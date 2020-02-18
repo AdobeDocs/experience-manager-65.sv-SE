@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: c097b60f-bcdf-45de-babe-b4c2e2b746a1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d12313003cb94b27c1ce64442a1f3394af529a0d
+source-git-commit: 9f260d3ccb98409790cd18b2540329fc36a07c05
 
 ---
 
@@ -48,8 +48,9 @@ Så här skapar du ett nytt arbetsflöde med redigeraren:
 >Om du skapar modeller programmatiskt (med ett crx-paket) kan du även skapa en undermapp i:
 >
 >`/var/workflow/models`
-
+>
 >Exempel, `/var/workflow/models/prototypes`
+>
 >Den här mappen kan sedan användas för [att hantera åtkomst till modellerna i den mappen](/help/sites-administering/workflows-managing.md#create-a-subfolder-in-var-workflow-models-and-apply-the-acl-to-that).
 
 ## Redigera ett arbetsflöde {#editing-a-workflow}
@@ -89,7 +90,8 @@ När du öppnar en [standardmodell och/eller äldre modell](/help/sites-developi
 * gör att du kan göra ändringar
 
 >[!NOTE]
-Mer information finns [i Platser för arbetsflödesmodeller](/help/sites-developing/workflows-best-practices.md#locations-workflow-models) .
+>
+>Mer information finns [i Platser för arbetsflödesmodeller](/help/sites-developing/workflows-best-practices.md#locations-workflow-models) .
 
 ![wf-22](assets/wf-22.png)
 
@@ -102,7 +104,8 @@ När du redigerar en modell visas de tillgängliga stegen i de olika grupperna i
 ![wf-10](assets/wf-10.png)
 
 >[!NOTE]
-Information om de komponenter i det primära steget som installeras med AEM finns i [Referens för](/help/sites-developing/workflows-step-ref.md)arbetsflödessteg.
+>
+>Information om de komponenter i det primära steget som installeras med AEM finns i [Referens för](/help/sites-developing/workflows-step-ref.md)arbetsflödessteg.
 
 Så här lägger du till steg i arbetsflödesmodellen:
 
@@ -144,7 +147,8 @@ Du kan **konfigurera** och anpassa ett arbetsflödesstegs beteende med hjälp av
 
    * Dubbelklicka på steget.
    >[!NOTE]
-   Information om de komponenter i det primära steget som installeras med AEM finns i [Referens för](/help/sites-developing/workflows-step-ref.md)arbetsflödessteg.
+   >
+   >Information om de komponenter i det primära steget som installeras med AEM finns i [Referens för](/help/sites-developing/workflows-step-ref.md)arbetsflödessteg.
 
 1. Konfigurera **stegegenskaperna** efter behov; Vilka egenskaper som är tillgängliga beror på stegtypen. Det kan också finnas flera tillgängliga flikar. Standardsteget för **deltagare** visas i ett nytt arbetsflöde som `Step 1`:
 
@@ -170,7 +174,8 @@ Du kan skapa en [tillfällig](/help/sites-developing/workflows.md#transient-work
    Mer information finns i [Synkronisera arbetsflödet](#sync-your-workflow-generate-a-runtime-model) .
 
 >[!NOTE]
-När du kör ett arbetsflöde i [tillfälligt](/help/sites-developing/workflows.md#transient-workflows) läge sparas ingen arbetsflödeshistorik i AEM. Därför visas ingen information om arbetsflödet i [tidslinjen](/help/sites-authoring/basic-handling.md#timeline) . [](/help/sites-authoring/basic-handling.md#timeline)
+>
+>När du kör ett arbetsflöde i [tillfälligt](/help/sites-developing/workflows.md#transient-workflows) läge sparas ingen arbetsflödeshistorik i AEM. Därför visas ingen information om arbetsflödet i [tidslinjen](/help/sites-authoring/basic-handling.md#timeline) . [](/help/sites-authoring/basic-handling.md#timeline)
 
 ## Göra arbetsflödesmodeller tillgängliga i Touch UI {#classic2touchui}
 
@@ -214,7 +219,8 @@ Du kan konfigurera en arbetsflödesmodell för [Multi Resource Support](/help/si
 [Arbetsflödesfaser](/help/sites-developing/workflows.md#workflow-stages) hjälper dig att visualisera förloppet för ett arbetsflöde när du hanterar uppgifter.
 
 >[!CAUTION]
-Om arbetsflödesfaser definieras i **Sidegenskaper**, men inte används för något av arbetsflödesstegen, visas inga förlopp i förloppsindikatorn (oavsett aktuellt arbetsflödessteg).
+>
+>Om arbetsflödesfaser definieras i **Sidegenskaper**, men inte används för något av arbetsflödesstegen, visas inga förlopp i förloppsindikatorn (oavsett aktuellt arbetsflödessteg).
 
 De steg som ska vara tillgängliga definieras i arbetsflödesmodellerna. befintliga arbetsflödesmodeller kan uppdateras så att de innehåller scendefinitioner. Du kan definiera valfritt antal steg för arbetsflödesmodellen.
 
@@ -340,7 +346,8 @@ För att illustrera några av möjligheterna att skapa ett arbetsflöde skapar f
    * Aktivera **Meddela användare via e-post**.
    * Välj `Administrator` ( `admin`) för fältet **Användare/grupp** .
    >[!NOTE]
-   För att e-postmeddelanden ska kunna skickas måste [informationen för e-posttjänsten och användarkontot konfigureras](/help/sites-administering/notification.md).
+   >
+   >För att e-postmeddelanden ska kunna skickas måste [informationen för e-posttjänsten och användarkontot konfigureras](/help/sites-administering/notification.md).
 
 1. Bekräfta uppdateringarna med en bock.
 
@@ -394,7 +401,8 @@ Så här definierar du en OR-regel:
    `/apps/myapp/workflow/scripts`
 
    >[!NOTE]
-   Skripten måste ha en [funktion `check()`](#function-check) som returnerar ett booleskt värde.
+   >
+   >Skripten måste ha en [funktion `check()`](#function-check) som returnerar ett booleskt värde.
 
 1. Redigera arbetsflödet och lägg till **OR-delningen** i modellen.
 1. Redigera egenskaperna för **grenen 1** i **ELLER Dela**:
@@ -404,7 +412,8 @@ Så här definierar du en OR-regel:
    * Ange sökvägen till skriptet som **Regel**. Exempel:
       `/apps/myapp/workflow/scripts/myscript1.ecma`
    >[!NOTE]
-   Du kan ändra grenordningen om det behövs.
+   >
+   >Du kan ändra grenordningen om det behövs.
 
 1. Redigera egenskaperna för **grenen 2** i **ELLER Dela**.
 
@@ -419,7 +428,8 @@ Så här definierar du en OR-regel:
 #### Funktionskontroll() {#function-check}
 
 >[!NOTE]
-Se [Använda ECMAScript](/help/sites-developing/workflows-customizing-extending.md#using-ecmascript).
+>
+>Se [Använda ECMAScript](/help/sites-developing/workflows-customizing-extending.md#using-ecmascript).
 
 Följande exempelskript returnerar `true` om noden finns `JCR_PATH` under `/content/we-retail/us/en`:
 
