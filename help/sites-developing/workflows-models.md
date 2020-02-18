@@ -185,7 +185,7 @@ Om det finns en arbetsflödesmodell i det klassiska användargränssnittet, men 
 
 1. Navigera till **[!UICONTROL Verktyg > Arbetsflöde > Modeller]**. Välj **[!UICONTROL Begär aktivering]** och sedan **[!UICONTROL Redigera]**.
 
-1. Välj **[!UICONTROL Redigera]**, öppna menyn **[!UICONTROL Sidinformation]** och gå sedan till fliken **[Grundläggande]** (om den inte redan är öppen) genom att välja **[!UICONTROL UICONTROL-Öppna egenskaper]** .
+1. Välj **[!UICONTROL Redigera]**, öppna menyn **[!UICONTROL Sidinformation]** och välj sedan **[!UICONTROL Öppna egenskaper]** och gå till fliken **[!UICONTROL Grundläggande]** (om den inte redan är öppen).
 
 1. Lägg till `Workflow : DAM` i **[!UICONTROL taggfältet]** . Bekräfta markeringen med bocken.
 
