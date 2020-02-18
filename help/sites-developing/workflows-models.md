@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: c097b60f-bcdf-45de-babe-b4c2e2b746a1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+source-git-commit: d12313003cb94b27c1ce64442a1f3394af529a0d
 
 ---
 
@@ -174,19 +174,25 @@ När du kör ett arbetsflöde i [tillfälligt](/help/sites-developing/workflows.
 
 ## Göra arbetsflödesmodeller tillgängliga i Touch UI {#classic2touchui}
 
-Om det finns en arbetsflödesmodell i det klassiska användargränssnittet som saknas på snabbmenyn för val i tidslinjen i Touch UI följer du konfigurationen för att göra den tillgänglig. Följande steg visar hur du använder arbetsflödesmodellerna i AEM Resurser, som kallas **[!UICONTROL Begär aktivering]** och **[!UICONTROL Begär inaktivering]**.
+Om det finns en arbetsflödesmodell i det klassiska användargränssnittet, men den saknas på snabbmenyn för val i **[!UICONTROL tidslinjerskan]** i Touch UI, följer du konfigurationen för att göra den tillgänglig. Följande steg visar hur du använder arbetsflödesmodellen som kallas **[!UICONTROL Begär aktivering]**.
 
-1. Bekräfta att modellen inte är tillgänglig i det beröringsaktiverade användargränssnittet. Få åtkomst till en resurs med `/assets.html/content/dam` sökväg. Markera resursen. Öppna **[!UICONTROL tidslinjen]** i den vänstra listen. Klicka på **[!UICONTROL Starta arbetsflöde]** och lägg märke till att det inte finns några modeller för **[!UICONTROL aktiveringsbegäran]** och **[!UICONTROL begäran om inaktivering]** i popup-listan.
-1. Klicka på **[!UICONTROL Verktyg > Allmänt > Taggning]**. Välj **[!UICONTROL Arbetsflöde]**.
-1. Klicka på **[!UICONTROL Skapa > Skapa tagg]**. Ange **[!UICONTROL Titel]** som `DAM` och **[!UICONTROL Namn]** som `dam`. Klicka på **[!UICONTROL Skicka]**.
+1. Bekräfta att modellen inte är tillgänglig i det beröringsaktiverade användargränssnittet. Få åtkomst till en resurs med `/assets.html/content/dam` sökväg. Välj en resurs. Öppna **[!UICONTROL tidslinjen]** i den vänstra listen. Klicka på **[!UICONTROL Starta arbetsflöde]** och bekräfta att **[!UICONTROL aktiveringsmodellen]** inte finns i popup-listan.
 
+1. Navigera genom **[!UICONTROL Verktyg > Allmänt > Taggning]**. Välj **[!UICONTROL Arbetsflöde]**.
+
+1. Välj **[!UICONTROL Skapa > Skapa tagg]**. Ange **[!UICONTROL Titel]** som `DAM` och **[!UICONTROL Namn]** som `dam`. Välj **[!UICONTROL Skicka]**.
    ![Skapa tagg i arbetsflödesmodell](assets/workflow_create_tag.png)
 
-1. Klicka på **[!UICONTROL Verktyg > Arbetsflöde > Modeller]**. Välj **[!UICONTROL Begär aktivering]** (eller **[!UICONTROL Begär inaktivering]**). Click **[!UICONTROL Edit]**.
-1. Gå till fliken **[!UICONTROL Sida]** i sidsparken. Öppna **[!UICONTROL Sidegenskaper]**.
-1. Lägg `Workflow : DAM` till i fältet **[!UICONTROL Taggar/nyckelord]** . Click **[!UICONTROL OK]**. Click **[!UICONTROL Save]**.
+1. Navigera till **[!UICONTROL Verktyg > Arbetsflöde > Modeller]**. Välj **[!UICONTROL Begär aktivering]** och sedan **[!UICONTROL Redigera]**.
 
+1. Välj **[!UICONTROL Redigera]**, öppna menyn **[!UICONTROL Sidinformation]** och gå sedan till fliken **[Grundläggande]** (om den inte redan är öppen) genom att välja **[!UICONTROL UICONTROL-Öppna egenskaper]** .
+
+1. Lägg till `Workflow : DAM` i **[!UICONTROL taggfältet]** . Bekräfta markeringen med bocken.
+
+1. Bekräfta tillägget av taggen med **[!UICONTROL Spara och stäng]**.
    ![Redigera sidegenskaper för modell](assets/workflow_model_edit_activation1.png)
+
+1. Slutför processen med **[!UICONTROL Synkronisera]**. Arbetsflödet är nu tillgängligt i det Touch-aktiverade gränssnittet.
 
 ### Konfigurera ett arbetsflöde för stöd för flera resurser {#configuring-a-workflow-for-multi-resource-support}
 
