@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 9941ba90-3d40-4c90-bca8-5db49603cbfa
 translation-type: tm+mt
-source-git-commit: 9532c1fb8af37b29285007bc72e86d42d5eb9c4d
+source-git-commit: 01f14c203e45b85c9d7733d88437bd56e3c27c8e
 
 ---
 
@@ -27,7 +27,7 @@ Du kan skapa en anpassad tally-komponent genom att utöka den abstrakta tally-kl
 
 [Klassificering](rating-basics.md) är en implementering av tally som använder ett stjärnsystem för att uttrycka en rad åsikter från positiva till negativa.
 
-Från och med AEM 6.1 är [avsökningskomponenten](poll-basics.md) inte längre tillgänglig.
+Från och med AEM 6.1 är avsökningskomponenten inte längre tillgänglig.
 
 [Recensioner](reviews-basics.md) är en SCF-komponent som är en kombination av [kommentarer](essentials-comments.md) och [omdömen](rating-basics.md).
 
