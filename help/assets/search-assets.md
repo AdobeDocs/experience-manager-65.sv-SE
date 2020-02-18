@@ -2,12 +2,9 @@
 title: Sök efter digitala resurser och bilder i AEM
 description: Lär dig hur du hittar de nödvändiga resurserna i AEM med hjälp av panelen Filter och hur du använder de resurser som visas i sökningen.
 contentOwner: AG
-products: SG_EXPERIENCEMANAGER/6.5/ASSETS
-discoiquuid: 98717f6d-1911-49ac-928c-01a75292ff01
-docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: dc38876e3905622a0ed6109c1718fcf464fe6374
+source-git-commit: b0ae7552a6dc0476a682bdbe715aac4b42315ff6
 
 ---
 
@@ -62,11 +59,15 @@ Du kan identifiera önskade resurser snabbare från sökresultatsidan med det dy
 
 Du kan köra nyckelordssökningar från OmniSearch-fältet. Nyckelordssökningen är inte skiftlägeskänslig och är en fulltextsökning (i alla vanliga metadatafält). Om mer än ett nyckelord söks efter används standardoperatorn mellan nyckelorden `AND` för standardsökning och det är `OR` när resurserna är smarta taggade.
 
-Resultatet sorteras efter relevans, med början med närmast matchande. För flera nyckelord är mer relevanta resultat de resurser som innehåller båda termerna i sina metadata. I metadata rangordnas nyckelord som visas som smarta taggar högre än nyckelord som visas i andra metadatafält. Med AEM kan man ge en viss sökterm högre vikt. Det går också att [höja rankningen](#searchrank) för vissa målresurser för specifika söktermer.
+Resultatet sorteras efter relevans, med början med närmast matchande. För flera nyckelord är mer relevanta resultat de resurser som innehåller båda termerna i sina metadata. I metadata rangordnas nyckelord som visas som smarta taggar högre än nyckelord som visas i andra metadatafält. Med AEM kan du ge en viss sökterm högre vikt. Det går också att [höja rankningen](#searchrank) för vissa målresurser för specifika söktermer.
 
-För att snabbt hitta relevanta resurser innehåller det avancerade gränssnittet funktioner för filtrering, sortering och markering. Du kan filtrera resultat baserat på flera villkor och se antalet sökningar efter olika filter. Du kan också köra sökningen igen genom att ändra frågan i fältet Omnissearch. När du ändrar söktermer eller filter används de andra filtren för att bevara sökkontexten. När resultatet är större än 1 000 visas inte alla sökbara resurser i AEM och över 1 000 visas som antalet sökbara resurser. Detta för att förbättra sökprestanda. När du bläddrar för att se fler resurser, utöver 1000, ökar antalet gradvis i steg om 200.
+För att snabbt hitta relevanta resurser innehåller det avancerade gränssnittet funktioner för filtrering, sortering och markering. Du kan filtrera resultat baserat på flera villkor och se antalet sökningar efter olika filter. Du kan också köra sökningen igen genom att ändra frågan i fältet Omnissearch. När du ändrar söktermer eller filter används de andra filtren för att bevara sökkontexten.
 
-Ibland kan du se oväntade resurser i sökresultaten. Mer information finns i [oväntade resultat](#unexpectedresults).
+När resultatet är många resurser visas de första 100 i kortvyn och 200 i listvyn. När användare rullar läses fler resurser in. Detta för att förbättra prestandan.
+
+>[!VIDEO](https://www.youtube.com/watch?v=LcrGPDLDf4o)
+
+Ibland kan du se oväntade resurser i sökresultaten. Mer information finns i [oväntade resultat](#troubleshoot-unexpected-search-results-and-issues).
 
 AEM kan söka i många filformat och sökfiltren kan anpassas efter företagets behov. Kontakta administratören för att få veta vilka sökalternativ som är tillgängliga för DAM-databasen och vilka begränsningar ditt konto har.
 
@@ -243,7 +244,7 @@ Du kan skicka följande frågeparametrar i en URL för att starta resursväljare
 | assettype (S) | bilder, dokument, multimedia, arkiv | <ul><li>[https://localhost:4502/aem/assetpicker.html?assettype=images](https://localhost:4502/aem/assetpicker.html?assettype=images)</li><li>[https://localhost:4502/aem/assetpicker.html?assettype=documents](https://localhost:4502/aem/assetpicker.html?assettype=documents)</li><li>[https://localhost:4502/aem/assetpicker.html?assettype=multimedia](https://localhost:4502/aem/assetpicker.html?assettype=multimedia)</li><li>[https://localhost:4502/aem/assetpicker.html?assettype=archives](https://localhost:4502/aem/assetpicker.html?assettype=archives)</li></ul> | Använd det här alternativet om du vill filtrera resurstyper baserat på det skickade värdet. |
 | root | &lt;mappsökväg> | [https://localhost:4502/aem/assetpicker.html?assettype=images&amp;root=/content/dam/we-retail/en/activities](https://localhost:4502/aem/assetpicker.html?assettype=images&root=/content/dam/we-retail/en/activities) | Använd det här alternativet om du vill ange rotmappen för resursväljaren. I det här fallet kan du bara välja underordnade resurser (direkt/indirekt) under rotmappen. |
 
-Om du vill komma åt resursväljargränssnittet går du till `https://[AEM server]:[port]/aem/assetpicker`. Navigera till önskad mapp och markera en eller flera resurser. Du kan också söka efter den önskade resursen i rutan Sök, tillämpa det filter som behövs och sedan markera den.
+Om du vill komma åt resursväljargränssnittet går du till `https://[aem_server]:[port]/aem/assetpicker`. Navigera till önskad mapp och markera en eller flera resurser. Du kan också söka efter den önskade resursen i rutan Sök, tillämpa det filter som behövs och sedan markera den.
 
 ![Bläddra och markera resurs i resursväljaren](assets/assetpicker.png)
 
@@ -258,7 +259,7 @@ Sökfunktionen i AEM Assets har följande begränsningar:
 * AEM kan fortsätta att visa söktermen efter att du har valt egenskaper för en resurs bland sökresultaten och sedan avbrutit sökningen. <!-- (CQ-4273540) -->
 * När du söker efter mappar, filer och mappar kan sökresultaten inte sorteras efter någon parameter.
 * Om du trycker på Retur utan att skriva något i Omnissearch bar, returnerar AEM en lista med endast filer och inte mappar. Om du söker specifikt efter mappar utan att använda ett nyckelord returnerar AEM inga resultat.
-* Med kryssrutan [!UICONTROL Markera alla] kan du bara välja de första 100 sökbara resurserna i kortvyn och de första 200 sökbara resurserna i listvyn.
+* Med kryssrutan [!UICONTROL Markera alla] kan du bara välja de första 100 sökbara resurserna i kortvyn och de första 200 sökbara resurserna i listvyn. Om du rullar och läser in fler resurser i användargränssnittet kan du välja fler med alternativet [!UICONTROL Markera alla] .
 
 Visuell sökning eller likhetssökning har följande begränsningar:
 
@@ -454,10 +455,10 @@ Du kan skapa smarta samlingar baserat på sökvillkoren. På **[!UICONTROL filte
 | Orelaterade eller delvis relaterade sökresultat | Sökbeteendet ändras med smart taggning. | Förstå [hur sökningen ändras efter smart taggning](#withsmarttags). |
 | Inga förslag för resurser som fylls i automatiskt | Nyligen överförda resurser har ännu inte indexerats. Metadata är inte omedelbart tillgängliga som förslag när du börjar skriva ett söknyckelord i omsökningsfältet. | AEM Resurser väntar tills en timeout-period har gått ut (en timme som standard) innan ett bakgrundsjobb körs för att indexera metadata för alla nyligen överförda eller uppdaterade resurser och lägger sedan till metadata i listan med förslag. |
 | Inga sökresultat | <ul><li>Det finns inga resurser som matchar din fråga.</li><li>Du lade till ett tomt utrymme före sökfrågan.</li><li>Ett metadatafält som inte stöds innehåller nyckelordet som du söker efter.</li><li>I tid och offline konfigureras resursen och sökningen gjordes när resursen var ledig.</li></ul> | <ul><li>Sök med ett annat nyckelord. Du kan även använda smart taggning för att förbättra sökresultaten.</li><li>Det är en [känd begränsning](#limitations).</li><li>Alla metadatafält beaktas inte vid sökningar. Se [omfång](#scope).</li><li>Sök senare eller ändra på- och avtidsinställningarna för de nödvändiga resurserna.</li></ul> |
-| Sökfilter/ predikat är inte tillgängligt | <ul><li>Sökfiltret är inte konfigurerat.</li><li>Den är inte tillgänglig för din inloggning.</li><li>(Sannolikheten är mindre) Sökalternativen är inte anpassade efter den distribution du använder.</li></ul> | <ul><li>Kontakta administratören för att kontrollera om sökanpassningarna är tillgängliga eller inte.</li><li>Kontakta administratören för att kontrollera om ditt konto har behörighet/behörigheter att använda anpassningen.</li><li>Kontakta administratören och kontrollera tillgängliga anpassningar för den AEM Resurser-distribution du använder.</li></ul> |
+| Sökfilter/ predikat är inte tillgängligt | <ul><li>Sökfiltret är inte konfigurerat.</li><li>Den är inte tillgänglig för din inloggning.</li><li>(Sannolikheten är mindre) Sökalternativen är inte anpassade efter den distribution du använder.</li></ul> | <ul><li>Kontakta administratören för att kontrollera om sökanpassningarna är tillgängliga eller inte.</li><li>Kontakta administratören för att kontrollera om ditt konto har behörighet att använda anpassningen.</li><li>Kontakta administratören och kontrollera tillgängliga anpassningar för den AEM Resurser-distribution du använder.</li></ul> |
 | När du söker efter visuellt liknande bilder saknas en förväntad bild | <ul><li>Bilden är inte tillgänglig i AEM.</li><li>Bilden är inte indexerad. Vanligtvis när den nyligen har överförts.</li><li>Bilden är inte smart taggad.</li></ul> | <ul><li>Lägg till bilden i AEM Resurser.</li><li>Kontakta administratören om du vill indexera om databasen. Se även till att du använder rätt index.</li><li>Kontakta administratören om du vill tagga de relevanta resurserna på ett smart sätt.</li></ul> |
 | När du söker efter visuellt liknande bilder visas en irrelevant bild | Visuell sökfunktion. | AEM visar så många potentiellt relevanta resurser som möjligt. Mindre relevanta bilder, om sådana finns, läggs till i resultatet men med en lägre sökrankning. Kvaliteten på matchningarna och relevansen hos de sökda resurserna minskar när du bläddrar nedåt i sökresultaten. |
-| När du väljer och arbetar med sökningar utförs inte alla sökningar | Med alternativet [!UICONTROL Markera alla] markeras endast de första 100 sökresultaten i kortvyn och de första 200 sökresultaten i listvyn. |  |
+| När du väljer och arbetar med sökresultat används inte alla sökresurser | Med alternativet [!UICONTROL Markera alla] markeras endast de första 100 sökresultaten i kortvyn och de första 200 sökresultaten i listvyn. |  |
 
 >[!MORELIKETHIS]
 >
