@@ -7,7 +7,7 @@ discoiquuid: 98717f6d-1911-49ac-928c-01a75292ff01
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 6d4f79c126a3c44666e2a42b2246c964813d24ab
+source-git-commit: dc38876e3905622a0ed6109c1718fcf464fe6374
 
 ---
 
@@ -459,7 +459,7 @@ Du kan skapa smarta samlingar baserat på sökvillkoren. På **[!UICONTROL filte
 | När du söker efter visuellt liknande bilder visas en irrelevant bild | Visuell sökfunktion. | AEM visar så många potentiellt relevanta resurser som möjligt. Mindre relevanta bilder, om sådana finns, läggs till i resultatet men med en lägre sökrankning. Kvaliteten på matchningarna och relevansen hos de sökda resurserna minskar när du bläddrar nedåt i sökresultaten. |
 | När du väljer och arbetar med sökningar utförs inte alla sökningar | Med alternativet [!UICONTROL Markera alla] markeras endast de första 100 sökresultaten i kortvyn och de första 200 sökresultaten i listvyn. |  |
 
->[!MORE SOM DET HÄR]
+>[!MORELIKETHIS]
 >
 >* [Implementeringshandbok för AEM-sökning](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/developing/search-tutorial-develop.html)
 >* [Avancerad konfiguration av predikat för sökning av flera värden och taggar](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/search-feature-video-use.html)
