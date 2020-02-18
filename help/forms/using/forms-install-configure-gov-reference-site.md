@@ -8,7 +8,7 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 93f3696242c681a019c2252364fe7cee510cb933
+source-git-commit: 33f73225fbb2c48353c1f34db3339c0bb79d4236
 
 ---
 
@@ -312,11 +312,15 @@ Det här avsnittet innehåller information och instruktioner om Adobe Analytics 
 
 **Referenser:**
 
-1. [https://helpx.adobe.com/experience-manager/6-5/help/sites-administering/adobeanalytics.html](https://helpx.adobe.com/experience-manager/6-5/help/sites-administering/adobeanalytics.html)
-1. [https://helpx.adobe.com/experience-manager/6-5/help/sites-administering/adobeanalytics-connect.html](https://helpx.adobe.com/experience-manager/6-5/help/sites-administering/adobeanalytics-connect.html)
-1. [https://helpx.adobe.com/experience-manager/6-5/help/sites-authoring/pa-using.html](https://helpx.adobe.com/experience-manager/6-5/help/sites-authoring/pa-using.html)
-1. [https://helpx.adobe.com/experience-manager/6-5/forms/using/configure-analytics-forms-documents.html](https://helpx.adobe.com/experience-manager/6-5/forms/using/configure-analytics-forms-documents.html)
-1. [https://helpx.adobe.com/experience-manager/6-5/forms/using/view-understand-aem-forms-analytics-reports.html](https://helpx.adobe.com/experience-manager/6-5/forms/using/view-understand-aem-forms-analytics-reports.html)
+* [Integrera med Adobe Analytics](../../sites-administering/adobeanalytics.md)
+
+* [Ansluta till Adobe Analytics och skapa ramverk](../../sites-administering/adobeanalytics-connect.md)
+
+* [Visa sidanalysdata](../../sites-authoring/pa-using.md)
+
+* [Konfigurera analyser och rapporter](configure-analytics-forms-documents.md)
+
+* [Visa och förstå analysrapporter för AEM Forms](view-understand-aem-forms-analytics-reports.md)
 
 ### Konfiguration av molntjänster för Adobe Analytics {#adobe-analytics-cloud-service-configuration}
 
@@ -432,7 +436,7 @@ De redigerbara mallarna som ingår i det här paketet levereras även förkonfig
 
 Mallar som ingår i paketet har även stöd för Style System:
 
-[https://helpx.adobe.com/ca/experience-manager/6-5/help/sites-authoring/style-system.html](https://helpx.adobe.com/ca/experience-manager/6-5/help/sites-authoring/style-system.html)
+[Formatsystem](../../sites-authoring/style-system.md)
 
 #### Malllogotyper {#template-logos}
 
@@ -446,7 +450,7 @@ När du redigerar sid- och formulärmallar kan du välja att uppdatera logotyper
 
 Mer information finns i Redigera sidinnehåll:
 
-[https://helpx.adobe.com/ca/experience-manager/6-5/help/sites-authoring/editing-content.html#main-pars_title_32](https://helpx.adobe.com/ca/experience-manager/6-5/help/sites-authoring/editing-content.html#main-pars_title_32)
+[Redigera sidinnehåll](../../sites-authoring/editing-content.md)
 
 ### Anpassning av webbplatssidor {#sites-pages-customization}
 
@@ -458,7 +462,7 @@ På dessa webbplatssidor används även AEM Grid-paketet för att styra layouten
 
 Sidorna i paketet har också stöd för Style System:
 
-[https://helpx.adobe.com/ca/experience-manager/6-5/help/sites-authoring/style-system.html](https://helpx.adobe.com/ca/experience-manager/6-5/help/sites-authoring/style-system.html)
+[Formatsystem](../../sites-authoring/style-system.md)
 
 Du kan även läsa mer om vilka format som stöds i [mallanpassningssystem](../../forms/using/forms-install-configure-gov-reference-site.md#customizetemplates) .
 
@@ -480,8 +484,8 @@ Dessa formulär kan anpassas efter vissa användningssätt. Observera att vissa 
 
 Anpassningsbara formulär kan också formateras med stilredigeraren eller temaredigeraren:
 
-* [https://helpx.adobe.com/experience-manager/6-5/forms/using/inline-style-adaptive-forms.html](https://helpx.adobe.com/experience-manager/6-5/forms/using/inline-style-adaptive-forms.html)
-* [https://helpx.adobe.com/ca/experience-manager/6-5/forms/using/themes.html](https://helpx.adobe.com/ca/experience-manager/6-5/forms/using/themes.html)
+* [Textbunden formatering av adaptiva formulärkomponenter](inline-style-adaptive-forms.md)
+* [Skapa och använda teman](themes.md)
 
 ### Anpassa arbetsflöden {#workflow-customization}
 
