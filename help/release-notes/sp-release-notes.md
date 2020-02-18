@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bd0b8e1605f6d8f6cc04a4173731351df002a67d
+source-git-commit: 37d0225f69800225e82f253ad9dbab8b2b30ac5e
 
 ---
 
@@ -163,6 +163,8 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 * Ett undantag visas i AEM vid avsökning efter jobbinformation för en resurs (CQ-4283569).
 
+* XSS-sårbarhet i DAM (NPR-31654).
+
 #### Webbplatser {#sites}
 
 * Om LiveCopy-arvet bryts visas länkar för språkkopiering i stället för länkar för LiveCopy (NPR-30980).
@@ -175,6 +177,9 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 * API:t ResponsiveGridExporter returnerar inte gränssnittet com.day.cq.wcm.foundation.model.impl.export.AllowedComponentsExporter. Paketet com.day.cq.wcm.foundation.model.impl deklareras som ett privat paket (NPR-31398).
 * När en sida som innehåller vissa ExperienceFragments öppnas i icke-redigerarläge (antingen i Författare utan prefixet och `editor.html` `wcmmode=disabled`, eller i Utgivare), avslutas begäran med HTTP-statusfelkoden 500 (NPR-30743).
 * Användare kan inte ändra sitt lösenord och komma åt sin profilsida (NPR-31161).
+* En JavaScript-fil med användardata genereras på serversidan (NPR-30822).
+* AEM-redigeringsgränssnittet tillåter nätfiske med externt innehåll (NPR-29745).
+* Sårbarhet vid språkinjektion i metadataredigeraren för AEM 6.5 (NPR-31017).
 
 #### Sök- och användargränssnitt {#search-ui-interface}
 
