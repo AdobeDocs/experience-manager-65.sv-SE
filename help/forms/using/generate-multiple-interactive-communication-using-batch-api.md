@@ -6,7 +6,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: interactive-communication
 translation-type: tm+mt
-source-git-commit: 3ba9308f7a6252f7ea6ae0de6455ab3e97e3b8dd
+source-git-commit: 1b664d082f090814903b2802d8accd80eb6b9e5e
 
 ---
 
@@ -174,6 +174,22 @@ Innan du distribuerar Java-servern måste du se till att du har en interaktiv ko
 
 1. Logga in på din AEM-instans och skapa en interaktiv kommunikation. Om du vill använda den interaktiva kommunikation som anges i exempelkoden nedan [klickar du här](assets/SimpleMediumIC.zip).
 1. [Bygg och driftsätt ett AEM-projekt med Apache Maven](https://helpx.adobe.com/experience-manager/using/maven_arch13.html) i din AEM-instans.
+1. Lägg till [AEM Forms Client SDK version 6.0.12](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/) eller senare och senaste [AEM Uber Jar](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/service-pack/sp-release-notes.html#uber-jar) i beroendelistan för POm-filen i ditt AEM-projekt. Exempel:
+
+   ```XML
+       <dependency>
+           <groupId>com.adobe.aemfd</groupId>
+           <artifactId>aemfd-client-sdk</artifactId>
+           <version>6.0.122</version>
+       </dependency>
+       <dependency>
+          <groupId>com.adobe.aem</groupId>
+          <artifactId>uber-jar</artifactId>
+          <version>6.5.0</version>
+          <classifier>apis</classifier>
+          <scope>provided</scope>
+       </dependency>
+   ```
 1. Öppna Java-projektet och skapa en Java-fil, till exempel CCMBatchServlet.java. Lägg till följande kod i filen:
 
    ```java
@@ -271,7 +287,7 @@ Innan du distribuerar Java-servern måste du se till att du har en interaktiv ko
                            throw new Exception("Invalid JSON Data. File name : " + filePath, ex);
                        }
                    }
-                   BatchInput batchInput = batchBuilderFactory.getBatchInputBuilder().setData(inputJSONArray).setTemplatePath("/content/dam/formsanddocuments/testsample/mediumic").build();
+                   BatchInput batchInput = batchBuilderFactory.getBatchInputBuilder().setData(inputJSONArray).setTemplatePath("/content/dam/formsanddocuments/[path of the interactive communcation]").build();
                    BatchConfig batchConfig = batchBuilderFactory.getBatchConfigBuilder().setBatchType(BatchType.WEB_AND_PRINT).build();
                    BatchResult batchResult = batchGeneratorService.generateBatch(batchInput, batchConfig);
                    List<RecordResult> recordList = batchResult.getRecordResults();
@@ -338,9 +354,7 @@ Innan du distribuerar Java-servern måste du se till att du har en interaktiv ko
    * När du anger både PRINT- och WEB-alternativ genereras både PDF-dokument och en JSON-fil per post.
 
 1. [Använd maven för att distribuera den uppdaterade koden till din AEM-instans](https://helpx.adobe.com/experience-manager/using/maven_arch13.html#BuildtheOSGibundleusingMaven).
-1. Anropa batch-API:t för att generera interaktiv kommunikation. Batch-API-utskriften returnerar en ström av PDF- och JSON-filer beroende på antalet poster. Du kan använda JSON-filen för att [förifylla en webbmall](#web-template).
-
-   Om du använder ovanstående kod distribueras API:t på `http://localhost:4502/bin/batchServlet`. Om du använder exemplet på interaktiv kommunikation i steg 1 kan du använda [records.json](assets/records.json) för att generera en interaktiv kommunikation. Den skriver till exempel ut och returnerar `http://localhost:4502/bin/batchServlet?filePath=C:/aem/records.json>.` en ström av en PDF-fil och en JSON-fil.
+1. Anropa batch-API:t för att generera interaktiv kommunikation. Batch-API-utskriften returnerar en ström av PDF- och JSON-filer beroende på antalet poster. Du kan använda JSON-filen för att [förifylla en webbmall](#web-template). Om du använder ovanstående kod distribueras API:t på `http://localhost:4502/bin/batchServlet`. Koden skriver ut och returnerar en ström av en PDF-fil och en JSON-fil.
 
 ### Fyll i en webbmall i förväg {#web-template}
 
