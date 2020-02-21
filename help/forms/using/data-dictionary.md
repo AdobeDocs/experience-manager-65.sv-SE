@@ -9,7 +9,7 @@ topic-tags: correspondence-management
 discoiquuid: a1a0ad6b-023a-4822-9cce-0618657c3f9d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5831c173114a5a6f741e0721b55d85a583e52f78
+source-git-commit: 2b8d64082e3ba837c057ab5ee8c45ea0735ef6d0
 
 ---
 
@@ -423,8 +423,15 @@ När du vill skicka samma bokstav på olika språk till dina kunder kan du lokal
 1. Tryck på **OK** i varningen. Correspondence Management hämtar en zip-fil till datorn med namnet DataDictionary-&lt;DDname>.zip.
 1. Zip-filen innehåller en .properties-fil. Den här filen definierar det hämtade dataordlistan. Innehållet i egenskapsfilen liknar följande:
 
-   # Wed May 20 16:06:23 BST 2015
-   DataDictionary.EmployeeDD.description=DataDictionary.EmployeeDD.displayName=EmployeeDataDictionaryDataDictionaryElement.name.description=DataDictionaryElement.name.displayName=nameDataDictionaryElement.person.description=DataDictionaryElement.person.displayName=person
+   ```
+   #Wed May 20 16:06:23 BST 2015
+   DataDictionary.EmployeeDD.description=
+   DataDictionary.EmployeeDD.displayName=EmployeeDataDictionary
+   DataDictionaryElement.name.description=
+   DataDictionaryElement.name.displayName=name
+   DataDictionaryElement.person.description=
+   DataDictionaryElement.person.displayName=person
+   ```
 
    Egenskapsfilens struktur definierar en rad var för beskrivningen och visningsnamnet för dataordlistan och varje dataordlisteelement i dataordlistan. Egenskapsfilen definierar dessutom en rad för ett uppräkningsvärde som anges för varje dataordlisteelement. Precis som med en dataordlista kan motsvarande egenskapsfil ha flera definitioner för dataordlisteelement. Dessutom kan filen innehålla definitioner för en eller flera uppräkningsvärdeuppsättningar.
 
