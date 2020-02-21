@@ -8,7 +8,7 @@ content-type: reference
 topic-tags: managing-assets
 discoiquuid: e7b95732-a571-48e8-afad-612059cdbde7
 translation-type: tm+mt
-source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
+source-git-commit: e9f5d8f63bc342723f2002f677c1673b4af6f891
 
 ---
 
@@ -70,7 +70,7 @@ När de är tillgängliga i **[!UICONTROL designläge]** kan du lägga till komp
 >
 >Om du skapar och utvecklar anpassade visningsprogram och använder Content Finder måste du lägga till parametern **[!UICONTROL allowfullscreen]** explicit.
 
-### Meddelande om att Flash-visningsprogrammet har upphört att gälla {#flash-viewers-end-of-life-notice}
+### Meddelande om att Flash Viewer har upphört {#flash-viewers-end-of-life-notice}
 
 Från och med den 31 januari 2017 upphör stödet för Flash-visningsprogramplattformen med Adobe Dynamic Media Classic.
 
@@ -265,11 +265,9 @@ Om du har flera konfigurationer visar AEM som standard [standardkonfigurationen]
 >* När [Säker förhandsvisning är aktiverat](/help/sites-administering/scene7.md#configuring-the-state-published-unpublished-of-assets-pushed-to-scene)visas både publicerade och opublicerade resurser i Dynamic Media Classic i webbläsaren för dynamiskt media Classic-innehåll.
 >* Om du inte ser ikonen **[!UICONTROL Dynamic Media Classic]** eller **[!UICONTROL S7]** som ett alternativ i webbläsaren måste du [konfigurera Dynamic Media Classic så att det fungerar med AEM](/help/sites-administering/scene7.md).
 >* För video har webbläsaren Dynamic Media Classic stöd för:
-   >
-   >  
-* Adaptiva videouppsättningar: behållare för alla videoåtergivningar som behövs för sömlös uppspelning på flera skärmar
->  * Enkel MP4-video
->  * En F4V-video
+   >   * Adaptiva videouppsättningar: behållare för alla videoåtergivningar som behövs för sömlös uppspelning på flera skärmar
+   >   * Enkel MP4-video
+   >   * En F4V-video
 
 
 ### Bläddra i det pekoptimerade användargränssnittet {#browsing-content-in-the-touch-optimized-ui}
