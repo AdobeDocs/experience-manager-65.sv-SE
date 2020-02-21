@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 3ebc1d22-a7a2-4375-9aa5-a18a7ceb446a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 90d69ef0ed0fb38bec75a3d36982f80b85dd43af
+source-git-commit: 9d42526ff4c7b7d8a31690ebfb8b45d0e951ebac
 
 ---
 
@@ -576,6 +576,7 @@ För att de klasser som kompileras från JSP:n ska kunna tas bort konfigurerar v
 >
 >Om du till exempel inkluderar `/libs/foundation/global.jsp`kan du använda följande konfiguration för `maven-resources-plugin` i stället för den konfiguration över som helt hoppar över `/libs`.
 >
+>
 ```
 > <resource>  
 >           <directory>src/main/content/jcr_root</directory>  
@@ -584,7 +585,7 @@ För att de klasser som kompileras från JSP:n ska kunna tas bort konfigurerar v
 >                   <include>libs/foundation/global.jsp</include>
 >       </includes>  
 >   </resource>  
->  ```
+>```
 
 ### Så här arbetar du med SCM-system {#how-to-work-with-scm-systems}
 
