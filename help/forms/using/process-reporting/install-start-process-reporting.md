@@ -10,7 +10,7 @@ topic-tags: process-reporting
 discoiquuid: 7c1fcde0-b983-4b24-bc19-fcee1d4f096b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 8f90dc4865126d52e04effc9197ef7145b1a167e
+source-git-commit: 8ae69f5bb67d51d759f143a076fef4f5f0375809
 
 ---
 
@@ -52,7 +52,7 @@ Gör så här för att ändra publiceringsschemat:
 >Om du kör implementeringen av AEM Forms på ett kluster utför du följande steg på varje nod i klustret.
 
 1. Stoppa AEM Forms-serverinstansen.
-1. 
+1. &#x200B;
 
    * (Windows) Öppna `[JBoss root]/bin/run.conf.bat` filen i en redigerare.
    * (För Linux, AIX och Solaris) `[JBoss root]/bin/run.conf.sh` i en redigerare.
