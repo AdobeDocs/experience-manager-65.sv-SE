@@ -4,7 +4,7 @@ seo-title: Konfigurera inställningar för frånvaro
 description: Konfigurera inställningar för frånvaro
 seo-description: Konfigurera inställningar för frånvaro
 translation-type: tm+mt
-source-git-commit: 52e4564ecab61cedaf3aca3d10339f6bcee2f71e
+source-git-commit: 7ed5c2d0121029811d8ddeca3b1121912bc761f4
 
 ---
 
@@ -48,7 +48,7 @@ Utför följande steg för att aktivera inställningen Frånvarande för ditt ko
 
    Upprepa steget för att lägga till fler tilldelningar. <br>
 
-   [!NOTE]
+   >[!NOTE]
    >Tilldelningsordningen är viktig. När ett objekt tilldelas en användare som har aktiverat inställningen Frånvarande utvärderas objektet mot den angivna listan över tilldelningar i den ordning som tilldelningarna läggs till. När ett objekt matchar villkoret tilldelas det till den som tilldelats objektet och nästa tilldelande kontrolleras inte.
 
 1. Tryck på **[!UICONTROL Spara]**. Inställningen börjar gälla vid angivet startdatum och angiven starttid. Om du loggar in när du inte är på kontoret beaktas du inte på kontoret förrän du ändrar dina inställningar.
@@ -56,9 +56,9 @@ Utför följande steg för att aktivera inställningen Frånvarande för ditt ko
 Nu tilldelas objekt som du har tilldelats under frånvaroperioden automatiskt till den angivna tilldelade personen.\
 ![Utanför kontoret](assets/out-of-office.png)
 
-[!NOTE]
+>[!NOTE]
 >(Endast för formulärbaserade arbetsflödesobjekt) Aktivera alternativet **Tillåt att tilldelad delegerar med alternativet** Frånvarande i steget **Tilldela uppgift** i arbetsflödet. Endast objekt som har det ovannämnda alternativet aktiverat delegeras till andra användare.
-> 
+
 ## Begränsningar {#limitations}
 
 * Det går inte att tilldela objekt till en grupp.
