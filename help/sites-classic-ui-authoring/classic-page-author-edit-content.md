@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: de321869-ebf9-41a1-8203-e12bdb088678
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
+source-git-commit: 71b1301faf3ea3d881bcbf34eac101f3ed5c514c
 
 ---
 
@@ -152,16 +152,17 @@ Så här tar du bort ett stycke:
 >[!NOTE]
 >
 >Om du har angett att [användaregenskaperna ska visa verktygsfältet](/help/sites-classic-ui-authoring/author-env-user-props.md) Global redigering kan du även utföra vissa åtgärder på styckena med knapparna **Kopiera**, **Klipp ut**, **Klistra** in och **Ta bort** .
-
->Det finns även olika [kortkommandon](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md) .
 >
+>Det finns även olika [kortkommandon](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md) .
+
 ## Klipp ut/kopiera/klistra in en komponent {#cut-copy-paste-a-component}
 
 Precis som när du [tar bort en komponent](#deleting-a-component) kan du använda snabbmenyn för att kopiera, klippa ut och/eller klistra in en komponent
 
 >[!NOTE]
-Om du har angett att [användaregenskaperna ska visa verktygsfältet](/help/sites-classic-ui-authoring/author-env-user-props.md) Global redigering kan du även utföra vissa åtgärder på styckena med knapparna **Kopiera**, **Klipp ut**, **Klistra** in och **Ta bort** .
-
+>
+>Om du har angett att [användaregenskaperna ska visa verktygsfältet](/help/sites-classic-ui-authoring/author-env-user-props.md) Global redigering kan du även utföra vissa åtgärder på styckena med knapparna **Kopiera**, **Klipp ut**, **Klistra** in och **Ta bort** .
+>
 >Det finns även olika [kortkommandon](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md) .
 
 >[!NOTE]
