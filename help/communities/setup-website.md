@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: d18c0ece-4c4f-499c-ac94-a9aaa7f883c4
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 4f4f2897000a0afe26a0dbcc4514e20befdb4114
 
 ---
 
@@ -38,9 +38,9 @@ Koden i den här självstudien är beroende av att huvudmappnamnet är samma fö
 >* Nodnamn kan innehålla mellanslag, men när de används i en URI måste utrymmet kodas antingen som %20 eller +
 >* Nodnamn kan innehålla bindestreck och understreck, men de måste kodas när de refereras som ett paketnamn i en Java-fil. Både bindestreck och understreck escape-konverteras med understreck följt av deras unicode-värde:
    >
-   >  
-* bindestreck blir &#39;_002d&#39;
->  * understreck blir &#39;_005f&#39;
+   >   
+   * bindestreck blir &#39;_002d&#39;
+   >   * understreck blir &#39;_005f&#39;
 
 
 ## Konfigurera programkatalogen (/apps) {#setup-the-application-directory-apps}
