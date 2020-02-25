@@ -490,7 +490,7 @@ Om följande syns i loggen:
 
 `java.lang.IllegalStateException: This tree does not exist`
 
-Kontrollera sedan att avsnitt [2. Skapa behörig användare](/content/docs/en/aem/6-1/administer/security/security/sync.md#2). skapa behörig användare) följdes korrekt.
+Kontrollera sedan att avsnitt [2. Skapa behörig användare](/help/sites-administering/sync.md#createauthuser) följdes korrekt.
 
 I det här avsnittet beskrivs hur du skapar en behörig användare, som finns i alla publiceringsinstanser, och identifierar dem i OSGi-konfigurationen för den hemliga providern. By default, the user is `admin`.
 
