@@ -36,16 +36,13 @@ Detta hjälper en utvecklare att:
 >
 >* Är bara tillgängligt i det beröringsaktiverade användargränssnittet (vid redigering av sidor).
 >* Är inte tillgängligt på mobila enheter eller små fönster på skrivbordet (på grund av utrymmesbegränsningar).
-   >
-   >    
-   * Detta inträffar när bredden är mindre än 1024px.
 >
-* Kräver lämpliga behörigheter:
-
-   * Användare som har skrivbehörighet i Developer Mode får åtkomst till det `/apps`.
-
-
-
+>    * Detta inträffar när bredden är mindre än 1024px.
+>
+>* Kräver lämpliga behörigheter:
+>
+>    * Användare som har skrivbehörighet i Developer Mode får åtkomst till det `/apps`.
+>
 
 >[!CAUTION]
 >

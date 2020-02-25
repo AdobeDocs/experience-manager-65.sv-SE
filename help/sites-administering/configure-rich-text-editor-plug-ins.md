@@ -282,19 +282,18 @@ Ange sedan platsen/platserna för de formatmallar som du vill referera till:
 >
 >I Rich Text Editor används ett behållar-DOM-element med ett ID `CQrte` som kan användas för att tillhandahålla olika format för visning och redigering:
 >
->
-```>
+>```
 >#CQ td {
 > // defines the style for viewing
 > }
->```>
->```>
+>```
+>
+>```
 >#CQrte td {
 > // defines the style for editing
 > }
->```>
-
-
+>```
+>
 
 ### Ange tillgängliga format i popup-listan {#stylesindropdown}
 

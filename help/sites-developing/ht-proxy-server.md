@@ -86,7 +86,7 @@ En begäran om en webbsida kan till exempel se ut så här:
 
 * C anger att den här posten kommer från klienten (det är en begäran om en webbsida)
 * 0 är anslutningens nummer (anslutningsräknaren startar vid 0)
-* # 00000 förskjutningen i byteflödet. Detta är den första posten, så förskjutningen är 0.
+* &#x200B;# 00000 förskjutningen i byteflödet. Detta är den första posten, så förskjutningen är 0.
 * `[GET <?>]` är innehållet i begäran, i exemplet en av HTTP-rubrikerna (url).
 
 När en anslutning stängs loggas följande information:

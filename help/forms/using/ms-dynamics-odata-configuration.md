@@ -93,8 +93,7 @@ Gör följande för att registrera en OAuth-klient på AD FS-datorn (Active Dire
 
    `Add-AdfsClient -ClientId “<Client-ID>” -Name "<name>" -RedirectUri "<redirect-uri>" -GenerateClientSecret`
 
-   
-Var:
+   Var:
 
    * `Client-ID` är ett klient-ID som du kan generera med valfri GUID-generator.
    * `redirect-uri` är URL:en till molntjänsten Microsoft Dynamics OData i AEM Forms. Standardmolntjänsten som installeras med AEM Forms-paketet distribueras på följande URL:
@@ -104,8 +103,7 @@ Var:
 
    `Grant-AdfsApplicationPermission -ClientRoleIdentifier “<Client-ID>” -ServerRoleIdentifier <resource> -ScopeNames openid`
 
-   
-Var:
+   Var:
 
    * `resource` är Microsoft Dynamics organisations-URL.
 

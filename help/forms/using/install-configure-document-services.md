@@ -415,6 +415,7 @@ AEM Forms-tilläggspaketet är ett program som distribueras till AEM. Paketet in
    ```
    sling.bootdelegation.xerces=org.apache.xerces.*
    ```
+
 1. Spara och stäng filen.
 
 ### Konfigurera teckensnittshanterartjänsten {#configuring-the-font-manager-service}

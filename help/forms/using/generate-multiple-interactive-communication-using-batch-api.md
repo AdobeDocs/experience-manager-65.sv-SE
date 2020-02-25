@@ -190,6 +190,7 @@ Innan du distribuerar Java-servern måste du se till att du har en interaktiv ko
           <scope>provided</scope>
        </dependency>
    ```
+
 1. Öppna Java-projektet och skapa en Java-fil, till exempel CCMBatchServlet.java. Lägg till följande kod i filen:
 
    ```java

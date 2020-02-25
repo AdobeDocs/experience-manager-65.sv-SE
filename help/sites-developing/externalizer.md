@@ -46,23 +46,25 @@ Så här definierar du en domänmappning för tjänsten **Externalizer** :
 
    `<unique-name> [scheme://]server[:port][/contextpath]`
 
-   
-Var:
+   Var:
 
-   * **Schemat** är vanligtvis http eller https, men kan också vara ftp, osv.
+    * **Schemat** är vanligtvis http eller https, men kan också vara ftp, osv.
 
-      * använd https för att framtvinga https-länkar vid behov
-      * den kommer att användas om klientkoden inte åsidosätter schemat när den frågar efter en URL-adress.
-   * **server** är värdnamnet (kan vara ett domännamn eller en IP-adress).
-   * **port** (valfritt) är portnumret.
-   * **kontextsökväg** (valfritt) anges bara om AEM är installerat som en webbapp under en annan kontextsökväg.
+        * använd https för att framtvinga https-länkar vid behov
+        * den kommer att användas om klientkoden inte åsidosätter schemat när den frågar efter en URL-adress.
+
+    * **server** är värdnamnet (kan vara ett domännamn eller en IP-adress).
+    * **port** (valfritt) är portnumret.
+    * **kontextsökväg** (valfritt) anges bara om AEM är installerat som en webbapp under en annan kontextsökväg.
+
    Exempel: `production https://my.production.instance`
 
    Följande mappningsnamn är fördefinierade och måste alltid anges som AEM är beroende av dem:
 
-   * `local` - den lokala instansen
-   * `author` - redigeringssystemets DNS
-   * `publish` - den offentliga webbplatsens DNS
+    * `local` - den lokala instansen
+    * `author` - redigeringssystemets DNS
+    * `publish` - den offentliga webbplatsens DNS
+
    >[!NOTE]
    >
    >Med en anpassad konfiguration kan du lägga till en ny kategori, till exempel `production``staging` eller till och med externa icke-AEM-system som `my-internal-webservice`. Det är praktiskt att undvika hårdkodning av sådana URL:er på olika platser i ett projekts kodbas.

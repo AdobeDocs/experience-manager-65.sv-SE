@@ -1318,11 +1318,11 @@ För att illustrera dessa steg definierar följande exempel en rapport som visar
    >
    >Detta är samma som definitionerna:
    >
-   >
-   ```
+   >```
    >N:data [nt:unstructured]
    >   P:clientFilter [String] = "function(v) { return v; }"
    >```
+   >
    >Där funktionen bara returnerar värdet som den får.
 
 1. Definiera rapportdesignen. Till exempel `osgireport[cq:Page]` under `/etc/designs/reports`.
@@ -1389,13 +1389,13 @@ En instans av din nya rapport kan nu skapas:
    >
    >Eftersom det här exemplet inte har några grupperbara kolumner är diagrammen inte tillgängliga. Om du vill se diagram anger du `groupable` till `true`:
    >
-   >
-   ```
+   >```
    >N:osgireport [sling:Folder]
    > N:bundlecol [cq:Component]
    > N:definitions [nt:unstructured]
    > P:groupable [Boolean] = true
    >```
+   >
 
 ## Konfigurera Report Framework Services {#configuring-the-report-framework-services}
 

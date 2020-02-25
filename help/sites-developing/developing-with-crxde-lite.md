@@ -423,15 +423,16 @@ Så här skapar du `HelloWorld` Java-klassen i Test Bundle:
 1. Filen öppnas i `HelloWorld.java` rutan Redigera.
 1. Lägg till följande rader i `HelloWorld.java`:
 
-   ```
-     package com.mycompany.test;
-   
-     public class HelloWorld {
-     public String getString(){
-     return "Hello World!";
-     }
-     }
-   ```
+    ```
+      package com.mycompany.test;
+
+      public class HelloWorld {
+      public String getString(){
+      return "Hello World!";
+      }
+      }
+    ```
+
 1. Klicka på **Spara alla** för att spara ändringarna på servern.
 
 ### Bygga ett paket {#building-a-bundle}

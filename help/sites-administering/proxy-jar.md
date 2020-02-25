@@ -114,7 +114,7 @@ C-0-#000000 -> [GET /author/prox.html?CFC_cK=1102938422341 HTTP/1.1 ]
 
 * C anger att den här posten kommer från klienten (det är en begäran om en webbsida)
 * 0 är anslutningens nummer (anslutningsräknaren startar vid 0)
-* # 00000 förskjutningen i byteflödet. Detta är den första posten, så förskjutningen är 0.
+* &#x200B;# 00000 förskjutningen i byteflödet. Detta är den första posten, så förskjutningen är 0.
 * [GET &lt;?>] är innehållet i begäran, i exemplet en av HTTP-rubrikerna (url).
 
 När en anslutning stängs loggas följande information:

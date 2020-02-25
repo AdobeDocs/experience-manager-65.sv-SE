@@ -60,10 +60,8 @@ För mer avancerade användningsområden kan MSM användas även av flerspråkig
 >För alla användningsfall rekommenderas följande metodtips:
 >
 >* [Best Practices for MSM](/help/sites-administering/msm-best-practices.md); särskilt:
-   >
-   >   
-   * [Skapa webbplats](/help/sites-administering/msm-best-practices.md#create-site)
-   >   * [MSM och flerspråkiga webbplatser](/help/sites-administering/msm-best-practices.md#msm-and-multilingual-websites)
+>
+>   * [Skapa webbplats](/help/sites-administering/msm-best-practices.md#create-site)
+>   * [MSM och flerspråkiga webbplatser](/help/sites-administering/msm-best-practices.md#msm-and-multilingual-websites)
 >
 >* [Best Practices for Translation](/help/sites-administering/tc-bp.md)
-

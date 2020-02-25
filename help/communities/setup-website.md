@@ -37,11 +37,9 @@ Koden i den här självstudien är beroende av att huvudmappnamnet är samma fö
 >* Namnen i CRXDE är nodnamn som utgör sökvägen till adresserbart innehåll
 >* Nodnamn kan innehålla mellanslag, men när de används i en URI måste utrymmet kodas antingen som %20 eller +
 >* Nodnamn kan innehålla bindestreck och understreck, men de måste kodas när de refereras som ett paketnamn i en Java-fil. Både bindestreck och understreck escape-konverteras med understreck följt av deras unicode-värde:
-   >
-   >   
-   * bindestreck blir &#39;_002d&#39;
-   >   * understreck blir &#39;_005f&#39;
-
+>
+>   * bindestreck blir &#39;_002d&#39;
+>   * understreck blir &#39;_005f&#39;
 
 ## Konfigurera programkatalogen (/apps) {#setup-the-application-directory-apps}
 

@@ -361,27 +361,33 @@ till exempel `5`
          Värde: Ange vad som krävs för att kontrollera filens rotation efter storlek/datum.
 till exempel `'.'yyyy-MM-dd`
    >[!NOTE]
-   `org.apache.sling.commons.log.file.size` styr rotationen av loggfilen genom att ange antingen:
-   * maximal filstorlek
-   * ett tids-/datumschema
-   för att ange när en ny fil ska skapas (och den befintliga filen får ett nytt namn enligt namnmönstret).
-   * En storleksgräns kan anges med ett tal. Om ingen storleksindikator anges används detta som antal byte, eller så kan du lägga till en av storleksindikatorerna - `KB`, `MB`eller `GB` (versaler ignoreras).
-   * Ett tids-/datumschema kan anges som ett `java.util.SimpleDateFormat` mönster. Detta anger den tidsperiod efter vilken filen ska roteras. det suffix som läggs till i den roterade filen (för identifiering).
-   Standardvärdet är &#39;.&#39;yyyy-MM-dd (för daglig loggrotation)
-   Så vid midnatt den 20 januari 2010 (eller när det första loggmeddelandet efter detta blir exakt) kommer ../logs/error.log att byta namn till ../logs/error.log.2010-01-20. Loggning för den 21 januari kommer att skickas till (en ny och tom) ../logs/error.log tills den överförs vid nästa ändring av dagen.
-       | `&#39;.&#39;
-    yyyy-MM`|Rotation i början av varje månad|
- |—|—|     | `&#39;.&#39;yyyy-ww`|Rotation på den första dagen i varje vecka (beroende på språkområde). |
-       | `&#39;.&#39;yyyy-MM-dd`|Rotation vid midnatt varje dag. |
-       | `&#39;.&#39;yyyy-MM-dd`|Rotation vid midnatt och middag varje dag. |
-       | `&#39;.&#39;yyyy-MM-dd-HH`|Rotation överst i varje timme. |
-       | `&#39;.&#39;yyyy-MM-dd-HH-mm`|Rotation i början av varje minut. 
- |    
-      
-Obs! När du anger tid/datum:       1. 
- Du bör&quot;escape&quot;-text inom ett par enkla citattecken (&#39; &#39;);   Detta     gör du för att undvika att vissa tecken tolkas som mönsterbokstäver.
-       1. Använd bara tecken som är tillåtna för ett giltigt filnamn var som helst i alternativet.
-   
+   >
+   >`org.apache.sling.commons.log.file.size` styr rotationen av loggfilen genom att ange antingen:
+   >
+   >* maximal filstorlek
+   >* ett tids-/datumschema
+   >
+   >för att ange när en ny fil ska skapas (och den befintliga filen får ett nytt namn enligt namnmönstret).
+   >
+   >* En storleksgräns kan anges med ett tal. Om ingen storleksindikator anges används detta som antal byte, eller så kan du lägga till en av storleksindikatorerna - `KB`, `MB`eller `GB` (versaler ignoreras).
+   >* Ett tids-/datumschema kan anges som ett `java.util.SimpleDateFormat` mönster. Detta anger den tidsperiod efter vilken filen ska roteras. det suffix som läggs till i den roterade filen (för identifiering).
+   >
+   >Standardvärdet är &#39;.&#39;yyyy-MM-dd (för daglig loggrotation)
+   >
+   >Så vid midnatt den 20 januari 2010 (eller när det första loggmeddelandet efter detta blir exakt) kommer ../logs/error.log att byta namn till ../logs/error.log.2010-01-20. Loggning för den 21 januari kommer att skickas till (en ny och tom) ../logs/error.log tills den överförs vid nästa ändring av dagen.
+   >
+   >| `&#39;.&#39;yyyy-MM`|Rotation i början av varje månad|
+   >|---|---|
+   >| `&#39;.&#39;yyyy-ww`|Rotation på den första dagen i varje vecka (beroende på språkområde). |
+   >| `&#39;.&#39;yyyy-MM-dd`|Rotation vid midnatt varje dag. |
+   >| `&#39;.&#39;yyyy-MM-dd`|Rotation vid midnatt och middag varje dag. |
+   >| `&#39;.&#39;yyyy-MM-dd-HH`|Rotation överst i varje timme. |
+   >| `&#39;.&#39;yyyy-MM-dd-HH-mm`|Rotation i början av varje minut. |
+   >
+   >Obs! När du anger tid/datum:
+   >1. Du bör&quot;escape&quot;-text inom ett par enkla citattecken (&#39; &#39;);
+   >   Detta gör du för att undvika att vissa tecken tolkas som mönsterbokstäver.
+   >1. Använd bara tecken som är tillåtna för ett giltigt filnamn var som helst i alternativet.
 
 1. Läs den nya loggfilen med det verktyg du valt.
 
