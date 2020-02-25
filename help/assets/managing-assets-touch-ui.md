@@ -4,7 +4,7 @@ description: Lär dig resurshanteringsåtgärder som överföring, hämtning, re
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 6d4f79c126a3c44666e2a42b2246c964813d24ab
+source-git-commit: a67ff409107cbde04d10932d624340857b9f9f64
 
 ---
 
@@ -354,13 +354,11 @@ Se även [Förhandsgranska dynamiska medieresurser.](/help/assets/previewing-ass
 
    ![chlimage_1-218](assets/chlimage_1-13.png)
 
-1. Markera en eller flera taggar i fältet **[!UICONTROL Taggar]** . Om du vill lägga till en egen tagg skriver du namnet på taggen i rutan och trycker på Retur. Den nya taggen sparas i AEM.
-
-   YouTube kräver att taggar ska publiceras och har en länk till YouTube (om en lämplig länk finns).
+1. Markera en eller flera taggar i fältet **[!UICONTROL Taggar]** . Om du vill lägga till en egen tagg skriver du namnet på taggen i rutan och trycker på Retur. Den nya taggen sparas i AEM. YouTube kräver taggar för att publicera. Se [Publicera videor på YouTube](video.md#publishing-videos-to-youtube).
 
    >[!NOTE]
    >
-   >Om du vill skapa taggar måste du ha skrivbehörighet för `/content/cq:tags/default` i CRX-databasen.
+   >Om du vill skapa taggar måste du ha skrivbehörighet i CRX-databasen `/content/cq:tags/default` .
 
 1. Om du vill ge resursen en gradering trycker/klickar du på fliken **[!UICONTROL Avancerat]** och sedan på/klickar du på stjärnan vid rätt position för att tilldela den önskade graderingen.
 
@@ -532,7 +530,7 @@ Du kan även inaktivera Tvinga borttagningsknappen med hjälp av en övertäckni
 
 ## Hämta resurser {#downloading-assets}
 
-Se [Hämta resurser från AEM](/help/assets/download-assets-from-aem.md).
+See [Download assets from AEM](/help/assets/download-assets-from-aem.md).
 
 ## Publicera resurser {#publishing-assets}
 
@@ -602,7 +600,7 @@ CUG är ett extra sätt att begränsa åtkomsten till dina resurser. Du kan ocks
 1. Publicera mappen och försök sedan komma åt den från publiceringsinstansen. En inloggningsskärm visas.
 1. Om du är CUG-medlem anger du dina säkerhetsuppgifter. Mappen visas när du har autentiserats av AEM.
 
-## Sök resurser {#assetsearch}
+## Söka efter material {#assetsearch}
 
 Att söka resurser är centralt för användningen av ett digitalt resurshanteringssystem - oavsett om det är avsett för kreativa användare, för robust hantering av resurser av företagsanvändare och marknadsförare eller för administration av DAM-administratörer.
 
