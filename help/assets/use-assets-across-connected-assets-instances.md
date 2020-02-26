@@ -29,7 +29,7 @@ Innan du använder eller konfigurerar den här funktionen bör du kontrollera f�
 
    |  | AEM Sites som en Cloud Service | AEM 6.5 Sites på AMS | AEM 6.5 Sites på plats |
    |---|---|---|---|
-   | **AEM Assets som molntjänst** | Stöds | Stöds | Stöds |
+   | **AEM Assets som Cloud Service** | Stöds | Stöds | Stöds |
    | **AEM 6.5 Assets on AMS** | Stöds inte | Stöds | Stöds |
    | **AEM 6.5 Assets på plats** | Stöds inte | Stöds inte | Stöds inte |
 
