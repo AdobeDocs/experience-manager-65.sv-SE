@@ -3,7 +3,7 @@ title: Använd anslutna resurser för att dela DAM-resurser i redigeringsarbetsf
 description: Använd resurser som är tillgängliga på en fjärrdistribution av Adobe Experience Manager Assets när du skapar webbsidor på en annan Experience Manager-webbplatsdistribution.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a107f3d3f10e2f5b5aed7722aee467a838f9d13d
+source-git-commit: a7082bc47bea1b8514121f482911da44919da73c
 
 ---
 
@@ -27,9 +27,9 @@ Innan du använder eller konfigurerar den här funktionen bör du kontrollera f�
 * Användarna ingår i lämpliga användargrupper för varje distribution.
 * Ett av de kriterier som stöds för Adobe Experience Manager-distributionstyper är uppfyllt. AEM 6.5 Assets fungerar med AEM som en molntjänst. Mer information finns i Funktionen [Anslutna resurser i AEM som en molntjänst](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/admin/use-assets-across-connected-assets-instances.html).
 
-   |  | AEM Sites as a Cloud Service | AEM 6.5 Sites på AMS | AEM 6.5 Sites på plats |
+   |  | AEM Sites som en Cloud Service | AEM 6.5 Sites på AMS | AEM 6.5 Sites på plats |
    |---|---|---|---|
-   | **AEM Resurser som en molntjänst** | Stöds | Stöds | Stöds |
+   | **AEM Assets som molntjänst** | Stöds | Stöds | Stöds |
    | **AEM 6.5 Assets on AMS** | Stöds inte | Stöds | Stöds |
    | **AEM 6.5 Assets på plats** | Stöds inte | Stöds inte | Stöds inte |
 
@@ -171,7 +171,7 @@ De hämtade resurserna kan användas som andra lokala resurser, förutom att ass
 * Alla webbplatsförfattare har läsbehörighet för de hämtade kopiorna, även om de inte har åtkomst till den fjärranslutna DAM-distributionen.
 * Inget API-stöd för att anpassa integreringen.
 * Funktionen stöder smidig sökning och användning av fjärrresurser. Om du vill göra många fjärrresurser tillgängliga på lokal distribution på en gång bör du överväga att migrera resurserna. Se Handbok för [resursmigrering](assets-migration-guide.md).
-* Det går inte att använda en fjärrresurs som miniatyrbild för en webbsida på fliken [!UICONTROL Miniatyrbilder] i [!UICONTROL Sidegenskaper] genom att klicka på [!UICONTROL Välj bild].
+* Det går inte att använda en fjärrresurs som sidminiatyr i [!UICONTROL användargränssnittet för Sidegenskaper] . Du kan ange en miniatyrbild för en webbsida i [!UICONTROL användargränssnittet för Sidegenskaper] från [!UICONTROL miniatyrbilden] genom att klicka på [!UICONTROL Välj bild].
 
 **Konfigurera och licensiera**
 
