@@ -3,7 +3,7 @@ title: Hantera flera resurser och samlingar
 description: Lär dig hur du redigerar metadata för flera resurser och samlingar samtidigt för att snabbt sprida vanliga metadataändringar.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: 9af0ee0ff9d1089b6cf09c52f7f606cce6775d72
 
 ---
 
@@ -50,26 +50,6 @@ Om du vill anpassa sidan med metadataegenskaper, inklusive lägga till, ändra e
    >
    >För fält med ett värde läggs de nya metadata inte till det befintliga värdet i fältet, även om du väljer **[!UICONTROL Lägg till läge]**.
 
-## Redigera metadataegenskaper för flera samlingar {#editing-metadata-properties-of-multiple-collections}
-
-1. Välj de samlingar du vill redigera i konsolen Samlingar.
-1. Tryck/klicka på **[!UICONTROL Egenskaper]** i verktygsfältet för att öppna egenskapssidan för de valda samlingarna.
-1. Ändra metadataegenskaperna för markerade samlingar under de olika flikarna.
-
-   >[!NOTE]
-   >
-   >De metadata som du lägger till för de valda samlingarna skriver över tidigare metadata för dessa samlingar, med undantag för taggar. Alla taggar som du lägger till i fältet **[!UICONTROL Taggar]** läggs till i den befintliga listan med taggar i metadata.
-
-1. Om du vill visa metadataegenskaperna för en viss samling avmarkerar du de återstående samlingarna i samlingslistan. Metadataredigeringsfälten fylls i med metadata för den aktuella samlingen.
-
-   >[!NOTE]
-   >
-   >* På sidan med samlingsegenskaper kan du ta bort samlingar från listan med samlingar genom att avmarkera dem. I samlingslistan är alla samlingar markerade som standard. Metadata för samlingar som du tar bort uppdateras inte.
-   >* Överst i listan markerar du kryssrutan vid **[!UICONTROL Titel]** för att växla mellan att markera samlingarna och rensa listan.
-
-
-1. Spara ändringarna.
-
 ## Konfigurera gräns för uppdatering av massmetadata {#configlimit}
 
 För att förhindra DOS-liknande situationer begränsar AEM antalet parametrar som stöds i en Sling-begäran. När du uppdaterar metadata för många resurser på en gång kan du nå gränsen och metadata uppdateras inte för fler resurser. AEM genererar följande varning i loggarna:
@@ -77,3 +57,8 @@ För att förhindra DOS-liknande situationer begränsar AEM antalet parametrar s
 `org.apache.sling.engine.impl.parameters.Util Too many name/value pairs, stopped processing after 10000 entries`
 
 Om du vill ändra gränsen öppnar du Webbkonsol ( **[!UICONTROL Verktyg]** > **[!UICONTROL Åtgärder]** > **[!UICONTROL Webbkonsol]**) och ändrar värdet för **[!UICONTROL maximalt antal POST-parametrar]** i konfigurationen för **[!UICONTROL APache Sling Request Parameter Handling]** OSGi.
+
+>[!MORELIKETHIS]
+>
+>* [Redigera metadataegenskaper för flera samlingar](managing-collections-touch-ui.md#editing-collection-metadata-in-bulk)
+
