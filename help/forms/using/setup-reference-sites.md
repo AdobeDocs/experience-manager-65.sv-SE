@@ -10,7 +10,7 @@ topic-tags: introduction
 discoiquuid: 03886dd3-5873-4908-912b-fbbddb26c322
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 709d8fe467f5449eb1e844a49126535a4a4a6e7a
+source-git-commit: 70350add185b932ee604e190aabaf972ff994ba2
 
 ---
 
@@ -220,8 +220,8 @@ Mer information om hur du använder paket och paketdelning finns i [Arbeta med p
 
 När du har installerat paketen och startat författaren och publicerat instanserna kan du gå till följande URL:er i webbläsaren:
 
-* https://[server]:[port]/wegov
-* https://[server]:[port]/weFinance
+* `https://[server]:[port]/wegov`
+* `https://[server]:[port]/wefinance`
 
 Om installationen lyckas får du tillgång till landningssidorna för referensplatserna och We.Finance.
 
@@ -231,12 +231,12 @@ Referenswebbplatserna för bostadslån och autoförsäkringsprogram är konfigur
 
 Så här importerar du den anpassade entiteten för programmet för automatisk försäkring:
 
-1. Hämta **lösningspaketet WeFinanceAutoInsurance_1_0.zip** från https://[server]:[port]/content/aemforms-refsite-collaterals/we-finance/auto-insurance/ms-dynamics/WeFinanceAutoInsurance_1_0.zip på din AEM-författarinstans.
+1. Ladda ned **lösningspaketet WeFinanceAutoInsurance_1_0.zip** från `https://[server]:[port]/content/aemforms-refsite-collaterals/we-finance/auto-insurance/ms-dynamics/WeFinanceAutoInsurance_1_0.zip` din AEM-författarinstans.
 1. Gå till **Inställningar > Lösningar** i din Microsoft Dynamics-instans och klicka på **Importera**. Markera och importera paketet.
 
 Så här importerar du den anpassade entiteten för programmet för automatisk försäkring:
 
-1. Hämta paketet **AEMFormsFSIRefsite_1_0.zip** från https://[author]:[port]/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/AEMFormsFSIRefsite_1_0.zip. Markera och importera paketet.
+1. Hämta paketet **AEMFormsFSIRefsite_1_0.zip** från `https://[author]:[port]/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/AEMFormsFSIRefsite_1_0.zip`. Markera och importera paketet.
 
 1. Gå till **Inställningar > Lösningar** i din Microsoft Dynamics-instans och klicka på **Importera**. Markera och importera paketet.
 
@@ -244,9 +244,9 @@ Så här importerar du kund- och försäkringspolicyposter:
 
 1. Ladda ned datafilerna **We.Finance Customers.csv, We.Finance Auto Insurance Renewals.csv** och **home inteckning** från följande platser hos din AEM-författare:
 
-   * https://[server]:[port/content/aemforms-refsite-collaterals/we-finance/auto-insurance/ms-dynamics/We.Finance Customers.csv
-   * https://[server]:[port/content/aemforms-refsite-collaterals/we-finance/auto-insurance/ms-dynamics/We.Finance Förnyelser av automatisk försäkring.csv
-   * https://[server]:[port]/content/aemforms-refsite-collaterals/we-Finance/home-bols/ms-dynamics/Sarah%20Rose%20Contact.csv
+   * `https://[server]:[port/content/aemforms-refsite-collaterals/we-finance/auto-insurance/ms-dynamics/We.Finance Customers.csv`
+   * `https://[server]:[port/content/aemforms-refsite-collaterals/we-finance/auto-insurance/ms-dynamics/We.Finance Auto Insurance Renewals.csv`
+   * `https://[server]:[port]/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/Sarah%20Rose%20Contact.csv`
 
 1. Gör följande i din Microsoft Dynamics-instans:
 
@@ -273,7 +273,7 @@ Konfigurera OAuth-molntjänsten i AEM Forms för att aktivera kommunikation mell
 
 Gör följande på både författare- och publiceringsinstanser:
 
-1. Gå till konsolen för AEM-webbkonfiguration på https://[server]:[host]/system/console/configMgr.
+1. Gå till AEM Web Configuration-konsolen på `https://[server]:[host]/system/console/configMgr`.
 1. Sök efter och tryck på **[!UICONTROL Adobe Sign Configuration Service]** för att öppna den för konfiguration.
 1. Konfigurera **[!UICONTROL statusuppdateringens schemaläggaruttryck]** som **0/2 * * * ?**.
 
