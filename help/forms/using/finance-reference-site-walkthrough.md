@@ -10,7 +10,7 @@ topic-tags: introduction
 discoiquuid: b4fdbf86-d8f3-4da5-9e4e-4d5492ae1632
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3eaace94bc0499aaebfcd389d4dc97b97c7d9160
+source-git-commit: 70350add185b932ee604e190aabaf972ff994ba2
 
 ---
 
@@ -788,13 +788,13 @@ Sarah Rose planerar att investera i en gemensam fond. Hon är en befintlig We.Fi
 
 #### Så här fungerar det {#how-it-works-17}
 
-The Blue Chip Growth Fund protus is an interactive communication. Det använder texter, bilder, diagram och tabellkomponenter (dokumentfragment) för att visa produktsammanfattning, aktieformat, fondprestanda, fondinformation och annan relaterad information. [ Du kan granska den interaktiva kommunikationen i redigeringsläget på https://]authorHost[: authorPort]/editor.html/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html
+The Blue Chip Growth Fund protus is an interactive communication. Det använder texter, bilder, diagram och tabellkomponenter (dokumentfragment) för att visa produktsammanfattning, aktieformat, fondprestanda, fondinformation och annan relaterad information. Du kan granska den interaktiva kommunikationen i redigeringsläget på `https://[authorHost]:[ authorPort]/editor.html/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html`
 
-Diagrammen och tabellerna hämtar data från en formulärdatamodell. Formulärdatamodellen ansluter till konfigurerade datakällor, en databas i den här genomgången, för att hämta information som är specifik för fonden. Du kan granska formulärdatamodellen på https://[authorHost]:[authorPort]/aem/fdm/editor.html/content/dam/formsanddocuments-fdm/we-Finance/wealth-management
+Diagrammen och tabellerna hämtar data från en formulärdatamodell. Formulärdatamodellen ansluter till konfigurerade datakällor, en databas i den här genomgången, för att hämta information som är specifik för fonden. Du kan granska formulärdatamodellen på `https://[authorHost]:[authorPort]/aem/fdm/editor.html/content/dam/formsanddocuments-fdm/we-finance/wealth-management`
 
 #### Se det själv {#see-it-yourself-15}
 
-Gå till webbportalen We.Finance på https://[publishHost]:[publishPort]/weFinance, tryck på förmögenhetshantering, expandera fonder efter tillgångsklass och tryck på We.Finance Blue Chip Growth Fund. Prospektet om fonden för tillväxt av den blå chipen, Web.Finance, öppnas.
+Gå till We.Finance-portalen på `https://[publishHost]:[publishPort]/wefinance`, tryck på förmögenhetsförvaltning, expandera fonder per tillgångsklass och tryck på We.Finance Blue Chip Growth Fund. Prospektet om fonden för tillväxt av den blå chipen, Web.Finance, öppnas.
 
 ### Sarah utforskar The Blue Chip Growth Fund-prospektet för att lära sig mer om fonden {#sarah-explores-the-blue-chip-growth-fund-prospectus-to-learn-about-the-fund}
 
@@ -806,11 +806,11 @@ Sarah utforskar flikarna Översikt, Pris och resultat, Portföljhantering, Avgif
 
 I den interaktiva kommunikationen från Blue Chip Growth Fund används överordnade och underordnade paneler för att dela upp relaterad information i olika avsnitt. Den överordnade panelen ordnar alla underordnade paneler i flikar.
 
-Layouten för den överordnade fliken är inställd på Tabbar överst för att konvertera alla underordnade paneler till tabbar. [ Du kan granska panelerna i den interaktiva kommunikationen i redigeringsläget på https://]authorHost[: authorPort]/editor.html/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html.
+Layouten för den överordnade fliken är inställd på Tabbar överst för att konvertera alla underordnade paneler till tabbar. Du kan granska panelerna i den interaktiva kommunikationen i redigeringsläget på `https://[authorHost]:[ authorPort]/editor.html/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html`.
 
 #### Se det själv {#see-it-yourself-16}
 
-[ Gå till interaktiv kommunikation för Blue Chip Growth Fund på https://]publishHost[: publishPort]/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html?wcmmode=disabled. Utforska alla flikar.
+Gå till den interaktiva informationen från Blue Chip Growth Fund på `https://[publishHost]:[ publishPort]/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html?wcmmode=disabled`. Utforska alla flikar.
 
 ### Sarah visar och mejlar PDF-versionen av Blue Chip Growth Fund {#sarah-views-and-emails-the-pdf-version-of-the-blue-chip-growth-fund-page}
 
@@ -820,15 +820,15 @@ Sarah reser till landet i helgen. Hon planerar att diskutera Blue Chip Growth Fu
 
 #### Så här fungerar det {#how-it-works-19}
 
-The Blue Chip Growth Fund protus is an interactive communication. Den har en webb- och PDF-kanal. Den interaktiva kommunikationen integreras med AEM Workflows för att skicka PDF-versionen via e-post. [ Du kan granska arbetsflödesmodellen på https://]authorHost[: authorPort]/editor.html/conf/global/settings/workflow/models/wealthmanagement.html.
+The Blue Chip Growth Fund protus is an interactive communication. Den har en webb- och PDF-kanal. Den interaktiva kommunikationen integreras med AEM Workflows för att skicka PDF-versionen via e-post. Du kan granska arbetsflödesmodellen på `https://[authorHost]:[ authorPort]/editor.html/conf/global/settings/workflow/models/wealthmanagement.html`.
 
 ![förmögenhetsförvaltning](assets/wealth-management.png)
 
 #### Se det själv {#see-it-yourself-17}
 
-[ Ladda ned PDF-versionen genom att gå till Blue Chip Growth Fund (interaktiv kommunikation) https://]publishHost[: publishPort]/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html.
+Ladda ned PDF-versionen genom att gå till Blue Chip Growth Fund interactive communication `https://[publishHost]:[ publishPort]/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html`och trycka på Download PDF.
 
-[ Om du vill skicka PDF via e-post går du till den interaktiva kommunikationen för Blue Chip Growth Fund https://]publishHost[: publishPort]/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html. Ange **fullständigt namn** och **e-postadress**. Klicka på **Skicka e-post**.
+Om du vill skicka PDF via e-post går du till den interaktiva kommunikationen med Blue Chip Growth Fund `https://[publishHost]:[ publishPort]/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html`och trycker på EMAIL PDF. Ange **fullständigt namn** och **e-postadress**. Klicka på **Skicka e-post**.
 
 ## Genomgång av autoförsäkringsprogram {#auto-insurance-application-walkthrough}
 
@@ -849,13 +849,13 @@ Conrad loggar in på AEM-instansen, öppnar kontrollpanelen för automatisk för
 
 #### Så här fungerar det {#how-it-works-20}
 
-Förnyelsekommunikation om försäkringsbrev är en interaktiv kommunikation. Conrad Simms använder Agent UI för att skicka informationen om förnyelse av försäkringsavtal till Sarah. Kommunikationen innehåller utskrift (PDF) och länkar till webbkanalen för den interaktiva kommunikationen. Den interaktiva kommunikationen använder AEM Workflow för att skicka e-postmeddelandet. [ Du kan se arbetsflödet på https://]authorHost[: authorPort]/editor.html/conf/global/settings/workflow/models/we-finance-auto-insurance-renewal.html
+Förnyelsekommunikation om försäkringsbrev är en interaktiv kommunikation. Conrad Simms använder Agent UI för att skicka informationen om förnyelse av försäkringsavtal till Sarah. Kommunikationen innehåller utskrift (PDF) och länkar till webbkanalen för den interaktiva kommunikationen. Den interaktiva kommunikationen använder AEM Workflow för att skicka e-postmeddelandet. Du kan se arbetsflödet på `https://[authorHost]:[ authorPort]/editor.html/conf/global/settings/workflow/models/we-finance-auto-insurance-renewal.html`
 
 ![bilförsäkring-arbetsflöde](assets/auto-insurance-workflow.png)
 
 #### Se det själv {#see-it-yourself-18}
 
-Logga in på **instrumentpanelen** för automatisk försäkring i We.Finance som Conrad Simms (csimms/password). URL:en är https://[publishhost]:[publish]/content/we-finance/global/en/login.html?resource=/content/we-finance/ccdashboard.html. Ange **kund-ID**. Sarah Rose kund-ID är 900001. Klicka på **Förnya princip**. Den interaktiva kommunikationen öppnas i agentgränssnittet. I agentgränssnittet anger du en giltig e-postadress för att skicka e-postmeddelandet med ett policydokument bifogat och klickar på **Skicka**. Ett meddelande, Inskickning initierad, visas på skärmen och sedan visas ett meddelande, Skickat utan fel, om några sekunder. Ett e-postmeddelande med ämnet **Förnyelse** av autoförsäkring skickas till den angivna e-postadressen. Den policy som Sarah Rose erbjuds är en premiepolicy.
+Logga in på **instrumentpanelen** för automatisk försäkring i We.Finance som Conrad Simms (csimms/password). URL:en är `https://[publishhost]:[publishport]/content/we-finance/global/en/login.html?resource=/content/we-finance/ccdashboard.html`. Ange **kund-ID**. Sarah Rose kund-ID är 900001. Klicka på **Förnya princip**. Den interaktiva kommunikationen öppnas i agentgränssnittet. I agentgränssnittet anger du en giltig e-postadress för att skicka e-postmeddelandet med ett policydokument bifogat och klickar på **Skicka**. Ett meddelande, Inskickning initierad, visas på skärmen och sedan visas ett meddelande, Skickat utan fel, om några sekunder. Ett e-postmeddelande med ämnet **Förnyelse** av autoförsäkring skickas till den angivna e-postadressen. Den policy som Sarah Rose erbjuds är en premiepolicy.
 
 Genomgången av bilförsäkringen innehåller även en annan kund, Alison Jones. Alison Jones kund-ID är 900002. När du skickar den interaktiva kommunikationen till Alison Jones skickas en standardpolicy. Skillnaden mellan standardpolicy och premiepolicy är:
 
@@ -863,18 +863,18 @@ Genomgången av bilförsäkringen innehåller även en annan kund, Alison Jones.
 * Standardpolicyn kostar mindre än premiepolicyn.
 * Premiumpolicyn har antistölderbelöning och standardpolicyn har smart rightbelöning
 
-Båda profilerna använder samma interaktiva kommunikation. Avsnitten i profilen ändras eller döljs baserat på villkoret av principtyp. Du kan öppna och granska den interaktiva kommunikationen om förnyelse av autoförsäkring direkt från https://[authorHost]: authorPort]/aem/formdetails.html/content/dam/formsanddocuments/we-Finance/autoInsurance/auto-Insurance-re
+Båda profilerna använder samma interaktiva kommunikation. Avsnitten i profilen ändras eller döljs baserat på villkoret av principtyp. Du kan öppna och granska den interaktiva kommunikationen om förnyelse av autoförsäkring direkt från `https://[authorHost]: authorPort]/aem/formdetails.html/content/dam/formsanddocuments/we-finance/autoinsurance/auto-insurance-renewal`
 
 **Använda Microsoft Dynamics som datakälla**
 
 Referenswebbplatsen innehåller också en interaktiv kommunikation som använder Microsoft Dynamics som datakälla för formulärdatamodellen. Utför följande steg för att konfigurera den interaktiva kommunikationen för genomgången av autoförsäkring:
 
-1. Logga in på https://[author]:[port]/crx/de som administratör.
+1. Logga in på `https://[author]:[port]/crx/de as an administrator`.
 1. Open the `/apps/we-finance/components/ccrui/ccrui.jsp`file.
 1. Ange värdet för `FormFieldRequestParameter`till `/content/dam/formsanddocuments/we-finance/autoinsurance/auto-insurance-renewal-dynamics`
 1. Tryck på **Spara alla**. Referenswebbplatsen är konfigurerad att använda interaktiv kommunikation som använder MS Dynamics som datakälla.
 
-Logga nu in på **Web.Finance Auto Insurance Dashboard** som Conrad Simms (csimms/password). URL:en är https://[publishhost]:[publish]/content/we-finance/global/en/login.html?resource=/content/we-finance/ccdashboard.html. Ange **kund-ID**. Sarah Rose kund-ID är 900001. Klicka på **Förnya princip**. Den interaktiva kommunikationen öppnas i agentgränssnittet. I agentgränssnittet anger du en giltig e-postadress för att skicka e-postmeddelandet med ett policydokument bifogat och klickar på **Skicka**. Ett meddelande, Inskickning initierad, visas på skärmen och sedan visas ett meddelande, Skickat utan fel, om några sekunder. Ett e-postmeddelande med ämnet **Förnyelse** av autoförsäkring skickas till den angivna e-postadressen.
+Logga nu in på **Web.Finance Auto Insurance Dashboard** som Conrad Simms (csimms/password). URL:en är `https://[publishhost]:[publishport]/content/we-finance/global/en/login.html?resource=/content/we-finance/ccdashboard.html`. Ange **kund-ID**. Sarah Rose kund-ID är 900001. Klicka på **Förnya princip**. Den interaktiva kommunikationen öppnas i agentgränssnittet. I agentgränssnittet anger du en giltig e-postadress för att skicka e-postmeddelandet med ett policydokument bifogat och klickar på **Skicka**. Ett meddelande, Inskickning initierad, visas på skärmen och sedan visas ett meddelande, Skickat utan fel, om några sekunder. Ett e-postmeddelande med ämnet **Förnyelse** av autoförsäkring skickas till den angivna e-postadressen.
 
 >[!NOTE]
 >
@@ -902,7 +902,7 @@ Du måste ha fått ett e-postmeddelande med en bifogad PDF. PDF-filen är en uts
 
 Knappen **Förnya nu** i e-postmeddelandet dirigerar Sarah till webbversionen av policyn. Du kan gå till följande URL:
 
-https://[publishServer]:[publishPort]/content/document.html?schema=fdm&amp;documentId=/content/forms/af/we-finance/autoinsurance/auto-insurance-renewal/channels/web.html&amp;customerId=90001
+`https://[publishServer]:[publishPort]/content/document.html?schema=fdm&documentId=/content/forms/af/we-finance/autoinsurance/auto-insurance-renewal/channels/web.html&customerId=900001`
 
 Du kan kontrollera den detaljerade sammanfattningen av förnyelsen av din automatiska försäkring och klicka på **Förnya nu** längst ned på sidan.
 
@@ -920,6 +920,6 @@ Knappen Förnya nu dirigerar Sarah till betalningssidan. Betalningssidan är ett
 
 Klicka på **Förnya nu** för att nå betalningssidan. Fyll i kreditkortsinformationen och klicka på **Gör betalning**. Du kan nå betalningssidan i utvecklingsinstansen på:
 
-https://[authorServer]:[authorPort]/content/document.html?documentId=/content/forms/af/we-finance/credit-card/ccbillpayment.html&amp;schema=fdm&amp;customerId=90001
+`https://[authorServer]:[authorPort]/content/document.html?documentId=/content/forms/af/we-finance/credit-card/ccbillpayment.html&schema=fdm&customerId=900001`
 
 Tacka-meddelandet visas när du har klickat på knappen Gör betalning.
