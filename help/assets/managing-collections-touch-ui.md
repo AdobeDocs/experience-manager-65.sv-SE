@@ -1,35 +1,31 @@
 ---
-title: Hantera resurssamlingar
+title: Hantera samlingar av digitala resurser
 description: Lär dig mer om hur du hanterar samlingar med resurser, som att skapa, visa, ta bort, redigera och hämta samlingar.
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
+source-git-commit: 9af0ee0ff9d1089b6cf09c52f7f606cce6775d72
 
 ---
 
 
 # Hantera samlingar {#managing-collections}
 
-En samling är en uppsättning resurser i Adobe Experience Manager (AEM) Assets. Använd samlingar för att dela resurser mellan användare.
+En samling är en uppsättning resurser i Adobe Experience Manager Assets. Använd samlingar för att dela resurser mellan användare. Uppsättningen kan vara en statisk samling eller en dynamisk samling som baseras på sökresultat.
 
-* En samling kan innehålla resurser från olika platser.
-* Du kan dela samlingar med olika användare som har olika behörighetsnivåer, t.ex. visning, redigering och så vidare.
+Till skillnad från mappar kan en samling innehålla resurser från olika platser. Du kan dela samlingar med olika användare som har olika behörighetsnivåer, t.ex. visning, redigering och så vidare.
 
 Du kan dela flera samlingar med en användare. Varje samling innehåller referenser till resurser. Resursernas referensintegritet bevaras i alla samlingar.
 
 Samlingar är av följande typer, baserat på det sätt som de samlar resurser på:
 
-* En samling som innehåller en statisk referenslista med resurser, mappar och andra samlingar
+* En samling som innehåller en statisk referenslista med resurser, mappar och andra samlingar.
 
-* En smart samling som dynamiskt inkluderar resurser baserat på sökvillkor
+* En smart samling som dynamiskt inkluderar resurser baserat på sökvillkor.
 
-## Navigera i samlingskonsolen {#navigating-the-collections-console}
+## Åtkomst till samlingskonsolen {#navigating-the-collections-console}
 
-Så här öppnar du konsolen **[!UICONTROL Samlingar]** :
-
-1. Tryck eller klicka på AEM-logotypen.
-1. Gå till **[!UICONTROL Resurser]** > **[!UICONTROL Samlingar]** på navigeringssidan. Konsolen **[!UICONTROL Samlingar]** visas.
+Om du vill öppna **[!UICONTROL Samlingar]** trycker eller klickar du på Experience Manager-logotypen. Gå till **[!UICONTROL Resurser]** > **[!UICONTROL Samlingar]** på navigeringssidan.
 
 ## Skapa en samling {#creating-a-collection}
 
@@ -53,26 +49,18 @@ Du kan skapa en samling med statiska referenser, t.ex. en samling med referenser
 
    >[!NOTE]
    >
-   >Med AEM Resurser kan du skapa granskningsåtgärder för en samling på samma sätt som du skapar granskningsåtgärder för en resursmapp.
+   >Med Experience Manager Assets kan du skapa granskningsåtgärder för en samling på samma sätt som du skapar granskningsåtgärder för en resursmapp.
 
-   Om du vill lägga till resurser i samlingen går du till användargränssnittet Resurser. Mer information finns i [Lägga till resurser i en samling](/help/assets/managing-collections-touch-ui.md#adding-assets-to-a-collection).
+   Om du vill lägga till resurser i samlingen går du till användargränssnittet Resurser. Mer information finns i [Lägga till resurser i en samling](#adding-assets-to-a-collection).
 
 ### Skapa samlingar med dropzone {#create-collections-using-dropzone}
 
 Du kan dra resurser från resursgränssnittet till en samling. Du kan också skapa en kopia av en samling och dra resurserna dit.
 
-1. I resursgränssnittet väljer du de resurser som du vill lägga till i en samling.
-1. Dra resurserna till zonen **[!UICONTROL Släpp i samling]** .
+1. I resursanvändargränssnittet väljer du de resurser som du vill lägga till i en samling.
+1. Dra resurserna till zonen **[!UICONTROL Släpp i samling]** . Du kan också trycka/klicka på ikonen **[!UICONTROL Till samling]** i verktygsfältet.
 
    ![drop_in_collection](assets/drop_in_collection.png)
-
-   Släpp musknappen när Dropzone aktiveras och etiketten ändras till **[!UICONTROL Släpp för att lägga]** till.
-
-   ![drop_to_add](assets/drop_to_add.png)
-
-   Du kan också trycka/klicka på ikonen **[!UICONTROL Till samling]** i verktygsfältet.
-
-   ![chlimage_1-6](assets/chlimage_1-109.png)
 
 1. Tryck/klicka på ikonen **[!UICONTROL Skapa samling]** i verktygsfältet på sidan **[!UICONTROL Lägg till i samling]** .
 
@@ -85,23 +73,25 @@ Du kan dra resurser från resursgränssnittet till en samling. Du kan också ska
 
 En smart samling använder ett sökvillkor för att dynamiskt fylla i resurser. Du kan skapa en smart samling med enbart filer och inte med mappar eller filer och mappar.
 
-1. Navigera till resursgränssnittet och tryck/klicka på **[!UICONTROL sökikonen]** .
-1. Ange sökordet i rutan Omnissearch och tryck på Retur. Tryck/klicka på ikonen GlobalNav för att visa filterpanelen och använda ett sökfilter från sökpanelen.
+Så här skapar du en smart samling:
+
+1. Navigera till användargränssnittet Resurser och tryck/klicka på sökikonen.
+
+1. Ange sökordet i rutan Omnissearch och tryck på Retur. Öppna filterpanelen och använd ett sökfilter.
+
 1. I listan **[!UICONTROL Filer och mappar]** väljer du **[!UICONTROL Filer]**.
 
    ![files_option](assets/files_option.png)
 
 1. Tryck/klicka på **[!UICONTROL Spara smart samling]**.
+
 1. Ange ett namn för samlingen. Välj **[!UICONTROL Offentlig]** om du vill lägga till gruppen DAM-användare med visningsprogramrollen i den smarta samlingen.
 
    ![save_collection](assets/save_collection.png)
 
    >[!NOTE]
    >
-   >Om du väljer **[!UICONTROL Offentlig]** blir den smarta samlingen tillgänglig för alla med rollen Ägare när du har skapat den.
-   >
-   >
-   >Om du avmarkerar alternativet **[!UICONTROL Offentlig]** är DAM-användargruppen inte längre kopplad till den smarta samlingen.
+   >Om du väljer **[!UICONTROL Offentlig]** blir den smarta samlingen tillgänglig för alla med ägarrollen när du har skapat den. Om du avmarkerar alternativet **[!UICONTROL Offentlig]** är DAM-användargruppen inte längre kopplad till den smarta samlingen.
 
 1. Tryck/klicka på **[!UICONTROL Spara]** för att skapa den smarta samlingen och stäng sedan meddelanderutan för att slutföra processen.
 
@@ -115,27 +105,23 @@ En smart samling använder ett sökvillkor för att dynamiskt fylla i resurser. 
 
 ## Lägga till resurser i en samling {#adding-assets-to-a-collection}
 
-Du kan lägga till resurser i en samling som innehåller en lista med refererade resurser eller mappar.
+Du kan lägga till resurser i en samling som innehåller en lista med refererade resurser eller mappar. Smarta samlingar använder en sökfråga för att fylla i resurser. Statiska referenser till resurser och mappar kan därför inte användas för dem.
 
->[!NOTE]
->
->Smarta samlingar använder en sökfråga för att fylla i resurser. Statiska referenser till resurser och mappar kan därför inte användas för dem.
-
-1. I resursgränssnittet navigerar du till platsen för resursen som du vill lägga till i en samling.
-1. Markera resursen och tryck/klicka på ikonen **[!UICONTROL Till samling]** i verktygsfältet.
+1. I resursanvändargränssnittet markerar du resursen och trycker/klickar på ikonen **[!UICONTROL Till samling]** i verktygsfältet.
 
    ![chlimage_1-8](assets/chlimage_1-113.png)
 
-   Du kan också dra resursen till zonen **[!UICONTROL Släpp i samling]** . Släpp musknappen när släppzonen blir aktiv och etiketten ändras till **[!UICONTROL Släpp för att lägga]** till.
+   Du kan också dra resursen till området **[!UICONTROL Släpp i samling]** i gränssnittet. Lägg till resurserna när regionens etikett ändras till **[!UICONTROL Släpp för att lägga]** till.
 
 1. På sidan **[!UICONTROL Lägg till i samling]** väljer du den samling du vill lägga till resursen i.
+
 1. Tryck/klicka på **[!UICONTROL Lägg till]** och stäng sedan bekräftelsemeddelandet. Resursen läggs till i samlingen.
 
 ## Redigera en smart samling {#editing-a-smart-collection}
 
 Smarta samlingar skapas genom att en sökning sparas så att du kan ändra deras innehåll genom att ändra sökparametrarna för den [sparade sökningen](#editing-saved-searches).
 
-1. I resursgränssnittet: tryck/klicka på ikonen **[!UICONTROL Sök]** i verktygsfältet.
+1. I resursanvändargränssnittet: tryck/klicka på sökikonen i verktygsfältet.
 
    ![chlimage_1-9](assets/chlimage_1-110.png)
 
@@ -161,22 +147,36 @@ Smarta samlingar skapas genom att en sökning sparas så att du kan ändra deras
 Samlingsmetadata omfattar data om samlingen, inklusive taggar som läggs till.
 
 1. Välj en samling i konsolen Samlingar och tryck/klicka på ikonen **[!UICONTROL Egenskaper]** i verktygsfältet.
-1. På sidan Metadata för **[!UICONTROL samling]** kan du visa samlingsmetadata från flikarna **[!UICONTROL Grundläggande]** och **Avancerat** .
+1. På sidan Metadata för **[!UICONTROL samling]** kan du visa samlingsmetadata från flikarna **[!UICONTROL Grundläggande]** och **[!UICONTROL Avancerat]** .
 1. Ändra metadata efter behov och tryck/klicka sedan på **[!UICONTROL Spara och stäng]** i verktygsfältet för att spara ändringarna.
 
-### Redigera samlingsmetadata {#editing-collection-metadata-in-bulk}
+## Redigera metadata för flera samlingar samtidigt {#editing-collection-metadata-in-bulk}
 
 Du kan redigera metadata för flera samlingar samtidigt. Med den här funktionen kan du snabbt replikera vanliga metadata i flera samlingar.
 
 1. I konsolen Samlingar väljer du två eller flera samlingar som du vill redigera metadata för.
 1. Tryck/klicka på ikonen **[!UICONTROL Egenskaper]** i verktygsfältet.
 1. På sidan Metadata för **[!UICONTROL samling]** redigerar du metadata på flikarna **[!UICONTROL Grundläggande]** och **[!UICONTROL Avancerat]** .
-1. Tryck/klicka på **[!UICONTROL Spara och stäng]** i verktygsfältet och stäng sedan bekräftelsedialogrutan för att slutföra processen.
-1. Om du vill lägga till nya metadata med befintliga metadata väljer du **[!UICONTROL Lägga till]**. Om du inte markerar det här alternativet ersätter de nya metadata som finns i fälten. Tryck/klicka på **[!UICONTROL Skicka]**.
+1. Om du vill visa metadataegenskaperna för en viss samling avmarkerar du de återstående samlingarna i samlingslistan. Metadataredigeringsfälten fylls i med metadata för den aktuella samlingen.
 
    >[!NOTE]
    >
-   >Läget Lägg till fungerar bara för fält som kan innehålla flera värden. För fält som bara kan innehålla ett värde läggs de nya metadata inte till i det befintliga värdet i fältet, även om du väljer **[!UICONTROL Lägg till]**.
+   >* På sidan med samlingsegenskaper kan du ta bort samlingar från listan med samlingar genom att avmarkera dem. I samlingslistan är alla samlingar markerade som standard. Metadata för samlingar som du tar bort uppdateras inte.
+   >* Överst i listan markerar du kryssrutan vid **[!UICONTROL Titel]** för att växla mellan att markera samlingarna och rensa listan.
+
+
+1. Tryck/klicka på **[!UICONTROL Spara och stäng]** i verktygsfältet och stäng sedan bekräftelsedialogrutan för att slutföra processen.
+1. Om du vill lägga till nya metadata med befintliga metadata väljer du **[!UICONTROL Lägg till läge]**. Om du inte markerar det här alternativet ersätter de nya metadata som finns i fälten. Tryck/klicka på **[!UICONTROL Skicka]**.
+
+   >[!NOTE]
+   >
+   >De metadata som du lägger till för de valda samlingarna skriver över tidigare metadata för dessa samlingar. Använd [!UICONTROL tilläggsläget] för att lägga till nya värden till befintliga metadata i fälten som kan innehålla flera värden. Enkelvärdesfält skrivs alltid över. Alla taggar som du lägger till i fältet [!UICONTROL Taggar] läggs till i den befintliga listan med taggar i metadata.
+
+Om du vill anpassa [!UICONTROL egenskapssidan för] metadata, inklusive lägga till, ändra eller ta bort metadataegenskaper, använder du schemaredigeraren.
+
+>[!TIP]
+>
+>Massredigeringsmetoden fungerar för resurser som är tillgängliga i en samling. För resurser som är tillgängliga i olika mappar eller som matchar ett gemensamt villkor är det möjligt att [uppdatera metadata satsvis efter sökning](/help/assets/search-assets.md#metadataupdates).
 
 ## Sök i samlingar {#searching-collections}
 
@@ -197,7 +197,7 @@ Du kan redigera samlingsinställningar, till exempel rubrik och beskrivning, ell
 1. Markera en samling och tryck/klicka på ikonen **[!UICONTROL Inställningar]** i verktygsfältet. Du kan även använda **[!UICONTROL snabbåtgärden Inställningar]** från samlingsminiatyrbilden.
 1. Ändra samlingsinställningarna på sidan **[!UICONTROL Samlingsinställningar]** . Du kan till exempel ändra samlingens rubrik, beskrivningar, medlemmar och behörigheter enligt beskrivningen i [Lägga till samlingar](#creating-a-collection).
 
-1. Tryck/klicka på **[!UICONTROL Spara]** för att spara ändringarna.
+1. Spara ändringarna genom att trycka/klicka på **[!UICONTROL Spara]**.
 
 ## Ta bort en samling {#deleting-a-collection}
 
@@ -209,7 +209,7 @@ Du kan redigera samlingsinställningar, till exempel rubrik och beskrivning, ell
 
    >[!NOTE]
    >
-   >Du kan också identifiera smarta samlingar genom att [ta bort sparade sökningar](#deleting-saved-searches).
+   >Du kan också ta bort smarta samlingar genom att [ta bort sparade sökningar](#deleting-saved-searches).
 
 ## Hämta en samling {#downloading-a-collection}
 
@@ -225,9 +225,7 @@ När du hämtar en samling hämtas hela resurshierarkin i samlingen, inklusive m
 
 Du kan lägga till en samling i en annan samling och på så sätt skapa en kapslad samling.
 
-1. Välj önskad samling eller grupp med samlingar i konsolen Samlingar och tryck eller klicka på ikonen **[!UICONTROL Till samling]** i verktygsfältet.
-
-   ![chlimage_1-12](assets/chlimage_1-109.png)
+1. Välj önskad samling eller grupp med samlingar i konsolen Samlingar och tryck eller klicka på **[!UICONTROL Till samling]** i verktygsfältet.
 
 1. På sidan **[!UICONTROL Lägg till i samling]** väljer du den samling där samlingen ska läggas till.
 
@@ -243,36 +241,33 @@ Du kan lägga till en samling i en annan samling och på så sätt skapa en kaps
 
 ## Sparade sökningar {#saved-searches}
 
-I resursgränssnittet kan du söka efter eller filtrera resurser baserat på vissa regler, sökvillkor eller anpassade sökfaktorer. Om du sparar dem som **[!UICONTROL sparade sökningar]** kan du komma åt dem senare från listan **[!UICONTROL Sparade sökningar]** på panelen Filter. När du skapar en sparad sökning skapas även en smart samling.
+I användargränssnittet Resurser kan du söka efter eller filtrera resurser baserat på vissa regler, sökvillkor eller anpassade sökfaktorer. Om du sparar dem som **[!UICONTROL sparade sökningar]** kan du komma åt dem senare från listan **[!UICONTROL Sparade sökningar]** på panelen Filter. När du skapar en sparad sökning skapas även en smart samling.
 
 ![saved_searches_list](assets/saved_searches_list.png)
 
-### Skapa sparade sökningar {#creating-saved-searches}
-
-Sparade sökningar skapas när du skapar en smart samling. Smarta samlingar läggs automatiskt till i listan **[!UICONTROL Sparade sökningar]** . Frågan om sparade sökningar för samlingen sparas i egenskapen `dam:query` crxde vid den relativa platsen `/content/dam/collections/`.
+Sparade sökningar skapas när du skapar en smart samling. Smarta samlingar läggs automatiskt till i listan **[!UICONTROL Sparade sökningar]** . Frågan om sparade sökningar för samlingen sparas i egenskapen `dam:query` CRXDE på den relativa platsen `/content/dam/collections/`.
 
 >[!NOTE]
 >
 >Du kan dela smarta samlingar på samma sätt som du delar statiska samlingar.
 
-### Redigera sparade sökningar {#editing-saved-searches}
+Att redigera sparade sökningar är detsamma som att redigera smarta samlingar. Mer information finns i [Redigera en smart samling](#editing-a-smart-collection).
 
-Att redigera sparade sökningar är detsamma som att redigera smarta samlingar. Mer information finns i [Redigera en smart samling](/help/assets/managing-collections-touch-ui.md#editing-a-smart-collection).
+Så här tar du bort sparade sökningar:
 
-### Ta bort sparade sökningar {#deleting-saved-searches}
-
-1. Navigera till resursgränssnittet och tryck/klicka på ikonen Sök i verktygsfältet.
+1. I resursanvändargränssnittet: tryck/klicka på sökikonen i verktygsfältet.
 
    ![chlimage_1-13](assets/chlimage_1-114.png)
 
-1. Tryck på Retur med markören i rutan Omni Search.
+1. Tryck på Retur när markören är i omsökningsfältet.
+
 1. Klicka på eller tryck på ikonen GlobalNav för att visa filterpanelen.
 
-1. I listan **[!UICONTROL Sparade sökningar]** trycker du på **[!UICONTROL Ta bort]** bredvid den smarta samling som du vill ta bort.
+1. I listan **[!UICONTROL Sparade sökningar]** : tryck/klicka på **[!UICONTROL Ta bort]** bredvid den smarta samling som du vill ta bort.
 
    ![select_smart_collection-1](assets/select_smart_collection-1.png)
 
-1. Ta bort den sparade sökningen genom att trycka på **[!UICONTROL Delete]** i dialogrutan.
+1. Tryck/klicka på **[!UICONTROL Ta bort]** i dialogrutan för att ta bort den sparade sökningen.
 
 ## Köra ett arbetsflöde i en samling {#running-a-workflow-on-a-collection}
 
@@ -280,7 +275,7 @@ Du kan köra ett arbetsflöde för resurserna i en samling. Om samlingen innehå
 
 1. Välj en samling som du vill köra ett arbetsflöde för i samlingskonsolen.
 1. Tryck/klicka på ikonen GlobalNav och välj **[!UICONTROL Tidslinje]** i listan.
-1. Klicka eller tryck på ikonen Cirkumflex längst ned på tidslinjen och tryck sedan på **[!UICONTROL Starta arbetsflöde]**.
+1. Klicka på eller tryck på ikonen Cirkumflex längst ned på tidslinjen och tryck/klicka sedan på **[!UICONTROL Starta arbetsflöde]**.
 
    ![chlimage_1-14](assets/chlimage_1-137.png)
 
@@ -290,7 +285,6 @@ Du kan köra ett arbetsflöde för resurserna i en samling. Om samlingen innehå
 
 >[!MORELIKETHIS]
 >
->* [Konfigurera e-postmeddelanden för AEM Assets](/help/sites-administering/notification.md#assetsconfig)
->* [Redigera metadataegenskaper för flera samlingar](/help/assets/managing-multiple-assets.md)
->* [Skapa en granskningsuppgift för samlingar](/help/assets/bulk-approval.md)
+>* [Konfigurera e-postmeddelanden för Experience Manager Assets](/help/sites-administering/notification.md#assetsconfig)
+>* [Skapa en granskningsuppgift för samlingar](bulk-approval.md)
 
