@@ -4,7 +4,7 @@ description: Lär dig hur du hittar de nödvändiga resurserna i AEM med hjälp 
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b0ae7552a6dc0476a682bdbe715aac4b42315ff6
+source-git-commit: faea8ebd2afea9ade9900a8e8b1e6cf3169c349d
 
 ---
 
@@ -15,7 +15,7 @@ Adobe Experience Manager Assets (AEM) innehåller robusta metoder för resurside
 
 AEM stöder följande användningsfall och den här artikeln beskriver användning, begrepp, konfigurationer, begränsningar och felsökning för dessa användningsområden.
 
-| Sök resurser | Konfiguration och administration | Arbeta med sökresultat |
+| Söka efter material | Konfiguration och administration | Arbeta med sökresultat |
 |---|---|---|
 | [Grundläggande sökningar](#searchbasics) | [Sökindex](#searchindex) | [Sortera resultat](#sort) |
 | [Förstå sökgränssnittet](#searchui) | [Visuell sökning eller likhetssökning](#configvisualsearch) | [Kontrollera egenskaper och metadata för en resurs](#checkinfo) |
@@ -435,7 +435,7 @@ Du kan hämta de sökda resurserna och deras återgivningar på samma sätt som 
 
 Det går att göra satsvisa uppdateringar av de gemensamma metadatafälten för flera resurser. Välj en eller flera resurser från sökresultaten. Klicka på **[!UICONTROL Egenskaper]** i verktygsfältet och uppdatera metadata efter behov. Klicka på **[!UICONTROL Spara och stäng]** när du är klar. De befintliga metadata i de uppdaterade fälten skrivs över.
 
-För resurser som är tillgängliga i en enda mapp eller en samling är det enklare att [uppdatera metadata gruppvis](/help/assets/managing-multiple-assets.md). För resurser som är tillgängliga i olika mappar eller matchar ett gemensamt villkor är det snabbare att uppdatera metadata i grupp via sökning.
+För resurser som är tillgängliga i en enda mapp eller en samling är det enklare att [uppdatera metadata gruppvis](/help/assets/managing-multiple-assets.md) utan att använda sökfunktionen. För resurser som är tillgängliga i olika mappar eller matchar ett gemensamt villkor är det snabbare att uppdatera metadata i grupp via sökning.
 
 ### Smarta samlingar {#collections-1}
 
