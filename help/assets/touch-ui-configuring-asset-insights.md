@@ -3,7 +3,7 @@ title: Konfigurera tillgångsinsikter
 description: Konfigurera tillgångsinsikter i AEM Resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 6d4f79c126a3c44666e2a42b2246c964813d24ab
+source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 
 ---
 
@@ -24,7 +24,6 @@ Adobe Experience Manager (AEM) Assets hämtar användningsdata om AEM-resurser s
 1. Välj ett datacenter i guiden och ange dina autentiseringsuppgifter, inklusive namnet på din organisation, användarnamn och delad hemlighet.
 
    ![Konfigurera Adobe Analytics för Assets Insights i AEM](assets/insights_config2.png)
-
 
    *Bild:Konfigurera Adobe Analytics för Assets Insights i AEM*
 
