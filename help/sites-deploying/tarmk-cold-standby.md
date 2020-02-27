@@ -11,7 +11,7 @@ topic-tags: deploying
 discoiquuid: 9559e837-a87e-4ee7-8ca6-13b42c74e6bf
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 29328ff7fde4ed0e7f9728af1be911133259dc6c
+source-git-commit: c5e6098b62ff7e3e787b5f0f3c3b32a35e3981c6
 
 ---
 
@@ -362,8 +362,10 @@ Dessutom kan information för upp till 10 klienter (standby-instanser) som är a
 
 ## Underhåll av vänteläge, kall {#cold-standby-repository-maintenance}
 
+### Revision Cleanup {#revision-clean}
+
 >[!NOTE]
-Om du kör rensning [av](/help/sites-deploying/revision-cleanup.md) onlineändringar på den primära instansen behövs inte den manuella proceduren nedan. Dessutom, om du använder rensning av onlineändringar, kommer åtgärden i standby-instansen att utföras automatiskt `cleanup ()` .
+Om du kör rensning [av](/help/sites-deploying/revision-cleanup.md) onlineändringar på den primära instansen behövs inte den manuella proceduren nedan. Om du använder onlinesortering för revision utförs dessutom åtgärden automatiskt på standby-instansen `cleanup ()` .
 
 >[!NOTE]
 Kör inte någon rensning av offlineversioner i vänteläge. Den behövs inte och minskar inte segmentlagerstorleken.
