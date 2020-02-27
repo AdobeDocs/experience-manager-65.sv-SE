@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: cd3b979f-53d4-4274-b4eb-a9533329192a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 56006a1f49e4d357cd7ee44a4a1dd1af7189e70a
 
 ---
 
@@ -41,7 +41,7 @@ Om villkoren inte uppfylls rekommenderar vi en aktiverings-/standby-distribution
 
 ### Minimal MongoDB-distribution för AEM {#minimal-mongodb-deployment-for-aem}
 
-Nedan visas en minimal driftsättning för AEM på MongoDB. För enkelhetens skull har SSL-terminering och HTTP-proxykomponenter generaliserats. Den består av en enda MongoBD-replikuppsättning, med en primär och två sekundära.
+Nedan visas en minimal driftsättning för AEM på MongoDB. För enkelhetens skull har SSL-terminering och HTTP-proxykomponenter generaliserats. Den består av en enda MongoDB-replikuppsättning, med en primär och två sekundära.
 
 ![chlimage_1-4](assets/chlimage_1-4.png)
 
@@ -55,7 +55,7 @@ I den här distributionen krävs alla komponenter för en lyckad implementering.
 
 En lista över vilka operativsystem som stöds för AEM 6 finns på sidan [](/help/sites-deploying/technical-requirements.md)Tekniska krav.
 
-### Miljö {#environments}
+### Miljöer {#environments}
 
 Virtualiserade miljöer stöds förutsatt att det finns god kommunikation mellan de olika tekniska team som kör projektet. Detta omfattar teamet som kör AEM, teamet som äger operativsystemet och teamet som hanterar den virtualiserade infrastrukturen.
 
