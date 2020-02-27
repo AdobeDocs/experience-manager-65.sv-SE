@@ -1,14 +1,14 @@
 ---
-title: Granska mappresurser och samlingar
+title: Granska material i mappar och samlingar
 description: Ställ in granskningsarbetsflöden för material i en mapp eller en samling och dela dem med granskare eller kreativa partners för att få feedback.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
+source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 
 ---
 
 
-# Granska mappresurser och samlingar {#review-folder-assets-and-collections}
+# Granska material i mappar och samlingar {#review-folder-assets-and-collections}
 
 Ställ in granskningsarbetsflöden för material i en mapp eller en samling och dela dem med granskare eller kreativa partners för att få feedback.
 
@@ -102,7 +102,9 @@ När granskaren har slutfört granskningen (godkänner eller avvisar resurser) f
 1. Navigera till samlingskonsolen och öppna samlingen. Ikonerna för godkännandestatus för resurserna visas både i kort- och listvyn.
 
    ![collection_reviewstatuscardview](assets/collection_reviewstatuscardview.png)
+
    *Bild:Kortvy*
 
    ![collection_reviewstatuslistview](assets/collection_reviewstatuslistview.png)
+
    *Bild:Listvy*
