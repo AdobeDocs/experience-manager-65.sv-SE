@@ -3,12 +3,12 @@ title: Hantera Adobe Stock-mediefiler i AEM Resurser
 description: Sök, hämta, licensiera och hantera Adobe Stock-mediefiler inifrån AEM. Använd de licensierade mediefilerna som andra digitala resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 70a88085a0fd6e949974aa7f1f92fdc3def3d98e
+source-git-commit: 62e82b6da2a5f961acf8cbc30ad29b3c25b1ecef
 
 ---
 
 
-# Använda Adobe Stock-mediefiler i AEM Resurser {#use-adobe-stock-assets-in-aem-assets}
+# Use Adobe Stock assets in AEM Assets {#use-adobe-stock-assets-in-aem-assets}
 
 Organisationer kan integrera sin Adobe Stock Enterprise-plan med AEM Assets för att säkerställa att licensierade mediefiler finns tillgängliga i stor omfattning för kreativa projekt och marknadsföringsprojekt, med de kraftfulla mediehanteringsfunktionerna i AEM.
 
@@ -16,7 +16,7 @@ Adobe Stock ger designers och företag tillgång till miljontals utvalda och roy
 
 ## Förutsättningar {#prerequisites}
 
-Integreringen kräver en Adobe Stock-plan [för](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html) företag och AEM 6.5 eller senare. Mer information om AEM 6.5 Service Pack finns i [versionsinformationen](/help/release-notes/sp-release-notes.md).
+Integreringen kräver en Adobe Stock-plan [för](https://stockenterprise.adobe.com/) företag och AEM 6.5 eller senare. Mer information om AEM 6.5 Service Pack finns i [versionsinformationen](/help/release-notes/sp-release-notes.md).
 
 ## Integrera AEM och Adobe Stock {#integrate-aem-and-adobe-stock}
 
@@ -52,7 +52,9 @@ Med den här funktionen kan organisationer tillåta sina användare att arbeta m
 
 När en Adobe Stock-mediefil har licensierats i AEM kan den användas och hanteras som en vanlig mediefil. I AEM kan användarna söka efter och förhandsgranska resurserna; kopiera och publicera tillgångarna, dela tillgångarna på varumärkesportalen, få tillgång till och använda materialet via AEM-datorprogrammet, och så vidare.
 
-![Sök efter Adobe Stock-mediefiler och filtrera resultat från din AEM-arbetsyta](assets/adobe-stock-search-results-workspace.png)*: Sök efter Adobe Stock-resurser och filtrera resultat från din AEM-arbetsyta*
+![Sök efter Adobe Stock-resurser och filtrera resultat från din AEM-arbetsyta](assets/adobe-stock-search-results-workspace.png)
+
+*Bild: Sök efter Adobe Stock-resurser och filtrera resultat från din AEM-arbetsyta*
 
 **** S. Sök efter resurser som liknar de resurser vars Adobe Stock ID anges. **** B. Sök efter resurser som matchar ditt val av form eller orientering. **************** C.**Sök efter en av de resurstyper som stöds** D. Öppna eller dölj filterrutan **E. Licensiera och spara den valda resursen i AEM** F. Spara resursen i AEM med vattenstämpel **G. Utforska resurser på Adobe Stock-webbplatsen som liknar den valda resursen** H. Visa de valda resurserna på Adobe Stock-webbplatsen **I. Antal valda resurser från sökresultaten** J. Växla mellan kortvyn och listvyn
 
@@ -70,7 +72,9 @@ Du kan också börja skriva `Location: Adobe Stock` i sökfältet och välja Ado
 >
 >Resurser som söks från Adobe Stock visas bara i AEM. Adobe Stock-mediefiler hämtas och lagras i AEM-databasen först när en användare antingen [sparar en mediefil](/help/assets/aem-assets-adobe-stock.md#saveassets) eller [licensierar en mediefil](/help/assets/aem-assets-adobe-stock.md#licenseassets). Resurser som redan lagras i AEM visas och markeras för att underlätta referens och åtkomst. Dessutom sparas sådana resurser med ytterligare metadata som anger källan som Adobe Stock.
 
-![Sökfilter i AEM och markerade Adobe Stock-resurser i sökresultat](assets/aem-search-filters2.jpg)*Bild: Sök efter filter i AEM och markerade Adobe Stock-mediefiler i sökresultaten*
+![Sök efter filter i AEM och markerade Adobe Stock-mediefiler i sökresultaten](assets/aem-search-filters2.jpg)
+
+*Bild: Sök efter filter i AEM och markerade Adobe Stock-mediefiler i sökresultaten*
 
 ### Spara och visa nödvändiga resurser {#saveassets}
 
@@ -86,7 +90,9 @@ Nästa gång du söker efter resurser markeras de sparade resurserna med ett mä
 
 Användare kan licensiera Adobe Stock-mediefiler genom att använda kvoten för deras Adobe Stock Enterprise-plan. När du licensierar en mediefil sparas den utan vattenstämpel och är tillgänglig för sökning och användning i AEM Resurser.
 
-![Dialogruta där du kan licensiera och spara Adobe Stock-mediefiler i AEM Assets](assets/aem-stock_licenseandsave.jpg)*Bild: Dialogruta där du kan licensiera och spara Adobe Stock-mediefiler i AEM Resurser*
+![Dialogruta där du kan licensiera och spara Adobe Stock-mediefiler i AEM Resurser](assets/aem-stock_licenseandsave.jpg)
+
+*Bild: Dialogruta där du kan licensiera och spara Adobe Stock-mediefiler i AEM Resurser*
 
 ### Få åtkomst till metadata och resursegenskaper {#access-metadata-and-asset-properties}
 
@@ -94,7 +100,9 @@ Användare kan komma åt och förhandsgranska metadata, inklusive Adobe Stock-me
 
 Användarna kan se egenskaperna för både, licensierade och olicensierade resurser.
 
-![Visa och öppna metadata och licensreferenser för sparade resurser](assets/metadata_properties.jpg)*Bild: Visa och få tillgång till metadata och licensreferenser för sparade resurser*
+![Visa och få tillgång till metadata och licensreferenser för sparade resurser](assets/metadata_properties.jpg)
+
+*Bild: Visa och få tillgång till metadata och licensreferenser för sparade resurser*
 
 ## Kända begränsningar {#known-limitations}
 
