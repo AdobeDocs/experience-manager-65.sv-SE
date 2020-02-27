@@ -3,7 +3,7 @@ title: Överlappande metadata
 description: I den här artikeln beskrivs hur du definierar överlappande metadata för resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
+source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 
 ---
 
@@ -104,7 +104,9 @@ Oavsett vilken resurstyp du väljer visas copyrightinformationen som ett obligat
 1. Navigera till mappen som du tillämpade metadatamodeller på och öppna egenskapssidan för en resurs. Beroende på vad du väljer i fältet Resurstyp visas relevanta överlappande metadatafält.
 
    ![Överlappande metadata för videoresurs](assets/video_asset.png)
+
    *Bild: Överlappande metadata för en video*
 
    ![Överlappande metadata för dokumentresurs](assets/doc_type_fields.png)
+
    *Bild: Överlappande metadata för ett dokument*
