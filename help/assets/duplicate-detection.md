@@ -3,7 +3,7 @@ title: Aktivera identifiering av dubblettresurser
 description: Lär dig hur du aktiverar identifiering av dubblettresurser i AEM.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 07c1a4102539ba4678c55dee3a4882101e39864f
+source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 
 ---
 
@@ -17,7 +17,6 @@ Om du försöker överföra en resurs som finns i Adobe Experience Manager-resur
 1. Välj alternativet **[!UICONTROL Identifiera dubbletter]** och klicka/tryck på **[!UICONTROL Spara]**.
 
    ![Välj alternativet Identifiera dubblett i serverleten](assets/chlimage_1-377.png)
-
 
    *Bild: Välj alternativet Identifiera dubblett i serverleten*
 
