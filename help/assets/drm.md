@@ -3,12 +3,12 @@ title: Digital Rights Management i Assets
 description: Lär dig hur du hanterar förfallotillstånd för mediefiler och information om licensierade mediefiler i AEM.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
+source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 
 ---
 
 
-# Digital Rights Management för digitala resurser {#digital-rights-management-in-assets}
+# Digital Rights Management for digital assets {#digital-rights-management-in-assets}
 
 Digitala resurser är ofta kopplade till en licens, som anger användningsvillkoren och hur länge de ska användas. Eftersom Adobe Experience Manager Assets (AEM) är helt integrerat med AEM-plattformen kan ni effektivt hantera information om när mediefiler förfaller och resursstatus. Du kan även associera licensinformation med resurser.
 
@@ -18,11 +18,15 @@ Att mediefiler förfaller är ett effektivt sätt att genomdriva licenskrav för
 
 Du kan visa förfallostatusen för en resurs i resurskonsolen i både kort- och listvyn.
 
-![utgången_flagga_kort](assets/expired_flag_card.png)<br> *Bild: I kortvyn anger en flagga på kortet att resursen har gått ut.*
+![utgången_flagga_kort](assets/expired_flag_card.png)
+
+*Bild: I kortvyn anger en flagga på kortet att resursen har gått ut.*
 
 **Listvy**
 
-![expirate_flag_list](assets/expired_flag_list.png)*Figure: I listvyn visar kolumnen **[!UICONTROL Status]**bannern **[!UICONTROL Förfallen]**.*
+![utgången_flagga_lista](assets/expired_flag_list.png)
+
+*Bild: I listvyn visar kolumnen[!UICONTROL Status]bannern[!UICONTROL Förfallen].*
 
  Du kan visa förfallostatusen för en resurs på tidslinjen. Markera resursen och välj Tidslinje på menyn GlobalNav.
 
@@ -150,7 +154,7 @@ Resurskonsolen för Adobe Experience Manager-resurser (AEM) kan visa olika läge
 
    ![chlimage_1-166](assets/chlimage_1-166.png)
 
-## Digital Rights Management i Assets {#digital-rights-management-in-assets-1}
+## Digital Rights Management in Assets {#digital-rights-management-in-assets-1}
 
 Den här funktionen tvingar dig att godkänna licensavtalet innan du kan hämta en licensierad mediefil från Adobe Experience Manager (AEM) Assets.
 
