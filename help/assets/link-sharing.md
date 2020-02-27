@@ -3,7 +3,7 @@ title: Generera en URL till delade resurser
 description: I den här artikeln beskrivs hur du delar resurser, mappar och samlingar i AEM Resurser som en URL till externa parter.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 
 ---
 
@@ -16,7 +16,7 @@ Med Adobe Experience Manager Assets (AEM) kan ni dela resurser, mappar och samli
 >
 >Du måste ha behörigheten Redigera åtkomstkontrollista för mappen eller resursen som du vill dela som en länk.
 
-## Dela resurser {#sharelink}
+## Dela material {#sharelink}
 
 Använd dialogrutan Länkdelning för att generera URL:en för resurser som du vill dela med användare. Användare med administratörsbehörighet eller läsbehörighet på `/var/dam/share` platsen kan visa de länkar som delas med dem.
 
