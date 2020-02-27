@@ -3,7 +3,7 @@ title: Stöd för Camera Raw
 description: Lär dig hur du aktiverar stöd för Camera Raw i Adobe Experience Manager Assets.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0b8472dbfbfe326b4b5fe0d43b0f361318b37d16
+source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 
 ---
 
@@ -53,11 +53,9 @@ Nu kan du importera Camera Raw-filer till AEM Resurser. När du har installerat 
 
 ![chlimage_1-135](assets/chlimage_1-337.png)
 
-
 *Bild: Alternativ på sidopanelen.*
 
 ![chlimage_1-132](assets/chlimage_1-338.png)
-
 
 *Bild: Använd det här alternativet om du vill göra små ändringar i dina bilder.*
 
