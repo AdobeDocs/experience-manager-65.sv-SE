@@ -3,7 +3,7 @@ title: Metadata-scheman
 description: Metadata-schemat definierar layouten för egenskapssidan och de metadataegenskaper som visas för resurser. Lär dig hur du skapar anpassade metadatamatcheman, redigerar metadatamatchema och hur du använder metadatamatchema på resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: 4efe021c2f3f6f38594182d27a76ff69b7466c92
 
 ---
 
@@ -33,22 +33,21 @@ Du kan använda redigeraren Metadata Schema Forms om du vill ändra befintliga s
    ![chlimage_1-37](assets/chlimage_1-173.png)
 
    AEM innehåller följande mallar:
-
    * **standard**: Basmetadataschemaformuläret för resurser.
-   Följande underordnade formulär ärver egenskaperna för standardformuläret:
-i. **bild**: Schemaformulär för resurser med MIME-typen &quot;image&quot;, till exempel `image/jpeg`, `image/png`osv.
-&quot;Bildsformuläret har följande underordnade formulärmallar:a. **jpeg**: Schemaformulär för resurser med undertyp `jpeg`.
-b. **tiff**: Schemaformulär för resurser med undertyp `tiff`.
 
-   ii. **program**: Schemaformulär för resurser med MIME-typ, `application`till exempel `application/pdf`, `application/zip`och så vidare.
-a. **pdf**: Schemaformulär för resurser med undertyp `pdf`.
+      Följande underordnade formulär ärver egenskaperna för standardformuläret:
 
-   iii. **video**: Schemaformulär för resurser med MIME-typ `video`som `video/avi`, `video/mp4`osv.
+      1. **bild**: Schemaformulär för resurser med MIME-typen &quot;image&quot;, till exempel `image/jpeg`, `image/png`osv.
 
+         &quot;Bildsformuläret har följande underordnade formulärmallar:
+         * **jpeg**: Schemaformulär för resurser med undertyp `jpeg`.
+         * **tiff**: Schemaformulär för resurser med undertyp `tiff`.
+      1. **program**: Schemaformulär för resurser med MIME-typ, `application`till exempel `application/pdf`, `application/zip`och så vidare.
+         * **pdf**: Schemaformulär för resurser med undertyp `pdf`.
+      1. **video**: Schemaformulär för resurser med MIME-typ `video`som `video/avi`, `video/mp4`osv.
    * **samling**: Schemaformulär för samlingar.
    * **** innehållfragment: Schemaformulär för innehållsfragment.
    * **formulär**: Det här schemaformuläret gäller [Adobe Experience Manager Forms](/help/forms/home.md).
-
 
 >[!NOTE]
 >
@@ -96,7 +95,7 @@ På fliken **[!UICONTROL Skapa formulär]** visas formulärobjekt som du använd
 | [!UICONTROL Avsnittshuvud] | Lägg till en avsnittsrubrik för en lista med gemensamma komponenter. |
 | [!UICONTROL Enkelradstext] | Lägg till en textegenskap för en rad. Den lagras som en sträng. |
 | [!UICONTROL Flervärdestext] | Lägg till en textegenskap med flera värden. Den lagras som en strängarray. |
-| [!UICONTROL Nummer] | Lägg till en sifferkomponent. |
+| [!UICONTROL Siffra] | Lägg till en sifferkomponent. |
 | [!UICONTROL Date] | Lägg till en datumkomponent. |
 | [!UICONTROL Listruta] | Lägg till en listruta. |
 | [!UICONTROL Standardtaggar] | Lägg till en tagg. |
