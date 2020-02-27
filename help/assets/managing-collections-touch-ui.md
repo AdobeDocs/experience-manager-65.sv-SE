@@ -150,19 +150,33 @@ Samlingsmetadata omfattar data om samlingen, inklusive taggar som läggs till.
 1. På sidan Metadata för **[!UICONTROL samling]** kan du visa samlingsmetadata från flikarna **[!UICONTROL Grundläggande]** och **[!UICONTROL Avancerat]** .
 1. Ändra metadata efter behov och tryck/klicka sedan på **[!UICONTROL Spara och stäng]** i verktygsfältet för att spara ändringarna.
 
-### Redigera samlingsmetadata {#editing-collection-metadata-in-bulk}
+## Redigera metadata för flera samlingar samtidigt {#editing-collection-metadata-in-bulk}
 
 Du kan redigera metadata för flera samlingar samtidigt. Med den här funktionen kan du snabbt replikera vanliga metadata i flera samlingar.
 
 1. I konsolen Samlingar väljer du två eller flera samlingar som du vill redigera metadata för.
 1. Tryck/klicka på ikonen **[!UICONTROL Egenskaper]** i verktygsfältet.
 1. På sidan Metadata för **[!UICONTROL samling]** redigerar du metadata på flikarna **[!UICONTROL Grundläggande]** och **[!UICONTROL Avancerat]** .
+1. Om du vill visa metadataegenskaperna för en viss samling avmarkerar du de återstående samlingarna i samlingslistan. Metadataredigeringsfälten fylls i med metadata för den aktuella samlingen.
+
+   >[!NOTE]
+   >
+   >* På sidan med samlingsegenskaper kan du ta bort samlingar från listan med samlingar genom att avmarkera dem. I samlingslistan är alla samlingar markerade som standard. Metadata för samlingar som du tar bort uppdateras inte.
+   >* Överst i listan markerar du kryssrutan vid **[!UICONTROL Titel]** för att växla mellan att markera samlingarna och rensa listan.
+
+
 1. Tryck/klicka på **[!UICONTROL Spara och stäng]** i verktygsfältet och stäng sedan bekräftelsedialogrutan för att slutföra processen.
 1. Om du vill lägga till nya metadata med befintliga metadata väljer du **[!UICONTROL Lägg till läge]**. Om du inte markerar det här alternativet ersätter de nya metadata som finns i fälten. Tryck/klicka på **[!UICONTROL Skicka]**.
 
    >[!NOTE]
    >
-   >Läget Lägg till fungerar bara för fält som kan innehålla flera värden. För fält som bara kan innehålla ett värde läggs de nya metadata inte till i det befintliga värdet i fältet, även om du väljer **[!UICONTROL Lägg till]**.
+   >De metadata som du lägger till för de valda samlingarna skriver över tidigare metadata för dessa samlingar. Använd [!UICONTROL tilläggsläget] för att lägga till nya värden till befintliga metadata i fälten som kan innehålla flera värden. Enkelvärdesfält skrivs alltid över. Alla taggar som du lägger till i fältet [!UICONTROL Taggar] läggs till i den befintliga listan med taggar i metadata.
+
+Om du vill anpassa [!UICONTROL egenskapssidan för] metadata, inklusive lägga till, ändra eller ta bort metadataegenskaper, använder du schemaredigeraren.
+
+>[!TIP]
+>
+>Massredigeringsmetoden fungerar för resurser som är tillgängliga i en samling. För resurser som är tillgängliga i olika mappar eller som matchar ett gemensamt villkor är det möjligt att [uppdatera metadata satsvis efter sökning](/help/assets/search-assets.md#metadataupdates).
 
 ## Sök i samlingar {#searching-collections}
 
@@ -206,34 +220,6 @@ När du hämtar en samling hämtas hela resurshierarkin i samlingen, inklusive m
 1. I dialogrutan **[!UICONTROL Hämta]** trycker/klickar du på **[!UICONTROL Hämta]**. Om du vill hämta återgivningarna av resurserna i samlingen väljer du **[!UICONTROL Återgivningar]**. Välj alternativet **[!UICONTROL E-post]** om du vill skicka ett e-postmeddelande till samlingens ägare.
 
    När du väljer en samling som ska hämtas hämtas hela mapphierarkin under samlingen. Om du vill inkludera varje samling som du hämtar (inklusive resurser i underordnade samlingar som är kapslade under den överordnade samlingen) i en enskild mapp väljer du **[!UICONTROL Skapa separata mappar för varje resurs]**.
-
-## Redigera metadataegenskaper för flera samlingar {#edit-metadata-in-bulk}
-
-Med Adobe Enterprise Manager (AEM) Assets kan du redigera flera samlingars metadata samtidigt. Använd sidan [!UICONTROL Egenskaper] om du vill göra metadataändringar i flera samlingar, till exempel ändra metadataegenskaper till ett gemensamt värde eller lägga till eller ändra taggar.
-
-Om du vill anpassa [!UICONTROL egenskapssidan för] metadata, inklusive lägga till, ändra eller ta bort metadataegenskaper, använder du schemaredigeraren.
-
->[!NOTE]
->
->Massredigeringsmetoderna fungerar för resurser som är tillgängliga i en samling. För resurser som är tillgängliga i olika mappar eller som matchar ett gemensamt villkor är det möjligt att [uppdatera metadata satsvis efter sökning](/help/assets/search-assets.md#metadataupdates).
-
-1. I samlingskonsolen väljer du de samlingar du vill redigera.
-1. Tryck/klicka på **[!UICONTROL Egenskaper]** i verktygsfältet för att öppna sidan [!UICONTROL Egenskaper] för de valda samlingarna.
-1. Ändra metadataegenskaperna för markerade samlingar under de olika flikarna.
-
-   >[!NOTE]
-   >
-   >De metadata som du lägger till för de valda samlingarna skriver över tidigare metadata för dessa samlingar, med undantag för taggar. Alla taggar som du lägger till i fältet **[!UICONTROL Taggar]** läggs till i den befintliga listan med taggar i metadata.
-
-1. Om du vill visa metadataegenskaperna för en viss samling avmarkerar du de återstående samlingarna i samlingslistan. Metadataredigeringsfälten fylls i med metadata för den aktuella samlingen.
-
-   >[!NOTE]
-   >
-   >* På sidan med samlingsegenskaper kan du ta bort samlingar från listan med samlingar genom att avmarkera dem. I samlingslistan är alla samlingar markerade som standard. Metadata för samlingar som du tar bort uppdateras inte.
-   >* Överst i listan markerar du kryssrutan vid **[!UICONTROL Titel]** för att växla mellan att markera samlingarna och rensa listan.
-
-
-1. Spara ändringarna.
 
 ## Skapa kapslade samlingar {#creating-nested-collections}
 
@@ -300,6 +286,5 @@ Du kan köra ett arbetsflöde för resurserna i en samling. Om samlingen innehå
 >[!MORELIKETHIS]
 >
 >* [Konfigurera e-postmeddelanden för Experience Manager Assets](/help/sites-administering/notification.md#assetsconfig)
->* [Redigera metadataegenskaper för flera samlingar](managing-multiple-assets.md)
 >* [Skapa en granskningsuppgift för samlingar](bulk-approval.md)
 
