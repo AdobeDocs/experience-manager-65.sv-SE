@@ -4,7 +4,7 @@ description: Använd resurser på flera sidor/mappar som är härledda från och
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 
 ---
 
@@ -68,6 +68,7 @@ Så här skapar du live-kopior med den första metoden:
 1. Välj källmaterial eller mappar. Klicka på **[!UICONTROL Skapa > Live-kopia]** i verktygsfältet.
 
    ![Skapa en live-kopia från AEM-gränssnittet](assets/create_lc1.png)
+
    *Bild:Skapa en live-kopia från AEM-gränssnittet*
 
 1. Välj en målmapp. Click **[!UICONTROL Next]**.
@@ -79,6 +80,7 @@ Så här skapar du live-kopior med den andra metoden:
 1. I AEM-gränssnittet klickar du på **[!UICONTROL Skapa > Live-kopia]** i det övre högra hörnet.
 
    ![Skapa en live-kopia från AEM-gränssnittet](assets/create_lc2.png)
+
    *Bild:Skapa en live-kopia från AEM-gränssnittet*
 
 1. Välj källresurs eller källmapp. Click **[!UICONTROL Next]**.
@@ -111,6 +113,7 @@ Följ de här stegen för att kontrollera information och status för en live-ko
 1. Klicka på **[!UICONTROL Live Copy]**. Du kan kontrollera sökvägen till källan, avbrottsstatus, synkroniseringsstatus, det senaste utrullningsdatumet och den användare som gjorde den senaste utrullningen.
 
    ![Live-kopieringsinformation och status visas i en konsol i Egenskaper](assets/lcfolder_info_properties.png)
+
    *Bild:Live copy-information och status*
 
 1. Du kan aktivera eller inaktivera om underordnade resurser lånar konfigurationen för live-kopia.
@@ -125,6 +128,7 @@ AEM tillhandahåller en konsol för att kontrollera status för alla live-kopior
 1. Klicka på **[!UICONTROL Live Copy Source]**. Klicka på **[!UICONTROL Live Copy Overview]** för att öppna konsolen. Den här instrumentpanelen ger status på den översta nivån för alla underordnade resurser.
 
    ![Visa status för live-kopior i Live Copy-konsolen](assets/livecopy-statuses.png)
+
    *Bild:Visa status för live-kopior i Live Copy-konsolen*
 
 1. Om du vill visa detaljerad information om varje resurs i den aktiva kopiemappen markerar du en resurs och klickar på **[!UICONTROL Relationsstatus]** i verktygsfältet.
@@ -149,11 +153,15 @@ För en källresurs eller källmapp kan du se följande information och utföra 
 
 Markera källresursen eller källmappen, öppna den vänstra listen och klicka på **[!UICONTROL Referenser]**. Du kan också markera en resurs eller mapp och använda kortkommandot `Alt + 4`.
 
-![Åtgärder och information som finns i referensfältet för den valda källan](assets/referencerail_source.png)*Bild:Åtgärder och information som är tillgänglig i referensfältet för den valda källan*
+![Åtgärder och information som är tillgänglig i referensfältet för den valda källan](assets/referencerail_source.png)
+
+*Bild:Åtgärder och information som är tillgänglig i referensfältet för den valda källan*
 
 Om det är en specifik live-kopia klickar du på **[!UICONTROL Redigera Live-kopia]** för att göra uppehåll i relationen eller ändra utrullningskonfigurationen.
 
-![För en specifik live-kopia kan du välja att göra uppehåll i relationen eller ändra utrullningskonfigurationen från referenslisten när källresursen har valts](assets/referencerail_editlc_options.png)*:Pausa relationen eller ändra utrullningskonfiguration för en specifik live-kopia*
+![För en specifik live-kopia är alternativet att inaktivera relationen eller ändra utrullningskonfigurationen tillgängligt från referenslisten när källresurs har valts](assets/referencerail_editlc_options.png)
+
+*Bild:Pausa relationen eller ändra utrullningskonfiguration för en specifik live-kopia*
 
 ### Snabbåtgärder från referensfältet för live-kopia {#refraillc}
 
@@ -165,7 +173,9 @@ För en resurs eller mapp för en live-kopia kan du se följande information och
 
 Välj en resurs eller mapp för en live-kopia, öppna den vänstra listen och klicka på **[!UICONTROL Referenser]**. Du kan också markera en resurs eller mapp och använda kortkommandot `Alt + 4`.
 
-![Åtgärder som är tillgängliga i referensfältet för den valda live-kopian](assets/referencerail_livecopy.png)*Bild:Åtgärder som är tillgängliga i referensfältet för den valda live-kopian*
+![Åtgärder som är tillgängliga i referensfältet för den valda live-kopian](assets/referencerail_livecopy.png)
+
+*Bild:Åtgärder som är tillgängliga i referensfältet för den valda live-kopian*
 
 ## Sprid ändringar från källa till live-kopior {#rolloutsync}
 
@@ -180,6 +190,7 @@ Du kan initiera en utrullningsåtgärd från källresursen och uppdatera alla el
 1. Markera de live-kopior som du vill uppdatera. Klicka på **[!UICONTROL Överrullning]**. Om du vill ta med uppdateringarna som gjorts för de underordnade resurserna väljer du **[!UICONTROL Utrullningskälla och Alla underordnade]**.
 
    ![Fyll ut ändringarna av källan till några eller alla live-kopior](assets/livecopy_rollout_page.png)
+
    *Bild:Fyll ut ändringarna av källan till några eller alla live-kopior*
 
 >[!NOTE]
@@ -188,7 +199,9 @@ Du kan initiera en utrullningsåtgärd från källresursen och uppdatera alla el
 
 Du kan också starta en utrullningsåtgärd från referenslinjen när du har valt en specifik live-kopia. Mer information finns i [Snabbåtgärder från referensfältet för live-kopia](#refraillc). I den här metoden för utrullning uppdateras endast den markerade live-kopian och eventuellt dess underordnade.
 
-![Rulla ut ändringarna av källan till den markerade Live-kopian](assets/livecopy_rollout_dialog.png)*Bild:Rulla ut ändringarna av källan till den markerade live-kopian*
+![Rulla ut ändringarna av källan till den markerade live-kopian](assets/livecopy_rollout_dialog.png)
+
+*Bild:Rulla ut ändringarna av källan till den markerade live-kopian*
 
 ### Om synkroniseringsåtgärd {#aboutsync}
 
@@ -206,7 +219,9 @@ Om du vill starta en synkroniseringsåtgärd öppnar du sidan **[!UICONTROL Egen
 
 Om du vill se status och information om en synkroniseringsåtgärd läser du [Information om och status för en live-kopia](#statuslcasset) samt [Information och status för alla live-kopior av en mapp](#statuslcfolder).
 
-![Funktionen Synkronisera hämtar ändringarna som gjorts i källfilen](assets/livecopy_sync.png)*Bild:Synkroniseringsåtgärden hämtar de ändringar som gjorts i källan*
+![Synkroniseringsåtgärden hämtar de ändringar som gjorts i källan](assets/livecopy_sync.png)
+
+*Bild:Synkroniseringsåtgärden hämtar de ändringar som gjorts i källan*
 
 >[!NOTE]
 >
@@ -229,6 +244,7 @@ Du kan dock göra lokala ändringar i en live-kopia för att ändra några valda
 Du kan ångra alla lokala ändringar och återställa resursen till källans läge. Återställ åtgärd oåterkalleligt och omedelbart åsidosätter alla lokala ändringar och återupprättar arv på alla metadatafält. Om du vill återställa från sidan **[!UICONTROL Egenskaper]** för en live-kopia klickar du på **[!UICONTROL Återställ]** i verktygsfältet.
 
 ![Återställ-åtgärden skriver över lokala redigeringar och delar av den aktiva kopian med källan.](assets/livecopy_reset.png)
+
 *Bild: Återställ åtgärd skriver över lokala redigeringar och delar av den aktiva kopian med källan*
 
 ## Ta bort direktrelation {#detach}
@@ -240,6 +256,7 @@ Du kan ta bort relationen mellan en källa och en live-kopia helt med åtgärden
 1. Klicka på **[!UICONTROL Live Copy]**. Klicka på **[!UICONTROL Koppla loss]** i verktygsfältet. Klicka på **[!UICONTROL Koppla loss]** i den dialogruta som visas.
 
    ![Koppla loss-åtgärden tar helt bort relationen mellan källa och live-kopia](assets/livecopy_detach.png)
+
    *Bild:Koppla loss-åtgärden tar helt bort relationen mellan källa och live-kopia*
 
    >[!CAUTION]
@@ -257,6 +274,7 @@ Om du har flera resurser i en live-kopieringsmapp kan initieringsåtgärder för
 1. På den här instrumentpanelen väljer du en live-kopia av en live-kopiemapp. Klicka på önskade åtgärder i verktygsfältet. De tillgängliga åtgärderna är **[!UICONTROL Synkronisera]**, **[!UICONTROL Återställ]**, **[!UICONTROL Gör uppehåll]** och **[!UICONTROL Frigör]**. Du kan snabbt initiera dessa åtgärder för alla resurser i valfritt antal kopiamappar som finns i en direktrelation med den valda källmappen.
 
    ![Uppdatera enkelt många resurser i kopiemappar från Live Copy Overview-konsolen](assets/livecopyconsole_update_many_assets.png)
+
    *Bild:Uppdatera enkelt många resurser i kopiemappar från Live Copy Overview-konsolen*
 
 ## Utöka MSM för resurser {#extendapi}
