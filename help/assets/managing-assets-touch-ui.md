@@ -4,7 +4,7 @@ description: Lär dig resurshanteringsåtgärder som överföring, hämtning, re
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: a67ff409107cbde04d10932d624340857b9f9f64
+source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 
 ---
 
@@ -689,7 +689,9 @@ Du kan också lägga till bildscheman med bildredigeraren. Mer information finns
 
 På tidslinjen kan du visa olika händelser för ett markerat objekt, t.ex. aktiva arbetsflöden för en resurs, kommentarer/anteckningar, aktivitetsloggar och versioner.
 
-![Sortera tidslinjeposter för en resurs](assets/sort_timeline.gif)*Bild: Sortera tidslinjeposter för en resurs*
+![Sortera tidslinjeposter för en resurs](assets/sort_timeline.gif)
+
+*Bild: Sortera tidslinjeposter för en resurs*
 
 >[!NOTE]
 >
