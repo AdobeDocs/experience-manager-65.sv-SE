@@ -4,7 +4,7 @@ description: Lär dig hur du hittar de nödvändiga resurserna i AEM med hjälp 
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: faea8ebd2afea9ade9900a8e8b1e6cf3169c349d
+source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 
 ---
 
@@ -49,7 +49,6 @@ Bekanta dig med sökgränssnittet och de tillgängliga åtgärderna.
 Du kan identifiera önskade resurser snabbare från sökresultatsidan med det dynamiskt uppdaterade antalet förväntade sökresultat i sökmetoderna. Det förväntade antalet resurser uppdateras även innan sökfiltret används. Genom att se det förväntade antalet mot filtret kan du snabbt och effektivt navigera bland sökresultaten. Mer information finns i [Söka efter resurser i AEM](search-assets.md).
 
 ![Se det ungefärliga antalet resurser utan att filtrera sökresultaten i sökfaktorer.](assets/asset_search_results_in_facets_filters.png)
-
 
 *Bild:Se det ungefärliga antalet resurser utan att filtrera sökresultaten i sökfaktorer.*
 
@@ -100,7 +99,6 @@ Om du vill få förslag på fler än ett söknyckelord fortsätter du att skriva
 
 ![Skriv in flera nyckelord för att visa förslag som passar alla](assets/search_suggestionsmanykeywords.gif)
 
-
 *Bild:Skriv in flera nyckelord för att visa förslag som passar alla*
 
 ### Sök efter rankning och förstärkning {#searchrank}
@@ -133,7 +131,6 @@ I AEM finns olika metoder, till exempel filter som gäller för de sökda resurs
 
 ![Begränsa sökresultaten till en mapp genom att lägga till en mappsökväg i panelen Filter](assets/search_folder_select.gif)
 
-
 *Bild:Begränsa sökresultaten till en mapp genom att lägga till en mappsökväg i panelen Filter*
 
 ### Söka efter liknande bilder {#visualsearch}
@@ -141,7 +138,6 @@ I AEM finns olika metoder, till exempel filter som gäller för de sökda resurs
 Om du vill söka efter bilder som visuellt liknar en användarmarkerad bild klickar du på alternativet **[!UICONTROL Sök liknande]** i kortvyn för en bild eller i verktygsfältet. AEM visar de smarta taggade bilder från DAM-databasen som liknar den bild som användaren har valt. Se [hur du konfigurerar likhetssökning](#configvisualsearch).
 
 ![Söka efter liknande bilder med hjälp av alternativet i kortvyn](assets/search_find_similar.png)
-
 
 *Bild:Söka efter liknande bilder med hjälp av alternativet i kortvyn*
 
@@ -248,7 +244,6 @@ Om du vill komma åt resursväljargränssnittet går du till `https://[aem_serve
 
 ![Bläddra och markera resurs i resursväljaren](assets/assetpicker.png)
 
-
 *Bild:Bläddra och markera resurs i resursväljaren*
 
 ## Begränsningar {#limitations}
@@ -290,7 +285,6 @@ Använd citattecken runt nyckelord för att hitta resurser som innehåller den e
 
 ![Sökbeteende med och utan citattecken](assets/search_with_quotes.gif)
 
-
 *Bild:Sökbeteende med och utan citattecken*
 
 **Sök med asterisk som jokertecken**: Om du vill bredda sökningen använder du en asterisk före eller efter sökordet för att matcha ett valfritt antal tecken. Om du till exempel söker efter en körning utan asterisk returneras inga resurser som innehåller någon variant av ordet (inklusive i metadata). En asterisk ersätter ett valfritt antal tecken. Exempel:
@@ -301,7 +295,6 @@ Använd citattecken runt nyckelord för att hitta resurser som innehåller den e
 * `*run*` returnerar alla möjliga kombinationer.
 
 ![Illustration use asterisk wildcard in Asset search using a example](assets/search_with_asterisk_run.gif)
-
 
 *Bild:Illustration use asterisk wildcard in Asset search using a example*
 
@@ -315,13 +308,11 @@ Använd citattecken runt nyckelord för att hitta resurser som innehåller den e
 
 ![Illustration use of question mark wildcard in Asset search using a example](assets/search_with_questionmark_run.gif)
 
-
 *Bild:Illustration use of question mark wildcard in Asset search using a example*
 
 **Exkludera ett nyckelord**: Använd streck för att söka efter resurser som inte innehåller något nyckelord. Frågan returnerar till exempel resurser som innehåller `running -shoe` men inte `running``shoe`. På samma sätt returnerar frågan resurser som innehåller `camp -night` men inte `camp` `night`. Observera att `camp-night` frågan returnerar resurser som innehåller både `camp` och `night`.
 
 ![Användning av bindestreck för att söka efter resurser som inte innehåller ett exkluderat nyckelord](assets/search_dash_exclude_keyword.gif)
-
 
 *Bild:Användning av bindestreck för att söka efter resurser som inte innehåller ett exkluderat nyckelord*
 
@@ -423,7 +414,6 @@ Om du vill visa alla metadata för en resurs markerar du resursen och klickar p�
 Om du vill kontrollera kommentarerna för en resurs eller versionshistorik för en resurs klickar du på resursen för att öppna en stor förhandsvisning. Öppna tidslinjen i den vänstra listen och välj **[!UICONTROL Kommentarer]** eller **[!UICONTROL versioner]**. Du kan också sortera tidslinjeaktiviteten som kommentarer eller versioner i kronologisk ordning.
 
 ![Sortera tidslinjeposter för en sökresurs](assets/sort_timeline_search_results.gif)
-
 
 *Bild:Sortera tidslinjeposter för en sökresurs*
 
