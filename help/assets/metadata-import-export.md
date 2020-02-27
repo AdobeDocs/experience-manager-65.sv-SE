@@ -3,7 +3,7 @@ title: Importera och exportera metadata för resurser i grupp
 description: Importera och exportera metadata för resurser i grupp
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 07c1a4102539ba4678c55dee3a4882101e39864f
+source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 
 ---
 
@@ -59,6 +59,7 @@ Några exempel på användningsområden för att exportera flera metadata samtid
 1. Öppna inkorgsmeddelandet för exportjobbet. Markera jobbet och klicka på **[!UICONTROL Öppna]** i verktygsfältet. Om du vill hämta CSV-filen med metadata trycker/klickar du på **[!UICONTROL CSV-hämtning]** i verktygsfältet. Click **[!UICONTROL Close]**.
 
    ![Dialogruta för att hämta CSV-filen som innehåller metadata som exporterats i grupp](assets/csv_download.png)
+
    *Bild: Dialogruta för att hämta CSV-filen som innehåller metadata som exporterats i grupp*
 
 >[!MORELIKETHIS]
