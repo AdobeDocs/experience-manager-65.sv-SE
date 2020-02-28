@@ -3,7 +3,7 @@ title: Använd anslutna resurser för att dela DAM-resurser i redigeringsarbetsf
 description: Använd resurser som är tillgängliga på en fjärrdistribution av Adobe Experience Manager Assets när du skapar webbsidor på en annan Experience Manager-webbplatsdistribution.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a7082bc47bea1b8514121f482911da44919da73c
+source-git-commit: 8a014887f395c5ade0affcb3c199e090af263bdc
 
 ---
 
@@ -27,24 +27,15 @@ Innan du använder eller konfigurerar den här funktionen bör du kontrollera f�
 * Användarna ingår i lämpliga användargrupper för varje distribution.
 * Ett av de kriterier som stöds för Adobe Experience Manager-distributionstyper är uppfyllt. AEM 6.5 Assets fungerar med AEM som en molntjänst. Mer information finns i Funktionen [Anslutna resurser i AEM som en molntjänst](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/admin/use-assets-across-connected-assets-instances.html).
 
-   |  | AEM Sites som en Cloud Service | AEM 6.5 Sites på AMS | AEM 6.5 Sites på plats |
+   |  | AEM Sites as a Cloud Service | AEM 6.5 Sites på AMS | AEM 6.5 Sites på plats |
    |---|---|---|---|
-   | **AEM Assets som Cloud Service** | Stöds | Stöds | Stöds |
+   | **AEM Assets as a Cloud Service** | Stöds | Stöds | Stöds |
    | **AEM 6.5 Assets on AMS** | Stöds inte | Stöds | Stöds |
    | **AEM 6.5 Assets på plats** | Stöds inte | Stöds inte | Stöds inte |
 
 ### Filformat som stöds {#mimetypes}
 
-Författare kan söka efter bilder och följande typer av dokument i Content Finder och använda de sökbara resurserna i Page Editor. Dokument kan läggas till i `Download` komponenten och bilder kan läggas till i `Image` komponenten. Författare kan också lägga till fjärrresurserna i en anpassad AEM-komponent som utökar standard- `Download` eller `Image` komponenterna.
-
-* Microsoft Word (DOC och DOCX)
-* Microsoft Excel (XLS och XLSX)
-* Microsoft PowerPoint (PPT och PPTX)
-* Adobe PDF (PDF)
-* OpenDocument-text (ODT)
-* RTF (Rich Text Format)
-* Oformaterad text (TXT)
-* Webbsidor (HTML)
+Författare kan söka efter bilder och följande typer av dokument i Content Finder och använda de sökbara resurserna i Page Editor. Dokument kan läggas till i `Download` komponenten och bilder kan läggas till i `Image` komponenten. Författare kan också lägga till fjärrresurserna i en anpassad AEM-komponent som utökar standard- `Download` eller `Image` komponenterna. En lista över format som stöds finns i Format som stöds för [anslutna resurser](assets-formats.md#supported-document-formats).
 
 ### Användare och grupper {#users-and-groups-involved}
 
