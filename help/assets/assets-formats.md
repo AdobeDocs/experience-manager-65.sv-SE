@@ -3,7 +3,7 @@ title: Format som stöds för resurser
 description: Lista över filformat som stöds av AEM Resurser och funktioner som stöds för varje format.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 8a014887f395c5ade0affcb3c199e090af263bdc
+source-git-commit: 8a701d98fed79648104c39816482ff94997ba2e6
 
 ---
 
@@ -93,7 +93,7 @@ Med Adobe Camera Raw-biblioteket kan AEM Resurser importera råbilder. Se [Stöd
 
 Dokumentformat som stöds för filhanteringsfunktioner är följande:
 
-| Format | Lagring | Metadatahantering<br> | Extrahering av metadata<br> | Generering av miniatyrbilder<br> | Interaktiv<br> redigering | Metadata<br> -tillbakaskrivning | Insikter | Anslutna resurser |
+| Format | Lagring | Metadatahantering<br> | Extrahering av metadata<br> | Generering av miniatyrbilder<br> | Interaktiv<br> redigering | Metadata<br> -tillbakaskrivning | [Insikter](touch-ui-asset-insights.md) | [Anslutna resurser](use-assets-across-connected-assets-instances.md) |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ |  | ✓ | ✓ | ✓ | ✓ |  |
 | DOC | ✓ | ✓ | ✓ | ✓ |  |  |  | ✓ |
