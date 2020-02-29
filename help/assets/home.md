@@ -4,7 +4,7 @@ seo-title: Användarhandbok för AEM 6.5 Assets
 description: Den här guiden täcker alla AEM Assets-uppgifter, t.ex. hur du skapar, hanterar, levererar och optimerar digitala resurser.
 seo-description: Omfattar alla AEM Assets-uppgifter, t.ex. hur man skapar, hanterar, levererar och optimerar digitala resurser.
 translation-type: tm+mt
-source-git-commit: 37ec3d8ce779ba392e6a92c828efb5fad749abec
+source-git-commit: b90343874d5afd9858d8a6d82828eabdfa1d3ccd
 
 ---
 
@@ -39,11 +39,11 @@ Den här guiden täcker alla AEM Assets-uppgifter, t.ex. hur du skapar, hanterar
 
 ## Viktiga AEM-resurser
 
-* [AEM-självstudiekurser](https://helpx.adobe.com/experience-manager/kt/index/aem-6-4-videos.html)
+* [AEM Video-självstudiekurser](https://helpx.adobe.com/experience-manager/kt/index/aem-6-5-videos.html#Assets)
+* [GDPR-efterlevnad](/help/managing/data-protection-and-privacy.md)
+* [Experience League](https://guided.adobe.com/?mv=other#recommended/solutions/experience-manager)
+* [AEM Assets Community Forum](https://experienceleaguecommunities.adobe.com/t5/Adobe-Experience-Manager-Assets/ct-p/experience-manager-assets-community)
 * [Användarhandbok för Dispatcher](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)
 * [Användarhandbok för HTML](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)
 * [Användarhandbok för kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
-* [GDPR-beredskap](/help/managing/data-protection-and-privacy.md)
-* [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&mv=other#solutions/experience-manager)
-* [AEM Community Forum](https://forums.adobe.com/community/experience-cloud/marketing-cloud/experience-manager)
