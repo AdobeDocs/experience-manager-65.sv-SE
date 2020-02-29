@@ -3,7 +3,7 @@ title: Använd anslutna resurser för att dela DAM-resurser i redigeringsarbetsf
 description: Använd resurser som är tillgängliga på en fjärrdistribution av Adobe Experience Manager Assets när du skapar webbsidor på en annan Experience Manager-webbplatsdistribution.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 8a014887f395c5ade0affcb3c199e090af263bdc
+source-git-commit: bcc51ca9cc98af0141824e0f1ea6c3c0fd9fa888
 
 ---
 
@@ -35,7 +35,10 @@ Innan du använder eller konfigurerar den här funktionen bör du kontrollera f�
 
 ### Filformat som stöds {#mimetypes}
 
-Författare kan söka efter bilder och följande typer av dokument i Content Finder och använda de sökbara resurserna i Page Editor. Dokument kan läggas till i `Download` komponenten och bilder kan läggas till i `Image` komponenten. Författare kan också lägga till fjärrresurserna i en anpassad AEM-komponent som utökar standard- `Download` eller `Image` komponenterna. En lista över format som stöds finns i Format som stöds för [anslutna resurser](assets-formats.md#supported-document-formats).
+Författare kan söka efter bilder och följande typer av dokument i Content Finder och använda de sökbara resurserna i Page Editor. Dokument kan läggas till i `Download` komponenten och bilder kan läggas till i `Image` komponenten. Författare kan också lägga till fjärrresurserna i en anpassad AEM-komponent som utökar standard- `Download` eller `Image` komponenterna. Listan över format som stöds är:
+
+* **Bildformat**: De bildformat som stöds av [Image-komponenten](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html) stöds av Anslutna resurser. Dynamiska mediakomponenter stöds inte.
+* **Dokumentformat**: Se Dokumentformat som stöds [i](assets-formats.md#supported-document-formats)Anslutna resurser.
 
 ### Användare och grupper {#users-and-groups-involved}
 
