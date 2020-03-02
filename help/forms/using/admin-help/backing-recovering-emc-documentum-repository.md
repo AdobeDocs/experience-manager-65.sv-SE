@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f146202f-25f1-46a0-9943-c483f5f09f9f
 translation-type: tm+mt
-source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
+source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ---
 
@@ -189,22 +189,22 @@ I det här avsnittet beskrivs hur du installerar och konfigurerar EMC NetWorker-
 
 1. Ange lösenordet för konfigurationsfilen enligt följande:
 
-   * Öppna en kommandotolk och ändra till *[NetWorker_root]*\Legato\nsr\bin.
+   * Öppna en kommandotolk och ändra till `[NetWorker_root]\Legato\nsr\bin`.
    * Kör följande kommando: `-nsrnmdsv.exe -f`*&lt;sökväg> -P &lt;lösenord>*
 
 1. Skapa de körbara batchfiler (.bat) som används för att säkerhetskopiera databasen. (Se dokumentationen för NetWorker.) Ange information i gruppfilerna enligt installationen.
 
    * Fullständig säkerhetskopiering av databasen (nsrnmddbf.bat):
 
-      *[NetWorker_database_module_root]* `-s`*&lt;NetWorker_Server_Name>*`-U`*[användarnamn ]*`-P`*[lösenord]*`-l full`*&lt;database_name>*
+      `NetWorker_database_module_root` `-s`*&lt;NetWorker_Server_Name>*`-U``[username]``-P`*[password ]*`-l full`*&lt;database_name>*
 
    * Inkrementell säkerhetskopiering av databas (nsrnmddbi.bat):
 
-      *[NetWorker_database_module_root]* `-s`*&lt;NetWorker_Server_Name>*`-U`*[användarnamn ]*`-P`*[lösenord]*`-l 1 -R`*&lt;database_name>*
+      `[NetWorker_database_module_root]` `-s`*&lt;NetWorker_Server_Name>*`-U``[username]``-P``[password]``-l 1 -R`*&lt;database_name>*
 
    * Säkerhetskopiering av databaslogg (nsrnmddbl.bat):
 
-      *[NetWorker_database_module_root]* `-s`*&lt;NetWorker_Server_Name>*`-U`*[användarnamn ]*`-P`*[lösenord]*`-l incr -R`*&lt;database_name>*
+      `[NetWorker_database_module_root]` `-s``<NetWorker_Server_Name>` `-U``[username]` `-P``[password]` `-l incr -R`*&lt;database_name>*
 
       
 Var:
@@ -241,7 +241,7 @@ Utför följande uppgifter när du har slutfört en fullständig säkerhetskopie
 >
 >Kommandoskripten kräver den fullständiga sökvägen till filen nsrnmd_win.cfg som du skapade när du [förberedde EMC Document Content Server för säkerhetskopiering och återställning](backing-recovering-emc-documentum-repository.md#preparing-the-emc-document-content-server-for-backup-and-recovery).
 
-1. Öppna en kommandotolk och ändra till *[NetWorker_root]*\Legato\nsr\bin.
+1. Öppna en kommandotolk och ändra till `[NetWorker_root]\Legato\nsr\bin`.
 1. Kör följande kommando:
 
    ```as3
@@ -267,4 +267,3 @@ Utför följande åtgärder innan du återställer AEM-formulärdata. (Se [Åter
    ```as3
     - nsrnmdrs.exe -B <docbase_name> -f <path_to_cfg_file> -C SA
    ```
-
