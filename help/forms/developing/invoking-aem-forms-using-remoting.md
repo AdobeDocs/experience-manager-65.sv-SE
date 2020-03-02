@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 3d8bb2d3-b1f8-49e1-a529-b3e7a28da4bb
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ---
 
@@ -963,7 +963,7 @@ Den fullständigt kvalificerade datatypen för den komplexa typen AEM Forms till
 ActionScript-klassens fält matchar fälten som tillhör den komplexa typen AEM Forms. De sex fälten i ActionScript-klassen Customer matchar fälten som tillhör `com.adobe.livecycle.sample.customer.Customer`.
 
 >[!NOTE]
-Ett bra sätt att avgöra vilka fältnamn som tillhör en komplex formulärtyp är att visa tjänstens WSDL i en webbläsare. En WSDL anger en tjänsts komplexa typer och motsvarande datamedlemmar. Följande WSDL används för kundtjänsten: *https://[yourServer]:[yourPort]/soap/services/CustomerService?wsdl.*
+Ett bra sätt att avgöra vilka fältnamn som tillhör en komplex formulärtyp är att visa tjänstens WSDL i en webbläsare. En WSDL anger en tjänsts komplexa typer och motsvarande datamedlemmar. Följande WSDL används för kundtjänsten: `https://[yourServer]:[yourPort]/soap/services/CustomerService?wsdl.`
 
 Klassen Customer ActionScript tillhör ett paket som heter customer. Du bör placera alla ActionScript-klasser som mappar till komplexa AEM Forms-datatyper i sina egna paket. Skapa en mapp i src-mappen för Flex-projektet och placera ActionScript-filen i mappen, vilket visas på följande bild.
 
