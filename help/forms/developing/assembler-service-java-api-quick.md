@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: b7b17cf8-def5-4a77-a872-c1f286814881
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ---
 
@@ -191,7 +191,7 @@ I följande Java-kodexempel sammanfogas två PDF-källdokument med namnen *map.p
 
 ## Snabbstart (SOAP-läge): Dela upp ett PDF-dokument med Java API {#quick-start-soap-mode-disassembling-a-pdf-document-using-the-java-api}
 
-I följande Java-kodexempel demonteras ett PDF-dokument med namnet *AssemblerResultPDF.pdf*. Observera att namnet på DDX-dokumentet är *shell_disassemble.xml*. Varje upplöst PDF-dokument heter *[ResultPDFNumber].pdf*. Det vill säga, det första upplösta PDF-dokumentet heter *ResultPDF1.pdf.* Information om *dx-dokumentet shell_disassemble.xml* som används i det här kodexemplet finns i [Dela upp PDF-dokument](/help/forms/developing/assembling-pdf-documents.md#programmatically-disassembling-pdf-documents)programmatiskt.
+I följande Java-kodexempel demonteras ett PDF-dokument med namnet *AssemblerResultPDF.pdf*. Observera att namnet på DDX-dokumentet är *shell_disassemble.xml*. Alla uppdelade PDF-dokument namnges `ResultPDF[Number].pdf`. Det vill säga, det första upplösta PDF-dokumentet heter *ResultPDF1.pdf.* Information om *dx-dokumentet shell_disassemble.xml* som används i det här kodexemplet finns i [Dela upp PDF-dokument](/help/forms/developing/assembling-pdf-documents.md#programmatically-disassembling-pdf-documents)programmatiskt.
 
 ```as3
  /*
