@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: d2c95881-6c02-4e34-85af-84607df54287
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ---
 
@@ -43,7 +43,7 @@ Följande värden visar några exempel på URI-värden:
 
 >[!NOTE]
 >
->Du kan bläddra i AEM Forms-databasen med en webbläsare. Om du vill bläddra i databasen anger du följande URL i en webbläsare https://[servernamn]:[serverport]/databas. Du kan verifiera snabbstartsresultat som är kopplade till avsnittet Arbeta med AEM Forms-databas med en webbläsare. Om du till exempel lägger till innehåll i AEM Forms-databasen kan du se innehållet i en webbläsare. (Se [Snabbstart (SOAP-läge): Skriva en resurs med Java API](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-writing-a-resource-using-the-java-api).)
+>Du kan bläddra i AEM Forms-databasen med en webbläsare. Om du vill bläddra i databasen anger du följande URL-adress i en webbläsare `https://[server name]:[server port]/repository`. Du kan verifiera snabbstartsresultat som är kopplade till avsnittet Arbeta med AEM Forms-databas med en webbläsare. Om du till exempel lägger till innehåll i AEM Forms-databasen kan du se innehållet i en webbläsare. (Se [Snabbstart (SOAP-läge): Skriva en resurs med Java API](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-writing-a-resource-using-the-java-api).)
 
 Databas-API:t innehåller ett antal åtgärder som du kan använda för att lagra och hämta information från databasen. Du kan till exempel få en lista med resurser eller hämta särskilda resurser som lagras i databasen när en resurs behövs som en del av bearbetningen av ett program.
 
