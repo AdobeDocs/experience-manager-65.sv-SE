@@ -10,7 +10,7 @@ topic-tags: process-reporting
 discoiquuid: 222daab8-4514-44a5-b5c9-c5510809c74e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ---
 
@@ -32,7 +32,7 @@ Utför följande mallprocedur innan du lägger till en anpassad rapport:
 
 CRX QueryBuilder REST-gränssnittet exponerar funktionerna i Asset Share Query Builder via ett Java API och ett REST API. Läs om hur du använder [CRX QueryBuilder REST-gränssnittet](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html)innan du utför följande steg:
 
-1. Gå till URL:en https://[server]:[port]/lc/bin/querybuilder.json
+1. Bläddra till URL:en `https://[server]:[port]/lc/bin/querybuilder.json`
 1. Skapa en fråga baserat på lagringsnodens struktur och nodegenskaper i Process Reporting.
 
    Du kan ange valfria parametrar för att ange förskjutning, begränsning, träffar och egenskaper. Du kan hårdkoda argumenten för statiska rapporter och hämta parametrarna från gränssnittet för dynamiska rapporter.
