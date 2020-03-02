@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 180cac3f-6378-42bc-9a47-60f9f08a7103
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ---
 
@@ -713,7 +713,7 @@ Om du tänker arbeta med dialogruta- eller skript-XML-filer bör du installera p
 Dialogrutan och skriptfilerna finns i filen appmondata.jar. Innan du kan ändra någon av dessa filer eller lägga till nya skript- eller dialogfiler måste du packa upp den här JAR-filen. Anta till exempel att du vill lägga till stöd för programmet EditPlus. Du skapar två XML-filer med namnen appmon.editplus.script.en_US.xml och appmon.editplus.script.addition.en_US.xml. Dessa XML-skript måste läggas till i filen adobe-appmondata.jar på två platser, enligt vad som anges nedan:
 
 * adobe-livecycle-native-jboss-x86_win32.ear > adobe-Native2PDFSvc.war\WEB-INF\lib > adobe-native.jar > Native2PDFSvc-native.jar\bin > adobe-appmondata.jar\com\adobe\appmon. Filen adobe-livecycle-native-jboss-x86_win32.ear finns i exportmappen på `[AEM forms install directory]\configurationManager`. (Om AEM Forms distribueras på en annan J2EE-programserver ersätter du filen adobe-livecycle-native-jboss-x86_win32.ear med den EAR-fil som motsvarar J2EE-programservern.)
-* adobe-generatepdf-dsc.jar > adobe-appmondata.jar\com\adobe\appmon (filen adobe-appmondata.jar finns i filen adobe-generatepdf-dsc.jar). Filen adobe-generatepdf-dsc.jar finns i installationskatalogen *[för]* AEM-formulär\installationsmappen.
+* adobe-generatepdf-dsc.jar > adobe-appmondata.jar\com\adobe\appmon (filen adobe-appmondata.jar finns i filen adobe-generatepdf-dsc.jar). Filen adobe-generatepdf-dsc.jar finns i `[AEM forms install directory]\deploy` mappen.
 
 När du har lagt till dessa XML-filer i filen adobe-appmondata.jar måste du distribuera om komponenten GeneratePDF. Så här lägger du till dialogrute- och skript-XML-filer i filen adobe-appmondata.jar:
 
@@ -741,7 +741,7 @@ När du har lagt till dessa XML-filer i filen adobe-appmondata.jar måste du dis
 
 Om du vill dirigera filer till ett nytt originalprogram måste du skapa en skript-XML-fil för det programmet. Om du vill ändra hur tjänsten Generera PDF interagerar med ett program som redan stöds måste du ändra skriptet för det programmet.
 
-Skriptet innehåller instruktioner som navigerar genom det inbyggda programmets fönsterelement och som ger specifika svar på dessa element. Filen som innehåller den här informationen är giltig.*[appname]*.script.*[locale]*.xml. Ett exempel är appmon.notepad.script.en_US.xml.
+Skriptet innehåller instruktioner som navigerar genom det inbyggda programmets fönsterelement och som ger specifika svar på dessa element. Filen som innehåller den här informationen är `appmon.[appname]` `.script.[locale].xml`. Ett exempel är appmon.notepad.script.en_US.xml.
 
 #### Identifiera steg som skriptet måste köra {#identifying-steps-the-script-must-execute}
 
@@ -836,16 +836,16 @@ Om du skapar ett skript för ett internt program som inte stöds tidigare, måst
 
 >[!NOTE]
 >
->I detta sammanhang innebär termen ytterligare innehållet i appen.[applicationname].addition.[locale].xml. En sådan fil anger åsidosättningar och tillägg till XML-filen i dialogrutan.
+>I det här sammanhanget innebär termen ytterligare innehållet i `appmon.[applicationname].addition.[locale].xml` filen. En sådan fil anger åsidosättningar och tillägg till XML-filen i dialogrutan.
 
 Du kan också ändra XML-filen för ytterligare dialogrutor för ett internt program för följande syften:
 
 * Så här åsidosätter du XML-filen i dialogrutor för ett program med ett annat svar
 * Lägga till ett svar i en dialogruta som inte är adresserad i dialogrutans XML-fil för det programmet
 
-Filnamnet som identifierar ytterligare en dialogXML-fil används.*[appname]*.addition.*[locale]*.xml. Ett exempel är appmon.excel.addition.en_US.xml.
+Filnamnet som identifierar ytterligare en dialogXML-fil är `appmon.[appname].addition.[locale].xml`. Ett exempel är appmon.excel.addition.en_US.xml.
 
-Namnet på XML-filen för den extra dialogrutan måste ha formattillägget.*[applicationname]*.addition.*[locale]*.xml, där *programnamnet* exakt måste matcha programnamnet som används i XML-konfigurationsfilen och i skriptet.
+Namnet på XML-filen för den extra dialogrutan måste ha formatet `appmon.[applicationname].addition.[locale].xml`där *programnamnet* exakt måste matcha programnamnet som används i XML-konfigurationsfilen och i skriptet.
 
 >[!NOTE]
 >
@@ -898,7 +898,7 @@ I det här exemplet ändrades standardkonfigurationsdata som medföljde tjänste
 
 #### Skapa en miljövariabel för att hitta det inbyggda programmet {#creating-an-environment-variable-to-locate-the-native-application}
 
-Skapa en miljövariabel som anger platsen för det interna programmets körbara fil. Variabeln måste använda formatet *[applicationName]*_PATH, där *programnamnet* exakt måste matcha programnamnet som används i XML-konfigurationsfilen och i skriptet, och där sökvägen till den körbara filen finns inom citattecken. Ett exempel på en sådan miljövariabel är `Photoshop_PATH`.
+Skapa en miljövariabel som anger platsen för det interna programmets körbara fil. Variabeln måste använda formatet `[applicationname]_PATH`, där *programnamnet* exakt måste matcha programnamnet som används i XML-konfigurationsfilen och i skriptet, och där sökvägen innehåller sökvägen till den körbara filen inom citattecken. Ett exempel på en sådan miljövariabel är `Photoshop_PATH`.
 
 När du har skapat den nya systemvariabeln måste du starta om servern som tjänsten Generera PDF är distribuerad på.
 
@@ -907,7 +907,7 @@ När du har skapat den nya systemvariabeln måste du starta om servern som tjän
 1. Välj **Kontrollpanelen > System**.
 1. I dialogrutan Systemegenskaper klickar du på fliken **Avancerat** och sedan på **Miljövariabler**.
 1. Klicka på **Ny** under Systemvariabler i dialogrutan Miljövariabler.
-1. I dialogrutan Ny systemvariabel skriver du ett namn med formatet **applicationName** _PATH i rutan *[Variabelnamn]*.
+1. I dialogrutan Ny systemvariabel skriver du ett namn som använder formatet i rutan **Variabelnamn** `[applicationname]_PATH`.
 1. I rutan **Variabelvärde** skriver du den fullständiga sökvägen och filnamnet för programmets körbara fil och klickar sedan på **OK**. For example, type: `c:\windows\Notepad.exe`
 1. Klicka på **OK** i dialogrutan Miljövariabler.
 
