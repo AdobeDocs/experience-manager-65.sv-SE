@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 6f9a294d-24bd-4e4b-b929-2809f5e6cef9
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ---
 
@@ -154,7 +154,7 @@ Katalogen Content Storage Root innehåller databasen Content Services (Borttagen
 
 Rotkatalogen för innehållslagring skapas när Content Services (Borttagen) installeras. Platsen för rotkatalogen för innehållslagring bestäms under installationen av AEM-formulär.
 
-Standardplatsen för rotkatalogen för innehållslagring är *[aem-forms root]*/lccs_data.
+Standardplatsen för rotkatalogen för innehållslagring är `[aem-forms root]/lccs_data`.
 
 Säkerhetskopiera följande kataloger i rotkatalogen för innehållslagring:
 
@@ -176,7 +176,7 @@ När du installerar innehållstjänster (borttagna) i en klustrad miljö delas r
 
 **** Indexrotkatalog: En katalog som skapas på varje nod i klustret och som alltid har samma sökväg och katalognamn
 
-Standardplatsen för rotkatalogen för innehållslagring är *[GDS-rot]*/lccs_data, där *[GDS-rot]* är den plats som beskrivs i [GDS-platsen](files-back-recover.md#gds-location). Säkerhetskopiera följande kataloger i rotkatalogen för innehållslagring:
+Standardplatsen för rotkatalogen för innehållslagring är `[GDS root]/lccs_data`, där `[GDS root]` är platsen som beskrivs i [GDS-platsen](files-back-recover.md#gds-location). Säkerhetskopiera följande kataloger i rotkatalogen för innehållslagring:
 
 /audit.contentstore
 
@@ -188,7 +188,7 @@ Standardplatsen för rotkatalogen för innehållslagring är *[GDS-rot]*/lccs_da
 
 Om katalogen /backup-lucene-indexes inte finns säkerhetskopierar du katalogen /lucene-indexes, som också finns i katalogen Content Storage Root. Om katalogen /backup-lucene-indexes finns ska du inte säkerhetskopiera katalogen /lucene-indexes eftersom det kan orsaka fel.
 
-Standardplatsen för indexrotkatalogen är *[aem-forms root]*/lucene-indexes på varje nod.
+Standardplatsen för indexrotkatalogen finns `[aem-forms root]/lucene-indexes` på varje nod.
 
 ## Kundinstallerade teckensnitt {#customer-installed-fonts}
 
@@ -196,6 +196,6 @@ Om du har installerat ytterligare teckensnitt i AEM-formulärmiljön måste du s
 
 >[!NOTE]
 >
->Som standard finns de Adobe-teckensnitt som installeras med AEM-formulär i katalogen [aem-forms root]/fonts.
+>Som standard finns de Adobe-teckensnitt som installeras med AEM-formulär i `[aem-forms root]/fonts` katalogen.
 
 Om du initierar om operativsystemet på värddatorn och vill använda teckensnitt från det tidigare operativsystemet, bör innehållet i systemteckensnittskatalogen också säkerhetskopieras. (Mer information finns i dokumentationen för ditt operativsystem).
