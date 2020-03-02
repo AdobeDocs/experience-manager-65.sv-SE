@@ -4,7 +4,7 @@ description: Lär dig resurshanteringsåtgärder som överföring, hämtning, re
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 0f086ed9d1674149888d2921820eacce1aed9e24
+source-git-commit: 68692e7b82aecd81a21f3a970f3707f2ff39792a
 
 ---
 
@@ -627,7 +627,7 @@ I kortvyn visas alternativet **[!UICONTROL Välj]** som en snabbåtgärd.
 
 ![select_quick_action](assets/select_quick_action.png)
 
-När du bläddrar i en mapp eller en samling i Assets-användargränssnittet i en webbläsare kan du markera alla resurser med alternativet [!UICONTROL Markera alla] i det övre högra hörnet.
+När du bläddrar i en mapp eller en samling i Assets-användargränssnittet i en webbläsare kan du välja alla visade eller inlästa resurser med alternativet [!UICONTROL Markera alla] i det övre högra hörnet. Om du inte bläddrar nedan läses endast 100 resurser in i kortvyn och 200 läses in i listvyn. Om du väljer alternativet Alla markeras endast dessa resurser.
 
 Mer information finns i [Visa och välja resurser](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
 
