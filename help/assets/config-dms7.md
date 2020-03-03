@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
+source-git-commit: 44c0b6c5a8e7688b597e4b9de857d7f54ff23d49
 
 ---
 
@@ -24,7 +24,7 @@ I följande arkitekturdiagram beskrivs hur läget Dynamic Media - Scene7 fungera
 
 Med den nya arkitekturen ansvarar AEM för masterresurser och synkronisering med Dynamic Media för bearbetning och publicering av material:
 
-1. När huvudresursen överförs till AEM replikeras den till Dynamic Media. I det läget hanterar Dynamic Media all materialbearbetning och återgivningsgenerering, till exempel videokodning och dynamiska varianter av en bild. (I Dynamic Media - Scene7-läge kan du bara överföra resurser vars filstorlek är 2 GB eller mindre.)
+1. När huvudresursen överförs till AEM replikeras den till Dynamic Media. I det läget hanterar Dynamic Media all materialbearbetning och återgivningsgenerering, till exempel videokodning och dynamiska varianter av en bild. <!-- (In Dynamic Media - Scene7 mode, be aware that you can only upload assets whose file sizes are 2 GB or less.) Jira ticket CQ-4286561 fixed this issue. DM-S7 NOW SUPPORTS THE UPLOAD OF ASSETS LARGER THAN 2 GB. -->
 1. När återgivningarna har genererats kan AEM på ett säkert sätt komma åt och förhandsgranska de dynamiska fjärråtergivningarna (inga binärfiler skickas tillbaka till AEM-instansen).
 1. När innehållet är klart att publiceras och godkännas utlöses Dynamic Media-tjänsten att skicka ut innehållet till leveransservrar och cachelagra innehållet vid CDN.
 
