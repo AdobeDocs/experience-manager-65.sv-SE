@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 translation-type: tm+mt
-source-git-commit: fdcd9173b02347a7a9527b292635d63e8aa9ce19
+source-git-commit: 9f4a460c7f64d86e35e950e512ed5b6cda1cbf2a
 
 ---
 
@@ -21,7 +21,7 @@ source-git-commit: fdcd9173b02347a7a9527b292635d63e8aa9ce19
 | Version | 6.5.3.0 |
 | Typ | Service Pack-version |
 | Date | 12 december 2019 |
-| Hämta URL | [PackageShare](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/AEM-6.5.3.0), [Software Distribution](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/aem.html#package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.3.zip) |
+| Hämta URL | [PackageShare](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/AEM-6.5.3.0) |
 
 ## Vad ingår i Adobe Experience Manager 6.5.3.0 {#what-s-included-in-aem}
 
@@ -434,10 +434,9 @@ Lista över innehållspaket som ingår i AEM 6.5.3.0
 ## Användbara resurser {#helpful-resources}
 
 * [Versionsinformation om AEM 6.5](/help/release-notes/release-notes.md)
-* [AEM - produktsida](https://www.adobe.com/solutions/web-experience-management.html)
-* [Stöd för AEM-utvecklare](https://docs.adobe.com/content/ddc/en.html)
+* [AEM - produktsida](https://www.adobe.com/marketing/experience-manager.html)
 * [AEM 6.5 - dokumentation](https://helpx.adobe.com/support/experience-manager/6-5.html)
-* Prenumerera på [Adobe Priority-produktuppdateringar](https://docs.adobe.com/content/help/en/release-notes/experience-cloud/current.html)
+* Prenumerera på [Adobe Priority-produktuppdateringar](https://www.adobe.com/subscription/priority-product-update.html)
 
 ## Begränsade platser {#restricted-sites}
 
