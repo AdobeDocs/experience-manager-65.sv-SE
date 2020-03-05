@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 44c0b6c5a8e7688b597e4b9de857d7f54ff23d49
+source-git-commit: 7029d6e7047680880ef89365826dd47af478c0b6
 
 ---
 
@@ -84,7 +84,7 @@ Så här konfigurerar du molntjänster för dynamiska media:
    >
    >När du har fått ditt e-postmeddelande med inloggningsuppgifter för Dynamic Media loggar du [in på](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) Dynamic Media Classic för att ändra ditt lösenord. Lösenordet som anges i e-postmeddelandet om etablering genereras av systemet och är endast avsett som ett tillfälligt lösenord. Det är viktigt att du uppdaterar lösenordet så att molntjänsten Dynamic Media är konfigurerad med rätt autentiseringsuppgifter.
 
-1. Om anslutningen lyckas kan du även ange följande:
+1. När anslutningen lyckas kan du även ange följande:
 
    * **[!UICONTROL Företag]** - namnet på Dynamic Media-kontot. Det är möjligt att du har flera Dynamic Media-konton för olika undervarumärken, divisioner eller olika miljöer för staging/produktion.
 
@@ -94,6 +94,16 @@ Så här konfigurerar du molntjänster för dynamiska media:
 
    * **[!UICONTROL Secure Preview Server]** - gör att du kan ange URL-sökvägen till den säkra servern för förhandsgranskning av återgivningar. Det innebär att när renderingar har skapats kan AEM på ett säkert sätt komma åt och förhandsgranska de dynamiska fjärrrenderingarna (inga binärfiler skickas tillbaka till AEM-instansen).
 Om du inte har ett särskilt arrangemang för att använda ditt företags server eller en speciell server rekommenderar Adobe Systems att du låter den här inställningen vara som den är angiven.
+
+   * **[!UICONTROL Synkronisera allt innehåll]** - <!-- NEW OPTION, CQDOC-15371, Added March 4, 2020-->markerat som standard. Avmarkera det här alternativet om du vill inkludera eller exkludera resurser från synkroniseringen till dynamiska media. Om du avmarkerar det här alternativet kan du välja mellan följande två synkroniseringslägen för dynamiska media:
+
+   * **[!UICONTROL Synkroniseringsläge för dynamiska media]**
+      * **[!UICONTROL Aktiverat som standard]** - Konfigurationen används som standard på alla mappar, såvida du inte markerar en mapp som är speciellt avsedd att exkluderas. <!-- you can then deselect the folders that you do not want the configuration applied to.-->
+      * **[!UICONTROL Inaktiverad som standard]** - Konfigurationen tillämpas inte på någon mapp förrän du uttryckligen markerar en vald mapp för synkronisering till dynamiska media.
+Om du vill markera en markerad mapp för synkronisering till dynamiska media väljer du en resursmapp och klickar sedan på **[!UICONTROL Egenskaper]** i verktygsfältet. På fliken **[!UICONTROL Detaljer]** väljer du bland följande tre alternativ i listrutan **[!UICONTROL Dynamiskt]** mediasynkroniseringsläge. När du är klar trycker du på **[!UICONTROL Spara]**. *Kom ihåg: Dessa tre alternativ är inte tillgängliga om du valde **Synkronisera allt innehåll**tidigare.*
+         * **[!UICONTROL Ärvd]** - inget explicit synkroniseringsvärde för mappen; I stället ärver mappen synkroniseringsvärdet från någon av dess överordnade mappar eller standardläget i molnkonfigurationen. Detaljerad status för ärvda program genom ett verktygstips.
+         * **[!UICONTROL Aktivera för undermappar]** - Inkludera allt i det här underträdet för synkronisering till Dynamic Media. De mappspecifika inställningarna åsidosätter standardläget i molnkonfigurationen.
+         * **[!UICONTROL Inaktiverat för undermappar]** - Uteslut allt i det här underträdet från synkronisering till Dynamic Media.
    >[!NOTE]
    >
    >Det finns inget stöd för versionshantering i DMS7. Dessutom gäller fördröjd aktivering endast om **[!UICONTROL Publicera resurser]** på sidan Redigera dynamisk mediekonfiguration är inställd på **[!UICONTROL Vid aktivering]**, och sedan endast tills resursen aktiveras första gången.
@@ -164,7 +174,7 @@ Du öppnar sidan Allmänna inställningar för programmet genom att klicka på *
 
 **Servrar - **On account provisioning, ger Dynamic Media automatiskt de servrar som är tilldelade ditt företag. De här servrarna används för att skapa URL-strängar för din webbplats och dina program. Dessa URL-anrop är specifika för ditt konto. Ändra inte något av servernamnen såvida inte AEM-stödet uttryckligen har instruerat att göra det.
 
-**[!UICONTROL Skriv över bilder]** - Dynamiska media tillåter inte att två filer har samma namn. Varje objekts URL-ID (filnamnet minus filtillägget) måste vara unikt. De här alternativen anger hur ersättningsresurser överförs: om de ersätter originalet eller blir dubbletter. Duplicerade resurser får ett nytt namn med namnet&quot;-1&quot; (till exempel heter stol.tif stol-1.tif). Dessa alternativ påverkar resurser som överförts till en annan mapp än den ursprungliga eller resurser med ett annat filnamnstillägg än den ursprungliga (till exempel JPG, TIF eller PNG).
+**[!UICONTROL Skriv över bilder]** - Dynamiska media tillåter inte att två filer har samma namn. Varje objekts URL-ID (filnamnet minus filtillägget) måste vara unikt. De här alternativen anger hur ersättningsresurser överförs: om de ersätter originalet eller blir dubbletter. Dubblettresurser får ett nytt namn med namnet&quot;-1&quot; (till exempel heter stol.tif stol-1.tif). Dessa alternativ påverkar resurser som överförts till en annan mapp än den ursprungliga eller resurser med ett annat filnamnstillägg än den ursprungliga (till exempel JPG, TIF eller PNG).
 
 * **[!UICONTROL Skriv över i den aktuella mappen, samma basbildnamn/tillägg]** - Det här alternativet är den striktaste regeln för ersättning. Det kräver att du överför ersättningsbilden till samma mapp som originalbilden och att ersättningsbilden har samma filnamnstillägg som originalbilden. Om dessa krav inte uppfylls skapas en dubblett.
 
@@ -259,7 +269,7 @@ Du kan lägga till anpassade MIME-typer för format som inte stöds i AEM Resurs
 
    ![2019-08-02_16-17-29](assets/2019-08-02_16-17-29.png)
 
-1. På sidan bläddrar du nedåt till namnet *Adobe CQ Scene7 Asset MIME type Service* enligt följande skärmbild. Tryck på **[!UICONTROL Redigera konfigurationsvärdena]** (pennikonen) till höger om namnet.
+1. På sidan bläddrar du nedåt till namnet *Adobe CQ Scene7 Asset MIME type Service* enligt skärmbilden nedan. Tryck på **[!UICONTROL Redigera konfigurationsvärdena]** (pennikonen) till höger om namnet.
 
    ![2019-08-02_16-44-56](assets/2019-08-02_16-44-56.png)
 
@@ -468,7 +478,7 @@ När rotationsuppsättningen överförs och publiceras aktiverar du namnet på d
 Adobe rekommenderar följande finjusteringstips för synkroniseringsprestanda/skalbarhet för att Dynamic Media (med `dynamicmedia_scene7` körningsläge) ska fungera smidigt:
 
 * Uppdatera de fördefinierade arbetstrådarna för Granite-arbetsflödet (videoresurser).
-* Uppdatera det fördefinierade tillfälliga Granite-arbetsflödet (bilder och andra resurser än videor) för köarbetstrådar.
+* Uppdatera de fördefinierade tillfälliga arbetsflödena för Granite (bilder och andra mediefiler) för köarbetstrådar.
 * Uppdatera de maximala överföringsanslutningarna till Dynamic Media Classic-servern.
 
 #### Uppdaterar kön för Granska tillfälligt arbetsflöde {#updating-the-granite-transient-workflow-queue}
@@ -569,7 +579,7 @@ Om du använder Dynamic Media för bild och/eller video kan du använda de stand
    <td>Börjar med <strong>video/</strong></td>
    <td>"filter-video" som är klar att användas:
     <ul>
-     <li><br /> Undanta återgivningar av originalvideo och statiska miniatyrer från replikering. <br /> </li>
+     <li>Undanta återgivningar av originalvideo och statiska miniatyrer från replikering.<br /> <br /> </li>
     </ul> </td>
   </tr>
  </tbody>
