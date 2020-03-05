@@ -11,14 +11,14 @@ content-type: reference
 discoiquuid: 39b8cf9b-afec-4c9a-8a5d-7fc87e643f26
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9c73abc3291f2847c705cb649d2993fb186b0993
+source-git-commit: 9f923782d3d0a7bdf45b18e8025bd2d083acf77c
 
 ---
 
 
 # Publicera mappar på varumärkesportalen{#publish-folders-to-brand-portal}
 
-Som administratör för Adobe Experience Manager-resurser (AEM) kan du publicera resurser och mappar i instansen av AEM Assets Brand Portal (eller schemalägga publiceringsarbetsflödet till ett senare datum/tid) för organisationen. Du måste dock först integrera AEM Assets med varumärkesportalen. Mer information finns i [Konfigurera AEM Assets-integrering med varumärkesportalen](/help/assets/brand-portal-configuring-integration.md).
+Som administratör för Adobe Experience Manager-resurser (AEM) kan du publicera resurser och mappar i instansen av AEM Assets Brand Portal (eller schemalägga publiceringsarbetsflödet till ett senare datum/tid) för organisationen. Du måste dock först integrera AEM Assets med varumärkesportalen. Mer information finns i [Konfigurera AEM-resurser med varumärkesportalen](/help/assets/configure-aem-assets-with-brand-portal.md).
 
 När du har publicerat en resurs eller mapp är den tillgänglig för användare i varumärkesportalen.
 
