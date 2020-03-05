@@ -1,10 +1,10 @@
 ---
-title: Hantera samlingar av digitala resurser
+title: Hantera samlingar med digitala resurser
 description: Lär dig mer om hur du hanterar samlingar med resurser, som att skapa, visa, ta bort, redigera och hämta samlingar.
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 9af0ee0ff9d1089b6cf09c52f7f606cce6775d72
+source-git-commit: 27fdeaf50255379fd6e5bb45eaf593cec895cd04
 
 ---
 
@@ -25,7 +25,7 @@ Samlingar är av följande typer, baserat på det sätt som de samlar resurser p
 
 ## Åtkomst till samlingskonsolen {#navigating-the-collections-console}
 
-Om du vill öppna **[!UICONTROL Samlingar]** trycker eller klickar du på Experience Manager-logotypen. Gå till **[!UICONTROL Resurser]** > **[!UICONTROL Samlingar]** på navigeringssidan.
+Om du vill öppna **[!UICONTROL Samlingar]** trycker eller klickar du på Experience Manager-logotypen. From the navigation page, go to **[!UICONTROL Assets]** > **[!UICONTROL Collections]**.
 
 ## Skapa en samling {#creating-a-collection}
 
@@ -38,14 +38,14 @@ Du kan skapa en samling med statiska referenser, t.ex. en samling med referenser
 1. Gå till **[!UICONTROL samlingskonsolen]** .
 1. Tryck/klicka på **[!UICONTROL Skapa]** i verktygsfältet.
 1. Ange en rubrik och en valfri beskrivning för samlingen på sidan **[!UICONTROL Skapa samling]** .
-1. Lägg till medlemmar i samlingen och tilldela lämpliga behörigheter. Du kan också välja **[!UICONTROL Offentlig samling]** så att alla användare kan komma åt samlingen.
+1. Lägg till medlemmar i samlingen och tilldela lämpliga behörigheter. Alternatively, select **[!UICONTROL Public Collection]** to allow all users to access the collection.
 
    >[!NOTE]
    >
    >Om du vill att medlemmarna ska kunna dela samlingar med andra användare anger du gruppens läsbehörighet på sökvägen `dam-users` `home/users`. Ge användarna på `/content/dam/collections` platsen behörighet att visa samlingar i popup-listor. Du kan också göra användaren till en del av `dam-users` gruppen.
 
 1. (Valfritt) Lägg till en miniatyrbild för samlingen.
-1. Tryck/klicka på **[!UICONTROL Skapa]** och sedan på/klicka på **[!UICONTROL OK]** för att stänga dialogrutan. En samling med den angivna titeln och egenskaperna öppnas i konsolen Samlingar.
+1. Tap/click **[!UICONTROL Create]**, and then tap/click **[!UICONTROL OK]** to close the dialog. En samling med den angivna titeln och de angivna egenskaperna öppnas i konsolen Samlingar.
 
    >[!NOTE]
    >
@@ -64,9 +64,9 @@ Du kan dra resurser från resursgränssnittet till en samling. Du kan också ska
 
 1. Tryck/klicka på ikonen **[!UICONTROL Skapa samling]** i verktygsfältet på sidan **[!UICONTROL Lägg till i samling]** .
 
-   Om du vill lägga till resurserna i en befintlig samling markerar du den på sidan och trycker/klickar på **[!UICONTROL Lägg till]**. Som standard är den senast uppdaterade samlingen markerad.
+   If you want to add the assets to an existing collection, select it from the page, and tap/click **[!UICONTROL Add]**. Som standard väljs den senast uppdaterade samlingen.
 
-1. Ange ett namn för samlingen i dialogrutan **[!UICONTROL Skapa ny samling]** . Om du vill att samlingen ska vara tillgänglig för alla användare väljer du **[!UICONTROL Offentlig samling]**.
+1. In the **[!UICONTROL Create New Collection]** dialog, specify a name for the collection. If you want the collection to be accessible to all users, select **[!UICONTROL Public Collection]**.
 1. Tryck/klicka på **[!UICONTROL Fortsätt]** för att skapa samlingen.
 
 ### Skapa en smart samling {#creating-a-smart-collection}
@@ -93,13 +93,13 @@ Så här skapar du en smart samling:
    >
    >Om du väljer **[!UICONTROL Offentlig]** blir den smarta samlingen tillgänglig för alla med ägarrollen när du har skapat den. Om du avmarkerar alternativet **[!UICONTROL Offentlig]** är DAM-användargruppen inte längre kopplad till den smarta samlingen.
 
-1. Tryck/klicka på **[!UICONTROL Spara]** för att skapa den smarta samlingen och stäng sedan meddelanderutan för att slutföra processen.
+1. Tap/click **[!UICONTROL Save]** to create the smart collection, and then close the message box to complete the process.
 
-   Den nya smarta samlingen läggs också till i listan **[!UICONTROL Sparade sökningar]** .
+   The new smart collection is also added to the **[!UICONTROL Saved Searches]** list.
 
    ![collection_listing](assets/collection_listing.png)
 
-   Etiketten för knappen **[!UICONTROL Skapa smart markering]** ändras till **[!UICONTROL Redigera smart markering]**. Om du vill redigera inställningarna för den smarta samlingen väljer du **[!UICONTROL Filer]** i listan **[!UICONTROL Filer och mappar]** . Tryck/klicka sedan på knappen **[!UICONTROL Redigera smart markering]** .
+   Etiketten för knappen **[!UICONTROL Skapa smart markering]** ändras till **[!UICONTROL Redigera smart markering]**. To edit the settings of the smart collection, select **[!UICONTROL Files]** from the **[!UICONTROL Files &amp; Folders]** list. Tryck/klicka sedan på knappen **[!UICONTROL Redigera smart markering]** .
 
    ![chlimage_1-7](assets/chlimage_1-112.png)
 
@@ -119,7 +119,7 @@ Du kan lägga till resurser i en samling som innehåller en lista med refererade
 
 ## Redigera en smart samling {#editing-a-smart-collection}
 
-Smarta samlingar skapas genom att en sökning sparas så att du kan ändra deras innehåll genom att ändra sökparametrarna för den [sparade sökningen](#editing-saved-searches).
+Smarta samlingar skapas genom att en sökning sparas så att du kan ändra deras innehåll genom att ändra sökparametrarna för den [sparade sökningen](#saved-searches).
 
 1. I resursanvändargränssnittet: tryck/klicka på sökikonen i verktygsfältet.
 
@@ -127,7 +127,7 @@ Smarta samlingar skapas genom att en sökning sparas så att du kan ändra deras
 
 1. Tryck på returtangenten när markören är i Omnissearch-rutan.
 1. Tryck/klicka på ikonen GlobalNav för att visa panelen Filter.
-1. Välj den smarta samling du vill ändra i listan **[!UICONTROL Sparade sökningar]** . På sökpanelen visas de filter som har konfigurerats för den sparade sökningen.
+1. From the **[!UICONTROL Saved Searches]** list, select the smart collection you want to modify. På sökpanelen visas de filter som har konfigurerats för den sparade sökningen.
 
    ![select_smart_collection](assets/select_smart_collection.png)
 
@@ -147,7 +147,7 @@ Smarta samlingar skapas genom att en sökning sparas så att du kan ändra deras
 Samlingsmetadata omfattar data om samlingen, inklusive taggar som läggs till.
 
 1. Välj en samling i konsolen Samlingar och tryck/klicka på ikonen **[!UICONTROL Egenskaper]** i verktygsfältet.
-1. På sidan Metadata för **[!UICONTROL samling]** kan du visa samlingsmetadata från flikarna **[!UICONTROL Grundläggande]** och **[!UICONTROL Avancerat]** .
+1. In the **[!UICONTROL Collection Metadata]** page, view the collection metadata from the **[!UICONTROL Basic]** and **[!UICONTROL Advanced]** tabs.
 1. Ändra metadata efter behov och tryck/klicka sedan på **[!UICONTROL Spara och stäng]** i verktygsfältet för att spara ändringarna.
 
 ## Redigera metadata för flera samlingar samtidigt {#editing-collection-metadata-in-bulk}
@@ -166,7 +166,7 @@ Du kan redigera metadata för flera samlingar samtidigt. Med den här funktionen
 
 
 1. Tryck/klicka på **[!UICONTROL Spara och stäng]** i verktygsfältet och stäng sedan bekräftelsedialogrutan för att slutföra processen.
-1. Om du vill lägga till nya metadata med befintliga metadata väljer du **[!UICONTROL Lägg till läge]**. Om du inte markerar det här alternativet ersätter de nya metadata som finns i fälten. Tryck/klicka på **[!UICONTROL Skicka]**.
+1. To append the new metadata with the existing metadata, select **[!UICONTROL Append mode]**. Om du inte markerar det här alternativet ersätter de nya metadata de data som finns i fälten. Tryck/klicka på **[!UICONTROL Skicka]**.
 
    >[!NOTE]
    >
@@ -195,7 +195,7 @@ I en samling är sökning efter AEM-resurser begränsad till resurser (och deras
 Du kan redigera samlingsinställningar, till exempel rubrik och beskrivning, eller lägga till medlemmar i en samling.
 
 1. Markera en samling och tryck/klicka på ikonen **[!UICONTROL Inställningar]** i verktygsfältet. Du kan även använda **[!UICONTROL snabbåtgärden Inställningar]** från samlingsminiatyrbilden.
-1. Ändra samlingsinställningarna på sidan **[!UICONTROL Samlingsinställningar]** . Du kan till exempel ändra samlingens rubrik, beskrivningar, medlemmar och behörigheter enligt beskrivningen i [Lägga till samlingar](#creating-a-collection).
+1. Modify the collection settings in the **[!UICONTROL Collection Settings]** page. For example, modify the collection title, descriptions, members, and permissions as discussed in [Adding Collections](#creating-a-collection).
 
 1. Spara ändringarna genom att trycka/klicka på **[!UICONTROL Spara]**.
 
@@ -209,7 +209,7 @@ Du kan redigera samlingsinställningar, till exempel rubrik och beskrivning, ell
 
    >[!NOTE]
    >
-   >Du kan också ta bort smarta samlingar genom att [ta bort sparade sökningar](#deleting-saved-searches).
+   >Du kan också ta bort smarta samlingar genom att [ta bort sparade sökningar](#saved-searches).
 
 ## Hämta en samling {#downloading-a-collection}
 
@@ -241,11 +241,11 @@ Du kan lägga till en samling i en annan samling och på så sätt skapa en kaps
 
 ## Sparade sökningar {#saved-searches}
 
-I användargränssnittet Resurser kan du söka efter eller filtrera resurser baserat på vissa regler, sökvillkor eller anpassade sökfaktorer. Om du sparar dem som **[!UICONTROL sparade sökningar]** kan du komma åt dem senare från listan **[!UICONTROL Sparade sökningar]** på panelen Filter. När du skapar en sparad sökning skapas även en smart samling.
+I Assets-gränssnittet kan du söka efter eller filtrera resurser baserat på vissa regler, sökvillkor eller anpassade sökfasetter. If you save these as **[!UICONTROL Saved Searches]**, you can access them later from the **[!UICONTROL Saved Searches]** list in the Filter panel. När du skapar en sparad sökning skapas även en smart samling.
 
 ![saved_searches_list](assets/saved_searches_list.png)
 
-Sparade sökningar skapas när du skapar en smart samling. Smarta samlingar läggs automatiskt till i listan **[!UICONTROL Sparade sökningar]** . Frågan om sparade sökningar för samlingen sparas i egenskapen `dam:query` CRXDE på den relativa platsen `/content/dam/collections/`.
+Sparade sökningar skapas när du skapar en smart samling. Smart collections are automatically added to the **[!UICONTROL Saved Searches]** list. Frågan om sparade sökningar för samlingen sparas i egenskapen `dam:query` i CRXDE på den relativa sökvägen `/content/dam/collections/`.
 
 >[!NOTE]
 >
@@ -263,7 +263,7 @@ Så här tar du bort sparade sökningar:
 
 1. Klicka på eller tryck på ikonen GlobalNav för att visa filterpanelen.
 
-1. I listan **[!UICONTROL Sparade sökningar]** : tryck/klicka på **[!UICONTROL Ta bort]** bredvid den smarta samling som du vill ta bort.
+1. From the **[!UICONTROL Saved Searches]** list, tap/click **[!UICONTROL Delete]** next to the smart collection that you want to delete.
 
    ![select_smart_collection-1](assets/select_smart_collection-1.png)
 
@@ -275,11 +275,11 @@ Du kan köra ett arbetsflöde för resurserna i en samling. Om samlingen innehå
 
 1. Välj en samling som du vill köra ett arbetsflöde för i samlingskonsolen.
 1. Tryck/klicka på ikonen GlobalNav och välj **[!UICONTROL Tidslinje]** i listan.
-1. Klicka på eller tryck på ikonen Cirkumflex längst ned på tidslinjen och tryck/klicka sedan på **[!UICONTROL Starta arbetsflöde]**.
+1. Klicka eller tryck på cirkumflexikonen längst ned på tidslinjen och tryck/klicka sedan på **[!UICONTROL Starta arbetsflöde]**.
 
    ![chlimage_1-14](assets/chlimage_1-137.png)
 
-1. I delen **[!UICONTROL Starta arbetsflöde]** väljer du en arbetsflödesmodell i listan. Välj till exempel **[!UICONTROL DAM Update Asset]** -modellen.
+1. I avsnittet **[!UICONTROL Starta arbetsflöde]** väljer du en arbetsflödesmodell i listan. Välj till exempel modellen **[!UICONTROL DAM Update Asset]**.
 1. Ange en titel för arbetsflödet och tryck/klicka på **[!UICONTROL Start]**.
 1. Tryck/klicka på **[!UICONTROL Fortsätt]** i dialogrutan. Arbetsflödet körs på alla resurser i samlingen.
 
