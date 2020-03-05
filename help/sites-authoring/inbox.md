@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 8b607b55-2412-469f-856b-0a3dea4b0efb
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 8ebe1a2c23ec5e3e16807072ac17ec13a6df9701
 
 ---
 
@@ -22,7 +22,7 @@ Du kan få meddelanden från olika AEM-områden, inklusive arbetsflöden och pro
 * Uppgifter:
 
    * dessa kan också skapas vid olika punkter i AEM-gränssnittet, t.ex. under **Projekt**,
-   * dessa kan vara produkten av ett arbetsflöde **Skapa uppgift** eller **Skapa projektuppgift** .
+   * these can be the product of a workflow **Create Task** or **Create Project Task** step.
 
 * Arbetsflöden:
 
@@ -75,16 +75,16 @@ Så här öppnar du Inkorgen för AEM-meddelanden:
 
 1. Klicka/tryck på indikatorn i verktygsfältet.
 
-1. Välj **Visa alla**. AEM **Inbox** öppnas. I inkorgen visas objekt från arbetsflöden, projekt och uppgifter.
+1. Välj **Visa alla**. **AEM -inkorgen** öppnas. I inkorgen visas objekt från arbetsflöden, projekt och uppgifter.
 1. Standardvyn är [Listvy](#inbox-list-view), men du kan även växla till [Kalendervy](#inbox-calendar-view). Detta görs med vyväljaren (verktygsfält, överst till höger).
 
    För båda vyerna kan du även definiera [visningsinställningar](#inbox-view-settings). vilka alternativ som är tillgängliga beror på den aktuella vyn.
 
-   ![wf-79](assets/wf-79.png)
+   ![wf-79](assets/inbox-list-view.png)
 
 >[!NOTE]
 >
->Inkorgen fungerar som en konsol, så använd [Global navigering](/help/sites-authoring/basic-handling.md#global-navigation) eller [Sök](/help/sites-authoring/search.md) för att navigera till en annan plats när du är klar.
+>Inkorgen fungerar som en konsol, och du kan använda [Global navigering](/help/sites-authoring/basic-handling.md#global-navigation) eller [Sök](/help/sites-authoring/search.md) för att navigera till en annan plats när du är klar.
 
 ### Inkorg - listvy {#inbox-list-view}
 
@@ -102,14 +102,14 @@ Du kan:
 
 * välja en specifik vy, **Tidslinje**, **kolumn**, **lista**
 
-* specificera de uppgifter som ska visas enligt **tidsplanen**, **Alla**, **Planerat**, **Pågår**, **Förfaller snart**, **Förfallodatum**
+* specify the tasks to display according to **Schedule**; **All**, **Planned**, **In Progress**, **Due Soon**, **Past Due**
 
 * detaljgranska för mer detaljerad information om ett objekt
 * markera ett datumintervall som vyn ska fokuseras i:
 
 ![wf-91](assets/wf-91.png)
 
-### Inkorg - Visa inställningar {#inbox-view-settings}
+### Inkorg - Inställningar {#inbox-view-settings}
 
 För båda vyerna (List och Calendar) kan du definiera inställningar:
 
@@ -118,7 +118,7 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
    I **kalendervyn** kan du konfigurera:
 
    * **Gruppera efter**
-   * **Schemalägg** eller **ingen**
+   * **Schema** eller **Ingen**
    * **Kortstorlek**
    ![wf-92](assets/wf-92.png)
 
@@ -126,9 +126,29 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
 
    I **listvyn** kan du konfigurera sorteringsmekanismen:
 
-   * **Sortera efter**
+   * **Sorteringsfält**
    * **Sorteringsordning**
-   ![wf-83](assets/wf-83.png)
+   ![wf-83](assets/inbox-settings.png)
+
+### Inkorg - Administratörskontroll {#inbox-admin-control}
+
+Användare som ingår i gruppen **Arbetsflödesadministratörer** kan visa alternativet Administratörskontroll i listan. Med det här alternativet kan administratörer:
+
+* Definiera anpassningar för texten och logotypen i sidhuvudet.
+
+* Styr visningen av de navigeringsalternativ som är tillgängliga i sidhuvudet och begränsa användarna till arbetsflödets redigeringsläge eller navigera till hjälpen eller andra lösningslänkar.
+
+![admin-control](assets/admin-control.png)
+
+* **Anpassning av varumärkesprofilering**
+
+   * **Anpassa rubriktext:** Ange den text i det här fältet som ska ersätta den befintliga **Adobe Experience Manager** -texten som visas i sidhuvudet.
+
+   * **Anpassa logotyp:** Överför en bild i DAM (Digital Asset Management) och använd det här fältet för att ersätta Adobe Experience Manager-logotypen som visas i sidhuvudet.
+
+* **Användarnavigering**
+   * **Dölj navigeringsalternativ:** Välj det här alternativet om du vill dölja navigeringsalternativen i sidhuvudet, t.ex. alternativet att navigera till andra lösningar, hjälplänken och alternativen som visas när användaren trycker på Adobe Experience Manager-logotypen eller -texten.
+* **Spara:** Tryck/klicka på det här alternativet om du vill spara inställningarna.
 
 ## Vidta åtgärder för ett objekt {#taking-action-on-an-item}
 
@@ -176,7 +196,7 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
 I inkorgen kan du skapa uppgifter:
 
 1. Välj **Skapa** och sedan **Aktivitet**.
-1. Fyll i de nödvändiga fälten på flikarna **Grundläggande** och **Avancerat** . Endast **titeln** är obligatorisk, alla andra är valfria:
+1. Complete the necessary fields in the **Basic** and **Advanced** tabs; only the **Title** is mandatory, all others are optional:
 
    * **Grundläggande**:
 
@@ -210,7 +230,7 @@ För vissa uppgifter kan du skapa ett [projekt](/help/sites-authoring/projects.m
    >Arbetsobjekt (från ett arbetsflöde) kan inte användas för att skapa ett projekt.
 
 1. Välj **Skapa projekt** i verktygsfältet för att öppna guiden.
-1. Välj lämplig mall och sedan **Nästa**.
+1. Select the appropriate template, then **Next**.
 1. Ange de nödvändiga egenskaperna:
 
    * **Grundläggande**
