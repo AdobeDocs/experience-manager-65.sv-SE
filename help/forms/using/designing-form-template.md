@@ -10,7 +10,7 @@ topic-tags: hTML5_forms
 discoiquuid: f2e9dbe4-e210-41f3-8878-2fc4d166e63c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 8ebe1a2c23ec5e3e16807072ac17ec13a6df9701
 
 ---
 
@@ -38,5 +38,9 @@ Fliken Förhandsgranska HTML läggs till i designläget för formulärdesigners 
 Huvudmålet för HTML5-formulär är pekenheter. Därför har en ny kontroll för signering i klotter lagts till i AEM Forms Designer. Du kan klicka på eller dra och släppa kontrollen för signering av skript på formulärmallen och konfigurera den. Det återges som ett klottrigt fält i HTML5-rendering och kan användas för att klottra signaturer på enheter med pekskärm. På stationära datorer kan den användas som ett klotterfält med hjälp av muskontroll. Mer information om hur du använder den här funktionen finns i [XFA-skriptfält](../../forms/using/scribble-signature.md).
 
 ![4](assets/4.png)
+
+#### RTF-format {#rich-text-format}
+
+Om du vill lägga till en lista med formateringsalternativ i ett textfält i det återgivna HTML5-formuläret kan du definiera ett fältformat för textfältet i Forms Designer. Tryck på textfältet i **[!UICONTROL designvyn]**. Använd inställningarna genom att välja **[!UICONTROL RTF]** i listrutan **[!UICONTROL Fältformat]** på fliken **[!UICONTROL Fält]** . Textfältet visar formateringsalternativ när det återges i ett HTML5-formulär.
 
 [Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
