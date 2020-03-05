@@ -10,7 +10,7 @@ topic-tags: publish
 discoiquuid: f0a5588d-f210-4f04-bc35-b62834f90ab1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 489ff793e05e01c59faba63d60cc362e4f26f703
+source-git-commit: 86649ccfd494435038da06e72fbfed544a7aaf12
 
 ---
 
@@ -27,78 +27,78 @@ Tilldela ett uppgiftssteg skapar en uppgift och tilldelar den till en användare
 
 Du kan också använda komponenten för att styra aktivitetens beteende. Du kan till exempel skapa ett automatiskt postdokument, tilldela uppgiften till en viss användare eller grupp, ange sökvägen till skickade data, ange sökvägen till data som ska fyllas i i förväg och ange standardåtgärder. Tilldela uppgift-steget har följande egenskaper:
 
-* **** Titel: Uppgiftens namn. Titeln visas i AEM Inbox.
-* **** Beskrivning: Förklaring av de åtgärder som utförs i uppgiften. Den här informationen är användbar för andra processutvecklare när du arbetar i en delad utvecklingsmiljö.
+* **Titel:** Uppgiftens namn. Titeln visas i AEM Inbox.
+* **Beskrivning:** Förklaring av de åtgärder som utförs i uppgiften. Den här informationen är användbar för andra processutvecklare när du arbetar i en delad utvecklingsmiljö.
 
-* **** Miniatyrbildssökväg: Sökväg till aktivitetsminiatyrbilden. Om ingen sökväg anges visas en standardminiatyrbild för ett anpassat formulär och en standardikon för Postdokument.
-* **** Arbetsflödesfas: Ett arbetsflöde kan ha flera steg. Dessa steg visas i AEM Inbox. Du kan definiera de här stegen i modellens egenskaper (Sidspark > Sida > Sidegenskaper > Steg).
-* **** Prioritet: Den valda prioriteten visas i AEM Inbox. De tillgängliga alternativen är Hög, Medel och Låg. Standardvärdet är Medel.
-* **** Förfallodatum: Ange antalet dagar eller timmar efter vilka aktiviteten har markerats som försenad. Om du väljer **Av** markeras uppgiften aldrig som försenad. Du kan också ange en uttidshanterare för att utföra vissa åtgärder när åtgärden är försenad.
+* **Miniatyrbildssökväg:** Sökväg till aktivitetsminiatyrbilden. Om ingen sökväg anges visas en standardminiatyrbild för ett anpassat formulär och en standardikon för Postdokument.
+* **Arbetsflödesfas:** Ett arbetsflöde kan ha flera steg. Dessa steg visas i AEM Inbox. Du kan definiera de här stegen i modellens egenskaper (Sidspark > Sida > Sidegenskaper > Steg).
+* **Prioritet:** Den valda prioriteten visas i AEM Inbox. De tillgängliga alternativen är Hög, Medel och Låg. Standardvärdet är Medel.
+* **Förfallodatum:** Ange antalet dagar eller timmar efter vilka aktiviteten har markerats som försenad. Om du väljer **Av** markeras uppgiften aldrig som försenad. Du kan också ange en uttidshanterare för att utföra vissa åtgärder när åtgärden är försenad.
 
-* **** Dagar: Antalet dagar innan uppgiften ska slutföras. Antalet dagar räknas efter att uppgiften har tilldelats en användare. Om en uppgift inte är fullständig och korsar det antal dagar som anges i fältet Dagar, aktiveras en timeout-hanterare efter förfallodatumet, om detta väljs.
-* **** Timmar: Antalet timmar innan uppgiften ska slutföras. Antalet timmar räknas efter att uppgiften har tilldelats en användare. Om en uppgift inte är slutförd och korsar det antal timmar som anges i fältet Timmar, aktiveras en timeout-hanterare efter de timmar som ska förfalla.
-* **** Tidsgräns efter förfallodatum: Välj det här alternativet om du vill aktivera markeringsfältet för Timeout-hanteraren.
-* **** Timeout-hanterare: Välj det skript som ska köras när tilldelningssteget överskrider förfallodatumet. Skript som placeras i CRX-databasen i [apps]/fd/dashboard/scripts/timeoutHandler kan väljas. Den angivna sökvägen finns inte i crx-databasen. En administratör skapar sökvägen innan den används.
-* **** Markera åtgärden och kommentera från den senaste aktiviteten i Uppgiftsinformation: Välj det här alternativet om du vill visa den senaste åtgärden som utfördes och kommentaren som togs emot i aktivitetsinformationsavsnittet för en uppgift.
-* **** Typ: Välj vilken typ av dokument som ska fyllas när arbetsflödet startas. Du kan välja ett adaptivt formulär, ett skrivskyddat adaptivt formulär, ett icke-interaktivt PDF-dokument, ett gränssnitt för interaktiv kommunikationsagent eller ett dokument för interaktiv kommunikationskanal.
-* **** Använd adaptiv form: Ange den metod som ska användas för att hitta indataadaptiva formulär. Det här alternativet är tillgängligt om du väljer Adaptivt formulär eller Skrivskyddat anpassat formulär i listrutan Typ. Du kan använda det adaptiva formuläret som skickas till arbetsflödet, som finns på en absolut sökväg eller som finns på en sökväg i en variabel. Du kan använda en variabel av typen String för att ange sökvägen.\
+* **Dagar:** Antalet dagar innan uppgiften ska slutföras. Antalet dagar räknas efter att uppgiften har tilldelats en användare. Om en uppgift inte är fullständig och korsar det antal dagar som anges i fältet Dagar, aktiveras en timeout-hanterare efter förfallodatumet, om detta väljs.
+* **Timmar:** Antalet timmar innan uppgiften ska slutföras. Antalet timmar räknas efter att uppgiften har tilldelats en användare. Om en uppgift inte är slutförd och korsar det antal timmar som anges i fältet Timmar, aktiveras en timeout-hanterare efter de timmar som ska förfalla.
+* **Tidsgräns efter förfallodatum:** Välj det här alternativet om du vill aktivera markeringsfältet för Timeout-hanteraren.
+* **Timeout-hanterare:** Välj det skript som ska köras när tilldelningssteget överskrider förfallodatumet. Skript som placeras i CRX-databasen i [apps]/fd/dashboard/scripts/timeoutHandler kan väljas. Den angivna sökvägen finns inte i crx-databasen. En administratör skapar sökvägen innan den används.
+* **Markera åtgärden och kommentera från den senaste aktiviteten i Uppgiftsinformation:** Välj det här alternativet om du vill visa den senaste åtgärden som utfördes och kommentaren som togs emot i aktivitetsinformationsavsnittet för en uppgift.
+* **Typ:** Välj vilken typ av dokument som ska fyllas när arbetsflödet startas. Du kan välja ett adaptivt formulär, ett skrivskyddat adaptivt formulär, ett icke-interaktivt PDF-dokument, ett gränssnitt för interaktiv kommunikationsagent eller ett dokument för interaktiv kommunikationskanal.
+* **Använd adaptiv form:** Ange den metod som ska användas för att hitta indataadaptiva formulär. Det här alternativet är tillgängligt om du väljer Adaptivt formulär eller Skrivskyddat anpassat formulär i listrutan Typ. Du kan använda det adaptiva formuläret som skickas till arbetsflödet, som finns på en absolut sökväg eller som finns på en sökväg i en variabel. Du kan använda en variabel av typen String för att ange sökvägen.\
    Du kan koppla flera adaptiva formulär till ett arbetsflöde. Det innebär att du kan ange ett anpassningsbart formulär i körningsmiljön med hjälp av de tillgängliga indatametoderna.
 
-* **** Använd interaktiv kommunikation: Ange den metod som ska användas för att hitta den interaktiva indatakommunikationen. Du kan använda den interaktiva kommunikationen som skickas till arbetsflödet, som finns på en absolut sökväg eller som finns på en sökväg i en variabel. Du kan använda en variabel av typen String för att ange sökvägen. Det här alternativet är tillgängligt om du väljer gränssnittet Interactive Communication Agent eller Interactive Communication Web Channel Document i listrutan Typ.\
-   **** Obs! Du måste ha grupptilldelningar för cm-agent-users och arbetsflödesanvändare för att få tillgång till gränssnittet för Interactive Communications Agent i AEM-inkorg.
+* **Använd interaktiv kommunikation:** Ange den metod som ska användas för att hitta den interaktiva indatakommunikationen. Du kan använda den interaktiva kommunikationen som skickas till arbetsflödet, som finns på en absolut sökväg eller som finns på en sökväg i en variabel. Du kan använda en variabel av typen String för att ange sökvägen. Det här alternativet är tillgängligt om du väljer gränssnittet Interactive Communication Agent eller Interactive Communication Web Channel Document i listrutan Typ.\
+   **Obs!** Du måste ha grupptilldelningar för cm-agent-users och arbetsflödesanvändare för att få tillgång till gränssnittet för Interactive Communications Agent i AEM-inkorg.
 
 * **Adaptiv form eller interaktiv kommunikationsväg**: Ange sökvägen till det adaptiva formuläret eller interaktiv kommunikation. Du kan använda det adaptiva formuläret eller den interaktiva kommunikationen som skickas till arbetsflödet, som finns på en absolut sökväg, eller hämta det adaptiva formuläret från en sökväg som lagras i en variabel av strängdatatyp.
-* **** Välj PDF-indata med: Ange sökvägen till ett icke-interaktivt PDF-dokument. Fältet är tillgängligt när du väljer ett icke-interaktivt PDF-dokument i fältet Typ. Du kan välja PDF-indata med den sökväg som är relativ till nyttolasten, som har sparats med en absolut sökväg eller med en variabel av dokumentdatatypen. Exempel: [Payload_Directory]/Workflow/PDF/credit-card.pdf. Sökvägen finns inte i crx-databasen. En administratör skapar sökvägen innan den används. Du måste aktivera alternativet Dokument för post eller formulärmallsbaserade adaptiva formulär för att kunna använda alternativet PDF-sökväg.
+* **Välj PDF-indata med:** Ange sökvägen till ett icke-interaktivt PDF-dokument. Fältet är tillgängligt när du väljer ett icke-interaktivt PDF-dokument i fältet Typ. Du kan välja PDF-indata med den sökväg som är relativ till nyttolasten, som har sparats med en absolut sökväg eller med en variabel av dokumentdatatypen. Exempel: [Payload_Directory]/Workflow/PDF/credit-card.pdf. Sökvägen finns inte i crx-databasen. En administratör skapar sökvägen innan den används. Du måste aktivera alternativet Dokument för post eller formulärmallsbaserade adaptiva formulär för att kunna använda alternativet PDF-sökväg.
 * **Rendera det anpassningsbara formuläret som**: När en uppgift har markerats som slutförd kan du återge det anpassningsbara formuläret som ett skrivskyddat anpassat formulär eller som ett PDF-dokument. Du måste ha alternativet Dokument i post aktiverat eller formulärmallsbaserade adaptiva formulär för att kunna återge det adaptiva formuläret som Dokument i post.
-* **** Förifylld: Följande fält i listan nedan fungerar som indata för uppgiften:
+* **Förifylld:** Följande fält i listan nedan fungerar som indata för uppgiften:
 
-   * **** Välj indatafil med: Sökväg till indatafil (.json,). xml, .doc eller formulärdatamodell). Du kan hämta indatafilen med en sökväg som är relativ till nyttolasten eller hämta filen som lagras i en variabel av datatypen Document, XML eller JSON. Filen innehåller till exempel de data som skickats för formuläret via ett AEM Inbox-program. En exempelsökväg är [Payload_Directory]/workflow/data.
-   * **** Välj indatabilagor med: Bifogade filer som är tillgängliga på platsen bifogas till formuläret som är kopplat till uppgiften. Sökvägen är alltid relativ till nyttolasten. En exempelsökväg är [Payload_Directory]/attachments/
-   * **** Välj JSON-indata: Välj en JSON-indatafil med en sökväg som är relativ till nyttolasten eller som lagras i en variabel av datatypen Document, JSON eller Form Data Model. Det här alternativet är tillgängligt om du väljer gränssnittet Interactive Communication Agent eller Interactive Communication Web Channel Document i listrutan Typ.
-   * **** Välj en anpassad förifyllningstjänst: Välj förifyllningstjänsten för att hämta data och fylla i dokumentet för webbkanalen för interaktiv kommunikation eller användargränssnittet för agenten i förväg.
+   * **Välj indatafil med:** Sökväg till indatafil (.json,). xml, .doc eller formulärdatamodell). Du kan hämta indatafilen med en sökväg som är relativ till nyttolasten eller hämta filen som lagras i en variabel av datatypen Document, XML eller JSON. Filen innehåller till exempel de data som skickats för formuläret via ett AEM Inbox-program. En exempelsökväg är [Payload_Directory]/workflow/data.
+   * **Välj indatabilagor med:** Bifogade filer som är tillgängliga på platsen bifogas till formuläret som är kopplat till uppgiften. Sökvägen är alltid relativ till nyttolasten. En exempelsökväg är [Payload_Directory]/attachments/
+   * **Välj JSON-indata:** Välj en JSON-indatafil med en sökväg som är relativ till nyttolasten eller som lagras i en variabel av datatypen Document, JSON eller Form Data Model. Det här alternativet är tillgängligt om du väljer gränssnittet Interactive Communication Agent eller Interactive Communication Web Channel Document i listrutan Typ.
+   * **Välj en anpassad förifyllningstjänst:** Välj förifyllningstjänsten för att hämta data och fylla i dokumentet för webbkanalen för interaktiv kommunikation eller användargränssnittet för agenten i förväg.
 
-   * **** Använd förifyllningstjänsten för den interaktiva kommunikation som valts ovan: Använd det här alternativet om du vill använda förifyllningstjänsten för interaktiv kommunikation som definieras i listrutan Använd interaktiv kommunikation.
-   * **** Attributmappning för begäran: Använd avsnittet Mappning av attribut för begäran för att definiera [namn och värde för attributet](../../forms/using/work-with-form-data-model.md#bindargument)request. Hämta informationen från datakällan baserat på attributnamnet och värdet som anges i begäran. Du kan definiera ett attributvärde för begäran med hjälp av ett literalt värde eller en variabel av datatypen String.\
+   * **Använd förifyllningstjänsten för den interaktiva kommunikation som valts ovan:** Använd det här alternativet om du vill använda förifyllningstjänsten för interaktiv kommunikation som definieras i listrutan Använd interaktiv kommunikation.
+   * **Attributmappning för begäran:** Använd avsnittet Mappning av attribut för begäran för att definiera [namn och värde för attributet](../../forms/using/work-with-form-data-model.md#bindargument)request. Hämta informationen från datakällan baserat på attributnamnet och värdet som anges i begäran. Du kan definiera ett attributvärde för begäran med hjälp av ett literalt värde eller en variabel av datatypen String.\
       Alternativen för förifyllningstjänst och attributmappning för begäran är bara tillgängliga om du väljer Interactive Communication Agent UI eller Interactive Communication Web Channel Document i listrutan Typ.
 
-* **** Skickade uppgifter: Följande fält i listan nedan fungerar som utdataplatser för uppgiften:
+* **Skickade uppgifter:** Följande fält i listan nedan fungerar som utdataplatser för uppgiften:
 
-   * **** Spara utdatafilen med: Spara datafilen (.json,). xml, .doc eller formulärdatamodell). Datafilen innehåller information som skickas via det associerade formuläret. Du kan spara utdatafilen med en sökväg som är relativ till nyttolasten eller lagra den i en variabel av datatypen Document, XML eller JSON. Exempel: [Payload_Directory]/Workflow/data, där data är en fil.
-   * **** Spara bilagor med: Spara formulärbilagorna som ingår i en uppgift. Du kan spara de bifogade filerna med en sökväg som är relativ till nyttolasten eller lagra den i en variabel av dokumentdatatypen.
-   * **** Spara postdokument med: Sökväg för att spara en postdokumentfil. Exempel: [Payload_Directory]/DocumentofRecord/credit-card.pdf. Du kan spara postdokumentet med en sökväg som är relativ till nyttolasten eller lagra det i en variabel av dokumentdatatypen. Om du väljer alternativet **Relativt till nyttolast** , genereras inte postdokumentet om sökvägsfältet lämnas tomt. Det här alternativet är bara tillgängligt om du väljer Adaptivt formulär i listrutan Typ.
+   * **Spara utdatafilen med:** Spara datafilen (.json,). xml, .doc eller formulärdatamodell). Datafilen innehåller information som skickas via det associerade formuläret. Du kan spara utdatafilen med en sökväg som är relativ till nyttolasten eller lagra den i en variabel av datatypen Document, XML eller JSON. Exempel: [Payload_Directory]/Workflow/data, där data är en fil.
+   * **Spara bilagor med:** Spara formulärbilagorna som ingår i en uppgift. Du kan spara de bifogade filerna med en sökväg som är relativ till nyttolasten eller lagra den i en variabel av dokumentdatatypen.
+   * **Spara postdokument med:** Sökväg för att spara en postdokumentfil. Exempel: [Payload_Directory]/DocumentofRecord/credit-card.pdf. Du kan spara postdokumentet med en sökväg som är relativ till nyttolasten eller lagra det i en variabel av dokumentdatatypen. Om du väljer alternativet **Relativt till nyttolast** , genereras inte postdokumentet om sökvägsfältet lämnas tomt. Det här alternativet är bara tillgängligt om du väljer Adaptivt formulär i listrutan Typ.
 
-   * **** Spara webbkanalsdata med: Spara webbkanalsdatafilen med en sökväg som är relativ till nyttolasten eller lagra den i en variabel av datatypen Document, JSON eller Form Data Model. Det här alternativet är bara tillgängligt om du väljer gränssnittet för interaktiv kommunikationsagent i listrutan Typ.
-   * **** Spara PDF-dokument med: Spara PDF-dokumentet med en sökväg som är relativ till nyttolasten eller lagra det i en variabel av dokumentdatatypen. Det här alternativet är bara tillgängligt om du väljer gränssnittet för interaktiv kommunikationsagent i listrutan Typ.
-   * **** Spara layoutmall med: Spara layoutmallen med en sökväg som är relativ till nyttolasten eller lagra den i en variabel av dokumentdatatypen. Layoutmallen [](../../forms/using/layout-design-details.md) refererar till en XDP-fil som du skapar med Forms Designer. Det här alternativet är bara tillgängligt om du väljer gränssnittet för interaktiv kommunikationsagent i listrutan Typ.
+   * **Spara webbkanalsdata med:** Spara webbkanalsdatafilen med en sökväg som är relativ till nyttolasten eller lagra den i en variabel av datatypen Document, JSON eller Form Data Model. Det här alternativet är bara tillgängligt om du väljer gränssnittet för interaktiv kommunikationsagent i listrutan Typ.
+   * **Spara PDF-dokument med:** Spara PDF-dokumentet med en sökväg som är relativ till nyttolasten eller lagra det i en variabel av dokumentdatatypen. Det här alternativet är bara tillgängligt om du väljer gränssnittet för interaktiv kommunikationsagent i listrutan Typ.
+   * **Spara layoutmall med:** Spara layoutmallen med en sökväg som är relativ till nyttolasten eller lagra den i en variabel av dokumentdatatypen. Layoutmallen [](../../forms/using/layout-design-details.md) refererar till en XDP-fil som du skapar med Forms Designer. Det här alternativet är bara tillgängligt om du väljer gränssnittet för interaktiv kommunikationsagent i listrutan Typ.
 
-* **** Tilldelning > Tilldelningsalternativ: Ange vilken metod som ska användas för att tilldela en användare uppgiften. Du kan dynamiskt tilldela uppgiften till en användare eller grupp med skriptet för deltagarväljaren eller tilldela uppgiften till en viss AEM-användare eller grupp.
-* **** Väljare: Alternativet är tillgängligt när alternativet **Dynamiskt för en användare eller grupp** är markerat i fältet Tilldela alternativ. Du kan använda ett ECMAScript eller en tjänst för att dynamiskt välja en användare eller grupp. Mer information finns i Tilldela användare [ett arbetsflöde](https://helpx.adobe.com/experience-manager/kb/HowToAssignAWorkflowDynamicallyToParticipants.html) dynamiskt och [Skapa ett anpassat Adobe Experience Manager Dynamic Participant-steg.](https://helpx.adobe.com/experience-manager/using/dynamic-steps.html)
+* **Tilldelning > Tilldelningsalternativ:** Ange vilken metod som ska användas för att tilldela en användare uppgiften. Du kan dynamiskt tilldela uppgiften till en användare eller grupp med skriptet för deltagarväljaren eller tilldela uppgiften till en viss AEM-användare eller grupp.
+* **Väljare:** Alternativet är tillgängligt när alternativet **Dynamiskt för en användare eller grupp** är markerat i fältet Tilldela alternativ. Du kan använda ett ECMAScript eller en tjänst för att dynamiskt välja en användare eller grupp. Mer information finns i Tilldela användare [ett arbetsflöde](https://helpx.adobe.com/experience-manager/kb/HowToAssignAWorkflowDynamicallyToParticipants.html) dynamiskt och [Skapa ett anpassat Adobe Experience Manager Dynamic Participant-steg.](https://helpx.adobe.com/experience-manager/using/dynamic-steps.html)
 
-* **** Deltagare: Fältet är tillgängligt när alternativet **[!UICONTROL com.adobe.granite.workflow.core.process.RandomParticipantChooser]** är markerat i fältet **Deltagare** . I fältet kan du välja användare eller grupper för alternativet RandomParticipantChooser.
+* **Deltagare:** Fältet är tillgängligt när alternativet **[!UICONTROL com.adobe.granite.workflow.core.process.RandomParticipantChooser]** är markerat i fältet **Deltagare** . I fältet kan du välja användare eller grupper för alternativet RandomParticipantChooser.
 
-* **** Uppdragare: Fältet är tillgängligt när **[!UICONTROL com.adobe.fd.workspace.step.service.VariableParticipantChooser]** har valts i fältet **Deltagarväljare** . I fältet kan du välja en variabel av datatypen String för att definiera den som tilldelas.
+* **Uppdragare:** Fältet är tillgängligt när **[!UICONTROL com.adobe.fd.workspace.step.service.VariableParticipantChooser]** har valts i fältet **Deltagarväljare** . I fältet kan du välja en variabel av datatypen String för att definiera den som tilldelas.
 
-* **** Argument: Fältet är tillgängligt när ett annat skript än skriptet RandomParticipantChoose har valts i fältet för deltagarväljare. I fältet kan du ange en lista med kommaavgränsade argument för det skript som valts i fältet Deltagare.
+* **Argument:** Fältet är tillgängligt när ett annat skript än skriptet RandomParticipantChoose har valts i fältet för deltagarväljare. I fältet kan du ange en lista med kommaavgränsade argument för det skript som valts i fältet Deltagare.
 
-* **** Användare eller grupp: Uppgiften tilldelas den valda användaren eller gruppen. Alternativet är tillgängligt när alternativet **** Till en viss användare eller grupp är markerat i fältet **Tilldelningsalternativ** . I fältet visas alla användare och grupper i gruppen för arbetsflödesanvändare.\
+* **Användare eller grupp:** Uppgiften tilldelas den valda användaren eller gruppen. Alternativet är tillgängligt när alternativet **** Till en viss användare eller grupp är markerat i fältet **Tilldelningsalternativ** . I fältet visas alla användare och grupper i gruppen för arbetsflödesanvändare.\
    I listrutan **Användare eller Grupp** visas de användare och grupper som den inloggade användaren har åtkomst till. Hur användarnamn visas beror på om du har åtkomstbehörighet till **användarnoden** i crx-databasen för den aktuella användaren.
 
-* **** Meddela den tilldelade via e-post: Välj det här alternativet om du vill skicka e-postmeddelanden till den tilldelade personen. Dessa meddelanden skickas när en uppgift tilldelas en användare. Aktivera meddelanden från AEM Web Console innan du använder alternativet. Stegvisa instruktioner finns i [Konfigurera e-postmeddelanden för tilldelningssteget](../../forms/using/aem-forms-workflow.md)
+* **Meddela den tilldelade via e-post:** Välj det här alternativet om du vill skicka e-postmeddelanden till den tilldelade personen. Dessa meddelanden skickas när en uppgift tilldelas en användare. Aktivera meddelanden från AEM Web Console innan du använder alternativet. Stegvisa instruktioner finns i [Konfigurera e-postmeddelanden för tilldelningssteget](../../forms/using/aem-forms-workflow.md)
 
 * **HTML-e-postmall**: Välj e-postmall för e-postmeddelandet. Om du vill redigera en mall ändrar du filen på /libs/fd/dashboard/templates/email/htmlEmailTemplate.txt i crx-databasen.
-* **** Tillåt delegering till: I AEM Inbox finns ett alternativ för den inloggade användaren att delegera det tilldelade arbetsflödet till en annan användare. Du får delegera inom samma grupp eller till arbetsflödesanvändaren i en annan grupp. Om uppgiften har tilldelats en enskild användare och alternativet **Tillåt delegering till medlemmar i den tilldelade gruppen** har valts, går det inte att delegera uppgiften till en annan användare eller grupp.
-* **** Delningsinställningar: I AEM Inbox finns alternativ för att dela en enstaka eller alla uppgifter i inkorgen med andra användare:
+* **Tillåt delegering till:** I AEM Inbox finns ett alternativ för den inloggade användaren att delegera det tilldelade arbetsflödet till en annan användare. Du får delegera inom samma grupp eller till arbetsflödesanvändaren i en annan grupp. Om uppgiften har tilldelats en enskild användare och alternativet **Tillåt delegering till medlemmar i den tilldelade gruppen** har valts, går det inte att delegera uppgiften till en annan användare eller grupp.
+* **Delningsinställningar:** I AEM Inbox finns alternativ för att dela en enstaka eller alla uppgifter i inkorgen med andra användare:
    * När alternativet **Tillåt att tilldelad delar explicit i inkorgen** är markerat kan användaren klicka på uppgiften och dela den med en annan AEM-användare.
    * När alternativet **Tillåt att tilldelad kan dela via** delning av inkorgen är markerat och en användare delar sina inkorgsobjekt eller tillåter andra användare att komma åt sina inkorgsobjekt, delas endast uppgifter med andra användare som har det här alternativet aktiverat.
 
-* **** Åtgärder > Standardåtgärder: Det finns färdiga funktioner för att skicka, spara och återställa. Som standard är alla standardåtgärder aktiverade.
-* **** Flödesvariabel: Namn på flödesvariabeln. Vägvariabeln hämtar anpassade åtgärder som en användare väljer i AEM Inbox.
-* **** Vägar: En aktivitet kan förgrena till olika vägar. När det här alternativet har valts i AEM Inbox returnerar flödet ett värde och arbetsflödesgrenarna baserat på den valda vägen. Du kan antingen lagra flöden i en variabel av datatypen String eller välja **Literal** om du vill lägga till vägar manuellt.
+* **Åtgärder > Standardåtgärder:** Det finns färdiga funktioner för att skicka, spara och återställa. Som standard är alla standardåtgärder aktiverade.
+* **Flödesvariabel:** Namn på flödesvariabeln. Vägvariabeln hämtar anpassade åtgärder som en användare väljer i AEM Inbox.
+* **Vägar:** En aktivitet kan förgrena till olika vägar. När det här alternativet har valts i AEM Inbox returnerar flödet ett värde och arbetsflödesgrenarna baserat på den valda vägen. Du kan antingen lagra flöden i en variabel av datatypen String eller välja **Literal** om du vill lägga till vägar manuellt.
 
 * **Titel**: Ange ruttens titel. Den visas i AEM Inbox.
 * **Korallikon**: Ange HTML-attribut för en korallikon. Adobe CorelUI-biblioteket innehåller en mängd ikoner som sätter fokus först. Du kan välja och använda en ikon för rutten. Den visas tillsammans med titeln i AEM Inbox. Om du lagrar rutterna i en variabel använder rutterna en taggikon.
 * **Tillåt att den som tilldelats kan lägga till kommentarer**: Välj det här alternativet om du vill aktivera kommentarer för uppgiften. En tilldelad kan lägga till kommentarerna inifrån AEM Inbox när uppgiften skickas.
-* **** Spara kommentar i variabel: Spara kommentaren i en variabel av datatypen String. Det här alternativet visas bara om du markerar kryssrutan **Tillåt att den som tilldelas kan lägga till kommentarer** .
+* **Spara kommentar i variabel:** Spara kommentaren i en variabel av datatypen String. Det här alternativet visas bara om du markerar kryssrutan **Tillåt att den som tilldelas kan lägga till kommentarer** .
 
 * **Tillåt att den som tilldelas kan lägga till bilagor till uppgiften**: Välj det här alternativet om du vill aktivera bilagor för uppgiften. En tilldelad kan lägga till de bifogade filerna inifrån AEM Inbox när uppgiften skickas.
 * **Spara bifogade utdatauppgifter med**: Ange platsen för den bifogade mappen. Du kan spara bilagor för utdatauppgifter med en sökväg som är relativ till nyttolasten eller med en variabel av dokumentdatatypen. Det här alternativet visas bara om du markerar kryssrutan **Tillåt att den som tilldelas kan lägga till bifogade filer i uppgiften** och väljer **Adaptiv form**, **Skrivskyddat anpassat formulär** eller **Icke-interaktivt PDF-dokument** i listrutan **Typ** **** på fliken¥Form/Document¥.
@@ -107,11 +107,11 @@ Du kan också använda komponenten för att styra aktivitetens beteende. Du kan 
 >
 >Använd fliken Bifogade filer i agentanvändargränssnittet under körning för att koppla de bifogade filerna till en interaktiv kommunikation. De associerade bifogade filerna visas som bifogade uppgifter i sidosparken när arbetsobjektet har öppnats i ett fullständigt läge.
 
-* **** Använd anpassade metadata: Välj det här alternativet om du vill aktivera det anpassade metadatafältet. Anpassade metadata används i e-postmallar.
-* **** Anpassade metadata: Välj anpassade metadata för e-postmallarna. Anpassade metadata är tillgängliga i crx-databaser på apparna/fd/dashboard/scripts/metadataScripts. Den angivna sökvägen finns inte i crx-databasen. En administratör skapar sökvägen innan den används. Du kan också använda en tjänst för anpassade metadata. Du kan också utöka gränssnittet WorkitemUserMetadataService för att tillhandahålla anpassade metadata.
+* **Använd anpassade metadata:** Välj det här alternativet om du vill aktivera det anpassade metadatafältet. Anpassade metadata används i e-postmallar.
+* **Anpassade metadata:** Välj anpassade metadata för e-postmallarna. Anpassade metadata är tillgängliga i crx-databaser på apparna/fd/dashboard/scripts/metadataScripts. Den angivna sökvägen finns inte i crx-databasen. En administratör skapar sökvägen innan den används. Du kan också använda en tjänst för anpassade metadata. Du kan också utöka gränssnittet WorkitemUserMetadataService för att tillhandahålla anpassade metadata.
 * **Visa data från föregående steg**: Välj det här alternativet om du vill att tilldelningar ska kunna visa tidigare tilldelningar, åtgärder som redan har vidtagits för uppgiften, kommentarer som har lagts till i uppgiften och dokument med information om den slutförda uppgiften, om tillgängligt.
-* **** Visa data från efterföljande steg: Välj det här alternativet om du vill att den som är tilldelad ska kunna visa den åtgärd som har vidtagits och de kommentarer som har lagts till i uppgiften av efterföljande tilldelningar. Den aktuella personen kan även visa ett dokument med uppgifter om den slutförda uppgiften, om det är tillgängligt.
-* **** Synlighet för datatyp: Som standard kan en tilldelad visa ett dokument för registrering, tilldelningar, åtgärd och kommentarer som tidigare och efterföljande tilldelningar har lagt till. Använd datatypsalternativet för synlighet för att begränsa vilken typ av data som är synlig för de tilldelade.
+* **Visa data från efterföljande steg:** Välj det här alternativet om du vill att den som är tilldelad ska kunna visa den åtgärd som har vidtagits och de kommentarer som har lagts till i uppgiften av efterföljande tilldelningar. Den aktuella personen kan även visa ett dokument med uppgifter om den slutförda uppgiften, om det är tillgängligt.
+* **Synlighet för datatyp:** Som standard kan en tilldelad visa ett dokument för registrering, tilldelningar, åtgärd och kommentarer som tidigare och efterföljande tilldelningar har lagt till. Använd datatypsalternativet för synlighet för att begränsa vilken typ av data som är synlig för de tilldelade.
 
 ## Skicka e-poststeg {#send-email-step}
 
@@ -119,11 +119,11 @@ Använd e-poststeget för att skicka ett e-postmeddelande, till exempel ett e-po
 
 I e-poststeget används Day CQ Mail Service för att skicka e-post. Kontrollera att [e-posttjänsten](../../forms/using/aem-forms-workflow.md) är konfigurerad innan du använder e-poststeget. E-poststeget har följande egenskaper:
 
-**** Titel: Stegen är en titel som hjälper dig att identifiera steget i arbetsflödesredigeraren.
+**Titel:** Stegen är en titel som hjälper dig att identifiera steget i arbetsflödesredigeraren.
 
-**** Beskrivning: Förklaring är användbar för andra processutvecklare när du arbetar i en delad utvecklingsmiljö.
+**Beskrivning:** Förklaring är användbar för andra processutvecklare när du arbetar i en delad utvecklingsmiljö.
 
-**** Ämne: Ämne kan hämtas från ett arbetsflödes metadata, anges manuellt eller hämtas från värdet som lagras i en variabel. Välj bland följande alternativ:
+**Ämne:** Ämne kan hämtas från ett arbetsflödes metadata, anges manuellt eller hämtas från värdet som lagras i en variabel. Välj bland följande alternativ:
 
 * **Literal -** Ange ett ämne manuellt.
 * **Hämta från arbetsflödesmetadata** - Hämta ämnet från en metadataegenskap.
@@ -131,21 +131,21 @@ I e-poststeget används Day CQ Mail Service för att skicka e-post. Kontrollera 
 
 **HTML-e-postmall**: HTML-mall för e-postmeddelandet. Du kan ange variabler i en e-postmall. E-poststeget extraheras och visar alla variabler som ingår i en mall för indata.
 
-**** Metadata för e-postmall: Värdet för e-postmallvariablerna kan vara ett användarspecificerat värde, sökvägen till en resurs på författaren eller på publiceringsservern, bilden eller en metadataegenskap för arbetsflödet.
+**Metadata för e-postmall:** Värdet för e-postmallvariablerna kan vara ett användarspecificerat värde, sökvägen till en resurs på författaren eller på publiceringsservern, bilden eller en metadataegenskap för arbetsflödet.
 
-* **** Literal: Använd alternativet när du vet exakt vilket värde du ska ange. Till exempel [example@example.com](mailto:example@example.com).
+* **Literal:** Använd alternativet när du vet exakt vilket värde du ska ange. Till exempel [example@example.com](mailto:example@example.com).
 
-* **** Metadata för arbetsflöde: Använd alternativet när värdet som ska användas sparas i en arbetsflödets metadataegenskap. När du har valt alternativet anger du metadataegenskapens namn i den tomma textrutan under alternativet Metadata för arbetsflöde. Till exempel emailAddress.
-* **** Resurs-URL: Använd alternativet för att bädda in en webblänk av en interaktiv kommunikation i e-postmeddelandet. När du har valt alternativet bläddrar du och väljer den interaktiva kommunikation som ska bäddas in. Resursen kan finnas på författaren eller på publiceringsservern.
-* **** Bild: Använd alternativet för att bädda in en bild i e-postmeddelandet. När du har valt alternativet bläddrar du och väljer bilden. Bildalternativet är bara tillgängligt för de bildtaggar (&lt;img src=&quot;*&quot;/>) som är tillgängliga i e-postmallen.
+* **Metadata för arbetsflöde:** Använd alternativet när värdet som ska användas sparas i en arbetsflödets metadataegenskap. När du har valt alternativet anger du metadataegenskapens namn i den tomma textrutan under alternativet Metadata för arbetsflöde. Till exempel emailAddress.
+* **Resurs-URL:** Använd alternativet för att bädda in en webblänk av en interaktiv kommunikation i e-postmeddelandet. När du har valt alternativet bläddrar du och väljer den interaktiva kommunikation som ska bäddas in. Resursen kan finnas på författaren eller på publiceringsservern.
+* **Bild:** Använd alternativet för att bädda in en bild i e-postmeddelandet. När du har valt alternativet bläddrar du och väljer bilden. Bildalternativet är bara tillgängligt för de bildtaggar (&lt;img src=&quot;*&quot;/>) som är tillgängliga i e-postmallen.
 
-**** Avsändarens/mottagarens e-postadress: Välj alternativet **Litteral** om du vill ange en e-postadress manuellt eller markera alternativet **Hämta från arbetsflödets metadata** om du vill hämta e-postadressen från en metadataegenskap. Du kan också ange en lista med egenskapsvektorer för metadata för **alternativet Hämta från arbetsflödesmetadata** . Välj alternativet **Variabel** om du vill hämta e-postadressen från värdet som lagras i en variabel av strängdatatyp.
+**Avsändarens/mottagarens e-postadress:** Välj alternativet **Litteral** om du vill ange en e-postadress manuellt eller markera alternativet **Hämta från arbetsflödets metadata** om du vill hämta e-postadressen från en metadataegenskap. Du kan också ange en lista med egenskapsvektorer för metadata för **alternativet Hämta från arbetsflödesmetadata** . Välj alternativet **Variabel** om du vill hämta e-postadressen från värdet som lagras i en variabel av strängdatatyp.
 
-**** Bifogad fil: Den tillgängliga resursen på den angivna platsen är kopplad till e-postmeddelandet. Resursens sökväg kan vara relativ till nyttolasten eller den absoluta sökvägen. En exempelsökväg är [Payload_Directory]/attachments/.
+**Bifogad fil:** Den tillgängliga resursen på den angivna platsen är kopplad till e-postmeddelandet. Resursens sökväg kan vara relativ till nyttolasten eller den absoluta sökvägen. En exempelsökväg är [Payload_Directory]/attachments/.
 
 Välj alternativet **Variabel** om du vill hämta den bifogade filen som lagras i en variabel av datatypen Document, XML eller JSON.
 
-**** Filnamn: Namn på e-postbilagefilen. E-poststeget ändrar det ursprungliga filnamnet för den bifogade filen till det angivna filnamnet. Namnet kan anges manuellt eller hämtas från en metadataegenskap eller variabel i arbetsflödet. Använd alternativet **Literal** när du vet exakt vilket värde du ska ange. Använd alternativet **Variabel** för att hämta filnamnet från värdet som lagras i en variabel av strängdatatyp. Använd alternativet **Hämta från arbetsflödesmetadata** när värdet som ska användas sparas i en metadataegenskap för arbetsflöde.
+**Filnamn:** Namn på e-postbilagefilen. E-poststeget ändrar det ursprungliga filnamnet för den bifogade filen till det angivna filnamnet. Namnet kan anges manuellt eller hämtas från en metadataegenskap eller variabel i arbetsflödet. Använd alternativet **Literal** när du vet exakt vilket värde du ska ange. Använd alternativet **Variabel** för att hämta filnamnet från värdet som lagras i en variabel av strängdatatyp. Använd alternativet **Hämta från arbetsflödesmetadata** när värdet som ska användas sparas i en metadataegenskap för arbetsflöde.
 
 ## Generera dokumentarkivhandlingssteget {#generate-document-of-record-step}
 
@@ -158,13 +158,13 @@ Du kan koppla flera adaptiva formulär till ett arbetsflöde. Det innebär att d
 
 **Adaptiv formulärsökväg**: Ange sökvägen för det adaptiva formuläret. Fältet är tillgängligt när du väljer alternativet **Tillgängligt med en absolut sökväg** i fältet **Använd anpassat formulär** .
 
-**** Välj Indata med: Sökväg till indata för det adaptiva formuläret. Du kan behålla data på en plats i förhållande till nyttolasten, ange en absolut sökväg till data eller hämta data som lagras i en variabel av datatypen Document, JSON eller XML. Indata sammanfogas med det adaptiva formuläret för att skapa ett postdokument.
+**Välj Indata med:** Sökväg till indata för det adaptiva formuläret. Du kan behålla data på en plats i förhållande till nyttolasten, ange en absolut sökväg till data eller hämta data som lagras i en variabel av datatypen Document, JSON eller XML. Indata sammanfogas med det adaptiva formuläret för att skapa ett postdokument.
 
-**** Välj sökväg för indatabilaga med: Sökväg till de bifogade filerna. De här bifogade filerna ingår i dokumentdokumentet. Du kan behålla de bifogade filerna på en plats i förhållande till nyttolasten, ange en absolut sökväg för de bifogade filerna eller hämta bifogade filer som lagras i en variabel av dokumentdatatypen.
+**Välj sökväg för indatabilaga med:** Sökväg till de bifogade filerna. De här bifogade filerna ingår i dokumentdokumentet. Du kan behålla de bifogade filerna på en plats i förhållande till nyttolasten, ange en absolut sökväg för de bifogade filerna eller hämta bifogade filer som lagras i en variabel av dokumentdatatypen.
 
 Om du anger sökvägen till en mapp, till exempel bilagor, bifogas alla filer som är direkt tillgängliga i mappen till Dokument för post. Om det finns filer i de mappar som är direkt tillgängliga i den angivna sökvägen inkluderas filerna i Postdokument som bilagor. Om det finns mappar i direkt tillgängliga mappar hoppas de över.
 
-**** Spara genererat postdokument med följande alternativ: Ange platsen där ett dokument med en postfil ska sparas. Du kan välja att skriva över nyttolastmappen, placera postdokumentet på en plats i nyttolastkatalogen eller lagra postdokumentet i en variabel av dokumentdatatypen.
+**Spara genererat postdokument med följande alternativ:** Ange platsen där ett dokument med en postfil ska sparas. Du kan välja att skriva över nyttolastmappen, placera postdokumentet på en plats i nyttolastkatalogen eller lagra postdokumentet i en variabel av dokumentdatatypen.
 
 **Språk**: Ange språk för postdokumentet. Välj **Litteral** för att välja språkområde från en nedrullningsbar lista eller välj **Variabel** för att hämta språkområdet från det värde som lagras i en variabel av strängdatatyp. Du måste definiera språkkoden medan du lagrar värdet för språkinställningen i en variabel. Ange till exempel **en_US** för engelska och **fr_FR** för franska.
 
@@ -227,49 +227,49 @@ Följande databastabell och JSON-filen används som exempel för att förklara i
 
 I steget Anropa formulärdatamodelltjänst visas följande fält för att underlätta formulärdatamodellåtgärder:
 
-* **** Titel: Stegets namn. Det hjälper till att identifiera steget i arbetsflödesredigeraren.
-* **** Beskrivning: Förklaring är användbar för andra processutvecklare när du arbetar i en delad utvecklingsmiljö.
+* **Titel:** Stegets namn. Det hjälper till att identifiera steget i arbetsflödesredigeraren.
+* **Beskrivning:** Förklaring är användbar för andra processutvecklare när du arbetar i en delad utvecklingsmiljö.
 
 * **Sökväg till** formulärdatamodell: Bläddra och välj en formulärdatamodell som finns på servern.
 
 * **Tjänst**: Lista över tjänster som den valda formulärdatamodellen tillhandahåller.
 * **Indata för tjänster > Ange indata med hjälp av litteral-, variabel- eller arbetsflödesmetadata och en JSON-fil**: En tjänst kan ha flera argument. Välj alternativet för att hämta värdet för tjänstargumenten från en metadataegenskap för arbetsflöde, ett JSON-objekt, en variabel eller ange värdet direkt i textrutan:
 
-   * **** Literal: Använd alternativet när du vet exakt vilket värde du ska ange. Exempel: srose@we.info.
-   * **** Variabel: Använd alternativet för att hämta värdet som lagras i en variabel.
-   * **** Hämta från arbetsflödesmetadata: Använd alternativet när värdet som ska användas sparas i en arbetsflödets metadataegenskap. Till exempel emailAddress.
-   * **** JSON-punktnotation: Använd alternativet när värdet som ska användas finns i en JSON-fil. Till exempel försäkring.customerDetails.emailAddress. Alternativet JSON-punktnotation är bara tillgängligt om du har valt alternativet Mappa inmatningsfält från JSON-inmatningsalternativet.
-   * **** Mappa indatafält från JSON-indata: Ange sökvägen till en JSON-fil för att hämta indatavärdet för vissa tjänstargument från JSON-filen. Sökvägen till JSON-filen kan vara relativ till nyttolasten, en absolut sökväg eller så kan du välja ett JSON-inmatningsdokument med hjälp av variabeln JSON eller Form Data Model.
+   * **Literal:** Använd alternativet när du vet exakt vilket värde du ska ange. Exempel: srose@we.info.
+   * **Variabel:** Använd alternativet för att hämta värdet som lagras i en variabel.
+   * **Hämta från arbetsflödesmetadata:** Använd alternativet när värdet som ska användas sparas i en arbetsflödets metadataegenskap. Till exempel emailAddress.
+   * **JSON-punktnotation:** Använd alternativet när värdet som ska användas finns i en JSON-fil. Till exempel försäkring.customerDetails.emailAddress. Alternativet JSON-punktnotation är bara tillgängligt om du har valt alternativet Mappa inmatningsfält från JSON-inmatningsalternativet.
+   * **Mappa indatafält från JSON-indata:** Ange sökvägen till en JSON-fil för att hämta indatavärdet för vissa tjänstargument från JSON-filen. Sökvägen till JSON-filen kan vara relativ till nyttolasten, en absolut sökväg eller så kan du välja ett JSON-inmatningsdokument med hjälp av variabeln JSON eller Form Data Model.
 
-* **** Indata för tjänster > Ange indata med hjälp av variabel eller en JSON-fil: Välj alternativet om du vill hämta värden för alla argument från en JSON-fil som har sparats med en absolut sökväg, med en sökväg som är relativ till nyttolasten eller i en variabel.
+* **Indata för tjänster > Ange indata med hjälp av variabel eller en JSON-fil:** Välj alternativet om du vill hämta värden för alla argument från en JSON-fil som har sparats med en absolut sökväg, med en sökväg som är relativ till nyttolasten eller i en variabel.
 * **Välj Indata-JSON-dokument med**: JSON-filen innehåller värden för alla tjänstargument. JSON-filens sökväg kan vara **relativ till nyttolasten** eller en **absolut sökväg.** Du kan även hämta JSON-indata-dokumentet med hjälp av en variabel av datatypen JSON eller Form Data Model.
 
-* **** JSON-punktnotation: Lämna fältet tomt om du vill använda alla objekt i den angivna JSON-filen som indata för tjänstargument. Om du vill läsa ett specifikt JSON-objekt från den angivna JSON-filen som indata för serviceargument anger du punktnotation för JSON-objektet, till exempel, om du har en JSON som liknar den som anges i början av avsnittet, anger du försäkring.customerDetails för att ge all information om en kund som indata till tjänsten.
-* **** Utdata för tjänsten > Mappa och skriv utdatavärden till variabel eller metadata: Välj alternativet att spara utdatavärdena som egenskaper för arbetsflödesinstansens metadatanod i crx-databasen. Ange namnet på metadataegenskapen och välj det motsvarande tjänstutdataattribut som ska mappas med metadataegenskapen, till exempel mappa det telefonnummer som returneras av utdatatjänsten med egenskapen phone_number för arbetsflödets metadata. På samma sätt kan du lagra utdata i en variabel med datatypen Long.
-* **** Utdata från tjänst > Spara utdata till variabel eller en JSON-fil: Välj alternativet att spara utdatavärdena i en JSON-fil med en absolut sökväg, med en sökväg som är relativ till nyttolasten eller i en variabel.
-* **** Spara JSON-utdatadokument med alternativen nedan: Spara JSON-utdatafilen. Sökvägen till JSON-utdatafilen kan vara relativ till nyttolasten eller en absolut sökväg. Du kan också spara JSON-utdatafilen med en variabel av datatypen JSON eller Form Data Model.
+* **JSON-punktnotation:** Lämna fältet tomt om du vill använda alla objekt i den angivna JSON-filen som indata för tjänstargument. Om du vill läsa ett specifikt JSON-objekt från den angivna JSON-filen som indata för serviceargument anger du punktnotation för JSON-objektet, till exempel, om du har en JSON som liknar den som anges i början av avsnittet, anger du försäkring.customerDetails för att ge all information om en kund som indata till tjänsten.
+* **Utdata för tjänsten > Mappa och skriv utdatavärden till variabel eller metadata:** Välj alternativet att spara utdatavärdena som egenskaper för arbetsflödesinstansens metadatanod i crx-databasen. Ange namnet på metadataegenskapen och välj det motsvarande tjänstutdataattribut som ska mappas med metadataegenskapen, till exempel mappa det telefonnummer som returneras av utdatatjänsten med egenskapen phone_number för arbetsflödets metadata. På samma sätt kan du lagra utdata i en variabel med datatypen Long.
+* **Utdata från tjänst > Spara utdata till variabel eller en JSON-fil:** Välj alternativet att spara utdatavärdena i en JSON-fil med en absolut sökväg, med en sökväg som är relativ till nyttolasten eller i en variabel.
+* **Spara JSON-utdatadokument med alternativen nedan:** Spara JSON-utdatafilen. Sökvägen till JSON-utdatafilen kan vara relativ till nyttolasten eller en absolut sökväg. Du kan också spara JSON-utdatafilen med en variabel av datatypen JSON eller Form Data Model.
 
 ## Underteckna dokumentsteg {#sign-document-step}
 
 I steget Signera dokument kan du använda Adobe Sign för att signera dokument. Stegen Signera dokument har följande egenskaper:
 
-* **** Avtalsnamn: Ange avtalets namn. Avtalsnamnet blir en del av ämnet och brödtexten i det e-postmeddelande som skickas till signerarna. Du kan antingen lagra namnet i en variabel av datatypen String eller välja **Literal** om du vill lägga till namnet manuellt.
+* **Avtalsnamn:** Ange avtalets namn. Avtalsnamnet blir en del av ämnet och brödtexten i det e-postmeddelande som skickas till signerarna. Du kan antingen lagra namnet i en variabel av datatypen String eller välja **Literal** om du vill lägga till namnet manuellt.
 
-* **** Språk: Ange språk för alternativen för e-post och verifiering. Du kan antingen lagra språkinställningen i en variabel av datatypen String eller välja **Literal** för att välja språkinställningen i listan med tillgängliga alternativ. Du måste definiera språkkoden medan du lagrar värdet för språkinställningen i en variabel. Ange till exempel **en_US** för engelska och **fr_FR** för franska.
+* **Språk:** Ange språk för alternativen för e-post och verifiering. Du kan antingen lagra språkinställningen i en variabel av datatypen String eller välja **Literal** för att välja språkinställningen i listan med tillgängliga alternativ. Du måste definiera språkkoden medan du lagrar värdet för språkinställningen i en variabel. Ange till exempel **en_US** för engelska och **fr_FR** för franska.
 
 * **Adobe Sign Cloud-konfiguration**: Välj en Adobe Sign Cloud-konfiguration. Om du inte har konfigurerat Adobe Sign för AEM-formulär läser du [Integrera Adobe Sign med AEM-formulär](../../forms/using/adobe-sign-integration-adaptive-forms.md).
 
-* **** Välj dokument som ska signeras med: Du kan välja ett dokument från en plats som är relativ till nyttolasten, använda nyttolasten som dokument, ange en absolut sökväg för dokumentet eller hämta dokumentet som lagras i en variabel av dokumentdatatypen.
-* **** Dagar till deadline: Ett dokument markeras som förfallodatum (passerad deadline) efter det att ingen aktivitet har gjorts i aktiviteten för det antal dagar som anges i fältet **Dagar till deadline** . Antalet dagar räknas efter att den dokumenterade har tilldelats en användare för signering.
-* **** E-postfrekvens för påminnelse: Du kan skicka en påminnelse via e-post varje dag eller vecka. Veckan räknas från den dag som den dokumenterade tilldelas en användare för signering.
-* **** Underskriftsprocess: Du kan välja att signera ett dokument i en sekventiell eller parallell ordning. I sekventiell ordning tar en signerare emot dokumentet i taget för signering. När den första signeraren har slutfört signeringen av dokumentet skickas dokumentet till den andra signeraren och så vidare. Flera signerare kan signera ett dokument samtidigt i parallell ordning.
-* **** URL för omdirigering: Ange en URL för omdirigering. När dokumentet har signerats kan du dirigera om den som tilldelats till en URL. Oftast innehåller denna URL ett tackmeddelande eller ytterligare instruktioner.
-* **** Arbetsflödesfas: Ett arbetsflöde kan ha flera steg. Dessa steg visas i AEM Inbox. Du kan definiera de här stegen i modellens egenskaper (Sidspark > Sida > Sidegenskaper > Steg).
-* **** Välj signerare: Ange metoden för att välja signerare för dokumentet. Du kan dynamiskt tilldela arbetsflödet till en användare eller en grupp eller manuellt lägga till information om en signerare.
-* **** Skript eller tjänst för att välja signerare: Alternativet är bara tillgängligt om alternativet Dynamiskt är markerat i fältet Välj signerare. Du kan ange ett ECMAScript eller en tjänst för att välja signerare och verifieringsalternativ för ett dokument.
-* **** Signerarinformation: Alternativet är bara tillgängligt om alternativet Manuellt är markerat i fältet Välj signerare. Ange e-postadress och välj en valfri verifieringsmekanism. Innan du väljer en verifieringsmekanism i två steg ska du kontrollera att motsvarande verifieringsalternativ är aktiverat för det konfigurerade Adobe Sign-kontot. Du kan använda en variabel av datatypen String för att definiera värden för fälten **[!UICONTROL E-post]**, **[!UICONTROL Landskod]** och **[!UICONTROL Telefonnummer]** . Fälten **[!UICONTROL Landskod]** och **[!UICONTROL Telefonnummer]** visas endast om du väljer **[!UICONTROL Telefonverifiering]** i den **[!UICONTROL 2-stegsvisa]** verifieringslistan.
-* **** Statusvariabel: Ett Adobe Sign-aktiverat dokument lagrar dokumentets signeringsstatus i en variabel av datatypen String. Ange namnet på statusvariabeln (adobeSignStatus). En statusvariabel för en instans finns i CRXDE på /etc/workflow/instances/&lt;server>/&lt;datum-tid>/&lt;instans av arbetsflödesmodell>/workItems/&lt;nod>/metaData innehåller status för en variabel.
-* **** Spara signerat dokument med följande alternativ: Ange platsen där signerade dokument ska sparas. Du kan välja att skriva över nyttolastfilen, placera det signerade dokumentet på en plats i nyttolastkatalogen eller lagra det signerade dokumentet i en variabel av Dokumenttyp.
+* **Välj dokument som ska signeras med:** Du kan välja ett dokument från en plats som är relativ till nyttolasten, använda nyttolasten som dokument, ange en absolut sökväg för dokumentet eller hämta dokumentet som lagras i en variabel av dokumentdatatypen.
+* **Dagar till deadline:** Ett dokument markeras som förfallodatum (passerad deadline) efter det att ingen aktivitet har gjorts i aktiviteten för det antal dagar som anges i fältet **Dagar till deadline** . Antalet dagar räknas efter att den dokumenterade har tilldelats en användare för signering.
+* **E-postfrekvens för påminnelse:** Du kan skicka en påminnelse via e-post varje dag eller vecka. Veckan räknas från den dag som den dokumenterade tilldelas en användare för signering.
+* **Underskriftsprocess:** Du kan välja att signera ett dokument i en sekventiell eller parallell ordning. I sekventiell ordning tar en signerare emot dokumentet i taget för signering. När den första signeraren har slutfört signeringen av dokumentet skickas dokumentet till den andra signeraren och så vidare. Flera signerare kan signera ett dokument samtidigt i parallell ordning.
+* **URL för omdirigering:** Ange en URL för omdirigering. När dokumentet har signerats kan du dirigera om den som tilldelats till en URL. Oftast innehåller denna URL ett tackmeddelande eller ytterligare instruktioner.
+* **Arbetsflödesfas:** Ett arbetsflöde kan ha flera steg. Dessa steg visas i AEM Inbox. Du kan definiera de här stegen i modellens egenskaper (Sidspark > Sida > Sidegenskaper > Steg).
+* **Välj signerare:** Ange metoden för att välja signerare för dokumentet. Du kan dynamiskt tilldela arbetsflödet till en användare eller en grupp eller manuellt lägga till information om en signerare.
+* **Skript eller tjänst för att välja signerare:** Alternativet är bara tillgängligt om alternativet Dynamiskt är markerat i fältet Välj signerare. Du kan ange ett ECMAScript eller en tjänst för att välja signerare och verifieringsalternativ för ett dokument.
+* **Signerarinformation:** Alternativet är bara tillgängligt om alternativet Manuellt är markerat i fältet Välj signerare. Ange e-postadress och välj en valfri verifieringsmekanism. Innan du väljer en verifieringsmekanism i två steg ska du kontrollera att motsvarande verifieringsalternativ är aktiverat för det konfigurerade Adobe Sign-kontot. Du kan använda en variabel av datatypen String för att definiera värden för fälten **[!UICONTROL E-post]**, **[!UICONTROL Landskod]** och **[!UICONTROL Telefonnummer]** . Fälten **[!UICONTROL Landskod]** och **[!UICONTROL Telefonnummer]** visas endast om du väljer **[!UICONTROL Telefonverifiering]** i den **[!UICONTROL 2-stegsvisa]** verifieringslistan.
+* **Statusvariabel:** Ett Adobe Sign-aktiverat dokument lagrar dokumentets signeringsstatus i en variabel av datatypen String. Ange namnet på statusvariabeln (adobeSignStatus). En statusvariabel för en instans finns i CRXDE på /etc/workflow/instances/&lt;server>/&lt;datum-tid>/&lt;instans av arbetsflödesmodell>/workItems/&lt;nod>/metaData innehåller status för en variabel.
+* **Spara signerat dokument med följande alternativ:** Ange platsen där signerade dokument ska sparas. Du kan välja att skriva över nyttolastfilen, placera det signerade dokumentet på en plats i nyttolastkatalogen eller lagra det signerade dokumentet i en variabel av Dokumenttyp.
 
 ## Steg för Document Services {#document-services-steps}
 
@@ -365,3 +365,62 @@ Skicka ett dokument direkt till en skrivare. Det har stöd för följande åtkom
 * **Direkttillgänglig skrivare**: En skrivare som är installerad på samma dator kallas för en skrivare med direktåtkomst och datorn kallas för skrivarvärd. Den här typen av skrivare kan vara en lokal skrivare som är ansluten direkt till datorn.
 * **Indirekt tillgänglig skrivare**: Skrivaren som är installerad på en utskriftsserver är tillgänglig från andra datorer. Teknik som det gemensamma utskriftssystemet UNIX® (CUPS) och protokollet Line Printer Daemon (LPD) är tillgängliga för anslutning till en nätverksskrivare. Om du vill få åtkomst till en indirekt tillgänglig skrivare anger du utskriftsserverns IP-adress eller värdnamn. Med den här funktionen kan du skicka ett dokument till en LPD-URI när nätverket har ett LPD-program öppet. Med hjälp av den här funktionen kan du dirigera dokumentet till en skrivare som är ansluten till nätverket som har ett LPD-program öppet.
 
+### Generera utskriftssteg {#generatePrintedOutput}
+
+Steget genererar ett PCL-, PostScript-, ZPL-, IPL-, TPCL- eller DPL-utdata baserat på en formulärdesign och datafil. Datafilen sammanfogas med formulärdesignen och formateras för utskrift. De utdata som genereras i det här steget kan skickas direkt till en skrivare eller sparas som en fil. Vi rekommenderar att du använder det här steget när du vill använda formulärdesigner eller data från ett program. Om dina formulärdesigner eller formulärdesigner finns i nätverket, det lokala filsystemet eller på HTTP-platsen använder du åtgärden generatePrintedOutput.
+
+Programmet kräver till exempel att du sammanfogar en formulärdesign med en datafil. Informationen innehåller hundratals poster. Dessutom krävs att utdata skickas till en skrivare som stöder ZPL. Formulärdesignen och dina indata finns i ett program. Använd åtgärden generatePrintedOutput för att sammanfoga varje post med en formulärdesign och skicka utdata till en skrivare som stöder ZPL.
+
+Stegen Generera utskrift har följande egenskaper:
+
+**Indataegenskaper**
+
+* **[!UICONTROL Välj mallfil med]**: Ange sökvägen till mallfilen. Du kan välja mallfilen med hjälp av sökvägen som är relativ till nyttolasten, sparad med en absolut sökväg eller med hjälp av en variabel av datatypen Dokument. Exempel: [Payload_Directory]/Workflow/data.xml. Om sökvägen inte finns i crx-databasen kan en administratör skapa sökvägen innan den används. Dessutom kan du acceptera nyttolast som indatafil.
+
+* **[!UICONTROL Välj datadokument med]**: Ange sökvägen till en indatafil. Du kan markera indatafilen med den sökväg som är relativ till nyttolasten, som har sparats med en absolut sökväg eller med en variabel av dokumentdatatypen. Exempel: [Payload_Directory]/Workflow/data.xml. Om sökvägen inte finns i crx-databasen kan en administratör skapa sökvägen innan den används.
+
+* **[!UICONTROL Skrivarformat]**: Ett värde för Utskriftsformat som anger vilket sidbeskrivningsspråk som ska användas när ingen XDC-fil anges för att generera utdataströmmen. Om du anger ett literalt värde väljer du något av följande värden:
+
+   * **[!UICONTROL Anpassad PCL]**: Använd alternativet för att ange en anpassad XDC-fil för PCL.
+   * **[!UICONTROL Eget PostScript]**: Använd alternativet för att ange en anpassad XDC-fil för PostScript.
+   * **[!UICONTROL Anpassad ZPL]**: Använd alternativet för att ange en anpassad XDC-fil för ZPL.
+   * **[!UICONTROL Generic Color PCL (5c)]**: Använd en allmän färg-PCL (5c).
+   * **[!UICONTROL Allmän PostScript Level3]**: Använd allmän PostScript Level 3.
+   * **[!UICONTROL ZPL 300 DPI]**: Använd ZPL 300 DPI. Zpl300.xdc används.
+   * **[!UICONTROL ZPL 600 DPI]**: Använd ZPL 600 DPI. Filen zpl600.xdc används.
+   * **[!UICONTROL Anpassad IPL]**: Använd alternativet för att ange en anpassad XDC-fil för IPL.
+   * **[!UICONTROL IPL 300 DPI]**: Använd IPL 300 DPI. ipl300.xdc används.
+   * **[!UICONTROL IPL 400 DPI]**: Använd IPL 400 DPI. Filen ipl400.xdc används.
+   * **[!UICONTROL Anpassad TPCL]**: Använd alternativet för att ange en anpassad XDC-fil för TPCL.
+   * **[!UICONTROL TPCL 305 DPI]**: Använd TPCL 300 DPI. Filen tpcl305.xdc används.
+   * **[!UICONTROL PCL 600 DPI]**: Använd TPCL 600 DPI. Filen tpcl600.xdc används.
+   * **[!UICONTROL Anpassat DPL]**: Använd alternativet för att ange en anpassad XDC-fil som DPL.
+   * **[!UICONTROL DPL300DPI]**: Använd DPL 300 DPI. Filen dpl300.xdc används.
+   * **[!UICONTROL DPL406DPI]**: Använd DPL 400 DPI. dpl406.xdc används.
+   * **[!UICONTROL DPL600DPI]**: Använd DPL 600 DPI. dpl600.xdc används.
+
+**Utdataegenskaper**
+
+* **[!UICONTROL Spara utdatadokument med]**: Ange platsen där utdatafilen ska sparas. Du kan spara utdatafilen på en plats som är relativ till nyttolasten, i en variabel eller ange en absolut plats att spara utdatafilen på. Om sökvägen inte finns i crx-databasen kan en administratör skapa sökvägen innan den används.
+
+**Avancerade egenskaper**
+
+* **[!UICONTROL Välj innehållets rotplats med]**: Innehållsroten är ett strängvärde som anger URI, absolut referens eller plats i databasen för att hämta relativa resurser som används i formulärdesignen. Om formulärdesignen till exempel refererar till en bild relativt, som ../myImage.gif, måste myImage.gif finnas på repository://. Standardvärdet är repository://, som pekar på databasens rotnivå.
+
+   När du väljer en resurs från ditt program måste innehållsrots-URI-sökvägen ha rätt struktur. Om ett formulär till exempel hämtas från ett program med namnet SampleApp och placeras på SampleApp/1.0/forms/Test.xdp, måste innehållets rot-URI anges som repository://administrator@password/Applications/SampleApp/1.0/forms/, eller databasen:/Applications/SampleApp/1.0/forms/ (när behörigheten är null). När innehållets rot-URI anges på det här sättet kommer sökvägarna för alla refererade resurser i formuläret att matchas mot denna URI.
+
+* **[!UICONTROL Välj XCI-fil med]**: XCI-filer används för att beskriva teckensnitt och andra egenskaper som används för formulärdesignelement. Du kan behålla en XCI-fil i förhållande till nyttolasten, på en absolut sökväg eller med en variabel av dokumentdatatypen.
+
+* **[!UICONTROL Språk]**: Anger det språk som används för att generera PDF-dokumentet. Om du anger ett literalt värde väljer du ett språk i listan eller något av dessa värden:
+   * **Så här använder du serverstandard**:
+(Standard) Använd språkinställningen som är konfigurerad på AEM Forms-servern. Inställningen Språk konfigureras med administrationskonsolen. (Se [Designer-hjälpen](http://www.adobe.com/go/learn_aemforms_designer_65).)
+
+   * **Så här använder du ett anpassat värde**:
+Skriv språkkoden i den litterala rutan eller välj en strängvariabel som innehåller språkkoden. En fullständig lista över språkkoder som stöds finns på http://java.sun.com/j2se/1.5.0/docs/guide/intl/locale.doc.html.
+
+* **[!UICONTROL Kopior]**: Ett heltalsvärde som anger antalet kopior som ska genereras för utdata. Standardvärdet är 1.
+
+* **[!UICONTROL Dubbelsidig utskrift]**:  Ett sidnumreringsvärde som anger om dubbelsidig eller enkelsidig utskrift ska användas. Skrivare som stöder PostScript och PCL använder det här värdet.Om du anger ett literalt värde väljer du något av följande värden:
+   * **[!UICONTROL Dubbelsidig långsida]**: Använd dubbelsidig utskrift och utskrift med sidnumrering i långkant.
+   * **[!UICONTROL Dubbelsidig kortsida]**: Använd dubbelsidig utskrift och utskrift med hjälp av sidnumrering med kort kant.
+   * **[!UICONTROL Enkelsidigt]**: Använd enkelsidig utskrift.
