@@ -10,7 +10,7 @@ topic-tags: author
 discoiquuid: 9e9aaf36-bb86-4954-83cc-fa6b3e80ae4b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cc4b667bb20622949c71eee64b07d679109482c1
+source-git-commit: 8ebe1a2c23ec5e3e16807072ac17ec13a6df9701
 
 ---
 
@@ -42,8 +42,8 @@ Välj **Layout** i listrutan som visas högst upp i det adaptiva formuläret och
 
    Verktygsfältet som visas när du har tryckt på komponenter består av följande alternativ:
 
-   * **** Överordnad: Markera den överordnade komponenten för en komponent.
-   * **** Flyt till ny rad: Flytta komponenten till nästa rad om det finns flera komponenter på samma rad.
+   * **Överordnad:** Markera den överordnade komponenten för en komponent.
+   * **Flyt till ny rad:** Flytta komponenten till nästa rad om det finns flera komponenter på samma rad.
    Du kan ångra alla storleksändringar och använda standardlayout på panelen som innehåller storleksändrade komponenter med alternativet **[!UICONTROL Återställ brytpunktslayout]** ( ![Återställ brytpunkt](assets/reverttopreviouslypublishedversion.png)). Tryck på den överordnade för den storleksändrade komponenten för att visa alternativet.
 
    >[!NOTE]
@@ -52,7 +52,7 @@ Välj **Layout** i listrutan som visas högst upp i det adaptiva formuläret och
 
 ### Exempel {#example}
 
-**** Mål: Du vill infoga en tabellkomponent och en bildkomponent och placera dem parallellt med varandra i en interaktiv kommunikation.
+**Mål:** Du vill infoga en tabellkomponent och en bildkomponent och placera dem parallellt med varandra i en interaktiv kommunikation.
 
 1. Infoga tabell- och bildkomponenterna i redigeringsläget i webbkanalen. Bildkomponenten visas efter tabellkomponenten.
 1. Växla till layoutläget och tryck på tabellkomponenten. De blå punkter som komponentvisningen ska ändra storlek på i kolumnerna 1 och 12.
@@ -76,6 +76,20 @@ Utför följande steg om du vill ändra storlek på hela panelen i stället för
 
 1. Dra och släpp de blå punkterna för att definiera panelens position i det responsiva rutnätet.
 Du kan upprepa steg 1 och 2 och välja ![Markera överordnad](assets/float_to_new_line_icon.svg) för att flytta den storleksändrade panelen till nästa rad.
+
+## Definiera layout med flera kolumner för en panel
+
+Utför följande steg för att definiera antalet kolumner för en panel:
+
+1. I **[!UICONTROL redigeringsläget]** trycker du på panelen, väljer ![Konfigurera](assets/configure_icon.png)och väljer **[!UICONTROL Responsiv - allt på sidan utan navigeringsalternativ]** .
+
+1. Tryck på ![Spara](assets/save_icon.svg) för att spara egenskaperna.
+
+1. I **[!UICONTROL layoutläget]** trycker du på någon av komponenterna i panelen som du vill ändra storlek på, väljer ![Markera överordnad](assets/select_parent_icon.svg)och väljer det första alternativet i listrutan om panelen är komponentens omedelbara överordnade.
+
+1. Tryck på ![flera kolumner](assets/multi-column.svg) och välj antalet kolumner i listrutan. Antalet kolumner kan vara mellan 1 och 12. Panelen delas upp i en layout med flera kolumner.
+
+![flera kolumner i layoutläge](assets/multi-column-layout.png)
 
 ## Aktivera det nya responsiva rutnätet för äldre responsiva layouter {#enableresponsivegrid}
 
