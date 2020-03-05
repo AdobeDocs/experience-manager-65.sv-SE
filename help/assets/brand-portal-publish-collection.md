@@ -11,14 +11,14 @@ content-type: reference
 discoiquuid: 90e3fd0e-9bc3-4aff-8c7b-7408f5b940e8
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9c73abc3291f2847c705cb649d2993fb186b0993
+source-git-commit: 9f923782d3d0a7bdf45b18e8025bd2d083acf77c
 
 ---
 
 
 # Publicera samlingar på varumärkesportalen {#publish-collections-to-brand-portal}
 
-Som administratör för Adobe Experience Manager-resurser (AEM) kan du publicera samlingar till instansen AEM Assets Brand Portal för din organisation. Du måste dock först integrera AEM Assets med varumärkesportalen. Mer information finns i [Konfigurera AEM Assets-integrering med varumärkesportalen](/help/assets/brand-portal-configuring-integration.md).
+Som administratör för Adobe Experience Manager-resurser (AEM) kan du publicera samlingar till instansen AEM Assets Brand Portal för din organisation. Du måste dock först integrera AEM Assets med varumärkesportalen. Mer information finns i [Konfigurera AEM-resurser med varumärkesportalen](/help/assets/configure-aem-assets-with-brand-portal.md).
 
 Om du gör senare ändringar i den ursprungliga samlingen i AEM Resurser återspeglas inte ändringarna i varumärkesportalen förrän du publicerar samlingen igen. Den här egenskapen ser till att ändringar i pågående arbete inte är tillgängliga i varumärkesportalen. Endast godkända ändringar som publiceras av en administratör är tillgängliga i varumärkesportalen.
 
