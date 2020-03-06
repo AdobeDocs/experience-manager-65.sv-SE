@@ -12,7 +12,7 @@ discoiquuid: 59780112-6a9b-4de2-bf65-f026c8c74a31
 docset: aem65
 targetaudience: target-audience upgrader
 translation-type: tm+mt
-source-git-commit: 1f7a45adc73b407c402a51b061632e72d97ca306
+source-git-commit: 5035c9630b5e861f4386e1b5ab4f4ae7a8d26149
 
 ---
 
@@ -88,7 +88,7 @@ Det går fortfarande att skapa klassiskt gränssnitt i AEM 6.5, men det är bort
 
 För att underlätta uppgraderingarna och säkerställa att konfigurationerna inte skrivs över under en uppgradering har databasen omstrukturerats i 6.4 för att skilja innehåll från konfiguration.
 
-Därför måste ett antal inställningar flyttas så att de inte längre finns under `/etc` som tidigare. För att se över alla omstruktureringsproblem i databasen som måste ses över och anpassas i uppdateringen till AEM 6.4, se [Omstrukturering av databaser i AEM 6.4](/help/sites-deploying/repository-restructuring-in-aem65.md).
+Därför måste ett antal inställningar flyttas så att de inte längre finns under `/etc` som tidigare. För att se över alla omstruktureringsproblem i databasen som måste ses över och anpassas i uppdateringen till AEM 6.4, se [Omstrukturering av databaser i AEM 6.4](/help/sites-deploying/repository-restructuring.md).
 
 ## AEM-anpassningar {#aem-customizations}
 
