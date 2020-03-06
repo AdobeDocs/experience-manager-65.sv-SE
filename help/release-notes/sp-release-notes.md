@@ -8,7 +8,7 @@ discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: d361087667853d30d5e3b475bdc9262dfc8d9f00
+source-git-commit: 14df85f7a815fe567ea87375727ebe1e54733464
 
 ---
 
@@ -22,7 +22,7 @@ source-git-commit: d361087667853d30d5e3b475bdc9262dfc8d9f00
 | Version | 6.5.4.0 |
 | Typ | Service Pack-version |
 | Date | 5 mars 2020 |
-| Hämta URL | [PackageShare](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/AEM-6.5.4.0) |
+| Hämta URL | [PackageShare](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/AEM-6.5.4.0), [Software Distribution(beta)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.4.zip) |
 
 ## Vad ingår i Adobe Experience Manager 6.5.4.0 {#what-s-included-in-aem}
 
@@ -128,8 +128,6 @@ En fullständig lista över funktioner, viktiga högdagrar, viktiga funktioner s
 
 * När du flyttar innehållet i samma mapp är alternativet för sidflyttning inaktiverat (NPR-31840).
 
-* När URL:er som slutar med /_jcr_content/.html eller /jcr:content/.html används slutar CPU-toppar och AEM svara (NPR-31837).
-
 * I strukturläget för redigerbara mallar visas felaktiga resultat i listan över tillåtna komponenter i layoutbehållaren. Endast komponenter med designdialogrutan visas i layoutbehållaren (NPR-31816).
 
 * När en sida har skrivskyddad behörighet för en användare visas alternativet Öppna egenskaper i sites.html, men inte i editor.html (NPR-31770).
@@ -179,8 +177,6 @@ En fullständig lista över funktioner, viktiga högdagrar, viktiga funktioner s
 ### WCM-mallredigerare {#wcm-template-editor-6540}
 
 * I redigerbart mallstrukturläge visas inte länkknappskomponenten i listan över tillåtna komponenter i layoutbehållaren (CQ-4282099).
-
-* Processortoppar och Experience Manager slutar svara när URL:er avslutas med `/_jcr_content/.html` eller `/jcr:content/.html` öppnas (CQ-4280770).
 
 ### WCM Page Editor {#wcm-page-editor-6540}
 
