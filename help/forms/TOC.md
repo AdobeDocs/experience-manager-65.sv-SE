@@ -5,7 +5,7 @@ sub-product: forms
 audience: end-user
 user-guide-title: AEM 6.5 Forms User Guide
 translation-type: tm+mt
-source-git-commit: a8212a6af2a2f4a805dc2c256b741a8b45896f83
+source-git-commit: 42a08dca17df382b875c5326a64b5584028741d8
 
 ---
 
@@ -23,18 +23,18 @@ source-git-commit: a8212a6af2a2f4a805dc2c256b741a8b45896f83
    + [Introduktion till hantering av formulär](using/introduction-managing-forms.md)
    + [Introduktion till tjänsten Automatiserad formulärkonvertering](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/table-of-contents/introduction.html)
    + Självstudiekurs: Skapa ditt första adaptiva formulär {#create-first-adaptive-form}
-      + [Självstudiekurs:Skapa ditt första anpassningsbara formulär](using/create-your-first-adaptive-form.md)
+      + [Självstudiekurs: Skapa ditt första anpassningsbara formulär](using/create-your-first-adaptive-form.md)
       + [Självstudiekurs: Skapa ett anpassat formulär](using/create-adaptive-form.md)
-      + [Självstudiekurs:Skapa formulärdatamodell](using/create-form-data-model.md)
+      + [Självstudiekurs: Skapa formulärdatamodell](using/create-form-data-model.md)
       + [Självstudiekurs: Tillämpa regler på anpassningsbara formulärfält l](using/apply-rules-to-adaptive-form-fields.md)
-      + [Självstudiekurs:Formatera ditt anpassningsbara formulär](using/style-your-adaptive-form.md)
+      + [Självstudiekurs: Formatera ditt anpassningsbara formulär](using/style-your-adaptive-form.md)
       + [Självstudiekurs: Publicera ditt adaptiva formulär](/help/forms/using/publish-your-adaptive-form.md)
       + [Självstudiekurs: Testa ditt adaptiva formulär](/help/forms/using/testing-your-adaptive-form.md)
    + Självstudiekurs: Skapa din första interaktiva kommunikation {#create-first-interactive-communication}
-      + [Självstudiekurs:Skapa din första interaktiva kommunikation](using/create-your-first-interactive-communication.md)
+      + [Självstudiekurs: Skapa din första interaktiva kommunikation](using/create-your-first-interactive-communication.md)
       + [Självstudiekurs: Planera interaktiv kommunikation](using/planning-interactive-communications.md)
-      + [Självstudiekurs:Skapa formulärdatamodell](using/create-form-data-model0.md)
-      + [Självstudiekurs:Skapa dokumentfragment](using/create-document-fragments.md)
+      + [Självstudiekurs: Skapa formulärdatamodell](using/create-form-data-model0.md)
+      + [Självstudiekurs: Skapa dokumentfragment](using/create-document-fragments.md)
       + [Självstudiekurs: Skapa mallar](using/create-templates-print-web.md)
       + [Självstudiekurs: Skapa interaktiv kommunikation](using/create-interactive-communication0.md)
    + AEM Forms Reference Collaterals {#aem-forms-reference-collaterals}
@@ -62,7 +62,7 @@ source-git-commit: a8212a6af2a2f4a805dc2c256b741a8b45896f83
       + [Installera och konfigurera tjänsten Automatisk formulärkonvertering](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/table-of-contents/configure-service.html)
    + Installera AEM Forms på JEE {#jee-installation}
       + [Plattformar som stöds för AEM-formulär på JEE](using/aem-forms-jee-supported-platforms.md)
-      + [Installera och distribuera AEM Forms på JEE med nyckelord för JBoss](http://www.adobe.com/go/learn_aemforms_installTurnkey_65)
+      + [Installera och distribuera AEM Forms på JEE med nyckelord för JBoss](http://www.adobe.com/go/learn_aemforms_upgradeTurnkey_65)
       + [Installera och konfigurera AEM Forms Document Security-server](using/installing-and-configuring-the-document-security-server.md)
       + [Förbered installation av en enda server för AEM Forms](http://www.adobe.com/go/learn_aemforms_prepareInstallsingle_65)
       + [Installera och distribuera AEM-formulär på JEE för JBoss](http://www.adobe.com/go/learn_aemforms_installJBoss_65)
@@ -302,6 +302,7 @@ source-git-commit: a8212a6af2a2f4a805dc2c256b741a8b45896f83
    + [Översikt över korrespondenshantering](using/cm-overview.md)
    + [Layoutdesign](using/layout-design-details.md)
    + [Dataordlista](using/data-dictionary.md)
+   + [Dokumentfragment](using/document-fragments.md)
    + [Skapa brev](using/create-letter.md)
    + [Skapa korrespondens](using/create-correspondence.md)
    + [Fjärrfunktioner i Expression Builder](using/expression-builder.md)
@@ -312,7 +313,7 @@ source-git-commit: a8212a6af2a2f4a805dc2c256b741a8b45896f83
    + [Lägg till anpassade egenskaper i Correspondence Management-resurser](using/add-custom-properties-cm-assets.md)
    + [Anpassa gränssnitt för att skapa korrespondens](using/customize-create-correspondence-ui.md)
    + [Anpassa textredigeraren](using/customize-text-editor.md)
-   + [Korrespondenshantering:Felsökning](using/cm-troubleshooting.md)
+   + [Korrespondenshantering: Felsökning](using/cm-troubleshooting.md)
    + [API:er för åtkomst till bokstavsinstanser](using/cm-apis-to-access-letter-instances.md)
    + [Integrera Create Correspondence UI med din anpassade portal](using/integrating-create-correspondence-ui-with-your-portal.md)
    + [Anpassade specialtecken i korrespondenshantering](using/custom-special-characters.md)
@@ -520,7 +521,7 @@ source-git-commit: a8212a6af2a2f4a805dc2c256b741a8b45896f83
       + [Importera och exportera globala inställningar](/help/forms/using/admin-help/importing-exporting-global-settings.md)
       + [Ställa in dagens meddelande](/help/forms/using/admin-help/setting-message-day.md)
       + [Anpassa sökmallar](/help/forms/using/admin-help/customizing-search-templates.md)
-      + [Hantera de kategorier som visas i arbetsytan](/help/forms/using/admin-help/categories-displayed-workspace.md)
+      + [Hantera de kategorier som visas i Arbetsyta](/help/forms/using/admin-help/categories-displayed-workspace.md)
    + Hälsoövervakning {#health-monitor}
       + [Översikt över hälsoövervakning](/help/forms/using/admin-help/overview-11.md)
       + [Finjustera prestanda för hälsoövervakning](/help/forms/using/admin-help/fine-tuning-health-monitor-performance.md)
