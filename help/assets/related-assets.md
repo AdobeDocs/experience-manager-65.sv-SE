@@ -3,7 +3,7 @@ title: Relaterade tillgångar
 description: Lär dig hur du relaterar resurser som delar vissa gemensamma attribut. Du kan också använda funktionen för att skapa käll-/härledda relationer mellan resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: fb0688afbadd1b27f1a3b3326f18c15d1c7811aa
 
 ---
 
@@ -13,6 +13,9 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 Med Adobe Experience Manager Assets (AEM) kan ni manuellt relatera resurser baserat på organisationens behov med hjälp av funktionen för relaterade resurser. Du kan till exempel relatera en licensfil till en resurs eller en bild/video på ett liknande ämne. Du kan relatera resurser som delar vissa gemensamma attribut. Du kan också använda funktionen för att skapa käll-/härledda relationer mellan resurser. Om du till exempel har en PDF-fil som genereras från en INDD-fil kan du koppla PDF-filen till dess INDD-källfil.
 
 Med den här funktionen kan du dela en lågupplöst PDF- eller JPG-fil med leverantörer eller myndigheter och göra den högupplösta INDD-filen tillgänglig endast på begäran.
+
+>[!NOTE] Användare med redigeringsbehörighet kan relatera och dela upp resurser.
+>
 
 ## Relatera resurser {#relating-assets}
 
@@ -44,7 +47,7 @@ Med den här funktionen kan du dela en lågupplöst PDF- eller JPG-fil med lever
    ![chlimage_1-277](assets/chlimage_1-277.png)
 
 1. Klicka på/tryck på ikonen **[!UICONTROL Bekräfta]** .
-1. Klicka/tryck på **[!UICONTROL OK]** för att stänga dialogrutan. Beroende på ditt val av relation i steg 3 listas den relaterade resursen under en lämplig kategori i **[!UICONTROL relaterat]** avsnitt. Om den resurs du har relaterat är källfilen för den aktuella resursen visas den under **[!UICONTROL Källa]**.
+1. Klicka/tryck på **[!UICONTROL OK]** för att stänga dialogrutan. Beroende på ditt val av relation i steg 3 listas den relaterade resursen under en lämplig kategori i avsnittet **[!UICONTROL Relaterat]** . Om den resurs du har relaterat är källfilen för den aktuella resursen visas den under **[!UICONTROL Källa]**.
 
    ![chlimage_1-278](assets/chlimage_1-278.png)
 
