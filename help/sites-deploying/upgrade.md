@@ -12,7 +12,7 @@ discoiquuid: ebd99cc4-8762-4c28-a177-d62dac276afe
 docset: aem65
 targetaudience: target-audience upgrader
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 5035c9630b5e861f4386e1b5ab4f4ae7a8d26149
 
 ---
 
@@ -31,7 +31,7 @@ I det här avsnittet beskriver vi uppgradering av en AEM-installation till AEM 6
 * [Kontrollera och felsök efter uppgradering](/help/sites-deploying/post-upgrade-checks-and-troubleshooting.md)
 * [Hållbara uppgraderingar](/help/sites-deploying/sustainable-upgrades.md)
 * [Lazy Content Migration](/help/sites-deploying/lazy-content-migration.md)
-* [Omstrukturering av lager i AEM 6.5](/help/sites-deploying/repository-restructuring-in-aem65.md)
+* [Omstrukturering av lager i AEM 6.5](/help/sites-deploying/repository-restructuring.md)
 
 För enklare referens till de AEM-instanser som används i dessa procedurer används följande termer i alla dessa artiklar:
 
@@ -81,7 +81,7 @@ Uppgradering av AEM är en flerstegsprocess som ibland tar flera månader. Följ
 
 ## Uppgraderingsflöde {#upgrade-overview-1}
 
-Bilden nedan visar det rekommenderade arbetsflödet för uppgradering. Observera referensen till de nya funktioner som vi har infört. Uppgraderingen bör börja med mönsteravkännaren (se [Utvärdera uppgraderingskomplexiteten med mönsteravkännaren](/help/sites-deploying/pattern-detector.md)), som du kan använda för att bestämma vilken väg du vill ta för kompatibilitet med AEM 6.4 baserat på mönstren i den genererade rapporten.
+Bilden nedan visar det rekommenderade arbetsflödet för uppgradering. Observera referensen till de nya funktioner som vi har infört. Uppgraderingen bör börja med mönsteravkännaren (se [Utvärdera uppgraderingskomplexiteten med mönsteravkännaren](/help/sites-deploying/pattern-detector.md)), som du kan använda för att bestämma vilken sökväg du vill använda för kompatibilitet med AEM 6.4 baserat på mönstren i den genererade rapporten.
 
 I 6.5 fokuserades alla nya funktioner bakåt så att de var kompatibla, men i de fall där du fortfarande ser problem med bakåtkompatibilitet kan du i kompatibilitetsläget tillfälligt skjuta upp utvecklingen så att den anpassade koden är kompatibel med 6.5. Med den här metoden undviker du utvecklingsarbete direkt efter uppgraderingen (se [Bakåtkompatibilitet i AEM 6.5](/help/sites-deploying/backward-compatibility.md)).
 
