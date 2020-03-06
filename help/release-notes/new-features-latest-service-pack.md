@@ -4,14 +4,14 @@ description: Nyheter i Adobe Experience Manager 6.5 Service Pack 4
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 1d867ee46ca9cd5945c7413d42fc002b90332c3c
+source-git-commit: 14df85f7a815fe567ea87375727ebe1e54733464
 
 ---
 
 
 # Nyheter i Adobe Experience Manager 6.5 Service Pack 4 {#aem-whats-new-service-pack-4}
 
-2020, för Adobe Experience Manager (AEM) 6.5, levereras nya funktioner och förbättringar i kvartalsvisa Service Packs. Kunderna drar nytta av den här nya metoden när de börjar använda innovationerna snabbare.
+2020 levererar Adobe Experience Manager (AEM) 6.5 funktioner och kontinuerliga förbättringar i kvartalsvisa Service Pack. Kunderna drar nytta av den här nya metoden när de börjar använda innovationerna snabbare.
 
 Den senaste versionen av AEM Service Pack 4 (6.5.4.0) släpptes 5 **mars 2020**. I den här artikeln beskrivs de funktioner som den senaste Service Pack-versionen erbjuder för att göra din AEM-resa mer tilltalande.
 
@@ -19,15 +19,16 @@ Den senaste versionen av AEM Service Pack 4 (6.5.4.0) släpptes 5 **mars 2020**.
 
 ### Prestandaförbättringar inom olika områden {#performance-improvements}
 
-* Minska tiden för inläsning och initiering av ContextHub inom en plats (contexthub.kernel.js). Ger snabbare inläsning av första sidan under ett webbplatsbesök.
+* Minskad tid för inläsning och initiering av ContextHub inom en plats (contexthub.kernel.js). Det gör att en sida läses in snabbare under ett webbplatsbesök.
 
-* I sidredigeraren kan du minska den tid det tar att uppdatera sidan efter att du har dragit och släppt Experience Fragments till sidans arbetsyta.
+* Förkorta tiden för uppdatering av en sida efter att du har dragit och släppt Experience Fragments på arbetsytan i en sidredigerare.
 
-* I Live Copy Overview kan du korta ned tiden för inläsning av poster när webbplatsen har många live-kopior (+200).
+* I Live Copy Overview förkortades tiden för inläsning av poster när en webbplats har fler än 200 live-kopior.
 
-* Förbättra hanteringen av ofullständiga/ogiltiga URL:er i mallredigeraren, vilket kan göra att mallredigeraren blir långsammare.
+* I mallredigeraren har hanteringen av ofullständiga eller ogiltiga URL:er förbättrats, vilket kan göra att mallredigeraren tar längre tid.
 
-Med början från AEM 6.5 SP4 har Style System förbättrats och formaten kan nu även väljas i en komponentdialogruta.
+Dessutom innehåller AEM 6.5 SP4 förbättringar av formatsystemet. Nu kan du även välja format i en komponentdialogruta.
+
 
 ## AEM Assets {#aem-assets}
 
