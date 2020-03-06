@@ -11,7 +11,7 @@ topic-tags: upgrading
 discoiquuid: 49210824-ad87-4b6a-9ae8-77dcfe2b5c06
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 5035c9630b5e861f4386e1b5ab4f4ae7a8d26149
 
 ---
 
@@ -114,7 +114,7 @@ När du uppgraderar kan du behöva uppgradera andra komponenter i din tekniska s
 
 ![doi_cropped](assets/doi_cropped.png)
 
-Granska de tekniska kraven för AEM 6.5 och se till att din nuvarande maskin- och programvara är tillräcklig. Följande dokument innehåller information om möjliga ändringar av de operativa processerna:
+Granska de tekniska kraven för AEM 6.5 och se till att din nuvarande maskin- och programvara är tillräcklig. Följande dokument innehåller information om eventuella ändringar av de operativa processerna:
 
 **Övervakning och underhåll:**
 
@@ -136,7 +136,7 @@ Granska de tekniska kraven för AEM 6.5 och se till att din nuvarande maskin- oc
 
 #### Överväganden vid innehållsomstrukturering {#content-restructuring-considerations}
 
-AEM har infört ändringar i databasstrukturen som gör uppgraderingarna smidigare. Ändringarna innebär att flytta innehåll från mappen /etc till mappar som /libs, /apps och /content, baserat på om Adobe eller en kund äger innehållet, vilket minskar riskerna för att skriva över innehåll under releaser. Omstruktureringen av databasen har gjorts på ett sådant sätt att inga kodändringar behöver göras vid uppgraderingen av version 6.5, även om det rekommenderas att du granskar informationen i [Repository-omstrukturering i AEM](/help/sites-deploying/repository-restructuring-in-aem65.md) när du planerar en uppgradering.
+AEM har infört ändringar i databasstrukturen som gör uppgraderingarna smidigare. Ändringarna innebär att flytta innehåll från mappen /etc till mappar som /libs, /apps och /content, baserat på om Adobe eller en kund äger innehållet, vilket minskar riskerna för att skriva över innehåll under releaser. Omstruktureringen av databasen har gjorts på ett sådant sätt att inga kodändringar behöver göras vid uppgraderingen av version 6.5, även om det rekommenderas att du granskar informationen i [Repository-omstrukturering i AEM](/help/sites-deploying/repository-restructuring.md) när du planerar en uppgradering.
 
 ### Utvärderar uppgraderingskomplexitet {#assessing-upgrade-complexity}
 
