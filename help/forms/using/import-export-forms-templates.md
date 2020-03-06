@@ -10,7 +10,7 @@ topic-tags: forms-manager
 discoiquuid: 69210727-dde3-495a-87b7-2e8173e6b664
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4dc4a518c212555b7833ac27de02087a403d3517
+source-git-commit: 5035c9630b5e861f4386e1b5ab4f4ae7a8d26149
 
 ---
 
@@ -21,7 +21,7 @@ Du kan flytta formulär och relaterade resurser, teman, dataordlistor, dokumentf
 
 >[!NOTE]
 >
->* I AEM 6.4 Forms har strukturen och sökvägarna för crx-databaser ändrats. Om du importerar resurser från en tidigare version till AEM 6.4-formulär och formuläret har vissa beroenden av den äldre strukturen, måste du exportera beroendena manuellt. Mer information om förändringar i databasens struktur och vägar finns i [Databasomstrukturering i AEM 6.4](/help/sites-deploying/repository-restructuring-in-aem65.md).
+>* I AEM 6.4 Forms har strukturen och sökvägarna för crx-databaser ändrats. Om du importerar resurser från en tidigare version till AEM 6.4-formulär och formuläret har vissa beroenden av den äldre strukturen, måste du exportera beroendena manuellt. Mer information om förändringar i databasens struktur och sökvägar finns i [Databasomstrukturering i AEM](/help/sites-deploying/repository-restructuring.md).
 >
 
 
@@ -43,10 +43,10 @@ Så här hämtar du resurser för formulär och dokument:
 1. Markera formulärresurserna och tryck på ikonen **Hämta** .
 1. Välj något av följande alternativ i Hämta resurser och tryck sedan på **Hämta**.
 
-   * **** Hämta som CRX-paket: Använd alternativet för att hämta och flytta alla valda resurser och relaterade beroenden från en AEM Forms-instans till en annan. Alla resurser och mappar hämtas som crx-paket. Alla formulärresurser, inklusive formulär som skapats i AEM (adaptiva formulär, interaktiv kommunikation och adaptiva formulärfragment), formuläruppsättningar, formulärmallar, PDF-dokument och resurser (XSD, XFS, bilder) kan hämtas som paket från AEM Forms UI.
+   * **Hämta som CRX-paket:** Använd alternativet för att hämta och flytta alla valda resurser och relaterade beroenden från en AEM Forms-instans till en annan. Alla resurser och mappar hämtas som crx-paket. Alla formulärresurser, inklusive formulär som skapats i AEM (adaptiva formulär, interaktiv kommunikation och adaptiva formulärfragment), formuläruppsättningar, formulärmallar, PDF-dokument och resurser (XSD, XFS, bilder) kan hämtas som paket från AEM Forms UI.
 Fördelen med att hämta resurser som paket är att det även hämtar resurser som har använts av den resurs som valts för hämtning. Om du till exempel har ett adaptivt formulär som använder en formulärmall, XSD och en bild. När du väljer det här adaptiva formuläret och hämtar det som paket innehåller det hämtade paketet även formulärmallen, XSD och bilden. Alla metadataegenskaper (inklusive anpassade egenskaper) som är kopplade till resursen hämtas också.
 
-   * **** Hämta resurser som binära filer: Använd alternativet för att endast hämta formulärmallar (XDP), PDF-formulär (PDF), dokument (PDF) och resurser (bilder, scheman, formatmallar). Du kan redigera dessa resurser med externa program. Det hämtar formulärresurser som har binära filer, som XSD, XDP, bilder, PDF och XDP som en ZIP-fil.
+   * **Hämta resurser som binära filer:** Använd alternativet för att endast hämta formulärmallar (XDP), PDF-formulär (PDF), dokument (PDF) och resurser (bilder, scheman, formatmallar). Du kan redigera dessa resurser med externa program. Det hämtar formulärresurser som har binära filer, som XSD, XDP, bilder, PDF och XDP som en ZIP-fil.
 Du kan inte hämta adaptiva formulär, interaktiv kommunikation, adaptiva formulärfragment, teman och formuläruppsättningar med alternativet **Hämta resurser som binära filer** . Om du vill hämta dessa resurser använder du **alternativet Hämta som CRX-paket** .
    De valda resurserna hämtas som ett arkiv (.zip-fil).
 
@@ -191,7 +191,7 @@ Du kan använda AEM-pakethanteraren för att exportera arbetsflödesprogram. Ang
 
 ## Mappar och ordna resurser {#folders-and-organizing-assets}
 
- AEM Forms användargränssnitt använder mappar för att ordna resurser. De här mapparna används för att ordna resurser som skapats i användargränssnittet i AEM Forms. Du kan byta namn på, skapa undermappar och lagra resurser och dokument i dessa mappar. Genom att ordna dokument och resurser i en mapp kan du gruppera filerna tillsammans för enkel hantering. Du kan markera en mapp och välja att hämta eller ta bort den.
+AEM Forms användargränssnitt använder mappar för att ordna resurser. De här mapparna används för att ordna resurser som skapats i användargränssnittet i AEM Forms. Du kan byta namn på, skapa undermappar och lagra resurser och dokument i dessa mappar. Genom att ordna dokument och resurser i en mapp kan du gruppera filerna tillsammans för enkel hantering. Du kan markera en mapp och välja att hämta eller ta bort den.
 
 Så här skapar du en mapp:
 
@@ -202,8 +202,8 @@ Så här skapar du en mapp:
 1. Tryck på Skapa > Mapp.
 1. Ange följande information:
 
-   * **** Titel: Visningsnamn för mappen
-   * **** Namn: *(Obligatoriskt)* Det nodnamn under vilket du vill lagra mappen i databasen
+   * **Titel:** Visningsnamn för mappen
+   * **Namn:** *(Obligatoriskt)* Det nodnamn under vilket du vill lagra mappen i databasen
    >[!NOTE]
    >
    >Som standard fylls värdet för namnfältet automatiskt i från titeln. Namnet får bara innehålla alfanumeriska tecken eller bindestreck (-) och understreck (_). Alla andra specialtecken som anges i titeln ersätts automatiskt med ett bindestreck och du uppmanas att bekräfta det nya namnet. Du kan välja att fortsätta med det föreslagna namnet eller redigera det ytterligare.
@@ -231,7 +231,7 @@ Följ de här stegen för att skapa kopior av resurser och brev:
 1. Om det behövs kan du redigera titeln och namnet som du vill spara kopian av resursen/bokstaven med.
 1. Tryck på Klistra in. Nya kopior av de kopierade resurserna skapas.
 
-## Sök {#search-forms}
+## Sökning {#search-forms}
 
 Med användargränssnittet för AEM Forms kan du söka efter ditt innehåll. I det övre fältet kan du trycka på Sök **[A]** om du vill söka efter resurser och dokument i ditt innehåll.
 
@@ -239,7 +239,7 @@ När du söker efter resurser visas sidopanelen i AEM Forms. Du kan också tryck
 
 ![search_topbar](assets/search_topbar.png)
 
-******S. Sök** B.Filter
+**S.** Sök **B.** Filter
 
 ![Panelen Sida - Filter](assets/search_sidepanel.png)
 
