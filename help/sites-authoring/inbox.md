@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 8b607b55-2412-469f-856b-0a3dea4b0efb
 translation-type: tm+mt
-source-git-commit: 8ebe1a2c23ec5e3e16807072ac17ec13a6df9701
+source-git-commit: 033c32c581fddd5f632ad534f57c84b4d74a4104
 
 ---
 
@@ -132,22 +132,24 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
 
 ### Inkorg - Administratörskontroll {#inbox-admin-control}
 
-Användare som ingår i gruppen **Arbetsflödesadministratörer** kan visa alternativet Administratörskontroll i listan. Med det här alternativet kan administratörer:
+Med alternativet Admin Control kan administratörer:
 
-* Definiera anpassningar för texten och logotypen i sidhuvudet.
+* Anpassa rubriktext och logotyp
 
-* Styr visningen av de navigeringsalternativ som är tillgängliga i sidhuvudet och begränsa användarna till arbetsflödets redigeringsläge eller navigera till hjälpen eller andra lösningslänkar.
+* Styra visningen av navigeringslänkar i sidhuvudet
+
+Alternativet Admin Control visas endast i listrutan för visningsväljare om du är medlem i gruppen administratörer eller arbetsflödesadministratörer.
 
 ![admin-control](assets/admin-control.png)
 
 * **Anpassning av varumärkesprofilering**
 
-   * **Anpassa rubriktext:** Ange den text i det här fältet som ska ersätta den befintliga **Adobe Experience Manager** -texten som visas i sidhuvudet.
+   * **Anpassa rubriktext:** Ange den text som ska visas i sidhuvudet.
 
-   * **Anpassa logotyp:** Överför en bild i DAM (Digital Asset Management) och använd det här fältet för att ersätta Adobe Experience Manager-logotypen som visas i sidhuvudet.
+   * **Anpassa logotyp:** Överför en bild i DAM (Digital Asset Management) och hänvisa till den bilden för att visa den i sidhuvudet.
 
 * **Användarnavigering**
-   * **Dölj navigeringsalternativ:** Välj det här alternativet om du vill dölja navigeringsalternativen i sidhuvudet, t.ex. alternativet att navigera till andra lösningar, hjälplänken och alternativen som visas när användaren trycker på Adobe Experience Manager-logotypen eller -texten.
+   * **Dölj navigeringsalternativ:** Välj det här alternativet om du vill dölja navigeringsalternativ som är tillgängliga i sidhuvudet. Navigeringsalternativen inkluderar länkar till andra lösningar, hjälplänken och de redigeringsalternativ som finns när man trycker på Adobe Experience Manager-logotypen eller -texten.
 * **Spara:** Tryck/klicka på det här alternativet om du vill spara inställningarna.
 
 ## Vidta åtgärder för ett objekt {#taking-action-on-an-item}
