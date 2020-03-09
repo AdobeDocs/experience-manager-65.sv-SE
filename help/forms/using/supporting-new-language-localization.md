@@ -10,7 +10,7 @@ topic-tags: Configuration
 discoiquuid: d4e2acb0-8d53-4749-9d84-15b8136e610b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3226edb575de3d9f8bff53f5ca81e2957f37c544
+source-git-commit: dbfadb0b49c83c38aa2cb55c32517ad70bbd79d0
 
 ---
 
@@ -42,7 +42,7 @@ Om det inte finns något klientbibliotek för det begärda språket söker progr
 
 ## Lägg till lokaliseringsstöd för språk som inte stöds {#add-localization-support-for-non-supported-locales}
 
-AEM Forms har för närvarande stöd för lokalisering av innehåll i adaptiva formulär på engelska (en), spanska (es), franska (fr), italienska (it), tyska (de), japanska (ja), portugisiska (Brasilien), kinesiska (zh-tn), kinesiska (zh-tw) och koreanska (ko-kr).
+AEM Forms har för närvarande stöd för lokalisering av innehåll i adaptiva formulär på engelska (en), spanska (es), franska (fr), italienska (it), tyska (de), japanska (ja), portugisiska (Brasilien), kinesiska (zh-CN), kinesiska (zh-TW) och koreanska (ko-KR).
 
 Så här lägger du till stöd för en ny språkinställning vid körning av adaptiva formulär:
 
@@ -93,12 +93,12 @@ LogMessages.js
 
 ### Lägg till språkstöd för ordlistan {#add-locale-support-for-the-dictionary-br}
 
-Utför bara det här steget om `<locale>` du lägger till inte finns bland `en`, `de`, `es`, `fr`, `it`, `pt-br`, `zh-tn`, `zh-tw`, `ja``ko-kr`¥.
+Utför bara det här steget om `<locale>` du lägger till inte finns bland `en`, `de`, `es`, `fr`, `it`, `pt-br`, `zh-cn`, `zh-tw`, `ja``ko-kr`¥.
 
 1. Skapa en `nt:unstructured` nod `languages` under `etc`, om den inte redan finns.
 
 1. Lägg till en strängegenskap med flera värden `languages` till noden, om den inte redan finns.
-1. Lägg till `<locale>` standardvärden för nationella inställningar `de`, `es`, `fr`, `it`, `pt-br`, `zh-tn`, `zh-tw`, `ja`, `ko-kr`om sådana inte finns.
+1. Lägg till `<locale>` standardvärden för nationella inställningar `de`, `es`, `fr`, `it`, `pt-br`, `zh-cn`, `zh-tw`, `ja`, `ko-kr`om sådana inte finns.
 
 1. Lägg till egenskapen `<locale>` i värdena för `languages` egenskapen `/etc/languages`.
 
