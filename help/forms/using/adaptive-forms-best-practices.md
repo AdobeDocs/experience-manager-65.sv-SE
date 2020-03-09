@@ -8,7 +8,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 43c431e4-5286-4f4e-b94f-5a7451c4a22c
 translation-type: tm+mt
-source-git-commit: 6bd09bca68ea1fcec2dca7694dd3d39dc5153bfc
+source-git-commit: dbfadb0b49c83c38aa2cb55c32517ad70bbd79d0
 
 ---
 
@@ -21,7 +21,7 @@ Adobe Experience Manager-formulär (AEM) kan hjälpa er att omvandla komplexa tr
 
 Det här dokumentet innehåller riktlinjer och rekommendationer som formuläradministratörer, författare och utvecklare kan dra nytta av när de arbetar med AEM Forms, särskilt adaptiva formulärkomponenter. Här diskuteras de effektivaste strategierna, från att skapa ett formulärutvecklingsprojekt till att konfigurera, anpassa, skapa och optimera AEM-formulär. Dessa bästa metoder bidrar tillsammans till AEM Forms-ekosystemets övergripande prestanda.
 
-Här finns dessutom några rekommenderade läsningar för allmän AEM-praxis:
+Här följer dessutom några rekommenderade artiklar för allmän AEM-praxis:
 
 * [God praxis: Driftsätta och underhålla AEM](/help/sites-deploying/best-practices.md)
 * [God praxis: Skapa innehåll](/help/sites-authoring/best-practices.md)
@@ -91,7 +91,7 @@ Mer information finns i [Skapa ett anpassat formulär](/help/forms/using/creatin
 * Om du vill visa och redigera egenskaperna för en komponent i komponentwebbläsaren i sidofältet markerar du komponenten och klickar på ![cmpr-1](assets/cmppr-1.png). Du kan också dubbelklicka på en komponent om du vill visa dess egenskaper i egenskapsläsaren.
 * Använd kortkommandon för att vidta snabba åtgärder i formulären. Se [Kortkommandon](/help/forms/using/keyboard-shortcuts.md)för AEM-formulär.
 
-* Adaptiva formulärkomponenter rekommenderas endast för användning på adaptiva formulärsidor. Komponenterna är beroende av sin överordnade hierarki. Använd dem därför inte på en AEM-sida.
+* Adaptiva formulärkomponenter rekommenderas för användning endast i adaptiva formulärsidor. Komponenterna är beroende av sin överordnade hierarki. Använd dem därför inte på en AEM-sida.
 
 Se även komponentbeskrivningar och metodtips i [Introduktion till utveckling av adaptiva formulär](/help/forms/using/introduction-forms-authoring.md).
 
@@ -166,7 +166,7 @@ Du kan förifylla anpassningsbara formulärfält med data som hämtats från bac
 
 * AEM Forms tillhandahåller en förifylld tjänst för att läsa data från en fördefinierad XML-datafil och förifylla fälten i ett adaptivt formulär med innehållet i XML-filen för förifyllnad.
 * XML-koden för förifyllda data måste vara kompatibel med schemat för den formulärmodell som är associerad med det adaptiva formuläret.
-* Inkludera `afBoundedData` och `afUnBoundedData` avsnitt i förifyll XML för att förifylla både bundna och obundna fält i ett anpassat formulär.
+* Inkludera `afBoundedData` och `afUnBoundedData` avsnitt i förifyll XML för att förifylla både bundna och obundna fält i ett adaptivt formulär.
 
 * För adaptiva formulär baserade på formulärdatamodell tillhandahåller AEM Forms en färdig tjänst för förifyllnad av formulärdatamodell. förifyllningstjänsten söker efter datakällor för datamodellobjekt i det adaptiva formuläret och fyller i fältvärden i förväg när formuläret återges.
 * Du kan också använda de adaptiva formulären för förifyllnad av filer, krökningar, tjänster och http-protokoll.
@@ -245,7 +245,7 @@ Nedan beskrivs några tips om hur du översätter anpassningsbara formulär:
 
    `https://[server]:[port]/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 
-* AEM Forms har för närvarande stöd för lokalisering av innehåll i adaptiva formulär på engelska (en), spanska (es), franska (fr), italienska (it), tyska (de), japanska (ja), portugisiska (Brasilien), kinesiska (zh-tn), kinesiska (zh-tw) och koreanska (ko-kr). Du kan dock lägga till stöd för nya språk för adaptiva formulär vid körning. Mer information finns i [Stöd för nya språk för lokalisering](/help/forms/using/supporting-new-language-localization.md)av adaptiva formulär.
+* AEM Forms har för närvarande stöd för lokalisering av innehåll i adaptiva formulär på engelska (en), spanska (es), franska (fr), italienska (it), tyska (de), japanska (ja), portugisiska (Brasilien), kinesiska (zh-CN), kinesiska (zh-TW) och koreanska (ko-KR). Du kan dock lägga till stöd för nya språk för adaptiva formulär vid körning. Mer information finns i [Stöd för nya språk för lokalisering](/help/forms/using/supporting-new-language-localization.md)av adaptiva formulär.
 
 ## Förbered formulärprojekt för produktion {#prepare-forms-project-for-production}
 
