@@ -8,7 +8,7 @@ discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 14df85f7a815fe567ea87375727ebe1e54733464
+source-git-commit: ff006375b9ac958c7a5f9adf122990bf23808834
 
 ---
 
@@ -32,7 +32,7 @@ Några viktiga funktioner och förbättringar i AEM 6.5.4.0:
 
 * AEM Assets har nu konfigurerats med en varumärkesportal via Adobe I/O Console.
 
-* Ett nytt [Generate Output](../forms/using/aem-forms-workflow-step-reference.md) -steg är nu tillgängligt för AEM-arbetsflöden.
+* Ett nytt [genereringssteg för utskrift](../forms/using/aem-forms-workflow-step-reference.md) är nu tillgängligt för arbetsflöden i AEM Forms.
 
 * [Flerkolumnsstöd](../forms/using/resize-using-layout-mode.md) för layoutläge för adaptiva formulär och interaktiv kommunikation.
 
@@ -43,62 +43,6 @@ Några viktiga funktioner och förbättringar i AEM 6.5.4.0:
 * Den inbyggda databasen (Apache Jackrabbit Oak) uppdateras till version 1.10.8.
 
 En fullständig lista över funktioner, viktiga högdagrar, viktiga funktioner som introducerats i tidigare AEM 6.5-servicepaket finns i [Nyheter i Adobe Experience Manager 6.5 Service Pack 4](new-features-latest-service-pack.md).
-
-### Assets {#assets-6540-enhancements}
-
-* Knappen som utlöser arbetsflödet på sidan för resurssamling är inaktiverad (NPR-32471).
-
-* En mapp utan namn skapas i SPS (Scene7 Publishing System) när en resurs flyttas från en mapp till en annan i Experience Manager med Dynamic Media Scene7-konfiguration (NPR-32440).
-
-* Åtgärden för att flytta alla resurser (med Markera alla och sedan flytta) till en mapp som innehåller publicerade resurser misslyckas med felet (NPR-32366).
-
-* Återgivningsgenerering för resurser med ${extension} misslyckas (NPR-32294).
-
-* Versionshistorik-URL:er visas under fältet Refererat av på egenskapssidan för resurser (NPR-31889).
-
-* ZIP-filen som hämtas från DAM kan inte öppnas med WinZip (NPR-32293).
-
-* Ursprungliga behörigheter för en mapp uppdateras när mappinställningar öppnas för att ändra mappens titel eller miniatyrbild och sedan sparas (NPR-32292).
-
-* Kalenderikonen för den schemalagda aktiveringen visas inte i statuskolumnen (i Klassiskt användargränssnitt för DAM-tillgångslista) för resurser vars aktivering är schemalagd för ett senare datum och en senare tid (NPR-32291).
-
-* När du skapar fragment med fragmentmallar uppstår ett fel när du söker efter samlingar när fragmentet skapas (NPR-32290).
-
-* Flera sökfrågor utlöses när flera taggar väljs från sökfiltret (NPR-32143).
-
-* Användargränssnittet i Experience Manager Assets visar trunkerade filnamn när resurser med fler än 50 tecken i filnamnet överförs (NPR-32054).
-
-* Alla kryssrutor på panelen Filter avmarkeras när den första och den andra kryssrutan avmarkeras när du har markerat två kryssrutor i kryssruteträdet i Adobe Stock (NPR-31919).
-
-* Filer- och mappsökning med Omnisearch-ansikten ger undantag (NPR-31872).
-
-* Fältmarkering för obligatoriskt fältval i metadataredigeraren tas inte bort även efter att det obligatoriska fältet har markerats, när beroendereglerna har angetts i motsvarande metadatamatchformulär (NPR-31834).
-
-* Fullständiga namn på taggar på lövnivå (från tagghierarkin) visas inte på egenskapssidan för resurser (NPR-31820).
-
-* Om du använder kommandot back från objektets egenskapssida i webbläsaren Safari uppstår ett fel (NPR-31753).
-
-* Touch UI-sökning (utförd via Omnissearch)-resultatsidan rullar automatiskt upp och förlorar användarens rullningsposition (NPR-31307).
-
-* Assets detail page of PDF assets does not show action buttons except To Collection and Add Rendition buttons in Experience Manager running mode on Dynamic Media Scene7 (CQ-4286705).
-
-* Resurser större än 2 GB kan nu överföras i Dynamic Media-Scene7 (CQ-4286561).
-
-* Resurserna tar för lång tid att bearbeta genom batchöverföringen i Scene7 (CQ-4286445).
-
-* Knappen Spara importerar inte fjärruppsättningen när användaren inte har gjort några ändringar i Set Editor i Dynamic Media Client (CQ-4285690).
-
-* Miniatyrbilden av 3D-resursen är inte informativ när en 3D-modell som stöds har importerats till AEM (CQ-4283701).
-
-* Den obearbetade statusen för visningsförinställningen för smart beskärning visas två gånger på banderolltexten bredvid förinställningsnamnet (CQ-4283517).
-
-* Felaktig behållarhöjd för en överförd 3D-modell som förhandsvisats i 3D-visningsprogrammet visas på objektets informationssida (CQ-4283309).
-
-* Carousel Editor öppnas inte i IE 11 i läget Dynamic Media Hybrid i Experience Manager (CQ-425590).
-
-* Tangentbordsfokus fastnar i den nedrullningsbara menyn E-post i hämtningsdialogrutan i webbläsarna Chrome och Safari (NPR-32067).
-
-* Kryssrutan Synkronisera allt innehåll är inte aktiverad som standard när du försöker lägga till DM-molnkonfiguration på AEM (CQ-4288533).
 
 ### Sites {#sites-fixes}
 
@@ -144,13 +88,69 @@ En fullständig lista över funktioner, viktiga högdagrar, viktiga funktioner s
 
 * Ett felmeddelande visas när arbetsflödesinformation visas med Inbox (CQ-4282168).
 
+### Assets {#assets-6540-enhancements}
+
+* Knappen som utlöser arbetsflödet på sidan för resurssamling är inaktiverad (NPR-32471).
+
+* En mapp utan namn skapas i SPS (Scene7 Publishing System) när en resurs flyttas från en mapp till en annan i Experience Manager med Dynamic Media Scene7-konfiguration (NPR-32440).
+
+* Åtgärden för att flytta alla resurser (med Markera alla och sedan flytta) till en mapp som innehåller publicerade resurser misslyckas med felet (NPR-32366).
+
+* Återgivningsgenerering för resurser med ${extension} misslyckas (NPR-32294).
+
+* Versionshistorik-URL:er visas under fältet Refererat av på egenskapssidan för resurser (NPR-31889).
+
+* ZIP-filen som hämtas från DAM kan inte öppnas med WinZip (NPR-32293).
+
+* Ursprungliga behörigheter för en mapp uppdateras när mappinställningar öppnas för att ändra mappens titel eller miniatyrbild och sedan sparas (NPR-32292).
+
+* Kalenderikonen för den schemalagda aktiveringen visas inte i statuskolumnen (i Klassiskt användargränssnitt för DAM-tillgångslista) för resurser vars aktivering är schemalagd för ett senare datum och en senare tid (NPR-32291).
+
+* När du skapar fragment med fragmentmallar uppstår ett fel när du söker efter samlingar när fragmentet skapas (NPR-32290).
+
+* Flera sökfrågor utlöses när flera taggar väljs från sökfiltret (NPR-32143).
+
+* Experience Manager Assets-gränssnittet visar trunkerade filnamn när resurser med fler än 50 tecken i filnamnet överförs (NPR-32054).
+
+* Alla kryssrutor på panelen Filter avmarkeras när den första och den andra kryssrutan avmarkeras när du har markerat två kryssrutor i kryssruteträdet i Adobe Stock (NPR-31919).
+
+* Filer- och mappsökning med Omnisearch-ansikten ger undantag (NPR-31872).
+
+* Fältmarkering för obligatoriskt fältval i metadataredigeraren tas inte bort även efter att det obligatoriska fältet har markerats, när beroendereglerna har angetts i motsvarande metadatamatchformulär (NPR-31834).
+
+* Fullständiga namn på taggar på lövnivå (från tagghierarkin) visas inte på egenskapssidan för resurser (NPR-31820).
+
+* Om du använder kommandot back från objektets egenskapssida i webbläsaren Safari uppstår ett fel (NPR-31753).
+
+* Touch UI-sökning (utförd via Omnissearch)-resultatsidan rullar automatiskt upp och förlorar användarens rullningsposition (NPR-31307).
+
+* Assets detail page of PDF assets does not show action buttons except To Collection and Add Rendition buttons in Experience Manager running mode on Dynamic Media Scene7 (CQ-4286705).
+
+* Resurser större än 2 GB kan nu överföras i Dynamic Media-Scene7 (CQ-4286561).
+
+* Resurserna tar för lång tid att bearbeta genom batchöverföringen i Scene7 (CQ-4286445).
+
+* Knappen Spara importerar inte fjärruppsättningen när användaren inte har gjort några ändringar i Set Editor i Dynamic Media Client (CQ-4285690).
+
+* Miniatyrbilden av 3D-resursen är inte informativ när en 3D-modell som stöds har importerats till AEM (CQ-4283701).
+
+* Den obearbetade statusen för visningsförinställningen för smart beskärning visas två gånger på banderolltexten bredvid förinställningsnamnet (CQ-4283517).
+
+* Felaktig behållarhöjd för en överförd 3D-modell som förhandsvisats i 3D-visningsprogrammet visas på objektets informationssida (CQ-4283309).
+
+* Carousel Editor öppnas inte i IE 11 i läget Dynamic Media Hybrid i Experience Manager (CQ-425590).
+
+* Tangentbordsfokus fastnar i den nedrullningsbara menyn E-post i hämtningsdialogrutan i webbläsarna Chrome och Safari (NPR-32067).
+
+* Kryssrutan Synkronisera allt innehåll är inte aktiverad som standard när du försöker lägga till DM-molnkonfiguration på AEM (CQ-4288533).
+
 ### Foundation UI {#foundation-ui-6540}
 
 * Muskontrollen flyttas till föregående filterfält i stället för att finnas kvar i det befintliga filterfältet när resurser söks med hjälp av filterpanelen (NPR-32538).
 
-* [Eller plattformstaggning] Sök efter taggar genom att skriva i taggfälten visar taggar utanför rotgränserna och respekterar inte `rootPath` egenskapen för taggfält (NPR-31895).
+* Plattformstaggning: Om du söker efter taggar genom att skriva i taggfälten visas taggar utanför rotgränserna och egenskapen för taggfält respekteras inte (NPR-31895). `rootPath`
 
-* [Webbläsaren för plattformsgränssnittssökvägen] bryts om en ogiltig sökväg läggs till i textfältet (NPR-31884).
+* Plattformsgränssnitt: Webbläsaren för sökvägen bryts om en ogiltig sökväg läggs till i textfältet (NPR-31884).
 
 * Meddelande döljs bakom en klistermeny vid sidval (NPR-31628).
 
@@ -240,9 +240,7 @@ En fullständig lista över funktioner, viktiga högdagrar, viktiga funktioner s
 
 * Dokumentsäkerhet: En skyddad PDF-fil kan inte öppnas offline med alternativet DisableGlobalOfflineSynchronizationData inställt på True (NPR-32078).
 
-* Designer: Om taggningsalternativet är aktiverat försvinner delformulärsramen i den genererade PDF-utdatafilen (NPR-32547).
-
-* Designer: Om taggningsalternativet är aktiverat försvinner delformulärsramen i den genererade PDF-utdatafilen (NPR-31983, NPR-31950).
+* Designer: Om taggningsalternativet är aktiverat försvinner delformulärsramen i den genererade PDF-utdatafilen (NPR-32547, NPR-31983, NPR-31950).
 
 * Designer: Om det finns sammanfogade celler i en tabell misslyckas hjälpmedelstestet för PDF-utdatafilen som konverterats från ett XDP-formulär med hjälp av utdatatjänsten (CQ-4285372).
 
