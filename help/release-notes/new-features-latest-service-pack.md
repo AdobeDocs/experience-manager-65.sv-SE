@@ -112,7 +112,7 @@ Mer information finns i [Utforma formulärmallar för HTML5-formulär](../forms/
 
 Förutom de nya funktionerna innehåller AEM 6.5 Service Pack 4 följande viktiga funktioner:
 
-* Endast delträd med selektivt innehåll kan nu synkas till *Dynamic Media - Scene7-läge* i stället för till alla `content/dam`.
+* Endast delträd med selektivt innehåll kan nu synkas till ***Dynamic Media - Scene7-läge*** i stället för till alla `content/dam`.
 
 * Integrering av formulärdatamodeller med SOAP-webbtjänsten har nu stöd för urvalsgrupper eller attribut för element.
 
