@@ -10,7 +10,7 @@ topic-tags: author
 discoiquuid: 9e9aaf36-bb86-4954-83cc-fa6b3e80ae4b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 8ebe1a2c23ec5e3e16807072ac17ec13a6df9701
+source-git-commit: 147c50adb02b48be8e3aba760dbac309ab49badf
 
 ---
 
@@ -81,11 +81,11 @@ Du kan upprepa steg 1 och 2 och välja ![Markera överordnad](assets/float_to_ne
 
 Utför följande steg för att definiera antalet kolumner för en panel:
 
-1. I **[!UICONTROL redigeringsläget]** trycker du på panelen, väljer ![Konfigurera](assets/configure_icon.png)och väljer **[!UICONTROL Responsiv - allt på sidan utan navigeringsalternativ]** .
+1. I **[!UICONTROL redigeringsläget]** trycker du på panelen, väljer ![Konfigurera](assets/configure_icon.png)och väljer **[!UICONTROL Responsiv - allt på sidan utan navigeringsalternativ]** i listrutan **[!UICONTROL Panellayout]** .
 
 1. Tryck på ![Spara](assets/save_icon.svg) för att spara egenskaperna.
 
-1. I **[!UICONTROL layoutläget]** trycker du på någon av komponenterna i panelen som du vill ändra storlek på, väljer ![Markera överordnad](assets/select_parent_icon.svg)och väljer det första alternativet i listrutan om panelen är komponentens omedelbara överordnade.
+1. I **[!UICONTROL layoutläget]** trycker du på någon av komponenterna på panelen, väljer ![Markera överordnad](assets/select_parent_icon.svg)och markerar panelen.
 
 1. Tryck på ![flera kolumner](assets/multi-column.svg) och välj antalet kolumner i listrutan. Antalet kolumner kan vara mellan 1 och 12. Panelen delas upp i en layout med flera kolumner.
 
