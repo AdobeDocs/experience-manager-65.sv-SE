@@ -4,7 +4,7 @@ description: Nyheter i Adobe Experience Manager 6.5 Service Pack 4
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 14df85f7a815fe567ea87375727ebe1e54733464
+source-git-commit: 93521f102596a7f5cb247ddc430626d352338ce8
 
 ---
 
@@ -112,7 +112,7 @@ Mer information finns i [Utforma formulärmallar för HTML5-formulär](../forms/
 
 Förutom de nya funktionerna innehåller AEM 6.5 Service Pack 4 följande viktiga funktioner:
 
-* Nu kan bara delträd med selektivt innehåll synkas till Scene7 i stället för till alla `content/dam`.
+* Endast delträd med selektivt innehåll kan nu synkas till *Dynamic Media - Scene7-läge* i stället för till alla `content/dam`.
 
 * Integrering av formulärdatamodeller med SOAP-webbtjänsten har nu stöd för urvalsgrupper eller attribut för element.
 
@@ -135,7 +135,7 @@ Du kan dela dina inkorgsobjekt med en annan användare. När en annan användare
 ### Konfigurera frånvaroinställningar för inkorgsobjekt {#configure-out-of-office}
 
 Om du tänker vara utanför kontoret kan du ange vad som ska hända med artiklar som har tilldelats dig för den perioden.
-Du kan ange ett startdatum och en sluttid och ett slutdatum och en sluttid så att dina inställningar som inte är på kontoret börjar gälla. Du kan ange en standardperson som alla dina objekt skickas till. Se [Konfigurera inställningar](../forms/using/configure-out-of-office-settings.md)för frånvaro.
+Du kan ange startdatum och -tid och slutdatum och sluttid så att dina inställningar som inte är på kontoret börjar gälla. Du kan ange en standardperson som alla dina objekt skickas till. Se [Konfigurera inställningar](../forms/using/configure-out-of-office-settings.md)för frånvaro.
 
 ### Generera flera interaktiva dokument med Batch API {#generate-multiple-ic}
 
