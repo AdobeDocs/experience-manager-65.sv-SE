@@ -4,7 +4,7 @@ description: Nyheter i Adobe Experience Manager 6.5 Service Pack 4
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: c9e8e1f2ebb72efc2f54c13c3ddae525ec55349f
+source-git-commit: d0038181326037ab71f4df9b509d2f0827191c86
 
 ---
 
@@ -109,7 +109,7 @@ Mer information finns i [Utforma formulärmallar för HTML5-formulär](../forms/
 
 Förutom nya funktioner innehåller AEM 6.5 Service Pack 4 följande viktiga funktioner:
 
-* Nu kan du synkronisera selektiva innehållets underträd till Scene7 i stället för alla tillgängliga på `content/dam`.
+* Nu kan du synkronisera selektiva underträd till *Dynamic Media - Scene7-läge* i stället för alla tillgängliga på `content/dam`.
 
 * Integrering av formulärdatamodell med SOAP-webbtjänst har nu stöd för urvalsgrupper eller attribut för element.
 
