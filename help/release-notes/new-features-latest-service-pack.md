@@ -4,14 +4,14 @@ description: Nyheter i Adobe Experience Manager 6.5 Service Pack 4
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 93521f102596a7f5cb247ddc430626d352338ce8
+source-git-commit: c9e8e1f2ebb72efc2f54c13c3ddae525ec55349f
 
 ---
 
 
 # Nyheter i Adobe Experience Manager 6.5 Service Pack 4 {#aem-whats-new-service-pack-4}
 
-2020 levererar Adobe Experience Manager (AEM) 6.5 funktioner och kontinuerliga förbättringar i kvartalsvisa Service Pack. Kunderna drar nytta av den här nya metoden när de börjar använda innovationerna snabbare.
+Adobe Experience Manager (AEM) 6.5 ger funktioner och kontinuerliga förbättringar genom kvartalsvisa Service Packs i år. Det nya sättet är till fördel för våra kunder när de börjar använda innovationerna snabbare.
 
 Den senaste versionen av AEM Service Pack 4 (6.5.4.0) släpptes 5 **mars 2020**. I den här artikeln beskrivs de funktioner som den senaste Service Pack-versionen erbjuder för att göra din AEM-resa mer tilltalande.
 
@@ -23,20 +23,17 @@ Den senaste versionen av AEM Service Pack 4 (6.5.4.0) släpptes 5 **mars 2020**.
 
 * Förkorta tiden för uppdatering av en sida efter att du har dragit och släppt Experience Fragments på arbetsytan i en sidredigerare.
 
-* I Live Copy Overview förkortades tiden för inläsning av poster när en webbplats har fler än 200 live-kopior.
+* Förkortade tiden för inläsning av poster för en Sites-sida med över 200 live-kopior i Live Copy Overview.
 
-* I mallredigeraren har hanteringen av ofullständiga eller ogiltiga URL:er förbättrats, vilket kan göra att mallredigeraren tar längre tid.
+* Förbättrad hantering av ofullständiga eller ogiltiga URL:er som kan göra att mallredigeraren blir långsammare i mallredigeraren.
 
-Dessutom innehåller AEM 6.5 SP4 förbättringar av formatsystemet. Nu kan du även välja format i en komponentdialogruta.
-
+Dessutom innehåller AEM 6.5 Service Pack 4 förbättringar av formatsystemet. Nu kan du även välja format i en komponentdialogruta.
 
 ## AEM Assets {#aem-assets}
 
 ### Integrering med varumärkesportalen via Adobe I/O Console {#assets-integration-bp}
 
-AEM Assets har nu konfigurerats med Brand Portal via Adobe I/O, som anskaffar en IMS-token för auktorisering av innehavaren av varumärkesportalen. Tidigare konfigurerades den i Classic UI via äldre OAuth-gateway.
-
-Nya integreringar med äldre OAuth stöds inte efter 6 april 2020 och kommer att överföras till Adobe I/O Console. Om du inte ändrar integreringen fortsätter de befintliga konfigurationerna att fungera.
+Nu kan du konfigurera AEM Assets med Brand Portal via Adobe I/O Console. Adobe I/O Console anskaffar en IMS-token för godkännande av innehavaren av varumärkesportalen. Tidigare konfigurerades AEM Assets med varumärkesportalen i det klassiska användargränssnittet via äldre OAuth-gateway. Konfigurationerna som använder äldre OAuth Gateway stöds till 6 april 2020. Om du inte ändrar integreringen fortsätter de befintliga konfigurationerna att fungera.
 
 Du kan antingen skapa en ny integrering eller uppgradera integreringsinställningarna till Adobe I/O Console.
 
@@ -56,7 +53,7 @@ Du kan antingen skapa en ny integrering eller uppgradera integreringsinställnin
 
 ### Generera utskrifter i arbetsflöden för AEM Forms {#generate-printable-output}
 
-Om du vill ha en lösning för att skriva ut flera kopior av en källmallfil och integrera den med en datafil med flera poster, finns ett nytt arbetsflödessteg för att generera utskrift i AEM Forms. Om du till exempel vill skriva ut ett källformulär med ett annat namn varje gång det skrivs ut, kan du ha dessa namn i datafilen och integrera dem med en standardmallfil.
+Om du vill ha en lösning för att skriva ut eller spara flera kopior av en källmallfil och integrera den med en datafil med flera poster, finns ett nytt arbetsflödessteg för att generera utskrift i AEM Forms. Om du till exempel vill skriva ut ett källformulär med ett annat namn varje gång det skrivs ut, kan du ha dessa namn i datafilen och integrera dem med en standardmallfil.
 
 Utnyttja den här funktionen med **Verktyg** > **[!UICONTROL Arbetsflöde]** > **[!UICONTROL Modeller]** > **[!UICONTROL Skapa]** och sök sedan efter arbetsflödessteget **[!UICONTROL Generera utskrift]** .
 
@@ -68,7 +65,7 @@ Mer information om den här funktionen finns i [Formulärcentrerat arbetsflöde 
 
 Nu kan du definiera antalet kolumner för en panel i adaptiva formulär och interaktiv kommunikation.
 
-Du kan hitta det nya alternativet genom att växla till layoutläget, trycka på panelen som du vill konvertera till ett flerkolumnsformat, markera dess överordnade objekt och trycka på ikonen för flera kolumner, enligt bilden nedan, för att definiera antalet kolumner för panelen.
+Du hittar det nya alternativet genom att växla till layoutläget. Tryck på panelen som du vill konvertera till ett flerkolumnsformat, markera dess överordnade panel och tryck på ikonen för flera kolumner för att definiera antalet kolumner för panelen.
 
 ![Flerspaltig layout](assets/multi-column-layout.gif)
 
@@ -80,13 +77,13 @@ Känner du någonsin att du behöver anpassa alternativen i AEM-huvudet? Det är
 
 **Anpassa rubriktext**
 
-Användare som tillhör gruppen **arbetsflödesadministratörer** kan nu anpassa den tillgängliga rubriktexten med text som du själv väljer för att ersätta den befintliga **[!UICONTROL Adobe Experience Manager]** -texten.
+Arbetsflödesadministratörer kan nu ange vilken rubriktext du vill ha.
 
 Du hittar det nya alternativet **[!UICONTROL Anpassa rubriktext]** under vyväljaren (som finns längst upp till höger i verktygsfältet) > **[!UICONTROL Administratörskontroll]**.
 
 **Anpassa logotyp**
 
-På samma sätt som när du anpassar rubriktext kan användare som tillhör **arbetsflödesadministratörer** nu anpassa logotypen längst upp med en egen logotyp.
+På samma sätt som när du anpassar rubriktext kan arbetsflödesadministratörer nu ange rubriklogotyp efter eget val.
 
 Du hittar det nya alternativet **[!UICONTROL Anpassa logotyp]** under vyväljaren > **[!UICONTROL Administratörskontroll]**.
 
@@ -94,7 +91,7 @@ Mer information om den här funktionen finns i [Inkorgen](../sites-authoring/inb
 
 ### Användarnavigeringskontroll {#user-navigation-control}
 
-Användare som tillhör gruppen **arbetsflödesadministratörer** kan välja att få användarna att arbeta i AEM i ett begränsat läge baserat på sin roll. Administratörerna kan styra visningen av de navigeringsalternativ som är tillgängliga i sidhuvudet och begränsa användarna till att växla till arbetsflödets redigeringsläge eller navigera till hjälplänkar eller andra lösningslänkar.
+Arbetsflödesadministratörer kan nu välja att få användarna att arbeta i AEM i ett begränsat läge baserat på sin roll. Administratörerna kan styra visningen av de navigeringsalternativ som är tillgängliga i sidhuvudet för att begränsa användarnas möjlighet att växla till arbetsflödets redigeringsläge eller andra lösningslänkar.
 
 Kolla in de nya **[!UICONTROL Dölj-navigeringsalternativen]** under vyväljaren > **[!UICONTROL Administratörskontroll]**.
 
@@ -102,19 +99,19 @@ Mer information om den här funktionen finns i [Inkorgen](../sites-authoring/inb
 
 ### RTF-stöd i HTML5-formulär {#rich-text-support}
 
-Textfältet kan nu visa en lista med formateringsalternativ i det återgivna HTML5-formuläret. Du måste definiera ett fältformat för textfältet i Forms Designer för att kunna använda lämpliga inställningar för fältet.
+Textfältet kan nu visa en lista med formateringsalternativ i det återgivna HTML5-formuläret. Du måste definiera ett format för textfältet i Forms Designer för att kunna använda lämpliga inställningar för fältet.
 
-Om du vill använda den här funktionen trycker du på textfältet i **[!UICONTROL designvyn]** i Forms Designer. Använd inställningarna genom att välja **[!UICONTROL RTF]** i listrutan **[!UICONTROL Fältformat]** på fliken **[!UICONTROL Fält]** . Textfältet visar nu formateringsalternativ när det återges i ett HTML5-formulär.
+Om du vill använda den här funktionen trycker du på textfältet i **[!UICONTROL designvyn]** i Forms Designer. Använd inställningarna genom att välja **[!UICONTROL RTF]** i listrutan **[!UICONTROL Fältformat]** på fliken **[!UICONTROL Fält]** .
 
 Mer information finns i [Utforma formulärmallar för HTML5-formulär](../forms/using/designing-form-template.md).
 
 ## Viktiga högdagrar
 
-Förutom de nya funktionerna innehåller AEM 6.5 Service Pack 4 följande viktiga funktioner:
+Förutom nya funktioner innehåller AEM 6.5 Service Pack 4 följande viktiga funktioner:
 
-* Endast delträd med selektivt innehåll kan nu synkas till ***Dynamic Media - Scene7-läge*** i stället för till alla `content/dam`.
+* Nu kan du synkronisera selektiva innehållets underträd till Scene7 i stället för alla tillgängliga på `content/dam`.
 
-* Integrering av formulärdatamodeller med SOAP-webbtjänsten har nu stöd för urvalsgrupper eller attribut för element.
+* Integrering av formulärdatamodell med SOAP-webbtjänst har nu stöd för urvalsgrupper eller attribut för element.
 
 * SOAP-indata eller -utdata och komplexa datastrukturer har nu stöd för dynamisk gruppersättning.
 
@@ -158,7 +155,7 @@ Mellan 12 december 2019 och 5 mars 2020 släppte Adobe följande funktioner som 
 
 * AEM Sites: Project Archetype 23Det bästa sättet att starta ett nytt AEM-projekt. Med Arketype 23 [sammanfogar vi Project Archetype för SPA och vanliga webbplatser till en](https://github.com/adobe/aem-project-archetype/releases/tag/aem-project-archetype-23), vilket ger dig ett standardtema som hjälper dig att komma igång direkt med utvecklingen.
 
-* AEM Sites: WKND Reference SiteAlla [nya referensprojekt](https://www.wknd.site/) är fullmatade med bästa praxis för hur man bygger webbplatser med AEM. Lär dig mer om att läsa den helt uppdaterade [WKND-självstudiekursen](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html) och hämta koden från [GitHub](https://github.com/adobe/aem-guides-wknd/releases).
+* AEM Sites: WKND Reference SiteAlla [nya referensprojekt](https://www.wknd.site/) är fullmatade med bästa praxis för hur man bygger webbplatser med AEM. Lär dig mer genom att läsa den helt uppdaterade [WKND-självstudiekursen](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html) och hämta koden från [GitHub](https://github.com/adobe/aem-guides-wknd/releases).
 
 * AEM Sites: Commerce CIF Core Components 0.7.0 och 0.9.0Integrating AEM Sites and Magento Commerce. Vi [utökar kontinuerligt dedikerade kärnkomponenter och en projekttyp med fokus på Commerce](https://github.com/adobe/aem-core-cif-components/releases).
 
