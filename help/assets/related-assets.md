@@ -3,7 +3,7 @@ title: Relaterade tillgångar
 description: Lär dig hur du relaterar resurser som delar vissa gemensamma attribut. Du kan också använda funktionen för att skapa käll-/härledda relationer mellan resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: fb0688afbadd1b27f1a3b3326f18c15d1c7811aa
+source-git-commit: 4fc656948e4c5cb4a3e927c25d3afd29102b7ab4
 
 ---
 
@@ -14,7 +14,7 @@ Med Adobe Experience Manager Assets (AEM) kan ni manuellt relatera resurser base
 
 Med den här funktionen kan du dela en lågupplöst PDF- eller JPG-fil med leverantörer eller myndigheter och göra den högupplösta INDD-filen tillgänglig endast på begäran.
 
->[!NOTE] Användare med redigeringsbehörighet kan relatera och dela upp resurser.
+>[!NOTE] Det är bara användare med redigeringsbehörighet som kan relatera och dela upp resurser.
 >
 
 ## Relatera resurser {#relating-assets}
