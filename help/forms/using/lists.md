@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0d5436c6-1976-496c-b9a7-7dc6e830bb5d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5a586758da84f467e075adcc33cdcede2fbf09c7
+source-git-commit: f763359fb333ef6cc8a6748ccfa39ba9aee9ca48
 
 ---
 
@@ -20,10 +20,10 @@ source-git-commit: 5a586758da84f467e075adcc33cdcede2fbf09c7
 
 Dokumentfragment är återanvändbara delar/komponenter av en korrespondens som du kan använda för att skapa brev/korrespondens. Dokumentfragmenten är av följande typer:
 
-* **Text**:En textresurs är en del av innehållet som består av ett eller flera textstycken. Ett stycke kan vara statiskt eller dynamiskt.
+* **Text**: En textresurs är en del av innehållet som består av ett eller flera textstycken. Ett stycke kan vara statiskt eller dynamiskt.
 * **Lista**: List är en grupp dokumentfragment, inklusive text, listor, villkor och bilder. Ordningen på listelementen kan vara fast eller redigerbar. När du skapar en bokstav kan du använda några eller alla listelement för att återanvända ett mönster med element.
-* **Villkor**:Med villkor kan du definiera vilket innehåll som ska inkluderas när korrespondensen skapas, baserat på angivna data. Villkoret beskrivs i termer av kontrollvariabler. En kontrollvariabel kan antingen vara ett dataordlisteelement eller en platshållare.
-* **Layoutfragment**:Ett layoutfragment är en layout som kan användas i en eller flera bokstäver. Ett layoutfragment används för att skapa repeterbara mönster, särskilt dynamiska tabeller. Layouten kan innehålla typiska formulärfält som &quot;Adress&quot; och &quot;Referensnummer&quot;. Den innehåller också tomma delformulär som anger målområden. Layouterna (XDP) skapas i Designer och överförs sedan till AEM Forms.
+* **Villkor**: Med villkor kan du definiera vilket innehåll som ska inkluderas när korrespondensen skapas, baserat på angivna data. Villkoret beskrivs i termer av kontrollvariabler. En kontrollvariabel kan antingen vara ett dataordlisteelement eller en platshållare.
+* **Layoutfragment**: Ett layoutfragment är en layout som kan användas i en eller flera bokstäver. Ett layoutfragment används för att skapa repeterbara mönster, särskilt dynamiska tabeller. Layouten kan innehålla typiska formulärfält som &quot;Adress&quot; och &quot;Referensnummer&quot;. Den innehåller också tomma delformulär som anger målområden. Layouterna (XDP) skapas i Designer och överförs sedan till AEM Forms.
 
 ## Text {#text}
 
@@ -44,8 +44,8 @@ Correspondence Management Solution har stöd för två typer av dynamiska dataob
 1. Tryck på **Skapa** > **Text** eller markera en textresurs och tryck sedan på **Redigera**.
 1. Ange följande information för texten:
 
-   * **Titel: (Valfritt)** Ange titeln för textresursen. Titlar behöver inte vara unika och kan innehålla specialtecken och tecken som inte är engelska. Texterna refereras till av sina titlar (när de är tillgängliga) som miniatyrbilder och resursegenskaper.
-   * **** Namn: Det unika namnet för textresursen. Det finns inga två resurser (text, villkor eller lista) i något läge med samma namn. I fältet Namn kan du bara ange engelska tecken, siffror och bindestreck. Fältet Namn fylls i automatiskt baserat på fältet Titel. De specialtecken, blanksteg, siffror och icke-engelska tecken som anges i fältet Titel ersätts med bindestreck i fältet Namn. Även om värdet i fältet Titel automatiskt kopieras till namnet kan du redigera värdet.
+   * **Titel: (Valfritt)** Ange titeln för textresursen. Titlar behöver inte vara unika och kan innehålla specialtecken och tecken som inte är engelska. Texterna refereras till av sina titlar (om de är tillgängliga) som miniatyrbilder och resursegenskaper.
+   * **Namn:** Det unika namnet för textresursen. Det finns inga två resurser (text, villkor eller lista) i något läge med samma namn. I fältet Namn kan du bara ange engelska tecken, siffror och bindestreck. Fältet Namn fylls i automatiskt baserat på fältet Titel. De specialtecken, blanksteg, siffror och icke-engelska tecken som anges i fältet Titel ersätts med bindestreck i fältet Namn. Även om värdet i fältet Titel automatiskt kopieras till namnet kan du redigera värdet.
    * **Beskrivning**: Ange en beskrivning av resursen.
    * **Dataordlista**: Du kan också markera det datalexikon som du vill mappa till. Med det här attributet kan du lägga till referenser till dataordlisteelement i textresursen.
    * **Taggar**: Om du vill skapa en egen tagg anger du ett värde i textfältet och trycker på Retur. Du kan se taggen under textfältet med taggar. När du sparar den här texten skapas även de nya taggarna.
@@ -60,11 +60,7 @@ Correspondence Management Solution har stöd för två typer av dynamiska dataob
 
    [ ![Toolbar](assets/advancedediting.png)
 
-   (Klicka för att öppna en bild i full storlek)
-
-   ](assets/advancedediting-1.png)
-
-   * **Länk**: Infoga hypertextlänk i texten.
+   * **Länk**: Infoga hypertextlänk i texten. Tryck på **[!UICONTROL Länk]**, ange länken i fältet **[!UICONTROL URL]** , ta bort standardobjektnamnet från fältet **[!UICONTROL Alt Text]** och tryck på ![Spara](assets/save_icon.svg).
    * **Upprepa**: Upprepa skriver ut samlingselement i Data Dictionary med hjälp av en avgränsare.
    * **Villkor**: Tryck för att infoga ett villkor. Infoga text baserad på villkor. Om villkoret är true visas texten med bokstaven, i annat fall inte.
    * **Lägg till beskrivning**: Lägg till anteckning i ett textstycke. Detta är metadata som är synliga för författaren men inte en del av det brev som skapas.
@@ -158,13 +154,13 @@ Med funktionen Sök och ersätt kan du söka efter (och ersätta) alla textsträ
 
 #### Sökalternativ {#search-options}
 
-**** Matcha gemener/VERSALER: Sökningen returnerar bara resultat med samma skiftläge.
+**Matcha gemener/VERSALER:** Sökningen returnerar bara resultat med samma skiftläge.
 
-**** Hela ord: Sökningen returnerar bara hela ord.
+**Hela ord:** Sökningen returnerar bara hela ord.
 
-**** Obs! Om du anger specialtecken i textrutan Sök inaktiveras alternativet Hela ord.
+**Obs!** Om du anger specialtecken i textrutan Sök inaktiveras alternativet Hela ord.
 
-**** Reg ex: Sök med reguljära uttryck. Följande reguljära uttryck söker till exempel efter e-postadresser i en textmodul:
+**Reg ex:** Sök med reguljära uttryck. Följande reguljära uttryck söker till exempel efter e-postadresser i en textmodul:
 
 `[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}`
 
@@ -188,10 +184,10 @@ Med funktionen Sök och ersätt kan du söka efter (och ersätta) alla textsträ
 * Använd lämplig databindning i textmoduler.
 * Följande regler gäller när du använder textredigeraren när du ändrar en textresurs:
 
-   * **** Tillägg av variabel: Tillåtet
-   * **** Borttagning av variabel: Tillåtet
-   * **** Uppdatering av egenskaper: Tillåtet
-   * **** Dataordlista har ändrats: Tillåts tills dataordlisteelementet inte används. Du kan inte ändra dataordlistan vid uppdatering.
+   * **Tillägg av variabel:** Tillåtet
+   * **Borttagning av variabel:** Tillåtet
+   * **Uppdatering av egenskaper:** Tillåtet
+   * **Dataordlista har ändrats:** Tillåts tills dataordlisteelementet inte används. Du kan inte ändra dataordlistan vid uppdatering.
 
 ## Lista {#list}
 
@@ -224,9 +220,9 @@ En lista är en grupp med relaterat innehåll som kan användas i en brevmall so
 1. Ange följande information för listan:
 
    * **Titel (valfritt): Ange** listans rubrik. Titeln behöver inte vara unik och kan innehålla specialtecken och tecken som inte är engelska. Listor refereras till av deras titlar (om de är tillgängliga), t.ex. i miniatyrbilder och resursegenskaper.
-   * **** Namn: Listans unika namn. Det finns inga två resurser (text, villkor eller lista) i något läge med samma namn. I fältet Namn kan du bara ange engelska tecken, siffror och bindestreck. Fältet Namn fylls automatiskt i med värdet i fältet Titel. De specialtecken, blanksteg, siffror och icke-engelska tecken som anges i fältet Titel ersätts med bindestreck i fältet Namn. Även om värdet i fältet Titel automatiskt kopieras till namnet kan du redigera värdet.
+   * **Namn:** Listans unika namn. Det finns inga två resurser (text, villkor eller lista) i något läge med samma namn. I fältet Namn kan du bara ange engelska tecken, siffror och bindestreck. Fältet Namn fylls automatiskt i med värdet i fältet Titel. De specialtecken, blanksteg, siffror och icke-engelska tecken som anges i fältet Titel ersätts med bindestreck i fältet Namn. Även om värdet i fältet Titel automatiskt kopieras till namnet kan du redigera värdet.
    * **Beskrivning (valfritt)**: Ange en beskrivning av resursen.
-   * **Dataordlista (valfritt)**: Du kan också välja vilken datamordlista du vill ansluta till. Endast resurser som använder samma dataordlista som listan, eller resurser som inte har någon dataordlista tilldelad, kan läggas till i listan. Om du tilldelar ett datalexikon till en lista blir det enklare för personen som skapar en brevmall att hitta rätt lista.
+   * **Dataordlista (valfritt)**: Du kan också välja vilken datamordlista du vill ansluta till. Endast resurser som använder samma dataordlista som listan, eller resurser som inte har någon dataordlista tilldelad, kan läggas till i listan. Om du tilldelar ett datalexikon till en lista blir det enklare för den som skapar en brevmall att hitta rätt lista.
    * **Taggar (valfritt)**: Markera de taggar som ska användas. Du kan också skriva namnet på en ny tagg och skapa den. (Den nya taggen skapas när du trycker på **Spara**.)
 
 1. Tryck på **Nästa**.
@@ -252,14 +248,14 @@ Om du vill ändra ordningen på resurserna i listan trycker du på och håller n
 
 1. Du kan välja följande alternativ för att ange hur varje resurs i listan fungerar vid körning:
 
-   * **** Redigerbar: När det här alternativet är markerat kan innehållet redigeras i användargränssnittet Skapa korrespondens. (Det här alternativet är inte tillgängligt för list- och bildmodulerna.)
-   * **** Obligatoriskt: När det här alternativet är markerat krävs innehållet i användargränssnittet Skapa korrespondens.
-   * **** Markerat: När det här alternativet är markerat är innehållet förvalt i användargränssnittet Skapa korrespondens.
-   * **** Hoppa över format: När det här alternativet är markerat hoppar innehållet över punkter och numrering i användargränssnittet Skapa korrespondens. (Det här alternativet är inte tillgängligt för Image-moduler. Mellan Hoppa över format, Stansat och Ignorera listformat kan bara ett av alternativen användas i en modul. Ett av dessa alternativ kan användas för en modul när du väljer Lägg till punkter för en modul.)
-   * **** Indrag: Du kan ändra indragsnivån för varje modul/innehåll som är markerat som en del av listan. Indrag anges i Nivåer (med början från noll), så att varje indragsnivå motsvarar en utfyllnad på 36 punkter.
-   * **** Sammansatt: När du väljer det här alternativet används den sammansatta numreringen som en kombination av den yttre (överordnade) listans format och dess eget format. Den sammansatta numreringen för den här kapslade listan baseras på den ordning i vilken den kapslade listan visas i den yttre listan.
-   * **** Ignorera listformat: Om alternativet Sammansatt numrering är avmarkerat aktiveras alternativet att ignorera listformat. Den här markeringen ignorerar den kapslade listans eget format och numreringen fortsätter från den yttre listan. Därför behandlas modulerna i den kapslade listan som en del av den yttre listan, oavsett vilka format som har angetts i den kapslade listan. Om alternativet Ignorera listformat inte är markerat för en kapslad lista har de moduler som är en del av den kapslade listan ett eget numreringsformat.
-   * **** Håll ihop med nästa: Anger sidbrytningen för resurserna i en lista. Om du ställer in egenskapen Behåll med nästa för en resurs i en lista på **På**, stannar resursen och nästa resurs på samma sida. Det innebär att innehållet i den valda resursen och nästa resurs inte bryts över flera sidor.
+   * **Redigerbar:** När det här alternativet är markerat kan innehållet redigeras i användargränssnittet Skapa korrespondens. (Det här alternativet är inte tillgängligt för list- och bildmodulerna.)
+   * **Obligatoriskt:** När det här alternativet är markerat krävs innehållet i användargränssnittet Skapa korrespondens.
+   * **Markerat:** När det här alternativet är markerat är innehållet förvalt i användargränssnittet Skapa korrespondens.
+   * **Hoppa över format:** När det här alternativet är markerat hoppar innehållet över punkter och numrering i användargränssnittet Skapa korrespondens. (Det här alternativet är inte tillgängligt för Image-moduler. Mellan Hoppa över format, Stansat och Ignorera listformat kan bara ett av alternativen användas i en modul. Ett av dessa alternativ kan användas för en modul när du väljer Lägg till punkter för en modul.)
+   * **Indrag:** Du kan ändra indragsnivån för varje modul/innehåll som är markerat som en del av listan. Indrag anges i Nivåer (med början från noll), så att varje indragsnivå motsvarar en utfyllnad på 36 punkter.
+   * **Sammansatt:** När du väljer det här alternativet används den sammansatta numreringen som en kombination av den yttre (överordnade) listans format och dess eget format. Den sammansatta numreringen för den här kapslade listan baseras på den ordning i vilken den kapslade listan visas i den yttre listan.
+   * **Ignorera listformat:** Om alternativet Sammansatt numrering är avmarkerat aktiveras alternativet att ignorera listformat. Den här markeringen ignorerar den kapslade listans eget format och numreringen fortsätter från den yttre listan. Därför behandlas modulerna i den kapslade listan som en del av den yttre listan, oavsett vilka format som har angetts i den kapslade listan. Om alternativet Ignorera listformat inte är markerat för en kapslad lista har de moduler som är en del av den kapslade listan ett eget numreringsformat.
+   * **Håll ihop med nästa:** Anger sidbrytningen för resurserna i en lista. Om du ställer in egenskapen Behåll med nästa för en resurs i en lista på **På**, stannar resursen och nästa resurs på samma sida. Det innebär att innehållet i den valda resursen och nästa resurs inte bryts över flera sidor.
 
 1. Tryck på **Spara**.
 
@@ -270,7 +266,7 @@ Om du vill ändra ordningen på resurserna i listan trycker du på och håller n
 * Följande regler gäller när du använder listredigeraren för att ändra en lista:
 
    * Uppdatering av egenskaper: Tillåtet
-   * **** Dataordlista har ändrats: Tillåts tills inget objekt som använder dataordlistan är associerat med det. Du kan inte ändra dataordlistan vid uppdatering.
+   * **Dataordlista har ändrats:** Tillåts tills inget objekt som använder dataordlistan är associerat med det. Du kan inte ändra dataordlistan vid uppdatering.
 
 ## Villkor {#conditions}
 
@@ -294,10 +290,10 @@ Med Villkorsredigeraren kan du ange ett standardvillkor. Om värdet för kontrol
 1. Välj **Skapa > Villkor**.
 1. Ange följande information för listan:
 
-   * **** Titel (valfritt): Ange villkorets titel. Titeln behöver inte vara unik och kan innehålla specialtecken och tecken som inte är engelska. Villkoren refereras till av deras titlar (om de är tillgängliga), t.ex. i miniatyrbilder och resursegenskaper.
-   * **** Namn: Villkorets unika namn. Det finns inga två resurser (text, villkor eller lista) i något läge med samma namn. I fältet Namn kan du bara ange engelska tecken, siffror och bindestreck. Fältet Namn fylls i automatiskt baserat på fältet Titel. De specialtecken, blanksteg, siffror och icke-engelska tecken som anges i fältet Titel ersätts med bindestreck i fältet Namn. Även om värdet i fältet Titel automatiskt kopieras till namnet kan du redigera värdet.
+   * **Titel (valfritt):** Ange villkorets titel. Titeln behöver inte vara unik och kan innehålla specialtecken och tecken som inte är engelska. Villkoren refereras till av deras titlar (om de är tillgängliga), t.ex. i miniatyrbilder och resursegenskaper.
+   * **Namn:** Villkorets unika namn. Det finns inga två resurser (text, villkor eller lista) i något läge med samma namn. I fältet Namn kan du bara ange engelska tecken, siffror och bindestreck. Fältet Namn fylls i automatiskt baserat på fältet Titel. De specialtecken, blanksteg, siffror och icke-engelska tecken som anges i fältet Titel ersätts med bindestreck i fältet Namn. Även om värdet i fältet Titel automatiskt kopieras till namnet kan du redigera värdet.
    * **Beskrivning (valfritt)** Skriv en beskrivning av villkoret.
-   * **Dataordlista (valfritt)**: Du kan också välja vilken datamordlista du vill ansluta till. Endast resurser som använder samma dataordlista som villkoret, eller resurser som inte har någon dataordlista tilldelad, kan läggas till i listan. Om du tilldelar ett datalexikon till en lista blir det enklare för den som skapar en brevmall att hitta rätt villkor.
+   * **Dataordlista (valfritt)**: Du kan också välja vilken datamordlista du vill ansluta till. Endast resurser som använder samma dataordlista som villkoret, eller resurser som inte har någon dataordlista tilldelad, kan läggas till i listan. Om du tilldelar ett datalexikon till en lista blir det enklare för personen som skapar en brevmall att hitta rätt villkor.
    * **Taggar (valfritt)**: Du kan också markera de taggar som ska användas. Du kan också skriva namnet på en ny tagg och skapa den. (Den nya taggen skapas när du trycker på **Spara**.)
 
 1. Tryck på **Nästa**.
@@ -325,10 +321,10 @@ Med Villkorsredigeraren kan du ange ett standardvillkor. Om värdet för kontrol
 * Använd lämplig databordsbindning
 * Följande regler gäller när du använder villkorsredigeraren för att redigera ett villkor:
 
-   * **** Tillägg av variabel: Tillåtet
-   * **** Borttagning av variabel: Tillåtet
-   * **** Uppdatering av egenskaper: Tillåtet
-   * **** Dataordlista har ändrats: Tillåts tills dataordlisteelementet inte används.
+   * **Tillägg av variabel:** Tillåtet
+   * **Borttagning av variabel:** Tillåtet
+   * **Uppdatering av egenskaper:** Tillåtet
+   * **Dataordlista har ändrats:** Tillåts tills dataordlisteelementet inte används.
 
 ## Layoutfragment {#layoutfragments}
 
@@ -383,8 +379,8 @@ Ett detaljerat exempel på hur du använder statiska och dynamiska tabeller i la
 1. Correspondence Management visar tillgängliga XDP:er. Välj den XDP som du vill basera ditt layoutfragment på och tryck på **Nästa**.
 1. Ange följande information för layouten:
 
-   * **** Titel (valfritt): Ange layoutfragmentets titel. Titeln behöver inte vara unik och kan innehålla specialtecken och tecken som inte är engelska. Layoutfragment refereras till av sina titlar (när de är tillgängliga) som miniatyrbilder och resursegenskaper.
-   * **** Namn: Layoutfragmentets unika namn. Det finns inga två resurser (text, villkor eller lista) i något läge med samma namn. I fältet Namn kan du bara ange engelska tecken, siffror och bindestreck. Fältet Namn fylls i automatiskt baserat på fältet Titel. De specialtecken, blanksteg, siffror och icke-engelska tecken som anges i fältet Titel ersätts med bindestreck i fältet Namn. Även om värdet i fältet Titel automatiskt kopieras till namnet kan du redigera värdet. Det här namnet visas i listan i användargränssnittet Hantera resurser.
+   * **Titel (valfritt):** Ange layoutfragmentets titel. Titeln behöver inte vara unik och kan innehålla specialtecken och tecken som inte är engelska. Layoutfragment refereras till av sina titlar (när de är tillgängliga) som miniatyrbilder och resursegenskaper.
+   * **Namn:** Layoutfragmentets unika namn. Det finns inga två resurser (text, villkor eller lista) i något läge med samma namn. I fältet Namn kan du bara ange engelska tecken, siffror och bindestreck. Fältet Namn fylls i automatiskt baserat på fältet Titel. De specialtecken, blanksteg, siffror och icke-engelska tecken som anges i fältet Titel ersätts med bindestreck i fältet Namn. Även om värdet i fältet Titel automatiskt kopieras till namnet kan du redigera värdet. Det här namnet visas i listan i användargränssnittet Hantera resurser.
    * **Beskrivning (valfritt)**: Beskrivning som visas i listan i användargränssnittet Hantera resurser.
    * **Taggar (valfritt)**: Du kan också markera de taggar som ska användas för villkoret. Du kan också skriva namnet på en ny tagg och skapa den.
 
@@ -399,7 +395,7 @@ Ett detaljerat exempel på hur du använder statiska och dynamiska tabeller i la
    * **Sidhuvud**: text som ska visas för rubriken
    * **Sidfot**: text som ska visas för sidfoten
    * **Typ**: typ av extra kolumn. Fält eller målområde. Typ är aktiverat för statiska platshållartabeller. Text kan definieras på kolumnnivå och inte på cellnivå. Alla celler i en utökad kolumn är av samma typ. För en dynamisk tabell är alla kolumner av fälttyp. För tabeller som inte är platshållare kan du inte definiera typen av ytterligare kolumner. I detta fall är typen av ytterligare celler i den utökade kolumnen densamma som typen av sista kolumn i den raden. och celltypen i ytterligare rader är samma som typen för den sista cellen i den kolumnen.
-   * **** Breddförhållande: förhållandet mellan tabellkolumnbredderna.
+   * **Breddförhållande:** förhållandet mellan tabellkolumnbredderna.
    Ett detaljerat exempel på hur du använder statiska och dynamiska tabeller i layoutfragment finns i [Exempel med exempelfiler: med statiska och dynamiska tabeller i en bokstav](#main-pars-header-28).
 
 1. Tryck på **Spara**.
