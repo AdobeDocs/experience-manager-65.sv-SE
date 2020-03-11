@@ -3,7 +3,7 @@ title: Hämta resurser från AEM
 description: Lär dig hur du hämtar resurser från AEM och aktiverar eller inaktiverar hämtningsfunktionen.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: e71b87b12d45bf12f29af917fddebeddedb18056
 
 ---
 
@@ -20,13 +20,15 @@ Om du vill hämta resurser går du till en resurs, markerar resursen och trycker
 
 Det går inte att hämta resurstyperna Bilduppsättningar, Snurra uppsättningar, Blandade medieuppsättningar och Carousel-uppsättningar.
 
-![Tillgängliga alternativ när du hämtar resurser från AEM Assets](assets/asset_download_dialog.png)*Bild: Tillgängliga alternativ vid hämtning av resurser från AEM Assets*
+![Tillgängliga alternativ vid hämtning av resurser från AEM Assets](assets/asset_download_dialog.png)
+
+*Bild: Tillgängliga alternativ vid hämtning av resurser från AEM Assets*
 
 Följande är alternativen för export/hämtning. Dynamiska renderingar är unika för Dynamic Media och gör att du kan generera renderingar direkt utöver den resurs du valt - det alternativet är bara tillgängligt om du har Dynamic Media aktiverat.
 
 | Export- eller nedladdningsalternativ | Beskrivningar |
 |---|---|
-| [!UICONTROL Resurser] | Välj det här om du vill hämta resursen i dess ursprungliga form utan några återgivningar. |
+| [!UICONTROL Assets] | Välj det här om du vill hämta resursen i dess ursprungliga form utan några återgivningar. |
 | [!UICONTROL Återgivningar] | En återgivning är den binära representationen av en resurs. Resurser har en primär representation - den som utgörs av den överförda filen. De kan ha valfritt antal representationer. <br> Med det här alternativet kan du välja de återgivningar du vill hämta. Vilka renderingar som är tillgängliga beror på vilken resurs du väljer. |
 | [!UICONTROL Dynamiska renderingar] | En dynamisk återgivning genererar andra återgivningar direkt. När du väljer det här alternativet väljer du också de återgivningar som du vill skapa dynamiskt genom att välja i listan [Bildförinställning](image-presets.md) . <br>Du kan dessutom välja storlek och måttenhet, format, färgrymd, upplösning och alla bildmodifierare (t.ex. för att invertera bilden) |
 | [!UICONTROL E-post] | Ett e-postmeddelande skickas till användaren. Standardmallar för e-post finns på följande platser:<ul><li>`/libs/settings/dam/workflow/notification/email/downloadasset`</li><li>`/libs/settings/dam/workflow/notification/email/transientworkflowcompleted`</li></ul> Mallar som du anpassar under distributionen bör finnas på följande platser: <ul><li>`/apps/settings/dam/workflow/notification/email/downloadasset`</li><li>`/apps/settings/dam/workflow/notification/email/transientworkflowcompleted`</li></ul>Du kan lagra klientspecifika anpassade mallar på följande platser:<ul><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/downloadasset`</li><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/transientworkflowcompleted`</li></ul> |
