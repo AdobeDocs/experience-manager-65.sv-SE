@@ -4,7 +4,7 @@ description: Nyheter i Adobe Experience Manager 6.5 Service Pack 4
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: d0038181326037ab71f4df9b509d2f0827191c86
+source-git-commit: edbe99460bb880ae118f7e826592bc7ad11d54c5
 
 ---
 
@@ -19,15 +19,15 @@ Den senaste versionen av AEM Service Pack 4 (6.5.4.0) släpptes 5 **mars 2020**.
 
 ### Prestandaförbättringar inom olika områden {#performance-improvements}
 
-* Minskad tid för inläsning och initiering av ContextHub inom en plats (contexthub.kernel.js). Det gör att en sida läses in snabbare under ett webbplatsbesök.
+* Minskad tid för inläsning och initiering av ContextHub inom en plats (contexthub.kernel.js). Det ger snabbare sidinläsning under ett webbplatsbesök.
 
-* Förkorta tiden för uppdatering av en sida efter att du har dragit och släppt Experience Fragments på arbetsytan i en sidredigerare.
+* Förkorta tiden för uppdatering av en sida efter att Experience Fragments har dragits och släppts till sidredigeraren Webbplatser.
 
 * Förkortade tiden för inläsning av poster för en Sites-sida med över 200 live-kopior i Live Copy Overview.
 
-* Förbättrad hantering av ofullständiga eller ogiltiga URL:er som kan göra att mallredigeraren blir långsammare i mallredigeraren.
+* Förbättrad hantering av ofullständiga eller ogiltiga URL:er. Sådana URL-adresser kan göra mallredigeraren långsammare.
 
-Dessutom innehåller AEM 6.5 Service Pack 4 förbättringar av formatsystemet. Nu kan du även välja format i en komponentdialogruta.
+Dessutom innehåller AEM 6.5.4.0 förbättringar i formatsystemet. Nu kan du välja format i komponentdialogrutan.
 
 ## AEM Assets {#aem-assets}
 
