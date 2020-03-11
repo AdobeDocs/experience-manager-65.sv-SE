@@ -4,7 +4,7 @@ description: Lär dig hur du hittar de nödvändiga resurserna i AEM med hjälp 
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 1d09e02c451c01955b93bc3149fc663754435fdf
+source-git-commit: e71b87b12d45bf12f29af917fddebeddedb18056
 
 ---
 
@@ -15,7 +15,7 @@ Adobe Experience Manager Assets (AEM) innehåller robusta metoder för resurside
 
 AEM stöder följande användningsfall och den här artikeln beskriver användning, begrepp, konfigurationer, begränsningar och felsökning för dessa användningsområden.
 
-| Söka efter material | Konfiguration och administration | Arbeta med sökresultat |
+| Söka efter resurser | Konfiguration och administration | Arbeta med sökresultat |
 |---|---|---|
 | [Grundläggande sökningar](#searchbasics) | [Sökindex](#searchindex) | [Sortera resultat](#sort) |
 | [Förstå sökgränssnittet](#searchui) | [Visuell sökning eller likhetssökning](#configvisualsearch) | [Kontrollera egenskaper och metadata för en resurs](#checkinfo) |
@@ -52,7 +52,7 @@ Du kan identifiera önskade resurser snabbare från sökresultatsidan med det dy
 
 ![Se det ungefärliga antalet resurser utan att filtrera sökresultaten i sökfaktorer.](assets/asset_search_results_in_facets_filters.png)
 
-*Bild: Se det ungefärliga antalet resurser utan att filtrera sökresultaten i sökfaktorer.*
+*Bild: Se det ungefärliga antalet resurser utan att filtrera sökresultaten i sökfaktorer*
 
 ## Förstå sökresultat och beteenden {#searchbehavior}
 
