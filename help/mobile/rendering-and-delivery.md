@@ -9,7 +9,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: 672d5b1e-6b2f-4afe-ab04-c398e5ef45d5
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 7eb3529de1c99d09eaa78c7589320a85e729400b
 
 ---
 
@@ -157,7 +157,7 @@ I följande tabell visas egenskaperna:
    <td>Sträng[] </td>
    <td>-</td>
    <td>sling:resourceType</td>
-   <td>Returnera inte standardexporten för CaaS json för följande sling-resurstyper.<br /><br /> Returnera en kundjson-export genom att återge resursen som &lt;RESOURCE&gt;.&lt;SELECTOR_TO_INC&gt;.json </td>
+   <td>Returnera inte standardexporten för CaaS json för följande sling-resurstyper.<br /> Returnera en kundjson-export genom att återge resursen som<br /> &lt;RESOURCE&gt;.&lt;SELECTOR_TO_INC&gt;.json </td>
   </tr>
  </tbody>
 </table>
@@ -226,7 +226,7 @@ Den här konfigurationen utökar standardinställningen så att underordnade gru
 
 Läs resurserna nedan om du vill veta mer om andra ämnen i Content Services:
 
-* [Utveckla modeller](/help/mobile/models-in-repository.md)
+* [Utveckla modeller](/help/mobile/administer-mobile-apps.md)
 * [Skapa innehållstjänster](/help/mobile/develop-content-as-a-service.md)
 * [Administrera innehållstjänster](/help/mobile/developing-content-services.md)
 
