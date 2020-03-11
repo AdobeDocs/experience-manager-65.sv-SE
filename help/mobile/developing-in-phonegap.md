@@ -9,7 +9,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: bc61e495-b53b-49c5-99e5-c2e35873e6bd
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 7eb3529de1c99d09eaa78c7589320a85e729400b
 
 ---
 
@@ -35,7 +35,7 @@ Följande resurser hjälper dig att komma igång med AEM Mobile med Adobe PhoneG
 * [AEM Mobile Content Services: En översikt](/help/mobile/develop-content-as-a-service.md)
 
    * Information om hur du aktiverar innehållstjänster och datamodeller finns i [Administrera innehållstjänster](/help/mobile/developing-content-services.md)
-   * Mer information om att skapa modeller finns i [Utveckla modeller](/help/mobile/models-in-repository.md)
+   * Mer information om att skapa modeller finns i [Utveckla modeller](/help/mobile/administer-mobile-apps.md)
    * Mer information om återgivning och leverans finns i [Återgivning och leverans av innehållstjänster](/help/mobile/rendering-and-delivery.md)
 
 >[!NOTE]
