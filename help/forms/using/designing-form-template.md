@@ -10,7 +10,7 @@ topic-tags: hTML5_forms
 discoiquuid: f2e9dbe4-e210-41f3-8878-2fc4d166e63c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 147c50adb02b48be8e3aba760dbac309ab49badf
+source-git-commit: f763359fb333ef6cc8a6748ccfa39ba9aee9ca48
 
 ---
 
@@ -41,6 +41,6 @@ Huvudmålet för HTML5-formulär är pekenheter. Därför har en ny kontroll fö
 
 #### RTF-format {#rich-text-format}
 
-Definiera ett RTF-fältformat för textfältet i Forms Designer om du vill lägga till en lista med formateringsalternativ för fältet i det återgivna HTML5-formuläret. Tillämpa inställningarna genom att trycka på textfältet i **[!UICONTROL designvyn]**. Välj **[!UICONTROL RTF]** i listrutan **[!UICONTROL Fältformat]** på fliken **[!UICONTROL Fält]** . Textfältet visar formateringsalternativ när det återges i ett HTML5-formulär.
+Du kan konvertera ett textfält till ett RTF-fält. En lista med formateringsalternativ läggs till i textfältet. Om du vill konvertera öppnar du Forms Designer och trycker på textfältet i **[!UICONTROL designvyn]**. Välj **[!UICONTROL RTF]** i listrutan **[!UICONTROL Fältformat]** på fliken **[!UICONTROL Fält]** . När XFA-formuläret återges som ett HTML5-formulär återges nu fältet som ett RTF-fält.
 
 [Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
