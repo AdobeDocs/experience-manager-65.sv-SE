@@ -7,12 +7,12 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: 2cde81d3-5fc1-4a32-a307-7dc592f37162
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 55a4c7eee6f1305fe84a22bc9b23cd77d73d414a
+source-git-commit: e71b87b12d45bf12f29af917fddebeddedb18056
 
 ---
 
 
-# Konfigurera RTF-redigeraren {#configure-the-rich-text-editor}
+# Configure the Rich Text Editor {#configure-the-rich-text-editor}
 
 Med textredigeraren får författarna ett stort antal funktioner för redigering av textinnehåll. Ikoner, markeringsrutor, verktygsfält och menyer finns för WYSIWYG-textredigering.
 
@@ -20,15 +20,21 @@ RTE kan konfigureras för att aktivera, inaktivera och utöka de funktioner som 
 
 Följande arbetsflöde visar den rekommenderade ordningen för att slutföra RTE-konfigurationsuppgifterna.
 
-![Stegen för att lära dig konfigurera hastighet](assets/rte_workflow_v1.png)*Bild: Stegen för att lära sig hur man konfigurerar RTE*
+![Stegen för att lära dig hur du konfigurerar hastigheten](assets/rte_workflow_v1.png)
+
+*Bild: Stegen för att lära sig hur man konfigurerar RTE*
 
 ## Förstå användargränssnittet med pekskärmsfunktioner och det klassiska användargränssnittet {#understand-touch-enabled-ui-and-classic-ui}
 
 Det användargränssnitt som har stöd för Touch är standardgränssnittet för AEM. Adobe introducerade Touch UI med [responsiv design](/help/sites-authoring/responsive-layout.md) för redigeringsmiljön. Touchgränssnittet är utformat för enheter med pekskärm och stationära datorer. Gränssnittet skiljer sig avsevärt från det ursprungliga klassiska användargränssnittet.
 
-![Verktygsfältet för textredigeraren i det Touch-aktiverade användargränssnittet](assets/chlimage_1-35.png)*: Verktygsfältet för textredigeraren i det Touch-aktiverade gränssnittet*
+![Verktygsfältet för textredigeraren i det Touch-aktiverade gränssnittet](assets/chlimage_1-35.png)
 
-![Verktygsfältet RTF-redigerare i Classic UI](assets/rtedefault.png)*Figure: Verktygsfältet RTF-redigerare i det klassiska användargränssnittet*
+*Bild: Verktygsfältet för textredigeraren i det Touch-aktiverade gränssnittet*
+
+![Verktygsfältet RTF-redigerare i det klassiska användargränssnittet](assets/rtedefault.png)
+
+*Bild: Verktygsfältet RTF-redigerare i det klassiska användargränssnittet*
 
 >[!MORELIKETHIS]
 >
@@ -57,7 +63,9 @@ Författare kan skapa och redigera textinnehåll i AEM med hjälp av de olika ko
 
 När innehållet öppnas (med en långsam dubbeltryckning/klick) kan det redigeras på sidan. Ett kompakt verktygsfält med mycket grundläggande alternativ visas.
 
-![Inline-redigering med grundläggande verktygsfält i Touch-aktiverat användargränssnitt](assets/chlimage_1-36.png)*Bild: Inline-redigering med grundläggande verktygsfält i Touch-aktiverat användargränssnitt*
+![Inline-redigering med grundläggande verktygsfält i Touch-aktiverat användargränssnitt](assets/chlimage_1-36.png)
+
+*Bild: Inline-redigering med grundläggande verktygsfält i Touch-aktiverat användargränssnitt*
 
 I det klassiska användargränssnittet kan du med en långsam dubbelklickning på komponenten redigera textbundet och med en orange kontur markeras innehållet. Om Innehållssökning är öppet visas ett verktygsfält med tillgängliga alternativ för RTF-formatering högst upp i fönstret. Om Innehållssökning inte är öppet visas inte formateringsalternativen och du kan bara göra grundläggande textredigeringar.
 
@@ -67,15 +75,21 @@ AEM-komponenter kan öppnas i helskärmsläge som döljer sidinnehållet och tar
 
 I dialogrutans helskärmsläge, tillsammans med ett detaljerat verktygsfält för textredigering, är även de alternativ och komponenter som är tillgängliga i en dialogruta tillgängliga. Det gäller endast för en dialogruta som innehåller RTE tillsammans med andra komponenter.
 
-![Det detaljerade verktygsfältet för textredigering när du redigerar i helskärmsläge i det touchaktiverade användargränssnittet](assets/chlimage_1-37.png)*Bild: Det detaljerade verktygsfältet för textredigering när du redigerar i helskärmsläge i det touchaktiverade gränssnittet*
+![Det detaljerade verktygsfältet för textredigering när du redigerar i helskärmsläge i det touchaktiverade gränssnittet](assets/chlimage_1-37.png)
+
+*Bild: Det detaljerade verktygsfältet för textredigering när du redigerar i helskärmsläge i det touchaktiverade gränssnittet*
 
 ### Dialogruteredigering {#dialog-editing}
 
 När du dubbelklickar på en komponent öppnas en dialogruta där du kan redigera innehållet. Dialogrutan öppnas ovanpå den befintliga sidan. I vissa specifika scenarier öppnas dialogrutan som ett popup-fönster. Om en textkomponent till exempel är en del av en kolumn i en sidlayout med flera kolumner och området som är tillgängligt för dialogrutan är mindre.
 
-![Dialogruteredigeringsläge i Touch-aktiverat användargränssnitt](assets/dialog_editing_modetouchui.png)*Bild: Dialogruteredigeringsläge i användargränssnittet med pekfunktioner*
+![Dialogruteredigeringsläge i användargränssnittet med pekfunktioner](assets/dialog_editing_modetouchui.png)
 
-![Dialogruta i Classic UI som innehåller ett detaljerat verktygsfält för redigering](assets/chlimage_1-38.png)av *figur: Dialogruta i Classic UI som innehåller ett detaljerat verktygsfält för redigering*
+*Bild: Dialogruteredigeringsläge i användargränssnittet med pekfunktioner*
+
+![Dialogruta i Classic UI som innehåller ett detaljerat verktygsfält för redigering](assets/chlimage_1-38.png)
+
+*Bild: Dialogruta i Classic UI som innehåller ett detaljerat verktygsfält för redigering*
 
 ## Om RTE-plugin-program och associerade funktioner {#aboutplugins}
 
