@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 8b607b55-2412-469f-856b-0a3dea4b0efb
 translation-type: tm+mt
-source-git-commit: 033c32c581fddd5f632ad534f57c84b4d74a4104
+source-git-commit: f763359fb333ef6cc8a6748ccfa39ba9aee9ca48
 
 ---
 
@@ -138,15 +138,15 @@ Med alternativet Admin Control kan administratörer:
 
 * Styra visningen av navigeringslänkar i sidhuvudet
 
-Alternativet Admin Control visas endast i listrutan för visningsväljare om du är medlem i gruppen administratörer eller arbetsflödesadministratörer.
+Alternativet Administratörskontroll är bara synligt för medlemmarna i gruppen Administratörer eller Arbetsflödesadministratörer.
 
 ![admin-control](assets/admin-control.png)
 
 * **Anpassning av varumärkesprofilering**
 
-   * **Anpassa rubriktext:** Ange den text som ska visas i sidhuvudet.
+   * **Anpassa rubriktext:** Ange den text som ska visas i rubriken för att ersätta **Adobe Experience Manager** -standardtexten.
 
-   * **Anpassa logotyp:** Överför en bild i DAM (Digital Asset Management) och hänvisa till den bilden för att visa den i sidhuvudet.
+   * **Anpassa logotyp:** Ange bilden som ska visas i sidhuvudet som logotyp. Överför en bild i DAM (Digital Asset Management) och hänvisa till den bilden i fältet.
 
 * **Användarnavigering**
    * **Dölj navigeringsalternativ:** Välj det här alternativet om du vill dölja navigeringsalternativ som är tillgängliga i sidhuvudet. Navigeringsalternativen inkluderar länkar till andra lösningar, hjälplänken och de redigeringsalternativ som finns när man trycker på Adobe Experience Manager-logotypen eller -texten.
