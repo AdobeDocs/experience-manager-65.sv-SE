@@ -4,7 +4,7 @@ product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.5 Authoring User Guide
 translation-type: tm+mt
-source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
+source-git-commit: e82fc1d3de3cff96cadb6a25a6ba6169cf7f7cd0
 
 ---
 
@@ -14,11 +14,12 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
 + [Översikt över användarhandboken för redigering](home.md)
 + Viktiga uppgifter, verktyg och koncept för AEM Authoring {#essentials}
    + [Steg 1 för författare](first-steps.md)
+   + [Sidredigering](page-authoring.md)
    + [Snabbguide till framtagning av sidor](qg-page-authoring.md)
    + [Begreppet redigering](author.md)
    + [Grundläggande hantering](basic-handling.md)
-   + [Sök](search.md)
-   + [Konfigurerar din kontomiljö](user-properties.md)
+   + [Sökning](search.md)
+   + [Konfigurera kontomiljön](user-properties.md)
    + [Din inkorg](inbox.md)
    + [Kortkommandon för konsoler](keyboard-shortcuts.md)
    + [Välja användargränssnitt](select-ui.md)
@@ -31,7 +32,7 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
    + [Redigera sidegenskaper](editing-page-properties.md)
    + [Publicera sidor](publishing-pages.md)
    + [Sidredigering med innehållsfragment](content-fragments.md)
-   + [Upplevelsefragment](experience-fragments.md)
+   + [Experience Fragments](experience-fragments.md)
    + [Exportera till CSV](csv-export.md)
    + [Komponenter](default-components.md)
    + [Skapa en sida för mobila enheter](mobile.md)
@@ -59,11 +60,11 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
    + [Arbeta med uppgifter](task-content.md)
    + [Kreativt projekt- och PIM-integrering](managing-product-information.md)
    + [Arbeta med projektarbetsflöden](projects-with-workflows.md)
-+ Startar {#launches}
-   + [Startar](launches.md)
-   + [Skapa startprogram](launches-creating.md)
-   + [Redigeringsövningar](launches-editing.md)
-   + [Befordra lanseringar](launches-promoting.md)
++ Launches {#launches}
+   + [Launches](launches.md)
+   + [Skapa Launches](launches-creating.md)
+   + [Redigera Launches](launches-editing.md)
+   + [Marknadsföra Launches](launches-promoting.md)
 + Arbetsflöden {#workflows}
    + [Arbeta med arbetsflöden](workflows.md)
    + [Använda arbetsflöden på sidor](workflows-applying.md)
@@ -74,12 +75,12 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
    + [Analyserar sidprestanda](ci-analyze.md)
    + [Visa sidanalysdata](pa-using.md)
    + [Lägga till sök&amp;höj upp funktioner på din sida](search-and-promote.md)
-+ Personalisering {#personalization}
-   + [Personalisering](personalization.md)
++ Personanpassning {#personalization}
+   + [Personanpassning](personalization.md)
    + [Förhandsgranska sidor med ContextHub-data](ch-previewing.md)
    + [Skapa riktat innehåll med målläge](content-targeting-touch.md)
    + [Arbeta med riktat innehåll på flera webbplatser](multisite-support-targeted-content.md)
-   + [Hur hantering av flera webbplatser för riktat innehåll är strukturerad](technical-multisite-targeted.md)
+   + [Så här struktureras hantering av flera webbplatser för riktat innehåll](technical-multisite-targeted.md)
    + [Hantera aktiviteter](activitylib.md)
    + [Hantera målgrupper](managing-audiences.md)
    + [Skapa och hantera erbjudanden](offerlib.md)
