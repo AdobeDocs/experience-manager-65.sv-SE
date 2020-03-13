@@ -4,7 +4,7 @@ product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.5 Classic UI Authoring User Guide
 translation-type: tm+mt
-source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
+source-git-commit: c34993650bbd309b036085abfae4f7db547c7104
 
 ---
 
@@ -17,9 +17,9 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
    + [Om du skriver i det klassiska gränssnittet](classicui.md)
    + [Arbeta med författarmiljön](author-env.md)
    + [Grundläggande hantering](author-env-basic-handling.md)
-   + [Konfigurerar din kontomiljö](author-env-user-props.md)
+   + [Konfigurera kontomiljön](author-env-user-props.md)
    + [Välja användargränssnitt](author-env-select-ui.md)
-   + [Sök](author-env-search.md)
+   + [Sökning](author-env-search.md)
    + [Din inkorg](author-env-inbox.md)
    + [Kortkommandon för konsoler](author-env-keyboard-shortcuts.md)
 + Redigering {#authoring}
@@ -49,12 +49,12 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
    + [Delta i arbetsflöden](classic-workflows-participating.md)
    + [Arbeta med arbetsflöden](classic-workflows.md)
    + [Använda arbetsflöden på sidor](classic-workflows-applying.md)
-+ Startar {#launches}
-   + [Startar](classic-launches.md)
-   + [Skapa startprogram](classic-launches-creating.md)
-   + [Redigeringsövningar](classic-launches-editing.md)
-   + [Befordra lanseringar](classic-launches-promoting.md)
-+ Personalisering {#personalization}
++ Launches {#launches}
+   + [Launches](classic-launches.md)
+   + [Skapa Launches](classic-launches-creating.md)
+   + [Redigera Launches](classic-launches-editing.md)
+   + [Marknadsföra Launches](classic-launches-promoting.md)
++ Personanpassning {#personalization}
    + [Förstå segmentering](classic-personalization-campaigns-segmentation.md)
    + [Kampanjhantering](classic-personalization-campaigns.md)
    + [Lärare och strategier](classic-personalization-campaigns-teasers-strategy.md)
@@ -74,11 +74,12 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
    + [Arbeta med Adobe Campaign](classic-personalization-ac.md)
    + [Adobe Campaign-komponenter](classic-personalization-ac-components.md)
    + [Inrikta er på Adobe Campaign](classic-personalization-ac-target.md)
+   + [Skapa Adobe Campaign-formulär i AEM](classic-personalization-ac-forms.md)
 + Skapa resurser i det klassiska användargränssnittet {#assets}
    + [Arbeta med resurser](classicui-assets.md)
    + [Leverera dynamiska medieresurser](dynamic-media-assets-delivering.md)
    + [Lägga till dynamiska medieresurser på sidor](dynamic-media-assets-adding-to-page.md)
    + [Lägga till Scene7-funktioner på sidan](manage-assets-classic-s7.md)
    + [Video](manage-assets-classic-s7-video.md)
-   + [Arbeta med dynamiska media](dynamic-media-assets.md)
+   + [Arbeta med Dynamic Media](dynamic-media-assets.md)
    + [Namnkonventioner för tillgångstestning](asset-naming-conventions.md)
