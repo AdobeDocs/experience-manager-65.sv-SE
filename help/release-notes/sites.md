@@ -1,13 +1,13 @@
 ---
 title: Versionsinformation för AEM Sites
-description: Versionsinformation om webbplatser i Adobe Experience Manager 6.4.
+description: Versionsinformation om webbplatser i Adobe Experience Manager 6.5.
 uuid: 676ead61-3d97-4f23-b616-c647d590bc8f
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: f82e9bd4-f7b6-492d-8e02-593e74fa1058
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 57bad4e74b2dfd9e389643bfe58ef25564c5c545
+source-git-commit: e3f32b526d8a619b8bacfc85e7dce4a7bf5d23a7
 
 ---
 
@@ -66,7 +66,7 @@ Se följande för förbättringar av AEM Sites 6.5 i detalj:
 * I [listvyn](/help/sites-authoring/basic-handling.md#list-view) finns en ny arbetsflödeskolumn som visar status när sidan befinner sig i ett arbetsflöde.
 * I [sidegenskaperna](/help/sites-authoring/editing-page-properties.md)kan du nu bläddra efter befintliga resurser när du tilldelar en miniatyrbild till sidan (fliken Miniatyrbilder).
 
-##  Page Editor {#page-editor}
+## Page Editor {#page-editor}
 
 * Möjliggör kontextredigering och komposition av ensidiga appupplevelser med React- och Angular-komponenter på klientsidan som utnyttjar JS SDK (kallas även SPA-redigerare)
 * Skolningsläge visas bara om sidan har en konfigurerad ställningar.
@@ -80,7 +80,7 @@ Se följande för förbättringar av AEM Sites 6.5 i detalj:
 * Resurserna i hämtningsrapporten visar nu innehållsfragment utifrån detta
 * Lägg till stöd för [innehållsfragment i Assets HTTP API](/help/assets/assets-api-content-fragments.md) via /api.json. Det finns API:er för att skapa, uppdatera, läsa och ta bort innehållsfragment.
 
-## Upplevelsefragment {#experience-fragments}
+## Experience Fragments {#experience-fragments}
 
 * Förbättrad indexering av [Experience Fragments](/help/sites-authoring/experience-fragments.md), så deras innehåll hittas i sökningen efter sidor där de används
 * Med alternativet [Exportera till mål](/help/sites-administering/experience-fragments-target.md) kan du nu skicka Experience Fragment som JSON (standard är HTML), eller både och
@@ -99,7 +99,7 @@ Se följande för förbättringar av AEM Sites 6.5 i detalj:
 * Om du skapar en ny sida i livecopy-strukturen skapas nu som standard en fristående sida
 * Använd MSM-funktioner i enkelsidiga appar som använder JS SDK (kallas även SPA-redigerare)
 
-## Startar {#launches}
+## Launches {#launches}
 
 * Nytt arbetsflöde för granskning och godkännande för lanseringar och möjlighet att endast befordra godkända startsidor
 * Tillagt [alternativ i användargränssnittet för att välja att ta bort Launch direkt efter erbjudandesteget](/help/sites-authoring/launches-promoting.md#promoting-launch-pages)
