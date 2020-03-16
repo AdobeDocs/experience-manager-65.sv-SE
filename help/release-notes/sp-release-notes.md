@@ -8,7 +8,7 @@ discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 82ded190d4fee4e4ef9849dc34372774c529844f
+source-git-commit: cc72581f0de6f47cd1d7e207f228e64ba7c9e842
 
 ---
 
@@ -38,7 +38,7 @@ Några viktiga funktioner och förbättringar i AEM 6.5.4.0:
 
 * Stöd för [RTF](../forms/using/designing-form-template.md) i HTML5-formulär.
 
-* Tillgänglighetsförbättringar i Assets.
+* [Tillgänglighetsförbättringar](new-features-latest-service-pack.md#accessibility-enhancements) i Experience Manager Assets.
 
 * Den inbyggda databasen (Apache Jackrabbit Oak) uppdateras till version 1.10.8.
 
@@ -110,7 +110,7 @@ En fullständig lista över funktioner, viktiga högdagrar, viktiga funktioner s
 
 * Flera sökfrågor utlöses när flera taggar väljs från sökfiltret (NPR-32143).
 
-* Användargränssnittet i Experience Manager Assets visar trunkerade filnamn när resurser med fler än 50 tecken i filnamnet överförs (NPR-32054).
+* Experience Manager Assets-gränssnittet visar trunkerade filnamn när resurser med fler än 50 tecken i filnamnet överförs (NPR-32054).
 
 * Alla kryssrutor på panelen Filter avmarkeras när den första och den andra kryssrutan avmarkeras när du har markerat två kryssrutor i kryssruteträdet i Adobe Stock (NPR-31919).
 
