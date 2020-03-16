@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0d5436c6-1976-496c-b9a7-7dc6e830bb5d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f763359fb333ef6cc8a6748ccfa39ba9aee9ca48
+source-git-commit: e3f32b526d8a619b8bacfc85e7dce4a7bf5d23a7
 
 ---
 
@@ -60,7 +60,7 @@ Correspondence Management Solution har stöd för två typer av dynamiska dataob
 
    [ ![Toolbar](assets/advancedediting.png)
 
-   * **Länk**: Infoga hypertextlänk i texten. Tryck på **[!UICONTROL Länk]**, ange länken i fältet **[!UICONTROL URL]** , ta bort standardobjektnamnet från fältet **[!UICONTROL Alt Text]** och tryck på ![Spara](assets/save_icon.svg).
+   * **Länk**: Infoga [hypertextlänk](#insert-hyperlink) i texten.
    * **Upprepa**: Upprepa skriver ut samlingselement i Data Dictionary med hjälp av en avgränsare.
    * **Villkor**: Tryck för att infoga ett villkor. Infoga text baserad på villkor. Om villkoret är true visas texten med bokstaven, i annat fall inte.
    * **Lägg till beskrivning**: Lägg till anteckning i ett textstycke. Detta är metadata som är synliga för författaren men inte en del av det brev som skapas.
@@ -131,6 +131,18 @@ Correspondence Management Solution har stöd för två typer av dynamiska dataob
 
 1. Du kan använda textbundna villkor och upprepa för att göra brevet mycket sammanhangsberoende och välstrukturerat. Mer information om textbundna villkor och upprepning finns i [Textbundna villkor och upprepas med bokstäver](/help/forms/using/cm-inline-condition.md).
 1. Tryck på **Spara**.
+
+#### Infoga hyperlänk i en text {#insert-hyperlink}
+
+Så här skapar du en hyperlänk i en textresurs:
+
+1. Markera texten eller datamodellobjektet i textredigeraren.
+
+2. Tryck på **[!UICONTROL Länk]**. Tryck på **[!UICONTROL Alt-textfältet]** för att ta bort det befintliga datamodellsobjektnamnet eller texten.
+
+3. Ange URL-adressen och tryck på ![Spara](assets/save_icon.svg).
+
+![Skapa hyperlänk i textresurs](assets/text-create-hyperlink.png)
 
 #### Söka och ersätta text {#searching-and-replacing-text}
 
