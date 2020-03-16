@@ -4,7 +4,7 @@ description: Nyheter i Adobe Experience Manager 6.5 Service Pack 4
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: edbe99460bb880ae118f7e826592bc7ad11d54c5
+source-git-commit: ed756d785864131c2e031aec4331388bc057576b
 
 ---
 
@@ -39,15 +39,17 @@ Du kan antingen skapa en ny integrering eller uppgradera integreringsinställnin
 
 ### Förbättrad tillgänglighet {#accessibility-enhancements}
 
-* Kryssrutor med blandat läge har nu ett attribut som är markerat med aria och värdet &quot;mixat&quot;, vilket visar deras blandat läge för skärmläsare.
+Experience Manager Assets innehåller följande tillgänglighetsförbättringar:
 
-* Tangentbordsbaserade kontroller stöds nu, förutom banbaserade gester, för att flytta runt zoomade bilder.
+* Piltangenter på tangentbordet kan användas för att flytta och panorera områden i zoomade bilder. Mer information finns i [Förhandsgranska resurser endast](../assets/managing-assets-touch-ui.md#previewing-assets)med tangentbordstangenter.
 
-* Datumformatsbegränsningar har angetts i fältetiketter så att användare med endast tangentbord manuellt kan ange datum.
+* Kryssrutorna för blandat läge (där kryssrutorna på första nivån inte markeras och genomstrykas) på panelen Filter kan läsas av skärmläsare om du inte markerar alla kapslade alternativ.
 
-* Alt-attribut har lagts till i dekorativa ikoner och tagits bort role=img-attribut, så att sådana ikoner och bilder inte visas för skärmläsaranvändare.
+* Begränsningar för datum- och tidsformat finns i fältetiketter för datumfält, så att användarna kan ange datumet i korrekt format med tangentbordet.
 
-* Alt-attributet har lagts till för att stänga ikoner som anger för skärmläsaranvändare när de tabbar över det.
+   Exempel, `On Time (MM-DD-YYYY HH:mm)`. Här är MM månad i tvåsiffrigt format, YYYY är år, DD är dag i tvåsiffrigt format, HH är timme i 24-timmars militärt format och mm är minut.
+
+* Symbolen på knappen för att ta bort de markerade taggarna visas nu för skärmläsare tillsammans med antalet markerade taggar. `X`
 
 ## AEM Forms {#aem-forms}
 
