@@ -7,12 +7,12 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: d11fc727-f23a-4cde-9fa6-97e2c81b4ad0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 57bad4e74b2dfd9e389643bfe58ef25564c5c545
+source-git-commit: 0ae42d9f81df89a7e1c08fac5cce5240f14e8c60
 
 ---
 
 
-# Kända fel{#known-issues}
+# Kända fel {#known-issues}
 
 På den här sidan finns en lista över kända fel i Adobe Experience Manager 6.5 som släpptes i april 2019.
 
@@ -30,9 +30,9 @@ Kontrollera att egenskapen &quot;*htmllibmanager.fileSystemOutputCacheLocation*&
 
 Det finns en [kunskapsbasartikel](https://helpx.adobe.com/experience-manager/kb/avoid-crx-quickstart-deletion-in-aem-6-5.html) med mer information och en lösning på problemet.
 
-## Resurser {#assets}
+## Assets {#assets}
 
-* **** Sök: Sökningen ger inga resultat om söksträngen innehåller inledande blanksteg ([OAK-4786](https://issues.apache.org/jira/browse/OAK-4786))
+* **Sök:** Sökningen ger inga resultat om söksträngen innehåller inledande blanksteg ([OAK-4786](https://issues.apache.org/jira/browse/OAK-4786))
 * **Mappmetadataschema**: När du har lagt till en alternativknapp återges ID- och Value-fältet inte som förväntat och borttagningsfunktionen fungerar inte. (CQ-4261144)
 * När du byter namn på en resurs går det inte att använda ett tomt utrymme i resursnamnet. (CQ-4266403)
 
@@ -51,12 +51,12 @@ Det finns en [kunskapsbasartikel](https://helpx.adobe.com/experience-manager/kb/
 * När ett adaptivt formulär har konfigurerats för att dynamiskt uppdatera värden för en komponent och den publiceringsinstans som är värd för formuläret nås via dispatchern, slutar funktionen att dynamiskt uppdatera värden för ett fält att fungera. Du löser problemet genom att öppna CRXDE på publiceringsinstansen, navigera till /libs/fd/af/runtime/clientlibs/guideChartReducer och skapa egenskapen som listas nedan.
 
    * Namn: allowProxy
-   * Typ:Boolean
-   * Värde:true
+   * Typ: Boolean
+   * Värde: true
    * Skyddad: Falskt
    * Obligatoriskt: Falskt
    * Flera: Falskt
    * Automatiskt skapad: Fas
 
-Egenskapen gör att klientbiblioteken under körningsmappen kan komma åt proxies. (CQ-4268679)
+Egenskapen gör att klientbiblioteken under körningsmappen kan komma åt proxy. (CQ-4268679)
 
