@@ -4,7 +4,7 @@ description: Nyheter i Adobe Experience Manager 6.5 Service Pack 4
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: ed756d785864131c2e031aec4331388bc057576b
+source-git-commit: 1fde7fc5dd32b5a2a83fe6c01cfa2b24be32a899
 
 ---
 
@@ -31,11 +31,12 @@ Dessutom innehåller AEM 6.5.4.0 förbättringar i formatsystemet. Nu kan du vä
 
 ## AEM Assets {#aem-assets}
 
-### Integrering med varumärkesportalen via Adobe I/O Console {#assets-integration-bp}
+### Konfigurera AEM-resurser med varumärkesportalen {#configure-assets-bp}
 
-Nu kan du konfigurera AEM Assets med Brand Portal via Adobe I/O Console. Adobe I/O Console anskaffar en IMS-token för godkännande av innehavaren av varumärkesportalen. Tidigare konfigurerades AEM Assets med varumärkesportalen i det klassiska användargränssnittet via äldre OAuth-gateway. Konfigurationerna som använder äldre OAuth Gateway stöds till 6 april 2020. Om du inte ändrar integreringen fortsätter de befintliga konfigurationerna att fungera.
+Auktoriseringskanalen mellan AEM Assets och Brand Portal har ändrats. Tidigare konfigurerades varumärkesportalen i Classic UI via äldre OAuth Gateway, som använder JWT-tokenutbyte för att erhålla en IMS Access-token för auktorisering. AEM Assets har nu konfigurerats med Brand Portal via Adobe I/O, som anskaffar en IMS-token för auktorisering av din klient för varumärkesportalen.
 
-Du kan antingen skapa en ny integrering eller uppgradera integreringsinställningarna till Adobe I/O Console.
+Stegen för att konfigurera AEM Assets med Brand Portal är olika beroende på din AEM-version, om du konfigurerar för första gången eller uppgraderar befintliga konfigurationer. Mer information finns i [Konfigurera AEM-resurser med varumärkesportalen](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html) .
+
 
 ### Förbättrad tillgänglighet {#accessibility-enhancements}
 
