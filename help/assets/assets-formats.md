@@ -3,7 +3,7 @@ title: Format som stöds för resurser
 description: Lista över filformat som stöds av AEM Resurser och funktioner som stöds för varje format.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 8a701d98fed79648104c39816482ff94997ba2e6
+source-git-commit: 08ea08fc2f8c36d509509f761a76a428d6df7e6a
 
 ---
 
@@ -55,7 +55,7 @@ Följande rasterbildformat stöds för Dynamic Media-funktioner:
 | [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ |
 | PICT | ✓ |  |  |  |  |
 
- &amp;ast; Den sammanfogade bilden extraheras från PSD-filen. Det är en bild som genereras av Adobe Photoshop och inkluderas i PSD-filen. Beroende på inställningarna kan den sammanfogade bilden vara den faktiska bilden eller inte.
+&amp;ast; Den sammanfogade bilden extraheras från PSD-filen. Det är en bild som genereras av Adobe Photoshop och inkluderas i PSD-filen. Beroende på inställningarna kan den sammanfogade bilden vara den faktiska bilden eller inte.
 
 Utöver informationen ovan bör du tänka på följande:
 
@@ -130,7 +130,7 @@ Utöver ovanstående funktioner bör du tänka på följande:
 
 * Information om hur du använder Dynamic Media för att generera dynamiska återgivningar för INDD-filer finns i [InDesign-filformat](../assets/managing-image-presets.md#indesign-indd-file-format)(INDD).
 
-## Multimedieformat som stöds {#supported-multimedia-formats}
+## Multimediaformat som stöds {#supported-multimedia-formats}
 
 |  | Lagring | Metadatahantering | Extrahering av metadata | Generering av miniatyrbilder | FFMPEG-omkodning |
 |:---|:---:|:---:|:---:|:---:|:---:|
@@ -188,18 +188,17 @@ De arkivformat som stöds och tillämpligheten för de vanliga DAM-arbetsflöden
 
 ## Andra format som stöds {#other-supported-formats}
 
-Hur vanliga DAM-arbetsflöden kan användas för ett par andra filformat beskrivs i tabellen nedan.
+Hur vanliga DAM-arbetsflöden kan användas för ett par andra filformat beskrivs i tabellen nedan. Vanlig DAM-funktionalitet, förutom Dynamic Media Delivery, stöds för alla filer.
 
 | Format | Lagring | Versionshantering | Arbetsflöde | Publicering | Åtkomstkontroll | Dynamic Media Delivery |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-| * | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | SVG | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | CSS | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | VTT | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | XML | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | JavaScript (när konfigureras med egen leveransdomän) |  |  |  |  |  | ✓ |
 
-**** &amp;ast; De andra formaten stöds i DAM för lagring, versionshantering, ACL, arbetsflöde, publicering och metadatahantering.
+**&amp;ast;** De andra formaten stöds i DAM för lagring, versionshantering, ACL, arbetsflöde, publicering och metadatahantering.
 
 ## MIME-typer som stöds {#supported-mime-types}
 
