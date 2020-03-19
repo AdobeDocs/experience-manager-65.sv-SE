@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 8ae324ea-8b84-47a3-aabf-1fee2a3bd46d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
+source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
 
 ---
 
@@ -25,11 +25,11 @@ Använd författarinstansen för att skapa en community-webbplats. I AEM Author-
 1. Logga in med administratörsbehörighet.
 1. Från global navigering går du till **Navigering, Communities, Sites.**
 
-Konsolen Communities Sites innehåller en guide som hjälper dig att skapa en communityplats. Du kan gå vidare till `Next`steget eller `Back`till föregående steg innan du implementerar platsen i det sista steget.
+Konsolen Communities Sites innehåller en guide som hjälper dig att skapa en communityplats. Du kan gå vidare till `Next` steget eller `Back` till föregående steg innan du implementerar platsen i det sista steget.
 
 Så här börjar du skapa en ny community-webbplats:
 
-* markera `Create`knappen.
+* Markera `Create`knappen.
 
 ![createcommunitysite](assets/createcommunitysite.png)
 
@@ -47,16 +47,16 @@ I steget [](/help/communities/sites-console.md#step2013asitetemplate)Webbplatsma
 
 * **Namn på** communitywebbplats: engagera
 
-   * dubbelkontrollera namnet eftersom det inte är lätt att ändra efter att webbplatsen har skapats
-   * den inledande URL:en visas under namnet på communityplatsen
-   * för en giltig URL, lägg till en baskod + &quot;.html&quot;
-   * *till exempel* https://localhost:4502/content/sites/ `engage/en.html`
+   * Dubbelkontrollera namnet eftersom det inte är lätt att ändra efter att webbplatsen har skapats
+   * Den inledande URL:en visas under namnet på communitywebbplatsen
+   * Ange en giltig URL genom att lägga till en baskod + &quot;.html&quot;
+   * *Till exempel* https://localhost:4502/content/sites/ `engage/en.html`
 
 * **Mall**: dra nedåt för att välja `Reference Site`
 
 Markera **nästa**
 
-### Steg 2:Design {#step-design}
+### Steg 2: Design {#step-design}
 
 Designsteget presenteras i två avsnitt där du kan välja tema och varumärkesbanderoll:
 
@@ -66,7 +66,7 @@ Välj det format som du vill använda på mallen. När du väljer det här alter
 
 #### GEMENSKAPENS WEBBPLATSHANTERING {#community-site-branding}
 
-(valfritt) Ladda upp en banderollbild som ska visas på webbplatsens sidor. Banderollen är fäst vid webbläsarens vänstra kant, mellan communitysidhuvudet och navigeringslänkarna. Banderollhöjden beskärs till 120 pixlar. Banderollens storlek ändras inte så att den passar webbläsarens bredd och höjden 120 pixlar.
+(Valfritt) Ladda upp en banderollbild som ska visas på webbplatsens sidor. Banderollen är fäst vid webbläsarens vänstra kant, mellan communitysidhuvudet och navigeringslänkarna. Banderollhöjden beskärs till 120 pixlar. Banderollens storlek ändras inte så att den passar webbläsarens bredd och höjden 120 pixlar.
 
 ![chlimage_1-58](assets/chlimage_1-58.png) ![chlimage_1-59](assets/chlimage_1-59.png)
 
@@ -82,11 +82,11 @@ Gå till [självstudiekursen Komma igång med AEM Communities för att få](/hel
 
 Markera alla kryssrutor för [användarhantering](/help/communities/sites-console.md#user-management)
 
-* för att tillåta besökare att registrera sig själva
-* så att besökarna kan se webbplatsen utan att logga in
-* för att tillåta medlemmar att skicka och ta emot meddelanden från andra communitymedlemmar
-* för att tillåta inloggning på Facebook i stället för att registrera och skapa en profil
-* för att tillåta inloggning med Twitter i stället för att registrera och skapa en profil
+* Tillåta besökare att registrera sig själva
+* Så här kan besökare på webbplatsen visa den utan att logga in
+* Så här tillåter du medlemmar att skicka och ta emot meddelanden från andra communitymedlemmar
+* Tillåt inloggning på Facebook i stället för att registrera och skapa en profil
+* Så här tillåter du inloggning med Twitter i stället för att registrera och skapa en profil
 
 >[!NOTE]
 >
@@ -94,14 +94,14 @@ Markera alla kryssrutor för [användarhantering](/help/communities/sites-consol
 
 ![communityinställningar](assets/site-settings.png)
 
-#### TAGGNING {#tagging}
+#### TAGGING {#tagging}
 
 De taggar som kan användas för communityinnehåll kontrolleras genom att AEM-namnutrymmen som tidigare definierats via [taggningskonsolen](/help/sites-administering/tags.md#tagging-console) (till exempel namnutrymmet [Tutorial](/help/communities/setup.md#create-tutorial-tags)) väljs.
 
 Det är enkelt att hitta namnutrymmen med typsnittssökning. Exempel:
 
-* type &#39;tut&#39;
-* select `Tutorial`
+* Typ `tut`
+* Välj `Tutorial`
 
 ![chlimage_1-60](assets/chlimage_1-60.png)
 
@@ -113,8 +113,8 @@ Om du vill att en community-medlem (eller grupp av medlemmar) ska kunna uppleva 
 
 Exempel:
 
-* typ &quot;q&quot;
-* välj [Quinn Harper](/help/communities/enablement-setup.md#publishcreateenablementmembers)
+* Typ `q`
+* Välj [Quinn Harper](/help/communities/enablement-setup.md#publishcreateenablementmembers)
 
 >[!NOTE]
 >
@@ -140,12 +140,12 @@ Se [Analyskonfiguration för communityfunktioner](/help/communities/analytics.md
 
 I [översättningsinställningarna](/help/communities/sites-console.md#translation) anges grundspråket för webbplatsen samt om UGC kan översättas och till vilket språk.
 
-* kontrollera **Tillåt maskinöversättning**
-* lämna standardspråken markerade för översättning av standardmaskinöversättningstjänsten
-* lämna standardöversättningsprovider och konfiguration
-* ingen global butik behövs eftersom det inte finns några språkversioner
-* välj **Översätt hela sidan**
-* lämna standardalternativet för beständighet
+* Kontrollera **Tillåt maskinöversättning**
+* Låt standardspråken vara markerade för översättning av standardmaskinöversättningstjänsten
+* Lämna standardöversättningsprovider och -konfiguration
+* Ingen global butik behövs eftersom det inte finns några språkversioner
+* Markera **Översätt hela sidan**
+* Lämna standardalternativet för beständighet
 
 ![chlimage_1-63](assets/chlimage_1-63.png)
 
@@ -181,16 +181,26 @@ När du väljer den fjärde ellipsikonen (Fler åtgärder) visas alternativen Ex
 
 Från vänster till höger är de:
 
-* **Öppna webbplats** välj pennikonen för att öppna communitywebbplatsen i redigeringsläge, för att lägga till och/eller konfigurera sidkomponenter
+* **Öppna webbplats**
 
-* **Redigera webbplats** välj egenskapsikonen för att öppna communitywebbplatsen för ändring av egenskaper, som titeln eller för att ändra temat
+   Välj pennikonen för att öppna communitywebbplatsen i redigeringsläge för författare, för att lägga till och/eller konfigurera sidkomponenter
 
-* **Publicera webbplats** välj ikonen world för att publicera communitywebbplatsen (om publiceringsservern till exempel körs på den lokala datorn, så väljer du localhost:4503 som standard)
+* **Redigera webbplats**
 
-* **Exportera plats** Välj exportikonen för att skapa ett paket för communitywebbplatsen som både lagras i [pakethanteraren](/help/sites-administering/package-manager.md) och hämtas.
+   Välj egenskapsikonen för att öppna communitywebbplatsen för ändring av egenskaper, som titeln eller för att ändra temat
+
+* **Publicera webbplats**
+
+   Välj världsikonen om du vill publicera communitywebbplatsen (till exempel om publiceringsservern körs på den lokala datorn, och sedan till localhost:4503 som standard)
+
+* **Exportera webbplats**
+
+   Välj exportikonen om du vill skapa ett paket för communitywebbplatsen som både lagras i [pakethanteraren](/help/sites-administering/package-manager.md) och hämtas.
 Observera att UGC inte ingår i platspaketet.
 
-* **Ta bort plats**välj ikonen Ta bort för att ta bort communitywebbplatsen från webbgruppskonsolen > Webbplatser. Den här åtgärden tar bort alla objekt som är associerade med platsen, till exempel UGC, användargrupper, resurser och databasposter.
+* **Ta bort plats**
+
+   Välj ikonen Ta bort om du vill ta bort communitywebbplatsen från **[UIControl Communities > Sites console]**. Den här åtgärden tar bort alla objekt som är associerade med platsen, till exempel UGC, användargrupper, resurser och databasposter.
 
 ![webbplatseråtgärder](assets/siteactions.png)
 
@@ -200,16 +210,17 @@ Observera att UGC inte ingår i platspaketet.
 >
 >På författarinstansen från huvudmenyn:
 >
->1. Navigera till Verktyg > Åtgärder > Replikering-menyn.
-1. Välj&quot;Agenter på författare&quot;.
-1. Välj &quot;Standardagent (publicera)&quot;.
-1. Välj Redigera bredvid Inställningar.
-1. I popup-dialogrutan för agentinställningar väljer du fliken Transport.
-1. I URI ändrar du portnumret 4503 till önskat portnummer >
-   * om du till exempel vill använda port 6103:
-https://localhost:6103/bin/receive?sling:authRequestLogin=1
-1. Välj OK.
-1. (valfritt) Återställ replikeringskön genom att välja Rensa eller Tvinga igen.
+>1. Navigera till **[UIControl-verktyg > Åtgärder > Replikering]** -menyn.
+>1. Välj **[UIControl-agenter för författaren]**.
+>1. Välj **[UIControl-standardagent (publicera)]**.
+>1. Bredvid **[UIControl-inställningar]** väljer du **[UIControl-redigering]**.
+>1. I popup-dialogrutan för agentinställningar väljer du fliken **[UIControl-transport]** .
+>1. I URI ändrar du portnumret 4503 till önskat portnummer >
+   >    * Om du till exempel vill använda port 6103:
+      >      https://localhost:6103/bin/receive?sling:authRequestLogin=1
+>
+1. Välj **[UIControl OK]**.
+1. (Valfritt) Välj **[UIControl Clear]** eller **[UIControl Force Retry]** för att återställa replikeringskön.
 
 
 
@@ -233,14 +244,14 @@ Med tanke på webbplatsens namn&quot;engagera&quot; i steg 1 kan de fyra nya anv
 * Community Engage Community managers
 * Administratörer för communityinteraktionsgrupper
 * Medlemmar i communityengagemang
-*  Moderatorer för communityengagemang
+* Moderatorer för communityengagemang
 * Privilegierade medlemmar för communityengagemang
 * Content Manager för communitywebbplats
 
 Observera att [Aaron McDonald](/help/communities/tutorials.md#demo-users) är medlem i
 
 * Community Engage Community managers
-*  Moderatorer för communityengagemang
+* Moderatorer för communityengagemang
 * Medlemmar i communityn (indirekt som medlem i gruppen Moderatorer)
 
 ![chlimage_1-67](assets/chlimage_1-67.png)
@@ -255,7 +266,7 @@ När en webbplats har konfigurerats och publicerats [konfigurerar du inloggnings
 
 Lägg till en `Login Page Mapping` som
 
-* /content/sites/engage/en/signin:/content/sites/engage/en
+* `/content/sites/engage/en/signin:/content/sites/engage/en`
 
 ## Valfria steg {#optional-steps}
 
@@ -293,13 +304,14 @@ Så här kommer du igång:
 
 
 1. Välj **Spara alla.**
-1. (valfritt) Ta bort webbläsarhistoriken.
+1. (Valfritt) Ta bort webbläsarhistoriken.
 1. Gå till https://localhost:4503/.
 
-   * anlända till https://localhost:4503/content/sites/engage/en.html
+   * Ankomst till https://localhost:4503/content/sites/engage/en.html
 
 >[!NOTE]
-Om du vill inaktivera det anger du bara ett prefix för egenskapsvärdet med ett &quot;x&quot; - `sling:match` - och `xlocalhost.4503/$` Spara alla ****.
+>
+>Om du vill inaktivera det anger du bara ett prefix för egenskapsvärdet med ett &quot;x&quot; - `sling:match` - och `xlocalhost.4503/$` Spara alla ****.
 
 ![chlimage_1-69](assets/chlimage_1-69.png)
 
@@ -322,5 +334,6 @@ Dessutom kan administratörer använda ikonen [](/help/communities/sites-console
 Kom ihåg att **spara** och **publicera** webbplatsen igen efter eventuella ändringar.
 
 >[!NOTE]
-Om du inte känner till AEM läser du dokumentationen om [grundläggande hantering](/help/sites-authoring/basic-handling.md) och en [snabbguide till redigeringssidorna](/help/sites-authoring/qg-page-authoring.md).
+>
+>Om du inte känner till AEM läser du dokumentationen om [grundläggande hantering](/help/sites-authoring/basic-handling.md) och en [snabbguide till redigeringssidorna](/help/sites-authoring/qg-page-authoring.md).
 
