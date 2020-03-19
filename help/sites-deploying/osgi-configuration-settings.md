@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: ed3a858c-7a43-4515-a2ff-43ca465c7d7d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 0849cfdd0e4f9a614c455214e6520ead07ae6da0
 
 ---
 
@@ -36,7 +36,7 @@ Följande OSGi-konfigurationsinställningar (listade efter paket) är relevanta 
 
 >[!NOTE]
 >
->Konfigurationsverktyget [AEM OSGi](https://www.aemstuff.com/osgi.html) kan användas för att lista OSGi-standardkonfigurationer.
+>Diff-verktyget för OSGi-konfiguration, som ingår i [AEM-verktygen](https://helpx.adobe.com/experience-manager/kb/tools/aem-tools.html), kan användas för att lista OSGi-standardkonfigurationer.
 
 >[!NOTE]
 >
