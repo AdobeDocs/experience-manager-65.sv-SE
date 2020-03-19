@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: edc3043c-7ec4-4e4a-b008-95f1784f012e
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
@@ -125,8 +125,8 @@ SQL-skriptet hämtas från AEM-databasen:
 
 En metod för att hämta schemat är att
 
-* Markera `jcr:content`noden för SQL-filen
-* Observera att värdet för `jcr:data`egenskapen är en visningslänk
+* Markera `jcr:content` noden för SQL-filen
+* Observera att värdet för `jcr:data` egenskapen är en visningslänk
 
 * Markera vylänken om du vill spara data i en lokal fil
 
@@ -155,7 +155,7 @@ I följande bild är `init_schema.sql` filen klar att köras:
 
 #### Uppdatera {#refresh}
 
-När skriptet har körts måste du uppdatera `SCHEMAS`avsnittet i skriptet `Navigator` för att kunna se den nya databasen. Använd uppdateringsikonen till höger om SCHEMAS:
+När skriptet har körts måste du uppdatera `SCHEMAS` avsnittet i skriptet `Navigator` för att kunna se den nya databasen. Använd uppdateringsikonen till höger om SCHEMAS:
 
 ![chlimage_1-110](assets/chlimage_1-110.png)
 
