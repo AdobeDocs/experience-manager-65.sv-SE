@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a777a3f1-b39f-4d90-b9b6-02d3e321a86f
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
 
 ---
 
@@ -19,7 +19,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 Community Components Guide är ett interaktivt utvecklingsverktyg för ramverket för [sociala komponenter (SCF)](scf.md). Den innehåller en lista över tillgängliga AEM Communities-komponenter eller de mer komplexa funktioner som byggts av flera komponenter.
 
-Förutom grundläggande information för varje komponent kan du med guiden experimentera med hur SCF-komponenterna/-funktionerna fungerar och hur de kan konfigureras eller anpassas.
+Tillsammans med grundläggande information för varje komponent kan guiden experimentera med hur SCF-komponenterna/-funktionerna fungerar och hur de kan konfigureras eller anpassas.
 
 Information om grundläggande utvecklingsfunktioner för varje komponent finns i [Grundläggande om funktioner och komponenter](essentials.md).
 
@@ -118,7 +118,7 @@ När du använder guiden för en publiceringsinstans är det möjligt att upplev
 
 >[!NOTE]
 >
->Observera att om SRP lämnas som standard till [JSRP](jsrp.md)så syns bara den UGC som anges på publiceringsinstansen vid publiceringen och *inte *visas från [moderationskonsolen](moderate-ugc.md) på författarinstansen.
+>Observera att om SRP lämnas som standard till [JSRP](jsrp.md)så syns bara den UGC som anges i publiceringsinstansen vid publiceringen och syns *inte* från [modereringskonsolen](moderate-ugc.md) på författarinstansen.
 
 ## Klientbibliotek {#client-side-libraries}
 
@@ -152,7 +152,7 @@ Använda kommentarkomponenten som exempel, på antingen författaren eller publi
 
 1. Markera komponentens `jcr:content` nod
 
-   Exempel, `/content/community-components/en/comments/jcr:content`
+   Exempel: `/content/community-components/en/comments/jcr:content`
 
 1. Lägg till en egenskap
 
