@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: e1b5c25d-cbdd-421c-b81a-feb6039610a3
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
 
 ---
 
@@ -50,10 +50,10 @@ I den här självstudien antas att du har en AEM-författare och en AEM-publicer
 
 Nedan följer några praktiska länkar för utvecklare som är nya på AEM-plattformen:
 
-* [Komma igång](../../help/sites-deploying/deploy.md#getting-started) - För distribution av AEM-instanser
+* [Komma igång](../../help/sites-deploying/deploy.md#getting-started): för distribution av AEM-instanser
 
-   * [Grundläggande information](../../help/sites-developing/the-basics.md) - För utvecklare av webbplatser och funktioner
-   * [Steg 1 för författare](../../help/sites-authoring/first-steps.md) - För redigering av sidinnehåll
+   * [Grunderna](../../help/sites-developing/the-basics.md): för utvecklare av webbplatser och funktioner
+   * [Steg 1 för författare](../../help/sites-authoring/first-steps.md): för att skapa sidinnehåll
 
 ## Använda CRXDE Lite Development Environment {#using-crxde-lite-development-environment}
 
@@ -71,7 +71,7 @@ När du har loggat in med administratörsbehörighet finns det olika sätt att f
 
 3. Bläddra direkt till `CRXDE Lite`: `<server>:<port>/crx/de`
 
-   På en lokal författarinstans: ` [http://localhost:4502/crx/de](http://localhost:4502/crx/de)`
+   På en lokal författarinstans: [http://localhost:4502/crx/de](http://localhost:4502/crx/de)
 
 Om du vill arbeta med CRXDE Lite måste du logga in med utvecklar- eller administratörsbehörighet. För standardinstansen av localhost kan du logga in med
 
