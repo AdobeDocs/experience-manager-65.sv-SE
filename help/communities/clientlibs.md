@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 68ce47c8-a03f-40d6-a7f3-2cc64aee0594
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 5b8b1544645465d10e7c2018364b6a74f1ad9a8e
 
 ---
 
 
-# Clientlibs for Communities Components{#clientlibs-for-communities-components}
+# Clientlibs for Communities Components {#clientlibs-for-communities-components}
 
 ## Introduktion {#introduction}
 
@@ -65,22 +65,22 @@ Använd [CRXDE|Lite](#using-crxde-lite) för att ändra en befintlig klientlibsl
 
 Så här lägger du till en klientlib för en community-webbplats med [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) :
 
-* gå till [https://&lt;server>:&lt;port>/crx/de](https://localhost:4502/crx/de)
-* leta reda på noden `clientlibslist` för sidan där du vill lägga till komponenten
+* Gå till [https://&lt;server>:&lt;port>/crx/de](https://localhost:4502/crx/de)
+* Leta reda på `clientlibslist` noden för sidan där du vill lägga till komponenten
 
    * `/content/sites/sample/en/page/jcr:content/clientlibslist`
 
-* med `clientlibslist` nod markerad
+* Med `clientlibslist` nod markerad
 
-   * leta reda på[] egenskapen String `scg:requiredClientLibs`
-   * välj dess `Value` för att komma åt dialogrutan String-array
+   * Leta reda på[] egenskapen String `scg:requiredClientLibs`
+   * Markera dess innehåll `Value` för att komma åt dialogrutan String-array
 
-      * bläddra nedåt om det behövs
-      * välj + för att ange ett nytt klientbibliotek
+      * Bläddra nedåt om det behövs
+      * Välj + för att ange ett nytt klientbibliotek
 
-         * upprepa för att lägga till fler klientbibliotek
-      * välj** OK**
-   * välj **Spara alla**
+         * Upprepa för att lägga till fler klientbibliotek
+      * Välj **OK**
+   * Välj **Spara alla**
 
 
 
