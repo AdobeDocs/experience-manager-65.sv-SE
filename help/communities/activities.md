@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 89f3630f-c01a-4dc0-9ff5-169785f22c01
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
 
 ---
 
 
-# Funktionen Aktivitetsströmmar{#activity-streams-feature}
+# Funktionen Aktivitetsströmmar {#activity-streams-feature}
 
 ## Introduktion {#introduction}
 
@@ -26,8 +26,8 @@ Möjligheten att följa ger en annan bild av aktiviteter när communitymedlemmar
 
 Dokumentet beskriver:
 
-* lägga till komponenten Activity Streams på en AEM-webbplats
-* konfigurationsinställningar för komponenten Activity Streams
+* Lägga till komponenten Activity Streams på en AEM-webbplats
+* Konfigurationsinställningar för komponenten för aktivitetsströmmar
 
 ### Lägga till aktivitetsströmmar till en sida {#adding-activity-streams-to-a-page}
 
@@ -53,15 +53,25 @@ Ange vilka aktiviteter som ska visas på fliken **Användaraktiviteter** :
 
 ![chlimage_1-26](assets/chlimage_1-26.png)
 
-* **Maximalt antal aktiviteter** antalet aktiviteter som ska visas
+* **Maximalt antal aktiviteter**
 
-* **Sökväg till** direktuppspelningsresurs Lämna tomt om du vill använda community-webbplatsen eller community-gruppen som standard. Direktuppspelningsresursens sökväg identifierar aktivitetskällan. Standardvärdet är tomt.
+   Antalet aktiviteter som ska visas
 
-* **Visa vyn** Användaraktiviteter, om den är markerad, innehåller aktivitetssidan en flik som filtrerar aktiviteter baserat på aktiviteter som genererats i communityn av den aktuella medlemmen. Standard är markerat.
+* **Sökväg för direktuppspelningsresurs**
 
-* **Visa vyn** Alla aktiviteter, om den är markerad, innehåller aktivitetssidan en flik som innehåller alla aktiviteter som genereras i den community som den aktuella medlemmen har åtkomst till. Standard är markerat.
+   Lämna tomt som standard till communitywebbplatsen eller community-gruppen. Direktuppspelningsresursens sökväg identifierar aktivitetskällan. Standardvärdet är tomt.
 
-* **Visa följande vy** om det här alternativet är markerat innehåller aktivitetssidan en flik som filtrerar aktiviteter baserat på de som den aktuella medlemmen följer. Standard är markerat.
+* **Visa vy för användaraktiviteter**
+
+   Om det här alternativet är markerat innehåller aktivitetssidan en flik som filtrerar aktiviteter baserat på aktiviteter som genererats i communityn av den aktuella medlemmen. Standard är markerat.
+
+* **Visa vyn Alla aktiviteter**
+
+   Om det här alternativet är markerat kommer aktivitetssidan att innehålla en flik som innehåller alla aktiviteter som har skapats i den community som den aktuella medlemmen har åtkomst till. Standard är markerat.
+
+* **Visa följande vy**
+
+   Om det här alternativet är markerat innehåller aktivitetssidan en flik som filtrerar aktiviteter baserat på de som den aktuella medlemmen följer. Standard är markerat.
 
 ### Följande vy {#following-view}
 
@@ -69,11 +79,11 @@ Komponenter måste konfigureras för att aktivera följande. Funktioner som till
 
 ![chlimage_1-27](assets/chlimage_1-27.png)
 
-Med knappen **Följ **kan du följa upp tävlingsbidrag som aktiviteter, [meddelanden](/help/communities/notifications.md)eller [prenumerationer](/help/communities/subscriptions.md). Varje gång **Följ **knappen är markerad går det att aktivera eller inaktivera en markering. Markeringen visas bara när den är konfigurerad. `Email Subscriptions`
+Med knappen **Följ** kan du följa inmatningar som aktiviteter, [meddelanden](/help/communities/notifications.md)eller [prenumerationer](/help/communities/subscriptions.md). Varje gång knappen **Följ** är markerad går det att aktivera eller inaktivera en markering. Markeringen visas bara när den är konfigurerad. `Email Subscriptions`
 
 Om någon av följande metoder är markerad ändras texten för knappen till **Följ**. Du kan välja `Unfollow All` att inaktivera alla metoder.
 
-Knappen **Följ **visas
+Knappen **Följ** visas
 
 * när du visar en annan medlems profil
 * på en huvudfunktionssida, t.ex. forum, QnA och bloggar
