@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 765a3d9b-4552-403e-872c-fdf684ac271d
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
@@ -35,7 +35,7 @@ Installation av:
 
 Inställningar för:
 
-* **Community Managers** för aktiveringsgrupper: Endast medlemmar i `Community Enablement Managers` användargruppen kan tilldelas rollen `*Community Site* Enablement Manager`vars behörigheter kan omfatta innehållsskapande, uppdrag och medlemshantering i publiceringsmiljön.
+* **Community Managers** för aktiveringsgrupper: Endast medlemmar i `Community Enablement Managers` användargruppen kan tilldelas rollen `Community Site Enablement Manager`vars behörigheter kan omfatta innehållsskapande, uppdrag och medlemshantering i publiceringsmiljön.
 
 Valfri konfiguration av:
 
@@ -51,37 +51,37 @@ Varje steg länkar till dokumentation med nödvändig information.
 
 **På alla författar-/publiceringsinstanser:**
 
-1. **[installera JDBC-drivrutin för MySQL](deploy-communities.md#jdbc-driver-for-mysql)**Use Web Console (paket):*http://localhost:4502/system/console/bundles*Installera *innan*du installerar SCORM-paketet
+1. **[Installera JDBC-drivrutin för MySQL](deploy-communities.md#jdbc-driver-for-mysql)**Use Web Console (paket):*http://localhost:4502/system/console/bundles*Installera *innan*du installerar SCORM-paketet
 
-1. **[installera SCORM-paketet](deploy-communities.md#scorm-package)**Använd pakethanteraren:*http://localhost:4502/crx/packmgr/*
+1. **[Installera SCORM-paketet](deploy-communities.md#scorm-package)**Använd pakethanteraren:*http://localhost:4502/crx/packmgr/*
 
 **På alla servrar:**
 
-1. **[installera MySQL, MySQL Workbench](mysql.md)**
+1. **[Installera MySQL, MySQL Workbench](mysql.md)**
 
-1. **[installera MySQL-databaser](mysql.md#database-setup)**Kör SQL-skript som hämtats från författarinstansenAnvänd MySQL Workbench
+1. **[Installera MySQL-databaser](mysql.md#database-setup)**Kör SQL-skript som hämtats från författarinstansenAnvänd MySQL Workbench
 
 **På samma server som är värd för författarinstans:**
 
-1. **[installera FFmpeg](ffmpeg.md)**
+1. **[Installera FFmpeg](ffmpeg.md)**
 
 **På alla författar-/publiceringsinstanser:**
 
-1. **[konfigurera poolen](mysql.md#configure-jdbc-connections)**JDBC-anslutningar med webbkonsolen (configMgr):*http://localhost:4502/system/console/configMgr*
+1. **[Konfigurera poolen](mysql.md#configure-jdbc-connections)**JDBC-anslutningar med webbkonsolen (configMgr):*http://localhost:4502/system/console/configMgr*
 
-1. **[konfigurera SCORM-motortjänsten](mysql.md#aem-communities-scormengine-service)**Använd webbkonsol (configMgr):*http://localhost:4502/system/console/configMgr*
+1. **[Konfigurera SCORM-motortjänsten](mysql.md#aem-communities-scormengine-service)**Använd webbkonsol (configMgr):*http://localhost:4502/system/console/configMgr*
 
-1. **[konfigurera CSRF-filter](mysql.md#adobe-granite-csrf-filter)**Använd webbkonsol (configMgr):*http://localhost:4502/system/console/configMgr*
+1. **[Konfigurera CSRF-filter](mysql.md#adobe-granite-csrf-filter)**Använd webbkonsol (configMgr):*http://localhost:4502/system/console/configMgr*
 
 **On author instance:**
 
-1. (*valfritt*) **[konfigurera tjänsten](analytics.md)**Analytics med konsolen Verktyg, Distribution och Cloud Services:*http://localhost:4502/etc/cloudservices/sitecatalyst.html*
+1. (*Valfritt*) **[Konfigurera analystjänsten](analytics.md)**med verktygs-, distributions- och molntjänstkonsolen:*http://localhost:4502/etc/cloudservices/sitecatalyst.html*
 
-1. **[konfigurera konsolen](ffmpeg.md#configure-ffmpeg-transcoding-service)**Använd arbetsflöde/modeller för FFmpeg
+1. **[Konfigurera mpeg](ffmpeg.md#configure-ffmpeg-transcoding-service)**Use Workflow/Models-konsolen
 
-1. **[aktivera tunneltjänsten](deploy-communities.md#tunnel-service-on-author)**Använd webbkonsol (configMgr):*http://localhost:4502/system/console/configMgr*
+1. **[Aktivera Tunneltjänsten](deploy-communities.md#tunnel-service-on-author)**Använd webbkonsol (configMgr):*http://localhost:4502/system/console/configMgr*
 
-1. **[skapa Community-administratörer](users.md#creating-community-members)**I författarmiljön använder du Classic-UI Security console:*http://localhost:4502/useradmin*skapa användare med sökväg = /home/users/community
+1. **[Skapa communityadministratörer](users.md#creating-community-members)**I författarmiljön använder du Classic-UI-säkerhetskonsolen:*http://localhost:4502/useradmin*skapa användare med sökväg = /home/users/community
 
    * Lägg till medlemmar i följande grupper:
 
@@ -90,4 +90,4 @@ Varje steg länkar till dokumentation med nödvändig information.
 
 ## Dispatcher {#dispatcher}
 
-När distributionen innehåller [AEM&#39;s Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)måste `clientheader``filter`avsnitten ändras för att aktiveringsfunktionerna ska fungera korrekt. Se [Konfigurera Dispatcher för Communities](dispatcher.md#enablement).
+När distributionen inkluderar [AEM&#39;s Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)måste avsnitten `clientheader` och `filter` ändras för att aktiveringsfunktionerna ska fungera korrekt. Se [Konfigurera Dispatcher för Communities](dispatcher.md#enablement).
