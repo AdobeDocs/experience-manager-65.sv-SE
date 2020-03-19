@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: f2ac3d66-cc79-498f-83fb-dd96feb88de2
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
@@ -23,8 +23,8 @@ I utvecklings- och demonstrationssyfte måste du köra en författare och en pub
 
 Följ de grundläggande [anvisningarna i AEM Getting Started](../../help/sites-deploying/deploy.md#getting-started) som ger
 
-* författarmiljö på [localhost:4502](http://localhost:4502/)
-* publiceringsmiljö på [localhost:4503](http://localhost:4503/)
+* Redigeringsmiljö på [localhost:4502](http://localhost:4502/)
+* Publiceringsmiljö på [localhost:4503](http://localhost:4503/)
 
 För AEM Communities,
 
@@ -109,7 +109,7 @@ När [tunneltjänsten](#enable-the-tunnel-service) är aktiverad används i stä
 
 I den här självstudiekursen skapas tre medlemmar i publiceringsmiljön. Två medlemmar blir medlemmar i en användargrupp som är tilldelad en utbildningsväg, medan den tredje medlemmen blir en aktiveringsresurskontakt.
 
-En fjärde användare skapas i författarmiljön och tilldelas rollerna Webbgruppsadministratör och Webbgruppshanterare.
+En fjärde användare skapas i författarmiljön och tilldelas rollerna Webbgruppsadministratör och Aktivitetshanteraren i användarforumet.
 
 >[!NOTE]
 >
@@ -121,12 +121,12 @@ En fjärde användare skapas i författarmiljön och tilldelas rollerna Webbgrup
 
 ### Riley Taylor - anmälare {#riley-taylor-enrollee}
 
-[Skapa en medlem](members.md#create-new-member) som ska läggas till i en grupp med elever - i communityklassgruppen Ski.
+[Skapa en medlem](members.md#create-new-member) som ska läggas till i en grupp med elev - Community Ski Class-gruppen.
 
 * **ID**: riley
 * **E-post**: riley.taylor@mailinator.com
-* **Lösenord**:lösenord
-* **Bekräfta lösenord**:lösenord
+* **Lösenord**: lösenord
+* **Bekräfta lösenord**: lösenord
 * **Förnamn**: Riley
 * **Efternamn**: Taylor
 
@@ -136,8 +136,8 @@ En fjärde användare skapas i författarmiljön och tilldelas rollerna Webbgrup
 
 * **ID**: sidney
 * **E-post**: sidney.croft@mailinator.com
-* **Lösenord**:lösenord
-* **Bekräfta lösenord**:lösenord
+* **Lösenord**: lösenord
+* **Bekräfta lösenord**: lösenord
 * **Förnamn**: Sidney
 * **Efternamn**: Beskär
 
@@ -147,8 +147,8 @@ En fjärde användare skapas i författarmiljön och tilldelas rollerna Webbgrup
 
 * **ID**: quinn
 * **E-post**: quinn.harper@mailinator.com
-* **Lösenord**:lösenord
-* **Bekräfta lösenord**:lösenord
+* **Lösenord**: lösenord
+* **Bekräfta lösenord**: lösenord
 * **Förnamn**: Quinn
 * **Efternamn**: Harper
 
@@ -161,8 +161,8 @@ En fjärde användare skapas i författarmiljön och tilldelas rollerna Webbgrup
 * **Beskrivning**: en exempelgrupp för tilldelning av aktiveringsresurser
 * **Lägg till medlemmar i gruppen** &#39;add&#39;:
 
-   *  riley
-   *  sidney
+   * riley
+   * sidney
 
 * Välj **[!UICONTROL Spara]**
 
@@ -193,12 +193,12 @@ Skapa en användare på *författaren* som får rollen som Community Administrat
 * Navigera från huvudkonsolen till **[!UICONTROL Verktyg, Åtgärder > Säkerhet > Användare]**
 * Välj **[!UICONTROL Lägg till användare på menyn]** Redigera ****
 
-* I `Create New User` dialogrutan anger du
+* In the `Create New User` dialog enter
 
    * **ID&amp;ast;**: sirius
    * **E-postadress**: sirius.nilson@mailinator.com
-   * **Lösenords&amp;stämpel;ast;**:lösenord
-   * **Bekräfta lösenord&amp;stämpel;ast;**:lösenord
+   * **Lösenords&amp;stämpel;ast;**: lösenord
+   * **Bekräfta lösenord&amp;stämpel;ast;**: lösenord
    * **Förnamn**: Sirius
    * **Efternamn&amp;stämpel;ast;**: Nilson
 
