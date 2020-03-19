@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 0b126218-b142-4d33-a28c-a91ab4fe99ac
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
@@ -69,7 +69,7 @@ Detta startar en MongoDB-server med standardport 27017.
 
 >[!NOTE]
 >
->Om MongoDB startas *efter *AEM, **start **all **AEM **instanser så att de ansluter till MongoDB på rätt sätt.
+>Om MongoDB startas *efter* AEM **startar du om** alla **AEM** -instanser så att de kan ansluta till MongoDB.
 
 ### Demo Production Option: Konfigurera MongoDB-replikuppsättning {#demo-production-option-setup-mongodb-replica-set}
 
