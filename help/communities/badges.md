@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 135b3077-5343-4888-858d-de5e9b1d4b04
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 272eedc1585dbdea315b49d010e4b1d78cedc360
 
 ---
 
 
-# Badges Console{#badges-console}
+# Badges Console {#badges-console}
 
 ## Om Badges {#about-badges}
 
@@ -26,15 +26,15 @@ Konsolen Communities Badges innehåller funktioner för att lägga till egna emb
 
 För närvarande visas emblem som en medlem i communityn får eller tilldelas tillsammans med sitt namn och avatar på följande platser:
 
-* profiler
-* [forum](/help/communities/forum.md)
+* Profiler
+* [Forum](/help/communities/forum.md)
 * [QnA](/help/communities/working-with-qna.md)
-* [lederboards](/help/communities/enabling-leaderboard.md)
-* [ideation](/help/communities/ideation-feature.md)
+* [Ledartavlor](/help/communities/enabling-leaderboard.md)
+* [Ideation](/help/communities/ideation-feature.md)
 
 För att nå Badges-konsolen i redigeringsmiljön
 
-* från global navigering: **Verktyg, Communities, Badges**
+* Navigera från global navigering till **[UIControl Tools > Communities > Badges]**
 
 Den här konsolen visar de emblem som är tillgängliga för tillfället och från vilka nya emblem kan läggas till.
 
@@ -48,13 +48,21 @@ Om publiceringsmiljön är en grupp utgivare måste du konfigurera [användarsyn
 
 ![chlimage_1-124](assets/chlimage_1-124.png)
 
-* **Överför bild**(*krävs*) En badge-bild med en rekommenderad storlek på 32 x 32 pixlar vid 72 dpi i antingen JPEG- eller PNG-format.
+* **Överför bild**
 
-* **Namn**(*obligatoriskt*) Namnet på märket. Det är standardnodnamnet `Display Name` och databasnodnamnet. Om `Name` databasen inte är ett giltigt databasnodnamn ändras det.
+   (*Obligatoriskt*) En badge-bild med en rekommenderad storlek på 32 x 32 pixlar vid 72 dpi i antingen JPEG- eller PNG-format.
 
-* **Visningsnamn**(*valfritt*) Namnet som ska visas för märket i gränssnittet. Standard är den oförändrade text som anges för `Name`.
+* **Namn**
 
-* **Beskrivning**(*valfritt*) En beskrivning av märket.
+   (*Obligatoriskt*) Namnet på märket. Det är standardnodnamnet `Display Name` och databasnodnamnet. Om `Name` databasen inte är ett giltigt databasnodnamn ändras det.
+
+* **Visningsnamn**
+
+   (*Valfritt*) Namnet som ska visas för märket i användargränssnittet. Standard är den oförändrade text som anges för `Name`.
+
+* **Beskrivning**
+
+   (*Valfritt*) En beskrivning av märket.
 
 ## Additional Information {#additional-information}
 
