@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 26715b94-e2ea-4da7-a0e2-3e5a367ac1cd
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
@@ -27,8 +27,8 @@ Nu när den nyligen skapade communitysajten och dess aktiveringsresurser och utb
 
 Börja med att bläddra till den URL som visas när du skapar webbplatsen, men på publiceringsservern, t.ex.
 
-* författarens URL = [http://localhost:4502/content/sites/enable/en.html](http://localhost:4502/content/sites/enable/en.html)
-* publicerings-URL = [http://localhost:4503/content/sites/enable/en.html](http://localhost:4503/content/sites/enable/en.html)
+* Författar-URL = [http://localhost:4502/content/sites/enable/en.html](http://localhost:4502/content/sites/enable/en.html)
+* Publicera URL = [http://localhost:4503/content/sites/enable/en.html](http://localhost:4503/content/sites/enable/en.html)
 
 Om [standardhemsidan var inställd](enablement-create-site.md#changethedefaulthomepage)startar du webbplatsen genom att bläddra till [http://localhost:4503/](http://localhost:4503/) .
 
@@ -36,7 +36,7 @@ Vid första ankomsten till den publicerade webbplatsen är besökaren vanligtvis
 
 **http://localhost:4503/content/sites/enable/en.html**
 
-![chlimage_1-432](assets/chlimage_1-433.png)
+![chlimage_1-433](assets/chlimage_1-433.png)
 
 ## Anonym webbplatsbesökare {#anonymous-site-visitor}
 
@@ -82,7 +82,7 @@ Logga in med
 * `Username: riley`
 * `Password: password`
 
-Om användarprofilen inte skapades genom självregistrering visas profilsidan den första gången en medlem loggar in, så att de kan verifiera och ändra den efter behov.
+Om användarprofilen inte skapades genom självregistrering visas profilsidan den första gången en medlem loggar in, så att de kan verifiera och ändra den om det behövs.
 
 Nästa gång medlemmen loggar in visas startsidan, som identifieras av det första menyalternativet.
 
@@ -161,7 +161,7 @@ Hemsidan identifieras av det första menyalternativet, Uppdrag. Quinn är modera
 
 ### Administration {#administration}
 
-Vad som finns, är aktivitet av de två eleverna `Riley Taylor` och `Sidney Croft. By s`väljer `Administration`länken till Moderation Console, kan Quinn använda [masmodereringskonsolen](moderation.md) för att moderera sina inlägg.
+Vad det finns, är aktivitet av de två eleverna `Riley Taylor` och `Sidney Croft`. Genom att klicka på `Administration` länken för att komma åt modereringskonsolen kan Quinn använda konsolen [för](moderation.md) moderering av flera objekt för att moderera sina inlägg.
 
 Om du väljer ikonen för sidpanelen växlar du de filter som används för att söka efter innehåll i communityn.
 
@@ -203,8 +203,8 @@ Med lite aktivitet och interaktion med resurserna när de publiceras är det vä
 * Logga in med administratörsbehörighet
 * Navigera från huvudmenyn till **[!UICONTROL Communities > Resources]**
 * Markera `Enablement Tutorial` platsen
-* Välj `Report`ikonen om du vill se en sammanfattning av alla resurser
-* Välj en resurs och sedan `Report`ikonen för en rapport om den resursen
+* Välj `Report` ikonen om du vill se en sammanfattning av alla resurser
+* Välj en resurs och sedan `Report` ikonen för en rapport om resursen
 
 Observera att det troligen är för tidigt att visa data från Adobe Analytics, som kan ta mellan 1 och 12 timmar att visa. Men grundläggande SCORM-rapportering är redan tillgänglig.
 
@@ -218,7 +218,7 @@ Observera att det troligen är för tidigt att visa data från Adobe Analytics, 
 
 * Open Card `Enablement Tutorial`
 * Open Card `Ski Lessons`
-* `select Report, User Report`
+* Välj `Report > User Report`
 
 ![chlimage_1-444](assets/chlimage_1-444.png)
 
