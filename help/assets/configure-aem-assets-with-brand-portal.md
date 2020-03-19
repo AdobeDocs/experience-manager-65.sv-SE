@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: dca5a2ac-1fc8-4251-b073-730fd6f49b1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 36e9743b8b41d53e735dce4ba13c986ea22e612b
+source-git-commit: f63e776d1f7a9433e80633cdcfdf5ffed37b29da
 
 ---
 
@@ -190,9 +190,6 @@ Kontrollera att du har utfört följande steg:
 
    ![Konfiguration av IMS-konto](assets/create-new-integration6.png)
 
-   >[!CAUTION]
-   >
-   >Skapa endast en IMS-konfiguration. Skapa inte flera IMS-konfigurationer.
 
 1. Välj IMS-konfigurationen och klicka på **[!UICONTROL Kontrollera hälsa]**. En dialogruta visas.
 
@@ -200,7 +197,13 @@ Kontrollera att du har utfört följande steg:
 
    ![](assets/create-new-integration5.png)
 
-   <br/> <br/>
+>[!CAUTION]
+>
+>Skapa endast en giltig IMS-konfiguration. Skapa inte flera IMS-konfigurationer.
+>
+> Kontrollera att konfigurationen är felfri. Om konfigurationen inte är felfri tar du bort den och skapar en ny felfri konfiguration.
+
+<br/> <br/>
 
 ### Konfigurera molntjänst {#configure-the-cloud-service}
 
