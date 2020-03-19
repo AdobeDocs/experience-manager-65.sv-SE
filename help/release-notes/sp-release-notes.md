@@ -8,7 +8,7 @@ discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: cc72581f0de6f47cd1d7e207f228e64ba7c9e842
+source-git-commit: cc3cb8732e2c0b4a7275ec302517791a5babdd42
 
 ---
 
@@ -41,6 +41,12 @@ Några viktiga funktioner och förbättringar i AEM 6.5.4.0:
 * [Tillgänglighetsförbättringar](new-features-latest-service-pack.md#accessibility-enhancements) i Experience Manager Assets.
 
 * Den inbyggda databasen (Apache Jackrabbit Oak) uppdateras till version 1.10.8.
+
+* Nu kan du synkronisera selektiva underträd till *Dynamic Media - Scene7-läge* i stället för alla tillgängliga på `content/dam`.
+
+* Integrering av formulärdatamodell med SOAP-webbtjänst har nu stöd för urvalsgrupper eller attribut för element.
+
+* SOAP-indata eller -utdata och komplexa datastrukturer har nu stöd för dynamisk gruppersättning.
 
 En fullständig lista över funktioner, viktiga högdagrar, viktiga funktioner som introducerats i tidigare AEM 6.5-servicepaket finns i [Nyheter i Adobe Experience Manager 6.5 Service Pack 4](new-features-latest-service-pack.md).
 
@@ -110,7 +116,7 @@ En fullständig lista över funktioner, viktiga högdagrar, viktiga funktioner s
 
 * Flera sökfrågor utlöses när flera taggar väljs från sökfiltret (NPR-32143).
 
-* Experience Manager Assets-gränssnittet visar trunkerade filnamn när resurser med fler än 50 tecken i filnamnet överförs (NPR-32054).
+* Användargränssnittet i Experience Manager Assets visar trunkerade filnamn när resurser med fler än 50 tecken i filnamnet överförs (NPR-32054).
 
 * Alla kryssrutor på panelen Filter avmarkeras när den första och den andra kryssrutan avmarkeras när du har markerat två kryssrutor i kryssruteträdet i Adobe Stock (NPR-31919).
 
@@ -347,7 +353,7 @@ Kunderna rekommenderas att granska om de använder funktionen eller funktionen i
 |---|---|---|
 | Integreringar | Inställningsskärmen för **[!UICONTROL AEM Cloud-tjänster]** har tagits bort. Med integreringen av AEM och Target uppdaterad i AEM 6.5 för att stödja Target Standard API, som använder autentisering via Adobe IMS och I/O, och den växande rollen hos Adobe Launch för att instrumentera AEM-sidor för analys och personalisering, har Opt-In Wizard blivit funktionellt irrelevant. | Konfigurera systemanslutningar, Adobe IMS-autentisering och Adobe I/O-integreringar via respektive AEM-molntjänster |
 
-## Kända fel {#known-issues}
+## Known issues {#known-issues}
 
 * Om konfigurationsguiden för **anslutna resurser** returnerar ett 404-felmeddelande efter installationen måste du manuellt installera om **cq-remotedam-client-ui-content** och **cq-remotedam-client-ui-components** -paketen med hjälp av Package Manager.
 * Följande fel och varningsmeddelanden kan visas under installationen av AEM 6.5.x.x:
