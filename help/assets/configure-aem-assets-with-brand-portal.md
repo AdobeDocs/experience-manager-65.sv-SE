@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: dca5a2ac-1fc8-4251-b073-730fd6f49b1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f63e776d1f7a9433e80633cdcfdf5ffed37b29da
+source-git-commit: 4f3928558641af89d138bfbf85ba099a4286b2f3
 
 ---
 
@@ -203,7 +203,6 @@ Kontrollera att du har utfört följande steg:
 >
 > Kontrollera att konfigurationen är felfri. Om konfigurationen inte är felfri tar du bort den och skapar en ny felfri konfiguration.
 
-<br/> <br/>
 
 ### Konfigurera molntjänst {#configure-the-cloud-service}
 
