@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: developing
 discoiquuid: a03145f7-6697-4797-b73e-6f8d241ce469
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
 
 ---
 
@@ -42,7 +42,7 @@ Från global navigering på en författarinstans väljer du **[!UICONTROL Verkty
 
    * `Name`: Enkelsidig mall
    * `Description`: En mall som består av en enda sidfunktion.
-   * select `Enabled`
+   * Välj `Enabled`
 
 ![chlimage_1-83](assets/chlimage_1-83.png)
 
@@ -113,7 +113,7 @@ URL:en kommer att vara [http://localhost:4502/editor.html/content/sites/sample/e
 
 ![chlimage_1-90](assets/chlimage_1-90.png)
 
-På den enkla startsidan kan du se vad som är förkopplat via communityfunktionerna och -mallarna och spela upp med att lägga till och konfigurera communitykomponenter.
+På den enkla startsidan är det möjligt att se vad som är förkopplat via communityfunktionerna och -mallarna, och att leka med att lägga till och konfigurera communitykomponenter.
 
 ## Visa webbplats vid publicering {#view-site-on-publish}
 
