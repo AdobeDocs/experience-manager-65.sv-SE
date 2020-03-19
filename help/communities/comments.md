@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 216cfb3e-777e-4773-afba-749debdca000
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 5b8b1544645465d10e7c2018364b6a74f1ad9a8e
 
 ---
 
 
-# Använda kommentarer{#using-comments}
+# Använda kommentarer {#using-comments}
 
 ## Introduktion {#introduction}
 
@@ -24,12 +24,12 @@ Kommentarsfunktionen används för att låta besökare (medlemmar) på den inlog
 
 Dokumentet beskriver:
 
-* lägga `Comments`till på en sida.
-* konfigurationsinställningar för `Comments`komponenten.
+* Lägga `Comments`till på en sida.
+* Konfigurationsinställningar för `Comments`komponenten.
 
 >[!NOTE]
 >
->Anonym publicering av en kommentar stöds inte. Besökare måste registrera sig (bli medlem) och logga in för att kunna delta.
+>Anonym publicering av en kommentar stöds inte. Besökarna måste registrera sig (bli medlem) och logga in för att kunna delta.
 
 ### Lägga till kommentarer på en sida {#adding-comments-to-a-page}
 
@@ -81,7 +81,7 @@ Under fliken **Kommentarer** anger du hur besökare ska ange kommentarer.
 
 * **Tillåtna filtyper**
 
-   Endast relevant om Tillåt filöverföringar är markerat. En kommaavgränsad lista med filnamnstillägg med punktavgränsaren. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp anges tillåts inte den som inte anges. Standard är inte angivet så att** **alla filtyper tillåts.
+   Endast relevant om Tillåt filöverföringar är markerat. En kommaavgränsad lista med filnamnstillägg med punktavgränsaren. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp anges tillåts inte den som inte anges. Ingen standard har angetts så att alla filtyper tillåts.
 
 * **RTF-redigerare**
 
@@ -101,9 +101,11 @@ Under fliken **Kommentarer** anger du hur besökare ska ange kommentarer.
 
 #### Fliken Användarmoderering {#user-moderation-tab}
 
-Under fliken **Användarmoderering **anger du hur de skickade kommentarerna ska hanteras. Mer information finns i [Hantera användargenererat innehåll](/help/communities/moderate-ugc.md).
+På fliken **Användarmoderering** anger du hur de skickade kommentarerna ska hanteras. Mer information finns i [Hantera användargenererat innehåll](/help/communities/moderate-ugc.md).
 
-* **Förhandsmoderering** Om det här alternativet är markerat måste kommentarerna godkännas innan de visas på en publiceringsplats. Standard är avmarkerat.
+* **Före moderering**
+
+   Om det här alternativet är markerat måste kommentarerna godkännas innan de visas på en publiceringsplats. Standard är avmarkerat.
 
 * **Ta bort kommentarer**
 
@@ -139,7 +141,7 @@ Under fliken **Användarmoderering **anger du hur de skickade kommentarerna ska 
 
 #### Fliken Sorteringsinställningar {#sort-settings-tab}
 
-Under fliken **Sorteringsinställningar **anger du hur de bokförda kommentarerna ska sorteras när de visas.
+På fliken **Sorteringsinställningar** anger du hur de skickade kommentarerna ska sorteras när de visas.
 
 * **Sorteringsfält**
 
@@ -155,19 +157,19 @@ Genom att ändra kommentarsresurstypen genererar inte längre kommentarsystemet 
 
 När du känner till de anpassade resurstyperna anger du [designläge](/help/sites-authoring/default-components-designmode.md) och dubbelklickar på den monterade `Comments` komponenten för att öppna en dialogruta med en extra flik.
 
-Under fliken **Resurstyper **anger du anpassad resourceType för nya instanser av `Comments or Voting`komponenterna:
+Under fliken **Resurstyper** anger du anpassad resourceType för nya instanser av `Comments or Voting`komponenterna:
 
 ![chlimage_1-144](assets/chlimage_1-144.png)
 
 * **Resurstyp för kommentar**
 
-   Navigera till resourceType för en utökad `comment`komponent (en kommentar) i /apps. Exempel, `/apps/social/commons/components/hbs/comments/comment`
+   Navigera till resourceType för en utökad `comment`komponent (en kommentar) i /apps. Exempel: `/apps/social/commons/components/hbs/comments/comment`
 
    Den här resursen identifierar den resourceType för den UGC som skapas när en besökare publicerar en kommentar.
 
 * **Typ av röstningsresurs**
 
-   Navigera till resourceType för en utökad `voting`komponent i /apps. Exempel, `/apps/social/components/hbs/voting`
+   Navigera till resourceType för en utökad `voting`komponent i /apps. Exempel: `/apps/social/components/hbs/voting`
 
    Den här resursen identifierar resurstypen för användargenererat innehåll som skapas när en besökare publicerar en röst.
 
@@ -185,10 +187,10 @@ När den inloggade användaren har moderator- eller administratörsbehörighet k
 
 När besökaren är inloggad, beroende på konfigurationen, kan de
 
-* publicera en ny kommentar
-* redigera sin egen kommentar
-* ta bort sin egen kommentar
-* flagga andras kommentarer
+* Publicera en ny kommentar
+* Redigera en egen kommentar
+* Ta bort en egen kommentar
+* Flagga andras kommentarer
 
 #### Anonym {#anonymous}
 
