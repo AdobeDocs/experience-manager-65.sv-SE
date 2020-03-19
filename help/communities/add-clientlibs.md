@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 46f81c3f-6512-43f1-8ec1-cc717ab6f6ff
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
 
-# Lägg till klienter{#add-clientlibs}
+# Lägg till klienter {#add-clientlibs}
 
 ## Lägg till en ClientLibraryFolder (clientlibs) {#add-a-clientlibraryfolder-clientlibs}
 
@@ -24,33 +24,33 @@ Skapa en ClientLibraryFolder med namnet `clientlibs`som innehåller den JS och C
 
 Det `categories`egenskapsvärde som anges för det här klientbiblioteket är den identifierare som används för att ta med klientlibben direkt från en innehållssida eller för att bädda in den i andra klientlibs.
 
-1. med **CRXDE Lite**, expandera `/etc/designs`
+1. Expandera med **CRXDE Lite**`/etc/designs`
 
-1. högerklicka `an-scf-sandbox` och markera `Create Node`
+1. Högerklicka `an-scf-sandbox` och välj `Create Node`
 
    * Namn : `clientlibs`
    * Typ : `cq:ClientLibraryFolder`
 
-1. click **OK**
+1. Click **OK**
 
 ![chlimage_1-47](assets/chlimage_1-47.png)
 
-På fliken **Egenskaper** för den nya `clientlibs` noden anger du egenskapen **`categories`**:
+På fliken **Egenskaper** för den nya `clientlibs` noden anger du egenskapen **categories** :
 
 * Namn: **kategorier**
 * Typ: **String**
 * Värde: **apps.an-scf-sandbox**
-* click **Add**
-* klicka på **Spara alla**
+* Click **Add**
+* Klicka på **Spara alla**
 
-Obs! för att visa kategorivärdet med appar. är en konvention som identifierar att det ägande programmet finns i /apps-mappen, inte /libs.  VIKTIGT! Lägg till platshållare `js.tx`till filer och**`css.tx`**t. (Det är inte officiellt en cq:ClientLibraryFolder utan dem.)
+Obs! för att visa kategorivärdet med appar. är en konvention som identifierar att det ägande programmet finns i /apps-mappen, inte /libs.  VIKTIGT! Lägg till platshållare `js.tx`för **`css.txt`** filer. (Det är inte officiellt en cq:ClientLibraryFolder utan dem.)
 
-1. högerklicka **`/etc/designs/an-scf-sandbox/clientlibs`**
-1. välj **Skapa fil...**
-1. **ange** namn: `css.txt`
-1. välj **Skapa fil...**
-1. **ange** namn: `js.txt`
-1. klicka på **Spara alla**
+1. Högerklicka **`/etc/designs/an-scf-sandbox/clientlibs`**
+1. Välj **Skapa fil..**
+1. Ange **namn:** `css.txt`
+1. Välj **Skapa fil..**
+1. Ange **namn:** `js.txt`
+1. Klicka på **Spara alla**
 
 ![chlimage_1-48](assets/chlimage_1-48.png)
 
@@ -77,24 +77,28 @@ På fliken **Egenskaper** för `clientlibs` noden anger du strängegenskapen **e
 
 **Observera** att detta kan vara det önskade tillvägagångssättet för en produktionsplats, eftersom det kan vara en god idé jämfört med storleken/hastigheten på de klienter som laddas ned för varje sida.
 
-Om du bara använder en funktion på en sida kan du inkludera den funktionens fullständiga klientlib direkt på sidan, t.ex. &lt;% ui:includeClientLib categories=cq.social.hbs.forum&quot; %>
+Om du bara använder en funktion på en sida kan du inkludera den funktionens fullständiga klientlib direkt på sidan, t.ex.
+
+`% ui:includeClientLib categories=cq.social.hbs.forum" %`
 
 I det här fallet är det bäst att inkludera alla och så att de mer grundläggande SCF-klientlibs som är författarens klientlibs:
 
 * Namn : **`embed`**
 * Typ : **`String`**
-* click **`Multi`**
-* Värde: **`cq.social.scf`***&lt;enter> öppnar en dialogruta som klickar på **[+] **efter varje inlägg för att lägga till följande kategorier för klientlib:*
+* Klicka på **`Multi`**
+* Värde: **`cq.social.scf`**
 
-   * **`cq.ckeditor`**
-   * **`cq.social.author.hbs.comments`**
-   * **`cq.social.author.hbs.forum`**
-   * **`cq.social.author.hbs.rating`**
-   * **`cq.social.author.hbs.reviews`**
-   * **`cq.social.author.hbs.voting`**
-   * click **OK**
+   * Den öppnar en dialogruta och klickar **`+`** efter varje post för att lägga till följande clientlib-kategorier:
 
-* klicka på **Spara alla**
+      * **`cq.ckeditor`**
+      * **`cq.social.author.hbs.comments`**
+      * **`cq.social.author.hbs.forum`**
+      * **`cq.social.author.hbs.rating`**
+      * **`cq.social.author.hbs.reviews`**
+      * **`cq.social.author.hbs.voting`**
+      * click **OK**
+
+* Klicka på **Spara alla**
 
 ![chlimage_1-49](assets/chlimage_1-49.png)
 
@@ -114,20 +118,20 @@ När clientlibs för apps.an-scf-sandbox ingår formateras SCF-kommentarskompone
 
 ![chlimage_1-52](assets/chlimage_1-52.png)
 
-Programsatsen include tillhör <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> i <html> script. Standardvärdet **`foundation head.jsp`** innehåller ett skript som kan överlappas: **`headlibs.jsp`**.
+Programsatsen include tillhör i `head` avsnittet i `html` skriptet. Standardvärdet **`foundation head.jsp`** innehåller ett skript som kan överlappas: **`headlibs.jsp`**.
 
 **Copy headlibs.jsp and include clientlibs:**
 
-1. med **CRXDE Lite**, välj **`/libs/foundation/components/page/headlibs.jsp`**
+1. Med **CRXDE Lite** väljer du **`/libs/foundation/components/page/headlibs.jsp`**
 
-1. högerklicka och välj **Kopiera **(eller välj Kopiera från verktygsfältet)
-1. select**`/apps/an-scf-sandbox/components/playpage`**
-1. högerklicka och välj **Klistra in ** (eller välj Klistra in i verktygsfältet)
-1. dubbelklicka **`headlibs.jsp`** för att öppna den
-1. lägg till följande rad i slutet av filen
+1. Högerklicka och välj **Kopiera** (eller välj Kopiera i verktygsfältet)
+1. Välj **`/apps/an-scf-sandbox/components/playpage`**
+1. Högerklicka och välj **Klistra in** (eller välj Klistra in i verktygsfältet)
+1. Dubbelklicka **`headlibs.jsp`** för att öppna den
+1. Lägg till följande rad i slutet av filen
    **`<ui:includeClientLib categories="apps.an-scf-sandbox"/>`**
 
-1. klicka på **Spara alla**
+1. Klicka på **Spara alla**
 
 ```xml
 <%@ page session="false" %><%
@@ -153,30 +157,30 @@ Paketet finns i självstudiekursen [Skapa en exempelsida](/help/communities/crea
 
 Så här skapar du ett paket:
 
-* från CRXDE Lite klickar du på [paketikonen](https://localhost:4502/crx/packmgr/)
-* klicka på **Skapa paket**
+* Från CRXDE Lite klickar du på [paketikonen](https://localhost:4502/crx/packmgr/)
+* Klicka på **Skapa paket**
 
    * Paketnamn: an-scf-sandbox-minimum-pkg
    * Version: 0.1
-   * Grupp: &lt;lämna som standard>
-   * click **OK**
+   * Grupp: `leave as default`
+   * Click **OK**
 
-* click **Edit**
+* Click **Edit**
 
-   * välj **Filter **tab
+   * Välj **fliken Filter**
 
-      * klicka på **Lägg till filter**
-      * Rotsökväg: &lt;browse to** /apps/an-scf-sandbox**>
-      * klicka på **Klar**
-      * klicka på **Lägg till filter**
-      * Rotsökväg: &lt;bläddra till **/etc/designs/an-scf-sandbox**>
-      * klicka på **Klar**
-      * klicka på **Lägg till filter**
-      * Rotsökväg: &lt;browse to **/content/an-scf-sandbox**>
-      * klicka på **Klar**
-   * click **Save**
+      * Klicka på **Lägg till filter**
+      * Rotsökväg: bläddra till `/apps/an-scf-sandbox`
+      * Klicka på **Klar**
+      * Klicka på **Lägg till filter**
+      * Rotsökväg: bläddra till `/etc/designs/an-scf-sandbox`
+      * Klicka på **Klar**
+      * Klicka på **Lägg till filter**
+      * Rotsökväg: bläddra till `/content/an-scf-sandbox**`
+      * Klicka på **Klar**
+   * Click **Save**
 
 
-* klicka på **Skapa**
+* Klicka på **Skapa**
 
 Nu kan du välja **Hämta** för att spara den på hårddisken och **Överför paket** någon annanstans. Du kan även välja **Mer > Replikera** för att överföra sandlådan till en lokal värdpubliceringsinstans för att utöka sandlådan.
