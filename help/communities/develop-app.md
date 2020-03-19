@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 910229a3-38b1-44f1-9c09-55f8fd6cbb1d
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
@@ -30,9 +30,9 @@ Det första steget är att lägga till en supertypsegenskap för resursen till `
 Använda CRXDE Lite:
 
 <!--Resolve steps below-->
-    * Namn: `sling:resourceSuperType`
-    * Typ: `
-    * Värde: &quot;foundation/components/page&quot;
+    Namn: `sling:resourceSuperType`
+    Typ: `
+    Värde: &quot;foundation/components/page&quot;
 
 1. Klicka på det gröna **[!UICONTROL [+]Lägg till]**
 1. Klicka på **[!UICONTROL Spara alla]**
@@ -86,9 +86,9 @@ Använda CRXDE Lite:
 
    Om du vill ställa in redigering ska du lägga `body.jsp` över med ett lokalt skript och inkludera ett styckesystem (parsys) i brödtexten:
 
-   1. navigera till `/apps/an-scf-sandbox/components`
-   1. markera `playpage`noden
-   1. högerklicka och välj `Create > Create File...`
+   1. Navigera till `/apps/an-scf-sandbox/components`
+   1. Markera `playpage`noden
+   1. Högerklicka och välj `Create > Create File...`
 
       * Namn: **body.jsp**
    1. Klicka på **[!UICONTROL Spara alla]**
@@ -174,4 +174,4 @@ I det här enkla exemplet ställs rotsidan in statiskt för att dirigera om till
 
 När webbplatsen har publicerats dirigeras en gång till den engelska sidan om du bläddrar till rotsidan på en publiceringsinstans.
 
-Det sista steget innan du spelar med communitykomponenterna i SCF är att lägga till en klientbiblioteksmapp (clientlibs) ... . **[⇒](add-clientlibs.md)**
+Det sista steget innan du spelar med communitykomponenterna i SCF är att lägga till en klientbiblioteksmapp (clientlibs) .... [Lägg till bibliotek](add-clientlibs.md)
