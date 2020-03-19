@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 24b6d1d2-c118-4a25-959f-2783961c4ae3
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 5b8b1544645465d10e7c2018364b6a74f1ad9a8e
 
 ---
 
@@ -31,7 +31,7 @@ Två större metoder är att täcka över eller utöka en komponent.
 
 ## Övertäckningar {#overlays}
 
-Att ersätta en komponent är ett sätt att göra ändringar i en standardkomponent och påverka alla förekomster som använder standardkomponenten.
+Att täcka över en komponent är ett sätt att göra ändringar i en standardkomponent och påverka alla förekomster som använder standardkomponenten.
 
 Övertäckningen uppnås genom att en kopia av standardkomponenten i katalogen /**apps** ändras, i stället för att originalkomponenten i katalogen /**libs** ändras. Komponenten är konstruerad med en identisk relativ sökväg, förutom att &#39;libs&#39; ersätts med &#39;apps&#39;.
 
@@ -102,9 +102,9 @@ De anpassade formaten åsidosätter nu standardramverksformaten och komponenten 
 
 >[!CAUTION]
 >
->Alla CSS-klassnamn som har prefixet** scf-js-&amp;ast;**används specifikt i javascript-kod. Dessa klasser påverkar en komponents tillstånd (till exempel växla från dold till synlig) och bör varken åsidosättas eller tas bort.
+>Alla CSS-klassnamn som har prefixet `scf-js` har en specifik användning i javascript-kod. Dessa klasser påverkar en komponents tillstånd (till exempel växla från dold till synlig) och bör varken åsidosättas eller tas bort.
 >
->Medan scf-js-&amp;ast; klasser påverkar inte format. Klassnamnen kan användas i formatmallar med det intrycket att det kan finnas biverkningar när de styr elementens lägen.
+>Även om `scf-js` klasserna inte påverkar format kan klassnamnen användas i formatmallar med det intrycket att det kan finnas biverkningar när de styr elementens lägen.
 
 ## Utöka JavaScript {#extending-javascript}
 
@@ -145,7 +145,7 @@ Om du vill utöka en Javascript-implementering av komponenter behöver du bara
 
 Skripttaggar är en del av klientsidans ramverk. Det är limmet som kan binda den kod som genereras på serversidan till modellerna och vyerna på klientsidan.
 
-Skripttaggar i SCF-skript bör inte tas bort när komponenter åsidosätts eller åsidosätts. SCF-skripttaggar som skapas automatiskt för att injicera JSON i HTML identifieras med attributet `data-scf-json=`true.
+Skripttaggar i SCF-skript bör inte tas bort när komponenter åsidosätts eller åsidosätts. SCF-skripttaggar som skapas automatiskt för att injicera JSON i HTML identifieras med attributet `data-scf-json=true`.
 
 ## Clientlibs for SCF {#clientlibs-for-scf}
 
@@ -164,12 +164,12 @@ De fullständiga (icke-författare) klientlibs innehåller beroenden och är pra
 
 Dessa versioner finns i:
 
-* /etc/clientlibs/social/hbs/&lt;komponentnamn>
+* `/etc/clientlibs/social/hbs/&lt;component name&gt;`
 
 Exempel:
 
-* Klientmappsnod: /etc/clientlibs/social/hbs/forum
-* Egenskapen Kategorier: cq.social.hbs.forum
+* Klientmappsnod: `/etc/clientlibs/social/hbs/forum`
+* Egenskapen Kategorier: `cq.social.hbs.forum`
 
 I guiden [för](components-guide.md) communitykomponenter visas de fullständiga klientlibs som krävs för varje SCF-komponent.
 
@@ -183,12 +183,12 @@ Dessa clientlibs ska aldrig tas med direkt, utan kan bäddas in i andra clientli
 
 Dessa versioner finns i mappen SCF libs:
 
-* /libs/social/&lt;feature>/components/hbs/&lt;component name>/clientlibs
+* `/libs/social/&lt;feature&gt;/components/hbs/&lt;component name&gt;/clientlibs`
 
 Exempel:
 
-* Klientmappsnod: /libs/social/forum/hbs/forum/clientlibs
-* Egenskapen Kategorier: cq.social.author.hbs.forum
+* Klientmappsnod: `/libs/social/forum/hbs/forum/clientlibs`
+* Egenskapen Kategorier: `cq.social.author.hbs.forum`
 
 Obs! Även om författarklienter aldrig bäddar in andra bibliotek listar de sina beroenden. När beroendena är inbäddade i andra bibliotek hämtas de inte automatiskt in och måste även bäddas in.
 
