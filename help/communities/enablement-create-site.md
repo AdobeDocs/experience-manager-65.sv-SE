@@ -11,25 +11,25 @@ content-type: reference
 discoiquuid: b9333558-6af9-46b2-9f03-3722645c69a6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
 
-# Skapa en ny communitywebbplats för aktivering{#author-a-new-community-site-for-enablement}
+# Skapa en ny communitywebbplats för aktivering {#author-a-new-community-site-for-enablement}
 
 ## Skapa communitywebbplats {#create-community-site}
 
-[När du skapar](/help/communities/sites-console.md) en community-webbplats används en guide som vägleder dig genom de olika stegen för att skapa en community-webbplats. Du kan gå vidare till `Next`steget eller `Back`till föregående steg innan du implementerar platsen i det sista steget.
+[När du skapar](/help/communities/sites-console.md) en community-webbplats används en guide som vägleder dig genom de olika stegen för att skapa en community-webbplats. Du kan gå vidare till `Next` steget eller `Back` till föregående steg innan du implementerar platsen i det sista steget.
 
 Så här kommer du igång med att skapa en ny community-webbplats:
 
 Använda [författarinstansen](https://localhost:4502/)
 
-* logga in med administratörsbehörighet
-* navigera till **Communities,** **Sites**
+* Logga in med administratörsbehörighet
+* Navigera till **[UIControl Communities > Sites]**
 
-* välj **Skapa**
+* Välj **Skapa**
 
 ### Steg 1: Webbplatsmall {#step-site-template}
 
@@ -48,15 +48,15 @@ I steget **Webbplatsmall** anger du en titel, en beskrivning, namnet på webbadr
 
 * **Namn på** communitywebbplats: `enable`
 
-   * den inledande URL:en visas under namnet på communityplatsen
-   * för en giltig URL, lägg till en baskod + &quot;.html&quot;
-      *till exempel* https://localhost:4502/content/sites/ `enable/en.html`
+   * Den inledande URL:en visas under namnet på communitywebbplatsen
+   * Ange en giltig URL genom att lägga till en baskod + &quot;.html&quot;
+      *Till exempel* https://localhost:4502/content/sites/ `enable/en.html`
 
 * **Referensplatsmall**: dra nedåt för att välja `Reference Structured Learning Site Template`
 
 Markera **nästa**
 
-### Steg 2:Design {#step-design}
+### Steg 2: Design {#step-design}
 
 Designsteget presenteras i två avsnitt där du kan välja tema och varumärkesbanderoll:
 
@@ -84,15 +84,15 @@ En communitywebbplats är privat när anonyma besökare på webbplatsen nekas å
 
 Kontrollera att de flesta kryssrutor är avmarkerade för [användarhantering](/help/communities/sites-console.md#user-management) :
 
-* tillåt INTE besökare att registrera sig själva
-* tillåter INTE anonyma webbplatsbesökare att visa webbplatsen
-* valfritt om meddelanden bland communitymedlemmar ska tillåtas eller inte
-* tillåt INTE inloggning med Facebook
-* tillåt INTE inloggning med Twitter
+* Tillåt INTE webbplatsbesökare att registrera sig själva
+* Tillåt INTE anonyma webbplatsbesökare att visa webbplatsen
+* Valfritt om meddelanden ska tillåtas bland communitymedlemmar eller inte
+* Tillåt INTE inloggning med Facebook
+* Tillåt INTE inloggning med Twitter
 
 ![chlimage_1-3](assets/chlimage_1-3.png)
 
-#### TAGGNING {#tagging}
+#### TAGGING {#tagging}
 
 De taggar som kan användas för communityinnehåll kontrolleras genom att AEM-namnutrymmen som tidigare definierats via [taggningskonsolen](/help/sites-administering/tags.md#tagging-console) (till exempel namnutrymmet [Tutorial](/help/communities/enablement-setup.md#create-tutorial-tags)) väljs.
 
@@ -100,8 +100,8 @@ Om du väljer Taggnamnutrymmen för communitywebbplatsen begränsas dessutom det
 
 Det är enkelt att hitta namnutrymmen med typsnittssökning. Exempel:
 
-* type &#39;tut&#39;
-* select `Tutorial`
+* Typ `tut`
+* Välj `Tutorial`
 
 ![chlimage_1-4](assets/chlimage_1-4.png)
 
@@ -113,8 +113,8 @@ Om du vill att en community-medlem (eller grupp av medlemmar) ska kunna uppleva 
 
 Exempel:
 
-* typ &quot;q&quot;
-* välj [Quinn Harper](/help/communities/enablement-setup.md#publishcreateenablementmembers)
+* Typ `q`
+* Välj [Quinn Harper](/help/communities/enablement-setup.md#publishcreateenablementmembers)
 
 >[!NOTE]
 >
@@ -140,8 +140,8 @@ Det som visas på skärmbilden `Communities`är ramverksexemplet från [konfigur
 
 I [översättningsinställningarna](/help/communities/sites-console.md#translation) anges om UGC kan översättas och till vilket språk.
 
-* kontrollera **Tillåt maskinöversättning**
-* använd standardinställningarna
+* Kontrollera **Tillåt maskinöversättning**
+* Använd standardinställningarna
 
 ![chlimage_1-7](assets/chlimage_1-7.png)
 
@@ -151,8 +151,8 @@ För en aktiveringscommunity måste du identifiera en eller flera aktiveringsans
 
 * **Aktivitetshanterare**(krävs) Medlemmar i `Community Enablement Managers` gruppen kan väljas för att hantera den här communitywebbplatsen.
 
-   * type &quot;s&quot;
-   * select `Sirius Nilson`
+   * Typ `s`
+   * Välj `Sirius Nilson`
 
 * **Organisations-ID** för Marketing Cloud (valfritt) ID:t för ett Adobe Analytics-konto som är nödvändigt när [Video Heartbeat Analytics](/help/communities/analytics.md#video-heartbeat-analytics) inkluderas i aktiveringsrapporten.
 
@@ -160,13 +160,13 @@ För en aktiveringscommunity måste du identifiera en eller flera aktiveringsans
 
 Välj **Nästa**.
 
-### Steg 4:Skapa communitywebbplats {#step-create-community-site}
+### Steg 4: Skapa communitywebbplats {#step-create-community-site}
 
 Välj **Skapa.**
 
 ![chlimage_1-9](assets/chlimage_1-9.png)
 
-När processen är klar visas mappen för den nya platsen i konsolen Communities - Sites.
+När processen är klar visas mappen för den nya platsen i konsolen Communities > Sites.
 
 ![enablementsitecreated](assets/enablementsitecreated.png)
 
@@ -178,22 +178,32 @@ När du har valt communityplatsens mapp hovrar du över platsikonen så att fyra
 
 ![siteactionicons](assets/siteactionicons.png)
 
-När du väljer ellipsikonen (ikonen Fler åtgärder) visas alternativen Exportera plats och Ta bort plats.
+När du markerar ellipsikonen (ikonen Fler åtgärder) visas alternativen Exportera plats och Ta bort plats.
 
 ![siteactionsnya](assets/siteactionsnew.png)
 
 Från vänster till höger är de:
 
-* **Öppna webbplats** välj pennikonen för att öppna communitywebbplatsen i redigeringsläge, för att lägga till och/eller konfigurera sidkomponenter
+* **Öppna webbplats**
 
-* **Redigera webbplats** välj egenskapsikonen för att öppna communitywebbplatsen för ändring av egenskaper, som titeln eller för att ändra temat
+   Välj pennikonen för att öppna communitywebbplatsen i redigeringsläge för författare, för att lägga till och/eller konfigurera sidkomponenter
 
-* **Publicera webbplats** välj världsikonen för att publicera communitywebbplatsen (till localhost:4503 som standard)
+* **Redigera webbplats**
 
-* **Exportera plats** Välj exportikonen för att skapa ett paket för communitywebbplatsen som både lagras i [pakethanteraren](/help/sites-administering/package-manager.md) och hämtas.
+   Välj egenskapsikonen för att öppna communitywebbplatsen för ändring av egenskaper, som titeln eller för att ändra temat
+
+* **Publicera webbplats**
+
+   Välj världsikonen för att publicera communitywebbplatsen (till localhost:4503 som standard)
+
+* **Exportera webbplats**
+
+   Välj exportikonen om du vill skapa ett paket för communitywebbplatsen som både lagras i [pakethanteraren](/help/sites-administering/package-manager.md) och hämtas.
 Observera att UGC inte ingår i platspaketet.
 
-* **Ta bort plats** Om du vill ta bort communitywebbplatsen väljer du ikonen Ta bort plats som visas när du håller muspekaren över webbplatsen i Webbplatskonsol. Den här åtgärden tar bort alla objekt som är associerade med platsen, till exempel UGC, användargrupper, resurser och databasposter.
+* **Ta bort plats**
+
+   Om du vill ta bort communitywebbplatsen väljer du ikonen Ta bort plats som visas när du håller muspekaren över webbplatsen i Webbplatskonsolen. Den här åtgärden tar bort alla objekt som är associerade med platsen, till exempel UGC, användargrupper, resurser och databasposter.
 
 ![aktiveraAktivitetsåtgärder](assets/enablesiteactions.png)
 
@@ -225,14 +235,14 @@ Med hjälp av gruppkonsolen kan medlemmar läggas till individuellt eller genom 
 
 I det här exemplet `Community Ski Class` läggs gruppen till som medlem i gruppen `Community Enable Members` samt medlem `Quinn Harper`.
 
-* navigera till **Communities, Groups** console
-* välj gruppen Aktivera medlemmar *för* användargrupper
-* ange&quot;ski&quot; i sökrutan **Lägg till medlemmar i grupp**
-* välj *Community Ski Class* (grupp av elever)
-* ange &#39;quinn&#39; i sökrutan
-* välj *Quinn Harper* (kontaktperson för aktiveringsresurs)
+* Navigera till **Communities, Groups** console
+* Markera gruppen Aktivera medlemmar *för* grupp
+* Ange&quot;ski&quot; i sökrutan **Lägg till medlemmar i grupp**
+* Välj *Community Ski Class* (grupp av elever)
+* Ange &#39;quinn&#39; i sökrutan
+* Välj *Quinn Harper* (kontakt för aktiveringsresurs)
 
-* välj **Spara**
+* Välj **Spara**
 
 ![chlimage_1-13](assets/chlimage_1-13.png)
 
@@ -258,14 +268,14 @@ Om du vill göra det måste du använda [CRX|DE](https://localhost:4503/crx/de) 
 
 För att komma igång
 
-1. vid publicering, få åtkomst till CRXDE och logga in med administratörsbehörighet
+1. Vid publicering får du åtkomst till CRXDE och loggar in med administratörsbehörighet
 
-   * till exempel gå till [https://localhost:4503/crx/de](https://localhost:4503/crx/de) och logga in med `admin/admin`
+   * Bläddra till exempel till [https://localhost:4503/crx/de](https://localhost:4503/crx/de) och logga in med `admin/admin`
 
-1. i projektwebbläsaren expanderar `/etc/map`
-1. markera `http` noden
+1. Utöka i projektwebbläsaren `/etc/map`
+1. Markera `http` noden
 
-   * välj **Skapa nod**
+   * Välj **Skapa nod**
 
       * **Namn** localhost.4503
 
@@ -273,37 +283,37 @@ För att komma igång
 
       * **textsling** : [mappning](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)
 
-1. med nyligen skapad `localhost.4503` nod markerad
+1. Med den nyskapade `localhost.4503` noden markerad
 
-* add, egenskap
+   * Lägg till egenskap
 
-   * **Namnsling** :match
-   * **Type** String
-   * **Värde** localhost.4503/$
+      * **Namnsling** :match
+      * **Type** String
+      * **Värde** localhost.4503/$
+   (måste sluta med tecknet &#39;$&#39;)
 
-      (måste sluta med tecknet &#39;$&#39;)
+   * Lägg till egenskap
 
-* add, egenskap
+      * **Namnsling** :internalRedirect
+      * **Type** String
+      * **Värde** /content/sites/enable/en.html
 
-   * **Namnsling** :internalRedirect
-   * **Type** String
-   * **Värde** /content/sites/enable/en.html
 
-1. välj **Spara alla**
-1. (valfritt) ta bort webbläsarhistoriken
-1. gå till https://localhost:4503/
+1. Välj **Spara alla**
+1. (Valfritt) Ta bort webbläsarhistoriken
+1. Gå till https://localhost:4503/
 
-* anlända till https://localhost:4503/content/sites/enable/en.html
+   * Ankomst till https://localhost:4503/content/sites/enable/en.html
 
 >[!NOTE]
 >
->Om du vill inaktivera kan du förpend `sling:match` egenskapsvärdet med&quot;x&quot; - `xlocalhost.4503/$` - och **Spara alla**.
+>Om du vill inaktivera föränger du bara `sling:match` egenskapsvärdet med&quot;x&quot; - `xlocalhost.4503/$` - och **Spara alla**.
 
 ![chlimage_1-15](assets/chlimage_1-15.png)
 
 #### Felsökning: Fel när kartan sparades {#troubleshooting-error-saving-map}
 
-Om det inte går att spara ändringarna måste du kontrollera att nodnamnet är `localhost.4503`, med en punktavgränsare och inte `localhost:4503` med en kolonavgränsare, eftersom det inte `localhost`är ett giltigt namnområdesprefix.
+Om det inte går att spara ändringarna måste du se till att nodnamnet är `localhost.4503`, med en punktavgränsare och inte `localhost:4503` med en kolonavgränsare, eftersom `localhost` det inte är ett giltigt namnområdesprefix.
 
 ![chlimage_1-16](assets/chlimage_1-16.png)
 
@@ -331,7 +341,7 @@ Om inte kan du enkelt lägga till katalogfunktionen. På så sätt kan andra med
 
 Om platsstrukturen redan innehåller katalogfunktionen kan dess namn ändras.
 
-Om du vill ändra platsens struktur går du till **webbgrupper, konsolen Platser** , öppnar `enable` mappen och väljer ikonen **Redigera plats **för att komma åt egenskaperna för `Enablement Tutorial`.
+Om du vill ändra platsens struktur går du till konsolen **Webbplatser** , öppnar `enable` mappen och väljer ikonen **Redigera plats** för att komma åt egenskaperna för `Enablement Tutorial`.
 
 Välj STRUKTURpanelen om du vill lägga till en katalog eller ändra en befintlig katalog:
 
