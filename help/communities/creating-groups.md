@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: d94708ee-ca6b-420c-9536-6889d752f9de
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
 
 ---
 
 
-# Community-grupper{#community-groups}
+# Community-grupper {#community-groups}
 
 Funktionen för communitygrupper är möjligheten för en undercommunity att skapas dynamiskt på en community-webbplats av behöriga användare (community-medlemmar och författare) från publicerings- och författarmiljöerna.
 
@@ -32,33 +32,45 @@ Möjligheten att skapa en ny community-grupp bygger på att det finns en communi
 
 Exemplen som följer använder den communitywebbplats som skapats från `Reference Site Template` enligt beskrivningen i självstudiekursen [Komma igång med AEM Communities](/help/communities/getting-started.md) .
 
-Det här är sidan som läses in vid publicering när menyalternativet **Grupper **är markerat:
+Det här är sidan som läses in vid publicering när menyalternativet **Grupper** är markerat:
 
 ![chlimage_1-85](assets/chlimage_1-85.png)
 
 När du väljer ikonen **Ny grupp** öppnas en redigeringsdialogruta.
 
-Under fliken **Settings **anger du gruppens grundläggande funktioner:
+Under fliken **Inställningar** kan du ange gruppens grundläggande funktioner:
 
 ![chlimage_1-86](assets/chlimage_1-86.png)
 
-* **Gruppnamn** Namnet på gruppen som ska visas på communitywebbplatsen.
+* **Gruppnamn**
 
-* **Beskrivning** En beskrivning av gruppen som ska visas på communitywebbplatsen.
+   Namnet på gruppen som ska visas på communitywebbplatsen.
 
-* **Bjud in** en lista med medlemmar som ska bjudas in till gruppen. I typsnittssökningen ges förslag på communitymedlemmar som ska bjudas in.
+* **Beskrivning**
 
-* **Grupp-URL-namn** Namnet på gruppsidan som blir en del av URL-adressen.
+   En beskrivning av gruppen som ska visas på communitywebbplatsen.
 
-* **Open Group** Selecting `Open Group` (Öppna gruppmarkering) anger att anonyma besökare kan visa innehållet och kommer att avmarkera `Member Only Group`.
+* **Bjud in**
 
-* **Gruppmarkering endast för medlemmar** anger `Member Only Group` att endast medlemmar i gruppen kan visa innehållet och kommer att avmarkera `Open Group`.
+   En lista med medlemmar som ska bjudas in för att gå med i gruppen. I typsnittssökningen ges förslag på communitymedlemmar som ska bjudas in.
 
-Under fliken **Template **kan du välja från listan med mallar för communitygrupper som angavs när gruppfunktionen inkluderades i communityplatsens struktur eller i en mall för communitywebbplatser.
+* **Grupp-URL-namn**
+
+   Namnet på gruppsidan som blir en del av URL:en.
+
+* **Öppna grupp**
+
+   Markeringen `Open Group` anger att en anonym besökare kan visa innehållet och kommer att avmarkera `Member Only Group`.
+
+* **Endast medlemsgrupp**
+
+   Om du väljer `Member Only Group` det här alternativet visas endast gruppens medlemmar som kan visa innehållet, och det avmarkeras `Open Group`.
+
+Under fliken **Mall** kan du välja från listan med gruppmallar som angavs när gruppfunktionen inkluderades i communityplatsens struktur eller i en mall för communitywebbplatser.
 
 ![chlimage_1-87](assets/chlimage_1-87.png)
 
-Under fliken **Bild **är möjligheten att överföra en bild som ska visas för gruppen på gruppwebbplatsens gruppsida. Standardformatmallen ändrar bildens storlek till 170 x 90 pixlar.
+Under fliken **Bild** finns möjligheten att överföra en bild som ska visas för gruppen på gruppwebbplatsens gruppsida. Standardformatmallen ändrar bildens storlek till 170 x 90 pixlar.
 
 ![chlimage_1-88](assets/chlimage_1-88.png)
 
