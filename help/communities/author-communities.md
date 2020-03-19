@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: df1ac689-33db-4e30-9f75-3bda2a485652
 docset: aem65
 translation-type: tm+mt
-source-git-commit: aaa067e0718d15cedde46296c1be69d422359097
+source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
 
 ---
 
 
-# Communities-komponenter{#communities-components}
+# Communities-komponenter {#communities-components}
 
 ## Introduktion {#introduction}
 
@@ -65,13 +65,13 @@ Se även handboken [för interaktiva](/help/communities/components-guide.md)comm
 | Meddelande | [Meddelanden](/help/communities/configure-messaging.md) |
 | Meddelandelista | [Meddelanden](/help/communities/configure-messaging.md) |
 | QnA | [Frågor och svar](/help/communities/working-with-qna.md) |
-| Snabbsökning | [Sök](/help/communities/search.md) |
+| Snabbsökning | [Sökning](/help/communities/search.md) |
 | Klassificering | [Klassificering](/help/communities/rating.md) |
 | Relaterade frågor | [Frågor och svar](/help/communities/working-with-qna.md) |
 | Recensioner | [Recensioner](/help/communities/reviews.md) |
 | Sammanfattning av granskningar (visning) | [Recensioner](/help/communities/reviews.md) |
-| Sök | [Sök](/help/communities/search.md) |
-| Sökresultat | [Sök](/help/communities/search.md) |
+| Sökning | [Sökning](/help/communities/search.md) |
+| Sökresultat | [Sökning](/help/communities/search.md) |
 | Social Tag Cloud | [Social Tag Cloud](/help/communities/tagcloud.md) |
 | Omröstning | [Omröstning](/help/communities/voting.md) |
 
