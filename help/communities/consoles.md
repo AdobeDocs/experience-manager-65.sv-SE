@@ -10,14 +10,14 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 5fa9ee8b-5893-4ae9-a986-bfdbb00f355f
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
 
 # Communities-konsoler {#communities-consoles}
 
-AEM Communities-konsolerna, som finns i författarmiljön från den globala navigeringspanelen, ger åtkomst till administrativa uppgifter som
+AEM Communities-konsolerna, som finns i författarmiljön från den globala navigeringspanelen, ger åtkomst till administrativa uppgifter som:
 
 * [Skapa en communitywebbplats](sites-console.md)
 * Lägga till [grupper](groups.md) som är kapslade på platsen
@@ -33,7 +33,7 @@ När du har loggat in med administratörsbehörighet i redigeringsmiljön är ko
 
 >[!NOTE]
 >
->I publiceringsmiljön visar en [communitywebbplats](sites-console.md) ett `Administration`menyalternativ när den inloggade medlemmen har lämplig behörighet.
+>I publiceringsmiljön visar en [communitywebbplats](sites-console.md) ett `Administration` menyalternativ när den inloggade medlemmen har lämplig behörighet.
 
 ## Global navigeringspanel {#global-navigation-panel}
 
@@ -50,7 +50,7 @@ Om du vill komma åt de olika webbgruppskonsolerna väljer du **navigering, Webb
 
 ![chlimage_1-92](assets/chlimage_1-92.png)
 
-* [Webbplatser](sites-console.md)
+* [Sites](sites-console.md)
 
    Webbplatskonsolen är tillgänglig i författarmiljön för att skapa och hantera communitywebbplatser och dess [grupper](groups.md).
 
