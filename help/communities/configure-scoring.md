@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 628b6dcd-8b1c-4166-8fc2-843baa86ac1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d522c5ec6c72a9fd391d021f2fac37f88c686bd9
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
 
-# Grundläggande om poäng och emblem{#scoring-and-badges-essentials}
+# Grundläggande om poäng och emblem {#scoring-and-badges-essentials}
 
 Funktionen AEM Communities-poäng och -badges gör det möjligt att identifiera och belöna communitymedlemmar.
 
@@ -26,9 +26,9 @@ Information om hur du konfigurerar funktionen finns i
 
 Den här sidan innehåller ytterligare teknisk information:
 
-* hur du [visar ett märke](#displaying-badges) som bild eller text
-* aktivera omfattande [felsökningsloggning](#debug-log-for-scoring-and-badging)
-* hur du [får åtkomst till UGC](#ugc-for-scoring-and-badging) för bedömning och märkning
+* Så här [visar du ett märke](#displaying-badges) som bild eller text
+* Aktivera omfattande [felsökningsloggning](#debug-log-for-scoring-and-badging)
+* Så här [får du åtkomst till UGC](#ugc-for-scoring-and-badging) för bedömning och märkning
 
 >[!CAUTION]
 >
@@ -38,7 +38,7 @@ Den här sidan innehåller ytterligare teknisk information:
 
 Om ett märke visas som text eller bild styrs på klientsidan i HBS-mallen.
 
-Sök till exempel efter `this.isAssigned` i `/libs/social/forum/components/hbs/topic/list-item.hbs`, :
+Sök till exempel efter `this.isAssigned` i `/libs/social/forum/components/hbs/topic/list-item.hbs`:
 
 ```
 {{#each author.badges}}
@@ -80,40 +80,40 @@ Detaljerade anvisningar finns i [Skapa en anpassad loggfil](/help/sites-deployin
 
 Så här konfigurerar du snabbt en slinglog-fil:
 
-1. få tillgång till loggsupport **för** Adobe Experience Manager Web Console, till exempel
+1. Få åtkomst till loggstödet **för** Adobe Experience Manager Web Console, till exempel
 
    * https://localhost:4502/system/console/slinglog
 
-1. välj **Lägg till ny loggare**
+1. Välj **Lägg till ny loggare**
 
-   1. välj `DEBUG`för **loggnivå**
+   1. Välj `DEBUG` för **loggnivå**
 
-   1. ange ett namn för **loggfilen**, till exempel
+   1. Ange ett namn för **loggfilen**, till exempel
 
       * logs/scoring-debug.log
-   1. ange två **Logger **(class)-poster (med `+` ikon)
+   1. Ange två **Logger** -poster (klass) (med `+` ikon)
 
       * `com.adobe.cq.social.scoring`
       * `com.adobe.cq.social.badging`
-   1. välj **Spara**
+   1. Välj **Spara**
 
 
 
 ![chlimage_1-193](assets/chlimage_1-193.png)
 
-Visa loggposter
+Så här visar du loggposter:
 
-* från webbkonsolen
+* Från webbkonsolen
 
-   * under menyn **Status **i
-   * markera **loggfiler**
-   * sök efter loggfilens namn, till exempel `scoring-debug`
+   * Under menyn **Status**
+   * Välj **loggfiler**
+   * Sök efter loggfilens namn, till exempel `scoring-debug`
 
-* på serverns lokala disk
+* På serverns lokala disk
 
-   * loggfilen finns på &lt;*server-install-dir*>/crx-quickstart/logs/&lt;*log-file-name*>.log
+   * Loggfilen finns på &lt;*server-install-dir*>/crx-quickstart/logs/&lt;*log-file-name*>.log
 
-   * for example, `.../crx-quickstart/logs/scoring-debug.log`
+   * Exempel: `.../crx-quickstart/logs/scoring-debug.log`
 
 ![chlimage_1-194](assets/chlimage_1-194.png)
 
@@ -123,9 +123,9 @@ Det går att visa användargenererat innehåll som är relaterat till poängsät
 
 Beskrivningarna för att komma åt betygs- och badging-data använder JSRP, eftersom UGC är lätt att komma åt med [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
 
-**JSRP on author** : när du experimenterar i redigeringsmiljön resulterar det i användargenererat innehåll som bara är synligt från författarmiljön.
+**JSRP on author**: när du experimenterar i redigeringsmiljön resulterar det i användargenererat innehåll som bara är synligt från författarmiljön.
 
-**JSRP vid publicering** : På samma sätt måste du vid testning i publiceringsmiljön få tillgång till CRXDE Lite med administratörsbehörighet för en publiceringsinstans. Om publiceringsinstansen körs i [produktionsläge](/help/sites-administering/production-ready.md) (noSampleContent Runmode) måste du [aktivera CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md).
+**JSRP vid publicering**: På samma sätt måste du vid testning i publiceringsmiljön få tillgång till CRXDE Lite med administratörsbehörighet för en publiceringsinstans. Om publiceringsinstansen körs i [produktionsläge](/help/sites-administering/production-ready.md) (noSampleContent Runmode) måste du [aktivera CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md).
 
 UGC:s basplats på JSRP är `/content/usergenerated/asi/jcr/`.
 
@@ -146,12 +146,12 @@ Skärmbilderna av databasdata kommer från att konfigurera poängsättning och m
 
 1. En AEM-webbplats *med* ett unikt ID (communitywebbplats skapad med guide):
 
-* med hjälp av självstudiekursen Komma igång (engagera) som skapades under självstudiekursen [Komma igång](/help/communities/getting-started.md)
-* hitta forumsidnoden
+   * Använda självstudiekursen Komma igång (engagera) som skapades under självstudiekursen [Komma igång](/help/communities/getting-started.md)
+   * Hitta forumsidnoden
 
-   * `/content/sites/engage/en/forum/jcr:content`
+      `/content/sites/engage/en/forum/jcr:content`
 
-* lägga till egenskaper för poängsättning och märkning
+   * Lägga till egenskaper för poängsättning och märkning
 
    ```
    scoringRules = [/etc/community/scoring/rules/comments-scoring,
@@ -163,25 +163,26 @@ Skärmbilderna av databasdata kommer från att konfigurera poängsättning och m
    /etc/community/badging/rules/forums-scoring]
    ```
 
-* hitta forumkomponentnoden
+   * Hitta forumkomponentnoden
 
-   * `/content/sites/engage/en/forum/jcr:content/content/primary/forum`
+      `/content/sites/engage/en/forum/jcr:content/content/primary/forum`
 ( `sling:resourceType = social/forum/components/hbs/forum`)
 
-* lägg till egenskap för att visa emblem
+   * Lägg till egenskap för att visa emblem
 
-   * `allowBadges = true`
+      `allowBadges = true`
 
-* en användare loggar in, skapar ett forumämne och tilldelas ett bronze-märke
+   * En användare loggar in, skapar ett forumämne och tilldelas ett bronze-märke
+
 
 1. En AEM-webbplats *utan* unikt ID:
 
-* använda guiden [Community Components](/help/communities/components-guide.md)
-* hitta forumsidnoden
+   * Använda guiden [Community Components](/help/communities/components-guide.md)
+   * Hitta forumsidnoden
 
-   * `/content/community-components/en/forum/jcr:content`
+      `/content/community-components/en/forum/jcr:content`
 
-* lägga till egenskaper för poängsättning och märkning
+   * Lägga till egenskaper för poängsättning och märkning
 
    ```
    scoringRules = [/etc/community/scoring/rules/comments-scoring,
@@ -193,24 +194,25 @@ Skärmbilderna av databasdata kommer från att konfigurera poängsättning och m
    /etc/community/badging/rules/forums-scoring]
    ```
 
-* hitta forumkomponentnoden
+   * Hitta forumkomponentnoden
 
-   * `/content/community-components/en/forum/jcr:content/content/forum`
+      `/content/community-components/en/forum/jcr:content/content/forum`
 ( `sling:resourceType = social/forum/components/hbs/forum`)
 
-* lägg till egenskap för att visa emblem
+   * Lägg till egenskap för att visa emblem
 
-   * `allowBadges = true`
+      `allowBadges = true`
 
-* en användare loggar in, skapar ett forumämne och tilldelas ett bronze-märke
+   * En användare loggar in, skapar ett forumämne och tilldelas ett bronze-märke
 
-1. en användare tilldelas ett moderatormärke med cURL:
 
-```shell
-curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=social:assignBadge" -F "badgeContentPath=/etc/community/badging/images/moderator/jcr:content/moderator.png" https://localhost:4503/home/users/community/w271OOup2Z4DjnOQrviv/profile.social.json
-```
+1. En användare tilldelas ett moderatormärke med cURL:
 
-Eftersom en användare har fått två bronze-märken och tilldelats ett moderatormärke, är detta vad användaren visas med sitt foruminlägg:
+   ```shell
+   curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=social:assignBadge" -F "badgeContentPath=/etc/community/badging/images/moderator/jcr:content/moderator.png" https://localhost:4503/home/users/community/w271OOup2Z4DjnOQrviv/profile.social.json
+   ```
+
+   När en användare har fått två bronze-märken och tilldelats ett moderatormärke, är det så här användaren visas med sitt foruminlägg.
 
 ![chlimage_1-195](assets/chlimage_1-195.png)
 
@@ -219,12 +221,12 @@ Eftersom en användare har fått två bronze-märken och tilldelats ett moderato
 >Det här exemplet följer inte följande metodtips:
 >
 >* Poängregelnamnen ska vara globalt unika. de ska inte sluta med samma namn.
-   >  Ett exempel på vad *inte ska göra:
+   >  Ett exempel på vad som *inte* ska göras:
    >  /etc/community/scoring/rules/site1/forums-scoring
    >  /etc/community/scoring/rules/site2/forums-scoring
    >
    >
-* skapa unika märkesbilder för olika AEM-webbplatser
+* Skapa unika märkesbilder för olika AEM-webbplatser
 >
 
 
@@ -237,7 +239,7 @@ I undersökningssyfte, till exempel med JSRP, är baskamappen som innehåller po
 
 * `/content/usergenerated/asi/jcr/scoring`
 
-Den underordnade noden för `scoring`är resultatregelns namn. Det bästa sättet är alltså att betygsregelnamn på en server är globalt unika.
+Den underordnade noden för `scoring` är resultatregelns namn. Det bästa sättet är alltså att betygsregelnamn på en server är globalt unika.
 
 För Geometrixx Engage-webbplatsen finns användaren och poängen i en sökväg som är konstruerad med namnet på bedömningsregeln, communityplatsens webbplats-ID ( `engage-ba81p`), ett unikt ID och användarens ID:
 
@@ -257,17 +259,17 @@ Du bör använda [API:erna](#scoring-and-badging-apis) .
 
 I undersökningssyfte, till exempel med JSRP, är baskappen som innehåller information om tilldelade eller tilldelade märken
 
-* /content/usergenerated/asi/jcr
+* `/content/usergenerated/asi/jcr`
 
 Följs av sökvägen till användarens profil och avslutas i en badges-mapp, till exempel
 
-* /home/users/community/w271Oup2Z4DjnOQrviv/profile/badges
+* `/home/users/community/w271OOup2Z4DjnOQrviv/profile/badges`
 
-#### tilldelat märke {#awarded-badge}
+#### Tilldelad bricka {#awarded-badge}
 
 ![chlimage_1-197](assets/chlimage_1-197.png)
 
-#### tilldelat märke {#assigned-badge}
+#### Tilldelat märke {#assigned-badge}
 
 ![chlimage_1-198](assets/chlimage_1-198.png)
 
