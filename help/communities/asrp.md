@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 3e81b519-57ca-4ee1-94bd-7adac4605407
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
 
 ---
 
 
-# ASRP - Adobe Storage Resource Provider{#asrp-adobe-storage-resource-provider}
+# ASRP - Adobe Storage Resource Provider {#asrp-adobe-storage-resource-provider}
 
 ## Om ASRP {#about-asrp}
 
@@ -45,26 +45,28 @@ Med konsolen [för](/help/communities/srp-config.md) lagringskonfiguration kan d
 
 **I AEM Author-instans:**
 
-* Från global navigering (Verktyg, Communities, Storage Configuration) väljer du** Adobe Storage Resource Provider (ASRP).**
+* Navigera från global navigering till **[UIControl Tools > Communities > Storage Configuration]** och välj **[UIControl Adobe Storage Resource Provider (ASRP)]**.
 
 ![chlimage_1-30](assets/chlimage_1-30.png)
 
 Följande information kommer från provisioneringsprocessen:
 
-* **URL för datacenter. **Nedrullningsbar meny för att välja det produktionsdatacenter som din kontorepresentant har identifierat.
-* **Standard Report Suite. **Ange namnet på standardrapportsviten.
-* **Konsumentnyckel**. Ange konsumentnyckeln.
-* **Hemlighet. **Ange hemligheten.
-* Välj **Skicka.**
+* **URL** för datacenter: Nedrullningsbar meny för att välja det produktionsdatacenter som din kontorepresentant har identifierat.
+* **Standardrapportsvit**: Ange namnet på standardrapportsviten.
+* **Konsumentnyckel**: Ange konsumentnyckeln.
+* **Hemlighet**: Ange hemligheten.
+* Välj **Skicka**.
 
 Förbered publiceringsinstanserna:
 
-* [replikera krypteringsnyckeln](#replicate-the-crypto-key)
-* [replikera konfigurationen](#publishing-the-configuration)
+* [Replikera krypteringsnyckeln](#replicate-the-crypto-key)
+* [Replikera konfigurationen](#publishing-the-configuration)
 
 Testa anslutningen när konfigurationen har skickats:
 
-* Välj **Testa konfiguration**. Testa anslutningen till datacentret från lagringskonsolen för varje författare och publiceringsinstans.
+* Välj **Testa konfiguration**.
+
+   Testa anslutningen till datacentret från konsolen Lagringskonfiguration för varje författare och publiceringsinstans.
 
 * Se till att URL:er för webbplatsen för profildata kan dirigeras från datacentret genom att [externalisera länkar](#externalize-links).
 
@@ -92,20 +94,19 @@ Så här gör du den identiska konfigurationen tillgänglig i publiceringsmiljö
 
 I AEM Author-instans:
 
-* Navigera från huvudmenyn till `Tools > Operations > Replication.`
-* Välj **Aktivera träd.**
-* **Startsökväg:
-**gå till /etc/socialconfig/srpc/
-* Avmarkera **Endast ändrad.**
-* Välj **Aktivera.**
+* Navigera från huvudmenyn till **[UIControl-verktyg > Åtgärder > Replikering]**.
+* Välj **Aktivera träd**
+* **Startsökväg**: bläddra till `/etc/socialconfig/srpc/`
+* Avmarkera **endast ändrade**
+* Välj **Aktivera**
 
 ## Uppgradera från AEM 6.0 {#upgrading-from-aem}
 
 >[!CAUTION]
 >
->Om du aktiverar ASRP på en publicerad communitywebbplats visas inte längre UGC som redan lagrats i [](/help/communities/jsrp.md)JCR, eftersom det inte finns någon synkronisering av data mellan lokal lagring och molnlagring.
+>Om du aktiverar ASRP på en publicerad communitywebbplats visas inte längre UGC som redan lagrats i [JCR](/help/communities/jsrp.md) , eftersom det inte finns någon synkronisering av data mellan lokal lagring och molnlagring.
 
-**`AEM Communities Extension`**introducerades tidigare i AEM 6.0-communityn för sociala nätverk som en molntjänst. Från och med AEM 6.1 Communities behövs ingen molnkonfiguration. Välj bara ASRP från [lagringskonfigurationskonsolen](/help/communities/srp-config.md).
+**`AEM Communities Extension`** introducerades tidigare i AEM 6.0 sociala communityn som en molntjänst. Från och med AEM 6.1 Communities behövs ingen molnkonfiguration. Välj bara ASRP från [lagringskonfigurationskonsolen](/help/communities/srp-config.md).
 
 På grund av den nya lagringsstrukturen är det nödvändigt att följa [uppgraderingsinstruktionerna](/help/communities/upgrade.md#adobe-cloud-storage) när du uppgraderar från sociala communityn till Communities.
 
@@ -142,6 +143,6 @@ Gå till konsolen Lagringskonfiguration eller kontrollera AEM-databasen på alla
 
 I JCR, if [/etc/socialconfig](https://localhost:4502/crx/de/index.jsp#/etc/socialconfig/):
 
-* innehåller ingen [srpc](https://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc) -nod, vilket betyder att lagringsprovidern är JSRP.
+* Innehåller ingen [srpc](https://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc) -nod, vilket betyder att lagringsprovidern är JSRP.
 * Om srpc-noden finns och innehåller [standardkonfiguration](https://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)för noden definierar standardkonfigurationens egenskaper att ASRP är standardprovider.
 
