@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: c061b358-8c0d-40d3-8090-dc9800309ab3
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
+source-git-commit: 07ac9c0e0836fc7000062c27dbdeb70059997089
 
 ---
 
@@ -156,7 +156,7 @@ Se även
 
 **Konfigurera behörigheter**
 
-När en auktoriserad användare, som är medlem i **`administrators`**användargruppen, har skapats på alla publiceringsinstanser måste den auktoriserade användaren identifieras som behörig användare av författaren med behörighet att synkronisera användardata från författaren till publiceringen.
+När en auktoriserad användare, som är medlem i **`administrators`**användargruppen, har skapats för alla publiceringsinstanser måste den auktoriserade användaren identifieras som behörig användare av författaren med behörighet att synkronisera användardata från författaren till publiceringen.
 
 * **on author**
 
@@ -311,7 +311,7 @@ Standardnoder som ska ignoreras:
    * .tokens
    * system
 
-* **Distribuerade mappar**Mest sling:Mappar ignoreras eftersom synkronisering inte behövs. Här listas de få undantagen.
+* **Distribuerade mappar**Mest sling:Mappar ignoreras eftersom synkronisering inte behövs. Här anges de få undantagen.
 Standardmappar att synkronisera
 
    * segment/poäng
@@ -328,7 +328,7 @@ Om Sling ID är samma för flera publiceringsinstanser i en publiceringsgrupp sy
 
 Så här validerar du att alla värden för Sling ID skiljer sig åt för varje publiceringsinstans:
 
-1. gå till [https://*host:port*/system/console/status-slingssettings](https://localhost:4503/system/console/status-slingsettings)
+1. bläddra till `http://<host>:<port>/system/console/status-slingsettings`
 1. kontrollera värdet för **Sling ID**
 
 ![](assets/chlimage_1-27.png)
@@ -490,7 +490,7 @@ Om följande syns i loggen:
 
 `java.lang.IllegalStateException: This tree does not exist`
 
-Kontrollera sedan att avsnitt [2. Skapa behörig användare](/help/sites-administering/sync.md#createauthuser) följdes korrekt.
+Kontrollera sedan att avsnitt [2. Skapa behörig användare](/content/docs/en/aem/6-1/administer/security/security/sync.md#2). skapa behörig användare) följdes korrekt.
 
 I det här avsnittet beskrivs hur du skapar en behörig användare, som finns i alla publiceringsinstanser, och identifierar dem i OSGi-konfigurationen för den hemliga providern. By default, the user is `admin`.
 
@@ -529,7 +529,7 @@ Se avsnitt [9. Unikt försäljnings-ID](#unique-sling-id)
 
       * när du redigerar paketet
 
-         * Fliken Filter: Lägg till filter:Rotsökväg: `/home`
+         * Fliken Filter: Lägg till filter: Rotsökväg: `/home`
          * Fliken Avancerat: AC-hantering: `Overwrite`
    * [exportera paketet](/help/sites-administering/package-manager.md#downloading-packages-to-your-file-system)
 
