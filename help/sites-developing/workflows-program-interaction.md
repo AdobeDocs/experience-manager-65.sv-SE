@@ -10,7 +10,7 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: cb621332-a149-4f8d-9425-fd815b033c38
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 7d2ba937710e5931356512b812a8b8fbe3a52072
 
 ---
 
@@ -37,30 +37,12 @@ Klassen innehåller också flera metoder för att hantera arbetsflödets livscyk
 
 Följande tabell innehåller länkar till referensdokumentationen för flera viktiga Java-objekt som kan användas när du interagerar programmatiskt med arbetsflöden. Exemplen som följer visar hur du hämtar och använder klassobjekten i koden.
 
-<table>
- <tbody>
-  <tr>
-   <th>Funktioner<a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/status/WorkflowStatus.html"></a></th>
-   <th>Objekt<br /> </th>
-  </tr>
-  <tr>
-   <td>Åtkomst till ett arbetsflöde<br /> </td>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/WorkflowSession.html"><code>WorkflowSession</code></a><br /> </td>
-  </tr>
-  <tr>
-   <td>Köra och fråga en arbetsflödesinstans<br /> </td>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/Workflow.html"><code>Workflow</code></a><br /> <a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkItem.html"><code>WorkItem</code></a><br /> <a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkflowData.html"><code>WorkflowData</code></a><br /> </td>
-  </tr>
-  <tr>
-   <td>Hantera en arbetsflödesmodell<br /> </td>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/model/WorkflowModel.html"><code>WorkflowModel</code></a><br /> <a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/model/WorkflowNode.html"><code>WorkflowNode</code></a><br /> <a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/model/WorkflowTransition.html"><code>WorkflowTransition</code></a><br /> </td>
-  </tr>
-  <tr>
-   <td>Information för en nod som finns i arbetsflödet (eller inte) </td>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/status/WorkflowStatus.html"><code>WorkflowStatus</code></a></td>
-  </tr>
- </tbody>
-</table>
+| Funktioner | Objekt |
+|---|---|
+| Åtkomst till ett arbetsflöde | [`WorkflowSession`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/WorkflowSession.html) |
+| Köra och fråga en arbetsflödesinstans | [`Workflow`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/Workflow.html)</br>[`WorkItem`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkItem.html)</br>[`WorkflowData`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkflowData.html) |
+| Hantera en arbetsflödesmodell | [`WorkflowModel`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/model/WorkflowModel.html)</br>[`WorkflowNode`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/model/WorkflowNode.html)</br>[`WorkflowTransition`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/model/WorkflowTransition.html) |
+| Information för en nod som finns i arbetsflödet (eller inte) | [`WorkflowStatus`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/status/WorkflowStatus.html) |
 
 ## Hämta arbetsflödesobjekt i ECMA-skript {#obtaining-workflow-objects-in-ecma-scripts}
 
@@ -115,7 +97,7 @@ Följande metoder för HTTP-begäran gäller:
   </tr>
   <tr>
    <td><code>POST</code></td>
-   <td><p>Skapar en ny arbetsflödesinstans. <br /> Parametrarna är: - <code>model</code>: ID (URI) för respektive arbetsflödesmodell<br /> - <code>payloadType</code>: som innehåller typen av nyttolast (till exempel <code>JCR_PATH</code> eller URL).<br /> Nyttolasten skickas som parameter <code>payload</code>. Ett <code>201</code> (<code>CREATED</code>) svar skickas tillbaka med ett platshuvud som innehåller URL:en för den nya arbetsflödesinstansresursen.</p> </td>
+   <td><p>Skapar en ny arbetsflödesinstans. Parametrarna är:<br /> - <code>model</code>: ID (URI) för respektive arbetsflödesmodell<br /> - <code>payloadType</code>: som innehåller typen av nyttolast (till exempel <code>JCR_PATH</code> eller URL).<br /> Nyttolasten skickas som parameter <code>payload</code>. Ett <code>201</code> (<code>CREATED</code>) svar skickas tillbaka med ett platshuvud som innehåller URL:en för den nya arbetsflödesinstansresursen.</p> </td>
   </tr>
  </tbody>
 </table>
