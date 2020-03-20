@@ -4,7 +4,7 @@ description: Lär dig resurshanteringsåtgärder som överföring, hämtning, re
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 76fe7f99273139243e8944448ccfb013408b38de
+source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
 
 ---
 
@@ -160,7 +160,7 @@ Med Dynamic Media kan du batchöverföra resurser via FTP-servern. Om du tänker
 1. Tryck på **[!UICONTROL Spara]** i det nedre högra hörnet av dialogrutan Alternativ för överföringsjobb.
 1. Tryck på **[!UICONTROL Skicka överföring]** i det nedre högra hörnet på sidan Överför.
 
-   Om du vill visa överföringsförloppet trycker du på **[!UICONTROL Jobb]**i det globala navigeringsfältet. På sidan Jobb visas överföringsförloppet. Du kan fortsätta arbeta i AEM och när som helst återgå till jobbsidan i Dynamic Media Classic för att granska ett pågående jobb.
+   Om du vill visa överföringsförloppet trycker du på **[!UICONTROL Jobb]**i det globala navigeringsfältet. På sidan Jobb visas överföringsförloppet. Du kan när som helst fortsätta arbeta i AEM och gå tillbaka till jobbsidan i Dynamic Media Classic för att granska ett pågående jobb.
 Om du vill avbryta ett pågående överföringsjobb trycker du på **[!UICONTROL Avbryt]** bredvid Varaktighet.
 
 #### Alternativ för överföringsjobb {#upload-job-options}
@@ -292,7 +292,7 @@ Mer information om hur du skapar förinställningar för gruppuppsättningar fin
 
 ### Strömmade överföringar {#streamed-uploads}
 
-Om du överför många resurser till AEM ökar I/O-begäranden till servern drastiskt, vilket minskar överföringseffektiviteten och kan till och med leda till att en del överföringsåtgärder tar slut. AEM Assets stöder direktuppspelad överföring av resurser. Direktuppspelad överföring minskar I/O-disken under överföringen genom att resurslagring undviks i en tillfällig mapp på servern innan den kopieras till databasen. I stället överförs data direkt till databasen. På så sätt minskas tiden det tar att överföra stora resurser och möjligheten till timeout. Direktuppspelad överföring är aktiverat som standard i AEM Resurser.
+Om du överför många resurser till AEM ökar I/O-begäranden till servern drastiskt, vilket minskar överföringseffektiviteten och kan till och med leda till att vissa överföringsåtgärder tar slut. AEM Assets stöder direktuppspelad överföring av resurser. Direktuppspelad överföring minskar I/O-disken under överföringen genom att resurslagring undviks i en tillfällig mapp på servern innan den kopieras till databasen. I stället överförs data direkt till databasen. På så sätt minskas tiden det tar att överföra stora resurser och möjligheten till timeout. Direktuppspelad överföring är aktiverat som standard i AEM Resurser.
 
 >[!NOTE]
 >
@@ -336,11 +336,10 @@ Följ de här stegen för att förhandsgranska en resurs.
 
 Så här förhandsgranskar du en resurs med tangentbordet:
 
-1. I Assets-användargränssnittet navigerar du till platsen för resursen som du vill förhandsgranska med hjälp av `Tab` piltangenterna och.
+1. I Assets-användargränssnittet navigerar du till önskad resurs med hjälp av `Tab` piltangenterna.
 
-1. Öppna önskad resurs.
+1. Tryck på `Enter` för att öppna resursen. Du kan zooma in resurser i förhandsvisningsläget.
 
-   I förhandsgranskningsläget är alternativen för zoomning och återställning tillgängliga för bildtyper [som](/help/assets/assets-formats.md#supported-raster-image-formats) stöds (med interaktiv redigering).
 1. Så här zoomar du in i resursen:
    1. Använd `Tab` tangenten för att flytta fokus till inzoomningsikonen.
    1. Använd `Enter` tangenten för att zooma in i bilden.
@@ -368,11 +367,15 @@ Se även [Förhandsgranska dynamiska medieresurser.](/help/assets/previewing-ass
 
 1. To schedule a particular date/time for the activation of the asset, use the date picker beside the **[!UICONTROL On Time]** field.
 
-   ![chlimage_1-217](assets/chlimage_1-12.png)
+   ![använd datumtidsväljaren eller tangentbordstangenter i fältet I tid för att lägga till datum och tid för resursaktivering](assets/schedule-activation.png)
+
+   *Bild: Schemalägg aktivering av tillgångar*
 
 1. Om du vill inaktivera tillgången efter en viss tid väljer du datum/tid för inaktiveringen i datumväljaren bredvid fältet **[!UICONTROL Av tid]** . Inaktiveringsdatumet ska vara senare än aktiveringsdatumet för en tillgång. Efter [!UICONTROL Av-tid]är en resurs och dess återgivningar inte tillgängliga vare sig via webbgränssnittet Resurser eller via HTTP-API:t.
 
-   ![chlimage_1-218](assets/chlimage_1-13.png)
+   ![använd datumtidsväljaren eller tangentbordstangenter i fältet Fråntid för att lägga till datum och tid för inaktivering av resurser](assets/schedule-deactivation.png)
+
+   *Bild: Schemalägg inaktivering av tillgångar*
 
 1. Markera en eller flera taggar i fältet **[!UICONTROL Taggar]** . Om du vill lägga till en egen tagg skriver du namnet på taggen i rutan och trycker på Retur. Den nya taggen sparas i AEM. YouTube kräver taggar för att publicera. Se [Publicera videor på YouTube](video.md#publishing-videos-to-youtube).
 
@@ -618,7 +621,7 @@ CUG är ett extra sätt att begränsa åtkomsten till dina resurser. Du kan ocks
 1. Publicera mappen och försök sedan komma åt den från publiceringsinstansen. En inloggningsskärm visas.
 1. Om du är CUG-medlem anger du dina säkerhetsuppgifter. Mappen visas när du har autentiserats av AEM.
 
-## Söka efter material {#assetsearch}
+## Söka efter resurser {#assetsearch}
 
 Att söka resurser är centralt för användningen av ett digitalt resurshanteringssystem - oavsett om det är avsett för kreativa användare, för robust hantering av resurser av företagsanvändare och marknadsförare eller för administration av DAM-administratörer.
 
@@ -763,7 +766,7 @@ Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Vi
    >
    >Anteckningar kan också läggas till i videomaterialet. När du kommenterar videoklipp pausas spelaren så att du kan anteckna i en bildruta. Mer information finns i [Hantera videomaterial](/help/assets/managing-video-assets.md).
 
-1. Om du vill välja en annan färg så att du kan skilja på användarna klickar/trycker du på profilikonen och klickar/trycker på **[!UICONTROL Mina inställningar]**.
+1. Om du vill välja en annan färg så att du kan skilja mellan användarna klickar/trycker du på profilikonen och klickar/trycker på **[!UICONTROL Mina inställningar]**.
 
    ![Välj ikonen för användarprofilen och sedan Mina inställningar för att öppna Användarinställningar](assets/User-profile-preferences.png)
 
