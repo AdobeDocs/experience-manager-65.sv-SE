@@ -4,7 +4,7 @@ description: Lär dig hur du hittar de nödvändiga resurserna i AEM med hjälp 
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: e71b87b12d45bf12f29af917fddebeddedb18056
+source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
 
 ---
 
@@ -30,9 +30,7 @@ AEM stöder följande användningsfall och den här artikeln beskriver användni
 
 Sök efter resurser med Omnissearch-fältet högst upp i AEM-webbgränssnittet. Gå till **[!UICONTROL Resurser]** > **[!UICONTROL Filer]** i AEM, klicka på sökikonen i det övre fältet, ange söknyckelord och tryck på Retur. Du kan också använda kortkommandot / (snedstreck) för att öppna Omnissearch-fältet. Plats:Resurser är förmarkerade för att begränsa sökningarna till DAM-resurser. AEM ger förslag när du börjar skriva ett söknyckelord.
 
-Använd panelen **[!UICONTROL Filter]** om du vill begränsa sökningen genom att filtrera sökresultaten baserat på olika alternativ (prediktiv), t.ex. filtyp, filstorlek, senaste ändringsdatum, status för mediefilen, information om insikter och Adobe Stock-licensiering. Administratörerna kan anpassa filterpanelen och lägga till eller ta bort sökpredikt med hjälp av sökfaktorer.
-
-Observera att [!UICONTROL filtypsfiltret] på panelen [!UICONTROL Filter] har kryssrutor med olika lägen, vilket innebär att om du inte markerar alla kapslade predikat (eller format) markeras inte kryssrutorna på den första nivån och genomstryks i stället.
+Använd panelen **[!UICONTROL Filter]** om du vill begränsa sökningen genom att filtrera sökresultaten baserat på olika alternativ (prediktiv), t.ex. filtyp, filstorlek, senaste ändringsdatum, status för mediefilen, information om insikter och Adobe Stock-licensiering. Administratörerna kan anpassa filterpanelen och lägga till eller ta bort sökpredikt med hjälp av sökfaktorer. Filtret [!UICONTROL Filtyp] på panelen [!UICONTROL Filter] har kryssrutor för olika lägen. Om du inte markerar alla kapslade predikat (eller format) markeras inte kryssrutorna på första nivån och de genomsöks i stället.
 
 AEM-sökfunktionen stöder sökning efter samlingar och sökning efter resurser i en samling. Se [söksamlingar](/help/assets/managing-collections-touch-ui.md).
 
