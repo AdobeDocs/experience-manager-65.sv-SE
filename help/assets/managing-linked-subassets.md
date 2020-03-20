@@ -3,7 +3,7 @@ title: Hantera sammansatta resurser med referenser och flersidiga resurser i Exp
 description: Lär dig hur du skapar referenser till AEM-resurser i InDesign, Illustrator och Photoshop. Använd funktionen för sidvisningsprogram för att visa enskilda underresurssidor för flersidiga filer som PDF-, INDD-, PPT-, PPTX- och AI-filer.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b13fe70c4b67b27e0f18bdb557c52e25d21e7f75
+source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
 
 ---
 
@@ -24,8 +24,10 @@ Du kan referera till befintliga AEM-resurser inifrån en Adobe Illustrator-fil.
 
 1. Använd [AEM-skrivbordsappen](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html)och montera AEM Resurser-databasen som en enhet på den lokala datorn. Navigera till platsen för resursen som du vill referera till i den monterade enheten.
 1. Dra resursen från den monterade enheten till Illustrator-filen.
+
 1. Spara Illustrator-filen på den monterade enheten eller [överför](/help/assets/managing-assets-touch-ui.md#uploading-assets) den till AEM-databasen.
-1. När arbetsflödet är klart går du till sidan med resursinformation för resursen. Referenser till befintliga AEM-resurser visas under **[!UICONTROL Beroenden]** i kolumnen **[!UICONTROL Referenser]** .
+
+1. När arbetsflödet är klart går du till sidan med resursinformation för resursen. Referenserna till befintliga AEM-resurser visas under **[!UICONTROL Beroenden]** i kolumnen **[!UICONTROL Referenser]** .
 
    ![chlimage_1-84](assets/chlimage_1-258.png)
 
@@ -35,7 +37,9 @@ Du kan referera till befintliga AEM-resurser inifrån en Adobe Illustrator-fil.
 
 1. Klicka på **[!UICONTROL Visa egenskaper]** i verktygsfältet. På sidan [!UICONTROL Egenskaper] visas listan med filer som refererar till den aktuella resursen under kolumnen **[!UICONTROL Referenser]** på fliken **[!UICONTROL Grundläggande]** .
 
-   ![chlimage_1-86](assets/chlimage_1-260.png)
+   ![visa referenserna för Experience Manager Assets i kolumnen Referenser i resursinformationen](assets/asset-references.png)
+
+   *Bild: Resursreferenser i tillgångsinformation*
 
 ## Lägga till AEM-resurser som referenser i Adobe InDesign {#add-aem-assets-as-references-in-adobe-indesign}
 
