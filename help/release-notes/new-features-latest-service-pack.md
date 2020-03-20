@@ -4,7 +4,7 @@ description: Nyheter i Adobe Experience Manager 6.5 Service Pack 4
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: f50369f269040bf7f1a30b018acbc1b441abdb15
+source-git-commit: da9d682a0392e5de8e012e254fb82bd15547a542
 
 ---
 
@@ -17,6 +17,8 @@ Den senaste versionen av AEM Service Pack 4 (6.5.4.0) släpptes 5 **mars 2020**.
 
 ## AEM Sites {#aem-sites}
 
+AEM 6.5.4.0 innehåller förbättringar i formatsystemet. Nu kan du välja format i komponentdialogrutan.
+
 ### Prestandaförbättringar inom olika områden {#performance-improvements}
 
 * Minskad tid för inläsning och initiering av ContextHub inom en plats (`contexthub.kernel.js`). Det ger snabbare sidinläsning under ett webbplatsbesök.
@@ -26,8 +28,6 @@ Den senaste versionen av AEM Service Pack 4 (6.5.4.0) släpptes 5 **mars 2020**.
 * Ökade inläsningstiden för inlägg på en Sites-sida med över 200 live-kopior i **[!UICONTROL Live Copy Overview]**.
 
 * Förbättrad hantering av ofullständiga eller ogiltiga URL:er. Sådana URL-adresser kan göra mallredigeraren långsammare.
-
-Dessutom innehåller AEM 6.5.4.0 förbättringar i formatsystemet. Nu kan du välja format i komponentdialogrutan.
 
 ## AEM Assets {#aem-assets}
 
@@ -116,16 +116,19 @@ Du kan ange startdatum och -tid och slutdatum och sluttid så att dina inställn
 
 Du kan använda batch-API:t för att skapa flera interaktiva dokument från en mall. Mallen är en interaktiv kommunikation utan data. Batch-API:t kombinerar data med en mall för att skapa en interaktiv kommunikation. API:t är användbart vid massproduktion av interaktiv kommunikation. Till exempel telefonräkningar, kreditkortsutdrag för flera kunder. Se [Generera flera interaktiva dokument med hjälp av API:t](../forms/using/generate-multiple-interactive-communication-using-batch-api.md)för gruppbearbetning.
 
-
-
 ## Viktiga versioner sedan AEM 6.5 SP3
 
 Mellan 12 december 2019 och 5 mars 2020 släppte Adobe följande funktioner som ligger utanför AEM-leverantörens kärnprogram:
 
-* AEM Cloud Manager 2020.1.0 och 2020.2.0Versionsuppdateringarna förbättrar pipeline-statusen och möjligheten att hämta loggar för olika steg. Mer information finns i:
+* AEM Cloud Manager 2020.1.0 och 2020.2.0
+
+   Versionsuppdateringarna förbättrar pipeline-statusen och möjligheten att hämta loggar för olika steg. Mer information finns i:
+
    * [Cloud Manager 2020.1.0](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/release-notes/release-notes-2020-1-0.html)
 
+
    * [Cloud Manager 2020.2.0](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/release-notes/release-notes-current.html)
+
 
 * CLI-uppdateringar för AEM Cloud Manager
 
