@@ -3,7 +3,7 @@ title: Redigera eller lägga till metadata
 description: Lär dig mer om metadata för resurser i AEM Resurser och olika sätt att redigera metadata för resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: 91818198032de0580fe04d09fdd567dc470c021d
 
 ---
 
@@ -24,11 +24,15 @@ Så här redigerar du metadata:
    * Välj snabbåtgärden **[!UICONTROL Visa egenskaper]** i miniatyrbilden av resursen.
    * Klicka/tryck på ikonen **[!UICONTROL Visa egenskaper]** i verktygsfältet på resurssidan.
       ![chlimage_1-168](assets/chlimage_1-168.png)
+      *Bild: Ikonen Egenskaper*
    Resurssidan visar alla metadata för resursen. Dessa metadata extraherades automatiskt när de överfördes (överfördes) till AEM Assets.
 
-   ![chlimage_1-169](assets/chlimage_1-169.png)
+   ![välj resursegenskaper för att visa metadata](assets/asset-metadata.png)
 
-1. Redigera metadata på de olika flikarna efter behov och klicka/tryck sedan på **[!UICONTROL Spara]** i verktygsfältet när du är klar. Klicka/tryck på **[!UICONTROL Stäng]** för att återgå till webbgränssnittet Resurser.
+
+   *Bild: Redigera eller lägga till metadata på sidan Egenskaper för resurser*
+
+1. Make edits to the metadata under the various tabs, as required, and when completed, click/tap **[!UICONTROL Save]** from the toolbar to save your changes. Click/tap **[!UICONTROL Close]** to return to the Assets web interface.
 
    >[!NOTE]
    >
