@@ -3,7 +3,7 @@ title: Relaterade tillgångar
 description: Lär dig hur du relaterar resurser som delar vissa gemensamma attribut. Du kan också använda funktionen för att skapa käll-/härledda relationer mellan resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 4fc656948e4c5cb4a3e927c25d3afd29102b7ab4
+source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
 
 ---
 
@@ -14,14 +14,16 @@ Med Adobe Experience Manager Assets (AEM) kan ni manuellt relatera resurser base
 
 Med den här funktionen kan du dela en lågupplöst PDF- eller JPG-fil med leverantörer eller myndigheter och göra den högupplösta INDD-filen tillgänglig endast på begäran.
 
->[!NOTE] Det är bara användare med redigeringsbehörighet som kan relatera och dela upp resurser.
+>[!NOTE] Endast användare med redigeringsbehörighet för resurser kan relatera och ta bort kopplingen för resurserna.
 >
 
 ## Relatera resurser {#relating-assets}
 
-1. I AEM-gränssnittet öppnar du sidan [!UICONTROL Egenskaper] för en resurs som du vill relatera.
+1. I AEM-gränssnittet öppnar du sidan **[!UICONTROL Egenskaper]** för en resurs som du vill relatera.
 
-   ![chlimage_1-272](assets/chlimage_1-272.png)
+   ![öppna en tillgångs egenskapssida för att relatera resursen](assets/asset-properties-relate-assets.png)
+
+   *Bild: Sida med tillgångsegenskaper för att relatera resurser*
 
    Du kan också välja resursen i listvyn.
 
@@ -47,7 +49,7 @@ Med den här funktionen kan du dela en lågupplöst PDF- eller JPG-fil med lever
    ![chlimage_1-277](assets/chlimage_1-277.png)
 
 1. Klicka på/tryck på ikonen **[!UICONTROL Bekräfta]** .
-1. Klicka/tryck på **[!UICONTROL OK]** för att stänga dialogrutan. Beroende på ditt val av relation i steg 3 listas den relaterade resursen under en lämplig kategori i avsnittet **[!UICONTROL Relaterat]** . Om den resurs du har relaterat är källfilen för den aktuella resursen visas den under **[!UICONTROL Källa]**.
+1. Klicka/tryck på **[!UICONTROL OK]** för att stänga dialogrutan. Beroende på ditt val av relation i steg 3 listas den relaterade resursen under en lämplig kategori i **[!UICONTROL relaterat]** avsnitt. Om den resurs du har relaterat är källfilen för den aktuella resursen visas den under **[!UICONTROL Källa]**.
 
    ![chlimage_1-278](assets/chlimage_1-278.png)
 
@@ -67,11 +69,14 @@ Det är också praktiskt att skapa käll-/härledda relationer mellan resurser m
 
 ![chlimage_1-281](assets/chlimage_1-281.png)
 
-Om källfilen är relaterad till en annan resurs hämtar AEM Resurser den refererade resursen och inkluderar den för översättning.
+Om källfilen är relaterad till en annan resurs hämtar Experience Manager Assets den refererade resursen och inkluderar den för översättning.
 
-![chlimage_1-282](assets/chlimage_1-282.png)
+![sidan med resursegenskaper visar den relaterade resursens källfil som ska inkluderas för översättning](assets/asset-properties-source-asset.png)
+
+*Bild: Källtillgång för relaterade tillgångar som ska inkluderas för översättning*
 
 1. Översätt resurserna i källmappen till ett målspråk genom att följa stegen i [Skapa ett nytt översättningsprojekt](translation-projects.md#create-a-new-translation-project). I det här fallet kan du till exempel översätta dina resurser till franska.
+
 1. Öppna översättningsmappen på sidan [!UICONTROL Projekt] .
 
    ![chlimage_1-283](assets/chlimage_1-283.png)
