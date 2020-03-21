@@ -4,7 +4,7 @@ description: Nyheter i Adobe Experience Manager 6.5 Service Pack 4
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: da9d682a0392e5de8e012e254fb82bd15547a542
+source-git-commit: 1d9d4d2e97ebd321f73b97deca2fb7298802bbd0
 
 ---
 
@@ -16,6 +16,8 @@ Adobe Experience Manager (AEM) 6.5 ger funktioner och kontinuerliga förbättrin
 Den senaste versionen av AEM Service Pack 4 (6.5.4.0) släpptes 5 **mars 2020**. I den här artikeln beskrivs de funktioner som den senaste Service Pack-versionen erbjuder för att göra din AEM-resa mer tilltalande.
 
 ## AEM Sites {#aem-sites}
+
+### Förbättringar i formatsystemet
 
 AEM 6.5.4.0 innehåller förbättringar i formatsystemet. Nu kan du välja format i komponentdialogrutan.
 
@@ -122,7 +124,7 @@ Mellan 12 december 2019 och 5 mars 2020 släppte Adobe följande funktioner som 
 
 * AEM Cloud Manager 2020.1.0 och 2020.2.0
 
-   Versionsuppdateringarna förbättrar pipeline-statusen och möjligheten att hämta loggar för olika steg. Mer information finns i:
+   Förbättra pipeline-status och möjligheten att ladda ned loggar i olika steg. Se:
 
    * [Cloud Manager 2020.1.0](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/release-notes/release-notes-2020-1-0.html)
 
@@ -132,7 +134,7 @@ Mellan 12 december 2019 och 5 mars 2020 släppte Adobe följande funktioner som 
 
 * CLI-uppdateringar för AEM Cloud Manager
 
-   Versionsuppdateringarna inkluderar automatisering av Cloud Manager-åtgärder med kommandoradsverktyget. Se [GitHub](https://github.com/adobe/aio-cli-plugin-cloudmanager/releases).
+   Automatisera Cloud Manager-uppgifter med kommandoradsverktyget. Se [GitHub](https://github.com/adobe/aio-cli-plugin-cloudmanager/releases).
 
 * AEM Sites: Project Archetype 23
 
@@ -148,7 +150,7 @@ Mellan 12 december 2019 och 5 mars 2020 släppte Adobe följande funktioner som 
 
 * AEM Assets: Desktop App 2.0.1.1
 
-   Mer information finns i [Få åtkomst till resurserna](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html)på skrivbordet.
+   Se [Få tillgång till resurserna](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html)på datorn.
 
 * AEM-skärmar: Feature Pack 202001
 
