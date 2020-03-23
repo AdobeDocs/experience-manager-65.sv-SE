@@ -3,7 +3,7 @@ title: Format som stöds för resurser
 description: Lista över filformat som stöds av AEM Resurser och funktioner som stöds för varje format.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 8431275c0e4de408e1ebafafafa94dcfae3c1127
+source-git-commit: d7d25c75c1023383e07c36252ece2e85425a95be
 
 ---
 
@@ -190,18 +190,15 @@ De arkivformat som stöds och tillämpligheten för de vanliga DAM-arbetsflöden
 
 ## Andra format som stöds {#other-supported-formats}
 
-Hur vanliga DAM-arbetsflöden kan användas för ett par andra filformat beskrivs i tabellen nedan. Vanlig DAM-funktionalitet, förutom Dynamic Media Delivery, stöds för alla filer.
+Hur vanliga DAM-arbetsflöden kan användas för ett par andra filformat beskrivs i tabellen nedan. Den vanliga DAM-funktionen som lagring, versionshantering, ACL, arbetsflöde, publicering och metadatahantering, förutom Dynamic Media Delivery, stöds för alla filer.
 
 | Format | Lagring | Versionshantering | Arbetsflöde | Publicering | Åtkomstkontroll | Dynamic Media Delivery |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-| **²** | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | SVG | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | CSS | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | VTT | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | XML | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | JavaScript (när konfigureras med egen leveransdomän) |  |  |  |  |  | ✓ |
-
-**²** De andra formaten stöds i DAM för lagring, versionshantering, ACL, arbetsflöde, publicering och metadatahantering.
 
 ## MIME-typer som stöds {#supported-mime-types}
 
@@ -249,7 +246,7 @@ Se även [Aktivera stöd](/help/sites-administering/scene7.md#enabling-mime-type
 | OTF | application/x-font-otf |  |  |
 | PDF | application/pdf | `pdfprocess=Rasterize&resolution=150`<br>`&colorspace=Auto&pdfbrochure=false`<br>`&keywords=false&links=false` | [pdfOptions](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/?f=r_pdf_options) |
 | PFB | application/x-font-type1 |  |  |
-| PFM | application/x-font-type1 |  |  |
+| PGM | application/x-font-type1 |  |  |
 | PICT | image/x-pict |  |  |
 | PNG | bild/png |  |  |
 | PPT | application/vnd.ms |  |  |
