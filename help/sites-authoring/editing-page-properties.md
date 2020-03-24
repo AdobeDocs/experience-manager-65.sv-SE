@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 1e9dd0d7-209a-4989-b66b-bca0d04b437a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 47a284a55f8d8f00ecda7be0bdcb8125cf976e3b
+source-git-commit: 60d36fd98bd4329a2b707229755fd197e2236748
 
 ---
 
@@ -193,13 +193,13 @@ Visar sidminiatyrbilden. Du kan:
    * **Aktivera användardelning för Pinterest**
    * **Önskad XF-variation** Definiera variant av upplevelsefragment som används för att generera metadata för sidan
 
-### Molntjänster {#cloud-services}
+### Cloud Services {#cloud-services}
 
-* **Molntjänster**
+* **Cloud Services**
 
    Definiera egenskaper för [molntjänster](/help/sites-developing/extending-cloud-config.md).
 
-### Personalisering {#personalization}
+### Personanpassning {#personalization}
 
 * **ContextHub-konfigurationer**
 
@@ -209,7 +209,10 @@ Visar sidminiatyrbilden. Du kan:
 
    Välj ett [varumärke om du vill ange ett omfång för målgruppsanpassning](/help/sites-authoring/target-adobe-campaign.md).
 
-### Permissions {#permissions}
+   >[!NOTE]
+   >Det här alternativet kräver att användarkontot finns i `Target Adminstrators`gruppen.
+
+### Behörigheter {#permissions}
 
 * **Behörigheter**
 
@@ -261,7 +264,7 @@ Du kan definiera sidegenskaper:
 
 * Från sidredigeraren:
 
-   * Använda **sidinformation** (och sedan **Öppna egenskaper**)
+   * Med **Sidinformation** (och sedan **Öppna egenskaper**)
 
 ### Från webbplatskonsolen - en sida {#from-the-sites-console-single-page}
 
@@ -289,7 +292,7 @@ När du redigerar en sida kan du använda **Sidinformation** för att definiera 
 
    ![screen_shot_2018-03-22at095740](assets/screen_shot_2018-03-22at095740.png)
 
-1. Välj **Öppna egenskaper** så öppnas en dialogruta där du kan redigera egenskaperna, sorterade efter lämplig flik. Följande knappar finns också till höger om verktygsfältet:
+1. Select **Open Properties** and a dailog will open allowing you to edit the properties, sorted by the appropriate tab. Följande knappar finns också till höger om verktygsfältet:
 
    * **Avbryt**
    * **Spara och stäng**
@@ -298,7 +301,7 @@ När du redigerar en sida kan du använda **Sidinformation** för att definiera 
 
 ### Från webbplatskonsolen - flera sidor {#from-the-sites-console-multiple-pages}
 
-På **webbplatskonsolen** kan du markera flera sidor och sedan använda **Visa egenskaper** för att visa och/eller redigera sidegenskaperna. Detta kallas massredigering av sidegenskaper.
+På **Sites**-konsolen kan du markera flera sidor och sedan använda **Visa egenskaper** för att visa och/eller redigera sidegenskaperna. Detta kallas massredigering av sidegenskaper.
 
 >[!NOTE]
 >
@@ -313,7 +316,7 @@ Du kan välja flera sidor för massredigering på olika sätt, bland annat:
 
 ![epp-01](assets/epp-01.png)
 
-När du har markerat sidorna och sedan klickat på eller klickat på alternativet **** Egenskaper, visas bulkegenskaperna:
+När du har markerat sidorna och tryckt eller klickat på alternativet **Egenskaper**, visas massegenskaperna:
 
 ![epp-02](assets/epp-02.png)
 
