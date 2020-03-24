@@ -8,7 +8,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 translation-type: tm+mt
-source-git-commit: d690bcc80052f356425cd85c498aa48b1caf44bc
+source-git-commit: 3c2974911b9e9b45d4c4641f9c3683677a88db2f
 
 ---
 
@@ -88,7 +88,7 @@ Om dina bildförinställningar används för att returnera `fmt !=JPEG` eller `f
 
 ## Måste jag ändra URL:er, bildförinställningar eller driftsätta ny kod för Smart Imaging på min webbplats? {#will-i-have-to-change-any-urls-image-presets-or-deploy-any-new-code-on-my-site-for-smart-imaging}
 
-Smart Imaging fungerar sömlöst med befintliga bild-URL:er och bildförinställningar. Dessutom kräver Smart Imaging inte att du lägger till kod på webbplatsen för att identifiera en användares webbläsare. Allt detta hanteras automatiskt.
+Nej. Smart Imaging fungerar sömlöst med befintliga bild-URL:er och bildförinställningar. Dessutom kräver Smart Imaging inte att du lägger till kod på webbplatsen för att identifiera en användares webbläsare. Allt detta hanteras automatiskt.
 
 Som tidigare nämnts stöder Smart Imaging endast bildformaten JPEG och PNG. För andra format måste du lägga till modifieraren i URL:en `bfc=off` enligt beskrivningen ovan.
 
@@ -115,11 +115,11 @@ Din första anpassade domän kostar inget extra med en Dynamic Media-licens.
 
 Du måste initiera begäran om att använda smart bildåtergivning; den inte aktiveras automatiskt.
 
-1. Initiera en begäran om teknisk support (e-post: s7support@adobe.com).
+1. Initiera en begäran om teknisk support (e-post: `s7support@adobe.com`).
 1. Ange följande information i din supportförfrågan:
 
    1. Primärt kontaktnamn, e-postadress, telefon.
-   1. Alla domäner som ska aktiveras för smart bildbehandling (det vill säga images.company.com eller mycompany.scene7.com).
+   1. Alla domäner som ska aktiveras för smart bildåtergivning (d.v.s. `images.company.com` eller `mycompany.scene7.com`).
 
       Om du vill hitta dina domäner loggar du in på ditt företagskonto eller dina företagskonton.
 
