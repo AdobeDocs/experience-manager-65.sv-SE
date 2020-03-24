@@ -19,7 +19,7 @@ source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
 
 Community Components Guide är ett interaktivt utvecklingsverktyg för ramverket för [sociala komponenter (SCF)](scf.md). Den innehåller en lista över tillgängliga AEM Communities-komponenter eller de mer komplexa funktioner som byggts av flera komponenter.
 
-Tillsammans med grundläggande information för varje komponent kan guiden experimentera med hur SCF-komponenterna/-funktionerna fungerar och hur de kan konfigureras eller anpassas.
+Förutom grundläggande information för varje komponent kan du med guiden experimentera med hur SCF-komponenterna/-funktionerna fungerar och hur de kan konfigureras eller anpassas.
 
 Information om grundläggande utvecklingsfunktioner för varje komponent finns i [Grundläggande om funktioner och komponenter](essentials.md).
 
