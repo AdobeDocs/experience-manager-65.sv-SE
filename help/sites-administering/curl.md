@@ -10,14 +10,14 @@ topic-tags: operations
 content-type: reference
 discoiquuid: d4ceb82e-2889-4507-af22-b051af83be38
 translation-type: tm+mt
-source-git-commit: a833a34bbeb938c72cdb851a46b2ffd97aee9f6d
+source-git-commit: 7ee76afa11384aedc79b17e823c8dc9594662388
 
 ---
 
 
 # Använda cURL med AEM{#using-curl-with-aem}
 
-Administratörer behöver ofta automatisera eller förenkla vanliga uppgifter i alla system. I AEM är till exempel hantering av användare, installation av paket och hantering av OSGi-paket uppgifter som måste utföras ofta.
+Administratörer behöver ofta automatisera eller förenkla vanliga uppgifter inom alla system. I AEM är till exempel hantering av användare, installation av paket och hantering av OSGi-paket uppgifter som måste utföras ofta.
 
 På grund av Sling-ramverkets RESTful-karaktär, som AEM bygger på, kan de flesta åtgärder minskas till ett URL-anrop. cURL kan användas för att köra sådana URL-anrop och kan vara ett användbart verktyg för AEM-administratörer.
 
@@ -206,7 +206,7 @@ curl -u admin:admin -FdeleteAuthorizable= http://localhost:4502/home/users/t/tes
 curl -u admin:admin -FdeleteAuthorizable= http://localhost:4502/home/groups/t/testGroup
 ```
 
-### Säkerhetskopiera {#backup}
+### Säkerhetskopiering {#backup}
 
 Mer information finns i [Säkerhetskopiera och återställ](/help/sites-administering/backup-and-restore.md#automating-aem-online-backup) .
 
@@ -370,13 +370,13 @@ curl -u admin:admin -F :operation=delete http://localhost:4502/etc/test/test.pro
 #### Flytta en nod {#move-a-node}
 
 ```shell
-curl -u admin:admin -F":operation=move" -F":applyTo=/sourceurl"  -F":dest=/target/parenturl/" https://lcoalhost:4502/content
+curl -u admin:admin -F":operation=move" -F":applyTo=/sourceurl"  -F":dest=/target/parenturl/" https://localhost:4502/content
 ```
 
 #### Kopiera en nod {#copy-a-node}
 
 ```shell
-curl -u admin:admin -F":operation=copy" -F":applyTo=/sourceurl"  -F":dest=/target/parenturl/" https://lcoalhost:4502/content
+curl -u admin:admin -F":operation=copy" -F":applyTo=/sourceurl"  -F":dest=/target/parenturl/" https://localhost:4502/content
 ```
 
 #### Överför filer med Sling PostServlet {#upload-files-using-sling-postservlet}
