@@ -49,7 +49,7 @@ Med den här funktionen kan du dela en lågupplöst PDF- eller JPG-fil med lever
    ![chlimage_1-277](assets/chlimage_1-277.png)
 
 1. Klicka på/tryck på ikonen **[!UICONTROL Bekräfta]** .
-1. Klicka/tryck på **[!UICONTROL OK]** för att stänga dialogrutan. Beroende på ditt val av relation i steg 3 listas den relaterade resursen under en lämplig kategori i **[!UICONTROL relaterat]** avsnitt. Om den resurs du har relaterat är källfilen för den aktuella resursen visas den under **[!UICONTROL Källa]**.
+1. Klicka/tryck på **[!UICONTROL OK]** för att stänga dialogrutan. Beroende på ditt val av relation i steg 3 listas den relaterade resursen under en lämplig kategori i avsnittet **[!UICONTROL Relaterat]** . Om den resurs du har relaterat är källfilen för den aktuella resursen visas den under **[!UICONTROL Källa]**.
 
    ![chlimage_1-278](assets/chlimage_1-278.png)
 
