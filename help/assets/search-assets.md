@@ -72,7 +72,7 @@ AEM kan söka i många filformat och sökfiltren kan anpassas efter företagets 
 
 ### Resultat med och utan förbättrade smarta taggar {#withsmarttags}
 
-Som standard kombineras söktermerna med AND-satsen i AEM-sökningen. Du kan till exempel söka efter nyckelordskvinna som springer. Som standard visas endast resurser med både kvinna och nyckelord som körs i metadata i sökresultatet. Samma beteende bevaras när specialtecken (punkter, understreck eller streck) används med nyckelorden. Följande sökfrågor returnerar samma resultat:
+Som standard kombineras söktermerna med AND-satsen i AEM-sökningen. Du kan till exempel söka efter nyckelordskvinna som springer. Som standard visas endast resurser med både kvinna och nyckelord som körs i metadata i sökresultatet. Samma beteende behålls när specialtecken (punkter, understreck eller streck) används med nyckelorden. Följande sökfrågor returnerar samma resultat:
 
 * `woman running`
 * `woman.running`
