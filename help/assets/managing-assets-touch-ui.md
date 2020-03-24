@@ -122,7 +122,7 @@ Innan du överför en resurs måste du kontrollera att den har ett [format](/hel
 
 ### Serieuppladdningar {#serialuploads}
 
-Vid överföring av flera resurser i grupp förbrukas betydande I/O-resurser, vilket kan påverka prestandan negativt för din AEM Assets-instans. Om du har en långsam internetanslutning ökar tiden det tar att överföra drastiskt på grund av att disk-I/O-inläsningen har ökat. Din webbläsare kan dessutom införa ytterligare begränsningar för antalet POST-begäranden som AEM Assets kan hantera för samtidiga överföringar av resurser. Därför misslyckas överföringen eller avslutas i förtid. Med andra ord kan AEM-resurser sakna vissa filer när en grupp filer importeras eller helt och hållet inte kan importera någon fil.
+Vid överföring av flera resurser i grupp förbrukas betydande I/O-resurser, vilket kan påverka prestanda negativt för din AEM Assets-instans. Om du har en långsam internetanslutning ökar tiden det tar att överföra drastiskt på grund av att disk-I/O-inläsningen har ökat. Din webbläsare kan dessutom införa ytterligare begränsningar för antalet POST-begäranden som AEM Assets kan hantera för samtidiga överföringar av resurser. Därför misslyckas överföringen eller avslutas i förtid. Med andra ord kan AEM-resurser sakna vissa filer när en grupp filer importeras eller helt och hållet inte kan importera någon fil.
 
 För att komma till rätta med denna situation importerar AEM Assets en resurs i taget (seriell överföring) under en gruppöverföring, i stället för att alla resurser hämtas samtidigt.
 
@@ -160,7 +160,7 @@ Med Dynamic Media kan du batchöverföra resurser via FTP-servern. Om du tänker
 1. Tryck på **[!UICONTROL Spara]** i det nedre högra hörnet av dialogrutan Alternativ för överföringsjobb.
 1. Tryck på **[!UICONTROL Skicka överföring]** i det nedre högra hörnet på sidan Överför.
 
-   Om du vill visa överföringsförloppet trycker du på **[!UICONTROL Jobb]**i det globala navigeringsfältet. På sidan Jobb visas överföringsförloppet. Du kan när som helst fortsätta arbeta i AEM och gå tillbaka till jobbsidan i Dynamic Media Classic för att granska ett pågående jobb.
+   Om du vill visa överföringsförloppet trycker du på **[!UICONTROL Jobb]**i det globala navigeringsfältet. På sidan Jobb visas överföringsförloppet. Du kan fortsätta arbeta i AEM och när som helst återgå till jobbsidan i Dynamic Media Classic för att granska ett pågående jobb.
 Om du vill avbryta ett pågående överföringsjobb trycker du på **[!UICONTROL Avbryt]** bredvid Varaktighet.
 
 #### Alternativ för överföringsjobb {#upload-job-options}
@@ -363,7 +363,7 @@ Se även [Förhandsgranska dynamiska medieresurser.](/help/assets/previewing-ass
 
    >[!NOTE]
    >
-   >Layouten på sidan [!UICONTROL Egenskaper] och de metadataegenskaper som är tillgängliga beror på det underliggande metadataschemat. Mer information om hur du ändrar layouten på sidan [!UICONTROL Egenskaper] finns i [Metadatamcheman](/help/assets/metadata-schemas.md).
+   >Layouten på sidan [!UICONTROL Egenskaper] och de metadataegenskaper som är tillgängliga beror på det underliggande metadataschemat. Mer information om hur du ändrar layouten för sidan [!UICONTROL Egenskaper] finns i [Metadatamcheman](/help/assets/metadata-schemas.md).
 
 1. To schedule a particular date/time for the activation of the asset, use the date picker beside the **[!UICONTROL On Time]** field.
 
