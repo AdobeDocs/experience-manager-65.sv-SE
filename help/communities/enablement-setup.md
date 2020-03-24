@@ -109,7 +109,7 @@ När [tunneltjänsten](#enable-the-tunnel-service) är aktiverad används i stä
 
 I den här självstudiekursen skapas tre medlemmar i publiceringsmiljön. Två medlemmar blir medlemmar i en användargrupp som är tilldelad en utbildningsväg, medan den tredje medlemmen blir en aktiveringsresurskontakt.
 
-En fjärde användare skapas i författarmiljön och tilldelas rollerna Webbgruppsadministratör och Aktivitetshanteraren i användarforumet.
+En fjärde användare skapas i författarmiljön och tilldelas rollerna Webbgruppsadministratör och Webbgruppshanterare.
 
 >[!NOTE]
 >
