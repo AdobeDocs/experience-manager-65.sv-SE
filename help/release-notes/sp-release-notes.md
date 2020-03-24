@@ -116,7 +116,7 @@ En fullständig lista över funktioner, viktiga högdagrar, viktiga funktioner s
 
 * Flera sökfrågor utlöses när flera taggar väljs från sökfiltret (NPR-32143).
 
-* Användargränssnittet i Experience Manager Assets visar trunkerade filnamn när resurser med fler än 50 tecken i filnamnet överförs (NPR-32054).
+* Experience Manager Assets-gränssnittet visar trunkerade filnamn när resurser med fler än 50 tecken i filnamnet överförs (NPR-32054).
 
 * Alla kryssrutor på panelen Filter avmarkeras när den första och den andra kryssrutan avmarkeras när du har markerat två kryssrutor i kryssruteträdet i Adobe Stock (NPR-31919).
 
