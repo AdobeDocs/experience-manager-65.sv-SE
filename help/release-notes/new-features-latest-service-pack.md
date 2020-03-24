@@ -4,22 +4,22 @@ description: Nyheter i Adobe Experience Manager 6.5 Service Pack 4
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 1d9d4d2e97ebd321f73b97deca2fb7298802bbd0
+source-git-commit: 5eff26237415160e80e622eacabf5c40dfad00af
 
 ---
 
 
 # Nyheter i Adobe Experience Manager 6.5 Service Pack 4 {#aem-whats-new-service-pack-4}
 
-Adobe Experience Manager (AEM) 6.5 ger funktioner och kontinuerliga förbättringar genom kvartalsvisa Service Pack. Det nya sättet är till fördel för våra kunder när de börjar använda innovationerna snabbare.
+Adobe Experience Manager (AEM) 6.5 ger funktioner och kontinuerliga förbättringar genom kvartalsvisa Service Pack. Strategin är till fördel när det blir enklare att ta till sig innovationerna.
 
-Den senaste versionen av AEM Service Pack 4 (6.5.4.0) släpptes 5 **mars 2020**. I den här artikeln beskrivs de funktioner som den senaste Service Pack-versionen erbjuder för att göra din AEM-resa mer tilltalande.
+AEM Service Pack 4 (6.5.4.0) lanseras den 5 **mars 2020**. I den här artikeln beskrivs de viktigaste funktionerna i 6.5 Service Packs som gör din AEM-resa mer tilltalande.
 
 ## AEM Sites {#aem-sites}
 
 ### Förbättringar i formatsystemet
 
-AEM 6.5.4.0 innehåller förbättringar i formatsystemet. Nu kan du välja format i komponentdialogrutan.
+Nu kan du välja format i komponentdialogrutan med det förbättrade formatsystemet.
 
 ### Prestandaförbättringar inom olika områden {#performance-improvements}
 
@@ -58,7 +58,7 @@ Experience Manager Assets innehåller följande tillgänglighetsförbättringar:
 
 ### Generera utskrifter i arbetsflöden för AEM Forms {#generate-printable-output}
 
-Med det nya arbetsflödessteget Generera utskrift kan du integrera en källmallfil med en datafil. Tack vare den här integreringen kan du skriva ut eller spara olika kopior av mallfilen. Du kan till exempel skriva ut ett källformulär med ett annat namn varje gång det skrivs ut. Spara namnen i datafilen och integrera datafilen med en standardmallfil. Mer information om den här funktionen finns i [Formulärcentrerat arbetsflöde i OSGi - stegreferens](../forms/using/aem-forms-workflow-step-reference.md).
+Med arbetsflödessteget Generera utskrift kan du integrera en källmallsfil med en datafil. Tack vare den här integreringen kan du skriva ut eller spara olika kopior av mallfilen. Steget genererar PCL-, PostScript-, ZPL-, IPL-, TPCL- eller DPL-utdata. Mer information om den här funktionen finns i [Formulärcentrerat arbetsflöde i OSGi - stegreferens](../forms/using/aem-forms-workflow-step-reference.md).
 
 ![Generera utdata för utskrift](assets/generate-print-output-demo.gif)
 
@@ -66,10 +66,7 @@ Med det nya arbetsflödessteget Generera utskrift kan du integrera en källmallf
 
 Nu kan du definiera antalet kolumner för en panel i adaptiva formulär och interaktiv kommunikation. Växla till layoutläge om du vill använda det nya alternativet med flera kolumner. Mer information finns i [Använda layoutläget för att ändra storlek på komponenter](../forms/using/resize-using-layout-mode.md).
 
-
 ![Flerspaltig layout](assets/multi-column-layout.gif)
-
-
 
 ### Anpassningar av AEM Inbox {#aem-inbox}
 
@@ -83,7 +80,7 @@ Alternativet Administratörskontroll är bara synligt för medlemmarna i gruppen
 
 ### RTF-stöd i HTML5-formulär {#rich-text-support}
 
-Du kan nu konvertera ett textfält i ett XFA-formulär till ett RTF-fält när det återges i ett HTML5-formulär. Det innebär att textfältet innehåller en lista med andra formateringsalternativ i ett HTML5-formulär. Mer information finns i [Utforma formulärmallar för HTML5-formulär](../forms/using/designing-form-template.md).
+Konvertera ett textfält i ett XFA-formulär till ett RTF-fält i ett HTML5-formulär. Mer information finns i [Utforma formulärmallar för HTML5-formulär](../forms/using/designing-form-template.md).
 
 ### Förbättrad tillgänglighet {#forms-accessibility-enhancements-6540}
 
@@ -105,16 +102,16 @@ Smart bildbehandling använder varje användares unika visningsegenskaper för a
 
 Resurser som användare kan söka efter visuellt liknande bilder. AEM visar smarta taggade bilder från DAM-databasen som liknar den användarvalda bilden. Se [Visuell sökning](../assets/search-assets.md).
 
-### Dela och begära åtkomst till inkorgsobjekt för en användare (6.5.3.0) {#share-request-access}
+### Dela och begära åtkomst till inkorgsobjekt som tillhör en AEM Forms-användare (6.5.3.0) {#share-request-access}
 
 Du kan dela dina inkorgsobjekt med en annan användare. När en annan användare får tillgång till dina inkorgsobjekt kan användaren göra anspråk på och vidta lämpliga åtgärder för delade objekt. På samma sätt kan du begära åtkomst till inkorgsobjekt från andra användare. Se [Dela och begära åtkomst till inkorgsobjekt för en användare](../forms/using/configure-shared-queues-osgi.md).
 
-### Konfigurera inställningen för frånvaro av inkorgsobjekt (6.5.3.0) {#configure-out-of-office}
+### Konfigurera inställningar utanför kontoret för inkorgsobjekt för en AEM Forms-användare (6.5.3.0) {#configure-out-of-office}
 
 Om du tänker vara utanför kontoret kan du ange vad som ska hända med artiklar som har tilldelats dig för den perioden.
 Du kan ange startdatum och -tid och slutdatum och sluttid så att dina inställningar som inte är på kontoret börjar gälla. Du kan ange en standardperson som alla dina objekt skickas till. Se [Konfigurera inställningar](../forms/using/configure-out-of-office-settings.md)för frånvaro.
 
-### Generera flera interaktiva dokument med Batch API (6.5.3.0) {#generate-multiple-ic}
+### Generera flera interaktiva dokument med Batch API för AEM Forms (6.5.3.0) {#generate-multiple-ic}
 
 Du kan använda batch-API:t för att skapa flera interaktiva dokument från en mall. Mallen är en interaktiv kommunikation utan data. Batch-API:t kombinerar data med en mall för att skapa en interaktiv kommunikation. API:t är användbart vid massproduktion av interaktiv kommunikation. Till exempel telefonräkningar, kreditkortsutdrag för flera kunder. Se [Generera flera interaktiva dokument med hjälp av API:t](../forms/using/generate-multiple-interactive-communication-using-batch-api.md)för gruppbearbetning.
 
