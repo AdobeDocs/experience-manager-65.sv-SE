@@ -9,20 +9,20 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e5413fb3-9d50-4f4f-9db8-7e53cd5145d5
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70350add185b932ee604e190aabaf972ff994ba2
+source-git-commit: 1449ce9aba3014b13421b32db70c15ef09967375
 
 ---
 
 
-# Självstudiekurs:Skapa formulärdatamodell{#tutorial-create-form-data-model}
+# Självstudiekurs: Skapa formulärdatamodell{#tutorial-create-form-data-model}
 
 ![04-create-form-data-model-main](assets/04-create-form-data-model-main.png)
 
-Den här självstudiekursen är ett steg i [Skapa din första interaktiva kommunikationsserie](/help/forms/using/create-your-first-interactive-communication.md) . Vi rekommenderar att du följer serien i kronologisk ordning för att förstå, utföra och demonstrera det fullständiga exemplet på självstudiekurser.
+Den här självstudiekursen är ett steg i [Skapa din första interaktiva kommunikationsserie](/help/forms/using/create-your-first-interactive-communication.md) . Vi rekommenderar att du följer serien i kronologisk ordning för att förstå, utföra och demonstrera det fullständiga självstudiekurserna.
 
 ## Om självstudiekursen {#about-the-tutorial}
 
-Med dataintegreringsmodulen för AEM Forms kan du skapa en formulärdatamodell från olika backend-datakällor, till exempel AEM-användarprofil, RESTful web services, SOAP-baserade webbtjänster, OData services och relationsdatabaser. Du kan konfigurera datamodellsobjekt och datatjänster i en formulärdatamodell och koppla den till ett anpassat formulär. Anpassningsbara formulärfält är bundna till objektegenskaper för datamodell. Med tjänsterna kan du förifylla det anpassningsbara formuläret och skriva skickade formulärdata tillbaka till datamodellobjektet.
+Med dataintegreringsmodulen för AEM Forms kan du skapa en formulärdatamodell från olika backend-datakällor, till exempel AEM-användarprofil, RESTful web services, SOAP-baserade webbtjänster, OData services och relationsdatabaser. Du kan konfigurera datamodellsobjekt och datatjänster i en formulärdatamodell och koppla den till ett anpassat formulär. Anpassningsbara formulärfält är bundna till objektegenskaper för datamodell. Med tjänsterna kan du förifylla det adaptiva formuläret och skriva skickade formulärdata tillbaka till datamodellobjektet.
 
 Mer information om integrering av formulärdata och formulärdatamodell finns i [AEM Forms-dataintegrering](https://helpx.adobe.com/experience-manager/6-3/forms/using/data-integration.html).
 
@@ -38,7 +38,7 @@ Formulärdatamodellen ser ut ungefär så här:
 
 ![Formulärdatamodell](assets/form_data_model_callouts_new.png)
 
-**********S. Konfigurerade datakällor** B. Datakällscheman **C.** Tillgängliga tjänster **D. Datamodellsobjekt** E. Konfigurerade tjänster
+**S.** Konfigurerade datakällor **B.** Datakällscheman **C.** Tillgängliga tjänster **D.** Datamodellsobjekt **E.** Konfigurerade tjänster
 
 ## Förutsättningar {#prerequisites}
 
@@ -54,9 +54,61 @@ Följande bild visar exempeldata för kundtabellen:
 
 ![sample_data_cust](assets/sample_data_cust.png)
 
-Samtalstabellen innehåller samtalsinformation som samtalsdatum, samtalstid, samtalsnummer, samtalslängd och samtalsavgifter. Kundregistret är länkat till samtalstabellen med hjälp av fältet Mobilnummer (mobiltelefoni). För varje mobilnummer i kundregistret finns det flera poster i samtalstabellen. Du kan till exempel hämta samtalsinformationen för **mobilnumret 1457892541** genom att referera till samtalstabellen.
+Använd följande DDL-sats för att skapa **kundtabellen** i databasen.
 
-Fakturaregistret innehåller fakturainformation som faktureringsdatum, faktureringsperiod, månadsavgifter och samtalsavgifter. Kundregistret är länkat till räkningstabellen med hjälp av fältet Faktureringsplan. Det finns en plan som är associerad med varje kund i kundregistret. Fakturaregistret innehåller prisinformation för alla befintliga planer. Du kan till exempel hämta avtalsinformationen för **Sarah** från kundregistret och använda dessa detaljer för att hämta prisinformation från fakturatabellen.
+```sql
+CREATE TABLE `customer` (
+   `mobilenum` int(11) NOT NULL,
+   `name` varchar(45) NOT NULL,
+   `address` varchar(45) NOT NULL,
+   `alternatemobilenumber` int(11) DEFAULT NULL,
+   `relationshipnumber` int(11) DEFAULT NULL,
+   `customerplan` varchar(45) DEFAULT NULL,
+   PRIMARY KEY (`mobilenum`),
+   UNIQUE KEY `mobilenum_UNIQUE` (`mobilenum`)
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+```
+
+Använd följande DDL-sats för att skapa **räkningstabellen** i databasen.
+
+```sql
+CREATE TABLE `bills` (
+   `billplan` varchar(45) NOT NULL,
+   `latepayment` decimal(4,2) NOT NULL,
+   `monthlycharges` decimal(4,2) NOT NULL,
+   `billdate` date NOT NULL,
+   `billperiod` varchar(45) NOT NULL,
+   `prevbal` decimal(4,2) NOT NULL,
+   `callcharges` decimal(4,2) NOT NULL,
+   `confcallcharges` decimal(4,2) NOT NULL,
+   `smscharges` decimal(4,2) NOT NULL,
+   `internetcharges` decimal(4,2) NOT NULL,
+   `roamingnational` decimal(4,2) NOT NULL,
+   `roamingintnl` decimal(4,2) NOT NULL,
+   `vas` decimal(4,2) NOT NULL,
+   `discounts` decimal(4,2) NOT NULL,
+   `tax` decimal(4,2) NOT NULL,
+   PRIMARY KEY (`billplan`)
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+```
+
+Använd följande DDL-sats för att skapa **anropstabellen** i databasen.
+
+```sql
+CREATE TABLE `calls` (
+   `mobilenum` int(11) DEFAULT NULL,
+   `calldate` date DEFAULT NULL,
+   `calltime` varchar(45) DEFAULT NULL,
+   `callnumber` int(11) DEFAULT NULL,
+   `callduration` varchar(45) DEFAULT NULL,
+   `callcharges` decimal(4,2) DEFAULT NULL,
+   `calltype` varchar(45) DEFAULT NULL
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+```
+
+I **samtalstabellen** finns samtalsinformation som samtalsdatum, samtalstid, samtalsnummer, samtalslängd och samtalsavgifter. Kundregistret **är** länkat till samtalstabellen med hjälp av fältet Mobilnummer (mobilnummer). För varje mobilnummer i **kundregistret** finns det flera poster i **samtalstabellen** . Du kan till exempel hämta samtalsinformationen för **mobilnumret 1457892541** genom att referera till **anropstabellen** .
+
+I **räkningsregistret** finns fakturainformation som faktureringsdatum, faktureringsperiod, månadsavgifter och samtalsavgifter. Registret **Kund** är länkat till **räkningstabellen** med hjälp av fältet Faktureringsplan. Det finns en plan som är associerad med varje kund i **kundregistret** . Tabellen **Fakturor** innehåller prisinformation för alla befintliga planer. Du kan till exempel hämta avtalsinformationen för **Sarah** från **kundregistret** och använda dessa detaljer för att hämta prisinformation från **fakturatabellen** .
 
 ## Steg 2: Konfigurera MySQL-databasen som datakälla {#step-configure-mysql-database-as-data-source}
 
@@ -77,20 +129,20 @@ Gör följande för att konfigurera MySQL-databasen:
    1. Leta reda på konfigurationen **för poolad DataSource** för Apache Sling-anslutningen. Tryck för att öppna konfigurationen i redigeringsläge.
    1. Ange följande information i konfigurationsdialogrutan:
 
-      * **** Datakällans namn: Du kan ange vilket namn som helst. Ange till exempel **MySQL**.
+      * **Datakällans namn:** Du kan ange vilket namn som helst. Ange till exempel **MySQL**.
 
       * **Egenskapsnamn** för DataSource-tjänst: Ange namnet på den tjänsteegenskap som innehåller DataSource-namnet. Den anges när datakällinstansen registreras som OSGi-tjänst. Exempel: **datasource.name**.
 
       * **JDBC-drivrutinsklass**: Ange Java-klassnamnet för JDBC-drivrutinen. För MySQL-databasen anger du **com.mysql.jdbc.Driver**.
 
       * **JDBC-anslutnings-URI**: Ange anslutnings-URL för databasen. För MySQL-databaser som körs på port 3306 och schematabell är URL:en: `jdbc:mysql://[server]:3306/teleca?autoReconnect=true&useUnicode=true&characterEncoding=utf-8`
-      * **** Användarnamn: Användarnamn för databasen. Det krävs för att JDBC-drivrutinen ska kunna upprätta en anslutning till databasen.
-      * **** Lösenord: Lösenord för databasen. Det krävs för att JDBC-drivrutinen ska kunna upprätta en anslutning till databasen.
-      * **** Test on Borgo: Aktivera alternativet **Testa vid köp** .
+      * **Användarnamn:** Användarnamn för databasen. Det krävs för att JDBC-drivrutinen ska kunna upprätta en anslutning till databasen.
+      * **Lösenord:** Lösenord för databasen. Det krävs för att JDBC-drivrutinen ska kunna upprätta en anslutning till databasen.
+      * **Test on Borgo:** Aktivera alternativet **Testa vid köp** .
 
-      * **** Test vid retur: Aktivera alternativet **Test on Return** .
+      * **Test vid retur:** Aktivera alternativet **Test on Return** .
 
-      * **** Valideringsfråga: Ange en SELECT-fråga (SQL) för att validera anslutningar från poolen. Frågan måste returnera minst en rad. Välj till exempel *** från kund**.
+      * **Valideringsfråga:** Ange en SELECT-fråga (SQL) för att validera anslutningar från poolen. Frågan måste returnera minst en rad. Välj till exempel *** från kund**.
 
       * **Transaktionsisolering**: Ange värdet **READ_COMMTED**.
    Lämna övriga egenskaper med standard [värden](https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html) och tryck på **Spara**.
@@ -99,7 +151,7 @@ Gör följande för att konfigurera MySQL-databasen:
 
    ![Apache-konfiguration](assets/apache_configuration_new.png)
 
-## Steg 3:Skapa formulärdatamodell {#step-create-form-data-model}
+## Steg 3: Skapa formulärdatamodell {#step-create-form-data-model}
 
 AEM Forms ger ett intuitivt användargränssnitt för att [skapa en](https://helpx.adobe.com/experience-manager/6-3/forms/using/data-integration.html#main-pars_header_1524967585)formulärdatamodell från konfigurerade datakällor. Du kan använda flera datakällor i en formulärdatamodell. I den här självstudiekursen använder du MySQL som datakälla.
 
@@ -206,7 +258,7 @@ Utför följande steg för att skapa associationer mellan datamodellsobjekt:
    * Ange en titel för associationen. Det är ett valfritt fält.
    * Välj **Ett till många** i listrutan **Typ** .
 
-   * Välj **anrop** i listrutan **Modellobjekt** .
+   * Välj **samtal** i listrutan **Modellobjekt** .
 
    * Välj **Hämta** i listrutan **Tjänst** .
 
