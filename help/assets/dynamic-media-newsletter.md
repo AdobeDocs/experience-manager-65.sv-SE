@@ -5,7 +5,7 @@ keywords: dynamic media;newsletter;product updates;tips and tricks;events;custom
 contentOwner: Rick Brough
 solution: Dynamic Media
 translation-type: tm+mt
-source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
+source-git-commit: dc625b31b5f4d0db0941de2da0e869b3af177551
 
 ---
 
@@ -21,6 +21,23 @@ I det här enastående nyhetsbrevet får du uppleva värdefulla resurser för ku
 [Registrera dig](https://www.adobe.com/subscription/dynamic-media-newsletter.html) för att få Dynamic Media Newsletter månadsvis i din inkorg.
 
 ## Missade du ett nummer av Dynamic Media Newsletter?
+
+* **[Februari 2020, utgåva 2](http://amc-mkt-prod1-t.adobe-campaign.com/rest/head/mirrorPage/@5lYjerUalNCDQd6ABlMufSyP3GqbFDn747uBiom3-3_efxsaEjuw8LNhJxrs89ft1vcsQzjvxTGMo55w-4k0YyBVGiL6m5AWSe9I7H7wIXKT0Efz.html)**I detta nummer:
+
+   * Delta i nya webbinarier i verktyget för kunskapsbyggaren och förvandla dem till en expert på Dynamic Media Classic.
+   * Se var ni hittar Dynamic Media på Adobe Summit 2020.
+   * Upptäck hur du använder beskärningsmagin i Dynamic Media.
+   * Utnyttja den kostnadsfria granskningen och få ut mer av Dynamic Media Classic.
+   * Läs om det nya användargränssnittet för Dynamic Media Classic.
+   * Träffa Georgia Myers, chef för Customer Success för Adobe Experience Cloud.
+
+* **[Januari 2020, utgåva 1](http://amc-mkt-prod1-t.adobe-campaign.com/rest/head/mirrorPage/@NpvOA7LHuVbd-W1B5pENdSLNFZ4L4ZeEkA_bVd4reX31KUOs3uaPFEuEx2mWz-3oNkVBcY5fdimoW3RM-SzTt6QXI4l1Rd2mEwrYsWp7C1LnUMVp.html)**I detta nummer:
+
+   * Fem nya kunskapsbyggare för webbinarier för att vässa dina kunskaper i Dynamic Media Classic.
+   * Gratis revision som hjälper dig att få ut mer av Dynamic Media Classic.
+   * En rekordnande semestersäsong för våra kunder inom multimedia.
+   * Handledning för att välja en DAM (Digital Asset Manager) som passar dina behov idag och förbereder dig för det som är nytt i multimedia imorgon.
+   * Möt Mark Dean, Digital Media Specialist.
 
 * **[November 2019, utgåva 11](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_11_2019_Nov.html)**I detta nummer:
 
