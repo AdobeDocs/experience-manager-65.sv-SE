@@ -3,7 +3,7 @@ title: Om AEM Assets
 description: Läs om vad som är digital resurshantering, användningsexempel och Adobes AEM Asset-erbjudande
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
+source-git-commit: 01475dc8cf4f1e4cb0575c60523c27105ebd1150
 
 ---
 
@@ -72,7 +72,7 @@ När du arbetar med digitala resurser i AEM måste du förstå följande termino
 
 * **Återgivningar** En återgivning är den binära återgivningen av en resurs. Resurser har alltid en primär representation - den som tillhör den överförda filen. De kan ha valfritt antal ytterligare representationer som skapas, till exempel genom anpassade arbetsflödessteg eller när en resurs överförs. Återgivningar kan ha en annan storlek, med en annan upplösning, med en vattenstämpel eller någon annan förändrad egenskap.
 
-* **Versionshantering** skapar en ögonblicksbild av digitala resurser vid en viss tidpunkt. Du kan återställa resurser till tidigare versioner. Se Versionshantering i AEM Resurser.
+* **Versionshantering** skapar en ögonblicksbild av digitala resurser vid en viss tidpunkt. Du kan återställa resurser till tidigare versioner. Se [versionshantering i AEM Assets](managing-assets-touch-ui.md#asset-versioning).
 
 * **Delresurser** är resurser som utgör en resurs, till exempel lager i en Adobe Photoshop-fil eller sidor i en PDF-fil. I AEM Resurser kan du hantera underresurser på samma sätt som du hanterar resurser.
 
