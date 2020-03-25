@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 7ae0055e09c3ae2ff2898ac4f6c537a825dc0cf0
+source-git-commit: 7345d629aa628c2e2e094a8194d9306d7c3d2d60
 
 ---
 
@@ -22,7 +22,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 * Den inbyggda databasen (Apache Jackrabbit Oak) uppdateras till version 1.10.6.
 
-* Experience Manager Assets har nu stöd för ZIP-arkiv som skapats med algoritmen Deflate 64.
+* Adobe Experience Manager Assets har nu stöd för ZIP-arkiv som skapats med algoritmen Deflate64.
 
 * Ny kolumn för skapat datum, som är sorterbar, har lagts till i DAM-listvyn och i resurssökningsresultat i listvyn.
 
@@ -110,7 +110,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 * Arbetsflödet för Dynamic Media Encode Video misslyckas med att generera miniatyrbilder för videon som migreras från Scene 7 till Dynamic Media - körningsläget Scene 7 (CQ-4282011).
 
-* IpsApiException observerades när resurser migrerades från en instans till en annan med olika företags-ID:n för Scene 7 (CQ-4280548).
+* IpsApiException observerades när resurser migrerades från en instans till en annan med olika företags-ID för Scene 7 (CQ-4280548).
 
 * Miniatyrbilden av 3D-resursen är inte informativ när en 3D-modell som stöds har importerats till AEM (CQ-4283701).
 
@@ -416,7 +416,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 ### Integrering {#integration}
 
 * Det anpassade innehållet visas inte korrekt på publiceringsinstansen förrän instansen startas om. NPR-30377: Programfix för CQ-4273706
-* När du konfigurerar Launch på en webbplats har biblioteksadressen ett snedstreck (/) som är förinställt, vilket ger manuella åtgärder varje gång. NPR-30694: Programfix för CQ-4275501
+* När du konfigurerar Launch på en webbplats har biblioteksadressen ett snedstreck (/) som är förinställt, vilket kan orsaka manuella åtgärder varje gång. NPR-30694: Programfix för CQ-4275501
 
 ### Formulär {#forms-6520}
 
@@ -688,7 +688,7 @@ De viktigaste nyheterna i AEM 6.5.1.0-formulär är:
 **Formulär - dokumentsäkerhet**
 
 * Digital signatur med HSM (Hardware Security Module) fungerar inte med OSGi Linux på Java 11 och Java 8\. NPR-29838: Programfix för CQ-4270441
-* Digital signatur med HSM (Hardware Security Module) fungerar inte med JEE Linux och alla appservrar som stöds, dvs. JBoss och Websphere. NPR-29739: Programfix för CQ-4266721
+* Digital signatur med HSM (Hardware Security Module) fungerar inte med JEE Linux och alla appservrar som stöds, dvs. JBoss och Websphere. NPR-29839: Programfix för CQ-4266721
 * Verifiering av signaturer i en PDF med hjälp av PDF Advanced Electronic Signatures (PAdES) genererar InvalidOperationException. NPR-29842: Programfix för CQ-4244837
 * Utökat stöd för Document Security Extension för Office 2019\. Programfix för CQ-4254369, CQ-4259764
 
