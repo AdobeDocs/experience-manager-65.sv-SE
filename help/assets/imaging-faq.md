@@ -8,7 +8,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 translation-type: tm+mt
-source-git-commit: 3c2974911b9e9b45d4c4641f9c3683677a88db2f
+source-git-commit: 582b7e9f36d3b9599058b4cfbe83897822b26d05
 
 ---
 
@@ -24,7 +24,7 @@ Smart Imaging får också bättre prestanda eftersom det är helt integrerat med
 I följande bildresursexempel visas den nya optimeringen av smarta bilder:
 
 | Bild<br>(URL) | Miniatyrbild | Storlek<br> (JPEG) | Storlek (WebP)<br> (med ***Smart Imaging***) | % minskning |
-|---|:---:|:---:|:---:|:---:|:---:|
+|---|---|---|---|---|
 | [Bild 1](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_6?hei=500&fmt=jpg&qlt=85&resmode=bisharp&op_usm=5,0.125,5,0) | ![picture1](/help/assets/assets-dm/picture1.png) | 73,75 kB | 45,92 kB | 38% |
 | [Bild 2](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_3?hei=500&fmt=jpg&qlt=85&resmode=bisharp&op_usm=5,0.125,5,0) | ![picture2](/help/assets/assets-dm/picture2.png) | 191 kB | 70,66 kB | 63% |
 | [Bild 3](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_2?hei=500&fmt=jpg&qlt=85&resmode=bisharp&op_usm=5,0.125,5,0) | ![picture3](/help/assets/assets-dm/picture3.png) | 96,64 kB | 39,44 kB | 59% |
