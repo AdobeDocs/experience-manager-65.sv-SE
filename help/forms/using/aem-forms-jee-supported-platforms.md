@@ -1,8 +1,8 @@
 ---
 title: Plattformar som stöds för AEM Forms på JEE
 seo-title: Plattformar som stöds för AEM Forms på JEE
-description: Lista över infrastrukturkomponenter som krävs och stöds för installation av AEM Forms i JEE
-seo-description: Lista över infrastrukturkomponenter som krävs och stöds för installation av AEM Forms i JEE
+description: Lista över infrastrukturkomponenter som krävs och stöds för installation av AEM Forms på JEE
+seo-description: Lista över infrastrukturkomponenter som krävs och stöds för installation av AEM Forms på JEE
 uuid: 777f943b-4cb4-444e-a036-8032b9fce5be
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 29a94f3ece1b96b24e1b77f4abe6f6f28924ae7b
+source-git-commit: 6cf69dc86ce70a43e77b00d6b3986fa40ae0a4ec
 
 ---
 
@@ -44,7 +44,7 @@ Adobe rekommenderar dessa konfigurationer och ger fullständig eller begränsad 
    <th>Beskrivning</th>
   </tr>
   <tr>
-   <td>S:Stöds<br /> </td>
+   <td>S: Stöds<br /> </td>
    <td>Adobe ger support och underhåll för denna konfiguration. Denna konfiguration omfattas av Adobes kvalitetssäkringsprocess.</td>
   </tr>
   <tr>
@@ -96,17 +96,17 @@ Adobe Experience Manager Forms kräver att en Java Virtual Machine körs, vilket
   </tr>
   <tr>
    <td>Oracle Java™ SE 8 (64 bitar)</td>
-   <td>S:Stöds</td>
+   <td>S: Stöds</td>
    <td>Mindre releaser och uppdateringar</td>
   </tr>
   <tr>
    <td>IBM® J9 Virtual Machine (bygge 2.8, JRE 1.8.0)</td>
-   <td>S:Stöds</td>
+   <td>S: Stöds</td>
    <td>Mindre releaser och uppdateringar</td>
   </tr>
   <tr>
    <td>IBM® J9 Virtual Machine (bygge 2.9, JRE 1.8.0)<br /> </td>
-   <td>S:Stöds</td>
+   <td>S: Stöds</td>
    <td>Mindre releaser och uppdateringar</td>
   </tr>
  </tbody>
@@ -122,8 +122,6 @@ Adobe Experience Manager Forms kräver att en Java Virtual Machine körs, vilket
 
 ### Databaser och CRX-beständighet {#databases-and-crx-persistence}
 
-#### Stöd för AEM-beständighet {#aem-persistence-support}
-
 <table>
  <tbody>
   <tr>
@@ -137,7 +135,7 @@ Adobe Experience Manager Forms kräver att en Java Virtual Machine körs, vilket
    <td><p>Stöds</p> </td>
   </tr>
   <tr>
-   <td><p>MongoDB Enterprise 4.0</p> </td>
+   <td><p>MongoDB Enterprise 4.0 </p> </td>
    <td><p>Databasmikrokernel</p> </td>
    <td><p>Stöds</p> </td>
   </tr>
@@ -154,7 +152,7 @@ Adobe Experience Manager Forms kräver att en Java Virtual Machine körs, vilket
 
 <tr>
    <td>Oracle Database 19c </td>
-   <td>Databasmikrokernel</td>
+   <td>Databas</td>
    <td>Stöds</td>
   </tr>
   <tr>
@@ -165,6 +163,11 @@ Adobe Experience Manager Forms kräver att en Java Virtual Machine körs, vilket
   <tr>
    <td>IBM DB2 11.1</td>
    <td>Databasmikrokernel</td>
+   <td>R: Begränsat stöd</td>
+  </tr>
+    <tr>
+   <td>MySQL 5.7.19 </td>
+   <td>-</td>
    <td>R: Begränsat stöd</td>
   </tr>
  </tbody>
@@ -172,7 +175,6 @@ Adobe Experience Manager Forms kräver att en Java Virtual Machine körs, vilket
 
 * IBM DB2 stöds inte för nya installationer. Det stöds endast för befintliga kunder som uppgraderar till AEM 6.5 Forms.
 * MongoDB är en tredjepartsprogramvara och ingår inte i AEM-licenspaketet. Mer information finns på sidan [MongoDB-licenspolicy](https://www.mongodb.org/about/licensing/) .
-
 * För att få ut mesta möjliga av din AEM-distribution rekommenderar Adobe att du licensierar MongoDB Enterprise-versionen för att få tillgång till professionell support.
 * Adobes kundtjänst kommer att hjälpa dig med frågor som rör användningen av MongoDB med AEM. Mer information finns på sidan [](https://www.mongodb.com/lp/contact/mongodb-adobe-experience-manager)MongoDB för Adobe Experience Manager.
 * &#39;Filsystem&#39; inkluderar blocklagring som är POSIX-kompatibel. Detta inkluderar nätverkslagringsteknik. Tänk på att filsystemets prestanda kan variera och påverka den övergripande prestandan. Vi rekommenderar att du läser in test-AEM i kombination med nätverks-/fjärrfilsystemet.
@@ -180,50 +182,8 @@ Adobe Experience Manager Forms kräver att en Java Virtual Machine körs, vilket
 * MongoDB-delning stöds inte i AEM.
 * AEM Forms på JEE stöder inte MySQL för RDBMK-beständighet.
 * Dokumentsäkerhetsmodulen använder inte innehållsdatabas. Det innebär att om du bara använder dokumentsäkerhet och inte tänker använda HTML Workspace, HTML5-formulär eller adaptiva formulär ska du inte installera Content Repository.
+* AEM Forms på JEE stöder inte användning av MySQL för beständig AEM Repository (CRX-Repository).
 
-#### Stöd för DATABASE {#database-support}
-
-<table>
- <tbody>
-  <tr>
-   <td><p><strong>Plattform</strong></p> </td>
-   <td><p><strong> Beskrivning</strong></p> </td>
-   <td><p><strong>Supportnivå</strong></p> </td>
-  </tr>
-  <tr>
-   <td>IBM DB2 11.1</td>
-   <td>Databasmikrokernel</td>
-   <td>R: Begränsat stöd</td>
-  </tr>
-  <tr>
-   <td><p>Oracle Database 12c version 1</p> </td>
-   <td><p>Databasmikrokernel</p> </td>
-   <td><p>Stöds</p> </td>
-  </tr>
-  <tr>
-   <td>Oracle Database 18c</td>
-   <td>Databasmikrokernel</td>
-   <td>Stöds</td>
-  </tr>
-    <tr>
-   <td>Oracle Database 19c</td>
-   <td>Databasmikrokernel</td>
-   <td>Stöds</td>
-  </tr>
-  <tr>
-   <td><p>MySQL 5.7.19<br /> </p> </td>
-   <td><p>Databasmikrokernel</p> </td>
-   <td><p>Stöds</p> </td>
-  </tr>
-  <tr>
-   <td><p>Microsoft SQL Server 2016</p> </td>
-   <td><p>Databasmikrokernel</p> </td>
-   <td><p>Stöds</p> </td>
-  </tr>
- </tbody>
-</table>
-
-* IBM DB2 stöds inte för nya installationer. Det stöds endast för befintliga kunder som uppgraderar till AEM 6.5 Forms.
 
 ### Databasdrivrutiner {#database-drivers}
 
@@ -263,12 +223,12 @@ Adobe Experience Manager Forms kräver att en Java Virtual Machine körs, vilket
   </tr>
   <tr>
    <td>IBM® WebSphere® Application Server 9.0 <sup>[1] [4]</sup><br /> </td>
-   <td>S:Stöds</td>
+   <td>S: Stöds</td>
    <td>Service Pack och viktiga uppdateringar</td>
   </tr>
   <tr>
    <td><p>JBoss® Enterprise Application Platform (EAP) 7.1.4 <sup>[2] [3] [7]</sup></p> </td>
-   <td><p>S:Stöds</p> </td>
+   <td><p>S: Stöds</p> </td>
    <td><p>Patchar och kumulativa patchar för den EAP-version som stöds</p> </td>
   </tr>
  </tbody>
@@ -291,27 +251,27 @@ Adobe Experience Manager Forms kräver att en Java Virtual Machine körs, vilket
   </tr>
   <tr>
    <td>Microsoft Windows Server 2016 (64-bitars)</td>
-   <td>S:Stöds</td>
+   <td>S: Stöds</td>
    <td>Service Pack och viktiga uppdateringar</td>
   </tr>
   <tr>
    <td><p>Red Hat Enterprise Linux 7 (Kernel 3.x) (64-bitars)</p> </td>
-   <td><p>S:Stöds</p> </td>
+   <td><p>S: Stöds</p> </td>
    <td><p>Mindre releaser, kumulativa uppdateringar och viktiga uppdateringar</p> </td>
   </tr>
   <tr>
    <td><p>SUSE® Linux® Enterprise Server 12 (64-bitars)</p> </td>
-   <td><p>S:Stöds</p> </td>
+   <td><p>S: Stöds</p> </td>
    <td><p>Service Pack, kumulativa patchar och viktiga säkerhetsuppdateringar</p> </td>
   </tr>
   <tr>
    <td>Oracle Linux® 7 Update 3 (64-bitars)</td>
-   <td>S:Stöds</td>
+   <td>S: Stöds</td>
    <td>Service Pack, kumulativa patchar och viktiga säkerhetsuppdateringar</td>
   </tr>
   <tr>
    <td>CentOS 7 (64 bitar)<sup> [6]</sup></td>
-   <td>S:Stöds</td>
+   <td>S: Stöds</td>
    <td>Service Pack, kumulativa patchar och viktiga säkerhetsuppdateringar</td>
   </tr>
  </tbody>
@@ -559,8 +519,7 @@ Ytterligare krav finns i:
  </tbody>
 </table>
 
-* 
-Diskutrymme för installation: 1,7 GB endast för Workbench, 2,7 GB på en enda enhet för en fullständig installation av Workbench, Designer och exempelsammansättningen 400 MB för temporära installationskataloger - 200 MB i användarens temp-katalog och 200 MB i Windows temporära katalog. Om alla dessa platser finns på en enda enhet måste det finnas 1,5 GB ledigt utrymme under installationen. De filer som kopieras till de tillfälliga katalogerna tas bort när installationen är klar.
+* Diskutrymme för installation: 1,7 GB endast för Workbench, 2,7 GB på en enda enhet för en fullständig installation av Workbench, Designer och exempelsammansättningen 400 MB för tillfälliga installationskataloger - 200 MB i användarens temp-katalog och 200 MB i Windows temporära katalog. Om alla dessa platser finns på en enda enhet måste det finnas 1,5 GB ledigt utrymme under installationen. De filer som kopieras till de tillfälliga katalogerna tas bort när installationen är klar.
 
 * Minne för att köra Workbench: 2 GB RAM
 * Maskinvarukrav: Intel® Pentium® 4 eller AMD-motsvarighet, 1 GHz-processor
@@ -570,7 +529,7 @@ Diskutrymme för installation: 1,7 GB endast för Workbench, 2,7 GB på en enda 
 
 ### Designer {#designer}
 
-**** Obs! Om du vill installera Designer i Windows kör du installationsprogrammet med administratörsbehörighet.
+**Obs!** Om du vill installera Designer i Windows kör du installationsprogrammet med administratörsbehörighet.
 
 * Microsoft® Windows® 2016 Server, Microsoft Windows 10
 
@@ -618,12 +577,12 @@ Diskutrymme för installation: 1,7 GB endast för Workbench, 2,7 GB på en enda 
   </tr>
   <tr>
    <td><p>Microsoft Edge (Evergreen)</p> </td>
-   <td><p>S:Stöds</p> </td>
+   <td><p>S: Stöds</p> </td>
    <td><p>Service Pack och uppdateringar</p> </td>
   </tr>
   <tr>
    <td><p>Mozilla Firefox (Evergreen)</p> </td>
-   <td><p>S:Stöds</p> </td>
+   <td><p>S: Stöds</p> </td>
    <td>Alla uppdateringar</td>
   </tr>
   <tr>
@@ -633,7 +592,7 @@ Diskutrymme för installation: 1,7 GB endast för Workbench, 2,7 GB på en enda 
   </tr>
   <tr>
    <td><p>Google Chrome (Evergreen)</p> </td>
-   <td><p>S:Stöds</p> </td>
+   <td><p>S: Stöds</p> </td>
    <td>Alla uppdateringar</td>
   </tr>
   <tr>
@@ -643,12 +602,12 @@ Diskutrymme för installation: 1,7 GB endast för Workbench, 2,7 GB på en enda 
   </tr>
   <tr>
    <td>Apple Safari 11.x</td>
-   <td>S:Stöds</td>
+   <td>S: Stöds</td>
    <td>Alla uppdateringar</td>
   </tr>
   <tr>
    <td>Apple Safari 12.x<br /><br /> </td>
-   <td>S:Stöds</td>
+   <td>S: Stöds</td>
    <td>Alla uppdateringar</td>
   </tr>
  </tbody>
@@ -751,7 +710,7 @@ Adobe stöder brådskande eller rekommenderade korrigeringsfiler som utfärdas a
 
 I vissa fall stöder inte Adobe uppdateringar från tredje part som ändrar de viktigaste funktionerna och därför inte fullständig bakåtkompatibilitet. Mer information om vilka uppdateringar som stöds finns i [Korrigeringsdefinitioner](https://helpx.adobe.com/aem-forms/aem-forms-third-party-software-patch.html) som stöds för specifika leverantörsprodukter och de korrigeringstyper som Adobe stöder.
 
-Under omständigheter som Adobe inte kan kontrollera kan korrigeringsfiler från tredje part som gör anspråk på bakåtkompatibilitet ha negativ inverkan på Adobes produkter eller kundmiljöer. I sådana fall rekommenderar Adobe att kunderna utvärderar effekten av en brådskande korrigering från en tredje part innan de använder den på kritiska system. Adobe kommer att arbeta tillsammans med tredje part och göra rimliga ansträngningar för att lösa sådana problem, antingen genom Adobes vanliga supportprogram eller genom att tredje part åtgärdar problemet i lagningen. Detta garanterar inte att en nyligen släppt korrigeringsfil från tredje part som kommer att stödjas av Adobe kommer att fungera enligt dokumentation från leverantören eller med AEM Forms på JEE.
+Under omständigheter som Adobe inte kan kontrollera kan korrigeringsfiler från tredje part som gör anspråk på bakåtkompatibilitet ha negativ inverkan på Adobes produkter eller kundmiljöer. I sådana fall rekommenderar Adobe att man utvärderar effekten av brådskande korrigeringar från tredje part innan man lägger in dem i kritiska system. Adobe kommer att arbeta tillsammans med tredje part och göra rimliga ansträngningar för att lösa sådana problem, antingen genom Adobes vanliga supportprogram eller genom att tredje part åtgärdar problemet i lagningen. Detta garanterar inte att en nyligen släppt korrigeringsfil från tredje part som kommer att stödjas av Adobe kommer att fungera enligt dokumentation från leverantören eller med AEM Forms på JEE.
 
 Adobe förbehåller sig rätten att ändra de referensplattformar från tredje part som stöds av en AEM Forms on JEE-release och de korrigeringsdefinitioner som stöds vid varje given tidpunkt.
 
