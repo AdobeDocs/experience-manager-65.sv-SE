@@ -4,7 +4,7 @@ description: Nyheter i Adobe Experience Manager 6.5 Service Pack 4
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 5eff26237415160e80e622eacabf5c40dfad00af
+source-git-commit: 7c937b425d909a1f3a9af0a1c3357c44220af0f2
 
 ---
 
@@ -85,8 +85,6 @@ Konvertera ett textfält i ett XFA-formulär till ett RTF-fält i ett HTML5-form
 ### Förbättrad tillgänglighet {#forms-accessibility-enhancements-6540}
 
 Experience Manager Forms innehåller följande tillgänglighetsförbättringar:
-
-* Man kan flytta tabbfokus utan problem för det Ultramarine-Accessible-referenstemat i ett adaptivt formulär.
 
 * Skärmläsarna meddelar kryssrutor, länkar, datumväljare och datuminmatningsfält korrekt i ett anpassat formulär.
 
