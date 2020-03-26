@@ -4,7 +4,7 @@ description: Nyheter i Adobe Experience Manager 6.5 Service Pack 4
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 7c937b425d909a1f3a9af0a1c3357c44220af0f2
+source-git-commit: 61d1531c020b5a25207b5e3f1c2b0c14e2974e02
 
 ---
 
@@ -60,7 +60,7 @@ Experience Manager Assets innehåller följande tillgänglighetsförbättringar:
 
 Med arbetsflödessteget Generera utskrift kan du integrera en källmallsfil med en datafil. Tack vare den här integreringen kan du skriva ut eller spara olika kopior av mallfilen. Steget genererar PCL-, PostScript-, ZPL-, IPL-, TPCL- eller DPL-utdata. Mer information om den här funktionen finns i [Formulärcentrerat arbetsflöde i OSGi - stegreferens](../forms/using/aem-forms-workflow-step-reference.md).
 
-![Generera utdata för utskrift](assets/generate-print-output-demo.gif)
+![Generera utdata för utskrift](assets/generate-print-output-step.gif)
 
 ### Stöd för flera kolumner för adaptiva formulär och interaktiv kommunikation i layoutläget {#multi-column-adaptive-forms}
 
@@ -124,7 +124,7 @@ Mellan 12 december 2019 och 5 mars 2020 släppte Adobe följande funktioner som 
    * [Cloud Manager 2020.1.0](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/release-notes/release-notes-2020-1-0.html)
 
 
-   * [Cloud Manager 2020.2.0](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/release-notes/release-notes-current.html)
+   * [Cloud Manager 2020.2.0](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/release-notes/release-notes-2020-2-0.html)
 
 
 * CLI-uppdateringar för AEM Cloud Manager
