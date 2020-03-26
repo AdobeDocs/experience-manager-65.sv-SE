@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 1f9867f1-5089-46d0-8e21-30d62dbf4f45
 legacypath: /content/docs/en/aem/6-0/develop/components/components-develop
 translation-type: tm+mt
-source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+source-git-commit: 00c98c4c1178f88844f6bec8a214d096205c58cd
 
 ---
 
@@ -553,7 +553,7 @@ Redigeringsbeteendet för en komponent konfigureras genom att en `cq:editConfig`
 * [ `cq:editConfig` nodegenskaper](#configuring-with-cq-editconfig-properties):
 
    * `cq:actions` ( `String array`): definierar de åtgärder som kan utföras på komponenten.
-   * `cq:layout` ( `String`):: definierar hur komponenten redigeras i det klassiska användargränssnittet.
+   * `cq:layout` ( `String`): : definierar hur komponenten redigeras i det klassiska användargränssnittet.
    * `cq:dialogMode` ( `String`): definierar hur komponentdialogrutan öppnas i det klassiska användargränssnittet
 
       * I det beröringsaktiverade användargränssnittet flyter dialogrutorna alltid i skrivbordsläge och öppnas automatiskt som helskärm i mobilen.
@@ -624,6 +624,10 @@ Egenskapen `cq:actions` ( `String array`) definierar en eller flera åtgärder s
    <td><code>edit</code></td>
    <td>Lägger till en knapp för att redigera komponenten.</td>
   </tr>
+      <tr>
+    <td><code>editannotate</code></td>
+    <td>Lägger till en knapp för att redigera komponenten samt tillåta <a href="/help/sites-authoring/annotations.md">anteckningar</a>.</td>
+   </tr>
   <tr>
    <td><code>delete</code></td>
    <td>Lägger till en knapp för att ta bort komponenten</td>
@@ -669,7 +673,7 @@ Egenskapen `cq:layout` ( `String`) definierar hur komponenten kan redigeras i de
   </tr>
   <tr>
    <td><code>rollover</code></td>
-   <td> Standardvärde. Komponentutgåvan är tillgänglig"när du för muspekaren över" genom att klicka och/eller snabbmenyn.<br /> Observera att motsvarande objekt på klientsidan är: <code>CQ.wcm.EditRollover</code>.</td>
+   <td>Standardvärde. Komponentutgåvan är tillgänglig"när du för muspekaren över" genom att klicka och/eller snabbmenyn.<br /> Observera att motsvarande objekt på klientsidan är: <code>CQ.wcm.EditRollover</code>.</td>
   </tr>
   <tr>
    <td><code>editbar</code></td>
@@ -686,7 +690,7 @@ Egenskapen `cq:layout` ( `String`) definierar hur komponenten kan redigeras i de
 >
 >Begreppen överrullning och redigeringsfält kan inte användas i det beröringsaktiverade gränssnittet.
 
-I följande konfiguration läggs en redigeringsknapp till i komponentens redigeringsfält:
+Följande konfiguration lägger till en redigeringsknapp i komponentens redigeringsfält:
 
 ```
 <jcr:root xmlns:cq="https://www.day.com/jcr/cq/1.0" xmlns:jcr="https://www.jcp.org/jcr/1.0"
@@ -790,7 +794,7 @@ Noden av typen `cq:DropTargetConfig` måste ha följande egenskaper:
   </tr>
   <tr>
    <td><code>accept</code></td>
-   <td>Regex används på resursens Mime-typ för att validera om släppning är tillåten.</td>
+   <td>Regex används på resursens MIME-typ för att validera om släppning är tillåten.</td>
   </tr>
   <tr>
    <td><code>groups</code></td>
@@ -817,7 +821,7 @@ Följande konfiguration hämtas från komponenten Download. Det gör att alla re
 
 ### cq:actionConfigs (endast Classic UI) {#cq-actionconfigs-classic-ui-only}
 
-Noden ( `cq:actionConfigs` nodtyp `nt:unstructured`) definierar en lista med nya åtgärder som läggs till i listan som definieras av `cq:actions` egenskapen. Varje underordnad nod till `cq:actionConfigs` definierar en ny åtgärd genom att definiera en widget.
+Noden ( `cq:actionConfigs` nodtyp `nt:unstructured`) definierar en lista med nya åtgärder som läggs till i listan som definieras av `cq:actions` egenskapen. Varje underordnad nod i `cq:actionConfigs` definierar en ny åtgärd genom att definiera en widget.
 
 I följande exempelkonfiguration definieras en ny knapp (med en avgränsare för det klassiska användargränssnittet):
 
