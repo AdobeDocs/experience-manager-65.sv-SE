@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 0e6e7850-6137-42c5-b8e2-d4e352fddae2
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: 3fe5f243c3e39029c1605a1a1977a48dba595d64
 
 ---
 
@@ -63,6 +63,9 @@ Om du vill anropa en AEM Forms-tjänst med hjälp av Java API:t inkluderar du n�
 
 * Den AEM Forms-tjänst som ska anropas. Ett klientprogram kan anropa en eller flera tjänster.
 * Det läge i vilket du vill anropa en AEM Forms-tjänst. Du kan använda läget EJB eller SOAP. (Se [Ange anslutningsegenskaper](invoking-aem-forms-using-java.md#setting-connection-properties).)
+
+>[!NOTE] (Endast inaktivera) Starta AEM Forms-servern med kommandot `standalone.bat -b <Server IP> -c lc_turnkey.xml` att ange en server-IP för EJB
+
 * J2EE-programservern där AEM Forms distribueras.
 
 ### Tjänstspecifika JAR-filer {#service-specific-jar-files}
@@ -422,7 +425,7 @@ Anslutningsläget kan antingen vara SOAP- eller EJB-läge. I EJB-läget används
 
 Om du vill anropa en AEM Forms-tjänst anger du följande anslutningsegenskaper:
 
-* **** DSC_DEFAULT_EJB_ENDPOINT: Om du använder EJB-anslutningsläget representerar det här värdet webbadressen till J2EE-programservern där AEM Forms distribueras. Om du vill fjärranropa AEM Forms anger du det J2EE-programservernamn på vilket AEM Forms distribueras. Om klientprogrammet finns på samma J2EE-programserver kan du ange `localhost`. Beroende på vilken J2EE-programserver AEM Forms distribueras på anger du ett av följande värden:
+* **DSC_DEFAULT_EJB_ENDPOINT:** Om du använder EJB-anslutningsläget representerar det här värdet webbadressen till J2EE-programservern där AEM Forms distribueras. Om du vill fjärranropa AEM Forms anger du det J2EE-programservernamn på vilket AEM Forms distribueras. Om klientprogrammet finns på samma J2EE-programserver kan du ange `localhost`. Beroende på vilken J2EE-programserver AEM Forms distribueras på anger du ett av följande värden:
 
    * JBoss: `https://<ServerName>:8080 (default port)`
    * WebSphere: `iiop://<ServerName>:2809 (default port)`
@@ -437,13 +440,13 @@ Om du vill anropa en AEM Forms-tjänst anger du följande anslutningsegenskaper:
 
    * Om du ställer in den här anslutningsegenskapen på `WebSphere`ställs `java.naming.factory.initial` värdet in på `com.ibm.ws.naming.util.WsnInitCtxFactory`.
    * Om du ställer in den här anslutningsegenskapen på `WebLogic`ställs `java.naming.factory.initial` värdet in på `weblogic.jndi.WLInitialContextFactory`.
-   * Om du anger den här anslutningsegenskapen som `JBoss`, anges också `java.naming.factory.initial` värdet till `org.jnp.interfaces.NamingContextFactory`.
+   * Om du anger den här anslutningsegenskapen som `JBoss`ställs `java.naming.factory.initial` värdet in på `org.jnp.interfaces.NamingContextFactory`.
    * Du kan ställa in egenskapen på ett värde som uppfyller dina krav om du inte vill använda standardvärdena. `java.naming.factory.initial`
    ***Obs**! I stället för att använda en sträng för att ange `DSC_SERVER_TYPE` anslutningsegenskapen kan du använda en statisk medlem av `ServiceClientFactoryProperties` klassen. Följande värden kan användas: `ServiceClientFactoryProperties.DSC_WEBSPHERE_SERVER_TYPE`, `ServiceClientFactoryProperties.DSC_WEBLOGIC_SERVER_TYPE`eller `ServiceClientFactoryProperties.DSC_JBOSS_SERVER_TYPE`.
 
-* **** DSC_CREDENTIAL_USERNAME: Anger användarnamnet för AEM-formulär. För att en användare ska kunna anropa en AEM Forms-tjänst måste användaren ha användarrollen Tjänster. En användare kan även ha en annan roll som inkluderar behörigheten Tjänstanrop. Annars genereras ett undantag när de försöker anropa en tjänst. Om tjänstsäkerhet är inaktiverad behöver du inte ange den här anslutningsegenskapen.
-* **** DSC_CREDENTIAL_PASSWORD: Anger motsvarande lösenordsvärde. Om tjänstsäkerhet är inaktiverad behöver du inte ange den här anslutningsegenskapen.
-* **** DSC_REQUEST_TIMEOUT: Standardtidsgränsen för begäran för SOAP-begäran är 1200000 millisekunder (20 minuter). Ibland kan en begäran ta längre tid att slutföra åtgärden. En SOAP-begäran som hämtar en stor uppsättning poster kan till exempel kräva en längre tidsgräns. Du kan använda för `ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT` att öka tidsgränsen för begärandeanrop för SOAP-begäranden.
+* **DSC_CREDENTIAL_USERNAME:** Anger användarnamnet för AEM-formulär. För att en användare ska kunna anropa en AEM Forms-tjänst måste användaren ha användarrollen Tjänster. En användare kan även ha en annan roll som inkluderar behörigheten Tjänstanrop. Annars genereras ett undantag när de försöker anropa en tjänst. Om tjänstsäkerhet är inaktiverad behöver du inte ange den här anslutningsegenskapen.
+* **DSC_CREDENTIAL_PASSWORD:** Anger motsvarande lösenordsvärde. Om tjänstsäkerhet är inaktiverad behöver du inte ange den här anslutningsegenskapen.
+* **DSC_REQUEST_TIMEOUT:** Standardtidsgränsen för begäran för SOAP-begäran är 1200000 millisekunder (20 minuter). Ibland kan en begäran ta längre tid att slutföra åtgärden. En SOAP-begäran som hämtar en stor uppsättning poster kan till exempel kräva en längre tidsgräns. Du kan använda för `ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT` att öka tidsgränsen för begärandeanrop för SOAP-begäranden.
 
    **Obs**! Endast SOAP-baserade anrop stöder egenskapen DSC_REQUEST_TIMEOUT.
 
@@ -1062,7 +1065,7 @@ Anropa den `MyApplication/EncryptDocument` kortvariga processen med Java-API:t:
 
 **Se även**
 
-[Snabbstart:Anropa en kort process med anrops-API](/help/forms/developing/invocation-api-quick-starts.md#quick-start-invoking-a-short-lived-process-using-the-invocation-api)
+[Snabbstart: Anropa en kort process med anrops-API](/help/forms/developing/invocation-api-quick-starts.md#quick-start-invoking-a-short-lived-process-using-the-invocation-api)
 
 [Anropa personalcentrerade, långlivade processer](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes)
 
