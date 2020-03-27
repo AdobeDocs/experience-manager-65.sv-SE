@@ -7,7 +7,7 @@ uuid: 908806a9-b0d4-42d3-9fe4-3eae44cf4326
 topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 translation-type: tm+mt
-source-git-commit: 0598f1e61218c540b6441182a3080e5217761ed4
+source-git-commit: a7ef7682df1dc627565f1cc30047ed775d2dbd13
 
 ---
 
@@ -258,7 +258,7 @@ Ange miljövariabler för 32- och 64-bitars Java Development Kit, tredjepartspro
 
 * Utför följande steg för att konfigurera IBM SSL-socketprovidern:
 
-1. Skapa en kopia av filen java.security. Filens standardplats är [WebSphere_installation_directory]\Appserver\java_[version]\jre\lib\security.
+1. Skapa en kopia av filen java.security. Filens standardplats är `[WebSphere_installation_directory]\Appserver\java_[version]\jre\lib\security`.
 1. Öppna den kopierade java.security-filen för redigering.
 1. Ändra standardfabrikerna för SSL-socket så att de använder JSSE2-fabrikerna i stället för standardfabrikerna för IBM WebSphere:
 
@@ -318,7 +318,6 @@ Användarkontot som används för att starta programservern kräver privilegiet 
 Du kan göra det möjligt för en icke-administratörsanvändare att använda PDF Generator-tjänsten. Normalt kan endast användare med administratörsbehörighet använda tjänsten:
 
 1. Skapa en miljövariabel, PDFG_NON_ADMIN_ENABLED.
-
 1. Ange värdet för miljövariabeln till TRUE.
 1. Starta om instansen AEM Forms.
 
@@ -331,12 +330,12 @@ Du kan göra det möjligt för en icke-administratörsanvändare att använda PD
 
    1. Microsoft rekommenderar att du säkerhetskopierar registret innan du ändrar det. Detaljerade anvisningar finns i [Säkerhetskopiera och återställa registret i Windows](https://support.microsoft.com/en-us/help/322756).
    1. Öppna Microsoft Windows Registereditor. Öppna Registereditorn genom att gå till Start > Kör, skriva regedit och klicka på OK.
-   1. Gå till HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\system\. Kontrollera att värdet för EnableLUA är 0 (noll).
+   1. Navigera till `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\system\`. Kontrollera att värdet för EnableLUA är 0 (noll).
    1. Kontrollera att värdet för **EnableLUA** är 0 (noll). Om värdet inte är 0 ändrar du värdet till 0. Stäng Registereditorn.
 
 1. Starta om datorn.
 
-### Inaktivera tjänsten Felrapportering {#disable-error-reporting-service}
+### Inaktivera felrapporteringstjänsten {#disable-error-reporting-service}
 
 När du konverterar ett dokument till PDF med PDF Generator-tjänsten på Windows Server rapporterar Windows Server ibland att den körbara filen har stött på ett problem och måste stängas. PDF-konverteringen påverkas dock inte eftersom den fortsätter i bakgrunden.
 
@@ -393,7 +392,7 @@ AEM Forms-tilläggspaketet är ett program som distribueras till AEM. Paketet in
 
    Om du hämtar paketet manuellt via den direktlänk som visas i artikeln [AEM Forms Relases](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) loggar du in på pakethanteraren, klickar på **[!UICONTROL Överför paket]**, markerar det hämtade paketet och klickar på Överför. När paketet har överförts klickar du på paketnamnet och sedan på **[!UICONTROL Installera]**.
 
-1. När paketet har installerats uppmanas du att starta om AEM-instansen. **Stoppa inte servern omedelbart.** Innan du stoppar AEM Forms-servern väntar du tills meddelandena ServiceEvent REGISTERED och ServiceEvent UNREGISTERED inte visas i filen [AEM-Installation-Directory]/crx-quickstart/logs/error.log och loggen är stabil.
+1. När paketet har installerats uppmanas du att starta om AEM-instansen. **Stoppa inte servern omedelbart.** Innan du stoppar AEM Forms-servern väntar du tills ServiceEvent REGISTERED- och ServiceEvent UNREGISTERED-meddelandena inte längre visas i `[AEM-Installation-Directory]/crx-quickstart/logs/error`.log-filen och loggen är stabil.
 
 ## Konfiguration efter installation {#post-installation-configurations}
 
@@ -401,7 +400,7 @@ AEM Forms-tilläggspaketet är ett program som distribueras till AEM. Paketet in
 
 1. Stoppa AEM-instansen. Gå till [AEM-installationskatalogen]\crx-quickstart\conf\ folder. Öppna filen sling.properties för redigering.
 
-   Om du använder [AEM-installationskatalogen]\crx-quickstart\bin\start.bat för att starta en AEM-instans redigerar du sling.properties som finns på [AEM_root]\crx-quickstart\.
+   Om du använder `[AEM installation directory]\crx-quickstart\bin\start.bat` för att starta en AEM-instans redigerar du sling.properties som finns på `[AEM_root]\crx-quickstart\`.
 
 1. Lägg till följande egenskaper i filen sling.properties:
 
@@ -415,7 +414,6 @@ AEM Forms-tilläggspaketet är ett program som distribueras till AEM. Paketet in
    ```
    sling.bootdelegation.xerces=org.apache.xerces.*
    ```
-
 1. Spara och stäng filen.
 
 ### Konfigurera teckensnittshanterartjänsten {#configuring-the-font-manager-service}
@@ -481,9 +479,9 @@ I Microsoft Windows använder PDF Generator-tjänsten Adobe Acrobat för att kon
 1. Dubbelklicka på ett PDF-dokument på datorn. När Acrobat startar för första gången visas dialogrutorna för inloggning, välkomstskärm och licensavtal. Stäng de här dialogrutorna för alla användare som har konfigurerats att använda PDF Generator.
 1. Kör PDF Generator-verktygsbatchfilen för att konfigurera Acrobat för PDF Generator-tjänsten:
 
-   1. Öppna [AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp) och hämta filen adobe-aemfd-pdfg-common-pkg-[version].zip från pakethanteraren.
+   1. Öppna [AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp) och hämta `adobe-aemfd-pdfg-common-pkg-[version].zip` filen från pakethanteraren.
    1. Zippa upp den nedladdade ZIP-filen. Öppna kommandotolken med administratörsbehörighet.
-   1. Navigera till katalogen [extract-zip-file]\jcr_root\etc\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]-win.zip\scripts. Kör följande kommandofil:
+   1. Navigate to the `[extracted-zip-file]\jcr_root\etc\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]-win.zip\scripts` directory. Kör följande kommandofil:
 
       `Acrobat_for_PDFG_Configuration.bat`
 
@@ -491,15 +489,15 @@ I Microsoft Windows använder PDF Generator-tjänsten Adobe Acrobat för att kon
 
 1. Kör System Ready Tool (SRT) för att validera Acrobat-installationen. Verktyget kontrollerar om datorn är korrekt konfigurerad för att köra PDF Generator-konverteringar och genererar en rapport på den angivna sökvägen:
 
-   1. Öppna kommandotolken. Navigera till mappen [extraherad-adobe-aemfd-pdfg-common-pkg]\jcr_root\etc\fd\ pdfg\tools\adobe-aemfd-pdfg-utilities-[version]-win.zip\srt. Kör följande kommando från kommandotolken:
+   1. Öppna kommandotolken. Navigate to the `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\etc\fd\ pdfg\tools\adobe-aemfd-pdfg-utilities-[version]-win.zip\srt` folder. Kör följande kommando från kommandotolken:
 
       `cscript SystemReadinessTool.vbs [Path_of_reports_folder] en`
 
       >[!NOTE]
       >
-      >Om verktyget för systemberedskap rapporterar att filen pdfgen.api inte är tillgänglig i plugin-mappen för acrobat kopierar du filen pdfgen.api från filen [extraherad-adobe-aemfd-pdfg-common-pkg]\plugins\x86_win32 directory to the [Acrobat_root]\Acrobat\plug_ins directory.
+      >Om systemberedskapsverktyget rapporterar att filen pdfgen.api inte är tillgänglig i plugin-mappen för acrobat kopierar du filen pdfgen.api från `[extracted-adobe-aemfd-pdfg-common-pkg]\plugins\x86_win32` katalogen till `[Acrobat_root]\Acrobat\plug_ins` katalogen.
 
-   1. Navigera till [Path_of_reports_folder]. Öppna filen SystemReadinessTool.html. Verifiera rapporten och åtgärda problemen.
+   1. Navigera till `[Path_of_reports_folder]`. Öppna filen SystemReadinessTool.html. Verifiera rapporten och åtgärda problemen.
 
 ### Konfigurera primär väg för konvertering från HTML till PDF (endast Windows) {#configure-primary-route-for-html-to-pdf-conversion-windows-only}
 
@@ -521,7 +519,7 @@ Med pålitlighetslagerhanteringen kan du importera, redigera och ta bort certifi
 
 ### Konfigurera certifikat för Reader-tilläggs- och krypteringstjänsten {#set-up-certificates-for-reader-extension-and-encryption-service}
 
-DocAssurance-tjänsten kan tillämpa användningsrättigheter på PDF-dokument. Konfigurera certifikaten om du vill tillämpa användningsbehörighet för PDF-dokument.
+Tjänsten DocAssurance kan lägga in användarrättigheter i PDF-dokument. Konfigurera certifikaten om du vill tillämpa användningsbehörighet för PDF-dokument.
 
 Innan du konfigurerar certifikaten bör du kontrollera att du har en:
 
@@ -530,7 +528,7 @@ Innan du konfigurerar certifikaten bör du kontrollera att du har en:
 * Lösenordet för den privata nyckeln som tillhandahålls med certifikatet.
 
 * Alias för privat nyckel. Du kan köra kommandot för Java-nyckelverktyget för att visa alias för den privata nyckeln:
-keytool -list -v -keystore [keystore-file] -storetype pkcs12
+   `keytool -list -v -keystore [keystore-file] -storetype pkcs12`
 
 * Lösenord för nyckelbehållarfil. Om du använder Adobe Reader Extensions-certifikatet är lösenordet för nyckelfilen alltid detsamma som lösenordet för den privata nyckeln.
 
@@ -552,7 +550,7 @@ Utför följande steg för att konfigurera certifikaten:
 
 ### Aktivera AES-256 {#enable-aes}
 
-Om du vill använda AES 256-kryptering för PDF-filer hämtar och installerar du Java Cryptography Extension (JCE) Unlimited Strength Jurisdential Policy-filer. Ersätt filerna local_policy.jar och US_export_policy.jar i mappen jre/lib/security. Om du till exempel använder Sun JDK kopierar du de hämtade filerna till mappen [JAVA_HOME]/jre/lib/security.
+Om du vill använda AES 256-kryptering för PDF-filer hämtar och installerar du Java Cryptography Extension (JCE) Unlimited Strength Jurisdential Policy-filer. Ersätt filerna local_policy.jar och US_export_policy.jar i mappen jre/lib/security. Om du till exempel använder Sun JDK kopierar du de hämtade filerna till `[JAVA_HOME]/jre/lib/security` mappen.
 
 Assembler-tjänsten är beroende av Reader Extensions-tjänsten, signaturtjänsten, Forms-tjänsten och Output-tjänsten. Utför följande steg för att verifiera att de tjänster som krävs är igång:
 
@@ -590,7 +588,7 @@ Assembler-tjänsten är beroende av Reader Extensions-tjänsten, signaturtjänst
 
 * På UNIX-baserade operativsystem gör du följande för att hitta bibliotek som saknas:
 
-1. Navigera till [crx-database]/sov/svcnative/HtmlToPdfSvc/bin/.
+1. Navigera till `[crx-repository]/bedrock/svcnative/HtmlToPdfSvc/bin/`.
 
 1. Kör följande kommando för att lista alla bibliotek som behövs för att konvertera HTML till PDF i PhantomJS.
 
