@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/maintaining_the_application_server
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: fad65765-d56d-4a9f-82d5-bcceb1758953
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: a26bc4e4ea10370dd2fc3403500004b9e378c418
 
 ---
 
@@ -109,7 +109,7 @@ När dokumentinnehållet är infogat (d.v.s. mindre än den maximala infogade st
 
 1. Starta om programservern med följande systemegenskap:
 
-   com.adobe.idp.defaultDocumentMaxInlineSize=[*värde angivet i steg 2*]
+   com.adobe.idp.defaultDocumentMaxInlineSize=`[value specified in Step 2]`
 
    >[!NOTE]
    >
