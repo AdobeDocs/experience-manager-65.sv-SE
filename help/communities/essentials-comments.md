@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 18f54a1c-52aa-414d-b494-1f19b5c10345
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
@@ -34,7 +34,7 @@ Kommentarskomponenten skapar ett kommentarsystem så att varje inlägg represent
    <td>Ja - egenskaper kan redigeras i <i></i>designläge</td>
   </tr>
   <tr>
-   <td> <a href="client-customize.md#clientlibs-for-scf"><strong>Clientlibs</strong></a></td>
+   <td> <a href="client-customize.md#clientlibs-for-scf"><strong>klientlibs</strong></a></td>
    <td>cq.ckeditor<br /> cq.social.hbs.comments<br /> cq.social.hbs.voice</td>
   </tr>
   <tr>
@@ -69,9 +69,9 @@ Kommentarsystemet finns redan i andra funktioner. Dessa är:
 
 ### Flaggorsakslista {#flag-reason-list}
 
-Anledningslistan för flaggning kan anpassas genom att du lägger till flagreasonlist.hbs i appen för att skriva över det som finns i
+Listan över orsaker till flagga kan anpassas genom att du lägger till flagreasonlist.hbs i appen för att skriva över det som finns i
 
-* /libs/social/commons/components/hbs/comments/comment/flagreasonlist.hbs
+* `/libs/social/commons/components/hbs/comments/comment/flagreasonlist.hbs`
 
 Detta gäller alla komponenter som utökar ett kommentarsystem.
 
