@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 2d308756-79d1-4d69-b51c-d4b6e692a137
 translation-type: tm+mt
-source-git-commit: 941ffeb40805c991eec6a601d01796cfc2cc95e4
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
@@ -59,11 +59,11 @@ Nedan följer länkar till viktig information för Communities-komponenter, -fun
 * [Meddelanden](essentials-messaging.md)
 * [RTF-redigerare](rte.md)
 * [Betygsättning och emblem](configure-scoring.md)
-* [Sök](search-implementation.md)
+* [Sökning](search-implementation.md)
 * [Social Graph](essentials-socialgraph.md)
 * [Lagringsresursprovider](srp-and-ugc.md)`(SRP)`
 
-* [Taggning](tag.md)
+* [Taggar](tag.md)
 
 ## Javadocs {#javadocs}
 
