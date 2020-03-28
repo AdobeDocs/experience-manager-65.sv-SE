@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: dca5a2ac-1fc8-4251-b073-730fd6f49b1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4f3928558641af89d138bfbf85ba099a4286b2f3
+source-git-commit: bdb26ba817e0599f811d7f4e131ec6ab356a4785
 
 ---
 
@@ -26,10 +26,15 @@ Adobe Experience Manager Assets (AEM) är konfigurerat med varumärkesportalen v
 >Tidigare konfigurerades varumärkesportalen i Classic UI via äldre OAuth Gateway, som använder JWT-tokenutbyte för att erhålla en IMS Access-token för auktorisering.
 >
 >Konfiguration via äldre OAuth stöds inte längre från 6 april 2020 och har ändrats till att konfigureras via Adobe I/O.
+
+
+>[!TIP]
 >
->Om du är en befintlig Brand Portal-användare med konfiguration för äldre OAuth Gateway rekommenderar vi att du tar bort de befintliga konfigurationerna och skapar en ny konfiguration för Adobe I/O.
+>***Endast för befintliga kunder***
 >
->Den befintliga konfigurationen fortsätter dock att fungera om du inte ändrar konfigurationerna.
+>Vi rekommenderar att du fortsätter använda den befintliga äldre OAuth Gateway-konfigurationen. Om du får problem med äldre OAuth Gateway-konfiguration tar du bort den befintliga konfigurationen och skapar en ny konfiguration via Adobe I/O.
+
+
 
 I den här hjälpen beskrivs följande två användningsområden:
 * [Ny konfiguration](#configure-new-integration-65): Om du är en ny Brand Portal-användare och vill konfigurera AEM Assets-författarinstansen med Brand Portal kan du skapa en ny konfiguration på Adobe I/O.
