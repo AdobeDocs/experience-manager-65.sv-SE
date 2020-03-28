@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 25b7ac08-6cdc-4dd5-a756-d6169b86f9ab
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
@@ -21,9 +21,9 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 När medlemmar interagerar med communityfunktioner skickas OSGi-händelser som kan utlösa asynkrona avlyssnare, som meddelanden eller spel (poängsättning och märkning).
 
-En komponents [SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html) -instans registrerar händelserna som `actions`de inträffar för en `topic`. SocialEvent innehåller en metod för att returnera en `verb`associerad åtgärd. Det finns en *n-1* -relation mellan `actions`och `verbs`.
+En komponents [SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html) -instans registrerar händelserna som `actions` de inträffar för en `topic`. SocialEvent innehåller en metod för att returnera en `verb` associerad åtgärd. Det finns en *n-1* -relation mellan `actions` och `verbs`.
 
-Följande tabeller beskriver vilka communitykomponenter som `verbs`definierats för varje `topic`tillgänglig för användning.
+För de webbdelar som levereras i releasen beskrivs i följande tabeller `verbs` definierade för varje `topic` tillgänglig för användning.
 
 ## Ämnen och verb {#topics-and-verbs}
 
