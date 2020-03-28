@@ -4,7 +4,7 @@ product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.5 Assets User Guide
 translation-type: tm+mt
-source-git-commit: 9f923782d3d0a7bdf45b18e8025bd2d083acf77c
+source-git-commit: 92e72695e267d4a8d1c18cf6842b17273e185444
 
 ---
 
@@ -12,7 +12,7 @@ source-git-commit: 9f923782d3d0a7bdf45b18e8025bd2d083acf77c
 # Användarhandbok för AEM 6.5 Assets {#assets}
 
 + [Användarhandbok för resurser](home.md)
-+ [Versionsinformation om AEM 6.5 Assets](../release-notes/assets.md)
++ [Versionsinformation om AEM 6.5 Assets](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/assets.html)
 + [Om DAM](assets.md)
 + [Metodtips för resurser](best-practices-for-assets.md)
 + Använd AEM Resurser {#using}
@@ -21,7 +21,7 @@ source-git-commit: 9f923782d3d0a7bdf45b18e8025bd2d083acf77c
    + [Flerspråkiga resurser](multilingual-assets.md)
    + [Använda Adobe Stock-mediefiler i AEM Resurser](aem-assets-adobe-stock.md)
    + [Förhandsgranska 3D-resurser](previewing-3d-assets.md)
-   + [Granska material i mappar och samlingar](bulk-approval.md)
+   + [Granska resurser i mappar och samlingar](bulk-approval.md)
    + [Aktivitetsström på tidslinjen](activity-stream.md)
    + [Tillämpa arbetsflöden på resurser](assets-workflow.md)
    + [Lägg till bildscheman](image-maps.md)
@@ -34,7 +34,7 @@ source-git-commit: 9f923782d3d0a7bdf45b18e8025bd2d083acf77c
    + [Konfigurera dynamiska media - Scene7-läge](config-dms7.md)
    + [Konfigurera dynamiska media - hybridläge](config-dynamic.md)
    + [Felsökning av dynamiska media - Scene7-läge](troubleshoot-dms7.md)
-   + [Hantera Dynamic Media-material](managing-assets.md)
+   + [Hantera Dynamic Media-resurser](managing-assets.md)
    + [Bästa tillvägagångssätt för att optimera bildkvalitet](best-practices-for-optimizing-the-quality-of-your-images.md)
    + [Hantera förinställningar för Dynamic Media Viewer](managing-viewer-presets.md)
    + [Använda förinställningar för Dynamic Media Viewer](viewer-presets.md)
@@ -60,12 +60,12 @@ source-git-commit: 9f923782d3d0a7bdf45b18e8025bd2d083acf77c
    + [Integrera Dynamic Media Viewers med Adobe Analytics och Adobe Launch](/help/assets/launch.md)
    + [Använda snabbvyer för att skapa anpassade popup-fönster](custom-pop-ups.md)
    + [Leverera optimerade bilder för en responsiv webbplats](responsive-site.md)
-   + [Förhandsgranska Dynamic Media-material](previewing-assets.md)
-   + [Lägga till Dynamic Media-material på sidor](adding-dynamic-media-assets-to-pages.md)
-   + [Bädda in läsare för Dynamic-video eller -bilder på en webbsida](embed-code.md)
+   + [Förhandsgranska Dynamic Media-resurser](previewing-assets.md)
+   + [Lägga till Dynamic Media-resurser på sidor](adding-dynamic-media-assets-to-pages.md)
+   + [Bädda in läsare för Dynamic Video  eller -bilder på en webbsida](embed-code.md)
    + [Länka URL till ett webbprogram](linking-urls-to-yourwebapplication.md)
    + [Omforma URL:er med regeluppsättningar](using-rulesets-to-transform-urls.md)
-   + [Publicera Dynamic Media-material](publishing-dynamicmedia-assets.md)
+   + [Publicera Dynamic Media-resurser](publishing-dynamicmedia-assets.md)
    + [Upphäva CDN-cachelagrat innehåll](invalidate-cdn-cached-content.md)
    + [Installerar funktionspaket 18912 för migrering av gruppresurser](bulk-ingest-migrate.md)
    + [Arbeta med väljare](working-with-selectors.md)
@@ -142,10 +142,10 @@ source-git-commit: 9f923782d3d0a7bdf45b18e8025bd2d083acf77c
    + [Konfigurera taggning med Smart Content Service](config-smart-tagging.md)
    + [Aktivera dubblettidentifiering](duplicate-detection.md)
    + [Ordna digitala resurser](organize-assets.md)
-   + [Hantera videomaterial](managing-video-assets.md)
+   + [Hantera videoresurser](managing-video-assets.md)
    + [Skapa översättningsprojekt](translation-projects.md)
    + [Förbered resurser för översättning](preparing-assets-for-translation.md)
-   + [Hämta material från AEM](download-assets-from-aem.md)
+   + [Hämta resurser från AEM](download-assets-from-aem.md)
    + [Asynkrona åtgärder](asynchronous-jobs.md)
    + [Ljuslåda](touch-ui-light-box.md)
    + [Resursinsikter](touch-ui-asset-insights.md)
