@@ -4,7 +4,7 @@ description: Nyheter i Adobe Experience Manager 6.5 Service Pack 4
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 61d1531c020b5a25207b5e3f1c2b0c14e2974e02
+source-git-commit: 5fc75e3dcb0ca107605c456d0f41be861dabc0eb
 
 ---
 
@@ -39,6 +39,10 @@ Auktoriseringskanalen mellan AEM Assets och Brand Portal har ändrats. Tidigare 
 
 Stegen för att konfigurera AEM Assets med Brand Portal är olika beroende på din AEM-version, om du konfigurerar för första gången eller uppgraderar befintliga konfigurationer. Mer information finns i [Konfigurera AEM-resurser med varumärkesportalen](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html) .
 
+
+### Known issues {#known-issues-bp}
+
+* Användare av varumärkesportalen kan inte publicera material i mappen för bidrag till AEM Assets när de uppgraderar till Adobe I/O på AEM 6.5.4.
 
 ### Förbättrad tillgänglighet {#accessibility-enhancements}
 
