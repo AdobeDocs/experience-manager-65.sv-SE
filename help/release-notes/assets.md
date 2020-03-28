@@ -2,7 +2,7 @@
 title: Versionsinformation om Adobe Experience Manager Assets
 description: De nya funktionerna och förbättringarna i Adobe Experience Manager 6.5 Assets.
 translation-type: tm+mt
-source-git-commit: 23f838b681d4d9eda55e287519f330addf7928aa
+source-git-commit: 92619acaa2eb820eda304355f8eaf79ec4a400e1
 
 ---
 
@@ -31,7 +31,7 @@ Organisationen kan använda sin [!DNL Adobe Stock] Enterprise-plan i för [!DNL 
 
 [!DNL Adobe Stock] ger designers och företag tillgång till miljontals utvalda och royaltyfria foton, vektorer, illustrationer, videor, mallar och 3D-resurser av hög kvalitet för alla kreativa projekt.
 
-Mer information finns i [Använda DNL Adobe Stock-resurser i Experience Manager Assets](/help/assets/aem-assets-adobe-stock.md).
+Mer information finns i [Använda [!DNL Adobe Stock]-resurser i Experience Manager Assets](/help/assets/aem-assets-adobe-stock.md).
 
 ![Förhandsgranska Adobe Stock-bilder och -licenser inifrån Experience Manager Assets](assets/stock_image_preview_license_options.png)
 
