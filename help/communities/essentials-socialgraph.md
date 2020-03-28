@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: f8d85d72-0215-4680-a334-e37a530fba58
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
@@ -19,9 +19,9 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 Möjligheten för en gemenskapsmedlem att följa [verksamheterna](essentials-activities.md) samt att följa dessa är fastställd i två delar:
 
-Den här `follow`komponenten måste associeras med en annan resurs, och den här associationen är redan upprättad för befintliga communitymedlemmar och funktioner på en [communitywebbplats](overview.md#communitiessites).
+Komponenten måste vara kopplad till en annan resurs, och den här associationen är redan upprättad för befintliga communitymedlemmar och funktioner på en `following` communitywebbplats [](overview.md#communitiessites).
 
-I `following`komponenten visas de medlemmar som antingen följer den aktuella medlemmen eller som följs av den aktuella medlemmen. Det här sociala diagrammet över relationerna mellan medlemmar ingår i användarprofilen som har skapats för en community-webbplats.
+Komponenten visar de medlemmar som antingen följer den aktuella medlemmen eller som följs av den aktuella medlemmen. `following` Det här sociala diagrammet över relationerna mellan medlemmar ingår i användarprofilen som har skapats för en community-webbplats.
 
 ## Grundläggande för klientsidan {#essentials-for-client-side}
 
@@ -58,11 +58,11 @@ I `following`komponenten visas de medlemmar som antingen följer den aktuella me
    <td>
     <ul>
      <li>Namn: <strong><code>outgoing</code></strong></li>
-     <li>Typ:Boolean</li>
+     <li>Typ: Boolean</li>
      <li>Värde:<br />
       <ul>
-       <li><i>true </i>- <code>following</code> komponenten visar de medlemmar som den inloggade medlemmen <code>follows</code></li>
-       <li><i>false </i>- <code>following</code> komponenten visar de medlemmar som <code>follow </code>den inloggade medlemmen</li>
+       <li><i>True </i>- <code>following</code> Komponenten listar de medlemmar som för närvarande är inloggade <code>follows</code></li>
+       <li><i>Falskt </i>- <code>following</code> Komponenten visar vilka medlemmar <code>follow </code>som är inloggade.</li>
       </ul> </li>
     </ul> <p>Standardvärdet är <i>true</i> om egenskapen saknas. För närvarande går det inte att ange den här egenskapen i redigeringsdialogrutan i redigeringsläge. Egenskapen måste läggas till i en instans av <code>following </code>noden med <a href="../../help/sites-developing/developing-with-crxde-lite.md">CRXDE|Lite</a>.</p> </td>
   </tr>
@@ -71,11 +71,11 @@ I `following`komponenten visas de medlemmar som antingen följer den aktuella me
 
 ### Följ {#follow}
 
-| **resourceType** | socialt/socialt diagram/komponenter/hbs/följande |
+| **resourceType** | `social/socialgraph/components/hbs/following` |
 |---|---|
 | [**oklanderlig **](scf.md#add-or-include-a-communities-component) | Nej |
-| **templates** | /libs/social/socialgraph/components/hbs/following/following.hbs |
-| **css** | /libs/social/socialgraph/components/hbs/following/clientlibs/following.css |
+| **templates** | `/libs/social/socialgraph/components/hbs/following/following.hbs` |
+| **css** | `/libs/social/socialgraph/components/hbs/following/clientlibs/following.css` |
 
 * [Anpassningar på klientsidan](client-customize.md)
 
