@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 98f70093-e786-4555-8aaa-d0df4c977dc0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a3ccb1ffe2b2e24c453afac8cf3efc098f393030
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
 
-# Viktiga meddelanden{#messaging-essentials}
+# Viktiga meddelanden {#messaging-essentials}
 
 På den här sidan visas information om hur du arbetar med att använda meddelandekomponenten för att inkludera en meddelandefunktion på en webbplats.
 
@@ -98,18 +98,21 @@ Se även anpassning av [klientsidan](/help/communities/client-customize.md)
 
 >[!CAUTION]
 >
->String-parametern får inte *innehålla ett avslutande snedstreck (/) för följande MessageBuilder-metoder:
+>String-parametern får *inte* innehålla ett avslutande snedstreck (/) för följande MessageBuilder-metoder:
 >
 >* `setInboxPath`()
 >* `setSentItemsPath`()
 >
->Exempel:
 >
->```
+Exempel:
+>
+>
+```>
 >valid: mb.setInboxPath( "/mail/inbox" );
 > not valid: mb.setInboxPath( "/mail/inbox/" );
->```
->
+>```>
+
+
 
 ### Community-webbplats {#community-site}
 
@@ -123,22 +126,22 @@ Följande exempel är en händelsehanterare som lyssnar efter `message sent` hä
 
 För att testa exempelskriptet på serversidan behöver du en utvecklingsmiljö och möjlighet att skapa ett OSGi-paket:
 
-1. Logga in som administratör för att ` [CRXDE|Lite](https://localhost:4502/crx/de).`
+1. Logga in som administratör till ` [CRXDE|Lite](https://localhost:4502/crx/de)`.
 1. Skapa en `bundle node`i `/apps/engage/install` med godtyckliga namn, som:
 
-   * Symboliskt namn: com.engage.media.social.messaging.MessagingNotification
+   * Symboliskt namn: `com.engage.media.social.messaging.MessagingNotification`
    * Namn: Komma igång - meddelande om självstudiekurs
-   * Beskrivning: en exempeltjänst för att skicka ett e-postmeddelande till användare när de får ett meddelande
-   * Paket: com.engage.media.social.messaging.notification
+   * Beskrivning: En exempeltjänst för att skicka ett e-postmeddelande till användare när de får ett meddelande
+   * Paket: `com.engage.media.social.messaging.notification`
 
-1. Gå till /apps/engage/install/com.engage.media.social.messaging.MessagingNotification/src/main/java/com/engage/media/social/messaging/notification och sedan:
+1. Navigera till `/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/src/main/java/com/engage/media/social/messaging/notification`och sedan:
 
-   1. Ta bort klassen Activator.java som skapas automatiskt.
-   1. Skapa klassen MessageEventHandler.java.
-   1. Kopiera och klistra in koden nedan i MessageEventHandler.java.
+   1. Ta bort den `Activator.java` klass som skapas automatiskt.
+   1. Skapa klass `MessageEventHandler.java`.
+   1. Kopiera och klistra in koden nedan i `MessageEventHandler.java`.
 
-1. Klicka på **Spara alla.**
-1. Navigera till /apps/engage/install/com.engage.media.social.messaging.MessagingNotification/com.engage.media.social.messaging.MessagingNotification.bnd och lägg till alla import-programsatser som de har skrivits i MessageEventHandler.java-koden.
+1. Klicka på **Spara alla**.
+1. Navigera till `/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/com.engage.media.social.messaging.MessagingNotification.bnd`och lägg till alla importsatser som de skrivs i `MessageEventHandler.java` koden.
 1. Bygg paketet.
 1. Kontrollera att `Day CQ Mail Service`OSGi-tjänsten är konfigurerad.
 1. Logga in som demoanvändare och skicka e-post till en annan användare.
