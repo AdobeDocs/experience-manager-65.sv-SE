@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 059c5bbe-07eb-4873-8157-2196df887b27
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
@@ -75,8 +75,8 @@ Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](
 
 Se:
 
-* [Översikt över](srp.md) lagringsresursprovidern - introduktion och databasanvändning - översikt
+* [Översikt över](srp.md) lagringsresursleverantör - introduktion och databasanvändning - översikt
 * [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och -exempel
 * [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - riktlinjer för kodning
-* [Omfaktorisering för SocialUtils](socialutils.md) - mappning av utgått verktygsmetoder till aktuella SRP-verktygsmetoder
+* [Omfaktorisering för SocialUtils](socialutils.md) - Mappar borttagna verktygsmetoder till aktuella SRP-verktygsmetoder
 
