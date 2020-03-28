@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 6bac681e-59e1-4786-9c50-6679c936cfd1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70e6f2d8366456e5091b7b775dc40914948921ab
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
 
-# Grundläggande om uppdrag{#assignments-essentials}
+# Grundläggande om uppdrag {#assignments-essentials}
 
 Läs vidare om du vill veta mer om den viktigaste informationen för att arbeta med uppdragsfunktionen på webbplatser [i användargrupper](/help/communities/overview.md#enablement-community) .
 
@@ -48,7 +48,7 @@ Tilldelningsfunktionen är möjligheten att tilldela aktiveringsresurser och utb
   </tr>
   <tr>
    <td><strong> egenskaper</strong></td>
-   <td>se <a href="/help/communities/assignments.md">Uppdragsfunktion</a></td>
+   <td>Se, <a href="/help/communities/assignments.md">Uppdragsfunktion</a></td>
   </tr>
  </tbody>
 </table>
