@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a07a4690-0e47-4a76-84cb-96abdc70b835
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
@@ -31,7 +31,7 @@ Anta att rubriken för kommentarkomponenten måste visas med ett alternativt uts
 
 Om du vill implementera den här lösningen skapar du en ny komponent som utökar (åsidosätter) den befintliga och ändrar Handlebars-skriptet. Det område på webbplatsen som använder de nya kommentarerna kan använda det utökade området, medan de webbplatser som använder standardutseendet inte påverkas.
 
-Kommentarskomponenten är i själva verket en av två komponenter som utgör kommentarssystemet. Det finns alltså två komponenter att utöka: *kommentarer* och *kommentarer*. Skriptet som ska redigeras finns i *comment *-komponentens `header.hbs` fil, medan den överordnade *kommentarkomponenten* (kommentarsystemet) är det som en författare faktiskt lägger till på sidan.
+Kommentarskomponenten är i själva verket en av två komponenter som utgör kommentarssystemet. Det finns alltså två komponenter att utöka: *kommentarer* och *kommentarer*. Skriptet som ska redigeras finns i *kommentarkomponentens* fil, medan den överordnade `header.hbs` kommentarkomponenten ** (kommentarsystemet) är det som en författare faktiskt lägger till på sidan.
 
 Om du vill lägga in kommentarer måste du
 
