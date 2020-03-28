@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 9045ce2e-a06d-4da5-9b83-56dd823007bb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
 
-# Funktion för resultatavla{#leaderboard-feature}
+# Funktion för resultatavla {#leaderboard-feature}
 
 ## Introduktion {#introduction}
 
@@ -26,8 +26,8 @@ Innan du tar med huvudpanelskomponenten på en sida måste du konfigurera [Scori
 
 Detta avsnitt i dokumentationen beskriver
 
-* lägga till `Leaderboard` komponenten på en [communitywebbplats](/help/communities/overview.md#community-sites)
-* konfigurationsinställningar för `Leaderboard` komponenten
+* Lägga till `Leaderboard` komponenten på en [communitywebbplats](/help/communities/overview.md#community-sites)
+* Konfigurationsinställningar för `Leaderboard` komponenten
 
 ### Lägga till en huvudpanel på en sida {#adding-a-leaderboard-to-a-page}
 
@@ -51,7 +51,7 @@ Markera den monterade `Leaderboard` komponent som du vill öppna och välj den `
 
 #### Fliken Inställningar {#settings-tab}
 
-Under fliken **Settings **anger du vilken information om medlemmen som visas:
+På fliken **Inställningar** anger du vilken information om medlemmen som ska visas:
 
 * **Visningsnamn**
 
@@ -79,21 +79,19 @@ Under fliken **Regler** , communitywebbplatsen och dess regler för poäng och b
 
 * **Regelplats**
 
-   (obligatoriskt) Plats där regeln Scoring/Badging är konfigurerad.
+   (Obligatoriskt) Plats där poängsättningsregeln/badging-regeln är konfigurerad.
 
 * **Poängregel**
 
-   (obligatoriskt) Specifik regel som genererar poängen som ska visas.
+   (Obligatoriskt) Specifik regel som genererar poängen som ska visas.
 
 * **Märkningsregel**
 
-   (obligatoriskt) Specifik regel som genererar märket som ska visas.
+   (Obligatoriskt) Specifik regel som genererar märket som ska visas.
 
 * **Visningsgräns**
 
-   Antal medlemmar som ska visas per sida.
-
-   Standardvärdet är 10.
+   Antal medlemmar som ska visas per sida. Standard är 10.
 
 ### Exempel: Deltagare i ledningsgruppen {#example-participants-leaderboard}
 
