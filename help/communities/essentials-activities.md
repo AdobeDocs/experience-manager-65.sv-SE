@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 8714b456-527a-457b-82c4-21bd445dfd9c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70e6f2d8366456e5091b7b775dc40914948921ab
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
 
-# Grundläggande om aktivitetsström{#activity-stream-essentials}
+# Grundläggande om aktivitetsström {#activity-stream-essentials}
 
 En inloggad community-medlems aktiviteter, till exempel publicering på ett forum eller en blogg, samlas i en ström som kan filtreras och visas på olika sätt genom konfiguration av aktivitetsströmkomponenten.
 
@@ -32,7 +32,7 @@ En medlem kan följa en aktivitetsström antingen efter en annan person eller et
 
 Ett *nyhetsflöde* är en sammanslagning av de aktivitetsströmmar som följs av en medlem till en enda ström.
 
-Ett * [socialt diagram](/help/communities/essentials-socialgraph.md)* fångar följande relationer mellan en medlem och en annan.
+Ett *[socialt diagram](/help/communities/essentials-socialgraph.md)*fångar följande relationer mellan en medlem och en annan.
 
 ## Grundläggande för klientsidan {#essentials-for-client-side}
 
