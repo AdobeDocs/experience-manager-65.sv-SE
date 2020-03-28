@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 83c4f18a-d7d6-4090-88c7-41a9075153b5
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
@@ -73,11 +73,11 @@ Borttagningen av den automatiskt skapade JSP-filen beror på att HBS-standardfil
 
 ### Skapa den underordnade kommentarskomponenten {#create-the-child-comment-component}
 
-I de här instruktionerna anges **Gruppera** som `.hidden` bara den överordnade komponenten ska inkluderas på en sida.
+I de här instruktionerna anges **Gruppera** som `.hidden` att bara den överordnade komponenten ska inkluderas på en sida.
 
 Borttagningen av den automatiskt skapade JSP-filen beror på att HBS-standardfilen används i stället.
 
-1. Navigera till `/apps/custom/components/comments` noden
+1. Navigate to the `/apps/custom/components/comments` node
 1. Högerklicka på noden
 
    * Välj **[!UICONTROL Skapa > Komponent..]**
@@ -112,7 +112,7 @@ Använda [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)
 
 * Redigera `comments.hbs` till:
 
-   * Ändra värdet på `data-scf-component` attributet (~line 20):
+   * Ändra värdet för `data-scf-component` attributet (~line 20):
 
       * From `social/commons/components/hbs/comments`
       * Till `/apps/custom/components/comments`
@@ -201,7 +201,7 @@ Ett sätt att göra detta är att
 
    * Välj **[!UICONTROL Verktyg > Distribution > Replikering]**
    * Välj `Activate Tree`
-   * Uppsättning `Start Path`:till `/apps/custom`
+   * Uppsättning `Start Path`: till `/apps/custom`
    * Avmarkera `Only Modified`
    * Markera `Activate`knapp
 
