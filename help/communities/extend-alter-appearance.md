@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: e0da09b3-725d-4ed1-9273-2532132f6918
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
 
-# Ändra utseendet (HBS){#alter-the-appearance-hbs}
+# Ändra utseendet (HBS) {#alter-the-appearance-hbs}
 
 Nu när komponenterna för det anpassade kommentarsystemet i programkatalogen (/apps) finns på plats, med en resourceSuperType som refererar till standardkommentarsystemet och den anpassade modellen/vyn registrerad, är det möjligt att ändra implementeringen.
 
@@ -30,7 +30,7 @@ För en enkel demonstration, en visuell funktion, tas den avatar som visas för 
 
 Använda [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md):
 
-* open [/apps/custom/components/comments/comment/**comment.hbs **](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment/comment.hbs)
+* Open [/apps/custom/components/comments/comment/**comment.hbs **](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment/comment.hbs)
 
    * kommentera taggen som innehåller avataren för ett kommentarinlägg (~ line 21):
 
@@ -40,7 +40,7 @@ Använda [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md):
        -->
       ```
 
-* open [/apps/custom/components/comments/**comments.hbs **](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comments.hbs)
+* Open [/apps/custom/components/comments/**comments.hbs **](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comments.hbs)
 
    * kommentera taggen som innehåller avataren för nästa kommentarspost (~ line 44):
 
@@ -50,7 +50,7 @@ Använda [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md):
        -->
       ```
 
-* välj **Spara alla**
+* Välj **Spara alla**
 
 ### Replikera anpassad app {#replicate-custom-app}
 
@@ -58,11 +58,11 @@ När programmet har ändrats måste den anpassade komponenten replikeras om.
 
 Ett sätt att göra detta är att
 
-* på huvudmenyn
+* Från huvudmenyn
 
    * välj **Verktyg > Åtgärder > Replikering**
    * select `Activate Tree`
-   * uppsättning `Start Path`:till `/apps/custom`
+   * uppsättning `Start Path`: till `/apps/custom`
    * avmarkera `Only Modified`
    * välj `Activate`knapp
 
