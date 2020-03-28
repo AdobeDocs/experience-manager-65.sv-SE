@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 1a947a06-6a5c-4be9-b2fa-e5fa809ff3b8
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
@@ -49,7 +49,7 @@ Anonym publicering av en röst stöds inte. Besökare på platsen måste registr
   </tr>
   <tr>
    <td><strong>egenskaper</strong></td>
-   <td><p>Se <a href="voting.md">Använda röstning</a></p> </td>
+   <td><p>Se, <a href="voting.md">Använda röstning</a></p> </td>
   </tr>
  </tbody>
 </table>
