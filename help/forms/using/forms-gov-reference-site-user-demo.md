@@ -8,7 +8,7 @@ contentOwner: anujkapo
 discoiquuid: ddb3778b-be06-4cde-bc6e-0994efa42b18
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3226edb575de3d9f8bff53f5ca81e2957f37c544
+source-git-commit: f323b490c37effc3cbb36c793b62fa788eca9545
 
 ---
 
@@ -35,7 +35,7 @@ Konfigurera referenswebbplatsen enligt beskrivningen i [Konfigurera och konfigur
 
 * Adobe Analytics
 
-### Faktiska användare och grupper {#fictitious-users-and-groups}
+### Fictitious users and groups {#fictitious-users-and-groups}
 
 Demonspaketet We.Gov innehåller följande inbyggda fiktiva användare:
 
@@ -80,7 +80,7 @@ Följande grupper ingår också:
    *https://&lt;aemserver>:&lt;port>/content/forms/af/adobe-gov-forms/enrollment-application-for-health-benefits.html*
 
 1. **Adobe Web.Gov Site**: *https://&lt;aemserver>:&lt;port>/content/we-gov/home.html*
-1. **Adobe Inbox**: Bell-ikon [på den översta menyraden finns] på AEM-serverdelen.
+1. **Adobe Inbox**: Bell-ikon [på den översta menyraden finns](assets/bell.svg) på AEM-serverdelen.
 
    *https://&lt;aemserver>:&lt;port>/aem/start.html*
 
@@ -98,7 +98,7 @@ Följande grupper ingår också:
 1. Logga in med:
 
    1. **Användare**: aya.tan
-   1. **Lösenord**:lösenord
+   1. **Lösenord**: lösenord
 
 1. Ändra storlek på webbläsarfönstret eller använd webbläsarens emulator för att replikera en mobilenhetsstorlek.
 
@@ -172,7 +172,7 @@ Du måste granska vissa dokument hemma innan hon kan slutföra tjänstbegäran. 
 
 ## Demo {#desktop-demo}
 
-**** Detta avsnitt: Hemma har Aya hittat den information hon behövde och återupptar programmet från sin dator. Gå till onlineformulärportalen och återuppta hennes ansökan. Med viss enkel anpassning kan man också automatiskt generera och mejla en länk för att återuppta ansökningen.
+**Detta avsnitt:** Hemma har Aya hittat den information hon behövde och återupptar programmet från sin dator. Gå till onlineformulärportalen och återuppta hennes ansökan. Med viss enkel anpassning kan man också automatiskt generera och mejla en länk för att återuppta ansökningen.
 
 ### Aya User Story (forts. adaptive form) {#aya-user-story-continued-adaptive-form}
 
@@ -219,7 +219,7 @@ Du måste granska vissa dokument hemma innan hon kan slutföra tjänstbegäran. 
 
 ![Government Agent George](/help/forms/using/assets/george_lang-1.png)
 
-**** Detta avsnitt: George är affärsanalytiker på den statliga myndigheten Aya begär en tjänst från. George har en enda kontrollpanel där han kan se alla serviceförfrågningar som han har tilldelats för granskning.
+**Detta avsnitt:** George är affärsanalytiker på den statliga myndigheten Aya begär en tjänst från. George har en enda kontrollpanel där han kan se alla serviceförfrågningar som han har tilldelats för granskning.
 
 ### George User Story (AEM inbox) {#george-user-story-aem-inbox}
 
@@ -230,8 +230,8 @@ Du måste granska vissa dokument hemma innan hon kan slutföra tjänstbegäran. 
 
    1. Logga in med:
 
-      1. **** Användare: george.lang
-      1. **** Lösenord:lösenord
+      1. **Användare:** george.lang
+      1. **Lösenord:** lösenord
    1. Eller personifiera:
 
       1. Skriv&quot;**George**&quot; i fältet&quot;**Personifiera som**&quot;.
@@ -278,7 +278,7 @@ George godkänner Ayas ansökan, och tack vare ett befintligt automatiserat arbe
 
 ![Camila (CX lead)](/help/forms/using/assets/camila_santos-1.png)
 
-**** Detta avsnitt: Camila på CX Lead ringer ett välkomstsamtal med Aya för att förklara hur man använder de myndighetstjänster hon har godkänts för.
+**Detta avsnitt:** Camila på CX Lead ringer ett välkomstsamtal med Aya för att förklara hur man använder de myndighetstjänster hon har godkänts för.
 
 ### Camila User Story (AEM inbox &amp; MS Dynamics) {#camila-user-story-aem-inbox-ms-dynamics}
 
@@ -290,7 +290,7 @@ George godkänner Ayas ansökan, och tack vare ett befintligt automatiserat arbe
    1. Logga in med:
 
       1. **Användare**: camila.santos
-      1. **Lösenord**:lösenord
+      1. **Lösenord**: lösenord
    1. Eller personifiera:
 
       1. Skriv&quot;**Camila**&quot; i fältet&quot;**Impersonate as**&quot;.
@@ -324,7 +324,7 @@ George godkänner Ayas ansökan, och tack vare ett befintligt automatiserat arbe
 
 ## Welcome Kit-medborgare (Aya) {#welcome-kit-citizen-aya}
 
-**** Detta avsnitt: Aya får ett e-postmeddelande med en länk till ett interaktivt meddelande som sammanfattar hennes fördelar och även innehåller formulärfält som ska fyllas i. Med PDF-förmånsutdrag bifogat och länk till interaktivt brev i e-postmeddelandet (med samma tema/varumärke som det interaktiva meddelandet).
+**Detta avsnitt:** Aya får ett e-postmeddelande med en länk till ett interaktivt meddelande som sammanfattar hennes fördelar och även innehåller formulärfält som ska fyllas i. Med PDF-förmånsutdrag bifogat och länk till interaktivt brev i e-postmeddelandet (med samma tema/varumärke som det interaktiva meddelandet).
 
 ### Aya User Story (e-postklient) {#aya-user-story-email-client}
 
@@ -349,7 +349,7 @@ George godkänner Ayas ansökan, och tack vare ett befintligt automatiserat arbe
 
 ## Påminnelse om förnyelse - medborgare (Aya) {#renewal-reminder-citizen-aya}
 
-**** Detta avsnitt: Camila schemalägger också en påminnelse så ett år senare. (Arbetsflödessteg som automatiserar/kör och skickar e-post).
+**Detta avsnitt:** Camila schemalägger också en påminnelse så ett år senare. (Arbetsflödessteg som automatiserar/kör och skickar e-post).
 
 ### Aya User Story (e-postklient) {#aya-user-story-email-client-1}
 
@@ -364,7 +364,7 @@ George godkänner Ayas ansökan, och tack vare ett befintligt automatiserat arbe
 
 ## Analytics CX Lead (Camila) {#analytics-cx-lead-camila}
 
-**** Detta avsnitt: Camila navigerar till en kontrollpanel där hon kan se nyckeltal från olika myndigheter, t.ex. procent av de medborgare som börjar fylla i ett formulär och överge det, den genomsnittliga tiden från att begära in det till svar på ansökan om godkännande/avslag, och engagemangsstatistik för de förmånsböcker hon har skickat till medborgarna.
+**Detta avsnitt:** Camila navigerar till en kontrollpanel där hon kan se nyckeltal från olika myndigheter, t.ex. procent av de medborgare som börjar fylla i ett formulär och överge det, den genomsnittliga tiden från att begära in det till svar på ansökan om godkännande/avslag, och engagemangsstatistik för de förmånsböcker hon har skickat till medborgarna.
 
 ### Camila granskar rapporter om webbplatser (Web.Gov Adobe Analytics) {#camila-reviews-sites-reporting-we-gov-adobe-analytics}
 
