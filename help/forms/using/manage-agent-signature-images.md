@@ -10,7 +10,7 @@ topic-tags: correspondence-management
 discoiquuid: a81cdd53-f0fb-4ac5-b2ec-c19aeee7186e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 06335b9a85414b6b1141dd19c863dfaad0812503
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -33,7 +33,7 @@ Du kan också åsidosätta standardfunktionen för anpassade funktioner för att
 1. Kontrollera att agentsignaturbilden har samma namn som användarens AEM-användarnamn. (Tillägg krävs inte för bildens filnamn.)
 1. I CRX skapar du en mapp med namnet `cmUserRoot` i innehållsmappen.
 
-   1. Gå till `https://[server]:[port]/crx/de`. Logga in som administratör om det behövs.
+   1. Gå till `https://'[server]:[port]'/crx/de`. Logga in som administratör om det behövs.
 
    1. Högerklicka på **innehållsmappen** och välj **Skapa** > **Skapa mapp**.
 
@@ -47,7 +47,7 @@ Du kan också åsidosätta standardfunktionen för anpassade funktioner för att
 
 1. I Innehållsutforskaren navigerar du till mappen cmUserRoot och lägger till agentsignaturbilden i den.
 
-   1. Gå till `https://[server]:[port]/crx/explorer/index.jsp`. Logga in som administratör om det behövs.
+   1. Gå till `https://'[server]:[port]'/crx/explorer/index.jsp`. Logga in som administratör om det behövs.
    1. Klicka på **Innehållsutforskaren**. Innehållsutforskaren öppnas i ett nytt fönster.
    1. Navigera till mappen cmUserRoot i Innehållsutforskaren och markera den. Högerklicka på **mappen cmUserRoot** och välj **Ny nod**.
 
@@ -55,9 +55,9 @@ Du kan också åsidosätta standardfunktionen för anpassade funktioner för att
 
       Gör följande poster i raden för ny nod och klicka sedan på den gröna bockmarkeringen.
 
-      **** Namn: JohnDoe (eller namnet på din agentsignaturfil)
+      **Namn:** JohnDoe (eller namnet på din agentsignaturfil)
 
-      **** Typ: nt:fil
+      **Typ:** nt:fil
 
       Under `cmUserRoot` mappen skapas en ny mapp med namnet `JohnDoe` (eller namnet som du angav i föregående steg).
 
