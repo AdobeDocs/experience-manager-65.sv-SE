@@ -9,7 +9,7 @@ topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 translation-type: tm+mt
-source-git-commit: 3226edb575de3d9f8bff53f5ca81e2957f37c544
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -22,9 +22,9 @@ Artikeln beskriver rekommendationer och bästa praxis för att skydda servrar so
 
 Artikeln beskriver härdningstekniker som ska användas under följande faser under installations- och konfigurationscykeln:
 
-* **** Förinstallation: Använd dessa tekniker innan du installerar AEM Forms på JEE.
-* **** Installation: Använd dessa tekniker under installationen av AEM Forms on JEE.
-* **** Efter installation: Använd dessa tekniker efter installation och regelbundet därefter.
+* **Förinstallation:** Använd dessa tekniker innan du installerar AEM Forms på JEE.
+* **Installation:** Använd dessa tekniker under installationen av AEM Forms on JEE.
+* **Efter installation:** Använd dessa tekniker efter installation och regelbundet därefter.
 
 AEM Forms på JEE är mycket anpassningsbart och kan fungera i många olika miljöer. Vissa av rekommendationerna kanske inte passar organisationens behov.
 
@@ -258,16 +258,16 @@ När AEM Forms på JEE är installerat konfigureras ett standardanvändarkonto f
 1. Skriv följande URL i en webbläsare:
 
    ```as3
-   https://[host name]:[port]/adminui
+   https://[host name]:'port'/adminui
    ```
 
    Standardportnumret är något av följande:
 
-   **** JBoss: 8080
+   **JBoss:** 8080
 
-   **** WebLogic-server: 7001
+   **WebLogic-server:** 7001
 
-   **** WebSphere: 9080.
+   **WebSphere:** 9080.
 
 1. I fältet **Användarnamn** skriver du `administrator` och skriver **i fältet** Lösenord `password`.
 1. Klicka på **Inställningar** > **Användarhantering** > **Användare och grupper**.
@@ -278,7 +278,7 @@ När AEM Forms på JEE är installerat konfigureras ett standardanvändarkonto f
 
 Vi rekommenderar dessutom att du ändrar standardlösenordet för CRX Administrator genom att utföra följande steg:
 
-1. Logga in `https://[server]:[port]/lc/libs/granite/security/content/useradmin.html` med standardanvändarnamnet/standardlösenordet.
+1. Logga in `https://'[server]:[port]'/lc/libs/granite/security/content/useradmin.html` med standardanvändarnamnet/standardlösenordet.
 1. Skriv Administratör i sökfältet och klicka på **Gå**.
 1. Välj **Administratör** i sökresultatet och klicka på ikonen **Redigera** längst ned till höger i användargränssnittet.
 1. Ange det nya lösenordet i fältet **Nytt lösenord** och det gamla lösenordet i fältet **Lösenord** .
@@ -291,7 +291,7 @@ WSDL-generering (Web Service Definition Language) ska endast aktiveras för utve
 1. Skriv följande URL i en webbläsare:
 
    ```as3
-   https://[host name]:[port]/adminui
+   https://[host name]:'port'/adminui
    ```
 
 1. Klicka på **Inställningar > Systeminställningar > Konfigurationer**.
@@ -319,7 +319,7 @@ I följande tabell beskrivs några tekniker för att skydda programservern efter
   </tr> 
   <tr> 
    <td><p>Katalogbläddring</p> </td> 
-   <td><p>När någon begär en sida som inte finns eller begär namnet på en Director (begärandesträngen avslutas med ett snedstreck (/)), ska programservern inte returnera innehållet i den katalogen. Du kan förhindra detta genom att inaktivera katalogbläddring på programservern. Du bör göra detta för administrationskonsolprogrammet och för andra program som körs på servern.</p> <p>För JBoss anger du värdet för listings initialization-parametern för egenskapen till <code>DefaultServlet</code> <code>false</code> i filen web.xml, vilket visas i det här exemplet:</p> <p>&lt;servlet&gt;</p> <p>&lt;servlet-name&gt;standard&lt;/servlet-name&gt;</p> <p>&lt;servlet-class&gt;</p> <p>org.apache.catalina.servlets.DefaultServlet</p> <p>&lt;/servlet-class&gt;</p> <p>&lt;init-param&gt;</p> <p>&lt;param-name&gt;listor&lt;/param-name&gt;</p> <p>&lt;param-value&gt;false&lt;/param-value&gt;</p> <p>&lt;/init-param&gt;</p> <p>&lt;load-on-startup&gt;1&lt;/load-on-startup&gt;</p> <p>&lt;/servlet&gt;</p> <p>För WebSphere anger du egenskapen <code>directoryBrowsingEnabled</code> i filen ibm-web-ext.xmi till <code>false</code>.</p> <p>För WebLogic anger du egenskaperna för indexkataloger i filen weblogic.xml till <code>false</code>enligt följande exempel:</p> <p>&lt;container-descriptor&gt;</p> <p>&lt;index-directory-enabled&gt;false</p> <p>&lt;/index-directory-enabled&gt;</p> <p>&lt;/container-descriptor&gt;</p> </td> 
+   <td><p>När någon begär en sida som inte finns eller begär namnet på en direktör (begärandesträngen avslutas med ett snedstreck (/)), ska programservern inte returnera innehållet i den katalogen. Du kan förhindra detta genom att inaktivera katalogbläddring på programservern. Du bör göra detta för administrationskonsolprogrammet och för andra program som körs på servern.</p> <p>För JBoss anger du värdet för listings initialization-parametern för egenskapen till <code>DefaultServlet</code> <code>false</code> i filen web.xml, vilket visas i det här exemplet:</p> <p>&lt;servlet&gt;</p> <p>&lt;servlet-name&gt;standard&lt;/servlet-name&gt;</p> <p>&lt;servlet-class&gt;</p> <p>org.apache.catalina.servlets.DefaultServlet</p> <p>&lt;/servlet-class&gt;</p> <p>&lt;init-param&gt;</p> <p>&lt;param-name&gt;listor&lt;/param-name&gt;</p> <p>&lt;param-value&gt;false&lt;/param-value&gt;</p> <p>&lt;/init-param&gt;</p> <p>&lt;load-on-startup&gt;1&lt;/load-on-startup&gt;</p> <p>&lt;/servlet&gt;</p> <p>För WebSphere anger du egenskapen <code>directoryBrowsingEnabled</code> i filen ibm-web-ext.xmi till <code>false</code>.</p> <p>För WebLogic anger du egenskaperna för indexkataloger i filen weblogic.xml till <code>false</code>enligt följande exempel:</p> <p>&lt;container-descriptor&gt;</p> <p>&lt;index-directory-enabled&gt;false</p> <p>&lt;/index-directory-enabled&gt;</p> <p>&lt;/container-descriptor&gt;</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -379,7 +379,7 @@ På WebSphere kan du bara konfigurera integrerad säkerhet när du använder en 
 
 AEM Forms databasschema innehåller känslig information om systemkonfiguration och affärsprocesser och bör döljas bakom brandväggen. Databasen bör beaktas inom samma förtroendegräns som formulärservern. För att skydda mot informationsexponering och stöld av affärsdata måste databasen konfigureras av databasadministratören så att endast behöriga administratörer får åtkomst till databasen.
 
-Som en extra försiktighetsåtgärd bör du överväga att använda databasleverantörsspecifika verktyg för att kryptera kolumner i tabeller som innehåller följande data:
+Som en extra försiktighetsåtgärd bör du överväga att använda leverantörsspecifika verktyg för att kryptera kolumner i tabeller som innehåller följande data:
 
 * Dokumentnycklar för rättighetshantering
 * HSM-PIN-krypteringsnyckel för Trust Store
@@ -639,10 +639,10 @@ Följande egenskaper är gemensamma för CSRF:
 
 I AEM Forms on JEE används funktionen Refererarfilter för att blockera CSRF-attacker. Följande termer används i det här avsnittet för att beskriva mekanismen för referensfiltrering:
 
-* **** Tillåten referent: En referent är adressen till källsidan som skickar en begäran till servern. För JSP-sidor eller -formulär är referensen vanligtvis föregående sida i webbläsarhistoriken. Referent för bilder är vanligtvis de sidor där bilderna visas. Du kan identifiera den referent som har behörighet till serverresurserna genom att lägga till dem i listan över tillåtna referenter.
-* **** Tillåtna referensundantag: Du kanske vill begränsa åtkomsten för en viss referent i listan över tillåtna referenter. Om du vill tillämpa den här begränsningen kan du lägga till enskilda sökvägar för den referenten i listan med tillåtna undantag för referenten. Begäranden som kommer från sökvägar i listan över tillåtna referensundantag förhindras från att anropa resurser på formulärservern. Du kan definiera tillåtna referensundantag för ett visst program och även använda en global lista med undantag som gäller för alla program.
-* **** Tillåtna URI:er: Det här är en lista över resurser som ska skickas utan att refererarens huvud har markerats. Resurser, t.ex. hjälpsidor som inte leder till statusändringar på servern, kan läggas till i den här listan. Resurserna i listan Tillåtna URI:er blockeras aldrig av referensfiltret oavsett vem som refererar.
-* **** Null-referens: En serverbegäran som inte är associerad med eller inte kommer från en överordnad webbsida betraktas som en begäran från en null-referens. När du till exempel öppnar ett nytt webbläsarfönster, skriver en adress och trycker på Retur är den referent som skickas till servern null. Ett skrivbordsprogram (.NET eller SWING) som gör en HTTP-begäran till en webbserver skickar även en Null-referens till servern.
+* **Tillåten referent:** En referent är adressen till källsidan som skickar en begäran till servern. För JSP-sidor eller -formulär är referensen vanligtvis föregående sida i webbläsarhistoriken. Referent för bilder är vanligtvis de sidor där bilderna visas. Du kan identifiera den referent som har behörighet till serverresurserna genom att lägga till dem i listan över tillåtna referenter.
+* **Tillåtna referensundantag:** Du kanske vill begränsa åtkomsten för en viss referent i listan över tillåtna referenter. Om du vill tillämpa den här begränsningen kan du lägga till enskilda sökvägar för den referenten i listan med tillåtna undantag för referenten. Begäranden som kommer från sökvägar i listan över tillåtna referensundantag förhindras från att anropa resurser på formulärservern. Du kan definiera tillåtna referensundantag för ett visst program och även använda en global lista med undantag som gäller för alla program.
+* **Tillåtna URI:er:** Det här är en lista över resurser som ska skickas utan att refererarens huvud har markerats. Resurser, t.ex. hjälpsidor som inte leder till statusändringar på servern, kan läggas till i den här listan. Resurserna i listan Tillåtna URI:er blockeras aldrig av referensfiltret oavsett vem som refererar.
+* **Null-referens:** En serverbegäran som inte är associerad med eller inte kommer från en överordnad webbsida betraktas som en begäran från en null-referens. När du till exempel öppnar ett nytt webbläsarfönster, skriver en adress och trycker på Retur är den referent som skickas till servern null. Ett skrivbordsprogram (.NET eller SWING) som gör en HTTP-begäran till en webbserver skickar även en Null-referens till servern.
 
 ### Referentfiltrering {#referer-filtering}
 
@@ -670,7 +670,7 @@ Refererarfiltreringsprocessen kan beskrivas så här:
 
 ### Hantera referensfiltrering {#managing-referer-filtering}
 
-I AEM Forms på JEE finns ett referensfilter som anger vilken referent som har åtkomst till serverresurserna. Som standard filtrerar inte referensfiltret begäranden som använder en säker HTTP-metod, t.ex. GET, om inte *CSRF_CHECK_GETS* är inställd på true. Om portnumret för en post med tillåten referens är 0, tillåter AEM Forms på JEE alla förfrågningar från den värden oavsett portnummer. Om inget portnummer anges tillåts endast begäranden från standardporten 80 (HTTP) eller port 443 (HTTPS). Referensfiltrering är inaktiverat om alla poster i listan över tillåtna referenter tas bort.
+I AEM Forms på JEE finns ett referensfilter som anger vilken referent som har åtkomst till serverresurserna. Som standard filtrerar inte referensfiltret begäranden som använder en säker HTTP-metod, t.ex. GET, om inte *CSRF_CHECK_GETS* är inställd på true. Om portnumret för en post med tillåten referens är 0, tillåter AEM Forms på JEE alla begäranden med Referer från den värden oavsett portnummer. Om inget portnummer anges tillåts endast begäranden från standardporten 80 (HTTP) eller port 443 (HTTPS). Referensfiltrering är inaktiverat om alla poster i listan över tillåtna referenter tas bort.
 
 När du först installerar Document Services uppdateras listan över tillåtna referenter med adressen till den server där Document Services är installerat. Posterna för servern omfattar servernamnet, IPv4-adressen, IPv6-adressen om IPv6 är aktiverat, loopback-adressen och en localhost-post. Namnen som läggs till i listan över tillåtna referenter returneras av värdoperativsystemet. En server med IP-adressen 10.40.54.187 kommer till exempel att innehålla följande poster: `https://server-name:0, https://10.40.54.187:0, https://127.0.0.1:0, http://localhost:0`. Den vita listan över icke-kvalificerade namn som returneras av värdoperativsystemet (namn som inte har IPv4-adress, IPv6-adress eller kvalificerat domännamn) uppdateras inte för alla okvalificerade namn. Ändra listan över tillåtna referenter så att den passar din affärsmiljö. Distribuera inte formulärservern i produktionsmiljön med standardlistan Tillåten referent. När du har ändrat någon av de tillåtna referenserna, referensundantagen eller URI:erna måste du starta om servern för att ändringarna ska börja gälla.
 
@@ -840,7 +840,7 @@ När du konfigurerar en säker nätverksarkitektur enligt beskrivningen i föreg
   </tr> 
   <tr> 
    <td><p>WebDAV</p> </td> 
-   <td><p>Möjliggör fjärrsurfning av AEM Forms i JEE-databasen (formulär, fragment osv.) av alla WebDAV-klienter</p> </td> 
+   <td><p>Möjliggör fjärrsurfning av AEM Forms i JEE-databasen (formulär, fragment och så vidare) av alla WebDAV-klienter</p> </td> 
   </tr> 
   <tr> 
    <td><p>AMF</p> </td> 
