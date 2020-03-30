@@ -10,7 +10,7 @@ topic-tags: correspondence-management
 discoiquuid: 666fee78-a103-44dc-afe7-71b90ce219b7
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 8e724af4d69cb859537dd088119aaca652ea3931
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -37,7 +37,7 @@ För att göra detta måste du:
 
 Så här anpassar du teckensnitt genom att redigera filen tbxeditor-config.xml:
 
-1. Gå till `https://[server]:[port]/[ContextPath]/crx/de` och logga in som administratör.
+1. Gå till `https://'[server]:[port]'/[ContextPath]/crx/de` och logga in som administratör.
 1. I programmappen skapar du en mapp med namnet config med en sökväg/struktur som liknar konfigurationsmappen, som finns på libs/fd/cm/config, enligt följande:
 
    1. Högerklicka på objektmappen i följande sökväg och välj **Overlay Node**:
@@ -48,11 +48,11 @@ Så här anpassar du teckensnitt genom att redigera filen tbxeditor-config.xml:
 
    1. Kontrollera att dialogrutan Overlay Node har följande värden:
 
-      **** Sökväg: /libs/fd/cm/config
+      **Sökväg:** /libs/fd/cm/config
 
-      **** Plats: /apps/
+      **Plats:** /apps/
 
-      **** Matcha nodtyper:Markerad
+      **Matcha nodtyper:** Markerad
 
       ![Överläggsnod](assets/2.png)
 
