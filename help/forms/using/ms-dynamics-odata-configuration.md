@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 627507f5-1ffc-48f8-8cc9-5dbc5e409ae3
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5831c173114a5a6f741e0721b55d85a583e52f78
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -55,7 +55,7 @@ Gör följande för att ange svars-URL:en för det registrerade Microsoft Dynami
 
 1. Gå till Microsoft Azure Active Directory-kontot och lägg till följande URL för molntjänstkonfiguration i **Svara-URL** -inställningarna för det registrerade programmet:
 
-   `https://[server]:[port]/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html`
+   `https://'[server]:[port]'/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html`
 
    ![Azure-katalog](assets/azure_directory_new.png)
 
@@ -97,7 +97,7 @@ Gör följande för att registrera en OAuth-klient på AD FS-datorn (Active Dire
 
    * `Client-ID` är ett klient-ID som du kan generera med valfri GUID-generator.
    * `redirect-uri` är URL:en till molntjänsten Microsoft Dynamics OData i AEM Forms. Standardmolntjänsten som installeras med AEM Forms-paketet distribueras på följande URL:
-      `https://[server]:[port]/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html`
+      `https://'[server]:[port]'/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html`
 
 1. Kör följande kommando för att bevilja åtkomst på AD FS-datorn:
 
@@ -140,7 +140,7 @@ När formulärdatamodellen öppnas för första gången ansluter den till den ko
 
 Om du vill granska formulärdatamodellen går du till **[!UICONTROL Formulär > Dataintegreringar]**. Välj **Microsoft Dynamics FDM** och klicka på **Redigera** för att öppna formulärdatamodellen i redigeringsläge. Du kan även öppna formulärdatamodellen direkt från följande URL:
 
-`https://[server]:[port]/aem/fdm/editor.html/content/dam/formsanddocuments-fdm/ms-dynamics-fdm`
+`https://'[server]:[port]'/aem/fdm/editor.html/content/dam/formsanddocuments-fdm/ms-dynamics-fdm`
 
 ![default-fdm-1](assets/default-fdm-1.png)
 
