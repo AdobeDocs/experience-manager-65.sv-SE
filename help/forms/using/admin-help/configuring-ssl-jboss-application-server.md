@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c187daa4-41b7-47dc-9669-d7120850cafd
 translation-type: tm+mt
-source-git-commit: a7ce63433f7e46feae8b0d23778e36d10c33972a
+source-git-commit: e4d84b5c6f7d2bfcac942b0b685a8f1fd11274f0
 
 ---
 
@@ -158,7 +158,7 @@ I denna procedur:
 
 
 
-1. Om du vill få åtkomst till administrationskonsolen med SSL skriver du `https://[host name]:[port]/adminui` i en webbläsare:
+1. Om du vill få åtkomst till administrationskonsolen med SSL skriver du `https://[host name]:'port'/adminui` i en webbläsare:
 
    Standardporten för SSL för JBoss är 8443. Ange den här porten när du öppnar AEM-formulär härifrån.
 
