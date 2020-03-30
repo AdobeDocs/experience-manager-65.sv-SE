@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/managing_endpoints
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 761e7909-43ba-4642-bcfc-8d76f139b9a3
 translation-type: tm+mt
-source-git-commit: 687cdacc2868de16a4df968dddedd330ce3317bb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -104,7 +104,7 @@ Så här anropar du en tjänst med bevakade mappar:
 1. Den måltjänst som konfigurerats för slutpunkten anropas synkront eller asynkront. Måltjänsten anropas med det användarnamn och lösenord som har konfigurerats för slutpunkten.
 
    * Synkrona anrop anropar måltjänsten direkt och hanterar omedelbart svaret.
-   * För asynkrona anrop anropas måltjänsten via tjänsten Jobbhanteraren, som placerar begäran i en kö. Jobbhanteraren anropar i sin tur provider.file_write_results_service för att hantera resultaten.
+   * För asynkrona anrop anropas måltjänsten via tjänsten Job Manager, som placerar begäran i en kö. Jobbhanteraren anropar i sin tur provider.file_write_results_service för att hantera resultaten.
 
 1. provider.file_write_results_service hanterar svaret eller felet för måltjänstens anrop. När det är klart sparas utdata i resultatmappen baserat på slutpunktskonfigurationen. provider.file_write_results_service bevarar också källan om slutpunkten är konfigurerad för att bevara resultaten när de har slutförts.
 
@@ -115,27 +115,27 @@ Så här anropar du en tjänst med bevakade mappar:
 
 Använd följande inställningar för att konfigurera en bevakad mappslutpunkt.
 
-**** Namn: (Obligatoriskt) Identifierar slutpunkten. Ta inte med ett &lt;-tecken eftersom det kortar av namnet som visas i arbetsytan. Om du anger en URL som namn på slutpunkten kontrollerar du att den överensstämmer med de syntaxregler som anges i RFC1738.
+**Namn:** (Obligatoriskt) Identifierar slutpunkten. Ta inte med ett &lt;-tecken eftersom det kortar av namnet som visas i arbetsytan. Om du anger en URL som namn på slutpunkten kontrollerar du att den överensstämmer med de syntaxregler som anges i RFC1738.
 
-**** Beskrivning: En beskrivning av slutpunkten. Ta inte med ett &lt;-tecken eftersom det kortar av beskrivningen som visas i Arbetsyta.
+**Beskrivning:** En beskrivning av slutpunkten. Ta inte med ett &lt;-tecken eftersom det kortar av beskrivningen som visas i Arbetsyta.
 
-**** Sökväg: (Obligatoriskt) Anger platsen för bevakad mapp. I en klustrad miljö måste den här inställningen peka på en delad nätverksmapp som är tillgänglig från alla datorer i klustret.
+**Sökväg:** (Obligatoriskt) Anger platsen för bevakad mapp. I en klustrad miljö måste den här inställningen peka på en delad nätverksmapp som är tillgänglig från alla datorer i klustret.
 
-**** Asynkron: Identifierar anropstypen som asynkron eller synkron. Standardvärdet är asynkront. Asynkron rekommenderas för långvariga processer, medan synkron rekommenderas för tillfälliga eller kortvariga processer.
+**Asynkron:** Identifierar anropstypen som asynkron eller synkron. Standardvärdet är asynkront. Asynkron rekommenderas för långvariga processer, medan synkron rekommenderas för tillfälliga eller kortvariga processer.
 
-**** Cron-uttryck: Ange ett cron-uttryck om den bevakade mappen måste schemaläggas med ett cron-uttryck. När den här inställningen är konfigurerad ignoreras upprepningsintervall.
+**Cron-uttryck:** Ange ett cron-uttryck om den bevakade mappen måste schemaläggas med ett cron-uttryck. När den här inställningen är konfigurerad ignoreras upprepningsintervall.
 
-**** Upprepa intervall: Intervallet i sekunder för inläsning av bevakad mapp. Om inte inställningen Gräns är aktiverad ska intervallet för upprepning vara längre än tiden för att bearbeta ett genomsnittligt jobb. annars kan systemet bli överbelastat. Standardvärdet är 5. Mer information finns i beskrivningen för Batchstorlek.
+**Upprepa intervall:** Intervallet i sekunder för inläsning av bevakad mapp. Om inte inställningen Gräns är aktiverad ska intervallet för upprepning vara längre än tiden för att bearbeta ett genomsnittligt jobb. annars kan systemet bli överbelastat. Standardvärdet är 5. Mer information finns i beskrivningen för Batchstorlek.
 
-**** Antal upprepningar: Antal gånger som den bevakade mappen genomsöker mappen eller katalogen. Värdet -1 anger obestämd skanning. Standardvärdet är -1.
+**Antal upprepningar:** Antal gånger som den bevakade mappen genomsöker mappen eller katalogen. Värdet -1 anger obestämd skanning. Standardvärdet är -1.
 
-**** Begränsning: När det här alternativet är markerat begränsas antalet bevakade mappjobb som AEM-formulär bearbetar vid en given tidpunkt. Det maximala antalet jobb bestäms av värdet för Batchstorlek. (Se Om begränsning.)
+**Begränsning:** När det här alternativet är markerat begränsas antalet bevakade mappjobb som AEM-formulär bearbetar vid en given tidpunkt. Det maximala antalet jobb bestäms av värdet för Batchstorlek. (Se Om begränsning.)
 
-**** Användarnamn: (Obligatoriskt) Det användarnamn som används när en måltjänst anropas från den bevakade mappen. Standardvärdet är SuperAdmin.
+**Användarnamn:** (Obligatoriskt) Det användarnamn som används när en måltjänst anropas från den bevakade mappen. Standardvärdet är SuperAdmin.
 
-**** Domännamn: (Obligatoriskt) Användarens domän. Standardvärdet är DefaultDom.
+**Domännamn:** (Obligatoriskt) Användarens domän. Standardvärdet är DefaultDom.
 
-**** Batchstorlek: Antalet filer eller mappar som ska hämtas per skanning. Används för att förhindra överbelastning av systemet. Om du läser in för många filer samtidigt kan det orsaka en krasch. Standardvärdet är 2.
+**Batchstorlek:** Antalet filer eller mappar som ska hämtas per skanning. Används för att förhindra överbelastning av systemet. Om du läser in för många filer samtidigt kan det orsaka en krasch. Standardvärdet är 2.
 
 Inställningarna Intervall för upprepning och Gruppstorlek avgör hur många filer i Bevakade mappar som tas upp vid varje sökning. Bevakad mapp använder en Quartz-trådpool för att skanna indatamappen. Trådpoolen delas med andra tjänster. Om skanningsintervallet är litet genomsöks indatamappen ofta av trådarna. Om filer ofta placeras i den bevakade mappen bör du hålla sökintervallet litet. Om filerna tas bort sällan bör du använda ett större inläsningsintervall så att de andra tjänsterna kan använda trådarna.
 
@@ -143,44 +143,44 @@ Om det finns en stor mängd filer som tas bort gör du gruppstorleken stor. Om t
 
 När filer släpps i den bevakade mappen visas filerna i indata, vilket kan försämra prestanda om skanningen sker varje sekund. Om du ökar skanningsintervallet kan prestandan förbättras. Om volymen för de filer som tas bort är liten justerar du batchstorleken och upprepningsintervallet därefter. Om till exempel 10 filer tas bort varje sekund, kan du försöka med att ange intervallet för upprepning till 1 sekund och gruppstorleken till 10.
 
-**** Väntetid: Tiden i millisekunder som du vill vänta innan du skannar en mapp eller fil efter att den har skapats. Om väntetiden till exempel är 3 600 000 millisekunder (en timme) och filen skapades för en minut sedan, kommer filen att hämtas efter 59 eller fler minuter. Standardvärdet är 0.
+**Väntetid:** Tiden i millisekunder som du vill vänta innan du skannar en mapp eller fil efter att den har skapats. Om väntetiden till exempel är 3 600 000 millisekunder (en timme) och filen skapades för en minut sedan, kommer filen att hämtas efter 59 eller fler minuter. Standardvärdet är 0.
 
 Den här inställningen är användbar för att säkerställa att en fil eller mapp kopieras helt till indatamappen. Om du till exempel har en stor fil att bearbeta och det tar tio minuter att hämta filen, ställer du in väntetiden på 10&amp;ast;60 &amp;ast;1000 millisekunder. Detta förhindrar att den bevakade mappen skannar filen om den inte är tio minuter gammal.
 
-******Uteslut filmönster: ett semikolon**; avgränsad lista över mönster som används i en bevakad mapp för att avgöra vilka filer och mappar som ska sökas igenom och hämtas. Filer och mappar med det här mönstret skannas inte för bearbetning.
+**Uteslut filmönster:** ett semikolon **;** avgränsad lista över mönster som används i en bevakad mapp för att avgöra vilka filer och mappar som ska sökas igenom och hämtas. Filer och mappar med det här mönstret skannas inte för bearbetning.
 
 Den här inställningen är användbar när indata är en mapp med flera filer. Innehållet i mappen kan kopieras till en mapp med ett namn som hämtas av den bevakade mappen. Detta förhindrar att den bevakade mappen hämtar en mapp för bearbetning innan mappen kopieras till indatamappen.
 
 Du kan använda filmönster för att exkludera:
 
 * Filer med specifika filnamnstillägg; t.ex. &amp;ast;.dat, &amp;ast;.xml, &amp;ast;.pdf.
-* Filer med särskilda namn; till exempel data. &amp;ast; utelämnar filer och mappar med namnen *data1*, *data2* och så vidare.
+* Filer med särskilda namn; till exempel data.&amp;ast; utelämnar filer och mappar med namnen *data1*, *data2* och så vidare.
 * Filer med sammansatta uttryck i namnet och tillägget, som i följande exempel:
 
-   * Data[0-9][0-9][0-9].[dD][aA][tT]
-   * &amp;ast;..[dD][Aa][Tt]
+   * Data[0-9][0-9][0-9].[dD][aA]&#39;port&#39;
+   * &amp;ast;..[dD][Aa]&#39;port&#39;
    * &amp;ast;..[xx][mm][Ll]
 
 Mer information om filmönster finns i [Om filmönster](configuring-watched-folder-endpoints.md#about-file-patterns).
 
-******Inkludera filmönster: (Obligatoriskt) Ett semikolon**. avgränsad lista med mönster som den bevakade mappen använder för att avgöra vilka mappar och filer som ska sökas igenom och hämtas. Om till exempel Inkludera filmönster är indata&amp;ast;, alla filer och mappar som matchar indata&amp;ast; plockas upp. Detta inkluderar filer och mappar med namnen input1, input2 och så vidare.
+**Inkludera filmönster:** (Obligatoriskt) Ett semikolon **.** avgränsad lista med mönster som den bevakade mappen använder för att avgöra vilka mappar och filer som ska sökas igenom och hämtas. Om till exempel Inkludera filmönster är indata&amp;ast;, alla filer och mappar som matchar indata&amp;ast; plockas upp. Detta inkluderar filer och mappar med namnen input1, input2 och så vidare.
 
 Standardvärdet är &amp;ast; och anger alla filer och mappar.
 
 Du kan använda filmönster för att inkludera:
 
 * Filer med specifika filnamnstillägg; t.ex. &amp;ast;.dat, &amp;ast;.xml, &amp;ast;.pdf.
-* Filer med särskilda namn; till exempel data. &amp;ast; innehåller filer och mappar med namnen *data1*, *data2* och så vidare.
+* Filer med särskilda namn; till exempel data.&amp;ast; innehåller filer och mappar med namnen *data1*, *data2* och så vidare.
 * Filer med sammansatta uttryck i namnet och tillägget, som i följande exempel:
 
-   * Data[0-9][0-9][0-9].[dD][aA][tT]
-   * &amp;ast;..[dD][Aa][Tt]
+   * Data[0-9][0-9][0-9].[dD][aA]&#39;port&#39;
+   * &amp;ast;..[dD][Aa]&#39;port&#39;
    * &amp;ast;..[xx][mm][Ll]
 
 Mer information om filmönster finns i [Om filmönster](configuring-watched-folder-endpoints.md#about-file-patterns).
 
 
-**** Resultatmapp: Mappen där de sparade resultaten lagras. Om resultaten inte visas i den här mappen kontrollerar du felmappen. Skrivskyddade filer bearbetas inte och sparas i felmappen. Värdet kan vara en absolut eller relativ sökväg med följande filmönster:
+**Resultatmapp:** Mappen där de sparade resultaten lagras. Om resultaten inte visas i den här mappen kontrollerar du felmappen. Skrivskyddade filer bearbetas inte och sparas i felmappen. Värdet kan vara en absolut eller relativ sökväg med följande filmönster:
 
 * %F = filnamnsprefix
 * %E = filnamnstillägg
@@ -203,31 +203,31 @@ Om sökvägen inte är absolut men relativ skapas mappen i den bevakade mappen. 
 
 ***Obs **: Ju mindre resultatmapparna är, desto bättre prestanda blir Bevakade mappar. Om den beräknade inläsningen för den bevakade mappen till exempel är 1 000 filer varje timme kan du testa ett mönster som`result/%Y%M%D%H`så att en ny undermapp skapas varje timme. Om inläsningen är mindre (till exempel 1 000 filer per dag) kan du använda ett mönster som`result/%Y%M%D`.*
 
-**** Bevara mapp: Den plats där filerna lagras efter att sökningen och hämtningen har slutförts. Sökvägen kan vara en absolut, relativ eller null-katalogsökväg. Du kan använda filmönster enligt beskrivningen för resultatmappen. Standardvärdet är preserve/%Y/%M/%D/.
+**Bevara mapp:** Den plats där filerna lagras efter att sökningen och hämtningen har slutförts. Sökvägen kan vara en absolut, relativ eller null-katalogsökväg. Du kan använda filmönster enligt beskrivningen för resultatmappen. Standardvärdet är preserve/%Y/%M/%D/.
 
-**** Felmapp: Mappen där felfiler sparas. Den här platsen är alltid relativ till den bevakade mappen. Du kan använda filmönster enligt beskrivningen för resultatmappen.
+**Felmapp:** Mappen där felfiler sparas. Den här platsen är alltid relativ till den bevakade mappen. Du kan använda filmönster enligt beskrivningen för resultatmappen.
 
 Skrivskyddade filer bearbetas inte och sparas i felmappen.
 
 Standardvärdet är fel/%Y/%M/%D/.
 
-**** Bevara vid fel: Bevara indatafiler om det inte går att utföra åtgärden på en tjänst. Standardvärdet är true.
+**Bevara vid fel:** Bevara indatafiler om det inte går att utföra åtgärden på en tjänst. Standardvärdet är true.
 
-**** Skriv över duplicerade filnamn: När värdet är True skrivs filerna i resultatmappen och i den bevarade mappen över. Om värdet är Falskt används filer och mappar med ett numeriskt indexsuffix för namnet. Standardvärdet är Falskt.
+**Skriv över duplicerade filnamn:** När värdet är True skrivs filerna i resultatmappen och i den bevarade mappen över. Om värdet är Falskt används filer och mappar med ett numeriskt indexsuffix för namnet. Standardvärdet är Falskt.
 
-**** Töm varaktighet: (Obligatoriskt) Filer och mappar i resultatmappen tas bort när de är äldre än det här värdet. Detta värde mäts i dagar. Den här inställningen är användbar för att säkerställa att resultatmappen inte blir full.
+**Töm varaktighet:** (Obligatoriskt) Filer och mappar i resultatmappen tas bort när de är äldre än det här värdet. Detta värde mäts i dagar. Den här inställningen är användbar för att säkerställa att resultatmappen inte blir full.
 
 Värdet -1 dagar anger att resultatmappen aldrig ska tas bort. Standardvärdet är -1.
 
-**** Åtgärdsnamn: (Obligatoriskt) En lista över åtgärder som kan tilldelas till den bevakade mappens slutpunkt.
+**Åtgärdsnamn:** (Obligatoriskt) En lista över åtgärder som kan tilldelas till den bevakade mappens slutpunkt.
 
-**** Mappningar av indataparameter: Används för att konfigurera de indata som krävs för att bearbeta tjänsten och åtgärden. Vilka inställningar som är tillgängliga beror på vilken tjänst som använder den bevakade mappens slutpunkt. Här är två typer av indata:
+**Mappningar av indataparameter:** Används för att konfigurera de indata som krävs för att bearbeta tjänsten och åtgärden. Vilka inställningar som är tillgängliga beror på vilken tjänst som använder den bevakade mappens slutpunkt. Här är två typer av indata:
 
-**** Literal: Den bevakade mappen använder det värde som anges i fältet när det visas. Alla grundläggande Java-typer stöds. Om ett API till exempel använder indata som String, long, int och Boolean, konverteras strängen till rätt typ och tjänsten anropas.
+**Literal:** Den bevakade mappen använder det värde som anges i fältet när det visas. Alla grundläggande Java-typer stöds. Om ett API till exempel använder indata som String, long, int och Boolean, konverteras strängen till rätt typ och tjänsten anropas.
 
-**** Variabel: Det angivna värdet är ett filmönster som används av den bevakade mappen för att välja indata. När det till exempel gäller tjänsten för krypterat lösenord, där indatadokumentet måste vara en PDF-fil, kan användaren använda &amp;ast;.pdf som filmönster. Den bevakade mappen hämtar alla filer i den bevakade mappen som matchar mönstret och anropar tjänsten för varje fil. När en variabel används konverteras alla indatafiler till dokument. Endast API:er som använder Document som indatatyp stöds.
+**Variabel:** Det angivna värdet är ett filmönster som används av den bevakade mappen för att välja indata. När det till exempel gäller tjänsten för krypterat lösenord, där indatadokumentet måste vara en PDF-fil, kan användaren använda &amp;ast;.pdf som filmönster. Den bevakade mappen hämtar alla filer i den bevakade mappen som matchar mönstret och anropar tjänsten för varje fil. När en variabel används konverteras alla indatafiler till dokument. Endast API:er som använder Document som indatatyp stöds.
 
-**** Mappningar av utdataparameter: Används för att konfigurera utdata för tjänsten och åtgärden. Vilka inställningar som är tillgängliga beror på vilken tjänst som använder den bevakade mappens slutpunkt.
+**Mappningar av utdataparameter:** Används för att konfigurera utdata för tjänsten och åtgärden. Vilka inställningar som är tillgängliga beror på vilken tjänst som använder den bevakade mappens slutpunkt.
 
 Bevakade mapputdata kan vara ett enstaka dokument, en lista med dokument eller en karta med dokument. Dessa utdatadokument sparas sedan i resultatmappen med det mönster som anges i Mappning av utdataparameter.
 
@@ -238,11 +238,11 @@ Bevakade mapputdata kan vara ett enstaka dokument, en lista med dokument eller e
 Administratörer kan ange vilken typ av fil som kan anropa en tjänst. Du kan skapa flera filmönster för varje bevakad mapp. Ett filmönster kan vara någon av följande filegenskaper:
 
 * Filer med filnamnstillägg; &amp;ast;.dat, &amp;ast;.xml, &amp;ast;.pdf,;
-* Filer med särskilda namn; till exempel data. &amp;ast;
+* Filer med särskilda namn; till exempel data.&amp;ast;
 * Filer med sammansatta uttryck i namnet och tillägget, som i följande exempel:
 
-   * Data[0-9][0-9][0-9].[dD][aA][tT]
-   * &amp;ast;..[dD][Aa][Tt]
+   * Data[0-9][0-9][0-9].[dD][aA]&#39;port&#39;
+   * &amp;ast;..[dD][Aa]&#39;port&#39;
    * &amp;ast;..[xx][mm][Ll]
 
 Administratören kan definiera filmönstret för utdatamappen där resultaten ska lagras. För utdatamappar (resultat, bevarande och fel) kan administratören ange något av följande filmönster:
@@ -333,9 +333,9 @@ När filer har flyttats till scenmappen skapas en anropsbegäran för varje fil 
 * Om servern kraschar innan Bevakad mapp kan skapa en anropsbegäran finns filerna i scenmappen kvar i scenmappen och återställs inte.
 * Om Bevakad mapp har skapat anropsbegäran för var och en av filerna i scenmappen och servern kraschar, finns det två beteenden baserade på anropstypen:
 
-**** Synkron: Om Bevakad mapp är konfigurerad att anropa tjänsten synkront förblir alla filer i scenmappen obearbetade i scenmappen.
+**Synkron:** Om Bevakad mapp är konfigurerad att anropa tjänsten synkront förblir alla filer i scenmappen obearbetade i scenmappen.
 
-**** Asynkron: I det här fallet är den bevakade mappen beroende av tjänsten Jobbhanteraren. Om tjänsten Jobbhanteraren anropar den bevakade mappen, flyttas filerna i scenmappen till mappen för bevarande eller fel baserat på resultatet av anropet. Om tjänsten Jobbhanteraren inte anropar den bevakade mappen kommer filerna inte att bearbetas i scenmappen. Detta inträffar när den bevakade mappen inte körs när jobbhanteraren anropar tillbaka.
+**Asynkron:** I det här fallet är den bevakade mappen beroende av tjänsten Jobbhanteraren. Om tjänsten Jobbhanteraren anropar den bevakade mappen, flyttas filerna i scenmappen till mappen för bevarande eller fel baserat på resultatet av anropet. Om tjänsten Jobbhanteraren inte anropar den bevakade mappen kommer filerna inte att bearbetas i scenmappen. Detta inträffar när den bevakade mappen inte körs när jobbhanteraren anropar tillbaka.
 
 ### Återställa obearbetade källfiler i scenmappen {#recovering-unprocessed-source-files-in-the-stage-folder}
 
@@ -368,7 +368,7 @@ Här följer några tips och råd när du konfigurerar slutpunkten för bevakad 
 * Om du har en bevakad mapp i Windows som bearbetar bildfiler anger du värden för alternativet Inkludera filmönster eller Uteslut filmönster för att förhindra att den automatiskt genererade Windows-filen Thumbs.db avsöks av den bevakade mappen.
 * Om ett cron-uttryck anges ignoreras det upprepade intervallet. Användningen av cron-uttryck baseras på Quartz-systemet för jobbschemaläggning med öppen källkod, version 1.4.0.
 * Batchstorleken är antalet filer eller mappar som hämtas vid varje sökning i den bevakade mappen. Om gruppstorleken är inställd på två och tio filer eller mappar släpps i den bevakade mappens indatamapp, hämtas endast två vid varje sökning. I nästa sökning, som sker efter den tidpunkt som anges i upprepningsintervallet, hämtas de två följande filerna.
-* För filmönster kan administratörer ange reguljära uttryck med stöd för jokerteckenmönster för att ange filmönster. Bevakad mapp ändrar det reguljära uttrycket så att det stöder mönster för jokertecken som &amp;ast;. &amp;ast; eller &amp;ast;.pdf. Dessa mönster med jokertecken stöds inte av reguljära uttryck.
+* För filmönster kan administratörer ange reguljära uttryck med stöd för jokerteckenmönster för att ange filmönster. Bevakad mapp ändrar det reguljära uttrycket så att det stöder mönster för jokertecken som &amp;ast;.&amp;ast; eller &amp;ast;.pdf. Dessa mönster med jokertecken stöds inte av reguljära uttryck.
 * Bevakad mapp söker igenom indatamappen efter indatamappen och vet inte om källfilen eller -mappen kopieras fullständigt till indatamappen innan den börjar bearbeta filen eller mappen. Så här ser du till att källfilen eller källmappen kopieras till indatamappen i den bevakade mappen innan filen eller mappen hämtas:
 
    * Använd väntetid, vilket är den tid i millisekunder som den bevakade mappen väntar från den senaste ändringstiden. Använd den här funktionen om du har stora filer att bearbeta. Om det t.ex. tar 10 minuter att hämta en fil anger du väntetiden som 10&amp;ast;60 &amp;ast;1 000 millisekunder. Detta förhindrar att övervakad mapp kan hämta filen om den inte är lika gammal som tio minuter.
@@ -383,11 +383,11 @@ Här följer några tips och råd när du konfigurerar slutpunkten för bevakad 
    * För `java.lang.String`: Administratören har två alternativ. Först kan administratören ange mappningstypen som `Literal` och ange ett mappningsvärde som en sträng, t.ex. `hello.` Bevakad mapp anropar tjänsten med strängen `hello`. För det andra kan administratören ange mappningstypen som en `Variable` och ange ett mappningsvärde med ett mönster som `*.txt`. I det senare fallet läses filer med tillägget .txt som ett dokument som tvingas som en sträng för att anropa tjänsten.
    * Java primitive type: Administratören kan ange mappningstypen som `Literal` och ange värdet. Bevakad mapp anropar tjänsten med det angivna värdet.
 
-* Bevakad mapp fungerar med dokument. De utdata som stöds är `com.adobe.idp.Document`, `org.w3c.Document`, `org.w3c.Node`samt en lista och karta över dessa typer. Andra typer resulterar i felutdata i felmappen.
+* Bevakad mapp fungerar med dokument. De utdata som stöds är `com.adobe.idp.Document`, `org.w3c.Document`, `org.w3c.Node`samt en lista och karta över dessa typer. Alla andra typer resulterar i felutdata i felmappen.
 * Om resultaten inte finns i resultatmappen kontrollerar du om ett fel har inträffat i felmappen.
-* Bevakade mappar fungerar bäst om de används i asynkront läge. I det här läget placerar Bevakad mapp anropsbegäran i kön och anropar igen. Kön bearbetas sedan asynkront. När alternativet Asynkron inte har angetts anropas måltjänsten synkront av Bevakade mappar och processmotorn väntar tills tjänsten har slutförts med begäran och resultaten har skapats. Om måltjänsten tar lång tid att behandla begäran kan timeoutfel uppstå i den bevakade mappen.
+* Bevakade mappar fungerar bäst om de används i asynkront läge. I det här läget placerar Bevakad mapp anropsbegäran i kön och anropar igen. Kön bearbetas sedan asynkront. När alternativet Asynkron inte har angetts anropas måltjänsten synkront av Bevakade mappar och processmotorn väntar tills tjänsten har slutförts med begäran och resultaten har skapats. Om måltjänsten tar lång tid att behandla begäran kan timeoutfel uppstå i övervakad mapp.
 * Om du skapar bevakade mappar för import- och exportåtgärder tillåts inte abstraktion av filnamnstillägg. När du anropar tjänsten för integrering av formulärdata med bevakade mappar kanske inte filnamnstilläggstypen för utdatafilen matchar det avsedda utdataformatet för dokumentobjekttypen. Om indatafilen till en bevakad mapp som anropar exportåtgärden till exempel är ett XFA-formulär som innehåller data, bör utdata vara en XDP-datafil. Om du vill få en utdatafil med rätt filnamnstillägg kan du ange den i mappningen av utdataparametrar. I det här exemplet kan du använda %F.xdp för att mappa utdataparametrar.
-* Bevakade mappar kan bearbeta indatafiler innan de kopieras helt till mappen. Fillåsning är inte obligatoriskt på UNIX som i Windows. När en fil kopieras till en bevakad mapp kan därför den bevakade mappen flytta filen till scenen utan att vänta på att filkopian ska slutföras. Detta beteende gör att endast en del av indatafilen bearbetas. Det finns för närvarande två tillfälliga lösningar:
+* Bevakade mappar kan bearbeta indatafiler innan de kopieras helt till mappen. Fillåsning är inte obligatoriskt på UNIX som i Windows. Det innebär att när en fil kopieras till en bevakad mapp kan övervakad mapp flytta filen till scenen utan att vänta på att filkopian ska slutföras. Detta beteende gör att endast en del av indatafilen bearbetas. Det finns för närvarande två tillfälliga lösningar:
 
    * Tillfällig lösning 1
 
