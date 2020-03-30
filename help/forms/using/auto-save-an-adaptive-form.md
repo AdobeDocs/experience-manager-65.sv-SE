@@ -8,7 +8,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: d519ac4e-6d29-4a69-874e-792acabe87ff
 translation-type: tm+mt
-source-git-commit: 3eaace94bc0499aaebfcd389d4dc97b97c7d9160
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -31,8 +31,8 @@ Alternativet för att spara automatiskt är inte aktiverat i ett anpassat formul
 1. I rutan **[!UICONTROL Adaptiv formulärhändelse]** anger du 1 eller TRUE för att automatiskt börja spara formuläret när formuläret läses in i webbläsaren. Du kan också ange ett villkorsuttryck för en händelse som när den aktiveras och returnerar true börjar spara formulärets innehåll.
 1. Ange utlösaren. Automatiskt sparande aktiveras baserat på din konfiguration. Dina alternativ är:
 
-   * **** Tidsbaserad: Välj alternativet för att börja spara innehållet baserat på ett visst tidsintervall.
-   * **** Händelsebaserad: Välj alternativet för att börja spara innehållet baserat på när en händelse utlöses.
+   * **[!UICONTROL Tidsbaserad:]** Välj alternativet för att börja spara innehållet baserat på ett visst tidsintervall.
+   * **[!UICONTROL Händelsebaserad:]** Välj alternativet för att börja spara innehållet baserat på när en händelse utlöses.
    När du väljer en utlösare aktiveras rutan Strategisk konfiguration. I rutan Strategisk konfiguration kan du:
 
    * Ange ett tidsintervall om du väljer **[!UICONTROL Tidsbaserad]** utlösare.
@@ -53,7 +53,7 @@ Alternativet för att spara automatiskt är inte aktiverat i ett anpassat formul
    >
    >För att alternativet Spara automatiskt ska fungera för anonyma användare måste du konfigurera Forms Common Configuration Service så att alla användare kan förhandsgranska, verifiera och signera formulär.
    >
-   >Om du vill konfigurera tjänsten går du till AEM Web Console-konfigurationen på `https://[server]:[host]/system/console/configMgr` och redigerar **[!UICONTROL Forms Common Configuration Service]** , väljer alternativet **[!UICONTROL Alla användare]** i fältet **[!UICONTROL Tillåt]** och sparar konfigurationen.
+   >Om du vill konfigurera tjänsten går du till AEM Web Console-konfigurationen på `https://server:port/system/console/configMgr` och redigerar **[!UICONTROL Forms Common Configuration Service]** , väljer alternativet **[!UICONTROL Alla användare]** i fältet **[!UICONTROL Tillåt]** och sparar konfigurationen.
 
 ## Implementera en anpassad strategi för att aktivera automatiskt sparande för anpassningsbara formulär {#implement-a-custom-strategy-to-enable-autosave-for-adaptive-forms}
 
