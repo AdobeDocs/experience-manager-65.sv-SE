@@ -10,7 +10,7 @@ topic-tags: hTML5_forms
 discoiquuid: bd9bf095-d74d-458c-afe7-fab04050849d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 19299fb5fc764d0e71c0ea3a5ec2286183dd6861
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -27,7 +27,7 @@ Ett befintligt HTML-program kan utnyttja API:t för FormBridge för att interage
 
 1. **Välj en profil eller skapa en profil**
 
-   1. I CRX DE-gränssnittet går du till: `https://[server]:[port]/crx/de`.
+   1. I CRX DE-gränssnittet går du till: `https://'[server]:[port]'/crx/de`.
    1. Logga in med administratörsautentiseringsuppgifter.
    1. Skapa en profil eller välj en befintlig profil.
 
