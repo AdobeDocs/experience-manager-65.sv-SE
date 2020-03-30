@@ -10,7 +10,7 @@ topic-tags: develop
 discoiquuid: 1cb54c8a-9322-4b5a-b5a7-0eef342cee54
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3eaace94bc0499aaebfcd389d4dc97b97c7d9160
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -94,7 +94,7 @@ Innan du använder den här artikeln för att skapa testfall måste du känna ti
 
 Följande exempel visar hur du skapar en testsvit för att testa flera adaptiva formulär. Du måste skapa ett separat testfall för varje formulär som du behöver testa. Genom att följa de här stegen och ändra JavaScript-koden i steg 11 kan du skapa en egen testsvit för att testa dina adaptiva formulär.
 
-1. Gå till CRXDE Lite i webbläsaren: `https://[server]:[port]/crx/de`.
+1. Gå till CRXDE Lite i webbläsaren: `https://'[server]:[port]'/crx/de`.
 1. Högerklicka på undermappen /etc/clientlibs och klicka på **Skapa** > **Skapa nod**. Ange ett namn (här afTestRegistration), ange typen av nod som cq:ClientLibraryFolder och klicka på **OK.**
 
    Mappen clientlibs innehåller registreringsaspekten för programmet (JS och Init). Vi rekommenderar att du registrerar alla Hobbes testsvitsobjekt som är specifika för ett formulär i mappen clientlibs.
@@ -109,7 +109,7 @@ Följande exempel visar hur du skapar en testsvit för att testa flera adaptiva 
    <td>Värde</td>
   </tr>
   <tr>
-   <td><p> kategorier</p> </td>
+   <td><p>kategorier</p> </td>
    <td><p>Sträng[]</p> </td>
    <td><p>granite.testing.hobbes.tests, granite.testing.calvin.tests</p> </td>
   </tr>
@@ -123,7 +123,7 @@ Följande exempel visar hur du skapar en testsvit för att testa flera adaptiva 
 
 >[!NOTE]
 >
->clientlib-filen granite.testing.calvin.af innehåller alla API:er för adaptiva formulär. Dessa API:er ingår i calvin-namnutrymmet.
+>Klientlib-filen granite.testing.calvin.af innehåller alla API:er för adaptiva formulär. Dessa API:er ingår i calvin-namnutrymmet.
 
 ![1_aftestregistration](assets/1_aftestregistration.png)
 
@@ -164,7 +164,7 @@ Följande exempel visar hur du skapar en testsvit för att testa flera adaptiva 
 
    | **Egenskap** | **Typ** | **Värde** |
    |---|---|---|
-   |  kategorier | Sträng[] | granite.testing.hobbes.tests, granite.testing.hobbes.tests.testForm |
+   | kategorier | Sträng[] | granite.testing.hobbes.tests, granite.testing.hobbes.tests.testForm |
    | beroenden | Sträng[] | granite.testing.calvin.tests |
 
    >[!NOTE]
