@@ -8,7 +8,7 @@ topic-tags: installing
 discoiquuid: 225f2bc1-6842-4c79-a66d-8024a29325c0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 94472fad34fe97740e4711d2cb35beb884db52ce
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -43,7 +43,7 @@ Innan du börjar installera och konfigurera funktioner för interaktiv kommunika
 * En AEM-instans körs. I AEM-terminologi är &quot;instance&quot; en kopia av AEM som körs på en server i författar- eller publiceringsläge. Du behöver minst en AEM-instans (Författare eller Bearbetning) för att köra AEM Forms-interaktiva funktioner för kommunikation och korrespondenshantering:
 
    * **Författare**: En AEM-instans som används för att skapa, överföra och redigera innehåll och för att administrera webbplatsen. När innehållet är klart att publiceras replikeras det till publiceringsinstansen.
-   * **** Bearbetar: En bearbetningsinstans är en instans av en [AEM Author](/help/forms/using/hardening-securing-aem-forms-environment.md) . Du kan ställa in en Author-instans och göra den oskarp efter att du har utfört installationen.
+   * **Bearbetar:** En bearbetningsinstans är en instans av en [AEM Author](/help/forms/using/hardening-securing-aem-forms-environment.md) . Du kan ställa in en Author-instans och göra den oskarp efter att du har utfört installationen.
 
    * **Publicera**: En AEM-instans som skickar det publicerade innehållet till allmänheten via Internet eller ett internt nätverk.
 
@@ -128,7 +128,7 @@ Utför följande steg på alla författare- och publiceringsinstanser för att s
 
 Utför följande steg på alla Author- och Publish-instanser för att vitlista paketet:
 
-1. Öppna AEM Configuration Manager i ett webbläsarfönster. Standardwebbadressen är https://[server]:[port]/system/console/configMgr.
+1. Öppna AEM Configuration Manager i ett webbläsarfönster. Standardwebbadressen är https://&#39;[server]:[port]&#39;/system/console/configMgr.
 1. Sök efter och öppna **Brandväggskonfiguration** för deserialisering.
 1. Lägg till paketet **sun.util.calendar** i **vitlistefältet** . Klicka på Spara.
 1. Upprepa steg 1-3 för alla författare- och publiceringsinstanser.
@@ -160,7 +160,7 @@ Dispatcher är ett verktyg för cachelagring och lastbalansering för AEM. AEM D
 
 1. Konfigurera tjänsten för refererarfilter:
 
-   Logga in som administratör i konfigurationshanteraren för Apache Felix. Konfigurationshanterarens standardwebbadress är https://[server]:[port_number]/system/console/configMgr. På menyn **Konfigurationer** väljer du alternativet **Apache Sling Reference Filter** . I fältet Tillåt värdar anger du värdnamnet för dispatchern så att den kan användas som referent och klickar på **Spara**. Posten har formatet https://[server]:[port].
+   Logga in som administratör i konfigurationshanteraren för Apache Felix. Konfigurationshanterarens standard-URL är https://&#39;server&#39;:[port_number]/system/console/configMgr. På menyn **Konfigurationer** väljer du alternativet **Apache Sling Reference Filter** . I fältet Tillåt värdar anger du värdnamnet för dispatchern så att den kan användas som referent och klickar på **Spara**. Posten har formatet https://&#39;[server]:[port]&#39;.
 
 #### Integrera Adobe Target {#integrate-adobe-target}
 
