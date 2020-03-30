@@ -9,7 +9,7 @@ content-type: reference
 topic-tags: correspondence-management
 discoiquuid: afeb9f4d-3feb-4a0e-8884-e3ec1309b33b
 translation-type: tm+mt
-source-git-commit: 5120bbdefea528ad6d07a9c99df565555b6a8444
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -30,7 +30,7 @@ Correspondence Management tillhandahåller brevmallar i AEM Forms-paketet [AEM-F
 
 När du har installerat paketet visas layoutmallarna (XDP) i mappen templates på följande plats:
 
-`https://[server]:[port]/[context-root]/aem/forms.html/content/dam/formsanddocuments/templates-folder`
+`https://'[server]:[port]'/[context-root]/aem/forms.html/content/dam/formsanddocuments/templates-folder`
 
 Följande är de gemensamma fälten i alla mallar i det här paketet:
 
