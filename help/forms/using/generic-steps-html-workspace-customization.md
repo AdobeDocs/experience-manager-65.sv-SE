@@ -11,7 +11,7 @@ topic-tags: forms-workspace
 discoiquuid: dd3218c4-2bb2-40fc-9141-5823b0ea4224
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 21623c615ebe69226cfaf84baf4cfb1717b449f4
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -20,7 +20,7 @@ source-git-commit: 21623c615ebe69226cfaf84baf4cfb1717b449f4
 
 De allmänna stegen för att utföra anpassningar är:
 
-1. Logga in på CRXDE Lite med åtkomst `https://[server]:[port]/lc/crx/de/index.jsp`.
+1. Logga in på CRXDE Lite med åtkomst `https://'[server]:[port]'/lc/crx/de/index.jsp`.
 1. Skapa en mapp med namnet `ws`at `/apps`om den inte finns. Klicka på **[!UICONTROL Spara alla]**.
 1. Bläddra till `/apps/ws`och navigera till fliken **[!UICONTROL Åtkomstkontroll]** .
 1. Klicka **[!UICONTROL +]** i listan **[!UICONTROL Åtkomstkontroll]** för att lägga till en ny post. Klicka **[!UICONTROL +]** igen.
@@ -97,6 +97,6 @@ De allmänna stegen för att utföra anpassningar är:
 
 1. Klicka på **[!UICONTROL Spara alla]**, rensa cache och uppdatera arbetsytan i AEM Forms.
 
-   Gå till URL:en `https://[server]:[port]/lc/ws` och logga in med administratörs-/lösenordsinformation. Webbläsaren dirigeras om till `https://[server]:[port]/lc/apps/ws/index.html`.
+   Gå till URL:en `https://'[server]:[port]'/lc/ws` och logga in med administratörs-/lösenordsinformation. Webbläsaren dirigeras om till `https://'[server]:[port]'/lc/apps/ws/index.html`.
 
 [Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
