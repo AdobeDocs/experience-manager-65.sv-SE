@@ -10,7 +10,7 @@ topic-tags: integrations
 discoiquuid: 3690fa80-6332-4df8-afea-77b5490fe0d1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 33f73225fbb2c48353c1f34db3339c0bb79d4236
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -49,20 +49,20 @@ När en användare interagerar med formuläret registreras interaktionerna och s
 
 Följ de här stegen för att visa analysrapporter:
 
-1. Logga in på AEM-portalen på `https://[hostname]:[port]`
+1. Logga in på AEM-portalen på `https://[hostname]:'port'`
 1. Klicka på **Formulär > Formulär och dokument**.
 1. Välj det formulär som du vill visa analysrapporterna för.
 1. Välj **Mer > Analysrapporter**.
 
 ![analytikerrapport](assets/analyticsreport.png)
 
-**** S. Analysrapport, kommando
+**S.** Analysrapport, kommando
 
 AEM Forms visar analysrapporter för formuläret och för varje panel i formuläret, enligt nedan.
 
 ![Sammanfattningsrapport för ett anpassat formulär](assets/analyticsdashboard_callout.png)
 
-************ S. Konvertering **B. Sammanfattning på formulärnivå** C.**Sammanfattning på panelnivå** D. Webbläsare för besökare - filter **E. Operativsystem för besökare - filter** F. Besökarnas språk - filter
+**S.** Konvertering **B.** Sammanfattning på formulärnivå **C.** Sammanfattning på panelnivå **D.** Webbläsare för besökare - filter **E.** Operativsystem för besökare - filter **F.** Besökarnas språk - filter
 
 Som standard visas analysrapporten för de senaste sju dagarna. Du kan visa rapporter för de senaste 15 dagarna, den senaste månaden och så vidare, eller ange ett datumintervall.
 
