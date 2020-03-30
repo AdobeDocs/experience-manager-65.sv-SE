@@ -8,7 +8,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 43c431e4-5286-4f4e-b94f-5a7451c4a22c
 translation-type: tm+mt
-source-git-commit: dbfadb0b49c83c38aa2cb55c32517ad70bbd79d0
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -170,7 +170,7 @@ Du kan förifylla anpassningsbara formulärfält med data som hämtats från bac
 
 * För adaptiva formulär baserade på formulärdatamodell tillhandahåller AEM Forms en färdig tjänst för förifyllnad av formulärdatamodell. förifyllningstjänsten söker efter datakällor för datamodellobjekt i det adaptiva formuläret och fyller i fältvärden i förväg när formuläret återges.
 * Du kan också använda de adaptiva formulären för förifyllnad av filer, krökningar, tjänster och http-protokoll.
-* AEM Forms har stöd för anpassade förifyllningstjänster som du kan ansluta som en OSGi-tjänst för att förifylla adaptiva formulär.
+* AEM Forms stöder anpassade förifyllningstjänster som du kan ansluta som en OSGi-tjänst för att förifylla adaptiva formulär.
 
 Mer information finns i [Förifyll adaptiva formulärfält](/help/forms/using/prepopulate-adaptive-form-fields.md).
 
@@ -243,7 +243,7 @@ Nedan beskrivs några tips om hur du översätter anpassningsbara formulär:
 * Ändringar som att lägga till en ny komponent eller använda ett skript i ett lokaliserat formulär lokaliseras inte automatiskt. Därför måste du slutföra ett formulär innan du lokaliserar det för att undvika flera lokaliseringscykler.
 * Använd parametern request `afAcceptLang` för att åsidosätta webbläsarens språkområde och återge formuläret i det angivna språkområdet. Följande URL kommer till exempel att tvinga formuläret att återges på japanska, oavsett vilket språk som anges i webbläsarinställningen:
 
-   `https://[server]:[port]/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
+   `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 
 * AEM Forms har för närvarande stöd för lokalisering av innehåll i adaptiva formulär på engelska (en), spanska (es), franska (fr), italienska (it), tyska (de), japanska (ja), portugisiska (Brasilien), kinesiska (zh-CN), kinesiska (zh-TW) och koreanska (ko-KR). Du kan dock lägga till stöd för nya språk för adaptiva formulär vid körning. Mer information finns i [Stöd för nya språk för lokalisering](/help/forms/using/supporting-new-language-localization.md)av adaptiva formulär.
 
