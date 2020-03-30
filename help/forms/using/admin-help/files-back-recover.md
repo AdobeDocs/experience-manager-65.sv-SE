@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 6f9a294d-24bd-4e4b-b929-2809f5e6cef9
 translation-type: tm+mt
-source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -22,12 +22,12 @@ De program- och datafiler som måste säkerhetskopieras beskrivs mer ingående i
 Tänk på följande när det gäller säkerhetskopiering och återställning:
 
 * Databasen bör säkerhetskopieras före GDS- och AEM-databasen.
-* Om du behöver ta ned noderna i en klustrad klustermiljö för säkerhetskopiering kontrollerar du att slavnoderna är avstängda före huvudnoden. Annars kan det leda till inkonsekvens i klustret eller servern. Dessutom bör huvudnoden göras live före en slavnod.
+* Om du behöver ta ned noderna i en klustrad klustermiljö för säkerhetskopiering kontrollerar du att slavnoderna är avstängda före huvudnoden. Annars kan det leda till inkonsekvens i klustret eller servern. Dessutom bör huvudnoden göras live före en slave-nod.
 * För återställningsåtgärden i ett kluster bör programservern stoppas för varje nod i klustret.
 
 ## Katalog för global dokumentlagring {#global-document-storage-directory}
 
-GDS är en katalog som används för att lagra långlivade filer som används i en process. Långvariga filer är avsedda att omfatta en eller flera lanseringar av ett AEM-formulärsystem och kan sträcka sig över flera dagar och till och med år. Dessa långa filer kan innehålla PDF-filer, profiler och formulärmallar. Långvariga filer är en viktig del av det övergripande tillståndet för många AEM-formulärdistributioner. Om vissa eller alla långlivade dokument förloras eller skadas kan formulärservern bli instabil.
+GDS är en katalog som används för att lagra långlivade filer som används i en process. Långvariga filer är avsedda att omfatta en eller flera lanseringar av ett AEM-formulärsystem och kan omfatta flera dagar och till och med år. Dessa långa filer kan innehålla PDF-filer, profiler och formulärmallar. Långvariga filer är en viktig del av det övergripande tillståndet för många AEM-formulärdistributioner. Om vissa eller alla långlivade dokument förloras eller skadas kan formulärservern bli instabil.
 
 Indatadokument för asynkrona jobbanrop lagras också i GDS och måste vara tillgängliga för bearbetning av begäranden. Därför är det viktigt att du ser tillförlitligheten i det filsystem som är värd för GDS och använder en redundant uppsättning av oberoende diskar (RAID) eller annan teknik som passar för dina krav på kvalitet och servicenivå.
 
@@ -37,9 +37,9 @@ Platsen för GDS bestäms under installationen av AEM-formulär eller senare med
 
 Om du lämnar platsinställningen tom under installationen blir platsen som standard en katalog under programserverinstallationen. Du måste säkerhetskopiera följande katalog för programservern:
 
-* (JBoss) `[appserver root]/server/[server]/svcnative/DocumentStorage`
-* (WebLogic) `[appserverdomain]/[server]/adobe/AEMformsserver/DocumentStorage`
-* (WebSphere) `[appserver root]/installedApps/adobe/[server]/DocumentStorage`
+* (JBoss) `[appserver root]/server/'server'/svcnative/DocumentStorage`
+* (WebLogic) `[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage`
+* (WebSphere) `[appserver root]/installedApps/adobe/'server'/DocumentStorage`
 
 Om du har ändrat GDS-platsen till en annan plats än standardplatsen kan du bestämma den på följande sätt:
 
@@ -54,11 +54,11 @@ GDS-platserna kan ändras under en återställning om den ursprungliga platsen i
 
 Du kan aktivera dokumentlagring för AEM-formulär i AEM-formulärdatabasen med administrationskonsolen. Även om det här alternativet behåller alla beständiga dokument i databasen, kräver AEM-formulär fortfarande den filsystembaserade GDS-katalogen eftersom den används för att lagra permanenta och tillfälliga filer och resurser relaterade till sessioner och anrop av AEM-formulär.
 
-När du väljer alternativet Aktivera dokumentlagring i databasen i Core System Settings i administrationskonsolen eller med Configuration Manager, tillåter inte AEM-formulär läge för säkerhetskopiering av ögonblicksbilder och rullande säkerhetskopieringsläge. Därför behöver du inte hantera säkerhetskopieringslägen med AEM-formulär. Om du använder det här alternativet bör du endast säkerhetskopiera GDS en gång efter att du har aktiverat alternativet. När du återställer AEM-formulär från en säkerhetskopia behöver du inte byta namn på säkerhetskopieringskatalogen för GDS eller återställa GDS.
+När du väljer alternativet &quot;Aktivera dokumentlagring i databasen&quot; i Core System Settings i administrationskonsolen eller med Configuration Manager, tillåter inte AEM-formulär att ögonblicksbilder säkerhetskopieras och rullande säkerhetskopieringsläge. Därför behöver du inte hantera säkerhetskopieringslägen med AEM-formulär. Om du använder det här alternativet bör du endast säkerhetskopiera GDS en gång efter att du har aktiverat alternativet. När du återställer AEM-formulär från en säkerhetskopia behöver du inte byta namn på säkerhetskopieringskatalogen för GDS eller återställa GDS.
 
 ## AEM-databas {#aem-repository}
 
-AEM-databasen (crx-database) skapas om crx-databasen konfigureras när AEM-formulär installeras. Platsen för katalogen i crx-databasen bestäms under installationen av AEM-formulär. Säkerhetskopiering och återställning av AEM-databas krävs tillsammans med databas och GDS för enhetliga AEM-formulärdata i AEM-formulär. AEM-databasen innehåller data för Correspondence Management Solution, Forms Manager och AEM Forms Workspace.
+AEM-databasen (crx-database) skapas om crx-databasen konfigureras när AEM-formulär installeras. Platsen för katalogen för crx-databasen bestäms under installationen av AEM-formulär. Säkerhetskopiering och återställning av AEM-databas krävs tillsammans med databas och GDS för enhetliga AEM-formulärdata i AEM-formulär. AEM-databasen innehåller data för Correspondence Management Solution, Forms Manager och AEM Forms Workspace.
 
 ### Correspondence Management Solution {#correspondence-management-solution}
 
@@ -113,11 +113,11 @@ Mer information om säkerhetskopiering och återställning av DB2-databaser finn
 
 Använd säkerhetskopiering av ögonblicksbilder eller konfigurera Oracle-databasen så att den körs i arkivloggläge. (Se [Oracle Backup: En introduktion](https://www.databasedesign-resource.com/oracle-backup.md).) Mer information om hur du säkerhetskopierar och återställer Oracle-databasen finns på följande platser:
 
-[](https://www.oracle.com/technetwork/database/features/availability/br-overview-097160.html) Säkerhetskopiering och återställning i Oracle: Beskriver koncepten för säkerhetskopiering och återställning och de vanligaste teknikerna för användning av Recovery Manager (RMAN) för säkerhetskopiering, återställning och rapportering, samt ger mer information om hur du planerar en strategi för säkerhetskopiering och återställning.
+[Säkerhetskopiering och återställning i Oracle:](https://www.oracle.com/technetwork/database/features/availability/br-overview-097160.html) Beskriver koncepten för säkerhetskopiering och återställning och de vanligaste teknikerna för användning av Recovery Manager (RMAN) för säkerhetskopiering, återställning och rapportering, samt ger mer information om hur du planerar en strategi för säkerhetskopiering och återställning.
 
-[](https://download.oracle.com/docs/cd/E11882_01/backup.112/e10642.pdf) Användarhandbok för säkerhetskopiering och återställning av Oracle-databas: Innehåller detaljerad information om RMAN-arkitektur, koncept och mekanismer för säkerhetskopiering och återställning, avancerade återställningstekniker som återställning vid tidpunkt och funktioner för databasflashback samt prestandajustering för säkerhetskopiering och återställning. Det omfattar även användarhanterad säkerhetskopiering och återställning med användarens operativsystem istället för RMAN. Den här volymen är väsentlig för säkerhetskopiering och återställning av mer avancerade databasdistributioner och för avancerade återställningsscenarier.
+[Användarhandbok för säkerhetskopiering och återställning av Oracle-databas:](https://download.oracle.com/docs/cd/E11882_01/backup.112/e10642.pdf) Innehåller detaljerad information om RMAN-arkitektur, koncept och mekanismer för säkerhetskopiering och återställning, avancerade återställningstekniker som återställning vid tidpunkt och funktioner för databasflashback samt prestandajustering för säkerhetskopiering och återställning. Det omfattar även användarhanterad säkerhetskopiering och återställning med användarens operativsystem istället för RMAN. Den här volymen är väsentlig för säkerhetskopiering och återställning av mer avancerade databasdistributioner och för avancerade återställningsscenarier.
 
-[](https://download.oracle.com/docs/cd/E11882_01/backup.112/e10643.pdf) Referens för säkerhetskopiering och återställning av Oracle-databas: Innehåller fullständig information om syntax och semantik för alla RMAN-kommandon och beskriver de databasvyer som är tillgängliga för rapportering av säkerhetskopierings- och återställningsaktiviteter.
+[Referens för säkerhetskopiering och återställning av Oracle-databas:](https://download.oracle.com/docs/cd/E11882_01/backup.112/e10643.pdf) Innehåller fullständig information om syntax och semantik för alla RMAN-kommandon och beskriver de databasvyer som är tillgängliga för rapportering av säkerhetskopierings- och återställningsaktiviteter.
 
 ### SQL Server {#sql-server}
 
@@ -134,7 +134,7 @@ Se [Strategier](https://articles.techrepublic.com.com/5100-1035_61-1043671.md)f�
 
 Använd MySQLAdmin eller ändra INI-filerna i Windows för att konfigurera MySQL-databasen så att den körs i binärt loggläge. (Se [Binär loggning](https://dev.mysql.com/doc/refman/5.1/en/binary-log.html)för MySQL.) Ett verktyg för säkerhetskopiering av MySQL är också tillgängligt från InnoBase. (Se [Innobase Hot Backup](https://www.innodb.com/hot-backup/features.md).)
 
-**Obs**: Standardläget *för binär loggning för MySQL är &quot;Statement&quot;, vilket är inkompatibelt med tabeller som används av Content Services (utgått). Om du använder binär loggning i det här standardläget misslyckas Content Services (Borttagen). Om ditt system innehåller innehållstjänster (borttaget) använder du loggningsläget Blandat.*Om du vill aktivera&quot;blandad&quot; loggning lägger du till följande argument i filen my.ini:
+**Obs**: Standardläget *för binär loggning för MySQL är &quot;Statement&quot;, vilket är inkompatibelt med tabeller som används av Content Services (utgått). Om du använder binär loggning i det här standardläget misslyckas Content Services (Borttagen). Om ditt system innehåller innehållstjänster (borttaget) använder du loggningsläget Blandat. Om du vill aktivera&quot;blandad&quot; loggning lägger du till följande argument i filen my.ini:*
 `binlog_format=mixed log-bin=logname`
 
 Du kan använda verktyget mysqldump för att få en fullständig säkerhetskopiering av databasen. Fullständig säkerhetskopiering krävs, men är inte alltid lämplig. De producerar stora säkerhetskopior och tar tid att generera. Om du vill göra en stegvis säkerhetskopiering måste du starta servern med alternativet - `log-bin` enligt beskrivningen i föregående avsnitt. Varje gång MySQL-servern startas om slutar den skriva till den aktuella binära loggen, skapar en ny och från och med då blir den nya den aktuella. Du kan tvinga en växel manuellt med `FLUSH LOGS SQL` kommandot. Efter den första fullständiga säkerhetskopieringen utförs efterföljande stegvisa säkerhetskopieringar med hjälp av verktyget mysqladmin med `flush-logs` kommandot, som skapar nästa loggfil.
@@ -172,9 +172,9 @@ Om katalogen /backup-lucene-indexes inte finns säkerhetskopierar du katalogen /
 
 När du installerar innehållstjänster (borttagna) i en klustrad miljö delas rotkatalogen för innehållslagring upp i två separata kataloger:
 
-**** Rotkatalog för innehållslagring: Vanligtvis är en delad nätverkskatalog som är läsbar/skrivskyddad för alla noder i klustret
+**Rotkatalog för innehållslagring:** Vanligtvis är en delad nätverkskatalog som är läsbar/skrivskyddad för alla noder i klustret
 
-**** Indexrotkatalog: En katalog som skapas på varje nod i klustret och som alltid har samma sökväg och katalognamn
+**Indexrotkatalog:** En katalog som skapas på varje nod i klustret och som alltid har samma sökväg och katalognamn
 
 Standardplatsen för rotkatalogen för innehållslagring är `[GDS root]/lccs_data`, där `[GDS root]` är platsen som beskrivs i [GDS-platsen](files-back-recover.md#gds-location). Säkerhetskopiera följande kataloger i rotkatalogen för innehållslagring:
 
@@ -192,7 +192,7 @@ Standardplatsen för indexrotkatalogen finns `[aem-forms root]/lucene-indexes` p
 
 ## Kundinstallerade teckensnitt {#customer-installed-fonts}
 
-Om du har installerat ytterligare teckensnitt i AEM-formulärmiljön måste du säkerhetskopiera dem separat. Säkerhetskopiera alla teckensnittskataloger från Adobe och kunder som anges i administrationskonsolen under Inställningar > Kärnsystem > Konfigurationer. Se till att du säkerhetskopierar hela teckensnittskatalogen.
+Om du har installerat ytterligare teckensnitt i AEM-formulärmiljön måste du säkerhetskopiera dem separat. Säkerhetskopiera alla Adobe- och kundkataloger som anges i administrationskonsolen under Inställningar > Kärnsystem > Konfigurationer. Se till att du säkerhetskopierar hela teckensnittskatalogen.
 
 >[!NOTE]
 >
