@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0d5436c6-1976-496c-b9a7-7dc6e830bb5d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e3f32b526d8a619b8bacfc85e7dce4a7bf5d23a7
+source-git-commit: e4d84b5c6f7d2bfcac942b0b685a8f1fd11274f0
 
 ---
 
@@ -107,9 +107,9 @@ Correspondence Management Solution har stöd för två typer av dynamiska dataob
 
    ![textbakgrundsfärglägga](assets/textbackgroundcolorapplied.png)
 
-   Du kan antingen trycka direkt på grundfärgen **[A]** på paletten Grundfärger eller på **Välj** när du har använt reglaget **[B]** för att välja rätt färgton.
+   Du kan antingen trycka direkt på en grundfärg `**[A]**` som finns på paletten Grundfärger eller på **Välj** efter `**[B]**` att du har använt reglaget för att välja rätt färgton.
 
-   Du kan också gå till fliken Avancerat och välja lämplig nyans, ljushet och mättnad **[C]** för att skapa den exakta färgen och sedan trycka på Välj **[D]** för att använda färgen för att markera texten.
+   Du kan också gå till fliken Avancerat och välja lämplig nyans, ljushet och mättnad `**[C]**` för att skapa en exakt färg och sedan trycka på Välj `**[D]**` för att markera texten.
 
    ![textbakgrundsfärg-1](assets/textbackgroundcolor-1.png)
 
@@ -313,7 +313,7 @@ Med Villkorsredigeraren kan du ange ett standardvillkor. Om värdet för kontrol
 1. Om du vill lägga till en resurs i villkoret markerar du den på sidan Välj resurser och trycker på **Klar**. Resurserna läggs till i rutan Uttryck.
 1. Du kan välja följande alternativ för att ange hur villkoret fungerar under körning:
 
-   * **Inaktivera utvärdering av flera resultat\Aktivera utvärdering** av flera resultat: När det här alternativet är aktiverat (visas som&quot;Aktivera flera..&quot;) utvärderas alla villkor och resultatet är summan av alla verkliga villkor. Om det här alternativet är inaktiverat (visas som&quot;Inaktivera flera..&quot;) utvärderas endast det första villkoret som är sant och blir villkorets utdata.
+   * **Inaktivera utvärdering av flera resultat\Aktivera utvärdering** av flera resultat: När det här alternativet är aktiverat (visas som&quot;Aktivera flera..&quot;) utvärderas alla villkor och resultatet är summan av alla verkliga villkor. Om det här alternativet är inaktiverat (visas som&quot;Inaktivera flera..&quot;) utvärderas endast det första villkoret som är sant och blir resultatet av villkoret.
    * **Sidbrytning**: Välj det här alternativet ( ![break](assets/break.png)) om du vill lägga till en sidbrytning mellan villkorens moduler. Om det här alternativet inte är markerat ( ![ingen brytning](assets/nobreak.png)) flyttas hela villkoret till nästa sida, i stället för att brytas i sidan mellan villkoret, om ett villkor flödar över till nästa sida.
 
 1. Om du vill ändra ordningen på resurserna i villkoret trycker du på och håller ned pilikonen ( ![dra](assets/dragndrop.png) ) och drar. När användaren öppnar en brevmall i användargränssnittet Skapa korrespondens, monteras innehållet i den ordning som du definierade här.
