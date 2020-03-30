@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 2878b145-e6c0-48d3-810c-3540de13c826
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -33,9 +33,9 @@ Om du vill logga in som administratör måste du ha administratörsrollen tillde
 
 Om du vill logga in på webbsidorna med en webbläsare behöver du dokumentets säkerhets-URL och ett konto. URL:en för användare skiljer sig från URL:en för administratörer. Administratörer kan även logga in på användarsidorna för att skapa profiler.
 
-Om du har tillgång till mer än en installation av dokumentsäkerhet behöver du URL:en för den instans av dokumentsäkerhet som du vill komma åt. Kontakta administratören om du inte har den här informationen. Standardwebbadressen för användarsidorna är https://*[host]*:*[port]*/edc. Portnumret kanske inte krävs i vissa fall. Be administratören om mer information.
+Om du har tillgång till mer än en installation av dokumentsäkerhet behöver du URL:en för den instans av dokumentsäkerhet som du vill komma åt. Kontakta administratören om du inte har den här informationen. Standardwebbadressen för användarsidorna är `https://[host]:[port]/edc`. Portnumret kanske inte krävs i vissa fall. Be administratören om mer information.
 
-Standardwebbadressen för administratörer är https://*[host]*:*[port]*/adminui.
+Standardwebbadressen för administratörer är `https://[host]:[port]/adminui`.
 
 För administratörer skapas ett superadministratörskonto som standard under installationen. Du kan använda det här kontot för att logga in när dokumentsäkerhet först installeras.
 
@@ -45,9 +45,9 @@ För administratörer skapas ett superadministratörskonto som standard under in
 
 1. Skriv URL-adressen i webbläsaren:
 
-   Dokumentets säkerhets-URL: `https://`*[värddatorns ]*`:`*[port]*`/edc`
+   Dokumentets säkerhets-URL: `https://[host]:[port]/edc`
 
-   eller URL för administrationskonsolen: `https://`*[värddatorns ]*`:`*[port]*`/adminui`
+   eller URL för administrationskonsolen: `https://[host]:[port]/adminui`
 
 1. Skriv ditt användarnamn och lösenord i inloggningsfönstret och klicka på OK.
 1. I administrationskonsolen klickar du på Tjänster > Dokumentsäkerhet.
