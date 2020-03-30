@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 1254a7c2-2c67-4661-803e-afd53e817916
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -18,12 +18,12 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 Standardinstallationen och inställningarna för AEM Forms tillåter endast att en AEM Forms-arbetsyta är tillgänglig på servern. Du kan dock behöva placera två olika instanser av arbetsytan i AEM Forms på en enda AEM Forms-server. De två instanserna är tillgängliga via olika URL:er.
 
-AEM Forms-administratörer anpassar arbetsytan för att skapa två olika URL:er och gör två arbetsytor tillgängliga på samma server. I den här artikeln antar vi att de två arbetsytorna är tillgängliga både `https://[server]:[port]/lc/ws` och `https://[server]:[port]:/lc/ws2`.
+AEM Forms-administratörer anpassar arbetsytan för att skapa två olika URL:er och gör två arbetsytor tillgängliga på samma server. I den här artikeln antar vi att de två arbetsytorna är tillgängliga både `https://'[server]:[port]'/lc/ws` och `https://'[server]:[port]':/lc/ws2`.
 
 Följ de här stegen för att konfigurera arbetsytan i AEM Forms.
 
 1. Installera utvecklarpaketet för AEM Forms-arbetsytan på servern. Se [dev-paketet](/help/forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)för instruktioner om hur du skapar det.
-1. Logga in på CRXDE Lite som administratör via `https://[server]:[port]/lc/crx/de/index.jsp`.
+1. Logga in på CRXDE Lite som administratör via `https://'[server]:[port]'/lc/crx/de/index.jsp`.
 1. Kopiera nod på /content och klistra in på /content. Byt namn på noden till ws2. Klicka på **[!UICONTROL Spara alla]**. Ändra värdet på `sling:resourceType` till ws2 i den här nodens egenskaper. Klicka på **[!UICONTROL Spara alla]**.
 
 1. Kopiera mapp från /libs och klistra in på /apps. Byt namn på mappen till ws2. Klicka på **[!UICONTROL Spara alla]**.
