@@ -8,7 +8,7 @@ products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: Configuration
 discoiquuid: 6b31397a-fb06-4043-9368-59fb4fce8afa
 translation-type: tm+mt
-source-git-commit: 5120bbdefea528ad6d07a9c99df565555b6a8444
+source-git-commit: f323b490c37effc3cbb36c793b62fa788eca9545
 
 ---
 
@@ -38,7 +38,7 @@ Innan du börjar konfigurera och konfigurera Dynamics 365 måste du se till att 
 
 1. Gå till följande sida på författarinstansen:
 
-   https://[server]:[port]/editor.html/content/we-finance/global/en/loan-landing-page.html
+   `https://[server]:[port]/editor.html/content/we-finance/global/en/loan-landing-page.html`
 
 1. Bläddra nedåt till Hemmedarbetarkalkylatorn.
 1. Markera den högra kolumnens panel (räknare) och tryck för att visa snabbmenyn. Tryck på Konfigurera på snabbmenyn. Dialogrutan Redigera AEM Forms Container visas.
@@ -62,7 +62,7 @@ Innan du börjar konfigurera och konfigurera Dynamics 365 måste du se till att 
 
    1. Hämta paketet från:
 
-      `https://[server]:[port]/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/AEMFormsFSIRefsite_1_0.zip`
+      `https://'[server]:[port]'/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/AEMFormsFSIRefsite_1_0.zip`
 
    1. Importera lösningspaketet till Microsoft® Dynamics-instansen. Gå till **Inställningar** > **Lösningar** i din Microsoft® Dynamics-instans och tryck sedan på **Importera**.
 
@@ -70,7 +70,7 @@ Innan du börjar konfigurera och konfigurera Dynamics 365 måste du se till att 
 
    1. Hämta paketet från:
 
-      `https://[server]:[port]/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/Sarah%20Rose%20Contact.csv`
+      `https://'[server]:[port]'/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/Sarah%20Rose%20Contact.csv`
 
    1. Importera paketet till din Microsoft® Dynamics-instans. I din Microsoft® Dynamics-instans går du till **Försäljning** > **Kontakter** och trycker sedan på **Importera data**.
 
