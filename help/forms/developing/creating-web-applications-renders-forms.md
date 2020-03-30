@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: f29b089e-8902-4744-81c5-15ee41ba8069
 translation-type: tm+mt
-source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -140,7 +140,7 @@ Normalt placerar du inte klientkod i en Java-servlets `doGet` eller `doPost` met
 Så här återger du ett formulär baserat på fragment med hjälp av API:t för Forms-tjänsten:
 
 1. Inkludera JAR-klientfiler, t.ex. adobe-forms-client.jar, i Java-projektets klassökväg. Mer information om var dessa filer finns i [Inkludera Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)för AEM Forms.
-1. Hämta värdet för den alternativknapp som skickas från HTML-formuläret och ange om amerikansk eller kanadensisk information ska användas. Om du skickar in en amerikansk fil skapar du en `com.adobe.idp.Document` som lagrar data som finns i *Purchase Order US.xml*. Om du har en kanadensisk version skapar du en `com.adobe.idp.Document` som lagrar data som finns i filen *Purchase Order Canada.xml* .
+1. Hämta värdet för den alternativknapp som skickas från HTML-formuläret och ange om amerikansk eller kanadensisk information ska användas. Om du skickar in en amerikansk fil skapar du en `com.adobe.idp.Document` som lagrar data som finns i *Purchase Order US.xml*. På samma sätt kan du om du använder Kanada skapa en `com.adobe.idp.Document` som lagrar data som finns i filen *Purchase Order Canada.xml* .
 1. Skapa ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper. (Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
 1. Skapa ett `FormsServiceClient` objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory` objektet.
 1. Skapa ett `URLSpec` objekt som lagrar URI-värden med hjälp av dess konstruktor.
@@ -219,7 +219,7 @@ Följande kodexempel representerar den Java-server som anropar Forms-tjänsten o
          try{
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -258,9 +258,9 @@ Följande kodexempel representerar den Java-server som anropar Forms-tjänsten o
              //Specify URI values that are required to render a form
              //design based on fragments
              URLSpec uriValues = new URLSpec();
-             uriValues.setApplicationWebRoot("https://[server]:[port]/RenderFormFragment");
+             uriValues.setApplicationWebRoot("https://'[server]:[port]'/RenderFormFragment");
              uriValues.setContentRootURI("repository:///");
-             uriValues.setTargetURL("https://[server]:[port]/FormsServiceClientApp/HandleData");
+             uriValues.setTargetURL("https://'[server]:[port]'/FormsServiceClientApp/HandleData");
  
              //Invoke the renderPDFForm method and write the
              //results to a client web browser
@@ -336,7 +336,7 @@ Följande HTML-kod finns i filen index.html som skapades under installationen av
  </head>
  
  <body>
- <form name="myform" action="https://[server]:[port]/FragmentsWebApplication/RenderFormFragment" method="post">
+ <form name="myform" action="https://'[server]:[port]'/FragmentsWebApplication/RenderFormFragment" method="post">
       <table>
       <tr>
         <th>Forms Fragment Web Client</th>
@@ -369,7 +369,7 @@ Följande HTML-kod finns i filen index.html som skapades under installationen av
 
 ### Paketera webbprogrammet {#packaging-the-web-application}
 
-Om du vill distribuera den Java-server som anropar Forms-tjänsten paketerar du webbprogrammet i en WAR-fil. Kontrollera att externa JAR-filer som komponentens affärslogik är beroende av, t.ex. adobe-livecycle-client.jar och adobe-forms-client.jar, också ingår i WAR-filen.
+Om du vill distribuera den Java-server som anropar Forms-tjänsten paketerar du webbprogrammet i en WAR-fil. Se till att externa JAR-filer som komponentens affärslogik är beroende av, t.ex. adobe-livecycle-client.jar och adobe-forms-client.jar, också inkluderas i WAR-filen.
 
 **Så här paketerar du ett webbprogram till en WAR-fil:**
 
