@@ -9,7 +9,7 @@ topic-tags: author
 discoiquuid: 34e6d1bc-4eca-42dc-9ae5-9a2107fbefce
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 19299fb5fc764d0e71c0ea3a5ec2286183dd6861
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -28,8 +28,8 @@ Utför följande konfigurationer om du vill att Designer ska kunna generera HTML
 
 ### Konfigurera autentiseringstjänsten för Apache Sling {#configure-apache-sling-authentication-service}
 
-1. Gå till `https://[server]:[port]/system/console/configMgr` AEM Forms som körs på OSGi eller
-   `https://[server]:[port]/lc/system/console/configMgr` på AEM Forms som körs på JEE.
+1. Gå till `https://'[server]:[port]'/system/console/configMgr` AEM Forms som körs på OSGi eller
+   `https://'[server]:[port]'/lc/system/console/configMgr` på AEM Forms som körs på JEE.
 1. Leta reda på och klicka på konfigurationen för **Apache Sling Authentication Service** för att öppna den i redigeringsläge.
 
 1. Beroende på om du kör AEM Forms på OSGi eller JEE lägger du till följande i fältet **Autentiseringskrav** :
@@ -55,8 +55,8 @@ Som standard är [skyddat läge](../../forms/using/get-xdp-pdf-documents-aem.md)
 
 1. Logga in på AEM Web Console som administratör.
 
-   * URL för AEM Forms på OSGi är `https://[server]:[port]/system/console/configMgr`
-   * URL för AEM Forms på JEE är `https://[server]:[port]/lc/system/console/configMgr`
+   * URL för AEM Forms på OSGi är `https://'[server]:[port]'/system/console/configMgr`
+   * URL för AEM Forms på JEE är `https://'[server]:[port]'/lc/system/console/configMgr`
 
 1. Öppna **[!UICONTROL Mobile Forms Configurations]** för redigering.
 1. Avmarkera alternativet **[!UICONTROL Skyddat läge]** och klicka på **[!UICONTROL Spara]**.
@@ -69,16 +69,16 @@ Som standard är [skyddat läge](../../forms/using/get-xdp-pdf-documents-aem.md)
    * **Server-URL**: URL till AEM Forms-server.
 
    * **HTTP-portnummer**: AEM-serverport. Standardvärdet är 4502.
-   * **** HTML-förhandsgranskningskontext: Sökväg till profilen för återgivning av XFA-formulär. Följande standardprofiler används för att förhandsgranska formuläret i Designer. Du kan också ange sökvägen till en anpassad profil.
+   * **HTML-förhandsgranskningskontext:** Sökväg till profilen för återgivning av XFA-formulär. Följande standardprofiler används för att förhandsgranska formuläret i Designer. Du kan också ange sökvägen till en anpassad profil.
 
       * `/content/xfaforms/profiles/default.html` (AEM Forms on OSGi)
 
       * `/lc/content/xfaforms/profiles/default.html` (AEM Forms on JEE)
-   * **** Forms Manager-kontext: Kontextsökväg som Forms Manager-gränssnittet distribueras till. Standardvärdena är:
+   * **Forms Manager-kontext:** Kontextsökväg som Forms Manager-gränssnittet distribueras till. Standardvärdena är:
 
       * `/aem/forms` (AEM Forms on OSGi)
       * `/lc/forms` (AEM Forms on JEE)
-   **** Obs! Kontrollera att AEM Forms-servern körs. The HTML preview connects to the CRX server to *generate* a preview.
+   **Obs!** Kontrollera att AEM Forms-servern körs. The HTML preview connects to the CRX server to *generate* a preview.
 
    ![Alternativ för AEM Forms Designer ](assets/server_options.png)
 
