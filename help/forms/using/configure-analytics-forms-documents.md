@@ -10,7 +10,7 @@ topic-tags: integrations
 discoiquuid: 96a77980-4213-4779-a540-00905ea8f7e3
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -164,7 +164,7 @@ Ett Adobe Analytics-ramverk är en uppsättning mappningar mellan Adobe Analytic
 
    * **Synkkron** för analysrapport: Ange cron-uttryck för att hämta rapporter från Adobe Analytics. Standardvärdet är 0 0 2 ? * *.
 
-   * **** Tidsgräns för hämtning av rapport: Ange hur länge (i sekunder) som servern ska svara på analysrapporten. Standardtiden är 120 sekunder.
+   * **Tidsgräns för hämtning av rapport:** Ange hur länge (i sekunder) som servern ska svara på analysrapporten. Standardtiden är 120 sekunder.
    >[!NOTE]
    >
    >Det kan ta upp till 10 sekunder till att tidsgränsen för hämtning av rapporter överskrids och det angivna antalet sekunder.
@@ -175,14 +175,14 @@ Nu kan ni aktivera analyser för formulär och generera en analysrapport.
 
 ## Aktivera analys för ett formulär eller dokument {#enabling-analytics-for-a-form-or-document}
 
-1. Logga in på AEM-portalen på `https://[hostname]:[port]`.
+1. Logga in på AEM-portalen på `https://[hostname]:'port'`.
 1. Klicka på **Formulär > Formulär och dokument**, markera ett formulär eller dokument och klicka på **Aktivera analys**. Analysen är aktiverad.
 
    ![Aktivera analys för ett formulär eller dokument](assets/enable-analytics-1.png)
 
    Aktivera analys för ett formulär
 
-   ******S. Aktivera knappen Analytics (Analyser)** B. Markerat formulär
+   **S.** Aktivera knappen Analytics (Analyser) **B.** Markerat formulär
 
    Mer information om hur du visar analysrapporter för formulär finns i [Visa och förstå analysrapporter för AEM Forms](../../forms/using/view-understand-aem-forms-analytics-reports.md)
 
