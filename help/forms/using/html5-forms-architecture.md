@@ -11,7 +11,7 @@ topic-tags: hTML5_forms
 discoiquuid: a644978e-5736-4771-918a-dfefe350a4a1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 19299fb5fc764d0e71c0ea3a5ec2286183dd6861
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -77,7 +77,7 @@ Den här komponenten ansvarar också för att generera data-XML från det inskic
 
 #### Cachekomponent {#cache-component}
 
-HTML5-formulär använder cachelagring för att optimera dataflöde och svarstid. Du kan konfigurera cachetjänstens nivå för att finjustera avvägningen mellan prestanda och utrymmesanvändning.
+HTML5-formulär använder cachelagring för att optimera dataflödet och svarstiden. Du kan konfigurera cachetjänstens nivå för att finjustera avvägningen mellan prestanda och utrymmesanvändning.
 
 <table>
  <tbody>
@@ -94,7 +94,7 @@ HTML5-formulär använder cachelagring för att optimera dataflöde och svarstid
    <td>Cachelagra endast mellanliggande artefakter som genereras före återgivningen av formuläret, som en mall som innehåller textbundna fragment och bilder</td>
   </tr>
   <tr>
-   <td> Aggressiv</td>
+   <td>Aggressiv</td>
    <td>Cachelagra återgivet HTML-innehåll<br /> Cachelagra alla artefakter som cachelagrats på den konservativa nivån.<br /> <strong>Obs</strong>: Den här strategin ger bästa prestanda men kräver mer minne för att lagra cachelagrade artefakter.</td>
   </tr>
  </tbody>
@@ -110,7 +110,7 @@ HTML5-formulär utför cachelagring i minnet med LRU-strategi. Om cachestrategin
 
 Med konfigurationstjänsten kan du justera konfigurationsparametrar och cacheinställningar för HTML5-formulär.
 
-Om du vill uppdatera de här inställningarna går du till CQ Felix Admin Console (finns på https://&lt;[server]:[port]/system/console/configMgr), söker efter och väljer Konfigurera mobilformulär.
+Om du vill uppdatera de här inställningarna går du till CQ Felix Admin Console (finns på https://&lt;&#39;[server]:[port]&#39;/system/console/configMgr), söker efter och väljer Konfigurera mobilformulär.
 
 Du kan konfigurera cachestorleken eller inaktivera cacheminnet med hjälp av konfigurationstjänsten. Du kan även aktivera felsökning med parametern Felsökningsalternativ. Mer information om felsökning av formulär finns i [Felsöka HTML5-formulär](/help/forms/using/debug.md).
 
