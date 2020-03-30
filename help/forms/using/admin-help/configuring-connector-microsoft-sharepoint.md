@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/connecting_to_a_content_management_system
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0ec881c9-8dcc-4847-9edf-24d9e6c4a7ea
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -22,13 +22,13 @@ Koppling för Microsoft SharePoint möjliggör kommunikation mellan AEM-formulä
 1. I administrationskonsolen klickar du på Tjänster > Koppling för Microsoft SharePoint.
 1. Ange följande inställningar för SharePoint-servern:
 
-   **** Värdnamn för SharePoint-server: Webbprogrammets värdnamnsportnummer på SharePoint-servern i formatet `[hostname]:[port]`.
+   **Värdnamn för SharePoint-server:** Webbprogrammets värdnamnsportnummer på SharePoint-servern i formatet `[hostname]:'port'`.
 
-   **** Användarnamn: Användarkontot som används för att ansluta till SharePoint-servern.
+   **Användarnamn:** Användarkontot som används för att ansluta till SharePoint-servern.
 
-   **** Lösenord: Lösenord för användarkontot som används för att ansluta till SharePoint-servern
+   **Lösenord:** Lösenord för användarkontot som används för att ansluta till SharePoint-servern
 
-   **** Domännamn: Domän där SharePoint-servern finns.
+   **Domännamn:** Domän där SharePoint-servern finns.
 
 1. Klicka på Spara.
 
