@@ -7,7 +7,7 @@ uuid: 908806a9-b0d4-42d3-9fe4-3eae44cf4326
 topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 translation-type: tm+mt
-source-git-commit: a7ef7682df1dc627565f1cc30047ed775d2dbd13
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -554,7 +554,7 @@ Om du vill använda AES 256-kryptering för PDF-filer hämtar och installerar du
 
 Assembler-tjänsten är beroende av Reader Extensions-tjänsten, signaturtjänsten, Forms-tjänsten och Output-tjänsten. Utför följande steg för att verifiera att de tjänster som krävs är igång:
 
-1. Logga in på URL `https://[server]:[port]/system/console/bundles` som administratör.
+1. Logga in på URL `https://'[server]:[port]'/system/console/bundles` som administratör.
 1. Sök i följande tjänst och kontrollera att tjänsterna körs:
 
 <table> 
