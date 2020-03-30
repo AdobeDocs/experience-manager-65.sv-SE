@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 73e63493-e821-443f-b50d-10797360f5d1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3eaace94bc0499aaebfcd389d4dc97b97c7d9160
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -41,7 +41,7 @@ I följande diagram visas hela proceduren för att skapa, köra och övervaka et
 ## Innan du startar {#before-you-start}
 
 * Ett arbetsflöde är en representation av en affärsprocess i verkligheten. Håll er verkliga affärsprocess och lista över deltagarna i affärsprocessen klar. Ha också materialet (adaptiva formulär, PDF-dokument med mera) färdigt innan du börjar skapa ett arbetsflöde.
-*  Ett arbetsflöde kan ha flera steg. De här stegen visas i AEM Inbox och hjälper till att rapportera arbetsflödets förlopp. Dela upp affärsprocessen i logiska steg.
+* Ett arbetsflöde kan ha flera steg. De här stegen visas i AEM Inbox och hjälper till att rapportera arbetsflödets förlopp. Dela upp affärsprocessen i logiska steg.
 * Du kan konfigurera tilldelningssteget i AEM-arbetsflöden för att skicka e-postmeddelanden till användare eller tilldelade användare. Aktivera [e-postmeddelanden](#configure-email-service).
 * Ett arbetsflöde kan även använda Adobe Sign för digitala signaturer. Om du tänker använda Adobe Sign i ett arbetsflöde, [konfigurerar du Adobe Sign för AEM Forms](../../forms/using/adobe-sign-integration-adaptive-forms.md) innan du använder det i ett arbetsflöde.
 
@@ -65,7 +65,7 @@ I exemplet skapas en arbetsflödesmodell för en låneansökan som ska fyllas av
 
 [Hämta fil](assets/example-mortgage-loan-application.zip)
 
-1. Öppna konsolen Arbetsflödesmodeller. Standardwebbadressen är https://[Server]:[port]/libs/cq/workflow/admin/console/content/models.html/etc/workflow/models
+1. Öppna konsolen Arbetsflödesmodeller. Standardwebbadressen är https://&#39;[server]:[port]&#39;/libs/cq/workflow/admin/console/content/models.html/etc/workflow/models
 1. Välj **Skapa** och sedan **Skapa modell**. Dialogrutan Lägg till arbetsflödesmodell visas.
 1. Ange **Titel** och **Namn** (valfritt). Till exempel en låneansökan. Tryck på **Klar**.
 1. Välj den nya arbetsflödesmodellen och tryck på **Redigera**. Nu kan du lägga till arbetsflödessteg för att skapa affärslogik. När du först skapar en arbetsflödesmodell innehåller den:
@@ -73,13 +73,13 @@ I exemplet skapas en arbetsflödesmodell för en låneansökan som ska fyllas av
    * Stegen: Flödesstart och Flödesslut. De här stegen representerar början och slutet av arbetsflödet. Dessa steg är obligatoriska och kan inte redigeras eller tas bort.
    * Ett exempel på deltagarsteg som heter Steg 1. Det här steget är konfigurerat för att tilldela en arbetsuppgift till administratörsanvändaren. Ta bort det här steget.
 
-1. Aktivera e-postmeddelanden. Du kan konfigurera ett formulärorienterat arbetsflöde i OSGi för att skicka e-postmeddelanden till användare eller tilldelade användare. Gör följande konfigurationer för att aktivera e-postmeddelanden:
+1. Aktivera e-postmeddelanden. Du kan konfigurera formulärcentrerade arbetsflöden i OSGi för att skicka e-postmeddelanden till användare eller tilldelade användare. Gör följande konfigurationer för att aktivera e-postmeddelanden:
 
-   1. Gå till konfigurationshanteraren för AEM på https://[server]:[port]/system/console/configMgr.
+   1. Gå till konfigurationshanteraren för AEM på https://&#39;[server]:[port]&#39;/system/console/configMgr.
    1. Öppna konfigurationen för **[!UICONTROL daglig CQ Mail Service]** . Ange ett värde för **[!UICONTROL SMTP-serverns värdnamn]**, **** SMTP-serverport och adressfälten **** &quot;Från&quot;. Click **[!UICONTROL Save]**.
    1. Öppna **[!UICONTROL Dag CQ Link Externalizer]** -konfigurationen. I fältet **[!UICONTROL Domäner]** anger du den faktiska värdnamnet/IP-adressen och portnumret för lokala instanser, författare och publiceringsinstanser. Click **[!UICONTROL Save]**.
 
-1. Skapa arbetsflödesfaser.  Ett arbetsflöde kan ha flera steg. Dessa steg visas i AEM Inbox och rapporterar förloppet för arbetsflödet.
+1. Skapa arbetsflödesfaser. Ett arbetsflöde kan ha flera steg. Dessa steg visas i AEM Inbox och rapporterar förloppet för arbetsflödet.
 
    Om du vill definiera en scen trycker du på ikonen ![informationscirkel](assets/info-circle.png) för att öppna arbetsflödesmodellens egenskaper, öppnar fliken **Steg** , lägger till faser för arbetsflödesmodellen och trycker på **Spara och stäng**. I exemplet med låneansökan skapar du faser: låneansökan, låneanspråksstatus, signerade dokument och signerade lånedokument.
 
@@ -107,7 +107,7 @@ I exemplet skapas en arbetsflödesmodell för en låneansökan som ska fyllas av
 
    ![ELLER Dela exempel](assets/orsplit_branch1_active_new.png)
 
-   **Routningsuttryck för gren 1**
+   **Routningsuttryck för gren 2**
 
    När en användare trycker på **Avvisa** i AEM Inbox aktiveras gren 2.
 
@@ -265,7 +265,7 @@ Du kan associera och köra ett formulärcentrerat arbetsflöde i OSGi när du sk
 
 Du kan använda stegen Tilldela uppgift och Skicka e-post i AEM-arbetsflöden för att skicka ett e-postmeddelande. Utför följande steg för att ange e-postservrar och andra konfigurationer som krävs för att skicka e-post:
 
-1. Gå till konfigurationshanteraren för AEM på https://[server]:[port]/system/console/configMgr.
+1. Gå till konfigurationshanteraren för AEM på https://&#39;[server]:[port]&#39;/system/console/configMgr.
 1. Öppna konfigurationen för **[!UICONTROL daglig CQ Mail Service]** . Ange ett värde för **[!UICONTROL SMTP-serverns värdnamn]**, **** SMTP-serverport och adressfälten **** &quot;Från&quot;. Click **[!UICONTROL Save]**.
 1. Öppna **[!UICONTROL Dag CQ Link Externalizer]** -konfigurationen. I fältet **[!UICONTROL Domäner]** anger du den faktiska värdnamnet/IP-adressen och portnumret för lokala instanser, författare och publiceringsinstanser. Click **[!UICONTROL Save]**.
 
