@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 698990a2-dd3f-480f-9d15-d87563860297
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -23,7 +23,7 @@ AEM Forms-arbetsytan är enkel inloggning aktiverad. Om en användare har loggat
 
 Sessionstimeout för en användare kan konfigureras i administrationskonsolen.
 
-Om du vill ange tidsgränsen loggar du in `https://[server]:[port]/adminui`på, går till **Inställningar > Användarhantering > Konfiguration > Konfigurera avancerade systemattribut** och gör önskade inställningar.
+Om du vill ange tidsgränsen loggar du in `https://'[server]:[port]'/adminui`på, går till **Inställningar > Användarhantering > Konfiguration > Konfigurera avancerade systemattribut** och gör önskade inställningar.
 
 I AEM Forms-arbetsytan hanteras timeout som:
 
