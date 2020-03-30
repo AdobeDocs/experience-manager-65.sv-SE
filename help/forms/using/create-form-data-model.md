@@ -9,20 +9,20 @@ products: SG_EXPERIENCEMANAGER/6.3/FORMS
 discoiquuid: 12e6c325-ace0-4a57-8ed4-6f7ceee23099
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70350add185b932ee604e190aabaf972ff994ba2
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
-# Självstudiekurs:Skapa formulärdatamodell {#tutorial-create-form-data-model}
+# Självstudiekurs: Skapa formulärdatamodell {#tutorial-create-form-data-model}
 
 ![04-create-form-data-model-main](assets/04-create-form-data-model-main.png)
 
-Den här självstudiekursen är ett steg i serien [Create Your First Adaptive Form](../../forms/using/create-your-first-adaptive-form.md) . Vi rekommenderar att du följer serien i kronologisk ordning för att förstå, utföra och demonstrera det fullständiga exemplet på självstudiekurser.
+Den här självstudiekursen är ett steg i serien [Create Your First Adaptive Form](../../forms/using/create-your-first-adaptive-form.md) . Vi rekommenderar att du följer serien i kronologisk ordning för att förstå, utföra och demonstrera det fullständiga självstudiekurserna.
 
 ## Om självstudiekursen {#about-the-tutorial}
 
-Med dataintegreringsmodulen för AEM Forms kan du skapa en formulärdatamodell från olika backend-datakällor, till exempel AEM-användarprofil, RESTful web services, SOAP-baserade webbtjänster, OData services och relationsdatabaser. Du kan konfigurera datamodellsobjekt och datatjänster i en formulärdatamodell och koppla den till ett anpassat formulär. Anpassningsbara formulärfält är bundna till objektegenskaper för datamodell. Med tjänsterna kan du förifylla det anpassningsbara formuläret och skriva skickade formulärdata tillbaka till datamodellobjektet.
+Med dataintegreringsmodulen för AEM Forms kan du skapa en formulärdatamodell från olika backend-datakällor, till exempel AEM-användarprofil, RESTful web services, SOAP-baserade webbtjänster, OData services och relationsdatabaser. Du kan konfigurera datamodellsobjekt och datatjänster i en formulärdatamodell och koppla den till ett anpassat formulär. Anpassningsbara formulärfält är bundna till objektegenskaper för datamodell. Med tjänsterna kan du förifylla det adaptiva formuläret och skriva skickade formulärdata tillbaka till datamodellobjektet.
 
 Mer information om integrering av formulärdata och formulärdatamodell finns i [AEM Forms-dataintegrering](../../forms/using/data-integration.md).
 
@@ -37,7 +37,7 @@ Formulärdatamodellen ser ut ungefär så här:
 
 ![form-data-model_l](assets/form-data-model_l.png)
 
-**********S. Konfigurerade datakällor** B. Datakällscheman **C.** Tillgängliga tjänster **D. Datamodellsobjekt** E. Konfigurerade tjänster
+**S.** Konfigurerade datakällor **B.** Datakällscheman **C.** Tillgängliga tjänster **D.** Datamodellsobjekt **E.** Konfigurerade tjänster
 
 ## Förutsättningar {#prerequisites}
 
@@ -67,22 +67,22 @@ Gör följande för att konfigurera MySQL-databasen:
    1. Leta reda på konfigurationen **för poolad DataSource** för Apache Sling-anslutningen. Tryck för att öppna konfigurationen i redigeringsläge.
    1. Ange följande information i konfigurationsdialogrutan:
 
-      * **** Datakällans namn: Du kan ange vilket namn som helst. Ange till exempel **WeRetailMySQL**.
+      * **Datakällans namn:** Du kan ange vilket namn som helst. Ange till exempel **WeRetailMySQL**.
       * **Egenskapsnamn** för DataSource-tjänst: Ange namnet på den tjänsteegenskap som innehåller DataSource-namnet. Den anges när datakällinstansen registreras som OSGi-tjänst. Exempel: **datasource.name**.
       * **JDBC-drivrutinsklass**: Ange Java-klassnamnet för JDBC-drivrutinen. För MySQL-databasen anger du **com.mysql.jdbc.Driver**.
-      * **JDBC-anslutnings-URI**: Ange anslutnings-URL för databasen. För MySQL-databaser som körs på port 3306 och schema werail är URL:en: `jdbc:mysql://[server]:3306/weretail?autoReconnect=true&useUnicode=true&characterEncoding=utf-8`
-      * **** Användarnamn: Användarnamn för databasen. Det krävs för att JDBC-drivrutinen ska kunna upprätta en anslutning till databasen.
-      * **** Lösenord: Lösenord för databasen. Det krävs för att JDBC-drivrutinen ska kunna upprätta en anslutning till databasen.
-      * **** Test on Borgo: Aktivera alternativet **Testa vid köp** .
-      * **** Test vid retur: Aktivera alternativet **Test on Return** .
-      * **** Valideringsfråga: Ange en SELECT-fråga (SQL) för att validera anslutningar från poolen. Frågan måste returnera minst en rad. Du kan till exempel **välja * från kundinformation**.
+      * **JDBC-anslutnings-URI**: Ange anslutnings-URL för databasen. För MySQL-databaser som körs på port 3306 och schema werail är URL:en: `jdbc:mysql://'server':3306/weretail?autoReconnect=true&useUnicode=true&characterEncoding=utf-8`
+      * **Användarnamn:** Användarnamn för databasen. Det krävs för att JDBC-drivrutinen ska kunna upprätta en anslutning till databasen.
+      * **Lösenord:** Lösenord för databasen. Det krävs för att JDBC-drivrutinen ska kunna upprätta en anslutning till databasen.
+      * **Test on Borgo:** Aktivera alternativet **Testa vid köp** .
+      * **Test vid retur:** Aktivera alternativet **Test on Return** .
+      * **Valideringsfråga:** Ange en SELECT-fråga (SQL) för att validera anslutningar från poolen. Frågan måste returnera minst en rad. Du kan till exempel **välja * från kundinformation**.
       * **Transaktionsisolering**: Ange värdet **READ_COMMTED**.
       Lämna övriga egenskaper med standard [värden](https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html) och tryck på **Spara**.
    En konfiguration som liknar följande skapas.
 
    ![relational-database-data-source-configuration](assets/relational-database-data-source-configuration.png)
 
-## Steg 2:Skapa formulärdatamodell {#create-fdm}
+## Steg 2: Skapa formulärdatamodell {#create-fdm}
 
 AEM Forms har ett intuitivt användargränssnitt för att [skapa en](../../forms/using/data-integration.md#main-pars-header-1524967585)formulärdatamodell från konfigurerade datakällor. Du kan använda flera datakällor i en formulärdatamodell. I det här fallet använder vi den konfigurerade MySQL-datakällan.
 
@@ -113,7 +113,7 @@ Gör följande för att konfigurera formulärdatamodellen:
 
    ![default-fdm](assets/default-fdm.png)
 
-1. Expandera trädet för datakällan WeRailMySQL. Välj följande datamodellsobjekt och datatjänster från **Nere** > **schema med kundinformation** till formulärdatamodell:
+1. Expandera trädet för datakällan WeRailMySQL. Välj följande datamodellsobjekt och datatjänster från **Nere** > schema med **kundinformation** till formulärdatamodell:
 
    * **Datamodellsobjekt**:
 
