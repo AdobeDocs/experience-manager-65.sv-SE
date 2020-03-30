@@ -10,7 +10,7 @@ topic-tags: publish
 discoiquuid: 14bb521a-42ea-4fe2-90fb-202e7ddf917a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 8e724af4d69cb859537dd088119aaca652ea3931
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -80,7 +80,7 @@ Utför följande steg för att aktivera felsökningsloggning för arbetsflöden 
 
 1. Gå till konfigurationshanteraren för AEM-webbkonsolen på:
 
-   https://[server]:[port]/system/console/configMgr
+   https://&#39;[server]:[port]&#39;/system/console/configMgr
 
 1. Välj **[!UICONTROL Sling]** > **[!UICONTROL Loggstöd]**.
 1. Tryck på **[!UICONTROL Lägg till ny loggare.]**
