@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: developer-reference
 discoiquuid: 9457effd-3595-452f-a976-ad9eda6dc909
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -92,7 +92,7 @@ Ange följande parametrar i begärande-URL:
   </tr>
   <tr>
    <td><code>cutPoints</code> <br /> (valfritt)</td>
-   <td>Anger en kommaavgränsad lista med formuläregenskaper som ska inkluderas i resultaten. <br /> Standardegenskaperna är: <code>formName</code>, <code>formPath</code>, <code>submitID</code>, <code>formType</code>, <code>jcr:lastModified</code>, <code>owner</code></td>
+   <td>Anger en kommaavgränsad lista med formuläregenskaper som ska inkluderas i resultaten. Standardegenskaperna är:<br /> <code>formName</code>, <code>formPath</code>, <code>submitID</code>, <code>formType</code>, <code>jcr:lastModified</code>, <code>owner</code></td>
   </tr>
   <tr>
    <td><code>search</code> <br /> (valfritt)</td>
@@ -148,7 +148,7 @@ Returnerar ett kommentar-ID när en kommentar har publicerats.
 **Begär URL**
 
 ```
-https://[host:[port]/content/forms/portal/submission.review.json?func=addComment&submitID=1403037413508500&comment=API+test+comment
+https://[host:'port'/content/forms/portal/submission.review.json?func=addComment&submitID=1403037413508500&comment=API+test+comment
 ```
 
 **Svar**
@@ -186,7 +186,7 @@ Svarsobjektet innehåller en JSON-array som innehåller alla kommentarer som är
 **Begär URL**
 
 ```
-https://[host]:[port]/content/forms/portal/submission.review.json?func=getComments&submitID=1403037413508500
+https://[host]:'port'/content/forms/portal/submission.review.json?func=getComments&submitID=1403037413508500
 ```
 
 **Svar**
@@ -218,7 +218,7 @@ Returnerar ett JSON-objekt med information om den publicerade uppdateringen.
 **Begär URL**
 
 ```
-https://[host]:[port]/content/forms/portal/submission.review.json?func=updateSubmission&submitID=1403037413508500&value=sample_value&property=some_new_prop
+https://[host]:'port'/content/forms/portal/submission.review.json?func=updateSubmission&submitID=1403037413508500&value=sample_value&property=some_new_prop
 ```
 
 **Svar**
