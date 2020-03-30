@@ -9,7 +9,7 @@ topic-tags: develop
 discoiquuid: 2fd2276e-cfe3-47ad-94c1-9c7af56b7a17
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -22,7 +22,7 @@ JavaScript är uttrycksspråket i adaptiva formulär. Alla uttryck är giltiga J
 
 ## Bästa tillvägagångssätt för att skriva uttryck {#best-practices-for-writing-expressions}
 
-* När du skriver uttryck kan du använda namnet på fältet eller panelen för att komma åt fält och paneler. Använd egenskapen value om du vill komma åt ett fälts värde. Exempel, `field1.value`
+* När du skriver uttryck kan du använda namnet på fältet eller panelen för att komma åt fält och paneler. Använd egenskapen value om du vill komma åt ett fälts värde. Exempel: `field1.value`
 * Använd unika namn för fält och paneler i hela formuläret. Det hjälper till att undvika eventuella konflikter med fältnamn som används när uttryck skrivs.
 * När du skriver flerradsuttryck kan du använda ett semikolon för att avsluta en -programsats.
 
@@ -48,11 +48,11 @@ I anpassningsbara formulär kan du skriva uttryck för att lägga till beteenden
 * **[Åtkomstuttryck](../../forms/using/adaptive-form-expressions.md#main-pars-header-4)**: för att aktivera/inaktivera ett fält.
 * **[Beräkna uttryck](../../forms/using/adaptive-form-expressions.md#p-calculate-expression-p)**: till automatisk beräkning av ett fälts värde.
 * **[Klicka på uttryck](../../forms/using/adaptive-form-expressions.md#p-click-expression-p)**: för att hantera åtgärder vid klickningshändelser för en knapp.
-* **[](../../forms/using/adaptive-form-expressions.md#p-initialization-script-p)Initieringsskript **: utföra en åtgärd vid initiering av ett fält.
+* **[Initieringsskript](../../forms/using/adaptive-form-expressions.md#p-initialization-script-p):**utföra en åtgärd vid initiering av ett fält.
 * **[Alternativuttryck](../../forms/using/adaptive-form-expressions.md#p-options-expression-p)**: för att dynamiskt fylla i en nedrullningsbar lista.
 * **[Sammanfattningsuttryck](#summary)**: för att dynamiskt beräkna titeln på ett dragspel.
 * **[Validera uttryck](../../forms/using/adaptive-form-expressions.md#p-validate-expression-p)**: för att validera ett fält.
-* **[](../../forms/using/adaptive-form-expressions.md#p-value-commit-script-p)Värde för implementeringsskript **: om du vill ändra komponenterna i ett formulär efter att värdet för ett fält har ändrats.
+* **[Värde för implementeringsskript](../../forms/using/adaptive-form-expressions.md#p-value-commit-script-p):**om du vill ändra komponenterna i ett formulär efter att värdet för ett fält har ändrats.
 * **[Synlighetsuttryck](../../forms/using/adaptive-form-expressions.md#p-visibility-expression-p)**: för att styra visningen av ett fält och en panel.
 * **[Uttryck](../../forms/using/adaptive-form-expressions.md#p-step-completion-expression-p)**för att slutföra steg: för att förhindra att en användare går vidare till nästa steg i en guide.
 
@@ -95,11 +95,11 @@ Initieringsskriptet aktiveras när ett anpassat formulär initieras. Beroende p�
 * När ett anpassat formulär återges med en dataförifyllning körs skriptet när förifyllningen har slutförts.
 * När serverbaserad omvalidering av ett adaptivt formulär utlöses körs initieringsskriptet.
 
-**** Gäller för: fält och panel
+**Gäller för:** fält och panel
 
-**** Returtyp: Initieringsskriptuttrycket returnerar inget värde. Om något uttryck returnerar ett värde ignoreras värdet.
+**Returtyp:** Initieringsskriptuttrycket returnerar inget värde. Om något uttryck returnerar ett värde ignoreras värdet.
 
-**** Exempel: I ett scenario där data förifylls och fälten fylls i med standardvärden `'Adaptive Forms'` när deras värde sparas som null, är initieringsskriptuttrycket:
+**Exempel:** I ett scenario där data förifylls och fälten fylls i med standardvärden `'Adaptive Forms'` när deras värde sparas som null, är initieringsskriptuttrycket:
 `if(this.value==null) this.value='Adaptive Forms';`
 
 ### Alternativ {#options-expression}
@@ -122,11 +122,11 @@ Uttrycket Sammanfattning beräknar dynamiskt titeln på en underordnad panel i e
 
 Sammanfattningsuttrycket används vanligtvis för att upprepa underordnade objekt i en dragspelslayoutpanel för att ge varje underordnad panel en meningsfull rubrik.
 
-**** Gäller för: Paneler som är direkt underordnade en panel vars layout är konfigurerad som dragspelspanel.
+**Gäller för:** Paneler som är direkt underordnade en panel vars layout är konfigurerad som dragspelspanel.
 
-**** Returtyp: Uttrycket returnerar en sträng som blir dragspelets titel.
+**Returtyp:** Uttrycket returnerar en sträng som blir dragspelets titel.
 
-**** Exempel: &quot;Kontonummer: &quot;+ texbox1.value
+**Exempel:** &quot;Kontonummer: &quot;+ texbox1.value
 
 ### Validera uttryck {#validate-expression}
 
@@ -143,7 +143,7 @@ Om det icke-tomma värdet inte matchar mönstret returnerar uttrycket **false** 
 
 >[!NOTE]
 >
->Om du skriver ett valideringsuttryck för ett icke-obligatoriskt eller obligatoriskt fält utvärderas uttrycket oavsett fältets synlighetsstatus. Om du vill stoppa valideringen för de dolda fälten anger du egenskapen validationsDisabled i Initialization eller Value Commit Script till true. Exempel, `this.validationsDisabled=true`
+>Om du skriver ett valideringsuttryck för ett icke-obligatoriskt eller obligatoriskt fält utvärderas uttrycket oavsett fältets synlighetsstatus. Om du vill stoppa valideringen för de dolda fälten anger du egenskapen validationsDisabled i Initialization eller Value Commit Script till true. Exempel: `this.validationsDisabled=true`
 
 ### Värde för implementeringsskript {#value-commit-script}
 
@@ -152,16 +152,16 @@ Skriptet Värde implementeras aktiveras när:
 * En användare ändrar värdet för ett fält från användargränssnittet.
 * Värdet för ett fält ändras programmatiskt på grund av ändringar i ett annat fält.
 
-**** Gäller för: fält
+**Gäller för:** fält
 
-**** Returtyp: Värdet för implementeringsskriptuttrycket returnerar inget värde. Om något uttryck returnerar ett värde ignoreras värdet.
+**Returtyp:** Värdet för implementeringsskriptuttrycket returnerar inget värde. Om något uttryck returnerar ett värde ignoreras värdet.
 
-**** Exempel: Om du vill konvertera de alfabet som anges i fältet till versaler vid implementering, är värdet för implementeringsuttryck:
+**Exempel:** Om du vill konvertera de alfabet som anges i fältet till versaler vid implementering, är värdet för implementeringsuttryck:
 `this.value=this.value.toUpperCase()`
 
 >[!NOTE]
 >
->Du kan inaktivera körningen av Value Commit Script när värdet för ett fält ändras programmatiskt. Det gör du genom att gå till https://[server]:[port]/system/console/configMgr och ändra **Adaptiv formulärversion för kompatibilitet** till **AEM Forms 6.1**. Därefter körs Value Commit Script bara när användaren ändrar fältets värde från användargränssnittet.
+>Du kan inaktivera körningen av Value Commit Script när värdet för ett fält ändras programmatiskt. Det gör du genom att gå till https://&#39;[server]:[port]&#39;/system/console/configMgr och ändra **Adaptiv formulärversion för kompatibilitet** till **AEM Forms 6.1**. Därefter körs Value Commit Script bara när användaren ändrar fältets värde från användargränssnittet.
 
 ### Synlighetsuttryck {#visibility-expression}
 
@@ -276,9 +276,10 @@ Utför följande steg för att skapa ett anpassat mönster för en viss fälttyp
 
 1. Navigera till CRXDE Lite i redigeringsinstansen.
 1. Skapa en mapp för att behålla dina anpassade mönster. Skapa en nod av typen sling:folder i katalogen /apps. Skapa till exempel en nod med namnet `customPatterns`. Under den här noden skapar du en annan nod av typen `nt:unstructed` och namnger den `textboxpatterns`. Den här noden innehåller de olika anpassade mönster som du vill lägga till.
-1. Öppna fliken Egenskaper för noden som skapades. Öppna till exempel fliken Egenskaper i `textboxpatterns`. Lägg till `guideComponentType` egenskapen i den här noden och ställ in värdet på *fd/af/components/formatter/guideTextBox*.
+1. Öppna fliken Egenskaper för noden som skapades. Öppna till exempel fliken Egenskaper i `textboxpatterns`. Lägg till `guideComponentType` egenskapen i den här noden och ställ in värdet på *fd/af/components/formter/guideTextBox*.
 
-1. Värdet för den här egenskapen varierar beroende på vilket fält du vill definiera mönstren för. För numeriska fält är värdet för `guideComponentType` egenskapen *fd/af/components/formter/guideNumericBox*. Värdet för Datepicker-fältet är *fd/af/components/formter/guideDatepicker*. &quot;
+1. Värdet för den här egenskapen varierar beroende på vilket fält du vill definiera mönstren för. För numeriska fält är värdet för `guideComponentType` egenskapen *fd/af/components/formter/guideNumericBox*. Värdet för Datepicker-fältet är *fd/af/components/formter/guideDatepicker*.
+&quot;
 1. Du kan lägga till ett anpassat mönster genom att tilldela en egenskap till `textboxpatterns` noden. Lägg till en egenskap med ett namn (till exempel `pattern1`) och ställ in värdet för mönstret som du vill lägga till. Du kan till exempel lägga till en egenskap `pattern1` med värdet Fax=text {99-999-99999}. Mönstret är tillgängligt för alla textrutor som du använder i adaptiva formulär.
 
    ![Skapa anpassade mönster för fält i CrxDe](assets/creating-custom-patterns.png)
