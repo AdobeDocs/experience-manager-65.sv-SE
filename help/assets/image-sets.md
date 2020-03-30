@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: ccc4eb23-934c-4e67-860b-a6faa2bcaafc
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4f5f6cc88bc0408af117ad5760d4313c9f7d54b9
+source-git-commit: 45de0f9d9570d64cacf7009d64072858012869a0
 
 ---
 
@@ -179,7 +179,7 @@ Uppsättningar som skapats med gruppuppsättningsförinställningar visas *inte*
 
 * Öppna egenskaperna för en enskild resurs. Egenskaper anger vad som ställer in den valda resursen eller en medlem i. Klicka på uppsättningens namn för att se hela uppsättningen.
 
-   ![6_5_imageset-assetproperties](assets/6_5_imageset-assetproperties.png)
+   ![6_5_imageset-assetproperties](assets/6_5_imageset-assetproperties2.png)
 
 * Från en medlemsbild i en uppsättning. Välj menyn **[!UICONTROL Uppsättningar]** för att visa de uppsättningar som resursen är medlem i.
 
