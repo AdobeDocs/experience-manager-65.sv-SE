@@ -10,7 +10,7 @@ topic-tags: correspondence-management
 discoiquuid: 0d3bb98e-7139-4d8e-b110-6ebd11debda1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -30,7 +30,7 @@ Ett sätt att anropa programmet Create Correspondence från en anpassad portal �
 * URL:en till XML-data som hämtats från den önskade datakällan (med parametern cmDataUrl).
 
 Den anpassade portalen skulle till exempel förbereda URL:en som\
-`https://[server]:[port]/[contextPath]/aem/forms/createcorrespondence.html?random=[timestamp]&cmLetterId=[letter identifier]&cmDataUrl=[data URL]`som kan vara href från en länk på portalen.
+`https://'[server]:[port]'/[contextPath]/aem/forms/createcorrespondence.html?random=[timestamp]&cmLetterId=[letter identifier]&cmDataUrl=[data URL]`som kan vara href från en länk på portalen.
 
 >[!NOTE]
 >
@@ -42,7 +42,7 @@ Den anpassade portalen skulle till exempel förbereda URL:en som\
 
 ## Inline databaserat anrop {#inline-data-based-invocation}
 
-Ett annat (och säkrare) sätt att anropa programmet Create Correspondence kan vara att bara trycka på URL:en på https://[server]:[port]/[contextPath]/aem/forms/createcorrespondence.html, medan parametrarna och data skickas för att anropa programmet Create Correspondence som en POST-begäran (dölja dem för slutanvändaren). Det innebär också att du nu kan skicka XML-data för Create Correspondence-programmet (som en del av samma begäran, med parametern cmData), vilket inte var möjligt/idealiskt i den tidigare metoden.
+Ett annat (och säkrare) sätt att anropa programmet Create Correspondence kan vara att bara trycka på URL:en på https://&#39;[server]:[port]&#39;/[contextPath]/aem/forms/createcorrespondence.html, medan parametrarna och data skickas för att anropa programmet Create Correspondence som en POST-begäran (dölja dem för slutanvändaren). Det innebär också att du nu kan skicka XML-data för Create Correspondence-programmet (som en del av samma begäran, med parametern cmData), vilket inte var möjligt/idealiskt i den tidigare metoden.
 
 ### Parametrar för att ange bokstav {#parameters-for-specifying-letter}
 
