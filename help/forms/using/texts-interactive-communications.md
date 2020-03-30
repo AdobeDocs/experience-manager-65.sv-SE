@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f04050f8-42de-4ef0-b6ed-145d59bbffce
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a326e508a781b3afaba8b5e371aa862a30536740
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -89,7 +89,7 @@ Om du har angett en formulärdatamodell när du skapar en text visas egenskapern
 
 Du kan också söka efter och lägga till en formulärdatamodellsegenskap med symbolen @ i textredigeraren. Placera markören där du vill infoga egenskapen. Skriv @ följt av söksträngen. Sökåtgärden utförs på alla formulärdatamodegenskaper och variabler som är tillgängliga i dokumentfragmentet. Egenskaperna eller variablerna som innehåller söksträngen hämtas och visas som en nedrullningsbar lista. Navigera genom sökresultaten och klicka på den egenskap som du vill infoga vid markörens plats. Tryck på Esc för att dölja sökresultaten.
 
-* Om du vill att agenterna ska kunna redigera värdet för en formulärdatamodellegenskap i agentens användargränssnitt medan [Förbered och skicka interaktiv kommunikation](/help/forms/using/prepare-send-interactive-communication.md) med agentens användargränssnitt, trycker du på **[D]** -låsikonen för den egenskapen och ser till att den är i ett olåst läge. Egenskapens standardläge är låst och en agent kan inte redigera egenskapen i agentens användargränssnitt.
+* Om du vill att agenterna ska kunna redigera en formulärdatamodellegenskaps värde i agentens användargränssnitt medan [Förbered och skicka interaktiv kommunikation](/help/forms/using/prepare-send-interactive-communication.md) med agentens användargränssnitt, trycker du på **[D]** -låsikonen för den egenskapen och ser till att den är i ett olåst läge. Egenskapens standardläge är låst och en agent kan inte redigera egenskapen i agentens användargränssnitt.
 
 Du kan också använda egenskaper för formulärdatamodell för att konstruera regler för att visa eller dölja delar av innehåll. Mer information finns i [Skapa regler i text](#rules).
 
@@ -216,9 +216,9 @@ Markera texten och tryck på Markeringsfärg om du vill framhäva delar av text 
 
 ![textbakgrundsgrundfärgtillämpad-1](assets/textbackgroundcolorapplied-1.png)
 
-Du kan antingen trycka direkt på grundfärgen **[A]** på paletten Grundfärger eller på **Välj** när du har använt reglaget **[B]** för att välja rätt färgton.
+Du kan antingen trycka direkt på en grundfärg `**[A]**` som finns på paletten Grundfärger eller på **Välj** efter `**[B]**` att du har använt reglaget för att välja rätt färgton.
 
-Du kan också gå till fliken Avancerat och välja lämplig nyans, ljushet och mättnad **[C]** för att skapa den exakta färgen och sedan trycka på Välj **[D]** för att använda färgen för att markera texten.
+Du kan också gå till fliken Avancerat och välja lämplig nyans, ljushet och mättnad `**[C]**` för att skapa en exakt färg och sedan trycka på Välj `**[D]**` för att markera texten.
 
 ![textbakgrundsfärg-2](assets/textbackgroundcolor-2.png)
 
