@@ -9,12 +9,12 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 discoiquuid: cc473808-e71a-4834-bb30-91e6df783e60
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
-# Korrespondenshantering:Felsökning {#correspondence-management-troubleshooting}
+# Korrespondenshantering: Felsökning {#correspondence-management-troubleshooting}
 
 ## Fel när en bokstav sparades {#errors-when-saving-a-letter}
 
@@ -46,7 +46,7 @@ Felet&quot;Fel vid inläsning av brev: Det gick inte att importera resursen frå
 
 Återställ bokstavscachen för publiceringsinstansen genom att följa följande steg och försök sedan visa brevet igen:
 
-1. Gå till **`https://[server]:[port]/[contextPath]/system/console/configMgr`** och logga in som administratör.
+1. Gå till **`https://'[server]:[port]'/[contextPath]/system/console/configMgr`** och logga in som administratör.
 1. Välj **Korrespondenshanteringskonfigurationer**.
 1. I **Correspondence Management Configurations** inaktiverar du **Enable Letter Cache** och klickar sedan på&#x200B;**Save.**
 1. Aktivera **Aktivera cacheminne** för brev och klicka sedan på **Spara**.
