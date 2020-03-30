@@ -1,8 +1,8 @@
 ---
 title: Lägg till anpassad åtgärd/knapp i användargränssnittet Skapa korrespondens
 seo-title: Lägg till anpassad åtgärd/knapp i användargränssnittet Skapa korrespondens
-description: Lär dig hur du lägger till en anpassad åtgärd/knapp i användargränssnittet för Skapa korrespondens
-seo-description: Lär dig hur du lägger till en anpassad åtgärd/knapp i användargränssnittet för Skapa korrespondens
+description: Lär dig hur du lägger till en anpassad åtgärd/knapp i användargränssnittet för att skapa korrespondens
+seo-description: Lär dig hur du lägger till en anpassad åtgärd/knapp i användargränssnittet för att skapa korrespondens
 uuid: 1b2b00bb-93ef-4bfe-9fc5-25c45e4cb4b1
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,7 +10,7 @@ topic-tags: correspondence-management
 discoiquuid: 046e3314-b436-47ed-98be-43d85f576789
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5a586758da84f467e075adcc33cdcede2fbf09c7
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -40,7 +40,7 @@ Om du lägger till en knapp med en åtgärd (här skickar du ett brev för grans
 
 ### Lägg till knappen i användargränssnittet Skapa korrespondens {#add-the-button-to-the-create-correspondence-user-interface}
 
-1. Gå till `https://[server]:[port]/[ContextPath]/crx/de` och logga in som administratör.
+1. Gå till `https://'[server]:[port]'/[ContextPath]/crx/de` och logga in som administratör.
 1. I mappen apps skapar du en mapp med namnet `defaultApp` med sökvägen/strukturen som liknar defaultApp-mappen (som finns i config-mappen). Så här skapar du mappen:
 
    1. Högerklicka på mappen **defaultApp** på följande sökväg och välj **Overlay Node**:
@@ -51,11 +51,11 @@ Om du lägger till en knapp med en åtgärd (här skickar du ett brev för grans
 
    1. Kontrollera att dialogrutan Overlay Node har följande värden:
 
-      **** Sökväg:/libs/fd/cm/config/defaultApp/
+      **Sökväg:** /libs/fd/cm/config/defaultApp/
 
-      **** Plats för övertäckning: /apps/
+      **Plats för övertäckning:** /apps/
 
-      **** Matcha nodtyper:Markerad
+      **Matcha nodtyper:** Markerad
 
       ![Överläggsnod](assets/2_defaultappoverlaynode.png)
 
@@ -127,15 +127,15 @@ Filen ACMExtensionsMessages.properties innehåller etiketter och knappbeskrivnin
 
 1. Högerklicka på mappen **locale** på följande sökväg och välj **Overlay Node**:
 
-    /libs/fd/cm/config/defaultApp/locale
+   /libs/fd/cm/config/defaultApp/locale
 
 1. Kontrollera att dialogrutan Overlay Node har följande värden:
 
-   **** Sökväg: /libs/fd/cm/config/defaultApp/locale
+   **Sökväg:** /libs/fd/cm/config/defaultApp/locale
 
-   **** Plats för övertäckning: /apps/
+   **Plats för övertäckning:** /apps/
 
-   **** Matcha nodtyper:Markerad
+   **Matcha nodtyper:** Markerad
 
 1. Click **OK**.
 1. Klicka på **Spara alla**.
@@ -167,7 +167,7 @@ När du har gjort alla ändringar på serversidan startar du om paketet Adobe As
 >
 >Du kan behöva rensa webbläsarens cache.
 
-1. Gå till `https://[host]:[port]/system/console/bundles`. Logga in som administratör om det behövs.
+1. Gå till `https://[host]:'port'/system/console/bundles`. Logga in som administratör om det behövs.
 
 1. Leta reda på paketet Adobe Asset Composer Building Block. Starta om paketet: Klicka på Stopp och sedan på Start.
 
@@ -189,7 +189,7 @@ Hanteringen av åtgärd/knapp vid klickning innehåller logik för:
 * Aktivera/inaktivera nyligen tillagda åtgärder: klart genom att åsidosätta funktionen actionEnabled().
 * Faktisk hantering av åtgärden när användaren klickar på knappen: utförd genom att åsidosätta implementeringen av funktionen handleAction().
 
-1. Gå till `https://[server]:[port]/[ContextPath]/crx/de`. Logga in som administratör om det behövs.
+1. Gå till `https://'[server]:[port]'/[ContextPath]/crx/de`. Logga in som administratör om det behövs.
 
 1. I mappen apps skapar du en mapp med namnet `js` i grenen /apps i CRX med en struktur som liknar den i följande mapp:
 
@@ -203,11 +203,11 @@ Hanteringen av åtgärd/knapp vid klickning innehåller logik för:
 
    1. Kontrollera att dialogrutan Overlay Node har följande värden:
 
-      **** Sökväg: /libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/js
+      **Sökväg:** /libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/js
 
-      **** Plats för övertäckning: /apps/
+      **Plats för övertäckning:** /apps/
 
-      **** Matcha nodtyper:Markerad
+      **Matcha nodtyper:** Markerad
 
    1. Click **OK**.
    1. Klicka på **Spara alla**.
@@ -338,7 +338,7 @@ components.zip
 
 LCA-processen körs på LiveCycle-servern och kräver serveradressen och inloggningsuppgifterna.
 
-1. Gå till `https://[server]:[port]/system/console/configMgr` och logga in som administratör.
+1. Gå till `https://'[server]:[port]'/system/console/configMgr` och logga in som administratör.
 1. Leta reda på SDK-konfigurationen för Adobe LiveCycle Client och klicka på **Redigera** (redigeringsikonen). Panelen Konfigurationer öppnas.
 
 1. Ange följande information och klicka på **Spara**:
@@ -380,7 +380,7 @@ Den LiveCycle-process som krävs för e-posttjänstprocessen.
 
 I AEM-servern anger du vilka LiveCycle-tjänster du vill ha tillgång till AEM-servern.
 
-1. Logga in som administratör till `https:/[host]/:[port]/system/console/configMgr`.
+1. Logga in som administratör till `https:/[host]:'port'/system/console/configMgr`.
 
 1. Leta upp och klicka på **Adobe LiveCycle Client SDK Configuration**. Konfigurationspanelen för Adobe LiveCycle Client SDK visas.
 1. Klicka på +-ikonen i listan Tjänstnamn och lägg till ett serviceName **SendLetterForReview/SendLetterForReviewProcess**.
@@ -413,7 +413,7 @@ Mer information finns i [Ansluta AEM-formulär till Adobe LiveCycle](/help/forms
 
 1. Ange följande parametrar i konfigurationsfilen:
 
-   * **crx.serverUrl**=https:/[host]/:[port]/[kontextsökväg]/[AEM URL]
+   * **crx.serverUrl**=https:/host:port/[kontextsökväg]/[AEM-URL]
    * **crx.username**= AEM-användarnamn
    * **crx.password**= AEM-lösenord
    * **crx.appRoot**=/content/apps/cm
