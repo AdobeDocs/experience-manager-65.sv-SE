@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c04c488b-73f3-49ba-9e89-f97497965757
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 8f90dc4865126d52e04effc9197ef7145b1a167e
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -72,7 +72,7 @@ Omvänd replikering kopierar transaktionsdata till författarinstansens standard
 
 Du kan visa transaktionsrapporter om författare eller publiceringsinstanser. Transaktionsrapporten för författarinstansen ger en aggregerad summa av alla transaktioner som äger rum på den konfigurerade författaren och publiceringsinstansen. Transaktionsrapporten för publiceringsinstansen ger ett antal transaktioner som bara äger rum på den underliggande publiceringsinstansen. Följ de här stegen för att visa rapporten:
 
-1. Logga in på AEM Forms-servern på `https://[hostname]:[port]`.
+1. Logga in på AEM Forms-servern på `https://[hostname]:'port'`.
 1. Navigera till **Verktyg** > **Formulär**>**Visa transaktionsrapport**.
 
 ## Förstå rapporten {#understanding-the-report}
