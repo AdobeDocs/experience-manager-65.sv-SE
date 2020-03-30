@@ -8,7 +8,7 @@ discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: cc3cb8732e2c0b4a7275ec302517791a5babdd42
+source-git-commit: 34f5cfc692241da4b9f5330e5abc324998fadb23
 
 ---
 
@@ -116,7 +116,7 @@ En fullständig lista över funktioner, viktiga högdagrar, viktiga funktioner s
 
 * Flera sökfrågor utlöses när flera taggar väljs från sökfiltret (NPR-32143).
 
-* Experience Manager Assets-gränssnittet visar trunkerade filnamn när resurser med fler än 50 tecken i filnamnet överförs (NPR-32054).
+* Användargränssnittet i Experience Manager Assets visar trunkerade filnamn när resurser med fler än 50 tecken i filnamnet överförs (NPR-32054).
 
 * Alla kryssrutor på panelen Filter avmarkeras när den första och den andra kryssrutan avmarkeras när du har markerat två kryssrutor i kryssruteträdet i Adobe Stock (NPR-31919).
 
@@ -193,6 +193,13 @@ En fullständig lista över funktioner, viktiga högdagrar, viktiga funktioner s
 * Målmolnkonfigurationen misslyckades med felet när mbox-begäran skulle hämtas (CQ-4279880).
 
 ### Varumärkesportal {#assets-brand-portal}
+
+* Användare av varumärkesportalen kan inte publicera resurser i mappen för bidrag till AEM Assets när de uppgraderar till Adobe I/O på AEM 6.5.4 (CQDOC-15655).
+
+   Problemet åtgärdas i nästa Service Pack AEM 6.5.5.
+
+   Om du vill åtgärda AEM 6.5.4 direkt rekommenderar vi att du [hämtar snabbkorrigeringen](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/hotfix/cq-6.5.0-hotfix-33041) och installerar den på din författarinstans.
+
 
 * Värden för rullgardinsmenyer för metadatamatchning visas inte i resursegenskaper (CQ-4283287).
 
