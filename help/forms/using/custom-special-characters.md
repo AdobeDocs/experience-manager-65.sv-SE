@@ -10,7 +10,7 @@ topic-tags: correspondence-management
 discoiquuid: 9f26565c-a7ba-4e9e-bf77-a95eb8e351f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 08e53eec26e29c2403cdfc3239da3ea23da3f321
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -40,7 +40,7 @@ Administratören kan lägga till stöd för fler/anpassade specialtecken genom a
 
 Följ de här stegen för att lägga till stöd för anpassade specialtecken:
 
-1. Gå till `https://[server]:[port]/[ContextPath]/crx/de` och logga in som administratör.
+1. Gå till `https://'[server]:[port]'/[ContextPath]/crx/de` och logga in som administratör.
 1. I mappen apps skapar du en mapp med namnet **[!UICONTROL specialcharacters]** med en sökväg/struktur som liknar specialteckenmappen (som finns i mappen textEditorConfig under libs):
 
    1. Högerklicka på mappen med **specialtecken** i följande sökväg och välj **Overlay Node**:
@@ -49,11 +49,11 @@ Följ de här stegen för att lägga till stöd för anpassade specialtecken:
 
    1. Kontrollera att dialogrutan Overlay Node har följande värden:
 
-      **** Sökväg: /libs/fd/cm/ma/gui/configuration/textEditorConfig/specialtecken
+      **Sökväg:** /libs/fd/cm/ma/gui/configuration/textEditorConfig/specialtecken
 
-      **** Plats för övertäckning: /apps/
+      **Plats för övertäckning:** /apps/
 
-      **** Matcha nodtyper:Markerad
+      **Matcha nodtyper:** Markerad
 
       >[!NOTE]
       >
@@ -138,7 +138,7 @@ Följ de här stegen för att lägga till stöd för anpassade specialtecken:
     <ol>
      <li>Lägg till en underordnad nod under "/apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters" med obligatoriska egenskaper. </li>
      <li>Lägg till egenskapen "sling:orderBefore (String)" i den nyskapade underordnade noden. </li>
-     <li>Lägg till nodnamn som ett värde innan det nya specialtecknet visas. </li>
+     <li>Lägg till nodnamn som ett värde som det nya specialtecknet ska visas före. </li>
      <li>Klicka på Spara alla. </li>
      <li>Uppdatera textredigeraren\Skapa korrespondensgränssnitt för att se ändringarna.<br /> </li>
     </ol> </td>
