@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 968c2574-ec9a-45ca-9c64-66f4caeec285
 translation-type: tm+mt
-source-git-commit: 06335b9a85414b6b1141dd19c863dfaad0812503
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -156,14 +156,14 @@ Mer information om hur du använder kommandot keytool finns i filen keytool.html
    C:\Program Files\Java\jrockit-jdk1.6.0_24-R28\bin\keytool" -import -v -noprompt -alias bedrock -file "ads-ca.cer" -keystore "ads-ca.jks" -storepass Password1 -keypass Password1
    ```
 
-Nyckelfilen för anpassat förtroende med namnet&quot;ads-ca.jks&quot; skapas i katalogen [appserverdomain]/adobe/[server] .
+Nyckelfilen Custom Trust med namnet &quot;ads-ca.jks&quot; skapas i katalogen [appserverdomain]/adobe/&#39;server.
 
 Konfigurera WebLogic så att den använder nyckelbehållaren Custom Identity och Custom Trust som du skapade. Inaktivera även funktionen för verifiering av WebLogic-värdnamn eftersom det unika namn som användes för att skapa nyckelbehållarfilerna inte innehöll namnet på den dator som är värd för WebLogic-servern.
 
 ## Konfigurera WebLogic att använda SSL {#configure-weblogic-to-use-ssl}
 
 1. Starta administrationskonsolen för WebLogic Server genom att skriva `https://`*[värdnamnet ]*`:7001/console`i URL-raden i en webbläsare.
-1. Under Miljö, i Domänkonfigurationer, väljer du **Servrar >[Server]> Konfiguration > Allmänt**.
+1. Under Miljö, i Domänkonfigurationer, väljer du **Servrar > &#39;server&#39; > Konfiguration > Allmänt**.
 1. Under Allmänt, under Konfiguration, kontrollerar du att **lyssningsporten är aktiverad** och **SSL-lyssningsporten aktiverad** är markerade. Om det inte är aktiverat gör du följande:
 
    1. Klicka på **Lås och redigera** under ändringscentret för att ändra markeringar och värden.
@@ -185,7 +185,7 @@ Konfigurera WebLogic så att den använder nyckelbehållaren Custom Identity och
 
 1. Ange följande värden under Lita på:
 
-   **Namn** på nyckelfil för anpassat förtroende: `*[appserverdomain]*/adobe/*[server]*/ads-ca.jks`, var `*[appserverdomain]*` är den faktiska banan?
+   **Namn** på nyckelfil för anpassat förtroende: `*[appserverdomain]*/adobe/*'server'*/ads-ca.jks`, var `*[appserverdomain]*` är den faktiska banan?
 
    **Nyckellagringstyp** för anpassat förtroende: JKS
 
