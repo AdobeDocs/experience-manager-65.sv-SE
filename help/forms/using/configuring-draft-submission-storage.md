@@ -9,7 +9,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 6ebb6420-68b6-4abc-b298-c252db038416
 translation-type: tm+mt
-source-git-commit: f9ed171c188a4dfb71f12ae9c98105a4c1895542
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -38,7 +38,7 @@ Utöver det ovan nämnda standardtillvägagångssättet finns det även en alter
 
 ## Konfigurera formulärportalutkast och skicka-tjänster {#configuring-forms-portal-drafts-and-submissions-services}
 
-I AEM Web Console Configuration (Konfiguration av AEM-webbkonsol) `https://[host]:[port]/system/console/configMgr`klickar du för att öppna **formulärportalen, utkast och inskickningskonfiguration** i redigeringsläge.
+I AEM Web Console Configuration (Konfiguration av AEM-webbkonsol) `https://[host]:'port'/system/console/configMgr`klickar du för att öppna **formulärportalen, utkast och inskickningskonfiguration** i redigeringsläge.
 
 Ange värden för egenskaper baserat på dina krav enligt beskrivningen nedan:
 
@@ -102,7 +102,7 @@ Data skickas direkt till den konfigurerade fjärrinstansen
 
 Förutom konfigurationen ovan anger du information om den konfigurerade fjärrbearbetningsinstansen.
 
-I AEM Web Console Configuration ( `https://[host]:[port]/system/console/configMgr`) klickar du för att öppna **AEM DS Settings Service** i redigeringsläge. I dialogrutan för AEM DS-inställningstjänsten anger du information om hur server-URL:en bearbetas, användarnamn och lösenord för servern.
+I AEM Web Console Configuration ( `https://[host]:'port'/system/console/configMgr`) klickar du för att öppna **AEM DS Settings Service** i redigeringsläge. I dialogrutan för AEM DS-inställningstjänsten anger du information om hur server-URL:en bearbetas, användarnamn och lösenord för servern.
 
 >[!NOTE]
 >
