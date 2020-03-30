@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 43780682ba27d9c7d578393df04267ed8be4f1de
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -32,7 +32,7 @@ Dataintegrering har stöd för autentiseringstyperna OAuth2.0, Grundläggande au
 
 Du kan konfigurera relationsdatabaser med hjälp av AEM Web Console Configuration. Gör följande:
 
-1. Gå till AEM-webbkonsolen på https://[server]:[host]/system/console/configMgr.
+1. Gå till AEM-webbkonsolen på https://server:host/system/console/configMgr.
 1. Leta efter **[!UICONTROL konfiguration av poolad DataSource]** för Apache Sling-anslutning. Tryck för att öppna konfigurationen i redigeringsläge.
 1. I konfigurationsdialogrutan anger du information för den databas som du vill konfigurera, till exempel:
 
@@ -47,7 +47,7 @@ Du kan konfigurera relationsdatabaser med hjälp av AEM Web Console Configuratio
    >
    >    
    >    
-   >    1. Gå till https://[server]:[port]/system/console/crypto.
+   >    1. Gå till https://&#39;[server]:[port]&#39;/system/console/crypto.
    >    1. I fältet **[!UICONTROL Oformaterad text]** anger du lösenordet eller en sträng som ska krypteras och klickar på **[!UICONTROL Skydda]**.
    >    
    >    
@@ -66,7 +66,7 @@ Du kan konfigurera relationsdatabaser med hjälp av AEM Web Console Configuratio
 
 Du kan konfigurera AEM-användarprofilen med hjälp av konfigurationen för anslutning av användarprofil i AEM Web Console. Gör följande:
 
-1. Gå till AEM-webbkonsolen på https://[server]:[host]/system/console/configMgr.
+1. Gå till AEM-webbkonsolen på https://&#39;[server]:[port]&#39;system/console/configMgr.
 1. Leta efter **[!UICONTROL AEM Forms-dataintegrering - Konfiguration]** av anslutning till användarprofil och tryck för att öppna konfigurationen i redigeringsläge.
 1. I dialogrutan Konfiguration av anslutning till användarprofil kan du lägga till, ta bort eller uppdatera egenskaper för användarprofiler. De angivna egenskaperna kommer att vara tillgängliga för användning i formulärdatamodellen. Använd följande format för att ange egenskaper för användarprofiler:
 
@@ -86,7 +86,7 @@ Du kan konfigurera AEM-användarprofilen med hjälp av konfigurationen för ansl
 
 **Obs**: Konfiguration för molntjänstmappen krävs för konfigurering av molntjänster för RESTful-, SOAP- och OData-tjänster.
 
-Alla molntjänstkonfigurationer i AEM konsolideras i mappen `/conf` i AEM-databasen. Mappen innehåller som standard den `conf` mapp där du kan skapa molntjänstkonfigurationer `global` . Du måste dock manuellt aktivera det för molnkonfigurationer. Du kan också skapa ytterligare mappar i `conf` för att skapa och organisera molntjänstkonfigurationer.
+Alla molntjänstkonfigurationer i AEM konsolideras i mappen `/conf` i AEM-databasen. Mappen innehåller som standard den `conf` mapp där du kan skapa molntjänstkonfigurationer `global` . Du måste dock manuellt aktivera den för molnkonfigurationer. Du kan också skapa ytterligare mappar i `conf` för att skapa och organisera molntjänstkonfigurationer.
 
 Så här konfigurerar du mappen för molntjänstkonfigurationer:
 
