@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 7620e5e4-022e-49b2-8cfe-d5eec8ab99d7
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -60,7 +60,7 @@ Användare som har rollen PDFG-administratör eller PDFG-användare kan installe
 
 1. (PDFG-administratörer) I administrationskonsolen klickar du på Tjänster > PDF Generator > PDFG Network Printer.
 
-   (PDFG-användare) Gå till `http(s)://[host]:[port]/pdfgui` och klicka på länken under PDFG Network Printer Installation.
+   (PDFG-användare) Gå till `http(s)://[host]:'port'/pdfgui` och klicka på länken under PDFG Network Printer Installation.
 
 1. Klicka på länken under Installation av PDFG-nätverksskrivare. När du uppmanas att ange användarkontouppgifter anger du användarnamnet och lösenordet som du använde i steg 1 för att logga in. Ett meddelande om att skrivaren har installerats visas.
 
