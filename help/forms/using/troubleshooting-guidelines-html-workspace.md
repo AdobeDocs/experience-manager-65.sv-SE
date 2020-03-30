@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 5dae9ed9-77a3-44f5-a94d-ca5c355c8730
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -25,12 +25,12 @@ I den här artikeln beskrivs hur du felsöker arbetsytan i AEM Forms genom att a
 
 Utför följande steg om du råkar ut för ett fel `javax.jcr.nodetype.ConstraintViolationException: OakConstraint0025: Authorizable property rep:authorizableId may not be removed`när du installerar paketet:
 
-1. Logga in på CRX DE lite. Standardwebbadressen är `https://[localhost]:[port]/lc/crx/de/index.jsp`
+1. Logga in på CRX DE lite. Standardwebbadressen är `https://[localhost]:'port'/lc/crx/de/index.jsp`
 1. Ta bort följande nod:
 
    `/home/groups/P/PERM_WORKSPACE_USER`
 
-1. Gå till Package Manager. Standardwebbadressen är `https://[localhost]:[port]/lc/crx/packmgr/index.jsp.`
+1. Gå till Package Manager. Standardwebbadressen är `https://[localhost]:'port'/lc/crx/packmgr/index.jsp.`
 1. Sök efter och installera `adobe-lc-workspace-pkg-[version].zip` paketet.
 1. Starta om programservern.
 
@@ -155,7 +155,7 @@ Skript och format kan felsökas i olika webbläsare.
 
 * **Felsökning i IE**: Information om hur du felsöker arbetsytan i AEM Forms i IE finns i: [https://msdn.microsoft.com/en-us/library/hh772704(v=vs.85).aspx](https://msdn.microsoft.com/en-us/library/hh772704(v=vs.85).aspx).
 
-* **Felsökning i Chrome**: Använd kortkommandot för att öppna felsökningsprogrammet i Chrome: Ctrl+Skift+I.Mer information finns i: [https://developer.chrome.com/extensions/tut_debugging.html](https://developer.chrome.com/extensions/tut_debugging.html).
+* **Felsökning i Chrome**: Använd kortkommandot för att öppna felsökningsprogrammet i Chrome: Ctrl+Skift+I. Mer information finns i: [https://developer.chrome.com/extensions/tut_debugging.html](https://developer.chrome.com/extensions/tut_debugging.html).
 
 * **Felsökning i Firefox**: Det finns flera tillägg för att felsöka skript och format i Firefox. Firebug är till exempel ett sådant felsökningsverktyg ([https://getfirebug.com](https://getfirebug.com)).
 
