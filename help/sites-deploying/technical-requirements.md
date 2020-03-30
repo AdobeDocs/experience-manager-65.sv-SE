@@ -11,7 +11,7 @@ topic-tags: platform
 discoiquuid: 16c7a97d-884a-447e-9aad-18a2db1bda1d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 490f64a49345e1980e35efebf9449fe1a639dc3d
+source-git-commit: f323b490c37effc3cbb36c793b62fa788eca9545
 
 ---
 
@@ -48,7 +48,7 @@ Lägsta krav för att köra Adobe Experience Manager:
 
 
 
-Mer information finns i [Riktlinjerna](/help/managing/hardware-sizing-guidelines.md)för maskinvarustorlek.
+Mer information finns i riktlinjerna [för](/help/managing/hardware-sizing-guidelines.md)maskinvarans storlek.
 
 ### Supportnivåer {#support-levels}
 
@@ -65,7 +65,7 @@ Adobe rekommenderar dessa konfigurationer och ger fullständig support som en de
    <td>Beskrivning<br /> </td>
   </tr>
   <tr>
-   <td><strong>S:Stöds</strong></td>
+   <td><strong>S: Stöds</strong></td>
    <td>Adobe ger support och underhåll för denna konfiguration. Denna konfiguration omfattas av Adobes kvalitetssäkringsprocess.</td>
   </tr>
   <tr>
@@ -100,32 +100,32 @@ Adobe Experience Manager fungerar med följande versioner av Java Virtual Machin
    <td>Supportnivå<br /> </td>
   </tr>
   <tr>
-   <td>Oracle Java SE 12 JDK [1]</td>
+   <td>Oracle Java SE 12 JDK `\[1]`</td>
    <td>Z: Stöds inte </td>
   </tr>
   <tr>
    <td><strong>Oracle Java SE 11 JDK - 64 bitar</strong></td>
-   <td>S:Stöds</td>
+   <td>S: Stöds</td>
   </tr>
   <tr>
-   <td>Oracle Java SE 10 JDK [1]</td>
+   <td>Oracle Java SE 10 JDK `\[1]`</td>
    <td>Z: Stöds inte </td>
   </tr>
   <tr>
-   <td>Oracle Java SE 9 JDK [1]</td>
+   <td>Oracle Java SE 9 JDK `\[1]`</td>
    <td>Z: Stöds inte</td>
   </tr>
   <tr>
    <td>Oracle Java SE 8 JDK - 64 bitar</td>
-   <td>S: Stöds [3]<br /> </td>
+   <td>S: Supported `\[3]`<br /> </td>
   </tr>
   <tr>
-   <td>IBM J9 VM - build 2.9, JRE 1.8.0 [2]</td>
-   <td>S:Stöds</td>
+   <td>IBM J9 VM - build 2.9, JRE 1.8.0 `\[2`</td>
+   <td>S: Stöds</td>
   </tr>
   <tr>
-   <td>IBM J9 VM - build 2.8, JRE 1.8.0 [2]</td>
-   <td>S:Stöds</td>
+   <td>IBM J9 VM - build 2.8, JRE 1.8.0 `\[2`</td>
+   <td>S: Stöds</td>
   </tr>
  </tbody>
 </table>
@@ -141,19 +141,19 @@ Det finns olika alternativ för att distribuera Adobe Experience Manager-databas
 
 | **Plattform** | **Beskrivning** | **Supportnivå** |
 |---|---|---|
-| **Filsystem med TAR-filer[1 ]** | Databas | S:Stöds |
-| **Filsystem med datastore[1 ]** | Binärfiler | S:Stöds |
-| Lagra binärfiler i TAR-filer i filsystem [1] | Binärfiler | Z: Stöds inte för produktion |
-| Amazon S3 | Binärfiler | S:Stöds |
-| Microsoft Azure Blob Storage | Binärfiler | S:Stöds |
+| **Filsystem med TAR-filer`\[1]`** | Databas | S: Stöds |
+| **Filsystem med datastore`\[1]`** | Binärfiler | S: Stöds |
+| Lagra binärfiler i TAR-filer i filsystemet `\[1]` | Binärfiler | Z: Stöds inte för produktion |
+| Amazon S3 | Binärfiler | S: Stöds |
+| Microsoft Azure Blob Storage | Binärfiler | S: Stöds |
 | MongoDB Enterprise 4.0 | Databas | S: Stöds [2, 3] |
 | MongoDB Enterprise 3.6 | Databas | Z: Stöds inte |
 | MongoDB Enterprise 3.4 | Databas | Z: Stöds inte |
-| IBM DB2 10.5 | Databas för databas och formulär | R: Begränsad support [4] |
+| IBM DB2 10.5 | Databas för databas och formulär | R: Begränsat stöd `\[4]` |
 | Oracle Database 12c (12.1.x) | Databas för databas och formulär | R: Begränsat stöd |
-| Microsoft SQL Server 2016 | Formulärdatabas | S:Stöds |
-| **Apache Lucene (inbyggt i Quickstart)** | Söktjänst | S:Stöds |
-| Apache Solr | Söktjänst | S:Stöds |
+| Microsoft SQL Server 2016 | Formulärdatabas | S: Stöds |
+| **Apache Lucene (inbyggt i Quickstart)** | Söktjänst | S: Stöds |
+| Apache Solr | Söktjänst | S: Stöds |
 
 1. &#39;Filsystem&#39; inkluderar blocklagring som är POSIX-kompatibel. Detta inkluderar nätverkslagringsteknik. Tänk på att filsystemets prestanda kan variera och påverka den övergripande prestandan. Vi rekommenderar att du läser in test-AEM i kombination med nätverks-/fjärrfilsystemet.
 1. MongoDB-delning stöds inte i AEM.
@@ -194,13 +194,13 @@ Den lägsta servlet API-version som krävs är Servlet 3.1
 
 | Plattform | Supportnivå |
 |---|---|
-| **Quickstart inbyggd servermotor (9.4)** | S:Stöds |
+| **Quickstart inbyggd servermotor (9.4)** | S: Stöds |
 | Oracle WebLogic Server 12.2 (12cR2) | Z: Stöds inte |
-| IBM WebSphere Application Server Continuous Delivery (LibertyProfile) med Web Profile 7.0 och IBM JRE 1.8 | R: Begränsad support för nya kontrakt [2] |
-| IBM WebSphere Application Server 9.0 och IBM JRE 1.8 | R: Begränsad support för nya kontrakt [1] [2] |
-| Apache Tomcat 8.5.x | R: Begränsad support för nya kontrakt [2] |
+| IBM WebSphere Application Server Continuous Delivery (LibertyProfile) med Web Profile 7.0 och IBM JRE 1.8 | R: Begränsad support för nya kontrakt `\[2]` |
+| IBM WebSphere Application Server 9.0 och IBM JRE 1.8 | R: Begränsad support för nya kontrakt `\[1]``\[2]` |
+| Apache Tomcat 8.5.x | R: Begränsad support för nya kontrakt `\[2]` |
 | JBoss EAP 7.2.x med JBoss Application Server | Z: Stöds inte |
-| JBoss EAP 7.1.4 med JBoss Application Server | R: Begränsad support för nya kontrakt [1] [2] |
+| JBoss EAP 7.1.4 med JBoss Application Server | R: Begränsad support för nya kontrakt `\[1]``\[2]` |
 | JBoss EAP 7.0.x med JBoss Application Server | Z: Stöds inte |
 
 1. Rekommenderas för användning med AEM Forms.
@@ -212,11 +212,11 @@ Adobe Experience Manager fungerar med följande serverplattformar för produktio
 
 | **Plattform** | **Supportnivå** |
 |---|---|
-| **Linux, baserat på Red Hat-distribution** | S: Stöds [1] [3] |
-| Linux baserat på Debian-distribution inkl. Ubuntu | S: Stöds [2] |
-| Linux, baserat på SUSE-distribution | S:Stöds |
-| Microsoft Windows Server 2019 [4] | R: Begränsad support för nya kontrakt |
-| Microsoft Windows Server 2016 [4] | R: Begränsad support för nya kontrakt [5] |
+| **Linux, baserat på Red Hat-distribution** | S: Stöds `\[1]``\[3]` |
+| Linux baserat på Debian-distribution inkl. Ubuntu | S: Stöds `\[2]` |
+| Linux, baserat på SUSE-distribution | S: Stöds |
+| Microsoft Windows Server 2019 `\[4]` | R: Begränsad support för nya kontrakt |
+| Microsoft Windows Server 2016 `\[4]` | R: Begränsad support för nya kontrakt `\[5]` |
 | Microsoft Windows Server 2012 R2 | Z: Stöds inte |
 | Oracle Solaris 11 | Z: Stöds inte |
 | IBM AIX 7.2 | Z: Stöds inte |
@@ -245,8 +245,8 @@ Följande webbservrar kan användas med Dispatcher version 4.3.2:
 
 | Plattform | Supportnivå |
 |---|---|
-| **Apache httpd 2.4.x** [1,2] | S:Stöds |
-| Microsoft IIS 10 (Internet Information Server) | S:Stöds |
+| **Apache httpd 2.4.x** [1,2] | S: Stöds |
+| Microsoft IIS 10 (Internet Information Server) | S: Stöds |
 | Microsoft IIS 8.5 (Internet Information Server) | Z: Stöds inte |
 
 1. Webbservrar som byggts utifrån Apache httpd-källkoden har samma supportnivå som den version av httpd som den baseras på. Om du är osäker kan du be Adobe bekräfta den supportnivå som gäller respektive serverprodukt. Följande fall:
@@ -268,7 +268,7 @@ AEM-användargränssnittet är optimerat för större skärmar (vanligen bärbar
 >
 >**Stöd för webbläsare med snabb lansering:**
 >
->Uppdateringar av Mozilla Firefox, Google Chrome och Microsoft Edge var sjätte månad. Adobe kommer att tillhandahålla uppdateringar för Adobe Experience Manager för att upprätthålla den supportnivå som anges nedan för kommande versioner av dessa webbläsare.
+>Uppdateringar av Mozilla Firefox, Google Chrome och Microsoft Edge var sjätte månad. Adobe tillhandahåller uppdateringar för Adobe Experience Manager för att upprätthålla den supportnivå som anges nedan för kommande versioner av dessa webbläsare.
 
 <table>
  <tbody>
@@ -279,13 +279,13 @@ AEM-användargränssnittet är optimerat för större skärmar (vanligen bärbar
   </tr>
   <tr>
    <td><strong>Google Chrome (Evergreen)</strong></td>
-   <td>S:Stöds</td>
-   <td>S:Stöds</td>
+   <td>S: Stöds</td>
+   <td>S: Stöds</td>
   </tr>
   <tr>
    <td>Microsoft Edge (Evergreen)</td>
-   <td>S:Stöds</td>
-   <td>S:Stöds</td>
+   <td>S: Stöds</td>
+   <td>S: Stöds</td>
   </tr>
   <tr>
    <td>Microsoft Internet Explorer 11</td>
@@ -294,18 +294,18 @@ AEM-användargränssnittet är optimerat för större skärmar (vanligen bärbar
   </tr>
   <tr>
    <td>Mozilla Firefox (Evergreen)</td>
-   <td>S:Stöds</td>
-   <td>S:Stöds</td>
+   <td>S: Stöds</td>
+   <td>S: Stöds</td>
   </tr>
   <tr>
-   <td>Mozilla Firefox last ESR [1]</td>
-   <td>S:Stöds</td>
-   <td>S:Stöds</td>
+   <td>Mozilla Firefox last ESR `\[1]`</td>
+   <td>S: Stöds</td>
+   <td>S: Stöds</td>
   </tr>
   <tr>
    <td>Apple Safari på macOS (Evergreen)</td>
-   <td>S:Stöds</td>
-   <td>S:Stöds</td>
+   <td>S: Stöds</td>
+   <td>S: Stöds</td>
   </tr>
   <tr>
    <td>Apple Safari 11.x i macOS</td>
@@ -314,7 +314,7 @@ AEM-användargränssnittet är optimerat för större skärmar (vanligen bärbar
   </tr>
   <tr>
    <td>Apple Safari på iOS 12.x</td>
-   <td>S: Stöds [2]</td>
+   <td>S: Supported `\[2]`</td>
    <td>Z: Stöds inte</td>
   </tr>
   <tr>
@@ -336,7 +336,7 @@ I allmänhet är webbläsarstöd för webbplatser som återges av AEM Sites bero
 
 **Microsoft Windows 7+**
 
-Om du vill ansluta med Microsoft Windows 7+ till en AEM-instans som inte är säker med SSL måste grundläggande autentisering över oskyddat nätverk aktiveras i Windows. Detta kräver en ändring i Windows-registret för WebClient:
+Om du vill ansluta med Microsoft Windows 7+ till en AEM-instans som inte är säker med SSL måste grundläggande autentisering över osäkert nätverk aktiveras i Windows. Detta kräver en ändring i Windows-registret för WebClient:
 
 1. Leta reda på registerundernyckeln:
 
@@ -400,13 +400,13 @@ Om du använder Dynamic Media i Linux måste följande krav vara uppfyllda:
 
 >[!NOTE]
 >
->**** Inaktiverar SELinux: Image Serving fungerar inte med SELinux aktiverat. Det här alternativet är aktiverat som standard. Du åtgärdar detta genom att redigera filen **/etc/selinux/config** och ändra SELinux-värdet från:
+>**Inaktiverar SELinux:** Image Serving fungerar inte med SELinux aktiverat. Det här alternativet är aktiverat som standard. Du åtgärdar detta genom att redigera filen **/etc/selinux/config** och ändra SELinux-värdet från:
 >
 >`SELINUX=enforcing` **till**`SELINUX=disabled`
 
 >[!NOTE]
 >
->**** NUMA-arkitektur: System med processorer med AMD64 och Intel EM64T är vanligtvis konfigurerade som icke-enhetliga minnesarkitekturplattformar (NUMA), vilket innebär att kärnan konstruerar flera minnesnoder vid start i stället för att konstruera en enda minnesnod.
+>**NUMA-arkitektur:** System med processorer med AMD64 och Intel EM64T är vanligtvis konfigurerade som icke-enhetliga minnesarkitekturplattformar (NUMA), vilket innebär att kärnan konstruerar flera minnesnoder vid start i stället för att konstruera en enda minnesnod.
 >
 >Konstruktionen för flera noder kan resultera i minnesöverbelastning på en eller flera av noderna innan andra noder töms. När minnesöverbelastning inträffar kan kärnan bestämma sig för att avsluta processer (till exempel Image Server eller Platform Server) trots att det finns tillgängligt minne.
 >
@@ -414,7 +414,7 @@ Om du använder Dynamic Media i Linux måste följande krav vara uppfyllda:
 
 >[!NOTE]
 >
->**** Servervärdnamnet måste matcha: Kontrollera att serverns värdnamn kan matchas till en IP-adress. Om det inte är möjligt lägger du till det fullständiga, kvalificerade värdnamnet och IP-adressen till **/etc/värdar**:
+>**Servervärdnamnet måste matcha:** Kontrollera att serverns värdnamn kan matchas till en IP-adress. Om det inte är möjligt lägger du till det fullständiga, kvalificerade värdnamnet och IP-adressen till **/etc/värdar**:
 >
 >`<ip address> <fully qualified hostname>`
 
