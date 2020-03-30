@@ -10,7 +10,7 @@ topic-tags: develop
 discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -81,7 +81,7 @@ När förutsättningarna är uppfyllda utför du följande steg för att konfigu
 
    Tryck på **[!UICONTROL Skapa]** för att skapa Adobe Sign-konfigurationen.
 
-1. Öppna AEM Web Console. URL:en är `https://[server]:[port]/system/console/configMgr`
+1. Öppna AEM Web Console. URL:en är `https://'[server]:[port]'/system/console/configMgr`
 1. Öppna **Forms Common Configuration Service.**
 1. I fältet **Tillåt** **väljer** du Alla användare - Alla användare, anonyma eller inloggade, kan förhandsgranska bilagor, verifiera och signera formulär och klicka på **Spara.** Författarinstansen är konfigurerad att använda Adobe Sign.
 1. Logga in på [Publish](/help/sites-deploying/deploy.md) -instansen och öppna följande URL:
@@ -99,7 +99,7 @@ Ett anpassat formulär aktiverat för Adobe Sign skickas endast när alla signer
 1. Logga in på AEM Forms-servern med administratörsuppgifter och gå till **Verktyg** > **Åtgärder** > **Webbkonsol**.
 
    Du kan även öppna följande URL-adress i ett webbläsarfönster:
-   `https://[localhost]:[port]/system/console/configMgr`
+   `https://[localhost]:'port'/system/console/configMgr`
 
 1. Leta reda på och öppna **konfigurationstjänsten** för Adobe Sign. Ange ett [cron-uttryck](https://en.wikipedia.org/wiki/Cron#CRON_expression) i fältet **Status Update Scheduler Expression** och klicka på **Save**. Om du till exempel vill köra konfigurationstjänsten varje dag klockan 00:00 anger du `0 0 0 1/1 * ? *` i fältet **Status Update Scheduler Expression** .
 
