@@ -10,7 +10,7 @@ topic-tags: forms-app
 discoiquuid: 88555db2-712f-4ef9-bf47-76c7ba83d964
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4a0f3f64095b4726f295a0c1857a1e999353f5f5
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -150,7 +150,7 @@ Du måste arkivera Xcode-projektet för att skapa installationsprogrammet (en IP
 1. Välj **Spara för företag eller Ad-hoc-distribution** som distributionsmetod och klicka på **Nästa**.
 1. Välj lämplig **kodsigneringsidentitet** och klicka på **Nästa**. Klicka på **Tillåt** för att använda signaturen.
 1. Ange appens namn och välj **Spara för företagsdistribution**.
-1. Ange programmets **program-URL** . Ange till exempel URL om du vill ha programmet på en CRX-server `https://[LC_host]:[port]/lc/content/distribution/mobileworkspace/APP_NAME.ipa`.
+1. Ange programmets **program-URL** . Ange till exempel URL om du vill ha programmet på en CRX-server `https://[LC_host]:'port'/lc/content/distribution/mobileworkspace/APP_NAME.ipa`.
 1. Ange AEM-formulär i fältet **Titel** .
 1. Klicka på **Spara** och stäng Xcode.
 
