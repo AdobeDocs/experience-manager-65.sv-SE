@@ -10,7 +10,7 @@ topic-tags: forms-manager
 discoiquuid: 28b9f1d6-6a52-458f-a8ed-a206502eda0d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -33,11 +33,11 @@ Du kan överföra de resurstyper som stöds individuellt eller som ett ZIP-arkiv
 
 ## Överföra formulär {#uploading-forms}
 
-1. Logga in i användargränssnittet för AEM Forms via `https://[server]:[port]/aem/forms.html`.
+1. Logga in i användargränssnittet för AEM Forms via `https://'[server]:[port]'/aem/forms.html`.
 1. Navigera till mappen där du vill överföra formuläret eller mappen som innehåller formulär.
 1. Tryck på **Skapa > Filöverföring** i verktygsfältet för åtgärder.
 
-   ![Filer från lokal lagring under Skapa](assets/step.png)
+   ![Filer från lokal lagring, alternativ under Skapa](assets/step.png)
 
 1. I dialogrutan Skicka formulär eller paket kan du bläddra och välja vilken fil du vill överföra. I filläsaren visas endast de filformat som stöds (ZIP, XDP och PDF).
 
@@ -65,7 +65,7 @@ Med AEM Forms-servern kan du köra JavaScript-kod. En skadlig JavaScript-kod kan
 
 Det skyddade läget är aktiverat som standard. Om det behövs kan du inaktivera skyddat läge:
 
-1. Logga in på AEM Web Console som administratör. URL:en är https://[server]:[port]/system/console/configMgr
+1. Logga in på AEM Web Console som administratör. URL:en är https://&#39;[server]:[port]&#39;/system/console/configMgr
 1. Öppna Mobile Forms Configurations för redigering.
 1. Avmarkera alternativet Skyddat läge och klicka på **Spara**. Skyddat läge är inaktiverat.
 
