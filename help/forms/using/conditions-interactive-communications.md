@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: fe59d260-d392-4d6f-bb7e-2f2a1d701f51
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a326e508a781b3afaba8b5e371aa862a30536740
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -74,7 +74,7 @@ Resurserna i de villkor som återges baserat på de regler som tillämpas och de
 
    ![createconditionscreenassetsaddedannotated](assets/createconditionscreenassetsaddedannotated.png)
 
-   **[En]avvisa ändring.**Tryck på den här ikonen om du vill ignorera de ändringar du kan ha gjort i resursen och regeln i villkoret.   **[B]Acceptera ändring.**Tryck på den här ikonen om du vill acceptera ändringarna som du har gjort i resursen och regeln i villkoret.   **[C]Duplicera resurs.**Tryck på den här ikonen om du vill skapa en kopia av resursen tillsammans med den tillämpade regeln, om någon, i villkoret. Sedan kan du fortsätta redigera regeln och resursen för duplicerad resurs. Att duplicera en resurs är användbart när du vill skapa liknande regler för att visa alternativa resurser baserat på en viss kontext.   **[D]Visa förhandsgranskning.**Tryck på den här ikonen om du vill visa en förhandsvisning av resursen på sidan Skapa\Redigera villkor.   **[E]Ändra ordning.**Tryck och håll ned den här ikonen om du vill dra och släppa resurser för att ändra ordning på dem i ett villkor.
+   **[En]avvisa ändring.**Tryck på den här ikonen om du vill ignorera de ändringar du kan ha gjort i resursen och regeln i villkoret.   **[B]Acceptera ändring.**Tryck på den här ikonen om du vill acceptera ändringarna som du har gjort i resursen och regeln i villkoret.   **[C]Duplicera resurs.**Tryck på den här ikonen om du vill skapa en kopia av resursen tillsammans med den tillämpade regeln, om någon, i villkoret. Sedan kan du fortsätta redigera regeln och resursen för duplicerad resurs. Att duplicera en resurs är användbart när du vill skapa liknande regler för att visa alternativa resurser baserat på en viss kontext.   **[D]Visa förhandsgranskning.**Tryck på den här ikonen om du vill visa en förhandsvisning av resursen på sidan Skapa\Redigera villkor.   **&#39;server&#39; Ändra ordning.** Tryck och håll ned den här ikonen om du vill dra och släppa resurser för att ändra ordning på dem i ett villkor.
 
    Du kan välja följande alternativ för att ange hur villkoret fungerar under körning:
 
