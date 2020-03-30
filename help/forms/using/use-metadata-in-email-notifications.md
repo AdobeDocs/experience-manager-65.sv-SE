@@ -8,7 +8,7 @@ topic-tags: publish
 discoiquuid: d48b5137-c866-43cd-925b-7a6a8eac8c0b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -155,7 +155,7 @@ Du kan också använda anpassade metadata i ett e-postmeddelande. Anpassade meta
 
 [ECMAScript](https://en.wikipedia.org/wiki/ECMAScript) är ett skriptspråk. Det används för skript och serverprogram på klientsidan. Utför följande steg för att använda ECMAScript för att lägga till anpassade metadata för en e-postmall:
 
-1. Logga in på CRX DE med ett administratörskonto. URL:en är https://[server]:[port]/crx/de/index.jsp
+1. Logga in på CRX DE med ett administratörskonto. URL:en är https://&#39;[server]:[port]&#39;/crx/de/index.jsp
 
 1. Gå till /apps/fd/dashboard/scripts/metadataScripts. Skapa en fil med filnamnstillägget .ecma. Exempel: usermetadata.ecma
 
