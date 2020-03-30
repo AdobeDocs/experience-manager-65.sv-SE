@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 180cac3f-6378-42bc-9a47-60f9f08a7103
 translation-type: tm+mt
-source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -166,7 +166,7 @@ Konvertera ett Microsoft Word-dokument till ett PDF-dokument med hjälp av Gener
 
    Så här hämtar du PDF-dokumentet:
 
-   * Anropa `CreatePDFResult` objektets `getCreatedDocument` metod som returnerar ett `com.adobe.idp.Document` objekt.
+   * Anropa `CreatePDFResult` objektets `getCreatedDocument` metod, som returnerar ett `com.adobe.idp.Document` objekt.
    * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att extrahera PDF-dokumentet från objektet som skapades i föregående steg.
    Utför följande åtgärder om du använde metoden för att hämta loggdokumentet (gäller inte för HTML-konverteringar): `createPDF2`
 
@@ -186,7 +186,7 @@ Konvertera ett Microsoft Word-dokument till ett PDF-dokument med hjälp av Gener
 
 ### Konvertera Word-dokument till PDF-dokument med webbtjänstens API {#convert-word-documents-to-pdf-documents-using-the-web-service-api}
 
-Konvertera ett Microsoft Word-dokument till ett PDF-dokument med hjälp av Generate PDF API (webbtjänsten):
+Konvertera ett Microsoft Word-dokument till ett PDF-dokument med hjälp av Generera PDF API (webbtjänst):
 
 1. Inkludera projektfiler.
 
@@ -570,7 +570,7 @@ Komponentinteraktioner för intern filkonvertering
 
 I det här dokumentet används termen *ursprungsprogram* för att ange vilket program som används för att skapa ett internt filformat, t.ex. Microsoft Word.
 
-*AppMon* är en företagskomponent som interagerar med ett systemspecifikt program på samma sätt som en användare navigerar genom de dialogrutor som visas i det programmet. Den XML-grammatik som används av AppMon för att instruera ett program, t.ex. Microsoft Word, att öppna och skriva ut en fil omfattar följande sekventiella uppgifter:
+*AppMon* är en företagskomponent som interagerar med ett systemspecifikt program på samma sätt som en användare navigerar i de dialogrutor som visas i det programmet. Den XML-grammatik som används av AppMon för att instruera ett program, t.ex. Microsoft Word, att öppna och skriva ut en fil omfattar följande sekventiella uppgifter:
 
 1. Öppna filen genom att välja Arkiv > Öppna
 1. se till att dialogrutan Öppna visas, om inte, hantera felet
@@ -606,7 +606,7 @@ I den här tabellen visas vilken typ av information som används vid utskrift av
   <tr>
    <td><p>Skript </p></td>
    <td><p>Anger interaktioner mellan tjänsten Generera PDF och ett systemspecifikt program. Sådana interaktioner dirigerar vanligtvis programmet till Adobe PDF-drivrutinen. </p><p>Skriptet innehåller instruktioner som instruerar det ursprungliga programmet att öppna specifika dialogrutor och som ger specifika svar på fält och knappar i dessa dialogrutor. </p></td>
-   <td><p>Tjänsten Generate PDF innehåller skriptfiler för alla originalprogram som stöds. Du kan ändra dessa filer med ett XML-redigeringsprogram.</p><p>Om du vill lägga till stöd för ett nytt inbyggt program måste du skapa en ny skriptfil. (Se <a href="converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application">Skapa eller ändra ytterligare en dialogrute-XML-fil för ett internt program</a>.) </p></td>
+   <td><p>Tjänsten Generate PDF innehåller skriptfiler för alla originalprogram som stöds. Du kan ändra dessa filer med ett XML-redigeringsprogram.</p><p>Om du vill lägga till stöd för ett nytt systemspecifikt program måste du skapa en ny skriptfil. (Se <a href="converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application">Skapa eller ändra ytterligare en dialogrute-XML-fil för ett internt program</a>.) </p></td>
   </tr>
   <tr>
    <td><p>Allmänna instruktioner i dialogrutan </p></td>
@@ -615,12 +615,12 @@ I den här tabellen visas vilken typ av information som används vid utskrift av
   </tr>
   <tr>
    <td><p>Programspecifika dialogruteinstruktioner</p></td>
-   <td><p>Anger hur programspecifika dialogrutor ska besvaras. </p><p>Filen som innehåller den här informationen är giltig.<i>[appname]</i>.dialog.<i>[locale]</i>.xml (till exempel appmon.word.en_US.xml).</p></td>
+   <td><p>Anger hur programspecifika dialogrutor ska besvaras. </p><p>Filen som innehåller den här informationen är giltig.<i>`[appname]`</i>.dialog.<i>`[locale]`</i>.xml (t.ex. appmon.word.en_US.xml).</p></td>
    <td><p>Ändra inte den här filen. </p><p>Information om hur du lägger till dialogruteinstruktioner för ett nytt inbyggt program finns i <a href="converting-file-formats-pdf.md#creating_or_modifying_an_additional_dialog_xml_file_for_a_native_application">Skapa eller ändra ytterligare en dialogrute-XML-fil för ett inbyggt program</a>.</p></td>
   </tr>
   <tr>
    <td><p>Ytterligare programspecifika dialogruteinstruktioner </p></td>
-   <td><p>Anger åsidosättningar och tillägg till programspecifika dialogruteinstruktioner. I avsnittet visas ett exempel på sådan information. </p><p>Filen som innehåller den här informationen är giltig.<i>[appname]</i>.addition.<i>[locale]</i>.xml. Ett exempel är appmon.addition.en_US.xml.</p></td>
+   <td><p>Anger åsidosättningar och tillägg till programspecifika dialogruteinstruktioner. I avsnittet visas ett exempel på sådan information. </p><p>Filen som innehåller den här informationen är giltig.<i>`[appname]`</i>.addition.<i>`[locale]`</i>.xml. Ett exempel är appmon.addition.en_US.xml.</p></td>
    <td><p>Filer av den här typen kan skapas och ändras med ett XML-redigeringsprogram. (Se <a href="converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application">Skapa eller ändra ytterligare en dialogrute-XML-fil för ett internt program</a>.) </p><p><strong>Viktigt</strong>: Du måste skapa ytterligare programspecifika dialogruteinstruktioner för varje systemspecifikt program som servern stöder. </p></td>
   </tr>
  </tbody>
@@ -672,9 +672,9 @@ En *dialogrute-XML-fil* anger hur tjänsten Generate PDF svarar på systemdialog
 
 När systemet eller det inbyggda programmet visar en dialogruta som inte hanteras av den XML-fil som för närvarande körs, söker tjänsten Generera PDF igenom XML-filer i dialogrutan i den här ordningen och stoppar när en matchning hittas:
 
-* appmon.*[appname]*.additional.*[locale]*.xml
-* appmon.*[appname].[locale]*.xml (Ändra inte den här filen.)
-* appmon.global.*[locale]*.xml (Ändra inte den här filen.)
+* appmon.`[appname]`.additional.`[locale]`.xml
+* appmon.`[appname]`.`[locale]`.xml (Ändra inte den här filen.)
+* appmon.global.`[locale]`.xml (Ändra inte den här filen.)
 
 Om tjänsten Generera PDF hittar en matchning för dialogrutan stängs den av genom att den skickas med tangentbordet eller någon annan åtgärd som har angetts för dialogrutan. Om instruktionerna för dialogrutan anger ett avbrottsmeddelande avbryter tjänsten Generera PDF det jobb som körs och genererar ett felmeddelande. Ett sådant abort-meddelande skulle anges i elementet `abortMessage` i skriptets XML-grammatik.
 
@@ -737,11 +737,11 @@ När du har lagt till dessa XML-filer i filen adobe-appmondata.jar måste du dis
 1. Expandera Aktiva tjänster. En grön pil visas bredvid tjänstnamnet om det körs. Annars är tjänsten i stoppat läge.
 1. Om tjänsten är stoppad högerklickar du på tjänstnamnet och väljer Starta tjänst.
 
-### Skapa eller ändra en skript-XML-fil för ett internt program {#creating-or-modifying-a-script-xml-file-for-a-native-application}
+### Skapa eller ändra en skript-XML-fil för ett program {#creating-or-modifying-a-script-xml-file-for-a-native-application}
 
 Om du vill dirigera filer till ett nytt originalprogram måste du skapa en skript-XML-fil för det programmet. Om du vill ändra hur tjänsten Generera PDF interagerar med ett program som redan stöds måste du ändra skriptet för det programmet.
 
-Skriptet innehåller instruktioner som navigerar genom det inbyggda programmets fönsterelement och som ger specifika svar på dessa element. Filen som innehåller den här informationen är `appmon.[appname]` `.script.[locale].xml`. Ett exempel är appmon.notepad.script.en_US.xml.
+Skriptet innehåller instruktioner som navigerar genom det inbyggda programmets fönsterelement och som ger specifika svar på dessa element. Filen som innehåller den här informationen är `appmon.`[appname]&quot; `.script.`[locale]`.xml`. Ett exempel är appmon.notepad.script.en_US.xml.
 
 #### Identifiera steg som skriptet måste köra {#identifying-steps-the-script-must-execute}
 
@@ -836,7 +836,7 @@ Om du skapar ett skript för ett internt program som inte stöds tidigare, måst
 
 >[!NOTE]
 >
->I det här sammanhanget innebär termen ytterligare innehållet i `appmon.[applicationname].addition.[locale].xml` filen. En sådan fil anger åsidosättningar och tillägg till XML-filen i dialogrutan.
+>I detta sammanhang innebär termen ytterligare innehållet i filen `appmon.[applicationname].addition.[locale]`.xml. En sådan fil anger åsidosättningar och tillägg till XML-filen i dialogrutan.
 
 Du kan också ändra XML-filen för ytterligare dialogrutor för ett internt program för följande syften:
 
