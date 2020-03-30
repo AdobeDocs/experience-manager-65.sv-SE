@@ -8,7 +8,7 @@ content-type: troubleshooting
 topic-tags: publish
 discoiquuid: e6c9f3bb-8f20-4889-86f4-d30578fb1c51
 translation-type: tm+mt
-source-git-commit: 06335b9a85414b6b1141dd19c863dfaad0812503
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -25,7 +25,7 @@ Tilldela uppgifter och Adobe Sign-steg i [formulärbaserade arbetsflöden i OSGi
 
 ECMAScript är ett skriptspråk. Det används för skript och serverprogram på klientsidan. Utför följande steg för att dynamiskt välja en användare eller grupp med ECMAScript:
 
-1. Öppna CRXDE Lite. URL:en är `https://[server]:[port]/crx/de/index.jsp`
+1. Öppna CRXDE Lite. URL:en är `https://'[server]:[port]'/crx/de/index.jsp`
 1. Skapa en fil med filtillägget .ecma i följande sökväg. Om sökvägen (nodstrukturen) inte finns skapar du den:
 
    * (Sökväg för steget Tilldela uppgift) `/apps/fd/dashboard/scripts/participantChooser`
