@@ -10,7 +10,7 @@ topic-tags: customization
 discoiquuid: 136ac7e3-9d1f-4d58-bd4f-9dbe09eeafee
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9d90bc5f77f827925e3e1ecd12d56a94a2bbae30
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -50,7 +50,7 @@ Skapa ett tema med hjälp av temaredigeraren för att anpassa layouten för alla
 
 ## Skapa en anpassad fältlayout {#create-a-custom-field-layout}
 
-1. Öppna CRXDE lite. Standardwebbadressen är https://[Server]:[Port]/crx/de.
+1. Öppna CRXDE lite. Standardwebbadressen är https://&#39;[server]:[port]&#39;/crx/de.
 1. Kopiera en fältlayout från noden /libs/fd/af/layouts/field (till exempel defaultFieldLayout) till noden /apps (till exempel /apps/af-field-layout).
 1. Byt namn på den kopierade noden och filen defaultFieldLayout.jsp. Till exempel errorOnRight.jsp.
 
