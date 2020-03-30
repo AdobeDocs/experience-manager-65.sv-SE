@@ -11,7 +11,7 @@ topic-tags: forms-workspace
 discoiquuid: 89f9d666-28e2-4201-8467-ae90693ca5d2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 21623c615ebe69226cfaf84baf4cfb1717b449f4
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -37,7 +37,7 @@ Innan du utför ovanstående steg måste du följa de steg som beskrivs i [Allm�
 Utför följande steg för att lägga till stöd för språket *Nytt* och webbläsarens språkkod *nu*.
 
 1. Logga in på CRXDE Lite.
-Standardwebbadressen för CRXDE Lite är `https://[server]:[port]/lc/crx/de/index.jsp`.
+Standardwebbadressen för CRXDE Lite är `https://'[server]:[port]'/lc/crx/de/index.jsp`.
 1. Navigera till platsen `apps/ws/locales` och skapa en ny mapp `nw.`
 1. Kopiera filen `translation.json`från platsen `/apps/ws/locales/en-US` till platsen `/apps/ws/locales/nw` .
 1. Navigera till `/apps/ws/locales/nw` och öppna `translation.json` för redigering. Gör språkspecifika ändringar i filen translation.json.
@@ -54,7 +54,7 @@ I följande steg antas de nya lokaliserade bildfilerna vara *Categories_nw.png*,
 
 >[!NOTE]
 >
->För att hitta språkkoden för webbläsaren. Öppna `https://[server]:[port]/lc/libs/ws/Locale.html`.
+>För att hitta språkkoden för webbläsaren. Öppna `https://'[server]:[port]'/lc/libs/ws/Locale.html`.
 
 ![collapsing_panels_image](assets/collapsing_panels_image.png)
 
