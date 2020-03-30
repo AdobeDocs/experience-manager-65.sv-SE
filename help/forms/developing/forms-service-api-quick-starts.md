@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 9fe48243-24c6-4e08-9886-148cd99dec87
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -122,7 +122,7 @@ I följande kodexempel återges ett interaktivt PDF-formulär med namnet *Loan.x
          try{
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -147,9 +147,9 @@ I följande kodexempel återges ett interaktivt PDF-formulär med namnet *Loan.x
  
              //Specify URI values that are required to render a form
              URLSpec uriValues = new URLSpec();
-             uriValues.setApplicationWebRoot("https://[server]:[port]/FormsQS");
+             uriValues.setApplicationWebRoot("https://'[server]:[port]'/FormsQS");
              uriValues.setContentRootURI("repository:///");
-             uriValues.setTargetURL("https://[server]:[port]/FormsQS/HandleData");
+             uriValues.setTargetURL("https://'[server]:[port]'/FormsQS/HandleData");
  
              //Specify file attachments to attach to the form
              FileInputStream fileAttachment = new FileInputStream("C:\\rideau1.jpg");
@@ -263,7 +263,7 @@ I följande kodexempel återges ett formulär med namnet *Loan.xdp* på klienten
      try{
          //Set connection properties required to invoke AEM Forms
          Properties connectionProps = new Properties();
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -286,9 +286,9 @@ I följande kodexempel återges ett formulär med namnet *Loan.xdp* på klienten
  
          //Specify URI values required to render a form
          URLSpec uriValues = new URLSpec();
-         uriValues.setApplicationWebRoot("https://[server]:[port]/FormsServiceClientApp");
+         uriValues.setApplicationWebRoot("https://'[server]:[port]'/FormsServiceClientApp");
          uriValues.setContentRootURI("repository:///");
-         uriValues.setTargetURL("https://[server]:[port]/FormsServiceClientApp/HandleData");
+         uriValues.setTargetURL("https://'[server]:[port]'/FormsServiceClientApp/HandleData");
  
          //Invoke the renderPDFForm method to render
          //an interactive PDF form on the client
@@ -397,7 +397,7 @@ I följande kodexempel återges en guide (utgått) med namnet *TLALifeClaim.xdp*
  
          //Set connection properties required to invoke AEM Forms
          Properties connectionProps = new Properties();
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -423,9 +423,9 @@ I följande kodexempel återges en guide (utgått) med namnet *TLALifeClaim.xdp*
          //Specify URI values that are required to render a form
          //design located in the AEM Forms repository
          URLSpec uriValues = new URLSpec();
-         uriValues.setApplicationWebRoot("https://[server]:[port]/FormsQS");
+         uriValues.setApplicationWebRoot("https://'[server]:[port]'/FormsQS");
          uriValues.setContentRootURI("repository:///");
-         uriValues.setTargetURL("https://[server]:[port]/FormsQS/HandleData");
+         uriValues.setTargetURL("https://'[server]:[port]'/FormsQS/HandleData");
  
  
          //Invoke the renderFormGuide method
@@ -532,7 +532,7 @@ I följande kodexempel återges ett formulär som är baserat på fragment. Namn
          try{
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -557,9 +557,9 @@ I följande kodexempel återges ett formulär som är baserat på fragment. Namn
              //Specify URI values that are required to render a form
              //design based on fragments
              URLSpec uriValues = new URLSpec();
-             uriValues.setApplicationWebRoot("https://[server]:[port]/FormsServiceClientApp");
+             uriValues.setApplicationWebRoot("https://'[server]:[port]'/FormsServiceClientApp");
              uriValues.setContentRootURI("repository:///");
-             uriValues.setTargetURL("https://[server]:[port]/FormsServiceClientApp/HandleData");
+             uriValues.setTargetURL("https://'[server]:[port]'/FormsServiceClientApp/HandleData");
  
              //Invoke the renderPDFForm method and write the
              //results to a client web browser
@@ -665,7 +665,7 @@ I följande kodexempel återges ett rättighetsaktiverat formulär i en webbläs
      try{
          //Set connection properties required to invoke AEM Forms
          Properties connectionProps = new Properties();
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -692,9 +692,9 @@ I följande kodexempel återges ett rättighetsaktiverat formulär i en webbläs
  
          //Specify URI values required to render the form
          URLSpec uriValues = new URLSpec();
-         uriValues.setApplicationWebRoot("https://[server]:[port]/FormsQS");
+         uriValues.setApplicationWebRoot("https://'[server]:[port]'/FormsQS");
          uriValues.setContentRootURI("repository:///");
-         uriValues.setTargetURL("https://[server]:[port]/FormsQS/HandleData");
+         uriValues.setTargetURL("https://'[server]:[port]'/FormsQS/HandleData");
  
          //Render a rights-enabled PDF form
          FormsResult formOut = formsClient.renderPDFFormWithUsageRights(
@@ -804,7 +804,7 @@ I följande kodexempel återges ett HTML-formulär med Java API:t för Forms-tj�
  
                  //Set connection properties required to invoke AEM Forms
                  Properties connectionProps = new Properties();
-                 connectionProps.setProperty("DSC_DEFAULT_SOAP_ENDPOINT", "https://[server]:[port]");
+                 connectionProps.setProperty("DSC_DEFAULT_SOAP_ENDPOINT", "https://'[server]:[port]'");
                  connectionProps.setProperty("DSC_TRANSPORT_PROTOCOL","SOAP");
                  connectionProps.setProperty("DSC_SERVER_TYPE", "JBoss");
                  connectionProps.setProperty("DSC_CREDENTIAL_USERNAME", "administrator");
@@ -837,9 +837,9 @@ I följande kodexempel återges ett HTML-formulär med Java API:t för Forms-tj�
  
                  //Specify URI values that are required to render a form
                  URLSpec uriValues = new URLSpec();
-                 uriValues.setApplicationWebRoot("https://[server]:[port]/FormsQS");
+                 uriValues.setApplicationWebRoot("https://'[server]:[port]'/FormsQS");
                  uriValues.setContentRootURI("repository:///");
-                 uriValues.setTargetURL("https://[server]:[port]/FormsQS/HandleSubmittedHTMLForm");
+                 uriValues.setTargetURL("https://'[server]:[port]'/FormsQS/HandleSubmittedHTMLForm");
  
                  //Specify file attachments
                  FileInputStream myForm = new FileInputStream("C:\\Attach1.txt");
@@ -966,7 +966,7 @@ I följande kodexempel återges ett HTML-formulär med hjälp av Forms-tjänsten
              try{
                  //Set connection properties required to invoke AEM Forms
                  Properties connectionProps = new Properties();
-                 connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+                 connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
                  connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
                  connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
                  connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -996,9 +996,9 @@ I följande kodexempel återges ett HTML-formulär med hjälp av Forms-tjänsten
  
                  //Specify URI values that are required to render a form
                  URLSpec uriValues = new URLSpec();
-                 uriValues.setApplicationWebRoot("https://[server]:[port]/FormsQS");
+                 uriValues.setApplicationWebRoot("https://'[server]:[port]'/FormsQS");
                  uriValues.setContentRootURI("repository:///");
-                 uriValues.setTargetURL("https://[server]:[port]/FormsQS/HandleData");
+                 uriValues.setTargetURL("https://'[server]:[port]'/FormsQS/HandleData");
  
                  //Specify file attachments
                  FileInputStream myForm = new FileInputStream("C:\\Attach1.txt");
@@ -1119,7 +1119,7 @@ I följande kodexempel återges ett HTML-formulär med ett verktygsfält som vis
              try{
                  //Set connection properties required to invoke AEM Forms
                  Properties connectionProps = new Properties();
-                 connectionProps.setProperty("DSC_DEFAULT_SOAP_ENDPOINT", "https://[server]:[port]");
+                 connectionProps.setProperty("DSC_DEFAULT_SOAP_ENDPOINT", "https://'[server]:[port]'");
                  connectionProps.setProperty("DSC_TRANSPORT_PROTOCOL","SOAP");
                  connectionProps.setProperty("DSC_SERVER_TYPE", "JBoss");
                  connectionProps.setProperty("DSC_CREDENTIAL_USERNAME", "administrator");
@@ -1151,9 +1151,9 @@ I följande kodexempel återges ett HTML-formulär med ett verktygsfält som vis
  
                  //Specify URI values that are required to render a form
                  URLSpec uriValues = new URLSpec();
-                 uriValues.setApplicationWebRoot("https://[server]:[port]/FormsQS");
+                 uriValues.setApplicationWebRoot("https://'[server]:[port]'/FormsQS");
                  uriValues.setContentRootURI("repository:///");
-                 uriValues.setTargetURL("https://[server]:[port]/FormsQS/HandleData");
+                 uriValues.setTargetURL("https://'[server]:[port]'/FormsQS/HandleData");
  
                  //Specify file attachments
                  FileInputStream myForm = new FileInputStream("C:\\Attach1.txt");
@@ -1283,7 +1283,7 @@ I följande kodexempel hanteras ett formulär som skickas som XML. Det innehåll
  
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -1452,7 +1452,7 @@ I följande kodexempel hanteras ett formulär som skickas som PDF-data. Det inne
  
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -1605,7 +1605,7 @@ I följande kodexempel hanteras ett HTML-formulär som skickas som XML-data. Det
  
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -1776,7 +1776,7 @@ I följande Java-kodexempel hanteras formulärdata som skickas som XML. Formulä
  
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -2197,7 +2197,7 @@ public class RenderDynamicForm extends HttpServlet implements Servlet {
   try {
    //Set connection properties required to invoke AEM Forms
    Properties connectionProps = new Properties();
-   connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+   connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
    connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL, ServiceC
    lientFactoryProperties.DSC_SOAP_PROTOCOL);
    connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
@@ -2214,9 +2214,9 @@ public class RenderDynamicForm extends HttpServlet implements Servlet {
    pdfFormRenderSpec.setCacheEnabled(new Boolean(true));
    //Specify URI values that are required to render a form
    URLSpec uriValues = new URLSpec();
-   uriValues.setApplicationWebRoot("https://[server]:[port]/FormsQS");
+   uriValues.setApplicationWebRoot("https://'[server]:[port]'/FormsQS");
    uriValues.setContentRootURI("repository:///");
-   uriValues.setTargetURL("https://[server]:[port]/FormsQS/HandleData");
+   uriValues.setTargetURL("https://'[server]:[port]'/FormsQS/HandleData");
    //Invoke the renderForm method
    FormsResult formOut = formsClient.renderPDFForm(
    formName, //formQuery
@@ -2310,7 +2310,7 @@ I följande kodexempel bearbetas ett formulär som innehåller ett beräkningssk
          try{
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -2427,7 +2427,7 @@ Följande kodexempel optimerar prestanda genom att ställa in alternativen för 
  
          //Set connection properties required to invoke AEM Forms
          Properties connectionProps = new Properties();
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -2452,9 +2452,9 @@ Följande kodexempel optimerar prestanda genom att ställa in alternativen för 
          //Specify URI values that are required to render a form
          //design located in the AEM Forms Repository
          URLSpec uriValues = new URLSpec();
-         uriValues.setApplicationWebRoot("https://[server]:[port]/FormsServiceClientApp");
+         uriValues.setApplicationWebRoot("https://'[server]:[port]'/FormsServiceClientApp");
          uriValues.setContentRootURI("repository:///");
-         uriValues.setTargetURL("https://[server]:[port]/FormsServiceClientApp/HandleData");
+         uriValues.setTargetURL("https://'[server]:[port]'/FormsServiceClientApp/HandleData");
  
          //Invoke the renderPDFForm method and write the
          //results to a client web browser
@@ -2557,7 +2557,7 @@ Följande Java-snabbstart återger ett interaktivt PDF-formulär som är baserat
          try{
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -2575,8 +2575,8 @@ Följande Java-snabbstart återger ett interaktivt PDF-formulär som är baserat
  
              //Specify URI values that are required to render a form
              URLSpec uriValues = new URLSpec();
-             uriValues.setApplicationWebRoot("https://[server]:[port]/FormsQS");
-             uriValues.setTargetURL("https://[server]:[port]/FormsQS/HandleData");
+             uriValues.setApplicationWebRoot("https://'[server]:[port]'/FormsQS");
+             uriValues.setTargetURL("https://'[server]:[port]'/FormsQS/HandleData");
  
              //Invoke the renderPDFForm method and pass the
              //form design by value
@@ -2671,7 +2671,7 @@ Följande Java-snabbstart hämtar filen Loan.xdp från Content Services (utgått
          try{
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
