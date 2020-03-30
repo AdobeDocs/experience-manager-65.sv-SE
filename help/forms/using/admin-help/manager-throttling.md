@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/maintaining_aem_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9a8b4e3a-f416-4dc6-a90a-9018df5c844e
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -84,7 +84,7 @@ Du kan konfigurera begränsning för Work Manager så att arbetsobjekt schemalä
 
 **Lägg till Java-alternativ i WebLogic**
 
-1. Starta WebLogic Administration Console genom att ange `https://`*[värdnamnsporten ]*`:`*[i en webbläsare]*`/console` .
+1. Starta WebLogic Administration Console genom att skriva `https://[host name]:[port]/console` i en webbläsare.
 1. Skriv användarnamnet och lösenordet som du skapade för WebLogic Server-domänen och klicka på Logga under Change Center och klicka på Lock &amp; Edit.
 1. Klicka på Miljö > Servrar under Domänstruktur och klicka på namnet på den hanterade servern i den högra panelen.
 1. På nästa skärm klickar du på fliken Konfiguration > fliken Serverstart.
