@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 14f17126-e744-479b-a8e6-24c131615b46
 translation-type: tm+mt
-source-git-commit: 687cdacc2868de16a4df968dddedd330ce3317bb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -109,7 +109,7 @@ I följande Java-exempel distribueras en komponent som är baserad på en JAR-fi
           
              //Set connection properties required to invoke AEM Forms                                 
              Properties connectionProps = new Properties(); 
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]"); 
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'"); 
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);           
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss"); 
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator"); 
@@ -208,7 +208,7 @@ I följande Java-kodexempel anges körningskontexten för Kör som-anrop till en
      try{ 
          //Set connection properties required to invoke AEM Forms 
          Properties connectionProps = new Properties(); 
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]"); 
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'"); 
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);           
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss"); 
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "tblue"); 
@@ -306,7 +306,7 @@ I följande Java-kodexempel inaktiveras skyddet från exempeltjänsten EncryptDo
      try{ 
          //Set connection properties required to invoke AEM Forms                                 
          Properties connectionProps = new Properties(); 
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]"); 
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'"); 
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);           
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss"); 
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator"); 
@@ -378,7 +378,7 @@ I följande Java-kodexempel startas en tjänst med namnet *SendEmailService*.
          try{ 
              //Set connection properties required to invoke AEM Forms      
              Properties ConnectionProps = new Properties(); 
-             ConnectionProps.setProperty("DSC_DEFAULT_SOAP_ENDPOINT", "https://[server]:[port]"); 
+             ConnectionProps.setProperty("DSC_DEFAULT_SOAP_ENDPOINT", "https://'[server]:[port]'"); 
              ConnectionProps.setProperty("DSC_TRANSPORT_PROTOCOL","SOAP");           
              ConnectionProps.setProperty("DSC_SERVER_TYPE", "JBoss"); 
              ConnectionProps.setProperty("DSC_CREDENTIAL_USERNAME", "administrator"); 
@@ -472,7 +472,7 @@ I följande Java-exempel ändras konfigurationsvärden som tillhör SendEmail Se
          try{ 
              //Set connection properties required to invoke AEM Forms     
              Properties ConnectionProps = new Properties(); 
-             ConnectionProps.setProperty("DSC_DEFAULT_SOAP_ENDPOINT", "https://[server]:[port]"); 
+             ConnectionProps.setProperty("DSC_DEFAULT_SOAP_ENDPOINT", "https://'[server]:[port]'"); 
              ConnectionProps.setProperty("DSC_TRANSPORT_PROTOCOL","SOAP");           
              ConnectionProps.setProperty("DSC_SERVER_TYPE", "JBoss"); 
              ConnectionProps.setProperty("DSC_CREDENTIAL_USERNAME", "administrator"); 
@@ -575,7 +575,7 @@ I följande Java-kodexempel tas en komponent bort med Java API.
          try{ 
                //Set connection properties required to invoke AEM Forms                                                                                                                        
                Properties connectionProps = new Properties(); 
-               connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]"); 
+               connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'"); 
       connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);           
                connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss"); 
                connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator"); 
