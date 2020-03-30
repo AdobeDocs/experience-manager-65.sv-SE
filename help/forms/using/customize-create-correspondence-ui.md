@@ -10,7 +10,7 @@ topic-tags: correspondence-management
 discoiquuid: 13a93111-c08c-4457-b69a-a6f6eb6da330
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9d90bc5f77f827925e3e1ecd12d56a94a2bbae30
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -51,7 +51,7 @@ Avdelningen /apps (mappstruktur):
 
 Följ de här stegen för att skapa den nödvändiga mappstrukturen i grenen /apps:
 
-1. Gå till `https://[server]:[port]/[ContextPath]/crx/de` och logga in som administratör.
+1. Gå till `https://'[server]:[port]'/[ContextPath]/crx/de` och logga in som administratör.
 1. I mappen apps skapar du en mapp med namnet `css` med en sökväg/struktur som liknar css-mappen (finns i ccrui-mappen).
 
    Steg för att skapa css-mappen:
@@ -62,11 +62,11 @@ Följ de här stegen för att skapa den nödvändiga mappstrukturen i grenen /ap
 
    1. Kontrollera att dialogrutan Overlay Node har följande värden:
 
-      **** Sökväg: /libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/css
+      **Sökväg:** /libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/css
 
-      **** Plats för övertäckning: /apps/
+      **Plats för övertäckning:** /apps/
 
-      **** Matcha nodtyper:Markerad
+      **Matcha nodtyper:** Markerad
 
       ![Sökväg till överläggsnod](assets/0_1_5ioverlaynodedialog.png)
 
@@ -90,11 +90,11 @@ Följ de här stegen för att skapa den nödvändiga mappstrukturen i grenen /ap
    1. Högerklicka på mappen **imgs** på följande sökväg och välj **Overlay Node**: `/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs`
    1. Kontrollera att dialogrutan Overlay Node har följande värden:
 
-      **** Sökväg: /libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs
+      **Sökväg:** /libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs
 
-      **** Plats för övertäckning: /apps/
+      **Plats för övertäckning:** /apps/
 
-      **** Matcha nodtyper:Markerad
+      **Matcha nodtyper:** Markerad
 
    1. Click **OK**.
 
@@ -106,7 +106,7 @@ Följ de här stegen för att skapa den nödvändiga mappstrukturen i grenen /ap
 
 ## Överför den nya logotypen till CRX {#uploadlogo}
 
-Överför din anpassade logotypfil till CRX. HTML-standardregler styr återgivningen av logotypen. De bildfilformat som stöds är beroende av vilken webbläsare du använder för att få åtkomst till AEM Forms. Alla webbläsare har stöd för JPEG, GIF och PNG. Mer information finns i den webbläsarspecifika dokumentationen om de bildformat som stöds.
+Överför din anpassade logotypfil till CRX. HTML-standardregler styr återgivningen av logotypen. De bildfilsformat som stöds är beroende av vilken webbläsare du använder för att komma åt AEM Forms. Alla webbläsare har stöd för JPEG, GIF och PNG. Mer information finns i den webbläsarspecifika dokumentationen om de bildformat som stöds.
 
 * Standardmåtten för logotypbilden är 48 px * 48 px. Se till att bilden liknar den här storleken eller är större än 48 px * 48 px.
 * Om höjden på logotypbilden är större än 50 px, skalas bilden ned i användargränssnittet Create Correspondence till en maximal höjd på 50 px eftersom det är höjden på sidhuvudet. När du skalar ned bilden behåller användargränssnittet Skapa korrespondens bildens proportioner.
@@ -114,7 +114,7 @@ Följ de här stegen för att skapa den nödvändiga mappstrukturen i grenen /ap
 
 Följ de här stegen för att överföra den anpassade logotypfilen till CRX:
 
-1. Gå till `https://[server]:[port]/[contextpath]/crx/de`. Logga in som administratör om det behövs.
+1. Gå till `https://'[server]:[port]'/[contextpath]/crx/de`. Logga in som administratör om det behövs.
 1. I CRXDE högerklickar du på mappen **imgs** på följande sökväg och väljer **Skapa > Skapa fil**:
 
    `/apps/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs/`
@@ -143,7 +143,7 @@ Följ de här stegen för att överföra den anpassade logotypfilen till CRX:
 
 1. I dialogrutan Redigera jcr:data klickar du på **Bläddra** och väljer den bildfil som du vill använda som logotyp (här CustomLogo.png).
 
-   De bildfilformat som stöds är beroende av vilken webbläsare du använder för att få åtkomst till AEM Forms. Alla webbläsare har stöd för JPEG, GIF och PNG. Mer information finns i den webbläsarspecifika dokumentationen om de bildformat som stöds.
+   De bildfilsformat som stöds är beroende av vilken webbläsare du använder för att komma åt AEM Forms. Alla webbläsare har stöd för JPEG, GIF och PNG. Mer information finns i den webbläsarspecifika dokumentationen om de bildformat som stöds.
 
    ![Exempel på anpassad logotypfil](assets/geometrixx-outdoors.png)
 
@@ -157,7 +157,7 @@ Den anpassade logotypbilden kräver en extra formatmall för att kunna läsas in
 
 Följ de här stegen för att konfigurera formatmallen för återgivning av logotypen:
 
-1. Gå till `https://[server]:[port]/[contextpath]/crx/de`. Logga in som administratör om det behövs.
+1. Gå till `https://'[server]:[port]'/[contextpath]/crx/de`. Logga in som administratör om det behövs.
 1. Skapa en fil med namnet customcss.css (du kan inte använda ett annat filnamn) på följande plats:
 
    `/apps/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/css/`
