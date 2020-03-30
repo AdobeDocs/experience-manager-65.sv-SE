@@ -10,7 +10,7 @@ topic-tags: Configuration
 discoiquuid: 8c8b1998-eab4-4230-b24f-5e96883ba599
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27695ee7880cfa23d504d723297c9a06729a424b
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -23,7 +23,7 @@ Som standard körs synkroniseringsschemaläggaren efter var tredje minut för at
 
 Utför följande steg för att ändra intervallet för synkroniseringsplaneraren:
 
-1. Logga in på AEM Configuration Manager. URL:en för Configuration Manager är `https://[Server]:[Port]/lc/system/console/configMgr`
+1. Logga in på AEM Configuration Manager. URL:en för Configuration Manager är `https://'[server]:[port]'/lc/system/console/configMgr`
 
 1. Leta upp och öppna **FormsManagerConfiguration** -paketet.
 
@@ -35,17 +35,17 @@ Utför följande steg för att ändra intervallet för synkroniseringsplaneraren
 
 Du kan använda alternativet **Synkronisera resurser från databas** om du vill synkronisera resurserna manuellt. Så här synkroniserar du resurserna manuellt:
 
-1. Logga in på AEM Forms. Standardwebbadressen är `https://[Server]:[Port]/lc/aem/forms/`.
+1. Logga in på AEM Forms. Standardwebbadressen är `https://'[server]:[port]'/lc/aem/forms/`.
 
    ![AEM Forms användargränssnitt](assets/aem_forms_ui.png)
 
-   **** Bild: Användargränssnittet *AEM Forms*
+   **Bild:** Användargränssnittet *AEM Forms*
 
 1. Klicka på ![ikonen aem6forms_sync](assets/aem6forms_sync.png) i verktygsfältet. Om du inte har några resurser på den senast konfigurerade sökvägen visas dialogrutan enligt nedan. Klicka på **Start** för att starta synkroniseringen.
 
    ![Synkroniseringsdialogruta](assets/migrate-and-syncronize.png)
 
-   **** Bild: Dialogrutan *Synkronisering*
+   **Bild:** Dialogrutan *Synkronisering*
 
 ## Felsökning av synkroniseringsfel {#troubleshooting-synchronization-error}
 
@@ -57,4 +57,4 @@ Lös konflikten genom att byta namn på programmet och manuellt synkronisera res
 
 ![Konflikter i dialogrutan för resurssynkronisering](assets/sync-conflict.png)
 
-**** Bild: Konflikter *i dialogrutan för resurssynkronisering*
+**Bild:** Konflikter *i dialogrutan för resurssynkronisering*
