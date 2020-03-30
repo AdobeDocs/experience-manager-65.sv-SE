@@ -10,7 +10,7 @@ content-strategy: max-2018
 discoiquuid: 770e9174-b648-462a-abe9-05fefa967d86
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 33f73225fbb2c48353c1f34db3339c0bb79d4236
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -172,7 +172,7 @@ Lista med metaegenskaper för ett tema (finns på egenskapssidan för ett tema).
      <li>Den användardefinierade databassökvägen inom '/etc' där de klienter som motsvarar temat lagras.</li>
      <li>Standardvärde - '/etc/clientlibs/fd/themes' + relativ sökväg för temaresursen.</li>
      <li>Om platsen inte finns genereras mapphierarkin automatiskt.</li>
-     <li>När det här värdet ändras flyttas nodstrukturen för klientlib till den nya plats som anges.<br /><em> <strong></strong>Obs! Om du ändrar standardplats för klientlib tilldelar du <code>crx:replicate, rep:write, rep:glob:*, rep:itemNames:: js.txt, jcr:read </code>och <code>forms-users</code> till <code>crx:replicate</code><code>jcr:read </code><code>fd-service</code> den nya platsen i CRXDE-databasen. Bifoga även en annan ACL genom att lägga till <code>deny jcr:addChildNodes</code> för <code>forms-user</code></em></li>
+     <li>När det här värdet ändras flyttas nodstrukturen för klientlib till den nya plats som anges.<br /> <em><strong>Obs!</strong> Om du ändrar standardplats för klientlib tilldelar du <code>crx:replicate, rep:write, rep:glob:*, rep:itemNames:: js.txt, jcr:read </code>och <code>forms-users</code> till <code>crx:replicate</code><code>jcr:read </code><code>fd-service</code> den nya platsen i CRXDE-databasen. Bifoga även en annan ACL genom att lägga till <code>deny jcr:addChildNodes</code> för <code>forms-user</code></em></li>
     </ul> </td>
   </tr>
   <tr>
@@ -202,9 +202,9 @@ Temaredigeraren är uppdelad i två paneler:
 
 * **Sidofält**- visas på vänster sida. Den har följande objekt:
 
-   * **** Väljare: Visar den komponent som är markerad för formatering och dess egenskaper som du kan formatera. Väljaren representerar alla komponenter av en typ. Om du väljer en textrutekomponent i ett tema för formatering ärver alla textrutor i formuläret eller den interaktiva kommunikationen formatet. Med väljare kan du välja en allmän komponent eller en specifik komponent för formatering. En fältkomponent är till exempel en allmän komponent och en textruta är en specifik komponent.
+   * **Väljare:** Visar den komponent som är markerad för formatering och dess egenskaper som du kan formatera. Väljaren representerar alla komponenter av en typ. Om du väljer en textrutekomponent i ett tema för formatering ärver alla textrutor i formuläret eller den interaktiva kommunikationen formatet. Med väljare kan du välja en allmän komponent eller en specifik komponent för formatering. En fältkomponent är till exempel en allmän komponent och en textruta är en specifik komponent.
 
-      ****Formatera allmän komponent:
+      **Formatera allmän komponent:**
 Ett fält kan vara ett numeriskt fält, t.ex. age, eller ett textfält, t.ex. adress.
 När du formaterar ett fält formateras alla fält, till exempel ålder, namn och adress.
 
@@ -215,15 +215,15 @@ En specifik komponent påverkar objekt i den specifika kategorin. När du format
 
       När du anpassar alla fältkomponenter med en viss bakgrundsfärg ärver alla fält, som ålder, namn och adress, bakgrundsfärgen. När du markerar en numerisk ruta, t.ex. ålder, och minskar bredden på den, minskas bredden på alla numeriska rutor, t.ex. ålder, antalet personer i en familj. Bredden på textrutor ändras inte.
 
-   * **** Läge: Gör att du kan anpassa format för ett objekt i ett visst läge. Du kan till exempel ange hur ett objekt ska se ut när det är i standardläge, fokusläge, inaktiverat läge, hovring eller felläge.
-   * **** Egenskapskategorier: Formategenskaper delas upp i olika kategorier. Till exempel Dimension &amp; Position, Text, Bakgrund, Kant och Effekter. Under varje kategori anger du formatinformation. Under Bakgrund kan du till exempel ange Bakgrundsfärg och Bild och övertoning.
+   * **Läge:** Gör att du kan anpassa format för ett objekt i ett visst läge. Du kan till exempel ange hur ett objekt ska se ut när det är i standardläge, fokusläge, inaktiverat läge, hovring eller felläge.
+   * **Egenskapskategorier:** Formategenskaper delas upp i olika kategorier. Till exempel Dimension &amp; Position, Text, Bakgrund, Kant och Effekter. Under varje kategori anger du formatinformation. Under Bakgrund kan du till exempel ange Bakgrundsfärg och Bild och övertoning.
 
-   * **** Avancerat: Gör att du kan lägga till anpassad CSS till ett objekt, vilket åsidosätter de egenskaper som visuella kontroller definierar om det finns en överlappning.
+   * **Avancerat:** Gör att du kan lägga till anpassad CSS till ett objekt, vilket åsidosätter de egenskaper som visuella kontroller definierar om det finns en överlappning.
 
    * **Visa CSS**: Gör att du kan visa CSS för den markerade komponenten
    I sidofältet finns dessutom en pil längst ned. När du klickar på pilen får du ytterligare två alternativ: **Simulera lyckade** och **simulera fel.** Dessa alternativ, tillsammans med de alternativ som beskrivs ovan, beskrivs i detalj [nedan](../../forms/using/themes.md#using-rail).
 
-[ Redigera ![tema med Rail och Canvas markerat.](assets/themes.png)](assets/themes-1.png)**** **A. Sidofält** B. Arbetsyta
+[ Redigera ![tema med Rail och Canvas markerat.](assets/themes.png)](assets/themes-1.png) **A.** Sidofält **B.** Arbetsyta
 
 ### Formatkomponenter {#styling-components}
 
@@ -235,7 +235,7 @@ Alternativ i sidofältet som gör att du kan markera och formatera olika kompone
 
 Om du klickar på redigeringsknappen mot en komponent i sidlisten markeras komponenten på arbetsytan. Du kan också formatera komponenten med alternativen i sidlisten.
 
-Vissa komponenter som textruta, numerisk ruta, alternativknapp och kryssruta kategoriseras under generiska komponenter som Fält. Du kan till exempel anpassa stilen på alternativknappar. Välj alternativknappar för formatering genom att välja **Fält > Widget > Alternativknapp**.
+Vissa komponenter som textruta, numerisk ruta, alternativknapp och kryssruta är kategoriserade under generiska komponenter som Fält. Du kan till exempel anpassa stilen på alternativknappar. Välj alternativknappar för formatering genom att välja **Fält > Widget > Alternativknapp**.
 
 Klicka på **UTÖKA ALLA** i sidofältet om du vill visa, markera och formatera komponenter som inte är synliga framför.
 
@@ -266,7 +266,7 @@ Skräddarsydda layouter från Theme Editor innehåller:
 
 Skrivbords- och mobillayouter kan ha något eller helt olika format. För mobila enheter har surfplattor och telefoner liknande layouter förutom komponentstorlekar.
 
-Använd temaredigerarens brytpunkter för att definiera alternativ formatering för olika skärmstorlekar. Du kan välja en basenhet eller upplösning som du börjar bygga temat på, och formatvariationerna för andra upplösningar genereras automatiskt. Du kan ändra formateringen för alla upplösningar.
+Använd Theme Editor-brytpunkter för att definiera alternativ formatering för olika skärmstorlekar. Du kan välja en basenhet eller upplösning som du börjar bygga temat på, och formatvariationerna för andra upplösningar genereras automatiskt. Du kan ändra formateringen för alla upplösningar.
 
 >[!NOTE]
 >
@@ -315,7 +315,7 @@ När du skapar ett tema skapas det med ett formulär som levereras med Theme Edi
 
 Så här ersätter du det aktuella formuläret eller den interaktiva kommunikationen på arbetsytan i temeredigeraren:
 
-1. Klicka på **Temaalternativ** för ![temaalternativ](assets/theme-options.png) > **Konfigurera** på panelen TEMAREDIGERARE.
+1. Klicka på **Temaalternativ** > ![Temaalternativ](assets/theme-options.png) > **Konfigurera** på panelen TEMAREDIGERARE.
 
 1. På fliken Allmänt bläddrar du och väljer ett formulär eller en interaktiv kommunikation för fältet **Adaptivt formulär/dokument** .
 
@@ -510,7 +510,7 @@ Utför följande steg för att konfigurera ett tema så att det använder TypeKi
 
 Du kan använda tjänsten för temakonfiguration för att lägga till fler teckensnitt i temaredigeraren. Gör så här för att lägga till teckensnitt:
 
-1. Logga in på AEM Web Console med administratörsbehörighet. URL:en för AEM Web Console är `https://[server]:[port]/system/console/configMgr`.
+1. Logga in på AEM Web Console med administratörsbehörighet. URL:en för AEM Web Console är `https://'[server]:[port]'/system/console/configMgr`.
 1. Öppna **tjänsten** Adaptiv formulärtemakonfiguration.
 
    ![tema-config](assets/theme-config.png)
@@ -598,11 +598,11 @@ När du har anpassat temat kan du använda det i formuläret eller i den interak
 
 ## Inverkan på andra användningsområden för anpassade formulär {#impact-on-other-adaptive-form-use-cases}
 
-* **** Publicera/avpublicera ett formulär: När du publicerar ett formulär publiceras även det tema som används på (om det inte redan är publicerat)
-* **** Importera/exportera ett formulär: När du importerar eller exporterar ett formulär importeras eller exporteras även det tillhörande temat automatiskt.
-* **** Referenser till ett formulär: Avsnittet Referenser i formulärreferenser innehåller en extra post för temat.
-* **** Senast ändrad i ett formulär: Uppdaterades när det associerade temat ändras.
-* **** A/B-testning: Du kan använda ett annat tema för två versioner av formuläret i A/B-testning. Information om de två temana lagras individuellt på de två stödlinebehållarna.
+* **Publicera/avpublicera ett formulär:** När du publicerar ett formulär publiceras även det tema som används på (om det inte redan är publicerat)
+* **Importera/exportera ett formulär:** När du importerar eller exporterar ett formulär importeras eller exporteras även det tillhörande temat automatiskt.
+* **Referenser till ett formulär:** Avsnittet Referenser i formulärreferenser innehåller en extra post för temat.
+* **Senast ändrad i ett formulär:** Uppdaterades när det associerade temat ändras.
+* **A/B-testning:** Du kan använda ett annat tema för två versioner av formuläret i A/B-testning. Information om de två temana lagras individuellt på de två stödlinebehållarna.
 
 ## CSS-genereringssekvens {#css-generation-sequence}
 
