@@ -10,7 +10,7 @@ topic-tags: Configuration
 discoiquuid: d4e2acb0-8d53-4749-9d84-15b8136e610b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: dbfadb0b49c83c38aa2cb55c32517ad70bbd79d0
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -30,7 +30,7 @@ Lokaliseringen av anpassningsbara formulär bygger på två typer av språkordli
 När ett anpassat formulär återges identifierar det det begärda språkområdet genom att titta på följande parametrar i den angivna ordningen:
 
 * Begäranparameter `afAcceptLang`Om du vill åsidosätta webbläsarens språkområde för användare kan du skicka parametern request så att språkområdet tvingas att `afAcceptLang` . Följande URL kommer till exempel att tvinga formuläret att återges på japanska språk:
-   `https://[server]:[port]/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
+   `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 
 * Webbläsarens språkområdesuppsättning för användaren, som anges i begäran med hjälp av `Accept-Language` rubriken.
 
@@ -56,7 +56,7 @@ Så här lägger du till stöd för en ny språkinställning vid körning av ada
 
 ### Lägga till en språkinställning i tjänsten för guidelokalisering {#add-a-locale-to-the-guide-localization-service-br}
 
-1. Gå till `https://[server]:[port]/system/console/configMgr`.
+1. Gå till `https://'[server]:[port]'/system/console/configMgr`.
 1. Klicka för att redigera **komponenten för guidelokaliseringstjänsten** .
 1. Lägg till det språkområde som du vill lägga till i listan över språkområden som stöds.
 
@@ -102,7 +102,7 @@ Utför bara det här steget om `<locale>` du lägger till inte finns bland `en`,
 
 1. Lägg till egenskapen `<locale>` i värdena för `languages` egenskapen `/etc/languages`.
 
-Fältet `<locale>` visas på `https://[server]:[port]/libs/cq/i18n/translator.html`.
+Fältet `<locale>` visas på `https://'[server]:[port]'/libs/cq/i18n/translator.html`.
 
 ### Starta om servern {#restart-the-server}
 
