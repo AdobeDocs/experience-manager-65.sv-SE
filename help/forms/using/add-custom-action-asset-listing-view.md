@@ -10,7 +10,7 @@ topic-tags: correspondence-management
 discoiquuid: 6378ae30-a351-49f7-8e9a-f0bd4287b9d3
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -42,7 +42,7 @@ Stegen nedan lägger till kommandot &quot;Hämta platt PDF&quot; i resurslista f
 
 Följ de här stegen för att anpassa Correspondence Management så att användarna kan hämta ett vanligt PDF-dokument med brev:
 
-1. Gå till `https://[server]:[port]/[ContextPath]/crx/de` och logga in som administratör.
+1. Gå till `https://'[server]:[port]'/[ContextPath]/crx/de` och logga in som administratör.
 
 1. I mappen apps skapar du en mapp med namnet items med en sökväg/struktur som liknar mappen items i en urvalsmapp enligt följande:
 
@@ -61,11 +61,11 @@ Följ de här stegen för att anpassa Correspondence Management så att använda
 
    1. Kontrollera att dialogrutan Overlay Node har följande värden:
 
-      **** Sökväg: /libs/fd/cm/ma/gui/content/cmassets/jcr:content/body/content/header/items/selection/items
+      **Sökväg:** /libs/fd/cm/ma/gui/content/cmassets/jcr:content/body/content/header/items/selection/items
 
-      **** Plats: /apps/
+      **Plats:** /apps/
 
-      **** Matcha nodtyper:Markerad
+      **Matcha nodtyper:** Markerad
 
       ![Överläggsnod](assets/2_createnodedownloadflatpdf.png)
 
@@ -79,9 +79,9 @@ Följ de här stegen för att anpassa Correspondence Management så att använda
 
    1. Se till att dialogrutan Skapa nod har följande värden och klicka på **OK**:
 
-      **** Namn: downloadFlatPDF (eller det namn du vill ge den här egenskapen)
+      **Namn:** downloadFlatPDF (eller det namn du vill ge den här egenskapen)
 
-      **** Typ:nt:ostrukturerad
+      **Typ:** nt:ostrukturerad
 
    1. Klicka på den nya noden som du har skapat (här downloadFlatPDF). CRX visar nodens egenskaper.
 
@@ -145,11 +145,11 @@ Följ de här stegen för att anpassa Correspondence Management så att använda
 
    1. Kontrollera att dialogrutan Overlay Node har följande värden:
 
-      **** Sökväg: /libs/fd/cm/ma/gui/components/admin/clientlibs/admin/js
+      **Sökväg:** /libs/fd/cm/ma/gui/components/admin/clientlibs/admin/js
 
-      **** Plats: /apps/
+      **Plats:** /apps/
 
-      **** Matcha nodtyper:Markerad
+      **Matcha nodtyper:** Markerad
 
    1. Click **OK**. Mappstrukturen skapas i programmappen. Klicka på **Spara alla**.
 
@@ -235,11 +235,11 @@ Följ de här stegen för att anpassa Correspondence Management så att använda
 
    1. Kontrollera att dialogrutan Overlay Node har följande värden:
 
-      **** Sökväg: /libs/fd/cm/ma/gui/content/commons/actionhandlers/items/
+      **Sökväg:** /libs/fd/cm/ma/gui/content/commons/actionhandlers/items/
 
-      **** Plats: /apps/
+      **Plats:** /apps/
 
-      **** Matcha nodtyper:Markerad
+      **Matcha nodtyper:** Markerad
 
    1. Click **OK**. Mappstrukturen skapas i programmappen.
 
@@ -251,9 +251,9 @@ Följ de här stegen för att anpassa Correspondence Management så att använda
 
    1. Se till att dialogrutan Skapa nod har följande värden och klicka på **OK**:
 
-      **** Namn: letterpdfdownloader (eller det namn du vill ge den här egenskapen) måste vara unikt. Om du använder ett annat namn här anger du samma namn i formaction.js-filens ACTION_URL-variabel.)
+      **Namn:** letterpdfdownloader (eller det namn du vill ge den här egenskapen) måste vara unikt. Om du använder ett annat namn här anger du samma namn i formaction.js-filens ACTION_URL-variabel.)
 
-      **** Typ:nt:ostrukturerad
+      **Typ:** nt:ostrukturerad
 
    1. Klicka på den nya noden som du har skapat (här downloadFlatPDF). CRX visar nodens egenskaper.
 
@@ -349,9 +349,9 @@ Följ de här stegen för att anpassa Correspondence Management så att använda
 
 När du har lagt till en anpassad funktion för att ladda ned en platt PDF-fil av brev kan du göra så här för att ladda ned en platt PDF-version av det brev du väljer:
 
-1. Gå till `https://[server]:[port]/[ContextPath]/projects.html` och logga in.
+1. Gå till `https://'[server]:[port]'/[ContextPath]/projects.html` och logga in.
 
-1. Välj **Formulär > Bokstäver**. Correspondence Management listar bokstäverna som är tillgängliga i systemet.
+1. Välj **Formulär > Bokstäver**. Correspondence Management listar bokstäverna som finns i systemet.
 1. Klicka på **Markera** och sedan på en bokstav för att markera den.
 1. Välj **Mer** > **&lt;Hämta platt PDF>** (De anpassade funktionerna som skapas med instruktionerna i den här artikeln). Dialogrutan Hämta brev som PDF visas.
 
