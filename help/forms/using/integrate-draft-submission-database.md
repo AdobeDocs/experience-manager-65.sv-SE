@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: da96d3d8-a338-470a-8d20-55ea39bd15bf
 translation-type: tm+mt
-source-git-commit: 06335b9a85414b6b1141dd19c863dfaad0812503
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -74,7 +74,7 @@ Utför följande steg på alla författare- och publiceringsinstanser för att i
 
    Så här anger du ett annat namn för metadatatabellen:
 
-   * I Web Console Configuration söker du efter och klickar på Exempelimplementering av Forms Portal-metadatatjänst. Du kan ändra värdena för datakälla, metadata eller ytterligare metadatatabellnamn.
+   * I Web Console Configuration söker du efter och klickar på Implementering av Exempel på metadatatjänst för Forms Portal. Du kan ändra värdena för datakälla, metadata eller ytterligare metadatatabellnamn.
    Så här anger du ett annat namn för datatabellen:
 
    * I Web Console Configuration söker du efter och klickar på Exempelimplementering för Forms Portal Data Service. Du kan ändra värdena för datakällan och datatabellnamnet.
@@ -302,12 +302,12 @@ Exempelimplementeringen är nu konfigurerad, som du kan använda för att lista 
 
 Utför följande steg på alla författare- och publiceringsinstanser för att installera filen mysql-connector-java-5.1.39-bin.jar:
 
-1. Navigera till `https://[server]:[port]/system/console/depfinder` och sök efter paketet com.mysql.jdbc.
+1. Navigera till `https://'[server]:[port]'/system/console/depfinder` och sök efter paketet com.mysql.jdbc.
 1. I kolumnen Exporterad av kontrollerar du om paketet exporteras av något paket.
 
    Fortsätt om paketet inte exporteras av något paket.
 
-1. Navigera till `https://[server]:[port]/system/console/bundles` och klicka på **[!UICONTROL Installera/Uppdatera]**.
+1. Navigera till `https://'[server]:[port]'/system/console/bundles` och klicka på **[!UICONTROL Installera/Uppdatera]**.
 1. Klicka på **[!UICONTROL Välj fil]** och bläddra till filen mysql-connector-java-5.1.39-bin.jar. Markera kryssrutorna **[!UICONTROL Starta paket]** och **[!UICONTROL Uppdatera paket]** .
 1. Klicka på **[!UICONTROL Installera eller Uppdatera]**. Starta om servern när du är klar.
 1. (Endast *Windows*) Stäng av operativsystemets brandvägg.
@@ -399,13 +399,13 @@ Så här skapar du [ett klientbibliotek](/help/sites-developing/clientlibs.md) o
 
 1. Lägg till följande egenskap i mappen som skapades i steg 2 och klicka på **[!UICONTROL Spara alla]**.
 
-   * **** Namn: kategorier
+   * **[!UICONTROL Namn:]** kategorier
 
-   * **** Typ:Sträng
+   * **[!UICONTROL Typ:]** Sträng
 
-   * **** Värde: fp.validation
+   * **[!UICONTROL Värde:]** fp.validation
 
-   * **** flera alternativ:Aktiverad
+   * **[!UICONTROL flera alternativ:]** Aktiverad
 
 1. Navigera till `/libs/fd/af/runtime/clientlibs/guideRuntime`och lägg till `fp.validation` värdet i egenskapen embed.
 
