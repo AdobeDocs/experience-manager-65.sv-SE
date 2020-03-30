@@ -9,7 +9,7 @@ topic-tags: author
 discoiquuid: 1a32eb24-db3b-4fad-b1c7-6326b5af4e5e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 6bd09bca68ea1fcec2dca7694dd3d39dc5153bfc
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -32,7 +32,7 @@ Du kan skapa ett anpassat formulärfragment från grunden eller spara en panel i
 
    >[!NOTE]
    >
-   > Se till att du anger ett unikt namn för fragmentet. Om det redan finns ett annat fragment med samma namn kan fragmentet inte skapas.
+   >Se till att du anger ett unikt namn för fragmentet. Om det redan finns ett annat fragment med samma namn kan fragmentet inte skapas.
 
 1. Klicka för att öppna fliken **Formulärmodell** och välj sedan en av följande modeller för fragmentet på den nedrullningsbara menyn **Välj från** :
 
@@ -163,7 +163,7 @@ Du kan ändra fragmentresursen och dess bindningar i dialogrutan Redigera kompon
 
 Du kan utföra flera åtgärder på anpassningsbara formulärfragment med hjälp av gränssnittet för AEM-formulär.
 
-1. Gå till `https://[hostname]:[port]/aem/forms.html`.
+1. Gå till `https://[hostname]:'port'/aem/forms.html`.
 
 1. Klicka på **Välj** i verktygsfältet i användargränssnittet för AEM-formulär och välj ett adaptivt formulärfragment. Verktygsfältet innehåller följande åtgärder som du kan utföra på det valda adaptiva formulärfragmentet.
 
@@ -175,39 +175,39 @@ Du kan utföra flera åtgärder på anpassningsbara formulärfragment med hjälp
   </tr>
   <tr>
    <td><p>Öppna</p> </td>
-   <td><p><br /> Öppnar det markerade adaptiva formulärfragmentet i redigeringsläge. <br /> </p> </td>
+   <td><p>Öppnar det markerade adaptiva formulärfragmentet i redigeringsläge.<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>Visa egenskaper</p> </td>
-   <td><p>Öppnar egenskapspanelen. På panelen Egenskaper kan du visa och redigera egenskaper, generera en förhandsvisning och överföra en miniatyrbild för det valda fragmentet. <a href="../../forms/using/manage-form-metadata.md" target="_blank"> Mer information finns i </a>Hantera metadata<br />. <br /> </p> </td>
+   <td><p>Öppnar egenskapspanelen. På panelen Egenskaper kan du visa och redigera egenskaper, generera en förhandsvisning och överföra en miniatyrbild för det valda fragmentet. Mer information finns i <a href="../../forms/using/manage-form-metadata.md" target="_blank">Hantera metadata</a>.<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>Kopiera</p> </td>
-   <td><p>Kopierar det markerade fragmentet. <br /> Knappen Klistra in visas i verktygsfältet. <br /> </p> </td>
+   <td><p>Kopierar det markerade fragmentet. Knappen Klistra in visas i verktygsfältet.<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>Hämta</p> </td>
-   <td><p><br /> Hämtar det markerade fragmentet. <br /> </p> </td>
+   <td><p>Hämtar det markerade fragmentet.<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>Förhandsgranska</p> </td>
-   <td><p>Tillhandahåller alternativ för att förhandsgranska fragmentet som HTML eller som en anpassad förhandsgranskning genom att sammanfoga data från en XML-fil med fragmentet. <a href="/help/forms/using/previewing-forms.md" target="_blank"> Mer information finns i </a>Förhandsgranska ett formulär<br />. <br /> </p> </td>
+   <td><p>Tillhandahåller alternativ för att förhandsgranska fragmentet som HTML eller som en anpassad förhandsgranskning genom att sammanfoga data från en XML-fil med fragmentet. Mer information finns i <a href="/help/forms/using/previewing-forms.md" target="_blank">Förhandsgranska ett formulär</a>.<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>Starta granskning/hantera granskning</p> </td>
-   <td><p>Gör att du kan initiera och hantera en granskning av det valda fragmentet. <a href="../../forms/using/create-reviews-forms.md" target="_blank"> Mer information finns i </a>Skapa och hantera granskningar<br />. <br /> </p> </td>
+   <td><p>Gör att du kan initiera och hantera en granskning av det valda fragmentet. Mer information finns i <a href="../../forms/using/create-reviews-forms.md" target="_blank">Skapa och hantera granskningar</a>.<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>Skapa ordlista</p> </td>
-   <td><p>Skapar en ordlista för lokalisering av det valda fragmentet. <a href="/help/forms/using/lazy-loading-adaptive-forms.md" target="_blank"> Mer information finns i </a>Lokalisera anpassningsbara formulär<br />. <br /> </p> </td>
+   <td><p>Skapar en ordlista för lokalisering av det valda fragmentet. Mer information finns i <a href="/help/forms/using/lazy-loading-adaptive-forms.md" target="_blank">Lokalisera anpassningsbara formulär</a>.<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>Publicera/avpublicera</p> </td>
-   <td><p><br /> Publicerar/avpublicerar det markerade fragmentet. <br /> </p> </td>
+   <td><p>Publicerar/avpublicerar det markerade fragmentet.<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>Ta bort</p> </td>
-   <td><p><br /> Tar bort det markerade fragmentet. <br /> </p> </td>
+   <td><p>Tar bort det markerade fragmentet.<br /> <br /> </p> </td>
   </tr>
  </tbody>
 </table>
@@ -226,7 +226,7 @@ Om du vill lokalisera ett adaptivt formulär som innehåller adaptiva formulärf
 * Om du sparar en panel som fragment som innehåller ett annat XDP-fragment i ett XDP-baserat adaptivt formulär, binds det resulterande fragmentet automatiskt till det underordnade XDP-fragmentet. Om det finns ett XSD-baserat anpassningsbart formulär binds det resulterande fragmentet till schemaroten.
 * När du skapar ett adaptivt formulärfragment skapas en fragmentnod, som liknar noden guideContainer för ett adaptivt formulär, i CRXDe Lite.
 * Ett fragment i ett adaptivt formulär som använder en annan formulärdatamodell stöds inte. Ett XDP-baserat fragment stöds till exempel inte i en XSD-baserad adaptiv form och vice versa.
-* Anpassade formulärfragment kan användas via fliken Adaptiva formulärfragment i AEM Content Finder.
+* Anpassningsbara formulärfragment kan användas via fliken Adaptiva formulärfragment i AEM Content Finder.
 * Alla uttryck, skript och format i ett fristående adaptivt formulärfragment behålls när de infogas som referens eller bäddas in i ett adaptivt formulär.
 * Du kan inte redigera ett adaptivt formulärfragment, som infogas med referens, inifrån ett adaptivt formulär. Om du vill redigera kan du antingen redigera det fristående adaptiva formulärfragmentet eller bädda in fragmentet i det adaptiva formuläret.
 * När du publicerar ett adaptivt formulär måste du publicera de fristående adaptiva formulärfragmenten som infogats som referens i det adaptiva formuläret.
