@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dd11fd83-3df1-4727-8340-8c5426812823
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -31,7 +31,7 @@ Sammanfattningsvis kan du i Inkorgen skapa ett nytt program och hantera tilldela
 
 ## Skapa program {#create-application}
 
-1. Gå till AEM Inbox på https://[server]:[port]/aem/inbox.
+1. Gå till AEM Inbox på https://&#39;[server]:[port]&#39;/aem/inbox.
 1. Tryck på **[!UICONTROL Skapa > Program]** i Inkorgen. Sidan Välj program visas.
 1. Markera ett program och klicka på **[!UICONTROL Skapa]**. Det adaptiva formulär som är associerat med programmet öppnas. Fyll i informationen i det adaptiva formuläret och tryck på **[!UICONTROL Skicka]**. Det startar det associerade arbetsflödet och skapar en uppgift i den tilldelades inkorg.
 
@@ -108,7 +108,7 @@ AEM Inbox visar endast aktiva uppgifter. Slutförda uppgifter visas inte i lista
 
 1. Tryck för att markera en uppgift och klicka på **[!UICONTROL Öppna]**.
 
-Uppgiften öppnas och visar dokumentet eller det adaptiva formulär som är kopplat till uppgiften. För anpassningsbara formulär visar uppgiften det skrivskyddade anpassningsbara formuläret eller dess PDF-dokument i poster som konfigurerats på fliken Formulär/Dokument i arbetsflödessteget [](/help/sites-developing/workflows-step-ref.md)Tilldela uppgift.
+Uppgiften öppnas och visar dokumentet eller det adaptiva formulär som är kopplat till uppgiften. För anpassningsbara formulär visar uppgiften det skrivskyddade anpassningsbara formuläret eller dess PDF-dokument med poster som konfigurerats på fliken Formulär/Dokument i arbetsflödessteget [](/help/sites-developing/workflows-step-ref.md)Tilldela uppgift.
 
 I avsnittet med aktivitetsinformation visas information om till exempel åtgärd, aktivitetsstatus, startdatum och slutdatum.
 
