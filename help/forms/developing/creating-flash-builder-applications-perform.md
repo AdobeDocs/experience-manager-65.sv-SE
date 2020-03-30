@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 0ff30df7-b3ad-4c34-9644-87c689acc294
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -75,7 +75,7 @@ När ett klientprogram startas kan du göra en POST-begäran till `/um/login` s�
 Om säkerhetsservern hittar en giltig token som matchar en användare kan du med säkerhetsservern fortsätta och svara med `authstate=COMPLETE`. Annars svarar säkerhetstjänsten med `authstate=CREDENTIAL_CHALLENGE`. I följande lista förklaras dessa värden:
 
 * `Case authstate=COMPLETE`: Anger att användaren är autentiserad och att `assertionid` värdet innehåller användarens kontrollidentifierare. I det här skedet kan klientprogrammet ansluta till AEM Forms. Servern som konfigurerats för den URL:en kan hämta användarens information `AuthResult` genom att anropa `AuthenticationManager.authenticate(HttpRequestToken)` metoden. Instansen kan `AuthResult` skapa användarhanterarkontexten och lagra den i sessionen.
-* `Case authstate=CREDENTIAL_CHALLENGE`: Anger att säkerhetsservern kräver användarens autentiseringsuppgifter. Som svar kan klientprogrammet visa inloggningsskärmen för användaren och skicka de inhämtade autentiseringsuppgifterna till säkerhetsservern (till exempel `https://<your_serverhost>:<your_port>/um/login?um_no_redirect=true&j_username=administrator&j_password=password)`. Om autentiseringen lyckas svarar säkerhetsservern med `authstate=COMPLETE`.
+* `Case authstate=CREDENTIAL_CHALLENGE`: Anger att säkerhetsservern kräver användarens autentiseringsuppgifter. Som svar kan klientprogrammet visa inloggningsskärmen för användaren och skicka de inhämtade inloggningsuppgifterna till säkerhetsservern (till exempel `https://<your_serverhost>:<your_port>/um/login?um_no_redirect=true&j_username=administrator&j_password=password)`. Om autentiseringen lyckas svarar säkerhetsservern med `authstate=COMPLETE`.
 
 Om autentiseringen fortfarande inte lyckas svarar säkerhetsservern med `authstate=FAILED`. För att svara på det här värdet kan klientprogrammet visa ett meddelande för att hämta inloggningsuppgifterna igen.
 
@@ -697,8 +697,8 @@ Följande kod representerar filen remoting.mxml som anropar `MyApplication/Encry
              private var fileRef:FileReference = new FileReference();
              private var docRef:DocumentReference = new DocumentReference();
              private var parentResourcePath:String = "/";
-             //private var serverPort:String = "[server]:[port]";
-             private var serverPort:String = "[server]:[port]";
+             //private var serverPort:String = "'[server]:[port]'";
+             private var serverPort:String = "'[server]:[port]'";
              private var now1:Date;
              private var userManager:UserManager;
  
