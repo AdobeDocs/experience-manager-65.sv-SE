@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/maintaining_the_application_server
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c908d064-6596-473a-b218-22a2496c83f7
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -78,7 +78,7 @@ Administrationskonsolen för WebLogic Server är inte längre tillgänglig och k
    * (Windows) `startWebLogic.cmd`
    * (Linux, UNIX) ./ `startWebLogic.sh`
 
-1. Gå till administrationskonsolen för WebLogic Server genom att skriva `https://*[host name]:`[Port] `/console` i URL-raden för en webbläsare, där *[Port]* är den osäkra avlyssningsporten. Portvärdet är som standard 7001.
+1. Gå till administrationskonsolen för WebLogic Server genom att skriva `https://[host name]:[port]/console` i URL-raden för en webbläsare, där *[porten]* är den osäkra avlyssningsporten. Portvärdet är som standard 7001.
 1. På inloggningsskärmen skriver du ditt administratörsanvändarnamn och lösenord och klickar på Logga in.
 
 ## Starta nodhanteraren {#start-node-manager}
@@ -101,7 +101,7 @@ När du har stängt av WebLogic Server kan du stänga den kommandotolk som du ka
 >Denna uppgift kan bara utföras när du har skapat en WebLogic-domän och en hanterad server.
 
 1. Kontrollera att WebLogic-servern och nodhanteraren körs.
-1. Starta administrationskonsolen för WebLogic-servern genom att skriva `https://`*[värdnamnet]:[port ]*`/console`på URL-raden i en webbläsare.
+1. Starta administrationskonsolen för WebLogic-servern genom att skriva `https://host name]:[port]`/console&quot; på URL-raden i en webbläsare.
 1. Klicka på Miljö > Servrar under Domänstruktur.
 1. Klicka på fliken Kontroll i den högra rutan.
 1. Välj den hanterade server som du vill starta.
