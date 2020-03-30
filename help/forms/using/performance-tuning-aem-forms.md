@@ -10,7 +10,7 @@ topic-tags: Configuration
 discoiquuid: 38c0ec46-5686-4656-bfb4-7125ec194673
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3226edb575de3d9f8bff53f5ca81e2957f37c544
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -23,8 +23,8 @@ I den här artikeln beskrivs strategier och bästa metoder som du kan implemente
 
 Du kan konfigurera och styra cachningsstrategin för AEM Forms med komponenten **Mobile Forms Configurations** i AEM Web Configuration Console på:
 
-* (AEM Forms on OSGi) `https://[server]:[port]/system/console/configMgr`
-* (AEM Forms on JEE) `https://[server]:[port]/lc/system/console/configMgr`
+* (AEM Forms on OSGi) `https://'[server]:[port]'/system/console/configMgr`
+* (AEM Forms on JEE) `https://'[server]:[port]'/lc/system/console/configMgr`
 
 De tillgängliga alternativen för cachelagring är följande:
 
@@ -131,7 +131,7 @@ Lägg till följande konfiguration i `APACHE_HOME/conf/httpd.conf` konfiguration
    </Location>
    ```
 
-   Om du vill få åtkomst till crx-servern använder du `https://[server]:80`, där `server` är namnet på den server där Apache-servern körs.
+   Om du vill få åtkomst till crx-servern använder du `https://'server':80`, där `server` är namnet på den server där Apache-servern körs.
 
 ## Använda ett antivirus på en server som kör AEM Forms {#using-an-antivirus-on-server-running-aem-forms}
 
@@ -153,9 +153,9 @@ För att förbättra prestanda kan du instruera antivirusprogrammet att utesluta
 
 * **(AEM Forms on JEE only)** Global Document Storage (GDS)-katalog. Standardplatsen är:
 
-   * (JBoss) [appserver root]/server/[server]/svcnative/DocumentStorage
-   * (WebLogic) [appserverdomain]/[server]/adobe/LiveCycleServer/DocumentStorage
-   * (WebSphere) [appserver root]/installedApps/adobe/[server]/DocumentStorage
+   * (JBoss) [appserver root]/server/&#39;server&#39;/svcnative/DocumentStorage
+   * (WebLogic) [appserverdomain]/&#39;server&#39;/adobe/LiveCycleServer/DocumentStorage
+   * (WebSphere) [appserver root]/installedApps/adobe/&#39;server&#39;/DocumentStorage
 
 * **(Endast AEM Forms på JEE)** AEM Forms-serverloggar och tillfällig katalog. Standardplatsen är:
 
@@ -164,7 +164,7 @@ För att förbättra prestanda kan du instruera antivirusprogrammet att utesluta
 
 >[!NOTE]
 >
->* Om du använder en annan plats för GDS och en tillfällig katalog öppnar du AdminUI på `https://[server]:[port]/adminui`och går till **Hem > Inställningar > Core System Settings > Core Configurations** för att bekräfta platsen som används.
+>* Om du använder en annan plats för GDS och en tillfällig katalog öppnar du AdminUI på `https://'[server]:[port]'/adminui`och går till **Hem > Inställningar > Core System Settings > Core Configurations** för att bekräfta platsen som används.
 
 * Om AEM Forms-servern fungerar långsamt även efter att de föreslagna katalogerna har utelämnats ska du även utelämna den körbara Java-filen (java.exe).
 
