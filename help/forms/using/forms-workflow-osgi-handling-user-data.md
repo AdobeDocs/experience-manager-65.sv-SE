@@ -8,7 +8,7 @@ topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9f400560-8152-4d07-a946-e514e9b9cedf
 translation-type: tm+mt
-source-git-commit: 06335b9a85414b6b1141dd19c863dfaad0812503
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -80,7 +80,7 @@ Du kan dock inte identifiera eller så kan resultatet vara tvetydigt när du ide
 
 Så här identifierar och får du åtkomst till användardata som lagras för en arbetsflödesinstans:
 
-1. I AEM-författarinstansen går du till `https://[server]:[port]/crx/de` och navigerar till **[!UICONTROL Verktyg > Fråga]**.
+1. I AEM-författarinstansen går du till `https://'[server]:[port]'/crx/de` och navigerar till **[!UICONTROL Verktyg > Fråga]**.
 
    Välj **[!UICONTROL SQL2]** i listrutan **[!UICONTROL Typ]** .
 
@@ -133,7 +133,7 @@ Du måste vara AEM-administratör för att kunna ta bort användardata från arb
 
 1. Utför det här steget för arbetsflödesinstanser med statusen **KÖRNING**, **SUSPENDED** eller **STALE** :
 
-   1. Gå till `https://[server]:[port]/aem/start.html` och logga in med administratörsautentiseringsuppgifter.
+   1. Gå till `https://'[server]:[port]'/aem/start.html` och logga in med administratörsautentiseringsuppgifter.
    1. Navigera till **[!UICONTROL Verktyg > Arbetsflöde > Instanser]**.
    1. Välj relevanta arbetsflödesinstanser för användaren och tryck på **[!UICONTROL Avsluta]** för att avsluta instanser som körs.
    Mer information om hur du arbetar med arbetsflödesinstanser finns i [Administrera arbetsflödesinstanser](/help/sites-administering/workflows-administering.md).
