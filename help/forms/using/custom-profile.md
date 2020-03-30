@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 9cd22244-9aa6-4b5f-96cf-c9cb3d6f9c8a
 translation-type: tm+mt
-source-git-commit: 19299fb5fc764d0e71c0ea3a5ec2286183dd6861
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -56,7 +56,7 @@ Så här skapar du en anpassad profil:
 
 ### Skapa profilnod {#create-profile-node}
 
-1. Navigera till CRX DE-gränssnittet på URL:en: och logga `https://[server]:[port]/crx/de` in i gränssnittet med administratörsautentiseringsuppgifter.
+1. Navigera till CRX DE-gränssnittet på URL:en: och logga `https://'[server]:[port]'/crx/de` in i gränssnittet med administratörsautentiseringsuppgifter.
 
 1. Navigera till platsen */content/xfaforms/profiles* i den vänstra rutan.
 
@@ -78,7 +78,7 @@ När du har skapat en anpassad profil lägger du till återgivningsinformation i
 1. Klistra in **html.jsp** -noden i den `/apps/hrform/demo` mapp som skapas ovan med samma namn **html.jsp** och klicka på **Spara**.
 1. Om du har andra komponenter i profilskriptet följer du steg 1-6 för att kopiera komponenterna i /apps/hrform/demo-mappen.
 
-1. Kontrollera att profilen har skapats genom att öppna URL `https://[server]:[port]/content/xfaforms/profiles/hrform.html`
+1. Kontrollera att profilen har skapats genom att öppna URL `https://'[server]:[port]'/content/xfaforms/profiles/hrform.html`
 
 Verifiera formulären genom att [importera formulären](/help/forms/using/get-xdp-pdf-documents-aem.md) från det lokala filsystemet till AEM Forms och [förhandsgranska formuläret](/help/forms/using/previewing-forms.md) på AEM-serverns författarinstans.
 
