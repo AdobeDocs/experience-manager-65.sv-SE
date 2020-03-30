@@ -10,7 +10,7 @@ topic-tags: introduction
 discoiquuid: b4fdbf86-d8f3-4da5-9e4e-4d5492ae1632
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70350add185b932ee604e190aabaf972ff994ba2
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -73,7 +73,7 @@ Sarah väljer ett kreditkort bland de tillgängliga alternativen och klickar på
 
 ![cc-application-form-desktop](assets/cc-application-form-desktop.png)
 
-På sidan Personlig information får hon ett meddelande om att hon måste logga in med sina inloggningsuppgifter eftersom Sarah skickar sitt socialförsäkringsnummer.
+På sidan Personlig information får hon ett meddelande om att hon måste logga in med sina inloggningsuppgifter, eftersom Sarah ger sitt socialförsäkringsnummer.
 
 ![login-ssn](assets/login-ssn.png)
 
@@ -91,17 +91,17 @@ Om Sarah använder kreditkortsprogrammet från sin mobila enhet öppnas det resp
 
 **Så här fungerar det**
 
-Knappen **Använd nu** dirigerar Sarah till kreditkortsprogrammet. Programmet är ett anpassat formulär som du kan granska i redigeringsinstanserna `https://[host]:[Port]/editor.html/content/forms/af/we-finance/cc-app.html`.
+Knappen **Använd nu** dirigerar Sarah till kreditkortsprogrammet. Programmet är ett anpassat formulär som du kan granska i redigeringsinstanserna på `https://[host]:'port'/editor.html/content/forms/af/we-finance/cc-app.html`.
 
 Några av de funktioner du kan granska i den anpassade formen är:
 
 * Det baseras på ett XSD-schema.
-* Den har skapats med tema A för Web Finance för formatering och We.Finance för layout. Dessutom används Layout utan panelrubriker i formulärrubrikslayouten för mobil navigering. Den visar en progressiv mobil layout när den öppnas från en mobil enhet. Du kan granska mallen på `https://[host]:[Port]/libs/wcm/core/content/sites/templates.html/conf/we-finance` och temat på `https://[host]:[Port]/editor.html/content/dam/formsanddocuments-themes/we-finance/we-finance-theme-a/jcr:content`.
-* Den innehåller anpassningsbara formulärregler som anropar Form Data Model-tjänster för att förifylla användarinformation för inloggad användare. Den anropar också tjänster för att förifylla information med personnummer eller e-postadress som anges i formuläret. Du kan läsa formulärdatamodeller och deras tjänster på `https://[host]:[Port]/aem/forms.html/content/dam/formsanddocuments-fdm`.
+* Den har skapats med tema A för Web Finance för formatering och We.Finance för layout. Dessutom används Layout utan panelrubriker i formulärrubrikslayouten för mobil navigering. Den visar en progressiv mobil layout när den öppnas från en mobil enhet. Du kan granska mallen på `https://[host]:'port'/libs/wcm/core/content/sites/templates.html/conf/we-finance` och temat på `https://[host]:'port'/editor.html/content/dam/formsanddocuments-themes/we-finance/we-finance-theme-a/jcr:content`.
+* Den innehåller anpassningsbara formulärregler som anropar Form Data Model-tjänster för att förifylla användarinformation för inloggad användare. Den anropar också tjänster för att förifylla information med personnummer eller e-postadress som anges i formuläret. Du kan läsa formulärdatamodeller och deras tjänster på `https://[host]:'port'/aem/forms.html/content/dam/formsanddocuments-fdm`.
 * Här används olika adaptiva formulärkomponenter för att hämta in indata och anpassa dem efter användarens svar. Den använder också komponenter som e-post som stöder HTML5-indatatyper.
 * Den använder komponenten Signature Step för att visa det ifyllda formuläret och tillåter elektronisk signatur i formuläret.
 * Knappen Spara mitt förlopp genererar ett unikt ID för användaren och sparar det delvis ifyllda programmet som ett utkast i en nod i AEM-databasen. Dessutom visas en dialogruta där du söker behörighet att skicka ett e-postmeddelande med en länk till noden som innehåller utkastet till program. Knappen Skicka e-post i bekräftelsedialogrutan utlöser ett e-postmeddelande med en länk till noden som innehåller utkastet.
-* Den använder åtgärden Anropa AEM Workflow för att starta arbetsflödet för godkännande av kreditkort. Du kan granska arbetsflödet som används i det här formuläret på `https://[host]:[Port]/editor.html/conf/global/settings/workflow/models/we-finance-credit-card-workflow.html`
+* Den använder åtgärden Anropa AEM Workflow för att starta arbetsflödet för godkännande av kreditkort. Du kan granska arbetsflödet som används i det här formuläret på `https://[host]:'port'/editor.html/conf/global/settings/workflow/models/we-finance-credit-card-workflow.html`
 
 Vi rekommenderar att du granskar formuläret för att förstå vilket schema, vilka komponenter, regler, formulärdatamodeller, arbetsflöde för formulär och vilken skicka-åtgärd som används för att skapa formuläret.
 
@@ -374,20 +374,20 @@ Den inskickade ansökan går till We.Finance för godkännande.
 
 #### Så här fungerar det {#how-it-works-7}
 
-Knappen **Använd nu** dirigerar Sarah till bostadslådan. Programmet är ett anpassat formulär som du kan granska i redigeringsinstanserna `https://[host]:[Port]/editor.html/content/forms/af/we-finance/hm-app.html`.
+Knappen **Använd nu** dirigerar Sarah till bostadslådan. Programmet är ett anpassat formulär som du kan granska i redigeringsinstanserna på `https://[host]:'port'/editor.html/content/forms/af/we-finance/hm-app.html`.
 
 Några av de funktioner du kan granska i den anpassade formen är:
 
 * Det baseras på ett XSD-schema `homeMortgageApplication.xsd`.
 * Det har skapats med We Finance Theme B för formatering och We.Finance för layout. Dessutom används Layout utan panelrubriker i formulärrubrikslayouten för mobil navigering. Den visar en progressiv mobil layout när den öppnas från en mobil enhet. Du kan granska mallen och temat som används i det adaptiva formuläret på följande platser i din AEM-författarinstans:
 
-   * `https://[host]:[Port]/libs/wcm/core/content/sites/templates.html/conf/we-finance`
-   * `https://[host]:[Port]/editor.html/content/dam/formsanddocuments-themes/we-finance/we-finance-theme-b/jcr:content`
+   * `https://[host]:'port'/libs/wcm/core/content/sites/templates.html/conf/we-finance`
+   * `https://[host]:'port'/editor.html/content/dam/formsanddocuments-themes/we-finance/we-finance-theme-b/jcr:content`
 
-* Den första fliken, Komma igång, i programmet är en dynamisk låneberäkning som visar alternativ baserat på vad användaren väljer. Fälten och värdena är till exempel olika för alternativen Inköp och Refinansiering. Den här funktionaliteten uppnås med hjälp av regler för att visa/dölja. När du klickar på Fortsätt och fliken Planer initieras anropas dessutom en webbtjänst som konfigurerats i en formulärdatamodell för att hämta och visa hypoteksplaner. Du kan läsa formulärdatamodeller och konfigurerade tjänster på `https://[host]:[Port]/aem/forms.html/content/dam/formsanddocuments-fdm`.
+* Den första fliken, Komma igång, i programmet är en dynamisk låneberäkning som visar alternativ baserat på vad användaren väljer. Fälten och värdena är till exempel olika för alternativen Inköp och Refinansiering. Den här funktionaliteten uppnås med hjälp av regler för att visa/dölja. När du klickar på Fortsätt och fliken Planer initieras anropas dessutom en webbtjänst som konfigurerats i en formulärdatamodell för att hämta och visa hypoteksplaner. Du kan läsa formulärdatamodeller och konfigurerade tjänster på `https://[host]:'port'/aem/forms.html/content/dam/formsanddocuments-fdm`.
 * Här används olika adaptiva formulärkomponenter för att hämta in indata och anpassa dem efter användarens svar. Den använder också komponenter som e-post som stöder HTML5-indatatyper.
 * Den använder komponenten Signature Step för att visa det ifyllda formuläret och tillåter elektronisk signatur i formuläret.
-* Den använder åtgärden Invoke AEM Workflow för att starta Web Finance Home Mortgage AEM-arbetsflödet. Du kan granska arbetsflödet som används i det här formuläret på `https://[host]:[Port]/editor.html/conf/global/settings/workflow/models/we-finance-home-mortgage-workflow.html`
+* Den använder åtgärden Invoke AEM Workflow för att starta Web Finance Home Mortgage AEM-arbetsflödet. Du kan granska arbetsflödet som används i det här formuläret på `https://[host]:'port'/editor.html/conf/global/settings/workflow/models/we-finance-home-mortgage-workflow.html`
 
 Vi rekommenderar att du granskar formuläret för att förstå vilket schema, vilka komponenter, regler, formulärdatamodeller, arbetsflöde för formulär och vilken skicka-åtgärd som används för att skapa formuläret.
 
@@ -403,7 +403,7 @@ Se även följande dokumentation för mer information om funktioner som används
 
 #### Se det själv {#see-it-yourself-6}
 
-Gå till `https://[server]:[port]/content/we-finance/global/en/all-forms.html` och klicka på knappen **Använd nu** i Home Mortgage Application. Fyll i informationen på fliken Komma igång, prova olika alternativ och skicka programmet.
+Gå till `https://'[server]:[port]'/content/we-finance/global/en/all-forms.html` och klicka på knappen **Använd nu** i Home Mortgage Application. Fyll i informationen på fliken Komma igång, prova olika alternativ och skicka programmet.
 
 Se till att du anger ett giltigt e-post-ID i programmet för att få ett bekräftelsemeddelande i inkorgen.
 
@@ -459,7 +459,7 @@ Om du angav ditt e-post-ID när du fyllde i låneansökan bör du ha fått ett e
 
 Du kan visa den i AEM-publiceringsinstansen på följande URL:
 
-`https://[host]:[port]/content/forms/af/we-finance/mortgage-loan-welcome-kit.html`
+`https://[host]:'port'/content/forms/af/we-finance/mortgage-loan-welcome-kit.html`
 
 ### Sarah får ett kontoutdrag {#sarah-receives-an-account-statement}
 
@@ -549,7 +549,7 @@ Utför följande steg i författarinstansen för att skapa A/B-test för lånean
    `https://&lt;hostname&gt;:&lt;port&gt;/content/dam/formsanddocuments/we-finance/hm-app/jcr:content?wcmmode=disabled`
 
    >[!NOTE]
-   >  Ta bort cookien med **namnrutan** från webbläsarens cookie-beständighet innan du öppnar formuläret nästa gång. Du kommer att se upplevelsen A och B av formuläret på måfå.
+   > Ta bort cookien med **namnrutan** från webbläsarens cookie-beständighet innan du öppnar formuläret nästa gång. Du kommer att se upplevelsen A och B av formuläret på måfå.
 
 1. Markera formuläret, klicka på **Mer** och klicka på **A/B-testrapport**. Du hittar inte så mycket data i rapporten som du just har påbörjat testningen. Nu ska vi tillhandahålla vissa startdata för att se hur A/B-testrapporten ser ut.
 1. Öppna CRXDE Lite och ta en säkerhetskopia av följande fil: /libs/fd/fmaddon/gui/components/admin/targetreport/clientlibs/targetreport/js/targetreport.js
@@ -618,17 +618,17 @@ Den inskickade ansökan går till We.Finance för godkännande.
 
 #### Så här fungerar det {#how-it-works-13}
 
-Knappen **Använd nu** dirigerar Sarah till bostadslådan. Programmet är ett anpassat formulär som du kan granska i redigeringsinstanserna `https://[host]:[Port]/editor.html/content/forms/af/we-finance/ms-dynamics/application-for-home-mortgage.html`.
+Knappen **Använd nu** dirigerar Sarah till bostadslådan. Programmet är ett anpassat formulär som du kan granska i redigeringsinstanserna på `https://[host]:'port'/editor.html/content/forms/af/we-finance/ms-dynamics/application-for-home-mortgage.html`.
 
 Några av de funktioner du kan granska i den anpassade formen är:
 
 * Det baseras på ett XSD-schema `homeMortgageApplication.xsd`.
 * Det har skapats med We Finance Theme B för formatering och We.Finance för layout. Dessutom används Layout utan panelrubriker i formulärrubrikslayouten för mobil navigering. Den visar en progressiv mobil layout när den öppnas från en mobil enhet. Du kan granska mallen och temat som används i det adaptiva formuläret på följande platser i din AEM-författarinstans:
 
-   * `https://[host]:[Port]/libs/wcm/core/content/sites/templates.html/conf/we-finance`
-   * `https://[host]:[Port]/editor.html/content/dam/formsanddocuments-themes/we-finance/we-finance-theme-b/jcr:content`
+   * `https://[host]:'port'/libs/wcm/core/content/sites/templates.html/conf/we-finance`
+   * `https://[host]:'port'/editor.html/content/dam/formsanddocuments-themes/we-finance/we-finance-theme-b/jcr:content`
 
-* Den första fliken, Komma igång, i programmet är en dynamisk låneberäkning som visar alternativ baserat på vad användaren väljer. Fälten och värdena är till exempel olika för alternativen Inköp och Refinansiering. Den här funktionaliteten uppnås med hjälp av regler för att visa/dölja. När du klickar på Fortsätt och fliken Planer initieras anropas dessutom en webbtjänst som konfigurerats i en formulärdatamodell för att hämta och visa hypoteksplaner. Du kan läsa formulärdatamodeller och konfigurerade tjänster på `https://[host]:[Port]/aem/forms.html/content/dam/formsanddocuments-fdm`.
+* Den första fliken, Komma igång, i programmet är en dynamisk låneberäkning som visar alternativ baserat på vad användaren väljer. Fälten och värdena är till exempel olika för alternativen Inköp och Refinansiering. Den här funktionaliteten uppnås med hjälp av regler för att visa/dölja. När du klickar på Fortsätt och fliken Planer initieras anropas dessutom en webbtjänst som konfigurerats i en formulärdatamodell för att hämta och visa hypoteksplaner. Du kan läsa formulärdatamodeller och konfigurerade tjänster på `https://[host]:'port'/aem/forms.html/content/dam/formsanddocuments-fdm`.
 * Här används olika adaptiva formulärkomponenter för att hämta in indata och anpassa dem efter användarens svar. Den använder också komponenter som e-post som stöder HTML5-indatatyper.
 * Den använder komponenten Signature Step för att visa det ifyllda formuläret och tillåter elektronisk signatur i formuläret.
 
@@ -674,7 +674,7 @@ Nyhetsbrevet som skickas till Sarah är en anpassad implementering som utlöser 
 
 Sarah gillar hemförsäkringsplanen i nyhetsbrevet och bestämmer sig för att ansöka om den. Hon klickar på Apply Now i nyhetsbrevet, som öppnar försäkringsansökan på webbportalen We.Finance. Ansökningsformuläret är organiserat i avsnitt med hjälp av en kortlayout.
 
-På sidan Personlig information får hon ett meddelande om att hon måste logga in med sina inloggningsuppgifter eftersom Sarah skickar sitt socialförsäkringsnummer.
+På sidan Personlig information får hon ett meddelande om att hon måste logga in med sina inloggningsuppgifter, eftersom Sarah ger sitt socialförsäkringsnummer.
 
 ![försäkring-ssn](assets/insurance-ssn.png)
 
@@ -686,17 +686,17 @@ Om Sarah skickade in programmet på en mobil enhet skulle hon gå igenom följan
 
 #### Så här fungerar det {#how-it-works-15}
 
-Knappen **Använd nu** i nyhetsbrevet dirigerar Sarah till hemförsäkringsprogrammet på webbportalen. Programmet är ett anpassat formulär som du kan granska i redigeringsinstansen på `https://[host]:[Port]/editor.html/content/forms/af/we-finance/insurance/application-for-insurance.html`.
+Knappen **Använd nu** i nyhetsbrevet dirigerar Sarah till hemförsäkringsprogrammet på webbportalen. Programmet är ett anpassat formulär som du kan granska i redigeringsinstansen på `https://[host]:'port'/editor.html/content/forms/af/we-finance/insurance/application-for-insurance.html`.
 
 Några av de funktioner du kan granska i den anpassade formen är:
 
 * Det baseras på ett XSD-schema `insurance.xsd`.
-* Det har skapats med försäkringstemat för formatering och använder Layout utan panelrubriker i formulärrubrikslayouten för mobil navigering. Den visar en progressiv mobil layout när den öppnas från en mobil enhet. Du kan granska mallen på `https://[host]:[Port]/libs/wcm/core/content/sites/templates.html/conf/we-finance` och temat på `https://[host]:[Port]/editor.html/content/dam/formsanddocuments-themes/we-finance/insurance/jcr:content`.
+* Det har skapats med försäkringstemat för formatering och använder Layout utan panelrubriker i formulärrubrikslayouten för mobil navigering. Den visar en progressiv mobil layout när den öppnas från en mobil enhet. Du kan granska mallen på `https://[host]:'port'/libs/wcm/core/content/sites/templates.html/conf/we-finance` och temat på `https://[host]:'port'/editor.html/content/dam/formsanddocuments-themes/we-finance/insurance/jcr:content`.
 
-* Den innehåller anpassningsbara formulärregler som anropar Form Data Model-tjänster för att förifylla användarinformation för inloggad användare. Den anropar också tjänster för att förifylla information med personnummer eller e-postadress som anges i formuläret. Du kan läsa formulärdatamodeller och deras tjänster på `https://[host]:[Port]/aem/forms.html/content/dam/formsanddocuments-fdm`.
+* Den innehåller anpassningsbara formulärregler som anropar Form Data Model-tjänster för att förifylla användarinformation för inloggad användare. Den anropar också tjänster för att förifylla information med personnummer eller e-postadress som anges i formuläret. Du kan läsa formulärdatamodeller och deras tjänster på `https://[host]:'port'/aem/forms.html/content/dam/formsanddocuments-fdm`.
 * Här används olika adaptiva formulärkomponenter för att hämta in indata och anpassa dem efter användarens svar. Den använder också komponenter som e-post som stöder HTML5-indatatyper.
 * Knappen Spara mitt förlopp genererar ett unikt ID för användaren och sparar det delvis ifyllda programmet som ett utkast i en nod i AEM-databasen. Dessutom visas en dialogruta där du söker behörighet att skicka ett e-postmeddelande med en länk till noden som innehåller utkastet till program. Knappen Skicka e-post i bekräftelsedialogrutan utlöser ett e-postmeddelande med en länk till noden som innehåller utkastet.
-* Den använder åtgärden Invoke AEM Workflow för att starta arbetsflödet för godkännande av försäkring. Du kan granska arbetsflödet som används i det här formuläret på `https://[host]:[Port]/editor.html/conf/global/settings/workflow/models/we-finance-insurance-workflow.html`
+* Den använder åtgärden Invoke AEM Workflow för att starta arbetsflödet för godkännande av försäkring. Du kan granska arbetsflödet som används i det här formuläret på `https://[host]:'port'/editor.html/conf/global/settings/workflow/models/we-finance-insurance-workflow.html`
 
 Vi rekommenderar att du granskar formuläret för att förstå vilket schema, vilka komponenter, regler, formulärdatamodeller, arbetsflöde för formulär och vilken skicka-åtgärd som används för att skapa formuläret.
 
@@ -869,7 +869,7 @@ Båda profilerna använder samma interaktiva kommunikation. Avsnitten i profilen
 
 Referenswebbplatsen innehåller också en interaktiv kommunikation som använder Microsoft Dynamics som datakälla för formulärdatamodellen. Utför följande steg för att konfigurera den interaktiva kommunikationen för genomgången av autoförsäkring:
 
-1. Logga in på `https://[author]:[port]/crx/de as an administrator`.
+1. Logga in på `https://[author]:'port'/crx/de as an administrator`.
 1. Open the `/apps/we-finance/components/ccrui/ccrui.jsp`file.
 1. Ange värdet för `FormFieldRequestParameter`till `/content/dam/formsanddocuments/we-finance/autoinsurance/auto-insurance-renewal-dynamics`
 1. Tryck på **Spara alla**. Referenswebbplatsen är konfigurerad att använda interaktiv kommunikation som använder MS Dynamics som datakälla.
