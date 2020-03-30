@@ -10,7 +10,7 @@ topic-tags: process-reporting
 discoiquuid: 7c1fcde0-b983-4b24-bc19-fcee1d4f096b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 8ae69f5bb67d51d759f143a076fef4f5f0375809
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -108,7 +108,7 @@ Du kan använda administrationskonsolen för att konfigurera roten (**standard**
 
 #### Så här konfigurerar du lagringsplatser för processrapportering {#to-configure-the-process-reporting-repository-locations}
 
-1. Logga in på **administrationskonsolen** med administratörsuppgifter. Standardwebbadressen för administrationskonsolen är `https://[server]:[port]/adminui`
+1. Logga in på **administrationskonsolen** med administratörsuppgifter. Standardwebbadressen för administrationskonsolen är `https://'[server]:[port]'/adminui`
 1. Navigera till **Hem** > **Tjänster** > **Program och tjänster** >**Tjänsthantering** och öppna tjänsten **ProcessDataStorageProvider** .
 
    ![process-data-storage-service](assets/process-data-storage-service.png)
@@ -133,7 +133,7 @@ Tjänsten ReportConfiguration används av Process Reporting för att konfigurera
 
 #### Så här konfigurerar du ReportingConfiguration-tjänsten {#to-configure-the-reportingconfiguration-service}
 
-1. Logga in på **Configuration Manager** med autentiseringsuppgifter för CRX-administratör. Konfigurationshanterarens standardwebbadress är `https://[server]:[port]/lc/system/console/configMgr`
+1. Logga in på **Configuration Manager** med autentiseringsuppgifter för CRX-administratör. Konfigurationshanterarens standardwebbadress är `https://'[server]:[port]'/lc/system/console/configMgr`
 1. Öppna tjänsten **ReportingConfiguration** .
 1. **Antal poster**
 
@@ -166,7 +166,7 @@ Tjänsten ProcessDataPublisher importerar processdata från AEM Forms-databasen 
 
 1. Logga in på **administrationskonsolen** med administratörsuppgifter.
 
-   Standardwebbadressen är `https://[server]:port]/adminui/`.
+   Standardwebbadressen är `https://'server':port]/adminui/`.
 
 1. Navigera till **Hem** > **Tjänster** > **Program och tjänster** >**Tjänsthantering** och öppna tjänsten **ProcessDataPublisher** .
 
@@ -244,37 +244,37 @@ När du loggar in på Process Reporting visas **[!UICONTROL startskärmen]** .
 
 ![process-reporting-home-screen](assets/process-reporting-home-screen.png)
 
-**** Trädvy för processrapportering: Trädvyn till vänster på hemskärmen innehåller objekten för processrapportmodulerna.
+**Trädvy för processrapportering:** Trädvyn till vänster på hemskärmen innehåller objekten för processrapportmodulerna.
 
 Trädvyn består av följande objekt på den översta nivån:
 
-**** Rapporter: Det här objektet innehåller färdiga rapporter som levereras med processrapportering.
+**Rapporter:** Det här objektet innehåller färdiga rapporter som levereras med processrapportering.
 
 Mer information om de fördefinierade rapporterna finns i [Fördefinierade rapporter i Processrapportering](/help/forms/using/process-reporting/pre-defined-reports-in-process-reporting.md).
 
-**** Adhoc-frågor: Det här objektet innehåller alternativ för att utföra filterbaserad sökning efter processer och uppgifter.
+**Adhoc-frågor:** Det här objektet innehåller alternativ för att utföra filterbaserad sökning efter processer och uppgifter.
 
 Mer information om ad hoc-frågor finns i [Ad-hoc-frågor i processrapportering](/help/forms/using/process-reporting/adhoc-queries-in-process-reporting.md).
 
-**** Anpassad: Noden Anpassad visar anpassade rapporter som du skapar.
+**Anpassad:** Noden Anpassad visar anpassade rapporter som du skapar.
 
 Information om hur du skapar och visar anpassade rapporter finns i [Anpassade rapporter i processrapportering](/help/forms/using/process-reporting/process-reporting-custom-reports.md).
 
-**** Titelfält för processrapportering: Titelfältet Processrapportering innehåller några allmänna alternativ som du kan använda när du arbetar i användargränssnittet.
+**Titelfält för processrapportering:** Titelfältet Processrapportering innehåller några allmänna alternativ som du kan använda när du arbetar i användargränssnittet.
 
-**** Processrapporttitel: Rubriken Processrapportering visas i det vänstra hörnet av namnlisten.
+**Processrapporttitel:** Rubriken Processrapportering visas i det vänstra hörnet av namnlisten.
 
 Klicka på titeln när som helst för att gå tillbaka till hemskärmen.
 
-**** Senaste uppdateringstid: Processdata publiceras på schemalagd basis från AEM Forms-databasen till Process Reporting-databasen.
+**Senaste uppdateringstid:** Processdata publiceras på schemalagd basis från AEM Forms-databasen till Process Reporting-databasen.
 
 Senaste uppdateringstid visar det senaste datumet och den senaste tiden fram till vilket datapresentationerna överfördes till Process Reporting-databasen.
 
 Mer information om datapubliceringstjänsten och hur du schemalägger den här tjänsten finns i [Schemalägg publicering](/help/forms/using/process-reporting/install-start-process-reporting.md#p-schedule-process-data-publishing-p) av processdata i artikeln Komma igång med processrapportering.
 
-**** Processrapportanvändare: Det inloggade användarnamnet visas till höger om tiden för senaste uppdatering.
+**Processrapportanvändare:** Det inloggade användarnamnet visas till höger om tiden för senaste uppdatering.
 
-**** Listruta med namnlist för Processrapportering: Listrutan till höger i namnlisten Processrapportering innehåller följande alternativ:
+**Listruta med namnlist för Processrapportering:** Listrutan till höger i namnlisten Processrapportering innehåller följande alternativ:
 
 * **[!UICONTROL Synkronisera]**: Synkronisera den inbäddade processrapportdatabasen med AEM Forms-databasen.
 * **[!UICONTROL Hjälp]**: Visa hjälpdokumentationen om processrapportering.
