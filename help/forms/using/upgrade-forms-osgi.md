@@ -10,7 +10,7 @@ topic-tags: installing
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: e745033f-8015-4fae-9d82-99d35802c0a6
 translation-type: tm+mt
-source-git-commit: 0a7c243589b410a671674b85d27fad158fe96b2a
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -38,11 +38,11 @@ Gör följande för att uppgradera från AEM 6.3-formulär eller AEM 6.4-formul�
 
       >[!NOTE]
       >
-      >När servern har startats och körts är några av AEM Forms-paketen fortfarande i installationstillstånd. Antalet paket kan variera för varje installation. Du kan ignorera läget för dessa paket. Paketen listas på https://[server]:[port]/system/console/.
+      >När servern har startats och körts är några av AEM Forms-paketen fortfarande i installationstillstånd. Antalet paket kan variera för varje installation. Du kan ignorera läget för dessa paket. Paketen listas på https://&#39;[server]:[port]&#39;/system/console/.
 
-1. Installera tilläggspaketet AEM Forms.  Stegen listas nedan:
+1. Installera tilläggspaketet AEM Forms. Stegen listas nedan:
 
-   1. Logga in på AEM-servern som administratör och öppna paketresursen. Standardwebbadressen för paketresursen är `https://[server]:[port]/crx/packageshare`.
+   1. Logga in på AEM-servern som administratör och öppna paketresursen. Standardwebbadressen för paketresursen är `https://'[server]:[port]'/crx/packageshare`.
    1. I paketresursen söker du efter **AEM 6.5-formulärtilläggspaket**, klickar på det paket som gäller för ditt operativsystem och klickar på **Hämta**. Läs och godkänn licensavtalet och klicka på **OK**. Nedladdningen startar. När du har hämtat **visas ordet Hämtad** bredvid paketet.
 
       Du kan också använda de hyperlänkar som visas i [AEM Forms-versioner](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) för att hämta ett paket manuellt.
@@ -94,13 +94,13 @@ Gör följande för att uppgradera från AEM 6.3-formulär eller AEM 6.4-formul�
 
 1. Kontrollera att servern har uppgraderats, att alla data har migrerats och att den fungerar som vanligt.
 
-   * **** Verifiera paketens status: Kontrollera att alla paket är i aktivt läge.
-   * **** Verifiera replikering och omvänd replikering: Publicera, fyll i och skicka några migrerade formulär. Verifiera också skickade data.
-   * **** Verifiera åtkomst till användargränssnitt för administratörer och utvecklare: Logga in på AEM-instansen från ett administratörskonto och verifiera att du har tillgång till följande URL:er:
+   * **Verifiera paketens status:** Kontrollera att alla paket är i aktivt läge.
+   * **Verifiera replikering och omvänd replikering:** Publicera, fyll i och skicka några migrerade formulär. Verifiera också skickade data.
+   * **Verifiera åtkomst till användargränssnitt för administratörer och utvecklare:** Logga in på AEM-instansen från ett administratörskonto och verifiera att du har tillgång till följande URL:er:
 
-      * `https://[server]:[port]/crx/packmgr`
-      * `https://[server]:[port]/crx/de`
-      * `https://[server]:[port]/aem/forms.html/content/dam/formsanddocuments`
+      * `https://'[server]:[port]'/crx/packmgr`
+      * `https://'[server]:[port]'/crx/de`
+      * `https://'[server]:[port]'/aem/forms.html/content/dam/formsanddocuments`
    >[!NOTE]
    I AEM 6.4 Forms har strukturen för crx-databasen ändrats. Om du uppgraderar från 6.3-formulär till AEM 6.5-formulär kan du använda de ändrade sökvägarna för anpassning som du skapar på nytt. En fullständig lista över ändrade sökvägar finns i [Omstrukturering av formulärdatabaser i AEM](/help/sites-deploying/forms-repository-restructuring-in-aem-6-5.md).
 
