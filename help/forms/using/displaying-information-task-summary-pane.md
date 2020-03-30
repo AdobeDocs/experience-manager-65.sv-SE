@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 90d0f584-b598-4b21-85d7-31da5f13d404
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -30,7 +30,7 @@ Med arbetsytan i AEM Forms kan du visa en webbsida som du väljer i rutan Samman
 1. Konfigurera URL-fältet för uppgiftssammanfattning. Du kan ange ett literalt värde, en mall, en variabel eller ett XPath-uttryck.
 1. Ett exempel på hur informationen på sidan Uppgiftssammanfattning visas nedan.
 
-   * Logga in i CRXDE Lite-miljön på `https://[server]:[port]/lc/crx/de`.
+   * Logga in i CRXDE Lite-miljön på `https://'[server]:[port]'/lc/crx/de`.
    * `Create a node`**SampleSummary **` under `/` with type `content:`. In the properties of this node, add `unstructuredsling:` of type String and value ``. In the Access Control List of this node, add an entry for `resourceTypeSampleSummaryPERM_WORKSPACE_` allowing `USERjcr:read` privileges.`
    * `Create a folder`**SampleSummary **under`/apps`. Lägg till en post för`/apps/SampleSummary`att tillåta i åtkomstkontrollistan`PERM_WORKSPACE_USER``jcr:readprivileges`.
    * `Create a file `html.esp` at `/apps/`. For example, add the following lines in `SampleSummaryhtml.esp`.`
@@ -49,7 +49,7 @@ Med arbetsytan i AEM Forms kan du visa en webbsida som du väljer i rutan Samman
    ```
 
    * Ange värdet för uppgiftssammanfattnings-URL:en som `/lc/content/SampleSummary.html` i steget Tilldela uppgift.
-   * När den uppgift som är associerad med det här steget Tilldela uppgift öppnas i arbetsytan i AEM Forms, kommer `html.esp` vid `/apps/SampleSummary` att renderas i åtgärdssammanfattningsrutan.
+   * När den uppgift som är associerad med det här steget Tilldela uppgift öppnas i arbetsytan i AEM Forms, kommer `html.esp` vid `/apps/SampleSummary` att renderas i åtgärdssammanfattningsfönstret.
 
 
 [Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
