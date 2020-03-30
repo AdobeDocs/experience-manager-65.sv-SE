@@ -9,7 +9,7 @@ topic-tags: correspondence-management
 discoiquuid: 87742cb2-357b-421f-b79d-e355887ddec0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3eaace94bc0499aaebfcd389d4dc97b97c7d9160
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -47,7 +47,7 @@ Markera den bokstav du vill förhandsgranska genom att följa följande steg:
 
    ![Förhandsgranska brev](assets/8_previewcustomdatafile.png)
 
-1. HTML-bokstaven (förhandsgranskning av mobilformulär) öppnas som standard med fliken Data i fokus.
+1. Bokstaven HTML-förhandsgranskning (förhandsgranskning av mobilformulär) öppnas som standard med fliken Data i fokus.
 
    Mer information om mobilformulär och vilka funktioner de har stöd för finns i [Funktionsdifferentiering mellan mobilformulär och PDF-formulär](https://helpx.adobe.com/livecycle/help/mobile-forms/feature-differentiation-mobile-forms-pdf.html).
 
@@ -134,9 +134,9 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
 
    ![letterbakgrundsfärg](assets/letterbackgroundcolor.png)
 
-   Du kan antingen trycka direkt på grundfärgen **[A]** på paletten Grundfärger eller på **Välj** när du har använt reglaget **[B]** för att välja rätt färgton.
+   Du kan antingen trycka direkt på en grundfärg `**[A]**` som finns på paletten Grundfärger eller på **Välj** efter `**[B]**` att du har använt reglaget för att välja rätt färgton.
 
-   Du kan också gå till fliken Avancerat och välja lämplig nyans, ljushet och mättnad **[C]** för att skapa den exakta färgen och sedan trycka på Välj **[D]** för att använda färgen för att markera texten.
+   Du kan också gå till fliken Avancerat och välja lämplig nyans, ljushet och mättnad `**[C]**` för att skapa en exakt färg och sedan trycka på Välj `**[D]**` för att markera texten.
 
    ![textbakgrundsfärg](assets/textbackgroundcolor.png)
 
@@ -246,7 +246,7 @@ Du kan göra layout- och innehållsrelaterade ändringar för att se till att br
 
    ![saveasdraft](assets/saveasdraft.png)
 
-   Dialogrutan Utkastbokstavsnamn visas med bokstavskod-ID:t. Du kan också redigera detta ID. Notera brev-ID:t och tryck sedan på **Klar**. Du kan sedan använda detta ID för att [läsa in utkastet](../../forms/using/submit-letter-topostprocess.md#main-pars-header-1)igen.
+   Dialogrutan Utkastbokstavsnamn visas med bokstavskod-ID. Du kan också redigera detta ID. Notera brev-ID:t och tryck sedan på **Klar**. Du kan sedan använda detta ID för att [läsa in utkastet](../../forms/using/submit-letter-topostprocess.md#main-pars-header-1)igen.
 
 1. Om du vill förhandsgranska bokstaven som en förenklad PDF-fil med exakt layout och sidbrytningar så som den kommer att skickas, trycker du på ![förhandsgranskning](assets/preview.png).
 
@@ -349,7 +349,7 @@ Mer information om webbläsarkompatibilitet med förhandsgranskning av brev finn
 
 Om du vill ändra förhandsgranskningsläget för brevet utför du följande steg:
 
-1. Gå till `https://[system]:[port]/system/console/configMgr` och logga in som administratör om det behövs.
+1. Gå till `https://[system]:'port'/system/console/configMgr` och logga in som administratör om det behövs.
 1. Gå till **[!UICONTROL Correspondence Management Configurations]** > **[!UICONTROL Rendition Type]** och välj **HTML Rendition** (Default) eller **PDF Rendition**.
 1. Click **[!UICONTROL Save]**.
 
