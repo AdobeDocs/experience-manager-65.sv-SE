@@ -10,7 +10,7 @@ topic-tags: correspondence-management
 discoiquuid: adc7ec13-0675-4071-9c4c-e238202d9d85
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5a586758da84f467e075adcc33cdcede2fbf09c7
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -23,7 +23,7 @@ I användargränssnittet Skapa korrespondens förhandsgranskar agentanvändare k
 
 För att förhindra obehörig användning av dessa data kan organisationer lägga in en vattenstämpel i PDF-filen för förhandsgranskning. Standardvattenstämpeln är&quot;PREVIEW&quot;, som visas i hela PDF-filen.
 
-Om du vill aktivera vattenstämpeln i PDF-förhandsgranskning väljer du alternativet **[!UICONTROL Använd vattenstämpel]** vid förhandsgranskning i **[!UICONTROL Correspondence Management Configurations]** på https://[server]:[port]/system/console/configMgr.
+Om du vill aktivera vattenstämpeln i PDF-förhandsgranskning väljer du alternativet **[!UICONTROL Använd vattenstämpel]** vid förhandsgranskning i **[!UICONTROL Correspondence Management Configurations]** på https://&#39;[server]:[port]&#39;/system/console/configMgr.
 
 ![default-watermark](assets/default-watermark.png)
 
@@ -31,7 +31,7 @@ Följ de här stegen för att anpassa texten och utseendet på vattenstämpeln:
 
 ## Anpassa vattenstämpeln i PDF-förhandsvisning i användargränssnittet Skapa korrespondens {#customizewatermark-}
 
-1. Gå till `https://[server]:[port]/[ContextPath]/crx/de` och logga in som administratör.
+1. Gå till `https://'[server]:[port]'/[ContextPath]/crx/de` och logga in som administratör.
 1. I mappen apps skapar du en mapp med namnet **[!UICONTROL previewwatermark]** med en sökväg/struktur som liknar mappen med förhandsvisningsvattenstämpeln i mappen libs:
 
    1. Högerklicka på mappen **för förhandsvisning av vattenstämpel** i följande sökväg och välj **Overlay Node**:
@@ -40,11 +40,11 @@ Följ de här stegen för att anpassa texten och utseendet på vattenstämpeln:
 
    1. Kontrollera att dialogrutan Overlay Node har följande värden:
 
-      **** Sökväg: /libs/fd/cm/configFiles/previewwatermark
+      **Sökväg:** /libs/fd/cm/configFiles/previewwatermark
 
-      **** Plats för övertäckning: /apps/
+      **Plats för övertäckning:** /apps/
 
-      **** Matcha nodtyper:Markerad
+      **Matcha nodtyper:** Markerad
 
       >[!NOTE]
       >
