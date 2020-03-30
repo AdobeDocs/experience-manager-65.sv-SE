@@ -8,7 +8,7 @@ topic-tags: installing
 discoiquuid: de292a19-07db-4ed3-b13a-7a2f1cd9e0dd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3226edb575de3d9f8bff53f5ca81e2957f37c544
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -33,7 +33,7 @@ AEM Forms är en kraftfull plattform i företagsklass. Formulärcentrerat arbets
 
 ## Distributionstopologi {#deployment-topology}
 
-AEM Forms-tilläggspaketet är ett program som distribueras till AEM. Du behöver bara minst en AEM-författare eller bearbetningsinstans (produktionsförfattare) för att köra det formulärbaserade arbetsflödet på OSGi-funktionen.  En bearbetningsinstans är en instans av en [AEM Author](/help/forms/using/hardening-securing-aem-forms-environment.md) . Gör inga riktiga skribenter, som att skapa arbetsflöden eller anpassningsbara formulär, åt produktionsförfattaren.
+AEM Forms-tilläggspaketet är ett program som distribueras till AEM. Du behöver bara minst en AEM-författare eller bearbetningsinstans (produktionsförfattare) för att köra det formulärbaserade arbetsflödet på OSGi-funktionen. En bearbetningsinstans är en instans av en [AEM Author](/help/forms/using/hardening-securing-aem-forms-environment.md) . Gör inga riktiga skribenter, som att skapa arbetsflöden eller anpassningsbara formulär, åt produktionsförfattaren.
 
 Följande topologi är en indikativ topologi för att köra AEM Forms Interactive Communications, Correspondence Management, AEM Forms data capture och Forms-Centric workflow på OSGi-funktioner. Mer information om topologin finns i [Arkitektur och distributionstopologier för AEM Forms](/help/forms/using/aem-forms-architecture-deployment.md).
 
@@ -55,7 +55,7 @@ Innan du börjar installera och konfigurera ett formulärcentrerat arbetsflöde 
 * En AEM-instans körs. I AEM-terminologi är &quot;instance&quot; en kopia av AEM som körs på en server i författar- eller publiceringsläge. Du måste ha minst en AEM-instans (författare eller bearbetning) för att kunna köra ett formulärcentrerat arbetsflöde på OSGi:
 
    * **Författare**: En AEM-instans som används för att skapa, överföra och redigera innehåll och för att administrera webbplatsen. När innehållet är klart att publiceras replikeras det till publiceringsinstansen.
-   * **** Bearbetar: En bearbetningsinstans är en instans av en [AEM Author](/help/forms/using/hardening-securing-aem-forms-environment.md) . Du kan ställa in en Author-instans och göra den oskarp efter att du har utfört installationen.
+   * **Bearbetar:** En bearbetningsinstans är en instans av en [AEM Author](/help/forms/using/hardening-securing-aem-forms-environment.md) . Du kan ställa in en Author-instans och göra den oskarp efter att du har utfört installationen.
 
    * **Publicera**: En AEM-instans som skickar det publicerade innehållet till allmänheten via Internet eller ett internt nätverk.
 
@@ -140,7 +140,7 @@ Utför följande steg på alla författare- och publiceringsinstanser för att s
 
 Utför följande steg på alla Author- och Publish-instanser för att vitlista paketet:
 
-1. Öppna AEM Configuration Manager i ett webbläsarfönster. Standardwebbadressen är https://[server]:[port]/system/console/configMgr.
+1. Öppna AEM Configuration Manager i ett webbläsarfönster. Standardwebbadressen är https://&#39;[server]:[port]&#39;/system/console/configMgr.
 1. Sök efter och öppna **Brandväggskonfiguration** för deserialisering.
 1. Lägg till paketet **sun.util.calendar** i **vitlistefältet** . Klicka på Spara.
 1. Upprepa steg 1-3 för alla författare- och publiceringsinstanser.
@@ -161,7 +161,7 @@ Dispatcher är ett verktyg för cachelagring och lastbalansering för AEM. AEM D
 
 1. Konfigurera tjänsten för refererarfilter:
 
-   Logga in som administratör i konfigurationshanteraren för Apache Felix. Konfigurationshanterarens standardwebbadress är https://[server]:[port_number]/system/console/configMgr. På menyn **Konfigurationer** väljer du alternativet **Apache Sling Reference Filter** . I fältet Tillåt värdar anger du värdnamnet för dispatchern så att den kan användas som referent och klickar på **Spara**. Formatet på posten är `https://[server]:[port]`.
+   Logga in som administratör i konfigurationshanteraren för Apache Felix. Konfigurationshanterarens standard-URL är https://&#39;server&#39;:[port_number]/system/console/configMgr. På menyn **Konfigurationer** väljer du alternativet **Apache Sling Reference Filter** . I fältet Tillåt värdar anger du värdnamnet för dispatchern så att den kan användas som referent och klickar på **Spara**. Formatet på posten är `https://'[server]:[port]'`.
 
 #### Konfigurera cache {#configure-cache}
 
@@ -172,7 +172,7 @@ Cachelagring är en mekanism som förkortar dataåtkomsttider, minskar fördröj
 
 Utför följande steg för att konfigurera cachen för adaptiva formulär:
 
-1. Gå till konfigurationshanteraren för AEM-webbkonsolen på `https://[server]:[port]/system/console/configMgr`.
+1. Gå till konfigurationshanteraren för AEM-webbkonsolen på `https://'[server]:[port]'/system/console/configMgr`.
 1. Klicka på **tjänsten** Adaptiv formulärkonfiguration för att redigera dess konfigurationsvärden. I dialogrutan Redigera konfigurationsvärden anger du det maximala antalet formulär eller dokument som en instans av AEM Forms-servern kan cachelagra i fältet **Antal adaptiva formulär** . Standardvärdet är 100. Click **Save**.
 
    >[!NOTE]
@@ -191,7 +191,7 @@ Om du vill använda Adobe Sign med AEM-formulär [integrerar du Adobe Sign med A
 
 Du har konfigurerat en miljö för att använda ett formulärcentrerat arbetsflöde på OSGi-funktioner. Stegen för att använda funktionerna är nu:
 
-* [Använda formulärcentrerat arbetsflöde i OSGi](../../forms/using/aem-forms-workflow.md)
+* [Använda formulärcentrerat arbetsflöde på OSGi](../../forms/using/aem-forms-workflow.md)
 * [Referens för arbetsflödessteg](/help/sites-developing/workflows-step-ref.md)
 * [Efterbearbetning av brev och interaktiv kommunikation](../../forms/using/submit-letter-topostprocess.md)
 
