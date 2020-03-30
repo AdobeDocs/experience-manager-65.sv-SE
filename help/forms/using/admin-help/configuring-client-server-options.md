@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0f069fbc-10c2-403e-9419-5e9920035d75
 translation-type: tm+mt
-source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -22,47 +22,47 @@ source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
 
 ## Inställningar för serverkonfiguration {#server-configuration-settings}
 
-**** Bas-URL: Bas-dokumentets säkerhets-URL, som innehåller servernamnet och porten. Den information som läggs till i basen skapar anslutnings-URL:er. Till exempel läggs /edc/Main.do till för att få åtkomst till webbsidorna. Användarna besvarar även inbjudningar till extern användarregistrering via denna URL.
+**Bas-URL:** Bas-dokumentets säkerhets-URL, som innehåller servernamnet och porten. Den information som läggs till i basen skapar anslutnings-URL:er. Till exempel läggs /edc/Main.do till för att få åtkomst till webbsidorna. Användarna besvarar även inbjudningar till extern användarregistrering via denna URL.
 
 Om du använder IPv6 anger du bas-URL:en som datornamn eller DNS-namn. Om du använder en numerisk IP-adress kan Acrobat inte öppna principskyddade filer. Använd även HTTP-säker URL (HTTPS) för servern.
 
 ***Obs **: Bas-URL:en är inbäddad i principskyddade filer. Klientprogram använder bas-URL:en för att ansluta tillbaka till servern. Skyddade filer innehåller även fortsättningsvis bas-URL:en, även om den ändras senare. Om du ändrar bas-URL:en måste konfigurationsinformationen uppdateras för alla anslutande klienter.*
 
-**** Standardlåneperiod offline: Den standardtid som en användare kan använda ett skyddat dokument offline. Den här inställningen avgör det inledande värdet för inställningen för den automatiska offlinelåneperioden när du skapar en profil. (Se Skapa och redigera profiler.) När låneperioden löper ut måste mottagaren synkronisera dokumentet igen för att kunna fortsätta använda det.
+**Standardperiod för offlinelån:** Den standardtid som en användare kan använda ett skyddat dokument offline. Den här inställningen avgör det inledande värdet för inställningen för den automatiska offlinelåneperioden när du skapar en profil. (Se Skapa och redigera profiler.) När låneperioden löper ut måste mottagaren synkronisera dokumentet igen för att kunna fortsätta använda det.
 
 En diskussion om hur offlinelån och synkronisering fungerar finns i [Primer om att konfigurera offlinelån och synkronisering](https://blogs.adobe.com/security/2009/05/primer_on_configuring_offline.html).
 
-**** Standardperiod för offlinesynkronisering: Den längsta tid som ett dokument kan användas offline från när det är skyddat från början.
+**Standardperiod för offlinesynkronisering:** Den längsta tid som ett dokument kan användas offline från när det är skyddat från början.
 
-**** Tidsgräns för klientsession: Den tid, i minuter, efter vilken dokumentsäkerheten kopplas från om en användare som är inloggad via ett klientprogram inte interagerar med dokumentsäkerheten.
+**Tidsgräns för klientsession:** Den tid, i minuter, efter vilken dokumentsäkerheten kopplas från om en användare som är inloggad via ett klientprogram inte interagerar med dokumentsäkerheten.
 
-**** Tillåt åtkomst för anonyma användare: Välj det här alternativet om du vill aktivera möjligheten att skapa delade och personliga policyer som tillåter anonyma användare att öppna policyskyddade dokument. (Användare som inte har konton kan komma åt dokumentet, men de kan inte logga in på dokumentsäkerhet eller använda andra profilskyddade dokument.)
+**Tillåt åtkomst för anonyma användare:** Välj det här alternativet om du vill aktivera möjligheten att skapa delade och personliga policyer som tillåter anonyma användare att öppna policyskyddade dokument. (Användare som inte har konton kan komma åt dokumentet, men de kan inte logga in på dokumentsäkerhet eller använda andra profilskyddade dokument.)
 
-**** Inaktivera åtkomst till Version 7-klienter: Anger om användare kan använda Acrobat eller Reader 7.0 för att ansluta till servern. När det här alternativet är markerat måste användarna använda Acrobat eller Reader 8.0 eller senare för att slutföra dokumentskyddsåtgärder för PDF-dokument. Om en profil kräver att Acrobat eller Reader 8.0 eller senare måste köras i certifierat läge när principskyddade dokument öppnas bör du inaktivera åtkomsten till Acrobat eller Reader 7. (Se Ange dokumentbehörigheter för användare och grupper.)
+**Inaktivera åtkomst till Version 7-klienter:** Anger om användare kan använda Acrobat eller Reader 7.0 för att ansluta till servern. När det här alternativet är markerat måste användarna använda Acrobat eller Reader 8.0 eller senare för att slutföra dokumentskyddsåtgärder för PDF-dokument. Om en profil kräver att Acrobat eller Reader 8.0 eller senare måste köras i certifierat läge när principskyddade dokument öppnas bör du inaktivera åtkomsten till Acrobat eller Reader 7. (Se Ange dokumentbehörigheter för användare och grupper.)
 
 **Tillåt offlineåtkomst per dokument** Välj det här alternativet om du vill ange offlineåtkomst per dokument. Om den här inställningen är aktiverad har användaren bara offline-åtkomst till de dokument som användaren har öppnat online minst en gång.
 
-**** Tillåt lösenordsautentisering av användarnamn: Välj det här alternativet om du vill att klientprogram ska kunna använda autentisering av användarnamn/lösenord vid anslutning till servern.
+**Tillåt lösenordsautentisering av användarnamn:** Välj det här alternativet om du vill att klientprogram ska kunna använda autentisering av användarnamn/lösenord vid anslutning till servern.
 
-**** Tillåt Kerberos-autentisering: Välj det här alternativet om du vill att klientprogram ska kunna använda Kerberos-autentisering när de ansluter till servern.
+**Tillåt Kerberos-autentisering:** Välj det här alternativet om du vill att klientprogram ska kunna använda Kerberos-autentisering när de ansluter till servern.
 
-**** Tillåt klientcertifikatautentisering: Välj det här alternativet om du vill att klientprogram ska kunna använda certifikatautentisering när de ansluter till servern.
+**Tillåt klientcertifikatautentisering:** Välj det här alternativet om du vill att klientprogram ska kunna använda certifikatautentisering när de ansluter till servern.
 
 **Tillåt utökad autentisering** Välj om du vill aktivera utökad autentisering och ange sedan den utökade URL:en för autentiseringslandning.
 
 Om du väljer det här alternativet kan klientprogram använda utökad autentisering. Utökad autentisering möjliggör anpassade autentiseringsprocesser och olika autentiseringsalternativ som konfigurerats på AEM-formulärservern. Användare kan nu till exempel använda SAML-baserad autentisering i stället för användarnamn/lösenord för AEM-formulär från Acrobat och Reader Client. Som standard innehåller landnings-URL:en *localhost* som servernamn. Ersätt servernamnet med ett fullständigt kvalificerat värdnamn. Värdnamnet i landnings-URL fylls automatiskt i från bas-URL:en om utökad autentisering inte har aktiverats ännu. Se [Lägg till den utökade autentiseringsprovidern](configuring-client-server-options.md#add-the-extended-authentication-provider).
 
-***Obs **!Utökad autentisering stöds i Apple Mac OS X med Adobe Acrobat version 11.0.6 och senare.*
+***Obs **! Utökad autentisering stöds i Apple Mac OS X med Adobe Acrobat version 11.0.6 och senare.*
 
 **Önskad HTML-kontrollbredd för utökad autentisering** Ange bredden på den utökade autentiseringsdialogrutan som öppnas i Acrobat för att ange inloggningsuppgifter.
 
 **Önskad HTML-kontrollhöjd för utökad autentisering** Ange höjden på den utökade autentiseringsdialogrutan som öppnas i Acrobat för att ange inloggningsuppgifter.
 
-*****Obs *! Bredd- och höjdgränserna för den här dialogrutan är följande:Bredd: Minimum = 400, maximum = 900
+***Obs **! Bredd- och höjdgränserna för den här dialogrutan är följande:*Bredd: Minimum = 400, maximum = 900
 
 Höjd: Minimum = 450; maximum = 800
 
-**** Aktivera cachelagring av klientautentiseringsuppgifter: Välj det här alternativet om du vill tillåta användare att cachelagra sina inloggningsuppgifter (användarnamn och lösenord). När användarnas inloggningsuppgifter är cachelagrade behöver de inte ange sina inloggningsuppgifter varje gång de öppnar ett dokument eller när de klickar på Uppdatera på sidan Hantera skyddsprofiler i Adobe Acrobat. Du kan ange antalet dagar innan användarna måste ange sina inloggningsuppgifter igen. Om du anger värdet 0 för antal dagar kan autentiseringsuppgifter cachelagras på obestämd tid.
+**Aktivera cachelagring av klientautentiseringsuppgifter:** Välj det här alternativet om du vill tillåta användare att cachelagra sina inloggningsuppgifter (användarnamn och lösenord). När användarnas inloggningsuppgifter är cachelagrade behöver de inte ange sina inloggningsuppgifter varje gång de öppnar ett dokument eller när de klickar på Uppdatera på sidan Hantera skyddsprofiler i Adobe Acrobat. Du kan ange antalet dagar innan användarna måste ange sina inloggningsuppgifter igen. Om du anger värdet 0 för antal dagar kan autentiseringsuppgifter cachelagras på obestämd tid.
 
 ## Konfigurera användare och administratörer för dokumentsäkerhet {#configuring-document-security-users-and-administrators}
 
@@ -80,7 +80,7 @@ Listan med synliga användare och grupper är synlig för principuppsättningens
 
 1. När du har installerat och konfigurerat din AEM-formulärmiljö med dokumentsäkerhet konfigurerar du alla lämpliga domäner i Användarhantering. <!-- Fix broken link (See Setting up and managing domains) -->
 
-   ***Obs **!Du måste skapa domäner innan du kan skapa profiler.*
+   ***Obs **! Du måste skapa domäner innan du kan skapa profiler.*
 
 1. I administrationskonsolen klickar du på Tjänster > Dokumenthantering > Profiler och sedan på fliken Principuppsättningar.
 1. Välj Global principuppsättning och klicka sedan på fliken Synliga användare och grupper.
@@ -120,7 +120,7 @@ Med utökad autentisering aktiverat får användare som öppnar ett policyskydda
    <entry key="sso-o" value="/ssoexample/logout.jsp"/>
    ```
 
-1. Spara filen och importera sedan den uppdaterade filen från sidan Manuell konfiguration:I administrationskonsolen klickar du på Inställningar > Användarhantering > Konfiguration > Importera och exportera konfigurationsfiler.
+1. Spara filen och importera sedan den uppdaterade filen från sidan Manuell konfiguration: I administrationskonsolen klickar du på Inställningar > Användarhantering > Konfiguration > Importera och exportera konfigurationsfiler.
 
 ## Konfigurera offlinesäkerhet {#configuring-offline-security}
 
@@ -161,12 +161,12 @@ I följande exempel är Key1 den äldre av de två huvudnycklarna och Key2 den n
 Av sekretesskäl ger dokumentskyddet ett automatiskt nyckelrolloveralternativ med en standardfrekvenstid på 20 dagar när du använder offlinedokument. Du kan ändra överrullningsfrekvensen; Undvik dock att ange ett lägre värde än 14 dagar eftersom användare kan hindras från att visa offlinedokument och systemprestanda kan påverkas.
 
 1. På dokumentsäkerhetssidan klickar du på Konfiguration > Nyckelhantering.
-1. Ange antalet dagar för rollover-perioden i rutan Tangentrollover-frekvens.
+1. I rutan Tangentrollover-frekvens anger du antalet dagar för rollover-perioden.
 1. Klicka på OK.
 
 **Överför huvudnycklar manuellt**
 
-Om du vill behålla sekretessen för offlinedokument kan du manuellt föra över huvudnycklar. Du kan behöva rulla över en nyckel manuellt (t.ex. om nyckeln komprometteras av någon som hämtar den från en dator där den cache-lagras för att kunna aktivera offlineåtkomst till ett dokument).
+För att sekretessen för offlinedokument ska kunna bevaras kan du manuellt föra över huvudnycklar. Du kan behöva rulla över en nyckel manuellt (t.ex. om nyckeln komprometteras av någon som hämtar den från en dator där den cache-lagras för att kunna aktivera offlineåtkomst till ett dokument).
 
 >[!NOTE]
 >
@@ -276,95 +276,95 @@ Du kan aktivera och inaktivera händelsegranskning och ange vilka typer av händ
 
 **Dokumenthändelser**
 
-**** Visa dokument: En mottagare visar ett policyskyddat dokument.
+**Visa dokument:** En mottagare visar ett policyskyddat dokument.
 
-**** Stäng dokument: En mottagare stänger ett profilskyddat dokument.
+**Stäng dokument:** En mottagare stänger ett profilskyddat dokument.
 
 **Skriv ut med låg upplösning** En mottagare skriver ut ett policyskyddat dokument med det angivna lågupplösningsalternativet.
 
-**** Högupplöst utskrift: En mottagare skriver ut ett policyskyddat dokument med ett alternativ för hög upplösning.
+**Högupplöst utskrift:** En mottagare skriver ut ett policyskyddat dokument med ett alternativ för hög upplösning.
 
-**** Lägg till anteckning i dokument: En mottagare lägger till en anteckning i ett PDF-dokument.
+**Lägg till anteckning i dokument:** En mottagare lägger till en anteckning i ett PDF-dokument.
 
-**** Återkalla dokument: En användare eller administratör återkallar åtkomsten till ett principskyddat dokument.
+**Återkalla dokument:** En användare eller administratör återkallar åtkomsten till ett principskyddat dokument.
 
-**** Ångra Återkalla dokument: En användare eller administratör återställer åtkomsten till ett principskyddat dokument.
+**Ångra Återkalla dokument:** En användare eller administratör återställer åtkomsten till ett principskyddat dokument.
 
-**** Ifyllning av formulär: En mottagare anger information i ett PDF-dokument som är ett ifyllbart formulär.
+**Ifyllning av formulär:** En mottagare anger information i ett PDF-dokument som är ett ifyllbart formulär.
 
-**** Borttagen princip: En utgivare tar bort en princip från ett dokument för att återkalla säkerhetsskyddet.
+**Borttagen princip:** En utgivare tar bort en princip från ett dokument för att återkalla säkerhetsskyddet.
 
-**** Ändra URL för dokumentåterkallning: Ett anrop från API-nivån ändrar den spärr-URL som anges för att få åtkomst till ett nytt dokument som ersätter ett återkallat dokument.
+**Ändra URL för dokumentåterkallning:** Ett anrop från API-nivån ändrar den spärr-URL som anges för att få åtkomst till ett nytt dokument som ersätter ett återkallat dokument.
 
-**** Ändra dokument: En mottagare ändrar innehållet i ett policyskyddat dokument.
+**Ändra dokument:** En mottagare ändrar innehållet i ett policyskyddat dokument.
 
-**** Signera dokument: En mottagare signerar ett dokument.
+**Signera dokument:** En mottagare signerar ett dokument.
 
-**** Skydda ett nytt dokument: En användare använder en profil för att skydda ett dokument.
+**Skydda ett nytt dokument:** En användare använder en profil för att skydda ett dokument.
 
-**** Byt profil på dokument: En användare eller administratör växlar den princip som är kopplad till ett dokument.
+**Byt profil på dokument:** En användare eller administratör växlar den princip som är kopplad till ett dokument.
 
-**** Publicera dokument som: Ett nytt dokument vars documentName och license är identiska med ett befintligt dokument registreras på servern och dokumenten har ingen överordnad-underordnad relation. Den här händelsen kan utlösas med AEM Forms SDK.
+**Publicera dokument som:** Ett nytt dokument vars documentName och license är identiska med ett befintligt dokument registreras på servern och dokumenten har ingen överordnad-underordnad relation. Den här händelsen kan utlösas med AEM Forms SDK.
 
-**** Upprepa dokument: Ett nytt dokument vars documentName och license är identiska med ett befintligt dokument registreras på servern och dokumenten har en överordnad-underordnad relation. Den här händelsen kan utlösas med AEM Forms SDK.
+**Upprepa dokument:** Ett nytt dokument vars documentName och license är identiska med ett befintligt dokument registreras på servern och dokumenten har en överordnad-underordnad relation. Den här händelsen kan utlösas med AEM Forms SDK.
 
 **Politiska händelser**
 
-**** Skapad princip: En användare eller administratör skapar en profil.
+**Skapad princip:** En användare eller administratör skapar en profil.
 
-**** Aktiverad princip: En administratör gör en profil tillgänglig.
+**Aktiverad princip:** En administratör gör en profil tillgänglig.
 
-**** Ändrad princip: En användare eller administratör ändrar en princip.
+**Ändrad princip:** En användare eller administratör ändrar en princip.
 
-**** Inaktiverad princip: En administratör gör att en princip inte är tillgänglig.
+**Inaktiverad princip:** En administratör gör att en princip inte är tillgänglig.
 
-**** Borttagen princip: En användare eller administratör tar bort en princip.
+**Borttagen princip:** En användare eller administratör tar bort en princip.
 
-**** Ändra principägare: Ett anrop från API-nivån ändrar principägaren.
+**Ändra principägare:** Ett anrop från API-nivån ändrar principägaren.
 
 **Användarhändelser**
 
-**** Borttagen användare: En administratör tar bort ett användarkonto.
+**Borttagen användare:** En administratör tar bort ett användarkonto.
 
-**** Registrera inbjuden användare: En extern användare registrerar sig med dokumentsäkerhet.
+**Registrera inbjuden användare:** En extern användare registrerar sig med dokumentsäkerhet.
 
-**** Slutförd inloggning: Administratörer eller användare har loggat in.
+**Slutförd inloggning:** Administratörer eller användare har loggat in.
 
-**** Inbjudna användare: Dokumentsäkerhet bjuder in en användare att registrera sig.
+**Inbjudna användare:** Dokumentsäkerhet bjuder in en användare att registrera sig.
 
-**** Aktiverade användare: Externa användare aktiverar sina konton med hjälp av URL:en i aktiveringsmeddelandet, eller så aktiverar en administratör ett konto.
+**Aktiverade användare:** Externa användare aktiverar sina konton med hjälp av URL:en i aktiveringsmeddelandet, eller så aktiverar en administratör ett konto.
 
-**** Ändra lösenord: Inbjudna användare ändrar sina lösenord eller administratören återställer ett lösenord för en lokal användare.
+**Ändra lösenord:** Inbjudna användare ändrar sina lösenord eller administratören återställer ett lösenord för en lokal användare.
 
-**** Misslyckad inloggning: Administratörer eller användare har misslyckats med inloggningsförsök.
+**Misslyckad inloggning:** Administratörer eller användare har misslyckats med inloggningsförsök.
 
-**** Inaktiverade användare: En administratör inaktiverar ett lokalt användarkonto.
+**Inaktiverade användare:** En administratör inaktiverar ett lokalt användarkonto.
 
-**** Profiluppdatering: Inbjudna användare ändrar namn, organisationsnamn och lösenord.
+**Profiluppdatering:** Inbjudna användare ändrar namn, organisationsnamn och lösenord.
 
-**** Konto låst: En administratör låser ett konto.
+**Konto låst:** En administratör låser ett konto.
 
 **Principuppsättningshändelser**
 
-**** CreatedPolicy Set: En administratör eller principuppsättningskoordinator skapar en principuppsättning.
+**CreatedPolicy Set:** En administratör eller principuppsättningskoordinator skapar en principuppsättning.
 
-**** Borttagen principuppsättning: En administratör eller koordinator för en principuppsättning tar bort en principuppsättning.
+**Borttagen principuppsättning:** En administratör eller koordinator för en principuppsättning tar bort en principuppsättning.
 
-**** Ändrad principuppsättning: En administratör eller principuppsättningskoordinator ändrar en principuppsättning.
+**Ändrad principuppsättning:** En administratör eller principuppsättningskoordinator ändrar en principuppsättning.
 
 **Systemhändelser**
 
-**** Katalogsynkroniseringen har slutförts: Den här informationen är inte tillgänglig från sidan Händelser. Den aktuella katalogsynkroniseringsinformationen, inklusive det aktuella synkroniseringstillståndet och tidpunkten för den senaste synkroniseringen, visas på sidan Domänhantering. Om du vill få åtkomst till sidan Domänhantering i administrationskonsolen klickar du på Inställningar > Användarhantering > Domänhantering.
+**Katalogsynkroniseringen har slutförts:** Den här informationen är inte tillgänglig från sidan Händelser. Den aktuella katalogsynkroniseringsinformationen, inklusive det aktuella synkroniseringstillståndet och tidpunkten för den senaste synkroniseringen, visas på sidan Domänhantering. Om du vill få åtkomst till sidan Domänhantering i administrationskonsolen klickar du på Inställningar > Användarhantering > Domänhantering.
 
-**** Klientaktivering av offlineåtkomst: En användare aktiverade offlineåtkomst till dokument som är skyddade mot servern på användarens dator.
+**Klientaktivering av offlineåtkomst:** En användare aktiverade offlineåtkomst till dokument som är skyddade mot servern på användarens dator.
 
 **Synkroniserat klientprogram** måste synkronisera information med servern för att tillåta åtkomst offline.
 
-**** Versionsfel: En version av AEM Forms SDK som inte är kompatibel med servern försökte ansluta till servern.
+**Versionsfel:** En version av AEM Forms SDK som inte är kompatibel med servern försökte ansluta till servern.
 
-**** Katalogsynkroniseringsinformation: Den här informationen är inte tillgänglig från sidan Händelser. Den aktuella katalogsynkroniseringsinformationen, inklusive det aktuella synkroniseringstillståndet och tidpunkten för den senaste synkroniseringen, visas på sidan Domänhantering. Om du vill få åtkomst till sidan Domänhantering i administrationskonsolen klickar du på Inställningar > Användarhantering > Domänhantering.
+**Katalogsynkroniseringsinformation:** Den här informationen är inte tillgänglig från sidan Händelser. Den aktuella katalogsynkroniseringsinformationen, inklusive det aktuella synkroniseringstillståndet och tidpunkten för den senaste synkroniseringen, visas på sidan Domänhantering. Om du vill få åtkomst till sidan Domänhantering i administrationskonsolen klickar du på Inställningar > Användarhantering > Domänhantering.
 
-**** Serverkonfigurationsändring: Ändringar av serverkonfigurationen som görs antingen via webbsidorna eller manuellt genom att importera en config.xml-fil. Detta inkluderar ändringar av bas-URL:en, timeout-problem för sessioner, inloggningslås, kataloginställningar, tangentöverrullningar, SMTP-serverinställningar för extern registrering, konfiguration av vattenstämplar, visningsalternativ osv.
+**Serverkonfigurationsändring:** Ändringar av serverkonfigurationen som görs antingen via webbsidorna eller manuellt genom att importera en config.xml-fil. Detta inkluderar ändringar av bas-URL:en, timeout-problem för sessioner, inloggningslås, kataloginställningar, tangentöverrullningar, SMTP-serverinställningar för extern registrering, konfiguration av vattenstämplar, visningsalternativ osv.
 
 ## Konfigurera utökad användningsspårning {#configuring-extended-usage-tracking}
 
@@ -380,7 +380,7 @@ Kontrollera att Servergranskning är aktiverat innan du börjar. Mer information
 
 1. I administrationskonsolen klickar du på Tjänster > Dokumentsäkerhet > Konfiguration > Gransknings- och sekretessinställningar.
 1. Om du vill konfigurera utökad användningsspårning väljer du Ja eller Nej under Aktivera spårning.
-1. Om du vill ange markeringen i kryssrutan Tillåt insamling av detaljerade användningsdata på inloggningssidan väljer du Ja eller Nej under Aktivera spårningsstandard.
+1. Om du vill ange markeringen för kryssrutan Tillåt insamling av detaljerade användningsdata på inloggningssidan väljer du Ja eller Nej under Aktivera spårningsstandard.
 
 Om du vill visa spårade händelser kan du använda filtret Dokumenthändelser på sidan Händelser. De händelser som spåras med JavaScript markeras som Detaljerad användningsspårning. Mer information om händelser finns i [Övervakningshändelser](/help/forms/using/admin-help/monitoring-events.md#monitoring-events) .
 
@@ -391,31 +391,31 @@ Om du vill visa spårade händelser kan du använda filtret Dokumenthändelser p
 
 ### Visningsinställningar {#display-settings}
 
-**** Rader som ska visas för sökresultat: Antal rader som visas på en sida när sökningar utförs.
+**Rader som ska visas för sökresultat:** Antal rader som visas på en sida när sökningar utförs.
 
 **Anpassning för dialogrutan för klientinloggning**
 
 Dessa inställningar styr texten som visas i inloggningsprompten som visas när en användare loggar in på dokumentsäkerhet via ett klientprogram.
 
-**** Välkomsttext: Välkomstmeddelandet, till exempel&quot;Logga in med ditt användarnamn och lösenord&quot;. Välkomstmeddelandet bör innehålla information om hur du loggar in på dokumentsäkerhet och hur du kontaktar en administratör eller annan utsedd supportperson i organisationen för att få hjälp. Externa användare kan till exempel behöva kontakta en administratör om de glömmer bort sina lösenord eller behöver hjälp med registreringen eller inloggningen. Den maximala längden på välkomsttexten är 512 tecken.
+**Välkomsttext:** Välkomstmeddelandet, till exempel&quot;Logga in med ditt användarnamn och lösenord&quot;. Välkomstmeddelandet bör innehålla information om hur du loggar in på dokumentsäkerhet och hur du kontaktar en administratör eller annan utsedd supportperson i organisationen för att få hjälp. Externa användare kan till exempel behöva kontakta en administratör om de glömmer bort sina lösenord eller behöver hjälp med registreringen eller inloggningen. Den maximala längden på välkomsttexten är 512 tecken.
 
-**** Text för användarnamn: Textetiketten för rutan Användarnamn.
+**Text för användarnamn:** Textetiketten för rutan Användarnamn.
 
-**** Lösenordstext: Textetiketten för lösenordsrutan.
+**Lösenordstext:** Textetiketten för lösenordsrutan.
 
 **Anpassning för dialogrutan för autentisering av klientcertifikat**
 
 De här inställningarna styr texten som visas i dialogrutan för certifikatautentisering.
 
-**** ChooseAuthentication Type Text: Den text som visas som instruerar en användare att välja en autentiseringstyp.
+**ChooseAuthentication Type Text:** Den text som visas som instruerar en användare att välja en autentiseringstyp.
 
-**** Välj certifikatstext: Den text som visas för att instruera en användare att välja en certifikattyp.
+**Välj certifikatstext:** Den text som visas för att instruera en användare att välja en certifikattyp.
 
-**** Feltext för certifikat som inte är tillgängliga: Meddelande med upp till 512 tecken som visas när det valda certifikatet inte är tillgängligt.
+**Feltext för certifikat som inte är tillgängliga:** Meddelande med upp till 512 tecken som visas när det valda certifikatet inte är tillgängligt.
 
 **Anpassning för visning av klientcertifikat**
 
-**** Visa endast pålitliga autentiseringsutfärdare: När det här alternativet är markerat ger klientprogrammet bara användaren certifikat från certifikatutfärdare som AEM-formulär har konfigurerats att lita på (se Hantera certifikat och autentiseringsuppgifter). När det här alternativet inte är markerat visas en lista med alla certifikat i användarens system.
+**Visa endast pålitliga autentiseringsutfärdare:** När det här alternativet är markerat ger klientprogrammet bara användaren certifikat från certifikatutfärdare som AEM-formulär har konfigurerats att lita på (se Hantera certifikat och autentiseringsuppgifter). När det här alternativet inte är markerat visas en lista med alla certifikat i användarens system.
 
 ## Konfigurera dynamiska vattenstämplar {#configure-dynamic-watermarks}
 
@@ -446,7 +446,7 @@ Tänk på följande när du konfigurerar vattenstämplar:
 * Du kan inte använda ett lösenordsskyddat PDF-dokument som vattenstämpelelement. Om vattenstämpeln som du skapar innehåller andra element som inte är lösenordsskyddade kommer de att användas som en del av vattenstämpeln.
 * Du kan ändra den maximala PDF-filstorlek som du vill använda som vattenstämpelelement. Stora PDF-dokument som används som vattenstämplar försämrar prestanda vid offlinesynkronisering av dokument som används med sådana vattenstämplar. Se [Ändra konfigurationsparametrar](configuring-client-server-options.md#change-the-watermark-configuration-parameters)för vattenstämpel.
 * Endast den första sidan i den markerade PDF-filen används som vattenstämpel. Kontrollera att den information som du vill ska visas som vattenstämpel är tillgänglig på själva sidan.
-* Även om du kan ange skalningen av PDF-dokumentet bör du överväga PDF-dokumentets sidstorlek och layout om du tänker använda den som en vattenstämpel i sidhuvudet, sidfoten eller marginalerna.
+* Även om du kan ange skalningen för PDF-dokumentet bör du överväga PDF-dokumentets sidstorlek och layout om du tänker använda den som en vattenstämpel i sidhuvudet, sidfoten eller marginalerna.
 * Ange rätt namn när du anger teckensnittsnamnet. AEM-formulär ersätter det teckensnitt som du har angett om det inte finns i klientdatorn där dokumentet öppnas.
 * Om du har markerat text som vattenstämpelinnehåll fungerar inte alternativet Anpassa till sida för sidor som har olika bredd.
 * När du anger placeringen av vattenstämpelelementen måste du se till att inte mer än ett element har samma placering. Om två vattenstämpelelement har samma placering, t.ex. mittpunkt, visas de överlappade i dokumentet och i den ordning som de lades till i vattenstämpeln.
@@ -548,7 +548,7 @@ Dokumentsäkerhet genererar automatiskt en registreringsinbjudan via e-post när
 
 E-postmeddelandet innehåller en länk till en registreringssida och information om hur du registrerar dig. När den inbjudna användaren har registrerat sig utfärdar dokumentsäkerheten ett aktiveringsmejl med en länk till en aktiveringssida. När det är aktiverat fortsätter kontot att gälla tills du inaktiverar eller tar bort det.
 
-Om du aktiverar inbyggd registrering anger du SMTP-servern, e-postinformation för registrering, åtkomstfunktioner och återställer e-postinformation för lösenord endast en gång. Innan du aktiverar den inbyggda registreringen bör du kontrollera att du har skapat en lokal domän i Användarhantering som har tilldelat rollen&quot;Bjud in användare för dokumentsäkerhet&quot; till lämpliga användare och grupper i organisationen. (Se [Lägga till en lokal domän](/help/forms/using/admin-help/adding-domains.md#add-a-local-domain) och [Skapa och konfigurera roller](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles).) Om du inte använder den inbyggda registreringen måste du ha ett eget användarregistreringssystem som skapats med AEM Forms SDK. Se hjälpen om&quot;Developing SPIs for AEM forms&quot; i [Programmering med AEM-formulär](https://www.adobe.com/go/learn-aemforms-programming-63). Om du inte använder alternativet Inbyggd registrering rekommenderar vi att du konfigurerar ett meddelande i aktiveringsmeddelandet och på klientinloggningsskärmen för att informera användarna om hur de kontaktar administratören för ett nytt lösenord eller för annan information.
+Om du aktiverar inbyggd registrering anger du SMTP-servern, e-postinformation för registrering, åtkomstfunktioner och återställer e-postinformation för lösenord endast en gång. Innan du aktiverar den inbyggda registreringen bör du kontrollera att du har skapat en lokal domän i Användarhantering som har tilldelat rollen&quot;Bjud in användare för dokumentsäkerhet&quot; till lämpliga användare och grupper i organisationen. (Se [Lägga till en lokal domän](/help/forms/using/admin-help/adding-domains.md#add-a-local-domain) och [Skapa och konfigurera roller](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles).) Om du inte använder den inbyggda registreringen måste du ha ett eget användarregistreringssystem som skapats med AEM Forms SDK. Se hjälpen om&quot;Developing SPIs for AEM forms&quot; i [Programmering med AEM-formulär](https://www.adobe.com/go/learn-aemforms-programming-63). Om du inte använder alternativet Inbyggd registrering rekommenderar vi att du konfigurerar ett meddelande i aktiveringsmeddelandet och på klientinloggningsskärmen för att meddela användarna hur de kan kontakta administratören för ett nytt lösenord eller för att få annan information.
 
 **Aktivera och konfigurera registrering av inbjudna användare**
 
@@ -573,31 +573,31 @@ Du kan begränsa registreringen med dokumentsäkerhet för vissa externa använd
 
 Följande inställningar finns under Filter för e-postbegränsning på sidan Inbjuden användarregistrering.
 
-**** Uteslutning: Skriv e-postadressen till en användare eller grupp som ska uteslutas. Om du vill exkludera flera användare eller grupper skriver du varje e-postadress på en ny rad. Om du vill utesluta alla användare som tillhör en viss domän anger du ett jokertecken och domännamnet. Om du till exempel vill utesluta alla användare i domänen example.com anger du &amp;ast;.example.com.
+**Uteslutning:** Skriv e-postadressen till en användare eller grupp som ska uteslutas. Om du vill exkludera flera användare eller grupper skriver du varje e-postadress på en ny rad. Om du vill utesluta alla användare som tillhör en viss domän anger du ett jokertecken och domännamnet. Om du till exempel vill utesluta alla användare i domänen example.com anger du &amp;ast;.example.com.
 
-**** Inkludering: Skriv e-postadressen till en användare eller grupp som ska inkluderas. Om du vill inkludera flera användare eller grupper skriver du varje e-postadress på en ny rad. Om du vill inkludera alla användare som tillhör en viss domän anger du ett jokertecken och domännamnet. Om du till exempel vill inkludera alla användare i domänen example.com anger du &amp;ast;.example.com.
+**Inkludering:** Skriv e-postadressen till en användare eller grupp som ska inkluderas. Om du vill inkludera flera användare eller grupper skriver du varje e-postadress på en ny rad. Om du vill inkludera alla användare som tillhör en viss domän anger du ett jokertecken och domännamnet. Om du till exempel vill inkludera alla användare i domänen example.com anger du &amp;ast;.example.com.
 
 ### Parametrar för server- och registreringskonton {#server-and-registration-account-parameters}
 
 Följande inställningar finns under Allmänna inställningar på sidan Inbjuden användarregistrering.
 
-**** SMTP-värd: SMTP-serverns värdnamn. SMTP-servern hanterar meddelandena om utgående e-post för att registrera och aktivera inbjudna användarkonton.
+**SMTP-värd:** SMTP-serverns värdnamn. SMTP-servern hanterar meddelandena om utgående e-post för att registrera och aktivera inbjudna användarkonton.
 
 Om det krävs av SMTP-värden anger du nödvändig information i rutorna SMTP-serverkontonamn och SMTP-serverkontolösenord för att ansluta till SMTP-servern. Vissa organisationer tillämpar inte detta krav. Kontakta systemadministratören om du behöver information.
 
-**** Namn på socketklass för SMTP-server: Socket-klassnamn för SMTP-servern. Exempel: javax.net.ssl.SSLSocketFactory.
+**Namn på socketklass för SMTP-server:** Socket-klassnamn för SMTP-servern. Exempel: javax.net.ssl.SSLSocketFactory.
 
-**** E-postinnehållstyp: Godkänd MIME-typ som text/plain eller text/html.
+**E-postinnehållstyp:** Godkänd MIME-typ som text/plain eller text/html.
 
-**** E-postkodning: Kodningsformat som ska användas när e-postmeddelanden skickas. Du kan ange valfri kodning, till exempel UTF-8 för Unicode eller ISO-8859-1 för Latin. Standardvärdet är UTF-8.
+**E-postkodning:** Kodningsformat som ska användas när e-postmeddelanden skickas. Du kan ange valfri kodning, till exempel UTF-8 för Unicode eller ISO-8859-1 för Latin. Standardvärdet är UTF-8.
 
-**** E-postadress för omdirigering: När du anger en e-postadress för den här inställningen skickas alla nya inbjudningar till den angivna adressen. Den här inställningen kan vara användbar i testsyfte.
+**E-postadress för omdirigering:** När du anger en e-postadress för den här inställningen skickas alla nya inbjudningar till den angivna adressen. Den här inställningen kan vara användbar i testsyfte.
 
-**** Använd lokala domäner: Välj lämplig domän. Kontrollera att du har skapat domänen med hjälp av Användarhantering vid en ny installation. Om detta är en uppgradering skapades en extern användardomän under uppgraderingen och kan användas.
+**Använd lokala domäner:** Välj lämplig domän. Kontrollera att du har skapat domänen med hjälp av Användarhantering vid en ny installation. Om detta är en uppgradering skapades en extern användardomän under uppgraderingen och kan användas.
 
-**** Använd SSL för SMTP-server: Välj det här alternativet om du vill aktivera SSL för SMTP-servern.
+**Använd SSL för SMTP-server:** Välj det här alternativet om du vill aktivera SSL för SMTP-servern.
 
-**** Visa inloggningslänk på registreringssidan: Visar en inloggningslänk på registreringssidan som visas för inbjudna användare.
+**Visa inloggningslänk på registreringssidan:** Visar en inloggningslänk på registreringssidan som visas för inbjudna användare.
 
 **Aktivera TLS (Transport Layer Security) för SMTP-servern**
 
@@ -612,8 +612,8 @@ Om det krävs av SMTP-värden anger du nödvändig information i rutorna SMTP-se
    >
    >Om du använder Microsoft Office 365 som SMTP-server för att skicka inbjudningar till användarregistrering använder du följande inställningar:
    >
-   >**** SMTP-värd: smtp.office365.com
-   >**** Port: 587
+   >**SMTP-värd:** smtp.office365.com
+   >**Port:** 587
 
 1. Därefter måste du uppdatera config.xml. Se [Konfiguration för att aktivera SMTP för TLS (Transport Layer Security)](configuring-client-server-options.md#configuration-to-enable-smtp-for-transport-layer-security-tls)
 
@@ -629,13 +629,13 @@ När mottagaren aktiverar kontot blir användaren en lokal användare.
 
 Följande inställningar finns under E-postkonfiguration för inbjudan på sidan Inbjuden användarregistrering.
 
-**** Från: E-postadressen som inbjudan skickas från. Standardformatet för Från-e-postadressen är postmaster@[your_installation_domain].com.
+**Från:** E-postadressen som inbjudan skickas från. Standardformatet för Från-e-postadressen är postmaster@[your_installation_domain].com.
 
-**** Ämne: Standardämne för e-postmeddelandet med inbjudan.
+**Ämne:** Standardämne för e-postmeddelandet med inbjudan.
 
-**** Timeout: Det antal dagar efter vilket registreringsinbjudan upphör om den externa användaren inte registrerar sig. Standardvärdet är 30 dagar.
+**Timeout:** Det antal dagar efter vilket registreringsinbjudan upphör om den externa användaren inte registrerar sig. Standardvärdet är 30 dagar.
 
-**** Meddelande: Den text som visas i meddelandetexten och som uppmanar användaren att registrera sig.
+**Meddelande:** Den text som visas i meddelandetexten och som uppmanar användaren att registrera sig.
 
 ### E-postinställningar för aktivering {#activation-email-settings}
 
@@ -649,13 +649,13 @@ Följande inställningar finns under E-postkonfiguration för aktivering på sid
 >
 >Vi rekommenderar även att du konfigurerar ett meddelande på inloggningsskärmen för att ge externa användare råd om hur de ska kontakta sin administratör för att få ett nytt lösenord eller annan information.
 
-**** Från: E-postadressen som aktiveringsmeddelandet skickas från. Den här e-postadressen tar emot meddelanden om misslyckad leverans från registrantens e-postvärd och även meddelanden som mottagaren skickar som svar på registreringsmeddelandet. Standardformatet för Från-e-postadressen är postmaster@[your_installation_domain].com.
+**Från:** E-postadressen som aktiveringsmeddelandet skickas från. Den här e-postadressen tar emot meddelanden om misslyckad leverans från registrantens e-postvärd och även meddelanden som mottagaren skickar som svar på registreringsmeddelandet. Standardformatet för Från-e-postadressen är postmaster@[your_installation_domain].com.
 
-**** Ämne: Standardämne för aktiveringsmeddelandet.
+**Ämne:** Standardämne för aktiveringsmeddelandet.
 
-**** Timeout: Det antal dagar efter vilket aktiveringsinbjudan förfaller om användaren inte aktiverar kontot. Standardvärdet är 30 dagar.
+**Timeout:** Det antal dagar efter vilket aktiveringsinbjudan förfaller om användaren inte aktiverar kontot. Standardvärdet är 30 dagar.
 
-**** Meddelande: Den text som visas i meddelandetexten är ett meddelande som anger att mottagarens användarkonto måste aktiveras. Du kan även inkludera information om hur du kontaktar en administratör för att få ett nytt lösenord.
+**Meddelande:** Den text som visas i meddelandetexten är ett meddelande som anger att mottagarens användarkonto måste aktiveras. Du kan även inkludera information om hur du kontaktar en administratör för att få ett nytt lösenord.
 
 ### Konfigurera e-post för återställning av lösenord {#configure-a-password-reset-email}
 
@@ -663,19 +663,19 @@ Om du måste återställa en inbjuden användares lösenord skapas ett bekräfte
 
 Följande inställningar finns i området Återställ e-post för lösenord på sidan Inbjuden användarregistrering.
 
-**** Från: E-postadressen som e-postmeddelandet för lösenordsåterställning skickas från. Standardformatet för Från-e-postadressen är postmaster@[your_installation_domain].com.
+**Från:** E-postadressen som e-postmeddelandet för lösenordsåterställning skickas från. Standardformatet för Från-e-postadressen är postmaster@[your_installation_domain].com.
 
-**** Ämne: Standardämne för återställningsmeddelandet.
+**Ämne:** Standardämne för återställningsmeddelandet.
 
-**** Meddelande: Den text som visas i brödtexten av meddelandet är ett meddelande som anger att mottagarens externa användarlösenord har återställts.
+**Meddelande:** Den text som visas i brödtexten av meddelandet är ett meddelande som anger att mottagarens externa användarlösenord har återställts.
 
 ## Ge användare och grupper möjlighet att skapa profiler {#enable-users-and-groups-to-create-policies}
 
 På konfigurationssidan finns en länk till sidan Mina principer, där du anger vilka användare som kan skapa mina principer och vilka användare och grupper som visas i sökresultaten. Sidan Mina principer har två flikar:
 
-**** Fliken Skapa profiler: Används för att konfigurera användarbehörigheter för att skapa anpassade profiler.
+**Fliken Skapa profiler:** Används för att konfigurera användarbehörigheter för att skapa anpassade profiler.
 
-**** Fliken Synliga användare och grupper: Används för att styra vilka användare och grupper som visas i användarsökresultaten. Den överordnade användaren eller administratören för principuppsättningen måste välja och lägga till domäner, skapade med användarhantering, i den synliga användaren och gruppen för varje principuppsättning. Den här listan är synlig för principuppsättningens koordinator och används för att ange gränser för vilka domäner som principuppsättningens koordinator kan bläddra i när användaren väljer att lägga till i profiler.
+**Fliken Synliga användare och grupper:** Används för att styra vilka användare och grupper som visas i användarsökresultaten. Den överordnade användaren eller administratören för principuppsättningen måste välja och lägga till domäner, skapade med användarhantering, i den synliga användaren och gruppen för varje principuppsättning. Den här listan är synlig för principuppsättningens koordinator och används för att ange gränser för vilka domäner som principuppsättningens koordinator kan bläddra i när användaren väljer att lägga till i profiler.
 
 Innan du ger användarna behörighet att skapa anpassade profiler bör du tänka på hur mycket åtkomst eller kontroll du vill att enskilda användare ska ha. Tänk också på hur exponerad du vill att användare och grupper ska vara när du gör dem synliga för sökningar.
 
@@ -728,7 +728,7 @@ Du kan göra följande ändringar med hjälp av konfigurationsfilen:
 
 >[!NOTE]
 >
->Om du importerar konfigurationsfilen konfigureras systemet om baserat på informationen i filen. Undantagen är dynamisk vattenstämpelkonfiguration och anpassad händelseinformation, som inte sparas med den exporterade konfigurationsfilen. Du måste konfigurera den här informationen manuellt i det nya systemet. Endast systemadministratörer eller konsulter som är vana vid dokumentsäkerhet och XML bör ändra innehållet i en konfigurationsfil, till exempel för att konfigurera om en skadad inställning eller för att justera parametrar för ett visst företagsscenario.
+>Om du importerar konfigurationsfilen konfigureras systemet om baserat på informationen i filen. Undantagen är dynamisk vattenstämpelkonfiguration och anpassad händelseinformation, som inte sparas med den exporterade konfigurationsfilen. Du måste konfigurera informationen manuellt i det nya systemet. Endast systemadministratörer eller konsulter som är vana vid dokumentsäkerhet och XML bör ändra innehållet i en konfigurationsfil, till exempel för att konfigurera om en skadad inställning eller för att justera parametrar för ett visst företagsscenario.
 
 **Exportera en konfigurationsfil**
 
@@ -765,10 +765,10 @@ I dokumentets säkerhetskonfigurationsfil kan du ange standardfrekvensen för de
 
 Du kan konfigurera dokumentsäkerhet för att neka tjänster till program som uppfyller specifika villkor. Kriterierna kan ange ett enskilt attribut, t.ex. ett plattformsnamn, eller ange flera uppsättningar attribut. Med den här funktionen kan du styra vilka krav som dokumentsäkerheten måste hantera. Här är några program med den här funktionen:
 
-* **** Intäktsskydd: Du kanske vill neka åtkomst till klientprogram som inte har stöd för dina intäktskonventioner.
-* **** Programkompatibilitet: Vissa program kan vara inkompatibla med dokumentsäkerhetsserverns profiler eller funktioner.
+* **Intäktsskydd:** Du kanske vill neka åtkomst till klientprogram som inte har stöd för dina intäktskonventioner.
+* **Programkompatibilitet:** Vissa program kan vara inkompatibla med dokumentsäkerhetsserverns profiler eller funktioner.
 
-När klientprogram försöker skapa en länk med dokumentsäkerhet, tillhandahåller de program-, version- och plattformsinformation. Dokumentsäkerhet jämför den här informationen med Neka-inställningar som hämtas från dokumentets säkerhetskonfigurationsfil.
+När klientprogram försöker skapa en länk med dokumentsäkerhet, tillhandahåller de information om program, version och plattform. Dokumentsäkerhet jämför den här informationen med Neka-inställningar som hämtas från dokumentets säkerhetskonfigurationsfil.
 
 Inställningarna för Neka kan innehålla flera uppsättningar villkor för Neka. Om alla attribut i en uppsättning matchar, nekas det begärande programmet åtkomst till dokumentets säkerhetstjänster.
 
@@ -796,21 +796,21 @@ Flera Adobe-program inkluderar produktinformation när de begär dokumentsäkerh
 
 När Acrobat eller Adobe Reader begär en tjänst från dokumentskydd, anger den följande produktinformation:
 
-* **** Integrator: Adobe Systems, Inc.
-* **** Integratorversion: 1.0
-* **** Programfamilj:Acrobat
-* **** Programnamn:Acrobat
-* **** Programversion: 9.0.0
+* **Integrator:** Adobe Systems, Inc.
+* **Integratorversion:** 1.0
+* **Programfamilj:** Acrobat
+* **Programnamn:** Acrobat
+* **Programversion:** 9.0.0
 
 **Acrobat Reader DC-tillägg för Microsoft Office**
 
 Acrobat Reader DC-tillägg för Microsoft Office är ett plugin-program som används med Microsoft Office-produkterna Microsoft Word, Microsoft Excel och Microsoft PowerPoint. När den begär en tjänst tillhandahåller den följande information:
 
-* **** Integrator: Adobe Systems Incorporated
-* **** Integratorversion: 8.2
-* **** Programfamilj: Acrobat Reader DC-tillägg för Microsoft Office
-* **** Programnamn: Microsoft Word, Microsoft Excel eller Microsoft PowerPoint
-* **** Programversion: 2003 eller 2007
+* **Integrator:** Adobe Systems Incorporated
+* **Integratorversion:** 8.2
+* **Programfamilj:** Acrobat Reader DC-tillägg för Microsoft Office
+* **Programnamn:** Microsoft Word, Microsoft Excel eller Microsoft PowerPoint
+* **Programversion:** 2003 eller 2007
 
 **Konfigurera dokumentsäkerhet för att neka tjänster för specifika program**
 
@@ -960,8 +960,8 @@ Som standard kan du ange högst fem element i en vattenstämpel. Den maximala fi
 
 Många dokumentsäkerhetsanvändare har inte tillgång till externa länkar som **www.adobe.com** när de använder rätt användargränssnitt för hantering:
 
-* `https://[host]:[port]/adminui`
-* `https://[host]:[port]/edc`.
+* `https://[host]:'port'/adminui`
+* `https://[host]:'port'/edc`.
 
 Följande ändringar av config.xml inaktiverar alla externa länkar från användargränssnitten för högerhantering.
 
