@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: dcf83c9f-b818-44a2-9079-80a4fc357c4f
 translation-type: tm+mt
-source-git-commit: 58fa0f05bae7ab5ba51491be3171b5c6ffbe870d
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -38,7 +38,7 @@ Följande snabbstarter är tillgängliga för programmässig anrop av AEM Forms-
   <tr>
    <td><p><a href="/help/forms/developing/invoking-aem-forms-using-java.md#invoking_a_short_lived_process_using_the_invocation_api">Anropa en kort process med anrops-API</a></p></td>
    <td><p>Ej tillämpligt</p></td>
-   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_short_lived_process_using_the_invocation_api">Snabbstart:Anropa en kort process med anrops-API</a></p></td>
+   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_short_lived_process_using_the_invocation_api">Snabbstart: Anropa en kort process med anrops-API</a></p></td>
    <td><p>Ej tillämpligt</p></td>
   </tr>
   <tr>
@@ -69,7 +69,7 @@ Följande snabbstarter är tillgängliga för programmässig anrop av AEM Forms-
    <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http">Anropa AEM-formulär med BLOB-data via HTTP</a> (Exempel på Java-webbtjänst)</p></td>
    <td><p>Ej tillämpligt</p></td>
    <td><p>Ej tillämpligt</p></td>
-   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_blob_data_over_http_in_a_net_project">Snabbstart: Anropa en tjänst med BLOB-data över HTTP i ett .NET-projekt</a></p></td>
+   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_blob_data_over_http_in_a_net_project">Snabbstart: Anropa en tjänst med BLOB-data via HTTP i ett .NET-projekt</a></p></td>
   </tr>
   <tr>
    <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http">Anropa AEM Forms med BLOB-data via HTTP</a> (.NET web service example)</p></td>
@@ -85,7 +85,7 @@ Följande snabbstarter är tillgängliga för programmässig anrop av AEM Forms-
   </tr>
   <tr>
    <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting">Anropa AEM Forms Using (Borttaget för AEM-formulär) AEM Forms Remoting</a></p></td>
-   <td><p><a href="invocation-api-quick-starts.md#quick-start-invoking-a-short-lived-process-by-passing-an-unsecure-document-using-deprecated-for-aem-forms-aem-forms-remoting">Snabbstart:Anropa en kort process genom att skicka ett osäkert dokument med hjälp av (borttaget för AEM-formulär) AEM Forms Remoting</a></p></td>
+   <td><p><a href="invocation-api-quick-starts.md#quick-start-invoking-a-short-lived-process-by-passing-an-unsecure-document-using-deprecated-for-aem-forms-aem-forms-remoting">Snabbstart: Anropa en kort process genom att skicka ett osäkert dokument med hjälp av (borttaget för AEM-formulär) AEM Forms Remoting</a></p></td>
    <td><p>Ej tillämpligt</p></td>
    <td><p>Ej tillämpligt</p></td>
   </tr>
@@ -108,7 +108,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda ty
 
 ***Obs **: Snabbstarter som finns i Programmering med AEM-formulär baseras på den formulärserver som distribueras på JBoss Application Server och operativsystemet Microsoft Windows. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. (Se[Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)*
 
-## Snabbstart:Anropa en kort process med anrops-API {#quick-start-invoking-a-short-lived-process-using-the-invocation-api}
+## Snabbstart: Anropa en kort process med anrops-API {#quick-start-invoking-a-short-lived-process-using-the-invocation-api}
 
 I följande Java-kodexempel anropas en kortlivad process med namnet `MyApplication/EncryptDocument`. Observera att den här processen anropas synkront. Indataparametern för den här processen namnges `inDoc`. Utdataparametern för den här processen namnges `outDoc`. Lösenordskrypterade PDF-dokument sparas som en PDF-fil med namnet `EncryptLoan.pdf`. (Se [Anropa en kort process med anrops-API](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-a-short-lived-process-using-the-invocation-api).)
 
@@ -175,7 +175,7 @@ I följande Java-kodexempel anropas en kortlivad process med namnet `MyApplicati
          {
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -334,7 +334,7 @@ Ett oskyddat PDF-dokument som är baserat på en PDF-fil med namnet *Loan.pdf* s
              MyApplicationEncryptDocument encryptDocClient = encClient.getEncryptDocument();
  
              //Set connection values required to invoke AEM Forms
-             String url = "[server]:[port]/soap/services/MyApplication/EncryptDocument?blob=base64";
+             String url = "'[server]:[port]'/soap/services/MyApplication/EncryptDocument?blob=base64";
              String username = "administrator";
              String password = "password";
              ((BindingProvider) encryptDocClient).getRequestContext().put(BindingProvider.ENDPOINT_ADDRESS_PROPERTY, url);
@@ -419,7 +419,7 @@ I följande Flex-kodexempel anropas en kortlivad process med namnet `MyApplicati
       private var fileRef:FileReference = new FileReference();
       private var docRef:DocumentReference = new DocumentReference();
       private var parentResourcePath:String = "/";
-      private var serverPort:String = "[server]:[port]";
+      private var serverPort:String = "'[server]:[port]'";
       private var now1:Date;
       private  var cs:ChannelSet
  
@@ -455,7 +455,7 @@ I följande Flex-kodexempel anropas en kortlivad process med namnet `MyApplicati
      private function authTokenReceived(event:ResultEvent):void
              {
              var token:String = event.result as String;
-             var request:URLRequest = DocumentReference.constructRequestForUpload("https://[server]:[port]", token);
+             var request:URLRequest = DocumentReference.constructRequestForUpload("https://'[server]:[port]'", token);
  
              try
              {
@@ -684,7 +684,7 @@ Ett oskyddat PDF-dokument som är baserat på en PDF-fil med namnet *Loan.pdf* s
          MyApplicationEncryptDocumentServiceLocator locate = new MyApplicationEncryptDocumentServiceLocator ();
  
          //specify the service target URL and object type
-         URL serviceURL = new URL("https://[server]:[port]/soap/services/MyApplication/EncryptDocument?blob=dime");
+         URL serviceURL = new URL("https://'[server]:[port]'/soap/services/MyApplication/EncryptDocument?blob=dime");
  
          //Use the binding stub with the locator
          EncryptDocumentSoapBindingStub encryptionClientStub = new EncryptDocumentSoapBindingStub(serviceURL,locate);
@@ -756,7 +756,7 @@ Ett oskyddat PDF-dokument som är baserat på en PDF-fil med namnet *Loan.pdf* s
 
 I följande Java-kodexempel anropas en process med namnet `MyApplication/EncryptDocument` using data over HTTP. (Se [Anropa AEM-formulär med BLOB-data via HTTP](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http).)
 
-Ett oskyddat PDF-dokument som är baserat på en PDF-fil med namnet *Loan.pdf* skickas till AEM Forms-processen med SOAP via HTTP. PDF-filen finns på följande URL: `https://[server]:[port]/FormsQS`. Processen returnerar ett lösenordskrypterat PDF-dokument som sparas som en PDF-fil med namnet *EncryptedDocument.pdf*.
+Ett oskyddat PDF-dokument som är baserat på en PDF-fil med namnet *Loan.pdf* skickas till AEM Forms-processen med SOAP via HTTP. PDF-filen finns på följande URL: `https://'[server]:[port]'/FormsQS`. Processen returnerar ett lösenordskrypterat PDF-dokument som sparas som en PDF-fil med namnet *EncryptedDocument.pdf*.
 
 ```as3
  /**
@@ -783,7 +783,7 @@ Ett oskyddat PDF-dokument som är baserat på en PDF-fil med namnet *Loan.pdf* s
              MyApplicationEncryptDocument encryptDocClient = encClient.getEncryptDocument();
  
              //Set connection values required to invoke AEM Forms using BLOB over HTTP
-             String url = "https://[server]:[port]/soap/services/MyApplication/EncryptDocument?blob=http";
+             String url = "https://'[server]:[port]'/soap/services/MyApplication/EncryptDocument?blob=http";
              String username = "administrator";
              String password = "password";
              ((BindingProvider) encryptDocClient).getRequestContext().put(BindingProvider.ENDPOINT_ADDRESS_PROPERTY, url);
@@ -792,7 +792,7 @@ Ett oskyddat PDF-dokument som är baserat på en PDF-fil med namnet *Loan.pdf* s
  
              //Create a BLOB object and populate it by invoking the setRemoteURL method
              BLOB inDoc = new BLOB();
-             inDoc.setRemoteURL("https://[server]:[port]/FormsQS/Loan.pdf");
+             inDoc.setRemoteURL("https://'[server]:[port]'/FormsQS/Loan.pdf");
  
                 //invoke the short-lived process named MyApplication/EncryptDocument
              BLOB outDoc = encryptDocClient.invoke(inDoc);
@@ -827,7 +827,7 @@ Ett oskyddat PDF-dokument som är baserat på en PDF-fil med namnet *Loan.pdf* s
  
 ```
 
-## Snabbstart: Anropa en tjänst med BLOB-data över HTTP i ett .NET-projekt {#quick-start-invoking-a-service-using-blob-data-over-http-in-a-net-project}
+## Snabbstart: Anropa en tjänst med BLOB-data via HTTP i ett .NET-projekt {#quick-start-invoking-a-service-using-blob-data-over-http-in-a-net-project}
 
 I följande exempel på C#-kod anropas en process med namnet `MyApplication/EncryptDocument` från ett Microsoft .NET-projekt som använder data via HTTP. (Se [Anropa AEM-formulär med BLOB-data via HTTP](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http).)
 
@@ -862,7 +862,7 @@ Ett oskyddat PDF-dokument som är baserat på en PDF-fil med namnet *Loan.pdf* s
  
                 try
                 {
-                    String urlData = "https://[server]:[port]/FormsQS/Loan.pdf";
+                    String urlData = "https://'[server]:[port]'/FormsQS/Loan.pdf";
  
                     //Create a MyApplication_EncryptDocumentService object and set authentication values
                     MyApplication_EncryptDocumentService encryptClient = new MyApplication_EncryptDocumentService();
@@ -927,7 +927,7 @@ Ett oskyddat PDF-dokument som är baserat på en PDF-fil med namnet *Loan.pdf* s
  
 ```
 
-## Snabbstart:Anropa en tjänst med MTOM i ett .NET-projekt {#quick-start-invoking-a-service-using-mtom-in-a-net-project}
+## Snabbstart: Anropa en tjänst med MTOM i ett .NET-projekt {#quick-start-invoking-a-service-using-mtom-in-a-net-project}
 
 Följande exempel på C#-kod anropar en process med namnet `MyApplication/EncryptDocument` från ett Microsoft .NET-projekt med MTOM. (Se [Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom).)
 
@@ -964,7 +964,7 @@ Ett oskyddat PDF-dokument som är baserat på en PDF-fil med namnet *lån.pdf* s
  
                     //Create an EncryptDocumentClient object
                     MyApplication_EncryptDocumentClient encryptProcess = new MyApplication_EncryptDocumentClient();
-                    encryptProcess.Endpoint.Address = new System.ServiceModel.EndpointAddress("https://[server]:[port]/soap/services/MyApplication/EncryptDocument?blob=mtom");
+                    encryptProcess.Endpoint.Address = new System.ServiceModel.EndpointAddress("https://'[server]:[port]'/soap/services/MyApplication/EncryptDocument?blob=mtom");
                     BasicHttpBinding b = (BasicHttpBinding)encryptProcess.Endpoint.Binding;
                     b.MessageEncoding = WSMessageEncoding.Mtom;
  
@@ -1050,7 +1050,7 @@ Ett oskyddat PDF-dokument som är baserat på en PDF-fil med namnet *Loan.pdf* s
  
          //Specify connection values required to invoke the MyApplication/EncryptDocument process
          //using SwaRef
-         String url = "https://[server]:[port]/soap/services/MyApplication/EncryptDocument?blob=swaref";
+         String url = "https://'[server]:[port]'/soap/services/MyApplication/EncryptDocument?blob=swaref";
          String username = "administrator";
          String password = "password";
          String pdfFile = "C:\\Adobe\Loan.pdf";
