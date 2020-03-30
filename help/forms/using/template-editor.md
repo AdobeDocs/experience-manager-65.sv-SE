@@ -10,7 +10,7 @@ topic-tags: develop
 discoiquuid: b21a48ba-eccd-4bb5-9b92-3039026ddf2a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 94472fad34fe97740e4711d2cb35beb884db52ce
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -52,13 +52,13 @@ När du öppnar en mall för redigering kan du se följande AEM Editor-komponent
    * **Växla sidopanel**: Här kan du visa eller dölja sidofältet.
    * **Sidinformation**: Här kan du ange information som publicerings-/avpubliceringstid, miniatyrbilder, klientbibliotek, sidprincip och klientbibliotek för siddesign.
    * **Emulator**: Gör att du kan simulera och anpassa utseendet för olika enheter.
-   * **** Lagerväljare: Här kan du ändra lagret.
+   * **Lagerväljare:** Här kan du ändra lagret.
 Du kan välja **Strukturlager** eller **Inledande** innehållslager. Med strukturlagret kan du lägga till och anpassa sidhuvud och sidfot. Med lagret Ursprungligt innehåll kan du anpassa formulärinnehållet.
 
-   * **** Förhandsgranska: Gör att du kan förhandsgranska hur mallen ser ut när du publicerar den. Du kan använda Lagerväljaren och Förhandsgranska för att växla redigerings- och förhandsgranskningsläge.
+   * **Förhandsgranska:** Gör att du kan förhandsgranska hur mallen ser ut när du publicerar den. Du kan använda Lagerväljaren och Förhandsgranska för att växla redigerings- och förhandsgranskningsläge.
 
-* **** Sidofält: Tillhandahåller webbläsarna Innehåll, Egenskaper, Resurser och Komponenter.
-* **** Komponentverktygsfältet: När du markerar en komponent visas ett verktygsfält där du kan anpassa komponenten.
+* **Sidofält:** Tillhandahåller webbläsarna Innehåll, Egenskaper, Resurser och Komponenter.
+* **Komponentverktygsfältet:** När du markerar en komponent visas ett verktygsfält där du kan anpassa komponenten.
 * **Sida**: Det område där du lägger till innehåll för att skapa mallen.
 
 Se [Introduktion till redigering av adaptiva formulär](../../forms/using/introduction-forms-authoring.md) för att förstå redigeraren i Touch-gränssnittet.
@@ -80,7 +80,7 @@ När du markerar strukturlagret i mallredigeraren kan du se layoutbehållarna ov
 
 Layoutbehållare i strukturlagret
 
-******S. Layoutbehållare för huvudkomponent** B. Layoutbehållare för sidfotskomponent
+**S.** Layoutbehållare för huvudkomponent **B.** Layoutbehållare för sidfotskomponent
 
 Dra och släpp komponenten Adaptiv formulärrubrik i layoutbehållaren ovanför behållaren för adaptiv form. När du har lagt till komponenten kan du ange dess egenskaper så att du kan lägga till en logotyp och ange dess titel.
 
@@ -179,7 +179,7 @@ Så här visar och döljer du mallar:
 
    >[!NOTE]
    >
-   >URL:en för AEM-webbkonsolen är https://[server]:[port]/system/console/configMgr
+   >URL:en för AEM-webbkonsolen är https://&#39;[server]:[port]&#39;/system/console/configMgr
 
 1. Leta reda på och öppna konfigurationsinställningarna för **FormsManager** :
 
