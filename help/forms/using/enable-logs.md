@@ -11,7 +11,7 @@ topic-tags: hTML5_forms
 discoiquuid: 973806f8-fb44-4d52-ad3f-bfbf335f60a1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 19299fb5fc764d0e71c0ea3a5ec2286183dd6861
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -24,7 +24,7 @@ Du kan konfigurera loggningsverktyget så att loggar för HTML5-formulär skapas
 
 Utför följande steg för att konfigurera serversidesloggar:
 
-1. Gå till `https://[server]:[port]/system/console/configMgr`. Leta reda på och öppna *loggningskonfigurationsalternativet* för Appace Sling. En dialogruta visas:
+1. Gå till `https://'[server]:[port]'/system/console/configMgr`. Leta reda på och öppna *loggningskonfigurationsalternativet* för Appace Sling. En dialogruta visas:
 
    ![ Dialogrutan Konfiguration av loggningslogg för Apace Sling](assets/logconfig.png)
 
@@ -160,7 +160,7 @@ Exempel:
   </tr>
   <tr>
    <td>2-a4-b5-c6<br type="_moz" /> </td>
-   <td>Mål: Server<br /> xfa-nivå: INFO<br /> xfaView-nivå: DEBUG<br /> xfaPerf-nivå:TRACE</td>
+   <td>Mål: Server<br /> xfa-nivå: INFO<br /> xfaView-nivå: DEBUG<br /> xfaPerf-nivå: TRACE</td>
   </tr>
  </tbody>
 </table>
@@ -176,7 +176,7 @@ Exempel:
 
 Om du använder Configuration Manager för att aktivera loggning genereras loggar för varje återgivningsbegäran tills loggningen inaktiveras igen.
 
-1. Logga in på CQ Configuration Manager på `https://[server]:[port]/system/console/configMgr` och logga in med administratörsuppgifter.
+1. Logga in på CQ Configuration Manager på `https://'[server]:[port]'/system/console/configMgr` och logga in med administratörsuppgifter.
 1. Sök efter och klicka på **Mobile Forms Configurations**.
 1. I textrutan Felsökningsalternativ anger du de loggkonfigurationer som beskrivs i föregående avsnitt, till exempel **2-a4-b5-c6**
 
@@ -192,7 +192,7 @@ Som standard läggs all information till i filen error.log i katalogen /crx-data
 
 Så här ändrar du plats och namn på loggfilen:
 
-1. Logga in på Configuration Manager som administratör. Konfigurationshanterarens standardwebbadress är `https://[Server]:[Port]/system/console/configMgr`.
+1. Logga in på Configuration Manager som administratör. Konfigurationshanterarens standardwebbadress är `https://'[server]:[port]'/system/console/configMgr`.
 1. Klicka på **Konfiguration** av loggningsloggning för Apache Sling. En dialogruta visas.
 
    ![logconfig-1](assets/logconfig-1.png)
