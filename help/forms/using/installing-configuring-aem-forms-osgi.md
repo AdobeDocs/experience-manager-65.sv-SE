@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dfc473eb-6091-4f5d-a5a0-789972c513a9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5831c173114a5a6f741e0721b55d85a583e52f78
+source-git-commit: f323b490c37effc3cbb36c793b62fa788eca9545
 
 ---
 
@@ -20,7 +20,7 @@ source-git-commit: 5831c173114a5a6f741e0721b55d85a583e52f78
 
 AEM Forms innehåller en uppsättning formulär för att hämta data från slutanvändaren: adaptiva formulär, HTML5-formulär och PDF-formulär. Det innehåller även verktyg för att lista alla tillgängliga formulär på en webbsida, analysera formuläranvändningen och för att identifiera målanvändare utifrån deras profil. Dessa funktioner ingår i tilläggspaketet AEM Forms. Tilläggspaketet distribueras på en Author- eller Publish-instans av AEM.
 
-**** Adaptiva former: Dessa formulär ändrar utseende baserat på enhetens skärmstorlek, är engagerande och interaktiva till sin natur. Adaptiva formulär kan även integreras med Adobe Analytics, Adobe Sign och Adobe Target. Ni kunde leverera personaliserade formulär och processorienterade upplevelser till användarna baserat på deras demografi och andra funktioner. Du kan även integrera adaptiva formulär med Adobe Sign.
+**Adaptiva former:** Dessa formulär ändrar utseende baserat på enhetens skärmstorlek, är engagerande och interaktiva till sin natur. Adaptiva formulär kan även integreras med Adobe Analytics, Adobe Sign och Adobe Target. Ni kunde leverera personaliserade formulär och processorienterade upplevelser till användarna baserat på deras demografi och andra funktioner. Du kan även integrera adaptiva formulär med Adobe Sign.
 
 **PDF-formulär** är lämpliga för utskrift på pixelnivå och digital information som samlas in i ett PDF-dokument. I den digitala avataren kan du använda Adobe Acrobat eller Acrobat Reader för att fylla i dessa formulär. Du kan lägga upp dessa formulär på din webbplats eller använda formulärportalen för att lista dem på en AEM-webbplats. Du kan även skicka dessa formulär till andra som bilagor. De här formulären passar bäst för skrivbordsmiljöer.
 
@@ -51,7 +51,7 @@ Innan du börjar installera och konfigurera funktioner för datainhämtning i AE
    * 15 GB temporärt utrymme för Microsoft Windows-baserade installationer.
    * 6 GB temporärt utrymme för UNIX-baserade installationer.
 
-* Replikering och omvänd replikering har angetts för författaren och publiceringsinstanserna. Mer information finns i [Replikering](/help/sites-deploying/replication.md).
+* Replikering och omvänd replikering har angetts för författaren och publiceringsinstanserna. For details, see [Replication](/help/sites-deploying/replication.md).
 * För UNIX-baserade system:
 
    * Installera följande 32-bitarspaket från installationsmediet:
@@ -130,9 +130,9 @@ AEM Forms har några obligatoriska och valfria konfigurationer. De obligatoriska
 Utför följande steg på alla författare- och publiceringsinstanser för att starta delegeringen av biblioteken:
 
 1. Stoppa den underliggande AEM-instansen.
-1. Öppna [AEM-installationskatalogen]\crx-quickstart\conf\sling.properties för redigering.
+1. Öppna `[AEM installation directory]\crx-quickstart\conf\sling.properties` filen för redigering.
 
-   Om du använde [installationskatalogen]för AEM \crx-quickstart\bin\start.bat för att starta AEM redigerar du sling.properties som finns på [AEM_root]\crx-quickstart\.
+   Om du använde `[AEM installation directory]\crx-quickstart\bin\start.bat` för att starta AEM redigerar du sling.properties som finns på `[AEM_root]\crx-quickstart\`.
 
 1. Lägg till följande egenskaper i filen sling.properties:
 
@@ -148,7 +148,7 @@ Utför följande steg på alla författare- och publiceringsinstanser för att s
 
 Utför följande steg på alla Author- och Publish-instanser för att vitlista paketet:
 
-1. Öppna AEM Configuration Manager i ett webbläsarfönster. Standardwebbadressen är `https://[server]:[port]/system/console/configMgr`.
+1. Öppna AEM Configuration Manager i ett webbläsarfönster. Standardwebbadressen är `https://'[server]:[port]'/system/console/configMgr`.
 1. Sök efter **com.adobe.cq.deserfw.impl.DeserializationFirewallImpl.name** och öppna konfigurationen.
 1. Lägg till paketet **sun.util.calendar** i **vitlistefältet** . Click **Save**.
 1. Upprepa steg 1-3 för alla författarinstanser och publiceringsinstanser.
@@ -169,7 +169,7 @@ Dispatcher är ett verktyg för cachelagring och lastbalansering för AEM. AEM D
 
 1. Konfigurera tjänsten för refererarfilter:
 
-   Logga in som administratör i konfigurationshanteraren för Apache Felix. Konfigurationshanterarens standardwebbadress är https://[server]:[port_number]/system/console/configMgr. På menyn **Configurations **väljer du **alternativet Apache Sling Referrer-filter** . I fältet Tillåt värdar anger du värdnamnet för dispatchern så att den kan användas som referent och klickar på **Spara**. Posten har formatet https://[server]:[port].
+   Logga in som administratör i konfigurationshanteraren för Apache Felix. Konfigurationshanterarens standardwebbadress är `https://[server]:[port_number]/system/console/configMgr`. På menyn **Konfigurationer** väljer du alternativet **Apache Sling Reference Filter** . I fältet Tillåt värdar anger du värdnamnet för dispatchern så att den kan användas som referent och klickar på **Spara**. Posten har formatet &quot;https://[server]:[port]&quot;.
 
 #### Konfigurera cache {#configure-cache}
 
@@ -180,7 +180,7 @@ Cachelagring är en mekanism som förkortar dataåtkomsttider, minskar fördröj
 
 Utför följande steg för att konfigurera cachen för adaptiva formulär:
 
-1. Gå till konfigurationshanteraren för AEM-webbkonsolen på https://[server]:[port]/system/console/configMgr.
+1. Gå till konfigurationshanteraren för AEM-webbkonsolen på https://&#39;[server]:[port]&#39;/system/console/configMgr.
 1. Klicka på **Adaptiv form och Interactive Communication Web Channel Configuration** för att redigera dess konfigurationsvärden. I dialogrutan Redigera konfigurationsvärden anger du det maximala antalet formulär eller dokument som en instans av AEM Forms-servern kan cachelagra i fältet **Antal adaptiva formulär** . Standardvärdet är 100. Click **Save**.
 
    >[!NOTE]
