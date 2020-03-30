@@ -9,7 +9,7 @@ topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: d211d8b0-e75f-49c3-808d-5d0e26ad3a6b
 translation-type: tm+mt
-source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -35,7 +35,7 @@ Gör så här med webbsidan Program och tjänster i administrationskonsolen:
 1. Logga in på administrationskonsolen genom att skriva följande URL i en webbläsare:
 
    ```as3
-            https://[host name]:[port]/adminui
+            https://[host name]:'port'/adminui
    ```
 
 1. Klicka på **Tjänster > Program och tjänster > Inställningar**.
@@ -70,7 +70,7 @@ Vissa formulärservertjänster tillåter oautentiserade (anonyma) anrop för vis
 1. Logga in på administrationskonsolen genom att skriva följande URL i en webbläsare:
 
    ```as3
-            https://[host name]:[port]/adminui
+            https://[host name]:'port'/adminui
    ```
 
 1. Klicka på **Tjänster > Program och tjänster > Tjänsthantering**.
@@ -112,7 +112,7 @@ Slutanvändare kan autentisera till AEM Forms via Workbench, AEM Forms webbprogr
 1. Logga in på administrationskonsolen genom att skriva följande URL i en webbläsare:
 
    ```as3
-            https://[host name]:[port]/adminui
+            https://[host name]:'port'/adminui
    ```
 
 1. Klicka på **Inställningar > Användarhantering > Konfiguration > Importera och exportera konfigurationsfiler**.
