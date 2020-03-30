@@ -9,7 +9,7 @@ topic-tags: forms-workspace
 discoiquuid: f70f21e3-3bec-490d-889e-faf496fb738b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -26,7 +26,7 @@ Låt oss som exempel se Correspondence Management som ett kandidatexempel för i
 
 Börja med att skapa en Correspondence Management-exempelmall som renderas på arbetsytan i AEM Forms. Mer information finns i [Skapa en brevmall](../../forms/using/create-letter.md).
 
-Gå till Correspondence Management-mallen på dess URL för att kontrollera om Correspondence Management-mallen kan återges korrekt. URL:en har ett mönster som liknar `https://[server]:[port]/lc/content/cm/createcorrespondence.html?cmLetterId=encodedLetterId&cmUseTestData=1&cmPreview=0;`
+Gå till Correspondence Management-mallen på dess URL för att kontrollera om Correspondence Management-mallen kan återges korrekt. URL:en har ett mönster som liknar `https://'[server]:[port]'/lc/content/cm/createcorrespondence.html?cmLetterId=encodedLetterId&cmUseTestData=1&cmPreview=0;`
 
 där `encodedLetterId` är det URL-kodade brev-ID:t. Ange samma bokstav-ID när du definierar återgivningsprocessen för arbetsyteaktiviteten i Workbench.
 
@@ -104,7 +104,7 @@ Följ de här stegen för att skapa en uppgift som återger och skickar ett brev
    I dialogrutan Definiera aktivitet väljer du lämplig aktivitet, till exempel getLetterInstanceInfo, och klickar på **OK**.
 
 1. Distribuera programmet. Om du uppmanas att checka in och spara resurserna.
-1. Logga in på arbetsytan för AEM-formulär på https://[server]:[port]/lc/content/ws.
+1. Logga in på arbetsytan för AEM-formulär på https://&#39;[server]:[port]&#39;/lc/content/ws.
 1. Öppna den uppgift du lagt till, CMRenderer. Correspondence Management-brevet visas.
 
    ![cminarbetsyta](assets/cminworkspace.png)
