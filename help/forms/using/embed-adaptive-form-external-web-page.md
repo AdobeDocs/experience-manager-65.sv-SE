@@ -9,7 +9,7 @@ topic-tags: author
 discoiquuid: d739c6da-3b41-4452-8728-d7cd1a3ae20b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 92a64c8a1ba38f592d18355b8233cb79a2575301
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -162,7 +162,7 @@ Tänk på följande när du bäddar in ett anpassat formulär på en webbsida:
 
 ## Aktivera AEM Forms för att skicka adaptiva formulär till en domänövergripande webbplats {#cross-site}
 
-1. På AEM-författarinstansen går du till AEM Web Console Configuration Manager på `https://[server]:[port]/system/console/configMgr`.
-1. Leta reda på och öppna **filterkonfigurationen för** Apache Sling Referrer.
+1. På AEM-författarinstansen går du till AEM Web Console Configuration Manager på `https://'[server]:[port]'/system/console/configMgr`.
+1. Leta reda på och öppna **konfigurationen för filtret** för Apache Sling Referrer.
 1. I fältet Tillåtna värdar anger du den domän där webbsidan finns. Det gör att värden kan göra POST-begäranden till AEM-servern. Du kan också använda reguljära uttryck för att ange en serie externa programdomäner.
 
