@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/health_monitor
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: b8f8bddc-0d38-4d5e-b33f-978f04bc16c6
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -69,7 +69,7 @@ När du samlar in systemstatistik som fyller i Health Monitor påverkas prestand
 
 ## Lägg till Java-alternativ i WebLogic {#add-java-options-to-weblogic}
 
-1. Starta administrationskonsolen för WebLogic genom att skriva https://[värdnamn]:[port]/konsol på URL-raden i en webbläsare.
+1. Starta administrationskonsolen för WebLogic genom att skriva https://[värdnamn]:&#39;port&#39;/console i URL-raden i en webbläsare.
 1. Skriv användarnamnet och lösenordet som du skapade för WebLogic Server-domänen och klicka på Logga under Change Center och klicka på Lock &amp; Edit.
 1. Klicka på Miljö > Servrar under Domänstruktur och klicka på namnet på den hanterade servern i den högra panelen.
 1. På nästa skärm klickar du på fliken Konfiguration > fliken Serverstart.
