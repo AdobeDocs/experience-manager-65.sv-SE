@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/get_started_with_administering_aem_forms_on_je
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: bd648c38-731b-420e-973d-a4728b69868e
 translation-type: tm+mt
-source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -50,8 +50,8 @@ Mer information om hur du aktiverar läget för säker säkerhetskopiering finns
 Om du inte anger någon GDS-rotkatalog används en programserverkatalog som standard:
 
 * `[JBOSS_HOME]/server/<server>/svcnative/DocumentStorage`
-* `[WEBSPHERE_HOME]/installedApps/adobe/[server]/DocumentStorage`
-* `[WEBLOGIC_HOME]/user_projects/<domain>/[server]/adobe/AEMformsserver/DocumentStorage`
+* `[WEBSPHERE_HOME]/installedApps/adobe/'server'/DocumentStorage`
+* `[WEBLOGIC_HOME]/user_projects/<domain>/'server'/adobe/AEMformsserver/DocumentStorage`
 
 ***Obs **: Om du ändrar värdet för GDS-rotkataloginställningen bör du vara särskilt försiktig. GDS-katalogen används för att lagra både långlivade filer som används i en process och viktiga produktkomponenter för AEM-formulär. Att ändra platsen för GDS-katalogen är en stor systemändring. Om GDS-katalogen konfigureras på ett felaktigt sätt kommer AEM-formulären att fungera och en fullständig ominstallation av AEM-formulären kan krävas. Om du anger en ny plats för GDS-katalogen måste programservern stängas av och data migreras innan servern kan startas om. Systemadministratören måste flytta alla filer från den gamla platsen till den nya, men behålla den interna katalogstrukturen.*
 
@@ -75,15 +75,15 @@ Den här inställningen är tom som standard.
 
 **Maximal textbunden dokumentstorlek (byte)** Det maximala antalet byte som finns i minnet när dokument skickas mellan olika AEM-formulärkomponenter. Använd den här inställningen för prestandajustering. Dokument som är mindre än det här antalet lagras i minnet och sparas i databasen. Dokument som överskrider det högsta tillåtna antalet lagras på hårddisken.
 
- Den här inställningen är obligatorisk. Standardvärdet är 65 536 byte.
+Den här inställningen är obligatorisk. Standardvärdet är 65 536 byte.
 
 **Standardtidsgräns för borttagning av dokument (sekunder)** Den maximala tiden, i sekunder, under vilken ett dokument som skickas mellan olika AEM-formulärkomponenter anses vara aktiv. När den här tiden har gått kan filer som används för att lagra det här dokumentet tas bort. Använd den här inställningen för att kontrollera hur mycket diskutrymme som används.
 
- Den här inställningen är obligatorisk. Standardvärdet är 600 sekunder.
+Den här inställningen är obligatorisk. Standardvärdet är 600 sekunder.
 
 **Intervall för dokumentsvepning (sekunder)** Den tid, i sekunder, mellan försök att ta bort filer som inte längre behövs och som användes för att skicka dokumentdata mellan tjänster.
 
- Den här inställningen är obligatorisk. Standardvärdet är 30 sekunder.
+Den här inställningen är obligatorisk. Standardvärdet är 30 sekunder.
 
 **Aktivera FIPS** Välj det här alternativet om du vill aktivera FIPS-läget. Federal Information Processing Standard (FIPS) 140-2 är en kryptologistandard som definierats av USA:s regering. När AEM-formulär körs i FIPS-läge begränsar de dataskyddet till godkända FIPS 140-2-algoritmer genom att använda krypteringsmodulen RSA BSAFE Crypto-C 2.1.
 
@@ -105,6 +105,6 @@ Aktivera det här alternativet i utvecklingsmiljöer, där utvecklare använder 
 
 **Tillåt icke-skyddade RDS-begäranden** När det här alternativet är markerat behöver RDS-begäranden inte använda https. Som standard är det här alternativet inte markerat och all kommunikation till datatjänster måste vara https-begäranden.
 
-**** Tillåt osäker dokumentöverföring från Flex-program: Filöverföringsservern som används för att överföra dokument från Adobe Flex®-program till AEM-formulär kräver att användarna är autentiserade och behöriga innan de kan överföra dokument. Användaren måste tilldelas rollen som användare av Document Upload Application eller en annan roll som innefattar behörigheten Dokumentöverföring. Detta förhindrar obehöriga användare från att överföra dokument till AEM-formulärservern. Välj det här alternativet om du vill inaktivera den här säkerhetsfunktionen i en utvecklingsmiljö eller för bakåtkompatibilitet med tidigare versioner av AEM-formulär. Som standard är det här alternativet inte markerat. Mer information finns i&quot;Anropa AEM-formulär med AEM Forms Remoting&quot; i Programmering med AEM-formulär.
+**Tillåt osäker dokumentöverföring från Flex-program:** Filöverföringsservern som används för att överföra dokument från Adobe Flex®-program till AEM-formulär kräver att användarna är autentiserade och behöriga innan de kan överföra dokument. Användaren måste tilldelas rollen som användare av Document Upload Application eller en annan roll som innefattar behörigheten Dokumentöverföring. Detta förhindrar obehöriga användare från att överföra dokument till AEM-formulärservern. Välj det här alternativet om du vill inaktivera den här säkerhetsfunktionen i en utvecklingsmiljö eller för bakåtkompatibilitet med tidigare versioner av AEM-formulär. Som standard är det här alternativet inte markerat. Mer information finns i&quot;Anropa AEM-formulär med AEM Forms Remoting&quot; i Programmering med AEM-formulär.
 
-**** Tillåt oskyddad dokumentöverföring från Java SDK-program: Överföringar med HTTP DocumentManager måste vara skyddade. Som standard kräver HTTP-överföringar att användare autentiseras och auktoriseras innan de kan överföra dokument. Användaren måste tilldelas rollen Tjänstanvändare eller en annan roll som innehåller behörigheten Tjänstanrop. Detta förhindrar obehöriga användare från att överföra dokument till formulärservern. Välj det här alternativet om du vill inaktivera den här säkerhetsfunktionen i en utvecklingsmiljö, för bakåtkompatibilitet med tidigare versioner av AEM-formulär eller baserat på din brandvägg. Som standard är det här alternativet inte markerat. Mer information finns i&quot;Anropa AEM-formulär med Java API&quot; i Programmering med AEM-formulär.
+**Tillåt oskyddad dokumentöverföring från Java SDK-program:** Överföringar med HTTP DocumentManager måste vara skyddade. Som standard kräver HTTP-överföringar att användare autentiseras och auktoriseras innan de kan överföra dokument. Användaren måste tilldelas rollen Tjänstanvändare eller en annan roll som innehåller behörigheten Tjänstanrop. Detta förhindrar obehöriga användare från att överföra dokument till formulärservern. Välj det här alternativet om du vill inaktivera den här säkerhetsfunktionen i en utvecklingsmiljö, för bakåtkompatibilitet med tidigare versioner av AEM-formulär eller baserat på din brandvägg. Som standard är det här alternativet inte markerat. Mer information finns i&quot;Anropa AEM-formulär med Java API&quot; i Programmering med AEM-formulär.
