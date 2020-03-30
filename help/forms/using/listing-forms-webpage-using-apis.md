@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: 515ceaf6-c132-4e1a-b3c6-5d2c1ccffa7c
 translation-type: tm+mt
-source-git-commit: db69c393fc44ca2fcb30f9fcb0c5ca456ba35ed5
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -18,7 +18,7 @@ source-git-commit: db69c393fc44ca2fcb30f9fcb0c5ca456ba35ed5
 
 AEM Forms innehåller ett REST-baserat söknings-API som webbutvecklare kan använda för att fråga efter och hämta en uppsättning formulär som uppfyller sökvillkoren. Du kan använda API:er för att söka efter formulär baserat på olika filter. Svarsobjektet innehåller formulärattribut, egenskaper och återge formulärens slutpunkter.
 
-Om du vill söka efter formulär med REST API skickar du en GET-begäran till servern `https://[server]:[port]/libs/fd/fm/content/manage.json` med frågeparametrar som beskrivs nedan.
+Om du vill söka efter formulär med REST API skickar du en GET-begäran till servern `https://'[server]:[port]'/libs/fd/fm/content/manage.json` med frågeparametrar som beskrivs nedan.
 
 ## Frågeparametrar {#query-parameters}
 
@@ -32,7 +32,7 @@ Om du vill söka efter formulär med REST API skickar du en GET-begäran till se
    <td>func<br /> </td>
    <td><p>Anger den funktion som ska anropas. Om du vill söka efter formulär anger du värdet för <code>func </code>attributet till <code>searchForms</code>.</p> <p>Exempel: <code class="code">
        URLParameterBuilder entityBuilder=new URLParameterBuilder ();
-       entityBuilder.add("func", "searchForms");</code></p> <p><strong></strong> Obs! <em>Den här parametern är obligatorisk.</em><br /> </p> </td>
+       entityBuilder.add("func", "searchForms");</code></p> <p><strong>Obs!</strong> <em>Den här parametern är obligatorisk.</em><br /> </p> </td>
   </tr>
   <tr>
    <td>appPath<br /> </td>
@@ -91,7 +91,7 @@ Om du vill söka efter formulär med REST API skickar du en GET-begäran till se
        <li>ENDSWITH - A slutar med B om B är slutdelen av A</li>
        <li>LIKE - Implementerar operatorn LIKE</li>
        <li>AND - Kombinera flera programsatser</li>
-      </ul> <p><strong></strong> Obs! Operatorer för <em>GT, LT, GTEQ och LTEQ kan användas för egenskaper av linjär typ, till exempel LONG, DUBLE och DATE.</em></p> </li>
+      </ul> <p><strong>Obs!</strong> Operatorer för <em>GT, LT, GTEQ och LTEQ kan användas för egenskaper av linjär typ, till exempel LONG, DUBLE och DATE.</em></p> </li>
     </ul> </td>
   </tr>
   <tr>
