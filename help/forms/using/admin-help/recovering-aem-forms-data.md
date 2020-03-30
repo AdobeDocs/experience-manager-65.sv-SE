@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 4e093114-219b-4018-9530-9002eb665448
 translation-type: tm+mt
-source-git-commit: 3e83611f6b30cee774b72194bee1d03e323a6a57
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -25,13 +25,13 @@ I det här avsnittet beskrivs de steg som krävs för att återställa AEM-formu
 
 AEM-formulär bör återställas på ett tillförlitligt sätt vid följande fel:
 
-**** Diskfel: Det senaste säkerhetskopieringsmediet krävs för att återställa databasinnehållet.
+**Diskfel:** Det senaste säkerhetskopieringsmediet krävs för att återställa databasinnehållet.
 
-**** Skadade data: Filsystemen registrerar inte tidigare transaktioner och systemen kan skriva över nödvändiga processdata av misstag.
+**Skadade data:** Filsystemen registrerar inte tidigare transaktioner och systemen kan skriva över nödvändiga processdata av misstag.
 
-**** Användarfel: Återställningen begränsas till de data som är tillgängliga i databasen. Om data har lagrats och är tillgängliga förenklas återställningen.
+**Användarfel:** Återställningen begränsas till de data som är tillgängliga i databasen. Om data har lagrats och är tillgängliga förenklas återställningen.
 
-**** Strömavbrott, systemkrasch: Filsystems-API:er är ofta inte utformade eller används på ett robust sätt som skyddar mot oväntade systemfel. Om ett strömavbrott eller en systemkrasch inträffar är det troligare att dokumentinnehåll som lagras i databasen är uppdaterat än innehåll som lagras i ett filsystem.
+**Strömavbrott, systemkrasch:** Filsystems-API:er är ofta inte utformade eller används på ett robust sätt som skyddar mot oväntade systemfel. Om ett strömavbrott eller en systemkrasch inträffar är det troligare att dokumentinnehåll som lagras i databasen är uppdaterat än innehåll som lagras i ett filsystem.
 
 Om du använder läget för rullande säkerhetskopiering är du fortfarande i säkerhetskopieringsläge efter återställning. Om du använder läget för säkerhetskopiering av ögonblicksbilder är du inte i säkerhetskopieringsläge efter återställning.
 
@@ -67,17 +67,17 @@ Om en enskild nod i ett Multinode-kluster inte fungerar och de återstående nod
    >
    >Om katalogen /restore redan finns säkerhetskopierar du den och tar sedan bort den innan du byter namn på katalogen /backup som innehåller de senaste data.
 
-   * (JBoss) Byt namn `[appserver root]/server/[server]/svcnative/DocumentStorage/backup` till:
+   * (JBoss) Byt namn `[appserver root]/server/'server'/svcnative/DocumentStorage/backup` till:
 
-      `[appserver root]/server/[server]/svcnative/DocumentStorage/restore`.
+      `[appserver root]/server/'server'/svcnative/DocumentStorage/restore`.
 
-   * (WebLogic) Byt namn `[appserverdomain]/[server]/adobe/AEMformsserver/DocumentStorage/backup` till:
+   * (WebLogic) Byt namn `[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage/backup` till:
 
-      `[appserverdomain]/[server]/adobe/AEMformsserver/DocumentStorage/restore`.
+      `[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage/restore`.
 
-   * (WebSphere) Byt namn `[appserver root]/installedApps/adobe/[server]/DocumentStorage/backup` till:
+   * (WebSphere) Byt namn `[appserver root]/installedApps/adobe/'server'/DocumentStorage/backup` till:
 
-      `[appserver root]/installedApps/adobe/[server]/DocumentStorage/restore`.
+      `[appserver root]/installedApps/adobe/'server'/DocumentStorage/restore`.
 
 1. Återställ rotkatalogen för innehållslagring genom att först ta bort innehållet i rotkatalogen för innehållslagring i den befintliga installationen av AEM-formulär och sedan återställa innehållet genom att utföra följande åtgärder för antingen fristående eller klustrade miljöer:
 
@@ -85,9 +85,9 @@ Om en enskild nod i ett Multinode-kluster inte fungerar och de återstående nod
    >
    >Säkerhetskopian av rotkatalogen för innehållslagring måste återställas till platsen för rotkatalogen för innehållslagring så som den angavs under konfigurationen för innehållstjänster (borttagen).
 
-   **** Fristående: Återställ alla kataloger som säkerhetskopierades under återställningsprocessen. När katalogerna återställs och katalogen /backup-lucene-indexes finns byter du namn på den till /lucene-indexes. I annat fall ska katalogen lucene-indexes redan finnas och ingen åtgärd krävs.
+   **Fristående:** Återställ alla kataloger som säkerhetskopierades under återställningsprocessen. När katalogerna återställs och katalogen /backup-lucene-indexes finns byter du namn på den till /lucene-indexes. I annat fall ska katalogen lucene-indexes redan finnas och ingen åtgärd krävs.
 
-   **** Grupperad: Återställ alla kataloger som säkerhetskopierades under återställningsprocessen. Så här återställer du indexrotkatalogen:
+   **Grupperad:** Återställ alla kataloger som säkerhetskopierades under återställningsprocessen. Så här återställer du indexrotkatalogen:
 
    * Ta bort allt innehåll i indexrotkatalogen.
    * Om katalogen /backup-lucene-indexes finns kopierar du innehållet i katalogen *Content Storage Root*/backup-lucene-indexes till katalogen Index Root och tar bort katalogen *Content Storage Root*/backup-lucene-indexes.
