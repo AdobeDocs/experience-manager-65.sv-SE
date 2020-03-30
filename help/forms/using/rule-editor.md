@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 1b905e66-dc05-4f14-8025-62a78feef12a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a326e508a781b3afaba8b5e371aa862a30536740
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -20,7 +20,7 @@ source-git-commit: a326e508a781b3afaba8b5e371aa862a30536740
 
 Regelredigeringsfunktionen i Adobe Experience Manager Forms ger formuläranvändare och utvecklare möjlighet att skriva regler för anpassningsbara formulärobjekt. Dessa regler definierar åtgärder som ska utlösas av formulärobjekt baserat på förinställda villkor, användarindata och användaråtgärder i formuläret. Det effektiviserar formulärifyllningen ytterligare och ger större precision och hastighet.
 
-Regelredigeraren har ett intuitivt och förenklat användargränssnitt för att skriva regler. Regelredigeraren erbjuder en visuell redigerare för alla användare. Regelredigeraren är dessutom bara avsedd för användare som har behörighet att använda formulär. Regelredigeraren har en kodredigerare som kan skriva regler och skript. Några av de viktigaste åtgärderna som du kan utföra på anpassningsbara formulärobjekt med hjälp av regler är:
+Regelredigeraren har ett intuitivt och förenklat användargränssnitt för att skriva regler. Regelredigeraren erbjuder en visuell redigerare för alla användare. Regelredigeraren är dessutom bara avsedd för användare som har behörighet att använda formulär och har en kodredigerare som kan skriva regler och skript. Några av de viktigaste åtgärderna som du kan utföra på anpassningsbara formulärobjekt med hjälp av regler är:
 
 * Visa eller dölja ett objekt
 * Aktivera eller inaktivera ett objekt
@@ -70,7 +70,7 @@ Mer information om vilka regeltyper som finns i regelredigeraren finns i [Tillg�
 
 * Om du vill aktivera en åtgärd baserat på flera villkor bör du använda konstruktorn action-condition. Om du till exempel vill visa och dölja fält A genom att utvärdera villkor i fält B, C och D, använder du Visa eller Dölj regeltyp i fält A.
 * Använd villkorskonstruktion för villkorsåtgärd eller åtgärd om regeln innehåller en åtgärd för ett villkor.
-* Om en regel söker efter ett villkor och utför en åtgärd omedelbart när ett värde anges i ett fält eller när ett fält avslutas, rekommenderar vi att du skriver en regel med villkorsstyrd åtgärd eller med regeltypen När i fältet som villkoret utvärderas i.
+* Om en regel söker efter ett villkor och utför en åtgärd omedelbart när ett värde anges i ett fält eller när ett fält avslutas, rekommenderar vi att du skriver en regel med en villkorsstyrd åtgärd eller med regeltypen När i fältet som villkoret utvärderas i.
 * Villkoret i regeln När utvärderas när en användare ändrar värdet på objektet som regeln När används på. Om du vill att åtgärden ska utlösas när värdet ändras på serversidan, som vid förifyllning av värdet, rekommenderar vi att du skriver en When-regel som utlöser åtgärden när fältet initieras.
 * När du skriver regler för nedrullningsbara listor, alternativknappar eller kryssruteobjekt fylls alternativen eller värdena för dessa formulärobjekt i förväg i regelredigeraren.
 
@@ -85,9 +85,9 @@ Regelredigeraren innehåller följande logiska operatorer och händelser som du 
 * **Innehåller**
 * **Är tom**
 * **Är inte tom**
-* **** Har markerat: Returnerar true när användaren väljer ett visst alternativ för en kryssruta, listruta eller alternativknapp.
-* **** Har initierats (händelse): Returnerar true när ett formulärobjekt återges i webbläsaren.
-* **** Har ändrats (händelse): Returnerar true när användaren ändrar det angivna värdet eller det valda alternativet för ett formulärobjekt.
+* **Har markerat:** Returnerar true när användaren väljer ett visst alternativ för en kryssruta, listruta eller alternativknapp.
+* **Har initierats (händelse):** Returnerar true när ett formulärobjekt återges i webbläsaren.
+* **Har ändrats (händelse):** Returnerar true när användaren ändrar det angivna värdet eller det valda alternativet för ett formulärobjekt.
 
 ## Tillgängliga regeltyper i regelredigeraren {#available-rule-types-in-rule-editor}
 
@@ -266,7 +266,7 @@ En vanlig Aktivera-regel är strukturerad på följande sätt:
 
 Ungefär som med regeltypen Aktivera kan du med **regeltypen Inaktivera** aktivera eller inaktivera ett formulärobjekt baserat på om ett villkor är uppfyllt eller inte. Regeltypen Inaktivera utlöser också åtgärden Aktivera om villkoret inte uppfylls eller returneras `False`.
 
-En vanlig inaktiveringsregel är strukturerad på följande sätt:
+En vanlig inaktiveringsregel är strukturerad enligt följande:
 
 
 
@@ -375,7 +375,7 @@ Användare i gruppen för formuläranvändare har åtkomst till kodredigeraren. 
 
 AEM Forms spårar det regelredigeringsläge som du använde när du skrev en regel. När du startar regelredigeraren nästa gång öppnas den i det läget. Du kan dock konfigurera ett standardläge så att regelredigeraren öppnas i det angivna läget. Så här gör du:
 
-1. Gå till AEM-webbkonsolen på https://[host]:[port]/system/console/configMgr.
+1. Gå till AEM-webbkonsolen på `https://[host]:[port]/system/console/configMgr`.
 1. Klicka för att redigera tjänsten **[!UICONTROL för konfiguration av]** adaptiva formulär.
 1. välj **[!UICONTROL Visuell redigerare]** eller **[!UICONTROL kodredigerare]** i listrutan **[!UICONTROL Standardläge för regelredigeraren]**
 
@@ -524,7 +524,7 @@ Kodredigeraren JavaScript är uttrycksspråket i adaptiva formulär. Alla uttryc
 
 Mer information om riktlinjer för att skriva regler i kodredigeraren finns i [Adaptiva formuläruttryck](/help/forms/using/adaptive-form-expressions.md).
 
-När du skriver JavaScript-kod i regelredigeraren kan du använda följande visuella tecken för att utforma strukturen och syntaxen:
+När du skriver JavaScript-kod i regelredigeraren kan du använda följande visuella tips för att få hjälp med strukturen och syntaxen:
 
 * Syntaxhögdagrar
 * Automatiskt indrag
@@ -796,7 +796,7 @@ I ett inköpsorderformulär har du följande tabell där användarna fyller i si
 
 ![example-function-table](assets/example-function-table.png)
 
-******S. Rad1** B. Kvantitet **C.** Total kvantitet
+**S.** Rad1 **B.** Kvantitet **C.** Total kvantitet
 
 Nu vill du lägga till angivna kvantiteter i kolumnen Produktkvantitet för alla produkter och visa summan i cellen Total kvantitet. Du kan uppnå detta genom att skriva en Set Value Of-regel i cellen Total Quantity enligt nedan.
 
