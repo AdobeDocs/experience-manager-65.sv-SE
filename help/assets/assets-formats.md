@@ -1,14 +1,14 @@
 ---
 title: Format som stöds för resurser
-description: Lista över filformat som stöds av AEM Resurser och funktioner som stöds för varje format.
+description: Lista över filformat som stöds av AEM Assets och Dynamic Media samt funktioner som stöds för varje format.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: d7d25c75c1023383e07c36252ece2e85425a95be
+source-git-commit: 84c6cc47d84656be587cc6a268b8ddc2e1e39635
 
 ---
 
 
-# Format som stöds för resurser {#assets-supported-formats}
+# Resursformat som stöds {#assets-supported-formats}
 
 AEM Resurser har stöd för ett stort antal filformat och alla funktioner har olika stöd för olika MIME-typer.
 
@@ -22,9 +22,7 @@ Använd teckenförklaringen för att förstå supportnivån.
 | * | Stöds med tilläggsfunktioner |
 | - | Ej relevant |
 
-## Rasterbildformat som stöds {#supported-raster-image-formats}
-
-Följande rasterbildformat stöds för filhanteringsfunktioner:
+## Rasterbildformat som stöds i AEM Assets {#supported-raster-image-formats}
 
 | Format | Lagring | Metadatahantering | Extrahering av metadata | Generering av miniatyrbilder | Interaktiv redigering | Återskrivning av metadata | Insikter |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -44,7 +42,7 @@ Följande rasterbildformat stöds för filhanteringsfunktioner:
 
 **¹** Den sammanfogade bilden extraheras från PSD-filen. Det är en bild som genereras av Adobe Photoshop och inkluderas i PSD-filen. Beroende på inställningarna kan den sammanfogade bilden vara den faktiska bilden eller inte.
 
-Följande rasterbildformat stöds för Dynamic Media-funktioner:
+## Rasterbildformat som stöds i Dynamic Media (#supported-raster-image-formats-dynamic-media)
 
 | Format | Överför<br> (indataformat) | Skapa<br> bildförinställning<br><br> (utdataformat) | Förhandsgranska<br> dynamisk<br> återgivning | Leverera<br> dynamisk<br> återgivning | Hämta<br> dynamisk<br> återgivning |
 |---|:---:|:---:|:---:|:---:|:---:|
@@ -69,6 +67,22 @@ Utöver informationen ovan bör du tänka på följande:
 
 * För EPS-filer stöds tillbakaskrivning av metadata i PostScript Document Structuring Convention (PS-Adobe) version 3.0 eller senare.
 
+## Rasterbildformat som inte stöds i Dynamic Media (#unsupported-image-formats-dynamic-media)
+
+I följande tabell beskrivs de undertyper av rasterbildformat som *inte* stöds i Dynamic Media. Tabellen beskriver också föreslagna metoder som du kan använda för att identifiera sådana filer.
+
+| Format | Vad stöds inte? | Föreslagen identifieringsmetod |
+|---|---|---|
+| JPEG | Filer där de tre inledande byten är felaktiga. | Om du vill identifiera en JPEF-fil måste dess inledande tre byte vara `ff d8 ff`. Om de är något annat klassificeras det inte som en JPEG.<br>・ Det finns inget programverktyg som kan hjälpa dig med problemet.<br>・ Ett litet C++/java-program som läser de tre första byten i en fil bör kunna identifiera dessa filtyper.<br>・ Det kan vara bättre att hålla reda på källan till sådana filer och se vilket verktyg som genererar filen. |
+| PNG | Filer som har en IDAT-segmentstorlek som är större än 100 MB. | Du kan identifiera det här problemet med [libpng](http://www.libpng.org/pub/png/libpng.html) i C++. |
+| PSB |  | Använd exiftool om filtypen är PSB.<br>Exempel i en ExifTool-logg:<br>1. Filtyp: `PSB` |
+| PSD | Filer med en annan färgrymd än CMYK, RGB, Gråskala eller Bitmapp stöds inte.<br>Färgrymderna DuoTone, Lab och Indexed stöds inte. | Använd ExifTool om färgläget är Duplexfärg.<br>Exempel i en ExifTool-logg:<br>1. Färgläge: `Duotone` |
+|  | Filer med abrupta ändar. | Adobe kan inte identifiera detta tillstånd. Sådana filer kan inte heller öppnas med Adobe PhotoShop. Adobe föreslår att du undersöker det verktyg som användes för att skapa en sådan fil och felsöker vid källan. |
+|  | Filer med ett bitdjup som är större än 16. | Använd ExifTool om bitdjupet är större än 16.<br>Exempel i en ExifTool-logg:<br>1. Bitdjup: `32` |
+|  | Fil med Lab-färgrymd. | Använd exiftool om färgläget är Lab.<br>Exempel i en ExifTool-logg:<br>1. Färgläge: `Lab` |
+| TIFF | Filer med flyttalsdata. Det innebär att en TIFF-fil med 32-bitars djup inte stöds. | Använd ExifTool om MIME-typen är `image/tiff` och SampleFormat har `Float` ett värde. Exempel i en ExifTool-logg:<br>1. MIME-typ: `image/tiff`<br>Exempelformat: `Float #`<br>2. MIME-typ: `image/tiff`<br>Exempelformat: `Float; Float; Float; Float` |
+|  | Filer med Lab-färgrymd. | Använd ExifTool om färgläget är Lab.<br>Exempel i en ExifTool-logg:<br>1. Färgläge: `Lab` |
+
 ## PDF Rasterizer-bibliotek som stöds {#supported-pdf-rasterizer-library}
 
 Adobe PDF Rasterizer-biblioteket genererar högkvalitativa miniatyrbilder och förhandsgranskningar för stora och innehållsintensiva Adobe Illustrator- och PDF-filer. Adobe rekommenderar att du använder PDF-rastreringsbiblioteket för följande:
@@ -91,7 +105,7 @@ Se [Bildkonverteringsbibliotek](imaging-transcoding-library.md).
 
 Med Adobe Camera Raw-biblioteket kan AEM Resurser importera råbilder. Se [Stöd](camera-raw.md)för Camera Raw.
 
-## Dokumentformat som stöds {#supported-document-formats}
+## Dokumentformat för Assets som stöds {#supported-document-formats}
 
 Dokumentformat som stöds för filhanteringsfunktioner är följande:
 
@@ -116,7 +130,7 @@ Dokumentformat som stöds för filhanteringsfunktioner är följande:
 | QXP | ✓ | ✓ |  |  |  |  |  |  |
 | EPUB | ✓ | ✓ |  | ✓ | ✓ |  |  |  |
 
-Dokumentformat som stöds för Dynamic Media-funktioner är följande:
+## Dokumentformat som stöds i Dynamic Media (##supported-document-formats-dynamic-media)
 
 | Format | Överför<br> (indataformat) | Skapa<br> bildförinställning<br><br> (utdataformat) | Förhandsgranska<br> dynamisk<br> återgivning | Leverera<br> dynamisk<br> återgivning | Hämta<br> dynamisk<br> återgivning |
 |---|:---:|:---:|:---:|:---:|:---:|
@@ -155,7 +169,7 @@ Utöver ovanstående funktioner bör du tänka på följande:
 | WMV | ✓ | ✓ |  | * | * |
 | SWF | ✓ | ✓ |  |  |  |
 
-## Videoformat som stöds för Dynamic Media Transcoding {#supported-input-video-formats-for-dynamic-media-transcoding}
+## Videoformat som stöds i Dynamic Media för transkodning {#supported-input-video-formats-for-dynamic-media-transcoding}
 
 | Videofiltillägg | Behållare | Rekommenderade videokodekar | Videokodekar som inte stöds |
 |---|---|---|---|
