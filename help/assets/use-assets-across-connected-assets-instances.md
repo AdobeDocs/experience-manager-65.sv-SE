@@ -3,14 +3,14 @@ title: Använd Connected Assets när du vill dela DAM-resurser i redigeringsarbe
 description: Använd resurser som är tillgängliga på en fjärrdistribution av Adobe Experience Manager Assets när du skapar webbsidor på en annan Experience Manager Site-distribution.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: e71b87b12d45bf12f29af917fddebeddedb18056
+source-git-commit: 3c2c47b5d660fefd31470ce8d555c7bb949fa036
 
 ---
 
 
 # Använd Connected Assets när du vill dela DAM-resurser i AEM Sites {#use-connected-assets-to-share-dam-assets-in-aem-sites}
 
-I stora företag kan den infrastruktur som krävs för att skapa webbplatser vara distribuerad. Ibland kan funktionerna för att skapa webbplatser och de digitala resurser som används för att skapa webbplatserna finnas i olika distributioner. Olika skäl kan vara geografiskt spridda distributioner som måste kunna arbeta tillsammans, förvärv som leder till en heterogen infrastruktur som moderbolaget vill konsolidera eller tillväxt som leder till en sådan skala att en dedikerad instans krävs för materialhantering.
+I stora företag kan den infrastruktur som krävs för att skapa webbplatser vara distribuerad. Ibland kan funktionerna för att skapa webbplatser och de digitala resurser som används för att skapa webbplatserna finnas i olika distributioner. Vissa skäl kan vara geografiskt spridda befintliga driftsättningar som måste fungera tillsammans eller förvärv som leder till heterogen infrastruktur som moderbolaget vill använda tillsammans.
 
 AEM Sites erbjuder funktioner för att skapa webbsidor och AEM Assets är det DAM-system (Digital Asset Management) som tillhandahåller de resurser som krävs för webbplatserna. AEM stöder nu ovanstående exempel genom att integrera AEM Sites och AEM Assets.
 
@@ -37,7 +37,7 @@ Innan du använder eller konfigurerar den här funktionen bör du kontrollera f�
 
 Författare kan söka efter bilder och följande typer av dokument i Content Finder och använda resurserna i Page Editor. Dokument kan läggas till i `Download`-komponenten och bilder kan läggas till i `Image`-komponenten. Författare kan också lägga till fjärresurserna i en anpassad AEM-komponent som utökar standardversionen av `Download` eller `Image`-komponenterna. Listan över format som stöds är:
 
-* **Bildformat**: De bildformat som stöds av [Image-komponenten](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html) stöds av Anslutna resurser. Dynamiska mediabilder stöds inte.
+* **Bildformat**: De bildformat som stöds av [Image-komponenten](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html) stöds av Anslutna resurser. Dynamic Media-bilder stöds inte.
 * **Dokumentformat**: Se [Dokumentformat som stöds i Connected Assets](assets-formats.md#supported-document-formats).
 
 ### Användare och grupper som krävs {#users-and-groups-involved}
