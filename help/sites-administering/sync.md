@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: c061b358-8c0d-40d3-8090-dc9800309ab3
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 07ac9c0e0836fc7000062c27dbdeb70059997089
+source-git-commit: c9edac158bc6a00637f8be5aac70a2a249e11d59
 
 ---
 
@@ -167,7 +167,7 @@ När en auktoriserad användare, som är medlem i **`administrators`**användarg
    * leta `Apache Sling Distribution Transport Credentials - User Credentials based DistributionTransportSecretProvider`
    * välj den befintliga konfiguration som ska öppnas för redigering (pennikonen)Verifiera `property name`: **`socialpubsync-publishUser`**
 
-   * ange användarnamn och lösenord till den [behöriga användare](#createauthorizeduser) som skapades vid publicering i steg 2
+   * ange användarnamn och lösenord till den [behöriga användare](#createauthuser) som skapades vid publicering i steg 2
 
       * for example, `usersync-admin`
 
@@ -450,7 +450,7 @@ Detta visas när användarsynkronisering inte har aktiverats:
 
 När diagnostiken körs från redigeringsmiljön kommer resultatet att inkludera ett [INFO] -avsnitt som visar listan med konfigurerade publiceringsinstanser som kan bekräftas.
 
-I listan finns en URL för varje publiceringsinstans som kör diagnostiken för den instansen. URL-parametern `syncUser` läggs till i diagnostikwebbadressen med dess värde inställt på den *auktoriserade synkroniseringsanvändaren* som skapades i [steg 2](/help/sites-administering/sync.md#2createauthorizeduser).
+I listan finns en URL för varje publiceringsinstans som kör diagnostiken för den instansen. URL-parametern `syncUser` läggs till i diagnostikwebbadressen med dess värde inställt på den *auktoriserade synkroniseringsanvändaren* som skapades i [steg 2](#createauthuser).
 
 **Obs**: Innan du startar URL:en måste den *auktoriserade synkroniseringsanvändaren* redan vara inloggad på den publiceringsinstansen.
 
@@ -490,7 +490,7 @@ Om följande syns i loggen:
 
 `java.lang.IllegalStateException: This tree does not exist`
 
-Kontrollera sedan att avsnitt [2. Skapa behörig användare](/content/docs/en/aem/6-1/administer/security/security/sync.md#2). skapa behörig användare) följdes korrekt.
+Kontrollera sedan att avsnitt [2. Skapa auktoriserad användare](#createauthuser) följdes korrekt.
 
 I det här avsnittet beskrivs hur du skapar en behörig användare, som finns i alla publiceringsinstanser, och identifierar dem i OSGi-konfigurationen för den hemliga providern. By default, the user is `admin`.
 
