@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 30a12fc6-07b8-4c7c-b9e2-caa2bec0ac48
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: ebb60e79aa7fb45e059e2d2451f6d549cd24b8b0
 
 ---
 
@@ -36,7 +36,7 @@ Det måste finnas ett XML-element för varje formulärfält som du vill fylla i 
 
 När du fyller i ett formulär som redan innehåller data i förväg måste du ange de data som redan visas i XML-datakällan. Anta att ett formulär som innehåller 10 fält innehåller data i fyra fält. Anta sedan att du vill fylla i de återstående sex fälten i förväg. I det här fallet måste du ange 10 XML-element i XML-datakällan som används för att fylla i formuläret i förväg. Om du bara anger sex element är de fyra ursprungliga fälten tomma.
 
-Du kan t.ex. fylla i ett formulär i förväg, t.ex. exempelbekräftelseformuläret. (Se&quot;Bekräftelseformulär&quot; i [Rendering Interactive PDF Forms](/help/forms/development/rendering-forms-rendering-forms rendering-interactive-pdf-forms-rendering.md#rendering-interactive-pdf-forms).)
+Du kan t.ex. fylla i ett formulär i förväg, t.ex. exempelbekräftelseformuläret. (Se&quot;Bekräftelseformulär&quot; i [Återge interaktiva PDF-formulär](/help/forms/developing/rendering-interactive-pdf-forms.md).)
 
 Om du vill fylla i exempelbekräftelseformuläret i förväg måste du skapa en XML-datakälla som innehåller tre XML-element som matchar de tre fälten i formuläret. Formuläret innehåller följande tre fält: `FirstName`, `LastName`och `Amount`. Det första steget är att skapa en XML-datakälla som innehåller XML-element som matchar fälten i formulärdesignen. Nästa steg är att tilldela datavärden till XML-elementen, vilket visas i följande XML-kod.
 
@@ -209,7 +209,7 @@ Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprog
 
 **Skapa en XML-datakälla i minnet**
 
-Du kan använda `org.w3c.dom` klasser för att skapa en XML-datakälla i minnet för att fylla i ett formulär med flödeslayout i förväg. Du måste placera data i en XML-datakälla som överensstämmer med formuläret. Mer information om relationen mellan ett formulär med flödeslayout och XML-datakällan finns i [Förstå undergrupper](/help/forms/development/rendering-forms-rendering-forms preiating-forms-flowable-layouts-preiating-forms-flowable-layouts-preiating.md#understanding-data-subgroups).
+Du kan använda `org.w3c.dom` klasser för att skapa en XML-datakälla i minnet för att fylla i ett formulär med flödeslayout i förväg. Du måste placera data i en XML-datakälla som överensstämmer med formuläret. Mer information om relationen mellan ett formulär med flödeslayout och XML-datakällan finns i [Förstå undergrupper](#understanding-data-subgroups)med data.
 
 **Konvertera XML-datakällan**
 
