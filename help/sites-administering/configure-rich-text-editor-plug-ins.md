@@ -8,7 +8,7 @@ discoiquuid: 87dc79ad-0a71-43f6-af04-4d26c7472dc5
 mini-toc-levels: 1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 42c268396940144a217ff09f49fe3f6d6791a533
+source-git-commit: ac4c5ec920ed768002da1b4598590bfd9ca301f6
 
 ---
 
@@ -105,11 +105,11 @@ Du kan förkonfigurera beteendet för ikonen **[!UICONTROL Klistra in (Ctrl+V)]*
 
 Konfigurationen tillåter följande tre typer av användningsfall:
 
-*  Klistra in text med webbläsarens standardimplementering för inklistring. Det är inte en rekommenderad metod eftersom den kan medföra oönskad markering. Konfigurerad med `browser` nedan.
+* Klistra in text med webbläsarens standardimplementering för inklistring. Det är inte en rekommenderad metod eftersom den kan medföra oönskad markering. Konfigurerad med `browser` nedan.
 
-*  Klistra in urklippsinnehållet som oformaterad text. Den raderar alla formatelement från det kopierade innehållet innan den infogas i AEM-komponenten. Konfigurerad med `plaintext` nedan.
+* Klistra in urklippsinnehållet som oformaterad text. Den raderar alla formatelement från det kopierade innehållet innan den infogas i AEM-komponenten. Konfigurerad med `plaintext` nedan.
 
-*  Klistra in texten, inklusive tabeller, med formatering när du kopierar från MS Word. Det går inte att kopiera och klistra in text från en annan källa, t.ex. en webbsida eller MS Excel, utan endast partiell formatering. Konfigurerad med `wordhtml` nedan.
+* Klistra in texten, inklusive tabeller, med formatering när du kopierar från MS Word. Det går inte att kopiera och klistra in text från en annan källa, t.ex. en webbsida eller MS Excel, utan endast partiell formatering. Konfigurerad med `wordhtml` nedan.
 
 1. Navigera till `<rtePlugins-node>/edit` noden i komponenten. Skapa noderna om de inte finns. Mer information finns i [Aktivera ett plugin-program](#activateplugin).
 1. Skapa en egenskap med följande information i noden: `edit`
@@ -178,7 +178,7 @@ Så här konfigurerar du vilka format som tillåts när du klistrar in text i AE
   <tr>
    <td>fallbackBlockTag</td>
    <td>Sträng</td>
-   <td><p>Definierar den blocktagg som används för block med en blocktagg som inte ingår i allowBlockTags.</p> <p> i de flesta fall är det tillräckligt.</p> </td>
+   <td><p>Defines the block tag used for any blocks having a block tag not included in allowBlockTags.</p> <p> i de flesta fall är det tillräckligt.</p> </td>
   </tr>
   <tr>
    <td>tabell</td>
@@ -282,18 +282,19 @@ Ange sedan platsen/platserna för de formatmallar som du vill referera till:
 >
 >I Rich Text Editor används ett behållar-DOM-element med ett ID `CQrte` som kan användas för att tillhandahålla olika format för visning och redigering:
 >
->```
+>
+```
 >#CQ td {
 > // defines the style for viewing
 > }
 >```
 >
->```
+>
+```
 >#CQrte td {
 > // defines the style for editing
 > }
 >```
->
 
 ### Ange tillgängliga format i popup-listan {#stylesindropdown}
 
@@ -509,7 +510,7 @@ I CRXDE visas det representerade tecknet när egenskapen har sparats. Se exemple
 
    ![I CRXDE definierar du ett intervall med tecken som ska vara tillgängliga i RTE](assets/chlimage_1-107.png)
 
-   *Bild:I CRXDE definierar du ett intervall med tecken som ska vara tillgängliga i RTE*
+   *Bild: I CRXDE definierar du ett intervall med tecken som ska vara tillgängliga i RTE*
 
    ![Specialtecken som är tillgängliga i textredigeraren visas för författare i ett popup-](assets/rtepencil.png "fönsterSpecialtecken som är tillgängliga i textredigeraren visas för författare i ett popup-fönster")
 
@@ -581,7 +582,7 @@ Ibland kan du skapa datatabeller utan visuell text i en kolumnrubrik om rubriken
 RTE har stöd för dolda rubrikceller för att förbättra tillgängligheten i sådana scenarier. Dessutom innehåller den konfigurationsinställningar för dolda rubriker i tabeller. Med de här inställningarna kan du använda CSS-format på dolda rubriker i redigerings- och förhandsgranskningslägena. Om du vill hjälpa författare att identifiera dolda rubriker i redigeringsläget kan du inkludera följande parametrar i koden:
 
 * `hiddenHeaderEditingCSS`: Anger namnet på CSS-klassen som används i den dolda rubrikcellen när RTE redigeras.
-* `hiddenHeaderEditingStyle`: Anger en formatsträng som används i cellen med dolda rubriker när textredigeringsredigering används.
+* `hiddenHeaderEditingStyle`: Anger en formatsträng som används på cellen med dolda rubriker när textredigeringsredigering används.
 
 Om du anger både CSS och formatsträngen i koden har CSS-klassen företräde framför formatsträngen och kan skriva över alla konfigurationsändringar som formatsträngen gör.
 
@@ -594,7 +595,7 @@ Om du anger både CSS och formatsträngen i koden har CSS-klassen företräde fr
 
 ## Lägg till ordlistor för stavningskontrollen {#adddict}
 
-När plugin-programmet för stavningskontroll är aktiverat används lexikon för respektive språk. Dessa väljs sedan enligt webbplatsens språk antingen genom att underträdets language property används eller genom att språket extraheras från URL:en. till exempel. filialen `/en/` kontrolleras som engelska, `/de/` filialen som tyska.
+När plugin-programmet för stavningskontroll är aktiverat används lexikon för respektive språk. Dessa väljs sedan enligt webbplatsens språk antingen genom att underträdets language-egenskap används eller genom att språket extraheras från URL:en. till exempel. filialen `/en/` kontrolleras som engelska, `/de/` filialen som tyska.
 
 >[!NOTE]
 Meddelandet&quot;Stavningskontrollen misslyckades.&quot; visas om en kontroll görs för ett språk som inte är installerat.
