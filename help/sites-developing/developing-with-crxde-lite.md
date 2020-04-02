@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 4537c1fb-f99c-42e2-a222-b037794bdb52
 docset: aem65
 translation-type: tm+mt
-source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
+source-git-commit: 78133b41e1c99f8f86f4c0d51961287735423fe2
 
 ---
 
@@ -151,7 +151,7 @@ Med CRXDE Lite kan du skapa ett projekt med tre klick. I projektguiden skapas et
 Så här skapar du ett projekt med CRXDE Lite:
 
 1. Öppna CRXDE Lite i webbläsaren.
-1. **Högerklicka på en nod i navigeringsrutan, välj** Skapa ...**och sedan**Skapa projekt ... .
+1. Högerklicka på en nod i navigeringsrutan, välj **Skapa ...** och sedan **Skapa projekt ...**.
 Obs! Du kan högerklicka på valfri nod i trädnavigeringen, som de nya projektnoderna är, enligt design, skapade nedan `/apps,` och `/content` `/etc/packages`.
 
 1. Definiera:
@@ -191,7 +191,7 @@ Strukturen ser ut så här i CRXDE Lite med ett projekt som kallas **myproject**
 Så här skapar du en mapp med CRXDE Lite:
 
 1. Öppna CRXDE Lite i webbläsaren.
-1. **I navigeringsrutan högerklickar du på den mapp som du vill skapa den nya mappen i, väljer** Skapa ...**och sedan** Skapa mapp ... .
+1. I navigeringsrutan högerklickar du på den mapp som du vill skapa den nya mappen i, väljer **Skapa ...** och sedan **Skapa mapp ...**.
 
 1. Ange mappens **namn** och klicka på **OK**.
 
@@ -202,7 +202,7 @@ Så här skapar du en mapp med CRXDE Lite:
 Så här skapar du en mall med CRXDE Lite:
 
 1. Öppna CRXDE Lite i webbläsaren.
-1. **I navigeringsrutan högerklickar du på den mapp där du vill skapa mallen, väljer** Skapa ...**och sedan** Skapa mall ... .
+1. I navigeringsrutan högerklickar du på den mapp där du vill skapa mallen, väljer **Skapa ...** och sedan **Skapa mall ...**.
 
 1. Ange mallens **etikett**, **titel**, **beskrivning**, **resurstyp** och **rankning** . Click **Next**.
 
@@ -229,7 +229,7 @@ Funktionen som beskrivs här är bara tillgänglig om CQ5 är installerat, det v
 Så här skapar du en komponent med CRXDE Lite:
 
 1. Öppna CRXDE Lite i webbläsaren.
-1. **I navigeringsrutan högerklickar du på den mapp där du vill skapa komponenten, väljer** Skapa ...**och sedan** Skapa komponent ... .
+1. I navigeringsrutan högerklickar du på den mapp där du vill skapa komponenten, väljer **Skapa ...** och sedan **Skapa komponent ...**.
 
 1. Ange komponentens **etikett**, **titel**, **beskrivning**, **superresurstyp** och **grupp** . Click **Next**.
 
@@ -252,7 +252,7 @@ Det skapar:
 Så här skapar du en dialogruta med CRXDE Lite:
 
 1. Öppna CRXDE Lite i webbläsaren.
-1. **I navigeringsrutan högerklickar du på den komponent där du vill skapa dialogrutan, väljer** Skapa ...**och sedan** Skapa dialogruta ... .
+1. I navigeringsrutan högerklickar du på den komponent där du vill skapa dialogrutan, väljer **Skapa ...** och sedan **Skapa dialogruta ...**.
 
 1. Ange **etiketten** och **titeln**. Click **OK**.
 
@@ -271,7 +271,7 @@ Du kan också använda Dialogruteredigeraren för att redigera en dialogruta. Om
 Så här skapar du en nod med CRXDE Lite:
 
 1. Öppna CRXDE Lite i webbläsaren.
-1. **I navigeringsrutan högerklickar du på den nod där du vill skapa den nya noden, väljer** Skapa ...**och sedan** Skapa nod ... .
+1. I navigeringsrutan högerklickar du på den nod där du vill skapa den nya noden, väljer **Skapa ...** och sedan **Skapa nod ...**.
 1. Ange **namn** och **typ**. Click **OK**.
 1. Klicka på **Spara alla** för att spara ändringarna på servern.
 
@@ -298,7 +298,7 @@ Så här skapar du en egenskap med CRXDE Lite:
 Så här skapar du ett nytt skript:
 
 1. Öppna CRXDE Lite i webbläsaren.
-1. **I navigeringsrutan högerklickar du på den komponent där du vill skapa skriptet, väljer** Skapa ...**och sedan** Skapa fil ... .
+1. I navigeringsrutan högerklickar du på den komponent där du vill skapa skriptet, väljer **Skapa ...** och sedan **Skapa fil ...**.
 
 1. Ange **filnamnet** inklusive filnamnstillägget. Click **OK**.
 
@@ -321,7 +321,7 @@ Så här skapar du testpaketet med CRXDE Lite:
    * `/apps/myapp/src`
    * `/apps/myapp/install`
 
-1. `/apps/myapp/src`Högerklicka på mappen `Test` som ska innehålla **paketet, välj** Skapa ...**och sedan** Skapa paket ... .
+1. Högerklicka på mappen `/apps/myapp/src` som ska innehålla `Test` paketet, välj **Skapa ...** och sedan **Skapa paket ...**.
 
 1. Ange paketegenskaperna enligt följande:
 
@@ -403,7 +403,7 @@ I följande tabell visas alla egenskaper i Bnd-filen, deras värden och beskrivn
   </tr>
   <tr>
    <td>Bundle-Activator:</td>
-   <td>com.mincompany.test.Activator</td>
+   <td>com.mycompany.test.Activator</td>
    <td>Anger namnet på den valfria avlyssnarklassen som ska meddelas om start- och stopphändelser för paket</td>
   </tr>
  </tbody>
@@ -416,22 +416,22 @@ Mer information om bend-formatet finns i [bnd utility](https://bndtools.org/) so
 Så här skapar du `HelloWorld` Java-klassen i Test Bundle:
 
 1. Öppna CRXDE Lite i webbläsaren.
-1. `Activator.java`I navigeringsrutan högerklickar du på noden som innehåller `/apps/myapp/src/com.mycompany.test.TestBundle/src/main/java` filen ( **), väljer** Skapa ...**och sedan** Skapa fil ... .
+1. I navigeringsrutan högerklickar du på noden som innehåller `Activator.java` filen ( `/apps/myapp/src/com.mycompany.test.TestBundle/src/main/java`), väljer **Skapa ...** och sedan **Skapa fil ...**.
 
 1. Ge filen ett namn `HelloWorld.java`. Click **OK**.
 
 1. Filen öppnas i `HelloWorld.java` rutan Redigera.
 1. Lägg till följande rader i `HelloWorld.java`:
 
-    ```
-      package com.mycompany.test;
-
-      public class HelloWorld {
-      public String getString(){
-      return "Hello World!";
-      }
-      }
-    ```
+   ```
+     package com.mycompany.test;
+   
+     public class HelloWorld {
+     public String getString(){
+     return "Hello World!";
+     }
+     }
+   ```
 
 1. Klicka på **Spara alla** för att spara ändringarna på servern.
 
@@ -491,7 +491,7 @@ Så här exporterar du en nodtypsdefinition:
 Så här importerar du en nodtypsdefinition:
 
 1. Öppna CRXDE Lite i webbläsaren.
-1. **Välj** Verktyg **och sedan** Importera nodtyp... .
+1. Välj **Verktyg** och sedan **Importera nodtyp...**.
 
 1. Ange CND-notation för definitionen i textrutan.
 1. Markera **Tillåt uppdatering** om du uppdaterar en befintlig definition.
