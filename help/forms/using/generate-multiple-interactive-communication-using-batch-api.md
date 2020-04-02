@@ -6,7 +6,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: interactive-communication
 translation-type: tm+mt
-source-git-commit: 1b664d082f090814903b2802d8accd80eb6b9e5e
+source-git-commit: 6a29cf13c89b71f851c67f85b01e8e648c0896b9
 
 ---
 
