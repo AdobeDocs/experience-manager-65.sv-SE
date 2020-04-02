@@ -10,7 +10,7 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 50fafc64-d462-4386-93af-ce360588d294
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: ea6da2b75cce4052211fb8f0793f1f380eb85a20
 
 ---
 
@@ -398,7 +398,7 @@ standard: `9` (detta är också det högsta tillåtna värdet)
 
 ### Konfigurationsdialogruta {#configuration-dialog}
 
-Varje rapport kan ha en konfigurationsdialogruta där användaren kan ange olika parametrar för rapporten. Dialogrutan är tillgänglig via knappen **Redigera** när rapportsidan är öppen.
+Varje rapport kan ha en konfigurationsdialogruta där användaren kan ange olika parametrar för rapporten. Den här dialogrutan är tillgänglig via knappen **Redigera** när rapportsidan är öppen.
 
 Den här dialogrutan är en standard-CQ- [dialogruta](/help/sites-developing/components-basics.md#dialogs) och kan konfigureras som sådan (mer information finns i [CQ.Dialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Dialog) ).
 
@@ -1318,7 +1318,8 @@ För att illustrera dessa steg definierar följande exempel en rapport som visar
    >
    >Detta är samma som definitionerna:
    >
-   >```
+   >
+   ```
    >N:data [nt:unstructured]
    >   P:clientFilter [String] = "function(v) { return v; }"
    >```
@@ -1381,7 +1382,7 @@ En instans av din nya rapport kan nu skapas:
 1. Öppna **verktygskonsolen** .
 
 1. Välj **Rapporter** i den vänstra rutan.
-1. **Sedan** Nytt... i verktygsfältet. Definiera en **titel** och ett **namn**, välj den nya rapporttypen ( **OSGi-rapportmallen**) i listan med mallar och klicka sedan på **Skapa**.
+1. Sedan **Nytt...** i verktygsfältet. Definiera en **titel** och ett **namn**, välj den nya rapporttypen ( **OSGi-rapportmallen**) i listan med mallar och klicka sedan på **Skapa**.
 1. Den nya rapportinstansen visas i listan. Dubbelklicka här för att öppna.
 1. Dra en komponent (till exempel **Bundle** i **OSGi Report** -gruppen) från sidosparken för att skapa den första kolumnen och [starta rapportdefinitionen](/help/sites-administering/reporting.md#the-basics-of-report-customization).
 
@@ -1389,13 +1390,13 @@ En instans av din nya rapport kan nu skapas:
    >
    >Eftersom det här exemplet inte har några grupperbara kolumner är diagrammen inte tillgängliga. Om du vill se diagram anger du `groupable` till `true`:
    >
-   >```
+   >
+   ```
    >N:osgireport [sling:Folder]
    > N:bundlecol [cq:Component]
    > N:definitions [nt:unstructured]
    > P:groupable [Boolean] = true
    >```
-   >
 
 ## Konfigurera Report Framework Services {#configuring-the-report-framework-services}
 
@@ -1405,7 +1406,7 @@ Dessa kan visas med hjälp av webbkonsolens konfigurationsmeny (finns t.ex. på 
 
 ### Grundläggande tjänst (dagskonfiguration för CQ-rapportering) {#basic-service-day-cq-reporting-configuration}
 
-* **Tidszonen** definierar tidszonens historiska data som skapas för. Detta är för att säkerställa att det historiska diagrammet visar samma data för varje användare över hela världen.
+* **Tidszonen** definierar tidszonens historiska data som skapas för. Detta är för att säkerställa att det historiska diagrammet visar samma data för varje användare runt om i världen.
 * **Språkinställning** definierar det språkområde som ska användas tillsammans med **tidszonen** för historiska data. Språkinställningen används för att bestämma vissa språkspecifika kalenderinställningar (t.ex. om den första dagen i en vecka är söndag eller måndag).
 
 * **Sökväg** till ögonblicksbild definierar rotsökvägen där ögonblicksbilder för historiska diagram lagras.
