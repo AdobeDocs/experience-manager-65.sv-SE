@@ -1,6 +1,6 @@
 ---
 title: Återge HTML-formulär med anpassade CSS-filer
-seo-title: Återge HTML-formulär med anpassade CSS-filer
+seo-title: Rendering HTML Forms Using Custom CSS Files
 description: 'null'
 seo-description: 'null'
 uuid: a44e96f1-001d-48a2-8c96-15cb9d0c71b3
@@ -11,14 +11,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 8fe7c072-7df0-44b7-92d0-bf39dc1e688a
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: fcbe1d860410e215cb7c438f94579e0b14d262a5
 
 ---
 
 
 # Återge HTML-formulär med anpassade CSS-filer {#rendering-html-forms-using-custom-css-files}
 
-Forms-tjänsten återger HTML-formulär som svar på en HTTP-begäran från en webbläsare. När du återger ett HTML-formulär kan Forms-tjänsten referera till en anpassad CSS-fil. Du kan skapa en anpassad CSS-fil som uppfyller dina affärskrav och referera till den CSS-filen när du använder Forms-tjänsten för att återge HTML-formulär.
+The Forms service renders HTML forms in response to an HTTP request from a web browser. When rendering an HTML form, the Forms service can reference a custom CSS file. Du kan skapa en anpassad CSS-fil som uppfyller dina affärskrav och referera till den CSS-filen när du använder Forms-tjänsten för att återge HTML-formulär.
 
 Forms-tjänsten tolkar den anpassade CSS-filen tyst. Det innebär att Forms-tjänsten inte rapporterar fel som kan uppstå om den anpassade CSS-filen inte uppfyller CSS-standarderna. I det här fallet ignorerar Forms-tjänsten formatet och fortsätter med de återstående formaten som finns i CSS-filen.
 
@@ -52,7 +52,7 @@ Så här återger du ett HTML-formulär som använder en CSS-fil:
 
 **Inkludera projektfiler**
 
-Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprogram med Java, inkluderar du de JAR-filer som behövs. Om du använder webbtjänster måste du inkludera proxyfilerna.
+Include necessary files in your development project. Om du skapar ett klientprogram med Java, inkluderar du de JAR-filer som behövs. Om du använder webbtjänster måste du inkludera proxyfilerna.
 
 **Skapa ett Forms Java API-objekt**
 
@@ -163,7 +163,7 @@ När Forms-tjänsten återger ett HTML-formulär returneras ett formulärdatafl�
 
    * Ett strängvärde som anger formulärdesignens namn, inklusive filnamnstillägget. Om du refererar till en formulärdesign som är en del av ett formulärprogram måste du ange den fullständiga sökvägen, till exempel `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
    * Ett `TransformTo` uppräkningsvärde som anger HTML-inställningstypen. Om du till exempel vill återge ett HTML-formulär som är kompatibelt med dynamisk HTML för Internet Explorer 5.0 eller senare anger du `TransformTo.MSDHTML`.
-   * Ett `BLOB` objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du `null`. (Se [Fylla i formulär i förväg med flödeslayouter](/help/forms/development/rendering-forms-rendering-forms preiating-forms-flowable-layouts-preiating.md#prepopulating-forms-with-flowable-layouts).)
+   * Ett `BLOB` objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du `null`. (Se [Fylla i formulär i förväg med flödeslayouter](/help/forms/developing/prepopulating-forms-flowable-layouts.md).)
    * Det objekt `HTMLRenderSpec` som lagrar körningsalternativ för HTML.
    * Ett strängvärde som anger `HTTP_USER_AGENT` rubrikvärdet, till exempel `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`. Du kan skicka en tom sträng om du inte vill ange det här värdet.
    * Ett `URLSpec` objekt som lagrar de URI-värden som krävs för att återge ett HTML-formulär.
