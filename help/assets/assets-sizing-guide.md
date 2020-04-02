@@ -3,7 +3,7 @@ title: Guide för resursstorlek
 description: Bästa metoder för att fastställa effektiva mätvärden för att uppskatta den infrastruktur och de resurser som krävs för att driftsätta AEM Assets.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 70a88085a0fd6e949974aa7f1f92fdc3def3d98e
+source-git-commit: 8c907a43b5755de59b2929cf381ea41a7b977e1b
 
 ---
 
@@ -25,7 +25,7 @@ Versionshanteringsfunktionerna i AEM lagrar kopior av resurserna i versionshisto
 Med tanke på dessa faktorer behöver du en metod för att beräkna ett tillräckligt exakt lagringsutrymme för lagring av användarresurser.
 
 1. Fastställ storleken och antalet resurser som ska läsas in i systemet.
-1. Hämta ett representativt urval av de resurser som ska överföras till AEM. Om du t.ex. tänker läsa in PSD-, JPG-, AI- och PDF-filer i systemet behöver du flera exempelbilder för varje filformat. Dessutom bör dessa prover representera de olika filstorlekarna och komplexiteterna i bilderna.
+1. Hämta ett representativt urval av de resurser som ska överföras till AEM. Om du till exempel tänker läsa in PSD-, JPG-, AI- och PDF-filer i systemet behöver du flera exempelbilder för varje filformat. Dessutom bör dessa prover representera de olika filstorlekarna och komplexiteterna i bilderna.
 1. Definiera de återgivningar som ska användas.
 1. Skapa renderingarna i AEM med ImageMagick eller Adobes Creative Cloud-program. Förutom de återgivningar som användarna anger skapar du färdiga återgivningar. För användare som implementerar Scene7 kan du använda IC-binärfilen för att generera PTIFF-återgivningar som ska lagras i AEM.
 1. Om du tänker använda delresurser genererar du dem för rätt filtyper. Mer information finns i onlinedokumentationen om hur du genererar underresurssidor från InDesign-filer eller PNG-/PDF-filer från Illustrator-lager.
@@ -44,7 +44,7 @@ Om du utför steg 1-9 kan du se följande:
 * Antal nya resurser som läses in varje månad
 * År av tillväxt att allokera utrymme för
 
-Du kan ange dessa tal i kalkylbladet Nätverksstorlek för att fastställa det totala utrymmet som krävs för datalagret. Det är också ett användbart verktyg för att avgöra vilken inverkan som underhåll av resursversioner eller ändring av resurser i AEM har på disktillväxten.
+Du kan ange dessa tal i kalkylbladet Nätverksstorlek för att fastställa det totala utrymmet som krävs för datalagret. Det är också ett användbart verktyg för att avgöra vilken effekt underhåll av resursversioner eller ändring av resurser i AEM har på disktillväxten.
 
 De exempeldata som finns i verktyget visar hur viktigt det är att utföra de angivna stegen. Om du ändrar storlek på datalagret baserat enbart på de Raw-bilder som läses in (1 TB) kan du ha underskattat databasstorleken med faktorn 15.
 
@@ -93,7 +93,7 @@ Det är svårt att få fram exakta siffror för storleken för en NodeStore elle
 
 Eftersom binärfilerna lagras i datalagret tar varje binärfil upp lite utrymme. De flesta databaser är mindre än 100 GB. Det kan dock finnas större databaser som är upp till 1 TB stora. För att utföra offlinekomprimering behöver du dessutom tillräckligt med ledigt utrymme på volymen för att skriva om den komprimerade databasen tillsammans med den förkomprimerade versionen. En bra tumregel är att ändra storlek på disken till 1,5 gånger den storlek som förväntas för databasen.
 
-Använd SSD-diskar eller diskar med en IOPS-nivå som är större än 3 kB för databasen. För att eliminera riskerna att IOPS inför flaskhalsar i prestandan bör du övervaka CPU-IO-väntenivåer för tidiga tecken på problem.
+Använd SSD-diskar eller diskar med en IOPS-nivå som är högre än 3 000 för databasen. För att eliminera riskerna att IOPS inför flaskhalsar i prestandan bör du övervaka CPU-IO-väntenivåer för tidiga tecken på problem.
 
 [Hämta fil](assets/aem_environment_sizingtool.xlsx)
 
