@@ -3,7 +3,7 @@ title: Metadata-scheman
 description: Metadata-schemat definierar layouten för egenskapssidan och de metadataegenskaper som visas för resurser. Lär dig hur du skapar anpassade metadatamatcheman, redigerar metadatamatchema och hur du använder metadatamatchema på resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
+source-git-commit: 5cbaefd5a377db5aa9f8ba35371fe2a9cb638fa1
 
 ---
 
@@ -123,8 +123,6 @@ Om du vill redigera egenskaperna för en metadatakomponent i formuläret klickar
 
 Följande är giltiga värden för den här egenskapen:
 
-Följande är giltiga värden för den här egenskapen:
-
 * `./jcr:content/metadata/dc:title`: Lagrar värdet vid resursens metadatanod som egenskapen `dc:title`.
 
 * `./jcr:created`: Visar JCR-egenskapen vid objektets nod. Om du konfigurerar de här egenskaperna för visning bör du markera dem som Inaktivera redigering, eftersom de är skyddade. Otherwise, the error [!UICONTROL Asset(s) failed to modify] results when you save the asset&#39;s properties.
@@ -132,11 +130,21 @@ Följande är giltiga värden för den här egenskapen:
 För att komponenten ska visas korrekt i metadataschemaformuläret bör egenskapssökvägen inte innehålla några blanksteg.
 
 **Platshållare**: Använd den här egenskapen för att ange relevant platshållartext för metadataegenskapen.
+
 **Obligatoriskt**: Använd den här egenskapen för att markera en metadataegenskap som obligatorisk på egenskapssidan.
+
 **Inaktivera redigering**: Använd den här egenskapen för att göra en metadataegenskap icke-redigerbar på egenskapssidan.
+
 **Visa tomt fält i skrivskyddat**: Markera den här egenskapen om du vill visa en metadataegenskap på egenskapssidan även om den inte har något värde. Om en metadataegenskap inte har något värde visas den inte som standard på egenskapssidan.
-**Visa sorterad** lista: Använd den här egenskapen för att visa en ordnad lista med alternativ ****: Använd den här egenskapen för att ange alternativ i en lista **Beskrivning** : Använd den här egenskapen om du vill lägga till en kort beskrivning för metadatakomponenten.
+
+**Visa sorterad** lista: Använd den här egenskapen för att visa en ordnad lista med alternativ
+
+**Alternativ**: Använd den här egenskapen för att ange alternativ i en lista
+
+**Beskrivning** : Använd den här egenskapen om du vill lägga till en kort beskrivning för metadatakomponenten.
+
 **Klass**: Den objektklass som egenskapen är associerad med.
+
 **Ta bort**: Klicka på den här ikonen om du vill ta bort en komponent från schemaformuläret.
 
 ![chlimage_1-41](assets/chlimage_1-177.png)
