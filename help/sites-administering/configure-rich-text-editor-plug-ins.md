@@ -8,7 +8,7 @@ discoiquuid: 87dc79ad-0a71-43f6-af04-4d26c7472dc5
 mini-toc-levels: 1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ac4c5ec920ed768002da1b4598590bfd9ca301f6
+source-git-commit: 72cdeff04e18c13e4b31543bafcbd5ffa65a78a7
 
 ---
 
@@ -69,7 +69,9 @@ När du har aktiverat ett plugin-program följer du de här riktlinjerna för at
 
 ## Förstå plugin-programmet findreplace {#findreplace}
 
-Plugin- `findreplace` programmet behöver ingen konfiguration. Det fungerar som förväntat, direkt vid leverans.
+Plugin- `findreplace` programmet behöver ingen konfiguration. Det går som det ska.
+
+När du använder funktionen Ersätt bör du ange den ersättningssträng som ska ersättas samtidigt som söksträngen. Du kan dock fortfarande klicka på Sök för att söka efter strängen innan du ersätter den. Om ersättningssträngen anges efter att du klickat på Sök återställs sökningen till början av texten.
 
 Dialogrutan Sök och ersätt blir genomskinlig när du klickar på Sök och blir ogenomskinlig när du klickar på Ersätt. Detta gör att författaren kan granska texten som författaren ska ersätta. Om användare klickar på Ersätt alla stängs dialogrutan och visar antalet ersättningar som gjorts.
 
@@ -178,7 +180,7 @@ Så här konfigurerar du vilka format som tillåts när du klistrar in text i AE
   <tr>
    <td>fallbackBlockTag</td>
    <td>Sträng</td>
-   <td><p>Defines the block tag used for any blocks having a block tag not included in allowBlockTags.</p> <p> i de flesta fall är det tillräckligt.</p> </td>
+   <td><p>Definierar den blocktagg som används för block med en blocktagg som inte ingår i allowBlockTags.</p> <p> i de flesta fall är det tillräckligt.</p> </td>
   </tr>
   <tr>
    <td>tabell</td>
@@ -582,7 +584,7 @@ Ibland kan du skapa datatabeller utan visuell text i en kolumnrubrik om rubriken
 RTE har stöd för dolda rubrikceller för att förbättra tillgängligheten i sådana scenarier. Dessutom innehåller den konfigurationsinställningar för dolda rubriker i tabeller. Med de här inställningarna kan du använda CSS-format på dolda rubriker i redigerings- och förhandsgranskningslägena. Om du vill hjälpa författare att identifiera dolda rubriker i redigeringsläget kan du inkludera följande parametrar i koden:
 
 * `hiddenHeaderEditingCSS`: Anger namnet på CSS-klassen som används i den dolda rubrikcellen när RTE redigeras.
-* `hiddenHeaderEditingStyle`: Anger en formatsträng som används på cellen med dolda rubriker när textredigeringsredigering används.
+* `hiddenHeaderEditingStyle`: Anger en formatsträng som används i cellen med dolda rubriker när textredigeringsredigering används.
 
 Om du anger både CSS och formatsträngen i koden har CSS-klassen företräde framför formatsträngen och kan skriva över alla konfigurationsändringar som formatsträngen gör.
 
