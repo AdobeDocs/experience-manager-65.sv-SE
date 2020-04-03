@@ -12,7 +12,7 @@ discoiquuid: 7965b7ef-dec4-441a-a012-daf1d60df0fb
 pagetitle: Query Builder API
 tagskeywords: querybuilder
 translation-type: tm+mt
-source-git-commit: b3e1493811176271ead54bae55b1cd0cf759fe71
+source-git-commit: a491d4e9bd9ffc68c4ba7cac3149f48cf7576ee8
 
 ---
 
@@ -23,9 +23,9 @@ Funktionerna i [Asset Share Query Builder](/help/assets/assets-finder-editor.md)
 
 Frågebyggaren ( [`QueryBuilder`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html)) på serversidan accepterar en frågebeskrivning, skapar och kör en XPath-fråga, kan även filtrera resultatuppsättningen och extrahera facets, om så önskas.
 
-Frågebeskrivningen är bara en uppsättning prediktiv ([`Predicate`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/Predicate.html)). Exemplen innehåller ett fulltextpredikat, som motsvarar funktionen i XPath, och ett predikat för bildstorlek som söker efter bredd- och höjdegenskaper i DAM-resursens underträd. `jcr:contains()`
+Frågebeskrivningen är bara en uppsättning prediktiv ([`Predicate`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/Predicate.html)). Exempel är ett fulltextpredikat, som motsvarar funktionen i XPath `jcr:contains()` .
 
-För varje predikattyp finns det en utvärderingskomponent ([`PredicateEvaluator`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/PredicateEvaluator.html)) som kan hantera det specifika predikatet för XPath, filtrering och ansiktsextrahering. Det är mycket enkelt att skapa anpassade utvärderare, som kopplas in via OSGi-komponentkörningen.
+För varje predikattyp finns det en utvärderingskomponent ([`PredicateEvaluator`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/PredicateEvaluator.html)) som kan hantera det specifika predikatet för XPath, filtrering och facetextrahering. Det är mycket enkelt att skapa anpassade utvärderare, som kopplas in via OSGi-komponentkörningen.
 
 REST API ger åtkomst till exakt samma funktioner via HTTP med svar som skickas i JSON.
 
@@ -61,7 +61,7 @@ För `QueryBuilder` JSON-servern innehåller varje exempel en länk till den lok
 
 ### Returnera alla resultat {#returning-all-results}
 
-**Följande fråga kommer att** returnera tio resultat **(eller max tio), men informera dig om** Antal träffar: som faktiskt finns tillgängliga:
+Följande fråga kommer att **returnera tio resultat** (eller max tio), men informera dig om **Antal träffar:** som faktiskt finns tillgängliga:
 
 `http://localhost:4502/bin/querybuilder.json?path=/content&1_property=sling:resourceType&1_property.value=foundation/components/text&1_property.operation=like&orderby=path`
 
@@ -131,7 +131,7 @@ Den returnerar ett tal som är lika med standardgränsen på 10 resultat med fö
 
 ### Implementera sidnumrering {#implementing-pagination}
 
-Som standard ger Query Builder även antalet träffar. Beroende på den resulterande storleken kan det ta lång tid att fastställa det korrekta antalet, bland annat genom att kontrollera alla resultat för åtkomstkontroll. För det mesta används summan för att implementera sidnumrering för slutanvändargränssnittet. Eftersom det kan ta lång tid att fastställa det exakta antalet rekommenderar vi att du använder funktionen gissaTotal för att implementera sidnumreringen.
+Som standard ger Query Builder även antalet träffar. Beroende på den resulterande storleken kan det ta lång tid att fastställa det korrekta antalet, bland annat genom att kontrollera alla resultat för åtkomstkontroll. Summan används oftast för att implementera sidnumrering för slutanvändargränssnittet. Eftersom det kan ta lång tid att fastställa det exakta antalet rekommenderar vi att du använder funktionen gissaTotal för att implementera sidnumreringen.
 
 Gränssnittet kan till exempel anpassa följande metod:
 
@@ -332,7 +332,7 @@ p.hits=selective
 p.properties=sling:resourceType jcr:primaryType
 ```
 
-En annan sak du kan göra är att inkludera underordnade noder i QueryBuilder-svaret. För att kunna göra detta måste du ange
+En annan sak du kan göra är att ta med underordnade noder i QueryBuilder-svaret. För att kunna göra detta måste du ange
 
 ```
 p.nodedepth=n
