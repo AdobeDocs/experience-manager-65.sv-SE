@@ -4,16 +4,18 @@ description: Nyheter i Adobe Experience Manager 6.5 Service Pack 4
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 5fc75e3dcb0ca107605c456d0f41be861dabc0eb
+source-git-commit: c25b04b043d6ec6289a561b630e3d0fad750629a
 
 ---
 
 
 # Nyheter i Adobe Experience Manager 6.5 Service Pack 4 {#aem-whats-new-service-pack-4}
 
-Adobe Experience Manager (AEM) 6.5 ger funktioner och kontinuerliga förbättringar genom kvartalsvisa Service Pack. Strategin är till fördel när det blir enklare att ta till sig innovationerna.
+Med Adobe Experience Manager (6.5) får ni tillgång till nya funktioner och kontinuerliga förbättringar via kvartalsvisa Service Pack-versioner. Med den här metoden blir det enkelt att använda innovationerna.
 
-AEM Service Pack 4 (6.5.4.0) lanseras den 5 **mars 2020**. I den här artikeln beskrivs de viktigaste funktionerna i 6.5 Service Packs som gör din AEM-resa mer tilltalande.
+Experience Manager Service Pack 4 (6.5.4.0) lanseras den 5 mars 2020. Det är en viktig uppdatering som innehåller nya funktioner, viktiga förbättringar som kunderna efterfrågat samt prestanda, stabilitet, säkerhetsförbättringar som släppts sedan den allmänna tillgängligheten av 6.5-utgåvan i april 2019. Experience Manager 6.5.4.0 kan installeras ovanpå Adobe Experience Manager 6.5.
+
+I den här artikeln beskrivs de funktioner som ingår i det senaste 6.5 Service Pack-uppdateringen, [nyckelfunktioner som ingår i det tidigare 6.5 Service Pack-](#key-features-previous-service-packs)paketet [och några av de](#key-features-sice-sp3)viktigaste versionerna sedan Experience Manager 6.5.3.0.
 
 ## AEM Sites {#aem-sites}
 
@@ -94,7 +96,7 @@ Experience Manager Forms innehåller följande tillgänglighetsförbättringar:
 
 * Varje sida i ett adaptivt formulär innehåller nu en rubrik och en huvudlandmärkesetikett.
 
-## Viktiga funktioner i tidigare AEM 6.5 Service Packs
+## Viktiga funktioner i tidigare AEM 6.5 Service Packs {#key-features-previous-service-packs}
 
 ### Smart Imaging for Dynamic Media (6.5.3.0) {#smart-imaging}
 
@@ -117,7 +119,7 @@ Du kan ange startdatum och -tid och slutdatum och sluttid så att dina inställn
 
 Du kan använda batch-API:t för att skapa flera interaktiva dokument från en mall. Mallen är en interaktiv kommunikation utan data. Batch-API:t kombinerar data med en mall för att skapa en interaktiv kommunikation. API:t är användbart vid massproduktion av interaktiv kommunikation. Till exempel telefonräkningar, kreditkortsutdrag för flera kunder. Se [Generera flera interaktiva dokument med hjälp av API:t](../forms/using/generate-multiple-interactive-communication-using-batch-api.md)för gruppbearbetning.
 
-## Viktiga versioner sedan AEM 6.5 SP3
+## Viktiga versioner sedan AEM 6.5 SP3 {#key-features-sice-sp3}
 
 Mellan 12 december 2019 och 5 mars 2020 släppte Adobe följande funktioner som ligger utanför AEM-leverantörens kärnprogram:
 
