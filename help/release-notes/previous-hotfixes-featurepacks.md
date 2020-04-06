@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0e95ac8850a693764b82a29960b472d156dac535
+source-git-commit: a6f95e04fd5b8ed28beaa12e9fd170ed495397b8
 
 ---
 
@@ -92,13 +92,13 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 * Massförflyttning av resurser misslyckas och ett varningsmeddelande visas (NPR-30610).
 
-* Resursnamn ändras till gemener när du flyttar resurser från en mapp till en annan i [!DNL Experience Manager] körläge [!DNL Dynamic Media] Scene 7 (NPR-31630).
+* Resursnamn ändras till gemener när du flyttar resurser från en mapp till en annan i [!DNL Experience Manager] läget [!DNL Dynamic Media]-Scene7 (NPR-31630).
 
 * Ett fel uppstod när en fjärrbilduppsättning redigerades för bilden som finns i mappen som heter same som namnet på Scene 7-företaget (NPR-31340).
 
 * [!DNL Dynamic Media] resurser som innehåller referenser publiceras inte (NPR-31180).
 
-* Överföringar från [!DNL Experience Manager Dynamic Media] - Scene 7-miljön till Scene 7 tar för lång tid att slutföra (NPR-31048).
+* Överföringar från [!DNL Dynamic Media]7-Scene7-läge till [!DNL Dynamic Media Classic] tar för lång tid att slutföra (NPR-31048).
 
 * Aktiveringspunkten som läggs till i en bildresurs är inte synlig via Interactive Image Viewer på sidan med resursinformation (NPR-30979).
 
@@ -106,11 +106,11 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 * En konflikt inträffar när en språkkopia av resurser skapas och resurser inte överförs till Scene 7 (NPR-30932).
 
-* Dynamiska återgivningar som hämtats från [!DNL Experience Manager] Hybrid- [!DNL Dynamic Media] läge är brutna (de är av texttyp med innehållet&quot;det går inte att hitta bilden&quot; i stället för bildinnehållstypen) (NPR-30876).
+* Dynamiska återgivningar som hämtats från [!DNL Experience Manager] att ha [!DNL Dynamic Media]Hybrid-läge är brutna (de är av texttyp med innehållet&quot;det går inte att hitta bilden&quot; i stället för bildinnehållstypen) (NPR-30876).
 
-* [!DNL Dynamic Media] Arbetsflödet för kodning av video misslyckas med att generera miniatyrbilder för videon som migreras från Scen 7 till [!DNL Dynamic Media] - körningsläget Scene 7 (CQ-4282011).
+* [!DNL Dynamic Media] Arbetsflödet för kodning av video kan inte generera miniatyrbilder för videon som migreras från [!DNL Dynamic Media Classic] till [!DNL Dynamic Media]-Scene7-läget i Adobe Experience Manager (CQ-4282011).
 
-* IpsApiException observerades när resurser migrerades från en instans till en annan med olika företags-ID:n för Scene 7 (CQ-4280548).
+* IpsApiException observerades när resurser migrerades från en instans till en annan med olika Scene7-företags-ID:n (CQ-4280548).
 
 * Miniatyrbilden av 3D-resursen är inte informativ när en 3D-modell som stöds har importerats till [!DNL Experience Manager] (CQ-4283701).
 
@@ -120,7 +120,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 * Videor kan inte spelas upp med SmartCropVideoViewer i Internet Explorer 11 och Safari (CQ-4281422).
 
-* Användning av flyttningsknappen för att flytta flera resurser, från en mapp till en annan, misslyckas i [!DNL Experience Manager] körningsläget [!DNL Dynamic Media] - scene7 (CQ-4280384).
+* Användning av flyttningsknappen för att flytta flera resurser, från en mapp till en annan, misslyckas i [!DNL Experience Manager] körningsläget [!DNL Dynamic Media]-Scene7 (CQ-4280384).
 
 * Förvrängd video visas i resursinformation när MIME-typen är en annan än MP4 (CQ-4279704).
 
@@ -336,7 +336,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 * Schemaformuläret för mappmetadata identifierar inte automatiskt datatyp och skapar därför inte den relaterade TypeHint-typen när formuläret skickas. NPR-30599: Programfix för CQ-4275227
 * Alternativen för att beskära och rotera resurser är inaktiverade i DMS7-redigeringsgränssnittet. NPR-30118: Programfix för CQ-4273221
 * Funktionen Dela länk fungerar inte på [!DNL Experience Manager] instanser med DMS7-konfiguration. NPR-30080, NPR-30492: Programfix för CQ-4273651
-* Om du lägger till [!DNL Dynamic Media] Scene7-komponenten på sidan och sedan publicerar sidan aktiveras inte DMscene7-konfigurationen varje gång. NPR-30641: Programfix för CQ-4275962
+* Om du lägger till [!DNL Dynamic Media]-Scene7-komponenten på sidan och sedan publicerar sidan, aktiveras inte DMscene7-konfigurationen varje gång. NPR-30641: Programfix för CQ-4275962
 * Lade till en IPSJobJournal i [!DNL Experience Manager] för att skapa endast ett IPS-jobb (Intrusion Prevention Systems) per bearbetningsprofil. NPR-30490: Programfix för CQ-4273614
 * [!DNL Dynamic Media]: Lagt till standardfilter för att utesluta resurser från replikering till [!DNL Experience Manager] publiceringsnoden. NPR-30538: Programfix för CQ-4274678
 * Ett externt arbetsflöde för ombearbetning har introducerats för stöd för flera resurser så att mappen kan användas som nyttolast. Arbetsflödet består av två steg: ombearbetar resurser utan handtag via metadatamappning till nästa steg och överför alla resurser utan resurshandtag till S7 i ett enda IPS-jobb. Mer information finns i Konfigurera [!DNL Dynamic Media] molntjänster. NPR-30489: Programfix för CQ-4272903
@@ -351,7 +351,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 * Om du sorterar sökfrågan efter relevans returneras [!DNL InDesign] dokument tillsammans med [!DNL InDesign] mallar. Programfix för CQ-4273864
 * Om användaren har ett e-post-ID med versaler kan användarna inte checka in de resurser som tidigare har checkats ut. Programfix för CQ-4276575
 * Åtgärden Ta bort gäller bara för de förinställningar som är markerade, och om skärmen automatiskt uppdaterar listan efter åtgärden visas andra förinställningar som redan har uppdaterats. Programfix för CQ-4261461
-* Om du konfigurerar [!DNL Dynamic Media] molntjänster i DMHybrid-läge skapas flera tomma rapportsviter i [!DNL Analytics]och inget rapportsuite-id sparas i [!DNL Experience Manager], vilket resulterar i duplicering av rapportsviten. Programfix för CQ-4249780
+* Om du konfigurerar [!DNL Dynamic Media] Cloud-tjänster i [!DNL Dynamic Media]-hybrid-läge skapas flera tomma rapportsviter i [!DNL Analytics]och inget rapportsuite-id sparas i [!DNL Experience Manager], vilket resulterar i duplicering av rapportsviten. Programfix för CQ-4249780
 * Det går inte att synkronisera om namnbytet i [!DNL Experience Manager] resursen till duplicerat namn till Scene7. Programfix för CQ-4276763
 * Användargenererat innehåll visas felaktigt på sökfilterpanelen. Programfix för CQ-4273875
 * Alternativet Sök efter liknande är inte tillgängligt för TIFF-bilder. Programfix för CQ-4278238
@@ -416,7 +416,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 ### Integrering {#integration}
 
 * Det anpassade innehållet visas inte korrekt på publiceringsinstansen förrän instansen startas om. NPR-30377: Programfix för CQ-4273706
-* När du konfigurerar Launch på en webbplats har biblioteksadressen ett snedstreck (/) som är förinställt, vilket kan orsaka manuella åtgärder varje gång. NPR-30694: Programfix för CQ-4275501
+* När du konfigurerar Launch på en webbplats har biblioteksadressen ett snedstreck (/) som är förinställt, vilket ger manuella åtgärder varje gång. NPR-30694: Programfix för CQ-4275501
 
 ### Formulär {#forms-6520}
 
@@ -494,7 +494,7 @@ Viktiga högdagrar för [!DNL Experience Manager] 6.5.2.0-formulär är:
 Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 * Aktiverade inkludering av dynamiskt gränssnittsläge i spårningshändelser som anpassade attribut.
-* Inkluderat stöd för leverans av 360-graders videomaterial i [!DNL Dynamic Media] Scene 7.
+* Inkluderat stöd för leverans av 360-graders videomaterial i [!DNL Dynamic Media]-Scene7-läge.
 * Aktiverade *japansk radbrytning* via stilpluginen i RTF-redigeraren. Mer information finns i [Konfigurera japansk radbrytning](/help/sites-administering/configure-rich-text-editor-plug-ins.md#jpwordwrap)
 
 ### Assets
