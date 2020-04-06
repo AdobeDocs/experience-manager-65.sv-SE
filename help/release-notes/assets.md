@@ -2,7 +2,7 @@
 title: Versionsinformation om Adobe Experience Manager Assets
 description: De nya funktionerna och förbättringarna i Adobe Experience Manager 6.5 Assets.
 translation-type: tm+mt
-source-git-commit: 92619acaa2eb820eda304355f8eaf79ec4a400e1
+source-git-commit: a6f95e04fd5b8ed28beaa12e9fd170ed495397b8
 
 ---
 
@@ -65,7 +65,7 @@ I stora företag kan den infrastruktur som krävs för att skapa webbplatser dis
 
 [!DNL Dynamic Media] ger förbättrad multimediaproduktion och -leverans i [!DNL Experience Manager Assets] för att skapa engagerande och personaliserade upplevelser. Genom att överföra en enda högkvalitativ masterresurs och använda vår avancerade molnrendering och våra visningsprogram kan ni leverera vilken kombination av renderingar som helst direkt för att stödja er organisations mediestrategi.
 
-Mer information om nya [!DNL Dynamic Media] funktioner finns i [Dynamic Media Release Notes](https://marketing.adobe.com/resources/help/en_US/s7/release_notes/).
+Mer information om nya [!DNL Dynamic Media] funktioner finns i [Dynamic Media Release Notes](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/release-notes/s7rn2017.html).
 
 ### Stöd för 360-video {#video-support}
 
@@ -77,7 +77,7 @@ Nu kan du anpassa miniatyrbilderna för videomaterialet med hjälp av bildrutor 
 
 ### Förbättringar av hjälpmedel {#accessibility-enhancements}
 
-[!DNL Dynamic Media] visningsprogrammen har nu stöd för förbättrade hjälpmedelsfunktioner som Aria-support, skärmläsare och Alt-text. Mer information finns i [Versionsinformation](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/index.html)för Dynamic Media Viewer.
+[!DNL Dynamic Media] visningsprogrammen har nu stöd för förbättrade hjälpmedelsfunktioner som Aria-support, skärmläsare och Alt-text. Mer information finns i [Versionsinformation](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html)för Dynamic Media Viewer.
 
 ## Förbättrad sökupplevelse {#search-experience-enhancement}
 
