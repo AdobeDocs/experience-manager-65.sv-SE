@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3f53945579eaf5de1ed0b071aa9cce30dded89f1
+source-git-commit: a6f95e04fd5b8ed28beaa12e9fd170ed495397b8
 
 ---
 
@@ -194,12 +194,12 @@ Modereringsåtgärder registreras här.
    * `error.log`
 Felmeddelanden (av varierande allvarlighetsgrad) registreras här.
 
-   * [ Den `ImageServer-<PortId>-yyyy>-<mm>-<dd>.log`](https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/c_image_server_log.html)här loggen används bara om Dynamic Media är aktiverat. Det innehåller statistik och analysinformation som används för att analysera beteendet i den interna ImageServer-processen.
+   * [ Den `ImageServer-<PortId>-yyyy>-<mm>-<dd>.log`](https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/c_image_server_log.html)här loggen används bara om [!DNL Dynamic Media] är aktiverad. Det innehåller statistik och analysinformation som används för att analysera beteendet i den interna ImageServer-processen.
 
    * `request.log`
 Varje åtkomstbegäran registreras här tillsammans med svaret.
 
-   * [ Den `s7access-<yyyy>-<mm>-<dd>.log`](https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/c_Access_Log.html)här loggen används bara om Dynamic Media är aktiverat. I s7access-loggen registreras varje begäran som gjorts till Dynamic Media via `/is/image` och `/is/content`.
+   * [ Den `s7access-<yyyy>-<mm>-<dd>.log`](https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/c_Access_Log.html)här loggen används bara om [!DNL Dynamic Media] är aktiverad. I s7access-loggen registreras alla förfrågningar som gjorts till [!DNL Dynamic Media] genom `/is/image` och `/is/content`.
 
    * `stderr.log`
 Innehåller felmeddelanden, återigen av varierande allvarlighetsgrad, som genereras under start. Som standard är loggnivån inställd på `Warning` ( `WARN`)
@@ -216,7 +216,7 @@ Innehåller en logg över alla uppgraderingsåtgärder som körs från `com.day.
 Information om revideringsjournaler.
 
 >[!NOTE]
-ImageServer- och s7access-loggarna ingår inte i **Download Full **paketet som genereras från sidan **system/console/status-Bundlelist **. Om du har problem med dynamiska media bör du av supportskäl även bifoga loggarna för ImageServer och s7access när du kontaktar kundsupport.
+ImageServer- och s7access-loggarna ingår inte i **Download Full **paketet som genereras från sidan **system/console/status-Bundlelist **. Om du har [!DNL Dynamic Media] problem med supporten kan du av supportskäl även bifoga loggarna för ImageServer och s7access när du kontaktar kundsupport.
 
 ### Aktivera felsökningsloggnivån {#activating-the-debug-log-level}
 
@@ -239,7 +239,7 @@ Loggnivåerna är följande:
 |---|---|---|
 | 1 | Fel | Åtgärden misslyckades. Installationen fortsätter, men en del av AEM WCM installerades inte korrekt och kommer inte att fungera. |
 | 2 | Varning | Åtgärden har slutförts men problem uppstod. AEM WCM fungerar eventuellt inte korrekt. |
-| 3 |  Information | Åtgärden har slutförts. |
+| 3 | Information | Åtgärden har slutförts. |
 
 ### Skapa en anpassad loggfil {#create-a-custom-log-file}
 
@@ -255,7 +255,7 @@ I vissa fall kanske du vill skapa en anpassad loggfil med en annan loggnivå. Du
 
       Där `<*identifier*>` ersätts av fri text som du (måste) anger för att identifiera förekomsten (du kan inte utelämna den här informationen).
 
-      Exempel, `org.apache.sling.commons.log.LogManager.factory.config-MINE`
+      Exempel: `org.apache.sling.commons.log.LogManager.factory.config-MINE`
 
    * Typ: `sling:OsgiConfig`
    >[!NOTE]
@@ -265,10 +265,9 @@ I vissa fall kanske du vill skapa en anpassad loggfil med en annan loggnivå. Du
 
    * Namn: `org.apache.sling.commons.log.file`
 
-      Typ:Sträng
+      Typ: Sträng
 
-      Värde: Ange loggfilen.
-till exempel `logs/myLogFile.log`
+      Värde: Ange loggfilen. till exempel `logs/myLogFile.log`
 
    * Namn: `org.apache.sling.commons.log.names`
 
@@ -281,7 +280,7 @@ till exempel `logs/myLogFile.log`
       * `com.day`
    * Namn: `org.apache.sling.commons.log.level`
 
-      Typ:Sträng
+      Typ: Sträng
 
       Värde: Ange den loggnivå som krävs ( `debug`, `info`, `warn` eller `error`). till exempel `debug`
 
@@ -329,7 +328,7 @@ till exempel `logs/myLogFile.log`
 
    * Namn: `org.apache.sling.commons.log.LogManager.factory.writer-<*identifier*>` (eftersom detta är ett skrivprogram)
 
-      Precis som med Logger `<*identifier*>` ersätts den av fri text som du (måste) anger för att identifiera instansen (du kan inte utelämna den här informationen). Exempel, `org.apache.sling.commons.log.LogManager.factory.writer-MINE`
+      Precis som med Logger `<*identifier*>` ersätts den av fri text som du (måste) anger för att identifiera instansen (du kan inte utelämna den här informationen). Exempel: `org.apache.sling.commons.log.LogManager.factory.writer-MINE`
 
    * Typ: `sling:OsgiConfig`
    >[!NOTE]
@@ -351,43 +350,35 @@ till exempel `logs/myLogFile.log`
 
          Typ: `Long`
 
-         Värde: Ange hur många loggfiler du vill behålla.
-till exempel `5`
+         Värde: Ange hur många loggfiler du vill behålla. till exempel `5`
 
       * Namn: `org.apache.sling.commons.log.file.size`
 
          Typ: `String`
 
-         Värde: Ange vad som krävs för att kontrollera filens rotation efter storlek/datum.
-till exempel `'.'yyyy-MM-dd`
+         Värde: Ange vad som krävs för att kontrollera filens rotation efter storlek/datum. till exempel `'.'yyyy-MM-dd`
    >[!NOTE]
-   >
-   >`org.apache.sling.commons.log.file.size` styr rotationen av loggfilen genom att ange antingen:
-   >
-   >* maximal filstorlek
-   >* ett tids-/datumschema
-   >
-   >för att ange när en ny fil ska skapas (och den befintliga filen får ett nytt namn enligt namnmönstret).
-   >
-   >* En storleksgräns kan anges med ett tal. Om ingen storleksindikator anges används detta som antal byte, eller så kan du lägga till en av storleksindikatorerna - `KB`, `MB`eller `GB` (versaler ignoreras).
-   >* Ett tids-/datumschema kan anges som ett `java.util.SimpleDateFormat` mönster. Detta anger den tidsperiod efter vilken filen ska roteras. det suffix som läggs till i den roterade filen (för identifiering).
-   >
-   >Standardvärdet är &#39;.&#39;yyyy-MM-dd (för daglig loggrotation)
-   >
-   >Så vid midnatt den 20 januari 2010 (eller när det första loggmeddelandet efter detta blir exakt) kommer ../logs/error.log att byta namn till ../logs/error.log.2010-01-20. Loggning för den 21 januari kommer att skickas till (en ny och tom) ../logs/error.log tills den överförs vid nästa ändring av dagen.
-   >
-   >| `&#39;.&#39;yyyy-MM`|Rotation i början av varje månad|
-   >|---|---|
-   >| `&#39;.&#39;yyyy-ww`|Rotation på den första dagen i varje vecka (beroende på språkområde). |
-   >| `&#39;.&#39;yyyy-MM-dd`|Rotation vid midnatt varje dag. |
-   >| `&#39;.&#39;yyyy-MM-dd`|Rotation vid midnatt och middag varje dag. |
-   >| `&#39;.&#39;yyyy-MM-dd-HH`|Rotation överst i varje timme. |
-   >| `&#39;.&#39;yyyy-MM-dd-HH-mm`|Rotation i början av varje minut. |
-   >
-   >Obs! När du anger tid/datum:
-   >1. Du bör&quot;escape&quot;-text inom ett par enkla citattecken (&#39; &#39;);
-   >   Detta gör du för att undvika att vissa tecken tolkas som mönsterbokstäver.
-   >1. Använd bara tecken som är tillåtna för ett giltigt filnamn var som helst i alternativet.
+   `org.apache.sling.commons.log.file.size` styr rotationen av loggfilen genom att ange antingen:
+   * maximal filstorlek
+   * ett tids-/datumschema
+   för att ange när en ny fil ska skapas (och den befintliga filen får ett nytt namn enligt namnmönstret).
+   * En storleksgräns kan anges med ett tal. Om ingen storleksindikator anges används detta som antal byte, eller så kan du lägga till en av storleksindikatorerna - `KB`, `MB`eller `GB` (versaler ignoreras).
+   * Ett tids-/datumschema kan anges som ett `java.util.SimpleDateFormat` mönster. Detta anger den tidsperiod efter vilken filen ska roteras. det suffix som läggs till i den roterade filen (för identifiering).
+   Standardvärdet är &#39;.&#39;yyyy-MM-dd (för daglig loggrotation)
+   Så vid midnatt den 20 januari 2010 (eller när det första loggmeddelandet efter detta blir exakt) kommer ../logs/error.log att byta namn till ../logs/error.log.2010-01-20. Loggning för den 21 januari kommer att skickas till (en ny och tom) ../logs/error.log tills den överförs vid nästa ändring av dagen.
+       | `&#39;.&#39;yyyy-MM`|Rotation i början av varje månad|
+    |—|—|
+    | `&#39;.&#39;yyyy-ww`|Rotation på den första dagen i varje vecka (beroende på språkområde). |
+       | `&#39;.&#39;yyyy-MM-dd`|Rotation vid midnatt varje dag. |
+       | `&#39;.&#39;yyyy-MM-dd`|Rotation vid midnatt och middag varje dag. |
+       | `&#39;.&#39;yyyy-MM-dd-HH`|Rotation överst i varje timme. |
+       | `&#39;.&#39;yyyy-MM-dd-HH-mm`|Rotation i början av varje minut. |
+     
+     Obs! När du anger tid/datum:
+       1. Du bör&quot;escape&quot;-text inom ett par enkla citattecken (&#39; &#39;);
+   Detta     gör du för att undvika att vissa tecken tolkas som mönsterbokstäver.
+       1. Använd bara tecken som är tillåtna för ett giltigt filnamn var som helst i alternativet.
+   
 
 1. Läs den nya loggfilen med det verktyg du valt.
 
@@ -537,17 +528,17 @@ Vissa av dessa kommer att vara beroende av operativsystemet.
   <tr>
    <td>Tråddumpar</td>
    <td>Observera JVM-trådar. Identifiera innehåll, lås och långa löptider.</td>
-   <td><p><br /> Beroende på operativsystem: - Unix/Linux: <code>kill -QUIT &lt;<em>pid</em>&gt;</code><br /> - Windows (konsolläge): Ctrl-Break<br /> </p> <p>Analysverktyg finns också tillgängliga, till exempel <a href="https://java.net/projects/tda/">TDA</a>.<br /> </p> </td>
+   <td><p>Beroende på operativsystem:<br /> - Unix/Linux: <code>kill -QUIT &lt;<em>pid</em>&gt;</code><br /> - Windows (konsolläge): Ctrl-Break<br /> </p> <p>Analysverktyg finns också tillgängliga, till exempel <a href="https://java.net/projects/tda/">TDA</a>.<br /> </p> </td>
   </tr>
   <tr>
    <td>Heap Dumps</td>
    <td>Slut på minne som orsakar långsamma prestanda.</td>
-   <td><p><br /> Lägg till: <code>-XX:+HeapDumpOnOutOfMemoryError</code><br /> till java-anropet till AEM.</p> <p>Se <a href="https://java.sun.com/javase/6/webnotes/trouble/TSG-VM/html/clopts.html#gbzrr">felsökningsguiden för Java SE 6 med HotSpot VM</a>.</p> </td>
+   <td><p>Lägg till:<br /> <code>-XX:+HeapDumpOnOutOfMemoryError</code><br /> till java-anropet till AEM.</p> <p>Se <a href="https://java.sun.com/javase/6/webnotes/trouble/TSG-VM/html/clopts.html#gbzrr">felsökningsguiden för Java SE 6 med HotSpot VM</a>.</p> </td>
   </tr>
   <tr>
    <td>Systemanrop</td>
    <td>Identifiera timingproblem.</td>
-   <td><p>Anrop till <code>System.currentTimeMillis()</code> eller <code>com.day.util</code>.Timing används för att generera tidsstämplar från koden eller via <a href="#html-comments">HTML-kommentarer</a>.</p> <p><strong></strong> Obs! Dessa bör implementeras så att de kan aktiveras/avaktiveras efter behov. När ett system fungerar smidigt behövs inte de allmänna kostnaderna för att samla in statistik.</p> </td>
+   <td><p>Anrop till <code>System.currentTimeMillis()</code> eller <code>com.day.util</code>.Timing används för att generera tidsstämplar från koden eller via <a href="#html-comments">HTML-kommentarer</a>.</p> <p><strong>Obs!</strong> Dessa bör implementeras så att de kan aktiveras/avaktiveras efter behov. När ett system fungerar smidigt behövs inte de allmänna kostnaderna för att samla in statistik.</p> </td>
   </tr>
   <tr>
    <td>Apache Bench</td>
@@ -572,12 +563,12 @@ Vissa av dessa kommer att vara beroende av operativsystemet.
   <tr>
    <td>JConsole</td>
    <td>Observera JVM-statistik och trådar.</td>
-   <td><p>Användning: jconsole</p> <p>Se <a href="https://java.sun.com/developer/technicalArticles/J2SE/jconsole.html">jconsole</a> och <a href="#monitoring-performance-using-jconsole">Monitoring Performance med JConsole</a>.</p> <p><strong></strong> Obs! Med JDK 1.6 kan JConsole byggas ut med plugin-program. till exempel Top eller TDA (Thread Dump Analyzer).</p> </td>
+   <td><p>Användning: jconsole</p> <p>Se <a href="https://java.sun.com/developer/technicalArticles/J2SE/jconsole.html">jconsole</a> och <a href="#monitoring-performance-using-jconsole">Monitoring Performance med JConsole</a>.</p> <p><strong>Obs!</strong> Med JDK 1.6 kan JConsole byggas ut med plugin-program. till exempel Top eller TDA (Thread Dump Analyzer).</p> </td>
   </tr>
   <tr>
    <td>Java VisualVM</td>
    <td>Observera JVM-statistik, trådar, minne och profilering.</td>
-   <td><p>Användning: jvisualvm eller visualvm<br /> </p> <p>Se <a href="https://java.sun.com/javase/6/docs/technotes/tools/share/jvisualvm.html">jvisualvm</a>, <a href="https://visualvm.dev.java.net/">visualvm</a> och <a href="#monitoring-performance-using-j-visualvm">Övervakningsprestanda med (J)VisualVM</a>.</p> <p><strong></strong> Obs! Med JDK 1.6 kan VisualVM utökas med plugin-program.</p> </td>
+   <td><p>Användning: jvisualvm eller visualvm<br /> </p> <p>Se <a href="https://java.sun.com/javase/6/docs/technotes/tools/share/jvisualvm.html">jvisualvm</a>, <a href="https://visualvm.dev.java.net/">visualvm</a> och <a href="#monitoring-performance-using-j-visualvm">Övervakningsprestanda med (J)VisualVM</a>.</p> <p><strong>Obs!</strong> Med JDK 1.6 kan VisualVM utökas med plugin-program.</p> </td>
   </tr>
   <tr>
    <td>truss/strace, lsof</td>
