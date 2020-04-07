@@ -10,7 +10,7 @@ topic-tags: introduction
 discoiquuid: ba70921e-db7e-43f6-902c-1065d3b13aef
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 709d8fe467f5449eb1e844a49126535a4a4a6e7a
+source-git-commit: fbe85c70ef993e4728bd76a327e1a27365cf1021
 
 ---
 
@@ -26,7 +26,7 @@ Med adaptiva formulär kan du skapa formulär som är engagerande, responsiva, d
 
 * **Att använda en XDP-formulärmall**&#x200B;är en idealisk formulärmodell om du har investeringar i XFA-baserade eller XDP-formulär. Det är ett direkt sätt att konvertera XFA-baserade formulär till anpassningsbara formulär. Alla befintliga XFA-regler behålls i de tillhörande adaptiva formulären. De färdiga adaptiva formulären har stöd för XFA-konstruktioner, till exempel valideringar, händelser, egenskaper och mönster.
 
-* **Om du använder en XSD (XML Schema Definition) eller ett JSON Schema** XML- och JSON-schema representerar detta strukturen i vilken data produceras eller används av företagets back-end-system. Du kan koppla schemat till ett anpassat formulär och använda dess element för att lägga till dynamiskt innehåll i det anpassningsbara formuläret. Elementen i schemat kommer att vara tillgängliga för användning på fliken Datamodellobjekt i innehållsläsaren när du redigerar adaptiva formulär.
+* **Om du använder en XSD (XML Schema Definition) eller ett JSON Schema** XML- och JSON-schema representerar detta strukturen i vilken data produceras eller används av det bakomliggande systemet i organisationen. Du kan koppla schemat till ett anpassat formulär och använda dess element för att lägga till dynamiskt innehåll i det anpassningsbara formuläret. Elementen i schemat kommer att vara tillgängliga för användning på fliken Datamodellobjekt i innehållsläsaren när du redigerar adaptiva formulär.
 
 * **Om du använder inga eller utan en formulärmodell** Adaptiva formulär som skapas med det här alternativet används ingen formulärmodell. Data-XML som genereras från sådana formulär har en platt struktur med fält och motsvarande värden.
 
@@ -49,7 +49,7 @@ När du skapar ett nytt eller redigerar ett befintligt anpassat formulär använ
 
 ![Gränssnitt för redigering av anpassningsbara formulär](assets/formeditor.png)
 
-******S. Sidofält** B. Sida, verktygsfält **C.** Adaptiv formulärsida
+**S.** Sidofält **B.** Sida, verktygsfält **C.** Adaptiv formulärsida
 
 ### Sidebar {#sidebar}
 
@@ -62,7 +62,7 @@ Med sidofältet kan du
 
 ![Sidebar](assets/sidebar-comps.png)
 
-******** S. Innehållsläsaren **B. Egenskapsläsaren** C.**Resurser, webbläsare** D. Komponentwebbläsare
+**S.** Innehållsläsaren **B.** Egenskapsläsaren **C.** Resurser, webbläsare **D.** Komponentwebbläsare
 
 <!--Click to enlarge
 
@@ -257,14 +257,14 @@ Det gör att du kan dra och släppa formulärmodellelement i det anpassade formu
   </tr>
   <tr>
    <td>Verifiera steg</td>
-   <td><p>Lägger till en platshållare som visar det ifyllda formuläret för verifiering av användaren.</p> <p><strong>Obs</strong>:Adaptiv form som innehåller Verifiera-komponenten stöder inte anonyma användare. Du bör inte heller använda komponenten Verify i ett adaptivt formulärfragment.</p> </td>
+   <td><p>Lägger till en platshållare som visar det ifyllda formuläret för verifiering av användaren.</p> <p><strong>Obs</strong>: Adaptiv form som innehåller Verifiera-komponenten stöder inte anonyma användare. Du bör inte heller använda komponenten Verify i ett adaptivt formulärfragment.</p> </td>
   </tr>
  </tbody>
 </table>
 
 #### Bästa tillvägagångssätt vid arbete med komponenter {#best-practices}
 
-Här följer några tips och viktiga saker att komma ihåg när du arbetar med adaptiva formulärkomponenter:
+Här följer några tips och viktiga saker du bör komma ihåg när du arbetar med adaptiva formulärkomponenter:
 
 * Varje komponent har tillhörande egenskaper som styr dess utseende och funktion. Om du vill konfigurera egenskaperna för en komponent trycker du på komponenten och trycker på ![cmpr](assets/cmppr.png) för att öppna komponentegenskaperna i egenskapsläsaren.
 * En komponent identifieras med sitt elementnamn. När du trycker på ![cmpr](assets/cmppr.png)kan du ändra komponentens namn genom att ändra fältvärdet för **[!UICONTROL elementnamnet]** i egenskapsläsaren. Endast bokstäver, siffror, bindestreck (-) och understreck (_) godkänns i fältet Elementnamn. Andra specialtecken tillåts inte och elementnamnet måste börja med en bokstav.
@@ -298,7 +298,7 @@ Mer information om adaptiva formulär finns i [Bästa tillvägagångssätt för 
 
 >[!NOTE]
 >
->Anpassade formulärkomponenter har inte stöd för höger till vänster-språk. Till exempel hebreiska.
+>Adaptiva formulärkomponenter har inte stöd för RTL-språk. Till exempel hebreiska.
 
 ### Verktygsfältet Sida {#page-toolbar}
 
@@ -310,7 +310,7 @@ Verktygsfältet längst upp på sidan innehåller alternativ som gör att du kan
 
 * **Emulatorns** ![linjal](assets/ruler.png): Gör att du kan emulera formulärutseendet för olika visningsstorlekar, till exempel surfplattor och telefoner.
 
-* **Redigera**: Här kan du välja andra lägen, till exempel: **Redigera, Formatera, Utvecklare** och **Design**.
+* **Redigera**: Här kan du välja andra lägen, till exempel: **Redigera, Formatera, Utvecklare och Design**.
 
    * **Redigera**: Här kan du redigera egenskaperna för formuläret och dess komponenter. Du kan till exempel lägga till en komponent, släppa en bild och ange obligatoriska fält.
    * **Format**: Gör att du kan formatera utseendet på komponenter i formuläret. I stilläge kan du till exempel markera en panel och ange dess bakgrundsfärg.
@@ -319,7 +319,7 @@ Verktygsfältet längst upp på sidan innehåller alternativ som gör att du kan
 
       * Upptäck vad formulären består av.
       * Felsök vad som händer var och när, vilket i sin tur hjälper till att lösa problem.
-   * **Design**.  Gör att du kan aktivera eller inaktivera anpassade komponenter eller komponenter som inte finns med i sidofältet.
+   * **Design**. Gör att du kan aktivera eller inaktivera anpassade komponenter eller komponenter som inte finns med i sidofältet.
 
 
 * **Förhandsgranska**: Gör att du kan förhandsgranska hur formuläret ser ut när du publicerar det.
@@ -365,7 +365,7 @@ J. **Övriga**: Innehåller fler alternativ för att arbeta med den markerade ko
 
 ### Adaptiv formulärsida {#af-page}
 
-Den anpassningsbara formulärsidan är det faktiska formuläret. Det är som alla andra WCM-sidor som modelleras som WCM- `cq:Page` komponent. Följande bild visar innehållsstrukturen i ett typiskt anpassat formulär.
+Den anpassningsbara formulärsidan är det faktiska formuläret. Den är som alla andra WCM-sidor som modelleras som WCM- `cq:Page` komponent. Följande bild visar innehållsstrukturen i ett typiskt anpassat formulär.
 
 ![Innehållsstruktur för en WCM-sida med anpassat formulär](assets/afstructure.png)
 
@@ -378,9 +378,9 @@ Innehållsstrukturen innehåller vanligtvis följande primära komponenter:
    * *Skicka åtgärd*: Definierar hur formuläret ska bearbetas på servern när användaren skickar formuläret.
    * *Format*: Anger sökvägen till CSS-filen som används för att anpassa formulärets utseende.
 
-* **** rootPanel: Rotpanelen i ett adaptivt formulär. Den kan innehålla underpaneler under objektnoden. Varje panel, inklusive rotpanelen, kan ha en tillhörande layout. Panelens layout bestämmer hur formuläret placeras. I dragspelslayouten placeras till exempel objekten som dragspelssteg.
+* **rootPanel:** Rotpanelen i ett adaptivt formulär. Den kan innehålla underpaneler under objektnoden. Varje panel, inklusive rotpanelen, kan ha en tillhörande layout. Panelens layout bestämmer hur formuläret placeras. I dragspelslayouten placeras till exempel objekten som dragspelssteg.
 
-* **** verktygsfält: En adaptiv formulärbehållare har ett associerat globalt verktygsfält som är globalt för formuläret. Det här verktygsfältet kan läggas till med åtgärden **Lägg till verktygsfält** i redigeringsfältet, som gör att författare kan lägga till åtgärder som Skicka, Spara, Återställ och så vidare.
+* **verktygsfält:** En adaptiv formulärbehållare har ett associerat globalt verktygsfält som är globalt för formuläret. Det här verktygsfältet kan läggas till med åtgärden **Lägg till verktygsfält** i redigeringsfältet, som gör att författare kan lägga till åtgärder som Skicka, Spara, Återställ och så vidare.
 
-* **** resurser: Den här noden innehåller ytterligare information som används för formulärredigering. Exempel: formulärmodellinformation, lokaliseringsinformation osv.).
+* **resurser:** Den här noden innehåller ytterligare information som används för formulärredigering. Exempel: formulärmodellinformation, lokaliseringsinformation osv.).
 
