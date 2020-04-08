@@ -8,7 +8,7 @@ discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 4bda1be676ab357c68b541dbd41f108f274dd2d7
+source-git-commit: be4a8a78b8555149809b8026bfd059f4cc9e9401
 
 ---
 
@@ -116,7 +116,7 @@ En fullständig lista över funktioner, viktiga högdagrar, viktiga funktioner s
 
 * Flera sökfrågor utlöses när flera taggar väljs från sökfiltret (NPR-32143).
 
-* Användargränssnittet i Experience Manager Assets visar trunkerade filnamn när resurser med fler än 50 tecken i filnamnet överförs (NPR-32054).
+* Experience Manager Assets-gränssnittet visar trunkerade filnamn när resurser med fler än 50 tecken i filnamnet överförs (NPR-32054).
 
 * Alla kryssrutor på panelen Filter avmarkeras när den första och den andra kryssrutan avmarkeras när du har markerat två kryssrutor i kryssruteträdet i Adobe Stock (NPR-31919).
 
@@ -336,8 +336,6 @@ Eftersom det är ett fullständigt installationsprogram är filstorleken större
 
 UberJar för AEM 6.5.4.0 finns i [Adobe Public Maven-databasen](https://repo.adobe.com/nexus/content/groups/public/com/adobe/aem/uber-jar/6.5.4/).
 
-Den uppdaterade versionen av UberJar för 6.5.4.0 som innehåller paketet **com.fasterxml.jackson.core.async** finns på [Adobe Public Maven-arkivet](https://repo.adobe.com/nexus/content/groups/public/com/adobe/aem/uber-jar/6.5.4-1.0/).
-
 Om du vill använda UberJar i ett Maven-projekt kan du läsa artikeln [Så här använder du UberJar](/help/sites-developing/ht-projects-maven.md) och inkludera följande beroende i projektstrukturen:
 
 ```shell
@@ -345,6 +343,20 @@ Om du vill använda UberJar i ett Maven-projekt kan du läsa artikeln [Så här 
       <groupId>com.adobe.aem</groupId>
       <artifactId>uber-jar</artifactId>
       <version>6.5.4</version>
+      <classifier>apis</classifier>
+      <scope>provided</scope>
+</dependency>
+```
+
+Den uppdaterade versionen av UberJar för 6.5.4.0 som innehåller paketet **com.fasterxml.jackson.core.async** finns på [Adobe Public Maven-arkivet](https://repo.adobe.com/nexus/content/groups/public/com/adobe/aem/uber-jar/6.5.4-1.0/).
+
+Om du använder den uppdaterade versionen av UberJar ska du inkludera följande beroende i projektstrukturen:
+
+```shell
+<dependency>
+      <groupId>com.adobe.aem</groupId>
+      <artifactId>uber-jar</artifactId>
+      <version> 6.5.4-1.0</version>
       <classifier>apis</classifier>
       <scope>provided</scope>
 </dependency>
