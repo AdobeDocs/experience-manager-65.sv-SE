@@ -10,7 +10,7 @@ topic-tags: introduction
 discoiquuid: b4fdbf86-d8f3-4da5-9e4e-4d5492ae1632
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
 
 ---
 
@@ -298,9 +298,9 @@ Utför följande steg för att skapa ett A/B-test för ansökningsformuläret We
 1. Gå till användargränssnittet för formulär och dokument, markera formuläret, klicka på **Mer** och välj **Starta A/B-testning**.
 1. Öppna formuläret i webbläsaren flera gånger med följande URL:
 
-   `https://&lt;*hostname*&gt;:&lt;*port*&gt;/content/dam/formsanddocuments/we-finance/cc-app/jcr:content?wcmmode=disabled`
+   `https://[hostname]:[port]/content/dam/formsanddocuments/we-finance/cc-app/jcr:content?wcmmode=disabled`
 
-   >[!NOTE] Obs! Ta bort cookien med **namnrutan** från webbläsarens cookie-beständighet innan du öppnar formuläret nästa gång. Du kommer att se upplevelsen A och B av formuläret på måfå.
+   >[!NOTE] Ta bort cookien med **namnrutan** från webbläsarens cookie-beständighet innan du öppnar formuläret nästa gång. Du kommer att se upplevelsen A och B av formuläret på måfå.
 
 1. Markera formuläret, klicka på **Mer** och klicka på **A/B-testrapport**. Du hittar inte så mycket data i rapporten som du just har påbörjat testningen. Nu ska vi tillhandahålla vissa startdata för att se hur A/B-testrapporten ser ut.
 1. Öppna CRXDE Lite och ta en säkerhetskopia av följande fil: /libs/fd/fmaddon/gui/components/admin/targetreport/clientlibs/targetreport/js/targetreport.js
@@ -546,7 +546,7 @@ Utför följande steg i författarinstansen för att skapa A/B-test för lånean
 1. Ändra formuläret efter behov för att skapa en annan upplevelse än standardupplevelsen A.
 1. Gå till användargränssnittet för formulär och dokument, markera formuläret, klicka på **Mer** och välj **Starta A/B-testning**.
 1. Öppna formuläret i webbläsaren flera gånger med följande URL:
-   `https://&lt;hostname&gt;:&lt;port&gt;/content/dam/formsanddocuments/we-finance/hm-app/jcr:content?wcmmode=disabled`
+   `https://[hostname]:[port]/content/dam/formsanddocuments/we-finance/hm-app/jcr:content?wcmmode=disabled`
 
    >[!NOTE]
    > Ta bort cookien med **namnrutan** från webbläsarens cookie-beständighet innan du öppnar formuläret nästa gång. Du kommer att se upplevelsen A och B av formuläret på måfå.
