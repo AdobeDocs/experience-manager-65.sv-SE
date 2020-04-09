@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: d5722281-bea9-4fc7-abdc-e678899e0a15
 translation-type: tm+mt
-source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
+source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
 
 ---
 
@@ -24,7 +24,7 @@ De flesta AEM Forms-tjänster i tjänstbehållaren är konfigurerade att visa en
 
 Med hjälp av webbtjänster kan du utföra samma AEM Forms-åtgärder som du kan med Java API. En fördel med att använda webbtjänster för att anropa AEM Forms-tjänster är att du kan skapa ett klientprogram i en utvecklingsmiljö som stöder SOAP. Ett klientprogram är inte bundet till en specifik utvecklingsmiljö eller programmeringsspråk. Du kan till exempel skapa ett klientprogram med Microsoft Visual Studio .NET och C# som programmeringsspråk.
 
-AEM Forms-tjänster exponeras över SOAP-protokollet och är WSI Basic Profile 1.1-kompatibla. Web Services Interoperability (WSI) är en öppen standardorganisation som främjar interoperabilitet mellan olika plattformar. Mer information finns i [https://www.ws-i.org/](https://www.ws-i.org).
+AEM Forms-tjänster exponeras över SOAP-protokollet och är WSI Basic Profile 1.1-kompatibla. WSI (Web Services Interoperability) är en öppen standardorganisation som främjar interoperabilitet mellan olika plattformar för webbtjänster. Mer information finns i [https://www.ws-i.org/](https://www.ws-i.org).
 
 AEM Forms stöder följande webbtjänststandarder:
 
@@ -253,7 +253,7 @@ Här är korrelationen mellan överföringstyper och det fält från vilket du f
 
 >[!NOTE]
 >
->JAX WS-baserade program som använder MTOM-överföringsprotokollet är begränsade till 25 MB skickade och mottagna data. Den här begränsningen beror på ett fel i JAX-WS. Om den kombinerade storleken på skickade och mottagna filer överstiger 25 MB använder du överföringsprotokollet SwaRef i stället för MTOM. Annars finns det en risk för ett `OutOfMemory`*-undantag.*
+>JAX WS-baserade program som använder MTOM-överföringsprotokollet är begränsade till 25 MB skickade och mottagna data. Den här begränsningen beror på ett fel i JAX-WS. Om den kombinerade storleken på skickade och mottagna filer överstiger 25 MB använder du överföringsprotokollet SwaRef i stället för MTOM. I annat fall finns det en risk för ett `OutOfMemory` undantag.
 
 **MTOM-överföring av base64-kodade bytearrayer**
 
@@ -545,8 +545,8 @@ Du kan generera Axis Java-biblioteksfiler genom att utföra följande steg:
    * axis.jar
    * comons-codec-1.3.jar
    * commons-collections-3.1.jar
-   * comons-discovery.jar
-   * commons-log.jar
+   * commons-discovery.jar
+   * commons-logging.jar
    * dom3-xml-apis-2.5.0.jar
    * jai_imageio.jar
    * jaxen-1.1-beta-9.jar
@@ -674,9 +674,9 @@ Du kan anropa en AEM Forms-tjänst med hjälp av Java-proxyklasser och Base64. S
 
    >[!NOTE]
    >
-   >Ersätt `hiro-xp`med IP-adressen för J2EE-programvaruleverantören som är värd för AEM Forms.
+   >Ersätt `hiro-xp` *med IP-adressen till J2EE-programvaruleverantören som är värd för AEM Forms.*
 
-1. Paketera Java-proxyklasserna som skapats med JAX-WS till en JAR-fil.
+1. Paketera Java-proxyklasserna som skapats med JAX-WS i en JAR-fil.
 1. Inkludera JAR-proxyfilen för Java och JAR-filerna som finns i följande sökväg:
 
    &lt;Install Directory>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty
@@ -786,7 +786,7 @@ Tänk på den `MyApplication/EncryptDocument` process som tar emot ett oskyddat 
 
    >[!NOTE]
    >
-   >Ersätt `hiro-xp`med IP-adressen för J2EE-programvaruleverantören som är värd för AEM Forms.
+   >Ersätt `hiro-xp` *med IP-adressen till J2EE-programvaruleverantören som är värd för AEM Forms.*
 
 1. Skapa ett `System.ServiceModel.BasicHttpBinding` objekt genom att hämta värdet för `EncryptDocumentClient.Endpoint.Binding` datamedlemmen. Sänd returvärdet till `BasicHttpBinding`.
 1. Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` datamedlem till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
@@ -867,9 +867,9 @@ Så här anropar du `MyApplication/EncryptDocument` processen med Java-proxyfile
 
    >[!NOTE]
    >
-   >Ersätt `hiro-xp`* med IP-adressen för J2EE-programservern som är värd för AEM Forms. *
+   >Ersätt `hiro-xp` *med IP-adressen för J2EE-programservern som är värd för AEM Forms.*
 
-1. Paketera Java-proxyklasserna som skapats med JAX-WS till en JAR-fil.
+1. Paketera Java-proxyklasserna som skapats med JAX-WS i en JAR-fil.
 1. Inkludera JAR-proxyfilen för Java och JAR-filerna som finns i följande sökväg:
 
    &lt;Install Directory>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty
@@ -937,7 +937,7 @@ När den här processen anropas utför den följande åtgärder:
 
 ### Skapa en .NET-klientsammansättning som använder data över HTTP {#creating-a-net-client-assembly-that-uses-data-over-http}
 
-Om du vill skapa en klientsammansättning som använder data över HTTP följer du den process som anges i [Anropa AEM-formulär med Base64-kodning](#invoking-aem-forms-using-base64-encoding). Ändra emellertid URL:en i klassen proxy så att den omfattar `?blob=http` i stället för `?blob=base64`. Den här åtgärden ser till att data skickas via HTTP. Leta reda på följande kodrad i klassen proxy:
+Om du vill skapa en klientsammansättning som använder data via HTTP följer du den process som anges i [Anropa AEM-formulär med Base64-kodning](#invoking-aem-forms-using-base64-encoding). Ändra emellertid URL:en i klassen proxy så att den omfattar `?blob=http` i stället för `?blob=base64`. Den här åtgärden ser till att data skickas via HTTP. Leta reda på följande kodrad i klassen proxy:
 
 ```as3
  "http://localhost:8080/soap/services/MyApplication/EncryptDocument";
@@ -989,7 +989,7 @@ Du kan anropa en AEM Forms-tjänst med hjälp av Java-proxyklasser och BLOB-data
 
    >[!NOTE]
    >
-   >Ersätt `hiro-xp`* med IP-adressen för J2EE-programservern som är värd för AEM Forms. *
+   >Ersätt `hiro-xp` *med IP-adressen för J2EE-programservern som är värd för AEM Forms.*
 
 1. Paketera Java-proxyklasserna som skapats med JAX-WS till en JAR-fil.
 1. Inkludera JAR-proxyfilen för Java och JAR-filerna som finns i följande sökväg:
@@ -1037,7 +1037,7 @@ När den här processen anropas utför den följande åtgärder:
 1. Hämtar det oskyddade PDF-dokumentet som skickas till processen. Den här åtgärden baseras på `SetValue` åtgärden. Indataparametern för den här processen är en `document` processvariabel med namnet `inDoc`.
 1. Krypterar PDF-dokumentet med ett lösenord. Den här åtgärden baseras på `PasswordEncryptPDF` åtgärden. Lösenordskrypterade PDF-dokument returneras i en processvariabel med namnet `outDoc`.
 
-Den här processen baseras inte på en befintlig AEM Forms-process. Om du vill följa med i kodexemplen skapar du en process med namnet `MyApplication/EncryptDocument`**med Workbench. (Se [Använda Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).)
+Den här processen baseras inte på en befintlig AEM Forms-process. Om du vill följa med i kodexemplen skapar du en process med namnet `MyApplication/EncryptDocument` med Workbench. (Se [Använda Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).)
 
 >[!NOTE]
 >
@@ -1171,7 +1171,7 @@ AEM Forms stöder olika autentiseringslägen för webbtjänster vid anrop av tj�
 * Skicka en SAML-försäkran som en del av WS-Security-huvudet
 * Kerberos-token skickas som en del av WS-Security-huvudet
 
-AEM Forms stöder inte standardcertifikatbaserad autentisering, men den stöder certifikatbaserad autentisering i en annan form.
+AEM Forms stöder inte standardcertifikatbaserad autentisering, men det stöder certifikatbaserad autentisering i en annan form.
 
 >[!NOTE]
 >
