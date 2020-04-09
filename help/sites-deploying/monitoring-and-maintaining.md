@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e46f0d6b842ff1a295d411c770f36dd82001bcb2
+source-git-commit: 4244ebbe8ceb3bef8d47e1e32817edbd11db4d9a
 
 ---
 
@@ -151,8 +151,8 @@ Konsolen ger dessutom användbar information om versionerna:
 
 I nästa exempel:
 
-* Versionerna **Shirts** rensas eftersom versionsåldern är större än 2 dagar.
-* The **Tonga Fashions!** versionerna rensas eftersom deras antal versioner är större än 5.
+* Versionerna **[!DNL Shirts]** rensas eftersom deras versionsålder är större än 2 dagar.
+* Versionerna **[!DNL Tonga Fashions!]** rensas eftersom deras antal versioner är större än 5.
 
 ![global_version_screenshot](assets/global_version_screenshot.png)
 
