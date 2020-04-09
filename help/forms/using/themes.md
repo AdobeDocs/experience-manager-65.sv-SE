@@ -10,7 +10,7 @@ content-strategy: max-2018
 discoiquuid: 770e9174-b648-462a-abe9-05fefa967d86
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
 
 ---
 
@@ -564,7 +564,7 @@ Så här använder du ett tema i en interaktiv kommunikation:
 
    Du kan redigera egenskaperna för formuläret i sidlisten.
 
-1. Välj temat i listrutan **Tema** under** Basic** och klicka på **Done** ![check](assets/check-button.png)
+1. Välj temat i listrutan **Tema** under **Grundläggande** i sidofältet och klicka på **Klar** ![.](assets/check-button.png)
 
 ### Ändra tema för ett formulär vid körning {#change-theme-of-a-form-at-runtime}
 
