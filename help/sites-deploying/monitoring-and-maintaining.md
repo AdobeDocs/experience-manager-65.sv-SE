@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a6f95e04fd5b8ed28beaa12e9fd170ed495397b8
+source-git-commit: e46f0d6b842ff1a295d411c770f36dd82001bcb2
 
 ---
 
@@ -366,19 +366,18 @@ I vissa fall kanske du vill skapa en anpassad loggfil med en annan loggnivå. Du
    * Ett tids-/datumschema kan anges som ett `java.util.SimpleDateFormat` mönster. Detta anger den tidsperiod efter vilken filen ska roteras. det suffix som läggs till i den roterade filen (för identifiering).
    Standardvärdet är &#39;.&#39;yyyy-MM-dd (för daglig loggrotation)
    Så vid midnatt den 20 januari 2010 (eller när det första loggmeddelandet efter detta blir exakt) kommer ../logs/error.log att byta namn till ../logs/error.log.2010-01-20. Loggning för den 21 januari kommer att skickas till (en ny och tom) ../logs/error.log tills den överförs vid nästa ändring av dagen.
-       | `&#39;.&#39;yyyy-MM`|Rotation i början av varje månad|
-    |—|—|
-    | `&#39;.&#39;yyyy-ww`|Rotation på den första dagen i varje vecka (beroende på språkområde). |
-       | `&#39;.&#39;yyyy-MM-dd`|Rotation vid midnatt varje dag. |
-       | `&#39;.&#39;yyyy-MM-dd`|Rotation vid midnatt och middag varje dag. |
-       | `&#39;.&#39;yyyy-MM-dd-HH`|Rotation överst i varje timme. |
-       | `&#39;.&#39;yyyy-MM-dd-HH-mm`|Rotation i början av varje minut. |
-     
-     Obs! När du anger tid/datum:
-       1. Du bör&quot;escape&quot;-text inom ett par enkla citattecken (&#39; &#39;);
-   Detta     gör du för att undvika att vissa tecken tolkas som mönsterbokstäver.
-       1. Använd bara tecken som är tillåtna för ett giltigt filnamn var som helst i alternativet.
-   
+   | `'.'yyyy-MM` | Rotation i början av varje månad |
+   |---|---|
+   | `'.'yyyy-ww` | Rotation på den första dagen i varje vecka (beror på språkområdet). |
+   | `'.'yyyy-MM-dd` | Rotation vid midnatt varje dag. |
+   | `'.'yyyy-MM-dd-a` | Rotation vid midnatt och middag varje dag. |
+   | `'.'yyyy-MM-dd-HH` | Rotation överst varje timme. |
+   | `'.'yyyy-MM-dd-HH-mm` | Rotation i början av varje minut. |
+   Obs! När du anger tid/datum:
+   1. Du bör&quot;escape&quot;-text inom ett par enkla citattecken (&#39; &#39;);
+om du vill undvika att vissa tecken tolkas som mönsterbokstäver.
+   1. Använd bara tecken som är tillåtna för ett giltigt filnamn var som helst i alternativet.
+
 
 1. Läs den nya loggfilen med det verktyg du valt.
 
