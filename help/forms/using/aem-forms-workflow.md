@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 73e63493-e821-443f-b50d-10797360f5d1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
 
 ---
 
@@ -107,7 +107,7 @@ I exemplet skapas en arbetsflödesmodell för en låneansökan som ska fyllas av
 
    ![ELLER Dela exempel](assets/orsplit_branch1_active_new.png)
 
-   **Routningsuttryck för gren 2**
+   **Routningsuttryck för gren 1**
 
    När en användare trycker på **Avvisa** i AEM Inbox aktiveras gren 2.
 
@@ -271,4 +271,4 @@ Du kan använda stegen Tilldela uppgift och Skicka e-post i AEM-arbetsflöden f�
 
 ### Rensa arbetsflödesinstanser {#purge-workflow-instances}
 
-Om du minimerar antalet arbetsflödesinstanser ökas arbetsflödesmotorns prestanda, så att du regelbundet kan rensa avslutade eller pågående arbetsflödesinstanser från databasen. Mer information finns i [Vanlig rensning av arbetsflödesinstanser](/help/sites-administering/workflows-administering.md#regular tömning of workflow instances).
+Om du minimerar antalet arbetsflödesinstanser ökas arbetsflödesmotorns prestanda, så att du regelbundet kan rensa avslutade eller pågående arbetsflödesinstanser från databasen. Mer information finns i [Vanlig borttagning av arbetsflödesinstanser](/help/sites-administering/workflows-administering.md#regular-purging-of-workflow-instances).
