@@ -8,7 +8,7 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 33f73225fbb2c48353c1f34db3339c0bb79d4236
+source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
 
 ---
 
@@ -40,18 +40,18 @@ Paketet innehåller en molnkonfiguration som stöder följande plattformsversion
 
 ### Vad innehåller det här paketet? {#what-does-this-package-include}
 
-AEM Forms We.Gov demopaket ( **we-gov-forms.pkg.all-&lt;version>.zip **) levereras som ett paket som innehåller flera andra underpaket och tjänster. Paketet innehåller följande moduler:
+AEM Forms We.Gov demopaket (**we-gov-forms.pkg.all-&lt;version>.zip**) levereras som ett paket som innehåller flera andra underpaket och tjänster. Paketet innehåller följande moduler:
 
-* **we-gov-forms.pkg.all-&lt;version>.zip** -* Fullständigt demopaket*
+* **we-gov-forms.pkg.all-&lt;version>.zip** - *Fullständigt demopaket*
 
    * **we-gov-forms.ui.apps-&lt;version>.zip** *- Innehåller alla komponenter, klientbibliotek, exempelanvändare, arbetsflödesmodeller osv.*
 
-      * **we-gov-forms.core-&lt;version>.jar*** - Innehåller alla OSGI-tjänster, anpassad implementering av arbetsflödessteg osv.*
+      * **we-gov-forms.core-&lt;version>.jar** - *Innehåller alla OSGI-tjänster, anpassad implementering av arbetsflödessteg osv.*
 
       * **core.wcm.components.all-2.0.4.zip** - *Samling av WCM-exempelkomponenter*
 
       * **grid-aem.ui.apps-1.0-SNAPSHOT.zip** - *Layoutpaket för AEM Sites Grid för kolumnkontroll för Sites*
-   * **we-gov-forms.ui.content-&lt;version>.zip*** - Innehåller allt innehåll, alla sidor, bilder, *formulär, interaktiva kommunikationsresurser osv.
+   * **we-gov-forms.ui.content-&lt;version>.zip** - *Innehåller allt innehåll, alla sidor, bilder, formulär, interaktiva kommunikationsresurser osv.*
 
    * **we-gov-forms.config.public-&lt;version>.zip** - *Innehåller alla standardkonfigurationsnoder inklusive platshållarmolnkonfigurationer för att undvika problem med formulärdatamodell och tjänstbindning.*
 
@@ -142,14 +142,14 @@ Det här avsnittet innehåller information och instruktioner om konfigurationen 
 1. Klicka på&quot;Spara och stäng&quot; i menyraden.
 1. Upprepa steg 2-7 genom att söka efter&quot;**analyser**&quot;, markera gruppen&quot;**Analysadministratörer**&quot; och lägga till gruppen&quot;**Vi.Gov-formuläranvändare**&quot; som medlem.
 1. Upprepa steg 2-7 genom att söka efter&quot;**formuläranvändare**&quot;, markera gruppen&quot;**forms-power-users**&quot; och lägga till gruppen&quot;**We.Gov Form Users**&quot; som medlem.
-1. Upprepa steg 2-7 genom att söka efter&quot;**formuläranvändare**&quot;, välja gruppen&quot;**formuläranvändare**&quot; och lägga till gruppen &quot;** We.Gov Users**&quot; som medlem.
+1. Upprepa steg 2-7 genom att söka efter&quot;**formuläranvändare**&quot;, välja gruppen&quot;**formuläranvändare**&quot; och lägga till gruppen&quot;**Vi.Gov-användare**&quot; som medlem.
 
 ### E-postserverkonfiguration {#email-server-configuration}
 
 1. Granska installationsdokumentation [Konfigurera e-postmeddelande](/help/sites-administering/notification.md)
 
 1. Gå till *https://&lt;aemserver>:&lt;port>/system/console/configMgr*
-1. Leta upp och klicka på **Day CQ Mail Service **tjänsten som du vill konfigurera.
+1. Leta upp och klicka på **Day CQ Mail Service** .
 
    ![Konfigurera daglig CQ Mail-tjänst](assets/day_cq_mail_service.jpg)
 
@@ -157,7 +157,7 @@ Det här avsnittet innehåller information och instruktioner om konfigurationen 
 
    1. **SMTP-servervärdnamn**: t.ex. (smtp.gmail.com)
    1. **Serverport**: t.ex. (465) för gmail med SSL
-   1. **** SMTP-användare: demo@ &lt;företagsnamn>.com
+   1. **SMTP-användare:** demo@ &lt;företagsnamn>.com
    1. **&quot;Från&quot;-adress**: aemformsdemo@adobe.com
    ![Konfigurera SMTP](assets/configure_smtp.jpg)
 
@@ -234,8 +234,8 @@ Det här avsnittet innehåller information och instruktioner om konfigurationen 
 1. Gå till fliken Autentiseringsinställningar.
 1. Ange följande information:
 
-   1. **** Tjänstrot: t.ex. https://msdynamicsserver.api.crm3.dynamics.com/api/data/v9.1/
-   1. **** Autentiseringstyp: OAuth 2.0
+   1. **Tjänstrot:** t.ex. https://msdynamicsserver.api.crm3.dynamics.com/api/data/v9.1/
+   1. **Autentiseringstyp:** OAuth 2.0
    1. **Autentiseringsinställningar** (mer information finns i Konfigurationsinställningar [för](../../forms/using/forms-install-configure-gov-reference-site.md#dynamicsconfig) MS Dynamics i molnet):
 
       1. Klient-ID - även kallat program-ID
@@ -273,11 +273,11 @@ Stegen som beskrivs i det här avsnittet finns för att hjälpa dig att hitta kl
 1. Klicka på&quot;Anpassningar&quot; och&quot;Resurser för utvecklare&quot; längst ned till höger.
 1. Där hittar du Service Root URL: t.ex.
 
-* [https://msdynamicsserver.api.crm3.dynamics.com/api/data/v9.1/](https://msdynamicsserver.api.crm3.dynamics.com/api/data/v9.1/)*
+   *[https://msdynamicsserver.api.crm3.dynamics.com/api/data/v9.1/](https://msdynamicsserver.api.crm3.dynamics.com/api/data/v9.1/)*
 
 1. Information om URL:en för uppdaterings- och åtkomsttoken finns här:
 
-* [https://docs.microsoft.com/en-us/rest/api/datacatalog/authenticate-a-client-app](https://docs.microsoft.com/en-us/rest/api/datacatalog/authenticate-a-client-app)*
+   *[https://docs.microsoft.com/en-us/rest/api/datacatalog/authenticate-a-client-app](https://docs.microsoft.com/en-us/rest/api/datacatalog/authenticate-a-client-app)*
 
 #### Testa formulärdatamodellen {#testing-the-form-data-model}
 
@@ -386,11 +386,11 @@ Du kan också navigera till Adobe Analytics direkt för att se analysdata.
 1. Navigera till [https://my.omniture.com/login/](https://my.omniture.com/login/)
 1. Logga in med dina inloggningsuppgifter:
 
-   1. **** Företag: AEM Forms - demo
-   1. **** Användare: &lt;tillgängligt på begäran>
-   1. **** Lösenord: &lt;tillgängligt på begäran>
+   1. **Företag:** AEM Forms - demo
+   1. **Användare:** &lt;tillgängligt på begäran>
+   1. **Lösenord:** &lt;tillgängligt på begäran>
 
-1. Välj &quot;Referenswebbplats för Web.Gov&quot; i rapportsviterna.
+1. Välj &quot;Referenswebbplats för Web.GOV&quot; i rapportsviterna.
 
    ![Rapportsviter](assets/report_suites.jpg)
 
@@ -407,7 +407,7 @@ I det här avsnittet finns anvisningar om hur du anpassar demon.
 Det här demopaketet innehåller en OSGI-tjänstkonfigurationsfil som styr beteendet för WCM-filtertjänsten på målförfattarservern. Den här konfigurationen gör att servern arbetar i inaktiverat författarläge (motsvarar ?wcmmode=disabled) för att tillåta demonstration. Så här uppdaterar du konfigurationen och aktiverar redigering:
 
 1. Gå till *https://&lt;aemserver>:&lt;port>/system/console/configMgr*
-1. Leta upp och klicka på **Day CQ WCM Filter **Service för att konfigurera.
+1. Leta upp och klicka på **Dag CQ WCM Filter** Service för att konfigurera.
 
    ![Dag CQ WCM-filter](assets/day_cq_wcm_filter.jpg)
 
@@ -424,7 +424,7 @@ Mallarna innehåller mallarna AEM Site, Adaptive Form och Interactive Communicat
 
 *https://&lt;server>:&lt;port>/crx/de/index.jsp#/apps/we-gov/components*
 
-#### Formatsystem {#customizetemplates}
+#### Style system {#customizetemplates}
 
 Den här webbplatsen innehåller även klientbibliotek, varav ett importerar Bootstrap 4 ( [https://getbootstrap.com/](https://getbootstrap.com/) ). Det här klientbiblioteket är tillgängligt på
 
@@ -458,7 +458,7 @@ Alla webbplatssidor är tillgängliga från: *https://&lt;aemserver>:&lt;port>/s
 
 På dessa webbplatssidor används även AEM Grid-paketet för att styra layouten för några komponenter.
 
-#### Formatsystem {#style-system}
+#### Style system {#style-system}
 
 Sidorna i paketet har också stöd för Style System:
 
@@ -489,7 +489,7 @@ Anpassningsbara formulär kan också formateras med stilredigeraren eller temare
 
 ### Anpassa arbetsflöden {#workflow-customization}
 
-Anmälningsblanketten skickas till ett arbetsflöde för att behandlas av OSGI. Det här arbetsflödet finns på* https://&lt;aemserver>:&lt;port>/conf/we-gov/settings/models/we-gov-process.html*.
+Anmälningsblanketten skickas till ett arbetsflöde för att behandlas av OSGI. Det här arbetsflödet finns på *https://&lt;aemserver>:&lt;port>/conf/we-gov/settings/models/we-gov-process.html*.
 
 På grund av vissa begränsningar innehåller det här arbetsflödet flera skript och anpassade arbetsflödessteg för OSGI. Dessa arbetsflödessteg skapades som allmänna steg och har inte skapats med konfigurationsdialogrutor. För närvarande bygger konfigurationen av arbetsflödesstegen på processargument.
 
@@ -505,7 +505,7 @@ Det här avsnittet innehåller information om demonstrationsfunktioner och desig
 * Det anpassningsbara registreringsformuläret skickar e-postmeddelandet från Adobe Sign till det e-postmeddelande som anges i formulärets e-postfält. E-postadressen får inte vara samma e-postadress som e-postadressen som används för att konfigurera Adobe Sign-molnkonfigurationen.
 * Som standard innehåller demopaketet flera OSGI-tjänstkonfigurationer som styr det övergripande beteendet för målservern som är värd för demonstrationen. Den här konfigurationen innehåller en WCM-filtertjänstkonfiguration som som standard gör att servern fungerar i **inaktiverat författarläge** (motsvarar ?wcmmode=disabled). Se [Aktivera AEM-redigering](../../forms/using/forms-install-configure-gov-reference-site.md#enableauthoring) för att tillåta sidredigering.
 
-### Kända fel {#known-issues}
+### Known issues {#known-issues}
 
 * (AGRS-120) Webbplatsnavigeringskomponenten stöder för närvarande inte kapslade underordnade sidor som är mer än två nivåer djupa.
 * (AGRS-159) Aktuell MS Dynamics FDM måste utföra två åtgärder först, först POST av data i det anpassade registreringsformuläret till Dynamics och sedan hämta användarposten för att hämta kontakt-ID:t. I det aktuella läget kommer hämtning av kontakt-ID att misslyckas om fler än två användare med samma namn finns i Dynamics, vilket inte tillåter att det anpassade registreringsformuläret skickas.
