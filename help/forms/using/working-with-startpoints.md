@@ -10,7 +10,7 @@ topic-tags: forms-app
 discoiquuid: 1ea60fb2-cf9f-4a87-bd8e-98150e668456
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
 
 ---
 
@@ -23,24 +23,24 @@ En startpunkt anropar en process som skapats i Workbench. Den är kopplad till e
 >
 >Termerna startpunkter, startprocess och formulär används omväxlande när de refererar till det här konceptet.
 
-Om du vill initiera en process från appen AEM Forms måste du ha en startpunkt av typen **Workspace **i processen. Du måste också markera alternativet **[!UICONTROL Visio i mobil arbetsyta]** för startpunkten.
+Om du vill initiera en process från appen AEM Forms måste du ha en startpunkt av typen **Workspace** i processen. Du måste också markera alternativet **[!UICONTROL Visio i mobil arbetsyta]** för startpunkten.
 
 ![mws_startpoint_select_option](assets/mws_startpoint_select_option.png)
 
 **Så här startar du en process som definieras i Workbench**
 
 1. Om du vill visa startpunkterna som är tillgängliga i appen AEM Forms går du till [startsidan](../../forms/using/home-screen.md).
-1. Som standard visas listan **[!UICONTROL Alla formulär]**som standard på skärmen **[!UICONTROL Hem]**.
+1. Listan **[!UICONTROL Alla formulär]** visas som standard på **[!UICONTROL startskärmen]** .
 
    Startpunkten är kopplad till ett formulär. Tryck på det startpunktassocierade formuläret i listan för att öppna det.
 
    Formuläret som är kopplat till startpunkten öppnas.
 
-1. Ange informationen i formuläret **[!UICONTROL StartPoint]**.
+1. Ange informationen i **[!UICONTROL startpunktsformuläret]** .
 
    Du kan lägga till anteckningar i den här uppgiften med knappen [Bifogad](../../forms/using/add-attachments.md) fil.
 
-1. När du har fyllt i formuläret trycker du på knappen **Skicka** .
+1. När du har fyllt i formuläret trycker du på knappen **[!UICONTROL Skicka]** .
 
 Om programmet är offline sparas formuläret och dess data i mappen Utkorgen.
 
