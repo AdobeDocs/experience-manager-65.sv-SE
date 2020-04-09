@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 0e6e7850-6137-42c5-b8e2-d4e352fddae2
 translation-type: tm+mt
-source-git-commit: 3fe5f243c3e39029c1605a1a1977a48dba595d64
+source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
 
 ---
 
@@ -64,7 +64,9 @@ Om du vill anropa en AEM Forms-tjänst med hjälp av Java API:t inkluderar du n�
 * Den AEM Forms-tjänst som ska anropas. Ett klientprogram kan anropa en eller flera tjänster.
 * Det läge i vilket du vill anropa en AEM Forms-tjänst. Du kan använda läget EJB eller SOAP. (Se [Ange anslutningsegenskaper](invoking-aem-forms-using-java.md#setting-connection-properties).)
 
->[!NOTE] (Endast inaktivera) Starta AEM Forms-servern med kommandot `standalone.bat -b <Server IP> -c lc_turnkey.xml` att ange en server-IP för EJB
+>[!NOTE]
+>
+>(Endast inaktivera) Starta AEM Forms-servern med kommandot `standalone.bat -b <Server IP> -c lc_turnkey.xml` att ange en server-IP för EJB
 
 * J2EE-programservern där AEM Forms distribueras.
 
@@ -182,7 +184,7 @@ I följande tabell visas de JAR-filer som krävs för att anropa AEM Forms-tjän
    <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p></td>
   </tr>
   <tr>
-   <td><p>adobe-database-client.jar</p><p>comons-codec-1.3.jar</p></td>
+   <td><p>adobe-repository-client.jar</p><p>comons-codec-1.3.jar</p></td>
    <td><p>Krävs för att anropa databastjänsten.</p></td>
    <td><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs/common</p><p>&lt;<i>installationskatalog</i>&gt;/sdk/client-libs\thirdparty</p></td>
   </tr>
@@ -239,8 +241,8 @@ I följande tabell visas de JAR-filer som är beroende av anslutningsläget och 
      <li><p>axis.jar</p> </li>
      <li><p>comons-codec-1.3.jar</p> </li>
      <li><p>commons-collections-3.1.jar</p> </li>
-     <li><p>comons-discovery.jar</p> </li>
-     <li><p>commons-log.jar</p> </li>
+     <li><p>commons-discovery.jar</p> </li>
+     <li><p>commons-logging.jar</p> </li>
      <li><p>dom3-xml-apis-2.5.0.jar</p> </li>
      <li><p>jaxen-1.1-beta-9.jar</p> </li>
      <li><p>jaxrpc.jar</p> </li>
@@ -347,8 +349,8 @@ I följande tabell anges vilka scenarier som anropas och vilka JAR-filer som kr�
      <li><p>axis.jar</p> </li>
      <li><p>comons-codec-1.3.jar</p> </li>
      <li><p>commons-collections-3.1.jar</p> </li>
-     <li><p>comons-discovery.jar</p> </li>
-     <li><p>commons-log.jar</p> </li>
+     <li><p>commons-discovery.jar</p> </li>
+     <li><p>commons-logging.jar</p> </li>
      <li><p>dom3-xml-apis-2.5.0.jar</p> </li>
      <li><p>jai_imageio.jar</p> </li>
      <li><p>jaxen-1.1-beta-9.jar</p> </li>
@@ -376,8 +378,8 @@ I följande tabell anges vilka scenarier som anropas och vilka JAR-filer som kr�
      <li><p>axis.jar</p> </li>
      <li><p>comons-codec-1.3.jar</p> </li>
      <li><p>commons-collections-3.1.jar</p> </li>
-     <li><p>comons-discovery.jar</p> </li>
-     <li><p>commons-log.jar</p> </li>
+     <li><p>commons-discovery.jar</p> </li>
+     <li><p>commons-logging.jar</p> </li>
      <li><p>dom3-xml-apis-2.5.0.jar</p> </li>
      <li><p>jai_imageio.jar</p> </li>
      <li><p>jaxen-1.1-beta-9.jar</p> </li>
