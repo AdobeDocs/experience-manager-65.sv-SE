@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 6dc31bec-b02d-47db-a4f4-be8c14c5619e
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
 
 ---
 
@@ -58,9 +58,9 @@ I den här exempelstrukturen skickar en medarbetare ett ledighetsansökningsform
    1. Skapa en process **skapa en PTO-sammanfattning** och använd den som en underprocess innan **Tilldela uppgift** i din organisation.
    1. Definiera **employeeName**, **employeeID**, **ptoReason**, **totalDays** och **nodeName** som indatavariabler i den nya processen. Dessa variabler skickas som skickade formulärdata.
 
-      Definiera också en utdatavariabel **ptoNodePath **som ska användas när sammanfattnings-URL anges.
+      Definiera också en utdatavariabel **ptoNodePath** som ska användas när sammanfattnings-URL anges.
 
-   1. Använd komponenten **set value** för att ställa in indatainformationen i en **nodeProperty **( **nodeProps** )-mappning i **sammanfattande** PTO-process.
+   1. Använd komponenten **set value** för att ställa in indatainformationen i en **nodeProperty** ( **nodeProps**)-mappning när du **skapar en PTO-sammanfattning**.
 
       Tangenterna på kartan ska vara samma som tangenterna som definierades i HTML-återgivningen i föregående steg.
 
@@ -70,7 +70,7 @@ I den här exempelstrukturen skickar en medarbetare ett ledighetsansökningsform
 
       Den har tre indatavariabler:
 
-      * **Mappsökväg**: Sökvägen där den nya CRX-noden skapas. Ange sökvägen som **/innehåll**.
+      * **Mappsökväg**: Den sökväg där den nya CRX-noden skapas. Ange sökvägen som **/innehåll**.
       * **Nodnamn**: Tilldela indatavariabeln nodeName till det här fältet. Detta är en unik nodnamnssträng.
       * **Nodtyp**: Definiera typen som **not:undefined**. Utdata för den här processen är nodePath. nodePath är CRX-sökvägen för den nyskapade noden. The ndoePath skulle vara det slutliga resultatet av sammanfattningsprocessen för **att skapa PTO** .
    1. Skicka skickade formulärdata (**employeeName**, **employeeID**, **ptoReason** och **totalDays**) som indata till den nya processen **skapa PTO-sammanfattning**. Ta utdata som **ptoSummaryNodePath**.
