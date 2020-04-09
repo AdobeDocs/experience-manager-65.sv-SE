@@ -10,7 +10,7 @@ topic-tags: forms-app
 discoiquuid: 88555db2-712f-4ef9-bf47-76c7ba83d964
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
 
 ---
 
@@ -72,7 +72,7 @@ Detaljerad information om kodsignering och hur du lägger till enheter till iOS 
 1. Extrahera arkivet i `[User_Home]/Projects/[your-project]`katalogen.
 1. Navigera till ` [User_Home]/Projects/ `[projektkatalogen]`/adobe-lc-mobileworkspace-src-[version]/ios` .
 1. Öppna `AEM Forms.xcodeproj` projektet i Xcode.
-1. Klicka på **AEM Forms** och välj **AEM Forms** under **MÅL**. Välj fliken **Build Settings **och gå till avsnittet **Code Signing Entitlement** . I fälten Debug and Release gör du något av följande:
+1. Klicka på **AEM Forms** och välj **AEM Forms** under **MÅL**. Välj fliken **Bygginställningar** , leta upp **Kodsigneringsberättigande** och gör något av följande i fälten Felsök och Frigör:
 
    * Lämna fälten ospecificerade för att skapa en standardapp för mobil arbetsyta
    * Ange fälten som ska visas i [Skapa en säker AEM Forms-app för iOS](/help/forms/using/building-secure-mobile-workspace-app.md) för att skapa en säker AEM Forms-app.
