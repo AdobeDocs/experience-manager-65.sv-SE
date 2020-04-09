@@ -10,7 +10,7 @@ topic-tags: publish
 discoiquuid: 574de3d5-69ba-4e2f-a8ab-c59f357e4386
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 94472fad34fe97740e4711d2cb35beb884db52ce
+source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
 
 ---
 
@@ -35,7 +35,7 @@ Med åtgärden E-post kan en författare automatiskt skicka e-post till en eller
 
 >[!NOTE]
 >
->Om du vill använda åtgärden E-post måste du konfigurera AEM-posttjänsten enligt beskrivningen i [Konfigurera e-posttjänsten](/help/sites-administering/notification.md#configuring the mail service).
+>Om du vill använda e-poståtgärden måste du konfigurera AEM-posttjänsten enligt beskrivningen i [Konfigurera e-posttjänsten](/help/sites-administering/notification.md#configuring-the-mail-service).
 
 ### Aktivera e-poståtgärd i ett anpassat formulär {#enabling-email-action-on-an-adaptive-form}
 
@@ -65,7 +65,7 @@ Med åtgärden E-post kan en författare automatiskt skicka e-post till en eller
    >
    >Om du väljer åtgärden **** E-post-PDF måste du markera alternativet Inkludera bifogade filer.
 
-1. Spara ändringarna genom att klicka på **OK** .
+1. Click **OK** to save the changes.
 
 ### Använda adaptiva formulärfältsnamn för att dynamiskt skapa e-postinnehåll {#using-adaptive-form-field-names-to-dynamically-create-email-content}
 
