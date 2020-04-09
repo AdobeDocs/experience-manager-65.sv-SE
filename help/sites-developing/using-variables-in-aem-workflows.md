@@ -10,7 +10,7 @@ content-type: reference
 discoiquuid: bbb9936e-ecd2-44b3-b4ae-dd62a3160641
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bc042696506bf1691c2eeffc6ab941be85fa274c
+source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
 
 ---
 
@@ -44,7 +44,7 @@ Du skapar variabler med hjälp av avsnittet Variabler som är tillgängliga i ar
 
 Ytterligare komplexa datatyper som är tillgängliga i arbetsflöden med AEM Forms finns i [Variabler i arbetsflödena](/help/forms/using/variable-in-aem-workflows.md)för AEM Forms.  Använd datatypen ArrayList för att skapa variabelsamlingar. Du kan skapa en ArrayList-variabel för alla primitiva och komplexa datatyper. Skapa till exempel en ArrayList-variabel och välj String som undertyp för att lagra flera strängvärden med variabeln.
 
-Så här skapar du en variabel:
+Skapa en variabel genom att utföra följande steg:
 
 1. I en AEM-instans går du till Verktyg > Arbetsflöde > Modeller.
 1. Tryck på **[!UICONTROL Skapa]** och ange titeln och ett valfritt namn för arbetsflödesmodellen. Markera modellen och tryck på **[!UICONTROL Redigera]**.
@@ -76,12 +76,12 @@ Du kan använda steget Ange variabel för att ange värdet för en variabel och 
 
 Beroende på variabelns datatyp kan du använda följande alternativ för att ange värdet för en variabel:
 
-* **** Literal: Använd alternativet när du vet exakt vilket värde du ska ange.
-* **** Uttryck: Använd alternativet när värdet som ska användas beräknas baserat på ett uttryck. Uttrycket skapas i den angivna uttrycksredigeraren.
-* **** JSON-punktnotation: Använd alternativet för att hämta ett värde från en JSON- eller FDM-typvariabel.
-* **** XPATH: Använd alternativet för att hämta ett värde från en XML-typvariabel.
-* **** I förhållande till nyttolast: Använd alternativet när värdet som ska sparas till variabeln är tillgängligt på en sökväg som är relativ till nyttolasten.
-* **** Absolut sökväg: Använd alternativet när värdet som ska sparas i variabeln är tillgängligt på en absolut sökväg.
+* **Literal:** Använd alternativet när du vet exakt vilket värde du ska ange.
+* **Uttryck:** Använd alternativet när värdet som ska användas beräknas baserat på ett uttryck. Uttrycket skapas i den angivna uttrycksredigeraren.
+* **JSON-punktnotation:** Använd alternativet för att hämta ett värde från en JSON- eller FDM-typvariabel.
+* **XPATH:** Använd alternativet för att hämta ett värde från en XML-typvariabel.
+* **I förhållande till nyttolast:** Använd alternativet när värdet som ska sparas till variabeln är tillgängligt på en sökväg som är relativ till nyttolasten.
+* **Absolut sökväg:** Använd alternativet när värdet som ska sparas i variabeln är tillgängligt på en absolut sökväg.
 
 Du kan också uppdatera specifika element i en JSON- eller XML-typvariabel med JSON DOT Notation eller XPATH.
 
@@ -93,7 +93,7 @@ Utför följande steg för att lägga till mappning mellan variabler:
 1. Dra och släpp steget **Ange variabel** till arbetsflödesredigeraren, tryck på steget och välj ![](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/configure_icon.png) (Konfigurera).
 1. I dialogrutan Ange variabel väljer du **[!UICONTROL Mappning]** > **[!UICONTROL Lägg till mappning]**.
 1. I avsnittet **Mappningsvariabel** väljer du variabeln där data ska lagras, väljer mappningsläget och anger ett värde som ska lagras i variabeln. Mappningslägena varierar beroende på variabeltypen.
-1. Mappa fler variabler för att skapa ett meningsfullt uttryck. Tryck ![](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) för att spara ändringarna.
+1. Mappa fler variabler för att skapa ett meningsfullt uttryck. Tap ![](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) to save the changes.
 
 ### Exempel 1: Fråga en XML-variabel för att ange ett värde för en strängvariabel {#example-query-an-xml-variable-to-set-value-for-a-string-variable}
 
@@ -226,7 +226,7 @@ Du kan använda ett API för att ange variabler och skicka dem för att anropa a
 
 [workflowSession.startWorkflow](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/WorkflowSession.html#startWorkflow-com.adobe.granite.workflow.model.WorkflowModel-com.adobe.granite.workflow.exec.WorkflowData-java.util.Map-) använder modell, wfData och metaData som argument. Använd MetaDataMap för att ange värdet för variabeln.
 
-I detta API är variabeln **variableName** inställd på **value **med metaData.put(variableName, value);
+I det här API:t anges variabeln **variableName** till **värde** med metaData.put(variableName, value);
 
 ```java
 import com.adobe.granite.workflow.model.WorkflowModel;
