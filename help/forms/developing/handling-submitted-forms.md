@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 3d838027-6bde-4a71-a428-4d5102f7d799
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
 
 ---
 
@@ -152,15 +152,15 @@ Du hämtar formulärdata som har registrerats i Forms-tjänsten och fastställer
 
 Forms-tjänsten returnerar följande värden för att ange om bearbetningen av data har slutförts:
 
-* **** 0 (Skicka): Skickade data kan nu bearbetas.
-* **** 1 (Beräkna): Forms-tjänsten utförde en beräkningsåtgärd för data och resultaten måste återges för användaren.
-* **** 2 (Validera): Formulärtjänstens validerade formulärdata och resultaten måste återges för användaren.
-* **** 3 (Nästa): Den aktuella sidan har ändrats med resultat som måste skrivas till klientprogrammet.
+* **0 (Skicka):** Skickade data kan nu bearbetas.
+* **1 (Beräkna):** Forms-tjänsten utförde en beräkningsåtgärd för data och resultaten måste återges för användaren.
+* **2 (Validera):** Formulärtjänstens validerade formulärdata och resultaten måste återges för användaren.
+* **3 (Nästa):** Den aktuella sidan har ändrats med resultat som måste skrivas till klientprogrammet.
 * **4 (föregående**): Den aktuella sidan har ändrats med resultat som måste skrivas till klientprogrammet.
 
 >[!NOTE]
 >
->Beräkningar och valideringar måste återges för användaren. (Se [Beräkna formulärdata](/help/forms/develop/rendering-forms-rendering-forms calculate-form-data-calculate-form-data-calculate-form-data-calculate-form.md#calculate-form-data)*.)*
+>Beräkningar och valideringar måste återges för användaren. (Se [Beräkna formulärdata](/help/forms/developing/calculating-form-data.md#calculating-form-data).
 
 **Kontrollera om formuläröverföringen innehåller bifogade filer**
 
