@@ -12,7 +12,7 @@ discoiquuid: 59780112-6a9b-4de2-bf65-f026c8c74a31
 docset: aem65
 targetaudience: target-audience upgrader
 translation-type: tm+mt
-source-git-commit: 5035c9630b5e861f4386e1b5ab4f4ae7a8d26149
+source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
 
 ---
 
@@ -66,7 +66,7 @@ AEM Uber jar innehåller alla AEM API:er som ett enda beroende i Maven-projektet
 
 ### Avveckla användningen av den administrativa resurslösaren {#phase-out-use-of-administrative-resource-resolver}
 
-Användning av en administrativ session via `SlingRepository.loginAdministrative()` och `ResourceResolverFactory.getAdministrativeResourceResolver()` var mycket vanligt i kodbaser före AEM 6.0. Dessa metoder har tagits bort av säkerhetsskäl eftersom de ger för stor åtkomstnivå. [I framtida versioner av Sling kommer dessa metoder att tas bort](https://sling.apache.org/documentation/the-sling-engine/service-authentication.html#deprecation-of-administrative-authentication). Vi rekommenderar att du omfaktoriserar kod så att du kan använda tjänstanvändare i stället. Mer information om tjänstanvändare och [hur du fasar ut administrativa sessioner finns här](/help/sites-administering/security-service-users.md#how to phase out admin sessions).
+Användning av en administrativ session via `SlingRepository.loginAdministrative()` och `ResourceResolverFactory.getAdministrativeResourceResolver()` var mycket vanligt i kodbaser före AEM 6.0. Dessa metoder har tagits bort av säkerhetsskäl eftersom de ger för stor åtkomstnivå. [I framtida versioner av Sling kommer dessa metoder att tas bort](https://sling.apache.org/documentation/the-sling-engine/service-authentication.html#deprecation-of-administrative-authentication). Vi rekommenderar att du omfaktoriserar kod så att du kan använda tjänstanvändare i stället. Mer information om tjänstanvändare och [hur du fasar ut administrativa sessioner finns här](/help/sites-administering/security-service-users.md#how-to-phase-out=admin-sessions).
 
 ### Frågor och ekindexvärden {#queries-and-oak-indexes}
 
@@ -146,7 +146,7 @@ Adobe rekommenderar att du placerar egna skript `/apps/settings/dam/indesign/scr
 
 ### Återställer ContextHub-konfigurationer {#recovering-contexthub-configurations}
 
-ContextHub-konfigurationer genomförs med en uppgradering. Instruktioner om hur du återställer befintliga ContextHub-konfigurationer finns [här](/help/sites-administering/contexthub-config.md#recovery contexthub configurations after upgrade).
+ContextHub-konfigurationer påverkas av en uppgradering. Instruktioner om hur du återställer befintliga ContextHub-konfigurationer finns [här](/help/sites-administering/contexthub-config.md#recovering-contexthub-configurations-after-upgrading).
 
 ### Anpassningar av arbetsflöden {#workflow-customizations}
 
@@ -158,7 +158,7 @@ Det är vanligt att uppdatera ändringar som görs direkt i arbetsflöden för a
 >
 >Den här proceduren krävs endast för webbplatsuppgraderingar som använder redigerbara mallar från AEM 6.2
 
-Strukturen för redigerbara mallar har ändrats mellan AEM 6.2 och 6.3. Om du uppgraderar från 6.2 eller tidigare och om ditt webbplatsinnehåll byggs med redigerbara mallar måste du använda [verktyget](https://github.com/Adobe-Marketing-Cloud/aem-sites-template-migration)för rensning av responsiva noder. Verktyget ska köras **efter** en uppgradering för att rensa upp innehållet. Den måste köras på både författarnivå och publiceringsnivå.
+Strukturen för redigerbara mallar har ändrats mellan AEM 6.2 och 6.3. Om du uppgraderar från 6.2 eller tidigare och om ditt webbplatsinnehåll byggs med redigerbara mallar måste du använda [verktyget](https://github.com/Adobe-Marketing-Cloud/aem-sites-template-migration)för rensning av responsiva noder. Verktyget ska köras **efter** en uppgradering för att rensa upp innehållet. Det måste köras på både författarnivå och publiceringsnivå.
 
 ### Ändringar av CUG-implementering {#cug-implementation-changes}
 
