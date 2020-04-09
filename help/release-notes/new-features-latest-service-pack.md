@@ -4,7 +4,7 @@ description: Nyheter i Adobe Experience Manager 6.5 Service Pack 4
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: c25b04b043d6ec6289a561b630e3d0fad750629a
+source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
 
 ---
 
@@ -98,9 +98,13 @@ Experience Manager Forms innehåller följande tillgänglighetsförbättringar:
 
 ## Viktiga funktioner i tidigare AEM 6.5 Service Packs {#key-features-previous-service-packs}
 
-### Smart Imaging for Dynamic Media (6.5.3.0) {#smart-imaging}
+### Smart Imaging for Dynamic Media {#smart-imaging}
 
 Smart bildbehandling använder varje användares unika visningsegenskaper för att automatiskt leverera rätt bilder som är optimerade för sin upplevelse, vilket ger bättre prestanda och engagemang. Smart bildbehandling fungerar med befintliga bildförinställningar och använder intelligens under de sista millisekunderna i leveransen för att ytterligare minska bildfilens storlek baserat på webbläsarens eller nätverkets anslutningshastighet. Se [Smart bildbehandling](../assets/imaging-faq.md).
+
+### Smart beskärning i videoprofiler för Dynamic Media (6.5.3.0) {#smart-crop-video}
+
+Smart beskärning för video - en valfri funktion i videoprofiler - är ett verktyg som använder kraften i artificiell intelligens i Adobe Sensei för att automatiskt upptäcka och beskära fokalpunkten i alla adaptiva videoklipp och progressiva videoklipp som du har överfört, oavsett storlek. Se [Använda smart beskärning i videoprofiler](../assets/video-profiles.md).
 
 ### Visuell sökning efter AEM Assets (6.5.2.0) {#visual-search}
 
