@@ -4,7 +4,7 @@ seo-title: Konfigurera inställningar för frånvaro
 description: Konfigurera inställningar för frånvaro
 seo-description: Konfigurera inställningar för frånvaro
 translation-type: tm+mt
-source-git-commit: 7ed5c2d0121029811d8ddeca3b1121912bc761f4
+source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
 
 ---
 
@@ -14,7 +14,7 @@ source-git-commit: 7ed5c2d0121029811d8ddeca3b1121912bc761f4
 
 Om du tänker vara utanför kontoret kan du ange vad som ska hända med artiklar som har tilldelats dig för den perioden.
 
-Du kan ange startdatum och -tid och slutdatum och sluttid så att dina inställningar som inte är på kontoret börjar gälla. Om du befinner dig i en annan tidszon än servern används den tidszon som klienten använder.
+Du kan ange ett startdatum och en sluttid och ett slutdatum och en sluttid så att dina inställningar som inte är på kontoret börjar gälla. Om du befinner dig i en annan tidszon än servern används den tidszon som klienten använder.
 
 Du kan ange en standardperson som alla dina objekt skickas till. Du kan också ange undantag för objekt från specifika processer som ska skickas till en annan användare eller behållas i inkorgen tills du kommer tillbaka. Om den utsedda personen även är utanför kontoret, skickas objektet till användaren som han/hon har utsett. Om objektet inte kan tilldelas till en användare som inte är utanför kontoret finns objektet kvar i din inkorg.
 
@@ -49,14 +49,16 @@ Utför följande steg för att aktivera inställningen Frånvarande för ditt ko
    Upprepa steget för att lägga till fler tilldelningar. <br>
 
    >[!NOTE]
+   >
    >Tilldelningsordningen är viktig. När ett objekt tilldelas en användare som har aktiverat inställningen Frånvarande utvärderas objektet mot den angivna listan över tilldelningar i den ordning som tilldelningarna läggs till. När ett objekt matchar villkoret tilldelas det till den som tilldelats objektet och nästa tilldelande kontrolleras inte.
 
 1. Tryck på **[!UICONTROL Spara]**. Inställningen börjar gälla vid angivet startdatum och angiven starttid. Om du loggar in när du inte är på kontoret beaktas du inte på kontoret förrän du ändrar dina inställningar.
 
-Nu tilldelas objekt som du har tilldelats under frånvaroperioden automatiskt till den angivna tilldelade personen.\
+Nu tilldelas objekt som du har tilldelats under frånvaroperioden automatiskt till den angivna tilldelade personen.
 ![Utanför kontoret](assets/out-of-office.png)
 
 >[!NOTE]
+>
 >(Endast för formulärbaserade arbetsflödesobjekt) Aktivera alternativet **Tillåt att tilldelad delegerar med alternativet** Frånvarande i steget **Tilldela uppgift** i arbetsflödet. Endast objekt som har det ovannämnda alternativet aktiverat delegeras till andra användare.
 
 ## Begränsningar {#limitations}
