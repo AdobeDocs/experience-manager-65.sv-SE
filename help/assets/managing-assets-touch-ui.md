@@ -4,7 +4,7 @@ description: Lär dig resurshanteringsåtgärder som överföring, hämtning, re
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
+source-git-commit: be619b71dd0bb1addc10f4dbdbd2f00bc86dd003
 
 ---
 
@@ -122,7 +122,7 @@ Innan du överför en resurs måste du kontrollera att den har ett [format](/hel
 
 ### Serieuppladdningar {#serialuploads}
 
-Vid överföring av flera resurser i grupp förbrukas betydande I/O-resurser, vilket kan påverka prestanda negativt för din AEM Assets-instans. Om du har en långsam internetanslutning ökar tiden det tar att överföra drastiskt på grund av att disk-I/O-inläsningen har ökat. Din webbläsare kan dessutom införa ytterligare begränsningar för antalet POST-begäranden som AEM Assets kan hantera för samtidiga överföringar av resurser. Därför misslyckas överföringen eller avslutas i förtid. Med andra ord kan AEM-resurser sakna vissa filer när en grupp filer importeras eller helt och hållet inte kan importera någon fil.
+Vid överföring av flera resurser i grupp förbrukas betydande I/O-resurser, vilket kan påverka prestandan negativt för din AEM Assets-instans. Om du har en långsam internetanslutning ökar tiden det tar att överföra drastiskt på grund av att disk-I/O-inläsningen har ökat. Din webbläsare kan dessutom införa ytterligare begränsningar för antalet POST-begäranden som AEM Assets kan hantera för samtidiga överföringar av resurser. Därför misslyckas överföringen eller avslutas i förtid. Med andra ord kan AEM-resurser sakna vissa filer när en grupp filer importeras eller helt och hållet inte kan importera någon fil.
 
 För att komma till rätta med denna situation importerar AEM Assets en resurs i taget (seriell överföring) under en gruppöverföring, i stället för att alla resurser hämtas samtidigt.
 
@@ -138,7 +138,7 @@ Med Dynamic Media kan du batchöverföra resurser via FTP-servern. Om du tänker
 
 >[!NOTE]
 >
->Om du vill överföra resurser via FTP i läget Dynamic Media - Scene7 installerar du Feature Pack 18912 på AEM-författarinstanserna. Kontakta [Adobes kundtjänst](https://helpx.adobe.com/contact/enterprise-support.ec.html) för att få tillgång till FP-18912 och slutföra konfigurationen av ditt FTP-konto. Mer information finns i [Installera funktionspaket 18912 för migrering](/help/assets/bulk-ingest-migrate.md)av gruppresurser.
+>Om du vill överföra resurser via FTP i läget Dynamic Media - Scene7 installerar du Feature Pack 18912 på AEM-författarinstanserna. Kontakta [Adobes kundtjänst](https://helpx.adobe.com/se/contact/enterprise-support.ec.html) för att få tillgång till FP-18912 och slutföra konfigurationen av ditt FTP-konto. Mer information finns i [Installera funktionspaket 18912 för migrering](/help/assets/bulk-ingest-migrate.md)av gruppresurser.
 >
 >Om du använder FTP för att överföra resurser ignoreras de överföringsinställningar som anges i AEM. I stället används filbearbetningsregler, enligt definition i Dynamic Media Classic,.
 
@@ -363,7 +363,7 @@ Se även [Förhandsgranska dynamiska medieresurser.](/help/assets/previewing-ass
 
    >[!NOTE]
    >
-   >Layouten på sidan [!UICONTROL Egenskaper] och de metadataegenskaper som är tillgängliga beror på det underliggande metadataschemat. Mer information om hur du ändrar layouten för sidan [!UICONTROL Egenskaper] finns i [Metadatamcheman](/help/assets/metadata-schemas.md).
+   >Layouten på sidan [!UICONTROL Egenskaper] och de metadataegenskaper som är tillgängliga beror på det underliggande metadataschemat. Mer information om hur du ändrar layouten på sidan [!UICONTROL Egenskaper] finns i [Metadatamcheman](/help/assets/metadata-schemas.md).
 
 1. To schedule a particular date/time for the activation of the asset, use the date picker beside the **[!UICONTROL On Time]** field.
 
@@ -766,7 +766,7 @@ Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Vi
    >
    >Anteckningar kan också läggas till i videomaterialet. När du kommenterar videoklipp pausas spelaren så att du kan anteckna i en bildruta. Mer information finns i [Hantera videomaterial](/help/assets/managing-video-assets.md).
 
-1. Om du vill välja en annan färg så att du kan skilja mellan användarna klickar/trycker du på profilikonen och klickar/trycker på **[!UICONTROL Mina inställningar]**.
+1. Om du vill välja en annan färg så att du kan skilja på användarna klickar/trycker du på profilikonen och klickar/trycker på **[!UICONTROL Mina inställningar]**.
 
    ![Välj ikonen för användarprofilen och sedan Mina inställningar för att öppna Användarinställningar](assets/User-profile-preferences.png)
 
@@ -942,30 +942,7 @@ Versionsfunktionen gör följande:
 
 ### Starta ett arbetsflöde för en resurs {#starting-a-workflow-on-an-asset}
 
-1. Navigera till platsen för resursen som du vill starta ett arbetsflöde för och tryck/klicka på resursen för att öppna resurssidan.
-1. Tryck på ikonen GlobalNav och välj sedan **[!UICONTROL Tidslinje]** på menyn för att visa tidslinjen.
-
-   ![tidslinje-1](assets/timeline.png)
-
-1. Tryck på ikonen **[!UICONTROL Åtgärder]** (pil) längst ned för att öppna listan med tillgängliga åtgärder för resursen.
-
-   ![chlimage_1-252](assets/chlimage_1-45.png)
-
-1. Tryck på **[!UICONTROL Starta arbetsflöde]** i listan.
-
-   ![chlimage_1-253](assets/chlimage_1-49.png)
-
-1. In the **[!UICONTROL Start Workflow]** dialog, select a workflow model from the list.
-
-   ![chlimage_1-254](assets/chlimage_1-50.png)
-
-1. (Valfritt) Ange en rubrik för arbetsflödet som kan användas som referens för arbetsflödesinstansen.
-
-   ![chlimage_1-255](assets/chlimage_1-51.png)
-
-1. Tryck på **[!UICONTROL Start]** och sedan på **[!UICONTROL Fortsätt]** i dialogrutan för att bekräfta. Varje steg i arbetsflödet visas på tidslinjen som en händelse.
-
-   ![chlimage_1-256](assets/chlimage_1-52.png)
+Information om hur du använder ett arbetsflöde för att bearbeta en resurs finns i [Starta arbetsflöde för en resurs](/help/assets/assets-workflow.md#apply-a-workflow-to-an-asset).
 
 ## Samlingar {#collections}
 
