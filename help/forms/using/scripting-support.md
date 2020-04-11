@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 4ef78c8c-783f-4aac-a499-692cd4acef75
 translation-type: tm+mt
-source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -113,8 +113,8 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
   </tr>
   <tr>
    <td><code>title</code></td>
-   <td> Anger dokumentets titel. Den är bara tillgänglig för klientprogram.</td>
-   <td>Det returnerar HTML-dokumentets titel i form av formulär, inte formulärets metadatanamn som i PDF-formulär.</td>
+   <td>Anger dokumentets titel. Den är bara tillgänglig för klientprogram.</td>
+   <td>Det returnerar HTML-dokumentets titel i form av ett formulär i stället för formulärets metadatanamn, som i PDF-formulär.</td>
   </tr>
   <tr>
    <td><code>version</code></td>
@@ -1342,7 +1342,7 @@ Följande klientsidade XFA-händelser stöds:
 * Initiera
 * Validera
 * Beräkna
-* Klicka
+* Klicka på
 * Retur
 * Avsluta
 * Ändra
@@ -1351,5 +1351,3 @@ Följande klientsidade XFA-händelser stöds:
 >[!NOTE]
 >
 >HTML5-formulär återges på klientsidan (webbläsare). Du bör **validera** och **beräkna** skript på klientsidan i stället för serverbaserade skript.
-
-**[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)**
