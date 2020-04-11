@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 5e344be7-46cd-4e1f-ae3a-1f89c645cffe
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -20,7 +20,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 HTML5-formulär har stöd för XFA Picture-satsen för visningsvärde och formaterat värde för datum, text och numeriska symboler. Följande Picture-satsuttryck stöds:
 
 * category(locale){picture-clause}| category(locale){picture-clause}| category(locale){picture-clause}
-* category.subcategory{{}
+* category.subcategory{}
 
 >[!NOTE]
 >
@@ -210,5 +210,3 @@ HTML5-formulär har stöd för följande Text Picture-satsuttryck:
 | O | Enstaka alfanumeriskt tecken. |
 | 0 (noll) | Enstaka alfanumeriskt tecken. |
 | 9 | Enstaka siffra. |
-
-**[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)**
