@@ -1,30 +1,30 @@
 ---
-title: Generera HTML5-förhandsgranskning av ett XDP-formulär
+title: Generate HTML5 preview of an XDP form
 seo-title: Generera HTML5-förhandsgranskning av ett XDP-formulär
 description: Fliken Förhandsgranska HTML i LiveCycle Designer kan användas för att förhandsgranska formulär så som de visas i en webbläsare.
-seo-description: Fliken Förhandsgranska HTML i LiveCycle Designer kan användas för att förhandsgranska formulär så som de visas i en webbläsare.
+seo-description: Preview HTML tab in LiveCycle Designer can be used to preview forms as they appear in a browser.
 uuid: cbee956f-bf2d-40c5-8e03-58fce0fa215b
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 34e6d1bc-4eca-42dc-9ae5-9a2107fbefce
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
 
-# Generera HTML5-förhandsgranskning av ett XDP-formulär{#generate-html-preview-of-an-xdp-form}
+# Generate HTML5 preview of an XDP form{#generate-html-preview-of-an-xdp-form}
 
-När du utformar ett formulär i AEM Forms Designer kan du, förutom att förhandsgranska PDF-återgivningen av ett formulär, även förhandsgranska en HTML5-återgivning av det. Du kan använda fliken **Förhandsgranska HTML** för att förhandsgranska ett formulär så som det skulle visas i en webbläsare.
+While designing a form in AEM Forms Designer, besides previewing the PDF rendition of a form, you can also preview an HTML5 rendition of it. You can use the **Preview HTML** tab to preview a form as it would appear in a browser.
 
-## Aktivera HTML-förhandsgranskning för XDP-formulär i Designer {#html-preview-of-forms-in-forms-designer}
+## Enable HTML Preview for XDP forms in Designer {#html-preview-of-forms-in-forms-designer}
 
 Utför följande konfigurationer om du vill att Designer ska kunna generera HTML-förhandsgranskning av XDP-formulär:
 
 * Konfigurera autentiseringstjänsten för Apache Sling
 * Inaktivera skyddat läge
-* Ange information om AEM Forms-servern
+* Provide details of AEM Forms server
 
 ### Konfigurera autentiseringstjänsten för Apache Sling {#configure-apache-sling-authentication-service}
 
@@ -46,7 +46,7 @@ Utför följande konfigurationer om du vill att Designer ska kunna generera HTML
    >
    >Kopiera inte och klistra in det angivna värdet i fältet Autentiseringskrav eftersom det kan skada specialtecknen i värdet. Skriv i stället det angivna värdet i fältet.
 
-1. Ange ett användarnamn och lösenord i fälten **[!UICONTROL Anonymt användarnamn]** och **[!UICONTROL Anonymt användarlösenord]** . De angivna autentiseringsuppgifterna används för att hantera anonym autentisering och ge åtkomst till anonyma användare.
+1. Ange ett användarnamn och lösenord i fälten **[!UICONTROL Anonymt användarnamn]** och **[!UICONTROL Anonymt användarlösenord]** . The specified credentials are used to handle anonymous authentication and allow access to anonymous users.
 1. Klicka på **Spara** för att spara konfigurationen.
 
 ### Inaktivera skyddat läge {#disable-protected-mode}
@@ -61,7 +61,7 @@ Som standard är [skyddat läge](../../forms/using/get-xdp-pdf-documents-aem.md)
 1. Öppna **[!UICONTROL Mobile Forms Configurations]** för redigering.
 1. Avmarkera alternativet **[!UICONTROL Skyddat läge]** och klicka på **[!UICONTROL Spara]**.
 
-### Ange information om AEM Forms-servern {#provide-details-of-aem-forms-server}
+### Provide details of AEM Forms server {#provide-details-of-aem-forms-server}
 
 1. Gå till **Verktyg** > **Alternativ** i Designer.
 1. I fönstret Alternativ väljer du sidan **Serveralternativ** , anger följande och klickar på **OK**.
@@ -109,12 +109,10 @@ Om du testar formulären med exempeldata kan du kontrollera att data och fält m
 
 1. Select **File > Form Properties**.
 
-1. Click the **Preview** tab and, in the Data File box, type the full path to your test data file. Du kan också använda knappen Bläddra för att navigera till filen.
+1. Click the **Preview** tab and, in the Data File box, type the full path to your test data file. You can also use the Browse button to navigate to the file.
 
 1. Click **OK**. The next time you preview the form in the **Preview HTML** tab, the data values from the sample XML file will appear in the respective objects.
 
 ## Förhandsgranska formulär som finns i en databas {#html-preview-of-forms-in-forms-manager}
 
 I AEM Forms kan du förhandsgranska formulär och dokument i en databas. Med Förhandsgranska vet du exakt hur formulären ser ut och fungerar som de kommer att användas av slutanvändarna.
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
