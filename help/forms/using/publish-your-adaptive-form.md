@@ -9,7 +9,7 @@ topic-tags: introduction
 discoiquuid: e24dbd0e-4481-4f9d-9570-3a4046b3ef35
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 709d8fe467f5449eb1e844a49126535a4a4a6e7a
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -56,10 +56,10 @@ AEM Forms innehåller en komponent, AEM Forms Container, som bäddar in ett adap
    Webbplatsen We.Retail levereras med AEM. Om du inte har installerat webbplatsen We.Retail går du till [We.Retail Reference Implementation](https://helpx.adobe.com/experience-manager/6-3/help/sites-developing/we-retail.html) för att installera webbplatsen.
 
 1. Tryck på ![egenskapens](assets/properties.png) sidinformation och välj alternativet **Redigera mall** på den nyligen skapade webbsidan för Vi.Retail. Sidmallen öppnas på en ny flik i webbläsaren.
-1. Tryck inuti **layoutbehållarrutan** och tryck på ![feedhantering](assets/feedmanagement.png). Expandera dragspelsfliken **Allmänt** på fliken **Tillåtna komponenter** , markera alternativet **AEM-formulär** och tryck sedan på ![](https://helpx.adobe.com/content/dam/help/en/aem-forms/icons/AEM_6_3_Forms_save.PNG). AEM Forms Container-komponenten är aktiverad för sidan.
+1. Tryck inuti **layoutbehållarrutan** och tryck på ![feedhantering](assets/feedmanagement.png). Expandera dragspelsfliken **Allmänt** på fliken **Tillåtna komponenter** , markera alternativet **AEM-formulär** och tryck sedan på ![](assets/save_icon.svg). AEM Forms Container-komponenten är aktiverad för sidan.
 
 1. Öppna webbläsarfliken som innehåller sidan AEM Sites som öppnats i steg 1. Tryck på **Dra komponenter här** och tryck på **+.** I rutan **Infoga ny komponent** trycker du på **AEM-formulär.** Komponenten **AEM Forms Container** läggs till på sidan.
-1. Tryck på behållarkomponenten för **AEM Forms** och tryck ![](https://helpx.adobe.com/content/dam/help/en/aem-forms/6-2/cmppr.png). En dialogruta med egenskaper för AEM Forms Container visas. I fältet **Resurssökväg** bläddrar du till och väljer formuläret shipping-address-add-update-form adaptive. Tryck ![](https://helpx.adobe.com/content/dam/help/en/aem-forms/icons/AEM_6_3_Forms_save.PNG). Det anpassningsbara formuläret är inbäddat på sidan.
+1. Tryck på behållarkomponenten för **AEM Forms** och tryck ![](assets/configure-icon.svg). En dialogruta med egenskaper för AEM Forms Container visas. I fältet **Resurssökväg** bläddrar du till och väljer formuläret shipping-address-add-update-form adaptive. Tryck på ![](assets/save_icon.svg). Det anpassningsbara formuläret är inbäddat på sidan.
 1. Publicera både adaptiva formulär- och webbplatssidor. Här är några saker du bör hålla i minnet:
 
    * Om du publicerar AEM-webbplatssidan för första gången och den innehåller ett inbäddat formulär publicerar du webbplatssidan och det inbäddade formuläret.
