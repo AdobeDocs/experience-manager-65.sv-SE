@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: fa6e0246-6bd2-4ffb-b54c-15eda605f213
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -61,22 +61,20 @@ När du navigerar på arbetsytan i AEM Forms med ett tangentbord följer naviger
 
 Du kan ange olika inställningar för AEM Forms-arbetsytan i följande kategorier:
 
-**** Frånvarande: Ange inställningar för att styra hur uppgifter tilldelas andra personer när du inte är på kontoret. Se [Ange inställningar](/help/forms/using/todo-lists.md#main-pars-heading-22)utanför kontoret.
+**Frånvarande:** Ange inställningar för att styra hur uppgifter tilldelas andra personer när du inte är på kontoret. Se [Ange inställningar](/help/forms/using/todo-lists.md#main-pars-heading-22)utanför kontoret.
 
-**** Köer: Ange inställningar för att dela din Att göra-lista med andra användare eller för att begära åtkomst till en annan användares lista. Se [Arbeta med uppgifter från grupper och delade köer](/help/forms/using/todo-lists.md#main-pars-heading-19).
+**Köer:** Ange inställningar för att dela din Att göra-lista med andra användare eller för att begära åtkomst till en annan användares lista. Se [Arbeta med uppgifter från grupper och delade köer](/help/forms/using/todo-lists.md#main-pars-heading-19).
 
-**** Gränssnittsinställningar: Ange inställningar för hur du interagerar med arbetsytan i AEM Forms. Se [Ange användargränssnittsinställningar](/help/forms/using/getting-started-livecycle-html-workspace.md#main-pars-heading-5).
+**Gränssnittsinställningar:** Ange inställningar för hur du interagerar med arbetsytan i AEM Forms. Se [Ange användargränssnittsinställningar](/help/forms/using/getting-started-livecycle-html-workspace.md#main-pars-heading-5).
 
 ### Ange inställningar för användargränssnitt {#set-user-interface-preferences}
 
 Ange gränssnittsinställningarna på fliken Inställningar > Användargränssnittsinställningar. Följande inställningar är tillgängliga.
 
-* **** Startplats: Anger den sida som visas när du loggar in på arbetsytan i AEM Forms. De fyra tillgängliga alternativen är Starta process, Att göra, Spårning och Favoriter.
-* **** Utloggningsfråga: Anger om du uppmanas att bekräfta att du vill logga ut när du klickar på Logga ut.
-* **** Datumformat: Anger vilket datumvisningsformat som används på arbetsytan i AEM Forms.
+* **Startplats:** Anger den sida som visas när du loggar in på arbetsytan i AEM Forms. De fyra tillgängliga alternativen är Starta process, Att göra, Spårning och Favoriter.
+* **Utloggningsfråga:** Anger om du uppmanas att bekräfta att du vill logga ut när du klickar på Logga ut.
+* **Datumformat:** Anger vilket datumvisningsformat som används på arbetsytan i AEM Forms.
 * **Tidsformat**: Anger det tidsvisningsformat som används på arbetsytan i AEM Forms.
-* **** Meddela aktivitetshändelser via e-post: Anger om du får e-postmeddelanden för aktivitetshändelser, inklusive aktivitetstilldelningar, påminnelser och deadlines för uppgifter i din Att göra-lista och i gruppAtt göra-listor som du tillhör.
-* **** Bifoga formulär i e-post: Anger om en kopia av formuläret bifogas e-postmeddelanden. Bifogade filer stöds bara för PDF- och XDP-formulär.
-* **** Spara utkast periodiskt: Anger om dina formulärutkast sparas automatiskt regelbundet eller inte. Om du vill spara dina utkast regelbundet aktiverar du det här alternativet och anger hur länge du vill spara automatiskt från 1 till 30 minuter. När Spara automatiskt är aktiverat och en användare arbetar med ett utkast, sparas utkastet regelbundet efter det angivna antalet minuter. Utkastet sparas bara automatiskt när det finns en ändring i utkastet sedan det senast sparades eller sparades automatiskt. När utkastet sparas visas ett varningsmeddelande på skärmen.
-
-**[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)**
+* **Meddela aktivitetshändelser via e-post:** Anger om du får e-postmeddelanden för aktivitetshändelser, inklusive aktivitetstilldelningar, påminnelser och deadlines för uppgifter i din Att göra-lista och i gruppAtt göra-listor som du tillhör.
+* **Bifoga formulär i e-post:** Anger om en kopia av formuläret bifogas e-postmeddelanden. Bifogade filer stöds bara för PDF- och XDP-formulär.
+* **Spara utkast periodiskt:** Anger om dina formulärutkast sparas automatiskt regelbundet eller inte. Om du vill spara dina utkast regelbundet aktiverar du det här alternativet och anger hur länge du vill spara automatiskt från 1 till 30 minuter. När Spara automatiskt är aktiverat och en användare arbetar med ett utkast, sparas utkastet regelbundet efter det angivna antalet minuter. Utkastet sparas bara automatiskt när det finns en ändring i utkastet sedan det senast sparades eller sparades automatiskt. När utkastet sparas visas ett varningsmeddelande på skärmen.
