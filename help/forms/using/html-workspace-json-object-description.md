@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 61b7246d-ed28-4470-a0a2-a4aaf1a061a4
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -222,7 +222,7 @@ JSON-objekt som används i arbetsytan i AEM Forms beskrivs nedan.
   <tr>
    <td>serializedImageTicket<br /> </td>
    <td>F</td>
-   <td>Den innehåller bildbiljett som motsvarar uppgiften. <br /> Den här bildbiljetten används i aktivitetsfältet imageUrl för att hämta bilden för aktiviteten från servern. <br /> </td>
+   <td>Den innehåller bildbiljett som motsvarar uppgiften. Den här bildbiljetten används i aktivitetsfältet imageUrl för att hämta bilden för aktiviteten från servern.<br /> <br /> </td>
   </tr>
   <tr>
    <td>serviceName<br /> </td>
@@ -851,5 +851,3 @@ JSON-objekt som används i arbetsytan i AEM Forms beskrivs nedan.
   </tr>
  </tbody>
 </table>
-
-**[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)**
