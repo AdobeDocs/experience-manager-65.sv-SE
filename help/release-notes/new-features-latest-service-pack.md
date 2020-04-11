@@ -4,7 +4,7 @@ description: Nyheter i Adobe Experience Manager 6.5 Service Pack 4
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -13,7 +13,7 @@ source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
 
 Med Adobe Experience Manager (6.5) får ni tillgång till nya funktioner och kontinuerliga förbättringar via kvartalsvisa Service Pack-versioner. Med den här metoden blir det enkelt att använda innovationerna.
 
-Experience Manager Service Pack 4 (6.5.4.0) lanseras den 5 mars 2020. Det är en viktig uppdatering som innehåller nya funktioner, viktiga förbättringar som kunderna efterfrågat samt prestanda, stabilitet, säkerhetsförbättringar som släppts sedan den allmänna tillgängligheten av 6.5-utgåvan i april 2019. Experience Manager 6.5.4.0 kan installeras ovanpå Adobe Experience Manager 6.5.
+Experience Manager Service Pack 4 (6.5.4.0) är en viktig uppdatering. Det innehåller alla nya funktioner, viktiga förbättringar som kunderna efterfrågat, prestanda, stabilitet och säkerhetsförbättringar som släppts sedan AEM 6.5-versionen i april 2019. Du kan installera Service Pack på AEM 6.5 och senare versioner.
 
 I den här artikeln beskrivs de funktioner som ingår i det senaste 6.5 Service Pack-uppdateringen, [nyckelfunktioner som ingår i det tidigare 6.5 Service Pack-](#key-features-previous-service-packs)paketet [och några av de](#key-features-sice-sp3)viktigaste versionerna sedan Experience Manager 6.5.3.0.
 
@@ -117,7 +117,7 @@ Du kan dela dina inkorgsobjekt med en annan användare. När en annan användare
 ### Konfigurera inställningar utanför kontoret för inkorgsobjekt för en AEM Forms-användare (6.5.3.0) {#configure-out-of-office}
 
 Om du tänker vara utanför kontoret kan du ange vad som ska hända med artiklar som har tilldelats dig för den perioden.
-Du kan ange startdatum och -tid och slutdatum och sluttid så att dina inställningar som inte är på kontoret börjar gälla. Du kan ange en standardperson som alla dina objekt skickas till. Se [Konfigurera inställningar](../forms/using/configure-out-of-office-settings.md)för frånvaro.
+Du kan ange ett startdatum och en sluttid och ett slutdatum och en sluttid så att dina inställningar som inte är på kontoret börjar gälla. Du kan ange en standardperson som alla dina objekt skickas till. Se [Konfigurera inställningar](../forms/using/configure-out-of-office-settings.md)för frånvaro.
 
 ### Generera flera interaktiva dokument med Batch API för AEM Forms (6.5.3.0) {#generate-multiple-ic}
 
