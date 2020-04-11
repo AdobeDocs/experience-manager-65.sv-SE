@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 879ff6ca-e5f3-451d-acc2-f75142101ddd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3afe5bf8e49202608e4c9369b2ff3d26afa03dc4
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -173,7 +173,7 @@ Om du vill skapa en webbkanalmall definierar du en mapp där du kan spara de ska
 
 Så här skapar du en mapp för de redigerbara mallarna:
 
-1. Tryck på **Verktyg** ![](https://helpx.adobe.com/content/dam/help/en/aem-forms/icons/Tools.png) > **Konfigurationsläsaren**.
+1. Tryck på **Verktyg** ![](assets/hammer-icon.svg) > **Konfigurationsläsaren**.
 1. Tryck på **Skapa** på sidan Configuration Browser.
 1. I dialogrutan **Skapa konfiguration** anger du **Create_First_IC_templates** som mappens titel, markerar **Redigerbara mallar** och trycker sedan på **Skapa**.
 
@@ -248,7 +248,7 @@ När du har skapat webbmallen måste du aktivera den för användning när du sk
 
 Aktivera webbmallen genom att utföra följande steg:
 
-1. Tryck på **Verktyg** ![](https://helpx.adobe.com/content/dam/help/en/aem-forms/icons/Tools.png) > **Mallar**.
+1. Tryck på **Verktyg** ![](assets/hammer-icon.svg) > **Mallar**.
 1. Navigera till mallen **Create_First_IC_Web_Template** , markera den och tryck sedan på **Aktivera**.
 1. Bekräfta genom att klicka på **Aktivera** igen.
 
