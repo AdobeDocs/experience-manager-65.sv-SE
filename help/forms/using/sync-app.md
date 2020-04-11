@@ -11,7 +11,7 @@ topic-tags: forms-app
 discoiquuid: 393e4332-a2cc-42c8-a18f-3035addbcfaa
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -46,5 +46,3 @@ Tryck på knappen Synkronisera ![synkroniseringsprogram](assets/sync-app.png) l�
 * I .js-filen skickar anropet till funktionen processOfflineSubmittedSavedTasks(...) de sparade/skickade uppgifterna till servern. Den hanterar även fel och konflikter i synkroniseringsprocessen. Om överföringen av en uppgift misslyckas markeras aktiviteten i programmet som misslyckad. Dessutom finns uppgiften kvar i Utkorgen.
 * Funktionerna syncSubowedTask() och syncSavedTask() utför åtgärder på enskilda uppgifter.
 * Anropet till funktionen processOfflineSubmitSavedTasks() initieras av uppgiftslistkomponenten efter att en användare har valt att synkronisera offlineläget med servern eller en automatisk synkronisering av bakgrundstråden.
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
