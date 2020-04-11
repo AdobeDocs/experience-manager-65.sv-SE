@@ -10,7 +10,7 @@ content-strategy: max-2018
 discoiquuid: 770e9174-b648-462a-abe9-05fefa967d86
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -296,7 +296,7 @@ Med plusknappen mot resursbiblioteket kan du spara formatet med ett namn som du 
 
 När du anger ett anpassat namn för ett format kopplas formatet till ett tema och är inte längre tillgängligt för andra teman. Så här tar du bort ett sparat format:
 
-1. Klicka på **Temaalternativ** ![](https://helpx.adobe.com/content/dam/help/en/aem-forms/6-2/theme-options.png) > **Hantera format** i verktygsfältet CANVAS.
+1. Klicka på **Temaalternativ** ![](assets/theme-options.png) > **Hantera format** i verktygsfältet CANVAS.
 1. Välj ett sparat format i dialogrutan Hantera format och klicka på **Ta bort**.
 
    ![Ta bort det sparade formatet](assets/manage-styles.png)
