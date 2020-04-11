@@ -11,7 +11,7 @@ topic-tags: forms-workspace
 discoiquuid: 4c89d017-0d4b-4fa2-b648-342f3c755350
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -30,5 +30,3 @@ Arbetsytan i AEM Forms är kompatibel med fler enheter och formfaktorer. Den mö
 * Integrera enkelt arbetsytekomponenterna med dina webbprogram. Eftersom AEM Forms-arbetsytan är ett komponentbaserat program kan den enkelt anpassas och återanvändas.
 * Utvidga affärsprocesserna till mobila medarbetare både online och offline med AEM Forms-appen.
 * Visa rapporter för att övervaka eftersläpningar, arbetsköer och nyckeltal (KPI). Du kan använda API:er för att extrahera data för ytterligare analys med rapportverktyg från tredje part.
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
