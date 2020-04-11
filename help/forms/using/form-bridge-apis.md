@@ -1,7 +1,7 @@
 ---
-title: API:er för Form Bridge för HTML5-formulär
+title: Form Bridge APIs for HTML5 forms
 seo-title: API:er för Form Bridge för HTML5-formulär
-description: Externa program använder FormBridge API för att ansluta till XFA-mobilformuläret. API:t skickar en FormBridgeInitialized-händelse i det överordnade fönstret.
+description: Externa program använder FormBridge API för att ansluta till XFA-mobilformuläret. The API dispatches a FormBridgeInitialized event on the parent window.
 seo-description: Externa program använder FormBridge API för att ansluta till XFA-mobilformuläret. API:t skickar en FormBridgeInitialized-händelse i det överordnade fönstret.
 uuid: 0db22649-522b-4857-9ffd-826c52381d15
 content-type: reference
@@ -9,12 +9,12 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: developer-reference
 discoiquuid: c05c9911-7c49-4342-89de-61b8b9953c83
 translation-type: tm+mt
-source-git-commit: 8f90dc4865126d52e04effc9197ef7145b1a167e
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
 
-# API:er för Form Bridge för HTML5-formulär {#form-bridge-apis-for-html-forms}
+# Form Bridge APIs for HTML5 forms {#form-bridge-apis-for-html-forms}
 
 Du kan använda API:erna för Form Bridge för att öppna en kommunikationskanal mellan ett XFA-baserat HTML5-formulär och dina program. API:erna för Form Bridge innehåller ett **anslutnings** -API för att skapa anslutningen.
 
@@ -68,7 +68,7 @@ Returnerar versionsnumret för skriptbiblioteket
 
 * **Indata:**
 
-   * **** alternativ: JavaScript-objekt som innehåller följande egenskaper:
+   * **alternativ:** JavaScript-objekt som innehåller följande egenskaper:
 
       * **Fel**: Felhanterarfunktion
       * **lyckades**: Hanterarfunktionen Slutfört. Den här funktionen skickas till ett objekt som innehåller XML i *data* -egenskapen.
@@ -76,24 +76,24 @@ Returnerar versionsnumret för skriptbiblioteket
       * **validationChecker**: Funktion som ska anropas för att kontrollera verifieringsfel som tagits emot från servern. Valideringsfunktionen skickar en array med felsträngar.
       * **formState**: JSON-tillståndet för XFA-formuläret som data-XML ska returneras för. Om inget anges returneras data-XML för det återgivna formuläret.
 
-* **** Utdata: Ingen
-* **** Fel: Ingen
+* **Utdata:** Ingen
+* **Fel:** Ingen
 
 **registerConfig(configName, config)** Registrerar användare/portalspecifika konfigurationer med FormBridge. Dessa konfigurationer åsidosätter standardkonfigurationerna. De konfigurationer som stöds anges i avsnittet config.
 
 * **Indata:**
 
-   * **** configName: Namn på konfigurationen som ska åsidosättas
+   * **configName:** Namn på konfigurationen som ska åsidosättas
 
-      * **** widgetConfig: Låter användaren åsidosätta standardwidgetarna i formuläret med anpassade widgetar. Konfigurationen åsidosätts enligt följande:
+      * **widgetConfig:** Låter användaren åsidosätta standardwidgetarna i formuläret med anpassade widgetar. Konfigurationen åsidosätts enligt följande:
 
          *formBridge.registerConfig(&quot;widgetConfig&quot;:{/&amp;ast;configuration&amp;ast;/})*
 
-      * **** pagingConfig: Låter användaren åsidosätta standardbeteendet för återgivning av endast den första sidan. Konfigurationen åsidosätts enligt följande:
+      * **pagingConfig:** Låter användaren åsidosätta standardbeteendet för återgivning av endast den första sidan. Konfigurationen åsidosätts enligt följande:
 
          *window.formBridge.registerConfig(&quot;pagingConfig&quot;:{pagingDisabled: &lt;true| false>, crinkPageDisabled: &lt;true| false> }).*
 
-      * **** LoggingConfig: Låter användaren åsidosätta loggningsnivån, inaktivera loggning för en kategori eller visa loggkonsolen eller skicka till servern. Konfigurationen kan åsidosättas på följande sätt:
+      * **LoggingConfig:** Låter användaren åsidosätta loggningsnivån, inaktivera loggning för en kategori eller visa loggkonsolen eller skicka till servern. Konfigurationen kan åsidosättas på följande sätt:
 
       ```JavaScript
       formBridge.registerConfig{
@@ -107,7 +107,7 @@ Returnerar versionsnumret för skriptbiblioteket
         }
       ```
 
-      * **** SubmitServiceProxyConfig: Tillåt användarna att registrera tjänster för överföring och inloggning.
+      * **SubmitServiceProxyConfig:** Tillåt användarna att registrera tjänster för överföring och inloggning.
 
          ```JavaScript
          window.formBridge.registerConfig("submitServiceProxyConfig",
@@ -117,81 +117,81 @@ Returnerar versionsnumret för skriptbiblioteket
          "submitUrl" : "`<submitUrl>`"
          });
          ```
-   * **** config: Konfigurationens värde
+   * **config:** Konfigurationens värde
 
 
 
-* **** Utdata: Objekt som innehåller det ursprungliga värdet för konfigurationen i *data* -egenskapen.
+* **Utdata:** Objekt som innehåller det ursprungliga värdet för konfigurationen i *data* -egenskapen.
 
-* **** Fel: Ingen
+* **Fel:** Ingen
 
 **hideFields(fieldArray)** Döljer de fält vars uttryck är angivna i fieldArray. Anger egenskapen presence för de angivna fälten till osynlig
 
 * **Indata:**
 
-   * **** fieldArray: Array med vissa uttryck för de fält som ska döljas
+   * **fieldArray:** Array med vissa uttryck för de fält som ska döljas
 
-* **** Utdata: Ingen
-* **** Fel: Ingen
+* **Utdata:** Ingen
+* **Fel:** Ingen
 
 **showFields(fieldArray)** Visar de fält vars uttryck är angivna i fieldArray. Anger egenskapen presence för de angivna fälten till visible
 
 * **Indata:**
 
-   * **** fieldArray: Array med vissa uttryck för de fält som ska visas
+   * **fieldArray:** Array med vissa uttryck för de fält som ska visas
 
-* **** Utdata: Ingen
-* **** Fel: Ingen
+* **Utdata:** Ingen
+* **Fel:** Ingen
 
 **hideSubmitButtons()** Döljer alla skicka-knappar i formuläret
 
 * **Indata**: Ingen
 * **Utdata**: Ingen
-* **Fel**: Utlöser ett undantag om formulärtillståndet inte har initierats
+* **Fel**: Utlöser ett undantag om formulärtillståndet inte initieras
 
 **getFormState()** Returnerar den JSON som representerar formulärläget
 
-* **** Indata: Ingen
-* **** Utdata: Objekt som innehåller JSON som representerar det aktuella formulärtillståndet i *egenskapen data* .
+* **Indata:** Ingen
+* **Utdata:** Objekt som innehåller JSON som representerar det aktuella formulärtillståndet i *egenskapen data* .
 
-* **** Fel: Ingen
+* **Fel:** Ingen
 
 **restoreFormState(options)** Återställer formulärtillståndet från det angivna JSON-läget i options-objektet. Läget används och hanterare för lyckade eller fel anropas när åtgärden har slutförts
 
 * **Indata:**
 
-   * **** Alternativ: JavaScript-objekt som innehåller följande egenskaper:
+   * **Alternativ:** JavaScript-objekt som innehåller följande egenskaper:
 
       * **Fel**: Felhanterarfunktion
       * **lyckades**: Hanterarfunktionen Slutfört
       * **kontext**: Det objekt som kontexten (this) för funktionen *success* anges till
       * **formState**: Formulärets JSON-tillstånd. Formuläret återställs till JSON-läget.
 
-* **** Utdata: Ingen
-* **** Fel: Ingen
+* **Utdata:** Ingen
+* **Fel:** Ingen
 
 **setFocus (som)** Anger fokus på fältet som anges i som-uttrycket
 
-* **** Indata: Ett uttryck för fältet som fokus ska ställas in på
-* **** Utdata: Ingen
-* **** Fel: Utlöser ett undantag om ett felaktigt SOM-uttryck används
+* **Indata:** Ett uttryck för fältet som fokus ska ställas in på
+* **Utdata:** Ingen
+* **Fel:** Utlöser ett undantag om ett felaktigt SOM-uttryck används
 
 **setFieldValue (som, value)** Anger värdet för fälten för de angivna som-uttrycken
 
 * **Indata:**
 
-   * **** som: Array som innehåller vissa uttryck för fältet. Det uttryck som anger fältets värde.
-   * **** värde: Arrayen innehåller värden som motsvarar de som finns i en **** somarray. Om värdeets datatyp inte är densamma som fieldType ändras inte värdet.
+   * **som:** Array som innehåller vissa uttryck för fältet. Det uttryck som anger fältets värde.
+   * **värde:** Arrayen innehåller värden som motsvarar de som finns i en **** somarray. Om värdeets datatyp inte är densamma som fieldType ändras inte värdet.
 
-* **** Utdata: Ingen
-* **** Fel: Utlöser ett undantag om ett felaktigt SOM-uttryck används
+* **Utdata:** Ingen
+* **Fel:** Utlöser ett undantag om ett felaktigt SOM-uttryck används
 
 **getFieldValue (som)** Returnerar värdet för fälten för angivna som-uttryck
 
-* **** Indata: Array som innehåller vissa uttryck av fält vars värde måste hämtas
-* **** Utdata: Objekt som innehåller resultatet som en array i **data** -egenskapen.
+* **Indata:** Array som innehåller vissa uttryck av fält vars värde måste hämtas
+* **Utdata:** Objekt som innehåller resultatet som en array i **data** -egenskapen.
 
-* **** Fel: Ingen
+* **Fel:** Ingen
 
 ### Exempel på getFieldValue() API {#example-of-nbsp-getfieldvalue-api}
 
@@ -210,23 +210,23 @@ if(a.errors) {
 
 * **Indata:**
 
-   * **** som: Array som innehåller vissa uttryck för fälten
+   * **som:** Array som innehåller vissa uttryck för fälten
    * **egenskap**: Namn på egenskapen vars värde krävs
 
-* **** Utdata: Objekt som innehåller resultatet som en array i *data* -egenskapen
+* **Utdata:** Objekt som innehåller resultatet som en array i *data* -egenskapen
 
-* **** Fel: Ingen
+* **Fel:** Ingen
 
 **setFieldProperties(som, property, values)** Anger värdet för den givna egenskapen för alla fält som anges i som-uttryck
 
 * **Indata:**
 
-   * **** som: Array som innehåller vissa uttryck för de fält vars värde måste anges
+   * **som:** Array som innehåller vissa uttryck för de fält vars värde måste anges
    * **egenskap**: Egenskap vars värde måste anges
-   * **** värde: Array som innehåller värden för den angivna egenskapen för fält som anges i som-uttryck
+   * **värde:** Array som innehåller värden för den angivna egenskapen för fält som anges i som-uttryck
 
-* **** Utdata: Ingen
-* **** Fel: Ingen
+* **Utdata:** Ingen
+* **Fel:** Ingen
 
 ## Exempel på användning av API:t för Form Bridge {#sample-usage-of-form-bridge-api}
 
@@ -261,5 +261,3 @@ if(a.errors) {
     formBridge.submitForm({success:suc,error:err}); // not passing a context means that this will be formBridge itself. Validation errors will be checked.
   }
 ```
-
-**[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)**
