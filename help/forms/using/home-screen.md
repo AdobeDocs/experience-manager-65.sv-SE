@@ -10,7 +10,7 @@ topic-tags: forms-app
 discoiquuid: ba79479b-4159-4a39-95eb-2285e7ece9d4
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4a0f3f64095b4726f295a0c1857a1e999353f5f5
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -21,7 +21,7 @@ När du loggar in på appen AEM Forms omdirigeras du till hemskärmen.
 
 ## Standardhemskärm {#default-home-screen}
 
-Som standard visas alla formulär, inklusive startpunkter och uppgifter (om den anslutna servern är AEM Forms Workflow aktiverad), tillsammans med tillhörande miniatyrbilder på startskärmen. Du kan ange miniatyrbilder på AEM Forms-servern.
+Som standard visas alla formulär, inklusive startpunkter och uppgifter (om den anslutna servern är AEM Forms Workflow aktiverad) på startskärmen, tillsammans med tillhörande miniatyrbilder. Du kan ange miniatyrbilder på AEM Forms-servern.
 
 Följande bild är kommenterad med utanrop till de viktigaste komponenterna på startskärmen.
 
@@ -45,5 +45,3 @@ Du kan ändra programmets standardhemskärm antingen från programmets **[allmä
 Ändringen av inställningen för startskärmen i appen påverkar startskärmen för den inloggade användaren eller användaren på den aktuella mobila enheten.
 
 Ändringen i HTML Workspace påverkar dock alla AEM Forms-appanvändare som är inloggade på AEM Forms-servern.
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
