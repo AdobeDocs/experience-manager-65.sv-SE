@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: ca3f6025-7e17-4173-8267-e24a338ea4a1
 translation-type: tm+mt
-source-git-commit: 21623c615ebe69226cfaf84baf4cfb1717b449f4
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -359,5 +359,3 @@ Utför följande steg för att anpassa snabbmenyn Detaljåtgärdsåtgärder:
 * Öppna /apps/ws/js/registry.js för redigering.
 * Leta reda på följande text: `text!/lc/libs/ws/js/runtime/templates/taskdetails.html`
 * Ersätt den placerade texten med följande text: `text!/lc/apps/ws/js/runtime/templates/taskdetails.html`
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
