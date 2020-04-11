@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 discoiquuid: 7e404b45-1302-4dd1-b3c9-3f47fedb5f94
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -35,7 +35,7 @@ AEM LiveCycle Connector ingår i [AEM Forms-tilläggspaketet](/help/forms/using/
     -Djavax.net.ssl.trustStore=<<em>path to LC keystore</em>>
    ```
 
-    alternativ.
+   alternativ.
 
 * **Användarnamn**- Anger användarnamnet för kontot som används för att upprätta kommunikation mellan AEM och LiveCycle. Kontot är ett LiveCycle-användarkonto som har behörighet att starta Document Services.
 * **Lösenord**- Anger lösenordet.
@@ -219,8 +219,8 @@ Följande tjänster är tillgängliga:
 * com.adobe.idp.um.api.AuthenticationManager
 * com.adobe.idp.um.api.DirectoryManager
 * com.adobe.idp.um.api.AuthorizationManager
-* com.adobe.idp.dsc.Registry.service.ServiceRegistry
-* com.adobe.idp.dsc.Registry.component.ComponentRegistry
+* com.adobe.idp.dsc.registry.service.ServiceRegistry
+* com.adobe.idp.dsc.registry.component.ComponentRegistry
 
 #### Maven-beroenden {#maven-dependencies}
 
@@ -466,8 +466,8 @@ Följande tjänster är tillgängliga:
 
 Följande tjänster är tillgängliga:
 
-* com.adobe.database.bindings.ResourceRepository
-* com.adobe.database.bindings.ResourceSynchronizer
+* com.adobe.repository.bindings.ResourceRepository
+* com.adobe.repository.bindings.ResourceSynchronizer
 
 #### Maven-beroenden {#maven-dependencies-14}
 
@@ -478,5 +478,3 @@ Följande tjänster är tillgängliga:
   <version>11.0.0</version>
 </dependency>
 ```
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
