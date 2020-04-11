@@ -11,7 +11,7 @@ topic-tags: hTML5_forms
 discoiquuid: a644978e-5736-4771-918a-dfefe350a4a1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -185,4 +185,3 @@ Så som beskrivs ovan anropar profilåtergivaren JSP Forms Service via en sling 
 
 Med HTML5-formulär kan utvecklare skapa profil- och profilåtergivning för att anpassa formulärens utseende. Med HTML-formulär kan utvecklare t.ex. integrera formulär på en panel eller &lt;div> i en befintlig HTML-portal.
 Mer information om hur du skapar anpassade profiler finns i [Skapa en anpassad profil](/help/forms/using/custom-profile.md).
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
