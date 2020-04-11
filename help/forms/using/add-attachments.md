@@ -10,7 +10,7 @@ topic-tags: forms-app
 discoiquuid: d5976ed2-4482-495c-bf77-6d192379cfef
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -54,7 +54,7 @@ Du kan använda kameran på din mobila enhet eller sparade bilder på enheten f�
 
       Ta ett foto. Tryck sedan på knappen **Använd** ![use-pic](assets/use-pic.png) .
 
-      Du kan också trycka på **Återuppta** ![om du vill ta fotot igen](assets/retake.png) .
+      Du kan också trycka på **Återuppta** ![omtagning](assets/retake.png) för att ta fotot igen.
 
    1. Om du väljer **Galleri**.
 
@@ -66,7 +66,7 @@ Med alternativet **Anteckningar** kan du lägga till frihandsskript och textbila
 
 1. Tryck på knappen Bifogad fil ![längst ned](assets/attch.png) i fönstret.
 1. Tryck på **Anteckningar** i popup-fönstret som visas.
-1. Hämta ett frihandsskript i det användargränssnitt som startas.
+1. Hämta ett frihandsskript i anteckningsgränssnittet som startas.
 
    ![Klottra](assets/scribble-ui.png)
 
@@ -87,6 +87,3 @@ Bifogade filer för mobilformulär som synkroniseras med AEM Forms OSGi-servrar 
 Bilagor på formulärnivå stöds inte för adaptiva formulär som läses in i appen från en AEM Forms OSGi-server. Om du vill bifoga bilder eller textanteckningar aktiverar du bilagor på fältnivå i formuläret när du redigerar det. Dra och släpp den bifogade filkomponenten från komponentwebbläsaren i fältet.
 
 När det gäller anpassningsbara formulär kan du visa de bifogade filerna i postdokumentet (DoR). Se [Generera arkivdokument för icke-XFA adaptiva formulär](../../forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md).
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
-
