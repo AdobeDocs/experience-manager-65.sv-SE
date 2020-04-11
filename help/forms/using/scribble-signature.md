@@ -11,7 +11,7 @@ topic-tags: designer
 discoiquuid: ecd7f538-9c24-48e7-8450-596851e99cff
 docset: aem65
 translation-type: tm+mt
-source-git-commit: dfa983db4446cbb0cbdeb42297248aba55b3dffd
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -63,7 +63,7 @@ När ett signaturskriptfält har lagts till i formuläret och återgetts öppnas
 
 ![geolokalisering](assets/geolocation.png)
 
-******** S. Pensel **B. Suddgummi** C.**Geolocation** D. Geoplatsinformation
+**S.** Pensel **B.** Suddgummi **C.** Geolocation **D.** Geoplatsinformation
 
 ### Geotaggning {#geo-tagging}
 
@@ -72,7 +72,7 @@ När du klickar på ikonen för geopositionering när du skapar klottret bäddas
 >[!NOTE]
 Som standard är det obligatoriskt att bädda in geolokaliseringsinformation på iPad.
 
-På iPad visas inte geopositioneringsikonen som standard och geopositioneringsinformationen bäddas in automatiskt när du klickar på **OK**.
+På iPad visas inte geopositioneringsikonen som standard, och geopositioneringsinformationen bäddas in automatiskt när du klickar på **OK**.
 
 För iPad kan den här inställningen ändras genom att värdet för parametern ändras till `geoLocManadatoryOnIpad` `0`i fältets init-parametrar.
 
@@ -101,5 +101,3 @@ Så här tar du bort signaturer från formuläret:
 
 * (Mobila enheter) Tryck länge på signaturfältet och tryck på **Ja** i bekräftelsedialogrutan.
 * (Skrivbord) Håll markören över signaturfältet, klicka på ikonen **Avbryt** och klicka på **Ja** i bekräftelsedialogrutan.
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
