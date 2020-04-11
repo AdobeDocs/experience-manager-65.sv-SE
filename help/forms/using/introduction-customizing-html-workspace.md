@@ -11,7 +11,7 @@ topic-tags: forms-workspace
 discoiquuid: 021c6606-8cd3-472c-a80b-b1bcace7e87f
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 21623c615ebe69226cfaf84baf4cfb1717b449f4
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -42,7 +42,7 @@ De vanligaste stegen beskrivs i [Allmänna steg för anpassning](../../forms/usi
 
 Innan du anpassar arbetsytan bör du bekanta dig med den standardformatmall som finns i AEM Forms på /libs/ws/css/style.css.
 
-Om du vill anpassa arbetsytan bör du bekanta dig med den befintliga formatmallen, style.css, som finns i mappen /libs/ws/css. Nedan beskrivs några viktiga komponenter.
+Om du vill anpassa arbetsytan bör du bekanta dig med den befintliga formatmallen, style.css, som finns i mappen /libs/ws/css. Några viktiga komponenter beskrivs nedan.
 
 <table>
  <tbody>
@@ -263,7 +263,7 @@ Paketet kan byggas med de tre profiler som beskrivs nedan.
 
       * mallar - Innehåller alla mallar, det vill säga HTML-filer för alla komponenter i AEM Forms-arbetsytan.
    * main.js (kombinerat, minifierat och uglifierat).
-   * register.js
+   * registry.js
 
 
 
@@ -308,7 +308,7 @@ Paketet kan byggas med de tre profiler som beskrivs nedan.
 
       * mallar - Innehåller alla mallar, det vill säga HTML-filer för alla komponenter i AEM Forms-arbetsytan.
    * main.js (kombinerat).
-   * register.js
+   * registry.js
 
 
 
@@ -357,7 +357,7 @@ mvn clean -P Dev install on client-pkg
       * util - Innehåller alla verktygsfiler (JavaScript) som används i AEM Forms-arbetsytan.
       * vyer - Innehåller vyer över alla komponenter på arbetsytan i AEM Forms.
    * main.js
-   * register.js
+   * registry.js
    * router.js
 
 
@@ -380,5 +380,3 @@ mvn clean -P Dev install on client-pkg
 * html.jsp
 * content.xml
 * _rep_policy.xml
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
