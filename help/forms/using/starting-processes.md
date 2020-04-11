@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: c9d3f369-3744-41d5-b340-390ab7e03f36
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -127,5 +127,3 @@ Du kan lägga till alla processer i kategorin Favoriter. Genom att ange favorite
 >Om du vanligtvis startar processer när du använder arbetsytan i AEM Forms kan du ställa in inställningen Startplats så att kategorin Favoriter visas automatiskt när du startar arbetsytan i AEM Forms. Mer information finns i Hantera inställningar i [Komma igång med arbetsytan](/help/forms/using/getting-started-livecycle-html-workspace.md)för AEM-formulär.
 
 Markera en process som favorit genom att markera den i sin kategori och klicka på den ofyllda stjärnan. Stjärnan blir guld. Om du vill avmarkera en process som en favorit klickar du på den gyllene stjärnan igen.
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
