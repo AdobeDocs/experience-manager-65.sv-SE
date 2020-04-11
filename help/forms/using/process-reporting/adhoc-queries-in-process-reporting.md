@@ -2,7 +2,7 @@
 title: Ad hoc-frågor i processrapportering
 seo-title: Ad hoc-frågor i processrapportering
 description: Skapa anpassade frågor för att söka efter AEM Forms i JEE-process och uppgiftsinformation i Process Reporting
-seo-description: Skapa anpassade frågor för att söka efter AEM Forms i JEE-process och uppgiftsinformation i Process Reporting
+seo-description: Create custom queries to search for AEM Forms on JEE  process and task details in Process Reporting
 uuid: db0c5c28-b213-4582-a6ed-df127e570a4e
 content-type: reference
 topic-tags: process-reporting
@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: b0a544e2-2ce4-48e2-a721-82f481d36004
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 8f90dc4865126d52e04effc9197ef7145b1a167e
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -27,7 +27,7 @@ Dessutom kan ad hoc-frågor definieras med hjälp av egenskapsfilter för proces
 
 [**Processinformation **](/help/forms/using/process-reporting/adhoc-queries-in-process-reporting.md#p-process-task-details-p): Visa information om en processinstans genom att ange process-ID.
 
-**Uppgiftssökning**: Sök efter aktivitetsinstanser med ett användardefinierat sökfilter baserat på aktivitetsattribut.
+**Task Search**: Search for task instances with a user-defined search filter based on task attributes.
 
 **Uppgiftsinformation**: Visa information om en aktivitetsinstans genom att ange uppgifts-ID.
 
@@ -96,7 +96,7 @@ När du har skapat en fråga använder du alternativen i det övre högra hörne
 
 * **Avbryt**: Avbryt ändringarna och gå tillbaka till panelen **Mina filter** .
 * **Kör**: Kör den aktuella frågan för att se och/eller verifiera resultatet. I det här fallet behöver du inte spara frågan innan du kör frågan. Du kan verifiera resultatet, göra eventuella ändringar och sedan spara frågan när du är nöjd med resultatet.
-* **Spara**:Spara filtret. Filtret kan sedan visas och köras från panelen **Mina filter** .
+* **Spara**: Spara filtret. Filtret kan sedan visas och köras från panelen **Mina filter** .
 
 ### Alternativ på panelen Mina filter {#options-in-my-filters-panel}
 
@@ -188,7 +188,7 @@ Du kan visa information om en viss AEM Forms-process/uppgift:
 
    ![process_details](assets/process_details.png)
 
-   **** Vänster panel: Visar följande information om den valda processen:
+   **Vänster panel:** Visar följande information om den valda processen:
 
    * Namn på process
    * Datum och tid för processskapande
@@ -196,7 +196,7 @@ Du kan visa information om en viss AEM Forms-process/uppgift:
    * Processens längd
    * Processstatus
    * Processinitierare
-   **** Panelen längst upp till höger: Visar följande information om de uppgifter som utgör den valda processen:
+   **Panelen längst upp till höger:** Visar följande information om de uppgifter som utgör den valda processen:
 
    * Aktivitets-ID
    * Uppgiftsnamn
@@ -206,7 +206,7 @@ Du kan visa information om en viss AEM Forms-process/uppgift:
    * Datum och tid för slutförande av uppgift
    * Aktivitetsvaraktighet
    * Uppgiftsstatus
-   **** Panelen längst ned till höger: Visar följande information om processhistoriken för den valda processen:
+   **Panelen längst ned till höger:** Visar följande information om processhistoriken för den valda processen:
 
    * Processnamn
    * Processinitierare
@@ -217,7 +217,7 @@ Du kan visa information om en viss AEM Forms-process/uppgift:
 
    ![task_details](assets/task_details.png)
 
-   **** Vänster panel: Visar följande information om den valda aktiviteten:
+   **Vänster panel:** Visar följande information om den valda aktiviteten:
 
    * Aktivitetsnamn
    * ID för processen som den här aktiviteten tillhör
@@ -227,13 +227,13 @@ Du kan visa information om en viss AEM Forms-process/uppgift:
    * Aktivitetsvaraktighet
    * Uppgiftsstatus
    * Markerat uppgiftsflöde
-   **** Panelen längst upp till höger: Visar följande information om de formulär som utgör den valda uppgiften:
+   **Panelen längst upp till höger:** Visar följande information om de formulär som utgör den valda uppgiften:
 
    * Foprm-ID
    * Datum och tid då formuläret skapades
    * Datum och tid för formuläruppdatering
    * Formulärmallens URL
-   **** Panelen längst ned till höger: Visar följande information om processhistoriken för den valda uppgiften:
+   **Panelen längst ned till höger:** Visar följande information om processhistoriken för den valda uppgiften:
 
    * Typ av aktivitetstilldelning
    * Aktivitetsägare
@@ -266,5 +266,3 @@ Du kan visa information om en viss AEM Forms-process/uppgift:
    För en process visar frågeresultatet information om de uppgifter som ingår i processen.
 
    För en uppgift visar frågeresultatet detaljerna i de formulär som ingår i uppgiften.
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
