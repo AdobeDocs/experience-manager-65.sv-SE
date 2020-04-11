@@ -10,7 +10,7 @@ topic-tags: process-reporting
 discoiquuid: 7c1fcde0-b983-4b24-bc19-fcee1d4f096b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -279,5 +279,3 @@ Mer information om datapubliceringstjänsten och hur du schemalägger den här t
 * **[!UICONTROL Synkronisera]**: Synkronisera den inbäddade processrapportdatabasen med AEM Forms-databasen.
 * **[!UICONTROL Hjälp]**: Visa hjälpdokumentationen om processrapportering.
 * **[!UICONTROL Utloggning]**: Logga ut från processrapportering
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
