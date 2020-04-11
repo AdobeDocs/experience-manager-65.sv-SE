@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f4d98cb9-84d8-4735-91d2-b9ceec861e5e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d12d35bf8355d3069071523427a7794b88c09b13
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -49,7 +49,7 @@ Nedan följer några förutsättningar för att skapa en interaktiv kommunikatio
    * **[!UICONTROL Bokför process]**: Välj namnet på arbetsflödet som ska utlösas. När du väljer AEM-arbetsflöde anger du sökväg till bifogad fil, layoutsökväg, PDF-sökväg, sökväg till utskriftsdata och webbdatasökväg.
    * **[!UICONTROL Taggar]**: Markera taggarna som ska användas i den interaktiva kommunikationen. Du kan också skriva in ett nytt/anpassat taggnamn och trycka på Retur för att skapa det.
    * **[!UICONTROL Författare]**: Författarnamnet hämtas automatiskt från den inloggade användarens användarnamn.
-   * **** Publiceringsdatum: Ange det datum då den interaktiva kommunikationen ska publiceras.
+   * **[!UICONTROL Publiceringsdatum:]** Ange det datum då den interaktiva kommunikationen ska publiceras.
    * **[!UICONTROL Avpubliceringsdatum]**: Ange det datum då den interaktiva kommunikationen ska avpubliceras.
 
 1. Tryck på **[!UICONTROL Nästa]**. Skärmen där du anger utskrifts- och webbkanalsinformation visas.
@@ -85,7 +85,7 @@ Mer information om gränssnittet för utveckling av interaktiv kommunikation fin
    | **Komponent** | **Funktionalitet** |
    |---|---|
    | Diagram | Lägger till ett diagram som du kan använda i interaktiv kommunikation för visuell representation av tvådimensionella data som hämtats från en formulärdatamodellsamling. Mer information finns i [Använda diagram i interaktiv kommunikation](/help/forms/using/chart-component-interactive-communications.md). |
-   | Dokumentfragment | Gör att du kan lägga till en återanvändbar komponent, som text, lista eller villkor, i en interaktiv kommunikation. Komponenten som läggs till kan antingen vara modellbaserad för formulärdata eller utan en formulärdatamodell. |
+   | Dokumentfragment | Gör att du kan lägga till en återanvändbar komponent, som text, lista eller villkor, i en interaktiv kommunikation. Den tillagda komponenten kan antingen vara formulärdatamodellbaserad eller utan någon formulärdatamodell. |
    | Bild | Gör att du kan infoga en bild. |
 
    Dra och släpp komponenterna i din interaktiva kommunikation och konfigurera dem efter behov.
@@ -141,15 +141,15 @@ En obunden variabel som används i ett dokumentfragment kanske inte visas i redi
 
 ![Obunden variabel](assets/df_unbound_variable_new.png)
 
-Tryck på dokumentfragmentet, tryck på ![configure_icon](assets/configure_icon.png) (Configure) och sedan på **[!UICONTROL Properties]** från sidan för Interactive Communication. I avsnittet **[!UICONTROL Variabler och Datamodellobjekt]** listas variablerna, inklusive de dolda variablerna och datamodellsobjekten som används i dokumentfragmenten. Använd ![redigeringsikonen](https://helpx.adobe.com/content/dam/help/images/en/edit.png) (Redigera) bredvid varje datamodellsobjekt eller variabel för att redigera egenskaperna.
+Tryck på dokumentfragmentet, tryck på ![configure_icon](assets/configure_icon.png) (Configure) och sedan på **[!UICONTROL Properties]** från sidan för Interactive Communication. I avsnittet **[!UICONTROL Variabler och Datamodellobjekt]** listas variablerna, inklusive de dolda variablerna och datamodellsobjekten som används i dokumentfragmenten. Använd ![redigeringsikonen](assets/edit.svg) (Redigera) bredvid varje datamodellsobjekt eller variabel för att redigera egenskaperna.
 
 1. Om du vill ställa in bindning för variabler trycker du på en variabel och väljer ![configure_icon](assets/configure_icon.png) (Configure). Sedan ställer du in bindningsegenskaperna på egenskapspanelen i sidlisten.
 
    * **Ingen**: Agenten fyller i variabelns värde.
    * **Textfragment**: Om du väljer det här alternativet kan du bläddra och markera ett textdokumentfragment vars innehåll återges i fältet. Endast textdokumentfragment kan bindas till variabler som inte har några variabler inuti.
    * **Datamodellobjekt**: Välj en formulärdatamodellsegenskap vars värde är ifyllt i fältet.
-   * **** Standardvärde: I det här fältet kan du definiera ett standardvärde för variabeln. Värdet visas när du förhandsgranskar den interaktiva kommunikationen eller i agentgränssnittet.
-   * **** Visningsmönster: Du kan också definiera ett visningsformat för en variabel. Välj något av de fördefinierade alternativen i listrutan **Typ** om du vill använda ett visningsformat för en variabel. Välj **Egen** om du vill definiera ett visningsmönster som inte är tillgängligt i listan. Mer information finns i [Datavisningsmönster](../../forms/using/create-interactive-communication.md#datadisplaypatterns).
+   * **Standardvärde:** I det här fältet kan du definiera ett standardvärde för variabeln. Värdet visas när du förhandsgranskar den interaktiva kommunikationen eller i agentgränssnittet.
+   * **Visningsmönster:** Du kan också definiera ett visningsformat för en variabel. Välj något av de fördefinierade alternativen i listrutan **Typ** om du vill använda ett visningsformat för en variabel. Välj **Egen** om du vill definiera ett visningsmönster som inte är tillgängligt i listan. Mer information finns i [Datavisningsmönster](../../forms/using/create-interactive-communication.md#datadisplaypatterns).
    Navigera till [Variabler och Datamodellobjekt](../../forms/using/create-interactive-communication.md#hiddenvariables) för att ställa in bindning för dolda variabler i dokumentfragmentet.
 
    Du kan också dra och släppa datakällelement eller textdokumentfragment för att ställa in bindning av variabler.  Om du vill skapa en bindning med något av datakällelementen väljer du fliken **Datakällor** och drar och släpper elementet till variabelnamnet. Datakällelementet och variabeln måste vara av samma typ för att bindningen ska kunna konfigureras korrekt. Om du drar och släpper ett datakällelement till en redan bunden variabel, ersätter det nya elementet det föregående och skapar en ny bindning med variabeln. På samma sätt väljer du fliken **Resurser** och drar och släpper textdokumentfragmentet till variabelnamnet för att ange bindningen mellan dem. Textdokumentfragmentet får inte innehålla några variabler.
@@ -182,7 +182,7 @@ Tryck på dokumentfragmentet, tryck på ![configure_icon](assets/configure_icon.
 
    ![webbkanalresurser](assets/webchannelassets.png)
 
-   Tryck på dokumentfragmentet, tryck på ![configure_icon](assets/configure_icon.png) (Configure) och sedan på **[!UICONTROL Properties]** från sidan för Interactive Communication. I avsnittet **[!UICONTROL Variabler och Datamodellobjekt]** listas variablerna, inklusive de dolda variablerna och datamodellsobjekten som används i dokumentfragmenten. Använd ![redigeringsikonen](https://helpx.adobe.com/content/dam/help/images/en/edit.png) (Redigera) bredvid varje datamodellsobjekt eller variabel för att redigera egenskaperna. För dokumentfragment som har genererats [](../../forms/using/create-interactive-communication.md#main-pars-header-1213963149) automatiskt i en webbkanal med hjälp av kanalen Skriv ut använder du ikonen ![](assets/cancelinheritance.png) (avbryt arv) bredvid varje datamodellsobjekt och variabel för att [avbryta arv](../../forms/using/create-interactive-communication.md#main-pars-header-103384010) och för att kunna redigera dem.
+   Tryck på dokumentfragmentet, tryck på ![configure_icon](assets/configure_icon.png) (Configure) och tryck sedan på **[!UICONTROL Properties]** från sidan för Interactive Communication. I avsnittet **[!UICONTROL Variabler och Datamodellobjekt]** listas variablerna, inklusive de dolda variablerna och datamodellsobjekten som används i dokumentfragmenten. Använd ![redigeringsikonen](assets/edit.svg) (Redigera) bredvid varje datamodellsobjekt eller variabel för att redigera egenskaperna. För dokumentfragment som har genererats [](../../forms/using/create-interactive-communication.md#main-pars-header-1213963149) automatiskt i en webbkanal med hjälp av kanalen Skriv ut använder du ikonen ![](assets/cancelinheritance.png) (avbryt arv) bredvid varje datamodellsobjekt och variabel för att [avbryta arv](../../forms/using/create-interactive-communication.md#main-pars-header-103384010) och för att kunna redigera dem.
 
 1. Om du vill lägga till fler komponenter i webbkanalen när webbkanalen är vald trycker du på **[!UICONTROL Komponenter]**. Dra och släpp komponenter i webbkanalen i din interaktiva kommunikation efter behov och fortsätt att konfigurera dem.
 
@@ -240,7 +240,7 @@ I utskriftskanalen kan du konfigurera bilagor och biblioteksåtkomst så att age
    * **[!UICONTROL Filer som ska bifogas]**: Tryck på **[!UICONTROL Lägg till]** och bläddra till de filer som ska bifogas och ange följande:
 
       * **[!UICONTROL Bifoga den här filen till dokument som standard]**: Du kan ändra det här alternativet om bara bilagan inte är obligatorisk.
-      * **** Obligatoriskt: Agenten kan inte ta bort den bifogade filen i agentens användargränssnitt.
+      * **[!UICONTROL Obligatoriskt:]** Agenten kan inte ta bort den bifogade filen i agentens användargränssnitt.
    ![bifogade filer](assets/attachfiles.png)
 
 1. Tryck på **[!UICONTROL Klar]**.
@@ -376,7 +376,7 @@ Tryck på rotpanelen i webbmallen och tryck **+** för att lägga till en **tabe
 
 ![Komponentverktygsfältet](assets/component_toolbar_table_row_new.png)
 
-******** S. Lägg till rad **B. Radera rad** C.**Flytta upp** D. Flytta nedåt
+**S.** Lägg till rad **B.** Radera rad **C.** Flytta upp **D.** Flytta nedåt
 
 #### Lägga till eller redigera text i tabellceller {#addedittexttable}
 
@@ -393,7 +393,7 @@ Tryck på rotpanelen i webbmallen och tryck **+** för att lägga till en **tabe
 
 #### Skapa en hyperlänk för text i tabellcellen {#createhyperlinktable}
 
-1. Markera standardtextrutan i tabellcellen och tryck på ![](https://helpx.adobe.com/content/dam/help/images/en/edit.png) (Redigera).
+1. Markera standardtextrutan i tabellcellen och tryck på ![](assets/edit.svg) (Redigera).
 1. Markera texten i tabellcellen och tryck på ikonen Hyperlänk.
 1. Ange URL:en i fältet **Sökväg** .
 1. Tryck ![](assets/done_icon.png) för att spara hyperlänksegenskaperna.
@@ -573,17 +573,17 @@ När du har autogenererat innehåll i webbkanalen med alternativet Synkronisera 
 
 Tryck på komponenten för att visa följande alternativ:
 
-* **** Copy: Kopiera en komponent och klistra in den på andra platser i den interaktiva kommunikationen.
-* **** Klipp ut: Flytta en komponent från en plats till en annan i den interaktiva kommunikationen.
-* **** Infoga komponent: Infoga en komponent ovanför den markerade komponenten.
-* **** Klistra in: Klistra in komponenten som du klipper ut eller kopierar med alternativen som beskrivs ovan.
-* **** Grupp: Markera flera komponenter om du vill klippa ut, kopiera eller klistra in mer än en komponent tillsammans.
-* **** Överordnad: Markera den överordnade komponenten för en komponent.
-* **** Visa SOM-uttryck: Visa [SOM-uttrycket](../../forms/using/using-som-expressions-adaptive-forms.md) för komponenten.
+* **Copy:** Kopiera en komponent och klistra in den på andra platser i den interaktiva kommunikationen.
+* **Klipp ut:** Flytta en komponent från en plats till en annan i den interaktiva kommunikationen.
+* **Infoga komponent:** Infoga en komponent ovanför den markerade komponenten.
+* **Klistra in:** Klistra in komponenten som du klipper ut eller kopierar med alternativen som beskrivs ovan.
+* **Grupp:** Markera flera komponenter om du vill klippa ut, kopiera eller klistra in mer än en komponent tillsammans.
+* **Överordnad:** Markera den överordnade komponenten för en komponent.
+* **Visa SOM-uttryck:** Visa [SOM-uttrycket](../../forms/using/using-som-expressions-adaptive-forms.md) för komponenten.
 
-* **** Gruppera objekt i panelen: Gruppera komponenterna på en panel för att kunna utföra åtgärder på dessa komponenter samtidigt. Mer information finns i **[Gruppera objekt på panelen](../../forms/using/create-interactive-communication.md#main-pars-header-1815149576)**.
+* **Gruppera objekt i panelen:** Gruppera komponenterna på en panel för att kunna utföra åtgärder på dessa komponenter samtidigt. Mer information finns i **[Gruppera objekt på panelen](../../forms/using/create-interactive-communication.md#main-pars-header-1815149576)**.
 
-* **** Avbryt arv: Avbryt [arvet](../../forms/using/create-interactive-communication.md#main-pars-header-103384010) av komponenterna i målområdet för att redigera dem.
+* **Avbryt arv:** Avbryt [arvet](../../forms/using/create-interactive-communication.md#main-pars-header-103384010) av komponenterna i målområdet för att redigera dem.
 
 ### Gruppera objekt i panelen {#groupobjectspanel}
 
