@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 3d93375e-ec37-4445-96ea-d315676787b4
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -123,5 +123,3 @@ Volymrapporten för arbetsflöde visar antalet aktuella och slutförda instanser
    * **Uppdatera**: Uppdaterar rapporten med de senaste data som finns i lagringen
    * **Ändra förklaringsfärg**: Markera och ändra färgen på rapportförklaringen
    * **Exportera till CSV**: Exportera och hämta data från rapporten till en kommaavgränsad fil
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
