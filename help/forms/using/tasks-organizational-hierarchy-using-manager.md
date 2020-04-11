@@ -11,7 +11,7 @@ topic-tags: forms-workspace
 discoiquuid: 2e60df86-d8ff-4cf9-b801-9559857b5ff4
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -113,10 +113,8 @@ AEM Forms begränsar en användares åtkomst till endast de uppgifter som använ
 1. Distribuera DSC via Workbench. Starta om `ProcessManagementTeamTasksService` tjänsten.
 1. Du kan behöva uppdatera webbläsaren eller logga ut/logga in med användaren igen.
 
-Följande skärm visar hur du får tillgång till uppgifter i direkta rapporter och tillgängliga åtgärder.
+Följande skärm visar hur du får åtkomst till uppgifter i direkta rapporter och tillgängliga åtgärder.
 
 ![cu_manager_view](assets/cu_manager_view.png)
 
 Få tillgång till uppgifter som hör till underställda och agera på dessa
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
