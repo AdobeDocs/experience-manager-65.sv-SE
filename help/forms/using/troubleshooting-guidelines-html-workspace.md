@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 5dae9ed9-77a3-44f5-a94d-ca5c355c8730
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -192,5 +192,3 @@ Skript och format kan felsökas i olika webbläsare.
 1. HTML-formulär, använda Processegenskaper i sin design, när de återges i AEM Forms-arbetsytan, visar knappen Skicka i formuläret.
 
    När du utformar formulär läggs en Skicka-knapp till i formuläret när du använder Processegenskaper. När knappen Skicka återges som en PDF-fil på arbetsytan för AEM Forms visas den inte för slutanvändaren. När du återger som ett HTML-formulär på arbetsytan i AEM Forms visas knappen Skicka för slutanvändaren. Om du klickar på knappen Skicka i formuläret initieras ingen åtgärd. När du klickar på knappen Skicka längst ned på arbetsytan i AEM Forms, utanför formuläret, slutförs uppgiften.
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
