@@ -9,7 +9,7 @@ topic-tags: forms-workspace
 discoiquuid: f70f21e3-3bec-490d-889e-faf496fb738b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -114,5 +114,3 @@ Följ de här stegen för att skapa en uppgift som återger och skickar ett brev
    >[!NOTE]
    >
    >Knappen Skicka är inte aktiverad förrän alla obligatoriska variabler i brevet har fyllts i.
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
