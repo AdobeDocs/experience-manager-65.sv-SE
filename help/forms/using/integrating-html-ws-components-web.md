@@ -10,14 +10,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 6be87939-007e-42c7-8a41-e34ac2b8bed4
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
 
 # Integrera AEM Forms-arbetsytekomponenter i webbprogram {#integrating-aem-forms-workspace-components-in-web-applications}
 
-Du kan använda [komponenter](/help/forms/using/description-reusable-components.md) på arbetsytan för AEM Forms i ditt eget webbprogram. I följande exempelimplementering används komponenter från ett AEM Forms-utvecklingspaket som är installerat på en CRX™-instans för att skapa ett webbprogram. Anpassa lösningen nedan efter dina specifika behov. Exempelimplementeringen återanvänder `UserInfo`, `FilterList`och `TaskList`komponenter i en webbportal.
+Du kan använda [komponenter](/help/forms/using/description-reusable-components.md) på arbetsytan för AEM Forms i ditt eget webbprogram. The following sample implementation uses components from an AEM Forms workspace dev package installed on a CRX™ instance to create a web application. Anpassa lösningen nedan efter dina specifika behov. Exempelimplementeringen återanvänder `UserInfo`, `FilterList`och `TaskList`komponenter i en webbportal.
 
 1. Logga in i CRXDE Lite-miljön på `https://'[server]:[port]'/lc/crx/de/`. Kontrollera att du har ett AEM Forms-arbetsytedev-paket installerat.
 1. Skapa en bana `/apps/sampleApplication/wscomponents`.
@@ -55,7 +55,7 @@ Du kan använda [komponenter](/help/forms/using/description-reusable-components.
 
    >[!NOTE]
    >
-   >Varje komponent läggs till i komponenttaggen (med klasskomponent) vid återgivningen. Kontrollera att din hemsida innehåller dessa taggar. Mer information om de här grundläggande kontrolltaggarna finns i filen för `html.jsp` arbetsytan i AEM Forms.
+   >Each component is added to the component tag (having class gcomponent) while rendering. Kontrollera att din hemsida innehåller dessa taggar. Mer information om de här grundläggande kontrolltaggarna finns i filen för `html.jsp` arbetsytan i AEM Forms.
 
 1. Om du vill anpassa komponenterna kan du utöka de befintliga vyerna för den önskade komponenten enligt följande:
 
@@ -89,5 +89,3 @@ Du kan använda [komponenter](/help/forms/using/description-reusable-components.
        margin: 0 auto;
    }
    ```
-
-**[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)**
