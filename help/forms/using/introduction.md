@@ -9,7 +9,7 @@ topic-tags: hTML5_forms
 discoiquuid: 672ee050-63d1-46ed-bef2-f55800208d78
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -45,5 +45,3 @@ AEM ger också en enhetlig vy för att lista och hantera alla formulärmallar me
 ### Anpassa formulär {#forms-customization}
 
 HTML5-formulär återger formulärmallar med HTML5-standardkonstruktioner. Detta gör det enkelt att anpassa och utöka formulär i HTML5-format med hjälp av webbtekniker, främst CSS och JavaScript. Du kan enkelt anpassa utseendet på befintliga widgetar, skapa egna widgetar eller använda anpassade format i formulär. Mer information om hur du skapar anpassade widgetar och anpassar befintliga widgetar finns i [Plugin-program i anpassade widgetar med HTML5-formulär](../../forms/using/custom-widgets.md).
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
