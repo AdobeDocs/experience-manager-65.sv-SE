@@ -10,7 +10,7 @@ topic-tags: forms-workspace
 discoiquuid: 538591fe-29e4-40c4-a045-06095cc0c6b8
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -57,5 +57,3 @@ Ett exempel:
 1. Uppgiftsmodellen genererar en ryggbenshändelse som ett meddelande om att återgivningsanropet är slutfört.
 1. En annan vy, aktivitetsinformationsvyn lyssnar på den här händelsen från aktivitetsmodellen.
 1. Vyn Uppgiftsinformation ändrar sedan mallen för uppgiftsinformation så att den återgivna uppgiften (formulär, detaljer, bilagor, anteckningar och så vidare) visas för användaren.
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
