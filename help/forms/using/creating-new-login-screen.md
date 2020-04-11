@@ -10,7 +10,7 @@ topic-tags: forms-workspace
 discoiquuid: 35497785-263d-44b1-9ee4-85921997295b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -264,7 +264,7 @@ Du kan ändra inloggningsskärmen för alla AEM Forms-moduler som använder inlo
 
 ### Lägg till nya bilder {#add-new-images}
 
-1. Följ stegen i Lägga till nytt format eller ändra befintligt format (dokumenteras ovan).
+1. Följ stegen i Lägga till ett nytt format eller ändra ett befintligt format (dokumenteras ovan).
 1. Lägg till nya bilder i `/apps/livecycle/core/content/login`. Så här lägger du till bild:
 
    1. Installera WebDAV-klienten.
@@ -296,5 +296,3 @@ Du kan ändra inloggningsskärmen för alla AEM Forms-moduler som använder inlo
    
    <div class="newLginContainerBkg">
    ```
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
