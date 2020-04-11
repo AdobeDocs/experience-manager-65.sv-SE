@@ -10,7 +10,7 @@ topic-tags: hTML5_forms
 discoiquuid: 081f7c17-4e5d-4c7e-a5c3-5541a29b9d55
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -133,5 +133,3 @@ Skicka-tjänstproxyn väljer en topologi om den skicka-URL:en finns i request-pa
 * Om proxyn skickar data, skickar proxytjänsten alla parametrar utom submitUrl till slutpunkten */bin/xfaforms/submit* och tar emot xml-byte i svarsströmmen. Sedan skickar proxytjänsten data-xml-byte till submitUrl för bearbetning.
 
 * Innan data skickas (POST-begäran) till en server kontrollerar HTML5-formulär serverns anslutning och tillgänglighet. HTML-formulär skickar en tom huvudbegäran till servern för att verifiera anslutningen och tillgängligheten. Om servern är tillgänglig skickar HTML5-formuläret data (POST-begäran) till servern. Om servern inte är tillgänglig visas ett felmeddelande, *Could not connect to the server,* . Avancerad identifiering förhindrar att användarna behöver fylla i formuläret på ett enkelt sätt. Proxyservern hanterar huvudbegäran och genererar inget undantag.
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
