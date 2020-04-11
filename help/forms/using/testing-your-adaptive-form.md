@@ -8,7 +8,7 @@ contentOwner: khsingh
 discoiquuid: ecddb22e-c148-441f-9088-2e5b35c7021b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 709d8fe467f5449eb1e844a49126535a4a4a6e7a
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -17,7 +17,7 @@ source-git-commit: 709d8fe467f5449eb1e844a49126535a4a4a6e7a
 
 ![](do-not-localize/10-test-your-adaptive-form.png)
 
-Den här självstudiekursen är ett steg i serien [Create Your First Adaptive Form](https://helpx.adobe.com/experience-manager/6-3/forms/using/create-your-first-adaptive-form.html) . Vi rekommenderar att du följer serien i kronologisk ordning för att förstå, utföra och demonstrera det fullständiga exemplet på självstudiekurser.
+Den här självstudiekursen är ett steg i serien [Create Your First Adaptive Form](https://helpx.adobe.com/experience-manager/6-3/forms/using/create-your-first-adaptive-form.html) . Vi rekommenderar att du följer serien i kronologisk ordning för att förstå, utföra och demonstrera det fullständiga självstudiekurserna.
 
 När det adaptiva formuläret är klart är det viktigt att du testar adaptivet innan du distribuerar det till slutanvändarna. Du kan manuellt testa (funktionstesta) alla fält eller automatisera testningen av ditt adaptiva formulär. När du har flera adaptiva formulär blir det en svår uppgift att manuellt testa alla fält i alla adaptiva formulär.
 
@@ -45,7 +45,7 @@ Testsviter har en samling testfall. Du kan ha flera testsviter. Vi rekommenderar
    <td><strong>Värde</strong></td>
   </tr>
   <tr>
-   <td> kategorier</td>
+   <td>kategorier</td>
    <td>Sträng</td>
    <td>Aktiverad</td>
    <td>
@@ -142,7 +142,7 @@ En åtgärd är en specifik aktivitet i ett adaptivt formulär som att klicka p�
    <td><strong>Värde</strong></td>
   </tr>
   <tr>
-   <td> kategorier</td>
+   <td>kategorier</td>
    <td>Sträng</td>
    <td>Aktiverad</td>
    <td>
@@ -210,8 +210,8 @@ En åtgärd är en specifik aktivitet i ett adaptivt formulär som att klicka p�
 
 En testsvit kan ha flera testfall. Du kan köra alla testfall i en testsvit samtidigt eller individuellt. När du kör ett test anger ikonerna resultatet:
 
-* En bockmarkeringsikon anger att testet har slutförts: ![](https://helpx.adobe.com/content/dam/help/icons/Checkmark.png)
-* En X-ikon anger att testet misslyckades: ![](https://helpx.adobe.com/content/dam/help/icons/Cross.png)
+* En bockmarkeringsikon anger att testet har slutförts: ![](assets/save_icon.svg)
+* En X-ikon anger att testet misslyckades: ![](assets/close-icon.svg)
 
 1. Navigera till AEM-ikonen > **[!UICONTROL Verktyg]**> **[!UICONTROL Åtgärder]**> **[!UICONTROL Testning]**
 1. Så här kör du alla tester i Test Suite:
