@@ -10,7 +10,7 @@ topic-tags: process-reporting
 discoiquuid: a6ff50df-273d-48f7-b0c6-0e69e900b97f
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -76,5 +76,3 @@ Tjänsten använder sedan OSGi-tjänster för att hämta relevanta rapporterings
 Du kan skapa egna anpassade rapporter och visa dessa rapporter på fliken Anpassade rapporter i användargränssnittet för processrapportering.
 
 Anvisningar om hur du skapar en anpassad rapport finns i Skapa en anpassad rapport i artikeln [Anpassade rapporter i processrapportering](/help/forms/using/process-reporting/process-reporting-custom-reports.md).
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
