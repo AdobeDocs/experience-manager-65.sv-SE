@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: forms-app
 discoiquuid: fabc981e-0c9e-4157-b0a1-0c13717fb6cd
 translation-type: tm+mt
-source-git-commit: 4a0f3f64095b4726f295a0c1857a1e999353f5f5
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -82,9 +82,9 @@ Följande bild visar katalogstrukturen för `android`mappen i `src`mappen.
 1. I Android™ Studio väljer du **[!UICONTROL Importera projekt (Eclipse ADT, Gradle, etc.)]**.
 1. I projektutforskaren väljer du rotkatalogen för projektet som du vill skapa i textrutan **Rotkatalog** :
 
-   **** För Mac: [User_Home]/Projects/MobileWorkspace/src/android
+   **För Mac:** [User_Home]/Projects/MobileWorkspace/src/android
 
-   **** För Windows®: %HOMEPATH%\Projects\MobileWorkspace\src\android
+   **För Windows®:** %HOMEPATH%\Projects\MobileWorkspace\src\android
 
 1. När projektet har importerats visas ett popup-fönster med alternativet att uppdatera Android™-pluginmodulen Gradle. Klicka på lämplig knapp beroende på dina behov.
 
@@ -107,5 +107,3 @@ Du kan installera programmet på en Android™-enhet via [Android™ Debug Bridg
 **För MAC-användare**: `adb install [User_Home]/Projects/[your-project]/adobe-lc-mobileworkspace-src-[version]/android/build/outputs/apk/android-debug.apk`
 
 **För Windows®-användare**: `adb install %HOMEPATH%\Projects\[your-project]\adobe-lc-mobileworkspace-src-[version]\android\build\outputs\apk\android-debug.apk`
-
-**[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)**
