@@ -10,7 +10,7 @@ topic-tags: forms-workspace
 discoiquuid: 6a32d240-c6a6-4937-a31f-7a5ec3c60b1f
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -137,7 +137,7 @@ Några vanliga frågor om åtgärdsprofiler är följande:
 * Återge nytt HTML-formulär (nytt)
 * Standardåtergivningsformulär (nytt)
 
-Och likvärdiga inskickningsprocesser.
+Och likvärdiga sändningsprocesser.
 
 ![gen_question_b_20](assets/gen_question_b_20.png) **Vilka åtgärdsprofiler kommer att vara tillgängliga?**
 
@@ -160,4 +160,4 @@ Ja, eftersom de tidigare återgivnings- och skicketjänsterna som är kopplade t
 Om du har ändrat befintliga tjänster för återgivning eller skickning av PDF-formulär eller skapat anpassade tjänster (till exempel custom1) och nu vill använda samma funktioner för HTML-återgivning. Du måste replikera den nya renderings- eller skicka-tjänsten (till exempel custom2) och tillämpa liknande anpassningar på dessa. Nu kan du ändra åtgärdsprofilen för XDP-filen så att den börjar använda anpassade2-tjänster i stället för custom1 för rendering eller sändning.
 
 Vad behöver processdesignern göra för att formuläret ska kunna återges i HTML på en enhet och i PDF på en dator?
-Vad behöver processdesignern göra för att formuläret ska kunna återges i HTML på en enhet och i PDF på en dator?  [Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
+Vad behöver processdesignern göra för att formuläret ska kunna återges i HTML på en enhet och i PDF på en dator?
