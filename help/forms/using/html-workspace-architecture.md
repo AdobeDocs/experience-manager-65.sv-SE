@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: c3a312fb-f684-477d-916d-2d3c99aa7607
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -34,5 +34,3 @@ Paket som levereras för AEM Forms-arbetsytan:
 
 * `adobe-lc-workspace-pkg-<version>.zip`: Det är ett CRX-paket, dvs. det kan distribueras i CRX med hjälp av pakethanteraren.
 * `adobe-lc-workspace-<version>-src.zip`: Det är ett arkiv som innehåller fullständig kod för arbetsytan i AEM Forms och skript för att skapa distributionspaketen Ship, Debug och Dev.
-
-**[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)**
