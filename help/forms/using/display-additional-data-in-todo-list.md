@@ -10,7 +10,7 @@ topic-tags: forms-workspace
 discoiquuid: fed3b562-bcc2-4fb7-8fd2-35b1ac621e16
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -149,5 +149,3 @@ Slutligen måste du ta med en post i dev-paketet för varje egenskap som du vill
    ```
    <span class="stepname" alt="<%= $.t('task.stepname.value')%>" title = '<%= $.t("task.stepname.tooltip",{stepName:stepName})%>'/>
    ```
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
