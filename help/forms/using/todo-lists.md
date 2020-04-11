@@ -11,7 +11,7 @@ topic-tags: forms-workspace
 discoiquuid: d8546227-d78d-4fe2-a092-222482bb69c9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 21623c615ebe69226cfaf84baf4cfb1717b449f4
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -100,7 +100,7 @@ När du öppnar och gör anspråk på en uppgift från en grupp eller delad list
    * Om du vill göra anspråk på en uppgift, utan att öppna den, från en grupp eller delad Att göra-lista, klickar du på **Gör anspråk** genom att hålla pekaren över uppgiften. När en uppgift är öppen är anspråksknappen också tillgänglig i åtgärdsfältet nedanför åtgärdsrutan. När du gör anspråk på en uppgift flyttas den från gruppen eller den delade Att göra-listan till din lista.
    * Om du vill göra anspråk på och öppna en uppgift från en grupp eller delad Att göra-lista klickar du på **Gör anspråk på och öppnar**.
 
-## Arbeta med uppgifter {#working-with-tasks}
+## Working with tasks {#working-with-tasks}
 
 När du har öppnat en uppgift beror uppgiften på vilka flikar som visas i huvudrutan och vilka verktyg som är tillgängliga. Flikarna som du kan se beskrivs nedan:
 
@@ -108,7 +108,7 @@ När du har öppnat en uppgift beror uppgiften på vilka flikar som visas i huvu
 
 **Information**: Ger information om den aktuella uppgiften och processen som den tillhör.
 
-**Formulär**: Visar formuläret som är associerat med uppgiften. Formuläret kan vara av många filtyper, bland annat PDF, HTML, Guide och SWF. Formuläret kan se ut som ett vanligt utskrivbart eller webbaserat formulär eller vägleda dig genom en serie guideliknande paneler för att samla in information.
+**Formulär**: Visar formuläret som är associerat med uppgiften. Formuläret kan vara av många filtyper, bland annat PDF-, HTML-, guide- och SWF-filer. Formuläret kan se ut som ett vanligt utskrivbart eller webbaserat formulär eller vägleda dig genom en serie guideliknande paneler för att samla in information.
 
 **Historik**: Visar de uppgifter som ingår i processinstansen och det tillhörande formuläret, uppgiftstilldelningar och bilagor för varje uppgift.
 
@@ -215,7 +215,7 @@ Du kan slutföra en uppgift på flera olika sätt:
 * Från din Att göra-lista, utan att öppna uppgiftenObs! Det här alternativet är tillgängligt om `isMustOpenToComplete` fältet inte är markerat i `Assign Task` steget i Workbench när du utformar en process.
 * Om du får e-postmeddelanden via e-post
 
-När du har slutfört en uppgift kan en bekräftelsedialogruta visas som bekräftar åtgärden. Du kan till exempel se en dialogruta där du ombeds bekräfta att den information som du har angett är giltig.
+När du har slutfört en uppgift kan en bekräftelsedialogruta visas som bekräftar åtgärden. Du kan till exempel se en dialogruta där du ombeds bekräfta att den information du har angett är giltig.
 
 >[!NOTE]
 >
@@ -306,7 +306,7 @@ Alla uppgifter som är tilldelade dig visas i listan Att göra (kö).
 
 Alla grupper och delade Att göra-listor som du har åtkomst till visas också i den vänstra rutan på Att göra-sidan. Du kan slutföra uppgifter från alla Att göra-listor som du har tillgång till.
 
-En lista med att göra-uppgifter för en grupp kan ha fler än en medlem. En administratör konfigurerar grupper att göra-listor baserat på organisationens specifika krav. Gruppera Att göra-listor är ett sätt att distribuera arbete bland flera personer som har liknande ansvarsområden.
+En lista med att göra-uppgifter för en grupp kan ha fler än en medlem. En administratör konfigurerar grupper att göra-listor baserat på organisationens specifika krav. Gruppera Att göra-listor är ett sätt att distribuera arbete bland flera personer som delar liknande ansvarsområden.
 
 Alla i teamet hanterar t.ex. låneblanketter. Alla dessa uppgifter skickas till en gruppAtt göra-lista som alla medlemmar i gruppen har åtkomst till. Varje medlem i din grupp har åtkomst till uppgifterna från Att göra-listan.
 
@@ -330,7 +330,7 @@ Tänk på att för att en användare ska kunna se en uppgift i en delad kö mås
 
 **Dela din kö**
 
-1. Klicka på ikonen + på fliken **Köer** på fliken **Inställningar** för Användare som för närvarande delar min kö.
+1. På fliken **Köer** på fliken **Inställningar** klickar du på ikonen + för Användare som för närvarande delar min kö.
 1. Sök efter och välj namnet på användaren.
 1. Klicka på knappen **Dela** för att dela kön med den valda användaren.
 1. Markera namnet på användaren och klicka på **Dela**.
@@ -361,7 +361,7 @@ Om du får åtkomst till en annan användares Att göra-lista kan du inte visa n
 
 Om du tänker vara utanför kontoret kan du ange vad som ska hända med uppgifter som har tilldelats dig för den perioden.
 
-Du kan ange startdatum och -tid och slutdatum och sluttid så att dina inställningar som inte är på kontoret börjar gälla. Om du befinner dig i en annan tidszon än servern används tidszonen för servern.
+Du kan ange ett startdatum och en sluttid och ett slutdatum och en sluttid så att dina inställningar som inte är på kontoret börjar gälla. Om du befinner dig i en annan tidszon än servern används tidszonen för servern.
 
 Du kan ange en standardperson som alla dina uppgifter skickas till. Du kan också ange undantag för uppgifter från specifika processer som ska skickas till en annan användare eller som ska finnas kvar i din Att göra-lista tills du kommer tillbaka. Om den utsedda personen även är utanför kontoret, kommer uppgiften att utföras av den användare som han/hon har utsett. Om uppgiften inte kan tilldelas till en användare som inte är utanför kontoret finns uppgiften kvar i din Att göra-lista.
 
@@ -389,5 +389,3 @@ Du kan ange en standardperson som alla dina uppgifter skickas till. Du kan ocks�
    >Processdesignern kan ange att uppgifter från vissa processer alltid ska hållas privata och inte vidarebefordras till andra användare. Den här inställningen åsidosätter alla inställningar som du gör.
 
 1. När du är klar med inställningarna klickar du på **Spara**. Om dina inställningar indikerar att du inte är på kontoret för tillfället, träder ändringarna i kraft omedelbart. Annars börjar de gälla vid angivet startdatum och angiven starttid. Om du loggar in när du inte är på kontoret beaktas du inte på kontoret förrän du ändrar dina inställningar.
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
