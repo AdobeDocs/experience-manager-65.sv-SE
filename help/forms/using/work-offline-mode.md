@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: 9a3c6ab4-8bb9-40c7-8c56-59153b364887
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -18,7 +18,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 Med offlineläget i appen AEM Forms kan du arbeta smidigt även om appen är offline. Du kan öppna, uppdatera och skicka ett formulär utan att behöva ansluta till nätverket.
 
-Du börjar arbeta med appen AEM Forms genom att synkronisera appen med AEM Forms-servern. Alla formulär som du har tilldelats hämtas i appen. För AEM Forms på JEE hämtas uppgifter på fliken Åtgärder och startpunkter som är kopplade till formulär och andra formulär på fliken Formulär. För AEM Forms på OSGi läses endast Forms in på fliken Forms.
+Du börjar arbeta med appen AEM Forms genom att synkronisera appen med AEM Forms-servern. Alla formulär som du har tilldelats hämtas i din app. För AEM Forms på JEE hämtas uppgifter på fliken Åtgärder och startpunkter som är kopplade till formulär och andra formulär på fliken Formulär. För AEM Forms på OSGi läses endast Forms in på fliken Forms.
 
 Mer information om hur du synkroniserar appen finns i [Synkronisera appen](/help/forms/using/sync-app.md).
 
@@ -44,9 +44,7 @@ Så här konfigurerar du offlinekomponenten på serversidan i AEM Forms-appen:
 
    * **Rensa cache**: Rensar serversidans cache för formulärberoenden.
    * **Återställ konfiguration**: Återställer AEM Forms-appens offlinekonfiguration.
-   * **Cachegiltighet**: Anger giltighetsperioden för offlinecachen på serversidan.
-   * **Resursobjektssökvägar**: Anger sökvägar där offlinetjänsten övervakar resursändringar. Om några ändringar görs i de angivna sökvägarna uppdateras offlinecachen för alla beroende formulär. Exempel, `/etc/clientlibs/fd,/content/dam/images`.
+   * **Cache Validity**: Specifies the validity period for the server-side offline cache.
+   * **Resource Observation Paths**: Specifies paths where the offline service monitors for resource changes. If any changes occur in the specified paths, the offline cache of all dependent forms is updated. Exempel, `/etc/clientlibs/fd,/content/dam/images`.
 
-1. På fliken **Manuell resurscache** anger du att det inte går att identifiera formulärberoenden i offlinetjänsten. Du kan ange resurser, till exempel bilder som läses in från JavaScript. AEM Forms-appen hämtar dessa resurser även i offlineläge.
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
+1. In the **Manual Resource Cache** tab, specify the form dependencies offline service cannot identify. You can specify resources such as images loaded from within JavaScript. AEM Forms app will download these resources as well for the offline mode.
