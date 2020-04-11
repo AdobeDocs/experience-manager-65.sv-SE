@@ -10,7 +10,7 @@ topic-tags: process-reporting
 discoiquuid: 222daab8-4514-44a5-b5c9-c5510809c74e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -658,4 +658,4 @@ Förutsättningen för att skapa ett separat användargränssnitt för att visa 
 
 Importera paketet för att integrera anpassade rapporter och användargränssnitt som beskrivs i artikeln till användargränssnittet för processhantering. `sample-report-pkg-1.zip`
 
-[Få](assets/sample-report-pkg-1.zip)kontakt med[filsupporten](https://www.adobe.com/account/sign-in.supportportal.html)
+[Hämta fil](assets/sample-report-pkg-1.zip)
