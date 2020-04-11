@@ -10,7 +10,7 @@ topic-tags: forms-app
 discoiquuid: 1ea60fb2-cf9f-4a87-bd8e-98150e668456
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -47,5 +47,3 @@ Om programmet är offline sparas formuläret och dess data i mappen Utkorgen.
 Om appen är online synkroniseras uppgiften med AEM Forms-servern och tilldelas den användare som anges i processen.
 
 Information om hur du arbetar med uppgiften i uppgiftslistan finns i [Öppna en uppgift](/help/forms/using/open-task.md).
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
