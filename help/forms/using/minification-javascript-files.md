@@ -10,14 +10,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: c88a3013-5da2-4b09-9f29-ac1fb00822ec
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
 
-# Miniatyrbilder av JavaScript-filer {#minification-of-the-javascript-files}
+# Minification of the JavaScript files {#minification-of-the-javascript-files}
 
-Med miniatyr tas de redundanta tecknen bort från källkoden, till exempel blanksteg, ny rad och kommentarer. Detta förbättrar prestandan genom att minska storleken på koden. Miniatyrfunktionen påverkar inte funktionen, men den minskar kodens läsbarhet.
+Med miniatyr tas de redundanta tecknen bort från källkoden, till exempel blanksteg, ny rad och kommentarer. This improves the performance by reducing the size of the code. Miniatyrfunktionen påverkar inte funktionen, men den minskar kodens läsbarhet.
 
 Följ de här stegen för att generera miniatyrkod för semantiska ändringar.
 
@@ -72,5 +72,3 @@ Följ de här stegen för att generera miniatyrkod för semantiska ändringar.
 >[!NOTE]
 >
 >Uppgraderingen påverkas om du minimerar.
-
-**[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)**
