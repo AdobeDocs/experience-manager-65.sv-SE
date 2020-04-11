@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: f6440a36-719a-4f89-b7db-1af918a3469a
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -152,7 +152,7 @@ Kontrollera att du har följande bilder:
 
 1. Öppna `Capture.xcodeproj` projektet i Xcode.
 
-1. Navigera till `www/wsmobile/images`mappen.
+1. Navigate to the `www/wsmobile/images`folder.
 1. Om du vill ändra logotyp ersätter du standardfilen `LC-logo.png` med den anpassade `LC-logo.png` filen.
 1. Om du vill ändra bakgrund ersätter du standardfilen `Landing_bg.jpeg` med den anpassade `Landing_bg.jpeg`filen.
 1. Bygg och kör appen AEM Forms på iOS-enheter eller iOS-simulatorer.
@@ -161,7 +161,7 @@ Kontrollera att du har följande bilder:
 
 1. Öppna Android-projektet i Eclipse.
 
-1. Navigera till `assets/www/wsmobile/images`mappen.
+1. Navigate to the `assets/www/wsmobile/images`folder.
 1. Om du vill ändra logotyp ersätter du standardfilen `LC-logo.png` med den anpassade `LC-logo.png` filen.
 1. Om du vill ändra bakgrund ersätter du standardfilen `Landing_bg.jpeg` med den anpassade `Landing_bg.jpeg`filen.
 1. Bygg och kör appen AEM Forms på en Android-enhet.
@@ -170,7 +170,7 @@ Kontrollera att du har följande bilder:
 
 1. Öppna `MWSWindows.sln` projektet i Visual Studio.
 
-1. Navigera till `MWSWindows\www\wsmobile\images`mappen.
+1. Navigate to the `MWSWindows\www\wsmobile\images`folder.
 1. Om du vill ändra logotyp ersätter du standardfilen `LC-logo.png` med den anpassade `LC-logo.png` filen.
 1. Om du vill ändra bakgrund ersätter du standardfilen `Landing_bg.jpeg` med den anpassade `Landing_bg.jpeg`filen.
 1. Bygg och kör appen AEM Forms på en Windows-enhet.
@@ -202,7 +202,7 @@ Kontrollera att du har följande bild:
 
 1. Öppna `Capture.xcodeproj` projektet i Xcode.
 
-1. Navigera till `www/wsmobile/images`mappen.
+1. Navigate to the `www/wsmobile/images`folder.
 1. Om du vill ändra logotypen ersätter du standardfilen `aem_icon.png` med den anpassade `aem_icon.png` filen.
 1. Bygg och kör appen AEM Forms på iOS-enheter eller iOS-simulatorer.
 
@@ -210,7 +210,7 @@ Kontrollera att du har följande bild:
 
 1. Öppna Android-projektet i Eclipse.
 
-1. Navigera till `assets/www/wsmobile/images`mappen.
+1. Navigate to the `assets/www/wsmobile/images`folder.
 1. Om du vill ändra logotypen ersätter du standardfilen `aem_icon.png` med den anpassade `aem_icon.png` filen.
 1. Bygg och kör appen AEM Forms på en Android-enhet.
 
@@ -218,8 +218,6 @@ Kontrollera att du har följande bild:
 
 1. Öppna `MWSWindows.sln` projektet i Visual Studio.
 
-1. Navigera till `MWSWindows\www\wsmobile\images`mappen.
+1. Navigate to the `MWSWindows\www\wsmobile\images`folder.
 1. Om du vill ändra logotypen ersätter du standardfilen `aem_icon.png` med den anpassade `aem_icon.png` filen.
 1. Bygg och kör appen AEM Forms på en Windows-enhet.
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
