@@ -1,8 +1,8 @@
 ---
 title: Plattformar som stöds för AEM Forms på JEE
 seo-title: Plattformar som stöds för AEM Forms på JEE
-description: Lista över infrastrukturkomponenter som krävs och stöds för installation av AEM Forms på JEE
-seo-description: Lista över infrastrukturkomponenter som krävs och stöds för installation av AEM Forms på JEE
+description: Lista över infrastrukturkomponenter som krävs och stöds för installation av AEM Forms i JEE
+seo-description: Lista över infrastrukturkomponenter som krävs och stöds för installation av AEM Forms i JEE
 uuid: 777f943b-4cb4-444e-a036-8032b9fce5be
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b41060207a1fb522905259a0d33df690d606929d
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -714,5 +714,3 @@ Under omständigheter som Adobe inte kan kontrollera kan korrigeringsfiler från
 Adobe förbehåller sig rätten att ändra de referensplattformar från tredje part som stöds av en AEM Forms on JEE-release och de korrigeringsdefinitioner som stöds vid varje given tidpunkt.
 
 Ytterligare information om patchar från tredje part finns också på Adobe Enterprise Support-webbplatsen för kunskapsdatabasartiklar om din produkt.
-
-[Kontakta supporten](https://www.adobe.com/account/sign-in.supportportal.html)
