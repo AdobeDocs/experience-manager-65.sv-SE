@@ -4,7 +4,7 @@ description: Lär dig resurshanteringsåtgärder som överföring, hämtning, re
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: be619b71dd0bb1addc10f4dbdbd2f00bc86dd003
+source-git-commit: 82ed39dac05591b9bdc9fda101ed450c2096dc60
 
 ---
 
@@ -902,9 +902,7 @@ Versionsfunktionen gör följande:
 
    ![tidslinje](assets/timeline.png)
 
-1. Tryck/klicka på ikonen **[!UICONTROL Åtgärder]** (pil) längst ned för att visa tillgängliga åtgärder som du kan utföra på resursen.
-
-   ![chlimage_1-249](assets/chlimage_1-45.png)
+1. Klicka på **[!UICONTROL Åtgärder]** längst ned för att visa tillgängliga åtgärder som du kan utföra på resursen.
 
 1. Tryck/klicka på **[!UICONTROL Spara som version]** för att skapa en version för resursen.
 
