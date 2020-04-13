@@ -4,7 +4,7 @@ description: Lär dig resurshanteringsåtgärder som överföring, hämtning, re
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 82ed39dac05591b9bdc9fda101ed450c2096dc60
+source-git-commit: d1331c8c023a1e414e0231d082667d67c4adf17a
 
 ---
 
@@ -160,7 +160,7 @@ Med Dynamic Media kan du batchöverföra resurser via FTP-servern. Om du tänker
 1. Tryck på **[!UICONTROL Spara]** i det nedre högra hörnet av dialogrutan Alternativ för överföringsjobb.
 1. Tryck på **[!UICONTROL Skicka överföring]** i det nedre högra hörnet på sidan Överför.
 
-   Om du vill visa överföringsförloppet trycker du på **[!UICONTROL Jobb]**i det globala navigeringsfältet. På sidan Jobb visas överföringsförloppet. Du kan fortsätta arbeta i AEM och när som helst återgå till jobbsidan i Dynamic Media Classic för att granska ett pågående jobb.
+   Om du vill visa överföringsförloppet trycker du på **[!UICONTROL Jobb]**i det globala navigeringsfältet. På sidan Jobb visas överföringsförloppet. Du kan när som helst fortsätta arbeta i AEM och gå tillbaka till jobbsidan i Dynamic Media Classic för att granska ett pågående jobb.
 Om du vill avbryta ett pågående överföringsjobb trycker du på **[!UICONTROL Avbryt]** bredvid Varaktighet.
 
 #### Alternativ för överföringsjobb {#upload-job-options}
@@ -878,65 +878,61 @@ Här är ett exempel på hur du kan konfigurera AEM för att skriva ut antecknin
 1. Konfigurera PDF-filen med anteckningen genom att ange parametern font-family till `Arial Unicode MS, Noto Sans, Noto Sans CJK JP, sans-serif`. Den här konfigurationen är tillgänglig som standard och fungerar för alla europeiska språk och CJK-språk.
 1. Om det språk du väljer skiljer sig från de språk som nämns i steg 2 lägger du till en lämplig (kommaseparerad) post i standardteckensnittsfamiljen.
 
-## Resursversioner {#asset-versioning}
+## Skapa, hantera, förhandsgranska och återställa resursversioner {#asset-versioning}
 
 Versionshantering skapar en ögonblicksbild av digitala resurser vid en viss tidpunkt. Versionshantering hjälper till att återställa resurser till ett tidigare läge vid ett senare tillfälle. Om du till exempel vill ångra en ändring som du har gjort i en resurs återställer du den oredigerade versionen av resursen.
 
-Här följer exempel där du skapar versioner:
+Du kan skapa versioner i Experience Manager i följande scenarier:
 
-* Du ändrar en bild i ett annat program och överför den till AEM Resurser. En version av bilden skapas så att originalbilden inte skrivs över.
-* Du redigerar metadata för en resurs.
-* Du använder AEM-datorprogrammet för att checka ut en befintlig resurs och spara ändringarna. En ny version skapas varje gång resursen sparas.
+* Överför en resurs med samma filnamn som finns på samma plats. Det kan vara en ny tillgång eller en modifierad version av samma resurs.
+* Redigera en bild i Experience Manager och spara ändringarna.
+* Redigera metadata för en resurs.
+* Använd AEM-datorprogrammet för att checka ut en befintlig resurs, redigera den och [överföra dina ändringar](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#edit-assets-upload-updated-assets).
 
 Du kan även aktivera automatisk versionshantering via ett arbetsflöde. När du skapar en version för en resurs sparas metadata och återgivningar tillsammans med versionen. Återgivningar är renderingsalternativ för samma bilder, till exempel en PNG-återgivning av en överförd JPEG-fil.
 
-Versionsfunktionen gör följande:
+I Experience Manager kan ni
 
 * Skapa en version av en resurs.
 * Visa aktuell revision för en tillgång.
 * Återställ resursen till en tidigare version.
 
-1. Navigera till platsen för resursen som du vill skapa en version för och öppna resursens sida genom att trycka/klicka på den.
+1. Navigera till platsen för resursen som du vill skapa en version för och klicka på den för att öppna förhandsgranskningen. Öppna menyn i det övre vänstra hörnet på sidan och välj **[!UICONTROL Tidslinje]**.
 
-1. Tryck/klicka på ikonen GlobalNav och välj **[!UICONTROL Tidslinje]** på menyn.
+   ![Välj alternativet Tidslinje på den vänstra navigeringsmenyn](assets/timeline.png)
 
-   ![tidslinje](assets/timeline.png)
+*Bild: Öppna menyn i det övre vänstra området på sidan och välj alternativet[!UICONTROL Tidslinje].*
 
-1. Klicka på **[!UICONTROL Åtgärder]** längst ned för att visa tillgängliga åtgärder som du kan utföra på resursen.
+1. Så här skapar du en version av resursen:
 
-1. Tryck/klicka på **[!UICONTROL Spara som version]** för att skapa en version för resursen.
+   * Klicka på **[!UICONTROL Åtgärder]** längst ned.
+   * Klicka på **[!UICONTROL Spara som version]** för att skapa en version för resursen. Du kan även lägga till en etikett och en kommentar.
+   * Klicka på **[!UICONTROL Skapa]** för att skapa en version.
 
-   ![chlimage_1-250](assets/chlimage_1-46.png)
+      ![chlimage_1-251](assets/create-new-version-from-timeline.png)
 
-1. Lägg till en etikett och kommentar och klicka sedan på **[!UICONTROL Skapa]** för att skapa en version. Du kan också trycka/klicka på **Avbryt** för att avsluta åtgärden.
+1. Så här visar du en version av en resurs:
 
-   ![chlimage_1-251](assets/chlimage_1-47.png)
+   * Klicka på **[!UICONTROL Visa alla]** i [!UICONTROL tidslinjen].
+   * Klicka på **[!UICONTROL Versioner]**. Alla versioner som skapas för en resurs visas i den vänstra sidofältet.
 
-1. To view the new version, open the **[!UICONTROL Show All]** list in the timeline from the asset details page or the Assets UI, and choose **[!UICONTROL Versions]**. Alla versioner som skapas för en resurs visas på fliken Tidslinje. You can filter the list to show Versions, by clicking the drop arrow and selecting **[!UICONTROL Versions]** from the list.
+      ![versions_option](assets/versions_option.png)
 
-   ![versions_option](assets/versions_option.png)
+   * Välj en specifik version av resursen och klicka på **[!UICONTROL Förhandsgranska version]**.
 
-1. Välj en specifik version för resursen om du vill förhandsgranska den eller aktivera den för visning i resursgränssnittet.
+1. Så här återställer du till en äldre version av resursen: Efter återställning visas den här versionen i gränssnittet och är tillgänglig för användning [!DNL Assets] .
 
-   ![select_version](assets/select_version.png)
+   * Klicka på en version av resursen. Du kan också lägga till en etikett och en kommentar.
+   * Klicka på **[!UICONTROL Återställ till den här versionen]**.
 
-   >[!NOTE]
-   >
-   >Du kan också välja resursen i [listvyn](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources) eller i [kolumnvyn](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
+      ![select_version](assets/select_version.png)
 
-1. Lägg till en etikett och kommentar för versionen som ska återställas till den aktuella versionen i resursgränssnittet.
+1. Så här jämför du två versioner av en bild:
+   * Klicka på den version som ska jämföras med den aktuella versionen.
+   * Dra skjutreglaget åt vänster om du vill lägga den här versionen ovanpå den aktuella versionen och jämföra.
+   ![Använd reglaget för att jämföra de valda versionerna av en resurs med den aktuella versionen](assets/version-slider.gif)
 
-   ![save_version](assets/save_version.png)
-
-1. To generate a preview for the version, tap/click **[!UICONTROL Preview Version]**.
-1. Om du vill visa den här versionen i resursgränssnittet väljer du **[!UICONTROL Återställ till den här versionen]**.
-1. Om du vill jämföra två versioner går du till resursens tillgångssida och trycker/klickar på den version som ska jämföras med den aktuella versionen.
-
-   ![select_version_tocompare](assets/select_version_tocompare.png)
-
-1. Välj den version du vill jämföra på tidslinjen och dra reglaget åt vänster för att lägga den här versionen ovanpå den aktuella versionen och jämföra.
-
-   ![compare_versions](assets/compare_versions.png)
+   *Bild: Använd skjutreglaget för att enkelt jämföra de valda versionerna av en resurs med den aktuella versionen.*
 
 ### Starta ett arbetsflöde för en resurs {#starting-a-workflow-on-an-asset}
 
