@@ -8,7 +8,7 @@ discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: be4a8a78b8555149809b8026bfd059f4cc9e9401
+source-git-commit: 9daad219d885c1c6972ace0b247f3537dcdc38a9
 
 ---
 
@@ -116,7 +116,7 @@ En fullständig lista över funktioner, viktiga högdagrar, viktiga funktioner s
 
 * Flera sökfrågor utlöses när flera taggar väljs från sökfiltret (NPR-32143).
 
-* Experience Manager Assets-gränssnittet visar trunkerade filnamn när resurser med fler än 50 tecken i filnamnet överförs (NPR-32054).
+* Användargränssnittet i Experience Manager Assets visar trunkerade filnamn när resurser med fler än 50 tecken i filnamnet överförs (NPR-32054).
 
 * Alla kryssrutor på panelen Filter avmarkeras när den första och den andra kryssrutan avmarkeras när du har markerat två kryssrutor i kryssruteträdet i Adobe Stock (NPR-31919).
 
@@ -177,6 +177,8 @@ En fullständig lista över funktioner, viktiga högdagrar, viktiga funktioner s
 * Generering av URL för startbibliotek baseras endast på `path` och `library_name` värden från API:t Launch och är inte baserat på `library_path` värde (NPR-31550).
 
 * Ett felmeddelande visas när LiveFyre-relaterade objekt bearbetas (FYR-12420).
+
+* ReportSuitesServlet är sårbart för SSRF (NPR-32156).
 
 ### WCM-mallredigerare {#wcm-template-editor-6540}
 
