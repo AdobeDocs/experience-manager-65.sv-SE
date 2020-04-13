@@ -4,7 +4,7 @@ description: Lär dig resurshanteringsåtgärder som överföring, hämtning, re
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: d1331c8c023a1e414e0231d082667d67c4adf17a
+source-git-commit: 24c72d79fe1ebd140d7746759d73cbaffdd1ea2d
 
 ---
 
@@ -880,7 +880,7 @@ Här är ett exempel på hur du kan konfigurera AEM för att skriva ut antecknin
 
 ## Skapa, hantera, förhandsgranska och återställa resursversioner {#asset-versioning}
 
-Versionshantering skapar en ögonblicksbild av digitala resurser vid en viss tidpunkt. Versionshantering hjälper till att återställa resurser till ett tidigare läge vid ett senare tillfälle. Om du till exempel vill ångra en ändring som du har gjort i en resurs återställer du den oredigerade versionen av resursen.
+Versionshantering skapar en ögonblicksbild av digitala resurser vid en viss tidpunkt. Versionshantering hjälper till att återställa resurser till ett tidigare läge vid ett senare tillfälle. Om du till exempel vill ångra en ändring som du har gjort i en resurs återställer du den oredigerade versionen av resursen. I Experience Manager kan du skapa en version, visa den aktuella versionen, visa skillnader sida vid sida mellan två versioner av bilder och återställa en resurs till den tidigare versionen.
 
 Du kan skapa versioner i Experience Manager i följande scenarier:
 
@@ -891,17 +891,11 @@ Du kan skapa versioner i Experience Manager i följande scenarier:
 
 Du kan även aktivera automatisk versionshantering via ett arbetsflöde. När du skapar en version för en resurs sparas metadata och återgivningar tillsammans med versionen. Återgivningar är renderingsalternativ för samma bilder, till exempel en PNG-återgivning av en överförd JPEG-fil.
 
-I Experience Manager kan ni
-
-* Skapa en version av en resurs.
-* Visa aktuell revision för en tillgång.
-* Återställ resursen till en tidigare version.
-
 1. Navigera till platsen för resursen som du vill skapa en version för och klicka på den för att öppna förhandsgranskningen. Öppna menyn i det övre vänstra hörnet på sidan och välj **[!UICONTROL Tidslinje]**.
 
    ![Välj alternativet Tidslinje på den vänstra navigeringsmenyn](assets/timeline.png)
 
-*Bild: Öppna menyn i det övre vänstra området på sidan och välj alternativet[!UICONTROL Tidslinje].*
+   *Bild: Öppna menyn i det övre vänstra området på sidan och välj alternativet[!UICONTROL Tidslinje].*
 
 1. Så här skapar du en version av resursen:
 
@@ -910,6 +904,8 @@ I Experience Manager kan ni
    * Klicka på **[!UICONTROL Skapa]** för att skapa en version.
 
       ![chlimage_1-251](assets/create-new-version-from-timeline.png)
+
+      *Bild: Skapa en version av en resurs från vänster sidofält i[!UICONTROL tidslinjen].*
 
 1. Så här visar du en version av en resurs:
 
@@ -926,6 +922,8 @@ I Experience Manager kan ni
    * Klicka på **[!UICONTROL Återställ till den här versionen]**.
 
       ![select_version](assets/select_version.png)
+
+      *Bild: Välj en version och återgå till den. Den blir den aktuella versionen som sedan är tillgänglig för DAM-användarna.*
 
 1. Så här jämför du två versioner av en bild:
    * Klicka på den version som ska jämföras med den aktuella versionen.
