@@ -9,7 +9,7 @@ content-type: reference
 topic-tags: correspondence-management
 discoiquuid: 010e3639-b1a9-40fb-8615-7d18c4784b73
 translation-type: tm+mt
-source-git-commit: 5120bbdefea528ad6d07a9c99df565555b6a8444
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -85,7 +85,7 @@ I den här artikeln listas de kortkommandon som kan användas med Adaptiv formul
 
 I det här avsnittet visas olika tangentbord och kortkommandon för hjälpmedel som du kan använda i textredigeraren för Correspondence Management. Du kan använda följande kortkommandon medan du är:
 
-* Skapa eller redigera en [textresurs](/help/forms/using/document-fragments.md#main-pars-header-0)
+* Skapa eller redigera en [textresurs](texts-interactive-communications.md)
 * Redigera en textmodul när du har tryckt på den relevanta redigeringsikonen ( ![edittextmodule](assets/edittextmodule.png)) när du [skapar en korrespondens](/help/forms/using/create-correspondence.md).
 
 ### Textmarkering och flytta runt markören {#text-selection-and-moving-the-cursor-around}
