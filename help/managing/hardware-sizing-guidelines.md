@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 8893306f-4bc0-48eb-8448-36d0214caddf
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3f53945579eaf5de1ed0b071aa9cce30dded89f1
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
@@ -50,7 +50,7 @@ Grundläggande faktorer att beakta är (i denna ordning):
 
 ## Arkitektur {#architecture}
 
-En vanlig AEM-konfiguration består av en författare och en publiceringsmiljö. De här miljöerna har olika krav på den underliggande maskinvarans storlek och systemkonfiguration. Detaljerade överväganden för båda miljöerna beskrivs i avsnitten om [författarmiljö](/help/managing/hardware-sizing-guidelines.md#author-environment-specific-calculations) och [publiceringsmiljö](/help/managing/hardware-sizing-guidelines.md#publish-environment-specific-calculations) .
+En vanlig AEM-konfiguration består av en författare och en publiceringsmiljö. De här miljöerna har olika krav på den underliggande maskinvarans storlek och systemkonfiguration. Detaljerade överväganden för båda miljöerna beskrivs i avsnitten om [författarmiljön](/help/managing/hardware-sizing-guidelines.md#author-environment-specific-calculations) och [publiceringsmiljön](/help/managing/hardware-sizing-guidelines.md#publish-environment-specific-calculations) .
 
 I en typisk projektkonfiguration har du flera miljöer där du ska fasa ut projektet:
 
@@ -273,7 +273,7 @@ Förutom beräkningen för ett standardwebbprogram kan du behöva ta hänsyn til
 
 Omfattande bearbetning av digitala resurser kräver optimerade maskinvaruresurser, de viktigaste faktorerna är bildstorlek och högsta genomströmning för bearbetade bilder.
 
-Allokera minst 16 GB stackutrymme och konfigurera arbetsflödet för DAM-uppdatering av resurser så att det använder [Camera Raw-paketet](/help/assets/camera-raw.md) för att lägga in råbilder.
+Allokera minst 16 GB stackutrymme och konfigurera arbetsflödet för [!UICONTROL DAM-uppdatering av resurs] så att det använder [Camera Raw-paketet](/help/assets/camera-raw.md) för inhämtning av råbilder.
 
 >[!NOTE]
 Ett högre bildflöde innebär att datorresurserna måste kunna hålla jämna steg med I/O-system och vice versa. Om arbetsflöden till exempel startas vid import av bilder kan överföringen av många bilder via WebDAV orsaka en eftersläpning i arbetsflödena.
@@ -303,7 +303,7 @@ Att tänka på vid storleksändring av en community-webbplats beror på den för
 
 Användargenererat innehåll (UGC) som skickas till medlemmar lagras separat från sidinnehållet. AEM-plattformen använder ett nodarkiv som replikerar webbplatsinnehåll från författaren till publiceringen, men AEM Communities använder en enda gemensam butik för UGC som aldrig replikeras.
 
-För UGC-arkivet är det nödvändigt att välja en lagringsresursleverantör (SRP) som påverkar den valda distributionen.
+För UGC-arkivet är det nödvändigt att välja en leverantör av lagringsresurser (SRP) som påverkar den valda distributionen.
 Se
 
 * [Community-innehåll](/help/communities/working-with-srp.md)
