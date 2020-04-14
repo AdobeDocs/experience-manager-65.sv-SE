@@ -10,7 +10,7 @@ topic-tags: content
 content-type: reference
 discoiquuid: 91f0fd7d-4b49-4599-8f0e-fc367d51aeba
 translation-type: tm+mt
-source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
@@ -54,7 +54,7 @@ Använd Configuration Manager för att lägga till URL:en för ledarinstansen oc
 
 ## Konfigurera startprogram för arbetsflöden i ledarinstansen {#configure-workflow-launchers-on-the-leader-instance}
 
-Konfigurera arbetsflödesstarter så att arbetsflödet för **DAM Update Asset Offloading** används i ledarinstansen i stället för i arbetsflödet för **DAM Update Asset** .
+Konfigurera arbetsflödesstarter så att arbetsflödet för [!UICONTROL DAM Update Asset Offloading] används i ledarinstansen i stället för i arbetsflödet för **DAM Update Asset** .
 
 1. Tryck/klicka på AEM-logotypen och välj **Verktyg** > **Arbetsflöde** > **Starta** för att öppna **Workflow Launchers** -konsolen.
 
@@ -65,12 +65,12 @@ Konfigurera arbetsflödesstarter så att arbetsflödet för **DAM Update Asset O
 
    ![chlimage_1-51](assets/chlimage_1-51a.png)
 
-1. I listan **Arbetsflöde** väljer du Avlastning **av** DAM-uppdateringsresurs och trycker/klickar på **Spara**.
+1. I listan **Arbetsflöde** väljer du Avlastning [!UICONTROL av] DAM-uppdateringsresurs och trycker/klickar på **Spara**.
 
    ![chlimage_1-52](assets/chlimage_1-52a.png)
 
 1. Tryck/klicka på AEM-logotypen och välj **Verktyg** > **Arbetsflöde** > **Modeller** för att öppna sidan **Arbetsflödesmodeller** .
-1. Välj arbetsflödet **DAM Update Asset Offloading** och tryck/klicka på **Edit** (Redigera) i verktygsfältet för att visa information om det.
+1. Välj arbetsflödet [!UICONTROL DAM Update Asset Offloading] och tryck/klicka på **Edit** (Redigera) i verktygsfältet för att visa information om det.
 
    ![chlimage_1-53](assets/chlimage_1-53a.png)
 
