@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c47ef627-261e-4b4b-8846-873d3d84234b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 06335b9a85414b6b1141dd19c863dfaad0812503
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -105,7 +105,7 @@ Så här skapar du en underordnad egenskap:
 
 1. Tryck på **[!UICONTROL Klar]** för att spara den underordnade egenskapen och tryck på **[!UICONTROL Spara]** för att spara formulärdatamodellen. Egenskapen child läggs nu till i datamodellsobjektet.
 
-När du har skapat datamodellsobjekt och egenskaper kan du fortsätta att skapa anpassningsbara formulär och interaktiv kommunikation baserat på formulärdatamodellen. När du har datakällor tillgängliga och konfigurerade kan du senare binda formulärdatamodellen till datakällor. Bindningen uppdateras automatiskt i tillhörande adaptiva formulär och interaktiv kommunikation. Mer information om hur du skapar adaptiva formulär och interaktiv kommunikation med hjälp av formulärdatamodell finns i [Använda formulärdatamodell](/help/forms/using/using-form-data-model.md).
+När du har skapat datamodellsobjekt och -egenskaper kan du fortsätta att skapa anpassningsbara formulär och interaktiv kommunikation baserat på formulärdatamodellen. När du har datakällor tillgängliga och konfigurerade kan du senare binda formulärdatamodellen till datakällor. Bindningen uppdateras automatiskt i tillhörande adaptiva formulär och interaktiv kommunikation. Mer information om hur du skapar adaptiva formulär och interaktiv kommunikation med hjälp av formulärdatamodell finns i [Använda formulärdatamodell](/help/forms/using/using-form-data-model.md).
 
 ### Binda datamodellsobjekt och egenskaper {#bind-data-model-objects-and-properties}
 
@@ -155,7 +155,7 @@ Så här konfigurerar du läs- och skrivtjänster för att läsa och skriva data
 
    Läs- och skrivtjänster har konfigurerats för personaldatakälla
 
-1. Tryck på ![aem_6_3_edit](assets/aem_6_3_edit.png) för lästjänstargumentet för att [binda argumentet till ett användarprofilattribut, begärandeattribut eller litteralvärde](../../forms/using/work-with-form-data-model.md#main-pars-header-2140694395) och ange bindningsvärdet.
+1. Tryck på ![aem_6_3_edit](assets/aem_6_3_edit.png) för lästjänstargumentet för att [binda argumentet till ett användarprofilattribut, begärandeattribut eller litteralvärde](#bindargument) och ange bindningsvärdet.
 1. Tryck på **[!UICONTROL Klar]** för att spara argumentet, **[!UICONTROL Klar]** för att spara egenskaperna och sedan **[!UICONTROL Spara]** för att spara formulärdatamodellen.
 
 ### Bind Läs tjänsteargument {#bindargument}
@@ -302,7 +302,7 @@ Du kan till exempel skapa en beräknad egenskap, **FullName** , vars värde är 
 
    I listrutan Välj alternativ väljer du **[!UICONTROL Matematiskt uttryck]**. Andra tillgängliga alternativ är **[!UICONTROL Form Data Model Object]** och **[!UICONTROL String]**.
 
-1. I det matematiska uttrycket väljer du **[!UICONTROL FirstName]** och **[!UICONTROL LastName]** i första respektive andra objektet. Välj **[!UICONTROL plus]** som operator.
+1. I det matematiska uttrycket väljer du **[!UICONTROL FirstName]** och **[!UICONTROL LastName]** i det första respektive det andra objektet. Välj **[!UICONTROL plus]** som operator.
 
    Tryck på **[!UICONTROL Klar]** och sedan på **[!UICONTROL Stäng]** för att stänga regelredigeringsfönstret. Regeln ser ut ungefär så här.
 
