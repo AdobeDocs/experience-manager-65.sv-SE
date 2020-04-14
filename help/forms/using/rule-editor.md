@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 1b905e66-dc05-4f14-8025-62a78feef12a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -306,7 +306,7 @@ Om du vill definiera en regel baserat på en anpassad funktion väljer du **Funk
 
 ![Anpassade funktioner](assets/custom_functions_set_options_new.png)
 
-Mer information om hur du skapar en anpassad funktion finns i [Anpassade funktioner i regelredigeraren](../../forms/using/rule-editor.md#main-pars-header-296220653).
+Mer information om hur du skapar en anpassad funktion finns i [Anpassade funktioner i regelredigeraren](#custom-functions).
 
 Så här definierar du en regel baserad på en formulärdatamodell:
 
@@ -349,7 +349,7 @@ På fliken Formulärobjekt visas en hierarkisk vy över alla objekt som finns i 
 
 De formulärobjekt som har en eller flera giltiga regler markerade med en grön punkt. Om någon av reglerna som tillämpas på ett formulärobjekt är ogiltig markeras formulärobjektet med en gul punkt.
 
-Fliken Funktioner innehåller en uppsättning inbyggda funktioner, till exempel summan av, Min av, Max av, Medel av, Antal, och Validera formulär. Du kan använda de här funktionerna för att beräkna värden i repeterbara paneler och tabellrader och använda dem i action- och condition-satser när du skriver regler. Du kan dock även skapa [anpassade funktioner](../../forms/using/rule-editor.md#custom-functions) .
+Fliken Funktioner innehåller en uppsättning inbyggda funktioner, till exempel summan av, Min av, Max av, Medel av, Antal, och Validera formulär. Du kan använda de här funktionerna för att beräkna värden i repeterbara paneler och tabellrader och använda dem i action- och condition-satser när du skriver regler. Du kan dock även skapa [anpassade funktioner](#custom-functions) .
 
 ![Fliken Funktioner](assets/functions.png)
 
