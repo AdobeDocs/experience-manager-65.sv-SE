@@ -10,12 +10,12 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 5260d981-da40-40ab-834e-88e091840813
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 21efe30c6a69d04c737bc523aeaab504db8f605b
 
 ---
 
 
-# Debugging HTML5 forms {#debugging-html-forms}
+# Felsöka HTML5-formulär {#debugging-html-forms}
 
 Det här dokumentet innehåller flera felsökningsscenarier. För varje scenario anges några steg för att felsöka problemet. Följ de här stegen och om problemet kvarstår konfigurerar du loggboken så att du kan hämta och granska loggar för fel/varningar. Mer information om loggning av HTML5-formulär finns i [Generera loggar för HTML5-formulär](/help/forms/using/enable-logs.md).
 
@@ -52,9 +52,9 @@ Kontrollera följande parametrar:
  </tbody>
 </table>
 
-## Problem: Det går inte att återge ett formulär (ett felmeddelande visas) {#problem-unable-to-render-a-form-an-error-message-is-displayed}
+## Problem: Det går inte att återge ett formulär (ett felmeddelande visas) {#problem-unable-to-render-form}
 
-1. Ensure that the specified parameters are correct. For detailed information on parameters, see [Render Parameters](/help/forms/using/debug.md#main-pars-table).
+1. Kontrollera att de angivna parametrarna är korrekta. Mer information om parametrar finns i [Återgivningsparametrar](#problem-when-rendering-the-form-i-see-org-apache-sling-api-slingexception-exception-page).
 1. Logga in på CRX Package Manager (på https://&lt;server>:&lt;port>/crx/packmgr/index.jsp) och kontrollera om följande paket är korrekt installerade:
 
    * adobe-lc-forms-content-pkg-&lt;version>.zip
@@ -101,7 +101,7 @@ Kontrollera följande parametrar:
 ### Problem: Ett oväntat fel påträffades {#problem-unexpected-error-encountered}
 
 1. I formulärets URL lägger du till en frågeparameter, debugClientLibs, och anger värdet till true (till exempel: https://&lt;server>:&lt;port>/content/xfaforms/profiles/test.html?contentRoot=&lt;sökväg>&amp;template=&lt;namn på xdp-fil>&amp;log=1-a9-b9-c9&amp;debugClientLibs=true)
-1. In the desktop browser like chrome, go to Developer Tools -> Console.
+1. Gå till Utvecklarverktyg -> Konsol i webbläsaren som Chrome.
 1. Öppna loggarna för att identifiera feltypen. Mer information om loggar finns i [loggar för HTML5-formulär](/help/forms/using/enable-logs.md).
 1. Gå till Developer Tools -> Console. Använd stackspårning för att hitta koden som orsakar felet. Felsök felet för att lösa problemet.
 
@@ -116,23 +116,23 @@ Kontrollera följande parametrar:
 1. Aktivera loggarna på klientsidan enligt [loggarna för HTML5-formulären](/help/forms/using/enable-logs.md) med felsökningsalternativet **1-a5-b5-c5**. Återge sedan formuläret och klicka på Skicka. Öppna webbläsarens felsökningskonsol och kontrollera om det finns något fel.
 1. Leta reda på serverloggarna som anges i [Logs för HTML5-formulären](/help/forms/using/enable-logs.md). Kontrollera om det uppstod något fel i serverloggarna under överföringen.
 
-## Problem: Localized error messages do not display {#problem-localized-error-messages-do-not-display}
+## Problem: Lokaliserade felmeddelanden visas inte {#problem-localized-error-messages-do-not-display}
 
-1. Render the form with additional query parameter **debugClientLibs=true** in the desktop browser, and then go to Developer Tools -> Resources and check for the file I18N.css.
-1. If the file is not available, login into CRX DE at https://&lt;server>:&lt;port>/crx/de.
-1. In the folder hierarchy on the left, navigate to /libs/fd/xfaforms/clientlibs/I18N and ensure that the following files and folders exist:
+1. Rendera formuläret med den extra frågeparametern **debugClientLibs=true** i webbläsaren på skrivbordet och gå sedan till Developer Tools -> Resources och sök efter filen I18N.css.
+1. Om filen inte är tillgänglig loggar du in på CRX DE på https://&lt;server>:&lt;port>/crx/de.
+1. I mapphierarkin till vänster går du till /libs/fd/xfaforms/clientlibs/I18N och kontrollerar att följande filer och mappar finns:
 
    * Namespace.js
    * LogMessages.js
    * Mappar för språk
 
 1. Om någon av filerna eller mapparna ovan inte finns installerar du paketet **adobe-lc-forms-runtime-pkg-&lt;version>.zip** igen.
-1. Navigera till mappen som har samma namn som namnet på språkinställningen och kontrollera innehållet i den. The folder must contain the following files:
+1. Navigera till mappen som har samma namn som namnet på språkinställningen och kontrollera innehållet i den. Mappen måste innehålla följande filer:
 
    * I18N.js
    * js.txt
 
-1. Check the content of js.txt and make sure that it has the following entries.
+1. Kontrollera innehållet i js.txt och se till att det har följande poster.
 
    ```
    ../Namespace.js
@@ -140,11 +140,11 @@ Kontrollera följande parametrar:
    ../LogMessages.js
    ```
 
-## Problem: Image not showing up {#problem-image-not-showing-up}
+## Problem: Bilden visas inte {#problem-image-not-showing-up}
 
-1. Ensure that the image URL is correct.
-1. Check if your browser supports this type of image.
-1. In the exception details, search for word **caused by**.
+1. Kontrollera att bild-URL:en är korrekt.
+1. Kontrollera om webbläsaren stöder den här typen av bild.
+1. Sök efter ord **som** orsakats i undantagsinformationen.
 
    Den troliga orsaken är att en eller flera parametrar i URL:en är felaktiga.
 
