@@ -9,7 +9,7 @@ topic-tags: develop
 discoiquuid: 7139a0e6-0e37-477c-9e0b-aa356991d040
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
+source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
 
 ---
 
@@ -339,7 +339,7 @@ Du kan använda en anpassad förifyllningstjänst för scenarierna, där du hela
 Förifyllningstjänsten är en OSGi-tjänst och paketeras via OSGi-paketet. Du skapar OSGi-paketet, överför det och installerar det i AEM Forms-paketen. Innan du börjar skapa paketet:
 
 * [Ladda ned AEM Forms Client SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)
-* [Hämta mallpaketet](../../forms/using/prepopulate-adaptive-form-fields.md#main-pars-download-section-711716493)
+* Hämta mallpaketet
 
 * Placera datafilen (förifyllda data) i crx-databasen. Du kan placera filen på valfri plats i mappen \contents i crx-database.
 
