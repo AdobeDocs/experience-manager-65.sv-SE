@@ -4,7 +4,7 @@ description: Lär dig resurshanteringsåtgärder som överföring, hämtning, re
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 24c72d79fe1ebd140d7746759d73cbaffdd1ea2d
+source-git-commit: f737122575c9fd0af82a8b86d259db61753f2f97
 
 ---
 
@@ -19,7 +19,7 @@ När du organiserar en samling resurser, till exempel alla `Nature` bilder, kan 
 
 >[!NOTE]
 >
->* Delning av en resursmapp av den typen `sling:OrderedFolder`stöds inte när den delas till Marketing Cloud. Om du vill dela en mapp ska du inte välja [!UICONTROL Ordnad] när du skapar en mapp.
+>* Delning av en resursmapp av den typen `sling:OrderedFolder` stöds inte vid delning till Marketing Cloud. Om du vill dela en mapp ska du inte välja [!UICONTROL Ordnad] när du skapar en mapp.
 >* Det går inte att använda `subassets` ordet som namn på en mapp i Experience Manager. Det är ett nyckelord som är reserverat för nod som innehåller delresurser för sammansatta resurser.
 
 
@@ -56,13 +56,13 @@ Innan du överför en resurs måste du kontrollera att den har ett [format](/hel
 
    * Tryck på ikonen **[!UICONTROL Skapa]** i verktygsfältet. Tryck sedan på **[!UICONTROL Filer]** på menyn. Du kan byta namn på filen i den dialogruta som visas om det behövs.
    * I en webbläsare som har stöd för HTML5 drar du resurserna direkt till användargränssnittet Resurser. Dialogrutan för att byta namn på filen visas inte.
-   ![skapa alternativ med aem](assets/create-options.png)
+   ![Skapa alternativ för att överföra resurser](assets/create-options.png)
 
    Om du vill markera flera filer trycker du på Ctrl- eller Kommando-tangenten och markerar resurserna i dialogrutan för filväljaren. När du använder en iPad kan du bara markera en fil i taget.
 
    Du kan pausa överföringen av stora resurser (större än 500 MB) och återuppta den senare från samma sida. Tryck på **[!UICONTROL pausikonen]** bredvid förloppsindikatorn som visas när en överföring startar.
 
-   ![chlimage_1-211](assets/chlimage_1-5.png)
+   ![Förloppsindikator för överföring av resurser](assets/chlimage_1-5.png)
 
    Den storlek över vilken en tillgång betraktas som en stor tillgång kan konfigureras. Du kan till exempel konfigurera systemet så att resurser över 1 000 MB (i stället för 500 MB) betraktas som stora resurser. I det här fallet visas **[!UICONTROL Pausa]** i förloppsindikatorn när resurser som är större än 1 000 MB överförs.
 
@@ -72,7 +72,7 @@ Innan du överför en resurs måste du kontrollera att den har ett [format](/hel
 
    När du klickar på **[!UICONTROL pausikonen]** växlar den till en **[!UICONTROL uppspelningsikon]** . Om du vill återuppta överföringen klickar du på **[!UICONTROL uppspelningsikonen]** .
 
-   ![chlimage_1-212](assets/chlimage_1-6.png)
+   ![Återuppta den pausade resursuppladdningen med ikonen Spela upp](assets/chlimage_1-6.png)
 
    Om du vill avbryta en pågående överföring klickar du på Stäng (`X`) bredvid förloppsindikatorn. När du avbryter överföringen tas den delvis överförda delen av resursen bort.
 
@@ -86,7 +86,7 @@ Innan du överför en resurs måste du kontrollera att den har ett [format](/hel
 
    Du kan välja att ersätta en befintlig resurs, skapa en annan version eller behålla båda genom att byta namn på den nya resursen som överförs. Om du ersätter en befintlig resurs tas metadata för resursen och eventuella tidigare ändringar (till exempel anteckningar eller beskärningar) som du har gjort i den befintliga resursen bort. Om du väljer att behålla båda resurserna får den nya resursen ett nytt namn med ett nummer `1` efter resursens namn.
 
-   ![chlimage_1-213](assets/chlimage_1-7.png)
+   ![Dialogrutan Namnkonflikt för att lösa konflikter för resursnamn](assets/chlimage_1-7.png)
 
    >[!NOTE]
    >
@@ -100,7 +100,7 @@ Innan du överför en resurs måste du kontrollera att den har ett [format](/hel
    >
    >Dialogrutan [!UICONTROL Dubbletter identifierade] visas bara när funktionen för dubblettidentifiering är aktiverad. Information om hur du aktiverar funktionen för dubblettidentifiering finns i [Aktivera dubblettidentifiering](/help/assets/duplicate-detection.md).
 
-   ![chlimage_1-214](assets/chlimage_1-8.png)
+   ![Dialogrutan Duplicera resurs identifierad](assets/chlimage_1-8.png)
 
    Om du vill behålla den duplicerade resursen i AEM Resurser trycker/klickar du på **[!UICONTROL Behåll]**. Om du vill ta bort den duplicerade resursen som du överförde trycker/klickar du på **[!UICONTROL Ta bort]**.
 
@@ -112,7 +112,7 @@ Innan du överför en resurs måste du kontrollera att den har ett [format](/hel
 
    * resursens filnamn får inte innehålla `* / : [ \\ ] | # % { } ? &`
    * resursmappens namn får inte innehålla `* / : [ \\ ] | # % { } ? \" . ^ ; + & \t`
-   ![chlimage_1-215](assets/chlimage_1-10.png)
+   ![I dialogrutan för överföring av förlopp visas status för överförda filer och filer som inte kan överföras](assets/chlimage_1-10.png)
 
    Dessutom visas den senaste resursen som du överför eller den mapp som du skapade först i användargränssnittet för Resurser.
 
@@ -160,7 +160,7 @@ Med Dynamic Media kan du batchöverföra resurser via FTP-servern. Om du tänker
 1. Tryck på **[!UICONTROL Spara]** i det nedre högra hörnet av dialogrutan Alternativ för överföringsjobb.
 1. Tryck på **[!UICONTROL Skicka överföring]** i det nedre högra hörnet på sidan Överför.
 
-   Om du vill visa överföringsförloppet trycker du på **[!UICONTROL Jobb]**i det globala navigeringsfältet. På sidan Jobb visas överföringsförloppet. Du kan när som helst fortsätta arbeta i AEM och gå tillbaka till jobbsidan i Dynamic Media Classic för att granska ett pågående jobb.
+   Om du vill visa överföringsförloppet trycker du på **[!UICONTROL Jobb]**i det globala navigeringsfältet. På sidan Jobb visas överföringsförloppet. Du kan fortsätta arbeta i AEM och när som helst återgå till jobbsidan i Dynamic Media Classic för att granska ett pågående jobb.
 Om du vill avbryta ett pågående överföringsjobb trycker du på **[!UICONTROL Avbryt]** bredvid Varaktighet.
 
 #### Alternativ för överföringsjobb {#upload-job-options}
