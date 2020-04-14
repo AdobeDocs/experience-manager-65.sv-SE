@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 10158c13-47b4-43e3-ac47-690f3cbab158
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
 
 ---
 
@@ -44,7 +44,7 @@ Om du vill anpassa bilderna som används i vägåtgärder utför du stegen som b
 
 ## Åtgärdspopup för uppgiftslisteåtgärd {#task-list-task-action-popup}
 
-1. Skapa ett åtgärdsfönster för uppgiftslistan, se [Skapa kod](/help/forms/using/introduction-customizing-html-workspace.md#main-pars-heading-3)för arbetsytan i AEM Forms. Dev-paketet måste användas.
+1. Skapa ett åtgärdsfönster för uppgiftslistan, se [Skapa kod](introduction-customizing-html-workspace.md#building-html-workspace-code)för arbetsytan i AEM Forms. Dev-paketet måste användas.
 
 1. Kopiera `/libs/ws/js/runtime/templates/task.html` till `/apps/ws/js/runtime/templates/task.html`.
 
