@@ -3,7 +3,7 @@ title: Migrera resurser till Adobe Experience Manager Assets i grupp
 description: Beskriver hur du hämtar resurser till AEM, använder metadata, genererar återgivningar och aktiverar dem för att publicera instanser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
@@ -27,7 +27,7 @@ Innan du utför något av stegen i den här metoden bör du granska och implemen
 >* Syntetiskt arbetsflöde
 >
 >
-Programvaran är öppen källkod och täcks av [Apache v2-licensen](https://adobe-consulting-services.github.io/pages/license.html). Om du vill ställa en fråga eller rapportera ett problem går du till respektive [GitHub Issues för ACS AEM Tools](https://github.com/Adobe-Consulting-Services/acs-aem-commons/issues) och [ACS AEM Commons](https://github.com/Adobe-Consulting-Services/acs-aem-tools/issues).
+Programvaran är öppen källkod och täcks av [Apache v2-licensen](https://adobe-consulting-services.github.io/pages/license.html). Om du vill ställa en fråga eller rapportera ett problem går du till [GitHub Issues for ACS AEM Tools](https://github.com/Adobe-Consulting-Services/acs-aem-commons/issues) eller [ACS AEM Commons](https://github.com/Adobe-Consulting-Services/acs-aem-tools/issues).
 
 ## Migrera till AEM {#migrating-to-aem}
 
@@ -44,11 +44,11 @@ Att migrera resurser till AEM kräver flera steg och bör ses som en process i f
 
 ### Inaktivera arbetsflöden {#disabling-workflows}
 
-Innan du startar din migrering ska du inaktivera dina startprogram för arbetsflödet DAM Update Asset. Det är bäst att importera alla resurser till systemet och sedan köra arbetsflödena gruppvis. Om du redan är aktiv under migreringen kan du schemalägga att dessa aktiviteter körs på ledig tid.
+Innan du startar din migrering ska du inaktivera dina startprogram för arbetsflödet för [!UICONTROL DAM-uppdatering av resurser] . Det är bäst att importera alla resurser till systemet och sedan köra arbetsflödena gruppvis. Om du redan är aktiv under migreringen kan du schemalägga att dessa aktiviteter körs på ledig tid.
 
 ### Läs in taggar {#loading-tags}
 
-Du kanske redan har en tagg-taxonomi på plats som du tillämpar på dina bilder. Verktyg som CSV-resursimporteraren och AEM:s stöd för metadataprofiler kan automatisera processen att lägga till taggar i resurser, men taggarna måste läsas in i systemet. Med [ACS AEM Tools Tag Maker](https://adobe-consulting-services.github.io/acs-aem-tools/features/tag-maker/index.html) -funktionen kan du fylla i taggar med hjälp av ett Microsoft Excel-kalkylblad som är inläst i systemet.
+Du kanske redan har en tagg-taxonomi på plats som du tillämpar på dina bilder. Verktyg som CSV-resursimporteraren och Experience Managers stöd för metadataprofiler kan automatisera processen att lägga till taggar i resurser, men taggarna måste läsas in i systemet. Med [ACS AEM Tools Tag Maker](https://adobe-consulting-services.github.io/acs-aem-tools/features/tag-maker/index.html) -funktionen kan du fylla i taggar med hjälp av ett Microsoft Excel-kalkylblad som är inläst i systemet.
 
 ### Ingående resurser {#ingesting-assets}
 
@@ -75,20 +75,20 @@ Eftersom resurser inte behöver överföras via ett nätverk förbättras presta
 
 ### Bearbeta återgivningar {#processing-renditions}
 
-När du har läst in resurserna i systemet måste du bearbeta dem via arbetsflödet DAM Update Asset för att extrahera metadata och generera renderingar. Innan du utför det här steget måste du duplicera och ändra arbetsflödet för DAM-uppdatering av resurser efter dina behov. Det färdiga arbetsflödet innehåller många steg som kanske inte behövs, till exempel Scene7 PTIFF-generering eller InDesign-serverintegrering.
+När du har läst in resurserna i systemet måste du bearbeta dem i arbetsflödet för [!UICONTROL DAM-uppdatering av resurser] för att extrahera metadata och generera återgivningar. Innan du utför det här steget måste du duplicera och ändra arbetsflödet för [!UICONTROL DAM-uppdatering av resurser] efter dina behov. Det färdiga arbetsflödet innehåller många steg som kanske inte behövs, till exempel Scene7 PTIFF-generering eller InDesign-serverintegrering.
 
 När du har konfigurerat arbetsflödet efter dina behov finns det två alternativ:
 
 1. Det enklaste sättet är [ACS Commons massarbetsflödeshanterare](https://adobe-consulting-services.github.io/acs-aem-commons/features/bulk-workflow-manager.html). Med det här verktyget kan du köra en fråga och bearbeta resultatet av frågan via ett arbetsflöde. Det finns även alternativ för att ange gruppstorlekar.
-1. Du kan använda [ACS Commons Fast Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) tillsammans med [syntetiska arbetsflöden](https://adobe-consulting-services.github.io/acs-aem-commons/features/synthetic-workflow.html). Även om det här arbetssättet är mycket mer involverat kan du ta bort de allmänna kostnaderna för AEM-arbetsflödesmotorn samtidigt som du optimerar användningen av serverresurser. Dessutom förbättrar Fast Action Manager prestanda ytterligare genom att dynamiskt övervaka serverresurser och begränsa belastningen på systemet. Exempel på skript finns på funktionssidan ACS Commons.
+1. Du kan använda [ACS Commons Fast Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) tillsammans med [syntetiska arbetsflöden](https://adobe-consulting-services.github.io/acs-aem-commons/features/synthetic-workflow.html). Även om det här arbetssättet är mycket mer invecklat slipper ni omkostnaderna för arbetsflödesmotorn i AEM samtidigt och kan samtidigt optimera användningen av serverresurser. Dessutom förbättrar Fast Action Manager resultatet ytterligare genom att övervaka serverresurser dynamiskt och begränsa belastningen på systemet. Exempel på skript finns på funktionssidan för ACS Commons.
 
 ### Aktivera resurser {#activating-assets}
 
-För distributioner som har en publiceringsnivå måste du aktivera resurserna i publiceringsgruppen. Även om Adobe rekommenderar att du kör mer än en publiceringsinstans är det mest effektivt att replikera alla resurser till en publiceringsinstans och sedan klona den instansen. När du aktiverar ett stort antal resurser kan du behöva ingripa efter att ha aktiverat ett träd. Därför: När aktiveringar utlöses läggs objekt till i kön för delningsuppgifter/händelser. När storleken på den här kön börjar bli över cirka 40 000 objekt tar det dramatiskt lång tid att bearbeta. När storleken på den här kön överstiger 100 000 objekt börjar systemstabiliteten försämras.
+För distributioner som har en publiceringsnivå måste du aktivera resurserna i publiceringsgruppen. Även om Adobe rekommenderar att du kör mer än en publiceringsinstans är det mest effektivt att replikera alla resurser till en publiceringsinstans och sedan klona den instansen. När du aktiverar ett stort antal resurser kan du behöva ingripa efter att ha aktiverat ett träd. Därför: När aktiveringar utlöses läggs objekt till i kön för delningsuppgifter/händelser. När storleken på den här kön börjar bli större än cirka 40 000 objekt tar det drastiskt lång tid att bearbeta. När storleken på den här kön överstiger 100 000 objekt börjar systemstabiliteten försämras.
 
 Du kan lösa det här problemet genom att använda [Snabb Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) för att hantera resursreplikering. Detta fungerar utan att använda Sling-köerna, vilket sänker overheadkostnaderna samtidigt som arbetsbelastningen begränsas för att förhindra att servern blir överbelastad. Ett exempel på hur du använder FAM för att hantera replikering visas på funktionens dokumentationssida.
 
-Andra alternativ för att hämta resurser till publiceringsgruppen är bland annat att använda [vlt-rcp](https://jackrabbit.apache.org/filevault/rcp.html) eller [ekrun](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run), som tillhandahålls som verktyg som en del av Jackrabbit. Ett annat alternativ är att använda ett verktyg med öppen källkod för din AEM-infrastruktur som kallas [Grabbit](https://github.com/TWCable/grabbit), som sägs ha snabbare prestanda än vad VLT.
+Andra alternativ för att hämta resurser till publiceringsgruppen är bland annat att använda [vlt-rcp](https://jackrabbit.apache.org/filevault/rcp.html) eller [oak-run](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run), som ingår i Jackrabbit. Ett annat alternativ är att använda ett verktyg med öppen källkod för AEM-infrastrukturen, som kallas [Grabbit](https://github.com/TWCable/grabbit), och som sägs vara snabbare än vlt.
 
 För någon av dessa metoder är caveat att resurserna i författarinstansen inte visas som aktiverade. Om du vill hantera flaggning av dessa resurser med rätt aktiveringsstatus måste du också köra ett skript som markerar resurserna som aktiverade.
 
@@ -102,7 +102,7 @@ När resurserna har aktiverats kan du klona publiceringsinstansen och skapa så 
 
 1. Säkerhetskopiera källinstansen och datalagret.
 1. Återställ säkerhetskopian av instansen och datalagret till målplatsen. Följande steg hänvisar alla till den nya instansen.
-1. Sök i filsystemet under `crx-quickstart/launchpad/felix` efter `sling.id`. Ta bort den här filen.
+1. Perform a filesystem search under `crx-quickstart/launchpad/felix` for `sling.id`. Ta bort den här filen.
 1. Leta reda på och ta bort eventuella `repository-XXX` filer under rotsökvägen för datalagret.
 1. Redigera `crx-quickstart/install/org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config` och `crx-quickstart/launchpad/config/org/apache/jackrabbit/oak/plugins/blob/datastore/FileDataStore.config` peka på platsen för datalagret i den nya miljön.
 1. Starta miljön.
@@ -110,7 +110,7 @@ När resurserna har aktiverats kan du klona publiceringsinstansen och skapa så 
 
 ### Aktivera arbetsflöden {#enabling-workflows}
 
-När migreringen är klar bör startarna för DAM Update Asset-arbetsflödena återaktiveras för att stödja generering av återgivningar och metadataextrahering för den dagliga systemanvändningen.
+När migreringen är klar bör startarna för arbetsflödena för [!UICONTROL DAM Update Asset] återaktiveras för att stödja generering av återgivningar och metadataextrahering för den dagliga systemanvändningen.
 
 ## Migrera mellan AEM-distributioner {#migrating-between-aem-instances}
 
@@ -118,17 +118,17 @@ När migreringen är klar bör startarna för DAM Update Asset-arbetsflödena å
 
 I det här fallet är dina resurser redan ifyllda med metadata och återgivningar har redan genererats. Du kan helt enkelt fokusera på att flytta resurser från en instans till en annan. När du migrerar mellan AEM-instanser utför du följande steg:
 
-1. Inaktivera arbetsflöden:Eftersom du migrerar återgivningar tillsammans med våra resurser, vill du inaktivera arbetsflödesstarterna för DAM Update Asset.
+1. Inaktivera arbetsflöden: Eftersom du migrerar återgivningar tillsammans med våra resurser, vill du inaktivera arbetsflödets startprogram för [!UICONTROL DAM Update Asset] -arbetsflödet.
 
-1. Migrera taggar:Eftersom du redan har taggar inlästa i AEM-källinstansen kan du skapa dem i ett innehållspaket och installera paketet på målinstansen.
+1. Migrera taggar: Eftersom du redan har taggar inlästa i AEM-källinstansen kan du skapa dem i ett innehållspaket och installera paketet på målinstansen.
 
-1. Migrera resurser:Det finns två verktyg som rekommenderas för att flytta resurser från en AEM-instans till en annan:
+1. Migrera resurser: Det finns två verktyg som rekommenderas för att flytta resurser från en AEM-instans till en annan:
 
    * **Med Vault Remote Copy** eller vlt rcp kan du använda VLT i ett nätverk. Du kan ange en käll- och målkatalog och hämta alla databasdata från en instans och läsa in dem i en annan. Vlt rcp finns på [https://jackrabbit.apache.org/filevault/rcp.html](https://jackrabbit.apache.org/filevault/rcp.html)
    * **Grabbit** är ett verktyg för innehållssynkronisering med öppen källkod som utvecklats av Time Warner Cable för deras AEM-implementering. Eftersom den använder kontinuerliga dataströmmar har den en lägre fördröjning jämfört med vlt rcp och kräver en hastighetsförbättring på två till tio gånger snabbare än vlt rcp. Grabbit har även stöd för synkronisering av deltainnehåll, vilket gör att det kan synkronisera ändringar efter att en första migreringspass har slutförts.
 
-1. Aktivera resurser:Följ instruktionerna för [aktivering av resurser](#activating-assets) som dokumenterats för den första migreringen till AEM.
+1. Aktivera resurser: Följ instruktionerna för [aktivering av resurser](#activating-assets) som dokumenterats för den första migreringen till AEM.
 
-1. Klonpublicering:Precis som med en ny migrering är det effektivare att läsa in en publiceringsinstans och klona den än att aktivera innehållet på båda noderna. Se [Klona publicering.](#cloning-publish)
+1. Klonpublicering: Precis som med en ny migrering är det effektivare att läsa in en publiceringsinstans och klona den än att aktivera innehållet på båda noderna. Se [Klona publicering.](#cloning-publish)
 
-1. Aktivera arbetsflöden:När du är klar med migreringen kan du aktivera startfunktionerna för arbetsflödena för DAM Update Asset för att stödja generering av återgivningar och extrahering av metadata för den dagliga systemanvändningen.
+1. Aktivera arbetsflöden: När du är klar med migreringen kan du aktivera startfunktionerna för arbetsflödet för [!UICONTROL DAM-uppdatering av resurser] igen för att stödja generering av återgivningar och metadataextrahering för den dagliga systemanvändningen.
