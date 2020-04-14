@@ -3,7 +3,7 @@ title: Använd Connected Assets när du vill dela DAM-resurser i redigeringsarbe
 description: Använd resurser som är tillgängliga på en fjärrdistribution av Adobe Experience Manager Assets när du skapar webbsidor på en annan Experience Manager Site-distribution.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: ccdafa89793e97f69294958d814cccf3554b496d
+source-git-commit: 04fef21d6027dcfcb6a67a1121e0d1570926db41
 
 ---
 
@@ -95,7 +95,7 @@ Följ dessa steg när du vill konfigurera anslutningar för Connected Assets och
 
    >[!NOTE]
    >
-   >Alla återgivningar som är tillgängliga på den fjärranslutna AEM-distributionen hämtas när författare hämtar en resurs. Om du vill skapa fler återgivningar av en hämtad resurs hoppar du över det här konfigurationssteget. DAM Update Asset-arbetsflödet aktiveras och skapar fler återgivningar. Dessa återgivningar är bara tillgängliga i den lokala Sites-distributionen, inte i DAM-fjärrdistributionen.
+   >Alla återgivningar som är tillgängliga på den fjärranslutna AEM-distributionen hämtas när författare hämtar en resurs. Om du vill skapa fler återgivningar av en hämtad resurs hoppar du över det här konfigurationssteget. The [!UICONTROL DAM Update Asset] workflow gets triggered and creates more renditions. These renditions are available only on the local [!DNL Sites] deployment and not on the remote DAM deployment.
 
 1. Add the AEM Sites instance as one of the **[!UICONTROL Allowed Origins]** on the remote AEM Assets&#39; CORS configuration.
 
@@ -111,7 +111,7 @@ Webbplatsförfattare använder Content Finder för att ansluta till DAM-instanse
 
 Författare kan använda resurserna som finns på både den lokala DAM-instansen och fjärrinstansen av DAM på samma webbsida. Använd Content Finder för att växla mellan att söka i det lokala DAM-systemet eller söka i det fjärranslutna DAM-systemet.
 
-Endast taggar för fjärresurser som har en exakt motsvarande tagg, med samma taxonomiska hierarki, hämtas på den lokala Sites-instansen. Alla andra taggar tas bort. Författare kan söka efter fjärresurser med hjälp av alla taggar som finns i den fjärranslutna AEM-distributionen eftersom AEM erbjuder fulltextsökning.
+Endast de taggar för fjärrresurser som har en exakt motsvarande tagg tillsammans med samma taxonomi-hierarki, som är tillgängliga på den lokala platsinstansen, hämtas. Alla andra taggar tas bort. Författare kan söka efter fjärresurser med hjälp av alla taggar som finns i den fjärranslutna AEM-distributionen eftersom AEM erbjuder fulltextsökning.
 
 ### Genomgång av användningen {#walk-through-of-usage}
 
