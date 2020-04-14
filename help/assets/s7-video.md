@@ -8,7 +8,7 @@ topic-tags: managing-assets
 content-type: reference
 discoiquuid: 2685f9f3-0973-40a9-89b8-e7db0a6a75f2
 translation-type: tm+mt
-source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
@@ -97,7 +97,7 @@ Om du behöver uppdatera visningsprogrammet och kodningsförinställningarna fö
 ## Överföra huvudvideon till Scene7 från Adobe DAM {#uploading-your-master-video}
 
 1. Navigera till målmappen för CQ DAM där du har konfigurerat din molnkonfiguration med kodningsprofiler för Scene7.
-1. Klicka på **[!UICONTROL Överför]** för att överföra huvudvideon. Videoöverföring och -kodning är klar när arbetsflödet för DAM Update Asset är klart och **[!UICONTROL Publicera till Scene7]** är markerat.
+1. Klicka på **[!UICONTROL Överför]** för att överföra huvudvideon. Videoöverföring och -kodning är slutförd när arbetsflödet för [!UICONTROL DAM Update Asset] har slutförts och **[!UICONTROL Publicera till Scene7]** har en bock.
 
    >[!NOTE]
    >
@@ -109,7 +109,7 @@ Om du behöver uppdatera visningsprogrammet och kodningsförinställningarna fö
 
 När du använder AEM har du tillgång till både videokomponenten som finns i Sites och Scene7-videokomponenten. Dessa komponenter är inte utbytbara.
 
-Scene7-videokomponenten fungerar bara för Scene7-videofilmer. Grundkomponenten fungerar med videor som lagras från AEM (med ffmpeg) och Scene7.
+Scene7-videokomponenten fungerar bara för Scene7-videofilmer. Grundkomponenten fungerar med videor som lagras från AEM (med ffmpeg) och Scene7-videor.
 
 I följande matris förklaras när du bör använda vilken komponent:
 
@@ -147,7 +147,7 @@ De olika videokodningarna skapas enligt de kodningsförinställningar för S7 so
 
 1. I AEM trycker du på **[!UICONTROL Tools > Configuration Console**.
 1. Gå till **[!UICONTROL Verktyg > DAM > Videoprofiler]** i navigeringsträdet i **[!UICONTROL Configuration Console]** .
-1. Skapa en ny S7-videoprofil. **[!UICONTROL I]** New.. väljer du **[!UICONTROL Skapa sida]** och sedan mallen Scene7-videoprofil. Ge den nya videoprofilsidan ett namn och klicka på **[!UICONTROL Skapa]**.
+1. Skapa en ny S7-videoprofil. I **[!UICONTROL New..]** väljer du **[!UICONTROL Skapa sida]** och sedan mallen Scene7-videoprofil. Ge den nya videoprofilsidan ett namn och klicka på **[!UICONTROL Skapa]**.
 
    ![chlimage_1-366](assets/chlimage_1-366.png)
 
