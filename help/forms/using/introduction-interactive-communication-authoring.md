@@ -10,7 +10,7 @@ topic-tags: interactive-communications
 discoiquuid: 5855d21b-340c-4139-aabe-c3a534cedb98
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a326e508a781b3afaba8b5e371aa862a30536740
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -31,13 +31,13 @@ När du [skapar en ny eller redigerar en befintlig interaktiv kommunikation](../
 
 ![gränssnitt för framtagning av interaktiv kommunikation](assets/form-editor.png)
 
-******S. Sidofält** B. Verktygsfältet Sida **C.** Innehållsområde
+**S.** Sidofält **B.** Verktygsfältet Sida **C.** Innehållsområde
 
 ## Sidebar {#sidebar}
 
 ![Sidebar](assets/sidebar-comps-2.png)
 
-**************S. Kanalwebbläsare** B. Innehållsbläddraren **C.** Properties browser **D. Resursläsaren** E. Komponentbläddraren **F. Webbläsaren Datakällor - Datamodell** G. Webbläsaren Datakällor - Huvudinnehåll
+**S.** Kanalwebbläsare **B.** Innehållsbläddraren **C.** Properties browser **D.** Resursläsaren **E.** Komponentbläddraren **F.** Webbläsaren Datakällor - Datamodell **G.** Webbläsaren Datakällor - Huvudinnehåll
 
 <!-- Click to enlarge
 
@@ -101,7 +101,7 @@ B.**Redigera regler**: När du trycker på Redigera regler visas Regelredigerare
 
 C.**Copy**: Du kan använda kopieringsalternativet för att kopiera en komponent och klistra in den på andra platser i den interaktiva kommunikationen.
 
-D.**Klipp** ut: Du kan använda alternativet Klipp ut för att flytta en komponent från en plats till en annan i den interaktiva kommunikationen.
+D.**Cut**: Du kan använda alternativet Klipp ut för att flytta en komponent från en plats till en annan i den interaktiva kommunikationen.
 
 E. **Ta bort**: Gör att du kan ta bort komponenten från den interaktiva kommunikationen.
 
@@ -113,9 +113,9 @@ H. **Grupp**: Gör att du kan markera flera komponenter om du vill klippa ut, ko
 
 Jag. **Överordnad**: Gör att du kan välja en komponents överordnade.
 
-**J.** Visa SOM-uttryck: Gör att du kan visa [SOM-uttrycket](../../forms/using/using-som-expressions-adaptive-forms.md) för komponenten.
+J. **Visa SOM-uttryck:** Gör att du kan visa [SOM-uttrycket](../../forms/using/using-som-expressions-adaptive-forms.md) för komponenten.
 
-**K: Gruppera** objekt i panelen: Gör att du kan gruppera komponenterna på en panel för att kunna utföra åtgärder på dessa komponenter samtidigt. Mer information finns i [Gruppera objekt på panelen](../../forms/using/create-interactive-communication.md#main-pars-header-1815149576).
+K: Gruppera **objekt i panelen:** Gör att du kan gruppera komponenterna på en panel för att kunna utföra åtgärder på dessa komponenter samtidigt. Mer information finns i [Gruppera objekt på panelen](create-interactive-communication.md#groupobjectspanel).
 
 L. **Lägg till underordnad panel** (endast för paneler): Gör att du kan lägga till en underordnad panel på panelen.
 
