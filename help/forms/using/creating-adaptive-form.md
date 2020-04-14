@@ -9,7 +9,7 @@ topic-tags: author
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: f06b8cb2-6f98-465f-beec-1e91e3f45707
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -101,7 +101,7 @@ Gör följande om du vill använda en XFA-formulärmall som formulärmodell för
 
    >[!NOTE]
    >
-   >Du kan också ändra formulärmallen för ett anpassat formulär. Detaljerade steg finns i [Redigera formulärmodellegenskaper för ett adaptivt formulär](#edit-form-model).
+   >Du kan också ändra formulärmallen för ett anpassat formulär. Detaljerade steg finns i [Redigera formulärmodellegenskaper för ett anpassat formulär](#edit-form-model).
 
 ## Skapa ett anpassat formulär baserat på XML- eller JSON-schema {#create-an-adaptive-form-based-on-xml-or-json-schema}
 
@@ -135,7 +135,7 @@ Gör följande om du vill använda XML- eller JSON-schema som formulärmodell f�
 
 >[!NOTE]
 >
->Du kan också ändra schemat för ett anpassat formulär. Detaljerade steg finns i [Redigera formulärmodellegenskaper för ett anpassat formulär](#edit-form-model).
+>Du kan också ändra schemat för ett anpassat formulär. Detaljerade steg finns i [Redigera formulärmodellegenskaper för ett adaptivt formulär](#edit-form-model).
 
 ## Adaptiva formulärmallar {#adaptive-form-templates}
 
@@ -145,7 +145,7 @@ Dessutom kan du använda mallredigeraren för att skapa egna mallar. Mer informa
 
 >[!NOTE]
 >
->När du öppnar ett adaptivt formulär som skapats med den avancerade mallen för redigering visas ett felmeddelande. Den avancerade mallen har en signaturstegskomponent och Adobe Sign är aktiverat som standard för den. Skapa och välj en [Adobe Sign-molnkonfiguration](/help/forms/using/adobe-sign-integration-adaptive-forms.md) och [konfigurera en signerare](/help/forms/using/working-with-adobe-sign.md#main-pars-header-1374317451) för att lösa felet.
+>När du öppnar ett adaptivt formulär som skapats med den avancerade mallen för redigering visas ett felmeddelande. Den avancerade mallen har en signaturstegskomponent och Adobe Sign är aktiverat som standard för den. Skapa och välj en [Adobe Sign-molnkonfiguration](/help/forms/using/adobe-sign-integration-adaptive-forms.md) och [konfigurera en signerare](working-with-adobe-sign.md#addsignerstoanadaptiveform) för att lösa felet.
 
 ## Redigera formulärmodellegenskaper för ett anpassat formulär {#edit-form-model}
 
