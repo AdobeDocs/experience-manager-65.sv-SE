@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: 0ce7b338-6686-49b3-b58b-e7ab6b670708
 translation-type: tm+mt
-source-git-commit: 9d90bc5f77f827925e3e1ecd12d56a94a2bbae30
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -31,7 +31,7 @@ Innan du konfigurerar en bevakad mapp bör du kontrollera följande:
 * Bevakade mappar är en avancerad funktion i AEM-formulär. AEM-formulärtilläggspaket krävs för att funktionen ska fungera. Kontrollera att lämpligt AEM Forms-tilläggspaket är installerat och konfigurerat.
 * Du kan skapa den bevakade mappen i en delad eller lokal lagringsplats. Se till att AEM-formuläranvändare som är konfigurerade att köra den bevakade mappen har läs- och skrivbehörigheter i den bevakade mappen.
 * Du kan använda en tjänst, ett arbetsflöde eller ett skript för att automatisera en åtgärd med bevakad mapp. Kontrollera att motsvarande tjänst, arbetsflöde eller skript har skapats och är redo att köras. Mer information om hur du skapar en tjänst, ett arbetsflöde och ett skript finns i [Olika metoder för att bearbeta filer](/help/forms/using/watched-folder-in-aem-forms.md#various-methods-for-processing-files).
-* En bevakad mapp har olika egenskaper, se Egenskaper för [bevakad mapp](/help/forms/using/watched-folder-in-aem-forms.md#main-pars-header-1).
+* En bevakad mapp har olika egenskaper, se Egenskaper för [bevakad mapp](watched-folder-in-aem-forms.md#watchedfolderproperties).
 
 Så här skapar du en bevakad mapp:
 
@@ -63,22 +63,22 @@ Så här skapar du en bevakad mapp:
 
 1. Tryck på **Avancerat**. Den avancerade fliken innehåller fler fält. De flesta av dessa fält innehåller ett standardvärde.
 
-   * **** Nyttolastmappningsfilter: När du skapar en bevakad mapp skapas en mappstruktur i den mapp som bevakas. Mappstrukturen har mapparna stage, result, preserve, input och error. Mappstrukturen kan fungera som indatanyttolast för arbetsflödet och acceptera utdata från ett arbetsflöde. Den kan även visa eventuella felpunkter. Strukturen för en nyttolast skiljer sig från strukturen för en bevakad mapp. Du kan skriva egna skript för att mappa strukturen för en bevakad mapp till nyttolasten. Ett sådant skript kallas nyttolastmappningsfilter. Det finns två körklara implementeringar av nyttolastmappare. Om du inte har [någon anpassad implementering](/help/forms/using/watched-folder-in-aem-forms.md#creating-a-custom-payload-mapper-filter)kan du använda en körklar implementering:
+   * **Nyttolastmappningsfilter:** När du skapar en bevakad mapp skapas en mappstruktur i den mapp som bevakas. Mappstrukturen har mapparna stage, result, preserve, input och error. Mappstrukturen kan fungera som indatanyttolast för arbetsflödet och acceptera utdata från ett arbetsflöde. Den kan även visa eventuella felpunkter. Strukturen för en nyttolast skiljer sig från strukturen för en bevakad mapp. Du kan skriva egna skript för att mappa strukturen för en bevakad mapp till nyttolasten. Ett sådant skript kallas nyttolastmappningsfilter. Det finns två körklara implementeringar av nyttolastmappare. Om du inte har [någon anpassad implementering](/help/forms/using/watched-folder-in-aem-forms.md#creating-a-custom-payload-mapper-filter)kan du använda en körklar implementering:
 
-      * **** Standardmappare: Använd standardnyttolastmapparen för att behålla in- och utdatamaterialet för de bevakade mapparna i separata in- och utdatamappar i nyttolasten.
-      * **** Enkel filbaserad nyttolastmappare: Använd den enkla filbaserade nyttolastmapparen för att behålla in- och utdatamaterialet direkt i nyttolastmappen. Ingen extra hierarki skapas, som standardmappare.
+      * **Standardmappare:** Använd standardnyttolastmapparen för att behålla in- och utdatamaterialet för de bevakade mapparna i separata in- och utdatamappar i nyttolasten.
+      * **Enkel filbaserad nyttolastmappare:** Använd den enkla filbaserade nyttolastmapparen för att behålla in- och utdatamaterialet direkt i nyttolastmappen. Ingen extra hierarki skapas, som standardmappare.
    * **Körningsläge**: Ange en kommaavgränsad lista över tillåtna körningslägen för arbetsflödeskörning.
    * **Timeout för mellanlagrade filer efter**: Ange hur många sekunder som ska vänta innan en indatafil/indatamapp som redan har hämtats för bearbetning behandlas som att tidsgränsen har överskridits och markerats som ett fel. Timeout-mekanismen aktiveras bara när värdet för den här egenskapen är ett positivt tal.
    * **Ta bort mellanlagrade filer med timeout vid begränsning**: Om det här alternativet är aktiverat aktiveras funktionen **Timeout Stage Files After** (Tid out Stage Files After) bara när strypning är aktiverat för den bevakade mappen.
-   * **** Sök igenom indatamapp efter varje: Ange tidsintervallet, i sekunder, för att söka efter indata i den bevakade mappen. Om inte inställningen Gräns är aktiverad ska avsökningsintervallet vara längre än tiden för att bearbeta ett genomsnittligt jobb. annars kan systemet överbelastas. Intervallets värde måste vara större än eller lika med ett.
-   * **Exkludera filmönster**: Ange en semikolonavgränsad lista (;) med mönster som en bevakad mapp använder för att avgöra vilka filer och mappar som ska skannas och plockas upp. Alla filer eller mappar med det angivna mönstret skannas inte för bearbetning. Mer information om filmönster finns i [Om filmönster](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#about-file-patterns).
+   * **Sök igenom indatamapp efter varje:** Ange tidsintervallet, i sekunder, för att söka efter indata i den bevakade mappen. Om inte inställningen Gräns är aktiverad ska avsökningsintervallet vara längre än tiden för att bearbeta ett genomsnittligt jobb. annars kan systemet överbelastas. Intervallets värde måste vara större än eller lika med ett.
+   * **Uteslut filmönster**: Ange en semikolonavgränsad lista (;) med mönster som en bevakad mapp använder för att avgöra vilka filer och mappar som ska skannas och plockas upp. Alla filer eller mappar med det angivna mönstret skannas inte för bearbetning. Mer information om filmönster finns i [Om filmönster](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#about-file-patterns).
    * **Inkludera filmönster**: Ange en semikolonavgränsad lista (;) med mönster som den bevakade mappen använder för att avgöra vilka mappar och filer som ska genomsökas och hämtas. Om till exempel Inkludera filmönster är indata&amp;ast;, alla filer och mappar som matchar indata&amp;ast; plockas upp. Standardvärdet är &amp;ast; och anger alla filer och mappar. Mer information om filmönster finns i [Om filmönster](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#about-file-patterns).
-   * **** Väntetid: Ange i millisekunder hur lång tid du vill vänta innan du skannar en mapp eller fil efter att den har skapats. Om väntetiden till exempel är 3 600 000 millisekunder (en timme) och filen skapades för en minut sedan, kommer filen att hämtas efter 59 eller fler minuter. Standardvärdet är 0.
+   * **Väntetid:** Ange i millisekunder hur lång tid du vill vänta innan du skannar en mapp eller fil efter att den har skapats. Om väntetiden till exempel är 3 600 000 millisekunder (en timme) och filen skapades för en minut sedan, kommer filen att hämtas efter 59 eller fler minuter. Standardvärdet är 0.
 
       Den här inställningen är användbar för att säkerställa att allt innehåll i filen eller mappen kopieras till indatamappen. Om du till exempel har en stor fil att bearbeta och det tar tio minuter att hämta filen, ställer du in väntetiden på 10&amp;ast;60 &amp;ast;1000 millisekunder. Det här intervallet förhindrar att den bevakade mappen skannar filen om den inte är tio minuter gammal.
 
-   * **** Ta bort resultat som är äldre än: Ange hur många dagar du vill vänta innan filerna och mapparna som är äldre än det angivna värdet tas bort. Den här inställningen är användbar för att säkerställa att resultatmappen inte blir full. Värdet -1 dagar anger att resultatmappen aldrig ska tas bort. Standardvärdet är -1.
-   * **** Namn på resultatmapp: Ange namnet på mappen där resultaten ska lagras. Om resultaten inte visas i den här mappen kontrollerar du felmappen. Skrivskyddade filer bearbetas inte och sparas i felmappen. Du kan använda en absolut eller relativ sökväg med följande filmönster:
+   * **Ta bort resultat som är äldre än:** Ange hur många dagar du vill vänta innan filerna och mapparna som är äldre än det angivna värdet tas bort. Den här inställningen är användbar för att säkerställa att resultatmappen inte blir full. Värdet -1 dagar anger att resultatmappen aldrig ska tas bort. Standardvärdet är -1.
+   * **Namn på resultatmapp:** Ange namnet på mappen där resultaten ska lagras. Om resultaten inte visas i den här mappen kontrollerar du felmappen. Skrivskyddade filer bearbetas inte och sparas i felmappen. Du kan använda en absolut eller relativ sökväg med följande filmönster:
 
       * %F = filnamnsprefix
       * %E = filnamnstillägg
@@ -96,18 +96,18 @@ Så här skapar du en bevakad mapp:
       * %P = process- eller jobb-ID
       * Om det till exempel är 2009-08-17 och du anger C:/Test/WF0/error/%Y/%M/%D/%H/ är resultatmappen C:/Test/WF0/error/2009/07/17/20.
       * Om sökvägen inte är absolut men relativ skapas mappen i den bevakade mappen. Standardvärdet är result/%Y/%M/%D/, som är resultatmappen i den bevakade mappen. Mer information om filmönster finns i [Om filmönster](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#about-file-patterns).
-   * **** Namn på felmapp: Ange mappen där misslyckade filer sparas. Den här platsen är alltid relativ till den bevakade mappen. Du kan använda filmönster enligt beskrivningen för resultatmappen.
-   * **** Bevara mappnamn: Ange den mapp där filerna ska lagras efter att sökningen och hämtningen har slutförts. Sökvägen kan vara en absolut, relativ eller null-katalog. Du kan använda filmönster enligt beskrivningen för resultatmappen. Standardvärdet är preserve/%Y/%M/%D/.
-   * **** Batchstorlek: Ange antalet filer eller mappar som ska hämtas per skanning. Den förhindrar att systemet överbelastas. Om du läser in för många filer samtidigt kan det orsaka en krasch. Standardvärdet är 2.
+   * **Namn på felmapp:** Ange mappen där misslyckade filer sparas. Den här platsen är alltid relativ till den bevakade mappen. Du kan använda filmönster enligt beskrivningen för resultatmappen.
+   * **Bevara mappnamn:** Ange den mapp där filerna ska lagras efter att sökningen och hämtningen har slutförts. Sökvägen kan vara en absolut, relativ eller null-katalog. Du kan använda filmönster enligt beskrivningen för resultatmappen. Standardvärdet är preserve/%Y/%M/%D/.
+   * **Batchstorlek:** Ange antalet filer eller mappar som ska hämtas per skanning. Den förhindrar att systemet överbelastas. Om du läser in för många filer samtidigt kan det orsaka en krasch. Standardvärdet är 2.
 
       Om skanningsintervallet är litet genomsöks indatamappen ofta av trådarna. Om filer ofta placeras i den bevakade mappen bör du hålla sökintervallet litet. Om filerna tas bort sällan bör du använda ett större inläsningsintervall så att de andra tjänsterna kan använda trådarna.
 
-   * **** Begränsning på: När det här alternativet är aktiverat begränsas antalet bevakade mappjobb som AEM-formulär bearbetar vid en given tidpunkt. Värdet för Batchstorlek avgör det maximala antalet jobb. For more information, see [throttling](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#about-throttling)
+   * **Begränsning på:** När det här alternativet är aktiverat begränsas antalet bevakade mappjobb som AEM-formulär bearbetar vid en given tidpunkt. Värdet för Batchstorlek avgör det maximala antalet jobb. For more information, see [throttling](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#about-throttling)
    * **Skriv över befintliga filer med liknande namn**: När värdet är True skrivs filerna i resultatmappen och i den bevarade mappen över. Om värdet är Falskt används filer och mappar med ett numeriskt indexsuffix för namnet. Standardvärdet är Falskt.
-   * **** Bevara filer vid fel: Om du anger True bevaras indatafilerna om fel uppstår. Standardvärdet är true.
-   * **** Inkludera filer med mönster: Ange en semikolonavgränsad lista (;) med mönster som den bevakade mappen använder för att avgöra vilka mappar och filer som ska genomsökas och hämtas. Om till exempel Inkludera filmönster är indata hämtas alla filer och mappar som matchar indata. Mer information finns i [Administrationshjälp](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md)
-   * **** Anropa bevakad mapp asynkront: Identifierar anropstypen som asynkron eller synkron. Standardvärdet är asynkront. Asynkron rekommenderas för långvariga processer, medan synkron rekommenderas för tillfälliga eller kortvariga processer.
-   * **** Aktivera bevakad mapp: När det här alternativet är aktiverat aktiveras den bevakade mappen. Standardvärdet är True.
+   * **Bevara filer vid fel:** Om du anger True bevaras indatafilerna om fel uppstår. Standardvärdet är true.
+   * **Inkludera filer med mönster:** Ange en semikolonavgränsad lista (;) med mönster som den bevakade mappen använder för att avgöra vilka mappar och filer som ska genomsökas och hämtas. Om till exempel Inkludera filmönster är indata hämtas alla filer och mappar som matchar indata. Mer information finns i [Administrationshjälp](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md)
+   * **Anropa bevakad mapp asynkront:** Identifierar anropstypen som asynkron eller synkron. Standardvärdet är asynkront. Asynkron rekommenderas för långvariga processer, medan synkron rekommenderas för tillfälliga eller kortvariga processer.
+   * **Aktivera bevakad mapp:** När det här alternativet är aktiverat aktiveras den bevakade mappen. Standardvärdet är True.
 
 
 
