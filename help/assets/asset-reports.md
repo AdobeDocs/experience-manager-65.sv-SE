@@ -3,12 +3,12 @@ title: Rapporter om era digitala resurser
 description: Förstå rapporter om era resurser i AEM Assets som hjälper er att förstå hur era digitala resurser används, används och delas.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 70a88085a0fd6e949974aa7f1f92fdc3def3d98e
+source-git-commit: a839ec71e02ee5d92f054a686b7bb52142058ae9
 
 ---
 
 
-# Resursrapporter {#asset-reports}
+# Asset Reports {#asset-reports}
 
 Resursrapportering är ett viktigt verktyg för att utvärdera hur användbart Adobe Experience Manager Assets-distributionen är. Med AEM Assets kan ni generera olika rapporter för era digitala resurser. Rapporterna innehåller användbar information om hur ditt system används, hur användarna interagerar med resurser och vilka resurser som hämtas och delas.
 
@@ -38,16 +38,16 @@ AEM-administratörer kan enkelt generera och anpassa dessa rapporter för implem
 
 1. Tryck/klicka på AEM-logotypen och gå till **[!UICONTROL Verktyg]** > **[!UICONTROL Resurser]** > **[!UICONTROL Rapporter]**.
 
-![Navigera bland resurser](assets/AssetsReportNavigation.png)
+![Verktygssida för att navigera bland resurser - rapport](assets/AssetsReportNavigation.png)
 
 1. Tryck/klicka på **[!UICONTROL Skapa]** i verktygsfältet på sidan Resursrapporter.
 1. Välj den rapport du vill skapa på sidan **[!UICONTROL Skapa rapport]** och tryck/klicka på **[!UICONTROL Nästa]**.
 
-   ![choose_report](assets/choose_report.png)
+   ![Välj rapporttyp](assets/choose_report.png)
 
    >[!NOTE]
    >
-   >Innan du kan generera en **[!UICONTROL rapport om hämtad]** resurs måste du se till att tjänsten för hämtning av resurser är aktiverad. Öppna konfigurationen`https://[aem_server]:[port]/system/console/configMgr`Day CQ DAM Event Recorder **[!UICONTROL i webbkonsolen (]** ) och välj alternativet **[!UICONTROL Asset Downloaded (DOWNLOADED)]** i Händelsetyper om det inte redan är valt.
+   >Before you can generate an **[!UICONTROL Asset Downloaded]** report, ensure that the Asset Download service is enabled. Öppna konfigurationen`https://[aem_server]:[port]/system/console/configMgr`Day CQ DAM Event Recorder **[!UICONTROL i webbkonsolen (]** ) och välj alternativet **[!UICONTROL Asset Downloaded (DOWNLOADED)]** i Händelsetyper om det inte redan är valt.
 
    >[!NOTE]
    >
@@ -55,7 +55,7 @@ AEM-administratörer kan enkelt generera och anpassa dessa rapporter för implem
 
 1. Konfigurera rapportinformation som titel, beskrivning, miniatyrbild och mappsökväg i CRX-databasen där rapporten lagras. Som standard är mappsökvägen */content/dam*. Du kan ange en annan sökväg.
 
-   ![report_configuration](assets/report_configuration.png)
+   ![Sida för att lägga till rapportinformation](assets/report_configuration.png)
 
    Välj datumintervall för rapporten.
 
@@ -69,34 +69,34 @@ AEM-administratörer kan enkelt generera och anpassa dessa rapporter för implem
 
    >[!NOTE]
    >
-   >Rapporten **[!UICONTROL Diskanvändning]** innehåller inga datumintervallfält eftersom den endast visar aktuell diskanvändning.
+   >The **[!UICONTROL Disk Usage]** report does not include date range fields because it indicates current disk space usage only.
 
-   ![disk_usage_configuration](assets/disk_usage_configuration.png)
+   ![Sidan Information om rapporten Diskanvändning](assets/disk_usage_configuration.png)
 
    När du skapar rapporten **[!UICONTROL Filer]** kan du inkludera/exkludera undermappar. Du kan dock inte inkludera resursåtergivningar för den här rapporten.
 
-   ![files_report](assets/files_report.png)
+   ![Detaljsida för rapporten Filer](assets/files_report.png)
 
-   I rapporten **[!UICONTROL Länkdelning]** visas URL:er till resurser som delas med externa användare från AEM Resurser. Det innehåller e-post-ID för den användare som delade resurserna, e-post-ID för de användare som resurserna delas med, delningsdatum och förfallodatum för länken. Det går inte att anpassa kolumnerna.
+   The **[!UICONTROL Link Share]** report displays URLs to assets that are shared with external users from within AEM Assets. Den innehåller e-post-ID:n för den användare som delat resurserna, e-post-ID:n för de användare som resurserna delas med, delningsdatum och utgångsdatum för länken. Det går inte att anpassa kolumnerna.
 
-   Rapporten **[!UICONTROL Länkdelning]** innehåller inga alternativ för undermappar och återgivningar eftersom den bara publicerar de delade URL:er som visas under `/var/dam/share`.
+   The **[!UICONTROL Link Share]** report, does not include options for sub-folders and renditions because it merely publishes the shared URLs that appear under `/var/dam/share`.
 
-   ![link_share](assets/link_share.png)
+   ![Detaljsida för länkdelningsrapport](assets/link_share.png)
 
 1. Tryck/klicka på **[!UICONTROL Nästa]** i verktygsfältet.
 
 1. På sidan **[!UICONTROL Konfigurera kolumner]** är vissa kolumner markerade för att visas i rapporten som standard. Du kan markera fler kolumner. Avmarkera en markerad kolumn om du vill utesluta den i rapporten.
 
-   ![configure_columns](assets/configure_columns.png)
+   ![Markera eller avmarkera rapportkolumner](assets/configure_columns.png)
 
    Om du vill visa ett anpassat kolumnnamn eller en egenskapssökväg konfigurerar du egenskaperna för resursens binärfil under noden jcr:content i CRX. Du kan också lägga till den via egenskapssökvägsväljaren.
 
-   ![custom_columns](assets/custom_columns.png)
+   ![Skapa anpassade kolumner för rapporten](assets/custom_columns.png)
 
 1. Tryck/klicka på **[!UICONTROL Skapa]** i verktygsfältet. Ett meddelande meddelar att rapportgenereringen har initierats.
 1. På sidan Resursrapporter baseras rapportgenereringsstatusen på rapportjobbets aktuella tillstånd, till exempel Slutfört, Misslyckades, Köat eller Schemalagt. Samma status visas i inkorgen för meddelanden.Om du vill visa rapportsidan trycker/klickar du på rapportlänken. Du kan också markera rapporten och trycka på **[!UICONTROL Visa]** i verktygsfältet.
 
-   ![report_page](assets/report_page.png)
+   ![En genererad rapport](assets/report_page.png)
 
    Tryck på **[!UICONTROL Hämta]** i verktygsfältet för att hämta rapporten i CSV-format.
 
@@ -118,13 +118,13 @@ Du kan lägga till anpassade kolumner i följande rapporter om du vill visa mer 
 1. Välj den rapport du vill skapa på sidan **[!UICONTROL Skapa rapport]** och tryck/klicka på **[!UICONTROL Nästa]**.
 1. Konfigurera rapportinformation som titel, beskrivning, miniatyrbild, mappsökväg och datumintervall.
 
-1. Om du vill visa en anpassad kolumn anger du namnet på kolumnen under **[!UICONTROL Anpassade kolumner]**.
+1. To display a custom column, specify the name of the column in under **[!UICONTROL Custom Columns]**.
 
-   ![custom_columns-1](assets/custom_columns-1.png)
+   ![Ange namn för anpassad rapportkolumn](assets/custom_columns-1.png)
 
 1. Lägg till egenskapssökvägen under `jcr:content` noden i CRXDE med egenskapssökvägsväljaren. Du kan också skriva sökvägen i fältet för egenskapssökväg.
 
-   ![property_picker](assets/property_picker.png)
+   ![Mappa egenskapssökvägen från banor i jcr:content](assets/property_picker.png)
 
    Om du vill lägga till fler anpassade kolumner trycker/klickar du på **[!UICONTROL Lägg till]** och upprepar steg 5 och 6.
 
