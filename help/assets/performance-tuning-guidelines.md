@@ -4,7 +4,7 @@ description: Förslag och vägledning om AEM-konfiguration, ändringar av maskin
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
@@ -111,7 +111,7 @@ accessKey=<snip>
 
 ## Nätverksoptimering {#network-optimization}
 
-Adobe rekommenderar att du aktiverar HTTPS eftersom många företag har brandväggar som fångar upp HTTP-trafik, vilket påverkar överföringar negativt och skadar filer. För stora filöverföringar måste användarna ha kabelanslutna anslutningar till nätverket eftersom ett WiFi-nätverk snabbt blir mättat. Riktlinjer för hur du identifierar flaskhalsar i nätverk finns i [Handbok](/help/assets/assets-sizing-guide.md)för resursstorlek. Information om hur du utvärderar nätverksprestanda genom att analysera nätverkstopologi finns i [Resurser för nätverksaspekter](/help/assets/assets-network-considerations.md).
+Adobe rekommenderar att du aktiverar HTTPS eftersom många företag har brandväggar som förhindrar HTTP-trafik, vilket påverkar överföringar negativt och gör att filer skadas. För stora filöverföringar måste användarna ha kabelanslutna anslutningar till nätverket eftersom ett WiFi-nätverk snabbt blir mättat. Riktlinjer för hur du identifierar flaskhalsar i nätverk finns i [Handbok](/help/assets/assets-sizing-guide.md)för resursstorlek. Information om hur du utvärderar nätverksprestanda genom att analysera nätverkstopologi finns i [Resurser för nätverksaspekter](/help/assets/assets-network-considerations.md).
 
 Din nätverksoptimeringsstrategi är i första hand beroende av hur mycket bandbredd som är tillgänglig och hur stor belastning din AEM-instans har. Gemensamma konfigurationsalternativ, inklusive brandväggar och proxies, kan förbättra nätverkets prestanda. Här följer några viktiga punkter att tänka på:
 
@@ -124,22 +124,22 @@ Din nätverksoptimeringsstrategi är i första hand beroende av hur mycket bandb
 
 ### Övergående arbetsflöden {#transient-workflows}
 
-Ställ in arbetsflödet DAM Update Asset på Transient när det är möjligt. Inställningen minskar avsevärt de allmänna kostnader som krävs för att bearbeta arbetsflöden, eftersom arbetsflöden i det här fallet inte behöver passera genom de normala spårnings- och arkiveringsprocesserna.
+Ställ in arbetsflödet [!UICONTROL DAM Update Asset] på Transient om det är möjligt. Inställningen minskar avsevärt de allmänna kostnader som krävs för att bearbeta arbetsflöden, eftersom arbetsflöden i det här fallet inte behöver passera genom de normala spårnings- och arkiveringsprocesserna.
 
 >[!NOTE]
 >
->Som standard är arbetsflödet för DAM-uppdatering av tillgångar inställt på Transient i AEM 6.3. I så fall kan du hoppa över följande procedur.
+>Som standard är arbetsflödet för [!UICONTROL DAM-uppdatering av tillgångar] inställt på Transient i AEM 6.3. I så fall kan du hoppa över följande procedur.
 
 1. Navigera till `/miscadmin` i AEM-instansen på `https://[aem_server]:[port]/miscadmin`.
 1. Expandera **[!UICONTROL Verktyg]** > **[!UICONTROL Arbetsflöde]** > **[!UICONTROL Modeller]** > **[!UICONTROL dam]**.
 1. Öppna **[!UICONTROL DAM-uppdateringsresurs]**. Gå till fliken **[!UICONTROL Sida]** i den flytande verktygspanelen och klicka sedan på **[!UICONTROL Sidegenskaper]**.
-1. Välj **[!UICONTROL Övergående arbetsflöde]** och klicka på **[!UICONTROL OK]**.
+1. Select **[!UICONTROL Transient Workflow]** and click **[!UICONTROL OK]**.
 
    >[!NOTE]
    >
    >Vissa funktioner har inte stöd för tillfälliga arbetsflöden. Om din AEM Assets-distribution kräver dessa funktioner ska du inte konfigurera tillfälliga arbetsflöden.
 
-Om det inte går att använda tillfälliga arbetsflöden kör du regelbundet arbetsflödesrensning för att ta bort arkiverade arbetsflöden för DAM Update Asset för att säkerställa att systemprestanda inte försämras.
+Om det inte går att använda tillfälliga arbetsflöden kör du regelbundet arbetsflödesrensning för att ta bort arkiverade arbetsflöden för [!UICONTROL DAM-uppdatering av tillgångar] för att säkerställa att systemprestanda inte försämras.
 
 Vanligtvis kör du rensningsarbetsflödena varje vecka. I resurskrävande scenarier, till exempel vid omfattande tillgångsinmatning, kan du dock köra det oftare.
 
@@ -151,7 +151,7 @@ Om du till exempel har kört flera icke-tillfälliga arbetsflöden (som skapar a
 
 ### Maximalt antal parallella jobb {#maximum-parallel-jobs}
 
-Som standard kör AEM ett maximalt antal parallella jobb som motsvarar antalet processorer på servern. Problemet med den här inställningen är att under perioder med hög belastning används alla processorer av arbetsflödena för DAM Update Asset, vilket gör att användargränssnittet tar längre tid och förhindrar att AEM kör andra processer som skyddar serverns prestanda och stabilitet. Det är en god vana att ange det här värdet till hälften av de processorer som är tillgängliga på servern genom att utföra följande steg:
+Som standard kör AEM ett maximalt antal parallella jobb som motsvarar antalet processorer på servern. Problemet med den här inställningen är att under perioder med hög belastning används alla processorer av arbetsflödena för [!UICONTROL DAM Update Asset] , vilket gör att användargränssnittet tar längre tid och förhindrar att AEM kör andra processer som skyddar serverns prestanda och stabilitet. Det är en god vana att ange det här värdet till hälften av de processorer som är tillgängliga på servern genom att utföra följande steg:
 
 1. På AEM Author går du till `https://[aem_server]:[port]/system/console/slingevent`.
 1. Klicka på **[!UICONTROL Redigera]** i varje arbetsflödeskö som är relevant för implementeringen, till exempel **[!UICONTROL Bevilja tillfällig arbetsflödeskö]**.
@@ -161,15 +161,15 @@ Att ställa in en kö på hälften av de tillgängliga processorerna är en anv�
 
 ### DAM-uppdateringskonfiguration {#dam-update-asset-configuration}
 
-Arbetsflödet för DAM-uppdatering av resurser innehåller en komplett serie steg som är konfigurerade för uppgifter, till exempel Scene7 PTIFF-generering och InDesign Server-integrering. De flesta användare behöver dock inte utföra flera av dessa steg. Adobe rekommenderar att du skapar en anpassad kopia av arbetsflödesmodellen DAM Update Asset och tar bort alla onödiga steg. I det här fallet ska du uppdatera startarna för DAM Update Asset så att de pekar på den nya modellen.
+Arbetsflödet för [!UICONTROL DAM-uppdatering av resurser] innehåller en komplett serie steg som är konfigurerade för uppgifter, till exempel Scene7 PTIFF-generering och InDesign Server-integrering. De flesta användare behöver dock inte utföra flera av dessa steg. Adobe rekommenderar att du skapar en anpassad kopia av arbetsflödesmodellen [!UICONTROL DAM Update Asset] och tar bort alla onödiga steg. I det här fallet ska du uppdatera startarna för [!UICONTROL DAM Update Asset] så att de pekar på den nya modellen.
 
-Om du kör arbetsflödet DAM Update Asset kraftigt kan du öka storleken på filens datalager. Resultaten från ett experiment som Adobe har utfört har visat att datalagrets storlek kan öka med ungefär 400 GB om ca 500 arbetsflöden utförs inom 8 timmar.
+Om du kör arbetsflödet för [!UICONTROL DAM-uppdatering av resurser] kraftigt kan du öka storleken på fildatalagret. Resultaten från ett experiment som Adobe har utfört har visat att datalagrets storlek kan öka med ungefär 400 GB om ca 500 arbetsflöden utförs inom 8 timmar.
 
 Det är en tillfällig ökning och datalagret återställs till den ursprungliga storleken när du har kört skräpinsamlingsaktiviteten för datalagret.
 
 Vanligtvis körs skräpinsamlingsaktiviteten för datalager varje vecka tillsammans med andra schemalagda underhållsaktiviteter.
 
-Om du har begränsat diskutrymme och kör arbetsflöden för DAM-uppdatering av resurser intensivt bör du överväga att schemalägga skräpinsamlingen oftare.
+Om du har begränsat diskutrymme och kör arbetsflödena för [!UICONTROL DAM-uppdatering av resurser] intensivt bör du överväga att schemalägga skräpinsamlingsaktiviteten oftare.
 
 #### Generering av rendering vid körning {#runtime-rendition-generation}
 
@@ -181,7 +181,7 @@ Ett annat sätt är att använda Scene7-teknik för att helt och hållet överl�
 
 #### ImageMagick {#imagemagick}
 
-Om du anpassar arbetsflödet DAM Update Asset för att generera återgivningar med ImageMagick rekommenderar Adobe att du ändrar `policy.xml` filen i `/etc/ImageMagick/`. Som standard använder ImageMagick hela det tillgängliga diskutrymmet på operativsystemsvolymen och det tillgängliga minnet. Gör följande konfigurationsändringar i `policymap` avsnittet av för `policy.xml` att begränsa resurserna.
+Om du anpassar arbetsflödet [!UICONTROL DAM Update Asset] för att generera återgivningar med ImageMagick rekommenderar Adobe att du ändrar `policy.xml` filen i `/etc/ImageMagick/`. Som standard använder ImageMagick hela det tillgängliga diskutrymmet på operativsystemsvolymen och det tillgängliga minnet. Gör följande konfigurationsändringar i `policymap` avsnittet av för `policy.xml` att begränsa resurserna.
 
 ```xml
 <policymap>
@@ -220,7 +220,7 @@ XMP-tillbakaskrivning uppdaterar originalresursen när metadata ändras i AEM, v
 
 * Själva tillgången ändras
 * En version av resursen skapas
-* DAM Update Asset körs mot resursen
+* [!UICONTROL DAM Update Asset] körs mot resursen
 
 De listade resultaten kräver stora resurser. Därför rekommenderar Adobe att du [inaktiverar XMP-återställning](https://helpx.adobe.com/experience-manager/kb/disable-xmp-writeback.html)om det inte behövs.
 
@@ -299,7 +299,7 @@ Om användarna inte behöver kunna söka i innehållet i resurser, till exempel 
 
 När du skapar frågor som genererar stora resultatuppsättningar bör du använda parametern för att undvika att använda mycket minne när du kör dem. `guessTotal`
 
-## Kända fel {#known-issues}
+## Known issues {#known-issues}
 
 ### Stora filer {#large-files}
 
@@ -338,8 +338,8 @@ För att minimera latens och uppnå hög genomströmning genom effektiv processo
 * Aktivera tillfälliga arbetsflöden
 * Justera Granite-arbetsflödesköer för att begränsa samtidiga jobb
 * Konfigurera ImageMagick för att begränsa resursförbrukningen
-* Ta bort onödiga steg från arbetsflödet för DAM-uppdatering
+* Ta bort onödiga steg från arbetsflödet för [!UICONTROL DAM-uppdatering av resurser]
 * Konfigurera arbetsflöde och versionsrensning
 * Optimera index med de senaste servicepaketen och snabbkorrigeringarna. Kontakta Adobe Support för eventuella ytterligare indexoptimeringar.
 * Använd gissningTotal för att optimera frågeprestanda.
-* Om du konfigurerar AEM för att identifiera filtyper från filernas innehåll (genom att aktivera **[!UICONTROL Day CQ DAM Mime Type Service]** i **[!UICONTROL AEM Web Console]**) överför du många filer samtidigt under icke-toppade tider eftersom det är resurskrävande.
+* If you configure AEM to detect file types from the content of the files (by enabling **[!UICONTROL Day CQ DAM Mime Type Service]** in the **[!UICONTROL AEM Web Console]**), upload many files in bulk during non-peak hours as it is resource-intensive.
