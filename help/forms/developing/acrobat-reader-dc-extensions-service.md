@@ -9,7 +9,7 @@ content-type: reference
 topic-tags: develop
 discoiquuid: 31a9bfc6-462d-4535-888f-31026b8fa674
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 21efe30c6a69d04c737bc523aeaab504db8f605b
 
 ---
 
@@ -20,13 +20,15 @@ Följande snabbstarter är tillgängliga för tjänsten Acrobat Reader DC Extens
 
 [Snabbstart (SOAP-läge):Tillämpa användningsrättigheter med Java API](#quick-start-soap-mode-applying-usage-rights-using-the-java-api)
 
-[Ta bort användningsrättigheter från PDF-dokument](/help/forms/developing/acrobat-reader-dc-extensions-service.md#main-pars-heading-1)
+[Ta bort användningsrättigheter från PDF-dokument](#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api)
 
 [Snabbstart (SOAP-läge): Hämta autentiseringsinformation med Java API](acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-retrieving-credential-information-using-the-java-api)
 
 AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda typer och anslutningsläget bör anges till SOAP.
 
-***Obs **: Snabbstarter i Programmering med AEM Forms är baserade på operativsystemet på Forms-servern. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. (Se[Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)*
+>[!NOTE]
+>
+>Snabbstarter i Programmering med AEM Forms är baserade på operativsystemet på Forms-servern. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## Snabbstart (SOAP-läge):Tillämpa användningsrättigheter med Java API {#quick-start-soap-mode-applying-usage-rights-using-the-java-api}
 
