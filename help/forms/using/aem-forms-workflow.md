@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 73e63493-e821-443f-b50d-10797360f5d1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
+source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
 
 ---
 
@@ -121,7 +121,7 @@ I exemplet skapas en arbetsflödesmodell för en låneansökan som ska fyllas av
 
    Om du vill visa en komplett uppsättning värden för alla fält i tilldelningsstegen, dokumentsteget och signeringsdokumentsteget som konfigurerats för exempelvis låneprogram importerar du exempelpaketet som är tillgängligt för hämtning i början av det här avsnittet.
 
-   Arbetsflödesmodellen är klar. Du kan starta arbetsflödet på olika sätt. Mer information finns i [Starta ett formulärcentrerat arbetsflöde i OSGi](../../forms/using/aem-forms-workflow.md#main-pars-header).
+   Arbetsflödesmodellen är klar. Du kan starta arbetsflödet på olika sätt. Mer information finns i [Starta ett formulärcentrerat arbetsflöde i OSGi](#launch).
 
    ![arbetsflödeseditor-inteckning](assets/workflow-editor-mortgage.png)
 
