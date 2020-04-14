@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 739ec991-552b-42cd-85cd-984d1c9fe8fd
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
@@ -42,11 +42,11 @@ FFmpeg ska vara installerat på de servrar där AEM- *författarinstansen* finns
 
 ## Konfigurera MPEG-omkodningstjänsten {#configure-ffmpeg-transcoding-service}
 
-När FFmpeg är installerat konfigureras som standard flera återgivningar (transkoding) enligt arbetsflödesdefinitionen för DAM-uppdatering.
+När FFmpeg är installerat konfigureras som standard flera återgivningar (transkoding) enligt arbetsflödesdefinitionen för [!UICONTROL DAM-uppdatering] .
 
 Eftersom omkodningarna är processorintensiva bör du ändra listan över målåtergivningar. I de flesta fall behövs inte omkodning.
 
-Så här ändrar du arbetsflödet för DAM Update Asset, och i det här exemplet, för att inaktivera omkodning:
+Så här ändrar du arbetsflödet för [!UICONTROL DAM Update Asset] och i det här exemplet stänger du av transkodning:
 
 * Logga in på författarinstansen med administratörsbehörighet
 * Från global navigering: **[!UICONTROL Verktyg > Arbetsflöde > Modeller]**
