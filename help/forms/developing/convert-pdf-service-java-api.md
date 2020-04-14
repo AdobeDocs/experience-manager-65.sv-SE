@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: bdd9bb56-14f6-448b-be4a-7c11f670e901
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: e103640784f9d5b00a2a78cead6e904017ad7a53
 
 ---
 
@@ -25,7 +25,9 @@ Följande snabbstarter är tillgängliga för konvertering av PDF-tjänstens API
 
 AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda typer och anslutningsläget bör anges till SOAP.
 
-***Obs **: Snabbstart som finns i Programmering med AEM-formulär baseras på den Forms Server som distribueras på JBoss Application Server och operativsystemet Microsoft Windows. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. (Se[Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)*
+>[!NOTE]
+>
+>Snabbstart som finns i Programmering med AEM-formulär baseras på den Forms Server som distribueras på JBoss Application Server och operativsystemet Microsoft Windows. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
 ## Snabbstart (SOAP-läge): Konvertera ett PDF-dokument till PostScript med Java API {#quick-start-soap-mode-converting-a-pdf-document-to-postscript-using-the-java-api}
 
