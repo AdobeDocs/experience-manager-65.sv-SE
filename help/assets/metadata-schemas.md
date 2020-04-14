@@ -3,7 +3,7 @@ title: Metadata-scheman
 description: Metadata-schemat definierar layouten för egenskapssidan och de metadataegenskaper som visas för resurser. Lär dig hur du skapar anpassade metadatamatcheman, redigerar metadatamatchema och hur du använder metadatamatchema på resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5cbaefd5a377db5aa9f8ba35371fe2a9cb638fa1
+source-git-commit: f737122575c9fd0af82a8b86d259db61753f2f97
 
 ---
 
@@ -16,24 +16,23 @@ Du kan använda redigeraren Metadata Schema Forms om du vill ändra befintliga s
 
 1. Om du vill visa egenskapssidan för en resurs klickar eller trycker du på ikonen **[!UICONTROL Visa egenskaper]** från snabbåtgärder på resurspanelen i kortvyn.
 
-   ![chlimage_1-34](assets/chlimage_1-170.png)
+   ![Snabbåtgärder på resurspanelen](assets/chlimage_1-170.png)
 
    Du kan också markera resursen i användargränssnittet och sedan klicka på eller trycka på ikonen **[!UICONTROL Egenskaper]** i verktygsfältet.
 
-   ![chlimage_1-35](assets/chlimage_1-171.png)
+   ![Egenskapsikonen i det övre verktygsfältet](assets/chlimage_1-171.png)
 
 1. Redigera olika metadataegenskaper under de olika flikarna. Du kan dock inte ändra resurstypen på egenskapssidan.
 
-   ![du kan inte ändra resurstyp på fliken Grundläggande i resursegenskaper](assets/asset-properties-basic-tab.png)
+   ![Fliken Grundläggande i resursegenskaper, där resurstypen inte kan ändras](assets/asset-properties-basic-tab.png)
 
    *Bild: Fliken Grundläggande för resursegenskaper*
-
 
    Om du vill ändra MIME-typen för en resurs använder du ett anpassat metadatamatchschema eller ändrar ett befintligt formulär. Mer information finns i [Redigera metadata-schemaformulär](/help/assets/metadata-schemas.md#edit-metadata-schema-forms) . Om du ändrar metadataschemat för en viss MIME-typ ändras egenskapssidlayouten för resurser med den aktuella MIME-typen och alla resursundertyper. Om du till exempel ändrar ett jpeg-schema under `default/image` endast ändras metadatalayouten (resursegenskaper) för resurser med MIME-typ `image/jpeg`. Om du redigerar standardschemat ändrar du metadatalayouten för alla typer av resurser.
 
 1. To view a list of forms/templates, click the AEM logo and then navigate to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Schemas]**.
 
-   ![chlimage_1-37](assets/chlimage_1-173.png)
+   ![Sida som visar en lista med metadataschemaformulär](assets/chlimage_1-173.png)
 
    AEM innehåller följande mallar:
    * **standard**: Basmetadataschemaformuläret för resurser.
@@ -66,7 +65,7 @@ Du kan använda redigeraren Metadata Schema Forms om du vill ändra befintliga s
 
 1. I dialogrutan anger du rubriken för schemaformuläret och klickar sedan på **[!UICONTROL Skapa]** för att slutföra formulärskapandet.
 
-   ![chlimage_1-38](assets/chlimage_1-174.png)
+   ![Ange titel och skapa metadatamappningsformulär](assets/chlimage_1-174.png)
 
 ## Redigera metadata-schemaformulär {#edit-metadata-schema-forms}
 
@@ -81,12 +80,11 @@ Du kan lägga till nya flikar eller formulärobjekt i metadatchemaformuläret. F
 
 1. Markera kryssrutan före ett formulär på sidan Schemaformulär och klicka sedan på ikonen Redigera i verktygsfältet.
 
-   ![chlimage_1-39](assets/chlimage_1-175.png)
+   ![Ikonen Redigera i verktygsfältet för metadata-schemaformulär](assets/chlimage_1-175.png)
 
 1. In the **[!UICONTROL Metadata Schema Editor]** page, customize the properties page of the asset by dragging one or more components from the list of component types in the **[!UICONTROL Build Form]** tab to the **[!UICONTROL Basic]** tab.
 
-   ![lägga till komponenter från Build Form i metadatarameditor för att anpassa resursegenskaper](assets/metadata-schema-editor.png)
-
+   ![Redigerare för metadatamodell för att anpassa sidan Egenskaper för resurser](assets/metadata-schema-editor.png)
 
    *Bild: Fliken Grundläggande för metadatamatchredigeraren*
 
@@ -147,7 +145,7 @@ För att komponenten ska visas korrekt i metadataschemaformuläret bör egenskap
 
 **Ta bort**: Klicka på den här ikonen om du vill ta bort en komponent från schemaformuläret.
 
-![chlimage_1-41](assets/chlimage_1-177.png)
+![Ikonen Ta bort i metadataschemaformulär](assets/chlimage_1-177.png)
 
 >[!NOTE]
 >
@@ -155,15 +153,15 @@ För att komponenten ska visas korrekt i metadataschemaformuläret bör egenskap
 
 If you select the **[!UICONTROL Required]** option, you can search for assets missing mandatory metadata. Expandera predikatet för **[!UICONTROL metadatavalidering]** på panelen **[!UICONTROL Filter]** och välj alternativet **[!UICONTROL Ogiltig]** . Sökresultatet visar resurser som saknar obligatoriska metadata som du har konfigurerat via schemaformuläret.
 
-![chlimage_1-42](assets/chlimage_1-178.png)
+![Ett ogiltigt alternativ har valts i metadataverifieringspredikatet på panelen Filter ](assets/chlimage_1-178.png)
 
 Om du lägger till komponenten Sammanhangsbaserade metadata på en flik i ett schemaformulär, visas komponenten som en lista på egenskapssidan med resurser som det aktuella schemat används på. Listan innehåller alla andra flikar förutom den flik som du tillämpade på komponenten Sammanhangsberoende metadata på. För närvarande innehåller den här funktionen grundläggande funktioner för att styra visningen av metadata baserat på sammanhanget.
 
-![chlimage_1-43](assets/chlimage_1-179.png)
+![Sammanhangsberoende metadatakomponentflikar för resursegenskaper](assets/chlimage_1-179.png)
 
 Om du vill visa en flik på egenskapssidan förutom fliken där komponenten Sammanhangsberoende metadata används, väljer du fliken i listan. Fliken läggs till på egenskapssidan.
 
-![välj en flik från sammanhangsberoende metadatalista som ska visas på egenskapssidan](assets/contextual-metadata-asset-properties.png)
+![Fliken som valts i listan Sammanhangsberoende metadata visas på sidan med resursegenskaper](assets/contextual-metadata-asset-properties.png)
 
 *Bild: Sammanhangsberoende metadata på egenskapssida för resurs*
 
@@ -173,15 +171,15 @@ Instead of specifying properties for the options in the **[!UICONTROL Settings]*
 
 #### Lägga till eller ta bort en flik i schemaformuläret {#adding-deleting-a-tab-in-the-schema-form}
 
-Med schemaredigeraren kan du lägga till eller ta bort en flik. Standardschemaformuläret innehåller som standard flikarna **[!UICONTROL Grundläggande]**, **[!UICONTROL Avancerat]** , **[!UICONTROL IPTC]** och **[!UICONTROL IPTC-tillägg]** .
+Med schemaredigeraren kan du lägga till eller ta bort en flik. Standardschemaformuläret innehåller flikarna **[!UICONTROL Grundläggande]**, **[!UICONTROL Avancerat]** , **[!UICONTROL IPTC]** och **[!UICONTROL IPTC-tillägg]** .
 
-![chlimage_1-45](assets/chlimage_1-181.png)
+![Standardflikar i formuläret för metadataschema](assets/chlimage_1-181.png)
 
 Klicka `+` för att lägga till en ny flik i ett schemaformulär. Som standard har den nya fliken namnet `Unnamed-1`. Du kan ändra namnet på fliken **[!UICONTROL Inställningar]** .
 
 Klicka `X` för att ta bort en flik.
 
-![chlimage_1-46](assets/chlimage_1-182.png)
+![Lägga till eller ta bort en flik med metadatamodigeraren](assets/chlimage_1-182.png)
 
 ## Ta bort metadata-schemaformulär {#delete-metadata-schema-forms}
 
@@ -189,7 +187,8 @@ Med AEM kan du bara ta bort anpassade schemaformulär. Du kan inte ta bort stand
 
 Om du vill ta bort ett formulär markerar du det och klickar på ikonen Ta bort.
 
-![chlimage_1-47](assets/chlimage_1-183.png)
+![Ikonen Ta bort om du vill ta bort ett anpassat metadataschemaformulär](assets/chlimage_1-183.png)
+
 <!--![chlimage_1-47](assets/chlimage_1-177.png) -->
 >[!NOTE]
 >
@@ -254,26 +253,26 @@ Om mappen har en undermapp ärver resurserna i undermappen metadata från det sc
 
 1. Klicka på AEM-logotypen och navigera sedan till **[!UICONTROL Verktyg]** > **[!UICONTROL Resurser]** > **[!UICONTROL Metadata Schemas]**. Sidan **[!UICONTROL Metadata Schema Forms]** visas.
 1. Markera kryssrutan före ett formulär, till exempel standardformuläret för metadata, och klicka eller tryck på kopieringsikonen och spara det som ett anpassat formulär. Ange ett eget namn för formuläret, till exempel `my_default`. Du kan också skapa ett eget formulär.
-   ![chlimage_1-184](assets/chlimage_1-184.png)
+   ![Kopiera-ikon för att kopiera ett standardformulär och spara det som ett anpassat formulär på sidan Formulär för metadatamatchning](assets/chlimage_1-184.png)
 
 1. Markera **[!UICONTROL formuläret på sidan]** Metadata Schema Forms `my_default` och klicka sedan på **[!UICONTROL Redigera]** .
 
-   ![chlimage_1-49](assets/chlimage_1-185.png)
+   ![Ikonen Redigera om du vill öppna redigeraren för metadatamatchning och redigera ett schemaformulär](assets/chlimage_1-185.png)
 
 1. Lägg till ett textfält i schemaformuläret på sidan **[!UICONTROL Metadata Schema Editor]** . Lägg till exempel till ett fält med etiketten **[!UICONTROL Kategori]**.
 
-   ![lägga till ett textfält i metadatamatchredigeraren](assets/text-field-metadata-schema-editor.png)
+   ![Textfält har lagts till i Formulärredigeraren för metadataschema](assets/text-field-metadata-schema-editor.png)
 
    *Bild: Textfält har lagts till i formulärredigeraren för metadata*
 
 1. Click **[!UICONTROL Save]**. Det ändrade formuläret visas på sidan **[!UICONTROL Metadata Schema Forms]** .
 1. Klicka/tryck på **[!UICONTROL Använd för mapp(ar)]** i verktygsfältet för att använda anpassade metadata för en mapp.
 
-   ![chlimage_1-51](assets/chlimage_1-187.png)
+   ![Använd ikonen Mappar för att använda anpassade metadata på mappar](assets/chlimage_1-187.png)
 
 1. Välj den mapp som det ändrade schemat ska tillämpas på och klicka/tryck sedan på **[!UICONTROL Använd]**.
 
-   ![chlimage_1-52](assets/chlimage_1-188.png)
+   ![Välj en mapp för metadataschemat](assets/chlimage_1-188.png)
 
 1. Om det andra metadataschemat används i mappen visas ett varningsmeddelande om att du håller på att skriva över det befintliga metadataschemat. Klicka på **Skriv över**.
 1. Klicka på **OK** för att stänga meddelandet.
@@ -290,21 +289,21 @@ Du kan definiera obligatoriska fält på mappnivå, vilket tillämpas på resurs
 1. Klicka på AEM-logotypen och navigera sedan till **[!UICONTROL Verktyg]** > **[!UICONTROL Resurser]** > **[!UICONTROL Metadata Schemas]**. Sidan **[!UICONTROL Metadata Schema Forms]** visas.
 1. Spara standardformuläret för metadata som ett anpassat formulär. Du kan till exempel spara den som `my_default`.
 
-   ![chlimage_1-53](assets/chlimage_1-189.png)
+   ![Ett standardmetadataformulär har sparats som ett anpassat formulär](assets/chlimage_1-189.png)
 
 1. Redigera det anpassade formuläret. Lägg till ett obligatoriskt fält. Lägg till exempel till ett **[!UICONTROL kategorifält]** och gör fältet obligatoriskt.
 
-   ![lägg till fält i metadataformulär och välj Obligatoriskt på fliken Regler för att göra det obligatoriskt](assets/mandatory-field-metadata-schema-editor.png)
+   ![Lägg till ett obligatoriskt fält i metadataformuläret genom att välja Obligatoriskt på fliken Regler i Formulärredigeraren för metadataschema](assets/mandatory-field-metadata-schema-editor.png)
 
    *Bild: Obligatoriskt fält i formulärredigeraren för metadata*
 
 1. Click **[!UICONTROL Save]**. Det ändrade formuläret visas på sidan **[!UICONTROL Metadata Schema Forms]** . Markera formuläret och klicka eller tryck sedan på **[!UICONTROL Använd i mapp(ar)]** i verktygsfältet för att använda anpassade metadata i en mapp.
 
-   ![chlimage_1-55](assets/chlimage_1-191.png)
+   ![Använd på mappikonen för att använda anpassade metadataformulär på mappen](assets/chlimage_1-191.png)
 
 1. Navigera till mappen och överför vissa resurser med saknade metadata för det obligatoriska fältet som du lade till i det anpassade formuläret. Ett meddelande om saknade metadata för det obligatoriska fältet visas i kortvyn för resursen.
 
-   ![chlimage_1-56](assets/chlimage_1-192.png)
+   ![Meddelande om att obligatoriska metadata saknas i resurskortsvyn vid överföring av resurser i mapp](assets/chlimage_1-192.png)
 
 1. (Valfritt) Åtkomst `https://[server]:[port]/system/console/components/`. Konfigurera och aktivera `com.day.cq.dam.core.impl.MissingMetadataNotificationJob` komponenter som är inaktiverade som standard. Ange en frekvens som AEM ska kontrollera om metadata för resurserna är giltiga.
 
