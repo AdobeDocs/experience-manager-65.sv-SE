@@ -9,7 +9,7 @@ topic-tags: correspondence-management
 discoiquuid: 87742cb2-357b-421f-b79d-e355887ddec0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -83,7 +83,7 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
 
    Genom att trycka på Markera valda moduler ( ![markerat](assets/highlightselectedmodulesincontentccr.png)dmodulesincontentccr) längst upp till vänster i HTML-förhandsvisningen på fliken Innehåll eller Data kan du inaktivera eller aktivera funktioner för att gå till innehålls-/datamodulen när relevant text, stycke eller datafält är markerat i förhandsvisningen av bokstaven.
 
-   Mer information om åtgärder som är tillgängliga för olika moduler i användargränssnittet Skapa korrespondens finns i [Åtgärder och information i användargränssnittet](../../forms/using/create-letter.md#main-pars-header-9)Skapa korrespondens.
+   Mer information om åtgärder som är tillgängliga för olika moduler i användargränssnittet Skapa korrespondens finns i [Åtgärder och information i användargränssnittet](#actions-and-info-available-in-the-create-correspondence-content-tab)Skapa korrespondens.
 
 1. Om du vill söka efter innehållsmoduler använder du fältet Sök. Ange det fullständiga eller delvisa namnet eller titeln på innehållsmodulen för att söka efter den i korrespondensen.
 1. Tryck på visningsikonen ( ![visa](assets/display.png)) framför en lista, text, villkor eller målområde för att visa eller dölja den i bokstaven.
@@ -230,7 +230,7 @@ Du kan göra layout- och innehållsrelaterade ändringar för att se till att br
 
    Genom att trycka på Markera valda moduler i innehåll ( ![markerat](assets/highlightselectedmodulesincontentccr.png)dmodulesincontentccr) kan du inaktivera eller aktivera funktioner för att markera innehållsmodulen på fliken Innehåll när användaren trycker på den relevanta texten, stycket eller datafältet i förhandsvisningen av bokstaven.
 
-   Mer information om åtgärder som är tillgängliga för olika moduler i användargränssnittet Skapa korrespondens finns i [Åtgärder och information i användargränssnittet](../../forms/using/create-letter.md#main-pars-header-9)Skapa korrespondens.
+   Mer information om åtgärder som är tillgängliga för olika moduler i användargränssnittet Skapa korrespondens finns i [Åtgärder och information i användargränssnittet](#actions-and-info-available-in-the-create-correspondence-content-tab)Skapa korrespondens.
 
 1. Om du vill lägga till en sidbrytning i brevet trycker du där du vill infoga en sidbrytning och väljer Sidbrytning före eller Sidbrytning efter ( ![sidbrytning före](assets/pagebreakbeforeafter.png)).
 
@@ -246,7 +246,7 @@ Du kan göra layout- och innehållsrelaterade ändringar för att se till att br
 
    ![saveasdraft](assets/saveasdraft.png)
 
-   Dialogrutan Utkastbokstavsnamn visas med bokstavskod-ID. Du kan också redigera detta ID. Notera brev-ID:t och tryck sedan på **Klar**. Du kan sedan använda detta ID för att [läsa in utkastet](../../forms/using/submit-letter-topostprocess.md#main-pars-header-1)igen.
+   Dialogrutan Utkastbokstavsnamn visas med bokstavskod-ID. Du kan också redigera detta ID. Notera brev-ID:t och tryck sedan på **Klar**. Du kan sedan använda detta ID för att [läsa in utkastet](submit-letter-topostprocess.md#reloaddraft)igen.
 
 1. Om du vill förhandsgranska bokstaven som en förenklad PDF-fil med exakt layout och sidbrytningar så som den kommer att skickas, trycker du på ![förhandsgranskning](assets/preview.png).
 
