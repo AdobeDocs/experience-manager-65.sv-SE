@@ -9,7 +9,7 @@ topic-tags: develop
 discoiquuid: 7139a0e6-0e37-477c-9e0b-aa356991d040
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 8e724af4d69cb859537dd088119aaca652ea3931
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -27,10 +27,10 @@ Ett anpassningsbart formulär kan ha en blandning av bundna och obundna fält. B
 Du kan förifylla både bundna och obundna fält i ett anpassat formulär. Prefill-data innehåller avsnitten afBoundData och afUnBoundData för att förifylla både bundna och obundna fält i ett adaptivt formulär. Avsnittet innehåller förifyllda data för bundna fält och paneler. `afBoundData` Dessa data måste vara kompatibla med det associerade formulärmodellschemat:
 
 * För adaptiva formulär som använder [XFA-formulärmallen](../../forms/using/prepopulate-adaptive-form-fields.md)använder du den förifyllda XML-filen som är kompatibel med XFA-mallens dataschema.
-* För adaptiva formulär som använder [XML-schema](../../forms/using/prepopulate-adaptive-form-fields.md#main-pars-header-3)använder du den förifyllda XML-koden som är kompatibel med XML-schemastrukturen.
-* För adaptiva formulär som använder [JSON-schema](../../forms/using/prepopulate-adaptive-form-fields.md#json-schema-based-adaptive-forms)ska du använda JSON-prefyllnad som är kompatibel med JSON-schemat.
+* För adaptiva formulär som använder [XML-schema](#xml-schema-af)använder du den förifyllda XML-koden som är kompatibel med XML-schemastrukturen.
+* För adaptiva formulär som använder [JSON-schema](#json-schema-based-adaptive-forms)ska du använda JSON-prefyllnad som är kompatibel med JSON-schemat.
 * För anpassningsbara formulär med FDM-schema använder du JSON-funktionen för förifyllnad som är kompatibel med FDM-schemat.
-* För anpassningsbara formulär utan [någon formulärmodell](../../forms/using/prepopulate-adaptive-form-fields.md#p-adaptive-form-with-no-form-model-p)finns det inga bundna data. Varje fält är ett obundet fält och är förifyllt med den obundna XML-koden.
+* För anpassningsbara formulär utan [någon formulärmodell](#adaptive-form-with-no-form-model)finns det inga bundna data. Varje fält är ett obundet fält och är förifyllt med den obundna XML-koden.
 
 ### Exempel på XML-struktur för förifyllning {#sample-prefill-xml-structure}
 
