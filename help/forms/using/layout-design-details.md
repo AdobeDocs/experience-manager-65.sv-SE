@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 683809ac-089b-49bf-a72c-67d32439081f
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5a586758da84f467e075adcc33cdcede2fbf09c7
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -53,7 +53,7 @@ När du har analyserat layouten som krävs för att skapa interaktiv kommunikati
 
 >[!NOTE]
 >
->Lägg till innehåll i Print-kanalen i den interaktiva kommunikationen i stället för att lägga till innehåll i delformulärskomponenten i XDP-mallen. Lägg till innehåll i målområdena i Print-kanalen med [dokumentfragment, diagram, bilder](../../forms/using/create-interactive-communication.md#main-pars-header-741471925)och layoutfragment.
+>Lägg till innehåll i Print-kanalen i den interaktiva kommunikationen i stället för att lägga till innehåll i delformulärskomponenten i XDP-mallen. Lägg till innehåll i målområdena i Print-kanalen med [dokumentfragment, diagram, bilder](create-interactive-communication.md#step2)och layoutfragment.
 
 Utför följande steg för att använda delformulär i en XDP-mall:
 
@@ -75,7 +75,7 @@ Utför följande steg för att använda delformulär i en XDP-mall:
    1. Ange ett namn för delformuläret i fältet **Namn** .
    1. Välj **Ingen databindning** i listrutan **Databindning** .
 
-1. Markera på samma sätt rotdelformuläret i den vänstra rutan.
+1. På samma sätt markerar du rotdelformuläret i den vänstra rutan.
 
    ![Rotdelformulär](assets/root_subform_designer_new.png)
 
@@ -83,7 +83,7 @@ Utför följande steg för att använda delformulär i en XDP-mall:
 
    1. Ange ett namn för delformuläret i fältet **Namn** .
    1. Välj **Ingen databindning** i listrutan **Databindning** .
-   Upprepa steg 2 till 5 om du vill lägga till fler delformulär i XDP-mallen. Lägg bara till [text, dokumentfragment, bilder och diagram](../../forms/using/create-interactive-communication.md#main-pars-header-741471925) i målområdena när du skapar interaktiv kommunikation.
+   Upprepa steg 2 till 5 om du vill lägga till fler delformulär i XDP-mallen. Lägg bara till [text, dokumentfragment, bilder och diagram](create-interactive-communication.md#step2) i målområdena när du skapar interaktiv kommunikation.
 
 1. Välj **Arkiv** > **Spara som** för att spara filen i det lokala filsystemet:
 
@@ -115,7 +115,7 @@ Använd tabellkomponenten i Forms Designer för att skapa layoutfragment och anv
 
 >[!NOTE]
 >
->Ange text i tabellcellerna eller [skapa bindning med formulärdatamodellsobjekten](../../forms/using/create-interactive-communication.md#main-pars-header-570999227) medan du redigerar interaktiv kommunikation.
+>Ange text i tabellcellerna eller [skapa bindning med formulärdatamodellsobjekten](create-interactive-communication.md#step2) medan du redigerar interaktiv kommunikation.
 
 Utför följande steg för att använda tabellkomponenten i XDP-mallen med Forms Designer:
 
@@ -134,7 +134,7 @@ Utför följande steg för att använda tabellkomponenten i XDP-mallen med Forms
 
 1. Markera namnet på raden i den vänstra rutan och välj **Objekt** > **Bindning** > **Upprepa rad för varje dataobjekt**. Utför det här steget för att se till att om en bindning skapas mellan tabellcellerna på den här raden med formulärdatamodellsobjekt av samlingstyp, upprepas tabellraden automatiskt för varje dataobjekt som finns i databasen.
 
-   Ange text i tabellcellerna eller [skapa bindning med formulärdatamodellsobjekten](../../forms/using/create-interactive-communication.md#main-pars-header-570999227) medan du redigerar interaktiv kommunikation.
+   Ange text i tabellcellerna eller [skapa bindning med formulärdatamodellsobjekten](create-interactive-communication.md#step2) medan du redigerar interaktiv kommunikation.
 
 1. Välj **Arkiv** > **Spara som** för att spara filen i det lokala filsystemet:
 
