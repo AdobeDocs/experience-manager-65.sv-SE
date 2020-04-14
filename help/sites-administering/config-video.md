@@ -10,7 +10,7 @@ topic-tags: operations
 content-type: reference
 discoiquuid: a1efef3c-0e4b-4a17-bcad-e3cc17adbbf7
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
@@ -88,5 +88,5 @@ Video Component (videokomponenten) använder öppen källkod-produkten från tre
 
 >[!NOTE]
 >
->Arbetsflödesmodeller från OTB bevaras inte när du uppgraderar din AEM-instans. Adobe rekommenderar att du kopierar OOTB-arbetsflödesmodeller innan du redigerar dem. Kopiera till exempel OTB DAM Update Asset-modellen innan du redigerar omkodningssteget för MPEG i DAM Update Asset-modellen för att välja videoprofilnamn som fanns före uppgraderingen. Sedan kan du täcka över noden så att AEM kan hämta de anpassade ändringarna i OOTB-modellen `/apps` .
+>Arbetsflödesmodeller från OTB bevaras inte när du uppgraderar din AEM-instans. Adobe rekommenderar att du kopierar OOTB-arbetsflödesmodeller innan du redigerar dem. Du kan till exempel kopiera OTB [!UICONTROL DAM Update Asset] -modellen innan du redigerar omkodningssteget i [!UICONTROL DAM Update Asset] -modellen för att välja videoprofilnamn som fanns före uppgraderingen. Sedan kan du täcka över noden så att AEM kan hämta de anpassade ändringarna i OOTB-modellen `/apps` .
 
