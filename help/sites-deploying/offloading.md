@@ -10,7 +10,7 @@ topic-tags: configuring
 content-type: reference
 discoiquuid: 370151df-3b8e-41aa-b586-5c21ecb55ffe
 translation-type: tm+mt
-source-git-commit: 4ccaf401d561087f864c95e2be4c594cf34a7cb7
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
@@ -197,7 +197,7 @@ Jobb distribueras som summeringsinstanser där det associerade ämnet är aktive
    * Aktiverad: Den här instansen förbrukar jobb i det här avsnittet.
    * Inaktiverad: Den här instansen förbrukar inte jobb i det här avsnittet.
    * Exklusivt: Den här instansen förbrukar endast jobb i det här avsnittet.
-   **** Obs! När du väljer Exklusiv för ett ämne ställs alla andra ämnen automatiskt in på Inaktiverad.
+   **Obs!** När du väljer Exklusiv för ett ämne ställs alla andra ämnen automatiskt in på Inaktiverad.
 
 ### Installerade jobbkonsumenter {#installed-job-consumers}
 
@@ -205,15 +205,15 @@ Flera JobConsumer-implementeringar installeras med Experience Manager. Ämnen so
 
 | Jobbämne | Tjänst-PID | Beskrivning |
 |---|---|---|
-| / | org.apache.sling.event.impl.job.deprecated.EventAdminBridge | Installerat med Apache Sling. Bearbetar jobb som genereras av OSGi-händelseadministratören för bakåtkompatibilitet. |
-| com/day/cq/replication/job/&amp;ast; | com.day.cq.replikation.impl.AgentManagerImpl | En replikeringsagent som replikerar jobbnyttolaster. |
-| com/adobe/granite/workflow/offloading | com.adobe.granite.workflow.core.offloading.WorkflowOffloadingJobConsumer | Bearbetar jobb som genereras av arbetsflödet DAM Update Asset Offloader. |
+| / | org.apache.sling.event.impl.jobs.deprecated.EventAdminBridge | Installerat med Apache Sling. Bearbetar jobb som genereras av OSGi-händelseadministratören för bakåtkompatibilitet. |
+| com/day/cq/replication/job/&amp;ast; | com.day.cq.replication.impl.AgentManagerImpl | En replikeringsagent som replikerar jobbnyttolaster. |
+| com/adobe/granite/workflow/offloading | com.adobe.granite.workflow.core.offloading.WorkflowOffloadingJobConsumer | Bearbetar jobb som genereras av arbetsflödet [!UICONTROL DAM Update Asset Offloader] . |
 
 ### Inaktivera och aktivera ämnen för en instans {#disabling-and-enabling-topics-for-an-instance}
 
 Tjänsten Apache Sling Job Consumer Manager ger ämnesvitlistnings- och svartlistningsegenskaper. Konfigurera dessa egenskaper för att aktivera eller inaktivera bearbetning av specifika ämnen i en Experience Manager-instans.
 
-**** Obs! Om instansen tillhör en topologi kan du även använda Avlastningsläsaren på vilken dator som helst i topologin för att aktivera eller inaktivera ämnen.
+**Obs!** Om instansen tillhör en topologi kan du även använda Avlastningsläsaren på vilken dator som helst i topologin för att aktivera eller inaktivera ämnen.
 
 Den logik som skapar listan med aktiverade ämnen tillåter först alla ämnen som finns i vitlistan och tar sedan bort ämnen som finns i svartlistan. Som standard aktiveras alla ämnen (vitlistvärdet är `*`) och inga ämnen inaktiveras (svartlistan har inget värde).
 
@@ -221,8 +221,8 @@ Använd webbkonsolen eller en `sling:OsgiConfig` nod för att konfigurera följa
 
 | Egenskapsnamn i webbkonsolen | OSGi ID | Beskrivning |
 |---|---|---|
-| Ämnesvitlista | job.sumermanager.whitelist | En lista med ämnen som den lokala JobManager-tjänsten bearbetar. Standardvärdet för &amp;ast; skickar alla ämnen till den registrerade TopicConsumer-tjänsten. |
-| Ämnessvartlista | job.sumermanager.svartlist | En lista med ämnen som den lokala JobManager-tjänsten inte bearbetar. |
+| Ämnesvitlista | job.consumermanager.whitelist | En lista med ämnen som den lokala JobManager-tjänsten bearbetar. Standardvärdet för &amp;ast; skickar alla ämnen till den registrerade TopicConsumer-tjänsten. |
+| Ämnessvartlista | job.consumermanager.blacklist | En lista med ämnen som den lokala JobManager-tjänsten inte bearbetar. |
 
 ## Skapar replikeringsagenter för avlastning {#creating-replication-agents-for-offloading}
 
@@ -270,7 +270,7 @@ Exempel: `offloading_reverse_f5c8494a-4220-49b8-b079-360a72f71559`
 
 ### Skapar den utgående agenten {#creating-the-outgoing-agent}
 
-1. Skapa en **replikeringsagent** på författaren. (Se [dokumentationen för replikeringsagenter](/help/sites-deploying/replication.md).) Ange en **titel**. Namnet **** måste följa namnkonventionen.
+1. Skapa en **replikeringsagent** på författaren. (Se [dokumentet för replikeringsagenter](/help/sites-deploying/replication.md).) Ange en **titel**. Namnet **** måste följa namnkonventionen.
 1. Skapa agenten med följande egenskaper:
 
    | Egenskap | Värde |
@@ -317,11 +317,11 @@ Hämta Sling ID för en Experience Manager-instans med någon av följande metod
 
 Konfigurera instanserna av en topologi så att specifika instanser utför bakgrundsbearbetningen av resurser som läggs till eller uppdateras i DAM.
 
-Som standard kör Experience Manager arbetsflödet DAM Update Asset när en DAM-resurs ändras eller en resurs läggs till i DAM. Ändra standardbeteendet så att Experience Manager i stället kör arbetsflödet DAM Update Asset Offloader. Det här arbetsflödet genererar ett JobManager-jobb som har ett ämne i `com/adobe/granite/workflow/offloading`. Konfigurera sedan topologin så att jobbet skickas till en dedikerad arbetare.
+Som standard kör Experience Manager arbetsflödet [!UICONTROL DAM Update Asset] när en DAM-resurs ändras eller en resurs läggs till i DAM. Ändra standardbeteendet så att Experience Manager i stället kör arbetsflödet [!UICONTROL DAM Update Asset Offloader] . Det här arbetsflödet genererar ett JobManager-jobb som har ett ämne i `com/adobe/granite/workflow/offloading`. Konfigurera sedan topologin så att jobbet skickas till en dedikerad arbetare.
 
 >[!CAUTION]
 >
->Inget arbetsflöde ska vara tillfälligt när det används med arbetsflödesavlastning. Arbetsflödet för DAM-uppdatering av tillgångar får till exempel inte vara övergående när det används för avlastning av resurser. Information om hur du anger/tar bort den tillfälliga flaggan i ett arbetsflöde finns i [Övergående arbetsflöden](/help/assets/performance-tuning-guidelines.md#workflows).
+>Inget arbetsflöde ska vara tillfälligt när det används med arbetsflödesavlastning. Arbetsflödet för [!UICONTROL DAM-uppdatering av tillgångar] får till exempel inte vara övergående när det används för avlastning av resurser. Information om hur du anger/tar bort den tillfälliga flaggan i ett arbetsflöde finns i [Övergående arbetsflöden](/help/assets/performance-tuning-guidelines.md#workflows).
 
 Följande procedur utgår från följande egenskaper för avlastningstopologin:
 
@@ -334,14 +334,14 @@ Följande procedur utgår från följande egenskaper för avlastningstopologin:
 
    ![chlimage_1-116](assets/chlimage_1-116.png)
 
-1. För varje instans som användare interagerar med för att överföra eller ändra DAM-resurser, ska du konfigurera arbetsflödesstarter så att arbetsflödet för DAM Update Asset Offloading används:
+1. För varje instans som användare interagerar med för att överföra eller ändra DAM-resurser, ska du konfigurera arbetsflödesstarter så att arbetsflödet för [!UICONTROL DAM Update Asset Offloading] används:
 
    1. Öppna arbetsflödeskonsolen.
    1. Klicka på fliken Launcher.
-   1. Leta reda på de två startkonfigurationer som kör arbetsflödet DAM Update Asset. En startkonfigurationshändelsetyp är Node Created och den andra är Node Modified.
-   1. Ändra båda händelsetyperna så att de kör arbetsflödet DAM Update Asset Offloading. (Mer information om startkonfigurationer finns i [Starta arbetsflöden när noder ändras](/help/sites-administering/workflows-starting.md).)
+   1. Leta reda på de två startkonfigurationer som kör arbetsflödet [!UICONTROL DAM Update Asset] . En startkonfigurationshändelsetyp är Node Created och den andra är Node Modified.
+   1. Ändra båda händelsetyperna så att de kör arbetsflödet [!UICONTROL DAM Update Asset Offloading] . (Mer information om startkonfigurationer finns i [Starta arbetsflöden när noder ändras](/help/sites-administering/workflows-starting.md).)
 
-1. Inaktivera arbetsflödet som startar DAM Update Asset-arbetsflödet för de instanser som utför bakgrundsbearbetning av DAM-resurser.
+1. Inaktivera arbetsflödets startprogram som kör arbetsflödet för [!UICONTROL DAM-uppdatering av resurser] i de instanser som utför bakgrundsbearbetningen av DAM-resurser.
 
 ## Ytterligare läsning {#further-reading}
 
