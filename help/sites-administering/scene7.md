@@ -10,7 +10,7 @@ topic-tags: integration
 content-type: reference
 discoiquuid: f55e68c3-3309-4400-bef9-fd3afa6e2b5f
 translation-type: tm+mt
-source-git-commit: e9c64d214456eed8e0adb29edd60c2350b852a67
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
@@ -84,7 +84,7 @@ Så här använder du Dynamic Media och Dynamic Media Classic samtidigt:
     <tr>
     <td> </td>
     <td> </td>
-    <td><strong>Dynamiska medier</strong></td>
+    <td><strong>Dynamic Media</strong></td>
     <td> </td>
     <td><strong>Dynamic Media Classic-integrering</strong></td>
     <td> </td>
@@ -147,7 +147,7 @@ Så här använder du Dynamic Media och Dynamic Media Classic samtidigt:
     </tr>
     <tr>
     <td>Befintlig Dynamic Media Classic-kund och nybörjare på Assets</td>
-    <td><p>Ladda upp material till AEM och använd Dynamic Media för att generera renderingar för nedladdning/delning. Publicera automatiskt AEM-material till Dynamic Media Classic för leverans.</p> <p><strong></strong> Viktigt: Inaktiverar dubblettbearbetning och återgivningar som genererats i AEM kommer inte att synkroniseras med Dynamic Media Classic</p> </td>
+    <td><p>Ladda upp material till AEM och använd Dynamic Media för att generera renderingar för nedladdning/delning. Publicera automatiskt AEM-material till Dynamic Media Classic för leverans.</p> <p><strong>Viktigt:</strong> Inaktiverar dubblettbearbetning och återgivningar som genererats i AEM kommer inte att synkroniseras med Dynamic Media Classic</p> </td>
     <td><p>På</p> <p>(Se steg 3)</p> </td>
     <td>Av</td>
     <td>Av</td>
@@ -194,7 +194,7 @@ Adobe rekommenderar att du testkör integreringen genom att låta rotmappen peka
 
 Du kan överföra resurser antingen med hjälp av funktionen Resurser (digital resurshantering) eller genom att gå till Dynamic Media Classic direkt i AEM via webbläsaren Dynamic Media Classic. Vilken du väljer beror på följande faktorer:
 
-* Mediefiler av typen Dynamic Media Classic som AEM Assets ännu inte stöder måste läggas till på en AEM-webbplats direkt från Dynamic Media Classic via till exempel bildmallar.
+* Mediefiler av typen Dynamic Media Classic som AEM Assets ännu inte stöder måste läggas till direkt från Dynamic Media Classic på en AEM-webbplats via exempelvis bildmallar i webbläsaren Dynamic Media Classic.
 * För resurstyper som stöds av både AEM Resurser och Dynamic Media Classic beror överföringssättet på följande:
 
    * Var tillgångarna finns idag OCH
@@ -214,7 +214,7 @@ Om du vill konfigurera Dynamic Media Classic för integrering med AEM måste du 
 
 1. [Definiera en molnkonfiguration](#creating-a-cloud-configuration-for-scene) - Definierar mappningen mellan en Dynamic Media Classic-mapp och en Assets-mapp. Du måste slutföra det här steget även om du bara vill ha en enkelriktad synkronisering (AEM Resurser till Dynamic Media Classic).
 1. [Aktivera **Adobe CQ s7dam Dam Listener **](#enabling-the-adobe-cq-scene-dam-listener)- klar i[!UICONTROL OSGi]-konsolen.
-1. Om du vill att AEM-resurser automatiskt ska överföras till Dynamic Media Classic måste du aktivera det alternativet och lägga till Dynamic Media Classic i arbetsflödet för DAM-uppdateringsresurser. Du kan också överföra resurser manuellt.
+1. Om du vill att AEM-resurser automatiskt ska överföras till Dynamic Media Classic måste du aktivera det alternativet och lägga till Dynamic Media Classic i arbetsflödet för [!UICONTROL DAM-uppdatering] . Du kan också överföra resurser manuellt.
 1. Lägger till Dynamic Media Classic-komponenter i sidosparken. Detta gör att användarna kan använda komponenter i Dynamic Media Classic på sina AEM-sidor.
 1. [Mappa konfigurationen till sidan i AEM](#enabling-scene-for-wcm) - Det här steget krävs för att visa alla förinställningar för video som du har skapat i Dynamic Media Classic. Det krävs också om du behöver publicera en resurs utanför CQ-målmappen till Dynamic Media Classic.
 
@@ -354,7 +354,7 @@ Så här aktiverar du den:
 
    ![chlimage_1-299](assets/chlimage_1-299.png)
 
-1.  Tryck på **[!UICONTROL Spara]**.
+1. Tryck på **[!UICONTROL Spara]**.
 
 ### Lägga till konfigurerbar tidsgräns i arbetsflödet för Dynamic Media Classic Upload {#adding-configurable-timeout-to-scene-upload-workflow}
 
@@ -449,7 +449,7 @@ Om du använder den här funktionen bör du tänka på följande begränsningar:
 Så här anger du status för resurser som skickats till Dynamic Media Classic som opublicerade:
 
 1. Tryck på AEM-ikonen och gå till **[!UICONTROL Distribution > Cloud-tjänster]**, tryck på **[!UICONTROL Dynamic Media Classic]** och välj din konfiguration i Dynamic Media Classic.
-1. Tryck på fliken **[!UICONTROL Avancerat]** . I listrutan **[!UICONTROL Aktivera säker vy]** väljer du **[!UICONTROL Vid AEM-publiceringsaktivering]** för att överföra resurser till Dynamic Media Classic utan publicering. (Som standard anges det här värdet till **[!UICONTROL Omedelbart]**, där Dynamic Media Classic-resurser publiceras omedelbart.)
+1. Tap the **[!UICONTROL Advanced]** tab. I listrutan **[!UICONTROL Aktivera säker vy]** väljer du **[!UICONTROL Vid AEM-publiceringsaktivering]** för att överföra resurser till Dynamic Media Classic utan publicering. (Som standard anges det här värdet till **[!UICONTROL Omedelbart]**, där Dynamic Media Classic-resurser publiceras omedelbart.)
 
    Mer information om hur du testar resurser innan du publicerar dem finns i dokumentationen [för](https://help.adobe.com/en_US/scene7/using/WSd968ca97bf00cf72-5eeee3a113268dc80f5-8000.html) Dynamic Media Classic.
 
@@ -526,7 +526,7 @@ Så här konfigurerar du adhoc-mappen:
 1. Tryck på AEM-ikonen och gå till **[!UICONTROL Distribution > Cloud-tjänster]**, tryck på **[!UICONTROL Dynamic Media Classic]** och välj din konfiguration i Dynamic Media Classic.
 1. Tryck på **[!UICONTROL Redigera]** för att öppna konfigurationen.
 
-1. Tryck på fliken **[!UICONTROL Avancerat]** . I fältet **[!UICONTROL Ad-hoc-mapp]** kan du ändra **Ad-hoc** -mappen. Som standard är det **namnet_på_företaget/CQ5_adhoc**.
+1. Tap the **[!UICONTROL Advanced]** tab. I fältet **[!UICONTROL Ad-hoc-mapp]** kan du ändra **Ad-hoc** -mappen. Som standard är det **namnet_på_företaget/CQ5_adhoc**.
 
    ![chlimage_1-305](assets/chlimage_1-305.png)
 
@@ -542,7 +542,7 @@ Du konfigurerar det godkända filformatet efter MIME-typ i OSGi-området (Open S
 
 **Så här aktiverar du MIME-typbaserade resurser:**
 
-1. Tryck på AEM-ikonen och navigera till **[!UICONTROL Verktyg > Åtgärder > Webbkonsol]**.
+1. Tap the AEM icon and navigate to **[!UICONTROL Tools > Operations > Web Console]**.
 1. Tryck på **[!UICONTROL Konfiguration]** på panelen Konfiguration av Adobe Experience Manager Web Console på **[!UICONTROL OSGi]**-menyn.
 1. I kolumnen Namn söker du efter och trycker på **[!UICONTROL Adobe CQ Dynamic Media Classic Asset MIME-typtjänst]** för att redigera konfigurationen.
 1. I området Mime Type Mapping trycker du på ett plustecken (+) för att lägga till en MIME-typ.
@@ -559,7 +559,7 @@ Du konfigurerar det godkända filformatet efter MIME-typ i OSGi-området (Open S
 1. Expandera `<environment>` (ersätt `<environment>` det faktiska namnet) för att visa `mimeTypes` noden.
 1. Tryck på den mimeType som du just lade till.
 
-   Till exempel `mimeTypes > application_postscript` OR `mimeTypes > image_vnd.adobe.photoshop`.
+   For example, `mimeTypes > application_postscript` OR `mimeTypes > image_vnd.adobe.photoshop`.
 
 1. Tryck på fliken **[!UICONTROL Egenskaper]** till höger på CRXDE Lite-sidan.
 1. Ange en dynamisk Media Classic-överföringsjobbparameter i **[!UICONTROL värdefältet jobParam]** .
@@ -603,7 +603,7 @@ Om du har problem med att integrera AEM med Dynamic Media Classic hittar du lös
 * Kontrollera att du har konfigurerat molntjänsterna till Aktivera automatisk överföring och att du har uppdaterat och sparat arbetsflödet för DAM-resurser så att det inkluderar Dynamic Media Classic-överföring.
 * Gör något av följande när du överför en bild till en undermapp till målmappen för Dynamic Media Classic:
 
-   * Se till att namnen på alla resurser oavsett plats är unika. Annars tas resursen i huvudmålmappen bort och bara resursen i undermappen blir kvar.
+   * Se till att namnen på alla resurser oavsett plats är unika. Annars tas resursen i huvudmålmappen bort och bara resursen i undermappen finns kvar.
    * Ändra hur Dynamic Media Classic skriver över resurser under Konfigurera för kontot Dynamic Media Classic. Ange inte att Dynamic Media Classic ska skriva över resurser oavsett plats om du använder resurser med samma namn i undermappar.
 
 **Om de borttagna resurserna eller mapparna inte synkroniseras mellan Dynamic Media Classic och AEM:**
