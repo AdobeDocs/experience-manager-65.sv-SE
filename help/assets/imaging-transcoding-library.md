@@ -3,7 +3,7 @@ title: Konverteringsbibliotek för bildbehandling
 description: Lär dig hur du konfigurerar och använder Adobes Imaging Transcoding Library, en bildbehandlingslösning som kan utföra grundläggande bildhanteringsfunktioner, inklusive kodning, omkodning, bildomsampling och storleksändring.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
@@ -23,10 +23,10 @@ Bildkonverteringsbiblioteket har stöd för CMYK och fullt stöd för alfa, för
 
 Förutom stöd för ett stort antal filformat och profiler har Imaging Transcoding Library betydande fördelar jämfört med andra tredjepartslösningar när det gäller prestanda, skalbarhet och kvalitet. Här är några av fördelarna med att använda Imaging Transcoding Library:
 
-* **Skalförändra med ökad filstorlek eller upplösning**: Skalning uppnås främst genom den patenterade möjligheten hos Imaging Transcoding Library att ändra storlek samtidigt som filer avkodas. Detta gör att minnesanvändningen vid körning alltid är optimal och inte är en kvadratisk funktion som ökar filstorleken eller upplösningsmegapixlar. Konverteringsbiblioteket för bilder kan bearbeta större och högupplösta filer (som innehåller högre megapixlar). Tredjepartsverktyg som ImageMagick kan inte hantera stora filer och krascher när sådana filer bearbetas.
+* **Skalförändra med ökad filstorlek eller upplösning**: Skalning uppnås främst genom den patenterade möjligheten hos Imaging Transcoding Library att ändra storlek samtidigt som filer avkodas. Detta gör att minnesanvändningen vid körning alltid är optimal och inte är en kvadratisk funktion som ökar filstorleken eller upplösningsmegapixlar. Konverteringsbiblioteket för bildbehandling kan bearbeta större och högupplösta filer (som innehåller högre megapixlar). Tredjepartsverktyg som ImageMagick kan inte hantera stora filer och krascher när sådana filer bearbetas.
 * **Kvalitetskomprimerings- och storleksändringsalgoritmer** i Photoshop: Överensstämmelse med branschstandard när det gäller kvalitet på nedsampling (mjuk, skarp och automatisk bikubisk) och komprimeringskvalitet. Imaging Transcoding Library utvärderar dessutom kvalitetsfaktorn för indatabilden och använder intelligent optimala tabeller och kvalitetsinställningar för utdatabilden. Detta ger filer av optimal storlek utan att den visuella kvaliteten äventyras.
-* **** Hög genomströmning: Svarstiden är kortare och genomströmningen är genomgående högre än ImageMagick. Därför bör Imaging Transcoding Library minska väntetiden för användare och kostnaden för värdtjänster.
-* **** Skala bättre med samtidig inläsning: Omkodningsbiblioteket för bilder fungerar optimalt under samtidiga inläsningsförhållanden. Den ger hög genomströmning med optimala processorprestanda, minnesanvändning och låg svarstid, vilket minskar kostnaderna för värdtjänster.
+* **Hög genomströmning:** Svarstiden är kortare och genomströmningen är konsekvent högre än ImageMagick. Därför bör Imaging Transcoding Library minska väntetiden för användare och kostnaden för värdtjänster.
+* **Skala bättre med samtidig inläsning:** Omkodningsbiblioteket för bilder fungerar optimalt under samtidiga inläsningsförhållanden. Den ger hög genomströmning med optimala processorprestanda, minnesanvändning och låg svarstid, vilket minskar kostnaderna för värdtjänster.
 
 ## Plattformar som stöds {#supported-platforms}
 
@@ -36,7 +36,7 @@ Imaging Transcoding Library är bara tillgängligt för distributioner av RHEL 7
 >
 >Mac OS och andra *nix-distributioner (till exempel Debian och Ubuntu) stöds inte.
 
-## Usage {#usage}
+## Användning {#usage}
 
 Kommandoradsargumenten för Imaging Transcoding Library kan innehålla följande:
 
@@ -98,7 +98,7 @@ Om du vill konfigurera biblioteket skapar du en .conf-fil som anger biblioteken 
 
 1. Om du vill vara säker på att värdet för banan är inställt på `.`använder du `echo $LD_LIBRARY_PATH` kommandot. Utdata ska bara vara `.`. Starta om sessionen om värdet inte är `.`angivet.
 
-### Konfigurera arbetsflöde för DAM-uppdatering av resurser {#configure-dam-asset-update-workflow}
+### Konfigurera arbetsflöde för [!UICONTROL DAM-uppdatering av] resurser {#configure-dam-asset-update-workflow}
 
 Uppdatera arbetsflödet för [!UICONTROL DAM-uppdatering av resurser] om du vill använda biblioteket för bearbetning av bilder.
 
