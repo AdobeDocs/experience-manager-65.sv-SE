@@ -9,7 +9,7 @@ topic-tags: develop
 discoiquuid: 2fd2276e-cfe3-47ad-94c1-9c7af56b7a17
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -45,16 +45,16 @@ Upprepade paneler är instanser av en panel som läggs till eller tas bort dynam
 
 I anpassningsbara formulär kan du skriva uttryck för att lägga till beteenden som dynamiska visa/dölj-fält och paneler. Du kan också skriva uttryck för att lägga till beräknade fält, skrivskydda fält, valideringslogik och mycket annat. Adaptiva formulär har stöd för följande uttryck:
 
-* **[Åtkomstuttryck](../../forms/using/adaptive-form-expressions.md#main-pars-header-4)**: för att aktivera/inaktivera ett fält.
-* **[Beräkna uttryck](../../forms/using/adaptive-form-expressions.md#p-calculate-expression-p)**: till automatisk beräkning av ett fälts värde.
-* **[Klicka på uttryck](../../forms/using/adaptive-form-expressions.md#p-click-expression-p)**: för att hantera åtgärder vid klickningshändelser för en knapp.
-* **[Initieringsskript](../../forms/using/adaptive-form-expressions.md#p-initialization-script-p):**utföra en åtgärd vid initiering av ett fält.
-* **[Alternativuttryck](../../forms/using/adaptive-form-expressions.md#p-options-expression-p)**: för att dynamiskt fylla i en nedrullningsbar lista.
+* **[Åtkomstuttryck](#access-expression-enablement-expression)**: för att aktivera/inaktivera ett fält.
+* **[Beräkna uttryck](#calculate-expression)**: till automatisk beräkning av ett fälts värde.
+* **[Klicka på uttryck](#click-expression)**: för att hantera åtgärder vid klickningshändelser för en knapp.
+* **[Initieringsskript](#initialization-script):**utföra en åtgärd vid initiering av ett fält.
+* **[Alternativuttryck](#options-expression)**: för att dynamiskt fylla i en nedrullningsbar lista.
 * **[Sammanfattningsuttryck](#summary)**: för att dynamiskt beräkna titeln på ett dragspel.
-* **[Validera uttryck](../../forms/using/adaptive-form-expressions.md#p-validate-expression-p)**: för att validera ett fält.
-* **[Värde för implementeringsskript](../../forms/using/adaptive-form-expressions.md#p-value-commit-script-p):**om du vill ändra komponenterna i ett formulär efter att värdet för ett fält har ändrats.
-* **[Synlighetsuttryck](../../forms/using/adaptive-form-expressions.md#p-visibility-expression-p)**: för att styra visningen av ett fält och en panel.
-* **[Uttryck](../../forms/using/adaptive-form-expressions.md#p-step-completion-expression-p)**för att slutföra steg: för att förhindra att en användare går vidare till nästa steg i en guide.
+* **[Validera uttryck](#validate-expression)**: för att validera ett fält.
+* **[Värde för implementeringsskript](#value-commit-script):**om du vill ändra komponenterna i ett formulär efter att värdet för ett fält har ändrats.
+* **[Synlighetsuttryck](#visibility-expression)**: för att styra visningen av ett fält och en panel.
+* **[Uttryck](#step-completion-expression)**för att slutföra steg: för att förhindra att en användare går vidare till nästa steg i en guide.
 
 ### Åtkomstuttryck (aktiveringsuttryck) {#access-expression-enablement-expression}
 
