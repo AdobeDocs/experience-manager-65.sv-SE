@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0d5436c6-1976-496c-b9a7-7dc6e830bb5d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e4d84b5c6f7d2bfcac942b0b685a8f1fd11274f0
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -408,7 +408,7 @@ Ett detaljerat exempel på hur du använder statiska och dynamiska tabeller i la
    * **Sidfot**: text som ska visas för sidfoten
    * **Typ**: typ av extra kolumn. Fält eller målområde. Typ är aktiverat för statiska platshållartabeller. Text kan definieras på kolumnnivå och inte på cellnivå. Alla celler i en utökad kolumn är av samma typ. För en dynamisk tabell är alla kolumner av fälttyp. För tabeller som inte är platshållare kan du inte definiera typen av ytterligare kolumner. I detta fall är typen av ytterligare celler i den utökade kolumnen densamma som typen av sista kolumn i den raden. och celltypen i ytterligare rader är samma som typen för den sista cellen i den kolumnen.
    * **Breddförhållande:** förhållandet mellan tabellkolumnbredderna.
-   Ett detaljerat exempel på hur du använder statiska och dynamiska tabeller i layoutfragment finns i [Exempel med exempelfiler: med statiska och dynamiska tabeller i en bokstav](#main-pars-header-28).
+   Ett detaljerat exempel på hur du använder statiska och dynamiska tabeller i layoutfragment finns i [Exempel med exempelfiler: med statiska och dynamiska tabeller i en bokstav](#examplewithsamplefiles).
 
 1. Tryck på **Spara**.
 
