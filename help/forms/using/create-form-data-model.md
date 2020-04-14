@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.3/FORMS
 discoiquuid: 12e6c325-ace0-4a57-8ed4-6f7ceee23099
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -18,7 +18,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ![04-create-form-data-model-main](assets/04-create-form-data-model-main.png)
 
-Den här självstudiekursen är ett steg i serien [Create Your First Adaptive Form](../../forms/using/create-your-first-adaptive-form.md) . Vi rekommenderar att du följer serien i kronologisk ordning för att förstå, utföra och demonstrera det fullständiga självstudiekurserna.
+Den här självstudiekursen är ett steg i serien [Create Your First Adaptive Form](../../forms/using/create-your-first-adaptive-form.md) . Vi rekommenderar att du följer serien i kronologisk ordning för att förstå, utföra och demonstrera det fullständiga exemplet på självstudiekurser.
 
 ## Om självstudiekursen {#about-the-tutorial}
 
@@ -84,7 +84,7 @@ Gör följande för att konfigurera MySQL-databasen:
 
 ## Steg 2: Skapa formulärdatamodell {#create-fdm}
 
-AEM Forms har ett intuitivt användargränssnitt för att [skapa en](../../forms/using/data-integration.md#main-pars-header-1524967585)formulärdatamodell från konfigurerade datakällor. Du kan använda flera datakällor i en formulärdatamodell. I det här fallet använder vi den konfigurerade MySQL-datakällan.
+AEM Forms har ett intuitivt användargränssnitt för att [skapa en formulärdatamodell](data-integration.md) från konfigurerade datakällor. Du kan använda flera datakällor i en formulärdatamodell. I det här fallet använder vi den konfigurerade MySQL-datakällan.
 
 Gör följande för att skapa formulärdatamodell:
 
