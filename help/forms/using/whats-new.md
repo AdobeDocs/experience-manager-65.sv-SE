@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0e949429-cd5f-4301-aa72-14803cdfab00
 docset: aem65
 translation-type: tm+mt
-source-git-commit: eb6ecc224c4fdd8c1af6f7800dc30de419f5ef68
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -32,7 +32,7 @@ Mer information om hur du konfigurerar och använder transaktionsrapporter finns
 
 **Definiera visningsmönster för data**
 
-Utvecklare av interaktiv kommunikation kan nu definiera [datavisningsmönster](../../forms/using/create-interactive-communication.md#main-pars-header-1162517146) för fält, variabler och formulärdatamodellelement. Till exempel datum-, valuta- eller telefonformat.
+Utvecklare av interaktiv kommunikation kan nu definiera [datavisningsmönster](create-interactive-communication.md#datadisplaypatterns) för fält, variabler och formulärdatamodellelement. Till exempel datum-, valuta- eller telefonformat.
 
 **Använd nya diagramtyper**
 
@@ -176,7 +176,7 @@ AEM Forms kan konfigureras med valfri kombination av operativsystem, programserv
     </ul> </td>
   </tr>
   <tr>
-   <td>Kopplingar</td>
+   <td>Anslutningar</td>
    <td>
     <ul>
      <li>Koppling för Microsoft Sharepoint 2013</li>
