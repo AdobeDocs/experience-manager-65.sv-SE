@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 16e57cf6-aaa1-406d-a6ad-71ec60b15386
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -20,7 +20,7 @@ Sidan med uppgiftsinformation innehåller information om en uppgift och dess pro
 
 Du kan lägga till följande information på informationssidan:
 
-* Information som är tillgänglig i JSON-objektet för en uppgift (aktivitetsavsnittet i JSON-objektbeskrivningen [för](/help/forms/using/html-workspace-json-object-description.md)AEM Forms-arbetsytan)
+* Information som är tillgänglig i JSON-objektet för en uppgift (avsnittet Aktivitet i JSON-objektbeskrivningen [för](/help/forms/using/html-workspace-json-object-description.md)AEM Forms-arbetsytan)
 * Information tillgänglig i JSON-objektet för en processinstans (Processinstansavsnitt i JSON-objektbeskrivning [för](/help/forms/using/html-workspace-json-object-description.md)AEM Forms-arbetsytan)
 
 Så här anpassar du informationssidan:
@@ -84,4 +84,4 @@ Så här anpassar du informationssidan:
 >
 >Om du vill anpassa uppgiftsinformationssidan med uppgifter som skapats på fliken **Starta process** på arbetsytan i AEM Forms lägger du till den nya informationen `/apps/ws/js/runtime/templates/startprocess.html`.
 >
->Om du vill lägga till nya format för informationen som läggs till på informationssidan, ändrar du CSS-filen med hjälp av ändringsavsnittet *för* användargränssnittet i [Anpassa](/help/forms/using/changing-locale-user-interface.md#main-pars-header-3)arbetsytan.
+>Om du vill lägga till nya format för informationen som läggs till på informationssidan, ändrar du CSS-filen med hjälp av ändringsavsnittet *för* användargränssnittet i [Anpassa](changing-locale-user-interface.md)arbetsytan.
