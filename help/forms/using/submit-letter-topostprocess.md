@@ -10,7 +10,7 @@ topic-tags: correspondence-management
 discoiquuid: 9b06c394-8e26-429c-b78f-22afa271aeb3
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -25,9 +25,9 @@ Agenter kan associera och köra arbetsflöden för efterbearbetning av brev och 
 
 Om du vill associera postprocesser med brev eller interaktiv kommunikation måste du först konfigurera postprocesserna. Två typer av arbetsflöden kan utföras på skickade brev:
 
-1. **** Formulärarbetsflöde: Det här är AEM Forms om arbetsflöden för JEE-processhantering. Instruktioner för att konfigurera [formulärarbetsflöde](../../forms/using/submit-letter-topostprocess.md#main-pars-header-3).
+1. **Formulärarbetsflöde:** Det här är AEM Forms om arbetsflöden för JEE-processhantering. Instruktioner för att konfigurera [formulärarbetsflöde](#formsworkflow).
 
-1. **** AEM-arbetsflöde: AEM-arbetsflöden kan också användas som efterbearbetning för skickade brev. Instruktioner för att konfigurera [AEM-arbetsflöde](../../forms/using/aem-forms-workflow.md).
+1. **AEM-arbetsflöde:** AEM-arbetsflöden kan också användas som efterbearbetning för skickade brev. Instruktioner för att konfigurera [AEM-arbetsflöde](../../forms/using/aem-forms-workflow.md).
 
 ## Formulärarbetsflöde {#formsworkflow}
 
@@ -55,13 +55,13 @@ Om du vill associera postprocesser med brev eller interaktiv kommunikation måst
 
 1. Om du vill använda AEM Forms i JEE-arbetsflöden för efterbearbetning ställer du in de parametrar och utdata som behövs. Standardvärden för parametrarna anges nedan.
 
-   Gå till sidan Konfiguration av Adobe Experience Manager Web Console > **[!UICONTROL Konfiguration]** för hantering av korrespondenshantering och ange följande parametrar:
+   Gå till sidan Konfiguration av Adobe Experience Manager Web Console > **[!UICONTROL Konfiguration]** för korrespondenshantering och ange följande parametrar:
 
-   1. **** inPDFDoc (PDF-dokumentparameter): Ett PDF-dokument som indata. Indata innehåller den återgivna bokstaven som indata. De angivna parameternamnen kan konfigureras. De kan konfigureras från Correspondence Management-konfigurationer från konfigurationen.
-   1. **** inXMLDoc (XML-dataparameter): Ett XML-dokument som indata. Indata innehåller data som användaren anger i form av XML.
-   1. **** inXDPDoc (XDP-dokumentparameter): Ett XML-dokument som indata. Indata innehåller underliggande layout (XDP).
-   1. **** inAttachmentDocs (parametern Bifogade dokument): En listindataparameter. Indata innehåller alla bilagor som indata.
-   1. **** redirectURL (Redirect URL Output): En utdatatyp som anger den URL som ska omdirigeras till.
+   1. **inPDFDoc (PDF-dokumentparameter):** Ett PDF-dokument som indata. Indata innehåller den återgivna bokstaven som indata. De angivna parameternamnen kan konfigureras. De kan konfigureras från Correspondence Management-konfigurationer från konfigurationen.
+   1. **inXMLDoc (XML-dataparameter):** Ett XML-dokument som indata. Indata innehåller data som användaren anger i form av XML.
+   1. **inXDPDoc (XDP-dokumentparameter):** Ett XML-dokument som indata. Indata innehåller underliggande layout (XDP).
+   1. **inAttachmentDocs (parametern Bifogade dokument):** En listindataparameter. Indata innehåller alla bilagor som indata.
+   1. **redirectURL (Redirect URL Output):** En utdatatyp som anger den URL som ska omdirigeras till.
    Ditt formulärarbetsflöde måste ha antingen PDF-dokumentparameter eller XML-dataparameter som indata med samma namn som anges i **[!UICONTROL Correspondence Management Configurations]**. Detta krävs för att processen ska visas i listrutan Efterprocess.
 
 ## Inställningar för Publish-instansen {#settings-on-the-publish-instance}
