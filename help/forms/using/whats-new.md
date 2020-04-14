@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0e949429-cd5f-4301-aa72-14803cdfab00
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
+source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
 
 ---
 
@@ -84,7 +84,7 @@ Du kan [sortera valfri kolumn i en tabell](../../forms/using/adaptive-forms-tabl
 
 #### Begränsa tillgängligheten för adaptiva formulärmallar till specifika sökvägar {#restrict-the-availability-of-adaptive-forms-templates-to-specific-paths}
 
-Anpassade formulär har lagt till stöd för egenskapen cq:allowedPaths. Egenskapen [begränsar tillgängligheten för adaptiva formulärmallar till specifika sökvägar](../../forms/using/creating-adaptive-form.md#main-pars-text).
+Anpassade formulär har lagt till stöd för egenskapen cq:allowedPaths. Egenskapen [begränsar tillgängligheten för adaptiva formulärmallar till specifika sökvägar](creating-adaptive-form.md#adaptive-form-templates).
 
 #### Lägg till kryssrutor i det adaptiva formuläret dynamiskt {#add-check-boxes-to-the-adaptive-form-dynamically}
 
