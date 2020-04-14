@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 89f4d3cf-eb2e-4d55-8209-16ecbba03792
 translation-type: tm+mt
-source-git-commit: 01c93d2ef344b1ce36fddd21b634b8fa4e7aebe0
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -40,11 +40,11 @@ Skapa eller redigera en filtypsinställning för att ange hur konverteringen av 
 1. I rutan Filnamnstillägg skriver du filnamnstilläggen, avgränsade med kommatecken, för filtyper som stöds för det här programmet. Ta inte med punkten före eller ett mellanrum mellan tilläggen. The default is `bmp,gif,jpeg,jpg,tif,tiff,png`.
 1. (Valfritt) Om du vill använda optisk kodigenkänning (OCR) av text i bilder eller bilder markerar du Använd OCR och anger följande alternativ:
 
-**** Primärt OCRLanguage: Det språk som OCR-motorn ska använda för att identifiera tecknen. Standardvärdet är engelska (USA).
+**Primärt OCRLanguage:** Det språk som OCR-motorn ska använda för att identifiera tecknen. Standardvärdet är engelska (USA).
 
-**** PDF-utdatastil: Välj Sökbar bild om du vill att en bitmappsbild av sidorna i förgrunden och den skannade texten ska visas på ett osynligt lager under. Utseendet på sidan ändras inte, men texten kan markeras och läsas. Markera Formaterad text och grafik om du vill rekonstruera originalsidan med hjälp av identifierad text, teckensnitt, bilder och andra grafiska element. Standardinställningen är Sökbar bild (exakt).
+**PDF-utdatastil:** Välj Sökbar bild om du vill att en bitmappsbild av sidorna i förgrunden och den skannade texten ska visas på ett osynligt lager under. Utseendet på sidan ändras inte, men texten kan markeras och läsas. Markera Formaterad text och grafik om du vill rekonstruera originalsidan med hjälp av identifierad text, teckensnitt, bilder och andra grafiska element. Standardinställningen är Sökbar bild (exakt).
 
-**** Nedsampla bilder: Minskar antalet pixlar i färgbilder, gråskalebilder och monokroma bilder. Nedsampling av skannade bilder utförs när OCR har slutförts. Standardvärdet är Lägsta (600 dpi). Det här alternativet är inte tillgängligt om du anger PDF-utdataformatet till Sökbar bild (exakt).
+**Nedsampla bilder:** Minskar antalet pixlar i färgbilder, gråskalebilder och monokroma bilder. Nedsampling av skannade bilder utförs när OCR har slutförts. Standardvärdet är Lägsta (600 dpi). Det här alternativet är inte tillgängligt om du anger PDF-utdataformatet till Sökbar bild (exakt).
 
 1. Fyll i nödvändig information i dessa avsnitt:
 
@@ -52,7 +52,7 @@ Skapa eller redigera en filtypsinställning för att ange hur konverteringen av 
 
    [Exportinställningar för Adobe PDF (endast Windows)](/help/forms/using/admin-help/configuring-file-type-settings1.md#main-pars-heading-2)
 
-   [Inställningar för HTML-till-PDF](/help/forms/using/admin-help/configuring-file-type-settings1.md#main-pars-heading-3)
+   [Inställningar för HTML-till-PDF](#html-to-pdf-settings)
 
    [Inställningar för Flash-videor till PDF](/help/forms/using/admin-help/configuring-file-type-settings1.md#main-pars-heading-9)
 
@@ -68,7 +68,7 @@ Skapa eller redigera en filtypsinställning för att ange hur konverteringen av 
 
    [Inställningar för Microsoft Word (endast Windows)](/help/forms/using/admin-help/configuring-file-type-settings1.md#microsoft-word-settings-windows-only)
 
-   [Inställningar för Microsoft Visio (endast Windows)](/help/forms/using/admin-help/configuring-file-type-settings1.md#main-pars-header-1354428557)
+   [Inställningar för Microsoft Visio (endast Windows)](#visio)
 
    [Inställningar för Microsoft Publisher (endast Windows)](/help/forms/using/admin-help/configuring-file-type-settings1.md#microsoft-publisher-settings-windows-only)
 
@@ -112,27 +112,27 @@ Du kan ta bort en filtypsinställning som inte längre används.
 
 Följande alternativ bestämmer hur bildfiler konverteras till PDF. Instruktioner om hur du använder de här inställningarna finns i [Skapa eller redigera filtypsinställningar](configuring-file-type-settings.md#create-or-edit-file-type-settings).
 
-**** Filnamnstillägg: Kommaavgränsad lista med filnamnstillägg som kan konverteras.
+**Filnamnstillägg:** Kommaavgränsad lista med filnamnstillägg som kan konverteras.
 
-**** Prova Fallback Converter: PDF Generator kan konvertera bildfiler till PDF med Java™ eller Acrobat. När det här alternativet är markerat och konverteringen misslyckas eller når den angivna tidsgränsen, försöker PDF Generator konvertera med den alternativa metoden. Om den alternativa metoden misslyckas eller når den angivna tidsgränsen, skrivs ett undantag till loggfilen.
+**Prova Fallback Converter:** PDF Generator kan konvertera bildfiler till PDF med Java™ eller Acrobat. När det här alternativet är markerat och konverteringen misslyckas eller når den angivna tidsgränsen, försöker PDF Generator konvertera med den alternativa metoden. Om den alternativa metoden misslyckas eller når den angivna tidsgränsen, skrivs ett undantag till loggfilen.
 
 ***Obs **: JPEG 2000-filer kan bara konverteras med Acrobat.*
 
-**** Använd OCR: Anger om OCR (optisk teckenigenkänning) ska användas på PDF-filen. Med OCR kan du söka efter, korrigera och kopiera texten i PDF-filen.
+**Använd OCR:** Anger om OCR (optisk teckenigenkänning) ska användas på PDF-filen. Med OCR kan du söka efter, korrigera och kopiera texten i PDF-filen.
 
 ***Obs **! Funktionen OCR PDF (sökbar PDF) stöds bara i Microsoft Windows.*
 
-**** Primärt OCR-språk: Anger språket som OCR-motorn ska använda för att identifiera tecknen.
+**Primärt OCR-språk:** Anger språket som OCR-motorn ska använda för att identifiera tecknen.
 
-**** PDF-utdatastil: Bestämmer vilken typ av PDF som ska skapas. Alla format tillämpar OCR och teckensnitts- och sidigenkänning på textbilderna och konverterar dem till normal text.
+**PDF-utdatastil:** Bestämmer vilken typ av PDF som ska skapas. Alla format tillämpar OCR och teckensnitts- och sidigenkänning på textbilderna och konverterar dem till normal text.
 
-**** Sökbar bild: Gör texten sökbar och markeringsbar. Med det här alternativet behålls originalbilden, den skevas efter behov och ett osynligt textlager placeras över den. Alternativet Nedsampla bilder avgör om bilden nedsamplas och i vilken utsträckning.
+**Sökbar bild:** Gör texten sökbar och markeringsbar. Med det här alternativet behålls originalbilden, den skevas efter behov och ett osynligt textlager placeras över den. Alternativet Nedsampla bilder avgör om bilden nedsamplas och i vilken utsträckning.
 
-**** Sökbar bild (exakt): Gör texten sökbar och markeringsbar. Med det här alternativet behålls originalbilden och ett osynligt textlager placeras över den. Rekommenderas för fall där originalbilden kräver maximal återgivning.
+**Sökbar bild (exakt):** Gör texten sökbar och markeringsbar. Med det här alternativet behålls originalbilden och ett osynligt textlager placeras över den. Rekommenderas för fall där originalbilden kräver maximal återgivning.
 
-**** ClearScan: Syntetiserar ett nytt Type 3-teckensnitt som är snarlikt originalteckensnittet och bevarar sidbakgrunden med hjälp av en lågupplöst kopia.
+**ClearScan:** Syntetiserar ett nytt Type 3-teckensnitt som är snarlikt originalteckensnittet och bevarar sidbakgrunden med hjälp av en lågupplöst kopia.
 
-**** Nedsampla bilder: Minskar antalet pixlar i färgbilder, gråskalebilder och monokroma bilder när OCR är klart. Välj den nedsamplingsgrad som ska användas. Alternativ med högre nummer gör mindre nedsampling, vilket ger PDF-filer med högre upplösning.
+**Nedsampla bilder:** Minskar antalet pixlar i färgbilder, gråskalebilder och monokroma bilder när OCR är klart. Välj den nedsamplingsgrad som ska användas. Alternativ med högre nummer gör mindre nedsampling, vilket ger PDF-filer med högre upplösning.
 
 ## Exportinställningar för Adobe PDF (endast Windows) {#adobe-pdf-export-settings-windows-only}
 
@@ -144,85 +144,85 @@ Instruktioner om hur du använder den här inställningen finns i [Skapa eller r
 
 Följande alternativ avgör hur HTML-filer konverteras till PDF. Instruktioner om hur du använder dessa alternativ finns i [Skapa eller redigera filtypsinställningar](configuring-file-type-settings.md#create-or-edit-file-type-settings).
 
-**** Prova Fallback Converter: PDF Generator kan konvertera HTML-filer till PDF med Java™ eller Acrobat. När det här alternativet är markerat och konverteringen misslyckas eller når den angivna tidsgränsen, försöker PDF Generator konvertera med den alternativa metoden. Om den alternativa metoden misslyckas eller når den angivna tidsgränsen, skrivs ett undantag till loggfilen.
+**Prova Fallback Converter:** PDF Generator kan konvertera HTML-filer till PDF med Java™ eller Acrobat. När det här alternativet är markerat och konverteringen misslyckas eller når den angivna tidsgränsen, försöker PDF Generator konvertera med den alternativa metoden. Om den alternativa metoden misslyckas eller når den angivna tidsgränsen, skrivs ett undantag till loggfilen.
 
-**** Standardkodning: Anger indatakodningen för filtexten från en meny med operativsystem och alfabet. Använder bara det som har valts och visas i alternativet Standardkodning om HTML-källfilen inte anger någon typ av kodning.
+**Standardkodning:** Anger indatakodningen för filtexten från en meny med operativsystem och alfabet. Använder bara det som har valts och visas i alternativet Standardkodning om HTML-källfilen inte anger någon typ av kodning.
 
-**** Tvinga markerad kodning: Ignorerar kodning som har angetts i HTML-källfilen och använder den som har valts och visas i alternativet Standardkodning.
+**Tvinga markerad kodning:** Ignorerar kodning som har angetts i HTML-källfilen och använder den som har valts och visas i alternativet Standardkodning.
 
 ### Spindelningsinställningar {#spidering-settings}
 
 *Vid inpassning* skannas webbsidor efter länkar till andra webbsidor. När en länk till en annan webbsida påträffas hämtas målsidan och inkluderas i det PDF-dokument som skapas. Aktivera de här alternativen för att ange hur många nivåer som ska hämtas och konverteras till PDF:
 
-**** Hämta endast X-nivåer: Spindlar och konverterar sidor upp till ett djup på den angivna nivån från bassidans URL. Värdet 1 konverterar bara den angivna URL:en.
+**Hämta endast X-nivåer:** Spindlar och konverterar sidor upp till ett djup på den angivna nivån från bassidans URL. Värdet 1 konverterar bara den angivna URL:en.
 
-**** Hämta hela webbplatsen: Konverterar hela platsen med början från angiven URL.
+**Hämta hela webbplatsen:** Konverterar hela platsen med början från angiven URL.
 
-**** Stanna på samma sökväg: Länkar som pekar på sidor som inte finns på samma relativa sökväg som bas-URL:en konverteras inte under spikning.
+**Stanna på samma sökväg:** Länkar som pekar på sidor som inte finns på samma relativa sökväg som bas-URL:en konverteras inte under spikning.
 
-**** Stanna på samma server: Länkar som pekar på sidor på olika servrar konverteras inte under spikning. Endast länkar som pekar på samma server som den angivna URL:en konverteras.
+**Stanna på samma server:** Länkar som pekar på sidor på olika servrar konverteras inte under spikning. Endast länkar som pekar på samma server som den angivna URL:en konverteras.
 
 ### Inställningar för sidkonvertering {#page-conversion-settings}
 
 Aktivera dessa alternativ för att ange hur HTML-sidorna ska konverteras. Baserat på sidstorleken justeras bredd-, höjd- och marginalvärdena därefter.
 
-**** Sidstorlek: Välj anpassad och ange bredd och höjd, eller välj fördefinierade mått.
+**Sidstorlek:** Välj anpassad och ange bredd och höjd, eller välj fördefinierade mått.
 
-**** Orientering: Välj antingen stående eller liggande för det konverterade PDF-dokumentet.
+**Orientering:** Välj antingen stående eller liggande för det konverterade PDF-dokumentet.
 
-**** Marginaler: Anger marginaler (Överkant, Underkant, Vänster och Höger) i det genererade PDF-dokumentet.
+**Marginaler:** Anger marginaler (Överkant, Underkant, Vänster och Höger) i det genererade PDF-dokumentet.
 
-**** Lägg till bokmärken i PDF: Lägger till bokmärken i PDF-dokumentet.
+**Lägg till bokmärken i PDF:** Lägger till bokmärken i PDF-dokumentet.
 
-**** Aktivera PDF med märkord: Bäddar in taggar i PDF-dokumentet.
+**Aktivera PDF med märkord:** Bäddar in taggar i PDF-dokumentet.
 
-**** Ange inställningar för inledande vy: Här kan du konfigurera dokumentalternativ, fönsteralternativ och alternativ för användargränssnitt. De här inställningarna bestämmer hur innehållet visas från början.
+**Ange inställningar för inledande vy:** Här kan du konfigurera dokumentalternativ, fönsteralternativ och alternativ för användargränssnitt. De här inställningarna bestämmer hur innehållet visas från början.
 
 ### Dokumentalternativ {#document-options}
 
 Aktivera de här alternativen för att ange hur innehåll ska visas, hur sidor ska visas i PDF-dokumentet och hur förstoringsnivån ska anges:
 
-**** Visa: Markera de rutor som ska öppnas i Acrobat när PDF-dokumentet öppnas.
+**Visa:** Markera de rutor som ska öppnas i Acrobat när PDF-dokumentet öppnas.
 
-**** Sidlayout: Välj typ av sidlayout för PDF-dokumentet.
+**Sidlayout:** Välj typ av sidlayout för PDF-dokumentet.
 
-**** Förstoring: Välj förinställd förstoring för den inledande vyn av PDF-dokumentet eller välj ett anpassat värde. Om du väljer en standardinställning används standardförstoringen i Acrobat.
+**Förstoring:** Välj förinställd förstoring för den inledande vyn av PDF-dokumentet eller välj ett anpassat värde. Om du väljer en standardinställning används standardförstoringen i Acrobat.
 
-**** Öppna på sidnummer: Ange det sidnummer som PDF-filen öppnas på.
+**Öppna på sidnummer:** Ange det sidnummer som PDF-filen öppnas på.
 
 ### Fönsteralternativ {#window-options}
 
 Aktivera de här alternativen för att ange hur fönstret ska storleksändras och visas.
 
-**** Ändra fönstrets storlek till startsidan: Ändrar storleken på Acrobat-fönstret till den inledande sidans storlek.
+**Ändra fönstrets storlek till startsidan:** Ändrar storleken på Acrobat-fönstret till den inledande sidans storlek.
 
-**** Centrera fönstret på skärmen: Öppnar fönstret mitt på skärmen.
+**Centrera fönstret på skärmen:** Öppnar fönstret mitt på skärmen.
 
-**** Öppna i helskärmsläge: Öppnar fönstret i helskärmsläge.
+**Öppna i helskärmsläge:** Öppnar fönstret i helskärmsläge.
 
-**** Visa: Visar dokumentets namn eller filnamn i fönstret.
+**Visa:** Visar dokumentets namn eller filnamn i fönstret.
 
 ### Alternativ för användargränssnitt {#user-interface-options}
 
 Aktivera dessa alternativ för att ange fönstrets utseende:
 
-**** Dölj menyrad: Döljer menyraden i PDF-dokumentet.
+**Dölj menyrad:** Döljer menyraden i PDF-dokumentet.
 
-**** Dölj verktygsfält: Döljer verktygsfälten i PDF-dokumentet.
+**Dölj verktygsfält:** Döljer verktygsfälten i PDF-dokumentet.
 
-**** Dölj fönsterkontroller: Döljer fönsterkontrollerna i PDF-dokumentet.
+**Dölj fönsterkontroller:** Döljer fönsterkontrollerna i PDF-dokumentet.
 
 ## Inställningar för Flash-videor till PDF {#flash-videos-to-pdf-settings}
 
 PDF Generator stöder möjligheten att skicka en video för Adobe Flash (SWF- eller FLV-fil) och skapa en PDF-fil med en inbäddad video för Adobe Flash. Den här konverteringen kräver inte att Adobe Flash Player är installerat på formulärservern. Instruktioner om hur du använder det här alternativet finns i [Skapa eller redigera filtypsinställningar](configuring-file-type-settings.md#create-or-edit-file-type-settings).
 
-**** Filnamnstillägg: Kommaavgränsad lista med filnamnstillägg som kan konverteras.
+**Filnamnstillägg:** Kommaavgränsad lista med filnamnstillägg som kan konverteras.
 
 ## Inställningar för XPS till PDF {#xps-to-pdf-settings}
 
 XML Paper Specification (XPS) används i en Windows-utskriftsmaskin. Det här är ett Microsoft-format och kan skapas från alla Microsoft Office-program. Med AEM-formulär kan du konvertera XPS-filer till PDF.
 
-**** Filnamnstillägg: En kommaavgränsad lista över alla XPS-filnamnstillägg som kan konverteras. Det finns för närvarande ett format: .xps.
+**Filnamnstillägg:** En kommaavgränsad lista över alla XPS-filnamnstillägg som kan konverteras. Det finns för närvarande ett format: .xps.
 
 ## Inställningar för PDF-optimering {#pdf-optimizer-settings}
 
@@ -234,18 +234,18 @@ PDF Generator stöder möjligheten att minska storleken på PDF-filer. Om du anv
 
 Instruktioner om hur du använder den här inställningen finns i [Skapa eller redigera filtypsinställningar](configuring-file-type-settings.md#create-or-edit-file-type-settings).
 
-**** PDF-målversion: Anger den version av Acrobat som PDF-filen är kompatibel med.
+**PDF-målversion:** Anger den version av Acrobat som PDF-filen är kompatibel med.
 
 ### Teckensnitt {#fonts}
 
 1. Välj **Teckensnitt.**
 1. Välj något av följande alternativ:
 
-   **** Ångra inbäddning av alla teckensnitt: Tar bort inbäddade teckensnitt.
+   **Ångra inbäddning av alla teckensnitt:** Tar bort inbäddade teckensnitt.
 
-   **** Ångra inte inbäddning av teckensnitt: Tar inte bort inbäddning av teckensnitt.
+   **Ångra inte inbäddning av teckensnitt:** Tar inte bort inbäddning av teckensnitt.
 
-   **** Ångra inbäddning av vissa teckensnitt: Tar endast bort inbäddning av de angivna teckensnitten. Följ de här stegen för att ange de teckensnitt som du vill frigöra:
+   **Ångra inbäddning av vissa teckensnitt:** Tar endast bort inbäddning av de angivna teckensnitten. Följ de här stegen för att ange de teckensnitt som du vill frigöra:
 
    * Om det behövs väljer du en annan teckensnittskatalog i listrutan **Teckensnittskälla** . I den här listrutan visas teckensnittskataloger som anges i **Hem > Inställningar > Kärnsystem > Huvudkonfigurationer**.
    * Markera ett eller flera teckensnitt i listan **Tillgängliga teckensnitt** och klicka på **Lägg till**. De här teckensnitten läggs till i listan **Teckensnitt som inte ska bäddas in** .
@@ -270,7 +270,7 @@ Om PDF-dokumentet innehåller bilder som innehåller genomskinlighet kan du anv�
 
 >[!NOTE]
 >
->Om Acrobat 4.0 och senare väljs som PDF-målversion förenklas alla genomskinliga objekt. För andra Target PDF-versioner stöds genomskinlighet och du kan konfigurera genomskinlighetsinställningarna.
+>Om du väljer Acrobat 4.0 och senare som PDF-målversion förenklas alla genomskinliga objekt. För andra Target PDF-versioner stöds genomskinlighet och du kan konfigurera genomskinlighetsinställningarna.
 
 Välj **Genomskinlighet** om du vill konfigurera genomskinlighetsinställningarna när du optimerar PDF-dokument.
 
@@ -351,7 +351,7 @@ I följande tabell visas vanliga typer av skrivare och deras upplösning mätt i
 * **Konvertera jämna linjer till kurvor**: Minskar antalet kontrollpunkter som används för att skapa kurvor i CAD-ritningar, vilket ger mindre PDF-filer och snabbare skärmåtergivning.
 * **Ignorera inbäddade utskriftsinställningar**: Tar bort inbäddade utskriftsinställningar, t.ex. sidskalning och duplexläge, från dokumentet.
 * **Ignorera bokmärken**: Tar bort alla bokmärken från dokumentet.
-* **Förenkla formulärfält**: Gör formulärfält oanvändbara utan att deras utseende ändras. Formulärdata sammanfogas med sidan för att bli sidinnehåll.
+* **Förenkla formulärfält**: Gör formulärfält oanvändbara utan att deras utseende ändras. Formulärdata sammanfogas med sidan och blir sidinnehåll.
 * **Ignorera alla alternativa bilder**: Tar bort alla versioner av en bild utom den version som ska visas på skärmen. En del PDF-filer innehåller flera versioner av samma bild för olika syften, till exempel skärmvisning med låg upplösning och högupplösta utskrifter.
 * **Ignorera dokumenttaggar**: Tar bort taggar från dokumentet, vilket också tar bort textens tillgänglighet och flödesomformning.
 * **Identifiera och sammanfoga bildfragment**: Söker efter bilder eller masker som är fragmenterade i tunna segment och försöker sammanfoga segmenten till en enda bild eller mask.
@@ -403,7 +403,7 @@ De här alternativen avgör hur Microsoft Excel-filer konverteras. Instruktioner
 
 **Prova OpenOffice som återställningskonverterare**: När det här alternativet är markerat och konverteringen med Microsoft Excel misslyckas eller når den angivna tidsgränsen, försöker PDF Generator konvertera med OpenOffice. Om konverteringen med OpenOffice misslyckas eller når den angivna tidsgränsen, skrivs ett undantag till loggfilen.
 
-**Filnamnstillägg**: Anger filnamnstilläggen för filtyper, avgränsade med kommatecken, som accepteras för det här programmet. The default is `xls,xlsx`. Ta inte med en punkt före eller ett blanksteg mellan tilläggen.
+**Filnamnstillägg**: Anger filnamnstilläggen för filtyper, avgränsade med kommatecken, som accepteras för det här programmet. The default is `xls,xlsx`. Ta inte med en punkt före eller ett mellanrum mellan tilläggen.
 
 **Skapa en PDF/A-1a-kompatibel fil**: Tvingar fram användningen av Adobe PDF-inställningen PDF/A-1b:2005 RGB.
 
@@ -433,7 +433,7 @@ De här alternativen avgör hur Microsoft PowerPoint-filer konverteras. Instrukt
 
 **[!UICONTROL Prova OpenOffice som återställningskonverterare]**: När det här alternativet är markerat och konverteringen med Microsoft PowerPoint misslyckas eller når den angivna tidsgränsen, försöker PDF Generator konvertera med OpenOffice. Om konverteringen med OpenOffice misslyckas eller når den angivna tidsgränsen, skrivs ett undantag till loggfilen.
 
-**[!UICONTROL Filnamnstillägg]**: Anger filnamnstilläggen för filtyper, avgränsade med kommatecken, som accepteras för det här programmet. Standardvärdet är ppt,pptx. Ta inte med en punkt före eller ett blanksteg mellan tilläggen.
+**[!UICONTROL Filnamnstillägg]**: Anger filnamnstilläggen för filtyper, avgränsade med kommatecken, som accepteras för det här programmet. Standardvärdet är ppt,pptx. Ta inte med en punkt före eller ett mellanrum mellan tilläggen.
 
 **[!UICONTROL Konvertera dokumentinformation]**: Lägger till dokumentinformation från egenskapsdialogrutan för källfilen, inklusive titel, ämne, författare, nyckelord, hanterare, företag, kategori och kommentarer. Det här alternativet är markerat som standard.
 
@@ -443,7 +443,7 @@ De här alternativen avgör hur Microsoft PowerPoint-filer konverteras. Instrukt
 
 **[!UICONTROL Aktivera tillgänglighet och flödesomformning med taggad Adobe PDF]**: Bäddar in taggar i PDF-filen. Det här alternativet är avmarkerat som standard.
 
-**[!UICONTROL Konvertera multimedia till PDF-multimedia]**: Konverterar multimedia till PDF-multimedia där det är möjligt. Det här alternativet är markerat som standard.
+**[!UICONTROL Konvertera multimedia till PDF-multimedia]**: Konverterar multimedia till PDF-multimedia, där det är möjligt. Det här alternativet är markerat som standard.
 
 **[!UICONTROL Konvertera stödanteckningar]**: Konverterar stödanteckningar till PDF.
 
@@ -465,7 +465,7 @@ De här alternativen avgör hur Microsoft PowerPoint-filer konverteras. Instrukt
 
 De här alternativen avgör hur Microsoft Project-filer konverteras. Instruktioner om hur du använder dessa alternativ finns i [Skapa eller redigera filtypsinställningar](/help/forms/using/admin-help/configuring-file-type-settings1.md#main-pars-heading-0).
 
-1. **** Filnamnstillägg: Anger filnamnstilläggen för filtyper, avgränsade med kommatecken, som accepteras för det här programmet. The default is `mpp`. Ta inte med en punkt före eller ett blanksteg mellan tilläggen.
+1. **[!UICONTROL Filnamnstillägg:]** Anger filnamnstilläggen för filtyper, avgränsade med kommatecken, som accepteras för det här programmet. The default is `mpp`. Ta inte med en punkt före eller ett mellanrum mellan tilläggen.
 
 1. **[!UICONTROL Konvertera dokumentinformation]**: Lägger till dokumentinformation från egenskapsdialogrutan för källfilen, inklusive titel, ämne, författare, nyckelord, hanterare, företag, kategori och kommentarer. Det här alternativet är markerat som standard.
 1. **[!UICONTROL Bifoga källfil till Adobe PDF]**: Lägger till källfilen i PDF-filen som en bifogad fil.
@@ -478,7 +478,7 @@ De här alternativen avgör hur Microsoft Word-filer konverteras. Instruktioner 
 
 **[!UICONTROL Prova OpenOffice som återställningskonverterare]**: När det här alternativet är markerat och konverteringen med Microsoft Word misslyckas eller når den angivna tidsgränsen, försöker PDF Generator konvertera med OpenOffice. Om konverteringen med OpenOffice misslyckas eller når den angivna tidsgränsen, skrivs ett undantag till loggfilen.
 
-**[!UICONTROL Filnamnstillägg]**: Anger filnamnstilläggen för filtyper, avgränsade med kommatecken, som accepteras för det här programmet. The default is `doc,docx,rtf,txt`. Ta inte med en punkt före eller ett blanksteg mellan tilläggen.
+**[!UICONTROL Filnamnstillägg]**: Anger filnamnstilläggen för filtyper, avgränsade med kommatecken, som accepteras för det här programmet. The default is `doc,docx,rtf,txt`. Ta inte med en punkt före eller ett mellanrum mellan tilläggen.
 
 **[!UICONTROL Konvertera dokumentinformation]**: Lägger till dokumentinformation från egenskapsdialogrutan för källfilen, inklusive titel, ämne, författare, nyckelord, hanterare, företag, kategori och kommentarer. Det här alternativet är markerat som standard.
 
@@ -536,13 +536,13 @@ Om ett Microsoft Word-formatnamn innehåller ett komma (,) eller likhetstecken (
 
 De här alternativen avgör hur Microsoft Publisher-filer konverteras. Instruktioner om hur du använder dessa alternativ finns i [Skapa eller redigera filtypsinställningar](/help/forms/using/admin-help/configuring-file-type-settings1.md#main-pars-heading-0).
 
-**[!UICONTROL Filnamnstillägg]**: Anger filnamnstilläggen för filtyper, avgränsade med kommatecken, som accepteras för det här programmet. The default is `pub`. Ta inte med en punkt före eller ett blanksteg mellan tilläggen.
+**[!UICONTROL Filnamnstillägg]**: Anger filnamnstilläggen för filtyper, avgränsade med kommatecken, som accepteras för det här programmet. The default is `pub`. Ta inte med en punkt före eller ett mellanrum mellan tilläggen.
 
 ## AutoCAD-inställningar (endast Windows) {#autocad-settings-windows-only}
 
 Dessa alternativ avgör hur AutoCAD-filer konverteras. Instruktioner om hur du använder dessa alternativ finns i [Skapa eller redigera filtypsinställningar](/help/forms/using/admin-help/configuring-file-type-settings1.md#create-or-edit-file-type-settings).
 
-**[!UICONTROL Filnamnstillägg]**: Anger filnamnstilläggen för filtyper, avgränsade med kommatecken, som accepteras för det här programmet. The default is `dwg`. Ta inte med en punkt före eller ett blanksteg mellan tilläggen.
+**[!UICONTROL Filnamnstillägg]**: Anger filnamnstilläggen för filtyper, avgränsade med kommatecken, som accepteras för det här programmet. The default is `dwg`. Ta inte med en punkt före eller ett mellanrum mellan tilläggen.
 
 **[!UICONTROL Konvertera dokumentinformation]**: Lägger till dokumentinformation från egenskapsdialogrutan för källfilen, inklusive titel, ämne, författare, nyckelord, hanterare, företag, kategori och kommentarer. Det här alternativet är markerat som standard.
 
@@ -578,7 +578,7 @@ De här alternativen avgör hur OpenOffice-filer konverteras. Instruktioner om h
 
 **Prova PDFMaker som återställningskonverterare**: När det här alternativet är valt och en konvertering med OpenOffice misslyckas eller når den angivna tidsgränsen, försöker PDF Generator konvertera med PDFMaker. Om konverteringen med PDFMaker misslyckas eller når den angivna tidsgränsen, skrivs ett undantag till loggfilen.
 
-**Filnamnstillägg**: Ange filnamnstilläggen för filtyper, avgränsade med kommatecken, som kan användas i det här programmet. The default is `odt,odp,ods,odg,odf,sxw,sxi,sxd`. Ta inte med en punkt före eller ett blanksteg mellan tilläggen.
+**Filnamnstillägg**: Ange filnamnstilläggen för filtyper, avgränsade med kommatecken, som kan användas i det här programmet. The default is `odt,odp,ods,odg,odf,sxw,sxi,sxd`. Ta inte med en punkt före eller ett mellanrum mellan tilläggen.
 
 **Intervall**: Konvertera alla sidor eller ange vissa sidor eller ett sidintervall. Om inget sidintervall är definierat konverteras alla sidor. Om du vill exportera ett sidintervall använder du formatet 3-6. Om du vill exportera enstaka sidor använder du formatet 7;9;11. Du kan exportera en kombination av sidintervall och enstaka sidor med ett format som 3-6;8;10;12.
 
@@ -586,7 +586,7 @@ De här alternativen avgör hur OpenOffice-filer konverteras. Instruktioner om h
 
 **Bilder**: Konfigurera hur bilder konverteras. EPS-bilder med inbäddade förhandsvisningar exporteras endast som förhandsvisningar. EPS-bilder utan inbäddade förhandsvisningar exporteras som tomma platshållare. Med förlustfri komprimering av bilder bevaras alla pixlar. Med JPEG-komprimering av bilder och en hög kvalitetsnivå bevaras nästan alla pixlar. Med en låg kvalitetsnivå försvinner vissa pixlar och artefakter uppstår, men filstorleken minskar.
 
-**Allmänt**: Aktivera alternativen för att konvertera en taggad PDF-fil eller för att exportera anteckningar i Writer- och FormCalc-dokument, Impress-bildövergångseffekter eller tomma sidor till PDF-filen. När du exporterar märkord kan filstorleken öka med mycket. Vissa märkord som exporteras är innehållsförteckningar, hyperlänkar och kontroller.
+**Allmänt**: Aktivera alternativen för att konvertera en taggad PDF-fil eller för att exportera anteckningar från Writer- och FormCalc-dokument, Impress-bildövergångseffekter eller tomma sidor till PDF-filen. När du exporterar märkord kan filstorleken öka med mycket. Vissa märkord som exporteras är innehållsförteckningar, hyperlänkar och kontroller.
 
 Du kan också ange hur formulär ska skickas. Alternativen är XML, FDF, PDF eller HTML. Den här inställningen åsidosätter kontrollens URL-egenskap som du anger i dokumentet. Endast en gemensam inställning kan väljas för PDF-dokumentet:
 
