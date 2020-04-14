@@ -3,7 +3,7 @@ title: Använd Connected Assets när du vill dela DAM-resurser i redigeringsarbe
 description: Använd resurser som är tillgängliga på en fjärrdistribution av Adobe Experience Manager Assets när du skapar webbsidor på en annan Experience Manager Site-distribution.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 3c2c47b5d660fefd31470ce8d555c7bb949fa036
+source-git-commit: ccdafa89793e97f69294958d814cccf3554b496d
 
 ---
 
@@ -45,7 +45,7 @@ Författare kan söka efter bilder och följande typer av dokument i Content Fin
 De olika roller som krävs för att konfigurera och använda funktionen och motsvarande användargrupper beskrivs nedan. Lokalt omfång används för de fall då en webbsida skapas av en författare. Fjärromfång används för DAM-distributionen som är värd för de nödvändiga resurserna. Sites-författaren hämtar dessa fjärresurser.
 
 | Roll | Omfång | Användargrupp | Användarnamn i genomgång | Krav |
-|----------------------------------|--------|------------------------------------------------------------------------------|--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|---|---|---|---|---|
 | AEM Sites-administratör | Lokalt | AEM-administratör | `admin` | Konfigurerar AEM, konfigurerar integrering med fjärrdistributionen av Assets. |
 | DAM-användare | Lokalt | Författare | `ksaner` | Används för att visa och duplicera de hämtade resurserna i `/content/DAM/connectedassets/`. |
 | AEM Sites-författare | Lokalt | Författare (med läsbehörighet på det fjärranslutna DAM-systemet och författarbehörighet på den lokala Sites-distributionen) | `ksaner` | Slutanvändare är Sites-författare som använder den här integreringen för att förbättra innehållshastigheten. Författarna söker efter och bläddrar bland resurser i fjärrversionen av DAM med hjälp av Content Finder och använder de bilder som behövs på lokala webbsidor. Autentiseringsuppgifterna för `ksaner` DAM-användaren används. |
@@ -73,11 +73,9 @@ Följ dessa steg när du vill konfigurera anslutningar för Connected Assets och
    1. AEM Assets-platsen är `https://[assets_servername_ams]:[port]`.
    1. Autentiseringsuppgifter för en DAM-distributör (teknisk användare).
    1. In **[!UICONTROL Mount Point]** field, enter the local AEM path where AEM fetches the assets. Till exempel, mappen `remoteassets`.
-
    1. Justera värdena för det **[!UICONTROL ursprungliga tröskelvärdet för optimering av binär överföring]** beroende på nätverket. En resursåtergivning med en storlek som är större än detta tröskelvärde överförs asynkront.
    1. Select **[!UICONTROL Datastore Shared with Connected Assets]**, if you use a datastore to store your assets and the Datastore is the common storage between both AEM deployments. I det här fallet spelar tröskelvärdet ingen roll eftersom resursernas binärfiler finns i datalagret och de inte överförs.
-   ![En typisk konfiguration för Connected Assets](assets/connected-assets-typical-config.png)
-
+      ![En typisk konfiguration för Connected Assets](assets/connected-assets-typical-config.png)
    *Bild: En typisk konfiguration för Connected Assets*
 
 1. Inaktivera arbetsflödets startprogram eftersom resurserna redan har bearbetats och återgivningarna hämtas. Justera startkonfigurationerna för den lokala distributionen (AEM Sites) för att exkludera den `connectedassets`-mapp där fjärresurserna hämtas.
