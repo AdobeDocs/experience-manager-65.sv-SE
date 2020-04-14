@@ -3,7 +3,7 @@ title: Använd PDF-rastrering för att generera renderingar
 description: I den här artikeln beskrivs hur du skapar högkvalitativa miniatyrbilder och återgivningar med hjälp av Adobe PDF Rasterizer-biblioteket.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
@@ -26,9 +26,7 @@ Miniatyrbilder och förhandsgranskningar som genererats med PDF Rasterizer har b
    >
    >PDF Rasterizer-biblioteket är endast tillgängligt för Windows och Linux.
 
-1. Gå till arbetsflödeskonsolen för AEM Assets på `https://[server]:[port]/workflow`.
-
-   Öppna arbetsflödessidan DAM Update Asset.
+1. Gå till arbetsflödeskonsolen för AEM Assets på `https://[server]:[port]/workflow`. Öppna arbetsflödessidan [!UICONTROL DAM Update Asset] .
 
 1. Följ de här stegen för att förhindra att miniatyrbilder och webbåtergivning genereras för PDF- och AI-filer med standardmetoderna:
 
