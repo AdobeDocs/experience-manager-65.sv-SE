@@ -12,7 +12,7 @@ discoiquuid: 59780112-6a9b-4de2-bf65-f026c8c74a31
 docset: aem65
 targetaudience: target-audience upgrader
 translation-type: tm+mt
-source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
@@ -150,7 +150,7 @@ ContextHub-konfigurationer påverkas av en uppgradering. Instruktioner om hur du
 
 ### Anpassningar av arbetsflöden {#workflow-customizations}
 
-Det är vanligt att uppdatera ändringar som görs direkt i arbetsflöden för att lägga till eller ta bort funktioner som inte behövs. Ett vanligt arbetsflöde som är anpassat är arbetsflödet för DAM-uppdatering av resurser. Alla arbetsflöden som krävs för en anpassad implementering bör säkerhetskopieras och lagras i versionskontroll eftersom de kan skrivas över under en uppgradering.
+Det är vanligt att uppdatera ändringar som görs direkt i arbetsflöden för att lägga till eller ta bort funktioner som inte behövs. Ett vanligt arbetsflöde som är anpassat är arbetsflödet för [!UICONTROL DAM-uppdatering av resurser] . Alla arbetsflöden som krävs för en anpassad implementering bör säkerhetskopieras och lagras i versionskontroll eftersom de kan skrivas över under en uppgradering.
 
 ### Redigerbara mallar {#editable-templates}
 
@@ -158,7 +158,7 @@ Det är vanligt att uppdatera ändringar som görs direkt i arbetsflöden för a
 >
 >Den här proceduren krävs endast för webbplatsuppgraderingar som använder redigerbara mallar från AEM 6.2
 
-Strukturen för redigerbara mallar har ändrats mellan AEM 6.2 och 6.3. Om du uppgraderar från 6.2 eller tidigare och om ditt webbplatsinnehåll byggs med redigerbara mallar måste du använda [verktyget](https://github.com/Adobe-Marketing-Cloud/aem-sites-template-migration)för rensning av responsiva noder. Verktyget ska köras **efter** en uppgradering för att rensa upp innehållet. Det måste köras på både författarnivå och publiceringsnivå.
+Strukturen för redigerbara mallar har ändrats mellan AEM 6.2 och 6.3. Om du uppgraderar från 6.2 eller tidigare och om ditt webbplatsinnehåll byggs med redigerbara mallar måste du använda [verktyget](https://github.com/Adobe-Marketing-Cloud/aem-sites-template-migration)för rensning av responsiva noder. Verktyget ska köras **efter** en uppgradering för att rensa upp innehållet. Den måste köras på både författarnivå och publiceringsnivå.
 
 ### Ändringar av CUG-implementering {#cug-implementation-changes}
 
