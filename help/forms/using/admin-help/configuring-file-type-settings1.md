@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 89f4d3cf-eb2e-4d55-8209-16ecbba03792
 translation-type: tm+mt
-source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
+source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
 
 ---
 
@@ -21,7 +21,7 @@ I PDF Generator kan du ange programinställningar för filtyper som stöds. I Wi
 
 På sidan Filtypsinställningar kan du utföra följande uppgifter:
 
-* [Skapa eller redigera en filtypsinställning](/help/forms/using/admin-help/configuring-file-type-settings1.md#main-pars-heading-0)
+* [Skapa eller redigera en filtypsinställning](#create-or-edit-file-type-settings)
 * Ange vilka filtypsinställningar som ska användas som standard (se [Importera och exportera PDF Generator-konfigurationsfiler](https://helpx.adobe.com/aem-forms/6-2/admin-help/importing-exporting-pdf-generator-configuration.html))
 * [Ändra standardinställningarna](/help/forms/using/admin-help/configuring-file-type-settings1.md#change-the-default-settings)
 * [Aktivera stöd för PDF/A](https://helpx.adobe.com/aem-forms/6-2/admin-help/enable-pdf-a-support.html)
@@ -50,15 +50,15 @@ Skapa eller redigera en filtypsinställning för att ange hur konverteringen av 
 
    [Importera och exportera PDF Generator-konfigurationsfiler](https://helpx.adobe.com/aem-forms/6-2/admin-help/importing-exporting-pdf-generator-configuration.html)
 
-   [Exportinställningar för Adobe PDF (endast Windows)](/help/forms/using/admin-help/configuring-file-type-settings1.md#main-pars-heading-2)
+   [Exportinställningar för Adobe PDF (endast Windows)](#adobe-pdf-export-settings-windows-only)
 
    [Inställningar för HTML-till-PDF](#html-to-pdf-settings)
 
-   [Inställningar för Flash-videor till PDF](/help/forms/using/admin-help/configuring-file-type-settings1.md#main-pars-heading-9)
+   [Inställningar för Flash-videor till PDF](#flash-videos-to-pdf-settings)
 
-   [Inställningar för XPS till PDF](/help/forms/using/admin-help/configuring-file-type-settings1.md#main-pars-heading-10)
+   [Inställningar för XPS till PDF](#xps-to-pdf-settings)
 
-   [Inställningar för PDF-optimering](/help/forms/using/admin-help/configuring-file-type-settings1.md#main-pars-heading-11)
+   [Inställningar för PDF-optimering](#pdf-optimizer-settings)
 
    [Inställningar för Microsoft Excel (endast Windows)](/help/forms/using/admin-help/configuring-file-type-settings1.md#microsoft-excel-settings-windows-only)
 
@@ -270,7 +270,7 @@ Om PDF-dokumentet innehåller bilder som innehåller genomskinlighet kan du anv�
 
 >[!NOTE]
 >
->Om du väljer Acrobat 4.0 och senare som PDF-målversion förenklas alla genomskinliga objekt. För andra Target PDF-versioner stöds genomskinlighet och du kan konfigurera genomskinlighetsinställningarna.
+>Om Acrobat 4.0 och senare väljs som PDF-målversion förenklas alla genomskinliga objekt. För andra Target PDF-versioner stöds genomskinlighet och du kan konfigurera genomskinlighetsinställningarna.
 
 Välj **Genomskinlighet** om du vill konfigurera genomskinlighetsinställningarna när du optimerar PDF-dokument.
 
@@ -399,7 +399,7 @@ Välj något av följande alternativ för Flate-komprimering i listrutan:
 
 ## Inställningar för Microsoft Excel (endast Windows) {#microsoft-excel-settings-windows-only}
 
-De här alternativen avgör hur Microsoft Excel-filer konverteras. Instruktioner om hur du använder dessa alternativ finns i [Skapa eller redigera filtypsinställningar](/help/forms/using/admin-help/configuring-file-type-settings1.md#main-pars-heading-0).
+De här alternativen avgör hur Microsoft Excel-filer konverteras. Instruktioner om hur du använder dessa alternativ finns i [Skapa eller redigera filtypsinställningar](#create-or-edit-file-type-settings).
 
 **Prova OpenOffice som återställningskonverterare**: När det här alternativet är markerat och konverteringen med Microsoft Excel misslyckas eller når den angivna tidsgränsen, försöker PDF Generator konvertera med OpenOffice. Om konverteringen med OpenOffice misslyckas eller når den angivna tidsgränsen, skrivs ett undantag till loggfilen.
 
@@ -463,7 +463,7 @@ De här alternativen avgör hur Microsoft PowerPoint-filer konverteras. Instrukt
 
 ## Inställningar för Microsoft Project (endast Windows) {#microsoft-project-settings-windows-only}
 
-De här alternativen avgör hur Microsoft Project-filer konverteras. Instruktioner om hur du använder dessa alternativ finns i [Skapa eller redigera filtypsinställningar](/help/forms/using/admin-help/configuring-file-type-settings1.md#main-pars-heading-0).
+De här alternativen avgör hur Microsoft Project-filer konverteras. Instruktioner om hur du använder dessa alternativ finns i [Skapa eller redigera filtypsinställningar](#create-or-edit-file-type-settings).
 
 1. **[!UICONTROL Filnamnstillägg:]** Anger filnamnstilläggen för filtyper, avgränsade med kommatecken, som accepteras för det här programmet. The default is `mpp`. Ta inte med en punkt före eller ett mellanrum mellan tilläggen.
 
@@ -474,7 +474,7 @@ De här alternativen avgör hur Microsoft Project-filer konverteras. Instruktion
 
 ## Inställningar för Microsoft Word (endast Windows) {#microsoft-word-settings-windows-only}
 
-De här alternativen avgör hur Microsoft Word-filer konverteras. Instruktioner om hur du använder dessa alternativ finns i [Skapa eller redigera filtypsinställningar](/help/forms/using/admin-help/configuring-file-type-settings1.md#main-pars-heading-0).
+De här alternativen avgör hur Microsoft Word-filer konverteras. Instruktioner om hur du använder dessa alternativ finns i [Skapa eller redigera filtypsinställningar](#create-or-edit-file-type-settings).
 
 **[!UICONTROL Prova OpenOffice som återställningskonverterare]**: När det här alternativet är markerat och konverteringen med Microsoft Word misslyckas eller når den angivna tidsgränsen, försöker PDF Generator konvertera med OpenOffice. Om konverteringen med OpenOffice misslyckas eller når den angivna tidsgränsen, skrivs ett undantag till loggfilen.
 
@@ -534,15 +534,15 @@ Om ett Microsoft Word-formatnamn innehåller ett komma (,) eller likhetstecken (
 
 ## Inställningar för Microsoft Publisher (endast Windows) {#microsoft-publisher-settings-windows-only}
 
-De här alternativen avgör hur Microsoft Publisher-filer konverteras. Instruktioner om hur du använder dessa alternativ finns i [Skapa eller redigera filtypsinställningar](/help/forms/using/admin-help/configuring-file-type-settings1.md#main-pars-heading-0).
+De här alternativen avgör hur Microsoft Publisher-filer konverteras. Instruktioner om hur du använder dessa alternativ finns i [Skapa eller redigera filtypsinställningar](#create-or-edit-file-type-settings).
 
-**[!UICONTROL Filnamnstillägg]**: Anger filnamnstilläggen för filtyper, avgränsade med kommatecken, som accepteras för det här programmet. The default is `pub`. Ta inte med en punkt före eller ett mellanrum mellan tilläggen.
+**[!UICONTROL Filnamnstillägg]**: Anger filnamnstilläggen för filtyper, avgränsade med kommatecken, som accepteras för det här programmet. The default is `pub`. Ta inte med en punkt före eller ett blanksteg mellan tilläggen.
 
 ## AutoCAD-inställningar (endast Windows) {#autocad-settings-windows-only}
 
 Dessa alternativ avgör hur AutoCAD-filer konverteras. Instruktioner om hur du använder dessa alternativ finns i [Skapa eller redigera filtypsinställningar](/help/forms/using/admin-help/configuring-file-type-settings1.md#create-or-edit-file-type-settings).
 
-**[!UICONTROL Filnamnstillägg]**: Anger filnamnstilläggen för filtyper, avgränsade med kommatecken, som accepteras för det här programmet. The default is `dwg`. Ta inte med en punkt före eller ett mellanrum mellan tilläggen.
+**[!UICONTROL Filnamnstillägg]**: Anger filnamnstilläggen för filtyper, avgränsade med kommatecken, som accepteras för det här programmet. The default is `dwg`. Ta inte med en punkt före eller ett blanksteg mellan tilläggen.
 
 **[!UICONTROL Konvertera dokumentinformation]**: Lägger till dokumentinformation från egenskapsdialogrutan för källfilen, inklusive titel, ämne, författare, nyckelord, hanterare, företag, kategori och kommentarer. Det här alternativet är markerat som standard.
 
