@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f4d98cb9-84d8-4735-91d2-b9ceec861e5e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -127,7 +127,7 @@ Mer information om gränssnittet för utveckling av interaktiv kommunikation fin
  </tbody>
 </table>
 
-Du kan också ersätta bindningen mellan ett målområde och ett dokumentfragment genom att släppa det nya fragmentet i målområdet med hjälp av fliken **Resurser** . Målområdets blå färgskuggning när fragmentet dras anger att dokumentfragmentet kan släppas till målområdet.
+Du kan också ersätta bindningen mellan ett målområde och ett dokumentfragment genom att släppa det nya fragmentet i målområdet med hjälp av fliken **[!UICONTROL Resurser]** . Målområdets blå färgskuggning när fragmentet dras anger att dokumentfragmentet kan släppas till målområdet.
 
 Mer information om dokumentfragment finns i [Dokumentfragment](/help/forms/using/document-fragments.md).
 
@@ -178,11 +178,11 @@ Tryck på dokumentfragmentet, tryck på ![configure_icon](assets/configure_icon.
 
 1. Växla till **[!UICONTROL webbkanal]**. Webbkanalen visas i redigeraren för interaktiv kommunikation. När du byter från Print-kanalen till Web channel för första gången sker den automatiska synkroniseringen. Mer information finns i [Synkronisera webbkanal från utskriftskanalen](../../forms/using/create-interactive-communication.md#synchronize).
 
-   Eftersom vi använder Skriv ut som master för webben i det här exemplet synkroniseras platshållarna för utskriftskanalen, innehållet och databindningen till webbkanalen. Du kan dock ändra och anpassa det specifika innehållet i webbkanalen. [Avbryt arv](../../forms/using/create-interactive-communication.md#main-pars-header-103384010) för målområdena och variabler som har genererats med utskriftskanalen för att kunna anpassa innehållet.
+   Eftersom vi använder Skriv ut som master för webben i det här exemplet synkroniseras platshållarna för utskriftskanalen, innehållet och databindningen till webbkanalen. Du kan dock ändra och anpassa det specifika innehållet i webbkanalen. [Avbryt arv](#cancelinheritance) för målområdena och variabler som har genererats med utskriftskanalen för att kunna anpassa innehållet.
 
    ![webbkanalresurser](assets/webchannelassets.png)
 
-   Tryck på dokumentfragmentet, tryck på ![configure_icon](assets/configure_icon.png) (Configure) och tryck sedan på **[!UICONTROL Properties]** från sidan för Interactive Communication. I avsnittet **[!UICONTROL Variabler och Datamodellobjekt]** listas variablerna, inklusive de dolda variablerna och datamodellsobjekten som används i dokumentfragmenten. Använd ![redigeringsikonen](assets/edit.svg) (Redigera) bredvid varje datamodellsobjekt eller variabel för att redigera egenskaperna. För dokumentfragment som har genererats [](../../forms/using/create-interactive-communication.md#main-pars-header-1213963149) automatiskt i en webbkanal med hjälp av kanalen Skriv ut använder du ikonen ![](assets/cancelinheritance.png) (avbryt arv) bredvid varje datamodellsobjekt och variabel för att [avbryta arv](../../forms/using/create-interactive-communication.md#main-pars-header-103384010) och för att kunna redigera dem.
+   Tryck på dokumentfragmentet, tryck på ![configure_icon](assets/configure_icon.png) (Configure) och tryck sedan på **[!UICONTROL Properties]** från sidan för Interactive Communication. I avsnittet **[!UICONTROL Variabler och Datamodellobjekt]** listas variablerna, inklusive de dolda variablerna och datamodellsobjekten som används i dokumentfragmenten. Använd ![redigeringsikonen](assets/edit.svg) (Redigera) bredvid varje datamodellsobjekt eller variabel för att redigera egenskaperna. För dokumentfragment som har genererats [](#synchronize) automatiskt i en webbkanal med hjälp av kanalen Skriv ut använder du ikonen ![](assets/cancelinheritance.png) (avbryt arv) bredvid varje datamodellsobjekt och variabel för att [avbryta arv](#cancelinheritance) och för att kunna redigera dem.
 
 1. Om du vill lägga till fler komponenter i webbkanalen när webbkanalen är vald trycker du på **[!UICONTROL Komponenter]**. Dra och släpp komponenter i webbkanalen i din interaktiva kommunikation efter behov och fortsätt att konfigurera dem.
 
@@ -200,7 +200,7 @@ Tryck på dokumentfragmentet, tryck på ![configure_icon](assets/configure_icon.
 
 1. Infoga resurser i webbkanalen efter behov.
 
-   Du kan [förhandsgranska din interaktiva kommunikation](#previewic) för att se hur utskrifts- och webbutdata för den interaktiva kommunikationen ser ut och fortsätta att göra de ändringar som behövs.
+   Du kan [förhandsgranska den interaktiva kommunikationen](#previewic) och se hur utskrifts- och webbutdata för den interaktiva kommunikationen ser ut och fortsätta att göra de ändringar som behövs.
 
 ## Förhandsgranska interaktiv kommunikation {#previewic}
 
@@ -286,7 +286,7 @@ Om du vill använda visningsmönstret måste antalet tecken eller siffror som de
 
 Du kan omdefiniera visningsmönstret för ett fält, en variabel eller ett element i en formulärdatamodell när du har genererat webbinnehåll från utskriftskanalen. Därför kan ett element ha olika visningsmönster definierade för utskrifts- och webbkanaler. Om du inte definierar ett visningsmönster för ett element i en utskriftskanal och automatiskt genererar webbinnehåll med hjälp av en utskriftskanal, definierar databindningen som är definierad för elementet i en utskriftskanal de visningsmönsteralternativ som finns i listrutan **[!UICONTROL Typ]** . Om ingen bindning har definierats för elementet definierar elementets datatyp de tillgängliga alternativen för visningsmönster. Om du till exempel skapar en databindning av typen Number för ett element i en utskriftskanal, har visningsmönsteralternativen som finns i listrutan **[!UICONTROL Typ]** olika format typen Number.
 
-Växla till **förhandsgranskningsläget** eller öppna användargränssnittet för agenten för att visa det visningsmönster som används för dessa element.
+Växla till **förhandsgranskningsläget** eller öppna agentens användargränssnitt för att visa det visningsmönster som används för dessa element.
 
 I följande tabell visas ett exempel på de värden som visas som ett resultat av inställningen av datavisningsmönstret för en variabel:
 
@@ -581,9 +581,9 @@ Tryck på komponenten för att visa följande alternativ:
 * **Överordnad:** Markera den överordnade komponenten för en komponent.
 * **Visa SOM-uttryck:** Visa [SOM-uttrycket](../../forms/using/using-som-expressions-adaptive-forms.md) för komponenten.
 
-* **Gruppera objekt i panelen:** Gruppera komponenterna på en panel för att kunna utföra åtgärder på dessa komponenter samtidigt. Mer information finns i **[Gruppera objekt på panelen](../../forms/using/create-interactive-communication.md#main-pars-header-1815149576)**.
+* **Gruppera objekt i panelen:** Gruppera komponenterna på en panel för att kunna utföra åtgärder på dessa komponenter samtidigt. Mer information finns i [Gruppera objekt på panelen](#groupobjectspanel).
 
-* **Avbryt arv:** Avbryt [arvet](../../forms/using/create-interactive-communication.md#main-pars-header-103384010) av komponenterna i målområdet för att redigera dem.
+* **Avbryt arv:** Avbryt [arvet](#cancelinheritance) av komponenterna i målområdet för att redigera dem.
 
 ### Gruppera objekt i panelen {#groupobjectspanel}
 
