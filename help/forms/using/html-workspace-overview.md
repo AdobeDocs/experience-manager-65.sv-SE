@@ -10,7 +10,7 @@ topic-tags: forms-workspace
 discoiquuid: 866cd9cb-6661-4b0f-a3af-e39453e6e51b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 21efe30c6a69d04c737bc523aeaab504db8f605b
 
 ---
 
@@ -49,7 +49,7 @@ Du kan godkänna flera uppgifter av samma typ. När du har valt en uppgift för 
 
 Flex Workspace stöds inte av AEM Forms-kunder. Alla kunder som använder Flex Workspace bör gå över till AEM Forms Workspace.
 
-I AEM Forms-arbetsytan har standardtjänsterna för återgivning och sändning, i standardåtgärdsprofilen, som är kopplad till XDP-formulär ändrats och nya tjänster introducerats. Mer information finns i [Ny rendering och skicka-tjänst](/help/forms/using/new-render-submit-service.md). Om du vill migrera befintliga processer, som fungerar med XDP-formulär, för att använda dessa tjänster, kan du följa [dessa steg](/help/forms/using/new-render-submit-service.md#main-pars-faq).
+I AEM Forms-arbetsytan har standardtjänsterna för återgivning och sändning, i standardåtgärdsprofilen, som är kopplad till XDP-formulär ändrats och nya tjänster introducerats. Mer information finns i [Ny rendering och skicka-tjänst](/help/forms/using/new-render-submit-service.md). Om du vill migrera befintliga processer, som fungerar med XDP-formulär, för att använda dessa tjänster, kan du följa [dessa steg](new-render-submit-service.md).
 
 **Anpassa Flex-arbetsytan med arbetsytan i AEM Forms**
 
@@ -120,11 +120,11 @@ Arbetsytan i AEM Forms har stöd för en mängd anpassningar för att uppdatera 
 * Funktioner som använder semantiska anpassningar
 * Återanvända HTML-komponenter i andra webbprogram
 
-Artikeln om [anpassning](/help/forms/using/introduction-customizing-html-workspace.md#main-pars-heading-0) förklarar vilka typer av sådana anpassningar som finns.
+Artikeln om [anpassning](introduction-customizing-html-workspace.md#types-of-customizations) förklarar vilka typer av sådana anpassningar som finns.
 
 ### Set up the developer environment {#set-up-the-developer-environment}
 
-AEM Forms-arbetsytan innehåller ett CRX-paket som distribuerats på CRX, ett SDK-arkiv som innehåller den fullständiga källkoden, JavaScript-bibliotek från tredje part och byggskript för arbetsytan AEM Forms. Använd dessa för att konfigurera utvecklingsmiljön för att utföra de anpassningar som nämns ovan. Mer information finns i [Skapa kod](/help/forms/using/introduction-customizing-html-workspace.md#main-pars-heading-3)för arbetsytan i AEM Forms.
+AEM Forms-arbetsytan innehåller ett CRX-paket som distribuerats på CRX, ett SDK-arkiv som innehåller den fullständiga källkoden, JavaScript-bibliotek från tredje part och byggskript för arbetsytan AEM Forms. Använd dessa för att konfigurera utvecklingsmiljön för att utföra de anpassningar som nämns ovan. Mer information finns i [Skapa kod](introduction-customizing-html-workspace.md#building-html-workspace-code)för arbetsytan i AEM Forms.
 
 Du kan anpassa en stor del av gränssnittet och viktiga funktioner som teckensnitt, färgscheman, logotyp, inloggningsskärmen, feldialogrutor, integrering med tredjepartsprogram och återanvändning av komponenter i tredjepartsprogram. Du kan även förbättra innehållet som visas på sidan Sammanfattning av uppgifter, visa bilder för åtgärder för uppgiftsvägar och även ändra de lågnivåmodeller och vyer för Backbone som skapar arbetsytan i AEM Forms.
 
