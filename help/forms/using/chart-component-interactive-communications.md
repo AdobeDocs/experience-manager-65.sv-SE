@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e21714ad-d445-4aff-b0db-d577061e0907
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -150,7 +150,7 @@ Konfigurera följande egenskaper när du skapar diagram för tryck- och webbkana
   </tr>
   <tr>
    <td>Verktygstips</td>
-   <td><p>Det format som verktygstipset visas i när användaren för musen över en datapunkt i diagrammet i webbkanalen. Standardvärdet är ${x}(${y}). Beroende på diagramtyp ersätts variablerna ${x}och ${y} dynamiskt med motsvarande värden på X-axeln och Y-axeln när du pekar med musen på en punkt, stapel eller segment i diagrammet och visas i verktygstipset.</p> <p>Om du vill inaktivera verktygstipset lämnar du fältet <span class="uicontrol">Verktygstips</code> tomt. Det här alternativet gäller inte för linjediagram och ytdiagram. Se <a href="../../forms/using/chart-component-interactive-communications.md#main-pars-header-e1f6">exempel 1: Diagramutdata för tryck och webb</a>.</code></p> </td>
+   <td><p>Det format som verktygstipset visas i när användaren för musen över en datapunkt i diagrammet i webbkanalen. Standardvärdet är ${x}(${y}). Beroende på diagramtyp ersätts variablerna ${x}och ${y} dynamiskt med motsvarande värden på X-axeln och Y-axeln när du pekar med musen på en punkt, stapel eller segment i diagrammet och visas i verktygstipset.</p> <p>Om du vill inaktivera verktygstipset lämnar du fältet <span class="uicontrol">Verktygstips</code> tomt. Det här alternativet gäller inte för linjediagram och ytdiagram. Se <a href="#chartoutputprintweb">exempel 1: Diagramutdata för tryck och webb</a>.</code></p> </td>
    <td>Webb</td>
   </tr>
   <tr>
@@ -169,8 +169,8 @@ Konfigurera följande egenskaper när du skapar diagram för tryck- och webbkana
      <li><strong>Referenspunkt &gt; Datamodellobjekt för serie: </strong>Tillgängligt för flera seriers kvadrantdiagram om du väljer <span class="uicontrol">Datamodellobjekt</code> i listrutan Bindningstyp. Definiera objektegenskapen för formulärdatamodellen för att identifiera serien för referenspunkten. </code></li>
      <li><strong>Referenspunkt &gt; Datamodellobjektvärde för serie: </strong>Tillgängligt för flera seriers kvadrantdiagram om du väljer <span class="uicontrol">Datamodellobjekt</code> i listrutan Bindningstyp. Använd objektegenskapen för formulärdatamodellen för serie och det värde som definieras i det här fältet för att identifiera serien för referenspunkten.</code></li>
      <li><strong>Referenspunkt &gt; Datamodellobjekt för referenspunkt: </strong>Tillgängligt för kvadrantdiagram om du väljer <span class="uicontrol">Datamodellobjekt</code> i listrutan Bindningstyp. Definiera en objektegenskap för formulärdatamodellen som är jämställd med egenskaperna som ritas på X- och Y-axeln. För flera serier definierar du dessutom en datamodellsobjektegenskap som är en underordnad enhet till datamodellens objektegenskap som definierats för serien.</code></li>
-     <li><strong>Referenspunkt &gt; Datamodellobjektvärde för referenspunkt: </strong>Tillgängligt för kvadrantdiagram om du väljer <span class="uicontrol">Datamodellobjekt</code> i listrutan Bindningstyp. Använd objektegenskapen för formulärdatamodellen som referenspunkt och det värde som definieras i det här fältet för att identifiera referenspunkten för diagrammet.<br /><strong> Kvadrantens </strong>etiketter &gt; Övre vänster: Finns för kvadrantdiagram för att ange namnet på den övre vänstra kvadranten.</code></li>
-     <li><strong></strong> Quadrant Labels &gt; Top Right: Finns för kvadrantdiagram för att ange namnet på den övre högra kvadranten.</li>
+     <li><strong>Referenspunkt &gt; Datamodellobjektvärde för referenspunkt: </strong>Tillgängligt för kvadrantdiagram om du väljer <span class="uicontrol">Datamodellobjekt</code> i listrutan Bindningstyp. Använd objektegenskapen för formulärdatamodellen som referenspunkt och det värde som definieras i det här fältet för att identifiera referenspunkten för diagrammet.<br /> Kvadrantens <strong>etiketter &gt; Övre vänster:</strong> Finns för kvadrantdiagram för att ange namnet på den övre vänstra kvadranten.</code></li>
+     <li><strong>Quadrant Labels &gt; Top Right:</strong> Finns för kvadrantdiagram för att ange namnet på den övre högra kvadranten.</li>
      <li><strong>Quadrant Labels &gt; Bottom Right: </strong>Tillgängligt för kvadrantdiagram för att ange namnet på den nedre högra kvadranten.</li>
      <li><strong>Quadrant Labels &gt; Bottom Left: Det </strong>finns för kvadrantdiagram som anger namnet på den nedre vänstra kvadranten.</li>
     </ul> </td>
@@ -185,7 +185,7 @@ Du kan konfigurera ett diagram så att statistiska funktioner används för att 
 
 ![Funktioner i diagram](assets/functions_charts_new.png)
 
-Medan diagramkomponenten innehåller vissa inbyggda funktioner kan du skriva [anpassade funktioner](../../forms/using/chart-component-interactive-communications.md#main-pars-header-473010287) och göra dem tillgängliga för användning i diagramkonfigurationen i webbkanalen.
+Medan diagramkomponenten innehåller vissa inbyggda funktioner kan du skriva [anpassade funktioner](#customfunctionsweb) och göra dem tillgängliga för användning i diagramkonfigurationen i webbkanalen.
 
 Följande funktioner är tillgängliga som standard med komponenten Chart:
 
@@ -205,7 +205,7 @@ Följande funktioner är tillgängliga som standard med komponenten Chart:
 
 **Läge** Returnerar värdet med de flesta förekomster på X- eller Y-axeln för ett givet värde på den andra axeln.
 
-Mer information finns i [exempel 2: Användning av summerings- och frekvensfunktioner i ett linjediagram](../../forms/using/chart-component-interactive-communications.md#main-pars-header-ae38).
+Mer information finns i [exempel 2: Användning av summerings- och frekvensfunktioner i ett linjediagram](#applicationsumfrequency).
 
 ### Anpassade funktioner i webbkanalen {#customfunctionsweb}
 
@@ -301,12 +301,12 @@ Diagrammet visar beloppet för transaktioner som utförts i ett visst datuminter
 
 För att uppnå detta anger du följande egenskaper:
 
-* **** Namn: Ange diagrammets namn.
-* **** Diagramtyp: Välj **Kvadrant** i listrutan.
+* **Namn:** Ange diagrammets namn.
+* **Diagramtyp:** Välj **Kvadrant** i listrutan.
 
 * Markera kryssrutan **Flera serier** .
 * **Datamodellobjekt**: Ange datamodellens objektegenskap för serien. Datamodellens objektegenskap för banknamnet är överordnad datamodellens objektegenskaper som ritas i X-axeln och Y-axeln.
-* **** Datamodellsobjekt: Markera datamodellens objektegenskaper för att skapa databindningar för X-axeln (transaktionsdatum) och Y-axeln (transaktionsmängd).
+* **Datamodellsobjekt:** Markera datamodellens objektegenskaper för att skapa databindningar för X-axeln (transaktionsdatum) och Y-axeln (transaktionsmängd).
 * I avsnittet **Referenspunkt** väljer du **Statisk** som bindningstyp.
 
 * Ange värdena för referenspunkterna X-axel och Y-axel.
