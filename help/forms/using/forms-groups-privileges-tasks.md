@@ -11,7 +11,7 @@ topic-tags: Configuration
 discoiquuid: 1717b1b4-1c2a-450e-8e79-4156a974d5fa
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
+source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
 
 ---
 
@@ -20,7 +20,7 @@ source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
 
 Du kan [skapa grupper](/help/sites-administering/user-group-ac-admin.md#group-administration) och tilldela profiler och [användare](/help/sites-administering/user-group-ac-admin.md#user-administration) till grupperna i AEM. Dessa profiler styr behörigheter för de användare som är en del av gruppen.
 
-När du har installerat [AEM Forms-tilläggspaketet](../../forms/using/installing-configuring-aem-forms-osgi.md)blir de grupper som omnämns i den här artikeln automatiskt tillgängliga för tilldelning. Exempel på sådana grupper är formuläranvändare och formuläranvändare. I följande tabell visas de uppgifter som en användare kan utföra för AEM Forms på OSGi baserat på grupptilldelningarna:
+När du har installerat [AEM Forms-tilläggspaketet](../../forms/using/installing-configuring-aem-forms-osgi.md)blir de grupper som omnämns i den här artikeln automatiskt tillgängliga för tilldelning, till exempel formuläranvändare och användare med formulärfunktioner. I följande tabell visas de uppgifter som en användare kan utföra för AEM Forms på OSGi baserat på grupptilldelningarna:
 
 <table>
  <tbody>
@@ -29,7 +29,7 @@ När du har installerat [AEM Forms-tilläggspaketet](../../forms/using/installin
    <td>Uppgifter</td> 
   </tr>
   <tr>
-   <td>formuläranvändare <sup><a href="#main-pars-text">[1]</a></sup></td> 
+   <td>formuläranvändare <sup>[1]</sup></td> 
    <td>
     <ul> 
      <li>Skapa, förhandsgranska, publicera och skicka adaptiva formulär</li> 
@@ -59,7 +59,7 @@ När du har installerat [AEM Forms-tilläggspaketet](../../forms/using/installin
     </ul> </td> 
   </tr>
   <tr>
-   <td>template-authors <sup><a href="#main-pars-text">[2]</a></sup></td> 
+   <td>template-authors <sup>[2]</sup></td> 
    <td>
     <ul> 
      <li>Skapa och förhandsgranska anpassningsbara formulär eller mallar för interaktiv kommunikation</li> 
