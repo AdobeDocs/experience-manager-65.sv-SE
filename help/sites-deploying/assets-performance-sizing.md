@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: configuring
 discoiquuid: a79839e2-be39-418b-a3bd-f5457e555172
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
@@ -60,7 +60,7 @@ DAM-processerna är väl lämpade att utföras parallellt för stora mängder. N
 
 Omfattande bearbetning av digitala resurser kräver optimerade maskinvaruresurser, de viktigaste faktorerna är bildstorlek och högsta genomströmning för bearbetade bilder.
 
-Allokera minst 16 GB stackutrymme och konfigurera arbetsflödet för DAM-uppdatering av resurser så att det använder [Camera Raw-paketet](/help/assets/camera-raw.md) för att lägga in råbilder.
+Allokera minst 16 GB stackutrymme och konfigurera arbetsflödet för [!UICONTROL DAM-uppdatering av resurs] så att det använder [Camera Raw-paketet](/help/assets/camera-raw.md) för inhämtning av råbilder.
 
 ## Förstå systemet {#understanding-the-system}
 
@@ -102,7 +102,7 @@ För varje digitalt resurshanteringsprojekt måste du se till att det finns ett 
 
 Följande prestandaförbättringar har hittills använts i projekt:
 
-* Selektiv renderingsgenerering: generera bara de återgivningar du behöver genom att lägga till villkor i arbetsflödet för resursbearbetning, så att mer kostsamma återgivningar bara genereras för vissa resurser.
+* Selektiv renderingsgenerering: generera bara de återgivningar du behöver genom att lägga till villkor i arbetsflödet för resursbearbetning, så att mer kostsamma återgivningar bara genereras för utvalda resurser.
 * Delat datalager bland instanser: när diskutrymmet börjar ta slut kan detta avsevärt minska det diskutrymme som behövs, till priset av högre konfigurationsinsatser och förlorad automatisk rensning av datalagret.
 
 ## Ytterligare läsning {#further-reading}
