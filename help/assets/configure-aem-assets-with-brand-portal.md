@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: dca5a2ac-1fc8-4251-b073-730fd6f49b1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bdb26ba817e0599f811d7f4e131ec6ab356a4785
+source-git-commit: 28354bd9785fa83939f9e3b051aac195d7706633
 
 ---
 
@@ -204,7 +204,7 @@ Kontrollera att du har utfört följande steg:
 
 >[!CAUTION]
 >
->Skapa endast en giltig IMS-konfiguration. Skapa inte flera IMS-konfigurationer.
+>Skapa endast en giltig IMS-konfiguration.
 >
 > Kontrollera att konfigurationen är felfri. Om konfigurationen inte är felfri tar du bort den och skapar en ny felfri konfiguration.
 
