@@ -10,7 +10,7 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: dfaa4b3f-f65a-4fe3-87a7-f3bc71015e56
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
@@ -26,14 +26,14 @@ Med videointegrationen i Dynamic Media Classic kan du nå optimerad video på al
 
 ## Om FFMPEG och Dynamic Media Classic {#about-ffmpeg-and-scene}
 
-Standardprocessen för videokodning bygger på den FFMPEG-baserade integrationen med videoprofiler. Därför innehåller det färdiga arbetsflödet DAM Update Asset följande två åtgärder:
+Standardprocessen för videokodning bygger på den FFMPEG-baserade integrationen med videoprofiler. Därför innehåller det färdiga arbetsflödet för [!UICONTROL DAM Update Asset] följande två åtgärder för ffmpeg-baserade arbetsflöden:
 
 * FFMPEG-miniatyrbilder
 * FFMPEG-kodning
 
-Tänk på att aktivering och konfigurering av den dynamiska Media Classic-integreringen inte automatiskt tar bort eller inaktiverar dessa två arbetsflödessteg från det körklara arbetsflödet för DAM Update Asset Input. Om du redan använder den FFMPEG-baserade videokodningen i AEM är det troligt att du har FFMPEG installerat i dina redigeringsmiljöer. I det här fallet kodas en ny video som hämtas med Assets två gånger: en gång från FFMPEG-kodaren och en gång från Dynamic Media Classic-integreringen.
+Tänk på att aktivering och konfigurering av den dynamiska Media Classic-integreringen inte automatiskt tar bort eller inaktiverar dessa två arbetsflödessteg från det färdiga arbetsflödet för [!UICONTROL DAM-uppdatering av resurser] . Om du redan använder den FFMPEG-baserade videokodningen i AEM är det troligt att du har FFMPEG installerat i dina redigeringsmiljöer. I det här fallet kodas en ny video som hämtas med Assets två gånger: en gång från FFMPEG-kodaren och en gång från Dynamic Media Classic-integreringen.
 
-Om du har konfigurerat och installerat den FFMPEG-baserade videokodningen i AEM rekommenderar Adobe att du tar bort de två arbetsflödena för FFMPEG från arbetsflödena för DAM-uppdatering.
+Om du har konfigurerat och installerat den FFMPEG-baserade videokodningen i AEM rekommenderar Adobe att du tar bort de två arbetsflödena för FFMPEG från arbetsflödena för [!UICONTROL DAM-uppdatering] .
 
 ### Format som stöds {#supported-formats}
 
@@ -149,7 +149,7 @@ De olika videokoderna skapas enligt de förinställningar för dynamisk Media Cl
 >Nya videoprofiler och ändringar av dem måste aktiveras för publicering.
 
 1. I AEM går du till **[!UICONTROL Verktyg]** och väljer **[!UICONTROL Konfigurationskonsol]**. Gå till **[!UICONTROL Verktyg]** > **[!UICONTROL Resurser]** > **[!UICONTROL Videoprofiler]** i navigeringsträdet i Configuration Console.
-1. Skapa en ny Dynamic Media Classic-videoprofil. **[!UICONTROL I]** New.. väljer du **[!UICONTROL Skapa sida]** och sedan mallen Dynamic Media Classic Video Profile. Ge den nya videoprofilsidan ett namn och klicka på **[!UICONTROL Skapa]**.
+1. Skapa en ny Dynamic Media Classic-videoprofil. I **[!UICONTROL New..]** väljer du **[!UICONTROL Skapa sida]** och sedan mallen Dynamic Media Classic Video Profile. Ge den nya videoprofilsidan ett namn och klicka på **[!UICONTROL Skapa]**.
 
    ![chlimage_1-133](assets/chlimage_1-133.png)
 
