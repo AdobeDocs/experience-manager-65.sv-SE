@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: configuring
 discoiquuid: 80118cd1-73e1-4675-bbdf-85d66d150abc
 translation-type: tm+mt
-source-git-commit: 3f53945579eaf5de1ed0b071aa9cce30dded89f1
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
@@ -230,7 +230,7 @@ Arbetsflödesmotorn använder Apache Sling-jobbköer för hantering och schemal�
 
 Konfigurera de här tjänsterna för att begränsa antalet arbetsflödesprocesser som körs samtidigt.
 
-**** Obs! När du konfigurerar dessa jobbköer påverkas alla arbetsflöden såvida du inte har skapat en jobbkö för en viss arbetsflödesmodell (se [Konfigurera kön för en viss arbetsflödesmodell](/help/sites-deploying/configuring-performance.md#configure-the-queue-for-a-specific-workflow) nedan).
+**Obs!** När du konfigurerar dessa jobbköer påverkas alla arbetsflöden såvida du inte har skapat en jobbkö för en viss arbetsflödesmodell (se [Konfigurera kön för en viss arbetsflödesmodell](/help/sites-deploying/configuring-performance.md#configure-the-queue-for-a-specific-workflow) nedan).
 
 **Konfiguration i databasen**
 
@@ -253,15 +253,15 @@ När arbetsflödesmodeller körs skapas Sling-jobb för ett specifikt ämne. Som
 * com/adobe/granite/workflow/job&amp;ast;
 * com/adobe/granite/workflow/external/job&amp;ast;
 
-Faktiska jobbämnen som arbetsflödesmodeller genererar innehåller modellspecifikt suffix. Arbetsflödesmodellen DAM Update Asset genererar till exempel jobb med följande ämne:
+Faktiska jobbämnen som arbetsflödesmodeller genererar innehåller modellspecifikt suffix. Arbetsflödesmodellen [!UICONTROL DAM Update Asset] genererar till exempel jobb med följande ämne:
 
 com/adobe/granite/workflow/job/etc/workflow/models/dam/update_asset/jcr_content/model
 
 Därför kan du skapa en jobbkö för ämnet som matchar jobbavsnitten i arbetsflödesmodellen. När du konfigurerar de prestandarelaterade egenskaperna för kön påverkas endast arbetsflödesmodellen som genererar jobben som matchar köavsnittet.
 
-Följande procedur skapar en jobbkö för ett arbetsflöde med arbetsflödet DAM Update Asset som exempel.
+Följande procedur skapar en jobbkö för ett arbetsflöde med arbetsflödet [!UICONTROL DAM-uppdatering av resurser] som exempel.
 
-1. Kör arbetsflödesmodellen som du vill skapa jobbkön för så att ämnesstatistik genereras. Lägg till exempel till en bild i Resurser för att köra arbetsflödet DAM Update Asset.
+1. Kör arbetsflödesmodellen som du vill skapa jobbkön för så att ämnesstatistik genereras. Lägg till exempel till en bild i Resurser för att köra arbetsflödet [!UICONTROL DAM Update Asset] .
 1. Öppna Sling Jobs-konsolen. ([http://localhost:4502/system/console/slingevent](http://localhost:4502/system/console/slingevent))
 1. Identifiera arbetsflödesrelaterade ämnen i konsolen. Följande avsnitt finns för DAM Update Asset:
 
@@ -378,7 +378,7 @@ Du måste testa prestanda både under normala förhållanden och under toppförh
 
 Alla erfarenheter och all statistik som du har samlat in från en befintlig webbplats kan också vara användbara när du ska fastställa framtida mål. till exempel topptrafik från din webbplats.
 
-#### Enkomponentstester {#single-component-tests}
+#### Enstaka komponenttester {#single-component-tests}
 
 Viktiga komponenter måste testas - både under medelförhållanden och under högbelastningsförhållanden.
 
@@ -398,12 +398,12 @@ Genom att testa komponenterna i kombination får du en närmare bild av hur prog
 | Scenario | Komponent | #Användare | Tx/sek (förväntas) | Tx/sek (testad) | Beskrivning |
 |---|---|---|---|---|---|
 | Blandat genomsnitt | Hemsida | 10 | 1 |  |  |
-|  | Sök | 10 | 1 |  |  |
+|  | Sökning | 10 | 1 |  |  |
 |  | Nyheter | 10 | 2 |  |  |
 |  | Händelser | 10 | 1 |  |  |
 |  | Aktiveringar | 10 | 3 |  | Simulering av författarbeteende. |
 | Blandad topp | Hemsida | 100 | 5 |  |  |
-|  | Sök | 50 | 5 |  |  |
+|  | Sökning | 50 | 5 |  |  |
 |  | Nyheter | 100 | 10 |  |  |
 |  | Händelser | 100 | 10 |  |  |
 |  | Aktiveringar | 20 | 20 |  | Simulering av författarbeteende. |
@@ -415,7 +415,7 @@ Under de första dagarna efter det att webbplatsen har tillgängliggjorts kan du
 | Scenario | Testtyp | #Användare | Tx/sek (förväntas) | Tx/sek (testad) | Beskrivning |
 |---|---|---|---|---|---|
 | Live-topp på väg | Hemsida | 200 | 20 |  |  |
-|  | Sök | 100 | 10 |  |  |
+|  | Sökning | 100 | 10 |  |  |
 |  | Nyheter | 200 | 20 |  |  |
 |  | Händelser | 200 | 20 |  |  |
 |  | Aktiveringar | 20 | 20 |  | Simulering av författarbeteende. |
@@ -443,7 +443,7 @@ Vissa problem kommer inte att uppstå förrän systemet har körts under en kont
 | Scenario | Testtyp | #Användare | Tx/sek (förväntas) | Tx/sek (testad) | Beskrivning |
 |---|---|---|---|---|---|
 | Varaktighetsprovning (72 timmar) | Hemsida | 10 | 1 |  |  |
-|  | Sök | 10 | 1 |  |  |
+|  | Sökning | 10 | 1 |  |  |
 |  | Nyheter | 20 | 2 |  |  |
 |  | Händelser | 10 | 1 |  |  |
 |  | Aktiveringar | 1 | 3 |  | Simulering av författarbeteende. |
@@ -602,7 +602,7 @@ Det är viktigt att du skapar dessa bilder med samma namngivningshandtag som sid
 
 För sidor som inte ändras finns bilderna kvar i cachen, även om själva sidorna vanligtvis blir automatiskt ogiltiga.
 
-#### Personalisering {#personalization}
+#### Personanpassning {#personalization}
 
 Dispatcher kan inte cachelagra anpassade data, så vi rekommenderar att du begränsar personaliseringen till där det är nödvändigt. Så här visar du varför:
 
@@ -632,7 +632,7 @@ Det finns två sätt som en webbläsare kan använda för att avgöra vilken typ
 1. Genom filtillägg (t.ex. .html, .gif, .jpg osv.)
 1. Med MIME-typen som servern skickar med filen.
 
-För de flesta filer används MIME-typen i filtillägget. dvs.:
+För de flesta filer används MIME-typen i filtillägget. i.e.:
 
 1. Genom filtillägg (t.ex. .html, .gif, .jpg osv.)
 1. Med MIME-typen som servern skickar med filen.
@@ -704,11 +704,11 @@ Följande tabell visar storleken på datavolymer som används i prestandatestern
  </tbody>
 </table>
 
-Prestandatestvärdet för säkerhetskopiering upprepas med ytterligare innehållsuppsättningar som läggs till vid varje upprepning.
+Prestandatestvärdet för säkerhetskopiering upprepas med ytterligare innehållsuppsättningar som läggs till vid varje repetition.
 
 #### Benchmark-scenarier {#benchmark-scenarios}
 
-Referensvärdena för säkerhetskopiering omfattar två huvudscenarier: säkerhetskopierar när systemet är under en betydande programbelastning och säkerhetskopierar när systemet är inaktivt. Även om den allmänna rekommendationen är att säkerhetskopieringar ska utföras när CQ-systemet är så inaktivt som möjligt, finns det situationer där det är nödvändigt att säkerhetskopieringen måste köras när systemet är under laddning.
+Referensvärdena för säkerhetskopiering omfattar två huvudscenarier: säkerhetskopieringar när systemet är under stor programbelastning och säkerhetskopieringar när systemet är ledigt. Även om den allmänna rekommendationen är att säkerhetskopieringar ska utföras när CQ-systemet är så inaktivt som möjligt, finns det situationer där det är nödvändigt att säkerhetskopieringen måste köras när systemet är under laddning.
 
 **Säkerhetskopiering av vänteläge** utförs utan någon annan aktivitet på CQ.
 
@@ -718,7 +718,7 @@ Tidpunkter för säkerhetskopiering och storlek för säkerhetskopieringen hämt
 
 Inläsningen består av sidor som skapar/tar bort, bläddrar och frågor där större delen av inläsningen kommer från sidbläddringar och frågor. Om du lägger till och tar bort för många sidor ökar arbetsytans storlek kontinuerligt och förhindrar att säkerhetskopiorna slutförs. Distributionen av den last som skriptet ska använda är 75 % sidöverföringar, 24 % frågor och 1 % sidskapande (en nivå utan kapslade undersidor). Maximalt medelvärde för transaktioner per sekund i ett system som är inaktivt uppnås med fyra samtidiga trådar, vilket är vad som kommer att användas vid testning av säkerhetskopior under inläsning.
 
-Inläsningens inverkan på säkerhetskopieringsprestanda kan uppskattas av skillnaden mellan prestanda med och utan den här programinläsningen. Effekten av säkerhetskopieringen på programmets dataflöde hittas genom att man jämför scenariogenomströmningen i transaktioner per timme med och utan en pågående säkerhetskopiering, och med säkerhetskopieringar som körs med olika inställningar för fördröjning av säkerhetskopiering.
+Inläsningens inverkan på säkerhetskopieringsprestanda kan uppskattas av skillnaden mellan prestanda med och utan den här programinläsningen. Effekten av säkerhetskopieringen på programmets dataflöde hittas genom att man jämför scenariogenomströmningen i transaktioner per timme med och utan en pågående samtidig säkerhetskopiering och med säkerhetskopieringar som körs med olika inställningar för fördröjning av säkerhetskopiering.
 
 **Fördröjningsinställning** För flera av scenarierna varierade vi även fördröjningsinställningen för säkerhetskopiering med värden på 10 ms (standard), 1 ms och 0 ms, för att undersöka hur den här inställningen påverkade säkerhetskopieringens prestanda.
 
