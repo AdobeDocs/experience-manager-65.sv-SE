@@ -10,14 +10,14 @@ topic-tags: publish
 discoiquuid: db38972c-be3f-49fd-8cc1-45b16ed244af
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
 
 # Bevakad mapp i AEM Forms{#watched-folder-in-aem-forms}
 
-En administratör kan konfigurera en nätverksmapp, en s.k. bevakad mapp, så att när en användare monterar en fil (t.ex. en PDF-fil) i den bevakade mappen så startas ett förkonfigurerat arbetsflöde, en tjänst eller ett skript för att bearbeta den tillagda filen. När tjänsten har utfört den angivna åtgärden sparas resultatfilen i en angiven utdatamapp. Mer information om arbetsflöde, tjänst och skript finns i [Olika metoder för att bearbeta filer](../../forms/using/watched-folder-in-aem-forms.md#main-pars-header-4).
+En administratör kan konfigurera en nätverksmapp, en s.k. bevakad mapp, så att när en användare monterar en fil (t.ex. en PDF-fil) i den bevakade mappen så startas ett förkonfigurerat arbetsflöde, en tjänst eller ett skript för att bearbeta den tillagda filen. När tjänsten har utfört den angivna åtgärden sparas resultatfilen i en angiven utdatamapp. Mer information om arbetsflöde, tjänst och skript finns i [Olika metoder för att bearbeta filer](#variousmethodsforprocessingfiles).
 
 ## Skapa en bevakad mapp {#create-a-watched-folder}
 
@@ -25,7 +25,7 @@ Du kan använda någon av följande metoder för att skapa en bevakad mapp i fil
 
 * När du konfigurerar egenskaperna för en speciell nod i konfigurationen för bevakad mapp anger du den fullständiga sökvägen till den överordnade katalogen i egenskapen folderPath och lägger till namnet på den bevakade mapp som ska skapas, vilket visas i följande exempel: `C:/MyPDFs/MyWatchedFolder`Mappen `MyWatchedFolder`finns inte. AEM Forms försöker skapa mappen med den angivna sökvägen.
 
-* Skapa en mapp på filsystemet innan du konfigurerar en bevakad mappslutpunkt och ange sedan den fullständiga sökvägen i egenskapen folderPath. Mer information om egenskapen folderPath finns i Egenskaper [för](../../forms/using/watched-folder-in-aem-forms.md#main-pars-header-1)bevakad mapp.
+* Skapa en mapp på filsystemet innan du konfigurerar en bevakad mappslutpunkt och ange sedan den fullständiga sökvägen i egenskapen folderPath. Mer information om egenskapen folderPath finns i Egenskaper [för](#watchedfolderproperties)bevakad mapp.
 
 >[!NOTE]
 >
@@ -49,7 +49,7 @@ Om du vill konfigurera en bevakad mapp skapar du en konfigurationsnod för bevak
    * `inputProcessorType`
    * `inputProcessorId`
    * `outputFilePattern`
-   En fullständig lista över egenskaper som stöds finns i Egenskaper [för](../../forms/using/watched-folder-in-aem-forms.md#main-pars-header-1)bevakad mapp.
+   En fullständig lista över egenskaper som stöds finns i Egenskaper [för](#watchedfolderproperties)bevakad mapp.
 
 1. Klicka på **Spara alla**. När noden har skapats och egenskaperna har sparats. Mapparna `input`, `result`, `failure`, `preserve`och `stage`skapas på den sökväg som anges i `folderPath` egenskapen.
 
@@ -150,14 +150,14 @@ Mer information om filmönster finns i [Om filmönster](../../forms/using/watche
 
    Om det finns en stor mängd filer som tas bort gör du gruppstorleken stor. Om till exempel tjänsten som startas av slutpunkten Bevakade mappar kan bearbeta 700 filer per minut, och användare släpper filer i indatamappen i samma takt, och sedan ställer du in batchstorleken på 350 och avsökningsintervallet på 30 sekunder, kan du förbättra prestandan för Bevakade mappar utan att det kostar för mycket att skanna den bevakade mappen.
 
-   När filer släpps i den bevakade mappen listas filerna i indata, vilket kan försämra prestanda om skanningen sker varje sekund. Om du ökar skanningsintervallet kan prestandan förbättras. Om volymen för de filer som tas bort är liten justerar du batchstorleken och avsökningsintervallet. Om till exempel 10 filer tas bort varje sekund, kan du prova att ange pollInterval till 1 sekund och Batch Size till 10
+   När filer släpps i den bevakade mappen listas filerna i indata, vilket kan försämra prestanda om skanningen sker varje sekund. Om du ökar skanningsintervallet kan prestandan förbättras. Om filvolymen som tas bort är liten justerar du batchstorleken och avsökningsintervallet. Om till exempel 10 filer tas bort varje sekund, kan du prova att ange pollInterval till 1 sekund och Batch Size till 10
 
 * **throttleOn (Boolean)**: När det här alternativet är markerat begränsas antalet övervakade mappjobb som AEM Forms bearbetar vid en given tidpunkt. Det maximala antalet jobb bestäms av värdet för Batchstorlek. Standardvärdet är true. (Se [Begränsning](../../forms/using/watched-folder-in-aem-forms.md#p-about-throttling-p).)
 
 * **overwriteDuplicateFilename (Boolean)**: När värdet är True skrivs filerna i resultatmappen och i den bevarade mappen över. Om värdet är Falskt används filer och mappar med ett numeriskt indexsuffix för namnet. Standardvärdet är Falskt.
 * **preserveOnFailure (Boolean)**: Bevara indatafiler om det inte går att utföra åtgärden på en tjänst. Standardvärdet är true.
 * **inputFilePattern (String)**: Anger mönstret för indatafilerna för en bevakad mapp. Skapar en vitlista över filerna.
-* **asynk (Boolean)**: Identifierar anropstypen som asynkron eller synkron. Standardvärdet är true (asynkront). Filbearbetningen är en resurskrävande uppgift. Behåll värdet för asynch-flaggan till true för att förhindra att huvudtråden i sökningsjobbet kvävs. I en klustermiljö är det viktigt att flaggan är true för att det ska gå att använda belastningsutjämning för de filer som bearbetas på de tillgängliga servrarna. Om flaggan är false försöker sökningsjobbet att utföra bearbetning för varje fil/mapp på den översta nivån sekventiellt i sin egen tråd. Ange inte flaggan till false utan en specifik orsak, till exempel arbetsflödesbaserad bearbetning i en enskild serverkonfiguration.
+* **asynk (Boolean)**: Identifierar anropstypen som asynkron eller synkron. Standardvärdet är true (asynkront). Filbearbetningen är en resurskrävande uppgift. Behåll värdet för asynch-flaggan till true för att förhindra att huvudtråden i sökningsjobbet kvävs. I en klustermiljö är det viktigt att flaggan är true för att det ska gå att använda belastningsutjämning för de filer som bearbetas på de tillgängliga servrarna. Om flaggan är false försöker sökningsjobbet att bearbeta varje fil/mapp på den översta nivån sekventiellt i sin egen tråd. Ange inte flaggan till false utan en specifik orsak, till exempel arbetsflödesbaserad bearbetning i en enskild serverkonfiguration.
 
 >[!NOTE]
 >
@@ -662,5 +662,5 @@ inputProcessorType (String): Den typ av process som ska startas. I den här sjä
    * inputProcessorId (String): Beteendet för egenskapen inputProcessorId baseras på det värde som anges för egenskapen inputProcessorType. I det här exemplet är värdet för egenskapen inputProcessorType arbetsflöde. Ange därför följande sökväg för PDFG-arbetsflödet för egenskapen inputProcessorId: /etc/workflow/models/pdfg/jcr:content/model
 
    * outputFilePattern (String): Utdatafilens mönster. Du kan ange en mapp eller ett filmönster. Om ett mappmönster anges har utdatafilerna namn enligt arbetsflödena. Om ett filmönster anges har utdatafilerna namn som beskrivs i filmönstret.
-   Förutom de obligatoriska egenskaper som nämns ovan, har Bevakade mappar även stöd för några valfria egenskaper. En fullständig lista och en beskrivning av valfria egenskaper finns i Egenskaper för [bevakad mapp](../../forms/using/watched-folder-in-aem-forms.md#main-pars-header-1).
+   Förutom de obligatoriska egenskaper som nämns ovan, har Bevakade mappar även stöd för några valfria egenskaper. En fullständig lista och en beskrivning av valfria egenskaper finns i Egenskaper för [bevakad mapp](#watchedfolderproperties).
 
