@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a6f95e04fd5b8ed28beaa12e9fd170ed495397b8
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
@@ -326,7 +326,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 * Möjlig XSS-attack (cross-site scripting) via ett begränsat varningsfönster eftersom den injicerade bilden kan ses. NPR-30617: Programfix för CQ-4270133
 * MultiTenant: Innehavare som sparar mappegenskaper observerar både meddelande om att åtgärden lyckades och felmeddelande som beskriver åtgärden misslyckades:&quot;Det går inte att redigera egenskaper. Otillräckliga behörigheter.&quot; och förvirrar dem. NPR-30545: Programfix för CQ-4275333
 * Dialogrutan Resursväljare tillåter inte val av resurs och kan därför inte uppdatera källan med hjälp av funktionen för relaterat källbyte. NPR-30502: Programfix för CQ-4275029
-* DAM Update Asset Workflow - I inaktivt läge vid överföring av stora MP4-filer. NPR-30480: Programfix för CQ-4271352
+* [!UICONTROL Arbetsflöde för DAM-uppdatering av resurser] - I inaktivt läge vid överföring av stora mp4-filer. NPR-30480: Programfix för CQ-4271352
 * Funktionen Skapa granskningsuppgift fungerar inte eftersom null-nyttolast gör att alla efterföljande granskningsuppgiftrelaterade åtgärder misslyckas. NPR-30468: Programfix för CQ-4274263
 * Adobe Smart Tag-anslutningsproblem via DataPower. NPR-30026: Programfix för CQ-4269457
 * Resursens användargränssnittskolumnvy genererar ett fel vid försök att öppna filtren från listen. NPR-30501: Programfix för CQ-4273862
@@ -688,7 +688,7 @@ De viktigaste högdagrarna för [!DNL Experience Manager Forms] 6.5.1.0 är:
 **Formulär - dokumentsäkerhet**
 
 * Digital signatur med HSM (Hardware Security Module) fungerar inte med OSGi Linux på Java 11 och Java 8\. NPR-29838: Programfix för CQ-4270441
-* Digital signatur med HSM (Hardware Security Module) fungerar inte med JEE Linux och alla appservrar som stöds, dvs. JBoss och Websphere. NPR-29839: Programfix för CQ-4266721
+* Digital signatur med HSM (Hardware Security Module) fungerar inte med JEE Linux och alla appservrar som stöds, dvs. JBoss och Websphere. NPR-29739: Programfix för CQ-4266721
 * Verifiering av signaturer i en PDF med hjälp av PDF Advanced Electronic Signatures (PAdES) genererar InvalidOperationException. NPR-29842: Programfix för CQ-4244837
 * Utökat stöd för Document Security Extension för Office 2019\. Programfix för CQ-4254369, CQ-4259764
 
