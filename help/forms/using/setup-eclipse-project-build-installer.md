@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: f5d6d9bd-4f36-4a4f-8008-15fb853a9219
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -18,9 +18,9 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 Utför följande steg i den rekommenderade sekvensen för att skapa Android-appen för AEM Forms.
 
-1. [Ladda ned källkodspaketet för AEM Forms-appen](/help/forms/using/setup-eclipse-project-build-installer.md#main-pars-header-277929160)
-1. [Ange miljövariabler](/help/forms/using/setup-eclipse-project-build-installer.md#main-pars-header-111803610)
-1. [Bygg standardappen AEM Forms](/help/forms/using/setup-eclipse-project-build-installer.md#main-pars-heading-0)
+1. [Ladda ned källkodspaketet för AEM Forms-appen](#download-android-zip)
+1. [Ange miljövariabler](#set-environment-variable-android)
+1. [Bygg standardappen AEM Forms](#set-up-the-xcode-project)
 
 ## Ladda ned källkodspaketet för AEM Forms-appen {#download-android-zip}
 
@@ -50,8 +50,8 @@ Ange följande miljövariabler innan du startar byggprocessen för AEM Forms-app
 
 När du har sparat filen adobe-lc-mobileworkspace-src-&lt;version>.zip på det lokala filsystemet och angett miljövariabler skapar du en standard-AEM Forms Android-app med något av följande alternativ:
 
-* [Bygg appen AEM Forms med Android Studio](/help/forms/using/setup-eclipse-project-build-installer.md#main-pars-header-1347434739)
-* [Generera APK-fil med Android Studio](/help/forms/using/setup-eclipse-project-build-installer.md#main-pars-header-0)
+* [Bygg appen AEM Forms med Android Studio](#using-android-studio)
+* [Generera APK-fil med Android Studio](#generate-apk-android-studio)
 
 ### Bygg appen AEM Forms med Android Studio {#using-android-studio}
 
