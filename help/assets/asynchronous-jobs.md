@@ -3,7 +3,7 @@ title: Asynkrona åtgärder
 description: AEM Assets optimerar prestanda genom att utföra vissa resurskrävande uppgifter asynkront.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
+source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ---
 
@@ -33,7 +33,8 @@ När AEM Resurser bearbetar en åtgärd asynkront får du ett meddelande i inkor
 
 Om du vill visa status för asynkrona åtgärder i detalj går du till sidan **[!UICONTROL Async Job Status]** .
 
-1. Tryck/klicka på AEM-logotypen och välj **[!UICONTROL Åtgärder]** > **[!UICONTROL Jobb]**.
+1. I Experience Manager-gränssnittet klickar du på **[!UICONTROL Åtgärder]** > **[!UICONTROL Jobb]**.
+
 1. Granska informationen om åtgärderna på sidan **[!UICONTROL Async Job Status]** .
 
    ![Status och information för asynkrona åtgärder](assets/AsyncOperation-status.png)
@@ -48,11 +49,11 @@ Om du vill visa status för asynkrona åtgärder i detalj går du till sidan **[
 
    * **[!UICONTROL Schemalagd]**: Åtgärden är schemalagd för bearbetning vid ett senare tillfälle
 
-1. Om du vill avbryta en aktiv åtgärd markerar du den i listan och trycker på **[!UICONTROL Stopp]** i verktygsfältet.
+1. Om du vill avbryta en aktiv åtgärd markerar du den i listan och klickar på **[!UICONTROL Stopp]** i verktygsfältet.
 
    ![stop_icon](assets/stop_icon.png)
 
-1. Om du vill visa extra information, till exempel beskrivning och loggar, markerar du åtgärden och trycker på **[!UICONTROL Öppna]** i verktygsfältet.
+1. Om du vill visa extra information, till exempel beskrivning och loggar, markerar du åtgärden och klickar på **[!UICONTROL Öppna]** i verktygsfältet.
 
    ![open_icon](assets/open_icon.png)
 
@@ -60,7 +61,7 @@ Om du vill visa status för asynkrona åtgärder i detalj går du till sidan **[
 
    ![job_details](assets/job_details.png)
 
-1. Om du vill ta bort åtgärden från listan väljer du **[!UICONTROL Ta bort]** i verktygsfältet. Om du vill hämta information i en CSV-fil trycker du på **[!UICONTROL Hämta]**.
+1. Om du vill ta bort åtgärden från listan väljer du **[!UICONTROL Ta bort]** i verktygsfältet. Om du vill hämta information i en CSV-fil klickar du på **[!UICONTROL Hämta]**.
 
    >[!NOTE]
    >
@@ -72,7 +73,7 @@ AEM Assets kör ett rensningsjobb varje dag klockan 1:00 för att ta bort slutf�
 
 Du kan ändra schemat för rensningsjobbet och hur länge detaljer om slutförda jobb behålls innan de tas bort. Du kan också konfigurera det maximala antalet slutförda jobb för vilka information sparas när som helst.
 
-1. Tryck/klicka på AEM-logotypen och gå till **[!UICONTROL Verktyg]** > **[!UICONTROL Åtgärder]** > **[!UICONTROL Webbkonsol]**.
+1. I Experience Manager-gränssnittet klickar du på **[!UICONTROL Verktyg]** > **[!UICONTROL Åtgärder]** > **[!UICONTROL Webbkonsol]**.
 1. Öppna det schemalagda **[!UICONTROL rensningsjobbet för]** Adobe CQ DAM Async Jobs.
 1. Ange tröskelvärdet för antal dagar efter vilka slutförda jobb tas bort och det maximala antalet jobb för vilka information sparas i historiken.
 
@@ -88,7 +89,7 @@ Du kan konfigurera tröskelvärdet för antal resurser eller referenser för AEM
 
 Om antalet resurser eller mappar som ska tas bort överstiger tröskelvärdet, utförs borttagningsåtgärden asynkront.
 
-1. Tryck/klicka på AEM-logotypen och gå till **[!UICONTROL Verktyg]** > **[!UICONTROL Åtgärder]** > **[!UICONTROL Webbkonsol]**.
+1. I Experience Manager-gränssnittet klickar du på **[!UICONTROL Verktyg]** > **[!UICONTROL Åtgärder]** > **[!UICONTROL Webbkonsol]**.
 1. Öppna konfigurationen för **[!UICONTROL Async Delete Operation Job Processing]** i webbkonsolen.
 1. I rutan **[!UICONTROL Tröskelvärde för antal resurser]** anger du tröskelvärdet för antal resurser/mappar för asynkron bearbetning av borttagningsåtgärder.
 
@@ -100,7 +101,7 @@ Om antalet resurser eller mappar som ska tas bort överstiger tröskelvärdet, u
 
 Om antalet resurser/mappar eller referenser som ska flyttas överstiger tröskelvärdet, utförs flyttåtgärden asynkront.
 
-1. Tryck/klicka på AEM-logotypen och gå till **[!UICONTROL Verktyg]** > **[!UICONTROL Åtgärder]** > **[!UICONTROL Webbkonsol]**.
+1. I Experience Manager-gränssnittet klickar du på **[!UICONTROL Verktyg]** > **[!UICONTROL Åtgärder]** > **[!UICONTROL Webbkonsol]**.
 1. Öppna konfigurationen för **[!UICONTROL Async Move Operation Job Processing]** i webbkonsolen.
 1. I rutan **[!UICONTROL Tröskelvärde för antal resurser/referenser]** anger du tröskelvärdet för antal resurser/mappar eller referenser för asynkron bearbetning av flyttåtgärder.
 
