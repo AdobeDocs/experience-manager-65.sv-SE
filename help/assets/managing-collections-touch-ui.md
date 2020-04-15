@@ -4,7 +4,7 @@ description: Lär dig mer om hur du hanterar samlingar med resurser, som att ska
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 27fdeaf50255379fd6e5bb45eaf593cec895cd04
+source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ---
 
@@ -25,7 +25,7 @@ Samlingar är av följande typer, baserat på det sätt som de samlar resurser p
 
 ## Åtkomst till samlingskonsolen {#navigating-the-collections-console}
 
-Om du vill öppna **[!UICONTROL Samlingar]** trycker eller klickar du på Experience Manager-logotypen. From the navigation page, go to **[!UICONTROL Assets]** > **[!UICONTROL Collections]**.
+Öppna **[!UICONTROL samlingarna]** i Experience Manager-gränssnittet genom att gå till **[!UICONTROL Resurser]** > **[!UICONTROL Samlingar]**.
 
 ## Skapa en samling {#creating-a-collection}
 
@@ -36,7 +36,7 @@ Du kan skapa en samling med [statiska referenser](#creating-a-collection-with-st
 Du kan skapa en samling med statiska referenser, t.ex. en samling med referenser till resurser, mappar, samlingar, snurrsuppsättningar och bilduppsättningar.
 
 1. Gå till **[!UICONTROL samlingskonsolen]** .
-1. Tryck/klicka på **[!UICONTROL Skapa]** i verktygsfältet.
+1. Klicka på **[!UICONTROL Skapa]** i verktygsfältet.
 1. Ange en rubrik och en valfri beskrivning för samlingen på sidan **[!UICONTROL Skapa samling]** .
 1. Lägg till medlemmar i samlingen och tilldela lämpliga behörigheter. Alternatively, select **[!UICONTROL Public Collection]** to allow all users to access the collection.
 
@@ -45,7 +45,7 @@ Du kan skapa en samling med statiska referenser, t.ex. en samling med referenser
    >Om du vill att medlemmarna ska kunna dela samlingar med andra användare anger du gruppens läsbehörighet på sökvägen `dam-users` `home/users`. Ge användarna på `/content/dam/collections` platsen behörighet att visa samlingar i popup-listor. Du kan också göra användaren till en del av `dam-users` gruppen.
 
 1. (Valfritt) Lägg till en miniatyrbild för samlingen.
-1. Tap/click **[!UICONTROL Create]**, and then tap/click **[!UICONTROL OK]** to close the dialog. En samling med den angivna titeln och de angivna egenskaperna öppnas i konsolen Samlingar.
+1. Klicka på **[!UICONTROL Skapa]** och sedan på **[!UICONTROL OK]** för att stänga dialogrutan. En samling med den angivna titeln och de angivna egenskaperna öppnas i konsolen Samlingar.
 
    >[!NOTE]
    >
@@ -58,16 +58,16 @@ Du kan skapa en samling med statiska referenser, t.ex. en samling med referenser
 Du kan dra resurser från resursgränssnittet till en samling. Du kan också skapa en kopia av en samling och dra resurserna dit.
 
 1. I resursanvändargränssnittet väljer du de resurser som du vill lägga till i en samling.
-1. Dra resurserna till zonen **[!UICONTROL Släpp i samling]** . Du kan också trycka/klicka på ikonen **[!UICONTROL Till samling]** i verktygsfältet.
+1. Dra resurserna till zonen **[!UICONTROL Släpp i samling]** . Du kan också klicka på ikonen **[!UICONTROL Till samling]** i verktygsfältet.
 
    ![drop_in_collection](assets/drop_in_collection.png)
 
-1. Tryck/klicka på ikonen **[!UICONTROL Skapa samling]** i verktygsfältet på sidan **[!UICONTROL Lägg till i samling]** .
+1. På sidan **[!UICONTROL Lägg till i samling]** klickar du på ikonen **[!UICONTROL Skapa samling]** i verktygsfältet.
 
-   If you want to add the assets to an existing collection, select it from the page, and tap/click **[!UICONTROL Add]**. Som standard väljs den senast uppdaterade samlingen.
+   If you want to add the assets to an existing collection, select it from the page, and click **[!UICONTROL Add]**. Som standard väljs den senast uppdaterade samlingen.
 
 1. In the **[!UICONTROL Create New Collection]** dialog, specify a name for the collection. If you want the collection to be accessible to all users, select **[!UICONTROL Public Collection]**.
-1. Tryck/klicka på **[!UICONTROL Fortsätt]** för att skapa samlingen.
+1. Klicka på **[!UICONTROL Fortsätt]** för att skapa samlingen.
 
 ### Skapa en smart samling {#creating-a-smart-collection}
 
@@ -75,15 +75,15 @@ En smart samling använder ett sökvillkor för att dynamiskt fylla i resurser. 
 
 Så här skapar du en smart samling:
 
-1. Navigera till användargränssnittet Resurser och tryck/klicka på sökikonen.
+1. Navigera till användargränssnittet Resurser och klicka på Sök.
 
-1. Ange sökordet i rutan Omnissearch och tryck på Retur. Öppna filterpanelen och använd ett sökfilter.
+1. Skriv sökordet i rutan Sök och tryck på `Enter`. Öppna filterpanelen och använd ett sökfilter.
 
 1. I listan **[!UICONTROL Filer och mappar]** väljer du **[!UICONTROL Filer]**.
 
    ![files_option](assets/files_option.png)
 
-1. Tryck/klicka på **[!UICONTROL Spara smart samling]**.
+1. Klicka på **[!UICONTROL Spara smart samling]**.
 
 1. Ange ett namn för samlingen. Välj **[!UICONTROL Offentlig]** om du vill lägga till gruppen DAM-användare med visningsprogramrollen i den smarta samlingen.
 
@@ -93,13 +93,13 @@ Så här skapar du en smart samling:
    >
    >Om du väljer **[!UICONTROL Offentlig]** blir den smarta samlingen tillgänglig för alla med ägarrollen när du har skapat den. Om du avmarkerar alternativet **[!UICONTROL Offentlig]** är DAM-användargruppen inte längre kopplad till den smarta samlingen.
 
-1. Tap/click **[!UICONTROL Save]** to create the smart collection, and then close the message box to complete the process.
+1. Click **[!UICONTROL Save]** to create the smart collection, and then close the message box to complete the process.
 
    The new smart collection is also added to the **[!UICONTROL Saved Searches]** list.
 
    ![collection_listing](assets/collection_listing.png)
 
-   Etiketten för knappen **[!UICONTROL Skapa smart markering]** ändras till **[!UICONTROL Redigera smart markering]**. To edit the settings of the smart collection, select **[!UICONTROL Files]** from the **[!UICONTROL Files &amp; Folders]** list. Tryck/klicka sedan på knappen **[!UICONTROL Redigera smart markering]** .
+   Etiketten för knappen **[!UICONTROL Skapa smart markering]** ändras till **[!UICONTROL Redigera smart markering]**. To edit the settings of the smart collection, select **[!UICONTROL Files]** from the **[!UICONTROL Files &amp; Folders]** list. Klicka sedan på knappen **[!UICONTROL Redigera smart markering]** .
 
    ![chlimage_1-7](assets/chlimage_1-112.png)
 
@@ -107,7 +107,7 @@ Så här skapar du en smart samling:
 
 Du kan lägga till resurser i en samling som innehåller en lista med refererade resurser eller mappar. Smarta samlingar använder en sökfråga för att fylla i resurser. Statiska referenser till resurser och mappar kan därför inte användas för dem.
 
-1. I resursanvändargränssnittet markerar du resursen och trycker/klickar på ikonen **[!UICONTROL Till samling]** i verktygsfältet.
+1. I resursanvändargränssnittet markerar du resursen och klickar på ikonen **[!UICONTROL Till samling]** i verktygsfältet.
 
    ![chlimage_1-8](assets/chlimage_1-113.png)
 
@@ -115,47 +115,47 @@ Du kan lägga till resurser i en samling som innehåller en lista med refererade
 
 1. På sidan **[!UICONTROL Lägg till i samling]** väljer du den samling du vill lägga till resursen i.
 
-1. Tryck/klicka på **[!UICONTROL Lägg till]** och stäng sedan bekräftelsemeddelandet. Resursen läggs till i samlingen.
+1. Klicka på **[!UICONTROL Lägg till]** och stäng sedan bekräftelsemeddelandet. Resursen läggs till i samlingen.
 
 ## Redigera en smart samling {#editing-a-smart-collection}
 
 Smarta samlingar skapas genom att en sökning sparas så att du kan ändra deras innehåll genom att ändra sökparametrarna för den [sparade sökningen](#saved-searches).
 
-1. I resursanvändargränssnittet: tryck/klicka på sökikonen i verktygsfältet.
+1. Klicka på sökikonen i verktygsfältet i resursanvändargränssnittet.
 
    ![chlimage_1-9](assets/chlimage_1-110.png)
 
 1. Tryck på returtangenten när markören är i Omnissearch-rutan.
-1. Tryck/klicka på ikonen GlobalNav för att visa panelen Filter.
+1. Klicka på ikonen GlobalNav för att visa panelen Filter.
 1. From the **[!UICONTROL Saved Searches]** list, select the smart collection you want to modify. På sökpanelen visas de filter som har konfigurerats för den sparade sökningen.
 
    ![select_smart_collection](assets/select_smart_collection.png)
 
 1. I listan **[!UICONTROL Filer och mappar]** väljer du **[!UICONTROL Filer]**.
-1. Ändra ett eller flera filter efter behov. Tryck/klicka på **[!UICONTROL Redigera smart samling]**.
+1. Ändra ett eller flera filter efter behov. Klicka på **[!UICONTROL Redigera smart samling]**.
 
    Du kan också redigera namnet på den smarta samlingen.
 
    ![edit_smart_collection,dialog](assets/edit_smart_collectiondialog.png)
 
-1. Tryck/klicka på **[!UICONTROL Spara]**. Dialogrutan **[!UICONTROL Redigera smart samling]** visas.
-1. Tryck/klicka på **[!UICONTROL Skriv över]** om du vill ersätta den ursprungliga smarta samlingen med den redigerade samlingen. Du kan också välja **[!UICONTROL Spara som]** om du vill spara den redigerade samlingen separat.
-1. Tryck/klicka på **[!UICONTROL Spara]** i bekräftelsedialogrutan för att slutföra processen.
+1. Click **[!UICONTROL Save]**. Dialogrutan **[!UICONTROL Redigera smart samling]** visas.
+1. Klicka på **[!UICONTROL Skriv över]** om du vill ersätta den ursprungliga smarta samlingen med den redigerade samlingen. Du kan också välja **[!UICONTROL Spara som]** om du vill spara den redigerade samlingen separat.
+1. Klicka på **[!UICONTROL Spara]** i bekräftelsedialogrutan för att slutföra processen.
 
 ## Visa och redigera samlingsmetadata {#viewing-and-editing-collection-metadata}
 
 Samlingsmetadata omfattar data om samlingen, inklusive taggar som läggs till.
 
-1. Välj en samling i konsolen Samlingar och tryck/klicka på ikonen **[!UICONTROL Egenskaper]** i verktygsfältet.
+1. Välj en samling i konsolen Samlingar och klicka på ikonen **[!UICONTROL Egenskaper]** i verktygsfältet.
 1. In the **[!UICONTROL Collection Metadata]** page, view the collection metadata from the **[!UICONTROL Basic]** and **[!UICONTROL Advanced]** tabs.
-1. Ändra metadata efter behov och tryck/klicka sedan på **[!UICONTROL Spara och stäng]** i verktygsfältet för att spara ändringarna.
+1. Ändra metadata efter behov och klicka sedan på **[!UICONTROL Spara och stäng]** i verktygsfältet för att spara ändringarna.
 
 ## Redigera metadata för flera samlingar samtidigt {#editing-collection-metadata-in-bulk}
 
 Du kan redigera metadata för flera samlingar samtidigt. Med den här funktionen kan du snabbt replikera vanliga metadata i flera samlingar.
 
 1. I konsolen Samlingar väljer du två eller flera samlingar som du vill redigera metadata för.
-1. Tryck/klicka på ikonen **[!UICONTROL Egenskaper]** i verktygsfältet.
+1. Klicka på ikonen **[!UICONTROL Egenskaper]** i verktygsfältet.
 1. På sidan Metadata för **[!UICONTROL samling]** redigerar du metadata på flikarna **[!UICONTROL Grundläggande]** och **[!UICONTROL Avancerat]** .
 1. Om du vill visa metadataegenskaperna för en viss samling avmarkerar du de återstående samlingarna i samlingslistan. Metadataredigeringsfälten fylls i med metadata för den aktuella samlingen.
 
@@ -165,8 +165,8 @@ Du kan redigera metadata för flera samlingar samtidigt. Med den här funktionen
    >* Överst i listan markerar du kryssrutan vid **[!UICONTROL Titel]** för att växla mellan att markera samlingarna och rensa listan.
 
 
-1. Tryck/klicka på **[!UICONTROL Spara och stäng]** i verktygsfältet och stäng sedan bekräftelsedialogrutan för att slutföra processen.
-1. To append the new metadata with the existing metadata, select **[!UICONTROL Append mode]**. Om du inte markerar det här alternativet ersätter de nya metadata de data som finns i fälten. Tryck/klicka på **[!UICONTROL Skicka]**.
+1. Klicka på **[!UICONTROL Spara och stäng]** i verktygsfältet och stäng sedan bekräftelsedialogrutan för att slutföra processen.
+1. To append the new metadata with the existing metadata, select **[!UICONTROL Append mode]**. Om du inte markerar det här alternativet ersätter de nya metadata de data som finns i fälten. Klicka på **[!UICONTROL Skicka]**.
 
    >[!NOTE]
    >
@@ -186,7 +186,7 @@ Om du söker efter samlingar från den översta nivån returneras bara enskilda 
 
 ## Sök i samlingar {#searching-within-collections}
 
-Tryck/klicka på en samling i Samlingar-konsolen för att öppna den.
+Öppna en samling genom att klicka på den i konsolen Samlingar.
 
 I en samling är sökning efter AEM-resurser begränsad till resurser (och deras taggar och metadata) i den samling som du visar. När du söker i en mapp returneras alla matchande resurser och underordnade mappar i den aktuella mappen. När du söker i en samling returneras endast matchande resurser, mappar och andra samlingar som är direktmedlemmar i samlingen.
 
@@ -194,18 +194,18 @@ I en samling är sökning efter AEM-resurser begränsad till resurser (och deras
 
 Du kan redigera samlingsinställningar, till exempel rubrik och beskrivning, eller lägga till medlemmar i en samling.
 
-1. Markera en samling och tryck/klicka på ikonen **[!UICONTROL Inställningar]** i verktygsfältet. Du kan även använda **[!UICONTROL snabbåtgärden Inställningar]** från samlingsminiatyrbilden.
+1. Markera en samling och klicka på ikonen **[!UICONTROL Inställningar]** i verktygsfältet. Du kan även använda **[!UICONTROL snabbåtgärden Inställningar]** från samlingsminiatyrbilden.
 1. Modify the collection settings in the **[!UICONTROL Collection Settings]** page. For example, modify the collection title, descriptions, members, and permissions as discussed in [Adding Collections](#creating-a-collection).
 
-1. Spara ändringarna genom att trycka/klicka på **[!UICONTROL Spara]**.
+1. Spara ändringarna genom att klicka på **[!UICONTROL Spara]**.
 
 ## Ta bort en samling {#deleting-a-collection}
 
-1. Välj en eller flera samlingar i konsolen Samlingar och tryck/klicka på ikonen Ta bort i verktygsfältet.
+1. Välj en eller flera samlingar i konsolen Samlingar och klicka på ikonen Ta bort i verktygsfältet.
 
    ![chlimage_1-11](assets/chlimage_1-177.png)
 
-1. Tryck/klicka på **[!UICONTROL Ta bort]** i dialogrutan för att bekräfta borttagningsåtgärden.
+1. Klicka på **[!UICONTROL Ta bort]** i dialogrutan för att bekräfta borttagningsåtgärden.
 
    >[!NOTE]
    >
@@ -216,8 +216,8 @@ Du kan redigera samlingsinställningar, till exempel rubrik och beskrivning, ell
 När du hämtar en samling hämtas hela resurshierarkin i samlingen, inklusive mappar och underordnade samlingar.
 
 1. Välj en eller flera samlingar som du vill hämta från samlingskonsolen.
-1. Tryck/klicka på nedladdningsikonen i verktygsfältet.
-1. I dialogrutan **[!UICONTROL Hämta]** trycker/klickar du på **[!UICONTROL Hämta]**. Om du vill hämta återgivningarna av resurserna i samlingen väljer du **[!UICONTROL Återgivningar]**. Välj alternativet **[!UICONTROL E-post]** om du vill skicka ett e-postmeddelande till samlingens ägare.
+1. Klicka på nedladdningsikonen i verktygsfältet.
+1. I dialogrutan **[!UICONTROL Hämta]** klickar du på **[!UICONTROL Hämta]**. Om du vill hämta återgivningarna av resurserna i samlingen väljer du **[!UICONTROL Återgivningar]**. Välj alternativet **[!UICONTROL E-post]** om du vill skicka ett e-postmeddelande till samlingens ägare.
 
    När du väljer en samling som ska hämtas hämtas hela mapphierarkin under samlingen. Om du vill inkludera varje samling som du hämtar (inklusive resurser i underordnade samlingar som är kapslade under den överordnade samlingen) i en enskild mapp väljer du **[!UICONTROL Skapa separata mappar för varje resurs]**.
 
@@ -225,7 +225,7 @@ När du hämtar en samling hämtas hela resurshierarkin i samlingen, inklusive m
 
 Du kan lägga till en samling i en annan samling och på så sätt skapa en kapslad samling.
 
-1. Välj önskad samling eller grupp med samlingar i konsolen Samlingar och tryck eller klicka på **[!UICONTROL Till samling]** i verktygsfältet.
+1. Välj önskad samling eller grupp med samlingar i konsolen Samlingar och klicka på **[!UICONTROL Till samling]** i verktygsfältet.
 
 1. På sidan **[!UICONTROL Lägg till i samling]** väljer du den samling där samlingen ska läggas till.
 
@@ -233,7 +233,7 @@ Du kan lägga till en samling i en annan samling och på så sätt skapa en kaps
    >
    >Den senast uppdaterade samlingen väljs som standard på sidan **[!UICONTROL Lägg till i samling]** .
 
-1. Tryck/klicka på **[!UICONTROL Lägg till]**. Ett meddelande bekräftar att samlingen har lagts till i målsamlingen på sidan **[!UICONTROL Välj mål]** . Stäng meddelandet för att slutföra processen.
+1. Click **[!UICONTROL Add]**. Ett meddelande bekräftar att samlingen har lagts till i målsamlingen på sidan **[!UICONTROL Välj mål]** . Stäng meddelandet för att slutföra processen.
 
 >[!NOTE]
 >
@@ -255,33 +255,33 @@ Att redigera sparade sökningar är detsamma som att redigera smarta samlingar. 
 
 Så här tar du bort sparade sökningar:
 
-1. I resursanvändargränssnittet: tryck/klicka på sökikonen i verktygsfältet.
+1. Klicka på sökikonen i verktygsfältet i resursanvändargränssnittet.
 
    ![chlimage_1-13](assets/chlimage_1-114.png)
 
 1. Tryck på Retur när markören är i omsökningsfältet.
 
-1. Klicka på eller tryck på ikonen GlobalNav för att visa filterpanelen.
+1. Klicka på ikonen GlobalNav för att visa panelen Filter.
 
-1. From the **[!UICONTROL Saved Searches]** list, tap/click **[!UICONTROL Delete]** next to the smart collection that you want to delete.
+1. From the **[!UICONTROL Saved Searches]** list, click **[!UICONTROL Delete]** next to the smart collection that you want to delete.
 
    ![select_smart_collection-1](assets/select_smart_collection-1.png)
 
-1. Tryck/klicka på **[!UICONTROL Ta bort]** i dialogrutan för att ta bort den sparade sökningen.
+1. Klicka på **[!UICONTROL Ta bort]** i dialogrutan för att ta bort den sparade sökningen.
 
 ## Köra ett arbetsflöde i en samling {#running-a-workflow-on-a-collection}
 
 Du kan köra ett arbetsflöde för resurserna i en samling. Om samlingen innehåller kapslade samlingar körs arbetsflödet även på resurserna i de kapslade samlingarna. Om samlingen och den kapslade samlingen innehåller duplicerade resurser körs arbetsflödet bara en gång för sådana resurser.
 
 1. Välj en samling som du vill köra ett arbetsflöde för i samlingskonsolen.
-1. Tryck/klicka på ikonen GlobalNav och välj **[!UICONTROL Tidslinje]** i listan.
-1. Klicka eller tryck på cirkumflexikonen längst ned på tidslinjen och tryck/klicka sedan på **[!UICONTROL Starta arbetsflöde]**.
+1. Klicka på ikonen GlobalNav och välj **[!UICONTROL Tidslinje]** i listan.
+1. From the timeline, click the Caret icon at the bottom, and then click **[!UICONTROL Start Workflow]**.
 
    ![chlimage_1-14](assets/chlimage_1-137.png)
 
 1. I avsnittet **[!UICONTROL Starta arbetsflöde]** väljer du en arbetsflödesmodell i listan. Välj till exempel modellen **[!UICONTROL DAM Update Asset]**.
-1. Ange en titel för arbetsflödet och tryck/klicka på **[!UICONTROL Start]**.
-1. Tryck/klicka på **[!UICONTROL Fortsätt]** i dialogrutan. Arbetsflödet körs på alla resurser i samlingen.
+1. Ange en rubrik för arbetsflödet och klicka på **[!UICONTROL Start]**.
+1. Klicka på **[!UICONTROL Fortsätt]** i dialogrutan. Arbetsflödet körs på alla resurser i samlingen.
 
 >[!MORELIKETHIS]
 >
