@@ -3,7 +3,7 @@ title: AEM Assets Home Page Experience
 description: Anpassa startsidan för AEM Assets för en rik välkomstskärm, inklusive en ögonblicksbild av nyligen gjorda aktiviteter kring resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
+source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ---
 
@@ -41,7 +41,7 @@ När du har aktiverat startsidan för Assets navigerar du till användargränssn
 
 ![konfigurera Experience link i Assets-användargränssnittet](assets/config-experience-link.png)
 
-Tryck/klicka på **[!UICONTROL Klicka här för att konfigurera din upplevelselänk]** för att lägga till ditt användarnamn, din bakgrundsbild och din profilbild.
+Klicka på **[!UICONTROL Klicka här för att konfigurera länken]** till användargränssnittet, bakgrundsbilden och profilbilden.
 
 Hemsidan för Assets innehåller följande avsnitt:
 
