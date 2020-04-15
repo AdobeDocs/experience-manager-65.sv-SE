@@ -4,12 +4,12 @@ description: Förslag och vägledning om AEM-konfiguration, ändringar av maskin
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
+source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ---
 
 
-<!-- TBD: Formatting using backticks. Add UICONTROL tag. Redundant info as reviewed by engineering. -->
+<!-- TBD: Get reviewed by engineering. -->
 
 # Prestandajusteringsguide för resurser {#assets-performance-tuning-guide}
 
@@ -29,11 +29,11 @@ AEM stöds på ett antal plattformar, men Adobe har funnit det bästa stödet f�
 
 ### Tillfällig mapp {#temp-folder}
 
-Om du vill förbättra överföringstiderna använder du högpresterande lagringsutrymme för den tillfälliga Java-katalogen. I Linux och Windows kan en RAM-enhet eller SSD användas. I molnbaserade miljöer kan en motsvarande typ av höghastighetslagring användas. I till exempel Amazon EC2 kan en [&quot;kortdisk&quot;](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) -enhet användas för den tillfälliga mappen.
+Om du vill förbättra överföringstiderna använder du högpresterande lagringsutrymme för den tillfälliga Java-katalogen. I Linux och Windows kan en RAM-enhet eller SSD användas. I molnbaserade miljöer kan en motsvarande typ av höghastighetslagring användas. I till exempel Amazon EC2 kan en [tillfällig enhet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) användas för den tillfälliga mappen.
 
 Om servern har tillräckligt med minne konfigurerar du en RAM-enhet. Kör följande kommandon i Linux för att skapa en 8 GB RAM-enhet:
 
-```
+```shell
 mkfs -q /dev/ram1 800000
  mkdir -p /mnt/aem-tmp
  mount /dev/ram1 /mnt/aem-tmp
@@ -58,7 +58,7 @@ Adobe rekommenderar att du driftsätter AEM Assets på Java 8 för optimala pres
 
 ### JVM-parametrar {#jvm-parameters}
 
-Du bör ange följande JVM-parametrar:
+Ange följande JVM-parametrar:
 
 * `-XX:+UseConcMarkSweepGC`
 * `-Doak.queryLimitInMemory`=500000
@@ -88,7 +88,7 @@ Implementering av ett S3- eller delat fildatalager kan bidra till att spara disk
 
 Följande S3 Data Store-konfiguration ( `org.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore.cfg`) hjälper Adobe att extrahera 12,8 TB binära stora objekt (BLOB) från ett befintligt arkiv till ett S3-datalager på en kunds webbplats:
 
-```
+```conf
 accessKey=<snip>
  secretKey=<snip>
  s3Bucket=<snip>
@@ -126,18 +126,17 @@ Din nätverksoptimeringsstrategi är i första hand beroende av hur mycket bandb
 
 Ställ in arbetsflödet [!UICONTROL DAM Update Asset] på Transient om det är möjligt. Inställningen minskar avsevärt de allmänna kostnader som krävs för att bearbeta arbetsflöden, eftersom arbetsflöden i det här fallet inte behöver passera genom de normala spårnings- och arkiveringsprocesserna.
 
->[!NOTE]
->
->Som standard är arbetsflödet för [!UICONTROL DAM-uppdatering av tillgångar] inställt på Transient i AEM 6.3. I så fall kan du hoppa över följande procedur.
-
 1. Navigera till `/miscadmin` i AEM-instansen på `https://[aem_server]:[port]/miscadmin`.
+
 1. Expandera **[!UICONTROL Verktyg]** > **[!UICONTROL Arbetsflöde]** > **[!UICONTROL Modeller]** > **[!UICONTROL dam]**.
+
 1. Öppna **[!UICONTROL DAM-uppdateringsresurs]**. Gå till fliken **[!UICONTROL Sida]** i den flytande verktygspanelen och klicka sedan på **[!UICONTROL Sidegenskaper]**.
+
 1. Select **[!UICONTROL Transient Workflow]** and click **[!UICONTROL OK]**.
 
    >[!NOTE]
    >
-   >Vissa funktioner har inte stöd för tillfälliga arbetsflöden. Om din AEM Assets-distribution kräver dessa funktioner ska du inte konfigurera tillfälliga arbetsflöden.
+   >Vissa funktioner har inte stöd för tillfälliga arbetsflöden. Om din [!DNL Assets] distribution kräver dessa funktioner ska du inte konfigurera tillfälliga arbetsflöden.
 
 Om det inte går att använda tillfälliga arbetsflöden kör du regelbundet arbetsflödesrensning för att ta bort arkiverade arbetsflöden för [!UICONTROL DAM-uppdatering av tillgångar] för att säkerställa att systemprestanda inte försämras.
 
@@ -147,14 +146,16 @@ Om du vill konfigurera rensning av arbetsflöden lägger du till en ny Adobe Gra
 
 Om tömningen är för lång så tar det för lång tid. Därför bör du se till att rensningsjobben är fullständiga för att undvika situationer där rensningsarbetsflödena misslyckas på grund av det stora antalet arbetsflöden.
 
-Om du till exempel har kört flera icke-tillfälliga arbetsflöden (som skapar arbetsflödesinstansnoder) kan du köra [ACS AEM Commons Workflow Remover](https://adobe-consulting-services.github.io/acs-aem-commons/features/workflow-remover.html) på ad hoc-basis. Det tar bort överflödiga, slutförda arbetsflödesinstanser direkt i stället för att vänta på att schemaläggaren för rensning av arbetsflödet i Adobe Granite ska köras.
+När du till exempel har kört flera icke-tillfälliga arbetsflöden (som skapar arbetsflödesinstansnoder) kan du köra [ACS AEM Commons Workflow Remover](https://adobe-consulting-services.github.io/acs-aem-commons/features/workflow-remover.html) på ad hoc-basis. Det tar bort överflödiga, slutförda arbetsflödesinstanser direkt i stället för att vänta på att schemaläggaren för rensning av arbetsflödet i Adobe Granite ska köras.
 
 ### Maximalt antal parallella jobb {#maximum-parallel-jobs}
 
 Som standard kör AEM ett maximalt antal parallella jobb som motsvarar antalet processorer på servern. Problemet med den här inställningen är att under perioder med hög belastning används alla processorer av arbetsflödena för [!UICONTROL DAM Update Asset] , vilket gör att användargränssnittet tar längre tid och förhindrar att AEM kör andra processer som skyddar serverns prestanda och stabilitet. Det är en god vana att ange det här värdet till hälften av de processorer som är tillgängliga på servern genom att utföra följande steg:
 
-1. På AEM Author går du till `https://[aem_server]:[port]/system/console/slingevent`.
+1. På Experience Manager Author går du till `https://[aem_server]:[port]/system/console/slingevent`.
+
 1. Klicka på **[!UICONTROL Redigera]** i varje arbetsflödeskö som är relevant för implementeringen, till exempel **[!UICONTROL Bevilja tillfällig arbetsflödeskö]**.
+
 1. Uppdatera värdet för **[!UICONTROL maximalt antal parallella jobb]** och klicka på **[!UICONTROL Spara]**.
 
 Att ställa in en kö på hälften av de tillgängliga processorerna är en användbar lösning att börja med. Du kan dock behöva öka eller minska det här antalet för att få maximal genomströmning och justera det efter miljö. Det finns separata köer för tillfälliga och icke-tillfälliga arbetsflöden samt andra processer, till exempel externa arbetsflöden. Om flera köer är inställda på 50 % av processorerna aktiva samtidigt kan systemet snabbt bli överbelastat. De köer som används ofta varierar mycket mellan olika implementeringar. Därför kan du behöva konfigurera dem noggrant för maximal effektivitet utan att ge avkall på serverstabiliteten.
@@ -256,11 +257,15 @@ Vissa optimeringar kan göras för Oak-indexkonfigurationer som kan förbättra 
 1. Bläddra till `/oak:index/damAssetLucene`. Lägg till en `String[]` egenskap `includedPaths` med ett värde `/content/dam`.
 1. Spara.
 
-(Endast AEM6.1 och 6.2) Uppdatera indexet ntBaseLucene för att förbättra prestanda vid borttagning och flyttning av resurser:
+<!-- TBD: Review by engineering if required in 6.5 docs or not.
 
-1. Bläddra till `/oak:index/ntBaseLucene/indexRules/nt:base/properties`
-1. Lägg till två nt:ostrukturerade noder `slingResource` och `damResolvedPath` under `/oak:index/ntBaseLucene/indexRules/nt:base/properties`
-1. Ange egenskaperna nedan för noderna (var `ordered` och `propertyIndex` egenskaper är av typen `Boolean`:
+(AEM6.1 and 6.2 only) Update the `ntBaseLucene` index to improve asset delete and move performance:
+
+1. Browse to `/oak:index/ntBaseLucene/indexRules/nt:base/properties`
+
+1. Add two nt:unstructured nodes `slingResource` and `damResolvedPath` under `/oak:index/ntBaseLucene/indexRules/nt:base/properties`
+
+1. Set the properties below on the nodes (where `ordered` and `propertyIndex` properties are of type `Boolean`:
 
    ```
    slingResource
@@ -275,25 +280,24 @@ Vissa optimeringar kan göras för Oak-indexkonfigurationer som kan förbättra 
    type="String"
    ```
 
-1. Ange egenskapen på `/oak:index/ntBaseLucene` noden `reindex=true`. Klicka på **[!UICONTROL Spara alla]**.
-1. Övervaka error.log för att se när indexeringen är klar:
-Omindexering har slutförts för index: [/ek:index/ntBaseLucene]
-1. Du kan också se att indexeringen har slutförts genom att uppdatera noden /oak:index/ntBaseLucene i CRXDe eftersom egenskapen reindex skulle återgå till false
-1. När indexeringen är klar går du tillbaka till CRXDe och anger att type-egenskapen ska inaktiveras för dessa två index
+1. On the `/oak:index/ntBaseLucene` node, set the property `reindex=true`. Click **[!UICONTROL Save All]**.
+1. Monitor the error.log to see when indexing is completed:
+   Reindexing completed for indexes: [/oak:index/ntBaseLucene]
+1. You can also see that indexing is completed by refreshing the /oak:index/ntBaseLucene node in CRXDe as the reindex property would go back to false
+1. Once indexing is completed then go back to CRXDe and set the "type" property to disabled on these two indexes
 
-   * */oak:index/slingResource*
-   * */oak:index/damResolvedPath*
+    * */oak:index/slingResource*
+    * */oak:index/damResolvedPath*
 
-1. Klicka på Spara alla
+1. Click "Save All"
+-->
 
 Inaktivera Lucene-textextrahering:
 
-Om användarna inte behöver kunna söka i innehållet i resurser, till exempel genom att söka i texten i PDF-dokument, kan du förbättra indexprestanda genom att inaktivera den här funktionen.
+Om dina användare inte behöver göra fulltextsökning av resurser, till exempel söka igenom text i PDF-dokument, kan du inaktivera det. Du förbättrar indexets prestanda genom att inaktivera fulltextindexering.
 
-1. Gå till AEM-pakethanteraren /crx/packmgr/index.jsp
-1. Överför och installera paketet nedan
-
-[Hämta fil](assets/disable_indexingbinarytextextraction-10.zip)
+1. Gå till AEM-pakethanteraren `/crx/packmgr/index.jsp`.
+1. Överför och installera det paket som finns på [disable_indexingbinarytextextraction-10.zip](assets/disable_indexingbinarytextextraction-10.zip).
 
 ### Gissa totalt {#guess-total}
 
