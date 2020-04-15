@@ -3,7 +3,7 @@ title: Installera och konfigurera ImageMagick så att det fungerar med AEM Asset
 description: Läs om programmet ImageMagick, hur du installerar det, konfigurerar kommandoradsprocessen och använder det för att redigera, skapa och generera miniatyrbilder från bilder.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 70a88085a0fd6e949974aa7f1f92fdc3def3d98e
+source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ---
 
@@ -34,7 +34,7 @@ Det finns flera versioner av installationsfilerna för ImageMagic för olika ope
 
 Du kan ställa in kommandoradens processsteg för ditt särskilda användningsfall. Följ de här stegen för att generera en bild och miniatyrbilder (140x100, 48x48, 319x319 och 1280x1280) varje gång du lägger till en JPEG-bildfil `/content/dam` på AEM-servern:
 
-1. Gå till arbetsflödeskonsolen ( `https://[*AEM server*]:[*Port*]/workflow`) på AEM-servern och öppna arbetsflödesmodellen för **[!UICONTROL DAM-uppdatering]** .
+1. Gå till arbetsflödeskonsolen (`https://[aem_server]:[port]/workflow`) på AEM-servern och öppna arbetsflödesmodellen för **[!UICONTROL DAM-uppdatering]** .
 1. Öppna steget **[!UICONTROL EPS-miniatyrbilder (som drivs av ImageMagick)]** från arbetsflödesmodellen för **[!UICONTROL DAM-uppdatering av resurser]** .
 1. På fliken **** Argument lägger du `image/jpeg` till i listan **[!UICONTROL Mime-typer]** .
 
@@ -48,11 +48,11 @@ Du kan ställa in kommandoradens processsteg för ditt särskilda användningsfa
 
    ![select_flags](assets/select_flags.png)
 
-1. På fliken **[!UICONTROL Webbaktiverad bild]** anger du information om återgivningen med måtten 1 280 × 1 280 pixlar. Dessutom anger du *bild/jpeg* i rutan **[!UICONTROL Mimeter]** .
+1. På fliken **[!UICONTROL Webbaktiverad bild]** anger du information om återgivningen med måtten 1 280 × 1 280 pixlar. Ange dessutom `image/jpeg` i rutan **[!UICONTROL MimeType]** .
 
    ![web_enabled_image](assets/web_enabled_image.png)
 
-1. Tryck/klicka på **[!UICONTROL OK]** för att spara ändringarna.
+1. Click **[!UICONTROL OK]** to save the changes.
 
    >[!NOTE]
    >
@@ -65,7 +65,7 @@ Du kan ställa in kommandoradens processsteg för ditt särskilda användningsfa
 
    ![skip_mime_types](assets/skip_mime_types.png)
 
-1. På fliken **[!UICONTROL Webbaktiverad bild]** lägger du till MIME-typen `image/jpeg` under **[!UICONTROL Hoppa över lista]**. Tryck/klicka på **[!UICONTROL OK]** för att spara ändringarna.
+1. På fliken **[!UICONTROL Webbaktiverad bild]** lägger du till MIME-typen `image/jpeg` under **[!UICONTROL Hoppa över lista]**. Click **[!UICONTROL OK]** to save the changes.
 
    ![web_enabled](assets/web_enabled.png)
 
