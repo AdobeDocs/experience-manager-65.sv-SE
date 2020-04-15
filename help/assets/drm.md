@@ -3,7 +3,7 @@ title: Digital Rights Management i Assets
 description: Lär dig hur du hanterar förfallotillstånd för mediefiler och information om licensierade mediefiler i AEM.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
+source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ---
 
@@ -63,7 +63,7 @@ Du kan söka efter utgångna resurser, inklusive underresurser som gått ut, på
 
    ![chlimage_1-151](assets/chlimage_1-151.png)
 
-1. Click/tap the **[!UICONTROL Expiry Status]** option to expand it.
+1. Klicka på alternativet **[!UICONTROL Förfallostatus]** för att expandera det.
 
    ![chlimage_1-152](assets/chlimage_1-152.png)
 
@@ -105,7 +105,7 @@ Resurskonsolen för Adobe Experience Manager-resurser (AEM) kan visa olika läge
 
    ![chlimage_1-155](assets/chlimage_1-155.png)
 
-1. Tryck på **[!UICONTROL Publicera]** i verktygsfältet. Om du inte ser **Publicera** i verktygsfältet trycker du på **[!UICONTROL Mer]** i verktygsfältet och letar upp alternativet **[!UICONTROL Publicera]** .
+1. Klicka på **[!UICONTROL Publicera]** i verktygsfältet. Om du inte ser **Publicera** i verktygsfältet klickar du på **[!UICONTROL Mer]** i verktygsfältet och letar upp alternativet **[!UICONTROL Publicera]** .
 
    ![chlimage_1-156](assets/chlimage_1-156.png)
 
@@ -114,7 +114,7 @@ Resurskonsolen för Adobe Experience Manager-resurser (AEM) kan visa olika läge
 
    ![chlimage_1-157](assets/chlimage_1-157.png)
 
-1. I resursgränssnittet markerar du en resurs och trycker på **[!UICONTROL Egenskaper]** för att visa sidan med resursinformation.
+1. Markera en resurs i gränssnittet Resurser och klicka på **[!UICONTROL Egenskaper]** för att visa sidan med resursinformation.
 
    ![chlimage_1-158](assets/chlimage_1-158.png)
 
@@ -136,16 +136,16 @@ Resurskonsolen för Adobe Experience Manager-resurser (AEM) kan visa olika läge
 
    ![chlimage_1-161](assets/chlimage_1-161.png)
 
-1. Om du vill söka efter resurser baserat på deras status trycker du på **[!UICONTROL Sök]** för att visa omsökningsfältet.
+1. Om du vill söka efter resurser baserat på deras status klickar du på **[!UICONTROL Sök]** för att visa omsökningsfältet.
 
    ![chlimage_1-162](assets/chlimage_1-162.png)
 
-1. Tryck på retur och tryck sedan på **[!UICONTROL GlobalNav]** för att visa sökpanelen.
-1. In the Search panel, tap/click **[!UICONTROL Publish Status]** and select **[!UICONTROL Published]** to search for published assets in AEM Assets.
+1. Tryck på Retur och klicka sedan på **[!UICONTROL GlobalNav]** för att visa sökpanelen.
+1. In the Search panel, click **[!UICONTROL Publish Status]** and select **[!UICONTROL Published]** to search for published assets in AEM Assets.
 
    ![chlimage_1-163](assets/chlimage_1-163.png)
 
-1. Tap/click **[!UICONTROL Approval Status]** and click the appropriate option to search for approved or rejected assets.
+1. Click **[!UICONTROL Approval Status]** and click the appropriate option to search for approved or rejected assets.
 
    ![chlimage_1-164](assets/chlimage_1-164.png)
 
@@ -159,15 +159,15 @@ Resurskonsolen för Adobe Experience Manager-resurser (AEM) kan visa olika läge
 
 ## Digital Rights Management in Assets {#digital-rights-management-in-assets-1}
 
-Den här funktionen tvingar dig att godkänna licensavtalet innan du kan hämta en licensierad mediefil från Adobe Experience Manager (AEM) Assets.
+Den här funktionen tvingar dig att godkänna licensavtalet innan du kan hämta en licensierad mediefil från Adobe Experience Manager Assets.
 
-Om du väljer en skyddad resurs och trycker på **[!UICONTROL Hämta]** omdirigeras du till en licenssida där du godkänner licensavtalet. Om du inte godkänner licensavtalet inaktiveras knappen **[!UICONTROL Hämta]** .
+Om du väljer en skyddad resurs och klickar på **[!UICONTROL Hämta]** omdirigeras du till en licenssida där du godkänner licensavtalet. Om du inte godkänner licensavtalet inaktiveras knappen **[!UICONTROL Hämta]** .
 
 Om markeringen innehåller flera skyddade resurser markerar du en resurs i taget, godkänner licensavtalet och fortsätter att hämta resursen.
 
 En tillgång anses vara skyddad om något av dessa villkor är uppfyllt:
 
-* Metadataegenskapen för resursen `xmpRights:WebStatement` pekar på sökvägen till CQ-sidan som innehåller licensavtalet för resursen.
+* Metadataegenskapen för resursen `xmpRights:WebStatement` pekar på sökvägen till sidan som innehåller licensavtalet för resursen.
 * Värdet för resursens metadataegenskap `adobe_dam:restrictions` är en rå HTML-kod som anger licensavtalet.
 
 >[!NOTE]
@@ -180,7 +180,7 @@ En tillgång anses vara skyddad om något av dessa villkor är uppfyllt:
 
 1. I kortvyn väljer du de resurser du vill hämta och klickar på **[!UICONTROL Hämta]**.
 1. In the **[!UICONTROL Copyright Management]** page, select the asset you want to download from the list.
-1. Välj **[!UICONTROL Godkänn]** i licensfönstret. En bock visas bredvid den mediefil som du godkänner licensavtalet för. Tryck/klicka på knappen **[!UICONTROL Hämta]** .
+1. Välj **[!UICONTROL Godkänn]** i licensfönstret. En bock visas bredvid den mediefil som du godkänner licensavtalet för. Klicka på knappen **[!UICONTROL Hämta]** .
 
    >[!NOTE]
    >
@@ -188,4 +188,4 @@ En tillgång anses vara skyddad om något av dessa villkor är uppfyllt:
 
    ![chlimage_1-167](assets/chlimage_1-167.png)
 
-1. I dialogrutan trycker/klickar du på **[!UICONTROL Hämta]** för att hämta resursen eller dess återgivningar.
+1. I dialogrutan klickar du på **[!UICONTROL Hämta]** för att hämta resursen eller dess återgivningar.
