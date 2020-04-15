@@ -1,24 +1,24 @@
 ---
-title: Utöka sökfunktionerna i AEM Assets
-description: Utöka sökfunktionerna i AEM Assets utöver standardvärdena.
+title: Utöka sökfunktionerna i Adobe Experience Manager Assets
+description: Utöka sökfunktionerna i Adobe Experience Manager Assets utöver standardvärdena.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ---
 
 
 # Utöka resurssökning {#extending-assets-search}
 
-Du kan utöka sökfunktionerna i Adobe Experience Manager (AEM) Assets. När allt är klart söker AEM Resurser efter resurser efter strängar.
+Du kan utöka [!DNL Adobe Experience Manager Assets] sökfunktionerna. Söker efter resurser efter strängar direkt i programmet [!DNL Experience Manager Assets] .
 
 Sökningen görs via gränssnittet i QueryBuilder så att sökningen kan anpassas med flera predikat. Du kan täcka över standarduppsättningen med predikat i följande katalog: `/apps/dam/content/search/searchpanel/facets`.
 
-Du kan även lägga till ytterligare flikar på AEM Resurser-administratörspanelen.
+Du kan också lägga till fler flikar på [!DNL Assets] administratörspanelen.
 
 >[!CAUTION]
 >
->Från och med AEM 6.4 är det klassiska användargränssnittet föråldrat. Information finns i [Borttagna och borttagna funktioner](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/deprecated-removed-features.html). Du rekommenderas att använda användargränssnittet med pekskärmsfunktioner. Mer information om anpassning finns i [Sök efter ansikten](/help/assets/search-facets.md).
+>Från och med [!DNL Experience Manager] 6.4 används inte det klassiska användargränssnittet. Information finns i [Borttagna och borttagna funktioner](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/deprecated-removed-features.html). Adobe rekommenderar att du använder ett användargränssnitt med pekskärm. Mer information om anpassning finns i [Sök efter ansikten](/help/assets/search-facets.md).
 
 ## Övertäckning {#overlaying}
 
@@ -29,7 +29,6 @@ Om du vill täcka över de förkonfigurerade predikaten kopierar du `facets` nod
 >[!NOTE]
 >
 >Som standard finns inte katalogstrukturen under/ `apps` och måste skapas. Kontrollera att nodtyperna matchar dem under / `libs`.
-
 
 ## Lägg till tabbar {#adding-tabs}
 
@@ -44,7 +43,7 @@ Du kan lägga till fler sökflikar genom att konfigurera dem i AEM Resurser Admi
 
 ## Skapa anpassade predikat {#creating-custom-predicates}
 
-AEM Resurser innehåller en uppsättning fördefinierade predikat som kan användas för att anpassa en resursdelssida. Att anpassa en resurs på det här sättet beskrivs i [Skapa och konfigurera en resursdelssida](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page).
+[!DNL Assets] innehåller en uppsättning fördefinierade predikat som kan användas för att anpassa en resursdelssida. Att anpassa en resurs på det här sättet beskrivs i [Skapa och konfigurera en resursdelssida](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page).
 
 Förutom att använda befintliga predikat kan AEM-utvecklare även skapa egna predikat med [Query Builder API](/help/sites-developing/querybuilder-api.md).
 
@@ -253,7 +252,7 @@ Följande predikat är tillgängliga som förkonfigurerade ExtJS-widgetar.
 | Egenskap | Typ | Beskrivning |
 |---|---|---|
 | predikateName | Sträng | Predikatets namn. Standardvärdet är `fulltext` |
-| searchCallback | Funktion | Återanrop för att utlösa sökning vid händelse `keyup`. Standardvärdet är `CQ.wcm.SiteAdmin.doSearch` |
+| searchCallback |  -funktion | Återanrop för att utlösa sökning vid händelse `keyup`. Standardvärdet är `CQ.wcm.SiteAdmin.doSearch` |
 
 ### PropertyPredicate {#propertypredicate}
 
@@ -289,8 +288,8 @@ Följande predikat är tillgängliga som förkonfigurerade ExtJS-widgetar.
 | egenskapsnamn | Sträng | Namn på JCR-egenskapen. Standardvärdet är `jcr:content/metadata/cq:tags` |
 | komprimera | Sträng | Komprimera nivå. Standardvärdet är `level1` |
 | triggerSearch | Boolesk | Flagga för att utlösa sökning vid kontroll. Standardvärdet är false |
-| searchCallback | Funktion | Återanrop för att utlösa sökning. Standardvärdet är `CQ.wcm.SiteAdmin.doSearch` |
-| searchTimeoutTime |  Nummer | Timeout innan searchCallback aktiveras. Standardvärdet är 800 ms |
+| searchCallback |  -funktion | Återanrop för att utlösa sökning. Standardvärdet är `CQ.wcm.SiteAdmin.doSearch` |
+| searchTimeoutTime | Siffra | Timeout innan searchCallback aktiveras. Standardvärdet är 800 ms |
 
 ## Anpassa sökresultat {#customizing-search-results}
 
