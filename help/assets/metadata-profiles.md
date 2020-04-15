@@ -3,7 +3,7 @@ title: Metadataprofiler för att anpassa metadatakrav för resurser
 description: Lär dig mer om metadataprofiler för resurser. Lär dig hur du skapar en metadataprofil och använder den på mappresurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9658fbf8c918b9051a35e7477afa01af7722a662
+source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ---
 
@@ -25,34 +25,34 @@ Med en metadataprofil kan du använda standardmetadata för resurser i en mapp. 
 
    Redigera följande egenskaper för komponenten **[!UICONTROL Description]** :
 
-   * **[!UICONTROL Fältetikett]** - metadataegenskapens visningsnamn. Det är bara till för användarreferensen.
+   * **[!UICONTROL Fältetikett]**: Visningsnamnet för metadataegenskapen. Det är bara till för användarreferensen.
 
-   * **[!UICONTROL Mappa till egenskap]** - Värdet för den här egenskapen anger den relativa sökvägen/namnet till objektnoden där den sparas i databasen. Värdet ska alltid börja med `./` eftersom det anger att sökvägen finns under objektets nod.
+   * **[!UICONTROL Mappa till egenskap]**: Värdet för den här egenskapen anger den relativa sökvägen/namnet till resursnoden där den sparas i databasen. Värdet ska alltid börja med `./` eftersom det anger att sökvägen finns under objektets nod.
    ![chlimage_1-199](assets/chlimage_1-482.png)
 
-   Värdet som du anger för **[!UICONTROL Mappa till egenskap]** lagras som en egenskap under objektets metadatanod. Om du till exempel anger . `/jcr:content/metadata/dc:desc` som namnet på **[!UICONTROL Mappa till egenskap]** lagrar AEM Resurser värdet `dc:desc` i objektets metadatanod.
+   The value you specify for **[!UICONTROL Map to property]** is stored as a property under the asset&#39;s metadata node. Om du till exempel anger . `/jcr:content/metadata/dc:desc` som namnet på **[!UICONTROL Mappa till egenskap]** lagrar AEM Resurser värdet `dc:desc` i objektets metadatanod.
 
-   * **[!UICONTROL Standardvärde]** - Använd den här egenskapen om du vill lägga till ett standardvärde för metadatakomponenten. Om du till exempel anger &quot;Min beskrivning&quot; tilldelas det här värdet till egenskapen `dc:desc` vid objektets metadatanod.
+   * **[!UICONTROL Standardvärde]**: Använd den här egenskapen om du vill lägga till ett standardvärde för metadatakomponenten. Om du till exempel anger &quot;Min beskrivning&quot; tilldelas det här värdet till egenskapen `dc:desc` vid objektets metadatanod.
    ![chlimage_1-200](assets/chlimage_1-483.png)
 
    >[!NOTE]
    >
    >Lägga till ett standardvärde i en ny metadataegenskap (som inte finns redan i . `/jcr:content/metadata` nod) visar inte egenskapen och dess värde på objektets egenskapssida som standard. Om du vill visa den nya egenskapen på [!UICONTROL egenskapssidan] för resurserna ändrar du motsvarande schemaformulär.
 
-1. (Valfritt) Lägg till fler komponenter i Redigera formulär på fliken **[!UICONTROL Skapa formulär]** och konfigurera deras egenskaper på fliken **[!UICONTROL Inställningar]** . Följande egenskaper är tillgängliga på fliken **[!UICONTROL Skapa formulär]** :
+1. (Optional) Add more components to the Edit Form from the **[!UICONTROL Build Form]** tab, and configure their properties in the **[!UICONTROL Settings]** tab. The following properties are available from the **[!UICONTROL Build Form]** tab:
 
 | Komponent | Egenskaper |
 |---|---|
 | [!UICONTROL Avsnittshuvud] | Fältetikett, <br> beskrivning |
 | [!UICONTROL Enkelradstext] | Fältetikett, <br> Koppla till egenskap, <br> standardvärde |
 | [!UICONTROL Flervärdestext] | Fältetikett, <br> Koppla till egenskap, <br> standardvärde |
-| [!UICONTROL Nummer] | Fältetikett, <br> Koppla till egenskap, <br> standardvärde |
+| [!UICONTROL Siffra] | Fältetikett, <br> Koppla till egenskap, <br> standardvärde |
 | [!UICONTROL Date] | Fältetikett, <br> Koppla till egenskap, <br> standardvärde |
 | [!UICONTROL Standardtaggar] | Fältetikett, <br> Koppla till egenskap, <br> Standardvärde, <br> Beskrivning |
 
 ![chlimage_1-201](assets/chlimage_1-484.png)
 
-1. Tryck/klicka på **[!UICONTROL Klar]**. Metadataprofilen läggs till i listan med profiler på sidan **[!UICONTROL Metadataprofiler]** .<br>
+1. Tryck/klicka på **[!UICONTROL Klar]**. Metadataprofilen läggs till i listan över profiler på sidan **[!UICONTROL Metadataprofiler]** .<br>
 
 
    ![Metadataprofil har lagts till på sidan Metadataprofiler](assets/MetadataProfiles-page.png)
@@ -65,7 +65,7 @@ Med en metadataprofil kan du använda standardmetadata för resurser i en mapp. 
 
 1. Tryck på **[!UICONTROL Kopiera]** i verktygsfältet.
 1. I dialogrutan **[!UICONTROL Kopiera metadataprofil]** anger du en rubrik för den nya kopian av metadataprofilen.
-1. Tryck på **[!UICONTROL Kopiera]**. Kopian av metadataprofilen visas i listan över profiler på sidan **[!UICONTROL Metadataprofiler]** .
+1. Tryck på **[!UICONTROL Kopiera]**. The copy of the Metadata Profile appears in the list of profiles in the **[!UICONTROL Metadata Profiles]** page.
 
    ![En kopia av metadataprofilen som lagts till på sidan Metadataprofiler](assets/copy-metadata-profile.png)
 
@@ -73,7 +73,7 @@ Med en metadataprofil kan du använda standardmetadata för resurser i en mapp. 
 
 1. På sidan **[!UICONTROL Metadataprofiler]** väljer du en profil som ska tas bort.
 
-   ![chlimage_1-205](assets/chlimage_1-488.png)
+   ![chlimage_1-206](assets/chlimage_1-488.png)
 
 1. Ta[] **[!UICONTROL bort metadataprofiler]** i verktygsfältet.
 1. Klicka på **[!UICONTROL Ta bort]** i dialogrutan för att bekräfta borttagningen. Metadataprofilen tas bort från listan.
@@ -86,7 +86,7 @@ Om du har tilldelat en annan metadataprofil till en mapp åsidosätter den nya p
 
 Mappar som har tilldelats en profil visas i användargränssnittet med namnet på profilen som visas i kortnamnet.
 
-![chlimage_1-205](assets/chlimage_1-489.png)
+![chlimage_1-206](assets/chlimage_1-489.png)
 
 Du kan tillämpa metadataprofiler på specifika mappar eller globalt på alla resurser.
 
@@ -94,9 +94,9 @@ Du kan bearbeta resurser i en mapp som redan har en befintlig metadataprofil som
 
 ### Använda metadataprofiler på specifika mappar {#applying-metadata-profiles-to-specific-folders}
 
-Du kan tillämpa en metadataprofil på en mapp från **[!UICONTROL Verktyg]** -menyn eller, om du är i mappen, från **[!UICONTROL Egenskaper]**. I det här avsnittet beskrivs hur du använder metadataprofiler på mappar på båda sätten.
+You can apply a metadata profile to a folder from within the **[!UICONTROL Tools]** menu or if you are in the folder, from **[!UICONTROL Properties]**. I det här avsnittet beskrivs hur du använder metadataprofiler på mappar på båda sätten.
 
-Mappar som redan har tilldelats en profil visas genom att profilens namn visas direkt under mappnamnet.
+För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
 
 Du kan bearbeta resurser i en mapp som redan har en befintlig videoprofil som du senare ändrade. Se [Bearbeta resurser i en mapp när du har redigerat dess bearbetningsprofil](processing-profiles.md#reprocessing-assets).
 
@@ -109,18 +109,18 @@ Så här använder du metadataprofilen:
 
    ![chlimage_1-207](assets/chlimage_1-490.png)
 
-1. Tryck på **[!UICONTROL Använd metadataprofil för mappar]** och markera den eller de mappar som du vill använda för att ta emot de nyligen överförda resurserna. Tryck sedan på **[!UICONTROL Klar]**. Mappar som redan har tilldelats en profil visas genom att profilens namn visas direkt under mappnamnet.
+1. Tryck på **[!UICONTROL Använd metadataprofil för mappar]** och markera den eller de mappar som du vill använda för att ta emot de nyligen överförda resurserna. Tryck sedan på **[!UICONTROL Klar]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
 
 #### Använd metadataprofiler på mappar från Egenskaper {#applying-metadata-profiles-to-folders-from-properties}
 
 1. I den vänstra listen trycker du på **[!UICONTROL Resurser]** och navigerar sedan till mappen som du vill använda en metadataprofil på.
 1. På mappen: tryck eller klicka på bockmarkeringen för att markera den och tryck eller klicka sedan på **[!UICONTROL Egenskaper]**.
 
-1. Välj fliken **[!UICONTROL Metadataprofiler]** och välj profilen i listrutan och tryck på **[!UICONTROL Spara]**.
+1. Select the **[!UICONTROL Metadata Profiles]** tab and select the profile from the drop-down menu and tap **[!UICONTROL Save]**.
 
    ![chlimage_1-208](assets/chlimage_1-491.png)
 
-   Mappar som redan har tilldelats en profil visas genom att profilens namn visas direkt under mappnamnet.
+   För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
 
 ### Använd en metadataprofil globalt {#applying-a-metadata-profile-globally}
 
@@ -142,7 +142,7 @@ Du kan bearbeta resurser i en mapp som redan har en befintlig metadataprofil som
 
 När du tar bort en metadataprofil från en mapp ärver alla undermappar automatiskt borttagningen av profilen från den överordnade mappen. All bearbetning av filer som har inträffat i mapparna förblir dock oförändrad.
 
-Du kan ta bort en metadataprofil från en mapp från **[!UICONTROL Verktyg]** -menyn eller, om du är i mappen, från **[!UICONTROL Egenskaper]**. I det här avsnittet beskrivs hur du tar bort metadataprofiler från mappar på båda sätten.
+Du kan ta bort en metadataprofil från en mapp från menyn **[!UICONTROL Verktyg]** eller, om du är i mappen, från **[!UICONTROL Egenskaper]**. I det här avsnittet beskrivs hur du tar bort metadataprofiler från mappar på båda sätten.
 
 ### Ta bort metadataprofiler från mappar via användargränssnittet Profiler {#removing-metadata-profiles-from-folders-via-profiles-user-interface}
 
@@ -156,7 +156,7 @@ Du kan ta bort en metadataprofil från en mapp från **[!UICONTROL Verktyg]** -m
 
 1. Tryck på AEM-logotypen, navigera till **[!UICONTROL Resurser]** och sedan till den mapp som du vill ta bort en metadataprofil från.
 1. Markera mappen genom att trycka på bockmarkeringen och sedan på **[!UICONTROL Egenskaper]**.
-1. Välj fliken **[!UICONTROL Metadataprofiler]** och välj **[!UICONTROL Ingen]** i listrutan och klicka på **[!UICONTROL Spara]**. Mappar som redan har tilldelats en profil visas genom att profilens namn visas direkt under mappnamnet.
+1. Välj fliken **[!UICONTROL Metadataprofiler]** och välj **[!UICONTROL Ingen]** i listrutan och klicka på **[!UICONTROL Spara]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
 
 >[!MORELIKETHIS]
 >
