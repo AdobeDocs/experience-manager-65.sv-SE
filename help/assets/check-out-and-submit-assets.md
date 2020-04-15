@@ -3,7 +3,7 @@ title: Checka in och checka ut dina digitala resurser för redigering
 description: Lär dig hur du checkar ut resurser för redigering och checkar in dem igen när ändringarna är klara.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 07c1a4102539ba4678c55dee3a4882101e39864f
+source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ---
 
@@ -19,7 +19,7 @@ Den här funktionen förhindrar att andra användare åsidosätter ändringar so
 ## Checka ut resurser {#checking-out-assets}
 
 1. I resursgränssnittet väljer du den resurs du vill checka ut. Du kan också välja flera resurser att checka ut.
-1. Klicka/tryck på **[!UICONTROL Utcheckning]**i verktygsfältet.
+1. Klicka på **[!UICONTROL Utcheckning]**i verktygsfältet.
 Alternativet **[!UICONTROL Checka ut]** växlar till **[!UICONTROL Checka in]**.
 Logga in som en annan användare om du vill kontrollera om andra användare kan redigera den utcheckade resursen. En låssymbol visas på miniatyrbilden för den resurs som du har checkat ut.
 
@@ -29,9 +29,9 @@ Logga in som en annan användare om du vill kontrollera om andra användare kan 
 
    ![chlimage_1-472](assets/chlimage_1-472.png)
 
-   Du kan emellertid trycka på **[!UICONTROL Visa egenskaper]** för att redigera metadata för den låsta resursen.
+   Du kan klicka på **[!UICONTROL Visa egenskaper]** för att redigera metadata för den låsta resursen.
 
-1. Tryck på **[!UICONTROL Redigera]** för att öppna resursen i redigeringsläge.
+1. Klicka på **[!UICONTROL Redigera]** för att öppna resursen i redigeringsläge.
 
    ![chlimage_1-473](assets/chlimage_1-473.png)
 
@@ -41,7 +41,7 @@ Logga in som en annan användare om du vill kontrollera om andra användare kan 
 
    Du kan också välja att anteckna eller publicera resursen.
 
-1. Välj den redigerade resursen i resursgränssnittet och tryck på **[!UICONTROL Checka in]** i verktygsfältet. Den ändrade resursen checkas in i AEM Resurser och är tillgänglig för andra användare för redigering.
+1. Markera den redigerade resursen i [!DNL Assets] gränssnittet och klicka på **[!UICONTROL Checka in]** i verktygsfältet. Den ändrade resursen checkas in i AEM Resurser och är tillgänglig för andra användare för redigering.
 
 ## Tvingad incheckning {#forced-check-in}
 
@@ -52,7 +52,7 @@ Administratörer kan checka in resurser som är utcheckade av andra användare.
 
    ![chlimage_1-476](assets/chlimage_1-476.png)
 
-1. Tryck på **[!UICONTROL Release Lock]** i verktygsfältet. Resursen checkas in igen och är tillgänglig för redigering för andra användare.
+1. Klicka på **[!UICONTROL Frigör lås]** i verktygsfältet. Resursen checkas in igen och är tillgänglig för redigering för andra användare.
 
 >[!MORELIKETHIS]
 >
