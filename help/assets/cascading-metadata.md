@@ -3,7 +3,7 @@ title: Överlappande metadata
 description: I den här artikeln beskrivs hur du definierar överlappande metadata för resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
+source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ---
 
@@ -32,14 +32,14 @@ Tänk dig ett scenario där du vill visa överlappande metadata baserat på den 
 
 Oavsett vilken resurstyp du väljer visas copyrightinformationen som ett obligatoriskt fält.
 
-1. Tryck/klicka på AEM-logotypen och gå till **[!UICONTROL Verktyg]** > **[!UICONTROL Resurser]** > **[!UICONTROL Metadata Schemas]**.
-1. Välj ett schemaformulär på sidan **[!UICONTROL Schemaformulär]** och redigera sedan schemat genom att trycka/klicka på **[!UICONTROL Redigera]** i verktygsfältet.
+1. I Experience Manager-gränssnittet går du till **[!UICONTROL Verktyg]** > **[!UICONTROL Resurser]** > **[!UICONTROL Metadata Schemas]**.
+1. In the **[!UICONTROL Schema Forms]** page, select a schema form and then click **[!UICONTROL Edit]** from the toolbar to edit the schema.
 
    ![select_form](assets/select_form.png)
 
 1. (Valfritt) Skapa ett nytt fält som ska villkoraliseras i metadataramedigeraren. Ange ett namn och en egenskapssökväg på fliken **[!UICONTROL Inställningar]** .
 
-   Om du vill skapa en ny flik trycker/klickar du `+` för att lägga till en flik och lägger sedan till ett metadatafält.
+   Om du vill skapa en ny flik klickar du på `+` för att lägga till en flik och lägger sedan till ett metadatafält.
 
    ![add_tab](assets/add_tab.png)
 
@@ -49,7 +49,7 @@ Oavsett vilken resurstyp du väljer visas copyrightinformationen som ett obligat
 
 1. Nyckelvärdepar är de alternativ som ges till en formuläranvändare. Du kan ange nyckelvärdepar antingen manuellt eller från en JSON-fil.
 
-   * Om du vill ange värden manuellt väljer du **[!UICONTROL Lägg till manuellt]** och trycker/klickar på **[!UICONTROL Lägg till alternativ]** och anger alternativ för text och värde. Ange till exempel resurstyperna Video, PDF, Word och Bild.
+   * Om du vill ange värdena manuellt väljer du **[!UICONTROL Lägg till manuellt]** och klickar på **[!UICONTROL Lägg till alternativ]** och anger text och värde för alternativet. Ange till exempel resurstyperna Video, PDF, Word och Bild.
 
    * Om du vill hämta värden från en JSON-fil dynamiskt väljer du **[!UICONTROL Lägg till via JSON-sökväg]** och anger sökvägen till JSON-filen. AEM hämtar nyckelvärdepar i realtid när formuläret presenteras för användaren.
    Båda alternativen utesluter varandra. Du kan inte importera alternativen från en JSON-fil och redigera manuellt.
@@ -75,7 +75,7 @@ Oavsett vilken resurstyp du väljer visas copyrightinformationen som ett obligat
    ![select_beroentfield](assets/select_dependentfield.png)
 
 1. Under **[!UICONTROL Krav]** väljer du alternativet **[!UICONTROL Obligatorisk, baserat på ny regel]** .
-1. Tryck/klicka på **[!UICONTROL Lägg till regel]** och välj fältet **[!UICONTROL Resurstyp]** för att skapa ett beroende. Välj också det fältvärde som beroendet ska skapas utifrån. I det här fallet väljer du **[!UICONTROL Video]**. Tryck/klicka på **[!UICONTROL Klar]** för att spara ändringarna.
+1. Klicka på **[!UICONTROL Lägg till regel]** och välj fältet **[!UICONTROL Resurstyp]** för att skapa ett beroende. Välj också det fältvärde som beroendet ska skapas utifrån. In this case, choose **[!UICONTROL Video]**. Click **[!UICONTROL Done]** to save the changes.
 
    ![define_rule](assets/define_rule.png)
 
@@ -85,17 +85,17 @@ Oavsett vilken resurstyp du väljer visas copyrightinformationen som ett obligat
 
 1. Under **[!UICONTROL Synlighet]** väljer du alternativet **[!UICONTROL Synlig, baserat på den nya regeln]** .
 
-1. Tryck/klicka på **[!UICONTROL Lägg till regel]** och välj fältet **[!UICONTROL Resurstyp]** för att skapa ett beroende. Välj också det fältvärde som beroendet ska skapas utifrån. I det här fallet väljer du **[!UICONTROL Video]**. Tryck/klicka på **[!UICONTROL Klar]** för att spara ändringarna.
+1. Klicka på **[!UICONTROL Lägg till regel]** och välj fältet **[!UICONTROL Resurstyp]** för att skapa ett beroende. Välj också det fältvärde som beroendet ska skapas utifrån. In this case, choose **[!UICONTROL Video]**. Click **[!UICONTROL Done]** to save the changes.
 
    ![define_visibilityrule](assets/define_visibilityrule.png)
 
    >[!NOTE]
    >
-   >Om du trycker/klickar på ett tomt utrymme (eller någon annan plats än värdena) återställs värdena. Om det händer markerar du värdena igen.
+   >Om du klickar på ett tomt utrymme (eller någon annan plats än värdena) återställs värdena. Om det händer markerar du värdena igen.
 
    >[!NOTE]
    >
-   >Du kan använda villkoret **[!UICONTROL Krav]** och **[!UICONTROL synlighet]** oberoende av varandra.
+   >You can apply **[!UICONTROL Requirement]** condition and **[!UICONTROL Visibility]** condition independent of each other.
 
 1. Du kan också skapa ett beroende mellan värdet Video i fältet Resurstyp och andra fält, till exempel Kodek och Varaktighet.
 1. Upprepa stegen för att skapa beroende mellan dokumentresurser (PDF och Word) i fältet [!UICONTROL Resurstyp] och fält som [!UICONTROL Sidantal] och [!UICONTROL Författare].
