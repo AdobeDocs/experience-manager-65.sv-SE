@@ -3,7 +3,7 @@ title: Lägg till vattenstämpel i era digitala resurser.
 description: Lär dig hur du använder funktionen Vattenstämpel för att lägga till en digital vattenstämpel till resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ---
 
@@ -19,7 +19,8 @@ Om du vill kunna använda vattenstämpel på resurser lägger du till vattenstä
 
 1. Dra steget **[!UICONTROL Lägg till vattenstämpel]** från sidopanelen till arbetsflödet för [!UICONTROL DAM-uppdatering av resurser] .
 
-   ![Dra steget Lägg till vattenstämpel och lägg till i arbetsflödet för DAM-uppdateringsresurser](assets/add_watermark_step_aem_assets.png)
+   ![Dra steget [!UICONTROL Lägg till vattenstämpel] och lägg till i arbetsflödet [!UICONTROL för] DAM-uppdateringsresurs](assets/add_watermark_step_aem_assets.png)2
+   *Bild: Dra steget[!UICONTROL Lägg till vattenstämpel]och lägg till i arbetsflödet för[!UICONTROL DAM-uppdateringsresurs]*
 
    >[!NOTE]
    >
@@ -29,6 +30,8 @@ Om du vill kunna använda vattenstämpel på resurser lägger du till vattenstä
 1. På fliken **[!UICONTROL Argument]** anger du giltiga värden i de olika fälten, inklusive text, teckensnittstyp, storlek, färg, position, orientering och så vidare. Bekräfta ändringarna genom att trycka/klicka på ikonen Klar.
 
    ![Ange argumenten i steget Lägg till vattenstämpel i Resurser](assets/arguments_add_watermark_aem_assets.png)
+
+   *Bild: Ange argumenten i steget Lägg till vattenstämpel i Resurser*
 
 1. Spara arbetsflödet för **[!UICONTROL DAM-uppdatering av resurser]** med vattenstämpelsteget.
 1. Ladda upp en exempelresurs från Assets-användargränssnittet. Vattenstämpeln visas med teckensnittsstorlek, färg o.s.v. på den plats som du konfigurerade i ovanstående steg.
