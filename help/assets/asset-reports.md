@@ -3,7 +3,7 @@ title: Rapporter om era digitala resurser
 description: Förstå rapporter om era resurser i AEM Assets som hjälper er att förstå hur era digitala resurser används, används och delas.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a839ec71e02ee5d92f054a686b7bb52142058ae9
+source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ---
 
@@ -36,12 +36,12 @@ AEM Assets genererar följande standardrapporter:
 
 AEM-administratörer kan enkelt generera och anpassa dessa rapporter för implementeringen. Administratören kan följa de här stegen för att skapa en rapport:
 
-1. Tryck/klicka på AEM-logotypen och gå till **[!UICONTROL Verktyg]** > **[!UICONTROL Resurser]** > **[!UICONTROL Rapporter]**.
+1. I Experience Manager-gränssnittet klickar du på **[!UICONTROL Verktyg]** > **[!UICONTROL Resurser]** > **[!UICONTROL Rapporter]**.
 
 ![Verktygssida för att navigera bland resurser - rapport](assets/AssetsReportNavigation.png)
 
-1. Tryck/klicka på **[!UICONTROL Skapa]** i verktygsfältet på sidan Resursrapporter.
-1. Välj den rapport du vill skapa på sidan **[!UICONTROL Skapa rapport]** och tryck/klicka på **[!UICONTROL Nästa]**.
+1. På sidan [!UICONTROL Resursrapporter] klickar du på **[!UICONTROL Skapa]** i verktygsfältet.
+1. Välj den rapport du vill skapa på sidan **[!UICONTROL Skapa rapport]** och klicka på **[!UICONTROL Nästa]**.
 
    ![Välj rapporttyp](assets/choose_report.png)
 
@@ -53,7 +53,7 @@ AEM-administratörer kan enkelt generera och anpassa dessa rapporter för implem
    >
    >Som standard inkluderas innehållsfragment och länkdelningar i rapporten Hämtade resurser. Välj lämpligt alternativ för att skapa en rapport över länkdelningar eller för att utesluta innehållsfragment från hämtningsrapporten.
 
-1. Konfigurera rapportinformation som titel, beskrivning, miniatyrbild och mappsökväg i CRX-databasen där rapporten lagras. Som standard är mappsökvägen */content/dam*. Du kan ange en annan sökväg.
+1. Konfigurera rapportinformation som titel, beskrivning, miniatyrbild och mappsökväg i CRX-databasen där rapporten lagras. Som standard är mappsökvägen `/content/dam`. Du kan ange en annan sökväg.
 
    ![Sida för att lägga till rapportinformation](assets/report_configuration.png)
 
@@ -83,7 +83,7 @@ AEM-administratörer kan enkelt generera och anpassa dessa rapporter för implem
 
    ![Detaljsida för länkdelningsrapport](assets/link_share.png)
 
-1. Tryck/klicka på **[!UICONTROL Nästa]** i verktygsfältet.
+1. Klicka på **[!UICONTROL Nästa]** i verktygsfältet.
 
 1. På sidan **[!UICONTROL Konfigurera kolumner]** är vissa kolumner markerade för att visas i rapporten som standard. Du kan markera fler kolumner. Avmarkera en markerad kolumn om du vill utesluta den i rapporten.
 
@@ -91,14 +91,14 @@ AEM-administratörer kan enkelt generera och anpassa dessa rapporter för implem
 
    Om du vill visa ett anpassat kolumnnamn eller en egenskapssökväg konfigurerar du egenskaperna för resursens binärfil under noden jcr:content i CRX. Du kan också lägga till den via egenskapssökvägsväljaren.
 
-   ![Skapa anpassade kolumner för rapporten](assets/custom_columns.png)
+   ![Markera eller avmarkera rapportkolumner](assets/custom_columns.png)
 
-1. Tryck/klicka på **[!UICONTROL Skapa]** i verktygsfältet. Ett meddelande meddelar att rapportgenereringen har initierats.
-1. På sidan Resursrapporter baseras rapportgenereringsstatusen på rapportjobbets aktuella tillstånd, till exempel Slutfört, Misslyckades, Köat eller Schemalagt. Samma status visas i inkorgen för meddelanden.Om du vill visa rapportsidan trycker/klickar du på rapportlänken. Du kan också markera rapporten och trycka på **[!UICONTROL Visa]** i verktygsfältet.
+1. Klicka på **[!UICONTROL Skapa]** i verktygsfältet. Ett meddelande meddelar att rapportgenereringen har initierats.
+1. På sidan Resursrapporter baseras rapportgenereringsstatusen på rapportjobbets aktuella tillstånd, till exempel Slutfört, Misslyckades, Köat eller Schemalagt. Samma status visas i inkorgen för meddelanden.Om du vill visa rapportsidan klickar du på rapportlänken. Du kan också markera rapporten och klicka på **[!UICONTROL Visa]** i verktygsfältet.
 
    ![En genererad rapport](assets/report_page.png)
 
-   Tryck på **[!UICONTROL Hämta]** i verktygsfältet för att hämta rapporten i CSV-format.
+   Klicka på **[!UICONTROL Hämta]** i verktygsfältet för att hämta rapporten i CSV-format.
 
 ## Lägg till anpassade kolumner {#add-custom-columns}
 
@@ -112,10 +112,10 @@ Du kan lägga till anpassade kolumner i följande rapporter om du vill visa mer 
 * Publicera varumärkesportalen
 * Filer
 
-1. Tryck/klicka på AEM-logotypen och gå till **[!UICONTROL Verktyg]** > **[!UICONTROL Resurser]** > **[!UICONTROL Rapporter]**.
-1. Tryck/klicka på **[!UICONTROL Skapa]** i verktygsfältet på sidan Resursrapporter.
+1. I Experience Manager-gränssnittet klickar du på **[!UICONTROL Verktyg]** > **[!UICONTROL Resurser]** > **[!UICONTROL Rapporter]**.
+1. På sidan [!UICONTROL Resursrapporter] klickar du på **[!UICONTROL Skapa]** i verktygsfältet.
 
-1. Välj den rapport du vill skapa på sidan **[!UICONTROL Skapa rapport]** och tryck/klicka på **[!UICONTROL Nästa]**.
+1. Välj den rapport du vill skapa på sidan **[!UICONTROL Skapa rapport]** och klicka på **[!UICONTROL Nästa]**.
 1. Konfigurera rapportinformation som titel, beskrivning, miniatyrbild, mappsökväg och datumintervall.
 
 1. To display a custom column, specify the name of the column in under **[!UICONTROL Custom Columns]**.
@@ -126,9 +126,9 @@ Du kan lägga till anpassade kolumner i följande rapporter om du vill visa mer 
 
    ![Mappa egenskapssökvägen från banor i jcr:content](assets/property_picker.png)
 
-   Om du vill lägga till fler anpassade kolumner trycker/klickar du på **[!UICONTROL Lägg till]** och upprepar steg 5 och 6.
+   Om du vill lägga till fler anpassade kolumner klickar du på **[!UICONTROL Lägg till]** och upprepar steg 5 och 6.
 
-1. Tryck/klicka på **[!UICONTROL Skapa]** i verktygsfältet. Ett meddelande meddelar att rapportgenereringen har initierats.
+1. Klicka på **[!UICONTROL Skapa]** i verktygsfältet. Ett meddelande meddelar att rapportgenereringen har initierats.
 
 ## Konfigurera rensningstjänst {#configure-purging-service}
 
