@@ -3,7 +3,7 @@ title: Aktivera identifiering av dubblettresurser
 description: Lär dig hur du aktiverar identifiering av dubblettresurser i AEM.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
+source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ---
 
@@ -14,7 +14,7 @@ Om du försöker överföra en resurs som finns i Adobe Experience Manager-resur
 
 1. Öppna sidan Konfiguration av AEM Web Console via `https://[aem_server]:[port]/system/console/configMgr`.
 1. Redigera konfigurationen för serverns CQ DAM **[!UICONTROL Create Asset]**.
-1. Välj alternativet **[!UICONTROL Identifiera dubbletter]** och klicka/tryck på **[!UICONTROL Spara]**.
+1. Markera alternativet **[!UICONTROL Identifiera dubbletter]** och klicka på **[!UICONTROL Spara]**.
 
    ![Välj alternativet Identifiera dubblett i serverleten](assets/chlimage_1-377.png)
 
