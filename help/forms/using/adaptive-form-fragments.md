@@ -9,7 +9,7 @@ topic-tags: author
 discoiquuid: 1a32eb24-db3b-4fad-b1c7-6326b5af4e5e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -71,7 +71,9 @@ Om du dessutom har valt ett XML-schema eller en XDP-formulärmall som formulärm
 1. Ange följande information i dialogrutan Skapa fragment:
 
    * **Namn**: Namnet på fragmentet. Standardvärdet är panelens elementnamn. Det är ett obligatoriskt fält.
-      ***Obs **: Se till att du anger ett unikt namn för fragmentet. Om det redan finns ett annat fragment med samma namn kan fragmentet inte skapas.*
+      >[!NOTE]
+      >
+      >Se till att du anger ett unikt namn för fragmentet. Om det redan finns ett annat fragment med samma namn kan fragmentet inte skapas.
 
    * **Titel**: Fragmentets namn. Standardvärdet är panelens namn.
 
@@ -226,7 +228,7 @@ Om du vill lokalisera ett adaptivt formulär som innehåller adaptiva formulärf
 * Om du sparar en panel som fragment som innehåller ett annat XDP-fragment i ett XDP-baserat adaptivt formulär, binds det resulterande fragmentet automatiskt till det underordnade XDP-fragmentet. Om det finns ett XSD-baserat anpassningsbart formulär binds det resulterande fragmentet till schemaroten.
 * När du skapar ett adaptivt formulärfragment skapas en fragmentnod, som liknar noden guideContainer för ett adaptivt formulär, i CRXDe Lite.
 * Ett fragment i ett adaptivt formulär som använder en annan formulärdatamodell stöds inte. Ett XDP-baserat fragment stöds till exempel inte i en XSD-baserad adaptiv form och vice versa.
-* Anpassningsbara formulärfragment kan användas via fliken Adaptiva formulärfragment i AEM Content Finder.
+* Anpassade formulärfragment kan användas via fliken Adaptiva formulärfragment i AEM Content Finder.
 * Alla uttryck, skript och format i ett fristående adaptivt formulärfragment behålls när de infogas som referens eller bäddas in i ett adaptivt formulär.
 * Du kan inte redigera ett adaptivt formulärfragment, som infogas med referens, inifrån ett adaptivt formulär. Om du vill redigera kan du antingen redigera det fristående adaptiva formulärfragmentet eller bädda in fragmentet i det adaptiva formuläret.
 * När du publicerar ett adaptivt formulär måste du publicera de fristående adaptiva formulärfragmenten som infogats som referens i det adaptiva formuläret.
