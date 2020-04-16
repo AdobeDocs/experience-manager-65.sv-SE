@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: fc418da9-496f-4a2b-bfe4-2add3ac4f468
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d12d35bf8355d3069071523427a7794b88c09b13
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -142,8 +142,8 @@ Tabeller i anpassningsbara formulär gör att du kan skriva uttryck i JavaScript
 
 Tabellerna och raderna har endast stöd för synlighetsuttryck som styr synligheten baserat på värdet som returneras av ett uttryck, men cellerna har stöd för följande uttryck:
 
-* **** Initieringsskript: för att utföra en åtgärd vid initiering av ett fält.
-* **** Värde för implementeringsskript: om du vill ändra komponenterna i ett formulär efter att värdet för ett fält har ändrats.
+* **Initieringsskript:** för att utföra en åtgärd vid initiering av ett fält.
+* **Värde för implementeringsskript:** om du vill ändra komponenterna i ett formulär efter att värdet för ett fält har ändrats.
 
 >[!NOTE]
 >
@@ -180,7 +180,9 @@ Mobil vy av en tabell med sidhuvud i vänster layout
 
 I kolumnlayouten Komprimerbar komprimeras kolumnerna i tabellen så att en eller två kolumner visas, beroende på enhetens storlek, medan andra kolumner komprimeras. Du kan klicka på ikonen för att komprimera/expandera om du vill visa andra kolumner i tabellen.
 
-**Obs**: Kolumnlayout som kan komprimeras är optimerad för mobila enheter, men fungerar även på stationära datorer, om den tillgängliga bredden inte räcker för att visa alla kolumner i en tabell.
+>[!NOTE]
+>
+>Kolumnlayout som kan komprimeras är optimerad för mobila enheter, men fungerar även på stationära datorer, om den tillgängliga bredden inte räcker för att visa alla kolumner i en tabell.
 
 Följande bilder jämför hur en tabell ser ut på en enhet med komprimerade och expanderade kolumner.
 
