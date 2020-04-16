@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 42de04bf-25e4-4478-a411-38671ed871ae
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -44,7 +44,9 @@ Du kan utföra följande uppgifter med hjälp av signaturtjänsten:
 * Validera alla digitala signaturer som finns i ett PDF-dokument. (Se [Verifiera flera digitala signaturer](digitally-signing-certifying-documents.md#verifying-digital-signatures).)
 * Ta bort en digital signatur från ett signaturfält. (Se [Ta bort digitala signaturer](digitally-signing-certifying-documents.md#removing-digital-signatures).)
 
-   ***Obs **: Mer information om signaturtjänsten finns i[Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).*
+>[!NOTE]
+>
+> Mer information om signaturtjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ## Lägga till signaturfält {#adding-signature-fields}
 
@@ -117,7 +119,7 @@ Lägg till ett signaturfält med signatur-API (Java):
 
 1. Hämta ett PDF-dokument som ett signaturfält läggs till i
 
-   * Skapa ett `java.io.FileInputStream` objekt som representerar PDF-dokumentet som ett signaturfält läggs till i med hjälp av dess konstruktor och skicka ett strängvärde som anger PDF-dokumentets plats.
+   * Skapa ett `java.io.FileInputStream` objekt som representerar PDF-dokumentet som ett signaturfält läggs till i med hjälp av dess konstruktor och skicka ett strängvärde som anger platsen för PDF-dokumentet.
    * Skapa ett `com.adobe.idp.Document` objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream` objektet.
 
 1. Lägg till ett signaturfält
@@ -295,7 +297,7 @@ Hämta namn på signaturfält med signatur-API (Java):
 
 ### Hämta signaturfält med webbtjänstens API {#retrieve-signature-field-using-the-web-service-api}
 
-Hämta namn på signaturfält med signatur-API:t (webbtjänst):
+Hämta namn på signaturfält med Signature API (webbtjänst):
 
 1. Inkludera projektfiler
 
@@ -398,11 +400,11 @@ Följande ordlistevärden för dirigerade värden kan anges:
 * **Filter**: Anger det filter som används med signaturfältet. Du kan till exempel använda filtret Adobe.PPKLite. (Se [PDF-referens](https://www.adobe.com/devnet/acrobat/pdfs/pdf_reference_1-7.pdf).)
 * **Flaggalternativ**: Anger de flaggvärden som är associerade med det här signaturfältet. Värdet 1 innebär att en signerare endast får använda de angivna värdena för posten. Värdet 0 innebär att andra värden är tillåtna. Här är bitpositionerna:
 
-   * **** 1 (filter): Den underskriftshanterare som ska användas för att signera signaturfältet
-   * **** 2 (SubFilter): En array med namn som anger godkända kodningar att använda vid signering
+   * **1 (filter):** Den underskriftshanterare som ska användas för att signera signaturfältet
+   * **2 (SubFilter):** En array med namn som anger godkända kodningar att använda vid signering
    * **3 (V)**: Det lägsta versionsnummer som krävs för underskriftshanteraren som ska användas för att signera signaturfältet
-   * **** 4 (skäl): En array med strängar som anger möjliga orsaker till signering av ett dokument
-   * **** 5 (PDFLegalWarnings): En array med strängar som anger möjliga juridiska attesteringar
+   * **4 (skäl):** En array med strängar som anger möjliga orsaker till signering av ett dokument
+   * **5 (PDFLegalWarnings):** En array med strängar som anger möjliga juridiska attesteringar
 
 * **Juridiska attesteringar**: När ett dokument är certifierat skannas det automatiskt efter specifika typer av innehåll som kan göra det synliga innehållet i ett dokument tvetydigt eller vilseledande. En anteckning kan till exempel skymma text som är viktig för att förstå vad som certifieras. Skanningsprocessen genererar varningar som anger att den här typen av innehåll finns. Det innehåller även en ytterligare förklaring av innehållet som kan ha genererat varningar.
 * **Behörigheter**: Anger behörigheter som kan användas i ett PDF-dokument utan att underskriften blir ogiltig.
@@ -443,7 +445,7 @@ Spara PDF-dokumentet som innehåller det ändrade signaturfältet som en PDF-fil
 
 1. Hämta PDF-dokumentet som innehåller signaturfältet som ska ändras
 
-   * Skapa ett `java.io.FileInputStream` objekt som representerar PDF-dokumentet som innehåller signaturfältet som ska ändras med hjälp av dess konstruktor och skicka ett strängvärde som anger PDF-dokumentets plats.
+   * Skapa ett `java.io.FileInputStream` objekt som representerar PDF-dokumentet som innehåller signaturfältet som ska ändras med hjälp av dess konstruktor och skicka ett strängvärde som anger platsen för PDF-dokumentet.
    * Skapa ett `com.adobe.idp.Document` objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream` objektet.
 
 1. Ange lexikonvärden
@@ -545,7 +547,7 @@ Spara PDF-dokumentet som innehåller det ändrade signaturfältet som en PDF-fil
 
 Digitala signaturer kan användas i PDF-dokument för att ge en viss säkerhetsnivå. Digitala signaturer, precis som handskrivna signaturer, är ett sätt som signerare kan använda för att identifiera sig och göra programsatser om ett dokument. Den teknik som används för att digitalt signera dokument gör att både signeraren och mottagaren vet vad som signerats och vet att dokumentet inte har ändrats sedan det signerades.
 
-PDF-dokument signeras med hjälp av teknik med öppen nyckel. En signerare har två nycklar: en offentlig nyckel och en privat nyckel. Den privata nyckeln lagras i en användares autentiseringsuppgifter som måste vara tillgängliga vid signeringen. Den offentliga nyckeln lagras i användarens certifikat som måste vara tillgängligt för mottagarna för att validera signaturen. Information om återkallade certifikat finns i listor över återkallade certifikat (CRL:er) och OCSP-svar (Online Certificate Status Protocol) som distribueras av certifikatutfärdare (CA:er). Tidpunkten för signering kan hämtas från en betrodd källa som kallas tidsstämpelutfärdare.
+PDF-dokument signeras med hjälp av teknik för offentlig nyckel. En signerare har två nycklar: en offentlig nyckel och en privat nyckel. Den privata nyckeln lagras i en användares autentiseringsuppgifter som måste vara tillgängliga vid signeringen. Den offentliga nyckeln lagras i användarens certifikat som måste vara tillgängligt för mottagarna för att validera signaturen. Information om återkallade certifikat finns i listor över återkallade certifikat (CRL:er) och OCSP-svar (Online Certificate Status Protocol) som distribueras av certifikatutfärdare (CA:er). Tidpunkten för signering kan hämtas från en betrodd källa som kallas tidsstämpelutfärdare.
 
 >[!NOTE]
 >
@@ -640,10 +642,10 @@ Du kan också ange om du vill utföra en spärrkontroll som avgör om certifikat
 
 * **NoCheck**: Utför inte spärrkontroll.
 * **BestEffort**: Försök alltid att kontrollera om alla certifikat i kedjan har återkallats. Om det uppstår något problem vid kontrollen antas återkallningen vara giltig. Om något fel inträffar antar du att certifikatet inte har återkallats.
-* **** CheckIfAvailable: Kontrollera om alla certifikat i kedjan har återkallats om det finns någon återkallningsinformation. Om något problem uppstår vid kontrollen antas återkallningen vara ogiltig. Om något fel inträffar antar du att certifikatet har återkallats och är ogiltigt. (Detta är standardvärdet.)
+* **CheckIfAvailable:** Kontrollera om alla certifikat i kedjan har återkallats om det finns någon återkallningsinformation. Om något problem uppstår vid kontrollen antas återkallningen vara ogiltig. Om något fel inträffar antar du att certifikatet har återkallats och är ogiltigt. (Detta är standardvärdet.)
 * **AlwaysCheck**: Kontrollera om alla certifikat i kedjan har återkallats. Om det inte finns någon återkallningsinformation i något certifikat antas återkallningen vara ogiltig.
 
-Om du vill utföra återkallningskontroll på ett certifikat kan du ange en URL till en CRL-server (Certificate revocation List) med hjälp av ett `CRLOptionSpec` objekt. Om du vill utföra en spärrkontroll och inte anger en URL till en CRL-server, hämtar signaturtjänsten URL-adressen från certifikatet.
+Om du vill göra en återkallningskontroll på ett certifikat kan du ange en URL till en CRL-server (Certificate revocation List) genom att använda ett `CRLOptionSpec` objekt. Om du vill utföra en spärrkontroll och inte anger en URL till en CRL-server, hämtar signaturtjänsten URL-adressen från certifikatet.
 
 I stället för att använda en CRL-server kan du använda en OCSP-server (Online Certificate Status Protocol) när du utför spärrkontroll. När du använder en OCSP-server i stället för en CRL-server utförs spärrkontrollen oftast snabbare. (Se &quot;Online Certificate Status Protocol&quot; på [https://tools.ietf.org/html/rfc2560](https://tools.ietf.org/html/rfc2560).)
 
@@ -705,7 +707,7 @@ Signera ett PDF-dokument digitalt med signatur-API (Java):
 
    Signera PDF-dokumentet genom att anropa `SignatureServiceClient` objektets `sign` metod och skicka följande värden:
 
-   * Ett `com.adobe.idp.Document` objekt som representerar det PDF-dokument som ska signeras.
+   * Ett `com.adobe.idp.Document` objekt som representerar PDF-dokumentet som ska signeras.
    * Ett strängvärde som representerar namnet på signaturfältet som ska innehålla den digitala signaturen.
    * Ett `Credential` objekt som representerar de autentiseringsuppgifter som används för att signera PDF-dokumentet digitalt. Skapa ett `Credential` objekt genom att anropa `Credential` objektets statiska `getInstance` metod och skicka ett strängvärde som anger aliasvärdet som motsvarar säkerhetsuppgifter.
    * Ett `HashAlgorithm` objekt som anger en statisk datamedlem som representerar hash-algoritmen som ska användas för att sammanställa PDF-dokumentet. Du kan till exempel ange `HashAlgorithm.SHA1` att SHA1-algoritmen ska användas.
@@ -770,7 +772,7 @@ Så här signerar du ett PDF-dokument digitalt med signatur-API:t (webbtjänst):
 
    Signera PDF-dokumentet genom att anropa `SignatureServiceClient` objektets `sign` metod och skicka följande värden:
 
-   * Ett `BLOB` objekt som representerar det PDF-dokument som ska signeras.
+   * Ett `BLOB` objekt som representerar PDF-dokumentet som ska signeras.
    * Ett strängvärde som representerar namnet på signaturfältet som ska innehålla den digitala signaturen.
    * Ett `Credential` objekt som representerar de autentiseringsuppgifter som används för att signera PDF-dokumentet digitalt. Skapa ett `Credential` objekt med hjälp av dess konstruktor och ange aliaset genom att tilldela ett värde till `Credential` objektets `alias` egenskap.
    * Ett `HashAlgorithm` objekt som anger en statisk datamedlem som representerar hash-algoritmen som ska användas för att sammanställa PDF-dokumentet. Du kan till exempel ange `HashAlgorithm.SHA1` att SHA1-algoritmen ska användas.
@@ -923,7 +925,7 @@ Signera ett interaktivt formulär digitalt med hjälp av Forms and Signature API
 
    Signera PDF-dokumentet genom att anropa `SignatureServiceClient` objektets `sign` metod och skicka följande värden:
 
-   * Ett `com.adobe.idp.Document` objekt som representerar det PDF-dokument som ska signeras. Kontrollera att det här objektet är det objekt `com.adobe.idp.Document` som hämtas från Forms-tjänsten.
+   * Ett `com.adobe.idp.Document` objekt som representerar PDF-dokumentet som ska signeras. Kontrollera att det här objektet är det objekt `com.adobe.idp.Document` som hämtas från Forms-tjänsten.
    * Ett strängvärde som representerar namnet på signaturfältet som är signerat.
    * Ett `Credential` objekt som representerar de autentiseringsuppgifter som används för att signera PDF-dokumentet digitalt. Skapa ett `Credential` objekt genom att anropa `Credential` objektets statiska `getInstance` metod. Skicka ett strängvärde som anger aliasvärdet som motsvarar säkerhetsuppgifter.
    * Ett `HashAlgorithm` objekt som anger en statisk datamedlem som representerar hash-algoritmen som ska användas för att sammanställa PDF-dokumentet. Du kan till exempel ange `HashAlgorithm.SHA1` att SHA1-algoritmen ska användas.
@@ -1013,7 +1015,7 @@ Signera ett interaktivt formulär digitalt med API:t för formulär och signatur
 
    Signera PDF-dokumentet genom att anropa `SignatureServiceClient` objektets `sign` metod och skicka följande värden:
 
-   * Ett `BLOB` objekt som representerar det PDF-dokument som ska signeras. Använd den `BLOB` instans som returneras av Forms-tjänsten.
+   * Ett `BLOB` objekt som representerar PDF-dokumentet som ska signeras. Använd den `BLOB` instans som returneras av Forms-tjänsten.
    * Ett strängvärde som representerar namnet på signaturfältet som är signerat.
    * Ett `Credential` objekt som representerar de autentiseringsuppgifter som används för att signera PDF-dokumentet digitalt. Skapa ett `Credential` objekt med hjälp av dess konstruktor och ange aliaset genom att tilldela ett värde till `Credential` objektets `alias` egenskap.
    * Ett `HashAlgorithm` objekt som anger en statisk datamedlem som representerar hash-algoritmen som ska användas för att sammanställa PDF-dokumentet. Du kan till exempel ange `HashAlgorithm.SHA1` att SHA1-algoritmen ska användas.
@@ -1706,7 +1708,7 @@ Digitala signaturer måste tas bort från ett signaturfält innan en nyare digit
 
 >[!NOTE]
 >
-> Mer information om signaturtjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om signaturtjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-8}
 
@@ -1775,7 +1777,7 @@ Ta bort en digital signatur med signatur-API (Java):
 
 1. Hämta PDF-dokumentet som innehåller en signatur som ska tas bort
 
-   * Skapa ett `java.io.FileInputStream` objekt som representerar PDF-dokumentet som innehåller den signatur som ska tas bort genom att använda dess konstruktor och skicka ett strängvärde som anger PDF-dokumentets plats.
+   * Skapa ett `java.io.FileInputStream` objekt som representerar PDF-dokumentet som innehåller den signatur som ska tas bort med hjälp av dess konstruktor och skicka ett strängvärde som anger PDF-dokumentets plats.
    * Skapa ett `com.adobe.idp.Document` objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream` objektet.
 
 1. Ta bort den digitala signaturen från signaturfältet
