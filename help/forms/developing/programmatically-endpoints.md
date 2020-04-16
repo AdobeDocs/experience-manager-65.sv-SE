@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 076889a7-9c9f-4b6f-a45b-67a9b3923c36
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -28,15 +28,17 @@ Tjänsten Endpoint Registry ger möjlighet att programmässigt hantera slutpunkt
 * (Borttaget för AEM-formulär) Remoting
 * Aktivitetshanteraren
 
-   ***Obs **: SOAP, EJB och (Borttaget för AEM-formulär i JEE) Slutpunkter för fjärrstyrning skapas automatiskt för varje aktiverad tjänst. SOAP- och EJB-slutpunkterna aktiverar SOAP och EJB för alla serviceåtgärder.*
+>[!NOTE]
+>
+>SOAP, EJB och (Borttaget för AEM-formulär i JEE) Slutpunkter för fjärrstyrning skapas automatiskt för varje aktiverad tjänst. SOAP- och EJB-slutpunkterna aktiverar SOAP och EJB för alla serviceåtgärder.
 
-   En fjärrslutpunkt gör att Flex-klienter kan anropa åtgärder på den AEM Forms-tjänst som slutpunkten läggs till i. Ett Flex-mål med samma namn som slutpunkten skapas och Flex-klienter kan skapa RemoteObjects som pekar på det här målet för att anropa åtgärder på den relevanta tjänsten.
+En fjärrslutpunkt gör att Flex-klienter kan anropa åtgärder på den AEM Forms-tjänst som slutpunkten läggs till i. Ett Flex-mål med samma namn som slutpunkten skapas och Flex-klienter kan skapa RemoteObjects som pekar på det här målet för att anropa åtgärder på den relevanta tjänsten.
 
-   Slutpunkterna för e-post, Aktivitetshanteraren och Bevakade mappar visar bara en viss åtgärd för tjänsten. För att lägga till dessa slutpunkter krävs ett andra konfigurationssteg för att välja en metod att anropa, ange konfigurationsparametrar och ange in- och utdataparametermappningar.
+Slutpunkterna för e-post, Aktivitetshanteraren och Bevakade mappar visar bara en viss åtgärd för tjänsten. För att lägga till dessa slutpunkter krävs ett andra konfigurationssteg för att välja en metod att anropa, ange konfigurationsparametrar och ange in- och utdataparametermappningar.
 
-   Du kan ordna TaskManager-slutpunkter i grupper som kallas *kategorier*. Dessa kategorier visas sedan för Workspace via TaskManager, där slutanvändarna ser slutpunkterna för TaskManager när de kategoriseras. I Workspace ser slutanvändarna dessa kategorier i navigeringsrutan. Slutpunkterna i varje kategori visas som processkort på sidan Starta processer i Workspace.
+Du kan ordna TaskManager-slutpunkter i grupper som kallas *kategorier*. Dessa kategorier visas sedan för Workspace via TaskManager, där slutanvändarna ser slutpunkterna för TaskManager när de kategoriseras. I Workspace ser slutanvändarna dessa kategorier i navigeringsrutan. Slutpunkterna i varje kategori visas som processkort på sidan Starta processer i Workspace.
 
-   Du kan utföra följande uppgifter med hjälp av tjänsten för slutpunktsregister:
+Du kan utföra följande uppgifter med hjälp av tjänsten för slutpunktsregister:
 
 * Lägg till EJB-slutpunkter. (Se [Lägga till EJB-slutpunkter](programmatically-endpoints.md#adding-ejb-endpoints).)
 * Lägg till SOAP-slutpunkter. (Se [Lägga till SOAP-slutpunkter](programmatically-endpoints.md#adding-soap-endpoints).)
@@ -576,7 +578,7 @@ Följande konfigurationsvärden anges när en e-postslutpunkt läggs till i en t
 * **charSet**: Den teckenuppsättning som används av e-postleverantören. Standardvärdet är `UTF-8`.
 * **smtpSSLEnabled**: Ange det här värdet för att tvinga e-postleverantören att använda SSL när meddelanden om resultat eller fel skickas. Kontrollera att SMTP-värden har stöd för SSL.
 * **failedJobFolder**: Anger en katalog där resultat ska lagras när SMTP-e-postservern inte är i drift.
-* **asynkron**: När det är synkront bearbetas alla indatadokument och ett enda svar returneras. När inställningen är asynkron skickas ett svar för varje indatadokument som bearbetas. En e-postslutpunkt skapas till exempel för den process som introduceras i det här avsnittet, och ett e-postmeddelande skickas till slutpunktens inkorg som innehåller flera oskyddade PDF-dokument. När alla PDF-dokument har krypterats med ett lösenord, och om slutpunkten har konfigurerats som synkron, skickas ett enda e-postmeddelande med alla skyddade PDF-dokument bifogade. Om slutpunkten är konfigurerad som asynkron skickas ett separat e-postmeddelande för varje skyddat PDF-dokument. Varje e-postmeddelande innehåller ett enda PDF-dokument som en bifogad fil. Standardvärdet är asynkront.
+* **asynkron**: När det är synkront bearbetas alla indatadokument och ett svar returneras. När inställningen är asynkron skickas ett svar för varje indatadokument som bearbetas. En e-postslutpunkt skapas till exempel för den process som introduceras i det här avsnittet, och ett e-postmeddelande skickas till slutpunktens inkorg som innehåller flera oskyddade PDF-dokument. När alla PDF-dokument har krypterats med ett lösenord, och om slutpunkten har konfigurerats som synkron, skickas ett enda e-postmeddelande med alla skyddade PDF-dokument bifogade. Om slutpunkten är konfigurerad som asynkron skickas ett separat e-postmeddelande för varje skyddat PDF-dokument. Varje e-postmeddelande innehåller ett enda PDF-dokument som en bifogad fil. Standardvärdet är asynkront.
 
 **Definiera indataparametervärden**
 
