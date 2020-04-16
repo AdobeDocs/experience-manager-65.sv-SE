@@ -10,14 +10,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: df7b60bb-4897-479e-a05e-1b1e9429ed87
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
 
 # Anropa AEM-formulär med REST-begäran {#invoking-aem-forms-using-rest-requests}
 
- Processer som skapas i Workbench kan konfigureras så att du kan anropa dem via REST-begäranden (Representational State Transfer). REST-begäranden skickas från HTML-sidor. Det innebär att du kan anropa en formulärprocess direkt från en webbsida med hjälp av en REST-begäran. Du kan till exempel öppna en ny instans av en webbsida. Sedan kan du anropa en formulärprocess och läsa in ett återgivet PDF-dokument med data som skickades i en HTTP POST-begäran.
+Processer som skapas i Workbench kan konfigureras så att du kan anropa dem via REST-begäranden (Representational State Transfer). REST-begäranden skickas från HTML-sidor. Det innebär att du kan anropa en formulärprocess direkt från en webbsida med hjälp av en REST-begäran. Du kan till exempel öppna en ny instans av en webbsida. Sedan kan du anropa en formulärprocess och läsa in ett återgivet PDF-dokument med data som skickades i en HTTP POST-begäran.
 
 Det finns två typer av HTML-klienter. Den första HTML-klienten är en AJAX-klient som är skriven i JavaScript. Den andra klienten är ett HTML-formulär som innehåller en skicka-knapp. Ett HTML-baserat klientprogram är inte den enda möjliga REST-klienten. Alla klientprogram som stöder HTTP-begäranden kan anropa en tjänst med hjälp av ett REST-anrop. Du kan till exempel anropa en tjänst genom att använda ett REST-anrop från ett PDF-formulär. (Se [Anropa MyApplication/EncryptDocument-processen från Acrobat](#rest-invocation-examples).)
 
@@ -49,7 +49,11 @@ Följande datatyper stöds när AEM Forms-tjänster anropas med REST-begäran:
    Om en Forms-tjänst anropas med HTTP POST-metoden skickas argumenten inuti HTTP-begärandetexten. Om AEM Forms-tjänstens signatur har en strängindataparameter kan begärandetexten innehålla indataparameterns textvärde. Om tjänstens signatur definierar flera strängparametrar, kan begäran följa HTTP- `application/x-www-form-urlencoded` notationen med parameternamnen som används som formulärets fältnamn.
 
    Om en Forms-tjänst returnerar en strängparameter blir resultatet en textrepresentation av utdataparametern. Om en tjänst returnerar flera strängparametrar blir resultatet ett XML-dokument som kodar utdataparametrarna i följande format:
-   ` <result> <output-paramater1>output-parameter-value-as-string</output-paramater1> . . . <output-paramaterN>output-parameter-value-as-string</output-paramaterN> </result>`**Obs **: Värdet representerar`output-paramater1`utdataparameterns namn.
+   ` <result> <output-paramater1>output-parameter-value-as-string</output-paramater1> . . . <output-paramaterN>output-parameter-value-as-string</output-paramaterN> </result>`
+
+   >[!NOTE]
+   >
+   >Värdet representerar `output-paramater1` utdataparameterns namn.
 
    Om en Forms-tjänst kräver en `com.adobe.idp.Document` parameter kan tjänsten bara anropas med HTTP POST-metoden. Om tjänsten kräver en `com.adobe.idp.Document` parameter blir HTTP-begärandetexten innehållet i indatadokumentobjektet.
 
@@ -178,7 +182,7 @@ Följande exempel på REST-anrop finns:
 
 **Överföra booleska värden till en process**
 
-I följande HTML-exempel skickas två `Boolean` värden till en AEM Forms-process med namnet `RestTest2`. Anropsmetodens namn är `invoke` och versionen är 1.0.Observera att metoden HTML Post används.
+I följande HTML-exempel skickas två `Boolean` värden till en AEM Forms-process med namnet `RestTest2`. Anropsmetodens namn är `invoke` och versionen är 1.0. Observera att metoden HTML Post används.
 
 ```as3
  <html>
