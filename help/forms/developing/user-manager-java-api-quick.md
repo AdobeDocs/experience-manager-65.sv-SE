@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: e0c20fd2-b084-4f61-936c-5282826a8d3d
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -35,7 +35,9 @@ Java API Quick Start (SOAP) är tillgängligt för API:t för användarhanterare
 
 AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda typer och anslutningsläget bör anges till SOAP.
 
-***Obs **: Snabbstart i Programmering med AEM-formulär baseras på dokumentet om du använder ett annat operativsystem, till exempel Unix, och ersätter Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. (Se[Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)*
+>[!NOTE]
+>
+> Snabbstart i Programmering med AEM-formulär baseras på dokumentet om du använder ett annat operativsystem, till exempel Unix, och ersätter Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## Snabbstart (SOAP-läge): Lägga till användare med Java API {#quick-start-soap-mode-adding-users-using-the-java-api}
 
