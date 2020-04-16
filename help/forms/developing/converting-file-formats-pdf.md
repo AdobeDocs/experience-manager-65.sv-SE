@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 180cac3f-6378-42bc-9a47-60f9f08a7103
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -25,17 +25,23 @@ Tjänsten Generate PDF använder inbyggda program för att konvertera följande 
 
 * Microsoft Office 2003 och 2007 för att konvertera DOC, DOCX, RTF, TXT, XLS, XLSX, PPT, PPTX, VSD, MPP, MPPX, XPS och PUB (endast Windows)
 
-   **Obs**: Acrobat® 9.2 eller senare krävs för att konvertera Microsoft XPS-format till PDF.*
+>[!NOTE]
+>
+>Acrobat® 9.2 eller senare krävs för att konvertera Microsoft XPS-format till PDF.
 
 * Autodesk AutoCAD 2005, 2006, 2007, 2008 och 2009 för att konvertera DWF, DWG och DXW (endast engelska)
 * Corel WordPerfect 12 och X4 för att konvertera WPD, QPW, SHW (endast på engelska)
 * OpenOffice 2.0, 2.4, 3.0.1 och 3.1 för konvertering av ODT, ODS, ODP, ODG, ODF, SXW, SXI, SXC, SXD, DOC, DOCX, RTF, TXT, XLS, XLSX, PPT, PPTX, VSD, MPP, MPPX och PUB
 
-   ***Obs **: Tjänsten Generate PDF stöder inte 64-bitarsversionerna av OpenOffice.*
+>[!NOTE]
+>
+>Tjänsten Generate PDF stöder inte 64-bitarsversionerna av OpenOffice.
 
 * Adobe Photoshop® CS2 för att konvertera PSD (endast Windows)
 
-   ***Obs**! Photoshop CS3 och CS4 stöds inte eftersom de inte stöder Windows Server 2003 eller Windows Server 2008. *
+>[!NOTE]
+>
+>Photoshop CS3 och CS4 stöds inte eftersom de inte stöder Windows Server 2003 eller Windows Server 2008.
 
 * Adobe FrameMaker® 7.2 och 8 för att konvertera FM (endast Windows)
 * Adobe PageMaker® 7.0 för konvertering av PMD, PM6, P65 och PM (endast Windows)
