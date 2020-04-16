@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: de527d50-991b-4ca3-a8ac-44d5cab988e9
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -64,7 +64,9 @@ Du kan utföra följande uppgifter med hjälp av utdatatjänsten:
 * [Skapa sökregler](creating-document-output-streams.md#creating-search-rules)
 * [Förenkla PDF-dokument](creating-document-output-streams.md#flattening-pdf-documents)
 
-   ***Obs **: Mer information om utdatatjänsten finns i[Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).*
+>[!NOTE]
+>
+>Mer information om utdatatjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ## Skapa PDF-dokument {#creating-pdf-documents}
 
@@ -76,7 +78,7 @@ Använd Forms-tjänsten om du vill skapa ett interaktivt PDF-formulär där anv�
 
 >[!NOTE]
 >
-> Mer information om utdatatjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om utdatatjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary-of-steps}
 
@@ -169,7 +171,7 @@ Om du använder ett taggat Acrobat-formulär som indata kan du inte använda Jav
 
 **Generera ett PDF-dokument**
 
-När du har refererat till en giltig XML-datakälla som innehåller formulärdata och angett körningsalternativ, kan du anropa utdatatjänsten, vilket resulterar i att ett PDF-dokument genereras.
+När du har refererat till en giltig XML-datakälla som innehåller formulärdata och angett körningsalternativ, kan du anropa utdatatjänsten, vilket resulterar i att ett PDF-dokument skapas.
 
 När du genererar ett PDF-dokument anger du de URI-värden som krävs av utdatatjänsten för att skapa ett PDF-dokument. En formulärdesign kan lagras på platser som serverfilsystemet eller som en del av ett AEM Forms-program. En formulärdesign (eller andra resurser som en bildfil) som finns som en del av ett Forms-program kan refereras med hjälp av innehållets URI-rotvärde `repository:///`. Ta till exempel följande formulärdesign med namnet *Loan.xdp* som finns i ett Forms-program med namnet *Applications/FormsApplication*:
 
@@ -392,7 +394,7 @@ När ett PDF/A-dokument öppnas i Acrobat visas ett meddelande som bekräftar at
 
 >[!NOTE]
 >
-> Mer information om utdatatjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om utdatatjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-1}
 
@@ -614,7 +616,7 @@ Skapa ett PDF/A-dokument med hjälp av Output API (webbtjänsten):
 
 ## Skicka dokument som finns i innehållstjänster (borttagna) till utdatatjänsten {#passing-documents-located-in-content-services-deprecated-to-the-output-service}
 
-Output-tjänsten återger ett icke-interaktivt PDF-formulär som är baserat på en formulärdesign som vanligtvis sparas som en XDP-fil och skapas i Designer. Du kan skicka ett `com.adobe.idp.Document` objekt som innehåller formulärdesignen till utdatatjänsten. Utdatatjänsten återger sedan formulärdesignen som finns i `com.adobe.idp.Document` objektet.
+Output-tjänsten återger ett icke-interaktivt PDF-formulär som är baserat på en formulärdesign som vanligtvis sparas som en XDP-fil och skapas i Designer. Du kan skicka ett `com.adobe.idp.Document` objekt som innehåller formulärdesignen till utdatatjänsten. Utdatatjänsten återger sedan den formulärdesign som finns i `com.adobe.idp.Document` objektet.
 
 En fördel med att skicka ett `com.adobe.idp.Document` objekt till Output-tjänsten är att andra AEM Forms-tjänståtgärder returnerar en `com.adobe.idp.Document` instans. Det innebär att du kan hämta en `com.adobe.idp.Document` instans från en annan tjänståtgärd och återge den. Anta till exempel att en XDP-fil lagras i en Content Services-nod (utgått) med namnet `/Company Home/Form Designs`, vilket visas i följande bild.
 
@@ -798,7 +800,7 @@ Skicka ett dokument som hämtats från innehållstjänster (borttaget) med hjäl
 
 ## Skicka dokument som finns i databasen till utdatatjänsten {#passing-documents-located-in-the-repository-to-the-output-service}
 
-Output-tjänsten återger ett icke-interaktivt PDF-formulär som är baserat på en formulärdesign som vanligtvis sparas som en XDP-fil och skapas i Designer. Du kan skicka ett `com.adobe.idp.Document` objekt som innehåller formulärdesignen till utdatatjänsten. Utdatatjänsten återger sedan formulärdesignen som finns i `com.adobe.idp.Document` objektet.
+Output-tjänsten återger ett icke-interaktivt PDF-formulär som är baserat på en formulärdesign som vanligtvis sparas som en XDP-fil och skapas i Designer. Du kan skicka ett `com.adobe.idp.Document` objekt som innehåller formulärdesignen till utdatatjänsten. Utdatatjänsten återger sedan den formulärdesign som finns i `com.adobe.idp.Document` objektet.
 
 En fördel med att skicka ett `com.adobe.idp.Document` objekt till Output-tjänsten är att andra AEM Forms-tjänståtgärder returnerar en `com.adobe.idp.Document` instans. Det innebär att du kan hämta en `com.adobe.idp.Document` instans från en annan tjänståtgärd och återge den. Anta till exempel att en XDP-fil lagras i AEM Forms-databasen, vilket visas i följande bild.
 
@@ -930,7 +932,7 @@ Innan du läser *Skapa PDF-dokument med fragment* bör du bekanta dig med att an
 
 >[!NOTE]
 >
-> Mer information om utdatatjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om utdatatjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-4}
 
@@ -1133,7 +1135,7 @@ Med hjälp av tjänsten Output kan du sammanfoga XML-data med en formulärdesign
 
 >[!NOTE]
 >
-> Mer information om utdatatjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om utdatatjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-5}
 
@@ -1337,7 +1339,7 @@ Med hjälp av tjänsten Output kan du sammanfoga XML-data med en formulärdesign
 
 >[!NOTE]
 >
-> Mer information om utdatatjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om utdatatjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-6}
 
@@ -1674,7 +1676,7 @@ Observera att XML-elementet som startar och avslutar varje datapost är `LoanRec
 
 >[!NOTE]
 >
-> Mer information om utdatatjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om utdatatjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-7}
 
@@ -1788,7 +1790,7 @@ Skapa flera PDF-filer med Output API (Java):
 
 1. Referera en XML-datakälla
 
-   * Skapa ett `java.io.FileInputStream` objekt som representerar XML-datakällan som innehåller flera poster genom att använda dess konstruktor och skicka ett strängvärde som anger platsen för XML-filen.
+   * Skapa ett `java.io.FileInputStream` objekt som representerar XML-datakällan som innehåller flera poster med hjälp av dess konstruktor och skicka ett strängvärde som anger platsen för XML-filen.
    * Skapa ett `com.adobe.idp.Document` objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream` objektet.
 
 1. Ange alternativ för PDF-körning
@@ -1915,7 +1917,7 @@ Dessutom kan utdatatjänsten generera dokumentpaket där flera poster finns i da
 
 >[!NOTE]
 >
-> Mer information om utdatatjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om utdatatjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-8}
 
@@ -2172,7 +2174,7 @@ Om du försöker förenkla ett PDF-dokument som är ett icke-interaktivt PDF-dok
 
 >[!NOTE]
 >
-> Mer information om utdatatjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om utdatatjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-9}
 
