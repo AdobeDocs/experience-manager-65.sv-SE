@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 discoiquuid: 536bcba4-b754-4799-b0d2-88960cc4c44a
 translation-type: tm+mt
-source-git-commit: 94472fad34fe97740e4711d2cb35beb884db52ce
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -104,7 +104,9 @@ Aliaset innehåller alla parametrar som krävs för en HSM eller token. Följ in
    * **DLL-sökväg**: Ange den fullständiga sökvägen till HSM- eller tokenklientbiblioteket på servern. Exempel: C:\Program Files\LunaSA\cryptoki.dll. I en klustrad miljö måste sökvägen vara identisk för alla servrar i klustret.
    * **HSM-stift**: Ange lösenordet som krävs för att komma åt enhetsnyckeln.
    * **HSM-kortplats-ID**: Ange en platsidentifierare av typen heltal. Kortplats-ID anges klient för klient. Om du registrerar en andra dator till en annan partition (till exempel HSMPART2 på samma HSM-enhet), kopplas fack 1 till HSMPART2-partitionen för klienten.
-   **** Obs! *När du konfigurerar Etoken anger du ett numeriskt värde för fältet HSM-kortplats-ID. Ett numeriskt värde krävs för att signeringsåtgärderna ska fungera.*
+   >[!NOTE]
+   >
+   >När du konfigurerar Etoken anger du ett numeriskt värde för fältet HSM-kortplats-ID. Ett numeriskt värde krävs för att signeringsåtgärderna ska fungera.
 
    * **Certifikat SHA1**: Ange SHA1-värdet (tumavtryck) för filen med den offentliga nyckeln (.cer) för de autentiseringsuppgifter som du använder. Kontrollera att inga blanksteg används i SHA1-värdet. Om du använder ett fysiskt certifikat krävs det inte.
    * **HSM-enhetstyp**: Välj tillverkaren av HSM-enheten (Luna eller annan) eller eToken-enheten.
