@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 3d8bb2d3-b1f8-49e1-a529-b3e7a28da4bb
 translation-type: tm+mt
-source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -127,10 +127,10 @@ docRef.text = "Text for my document";  // Optionally, you can override the ser
 
 * När dokumentet inte finns på servern kan du använda servern Remoting Upload för att överföra ett dokument till AEM Forms. Nytt i AEM Forms är möjligheten att överföra säkra dokument. När du överför ett säkert dokument måste du använda en användare som har rollen *Document Upload Application User* . Utan den här rollen kan användaren inte överföra ett säkert dokument. Vi rekommenderar att du använder enkel inloggning för att överföra ett säkert dokument. (Se [Skicka säkra dokument för att anropa processer med Remoting](invoking-aem-forms-using-remoting.md#passing-secure-documents-to-invoke-processes-using-remoting).)
 
-   **Obs**: Om AEM Forms är konfigurerat att tillåta osäkra dokument att överföras kan du använda en användare som inte har användarrollen för dokumentöverföring för att överföra ett dokument. En användare kan också ha behörigheten Dokumentöverföring. Om AEM Forms är konfigurerat att endast tillåta säkra dokument måste användaren ha användarrollen Dokumentöverföring eller behörigheten Dokumentöverföring. (Se [Konfigurera AEM-formulär för att acceptera säkra och osäkra dokument](invoking-aem-forms-using-remoting.md#configuring-aem-forms-to-accept-secure-and-unsecure-documents).)
+>[!NOTE]
+Om AEM Forms är konfigurerat att tillåta osäkra dokument att överföras kan du använda en användare som inte har användarrollen för dokumentöverföring för att överföra ett dokument. En användare kan också ha behörigheten Dokumentöverföring. Om AEM Forms är konfigurerat att endast tillåta säkra dokument måste användaren ha användarrollen Dokumentöverföring eller behörigheten Dokumentöverföring. (Se [Konfigurera AEM-formulär för att godkänna säkra och osäkra dokument](invoking-aem-forms-using-remoting.md#configuring-aem-forms-to-accept-secure-and-unsecure-documents).
 
-   Du använder Flash standardfunktioner för överföring av den angivna URL-adressen: `https://SERVER:PORT/remoting/lcfileupload`. Du kan sedan använda `DocumentReference` objektet där en indataparameter av typen `Document` förväntas
-   ` private function startUpload():void  {  fileRef.addEventListener(Event.SELECT, selectHandler);  fileRef.addEventListener("uploadCompleteData", completeHandler);  try  {   var success:Boolean = fileRef.browse();  }    catch (error:Error)  {   trace("Unable to browse for files.");  }  }      private function selectHandler(event:Event):void {  var request:URLRequest = new  URLRequest("https://SERVER:PORT/remoting/lcfileupload")  try   {   fileRef.upload(request);   }    catch (error:Error)   {   trace("Unable to upload file.");   }  }    private function completeHandler(event:DataEvent):void  {   var params:Object = new Object();   var docRef:DocumentReference = new DocumentReference();   docRef.url = event.data as String;   docRef.referenceType = DocumentReference.REF_TYPE_URL;  }`Snabbstart för fjärrkommunikation använder serverkommandot för fjärröverföring för att skicka en PDF-fil till `MyApplication/EncryptDocument`processen. (Se [Anropa en kort process genom att skicka ett osäkert dokument med (borttaget för AEM-formulär) AEM Forms Remoting](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting).)
+Du använder Flash standardfunktioner för överföring av den angivna URL-adressen: `https://SERVER:PORT/remoting/lcfileupload`. Du kan sedan använda `DocumentReference` objektet där en indataparameter av typen `Document` förväntas` private function startUpload():void  {  fileRef.addEventListener(Event.SELECT, selectHandler);  fileRef.addEventListener("uploadCompleteData", completeHandler);  try  {   var success:Boolean = fileRef.browse();  }    catch (error:Error)  {   trace("Unable to browse for files.");  }  }      private function selectHandler(event:Event):void {  var request:URLRequest = new  URLRequest("https://SERVER:PORT/remoting/lcfileupload")  try   {   fileRef.upload(request);   }    catch (error:Error)   {   trace("Unable to upload file.");   }  }    private function completeHandler(event:DataEvent):void  {   var params:Object = new Object();   var docRef:DocumentReference = new DocumentReference();   docRef.url = event.data as String;   docRef.referenceType = DocumentReference.REF_TYPE_URL;  }`. Snabbstarten för fjärrkommunikation använder serverleten för fjärröverföring för att skicka en PDF-fil till `MyApplication/EncryptDocument`processen. (Se [Anropa en kort process genom att skicka ett osäkert dokument med (borttaget för AEM-formulär) AEM Forms Remoting](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting).)
 
 ```java
  
@@ -197,9 +197,9 @@ I det här avsnittet beskrivs hur du anropar en AEM Forms-process och överför 
 
 Du skapar en `mx:RemoteObject` instans för att anropa en AEM Forms-process som har skapats i Workbench. Om du vill skapa en `mx:RemoteObject` instans anger du följande värden:
 
-* **** id: Namnet på den `mx:RemoteObject` instans som representerar processen som ska anropas.
-* **** mål: Namnet på den AEM Forms-process som ska anropas. Om du till exempel vill anropa `MyApplication/EncryptDocument` processen anger du `MyApplication/EncryptDocument`.
-* **** resultat: Namnet på den Flex-metod som hanterar resultatet.
+* **id:** Namnet på den `mx:RemoteObject` instans som representerar processen som ska anropas.
+* **mål:** Namnet på den AEM Forms-process som ska anropas. Om du till exempel vill anropa `MyApplication/EncryptDocument` processen anger du `MyApplication/EncryptDocument`.
+* **resultat:** Namnet på den Flex-metod som hanterar resultatet.
 
 I - `mx:RemoteObject` taggen anger du en `<mx:method>` -tagg som anger namnet på processens anropsmetod. Vanligtvis är namnet på en anropsmetod för Forms `invoke`.
 
@@ -285,7 +285,7 @@ Du kan anropa `MyApplication/EncryptDocument` processen genom att utföra följa
 1. Kryptera PDF-dokumentet genom att anropa `mx:RemoteObject` instansens `invoke` metod. Skicka `Object` som innehåller indataparametern (som är det oskyddade PDF-dokumentet). Se Skicka indatavärden.
 1. Hämta det lösenordskrypterade PDF-dokumentet som returneras från processen. Se Hantera returvärden.
 
-[Snabbstart:Anropa en kort process genom att skicka ett osäkert dokument med hjälp av (borttaget för AEM-formulär) AEM Forms Remoting](/help/forms/developing/invocation-api-quick-starts.md#quick-start-invoking-a-short-lived-process-by-passing-an-unsecure-document-using-deprecated-for-aem-forms-aem-forms-remoting)
+[Snabbstart: Anropa en kort process genom att skicka ett osäkert dokument med hjälp av (borttaget för AEM-formulär) AEM Forms Remoting](/help/forms/developing/invocation-api-quick-starts.md#quick-start-invoking-a-short-lived-process-by-passing-an-unsecure-document-using-deprecated-for-aem-forms-aem-forms-remoting)
 
 ## Autentisera klientapplikationer som byggts med Flex {#authenticating-client-applications-built-with-flex}
 
@@ -612,7 +612,7 @@ Du kan använda administrationskonsolen för att ange om dokument är säkra nä
 >[!NOTE]
 Om du vill konfigurera AEM-formulär så att osäkra dokument accepteras markerar du alternativet Tillåt oskyddad dokumentöverföring från Flex-program. Starta sedan om ett program eller en tjänst för att se till att inställningen börjar gälla.
 
-### Snabbstart: Anropa en kort process genom att skicka ett säkert dokument med Remoting {#quick-start-invoking-a-short-lived-process-by-passing-a-secure-document-using-remoting}
+### Snabbstart: Anropa en kortvarig process genom att skicka ett säkert dokument med Remoting {#quick-start-invoking-a-short-lived-process-by-passing-a-secure-document-using-remoting}
 
 I följande kodexempel anropas `MyApplication/EncryptDocument.`A-användaren måste logga in för att klicka på knappen Välj fil som används för att överföra en PDF-fil och starta processen. Det vill säga, när användaren har autentiserats aktiveras knappen Välj fil. Följande bild visar Flex-klientprogrammet när en användare har autentiserats. Observera att den autentiserade CheckBox är aktiverad.
 
