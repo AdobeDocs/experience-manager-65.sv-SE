@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 18a320b4-dce6-4c50-8864-644b0b2d6644
 translation-type: tm+mt
-source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -445,7 +445,9 @@ När du har distribuerat webbprogrammet kan du testa det med en webbläsare. Om 
 
    Ange värden i HTML-formulärfälten och klicka på knappen Skicka program. Om det uppstår problem läser du loggfilen för J2EE-programservern.
 
-   ***Obs **: Bekräfta att Java-programmet anropade processen genom att starta Workspace och godkänna lånet.*
+>[!NOTE]
+>
+>Bekräfta att Java-programmet anropade processen genom att starta Workspace och godkänna lånet.
 
 ## Skapa ett ASP.NET-webbprogram som anropar en mänsklig, lång process {#creating-an-asp-net-web-application-that-invokes-a-human-centric-long-lived-process}
 
