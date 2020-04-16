@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 3504afe1-abf5-4fbf-a0d2-e093361764bd
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -33,7 +33,9 @@ Om du vill använda det nya formatet i HTML5-formulär markerar du tabellen som 
 
 Tabellerna som markeras som *complexTable* följer den inbyggda HTML-återgivningen och ger bättre stöd för tillgänglighet för vissa skärmläsare.  Om du vill skapa ett radintervall markerar du flera celler i en tabell i följd i samma kolumn, högerklickar på markeringen och klickar sedan på **[!UICONTROL Sammanfoga celler]**.
 
-*****Obs! Det går bara att skapa ett radintervall för celler längst till vänster.*
+>[!NOTE]
+>
+>Det går bara att skapa ett radintervall för celler längst till vänster.
 
 Om du vill markera en rad som en radrubrik markerar du alla celler i raden, högerklickar på markeringen och klickar sedan på **[!UICONTROL Markera rubrik]**.
 
