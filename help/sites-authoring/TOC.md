@@ -2,9 +2,9 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: AEM 6.5 Authoring User Guide
+user-guide-title: Användarhandbok för AEM 6.5-redigering
 translation-type: tm+mt
-source-git-commit: e82fc1d3de3cff96cadb6a25a6ba6169cf7f7cd0
+source-git-commit: 187421434882cf61ad17aea9f75920a5d5a76ed1
 
 ---
 
@@ -85,7 +85,7 @@ source-git-commit: e82fc1d3de3cff96cadb6a25a6ba6169cf7f7cd0
    + [Hantera målgrupper](managing-audiences.md)
    + [Skapa och hantera erbjudanden](offerlib.md)
    + [Förstå segmentering](segmentation-overview.md)
-+ AEM och Adobe Campaign {aem-adobe-campaign}
++ AEM och Adobe Campaign {#aem-adobe-campaign}
    + [Arbeta med Adobe Campaign](adobe-campaign.md)
    + [Arbeta med Adobe Campaign Classic och Adobe Campaign Standard](campaign.md)
    + [Inrikta er på Adobe Campaign](target-adobe-campaign.md)
