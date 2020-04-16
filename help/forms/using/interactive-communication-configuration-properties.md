@@ -11,7 +11,7 @@ topic-tags: interactive-communications
 discoiquuid: acb61d37-cd22-422e-bbf3-a2979b13ad41
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a326e508a781b3afaba8b5e371aa862a30536740
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -22,7 +22,7 @@ Interactive Communications innehåller egenskaper som konfigureras automatiskt e
 
 Öppna konfigurationssidan för **Adobe Experience Manager Web Console** med följande URL:
 
-`https://&lt;server&gt;:&lt;port&gt;/&lt;contextPath&gt;/system/console/configMgr`
+`https:/[server]:[port]/<contextPath>/system/console/configMgr`
 
 Konfigurationsegenskaperna omfattar:
 
@@ -60,19 +60,19 @@ Tryck på **Dokumentfragmentskonfiguration** på **Adobe Experience Manager Web 
    <td>Indrag</td> 
    <td>Bredden på en enskild indragsenhet som används för text i listdokumentfragment.</td> 
    <td>12.7mm</td> 
-   <td> Nummer</td> 
+   <td>Siffra</td> 
   </tr> 
   <tr> 
    <td>Minsta bredd för romerska siffror</td> 
    <td>Minsta bredd som ska användas på punkt- eller nummerfältet när latinska nummer används i listdokumentfragment. </td> 
    <td>12.7mm</td> 
-   <td> Nummer</td> 
+   <td>Siffra</td> 
   </tr> 
   <tr> 
    <td>Minsta numerisk bredd</td> 
    <td>Minsta bredd som ska användas på punkt- eller nummerfältet när numrerade listor används, förutom latinska nummer i listdokumentfragment.</td> 
    <td>8.0mm</td> 
-   <td> Nummer</td> 
+   <td>Siffra</td> 
   </tr> 
  </tbody> 
 </table>
@@ -117,7 +117,7 @@ Tryck på **Adaptive Form and Interactive Communication Web Channel Configuratio
 | Egenskap | Beskrivning | Standard | Godtagbara värden |
 |---|---|---|---|
 | Visa platshållare | Markera kryssrutan för att aktivera visning av platshållare för fält som ingår i adaptiva formulär och interaktiv kommunikation. | Markerad | Ej relevant |
-| Maximalt antal cacheposter | Ange det maximala antalet adaptiva formulär och interaktiv kommunikation som kan hämtas med cacheminnet. | 100 |  Nummer |
+| Maximalt antal cacheposter | Ange det maximala antalet adaptiva formulär och interaktiv kommunikation som kan hämtas med cacheminnet. | 100 | Siffra |
 | Gör filnamnet unikt | Markera kryssrutan om du vill att unika namn för filer ska inkluderas som bilagor i Adaptive Forms och Interactive Communications. | Inte markerad | Ej relevant |
 
 ## Konfiguration av tema för adaptiv form och interaktiv kommunikation - webbkanal {#adaptive-form-and-interactive-communication-web-channel-theme-configuration}
