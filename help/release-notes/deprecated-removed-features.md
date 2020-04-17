@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: e8e2e01b-0117-48c3-86d8-609d29a147be
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 471b57a52efc849eb57201e6397221fa4f88c746
+source-git-commit: 4be5286858b255a30983b5987ac54c4e71dd4f2f
 
 ---
 
@@ -42,7 +42,7 @@ Kunderna rekommenderas att granska om de använder funktionen/funktionen i den a
    <td>Kunder rekommenderas att gå över till nya integreringsfunktioner i Creative Cloud, som Adobe Asset Link eller AEM-datorprogrammet. Mer information finns i Bästa praxis <a href="/help/assets/aem-cc-integration-best-practices.md">för integrering av</a> AEM och Creative Cloud.</td>
   </tr>
   <tr>
-   <td>Resurser</td>
+   <td>Assets</td>
    <td>
     <ol>
      <li>AssetDownloadServlet är inaktiverat som standard för publiceringsinstanserna. Mer information finns i <a href="/help/sites-administering/security-checklist.md">checklista</a>för AEM-säkerhet.</li>
@@ -151,6 +151,11 @@ Kunderna rekommenderas att granska om de använder funktionen/funktionen i den a
    <td><p>Klassiskt redigeringsprogram för användargränssnittet i CRXDE-listan</p> <p>Adobe planerar inte att ytterligare förbättra den klassiska dialogruteredigeraren för användargränssnittet som levereras som en del av distributionen (QuickStart)</p> </td>
    <td> </td>
   </tr>
+  <tr>
+   <td>Formulär</td>
+   <td><p>AEM Forms-integration med AEM Mobile&lt; är föråldrad </p> </td>
+   <td>Ingen ersättning </td>
+  </tr>
  </tbody>
 </table>
 
@@ -166,9 +171,10 @@ I det här avsnittet listas funktioner som har tagits bort från AEM 6.5. Tidiga
 | Formulär | Stöd för tjänsten Adobe Central Migration Bridge har tagits bort eftersom Adobe Central-produkten inte längre stöds. | Ingen ersättning |
 | Formulär | `com.adobe.fd.df.fdinternal.model.ConfigurationInstance` | Ingen ersättning |
 | Formulär | `com.adobe.fd.ccm.channels.print.fdinternal.api.service.PrintDataTransformer` | Ingen ersättning |
+| Formulär | Uppgradering från LiveCycle ES4 SP1 till AEM 6.5 Forms on JEE är inte tillgänglig | Se [tillgängliga uppgraderingssökvägar](../forms/using/upgrade.md) i uppgraderingsdokumentationen för AEM Forms. |
 | Utvecklare | Firebug Lite har tagits bort från standarddistributionen (Quickstart) | Använd de inbyggda webbläsarkonsolerna för utvecklare |
 | Utvecklare | Ta bort `customJavaScriptPath` stöd i HTML Client Library Manager. | Ingen ersättning |
-| Resurser | Funktionen för att avlasta resurser har tagits bort i AEM 6.5 | Ingen ersättning |
+| Assets | Funktionen för att avlasta resurser har tagits bort i AEM 6.5 | Ingen ersättning |
 | Cache | `system/console/slingjsp` är inte längre tillgängligt i AEM 6.5. | Klasser och något cacheminne lagras under paketet Apache Sling Commons FileSystem ClassLoader. Du kan kontrollera paketnumret i AEM Web Console och ta bort cachemappen direkt från filsystemet (`crx-quickstart/launchpad/felix/bundle<ID>`). |
 
 ## Förhandsmeddelande för nästa release {#pre-announcement-for-next-release}
