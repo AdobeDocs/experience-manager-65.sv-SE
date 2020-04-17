@@ -4,7 +4,7 @@ description: Lär dig resurshanteringsåtgärder som överföring, hämtning, re
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: f737122575c9fd0af82a8b86d259db61753f2f97
+source-git-commit: dea9bf9387cf4b69e7054e03c5906ecf25cb0d59
 
 ---
 
@@ -306,7 +306,7 @@ Välj ett ZIP-arkiv i taget, klicka på **[!UICONTROL Extrahera arkiv]** och vä
 
 När extraheringen är klar meddelar AEM dig i meddelandefältet. Medan AEM extraherar ZIP kan du gå tillbaka till arbetet utan att avbryta extraheringen.
 
-![Meddelande om ZIP-extrahering](assets/Zip-extraction-notification.png)
+![Meddelande om ZIP-filextrahering](assets/Zip-extraction-notification.png)
 
 Vissa begränsningar för funktionen är:
 
@@ -326,11 +326,9 @@ Följ de här stegen för att förhandsgranska en resurs.
 
    Om du vill zooma in på en resurs trycker/klickar du `+` (eller trycker/klickar på förstoringsglaset på resursen). Om du vill zooma ut trycker/klickar du `-`. När du zoomar in kan du titta närmare på alla delar av bilden genom att panorera. Med den återställda zoompilen återgår du till den ursprungliga vyn.
 
-   ![uploadicon](assets/uploadicon.png)
-
    Tryck på **[!UICONTROL Återställ]** om du vill återställa vyn till den ursprungliga storleken.
 
-   ![chlimage_1-216](assets/chlimage_1-11.png)
+   ![Återställ ikonen så att användaren återgår till den ursprungliga vyn](assets/chlimage_1-11.png)
 
 **Förhandsgranska resurser endast med tangentbordstangenter**
 
@@ -353,11 +351,11 @@ Se även [Förhandsgranska dynamiska medieresurser.](/help/assets/previewing-ass
 
 ## Redigera egenskaper och metadata {#editing-properties}
 
-1. Navigera till platsen för resursen vars metadata du vill redigera.
+1. Navigera till resursens plats för att redigera dess metadata.
 
 1. Markera resursen och visa resursegenskaperna genom att trycka/klicka på **[!UICONTROL Egenskaper]** i verktygsfältet. Du kan också välja snabbåtgärden **[!UICONTROL Egenskaper]** på resurskortet.
 
-   ![properties_quickaction](assets/properties_quickaction.png)
+   ![Snabbåtgärden Egenskaper för resurskortvyn](assets/properties_quickaction.png)
 
 1. Redigera metadataegenskaperna under olika flikar på sidan [!UICONTROL Egenskaper] . Du kan till exempel redigera titeln, beskrivningen och så vidare på fliken **[!UICONTROL Grundläggande]** .
 
@@ -367,13 +365,13 @@ Se även [Förhandsgranska dynamiska medieresurser.](/help/assets/previewing-ass
 
 1. To schedule a particular date/time for the activation of the asset, use the date picker beside the **[!UICONTROL On Time]** field.
 
-   ![använd datumtidsväljaren eller tangentbordstangenter i fältet I tid för att lägga till datum och tid för resursaktivering](assets/schedule-activation.png)
+   ![Datumtidsväljaren eller använd tangentbordstangenter i fältet I tid för att lägga till datum och tid för resursaktivering](assets/schedule-activation.png)
 
    *Bild: Schemalägg aktivering av tillgångar*
 
 1. Om du vill inaktivera tillgången efter en viss tid väljer du datum/tid för inaktiveringen i datumväljaren bredvid fältet **[!UICONTROL Av tid]** . Inaktiveringsdatumet ska vara senare än aktiveringsdatumet för en tillgång. Efter [!UICONTROL Av-tid]är en resurs och dess återgivningar inte tillgängliga vare sig via webbgränssnittet Resurser eller via HTTP-API:t.
 
-   ![använd datumtidsväljaren eller tangentbordstangenter i fältet Fråntid för att lägga till datum och tid för inaktivering av resurser](assets/schedule-deactivation.png)
+   ![Datumtidsväljaren eller använd tangentbordstangenter i fältet Fråntid för att lägga till datum och tid för inaktivering av resurser](assets/schedule-deactivation.png)
 
    *Bild: Schemalägg inaktivering av tillgångar*
 
@@ -385,7 +383,7 @@ Se även [Förhandsgranska dynamiska medieresurser.](/help/assets/previewing-ass
 
 1. To provide a rating to the asset, tap/click the **[!UICONTROL Advanced]** tab and then tap/click the star at the appropriate position to assign the desired rating.
 
-   ![omdömen](assets/ratings.png)
+   ![Fliken Avancerat i resursegenskaper för att tilldela klassificering](assets/ratings.png)
 
    Värderingspoängen som du tilldelar resursen visas under **[!UICONTROL Dina graderingar]**. Det genomsnittliga omdöme som resursen fick från användare som värderade resursen visas under **[!UICONTROL Värdering]**. Dessutom visas uppdelningen av de omdömen som bidrar till det genomsnittliga omdömet under **[!UICONTROL Värderingsfördelning]**. Du kan söka efter resurser baserat på genomsnittliga poäng.
 
@@ -414,7 +412,7 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
 Övriga egenskaper och metadatainformation behålls. Ingen del av kopian skapas när en resurs kopieras.
 
 1. Välj en eller flera resurser i resursgränssnittet och tryck/klicka sedan på ikonen **[!UICONTROL Kopiera]** i verktygsfältet. Du kan också välja snabbåtgärden **[!UICONTROL Kopiera]** från resurskortet.
-   ![copy_icon](assets/copy_icon.png)
+   ![Ikonen Kopiera i verktygsfältet i resursens användargränssnitt](assets/copy_icon.png)
 
    >[!NOTE]
    >
@@ -428,7 +426,7 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
 
 1. Klicka på/tryck på ikonen **[!UICONTROL Klistra in]** resurs i verktygsfältet.
 
-   ![chlimage_1-219](assets/chlimage_1-14.png)Assets kopieras sedan till den här platsen.
+   ![Ikonen Klistra in i verktygsfältet](assets/chlimage_1-14.png)Resurser för resurser kopieras sedan till den här platsen.
 
    >[!NOTE]
    >
@@ -439,7 +437,7 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
 1. Navigera till platsen för resursen som du vill flytta.
 
 1. Markera resursen och tryck/klicka på ikonen **[!UICONTROL Flytta]** i verktygsfältet.
-   ![move_icon](assets/move_icon.png)
+   ![Ikonen Flytta i verktygsfältet i resursens användargränssnitt](assets/move_icon.png)
 
 1. Gör något av följande i guiden Flytta resurser:
 
@@ -766,7 +764,7 @@ Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Vi
    >
    >Anteckningar kan också läggas till i videomaterialet. När du kommenterar videoklipp pausas spelaren så att du kan anteckna i en bildruta. Mer information finns i [Hantera videomaterial](/help/assets/managing-video-assets.md).
 
-1. Om du vill välja en annan färg så att du kan skilja på användarna klickar/trycker du på profilikonen och klickar/trycker på **[!UICONTROL Mina inställningar]**.
+1. Om du vill välja en annan färg så att du kan skilja mellan användarna klickar/trycker du på profilikonen och klickar/trycker på **[!UICONTROL Mina inställningar]**.
 
    ![Välj ikonen för användarprofilen och sedan Mina inställningar för att öppna Användarinställningar](assets/User-profile-preferences.png)
 
