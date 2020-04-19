@@ -10,7 +10,7 @@ topic-tags: Configuration
 discoiquuid: 38c0ec46-5686-4656-bfb4-7125ec194673
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -55,7 +55,9 @@ set CQ_JVM_OPTS=%CQ_JVM_OPTS% -XX:PermSize=256m
 set CQ_JVM_OPTS=%CQ_JVM_OPTS% -XX:MaxPermSize=1024m
 ```
 
-**Obs**: De rekommenderade inställningarna är för Windows 2008 R2 8 Core och Oracle HotSpot 1.7 (64-bitars) JDK och bör skalas upp eller ned enligt din systemkonfiguration.
+>[!NOTE]
+>
+>De rekommenderade inställningarna är för Windows 2008 R2 8 Core och Oracle HotSpot 1.7 (64-bitars) JDK och bör skalas upp eller ned enligt din systemkonfiguration.
 
 ## Använda en webbserver {#using-a-web-server}
 
@@ -63,7 +65,9 @@ Anpassningsbara formulär och HTML5-formulär återges i HTML5-format. Resultate
 
 Så här aktiverar du exempelvis komprimering på 32-bitars Apache Web Server 2.0 med JBoss:
 
-***Obs **: Följande instruktioner gäller inte för andra servrar än 32-bitars Apache Web Server 2.0. Om du vill ha mer information om vilka steg som gäller för andra servrar läser du i motsvarande produktdokumentation.*
+>[!NOTE]
+>
+>Följande instruktioner gäller inte för andra servrar än 32-bitars Apache Web Server 2.0. Om du vill ha mer information om vilka steg som gäller för andra servrar läser du i motsvarande produktdokumentation.
 
 I följande steg visas de ändringar som krävs för att aktivera komprimering med Apache Web Server
 
