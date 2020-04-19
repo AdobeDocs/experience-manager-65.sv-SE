@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e047a95e-0acb-438a-8d27-f005c0adc508
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -51,7 +51,7 @@ Om processerna har utformats och implementerats utan att e-post krävs behöver 
 >
 >Om du anger felaktig information kan du klicka på Avbryt för att gå tillbaka till sidan som visades tidigare.
 
-### Konfigurera e-postmallar för användning med AEM Forms Workspace {#configuring-email-templates-to-use-html-workspace}
+### Konfigurera e-postmallar för att använda AEM Forms Workspace {#configuring-email-templates-to-use-html-workspace}
 
 >[!NOTE]
 >
@@ -69,7 +69,7 @@ Som standard innehåller e-postmeddelanden som skickas från AEM-formulär länk
 
 ## Konfigurera meddelanden för användare och grupper {#configuring-notifications-for-users-and-groups}
 
-På sidan Aktivitetsmeddelande kan du konfigurera mallar som används i arbetsflödet för formulär för att generera e-postmeddelanden som skickas till användare och grupper. Du kan anpassa och formatera meddelandena med hjälp av formulärarbetsflödesvariabler.
+På sidan Aktivitetsmeddelande kan du konfigurera mallar som används i arbetsflödet för formulär för att generera e-postmeddelanden som skickas till användare och grupper. Du kan anpassa och formatera meddelandena med hjälp av arbetsflödesvariabler för formulär.
 
 Du konfigurerar följande typer av meddelanden för användare och grupper:
 
@@ -195,15 +195,17 @@ Om din lösning distribueras i en klustrad miljö ska du ersätta den `@@notific
 
 `<`*PORT *`>`är portnumret för programserverns HTTP-avlyssnare. Standardporten för HTTP-avlyssnare för de programservrar som stöds är följande:
 
-**** JBoss: 8080
+**JBoss:** 8080
 
-**** Oracle WebLogic Server: 7001
+**Oracle WebLogic Server:** 7001
 
-**** IBM WebSphere: 9080
+**IBM WebSphere:** 9080
 
 Om du vill att de här URL-adresserna ska fungera korrekt ersätter du `<`*PORT *`>`med det portnummer som passar din miljö.
 
-***Obs **: Om du använder ett annat anpassat webbprogram än Forms för att ge användarna tillgång till uppgifterna, måste du i stället använda ett URL-format som passar ditt anpassade program.*
+>[!NOTE]
+>
+>Om du använder ett annat anpassat webbprogram än Forms för att ge användarna tillgång till uppgifterna, måste du i stället använda ett URL-format som passar ditt anpassade program.
 
 ### Variabelväljaren {#variable-picker}
 
@@ -211,7 +213,7 @@ Variabelväljarlistan innehåller användbara variabler som du kan dra och släp
 
 För påminnelser, uppgiftstilldelningar och deadlines för användare och grupper kan du använda följande variabler i rutorna Ämne och Meddelandemall:
 
-**description** Innehållet i egenskapen Description, enligt definitionen i användarsteget (startpunkt, åtgärden Assign Task eller åtgärden Assign Multiple Tasks) för processen i Workbench.
+**description** Innehållet i egenskapen Description, enligt definitionen i användarsteget (startpunkt, Tilldela uppgift eller Tilldela flera uppgifter) för processen i Workbench.
 
 **instruktioner** Innehållet i egenskapen Aktivitetsinstruktioner, enligt definition i användarsteget i processen i Workbench.
 
@@ -229,7 +231,9 @@ Dessutom kan du använda följande för grupppåminnelser, grupptilldelningar oc
 
 **group-name** Namnet på gruppen som är tilldelad arbetsuppgiften.
 
-**Obs**: *Om en variabel inte har något värde returneras ingenting.*
+>[!NOTE]
+>
+>Om en variabel saknar värde returneras ingenting.
 
 För fasta grenar kan du använda följande variabler i rutorna Ämne och Meddelandemall:
 
