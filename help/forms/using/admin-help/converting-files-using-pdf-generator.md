@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 999ae2be-56ba-48c1-861b-8d4c991a0206
 translation-type: tm+mt
-source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -61,7 +61,7 @@ Om ZIP-filen innehåller mer än en HTML-fil på den lägsta nivån i mapphierar
 
 >[!NOTE]
 >
->Funktionen HTML till PDF kräver vissa teckensnitt i systemets teckensnittskatalog. I Linux, Solaris och AIX måste systemteckensnittskatalogen innehålla teckensnittet Courier. I Windows måste systemets teckensnittskatalog innehålla Times New Roman.
+>Funktionen HTML till PDF kräver vissa teckensnitt i systemets teckensnittskatalog. I Linux, Solaris och AIX måste systemteckensnittskatalogen innehålla teckensnittet Courier. I Windows måste systemteckensnittskatalogen innehålla Times New Roman.
 
 >[!NOTE]
 >
@@ -72,16 +72,19 @@ Om ZIP-filen innehåller mer än en HTML-fil på den lägsta nivån i mapphierar
 
    * I Överför fil skriver du sökvägen och filnamnet för HTML-filen eller ZIP-filen, eller klickar på Bläddra för att leta reda på och markera den.
    * I rutan Ange URL-adress skriver du URL-adressen till sidan eller webbplatsen som ska konverteras.
-
-      ***Obs **: Filen som du konverterar måste ha filnamnstillägget .html, .htm eller .zip.*
+   >[!NOTE]
+   >
+   >Filen som du konverterar måste ha filnamnstillägget .html, .htm eller .zip.
 
 1. Ange konfigurationsinställningarna:
 
    * Om du vill använda anpassade inställningar väljer du Använd anpassade inställningar, anger säkerhets- och filtypsinställningar och anger ett timeout-värde. Standardvärdet är 270 sekunder.
-
-      **Obs**: Om du har konfigurerat tjänsten Generera PDF så att den använder Acrobat WebCapture, påverkar inte de filtypsinställningar som du har valt på den här sidan den PDF-fil som skapas. Ändra i stället den version av Acrobat som är installerad på servern.
+   >[!NOTE]
+   >
+   >Om du har konfigurerat tjänsten Generera PDF så att den använder Acrobat WebCapture, påverkar inte de filtypsinställningar som du har valt på den här sidan den PDF-fil som skapas. Ändra i stället den version av Acrobat som är installerad på servern.
 
    * Om du vill använda en befintlig inställningsfil väljer du Överför inställningsfil och klickar på Bläddra för att gå till filplatsen.
+
 
 1. Om du vill överföra en XMP-fil klickar du på Bläddra och går till filplatsen. En XMP-fil kan användas för att inkludera standardmetadatainformation. (Se [Om XMP-filer](converting-files-using-pdf-generator.md#about-xmp-files).)
 1. Klicka på Skapa. När filen skapas visas en länk till PDF-filen.
