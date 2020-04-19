@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0f069fbc-10c2-403e-9419-5e9920035d75
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -26,7 +26,9 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 Om du använder IPv6 anger du bas-URL:en som datornamn eller DNS-namn. Om du använder en numerisk IP-adress kan Acrobat inte öppna principskyddade filer. Använd även HTTP-säker URL (HTTPS) för servern.
 
-***Obs **: Bas-URL:en är inbäddad i principskyddade filer. Klientprogram använder bas-URL:en för att ansluta tillbaka till servern. Skyddade filer innehåller även fortsättningsvis bas-URL:en, även om den ändras senare. Om du ändrar bas-URL:en måste konfigurationsinformationen uppdateras för alla anslutande klienter.*
+>[!NOTE]
+>
+>Bas-URL:en är inbäddad i principskyddade filer. Klientprogram använder bas-URL:en för att ansluta tillbaka till servern. Skyddade filer innehåller även fortsättningsvis bas-URL:en, även om den ändras senare. Om du ändrar bas-URL:en måste konfigurationsinformationen uppdateras för alla anslutande klienter.
 
 **Standardperiod för offlinelån:** Den standardtid som en användare kan använda ett skyddat dokument offline. Den här inställningen avgör det inledande värdet för inställningen för den automatiska offlinelåneperioden när du skapar en profil. (Se Skapa och redigera profiler.) När låneperioden löper ut måste mottagaren synkronisera dokumentet igen för att kunna fortsätta använda det.
 
@@ -166,7 +168,7 @@ Av sekretesskäl ger dokumentskyddet ett automatiskt nyckelrolloveralternativ me
 
 **Överför huvudnycklar manuellt**
 
-För att sekretessen för offlinedokument ska kunna bevaras kan du manuellt föra över huvudnycklar. Du kan behöva rulla över en nyckel manuellt (t.ex. om nyckeln komprometteras av någon som hämtar den från en dator där den cache-lagras för att kunna aktivera offlineåtkomst till ett dokument).
+Om du vill behålla sekretessen för offlinedokument kan du manuellt föra över huvudnycklar. Du kan behöva rulla över en nyckel manuellt (t.ex. om nyckeln komprometteras av någon som hämtar den från en dator där den cache-lagras för att kunna aktivera offlineåtkomst till ett dokument).
 
 >[!NOTE]
 >
@@ -853,7 +855,7 @@ Acrobat Reader DC-tillägg för Microsoft Office är ett plugin-program som anv�
    * Apple OS X
    * Sun Solaris
    * HP-UX
-   `SDKVersions` Anger vilken version av dokumentsäkerhets-API:t för C++-klient som används av klientprogrammet. Exempel, `"8.2"`.
+   `SDKVersions` Anger vilken version av dokumentsäkerhets-API:t för C++-klient som används av klientprogrammet. Till exempel, `"8.2"`.
 
    `APPFamilies` definieras av klient-API:t.
 
