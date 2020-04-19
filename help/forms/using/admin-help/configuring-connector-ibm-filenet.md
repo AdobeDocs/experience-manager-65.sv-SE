@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/connecting_to_a_content_management_system
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: be4994de-12f8-436e-926a-49a6783b006e
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -28,7 +28,7 @@ Koppling till IBM FileNet möjliggör kommunikation mellan AEM-formulär och IBM
 IBM FileNet P8 Content Engine tillhandahåller programvarutjänster för hantering av företagsinnehåll och kunddefinierade affärsobjekt i FileNet-innehållsarkiv.
 
 1. I administrationskonsolen klickar du på Tjänster > Koppling för IBM FileNet.
-1. I rutan URL för innehållsmotor anger du den fullständiga anslutnings-URL:en. Exempel:
+1. I rutan URL för innehållsmotor anger du den fullständiga anslutnings-URL:en. Till exempel:
 
    Om du använder FileNet Content Engine 4.x med CEWS-transport anger du:
 
@@ -40,8 +40,8 @@ IBM FileNet P8 Content Engine tillhandahåller programvarutjänster för hanteri
 
 1. Välj en av följande skyddsnivåer i listan över autentiseringsskyddssystem:
 
-   * **** Rensa: Skickar autentiseringsuppgifter i oskyddat läge över nätverket
-   * **** Symmetrisk: Skickar krypterade inloggningsuppgifter i nätverket
+   * **Rensa:** Skickar autentiseringsuppgifter i oskyddat läge över nätverket
+   * **Symmetrisk:** Skickar krypterade inloggningsuppgifter i nätverket
 
 1. Ange sökvägen till krypteringsfilen i rutan Plats för krypteringsfil:
 
@@ -54,11 +54,11 @@ IBM FileNet P8 Content Engine tillhandahåller programvarutjänster för hanteri
 
 ## Konfigurera inställningar för processmotorn {#configure-the-process-engine-settings}
 
-Koppling för IBM FileNet innehåller Process Engine Connector för tjänsten IBM FileNet, som används för att interagera med IBM FileNet Process Engine. Du kan konfigurera inställningar för den här tjänsten.
+Koppling för IBM FileNet innehåller Process Engine Connector för IBM FileNet-tjänsten som används för att interagera med IBM FileNet Process Engine. Du kan konfigurera inställningar för den här tjänsten.
 
 1. Klicka på Tjänster > Koppling för IBM FileNet i administrationskonsolen.
 1. Om du vill aktivera användningen av Process Engine Connector för IBM FileNet-tjänsten väljer du Använd anslutningstjänsten för processmotor.
-1. Ange värdnamnet eller IP-adressen och portnumret följt av processrouterns namn i rutan Processrouter/Anslutningspunkt. Exempel:
+1. Ange värdnamnet eller IP-adressen och portnumret följt av processrouterns namn i rutan Processrouter/Anslutningspunkt. Till exempel:
 
    `rmi://ProcessEngineHostNameorIP:port/Name`
 
@@ -78,14 +78,15 @@ Du kan konfigurera vilken databastjänstleverantör som ska användas med FileNe
 
 Följande alternativ är tillgängliga:
 
-**** Aktuellt databasprovidernamn: Namnet på den aktuella databastjänstprovidern
+**Aktuellt databasprovidernamn:** Namnet på den aktuella databastjänstprovidern
 
-**** IBM FileNet Repository Provider: Gör FileNet-databasprovidern till databasprovidern. Det här alternativet har tagits bort.
+**IBM FileNet Repository Provider:** Gör FileNet-databasprovidern till databasprovidern. Det här alternativet har tagits bort.
 
-**** databasprovider: Gör den inbyggda databasprovidern till databasprovidern
+**databasprovider:** Gör den inbyggda databasprovidern till databasprovidern
 
-***Obs **: Om du vill välja en annan databastjänstleverantör än de som anges konfigurerar du RepositoryService i Program och tjänster.<!-- Fix broken link(See Managing Services) -->*
+>[!NOTE]
+>
+>Om du vill välja en annan databastjänstleverantör än de som anges konfigurerar du RepositoryService i Program och tjänster. <!-- Fix broken link(See Managing Services) -->
 
 1. I administrationskonsolen klickar du på Tjänster > Koppling för IBM FileNet.
 1. Välj den alternativa databastjänstleverantören under Information om databastjänstleverantör och klicka sedan på Spara.
-
