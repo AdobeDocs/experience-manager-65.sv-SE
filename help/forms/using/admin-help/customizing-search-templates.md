@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/configuring_workspace
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 6e4b4dfa-3af5-4c21-a2a1-b90ef02d8514
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -65,8 +65,9 @@ Du kan skapa så många sökmallar som behövs.
    * Markera en process eller ett uppgiftselement och klicka på högerpilen för att flytta det till listan Kolumner att rapportera.
    * Markera process- eller uppgiftselementet i listan Kolumner att rapportera och klicka på uppilen eller nedpilen för att flytta det till sin plats i kolumnordningen. Kolumnrubrikerna i sökresultaten visas i den ordning som de listas här.
    * (Valfritt) Om du vill ändra namnet på elementet för kolumnrubriken markerar du elementet i listan Kolumner att rapportera och anger det nya namnet.
-
-      **Obs**: Layouten *som anges i sökmallen åsidosätter användarens inställningar som anges för kolumnrubriker i Workspace.*
+   >[!NOTE]
+   >
+   >Layouten som anges i sökmallen åsidosätter användarens inställningar som anges för kolumnrubriker i Workspace.
 
 1. (Valfritt) För varje kolumn som du vill sortera i sökresultaten klickar du på fliken Sortera och utför följande steg:
 
