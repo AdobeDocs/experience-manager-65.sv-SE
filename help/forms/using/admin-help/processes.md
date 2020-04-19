@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 37e702c2-8716-4360-a3eb-d9877b28cc86
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -21,13 +21,13 @@ På sidan Processlista visas de processer som en användare har initierat eller 
 
 1. I administrationskonsolen klickar du på Tjänster > Formulärarbetsflöde > Formulärarbetsflöde. I processlistan visas följande information:
 
-   **** Processnamn - version: Processens namn, enligt definition i Workbench.
+   **Processnamn - version:** Processens namn, enligt definition i Workbench.
 
-   **** Program: Programmet som processen tillhör, enligt definition i Workbench.
+   **Program:** Programmet som processen tillhör, enligt definition i Workbench.
 
-   **** Status: Aktiv innebär att processen är den som aktiveras för processversionen. Inaktiv innebär att processen är en gammal version som fortfarande har processinstanser.
+   **Status:** Aktiv innebär att processen är den som aktiveras för processversionen. Inaktiv innebär att processen är en gammal version som fortfarande har processinstanser.
 
-   **** Skapad: Datum och tid då processen distribuerades.
+   **Skapad:** Datum och tid då processen distribuerades.
 
 1. Klicka på ett processnamn för att visa dess processinstanser på sidan Processinstans.
 
@@ -37,15 +37,15 @@ Om du öppnar sidan Processinstans från sidan Processlista visas alla processin
 
 För varje processinstans visas följande information i listan:
 
-**** Process-ID: Den identifierare som formulärarbetsflödet tilldelar när processen initieras (det vill säga när en användare eller ett automatiskt steg initierar en process). Du kan använda den här identifieraren för att spåra processinstansen genom dess livscykel.
+**Process-ID:** Den identifierare som formulärarbetsflödet tilldelar när processen initieras (det vill säga när en användare eller ett automatiskt steg initierar en process). Du kan använda den här identifieraren för att spåra processinstansen genom dess livscykel.
 
-**** Processnamn - version: Processens namn, enligt definition i Workbench.
+**Processnamn - version:** Processens namn, enligt definition i Workbench.
 
-**** Status: Anger om processinstansen körs normalt, om tillståndet ändras eller om den har stoppats. (Se Om processinstansstatus.)
+**Status:** Anger om processinstansen körs normalt, om tillståndet ändras eller om den har stoppats. (Se Om processinstansstatus.)
 
-**** Skapad: Det datum och den tidpunkt då processinstansen skapades.
+**Skapad:** Det datum och den tidpunkt då processinstansen skapades.
 
-**** Uppdateringsdatum: Datum och tid då processinstansens status senast ändrades.
+**Uppdateringsdatum:** Datum och tid då processinstansens status senast ändrades.
 
 Du kan göra följande på sidan Processinstans:
 
@@ -57,25 +57,27 @@ Du kan göra följande på sidan Processinstans:
 
 En processinstans, inklusive underprocesser, kan ha följande status:
 
-**** SLUTFÖRT: Alla förgreningar och åtgärder i processinstansen har slutförts. COMPLETE är den slutliga statusen för en processinstans.
+**SLUTFÖRT:** Alla förgreningar och åtgärder i processinstansen har slutförts. COMPLETE är den slutliga statusen för en processinstans.
 
-**** SLUTFÖRANDE: Processinstansens status ändras till COMPLETE.
+**SLUTFÖRANDE:** Processinstansens status ändras till COMPLETE.
 
-**** INITIERAD: Processinstansen har skapats men körs inte än. INITIATED är den första statusen för en processinstans.
+**INITIERAD:** Processinstansen har skapats men körs inte än. INITIATED är den första statusen för en processinstans.
 
-**** KÖRS: Processinstansen körs normalt. Ett automatiskt steg kan vara på gång, eller så kan processinstansen ta emot användarindata eller vänta på användarinteraktion.
+**KÖRS:** Processinstansen körs normalt. Ett automatiskt steg kan vara på gång, eller så kan processinstansen ta emot användarindata eller vänta på användarinteraktion.
 
-**** UPPSKJUTEN: Processinstansen har inaktiverats av en administratör eller av ett steg i processen. Inga fler åtgärder utförs förrän statusen har ändrats.
+**UPPSKJUTEN:** Processinstansen har inaktiverats av en administratör eller av ett steg i processen. Inga fler åtgärder utförs förrän statusen har ändrats.
 
-**** AVBRYT: Statusen ändras nu till SUSPENDED. Om en åtgärd har utformats för att ignorera pausbegäranden och ännu inte har slutförts, måste den åtgärden slutföras innan processinstansen pausas.
+**AVBRYT:** Statusen ändras nu till SUSPENDED. Om en åtgärd har utformats för att ignorera pausbegäranden och ännu inte har slutförts, måste den åtgärden slutföras innan processinstansen pausas.
 
-**** AVSLUTAD: Processinstansen har avslutats av en administratör.
+**AVSLUTAD:** Processinstansen har avslutats av en administratör.
 
-**** AVSLUTNING: Statusen ändras nu till AVSLUTAD. Om en åtgärd har utformats för att ignorera avslutningsbegäranden och ännu inte har slutförts, måste åtgärden slutföras innan processinstansen avslutas.
+**AVSLUTNING:** Statusen ändras nu till AVSLUTAD. Om en åtgärd har utformats för att ignorera avslutningsbegäranden och ännu inte har slutförts, måste åtgärden slutföras innan processinstansen avslutas.
 
-**** AVBRYT: Statusen ändras till KÖRNING efter att ha SUSPENDED.
+**AVBRYT:** Statusen ändras till KÖRNING efter att ha SUSPENDED.
 
-**Obs**: *När en begäran görs om att ändra status för en processinstans (till exempel att göra uppehåll eller avsluta), kommer begäran in i kommandokö för arbetsflöde för formulär. Beroende på storleken på kön och den totala bearbetningshastigheten kan det hända att den visade statusen inte ändras förrän sidan har lästs in en eller flera gånger.*
+>[!NOTE]
+>
+>När en begäran görs om att ändra status för en processinstans (till exempel att göra uppehåll eller avsluta), kommer begäran in i kommandokö för arbetsflöde för formulär. Beroende på storleken på kön och den totala bearbetningshastigheten kan det hända att den visade statusen inte ändras förrän sidan har lästs in en eller flera gånger.
 
 ### Pausa eller avbryta uppehåll i processinstanser {#suspend-or-unsuspend-process-instances}
 
@@ -113,27 +115,27 @@ Under Sammanfattning visas grundläggande information om processinstansen.
 
 På fliken Åtgärder visas varje åtgärd för processinstansen i den ordning som de slutförs från första till sista med följande information:
 
-**** Åtgärdsnamn: Namnet på åtgärden, enligt definition i Workbench.
+**Åtgärdsnamn:** Namnet på åtgärden, enligt definition i Workbench.
 
-**** Status: Anger om åtgärden körs normalt eller har stoppats. (Se Om processinstansstatus.)
+**Status:** Anger om åtgärden körs normalt eller har stoppats. (Se Om processinstansstatus.)
 
-**** Grennamn: Namnet på grenen, enligt definition i Workbench.
+**Grennamn:** Namnet på grenen, enligt definition i Workbench.
 
-**** Startdatum: Datum och tid då åtgärden startade.
+**Startdatum:** Datum och tid då åtgärden startade.
 
-**** Slutförd den: Datum och tid då åtgärden slutfördes.
+**Slutförd den:** Datum och tid då åtgärden slutfördes.
 
 En underprocess är en processinstans som startas av en annan process och som körs oberoende av den andra processen. Underprocesser visas bara om de har utformats som en del av processen i Workbench. På fliken Underprocesser visas varje underprocess med följande information:
 
-**** Process-ID: Detta positiva heltal som formulärarbetsflödet tilldelar när processen initieras (det vill säga när en användare eller ett automatiskt steg initierar processen). Du kan använda den här identifieraren för att spåra processinstansen genom dess livscykel.
+**Process-ID:** Detta positiva heltal som formulärarbetsflödet tilldelar när processen initieras (det vill säga när en användare eller ett automatiskt steg initierar processen). Du kan använda den här identifieraren för att spåra processinstansen genom dess livscykel.
 
-**** Processnamn - version: Processens namn, enligt Designer.
+**Processnamn - version:** Processens namn, enligt Designer.
 
-**** Status: Anger om processinstansen körs normalt, om tillståndet ändras eller om den stoppas. (Se Om processinstansstatus.)
+**Status:** Anger om processinstansen körs normalt, om tillståndet ändras eller om den stoppas. (Se Om processinstansstatus.)
 
-**** Skapad: Datum och tid då underprocessen skapades.
+**Skapad:** Datum och tid då underprocessen skapades.
 
-**** Uppdateringsdatum: Datum och tid då status för underprocessen senast ändrades.
+**Uppdateringsdatum:** Datum och tid då status för underprocessen senast ändrades.
 
 Du kan göra följande på sidan Processinstansinformation:
 
@@ -145,13 +147,13 @@ Du kan göra följande på sidan Processinstansinformation:
 
 En åtgärd (ett steg i en process) kan ha följande status:
 
-**** SLUTFÖRT: Åtgärden har slutförts.
+**SLUTFÖRT:** Åtgärden har slutförts.
 
-**** KÖRS: Åtgärden körs normalt. Den kan ta emot användarindata eller vänta på användarinteraktion, eller så kan ett automatiskt steg vara på gång.
+**KÖRS:** Åtgärden körs normalt. Den kan ta emot användarindata eller vänta på användarinteraktion, eller så kan ett automatiskt steg vara på gång.
 
-**** STALLERAD: Ett problem uppstod när åtgärden bearbetades. Leta efter felet eller undantaget på sidan Installerade åtgärder.
+**STALLERAD:** Ett problem uppstod när åtgärden bearbetades. Leta efter felet eller undantaget på sidan Installerade åtgärder.
 
-**** AVSLUTAD: Åtgärden avbröts av en administratör.
+**AVSLUTAD:** Åtgärden avbröts av en administratör.
 
 ### Avsluta åtgärder eller underprocesser {#terminate-operations-or-subprocesses}
 
@@ -188,11 +190,11 @@ På sidan Åtgärdsinformation visas en sammanfattning av en åtgärd i en proce
 
    För varje uppgift visas följande information i listan:
 
-   **** Processnamn - version: Processens namn, enligt definition i Workbench.
+   **Processnamn - version:** Processens namn, enligt definition i Workbench.
 
-   **** Program: Programmet som processen tillhör, enligt definition i Workbench.
+   **Program:** Programmet som processen tillhör, enligt definition i Workbench.
 
-   **** Status: Aktiv innebär att processen är den som aktiveras för processversionen. Inaktiv innebär att processen är en gammal version som fortfarande har processinstanser.
+   **Status:** Aktiv innebär att processen är den som aktiveras för processversionen. Inaktiv innebär att processen är en gammal version som fortfarande har processinstanser.
 
-   **** Skapad: Datum och tid då processen distribuerades.
+   **Skapad:** Datum och tid då processen distribuerades.
 
