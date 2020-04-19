@@ -8,7 +8,7 @@ topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 898268cb-4426-421f-8f63-d75bd85cb57f
 translation-type: tm+mt
-source-git-commit: 66a3db6cd50ae25849dc173e0714df7c140c1774
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -201,7 +201,9 @@ Gör följande för att ta bort dokumentsäkerhetsdata för ett säkerhetsobjekt
    1. Användare med egna profiler loggar in på sin dokumentsäkerhetswebbsida på https://[*server*]:[*port*]/edc.
    1. Navigera till **[!UICONTROL Tjänster > Dokumentsäkerhet > Mina principer]**.
    1. Öppna en profil och ta bort användaren från profilen.
-   **Obs**: Administratörer kan söka efter, komma åt och ta bort användardata från andra användares personliga profiler i **[!UICONTROL Tjänster > Dokumentsäkerhet > Mina principer]** med administrationskonsolen.
+   >[!NOTE]
+   >
+   >Administratörer kan söka efter, komma åt och ta bort användardata från andra användares personliga profiler i **[!UICONTROL Tjänster > Dokumentsäkerhet > Mina principer]** med administrationskonsolen.
 
 1. Ta bort data för huvuds-ID från användarhanteringsdatabasen. Detaljerade steg finns i [Hantering av formuläranvändare| Hantera användardata](/help/forms/using/user-management-handling-user-data.md).
 1. Starta AEM Forms-servern.
