@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: da96d3d8-a338-470a-8d20-55ea39bd15bf
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -74,11 +74,13 @@ Utför följande steg på alla författare- och publiceringsinstanser för att i
 
    Så här anger du ett annat namn för metadatatabellen:
 
-   * I Web Console Configuration söker du efter och klickar på Implementering av Exempel på metadatatjänst för Forms Portal. Du kan ändra värdena för datakälla, metadata eller ytterligare metadatatabellnamn.
+   * I Web Console Configuration söker du efter och klickar på Exempelimplementering av Forms Portal-metadatatjänst. Du kan ändra värdena för datakälla, metadata eller ytterligare metadatatabellnamn.
    Så här anger du ett annat namn för datatabellen:
 
    * I Web Console Configuration söker du efter och klickar på Exempelimplementering för Forms Portal Data Service. Du kan ändra värdena för datakällan och datatabellnamnet.
-   **Obs**: Om du ändrar tabellnamnen anger du dem i formulärportalskonfigurationen.
+   >[!NOTE]
+   >
+   >Om du ändrar tabellnamnen anger du dem i formulärportalskonfigurationen.
 
 1. Låt andra konfigurationer vara som de är och klicka på **[!UICONTROL Spara]**.
 
@@ -325,7 +327,7 @@ Databasimplementeringen av Forms Portal använder ytterligare metadatatabell. Ta
 Så här skapar du [ett klientbibliotek](/help/sites-developing/clientlibs.md) och använder skriptet:
 
 1. Logga in på CRXDE och navigera till /etc/clientlibs/
-1. Skapa en nod av typen **cq:ClientLibraryFolder** och ange namnet på noden. Exempel, `validation`.
+1. Skapa en nod av typen **cq:ClientLibraryFolder** och ange namnet på noden. Till exempel, `validation`.
 
    Klicka på **[!UICONTROL Spara alla]**.
 
