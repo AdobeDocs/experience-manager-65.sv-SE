@@ -9,7 +9,7 @@ topic-tags: author
 discoiquuid: 9d8d7044-ffce-4ab4-9543-a2d2f9da31e3
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 6bd09bca68ea1fcec2dca7694dd3d39dc5153bfc
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -102,7 +102,8 @@ Alla formulärfält måste ha olika elementnamn, även om de finns på olika pan
 
 När du skickar ett e-postmeddelande med en PDF-fil som innehåller formulärdata skickas ett e-postmeddelande med åtgärden **Skicka PDF via e-post** till en eller flera mottagare när formuläret har skickats.
 
-**** Obs! Den här överföringsåtgärden är tillgänglig för XFA-baserade adaptiva formulär och XSD-baserade adaptionsformulär som har dokumentmallen.
+>[!NOTE]
+Den här överföringsåtgärden är tillgänglig för XFA-baserade adaptiva formulär och XSD-baserade adaptionsformulär som har dokumentmallen.
 
 ## Anropa ett formulärarbetsflöde {#invoke-a-forms-workflow}
 
