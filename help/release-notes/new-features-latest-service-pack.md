@@ -4,7 +4,7 @@ description: Nyheter i Adobe Experience Manager 6.5 Service Pack 4
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -35,7 +35,7 @@ Nu kan du välja format i komponentdialogrutan med det förbättrade formatsyste
 
 ## AEM Assets {#aem-assets}
 
-### Konfigurera AEM-resurser med varumärkesportalen {#configure-assets-bp}
+### Konfigurera AEM Assets med varumärkesportalen {#configure-assets-bp}
 
 Auktoriseringskanalen mellan AEM Assets och Brand Portal har ändrats. Tidigare konfigurerades varumärkesportalen i Classic UI via äldre OAuth Gateway, som använder JWT-tokenutbyte för att erhålla en IMS Access-token för auktorisering. AEM Assets har nu konfigurerats med Brand Portal via Adobe I/O, som anskaffar en IMS-token för auktorisering av din klient för varumärkesportalen.
 
@@ -56,7 +56,7 @@ Experience Manager Assets innehåller följande tillgänglighetsförbättringar:
 
 * Begränsningar för datum- och tidsformat finns i fältetiketter för datumfält, så att användarna kan ange datumet i korrekt format med tangentbordet.
 
-   Exempel, `On Time (MM-DD-YYYY HH:mm)`. Här är MM månad i tvåsiffrigt format, YYYY är år, DD är dag i tvåsiffrigt format, HH är timme i 24-timmars militärt format och mm är minut.
+   Till exempel, `On Time (MM-DD-YYYY HH:mm)`. Här är MM månad i tvåsiffrigt format, YYYY är år, DD är dag i tvåsiffrigt format, HH är timme i 24-timmars militärt format och mm är minut.
 
 * Symbolen på knappen för att ta bort de markerade taggarna visas nu för skärmläsare tillsammans med antalet markerade taggar. `X`
 
@@ -117,13 +117,13 @@ Du kan dela dina inkorgsobjekt med en annan användare. När en annan användare
 ### Konfigurera inställningar utanför kontoret för inkorgsobjekt för en AEM Forms-användare (6.5.3.0) {#configure-out-of-office}
 
 Om du tänker vara utanför kontoret kan du ange vad som ska hända med artiklar som har tilldelats dig för den perioden.
-Du kan ange ett startdatum och en sluttid och ett slutdatum och en sluttid så att dina inställningar som inte är på kontoret börjar gälla. Du kan ange en standardperson som alla dina objekt skickas till. Se [Konfigurera inställningar](../forms/using/configure-out-of-office-settings.md)för frånvaro.
+Du kan ange startdatum och -tid och slutdatum och sluttid så att dina inställningar som inte är på kontoret börjar gälla. Du kan ange en standardperson som alla dina objekt skickas till. Se [Konfigurera inställningar](../forms/using/configure-out-of-office-settings.md)för frånvaro.
 
 ### Generera flera interaktiva dokument med Batch API för AEM Forms (6.5.3.0) {#generate-multiple-ic}
 
 Du kan använda batch-API:t för att skapa flera interaktiva dokument från en mall. Mallen är en interaktiv kommunikation utan data. Batch-API:t kombinerar data med en mall för att skapa en interaktiv kommunikation. API:t är användbart vid massproduktion av interaktiv kommunikation. Till exempel telefonräkningar, kreditkortsutdrag för flera kunder. Se [Generera flera interaktiva dokument med hjälp av API:t](../forms/using/generate-multiple-interactive-communication-using-batch-api.md)för gruppbearbetning.
 
-## Viktiga versioner sedan AEM 6.5 SP3 {#key-features-sice-sp3}
+## Viktiga versioner sedan AEM 6.5 SP3 {#key-features-since-sp3}
 
 Mellan 12 december 2019 och 5 mars 2020 släppte Adobe följande funktioner som ligger utanför AEM-leverantörens kärnprogram:
 
