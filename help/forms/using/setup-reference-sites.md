@@ -10,7 +10,7 @@ topic-tags: introduction
 discoiquuid: 03886dd3-5873-4908-912b-fbbddb26c322
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -355,7 +355,10 @@ Referenswebbplatsen visar hur AEM Forms är integrerat med Adobe Target så att 
 Så här konfigurerar du Target i AEM för att få en upplevelse av integreringen på referenswebbplatsen:
 
 1. Starta författarens snabbstart med jvm-argumentet `-Dabtesting.enabled=true` för att aktivera A/B-testning på servern.
-   **Obs**: Om AEM-instansen körs på JBoss, som startas som en tjänst från körkortsinstallationen, lägger du till `-Dabtesting.enabled=true` parametern i följande post i `jboss\bin\standalone.conf.bat` filen:
+
+   >[!NOTE]
+   >
+   >Om AEM-instansen körs på JBoss, som startas som en tjänst från körkortsinstallationen, lägger du till `-Dabtesting.enabled=true` parametern i följande post i `jboss\bin\standalone.conf.bat` filen:
    `set "JAVA_OPTS=%JAVA_OPTS% -Dadobeidp.serverName=server1 -Dfile.encoding=utf8 -Djava.net.preferIPv4Stack=true -Dabtesting.enabled=true"`
 
 1. Öppna `https://<hostname>:<port>/libs/cq/core/content/tools/cloudservices.html`.
@@ -369,7 +372,7 @@ Så här konfigurerar du Target i AEM för att få en upplevelse av integreringe
 
 1. Klicka på **[!UICONTROL AEM Forms Target Configuration]**.
 1. Välj ett målramverk.
-1. I fältet **[!UICONTROL Mål-URL]** anger du URL:en till AEM Forms. Exempel: `https://<hostname>:<port>/`.
+1. I fältet **[!UICONTROL Mål-URL]** anger du URL:en till AEM Forms. Till exempel: `https://<hostname>:<port>/`.
 
 1. Click **[!UICONTROL Save]**.
 
