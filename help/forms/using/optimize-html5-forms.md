@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: bdb9edc2-6a37-4d3f-97d5-0fc5664316be
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -20,7 +20,9 @@ HTML5-formulär återger formulär i HTML5-format. Resultatet kan bli stort bero
 
 I den här artikeln beskrivs stegen som krävs för att aktivera komprimering för 32-bitars Apache Web Server 2.0 med JBoss.
 
-*Obs! Följande instruktioner gäller inte för andra servrar än Apache Web Server 2.0 32 bitar.*
+>[!NOTE]
+>
+>Följande instruktioner gäller inte för andra servrar än Apache Web Server 2.0 32 bitar.
 
 Skaffa webbserverprogrammet Apache som kan användas i ditt operativsystem:
 
