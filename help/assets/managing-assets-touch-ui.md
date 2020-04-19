@@ -4,7 +4,7 @@ description: Lär dig resurshanteringsåtgärder som överföring, hämtning, re
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b1453d70ee75768057403c5cc93f5c7bad8ed918
+source-git-commit: 68fb4c08b8093ff50e74dc9e29011325cdf7e7d7
 
 ---
 
@@ -160,7 +160,7 @@ Med Dynamic Media kan du batchöverföra resurser via FTP-servern. Om du tänker
 1. Tryck på **[!UICONTROL Spara]** i det nedre högra hörnet av dialogrutan Alternativ för överföringsjobb.
 1. Tryck på **[!UICONTROL Skicka överföring]** i det nedre högra hörnet på sidan Överför.
 
-   Om du vill visa överföringsförloppet trycker du på **[!UICONTROL Jobb]**i det globala navigeringsfältet. På sidan Jobb visas överföringsförloppet. Du kan när som helst fortsätta arbeta i AEM och gå tillbaka till jobbsidan i Dynamic Media Classic för att granska ett pågående jobb.
+   Om du vill visa överföringsförloppet trycker du på **[!UICONTROL Jobb]**i det globala navigeringsfältet. På sidan Jobb visas överföringsförloppet. Du kan fortsätta arbeta i AEM och när som helst återgå till jobbsidan i Dynamic Media Classic för att granska ett pågående jobb.
 Om du vill avbryta ett pågående överföringsjobb trycker du på **[!UICONTROL Avbryt]** bredvid Varaktighet.
 
 #### Alternativ för överföringsjobb {#upload-job-options}
@@ -347,7 +347,11 @@ Så här förhandsgranskar du en resurs med tangentbordet:
 
 1. Använd piltangenterna för att flytta runt den zoomade bilden.
 
-Se även [Förhandsgranska dynamiska medieresurser.](/help/assets/previewing-assets.md)
+>[!MORELIKETHIS]
+>
+>* [Förhandsgranska dynamiska medieresurser](/help/assets/previewing-assets.md).
+>* [Visa delresurser](managing-linked-subassets.md#viewing-subassets).
+
 
 ## Redigera egenskaper och metadata {#editing-properties}
 
@@ -361,7 +365,7 @@ Se även [Förhandsgranska dynamiska medieresurser.](/help/assets/previewing-ass
 
    >[!NOTE]
    >
-   >Layouten på sidan [!UICONTROL Egenskaper] och de metadataegenskaper som är tillgängliga beror på det underliggande metadataschemat. Mer information om hur du ändrar layouten på sidan [!UICONTROL Egenskaper] finns i [Metadatamcheman](/help/assets/metadata-schemas.md).
+   >Layouten på sidan [!UICONTROL Egenskaper] och de metadataegenskaper som är tillgängliga beror på det underliggande metadataschemat. Mer information om hur du ändrar layouten för sidan [!UICONTROL Egenskaper] finns i [Metadatamcheman](/help/assets/metadata-schemas.md).
 
 1. To schedule a particular date/time for the activation of the asset, use the date picker beside the **[!UICONTROL On Time]** field.
 
@@ -764,7 +768,7 @@ Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Vi
    >
    >Anteckningar kan också läggas till i videomaterialet. När du kommenterar videoklipp pausas spelaren så att du kan anteckna i en bildruta. Mer information finns i [Hantera videomaterial](/help/assets/managing-video-assets.md).
 
-1. Om du vill välja en annan färg så att du kan skilja mellan användarna klickar/trycker du på profilikonen och klickar/trycker på **[!UICONTROL Mina inställningar]**.
+1. Om du vill välja en annan färg så att du kan skilja på användarna klickar/trycker du på profilikonen och klickar/trycker på **[!UICONTROL Mina inställningar]**.
 
    ![Välj ikonen för användarprofilen och sedan Mina inställningar för att öppna Användarinställningar](assets/User-profile-preferences.png)
 
