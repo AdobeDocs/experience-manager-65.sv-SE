@@ -10,7 +10,7 @@ topic-tags: customization
 discoiquuid: 7566203f-2f80-4ce7-bff9-073d67119f64
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 13cc8ba8fda8fa0e5fac6bb92d1d4fc4849492eb
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -31,7 +31,7 @@ Med Forms Portal kan du använda anpassade metadata i formulärlistor. När du s
 
 Utför följande steg för att skapa en anpassad mall för olika komponenter i Forms Portal.
 
-## Skapa en anpassad mall {#creating-a-nbsp-custom-template}
+## Creating a custom template {#creating-a-nbsp-custom-template}
 
 1. Skapa en slinga:Mappnod under /apps
 
@@ -45,8 +45,12 @@ Utför följande steg för att skapa en anpassad mall för olika komponenter i F
    * Länkkomponent: /libs/fd/fp/linkTemplate
    Lägg till en titel som du vill ska visas när du väljer layoutmallar.
 
-   *Obs! Titeln kan skilja sig från nodnamnet för sling:Mapp som du skapade.*
-   *I följande bild visas konfigurationen för komponenten Sök och Lister.* ![Skapa en sling:Mapp](assets/1.png)
+   >[!NOTE]
+   >
+   >Titeln kan skilja sig från nodnamnet för sling:Mapp som du skapade.
+
+   I följande bild visas konfigurationen för komponenten Sök och Lister.
+   ![Skapa en slinga:Mapp](assets/1.png)
 
 1. Skapa en filmall.html i den här mappen som ska fungera som anpassad mall.
 1. Skriv den anpassade mallen och använd anpassade metadata enligt beskrivningen nedan.
@@ -93,7 +97,7 @@ Olika komponenter i Forms Portal innehåller exklusiva uppsättningar OTB-metada
 
 ### Komponenten Search &amp; Lister {#search-amp-lister-component}
 
-* **** Titel: Formulärets namn
+* **Titel:** Formulärets namn
 * **namn**: Formulärets namn (oftast är det samma som titeln)
 * **beskrivning**: Beskrivning av formuläret
 * **formUrl**: URL för att återge formuläret som HTML
@@ -102,7 +106,9 @@ Olika komponenter i Forms Portal innehåller exklusiva uppsättningar OTB-metada
 
 * **htmlStyle**&amp; **pdfStyle**: Visningsformat för HTML- respektive PDF-ikoner som används för återgivning. Giltiga värden är &quot;**__FP_display_none**&quot; eller blank.
 
-   **** Obs! Kom ihåg att använda klassen __FP_display_none i din anpassade formatmall
+>[!NOTE]
+>
+>Kom ihåg att använda klassen __FP_display_none i din anpassade formatmall.
 
 * **downloadUrl**: URL för att hämta en resurs.
 
@@ -118,7 +124,7 @@ För rubrikrubriken i stödrastervyn är värdet för rubriken&quot;data-sortKey
 
 ### Länkkomponent {#link-component}
 
-* **** Titel: Formulärets namn
+* **Titel:** Formulärets namn
 * **formUrl**: URL för att återge formuläret som HTML
 * **mål**: Länkens målattribut. Giltiga värden är &quot;_blank&quot; och &quot;_self&quot;.
 * **linkText**: Länkbeskrivning
@@ -133,7 +139,7 @@ För rubrikrubriken i stödrastervyn är värdet för rubriken&quot;data-sortKey
 * **submitID**: ID för överföringen som visas (Använd bara i mallen för avsnittet Skicka).
 * **status**: Status för det skickade formuläret. (Använd endast i mallen för avsnittet Skicka).
 * **beskrivning**: Beskrivning av det adaptiva formulär som är kopplat till utkastet eller inlämningen.
-* **diffTime**: Skillnaden mellan aktuell tid och den senaste sparåtgärden för utkastet. Alternativt kan det vara en skillnad mellan den aktuella tiden och den senaste sändningsåtgärden för överföringen.
+* **diffTime**: Skillnaden mellan aktuell tid och den senaste sparåtgärden för utkastet. Alternativt kan det vara en skillnad mellan aktuell tid och den senaste sändningsåtgärden för överföringen.
 * **iconClass**: CSS-klass som används för att visa den första bokstaven i utkastet/sändningen. Forms Portal innehåller följande klasser som innehåller olika färgade bakgrunder.
 * **ägare**: Användare som skapade utkastet/överföringen.
 * **Idag**: Datum då utkastet eller inlämningen skapades i formatet DD:MM:YYY.
@@ -149,15 +155,15 @@ För rubrikrubriken i stödrastervyn är värdet för rubriken&quot;data-sortKey
 
 **A**. Behållarelement
 
-**** B. &quot;path&quot;-metadata med en fast hierarki för att få miniatyrbilder lagrade för varje formulär.
+**B.** &quot;path&quot;-metadata med en fast hierarki för att få miniatyrbilder lagrade för varje formulär.
 
 **C.** Attribut för upprepning av data som används för mallavsnittet för varje formulär
 
-**** D. För att lokalisera strängen &quot;Använd&quot;
+**D.** För att lokalisera strängen &quot;Använd&quot;
 
-**** E. Använda konfigurationsegenskapen pdfLinkText
+**E.** Använda konfigurationsegenskapen pdfLinkText
 
-**** F. Använda metadata för pdfUrl
+**F.** Använda metadata för pdfUrl
 
 ## Tips, tricks och kända fel {#tips-tricks-and-known-issues}
 
