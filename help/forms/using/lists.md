@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0d5436c6-1976-496c-b9a7-7dc6e830bb5d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -170,7 +170,9 @@ Med funktionen Sök och ersätt kan du söka efter (och ersätta) alla textsträ
 
 **Hela ord:** Sökningen returnerar bara hela ord.
 
-**Obs!** Om du anger specialtecken i textrutan Sök inaktiveras alternativet Hela ord.
+>[!NOTE]
+>
+>Om du anger specialtecken i textrutan Sök inaktiveras alternativet Hela ord.
 
 **Reg ex:** Sök med reguljära uttryck. Följande reguljära uttryck söker till exempel efter e-postadresser i en textmodul:
 
