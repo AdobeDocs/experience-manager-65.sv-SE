@@ -8,7 +8,7 @@ contentOwner: anujkapo
 discoiquuid: ddb3778b-be06-4cde-bc6e-0994efa42b18
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f323b490c37effc3cbb36c793b62fa788eca9545
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -116,7 +116,9 @@ Svar på några frågor som bekräftar hennes behörighet genom att fylla i ett 
 
 1. Gör ett val i varje listruta.
 
-   1. Obs! Om användaren tjänar mer än 200 000 USD/år är de inte berättigade.
+   >[!NOTE]
+   >
+   >Om användaren tjänar mer än 200 000 USD/år är de inte berättigade.
 
 1. Klicka på&quot;**Är jag berättigad?**” button.
 1. Klicka på knappen &quot;**Tillämpa nu**&quot; för att fortsätta.
