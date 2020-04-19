@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/get_started_with_administering_aem_forms_on_je
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: bd648c38-731b-420e-973d-a4728b69868e
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -35,14 +35,18 @@ Mer information om hur du aktiverar läget för säker säkerhetskopiering finns
 
 **Plats för tillfällig katalog** Katalogsökvägen där AEM-formulär skapar tillfälliga produktfiler. Om värdet för den här inställningen är tomt används systemets tillfälliga katalog som standard. Kontrollera att den tillfälliga katalogen är en skrivbar mapp.
 
-***Obs **! Kontrollera att den tillfälliga katalogen finns i det lokala filsystemet. AEM-formulär stöder inte en tillfällig katalog på en fjärrplats.*
+>[!NOTE]
+>
+>Kontrollera att den tillfälliga katalogen finns i det lokala filsystemet. AEM-formulär stöder inte en tillfällig katalog på en fjärrplats.
 
 **Rotkatalog** för global dokumentlagring Rotkatalogen för global dokumentlagring (GDS) används i följande syften:
 
 * Lagra långlivade dokument. Långa dokument har ingen förfallotid och finns kvar tills de tas bort (t.ex. PDF-filerna som används i en arbetsflödesprocess). De långvariga dokumenten utgör en kritisk del av det övergripande systemtillståndet. Om några eller alla dessa dokument förloras eller skadas kan formulärservern bli instabil. Därför är det viktigt att den här katalogen lagras på en RAID-enhet.
 * Lagra tillfälliga dokument som behövs under bearbetningen.
 
-   ***Obs **: Du kan även aktivera dokumentlagring i AEM-formulärdatabasen. Systemprestanda är dock bättre när du använder GDS.*
+>[!NOTE]
+>
+>Du kan även aktivera dokumentlagring i AEM-formulärdatabasen. Systemprestanda är dock bättre när du använder GDS.
 
 * Överför dokument mellan noder i ett kluster. Om du kör AEM-formulär i en klustrad miljö måste katalogen vara tillgänglig från alla noder i klustret.
 * Tar emot inkommande parametrar från fjärr-API-anrop.
@@ -53,9 +57,13 @@ Om du inte anger någon GDS-rotkatalog används en programserverkatalog som stan
 * `[WEBSPHERE_HOME]/installedApps/adobe/'server'/DocumentStorage`
 * `[WEBLOGIC_HOME]/user_projects/<domain>/'server'/adobe/AEMformsserver/DocumentStorage`
 
-***Obs **: Om du ändrar värdet för GDS-rotkataloginställningen bör du vara särskilt försiktig. GDS-katalogen används för att lagra både långlivade filer som används i en process och viktiga produktkomponenter för AEM-formulär. Att ändra platsen för GDS-katalogen är en stor systemändring. Om GDS-katalogen konfigureras på ett felaktigt sätt kommer AEM-formulären att fungera och en fullständig ominstallation av AEM-formulären kan krävas. Om du anger en ny plats för GDS-katalogen måste programservern stängas av och data migreras innan servern kan startas om. Systemadministratören måste flytta alla filer från den gamla platsen till den nya, men behålla den interna katalogstrukturen.*
+>[!NOTE]
+>
+>Om du ändrar värdet för GDS-rotkataloginställningen bör du vara särskilt försiktig. GDS-katalogen används för att lagra både långlivade filer som används i en process och viktiga produktkomponenter för AEM-formulär. Att ändra platsen för GDS-katalogen är en stor systemändring. Om GDS-katalogen konfigureras på ett felaktigt sätt kommer AEM-formulären att fungera och en fullständig ominstallation av AEM-formulären kan krävas. Om du anger en ny plats för GDS-katalogen måste programservern stängas av och data migreras innan servern kan startas om. Systemadministratören måste flytta alla filer från den gamla platsen till den nya, men behålla den interna katalogstrukturen.
 
-***Obs **: Ange inte samma katalog för den tillfälliga katalogen och GDS-katalogen.*
+>[!NOTE]
+>
+>Ange inte samma katalog för den tillfälliga katalogen och GDS-katalogen.
 
 Mer information om GDS-katalogen finns i [Förbereda för att installera AEM-formulär (Single Server)](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_63).
 
@@ -91,11 +99,13 @@ FIPS-läget stöder inte krypteringsalgoritmer som används i tidigare versioner
 
 När FIPS är aktiverat används vanligtvis inte lösenordskryptering för något dokument. Om du försöker göra det genereras ett FIPSModeException-undantag som anger att lösenordskryptering inte tillåts i FIPS-läge. Dessutom stöds inte elementet PDFsFromBookmarks (DX) i dokumentbeskrivningens XML-element i FIPS-läge när basdokumentet är lösenordskrypterat.
 
-***Obs **: AEM-formulärprogram validerar inte kod för att säkerställa FIPS-kompatibilitet. Den tillhandahåller ett FIPS-driftläge så att FIPS-godkända algoritmer används för kryptografiska tjänster från FIPS-godkända bibliotek (RSA).*
+>[!NOTE]
+>
+>AEM-formulärprogram validerar inte kod för att säkerställa FIPS-kompatibilitet. Den tillhandahåller ett FIPS-driftläge så att FIPS-godkända algoritmer används för kryptografiska tjänster från FIPS-godkända bibliotek (RSA).
 
 **Aktivera WSDL** Välj det här alternativet om du vill aktivera generering av WSDL (Web Service Definition Language) för alla tjänster som ingår i AEM-formulär.
 
-Aktivera det här alternativet i utvecklingsmiljöer, där utvecklare använder WSDL-generering för att skapa sina klientprogram. Du kan välja att inaktivera WSDL-generering i en produktionsmiljö för att undvika att visa tjänstens interna information.
+Aktivera det här alternativet i utvecklingsmiljöer, där utvecklare använder WSDL-generering för att bygga sina klientprogram. Du kan välja att inaktivera WSDL-generering i en produktionsmiljö för att undvika att visa tjänstens interna information.
 
 **Aktivera dokumentlagring i databasen** Välj det här alternativet om du vill lagra långlivade dokument i AEM-formulärdatabasen. Om du aktiverar det här alternativet tas inte behovet av en GDS-katalog bort. Om du väljer det här alternativet förenklas dock säkerhetskopieringen av AEM-formulär. Om du bara använder GDS-systemet innebär en säkerhetskopiering att AEM-formulärsystemet försätts i säkerhetskopieringsläge och att säkerhetskopieringen av databasen och GDS slutförs. Om du väljer databasalternativet innebär säkerhetskopieringen att du slutför databassäkerhetskopieringen för en ny installation eller slutför databassäkerhetskopieringen och engångskopieringen av GDS för en uppgradering. Ytterligare hantering av databasen kan behövas för att rensa jobb och data jämfört med en GDS-konfiguration. (Se Alternativ för säkerhetskopiering när databasen används för dokumentlagring.)
 
