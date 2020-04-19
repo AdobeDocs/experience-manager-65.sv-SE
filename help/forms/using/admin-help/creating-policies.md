@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: fa054d30-c7dc-4b64-acf1-cbcbe8827df5
 translation-type: tm+mt
-source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -47,11 +47,11 @@ Med Acrobat kan du tillämpa profiler på dokument som du skickar som e-postbila
 
 Hur du interagerar med policyer och uppsättningar beror på din roll inom organisationen:
 
-**** Användare: Användare kan skapa, redigera och ta bort sina personliga profiler. Inbjudna användare kan också skapa personliga profiler om administratören aktiverar den här funktionen.
+**Användare:** Användare kan skapa, redigera och ta bort sina personliga profiler. Inbjudna användare kan också skapa personliga profiler om administratören aktiverar den här funktionen.
 
-**** Koordinatorer för principuppsättning: Koordinatorer för principuppsättningar kan skapa och hantera delade profiler i de principuppsättningar där de har utsetts till koordinator. En principuppsättningskoordinator är vanligtvis en specialist i organisationen som bäst kan skapa policyer i en viss principuppsättning.
+**Koordinatorer för principuppsättning:** Koordinatorer för principuppsättningar kan skapa och hantera delade profiler i de principuppsättningar där de har utsetts till koordinator. En principuppsättningskoordinator är vanligtvis en specialist i organisationen som bäst kan skapa policyer i en viss principuppsättning.
 
-**** Administratörer: Administratörer kan redigera alla användares personliga profiler. De kan skapa delade profiler. De kan också skapa, redigera och ta bort principuppsättningar och utse samordnare för principuppsättningar.
+**Administratörer:** Administratörer kan redigera alla användares personliga profiler. De kan skapa delade profiler. De kan också skapa, redigera och ta bort principuppsättningar och utse samordnare för principuppsättningar.
 
 Mer information om de olika säkerhetsrollerna för dokument finns i [Om dokumentsäkerhetsanvändare](/help/forms/using/admin-help/document-security.md#about-document-security-users).
 
@@ -127,7 +127,7 @@ I området Användare och grupper anger du vilka användare som har åtkomst til
 >
 >Dokumentets utgivare är den användare som skyddar dokumentet med profilen. Den här användaren ingår alltid som standard i en princip med fullständig åtkomstbehörighet, inklusive återkallnings- och principbytesfunktioner. Administratörer kan dock ändra dokumentutgivarens åtkomsträttigheter för delade profiler. Administratören kan t.ex. hindra dokumentutgivaren från att återkalla dokumentåtkomst eller ändra profilen.
 
-**** Lägg till användare eller grupp: Om du vill lägga till en användare eller grupp med användare klickar du på Lägg till användare eller grupp och sedan på Avancerad sökning för att hitta användare eller grupper. Exempel på användare är organisationens interna användare och inbjudna användare som har registrerat sig för dokumentsäkerhet. När du väljer det här alternativet visas sidan Lägg till användare eller grupp:
+**Lägg till användare eller grupp:** Om du vill lägga till en användare eller grupp med användare klickar du på Lägg till användare eller grupp och sedan på Avancerad sökning för att hitta användare eller grupper. Exempel på användare är organisationens interna användare och inbjudna användare som har registrerat sig för dokumentsäkerhet. När du väljer det här alternativet visas sidan Lägg till användare eller grupp:
 
 * Skriv användar- eller gruppnamnet eller e-postadressen i rutan Sök.
 * Välj Namn eller E-post i listan Använda.
@@ -135,19 +135,23 @@ I området Användare och grupper anger du vilka användare som har åtkomst til
 * Välj den domän du vill söka i listan In och klicka på Sök.
 * När resultaten returneras markerar du den användare eller grupp som du vill lägga till och klickar på Lägg till.
 
-**Obs**: *Om du anger ett korrekt inbjudet användarnamn eller en e-postadress och inget resultat returneras, kanske användaren inte har registrerat sig än, eller så kan kontot tas bort. Du kan försöka lägga till användaren som en inbjuden användartyp eller kontakta administratören.*
+>[!NOTE]
+>
+>Om du anger ett korrekt inbjudet användarnamn eller en e-postadress och inget resultat returneras, kanske användaren inte har registrerat sig än, eller så kan kontot tas bort. Du kan försöka lägga till användaren som en inbjuden användartyp eller kontakta administratören.
 
-**** Bjud in ny användare: Om du vill lägga till en inbjuden användare klickar du på Bjud in ny användare, skriver användarens e-postadress i rutan som visas och klickar på Bjud in. Det här alternativet är bara tillgängligt om administratören har aktiverat det. När du lägger till nya inbjudna användare till en profil skickas ett e-postmeddelande med en registreringsinbjudan om användarna inte redan har bjudits in att registrera sig. Användarna måste använda länken i e-postmeddelandet för att skapa ett konto, och sedan måste de aktivera kontot.
+**Bjud in ny användare:** Om du vill lägga till en inbjuden användare klickar du på Bjud in ny användare, skriver användarens e-postadress i rutan som visas och klickar på Bjud in. Det här alternativet är bara tillgängligt om administratören har aktiverat det. När du lägger till nya inbjudna användare till en profil skickas ett e-postmeddelande med en registreringsinbjudan om användarna inte redan har bjudits in att registrera sig. Användarna måste använda länken i e-postmeddelandet för att skapa ett konto, och sedan måste de aktivera kontot.
 
 Efter registrering kan inbjudna användare använda principskyddade dokument som de har behörighet för. Beroende på vilka funktioner administratören har aktiverat kan externa användare ha behörighet att tillämpa profiler på dokument, skapa, redigera och ta bort profiler samt lägga till andra externa användare till profiler.
 
-**** Lägg till anonym användare: Klicka på Lägg till anonym användare om du vill tillåta anonym användaråtkomst. Det här alternativet är bara tillgängligt om administratören har aktiverat anonym användaråtkomst för dokumentsäkerhet. (Se Konfigurera dokumentsäkerhetsservern.) Det här alternativet ger alla åtkomst till dokument som skyddas av den här profilen, oavsett om de har ett dokumentsäkerhetskonto eller inte. Om du väljer det här alternativet kan du inte lägga till andra typer av användare i profilen.
+**Lägg till anonym användare:** Klicka på Lägg till anonym användare om du vill tillåta anonym användaråtkomst. Det här alternativet är bara tillgängligt om administratören har aktiverat anonym användaråtkomst för dokumentsäkerhet. (Se Konfigurera dokumentsäkerhetsservern.) Det här alternativet ger alla åtkomst till dokument som skyddas av den här profilen, oavsett om de har ett dokumentsäkerhetskonto eller inte. Om du väljer det här alternativet kan du inte lägga till andra typer av användare i profilen.
 
-***Obs **: Om du vill tillåta anonym åtkomst till ett policyskyddat dokument som för närvarande inte har det, tar du bort den befintliga policyn och tillämpar sedan en policy som tillåter anonym åtkomst. Om du byter eller ändrar den befintliga profilen måste användarna fortfarande logga in för att få åtkomst till dokumentet.*
+>[!NOTE]
+>
+>Om du vill tillåta anonym åtkomst till ett policyskyddat dokument som för närvarande inte har det, tar du bort den befintliga policyn och tillämpar sedan en policy som tillåter anonym åtkomst. Om du byter eller ändrar den befintliga profilen måste användarna fortfarande logga in för att få åtkomst till dokumentet.
 
 #### Ange dokumentbehörigheter för användare och grupper {#specify-the-document-permissions-for-users-and-groups}
 
-Du kan ange dokumentbehörigheter för en användare eller grupp åt gången, eller så kan du markera flera användare och grupper i listan och ändra deras behörigheter med hjälp av alternativen i området för kolumnrubriker.
+Du kan ange dokumentbehörigheter för en användare eller grupp åt gången, eller så kan du markera flera användare och grupper i listan och ändra deras behörigheter med alternativen i området för kolumnrubriker.
 
 Som standard har alla principskyddade dokument en behörighet som tillåter användare att öppna dem online.
 
@@ -155,65 +159,69 @@ Fliken Behörigheter och alternativ visas i dokumentskydd.
 
 Dessa dokumentbehörigheter är tillgängliga på fliken Behörigheter. Du kan tillämpa dessa behörigheter på PDF-, PTC Pro/E- och Microsoft Office-filer.
 
-**** Skriv ut: Låter användaren skriva ut ett dokument som är skyddat med den här profilen. För Office- och Pro/E-filer kan du markera kryssrutan Skriv ut om du vill tillåta utskrift eller avmarkera den om du vill förhindra utskrift. Om du markerar kryssrutan Visa anpassade behörigheter för PDF kan du välja bland följande alternativ:
+**Skriv ut:** Låter användaren skriva ut ett dokument som är skyddat med den här profilen. För Office- och Pro/E-filer kan du markera kryssrutan Skriv ut om du vill tillåta utskrift eller avmarkera den om du vill förhindra utskrift. Om du markerar kryssrutan Visa anpassade behörigheter för PDF kan du välja bland följande alternativ:
 
-**** Ej tillåtet: Användaren får inte skriva ut PDF-filen.
+**Ej tillåtet:** Användaren får inte skriva ut PDF-filen.
 
-**** Tillåtet: Användaren får skriva ut PDF-filen.
+**Tillåtet:** Användaren får skriva ut PDF-filen.
 
-**Låg upplösning.** endast: Användaren kan skriva ut PDF-filen med låg upplösning.
+**Låg upplösning. endast:** Användaren kan skriva ut PDF-filen med låg upplösning.
 
-**** Ändra: Låter användaren ändra ett dokument som är skyddat med den här principen. För Office- och Pro/E-filer kan du markera kryssrutan Ändra om du vill tillåta ändringar, eller avmarkera den om du vill förhindra ändringar. Om du markerar kryssrutan Visa anpassade behörigheter för PDF kan du välja bland följande alternativ:
+**Ändra:** Låter användaren ändra ett dokument som är skyddat med den här principen. För Office- och Pro/E-filer kan du markera kryssrutan Ändra om du vill tillåta ändringar, eller avmarkera den om du vill förhindra ändringar. Om du markerar kryssrutan Visa anpassade behörigheter för PDF kan du välja bland följande alternativ:
 
-**** Ej tillåtet: Användaren får inte ändra PDF-filen.
+**Ej tillåtet:** Användaren får inte ändra PDF-filen.
 
-**** Alla: Användaren kan ändra PDF-filen.
+**Alla:** Användaren kan ändra PDF-filen.
 
-**** Samarbeta: Användaren kan samarbeta med andra och använda samarbetsalternativen i Adobe Acrobat. Med den här behörigheten kan användaren kopiera formulärdata även om behörigheten Kopiera inte uttryckligen anges i principen.
+**Samarbeta:** Användaren kan samarbeta med andra och använda samarbetsalternativen i Adobe Acrobat. Med den här behörigheten kan användaren kopiera formulärdata även om behörigheten Kopiera inte uttryckligen anges i principen.
 
-**** Ändra sidor: Användaren kan lägga till och ta bort sidor och redigera innehåll i PDF-filen.
+**Ändra sidor:** Användaren kan lägga till och ta bort sidor och redigera innehåll i PDF-filen.
 
-**** Fyll i och signera: Användaren kan fylla i formulärfält i PDF-filen och signera den.
+**Fyll i och signera:** Användaren kan fylla i formulärfält i PDF-filen och signera den.
 
-**** Copy: Låter användaren kopiera text från ett dokument som är skyddat med den här profilen.
+**Copy:** Låter användaren kopiera text från ett dokument som är skyddat med den här profilen.
 
-**** Skärmläsare: Den här behörigheten visas om du markerar kryssrutan Visa anpassade behörigheter för PDF. När det här alternativet är markerat har Adobe Acrobat behörighet att lägga till tillfälliga taggar i PDF-filen för att förbättra läsbarheten med en skärmläsare.
+**Skärmläsare:** Den här behörigheten visas om du markerar kryssrutan Visa anpassade behörigheter för PDF. När det här alternativet är markerat har Adobe Acrobat behörighet att lägga till tillfälliga taggar i PDF-filen för att förbättra läsbarheten med en skärmläsare.
 
 Dessa dokumentbehörigheter är tillgängliga på fliken Alternativ. Du kan använda dessa behörigheter för PDF-, PTC Pro/E- och Microsoft Office-filer:
 
-**** Offline: Låter användaren visa ett dokument offline som är skyddat med den här principen.
+**Offline:** Låter användaren visa ett dokument offline som är skyddat med den här principen.
 
-**** Behörighetsgiltighet: Välj Behörigheter är alltid giltiga eller ange en giltighetsperiod för dokumentbehörigheter. Om du väljer en giltighetsperiod klickar du på kalenderikonerna för att välja ett datum och använder pilarna för att ange tiden i 24-timmarsformat.
+**Behörighetsgiltighet:** Välj Behörigheter är alltid giltiga eller ange en giltighetsperiod för dokumentbehörigheter. Om du väljer en giltighetsperiod klickar du på kalenderikonerna för att välja ett datum och använder pilarna för att ange tiden i 24-timmarsformat.
 
 För delade profiler kan administratörer inaktivera följande behörigheter för dokumentutgivaren (den användare som tillämpar profilen på ett dokument):
 
-**** Återkalla: Låter dokumentutgivaren återkalla dokumentbehörigheter.
+**Återkalla:** Låter dokumentutgivaren återkalla dokumentbehörigheter.
 
-**** Växel: Tillåter dokumentutgivaren att växla principbehörigheter.
+**Växel:** Tillåter dokumentutgivaren att växla principbehörigheter.
 
 ### Allmänna inställningar {#general-settings}
 
 Området Allmänna inställningar innehåller följande inställningar:
 
-**** Giltighetsperiod: Den tidsperiod under vilken det profilskyddade dokumentet är tillgängligt för behöriga mottagare. Du kan välja mellan följande alternativ för giltighetsperiod:
+**Giltighetsperiod:** Den tidsperiod under vilken det profilskyddade dokumentet är tillgängligt för behöriga mottagare. Du kan välja mellan följande alternativ för giltighetsperiod:
 
-**** Dokumentet kommer inte att vara giltigt efter: Dokumentet är tillgängligt under det angivna antalet dagar från när dokumentet skyddades.
+**Dokumentet kommer inte att vara giltigt efter:** Dokumentet är tillgängligt under det angivna antalet dagar från när dokumentet skyddades.
 
-**** Dokumentet kommer inte att vara giltigt efter detta datum: Dokumentet är giltigt från det datum då profilen tillämpas på dokumentet till det slutdatum som anges.
+**Dokumentet kommer inte att vara giltigt efter detta datum:** Dokumentet är giltigt från det datum då profilen tillämpas på dokumentet till det slutdatum som anges.
 
-**** Giltig från, till: Dokumentet är giltigt under de angivna datumen. Du kan använda kalendern för att välja ett datum, där det är tillämpligt, genom att klicka på kalenderikonen.
+**Giltig från, till:** Dokumentet är giltigt under de angivna datumen. Du kan använda kalendern för att välja ett datum, där det är tillämpligt, genom att klicka på kalenderikonen.
 
-**** Dokumentet är alltid giltigt: Dokumentets giltighetsperiod går inte ut.
+**Dokumentet är alltid giltigt:** Dokumentets giltighetsperiod går inte ut.
 
-***Obs **: Giltighetsdatumen baseras på tidszonen i dokumentsäkerhetssystemet, inte på tidszonen på den lokala datorn.*
+>[!NOTE]
+>
+>Giltighetsdatumen baseras på tidszonen i dokumentsäkerhetssystemet, inte på tidszonen på den lokala datorn.
 
-**** Granskning: Aktivera eller inaktivera granskning av händelser som är kopplade till ett policyskyddat dokument. Dokumentsäkerhet kan t.ex. registrera händelser som försök att öppna ett dokument. Granskade händelser visas i listan på sidan Händelser. Om du inte väljer det här alternativet registreras inte händelser för dokument som är kopplade till profilen.
+**Granskning:** Aktivera eller inaktivera granskning av händelser som är kopplade till ett policyskyddat dokument. Dokumentsäkerhet kan t.ex. registrera händelser som försök att öppna ett dokument. Granskade händelser visas i listan på sidan Händelser. Om du inte väljer det här alternativet registreras inte händelser för dokument som är kopplade till profilen.
 
-***Obs **: Administratören måste även aktivera servergranskning på konfigurationssidan för granskning och sekretessinställningar för att granskningsfunktionen ska fungera.*
+>[!NOTE]
+>
+>Administratören måste även aktivera servergranskning på konfigurationssidan för granskning och sekretessinställningar för att granskningsfunktionen ska fungera.
 
-**** Spårning av utökad användning: Aktivera eller inaktivera spårning av utökad användning. dokumentskydd har stöd för spårning av användarhändelser som är kopplade till olika åtgärder som utförs på en PDF-fil. Dokumentsäkerhetsobjektet kan nås med ett Java-skript. En knappklickning, en multimediefil som spelas upp eller sparandet av en fil är några exempel på händelser som kan utlösas från en profilskyddad PDF. Med dokumentsäkerhetsobjektet kan du även hämta användarinformation. Händelsespårning kan aktiveras från dokumentsäkerhetsservern på global nivå eller på principnivå.
+**Spårning av utökad användning:** Aktivera eller inaktivera spårning av utökad användning. dokumentskydd har stöd för spårning av användarhändelser som är kopplade till olika åtgärder som utförs på en PDF-fil. Dokumentsäkerhetsobjektet kan nås med ett Java-skript. En knappklickning, en multimediefil som spelas upp eller sparandet av en fil är några exempel på händelser som kan utlösas från en profilskyddad PDF. Med dokumentsäkerhetsobjektet kan du även hämta användarinformation. Händelsespårning kan aktiveras från dokumentsäkerhetsservern på global nivå eller på principnivå.
 
-**** Leasingperiod automatiskt offline: Det maximala antalet dagar som mottagaren kan använda det principskyddade dokumentet offline (utan en aktiv Internet- eller nätverksanslutning). När låneperioden löper ut måste mottagaren synkronisera dokumentet igen för att kunna fortsätta använda det.
+**Leasingperiod automatiskt offline:** Det högsta antal dagar som mottagaren kan använda det principskyddade dokumentet offline (utan en aktiv Internet- eller nätverksanslutning). När låneperioden löper ut måste mottagaren synkronisera dokumentet igen för att kunna fortsätta använda det.
 
 ### Externa auktoriseringsleverantörer {#external-authorization-providers}
 
@@ -223,11 +231,11 @@ Välj externa autentiseringsproviders om du redan har konfigurerat några. Tillg
 
 Du kan åsidosätta de autentiseringsinställningar som du har konfigurerat på servern och ange de autentiseringsalternativ som är relevanta för den här principen. Välj Åsidosätt globala autentiseringsinställningar och välj sedan de autentiseringsalternativ som är relevanta för den här principen. Följande autentiseringsalternativ är tillgängliga:
 
-**** Tillåt lösenordsautentisering av användarnamn: Välj det här alternativet om du vill att klientprogram ska kunna använda autentisering av användarnamn/lösenord vid anslutning till servern.
+**Tillåt lösenordsautentisering av användarnamn:** Välj det här alternativet om du vill att klientprogram ska kunna använda autentisering av användarnamn/lösenord vid anslutning till servern.
 
-**** Tillåt Kerberos-autentisering: Välj det här alternativet om du vill att klientprogram ska kunna använda Kerberos-autentisering när de ansluter till servern.
+**Tillåt Kerberos-autentisering:** Välj det här alternativet om du vill att klientprogram ska kunna använda Kerberos-autentisering när de ansluter till servern.
 
-**** Tillåt klientcertifikatautentisering: Välj det här alternativet om du vill att klientprogram ska kunna använda certifikatautentisering när de ansluter till servern.
+**Tillåt klientcertifikatautentisering:** Välj det här alternativet om du vill att klientprogram ska kunna använda certifikatautentisering när de ansluter till servern.
 
 **Tillåt utökad autentisering** Välj för att aktivera utökad autentisering. Om du väljer det här alternativet kan klientprogram använda utökad autentisering. Utökad autentisering möjliggör anpassade autentiseringsprocesser och olika autentiseringsalternativ som konfigurerats på dokumentsäkerhetsservern
 
@@ -241,17 +249,19 @@ Om du åsidosätter de globala autentiseringsinställningarna kan du välja de a
 
 Området Avancerade inställningar innehåller följande inställningar:
 
-**** Dynamisk vattenstämpel: Välj en vattenstämpel som ska visas dynamiskt på sidorna i ett dokument (t.ex. när en mottagare skriver ut dokumentet). Dynamiska vattenstämplar identifierar unikt ett dokument och bidrar därför till att säkerställa dokumentets sekretess och förhindra upphovsrättsintrång. Administratören kan till exempel konfigurera en dynamisk vattenstämpel som visar aktuellt datum, användarnamnet eller identifieraren för den person som använder dokumentet eller namnet på profilen som används för att skydda dokumentet. En vattenstämpel kan även visa anpassad text eller grafiska element om den är konfigurerad. Administratörer konfigurerar alternativen för vattenstämplar och administratörer och användare kan tillämpa dem på profiler.
+**Dynamisk vattenstämpel:** Välj en vattenstämpel som ska visas dynamiskt på sidorna i ett dokument (t.ex. när en mottagare skriver ut dokumentet). Dynamiska vattenstämplar identifierar unikt ett dokument och bidrar därför till att säkerställa dokumentets sekretess och förhindra upphovsrättsintrång. Administratören kan till exempel konfigurera en dynamisk vattenstämpel som visar aktuellt datum, användarnamnet eller identifieraren för den person som använder dokumentet eller namnet på profilen som används för att skydda dokumentet. En vattenstämpel kan även visa anpassad text eller grafiska element om den är konfigurerad. Administratörer konfigurerar alternativen för vattenstämplar och administratörer och användare kan tillämpa dem på profiler.
 
 (Se [Konfigurera dynamiska vattenstämplar](/help/forms/using/admin-help/configuring-client-server-options.md#configure-dynamic-watermarks).)
 
 Om du redigerar en profil och administratören har tagit bort en konfigurerad vattenstämpel som du tidigare har valt för den här principen, visas en anteckning på sidan Redigera princip. Om du i det här fallet sparar det redigerade dokumentet, väljer du en ny vattenstämpel om du vill att den ska visas i dokumentet.
 
-***Obs **: För profiler som ger anonym användaråtkomst visas inte användarnamnet och identifieraren för en anonym användare som en vattenstämpel, även om du väljer den här typen av vattenstämpel.*
+>[!NOTE]
+>
+>För profiler som ger anonym användaråtkomst visas inte användarnamnet och identifieraren för en anonym användare som en vattenstämpel, även om du väljer den här typen av vattenstämpel.
 
-**** Använd endast certifierade Acrobat-plugin-program för PDF: När du väljer det här alternativet för en profil måste Acrobat 8.0 och senare köras i certifierat läge när dokument som är skyddade med profilen öppnas. När Acrobat körs i certifierat läge läses inga plugin-program från tredje part in.
+**Använd endast certifierade Acrobat-plugin-program för PDF:** När du väljer det här alternativet för en profil måste Acrobat 8.0 och senare köras i certifierat läge när dokument som är skyddade med profilen öppnas. När Acrobat körs i certifierat läge läses inga plugin-program från tredje part in.
 
-Välj det här alternativet om du är oroad över att en dokumentmottagare skriver ett plugin-program som kan kringgå något av dokumentskyddet i Acrobat 8.0 eller senare. Välj inte det här alternativet om dokumentmottagarna behöver använda plugin-program från tredje part i Acrobat för att interagera med dokument.
+Välj det här alternativet om du är orolig för att en dokumentmottagare ska skriva ett plugin-program som kan kringgå något av dokumentskyddet i Acrobat 8.0 eller senare. Välj inte det här alternativet om dokumentmottagarna behöver använda plugin-program från tredje part i Acrobat för att interagera med dokument.
 
 Det här alternativet aktiverar endast det certifierade läget i Acrobat 8.0 eller senare. administratören måste inaktivera åtkomsten till Acrobat 7.0.
 
@@ -259,19 +269,19 @@ Det här alternativet aktiverar endast det certifierade läget i Acrobat 8.0 ell
 
 Det här alternativet gäller inte Adobe Reader.
 
-**** Felmeddelande om nekad åtkomst: Ett meddelande som visas för alla som försöker öppna ett policyskyddat dokument utan behörighet. Det här meddelandet visas i Acrobat. Klienter som inte kan visa det här meddelandet visar ett standardmeddelande som anger att åtkomst nekas.
+**Felmeddelande om nekad åtkomst:** Ett meddelande som visas för alla som försöker öppna ett policyskyddat dokument utan behörighet. Det här meddelandet visas i Acrobat. Klienter som inte kan visa det här meddelandet visar ett standardmeddelande som anger att åtkomst nekas.
 
 ### Avancerade inställningar som inte kan ändras {#unchangeable-advanced-settings}
 
 Området Avancerade inställningar som inte kan ändras innehåller följande inställningar. Du kan inte ändra de här inställningarna när du har sparat profilen.
 
-**** Krypteringsalgoritm och nyckellängd: Används för att skydda dina dokument. Du kan välja mellan följande alternativ:
+**Krypteringsalgoritm och nyckellängd:** Används för att skydda dina dokument. Du kan välja mellan följande alternativ:
 
 * 128-bitars AES
 * 256-bitars AES. Endast Acrobat 9.0 och senare stöder det här alternativet. Om du vill använda AES 256-kryptering för PDF-filer hämtar och installerar du Java Cryptography Extension (JCE) Unlimited Strength Jurisdential Policy-filer. Dessa filer ersätter filerna local_policy.jar och US_export_policy.jar i mappen [JAVE_HOME]/lib/security. Om du till exempel använder Sun JDK 1.6 kopierar du de hämtade filerna till [mappen]dep root/Java/jdk1.6.0_26/lib/security. Du kan hämta dessa filer från [Java SE Downloads](https://java.sun.com/javase/downloads/index.jsp).
 * Ingen kryptering. Acrobat 9.0 och senare stöder det här alternativet. Om du väljer det här alternativet inaktiveras alternativen Dokumentbegränsningar. Det här alternativet kan vara användbart om du vill använda dokumentskydd för dokumentgranskning eller versionskontroll, men inte vill kryptera dokumentet.
 
-**** Dokumentbegränsningar: Markera de PDF-dokumentkomponenter som ska krypteras. Andra klientprogram krypterar hela dokumentet men inte länkade eller inbäddade filer. Du kan välja mellan följande alternativ:
+**Dokumentbegränsningar:** Markera de PDF-dokumentkomponenter som ska krypteras. Andra klientprogram krypterar hela dokumentet men inte länkade eller inbäddade filer. Du kan välja mellan följande alternativ:
 
 * Hela dokumentet, inklusive dess bilagor och metadata. *Metadata* är information om dokumentet och dess innehåll som du kan visa via dialogrutan Dokumentegenskaper eller Acrobats avancerade-meny. I Acrobat kan du bifoga filer av olika typer (till exempel text-, ljud- och videofiler) till PDF-dokument.
 * Dokumentet och dess bilagor, men inte metadata.
@@ -328,9 +338,9 @@ Administratörer kan söka efter delade profiler och personliga profiler som har
 
 1. Välj något av följande alternativ i söklistan:
 
-   **** Princip-ID: ID-numret för profilen som genereras när användaren skapar profilen. Du måste ange det exakta princip-ID:t.
+   **Princip-ID:** ID-numret för profilen som genereras när användaren skapar profilen. Du måste ange det exakta princip-ID:t.
 
-   **** Principnamn: Namnet på principen. Du kan söka efter delar av eller hela principnamnet.
+   **Principnamn:** Namnet på principen. Du kan söka efter delar av eller hela principnamnet.
 
 1. Skriv motsvarande värde i textrutan. Om du till exempel har valt Principnamn skriver du det principnamn du söker efter.
 1. I visningslistan väljer du antalet resultat som ska visas och klickar sedan på Sök. Sökresultaten visas.
