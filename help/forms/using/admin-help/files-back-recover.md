@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 6f9a294d-24bd-4e4b-b929-2809f5e6cef9
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -82,7 +82,7 @@ Den möjliggör uppgiftshantering för klienter utan Flash Player och Adobe Read
 
 ## AEM-formulärdatabas {#aem-forms-database}
 
-AEM-formulärdatabasen lagrar innehåll som formulärartefakter, tjänstkonfigurationer, processtillstånd och databasreferenser till filer i GDS och rotkatalogen för innehållslagring (för Content Services). Säkerhetskopiering av databaser kan utföras i realtid utan avbrott i tjänsten, och återställning kan ske till en viss tidpunkt eller till en viss ändring. I det här avsnittet beskrivs hur du konfigurerar databasen så att den kan säkerhetskopieras i realtid.
+AEM-formulärdatabasen lagrar innehåll som formulärartefakter, tjänstkonfigurationer, processtillstånd och databasreferenser till filer i GDS och rotkatalogen för innehållslagring (för Content Services). Säkerhetskopiering av databaser kan utföras i realtid utan avbrott i tjänsten, och återställningen kan ske till en viss tidpunkt eller till en viss ändring. I det här avsnittet beskrivs hur du konfigurerar databasen så att den kan säkerhetskopieras i realtid.
 
 I ett korrekt konfigurerat AEM-formulärsystem kan systemadministratören och databasadministratören enkelt samarbeta för att återställa systemet till ett konsekvent och känt tillstånd.
 
@@ -134,8 +134,9 @@ Se [Strategier](https://articles.techrepublic.com.com/5100-1035_61-1043671.md)f�
 
 Använd MySQLAdmin eller ändra INI-filerna i Windows för att konfigurera MySQL-databasen så att den körs i binärt loggläge. (Se [Binär loggning](https://dev.mysql.com/doc/refman/5.1/en/binary-log.html)för MySQL.) Ett verktyg för säkerhetskopiering av MySQL är också tillgängligt från InnoBase. (Se [Innobase Hot Backup](https://www.innodb.com/hot-backup/features.md).)
 
-**Obs**: Standardläget *för binär loggning för MySQL är &quot;Statement&quot;, vilket är inkompatibelt med tabeller som används av Content Services (utgått). Om du använder binär loggning i det här standardläget misslyckas Content Services (Borttagen). Om ditt system innehåller innehållstjänster (borttaget) använder du loggningsläget Blandat. Om du vill aktivera&quot;blandad&quot; loggning lägger du till följande argument i filen my.ini:*
-`binlog_format=mixed log-bin=logname`
+>[!NOTE]
+>
+>Standardläget för binär loggning för MySQL är &quot;Statement&quot;, vilket är inkompatibelt med tabeller som används av Content Services (utgått). Om du använder binär loggning i det här standardläget misslyckas Content Services (Borttagen). Om ditt system innehåller innehållstjänster (borttaget) använder du loggningsläget Blandat. Om du vill aktivera&quot;blandad&quot; loggning lägger du till följande argument i file:*`binlog_format=mixed log-bin=logname`
 
 Du kan använda verktyget mysqldump för att få en fullständig säkerhetskopiering av databasen. Fullständig säkerhetskopiering krävs, men är inte alltid lämplig. De producerar stora säkerhetskopior och tar tid att generera. Om du vill göra en stegvis säkerhetskopiering måste du starta servern med alternativet - `log-bin` enligt beskrivningen i föregående avsnitt. Varje gång MySQL-servern startas om slutar den skriva till den aktuella binära loggen, skapar en ny och från och med då blir den nya den aktuella. Du kan tvinga en växel manuellt med `FLUSH LOGS SQL` kommandot. Efter den första fullständiga säkerhetskopieringen utförs efterföljande stegvisa säkerhetskopieringar med hjälp av verktyget mysqladmin med `flush-logs` kommandot, som skapar nästa loggfil.
 
@@ -192,7 +193,7 @@ Standardplatsen för indexrotkatalogen finns `[aem-forms root]/lucene-indexes` p
 
 ## Kundinstallerade teckensnitt {#customer-installed-fonts}
 
-Om du har installerat ytterligare teckensnitt i AEM-formulärmiljön måste du säkerhetskopiera dem separat. Säkerhetskopiera alla Adobe- och kundkataloger som anges i administrationskonsolen under Inställningar > Kärnsystem > Konfigurationer. Se till att du säkerhetskopierar hela teckensnittskatalogen.
+Om du har installerat ytterligare teckensnitt i AEM-formulärmiljön måste du säkerhetskopiera dem separat. Säkerhetskopiera alla teckensnittskataloger från Adobe och kunder som anges i administrationskonsolen under Inställningar > Kärnsystem > Konfigurationer. Se till att du säkerhetskopierar hela teckensnittskatalogen.
 
 >[!NOTE]
 >
