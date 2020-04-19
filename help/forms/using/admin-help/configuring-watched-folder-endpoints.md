@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/managing_endpoints
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 761e7909-43ba-4642-bcfc-8d76f139b9a3
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -201,7 +201,9 @@ Om det till exempel är 2009-08-17 och du anger `C:/Test/WF0/failure/%Y/%M/%D/%H
 
 Om sökvägen inte är absolut men relativ skapas mappen i den bevakade mappen. Standardvärdet är result/%Y/%M/%D/, som är resultatmappen i den bevakade mappen. Mer information om filmönster finns i [Om filmönster](configuring-watched-folder-endpoints.md#about-file-patterns).
 
-***Obs **: Ju mindre resultatmapparna är, desto bättre prestanda blir Bevakade mappar. Om den beräknade inläsningen för den bevakade mappen till exempel är 1 000 filer varje timme kan du testa ett mönster som`result/%Y%M%D%H`så att en ny undermapp skapas varje timme. Om inläsningen är mindre (till exempel 1 000 filer per dag) kan du använda ett mönster som`result/%Y%M%D`.*
+>[!NOTE]
+>
+>Ju mindre resultatmapparna är, desto bättre prestanda blir Bevakade mappar. Om den beräknade inläsningen för den bevakade mappen till exempel är 1 000 filer varje timme kan du testa ett mönster som `result/%Y%M%D%H` så att en ny undermapp skapas varje timme. Om inläsningen är mindre (till exempel 1 000 filer per dag) kan du använda ett mönster som `result/%Y%M%D`.
 
 **Bevara mapp:** Den plats där filerna lagras efter att sökningen och hämtningen har slutförts. Sökvägen kan vara en absolut, relativ eller null-katalogsökväg. Du kan använda filmönster enligt beskrivningen för resultatmappen. Standardvärdet är preserve/%Y/%M/%D/.
 
@@ -231,7 +233,9 @@ Värdet -1 dagar anger att resultatmappen aldrig ska tas bort. Standardvärdet �
 
 Bevakade mapputdata kan vara ett enstaka dokument, en lista med dokument eller en karta med dokument. Dessa utdatadokument sparas sedan i resultatmappen med det mönster som anges i Mappning av utdataparameter.
 
-**Obs**: Om du *anger namn som ger unika utdatafilnamn förbättras prestandan. Tänk dig till exempel det fall där tjänsten returnerar ett utdatadokument och Output Parameter Mapping mappar det till`%F.%E`(indatafilens filnamn och filtillägg). Om användare i det här fallet släpper filer med samma namn varje minut, och resultatmappen är konfigurerad till`result/%Y/%M/%D`och inställningen Skriv över duplicerat filnamn är inaktiverad, försöker Bevakad mapp att matcha dubblettfilnamnen. Prestandan kan påverkas av att duplicerade filnamn tolkas. I det här fallet kan prestandan förbättras om du ändrar Mappning av utdataparameter till`%F_%h_%m_%s_%l`att lägga till timmar, minuter, sekunder och millisekunder i namnet eller ser till att borttagna filer har unika namn.*
+>[!NOTE]
+>
+>Om du anger namn som ger unika utdatafilnamn förbättras prestandan. Tänk dig till exempel det fall där tjänsten returnerar ett utdatadokument och Output Parameter Mapping mappar det till `%F.%E` (indatafilens filnamn och filtillägg). Om användare i det här fallet släpper filer med samma namn varje minut, och resultatmappen är konfigurerad till `result/%Y/%M/%D`och inställningen Skriv över duplicerat filnamn är inaktiverad, försöker Bevakad mapp att matcha dubblettfilnamnen. Prestandan kan påverkas av att duplicerade filnamn tolkas. I det här fallet kan prestandan förbättras om du ändrar Mappning av utdataparameter till `%F_%h_%m_%s_%l` att lägga till timmar, minuter, sekunder och millisekunder i namnet eller ser till att borttagna filer har unika namn.
 
 ## Om filmönster {#about-file-patterns}
 
