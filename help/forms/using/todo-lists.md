@@ -11,7 +11,7 @@ topic-tags: forms-workspace
 discoiquuid: d8546227-d78d-4fe2-a092-222482bb69c9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -212,10 +212,15 @@ Du kan slutföra en uppgift på flera olika sätt:
 
 * Använda de åtgärder som är tillgängliga på flikarna
 * Använda de inbyggda åtgärderna i själva formuläret
-* Från din Att göra-lista, utan att öppna uppgiftenObs! Det här alternativet är tillgängligt om `isMustOpenToComplete` fältet inte är markerat i `Assign Task` steget i Workbench när du utformar en process.
+* Från din att göra-lista, utan att öppna uppgiften
+
+>[!NOTE]
+>
+>Det här alternativet är tillgängligt om `isMustOpenToComplete` fältet inte är markerat i `Assign Task` steget i Workbench när du utformar en process.
+
 * Om du får e-postmeddelanden via e-post
 
-När du har slutfört en uppgift kan en bekräftelsedialogruta visas som bekräftar åtgärden. Du kan till exempel se en dialogruta där du ombeds bekräfta att den information du har angett är giltig.
+När du har slutfört en uppgift kan en bekräftelsedialogruta visas som bekräftar åtgärden. Du kan till exempel se en dialogruta där du ombeds bekräfta att den information som du har angett är giltig.
 
 >[!NOTE]
 >
@@ -270,7 +275,9 @@ Först anger du dina inställningar för AEM Forms-arbetsytan så att du får e-
 
 E-postmeddelandena kan innehålla en länk som öppnar uppgiften på arbetsytan i AEM Forms, en bifogad fil som används för uppgiften eller åtgärder för att slutföra uppgiften via e-post. Om ett formulär ingår i e-postmeddelandet kan du öppna formuläret och slutföra åtgärden om knapparna för att slutföra uppgiften finns i formuläret. Om åtgärder för att slutföra uppgiften ingår i e-postmeddelandet kan du slutföra uppgiften genom att klicka på åtgärderna i e-postmeddelandet eller genom att svara på e-postmeddelandet med åtgärden som är skriven som första rad i e-postmeddelandet.
 
-**Obs**: Information om hur du konfigurerar arbetsytan så att den använder rätt e-postmallar finns i [AEM Forms JEE Administrator Guide](https://help.adobe.com/en_US/AEMForms/6.1/AdminHelp/).
+>[!NOTE]
+>
+>Information om hur du konfigurerar arbetsytan så att den använder rätt e-postmallar finns i [AEM Forms JEE Administrator Guide](https://help.adobe.com/en_US/AEMForms/6.1/AdminHelp/).
 
 När du slutför en uppgift via e-post tas uppgiften bort från din Att göra-lista på arbetsytan i AEM Forms.
 
@@ -361,7 +368,7 @@ Om du får åtkomst till en annan användares Att göra-lista kan du inte visa n
 
 Om du tänker vara utanför kontoret kan du ange vad som ska hända med uppgifter som har tilldelats dig för den perioden.
 
-Du kan ange ett startdatum och en sluttid och ett slutdatum och en sluttid så att dina inställningar som inte är på kontoret börjar gälla. Om du befinner dig i en annan tidszon än servern används tidszonen för servern.
+Du kan ange startdatum och -tid och slutdatum och sluttid så att dina inställningar som inte är på kontoret börjar gälla. Om du befinner dig i en annan tidszon än servern används tidszonen för servern.
 
 Du kan ange en standardperson som alla dina uppgifter skickas till. Du kan också ange undantag för uppgifter från specifika processer som ska skickas till en annan användare eller som ska finnas kvar i din Att göra-lista tills du kommer tillbaka. Om den utsedda personen även är utanför kontoret, kommer uppgiften att utföras av den användare som han/hon har utsett. Om uppgiften inte kan tilldelas till en användare som inte är utanför kontoret finns uppgiften kvar i din Att göra-lista.
 
