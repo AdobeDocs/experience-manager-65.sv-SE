@@ -3,7 +3,7 @@ title: Hantera Adobe Stock-mediefiler i AEM Resurser
 description: Sök, hämta, licensiera och hantera Adobe Stock-mediefiler inifrån AEM. Använd de licensierade mediefilerna som andra digitala resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 62e82b6da2a5f961acf8cbc30ad29b3c25b1ecef
+source-git-commit: 68fb4c08b8093ff50e74dc9e29011325cdf7e7d7
 
 ---
 
@@ -16,7 +16,7 @@ Adobe Stock ger designers och företag tillgång till miljontals utvalda och roy
 
 ## Förutsättningar {#prerequisites}
 
-Integreringen kräver en Adobe Stock-plan [för](https://stockenterprise.adobe.com/) företag och AEM 6.5 eller senare. Mer information om AEM 6.5 Service Pack finns i [versionsinformationen](/help/release-notes/sp-release-notes.md).
+Integreringen kräver en Adobe Stock-plan [för](https://stockenterprise.adobe.com/) företag och AEM 6.5 eller senare. Information om AEM 6.5-Service Pack finns i [versionsinformationen](/help/release-notes/sp-release-notes.md).
 
 ## Integrera AEM och Adobe Stock {#integrate-aem-and-adobe-stock}
 
@@ -26,12 +26,12 @@ Om du vill tillåta kommunikation mellan AEM och Adobe Stock skapar du en IMS-ko
 >
 >Det är bara AEM-administratörer och Admin Console-administratörer för en organisation som kan utföra integreringen eftersom den kräver administratörsbehörighet.
 
-### Skapa en IMS-konfiguration {#create-an-ims-configuration}
+### Create an IMS configuration {#create-an-ims-configuration}
 
 1. Klicka på AEM-logotypen. Navigera till **[!UICONTROL Verktyg]** > **[!UICONTROL Säkerhet]** > **[!UICONTROL Adobe IMS-konfigurationer]**. Klicka på **[!UICONTROL Skapa]** och välj **[!UICONTROL molnlösning]** > **[!UICONTROL Adobe Stock]**.
 1. Återanvänd ett befintligt certifikat eller välj **[!UICONTROL Skapa nytt certifikat]**.
-1. Klicka på **[!UICONTROL Skapa certifikat]**. Ladda ned den offentliga nyckeln när du har skapat den. Click **[!UICONTROL Next]**.
-1. Ange lämpliga värden i fälten **[!UICONTROL Title]**, **[!UICONTROL Authorization Server]**, **[!UICONTROL API Key]**, **[!UICONTROL Client Secret]** och **[!UICONTROL Payload]**. Se [Snabbstart](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/JWT.md)för JWT-autentisering för detaljerad information om hur du hämtar dessa värden från Adobe I/O.
+1. Klicka på **[!UICONTROL Skapa certifikat]**. Ladda ned den offentliga nyckeln när du har skapat den. Klicka på **[!UICONTROL Nästa]**.
+1. Ange lämpliga värden i fälten **[!UICONTROL Title]**, **[!UICONTROL Authorization Server]**, **[!UICONTROL API Key]**, **[!UICONTROL Client Secret]** och **[!UICONTROL Payload]**. Avsnittet [Snabbstart för JWT-autentisering](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/JWT.md) innehåller detaljerad information om hur du hämtar dessa värden från Adobe I/O.
 1. Lägg till den nedladdade publika nyckeln till ditt Adobe I/O-tjänstkonto.
 
 ### Skapa Adobe Stock-konfiguration i AEM {#create-adobe-stock-configuration-in-aem}
@@ -56,7 +56,7 @@ När en Adobe Stock-mediefil har licensierats i AEM kan den användas och hanter
 
 *Bild: Sök efter Adobe Stock-resurser och filtrera resultat från din AEM-arbetsyta*
 
-**** S. Sök efter resurser som liknar de resurser vars Adobe Stock ID anges. **** B. Sök efter resurser som matchar ditt val av form eller orientering. **************** C.**Sök efter en av de resurstyper som stöds** D. Öppna eller dölj filterrutan **E. Licensiera och spara den valda resursen i AEM** F. Spara resursen i AEM med vattenstämpel **G. Utforska resurser på Adobe Stock-webbplatsen som liknar den valda resursen** H. Visa de valda resurserna på Adobe Stock-webbplatsen **I. Antal valda resurser från sökresultaten** J. Växla mellan kortvyn och listvyn
+**A.** Sök efter resurser som liknar de resurser vars Adobe Stock ID har angetts. **B.** Sök efter resurser som matchar ditt val av form eller orientering. **C.** Sök efter en eller flera av de resurstyper som stöds **D.** Öppna eller dölj filterrutan **E.** Licensiera och spara den valda resursen i AEM **F.** Spara resursen i AEM med vattenstämpel **G.** Utforska resurser på Adobe Stock-webbplatsen som liknar den valda resursen **H.** Visa de valda resurserna på Adobe Stock-webbplatsen **I.** Antal valda resurser i sökresultatet **J.** Växla mellan kortvyn och listvyn
 
 ### Hitta resurser {#find-assets}
 
@@ -70,7 +70,7 @@ Du kan också börja skriva `Location: Adobe Stock` i sökfältet och välja Ado
 
 >[!NOTE]
 >
->Resurser som söks från Adobe Stock visas bara i AEM. Adobe Stock-mediefiler hämtas och lagras i AEM-databasen först när en användare antingen [sparar en mediefil](/help/assets/aem-assets-adobe-stock.md#saveassets) eller [licensierar en mediefil](/help/assets/aem-assets-adobe-stock.md#licenseassets). Resurser som redan lagras i AEM visas och markeras för att underlätta referens och åtkomst. Dessutom sparas sådana resurser med ytterligare metadata som anger källan som Adobe Stock.
+>Resurser som eftersöks från Adobe Stock visas bara i AEM. Adobe Stock-mediefiler hämtas och lagras i AEM-databasen först när en användare antingen [sparar en mediefil](/help/assets/aem-assets-adobe-stock.md#saveassets) eller [licensierar en mediefil](/help/assets/aem-assets-adobe-stock.md#licenseassets). Resurser som redan lagras i AEM visas och markeras för att underlätta referens och åtkomst. Dessutom sparas sådana resurser med ytterligare metadata som anger källan som Adobe Stock.
 
 ![Sök efter filter i AEM och markerade Adobe Stock-mediefiler i sökresultaten](assets/aem-search-filters2.jpg)
 
@@ -118,10 +118,9 @@ Det är möjligt att en felaktig licenstyp visas i AEM för en resurs. Användar
 
 När en användare uppdaterar ett licensreferensfält uppdateras licensreferensinformationen i AEM, men inte på Adobe Stock-webbplatsen. Om användaren uppdaterar referensfälten på Adobe Stock-webbplatsen synkroniseras inte uppdateringarna i AEM.
 
-## Relaterade resurser {#related-resources}
+>[!MORELIKETHIS]
+>
+>* [Videosjälvstudiekurs om hur du använder Adobe Stock-resurser med AEM Assets](https://helpx.adobe.com/experience-manager/kt/assets/using/stock-assets-feature-video-use.html)
+>* [Hjälp om Adobe Stock-företagsplaner](https://helpx.adobe.com/enterprise/using/adobe-stock-enterprise.html)
+>* [Vanliga frågor om Adobe Stock](https://helpx.adobe.com/stock/faq.html)
 
-[Videosjälvstudiekurs om hur du använder Adobe Stock-resurser med AEM Assets](https://helpx.adobe.com/experience-manager/kt/assets/using/stock-assets-feature-video-use.html)
-
-[Hjälp om Adobe Stock-företagsplaner](https://helpx.adobe.com/enterprise/using/adobe-stock-enterprise.html)
-
-[Vanliga frågor om Adobe Stock](https://helpx.adobe.com/stock/faq.html)
