@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: da96d3d8-a338-470a-8d20-55ea39bd15bf
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: 070d4e105c94548dda1098bf47cab83e0847f24d
 
 ---
 
@@ -26,8 +26,7 @@ Exemplet, som behandlas i det här dokumentet, är en referensimplementering av 
 >
 >* De exempel och konfigurationer som beskrivs i det här dokumentet är enligt MySQL 5.6.24 och du måste ersätta dem på lämpligt sätt för ditt databassystem.
 >* Kontrollera att du har installerat den senaste versionen av AEM Forms-tilläggspaketet. En lista över tillgängliga paket finns i artikeln [AEM Forms Release](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) .
->
-
+> * Exempelpaketet fungerar bara med åtgärder för att skicka adaptiva formulär.
 
 
 ## Konfigurera och konfigurera exemplet {#set-up-and-configure-the-sample}
@@ -74,7 +73,7 @@ Utför följande steg på alla författare- och publiceringsinstanser för att i
 
    Så här anger du ett annat namn för metadatatabellen:
 
-   * I Web Console Configuration söker du efter och klickar på Exempelimplementering av Forms Portal-metadatatjänst. Du kan ändra värdena för datakälla, metadata eller ytterligare metadatatabellnamn.
+   * I Web Console Configuration söker du efter och klickar på Implementering av Exempel på metadatatjänst för Forms Portal. Du kan ändra värdena för datakälla, metadata eller ytterligare metadatatabellnamn.
    Så här anger du ett annat namn för datatabellen:
 
    * I Web Console Configuration söker du efter och klickar på Exempelimplementering för Forms Portal Data Service. Du kan ändra värdena för datakällan och datatabellnamnet.
