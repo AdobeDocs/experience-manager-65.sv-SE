@@ -1,13 +1,9 @@
 ---
-title: 'Konfigurera RTF-redigeraren för att skapa innehåll i AEM '
-description: Lär dig konfigurera AEM Rich Text Editor för att skapa innehåll i AEM.
-uuid: 4f87745e-586a-4cba-887b-391e37520ffc
+title: Konfigurera RTF-redigeraren för att skapa innehåll i Adobe Experience Manager.
+description: Lär dig konfigurera RTF-redigeraren i Adobe Experience Manager för att skapa innehåll i Adobe Experience Manager.
 contentOwner: AG
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-discoiquuid: 2cde81d3-5fc1-4a32-a307-7dc592f37162
-docset: aem65
 translation-type: tm+mt
-source-git-commit: e71b87b12d45bf12f29af917fddebeddedb18056
+source-git-commit: 29b1520c59f555776f089b20614bf503492f7411
 
 ---
 
@@ -16,19 +12,17 @@ source-git-commit: e71b87b12d45bf12f29af917fddebeddedb18056
 
 Med textredigeraren får författarna ett stort antal funktioner för redigering av textinnehåll. Ikoner, markeringsrutor, verktygsfält och menyer finns för WYSIWYG-textredigering.
 
-RTE kan konfigureras för att aktivera, inaktivera och utöka de funktioner som är tillgängliga i redigeringskomponenterna. Mer information om hur du använder RTE-funktioner för redigering finns i [Använda RTF-redigerare för redigering](/help/sites-authoring/rich-text-editor.md).
+Mer information om hur du använder RTE-funktioner för redigering finns i [Använda RTF-redigerare för redigering](/help/sites-authoring/rich-text-editor.md). RTE kan konfigureras för att aktivera, inaktivera och utöka de funktioner som är tillgängliga i redigeringskomponenterna. Följande arbetsflöde visar en rekommenderad ordning för slutförande av RTE-konfigurationsåtgärder i Experience Manager.
 
-Följande arbetsflöde visar den rekommenderade ordningen för att slutföra RTE-konfigurationsuppgifterna.
-
-![Stegen för att lära dig hur du konfigurerar hastigheten](assets/rte_workflow_v1.png)
+![Stegen för att lära sig hur man konfigurerar RTE](assets/rte_workflow_v1.png)
 
 *Bild: Stegen för att lära sig hur man konfigurerar RTE*
 
 ## Förstå användargränssnittet med pekskärmsfunktioner och det klassiska användargränssnittet {#understand-touch-enabled-ui-and-classic-ui}
 
-Det användargränssnitt som har stöd för Touch är standardgränssnittet för AEM. Adobe introducerade Touch UI med [responsiv design](/help/sites-authoring/responsive-layout.md) för redigeringsmiljön. Touchgränssnittet är utformat för enheter med pekskärm och stationära datorer. Gränssnittet skiljer sig avsevärt från det ursprungliga klassiska användargränssnittet.
+Det användargränssnitt som har stöd för pekfunktioner är standardgränssnittet för Experience Manager. Adobe introducerade ett användargränssnitt med pekskärmsfunktioner med [responsiv design](/help/sites-authoring/responsive-layout.md) för redigeringsmiljön. Det användargränssnitt som har stöd för pekskärm är utformat för enheter med pekskärm och stationära datorer. Gränssnittet skiljer sig avsevärt från det ursprungliga klassiska gränssnittet.
 
-![Verktygsfältet för textredigeraren i det Touch-aktiverade gränssnittet](assets/chlimage_1-35.png)
+![Verktygsfältet för textredigeraren i det Touch-aktiverade användargränssnittet](assets/chlimage_1-35.png)
 
 *Bild: Verktygsfältet för textredigeraren i det Touch-aktiverade gränssnittet*
 
@@ -39,14 +33,14 @@ Det användargränssnitt som har stöd för Touch är standardgränssnittet för
 >[!MORELIKETHIS]
 >
 >* [Gränssnittsrekommendationer](/help/sites-deploying/ui-recommendations.md)
->* Information om hur du ersätter det klassiska användargränssnittet finns i [Versionsinformation för AEM 6.5](/help/release-notes/deprecated-removed-features.md)
+>* Information om hur du ersätter det klassiska användargränssnittet finns i [versionsinformationen för Experience Manager 6.5](/help/release-notes/deprecated-removed-features.md)
 >* Skillnaden mellan användargränssnitten finns i [Touch-gränssnittet och det klassiska användargränssnittet](https://aemcq5pedia.wordpress.com/2018/01/05/touch-enabled-ui-aem6-3/)
->* Mer information om användargränssnittet med pekfunktioner finns i [avsnittet om användargränssnittet i AEM Touch](/help/sites-developing/touch-ui-concepts.md)
+>* Mer information om användargränssnittet med pekfunktioner finns i avsnittet [om användargränssnittet i Experience Manager Touch.](/help/sites-developing/touch-ui-concepts.md)
 
 
 ## Olika redigeringslägen {#editingmodes}
 
-Författare kan skapa och redigera textinnehåll i AEM med hjälp av de olika komponentlägena. Alternativen i verktygsfältet för att skapa och formatera innehåll och användarupplevelsen i komponenter med RTE-funktioner i olika redigeringslägen varierar beroende på RTE-konfigurationer.
+Författare kan skapa och redigera textinnehåll i Experience Manager med hjälp av de olika komponentlägena. Alternativen i verktygsfältet för att skapa och formatera innehåll och användarupplevelsen i komponenter med RTE-funktioner i olika redigeringslägen varierar beroende på RTE-konfigurationer.
 
 | Redigeringsläge | Redigeringsområde | Rekommenderade funktioner som ska aktiveras | Pekgränssnitt | Klassiskt användargränssnitt |
 |--- |--- |--- |--- |--- |
@@ -71,7 +65,7 @@ I det klassiska användargränssnittet kan du med en långsam dubbelklickning p�
 
 ### Helskärmsredigering {#full-screen-editing}
 
-AEM-komponenter kan öppnas i helskärmsläge som döljer sidinnehållet och tar upp den tillgängliga skärmen. Överväg att redigera i helskärmsläge som en detaljerad version av den infogade redigeringen eftersom den erbjuder de flesta redigeringsalternativen. Du kan öppna den genom att klicka på ![rte_fullscreen](assets/rte_fullscreen.png)i det kompakta verktygsfältet när du använder det infogade redigeringsläget.
+Experience Manager-komponenter kan öppnas i helskärmsläge som döljer sidinnehållet och tar upp den tillgängliga skärmen. Överväg att redigera i helskärmsläge som en detaljerad version av den infogade redigeringen eftersom den erbjuder de flesta redigeringsalternativen. Du kan öppna den genom att klicka på ![rte_fullscreen](assets/rte_fullscreen.png)i det kompakta verktygsfältet när du använder det infogade redigeringsläget.
 
 I dialogrutans helskärmsläge, tillsammans med ett detaljerat verktygsfält för textredigering, är även de alternativ och komponenter som är tillgängliga i en dialogruta tillgängliga. Det gäller endast för en dialogruta som innehåller RTE tillsammans med andra komponenter.
 
@@ -109,7 +103,6 @@ I följande tabell visas de aktuella plugin-programmen:
 * Plugin-ID:n med en länk till API-dokumentationen. ID används som nodnamn när ett plugin-program [aktiveras](/help/sites-administering/configure-rich-text-editor-plug-ins.md#activateplugin).
 * Tillåtna värden för `features` egenskapen.
 * En beskrivning av de funktioner som tillhandahålls av plugin-programmet.
-
 
 | Plug-in-ID | funktioner | Beskrivning |
 |--- |--- |--- |
