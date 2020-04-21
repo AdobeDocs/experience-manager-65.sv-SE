@@ -1,14 +1,9 @@
 ---
 title: Konfigurera plugin-programmen för RTF-redigeraren
-description: Lär dig konfigurera plugin-programmen för AEM Rich Text Editor så att enskilda funktioner aktiveras.
-uuid: 012552b7-5e32-4d74-be07-b441c3d4b47b
+description: Lär dig att konfigurera plugin-programmen för RTF-redigeraren i Adobe Experience Manager för att aktivera enskilda funktioner.
 contentOwner: AG
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-discoiquuid: 87dc79ad-0a71-43f6-af04-4d26c7472dc5
-mini-toc-levels: 1
-docset: aem65
 translation-type: tm+mt
-source-git-commit: 72cdeff04e18c13e4b31543bafcbd5ffa65a78a7
+source-git-commit: 29b1520c59f555776f089b20614bf503492f7411
 
 ---
 
@@ -21,7 +16,7 @@ Mer information om de andra RTE-konfigurationerna finns i [Konfigurera RTF-redig
 
 >[!NOTE]
 >
->När du arbetar med CRXDE Lite bör du spara ändringarna regelbundet med Spara alla.
+>När du arbetar med CRXDE Lite bör du spara ändringarna regelbundet med alternativet [!UICONTROL Spara alla] .
 
 ## Aktivera ett plugin-program och konfigurera egenskapen features {#activateplugin}
 
@@ -229,7 +224,7 @@ Exempel på en giltig `htmlPasteRules` struktur:
 
 ## Konfigurera textformat {#textstyles}
 
-Författare kan använda format för att ändra utseendet på en del av texten. Formaten baseras på CSS-klasser som du fördefinierar i din CSS-formatmall. Stiliserat innehåll omsluts av `span` -taggar som använder attributet `class` för att referera till CSS-klassen. Exempel:
+Författare kan använda format för att ändra utseendet på en del av texten. Formaten baseras på CSS-klasser som du fördefinierar i din CSS-formatmall. Stiliserat innehåll omsluts av `span` -taggar som använder attributet `class` för att referera till CSS-klassen. Till exempel:
 
 `<span class=monospaced>Monospaced Text Here</span>`
 
@@ -315,7 +310,7 @@ Ange sedan platsen/platserna för de formatmallar som du vill referera till:
 
    * **Namn**`cssName`
    * **Typ**`String`
-   * **Värde** Namnet på CSS-klassen (utan föregående &#39;.&#39;); i stället `cssClass` för `.cssClass`)
+   * **Värde** Namnet på CSS-klassen (utan föregående &#39;.&#39;); for example, `cssClass` instead of `.cssClass`)
 
 1. Lägg till egenskapen `text` i samma nod; definierar texten som visas i markeringsrutan:
 
@@ -584,7 +579,7 @@ Ibland kan du skapa datatabeller utan visuell text i en kolumnrubrik om rubriken
 RTE har stöd för dolda rubrikceller för att förbättra tillgängligheten i sådana scenarier. Dessutom innehåller den konfigurationsinställningar för dolda rubriker i tabeller. Med de här inställningarna kan du använda CSS-format på dolda rubriker i redigerings- och förhandsgranskningslägena. Om du vill hjälpa författare att identifiera dolda rubriker i redigeringsläget kan du inkludera följande parametrar i koden:
 
 * `hiddenHeaderEditingCSS`: Anger namnet på CSS-klassen som används i den dolda rubrikcellen när RTE redigeras.
-* `hiddenHeaderEditingStyle`: Anger en formatsträng som används i cellen med dolda rubriker när textredigeringsredigering används.
+* `hiddenHeaderEditingStyle`: Anger en formatsträng som används på cellen med dolda rubriker när textredigeringsredigering används.
 
 Om du anger både CSS och formatsträngen i koden har CSS-klassen företräde framför formatsträngen och kan skriva över alla konfigurationsändringar som formatsträngen gör.
 
@@ -600,20 +595,18 @@ Om du anger både CSS och formatsträngen i koden har CSS-klassen företräde fr
 När plugin-programmet för stavningskontroll är aktiverat används lexikon för respektive språk. Dessa väljs sedan enligt webbplatsens språk antingen genom att underträdets language-egenskap används eller genom att språket extraheras från URL:en. till exempel. filialen `/en/` kontrolleras som engelska, `/de/` filialen som tyska.
 
 >[!NOTE]
-Meddelandet&quot;Stavningskontrollen misslyckades.&quot; visas om en kontroll görs för ett språk som inte är installerat.
+Meddelandet `Spell checking failed` visas om en kontroll görs för ett språk som inte är installerat. Standardordlistorna finns i `/libs/cq/spellchecker/dictionaries`, tillsammans med lämpliga Viktigt-filer. Ändra inte filerna.
 
-En AEM-standardinstallation innehåller ordlistor för:
-
-* American English (en_us)
-* Engelska (en_gb)
-
->[!NOTE]
-Standardordlistorna finns i `/libs/cq/spellchecker/dictionaries`, tillsammans med lämpliga Viktigt-filer. Ändra inte filerna.
-
-Följ de här stegen om du vill lägga till fler ordlistor, om det behövs.
+En AEM-standardinstallation innehåller ordlistorna för amerikansk engelska (`en_us`) och brittisk engelska (`en_gb`). Följ de här stegen om du vill lägga till fler ordlistor.
 
 1. Navigera till sidan [https://extensions.openoffice.org/](https://extensions.openoffice.org/).
-1. Välj önskat språk och hämta ZIP-filen med stavningsdefinitionerna. Extrahera innehållet i arkivet i filsystemet.
+
+1. Gör något av följande om du vill hitta en ordlista på något av följande språk:
+
+   * Sök efter den ordlista du vill använda. Leta reda på länken till den ursprungliga källans eller författarens webbsida på ordlistesidan. Leta reda på ordlistefilerna för v2.x på en sådan sida.
+   * Sök efter v2.x-ordlistefiler på [https://wiki.openoffice.org/wiki/User:Khirano/Dictionaries](https://wiki.openoffice.org/wiki/User:Khirano/Dictionaries).
+
+1. Hämta arkivet med stavningsdefinitionerna. Extrahera innehållet i arkivet i filsystemet.
 
    >[!CAUTION]
    Endast ordlistor i formatet `MySpell` OpenOffice.org v2.0.1 eller tidigare stöds. Eftersom ordlistorna nu är arkivfiler rekommenderar vi att du kontrollerar arkivet efter nedladdningen.
@@ -622,8 +615,7 @@ Följ de här stegen om du vill lägga till fler ordlistor, om det behövs.
 1. Läs in .aff- och .dic-filerna i databasen `/apps/cq/spellchecker/dictionaries`.
 
 >[!NOTE]
-Stavningskontrollen för textredigering är tillgänglig på begäran. Den körs inte automatiskt när du börjar skriva text.
-Om du vill stavningskontrollera trycker/klickar du på stavningskontrollknappen i verktygsfältet. RTE kontrollerar stavningen av ord och markerar felstavade ord.
+Stavningskontrollen för textredigering är tillgänglig på begäran. Den körs inte automatiskt när du börjar skriva text. Om du vill stavningskontrollera klickar du på [!UICONTROL stavningskontrollen] i verktygsfältet. RTE kontrollerar stavningen av ord och markerar de felstavade orden.
 Om du infogar någon ändring som stavningskontrollen föreslår markeras inte längre textens status och felstavade ord. Om du vill köra stavningskontrollen trycker/klickar du på stavningskontrollknappen igen.
 
 ## Konfigurera historikstorlek för ångra- och gör om-åtgärder {#undohistory}
@@ -720,12 +712,12 @@ Om du vill konfigurera hur länkar läggs till i AEM från ett annat program def
 
       * **Namn**`cssInternal`
       * **Typ**`String`
-      * **Ange ett värde** för CSS-klassens namn (utan föregående &#39;.&#39;); i stället `cssClass` för `.cssClass`)
+      * **Ange ett värde** för CSS-klassens namn (utan föregående &#39;.&#39;); for example, `cssClass` instead of `.cssClass`)
    * CSS-format för externa länkar
 
       * **Namn**`cssExternal`
       * **Typ**`String`
-      * **Ange ett värde** för CSS-klassens namn (utan föregående &#39;.&#39;); i stället `cssClass` för `.cssClass`)
+      * **Ange ett värde** för CSS-klassens namn (utan föregående &#39;.&#39;); for example, `cssClass` instead of `.cssClass`)
    * Array med giltiga **protokoll** (inklusive https://, https:// file://, mailto:, bland annat)
 
       * **Namn**`protocols`
