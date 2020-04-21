@@ -8,7 +8,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 translation-type: tm+mt
-source-git-commit: 3e37ee6da263bb12eb0efea85213987e8286bc60
+source-git-commit: 7daf89f7e69d3e2e938780ff98fd2df46723e708
 
 ---
 
@@ -25,10 +25,10 @@ I följande bildresursexempel visas den nya optimeringen av smarta bilder:
 
 | Bild<br>(URL) | Miniatyrbild | Storlek<br> (JPEG) | Storlek (WebP)<br> (med Smart Imaging) | % minskning |
 |---|---|---|---|---|
-| [Bild 1](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_6?hei=500&fmt=jpg&qlt=85&resmode=bisharp&op_usm=5,0.125,5,0) | ![picture1](/help/assets/assets-dm/picture1.png) | 73,75 kB | 45,92 kB | 38% |
-| [Bild 2](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_3?hei=500&fmt=jpg&qlt=85&resmode=bisharp&op_usm=5,0.125,5,0) | ![picture2](/help/assets/assets-dm/picture2.png) | 191 kB | 70,66 kB | 63% |
-| [Bild 3](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_2?hei=500&fmt=jpg&qlt=85&resmode=bisharp&op_usm=5,0.125,5,0) | ![picture3](/help/assets/assets-dm/picture3.png) | 96,64 kB | 39,44 kB | 59% |
-| [Bild 4](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_1?hei=500&qlt=85&resmode=bisharp&op_usm=5,0.125,5,0) | ![picture4](/help/assets/assets-dm/picture4.png) | 315,80 kB | 178,19 kB | 44% |
+| [Bild 1](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_6?hei=500&amp;fmt=jpg&amp;qlt=85&amp;resmode=bisharp&amp;op_usm=5,0.125,5,0) | ![picture1](/help/assets/assets-dm/picture1.png) | 73,75 kB | 45,92 kB | 38% |
+| [Bild 2](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_3?hei=500&amp;fmt=jpg&amp;qlt=85&amp;resmode=bisharp&amp;op_usm=5,0.125,5,0) | ![picture2](/help/assets/assets-dm/picture2.png) | 191 kB | 70,66 kB | 63% |
+| [Bild 3](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_2?hei=500&amp;fmt=jpg&amp;qlt=85&amp;resmode=bisharp&amp;op_usm=5,0.125,5,0) | ![picture3](/help/assets/assets-dm/picture3.png) | 96,64 kB | 39,44 kB | 59% |
+| [Bild 4](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_1?hei=500&amp;qlt=85&amp;resmode=bisharp&amp;op_usm=5,0.125,5,0) | ![picture4](/help/assets/assets-dm/picture4.png) | 315,80 kB | 178,19 kB | 44% |
 |  |  |  |  | Genomsnitt = 51 % |
 
 På samma sätt som ovanstående testade Adobe även 7 009 URL:er från kundsajter och lyckades i genomsnitt optimera filstorleken 38 % ytterligare för JPEG och optimera filstorleken 31 % ytterligare för PNG med WebP-format, tack vare Smart Imaging.
@@ -72,25 +72,24 @@ Följande bildformat stöds för Smart Imaging:
 * JPEG
 * PNG
 
-För andra format som anges i en URL-adress bör du uttryckligen inaktivera Smart Imaging.  Lägg till modifierare `bfc=off` i URL:en för andra filformat än JPEG och PNG. Du kan uppnå detta på något av följande sätt:
+<!-- For any other format mentioned in a URL, you should explicity turn off Smart Imaging.  Append modifier `bfc=off` to the URL for file formats other than JPEG and PNG. You can accomplish this by using either one of the following methods:
 
-* Använd en regeluppsättning om modifieraren anges i URL:en. `fmt`
-* Lägg till i fältet URL-modifierare för de aktuella förinställningarna.
+* Use a ruleset if the `fmt` modifier is mentioned in the URL. 
+* Append in URL modifiers field of the presets concerned.
 
-Adobe arbetar på en permanent programfix som inte kräver att du bifogar `bfc=off` för `fmt !=JPEG` eller `fmt !=PNG`. Det här avsnittet uppdateras när korrigeringen har levererats.
-
+Adobe is working on a permanent fix that does not require you to append `bfc=off` for `fmt !=JPEG` or `fmt !=PNG`. This topic will be updated after the fix is delivered. -->
 
 ## Hur fungerar Smart Imaging med befintliga bildförinställningar som redan används? {#how-does-smart-imaging-work-with-our-existing-image-presets-that-are-already-in-use}
 
 Smart Imaging fungerar med dina befintliga &quot;bildförinställningar&quot; och alla bildinställningar kontrolleras, med undantag för kvalitet (qlt) och format (fmt) om det begärda filformatet är JPEG eller PNG. För formatkonvertering behåller vi fullständig visuell återgivning enligt inställningarna i bildförinställningen, men med en mindre filstorlek. Om den ursprungliga bildstorleken är mindre än vad Smart Imaging skapar, behålls originalbilden.
 
-Om dina bildförinställningar används för att returnera `fmt !=JPEG` eller `fmt !=PNG`ska du se till att lägga till `bfc=off` i förinställningsmodifierarfältet för att returnera det begärda filformatet.
+<!-- In addition, if your image presets are used to return `fmt !=JPEG` or `fmt !=PNG`, be sure append `bfc=off` in the preset modifier field to return the requested file format. -->
 
 ## Måste jag ändra URL:er, bildförinställningar eller driftsätta ny kod för Smart Imaging på min webbplats? {#will-i-have-to-change-any-urls-image-presets-or-deploy-any-new-code-on-my-site-for-smart-imaging}
 
 Nej. Smart Imaging fungerar sömlöst med befintliga bild-URL:er och bildförinställningar. Dessutom kräver Smart Imaging inte att du lägger till kod på webbplatsen för att identifiera en användares webbläsare. Allt detta hanteras automatiskt.
 
-Som tidigare nämnts stöder Smart Imaging endast bildformaten JPEG och PNG. För andra format måste du lägga till modifieraren i URL:en `bfc=off` enligt beskrivningen ovan.
+<!-- As mentioned earlier, Smart Imaging supports only JPEG and PNG image formats. For other formats, you need to append the `bfc=off` modifier to the URL as described earlier. -->
 
 Se även [Är jag berättigad att använda Smart Imaging?](#am-i-eligible-to-use-smart-imaging) för att förstå vad som krävs för smart bildbehandling.
 
