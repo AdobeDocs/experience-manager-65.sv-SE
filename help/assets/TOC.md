@@ -4,7 +4,7 @@ product: adobe experience manager
 audience: end-user
 user-guide-title: Användarhandbok för AEM 6.5 Assets
 translation-type: tm+mt
-source-git-commit: c400a3f1c1535a32e1e1209aa1760235a4841c5e
+source-git-commit: b539ab0d6e777be08abb288b6f736f4e511755f1
 
 ---
 
@@ -34,6 +34,7 @@ source-git-commit: c400a3f1c1535a32e1e1209aa1760235a4841c5e
    + [Konfigurera dynamiska media - Scene7-läge](config-dms7.md)
    + [Konfigurera dynamiska media - hybridläge](config-dynamic.md)
    + [Felsökning av dynamiska media - Scene7-läge](troubleshoot-dms7.md)
+   + [Migrera från Dynamic Media - hybrid-läge till Dynamic Media - S7-läge](migrate-from-hybrid-to-dms7.md)
    + [Hantera Dynamic Media-resurser](managing-assets.md)
    + [Bästa tillvägagångssätt för att optimera bildkvalitet](best-practices-for-optimizing-the-quality-of-your-images.md)
    + [Hantera förinställningar för Dynamic Media Viewer](managing-viewer-presets.md)
@@ -62,7 +63,7 @@ source-git-commit: c400a3f1c1535a32e1e1209aa1760235a4841c5e
    + [Leverera optimerade bilder för en responsiv webbplats](responsive-site.md)
    + [Förhandsgranska Dynamic Media-resurser](previewing-assets.md)
    + [Lägga till Dynamic Media-resurser på sidor](adding-dynamic-media-assets-to-pages.md)
-   + [Bädda in läsare för Dynamic Video  eller -bilder på en webbsida](embed-code.md)
+   + [Bädda in läsare för Dynamic-video eller -bilder på en webbsida](embed-code.md)
    + [Länka URL till ett webbprogram](linking-urls-to-yourwebapplication.md)
    + [Omforma URL:er med regeluppsättningar](using-rulesets-to-transform-urls.md)
    + [Publicera Dynamic Media-resurser](publishing-dynamicmedia-assets.md)
@@ -121,7 +122,7 @@ source-git-commit: c400a3f1c1535a32e1e1209aa1760235a4841c5e
    + [Metadataschema för mapp](folder-metadata-schema.md)
    + [Hantera smarta taggar](managing-smart-tags.md)
 + Varumärkesportal {#brandportal}
-   + [Konfigurera AEM-resurser med varumärkesportalen](configure-aem-assets-with-brand-portal.md)
+   + [Konfigurera AEM Assets med varumärkesportalen](configure-aem-assets-with-brand-portal.md)
    + [Publicera resurser på varumärkesportalen](brand-portal-publish-assets.md)
    + [Publicera mappar på varumärkesportalen](brand-portal-publish-folder.md)
    + [Publicera samlingar på varumärkesportalen](brand-portal-publish-collection.md)
