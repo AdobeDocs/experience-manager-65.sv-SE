@@ -10,7 +10,7 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: ee39435d-80f5-4758-ae01-1ea0d221b00b
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 58a06c1a16c62bffad2893fbec0b32d2ce7267a7
 
 ---
 
@@ -31,10 +31,10 @@ När innehållet har markerats som aktuellt kommer det att anges i den här komp
 
 Möjligheten att använda innehåll kan vara tillåten eller otillåten per komponent.
 
-Detta avsnitt i dokumentationen beskriver
+I det här avsnittet av dokumentationen beskrivs:
 
 * Lägga till aktuellt innehåll på en communitywebbplats
-* Konfigurationsinställningar för `Featured Content`komponenten
+* Konfigurationsinställningar för `Featured Content` komponenten
 
 ## Lägga till innehåll på en sida {#adding-featured-content-to-a-page}
 
@@ -46,7 +46,7 @@ och dra den till rätt plats på en sida där det aktuella innehållet ska visas
 
 Mer information finns i Grunderna för [communitykomponenter](basics.md).
 
-När de [nödvändiga klientbiblioteken](essentials-featured.md#essentials-for-client-side) inkluderas visas `Featured Content`komponenten så här:
+När de [nödvändiga klientbiblioteken](essentials-featured.md#essentials-for-client-side) inkluderas visas `Featured Content` komponenten så här:
 
 ![chlimage_1-13](assets/chlimage_1-13.png)
 
@@ -60,10 +60,10 @@ Markera den monterade `Featured Content` komponent som du vill öppna och välj 
 
 Under fliken **[!UICONTROL Inställningar]** identifierar du innehållet som ska visas:
 
-* **[!UICONTROL Visningsnamn]** Titeln för listan med aktuellt innehåll. Till exempel `Featured Questions` eller `Featured Ideas`. Standard är `Featured Content` om det lämnas tomt.
+* **[!UICONTROL Visningsnamn]** Titeln för listan med aktuellt innehåll. For example `Featured Questions` or `Featured Ideas`. Standard är `Featured Content` om det lämnas tomt.
 
 * **[!UICONTROL Plats för det aktuella innehållet]**
-   *(Obligatoriskt)* Bläddra till sidan med det innehåll som kan vara funktionellt (komponenterna på den sidan måste konfigureras för att tillåta aktuellt innehåll). Exempel, `/content/sites/engage/en/forum`
+   *(Obligatoriskt)* Bläddra till sidan med innehållet som kan vara funktionellt (komponenterna på den sidan måste konfigureras för att tillåta aktuellt innehåll). Till exempel, `/content/sites/engage/en/forum`
 
 * **[!UICONTROL Visningsgräns]** Det maximala antalet funktioner som kan visas. Standardvärdet är 5.
 
