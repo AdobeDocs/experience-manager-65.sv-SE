@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 739ec991-552b-42cd-85cd-984d1c9fe8fd
 translation-type: tm+mt
-source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
+source-git-commit: bb523ecf97ea18d8e8d5afa238fdf9e95fa58ab4
 
 ---
 
@@ -27,10 +27,10 @@ FFmpeg används i redigeringsmiljön för att hämta metadata för överförda a
 
 FFmpeg ska vara installerat på de servrar där AEM- *författarinstansen* finns.
 
-1. Gå till [https://www.ffmpeg.org](https://www.ffmpeg.org/)
-1. Ladda ned den senaste versionen av MPEG för just din miljö (Macintosh, Windows eller Linux)
+1. Gå till [https://www.ffmpeg.org](https://www.ffmpeg.org/).
+1. Ladda ned den senaste versionen av MPEG för just din miljö (Macintosh, Windows eller Linux).
 
-   * det är viktigt att hålla MPEG uppdaterad på grund av säkerhetsluckor i äldre versioner
+   * Det är viktigt att hålla MPEG uppdaterad på grund av säkerhetsluckor i äldre versioner.
 
 1. Installera MPEG enligt instruktionerna för operativsystemet.
 
@@ -38,7 +38,7 @@ FFmpeg ska vara installerat på de servrar där AEM- *författarinstansen* finns
 
    Du bör kunna köra MPEG från vilken katalog som helst i systemet.
 
-   * for example, `ffmpeg -version`
+   * Till exempel, `ffmpeg -version`.
 
 ## Konfigurera MPEG-omkodningstjänsten {#configure-ffmpeg-transcoding-service}
 
@@ -48,23 +48,23 @@ Eftersom omkodningarna är processorintensiva bör du ändra listan över målå
 
 Så här ändrar du arbetsflödet för [!UICONTROL DAM Update Asset] och i det här exemplet stänger du av transkodning:
 
-* Logga in på författarinstansen med administratörsbehörighet
-* Från global navigering: **[!UICONTROL Verktyg > Arbetsflöde > Modeller]**
-* Hitta **[!UICONTROL DAM-uppdateringsresurs]**
-* Dubbelklicka för att öppna arbetsflödet för redigering i det klassiska användargränssnittet
+* Logga in på författarinstansen med administratörsbehörighet.
+* Navigera från global navigering till **[!UICONTROL Verktyg]** > **[!UICONTROL Arbetsflöde]** > **[!UICONTROL Modeller]**.
+* Sök efter **[!UICONTROL DAM-uppdateringsresurs]**.
+* Dubbelklicka för att öppna arbetsflödet för redigering i det klassiska användargränssnittet.
 
    Resultatplats: [http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html](http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html)
 
-* Dubbelklicka på **[!UICONTROL omkodningssteget]** för att öppna dialogrutan Stegegenskaper
+* Dubbelklicka på **[!UICONTROL Fmpeg-omkodningssteget]** för att öppna dialogrutan Stegegenskaper.
 * Under fliken **[!UICONTROL Process]** :
 
    * **[!UICONTROL Åklaganden]**: Rensa alla poster för att inaktivera omkodning Standardvärden: `profile:firefoxhq,profile:hq,profile:flv,profile:iehq`
 
 ![chlimage_1-372](assets/chlimage_1-372.png)
 
-* Stäng **[!UICONTROL dialogrutan genom att klicka på]** OK `Step Properties`
+* Stäng **[!UICONTROL dialogrutan genom att klicka på]** OK `Step Properties` .
 
-* Välj **[!UICONTROL Spara]** för att spara `DAM Update Asset` arbetsflödet
+* Välj **[!UICONTROL Spara]** för att spara `DAM Update Asset` arbetsflödet.
 
-   (övre vänstra hörnet)
+
 
