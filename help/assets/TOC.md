@@ -4,14 +4,14 @@ product: adobe experience manager
 audience: end-user
 user-guide-title: Användarhandbok för AEM 6.5 Assets
 translation-type: tm+mt
-source-git-commit: b539ab0d6e777be08abb288b6f736f4e511755f1
+source-git-commit: c9ac722cb8903d1d9946c7a6f797f102cb99bbf2
 
 ---
 
 
 # Användarhandbok för AEM 6.5 Assets {#assets}
 
-+ [Användarhandbok för resurser](home.md)
++ [Användarhandbok för [!DNL Assets]](home.md)
 + [Versionsinformation om AEM 6.5 Assets](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/assets.html)
 + [Om DAM](assets.md)
 + [Metodtips för resurser](best-practices-for-assets.md)
@@ -19,7 +19,7 @@ source-git-commit: b539ab0d6e777be08abb288b6f736f4e511755f1
    + [AEM Assets - startsida](assets-home-page.md)
    + [Söka efter resurser i AEM](search-assets.md)
    + [Flerspråkiga resurser](multilingual-assets.md)
-   + [Använda Adobe Stock-mediefiler i AEM Resurser](aem-assets-adobe-stock.md)
+   + [Använd [!DNL Adobe Stock]-resurser i AEM Resurser](aem-assets-adobe-stock.md)
    + [Förhandsgranska 3D-resurser](previewing-3d-assets.md)
    + [Granska resurser i mappar och samlingar](bulk-approval.md)
    + [Aktivitetsström på tidslinjen](activity-stream.md)
@@ -74,7 +74,7 @@ source-git-commit: b539ab0d6e777be08abb288b6f736f4e511755f1
    + [Anpassa och utöka AEM Assets](extending-assets.md)
    + [Bearbeta resurser med mediehanterare och arbetsflöden](media-handlers.md)
    + [Utöka sökfunktionen](searchx.md)
-   + [Installera och konfigurera ImageMagick så att det fungerar med AEM Assets](best-practices-for-imagemagick.md)
+   + [Installera och konfigurera [!DNL ImageMagick] så att det fungerar med AEM Assets](best-practices-for-imagemagick.md)
    + [Integrera resurser med aktivitetsströmmen](extending-activity-stream.md)
    + [Utöka resursredigeraren](asseteditorx.md)
    + [HTTP API för Assets](mac-api-assets.md)
