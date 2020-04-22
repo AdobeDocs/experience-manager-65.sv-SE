@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: ea2b23af-49c3-409b-a041-43c42d846f21
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 58a06c1a16c62bffad2893fbec0b32d2ce7267a7
 
 ---
 
@@ -20,12 +20,12 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 ## Introduktion {#introduction}
 
-Funktionen för filbibliotek är en plats där besökare på den inloggade webbplatsen (community-medlemmar) kan överföra, hantera och hämta filer inom communitywebbplatsen.
+Filbiblioteksfunktionen är en plats där besökare på den inloggade webbplatsen (community-medlemmar) kan överföra, hantera och hämta filer inom communitywebbplatsen.
 
-Detta avsnitt i dokumentationen beskriver
+I det här avsnittet av dokumentationen beskrivs:
 
-* lägga till filbiblioteksfunktionen på en AEM-webbplats
-* konfigurationsinställningar för `File Library` komponenten
+* Lägga till filbiblioteksfunktionen på en AEM-webbplats.
+* Konfigurationsinställningar för `File Library` komponenten.
 
 ### Lägga till ett filbibliotek på en sida {#adding-a-file-library-to-a-page}
 
@@ -49,61 +49,111 @@ Markera den monterade `File Library` komponent som du vill öppna och välj den 
 
 #### Fliken Kommentarer {#comments-tab}
 
-Under fliken **Comments **anger du om och hur kommentarer för överförda filer ska visas:
+Under fliken **Kommentarer** anger du om och hur kommentarer för överförda filer ska visas:
 
-* **Tillåt kommentarer om filer** Om det här alternativet är markerat tillåts kommentarer om överförda filer. Standard är avmarkerat.
+* **Tillåt kommentarer om filer**
 
-* **Kommentarer per sida** Begränsar antalet kommentarer som visas per sida samt antalet svar som visas. Standardvärdet är **10**.
+   Om det här alternativet är markerat tillåts kommentarer för överförda filer. Standard är avmarkerat.
 
-* **Maximal filstorlek** Det här värdet begränsar storleken på den överförda filen. Standardgränsen är 104857600 (10 MB).
+* **Kommentarer per sida**
 
-* **Maximal meddelandelängd** Maximalt antal tecken som kan anges i textrutan. Standardvärdet är 4 096 tecken.
+   Begränsar antalet kommentarer som visas per sida samt antalet svar som visas. Standardvärdet är **10**.
 
-* **Tillåtna filtyper** En kommaavgränsad lista över filtillägg med avgränsaren &quot;punkt&quot;. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp anges tillåts inte den som inte anges. Standard är inte angivet så att** **alla filtyper tillåts.
+* **Maximal filstorlek**
 
-* **RTF-redigerare** Om det här alternativet är markerat kan kommentarerna infogas med kod. Standard är avmarkerat.
+   Det här värdet begränsar storleken på den överförda filen. Standardgränsen är 104857600 (10 MB).
 
-* **Ta bort kommentarer** Om det här alternativet är markerat kan användarna ta bort sina egna kommentarer. Standard är markerat.
+* **Maximal meddelandelängd**
 
-* **Tillåt taggning** Om det här alternativet är markerat aktiveras möjligheten att lägga till en tagg i filen. Standard är avmarkerat.
+   Maximalt antal tecken som kan anges i textrutan. Standardvärdet är 4 096 tecken.
 
-* **Tillåtna namnutrymmen** Om Tillåt taggning är markerat begränsas de tillgängliga taggarna till de namnutrymmen som är markerade. Om inga är markerade tillåts alla. Standard är alla namnutrymmen.
+* **Tillåtna filtyper**
 
-* **Förslagsgräns** Om Tillåt taggning är markerat begränsas det antal föreslagna taggar som visas med den här inställningen. Om värdet är -1 finns det ingen gräns. Standardvärdet är -1.
+   En kommaavgränsad lista med filtillägg med&quot;punktavgränsaren&quot;. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp anges tillåts inte den som inte anges. Standardvärdet har inte angetts så att alla filtyper tillåts.
 
-* **Tillåt röstning** Om det här alternativet är markerat aktiveras möjligheten att rösta för en fil. Standard är avmarkerat.
+* **RTF-redigerare**
 
-* **Tillåt följande** om det är markerat inkluderar du följande funktion för bloggartiklar, som gör att medlemmar kan [meddelas](/help/communities/notifications.md) om nya inlägg. Standard är avmarkerat.
+   Om det här alternativet är markerat kan kommentarer skrivas in med markeringar. Standard är avmarkerat.
 
-* **Aktivera omnämnande** om det är aktiverat gör att registrerade communityanvändare kan identifiera andra registrerade medlemmar (med förnamn, efternamn, användarnamn) och tagga dem med den vanliga @user-name-syntaxen. De taggade användarna får meddelanden om sina omnämnanden.
+* **Ta bort kommentarer**
 
-* **Max Mentions** Begränsa det maximala antalet omnämnanden som tillåts i ett inlägg. Standardvärdet är 10.
+   Om det här alternativet är markerat kan användarna ta bort sina egna kommentarer. Standard är markerat.
 
-* **Mönster** för användargränssnittets omnämnande Ange den tillåtna mönstersträngen till taggen (@mention) för den registrerade användaren i ett inlägg. Till exempel ~{{familyName}}{{givenName}}.
+* **Tillåt taggning**
 
-* **Tillåt kopplade svar** Om det här alternativet är markerat tillåter du svar på bokförda kommentarer. Standard är avmarkerat.
+   Om du markerar det här alternativet aktiveras möjligheten att lägga till en tagg i filen. Standard är avmarkerat.
+
+* **Tillåtna namnutrymmen**
+
+   Om Tillåt taggning är markerat begränsas de tillgängliga taggarna till de namnutrymmen som är markerade. Om inga är markerade tillåts alla. Standard är alla namnutrymmen.
+
+* **Förslagsgräns**
+
+   Om Tillåt taggning är markerat begränsas det antal föreslagna taggar som ska visas med den här inställningen. Om värdet är -1 finns det ingen gräns. Standardvärdet är -1.
+
+* **Tillåt röstning**
+
+   Om det här alternativet är markerat aktiveras möjligheten att rösta efter en fil. Standard är avmarkerat.
+
+* **Tillåt följande**
+
+   Om det här alternativet är markerat kan du inkludera följande funktion för bloggartiklar, som gör att medlemmar kan [meddelas](/help/communities/notifications.md) om nya inlägg. Standard är avmarkerat.
+
+* **Aktivera omnämnande**
+
+   Om det här alternativet är aktiverat kan registrerade communityanvändare identifiera andra registrerade medlemmar (med förnamn, efternamn, användarnamn) och tagga dem med den vanliga @användarnamnssyntaxen. De taggade användarna får meddelanden om sina omnämnanden.
+
+* **Max. omnämnanden**
+
+   Begränsa det maximala antalet omnämnanden som tillåts i ett inlägg. Standardvärdet är 10.
+
+* **Mönster för användargränssnittets omnämnande**
+
+   Ange den tillåtna mönstersträngen för att tagga (@mention) den registrerade användaren i ett inlägg. Till exempel ~{{familyName}}{{givenName}}.
+
+* **Tillåt kopplade svar**
+
+   Om det här alternativet är markerat tillåts svar på publicerade kommentarer. Standard är avmarkerat.
 
 #### Fliken Användarmoderering {#user-moderation-tab}
 
 Konfigurera moderering av kommentarer under fliken **Användarmoderering** , om kommentarer tillåts:
 
-* **Förhandsmoderering** Om det här alternativet är markerat måste kommentarerna godkännas innan de visas på en publiceringsplats. Standard är avmarkerat.
+* **Före moderering**
 
-* **Ta bort kommentarer** Om det här alternativet är markerat kan den besökare som publicerade kommentaren ta bort den. Standard är markerat.
+   Om det här alternativet är markerat måste kommentarerna godkännas innan de visas på en publiceringsplats. Standard är avmarkerat.
 
-* **Neka kommentarer** Om det här alternativet är markerat tillåter du pålitliga medlemsmoderatorer att neka kommentarer. Standard är avmarkerat.
+* **Ta bort kommentarer**
 
-* **Stäng/öppna kommentarer** igen Om det här alternativet är markerat tillåter du pålitliga medlemsmoderatorer att stänga och öppna kommentarer igen. Standard är avmarkerat.
+   Om det här alternativet är markerat kan den besökare som publicerade kommentaren ta bort den. Standard är markerat.
 
-* **Flagga kommentarer** Om det är markerat kan besökarna flagga kommentarer som olämpliga. Standard är avmarkerat.
+* **Neka kommentarer**
 
-* **Flaggorsakslista** Om det här alternativet är markerat kan besökare välja, från en nedrullningsbar lista, orsaken till att en kommentar flaggas som olämplig. Standard är avmarkerat.
+   Om det här alternativet är markerat tillåter du att pålitliga medlemsmoderatorer nekar kommentarer. Standard är avmarkerat.
 
-* **Anledning** till anpassad flagga Om den är markerad kan besökarna ange en egen orsak till att en kommentar flaggas som olämplig. Standard är avmarkerat.
+* **Stäng/öppna kommentarer igen**
 
-* **Moderationströskel** Ange hur många gånger en kommentar måste flaggas av besökare innan moderatorerna meddelas. Standard är en gång (**1**).
+   Om det här alternativet är markerat kan du tillåta att pålitliga medlemsmoderatorer stänger och öppnar kommentarer igen. Standard är avmarkerat.
 
-* **Flaggningsgräns** Ange hur många gånger en kommentar måste flaggas innan den döljs i den offentliga vyn. Talet måste vara större än eller lika med **modereringströskeln**. Standardvärdet är 5.
+* **Flagga kommentarer**
+
+   Om det här alternativet är markerat kan besökarna flagga kommentarer som olämpliga. Standard är avmarkerat.
+
+* **Flaggorsakslista**
+
+   Om det här alternativet är markerat kan besökare välja, från en nedrullningsbar lista, orsaken till att en kommentar flaggas som olämplig. Standard är avmarkerat.
+
+* **Anledning till anpassad flagga**
+
+   Om det här alternativet är markerat kan besökarna ange en egen orsak till att en kommentar flaggas som olämplig. Standard är avmarkerat.
+
+* **Modereringströskel**
+
+   Ange hur många gånger en kommentar måste flaggas av besökare innan moderatorerna meddelas. Standard är en gång (**1**).
+
+* **Flaggningsgräns**
+
+   Ange hur många gånger en kommentar måste flaggas innan den döljs för den offentliga vyn. Talet måste vara större än eller lika med **modereringströskeln**. Standardvärdet är 5.
 
 ### Fliken Sorteringsinställningar {#sort-settings-tab}
 
