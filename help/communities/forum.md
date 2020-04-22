@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: d936cef5-ad76-482d-97bf-c40137185812
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 58a06c1a16c62bffad2893fbec0b32d2ce7267a7
 
 ---
 
@@ -20,19 +20,19 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 ## Introduktion {#introduction}
 
-Forumfunktionen tillhandahåller ett område för inloggade webbplatsbesökare (community-medlemmar) i publiceringsmiljön till :
+Forumfunktionen tillhandahåller ett område där besökare (community-medlemmar) som loggat in kan besöka webbplatsen i publiceringsmiljön:
 
-* skapa nya ämnen
-* visa och svara på ämnen
-* följa ett ämne
-* sök i forum
-* bidra till att moderera foruminnehållet
-* flytta forumämnen från en sida till en annan
+* Skapa nya ämnen
+* Visa och svara på ämnen
+* Följ ett avsnitt
+* Sök i ett forum
+* Hjälp till att moderera foruminnehållet
+* Flytta forumämnen från en sida till en annan
 
-Detta avsnitt i dokumentationen beskriver
+I det här avsnittet av dokumentationen beskrivs:
 
-* lägga till forumfunktionen på en AEM-webbplats
-* konfigurationsinställningar för `Forum`komponenten
+* Lägga till forumfunktionen på en AEM-webbplats.
+* Konfigurationsinställningar för `Forum`komponenten.
 
 ### Lägga till ett forum på en sida {#adding-a-forum-to-a-page}
 
@@ -56,107 +56,191 @@ Markera den monterade `Forum` komponent som du vill öppna och välj den `Config
 
 #### Fliken Inställningar {#settings-tab}
 
-Under fliken **Settings **anger du inställningar för ämnen och svar:
+Ange inställningar för ämnen och svar på fliken **Inställningar** :
 
-* **Tillåt miniatyrbild för bifogad fil**Om det här alternativet är markerat skapas en miniatyrbild av den bifogade bilden.
-* **Maximal storlek** för miniatyrbildsminiatyr för bifogad miniatyrbild (i pixlar). Standardvärdet är 800 x 800.
+* **Tillåt miniatyrbild för bifogad fil**
+
+   Om du markerar det här alternativet skapas en miniatyrbild av den bifogade bilden.
+
+* **Maximal storlek på miniatyrbild**
+
+   Maximal storlek (i pixlar) för miniatyrbilden för den bifogade filen. Standardvärdet är 800 x 800.
 
 * **Minsta bildstorlek för miniatyrbild**
-* **Maximal miniatyrbildsstorlek** Maximal storlek (i pixlar) för miniatyrbilden för textbunden bild. Standardvärdet är 800 x 800.
+* **Maximal miniatyrstorlek**
 
-* **Ämnen per sida**Definierar antalet ämnen/inlägg som visas per sida. Standardvärdet är 10.
-* **Moderated** Om det här alternativet är markerat måste publicering av ämnen och kommentarer godkännas innan de visas på en publiceringswebbplats. Standard är avmarkerat.
+   Maximal storlek (i pixlar) för miniatyrbilden för textbunden bild. Standardvärdet är 800 x 800.
 
-* **Stängt** Om det här alternativet är markerat stängs forumet för nya ämnen och kommentarer. Standard är avmarkerat.
+* **Ämnen per sida**
 
-* **RTF-redigeraren** Om det här alternativet är markerat kan du skriva in ämnen och kommentarer med markeringar. Standard är avmarkerat.
+   Definierar antalet ämnen/inlägg som visas per sida. Standardvärdet är 10.
 
-* **Tillåt taggning** Om det här alternativet är markerat tillåter du medlemmar att lägga till taggetiketter i sitt inlägg (se fliken **Taggfält** ). Standard är avmarkerat.
+* **Kontrollerad**
 
-* **Tillåt filöverföringar** Om det här alternativet är markerat tillåter du att bifogade filer läggs till i ämnet eller kommentaren. Standard är avmarkerat.
+   Om det här alternativet är markerat måste publicering av ämnen och kommentarer godkännas innan de visas på en publiceringsplats. Standard är avmarkerat.
 
-* **Tillåt följande** om det är markerat, inkludera följande funktion för foruminlägg, som gör att medlemmar kan [meddelas](/help/communities/notifications.md) om nya inlägg. Standard är avmarkerat.
+* **Stängd**
 
-* **Tillåt fästa** Om det här alternativet är markerat kan forumämnen fästas överst i ämneslistan. Standard är avmarkerat.
+   Om det här alternativet är markerat stängs forumet för nya ämnen och kommentarer. Standard är avmarkerat.
 
-* **Tillåt innehåll** om det är markerat kan idén identifieras som [aktuellt innehåll](/help/communities/featured.md). Standard är avmarkerat.
+* **RTF-redigerare**
 
-* **Tillåt e-postprenumerationer** Om det här alternativet är markerat tillåter du medlemmar att meddelas om nya inlägg via e-post ([prenumeration](/help/communities/subscriptions.md)). Kräver `Allow Following` att kontrolleras och att [e-post konfigureras](/help/communities/email.md). Standard är avmarkerat.
+   Om det här alternativet är markerat kan du skriva in ämnen och kommentarer med markeringar. Standard är avmarkerat.
 
-* **Maximal filstorlek** relevant endast om `Allow File Uploads` markeras. Det här fältet begränsar storleken (i byte) på en överförd fil. Standardvärdet är 104857600 (10 MB).
+* **Tillåt taggning**
 
-* **Tillåtna filtyper**&#x200B;är bara relevanta om `Allow File Uploads` markeras. En kommaavgränsad lista med filtillägg med&quot;punktavgränsaren&quot;. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp har angetts kan de som inte har angetts inte överföras. Standard är inte angivet så att** **alla filtyper tillåts.
+   Om det här alternativet är markerat kan medlemmar lägga till taggetiketter i sina inlägg (se fliken **Taggfält** ). Standard är avmarkerat.
 
-* **Max Attach Image File Size** Relevant only if Allow File Uploads is checked. Maximalt antal byte som en överförd bildfil kan ha. Standardvärdet är 2097152** **(2 MB).
+* **Tillåt filöverföringar**
 
-* **Tillåt kopplade svar** Om det här alternativet är markerat tillåter du svar på kommentarer som publicerats i ämnet. Standard är avmarkerat.
+   Om du markerar det här alternativet kan du tillåta att bifogade filer läggs till i ämnet eller kommentaren. Standard är avmarkerat.
 
-* **Tillåt röstning** Om det här alternativet är markerat inkluderar du röstfunktionen med ett ämne. Standard är avmarkerat.
+* **Tillåt följande**
 
-* **Tillåt användare att ta bort kommentarer och ämnen** Tillåt medlemmar att ta bort kommentarer och ämnen som de har skickat in om de är markerade. Standard är avmarkerat.
+   Om det här alternativet är markerat kan du inkludera följande funktion för foruminlägg, som gör att medlemmar kan [informeras](/help/communities/notifications.md) om nya inlägg. Standard är avmarkerat.
 
-* **Visa vägbeskrivningar** Om det här alternativet är markerat visas vägbeskrivningar av navigeringsinformation på ämnessidor. Standard är markerat.
+* **Tillåt fästa**
 
-* **Visa emblem** Om det här alternativet är markerat visar du [märken](/help/communities/implementing-scoring.md) som tagits emot och tilldelats av en medlem i ett blogginlägg. Standard är avmarkerat.
+   Om det här alternativet är markerat kan forumämnen fästas överst i ämneslistan. Standard är avmarkerat.
 
-* **Tillåt behöriga medlemmar** Om det här alternativet är markerat tillåts endast behöriga medlemmar att skapa innehåll.
+* **Tillåt innehåll**
 
-* **Tillåtna behöriga medlemmar**Lägg till behöriga medlemmar som kan skapa innehåll.
-* **Blockera användargenererat innehåll i redigeringsläge** Om det är aktiverat blockerar användargenererat innehåll när redigering pågår i redigeringsläget.
+   Om du markerar det här alternativet kan idén identifieras som [aktuellt innehåll](/help/communities/featured.md). Standard är avmarkerat.
 
-* **Aktivera omnämnande** om det är aktiverat gör att registrerade communityanvändare kan identifiera andra registrerade medlemmar (med förnamn, efternamn, användarnamn) och tagga dem med den vanliga @user-name-syntaxen. De taggade användarna får meddelanden om sina omnämnanden.
+* **Tillåt e-postprenumerationer**
 
-* **Max Mentions** Begränsa det maximala antalet omnämnanden som tillåts i ett inlägg. Standardvärdet är 10.
+   Om det här alternativet är markerat kan medlemmar meddelas om nya inlägg via e-post ([prenumeration](/help/communities/subscriptions.md)). Kräver `Allow Following` att kontrolleras och att [e-post konfigureras](/help/communities/email.md). Standard är avmarkerat.
 
-* **Mönster** för användargränssnittets omnämnande Ange den tillåtna mönstersträngen till taggen (@mention) för den registrerade användaren i ett inlägg. Exempel `~{{familyName}}{{givenName}}`.
+* **Maximal filstorlek**
+
+   Relevant endast om `Allow File Uploads` är markerat. Det här fältet begränsar storleken (i byte) på en överförd fil. Standardvärdet är 104857600 (10 MB).
+
+* **Tillåtna filtyper**
+
+   Relevant endast om `Allow File Uploads` är markerat. En kommaavgränsad lista med filtillägg med&quot;punktavgränsaren&quot;. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp har angetts kan de som inte har angetts inte överföras. Ingen standard har angetts så att alla filtyper tillåts.
+
+* **Max Attach Image File Size** Relevant only if Allow File Uploads is checked. Maximalt antal byte som en överförd bildfil kan ha. Standardvärdet är 2097152 (2 MB).
+
+* **Tillåt kopplade svar**
+
+   Om det här alternativet är markerat tillåts svar på kommentarer som har publicerats i ämnet. Standard är avmarkerat.
+
+* **Tillåt röstning**
+
+   Inkludera röstfunktionen med ett ämne om det är markerat. Standard är avmarkerat.
+
+* **Tillåt användare att ta bort kommentarer och ämnen**
+
+   Om det här alternativet är markerat kan medlemmarna ta bort kommentarer och ämnen som de har skickat in. Standard är avmarkerat.
+
+* **Visa vägbeskrivningar**
+
+   Om du markerar det här alternativet visas navigeringsbeskrivningar på ämnessidor. Standard är markerat.
+
+* **Visa emblem**
+
+   Om det här alternativet är markerat visas färdiga och tilldelade [märken](/help/communities/implementing-scoring.md) med en medlems blogginlägg. Standard är avmarkerat.
+
+* **Tillåt behöriga medlemmar**
+
+   Om det här alternativet är markerat kan endast behöriga medlemmar skapa innehåll.
+
+* **Tillåtna behöriga medlemmar**
+
+   Lägg till de behöriga medlemmar som har behörighet att skapa innehåll.
+
+* **Blockera användargenererat innehåll i redigeringsläge för författare**
+
+   Om det här alternativet är aktiverat blockeras användargenererat innehåll när redigering i redigeringsläge.
+
+* **Aktivera omnämnande**
+
+   Om det här alternativet är aktiverat kan registrerade communityanvändare identifiera andra registrerade medlemmar (med förnamn, efternamn, användarnamn) och tagga dem med den vanliga @användarnamnssyntaxen. De taggade användarna får meddelanden om sina omnämnanden.
+
+* **Max. omnämnanden**
+
+   Begränsa det maximala antalet omnämnanden som tillåts i ett inlägg. Standardvärdet är 10.
+
+* **Mönster för användargränssnittets omnämnande**
+
+   Ange den tillåtna mönstersträngen för att tagga (@mention) den registrerade användaren i ett inlägg. Till exempel `~{{familyName}}{{givenName}}`.
 
 >[!NOTE]
 >
 >Det kan vara nödvändigt att kontrollera både `AllowThreaded Replies` och `Allow users to Delete Comments and Topics` aktivera kommentarer om ett ämne.
 
+
 #### Fliken Användarmoderering {#user-moderation-tab}
 
-Under fliken **Användarmoderering **anger du hur publicerade ämnen och svar (användargenererat innehåll) ska hanteras. Mer information finns i [Hantera användargenererat innehåll](/help/communities/moderate-ugc.md).
+På fliken **Användarmoderering** anger du hur publicerade ämnen och svar (användargenererat innehåll) ska hanteras. Mer information finns i [Hantera användargenererat innehåll](/help/communities/moderate-ugc.md).
 
-* **Neka inlägg** Om det här alternativet är markerat kan pålitliga medlemsmoderatorer neka inlägg och förhindra att posten visas på det offentliga forumet. Standard är avmarkerat.
+* **Neka inlägg**
 
-* **Stäng/öppna ämnen** igen Om det här alternativet är markerat kan pålitliga medlemsmoderatorer stänga ett avsnitt för ytterligare redigeringar och kommentarer och även öppna ett avsnitt på nytt. Standard är avmarkerat.
+   Om det här alternativet är markerat kan pålitliga medlemsmoderatorer neka inlägg och förhindra att posten visas på det offentliga forumet. Standard är avmarkerat.
 
-* **Flytta ämnen** Om det är markerat tillåter du moderatorer på publiceringssidan att flytta ämnen. Standard är markerat.
+* **Stäng/öppna avsnitt igen**
 
-* **Flagga inlägg** Om det är markerat kan medlemmar flagga andras ämnen eller kommentarer som olämpliga. Standard är avmarkerat.
+   Om det här alternativet är markerat kan pålitliga medlemsmoderatorer stänga ett ämne för ytterligare redigeringar och kommentarer, och kan även öppna ett avsnitt på nytt. Standard är avmarkerat.
 
-* **Flagga orsakslista** Om det här alternativet är markerat kan medlemmarna välja, från en nedrullningsbar lista, orsaken till att ett ämne eller en kommentar flaggas som olämplig. Standard är avmarkerat.
+* **Flytta ämnen**
 
-* **Anledning till anpassad flagga** Om den är markerad kan medlemmar ange en egen orsak till att ett ämne eller en kommentar flaggas som olämplig. Standard är avmarkerat.
+   Om det här alternativet är markerat kan du tillåta moderatorer på publiceringssidan att flytta ämnen. Standard är markerat.
 
-* **Moderationströskel** Ange hur många gånger ett ämne eller en kommentar måste flaggas av medlemmar innan moderatorerna meddelas. Standardvärdet är 1 (en gång).
+* **Flagga inlägg**
 
-* **Flaggningsgräns** Ange hur många gånger ett ämne eller en kommentar måste flaggas innan det döljs för den offentliga vyn. Om värdet är -1 döljs aldrig det flaggade ämnet eller kommentaren från den offentliga vyn. Annars måste talet vara större än eller lika med modereringströskeln. Standardvärdet är 5.
+   Om det här alternativet är markerat kan medlemmar flagga andras ämnen eller kommentarer som olämpliga. Standard är avmarkerat.
+
+* **Flaggorsakslista**
+
+   Om det här alternativet är markerat kan medlemmarna välja, från en nedrullningsbar lista, orsaken till att ett ämne eller en kommentar har flaggats som olämplig. Standard är avmarkerat.
+
+* **Anledning till anpassad flagga**
+
+   Om det här alternativet är markerat kan medlemmarna ange en egen orsak till att ett ämne eller en kommentar flaggas som olämplig. Standard är avmarkerat.
+
+* **Modereringströskel**
+
+   Ange hur många gånger ett ämne eller en kommentar måste flaggas av medlemmar innan moderatorerna meddelas. Standardvärdet är 1 (en gång).
+
+* **Flaggningsgräns**
+
+   Ange hur många gånger ett ämne eller en kommentar måste flaggas innan det döljs för den offentliga vyn. Om värdet är -1 döljs aldrig det flaggade ämnet eller kommentaren från den offentliga vyn. Annars måste talet vara större än eller lika med modereringströskeln. Standardvärdet är 5.
 
 #### Fliken Taggfält {#tag-field-tab}
 
-Under fliken **Taggfält** är de taggar som kan användas, om de tillåts under fliken **Inställningar **begränsade enligt de namnutrymmen som har valts.
+Under fliken **Tagg** begränsas de taggar som kan användas, om de tillåts under fliken **Inställningar** , enligt de namnutrymmen som valts.
 
-* **Tillåtna** relevanta namnutrymmen om `Allow Tagging` är markerat under fliken **Inställningar **. De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som kontrolleras. Listan med namnutrymmen innehåller &quot;Standardtaggar&quot; (standardnamnutrymmet) och &quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
+* **Tillåtna namnutrymmen**
 
-* **Förslagsgräns** Ange antalet taggar som ska visas som ett förslag till medlemmen som publicerar i forumet. Standardvärdet är **-**1 (inga gränser).
+   Relevant om `Allow Tagging` är markerat under fliken **Inställningar** . De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som kontrolleras. Listan med namnutrymmen innehåller &quot;Standardtaggar&quot; (standardnamnutrymmet) och &quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
+
+* **Förslagsgräns**
+
+   Ange antalet taggar som ska visas som ett förslag till medlemmens inlägg i forumet. Standardvärdet är **-**1 (inga gränser).
 
 #### Fliken Översättning {#translation-tab}
 
-Om översättning är aktiverat för communitywebbplatsen kan översättning ställas in för att översätta hela ämnet eller valda inlägg på fliken **Translation **.
+Om översättning är aktiverat för communitywebbplatsen på fliken **Översättning** kan översättning ställas in för att översätta hela ämnet eller valda inlägg.
 
-* **Översätt alla** Om det här alternativet är markerat översätts forumtråden till användarens önskade språk. Standard är avmarkerat.
+* **Översätt alla**
+
+   Om det här alternativet är markerat översätts forumtråden till användarens önskade språk. Standard är avmarkerat.
 
 #### Fliken Sorteringsinställningar {#sort-settings-tab}
 
-Under fliken **Sorteringsinställningar **anger du hur de bokförda kommentarerna ska sorteras när de visas.
+På fliken **Sorteringsinställningar** anger du hur de skickade kommentarerna ska sorteras när de visas.
 
-* **Sortera efter** Kontrollera alla tillåtna sorteringsval: `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`. Standardvärdet är `Newest, Oldest, Last Updated`.
+* **Sortera efter**
 
-* **Ange som standard** Dra nedåt om du vill välja något av de markerade sorteringsalternativen som ska visas som standard. Standardvärdet är `Newest`.
+   Kontrollera alla tillåtna sorteringsval: `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`. Standardvärdet är `Newest, Oldest, Last Updated`.
 
-* **Välj Tidsalternativ för sortering** i listrutan Analytics (Analyssortering) för att välja ett av `All, Last 24 Hours, Last 7 Days, Last 30 Days`. Standardvärdet är `All`.
+* **Ange som standard**
+
+   Dra nedåt om du vill välja något av de markerade sorteringsalternativen som ska visas som standard. Standardvärdet är `Newest`.
+
+* **Välj tidsalternativ för Analytics-sortering**
+
+   Dra ned för att välja ett av `All, Last 24 Hours, Last 7 Days, Last 30 Days`. Standardvärdet är `All`.
 
 ### Additional Information {#additional-information}
 
