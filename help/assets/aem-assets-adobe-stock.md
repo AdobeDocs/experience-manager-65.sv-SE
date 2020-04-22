@@ -1,9 +1,9 @@
 ---
-title: Hantera Adobe Stock-mediefiler i AEM Resurser
-description: Sök, hämta, licensiera och hantera Adobe Stock-mediefiler inifrån AEM. Använd de licensierade mediefilerna som andra digitala resurser.
+title: Hantera [!DNL Adobe Stock]-resurser i [!DNL Adobe Experience Manager Assets].
+description: Sök, hämta, licensiera och hantera [!DNL Adobe Stock]-resurser inifrån Adobe Experience Manager. Använd de licensierade mediefilerna som andra digitala resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 68fb4c08b8093ff50e74dc9e29011325cdf7e7d7
+source-git-commit: c9ac722cb8903d1d9946c7a6f797f102cb99bbf2
 
 ---
 
