@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 7be506fb-f5c4-48dd-bec2-a3ea3ea19397
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
+source-git-commit: 317093bce043ff2aaa5b5ceb8499f057fa9fa24b
 
 ---
 
@@ -51,7 +51,7 @@ I guiden **Skapa CSV-export** kan du välja:
 
 Den resulterande `export.csv` filen kan öppnas i Excel eller något annat kompatibelt program.
 
-![]() ![etc-01](assets/etc-01.png)
+![etc-01](assets/etc-01.png)
 
 Alternativet Skapa **CSV-rapport** är tillgängligt när du bläddrar i **webbplatskonsolen** (i listvyn): det är ett alternativ i listrutan **Skapa** :
 
@@ -59,7 +59,7 @@ Alternativet Skapa **CSV-rapport** är tillgängligt när du bläddrar i **webbp
 
 Så här skapar du en CSV-export:
 
-1. Öppna konsolen **Platser** och navigera till önskad plats om det behövs.
+1. Öppna konsolen **Sites** och navigera till önskad plats om det behövs.
 1. I verktygsfältet väljer du **Skapa** och sedan **CSV-rapport** för att öppna guiden:
 
    ![etc-03](assets/etc-03.png)
