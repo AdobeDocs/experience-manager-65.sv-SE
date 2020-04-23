@@ -11,7 +11,7 @@ topic-tags: best-practices
 discoiquuid: 2418777e-4eb2-4d82-aa9e-8d1b0bf740f3
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bd0cb6abe024bc4ff77c9932c99b816c832377f5
+source-git-commit: 87a8c36130c70d1fe8839c092fffda2821333466
 
 ---
 
@@ -99,7 +99,7 @@ Använd dessa rutiner när du skapar ett eget nyhetsbrev.
 |---|---|
 | Lägg till *alt* -attribut i bilder | Attributet *alt* har definierats som obligatoriskt för bildkomponenten. |
 | Använd *jpg* i stället för *png* -format för bilder | Bilderna hanteras alltid som JPG-bilder av bildkomponenten. |
-| Använd <img> element i stället för bakgrundsbilder i en tabell. | Inga bakgrundsbilddata används i mallarna. |
+| Använd `<img>` element i stället för bakgrundsbilder i en tabell. | Inga bakgrundsbilddata används i mallarna. |
 | Lägg till attributet style=&quot;display block&quot; i bilder. Tillåter visning bra på Gmail. | Alla bilder innehåller som standard attributet *style=&quot;display block&quot;* . |
 
 ### Text och länkar {#text-and-links}
@@ -135,9 +135,9 @@ Använd dessa rutiner när du skapar ett eget nyhetsbrev.
 
 AEM innehåller flera mallar och komponenter som du kan använda för att skapa nyhetsbrev om kampanjer. Du kan använda de här mallarna och komponenterna för att skapa anpassade nyhetsbrev.
 
-### Templates {#templates}
+### Mallar {#templates}
 
-Det finns tre något olika malltyper att välja mellan för att få en heltäckande bas och för att bredda möjligheterna för innehållsflöde. Du kan enkelt använda dessa för att skapa anpassade nyhetsbrev.
+Det finns tre något olika malltyper att välja mellan för att få en heltäckande bas och för att bredda möjligheterna med innehållsflöde. Du kan enkelt använda dessa för att skapa anpassade nyhetsbrev.
 
 Alla har ett **sidhuvud**, en **sidfot** och ett **textavsnitt** . Under brödavsnittet skiljer sig varje mall i **kolumndesign** (1, 2 eller 3 kolumner).
 
