@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 879ff6ca-e5f3-451d-acc2-f75142101ddd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: e545fc5e2ea139bd8ebb7f84138ba68e03d71d19
 
 ---
 
@@ -111,7 +111,7 @@ Så här skapar du en XDP-mall för utskriftskanalen:
 
 När du har skapat en XDP-mall med Forms Designer måste du överföra den till AEM Forms-servern så att mallen kan användas när du skapar den interaktiva kommunikationen.
 
-1. Välj **Formulär** > **Formulär och dokument**.
+1. Välj **[!UICONTROL Formulär]** > **[!UICONTROL Formulär och dokument]**.
 1. Tryck på **Skapa** > **Filöverföring**.
 
    Navigera till och välj mallen **create_first_ic_print_template** (XDP) och tryck på **Öppna** för att importera XDP-mallen till AEM Forms-servern.
