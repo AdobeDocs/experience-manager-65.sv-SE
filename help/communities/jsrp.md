@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: f5316a73-84e2-4a18-98c1-a384eeaa77cf
 translation-type: tm+mt
-source-git-commit: aa2c75e061e00ba74d54843a5f35bb7d82d12a92
+source-git-commit: e4456e80059479ca874681e20f8546f29ac92597
 
 ---
 
@@ -35,7 +35,7 @@ Med konsolen [för](srp-config.md) lagringskonfiguration kan du välja standardl
 
 För att nå konsolen Lagringskonfiguration i redigeringsmiljön
 
-* Från global navigering: **[!UICONTROL Verktyg > Communities > Storage Configuration]**
+* Från global navigering: **[!UICONTROL Verktyg]** > **[!UICONTROL Communities]** > **[!UICONTROL Storage Configuration]**
 
 ![chlimage_1-234](assets/chlimage_1-234.png)
 
@@ -44,13 +44,12 @@ För att nå konsolen Lagringskonfiguration i redigeringsmiljön
 
 ### Publicera konfigurationen {#publishing-the-configuration}
 
-När JSRP är standardkonfigurationen, kontrollerar du att den identiska konfigurationen är inställd i publiceringsmiljön:
+JSRP är standardkonfigurationen, och för att säkerställa att den identiska konfigurationen ställs in i publiceringsmiljön:
 
 * On author:
 
-   * Från global navigering: **[!UICONTROL Verktyg > Distribution > Replikering]**
-   * Välj **[!UICONTROL Aktivera träd]**
-   * **[!UICONTROL Startsökväg]**:
+   * Från global navigering: **[!UICONTROL Verktyg]** > **[!UICONTROL Distribution]** > **[!UICONTROL Replikering]**
+   * Välj **[!UICONTROL Aktivera träd]** > **[!UICONTROL Startsökväg]**:
 
       * Bläddra till `/conf/global/settings/community/srpc/`
    * Välj **[!UICONTROL Aktivera]**
@@ -58,7 +57,7 @@ När JSRP är standardkonfigurationen, kontrollerar du att den identiska konfigu
 
 ## Hantera användardata {#managing-user-data}
 
-Information om *användare*, *användarprofiler* och *användargrupper* som ofta används i publiceringsmiljön finns på
+Information om *användare*, *användarprofiler* och *användargrupper* som ofta används i publiceringsmiljön finns på:
 
 * [Användarsynkronisering](sync.md)
 * [Hantera användare och användargrupper](users.md)
@@ -71,10 +70,10 @@ Kontrollera att JSRP har konfigurerats som standardprovider genom att kontroller
 
 Gå till konsolen för lagringskonfiguration eller kontrollera AEM-databasen på alla författare och publicera AEM-instanser:
 
-* i JCR, if [/conf/global/settings/community](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community)
+* I JCR, if [/conf/global/settings/community](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community)
 
-   * Innehåller ingen [srpc](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc) -nod, vilket betyder att lagringsprovidern är JSRP
-   * Om srpc-noden finns och innehåller [standardkonfiguration](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc/defaultconfiguration)för nod, ska standardkonfigurationens egenskaper definiera JSRP som standardprovider
+   * Innehåller ingen [srpc](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc) -nod, vilket betyder att lagringsprovidern är JSRP.
+   * Om srpc-noden finns och innehåller [standardkonfiguration](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc/defaultconfiguration)för nod, ska standardkonfigurationens egenskaper definiera JSRP som standardprovider.
 
 ### UGC är inte synlig på författarinstans {#ugc-not-visible-on-author-instance}
 
