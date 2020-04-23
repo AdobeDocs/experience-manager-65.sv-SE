@@ -9,12 +9,12 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: ac5d8d4f-fc13-4e8d-819c-c5db07fa6870
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56f7db792b340ed6774c54170e9b5d2a52153cd5
+source-git-commit: e545fc5e2ea139bd8ebb7f84138ba68e03d71d19
 
 ---
 
 
-# Självstudiekurs:Skapa interaktiv kommunikation {#tutorial-create-interactive-communication}
+# Självstudiekurs: Skapa interaktiv kommunikation {#tutorial-create-interactive-communication}
 
 ![09-style-your-adaptive-form-small](assets/09-style-your-adaptive-form-small.png)
 
@@ -36,17 +36,17 @@ I den här självstudiekursen får du hjälp med att skapa interaktiv kommunikat
 
 Nedan följer en lista över resurser som redan har skapats i den här självstudiekursen och som behövs när du skapar den interaktiva kommunikationen för utskriftskanalen:
 
-**** Utskriftsmall: [create_first_ic_print_template](../../forms/using/create-templates-print-web.md)
+**Utskriftsmall:** [create_first_ic_print_template](../../forms/using/create-templates-print-web.md)
 
-**** Formulärdatamodell: [FDM_Create_First_IC](../../forms/using/create-form-data-model0.md)
+**Formulärdatamodell:** [FDM_Create_First_IC](../../forms/using/create-form-data-model0.md)
 
-**** Dokumentfragment: Bill_details_first_ic, customer_details_first_ic, Bill_summary_first_ic, summary_Charts_first_ic [](../../forms/using/create-document-fragments.md)
+**Dokumentfragment:** Bill_details_first_ic, customer_details_first_ic, Bill_summary_first_ic, summary_Charts_first_ic [](../../forms/using/create-document-fragments.md)
 
-**** Layoutfragment: [table_lf](../../forms/using/create-templates-print-web.md)
+**Layoutfragment:** [table_lf](../../forms/using/create-templates-print-web.md)
 
-**** Bilder: PayNow och ValueAddedServices
+**Bilder:** PayNow och ValueAddedServices
 
-1. Logga in på AEM-författarinstansen och gå till **Adobe Experience Manager** > **Formulär** > **Formulär och dokument**.
+1. Logga in på AEM-författarinstansen och gå till **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Formulär]** > **[!UICONTROL Formulär och dokument]**.
 1. Tryck på **Skapa** och välj **Interaktiv kommunikation**. Guiden **Skapa interaktiv kommunikation** visas.
 1. Ange **create_first_ic** i fälten **Titel** och **Namn** . Välj **FDM_Create_First_IC** som formulärdatamodell och tryck på **Nästa**.
 1. I guiden **Kanaler** :
@@ -67,7 +67,7 @@ Nedan följer en lista över resurser som redan har skapats i den här självstu
    | Bill_details_first_ic | BillDetails |
    | customer_details_first_ic | CustomerDetails |
    | Bill_summary_first_ic | BillSummary |
-   | summary_addas_first_interactive_communication | Avgifter |
+   | summary_Charts_first_interactive_communication | Avgifter |
 
    ![Dokumentfragment för interaktiv kommunikation](assets/create_first_ic_doc_fragments_new.png)
 
@@ -76,9 +76,9 @@ Nedan följer en lista över resurser som redan har skapats i den här självstu
 
    1. Ange ett namn för diagrammet.
    1. Välj **Cirkel** i listrutan **Diagramtyp** .
-   1. Välj **calltype** -egenskapen i **anropet** av datamodellens objekttyp i **X-axelavsnittet** . Tryck ![](assets/done_icon.png).
+   1. Välj **calltype** -egenskapen i **anropet** av datamodellens objekttyp i **X-axelavsnittet** . Tryck på ![](assets/done_icon.png).
    1. Välj **Frekvens** i listrutan **Funktion** .
-   1. Välj **calltype** -egenskapen i **anropet** av datamodellens objekttyp i avsnittet **Y-axel** . Tryck ![](assets/done_icon.png).
+   1. Välj **calltype** -egenskapen i **anropet** av datamodellens objekttyp i avsnittet **Y-axel** . Tryck på ![](assets/done_icon.png).
    1. Tryck ![](assets/done_icon.png) för att spara diagramegenskaperna.
 
 1. Gå till fliken **Resurser** och tillämpa filtret för att endast visa layoutfragmenten i den vänstra rutan. Dra och släpp layoutfragmentet **table_lf** till målområdet **Specificerade anrop** .
@@ -100,15 +100,15 @@ Nedan följer en lista över resurser som redan har skapats i den här självstu
 
 Nedan följer en lista över resurser som redan har skapats i kursen och som behövs när du skapar interaktiv kommunikation för webbkanalen:
 
-**** Webbmall: [Create_First_IC_Web_Template](../../forms/using/create-templates-print-web.md)
+**Webbmall:** [Create_First_IC_Web_Template](../../forms/using/create-templates-print-web.md)
 
-**** Formulärdatamodell: [FDM_Create_First_IC](../../forms/using/create-form-data-model0.md)
+**Formulärdatamodell:** [FDM_Create_First_IC](../../forms/using/create-form-data-model0.md)
 
-**** Dokumentfragment: Bill_details_first_ic, customer_details_first_ic, Bill_summary_first_ic, summary_Charts_first_ic [](../../forms/using/create-document-fragments.md)
+**Dokumentfragment:** Bill_details_first_ic, customer_details_first_ic, Bill_summary_first_ic, summary_Charts_first_ic [](../../forms/using/create-document-fragments.md)
 
-**** Bilder: PayNowWeb och ValueAddedServicesWeb
+**Bilder:** PayNowWeb och ValueAddedServicesWeb
 
-1. Logga in på AEM-författarinstansen och gå till **Adobe Experience Manager** > **Formulär** > **Formulär och dokument**.
+1. Logga in på AEM-författarinstansen och gå till **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Formulär]** > **[!UICONTROL Formulär och dokument]**.
 1. Tryck på **Skapa** och välj **Interaktiv kommunikation**. Guiden **Skapa interaktiv kommunikation** visas.
 1. Ange **create_first_ic** i fälten **Titel** och **Namn** . Välj **FDM_Create_First_IC** som formulärdatamodell och tryck på **Nästa**.
 1. I guiden **Kanaler** :
@@ -130,7 +130,7 @@ Nedan följer en lista över resurser som redan har skapats i kursen och som beh
    | Bill_details_first_ic | BillDetails |
    | customer_details_first_ic | CustomerDetails |
    | Bill_summary_first_ic | BillSummary |
-   | summary_addas_first_interactive_communication | Avgifter |
+   | summary_Charts_first_interactive_communication | Avgifter |
 
 1. Tryck på målområdet **Sammanfattning av avgifter** och tryck **+** för att lägga till en **diagramkomponent** .
 1. Tryck på diagramkomponenten och välj ![](assets/configure_icon.png) (Konfigurera). Diagramegenskaperna visas i den vänstra rutan:
@@ -138,11 +138,11 @@ Nedan följer en lista över resurser som redan har skapats i kursen och som beh
    1. Ange ett namn för diagrammet.
    1. Välj **Cirkel** i listrutan **Diagramtyp** .
 
-   1. Välj **calltype** -egenskapen i **anropet** av datamodellens objekttyp i **X-axelavsnittet** . Tryck ![](assets/done_icon.png).
+   1. Välj **calltype** -egenskapen i **anropet** av datamodellens objekttyp i **X-axelavsnittet** . Tryck på ![](assets/done_icon.png).
 
    1. Välj **Frekvens** i listrutan **Funktion** .
 
-   1. Välj **calltype** -egenskapen i **anropet** av datamodellens objekttyp i avsnittet **Y-axel** . Tryck ![](assets/done_icon.png).
+   1. Välj **calltype** -egenskapen i **anropet** av datamodellens objekttyp i avsnittet **Y-axel** . Tryck på ![](assets/done_icon.png).
 
    1. Tryck ![](assets/done_icon.png) för att spara diagramegenskaperna.
 
@@ -152,7 +152,7 @@ Nedan följer en lista över resurser som redan har skapats i kursen och som beh
 
    ![Tabell för interaktiv kommunikation](assets/table_ic_web_new.png)
 
-1. Markera **kolumnrubriken i tabellkolumnen** Mobilenum och välj **Fler alternativ** > **Ta bort kolumn**. Du kan även ta bort kolumnen **Calltype** .
+1. Välj kolumnrubriken **i tabellkolumnen** Mobilenum och välj **Fler alternativ** > **Ta bort kolumn**. Du kan även ta bort kolumnen **Calltype** .
 1. Markera kolumnrubriken **för** anropstabellen och tryck på ![Redigera](assets/edit.png) (Redigera) för att byta namn på texten till **Anropsdatum**. Du kan också byta namn på andra kolumnrubriker i tabellen.
 1. Baserat på användningsfallet infogar du en **Pay Now** -knapp i Interactive Communication som ger användaren möjlighet att göra betalningen genom att klicka på knappen. Gör så här för att infoga knappen:
 
@@ -198,7 +198,7 @@ Du kan också skapa en interaktiv kommunikation genom att aktivera automatisk sy
 
 Utför följande steg för att härleda webbkanalsinnehållet med hjälp av Print channel:
 
-1. Logga in på AEM-författarinstansen och gå till **Adobe Experience Manager** > **Formulär** > **Formulär och dokument**.
+1. Logga in på AEM-författarinstansen och gå till **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Formulär]** > **[!UICONTROL Formulär och dokument]**.
 1. Tryck på **Skapa** och välj **Interaktiv kommunikation**. Guiden **Skapa interaktiv kommunikation** visas.
 1. Ange **create_first_ic** i fälten **Titel** och **Namn** . Välj **FDM_Create_First_IC** som formulärdatamodell och tryck på **Nästa**.
 1. I guiden **Kanaler** :
