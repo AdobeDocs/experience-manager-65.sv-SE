@@ -1,8 +1,8 @@
 ---
 title: Plattformar som stöds för AEM Forms på JEE
 seo-title: Plattformar som stöds för AEM Forms på JEE
-description: Lista över infrastrukturkomponenter som krävs och stöds för installation av AEM Forms i JEE
-seo-description: Lista över infrastrukturkomponenter som krävs och stöds för installation av AEM Forms i JEE
+description: Lista över infrastrukturkomponenter som krävs och stöds för installation av AEM Forms på JEE
+seo-description: Lista över infrastrukturkomponenter som krävs och stöds för installation av AEM Forms på JEE
 uuid: 777f943b-4cb4-444e-a036-8032b9fce5be
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: a6b4a32b320d53c41ebf9615895dbf17ab722f19
 
 ---
 
@@ -151,7 +151,7 @@ Adobe Experience Manager Forms kräver att en Java Virtual Machine körs, vilket
   </tr> 
    <tr>
    <td>Oracle Database 19c </td>
-   <td>Databas</td>
+   <td>Repository Microkernal </td>
    <td>Stöds</td>
   </tr>
   <tr>
