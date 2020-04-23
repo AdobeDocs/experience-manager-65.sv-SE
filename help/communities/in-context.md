@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: ee104f6f-123b-4a6e-9031-849fc1318cc5
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 ---
 
@@ -29,11 +29,11 @@ Besök modereringsöversikten för en beskrivning av [modereringsåtgärder](mod
 
 Användargränssnittet som visas för moderatorn i publiceringsinstansen finns i dialogrutan för publicering och hantering av användargenererat innehåll (UGC). Elementen i användargränssnittet bestäms av besökarens status - oavsett om de är...
 
-1. Medlemmen som publicerade innehållet
-1. En pålitlig medlemsmoderator
-1. En administratör
-1. Inloggad, men varken administratör, moderator eller författare till innehållet
-1. Inte inloggad
+1. Medlemmen som publicerade innehållet.
+1. En tillförlitlig medlemsmoderator.
+1. En administratör.
+1. Inloggad, men varken administratör, moderator eller författare till innehållet.
+1. Inte inloggad.
 
 ## Exempel {#example}
 
@@ -57,7 +57,7 @@ Mer information om användargrupper finns på [Hantera användare och användarg
 
    * Ange brödtexten
 
-      Jag har inte haft så stor framgång när jag har lagt på en matare till en luftfågel varje år. De verkar komma en dag eller två, då är det klart. Jag ändrar det en gång i veckan är det för långt? Måste jag ändra den tidigare?
+      Jag har inte haft så stor framgång när jag hänger upp en matare för en hummeringfågel varje år. De verkar komma en dag eller två, då är det klart. Jag ändrar det en gång i veckan är det för långt? Måste jag ändra den tidigare?
    * Välj inlägg
    * Välj Logga ut
 
@@ -97,11 +97,11 @@ Logga in som administratör och lägg till Boyd Larsen (boyd.larsen@dodgit.com) 
 
 Vid publicering loggar du in som Boyd Larsen och öppnar tråden genom att välja `Forum`och sedan `Read more` för den hummerande fågelposten.
 
-Meddelande
+Obs!
 
-* Boyd har inte deltagit i forumet
-* Boyte kan inte ta bort någonting
-* Boyd är inloggad och kan svara eller flagga innehåll
+* Boyd har inte deltagit i forumet.
+* Boyd kan inte ta bort någonting.
+* Boyd är inloggad och kan svara eller flagga innehåll.
 
 Låt Boyd markera Flagga för att flagga innehållet som publicerats av Andrew.
 
@@ -113,10 +113,10 @@ Logga ut
 
 Logga in som administratör (administratör) och öppna tråden genom att välja Forum och sedan Läs mer för ett inlägg.
 
-Meddelande
+Obs!
 
-* Administratören kan flagga, ta bort, redigera, neka, klippa ut, stänga, fästa, använda
-* Administratören kan välja Administration för att komma åt modereringskonsolen
+* Administratören kan flagga, ta bort, redigera, neka, klippa ut, stänga, fästa, använda.
+* Administratören kan välja Administration för att komma åt modereringskonsolen.
 
 ![communityadmin-forum](assets/communityadmin-forum.png)
 
@@ -134,12 +134,12 @@ Logga ut.
 
 Logga in som Aaron McDonald (aaron.mcdonal@mailinator.com), som är moderator i communityn, och gå till tråden genom att välja Forum och sedan Läs mer för den hummingbird-posten.
 
-Meddelande
+Obs!
 
-* Aaron kan svara, ta bort, redigera eller neka sitt eget inlägg
-* Aaron kan även flagga/tillåta, svara, ta bort, redigera, neka annat innehåll
-* Aaron kan klippa ut forumämnet och flytta det till ett annat forum som han modererar för
-* Aaron kan välja Administration för att få åtkomst till modereringskonsolen
+* Aaron kan svara, ta bort, redigera eller neka sitt eget inlägg.
+* Aaron kan också flagga/tillåt, svara, ta bort, redigera, neka annat innehåll.
+* Aaron kan klippa ut forumämnet och flytta det till ett annat forum som han modererar för.
+* Aaron kan välja Administration för att komma åt moderationskonsolen.
 
 ![chlimage_1-2](assets/chlimage_1-2.png)
 
@@ -157,11 +157,11 @@ Logga ut.
 
 Logga in som Rebekah Larsen (rebekah.larsen@mailinator.com), en community-medlem som startade tråden, och gå till tråden genom att välja Forum och sedan Läs mer för den hummingbird-posten.
 
-Meddelande
+Obs!
 
-* Rebekah kan ta bort eller redigera sin egen post
-* Rebekah kan även svara på eller flagga annat innehåll
-* Rebekah har inte åtkomst till modereringskonsolen
+* Rebekah kan ta bort eller redigera sin egen post.
+* Rebekah kan även svara på eller flagga annat innehåll.
+* Rebekah har inte åtkomst till moderationskonsolen.
 
 ![chlimage_1-3](assets/chlimage_1-3.png)
 
