@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: e8f28cd5-7950-4aab-bf62-3d4ed3d33cbd
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 ---
 
@@ -19,11 +19,11 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 I det här avsnittet skapar du följande sidor som alla använder [sidmallen](initial-app.md#createthepagetemplate):
 
-* SCF Sandbox Site, som dirigerar om till den engelska versionen av huvudsidan
+* SCF Sandbox Site, som dirigerar om till den engelska versionen av huvudsidan.
 
-   * SCF Sandbox - Huvudsidan för den engelska versionen av webbplatsen
+   * SCF Sandbox - Huvudsidan för den engelska versionen av webbplatsen.
 
-      * SCF Play - Underordnad den huvudsida som ska spelas upp
+      * SCF Play - Underordnad till den huvudsida som ska spelas upp.
 
 Även om den här självstudiekursen inte omfattar [språkkopior](../../help/sites-administering/tc-prep.md)är den utformad så att rotsidan kan implementera identifiering av det språk som användaren föredrar via HTML-rubriken och dirigera om till rätt huvudsida för språket. Konventionen är att använda landskoden med två bokstäver för sidans nodnamn, t.ex. &quot;en&quot; för engelska, &quot;fr&quot; för franska och så vidare.
 
@@ -45,7 +45,7 @@ Nu när det finns en [sidmall](initial-app.md#createthepagetemplate)kan vi skapa
 
    Du kan även få tillgång till det klassiska användargränssnittet för webbplatser direkt genom att gå till [/siteAdmin.](http://localhost:4502/siteadmin)
 
-1. Välj **[!UICONTROL Webbplatser]** i utforskarrutan och välj sedan **[!UICONTROL Ny > Ny sida]** i verktygsfältet.
+1. Välj **[!UICONTROL Webbplatser]** i utforskarrutan och välj sedan **[!UICONTROL Ny]** > **[!UICONTROL Ny sida]** i verktygsfältet.
 
    Ange följande i dialogrutan **[!UICONTROL Skapa sida]** :
 
@@ -55,14 +55,14 @@ Nu när det finns en [sidmall](initial-app.md#createthepagetemplate)kan vi skapa
    * Klicka på **[!UICONTROL Skapa]**
    ![chlimage_1-38](assets/chlimage_1-38.png)
 
-1. Markera den sida du just skapade i Utforskarfönstret `/Websites/SCF Sandbox Site`och klicka på **[!UICONTROL Ny > Ny sida]**:
+1. Markera den sida du just skapade i Utforskarfönstret `/Websites/SCF Sandbox Site`och klicka på **[!UICONTROL Ny]** > **[!UICONTROL Ny sida]**:
 
    * Titel: `SCF Sandbox`
    * Namn: `en`
    * Välj **en SCF-sandlådeuppspelningsmall **
    * Klicka på **Skapa **
 
-1. Markera den sida du just skapade i Utforskarfönstret `/Websites/SCF Sandbox Site/SCF Sandbox`och klicka på **[!UICONTROL Ny > Ny sida]**
+1. Markera den sida du just skapade i Utforskarfönstret `/Websites/SCF Sandbox Site/SCF Sandbox`och klicka på **[!UICONTROL Ny]** > **[!UICONTROL Ny sida]**
 
    * Titel: `SCF Play`
    * Namn: `play`
@@ -83,7 +83,7 @@ Egenskapen &quot; ` [/etc/designs/an-scf-sandbox](setup-website.md#setupthedesig
 
 * `cq:template="/libs/wcm/core/templates/designpage"`
 
-har definierats, vilket ger möjlighet att referera till designresurser i ett skript med `currentDesign.getPath()`. Exempel
+har definierats, vilket ger möjlighet att referera till designresurser i ett skript med `currentDesign.getPath()`. Till exempel
 
 * &lt;% String favIcon = currentDesign.getPath() + &quot;/favicon.ico&quot;; %>
 
@@ -104,5 +104,6 @@ Databasen ska vara som följer:
 
 >[!NOTE]
 >
->Det är valfritt att använda cq:designPath och det har inget samband med [användningen av clientlibs](develop-app.md#includeclientlibsintemplate), vilket i huvudsak krävs eftersom SCF-komponenterna använder [klientlibs](client-customize.md#clientlibs-for-scf) för att hantera sina JS- och CSS-filer.
+>Det är valfritt att använda cq:designPath och det har inget samband med [användningen av clientlibs](develop-app.md#includeclientlibsintemplate), som i huvudsak krävs eftersom SCF-komponenterna använder [klientlibs](client-customize.md#clientlibs-for-scf) för att hantera sina JS- och CSS-filer.
+
 
