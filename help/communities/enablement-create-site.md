@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: b9333558-6af9-46b2-9f03-3722645c69a6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
+source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 ---
 
@@ -27,7 +27,7 @@ Så här kommer du igång med att skapa en ny community-webbplats:
 Använda [författarinstansen](https://localhost:4502/)
 
 * Logga in med administratörsbehörighet
-* Navigera till **[UIControl Communities > Sites]**
+* Navigera till **[!UICONTROL Communities > Sites]**
 
 * Välj **Skapa**
 
@@ -98,7 +98,7 @@ De taggar som kan användas för communityinnehåll kontrolleras genom att AEM-n
 
 Om du väljer Taggnamnutrymmen för communitywebbplatsen begränsas dessutom det urval som visas när du definierar kataloger och aktiveringsresurser. Viktig information finns i [Tagga aktiveringsresurser](/help/communities/tag-resources.md) .
 
-Det är enkelt att hitta namnutrymmen med typsnittssökning. Exempel:
+Det är enkelt att hitta namnutrymmen med typsnittssökning. Till exempel,
 
 * Typ `tut`
 * Välj `Tutorial`
@@ -111,7 +111,7 @@ Det är enkelt att hitta namnutrymmen med typsnittssökning. Exempel:
 
 Om du vill att en community-medlem (eller grupp av medlemmar) ska kunna uppleva webbplatsen som community-hanterare använder du typsnittssökningen och väljer medlemmens eller gruppens namn bland alternativen i listrutan.
 
-Exempel:
+Till exempel,
 
 * Typ `q`
 * Välj [Quinn Harper](/help/communities/enablement-setup.md#publishcreateenablementmembers)
