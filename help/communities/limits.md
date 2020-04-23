@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: d855aac2-f34d-402f-9dc3-c7ad494b45f2
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: e4456e80059479ca874681e20f8546f29ac92597
 
 ---
 
@@ -29,22 +29,22 @@ Med hjälp av medlemskonsolen kan bidragsgränser tas bort proaktivt för en med
 
 ## Konfiguration av AEM Communities User Generated Content Contribution Limits {#aem-communities-user-generated-content-contribution-limits-configuration}
 
-Den här OSGi-konfigurationen
+Den här OSGi-konfigurationen:
 
-* Definierar karaktärerna för bidragsgränserna (antal tjänster inom en tidsperiod).
-* Identifierar vem medlemmen kan meddela när gränsen har nåtts
-* Identifierar domäner som aldrig behöver begränsas
+* Definierar karaktärerna för bidragsgränserna (antalet tjänster inom en tidsperiod).
+* Identifierar vem medlemmen kan meddela när gränsen har nåtts.
+* Identifierar domäner som aldrig behöver begränsas.
 
 Så här når du OSGi-konfigurationen:
 
-* På den primära utgivaren
-* Logga in med administratörsbehörighet
-* Åtkomst till [webbkonsolen](../../help/sites-deploying/configuring-osgi.md)
+* På den primära utgivaren:
+* Logga in med administratörsbehörighet.
+* Gå till [webbkonsolen](../../help/sites-deploying/configuring-osgi.md).
 
    * Till exempel [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
-* Sök `AEM Communities User Generated Content Contribution Limits Configuration`
-* Markera redigeringsikonen
+* Hitta `AEM Communities User Generated Content Contribution Limits Configuration`.
+* Välj redigeringsikonen.
 
 ![chlimage_1-127](assets/chlimage_1-127.png)
 
