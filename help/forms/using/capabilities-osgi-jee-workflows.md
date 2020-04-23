@@ -9,7 +9,7 @@ topic-tags: publish
 discoiquuid: 89bcc76d-122f-4a3f-b857-16e5376e1624
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0a2d53aa3eab4eb4ec58fa9b28bef675715b1d09
+source-git-commit: 182043b43e9fdb2e7e6de982bceb87b43f36a3ba
 
 ---
 
@@ -79,12 +79,17 @@ Du kan använda AEM Inbox för att köra och övervaka formulärbaserade AEM-arb
   </tr>
   <tr>
    <td>Köer (delad personlig kö, göra anspråk på uppgifter från kö)</td>
-   <td>Stöds ej</td>
+   <td>Stöds</td>
    <td>Stöds</td>
   </tr>
   <tr>
    <td>Underrättelse utanför kontoret</td>
-   <td>Stöds ej</td>
+   <td>Stöds</td>
+   <td>Stöds</td>
+  </tr>
+    <tr>
+   <td>Anpassa gränssnittselement</td>
+   <td>Stöds</td>
    <td>Stöds</td>
   </tr>
   <tr>
@@ -303,6 +308,11 @@ Formulärbaserade AEM-arbetsflöden i OSGi- och AEM Forms JEE-arbetsflöden (AEM
   </tr>
   <tr>
    <td>Gateways, INGA VÄNTNINGAR </td>
+   <td>Stöds</td>
+   <td>Stöds</td>
+  </tr>
+   <tr>
+   <td>Variabler som lagrar data </td>
    <td>Stöds</td>
    <td>Stöds</td>
   </tr>
