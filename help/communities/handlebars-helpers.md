@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 8b6c1697-d693-41f4-8337-f41658465107
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 0270cee1970b5b092361c2f1ad4a117795465311
 
 ---
 
@@ -27,11 +27,12 @@ Implementeringen innehåller en definition på klientsidan och en serversida. De
 
 De anpassade SCF-hjälprarna som levereras med AEM Communities definieras i [klientbiblioteket](../../help/sites-developing/clientlibs.md):
 
-* /etc/clientlibs/social/commons/scf/helpers.js
+* `/etc/clientlibs/social/commons/scf/helpers.js`
 
 >[!NOTE]
 >
 >Installera det [senaste funktionspaketet](deploy-communities.md#latestfeaturepack)för communityn.
+
 
 ## Förkortning {#abbreviate}
 
@@ -45,21 +46,21 @@ Om safeString är true är den returnerade strängen SafeString.
 
 ### Parametrar {#parameters}
 
-* **kontext**:Sträng
+* **kontext**: Sträng
 
-   (valfritt) Standard är den tomma strängen
+   (Valfritt) Standard är den tomma strängen
 
 * **maxLength**: Nummer
 
-   (valfritt) Standard är längden på kontexten.
+   (Valfritt) Standard är längden på kontexten.
 
 * **maxWords**: Nummer
 
-   (valfritt) Standard är antalet ord i den trimmade strängen.
+   (Valfritt) Standard är antalet ord i den trimmade strängen.
 
-* **safeString**:Boolean
+* **safeString**: Boolean
 
-   (valfritt) Returnerar en Handlebars.SafeString() om true. Standardvärdet är false.
+   (Valfritt) Returnerar en Handlebars.SafeString() om true. Standardvärdet är false.
 
 ### Exempel {#examples}
 
@@ -93,25 +94,25 @@ Ett hjälpmedel för att lägga till två intervall under en div, ett för den f
 
 ### Parametrar {#parameters-1}
 
-* **kontext**:Sträng
+* **kontext**: Sträng
 
-   (valfritt) Default är den tomma strängen.
+   (Valfritt) Standard är den tomma strängen.
 
 * **numChars**: Nummer
 
-   (valfritt) Det antal tecken som ska visas när den fullständiga texten inte visas. Standardvärdet är 100.
+   (Valfritt) Det antal tecken som ska visas när inte den fullständiga texten visas. Standardvärdet är 100.
 
-* **moreText**:Sträng
+* **moreText**: Sträng
 
-   (valfritt) Texten som ska visas anger att det finns mer text att visa. Standardvärdet är &quot;more&quot;.
+   (Valfritt) Den text som ska visas anger att det finns mer text att visa. Standardvärdet är &quot;more&quot;.
 
-* **ellipsesText**:Sträng
+* **ellipsesText**: Sträng
 
-   (valfritt) Den text som ska visas som indikation på dold text. Standardvärdet är &quot;..&quot;.
+   (Valfritt) Den text som ska visas anger att det finns dold text. Standardvärdet är &quot;..&quot;.
 
-* **safeString**:Boolean
+* **safeString**: Boolean
 
-   (valfritt) Ett booleskt värde som anger om Handlebars.SafeString() ska användas eller inte innan resultatet returneras. Standardvärdet är false.
+   (Valfritt) Ett booleskt värde som anger om Handlebars.SafeString() ska användas eller inte innan resultatet returneras. Standardvärdet är false.
 
 ### Exempel {#example}
 
@@ -135,11 +136,11 @@ En hjälp som returnerar en formaterad datumsträng.
 
 * **kontext**: Nummer
 
-   (valfritt) en millisekundförskjutning från 1 januari 1970 (epok). Standard är aktuellt datum.
+   (Valfritt) en millisekundförskjutning från 1 januari 1970 (epok). Standard är aktuellt datum.
 
-* **format**:Sträng
+* **format**: Sträng
 
-   (valfritt) Datumformatet som ska användas. Standardvärdet är &quot;YYY-MM-DDTHH:mm:ss.sssZ&quot; och resultatet visas som &quot;2015-03-18T18:17:13-07:00&quot;
+   (Valfritt) Datumformatet som ska användas. Standardvärdet är &quot;YYY-MM-DDTHH:mm:ss.sssZ&quot; och resultatet visas som &quot;2015-03-18T18:17:13-07:00&quot;
 
 ### Exempel {#examples-1}
 
@@ -161,13 +162,13 @@ En hjälpfunktion som returnerar innehåll beroende på ett likhetsvillkor.
 
 ### Parametrar {#parameters-3}
 
-* **lvalue**:Sträng
+* **lvalue**: Sträng
 
-   Det vänstra värdet som ska jämföras
+   Värdet till vänster som ska jämföras.
 
-* **värde**:Sträng
+* **värde**: Sträng
 
-   Högervärdet som ska jämföras
+   Högervärdet som ska jämföras.
 
 ### Exempel {#example-1}
 
@@ -185,13 +186,13 @@ En blockhjälp som testar det aktuella värdet för [WCM-läget](https://helpx.a
 
 ### Parametrar {#parameters-4}
 
-* **kontext**:Sträng
+* **kontext**: Sträng
 
-   (valfritt) Den sträng som ska översättas. Obligatoriskt om inget standardvärde har angetts.
+   (Valfritt) Den sträng som ska översättas. Obligatoriskt om inget standardvärde har angetts.
 
-* **läge**:Sträng
+* **läge**: Sträng
 
-   (valfritt) En kommaseparerad lista med [WCM-lägen](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html) som ska testas om de anges.
+   (Valfritt) En kommaavgränsad lista över [WCM-lägen](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html) som ska testas om de anges.
 
 ### Exempel {#example-2}
 
@@ -211,17 +212,17 @@ Se även [Internationalisering av strängar i JavaScript-kod](../../help/sites-d
 
 ### Parametrar {#parameters-5}
 
-* **kontext**:Sträng
+* **kontext**: Sträng
 
-   (valfritt) Den sträng som ska översättas. Obligatoriskt om inget standardvärde har angetts.
+   (Valfritt) Den sträng som ska översättas. Obligatoriskt om inget standardvärde har angetts.
 
-* **standard**:Sträng
+* **standard**: Sträng
 
-   (valfritt) Standardsträngen som ska översättas. Obligatoriskt om ingen kontext har angetts.
+   (Valfritt) Standardsträngen som ska översättas. Obligatoriskt om ingen kontext har angetts.
 
-* **kommentar**:Sträng
+* **kommentar**: Sträng
 
-   (valfritt) Ett översättningstips
+   (Valfritt) Ett översättningstips
 
 ### Exempel {#example-3}
 
@@ -244,27 +245,27 @@ Den här hjälpen, som bara är lämplig på serversidan, innehåller funktioner
 
 * **kontext**: Sträng eller objekt
 
-   (valfritt, såvida det inte finns en relativ sökväg)
+   (Valfritt, såvida du inte anger en relativ sökväg)
 
-   använd `this`för att skicka aktuell kontext
+   Använd `this` för att skicka den aktuella kontexten.
 
-   använd `this.id` för att hämta resursen vid `id` återgivning av begärd resourceType
+   Används `this.id` för att hämta resursen vid återgivning `id` av begärd resourceType.
 
-* **resourceType**:Sträng
+* **resourceType**: Sträng
 
-   (valfritt) resurstypen blir standard för resurstypen från kontext
+   (Valfritt) Resurstypen får som standard resurstypen från kontexten.
 
-* **mall**:Sträng
+* **mall**: Sträng
 
-   sökväg till komponentskript
+   Sökväg till komponentskript.
 
-* **sökväg**:Sträng
+* **sökväg**: Sträng
 
-   (obligatoriskt) Sökvägen till resursen. Om sökvägen är relativ måste en kontext anges, annars returneras den tomma strängen.
+   (Obligatoriskt) Sökvägen till resursen. Om sökvägen är relativ måste en kontext anges, annars returneras den tomma strängen.
 
-* **authoringDisabled**:Boolean
+* **authoringDisabled**: Boolean
 
-   (valfritt) Standardvärdet är false. Endast för internt bruk.
+   (Valfritt) Standardvärdet är false. Endast för internt bruk.
 
 ### Exempel {#example-4}
 
@@ -272,7 +273,7 @@ Den här hjälpen, som bara är lämplig på serversidan, innehåller funktioner
 {{include this.id path="comments" resourceType="social/commons/components/hbs/comments"}}
 ```
 
-Det här kommer att innehålla en ny kommentarkomponent på `this.id` + /comments
+Det här innehåller en ny kommentarkomponent på `this.id` + /comments.
 
 ## IncludeClientLib {#includeclientlib}
 
@@ -282,21 +283,21 @@ Den här hjälpen, som bara är lämplig på serversidan, innehåller funktioner
 
 ### Parametrar {#parameters-7}
 
-* **kategorier**:Sträng
+* **kategorier**: Sträng
 
-   (valfritt) En lista med kommaavgränsade klientbibliotekskategorier. Detta inkluderar alla JavaScript- och CSS-bibliotek för de angivna kategorierna. Temanamnet extraheras från begäran.
+   (Valfritt) En lista med kommaavgränsade klientbibliotekskategorier. Detta inkluderar alla JavaScript- och CSS-bibliotek för de angivna kategorierna. Temanamnet extraheras från begäran.
 
-* **tema**:Sträng
+* **tema**: Sträng
 
-   (valfritt) En lista med kommaavgränsade klientbibliotekskategorier. Detta inkluderar alla temarelaterade bibliotek (både CSS och JS) för de angivna kategorierna. Temanamnet extraheras från begäran.
+   (Valfritt) En lista med kommaavgränsade klientbibliotekskategorier. Detta inkluderar alla temarelaterade bibliotek (både CSS och JS) för de angivna kategorierna. Temanamnet extraheras från begäran.
 
-* **js**:Sträng
+* **js**: Sträng
 
-   (valfritt) En lista med kommaavgränsade klientbibliotekskategorier. Detta inkluderar alla JavaScript-bibliotek för de angivna kategorierna.
+   (Valfritt) En lista med kommaavgränsade klientbibliotekskategorier. Detta inkluderar alla JavaScript-bibliotek för de angivna kategorierna.
 
-* **css**:Sträng
+* **css**: Sträng
 
-   (valfritt) En lista med kommaavgränsade klientbibliotekskategorier. Detta inkluderar alla CSS-bibliotek för de angivna kategorierna.
+   (Valfritt) En lista med kommaavgränsade klientbibliotekskategorier. Detta inkluderar alla CSS-bibliotek för de angivna kategorierna.
 
 ### Exempel {#examples-2}
 
@@ -342,7 +343,7 @@ Den här hjälpen, som bara är lämplig på serversidan, innehåller funktioner
 
 En hjälpfunktion som visar hur mycket tid som har gått upp till en brytpunkt, efter vilken ett vanligt datumformat visas.
 
-Exempel:
+Till exempel:
 
 * För 12 timmar sedan
 * 7 dagar sedan
@@ -383,7 +384,7 @@ OBS! det här är inte en validerare och ska inte användas för att skriva attr
 
 * **kontext**: object
 
-   den HTML som ska kodas
+   Den HTML som ska kodas.
 
 ### Exempel {#example-6}
 
@@ -401,7 +402,7 @@ OBS! det här är inte en validerare och ska inte användas för att skriva åtg
 
 * **kontext**: Objekt
 
-   Den HTML som ska kodas
+   Den HTML som ska kodas.
 
 ### Exempel {#example-7}
 
@@ -419,7 +420,7 @@ OBS! detta är inte en validerare och ska inte användas för att skriva till go
 
 * **kontext**: Objekt
 
-   Den HTML som ska kodas
+   Den HTML som ska kodas.
 
 ### Exempel {#example-8}
 
@@ -437,7 +438,7 @@ OBS! detta kan returnera en tom sträng
 
 * **kontext**: Objekt
 
-   Den URL som ska saneras
+   Den URL som ska saneras.
 
 ### Exempel {#example-9}
 
@@ -449,7 +450,7 @@ OBS! detta kan returnera en tom sträng
 
 En snabb översikt över hjälpfunktioner i [Handlebars.js-dokumentationen](https://handlebarsjs.com/expressions.html):
 
-* Ett Handlebars-anrop är en enkel identifierare (hjälpens *namn *) följt av noll eller flera blankstegsavgränsade parametrar.
+* Ett hjälpanrop till en handledare är en enkel identifierare (hjälpens *namn* ), följt av noll eller flera blankstegsavgränsade parametrar.
 * Parametrar kan vara ett enkelt String-, number-, boolean- eller JSON-objekt, samt en valfri sekvens av nyckelvärdepar (hash-argument) som den sista parametern/de sista.
 * Nycklarna i hash-argumenten måste vara enkla identifierare.
 * Värdena i hash-argument är Handlebars-uttryck: enkla identifierare, sökvägar eller strängar.
@@ -523,7 +524,7 @@ Anpassade hjälpprogram måste implementeras både på serversidan och på klien
 
 För att implementera och registrera en anpassad SCF-hjälp på serversidan behöver du bara implementera Java-gränssnittet [TemplateHelper](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/handlebars/api/TemplateHelper.html), göra det till en [OSGi-tjänst](../../help/sites-developing/the-basics.md#osgi) och installera den som en del av ett OSGi-paket.
 
-Exempel:
+Till exempel:
 
 ### FooTextHelper.java {#footexthelper-java}
 
@@ -567,10 +568,11 @@ public class FooTextHelper implements TemplateHelper<String>{
 >
 >Komponenten återges på nytt på klientsidan för den inloggade användaren, och om hjälpen på klientsidan inte hittas försvinner komponenten.
 
+
 ### Anpassade hjälpmedel på klientsidan {#client-side-custom-helpers}
 
 Hjälpprogram på klientsidan är Handlebars-skript som registreras genom anrop `Handlebars.registerHelper()`.
-Exempel:
+Till exempel:
 
 ### custom-helpers.js {#custom-helpers-js}
 
@@ -590,9 +592,9 @@ function(Handlebars, SCF, $CQ) {
 De anpassade hjälpfilerna på klientsidan måste läggas till i ett anpassat klientbibliotek.
 Klientlib måste:
 
-* Inkludera ett beroende på `cq.social.scf`
-* Läs in efter att handtag har lästs in
-* Bli [inkluderad](clientlibs.md)
+* Inkludera ett beroende `cq.social.scf`.
+* Läs in när Hanterarfält har lästs in.
+* Bli [inkluderad](clientlibs.md).
 
 Obs! SCF-hjälprarna definieras i `/etc/clientlibs/social/commons/scf/helpers.js`.
 
