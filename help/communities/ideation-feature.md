@@ -11,26 +11,26 @@ content-type: reference
 discoiquuid: a3f5a21d-2df6-4663-a1ea-3a067c46f860
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 ---
 
 
-# Idéfunktion{#ideation-feature}
+# Idéfunktion {#ideation-feature}
 
 ## Introduktion {#introduction}
 
-Idéfunktionen är ett område där besökare på den inloggade webbplatsen (community-medlemmar) kan publicera i publiceringsmiljön för att:
+Idéfunktionen är ett område där besökare (community-medlemmar) som är inloggade kan publicera i publiceringsmiljön:
 
-* skapa idéer att dela med communityn
-* visa och kommentera idéer
-* följa en idé
-* rösta om en idé
+* Skapa idéer att dela med communityn.
+* Visa och kommentera idéer.
+* Följ en idé.
+* Rösta på en idé.
 
-Detta avsnitt i dokumentationen beskriver
+I det här avsnittet av dokumentationen beskrivs:
 
-* lägga till designfunktionen på en AEM-webbplats
-* konfigurationsinställningar för Ideation-komponenten
+* Lägga till designfunktionen på en AEM-webbplats.
+* Konfigurationsinställningar för Ideation-komponenten.
 
 ### Lägga till en idé på en sida {#adding-a-ideation-to-a-page}
 
@@ -42,7 +42,7 @@ och dra den till rätt plats på en sida där idén ska visas.
 
 Mer information finns i Grunderna för [communitykomponenter](/help/communities/basics.md).
 
-När de [nödvändiga klientbiblioteken](/help/communities/ideation.md#essentials-for-client-side) inkluderas visas `Ideation`komponenten så här:
+När de [nödvändiga klientbiblioteken](/help/communities/ideation.md#essentials-for-client-side) inkluderas visas `Ideation` komponenten så här:
 
 ![chlimage_1-71](assets/chlimage_1-71.png)
 
@@ -54,7 +54,7 @@ Markera den monterade `Ideation` komponent som du vill öppna och välj den `Con
 
 #### Fliken Inställningar {#settings-tab}
 
-Under fliken **Settings **anger du inställningar för idéer och kommentarer:
+Ange inställningar för idéer och kommentarer på fliken **[!UICONTROL Inställningar]** :
 
 * **Tillåt miniatyrbild för bifogad fil**
 * **Maximal storlek på miniatyrbild**
@@ -88,7 +88,7 @@ Under fliken **Settings **anger du inställningar för idéer och kommentarer:
 
 * **Tillåt taggning**
 
-   Om det här alternativet är markerat kan medlemmar lägga till taggetiketter i sina inlägg (se fliken **Taggfält** ). Standard är avmarkerat.
+   Om det här alternativet är markerat kan medlemmar lägga till taggetiketter i sina inlägg (se fliken **[!UICONTROL Taggfält]** ). Standard är avmarkerat.
 
 * **Tillåt filöverföringar**
 
@@ -100,11 +100,11 @@ Under fliken **Settings **anger du inställningar för idéer och kommentarer:
 
 * **Tillåtna filtyper**
 
-   Relevant endast om `Allow File Uploads` är markerat. En kommaavgränsad lista med filtillägg med&quot;punktavgränsaren&quot;. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp har angetts kan de som inte har angetts inte överföras. Standard är inte angivet så att** **alla filtyper tillåts.
+   Relevant endast om `Allow File Uploads` är markerat. En kommaavgränsad lista med filtillägg med&quot;punktavgränsaren&quot;. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp har angetts kan de som inte har angetts inte överföras. Ingen standard har angetts så att alla filtyper tillåts.
 
 * **Maximal filstorlek för bifogad bild**
 
-   Endast relevant om Tillåt filöverföringar är markerat. Maximalt antal byte som en överförd bildfil kan ha. Standardvärdet är 2097152** **(2 MB).
+   Endast relevant om Tillåt filöverföringar är markerat. Maximalt antal byte som en överförd bildfil kan ha. Standardvärdet är 2097152 (2 MB).
 
 * **Tillåt svar**
 
@@ -146,7 +146,7 @@ Under fliken **Settings **anger du inställningar för idéer och kommentarer:
 
 #### Fliken Användarmoderering {#user-moderation-tab}
 
-Under fliken **Användarmoderering **anger du hur publicerade idéer och kommentarer (användargenererat innehåll) ska hanteras. Mer information finns i [Hantera användargenererat innehåll](/help/communities/moderate-ugc.md).
+På fliken **[!UICONTROL Användarmoderering]** anger du hur publicerade idéer och kommentarer (användargenererat innehåll) ska hanteras. Mer information finns i [Hantera användargenererat innehåll](/help/communities/moderate-ugc.md).
 
 * **Neka inlägg**
 
@@ -178,19 +178,19 @@ Under fliken **Användarmoderering **anger du hur publicerade idéer och komment
 
 #### Fliken Taggfält {#tag-field-tab}
 
-Under fliken **Taggfält** är de taggar som kan användas, om de tillåts under fliken **Inställningar **begränsade enligt de namnutrymmen som har valts.
+Under fliken **[!UICONTROL Tagg]** begränsas de taggar som kan användas, om de tillåts under fliken **[!UICONTROL Inställningar]** , enligt de namnutrymmen som valts.
 
 * **Tillåtna namnutrymmen**
 
-   Relevant om `Allow Tagging` är markerat under fliken **Inställningar** . De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som kontrolleras. Listan med namnutrymmen innehåller &quot;Standardtaggar&quot; (standardnamnutrymmet) och &quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
+   Relevant om `Allow Tagging` är markerat under fliken **[!UICONTROL Inställningar]** . De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som kontrolleras. Listan med namnutrymmen innehåller &quot;Standardtaggar&quot; (standardnamnutrymmet) och &quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
 
 * **Förslagsgräns**
 
-   Ange antalet taggar som ska visas som ett förslag till medlemmens inlägg i forumet. Värdet **-**1 betyder ingen gräns. Standardvärdet är 0.
+   Ange antalet taggar som ska visas som ett förslag till medlemmens inlägg i forumet. Värdet **-1** betyder ingen gräns. Standardvärdet är 0.
 
 #### Fliken Sorteringsinställningar {#sort-settings-tab}
 
-Under fliken **Sorteringsinställningar **anger du hur de bokförda kommentarerna ska sorteras när de visas.
+På fliken **[!UICONTROL Sorteringsinställningar]** anger du hur de skickade kommentarerna ska sorteras när de visas.
 
 * **Sortera efter**
 
