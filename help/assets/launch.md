@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: f4051767-182e-4cfd-9dfc-8f516378e0b6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
+source-git-commit: e8f97f6164a5021609917b99feb0608bcea59553
 
 ---
 
@@ -24,7 +24,7 @@ Integrationen innebär att ni kan spåra användningen av dynamiska medievyer p�
 
 Läs [Adobe-tillägget](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/overview.html) i användarhandboken för Experience Platform om du vill veta mer om tillägg.
 
-**** Vem bör läsa denna dokumentation: Webbplatsadministratörer, utvecklare på AEM-plattformen och administratörer i Operations.
+**Vem bör läsa denna dokumentation:** Webbplatsadministratörer, utvecklare på AEM-plattformen och driftadministratörer.
 
 ### Begränsningar i integreringen {#limitations-of-the-integration}
 
@@ -144,7 +144,7 @@ Se [Lägga till dynamiska medieresurser på sidor med Adobe Sites](https://helpx
 
 Kunder som inte använder AEM Sites eller bäddar in Dynamic Media-visningsprogram på webbsidor utanför AEM Sites, eller båda, kan fortfarande använda Adobe Launch-integreringen.
 
-Du måste slutföra konfigurationsstegen från [Konfigurera Adobe Analytics](#configuringadobeanalytics) och [konfigurera Adobe Launch](#configuringadobelaunch) . AEM-relaterade konfigurationssteg behövs dock inte.
+Du måste slutföra konfigurationsstegen i avsnitten [Konfigurera Adobe Analytics](#configuringadobeanalytics) och [Konfigurera Adobe Launch](#configuringadobelaunch). AEM-relaterade konfigurationssteg behövs dock inte.
 
 Om konfigurationen är korrekt kan du lägga till stöd för Adobe Launch på en webbsida med ett dynamiskt mediavisningsprogram.
 
@@ -185,11 +185,11 @@ Observera att om du aktiverar det här alternativet *utan* att ha Adobe Media An
 
 ### Om dataelement i tillägget Dynamiska medievisningsprogram {#about-data-elements-in-the-dynamic-media-viewers-extension}
 
-Den enda dataelementtypen som tillägget för dynamiska medievisningsprogram tillhandahåller är **[!UICONTROL visningsprogramhändelse]** från listrutan **[!UICONTROL Dataelementtyp]** .
+The only Data Element type that the Dynamic Media Viewers extension provides is **[!UICONTROL Viewer Event]** from the **[!UICONTROL Data Element Type]** drop-down list.
 
 När du väljer det här alternativet återges ett formulär med två fält i dataelementsredigeraren:
 
-* **[!UICONTROL Datatypen]** för händelsen DM-visningsprogram - en nedrullningsbar lista som identifierar alla visningsprogramhändelser som stöds av tillägget Dynamic Media Viewer och som har argument, plus ett särskilt **[!UICONTROL COMMON]** -objekt. Ett **[!UICONTROL COMMON]** -objekt representerar en lista med händelseparametrar som är gemensamma för alla typer av händelser som skickas av visningsprogrammen.
+* **[!UICONTROL Datatypen]** för händelsen DM-visningsprogram - en nedrullningsbar lista som identifierar alla visningsprogramhändelser som stöds av tillägget Dynamic Media Viewer och som har argument, plus ett särskilt **[!UICONTROL COMMON]** -objekt. A **[!UICONTROL COMMON]** item represents a list of event parameters that are common to all type of events sent by the viewers.
 * **[!UICONTROL Spårningsparameter]** - ett argument för den valda Dynamic Media Viewer-händelsen.
 
 ![image2019-7-22_12-5-46](assets/image2019-7-22_12-5-46.png)
@@ -198,9 +198,9 @@ I referenshandboken [för](https://marketing.adobe.com/resources/help/en_US/s7/v
 
 Nu ska vi titta på livscykeln för Dynamic Media Viewer *Data Element*. Värdet för det dataelementet fylls i efter att motsvarande Dynamic Media Viewer-händelse inträffar på sidan. Om dataelementet till exempel pekar på **[!UICONTROL LOAD]** -händelsen och dess &quot;asset&quot;-argument, kommer värdet för det dataelementet att få giltiga data när visningsprogrammet kör LOAD-händelsen för första gången. Om dataelementet pekar på **[!UICONTROL ZOOM]** -händelsen och dess &quot;scale&quot;-argument, förblir värdet för det dataelementet tomt tills användaren skickar en **[!UICONTROL ZOOM]** -händelse för första gången.
 
-På samma sätt uppdateras värdena för dataelement automatiskt när användaren skickar en motsvarande händelse på sidan. Värdeuppdateringen sker även om den särskilda händelsen inte har angetts i regelkonfigurationen. Om dataelementet **[!UICONTROL ZoomScale]** till exempel definieras för parametern &quot;scale&quot; i ZOOM-händelsen, men den enda regeln i regelkonfigurationen aktiveras av händelsen **[!UICONTROL LOAD]** , uppdateras värdet för **[!UICONTROL ZoomScale]** fortfarande varje gång en användare kör zoomning i visningsprogrammet.
+På samma sätt uppdateras värdena för dataelement automatiskt när visningsprogrammet skickar en motsvarande händelse på sidan. Värdeuppdateringen sker även om den särskilda händelsen inte har angetts i regelkonfigurationen. For example, if Data Element **[!UICONTROL ZoomScale]** is defined for &quot;scale&quot; parameter of the ZOOM event, but the only rule present in the Rule configuration is triggered by the **[!UICONTROL LOAD]** event, the value of **[!UICONTROL ZoomScale]** is still updated every time a user runs zoom inside the viewer.
 
-Alla Dynamic Media Viewer har en unik identifierare på webbsidan. Dataelementet håller reda på själva värdet och det visningsprogram som har fyllt i värdet. Det innebär att om det finns flera visningsprogram på samma sida, och det finns ett **[!UICONTROL AssetName]** -dataelement som pekar på **[!UICONTROL LOAD]** -händelsen och dess &quot;asset&quot;-argument, upprätthåller **[!UICONTROL AssetName]** -dataelementet en samling med resursnamn som associeras med varje visningsprogram som läses in på sidan.
+Alla Dynamic Media-visningsprogram har en unik identifierare på webbsidan. Dataelementet håller reda på själva värdet och det visningsprogram som har fyllt i värdet. This means that if there are several viewers on the same page, and there is an **[!UICONTROL AssetName]** Data Element that points to the **[!UICONTROL LOAD]** event and its &quot;asset&quot; argument, the **[!UICONTROL AssetName]** Data Element maintains a collection of asset names that are associated with each viewer loaded on the page.
 
 Det exakta värdet som returneras av dataelementet beror på sammanhanget. Om dataelementet begärs i en regel som utlöstes av en Dynamic Media Viewer-händelse, returneras Data Element-värdet för det visningsprogram som initierade regeln. Om dataelementet begärs i en regel som utlöstes av en händelse från något annat Adobe Launch-tillägg, är värdet för dataelementet värdet från det visningsprogram som var det sista som uppdaterade det här dataelementet.
 
@@ -239,7 +239,7 @@ I regelredigeraren lägger tillägget till nya konfigurationsalternativ för hä
 
 #### Om händelseredigeraren {#about-the-events-editor}
 
-I händelseredigeraren lägger tillägget för dynamiska medievyer till en ny **[!UICONTROL händelsetyp]** som kallas **[!UICONTROL visningsprogramhändelse]**.
+In the Event editor, the Dynamic Media Viewers extension adds a new **[!UICONTROL Event Type]** called **[!UICONTROL Viewer Event]**.
 
 När du väljer det här alternativet återger händelseredigeraren listrutan **[!UICONTROL Dynamic Media Viewer-händelser]** med alla tillgängliga händelser som stöds av visningsprogram för Dynamic Media.
 
@@ -256,7 +256,7 @@ Det enklaste sättet att göra detta är att slutföra följande tvåstegsproces
 
 ![image2019-7-10_20-41-52](assets/image2019-7-10_20-41-52.png)
 
-Det är dock möjligt att använda en alternativ metod och åsidosätta skapande av dataelement. Du kan direkt referera till ett argument från en Dynamic Media Viewer-händelse genom att ange det fullständiga, kvalificerade namnet på händelseargumentet i **[!UICONTROL värdeindatafältet]** för variabeltilldelningen i Analytics, omgivet av procenttecken (%). Exempel:
+Det är dock möjligt att använda en alternativ metod och åsidosätta skapande av dataelement. You can directly reference an argument from a Dynamic Media Viewer event by entering the fully qualified name of the event argument in the **[!UICONTROL value]** input field of the Analytics variable assignment, surrounded by percent (%) signs. Till exempel,
 
 `%event.detail.dm.LOAD.asset%`
 
@@ -264,7 +264,7 @@ Det är dock möjligt att använda en alternativ metod och åsidosätta skapande
 
 Observera att det finns en viktig skillnad mellan att använda dataelement och argumentreferens för direkt händelse. För dataelement spelar det ingen roll vilken händelse som utlöser åtgärden Ange variabler. Den händelse som utlöser regeln kan vara orelaterad till Dynamic Viewer (som ett musklick på webbsidan från tillägget Core). Men när du använder en referens för ett direkt argument är det viktigt att se till att händelsen som utlöser regeln motsvarar händelseargumentet som den refererar till.
 
-Om du till exempel refererar `%event.detail.dm.LOAD.asset%` returneras rätt resursnamn om regeln aktiveras av händelsen **[!UICONTROL LOAD]** för tillägget Dynamic Media Viewer. Det returnerar dock ett tomt värde för en annan händelse.
+For example, referencing `%event.detail.dm.LOAD.asset%` returns the correct asset name if the Rule is triggered by the **[!UICONTROL LOAD]** event of the Dynamic Media Viewer extension. Det returnerar dock ett tomt värde för alla andra händelser.
 
 I följande tabell visas Dynamic Media Viewer-händelser och deras argument som stöds:
 
@@ -401,7 +401,7 @@ I följande tabell visas Dynamic Media Viewer-händelser och deras argument som 
 
 **INNAN DU BÖRJAR**
 
-Om du inte redan har gjort det rekommenderar Adobe att du noggrant granskar all dokumentation innan det här avsnittet så att du förstår den fullständiga integreringen.
+Om du inte redan har gjort det rekommenderar Adobe att du noggrant granskar all dokumentation före det här avsnittet så att du förstår den fullständiga integreringen.
 
 I det här avsnittet förklaras de konfigurationssteg som krävs för att integrera dynamiska medievyer med Adobe Analytics och Adobe Analytics for Audio and Video. Även om det går att använda tillägget Dynamic Media Viewer för andra syften i Adobe Launch, omfattas sådana scenarier inte av den här dokumentationen.
 
@@ -437,7 +437,7 @@ Se även [implementeringshandboken](https://docs.adobe.com/content/help/en/analy
 
 ### Välja en rapportsvit {#selecting-a-report-suite}
 
-1. I det övre högra hörnet av Adobe Analytics-sidan, till höger om fältet **[!UICONTROL Sökrapporter]** , väljer du rätt rapportsvit i listrutan. Om det finns flera rapportsviter tillgängliga och du är osäker på vilken du ska använda kontaktar du Adobe Analytics-administratören som kan hjälpa dig att välja vilken rapportsserie som ska användas.
+1. Near the upper-right corner of the Adobe Analytics page, to the right of the **[!UICONTROL Search Reports]** field, select the correct report suite from the drop-down list. Om det finns flera rapportsviter och du är osäker på vilken du ska använda kontaktar du Adobe Analytics-administratören, som kan hjälpa dig att välja rätt rapportsvit.
 
    I bilden nedan skapade en användare en rapportsserie med namnet *DynamicMediaViewersExtensionDoc* och markerade den i listrutan. Rapportsvitens namn är avsett endast som illustration. namnet på den rapportsvit som du väljer skiljer sig åt.
 
@@ -480,7 +480,7 @@ Se även [implementeringshandboken](https://docs.adobe.com/content/help/en/analy
 
    Rapporten för **[!UICONTROL visningsprogramresursvariabeln (prop 30)]** finns till exempel på menyn Rapporter under **[!UICONTROL Anpassad trafik > Anpassad trafik 21-30 > Visningsprogramresurs (prop 30)]**.
 
-   Om du besöker den här rapporten direkt efter att **[!UICONTROL visningsprogramresursen (prop 30)]** har skapats visas inga data. som förväntas vid den här tidpunkten i integreringen.
+   Visiting this report right after **[!UICONTROL Viewer asset (prop 30)]** creation shows no data; that is expected at this point in the integration.
 
    ![image2019-6-26_23-12-49](assets/image2019-6-26_23-12-49.png)
 
@@ -490,7 +490,7 @@ När du har konfigurerat Adobe Launch kommer följande att konfigureras för int
 
 * Skapandet av en ny egenskap som håller ihop alla dina konfigurationer.
 * Installation och installation av tillägg. Klientkoden för alla tillägg som är installerade i egenskapen kompileras tillsammans till ett bibliotek. Det här biblioteket används av webbsidan senare.
-* Konfiguration av dataelement och regler. Den här konfigurationen definierar vilka data som ska hämtas från de dynamiska medievyn, när spårningslogiken ska utlösas och var data ska skickas i Adobe Analytics.
+* Konfiguration av dataelement och regler. Den här konfigurationen definierar vilka data som ska hämtas från de dynamiska medievyn, när spårningslogiken ska utlösas och var visningsprogrammets data ska skickas i Adobe Analytics.
 * Publicering av biblioteket.
 
 **Så här konfigurerar du Adobe Launch för integreringen**:
@@ -508,7 +508,7 @@ En egenskap i Adobe Launch är en namngiven konfiguration som håller ihop alla 
 Se även [Skapa en egenskap](https://docs.adobe.com/content/help/en/launch/using/implement/configure/create-a-property.html).
 
 1. Klicka på **[!UICONTROL Ny egenskap]** i Adobe Launch.
-1. I dialogrutan **[!UICONTROL Skapa egenskap]** skriver du ett beskrivande namn i fältet **[!UICONTROL Namn]** , till exempel webbplatsens titel. Exempel, `DynamicMediaViewersProp.`
+1. In the **[!UICONTROL Create Property]** dialog box, in the **[!UICONTROL Name]** field, type a descriptive name, such as the title of your website. Till exempel, `DynamicMediaViewersProp.`
 1. Ange webbplatsens domän i fältet **[!UICONTROL Domäner]** .
 1. I listrutan **[!UICONTROL Avancerade alternativ]** aktiverar du **[!UICONTROL Konfigurera för tilläggsutveckling (kan inte ändras senare)]** om det tillägg du vill använda (i det här fallet *Dynamiska medievyer*) inte släpps än.
 
@@ -534,9 +534,9 @@ Se [Tjänsttillägg](https://docs.adobe.com/content/help/en/launch/using/extensi
 
 * (Obligatoriskt) *Adobe Analytics* -tillägg
 
-Om du vill konfigurera det här tillägget behöver du först det Report Suite-ID som finns i Adobe Analytics, under **[!UICONTROL Admin > Report Suite]**, under kolumnrubriken **[!UICONTROL Report Suite-ID]** .
+To configure this extension, you will first need the Report Suite ID found in Adobe Analytics, under **[!UICONTROL Admin > Report Suite]**, under the **[!UICONTROL Report Suite ID]** column header.
 
-(Endast i demonstrationssyfte kommer rapportsvitens-ID för **[!UICONTROL DynamicMediaViewersExtensionDoc]** Report Suite att användas i följande skärmbilder. Detta ID skapades och användes tidigare när du [valde en rapportsvit](#selecting-a-report-suite) .)
+(For demonstration purposes only, the Report Suite ID of the **[!UICONTROL DynamicMediaViewersExtensionDoc]** Report Suite will be used in the following screenshots. Detta ID skapades och användes tidigare när du [valde en rapportsvit](#selecting-a-report-suite).)
 
 ![image2019-7-8_16-45-34](assets/image2019-7-8_16-45-34.png)
 
@@ -603,7 +603,7 @@ Publicering av ett bibliotek omfattar följande två steg:
 
    ![image2019-7-15_14-43-17](assets/image2019-7-15_14-43-17.png)
 
-1. På sidan Skapa nytt bibliotek anger du ett beskrivande namn för det nya biblioteket i fältet **[!UICONTROL Namn]** . Exempel:
+1. På sidan Skapa nytt bibliotek anger du ett beskrivande namn för det nya biblioteket i fältet **[!UICONTROL Namn]** . Till exempel,
 
    *DynamicMediaViewersLib*
 
@@ -619,7 +619,7 @@ Publicering av ett bibliotek omfattar följande två steg:
 
    >[!NOTE]
    >
-   >Nästa gång du gör ändringar i Adobe Launch-konfigurationen går du till fliken **[!UICONTROL Publicering]** under **[!UICONTROL Egenskapskonfigurationen]** och klickar sedan på det bibliotek du skapat tidigare.
+   >The next time you make changes to your Adobe Launch configuration, go to the **[!UICONTROL Publishing]** tab under the **[!UICONTROL Property]** configuration, then click your previously created library.
    >
    >
    >På bibliotekets publiceringsskärm klickar du på **[!UICONTROL Lägg till alla ändrade resurser]** och sedan på **[!UICONTROL Spara och skapa för utveckling]**.
@@ -683,7 +683,7 @@ AEM-konfigurationen består av följande två huvudsteg:
 
    >[!NOTE]
    >
-   >Lämna nu ***sidan Konfiguration*** av **[!UICONTROL Adobe IMS Technical Account]** öppen. Stäng ***inte*** sidan och klicka ***inte*** på Nästa. Du kommer tillbaka till den här sidan senare i stegen.
+   >At this point, ***leave open*** the **[!UICONTROL Adobe IMS Technical Account Configuration]** page; ***do not*** close the page and ***do not*** click Next. Du kommer tillbaka till den här sidan längre fram.
 
    ![2019-07-25_12-52-24](assets/2019-07-25_12-52-24.png)
 
@@ -694,7 +694,7 @@ AEM-konfigurationen består av följande två huvudsteg:
 
    ![2019-07-25_13-04-20](assets/2019-07-25_13-04-20.png)
 
-1. På den andra **[!UICONTROL Skapa en ny integreringssida]** aktiverar du (aktiverar) alternativknappen API **[!UICONTROL för]** Experience Platform Launch. Klicka på **[!UICONTROL Fortsätt]** längst ned till höger på sidan.
+1. På den andra **[!UICONTROL Skapa en ny integreringssida]** aktiverar du (aktiverar) alternativknappen API **[!UICONTROL för]** Experience Platform Launch. In the lower-right corner of the page, click **[!UICONTROL Continue]**.
 
    ![2019-07-25_13-13-54](assets/2019-07-25_13-13-54.png)
 
@@ -706,7 +706,7 @@ AEM-konfigurationen består av följande två huvudsteg:
 
    * Ladda upp filen med den **[!UICONTROL offentliga nyckeln (*.crt) som du laddade ned tidigare i dessa steg i området med certifikat]** för offentlig nyckel.
 
-   * Välj **[!UICONTROL Admin]** under **[!UICONTROL Välj en roll för API]** för Experience Platform Launch.
+   * Under the **[!UICONTROL Select a role for Experience Platform Launch API]** heading, select **[!UICONTROL Admin]**.
 
    * Under **[!UICONTROL Välj en eller flera produktprofiler för API:t]** för Experience Platform Launch väljer du produktprofilen **[!UICONTROL Launch - &lt;ditt_företag_namn>]**.
    ![2019-07-25_13-49-18](assets/2019-07-25_13-49-18.png)
@@ -716,19 +716,19 @@ AEM-konfigurationen består av följande två huvudsteg:
 
    ![2019-07-25_14-16-33](assets/2019-07-25_14-16-33.png)
 
-1. En integreringsinformationssida visas, ****som liknar följande:
+1. En integreringsinformationssida visas, **** som ser ut ungefär så här:
 
    >[!NOTE]
    >
-   >***Lämna den här sidan*** med integreringsinformation öppen. Du behöver olika typer av information från flikarna **[!UICONTROL Översikt]** och **[!UICONTROL JWT]** på bara ett ögonblick.
+   >***Låt den här sidan med integreringsinformation vara öppen.*** You will need various pieces of information from the **[!UICONTROL Overview]** and **[!UICONTROL JWT]** tabs in just a moment.
 
    ![2019-07-25_14-35-30](assets/2019-07-25_14-35-30.png)
 
    Sidan med integreringsinformation.
 
-1. Gå tillbaka till sidan Konfiguration **[!UICONTROL av]** Adobe IMS-konto som du har öppnat tidigare. Klicka på **[!UICONTROL Nästa]** i det övre högra hörnet på sidan för att öppna sidan **[!UICONTROL Konto]** i fönstret Konfiguration **[!UICONTROL av]** Adobe IMS-konto.
+1. Gå tillbaka till sidan Konfiguration **[!UICONTROL av]** Adobe IMS-konto som du lämnade öppen tidigare. Klicka på **[!UICONTROL Nästa]** i det övre högra hörnet på sidan för att öppna sidan **[!UICONTROL Konto]** i fönstret Konfiguration **[!UICONTROL av]** Adobe IMS-konto.
 
-   (Om du stängde sidan av misstag tidigare går du tillbaka till AEM-författaren och klickar sedan på **[!UICONTROL Verktyg > Säkerhet > Adobe IMS-konfigurationer]**. Klicka på **[!UICONTROL Skapa]**. I listrutan **[!UICONTROL Cloud Solution]** väljer du **[!UICONTROL Adobe Launch]**. I listrutan **[!UICONTROL Certifikat]** väljer du namnet på det certifikat som skapats tidigare.)
+   (Om du stängde sidan av misstag tidigare går du tillbaka till AEM-författaren och klickar sedan på **[!UICONTROL Verktyg > Säkerhet > Adobe IMS-konfigurationer]**. Klicka på **[!UICONTROL Skapa]**. I listrutan **[!UICONTROL Cloud Solution]** väljer du **[!UICONTROL Adobe Launch]**. In the **[!UICONTROL Certificate]** drop-down list, select the name of the previously created certificate.)
 
    ![2019-07-25_20-57-50](assets/2019-07-25_20-57-50.png)
 
@@ -744,7 +744,7 @@ AEM-konfigurationen består av följande två huvudsteg:
 
    * **[!UICONTROL Titel]** - Ange en beskrivande kontotitel.
    * **[!UICONTROL Auktoriseringsserver]** - Återgå till sidan Integreringsinformation som du öppnade tidigare. Klicka på fliken **[!UICONTROL JWT]** . Kopiera servernamnet - utan sökvägen - enligt markeringen nedan.
-   Gå tillbaka till sidan **[!UICONTROL Konto]** och klistra in namnet i respektive fält.
+   Return to the **[!UICONTROL Account]** page, then paste the name into the respective field.
 Exempelservernamnet `https://ims-na1.adobelogin.com/`(är till exempel endast för illustrationsändamål)
 
    ![2019-07-25_15-01-53](assets/2019-07-25_15-01-53.png)
@@ -753,7 +753,7 @@ Exempelservernamnet `https://ims-na1.adobelogin.com/`(är till exempel endast f�
 
 1. **[!UICONTROL API-nyckel]** - återgå till informationssidan för integrering. Klicka på fliken **[!UICONTROL Översikt]** och sedan på **[!UICONTROL Kopiera]** till höger om fältet **[!UICONTROL API-nyckel (klient-ID)]**.
 
-   Gå tillbaka till sidan **[!UICONTROL Konto]** och klistra sedan in nyckeln i respektive ****fält.
+   Return to the **[!UICONTROL Account]** page, then paste the key into the respective ****field.
 
    ![2019-07-25_14-35-333](assets/2019-07-25_14-35-333.png)
 
@@ -761,11 +761,11 @@ Exempelservernamnet `https://ims-na1.adobelogin.com/`(är till exempel endast f�
 
 1. **[!UICONTROL Klienthemlighet]**- gå tillbaka till informationssidan för integrering. På fliken **[!UICONTROL Översikt]** klickar du på **[!UICONTROL Hämta klienthemlighet]**. Klicka på **[!UICONTROL Kopiera]** till höger om fältet **[!UICONTROL Klienthemlighet]**.
 
-   Gå tillbaka till sidan **[!UICONTROL Konto]** och klistra sedan in nyckeln i respektive fält.
+   Return to the **[!UICONTROL Account]** page, then paste the key into the respective field.
 
 1. **[!UICONTROL Nyttolast]** - Återgå till informationssidan för integrering. Kopiera hela JSON-objektkoden från fliken **[!UICONTROL JWT]** i fältet JWT-nyttolast.
 
-   Gå tillbaka till sidan **[!UICONTROL Konto]** och klistra sedan in koden i respektive fält.
+   Return to the **[!UICONTROL Account]** page, then paste the code into the respective field.
 
    ![2019-07-25_21-59-12](assets/2019-07-25_21-59-12.png)
 
@@ -775,7 +775,7 @@ Exempelservernamnet `https://ims-na1.adobelogin.com/`(är till exempel endast f�
 
    ![2019-07-25_22-08-30](assets/2019-07-25_22-08-30.png)
 
-1. Klicka på **[!UICONTROL Skapa]** i det övre högra hörnet på **[!UICONTROL kontosidan]**.
+1. Near the upper-right corner of the **[!UICONTROL Account]** page, click **[!UICONTROL Create]**.
 
    Med AEM IMS konfigurerat har du nu ett nytt IMSA-konto som listas under **[!UICONTROL Adobe IMS-konfigurationer]**.
 
@@ -793,10 +793,10 @@ Exempelservernamnet `https://ims-na1.adobelogin.com/`(är till exempel endast f�
 
    ![2019-07-26_12-20-06](assets/2019-07-26_12-20-06.png)
 
-1. Klicka på **[!UICONTROL Skapa]** i det övre vänstra hörnet på sidan.
+1. Near the upper-left corner of the page, click **[!UICONTROL Create]**.
 1. På den **[!UICONTROL allmänna]** sidan (1/3 sidor) i fönstret **[!UICONTROL Skapa Adobe-startkonfiguration]** fyller du i följande fält:
 
-   * **[!UICONTROL Titel]** - Ange en beskrivande konfigurationstitel. Exempel, `We.Retail Launch cloud configuration`.
+   * **[!UICONTROL Titel]** - Ange en beskrivande konfigurationstitel. Till exempel, `We.Retail Launch cloud configuration`.
 
    * **[!UICONTROL Associerad Adobe IMS-konfiguration]** - Välj den IMS-konfiguration som du skapade tidigare i [Konfigurera AEM IMS](#configuring-aem-ims).
 
@@ -810,7 +810,7 @@ Exempelservernamnet `https://ims-na1.adobelogin.com/`(är till exempel endast f�
 1. Klicka på **[!UICONTROL Nästa]** i det övre vänstra hörnet.
 1. På sidan **[!UICONTROL Förproduktion]** (2/3 sidor) i fönstret **[!UICONTROL Skapa Adobe-startkonfiguration]** fyller du i följande fält:
 
-   I fältet **[!UICONTROL Biblioteks-URI]** kontrollerar du platsen för mellanlagringsversionen av ditt Adobe Launch-bibliotek. AEM fyller i det här fältet automatiskt.
+   In the **[!UICONTROL Library URI]** field, check the location of the staging version of your Adobe Launch library. Det här fältet fylls i automatiskt i AEM.
 
    I det här steget används Adobe Launch-bibliotek som distribueras till Adobe CDN endast i illustrationssyfte.
 
@@ -819,19 +819,17 @@ Exempelservernamnet `https://ims-na1.adobelogin.com/`(är till exempel endast f�
    >Kontrollera att den automatiskt ifyllda biblioteks-URI:n (Uniform Resource Identifier) inte har fel format. Om det behövs kan du åtgärda det så att URI:n representerar en protokollrelativ URI. Det vill säga, det börjar med ett dubbelt snedstreck.
    >
    >
-   >Exempel: `//assets.adobetm.com/launch-xxxx`.
+   >Till exempel: `//assets.adobetm.com/launch-xxxx`.
 
-   Sidan **[!UICONTROL Förproduktion]** ska se ut ungefär så här. Observera att alternativen **[!UICONTROL Arkivera]** och **[!UICONTROL Läs in bibliotek asynkront]** ***inte*** är angivna:
+   Your **[!UICONTROL Staging]** page should look similar to the following. Observera att alternativen **[!UICONTROL Arkivera]** och **[!UICONTROL Läs in bibliotek asynkront]** ***inte*** är angivna:
 
    ![image2019-7-15_15-21-8](assets/image2019-7-15_15-21-8.png)
 
 1. Klicka på **[!UICONTROL Nästa]** i det övre högra hörnet.
-1. På **[!UICONTROL produktionssidan]** (3/3 sidor) i fönstret **[!UICONTROL Skapa Adobe-startkonfiguration]** , om det behövs, korrigerar du den automatiskt ifyllda produktions-URI:n på samma sätt som på föregående **[!UICONTROL mellanlagringssida]** .
+1. On the **[!UICONTROL Production]** page (3/3 pages) of the **[!UICONTROL Create Adobe Launch Configuration]** window, if needed, fix the auto-populated production URI similar to how it was done on the previous **[!UICONTROL Staging]** page.
 1. Klicka på **[!UICONTROL Skapa]** i det övre högra hörnet.
 
    Din nya Adobe Launch Cloud-konfiguration har nu skapats och visas bredvid din webbplats på ungefär samma sätt som i följande exempel:
-
-   ![]()
 
 1. Välj din nya Adobe Launch Cloud-konfiguration (en bock visas till vänster om konfigurationstiteln när den har valts). Klicka på **[!UICONTROL Publicera]** i verktygsfältet.
 
