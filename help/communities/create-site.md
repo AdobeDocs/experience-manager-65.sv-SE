@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 8ae324ea-8b84-47a3-aabf-1fee2a3bd46d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
+source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 ---
 
@@ -98,7 +98,7 @@ Markera alla kryssrutor för [användarhantering](/help/communities/sites-consol
 
 De taggar som kan användas för communityinnehåll kontrolleras genom att AEM-namnutrymmen som tidigare definierats via [taggningskonsolen](/help/sites-administering/tags.md#tagging-console) (till exempel namnutrymmet [Tutorial](/help/communities/setup.md#create-tutorial-tags)) väljs.
 
-Det är enkelt att hitta namnutrymmen med typsnittssökning. Exempel:
+Det är enkelt att hitta namnutrymmen med typsnittssökning. Till exempel,
 
 * Typ `tut`
 * Välj `Tutorial`
@@ -111,7 +111,7 @@ Det är enkelt att hitta namnutrymmen med typsnittssökning. Exempel:
 
 Om du vill att en community-medlem (eller grupp av medlemmar) ska kunna uppleva webbplatsen som community-hanterare använder du typsnittssökningen och väljer medlemmens eller gruppens namn bland alternativen i listrutan.
 
-Exempel:
+Till exempel,
 
 * Typ `q`
 * Välj [Quinn Harper](/help/communities/enablement-setup.md#publishcreateenablementmembers)
@@ -200,7 +200,7 @@ Observera att UGC inte ingår i platspaketet.
 
 * **Ta bort plats**
 
-   Välj ikonen Ta bort om du vill ta bort communitywebbplatsen från **[UIControl Communities > Sites console]**. Den här åtgärden tar bort alla objekt som är associerade med platsen, till exempel UGC, användargrupper, resurser och databasposter.
+   Välj ikonen Ta bort om du vill ta bort communitywebbplatsen från **[!UICONTROL webbgrupper > Webbplatskonsolen]**. Den här åtgärden tar bort alla objekt som är associerade med platsen, till exempel UGC, användargrupper, resurser och databasposter.
 
 ![webbplatseråtgärder](assets/siteactions.png)
 
@@ -210,17 +210,17 @@ Observera att UGC inte ingår i platspaketet.
 >
 >På författarinstansen från huvudmenyn:
 >
->1. Navigera till **[UIControl-verktyg > Åtgärder > Replikering]** -menyn.
->1. Välj **[UIControl-agenter för författaren]**.
->1. Välj **[UIControl-standardagent (publicera)]**.
->1. Bredvid **[UIControl-inställningar]** väljer du **[UIControl-redigering]**.
->1. I popup-dialogrutan för agentinställningar väljer du fliken **[UIControl-transport]** .
+>1. Navigera till **[!UICONTROL Verktyg > Åtgärder > Replikering]** .
+>1. Välj **[!UICONTROL Agenter på författare]**.
+>1. Välj **[!UICONTROL standardagent (publicera)]**.
+>1. Vid **[!UICONTROL Inställningar]** väljer du **[!UICONTROL Redigera]**.
+>1. I popup-dialogrutan för agentinställningar väljer du fliken **[!UICONTROL Transport]** .
 >1. I URI ändrar du portnumret 4503 till önskat portnummer >
    >    * Om du till exempel vill använda port 6103:
       >      https://localhost:6103/bin/receive?sling:authRequestLogin=1
 >
-1. Välj **[UIControl OK]**.
-1. (Valfritt) Välj **[UIControl Clear]** eller **[UIControl Force Retry]** för att återställa replikeringskön.
+1. Välj **[!UICONTROL OK]**.
+1. (Valfritt) Välj **[!UICONTROL Rensa]** eller **[!UICONTROL Tvinga igen]** för att återställa replikeringskön.
 
 
 
