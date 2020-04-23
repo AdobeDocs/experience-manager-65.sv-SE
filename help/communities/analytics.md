@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: e6fdaf56-402f-418d-96d8-e46bd3ad1e8c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
+source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 ---
 
@@ -160,15 +160,15 @@ Om det inte är aktiverat instansieras aldrig videons hjärtslagskod och endast 
 
 Så här skapar du en ny Analytics-integrering, som integrerar Adobe Analytics med AEM-communitywebbplatsen, med standardgränssnittet på författarinstansen:
 
-* Från global navigering: **[UIControl Tools > Deployment > Cloud Services]**
-* Rulla ned till **[UIControl Adobe Analytics]**
-* Välj **[UIControl Configure Now]** eller **[UIControl Show Configurations]**
+* Från global navigering: **[!UICONTROL Verktyg > Distribution > Molntjänster]**
+* Rulla ned till **[!UICONTROL Adobe Analytics]**
+* Välj **[!UICONTROL Konfigurera nu]** eller **[!UICONTROL Visa konfigurationer]**
 
 ![chlimage_1-178](assets/chlimage_1-178.png)
 
 ### Dialogrutan Skapa konfiguration {#create-configuration-dialog}
 
-* Välj `[+]` ikon bredvid Tillgängliga **[konfigurationer]** för UIControl för att skapa en ny konfiguration
+* Välj `[+]` ikon bredvid **[!UICONTROL Tillgängliga konfigurationer]** för att skapa en ny konfiguration
 
 I dialogrutan Skapa konfiguration anger de värden som ska anges konfigurationen.
 
@@ -246,7 +246,7 @@ Så här sparar du inställningarna:
 
 När du har konfigurerat den grundläggande anslutningen till Adobe Analytics måste du skapa eller redigera ett ramverk för communitywebbplatsen. Syftet med ramverket är att mappa AEM-variabler (Communities feature) till analysvariabler (report suite).
 
-* Välj `[+]` ikon bredvid **[UIControl Available Frameworks]** för att skapa ett nytt ramverk
+* Välj `[+]` ikon bredvid **[!UICONTROL Tillgängliga ramverk]** för att skapa ett nytt ramverk
 
 ![chlimage_1-182](assets/chlimage_1-182.png)
 
@@ -636,7 +636,7 @@ Forum-ämnet är för närvarande det enda exemplet på den här anpassningen:
 * Navigera till [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md). Till exempel [https://localhost:4503/crx/de](https://localhost:4503/crx/de).
 
 * Under jcr:content-noden i språkroten ( `/content/sites/engage/en/jcr:content),`navigera till exempel till komponenten som konfigurerats för Analytics-rapportering).
-Exempel: **`analytics/reportConfigs/social_forum_components_hbs_topic`**
+Till exempel, **`analytics/reportConfigs/social_forum_components_hbs_topic`**
 
 * Observera de skapade tidsperioderna:
 
