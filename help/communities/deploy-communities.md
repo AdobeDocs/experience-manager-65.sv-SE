@@ -11,7 +11,7 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
+source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 ---
 
@@ -84,7 +84,7 @@ source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 
 
-## Senaste releaser {#latest-releases}
+## Latest Releases {#latest-releases}
 
 AEM 6.5 Communities GA levereras med Communities-paket. Om du vill veta mer om uppdateringar av AEM 6.5 [Communities](/help/release-notes/release-notes.md#experiencemanagercommunities)kan du läsa [AEM 6.5 Release Notes](/help/release-notes/release-notes.md#communities-release-notes.html).
 
@@ -245,7 +245,7 @@ Det finns två replikeringsagenter i författarmiljön som kräver att transport
 
 * Åtkomst till replikeringskonsolen på författaren
 
-   * Navigera från global navigering till **[UIControl Tools > Deployment > Replication > Agents on author]**
+   * Navigera från global navigering till **[!UICONTROL Verktyg > Distribution > Replikering > Agenter på författare]**
 
 * Följ samma procedur för båda agenterna:
 
@@ -363,7 +363,7 @@ Använda [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) :
 * Efter en stund visas dialogrutan **Slutfört** :
    `Operation completed successfully.`
 
-### Apache HTTP-server {#apache-http-server}
+### Apache HTTP Server {#apache-http-server}
 
 Om du använder Apache HTTP-servern måste du använda rätt servernamn för alla relevanta poster.
 
