@@ -10,18 +10,18 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: dcde4e03-78ab-4779-96a1-05ac41f14701
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: e4456e80059479ca874681e20f8546f29ac92597
 
 ---
 
 
 # Använda Länk {#using-liking}
 
-Den här `Liking`komponenten är ett användbart verktyg som gör att användare kan uttrycka sin åsikt om en viss del av innehållet, till exempel en kommentar i ett forum. Med `Liking`komponenten väljer medlemmarna hjärtikonen för att ange en positiv åsikt.
+Komponenten är ett användbart verktyg som gör att användare kan uttrycka sin åsikt om ett visst innehåll, till exempel en kommentar i ett forum. `Liking` Med den här `Liking` komponenten väljer medlemmarna hjärtikonen för att visa en positiv åsikt.
 
 ## Lägga till länkning på en sida {#adding-liking-to-a-page}
 
-Om du vill lägga till en `Liking` komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att leta reda på
+Om du vill lägga till en `Liking` komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att leta reda på:
 
 * `Communities / Liking`
 
@@ -43,11 +43,17 @@ Under fliken **[!UICONTROL Texter och etiketter]** anger du vilka egenskaper som
 
 ![chlimage_1-95](assets/chlimage_1-95.png)
 
-* **[!UICONTROL Positiv svarsetikett]**(*obligatoriskt*) Egenskapsnamnet för ett positivt svar.
+* **[!UICONTROL Etikett för positivt svar]**
 
-* **[!UICONTROL Negativ svarsetikett]**(*obligatoriskt*) Egenskapsnamnet för ett negativt svar.
+   (*Obligatoriskt*) Egenskapsnamnet för ett positivt svar.
 
-* **[!UICONTROL Tally Name]**(*Required*) The internal, identifier identifier property name for this instance of a vobe component.
+* **[!UICONTROL Etikett för negativt svar]**
+
+   (*Obligatoriskt*) Egenskapsnamnet för ett negativt svar.
+
+* **[!UICONTROL Namn]**
+
+   (*Obligatoriskt*) Det interna, identifierbara egenskapsnamnet för den här instansen av en röstkomponent.
 
 ## Site Visitor Experience {#site-visitor-experience}
 
