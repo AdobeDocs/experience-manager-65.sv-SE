@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 4a2ac67b-d2c9-4703-a1cb-d454786f9e6b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70e6f2d8366456e5091b7b775dc40914948921ab
+source-git-commit: 0270cee1970b5b092361c2f1ad4a117795465311
 
 ---
 
 
-# Komma igång med AEM Communities{#getting-started-with-aem-communities}
+# Komma igång med AEM Communities {#getting-started-with-aem-communities}
 
 Med AEM Communities kan företag skapa varumärkesanpassade communityupplevelser från ett bibliotek med webbplatsmallar. Forum, grupper, bloggar, fildelning, kalendrar, aktivitetsflöden och utökade användarprofiler kan integreras på webbplatsen för att främja interaktionen mellan prospekt, kunder och företag.
 
