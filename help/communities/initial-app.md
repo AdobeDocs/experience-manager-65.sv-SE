@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: f74d225e-0245-4d5a-bb93-0ee3f31557aa
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 ---
 
@@ -19,8 +19,8 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 I det här avsnittet skapar du följande:
 
-* Den **[mall](#createthepagetemplate)**som ska användas för att skapa innehållssidor på exempelwebbplatsen
-* Den **[komponent och det skript](#create-the-template-s-rendering-component)**som ska användas för att återge webbplatsens sidor
+* Den **[mall](#createthepagetemplate)**som ska användas för att skapa innehållssidor på exempelwebbplatsen.
+* Den **[komponent och det skript](#create-the-template-s-rendering-component)**som ska användas för att återge webbplatsens sidor.
 
 ## Skapa innehållsmallen {#create-the-content-template}
 
@@ -28,10 +28,10 @@ En mall definierar standardinnehållet för en ny sida. Komplexa webbplatser kan
 
 I den här övningen är alla sidor baserade på en enkel mall.
 
-1. I utforskarfönstret i CRXDE Lite
+1. I utforskarfönstret i CRXDE Lite:
 
-   * select `/apps/an-scf-sandbox/templates`
-   * **[!UICONTROL Skapa > Skapa mall]**
+   * Välj `/apps/an-scf-sandbox/templates`
+   * **[!UICONTROL Skapa]** > **[!UICONTROL Skapa mall]**
 
 1. I dialogrutan Skapa mall skriver du följande värden och klickar sedan på **[!UICONTROL Nästa]**:
 
@@ -44,29 +44,29 @@ I den här övningen är alla sidor baserade på en enkel mall.
 
    Resurstypen visas som egenskap på `playpage`noden jcr:content `sling:resourceType`. Den identifierar komponenten (resursen) som återger innehållet när det begärs av en webbläsare.
 
-   I det här fallet återges alla sidor som skapas med `playpage`mallen av `an-scf-sandbox/components/playpage` komponenten. Sökvägen till komponenten är relativ, vilket innebär att Sling kan söka efter resursen först i `/apps` mappen och, om den inte hittas, i `/libs` mappen.
+   I det här fallet återges alla sidor som skapas med `playpage` mallen av `an-scf-sandbox/components/playpage` komponenten. Sökvägen till komponenten är relativ, vilket innebär att Sling kan söka efter resursen först i `/apps` mappen och, om den inte hittas, i `/libs` mappen.
 
    ![chlimage_1-75](assets/chlimage_1-75.png)
 
 1. Om du använder kopiera/klistra in ska du kontrollera att värdet för Resurstyp inte har några inledande eller avslutande blanksteg.
 
-   Click **[!UICONTROL Next]**.
+   Klicka på **[!UICONTROL Nästa]**.
 
 1. &quot;Tillåtna sökvägar&quot; avser sökvägarna till sidor som använder den här mallen, så att mallen listas för dialogrutan **[!UICONTROL Ny sida]** .
 
    Om du vill lägga till en bana klickar du på plusknappen `+` och skriver `/content(/.&ast;)?` i textrutan som visas. Om du använder kopiera/klistra in ska du se till att det inte finns några inledande eller avslutande blanksteg.
 
-   Obs!Värdet för den tillåtna egenskapen path är ett *reguljärt uttryck.* Innehållssidor som har en sökväg som matchar uttrycket kan använda mallen. I det här fallet matchar det reguljära uttrycket sökvägen till mappen **/content** och alla dess undersidor.
+   Obs! Värdet för den tillåtna egenskapen path är ett *reguljärt uttryck.* Innehållssidor som har en sökväg som matchar uttrycket kan använda mallen. I det här fallet matchar det reguljära uttrycket sökvägen till mappen **/content** och alla dess undersidor.
 
-   När en författare skapar en sida nedan `/content`visas `playpage`mallen&quot;En SCF-sandlådesidmall&quot; i en lista med tillgängliga mallar som ska användas.
+   När en författare skapar en sida nedan `/content`visas `playpage` mallen&quot;En SCF-sandlådesidmall&quot; i en lista över tillgängliga mallar som ska användas.
 
-   När rotsidan har skapats från mallen kan åtkomsten till mallen begränsas till den här webbplatsen genom att ändra egenskapen så att den inkluderar rotsökvägen i det reguljära uttrycket, d.v.s..
+   När rotsidan har skapats från mallen kan åtkomsten till mallen begränsas till den här webbplatsen genom att ändra egenskapen så att den inkluderar rotsökvägen i det reguljära uttrycket, dvs.
 
    `/content/an-scf-sandbox(/.&ast;)?`
 
    ![chlimage_1-76](assets/chlimage_1-76.png)
 
-1. Click **[!UICONTROL Next]**.
+1. Klicka på **[!UICONTROL Nästa]**.
 
    Klicka på **[!UICONTROL Nästa]** på panelen **[!UICONTROL Tillåtna överordnade]** .
 
@@ -74,7 +74,7 @@ I den här övningen är alla sidor baserade på en enkel mall.
 
    Click **[!UICONTROL OK]**.
 
-1. När du har klickat på OK och skapat mallen visas röda trianglar i hörnen på egenskapsfliken för den nya `playpage`mallen. Dessa röda trianglar anger redigeringar som inte har sparats.
+1. När du har klickat på OK och skapat mallen visas röda trianglar i hörnen på egenskapsfliken för den nya `playpage` mallen. Dessa röda trianglar anger redigeringar som inte har sparats.
 
    Klicka på **[!UICONTROL Spara alla]** för att spara den nya mallen i databasen.
 
@@ -100,7 +100,7 @@ Skapa den *komponent* som definierar innehållet och återger alla sidor som ska
    * Grupp:
    ![chlimage_1-78](assets/chlimage_1-78.png)
 
-1. Klicka på **[!UICONTROL Nästa]** tills panelen **[!UICONTROL Tillåtna underordnade]** i dialogrutan visas
+1. Klicka på **[!UICONTROL Nästa]** tills panelen **[!UICONTROL Tillåtna underordnade]** i dialogrutan visas:
 
    * Click **[!UICONTROL OK]**
    * Klicka på **[!UICONTROL Spara alla]**
