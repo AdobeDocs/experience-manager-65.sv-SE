@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 048f7b30-20c3-4567-bd32-38cf2643cf39
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: f7e5afe46100db7837647ac89aaf58cf101143b0
 
 ---
 
@@ -52,7 +52,7 @@ Med konsolen [för](srp-config.md) lagringskonfiguration kan du välja standardl
 
 På författaren, för att komma åt lagringskonsolen:
 
-* Från global navigering: **[!UICONTROL Verktyg > Communities > Storage Configuration]**
+* I global navigering väljer du **[!UICONTROL Verktyg]** > **[!UICONTROL Communities]** > **[!UICONTROL Storage Configuration]**.
 
 ![chlimage_1-28](assets/chlimage_1-28.png)
 
@@ -69,28 +69,36 @@ På författaren, för att komma åt lagringskonsolen:
 
    * **[!UICONTROL mongoDB UGC-samling]**
 
-      *standard*:innehåll
+      *standard*: innehåll
 
    * **[!UICONTROL mongoDB Attachment Collection]**
 
-      *standard*:bilagor
+      *standard*: bilagor
 
 * **[!UICONTROL SolrConfiguration]**
 
    * **[Zookeeper](https://cwiki.apache.org/confluence/display/solr/Using+ZooKeeper+to+Manage+Configuration+Files)-värd **
 
-      När du kör i [SolrCloud-läge](solr.md#solrcloud-mode) med en extern ZooKeeper anger du det här värdet till `HOST:PORT` för ZooKeeper, till exempel *my.server.com:2181* För en ZooKeeper Ensemble, anger du kommaavgränsade `HOST:PORT` värden, till exempel *host1:2181,host2:211118181 Lämna*tomt om Solr körs i fristående läge med den interna ZooKeeper.
+      När du kör i [SolrCloud-läge](solr.md#solrcloud-mode) med en extern ZooKeeper anger du det här värdet till `HOST:PORT` för ZooKeeper, till exempel *my.server.com:2181*
+
+      Ange kommaavgränsade `HOST:PORT` värden för en ZooKeeper Ensemble, till exempel *host1:2181,host2:2181*
+
+      Lämna tomt om du kör Solr i fristående läge med den interna ZooKeeper.
       *Standard*: *&lt;blank>*
-   * **[!UICONTROL Solr-URL]**Den URL som används för att kommunicera med Solr i fristående läge.
+
+      * **[!UICONTROL Solr-URL]**Den URL som används för att kommunicera med Solr i fristående läge.
 Lämna tomt om du kör i SolrCloud-läge.
-      *Standard*: https://127.0.0.1:8983/solr/
-   * **[!UICONTROL Solr Collection]**Namnet på Solr-samlingen.
-      *Standard*: collection1
+         *Standard*: https://127.0.0.1:8983/solr/
+
+      * **[!UICONTROL Solr Collection]**Namnet på Solr-samlingen.
+         *Standard*: collection1
+
 * Välj **[!UICONTROL Skicka]**
 
 >[!NOTE]
 >
->MongoDB-databasen, som har standardvärdet name `communities`, ska inte anges till namnet på en databas som används för [nodarkiv eller datalager](../../help/sites-deploying/data-store-config.md)(binära). Se även [Lagringselement i AEM 6](../../help/sites-deploying/storage-elements-in-aem-6.md).
+>MongoDB-databasen, som har standardvärdet name `communities`, ska inte anges till namnet på en databas som används för [nodarkiv eller datalager](../../help/sites-deploying/data-store-config.md)(binära). Se även [Lagringselement i AEM 6.5](../../help/sites-deploying/storage-elements-in-aem-6.md).
+
 
 ### MongoDB-replikuppsättning {#mongodb-replica-set}
 
@@ -104,8 +112,8 @@ Om du vill arbeta med replikuppsättningar och lära dig hur du definierar anslu
 
 ```shell
 # Example url for:
-#     servers "mongoserver1", "mongoserver2", "mongoserver3"
-#     replica set 'rs0'
+# servers "mongoserver1", "mongoserver2", "mongoserver3"
+# replica set 'rs0'
 # port numbers only necessary if not default port 27017
 mongodb://mongoserver1:<mongoport1>,mongoserver2:<mongoport2>,mongoserver3:<mongoport3>/?replicaSet=rs0&maxPoolSize=100&waitQueueMultiple=50&readPreference=secondaryPreferred
 ```
@@ -122,7 +130,7 @@ Mer konfigurationsinformation finns i [Solr Configuration for SRP](solr.md).
 
 ### Uppgraderar {#upgrading}
 
-Om du uppgraderar från en tidigare version som konfigurerats med MSRP måste du
+Om du uppgraderar från en tidigare version som konfigurerats med MSRP måste du:
 
 1. Utför [uppgraderingen till AEM Communities](upgrade.md)
 1. Installera nya Solr-konfigurationsfiler
@@ -134,14 +142,13 @@ Om du uppgraderar från en tidigare version som konfigurerats med MSRP måste du
 
 MSRP måste identifieras som det gemensamma arkivet på alla författar- och publiceringsinstanser.
 
-Så här gör du den identiska konfigurationen tillgänglig i publiceringsmiljön:
+Om du vill göra den identiska konfigurationen tillgänglig i publiceringsmiljön loggar du in på författarinstansen och följer stegen:
 
-* On author:
-   * Navigera från huvudmenyn till **[!UICONTROL Verktyg > Åtgärder > Replikering]**
-   * Välj **[!UICONTROL Aktivera träd]**
-   * **[!UICONTROL Startsökväg]**:
-      * Bläddra till `/etc/socialconfig/srpc/`
-   * Välj **[!UICONTROL Aktivera]**
+* Navigera från huvudmenyn till **[!UICONTROL Verktyg]** > **[!UICONTROL Åtgärder]** > **[!UICONTROL Replikering]**.
+* Välj **[!UICONTROL Aktivera träd]**
+* **[!UICONTROL Startsökväg]**:
+   * Bläddra till `/etc/socialconfig/srpc/`
+* Välj **[!UICONTROL Aktivera]**
 
 ## Hantera användardata {#managing-user-data}
 
@@ -193,6 +200,7 @@ cURL -u *signin* -d *data* *reindex-url*
 >
 >Om du [indexerar om DSRP Solr](dsrp.md)är URL:en **/services/social/datastore/rdb/reindex**
 
+
 ### Exempel på omindexering av MSRP {#msrp-reindex-example}
 
 ```shell
@@ -213,8 +221,8 @@ Gå till konsolen [för](srp-config.md) lagringskonfiguration eller kontrollera 
 
 * I JCR, if [/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/)
 
-   * Innehåller ingen [srpc](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc) -nod, vilket betyder att lagringsprovidern är JSRP
-   * Om srpc-noden finns och innehåller [standardkonfiguration](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)för nod, ska standardkonfigurationens egenskaper definiera MSRP som standardprovider
+   * Innehåller ingen [srpc](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc) -nod, vilket betyder att lagringsprovidern är JSRP.
+   * Om srpc-noden finns och innehåller [standardkonfiguration](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)för nod, ska standardkonfigurationens egenskaper definiera MSRP som standardprovider.
 
 ### UGC försvinner efter uppgradering {#ugc-disappears-after-upgrade}
 
@@ -240,18 +248,18 @@ at com.adobe.cq.social.scf.core.BaseSocialComponent.toJSONString(BaseSocialCompo
 ... 124 common frames omitted
 ```
 
-Om du vill åtgärda felet måste du se till att du följer instruktionerna för [installation av standard-MLS](solr.md#installing-standard-mls)
+För att åtgärda felet ska du kontrollera följande när du följer instruktionerna för [installation av standard-MLS](solr.md#installing-standard-mls):
 
-* XML-konfigurationsfilerna kopierades till rätt Solr-plats
-* Solr startades om efter att de nya konfigurationsfilerna ersatt de befintliga
+* XML-konfigurationsfilerna kopierades till rätt Solr-plats.
+* Solr startades om efter att de nya konfigurationsfilerna ersatt de befintliga.
 
 ### Säker anslutning till MongoDB misslyckas {#secure-connection-to-mongodb-fails}
 
 Om ett försök att skapa en säker anslutning till MongoDB-servern misslyckas på grund av att en klassdefinition saknas, är det nödvändigt att uppdatera MongoDB-drivrutinspaketet, `mongo-java-driver`som är tillgängligt från den offentliga maven-databasen.
 
-1. Hämta drivrutinen från [https://search.maven.org/#artifactdetails%7Corg.mongodb%7Cmongo-java-driver%7C2.13.2%7Cjar](https://search.maven.org/#artifactdetails%7Corg.mongodb%7Cmongo-java-driver%7C2.13.2%7Cjar) (version 2.13.2 eller senare)
-1. Kopiera paketet till mappen&quot;crx-quickstart/install&quot; för en AEM-instans
-1. Starta om AEM-instansen
+1. Hämta drivrutinen från [https://search.maven.org/#artifactdetails%7Corg.mongodb%7Cmongo-java-driver%7C2.13.2%7Cjar](https://search.maven.org/#artifactdetails%7Corg.mongodb%7Cmongo-java-driver%7C2.13.2%7Cjar) (version 2.13.2 eller senare).
+1. Kopiera paketet till mappen&quot;crx-quickstart/install&quot; för en AEM-instans.
+1. Starta om AEM-instansen.
 
 ## Resurser {#resources}
 
