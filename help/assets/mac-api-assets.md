@@ -1,14 +1,14 @@
 ---
-title: Resurser för HTTP API
+title: HTTP API för Assets
 description: Lär dig mer om implementering, datamodell och funktioner i Assets HTTP API. Använd Assets HTTP API för att utföra olika åtgärder runt resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
+source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 ---
 
 
-# Resurser för HTTP API {#assets-http-api}
+# HTTP API för Assets {#assets-http-api}
 
 ## Översikt {#overview}
 
@@ -54,7 +54,7 @@ Mappar är som kataloger i traditionella filsystem. De är behållare för andra
 * `parent`: Länka till överordnad mapp
 * `thumbnail`: (Valfritt) länk till en mappminiatyrbild
 
-### Resurser {#assets}
+### Assets {#assets}
 
 I AEM innehåller en resurs följande element:
 
@@ -120,7 +120,7 @@ Egenskaper för enheter som ingår är en deluppsättning av alla egenskaper fö
 
 ## Skapa en mapp {#create-a-folder}
 
-Skapar en ny `sling`: `OrderedFolder` vid den angivna sökvägen. Om * anges i stället för ett nodnamn kommer serverleten att använda parameternamnet som nodnamn. Data accepteras som begäran antingen som en Siren-representation av den nya mappen eller som en uppsättning namn/värde-par, kodade som `application/www-form-urlencoded` eller `multipart`/ `form`- `data`, vilket är användbart när du skapar en mapp direkt från ett HTML-formulär. Dessutom kan mappens egenskaper anges som URL-frågeparametrar.
+Skapar en ny `sling`: `OrderedFolder` vid den angivna sökvägen. Om * anges i stället för ett nodnamn använder serverleten parameternamnet som nodnamn. Data accepteras som begäran antingen som en Siren-representation av den nya mappen eller som en uppsättning namn/värde-par, kodade som `application/www-form-urlencoded` eller `multipart`/ `form`- `data`, vilket är användbart när du skapar en mapp direkt från ett HTML-formulär. Dessutom kan mappens egenskaper anges som URL-frågeparametrar.
 
 Åtgärden misslyckas med en `500` svarskod om den överordnade noden för den angivna sökvägen inte finns. Om mappen redan finns returneras en `409` svarskod.
 
