@@ -3,7 +3,7 @@ title: Använd PDF-rastrering för att generera renderingar
 description: I den här artikeln beskrivs hur du skapar högkvalitativa miniatyrbilder och återgivningar med hjälp av Adobe PDF Rasterizer-biblioteket.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
+source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 ---
 
@@ -14,13 +14,13 @@ När du överför stora, innehållsintensiva PDF- eller AI-filer till Adobe Expe
 
 Adobe rekommenderar att du använder PDF-rastreringsbiblioteket för följande:
 
-* Tunga, innehållsintensiva AI-/PDF-filer
-* AI/PDF-filer med miniatyrbilder som inte genererats direkt
-* AI-filer med Pantone Matching System-färger (PMS)
+* Tunga, innehållsintensiva AI/PDF-filer.
+* AI- och PDF-filer med miniatyrer genereras inte direkt.
+* AI-filer med Pantone Matching System-färger (PMS).
 
 Miniatyrbilder och förhandsgranskningar som genererats med PDF Rasterizer har bättre kvalitet jämfört med färdiga utdata och ger därför en konsekvent visningsupplevelse på olika enheter. Adobe PDF Rasterizer-biblioteket har inte stöd för konvertering av färgrymd. Det skrivs alltid ut på RGB, oavsett källfilens färgrymd.
 
-1. Installera PDF-rastreringspaketet på din AEM-instans från [paketresursen](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg).
+1. Installera PDF Rasterizer-paketet på din AEM-distribution från [paketresurs](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg).
 
    >[!NOTE]
    >
@@ -105,4 +105,4 @@ Miniatyrbilder och förhandsgranskningar som genererats med PDF Rasterizer har b
    ![web_enabled_image-1](assets/web_enabled_image-1.png)
 
 1. Spara arbetsflödet.
-1. Överför en PDF- eller AI-fil till AEM Assets. I PDF-rastreraren genereras miniatyrbilder och webbåtergivningar för filen.
+1. Överför en PDF eller en AI-fil till AEM Resurser. I PDF-rastreraren genereras miniatyrbilder och webbåtergivningar för filen.
