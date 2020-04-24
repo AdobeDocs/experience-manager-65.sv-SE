@@ -1,16 +1,16 @@
 ---
-title: Hämta resurser från AEM
-description: Lär dig hur du hämtar resurser från AEM och aktiverar eller inaktiverar hämtningsfunktionen.
+title: Hämta digitala resurser från [!DNL Adobe Experience Manager].
+description: Lär dig hur du hämtar resurser från [!DNL Adobe Experience Manager] och aktiverar eller inaktiverar hämtningsfunktionen.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: ccdafa89793e97f69294958d814cccf3554b496d
+source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 ---
 
 
-# Hämta resurser från AEM {#download-assets-from-aem}
+# Download assets from [!DNL Adobe Experience Manager] {#download-assets-from-aem}
 
-Du kan hämta resurser, inklusive statiska och dynamiska återgivningar. Du kan också skicka e-postmeddelanden med länkar till resurser direkt från AEM Assets. Hämtade resurser paketeras i en ZIP-fil. Den komprimerade ZIP-filen har en maximal filstorlek på 1 GB för exportjobbet. Du tillåts maximalt 500 totala resurser per exportjobb.
+Du kan hämta resurser, inklusive statiska och dynamiska återgivningar. Du kan också skicka e-postmeddelanden med länkar till resurser direkt från [!DNL Adobe Experience Manager Assets]. Hämtade resurser paketeras i en ZIP-fil. Den komprimerade ZIP-filen har en maximal filstorlek på 1 GB för exportjobbet. Du tillåts maximalt 500 totala resurser per exportjobb.
 
 >[!NOTE]
 >
@@ -20,9 +20,9 @@ Om du vill hämta resurser går du till en resurs, markerar resursen och trycker
 
 Det går inte att hämta resurstyperna Bilduppsättningar, Snurra uppsättningar, Blandade medieuppsättningar och Carousel-uppsättningar.
 
-![Tillgängliga alternativ vid hämtning av resurser från AEM Assets](assets/asset_download_dialog.png)
+![Tillgängliga alternativ vid hämtning av resurser från Experience Manager Assets](assets/asset_download_dialog.png)
 
-*Bild: Tillgängliga alternativ vid hämtning av resurser från AEM Assets*
+*Bild: Tillgängliga alternativ när du hämtar resurser från[!DNL Experience Manager Assets].*
 
 Följande är alternativen för export/hämtning. Dynamiska renderingar är unika för Dynamic Media och gör att du kan generera renderingar direkt utöver den resurs du valt - det alternativet är bara tillgängligt om du har Dynamic Media aktiverat.
 
@@ -40,7 +40,7 @@ När du väljer en mapp att hämta hämtas hela resurshierarkin under mappen. Om
 
 ## Aktivera resurshämtningsserver {#enable-asset-download-servlet}
 
-Med standardservleten i AEM kan autentiserade användare skicka godtyckligt stora, samtidiga hämtningsbegäranden för att skapa ZIP-filer med resurser som är synliga för dem och som kan överbelasta servern och nätverket. För att minska de potentiella DoS-riskerna som orsakas av den här funktionen är `AssetDownloadServlet` OSGi-komponenten inaktiverad som standard för publiceringsinstanser.
+Med standardservleten i [!DNL Experience Manager] kan autentiserade användare skicka godtyckligt stora, samtidiga hämtningsbegäranden för att skapa ZIP-filer med resurser som är synliga för dem och som kan överbelasta servern och nätverket. För att minska de potentiella DoS-riskerna som orsakas av den här funktionen är `AssetDownloadServlet` OSGi-komponenten inaktiverad som standard för publiceringsinstanser.
 
 Om du vill tillåta hämtning av resurser från DAM, till exempel när du använder Assets Share Commons eller någon annan portalliknande implementering, aktiverar du servleten manuellt via en OSGi-konfiguration. Adobe rekommenderar att du anger en så låg hämtningsstorlek som möjligt utan att det påverkar kraven för den dagliga hämtningen. Ett högt värde kan påverka prestandan.
 
@@ -53,14 +53,14 @@ Om du vill tillåta hämtning av resurser från DAM, till exempel när du använ
 1. Skapa en ny fil av typen `nt:file` med namnet i config-mappen `com.day.cq.dam.core.impl.servlet.AssetDownloadServlet.config`.
 1. Fyll `com.day.cq.dam.core.impl.servlet.AssetDownloadServlet.config` med följande: Anger en maximal storlek (i byte) för hämtningen som värdet för `asset.download.prezip.maxcontentsize`. Nedanstående exempel konfigurerar den maximala storleken för ZIP-nedladdningen till högst 100 kB.
 
-   ```
+   ```conf
    enabled=B"true"
    asset.download.prezip.maxcontentsize=I"102400"
    ```
 
 ## Inaktivera resurshämtningsserver {#disable-asset-download-servlet}
 
-Du `Asset Download Servlet` kan inaktivera funktionen på en AEM Publish-instans genom att uppdatera dispatcherns konfiguration för att blockera eventuella hämtningsbegäranden. Servern kan även inaktiveras manuellt via OSGi-konsolen direkt.
+Du `Asset Download Servlet` kan inaktivera funktionen på en [!DNL Experience Manager] publiceringsinstans genom att uppdatera dispatcherns konfiguration för att blockera eventuella hämtningsbegäranden. Servern kan även inaktiveras manuellt via OSGi-konsolen direkt.
 
 1. Om du vill blockera resurshämtningsbegäranden via en dispatcherkonfiguration redigerar du `dispatcher.any` konfigurationen och lägger till en ny regel i [filteravsnittet](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#defining-a-filter).
 
@@ -71,6 +71,6 @@ Du `Asset Download Servlet` kan inaktivera funktionen på en AEM Publish-instans
 >[!MORELIKETHIS]
 >
 >* [Hämta DRM-skyddade resurser](drm.md)
->* [Hämta resurser med hjälp av AEM-datorprogrammet på Win- eller Mac-datorer](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html)
+>* [Hämta resurser med Experience Manager-datorprogrammet på Win- eller Mac-datorer](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html)
 >* [Hämta resurser med Adobe Assets Link inifrån de Adobe Creative Cloud-program som stöds](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html)
 
