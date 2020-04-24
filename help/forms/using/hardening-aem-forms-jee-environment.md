@@ -9,7 +9,7 @@ topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: dee9f9c9d3dfb916d1feaa0d258c883686e1a1dc
 
 ---
 
@@ -38,7 +38,7 @@ Du bör inte installera eller konfigurera AEM Forms på JEE med ett rotskal. Som
 
 **Installation och konfiguration i Windows**
 
-Du bör utföra installationen i Windows som administratör om du installerar AEM Forms på JEE på JBoss med hjälp av den nyckelfärdiga metoden eller om du installerar PDF Generator. När du installerar PDF Generator i Windows med inbyggt programstöd måste du köra installationen som samma Windows-användare som installerade Microsoft Office. Mer information om installationsprivilegier finns i dokumentet **Installera och distribuera AEM Forms på JEE** för programservern.
+Du bör utföra installationen i Windows som administratör om du installerar AEM Forms på JEE på JBoss med hjälp av den nyckelfärdiga metoden eller om du installerar PDF Generator. När du installerar PDF Generator i Windows med inbyggt programstöd måste du köra installationen som samma Windows-användare som installerade Microsoft Office. Mer information om installationsprivilegier finns i dokumentet* Installera och distribuera AEM Forms på JEE* för programservern.
 
 ### Säkerhet för nätverkslager {#network-layer-security}
 
@@ -184,7 +184,7 @@ Följ dessa anvisningar för att köra den programserver där AEM Forms på JEE 
    * Neka lokal inloggning
    * Logga in som tjänst (bör vara inställd)
 
-1. Ge det nya användarkontot behörigheterna Läs och kör, Lista mappinnehåll och Läs för kataloger för AEM Forms på JEE-webbinnehåll.
+1. Ge det nya användarkontot behörighet att läsa och köra, skriva, ändra, lista mappinnehåll och läsa för att slutföra AEM Forms i JEE-installationskatalogen och GDS-katalogen (Global Document Storage). Platsen för GDS-katalogen konfigureras manuellt under installationen av AEM Forms. Om platsinställningen är tom under installationen blir platsen som standard en katalog under programserverinstallationen vid [JBoss root]/server/[type]/svcnative/DocumentStorage.
 1. Starta programservern.
 
 **Inaktivera starttjänsten för Configuration Manager**
@@ -258,7 +258,7 @@ När AEM Forms på JEE är installerat konfigureras ett standardanvändarkonto f
 1. Skriv följande URL i en webbläsare:
 
    ```as3
-   https://[host name]:'port'/adminui
+   https://[host name]:[port]/adminui
    ```
 
    Standardportnumret är något av följande:
@@ -278,7 +278,7 @@ När AEM Forms på JEE är installerat konfigureras ett standardanvändarkonto f
 
 Vi rekommenderar dessutom att du ändrar standardlösenordet för CRX Administrator genom att utföra följande steg:
 
-1. Logga in `https://'[server]:[port]'/lc/libs/granite/security/content/useradmin.html` med standardanvändarnamnet/standardlösenordet.
+1. Logga in `https://[server]:[port]/lc/libs/granite/security/content/useradmin.html` med standardanvändarnamnet/standardlösenordet.
 1. Skriv Administratör i sökfältet och klicka på **Gå**.
 1. Välj **Administratör** i sökresultatet och klicka på ikonen **Redigera** längst ned till höger i användargränssnittet.
 1. Ange det nya lösenordet i fältet **Nytt lösenord** och det gamla lösenordet i fältet **Lösenord** .
@@ -291,7 +291,7 @@ WSDL-generering (Web Service Definition Language) ska endast aktiveras för utve
 1. Skriv följande URL i en webbläsare:
 
    ```as3
-   https://[host name]:'port'/adminui
+   https://[host name]:[port]/adminui
    ```
 
 1. Klicka på **Inställningar > Systeminställningar > Konfigurationer**.
@@ -373,7 +373,7 @@ På WebSphere kan du bara konfigurera integrerad säkerhet när du använder en 
 1. Välj **Start** > **Kontrollpanelen** > **Tjänster**, högerklicka på Windows-tjänsten för WebSphere (IBM WebSphere Application Server &lt;version> - &lt;node>) och välj **Egenskaper**.
 1. Klicka på fliken **Logga in** i dialogrutan Egenskaper.
 1. Välj **Det här kontot** och ange den information som krävs för att ställa in det inloggningskonto som du vill använda.
-1. Ange säkerhet på SQL Server från **blandat** läge till endast **** Windows-autentisering.
+1. Ange säkerhet på SQL Server från **blandat** läge till enbart **** Windows-autentisering.
 
 ### Skydda åtkomst till känsligt innehåll i databasen {#protecting-access-to-sensitive-content-in-the-database}
 
@@ -676,7 +676,7 @@ När du först installerar Document Services uppdateras listan över tillåtna r
 
 **Hantera listan Tillåten referent**
 
-Du kan hantera listan Tillåten referent från användarhanteringsgränssnittet i administrationskonsolen. Med användarhanteringsgränssnittet kan du skapa, redigera och ta bort listan. Se avsnittet *[Förebygga CSRF-attacker](/help/forms/using/admin-help/preventing-csrf-attacks.md)*i *administrationshjälpen*om du vill ha mer information om hur du arbetar med listan Tillåtna referenter.
+Du kan hantera listan Tillåten referent från användarhanteringsgränssnittet i administrationskonsolen. Med användarhanteringsgränssnittet kan du skapa, redigera och ta bort listan. Se avsnittet * [Förebygga CSRF-attacker](/help/forms/using/admin-help/preventing-csrf-attacks.md)* i *administrationshjälpen* för mer information om hur du arbetar med listan över tillåtna referenter.
 
 **Hantera listor över tillåtna referensundantag och tillåtna URI**
 
@@ -691,7 +691,7 @@ AEM Forms på JEE innehåller API:er för hantering av listan över tillåtna re
 * updateAllowedReferenceExceptions
 * deleteAllowedRefererExceptions
 
-Mer information om API:erna finns i *AEM Forms on JEE API Reference* .
+Mer information om API:erna finns i* AEM Forms on JEE API Reference*.
 
 Använd listan ***LC_GLOBAL_ALLOWED_REFERER_EXCEPTION*** för tillåtna referensundantag på global nivå, d.v.s. för att definiera undantag som gäller för alla program. Den här listan innehåller bara URI:er med antingen en absolut sökväg (t.ex. `/index.html`) eller en relativ sökväg (t.ex. `/sample/`). Du kan också lägga till ett reguljärt uttryck i slutet av en relativ URI, t.ex. `/sample/(.)*`.
 
@@ -711,7 +711,7 @@ Inkludera `-Dlc.um.csrffilter.disabled=true` JAVA-argumentet i startskriptet och
 
 **Referensfiltrering för anpassade WAR-filer**
 
-Du kan ha skapat anpassade WAR-filer för att arbeta med AEM Forms på JEE för att uppfylla dina affärskrav. Om du vill aktivera Referensfiltrering för dina anpassade WAR-filer inkluderar du ***adobe-usermanager-client.jar*** i klassökvägen för WAR och inkluderar en filterpost i *web.xml* -filen med följande parametrar:
+Du kan ha skapat anpassade WAR-filer för att arbeta med AEM Forms på JEE för att uppfylla dina affärskrav. Om du vill aktivera Referensfiltrering för dina anpassade WAR-filer inkluderar du ***adobe-usermanager-client.jar*** i klassökvägen för WAR och inkluderar en filterpost i filen* web.xml* med följande parametrar:
 
 **CSRF_CHECK_GETS** styr referentkontrollen på GET-begäranden. Om den här parametern inte är definierad ställs standardvärdet in på false. Ta endast med den här parametern om du vill filtrera GET-begäranden.
 
@@ -970,10 +970,11 @@ Vid installationen av nyckelord för AEM Forms på JEE skapas ett tjänstkonto s
 1. I fönstret Lokala säkerhetsinställningar, under Tilldelning av användarrättigheter, ger du följande rättigheter till användarkontot som formulärservern körs under:
 
    * Neka inloggning via Terminal Services
-   * Neka lokal inloggning
+   * Neka inloggning locallyxx
    * Logga in som tjänst (bör vara inställd)
 
-1. Ge det nya användarkontot läs- och körbehörighet, visa mappinnehåll och läsbehörighet för AEM Forms i JEE-webbinnehållskataloger.
+1. Ge det nya användarkontot behörighet att läsa och köra, skriva, ändra, lista mappinnehåll och läsa för att slutföra AEM Forms i JEE-installationskatalogen och GDS-katalogen (Global Document Storage). Platsen för GDS-katalogen konfigureras manuellt under installationen av AEM Forms. Om platsinställningen är tom under installationen blir platsen som standard en katalog under programserverinstallationen vid [JBoss root]/server/[type]/svcnative/DocumentStorage.
+
 1. Starta programservertjänsten.
 
 ### Filsystemsäkerhet {#file-system-security}
@@ -1038,4 +1039,3 @@ Ange egenskapen `directoryBrowsingEnabled` i filen ibm-web-ext.xml till `false`.
 1. Avmarkera både **Aktivera programsäkerhet** och **Använd Java 2-säkerhet**.
 1. Klicka på **OK** eller **Använd**.
 1. I rutan **Meddelanden** klickar du på **Spara direkt i huvudkonfigurationen**.
-
