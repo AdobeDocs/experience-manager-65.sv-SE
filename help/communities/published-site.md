@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: dd0cbc05-a361-46bc-b9f1-d045f8f23890
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 31a3ccc1f9f0940515ed64b1b18a535102bf7231
 
 ---
 
@@ -22,8 +22,8 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 Nu när den nyligen skapade communitywebbplatsen har publicerats bläddrar du till den URL som visas när du skapar webbplatsen, men på publiceringsservern, t.ex.
 
-* författarens URL = https://localhost:4502/content/sites/engage/en.html
-* publicerings-URL = https://localhost:4503/content/sites/engage/en.html
+* A\utvecklar-URL = https://localhost:4502/content/sites/engage/en.html
+* Publicera URL = https://localhost:4503/content/sites/engage/en.html
 
 För att minimera förvirring om vilken medlem som är inloggad på författare och publicera bör du använda olika webbläsare för varje instans.
 
@@ -69,7 +69,7 @@ Följ de här stegen för att skydda communityplatsens innehåll från anonyma a
    ![page-properties](assets/page-properties.png)
 
 1. Aktivera **autentiseringskrav**.
-1. Lägg till inloggningssidans sökväg. Till exempel **/innehåll/...... ./GetStarted**.
+1. Lägg till inloggningssidans sökväg. Till exempel **/innehåll/......./GetStarted**.
 1. Publicera sidan.
 
 ## Betrodd medlem i användargruppen {#trusted-community-member}
