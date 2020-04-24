@@ -1,16 +1,16 @@
 ---
-title: Hantera metadata för digitala resurser
-description: Lär dig mer om metadatatyperna och hur AEM Assets hjälper dig att hantera metadata för resurser så att det blir enklare att kategorisera och ordna resurser.
+title: Hantera metadata för digitala resurser i [!DNL Adobe Experience Manager].
+description: Lär dig mer om metadatatyperna och hur [!DNL Adobe Experience Manager Assets] hjälper dig att hantera metadata för resurser så att det blir enklare att kategorisera och ordna resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 ---
 
 
 # Hantera metadata för digitala resurser {#managing-metadata-for-digital-assets}
 
-Adobe Experience Manager (AEM) Assets bevarar metadata för alla resurser. Detta gör det enklare att kategorisera och organisera mediefiler och det hjälper personer som letar efter en viss mediefil. Tack vare möjligheten att extrahera metadata från filer som överförts till AEM Assets kan metadatahanteringen integreras med det kreativa arbetsflödet. Tack vare möjligheten att behålla och hantera godtyckliga metadata med dina resurser kan AEM Assets automatiskt ordna och bearbeta resurser baserat på deras metadata.
+[!DNL Adobe Experience Manager Assets] sparar metadata för varje resurs. Detta gör det enklare att kategorisera och organisera mediefiler och det hjälper personer som letar efter en viss mediefil. Tack vare möjligheten att extrahera metadata från filer som överförts till [!DNL Experience Manager Assets]kan metadatahanteringen integreras med det kreativa arbetsflödet. Med möjligheten att behålla och hantera godtyckliga metadata med dina resurser, [!DNL Experience Manager Assets] blir det möjligt att automatiskt ordna och bearbeta resurser baserat på deras metadata.
 
 * [XMP-metadata](xmp.md)
 * [Redigera eller lägga till metadata](meta-edit.md)
@@ -27,7 +27,7 @@ Metadata är samlingen av alla data som är tillgängliga för den här bilden, 
 * storleken på bilden som den sparades i databasen
 * namnet på mappen som den finns i
 
-Detta är de grundläggande metadataegenskaper som AEM kan hantera för resurser, vilket gör att användare kan se alla resurser, till exempel ordnade efter det senaste ändringsdatumet - användbart när de försöker identifiera vilka resurser som nyligen har lagts till i databasen.
+Detta är de grundläggande metadataegenskaperna som [!DNL Experience Manager] kan hantera resurser, vilket gör att användare kan se alla resurser, till exempel ordnade efter det senaste ändringsdatumet - användbart när de försöker identifiera vilka resurser som nyligen har lagts till i databasen.
 
 Du kan lägga till mer högnivådata till digitala resurser, till exempel:
 
@@ -45,7 +45,7 @@ När metadata läggs till i resurser växer resursens värde, eftersom resursen 
 * enklare att hantera - du kan hitta resurser med samma uppsättning egenskaper enklare och använda ändringar på dem
 * mer komplex - ju mer metadata du har lagt till i en resurs, desto viktigare blir det att hantera metadata
 
-Av dessa anledningar ger AEM Assets dig rätt sätt att skapa, hantera och utbyta metadata för dina digitala resurser.
+Därför har du tillgång [!DNL Assets] till rätt sätt att skapa, hantera och utbyta metadata för dina digitala resurser.
 
 ## Grundläggande om metadata {#metadata-basics}
 
@@ -62,7 +62,7 @@ Det finns två grundläggande typer av metadata:
 
 #### Tekniska metadata {#technical-metadata}
 
-Tekniska metadata är användbara för program som hanterar digitala resurser och bör inte underhållas manuellt. Tekniska metadata kan fastställas automatiskt av AEM Assets och annan programvara och kan ändras när resursen ändras. Vilka tekniska metadata som är tillgängliga för en mediefil beror till stor del på filtypen för resursen. Exempel på tekniska metadata är följande:
+Tekniska metadata är användbara för program som hanterar digitala resurser och bör inte underhållas manuellt. Tekniska metadata kan fastställas automatiskt av [!DNL Experience Manager Assets] och andra program och kan ändras när resursen ändras. Vilka tekniska metadata som är tillgängliga för en mediefil beror till stor del på filtypen för resursen. Exempel på tekniska metadata är följande:
 
 * en fils storlek
 * bildens mått (höjd och bredd)
@@ -75,7 +75,7 @@ Beskrivande metadata är metadata som rör programdomänen, till exempel det fö
 
 På grund av den höga kostnaden för manuell insats som krävs för att skapa beskrivande metadatainformation har standarder upprättats för att underlätta utbyte av metadata mellan olika programsystem och organisationer.
 
-AEM Assets stöder alla relevanta standarder för metadatahantering.
+[!DNL Experience Manager Assets] stöder alla relevanta standarder för metadatahantering.
 
 Eftersom metadata är så viktiga och det krävs mycket manuellt arbete för att skapa metadata har standarder fastställts som gör det enklare att utbyta.
 
@@ -83,14 +83,14 @@ Eftersom metadata är så viktiga och det krävs mycket manuellt arbete för att
 
 Det finns flera olika sätt att bädda in metadata i filer. Ett urval kodningsstandarder stöds:
 
-* XMP: som används av AEM Resurser för att lagra extraherade metadata i databasen.
+* XMP: används av [!DNL Assets] för att lagra extraherade metadata i databasen.
 * ID3: för ljud- och videofiler.
 * EXIF: för bildfiler.
 * Annat/äldre: från Microsoft Word, PowerPoint, Excel och så vidare.
 
 #### XMP {#xmp}
 
-XMP betyder Extensible Metadata Platform och är den metadatastandard som används av AEM Assets för all metadatahantering. XMP erbjuder universell metadatakodning som kan bäddas in i alla filformat, och erbjuder en innehållsmodell som stöds av Adobe och andra företag, så att användare av XMP i kombination med AEM Assets har en kraftfull plattform att bygga vidare på.
+XMP betyder Extensible Metadata Platform och är den metadatastandard som används av [!DNL Experience Manager Assets] för all metadatahantering. XMP erbjuder universell metadatakodning som kan bäddas in i alla filformat, och erbjuder en innehållsmodell som stöds av Adobe och andra företag, så att användare av XMP i kombination med [!DNL Experience Manager Assets] en kraftfull plattform kan bygga vidare på.
 
 #### ID3 {#id}
 
@@ -110,11 +110,11 @@ EXIF betyder Utbytbart bildfilformat och är det vanligaste metadataformatet som
 
 En stor begränsning för EXIF är att det inte stöds av andra populära bildfilformat som BMP, GIF eller PNG.
 
-EXIF lagrar metadata som par av ett metadatanamn och ett metadatavärde. Dessa metadata name-value-pars kallas också taggar, som inte ska blandas ihop med taggningen i AEM.
+EXIF lagrar metadata som par av ett metadatanamn och ett metadatavärde. Dessa metadata name-value-pars kallas också taggar, som inte ska blandas ihop med taggarna i [!DNL Experience Manager].
 
 Eftersom EXIF automatiskt skapas av moderna digitalkameror och stöds av moderna grafikprogram, kan det ses som den lägsta gemensamma nämnaren för metadatahantering.
 
-De flesta metadatafält som definieras av EXIF är av mycket teknisk karaktär och har begränsad användning för beskrivande metadatahantering. Av den anledningen erbjuder AEM Assets mappning av EXIF-egenskaper till [vanliga metadatamatchningar](metadata-schemas.md) och till [XMP](xmp-writeback.md), det kraftfulla metadataformatet som AEM Assets använder för metadatahantering.
+De flesta metadatafält som definieras av EXIF är av mycket teknisk karaktär och har begränsad användning för beskrivande metadatahantering. Därför erbjuder mappning av EXIF-egenskaper till [!DNL Assets] vanliga metadatamatchningar [och till](metadata-schemas.md) XMP [, det kraftfulla metadataformatet](xmp-writeback.md)[!DNL Assets] som används för metadatahantering.
 
 #### Andra metadata {#other-metadata}
 
@@ -126,7 +126,7 @@ Metadata-scheman är fördefinierade uppsättningar metadata-egenskapsdefinition
 
 Du kan också utforma egna metadatamappningar om det inte finns några som passar dina behov (var försiktig, men inte med att duplicera något som redan finns). Inom en organisation blir det enklare att dela metadata mellan olika organisationer.
 
-Med AEM får du en färdig lista över de vanligaste metadatamappningarna så att du snabbt kan komma igång med din metadatastrategi och välja de metadataegenskaper du behöver från ett redan definierat schema.
+[!DNL Experience Manager] innehåller en färdig lista med de vanligaste metadatamappningarna, så att du snabbt kan komma igång med metadatastrategin och välja de metadataegenskaper du behöver från ett redan definierat schema.
 
 De metadatamodeller som stöds visas i följande avsnitt.
 
@@ -149,8 +149,8 @@ De metadatamodeller som stöds visas i följande avsnitt.
 
 * cd-see - metadata hanteras av ACDSee-programmet [www.acdsee.com/](https://www.acdsee.com/)
 * album - Adobe Photoshop Album
-* cq - används av AEM Assets
-* dam - används av AEM Assets
+* cq - används av [!DNL Experience Manager Assets]
+* dam - används av [!DNL Experience Manager Assets]
 * dex - Optima SC Description Explorer
 * crs - Adobe Photoshop Camera Raw
 * lr - Adobe Lightroom
