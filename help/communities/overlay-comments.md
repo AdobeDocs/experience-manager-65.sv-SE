@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 502c0916-6c54-440c-be8c-eae56001fa26
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70e6f2d8366456e5091b7b775dc40914948921ab
+source-git-commit: 48afa2146d0dcbab4beaa1044645c269b49fd7ff
 
 ---
 
@@ -36,7 +36,7 @@ Om du vill lägga över kommentarer måste du:
 
 Anta att du vill anpassa meddelandet med e-postmeddelanden genom att [täcka över](/help/communities/client-customize.md#overlays) mallarna på **/libs/settings/community/templates/email/html**.
 
-Om du till exempel vill ändra meddelandena om omnämnanden (för en specifik communitykomponent där ugc skapas) lägger du till ett** if **condition for verb **mention** i mallarna för de komponenter som du aktiverade stödet för **@mentions** .
+Om du till exempel vill ändra meddelandena om omnämnanden (för en specifik communitykomponent där ugc skapas) lägger du till ett **if** -villkor för verb- **omnämnande** i mallarna för de komponenter som du har aktiverat stödet för **@omnämns** .
 
 ```java
 {{#equals this.verb "mention"}}\
@@ -44,4 +44,4 @@ Om du till exempel vill ändra meddelandena om omnämnanden (för en specifik co
 {{/equals}}\
 ```
 
-Om du vill ändra e-postmeddelandemallen för @mention i bloggkommentarer placerar du ut mallen utanför rutan på: **/libs/settings/community/templates/email/html/social.journal.components.hbs.comment/en**
+Om du vill ändra e-postmeddelandemallen för @mention i bloggkommentarer placerar du ut mallen utanför rutan på: `/libs/settings/community/templates/email/html/social.journal.components.hbs.comment/en`
