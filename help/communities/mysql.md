@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 9222bc93-c231-4ac8-aa28-30d784a4ca3b
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: f7e5afe46100db7837647ac89aaf58cf101143b0
 
 ---
 
@@ -25,12 +25,12 @@ Dessa instruktioner beskriver hur du ansluter till MySQL-servern, skapar aktiver
 
 Innan du konfigurerar aktiveringsfunktionen i MySQL för Communities måste du se till att
 
-* Installera [MySQL server](https://dev.mysql.com/downloads/mysql/) Community Server version 5.6
-   * Version 5.7 stöds inte för SCORM
-   * Kan vara samma server som författarens AEM-instans
-* Installera den officiella [JDBC-drivrutinen för MySQL på alla AEM-instanser](deploy-communities.md#jdbc-driver-for-mysql)
-* Installera [MySQL Workbench](https://dev.mysql.com/downloads/tools/workbench/)
-* Installera [SCORM-paketet på alla AEM-instanser](enablement.md#scorm)
+* Installera [MySQL server](https://dev.mysql.com/downloads/mysql/) Community Server version 5.6:
+   * Version 5.7 stöds inte för SCORM.
+   * Kan vara samma server som författarens AEM-instans.
+* Installera den officiella [JDBC-drivrutinen för MySQL](deploy-communities.md#jdbc-driver-for-mysql)på alla AEM-instanser.
+* Installera [MySQL Workbench](https://dev.mysql.com/downloads/tools/workbench/).
+* Installera [SCORM-paketet](enablement.md#scorm)på alla AEM-instanser.
 
 ## Installerar MySQL {#installing-mysql}
 
@@ -43,22 +43,19 @@ Eftersom SQL inte är skiftlägeskänsligt måste du, för skiftlägeskänsliga 
 Om du till exempel vill ange alla tabellnamn med gemener i ett Linux-operativsystem:
 
 * Redigera fil `/etc/my.cnf`
-* Lägg till följande rad i `[mysqld]` avsnittet:
-   `lower_case_table_names = 1`
+* Lägg till följande rad i `[mysqld]` avsnittet: `lower_case_table_names = 1`
 
 ### UTF8-teckenuppsättning {#utf-character-set}
 
 För att få bättre stöd för flera språk måste du använda teckenuppsättningen UTF8.
 
 Ändra MySQL till att ha UTF8 som teckenuppsättning:
-* mysql> SET NAMES &#39;utf8&#39;;
+* mysql > SET NAME &#39;utf8&#39;;
 
 Ändra MySQL-databasen till standard till UTF8:
 * Redigera fil `/etc/my.cnf`
-* Lägg till följande rad i `[client]` avsnittet:
-   `default-character-set=utf8`
-* Lägg till följande rad i `[mysqld]` avsnittet:
-   `character-set-server=utf8`
+* Lägg till följande i `[client]` avsnittet: `default-character-set=utf8`
+* Lägg till följande i `[mysqld]` avsnittet: `character-set-server=utf8`
 
 ## Installerar MySQL Workbench {#installing-mysql-workbench}
 
@@ -82,12 +79,11 @@ När MySQL Workbench startas första gången visas inga anslutningar, såvida de
    * Användarnamn: `root`
    * Lösenord: `no password by default`
    * Standardschema: `leave blank`
-1. Välj `Test Connection` för att verifiera anslutningen till den MySQL-tjänst som körs
+1. Välj `Test Connection` för att verifiera anslutningen till den MySQL-tjänst som körs.
 
 **Anteckningar**:
-
-* Standardporten är `3306`
-* Det `Connection Name` valda namnet anges som `datasource` namn i [JDBC OSGi-konfiguration](#configure-jdbc-connections)
+* Standardporten är `3306`.
+* Det `Connection Name` valda namnet anges som `datasource` namn i [JDBC OSGi-konfigurationen](#configure-jdbc-connections).
 
 #### Anslutningen lyckades {#successful-connection}
 
@@ -107,7 +103,7 @@ Observera att det finns ett testschema och standardanvändarkonton när du öppn
 
 SQL-skripten hämtas med CRXDE Lite på författarinstansen. SCORM- [paketet](deploy-communities.md#scorm) måste vara installerat:
 
-1. Bläddra till CRXDE Lite
+1. Bläddra till CRXDE Lite:
    * Till exempel [http://localhost:4502/crx/de](http://localhost:4502/crx/de)
 1. Expandera `/libs/social/config/scorm/` mappen
 1. Hämta `database_scormengine.sql`
@@ -117,9 +113,9 @@ SQL-skripten hämtas med CRXDE Lite på författarinstansen. SCORM- [paketet](de
 
 En metod för att hämta schemat är att
 
-* Markera `jcr:content`noden för SQL-filen
-* Observera att värdet för `jcr:data`egenskapen är en visningslänk
-* Markera vylänken om du vill spara data i en lokal fil
+* Markera `jcr:content`noden för sql-filen.
+* Observera att värdet för `jcr:data`egenskapen är en visningslänk.
+* Klicka på vylänken om du vill spara data i en lokal fil.
 
 ### Skapa SCORM-databas {#create-scorm-database}
 
@@ -134,7 +130,7 @@ Installera schemat innan du installerar data.
 
 >[!CAUTION]
 >
->Om databasnamnet ändras måste du ange det korrekt i
+>Om databasnamnet ändras måste du ange det korrekt i:
 >
 >* [JDBC-konfiguration](#configure-jdbc-connections)
 >* [SCORM-konfiguration](#configure-scorm)
@@ -164,13 +160,13 @@ Observera att körningen av skriptet för att skapa SCORM-databasen kan ta en mi
 
 #### Uppdatera {#refresh}
 
-När skripten har körts måste du uppdatera `SCHEMAS`avsnittet i `Navigator` för att kunna se den nya databasen. Använd uppdateringsikonen till höger om SCHEMAS:
+När skripten har körts måste du uppdatera `SCHEMAS` avsnittet i `Navigator` för att kunna se den nya databasen. Använd uppdateringsikonen till höger om SCHEMAS:
 
 ![chlimage_1-334](assets/chlimage_1-334.png)
 
 #### Resultat: scormenginedb {#result-scormenginedb}
 
-När du har installerat och uppdaterat SCHEMAS visas **`scormenginedb`**.
+När du har installerat och uppdaterat SCHEMAS `scormenginedb` visas den.
 
 ![chlimage_1-335](assets/chlimage_1-335.png)
 
@@ -193,11 +189,11 @@ När MySQL körs på en annan server än AEM måste serverns värdnamn anges i s
 
 * Ange följande värden:
    * **[!UICONTROL JDBC-drivrutinsklass]**: `com.mysql.jdbc.Driver`
-   * **URIJ **för DBC-anslutning:`jdbc:mysql://localhost:3306/aem63reporting`ange server i stället för localhost om MySQL-servern inte är samma som den här AEM-servern
-   * **[!UICONTROL Användarnamn]**: Rot eller ange det konfigurerade användarnamnet för MySQL-servern, om inte &#39;root&#39;
-   * **[!UICONTROL Lösenord]**: Rensa det här fältet om inget lösenord har angetts för MySQL, annars anger du det konfigurerade lösenordet för MySQL-användarnamnet
-   * **[!UICONTROL Datakällans namn]**: Namn som angetts för [MySQL-anslutningen](#new-connection-settings), till exempel &#39;enablement&#39;
-* Välj **[!UICONTROL Spara]**
+   * **URIJ **för DBC-anslutning:`jdbc:mysql://localhost:3306/aem63reporting`Ange server i stället för localhost om MySQL-servern inte är densamma som &#39;this&#39; AEM-servern.
+   * **[!UICONTROL Användarnamn]**: Rotera eller ange det konfigurerade användarnamnet för MySQL-servern, om inte &#39;root&#39;.
+   * **[!UICONTROL Lösenord]**: Avmarkera det här fältet om inget lösenord har angetts för MySQL, annars anger du det konfigurerade lösenordet för MySQL-användarnamnet.
+   * **[!UICONTROL Datakällans namn]**: Namn som angetts för [MySQL-anslutningen](#new-connection-settings), till exempel &#39;enablement&#39;.
+* Välj **[!UICONTROL Spara]**.
 
 ## Konfigurera korm {#configure-scorm}
 
@@ -225,21 +221,22 @@ När MySQL körs på en annan server än AEM, måste serverns värdnamn anges i 
 * Angående följande parameter:
    * **[!UICONTROL Lösenord]**: REDIGERA INTE
 
-      Endast för internt bruk. Den är avsedd för en särskild serviceanvändare som används av AEM Communities för att kommunicera med scorm-motorn.
+      Endast för intern användning: Den är avsedd för en särskild serviceanvändare som används av AEM Communities för att kommunicera med scorm-motorn.
 * Välj **[!UICONTROL Spara]**
 
 ### Adobe Granite CSRF-filter {#adobe-granite-csrf-filter}
 
 För att se till att aktiveringskurser fungerar korrekt i alla webbläsare måste Mozilla läggas till som en användaragent som inte är markerad av CSRF-filtret.
 
-* På varje publicerad AEM-instans
-* Inloggad med administratörsbehörighet
+* Logga in på AEM-publiceringsinstansen med administratörsbehörighet.
 * Åtkomst till [webbkonsolen](../../help/sites-deploying/configuring-osgi.md)
    * Till exempel [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
-* Sök `Adobe Granite CSRF Filter`
-* Markera redigeringsikonen
-   ![chlimage_1-337](assets/chlimage_1-338.png)
-* Välj `[+]` ikonen för att lägga till en säker användaragent
-* Enter `Mozilla/*`
-* Välj **[!UICONTROL Spara]**
+* Hitta `Adobe Granite CSRF Filter`.
+* Välj redigeringsikonen.
+
+   ![chlimage_1-338](assets/chlimage_1-338.png)
+
+* Välj `[+]` ikonen om du vill lägga till en säker användaragent.
+* Enter `Mozilla/*`.
+* Välj **[!UICONTROL Spara]**.
 
