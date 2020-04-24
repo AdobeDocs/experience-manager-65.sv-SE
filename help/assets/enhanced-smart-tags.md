@@ -3,7 +3,7 @@ title: Förbättrade smarta taggar
 description: Förbättrade smarta taggar
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
+source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 ---
 
@@ -44,7 +44,7 @@ Innan du kan använda tjänsten Smart Content måste du se till att följande ä
 
 ## Onboarding {#onboarding}
 
-Tjänsten Smart Content Service kan köpas som tillägg till Experience Manager. När du har köpt produkten skickas ett e-postmeddelande till administratören för organisationen med en länk till Adobe IO.
+Tjänsten Smart Content Service kan köpas som tillägg till Experience Manager. När du har köpt produkten skickas ett e-postmeddelande med en länk till Adobe I/O till administratören för organisationen.
 
 Administratören kan följa länken för att integrera Smart Content Service med Experience Manager. Information om hur du integrerar tjänsten med Experience Manager Assets finns i [Konfigurera smarta taggar](config-smart-tagging.md).
 
@@ -64,7 +64,7 @@ Lägg till resurserna i en mapp och använd taggarna på varje resurs från egen
 
 >[!NOTE]
 >
->1. Utbildning är en oåterkallelig process. Adobe rekommenderar att du granskar taggarna i den välstrukturerade resursuppsättningen innan du utbildar Smart Content Service på taggarna.
+>1. Utbildning är en oåterkallelig process. Adobe rekommenderar att du granskar taggarna i den välstrukturerade resursuppsättningen innan du utbildar Smart Content Service om taggarna.
 >1. Läs utbildningsriktlinjerna [för](smart-tags-training-guidelines.md) Smart Content Service innan du påbörjar utbildning för någon tagg.
 >1. När du utbildar Smart Content Service för första gången rekommenderar Adobe att du utbildar den på minst två distinkta taggar.
 
