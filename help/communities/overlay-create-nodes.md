@@ -10,22 +10,23 @@ topic-tags: developing
 content-type: reference
 discoiquuid: cd4f53ee-537b-4f10-a64f-474ba2c44576
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48afa2146d0dcbab4beaa1044645c269b49fd7ff
 
 ---
 
 
 # Skapa noder {#create-nodes}
 
-Täck över kommentarsystemet med en anpassad version genom att kopiera det minsta antalet filer som behövs från /libs till /apps och ändra dem i /apps.
+Täck över kommentarsystemet med en anpassad version genom att kopiera så få filer som behövs från `/libs` till `/apps` och ändra dem i `/apps`.
 
 >[!CAUTION]
 >
 >Innehållet i mappen /libs redigeras aldrig eftersom ominstallation eller uppgradering kan ta bort eller ersätta mappen /libs medan innehållet i mappen /apps lämnas orört.
 
+
 Om du använder [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) på en författarinstans börjar du med att skapa en sökväg i mappen /apps som är identisk med sökvägen till de övertäckta komponenterna i mappen /libs.
 
-Sökvägen som dupliceras är
+Sökvägen som dupliceras är:
 
 * `/libs/social/commons/components/hbs/comments/comment`
 
@@ -37,7 +38,7 @@ Vissa noder i sökvägen är mappar och andra är komponenter.
    * **[!UICONTROL Skapa > Mapp ...]**
       * Ange namn: `social`
 1. Markera `social` nod
-   * **[!UICONTROL Skapa > Mapp...]**
+   * **[!UICONTROL Skapa]** > **[!UICONTROL Mapp...]**
       * Ange namn: `commons`
 1. Markera `commons` nod
    * **[!UICONTROL Skapa > Mapp...]**
@@ -46,7 +47,7 @@ Vissa noder i sökvägen är mappar och andra är komponenter.
    * **[!UICONTROL Skapa > Mapp..]**.
       * Ange namn: `hbs`
 1. Markera `hbs` nod
-   * **[!UICONTROL Skapa > Skapa komponent...]**
+   * **[!UICONTROL Skapa]** > **[!UICONTROL Skapa komponent...]**
       * Ange etikett: `comments`
       * Ange titel: `Comments`
       * Ange beskrivning: `List of comments without showing avatars`
@@ -74,7 +75,7 @@ Vissa noder i sökvägen är mappar och andra är komponenter.
 
 >[!NOTE]
 >
->För att bevara arvskedjan anges `Super Type` (egenskapen `sling:resourceSuperType`) för överläggskomponenterna till samma värde som `Super Type` för komponenterna som överlappas, i det här fallet
+>För att bevara arvskedjan anges `Super Type` (egenskapen `sling:resourceSuperType`) för överläggskomponenterna till samma värde som `Super Type` för de komponenter som ska täckas, i det här fallet:
 >
 >* `social/commons/components/comments`
 >* `social/commons/components/comments/comment`
