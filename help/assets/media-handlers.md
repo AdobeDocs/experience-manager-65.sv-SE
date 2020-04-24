@@ -3,7 +3,7 @@ title: Bearbeta resurser med mediehanterare och arbetsflöden
 description: Lär dig mer om mediehanterarna och hur du använder arbetsflöden för att utföra uppgifter i dina digitala resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b600e5eaf7c61568f2559b3fb4915d433f5e13bf
+source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 ---
 
@@ -51,7 +51,7 @@ Så här visar du de aktiva mediehanterarna:
 
 1. Navigera till i webbläsaren `http://localhost:4502/system/console/components`.
 1. Klicka på `com.day.cq.dam.core.impl.store.AssetStoreImpl`.
-1. En lista med alla aktiva mediehanterare visas. Exempel:
+1. En lista med alla aktiva mediehanterare visas. Till exempel:
 
 ![chlimage_1-437](assets/chlimage_1-437.png)
 
@@ -72,7 +72,7 @@ Mediehanterarna kan inaktiveras eller aktiveras via webbhanteringskonsolen för 
 Så här aktiverar/inaktiverar du en mediehanterare:
 
 1. Navigera till i webbläsaren `https://<host>:<port>/system/console/components`.
-1. Klicka på **[!UICONTROL Inaktivera]** bredvid namnet på mediehanteraren. Exempel: `com.day.cq.dam.handler.standard.mp3.Mp3Handler`.
+1. Klicka på **[!UICONTROL Inaktivera]** bredvid namnet på mediehanteraren. Till exempel: `com.day.cq.dam.handler.standard.mp3.Mp3Handler`.
 1. Uppdatera sidan: en ikon visas bredvid mediehanteraren som anger att den är inaktiverad.
 1. Om du vill aktivera mediehanteraren klickar du på **[!UICONTROL Aktivera]** bredvid namnet på mediehanteraren.
 
@@ -476,7 +476,7 @@ Installera först ImageMagick på disken som är värd för AEM-servern:
 
    >[!NOTE]
    >
-   >I vissa versioner av Windows (till exempel Windows SE) kanske inte kommandot convert körs eftersom det står i konflikt med det inbyggda konverteringsverktyget som ingår i Windows-installationen. I det här fallet anger du den fullständiga sökvägen för verktyget ImageMagick som används för att konvertera bildfiler till miniatyrer. Exempel, `"C:\Program Files\ImageMagick-6.8.9-Q16\convert.exe" -define jpeg:size=319x319 ${filename} -thumbnail 319x319 cq5dam.thumbnail.319.319.png`.
+   >I vissa versioner av Windows (till exempel Windows SE) kanske inte kommandot convert körs eftersom det står i konflikt med det inbyggda konverteringsverktyget som ingår i Windows-installationen. I det här fallet anger du den fullständiga sökvägen för verktyget ImageMagick som används för att konvertera bildfiler till miniatyrer. Till exempel, `"C:\Program Files\ImageMagick-6.8.9-Q16\convert.exe" -define jpeg:size=319x319 ${filename} -thumbnail 319x319 cq5dam.thumbnail.319.319.png`.
 
 1. Om du vill se om verktyget fungerar som det ska lägger du till en JPG-bild i arbetskatalogen och kör kommandot convert `<image-name>.jpg -flip <image-name>-flipped.jpg` på kommandoraden.
 
@@ -496,7 +496,7 @@ Then, add the command line process step to the **[!UICONTROL DAM Update Asset]**
 
 Om du vill testa det ändrade arbetsflödet lägger du till en resurs i `/content/dam`.
 
-1. Hämta en tiff-bild i filsystemet. Byt namn på filen till `myImage.tiff` och kopiera den till, `/content/dam`till exempel med hjälp av WebDAV.
+1. Hämta en TIFF-bild i filsystemet. Byt namn på filen till `myImage.tiff` och kopiera den till, `/content/dam`till exempel med hjälp av WebDAV.
 1. Gå till **[!UICONTROL CQ5 DAM]** -konsolen, till exempel `http://localhost:4502/libs/wcm/core/content/damadmin.html`.
 1. Öppna resursen **[!UICONTROL myImage.tiff]** och kontrollera att den vända bilden och de tre miniatyrbilderna har skapats.
 
@@ -516,7 +516,7 @@ Om till exempel ImageMagick är installerat på den disk som är värd för AEM-
 
 `mime:image/gif,mime:image/tiff,tn:140:100,tn:48:48,tn:10:250,cmd:convert ${directory}/${filename} -flip ${directory}/${basename}.flipped.jpg`
 
-När arbetsflödet körs gäller steget endast resurser som har bild/gif eller mime:image/tiff som mime-types, skapar det en vänd bild av originalet, konverterar den till .jpg och skapar tre miniatyrbilder med måtten: 140x100, 48x48 och 10x250.
+När arbetsflödet körs gäller steget endast resurser som har `image/gif` eller `mime:image/tiff` som `mime-types`skapas en bild som vänds av originalet, konverteras till JPG och tre miniatyrbilder med följande dimensioner skapas: 140x100, 48x48 och 10x250.
 
 Använd följande [!UICONTROL processargument] för att skapa de tre standardminiatyrbilderna med ImageMagick:
 
