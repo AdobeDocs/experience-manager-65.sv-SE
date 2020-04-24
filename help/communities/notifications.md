@@ -11,40 +11,40 @@ content-type: reference
 discoiquuid: ab9088b7-a691-4153-ac82-1e8c0a19ed5d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 22e853ecaf2696c7329a81bb9d375b1dbc74452c
 
 ---
 
 
-# Communities-meddelanden{#communities-notifications}
+# Communities-meddelanden {#communities-notifications}
 
 ## Översikt {#overview}
 
 AEM Communities tillhandahåller ett meddelandeavsnitt som visar händelser av intresse för den signerade communitymedlemmen.
 
-Meddelanden liknar [aktiviteter](/help/communities/essentials-activities.md) och [prenumerationer](/help/communities/subscriptions.md) eftersom de kan vara ett resultat av
+Meddelanden liknar [aktiviteter](/help/communities/essentials-activities.md) och [prenumerationer](/help/communities/subscriptions.md) eftersom de kan härröra från:
 
-* Medlemmen publicerar innehåll
-* medlemmen väljer att följa en annan medlem
-* medlemmen väljer att följa specifika ämnen, artiklar och andra trådar med innehåll
-* medlemstaggning (@mention) en annan community-medlem i ett användargenererat innehåll
+* Medlemmens bokföringsinnehåll.
+* Medlemmen väljer att följa en annan medlem.
+* Medlemmen väljer att följa specifika ämnen, artiklar och andra innehållstrådar.
+* Medlemstaggningen (@mention) för en annan community-medlem i ett innehåll som skapats av en användare.
 
-Det som skiljer meddelanden från aktiviteter och prenumerationer är
+Det som skiljer meddelanden från aktiviteter och prenumerationer är:
 
-* en länk till meddelandeavsnittet alltid finns i en communitysajts rubrik
+* En länk till meddelandeavsnittet finns alltid i en communitysajts rubrik:
 
-   * aktiviteter kräver att [aktivitetsströmfunktionen](/help/communities/functions.md#activity-stream-function) inkluderas i communityplatsens struktur
-   * prenumerationer kräver [konfigurering av e-post](/help/communities/email.md)
+   * Aktiviteter kräver att [aktivitetsströmsfunktionen](/help/communities/functions.md#activity-stream-function) inkluderas i communityplatsens struktur.
+   * Prenumerationer kräver [konfigurering av e-post](/help/communities/email.md).
 
-* implementeringen av meddelanden sker via skalbara och anslutningsbara kanaler
+* Implementeringen av meddelanden sker via skalbara och anslutningsbara kanaler:
 
-   * aktiviteter är bara tillgängliga på webben
-   * prenumerationer är bara tillgängliga via e-post
+   * Aktiviteter är bara tillgängliga på webben.
+   * Prenumerationer är bara tillgängliga via e-post.
 
-Från och med Communities [FP1](/help/communities/deploy-communities.md#latestfeaturepack)är de tillgängliga meddelandekanalerna
+Från och med Communities [FP1](/help/communities/deploy-communities.md#latestfeaturepack)är de tillgängliga meddelandekanalerna:
 
-* webbkanalen, som du kommer åt via `Notifications` länken
-* e-postkanalen, tillgänglig när e-post har konfigurerats korrekt
+* Webbkanalen som du kommer åt via `Notifications` länken.
+* E-postkanalen, som är tillgänglig när e-post har konfigurerats korrekt.
 
 Framtida kanaler är mobila och stationära.
 
@@ -60,30 +60,30 @@ Instruktioner om hur du konfigurerar e-post finns i [Konfigurera e-post](/help/c
 
 Komponenter måste konfigureras för att aktivera följande. Funktioner som tillåter följande är [blogg](/help/communities/blog-feature.md), [forum](/help/communities/forum.md), [QnA](/help/communities/working-with-qna.md), [kalender](/help/communities/calendar.md), [filbibliotek](/help/communities/file-library.md)[](/help/communities/comments.md)och¥comments.
 
-Observera att
+**Obs**:
 
-* komponenter som används i [communitymallar](/help/communities/sites.md) och [gruppmallar](/help/communities/tools-groups.md) kan redan vara konfigurerade för att tillåta följande
+* Komponenter som används i [communitymallar](/help/communities/sites.md) och [gruppmallar](/help/communities/tools-groups.md) kanske redan är konfigurerade att följa efter.
 
-* medlemsprofiler är redan konfigurerade så att andra medlemmar kan följa
+* Medlemsprofiler är redan konfigurerade så att andra medlemmar kan följa efter.
 
 ## Meddelanden från följande {#notifications-from-following}
 
 ![chlimage_1-243](assets/chlimage_1-243.png)
 
-Med knappen **Följ **gör du det möjligt att följa inmatningar som aktiviteter, prenumerationer och/eller meddelanden. Varje gång **Följ **knappen är markerad går det att aktivera eller inaktivera en markering. Markeringen visas bara när den är konfigurerad. `Email Subscriptions`
+Med knappen **[!UICONTROL Följ]** kan du följa inmatningar som aktiviteter, prenumerationer och/eller meddelanden. Varje gång knappen **[!UICONTROL Följ]** är markerad går det att aktivera eller inaktivera en markering. Markeringen visas bara när den är konfigurerad. `Email Subscriptions`
 
-Om någon av följande metoder är markerad ändras texten för knappen till **Följ**. Du kan välja `Unfollow All` att inaktivera alla metoder.
+Om någon av följande metoder är markerad ändras texten för knappen till **[!UICONTROL Följ]**. Du kan välja `Unfollow All` att inaktivera alla metoder.
 
-Knappen **Följ **visas
+Knappen **[!UICONTROL Följ]** visas:
 
-* när du visar en annan medlems profil
-* på en huvudfunktionssida, t.ex. forum, QnA och bloggar
+* När en annan medlems profil visas.
+* På en huvudfunktionssida, till exempel forum, QnA och bloggar:
 
-   * följer all aktivitet för den allmänna funktionen
+   * Följer alla aktiviteter för den allmänna funktionen.
 
-* för ett visst inlägg, t.ex. ett forumämne, en QnA-fråga eller en bloggartikel
+* För ett visst inlägg, t.ex. ett forumämne, en QnA-fråga eller en bloggartikel:
 
-   * följer all aktivitet för den specifika posten
+   * Följer all aktivitet för den specifika posten.
 
 ## Hantera meddelandeinställningar {#managing-notification-settings}
 
@@ -123,7 +123,7 @@ När e-postkanalen är aktiverad får medlemmen ett e-postmeddelande som innehå
 
 Organisationer kan anpassa e-postmeddelandena genom att [täcka över](/help/communities/client-customize.md#overlays) mallarna på **/libs/settings/community/templates/email/html**.
 
-Om du till exempel vill ändra omnämnanden i e-postmeddelanden (för en communitykomponent) lägger du till ett** if **condition for verb **mention** i mallarna för de komponenter som du aktiverade stödet för **@mentions** .
+Om du till exempel vill ändra omnämns e-postmeddelanden (för en community-komponent) lägger du till ett **if** -villkor för verb- **omnämnande** i mallarna för de komponenter som du aktiverade stödet för **@omnämns** .
 
 Om du vill ändra e-postmeddelandemallen för @mention i bloggkommentarer placerar du ut mallen utanför rutan på: **/libs/settings/community/templates/email/html/social.journal.components.hbs.comment/en**
 
