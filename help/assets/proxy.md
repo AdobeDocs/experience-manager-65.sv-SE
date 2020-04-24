@@ -3,7 +3,7 @@ title: Proxyutveckling för resurser
 description: En proxy är en AEM-instans som använder proxyarbetare för att bearbeta jobb. Lär dig hur du konfigurerar en AEM-proxy, åtgärder som stöds, proxykomponenter och hur du utvecklar en anpassad proxyarbetare.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 ---
 
