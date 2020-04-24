@@ -3,7 +3,7 @@ title: Konfigurera resurstaggning med hjälp av Smart Content Service
 description: Lär dig hur du konfigurerar smart taggning och förbättrad smart taggning i AEM med hjälp av Smart Content Service.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
+source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 ---
 
@@ -12,7 +12,7 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 Du kan integrera Adobe Experience Manager (AEM) med Smart Content Service med hjälp av Adobe I/O. Använd den här konfigurationen för att komma åt tjänsten Smart Content från AEM.
 
-Artikeln innehåller information om följande viktiga uppgifter som krävs för att konfigurera tjänsten Smart Content. I bakänden autentiserar AEM-servern dina inloggningsuppgifter med Adobe IO-gatewayen innan din begäran vidarebefordras till Smart Content Service.
+Artikeln innehåller information om följande viktiga uppgifter som krävs för att konfigurera tjänsten Smart Content. I bakänden autentiserar AEM-servern dina inloggningsuppgifter med Adobe I/O-gatewayen innan din begäran vidarebefordras till Smart Content Service.
 
 * Skapa en konfiguration för Smart Content Service i AEM för att generera en offentlig nyckel. Hämta ett offentligt certifikat för OAuth-integrering.
 * Skapa en integrering i Adobe I/O och överför den genererade publika nyckeln.
@@ -26,7 +26,7 @@ Innan du kan använda tjänsten Smart Content måste du se till att följande ä
 * Ett Adobe ID-konto som har administratörsbehörighet för organisationen.
 * Tjänsten Smart Content Service är aktiverad för din organisation.
 
-## Hämta offentligt certifikat {#obtain-public-certificate}
+## Hämta ett offentligt certifikat {#obtain-public-certificate}
 
 Med ett offentligt certifikat kan du autentisera din profil på Adobe I/O.
 
@@ -66,7 +66,7 @@ När certifikatet upphör att gälla är det inte längre tillförlitligt. Följ
 1. Om du vill hämta ett offentligt certifikat klickar du på **[!UICONTROL Hämta offentligt certifikat för OAuth-integrering]**.
 1. Gå till [https://console.adobe.io](https://console.adobe.io) och navigera till de befintliga tjänsterna för smart innehåll på **[!UICONTROL integreringssidan]** . Överför det nya certifikatet. Mer information finns i anvisningarna i [Skapa Adobe I/O-integrering](#create-adobe-i-o-integration).
 
-## Skapa Adobe I/O-integration {#create-adobe-i-o-integration}
+## Skapa en Adobe I/O-integrering{#create-adobe-i-o-integration}
 
 Om du vill använda API:er för tjänsten Smart Content Service skapar du en integrering i Adobe I/O för att generera API-nyckel, ID för tekniskt konto, organisations-ID och klienthemlighet.
 
