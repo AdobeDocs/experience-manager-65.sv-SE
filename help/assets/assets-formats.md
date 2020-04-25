@@ -3,7 +3,7 @@ title: Format som stöds för resurser
 description: Lista över filformat som stöds av AEM Assets och Dynamic Media samt funktioner som stöds för varje format.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5304d956161ee7edce2ad5c058eec3ac7e200abf
+source-git-commit: 7dd295a8da986c019d2ae7ea6be237eeb860ab80
 
 ---
 
@@ -137,7 +137,7 @@ DO NOT PUBLISH THIS TABLE -- Removing it as it got malformed during GitHub migra
 -->
 
 | Format | Lagring | [Metadatahantering](metadata.md) | Extrahering av fulltext<br> | [Extrahering av metadata](metadata.md) | Generering av miniatyrbilder<br> | [Extrahering av deltillgångar](managing-linked-subassets.md) | [Återskrivning av metadata](xmp-writeback.md) | [Anslutna resurser](use-assets-across-connected-assets-instances.md) |
-|---|---|---|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|---|
 | [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ |  | ✓ | ✓ | ✓ | ✓ |  |
 | DOC | ✓ | ✓ | ✓ | ✓ |  |  |  | ✓ |
 | DOCX | ✓ | ✓ | ✓ | ✓ |  |  |  | ✓ |
@@ -283,7 +283,7 @@ En lista över MIME-typer som stöds finns i CRXDE Lite på `/conf/global/settin
 | OTF | application/x-font-otf |  |  |
 | PDF | application/pdf | `pdfprocess=Rasterize&resolution=150`<br>`&colorspace=Auto&pdfbrochure=false`<br>`&keywords=false&links=false` | [pdfOptions](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/?f=r_pdf_options) |
 | PFB | application/x-font-type1 |  |  |
-| PFM | application/x-font-type1 |  |  |
+| PGM | application/x-font-type1 |  |  |
 | PICT | image/x-pict |  |  |
 | PNG | bild/png |  |  |
 | PPT | application/vnd.ms |  |  |
