@@ -4,7 +4,7 @@ description: Lär dig resurshanteringsåtgärder som överföring, hämtning, re
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 6d26a708ac2073eb7ceff62e65c6aaafdb727639
+source-git-commit: fd5fcb7eacd3727fa62f8de10685d089ceab54ba
 
 ---
 
@@ -31,6 +31,8 @@ Följande (blankstegsavgränsad lista med) tecken stöds inte:
 
 * Namnet på en resursfil får inte innehålla något av följande tecken: `* / : [ \\ ] | # % { } ? &`
 * Namnet på en resursmapp får inte innehålla något av följande tecken: `* / : [ \\ ] | # % { } ? \" . ^ ; + & \t`
+
+Inkludera inte specialtecken i filnamnstilläggen för resurser.
 
 ## Överför resurser {#uploading-assets}
 
@@ -112,6 +114,8 @@ Innan du överför en resurs måste du kontrollera att den har ett [format](/hel
 
    * resursens filnamn får inte innehålla `* / : [ \\ ] | # % { } ? &`
    * resursmappens namn får inte innehålla `* / : [ \\ ] | # % { } ? \" . ^ ; + & \t`
+   Inkludera inte specialtecken i filnamnstilläggen för resurser.
+
    ![I dialogrutan för överföring av förlopp visas status för överförda filer och filer som inte kan överföras](assets/chlimage_1-10.png)
 
    Dessutom visas den senaste resursen som du överför eller den mapp som du skapade först i användargränssnittet för Resurser.
@@ -122,7 +126,7 @@ Innan du överför en resurs måste du kontrollera att den har ett [format](/hel
 
 ### Serieuppladdningar {#serialuploads}
 
-Vid överföring av flera resurser i grupp förbrukas betydande I/O-resurser, vilket kan påverka prestanda negativt för din AEM Assets-instans. Om du har en långsam internetanslutning ökar tiden det tar att överföra drastiskt på grund av att disk-I/O-inläsningen har ökat. Din webbläsare kan dessutom införa ytterligare begränsningar för antalet POST-begäranden som AEM Assets kan hantera för samtidiga överföringar av resurser. Därför misslyckas överföringen eller avslutas i förtid. Med andra ord kan AEM-resurser sakna vissa filer när en grupp filer importeras eller helt och hållet inte kan importera någon fil.
+Vid överföring av flera resurser i grupp förbrukas betydande I/O-resurser, vilket kan påverka prestandan negativt för din AEM Assets-instans. Om du har en långsam internetanslutning ökar tiden det tar att överföra drastiskt på grund av att disk-I/O-inläsningen har ökat. Din webbläsare kan dessutom införa ytterligare begränsningar för antalet POST-begäranden som AEM Assets kan hantera för samtidiga överföringar av resurser. Därför misslyckas överföringen eller avslutas i förtid. Med andra ord kan AEM-resurser sakna vissa filer när en grupp filer importeras eller helt och hållet inte kan importera någon fil.
 
 För att komma till rätta med denna situation importerar AEM Assets en resurs i taget (seriell överföring) under en gruppöverföring, i stället för att alla resurser hämtas samtidigt.
 
@@ -365,7 +369,7 @@ Så här förhandsgranskar du en resurs med tangentbordet:
 
    >[!NOTE]
    >
-   >Layouten på sidan [!UICONTROL Egenskaper] och de metadataegenskaper som är tillgängliga beror på det underliggande metadataschemat. Mer information om hur du ändrar layouten för sidan [!UICONTROL Egenskaper] finns i [Metadatamcheman](/help/assets/metadata-schemas.md).
+   >Layouten på sidan [!UICONTROL Egenskaper] och de metadataegenskaper som är tillgängliga beror på det underliggande metadataschemat. Mer information om hur du ändrar layouten på sidan [!UICONTROL Egenskaper] finns i [Metadatamcheman](/help/assets/metadata-schemas.md).
 
 1. To schedule a particular date/time for the activation of the asset, use the date picker beside the **[!UICONTROL On Time]** field.
 
