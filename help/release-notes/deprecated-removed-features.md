@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: e8e2e01b-0117-48c3-86d8-609d29a147be
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4be5286858b255a30983b5987ac54c4e71dd4f2f
+source-git-commit: 33fab976729baa09fdfd3725542f9e6bc7f37eeb
 
 ---
 
@@ -39,7 +39,7 @@ Kunderna rekommenderas att granska om de använder funktionen/funktionen i den a
   <tr>
    <td>Integrering med Creative Cloud</td>
    <td><p><a href="/help/assets/aem-cc-folder-sharing-best-practices.md">AEM till Creative Cloud Mappdelning</a> introducerades i AEM 6.2 som ett sätt för kreativa användare att få tillgång till resurser från AEM, så att de kan öppna dem i CC-program och överföra nya filer eller spara ändringar i AEM. En ny funktion i Creative Cloud-programmet, Adobe Asset Link, ger en mycket bättre användarupplevelse och kraftfullare åtkomst till resurser från AEM direkt inifrån Photoshop, InDesign och Illustrator.</p> <p>Adobe planerar inte att göra ytterligare förbättringar av AEM i integreringen av mappdelning i Creative Cloud. Funktionen ingår i AEM, men kunderna rekommenderas att använda ersättningslösningar.</p> </td>
-   <td>Kunder rekommenderas att gå över till nya integreringsfunktioner i Creative Cloud, som Adobe Asset Link eller AEM-datorprogrammet. Mer information finns i Bästa praxis <a href="/help/assets/aem-cc-integration-best-practices.md">för integrering av</a> AEM och Creative Cloud.</td>
+   <td>Kunder rekommenderas att gå över till nya integreringsfunktioner i Creative Cloud, som Adobe Asset Link eller AEM-datorprogrammet. Mer information finns i Bästa praxis för integrering av <a href="/help/assets/aem-cc-integration-best-practices.md">AEM och</a> Creative Cloud.</td>
   </tr>
   <tr>
    <td>Assets</td>
@@ -97,12 +97,12 @@ Kunderna rekommenderas att granska om de använder funktionen/funktionen i den a
      <li>Om du har gjort en ny installation:
       <ul>
        <li>Använd Adobe Sign-baserad signeringsupplevelse i ett signeringssteg i ett anpassat formulär.</li>
-       <li>Använd en fristående komponent för klottersignaturer i ett adaptivt formulär, interaktiv kommunikation och HTML5-formulär.</li>
+       <li>Använd en fristående komponent för Klottsignering i ett adaptivt formulär, interaktiv kommunikation och HTML5-formulär.</li>
       </ul> </li>
      <li>Om du har uppgraderat från en tidigare version till AEM 6.5-formulär:<br />
       <ul>
        <li>Fortsätt att använda funktionen för signering med klottersignering i Signature Step med formulär som redan använder funktionen.<br /> </li>
-       <li>Använd en fristående komponent för Klottsignering eller en Adobe Sign-baserad signeringsupplevelse i ett signeringssteg när du skapar ett nytt formulär. </li>
+       <li>Använd en fristående komponent för Klottsignering eller en Adobe Sign-baserad signeringsupplevelse i ett signeringssteg när du skapar ett formulär. </li>
       </ul> </li>
     </ul> <p> </p> <p> </p> </td>
   </tr>
@@ -165,13 +165,14 @@ I det här avsnittet listas funktioner som har tagits bort från AEM 6.5. Tidiga
 
 | Yta | Funktion | Ersättning |
 |--- |--- |--- |
-| Aktivitetskarta för analyser | Den version av aktivitetskartan som ingår i AEM. | På grund av säkerhetsändringar i Adobe Analytics-API:t är det inte längre möjligt att använda den version av Activity Map som ingår i AEM. Använd plugin-programmet [ActivityMap från Adobe Analytics](https://docs.adobe.com/content/help/en/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html). |
+| Aktivitetskarta för analyser | Den version av aktivitetskartan som ingår i AEM. | På grund av säkerhetsändringar i Adobe Analytics-API:t är det inte längre möjligt att använda den version av Activity Map som ingår i AEM. Använd plugin-programmet [ActivityMap från Adobe Analytics](https://docs.adobe.complugin /content/help/en/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html). |
 | Integreringar | ExactTarget-integrering har tagits bort från standarddistributionen (Quickstart) och är inte längre tillgänglig. | Ingen ersättning |
 | Integreringar | Integreringen av Salesforce Force API har tagits bort från standarddistributionen (Quickstart) och är nu ett extra paket att installera från PackageShare. | Funktionen är fortfarande tillgänglig. |
 | Formulär | Stöd för tjänsten Adobe Central Migration Bridge har tagits bort eftersom Adobe Central-produkten inte längre stöds. | Ingen ersättning |
 | Formulär | `com.adobe.fd.df.fdinternal.model.ConfigurationInstance` | Ingen ersättning |
 | Formulär | `com.adobe.fd.ccm.channels.print.fdinternal.api.service.PrintDataTransformer` | Ingen ersättning |
 | Formulär | Uppgradering från LiveCycle ES4 SP1 till AEM 6.5 Forms on JEE är inte tillgänglig | Se [tillgängliga uppgraderingssökvägar](../forms/using/upgrade.md) i uppgraderingsdokumentationen för AEM Forms. |
+| Formulär | UPD-baserat klusterstöd har tagits bort från AEM Forms på JEE | Du kan bara använda TCP-baserad klustring i AEM Forms på JEE. Om du uppgraderar en UDP-multicast-server från en tidigare version till AEM 5.5 Forms på JEE utförs manuella konfigurationer för att växla till TCP-baserad gemfire-klustring. Detaljerade instruktioner finns i [Uppgradera till AEM 6.5-formulär på JEE](../forms/using/upgrade-forms-jee.md) |
 | Utvecklare | Firebug Lite har tagits bort från standarddistributionen (Quickstart) | Använd de inbyggda webbläsarkonsolerna för utvecklare |
 | Utvecklare | Ta bort `customJavaScriptPath` stöd i HTML Client Library Manager. | Ingen ersättning |
 | Assets | Funktionen för att avlasta resurser har tagits bort i AEM 6.5 | Ingen ersättning |
