@@ -10,18 +10,18 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: a0e5491e-66bc-47b0-94a5-45a02bc558da
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 ---
 
 
 # Använda klassificeringar {#using-ratings}
 
-Komponenten `Rating`används fristående eller tillsammans med andra communityfunktioner. Med den här komponenten kan inloggade communitymedlemmar uttrycka sina åsikter genom att gradera innehåll.
+Komponenten `Rating` används fristående eller tillsammans med andra communityfunktioner. Med den här komponenten kan inloggade communitymedlemmar uttrycka sina åsikter genom att gradera innehåll.
 
 ## Lägga till en klassificering på en sida {#adding-a-rating-to-a-page}
 
-Om du vill lägga till en `Rating`komponent på en sida i redigeringsläge, letar du reda på komponenten `Communities / Rating` och drar den till rätt plats på en sida, t.ex. en position som är relativ till funktionen som medlemmarna ska betygsätta.
+Om du vill lägga till en `Rating` komponent på en sida i redigeringsläge, letar du reda på komponenten `Communities / Rating` och drar den på plats på en sida, t.ex. en position som är relativ till funktionen som medlemmarna ska betygsätta.
 
 Mer information finns i Grunderna för [communitykomponenter](basics.md).
 
@@ -49,7 +49,7 @@ Endast en klassificering per medlem tillåts. Medlemmen kan när som helst ändr
 
 ### Anonym {#anonymous}
 
-Anonym publicering av en klassificering stöds inte. Besökare måste registrera sig (bli medlem) och logga in för att kunna delta.
+Anonym publicering av en klassificering stöds inte. Besökarna måste registrera sig (bli medlem) och logga in för att kunna delta.
 
 ## Additional Information {#additional-information}
 
