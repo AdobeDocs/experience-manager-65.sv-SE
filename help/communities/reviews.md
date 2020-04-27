@@ -10,20 +10,21 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: bf4e7809-8def-4647-aaa6-3ac36865511f
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 ---
 
 
 # Använda granskningar och granskningar - sammanfattning (visning) {#using-reviews-and-reviews-summary-display}
 
-Komponenten är en `Reviews`sammansättning av [ och `Comments`](comments.md)[ `Rating`](rating.md) komponenter som är klara att användas.
+Komponenten `Reviews` är en sammansatt av [kommentarer](comments.md) och [klassificeringskomponenter](rating.md) som är klara att använda.
 
 Komponenten innehåller en sammanfattning av en aktiv eller stängd instans av en `Reviews Summary (Display)` `Reviews` komponent som kan visas någon annanstans på webbplatsen.
 
 >[!NOTE]
 >
->Anonym publicering av en granskning stöds inte. Besökare måste registrera sig (bli medlem) och logga in för att kunna delta. Den inloggade besökaren kan uppdatera sin granskning när som helst.
+>Anonym publicering av en granskning stöds inte. Besökarna måste registrera sig (bli medlem) och logga in för att kunna delta. Den inloggade besökaren kan uppdatera sin granskning när som helst.
+
 
 ## Lägga till en granskning på en sida {#adding-a-review-to-a-page}
 
@@ -33,7 +34,7 @@ Mer information finns i Grunderna för [communitykomponenter](basics.md).
 
 När de [nödvändiga klientbiblioteken](reviews-basics.md#essentials-for-client-side) inkluderas visas `Reviews`komponenten så här.
 
-![chlimage_1-340](assets/chlimage_1-340.png)
+![chlimage_1-344](assets/chlimage_1-340.png)
 
 ## Konfigurera granskningar {#configuring-reviews}
 
@@ -71,47 +72,82 @@ På webbplatsen markeras nödvändiga klassificeringar med en asterisk. Om ett o
 >
 >Om ett objekt anges på fliken **[!UICONTROL Nödvändiga klassificeringar]** som inte anges på fliken **[!UICONTROL Tillåtna klassificeringar]** , inkluderas det inte i posterna som ska värderas.
 
+
 Ange hur granskningar ska hanteras på fliken **[!UICONTROL Granska]** .
 
-![chlimage_1-340](assets/chlimage_1-344.png)
+![chlimage_1-344](assets/chlimage_1-344.png)
 
-* **[!UICONTROL Tillåt svar]** Om det här alternativet är markerat tillåter du svar på granskningar. Standard är avmarkerat.
+* **[!UICONTROL Tillåt svar]**
 
-* **[!UICONTROL Stängd]** Om det här alternativet är markerat stängs granskningen av nya granskningar och svar. Standard är avmarkerat.
+   Om det här alternativet är markerat tillåts svar på granskningar. Standard är avmarkerat.
 
-* **[!UICONTROL Tillåt filöverföringar]** Om det här alternativet är markerat tillåter du att bifogade filer överförs för granskningen. Standard är avmarkerat.
+* **[!UICONTROL Stängd]**
 
-* **Maximal filstorlek **är bara relevant om**[!UICONTROL Tillåt filöverföringar ]**är markerat. Det här fältet begränsar storleken (i byte) på en överförd fil. Standardvärdet är 10 MB.
+   Om det här alternativet är markerat stängs granskningen av nya granskningar och svar. Standard är avmarkerat.
 
-* **[!UICONTROL Maximal meddelandelängd]** Maximalt antal tecken som kan anges i textrutan. Standardvärdet är 4 096 tecken.
+* **[!UICONTROL Tillåt filöverföringar]**
 
-* **[!UICONTROL Tillåtna filtyper]**&#x200B;är bara relevanta om **[!UICONTROL Tillåt filöverföringar]** är markerat. En kommaavgränsad lista med filtillägg med&quot;punktavgränsaren&quot;. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp anges tillåts inte den som inte anges. Ingen standard har angetts så att alla filtyper tillåts.
+   Om det här alternativet är markerat tillåter du att bifogade filer överförs för granskningen. Standard är avmarkerat.
 
-* **[!UICONTROL RTF-redigerare]** Om det är markerat kan inlägg infogas med markeringar. Standard är avmarkerat.
+* **Maximal filstorlek **
 
-* **[!UICONTROL Tillåt röstning]** Om det här alternativet är markerat inkluderas röstningsfunktionen för ett ämne. Standard är avmarkerat.
+   Endast relevant om **[!UICONTROL Tillåt filöverföringar]** är markerat. Det här fältet begränsar storleken (i byte) på en överförd fil. Standardvärdet är 10 MB.
+
+* **[!UICONTROL Maximal meddelandelängd]**
+
+   Maximalt antal tecken som kan anges i textrutan. Standardvärdet är 4 096 tecken.
+
+* **[!UICONTROL Tillåtna filtyper]**
+
+   Endast relevant om **[!UICONTROL Tillåt filöverföringar]** är markerat. En kommaavgränsad lista med filtillägg med&quot;punktavgränsaren&quot;. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp anges tillåts inte den som inte anges. Ingen standard har angetts så att alla filtyper tillåts.
+
+* **[!UICONTROL RTF-redigerare]**
+
+   Om det är markerat kan inlägg markeras. Standard är avmarkerat.
+
+* **[!UICONTROL Tillåt röstning]**
+
+   Inkludera röstfunktionen för ett ämne om det är markerat. Standard är avmarkerat.
 
 Ange hur de publicerade granskningarna ska hanteras på fliken **[!UICONTROL Användarmoderering]** . Mer information finns i [Hantera användargenererat innehåll](moderate-ugc.md).
 
 ![chlimage_1-345](assets/chlimage_1-345.png)
 
-* **[!UICONTROL Förhandsmoderering]** Om det här alternativet är markerat måste granskningarna godkännas innan de visas på en publiceringswebbplats. Standard är avmarkerat.
+* **[!UICONTROL Före moderering]**
 
-* **[!UICONTROL Ta bort granskningar]** Om det här alternativet är markerat kan den medlem som publicerade granskningen ta bort den. Standard är avmarkerat.
+   Om du markerar det här alternativet måste granskningarna godkännas innan de visas på en publiceringsplats. Standard är avmarkerat.
 
-* **[!UICONTROL Neka granskningar]** Om det här alternativet är markerat tillåter du moderatorerna att neka granskningar. Standard är avmarkerat.
+* **[!UICONTROL Ta bort granskningar]**
 
-* **[!UICONTROL Stäng/öppna granskningar]** igen Om det här alternativet är markerat kan moderatorerna stänga och öppna granskningar igen. Standard är avmarkerat.
+   Om det här alternativet är markerat kan den medlem som publicerade granskningen ta bort den. Standard är avmarkerat.
 
-* **[!UICONTROL Flagggranskningar]** Om det här alternativet är markerat kan medlemmarna flagga granskningar som olämpliga. Standard är avmarkerat.
+* **[!UICONTROL Neka granskningar]**
 
-* **[!UICONTROL Om alternativet Flagga orsakslista]**&#x200B;är markerat kan medlemmarna i en nedrullningsbar lista välja orsaken till att en granskning flaggas som olämplig. Standard är avmarkerat.
+   Tillåt moderatorerna att neka granskningar om de är markerade. Standard är avmarkerat.
 
-* **[!UICONTROL Anledning]** till anpassad flagga Om den är markerad kan medlemmar ange en egen orsak till att en granskning har flaggats som olämplig. Standard är avmarkerat.
+* **[!UICONTROL Stäng/öppna granskningar igen]**
 
-* **[!UICONTROL Moderationströskel]** Ange hur många gånger en granskning måste flaggas av medlemmar innan moderatorerna meddelas. Standard är en gång (1).
+   Om det här alternativet är markerat kan moderatorerna stänga och öppna granskningar igen. Standard är avmarkerat.
 
-* **[!UICONTROL Flaggningsgräns]** Ange hur många gånger en granskning måste flaggas innan den döljs för den offentliga vyn. Talet måste vara större än eller lika med **[!UICONTROL modereringströskeln]**. Standardvärdet är 5.
+* **[!UICONTROL Flagggranskningar]**
+
+   Om det här alternativet är markerat kan medlemmarna flagga granskningar som olämpliga. Standard är avmarkerat.
+
+* **[!UICONTROL Flaggorsakslista]**
+
+   Om det här alternativet är markerat kan medlemmarna välja, från en nedrullningsbar lista, anledningen till att en granskning flaggas som olämplig. Standard är avmarkerat.
+
+* **[!UICONTROL Anledning till anpassad flagga]**
+
+   Om det här alternativet är markerat kan medlemmarna ange en egen orsak till att en granskning har flaggats som olämplig. Standard är avmarkerat.
+
+* **[!UICONTROL Modereringströskel]**
+
+   Ange hur många gånger en granskning måste flaggas av medlemmar innan moderatorerna meddelas. Standard är en gång (1).
+
+* **[!UICONTROL Flaggningsgräns]**
+
+   Ange hur många gånger en granskning måste flaggas innan den döljs för den offentliga vyn. Talet måste vara större än eller lika med **[!UICONTROL modereringströskeln]**. Standardvärdet är 5.
 
 ### Lägga till en granskningssammanfattning (visning) på en sida {#adding-a-review-summary-display-to-a-page}
 
@@ -131,6 +167,7 @@ När de [nödvändiga klientbiblioteken](reviews-basics.md#essentials-for-client
 >
 >&quot;Jämka&quot; motsvarar rösterna för den första posten på flikarna Tillåtna klassificeringar i den granskning som sammanfattas.
 
+
 ### Konfigurera sammanfattning av granskningar (visning) {#configuring-reviews-summary-display}
 
 Markera den monterade `Reviews Summary (Display)` komponent som du vill öppna och välj den `Configure` ikon som öppnar redigeringsdialogrutan.
@@ -145,7 +182,7 @@ Under fliken **[!UICONTROL Granskningssammanfattning]**
 
    ange eller bläddra till den placerade instansen av `reviews`komponenten som ska sammanfattas, t.ex. om den läggs till på webbsidan för webbplatsen [Geometrixx Engage,](getting-started.md) så blir sökvägen:
 
-   /content/sites/engage/en/page/jcr:content/content/primary/reviews
+   `/content/sites/engage/en/page/jcr:content/content/primary/reviews`
 
 * `Include histogram`
 
@@ -165,19 +202,19 @@ Under fliken **[!UICONTROL Resurstyper]** anger du anpassad resourceType för ny
 
 * **[!UICONTROL Resurstyp för kommentar]**
 
-   Navigera till resourceType för en utökad `comment`komponent (en kommentar) i /apps. Exempel, `/apps/social/commons/components/hbs/comments/comment`
+   Navigera till resourceType för en utökad `comment`komponent (en kommentar) i /apps. Till exempel, `/apps/social/commons/components/hbs/comments/comment`.
 
    Den här resursen identifierar den resourceType för den UGC som skapas när en besökare publicerar en kommentar.
 
 * **[!UICONTROL Typ av röstningsresurs]**
 
-   Navigera till resourceType för en utökad `voting`komponent i /apps. Exempel, `/apps/social/components/hbs/voting`
+   Navigera till resourceType för en utökad `voting`komponent i /apps. Till exempel, `/apps/social/components/hbs/voting`.
 
    Den här resursen identifierar resurstypen för användargenererat innehåll som skapas när en besökare publicerar en röst.
 
 * **[!UICONTROL Resurstyp för kommentarsystem]**
 
-   Navigera till resourceType för en utökad `comments`komponent (kommentarsystemet) i /apps. Lämna tomt om inte sidmallen [dynamiskt inkluderar](scf.md#add-or-include-a-communities-component) kommentarsystemet i det underliggande skriptet i stället för att läggas till på sidan som en resurs (kommentarsnod). Läs mer om [{{include}}-hjälpen](handlebars-helpers.md#include)
+   Navigera till resourceType för en utökad `comments`komponent (kommentarsystemet) i /apps. Lämna tomt om inte sidmallen [dynamiskt inkluderar](scf.md#add-or-include-a-communities-component) kommentarsystemet i det underliggande skriptet i stället för att läggas till på sidan som en resurs (kommentarsnod). Läs mer om [{{include}}-hjälpen](handlebars-helpers.md#include).
 
 ## Site Visitor Experience {#site-visitor-experience}
 
@@ -189,10 +226,10 @@ När den inloggade användaren har moderator- eller administratörsbehörighet k
 
 När besökaren är inloggad, beroende på konfigurationen, kan de
 
-* Publicera en ny granskning
-* Redigera en egen granskning
-* Ta bort en egen granskning
-* Flagga andras granskningskommentarer
+* Lägg upp en ny granskning.
+* Redigera en egen granskning.
+* Ta bort en egen granskning.
+* Flagga andras granskningskommentarer.
 
 Endast en klassificering per medlem tillåts. Medlemmen kan när som helst ändra sin klassificering.
 
