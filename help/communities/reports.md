@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: fde053ff-b671-456b-869c-81f16ea1f1be
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 ---
 
 
-# Rapportkonsol{#reports-console}
+# Rapportkonsol {#reports-console}
 
 ## Översikt {#overview}
 
@@ -24,11 +24,19 @@ För AEM Communities finns det olika rapporter som kan nås på flera sätt frå
 
 De olika rapporterna är i allmänhet följande:
 
-* [Uppdragsrapport](#assignments-report) - för en community [för](/help/communities/overview.md#enablement-community)aktivering ger en översikt över elevens framsteg i sina uppdrag, inklusive ett associerat poängvärde om SCORM-standarden implementeras
-* [Vyrapport](#views-report) - ger en översikt över vad communitymedlemmar och besökare tycker om communitysajter
-* [Inläggsrapport](#posts-report) - innehåller en lista över olika typer av inlägg från communitymedlemmar på valfri communitywebbplats
+* [Uppdragsrapport](#assignments-report)
 
-När [Adobe Analytics är aktiverat](/help/communities/sites-console.md#analytics)innehåller rapporterna antalet visningar, uppspelningar, kommentarer och omdömen för varje aktiveringsresurs över tiden
+   För en community [för](/help/communities/overview.md#enablement-community)aktivering ger du en översikt över hur eleverna arbetar med sina uppdrag, inklusive ett poängvärde om SCORM-standarden implementeras.
+
+* [Vyrapport](#views-report)
+
+   Ger en översikt över vad communitymedlemmar och besökare tycker om communitysajter.
+
+* [Inläggsrapport](#posts-report)
+
+   Ger en översikt över olika typer av inlägg från communitymedlemmar på alla communitysajter.
+
+När [Adobe Analytics är aktiverat](/help/communities/sites-console.md#analytics)innehåller rapporterna antalet visningar, uppspelningar, kommentarer och omdömen för varje aktiveringsresurs över tiden.
 
 Tabellrapporter kan exporteras i CSV-format för efterföljande bearbetning.
 
@@ -36,46 +44,46 @@ Tabellrapporter kan exporteras i CSV-format för efterföljande bearbetning.
 
 ### Rapporter om communitysajter {#reports-for-community-sites}
 
-* från global navigering: **Navigation**, **Communities, Reports**
+* Från global navigering: **[!UICONTROL Navigation]** > **[!UICONTROL Communities]** > **[!UICONTROL Reports]**
 
-* välj bland
+* Välj bland:
 
-   * **Uppdragsrapport**
+   * **[!UICONTROL Uppdragsrapport]**
 
-      * generera en rapport för den valda communitywebbplatsen, användaren eller gruppen samt tilldelningen
+      * Generera en rapport för den valda communityplatsen, användaren eller gruppen och tilldelningen.
+   * **[!UICONTROL Inläggsrapport]**
 
-      * **Inläggsrapport**
+      * Generera en rapport för den valda communityplatsen, innehållstypen och tidsperioden.
+   * **[!UICONTROL Vyrapport]**
 
-         * generera en rapport för den valda communityplatsen, innehållstypen och tidsperioden
-      * **Vyrapport**
+      * generera en rapport för den valda communityplatsen, innehållstypen och tidsperioden.
 
-         * generera en rapport för den valda communityplatsen, innehållstypen och tidsperioden
 
 
 ![chlimage_1-236](assets/chlimage_1-236.png)
 
 ### Rapporter om aktiveringsresurser och utbildningsvägar {#reports-for-enablement-resources-and-learning-paths}
 
-* från global navigering: **Navigation**, **Communities, Resources**
+* Från global navigering: **[!UICONTROL Navigation]** > **[!UICONTROL Communities]** > **[!UICONTROL Resources]**
 
-* välj en befintlig webbplats för aktiveringscommunityn
+* Välj en befintlig webbplats för aktiveringscommunityn:
 
-   * välj **Report **icon för att generera rapporter som täcker alla aktiveringsresurser
-   * välj en utbildningsväg för aktivering
-   * välj **Report **icon för att generera rapporter för
+   * Välj **rapportikonen** om du vill generera rapporter som täcker alla aktiveringsresurser.
+   * Välj en utbildningsväg för aktivering.
+   * Välj ikonen **Rapport** om du vill generera rapporter för:
 
-      * de medföljande aktiveringsresurserna
-      * de studerande som är tilldelade inlärningsbanan
+      * De medföljande aktiveringsresurserna.
+      * De studerande som är tilldelade inlärningsbanan.
 
-* Rapporterna innehåller följande uppgifter:
+* Rapporterna innehåller följande:
 
-   * tabelldata, kan hämtas som CSV
+   * Tabelldata, kan hämtas som CSV:
 
-      * identifiera studerande
-      * deras status
-      * om de har tilldelats eller öppnats via katalog
-      * antal kommentarer
-      * stjärnklassificering har angetts
+      * Identifiera studerande
+      * Deras status
+      * Om du har tilldelats eller fått åtkomst via katalog
+      * Antal kommentarer
+      * Stjärngradering
 
 Mer information finns i avsnittet [Rapporter](/help/communities/resources.md#report) i resurskonsolen.
 
@@ -91,16 +99,16 @@ Välj villkor för rapporten:
 
 * **Plats**
 
-   välj en webbplats för aktiveringscommunityn
+   Välj en community-webbplats för aktivering.
 
 * **Användare eller grupp**
-   * välj Användare för att generera en rapport för en elev
-   * välj Grupp för att generera en rapport för en grupp studerande
-   Tunneltjänsten kommer att få åtkomst till medlemmar och medlemsgrupper från publiceringsmiljön
+   * Välj Användare om du vill generera en rapport för en elev.
+   * Välj Grupp om du vill generera en rapport för en grupp av studerande.
+   Tunneltjänsten kommer att få åtkomst till medlemmar och medlemsgrupper från publiceringsmiljön.
 
 * **Tilldelning**
 
-   Välj bland de aktiveringsresurser som tilldelats de valda eleverna
+   Välj bland de aktiveringsresurser som tilldelats de valda eleverna.
 
 Välj **Generera** för att skapa rapporten:
 
@@ -114,24 +122,24 @@ Med hjälp av vykonsolen kan rapporter genereras på sidvisningar av communityfu
 
 Välj villkor för rapporten:
 
-* **Plats**
+* **[!UICONTROL Plats]**
 
-   välj en communitywebbplats
+   Välj en community-webbplats.
 
-* **Innehållstyp**
+* **[!UICONTROL Innehållstyp]**
 
-   kan välja Allt innehåll eller någon av funktionerna på webbplatsen
+   Välj Allt innehåll eller någon av funktionerna på webbplatsen.
 
-* tidsram
+* **[!UICONTROL Tidsram]**
 
-   välj en av
+   Välj något av följande:
 
    * De senaste 7 dagarna
    * De senaste 30 dagarna
    * De senaste 90 dagarna
    * Förra året
 
-Välj **Generera** för att skapa rapporten:
+Välj **[!UICONTROL Generera]** för att skapa rapporten.
 
 ![chlimage_1-240](assets/chlimage_1-240.png)
 
@@ -143,24 +151,24 @@ Med publiceringskonsolen kan rapporter genereras om antalet inlägg till communi
 
 Välj villkor för rapporten:
 
-* **Plats**
+* **[!UICONTROL Plats]**
 
-   välj en communitywebbplats
+   Välj en community-webbplats.
 
-* **Innehållstyp**
+* **[!UICONTROL Innehållstyp]**
 
-   kan välja Allt innehåll eller någon av funktionerna på webbplatsen
+   Välj Allt innehåll eller någon av funktionerna på webbplatsen.
 
-* tidsram
+* **[!UICONTROL Tidsram]**
 
-   välj en av
+   Välj något av följande:
 
    * De senaste 7 dagarna
    * De senaste 30 dagarna
    * De senaste 90 dagarna
    * Förra året
 
-Välj **Generera** för att skapa rapporten:
+Välj **[!UICONTROL Generera]** för att skapa rapporten.
 
 ![chlimage_1-242](assets/chlimage_1-242.png)
 
@@ -172,6 +180,6 @@ Om det inte finns några communitysajter i listan kontrollerar du att Adobe Anal
 
 ### Rapporterna visas inte i AEM Author-instansen {#reports-do-not-show-in-aem-author-instance}
 
-Om rapporter inte visas i AEM Author-instansen kontrollerar du om det finns anpassningar, till exempel URL-mappning i Publish-instansen. Om URL-mappning endast görs på AEM Publish-instansen av communitywebbplatsen kontrollerar du att samma har konfigurerats i AEM Author-instansen i **Site Trend Report Social Component Factory **configuration.
+Om rapporter inte visas i AEM Author-instansen kontrollerar du om det finns anpassningar, till exempel URL-mappning i Publish-instansen. Om URL-mappning endast görs på AEM Publish-instansen av communitywebbplatsen kontrollerar du att samma har konfigurerats i AEM Author-instansen i **Platstrend Report Social Component Factory** -konfigurationen.
 
 ![URL-mappning på AEM Author](assets/sitetrend.png)
