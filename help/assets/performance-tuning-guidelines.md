@@ -4,7 +4,7 @@ description: Förslag och vägledning om AEM-konfiguration, ändringar av maskin
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
+source-git-commit: 31234518537ca4a0b7ff36e8d52a3b7b1b8fe4f7
 
 ---
 
@@ -203,17 +203,13 @@ Dessutom anger du sökvägen till ImageMagick:s tillfälliga mapp i `configure.x
 
 >[!CAUTION]
 >
->En felaktig konfiguration kan göra servern instabil om ImageMagick använder allt tillgängligt diskutrymme.
->
->De principändringar som krävs för att bearbeta stora filer med ImageMagick kan påverka AEM-prestanda. Mer information finns i [Installera och konfigurera ImageMagick](/help/assets/best-practices-for-imagemagick.md).
+>En felaktig konfiguration kan göra servern instabil om ImageMagick använder allt tillgängligt diskutrymme. De principändringar som krävs för att bearbeta stora filer med ImageMagick kan påverka AEM-prestanda. Mer information finns i [Installera och konfigurera ImageMagick](/help/assets/best-practices-for-imagemagick.md).
 
 >[!NOTE]
 >
 >ImageMagick `policy.xml` - och `configure.xml` -filerna är tillgängliga `/usr/lib64/ImageMagick-&#42;/config/` i stället för `/etc/ImageMagick/`.Mer information om var konfigurationsfilerna finns i [dokumentationen](https://www.imagemagick.org/script/resources.php) till ImageMagick.
 
->[!TIP]
->
->Om du använder Experience Manager på Adobe Managed Services (AMS) kan du kontakta Adobe Support om du tänker bearbeta många stora PSD- eller PSB-filer. Samarbeta med Adobes kundtjänstrepresentant för att implementera de bästa metoderna för driftsättningen av AMS och för att välja de bästa möjliga verktygen och modellerna för Adobes egna format.
+Om du använder Experience Manager för Adobes hanterade tjänster (AMS) kan du kontakta Adobes kundtjänst om du tänker bearbeta många stora PSD- eller PSB-filer. Samarbeta med Adobes kundtjänstrepresentant för att implementera de bästa metoderna för driftsättningen av AMS och för att välja de bästa möjliga verktygen och modellerna för Adobes egna format. Det går inte att bearbeta PSB-filer med hög upplösning som är större än 3 000 × 2 3 000 pixlar i Experience Manager.
 
 ### XMP-tillbakaskrivning {#xmp-writeback}
 
