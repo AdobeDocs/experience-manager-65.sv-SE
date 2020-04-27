@@ -3,7 +3,7 @@ title: Bästa tillvägagångssätt för att bearbeta de olika filformat som stö
 description: Bästa tillvägagångssätt för att bearbeta de olika filtyper som stöds med hjälp av AEM Resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 70a88085a0fd6e949974aa7f1f92fdc3def3d98e
+source-git-commit: 31234518537ca4a0b7ff36e8d52a3b7b1b8fe4f7
 
 ---
 
@@ -16,13 +16,13 @@ Information om vilka filformat som stöds finns i Format [som stöds för](/help
 
 >[!TIP]
 >
->Om du använder Experience Manager på Adobe Managed Services (AMS) kan du kontakta Adobe Support om du tänker bearbeta många stora PSD- eller PSB-filer. Samarbeta med Adobes kundtjänstrepresentant för att implementera de bästa metoderna för driftsättningen av AMS och för att välja de bästa möjliga verktygen och modellerna för Adobes egna format.
+>Om du använder Experience Manager på Adobe Managed Services (AMS) kan du kontakta Adobe Support om du tänker bearbeta många stora PSD- eller PSB-filer. Samarbeta med Adobes kundtjänstrepresentant för att implementera de bästa metoderna för driftsättningen av AMS och för att välja de bästa möjliga verktygen och modellerna för Adobes egna format. Det går inte att bearbeta PSB-filer med hög upplösning som är större än 3 000 × 2 3 000 pixlar i Experience Manager.
 
 ## Adobe Camera Raw-bibliotek {#adobe-camera-raw-library}
 
 Adobe rekommenderar att du använder Adobe Camera Raw-biblioteket för RAW- och DNG-filer för optimala prestanda.
 
-Adobe Camera Raw-biblioteket stöder CMYK-färgprofil som indata. Däremot genereras utdata i RGB-färgrymd och endast JPEG-format stöds. Färgrymden för källfilen (till exempel CMYK) behålls inte i miniatyrbilderna.
+Adobe Camera Raw-biblioteket stöder CMYK-färgprofil som indata. Däremot genereras utdata i RGB-färgrymd och endast JPEG-format stöds. Källfilens färgrymd (till exempel CMYK) behålls inte i miniatyrbilderna.
 
 Mer information finns i Stöd för [](/help/assets/camera-raw.md)Camera Raw.
 
@@ -40,7 +40,7 @@ Miniatyrbilder och förhandsgranskningar som genererats med PDF Rasterizer har b
 
 Adobe rekommenderar att du använder Adobe InDesign Server för att extrahera Adobe InDesign-specifika återgivningar som IDML och HTML. Mer information finns i [Lägga till AEM-resurser som referenser i Adobe InDesign](/help/assets/managing-linked-subassets.md#refai).
 
-## Dynamiska medier {#dynamic-media}
+## Dynamic Media  {#dynamic-media}
 
 Dynamic Media genererar och levererar flera varianter av multimedieinnehåll i realtid via sitt globala, skalbara och prestandaoptimerade nätverk. Det levererar interaktiva tittarupplevelser och effektiviserar den digitala kampanjhanteringsprocessen. Mer information om hur du aktiverar dynamiska media finns i [Konfigurera dynamiska media](/help/assets/config-dynamic.md).
 
