@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: dd0cbc05-a361-46bc-b9f1-d045f8f23890
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 31a3ccc1f9f0940515ed64b1b18a535102bf7231
+source-git-commit: ca15258a5dc7ca99b6c9d6ae85e42c77a3802c87
 
 ---
 
@@ -22,7 +22,7 @@ source-git-commit: 31a3ccc1f9f0940515ed64b1b18a535102bf7231
 
 Nu när den nyligen skapade communitywebbplatsen har publicerats bläddrar du till den URL som visas när du skapar webbplatsen, men på publiceringsservern, t.ex.
 
-* A\utvecklar-URL = https://localhost:4502/content/sites/engage/en.html
+* Författar-URL = https://localhost:4502/content/sites/engage/en.html
 * Publicera URL = https://localhost:4503/content/sites/engage/en.html
 
 För att minimera förvirring om vilken medlem som är inloggad på författare och publicera bör du använda olika webbläsare för varje instans.
@@ -37,14 +37,14 @@ Vid första ankomsten till den publicerade webbplatsen är besökaren vanligtvis
 
 En anonym besökare ser följande i användargränssnittet:
 
-* Webbplatsens namn. Det här är självstudiekursen Komma igång
-* ingen profillänk
-* ingen meddelandelänk
-* ingen meddelandelänk
-* sökfält
+* Webbplatsens namn (självstudiekurs för att komma igång)
+* Ingen profillänk
+* Ingen meddelandelänk
+* Ingen meddelandelänk
+* Sökfält
 * Inloggningslänk
 * Varumärkesbanderollen
-* Menylänkar för de komponenter som ingår i referenswebbplatsmallen
+* Menylänkar för de komponenter som ingår i referenswebbplatsmallen.
 
 Om du markerar olika länkar är de skrivskyddade.
 
@@ -54,7 +54,7 @@ En känd begränsning exponerar communityinnehållet för anonyma besökare via 
 
 Följ de här stegen för att skydda communityplatsens innehåll från anonyma användare genom jcr-innehåll och json:
 
-1. På AEM Author-instansen går du till https://&lt;host>:&lt;port>/editor.html/content/site/&lt;sitename>.html.
+1. På AEM Author-instansen går du till https://: port/editor.html/content/site/sitename.html.
 
    >[!NOTE]
    >
@@ -64,19 +64,19 @@ Följ de här stegen för att skydda communityplatsens innehåll från anonyma a
 
    ![webbplatsautentisering](assets/site-authentication.png)
 
-1. Gå till fliken **Avancerat **.
+1. Gå till fliken **Avancerat** .
 
    ![page-properties](assets/page-properties.png)
 
 1. Aktivera **autentiseringskrav**.
-1. Lägg till inloggningssidans sökväg. Till exempel **/innehåll/......./GetStarted**.
+1. Lägg till inloggningssidans sökväg. Till exempel, **/innehåll/....../GetStarted**.
 1. Publicera sidan.
 
 ## Betrodd medlem i användargruppen {#trusted-community-member}
 
 Den här upplevelsen förutsätter att [Aaron McDonald](/help/communities/tutorials.md#demo-users) har tilldelats rollerna [community manager och moderator](/help/communities/create-site.md#roles). Om inte, gå tillbaka till utvecklingsmiljön för att [ändra webbplatsinställningarna](/help/communities/sites-console.md#modifying-site-properties) och välj Aaron McDonald som både community manager och moderator.
 
-I det övre högra hörnet markerar du `Log in`och signerar med användarnamnet&quot;aaron.mcdonald@mailinator.com&quot; och lösenordet&quot;password&quot;. Lägg märke till möjligheten att logga in med Twitter- eller Facebook-inloggningsuppgifter.
+I det övre högra hörnet markerar du `Log in`och signerar med användarnamn (aaron.mcdonald@mailinator.com) och lösenord (lösenord). Lägg märke till möjligheten att logga in med Twitter- eller Facebook-inloggningsuppgifter.
 
 ![chlimage_1-32](assets/chlimage_1-32.png)
 
@@ -85,8 +85,8 @@ När du har loggat in som registrerad community-medlem kan du lägga märke till
 * **Med Profil** kan du visa och redigera din profil.
 * [Alternativet Meddelanden](/help/communities/configure-messaging.md) dirigerar dig till avsnittet för direktmeddelanden, där du kan:
 
-1. Visa direktmeddelanden som du har tagit emot (Inkorgen), skickat (Skickat) och tagit bort (Papperskorgen).
-1. Skapa nya direktmeddelanden att skicka till enskilda personer och grupper.
+   1. Visa direktmeddelanden som du har tagit emot (Inkorgen), skickat (Skickat) och tagit bort (Papperskorgen).
+   1. Skapa nya direktmeddelanden att skicka till enskilda personer och grupper.
 
 * [Alternativet Meddelanden](/help/communities/notifications.md) dirigerar dig till meddelandeavsnittet, där du kan visa dina intressanta händelser och redigera meddelandeinställningar.
 * [Administrationen](/help/communities/published-site.md#moderationlink) dirigerar dig till AEM Communities Moderation Page, om du har modereringsbehörighet.
@@ -99,7 +99,7 @@ Observera att kalendersidan är hemsidan eftersom den valda referensplatsmallen 
 
 >[!NOTE]
 >
->Mer information om Communities-komponenter och -funktioner finns på
+>Mer information om Communities-komponenter och -funktioner finns på:
 >
 >* [Communities-komponenter](/help/communities/author-communities.md) (för författare)
 >* [Komponent-, funktions- och](/help/communities/essentials.md) funktionsfunktioner (för utvecklare)
@@ -123,25 +123,25 @@ Eftersom Aaron är gruppadministratör kan Aron skapa en ny community-grupp geno
 
 Detta är ett exempel där en grupp skapas i publiceringsmiljön.
 
-Grupper kan också skapas i författarmiljön och hanteras i communitywebbplatsen i författarmiljön ( [Community Groups Console](/help/communities/groups.md)). Upplevelsen av [att skapa grupper på författare](/help/communities/nested-groups.md) är nästa i den här självstudiekursen.
+Grupper kan också skapas i författarmiljön och hanteras i communitywebbplatsen i författarmiljön ([Community Groups console](/help/communities/groups.md)). Upplevelsen av [att skapa grupper på författare](/help/communities/nested-groups.md) är nästa i den här självstudiekursen.
 
 ![chlimage_1-36](assets/chlimage_1-36.png)
 
 Skapa en referensgrupp:
 
-1. välj **Ny grupp**
+1. Välj **ny grupp**
 1. **Fliken Inställningar**
 
    * Gruppnamn: `Sports`
-   * Beskrivning : `A parent group for various sporting groups`
+   * Beskrivning : `A parent group for various sporting groups`.
    * Grupp-URL-namn: `sports`
-   * välj `Open Group` (tillåt alla community-medlemmar att delta genom att gå med)
+   * Välj `Open Group` (tillåt alla community-medlemmar att delta genom att gå med)
 
 1. **Fliken Mallar**
 
-   * select `Reference Group` (innehåller en gruppfunktion i sin struktur för att tillåta kapslade grupper)
+   * Markera `Reference Group` (innehåller en gruppfunktion i sin struktur för att tillåta kapslade grupper)
 
-1. välj **Skapa grupp**
+1. Välj **Skapa grupp**
 
 ![chlimage_1-37](assets/chlimage_1-37.png)
 
@@ -149,25 +149,25 @@ När en ny grupp har skapats **väljer du den nya sportgruppen** för att skapa 
 
 ![chlimage_1-38](assets/chlimage_1-38.png)
 
-Den andra uppsättningen länkar, med början `Blog`, tillhör den markerade gruppen, `Sports`gruppen. Genom att välja `Groups` länken Sport är det möjligt att kapsla två grupper i gruppen Sport.
+Den andra uppsättningen länkar, med början `Blog`, tillhör den markerade gruppen, `Sports` gruppen. Genom att välja `Groups` länken Sport är det möjligt att kapsla två grupper i gruppen Sport.
 
-Som ett exempel lägger du till två n `ew groups.`
+Lägg till två exempel `new groups`.
 
-* en namngiven `Baseball`
+* En namngiven `Baseball`
 
-   * lämna det angivet som ett `Open Group` (obligatoriskt medlemskap)
-   * på fliken Mallar väljer du `Conversational Group`
+   * Ange det som ett `Open Group` (obligatoriskt medlemskap).
+   * På fliken Mallar väljer du `Conversational Group`.
 
-* en namngiven `Gymnastics`
+* En namngiven `Gymnastics`
 
-   * ändra inställningen till `Member Only Group` (begränsat medlemskap)
-   * på fliken Mallar väljer du `Conversational Group`
+   * Ändra inställningen till `Member Only Group` (begränsat medlemskap).
+   * På fliken Mallar väljer du `Conversational Group`.
 
-**Meddelande **:
+**Obs**:
 
-* en uppdatering av sidan kan behövas innan båda grupperna visas
-* den här mallen innehåller inte *gruppfunktionen, så det går inte att kapsla in grupper ytterligare
-* om du är författare kan du göra ett tredje val i [gruppkonsolen](/help/communities/groups.md) - ett `Public Group` (valfritt medlemskap)
+* Det kan vara nödvändigt att uppdatera sidan innan båda grupperna visas.
+* Den här mallen innehåller *inte* gruppfunktionen, så det går inte att kapsla in grupper ytterligare.
+* På författaren har [gruppkonsolen](/help/communities/groups.md) ett tredje val - ett `Public Group` (valfritt medlemskap).
 
 När båda grupperna har skapats väljer du Baseball-gruppen, en öppen grupp, och lägger märke till dess länkar:
 
@@ -181,14 +181,14 @@ Vid författare - med administratörsbehörighet går du till konsolen [](/help/
 
 Fortsätt publicera, logga ut som Aaron McDonald och visa grupperna i Sports Group som en anonym besökare:
 
-* från startsidan
-* markera `Groups`länk
-* markera `Sports`länk
-* välj `Groups`länken Sport
+* Från startsidan
+* Markera `Groups` länk
+* Markera `Sports` länk
+* Välj `Groups` länken Sport
 
 Bara Baseball-gruppen syns.
 
-Logga in som Weston McCall (weston.mccall@dodgit.com / lösenord) och navigera till samma plats. Observera att Weston kan `Join` öppna `Baseball` gruppen och antingen `enter or Leave` den privata `Gymnastics`gruppen.
+Logga in som Weston McCall (weston.mccall@dodgit.com / lösenord) och navigera till samma plats. Observera att Weston kan `Join` den öppna `Baseball` gruppen och antingen `enter or Leave` den privata `Gymnastics` gruppen.
 
 ![chlimage_1-40](assets/chlimage_1-40.png)
 
@@ -196,7 +196,7 @@ Logga in som Weston McCall (weston.mccall@dodgit.com / lösenord) och navigera t
 
 Visa den grundläggande webbsidan som finns på webbplatsen genom att välja länken Webbsida. Standardverktygen för AEM-redigering kan användas för att lägga till innehåll på den här sidan i författarmiljön.
 
-Gå till exempel till **författarinstansen** , öppna `engage` mappen i [webbgruppskonsolen](/help/communities/sites-console.md)och välj ikonen **Öppna webbplats** för att öppna redigeringsläget. Välj sedan förhandsvisningsläget för att markera `Web Page`länken och välj sedan redigeringsläget för att lägga till titel- och textkomponenter. Publicera sedan om antingen bara sidan eller hela webbplatsen.
+Gå till exempel till **författarinstansen** , öppna `engage` mappen i [webbgruppskonsolen](/help/communities/sites-console.md)och välj ikonen **Öppna webbplats** för att öppna redigeringsläget. Välj sedan förhandsvisningsläget för att markera `Web Page` länken och välj sedan redigeringsläget för att lägga till titel- och textkomponenter. Publicera sedan om antingen bara sidan eller hela webbplatsen.
 
 ![chlimage_1-41](assets/chlimage_1-41.png)
 
@@ -212,16 +212,16 @@ Använd webbläsarens bakåtknapp för att gå tillbaka till den publicerade web
 
 När du har loggat ut kan du skapa en ny användarregistrering.
 
-* select `Log In`
-* select `Sign up for a new account`
+* Välj `Log In`
+* Välj `Sign up for a new account`
 
 ![chlimage_1-43](assets/chlimage_1-43.png) ![chlimage_1-44](assets/chlimage_1-44.png)
 
 Som standard är e-postadressen inloggnings-ID. Om alternativet inte är markerat kan besökaren ange ett eget inloggnings-ID (användarnamn). Användarnamnet måste vara unikt i publiceringsmiljön.
 
-När du har angett användarens namn, e-postadress och lösenord `Sign Up`skapas användaren och kan signeras om du väljer det.
+När du har angett användarens namn, e-postadress och lösenord `Sign Up` skapas användaren och kan signeras om du väljer det.
 
-När du är inloggad är den första sidan deras `Profile`sida, som de kan anpassa.
+När du har loggat in är den första sidan deras `Profile` sida, som de kan anpassa.
 
 ![chlimage_1-45](assets/chlimage_1-45.png)
 
