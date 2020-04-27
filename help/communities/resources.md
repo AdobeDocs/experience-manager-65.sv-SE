@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 1ef15e76-fe7c-4ced-a20d-c0a9385e3ee4
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 ---
 
@@ -32,11 +32,14 @@ Mer information finns i [Konfigurera aktivering](enablement.md).
 >
 >Om SCORM har installerats efter att en community-webbplats har skapats måste eventuella aktiveringsresurser som finns innan SCORM har installerats återskapas.
 
+
+
 >[!NOTE]
 >
 >I och med releasen av [AEM 6.3](deploy-communities.md#latestfeaturepack) och motsvarande funktionspaket för Communities [AEM 6.2 FP3](deploy-communities.md#latestfeaturepack) och [AEM 6.1 FP7](https://docs.adobe.com/content/docs/en/aem/6-1/deploy/communities.html#Latest) behöver inte längre aktiveringsfunktionen en [MySQL-databas](mysql.md).
 
-##  Terminologi {#terminology}
+
+## Terminologi {#terminology}
 
 ### Resurs {#resource}
 
@@ -44,13 +47,13 @@ Resurser är avgörande för en community [för](overview.md#enablement-communit
 
 En resurs egenskaper:
 
-* Kan vara av typen
+* Kan vara av typen:
    * Bild (JPG, PNG, GIF, BMP)
    * Video (MP4)
    * Flash (SWF)
    * Dokument (PDF)
    * Quiz (SCORM)
-* Kan refereras från en eller flera utbildningsvägar
+* Kan refereras från en eller flera utbildningsvägar.
 
 ### Utbildningsväg {#learning-path}
 
@@ -58,9 +61,9 @@ En inlärningsväg är en logisk uppsättning aktiveringsresurser som grupperats
 
 ### Medlemsgrupp {#members-group}
 
-När en communitywebbplats skapas används det namn som tilldelats webbplatsen för URL:en när de [platsspecifika användargrupperna](users.md) som konfigurerats med olika behörigheter för olika roller skapas. Alla automatiskt skapade grupper har prefix `Community *<site-name>*`.
+När en communitywebbplats skapas används det namn som tilldelats webbplatsen för URL:en när de [platsspecifika användargrupperna](users.md) som konfigurerats med olika behörigheter för olika roller skapas. Alla automatiskt skapade grupper har prefix `Community <site-name>`.
 
-En sådan användargrupp är `Community *<site-name>* Members` grupp, som identifierar registrerade användare i publiceringsmiljön som communitymedlemmar. Ett exempel finns i självstudiekursen [Komma igång med AEM Communities for Enablement](getting-started-enablement.md) .
+En sådan användargrupp är `Community <site-name> Members` grupp, som identifierar registrerade användare i publiceringsmiljön som communitymedlemmar. Ett exempel finns i självstudiekursen [Komma igång med AEM Communities for Enablement](getting-started-enablement.md) .
 
 För [engagemangscommunityn](overview.md#egagementcommunity)är det rimligt att låta besökare på webbplatsen registrera sig själva eller använda social inloggning, då de automatiskt läggs till i medlemsgruppen.
 
@@ -72,9 +75,9 @@ För [aktiveringsgrupper](overview.md#enablement-community)bör du göra webbpla
 
 För att nå Resurskonsolen i redigeringsmiljön
 
-* Från global navigering: **[!UICONTROL Navigering > Communities > Resources]**
+* Från global navigering: **[!UICONTROL Navigation]** > **[!UICONTROL Communities]** > **[!UICONTROL Resources]**
 
-![chlimage_1-163](assets/chlimage_1-163.png)
+   ![chlimage_1-163](assets/chlimage_1-163.png)
 
 ### Välj en communitywebbplats {#select-a-community-site}
 
@@ -86,7 +89,7 @@ När en specifik communitywebbplats har valts är alla befintliga aktiveringsres
 
 ![chlimage_1-164](assets/chlimage_1-164.png)
 
-#### Sök {#search-features}
+#### Sökning {#search-features}
 
 ![chlimage_1-165](assets/chlimage_1-165.png)
 
@@ -106,16 +109,16 @@ Om du vill markera flera aktiveringsresurser, markerar du den första genom att 
 
 Lägga till en ny aktiveringsresurs på communitywebbplatsen
 
-* Markera `Create` ikonen
-* På undermenyn som visas väljer du `Resource`
+* Markera `Create` ikonen.
+* Välj **[!UICONTROL Resurs]** på undermenyn som visas.
 
-Detta startar en stegvis process för
+Detta startar en stegvis process för:
 
-* Beskriver resursen (namn, kortbild och text)
-* Välja resursinnehåll
-* Välja en omslagsbild för resursen
-* Identifiera resurskontakter
-* Tilldela resurser till medlemmar
+* Beskriver resursen (namn, kortbild och text).
+* Välja resursinnehåll.
+* Välja en omslagsbild för resursen.
+* Identifierar resurskontakter.
+* Tilldela resurser till medlemmar.
 
 När resursen är en del av en kurs, en inlärningsväg, ska medlemmar endast tilldelas inlärningsvägen. Tilldelningar kan läggas till efter att aktiveringsresursen har skapats.
 
@@ -125,21 +128,21 @@ När resursen är en del av en kurs, en inlärningsväg, ska medlemmar endast ti
 
 * **[!UICONTROL Lägg till bild]**
 
-   (*valfritt*) En bild som ska visas på kortet för aktiveringsresursen på medlemmens tilldelningssida samt på resurskonsolen. Bilden väljs från serverns lokala filsystem. Om ingen bild anges skapas en miniatyrbild för den överförda resursen.
+   (*Valfritt*) En bild som ska visas på kortet för aktiveringsresursen på medlemmens tilldelningssida samt på resurskonsolen. Bilden väljs från serverns lokala filsystem. Om ingen bild anges skapas en miniatyrbild för den överförda resursen.
 
-   ***Obs***: den rekommenderade bildstorleken är inte bara 480 x 480 pixlar. På grund av kortens responsiva design för olika webbläsardimensioner varierar visningsstorleken mellan 220 x 165 pixlar och 400 x 165 pixlar.
+   ***Obs***: Den rekommenderade bildstorleken är inte bara 480 x 480 pixlar. På grund av kortens responsiva design för olika webbläsardimensioner varierar visningsstorleken mellan 220 x 165 pixlar och 400 x 165 pixlar.
 
 * **[!UICONTROL Platsnamn]**
 
    (*skrivskyddat*) Den communitywebbplats som resursen läggs till i.
 
-* **[!UICONTROL Resursnamn&amp;stämpel;senaste;]**
+* **[!UICONTROL Resursnamn]**
 
-   (*obligatoriskt*) Resursens visningsnamn. Ett giltigt nodnamn skapas från visningsnamnet.
+   (*Obligatoriskt*) Resursens visningsnamn. Ett giltigt nodnamn skapas från visningsnamnet.
 
 * **[!UICONTROL Taggar]**
 
-   (*valfritt*) Du kan välja en eller flera taggar som associerar aktiveringsresursen med en eller flera kataloger. Se [Tagga aktiveringsresurser](tag-resources.md).
+   (*Valfritt*) Du kan välja en eller flera taggar som associerar aktiveringsresursen med en eller flera kataloger. Se [Tagga aktiveringsresurser](tag-resources.md).
 
 * **[!UICONTROL Visa i katalog]**
 
@@ -147,19 +150,19 @@ När resursen är en del av en kurs, en inlärningsväg, ska medlemmar endast ti
 
 * **[!UICONTROL Beskrivning]**
 
-   (*valfritt*) Beskrivning som ska visas för aktiveringsresursen.
+   (*Valfritt*) Beskrivningen som ska visas för aktiveringsresursen.
 
 * **[!UICONTROL Liten resurs]**
 
-   (*valfritt*) Välj bland AEM-resurser. En miniatyrbild som representerar resursen i publiceringsmiljön, t.ex. i en katalog.
+   (*Valfritt*) Välj bland AEM-resurser. En miniatyrbild som representerar resursen i publiceringsmiljön, t.ex. i en katalog.
 
 * **[!UICONTROL Stor resurs]**
 
-   (*valfritt*) Välj bland AEM-resurser. En stor bild som representerar resursen i publiceringsmiljön, till exempel på huvudsidan för en resurs.
+   (*Valfritt*) Välj bland AEM-resurser. En stor bild som representerar resursen i publiceringsmiljön, till exempel på huvudsidan för en resurs.
 
 * **[!UICONTROL Innehållsfragmentresurs]**
 
-   (*valfritt*) Välj bland AEM-resurser. Ett innehållsfragment som kan refereras i publiceringsmiljön, men som inte används som standard.
+   (*Valfritt*) Välj bland AEM-resurser. Ett innehållsfragment som kan refereras i publiceringsmiljön, men som inte används som standard.
 
 * Markera **[!UICONTROL nästa]**
 
@@ -173,9 +176,13 @@ Markera `'+' icon`i det övre högra hörnet när du vill börja välja resursen
 
 ![chlimage_1-171](assets/chlimage_1-171.png)
 
-* **[!UICONTROL Överföring från mina lokala filer]**&#x200B;Överföring från det lokala filsystemet använder den inbyggda filläsaren för att välja och överföra en fil. Filtyper som stöds är SCORM.zip (HTML5 eller SWF), MP4-video, SWF, PDF och bildtyper (JPG, PNG, GIF, BMP). Filnamnet blir namnet på resursen som läggs till i resursbiblioteket.
+* **[!UICONTROL Överför från mina lokala filer]**
 
-* **[!UICONTROL Bläddra bland resursbibliotek]** Välj från resursbibliotek. Markeringen begränsas till de som visas på communitywebbplatsen.
+   Vid överföring från det lokala filsystemet används den inbyggda filläsaren för att välja och överföra en fil. Filtyper som stöds är SCORM.zip (HTML5 eller SWF), MP4-video, SWF, PDF och bildtyper (JPG, PNG, GIF, BMP). Filnamnet blir namnet på resursen som läggs till i resursbiblioteket.
+
+* **[!UICONTROL Bläddra i resursbibliotek]**
+
+   Välj från Resursbibliotek. Markeringen begränsas till de som visas på communitywebbplatsen.
 
 * **[!UICONTROL Lägg till en extern URL]**
 
@@ -229,7 +236,7 @@ Markera `'+' icon`i det övre högra hörnet när du vill börja välja resursen
 
    Den rekommenderade storleken för omslagsbilden är 640 x 360 px.
 
-* Markera **[!UICONTROL nästa]**
+* Välj **[!UICONTROL Nästa]**.
 
 ### 3 inställningar {#settings}
 
@@ -240,6 +247,7 @@ Markera `'+' icon`i det övre högra hörnet när du vill börja välja resursen
 >Lärare ska inte registreras direkt i aktiveringsresurser som ska refereras från en inlärningsväg. Eleverna behöver bara vara inskrivna i kursen.
 >
 >Om en medlem är registrerad i både en resurs och en utbildningsväg som refererar till den resursen, kommer deras tilldelningar att visa både den enskilda resursen och resursen i utbildningsvägen.
+
 
 * **[!UICONTROL Sociala inställningar]**
 
@@ -258,26 +266,32 @@ Markera `'+' icon`i det övre högra hörnet när du vill börja välja resursen
       Om det här alternativet är markerat kan anonyma webbplatsbesökare visa resursen i en katalog när communitywebbplatsen även tillåter anonym åtkomst. Standard är avmarkerat.
 
 * **[!UICONTROL Förfallodatum]**
+
    *(Valfritt)* Ett datum då uppdraget ska vara slutfört kan väljas.
 
 * **[!UICONTROL Resursförfattare]**
+
    *(Valfritt)* Författaren till aktiveringsresursen. Använd listrutan för att välja bland de användare som är medlemmar i [medlemsgruppen](#members-group).
 
 * **[!UICONTROL Resurskontakt&amp;stämpel;ast;]**
+
    *(Obligatoriskt)* En person som medlemmen kan kontakta angående aktiveringsresursen. Använd listrutan för att välja bland de användare som är medlemmar i [medlemsgruppen](#members-group).
 
 * **[!UICONTROL Resursexpert]**
+
    *(Valfritt)* En person som medlemmen kan kontakta och som har kunskaper om aktiveringsresursen. Använd listrutan för att välja bland användare som är medlemmar i [medlemsgruppen](#members-group).
 
 ### 4 uppdrag {#assignments}
 
 ![chlimage_1-174](assets/chlimage_1-174.png)
 
-* **[!UICONTROL Lägg till tilldelningar]** Använd listrutan för att välja bland [medlemmarna](#members-group) - användarna och användargrupperna (med fet stil) - som ska registreras som elev. När medlemmar loggar in på communitywebbplatsen visas de aktiveringsresurser (och utbildningsvägar) som de är inskrivna i på deras [uppdragssida](functions.md#assignments-function) .
+* **[!UICONTROL Lägg till tilldelningar]**
 
-* välj **[!UICONTROL Skapa]**
+   Använd listrutan för att välja bland [medlemmar](#members-group) - de användare och användargrupper (med fet stil) - som ska registreras som elev. När medlemmar loggar in på communitywebbplatsen visas de aktiveringsresurser (och utbildningsvägar) som de är inskrivna i på deras [uppdragssida](functions.md#assignments-function) .
 
-![chlimage_1-175](assets/chlimage_1-175.png)
+* Välj **[!UICONTROL Skapa]**.
+
+   ![chlimage_1-175](assets/chlimage_1-175.png)
 
 Aktiveringsresursen har skapats och återgår till resurskonsolen med den nyligen skapade resursen markerad. Från den här konsolen går det att [hantera resursen](#managing-a-resource).
 
@@ -288,17 +302,17 @@ Aktiveringsresursen har skapats och återgår till resurskonsolen med den nylige
 Lägga till en ny utbildningsväg till communitywebbplatsen
 
 * Markera `Create` ikonen
-* På undermenyn som visas väljer du `Learning Path`
+* Välj **[!UICONTROL Utbildningsväg]** på undermenyn som visas.
 
-Detta startar en stegvis process för
+Detta startar en stegvis process för:
 
-* Identifiera inlärningsvägen
-* Erbjuda en kortbild som representerar inlärningsvägen för eleverna
-* Referera till aktiveringsresurser som ska ingå i utbildningsvägen
-* Om du vill kan du beställa resurserna
-* Möjlighet att identifiera inlärningsvägar som krävs
-* Identifiera en kontaktperson för utbildningsvägar
-* Registrerar medlemmar
+* Identifiera inlärningsvägen.
+* Erbjuda en kortbild som representerar inlärningsvägen för eleverna.
+* Refererar till de aktiveringsresurser som ska ingå i utbildningsvägen.
+* Du kan också beställa resurserna.
+* Du kan också identifiera nödvändiga utbildningsvägar.
+* Identifiera en kontaktperson för utbildningsvägar.
+* Registrerar medlemmar.
 
 För aktiveringsresurser som ingår i en inlärningsväg ska tilldelningarna endast göras för inlärningsvägen och inte för de enskilda resurserna.
 
@@ -308,21 +322,21 @@ För aktiveringsresurser som ingår i en inlärningsväg ska tilldelningarna end
 
 * **[!UICONTROL Lägg till bild]**
 
-   (*valfritt*) En bild som ska visas på kortet för utbildningssökvägen på medlemmens uppdragssida samt på Resurskonsolen. Bilden väljs från serverns lokala filsystem. Om ingen bild anges skapas en miniatyrbild för den överförda resursen.
+   (*Valfritt*) En bild som ska visas på kortet för utbildningssökvägen på medlemmens uppdragssida samt på Resurskonsolen. Bilden väljs från serverns lokala filsystem. Om ingen bild anges skapas en miniatyrbild för den överförda resursen.
 
-   ***Obs***: den rekommenderade bildstorleken inte längre bara är 480 x 480 pixlar. På grund av kortens responsiva design för olika webbläsardimensioner varierar visningsstorleken mellan 220 x 165 pixlar och 400 x 165 pixlar.
+   ***Obs***: Den rekommenderade bildstorleken är inte längre bara 480 x 480 pixlar. På grund av kortens responsiva design för olika webbläsardimensioner varierar visningsstorleken mellan 220 x 165 pixlar och 400 x 165 pixlar.
 
 * **[!UICONTROL Platsnamn]**
 
-   (*skrivskyddat*) Den communitywebbplats som resursen läggs till i.
+   (*Skrivskyddat*) Den community-webbplats som resursen läggs till i.
 
 * **[!UICONTROL Namn på utbildningssökväg]**
 
-   (*obligatoriskt*) Visningsnamnet för utbildningssökvägen. Ett giltigt nodnamn skapas från visningsnamnet.
+   (*Obligatoriskt*) Visningsnamnet för utbildningssökvägen. Ett giltigt nodnamn skapas från visningsnamnet.
 
 * **[!UICONTROL Taggar]**
 
-   (*valfritt*) Du kan välja en eller flera taggar som associerar utbildningsvägen med en eller flera kataloger. Se [Tagga aktiveringsresurser](tag-resources.md).
+   (*Valfritt*) Du kan välja en eller flera taggar som associerar utbildningsvägen med en eller flera kataloger. Se [Tagga aktiveringsresurser](tag-resources.md).
 
 * **[!UICONTROL Visa i katalog]**
 
@@ -330,29 +344,31 @@ För aktiveringsresurser som ingår i en inlärningsväg ska tilldelningarna end
 
 * **[!UICONTROL Beskrivning]**
 
-   (*valfritt*) Beskrivning som ska visas för aktiveringsresursen.
+   (*Valfritt*) Beskrivningen som ska visas för aktiveringsresursen.
 
 * **[!UICONTROL Liten resurs]**
 
-   (*valfritt*) Välj bland AEM-resurser. En miniatyrbild som representerar resursen i publiceringsmiljön, t.ex. i en katalog.
+   (*Valfritt*) Välj bland AEM-resurser. En miniatyrbild som representerar resursen i publiceringsmiljön, t.ex. i en katalog.
 
 * **[!UICONTROL Stor resurs]**
 
-   (*valfritt*) Välj bland AEM-resurser. En stor bild som representerar resursen i publiceringsmiljön, till exempel på huvudsidan för en resurs.
+   (*Valfritt*) Välj bland AEM-resurser. En stor bild som representerar resursen i publiceringsmiljön, till exempel på huvudsidan för en resurs.
 
 * **[!UICONTROL Innehållsfragmentresurs]**
 
-   (*valfritt*) Välj bland AEM-resurser. Ett innehållsfragment som kan refereras i publiceringsmiljön, men som inte används som standard.
+   (*Valfritt*) Välj bland AEM-resurser. Ett innehållsfragment som kan refereras i publiceringsmiljön, men som inte används som standard.
 
-* Markera **[!UICONTROL nästa]**
+* Välj **[!UICONTROL Nästa]**.
 
 ### Lägg till krav {#add-prerequisites}
 
 ![chlimage_1-178](assets/chlimage_1-178.png)
 
-* **[!UICONTROL Nödvändiga utbildningsvägar]**(*valfritt*) När andra publicerade utbildningsvägar väljs måste de slutföras innan en elev kan välja den här utbildningsvägen.
+* **[!UICONTROL Nödvändiga utbildningsvägar]**
 
-* Markera **[!UICONTROL nästa]**
+   (*Valfritt*) När andra publicerade utbildningsvägar har valts måste de vara klara innan en elev kan välja den här utbildningsvägen.
+
+* Välj **[!UICONTROL Nästa]**.
 
 ### Lägg till resurser {#add-resources}
 
@@ -360,19 +376,20 @@ För aktiveringsresurser som ingår i en inlärningsväg ska tilldelningarna end
 
 * **[!UICONTROL Använd beställning i utbildningsväg]**
 
-   (*valfritt*) Om värdet är På är den ordning som eleverna måste gå igenom inlärningsvägen i den ordning som aktiveringsresurserna läggs till. Standardvärdet är Av.
+   (*Valfritt*) Om värdet är På är den ordning som eleverna måste gå igenom inlärningsvägen i den ordning som aktiveringsresurserna läggs till. Standardvärdet är Av.
 
 * **[!UICONTROL Resurser]**
 
-   En eller flera resurser som valts bland *publicerade *aktiveringsresurser som skapats för den aktuella communitywebbplatsen.
+   En eller flera resurser som valts bland de *publicerade* aktiveringsresurserna som skapats för den aktuella communitywebbplatsen.
 
 >[!NOTE]
 >
 >Du kan bara välja resurser på samma nivå som utbildningsvägen. För en inlärningsväg som skapats i en grupp är t.ex. endast resurserna på gruppnivå tillgängliga. för en inlärningsväg som skapats på en community-webbplats finns resurserna på den webbplatsen tillgängliga för tillägg till inlärningsvägen.
 
+
 * Välj **[!UICONTROL Nästa]**.
 
-###  Inställningar {#settings-1}
+### Inställningar {#settings-1}
 
 ![chlimage_1-180](assets/chlimage_1-180.png)
 
@@ -392,13 +409,13 @@ För aktiveringsresurser som ingår i en inlärningsväg ska tilldelningarna end
 >
 >Om en medlem är registrerad i både en aktiveringsresurs och en utbildningsväg som refererar till den resursen, kommer deras tilldelningar att visa både den enskilda resursen och resursen i utbildningsvägen.
 
+
 ## Hantera en resurs {#managing-a-resource}
 
-Hantera en enda aktiveringsresurs
+Så här hanterar du en enda aktiveringsresurs:
 
-* Från Resurskonsolen
-* Välj den community-webbplats som innehåller resursen
-* Välj resurs
+* I **[!UICONTROL Resurskonsolen]** väljer du den communitywebbplats som innehåller resursen.
+* Välj resurs.
 
 För den valda aktiveringsresursen är det möjligt att:
 
@@ -422,7 +439,7 @@ Om den enda ändringen är att ändra uppdrag i steget Inställningar, kommer ä
 
 ![chlimage_1-182](assets/chlimage_1-182.png)
 
-Genom att markera kontrollkanarikonen blir aktiveringsresursen `Delete`d efter bekräftelse.
+Genom att markera kontrollkanarikonen aktiveras aktiveringsresursen `Deleted` efter bekräftelse.
 
 ### Publicera {#publish}
 
@@ -430,9 +447,9 @@ Genom att markera kontrollkanarikonen blir aktiveringsresursen `Delete`d efter b
 
 Innan eleverna kan se en tilldelad aktiveringskurs måste den publiceras:
 
-* Välj världsikonen för att `Publish`
-* Välj **[!UICONTROL Publicera]** igen i dialogrutan som öppnas
-* Välj **[!UICONTROL Stäng]**
+* Välj den världsikon du vill `Publish`.
+* I den dialogruta som öppnas väljer du **[!UICONTROL Publicera]** igen.
+* Välj **[!UICONTROL Stäng]**.
 
 Även om det står i dialogrutan att åtgärden står i kö publiceras den ofta omedelbart.
 
@@ -440,7 +457,7 @@ Innan eleverna kan se en tilldelad aktiveringskurs måste den publiceras:
 
 ![chlimage_1-184](assets/chlimage_1-184.png)
 
-Om du tillfälligt vill göra aktiveringsresurserna oåtkomliga för medlemmar i publiceringsmiljön utan att ta bort dem använder du världsikonen `Unpublish`för resursen.
+Om du tillfälligt vill göra aktiveringsresurserna oåtkomliga för medlemmar i publiceringsmiljön utan att ta bort dem använder du världsikonen för `Unpublish` resursen.
 
 ### Rapport {#report}
 
@@ -448,7 +465,7 @@ Om du tillfälligt vill göra aktiveringsresurserna oåtkomliga för medlemmar i
 
 Ikonen Rapport ger åtkomst till de rapporter som skapas när eleverna interagerar med sina tilldelade aktiveringsresurser i publiceringsmiljön. Rapporten varierar beroende på resurstypen.
 
-För alla utbildningsvägar är det möjligt att visa en rapport som baseras antingen på resurser eller studerande ( `User Report`).
+För alla utbildningsvägar är det möjligt att visa en rapport som baseras antingen på resurser eller studerande ( `User Report`.)
 
 ![chlimage_1-186](assets/chlimage_1-186.png)
 
@@ -464,19 +481,19 @@ Analysens tidslinjerapport visar när händelser inträffar över tid för den h
 
 * **Vyer**
 
-   En vy är när en elev besöker sidan med resursinformation
+   En vy är när en elev besöker sidan med resursinformation.
 
 * **Spelar**
 
-   En uppspelning är när alLearner interagerar med resursen, till exempel spelar upp en video eller öppnar en PDF-fil
+   En uppspelning är när alLearner interagerar med resursen, till exempel spelar upp en video eller öppnar en PDF-fil.
 
 * **Klassificeringar**
 
-   En klassificering är när en studerande ger en resurs en stjärngradering
+   En klassificering är när en elev ger en resurs en stjärngradering.
 
 * **Kommentarer**
 
-   En kommentar är när alLearner lägger till en kommentar
+   En kommentar är när alLearner lägger till en kommentar.
 
 Den lodräta axeln är antalet händelser.
 
@@ -514,14 +531,14 @@ Klassificeringsrapporten baseras på antalet studerande som har klassificerat ak
 
 #### Rapportsammanfattning {#report-summary}
 
-Rapportsammanfattningen är en tabelllista för en aktiveringsresurs
+Rapportsammanfattningen är en tabelllista för en aktiveringsresurs.
 
 * Alla som interagerat med resursen
    * Deras status
    * Om de har tilldelats resursen
       * I stället för att hitta resursen i en katalog
-   * Antal kommentarer
-   * Den angivna klassificeringen, om sådan finns
+      * Antal kommentarer
+      * Den angivna klassificeringen, om sådan finns
 
 Resursrapport för utbildningsvägar: Rapportsammanfattningen är en tabelllista
 
@@ -534,11 +551,11 @@ Resursrapport för utbildningsvägar: Rapportsammanfattningen är en tabelllista
    * Storlek
    * Namn på användarwebbplats
 
-För utbildningsvägar Användarrapport är rapportsammanfattningen en tabelllista
+För en utbildningsväg Användarrapport är rapportsammanfattningen en tabelllista.
 
-* Varje studerande som har tilldelats en utbildningsväg
-   * Antal slutförda resurser
-   * Deras status
+* Varje studerande som får delta i kursen:
+   * Antal slutförda resurser.
+   * Deras status.
 
 Du kan justera visningen av tabellen genom att markera kolumner med hjälp av `Show / hide columns` väljaren.
 
@@ -546,7 +563,7 @@ Du kan justera visningen av tabellen genom att markera kolumner med hjälp av `S
 
 Tabellen Rapportsammanfattning kan laddas ned i CSV-format med en knapp högst upp i konsolen.
 
-* för en aktiveringsresurs: `Download Resource Report as CSV` knapp
-* för en inlärningsväg: `Download Learning Path Report as CSV` knapp
+* För en aktiveringsresurs: - `Download Resource Report as CSV` .
+* För en inlärningsväg: - `Download Learning Path Report as CSV` .
 
 Den fullständiga rapportsammanfattningen hämtas oavsett vilka kolumner som valts för visning.
