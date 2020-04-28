@@ -3,7 +3,7 @@ title: XMP-tillbakaskrivning till återgivningar
 description: Lär dig hur XMP-återskrivningsfunktionen sprider metadataändringar för en resurs till alla eller vissa återgivningar av resursen.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: 33ab9845f7800c80a6beb5db06f3fadf582122d0
 
 ---
 
@@ -44,7 +44,7 @@ Om du vill att XMP-återskrivningsfunktionen ska kunna sprida metadataändringar
 
 Utför dessa steg för XMP-återskrivningsfunktionen som sprider metadata till återgivningsminiatyrerna 140.100.png och 319.319.png.
 
-1. Tryck/klicka på AEM-logotypen och navigera sedan till **Verktyg** > **Arbetsflöde** > **Modeller**.
+1. Tap/click the AEM logo, and then navigate to **Tools** > **Workflow** > **Models**.
 1. Öppna arbetsflödesmodellen **DAM Metadata Writeback** på sidan Modeller.
 1. Öppna steget för **XMP-återskrivningsprocess** på sidan med egenskaper för **DAM-metadataåterställning** .
 1. I dialogrutan Stegegenskaper trycker/klickar du på fliken **Process** .
@@ -55,7 +55,7 @@ Utför dessa steg för XMP-återskrivningsfunktionen som sprider metadata till �
 1. Spara ändringarna.
 1. Om du vill återskapa pyramidens TIF-renderingar för Dynamic Media-bilder med de nya attributen lägger du till steget **Dynamic Media Process Image Assets** i arbetsflödet för DAM-metadataåterställning.
 
-   PTIFF-renderingar skapas och lagras bara lokalt i en Dynamic Media Hybrid-implementering.
+   PTIFF-återgivningar skapas och lagras bara lokalt i en Dynamic Media-hybridimplementering.
 
 1. Spara arbetsflödet.
 
@@ -77,7 +77,7 @@ Vitlistsfiltrering av XMP-metadata löser problemet genom att du kan definiera d
 
 >[!NOTE]
 >
->Filtrering fungerar bara för egenskaper som härletts från XMP-källor i objektbinärfiler. För egenskaper som härleds från andra källor än XMP, t.ex. EXIF- och IPTC-format, fungerar inte filtreringen. Datumet då resursen skapades sparas till exempel i egenskapen EXIF TIFF `CreateDate` . AEM berättar det här värdet i metadatafältet med namnet `exif:DateTimeOriginal`. Eftersom källan inte är en XMP-källa fungerar inte filtrering på den här egenskapen.
+>Filtrering fungerar bara för egenskaper som härletts från XMP-källor i objektbinärfiler. För egenskaper som härleds från andra källor än XMP, t.ex. EXIF- och IPTC-format, fungerar inte filtreringen. Datumet då resursen skapades sparas till exempel i egenskapen EXIF TIFF `CreateDate` . AEM lagrar det här värdet i ett metadatafält med namnet `exif:DateTimeOriginal`. Eftersom källan inte är en XMP-källa fungerar inte filtrering på den här egenskapen.
 
 1. Öppna Configuration Manager genom att gå till `https://[aem_server]:[port]/system/console/configMgr`.
 1. Öppna **Adobe CQ DAM XmpFilter** -konfigurationen.
