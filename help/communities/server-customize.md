@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: df5416ec-5c63-481b-99ed-9e5a91df2432
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
 
 ---
 
@@ -26,6 +26,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >[!NOTE]
 >
 >Platsen för paket-API:er kan ändras när du uppgraderar från en större version till nästa.
+
 
 ### SocialComponent-gränssnitt {#socialcomponent-interface}
 
@@ -43,7 +44,7 @@ Alla klasser i SocialCollectionComponent måste implementera gränssnittet com.a
 
 ### SocialComponentFactory-gränssnitt {#socialcomponentfactory-interface}
 
-En SocialComponentFactory (fabrik) registrerar en SocialComponent med ramverket. Fabriken tillhandahåller ett sätt att meddela ramverket vilka SocialComponents som är tillgängliga för en viss resourceType och deras prioritetsranknings&amp;ast. när flera SocialComponents identifieras.
+En SocialComponentFactory (fabrik) registrerar en SocialComponent med ramverket. Fabriken tillhandahåller ett sätt att meddela ramverket vilka SocialComponents som är tillgängliga för en given resourceType och deras prioritetsordning när flera SocialComponents identifieras.
 
 En SocialComponentFactory ansvarar för att skapa en instans av den valda SocialComponent, vilket gör det möjligt att mata in alla beroenden som behövs av SocialComponent från fabriken med hjälp av DI-metoder.
 
@@ -65,29 +66,29 @@ En referens till OSGi-tjänsten erhålls genom att anropa `com.adobe.cq.social.s
 
 #### Klassen PostOperation {#postoperation-class}
 
-HTTP API POST-slutpunkterna är PostOperation-klasser som definieras genom implementering av `SlingPostOperation`gränssnittet (paket `org.apache.sling.servlets.post`).
+HTTP API POST-slutpunkterna är PostOperation-klasser som definieras genom implementering av `SlingPostOperation` gränssnittet (paket `org.apache.sling.servlets.post`).
 
-Slutpunktsimplementeringen anger `PostOperation`ett värde `sling.post.operation`som åtgärden ska svara på. Alla POST-begäranden med en:operation-parameter inställd på det värdet delegeras till den här implementeringsklassen.
+Slutpunktsimplementeringen anger `PostOperation` ett värde `sling.post.operation` som åtgärden ska svara på. Alla POST-begäranden med en:operation-parameter inställd på det värdet delegeras till den här implementeringsklassen.
 
-Den `PostOperation`anropar den `SocialOperation`som utför de åtgärder som krävs för åtgärden.
+Den `PostOperation` anropar `SocialOperation` som utför de åtgärder som krävs för åtgärden.
 
-Användaren `PostOperation`får resultatet från `SocialOperation`och returnerar det rätta svaret till klienten.
+Användaren `PostOperation` får resultatet från `SocialOperation` och returnerar det rätta svaret till klienten.
 
 #### Klassen SocialOperation {#socialoperation-class}
 
-Varje `SocialOperation`slutpunkt utökar klassen AbstractSocialOperation och åsidosätter metoden `performOperation().`Den här metoden utför alla åtgärder som krävs för att slutföra åtgärden och returnerar en `SocialOperationResult`eller annan utlöser en `OperationException`åtgärd. I så fall returneras en HTTP-felstatus med ett meddelande i stället för den vanliga JSON-svaret eller HTTP-statuskoden om det är tillgängligt.
+Varje `SocialOperation` slutpunkt utökar klassen AbstractSocialOperation och åsidosätter metoden `performOperation()`. Den här metoden utför alla åtgärder som krävs för att slutföra åtgärden och returnerar en `SocialOperationResult` eller annan utlöser en `OperationException`händelse. I så fall returneras en HTTP-felstatus med ett meddelande, om tillgängligt, i stället för den vanliga JSON-svarskoden eller HTTP-statuskoden för slutförd.
 
-Utökning `AbstractSocialOperation`gör det möjligt att återanvända `SocialComponents`för att skicka JSON-svar.
+Genom att utöka `AbstractSocialOperation` kan du återanvända `SocialComponents` för att skicka JSON-svar.
 
 #### Klassen SocialOperationResult {#socialoperationresult-class}
 
-Klassen `SocialOperationResult`returneras som resultatet av `SocialOperation`och består av en `SocialComponent`HTTP-statuskod och ett HTTP-statusmeddelande.
+Klassen returneras som ett resultat av `SocialOperationResult` och består av en `SocialOperation` `SocialComponent`HTTP-statuskod och ett HTTP-statusmeddelande.
 
-Resursen `SocialComponent`representerar den resurs som påverkades av åtgärden.
+Resursen `SocialComponent` representerar den resurs som påverkades av åtgärden.
 
-För en Skapa-åtgärd, `SocialComponent`som ingår i `SocialOperationResult`representerar den resurs som just har skapats och för en Update-åtgärd representerar den resursen som ändrades av åtgärden. Ingen `SocialComponent`returneras för en Delete-åtgärd.
+För en Skapa-åtgärd representerar den resurs som `SocialComponent` ingår i `SocialOperationResult` den resurs som just har skapats och för en Update-åtgärd representerar den den resurs som ändrades av åtgärden. Ingen `SocialComponent` returneras för en Delete-åtgärd.
 
-De HTTP-statuskoder som används är
+De HTTP-statuskoder som används är:
 
 * 2010 för Create-åtgärder
 * 200 för uppdateringsåtgärder
@@ -95,22 +96,24 @@ De HTTP-statuskoder som används är
 
 #### Klassen OperationException {#operationexception-class}
 
-Ett fel `OperationExcepton`kan genereras när en åtgärd utförs om begäran inte är giltig eller om något annat fel inträffar, till exempel interna fel, felaktiga parametervärden, felaktiga behörigheter osv. En `OperationException`består av en HTTP-statuskod och ett felmeddelande som returneras till klienten som svar på `PostOperatoin`.
+Ett fel `OperationExcepton` kan genereras när en åtgärd utförs om begäran inte är giltig eller om något annat fel inträffar, t.ex. interna fel, felaktiga parametervärden, felaktiga behörigheter osv. En `OperationException` består av en HTTP-statuskod och ett felmeddelande som returneras till klienten som svar på `PostOperatoin`.
 
 #### Klassen OperationService {#operationservice-class}
 
-Ramverket för sociala komponenter rekommenderar att den affärslogik som ansvarar för att utföra åtgärden inte implementeras i `SocialOperation`klassen, utan istället delegeras till en OSGi-tjänst. Med en OSGi-tjänst för affärslogik kan en `SocialComponent`som agerar på en `SocialOperation`slutpunkt integreras med annan kod och ha en annan affärslogik.
+Ramverket för sociala komponenter rekommenderar att den affärslogik som ansvarar för att utföra åtgärden inte implementeras inom `SocialOperation` klassen, utan istället delegeras till en OSGi-tjänst. Med en OSGi-tjänst för affärslogik kan en `SocialComponent`som agerar på en `SocialOperation` slutpunkt integreras med annan kod och ha en annan affärslogik.
 
-Alla `OperationService`klasser utökas `AbstractOperationService`så att ytterligare tillägg kan anslutas till den åtgärd som utförs. Varje åtgärd i tjänsten representeras av en `SocialOperation`klass. Du kan anropa `OperationExtensions`klassen under körning genom att anropa metoderna
+Alla `OperationService` klasser utökas `AbstractOperationService`så att ytterligare tillägg kan ingå i den åtgärd som utförs. Varje åtgärd i tjänsten representeras av en `SocialOperation` klass. Klassen kan anropas under körning genom att anropa metoderna `OperationExtensions`
 
 * `performBeforeActions()`
-Tillåter förkontroller/förbehandling och validering
+
+   Tillåter förkontroller/förbehandling och validering
 * `performAfterActions()`
-Möjliggör ytterligare ändringar av resurser eller anrop av anpassade händelser, arbetsflöden osv.
+
+   Möjliggör ytterligare ändringar av resurser eller anrop av anpassade händelser, arbetsflöden osv.
 
 #### Klassen OperationExtension {#operationextension-class}
 
-`OperationExtension`klasser är anpassade koddelar som kan injiceras i en åtgärd som gör det möjligt att anpassa operationer efter affärsbehov. Konsumenterna av komponenten kan dynamiskt och stegvis lägga till funktioner i komponenten. Med hjälp av tilläggs-/krokmönstret kan utvecklare fokusera enbart på själva tilläggen och ta bort behovet av att kopiera och åsidosätta hela åtgärder och komponenter.
+`OperationExtension` klasser är anpassade koddelar som kan injiceras i en åtgärd som gör det möjligt att anpassa operationer efter affärsbehov. Konsumenterna av komponenten kan dynamiskt och stegvis lägga till funktioner i komponenten. Med hjälp av tilläggs-/krokmönstret kan utvecklare fokusera enbart på själva tilläggen och ta bort behovet av att kopiera och åsidosätta hela åtgärder och komponenter.
 
 ## Exempelkod {#sample-code}
 
