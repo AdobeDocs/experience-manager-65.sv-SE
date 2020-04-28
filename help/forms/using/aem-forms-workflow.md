@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 73e63493-e821-443f-b50d-10797360f5d1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
+source-git-commit: 14a6e0c5f79ac7acb9f8bd06d3524473f1007485
 
 ---
 
@@ -65,7 +65,7 @@ I exemplet skapas en arbetsflödesmodell för en låneansökan som ska fyllas av
 
 [Hämta fil](assets/example-mortgage-loan-application.zip)
 
-1. Öppna konsolen Arbetsflödesmodeller. Standardwebbadressen är https://&#39;[server]:[port]&#39;/libs/cq/workflow/admin/console/content/models.html/etc/workflow/models
+1. Öppna konsolen Arbetsflödesmodeller. Standardwebbadressen är `https://[server]:[port]/libs/cq/workflow/admin/console/content/models.html/etc/workflow/models`
 1. Välj **Skapa** och sedan **Skapa modell**. Dialogrutan Lägg till arbetsflödesmodell visas.
 1. Ange **Titel** och **Namn** (valfritt). Till exempel en låneansökan. Tryck på **Klar**.
 1. Välj den nya arbetsflödesmodellen och tryck på **Redigera**. Nu kan du lägga till arbetsflödessteg för att skapa affärslogik. När du först skapar en arbetsflödesmodell innehåller den:
@@ -75,7 +75,7 @@ I exemplet skapas en arbetsflödesmodell för en låneansökan som ska fyllas av
 
 1. Aktivera e-postmeddelanden. Du kan konfigurera formulärcentrerade arbetsflöden i OSGi för att skicka e-postmeddelanden till användare eller tilldelade användare. Gör följande konfigurationer för att aktivera e-postmeddelanden:
 
-   1. Gå till konfigurationshanteraren för AEM på https://&#39;[server]:[port]&#39;/system/console/configMgr.
+   1. Gå till AEM-konfigurationshanteraren på `https://[server]:[port]/system/console/configMgr`.
    1. Öppna konfigurationen för **[!UICONTROL daglig CQ Mail Service]** . Ange ett värde för **[!UICONTROL SMTP-serverns värdnamn]**, **** SMTP-serverport och adressfälten **** &quot;Från&quot;. Click **[!UICONTROL Save]**.
    1. Öppna **[!UICONTROL Dag CQ Link Externalizer]** -konfigurationen. I fältet **[!UICONTROL Domäner]** anger du den faktiska värdnamnet/IP-adressen och portnumret för lokala instanser, författare och publiceringsinstanser. Click **[!UICONTROL Save]**.
 
@@ -107,7 +107,7 @@ I exemplet skapas en arbetsflödesmodell för en låneansökan som ska fyllas av
 
    ![ELLER Dela exempel](assets/orsplit_branch1_active_new.png)
 
-   **Routningsuttryck för gren 1**
+   **Routningsuttryck för gren 2**
 
    När en användare trycker på **Avvisa** i AEM Inbox aktiveras gren 2.
 
@@ -265,10 +265,10 @@ Du kan associera och köra ett formulärcentrerat arbetsflöde i OSGi när du sk
 
 Du kan använda stegen Tilldela uppgift och Skicka e-post i AEM-arbetsflöden för att skicka ett e-postmeddelande. Utför följande steg för att ange e-postservrar och andra konfigurationer som krävs för att skicka e-post:
 
-1. Gå till konfigurationshanteraren för AEM på https://&#39;[server]:[port]&#39;/system/console/configMgr.
+1. Gå till AEM-konfigurationshanteraren på `https://[server]:[port]/system/console/configMgr`.
 1. Öppna konfigurationen för **[!UICONTROL daglig CQ Mail Service]** . Ange ett värde för **[!UICONTROL SMTP-serverns värdnamn]**, **** SMTP-serverport och adressfälten **** &quot;Från&quot;. Click **[!UICONTROL Save]**.
 1. Öppna **[!UICONTROL Dag CQ Link Externalizer]** -konfigurationen. I fältet **[!UICONTROL Domäner]** anger du den faktiska värdnamnet/IP-adressen och portnumret för lokala instanser, författare och publiceringsinstanser. Click **[!UICONTROL Save]**.
 
 ### Rensa arbetsflödesinstanser {#purge-workflow-instances}
 
-Om du minimerar antalet arbetsflödesinstanser ökas arbetsflödesmotorns prestanda, så att du regelbundet kan rensa avslutade eller pågående arbetsflödesinstanser från databasen. Mer information finns i [Vanlig borttagning av arbetsflödesinstanser](/help/sites-administering/workflows-administering.md#regular-purging-of-workflow-instances).
+Om du minimerar antalet arbetsflödesinstanser ökas arbetsflödesmotorns prestanda, så att du regelbundet kan rensa avslutade eller pågående arbetsflödesinstanser från databasen. Mer information finns i [Vanlig rensning av arbetsflödesinstanser](/help/sites-administering/workflows-administering.md#regular) med rensning av arbetsflödesinstanser
