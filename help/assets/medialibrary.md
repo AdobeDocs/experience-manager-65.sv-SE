@@ -3,7 +3,7 @@ title: Jämför AEM Assets och AEM Media Library
 description: Jämför AEM Assets och AEM Media Library och se skillnaderna.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 569c552686e6312ecae0d500147a8b65354c303d
+source-git-commit: 476a8acbca2f498472225fe1df220f63eafe61e5
 
 ---
 
@@ -12,7 +12,7 @@ source-git-commit: 569c552686e6312ecae0d500147a8b65354c303d
 
 Adobe Experience Manager Assets (AEM) är en integrerad del av AEM-plattformen. Denna smidiga integrering ses som en stor fördel i AEM och säkerställer enhetlighet i innehållshanteringen och hög produktivitet för skribenter.
 
-## Frågor och svar {#frequently-asked-questions}
+## Vanliga frågor {#frequently-asked-questions}
 
 ### Vad är AEM Assets? {#what-is-aem-assets}
 
@@ -35,7 +35,7 @@ Dessa funktioner kräver en giltig licens för AEM Assets.
 
 ### Finns AEM Assets som separat paket? {#is-aem-assets-available-as-a-separate-package}
 
-Nej. För att underlätta installation och driftsättning levereras alla AEM-program och tillägg i ett enda paket med alla funktioner inkluderade. Det innebär inte att du har behörighet att använda alla funktioner i paketet.
+Nej. För att underlätta installation och driftsättning levereras alla AEM-program och tillägg i ett enda paket med alla funktioner inkluderade. Detta innebär inte att du har behörighet att använda alla funktioner i paketet.
 
 ### Jag vill redigera metadata för digitala resurser. Behöver jag AEM Assets? {#i-want-to-edit-metadata-of-digital-assets-do-i-need-aem-assets}
 
@@ -69,7 +69,7 @@ I det här fallet behöver man inte köpa AEM Assets, inte ens mediebiblioteket 
 * Avancerade metadataegenskaper och hantering
 * Adobe Asset Link (anslut till Creative Cloud for enterprise)
 * AEM-skrivbordsapp
-* Bearbetar profiler
+* Bearbeta profiler
 * InDesign-serverintegration
 * Resursmallar och katalogproduktionsramverk
 * Länkade resurser för Adobe Photoshop, Illustrator och InDesign
@@ -79,7 +79,7 @@ I det här fallet behöver man inte köpa AEM Assets, inte ens mediebiblioteket 
 * Stöd för Camera RAW
 * Hantering och konfiguration av sökfaktorer
 * Färdiga DAM-arbetsflöden (till exempel fotografering)
-* Resursrapportering och analys:Resursinsikter
+* Resursrapportering och analys: Resursinsikter
 * 3D-resurshantering
 * Anslutna resurser
 * Varumärkesportal
