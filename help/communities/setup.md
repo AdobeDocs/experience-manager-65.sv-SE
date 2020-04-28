@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 0d462ad1-5619-4bb6-9609-bc8987c40a0c
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
 
 ---
 
@@ -21,26 +21,27 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 I utvecklings- och demonstrationssyfte måste du köra en författare och en publiceringsinstans.
 
-Gör detta genom att följa de grundläggande AEM [Getting Started](../../help/sites-deploying/deploy.md#getting-started) -instruktionerna, som resulterar i
+Gör detta genom att följa de grundläggande AEM [Getting Started](../../help/sites-deploying/deploy.md#getting-started) -instruktionerna, som ger följande resultat:
 
 * Redigeringsmiljö på [localhost:4502](http://localhost:4502/)
 * Publiceringsmiljö på [localhost:4503](http://localhost:4503/)
 
 För AEM Communities,
 
-* Författarmiljön är till för
+* Författarmiljön är till för:
 
-   * Utveckling av webbplatser, mallar och komponenter
-   * Administrations- och konfigureringsuppgifter
+   * Utveckling av webbplatser, mallar och komponenter.
+   * Administrations- och konfigureringsuppgifter.
 
-* Publiceringsmiljön är avsedd för
+* Publiceringsmiljön är avsedd för:
 
-   * Användarupplevelsen när det gäller publicering och moderering av innehåll
-   * Skapa communitygrupper, medlemmar och medlemsgrupper
+   * Användarupplevelsen när det gäller publicering och moderering av innehåll.
+   * Skapa communitygrupper, medlemmar och medlemsgrupper.
 
 >[!NOTE]
 >
 >Om du inte känner till AEM läser du dokumentationen om [grundläggande hantering](../../help/sites-authoring/basic-handling.md) och en [snabbguide till redigeringssidorna](../../help/sites-authoring/qg-page-authoring.md).
+
 
 ## Installera senaste versionen av Communities {#install-latest-communities-release}
 
@@ -90,17 +91,17 @@ Skapa en användare på *författaren* som får rollen som Community Administrat
 
    * Till exempel användarnamn &#39;admin&#39; / lösenord &#39;admin&#39;
 
-* Navigera från huvudkonsolen till **[!UICONTROL Verktyg > Åtgärder > Säkerhet > Användare]**
+* Gå till **[!UICONTROL Verktyg]** > **[!UICONTROL Åtgärder]** > **[!UICONTROL Säkerhet]** > **[!UICONTROL Användare]** i huvudkonsolen.
 * Välj **Lägg till användare på menyn **Redigera****
 
-* I `Create New User` dialogrutan anger du
+* In the `Create New User` dialog enter:
 
-   * **[!UICONTROL ID&amp;ast;]**: sirius
+   * **[!UICONTROL ID]**: sirius
    * **[!UICONTROL E-postadress]**: sirius.nilson@mailinator.com
-   * **[!UICONTROL Lösenords&amp;stämpel;ast;]**:lösenord
-   * **[!UICONTROL Bekräfta lösenord&amp;stämpel;ast;]**:lösenord
+   * **[!UICONTROL Lösenord]**: lösenord
+   * **[!UICONTROL Bekräfta lösenord&amp;stämpel;ast;]**: lösenord
    * **[!UICONTROL Förnamn]**: Sirius
-   * **[!UICONTROL Efternamn&amp;stämpel;ast;]**: Nilson
+   * **[!UICONTROL Efternamn]**: Nilson
 
 ### Tilldela Sirius till gruppen Community-administratörer {#assign-sirius-to-community-administrators-group}
 
@@ -111,7 +112,7 @@ Bläddra ned till `Add User to Groups`:
    * Välj `Community Administrators`
    * Välj `Community Enablement Managers`
 
-* Välj **[!UICONTROL Spara]**
+* Välj **[!UICONTROL Spara]**.
 
 ![chlimage_1-301](assets/chlimage_1-301.png)
 
@@ -119,8 +120,8 @@ Bläddra ned till `Add User to Groups`:
 
 Innan demonstrationsversionerna av social inloggning med Facebook och Twitter kan användas är det nödvändigt att
 
-1. Installera ett korrigeringspaket eller [det senaste funktionspaketet](deploy-communities.md#latestfeaturepack) (för ändringar i Facebook-API:t från mars 2017)
-1. [Aktivera OAuth-providern](social-login.md#adobe-granite-oauth-authentication-handler) i publiceringsmiljön
+1. Installera ett korrigeringspaket eller [det senaste funktionspaketet](deploy-communities.md#latestfeaturepack) (för ändringar i Facebook-API:t från mars 2017).
+1. [Aktivera OAuth-providern](social-login.md#adobe-granite-oauth-authentication-handler) i publiceringsmiljön.
 
 För produktionsservrar är det nödvändigt att skapa de molntjänster som krävs för att tillhandahålla social inloggning.
 
@@ -141,10 +142,10 @@ Använd [taggningskonsolen](../../help/sites-administering/tags.md#tagging-conso
 
 ![chlimage_1-302](assets/chlimage_1-302.png)
 
-Följ sedan instruktionerna för att
+Följ sedan instruktionerna för att:
 
-1. [Ange taggbehörigheter](../../help/sites-administering/tags.md#setting-tag-permissions)
-1. [Publicera taggarna](../../help/sites-administering/tags.md#publishing-tags)
+1. [Ange taggbehörigheter](../../help/sites-administering/tags.md#setting-tag-permissions).
+1. [Publicera taggarna](../../help/sites-administering/tags.md#publishing-tags).
 
 Exempelpaket med taggar som skapats för självstudiekurserna Komma igång för AEM Communities
 
