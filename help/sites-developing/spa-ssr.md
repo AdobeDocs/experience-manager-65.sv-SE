@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 844e5c96-2a18-4869-b4c8-2fb9efe0332a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2dad220d6593ed542816f8a97b0d4b44f0d57876
+source-git-commit: 9f0eebfa0c5d2449dcc2977c7085b11a48a10eb9
 
 ---
 
@@ -28,7 +28,7 @@ source-git-commit: 2dad220d6593ed542816f8a97b0d4b44f0d57876
 
 ## Översikt {#overview}
 
-Single-page-applikationer (SPA) kan ge användaren en rik, dynamisk upplevelse som reagerar och beter sig på välbekanta sätt, ofta precis som ett systemspecifikt program. [Detta uppnås genom att kunden förlitar sig på att läsa in innehållet i förväg och sedan göra en reaktiv hantering av användarinteraktionen](/help/sites-developing/spa-walkthrough.md#how-does-a-spa-work) och på så sätt minimera mängden kommunikation som krävs mellan klienten och servern.
+Single-page-applikationer (SPA) kan ge användaren en rik, dynamisk upplevelse som reagerar och beter sig på välbekanta sätt, ofta precis som ett systemspecifikt program. [Detta uppnås genom att kunden förlitar sig på att läsa in innehållet i förväg och sedan göra en grov förbättring av användarinteraktionen](/help/sites-developing/spa-walkthrough.md#how-does-a-spa-work) och på så sätt minimera mängden kommunikation som krävs mellan klienten och servern, vilket gör appen mer reaktiv.
 
 Detta kan dock leda till längre inledande inläsningstider, särskilt om SPA-filen är stor och har mycket innehåll. För att optimera inläsningstiden kan en del av innehållet återges på serversidan. Serversidorendering (SSR) kan snabba upp den initiala inläsningen av sidan och sedan överföra ytterligare återgivning till klienten.
 
@@ -40,8 +40,8 @@ När du beslutar dig för att implementera SSR måste du först uppskatta vilken
 
 SSR ger vanligtvis ett visst värde när det finns ett tydligt&quot;ja&quot; till någon av följande frågor:
 
-* **** SEO: Krävs det fortfarande SSR för att webbplatsen ska kunna indexeras korrekt av sökmotorer som genererar trafik? Kom ihåg att de viktigaste sökmotorcrawlarna nu utvärderar JS.
-* **** Sidhastighet: Ger SSR en mätbar hastighetsförbättring i realtidsmiljöer och ökar den övergripande användarupplevelsen?
+* **SEO:** Krävs det fortfarande SSR för att webbplatsen ska kunna indexeras korrekt av sökmotorer som genererar trafik? Kom ihåg att de viktigaste sökmotorcrawlarna nu utvärderar JS.
+* **Sidhastighet:** Ger SSR en mätbar hastighetsförbättring i realtidsmiljöer och ökar den övergripande användarupplevelsen?
 
 Adobe rekommenderar att SSR implementeras endast när minst en av dessa två frågor besvaras med ett tydligt ja för ditt projekt. I följande avsnitt beskrivs hur du gör detta med Adobe I/O Runtime.
 
@@ -62,6 +62,33 @@ I följande avsnitt beskrivs hur Adobe I/O Runtime kan användas för att implem
 >[!NOTE]
 >
 >Adobe rekommenderar en separat instans av Adobe I/O Runtime för varje AEM-miljö (författare, publicering, scen osv.).
+
+## Fjärrrenderarkonfiguration {#remote-renderer-configuration}
+
+AEM måste veta var det fjärråtergivna innehållet kan hämtas. Oavsett [vilken modell du väljer att implementera för SSR,](#adobe-i-o-runtime) måste du ange för AEM hur du ska få åtkomst till den här fjärråtergivningstjänsten.
+
+Detta görs via **RemoteContentRenderer - Configuration Factory OSGi-tjänsten**. Sök efter strängen RemoteContentRenderer i webbkonsolens konfigurationskonsol på `http://<host>:<port>/system/console/configMgr`.
+
+![Renderingskonfiguration](assets/rendererconfig.png)
+
+Följande fält är tillgängliga för konfigurationen:
+
+* **Mönster** för innehållssökväg - Reguljärt uttryck för att matcha en del av innehållet, om det behövs
+* **URL** för fjärrslutpunkt - URL för slutpunkten som ansvarar för att generera innehållet
+   * Använd det säkra HTTPS-protokollet om det inte finns i det lokala nätverket.
+* **Ytterligare begäranrubriker** - Ytterligare rubriker som ska läggas till i begäran som skickas till fjärrslutpunkten
+   * Mönster: `key=value`
+* **Timeout** för begäran - timeout för fjärrvärdbegäran i millisekunder
+
+>[!NOTE]
+>
+>Oavsett om du väljer att implementera det [AEM-drivna kommunikationsflödet](#aem-driven-communication-flow) eller det [Adobe I/O Runtime-drivna flödet,](#adobe-i-o-runtime-driven-communication-flow) måste du definiera en fjärrkonfiguration för innehållsåtergivning.
+>
+>Den här konfigurationen måste också definieras om du väljer att [använda en anpassad Node.js-server.](#using-node-js)
+
+>[!NOTE]
+>
+>Den här konfigurationen utnyttjar [Renderer för fjärrinnehåll,](#remote-content-renderer) som har ytterligare alternativ för tillägg och anpassning.
 
 ## AEM-drivet kommunikationsflöde {#aem-driven-communication-flow}
 
@@ -164,3 +191,53 @@ För AEM-instanser på premesis är det också möjligt att implementera SSR med
 >[!NOTE]
 >
 >Om SSR måste implementeras via Node.js rekommenderar Adobe en separat Node.js-instans för varje AEM-miljö (författare, publicering, scen osv.).
+
+## Renderare för fjärrinnehåll {#remote-content-renderer}
+
+Den [fjärrkonfiguration](#remote-content-renderer-configuration) för innehållsrendering som krävs för att använda SSR med din SPA i AEM konverterar till en mer generaliserad renderingstjänst som kan utökas och anpassas efter dina behov.
+
+### RemoteContentRenderingService {#remotecontentrenderingservice}
+
+`RemoteContentRenderingService` är en OSGi-tjänst som hämtar innehåll som återges på en fjärrserver, till exempel från Adobe I/O. Innehållet som skickas till fjärrservern baseras på den begärandeparameter som skickas.
+
+`RemoteContentRenderingService` kan injiceras genom beroendeinvertering till antingen en anpassad Sling-modell eller servlet när ytterligare innehållsmanipulering krävs.
+
+Den här tjänsten används internt av [RemoteContentRendererRequestHandlerServlet](#remotecontentrendererrequesthandlerservlet).
+
+### RemoteContentRendererRequestHandlerServlet {#remotecontentrendererrequesthandlerservlet}
+
+Den `RemoteContentRendererRequestHandlerServlet` kan användas för att ställa in konfigurationen för begäran programmatiskt. `DefaultRemoteContentRendererRequestHandlerImpl`, den medföljande standardimplementeringen av begäranhanteraren, gör att du kan skapa flera OSGi-konfigurationer för att mappa en plats i innehållsstrukturen till en fjärrslutpunkt.
+
+Implementera `RemoteContentRendererRequestHandler` gränssnittet om du vill lägga till en anpassad begärandehanterare. Var noga med att ange egenskapen `Constants.SERVICE_RANKING` component till ett heltal som är högre än 100, vilket är rankningen för `DefaultRemoteContentRendererRequestHandlerImpl`.
+
+```
+@Component(immediate = true,
+        service = RemoteContentRendererRequestHandler.class,
+        property={
+            Constants.SERVICE_RANKING +":Integer=1000"
+        })
+public class CustomRemoteContentRendererRequestHandlerImpl implements RemoteContentRendererRequestHandler {}
+```
+
+### Konfigurera OSGi-konfigurationen för standardhanteraren {#configure-default-handler}
+
+Konfigurationen av standardhanteraren måste konfigureras enligt beskrivningen i avsnittet Konfiguration [av](#remote-content-renderer-configuration)fjärrinnehållsrenderare.
+
+### Användning av fjärråtergivning av innehåll {#usage}
+
+Så här hämtar du en servlet och returnerar innehåll som kan injiceras på sidan:
+
+1. Kontrollera att fjärrservern är tillgänglig.
+1. Lägg till ett av följande kodfragment i HTML-mallen för en AEM-komponent.
+1. Du kan också skapa eller ändra OSGi-konfigurationerna.
+1. Bläddra i webbplatsens innehåll
+
+Vanligtvis är HTML-mallen för en sidkomponent huvudmottagaren för en sådan funktion.
+
+```
+<sly data-sly-resource="${resource @ resourceType='cq/remote/content/renderer/request/handler'}" />
+```
+
+### Krav {#requirements}
+
+Servlets använder Sling Model Exporter för att serialisera komponentdata. Som standard stöds både `com.adobe.cq.export.json.ContainerExporter` och `com.adobe.cq.export.json.ComponentExporter` som Sling Model-kort. Om det behövs kan du lägga till klasser som begäran ska anpassas till med hjälp av `RemoteContentRendererServlet` och implementering av `RemoteContentRendererRequestHandler#getSlingModelAdapterClasses`. De extra klasserna måste utöka `ComponentExporter`.
