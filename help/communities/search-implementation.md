@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 300aa9f3-596f-42bc-8d46-e535f2bc4379
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
 
 ---
 
@@ -25,11 +25,11 @@ För Communities är de två saker som generellt söks igenom:
 
 * Innehåll som publicerats av communitymedlemmar
 
-   * Använder API:t för UGC-sökning i AEM Communities
+   * Använder AEM Communities UGC-söknings-API.
 
 * Användare och användargrupper (användardata)
 
-   * Använder sökfunktionerna i AEM-plattformen
+   * Använder sökfunktionerna i AEM-plattformen.
 
 Det här avsnittet av dokumentationen är av intresse för utvecklare som skapar anpassade komponenter som skapar eller hanterar UGC.
 
@@ -59,10 +59,10 @@ För [MSRP](msrp.md)lagras UGC i MongoDB som konfigurerats att använda Solr fö
 
 Om MSRP och Solr:
 
-* Den inbäddade Solr-funktionen för AEM-plattformen används inte för MSRP
-* Om du använder en fjärransluten Solr för AEM-plattformen kan den delas med MSRP, men de bör använda olika samlingar
-* Solr kan konfigureras för standardsökning eller för flerspråkig sökning (MLS)
-* Konfigurationsinformation finns i [Solr Configuration](msrp.md#solr-configuration) for MSRP
+* Inbäddad Solr för AEM-plattformen används inte för MSRP.
+* Om du använder en fjärransluten Solr för AEM-plattformen kan den delas med MSRP, men de bör använda olika samlingar.
+* Solr kan konfigureras för standardsökning eller för flerspråkig sökning (MLS).
+* Mer konfigurationsinformation finns i [Solr Configuration](msrp.md#solr-configuration) for MSRP.
 
 Anpassade sökfunktioner bör använda [UGC-söknings-API](#ugc-search-api).
 
@@ -88,8 +88,8 @@ Mer information om hur du ändrar befintliga index eller skapar anpassade index 
 
 Oak Index Manager [är](https://adobe-consulting-services.github.io/acs-aem-commons/features/oak-index-manager.html) tillgängligt från ACS AEM Commons. Den innehåller följande:
 
-* En vy över befintliga index
-* Möjlighet att initiera omindexering
+* En vy över befintliga index.
+* Möjlighet att initiera omindexering.
 
 Om du vill visa de befintliga ekindexen i [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)är platsen:
 
@@ -135,12 +135,12 @@ Nedan följer några av de sökbara egenskaper som används för olika webbgrupp
 
 ### Namngivning av anpassade egenskaper {#naming-of-custom-properties}
 
-När du lägger till anpassade egenskaper krävs *för att lägga till ett suffix till egenskapsnamnet för att dessa egenskaper ska vara synliga för sortering och sökningar som skapats med [UGC-söknings-API](#ugc-search-api).
+När du lägger till anpassade egenskaper [måste](#ugc-search-api)ett suffix läggas till i egenskapsnamnet för att dessa egenskaper ska vara synliga för sortering och sökningar som skapas med *UGC-söknings-API* .
 
 Suffixet är för frågespråk som använder ett schema:
 
-* Den identifierar egenskapen som sökbar
-* Den identifierar datatypen
+* Den identifierar egenskapen som sökbar.
+* Den identifierar datatypen.
 
 Solr är ett exempel på ett frågespråk som använder ett schema.
 
@@ -228,9 +228,9 @@ Värdet för `q` parametern är frågan. När URL-kodningen har avkodats kan fr�
 
 ## Relaterade resurser {#related-resources}
 
-* [Community Content Storage](working-with-srp.md) - Diskutera tillgängliga SRP-alternativ för en gemensam UGC-butik
-* [Översikt över](srp.md) lagringsresursleverantör - introduktion och databasanvändning - översikt
-* [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - riktlinjer för kodning
-* [Omfaktorisering](socialutils.md) för SocialUtils - verktygsmetoder för SRP som ersätter SocialUtils
-* [Komponenter](search.md) för sökning och sökresultat - lägga till UGC-sökfunktion i en mall
+* [Community Content Storage](working-with-srp.md) - Diskutera tillgängliga SRP-alternativ för en gemensam UGC-butik.
+* [Översikt över](srp.md) lagringsresursprovidern - Introduktion och översikt över databasanvändningen.
+* [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - riktlinjer för kodning.
+* [Omfaktorisering för SocialUtils](socialutils.md) - Verktygsmetoder för SRP som ersätter SocialUtils.
+* [Komponenter](search.md) för sökning och sökresultat - Lägga till UGC-sökfunktion i en mall.
 
