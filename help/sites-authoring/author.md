@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 81ff6f6f-11b3-4f8e-80e6-b3e104158394
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
+source-git-commit: b9cc4df476ab95707284c4255f9cf35f257a1258
 
 ---
 
@@ -38,9 +38,7 @@ I redigeringsmiljön är AEM-funktionaliteten tillgänglig via två användargr�
 
 >[!NOTE]
 >
->AEM används för att skapa AEM-dokumentationen.
->
->Tillsammans med Dispatcher används den också för publicering.
+>AEM och Dispatcher används för att publicera denna AEM-dokumentation.
 
 ### Författarmiljö {#author-environment}
 
