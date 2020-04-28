@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: introduction
 discoiquuid: d748decb-a614-4c9e-a502-d6176b720f1a
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 844d42ed50da153077423190684aa85265bce12f
 
 ---
 
@@ -29,6 +29,10 @@ Länkarna är inte aktiva när du [redigerar en sida](/help/sites-authoring/edit
 
 * [Växla till **förhandsgranskningsläget**](/help/sites-authoring/editing-content.md#preview-mode) om du vill navigera med hjälp av länkarna i ditt innehåll.
 
+### Strukturera sidor {#structure-pages}
+
+Sidor kan inte namnges `structure`. Sidor med namn `structure` går inte att redigera i sidredigeraren.
+
 ## CSS-begränsningar {#css-limitations}
 
 En utvecklare kan stöta på följande begränsningar när det gäller redigerarens interaktion med CSS.
@@ -37,7 +41,7 @@ En utvecklare kan stöta på följande begränsningar när det gäller redigerar
 
 Absolut positionerade element kan orsaka problem i positionen för deras övertäckning.
 
-* Om det inträffar måste du kontrollera att dimensionerna för det absolut placerade elementet är korrekta eftersom redigeraren kommer att skapa en övertäckning med exakt samma dimensioner.
+* Om detta inträffar måste du kontrollera att dimensionerna för det absolut placerade elementet är korrekta eftersom redigeraren kommer att skapa en övertäckning med exakt samma dimensioner.
 
 ### vh Enheter {#vh-units}
 
