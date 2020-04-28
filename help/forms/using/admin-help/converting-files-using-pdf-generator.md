@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 999ae2be-56ba-48c1-861b-8d4c991a0206
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: 68cd1c13fff94ac485865e50bc955548cd285b14
 
 ---
 
@@ -61,11 +61,22 @@ Om ZIP-filen innehåller mer än en HTML-fil på den lägsta nivån i mapphierar
 
 >[!NOTE]
 >
->Funktionen HTML till PDF kräver vissa teckensnitt i systemets teckensnittskatalog. I Linux, Solaris och AIX måste systemteckensnittskatalogen innehålla teckensnittet Courier. I Windows måste systemteckensnittskatalogen innehålla Times New Roman.
+>* Funktionen HTML till PDF kräver vissa teckensnitt i systemets teckensnittskatalog. I Linux, Solaris och AIX måste systemteckensnittskatalogen innehålla teckensnittet Courier. I Windows måste systemteckensnittskatalogen innehålla Times New Roman.
+   >
+   > 
+* Följande är japanska standardteckensnitt i AEM Forms i Linux. Minst >ett av dessa teckensnitt bör vara tillgängligt för konvertering av japanska teckensnitt i >systemet.
+   >
+   >   
+   * &quot;Sazanami Gothic&quot;
+   >   * &quot;Kozuka Gothic Pro-VI&quot;
+   >   * ’Kozuka Mincho Pro-VI’
+   >   * &quot;Sazanami Gothic&quot;
+   >   * &quot;Kozuka Mincho Pr6N&quot;
+   >   * &quot;Sazanami Mincho&quot;
+   >   * &quot;Adobe Heiti Std&quot;
+   >   * &quot;Adobe Song Std&quot;
+>* Om du vill överföra en fil från det lokala filsystemet använder du alternativet Överför fil på sidan HTML till PDF.
 
->[!NOTE]
->
->Om du vill överföra en fil från det lokala filsystemet använder du alternativet Överför fil på sidan HTML till PDF.
 
 1. I administrationskonsolen klickar du på Tjänster > PDF Generator > HTML till PDF.
 1. Ange vilken fil som ska konverteras genom att göra något av följande:
