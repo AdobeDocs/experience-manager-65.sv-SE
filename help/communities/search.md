@@ -10,7 +10,7 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 3acac082-efbe-4995-b374-851cb9aaf62d
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
 
 ---
 
@@ -19,15 +19,15 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 Sökfunktionen fungerar med olika andra funktioner, till exempel forum, som gör det möjligt att söka efter innehåll.
 
-När du lägger till möjligheten att söka efter inlägg som lagts in av communitymedlemmar, så kallade användargenererat innehåll (UGC), finns det två komponenter: [ och `Search`](#search) [ `Search Results`](#search-results).
+När du lägger till möjligheten att söka efter inlägg som lagts in av communitymedlemmar, så kallade användargenererat innehåll (UGC), finns det två komponenter: [Sök](#search) - och [sökresultat](#search-results).
 
 Sidan som innehåller `Search Results` komponenten har stöd för både sökning och visning av resultat.
 
-På sidan som innehåller `Search`komponenten kan du starta en sökning med resultat som visas på `Search Results` sidan.
+På sidan som innehåller `Search` komponenten kan du starta en sökning med resultat som visas på `Search Results` sidan.
 
 Sökfunktionen kan användas med andra funktioner som gör att besökare och medlemmar kan visa innehåll.
 
-## Sök {#search-features}
+## Sökning {#search-features}
 
 ### Lägg till sökning på en sida {#add-search-to-a-page}
 
@@ -83,9 +83,13 @@ På fliken **[!UICONTROL Sökresultatinställningar]** kan du ange vilka sökvä
 
 ![chlimage_1-378](assets/chlimage_1-378.png)
 
-* **[!UICONTROL Sökresultat per sida]** Definiera antalet ämnen/inlägg som visas per sida. Standardvärdet är 10.
+* **[!UICONTROL Sökresultat per sida]**
 
-* **[!UICONTROL Sökvägar]** Genom att lägga till sökvägar med knappen Lägg till objekt begränsas innehållssökningen.
+   Definiera antalet ämnen/inlägg som visas per sida. Standardvärdet är 10.
+
+* **[!UICONTROL Sökvägar]**
+
+   Genom att lägga till sökvägar med knappen Lägg till objekt begränsas innehållssökningen.
 
 ## Additional Information {#additional-information}
 
