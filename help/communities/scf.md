@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: d7b5b5e3-2d84-4a6b-bcc2-d490882ff3ed
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
 
 ---
 
@@ -21,12 +21,12 @@ Det sociala ramverket (SCF) förenklar processen att konfigurera, anpassa och ut
 
 Fördelarna med ramverket:
 
-* **Funktionell**: Enkel integrering direkt med liten eller ingen anpassning för 80 % av användningsfallen
-* **Skalbar**: Enhetlig användning av HTML-attribut för CSS-format
-* **Utbyggbart**: Komponentimplementeringen är objektorienterad och lätt utifrån affärslogik - enkel att lägga till inkrementell företagsinloggning på servern
-* **Flexibel**: Enkla logikfria javascript-mallar som enkelt kan överlappas och anpassas
-* **Tillgänglig**: HTTP-API:t stöder publicering från alla klienter, inklusive mobilappar
-* **Portable**: Integrera/bädda in i alla webbsidor som bygger på valfri teknik
+* **Funktionell**: Enkel integrering direkt med liten eller ingen anpassning för 80 % av användningsfallen.
+* **Skalbar**: Enhetlig användning av HTML-attribut för CSS-format.
+* **Utbyggbart**: Komponentimplementeringen är objektorienterad och lätt utifrån affärslogik - enkel att lägga till inkrementell företagsinloggning på servern.
+* **Flexibel**: Enkla logikfria javascript-mallar som enkelt kan överlagras och anpassas.
+* **Tillgänglig**: HTTP-API:t stöder publicering från alla klienter, inklusive mobilappar.
+* **Portable**: Integrera/bädda in i alla webbsidor som bygger på valfri teknik.
 
 Utforska en författare eller publicera en instans med hjälp av handboken [för interaktiva](components-guide.md)communitykomponenter.
 
@@ -48,20 +48,20 @@ SocialComponent-API:t kan utökas för att tillhandahålla data som krävs av en
 
 Om du vill anpassa eller utöka komponenterna skriver du bara övertäckningar och tillägg till din /apps-katalog, vilket förenklar uppgraderingen till framtida versioner.
 
-* För skal
-   * Endast [CSS behöver redigeras](client-customize.md#skinning-css)
-* For Look and Feel
-   * Ändra JS-mall och CSS
-* For Look, Feel och UX
-   * Ändra JS-mallen, CSS och [utöka/åsidosätt JavaScript](client-customize.md#extending-javascript)
-* Ändra informationen som är tillgänglig för JS-mallen eller för GET-slutpunkten
-   * Utöka [SocialComponent](server-customize.md#socialcomponent-interface)
-* Lägga till anpassad bearbetning under åtgärder
-   * Skriv en [OperationExtension](server-customize.md#operationextension-class)
-* Lägga till en ny anpassad åtgärd
-   * Skapa en ny [skickapoståtgärd](server-customize.md#postoperation-class)
-   * Använd befintliga [OperationServices](server-customize.md#operationservice-class) efter behov
-   * Lägg till JavaScript-kod för att anropa åtgärden från klientsidan efter behov
+* För skal:
+   * Endast [CSS behöver redigeras](client-customize.md#skinning-css).
+* För Look and Feel:
+   * Ändra JS-mallen och CSS.
+* För Look, Feel och UX:
+   * Ändra JS-mallen, CSS och [utöka/åsidosätt JavaScript](client-customize.md#extending-javascript).
+* Så här ändrar du informationen som är tillgänglig för JS-mallen eller för GET-slutpunkten:
+   * Utöka [SocialComponent](server-customize.md#socialcomponent-interface).
+* Så här lägger du till anpassad bearbetning under åtgärder:
+   * Skriv ett [OperationExtension](server-customize.md#operationextension-class).
+* Så här lägger du till en ny anpassad åtgärd:
+   * Skapa en ny [Sling Post-åtgärd](server-customize.md#postoperation-class).
+   * Använd befintliga [OperationServices](server-customize.md#operationservice-class) efter behov.
+   * Lägg till Javascript-kod för att anropa åtgärden från klientsidan efter behov.
 
 ## Serverside Framework {#server-side-framework}
 
@@ -75,7 +75,7 @@ Huvudklasserna beskrivs på sidan [Serveranpassning](server-customize.md) .
 
 Mer information om hur du arbetar med UGC finns i [Lagringsresursprovideröversikt](srp.md) .
 
-### HTTP-API {#http-api}
+### HTTP API {#http-api}
 
 HTTP-API:t har stöd för enkel anpassning och val av klientplattformar för PhoneGap-appar, inbyggda appar och andra integreringar och mashups. Dessutom gör HTTP API det möjligt för en community-webbplats att köras som en tjänst utan en klient, så att ramverkskomponenter kan integreras i alla webbsidor som bygger på valfri teknik.
 
@@ -83,11 +83,11 @@ HTTP-API:t har stöd för enkel anpassning och val av klientplattformar för Pho
 
 För varje SocialComponent tillhandahåller ramverket en HTTP-baserad API-slutpunkt. Slutpunkten nås genom att en GET-begäran skickas till resursen med väljaren .social.json + tillägget. Med Sling lämnas begäran till `DefaultSocialGetServlet`.
 
-The `DefaultSocialGetServlet`
+**`DefaultSocialGetServlet`**
 
-1. Skickar resursen (resourceType) till `SocialComponentFactoryManager`och tar emot en SocialComponentFactory som kan välja en `SocialComponent`som representerar resursen.
+1. Skickar resursen (resourceType) till `SocialComponentFactoryManager` och tar emot en SocialComponentFactory som kan välja en `SocialComponent` som representerar resursen.
 
-1. Anropar fabriken och tar emot en `SocialComponent`kapacitet att hantera resursen och begäran.
+1. Anropar fabriken och tar emot en `SocialComponent` kapacitet för hantering av resursen och begäran.
 1. Anropar `SocialComponent`, som bearbetar begäran och returnerar en JSON-representation av resultaten.
 1. Returnerar JSON-svaret till klienten.
 
@@ -111,11 +111,11 @@ Det finns en Sling POST:operation för varje SocialComponent-åtgärd. Affärslo
 
 ### Lagringsresursleverantör (SRP) {#storage-resource-provider-srp}
 
-Mer information om hur du hanterar UGC som lagras i [community-innehållslagringen](working-with-srp.md)finns i
+Mer information om hur du hanterar UGC som lagras i [community-innehållslagringen](working-with-srp.md)finns i:
 
-* [Översikt över](srp.md) lagringsresursleverantör - introduktion och databasanvändning - översikt
-* [SRP och UGC Essentials](srp-and-ugc.md) - metoder och exempel för SRP API-verktyg
-* [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - riktlinjer för kodning
+* [Översikt över](srp.md) lagringsresursprovidern - Introduktion och översikt över databasanvändningen.
+* [SRP och UGC Essentials](srp-and-ugc.md) - metoder och exempel för SRP API-verktyg.
+* [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - riktlinjer för kodning.
 
 ### Anpassningar på serversidan {#server-side-customizations}
 
@@ -181,6 +181,7 @@ I [Community Components Guide](components-guide.md) kan man växla mellan att l�
 >
 >Om du vill lägga till en komponent dynamiskt på en sida, i stället för att lägga till eller ta med den i en mall, läser du [Komponentsidinläsning](sideloading.md).
 
+
 ### Handtag {#handlebars-helpers}
 
 Se [SCF Handlebars Helpers](handlebars-helpers.md) för en lista och en beskrivning av anpassade hjälpredor som finns i SCF.
@@ -198,8 +199,8 @@ Ramverket använder mallar för serversidans handtag för att återge komponente
 Följande är rekommenderade konventioner för att definiera och använda CSS-klasser:
 
 * Använd CSS-klassväljarnamn med tydligt namn och undvik generiska namn som heading, image osv.
-* Definiera specifika klassväljarformat så att CSS-formatmallarna fungerar bra med andra element och format på sidan. Exempel: `.social-forum .topic-list .li { color: blue; }`
-* Håll CSS-klasser för formatering åtskilda från CSS-klasser för UX som drivs av JavaScript
+* Definiera specifika klassväljarformat så att CSS-formatmallarna fungerar bra med andra element och format på sidan. Till exempel: `.social-forum .topic-list .li { color: blue; }`
+* Håll CSS-klasser för formatering åtskilda från CSS-klasser för UX som drivs av JavaScript.
 
 ### Anpassningar på klientsidan {#client-side-customizations}
 
