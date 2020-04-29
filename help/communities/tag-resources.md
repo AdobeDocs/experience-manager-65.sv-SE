@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: c012d639-c6e6-4f73-bbd8-78a4baa38c17
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: fa01c9fad82adb021220631a0536ab77ceb01e31
 
 ---
 
@@ -26,13 +26,12 @@ I grund och botten:
 * [Skapa ett taggnamnutrymme](../../help/sites-administering/tags.md#creating-a-namespace) för varje katalog
 
    * [Ange taggbehörigheter](../../help/sites-administering/tags.md#setting-tag-permissions)
+   * Endast för communitymedlemmar (sluten community)
 
-      * Endast för communitymedlemmar (sluten community)
+      * Tillåt läsåtkomst för [communityplatsens medlemsgrupp](users.md#publish-group-roles)
+   * För alla webbplatsbesökare, oavsett om de är inloggade eller anonyma (öppen community)
 
-         * Tillåt läsåtkomst för [communityplatsens medlemsgrupp](users.md#publish-group-roles)
-      * För alla webbplatsbesökare, oavsett om de är inloggade eller anonyma (öppen community)
-
-         * Tillåt läsåtkomst för `Everyone`gruppen
+      * Tillåt läsåtkomst för `Everyone` gruppen
    * [Publicera taggarna](../../help/sites-administering/tags.md#publishing-tags)
 
 
@@ -41,8 +40,8 @@ I grund och botten:
 
    * [Konfigurera kataloger som finns i platsens struktur](functions.md#catalog-function)
 
-      * Kan lägga till taggar i kataloginstansen för att styra listan med taggar som finns i gränssnittsfiltren
-      * Kan lägga till [förfilter](catalog-developer-essentials.md#pre-filters)för att begränsa katalogernas inkluderade resurser
+      * Kan lägga till taggar i kataloginstansen för att styra listan med taggar som finns i gränssnittsfiltren.
+      * Kan lägga till [förfilter](catalog-developer-essentials.md#pre-filters)för att begränsa vilka resurser som ingår i en katalog.
 
 * [Publicera communitywebbplatsen](sites-console.md#publishing-the-site)
 * [Använd taggar för aktiveringsresurser](resources.md#create-a-resource) så att de kan filtreras kategoriserat
@@ -82,9 +81,8 @@ Administratören som använder taggarna i aktiveringsresurserna måste känna ti
 
 Om ett `ski-catalog` namnutrymme till exempel skapades och angavs för en katalog med namnet `Ski Catalog`kan det ha två underordnade taggar: `lesson-1` och `lesson-2`.
 
-Alla aktiveringsresurser som är taggade med något av följande:
+Alla aktiveringsresurser som taggats med en av
 
-* skidkatalog:
 * skidkatalog:lektion-1
 * skidkatalog:lektion-2
 
