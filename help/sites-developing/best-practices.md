@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 99678c1a-81f3-4fb3-bf73-98f0691c3fb6
 translation-type: tm+mt
-source-git-commit: 5597fb39500ac1f85d03263bfa1e5239d35d2a2c
+source-git-commit: e562939f1c64d8345b4c2a28e4b882200d9e4c07
 
 ---
 
@@ -30,12 +30,13 @@ Innan du börjar ditt AEM-utvecklingsprojekt bör du först granska följande me
 * [Code Pitfalls](/help/sites-developing/code-pitfalls.md)
 * [JCR-interaktion](/help/sites-developing/jcr-integration.md)
 * [OSGi Bundles](/help/sites-developing/osgi-bundles.md)
+* [Java API Best Practices](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/understand-java-api-best-practices.html)
 
 ### Ytterligare metodinformation {#additional-best-practices-information}
 
 Följande områden har dokumentation som är specifik för att utveckla metodtips:
 
-* [Webbplatser](#sites)
+* [Sites](#sites)
 * [Communities](/help/sites-developing/best-practices.md#communities)
 * [Verktyg/HTML](/help/sites-developing/best-practices.md#tooling-htl)
 
@@ -47,7 +48,7 @@ De bästa sätten att administrera, distribuera och underhålla, eller att skapa
 * [Bästa tillvägagångssätt](/help/sites-authoring/best-practices.md)
 * [Effektiva rutiner](/help/sites-deploying/best-practices.md)
 
-## Webbplatser {#sites}
+## Sites {#sites}
 
 Hantering och redigering av webbplatsinnehåll har några beprövade metoder:
 
@@ -55,7 +56,7 @@ Hantering och redigering av webbplatsinnehåll har några beprövade metoder:
  <tbody>
   <tr>
    <td>En del av teorin bakom standardgränssnittet med pekfunktioner.</td>
-   <td><p><a href="/help/sites-developing/touch-ui-concepts.md">Pekaktiverat användargränssnitt: Concepts</a></p> <p><a href="/help/sites-developing/touch-ui-structure.md">Pekaktiverat användargränssnitt:Struktur</a></p> </td>
+   <td><p><a href="/help/sites-developing/touch-ui-concepts.md">Pekaktiverat användargränssnitt: Concepts</a></p> <p><a href="/help/sites-developing/touch-ui-structure.md">Pekaktiverat användargränssnitt: Struktur</a></p> </td>
    <td>Dessa dokument ger en översikt över begreppen, och strukturen, för det beröringskänsliga användargränssnittet.</td>
   </tr>
   <tr>
@@ -78,7 +79,7 @@ Hantering och redigering av webbplatsinnehåll har några beprövade metoder:
 
 ## Communities {#communities}
 
-[AEM Communities](/help/communities/overview.md) förenklar framtagning och hantering av lokala communityn.
+[AEM Communities](/help/communities/overview.md) förenklar framtagning och hantering av lokala communities.
 
 Här beskrivs några tips för Communities:
 
@@ -99,5 +100,5 @@ HTML-mallspråk (HTL) är ett nytt HTML-mallsystem som introducerades med AEM 6.
 >[!NOTE]
 >
 >Följande självstudiekurs i flera delar kan vara av intresse för den bästa metoden för att skapa ett nytt AEM-projekt, med information om kärnkomponenter, redigerbara mallar, klientbibliotek och komponentutveckling:
->[Komma igång med AEM Sites - självstudiekurs om WKND](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)
+>[Getting Started with AEM Sites - WKND Tutorial](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)
 
