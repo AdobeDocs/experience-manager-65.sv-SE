@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: dc7a085e-d6de-4bc8-bd7e-6b43f8d172d2
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
 
 ---
 
@@ -21,36 +21,42 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 En anpassad webbplatsmall kan anges separat för varje språkkopia av en communitywebbplats.
 
-Gör så här:
+Så här gör du:
 
-* Skapa en egen mall
-* Täck över standardsökvägen för webbplatsmallen
-* Lägg till den anpassade mallen i överläggsbanan
-* Ange den anpassade mallen genom att lägga till en `page-template` egenskap till `configuration` noden
+* Skapa en anpassad mall.
+* Lägg över standardsökvägen för webbplatsmallen.
+* Lägg till den anpassade mallen i överläggsbanan.
+* Ange den anpassade mallen genom att lägga till en `page-template` egenskap till `configuration` noden.
 
 **Standardmall**:
 
-/**libs**/social/console/components/hbs/sitepage/**sitepage**.hbs
+`/libs/social/console/components/hbs/sitepage/sitepage.hbs`
 
 **Anpassad mall i övertäckningssökväg**:
 
-/**apps**/social/console/components/hbs/sitepage/**&lt;*template-name*>**.hbs
+`/apps/social/console/components/hbs/sitepage/template-name.hbs`
 
-**Egenskap**: page-template **Type**: Strängvärde ****: &lt;*template-name*> (inget tillägg)
+**Egenskap**: page-template
+
+**Typ**: Sträng
+
+**Värde**: `template-name` (inget tillägg)
 
 **Konfigurationsnod**:
 
-/content/&lt;sökväg till *communityplats*>/&lt;*språk*>/configuration
+`/content/community site path/lang/configuration`
 
-Till exempel: /content/sites/engage/en/configuration
+Till exempel: `/content/sites/engage/en/configuration`
 
 >[!NOTE]
 >
 >Alla noder i den överlagda banan behöver bara vara av typen `Folder`.
 
+
 >[!CAUTION]
 >
->Om den anpassade mallen får namnet *sitepage.hbs,* anpassas alla communitywebbplatser.
+>Om den anpassade mallen får namnet *sitepage.hbs* anpassas alla communitywebbplatser.
+
 
 ### Exempel på anpassad webbplatsmall {#custom-site-template-example}
 
@@ -58,11 +64,11 @@ Ett exempel är en webbplatsmall som `vertical-sitepage.hbs` placerar menylänka
 
 [Hämta fil](assets/vertical-sitepage.hbs)Placera den anpassade platsmallen i överläggsmappen:
 
-/**apps**/social/console/components/hbs/sitepage/**vertical-sitepage**.hbs
+`/apps/social/console/components/hbs/sitepage/vertical-sitepage.hbs`
 
 Identifiera den anpassade mallen genom att lägga till en `page-template` egenskap i konfigurationsnoden:
 
-/content/sites/sample/en/configuration
+`/content/sites/sample/en/configuration`
 
 ![chlimage_1-80](assets/chlimage_1-80.png)
 
@@ -82,22 +88,24 @@ Om du vill exportera UGC använder du [AEM Communities UGC Migration Tool](https
 
 ## Ta bort en communitywebbplats {#deleting-a-community-site}
 
-Från och med AEM Communities 6.3 Service Pack 1 visas ikonen Ta bort plats när du hovrar över communitywebbplatsen från webbgruppskonsolen > Webbplatskonsolen. Om du vill ta bort en community-webbplats och börja om från början kan du använda den här funktionen. Om du tar bort en community-webbplats tas följande objekt som är kopplade till den platsen bort:
+Från och med AEM Communities 6.3 Service Pack 1 visas ikonen Ta bort plats när du hovrar över communitywebbplatsen från **[!UICONTROL Communities]** > **[!UICONTROL Sites]** console. Om du vill ta bort en community-webbplats och börja om från början kan du använda den här funktionen. Om du tar bort en community-webbplats tas följande objekt som är kopplade till den platsen bort:
 
 * [UGC](#user-generated-content)
 * [Användargrupper](#community-user-groups)
-* [Resurser](#enablement-assets)
+* [Assets](#enablement-assets)
 * [Databasposter](#database-records)
 
 ### Unikt plats-ID för community {#community-unique-site-id}
 
 Så här identifierar du det unika plats-ID som är kopplat till communityplatsen med hjälp av CRXDE:
 
-* Navigera till webbplatsens språkrot, till exempel `/content/sites/*<site name>*/en/rep:policy`
+* Navigera till webbplatsens språkrot, till exempel `/content/sites/*<site name>*/en/rep:policy`.
 
-* Sök efter `allow<#>` noden med en `rep:principalName` i det här formatet `rep:principalName = *community-enable-nrh9h-members*`
+* Hitta `allow<#>` noden med en `rep:principalName` i det här formatet `rep:principalName = *community-enable-nrh9h-members*`.
 
-* Plats-ID är den tredje komponenten i `rep:principalName`Exempel: `rep:principalName = community-enable-nrh9h-members`
+* Plats-ID är den tredje komponenten i `rep:principalName`
+
+   Om `rep:principalName = community-enable-nrh9h-members`
 
    * **platsnamn** = *aktivera*
    * **plats-ID** = *nrh9h*
@@ -113,7 +121,7 @@ Det här innehåller en servett som tar bort all UGC från en SRP.
 
 All UGC kan tas bort eller för en specifik plats, till exempel:
 
-* path=/content/usergenerated/asi/mongo/content/sites/engage
+* `path=/content/usergenerated/asi/mongo/content/sites/engage`
 
 Detta tar endast bort användargenererat innehåll (som anges vid publicering) och inte redigerat innehåll (anges av författaren). Därför påverkas inte [skuggnoder](srp.md#shadownodes) .
 
@@ -124,16 +132,16 @@ På alla författare- och publiceringsinstanser, från [säkerhetskonsolen](../.
 * Förfixat med `community`
 * Följd av [unikt plats-ID](#community-unique-site-id)
 
-Exempel, `community-engage-x0e11-members`.
+Till exempel, `community-engage-x0e11-members`.
 
 ### Aktivera resurser {#enablement-assets}
 
 Från huvudkonsolen:
 
-* Välj **[!UICONTROL resurser]**
-* Ange **[!UICONTROL markeringsläge]**
-* Välj en mapp med det [unika plats-ID:t](#community-unique-site-id)
-* Välj **[!UICONTROL Ta bort]** (kan behöva välja från **[!UICONTROL Mer..]**)
+* Välj **[!UICONTROL Resurser]**.
+* Öppna **[!UICONTROL markeringsläget]** .
+* Välj en mapp med det [unika plats-ID:t](#community-unique-site-id).
+* Välj **[!UICONTROL Ta bort]** (kan behöva välja från **[!UICONTROL Fler...]**).
 
 ### Databasposter {#database-records}
 
