@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 63abeda4-6ea1-4b45-b188-f9c6b44ca0cd
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
 
 ---
 
@@ -33,15 +33,15 @@ Alla SCF-komponenter implementeras med SRP API, vilket gör att kod kan utveckla
 
 Se även:
 
-* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och -exempel
-* [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - riktlinjer för kodning
-* [Omfaktorisering för SocialUtils](socialutils.md) - Mappar borttagna verktygsmetoder till aktuella SRP-verktygsmetoder
+* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och exempel.
+* [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - riktlinjer för kodning.
+* [Omfaktorisering för SocialUtils](socialutils.md) - Mappar borttagna verktygsmetoder till aktuella SRP-verktygsmetoder.
 
 ## Om databasen {#about-the-repository}
 
 För att förstå SRP är det praktiskt att förstå vilken roll AEM-databasen (OAK) har på en AEM-communitywebbplats.
 
-**Java Content Repository (JCR)** Den här standarden definierar en datamodell och ett[JCR-API](https://jackrabbit.apache.org/jcr/jcr-api.html)(Application Programming Interface) för innehållsdatabaser. Det kombinerar egenskaper i konventionella filsystem med egenskaper i relationsdatabaser och lägger till ett antal extrafunktioner som innehållsprogram ofta behöver.
+**Java Content Repository (JCR)** Den här standarden definierar en datamodell och ett[JCR-API](https://jackrabbit.apache.org/jcr/jcr-api.html)(Application Programming Interface) för innehållsdatabaser. Det kombinerar egenskaper i vanliga filsystem med egenskaper i relationsdatabaser och lägger till ett antal extrafunktioner som innehållsprogram ofta behöver.
 
 En implementering av JCR är AEM-databasen, OAK.
 
@@ -63,7 +63,8 @@ När UGC sparas i delad lagring finns det en enda instans av medlemsinnehåll so
 >
 >Se [SRP och UGC Essentials](srp-and-ugc.md) för exempelkod och ytterligare information.
 >
->Mer information om de effektivaste strategierna vid kodning finns i [Åtkomst av UGC med SRP](accessing-ugc-with-srp.md) .
+>Mer information om de effektivaste strategierna vid kodning finns i [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) .
+
 
 ### ASRP {#asrp}
 
@@ -101,7 +102,7 @@ JSRP använder Oak-index för frågor.
 
 Skuggnoder, som påminner om sökvägen till UGC, finns i den lokala databasen för två syften:
 
-1. [Åtkomstkontroll (ACL](#for-access-control-acls))
+1. [Åtkomstkontroll (ACL)](#for-access-control-acls)
 1. [Icke-befintliga resurser](#for-non-existing-resources-ners)
 
 Oavsett SRP-implementering kommer den faktiska UGC:n att *inte vara synlig på samma plats som skuggnoden.
@@ -112,7 +113,7 @@ Vissa SRP-implementeringar, som ASRP och MSRP, lagrar communityinnehåll i datab
 
 Med SRP API utför alla SRP-alternativ samma kontroll av skuggplatsen före alla CRUD-åtgärder.
 
-ACL-kontrollen använder en verktygsmetod som returnerar en sökväg som är lämplig för att kontrollera behörigheterna som tillämpas på resursens UGC.
+ACL-kontrollen använder en verktygsmetod som returnerar en sökväg som är lämplig för att kontrollera de behörigheter som används för resursens UGC.
 
 Se [SRP och UGC Essentials](srp-and-ugc.md) för exempelkod.
 
@@ -126,17 +127,18 @@ Skuggnoder är en adresserbar plats för Sling i databasen.
 >
 >Eftersom skuggnoden har flera användningar innebär en skuggnod *inte* att komponenten är en NER.
 
+
 ### Lagringsplats {#storage-location}
 
 Här följer ett exempel på en skuggnod där komponenten [](http://localhost:4502/content/community-components/en/comments.html) Comments i [Community Components Guide](components-guide.md)används:
 
 * Komponenten finns i den lokala databasen på:
 
-   /content/community-components/en/comments/jcr:content/content/includable/comments
+   `/content/community-components/en/comments/jcr:content/content/includable/comments`
 
 * Motsvarande skuggnod finns i den lokala databasen på:
 
-   /content/usergenerated/content/community-components/en/comments/jcr:content/indesign/comments
+   `/content/usergenerated/content/community-components/en/comments/jcr:content/content/includable/comments`
 
 Ingen UGC hittas under skuggnoden.
 
