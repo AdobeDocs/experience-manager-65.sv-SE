@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 202d7dba-2b34-431d-b10f-87775632807f
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
 
 ---
 
@@ -23,9 +23,10 @@ Konsolen Platsmallar liknar konsolen [Gruppmallar](tools-groups.md) , som är in
 >
 >Konsolerna för att skapa [communitysajter](sites-console.md), [communitymallar](sites.md), mallar [för](tools-groups.md) communitygrupper [och](functions.md) communityfunktionerär endast avsedda att användas i författarmiljön.
 
+
 ## Konsol för webbplatsmallar {#site-templates-console}
 
-För att nå webbcommunitywebbplatskonsolen i redigeringsmiljön
+I författarmiljön kan du nå webbcommunitywebbplatskonsolen:
 
 * Från global navigering: **[!UICONTROL Verktyg > Communities > Site Templates]**
 
@@ -45,11 +46,17 @@ Då öppnas panelen Platsredigeraren som innehåller tre underpaneler:
 
 På panelen Grundläggande information konfigureras ett namn, en beskrivning och huruvida mallen är aktiverad eller inaktiverad:
 
-* **[!UICONTROL Mallnamn]** för community-webbplats Mallens namn-ID
+* **[!UICONTROL Mallnamn för communitywebbplats]**
 
-* **[!UICONTROL Beskrivning]** av communityplatsmall
+   Mallens namn-ID.
 
-* **[!UICONTROL Inaktiverad/aktiverad]** En växlingsväxling som styr om mallen kan refereras
+* **[!UICONTROL Beskrivning av mall för communitywebbplats]**
+
+   Mallbeskrivningen.
+
+* **[!UICONTROL Handikappade/aktiverade]**
+
+   En växlingsväxling som styr om mallen kan refereras.
 
 ### Miniatyrbild {#thumbnail}
 
@@ -75,6 +82,7 @@ Sidfunktionen ger en tom sida. Med gruppfunktionen kan du skapa en gruppwebbplat
 >
 >Alla andra funktioner, till exempel [sidfunktionen](functions.md#page-function), måste inkluderas och listas först.
 
+
 ![chlimage_1-22](assets/chlimage_1-22.png)
 
 ### Gruppmallar för gruppfunktion {#group-templates-for-groups-function}
@@ -84,6 +92,7 @@ När du inkluderar en gruppfunktion i platsmallen, kräver konfigurationen att d
 >[!CAUTION]
 >
 >Funktionen Grupper får *inte* vara den *första eller enda* funktionen i platsstrukturen.
+
 
 ![chlimage_1-23](assets/chlimage_1-23.png)
 
