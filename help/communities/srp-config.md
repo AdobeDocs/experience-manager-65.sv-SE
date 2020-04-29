@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 71fac7e9-814a-48b5-b816-9bdcb2a05190
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
 
 ---
 
@@ -21,7 +21,7 @@ Lagringskonfiguration är ett sätt att identifiera det lagringsutrymme som valt
 
 Den här inställningen informerar AEM Communities-koden om vilken implementering av lagringsresursprovidern som ska användas vid åtkomst till UGC och måste återspegla den topologi som fastställdes när AEM distribuerades.
 
-En diskussion om lagringsalternativ och driftsättningstopologier finns på
+En diskussion om lagringsalternativ och driftsättningstopologier finns på:
 
 * [Community Content Store](working-with-srp.md)
 * [Rekommenderade topologier](topologies.md)
@@ -30,20 +30,20 @@ En diskussion om lagringsalternativ och driftsättningstopologier finns på
 
 ![chlimage_1-188](assets/chlimage_1-188.png)
 
-För att nå lagringskonsolen i redigeringsmiljön
+För att nå lagringskonsolen i redigeringsmiljön.
 
-* Från global navigering: **[!UICONTROL Verktyg > Communities > Storage Configuration]**
+* Från global navigering väljer du **[!UICONTROL Verktyg]** > **[!UICONTROL Communities]** > **[!UICONTROL Storage Configuration]**
 
 Så här väljer du ett annat lagringsalternativ än standard-JCR:
 
-* välj ett alternativ
+* Välj ett alternativ
 * Konfigurera korrekt
 
    * Se information om hur du [väljer MSRP](msrp.md#select-msrp)
    * Se information för [val av DSRP](dsrp.md#select-dsrp)
    * Se information om hur du [väljer ASRP](asrp.md#select-asrp)
 
-* Välj **[!UICONTROL Skicka]**
+* Välj **[!UICONTROL Skicka]**.
 
 ### Om JCR-lagring {#about-jcr-storage}
 
@@ -55,5 +55,6 @@ Mer information finns i [JCR Store](jsrp.md) .
 
 >[!NOTE]
 >
->Om noden inte finns `srpc`under `/etc/socialconfig` visas standardlagret för [JCR](jsrp.md).
+>Frånvaro av noden `srpc` under `/etc/socialconfig` indikerar standardlagret för [JCR](jsrp.md).
+
 
