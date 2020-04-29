@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 06b8c0be-4362-4bd1-ad57-ea5503616b17
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b3e1493811176271ead54bae55b1cd0cf759fe71
+source-git-commit: 3d9bcc706a1fa7a15d0ce8729f7b85c4226b394f
 
 ---
 
@@ -171,7 +171,18 @@ Tidigare versioner av dessa ramverk kan fungera med AEM SPA Editor SDK, men stö
 
 ### Ytterligare ramar {#additional-frameworks}
 
-Ytterligare SPA-ramverk kan implementeras för att fungera med AEM SPA Editor SDK. I [SPA-designdokumentet](/help/sites-developing/spa-blueprint.md) finns information om vilka krav ett ramverk måste uppfylla för att kunna skapa ett ramverksspecifikt lager som består av moduler, komponenter och tjänster som ska fungera med AEM SPA-redigeraren.
+Ytterligare SPA-ramverk kan implementeras för att fungera med AEM SPA Editor SDK. I [SPA-](/help/sites-developing/spa-blueprint.md) designdokumentetfinns information om vilka krav ett ramverk måste uppfylla för att kunna skapa ett ramverksspecifikt lager bestående av moduler, komponenter och tjänster som ska fungera med AEM SPA-redigeraren.
+
+### Krav för textredigeraren {#text-editor-requirements}
+
+Om du vill använda redigeraren i stället för en textkomponent som skapats i SPA krävs ytterligare konfiguration.
+
+1. Ange ett attribut (det kan vara valfritt) för behållarelementet som innehåller text-HTML. När det gäller exempelinnehållet i WKND Journal är det ett `<div>` element och väljaren som har använts är `data-rte-editelement`.
+1. Ange konfigurationen `editElementQuery` för motsvarande AEM-textkomponenters `cq:InplaceEditingConfig` som pekar på den väljaren, t.ex. `data-rte-editelement`. Detta gör att redigeraren vet vilket HTML-element som omsluter HTML-texten.
+
+Ett exempel på hur detta görs finns i exempelinnehållet i [WKND Journal.](https://github.com/adobe/aem-sample-we-retail-journal/pull/16/files)
+
+Mer information om `editElementQuery` egenskapen och konfigurationen för textredigeraren finns i [Konfigurera textredigeraren.](/help/sites-administering/rich-text-editor.md)
 
 ### Begränsningar {#limitations}
 
