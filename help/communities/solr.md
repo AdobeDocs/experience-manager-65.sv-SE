@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: e228f1db-91ea-4ec3-86da-06d89d74bc72
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
 
 ---
 
@@ -29,7 +29,7 @@ I produktionsmiljöer ger [SolrCloud-läget](#solrcloud-mode) bättre prestanda 
 
 Hämta och installera Apache Solr:
 
-* [Version 4.10](https://archive.apache.org/dist/lucene/solr/4.10.4/) eller [version 5](https://archive.apache.org/dist/lucene/solr/5.5.3/)
+* [Version 4.10](https://archive.apache.org/dist/lucene/solr/4.10.4/) eller [version 5.x](https://archive.apache.org/dist/lucene/solr/5.5.3/)
 
 * Solr kräver Java 1.7 eller senare
 * Ingen tjänst behövs
@@ -49,8 +49,8 @@ Hämta och installera Apache Solr:
 
 Rekommendationen är att följa instruktionerna i SolrCloud för att installera:
 
-* 3 SolrCloud-noder på samma server
-* En extern Apache ZooKeeper
+* 3 SolrCloud-noder på samma server.
+* En extern Apache ZooKeeper.
 
 Vi rekommenderar även att du konfigurerar JVM för att justera minnesanvändning och skräpinsamling.
 
@@ -77,12 +77,13 @@ sh ./scripts/cloud-scripts/zkcli.sh \
 -solrhome *solr-home-path* \
 -confidir *config-dir*
 
-#### 2.Skapa en samling {#create-a-collection}
+#### 2. Skapa en samling {#create-a-collection}
 
 Referens:
 [https://cwiki.apache.org/confluence/display/solr/Solr+Start+Script+Reference#SolrStartScriptReference-Create](https://cwiki.apache.org/confluence/display/solr/Solr+Start+Script+Reference#SolrStartScriptReference-Create)
 
-Användning: ./bin/solr create \
+Användning:
+./bin/solr create \
 -c *mycollection-name*\
 -d *config-dir* \
 -n *myconfig-name* \
@@ -112,16 +113,16 @@ MLS för AEM-communities är tillgängligt som standard-MLS eller avancerad MLS.
 
 Standard-MLS innehåller förbättringar för innehållssökning för följande språk:
 
-* Engelska: förbättrad ordstam för försök att matcha ordhärledning
-* Japanska: förbättrad japansk tokenisering för halvbreddstecken
+* Engelska: Förbättrad ordstam för försök att matcha ordhärledning.
+* Japanska: Förbättrad japansk tokenisering för halvbreddstecken.
 
 Avancerad MLS innehåller förbättringar för innehållssökning för följande språk:
 
-* Engelska: ersatt stam med lemmatiker
-* Tyska: added decomUnder
-* Franska: extra elithantering
-* Kinesiska (förenklad): har lagt till en smartare token
-* Olika språk: har lagt till en ordlista, stoppordslista och en normaliserare.
+* Engelska: Ersatte ordstam med lemmatiker.
+* Tyska: Lagt till decomunder.
+* Franska: Utelöjningshantering har lagts till.
+* Kinesiska (förenklad): En smartare tokeniserare har lagts till.
+* Olika språk: En ordlista, stoppordslista och normalisering har lagts till.
 
 Följande 33 språk stöds i avancerad MLS.
 
@@ -151,66 +152,66 @@ För att SRP-samlingen (MSRP eller DSRP) ska ha stöd för standard Multilingual
 * **schema.xml**
 * **solrconfig.xml**
 
-Standard-MLS-filer (schema.xml, solrconfig.xml) för Solr 4.10
+Standard-MLS-filer (schema.xml, solrconfig.xml) för Solr 4.10.
 
-Standard-MLS-filer (schema.xml, solrconfig.xml) för Solr 5
+Standard-MLS-filer (schema.xml, solrconfig.xml) för Solr 5.x.
 
 Standardfilerna för MLS lagras i AEM-databasen.
 
 **Obs**: Solr-filerna lagras i mappen msrp/, men de gäller även för DSRP (inga ändringar krävs).
 
-**Nedladdningsinstruktioner**: ersätt `solrX` med `solr4` eller `solr5` på lämpligt sätt
+**Nedladdningsinstruktioner**: Ersätt `solrX` med `solr4` eller `solr5` efter behov.
 
-1. Använda CRXDE|Lite, leta upp
+1. Använd CRXDE|Lite, leta upp:
 
-   * /libs/social/config/datastore/msrp/*solrX*/**schema.xml**
-   * /libs/social/config/datastore/msrp/*solrX*/**solrconfig.xml**
+   * `/libs/social/config/datastore/msrp/solrX/schema.xml`
+   * `/libs/social/config/datastore/msrp/solrX/solrconfig.xml`
 
-1. Hämta till den lokala servern där Solr är distribuerad
+1. Hämta till den lokala servern där Solr är distribuerad.
 
-   * Leta reda på `jcr:content` nodens `jcr:data` egenskap
-   * Välj `view` för att starta hämtningen
-   * Se till att filerna sparas med rätt namn och kodning (UTF8)
+   * Leta reda på `jcr:content` nodens `jcr:data` egenskap.
+   * Välj `view` för att starta hämtningen.
+   * Se till att filerna sparas med rätt namn och kodning (UTF8).
 
-1. Följ installationsanvisningarna för antingen fristående läge eller SolrCloud-läge
+1. Följ installationsanvisningarna för antingen fristående läge eller SolrCloud-läge.
 
 #### SolrCloud-läge - standard-MLS {#solrcloud-mode-standard-mls}
 
-1. Installera och konfigurera Solr i SolrCloud-läge
+1. Installera och konfigurera Solr i SolrCloud-läge.
 1. Förbered en ny konfiguration:
 
-   1. Skapa *ny-config-dir* , till exempel *solr-install-dir*/myconfig/
+   1. Create new-config-dir* such as `solr-install-dir*/myconfig/`
 
    1. Kopiera innehållet i den befintliga Solr-konfigurationskatalogen till *new-config-dir*
 
-      * För Solr4: copy *solr-install-dir*/example/solr/collection1/conf/&amp;ast;
-      * För Solr5: copy *solr-install-dir*/server/solr/configsets/data_driven_schema_configs/&amp;ast;
-   1. Kopiera den hämtade **schema.xml** och **solrconfig.xml** till *new-config-dir* för att skriva över befintliga filer
+      * För Solr4: copy `solr-install-dir/example/solr/collection1/conf/`
+      * För Solr5: copy `solr-install-dir/server/solr/configsets/data_driven_schema_configs/`
+   1. Kopiera den hämtade **schema.xml** och **solrconfig.xml** till *new-config-dir* för att skriva över befintliga filer.
 
 
-1. [Överför den nya konfigurationen](#upload-a-configuration-to-zookeeper) till ZooKeeper
+1. [Överför den nya konfigurationen](#upload-a-configuration-to-zookeeper) till ZooKeeper.
 1. [Skapa en samling](#create-a-collection) som anger nödvändiga parametrar, till exempel antal kort, antal kopior och konfigurationsnamn.
-1. Om konfigurationsnamnet *inte angavs när samlingen skapades [länkar du den här samlingen](#link-a-collection-to-a-configuration-set) med konfigurationen överförd till ZooKeeper
+1. Om konfigurationsnamnet *inte angavs när samlingen skapades [länkar du den här samlingen](#link-a-collection-to-a-configuration-set) med konfigurationen överförd till ZooKeeper.
 
-1. För MSRP kör du omindexeringsverktyget [för](msrp.md#msrp-reindex-tool)MSRP, såvida det inte är en ny installation
+1. För MSRP kör du omindexeringsverktyget [för](msrp.md#msrp-reindex-tool)MSRP, såvida det inte är en ny installation.
 
 #### Fristående läge - standard-MLS {#standalone-mode-standard-mls}
 
-1. Installera Solr i fristående läge
+1. Installera Solr i fristående läge.
 1. Om du kör Solr5 skapar du en samling1 (liknande Solr4):
 
-   * ./bin/solr start
-   * ./bin/solr create_core -c collection1 -d sample_techproducts_configs
+   * `./bin/solr start`
+   * `./bin/solr create_core -c collection1 -d sample_techproducts_configs`
 
 1. Säkerhetskopiera **schema.xml** och **solrconfig.xml** i Solr-konfigurationsdir, till exempel:
 
-   * För Solr4: *solr-install-dir*/example/solr/collection1/conf/
-   * Skapat för Solr5: *solr-install-dir*/server/solr/collection1/conf/
+   * För Solr4: `solr-install-dir/example/solr/collection1/conf/`
+   * Skapat för Solr5: `solr-install-dir/server/solr/collection1/conf/`
 
-1. Kopiera den hämtade **schema.xml** och **solrconfig.xml** till samma katalog
+1. Kopiera den hämtade **schema.xml** och **solrconfig.xml** till samma katalog.
 
-1. Starta om Solr
-1. För MSRP kör du omindexeringsverktyget [för](#msrpreindextool)MSRP, såvida det inte är en ny installation
+1. Starta om Solr.
+1. För MSRP kör du omindexeringsverktyget [för](#msrpreindextool)MSRP, såvida det inte är en ny installation.
 
 ### Avancerad MLS installeras {#installing-advanced-mls}
 
@@ -220,14 +221,14 @@ Information om hur du får tillgång till det avancerade MLS-paketet finns i [AE
 
 Så här kommer du igång med installationen av antingen SolrCloud eller fristående läge:
 
-* Ladda ned zip-arkivet AEM-SOLR-MLS till värdservern Solr
-* Packa upp arkivet
+* Ladda ned zip-arkivet AEM-SOLR-MLS till värdservern Solr.
+* Packa upp arkivet.
 
 #### SolrCloud-läge - avancerad MLS {#solrcloud-mode-advanced-mls}
 
 Installationsanvisningar - notera de få skillnaderna för Solr4 och Solr5:
 
-1. Installera och konfigurera Solr i SolrCloud-läge
+1. Installera och konfigurera Solr i SolrCloud-läge.
 1. Extrahera innehållet i det avancerade MLS-paketet till disken. Innehållet bör omfatta:
 
    * **schema.xml**
@@ -240,15 +241,15 @@ Installationsanvisningar - notera de få skillnaderna för Solr4 och Solr5:
 
    1. Skapa en *ny-config-dir*
 
-      * Till exempel *solr-install-dir*/myconfig/
-      * Skapa undermappar med stoppord/ och språk/
+      * Som `solr-install-dir/myconfig/`
+      * Skapa undermappar `stopwords/` och `lang/`
    1. Kopiera innehållet i den befintliga Solr-konfigurationsdir till *new-config-dir*
 
-      * För Solr4: Copy *solr-install-dir*/example/solr/collection1/conf/&amp;ast;
-      * För Solr5: Kopiera *solr-install-dir*/server/solr/configsets/data_driven_schema_configs/&amp;ast;
-   1. Kopiera den extraherade **schema.xml** och **solrconfig.xml** till *new-config-dir* för att skriva över befintliga filer
-   1. För Solr5: Kopiera *solr_install_dir*/server/solr/configsets/sample_techproducts_configs/conf/lang/&amp;ast;.txt&quot; till *new-config-dir*/lang/
-   1. Kopiera de extraherade **stopporden/** mappen till *new-config-dir* , vilket resulterar i *new-config-dir*/stopwords/&amp;ast;.txt
+      * För Solr4: Kopiera `solr-install-dir/example/solr/collection1/conf/`
+      * För Solr5: Kopiera `solr-install-dir/server/solr/configsets/data_driven_schema_configs/`
+   1. Kopiera den extraherade **schema.xml** och **solrconfig.xml** till *new-config-dir* för att skriva över befintliga filer.
+   1. För Solr5: Kopiera `solr_install_dir/server/solr/configsets/sample_techproducts_configs/conf/lang/*.txt` till `new-config-dir/lang/`
+   1. Kopiera de extraherade **stopporden/** mappen till *new-config-dir* , vilket resulterar i `new-config-dir/stopwords/*.txt`
 
 
 
@@ -273,9 +274,9 @@ Installationsanvisningar - notera de få skillnaderna för Solr4 och Solr5:
    * *solr-install-dir/contribute/analysis-extras/lucene-libs/*.jar
 
 1. [Skapa en samling](#create-a-collection) som anger nödvändiga parametrar, till exempel antal kort, antal kopior och konfigurationsnamn.
-1. Om konfigurationsnamnet *inte* tillhandahölls när samlingen skapades [länkar du den nyligen skapade samlingen](#link-a-collection-to-a-configuration-set) med konfigurationen överförd till ZooKeeper
+1. Om konfigurationsnamnet *inte* tillhandahölls när samlingen skapades [länkar du den nyligen skapade samlingen](#link-a-collection-to-a-configuration-set) med konfigurationen överförd till ZooKeeper.
 
-1. För MSRP kör du omindexeringsverktyget [för](#msrpreindextool)MSRP, såvida det inte är en ny installation
+1. För MSRP kör du omindexeringsverktyget [för](#msrpreindextool)MSRP, såvida det inte är en ny installation.
 
 #### Fristående läge - avancerad MLS {#standalone-mode-advanced-mls}
 
@@ -283,11 +284,11 @@ Ett installationsskript ingår i det avancerade MLS-paketet.
 
 När innehållet i paketet har extraherats till servern som är värd för den fristående Solr-servern kör du bara installationsskriptet för att installera nödvändiga resurser och konfigurationsfiler.
 
-* Installera Solr i fristående läge
+* Installera Solr i fristående läge.
 * Om du kör Solr5 skapar du en samling1 (liknande Solr4):
 
-   * ./bin/solr start
-   * ./bin/solr create_core -c collection1 -d sample_techproducts_configs
+   * `./bin/solr start`
+   * `./bin/solr create_core -c collection1 -d sample_techproducts_configs`
 
 * Kör installationsskriptet: Install [-v 4|5] [-d solrhome] [-c collection path]where:
 
@@ -323,8 +324,8 @@ När innehållet i paketet har extraherats till servern som är värd för den f
 
 Filen **solrconfig.xml** styr intervallet för automatisk implementering och söksynlighet och kommer att kräva testning och justering.
 
-&lt;autoCommit>: Som standard är intervallet AutoCommit, som är en hård implementering av stabil lagring, inställt på 15 sekunder. Söksynligheten använder som standard indexvärdet före implementering.
+`<autoCommit>`: Som standard är intervallet AutoCommit, som är en hård implementering av stabil lagring, inställt på 15 sekunder. Söksynligheten använder som standard indexvärdet före implementering.
 
-Om du vill ändra sökningen till att använda ett index som har uppdaterats för att återspegla ändringar på grund av implementeringen ändrar du &lt;openSearcher> till true.
+Om du vill ändra sökningen till att använda ett index som har uppdaterats för att återspegla ändringar på grund av implementeringen, ändrar du värdet `openSearcher` till true.
 
-&lt;autoSoftCommit>: En &quot;soft&quot;-implementering ser till att ändringarna är synliga (indexet uppdateras), men säkerställer inte att ändringarna synkroniseras till stabil lagring (fast implementering). Resultatet blir en prestandaförbättring. Som standard är &lt;autoSoftCommit> inaktiverat med &lt;maxTime> inställt på -1.
+`autoSoftCommit`: En &quot;soft&quot;-implementering ser till att ändringarna är synliga (indexet uppdateras), men säkerställer inte att ändringarna synkroniseras till stabil lagring (fast implementering). Resultatet blir en prestandaförbättring. Som standard är `autoSoftCommit` inaktiverat med den inneslutna `maxTime` inställningen -1.
