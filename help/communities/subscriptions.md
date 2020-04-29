@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 33c85af4-4c56-487a-ba60-55211cb9f72c
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
 
 ---
 
@@ -25,9 +25,9 @@ Prenumerationer liknar [meddelanden](notifications.md) , eftersom medlemmar kan 
 
 Det som skiljer prenumerationer från meddelanden är:
 
-* Medlemmar får inte prenumerera efter andra medlemmar
-* Den enda åtgärd som medlemmar kan utföra är att välja `Email Subscriptions` när de följer
-* När e-postsvar har konfigurerats kan medlemmar effektivt publicera innehållet genom att helt enkelt svara på det mottagna e-postmeddelandet
+* Medlemmar får inte prenumerera när de följer efter andra medlemmar.
+* Den enda åtgärd som medlemmar kan utföra är att välja `Email Subscriptions` när de följer.
+* När e-postsvar har konfigurerats kan medlemmar effektivt publicera innehåll genom att helt enkelt svara på det mottagna e-postmeddelandet.
 
 ### Krav {#requirements}
 
@@ -49,15 +49,11 @@ Med knappen **Följ** kan du följa inmatningar som aktiviteter, prenumerationer
 
 Om någon av följande metoder är markerad ändras texten för knappen till **Följ**. Du kan välja `Unfollow All` att inaktivera alla metoder.
 
-Knappen **Följ** kommer endast att innehålla `Email Subscriptions` alternativet när ett forum, QnA eller blogg har konfigurerats för att aktivera e-postprenumerationer. Den här knappen visas
+Knappen **Följ** kommer endast att innehålla `Email Subscriptions` alternativet när ett forum, QnA eller blogg har konfigurerats för att aktivera e-postprenumerationer. Den här knappen visas:
 
-* På huvudfunktionssidan för det aktiverade forumet, QnA eller bloggen
+* På huvudfunktionssidan för det aktiverade forumet, QnA eller bloggen Kommer att skicka ett e-postmeddelande för all aktivitet under den funktionen.
 
-   * Skickar ett e-postmeddelande för all aktivitet under den funktionen
-
-* För ett visst inlägg, t.ex. ett forumämne, en QnA-fråga eller en bloggartikel
-
-   * Skickar ett e-postmeddelande när det finns aktivitet för det specifika inlägget
+* För ett visst inlägg, t.ex. ett forumämne, QnA-fråga eller bloggartikel Skickar ett e-postmeddelande när det finns aktivitet för det aktuella inlägget.
 
 ## Svara via e-post {#reply-by-email}
 
