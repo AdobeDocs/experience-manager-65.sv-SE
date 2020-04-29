@@ -3,7 +3,7 @@ title: Konfigurera RTF-redigeraren för att skapa innehåll i Adobe Experience M
 description: Lär dig konfigurera RTF-redigeraren i Adobe Experience Manager för att skapa innehåll i Adobe Experience Manager.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 29b1520c59f555776f089b20614bf503492f7411
+source-git-commit: 430994c8e9951500378e0a4d56c8004e7e81c24f
 
 ---
 
@@ -160,6 +160,15 @@ Konfigurera följande egenskaper som gäller i redigeringsläget för dialogruto
 * `rte-start`: Utlös den här händelsen i slutet `contenteditable-div` av textredigeraren, när textredigeringsredigeringen ska börja. Detta fungerar bara om `customStart` värdet är true.
 
 Om RTE används i dialogrutan med pekfunktioner är det obligatoriskt att ange egenskapen `useFixedInlineToolbar` till true för att undvika problem.
+
+## Anpassa redigering på plats {#customizing-in-place-editing}
+
+Du kan definiera på vilken HTML-väljare textredigeraren ska starta genom att konfigurera följande egenskaper:
+
+* **`editElementQuery`** - Den här egenskapen används `cq:InplaceEditingConfig`för att ange en väljare för det HTML-element som textbundna redigeringar för textkomponenten ska startas på. Om inget anges startas redigeringen direkt på HTML-koden för textkomponenten.
+* **`textPropertyName`** - Den här egenskapen används `cq:InplaceEditingConfig`för att ange namnet på den egenskap som ska sparas på noden content där textkomponentens HTML-värde ska bevaras efter infogad redigering.
+
+Motsvarande egenskap för dialogläge är `name`.
 
 ## Aktivera RTE-funktioner genom att aktivera plugin-program {#enable-rte-functionalities-by-activating-plug-ins}
 
