@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a9cb5294-e5ab-445b-b7c2-ffeecda91c50
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
 
 ---
 
@@ -42,6 +42,7 @@ Stegen för att lägga till SCF-komponenter dynamiskt är:
 >
 >Inläsning av [icke-befintliga resurser](scf.md#add-or-include-a-communities-component) stöds inte.
 
+
 ## Lägg till komponent dynamiskt i DOM {#dynamically-add-component-to-dom}
 
 Om komponenten inkluderas dynamiskt eller läses in dynamiskt måste den först läggas till i DOM.
@@ -50,9 +51,13 @@ När du lägger till SCF-komponenten är den vanligaste taggen DIV-taggen, men �
 
 Oavsett vilken tagg som används måste elementet åtminstone överensstämma med det vanliga SCF-rotelementmönstret genom att innehålla dessa två attribut:
 
-* **data-component-id** Den effektiva sökvägen till den tillagda komponenten
+* **data-component-id**
 
-* **data-scf-component** Komponentens resourceType
+   Den effektiva sökvägen till den tillagda komponenten.
+
+* **data-scf-component**
+
+   Komponentens resourceType.
 
 Här följer ett exempel på en kommenteringskomponent:
 
@@ -73,7 +78,7 @@ Dynamisk inkludering använder en boostrap-begäran som resulterar i att SCF und
 
 Om du vill initiera SCF-komponenter när som helst efter sidinläsningen startar du en JQuery-händelse som den här:
 
-$(document).trigger(SCF.events.BOOTSTRAP_REQUEST);
+`$(document).trigger(SCF.events.BOOTSTRAP_REQUEST);`
 
 ### Dynamisk inläsning {#dynamic-loading}
 
@@ -81,6 +86,6 @@ Dynamisk inläsning ger kontroll över inläsningen av SCF-komponenter.
 
 I stället för att starta alla SCF-komponenter som finns i DOM kan du ange en specifik SCF-komponent som ska läsas in med den här JavaScript-metoden:
 
-SCF.addComponent(document.getElementById(*someId*));
+`SCF.addComponent(document.getElementById(*someId*));`
 
-Där *someId* är värdet för attributet **data-component-id** .
+Var `someId` är värdet på `data-component-id` attributet.
