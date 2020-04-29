@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 4ade0d6b-041e-4a2f-98f8-3b8fcae0fb29
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
 
 ---
 
@@ -19,7 +19,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## Paketet SocialUtils har tagits bort {#socialutils-package-deprecated}
 
-Paketet **com.adobe.cq.social.ugcbase.SocialUtils** har tagits bort i AEM 6.1.
+Paketet `com.adobe.cq.social.ugcbase.SocialUtils` togs bort i AEM 6.1.
 
 I följande tabell visas de metoder som ska användas i stället för SocialUtils-metoder.
 
