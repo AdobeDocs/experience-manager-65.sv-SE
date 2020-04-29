@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0e949429-cd5f-4301-aa72-14803cdfab00
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
+source-git-commit: a417094c1d7b28ec54a6e84303d7a9747bb0c510
 
 ---
 
@@ -116,7 +116,7 @@ Loggningsfunktionerna i blankettbaserade arbetsflöden är standardiserade. Nu k
 
 ## Dataintegrering {#data-integration}
 
-Nu kan du:
+Du kan nu:
 
 * [Validera indata](../../forms/using/work-with-form-data-model.md#automated-validation-of-input-data) baserat på en lista med begränsningar. Det säkerställer att bara giltiga data skickas till datakällan.
 * [Åsidosätt standardslutpunkten](../../forms/using/configure-data-sources.md#configure-soap-web-services) som definieras i en WSDL-fil (Web Services Description Language).
@@ -148,7 +148,8 @@ AEM Forms kan konfigureras med valfri kombination av operativsystem, programserv
    <td>Programservrar<br /> </td>
    <td>
     <ul>
-     <li>Oracle Weblogic</li>
+    <li>WebSphere Liberty-profil</li>
+    <li>Oracle WebLogic</li>
     </ul> </td>
   </tr>
   <tr>
