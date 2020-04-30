@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: e9bfbbce-93fc-455c-a2f7-4ee44e63c03f
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 ---
 
 
-# Gruppmallar{#group-templates}
+# Gruppmallar {#group-templates}
 
 Konsolen Gruppmallar liknar konsolen [Platsmallar](/help/communities/sites.md) . Båda är skisser för en uppsättning färdiga sidor och funktioner som utgör en communitysajt. Skillnaden är att en webbplatsmall är för huvudcommunityn och en gruppmall är för en community-grupp, en undercommunity som är kapslad i huvudcommunityn.
 
@@ -30,6 +30,7 @@ När en åtgärd vidtas för att skapa en ny community-grupp väljs gruppens mal
 >
 >Konsolerna för att skapa [communitysajter](/help/communities/sites-console.md), [communitymallar](/help/communities/sites.md), mallar [för](/help/communities/tools-groups.md) communitygrupper [och](/help/communities/functions.md) communityfunktionerär endast avsedda att användas i författarmiljön.
 
+
 ## Konsolen Gruppmallar {#group-templates-console}
 
 Så här når du gruppmallskonsolen i AEM Author-miljön:
@@ -42,7 +43,7 @@ Den här konsolen visar mallarna som en [communitywebbplats](/help/communities/s
 
 ## Skapa gruppmall {#create-group-template}
 
-Om du vill börja skapa en ny gruppmall väljer du `Create`
+Om du vill börja skapa en ny gruppmall väljer du `Create`.
 
 Då öppnas panelen Platsredigeraren som innehåller tre underpaneler:
 
@@ -52,15 +53,17 @@ Då öppnas panelen Platsredigeraren som innehåller tre underpaneler:
 
 På panelen Grundläggande information konfigureras ett namn, en beskrivning och huruvida mallen är aktiverad eller inaktiverad:
 
-* **Nytt gruppmallsnamn** för mallens namn-ID
+* **Nytt gruppmallsnamn**
+
+   Mallens namn-ID.
 
 * **Beskrivning**
 
-   mallbeskrivningen
+   Mallbeskrivningen.
 
 * **Handikappade/aktiverade**
 
-   en växlingsväxling som styr om mallen kan refereras
+   En växlingsväxling som styr om mallen kan refereras.
 
 #### Miniatyrbild {#thumbnail}
 
@@ -78,6 +81,7 @@ På panelen Grundläggande information konfigureras ett namn, en beskrivning och
 >
 >Det är fortfarande inte tillåtet att lägga till en gruppfunktion som den första eller enda funktionen i en mall.
 
+
 ![Gruppmallsredigerare](assets/template-editor.png)
 
 Om du vill lägga till communityfunktioner drar du från höger sida till vänster i den ordning som länkarna på webbplatsmenyn ska visas. Format används på mallen när webbplatsen skapas.
@@ -88,7 +92,7 @@ Fortsätt dra och släpp av andra communityfunktioner som önskas för en underg
 
 ![dragningsfunktioner](assets/dragfunctions.png)
 
-När alla önskade funktioner har släppts i mallbyggarområdet och konfigurerats väljer du **Spara **i det övre högra hörnet.
+När alla önskade funktioner har släppts i mallbyggarområdet och konfigurerats väljer du **Spara** i det övre högra hörnet.
 
 ## Redigera gruppmall {#edit-group-template}
 
