@@ -1,22 +1,22 @@
 ---
-title: Konfigurera resurstaggning med hjälp av Smart Content Service
-description: Lär dig hur du konfigurerar smart taggning och förbättrad smart taggning i AEM med hjälp av Smart Content Service.
+title: Konfigurera resurstaggning med Smart Content Service.
+description: Lär dig hur du konfigurerar smart taggning och förbättrad smart taggning i Adobe Experience Manager med hjälp av Smart Content Service.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
 
 # Konfigurera resurstaggning med Smart Content Service {#configure-asset-tagging-using-the-smart-content-service}
 
-Du kan integrera Adobe Experience Manager (AEM) med Smart Content Service med hjälp av Adobe I/O. Använd den här konfigurationen för att komma åt tjänsten Smart Content från AEM.
+Du kan integrera [!DNL Adobe Experience Manager] med Smart Content Service med hjälp av Adobe I/O. Använd den här konfigurationen för att komma åt Smart Content Service inifrån [!DNL Experience Manager].
 
-Artikeln innehåller information om följande viktiga uppgifter som krävs för att konfigurera tjänsten Smart Content. I bakänden autentiserar AEM-servern dina inloggningsuppgifter med Adobe I/O-gatewayen innan din begäran vidarebefordras till Smart Content Service.
+Artikeln innehåller information om följande viktiga uppgifter som krävs för att konfigurera tjänsten Smart Content. I bakänden autentiserar [!DNL Experience Manager] servern dina inloggningsuppgifter med Adobe I/O-gatewayen innan din begäran vidarebefordras till Smart Content Service.
 
-* Skapa en konfiguration för Smart Content Service i AEM för att generera en offentlig nyckel. Hämta ett offentligt certifikat för OAuth-integrering.
+* Skapa en konfiguration för Smart Content Service i [!DNL Experience Manager] för att generera en offentlig nyckel. Hämta ett offentligt certifikat för OAuth-integrering.
 * Skapa en integrering i Adobe I/O och överför den genererade publika nyckeln.
-* Konfigurera din AEM-instans med API-nyckeln och andra autentiseringsuppgifter från Adobe I/O.
+* Konfigurera din [!DNL Experience Manager] instans med API-nyckeln och andra autentiseringsuppgifter från Adobe I/O.
 * Du kan även aktivera automatisk taggning vid överföring av resurser.
 
 ## Förutsättningar {#prerequisites}
@@ -30,7 +30,7 @@ Innan du kan använda tjänsten Smart Content måste du se till att följande ä
 
 Med ett offentligt certifikat kan du autentisera din profil på Adobe I/O.
 
-1. I AEM-användargränssnittet klickar du på AEM-logotypen och går till **[!UICONTROL Verktyg > Molntjänster]**> **[!UICONTROL Äldre molntjänster]**.
+1. I [!DNL Experience Manager] användargränssnittet går du till **[!UICONTROL Verktyg > Molntjänster]**> **[!UICONTROL Äldre molntjänster]**.
 
 1. Klicka på **[!UICONTROL Konfigurera nu]** under Smarta taggar för **[!UICONTROL resurser på sidan Molntjänster]**.
 1. I dialogrutan **[!UICONTROL Skapa konfiguration]** anger du en rubrik och ett namn för konfigurationen av smarta taggar. Klicka på **[!UICONTROL Skapa]**.
@@ -42,7 +42,7 @@ Med ett offentligt certifikat kan du autentisera din profil på Adobe I/O.
 
    Lämna de andra fälten tomma (kommer senare). Click **[!UICONTROL OK]**.
 
-   ![Dialogrutan AEM Smart Content Service för att ange innehållstjänstens URL](assets/aem_scs.png)
+   ![Dialogrutan Experience Manager Smart Content Service för att tillhandahålla innehållstjänstens URL](assets/aem_scs.png)
 
 1. Klicka på **[!UICONTROL Hämta offentligt certifikat för OAuth-integrering]** och hämta den offentliga certifikatfilen `AEM-SmartTags.crt`.
 
@@ -52,7 +52,7 @@ Med ett offentligt certifikat kan du autentisera din profil på Adobe I/O.
 
 När certifikatet upphör att gälla är det inte längre tillförlitligt. Följ de här stegen för att lägga till ett nytt certifikat. Du kan inte förnya ett certifikat som har upphört att gälla.
 
-1. Logga in på AEM-distributionen som administratör. Klicka på **[!UICONTROL Verktyg]** > **[!UICONTROL Dokumentskydd]** > **[!UICONTROL Användare]**.
+1. Log in your [!DNL Experience Manager] deployment as an administrator. Klicka på **[!UICONTROL Verktyg]** > **[!UICONTROL Dokumentskydd]** > **[!UICONTROL Användare]**.
 
 1. Leta upp och klicka på **[!UICONTROL dam-update-service]** user. Klicka på fliken **[!UICONTROL Nyckelbehållare]** .
 1. Ta bort den befintliga **[!UICONTROL nyckelbehållaren för]** likhetssökning med det certifikat som upphört att gälla. Klicka på **[!UICONTROL Spara och stäng]**.
@@ -88,9 +88,9 @@ Om du vill använda API:er för tjänsten Smart Content Service skapar du en int
 
 ## Konfigurera Smart Content Service {#configure-smart-content-service}
 
-Om du vill konfigurera integreringen använder du nyckelfälten Teknisk konto-ID, Organisations-ID, Klienthemlighet, Auktoriseringsserver och API från Adobe I/O-integreringen. Om du skapar en molnkonfiguration för smarta taggar kan du autentisera API-begäranden från AEM-instansen.
+Om du vill konfigurera integreringen använder du nyckelfälten Teknisk konto-ID, Organisations-ID, Klienthemlighet, Auktoriseringsserver och API från Adobe I/O-integreringen. Om du skapar en molnkonfiguration för smarta taggar kan du autentisera API-begäranden från [!DNL Experience Manager] instansen.
 
-1. Navigera till **[!UICONTROL Verktyg > Molntjänst > Äldre molntjänster]** i Experience Manager för att öppna [!UICONTROL molntjänstkonsolen] .
+1. I [!DNL Experience Manager]går du till **[!UICONTROL Verktyg > Molntjänst > Äldre molntjänster]** för att öppna konsolen [!UICONTROL Cloud Services] .
 1. Öppna konfigurationen som skapats ovan under Smarta taggar för **[!UICONTROL resurser]**. Klicka på **[!UICONTROL Redigera]** på tjänstinställningssidan.
 1. I dialogrutan **[!UICONTROL AEM Smart Content Service]** använder du de förifyllda värdena för fälten **[!UICONTROL Service URL]** och **[!UICONTROL Authorization Server]** .
 1. Använd de värden som genereras ovan för fälten **[!UICONTROL API-nyckel]**, ID för **[!UICONTROL tekniskt konto]**, **[!UICONTROL organisations-ID]** och **[!UICONTROL Klienthemlighet]**.
@@ -99,7 +99,7 @@ Om du vill konfigurera integreringen använder du nyckelfälten Teknisk konto-ID
 
 När du är klar med konfigurationen kan du använda en JMX MBean för att validera konfigurationen. Följ de här stegen för att validera.
 
-1. Gå till din AEM-server på `https://[server]:[port]`.
+1. Gå till din [!DNL Experience Manager] server på `https://[aem_server]:[port]`.
 
 1. Gå till **[!UICONTROL Verktyg > Åtgärder > Webbkonsol]** för att öppna OSGi-konsolen. Klicka på **[!UICONTROL Meny > JMX]**.
 1. Klicka på **[!UICONTROL com.day.cq.dam.similarAritysearch.internal.impl]**. Den öppnar **[!UICONTROL LikhetSök efter andra uppgifter.]**
@@ -109,14 +109,14 @@ När du är klar med konfigurationen kan du använda en JMX MBean för att valid
 
 ## Aktivera smart taggning i arbetsflödet Uppdatera resurs (valfritt) {#enable-smart-tagging-in-the-update-asset-workflow-optional}
 
-1. Gå till **[!UICONTROL Verktyg > Arbetsflöde > Modeller]** i Experience Manager.
+1. Gå [!DNL Experience Manager]till **[!UICONTROL Verktyg > Arbetsflöde > Modeller]**.
 1. På sidan **[!UICONTROL Arbetsflödesmodeller]** väljer du arbetsflödesmodellen **[!UICONTROL DAM-uppdatering]** .
 1. Klicka på **[!UICONTROL Redigera]** i verktygsfältet.
 1. Expandera sidopanelen för att visa stegen. Drag **[!UICONTROL Smart Tag Asset]** step that is available in the DAM Workflow section and place it after the **[!UICONTROL Process Thumbnails]** step.
 
    ![Lägg till resurssteget för smarta taggar efter steget med processminiatyrbilder i arbetsflödet för [!UICONTROL DAM-uppdatering av resurs]](assets/chlimage_1-105.png)
 
-   *Bild: Lägg till resurssteget för smarta taggar efter steget med processminiatyrbilder i arbetsflödet för[!UICONTROL DAM-uppdatering av resurs]*
+   *Bild: Lägg till resurssteget för smarta taggar efter steget med processminiatyrbilder i arbetsflödet för[!UICONTROL DAM-uppdatering].*
 
 1. Öppna steget i redigeringsläge. Under **[!UICONTROL Avancerade inställningar]** kontrollerar du att alternativet **[!UICONTROL Avancerat för hanterare]** är markerat.
 
