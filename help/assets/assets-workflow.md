@@ -3,7 +3,7 @@ title: Bearbeta material för att genomföra affärsprocesser, utföra revisione
 description: Resursbearbetning för att konvertera format, skapa renderingar, hantera resurser, validera resurser och köra arbetsflöden.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 82ed39dac05591b9bdc9fda101ed450c2096dc60
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
@@ -24,7 +24,7 @@ Information om de olika arbetsflödesmodellerna som är tillgängliga som standa
 
 ![En del av standardarbetsflödet](assets/aem-default-workflows.png)
 
-*Bild: Vissa standardarbetsflöden finns i[!DNL Experience Manager]*
+*Bild: Vissa standardarbetsflöden som är tillgängliga i[!DNL Experience Manager].*
 
 ## Använda arbetsflöden för att bearbeta resurser {#applying-workflows-to-assets}
 
