@@ -11,24 +11,28 @@ content-type: reference
 discoiquuid: 410149d6-15bd-41e5-bdba-1d8e6eab7b87
 pagetitle: Communities Tools
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 ---
 
 
 # Communities Tools {#communities-tools}
 
-Om du är författare kommer du åt verktygsgruppen Communities:
+Logga in din författarinstans för att få åtkomst till webbgruppsverktygskonsolen:
 
-* Från global navigering: **[!UICONTROL Verktyg > Communities]**
+* Från global navigering: **[!UICONTROL Verktyg]** > **[!UICONTROL Communities]**.
 
-![chlimage_1-129](assets/chlimage_1-129.png)
+   ![chlimage_1-129](assets/chlimage_1-129.png)
 
-* [Webbplatsmallar](sites.md) - Konsol för att skapa och hantera webbplatsmallar
-* [Gruppmallar](tools-groups.md)- Konsol för att skapa och hantera gruppmallar
-* [Community-funktioner](functions.md)- Konsol för att skapa och hantera communityfunktioner
-* [Lagringskonfiguration](srp-config.md) - Konsol för konfiguration och val av [standard-SRP](working-with-srp.md)
+* [Webbplatsmallar](sites.md) - Konsol för att skapa och hantera webbplatsmallar.
+
+* [Gruppmallar](tools-groups.md) - Konsol för att skapa och hantera gruppmallar.
+
+* [Community-funktioner](functions.md) - Konsol för att skapa och hantera communityfunktioner.
+
+* [Lagringskonfiguration](srp-config.md) - Konsol för konfiguration och val av [standard-SRP](working-with-srp.md).
 
 * [Komponentguide](components-guide.md) - Öppnar en interaktiv plats där du kan experimentera med hur SCF-komponenterna fungerar och hur de kan konfigureras eller anpassas.
+
 * [Badges](badges.md) - Konsol varifrån egna emblem kan läggas till för användning i regler för [poäng och emblem](implementing-scoring.md)
 
