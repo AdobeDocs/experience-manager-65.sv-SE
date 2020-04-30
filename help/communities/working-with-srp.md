@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 6f13b21a-f4ef-4889-9b8e-4da3f846fa35
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70e6f2d8366456e5091b7b775dc40914948921ab
+source-git-commit: 2bcd098ae901070d5e50cd89d06c854884b4e461
 
 ---
 
 
-# SRP - Community Content Storage{#srp-community-content-storage}
+# SRP - Community Content Storage {#srp-community-content-storage}
 
 ## Introduktion {#introduction}
 
@@ -32,15 +32,19 @@ Mer information om användningen av SRP för UGC finns i Översikt över [lagrin
 >
 >SRP gäller endast för communityinnehåll. Det påverkar inte var webbplatsinnehållet lagras ([nodarkiv](/help/sites-deploying/data-store-config.md)) och påverkar inte den säkra hanteringen av användarregistrering, användarprofiler och användargrupper mellan AEM-instanser (se även [Hantera användardata](#managing-user-data)).
 
+
 >[!CAUTION]
 >
 >Från och med AEM 6.1 replikeras [aldrig](#ugc-never-replicated)UGC.
 >
 >När distributionen inte innehåller någon gemensam butik, t.ex. [JSRP](/help/communities/topologies.md#jsrp) -standardtopologi, visas bara UGC i den AEM-publicerings- eller författarinstans där den angavs. Endast om topologin innehåller ett publiceringskluster visas UGC:n på alla publiceringsinstanser.
 
+
 ## Egenskaper för SRP-alternativ {#characteristics-of-srp-options}
 
-[ASRP - Adobe Storage Resource Provider](/help/communities/asrp.md)Med det här alternativet fjärrlagras UGC i en molntjänst som hanteras av Adobe. Det krävs ytterligare en licens och att man samarbetar med en kontorepresentant för att tillhandahålla kontot för den specifika licensen. ASRP kräver:
+[ASRP - Adobe Storage Resource Provider](/help/communities/asrp.md)
+
+Med det här alternativet lagras användargenererat innehåll på fjärrbasis i en molntjänst som hanteras av Adobe. Det krävs ytterligare en licens och att man samarbetar med en kontorepresentant för att tillhandahålla kontot för den specifika licensen. ASRP kräver:
 
 * En tillhörande molntjänst som tillhandahålls och stöds av Adobe för att lagra communityinnehåll.
 * Val av datacenter i en specifik geografi (USA, EMEA, APAC).
@@ -49,14 +53,17 @@ Mer information om användningen av SRP för UGC finns i Översikt över [lagrin
 
 ASRP är lämpligt:
 
-* för publiceringsservergruppen tarMK.
-* när det inte finns någon avsikt att investera i lokal lagring.
+* För TjärMK-publiceringsservergruppen.
+* När det inte finns någon avsikt att investera i lokal lagring.
 
 >[!NOTE]
 >
 >Det finns en gräns för att överföra bilagor till inlägg (eller kommentarer) i ASRP, som är 50 MB.
 
-[MSRP - lagringsresursprovidern](/help/communities/msrp.md)för MongoDB Med det här alternativet sparas UGC direkt i en lokal MongoDB-instans.
+
+[MSRP - lagringsresursprovider för MongoDB](/help/communities/msrp.md)
+
+Med det här alternativet sparas UGC direkt i en lokal MongoDB-instans.
 
 MSRP kräver:
 
@@ -70,7 +77,9 @@ ASRP är lämpligt:
 * För ett MongoMK- eller RdbMK-kluster.
 * När stora volymer av communityinnehåll förväntas.
 
-[DSRP - Relational Database Storage Resource Provider](/help/communities/dsrp.md)Med det här alternativet sparas UGC direkt i en lokal MySQL-databasinstans.
+[DSRP - Resursprovider för relativ databaslagring](/help/communities/dsrp.md)
+
+Med det här alternativet sparas UGC direkt i en lokal MySQL-databasinstans.
 
 DSRP kräver:
 
@@ -84,7 +93,9 @@ DSRP är lämpligt:
 * För ett MongoMK- eller RdbMK-kluster.
 * När stora volymer av communityinnehåll förväntas.
 
-[JSRP - JCR-lagringsresursprovider](/help/communities/jsrp.md)Det finns ingen gemensam lagringsplats med standardalternativet. UGC:n sparas bara i samma JCR-databas som den AEM-instans där den angavs.
+[JSRP - JCR-lagringsresursprovider](/help/communities/jsrp.md)
+
+Det finns ingen gemensam lagringsplats med standardalternativet. UGC:n sparas bara i samma JCR-databas som den AEM-instans där den angavs.
 
 JSRP:
 
@@ -129,4 +140,4 @@ Från och med AEM Communities 6.1 synkroniseras användarrelaterade data med Sli
 
 Vid uppgradering till AEM 6.5 Communities, om befintlig UGC måste behållas, bör åtgärder vidtas beroende på om AEM 5.6.1- eller AEM 6.0-communityn använde Adobe On-Demand-lagring eller lokal lagring av UGC.
 
-Mer information finns på [Uppgradera till AEM Communities 6.5](/help/communities/upgrade.md).
+Mer information finns i [Uppgradera till AEM Communities 6.5](/help/communities/upgrade.md).
