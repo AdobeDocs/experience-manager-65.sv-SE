@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 9941ba90-3d40-4c90-bca8-5db49603cbfa
 translation-type: tm+mt
-source-git-commit: 01f14c203e45b85c9d7733d88437bd56e3c27c8e
+source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 ---
 
@@ -23,7 +23,7 @@ Du kan skapa en anpassad tally-komponent genom att utöka den abstrakta tally-kl
 
 [Att gilla](essentials-liking.md) är ett genomförande av tally som är en enkel form av att uttrycka en positiv åsikt.
 
-[Omröstning](essentials-voting.md) är ett genomförande av tally som är en enkel form av ett positivt eller negativt yttrande.
+[Omröstning](essentials-voting.md) är ett genomförande av tally som är en enkel form av uttryck för en positiv eller negativ åsikt.
 
 [Klassificering](rating-basics.md) är en implementering av tally som använder ett stjärnsystem för att uttrycka en rad åsikter från positiva till negativa.
 
@@ -54,8 +54,8 @@ Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](
 
 Se:
 
-* [Översikt över](srp.md) lagringsresursprovidern - introduktion och databasanvändning - översikt
-* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och -exempel
-* [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - riktlinjer för kodning
-* [Omfaktorisering för SocialUtils](socialutils.md) - mappning av utgått verktygsmetoder till aktuella SRP-verktygsmetoder
+* [Översikt över](srp.md) lagringsresursprovidern - Introduktion och översikt över databasanvändningen.
+* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och exempel.
+* [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - riktlinjer för kodning.
+* [Omfaktorisering för SocialUtils](socialutils.md) - Mappar borttagna verktygsmetoder till aktuella SRP-verktygsmetoder.
 
