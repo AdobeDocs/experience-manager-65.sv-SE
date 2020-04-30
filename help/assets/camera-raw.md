@@ -1,22 +1,22 @@
 ---
-title: Stöd för Camera Raw
-description: Lär dig hur du aktiverar stöd för Camera Raw i Adobe Experience Manager Assets.
+title: Stöd för [!DNL Adobe Camera Raw].
+description: Lär dig hur du aktiverar stödet för [!DNL Adobe Camera Raw] i [!DNL Adobe Experience Manager Assets].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: e71b87b12d45bf12f29af917fddebeddedb18056
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
 
-# Stöd för att bearbeta bilder med Camera Raw {#camera-raw-support}
+# Bearbeta bilder med Camera Raw {#camera-raw-support}
 
-Du kan aktivera Camera Raw-stödet för att bearbeta råfilsformat, som CR2, NEF och RAF, och återge bilderna i JPEG-format. Funktionen stöds i Adobe Experience Manager Assets med hjälp av [Camera Raw-paketet](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) som är tillgängligt via Paketdelning.
+Du kan aktivera stöd för [!DNL Adobe Camera Raw] bearbetning av råfilsformat, t.ex. CR2, NEF och RAF, och återge bilderna i JPEG-format. Funktionen stöds i [!DNL Adobe Experience Manager Assets] med [Camera Raw-paketet](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) som är tillgängligt via Paketdelning.
 
 >[!NOTE]
 >
 >Funktionen stöder endast JPEG-återgivningar. Det stöds i Windows 64-bitars, Mac OS och RHEL 7.x.
 
-Så här aktiverar du stöd för Camera Raw i Adobe Experience Manager Assets:
+Så här aktiverar du [!DNL Camera Raw] stöd i [!DNL Experience Manager Assets]:
 
 1. Hämta [Camera Raw-paketet](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) från paketresursen.
 1. Öppna `https://[aem_server]:[port]/workflow`. Öppna arbetsflödet för **[!UICONTROL DAM-uppdatering av resurser]** .
@@ -53,13 +53,13 @@ Nu kan du importera Camera Raw-filer till AEM Resurser. När du har installerat 
 
 ![chlimage_1-131](assets/chlimage_1-337.png)
 
-*Bild: Alternativ i sidopanelen*
+*Bild: Alternativ på sidopanelen.*
 
 ![chlimage_1-132](assets/chlimage_1-338.png)
 
-*Bild: Använd det här alternativet om du vill göra små ändringar i dina bilder*
+*Bild: Använd det här alternativet om du vill göra små ändringar i dina bilder.*
 
-När du har sparat redigeringarna i en Camera Raw-bild `AdjustedPreview.jpg` skapas en ny återgivning för bilden. För andra bildtyper än Camera Raw återspeglas ändringarna i alla återgivningar.
+När du har sparat redigeringarna i en [!DNL Camera Raw] bild `AdjustedPreview.jpg` skapas en ny återgivning för bilden. För andra bildtyper förutom [!DNL Camera Raw]de återspeglas ändringarna i alla återgivningar.
 
 ## God praxis, kända problem och begränsningar {#best-practices}
 
@@ -67,4 +67,4 @@ Funktionen har följande begränsningar:
 
 * Funktionen stöder endast JPEG-återgivningar. Det stöds i Windows 64-bitars, Mac OS och RHEL 7.x.
 * Metadatatillbakaskrivning stöds inte för RAW- och DNG-format.
-* Camera Raw-biblioteket har begränsningar för det totala antalet pixlar som kan bearbetas samtidigt. För närvarande kan programmet bearbeta maximalt 65 000 pixlar på den långa sidan av en fil eller 512 MP, oavsett vilket villkor som påträffas först.
+* Biblioteket har begränsningar för det totala antalet pixlar som kan bearbetas samtidigt. [!DNL Camera Raw] För närvarande kan programmet bearbeta maximalt 65 000 pixlar på den långa sidan av en fil eller 512 MP, oavsett vilket villkor som påträffas först.
