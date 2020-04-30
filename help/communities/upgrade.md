@@ -11,12 +11,12 @@ topic-tags: deploying
 discoiquuid: abe5a998-bbe3-4a2b-bcf7-b490a8275219
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 2bcd098ae901070d5e50cd89d06c854884b4e461
 
 ---
 
 
-# Uppgradera till AEM 6.5 Communities{#upgrading-to-aem-communities}
+# Uppgradera till AEM 6.5 Communities {#upgrading-to-aem-communities}
 
 Beroende på webbplatsens topologi och funktioner kan följande åtgärder vara nödvändiga vid uppgradering till AEM Communities 6.5 eller installation av den senaste funktionspaketet.
 
@@ -26,11 +26,11 @@ Detta avsnitt är specifikt för Communities och kompletterar informationen som 
 
 ### Indexera om Solr {#reindex-solr}
 
-När du installerar ett nytt funktionspaket för Communities på en distribution som konfigurerats med MSRP måste du
+När du installerar ett nytt funktionspaket för Communities på en distribution som konfigurerats med MSRP måste du:
 
-1. installera det [senaste funktionspaketet](/help/communities/deploy-communities.md#latestfeaturepack)
-1. installera de [senaste Solr-konfigurationsfilerna](/help/communities/msrp.md#upgrading)
-1. indexera om MSRPse avsnittet [MSRP Reindex Tool](/help/communities/msrp.md#msrp-reindex-tool)
+1. Installera det [senaste funktionspaketet](/help/communities/deploy-communities.md#latestfeaturepack).
+1. Installera de [senaste Solr-konfigurationsfilerna](/help/communities/msrp.md#upgrading).
+1. Indexera om MSRPse avsnittet [MSRP Reindex Tool](/help/communities/msrp.md#msrp-reindex-tool).
 
 ### Aktivera 2.0 {#enablement}
 
@@ -48,30 +48,30 @@ Om den uppgraderade webbplatsen har konfigurerats för att använda Adobes molnl
 
 Det finns alltså möjlighet att instruera ASRP att använda `AEM 6.0 compatability-mode` för att få tillgång till UGC.
 
-För alla författare och publiceringsinstanser av AEM 6.3
+För alla AEM 6.3-instanser:
 
-* logga in med administratörsbehörighet
-* konfigurera [ASRP](/help/communities/asrp.md)
+* Logga in med administratörsbehörighet.
+* Konfigurera [ASRP](/help/communities/asrp.md).
 * Följ de här stegen för att göra befintlig UGC synlig:
 
-   * gå till webbkonsolen
+   * Bläddra till webbkonsolen:
 
-      * till exempel [https://&lt;värd>:&lt;port>/system/console/configMgr](https://localhost:4502/system/console/configMgr)
-   * leta upp **AEM Communities Utilities** configuration
-   * välj för att expandera konfigurationspanelen
+      * Till exempel [https://&lt;värd>:&lt;port>/system/console/configMgr](https://localhost:4502/system/console/configMgr)
 
-      * *uncheck ***`Cloud Storage`**
+      * Leta reda på konfigurationen för **AEM Communities** Utilities.
+      * Markera för att expandera konfigurationspanelen:
 
-      * välj **Spara**
+         * *Avmarkera*`Cloud Storage`
 
+         * Välj **Spara**
+      ![chlimage_1-176](assets/chlimage_1-176.png)
 
-![chlimage_1-176](assets/chlimage_1-176.png)
 
 ### Lokal lagring {#on-premise-storage}
 
 Om den uppgraderade webbplatsen inte använde molnlagring måste eventuell befintlig UGC konverteras för att följa den nya struktur som introducerades i AEM 6.1 Communities som stöd för den gemensamma butiken.
 
-Ett verktyg för migrering med öppen källkod finns för GitHub:
+Ett migreringsverktyg med öppen källkod är tillgängligt på GitHub:
 UGC-migreringsverktyg för[AEM Communities](https://github.com/Adobe-Marketing-Cloud/communities-ugc-migration)
 
 ### Java API:er {#java-apis}
@@ -100,8 +100,8 @@ Förutom att flytta UGC från tidigare versioner går det också att använda ve
 
 Det finns tre generationer av communitykomponenter:
 
-**Gen 1** : CQ 5.4 till och med AEM 5.6.0 - det här är **kollab** -komponenter som lagrar UGC i den lokala databasen med replikering som ett sätt att synkronisera UGC mellan plattformar. Andra skillnader är implementeringen med Java Server Pages (JSP) och bloggfunktionen som bara består av redigering i författarmiljön.
+**Gen 1**: CQ 5.4 till och med AEM 5.6.0 är dessa komponenter för **kollab** som lagrade UGC i den lokala databasen med replikering som ett sätt att synkronisera UGC mellan olika plattformar. Andra skillnader är implementeringen med Java Server Pages (JSP) och bloggfunktionen som bara består av redigering i författarmiljön.
 
-**Gen 2** : från AEM 5.6.1 till AEM 6.1 - det här är en blandning av **collab** och **sociala** komponenter. AEM 6.0 introducerade det nya ramverket [för](/help/communities/scf.md) sociala komponenter (SCF) och AEM 6.2 införde en [gemensam UGC-butik](/help/communities/working-with-srp.md) där UGC används av en [lagringsresursleverantör](/help/communities/srp.md) (SRP).
+**Gen 2**: Från AEM 5.6.1 till AEM 6.1 är detta en blandning av **collab** och **sociala** komponenter. AEM 6.0 introducerade det nya ramverket [för](/help/communities/scf.md) sociala komponenter (SCF) och AEM 6.2 införde en [gemensam UGC-butik](/help/communities/working-with-srp.md) där UGC används av en [lagringsresursleverantör](/help/communities/srp.md) (SRP).
 
-**Gen 3** : från och med AEM 6.2 finns det bara **sociala** komponenter, som implementeras i SCF som HBS-komponenter (Handlebars) som kräver val av SRP för UGC.
+**Gen 3**: Från och med AEM 6.2 finns det bara **sociala** komponenter, som implementeras i SCF som HBS-komponenter (Handlebars) som kräver val av SRP för UGC.
