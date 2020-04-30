@@ -3,7 +3,7 @@ title: Granska resurser i mappar och samlingar
 description: Ställ in granskningsarbetsflöden för material i en mapp eller en samling och dela dem med granskare eller kreativa partners för att få feedback.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
@@ -103,8 +103,8 @@ När granskaren har slutfört granskningen (godkänner eller avvisar resurser) f
 
    ![collection_reviewstatuscardview](assets/collection_reviewstatuscardview.png)
 
-   *Bild: Kortvy*
+   *Bild: Kortvy.*
 
    ![collection_reviewstatuslistview](assets/collection_reviewstatuslistview.png)
 
-   *Bild: Listvy*
+   *Bild: Listvy.*
