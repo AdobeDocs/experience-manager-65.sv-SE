@@ -4,7 +4,7 @@ product: adobe experience manager
 audience: end-user
 user-guide-title: Användarhandbok för AEM 6.5 Assets
 translation-type: tm+mt
-source-git-commit: c9ac722cb8903d1d9946c7a6f797f102cb99bbf2
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
@@ -103,7 +103,7 @@ source-git-commit: c9ac722cb8903d1d9946c7a6f797f102cb99bbf2
    + [Använd PDF-rastrering](aem-pdf-rasterizer.md)
    + [Konfigurera överföringsbegränsningar](configuring-asset-upload-restrictions.md)
    + [Bästa praxis för integrering av AEM och Creative Cloud](aem-cc-integration-best-practices.md)
-   + [Integrera med InDesign-server](indesign.md)
+   + [Integrera med InDesign Server](indesign.md)
    + [Metadataprofiler](metadata-profiles.md)
    + [Hantering av digitala rättigheter i resurser](drm.md)
    + [Använd demopaket för resursinsikter](touch-ui-using-demo-package-for-asset-insights.md)
