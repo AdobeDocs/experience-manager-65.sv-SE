@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 6e6ffe09-c50b-4238-8b8c-597c133d0a9e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 2bcd098ae901070d5e50cd89d06c854884b4e461
 
 ---
 
@@ -32,8 +32,8 @@ Forumfunktionen QnA (frågor och svar) ger ett område där communitymedlemmar k
 
 Dokumentationen beskriver:
 
-* lägga till QnA-forumfunktionen på en AEM-webbplats.
-* konfigurationsinställningar för `QnA`komponenten.
+* Lägga till QnA-forumfunktionen på en AEM-webbplats.
+* Konfigurationsinställningar för `QnA`komponenten.
 
 ## Lägga till ett forum med frågor och svar på en sida {#adding-a-q-a-forum-to-a-page}
 
@@ -81,7 +81,7 @@ Under fliken **Inställningar** anger du inställningar för ämnen (frågor) oc
 
 * **Stängd**
 
-   Om du markerar det här alternativet stängs forumet för nya frågor och kommentarer. Standard är avmarkerat.
+   Om det här alternativet är markerat stängs forumet för nya frågor och kommentarer. Standard är avmarkerat.
 
 * **RTF-redigerare**
 
@@ -117,18 +117,19 @@ Under fliken **Inställningar** anger du inställningar för ämnen (frågor) oc
 
 * **Maximal filstorlek för bifogad bild**
 
-   Endast relevant om Tillåt filöverföringar är markerat. Maximalt antal byte som en överförd bildfil kan ha. Standardvärdet är 2097152** **(2 MB).
+   Endast relevant om Tillåt filöverföringar är markerat. Maximalt antal byte som en överförd bildfil kan ha. Standardvärdet är 2097152 (2 MB).
 
 * **Tillåt svar**
 
    Om det här alternativet är markerat, tillåt svar på kommentarer som lagts in i frågan. Standard är avmarkerat.
+
 * **Tillåt röstning**
 
    Om du markerar det här alternativet inkluderas röstningsfunktionen med en fråga. Standard är avmarkerat.
 
 * **Tillåt användare att ta bort kommentarer och ämnen**
 
-   Om det här alternativet är markerat kan medlemmarna ta bort de kommentarer och frågor som de har skickat in. Standardvärdet är** **avmarkerat.
+   Om det här alternativet är markerat kan medlemmarna ta bort de kommentarer och frågor som de har skickat in. Standard är avmarkerat.
 
 * **Tillåt behöriga medlemmar**
 
@@ -138,7 +139,9 @@ Under fliken **Inställningar** anger du inställningar för ämnen (frågor) oc
 
    Om det här alternativet är aktiverat blockeras användargenererat innehåll när redigering i redigeringsläge.
 
-* **Flytta markerat svar till överkanten**Om det här alternativet är markerat är det första svar som visas ett markerat svar. Standard är avmarkerat.
+* **Flytta det markerade svaret överst**
+
+   Om det här alternativet är markerat är det första svar som visas ett valt svar. Standard är avmarkerat.
 * **Visa emblem**
 
    Om det här alternativet är markerat visas färdiga och tilldelade [märken](/help/communities/implementing-scoring.md) med en medlems blogginlägg. Standard är avmarkerat.
@@ -157,11 +160,11 @@ Under fliken **Inställningar** anger du inställningar för ämnen (frågor) oc
 
 * **Mönster för användargränssnittets omnämnande**
 
-   Ange den tillåtna mönstersträngen för att tagga (@mention) den registrerade användaren i ett inlägg. Exempel: ~{{familyName}}{{givenName}}.
+   Ange den tillåtna mönstersträngen för att tagga (@mention) den registrerade användaren i ett inlägg. Till exempel, `~{{familyName}}{{givenName}}`.
 
 #### Fliken Användarmoderering {#user-moderation-tab}
 
-På fliken **Användarmoderering** anger du hur publicerade ämnen (frågor) och svar (användargenererat innehåll) ska hanteras. Mer information finns i [Hantera användargenererat innehåll](/help/communities/moderate-ugc.md).
+På fliken **Användarmoderering** anger du hur bokförda ämnen (frågor) och svar (användargenererat innehåll) ska hanteras. Mer information finns i [Hantera användargenererat innehåll](/help/communities/moderate-ugc.md).
 
 * **Neka svar**
 
@@ -195,11 +198,15 @@ På fliken **Användarmoderering** anger du hur publicerade ämnen (frågor) och
 
 #### Fliken Taggfält {#tag-field-tab}
 
-Under fliken **Tagg** begränsas de taggar som kan användas, om de tillåts under fliken **Settings **enligt de valda namnutrymmena.
+Under fliken **Tagg** begränsas de taggar som kan användas, om de tillåts under fliken **Inställningar** , enligt de namnutrymmen som valts.
 
-* **Tillåtna** relevanta namnutrymmen om `Allow Tagging` är markerat under fliken **Inställningar **. De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som är markerade. Listan med namnutrymmen innehåller&quot;Standardtaggar&quot; (standardnamnutrymmet) och&quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
+* **Tillåtna namnutrymmen**
 
-* **Förslagsgräns** Ange antalet taggar som ska visas som ett förslag till medlemmen som publicerar i forumet. Värdet **-**1 betyder inga gränser. Standardvärdet är 0.
+   Relevant om `Allow Tagging` är markerat under fliken **Inställningar** . De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som är markerade. Listan med namnutrymmen innehåller&quot;Standardtaggar&quot; (standardnamnutrymmet) och&quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
+
+* **Förslagsgräns**
+
+   Ange antalet taggar som ska visas som ett förslag till medlemmens inlägg i forumet. Värdet **-**1 betyder inga gränser. Standardvärdet är 0.
 
 #### Fliken Sorteringsinställningar {#sort-settings-tab}
 
@@ -221,11 +228,11 @@ På fliken **Sorteringsinställningar** anger du hur de skickade kommentarerna s
 
 ### Identifiera svar {#identifying-answers}
 
-Ett svar kan markeras som ett korrekt eller användbart svar med `Select Answer` knappen. När en fråga har markerats som besvarad kan du inte välja ett annat svar förrän den första har avmarkerats med `Unmark Chosen Answer`knappen.
+Ett svar kan markeras som ett korrekt eller användbart svar med `Select Answer` knappen. När en fråga har markerats som besvarad kan du inte välja ett annat svar förrän den första har avmarkerats med `Unmark Chosen Answer` knappen.
 
 När du har valt det som ett användbart svar kan du avmarkera det med `Unmark Chosen Answer` knappen .
 
-När ett svar har valts som ett möjligt svar `Answered`visas en indikation på att frågan har ställts bredvid frågeämnet på QnA-huvudsidan.
+När ett svar har valts som ett möjligt svar visas en indikation på att frågan har `Answered` visats bredvid frågeämnet på QnA-huvudsidan.
 
 #### Styrelsemedlemmar och administratörer {#moderators-and-administrators}
 
@@ -237,10 +244,10 @@ De kan också identifiera svaren.
 
 När webbplatsbesökarna är inloggade, beroende på konfigurationen, kan de:
 
-* publicera en ny fråga.
-* redigera eller ta bort frågor de skapat.
-* flagga frågor eller svar från andra medlemmar.
-* identifiera svar på frågor de skapat.
+* Lägg upp en ny fråga.
+* Redigera eller ta bort frågor de skapat.
+* Flagga frågor eller svar från andra medlemmar.
+* Identifiera svar på frågor de skapat.
 
 #### Anonym {#anonymous}
 
