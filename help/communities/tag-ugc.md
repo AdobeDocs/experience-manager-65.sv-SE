@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 1cc8ce66-2c03-44e4-9ddd-8d6944d85c99
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 ---
 
@@ -27,7 +27,7 @@ Taggnamnutrymmen och taxonomier är samma för båda programmen.
 
 ## Funktioner i Communities {#communities-features}
 
-AEM Communities-funktionerna som kan konfigureras för att tillåta taggning är
+De AEM Communities-funktioner som kan konfigureras för att tillåta taggning är:
 
 * [Blogg](blog-feature.md)
 * [Kalender](calendar.md)
@@ -51,7 +51,7 @@ Eftersom taggar används i UGC i publiceringsmiljön måste läsbehörighet akti
 
 Se [Ange taggbehörigheter](../../help/sites-administering/tags.md#setting-tag-permissions).
 
-Så här visas det i CRXDE när en administratör tillämpar läsbehörigheter på `/etc/tag/discussions` gruppen `*Community Engage Members*`.
+Så här visas det i CRXDE när en administratör tillämpar läsbehörigheter på `/etc/tag/discussions` gruppen `Community Engage Members`.
 
 ![chlimage_1-74](assets/chlimage_1-74.png)
 
