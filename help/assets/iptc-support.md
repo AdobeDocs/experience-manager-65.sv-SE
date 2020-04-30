@@ -1,24 +1,24 @@
 ---
-title: Stöd för IPTC-metadata
-description: Läs om hur Adobe Experience Manager (AEM) Assets stöder IPTC-metadata, kreativa klassificeringar och nyckelord som läggs till i resurser via Adobe Bridge och andra Creative-program.
+title: Arbeta med IPTC-metadata i [!DNL Adobe Experience Manager Assets].
+description: Läs om hur [!DNL Adobe Experience Manager Assets] stöder IPTC-metadata, Creative-klassificeringar och nyckelord som lagts till i resurser via Adobe Bridge och andra Creative-program.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
 
-# Stöd för IPTC-metadata {#support-for-iptc-metadata}
+# Arbeta med IPTC-metadata {#support-for-iptc-metadata}
 
-Läs om hur Adobe Experience Manager (AEM) Assets stöder IPTC-metadata, kreativa klassificeringar och nyckelord som läggs till i resurser via Adobe Bridge och andra Creative-program.
+Lär dig hur [!DNL Adobe Experience Manager Assets] stöder IPTC-metadata, kreativa klassificeringar och nyckelord som läggs till i resurser via [!DNL Adobe Bridge] och andra [!DNL Adobe Creative Cloud] program.
 
-Adobe Experience Manager Assets (AEM) stöder IPTC-metadatastandarden som används ofta för att beskriva resurser. På så sätt kan AEM Assets förbättra accepterandet av bilder från olika parter, bland annat fotografer, byråer, bibliotek och museer.
+[!DNL Adobe Experience Manager Assets] har stöd för IPTC-metadatastandarden som används ofta för att beskriva resurser. På så sätt blir det enklare att [!DNL Assets] acceptera bilderna från olika håll, t.ex. fotografer, byråer, bibliotek, museer osv.
 
 Standardschemat för metadata för mediefiler innehåller nu metadatamatchningar för IPTC Core och IPTC Extension för att definiera omfattande metadataegenskaper som gör att användare kan lägga till exakta och tillförlitliga data om personer, platser och produkter som visas i en bild. Det har även stöd för datum, namn och identifierare för att skapa bilden samt ett flexibelt sätt att uttrycka rättighetsinformation.
 
 Egenskapssidan för resurser innehåller nu separata flikar för att visa IPTC-kärnan och IPTC-tilläggsmetadata i redigerbara fält.
 
-1. Välj en bild i användargränssnittet Resurser.
+1. Välj en bild i [!DNL Assets] användargränssnittet.
 1. Klicka på **[!UICONTROL Egenskaper]** i verktygsfältet.
 1. Klicka på fliken **[!UICONTROL IPTC]** för att visa IPTC-metadata för resursen.
 1. Redigera IPTC-metadataegenskaperna efter behov.
