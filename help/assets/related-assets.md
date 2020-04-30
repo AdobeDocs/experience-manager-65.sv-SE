@@ -1,16 +1,16 @@
 ---
 title: Relaterade tillgångar
-description: Lär dig hur du relaterar resurser som delar vissa gemensamma attribut. Du kan också använda funktionen för att skapa käll-/härledda relationer mellan resurser.
+description: Lär dig hur du relaterar digitala resurser som delar vissa gemensamma attribut. Skapa också källbaserade relationer mellan digitala resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
 
 # Relaterade tillgångar {#related-assets}
 
-Med Adobe Experience Manager Assets (AEM) kan ni manuellt relatera resurser baserat på organisationens behov med hjälp av funktionen för relaterade resurser. Du kan till exempel relatera en licensfil till en resurs eller en bild/video på ett liknande ämne. Du kan relatera resurser som delar vissa gemensamma attribut. Du kan också använda funktionen för att skapa käll-/härledda relationer mellan resurser. Om du till exempel har en PDF-fil som genereras från en INDD-fil kan du koppla PDF-filen till dess INDD-källfil.
+[!DNL Adobe Experience Manager Assets] I kan du manuellt relatera resurser baserat på organisationens behov med hjälp av funktionen för relaterade resurser. Du kan till exempel relatera en licensfil till en resurs eller en bild/video på ett liknande ämne. Du kan relatera resurser som delar vissa gemensamma attribut. Du kan också använda funktionen för att skapa käll-/härledda relationer mellan resurser. Om du till exempel har en PDF-fil som genereras från en INDD-fil kan du koppla PDF-filen till dess INDD-källfil.
 
 Med den här funktionen kan du dela en lågupplöst PDF- eller JPG-fil med leverantörer eller myndigheter och göra den högupplösta INDD-filen tillgänglig endast på begäran.
 
@@ -19,11 +19,11 @@ Med den här funktionen kan du dela en lågupplöst PDF- eller JPG-fil med lever
 
 ## Relatera resurser {#relating-assets}
 
-1. I AEM-gränssnittet öppnar du sidan **[!UICONTROL Egenskaper]** för en resurs som du vill relatera.
+1. Öppna sidan **[!UICONTROL Egenskaper]** i Experience Manager-gränssnittet för en resurs som du vill relatera.
 
    ![öppna en tillgångs egenskapssida för att relatera resursen](assets/asset-properties-relate-assets.png)
 
-   *Bild: Sida med tillgångsegenskaper för att relatera resurser*
+   *Bild: Sidan[!DNL Assets]Egenskaperför att relatera resurser.*
 
    Du kan också välja resursen i listvyn.
 
@@ -49,7 +49,7 @@ Med den här funktionen kan du dela en lågupplöst PDF- eller JPG-fil med lever
    ![chlimage_1-277](assets/chlimage_1-277.png)
 
 1. Klicka på/tryck på ikonen **[!UICONTROL Bekräfta]** .
-1. Klicka/tryck på **[!UICONTROL OK]** för att stänga dialogrutan. Beroende på ditt val av relation i steg 3 listas den relaterade resursen under en lämplig kategori i avsnittet **[!UICONTROL Relaterat]** . Om den resurs du har relaterat är källfilen för den aktuella resursen visas den under **[!UICONTROL Källa]**.
+1. Klicka/tryck på **[!UICONTROL OK]** för att stänga dialogrutan. Beroende på ditt val av relation i steg 3 listas den relaterade resursen under en lämplig kategori i **[!UICONTROL relaterat]** avsnitt. Om den resurs du har relaterat är källfilen för den aktuella resursen visas den under **[!UICONTROL Källa]**.
 
    ![chlimage_1-278](assets/chlimage_1-278.png)
 
@@ -65,15 +65,15 @@ Med den här funktionen kan du dela en lågupplöst PDF- eller JPG-fil med lever
 
 ## Översätter relaterade resurser {#translating-related-assets}
 
-Det är också praktiskt att skapa käll-/härledda relationer mellan resurser med hjälp av funktionen Relaterade resurser i översättningsarbetsflöden. När du kör ett översättningsarbetsflöde på en härledd resurs hämtar AEM Resurser automatiskt alla resurser som källfilen refererar till och inkluderar dem för översättning. På så sätt översätts den resurs som källresursen refererar till tillsammans med källresursen och de härledda resurserna. Tänk dig till exempel ett scenario där den engelska språkkopian innehåller en härledd resurs och dess källfil som visas.
+Det är också praktiskt att skapa käll-/härledda relationer mellan resurser med hjälp av funktionen Relaterade resurser i översättningsarbetsflöden. När du kör ett översättningsarbetsflöde på en härledd resurs hämtar automatiskt alla resurser som källfilen refererar till och inkluderar dem för översättning. [!DNL Experience Manager Assets] På så sätt översätts den resurs som källresursen refererar till tillsammans med källresursen och de härledda resurserna. Tänk dig till exempel ett scenario där den engelska språkkopian innehåller en härledd resurs och dess källfil som visas.
 
 ![chlimage_1-281](assets/chlimage_1-281.png)
 
-Om källfilen är relaterad till en annan resurs hämtar Experience Manager Assets den refererade resursen och inkluderar den för översättning.
+Om källfilen är relaterad till en annan resurs hämtar [!DNL Experience Manager Assets] den refererade resursen och inkluderar den för översättning.
 
 ![sidan med resursegenskaper visar den relaterade resursens källfil som ska inkluderas för översättning](assets/asset-properties-source-asset.png)
 
-*Bild: Källtillgång för relaterade tillgångar som ska inkluderas för översättning*
+*Bild: Källtillgång för relaterade tillgångar som ska inkluderas för översättning.*
 
 1. Översätt resurserna i källmappen till ett målspråk genom att följa stegen i [Skapa ett nytt översättningsprojekt](translation-projects.md#create-a-new-translation-project). I det här fallet kan du till exempel översätta dina resurser till franska.
 
