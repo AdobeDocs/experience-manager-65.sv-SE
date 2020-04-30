@@ -4,7 +4,7 @@ description: Lär dig resurshanteringsåtgärder som överföring, hämtning, re
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: fd5fcb7eacd3727fa62f8de10685d089ceab54ba
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
@@ -369,19 +369,19 @@ Så här förhandsgranskar du en resurs med tangentbordet:
 
    >[!NOTE]
    >
-   >Layouten på sidan [!UICONTROL Egenskaper] och de metadataegenskaper som är tillgängliga beror på det underliggande metadataschemat. Mer information om hur du ändrar layouten på sidan [!UICONTROL Egenskaper] finns i [Metadatamcheman](/help/assets/metadata-schemas.md).
+   >Layouten på sidan [!UICONTROL Egenskaper] och de metadataegenskaper som är tillgängliga beror på det underliggande metadataschemat. Mer information om hur du ändrar layouten för sidan [!UICONTROL Egenskaper] finns i [Metadatamcheman](/help/assets/metadata-schemas.md).
 
 1. To schedule a particular date/time for the activation of the asset, use the date picker beside the **[!UICONTROL On Time]** field.
 
    ![Datumtidsväljaren eller använd tangentbordstangenter i fältet I tid för att lägga till datum och tid för resursaktivering](assets/schedule-activation.png)
 
-   *Bild: Schemalägg aktivering av tillgångar*
+   *Bild: Schemalägg aktivering av resurser.*
 
 1. Om du vill inaktivera tillgången efter en viss tid väljer du datum/tid för inaktiveringen i datumväljaren bredvid fältet **[!UICONTROL Av tid]** . Inaktiveringsdatumet ska vara senare än aktiveringsdatumet för en tillgång. Efter [!UICONTROL Av-tid]är en resurs och dess återgivningar inte tillgängliga vare sig via webbgränssnittet Resurser eller via HTTP-API:t.
 
    ![Datumtidsväljaren eller använd tangentbordstangenter i fältet Fråntid för att lägga till datum och tid för inaktivering av resurser](assets/schedule-deactivation.png)
 
-   *Bild: Schemalägg inaktivering av tillgångar*
+   *Bild: Schemalägg inaktivering av tillgångar.*
 
 1. Markera en eller flera taggar i fältet **[!UICONTROL Taggar]** . Om du vill lägga till en egen tagg skriver du namnet på taggen i rutan och trycker på Retur. Den nya taggen sparas i AEM. YouTube kräver taggar för att publicera. Se [Publicera videor på YouTube](video.md#publishing-videos-to-youtube).
 
@@ -718,7 +718,7 @@ På tidslinjen kan du visa olika händelser för ett markerat objekt, t.ex. akti
 
 ![Sortera tidslinjeposter för en resurs](assets/sort_timeline.gif)
 
-*Bild: Sortera tidslinjeposter för en resurs*
+*Bild: Sortera tidslinjeposter för en resurs.*
 
 >[!NOTE]
 >
