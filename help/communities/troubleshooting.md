@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: cdb2d80a-2fbf-4ee6-b89b-b5d74e6d3bfc
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 ---
 
@@ -31,9 +31,7 @@ Du kan lösa problemet genom att använda Dispatcher 4.1.6 eller senare.
 
 Om ett forum skapades på CQ 5.4 och ämnen publicerades, och webbplatsen sedan uppgraderades till AEM 5.6.1 eller senare, kan ett försök att visa befintliga inlägg resultera i ett fel på sidan:
 
-ogiltigt mönstertecken &#39;a&#39;Kan inte hantera begäran till /content/demoforums/forum-test.html på den här servern
-
-Loggarna innehåller följande:
+Ogiltigt mönstertecken &#39;a&#39;Det går inte att skicka begäran till `/content/demoforums/forum-test.html` den här servern och loggarna innehåller följande:
 
 ```xml
 20.03.2014 22:49:35.805 ERROR [10.177.45.32 [1395380975744] GET /content/demoforums/forum-test.html HTTP/1.1] com.day.cq.wcm.tags.IncludeTag Error while executing script content.jsp
@@ -44,7 +42,7 @@ at org.apache.sling.scripting.core.impl.DefaultSlingScript.eval(DefaultSlingScri
 
 Problemet är att formatsträngen för com.day.cq.commons.date.RelativeTimeFormat ändrades mellan 5.4 och 5.5 så att&quot;a&quot; för&quot;ago&quot; inte längre accepteras.
 
-All kod som använder API:t RelativeTimeFormat() måste därför ändras
+All kod som använder API:t RelativeTimeFormat() måste därför ändras:
 
 * From: `final RelativeTimeFormat fmt = new RelativeTimeFormat("r a", resourceBundle);`
 * Till: `final RelativeTimeFormat fmt = new RelativeTimeFormat("r", resourceBundle);`
@@ -59,9 +57,9 @@ Mer information finns i [com.day.cq.commons.date.RelativeTimeFormat](https://hel
 
 Under start (inte under den första - men efter den) kan följande varning visas i loggarna:
 
-* 11.04.2014 08:38:07.223 **WARN** []FelixStartLevelcom.github.jknack.handlebars.Handlebars Helper &#39;i18n&#39; har ersatts med &#39;com.adobe.cq.social.handlebars.I18nHelper@15bac645&#39;
+* `11.04.2014 08:38:07.223 WARN [FelixStartLevel]com.github.jknack.handlebars.Handlebars Helper 'i18n'` har ersatts med `com.adobe.cq.social.handlebars.I18nHelper@15bac645`
 
-Denna varning kan ignoreras eftersom jknack.handlebars.Handlebars, som används av [SCF](scf.md#handlebarsjavascripttemplatinglanguage), har ett eget i18n-hjälpverktyg. Från början ersätts den med en AEM-specifik [i18n-hjälpreda](handlebars-helpers.md#i-n). Den här varningen genereras av tredjepartsbiblioteket för att bekräfta åsidosättningen av en befintlig hjälpreda.
+Den här varningen kan ignoreras eftersom `jknack.handlebars.Handlebars`, som används av [SCF](scf.md#handlebarsjavascripttemplatinglanguage), har ett eget i18n-hjälpverktyg. Från början ersätts den med en AEM-specifik [i18n-hjälpreda](handlebars-helpers.md#i-n). Den här varningen genereras av tredjepartsbiblioteket för att bekräfta åsidosättningen av en befintlig hjälpreda.
 
 ### Varning i loggar: OakResourceListener processOsgiEventQueue {#warning-in-logs-oakresourcelistener-processosgieventqueue}
 
