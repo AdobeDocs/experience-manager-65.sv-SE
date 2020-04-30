@@ -10,7 +10,7 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 23a5a65e-774d-4789-9659-09e8be0c2bcd
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 ---
 
@@ -49,17 +49,23 @@ Under fliken **[!UICONTROL Social Tag Cloud]** anger du vilka taggar som ska vis
 
 ![chlimage_1-305](assets/chlimage_1-305.png)
 
-* **[!UICONTROL Sociala taggar som visas]** för att identifiera vilka UGC-taggar som ska visas. De nedrullningsbara alternativen är
+* **[!UICONTROL Sociala taggar som visas]** för att identifiera vilka UGC-taggar som ska visas. De nedrullningsbara alternativen är:
 
    * `From page and child pages`
    * `All tags`
    Standardvärdet är `From page and child pages`, där &quot;sida&quot; refererar till inställningen för **sida** nedan.
 
-* **[!UICONTROL Sida]**(krävs om inte `All tags)` Sökvägen till UGC för en sida. Standard är den aktuella sidan om den lämnas tom.
+* **[!UICONTROL Sida]**
 
-* **[!UICONTROL Inga länkar på taggar]** Om det här alternativet är markerat visas taggarna i taggmolnet som oformaterad text. Om du inte markerar det här alternativet visas taggarna som aktiva länkar som söker efter allt innehåll som taggen tillämpas på. Standardvärdet är avmarkerat och kräver att **[!UICONTROL sökresultatsökvägen]** anges.
+   (Obligatoriskt om inte `All tags)` Sökvägen till UGC för en sida. Standard är den aktuella sidan om den lämnas tom.
 
-* **[!UICONTROL Sökresultatsökväg]** Sökvägen till en sida där en `Search Result` komponent har placerats, konfigurerad att referera till UGC som innehåller den UGC-sökväg som anges av inställningen **Sida** .
+* **[!UICONTROL Inga länkar i taggar]**
+
+   Om du markerar det här alternativet visas taggarna i taggmolnet som oformaterad text. Om du inte markerar det här alternativet visas taggarna som aktiva länkar som söker efter allt innehåll som taggen tillämpas på. Standardvärdet är avmarkerat och kräver att **[!UICONTROL sökresultatsökvägen]** anges.
+
+* **[!UICONTROL Sökresultatsökväg]**
+
+   Sökvägen till en sida där en `Search Result` komponent har placerats, konfigurerad att referera till UGC som innehåller den UGC-sökväg som anges av inställningen **Sida** .
 
 ## Ändra visning av molnet för sociala taggar {#change-display-of-social-tag-cloud}
 
@@ -69,9 +75,11 @@ Använd fliken **[!UICONTROL Social Tag Cloud (Design)]** för att ange hur tagg
 
 ![chlimage_1-306](assets/chlimage_1-306.png)
 
-* **[!UICONTROL Visa fullständiga titelsökvägar]** Om det här alternativet är markerat visas rubrikerna för de överordnade taggarna och namnutrymmet för varje tillämpad tagg.
+* **[!UICONTROL Visa fullständiga titelsökvägar]**
 
-   Exempel:
+   Om du markerar det här alternativet visas rubrikerna för de överordnade taggarna och namnutrymmet för varje tillämpad tagg.
+
+   Till exempel:
 
    * Markerad: `Geometrixx Media: Gadgets / Cars`
    * Avmarkerad: `Cars`
@@ -79,23 +87,31 @@ Använd fliken **[!UICONTROL Social Tag Cloud (Design)]** för att ange hur tagg
 
    Standard är avmarkerat.
 
-* **[!UICONTROL Visa endast lövtaggar]** Om det här alternativet är markerat visas endast tillämpade taggar som inte innehåller några andra taggar.
+* **[!UICONTROL Visa endast lövtaggar]**
 
-   Med taggID för
+   Om det här alternativet är markerat visas endast tillämpade taggar som inte innehåller några andra taggar.
+
+   Med taggID för:
 
    `Geometrixx Media: Gadgets / Cars`
 
-   Det finns tre taggar som kan användas: `Geometrixx Media (the namespace)`, `Gadgets`och `Cars`
+   Det finns tre taggar som kan användas:
 
-   * Markerad: visas bara `Cars` om det används
-   * Avmarkerad: `Geometrixx Media` och `Gadgets`även `Cars` kommer att visas, om det används
+   `Geometrixx Media (the namespace)`, `Gadgets`och `Cars`
+
+   * Markerad: Endast `Cars` visas om det används.
+   * Avmarkerad: `Geometrixx Media` och `Gadgets``Cars` kommer att visas, om det används.
    En enkel tagg är en lövtagg.
 
    Standard är avmarkerat.
 
-* **[!UICONTROL Länkmall]** En annan mall än en standardmall som används för att visa länkarna i ett taggmoln när länkar aktiveras via redigeringsdialogrutan för komponenten.
+* **[!UICONTROL Länka mall]**
 
-* **[!UICONTROL Samma storlek för alla taggar]** Om det här alternativet är markerat formateras alla ord i taggmolnet på samma sätt. Om alternativet inte är markerat formateras ord på olika sätt beroende på hur de används. Standard är avmarkerat.
+   En annan mall än en standardmall som används för att visa länkarna i ett taggmoln när länkarna aktiveras via redigeringsdialogrutan för komponenten.
+
+* **[!UICONTROL Samma storlek för alla taggar]**
+
+   Om det här alternativet är markerat formateras alla ord i taggmolnet på samma sätt. Om alternativet inte är markerat formateras ord på olika sätt beroende på hur de används. Standard är avmarkerat.
 
 ## Additional Information {#additional-information}
 
