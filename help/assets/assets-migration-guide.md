@@ -1,16 +1,16 @@
 ---
-title: Migrera resurser till Adobe Experience Manager Assets i grupp
-description: Beskriver hur du hämtar resurser till AEM, använder metadata, genererar återgivningar och aktiverar dem för att publicera instanser.
+title: Migrera resurser till [!DNL Adobe Experience Manager Assets] i grupp.
+description: Beskriver hur du hämtar resurser till [!DNL Adobe Experience Manager], använder metadata, genererar återgivningar och aktiverar dem för publiceringsinstanser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
 
 # Så här migrerar du resurser i grupp {#assets-migration-guide}
 
-När du migrerar resurser till AEM finns det flera steg att tänka på. Extrahering av resurser och metadata från det aktuella hemmet ligger utanför det här dokumentets omfång eftersom det varierar mycket mellan implementeringar, men i det här dokumentet beskrivs hur du överför dessa resurser till AEM, använder deras metadata, genererar återgivningar och aktiverar dem för publiceringsinstanser.
+När du migrerar resurser till [!DNL Adobe Experience Manager]finns det flera steg att tänka på. Extrahering av resurser och metadata från det aktuella hemmet ligger utanför det här dokumentets omfång eftersom det varierar mycket mellan olika implementeringar, men i det här dokumentet beskrivs hur du hämtar dessa resurser till [!DNL Experience Manager], använder deras metadata, skapar renderingar och aktiverar dem för publicering av instanser.
 
 ## Förutsättningar {#prerequisites}
 
@@ -18,7 +18,7 @@ Innan du utför något av stegen i den här metoden bör du granska och implemen
 
 >[!NOTE]
 >
->Följande verktyg för resursmigrering ingår inte i AEM och stöds inte av Adobe:
+>Följande verktyg för resursmigrering ingår inte i [!DNL Experience Manager] och stöds inte av Adobe:
 >
 >* ACS AEM Tools Tag Maker
 >* ACS AEM Tools CSV Asset Importer
@@ -29,9 +29,9 @@ Innan du utför något av stegen i den här metoden bör du granska och implemen
 >
 Programvaran är öppen källkod och täcks av [Apache v2-licensen](https://adobe-consulting-services.github.io/pages/license.html). Om du vill ställa en fråga eller rapportera ett problem går du till [GitHub Issues for ACS AEM Tools](https://github.com/Adobe-Consulting-Services/acs-aem-commons/issues) eller [ACS AEM Commons](https://github.com/Adobe-Consulting-Services/acs-aem-tools/issues).
 
-## Migrera till AEM {#migrating-to-aem}
+## Migrera till [!DNL Experience Manager]{#migrating-to-aem}
 
-Att migrera resurser till AEM kräver flera steg och bör ses som en process i flera steg. Flyttningsfaserna är följande:
+Att migrera resurser till [!DNL Experience Manager] kräver flera steg och bör ses som en process i flera steg. Flyttningsfaserna är följande:
 
 1. Inaktivera arbetsflöden.
 1. Läs in taggar.
@@ -48,7 +48,7 @@ Innan du startar din migrering ska du inaktivera dina startprogram för arbetsfl
 
 ### Läs in taggar {#loading-tags}
 
-Du kanske redan har en tagg-taxonomi på plats som du tillämpar på dina bilder. Verktyg som CSV-resursimporteraren och Experience Managers stöd för metadataprofiler kan automatisera processen att lägga till taggar i resurser, men taggarna måste läsas in i systemet. Med [ACS AEM Tools Tag Maker](https://adobe-consulting-services.github.io/acs-aem-tools/features/tag-maker/index.html) -funktionen kan du fylla i taggar med hjälp av ett Microsoft Excel-kalkylblad som är inläst i systemet.
+Du kanske redan har en tagg-taxonomi på plats som du tillämpar på dina bilder. Verktyg som CSV-resursimporteraren och stöd för metadataprofiler kan automatisera processen att använda taggar på resurser, men taggarna måste läsas in i systemet. [!DNL Experience Manager] Med [ACS AEM Tools Tag Maker](https://adobe-consulting-services.github.io/acs-aem-tools/features/tag-maker/index.html) -funktionen kan du fylla i taggar med hjälp av ett Microsoft Excel-kalkylblad som är inläst i systemet.
 
 ### Ingående resurser {#ingesting-assets}
 
@@ -58,7 +58,7 @@ Det finns två sätt att läsa in resurser i systemet: en push-baserad metod med
 
 #### Skicka via HTTP {#pushing-through-http}
 
-Adobes Managed Services-team använder ett verktyg som kallas Glutton för att läsa in data i kundmiljöer. Glutton är ett litet Java-program som läser in alla resurser från en katalog till en annan katalog i en AEM-instans. I stället för Glutton kan du också använda verktyg som Perl-skript för att publicera resurserna i databasen.
+Adobes Managed Services-team använder ett verktyg som kallas Glutton för att läsa in data i kundmiljöer. Glutton är ett litet Java-program som läser in alla resurser från en katalog till en annan katalog i en [!DNL Experience Manager] instans. I stället för Glutton kan du också använda verktyg som Perl-skript för att publicera resurserna i databasen.
 
 Det finns två nackdelar med att använda metoden att gå igenom https:
 
@@ -75,20 +75,20 @@ Eftersom resurser inte behöver överföras via ett nätverk förbättras presta
 
 ### Bearbeta återgivningar {#processing-renditions}
 
-När du har läst in resurserna i systemet måste du bearbeta dem i arbetsflödet för [!UICONTROL DAM-uppdatering av resurser] för att extrahera metadata och generera återgivningar. Innan du utför det här steget måste du duplicera och ändra arbetsflödet för [!UICONTROL DAM-uppdatering av resurser] efter dina behov. Det färdiga arbetsflödet innehåller många steg som kanske inte behövs, till exempel Scene7 PTIFF-generering eller InDesign-serverintegrering.
+När du har läst in resurserna i systemet måste du bearbeta dem i arbetsflödet för [!UICONTROL DAM-uppdatering av resurser] för att extrahera metadata och generera återgivningar. Innan du utför det här steget måste du duplicera och ändra arbetsflödet för [!UICONTROL DAM-uppdatering av resurser] efter dina behov. Det färdiga arbetsflödet innehåller många steg som kanske inte är nödvändiga för dig, t.ex. Scene7 PTIFF-generering eller [!DNL InDesign Server] integrering.
 
 När du har konfigurerat arbetsflödet efter dina behov finns det två alternativ:
 
 1. Det enklaste sättet är [ACS Commons massarbetsflödeshanterare](https://adobe-consulting-services.github.io/acs-aem-commons/features/bulk-workflow-manager.html). Med det här verktyget kan du köra en fråga och bearbeta resultatet av frågan via ett arbetsflöde. Det finns även alternativ för att ange gruppstorlekar.
-1. Du kan använda [ACS Commons Fast Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) tillsammans med [syntetiska arbetsflöden](https://adobe-consulting-services.github.io/acs-aem-commons/features/synthetic-workflow.html). Även om det här arbetssättet är mycket mer invecklat slipper ni omkostnaderna för arbetsflödesmotorn i AEM samtidigt och kan samtidigt optimera användningen av serverresurser. Dessutom förbättrar Fast Action Manager resultatet ytterligare genom att övervaka serverresurser dynamiskt och begränsa belastningen på systemet. Exempel på skript finns på funktionssidan för ACS Commons.
+1. Du kan använda [ACS Commons Fast Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) tillsammans med [syntetiska arbetsflöden](https://adobe-consulting-services.github.io/acs-aem-commons/features/synthetic-workflow.html). While this approach is much more involved, it lets you remove the overhead of the [!DNL Experience Manager] workflow engine while optimizing the use of server resources. Dessutom förbättrar Fast Action Manager resultatet ytterligare genom att övervaka serverresurser dynamiskt och begränsa belastningen på systemet. Exempel på skript finns på funktionssidan för ACS Commons.
 
 ### Aktivera resurser {#activating-assets}
 
-För distributioner som har en publiceringsnivå måste du aktivera resurserna i publiceringsgruppen. Även om Adobe rekommenderar att du kör mer än en publiceringsinstans är det mest effektivt att replikera alla resurser till en publiceringsinstans och sedan klona den instansen. När du aktiverar ett stort antal resurser kan du behöva ingripa efter att ha aktiverat ett träd. Därför: När aktiveringar utlöses läggs objekt till i kön för delningsuppgifter/händelser. När storleken på den här kön börjar bli större än cirka 40 000 objekt tar det drastiskt lång tid att bearbeta. När storleken på den här kön överstiger 100 000 objekt börjar systemstabiliteten försämras.
+För distributioner som har en publiceringsnivå måste du aktivera resurserna i publiceringsgruppen. Även om Adobe rekommenderar att du kör mer än en publiceringsinstans är det mest effektivt att replikera alla resurser till en publiceringsinstans och sedan klona den instansen. När du aktiverar ett stort antal resurser kan du behöva ingripa efter att ha aktiverat ett träd. Därför: När aktiveringar utlöses läggs objekt till i kön för delningsuppgifter/händelser. När storleken på den här kön börjar bli över cirka 40 000 objekt tar det dramatiskt lång tid att bearbeta. När storleken på den här kön överstiger 100 000 objekt börjar systemstabiliteten försämras.
 
 Du kan lösa det här problemet genom att använda [Snabb Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) för att hantera resursreplikering. Detta fungerar utan att använda Sling-köerna, vilket sänker overheadkostnaderna samtidigt som arbetsbelastningen begränsas för att förhindra att servern blir överbelastad. Ett exempel på hur du använder FAM för att hantera replikering visas på funktionens dokumentationssida.
 
-Andra alternativ för att hämta resurser till publiceringsgruppen är bland annat att använda [vlt-rcp](https://jackrabbit.apache.org/filevault/rcp.html) eller [oak-run](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run), som ingår i Jackrabbit. Ett annat alternativ är att använda ett verktyg med öppen källkod för AEM-infrastrukturen, som kallas [Grabbit](https://github.com/TWCable/grabbit), och som sägs vara snabbare än vlt.
+Andra alternativ för att hämta resurser till publiceringsgruppen är bland annat att använda [vlt-rcp](https://jackrabbit.apache.org/filevault/rcp.html) eller [oak-run](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run), som ingår i Jackrabbit. Another option is to use an open-sourced tool for your [!DNL Experience Manager] infrastructure called [Grabbit](https://github.com/TWCable/grabbit), which claims to have faster performance than vlt.
 
 För någon av dessa metoder är caveat att resurserna i författarinstansen inte visas som aktiverade. Om du vill hantera flaggning av dessa resurser med rätt aktiveringsstatus måste du också köra ett skript som markerar resurserna som aktiverade.
 
@@ -112,22 +112,22 @@ När resurserna har aktiverats kan du klona publiceringsinstansen och skapa så 
 
 När migreringen är klar bör startarna för arbetsflödena för [!UICONTROL DAM Update Asset] återaktiveras för att stödja generering av återgivningar och metadataextrahering för den dagliga systemanvändningen.
 
-## Migrera mellan AEM-distributioner {#migrating-between-aem-instances}
+## Migrera mellan [!DNL Experience Manager] distributioner {#migrating-between-aem-instances}
 
-Även om det inte är nästan lika vanligt behöver du ibland migrera stora mängder data från en AEM-instans till en annan. När du till exempel utför en AEM-uppgradering uppgraderar du maskinvaran eller migrerar till ett nytt datacenter, till exempel med en AMS-migrering.
+Även om det inte är nästan lika vanligt behöver du ibland migrera stora mängder data från en [!DNL Experience Manager] instans till en annan. till exempel när du utför en [!DNL Experience Manager] uppgradering, uppgraderar maskinvaran eller migrerar till ett nytt datacenter, till exempel med en AMS-migrering.
 
-I det här fallet är dina resurser redan ifyllda med metadata och återgivningar har redan genererats. Du kan helt enkelt fokusera på att flytta resurser från en instans till en annan. När du migrerar mellan AEM-instanser utför du följande steg:
+I det här fallet är dina resurser redan ifyllda med metadata och återgivningar har redan genererats. Du kan helt enkelt fokusera på att flytta resurser från en instans till en annan. När du migrerar mellan [!DNL Experience Manager] instanser utför du följande steg:
 
 1. Inaktivera arbetsflöden: Eftersom du migrerar återgivningar tillsammans med våra resurser, vill du inaktivera arbetsflödets startprogram för [!UICONTROL DAM Update Asset] -arbetsflödet.
 
-1. Migrera taggar: Eftersom du redan har taggar inlästa i AEM-källinstansen kan du skapa dem i ett innehållspaket och installera paketet på målinstansen.
+1. Migrera taggar: Eftersom du redan har taggar inlästa i källinstansen kan du skapa dem i ett innehållspaket och installera paketet på målinstansen. [!DNL Experience Manager]
 
-1. Migrera resurser: Det finns två verktyg som rekommenderas för att flytta resurser från en AEM-instans till en annan:
+1. Migrera resurser: Det finns två verktyg som rekommenderas för att flytta resurser från en [!DNL Experience Manager] instans till en annan:
 
    * **Med Vault Remote Copy** eller vlt rcp kan du använda VLT i ett nätverk. Du kan ange en käll- och målkatalog och hämta alla databasdata från en instans och läsa in dem i en annan. Vlt rcp finns på [https://jackrabbit.apache.org/filevault/rcp.html](https://jackrabbit.apache.org/filevault/rcp.html)
-   * **Grabbit** är ett verktyg för innehållssynkronisering med öppen källkod som utvecklats av Time Warner Cable för deras AEM-implementering. Eftersom den använder kontinuerliga dataströmmar har den en lägre fördröjning jämfört med vlt rcp och kräver en hastighetsförbättring på två till tio gånger snabbare än vlt rcp. Grabbit har även stöd för synkronisering av deltainnehåll, vilket gör att det kan synkronisera ändringar efter att en första migreringspass har slutförts.
+   * **Grabbit** är ett verktyg för innehållssynkronisering med öppen källkod som utvecklats av Time Warner Cable för deras [!DNL Experience Manager] implementering. Eftersom den använder kontinuerliga dataströmmar har den en lägre fördröjning jämfört med vlt rcp och kräver en hastighetsförbättring på två till tio gånger snabbare än vlt rcp. Grabbit har även stöd för synkronisering av deltainnehåll, vilket gör att det kan synkronisera ändringar efter att en första migreringspass har slutförts.
 
-1. Aktivera resurser: Följ instruktionerna för [aktivering av resurser](#activating-assets) som dokumenterats för den första migreringen till AEM.
+1. Aktivera resurser: Följ instruktionerna för att [aktivera resurser](#activating-assets) som dokumenterats för den första migreringen till [!DNL Experience Manager].
 
 1. Klonpublicering: Precis som med en ny migrering är det effektivare att läsa in en publiceringsinstans och klona den än att aktivera innehållet på båda noderna. Se [Klona publicering.](#cloning-publish)
 
