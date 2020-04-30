@@ -3,7 +3,7 @@ title: Generera en URL till delade resurser
 description: I den här artikeln beskrivs hur du delar resurser, mappar och samlingar i AEM Resurser som en URL till externa parter.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
@@ -16,7 +16,7 @@ Med Adobe Experience Manager Assets (AEM) kan ni dela resurser, mappar och samli
 >
 >Du måste ha behörigheten Redigera åtkomstkontrollista för mappen eller resursen som du vill dela som en länk.
 
-## Dela material {#sharelink}
+## Dela resurser {#sharelink}
 
 Använd dialogrutan Länkdelning för att generera URL:en för resurser som du vill dela med användare. Användare med administratörsbehörighet eller läsbehörighet på `/var/dam/share` platsen kan visa de länkar som delas med dem.
 
@@ -31,7 +31,7 @@ Använd dialogrutan Länkdelning för att generera URL:en för resurser som du v
 
    ![Dialogruta med länkresurs](assets/Link-sharing-dialog-box.png)
 
-   *Bild:Dialogruta med länkresurs*
+   *Bild: Dialogrutan där du kan dela resurser som en länk.*
 
    Du kan också fortsätta med steg 3-7 i den här proceduren för att lägga till e-postmottagare, konfigurera förfallotiden för länken och skicka den från dialogrutan.
 
@@ -47,14 +47,11 @@ Använd dialogrutan Länkdelning för att generera URL:en för resurser som du v
    >[!NOTE]
    Om en delad resurs flyttas till en annan plats slutar länken att fungera. Återskapa länken och dela den på nytt med användarna.
 
-1. Öppna konfigurationen för **[!UICONTROL Dag CQ Link Externalizer]** i webbkonsolen och ändra följande egenskaper i fältet **[!UICONTROL Domäner]** med de värden som anges för var och en av dem:
+1. I AEM-gränssnittet går du till **[!UICONTROL Verktyg]** > **[!UICONTROL Åtgärder]** > **[!UICONTROL Webbkonsol]**.
 
-   * lokal
-   * author
-   * publicera
-   För egenskaperna local och author anger du URL:en för den lokala instansen respektive författarinstansen. Både lokala egenskaper och författaregenskaper har samma värde om du kör en enda AEM-författarinstans. Ange publiceringsinstansens URL för publicering.
+1. Öppna **[!UICONTROL Dag CQ Link Externalizer]** -konfigurationen och ändra följande egenskaper i fältet **[!UICONTROL Domäner]** med de värden som anges mot `local`, `author`och `publish`. För egenskaperna `local` och `author` anger du URL:en för den lokala instansen respektive författarinstansen. Både `local` och `author` egenskaper har samma värde om du kör en enda Experience Manager Author-instans. Ange t. `publish`ex. URL:en för Experience Manager-publiceringsinstansen.
 
-1. I e-postadressrutan i dialogrutan **[!UICONTROL Länkdelning]** skriver du e-post-ID:t för den användare som du vill dela länken med. Du kan också dela länken med flera användare.
+1. In the email address box of the **[!UICONTROL Link Sharing]** dialog, type the email ID of the user you want to share the link with. Du kan också dela länken med flera användare.
 
    Om användaren är medlem i din organisation väljer du användarens e-post-ID bland de föreslagna e-post-ID:n som visas i listan under skrivområdet. För en extern användare anger du det fullständiga e-post-ID:t och väljer det sedan i listan.
 
@@ -62,13 +59,15 @@ Använd dialogrutan Länkdelning för att generera URL:en för resurser som du v
 
    ![Dela länkar till resurser direkt från dialogrutan Länkdelning](assets/Asset-Sharing-LinkShareDialog.png)
 
-   Dela länkar till resurser direkt från dialogrutan Länkdelning
+   *Bild: Dela länkar till resurser direkt från dialogrutan[!UICONTROL Länkdelning].*
 
    >[!NOTE]
-   Om du anger ett e-post-ID för en användare som inte är medlem i din organisation, kommer orden&quot;Extern användare&quot; att föregås av användarens e-post-ID.
+   Om du anger ett e-post-ID för en användare som inte är medlem i din organisation anges ordet [!UICONTROL Extern användare] som användarens e-post-ID.
 
-1. Ange ett ämne för den resurs du vill dela i rutan **[!UICONTROL Ämne]** .
-1. Ange ett valfritt meddelande i **[!UICONTROL rutan Meddelande]** .
+1. I fältet **[!UICONTROL Ämne]** anger du ett ämne för resursen som du vill dela.
+
+1. Ange ett valfritt meddelande i fältet **[!UICONTROL Meddelande]** .
+
 1. I fältet **[!UICONTROL Förfallodatum]** anger du ett förfallodatum och en förfallotid för länken med datumväljaren. Som standard är förfallodatumet inställt för en vecka från det datum du delar länken.
 
    ![Ange förfallodatum för delad länk](assets/Set-shared-link-expiration.png)
@@ -85,7 +84,7 @@ Använd dialogrutan Länkdelning för att generera URL:en för resurser som du v
 
    Om du vill växla till listvyn klickar/trycker du på layoutalternativet i verktygsfältet.
 
-1. Om du vill generera en förhandsgranskning av resursen klickar/trycker du på den delade resursen. Om du vill stänga förhandsgranskningen och gå tillbaka till **[!UICONTROL Marketing Cloud]** -sidan klickar/trycker du på **[!UICONTROL Bakåt]** i verktygsfältet. Om du har delat en mapp klickar/trycker du på **[!UICONTROL Överordnad mapp]** för att gå tillbaka till den överordnade mappen.
+1. Om du vill generera en förhandsgranskning av resursen klickar/trycker du på den delade resursen. To close the preview and return to the **[!UICONTROL Marketing Cloud]** page, click/tap **[!UICONTROL Back]** in the toolbar. If you have shared a folder, click/tap **[!UICONTROL Parent Folder]** to return to the parent folder.
 
    ![chlimage_1-261](assets/chlimage_1-546.png)
 
@@ -97,14 +96,14 @@ Använd dialogrutan Länkdelning för att generera URL:en för resurser som du v
    ![chlimage_1-262](assets/chlimage_1-547.png)
 
 1. Om du vill visa de resurser du har delat som länkar går du till resursgränssnittet och trycker på Experience Manager-logotypen. Visa navigeringsrutan genom att välja **[!UICONTROL Navigering]** i listan.
-1. I navigeringsrutan väljer du **[!UICONTROL Delade länkar]** för att visa en lista med delade resurser.
+1. From the Navigation pane, choose **[!UICONTROL Shared Links]** to display a list of shared assets.
 1. Om du vill ta bort delningen av en resurs markerar du den och trycker/klickar på **[!UICONTROL Ta bort delning]** i verktygsfältet. Ett bekräftelsemeddelande följer. Posten för resursen tas bort från listan.
 
 ## Konfigurera daglig CQ Mail-tjänst {#configmailservice}
 
 1. På Experience Managers hemsida går du till **[!UICONTROL Verktyg]** > **[!UICONTROL Åtgärder]** > **[!UICONTROL Webbkonsol]**.
 1. Leta upp **[!UICONTROL Dag CQ Mail Service]** i listan över tjänster.
-1. Tryck på **[!UICONTROL Redigera]** bredvid tjänsten och konfigurera följande parametrar för **[!UICONTROL Day CQ Mail Service]** med de uppgifter som anges för deras namn:
+1. Tap **[!UICONTROL Edit]** beside the service, and configure the following parameters for **[!UICONTROL Day CQ Mail Service]** with the details mentioned against their names:
 
    * Värdnamn för SMTP-server: värdnamn för e-postserver
    * SMTP-serverport: e-postserverport
@@ -118,9 +117,9 @@ Använd dialogrutan Länkdelning för att generera URL:en för resurser som du v
 
 När du hämtar resurser från den länk som delas med funktionen Länkdelning komprimerar AEM resurshierarkin från databasen och returnerar sedan resursen i en ZIP-fil. I avsaknad av begränsningar för den mängd data som kan komprimeras i en ZIP-fil utsätts stora mängder data för komprimering, vilket leder till minnesfel i JVM. För att skydda systemet från en potentiell denial of service-attack på grund av den här situationen konfigurerar du maxstorleken med parametern **[!UICONTROL Max Content Size (okomprimerad)]** för [!UICONTROL Day CQ DAM Adhoc Asset Share Proxy Servlet] i Configuration Manager. Om resursens okomprimerade storlek överskrider det konfigurerade värdet, avvisas begäranden om hämtning av resurser. Standardvärdet är 100 MB.
 
-1. Klicka på/tryck på AEM-logotypen och gå sedan till **[!UICONTROL Verktyg]** > **[!UICONTROL Åtgärder]** > **[!UICONTROL Webbkonsol]**.
+1. Klicka/tryck på AEM-logotypen och gå sedan till **[!UICONTROL Verktyg]** > **[!UICONTROL Åtgärder]** > **[!UICONTROL Webbkonsol]**.
 1. På webbkonsolen går du till **[!UICONTROL Day CQ DAM Adhoc Asset Share Proxy Server]** .
-1. Öppna **[!UICONTROL Dag CQ DAM Adhoc Asset Share Proxy Server]** i redigeringsläge och ändra värdet för parametern **[!UICONTROL Max Content Size (okomprimerad)]** .
+1. Öppna konfigurationen för **[!UICONTROL Day CQ DAM Adhoc Asset Share Proxy Server]** i redigeringsläge och ändra värdet för parametern **[!UICONTROL Maximal innehållsstorlek (okomprimerat)]**.
 
    ![chlimage_1-264](assets/chlimage_1-549.png)
 
