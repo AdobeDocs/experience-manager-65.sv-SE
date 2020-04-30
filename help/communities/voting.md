@@ -10,7 +10,7 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 071cac6d-05c5-47ab-85bc-ead6693ca1f4
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 2bcd098ae901070d5e50cd89d06c854884b4e461
 
 ---
 
@@ -39,11 +39,17 @@ Under fliken **[!UICONTROL Texter och etiketter]** anger du vilka egenskaper som
 
 ![chlimage_1-309](assets/chlimage_1-309.png)
 
-* **[!UICONTROL Positiv svarsetikett]**(*obligatoriskt*) Det interna egenskapsnamnet för ett positivt svar.
+* **[!UICONTROL Etikett för positivt svar]**
 
-* **[!UICONTROL Negativ svarsetikett]**(*obligatoriskt*) Det interna egenskapsnamnet för ett negativt svar.
+   (*Obligatoriskt*) Egenskapsnamnet internal för ett positivt svar.
 
-* **[!UICONTROL Tally Name]**(*Required*) The internal, identifier identifier property name for this instance of a vobe component.
+* **[!UICONTROL Etikett för negativt svar]**
+
+   (*Obligatoriskt*) Det interna egenskapsnamnet för ett negativt svar.
+
+* **[!UICONTROL Namn]**
+
+   (*Obligatoriskt*) Det interna, identifierbara egenskapsnamnet för den här instansen av en röstkomponent.
 
 ## Site Visitor Experience {#site-visitor-experience}
 
