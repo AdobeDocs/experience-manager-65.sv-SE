@@ -3,7 +3,7 @@ title: Jämför AEM Assets och AEM Media Library
 description: Jämför AEM Assets och AEM Media Library och se skillnaderna.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 476a8acbca2f498472225fe1df220f63eafe61e5
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
@@ -70,26 +70,25 @@ I det här fallet behöver man inte köpa AEM Assets, inte ens mediebiblioteket 
 * Adobe Asset Link (anslut till Creative Cloud for enterprise)
 * AEM-skrivbordsapp
 * Bearbeta profiler
-* InDesign-serverintegration
+* Integrering med InDesign Server
 * Resursmallar och katalogproduktionsramverk
-* Länkade resurser för Adobe Photoshop, Illustrator och InDesign
+* Integration mellan Adobe Photoshop, Adobe Illustrator och Adobe InDesign
 * Hantering av flerspråkiga resurser
 * PIM-integrering
-* Rights Management
+* Rättighetshantering
 * Stöd för Camera RAW
-* Hantering och konfiguration av sökfaktorer
+* Hantering och konfiguration av sökansikten
 * Färdiga DAM-arbetsflöden (till exempel fotografering)
-* Resursrapportering och analys: Resursinsikter
+* Resursrapportering och -analys som kallas insikter
 * 3D-resurshantering
 * Anslutna resurser
 * Varumärkesportal
 * Självbetjäningsåtkomst
-* Bläddra, söka och hämta
+* Sök, sök och ladda ned
 * Samlingar och mappdelning
-* Administratörsverktyg
-* Smarta taggar
+* Administratörsverktyg och gränssnitt
+* Smart taggning
 * Visuell sökning
-* Användargränssnitt för resursadministratör
 
 **Mediebibliotek**
 
@@ -97,9 +96,9 @@ I det här fallet behöver man inte köpa AEM Assets, inte ens mediebiblioteket 
 * Tagghantering
 * Versionskontroll
 * Statiska återgivningar
-* Projekt, uppgifter, arbetsflödesredigering
+* Projekt, uppgifter, arbetsflödesutveckling
 * Aktivitetsström (tidslinje)
 * Query Builder (API)
-* Marketing Cloud-integrering
+* Integrering med Marketing Cloud
 * Anpassning och tillägg av användargränssnitt
-* Kommentarer och anteckningar
+* Kommentarer och kommentarer
