@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 5d5eebe4-46c9-4028-9354-c5f27944fcdc
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
@@ -34,13 +34,12 @@ Se även [Konfigurera dynamiska media - Scene7-läge](/help/assets/config-dms7.m
 
 1. I din AEM-instans går du till **[!UICONTROL Verktyg > Dokumentskydd > Användare]** och väljer **[!UICONTROL Skapa användare]**. Den här tjänstanvändaren måste ha *läs-/skrivbehörighet* till `/content/dam.`
 1. I fälten **[!UICONTROL ID]** och **[!UICONTROL Lösenord]** anger du ett användarnamn och lösenord. till exempel **FTP-användare**. Det här namnet visas på tidslinjen som den användare som skapade resursen. När en resurs överförs från FTP betraktas en resurs som skapad när den överförs till FTP-servern och överförs till AEM.
-1. Kontakta [Adobe Enterprise Support för Experience Manager](https://helpx.adobe.com/contact/enterprise-support.ec.html) för att få tillgång till funktionspaketet 18912 för nedladdning. Du kan behöva följande information när du kontaktar supporten:
+1. Kontakta [Adobe Enterprise Customer Care för Experience Manager](https://helpx.adobe.com/se/contact/enterprise-support.ec.html) för att få tillgång till funktionspaketet 18912 för nedladdning. Du kan behöva följande information när du kontaktar supporten:
 
    * Serverns IP-adress för din Author-instans, inklusive portnumret (portnumret är som standard 4502.)
    * Användarnamn och lösenord för AEM-tjänsten från föregående steg.
 
-1. Adobe Enterprise Support för AEM ger dig FTP-inloggningsuppgifter och tillgång till funktionspaket 18912.
+1. Adobe Enterprise Customer Care för AEM ger dig FTP-inloggningsuppgifter och tillgång till funktionspaket 18912.
 1. Installera funktionspaketet när du får funktionspaketet 18912.
 
    Mer information om hur du använder paketdelning och paket i AEM finns i [Arbeta med paket](/help/sites-administering/package-manager.md) .
-
