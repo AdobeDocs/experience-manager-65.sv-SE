@@ -1,9 +1,9 @@
 ---
-title: Överlappande metadata
+title: Cascading metadata in [!DNL Adobe Experience Manager Assets].
 description: I den här artikeln beskrivs hur du definierar överlappande metadata för resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
@@ -23,7 +23,7 @@ Här följer några exempel där du kan definiera överlappande metadata:
 * Ändra alternativen som visas för ett visst fält baserat på värdet som anges i ett annat fält.
 * Ange standardvärdet för metadata i ett visst fält baserat på det värde som anges i ett annat fält.
 
-## Konfigurera överlappande metadata i AEM {#configure-cascading-metadata-in-aem}
+## Konfigurera överlappande metadata i [!DNL Experience Manager]{#configure-cascading-metadata-in-aem}
 
 Tänk dig ett scenario där du vill visa överlappande metadata baserat på den typ av resurs som är markerad. Några exempel
 
@@ -32,7 +32,7 @@ Tänk dig ett scenario där du vill visa överlappande metadata baserat på den 
 
 Oavsett vilken resurstyp du väljer visas copyrightinformationen som ett obligatoriskt fält.
 
-1. I Experience Manager-gränssnittet går du till **[!UICONTROL Verktyg]** > **[!UICONTROL Resurser]** > **[!UICONTROL Metadata Schemas]**.
+1. I [!DNL Experience Manager] gränssnittet går du till **[!UICONTROL Verktyg]** > **[!UICONTROL Resurser]** > **[!UICONTROL Metadata Schemas]**.
 1. In the **[!UICONTROL Schema Forms]** page, select a schema form and then click **[!UICONTROL Edit]** from the toolbar to edit the schema.
 
    ![select_form](assets/select_form.png)
@@ -51,7 +51,7 @@ Oavsett vilken resurstyp du väljer visas copyrightinformationen som ett obligat
 
    * Om du vill ange värdena manuellt väljer du **[!UICONTROL Lägg till manuellt]** och klickar på **[!UICONTROL Lägg till alternativ]** och anger text och värde för alternativet. Ange till exempel resurstyperna Video, PDF, Word och Bild.
 
-   * Om du vill hämta värden från en JSON-fil dynamiskt väljer du **[!UICONTROL Lägg till via JSON-sökväg]** och anger sökvägen till JSON-filen. AEM hämtar nyckelvärdepar i realtid när formuläret presenteras för användaren.
+   * Om du vill hämta värden från en JSON-fil dynamiskt väljer du **[!UICONTROL Lägg till via JSON-sökväg]** och anger sökvägen till JSON-filen. [!DNL Experience Manager] hämtar nyckelvärdepar i realtid när formuläret presenteras för användaren.
    Båda alternativen utesluter varandra. Du kan inte importera alternativen från en JSON-fil och redigera manuellt.
 
    ![add_choice](assets/add_choice.png)
@@ -105,8 +105,8 @@ Oavsett vilken resurstyp du väljer visas copyrightinformationen som ett obligat
 
    ![Överlappande metadata för videoresurs](assets/video_asset.png)
 
-   *Bild: Överlappande metadata för en video*
+   *Bild: Överlappande metadata för en video.*
 
    ![Överlappande metadata för dokumentresurs](assets/doc_type_fields.png)
 
-   *Bild: Överlappande metadata för ett dokument*
+   *Bild: Överlappande metadata för ett dokument.*
