@@ -1,16 +1,16 @@
 ---
 title: Skapa översättningsprojekt
-description: Lär dig hur du skapar översättningsprojekt i AEM.
+description: Lär dig hur du skapar översättningsprojekt i [!DNL Adobe Experience Manager].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
 
 # Skapa översättningsprojekt {#creating-translation-projects}
 
-Om du vill skapa en språkkopia utlöser du ett av följande språkkopieringsarbetsflöden som finns under referenspåret i AEM-användargränssnittet.
+Om du vill skapa en språkkopia utlöser du ett av följande språkkopieringsarbetsflöden som finns under referenslisten i [!DNL Experience Manager] användargränssnittet.
 
 * **Skapa och översätt**: I det här arbetsflödet kopieras resurser som ska översättas till språkroten för det språk som du vill översätta till. Beroende på vilka alternativ du väljer skapas dessutom ett översättningsprojekt för resurserna i projektkonsolen. Beroende på inställningarna kan översättningsprojektet startas manuellt eller köras automatiskt så fort översättningsprojektet skapas.
 
@@ -28,15 +28,15 @@ Om du vill skapa en språkkopia utlöser du ett av följande språkkopieringsarb
 
 Du använder arbetsflödet för att skapa och översätta för att generera språkkopior för ett visst språk för första gången. Arbetsflödet innehåller följande alternativ:
 
-* Skapa endast struktur
-* Skapa ett nytt översättningsprojekt
-* Lägg till i befintligt översättningsprojekt
+* Skapa endast struktur.
+* Skapa ett nytt översättningsprojekt.
+* Lägg till i befintligt översättningsprojekt.
 
 ### Skapa endast struktur {#create-structure-only}
 
 Använd alternativet **[!UICONTROL Skapa endast struktur]** om du vill skapa en målmappshierarki i målspråkets rot för att matcha källmappens hierarki i källspråkets rot. I det här fallet kopieras källresurserna till målmappen. Inget översättningsprojekt genereras emellertid.
 
-1. I resursgränssnittet väljer du den källmapp som du vill skapa en struktur för i målspråkets rot.
+1. I [!DNL Assets] gränssnittet väljer du den källmapp som du vill skapa en struktur för i målspråkets rot.
 1. Öppna rutan **[!UICONTROL Referenser]** och klicka/tryck på **[!UICONTROL Språkkopior]** under **[!UICONTROL Kopior]**.
 
    ![chlimage_1-57](assets/chlimage_1-57.png)
@@ -116,7 +116,7 @@ Om du använder det här alternativet kopieras resurser som ska översättas til
 
    ![visa översatta metadata på sidan Egenskaper för resurs](assets/translated-metadata-asset-properties.png)
 
-   *Bild: Översatta metadata på sidan med resursegenskaper*
+   *Bild: Översatta metadata på egenskapssidan för resursen.*
 
 
    >[!NOTE]
@@ -277,13 +277,13 @@ Om du använder det här alternativet läggs resursuppsättningen till i ett bef
 
 ## Skapa tillfälliga språkkopior {#creating-temporary-language-copies}
 
-När du kör ett översättningsarbetsflöde för att uppdatera en språkkopia med redigerade versioner av originalresurser bevaras den befintliga språkkopian tills du godkänner översatta resurser. AEM Resurser lagrar de nyligen översatta resurserna på en tillfällig plats och uppdaterar den befintliga språkkopian när du uttryckligen har godkänt resurserna. Om du avvisar resurserna ändras inte språkkopian.
+När du kör ett översättningsarbetsflöde för att uppdatera en språkkopia med redigerade versioner av originalresurser bevaras den befintliga språkkopian tills du godkänner översatta resurser. [!DNL Adobe Experience Manager Assets] lagrar de nyligen översatta resurserna på en tillfällig plats och uppdaterar den befintliga språkkopian när du uttryckligen har godkänt resurserna. Om du avvisar resurserna ändras inte språkkopian.
 
-1. Click/tap the source root folder under **[!UICONTROL Language Copies]** for which you already created a language copy, and then click/tap **[!UICONTROL Reveal in Assets]** to open the folder in AEM Assets.
+1. Click/tap the source root folder under **[!UICONTROL Language Copies]** for which you already created a language copy, and then click/tap **[!UICONTROL Reveal in Assets]** to open the folder in [!DNL Experience Manager Assets].
 
    ![chlimage_1-99](assets/chlimage_1-99.png)
 
-1. I resursgränssnittet markerar du en resurs som du redan har översatt och klickar/trycker på **[!UICONTROL redigeringsikonen]** i verktygsfältet för att öppna resursen i redigeringsläge.
+1. I [!DNL Assets] gränssnittet väljer du en resurs som du redan har översatt och klickar/trycker på **[!UICONTROL redigeringsikonen]** i verktygsfältet för att öppna resursen i redigeringsläge.
 1. Redigera resursen och spara sedan ändringarna.
 1. Uppdatera språkkopian genom att utföra steg 2-14 i proceduren [Lägg till i befintligt översättningsprojekt](#add-to-existing-translation-project) .
 1. Klicka på/tryck på ellipsen längst ned i rutan **[!UICONTROL Översättningsjobb]** . I listan över resurser på sidan **[!UICONTROL Översättningsjobb]** kan du tydligt visa den tillfälliga plats där den översatta versionen av resursen lagras.
@@ -303,6 +303,9 @@ När du kör ett översättningsarbetsflöde för att uppdatera en språkkopia m
 
    ![chlimage_1-103](assets/chlimage_1-103.png)
 
-1. Navigera till resurskonsolen och öppna sidan Egenskaper för var och en av de översatta resurserna för att visa översatta metadata.
+1. Om du vill visa översatta metadata går du till [!DNL Assets] konsolen och öppnar sidan [!UICONTROL Egenskaper] för var och en av de översatta resurserna.
 
-Tips om hur du översätter metadata för resurser effektivt finns i [5 steg för effektiv översättning av metadata](https://blogs.adobe.com/experiencedelivers/experience-management/translate_aemassets_metadata/).
+>[!MORELIKETHIS]
+>
+>* [Tips för att effektivt översätta metadata](https://blogs.adobe.com/experiencedelivers/experience-management/translate_aemassets_metadata/).
+
