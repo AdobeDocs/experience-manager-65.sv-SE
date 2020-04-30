@@ -1,18 +1,18 @@
 ---
-title: Hantera sammansatta resurser med referenser och flersidiga resurser i Adobe Experience Manager.
-description: Lär dig hur du skapar referenser till digitala resurser från Adobe InDesign, Adobe Illustrator och Adobe Photoshop. Använd funktionen för sidvisningsprogram för att visa enskilda underresurssidor för flersidiga filer som PDF-, INDD-, PPT-, PPTX- och AI-filer.
+title: Hantera sammansatta resurser med referenser och flersidiga resurser i [!DNL Adobe Experience Manager].
+description: Lär dig hur du skapar referenser till digitala resurser från [!DNL Adobe InDesign], [!DNL Adobe Illustrator] och [!DNL Adobe Photoshop]. Använd funktionen för sidvisningsprogram för att visa enskilda underresurssidor för flersidiga filer som PDF-, INDD-, PPT-, PPTX- och AI-filer.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 790efeaff6c8cf7e60104601e08955180dbb9600
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
 
 # Hantera sammansatta och flersidiga resurser {#managing-compound-assets}
 
-[!DNL Adobe Experience Manager Assets] kan identifiera om en överförd fil innehåller referenser till resurser som redan finns i databasen. Den här funktionen är endast tillgänglig för filformat som stöds. Om den överförda resursen innehåller referenser till Experience Manager-resurser skapas en dubbelriktad länk mellan de överförda och refererade resurserna.
+[!DNL Adobe Experience Manager Assets] kan identifiera om en överförd fil innehåller referenser till resurser som redan finns i databasen. Den här funktionen är endast tillgänglig för filformat som stöds. Om den överförda resursen innehåller referenser till [!DNL Experience Manager] resurser skapas en dubbelriktad länk mellan den överförda och refererade resursen.
 
-Förutom att eliminera redundans kan du förbättra samarbetet och öka användarnas effektivitet och produktivitet genom att referera till resurserna i Adobe Creative Cloud-programmen.
+Att referera till resurser i [!DNL Adobe Creative Cloud] program ger inte bara ökad redundans, utan även bättre samarbete och ökad produktivitet.
 
 [!DNL Experience Manager Assets] har stöd för dubbelriktade referenser. Du kan hitta refererade resurser på sidan med tillgångsinformation i den överförda filen. Dessutom kan du visa de refererande filerna på sidan med resursinformation för den refererade resursen.
 
@@ -25,7 +25,7 @@ Du kan referera till befintliga digitala resurser inifrån en [!DNL Adobe Illust
 1. Hämta digitala resurser till det lokala filsystemet med hjälp av [Experience Manager-datorprogrammet](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html). Navigera till filsystemplatsen för resursen som du vill referera till.
 1. Dra resursen från den lokala mappen till [!DNL Illustrator] filen.
 
-1. Spara [!DNL Illustrator] filen på den monterade enheten eller [överför](/help/assets/managing-assets-touch-ui.md#uploading-assets) den till Experience Manager-databasen.
+1. Spara [!DNL Illustrator] filen på den monterade enheten eller [överför](/help/assets/managing-assets-touch-ui.md#uploading-assets) den till [!DNL Experience Manager] databasen.
 
 1. När arbetsflödet är klart går du till sidan med resursinformation för resursen. Referenserna till befintliga digitala resurser visas under **[!UICONTROL Beroenden]** i kolumnen **[!UICONTROL Referenser]** .
 
@@ -39,7 +39,7 @@ Du kan referera till befintliga digitala resurser inifrån en [!DNL Adobe Illust
 
    ![visa referenserna för Experience Manager Assets i kolumnen Referenser i resursinformationen](assets/asset-references.png)
 
-   *Bild: Resursreferenser i tillgångsinformation*
+   *Bild: Resursreferenser i tillgångsinformation.*
 
 ## Lägg till digitala resurser som referenser i [!DNL Adobe InDesign]{#add-aem-assets-as-references-in-adobe-indesign}
 
@@ -86,7 +86,7 @@ För resurser som stöds i flersidiga format - PDF-filer, AI-filer [!DNL Microso
 
 Generering av delresurser är inaktiverat som standard. Så här aktiverar du generering av delresurser:
 
-1. Logga in på Experience Manager som administratör. Öppna **[!UICONTROL Verktyg > Arbetsflöde > Modeller]**.
+1. Logga in [!DNL Experience Manager] som administratör. Öppna **[!UICONTROL Verktyg > Arbetsflöde > Modeller]**.
 1. Välj arbetsflöde för **[!UICONTROL DAM-uppdatering av resurser]** och klicka på **[!UICONTROL Redigera]**.
 1. Klicka på **[!UICONTROL Växla sidopanel]** och leta upp steget **[!UICONTROL Skapa underresurs]** . Lägg till steget i arbetsflödet. Klicka på **[!UICONTROL Synkronisera]**.
 
