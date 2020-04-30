@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 4a0debdd-acb9-4646-80bb-fec66fae4088
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 ---
 
 
-# Aktivitetstrender{#activity-trends}
+# Aktivitetstrender {#activity-trends}
 
 ## Introduktion {#introduction}
 
@@ -24,9 +24,9 @@ Komponenten `Community Activity List` gör det möjligt att lägga till trendinf
 
 Dokumentet beskriver:
 
-* lägga till `Community Activity List` komponenten på en [communitywebbplats](/help/communities/overview.md#community-sites)
+* Lägga till `Community Activity List` komponenten på en [communitywebbplats](/help/communities/overview.md#community-sites).
 
-* konfigurationsinställningar för `Community Activity List` komponenten
+* Konfigurationsinställningar för `Community Activity List` komponenten.
 
 ### Krav {#requirement}
 
@@ -54,7 +54,7 @@ Markera den monterade `Community Activity List` komponent som du vill öppna och
 
 ![chlimage_1-55](assets/chlimage_1-55.png)
 
-Under fliken **Comments **anger du om och hur kommentarer för överförda filer ska visas:
+Under fliken **Kommentarer** anger du om och hur kommentarer för överförda filer ska visas:
 
 ![chlimage_1-56](assets/chlimage_1-56.png)
 
@@ -62,7 +62,7 @@ Under fliken **Comments **anger du om och hur kommentarer för överförda filer
 
    Ange om data ska visas för communitymedlemmar eller användargenererat innehåll (UGC).
 
-   Välj från
+   Välj  från:
 
    * `Members`
    * `Content`
@@ -80,7 +80,7 @@ Standardvärdet är 10.
 
 * **Typ av aktivitet**
 
-   Välj en av
+   Välj något av följande:
 
    * `Views`(sidbesök)
    * `Posts`(skapa UGC)
@@ -90,7 +90,7 @@ Standardvärdet är 10.
 
 * **Tidsperiod**
 
-   Välj en av
+   Välj något av följande:
 
    * `Last 24 hours`
    * `Last 7 days`
@@ -107,7 +107,7 @@ Standard är hela communitywebbplatsen.
 
 * **Medlemsräkningsaggregering**
 
-   När du avmarkerar det här alternativet (inaktiverat) räknas endast inlägg på den översta nivån. Om till exempel kontexten är rotsidan (standardinställningen) `Activity Type`visas ingen aktivitet `Posts`i den, eftersom det inte går att publicera innehåll på rotsidan. När du markerar det här alternativet inkluderas antalet på alla underordnade sidor.
+   När du avmarkerar det här alternativet (inaktiverat) räknas endast inlägg på den översta nivån. Om till exempel kontexten är rotsidan (standardinställningen) visas ingen aktivitet `Activity Type` `Posts` i någon av dem eftersom det inte går att publicera innehåll på rotsidan. När du markerar det här alternativet inkluderas antalet på alla underordnade sidor.
 Standard är markerat.
 
 ### Exempelsida med 4 komponenter {#example-page-with-components}
