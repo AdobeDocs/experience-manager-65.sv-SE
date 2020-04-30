@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 46f135de-a0bf-451d-bdcc-fb29188250aa
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 ---
 
@@ -39,9 +39,11 @@ Kräver en gemensam lagringsplats i följande rekommenderade topologier.
 >
 >När distributionen inte innehåller någon [gemensam butik](working-with-srp.md)visas bara UGC i AEM-publicerings- eller författarinstansen som den angavs för.
 
+
 >[!NOTE]
 >
 >Mer information om AEM-plattformen finns i [Rekommenderade distributioner](../../help/sites-deploying/recommended-deploys.md) och [introduktion till AEM-plattformen](../../help/sites-deploying/data-store-config.md).
+
 
 ## För produktion {#for-production}
 
@@ -49,9 +51,9 @@ Det är viktigt att upprätta en gemensam butik för UGC, och därför är den u
 
 Två exempel:
 
-1) Om den förväntade volymen av UGC är hög och en lokal MongoDB-instans är möjlig är valet [MSRP](msrp.md).
+1. Om den förväntade volymen av UGC är hög och en lokal MongoDB-instans är möjlig är valet [MSRP](msrp.md).
 
-2) För optimala prestanda för sidinnehåll ger valet av en [publiceringsgrupp](../../help/sites-deploying/recommended-deploys.md#tarmk-farm) och [ASRP](asrp.md) optimal skalning av UGC med relativt enkla åtgärder.
+1. För optimala prestanda för sidinnehåll ger valet av en [publiceringsgrupp](../../help/sites-deploying/recommended-deploys.md#tarmk-farm) och [ASRP](asrp.md) optimal skalning av UGC med relativt enkla åtgärder.
 
 För båda kan distributionen baseras på valfri OAK-mikrokärna.
 
@@ -61,7 +63,7 @@ Mer information om ekormikrokernaler finns på [Rekommenderade distributioner](.
 
 ### TjärMK-publiceringsgrupp {#tarmk-publish-farm}
 
-När topologin är en publiceringsanläggning är relevanta ämnen av betydelse
+När topologin är en publiceringsanläggning är viktiga ämnen:
 
 * [Användarsynkronisering](sync.md)
 * [Hantera användare och användargrupper](users.md)
@@ -100,7 +102,7 @@ Om du väljer [ASRP](asrp.md), [DSRP](dsrp.md) eller [MSRP](msrp.md) för produk
 
 * UGC- [gemensam butik](working-with-srp.md)
 
-   Beskriver lagring av communityinnehåll separat från webbplatsinnehåll
+   Beskriver lagring av communityinnehåll separat från webbplatsinnehåll.
 
 * [Node Stores and Data Stores](../../help/sites-deploying/data-store-config.md)
 
