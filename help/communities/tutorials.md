@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a420b0b1-65f4-4103-a7c9-263657c7870f
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 ---
 
@@ -21,7 +21,9 @@ Detta är exempel som kan vara till hjälp när det gäller att lära sig och ar
 
 ## Anpassning på klientsidan {#client-side-customization}
 
-Se även [SCF-anpassning](client-customize.md)på klientsidan.
+Se även:
+
+* [SCF-anpassning på klientsidan](client-customize.md)
 
 * [Community Components Guide](components-guide.md)
 
@@ -45,7 +47,7 @@ Exempelkod finns i [Adobe Marketing Cloud GitHub](https://github.com/Adobe-Marke
 
 * [AEM Communities Todo MVC](https://github.com/Adobe-Marketing-Cloud/aem-communities-todomvc-sample)
 
-   ToDo MVC - nedgraderar hur du utvecklar en SCF+SRP-komponent från grunden
+   ToDo MVC Graderar hur du utvecklar en SCF+SRP-komponent från grunden.
 
 * [Komma igång med AEM Communities](getting-started.md)
 
@@ -59,11 +61,11 @@ Exempelkod finns i [Adobe Marketing Cloud GitHub](https://github.com/Adobe-Marke
 
 Paketet med Geometrixx-exempel innehåller demoanvändare. Det finns ofta en skillnad i upplevelse mellan att vara besökare (inte inloggad) eller medlem (inloggad) och, så länge som Geometrixexempelpaketen är installerade, kan du använda dessa användare för att simulera ett inloggat läge när du undersöker med guiden [för](components-guide.md)communitykomponenter.
 
-Om du vill visa en fullständig lista över demoanvändare går du till **[!UICONTROL Verktyg > Åtgärder > Säkerhet > Användare]**. Eller använd den klassiska [säkerhetskonsolen](http://localhost:4502/useradmin) för användargränssnittet för att hantera användare och grupper.
+Om du vill visa en fullständig lista över demoanvändare går du till **[!UICONTROL Verktyg]** > **[!UICONTROL Åtgärder]** > **[!UICONTROL Säkerhet > Användare]**. Eller använd den klassiska [säkerhetskonsolen](http://localhost:4502/useradmin) för användargränssnittet för att hantera användare och grupper.
 
 Om en [community-plats har skapats](getting-started.md)kan du tilldela demoanvändare till [communityanvändargrupper](users.md).
 
-***användar-ID */*lösenord:***
+***användar-ID */*lösenord***:
 
 * aaron.mcdonald@mailinator.com / lösenord
 * emily.andrews@mailinator.com / lösenord
