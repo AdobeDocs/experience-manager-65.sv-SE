@@ -3,7 +3,7 @@ title: Digital Rights Management i Assets
 description: Lär dig hur du hanterar förfallotillstånd för mediefiler och information om licensierade mediefiler i AEM.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
@@ -20,7 +20,7 @@ Du kan visa förfallostatusen för en resurs i resurskonsolen i både kort- och 
 
 ![utgången_flagga_kort](assets/expired_flag_card.png)
 
-*Bild: I kortvyn anger en flagga på kortet att resursen har gått ut*
+*Bild: I kortvyn anger en flagga på kortet att resursen har gått ut.*
 
 **Listvy**
 
@@ -123,7 +123,7 @@ Resurskonsolen för Adobe Experience Manager-resurser (AEM) kan visa olika läge
    ![ange förfallodatum och förfallotid för resurs i fältet Förfaller](assets/asset-properties-advanced-tab.png)
 
 
-   *Bild: Avancerad flik i resursegenskaper för att ange förfallodatum för tillgångar*
+   *Bild: Fliken[!UICONTROL Avancerat]på sidan[!UICONTROL Egenskaper]för resurs för att ange förfallodatum för resurs.*
 
 1. Klicka på **[!UICONTROL Spara]** och sedan på **[!UICONTROL Stäng]** för att visa resurskonsolen.
 1. Publiceringsstatusen för resursen anger att den har upphört att gälla längst ned på miniatyrbilden av resursen i kortvyn. I listvyn visas resursens status som **[!UICONTROL Förfallen]**.
