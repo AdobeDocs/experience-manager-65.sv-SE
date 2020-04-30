@@ -3,7 +3,7 @@ title: Metadata-scheman
 description: Metadata-schemat definierar layouten för egenskapssidan och de metadataegenskaper som visas för resurser. Lär dig hur du skapar anpassade metadatamatcheman, redigerar metadatamatchema och hur du använder metadatamatchema på resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f737122575c9fd0af82a8b86d259db61753f2f97
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
@@ -26,7 +26,7 @@ Du kan använda redigeraren Metadata Schema Forms om du vill ändra befintliga s
 
    ![Fliken Grundläggande i resursegenskaper, där resurstypen inte kan ändras](assets/asset-properties-basic-tab.png)
 
-   *Bild: Fliken Grundläggande för resursegenskaper*
+   *Bild: Fliken Grundläggande om resursegenskaper.*
 
    Om du vill ändra MIME-typen för en resurs använder du ett anpassat metadatamatchschema eller ändrar ett befintligt formulär. Mer information finns i [Redigera metadata-schemaformulär](/help/assets/metadata-schemas.md#edit-metadata-schema-forms) . Om du ändrar metadataschemat för en viss MIME-typ ändras egenskapssidlayouten för resurser med den aktuella MIME-typen och alla resursundertyper. Om du till exempel ändrar ett jpeg-schema under `default/image` endast ändras metadatalayouten (resursegenskaper) för resurser med MIME-typ `image/jpeg`. Om du redigerar standardschemat ändrar du metadatalayouten för alla typer av resurser.
 
@@ -86,9 +86,9 @@ Du kan lägga till nya flikar eller formulärobjekt i metadatchemaformuläret. F
 
    ![Redigerare för metadatamodell för att anpassa sidan Egenskaper för resurser](assets/metadata-schema-editor.png)
 
-   *Bild: Fliken Grundläggande för metadatamatchredigeraren*
+   *Bild: Fliken[!UICONTROL Grundläggande]i[!UICONTROL metadataschredigeraren].*
 
-1. Om du vill konfigurera en komponent markerar du den och ändrar dess egenskaper på fliken **Inställningar** .
+1. Om du vill konfigurera en komponent markerar du den och ändrar dess egenskaper på fliken **[!UICONTROL Inställningar]** .
 
 ### Komponenter på fliken Skapa formulär {#components-within-the-build-form-tab}
 
@@ -127,29 +127,21 @@ Följande är giltiga värden för den här egenskapen:
 
 För att komponenten ska visas korrekt i metadataschemaformuläret bör egenskapssökvägen inte innehålla några blanksteg.
 
-**Platshållare**: Använd den här egenskapen för att ange relevant platshållartext för metadataegenskapen.
-
-**Obligatoriskt**: Använd den här egenskapen för att markera en metadataegenskap som obligatorisk på egenskapssidan.
-
-**Inaktivera redigering**: Använd den här egenskapen för att göra en metadataegenskap icke-redigerbar på egenskapssidan.
-
-**Visa tomt fält i skrivskyddat**: Markera den här egenskapen om du vill visa en metadataegenskap på egenskapssidan även om den inte har något värde. Om en metadataegenskap inte har något värde visas den inte som standard på egenskapssidan.
-
-**Visa sorterad** lista: Använd den här egenskapen för att visa en ordnad lista med alternativ
-
-**Alternativ**: Använd den här egenskapen för att ange alternativ i en lista
-
-**Beskrivning** : Använd den här egenskapen om du vill lägga till en kort beskrivning för metadatakomponenten.
-
-**Klass**: Den objektklass som egenskapen är associerad med.
-
-**Ta bort**: Klicka på den här ikonen om du vill ta bort en komponent från schemaformuläret.
+* **Platshållare**: Använd den här egenskapen för att ange relevant platshållartext för metadataegenskapen.
+* **Obligatoriskt**: Använd den här egenskapen för att markera en metadataegenskap som obligatorisk på egenskapssidan.
+* **Inaktivera redigering**: Använd den här egenskapen för att göra en metadataegenskap icke-redigerbar på egenskapssidan.
+* **Visa tomt fält i skrivskyddat**: Markera den här egenskapen om du vill visa en metadataegenskap på egenskapssidan även om den inte har något värde. Om en metadataegenskap inte har något värde visas den inte som standard på egenskapssidan.
+* **Visa sorterad** lista: Använd den här egenskapen för att visa en ordnad lista med alternativ
+* **Alternativ**: Använd den här egenskapen för att ange alternativ i en lista
+* **Beskrivning** : Använd den här egenskapen om du vill lägga till en kort beskrivning för metadatakomponenten.
+* **Klass**: Den objektklass som egenskapen är associerad med.
+* **Ta bort**: Klicka på den här ikonen om du vill ta bort en komponent från schemaformuläret.
 
 ![Ikonen Ta bort i metadataschemaformulär](assets/chlimage_1-177.png)
 
 >[!NOTE]
 >
->Komponenten Dolt fält innehåller inte dessa attribut. I stället innehåller den egenskaper som till exempel attributnamn, värde, fältetikett och Beskrivning. Värdena för komponenten Dolt fält skickas som en POST-parameter när resursen sparas. Den sparas inte som metadata för resursen.
+>Komponenten [!UICONTROL Dolt fält] innehåller inte dessa attribut. I stället innehåller den egenskaper som till exempel attributnamn, värde, fältetikett och Beskrivning. Värdena för komponenten Dolt fält skickas som en POST-parameter när resursen sparas. Den sparas inte som metadata för resursen.
 
 If you select the **[!UICONTROL Required]** option, you can search for assets missing mandatory metadata. Expandera predikatet för **[!UICONTROL metadatavalidering]** på panelen **[!UICONTROL Filter]** och välj alternativet **[!UICONTROL Ogiltig]** . Sökresultatet visar resurser som saknar obligatoriska metadata som du har konfigurerat via schemaformuläret.
 
@@ -163,7 +155,7 @@ Om du vill visa en flik på egenskapssidan förutom fliken där komponenten Samm
 
 ![Fliken som valts i listan Sammanhangsberoende metadata visas på sidan med resursegenskaper](assets/contextual-metadata-asset-properties.png)
 
-*Bild: Sammanhangsberoende metadata på egenskapssida för resurs*
+*Bild: Sammanhangsbaserade metadata på egenskapssidan för resurser.*
 
 ### Ange egenskaper i JSON-filen {#specify-properties-in-json-file}
 
@@ -263,7 +255,7 @@ Om mappen har en undermapp ärver resurserna i undermappen metadata från det sc
 
    ![Textfält har lagts till i Formulärredigeraren för metadataschema](assets/text-field-metadata-schema-editor.png)
 
-   *Bild: Textfält har lagts till i formulärredigeraren för metadata*
+   *Bild: Textfält har lagts till i formulärredigeraren för metadata.*
 
 1. Click **[!UICONTROL Save]**. Det ändrade formuläret visas på sidan **[!UICONTROL Metadata Schema Forms]** .
 1. Klicka/tryck på **[!UICONTROL Använd för mapp(ar)]** i verktygsfältet för att använda anpassade metadata för en mapp.
@@ -295,7 +287,7 @@ Du kan definiera obligatoriska fält på mappnivå, vilket tillämpas på resurs
 
    ![Lägg till ett obligatoriskt fält i metadataformuläret genom att välja Obligatoriskt på fliken Regler i Formulärredigeraren för metadataschema](assets/mandatory-field-metadata-schema-editor.png)
 
-   *Bild: Obligatoriskt fält i formulärredigeraren för metadata*
+   *Bild: Obligatoriskt fält i formulärredigeraren för metadata.*
 
 1. Click **[!UICONTROL Save]**. Det ändrade formuläret visas på sidan **[!UICONTROL Metadata Schema Forms]** . Markera formuläret och klicka eller tryck sedan på **[!UICONTROL Använd i mapp(ar)]** i verktygsfältet för att använda anpassade metadata i en mapp.
 
