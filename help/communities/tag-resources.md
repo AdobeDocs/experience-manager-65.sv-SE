@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: c012d639-c6e6-4f73-bbd8-78a4baa38c17
 translation-type: tm+mt
-source-git-commit: fa01c9fad82adb021220631a0536ab77ceb01e31
+source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 ---
 
@@ -81,7 +81,7 @@ Administratören som använder taggarna i aktiveringsresurserna måste känna ti
 
 Om ett `ski-catalog` namnutrymme till exempel skapades och angavs för en katalog med namnet `Ski Catalog`kan det ha två underordnade taggar: `lesson-1` och `lesson-2`.
 
-Alla aktiveringsresurser som taggats med en av
+Alla aktiveringsresurser som är taggade med något av följande:
 
 * skidkatalog:lektion-1
 * skidkatalog:lektion-2
