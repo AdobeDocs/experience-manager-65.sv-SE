@@ -3,7 +3,7 @@ title: Format som stöds för resurser
 description: Lista över filformat som stöds av AEM Assets och Dynamic Media samt funktioner som stöds för varje format.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 134530e6e4cabc31342fc3136ec3218ba5acea4a
+source-git-commit: 2b30ab18aa22352d7ece4617d22391759592fd19
 
 ---
 
@@ -42,7 +42,7 @@ Använd teckenförklaringen för att förstå supportnivån.
 
 ‡ Den sammanfogade bilden extraheras från PSD-filen. Det är en bild som genereras av Adobe Photoshop och inkluderas i PSD-filen. Beroende på inställningarna kan den sammanfogade bilden vara den faktiska bilden eller inte.
 
-## Rasterbildformat som stöds i Dynamic Media (#supported-raster-image-formats-dynamic-media)
+## Rasterbildformat som stöds i Dynamic Media {#supported-raster-image-formats-dynamic-media}
 
 | Format | Överför<br> (indataformat) | Skapa<br> bildförinställning<br><br> (utdataformat) | Förhandsgranska<br> dynamisk<br> återgivning | Leverera<br> dynamisk<br> återgivning | Hämta<br> dynamisk<br> återgivning |
 |---|:---:|:---:|:---:|:---:|:---:|
@@ -67,7 +67,7 @@ Utöver informationen ovan bör du tänka på följande:
 
 * För EPS-filer stöds tillbakaskrivning av metadata i PostScript Document Structuring Convention (PS-Adobe) version 3.0 eller senare.
 
-## Rasterbildformat som inte stöds i Dynamic Media (#unsupported-image-formats-dynamic-media)
+## Rasterbildformat som inte stöds i Dynamic Media {#unsupported-image-formats-dynamic-media}
 
 I följande lista beskrivs de undertyper av rasterbildfilformat som *inte* stöds i Dynamic Media.
 
@@ -168,7 +168,7 @@ DO NOT PUBLISH THIS TABLE -- Removing it as it got malformed during GitHub migra
 | QXP | ✓ | ✓ |  |  |  |  |  |  |
 | EPUB | ✓ | ✓ |  | ✓ | ✓ |  |  |  |
 
-## Dokumentformat som stöds i Dynamic Media (#supported-document-formats-dynamic-media)
+## Dokumentformat som stöds i Dynamic Media {#supported-document-formats-dynamic-media}
 
 | Format | Överför<br> (indataformat) | Skapa<br> bildförinställning<br><br> (utdataformat) | Förhandsgranska<br> dynamisk<br> återgivning | Leverera<br> dynamisk<br> återgivning | Hämta<br> dynamisk<br> återgivning |
 |---|:---:|:---:|:---:|:---:|:---:|
