@@ -1,18 +1,16 @@
 ---
-title: Resursmallar
+title: Resursmallar i [!DNL Adobe Experience Manager Assets].
 description: Lär dig mer om tillgångsmallar i [!DNL Adobe Experience Manager Assets] och hur du använder resursmallar för att skapa marknadsföringsmaterial.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
+source-git-commit: c8c35eedcce4a743e414b3a8e5bb6ef4b25ff3ee
 
 ---
 
 
 # Resursmallar {#asset-templates}
 
-Resursmallar är en speciell typ av resurser som gör det enkelt att snabbt återanvända visuellt avancerat innehåll för digitala medier och trycksaker. En resursmall består av två delar, avsnittet med fasta meddelanden och det redigerbara avsnittet.
-
-Avsnittet med fasta meddelanden kan innehålla eget innehåll, t.ex. varumärkeslogotyp och copyrightinformation som har inaktiverats för redigering. Det redigerbara avsnittet kan innehålla visuellt och textbaserat innehåll i fält som kan redigeras för att anpassa meddelanden.
+Resursmallar är en speciell typ av resurser som gör det enkelt att snabbt återanvända visuellt avancerat innehåll för digitala medier och trycksaker. En resursmall består av två delar, avsnittet med fasta meddelanden och det redigerbara avsnittet. Avsnittet med fasta meddelanden kan innehålla eget innehåll, t.ex. varumärkeslogotyp och copyrightinformation som har inaktiverats för redigering. Det redigerbara avsnittet kan innehålla visuellt och textbaserat innehåll i fält som kan redigeras för att anpassa meddelanden.
 
 Flexibiliteten att göra begränsade redigeringar samtidigt som du skyddar globala skyltar gör resursmallarna till idealiska byggstenar för snabb innehållsanpassning och distribution som innehållsartefakter för olika funktioner. Återanvändning av innehåll bidrar till att minska kostnaderna för hantering av tryckta och digitala kanaler och ger en helhetsbild och enhetliga upplevelser i alla dessa kanaler.
 
@@ -20,25 +18,19 @@ Som marknadsförare kan ni lagra och hantera mallar i [!DNL Experience Manager A
 
 Resursmallar är till största delen [!DNL Adobe InDesign] filer, men kompetens inom [!DNL Adobe InDesign] det är inte något hinder för att skapa fantastiska artefakter. Du behöver inte mappa fälten i din [!DNL Adobe InDesign] mall till de produktfält som du annars behöver när du skapar kataloger. Du kan redigera mallarna i WYSIWYG-läge direkt i webbgränssnittet. För [!DNL Adobe InDesign] att kunna bearbeta redigeringsändringarna måste du först konfigurera [!DNL Experience Manager Assets] för integrering med [!DNL Adobe InDesign Server].
 
-Möjligheten att redigera [!DNL Adobe InDesign] mallar från webbgränssnittet bidrar till ett bättre samarbete mellan kreatörer och marknadsförare, samtidigt som time to market för lokala marknadsföringssatsningar minskar.
+Möjligheten att redigera [!DNL Adobe InDesign] mallar från webbgränssnittet bidrar till ökat samarbete mellan kreatörer och marknadsförare. Den ökade innehållshastigheten minskar time-to-market för marknadsföringsmaterial.
 
 Du kan göra följande med resursmallar:
 
-* Ändra redigerbara mallfält från webbgränssnittet
-* Styr den grundläggande formateringen av text, t.ex. teckenstorlek, stil och typ på taggnivå
-* Ändra bilder i mallen med hjälp av innehållsväljaren
-* Förhandsgranska malländringar
-* Sammanfoga flera mallfiler för att skapa en flersidig artefakt
+* Ändra redigerbara mallfält från webbgränssnittet.
+* Styr den grundläggande formateringen av text, t.ex. teckenstorlek, stil och typ på taggnivå.
+* Ändra bilder i mallen med hjälp av Innehållsväljaren.
+* Förhandsgranska malländringar.
+* Sammanfoga flera mallfiler för att skapa en flersidig artefakt.
 
 När du väljer en mall för dina säkerheter [!DNL Experience Manager Assets] skapar en kopia av mallen som du kan redigera. Den ursprungliga mallen bevaras, vilket säkerställer att den globala signaturen förblir intakt och kan återanvändas för att stärka varumärkets enhetlighet.
 
-Du kan exportera den uppdaterade filen i den överordnade mappen i följande format:
-
-* INDD
-* PDF
-* JPG
-
-Du kan även hämta utdata i dessa format till ditt lokala system.
+Du kan exportera den uppdaterade filen i den överordnade mappen i INDD-, PDF- eller JPG-format. Du kan även hämta utdata i dessa format till det lokala filsystemet.
 
 ## Skapa en säkerhet {#creating-a-collateral}
 
@@ -70,13 +62,13 @@ Tänk dig ett scenario där du vill skapa digital tryckbar information som brosc
 
    <!--![chlimage_1-106](assets/.png) -->
 
-   Du kan också stänga dialogrutan och navigera till mappen på mallsidan som du började med för att visa den broschyr du skapade. Typen av säkerhet visas på miniatyrbilden i kortvyn. I det här fallet visas t.ex. Broschyr på miniatyrbilden.
+   Du kan också stänga dialogrutan och navigera till mappen på mallsidan som du började med för att visa den broschyr du skapade. Typen av säkerhet visas på miniatyrbilden i kortvyn. I det här fallet visas till exempel ordet [!UICONTROL Broschyr] på miniatyrbilden.
 
    ![chlimage_1-107](assets/chlimage_1-312.png)
 
 ## Redigera en säkerhet {#editing-a-collateral}
 
-Du kan redigera en sammanställning direkt när du har skapat den. Du kan även öppna den från mallsidan eller resurssidan.
+Du kan redigera en sammanställning direkt när du har skapat den. Du kan även öppna den från [!UICONTROL mallsidan] eller resurssidan.
 
 1. Gör något av följande om du vill öppna materialet för redigering:
 
@@ -100,7 +92,7 @@ Du kan redigera en sammanställning direkt när du har skapat den. Du kan även 
 
    >[!NOTE]
    >
-   >Se till att din [!DNL Experience Manager] instans är integrerad med en [!DNL InDesign Server] [!DNL Experience Manager Assets] så att du kan extrahera data från InDesign-mallen och göra den tillgänglig för redigering. Mer information finns i [Integrera Experience Manager Assets med InDesign Server](/help/assets/indesign.md).
+   >Se till att din [!DNL Experience Manager] instans är integrerad med en [!DNL InDesign Server] så att du kan extrahera data från [!DNL Experience Manager Assets] [!DNL InDesign] mallen och göra den tillgänglig för redigering. Mer information finns i [Integrera Experience Manager Assets med InDesign Server](/help/assets/indesign.md).
 
 1. Om du vill ändra texten i ett redigerbart fält klickar du på textfältet i listan med redigerbara fält och redigerar texten i fältet.
 
@@ -201,3 +193,7 @@ Du kan redigera en sammanställning direkt när du har skapat den. Du kan även 
    >[!NOTE]
    >
    >Du kan inte redigera en sammanfogad säkerhet senare eller använda den för att skapa annan säkerhet.
+
+## God praxis och begränsningar {#best-practices-limitations-tips}
+
+* AEM InDesign-redigeraren fungerar på taggnivå och all text under en enda tagg betraktas som en enda enhet. Om du vill bevara textformatering och format när du redigerar, lägger du till märkord i varje stycke (eller text med olika format) separat.
