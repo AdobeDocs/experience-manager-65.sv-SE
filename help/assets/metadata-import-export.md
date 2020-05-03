@@ -3,7 +3,7 @@ title: Importera och exportera resursmetadata i grupp.
 description: Importera och exportera metadata från digitalt material i grupp.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
+source-git-commit: 2fd9a32396152eaf46e69c3141cbe1b6a69a3891
 
 ---
 
@@ -34,6 +34,12 @@ Import av metadata är asynkron och påverkar inte systemets prestanda. Samtidig
    | [!UICONTROL Kolumnnamn för resurssökväg] | Definierar kolumnnamnet för CSV-filen med resurser. |
 
 1. Tryck/klicka på **[!UICONTROL Importera]** i verktygsfältet. När metadata har importerats skickas ett meddelande till din [!UICONTROL inkorg för meddelanden] . Navigera till egenskapssidan för resurser och kontrollera om metadatavärdena har importerats korrekt för resurser.
+
+Om du vill lägga till datum och tidsstämpel när du importerar metadata använder du `YYYY-MM-DDThh:mm:ss.fff-00:00` formatet för datum och tid. Datum och tid avgränsas med `T`, `hh` är timmar i 24-timmarsformat, `fff` är nanosekunder och `-00:00` är tidszonsförskjutning. Exempel: `2020-03-26T11:26:00.000-07:00` är 26 mars 2020 kl. 11:26:00.000 PST.
+
+>[!CAUTION]
+>
+>Om datumformatet inte matchar `YYYY-MM-DDThh:mm:ss.fff-00:00`ställs datumvärdena inte in. Datumformaten för den exporterade CSV-metadatafilen har formatet `YYYY-MM-DDThh:mm:ss-00:00`. Om du vill importera den konverterar du den till ett godkänt format genom att lägga till värdet för nanosekunder som anges av `fff`.
 
 ## Exportera metadata {#export-metadata}
 
