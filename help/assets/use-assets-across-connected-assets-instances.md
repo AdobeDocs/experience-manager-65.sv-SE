@@ -3,7 +3,7 @@ title: Använd anslutna resurser för att dela DAM-resurser i redigeringsarbetsf
 description: Använd resurser som är tillgängliga på en [!DNL Adobe Experience Manager Assets]-fjärrdistribution när du skapar webbsidor på en annan Experience Manager-webbplatsdistribution.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
+source-git-commit: 2cdcea028814b40fb178e63f583939df27a46cad
 
 ---
 
@@ -18,26 +18,26 @@ I stora företag kan den infrastruktur som krävs för att skapa webbplatser var
 
 When editing pages in Page Editor, the authors can seamlessly search, browse, and embed assets from a different [!DNL Experience Manager Assets] deployment. To do an [!DNL Experience Manager] administrator do a one-time integration of a local deployment of [!DNL Experience Manager Sites] with a different (remote) deployment of [!DNL Experience Manager Assets].
 
-For the [!DNL Sites] authors, the remote assets are available as read-only local assets. Funktionen stöder enkel sökning och användning av ett fåtal fjärresurser i taget. Om du vill göra många fjärresurser tillgängliga för lokal distribution på en gång bör du överväga att migrera resurserna samtidigt. See [Experience Manager Assets migration guide](/help/assets/assets-migration-guide.md).
+For the [!DNL Sites] authors, the remote assets are available as read-only local assets. Funktionen stöder enkel sökning och användning av ett fåtal fjärresurser i taget. Om du vill göra många fjärresurser tillgängliga för lokal distribution på en gång bör du överväga att migrera resurserna samtidigt. Se Migreringsguide för [Experience Manager Assets](/help/assets/assets-migration-guide.md).
 
 ### Förutsättningar och distributioner som stöds {#prerequisites}
 
 Innan du använder eller konfigurerar den här funktionen bör du kontrollera följande:
 
 * Användarna ingår i lämpliga användargrupper för varje distribution.
-* Ett av de kriterier som stöds för Adobe Experience Manager-distributionstyper är uppfyllt. [!DNL Experience Manager] 6.5 [!DNL Assets] works with [!DNL Experience Manager] as a Cloud Service. For more information, see [Connected Assets functionality in Experience Manager as a Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/admin/use-assets-across-connected-assets-instances.html).
+* Ett av de kriterier som stöds för Adobe Experience Manager-distributionstyper är uppfyllt. [!DNL Experience Manager] 6.5 [!DNL Assets] fungerar med [!DNL Experience Manager] molntjänster. Mer information finns i Funktionen [Anslutna resurser i Experience Manager som en molntjänst](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/admin/use-assets-across-connected-assets-instances.html).
 
-   |  | [!DNL Experience Manager Sites] as a Cloud Service | Experience Manager 6.5 [!DNL Sites] on AMS | Experience Manager 6.5 [!DNL Sites] on-premise |
+   |  | [!DNL Experience Manager Sites] som molntjänst | Experience Manager 6.5 [!DNL Sites] på AMS | Experience Manager 6.5 [!DNL Sites] lokalt |
    |---|---|---|---|
    | **[!DNL Experience Manager Assets]som molntjänst ** | Stöds | Stöds | Stöds |
-   | **Experience Manager 6.5[!DNL Assets]on AMS** | Stöds | Stöds | Stöds |
-   | **Experience Manager 6.5[!DNL Assets]on-premise** | Stöds ej | Stöds ej | Stöds ej |
+   | **Experience Manager 6.5[!DNL Assets]på AMS** | Stöds | Stöds | Stöds |
+   | **Experience Manager 6.5[!DNL Assets]lokalt** | Stöds ej | Stöds ej | Stöds ej |
 
 ### Filformat som stöds {#mimetypes}
 
 Författare kan söka efter bilder och följande typer av dokument i Content Finder och använda resurserna i Page Editor. Dokument kan läggas till i `Download`-komponenten och bilder kan läggas till i `Image`-komponenten. Authors can also add the remote assets in any custom Experience Manager component that extends the default `Download` or `Image` components. Listan över format som stöds är:
 
-* **Bildformat**: De bildformat som stöds av [Image-komponenten](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html) stöds av Anslutna resurser. [!DNL Dynamic Media] images are not supported.
+* **Bildformat**: De bildformat som stöds av [Image-komponenten](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html) stöds av Anslutna resurser. [!DNL Dynamic Media] bilder stöds inte.
 * **Dokumentformat**: Se [Dokumentformat som stöds i Connected Assets](assets-formats.md#supported-document-formats).
 
 ### Användare och grupper som krävs {#users-and-groups-involved}
@@ -46,12 +46,12 @@ De olika roller som krävs för att konfigurera och använda funktionen och mots
 
 | Roll | Omfång | Användargrupp | Användarnamn i genomgång | Krav |
 |---|---|---|---|---|
-| [!DNL Sites] administrator | Lokalt | Experience Manager administrator | `admin` | Set up Experience Manager, configure integration with the remote [!DNL Assets] deployment. |
-| DAM-användare | Lokalt | Författare | `ksaner` | Används för att visa och duplicera de hämtade resurserna i `/content/DAM/connectedassets/`. |
-| [!DNL Sites] author | Lokalt | Author (with read access on the remote DAM and author access on local [!DNL Sites]) | `ksaner` | End user are [!DNL Sites] authors who use this integration to improve their content velocity. Författarna söker efter och bläddrar bland resurser i fjärrversionen av DAM med hjälp av Content Finder och använder de bilder som behövs på lokala webbsidor. Autentiseringsuppgifterna för `ksaner` DAM-användaren används. |
-| [!DNL Assets] administrator | Fjärr | Experience Manager Administrator | `admin` on remote Experience Manager | Konfigurerar CORS (Cross-Origin Resource Sharing). |
-| DAM-användare | Fjärr | Författare | `ksaner` on remote Experience Manager | Skapa roll för fjärrdistributionen av Experience Manager. Söker efter och bläddrar bland resurser i Connected Assets med hjälp av Content Finder. |
-| DAM-distributör (teknisk användare) | Fjärr | paketbyggare och webbplatsförfattare | `ksaner` on remote Experience Manager | This user present on the remote deployment is used by Experience Manager local server (not the Site author role) to fetch the remote assets, on behalf of [!DNL Sites] author. Den här rollen är inte densamma som de två `ksaner`-rollerna ovan och den tillhör en annan användargrupp. |
+| [!DNL Sites] administratör | Lokalt | Experience Manager `administrators` | `admin` | Set up Experience Manager, configure integration with the remote [!DNL Assets] deployment. |
+| DAM-användare | Lokalt | `Authors` | `ksaner` | Används för att visa och duplicera de hämtade resurserna i `/content/DAM/connectedassets/`. |
+| [!DNL Sites] author | Lokalt | `Authors` (med läsåtkomst på fjärr-DAM och författaråtkomst lokalt [!DNL Sites]) | `ksaner` | End user are [!DNL Sites] authors who use this integration to improve their content velocity. Författarna söker efter och bläddrar bland resurser i fjärrversionen av DAM med hjälp av Content Finder och använder de bilder som behövs på lokala webbsidor. Autentiseringsuppgifterna för `ksaner` DAM-användaren används. |
+| [!DNL Assets] administratör | Fjärr | Experience Manager `administrators` | `admin` på Experience Manager på fjärrbasis | Konfigurerar CORS (Cross-Origin Resource Sharing). |
+| DAM-användare | Fjärr | `Authors` | `ksaner` på Experience Manager på fjärrbasis | Skapa roll för fjärrdistributionen av Experience Manager. Söker efter och bläddrar bland resurser i Connected Assets med hjälp av Content Finder. |
+| DAM-distributör (teknisk användare) | Fjärr | `Authors` | `ksaner` på Experience Manager på fjärrbasis | This user present on the remote deployment is used by Experience Manager local server (not the Site author role) to fetch the remote assets, on behalf of [!DNL Sites] author. Den här rollen är inte densamma som de två `ksaner`-rollerna ovan och den tillhör en annan användargrupp. |
 
 ## Configure a connection between [!DNL Sites] and [!DNL Assets] deployments {#configure-a-connection-between-sites-and-assets-deployments}
 
@@ -68,21 +68,21 @@ To configure Connected Assets and local [!DNL Sites] connectivity, follow these 
 
 1. Ensure that the users and roles with local scope exist on the Experience Manager Sites deployment and on the [!DNL Experience Manager Assets] deployment on AMS. Create a technical user on [!DNL Assets] deployment and add to the user group mentioned in [users and groups involved](/help/assets/use-assets-across-connected-assets-instances.md#users-and-groups-involved).
 
-1. Access the local [!DNL Experience Manager Sites] deployment at `https://[local_sites]:4502`. Click **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Connected Assets Configuration]** and provide the following values:
+1. Åtkomst till den lokala [!DNL Experience Manager Sites] distributionen på `https://[local_sites]:4502`. Klicka på **[!UICONTROL Verktyg]** > **[!UICONTROL Resurser]** > Konfiguration **[!UICONTROL av]** anslutna resurser och ange följande värden:
 
-   1. [!DNL Experience Manager Assets] location is `https://[assets_servername_ams]:[port]`.
+   1. [!DNL Experience Manager Assets] platsen är `https://[assets_servername_ams]:[port]`.
    1. Autentiseringsuppgifter för en DAM-distributör (teknisk användare).
-   1. In **[!UICONTROL Mount Point]** field, enter the local Experience Manager path where Experience Manager fetches the assets. Till exempel, mappen `remoteassets`.
-   1. Adjust the values of **[!UICONTROL Original Binary transfer optimization Threshold]** depending on your network. En resursåtergivning med en storlek som är större än detta tröskelvärde överförs asynkront.
-   1. Select **[!UICONTROL Datastore Shared with Connected Assets]**, if you use a datastore to store your assets and the Datastore is the common storage between both Experience Manager deployments. I det här fallet spelar tröskelvärdet ingen roll eftersom resursernas binärfiler finns i datalagret och de inte överförs.
+   1. I fältet **[!UICONTROL Monteringspunkt]** anger du den lokala Experience Manager-sökvägen där Experience Manager hämtar resurserna. Till exempel, mappen `remoteassets`.
+   1. Justera värdena för det **[!UICONTROL ursprungliga tröskelvärdet för optimering av binär överföring]** beroende på nätverket. En resursåtergivning med en storlek som är större än detta tröskelvärde överförs asynkront.
+   1. Välj **[!UICONTROL Datastore Shared with Connected Assets]**om du använder ett datalager för att lagra dina resurser, och Datastore är den gemensamma lagringsplatsen mellan båda Experience Manager-distributionerna. I det här fallet spelar tröskelvärdet ingen roll eftersom resursernas binärfiler finns i datalagret och de inte överförs.
       ![En typisk konfiguration för Connected Assets](assets/connected-assets-typical-config.png)
    *Bild: En typisk konfiguration för Connected Assets.*
 
 1. Inaktivera arbetsflödets startprogram eftersom resurserna redan har bearbetats och återgivningarna hämtas. Adjust the launcher configurations on the local ([!DNL Experience Manager Sites]) deployment to exclude the `connectedassets` folder, in which the remote assets are fetched.
 
-   1. On [!DNL Experience Manager Sites] deployment, click **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Launchers]**.
+   1. Vid [!DNL Experience Manager Sites] distributionen klickar du på **[!UICONTROL Verktyg]** > **[!UICONTROL Arbetsflöde]** > **[!UICONTROL Startprogram]**.
 
-   1. Search for Launchers with workflows as **[!UICONTROL DAM Update Asset]** and **[!UICONTROL DAM Metadata Writeback]**.
+   1. Sök efter startare med arbetsflöden som **[!UICONTROL DAM Update Asset]** och **[!UICONTROL DAM Metadata Writeback]**.
 
    1. Select the workflow launcher and click **[!UICONTROL Properties]** on the action bar.
 
@@ -97,9 +97,9 @@ To configure Connected Assets and local [!DNL Sites] connectivity, follow these 
    >
    >Alla återgivningar som är tillgängliga på Experience Manager-fjärrdistributionen hämtas när författare hämtar en resurs. Om du vill skapa fler återgivningar av en hämtad resurs hoppar du över det här konfigurationssteget. The [!UICONTROL DAM Update Asset] workflow gets triggered and creates more renditions. These renditions are available only on the local [!DNL Sites] deployment and not on the remote DAM deployment.
 
-1. Add the [!DNL Experience Manager Sites] instance as one of the **[!UICONTROL Allowed Origins]** on the remote [!DNL Experience Manager Assets] CORS configuration.
+1. Lägg till [!DNL Experience Manager Sites] instansen som ett av **[!UICONTROL Tillåtna original]** i fjärr- [!DNL Experience Manager Assets] CORS-konfigurationen.
 
-   1. Logga in med administratörsuppgifterna. Search for `Cross-Origin`. Access **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
+   1. Logga in med administratörsuppgifterna. Search for `Cross-Origin`. Öppna **[!UICONTROL Verktyg]** > **[!UICONTROL Åtgärder]** > **[!UICONTROL Webbkonsol]**.
 
    1. Om du till [!DNL Experience Manager Sites] exempel vill skapa en CORS-konfiguration klickar du på ![ikonen aem_assets_add_icon](assets/aem_assets_add_icon.png) bredvid **[!UICONTROL Adobe Granite-resursdelningspolicy]** för korsursprung.
 
@@ -117,13 +117,13 @@ Only those tags of remote assets are fetched that have an exact corresponding ta
 
 Använd konfigurationen ovan när du vill prova redigeringsfunktionen och se hur den fungerar. Använd de dokument eller bilder du vill ha på den fjärranslutna DAM-distributionen.
 
-1. Navigate to the [!DNL Assets] user interface on the remote deployment by accessing **[!UICONTROL Assets]** > **[!UICONTROL Files]** from [!DNL Experience Manager] workspace. Du kan även få åtkomst till `https://[assets_servername_ams]:[port]/assets.html/content/dam` i en webbläsare. Ladda upp de resurser du vill ha.
+1. Navigera till [!DNL Assets] användargränssnittet för fjärrdistributionen genom att gå till **[!UICONTROL Resurser]** > **[!UICONTROL Filer]** från [!DNL Experience Manager] arbetsytan. Du kan även få åtkomst till `https://[assets_servername_ams]:[port]/assets.html/content/dam` i en webbläsare. Ladda upp de resurser du vill ha.
 1. On the [!DNL Sites] instance, in the profile activator in the upper-right corner, click **[!UICONTROL Impersonate as]**. Provide `ksaner` as user name, select the option provided, and click **[!UICONTROL OK]**.
-1. Open a We.Retail website page at **[!UICONTROL Sites]** > **[!UICONTROL We.Retail]** > **[!UICONTROL us]** > **[!UICONTROL en]**. Redigera sidan. Du kan även öppna `https://[aem_server]:[port]/editor.html/content/we-retail/us/en/men.html` i en webbläsare när du vill redigera en sida.
+1. Öppna en webbsida för Vi.Butiker på **[!UICONTROL Sites]** > **[!UICONTROL We.Retail]** > **[!UICONTROL us]** > **[!UICONTROL en]**. Redigera sidan. Du kan även öppna `https://[aem_server]:[port]/editor.html/content/we-retail/us/en/men.html` i en webbläsare när du vill redigera en sida.
 
-   Click **[!UICONTROL Toggle Side Panel]** on upper-left corner of the page.
+   Klicka på **[!UICONTROL Växla sidopanel]** i det övre vänstra hörnet på sidan.
 
-1. Open the [!UICONTROL Assets] tab and click **[!UICONTROL Log in to Connected Assets]**.
+1. Öppna fliken [!UICONTROL Resurser] och klicka på **[!UICONTROL Logga in på Anslutna resurser]**.
 1. Ange inloggningsuppgifterna, `ksaner` som användarnamn och `password` som lösenord. This user has authoring permissions on both the [!DNL Experience Manager] deployments.
 1. Sök efter resursen som du har lagt till i DAM. Fjärresurserna visas i den vänstra panelen. Filtrera efter bilder eller dokument och filtrera efter olika typer av dokument som stöds. Dra bilderna till en `Image`-komponent och dokument till en `Download`-komponent.
 
@@ -163,11 +163,11 @@ De hämtade resurserna kan användas som andra lokala resurser, förutom att ass
 * All [!DNL Sites] authors have read permissions on the fetched copies, even if they do not have access to the remote DAM deployment.
 * Det finns inte API-stöd för att anpassa integreringen.
 * Funktionen stöder smidig sökning och användning av fjärresurser. Om du vill göra många fjärresurser tillgängliga i den lokala distributionen på en gång bör du överväga att migrera resurserna. Se [Handbok för resursmigrering](assets-migration-guide.md).
-* It is not possible to use a remote asset as a page thumbnail on [!UICONTROL Page Properties] user interface. You can set a thumbnail of a web page in [!UICONTROL Page Properties] user interface from the [!UICONTROL Thumbnail] by clicking [!UICONTROL Select Image].
+* Det går inte att använda en fjärrresurs som sidminiatyr i [!UICONTROL användargränssnittet för Sidegenskaper] . Du kan ange en miniatyrbild för en webbsida i [!UICONTROL användargränssnittet för Sidegenskaper] från [!UICONTROL miniatyrbilden] genom att klicka på [!UICONTROL Välj bild].
 
 **Konfigurera och licensiera**
 
-* [!DNL Experience Manager Assets] deployment on AMS is supported.
+* [!DNL Experience Manager Assets] driftsättning på AMS stöds.
 * [!DNL Experience Manager Sites] kan ansluta till en enda [!DNL Experience Manager Assets] databas åt gången.
 * A license of [!DNL Experience Manager Assets] working as remote repository.
 * One or more licenses of [!DNL Experience Manager Sites] working as local authoring deployment.
@@ -175,7 +175,7 @@ De hämtade resurserna kan användas som andra lokala resurser, förutom att ass
 **Användning**
 
 * De enda funktioner som stöds är sökning efter fjärresurser och att dra fjärresurserna till den lokala sidan för att skapa innehåll.
-* Tidsgränsen för hämtning är 5 sekunder. Författare kan ha problem med att hämta resurser, till exempel om det råder nätverksproblem. Authors can re-attempt by dragging the remote asset from [!UICONTROL Content Finder] to [!UICONTROL Page Editor].
+* Tidsgränsen för hämtning är 5 sekunder. Författare kan ha problem med att hämta resurser, till exempel om det råder nätverksproblem. Författare kan försöka igen genom att dra fjärrresursen från [!UICONTROL Innehållssökning] till [!UICONTROL sidredigeraren].
 * Enkla redigeringar som är icke-destruktiva och redigering som stöds via [!DNL Experience Manager]-komponenten kan tillämpas på hämtade resurser. `Image` Resurserna är skrivskyddade.
 
 ## Felsöka problem {#troubleshoot}
