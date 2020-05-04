@@ -3,7 +3,7 @@ title: Metadataprofiler för att anpassa metadatakrav för resurser
 description: Lär dig mer om metadataprofiler för resurser. Lär dig hur du skapar en metadataprofil och använder den på mappresurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
+source-git-commit: 95ac9d4c8b171c01b9adc056f5dc3a9d776c0465
 
 ---
 
@@ -54,7 +54,6 @@ Med en metadataprofil kan du använda standardmetadata för resurser i en mapp. 
 
 1. Tryck/klicka på **[!UICONTROL Klar]**. Metadataprofilen läggs till i listan över profiler på sidan **[!UICONTROL Metadataprofiler]** .<br>
 
-
    ![Metadataprofil har lagts till på sidan Metadataprofiler](assets/MetadataProfiles-page.png)
 
 ## Kopiera en metadataprofil {#copying-a-metadata-profile}
@@ -73,7 +72,7 @@ Med en metadataprofil kan du använda standardmetadata för resurser i en mapp. 
 
 1. På sidan **[!UICONTROL Metadataprofiler]** väljer du en profil som ska tas bort.
 
-   ![chlimage_1-206](assets/chlimage_1-488.png)
+   ![chlimage_1-205](assets/chlimage_1-488.png)
 
 1. Ta[] **[!UICONTROL bort metadataprofiler]** i verktygsfältet.
 1. Klicka på **[!UICONTROL Ta bort]** i dialogrutan för att bekräfta borttagningen. Metadataprofilen tas bort från listan.
@@ -128,13 +127,13 @@ Förutom att tillämpa en profil på en mapp kan du även tillämpa en profil gl
 
 Du kan bearbeta resurser i en mapp som redan har en befintlig metadataprofil som du senare ändrade. Se [Bearbeta resurser i en mapp när du har redigerat dess bearbetningsprofil](processing-profiles.md#reprocessing-assets).
 
-**Om du vill använda en metadataprofil globalt gör du något av följande**
+Så här använder du en metadataprofil globalt:
 
 * Navigera till `https://[aem_server]:[port]/mnt/overlay/dam/gui/content/assets/foldersharewizard.html/content/dam` och använd rätt profil och tryck på **[!UICONTROL Spara]**.
 
    ![chlimage_1-209](assets/chlimage_1-492.png)
 
-* Navigera till CRXDE Lite till följande nod: `/content/dam/jcr:content`. Lägg till egenskapen `metadataProfile:/etc/dam/metadata/dynamicmedia/<name of metadata profile>` och tryck på **Spara alla**.
+* Navigera till följande nod i CRXDE Lite: `/content/dam/jcr:content`. Lägg till egenskapen `metadataProfile:/etc/dam/metadata/dynamicmedia/<name of metadata profile>` och klicka på **[!UICONTROL Spara alla]**.
 
    ![chlimage_1-210](assets/chlimage_1-493.png)
 
@@ -157,6 +156,10 @@ Du kan ta bort en metadataprofil från en mapp från menyn **[!UICONTROL Verktyg
 1. Tryck på AEM-logotypen, navigera till **[!UICONTROL Resurser]** och sedan till den mapp som du vill ta bort en metadataprofil från.
 1. Markera mappen genom att trycka på bockmarkeringen och sedan på **[!UICONTROL Egenskaper]**.
 1. Välj fliken **[!UICONTROL Metadataprofiler]** och välj **[!UICONTROL Ingen]** i listrutan och klicka på **[!UICONTROL Spara]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
+
+## Begränsningar och bästa metoder {#limitations-best-practices-tips}
+
+* Det kan finnas befintliga metadataprofiler sedan du uppgraderade till [!DNL Experience Manager] 6.5. Om du efter uppgraderingen använder en sådan profil i mappegenskaper  på fliken [!UICONTROL Metadataprofiler] visas inte metadatafälten. Om du däremot använder en ny metadataprofil visas formulärfälten, men de är inte tillgängliga som förväntat. Funktionsbortfall är inte kvar, men om du vill se (ej tillgängliga) formulärfält redigerar du och sparar de befintliga metadataprofilerna.
 
 >[!MORELIKETHIS]
 >
