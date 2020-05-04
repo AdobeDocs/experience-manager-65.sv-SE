@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 9584392a-d8a3-45a4-9cdf-fd211c8e6091
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2dad220d6593ed542816f8a97b0d4b44f0d57876
+source-git-commit: 590dc4464182d4baf8293e7bb0774ce92971c0af
 
 ---
 
@@ -63,9 +63,9 @@ Precis som vid återgivning ska all routning också vara dynamisk. I AEM bör SP
 
 Statisk routning fungerar emot [principen om bärbarhet](/help/sites-developing/spa-architecture.md#portability) och begränsar författaren genom att inte vara kompatibel med innehållsredigeringsfunktionerna i AEM. Om innehållsförfattaren till exempel vill ändra en väg eller ändra en sida med statisk routning måste han eller hon be den som skapar sidan att göra det.
 
-## Maven Archetype for SPA Starter Kit {#maven-archetype-for-spa-starter-kit}
+## AEM Project Archetype {#aem-project-archetype}
 
-Adobe rekommenderar att du använder [Maven Archetype för SPA Starter Kit](https://github.com/adobe/aem-spa-project-archetype) för att starta ditt eget SPA-projekt för AEM.
+Alla AEM-projekt bör utnyttja [AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html), som stöder SPA-projekt med React eller Angular och utnyttjar SPA SDK.
 
 ## SPA-designmodeller {#spa-design-models}
 
