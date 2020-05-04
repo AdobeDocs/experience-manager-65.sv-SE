@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: cc1e5c20-cc9c-4222-8a11-ec5a963d4466
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2dad220d6593ed542816f8a97b0d4b44f0d57876
+source-git-commit: 590dc4464182d4baf8293e7bb0774ce92971c0af
 
 ---
 
@@ -118,9 +118,9 @@ Genom att bygga appen används [Webpack](https://webpack.js.org/) för distribut
 
 När paketet har skapats kan det överföras till en AEM-instans.
 
-### Maven Archetype for SPA Starter Kit {#maven-archetype-for-spa-starter-kit}
+### AEM Project Archetype {#aem-project-archetype}
 
-Adobe rekommenderar att du använder [Maven Archetype för SPA Starter Kit](https://github.com/adobe/aem-spa-project-archetype) för att starta ditt eget SPA-projekt för AEM.
+Alla AEM-projekt bör utnyttja [AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html), som stöder SPA-projekt med React eller Angular och utnyttjar SPA SDK.
 
 ## Programstruktur {#application-structure}
 
@@ -271,9 +271,9 @@ Mer information finns i [SPA-designdokumentet](/help/sites-developing/spa-bluepr
 
 Det är regelbundet nödvändigt att komponenter i ett ensidigt program delar information. Det finns flera rekommenderade sätt att göra detta, som anges nedan i ökande komplexitetsordning.
 
-* **** Alternativ 1: Centralisera logiken och sända till nödvändiga komponenter, till exempel med React Context.
-* **** Alternativ 2: Dela komponentlägen med hjälp av ett lägesbibliotek som Redux.
-* **** Alternativ 3: Utnyttja objekthierarkin genom att anpassa och utöka behållarkomponenten.
+* **Alternativ 1:** Centralisera logiken och sända till nödvändiga komponenter, till exempel med React Context.
+* **Alternativ 2:** Dela komponentlägen med hjälp av ett lägesbibliotek som Redux.
+* **Alternativ 3:** Utnyttja objekthierarkin genom att anpassa och utöka behållarkomponenten.
 
 ## Nästa steg {#next-steps}
 
