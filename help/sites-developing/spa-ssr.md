@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 844e5c96-2a18-4869-b4c8-2fb9efe0332a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9f0eebfa0c5d2449dcc2977c7085b11a48a10eb9
+source-git-commit: 590dc4464182d4baf8293e7bb0774ce92971c0af
 
 ---
 
@@ -176,7 +176,7 @@ Ett enkelt exempel finns i appen [](https://github.com/Adobe-Marketing-Cloud/aem
 
 >[!NOTE]
 >
->Alla SPA-projekt på AEM bör baseras på [Maven Archetype för SPA Starter Kit](https://github.com/adobe/aem-spa-project-archetype).
+>Alla AEM-projekt bör utnyttja [AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html), som stöder SPA-projekt med React eller Angular och utnyttjar SPA SDK.
 
 ## Använda Node.js {#using-node-js}
 
