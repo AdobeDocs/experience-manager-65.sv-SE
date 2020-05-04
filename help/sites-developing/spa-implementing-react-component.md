@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 6ed15763-02cc-45d1-adf6-cf9e5e8ebdb0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2dad220d6593ed542816f8a97b0d4b44f0d57876
+source-git-commit: 14cc66dfef7bc7781907bdd6093732912c064579
 
 ---
 
@@ -34,6 +34,11 @@ I den här artikeln visas exemplet på väderkomponenten i exemplet SPA för Web
 
 Du bör känna till [strukturen för ett SPA-program för AEM](/help/sites-developing/spa-getting-started-react.md) innan du läser den här artikeln.
 
+>[!CAUTION]
+>Det här dokumentet använder appen [](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal) We.Retail Journal endast i demonstrationssyfte. Det ska inte användas för något projektarbete.
+>
+>Alla AEM-projekt bör utnyttja [AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html), som stöder SPA-projekt med React eller Angular och utnyttjar SPA SDK.
+
 ## Väderkomponenten {#the-weather-component}
 
 väderkomponenten finns i det övre vänstra hörnet i appen We.Retail Journal. Den visar det aktuella vädret på en angiven plats och drar in väderdata dynamiskt.
@@ -42,7 +47,7 @@ väderkomponenten finns i det övre vänstra hörnet i appen We.Retail Journal. 
 
 ![screen_shot_2018-06-08at143224](assets/screen_shot_2018-06-08at143224.png)
 
-När du redigerar innehåll i SPA i SPA-redigeraren visas väderkomponenten som vilken annan AEM-komponent som helst, komplett med ett verktygsfält, och kan redigeras.
+När du skapar innehåll i SPA i SPA-redigeraren visas väderkomponenten som vilken annan AEM-komponent som helst, komplett med ett verktygsfält, och kan redigeras.
 
 ![screen_shot_2018-06-08at143304](assets/screen_shot_2018-06-08at143304.png)
 
