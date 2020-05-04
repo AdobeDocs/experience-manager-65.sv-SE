@@ -10,7 +10,7 @@ content-type: reference
 discoiquuid: 9cdd7648-d67e-414d-aedf-a5687da39326
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2dad220d6593ed542816f8a97b0d4b44f0d57876
+source-git-commit: 590dc4464182d4baf8293e7bb0774ce92971c0af
 
 ---
 
@@ -110,9 +110,9 @@ Genom att bygga appen används [Webpack](https://webpack.js.org/) för distribut
 
 När paketet har skapats kan det överföras till en AEM-instans.
 
-### Maven Archetype for SPA Starter Kit {#maven-archetype-for-spa-starter-kit}
+### AEM Project Archetype {#aem-project-archetype}
 
-Adobe rekommenderar att du använder [Maven Archetype för SPA Starter Kit](https://github.com/adobe/aem-spa-project-archetype) för att starta ditt eget SPA-projekt för AEM.
+Alla AEM-projekt bör utnyttja [AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html), som stöder SPA-projekt med React eller Angular och utnyttjar SPA SDK.
 
 ## Programstruktur {#application-structure}
 
@@ -280,9 +280,9 @@ Slutligen kan bilden återges i `image.component.html`.
 
 Det är regelbundet nödvändigt att komponenter i ett ensidigt program delar information. Det finns flera rekommenderade sätt att göra detta, som anges nedan i ökande komplexitetsordning.
 
-* **** Alternativ 1: Centralisera logiken och skicka till de nödvändiga komponenterna, till exempel genom att använda en util-klass som en ren objektorienterad lösning.
-* **** Alternativ 2: Dela komponentlägen med hjälp av ett lägesbibliotek som NgRx.
-* **** Alternativ 3: Utnyttja objekthierarkin genom att anpassa och utöka behållarkomponenten.
+* **Alternativ 1:** Centralisera logiken och skicka till de nödvändiga komponenterna, till exempel genom att använda en util-klass som en ren objektorienterad lösning.
+* **Alternativ 2:** Dela komponentlägen med hjälp av ett lägesbibliotek som NgRx.
+* **Alternativ 3:** Utnyttja objekthierarkin genom att anpassa och utöka behållarkomponenten.
 
 ## Nästa steg {#next-steps}
 
