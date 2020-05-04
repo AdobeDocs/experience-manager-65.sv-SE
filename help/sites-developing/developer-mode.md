@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 589e3a83-7d1a-43fd-98b7-3b947122829d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 2b0ef111f2f393fac2da1eef76c2ec79a471ff3f
 
 ---
 
@@ -36,13 +36,9 @@ Detta hjälper en utvecklare att:
 >
 >* Är bara tillgängligt i det beröringsaktiverade användargränssnittet (vid redigering av sidor).
 >* Är inte tillgängligt på mobila enheter eller små fönster på skrivbordet (på grund av utrymmesbegränsningar).
->
->    * Detta inträffar när bredden är mindre än 1024px.
->
->* Kräver lämpliga behörigheter:
->
->    * Användare som har skrivbehörighet i Developer Mode får åtkomst till det `/apps`.
->
+   >   * Detta inträffar när bredden är mindre än 1024px.
+>* Är bara tillgängligt för användare som är medlemmar i `administrators` gruppen.
+
 
 >[!CAUTION]
 >
