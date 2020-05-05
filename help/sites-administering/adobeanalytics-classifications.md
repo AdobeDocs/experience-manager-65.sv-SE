@@ -10,7 +10,7 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 6787511a-2ce0-421a-bcfb-90d5f32ad35e
 translation-type: tm+mt
-source-git-commit: a833a34bbeb938c72cdb851a46b2ffd97aee9f6d
+source-git-commit: 4456b5366387c27810c407d6ac9e6c17fc290269
 
 ---
 
@@ -21,14 +21,22 @@ Med Adobe Classifications exporteras klassificeringsdata till [Adobe Analytics](
 
 Så här konfigurerar du:
 
-1. Navigera via **Verktyg, Cloud-tjänster** till avsnittet **Adobe Analytics** .
-1. Lägg till en ny konfiguration. Du kommer att se att konfigurationsmallen för **Adobe Analytics-klassificeringar** visas under **Adobe Analytics Framework** -konfigurationen. Ange **titel** och **namn** :
+1. Välj **Navigering**, **Verktyg**, **Molntjänster** och sedan **Äldre molntjänster**.
+1. Bläddra till **Adobe Analytics** och välj **Show Configurations**.
+1. Klicka på länken **[+]** bredvid din Adobe Analytics-konfiguration.
 
-   ![aa-25](assets/aa-25.png)
+1. I dialogrutan **Skapa ramverk** :
 
-1. Klicka på **Skapa** för att konfigurera inställningarna.
+   * Ange en **titel**.
+   * Du kan också ange **Namn** för noden som lagrar ramverkets information i databasen.
+   * Välj **Adobe Analytics-klassificeringar**
+   Klicka på **Skapa**.
 
-   ![chlimage_1](assets/chlimage_1a.png)
+   ![Dialogrutan Skapa ramverk](assets/aa-25.png)
+
+1. Dialogrutan **Klassificeringsinställningar** öppnas för redigering.
+
+   ![Dialogrutan Klassificeringsinställningar](assets/aa-classifications-settings.png)
 
    Egenskaperna är följande:
 
