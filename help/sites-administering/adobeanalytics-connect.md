@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 6b545a51-3677-4ea1-ac7e-2d01ba19283e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4b965d8f7814816126601f6366c1ba313e404538
+source-git-commit: 4456b5366387c27810c407d6ac9e6c17fc290269
 
 ---
 
@@ -20,8 +20,8 @@ source-git-commit: 4b965d8f7814816126601f6366c1ba313e404538
 
 Om du vill spåra webbdata från dina AEM-sidor i Adobe Analytics skapar du en konfiguration för Adobe Analytics Cloud Services och ett ramverk för Adobe Analytics:
 
-* **** Adobe Analytics-konfiguration: Informationen om ditt Adobe Analytics-konto. Med Adobe Analytics-konfigurationen kan AEM ansluta till Adobe Analytics. Skapa en Adobe Analytics-konfiguration för varje konto du använder.
-* **** Adobe Analytics Framework: En uppsättning mappningar mellan egenskaper för Adobe Analytics-rapportsviten och CQ-variabler. Använd ett ramverk för att konfigurera hur webbplatsdata fyller i era Adobe Analytics-rapporter. Ramverk är kopplade till en Adobe Analytics-konfiguration. Du kan skapa flera ramverk för varje konfiguration.
+* **Adobe Analytics-konfiguration:** Informationen om ditt Adobe Analytics-konto. Med Adobe Analytics-konfigurationen kan AEM ansluta till Adobe Analytics. Skapa en Adobe Analytics-konfiguration för varje konto du använder.
+* **Adobe Analytics Framework:** En uppsättning mappningar mellan egenskaper för Adobe Analytics-rapportsviten och CQ-variabler. Använd ett ramverk för att konfigurera hur webbplatsdata fyller i era Adobe Analytics-rapporter. Ramverk är kopplade till en Adobe Analytics-konfiguration. Du kan skapa flera ramverk för varje konfiguration.
 
 När du associerar en webbsida med ett ramverk utför ramverket spårning för den sidan och de underordnade sidorna för den sidan. Sidvyer kan sedan hämtas från Adobe Analytics och visas i webbplatskonsolen.
 
@@ -110,7 +110,7 @@ För det Report Suite-ID (RSID) som du använder kan du styra vilka serverinstan
 >Ett ramverk är till exempel konfigurerat för att använda *rapportsviten* diwernetail och författaren är den valda serverinstansen. När sidor publiceras tillsammans med ramverket anropas fortfarande Adobe Analytics, men dessa anrop innehåller inte RSID. Endast anrop från författarinstansen innehåller RSID.
 
 1. Välj **Navigering**, **Verktyg**, **Molntjänster** och sedan **Äldre molntjänster**.
-1. Bläddra till **Adobe Analytics** och klicka på **[+]** bredvid **Tillgängliga konfigurationer**.
+1. Bläddra till **Adobe Analytics** och välj **Show Configurations**.
 1. Klicka på länken **[+]** bredvid din Adobe Analytics-konfiguration.
 
 1. I dialogrutan **Skapa ramverk** :
