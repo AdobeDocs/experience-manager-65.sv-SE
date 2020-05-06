@@ -3,7 +3,10 @@ title: Bearbeta resurser med mediehanterare och arbetsflöden
 description: Lär dig mer om mediehanterarna och hur du använder arbetsflöden för att utföra uppgifter i dina digitala resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
+source-git-commit: 99ce6e0572797b7bccf755aede93623be6bd5698
+workflow-type: tm+mt
+source-wordcount: '2133'
+ht-degree: 2%
 
 ---
 
@@ -59,11 +62,11 @@ Så här visar du de aktiva mediehanterarna:
 
 Mediehanterare är tjänster som vanligtvis används i kombination med arbetsflöden.
 
-AEM har vissa standardarbetsflöden för att bearbeta resurser. Om du vill visa dem öppnar du arbetsflödeskonsolen och klickar på fliken **[!UICONTROL Modeller]** : de arbetsflödesrubriker som börjar med AEM Assets är de resursspecifika.
+AEM har vissa standardarbetsflöden för att bearbeta resurser. Om du vill visa dem öppnar du arbetsflödeskonsolen och klickar på **[!UICONTROL Models]** fliken: de arbetsflödesrubriker som börjar med AEM Assets är de resursspecifika.
 
 Befintliga arbetsflöden kan utökas och nya kan skapas för att bearbeta resurser enligt specifika krav.
 
-The following example shows how to enhance the **[!UICONTROL AEM Assets Synchronization]** workflow so that sub-assets are generated for all assets except PDF documents.
+I följande exempel visas hur du förbättrar arbetsflödet **[!UICONTROL AEM Assets Synchronization]** så att delresurser genereras för alla resurser utom PDF-dokument.
 
 ### Inaktivera eller aktivera en mediehanterare {#disabling-enabling-a-media-handler}
 
@@ -72,9 +75,9 @@ Mediehanterarna kan inaktiveras eller aktiveras via webbhanteringskonsolen för 
 Så här aktiverar/inaktiverar du en mediehanterare:
 
 1. Navigera till i webbläsaren `https://<host>:<port>/system/console/components`.
-1. Klicka på **[!UICONTROL Inaktivera]** bredvid namnet på mediehanteraren. Till exempel: `com.day.cq.dam.handler.standard.mp3.Mp3Handler`.
+1. Klicka **[!UICONTROL Disable]** bredvid namnet på mediehanteraren. Till exempel: `com.day.cq.dam.handler.standard.mp3.Mp3Handler`.
 1. Uppdatera sidan: en ikon visas bredvid mediehanteraren som anger att den är inaktiverad.
-1. Om du vill aktivera mediehanteraren klickar du på **[!UICONTROL Aktivera]** bredvid namnet på mediehanteraren.
+1. Om du vill aktivera mediehanteraren klickar du **[!UICONTROL Enable]** bredvid namnet på mediehanteraren.
 
 ### Skapa en ny mediehanterare {#creating-a-new-media-handler}
 
@@ -135,16 +138,16 @@ När du har utfört följande procedur och överför en textfil till AEM, extrah
 
 1. Skapa `myBundle` Maven-projekt i Eclipse:
 
-   1. Klicka på **[!UICONTROL Arkiv > Nytt > Annat]** i menyraden.
-   1. Expandera mappen Maven i dialogrutan, välj Projekt av typen Maven och klicka på **[!UICONTROL Nästa]**.
-   1. Markera kryssrutan Skapa ett enkelt projekt och rutan Använd standardplatser för arbetsyta och klicka sedan på **[!UICONTROL Nästa]**.
+   1. Klicka på i menyraden **[!UICONTROL File > New > Other]**.
+   1. I dialogrutan expanderar du mappen Maven, väljer Maven Project och klickar på **[!UICONTROL Next]**.
+   1. Markera kryssrutan Skapa ett enkelt projekt och rutan Använd standardplatser för arbetsyta och klicka sedan på **[!UICONTROL Next]**.
    1. Definiera projektet Maven:
 
       * Grupp-ID: com.day.cq5.myhandler
       * Artefakt-ID: myBundle
       * Namn: Mitt AEM-paket
       * Beskrivning: Detta är mitt AEM-paket
-   1. Click **[!UICONTROL Finish]**.
+   1. Klicka på **[!UICONTROL Finish]**.
 
 
 1. Ställ in Java-kompilatorn på version 1.5:
@@ -155,7 +158,7 @@ När du har utfört följande procedur och överför en textfil till AEM, extrah
       * Kompilatorefterlevnadsnivå
       * Kompatibilitet med genererade .class-filer
       * Källkompatibilitet
-   1. Click **[!UICONTROL OK]**. Klicka på **[!UICONTROL Ja]** i dialogrutan.
+   1. Klicka på **[!UICONTROL OK]**. In the dialog window, click **[!UICONTROL Yes]**.
 
 
 1. Ersätt koden i `pom.xml` filen med följande kod:
@@ -428,12 +431,12 @@ När du har utfört följande procedur och överför en textfil till AEM, extrah
 
 1. Kompilera Java-klassen och skapa paketet:
 
-   1. Högerklicka på `myBundle` projektet, välj **[!UICONTROL Kör som]** och sedan **[!UICONTROL Maven Install]**.
+   1. Högerklicka på `myBundle` projektet, välj **[!UICONTROL Run As]** och sedan **[!UICONTROL Maven Install]**.
    1. Paketet `myBundle-0.0.1-SNAPSHOT.jar` (som innehåller den kompilerade klassen) skapas under `myBundle/target`.
 
 1. Skapa en ny nod under i CRX Explorer `/apps/myApp`. Namn = `install`, Typ = `nt:folder`.
 1. Kopiera paketet `myBundle-0.0.1-SNAPSHOT.jar` och lagra det under `/apps/myApp/install` (till exempel med WebDAV). Den nya texthanteraren är nu aktiv i AEM.
-1. Öppna [!UICONTROL Apache Felix Web Management Console]i webbläsaren. Välj fliken [!UICONTROL Komponenter] och inaktivera standardtexthanteraren `com.day.cq.dam.core.impl.handler.TextHandler`.
+1. Öppna [!UICONTROL Apache Felix Web Management Console]webbläsaren. Markera [!UICONTROL Components] fliken och inaktivera standardtexthanteraren `com.day.cq.dam.core.impl.handler.TextHandler`.
 
 ## Kommandoradsbaserad mediehanterare {#command-line-based-media-handler}
 
@@ -448,7 +451,7 @@ Följande konverteringar kan automatiskt köras och lagras i AEM Resurser:
 
 >[!NOTE]
 >
->I andra system än Windows returnerar verktyget FFMpeg ett fel när återgivningar genereras för en videoresurs som har ett enkelt citattecken (&#39;) i filnamnet. Om namnet på videofilen innehåller ett enkelt citattecken tar du bort det innan du överför det till AEM.
+>I andra system än Windows returnerar mpeg-verktyget ett fel när återgivningar genereras för en videoresurs som har ett enkelt citattecken (&#39;) i filnamnet. Om namnet på videofilen innehåller ett enkelt citattecken tar du bort det innan du överför det till AEM.
 
 Processen `CommandLineProcess` utför följande åtgärder i den ordning de anges:
 
@@ -482,11 +485,11 @@ Installera först ImageMagick på disken som är värd för AEM-servern:
 
    En speglad bild läggs till i katalogen.
 
-Then, add the command line process step to the **[!UICONTROL DAM Update Asset]** workflow:
+Lägg sedan till kommandoradsprocessteget i arbetsflödet **[!UICONTROL DAM Update Asset]**:
 
-1. Gå till **[!UICONTROL arbetsflödeskonsolen]** .
-1. Redigera **[!UICONTROL DAM Update Asset]** -modellen på fliken **[!UICONTROL Modeller]** .
-1. Ändra inställningarna för det **[!UICONTROL webbaktiverade återgivningssteget]** enligt följande:
+1. Gå till **[!UICONTROL Workflow]** konsolen.
+1. Redigera **[!UICONTROL Models]** modellen på **[!UICONTROL DAM Update Asset]** fliken.
+1. Ändra inställningarna för **[!UICONTROL Web enabled rendition]** steget enligt följande:
 
    **Argument**:
 
@@ -497,14 +500,14 @@ Then, add the command line process step to the **[!UICONTROL DAM Update Asset]**
 Om du vill testa det ändrade arbetsflödet lägger du till en resurs i `/content/dam`.
 
 1. Hämta en TIFF-bild i filsystemet. Byt namn på filen till `myImage.tiff` och kopiera den till, `/content/dam`till exempel med hjälp av WebDAV.
-1. Gå till **[!UICONTROL CQ5 DAM]** -konsolen, till exempel `http://localhost:4502/libs/wcm/core/content/damadmin.html`.
+1. Gå till **[!UICONTROL CQ5 DAM]** konsolen, till exempel `http://localhost:4502/libs/wcm/core/content/damadmin.html`.
 1. Öppna resursen **[!UICONTROL myImage.tiff]** och kontrollera att den vända bilden och de tre miniatyrbilderna har skapats.
 
 #### Konfigurera processteget CommandLineProcess {#configuring-the-commandlineprocess-process-step}
 
-I det här avsnittet beskrivs hur du anger [!UICONTROL processargument] för [!UICONTROL CommandLineProcess].
+This section describes how to set the [!UICONTROL Process Arguments] of the [!UICONTROL CommandLineProcess].
 
-Avgränsa värdena för [!UICONTROL processargument] med kommatecken och starta dem inte med ett blanksteg.
+Använd kommatecken för att avgränsa värdena för [!UICONTROL Process Arguments] tecknet och låt det inte börja med ett blanksteg.
 
 | Argument-Format | Beskrivning |
 |---|---|
@@ -512,23 +515,23 @@ Avgränsa värdena för [!UICONTROL processargument] med kommatecken och starta 
 | tn:&lt;width>:&lt;height> | Valfritt argument. Processen skapar en miniatyrbild med de dimensioner som definieras i argumentet. <br>Flera miniatyrbilder kan definieras. |
 | cmd: &lt;kommando> | Definierar det kommando som ska köras. Syntaxen beror på kommandoradsverktyget. Endast ett kommando kan definieras. <br>Följande variabler kan användas för att skapa kommandot:<br>`${filename}`: indatafilens namn, till exempel original.jpg <br> `${file}`: den fullständiga sökvägen till indatafilen, till exempel /tmp/cqdam0816.tmp/original.jpg <br> `${directory}`: indatafilens katalog, till exempel /tmp/cqdam0816.tmp <br>`${basename}`: namnet på indatafilen utan filnamnstillägg, till exempel original <br>`${extension}`: tillägg för indatafilen, till exempel jpg |
 
-Om till exempel ImageMagick är installerat på den disk som är värd för AEM-servern och du skapar ett processsteg med [!UICONTROL CommandLineProcess] som implementering och följande värden som [!UICONTROL Processargument]:
+Om till exempel ImageMagick är installerat på den disk som är värd för AEM-servern och du skapar ett processsteg med [!UICONTROL CommandLineProcess] som implementering och följande värden som [!UICONTROL Process Arguments]:
 
 `mime:image/gif,mime:image/tiff,tn:140:100,tn:48:48,tn:10:250,cmd:convert ${directory}/${filename} -flip ${directory}/${basename}.flipped.jpg`
 
 När arbetsflödet körs gäller steget endast resurser som har `image/gif` eller `mime:image/tiff` som `mime-types`skapas en bild som vänds av originalet, konverteras till JPG och tre miniatyrbilder med följande dimensioner skapas: 140x100, 48x48 och 10x250.
 
-Använd följande [!UICONTROL processargument] för att skapa de tre standardminiatyrbilderna med ImageMagick:
+Använd följande [!UICONTROL Process Arguments] för att skapa de tre standardminiatyrbilderna med ImageMagick:
 
 `mime:image/tiff,mime:image/png,mime:image/bmp,mime:image/gif,mime:image/jpeg,cmd:convert ${filename} -define jpeg:size=319x319 -thumbnail "319x319>" -background transparent -gravity center -extent 319x319 -write png:cq5dam.thumbnail.319.319.png -thumbnail "140x100>" -background transparent -gravity center -extent 140x100 -write cq5dam.thumbnail.140.100.png -thumbnail "48x48>" -background transparent -gravity center -extent 48x48 cq5dam.thumbnail.48.48.png`
 
-Använd följande [!UICONTROL processargument] för att skapa den webbaktiverade återgivningen med ImageMagick:
+Använd följande [!UICONTROL Process Arguments] för att skapa den webbaktiverade återgivningen med ImageMagick:
 
 `mime:image/tiff,mime:image/png,mime:image/bmp,mime:image/gif,mime:image/jpeg,cmd:convert ${filename} -define jpeg:size=1280x1280 -thumbnail "1280x1280>" cq5dam.web.1280.1280.jpeg`
 
 >[!NOTE]
 >
->Steget [!UICONTROL CommandLineProcess] gäller bara för Resurser (noder av typen `dam:Asset`) eller underordnade objekt till en resurs.
+>Stegen gäller bara för resurser (noder av typen [!UICONTROL CommandLineProcess] `dam:Asset`) eller underordnade objekt till en resurs.
 
 >[!MORELIKETHIS]
 >
