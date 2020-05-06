@@ -3,7 +3,10 @@ title: Bästa tillvägagångssätt för att övervaka [!DNL Adobe Experience Man
 description: Bästa tillvägagångssätt för att övervaka miljön och prestandan för din [!DNL Adobe Experience Manager]-distribution efter distributionen.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
+source-git-commit: 99ce6e0572797b7bccf755aede93623be6bd5698
+workflow-type: tm+mt
+source-wordcount: '1682'
+ht-degree: 0%
 
 ---
 
@@ -146,7 +149,7 @@ Här följer några färdiga hälsokontroller som är bra att övervaka:
 
 * Replikeringskö
 
-   * MBean: `org.apache.sling.healthcheck:name=replicationQueue,type=HealthCheck `
+   * MBean: `org.apache.sling.healthcheck:name=replicationQueue,type=HealthCheck`
    * Webbadress: `/system/console/jmx/org.apache.sling.healthcheck:name=replicationQueue,type=HealthCheck`
    * Instanser: En författare, alla publiceringsservrar
    * Larm threshold: När statusen inte är OK
@@ -184,7 +187,7 @@ Här följer några färdiga hälsokontroller som är bra att övervaka:
    * Larm threshold: När statusen inte är OK
    * Larm-definition: Det finns fel i loggfilerna. Mer information om orsaken till problemet finns i loggattributet.
 
-## Vanliga problem och lösningar {#common-issues-and-resolutions}
+## Vanliga problem och lösningar  {#common-issues-and-resolutions}
 
 Om du råkar ut för problem i samband med övervakningen finns det några felsökningsuppgifter som du kan utföra för att lösa vanliga problem med [!DNL Experience Manager] distributioner:
 
