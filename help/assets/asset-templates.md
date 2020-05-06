@@ -3,7 +3,10 @@ title: Resursmallar i [!DNL Adobe Experience Manager Assets].
 description: Lär dig mer om tillgångsmallar i [!DNL Adobe Experience Manager Assets] och hur du använder resursmallar för att skapa marknadsföringsmaterial.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c8c35eedcce4a743e414b3a8e5bb6ef4b25ff3ee
+source-git-commit: 99ce6e0572797b7bccf755aede93623be6bd5698
+workflow-type: tm+mt
+source-wordcount: '1522'
+ht-degree: 0%
 
 ---
 
@@ -36,17 +39,17 @@ Du kan exportera den uppdaterade filen i den överordnade mappen i INDD-, PDF- e
 
 Tänk dig ett scenario där du vill skapa digital tryckbar information som broschyrer, flygblad och annonser för en kommande kampanj och dela med butiker globalt. Genom att skapa material som bygger på en mall kan ni leverera en enhetlig kundupplevelse över alla kanaler. Designers kan skapa kampanjmallar (en eller flera sidor) med hjälp av en kreativ lösning, som [!DNL InDesign] och överföra mallarna till [!DNL Experience Manager Assets] dig. Innan du skapar en säkerhet måste du ha en eller flera INDD-mallar överförda till och tillgängliga [!DNL Experience Manager] i förväg.
 
-1. I [!DNL Experience Manager] gränssnittet klickar du på [!UICONTROL Resurser].
+1. Klicka i [!DNL Experience Manager] gränssnittet [!UICONTROL Assets].
 
-1. Välj **[!UICONTROL Mallar]** bland alternativen.
+1. Välj bland alternativen **[!UICONTROL Templates]**.
 
    ![chlimage_1-101](assets/chlimage_1-306.png)
 
-1. Klicka på **[!UICONTROL Skapa]** och välj sedan det material du vill skapa på menyn. Välj till exempel **[!UICONTROL Broschyr]**.
+1. Klicka på **[!UICONTROL Create]** och välj sedan det material du vill skapa på menyn. Välj till exempel **[!UICONTROL Brochure]**.
 
    ![chlimage_1-102](assets/chlimage_1-307.png)
 
-1. ha en eller flera INDD-mallar överförda till och tillgängliga [!DNL Experience Manager] i förväg. Välj en mall för broschyren och klicka på **[!UICONTROL Nästa]**.
+1. ha en eller flera INDD-mallar överförda till och tillgängliga [!DNL Experience Manager] i förväg. Välj en mall för broschyren och klicka på **[!UICONTROL Next]**.
 
    ![chlimage_1-103](assets/chlimage_1-308.png)
 
@@ -54,27 +57,27 @@ Tänk dig ett scenario där du vill skapa digital tryckbar information som brosc
 
    ![chlimage_1-104](assets/chlimage_1-309.png)
 
-1. (Valfritt) Klicka på **[!UICONTROL Taggar]** och välj en eller flera taggar för broschyren. Bekräfta **[!UICONTROL valet genom att klicka på Bekräfta]** .
+1. (Valfritt) Klicka på **[!UICONTROL Tags]** och välj en eller flera taggar för broschyren. Klicka **[!UICONTROL Confirm]** för att bekräfta valet.
 
    ![chlimage_1-105](assets/chlimage_1-310.png)
 
-1. Klicka på **[!UICONTROL Skapa]**. En dialogruta bekräftar att en ny broschyr har skapats. Klicka på **[!UICONTROL Öppna]** för att öppna broschyren i redigeringsläge.
+1. Klicka på **[!UICONTROL Create]**. En dialogruta bekräftar att en ny broschyr har skapats. Klicka **[!UICONTROL Open]** för att öppna broschyren i redigeringsläge.
 
    <!--![chlimage_1-106](assets/.png) -->
 
-   Du kan också stänga dialogrutan och navigera till mappen på mallsidan som du började med för att visa den broschyr du skapade. Typen av säkerhet visas på miniatyrbilden i kortvyn. I det här fallet visas till exempel ordet [!UICONTROL Broschyr] på miniatyrbilden.
+   Du kan också stänga dialogrutan och navigera till mappen på mallsidan som du började med för att visa den broschyr du skapade. Typen av säkerhet visas på miniatyrbilden i kortvyn. I det här fallet [!UICONTROL Brochure] visas till exempel ordet på miniatyrbilden.
 
    ![chlimage_1-107](assets/chlimage_1-312.png)
 
 ## Redigera en säkerhet {#editing-a-collateral}
 
-Du kan redigera en sammanställning direkt när du har skapat den. Du kan även öppna den från [!UICONTROL mallsidan] eller resurssidan.
+Du kan redigera en sammanställning direkt när du har skapat den. Du kan också öppna den från [!UICONTROL Templates] sidan eller resurssida.
 
 1. Gör något av följande om du vill öppna materialet för redigering:
 
    * Öppna den säkerhet (broschyr i det här fallet) som du skapade i steg 7 i [Skapa en säkerhet](/help/assets/asset-templates.md#creating-a-collateral).
-   * Navigera från sidan Mallar till en mapp där du skapade materialet och klicka på snabbåtgärden [!UICONTROL Redigera] på miniatyrbilden av en materialet.
-   * Klicka på **[!UICONTROL Redigera]** i verktygsfältet på tillgångssidan för säkerheten.
+   * Navigera från sidan Mallar till en mapp där du skapade materialet och klicka på snabbåtgärden på miniatyrbilden av en [!UICONTROL Edit] materialet.
+   * Klicka på verktygsfältet på tillgångssidan för säkerheten **[!UICONTROL Edit]** .
    * Select the collateral and click **[!UICONTROL Edit]** from the toolbar.
    <!--![chlimage_1-108](assets/chlimage_1-313.png) -->
 
@@ -100,11 +103,11 @@ Du kan redigera en sammanställning direkt när du har skapat den. Du kan även 
 
    Du kan redigera textegenskaperna, till exempel teckensnittsstil, färg och storlek, med de alternativ som finns.
 
-1. Klicka på **[!UICONTROL Förhandsgranska]** för att förhandsgranska textändringarna.
+1. Klicka **[!UICONTROL Preview]** för att förhandsgranska textändringarna.
 
    ![chlimage_1-112](assets/chlimage_1-317.png)
 
-1. Klicka på **[!UICONTROL Resurssökaren]** om du vill byta ut en bild.
+1. Om du vill byta ut en bild klickar du på **[!UICONTROL Asset Finder]**.
 
    ![chlimage_1-113](assets/chlimage_1-318.png)
 
@@ -116,7 +119,7 @@ Du kan redigera en sammanställning direkt när du har skapat den. Du kan även 
 
    ![chlimage_1-115](assets/chlimage_1-320.png)
 
-1. Klicka på **[!UICONTROL Förhandsvisa]** om du vill förhandsgranska bilden.
+1. Klicka **[!UICONTROL Preview]** för att förhandsgranska bilden.
 
    ![chlimage_1-116](assets/chlimage_1-321.png)
 
@@ -124,7 +127,7 @@ Du kan redigera en sammanställning direkt när du har skapat den. Du kan även 
 
    ![chlimage_1-117](assets/chlimage_1-322.png)
 
-1. Klicka på **[!UICONTROL Förhandsgranska]** i verktygsfältet om du vill förhandsgranska alla ändringar. Klicka på **[!UICONTROL Klar]** om du vill spara redigeringsändringarna för den aktuella informationen.
+1. Klicka **[!UICONTROL Preview]** i verktygsfältet för att förhandsgranska alla ändringar. Klicka **[!UICONTROL Done]** för att spara redigeringsändringarna för den aktuella informationen.
 
    >[!NOTE]
    >
@@ -140,8 +143,8 @@ Du kan redigera en sammanställning direkt när du har skapat den. Du kan även 
    >
    >Mer information om hur du arbetar med [!DNL InDesign] dokument finns i [Bästa metoder för att arbeta med InDesign-dokument i Experience Manager](https://helpx.adobe.com/experience-manager/kb/best-practices-idd-docs-aem.html).
 
-1. Om du vill generera en PDF-återgivning för broschyren väljer du alternativet Acrobat i dialogrutan och klickar sedan på **[!UICONTROL Fortsätt]**.
-1. Säkerheten skapas i den mapp du började med. Om du vill visa återgivningarna öppnar du materialet och väljer **[!UICONTROL Återgivningar]** i listan GlobalNav.
+1. Om du vill generera en PDF-återgivning för broschyren väljer du alternativet Acrobat i dialogrutan och klickar sedan på **[!UICONTROL Continue]**.
+1. Säkerheten skapas i den mapp du började med. Om du vill visa återgivningarna öppnar du materialet och väljer **[!UICONTROL Renditions]** i listan GlobalNav.
 
    ![chlimage_1-118](assets/chlimage_1-323.png)
 
@@ -151,15 +154,15 @@ Du kan redigera en sammanställning direkt när du har skapat den. Du kan även 
 
 ## Sammanfoga säkerhet {#merge-collateral}
 
-1. I [!DNL Experience Manager] gränssnittet klickar du på [!UICONTROL Resurser] på navigeringssidan.
+1. Klicka [!DNL Experience Manager] på navigeringssidan i [!UICONTROL Assets] gränssnittet.
 
-1. Välj **[!UICONTROL Mallar]** bland alternativen.
+1. Välj bland alternativen **[!UICONTROL Templates]**.
 
-1. Klicka på **[!UICONTROL Skapa]** och välj **[!UICONTROL Sammanfoga]** på menyn.
+1. Klicka **[!UICONTROL Create]** och välj **[!UICONTROL Merge]** på menyn.
 
    ![chlimage_1-120](assets/chlimage_1-325.png)
 
-1. På sidan [!UICONTROL Koppla] mall klickar du på **[!UICONTROL Koppla]**.
+1. From the [!UICONTROL Template Merge] page, click **[!UICONTROL Merge]**.
 
    ![chlimage_1-121](assets/chlimage_1-326.png)
 
@@ -179,16 +182,16 @@ Du kan redigera en sammanställning direkt när du har skapat den. Du kan även 
 
    ![chlimage_1-125](assets/chlimage_1-330.png)
 
-1. Klicka på **[!UICONTROL Nästa]** i verktygsfältet.
-1. På skärmen **[!UICONTROL Förhandsgranska och ordna]** om kan du ordna om mallarna om det behövs och förhandsgranska valet av mallar som ska sammanfogas. Klicka sedan på **[!UICONTROL Nästa]** i verktygsfältet.
+1. Klicka **[!UICONTROL Next]** i verktygsfältet.
+1. Ordna om mallarna om det behövs på **[!UICONTROL Preview & Reorder]** skärmen och förhandsgranska valet av mallar som ska sammanfogas. Then, click **[!UICONTROL Next]** from the toolbar.
 
    ![chlimage_1-126](assets/chlimage_1-331.png)
 
-1. Ange ett namn för säkerheten på skärmen [!UICONTROL Konfigurera mall] . Du kan också ange de taggar som du anser lämpliga. Om du vill exportera utdata i PDF-format väljer du **[!UICONTROL Acrobat (.PDF)]**. Som standard exporteras säkerheten i JPG-format och [!DNL InDesign] format. Om du vill ändra miniatyrbilden för flersidessäkerheten klickar du på **[!UICONTROL Ändra miniatyrbild]**.
+1. In the [!UICONTROL Configure Template] screen, specify a name for the collateral. Du kan också ange de taggar som du anser lämpliga. Om du vill exportera utdata i PDF-format väljer du **[!UICONTROL Acrobat (.PDF)]**. Som standard exporteras säkerheten i JPG-format och [!DNL InDesign] format. Om du vill ändra miniatyrbilden för flersidessäkerheten klickar du på **[!UICONTROL Change Thumbnail]**.
 
    ![chlimage_1-127](assets/chlimage_1-332.png)
 
-1. Klicka på **[!UICONTROL Spara]** och sedan på **[!UICONTROL OK]** i dialogrutan för att stänga dialogrutan. Den flersidiga informationen skapas i den mapp du började med.
+1. Klicka på **[!UICONTROL Save]** och sedan på **[!UICONTROL OK]** i dialogrutan för att stänga dialogrutan. Den flersidiga informationen skapas i den mapp du började med.
 
    >[!NOTE]
    >
@@ -196,4 +199,4 @@ Du kan redigera en sammanställning direkt när du har skapat den. Du kan även 
 
 ## God praxis och begränsningar {#best-practices-limitations-tips}
 
-* AEM InDesign-redigeraren fungerar på taggnivå och all text under en enda tagg betraktas som en enda enhet. Om du vill bevara textformatering och format när du redigerar, lägger du till märkord i varje stycke (eller text med olika format) separat.
+* Redigeraren [!DNL InDesign] i [!DNL Experience Manager] fungerar på taggnivå och all text under en tagg betraktas som en enda enhet. Om du vill bevara textformatering och format när du redigerar, lägger du till märkord i varje stycke (eller text med olika format) separat.
