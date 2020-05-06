@@ -3,15 +3,15 @@ title: Bästa praxis för integrering av Adobe Creative Cloud och [!DNL Adobe Ex
 description: Bästa tillvägagångssätt för att integrera [!DNL Adobe Experience Manager] med [!DNL Adobe Creative Cloud] för att effektivisera resursöverföringsarbetsflöden och uppnå hög innehållshastighet.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 1321aa3421455d78fd4562d6cb524aa232ee2ce1
+source-git-commit: 99ce6e0572797b7bccf755aede93623be6bd5698
+workflow-type: tm+mt
+source-wordcount: '3266'
+ht-degree: 15%
 
 ---
 
 
 # [!DNL Adobe Experience Manager] och [!DNL Creative Cloud] bästa praxis för integrering {#aem-and-creative-cloud-integration-best-practices}
-
-<!-- TBD: Reconcile with 6.4 article that's behind this article in terms of content streamlining and structuring.
--->
 
 [!DNL Adobe Experience Manager Assets] är en DAM-lösning (Digital Asset Management) som kan integreras med [!DNL Adobe Creative Cloud] för att hjälpa DAM-användare att samarbeta med kreativa team och effektivisera samarbetet när innehåll skapas.
 
@@ -47,19 +47,19 @@ Den här artikeln fokuserar främst på de två första aspekterna av samarbetsb
 
 | Användningsfall | [!DNL Adobe Asset Link] | [!DNL Experience Manager] datorprogram | Anmärkningar/andra lösningar |
 |---|---|---|---|
-| Upptäck - bläddra bland DAM-mappar | Ja | [!DNL Experience Manager] Webbgränssnitt + skrivbordsåtgärder | När du bläddrar i nätverksresursen ska du inaktivera miniatyrbilderna för att undvika att hämta binära filer med resurser. |
-| Upptäck - få åtkomst till DAM-samlingar | Ja | [!DNL Experience Manager] Webbgränssnitt + skrivbordsåtgärder |  |
-| Upptäck - sök efter resurser från DAM | Ja | [!DNL Experience Manager] Webbgränssnitt + skrivbordsåtgärder |  |
-| Använd - öppen resurs | Ja | Ja - för alla appar | [Öppna från webbgränssnittet](managing-assets-touch-ui.md#previewing-assets) eller från Finder |
+| Upptäck - bläddra bland DAM-mappar | Ja | [!DNL Experience Manager] Webbgränssnitt och skrivbordsfunktioner |  |
+| Upptäck - få åtkomst till DAM-samlingar | Ja | [!DNL Experience Manager] Webbgränssnitt och skrivbordsfunktioner |  |
+| Upptäck - sök efter resurser från DAM | Ja | [!DNL Experience Manager] Webbgränssnitt och skrivbordsfunktioner |  |
+| Använd - öppen resurs | Ja | Ja | [Öppna från webbgränssnittet](managing-assets-touch-ui.md#previewing-assets) eller från Finder |
 | Använd - placera resurs från DAM i ett dokument | Ja - inbäddning | Ja - länkning eller inbäddning | [!DNL Experience Manager] datorprogrammet ger åtkomst till resurser som filer i det lokala filsystemet. De här länkarna i de ursprungliga programmen representeras av lokala sökvägar. |
 | Redigera - öppna för redigering | Ja - utcheckningsåtgärd | Ja - Öppna åtgärd (i nätverksresursen) | [Checka ut i AAL](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html) sparar resursen i användarens Creative Cloud-lagringskonto (synkroniserat med Creative Cloud-programmet) som standard. |
 | Redigera - pågående arbete utanför DAM | Ja - Tillgängliga resurser i användarens Creative Cloud-lagringskonto synkroniserat med skrivbordet. | Ja |  |
 | Redigera - ladda upp ändringar | Ja - [incheckningsåtgärd](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html) med valfri kommentar | Ja |  |
 | Överför - en fil | Ja - överför aktuellt aktivt dokument | Ja | [Överför via webbgränssnitt](managing-assets-touch-ui.md#uploading-assets) |
-| Överför - flera filer/hierarkiska mappstrukturer | Nej | Ja | [Överför via webbgränssnitt](managing-assets-touch-ui.md#uploading-assets);<br>Anpassade skript eller verktyg |
-| Diverse - användare och inloggning | Creative Cloud-användare som är inloggad på Creative Cloud-datorprogrammet blir igenkända (SSO) | [!DNL Experience Manager] användare/inloggning | Användare av båda lösningarna räknas av mot [!DNL Experience Manager] användarkvoten. |
-| Diverse - nätverk och åtkomst | Kräver åtkomst från användarens skrivbord till [!DNL Experience Manager] distribution via nätverk | Kräver åtkomst från användarens skrivbord till [!DNL Experience Manager] distribution via nätverk | Adobe Asset Link delar inte nätverksproxymiljö. |
-| Diverse - Migrera ett stort antal resurser | Nej | Nej | [Migreringshandbok](assets-migration-guide.md) |
+| Överför - flera filer/hierarkiska mappstrukturer | Nej | Ja | [Ladda upp via webbgränssnitt](managing-assets-touch-ui.md#uploading-assets) eller via skript eller verktyg. |
+| Diverse - användare och inloggning | Creative Cloud-användare som är inloggad på Creative Cloud-datorprogrammet blir igenkända (SSO) | [!DNL Experience Manager] användare och autentiseringsuppgifter | Användare av båda lösningarna räknas in i [!DNL Experience Manager] användarkvoten. |
+| Diverse - nätverk och åtkomst | Kräver åtkomst från användarens skrivbord till [!DNL Experience Manager] distribution via nätverk | Kräver åtkomst från användarens skrivbord till [!DNL Experience Manager] distribution via nätverk | [!DNL Adobe Asset Link] delar inte nätverksproxymiljö. |
+| Diverse - Migrera ett stort antal resurser | Nej | Nej | [Guide för resursmigrering](assets-migration-guide.md) |
 
 För att stödja användningsexemplen på resursfördelning bör andra lösningar beaktas:
 
@@ -168,7 +168,7 @@ I sådana fall kan Adobe Asset Link eller [!DNL Experience Manager] skrivbordsap
 
 Externa byråer och frilansare som inte har direkt åtkomst till DAM-instansen kan behöva åtkomst till godkända resurser eller lägga till sina nya designer i DAM.
 
-Använd följande strategier för att ge åtkomst till slutliga/godkända mediefiler:
+Använd följande strategier för att ge tillgång till slutliga/godkända mediefiler:
 
 * Använd skrivbordsappen om Asset Link inte fungerar.
 * Använd [Experience Manager Assets Brand Portal](https://helpx.adobe.com/se/experience-manager/brand-portal/user-guide.html) för säker distribution av resurser till externa partner
