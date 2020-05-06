@@ -3,7 +3,10 @@ title: Hantera metadata för digitala resurser i [!DNL Adobe Experience Manager]
 description: Lär dig mer om metadatatyperna och hur [!DNL Adobe Experience Manager Assets] hjälper dig att hantera metadata för resurser så att det blir enklare att kategorisera och ordna resurser. Med [!DNL Experience Manager] går det att automatiskt ordna och bearbeta resurser baserat på deras metadata.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c32e64d4921d7239d07f57ab9e12c744758faa0a
+source-git-commit: 99ce6e0572797b7bccf755aede93623be6bd5698
+workflow-type: tm+mt
+source-wordcount: '1420'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +31,7 @@ Metadata är en samling med alla data som är tillgängliga för en resurs, men 
 * Namnet på mappen som den finns i.
 * Relaterade resurser eller tillämpade taggar.
 
-Ovanstående är de grundläggande metadataegenskaper som Experience Manager kan hantera för resurser, vilket gör att användarna kan se alla resurser. Det kan till exempel vara bra att beställa resurser efter det senaste ändringsdatumet när du försöker identifiera nyligen tillagda resurser.
+Ovanstående är de grundläggande metadataegenskaper som [!DNL Experience Manager] kan hantera resurser, vilket gör att användare kan se alla resurser. Det kan till exempel vara bra att beställa resurser efter det senaste ändringsdatumet när du försöker identifiera nyligen tillagda resurser.
 
 Du kan lägga till mer högnivådata till digitala resurser, till exempel:
 
@@ -90,7 +93,7 @@ ID3-taggar är utformade för filformatet MP3. Mer information om format:
 
 ### Exif {#exif}
 
-Exchangeable image file format (Exif) är det vanligaste metadataformatet som används för digitalfoto. Det är ett sätt att bädda in en fast ordlista med metadataegenskaper i många filformat, till exempel JPEG, TIFF, RIFF och WAV. Exif lagrar metadata som par av ett metadatanamn och ett metadatavärde. Dessa metadata name-value-pars kallas också taggar, som inte ska blandas ihop med taggarna i [!DNL Experience Manager].  Moderna digitalkameror skapar Exif-metadata och moderna grafikprogram stöder det. Exif-formatet är den minsta gemensamma nämnaren för metadatahantering, särskilt för bilder.
+Exchangeable image file format (Exif) är det vanligaste metadataformatet som används för digitalfoto. Det är ett sätt att bädda in en fast ordlista med metadataegenskaper i många filformat, till exempel JPEG, TIFF, RIFF och WAV. Exif lagrar metadata som par av ett metadatanamn och ett metadatavärde. Dessa metadata name-value-pars kallas också taggar, som inte ska blandas ihop med taggarna i [!DNL Experience Manager]. Moderna digitalkameror skapar Exif-metadata och moderna grafikprogram stöder det. Exif-formatet är den minsta gemensamma nämnaren för metadatahantering, särskilt för bilder.
 
 En stor begränsning för Exif är att ett fåtal populära bildfilsformat som BMP, GIF och PNG inte har stöd för det.
 
@@ -98,7 +101,7 @@ Metadatafält som definieras av Exif är vanligtvis av teknisk natur och har beg
 
 ### Andra metadata {#other-metadata}
 
-Andra metadata som kan bäddas in från filer är bland annat Microsoft Word, PowerPoint och Excel.
+Andra metadata som kan bäddas in från filer är bland annat [!DNL Microsoft Word], [!DNL PowerPoint], [!DNL Excel]osv.
 
 ## Metadata-scheman {#metadata-schemata}
 
