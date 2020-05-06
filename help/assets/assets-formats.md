@@ -3,7 +3,10 @@ title: Format som stöds för resurser
 description: Lista över filformat som stöds av AEM Assets och Dynamic Media samt funktioner som stöds för varje format.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 2b30ab18aa22352d7ece4617d22391759592fd19
+source-git-commit: 99ce6e0572797b7bccf755aede93623be6bd5698
+workflow-type: tm+mt
+source-wordcount: '1760'
+ht-degree: 2%
 
 ---
 
@@ -186,7 +189,7 @@ Utöver ovanstående funktioner bör du tänka på följande:
 
 ## Multimediaformat som stöds {#supported-multimedia-formats}
 
-|  | Lagring | Metadatahantering | Extrahering av metadata | Generering av miniatyrbilder | FFMPEG-omkodning |
+|  | Lagring | Metadatahantering | Extrahering av metadata | Generering av miniatyrbilder | FFmpeg-omkodning |
 |:---|:---:|:---:|:---:|:---:|:---:|
 | AAC | ✓ | ✓ |  | − | * |
 | MIDI | ✓ | ✓ |  | − | * |
@@ -254,7 +257,7 @@ Hur vanliga DAM-arbetsflöden kan användas för ett par andra filformat beskriv
 
 ## MIME-typer som stöds {#supported-mime-types}
 
-Som standard identifierar AEM filtypen med hjälp av filtillägget. AEM kan identifiera det från innehållet i filerna. För det senare alternativet [!UICONTROL Identifiera MIME från innehåll] i [!UICONTROL Day CQ DAM Mime Type Service] i AEM Web Console.
+Som standard identifierar AEM filtypen med hjälp av filtillägget. AEM kan identifiera det från innehållet i filerna. För den senare väljer du [!UICONTROL Detect MIME from content] ett alternativ [!UICONTROL Day CQ DAM Mime Type Service] i AEM Web Console.
 
 En lista över MIME-typer som stöds finns i CRXDE Lite på `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`.
 
