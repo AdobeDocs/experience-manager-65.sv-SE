@@ -1,19 +1,22 @@
 ---
-title: Söka efter digitala resurser och bilder i Adobe Experience Manager
-description: Lär dig hur du hittar de resurser du behöver i Adobe Experience Manager genom att använda panelen Filter och hur du använder de resurser som visas i sökningen.
+title: Sök efter digitala resurser och bilder i [!DNL Adobe Experience Manager].
+description: Lär dig hur du hittar de nödvändiga resurserna i [!DNL Adobe Experience Manager] genom att använda panelen Filter och hur du använder de resurser som visas i sökningen.
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
+source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
+workflow-type: tm+mt
+source-wordcount: '5831'
+ht-degree: 5%
 
 ---
 
 
-# Söka efter resurser i Adobe Experience Manager {#search-assets-in-aem}
+# Sök resurser i [!DNL Adobe Experience Manager] {#search-assets-in-aem}
 
-Adobe Experience Manager Assets erbjuder robusta metoder för resursidentifiering som hjälper er att uppnå högre innehållshastighet. Teamen minskar time to market med sömlös, intelligent sökupplevelse med hjälp av färdiga funktioner och anpassade metoder. Att söka resurser är centralt för användningen av ett digitalt resurshanteringssystem - oavsett om det är avsett för kreativa användare, för robust hantering av resurser av företagsanvändare och marknadsförare eller för administration av DAM-administratörer. Enkla, avancerade och anpassade sökningar som du kan utföra via användargränssnittet i Experience Manager Assets eller andra appar och ytor hjälper dig att uppfylla dessa användningsexempel.
+[!DNL Adobe Experience Manager Assets] har robusta metoder för resursidentifiering som hjälper dig att få högre innehållshastighet. Teamen minskar time to market med sömlös, intelligent sökupplevelse med hjälp av färdiga funktioner och anpassade metoder. Att söka resurser är centralt för användningen av ett digitalt resurshanteringssystem - oavsett om det är avsett för kreativa användare, för robust hantering av resurser av företagsanvändare och marknadsförare eller för administration av DAM-administratörer. Enkla, avancerade och anpassade sökningar som du kan utföra via [!DNL Assets] användargränssnittet eller andra appar och ytor bidrar till att uppfylla dessa användningsbehov.
 
-Experience Manager Assets har stöd för följande användningsfall och i den här artikeln beskrivs användning, begrepp, konfigurationer, begränsningar och felsökning för dessa användningsfall.
+[!DNL Experience Manager Assets] har stöd för följande användningsfall och den här artikeln beskriver användning, begrepp, konfigurationer, begränsningar och felsökning för dessa användningsfall.
 
 | Söka efter resurser | Konfiguration och administration | Arbeta med sökresultat |
 |---|---|---|
@@ -28,11 +31,11 @@ Experience Manager Assets har stöd för följande användningsfall och i den h�
 | [Begränsningar](#limitations) och [tips](#tips) |  |  |
 | [Illustrerade exempel](#samples) |  |  |
 
-Sök efter resurser med hjälp av omsökningsfältet högst upp i Experience Manager-webbgränssnittet. Gå till **[!UICONTROL Resurser]** > **[!UICONTROL Filer]** i Experience Manager, klicka på sökikonen i det övre fältet, ange söknyckelord och tryck på Retur. Du kan också använda kortkommandot / (snedstreck) för att öppna Omnissearch-fältet. Plats:Resurser är förmarkerade för att begränsa sökningarna till DAM-resurser. Experience Manager ger förslag när du börjar skriva ett söknyckelord.
+Sök efter resurser med hjälp av Omnissearch-fältet högst upp i [!DNL Experience Manager] webbgränssnittet. Gå till **[!UICONTROL Assets]** > **[!UICONTROL Files]** i [!DNL Experience Manager], klicka på sökikonen i det övre fältet, ange söknyckelord och tryck på Retur. Du kan också använda kortkommandot / (snedstreck) för att öppna Omnissearch-fältet. `Location:Assets` är förvalt för att begränsa sökningarna till DAM-resurser. [!DNL Experience Manager] innehåller förslag när du börjar skriva ett söknyckelord.
 
-Använd panelen **[!UICONTROL Filter]** om du vill begränsa sökningen genom att filtrera sökresultaten baserat på olika alternativ (prediktiv), t.ex. filtyp, filstorlek, senaste ändringsdatum, status för mediefilen, information om insikter och Adobe Stock-licensiering. Administratörerna kan anpassa filterpanelen och lägga till eller ta bort sökpredikt med hjälp av sökfaktorer. Filtret [!UICONTROL Filtyp] på panelen [!UICONTROL Filter] har kryssrutor för olika lägen. Om du inte markerar alla kapslade predikat (eller format) markeras därför kryssrutorna på första nivån delvis.
+Använd panelen för att begränsa sökningen genom att filtrera sökresultaten baserat på olika alternativ (prediktiv), t.ex. filtyp, filstorlek, senaste ändringsdatum, resursens status, insiktdata och Adobe Stock-licensiering. **[!UICONTROL Filters]** Administratörerna kan anpassa filterpanelen och lägga till eller ta bort sökpredikt med hjälp av sökfaktorer. Filtret [!UICONTROL File Type] på [!UICONTROL Filters] panelen har kryssrutor för olika lägen. Om du inte markerar alla kapslade predikat (eller format) markeras därför kryssrutorna på första nivån delvis.
 
-Sökfunktionen i Experience Manager stöder sökning efter samlingar och sökning efter resurser i en samling. Se [söksamlingar](/help/assets/managing-collections-touch-ui.md).
+[!DNL Experience Manager] sökfunktionen stöder sökning efter samlingar och sökning efter resurser i en samling. Se [söksamlingar](/help/assets/managing-collections-touch-ui.md).
 
 ## Förstå sökgränssnittet {#searchui}
 
@@ -40,7 +43,7 @@ Bekanta dig med sökgränssnittet och de tillgängliga åtgärderna.
 
 ![Förstå gränssnittet för Experience Manager Assets-sökresultat](assets/aem_search_results.png)
 
-*Bild: Förstå gränssnittet för Experience Manager Assets-sökresultat.*
+*Bild: Förstå gränssnittet för[!DNL Experience Manager Assets]sökresultat.*
 
 **S.** Spara sökningen som en smart samling. **B.** Filter eller predikat som begränsar sökresultaten. **C.** Visa filer, mappar eller båda. **D.** Klicka på Filter för att öppna eller stänga den vänstra rutan. **E.** Sökplatsen är DAM. **F.** Omsökningsfält med användardefinierat söknyckelord. **G.** Välj inlästa sökresultat. **H.** Antal visade sökresultat av totalt antal sökresultat. **Jag.** Stäng sökning **J.** Växla mellan kortvyn och listvyn.
 
@@ -58,36 +61,36 @@ Du kan identifiera önskade resurser snabbare från sökresultatsidan med det dy
 
 Du kan köra nyckelordssökningar från OmniSearch-fältet. Nyckelordssökningen är inte skiftlägeskänslig och är en fulltextsökning (i alla vanliga metadatafält). Om mer än ett nyckelord söks efter används standardoperatorn mellan nyckelorden `AND` för standardsökning och det är `OR` när resurserna är smarta taggade.
 
-Resultatet sorteras efter relevans, med början med närmast matchande. För flera nyckelord är mer relevanta resultat de resurser som innehåller båda termerna i sina metadata. I metadata rangordnas nyckelord som visas som smarta taggar högre än nyckelord som visas i andra metadatafält. Med Experience Manager kan du ge en viss sökterm högre vikt. Det går också att [höja rankningen](#searchrank) för vissa målresurser för specifika söktermer.
+Resultatet sorteras efter relevans, med början med närmast matchande. För flera nyckelord är mer relevanta resultat de resurser som innehåller båda termerna i sina metadata. I metadata rangordnas nyckelord som visas som smarta taggar högre än nyckelord som visas i andra metadatafält. [!DNL Experience Manager] ger en viss sökterm högre vikt. Det går också att [höja rankningen](#searchrank) för vissa målresurser för specifika söktermer.
 
 För att snabbt hitta relevanta resurser innehåller det avancerade gränssnittet funktioner för filtrering, sortering och markering. Du kan filtrera resultat baserat på flera villkor och se antalet sökningar efter olika filter. Du kan också köra sökningen igen genom att ändra frågan i fältet Omnissearch. När du ändrar söktermer eller filter används de andra filtren för att bevara sökkontexten.
 
-När resultatet är många resurser visas de första 100 i kortvyn och 200 i listvyn. När användare rullar läses fler resurser in. Detta för att förbättra prestandan.
+När resultatet är många resurser visas [!DNL Experience Manager] de första 100 i kortvyn och 200 i listvyn. När användare rullar läses fler resurser in. Detta för att förbättra prestandan.
 
 >[!VIDEO](https://www.youtube.com/watch?v=LcrGPDLDf4o)
 
 Ibland kan du se oväntade resurser i sökresultaten. Mer information finns i [oväntade resultat](#troubleshoot-unexpected-search-results-and-issues).
 
-Experience Manager kan söka i många filformat och sökfiltren kan anpassas efter företagets behov. Kontakta administratören för att få veta vilka sökalternativ som är tillgängliga för DAM-databasen och vilka begränsningar ditt konto har.
+[!DNL Experience Manager] kan söka i många filformat och sökfiltren kan anpassas efter dina behov. Kontakta administratören för att få veta vilka sökalternativ som är tillgängliga för DAM-databasen och vilka begränsningar ditt konto har.
 
 ### Resultat med och utan förbättrade smarta taggar {#withsmarttags}
 
-Som standard kombineras söktermerna i Experience Manager Search med en AND-sats. Du kan till exempel söka efter nyckelordskvinna som springer. Som standard visas endast resurser med både kvinna och nyckelord som körs i metadata i sökresultatet. Samma beteende bevaras när specialtecken (punkter, understreck eller streck) används med nyckelorden. Följande sökfrågor returnerar samma resultat:
+Som standard kombineras söktermerna med en AND-sats i sökningen [!DNL Experience Manager] . Du kan till exempel söka efter nyckelordskvinna som springer. Som standard visas endast resurser med både kvinna och nyckelord som körs i metadata i sökresultatet. Samma beteende bevaras när specialtecken (punkter, understreck eller streck) används med nyckelorden. Följande sökfrågor returnerar samma resultat:
 
 * `woman running`
 * `woman.running`
 * `woman-running`
 
 Frågan `woman -running` returnerar emellertid resurser utan `running` metadata.
-Om du använder smarta taggar läggs en extra `OR` sats till för att hitta någon av söktermerna som de använda smarta taggarna. En resurs som är taggad med antingen `woman` eller `running` med smarta taggar visas också i en sådan sökfråga. Sökresultaten är en kombination av
+Om du använder smarta taggar läggs en extra `OR` sats till för att hitta någon av söktermerna som de använda smarta taggarna. En resurs som är taggad med antingen `woman` eller `running` använder smarta taggar visas också i en sådan sökfråga. Sökresultaten är en kombination av
 
 * Resurser med `woman` och `running` nyckelord i metadata (standardbeteende).
 
-* Resurser som är smarta och taggade med något av nyckelorden (beteendet Smarta taggar).
+* Resurser som är smarta och taggade med något av nyckelorden (beteendet för smarta taggar).
 
 ### Sök efter förslag medan du skriver {#searchsuggestions}
 
-När du börjar skriva nyckelord föreslår Experience Manager möjliga söknyckelord eller fraser. Förslagen baseras på metadata för de befintliga resurserna. Experience Manager indexerar alla metadatafält som kan vara till hjälp vid sökningen. Systemet använder värdena från följande metadatafält för att ge sökförslag. Om du vill ge sökförslag bör du överväga att fylla i följande fält med lämpliga nyckelord:
+När du börjar skriva nyckelord föreslår [!DNL Experience Manager] du möjliga söknyckelord eller fraser. Förslagen baseras på metadata för de befintliga resurserna. [!DNL Experience Manager] indexerar alla metadatafält som kan vara till hjälp vid sökning. Systemet använder värdena från följande metadatafält för att ge sökförslag. Om du vill ge sökförslag bör du överväga att fylla i följande fält med lämpliga nyckelord:
 
 * Resurstaggar. (kartor till `jcr:content/metadata/cq:tags`)
 * Resursrubrik. (kartor till `jcr:content/metadata/dc:title`)
@@ -111,9 +114,9 @@ Sökresultaten som matchar alla söktermer i metadatafält visas först, följt 
 
 Du kan förbättra nyckelordens relevans för vissa resurser för att öka sökningen baserat på nyckelorden. Det innebär att de bilder som du befordrar särskilda nyckelord för visas högst upp i sökresultatet när du söker baserat på dessa nyckelord.
 
-1. Öppna egenskapssidan för resursen i Assets-gränssnittet. Klicka på **[!UICONTROL Avancerat]** och klicka/tryck på **[!UICONTROL Lägg till]** under **[!UICONTROL Upphöjd för att söka efter nyckelord]**.
-1. I rutan **[!UICONTROL Sök efter]** ökning anger du ett nyckelord som du vill öka sökningen efter bilden för och klickar/trycker sedan på **[!UICONTROL Lägg till]**. Du kan ange flera nyckelord på samma sätt.
-1. Klicka/tryck på **[!UICONTROL Spara och stäng]**. Den resurs som du befordrade för det här nyckelordet visas bland de översta sökresultaten.
+1. From the [!DNL Assets] user interface, open the properties page for the asset. Klicka på **[!UICONTROL Advanced]** och klicka/tryck på **[!UICONTROL Add]** under **[!UICONTROL Elevate for search keywords]**.
+1. I **[!UICONTROL Search Promote]** rutan anger du ett nyckelord som du vill öka sökningen efter bilden för och klickar/trycker sedan på **[!UICONTROL Add]**. Du kan ange flera nyckelord på samma sätt.
+1. Klicka/tryck på **[!UICONTROL Save & Close]**. Den resurs som du befordrade för det här nyckelordet visas bland de översta sökresultaten.
 
 Du kan använda detta till din fördel genom att öka rankningen för vissa resurser i sökresultaten för nyckelordet target. Se exempelvideon nedan. Mer information finns i [Sök i Experience Manager](https://helpx.adobe.com/experience-manager/kt/assets/using/search-feature-video-use.html).
 
@@ -123,11 +126,11 @@ Du kan använda detta till din fördel genom att öka rankningen för vissa resu
 
 ## Avancerad sökning {#scope}
 
-I Experience Manager finns olika metoder, till exempel filter, som används för de sökda resurserna, så att du snabbare kan hitta de önskade resurserna. Nedan beskrivs några vanliga metoder. Några [illustrerade exempel](#samples) visas nedan.
+[!DNL Experience Manager] I finns olika metoder, till exempel filter som används för de sökda resurserna, för att du snabbare ska kunna hitta de önskade resurserna. Nedan beskrivs några vanliga metoder. Några [illustrerade exempel](#samples) visas nedan.
 
-**Sök efter filer eller mappar**: Se antingen filer, mappar eller båda i sökresultaten. På **[!UICONTROL filterpanelen]** kan du välja lämpligt alternativ. Se [sökgränssnitt](#searchui).
+**Sök efter filer eller mappar**: Se antingen filer, mappar eller båda i sökresultaten. På **[!UICONTROL Filters]** panelen kan du välja rätt alternativ. Se [sökgränssnitt](#searchui).
 
-**Sök efter resurser i en mapp**: Du kan begränsa sökningen till en viss mapp. Lägg till en mappsökväg på panelen **[!UICONTROL Filter]** . Du kan bara markera en mapp i taget.
+**Sök efter resurser i en mapp**: Du kan begränsa sökningen till en viss mapp. Lägg till en mappsökväg på **[!UICONTROL Filters]** panelen. Du kan bara markera en mapp i taget.
 
 ![Begränsa sökresultaten till en mapp genom att lägga till en mappsökväg i panelen Filter](assets/search_folder_select.gif)
 
@@ -135,7 +138,7 @@ I Experience Manager finns olika metoder, till exempel filter, som används för
 
 ### Söka efter liknande bilder {#visualsearch}
 
-To find images that are visually similar to a user-selected image, click **[!UICONTROL Find Similar]** option from the card view of an image or from the toolbar. Experience Manager visar de smarta taggade bilderna från DAM-databasen som liknar den bild som användaren har valt. Läs [Så här konfigurerar du likhetssökning](#configvisualsearch).
+Om du vill söka efter bilder som visuellt liknar en användarvald bild klickar du på alternativet **[!UICONTROL Find Similar]** i kortvyn för en bild eller i verktygsfältet. [!DNL Experience Manager] visar smarta taggade bilder från DAM-databasen som liknar den användarvalda bilden. Läs [Så här konfigurerar du likhetssökning](#configvisualsearch).
 
 ![Söka efter liknande bilder med hjälp av alternativet i kortvyn](assets/search_find_similar.png)
 
@@ -143,18 +146,18 @@ To find images that are visually similar to a user-selected image, click **[!UIC
 
 ### Adobe Stock-bilder {#adobestock}
 
-I Experience Managers användargränssnitt kan användare söka efter [Adobe Stock-mediefiler](/help/assets/aem-assets-adobe-stock.md) och licensiera de mediefiler som behövs. Lägg till `Location: Adobe Stock` i omsökningsfältet. Du kan också använda panelen Filter för att hitta alla licensierade eller olicensierade mediefiler eller söka efter en viss mediefil med hjälp av Adobe Stock-filnumret.
+I [!DNL Experience Manager] användargränssnittet kan användarna söka efter [Adobe Stock-mediefiler](/help/assets/aem-assets-adobe-stock.md) och licensiera de mediefiler som behövs. Lägg till `Location: Adobe Stock` i omsökningsfältet. Du kan också använda panelen Filter för att hitta alla licensierade eller olicensierade mediefiler eller söka efter en viss mediefil med hjälp av Adobe Stock-filnumret.
 
 ### Dynamiska medieresurser {#dmassets}
 
-Du kan filtrera efter dynamiska mediabilder genom att välja **[!UICONTROL Dynamiska media]** > **[!UICONTROL Uppsättningar]** på panelen **[!UICONTROL Filter]** . Den filtrerar och visar resurser som bilduppsättningar, karuseller, blandade medieuppsättningar och rotationsuppsättningar.
+Du kan filtrera efter dynamiska mediebilder genom att välja **[!UICONTROL Dynamic Media]** > **[!UICONTROL Sets]** på panelen **[!UICONTROL Filters]**. Den filtrerar och visar resurser som bilduppsättningar, karuseller, blandade medieuppsättningar och rotationsuppsättningar.
 
 ### Söka med specifika värden i metadatafält {#gqlsearch}
 
 Du kan söka efter resurser baserat på exakta värden för specifika metadatafält, som titel, beskrivning och författare. Funktionen för fulltextsökning i GQL hämtar endast resurser vars metadatavärde exakt matchar din sökfråga. Namnen på egenskaperna (till exempel författare, titel och så vidare) och värdena är skiftlägeskänsliga.
 
 | Metadatafält | Fasettvärde och -användning |
-|---|---|
+| ----------------------------------------- | ------------------------------------- |
 | Titel | title:John |
 | Originalformat | skapare:John |
 | Plats | plats:NA |
@@ -191,37 +194,37 @@ Här är några exempel på sökformat för komplexa frågor:
 * Så här visar du resurser med ett egenskapsvärde som innehåller en viss sträng (till exempel: title = Basel Meeting Room): `title:*Meeting*`
 * Så här visar du resurser som innehåller en viss sträng och har ett specifikt egenskapsvärde (till exempel: sök efter Adobe-strängen i resurser med title=John Doe): `*Adobe* title:"John Doe"`
 
-## Sök efter resurser från andra Experience Manager-erbjudanden eller gränssnitt {#beyondomnisearch}
+## Sök efter resurser från andra [!DNL Experience Manager] erbjudanden eller gränssnitt {#beyondomnisearch}
 
-Adobe Experience Manager kopplar DAM-databasen till olika andra Experience Manager-lösningar för att ge snabbare åtkomst till digitala resurser och effektivisera de kreativa arbetsflödena. Alla resursidentifieringar börjar med bläddring eller sökning. Sökfunktionen är i stort sett densamma på de olika ytorna och lösningarna. Vissa sökmetoder ändras när målgruppen, användningsexemplen och användargränssnittet varierar mellan Experience Manager-lösningarna. De specifika metoderna beskrivs för de enskilda lösningarna på länkarna nedan. De universellt tillämpliga tipsen och beteendena beskrivs i den här artikeln.
+[!DNL Adobe Experience Manager] kopplar DAM-databasen till olika andra [!DNL Experience Manager] lösningar för att ge snabbare åtkomst till digitala resurser och effektivisera de kreativa arbetsflödena. Alla resursidentifieringar börjar med bläddring eller sökning. Sökfunktionen är i stort sett densamma på de olika ytorna och lösningarna. Vissa sökmetoder ändras när målgruppen, användningsexemplen och användargränssnittet varierar mellan olika [!DNL Experience Manager] lösningar. De specifika metoderna beskrivs för de enskilda lösningarna på länkarna nedan. De universellt tillämpliga tipsen och beteendena beskrivs i den här artikeln.
 
 ### Söka efter resurser från Adobe Asset Link-panelen {#aal}
 
-Med Adobe Asset Link kan formgivarna nu komma åt innehåll som lagras i Experience Manager Assets, utan att lämna de Adobe Creative Cloud-program som stöds. Med hjälp av panelen i appen i Creative Cloud-programmen kan du smidigt söka efter, söka efter, checka ut och checka in resurser: Photoshop, Illustrator och InDesign. Med Asset Link kan du också söka visuellt liknande resultat. Visuella sökresultat bygger på Adobe Senseis maskininlärningsalgoritmer och hjälper användarna att hitta estetiskt liknande bilder. Se [söka efter och bläddra bland resurser](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink) med Adobe Asset Link.
+Med Adobe Asset Link kan formgivare nu komma åt innehåll som lagras i [!DNL Experience Manager Assets], utan att lämna de Adobe Creative Cloud-program som stöds. Med hjälp av panelen i appen i Creative Cloud-programmen kan du smidigt söka efter, söka efter, checka ut och checka in resurser: Photoshop, Illustrator och InDesign. Med Asset Link kan du också söka visuellt liknande resultat. Visuella sökresultat bygger på Adobe Senseis maskininlärningsalgoritmer och hjälper användarna att hitta estetiskt liknande bilder. Se [söka efter och bläddra bland resurser](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink) med Adobe Asset Link.
 
-### Sök efter resurser i Experience Manager-datorprogrammet {#desktopapp}
+### Söka efter resurser i [!DNL Experience Manager] skrivbordsappen {#desktopapp}
 
-Kreatörer använder datorprogrammet för att göra Experience Manager Assets enkelt sökbart och tillgängligt på sin lokala dator (Win eller Mac). Det är enkelt att visa de resurser du vill i Finder eller Utforskaren i Windows, som öppnas i skrivbordsprogram och ändras lokalt. Ändringarna sparas sedan i Experience Manager med en ny version som skapas i databasen. Programmet stöder enkla sökningar med ett eller flera nyckelord, * och ? jokertecken och operatorn AND. Se [Bläddra bland, söka efter och förhandsgranska resurser](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#browse-search-preview-assets) i skrivbordsappen.
+Kreatörer använder datorprogrammet för att göra det [!DNL Experience Manager Assets] enkelt att söka och tillgängligt på sin dator (Win eller Mac). Det är enkelt att visa de önskade resurserna i Finder eller Utforskaren i Windows, som öppnats i skrivbordsprogram och ändrats lokalt. Ändringarna sparas sedan [!DNL Experience Manager] i en ny version som skapats i databasen. Programmet har stöd för grundläggande sökningar med ett eller flera nyckelord, `*` jokertecken och `?` `AND` operatorn . Se [Bläddra bland, söka efter och förhandsgranska resurser](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#browse-search-preview-assets) i skrivbordsappen.
 
-### Sök efter resurser i varumärkesportalen {#brandportal}
+### Sök resurser i [!DNL Brand Portal] {#brandportal}
 
 Affärsanvändare och marknadsförare använder Brand Portal för att effektivt och säkert dela godkänt digitalt material med interna team, partners och återförsäljare. Se [Sök resurser på varumärkesportalen](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/search-capabilities/brand-portal-searching.html).
 
-### Sök efter Adobe Stock-bilder {#adobestock-1}
+### Sök efter [!DNL Adobe Stock] bilder {#adobestock-1}
 
-I Experience Managers användargränssnitt kan användarna söka efter Adobe Stock-mediefiler och licensiera de mediefiler som behövs. Lägg till `Location: Adobe Stock` i Omnissearch-fältet. Du kan också använda **[!UICONTROL filterpanelen]** för att hitta alla licensierade eller olicensierade mediefiler eller söka efter en viss mediefil med hjälp av Adobe Stock-filnumret. Se [Hantera Adobe Stock-bilder i Experience Manager](/help/assets/aem-assets-adobe-stock.md#usemanage).
+I [!DNL Experience Manager] användargränssnittet kan användarna söka efter Adobe Stock-mediefiler och licensiera de mediefiler som behövs. Lägg till `Location: Adobe Stock` i Omnissearch-fältet. Du kan också använda **[!UICONTROL Filters]** panelen för att hitta alla licensierade eller olicensierade mediefiler eller söka efter en viss mediefil med hjälp av Adobe Stock-filnumret. Se [Hantera Adobe Stock-bilder i Experience Manager](/help/assets/aem-assets-adobe-stock.md#usemanage).
 
 ### Sök efter Dynamic Media-resurser {#dynamicmedia}
 
-Du kan filtrera efter dynamiska mediabilder genom att välja **[!UICONTROL Dynamiska media]** > **[!UICONTROL Uppsättningar]** på panelen **[!UICONTROL Filter]** . Den filtrerar och visar resurser som bilduppsättningar, karuseller, blandade medieuppsättningar och rotationsuppsättningar. När författarna redigerar webbsidor kan de söka efter uppsättningar inifrån Content Finder. Det finns ett filter för uppsättningar på en snabbmeny.
+Du kan filtrera efter dynamiska mediebilder genom att välja **[!UICONTROL Dynamic Media]** > **[!UICONTROL Sets]** på panelen **[!UICONTROL Filters]**. Den filtrerar och visar resurser som bilduppsättningar, karuseller, blandade medieuppsättningar och rotationsuppsättningar. När författarna redigerar webbsidor kan de söka efter uppsättningar inifrån Content Finder. Det finns ett filter för uppsättningar på en snabbmeny.
 
 ### Söka efter resurser i Content Finder vid redigering av webbsidor {#contentfinder}
 
-Författare kan använda Content Finder för att söka i DAM-databasen efter relevanta resurser och använda resurserna på de webbsidor de skapar. Upphovsmannen kan också använda funktionen Anslutna resurser för att söka efter resurser som är tillgängliga i en fjärrdistribution av Experience Manager. Författare kan sedan använda dessa resurser på webbsidor i en lokal Experience Manager-distribution. Se [Använda fjärrresurser](/help/assets/use-assets-across-connected-assets-instances.md#use-remote-assets).
+Författare kan använda Content Finder för att söka i DAM-databasen efter relevanta resurser och använda resurserna på de webbsidor de skapar. Författare kan också använda funktionen Anslutna resurser för att söka efter resurser som är tillgängliga i en fjärrdistribution [!DNL Experience Manager] . Författare kan sedan använda dessa resurser på webbsidor i en lokal [!DNL Experience Manager] distribution. Se [Använda fjärrresurser](/help/assets/use-assets-across-connected-assets-instances.md#use-remote-assets).
 
 ### Sök i samlingar {#collections}
 
-Sökfunktionen i Experience Manager stöder sökning efter samlingar och sökning efter resurser i en samling. Se [söksamlingar](/help/assets/managing-collections-touch-ui.md).
+[!DNL Experience Manager] sökfunktionen stöder sökning efter samlingar och sökning efter resurser i en samling. Se [söksamlingar](/help/assets/managing-collections-touch-ui.md).
 
 ## Resursväljaren {#assetselector}
 
@@ -248,18 +251,18 @@ Gå till `https://[aem_server]:[port]/aem/assetpicker`resursväljarens gränssni
 
 ## Begränsningar {#limitations}
 
-Sökfunktionen i Experience Manager Assets har följande begränsningar:
+Sökfunktionen i [!DNL Experience Manager Assets] har följande begränsningar:
 
 * Ange inget radavståndsutrymme i sökfrågan, annars fungerar inte sökningen.
-* Experience Manager kan fortsätta att visa söktermen efter att du har valt egenskaper för en resurs bland sökresultaten och sedan avbrutit sökningen. <!-- (CQ-4273540) -->
+* [!DNL Experience Manager] kan fortsätta att visa söktermen efter att du har valt egenskaper för en resurs bland sökresultaten och sedan avbryta sökningen. <!-- (CQ-4273540) -->
 * När du söker efter mappar, filer och mappar kan sökresultaten inte sorteras efter någon parameter.
-* Om du trycker på retur utan att skriva något i omsökningsfältet returnerar Experience Manager bara en lista med filer och inte mappar. Om du söker specifikt efter mappar utan att använda ett nyckelord returneras inga resultat i Experience Manager.
-* Använd alternativet **[!UICONTROL Markera alla]** i det övre högra hörnet av söksidan för att välja de sökbara resurserna. Experience Manager visar först 100 resurser i kortvyn och 200 resurser i listvyn. Fler resurser läses in när du bläddrar i sökresultaten. Du kan välja fler resurser än de inlästa resurserna. Antalet markerade resurser visas i det övre högra hörnet på sökresultatsidan. Du kan arbeta med markeringen, till exempel hämta de markerade resurserna, uppdatera metadataegenskaperna i grupp för de markerade resurserna eller lägga till de markerade resurserna i en samling. När fler resurser är markerade än vad som visas tillämpas en åtgärd antingen på alla markerade resurser eller så visas antalet resurser som åtgärden används på i en dialogruta. Om du vill tillämpa en åtgärd på de resurser som inte lästes in måste du se till att alla resurser är uttryckligen markerade.
+* Om du trycker på Retur utan att skriva något i Omnissearch bar [!DNL Experience Manager] returneras en lista med endast filer och inte mappar. Om du söker specifikt efter mappar utan att använda ett nyckelord returneras inga resultat i . [!DNL Experience Manager]
+* Använd alternativet **[!UICONTROL Select All]** i det övre högra hörnet av söksidan för att välja de sökbara resurserna. [!DNL Experience Manager] visar först 100 resurser i kortvyn och 200 resurser i listvyn. Fler resurser läses in när du bläddrar i sökresultaten. Du kan välja fler resurser än de inlästa resurserna. Antalet markerade resurser visas i det övre högra hörnet på sökresultatsidan. Du kan arbeta med markeringen, till exempel hämta de markerade resurserna, uppdatera metadataegenskaperna i grupp för de markerade resurserna eller lägga till de markerade resurserna i en samling. När fler resurser är markerade än vad som visas tillämpas en åtgärd antingen på alla markerade resurser eller så visas antalet resurser som åtgärden används på i en dialogruta. Om du vill tillämpa en åtgärd på de resurser som inte lästes in måste du se till att alla resurser är uttryckligen markerade.
 
 Visuell sökning eller likhetssökning har följande begränsningar:
 
 * Visuell sökning fungerar bäst med större databaser. Även om det inte finns något minsta antal bilder som krävs för bra resultat, kanske inte matchningskvaliteten för ett fåtal bilder är lika bra som matchningarna från en stor databas.
-* Du kan inte ändra modell eller utbilda Experience Manager för att hitta liknande bilder. Modellen ändras inte om du till exempel lägger till eller tar bort smarta taggar för ett fåtal resurser. Resurserna tas inte med i de visuellt liknande sökresultaten.
+* Du kan inte ändra modell eller tåg [!DNL Experience Manager] för att hitta liknande bilder. Modellen ändras inte om du till exempel lägger till eller tar bort smarta taggar för ett fåtal resurser. Resurserna tas inte med i de visuellt liknande sökresultaten.
 
 Sökfunktionen kan ha prestandabegränsningar i följande scenarier:
 
@@ -269,13 +272,13 @@ Sökfunktionen kan ha prestandabegränsningar i följande scenarier:
 
 * När du övervakar granskningsstatusen för resurser ska du använda lämpligt alternativ för att hitta vilka resurser som är godkända eller vilka resurser som väntar på godkännande.
 * Använd Insights-predikatet för att söka efter resurser som stöds baserat på användningsstatistik från olika Creative-program. Användningsdata grupperas under Användningspoäng, Impressions, Clicks och Media-kanaler där resurserna visas i kategorier.
-* Använd kryssrutan **[!UICONTROL Markera alla]** för att välja de sökda resurserna. Experience Manager visar först 100 resurser i kortvyn och 200 resurser i listvyn. Fler resurser läses in när du bläddrar i sökresultaten. Du kan välja fler resurser än de inlästa resurserna. Antalet markerade resurser visas i det övre högra hörnet på sökresultatsidan. Du kan arbeta med markeringen, till exempel hämta de markerade resurserna, uppdatera metadataegenskaperna i grupp för de markerade resurserna eller lägga till de markerade resurserna i en samling. När fler resurser är markerade än vad som visas tillämpas en åtgärd antingen på alla markerade resurser eller så visas antalet resurser som åtgärden används på i en dialogruta. Om du vill tillämpa en åtgärd på de resurser som inte lästes in måste du se till att alla resurser är uttryckligen markerade.
+* Använd kryssrutan för att välja de sökbara resurserna **[!UICONTROL Select All]** . [!DNL Experience Manager] visar först 100 resurser i kortvyn och 200 resurser i listvyn. Fler resurser läses in när du bläddrar i sökresultaten. Du kan välja fler resurser än de inlästa resurserna. Antalet markerade resurser visas i det övre högra hörnet på sökresultatsidan. Du kan arbeta med markeringen, till exempel hämta de markerade resurserna, uppdatera metadataegenskaperna i grupp för de markerade resurserna eller lägga till de markerade resurserna i en samling. När fler resurser är markerade än vad som visas tillämpas en åtgärd antingen på alla markerade resurser eller så visas antalet resurser som åtgärden används på i en dialogruta. Om du vill tillämpa en åtgärd på de resurser som inte lästes in måste du se till att alla resurser är uttryckligen markerade.
 * Mer information om hur du söker efter resurser som inte innehåller de obligatoriska metadata finns i [obligatoriska metadata](#mandatorymetadata).
 * Alla metadatafält används för sökningen. En allmän sökning, som att söka efter 12, ger vanligtvis många resultat. Du får bättre resultat om du använder dubbla (inte enkla) citattecken eller ser till att talet ligger intill ett ord utan specialtecken (till exempel *sko12*).
 * Fulltextsökning stöder operatorer som -, ^ och så vidare. Om du vill söka efter de här bokstäverna som stränglitteraler omger du sökuttrycket med citattecken. Använd till exempel &quot;Anteckningsbok - Skönhet&quot; i stället för Anteckningsbok - Skönhet.
 * Om sökresultaten är för många kan du begränsa [sökningen](#scope) till noll för de önskade resurserna. Det fungerar bäst om du har en aning om hur du ska söka efter de önskade resurserna, till exempel en viss filtyp, en viss plats, specifika metadata och så vidare.
 
-* **Taggning**: Taggar hjälper dig att kategorisera resurser som du kan bläddra bland och söka efter mer effektivt. Taggning hjälper till att sprida rätt taxonomi till andra användare och arbetsflöden. Experience Manager erbjuder metoder för att automatiskt tagga resurser med hjälp av Adobe Senseis artificiellt intelligenta tjänster som hela tiden blir bättre på att tagga upp era resurser med användning och utbildning. När du söker efter resurser tas smarta taggar med i beräkningen om funktionen är aktiverad på ditt konto. Det fungerar tillsammans med de inbyggda sökfunktionerna. Se [sökbeteende](#searchbehavior). Om du vill optimera den ordning i vilken sökresultaten visas kan du [öka sökrankningen](#searchrank) för några utvalda resurser.
+* **Taggning**: Taggar hjälper dig att kategorisera resurser som du kan bläddra bland och söka efter mer effektivt. Taggning hjälper till att sprida rätt taxonomi till andra användare och arbetsflöden. [!DNL Experience Manager] erbjuder metoder för att automatiskt tagga resurser med hjälp av Adobe Senseis artificiellt intelligenta tjänster som hela tiden blir bättre på att tagga upp materialet med användning och utbildning. När du söker efter resurser tas smarta taggar med i beräkningen om funktionen är aktiverad på ditt konto. Det fungerar tillsammans med de inbyggda sökfunktionerna. Se [sökbeteende](#searchbehavior). Om du vill optimera den ordning i vilken sökresultaten visas kan du [öka sökrankningen](#searchrank) för några utvalda resurser.
 
 * **Indexering**: Endast indexerade metadata och resurser returneras i sökresultatet. För bättre täckning och prestanda bör du se till att indexeringen är korrekt och följa bästa praxis. Se [indexering](#searchindex).
 
@@ -324,9 +327,9 @@ Resursidentifiering bygger på indexering av DAM-innehåll, inklusive metadata. 
 
 ### Visuell sökning eller likhetssökning {#configvisualsearch}
 
-Visuell sökning använder smart taggning och kräver Experience Manager 6.5.2.0 eller senare. Följ de här stegen när du har konfigurerat funktionen för smart taggning.
+Visuell sökning använder smart taggning och kräver [!DNL Experience Manager] 6.5.2.0 eller senare. Följ de här stegen när du har konfigurerat funktionen för smart taggning.
 
-1. I Experience Manager CRXDE i `/oak:index/lucene` noden lägger du till följande egenskaper och värden och sparar ändringarna.
+1. I [!DNL Experience Manager] CRXDE, i `/oak:index/lucene` noden, lägger du till följande egenskaper och värden och sparar ändringarna.
 
    * `costPerEntry` type-egenskap `Double` med värdet `10`.
 
@@ -347,7 +350,7 @@ Visuell sökning använder smart taggning och kräver Experience Manager 6.5.2.0
    Spara ändringarna.
 
 1. Få åtkomst till `/oak:index/damAssetLucene/indexRules/dam:Asset/properties/predictedTags` och lägg till `similarityTags` egenskaper av typen `Boolean` med värdet för `true`.
-1. Använd smarta taggar på resurserna i Experience Manager-databasen. Se [hur du konfigurerar smarta taggar](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/smart-tags-technical-video-setup.html).
+1. Använd smarta taggar för resurserna i din [!DNL Experience Manager] databas. Se [hur du konfigurerar smarta taggar](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/smart-tags-technical-video-setup.html).
 1. I CRXDE i `/oak-index/damAssetLucene` noden anger du `reindex` egenskapen till `true`. Spara ändringarna.
 1. (Valfritt) Om du har skapat ett anpassat sökformulär kopierar du `/libs/settings/dam/search/facets/assets/jcr%3Acontent/items/similaritysearch` noden till `/conf/global/settings/dam/search/facets/assets/jcr:content/items`. Spara alla ändringar.
 
@@ -359,11 +362,11 @@ Affärsanvändare, administratörer och DAM-bibliotek kan definiera vissa metada
 
 ### Ändra sökfaktorer {#searchfacets}
 
-Experience Manager Assets har sökfunktioner som du kan använda för att filtrera sökresultaten, vilket ger snabbare upptäckt. Panelen Filter innehåller som standard några standardaspekter. Administratörer kan anpassa filterpanelen för att ändra standardmetoderna med hjälp av inbyggda predikat. Experience Manager innehåller en bra samling inbyggda predikat och en redigerare som anpassar ansiktena. Se [sökfaktorer](/help/assets/search-facets.md).
+För att öka hastigheten på identifieringen erbjuder [!DNL Experience Manager Assets] sökfaktorer som du kan använda för att filtrera sökresultaten. Panelen Filter innehåller som standard några standardaspekter. Administratörer kan anpassa filterpanelen för att ändra standardmetoderna med hjälp av inbyggda predikat. [!DNL Experience Manager] innehåller en bra samling inbyggda predikat och en redigerare för att anpassa ansiktena. Se [sökfaktorer](/help/assets/search-facets.md).
 
 ### Extrahera text när resurser överförs {#extracttextupload}
 
-Du kan konfigurera Experience Manager så att texten extraheras från resurserna när användarna överför resurser, till exempel PSD- eller PDF-filer. Experience Manager indexerar den extraherade texten och hjälper användarna att söka efter dessa resurser baserat på den extraherade texten. Se [Överföra resurser](/help/assets/managing-assets-touch-ui.md#uploading-assets).
+Du kan konfigurera så [!DNL Experience Manager] att texten extraheras från resurserna när användare överför resurser, till exempel PSD- eller PDF-filer. [!DNL Experience Manager] indexerar den extraherade texten och hjälper användarna att söka efter dessa resurser baserat på den extraherade texten. Se [Överföra resurser](/help/assets/managing-assets-touch-ui.md#uploading-assets).
 
 ### Anpassade predikat för att filtrera sökresultat {#custompredicates}
 
@@ -399,7 +402,7 @@ När du ser sökningar efter resurser som matchar dina villkor kan du utföra f�
 
 ### Sortera sökresultat {#sort}
 
-Om du sorterar sökresultatet hittar du snabbare den resurs du behöver. Sorting search results works in list view and only when you select **[!UICONTROL [Files](#searchui)]**from the**[!UICONTROL  Filters ]**panel. Experience Manager Assets använder sortering på serversidan för att snabbt sortera alla resurser (oavsett hur många) i en mapp eller resultaten av en sökfråga. Sortering på serversidan ger snabbare och exaktare resultat än sortering på klientsidan.
+Om du sorterar sökresultatet hittar du snabbare den resurs du behöver. Sortering av sökresultat fungerar i listvyn och endast när du väljer **[!UICONTROL [Filer](#searchui)]** på panelen **[!UICONTROL Filters]**. [!DNL Experience Manager Assets]I används serversortering för att snabbt sortera alla resurser (oavsett hur många) i en mapp eller i resultatet av en sökfråga. Sortering på serversidan ger snabbare och exaktare resultat än sortering på klientsidan.
 
 I listvyn kan du sortera sökresultaten på samma sätt som du kan sortera resurser i valfri mapp. Sortering fungerar för de här kolumnerna - Namn, Titel, Status, Dimensioner, Storlek, Klassificering, Användning, Skapad (Datum), Ändrad (Datum), Publicerad, Arbetsflöde och Utcheckad.
 
@@ -409,9 +412,9 @@ Begränsningar av sorteringsfunktioner finns i [Begränsningar](#limitations).
 
 Du kan kontrollera detaljerad information om en sökresurs från sökresultatsidan.
 
-Om du vill visa alla metadata för en resurs markerar du resursen och klickar på **[!UICONTROL egenskaper]** i verktygsfältet.
+Om du vill visa alla metadata för en resurs markerar du resursen och klickar på **[!UICONTROL properties]** i verktygsfältet.
 
-Om du vill kontrollera kommentarerna för en resurs eller versionshistoriken för en resurs klickar du på resursen för att öppna en stor förhandsvisning. Open timeline in the left rail and select **[!UICONTROL Comments]** or **[!UICONTROL Versions]**. Du kan också sortera tidslinjeaktiviteter, som kommentarer eller versioner, i kronologisk ordning.
+Om du vill kontrollera kommentarerna för en resurs eller versionshistoriken för en resurs klickar du på resursen för att öppna en stor förhandsvisning. Öppna tidslinjen i den vänstra rutan och välj **[!UICONTROL Comments]** eller **[!UICONTROL Versions]**. Du kan också sortera tidslinjeaktiviteter, som kommentarer eller versioner, i kronologisk ordning.
 
 ![Sortera tidslinjeposter för en sökresurs](assets/sort_timeline_search_results.gif)
 
@@ -419,11 +422,11 @@ Om du vill kontrollera kommentarerna för en resurs eller versionshistoriken fö
 
 ### Hämta sökbara resurser {#download}
 
-Du kan hämta de sökda resurserna och deras återgivningar på samma sätt som du hämtar vanliga resurser från mappar. Välj en eller flera resurser från sökresultaten och klicka på **[!UICONTROL Hämta]** i verktygsfältet.
+Du kan hämta de sökda resurserna och deras återgivningar på samma sätt som du hämtar vanliga resurser från mappar. Välj en eller flera resurser från sökresultaten och klicka på **[!UICONTROL Download]** i verktygsfältet.
 
 ### Uppdatera metadataegenskaper gruppvis {#metadataupdates}
 
-Det går att göra satsvisa uppdateringar av de gemensamma metadatafälten för flera resurser. Välj en eller flera resurser från sökresultaten. Klicka på **[!UICONTROL Egenskaper]** i verktygsfältet och uppdatera metadata efter behov. Klicka på **[!UICONTROL Spara och stäng]** när du är klar. De befintliga metadata i de uppdaterade fälten skrivs över.
+Det går att göra satsvisa uppdateringar av de gemensamma metadatafälten för flera resurser. Välj en eller flera resurser från sökresultaten. Klicka **[!UICONTROL Properties]** i verktygsfältet och uppdatera metadata efter behov. Klicka **[!UICONTROL Save and Close]** när du är klar. De befintliga metadata i de uppdaterade fälten skrivs över.
 
 För resurser som är tillgängliga i en enda mapp eller en samling är det enklare att [uppdatera metadata gruppvis](/help/assets/managing-multiple-assets.md) utan att använda sökfunktionen. För resurser som är tillgängliga i olika mappar eller matchar ett gemensamt villkor är det snabbare att uppdatera metadata i grupp via sökning.
 
@@ -434,21 +437,21 @@ En samling är en ordnad uppsättning resurser som kan innehålla resurser från
 * En statisk referenslista med resurser, mappar och andra samlingar.
 * En dynamisk lista (smart samling) som fyller i resurser i samlingen baserat på sökvillkor.
 
-Du kan skapa smarta samlingar baserat på sökvillkoren. På **[!UICONTROL filterpanelen]** väljer du **[!UICONTROL Filer]** och klickar på **[!UICONTROL Spara smart samling]**. Läs mer i [Hantera samlingar](/help/assets/managing-collections-touch-ui.md).
+Du kan skapa smarta samlingar baserat på sökvillkoren. På panelen **[!UICONTROL Filters]** väljer du **[!UICONTROL Files]** och klickar på **[!UICONTROL Save Smart Collection]**. Läs mer i [Hantera samlingar](/help/assets/managing-collections-touch-ui.md).
 
 ## Felsöka oväntade sökresultat och problem {#troubleshoot-unexpected-search-results-and-issues}
 
 | Fel, problem, symtom | Möjlig orsak | Möjlig korrigering eller förståelse för problemet |
 |---|---|---|
-| Felaktiga resultat vid sökning efter resurser som saknar metadata | När du söker efter resurser som saknar obligatoriska metadata kan Experience Manager visa resurser som har giltiga metadata. Resultatet baseras på indexerad metadataegenskap. | När metadata har uppdaterats krävs omindexering för att återspegla rätt status för resursens metadata. Se [obligatoriska metadata](metadata-schemas.md#define-mandatory-metadata). |
+| Felaktiga resultat vid sökning efter resurser som saknar metadata | När du söker efter resurser som saknar de obligatoriska metadata, kan [!DNL Experience Manager] visa vissa resurser som har giltiga metadata. Resultatet baseras på indexerad metadataegenskap. | När metadata har uppdaterats krävs omindexering för att återspegla rätt status för resursens metadata. Se [obligatoriska metadata](metadata-schemas.md#define-mandatory-metadata). |
 | För många sökresultat | En stor sökparameter. | Överväg att begränsa [sökningens](#scope)omfattning. Smarta taggar kan ge fler sökresultat än du förväntade dig. Se [sökbeteendet med smarta taggar](#withsmarttags). |
 | Orelaterade eller delvis relaterade sökresultat | Sökbeteendet ändras med smart taggning. | Förstå [hur sökningen ändras efter smart taggning](#withsmarttags). |
-| Inga förslag för resurser som fylls i automatiskt | Nyligen överförda resurser har ännu inte indexerats. Metadata är inte omedelbart tillgängliga som förslag när du börjar skriva ett söknyckelord i omsökningsfältet. | Experience Manager Assets väntar tills en timeout-period har gått ut (en timme som standard) innan ett bakgrundsjobb körs för att indexera metadata för alla nyligen överförda eller uppdaterade resurser och lägger sedan till metadata i listan med förslag. |
+| Inga förslag för resurser som fylls i automatiskt | Nyligen överförda resurser har ännu inte indexerats. Metadata är inte omedelbart tillgängliga som förslag när du börjar skriva ett söknyckelord i omsökningsfältet. | [!DNL Assets] Väntar till utgången av en timeout-period (en timme som standard) innan ett bakgrundsjobb körs för att indexera metadata för alla nyligen överförda eller uppdaterade resurser och lägger sedan till metadata i listan med förslag. |
 | Inga sökresultat | <ul><li>Det finns inga resurser som matchar din fråga.</li><li>Du lade till ett tomt utrymme före sökfrågan.</li><li>Ett metadatafält som inte stöds innehåller nyckelordet som du söker efter.</li><li>I tid och offline konfigureras resursen och sökningen gjordes när resursen var ledig.</li></ul> | <ul><li>Sök med ett annat nyckelord. Du kan även använda smart taggning för att förbättra sökresultaten.</li><li>Det är en [känd begränsning](#limitations).</li><li>Alla metadatafält beaktas inte vid sökningar. Se [omfång](#scope).</li><li>Sök senare eller ändra på- och avtidsinställningarna för de nödvändiga resurserna.</li></ul> |
-| Sökfilter/ predikat är inte tillgängligt | <ul><li>Sökfiltret är inte konfigurerat.</li><li>Den är inte tillgänglig för din inloggning.</li><li>(Sannolikheten är mindre) Sökalternativen är inte anpassade efter den distribution du använder.</li></ul> | <ul><li>Kontakta administratören för att kontrollera om sökanpassningarna är tillgängliga eller inte.</li><li>Kontakta administratören för att kontrollera om ditt konto har behörighet att använda anpassningen.</li><li>Kontakta administratören och kontrollera tillgängliga anpassningar för den Experience Manager Assets-distribution som du använder.</li></ul> |
-| När du söker efter visuellt liknande bilder saknas en förväntad bild | <ul><li>Bilden är inte tillgänglig i Experience Manager.</li><li>Bilden är inte indexerad. Vanligtvis när den nyligen har överförts.</li><li>Bilden är inte smart taggad.</li></ul> | <ul><li>Lägg till bilden i Experience Manager Assets.</li><li>Kontakta administratören om du vill indexera om databasen. Se även till att du använder rätt index.</li><li>Kontakta administratören om du vill tagga de relevanta resurserna på ett smart sätt.</li></ul> |
-| När du söker efter visuellt liknande bilder visas en irrelevant bild | Visuell sökfunktion. | Experience Manager visar så många potentiellt relevanta resurser som möjligt. Mindre relevanta bilder, om sådana finns, läggs till i resultatet men med en lägre sökrankning. Kvaliteten på matchningarna och relevansen hos de sökda resurserna minskar när du bläddrar nedåt i sökresultaten. |
-| När du väljer och arbetar med sökresultat används inte alla sökresurser | Med alternativet [!UICONTROL Markera alla] markeras endast de första 100 sökresultaten i kortvyn och de första 200 sökresultaten i listvyn. |  |
+| Sökfilter/ predikat är inte tillgängligt | <ul><li>Sökfiltret är inte konfigurerat.</li><li>Den är inte tillgänglig för din inloggning.</li><li>(Sannolikheten är mindre) Sökalternativen är inte anpassade efter den distribution du använder.</li></ul> | <ul><li>Kontakta administratören för att kontrollera om sökanpassningarna är tillgängliga eller inte.</li><li>Kontakta administratören för att kontrollera om ditt konto har behörighet att använda anpassningen.</li><li>Kontakta administratören och kontrollera vilka anpassningar som är tillgängliga för den [!DNL Assets] distribution du använder.</li></ul> |
+| När du söker efter visuellt liknande bilder saknas en förväntad bild | <ul><li>Bilden är inte tillgänglig i [!DNL Experience Manager].</li><li>Bilden är inte indexerad. Vanligtvis när den nyligen har överförts.</li><li>Bilden är inte smart taggad.</li></ul> | <ul><li>Lägg till bilden i [!DNL Assets].</li><li>Kontakta administratören om du vill indexera om databasen. Se även till att du använder rätt index.</li><li>Kontakta administratören om du vill tagga de relevanta resurserna på ett smart sätt.</li></ul> |
+| När du söker efter visuellt liknande bilder visas en irrelevant bild | Visuell sökfunktion. | [!DNL Experience Manager] visar så många potentiellt relevanta tillgångar som möjligt. Mindre relevanta bilder, om sådana finns, läggs till i resultatet men med en lägre sökrankning. Kvaliteten på matchningarna och relevansen hos de sökda resurserna minskar när du bläddrar nedåt i sökresultaten. |
+| När du väljer och arbetar med sökresultat används inte alla sökresurser | Med det här [!UICONTROL Select All] alternativet väljs endast de första 100 sökresultaten i kortvyn och de första 200 sökresultaten i listvyn. |  |
 
 >[!MORELIKETHIS]
 >
