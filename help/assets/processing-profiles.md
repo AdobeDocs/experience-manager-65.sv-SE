@@ -9,7 +9,10 @@ content-type: reference
 discoiquuid: b555bf0c-44cb-4fbf-abc4-15971663904d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
+source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
+workflow-type: tm+mt
+source-wordcount: '1317'
+ht-degree: 2%
 
 ---
 
@@ -71,50 +74,50 @@ Migreringens publiceringsagent måste inaktiveras på Dynamic Media-servern så 
    * Om det finns en eller flera undermappar med resurser i den markerade huvudmappen bearbetas alla resurser i mapphierarkin igen.
    * Som en god vana bör du undvika att köra det här arbetsflödet på en mapphierarki som har fler än 1 000 resurser.
 
-1. Klicka på **[!UICONTROL Tidslinje]** i listrutan nära sidans övre vänstra hörn.
+1. Klicka på **[!UICONTROL Timeline]** i listrutan nära sidans övre vänstra hörn.
 1. Klicka på karikonen ( **^** ) nära sidans nedre vänstra hörn till höger om kommentarsfältet.
 
    ![Bearbeta resursarbetsflöde 1](/help/assets/assets/reprocess-assets1.png)
 
-1. Klicka på **[!UICONTROL Starta arbetsflöde]**.
-1. Välj **[!UICONTROL Scen7 i listrutan]** Starta arbetsflöde **[!UICONTROL : Återbearbeta resurser]**.
+1. Klicka på **[!UICONTROL Start Workflow]**.
+1. From the **[!UICONTROL Start Workflow]** drop-down list, choose **[!UICONTROL Scene7: Reprocess Assets]**.
 1. (Valfritt) Ange ett namn för arbetsflödet i **textrutan** Ange arbetsflödets rubrik. Du kan använda namnet för att referera till arbetsflödesinstansen, om det behövs.
 
    ![Bearbeta resurser 2](/help/assets/assets/reprocess-assets2.png)
 
-1. Klicka på **[!UICONTROL Start]** och sedan på **[!UICONTROL Bekräfta]**.
+1. Klicka **[!UICONTROL Start]** och sedan på **[!UICONTROL Confirm]**.
 
-   Om du vill övervaka arbetsflödet eller kontrollera dess förlopp går du till AEM-huvudkonsolsidan och klickar på **[!UICONTROL Verktyg > Arbetsflöde]**. Välj ett arbetsflöde på sidan Arbetsflödesinstanser. Klicka på **[!UICONTROL Öppna historik]** på menyraden. Du kan också avsluta, göra uppehåll i eller byta namn på ett valt arbetsflöde från samma sida för arbetsflödesinstanser.
+   Om du vill övervaka arbetsflödet eller kontrollera förloppet går du till AEM-huvudkonsolsidan och klickar på **[!UICONTROL Tools > Workflow]**. Välj ett arbetsflöde på sidan Arbetsflödesinstanser. Klicka på på menyraden **[!UICONTROL Open History]**. Du kan också avsluta, göra uppehåll i eller byta namn på ett valt arbetsflöde från samma sida för arbetsflödesinstanser.
 
 ### Justera batchstorleken för arbetsflödet för ombearbetning {#adjusting-load}
 
-(Valfritt) Standardbatchstorleken i ombearbetningsarbetsflödet är 50 resurser per jobb. Den optimala batchstorleken styrs av den genomsnittliga tillgångsstorleken och de Mime-typer av resurser som ombearbetningen körs på. Ett högre värde innebär att du kommer att ha många filer i ett och samma ombearbetningsjobb. Bearbetningsbanderollen ligger alltså kvar på AEM-resurserna en längre tid. Om den genomsnittliga filstorleken är liten, 1 MB eller mindre, rekommenderar Adobe att du ökar värdet till flera hundra, men aldrig mer än 1 000. Om den genomsnittliga filstorleken är large-Hundratals megabyte rekommenderar Adobe att du minskar gruppstorleken upp till 10.
+(Valfritt) Standardbatchstorleken i ombearbetningsarbetsflödet är 50 resurser per jobb. Den optimala batchstorleken styrs av den genomsnittliga tillgångsstorleken och de MIME-typer av resurser som ombearbetningen körs på. Ett högre värde innebär att du kommer att ha många filer i ett och samma ombearbetningsjobb. Bearbetningsbanderollen ligger alltså kvar på AEM-resurserna en längre tid. Om den genomsnittliga filstorleken är liten, 1 MB eller mindre, rekommenderar Adobe att du ökar värdet till flera hundra, men aldrig mer än 1 000. Om den genomsnittliga filstorleken är large-Hundratals megabyte rekommenderar Adobe att du minskar gruppstorleken upp till 10.
 
 **Om du vill justera batchstorleken för arbetsflödet för ombearbetning**
 
-1. I Experience Manager trycker du på **[!UICONTROL Adobe Experience Manager]** för att komma åt den globala navigeringskonsolen och sedan på ikonen **[!UICONTROL Verktyg]** (hammer) > **[!UICONTROL Arbetsflöde > Modeller]**.
-1. På sidan Arbetsflödesmodeller i kortvyn eller listvyn väljer du **[!UICONTROL Scen7: Återbearbeta resurser]**.
+1. I Experience Manager trycker du på **[!UICONTROL Adobe Experience Manager]** för att komma åt den globala navigeringskonsolen och sedan på **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Workflow > Models]**.
+1. På sidan Arbetsflödesmodeller i kortvyn eller listvyn väljer du **[!UICONTROL Scene7: Reprocess Assets]**.
 
    ![Sidan Arbetsflödesmodeller med Scene7: Arbetsflödet för att bearbeta resurser som valts i kortvyn](/help/assets/assets-dm/reprocess-assets7.png)
 
-1. Klicka på **[!UICONTROL Redigera]** i verktygsfältet. En ny flik i webbläsaren öppnar Scene7: Sidan med arbetsflödesmodellen Återbearbeta resurser.
-1. På Scene7: Återbearbeta arbetsflödessidan Resurser, i det övre högra hörnet, och tryck på **[!UICONTROL Redigera]** för att låsa upp arbetsflödet.
-1. I arbetsflödet väljer du komponenten Scene7 Batch Upload för att öppna verktygsfältet och trycker sedan på **[!UICONTROL Configure]** (Konfigurera) i verktygsfältet.
+1. Klicka på i verktygsfältet **[!UICONTROL Edit]**. En ny flik i webbläsaren öppnar Scene7: Sidan med arbetsflödesmodellen Återbearbeta resurser.
+1. På Scene7: Återbearbeta arbetsflödessidan Resurser, i det övre högra hörnet, tryck för **[!UICONTROL Edit]** att låsa upp arbetsflödet.
+1. I arbetsflödet väljer du komponenten Scene7 Batch Upload för att öppna verktygsfältet och trycker sedan **[!UICONTROL Configure]** på verktygsfältet.
 
    ![Komponenten Scene7 Batch Upload](/help/assets/assets-dm/reprocess-assets8.png)
 
-1. Ange följande i dialogrutan **[!UICONTROL Gruppöverföring till Scene7 - Stegegenskaper]** :
-   * I textfälten **[!UICONTROL Titel]** och **[!UICONTROL Beskrivning]** anger du en ny titel och beskrivning för jobbet, om så önskas.
+1. Ange följande i **[!UICONTROL Batch Upload to Scene7—Step Properties]** dialogrutan:
+   * In the **[!UICONTROL Title]** and **[!UICONTROL Description]** text fields, enter a new title and description for the job, if desired.
    * Välj **[!UICONTROL Handler Advance]** om hanteraren ska gå vidare till nästa steg.
-   * I fältet **[!UICONTROL Timeout]** anger du den externa processens timeout (sekunder).
-   * I fältet **[!UICONTROL Period]** anger du ett avsökningsintervall (sekunder) som ska testas för att den externa processen ska slutföras.
-   * I fältet **** Gruppera anger du det maximala antalet resurser (50-1000) som ska bearbetas i ett batchbearbetningsjobb för en dynamisk medieserver.
-   * Välj **[!UICONTROL Avancerat vid timeout]** om du vill fortsätta när tidsgränsen nås. Avmarkera alternativet om du vill fortsätta till inkorgen när tidsgränsen nås.
+   * I **[!UICONTROL Timeout]** fältet anger du timeout för extern process (sekunder).
+   * I **[!UICONTROL Period]** fältet anger du ett avsökningsintervall (sekunder) som ska testas för att den externa processen ska slutföras.
+   * In the **[!UICONTROL Batch field]**, enter the maximum number of assets (50-1000) to process in a Dynamic Media server batch processing upload job.
+   * Välj **[!UICONTROL Advance on timeout]** om du vill fortsätta när tidsgränsen nås. Avmarkera alternativet om du vill fortsätta till inkorgen när tidsgränsen nås.
    ![Egenskaper, dialogruta](/help/assets/assets-dm/reprocess-assets3.png)
 
-1. I det övre högra hörnet av dialogrutan **[!UICONTROL Gruppöverföring till scen7 - Stegegenskaper]** trycker du på **[!UICONTROL Klar]**.
+1. Tryck på i det övre högra hörnet av **[!UICONTROL Batch Upload to Scene7 – Step Properties]** dialogrutan **[!UICONTROL Done]**.
 
-1. I det övre högra hörnet av Scene7: Återbearbeta arbetsflödesmodellsidan Resurser, tryck på **[!UICONTROL Synkronisera]**. När du ser **[!UICONTROL Synkroniserad]** synkroniseras arbetsflödets körningsmodell och kan bearbeta resurser i en mapp igen.
+1. I det övre högra hörnet av Scene7: Återbearbeta arbetsflödesmodellsidan Resurser, tryck **[!UICONTROL Sync]**. När du ser **[!UICONTROL Synced]**&#x200B;är arbetsflödets körningsmodell synkroniserad och klar att bearbeta resurser i en mapp igen.
 
    ![Synkronisera arbetsflödesmodellen](/help/assets/assets-dm/reprocess-assets1.png)
 
