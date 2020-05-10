@@ -1,37 +1,39 @@
 ---
-title: Bearbeta resurser med mediehanterare och arbetsflöden
+title: Bearbeta resurser med mediehanterare och arbetsflöden i [!DNL Adobe Experience Manager].
 description: Lär dig mer om mediehanterarna och hur du använder arbetsflöden för att utföra uppgifter i dina digitala resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 99ce6e0572797b7bccf755aede93623be6bd5698
+source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
 workflow-type: tm+mt
-source-wordcount: '2133'
-ht-degree: 2%
+source-wordcount: '2052'
+ht-degree: 1%
 
 ---
 
 
 # Bearbeta resurser med mediehanterare och arbetsflöden {#processing-assets-using-media-handlers-and-workflows}
 
-Adobe Experience Manager Assets (AEM) innehåller en uppsättning standardarbetsflöden och mediehanterare för att bearbeta resurser. I ett arbetsflöde definieras de uppgifter som ska köras på resurserna och sedan delegeras de specifika uppgifterna till mediehanterarna, till exempel generering av miniatyrbilder eller extrahering av metadata.
+[!DNL Adobe Experience Manager Assets] innehåller en uppsättning standardarbetsflöden och mediehanterare för att bearbeta resurser. I ett arbetsflöde definieras de uppgifter som ska köras på resurserna och sedan delegeras de specifika uppgifterna till mediehanterarna, till exempel generering av miniatyrbilder eller extrahering av metadata.
 
-Ett arbetsflöde kan konfigureras så att det körs automatiskt när en resurs av en viss MIME-typ överförs. Bearbetningsstegen definieras som en serie mediehanterare för AEM Resurser. AEM innehåller vissa [inbyggda hanterare,](#default-media-handlers) och ytterligare kan antingen [anpassas](#creating-a-new-media-handler) eller definieras genom att delegera processen till ett [kommandoradsverktyg](#command-line-based-media-handler).
+Ett arbetsflöde kan konfigureras så att det körs automatiskt när en resurs av en viss MIME-typ överförs. Bearbetningsstegen definieras som en serie [!DNL Assets] mediehanterare. [!DNL Experience Manager] innehåller vissa [inbyggda hanterare,](#default-media-handlers) och ytterligare kan antingen [anpassas](#creating-a-new-media-handler) eller definieras genom att delegera processen till ett [kommandoradsverktyg](#command-line-based-media-handler).
 
-Mediehanterare är tjänster i AEM Resurser som utför specifika åtgärder på resurser. När till exempel en MP3-ljudfil överförs till AEM utlöses en MP3-hanterare som extraherar metadata och skapar en miniatyrbild. Mediehanterare används vanligtvis i kombination med arbetsflöden. De vanligaste MIME-typerna stöds i AEM. Specifika uppgifter kan utföras på resurser genom att antingen utöka/skapa arbetsflöden, utöka/skapa mediehanterare eller inaktivera/aktivera mediehanterare.
+Mediehanterare är tjänster i [!DNL Assets] som utför specifika åtgärder för resurser. När till exempel en MP3-ljudfil överförs till [!DNL Experience Manager]utlöses en MP3-hanterare som extraherar metadata och skapar en miniatyrbild. Mediehanterare används vanligtvis i kombination med arbetsflöden. De vanligaste MIME-typerna stöds i [!DNL Experience Manager]. Specifika uppgifter kan utföras på resurser genom att antingen utöka/skapa arbetsflöden, utöka/skapa mediehanterare eller inaktivera/aktivera mediehanterare.
 
 >[!NOTE]
 >
->På sidan Format [som stöds av](assets-formats.md) Assets finns en beskrivning av alla format som stöds av AEM Assets samt funktioner som stöds för varje format.
+>På sidan Format [som stöds av](assets-formats.md) Assets finns en beskrivning av alla format som stöds av [!DNL Assets] samt funktioner som stöds för varje format.
 
 ## Standardmediehanterare {#default-media-handlers}
 
-Följande mediehanterare är tillgängliga i AEM Resurser och hanterar de vanligaste MIME-typerna:
+Följande mediehanterare är tillgängliga i [!DNL Assets] och hanterar de vanligaste MIME-typerna:
 
-<!-- TBD: Apply correct formatting once table is moved to MD.
+<!-- TBD: 
+* Apply correct formatting once table is moved to MD.
+* Java versions shouldn't be set to 1.5. Must be updated.
 -->
 
 | Hanterarnamn | Tjänstnamn (i systemkonsolen) | MIME-typer som stöds |
-|---|---|---|
+|--------------|--------------------------------------|----------------------|
 | [!UICONTROL TextHandler] | `com.day.cq.dam.core.impl.handler.TextHandler` | text/plain |
 | [!UICONTROL PdfHandler] | `com.day.cq.dam.handler.standard.pdf.PdfHandler` | <ul><li>application/pdf</li><li>program/illustrator</li></ul> |
 | [!UICONTROL JpegHandler] | `com.day.cq.dam.core.impl.handler.JpegHandler` | image/jpeg |
@@ -62,7 +64,7 @@ Så här visar du de aktiva mediehanterarna:
 
 Mediehanterare är tjänster som vanligtvis används i kombination med arbetsflöden.
 
-AEM har vissa standardarbetsflöden för att bearbeta resurser. Om du vill visa dem öppnar du arbetsflödeskonsolen och klickar på **[!UICONTROL Models]** fliken: de arbetsflödesrubriker som börjar med AEM Assets är de resursspecifika.
+[!DNL Experience Manager] har vissa standardarbetsflöden för att bearbeta resurser. Om du vill visa dem öppnar du arbetsflödeskonsolen och klickar på **[!UICONTROL Models]** fliken: de arbetsflödestitlar som börjar med [!DNL Assets] är resursspecifika.
 
 Befintliga arbetsflöden kan utökas och nya kan skapas för att bearbeta resurser enligt specifika krav.
 
@@ -132,28 +134,28 @@ I det här avsnittet skapar du en specifik texthanterare som genererar miniatyrb
 
 Gör så här:
 
-Se [Utvecklingsverktyg](../sites-developing/dev-tools.md) för att installera och konfigurera Eclipse med en Maven-plugin och för att ställa in beroenden som behövs för Maven-projektet.
+Se [Utvecklingsverktyg](../sites-developing/dev-tools.md) för att installera och konfigurera Eclipse med ett [!DNL Maven] plugin-program och för att ställa in beroenden som behövs för [!DNL Maven] projektet.
 
-När du har utfört följande procedur och överför en textfil till AEM, extraheras filens metadata och två miniatyrer med vattenstämpel genereras.
+När du har utfört följande procedur extraheras filens metadata när du överför en TXT-fil till [!DNL Experience Manager]och två miniatyrer med vattenstämpel genereras.
 
-1. Skapa `myBundle` Maven-projekt i Eclipse:
+1. I Eclipse skapar du `myBundle`[!DNL Maven] projekt:
 
    1. Klicka på i menyraden **[!UICONTROL File > New > Other]**.
-   1. I dialogrutan expanderar du mappen Maven, väljer Maven Project och klickar på **[!UICONTROL Next]**.
+   1. Expandera [!DNL Maven] mappen i dialogrutan, markera [!DNL Maven] projekt och klicka på **[!UICONTROL Next]**.
    1. Markera kryssrutan Skapa ett enkelt projekt och rutan Använd standardplatser för arbetsyta och klicka sedan på **[!UICONTROL Next]**.
-   1. Definiera projektet Maven:
+   1. Definiera ett [!DNL Maven] projekt:
 
-      * Grupp-ID: com.day.cq5.myhandler
-      * Artefakt-ID: myBundle
-      * Namn: Mitt AEM-paket
-      * Beskrivning: Detta är mitt AEM-paket
+      * Grupp-ID: `com.day.cq5.myhandler`.
+      * Artefakt-ID: myBundle.
+      * Namn: Mitt [!DNL Experience Manager] paket.
+      * Beskrivning: Det här är mitt [!DNL Experience Manager] paket.
    1. Klicka på **[!UICONTROL Finish]**.
 
 
-1. Ställ in Java-kompilatorn på version 1.5:
+1. Ställ in kompilatorn på version 1.5: [!DNL Java]
 
-   1. Högerklicka på `myBundle` projektet och välj Egenskaper.
-   1. Välj Java Compiler och ange följande egenskaper till 1.5:
+   1. Högerklicka på `myBundle` projektet och välj [!UICONTROL Properties].
+   1. Markera [!UICONTROL Java Compiler] och ange följande egenskaper till 1.5:
 
       * Kompilatorefterlevnadsnivå
       * Kompatibilitet med genererade .class-filer
@@ -278,15 +280,15 @@ När du har utfört följande procedur och överför en textfil till AEM, extrah
     </dependencies>
    ```
 
-1. Skapa paketet `com.day.cq5.myhandler` som innehåller Java-klasserna under `myBundle/src/main/java`:
+1. Skapa paketet `com.day.cq5.myhandler` som innehåller [!DNL Java] klasserna under `myBundle/src/main/java`:
 
    1. Under myBundle högerklickar du `src/main/java`, väljer Ny och sedan Packa.
    1. Ge den ett namn `com.day.cq5.myhandler` och klicka på Slutför.
 
-1. Skapa klassen Java `MyHandler`:
+1. Skapa [!DNL Java] klassen `MyHandler`:
 
-   1. I Eclipse, under `myBundle/src/main/java`högerklickar du på `com.day.cq5.myhandler` paketet, väljer Ny och sedan Klass.
-   1. Ge Java-klassen namnet MyHandler i dialogrutan och klicka på Slutför. Eclipse skapar och öppnar filen MyHandler.java.
+   1. I [!DNL Eclipse], under `myBundle/src/main/java`, högerklickar du på `com.day.cq5.myhandler` paketet. Välj [!UICONTROL New]sedan [!UICONTROL Class].
+   1. I dialogrutan ger du klassen ett namn [!DNL Java] och klickar på `MyHandler` [!UICONTROL Finish]. [!DNL Eclipse] skapar och öppnar filen `MyHandler.java`.
    1. I `MyHandler.java` Ersätt den befintliga koden med följande och spara sedan ändringarna:
 
    ```java
@@ -429,20 +431,20 @@ När du har utfört följande procedur och överför en textfil till AEM, extrah
    }
    ```
 
-1. Kompilera Java-klassen och skapa paketet:
+1. Kompilera [!DNL Java] klassen och skapa paketet:
 
    1. Högerklicka på `myBundle` projektet, välj **[!UICONTROL Run As]** och sedan **[!UICONTROL Maven Install]**.
    1. Paketet `myBundle-0.0.1-SNAPSHOT.jar` (som innehåller den kompilerade klassen) skapas under `myBundle/target`.
 
 1. Skapa en ny nod under i CRX Explorer `/apps/myApp`. Namn = `install`, Typ = `nt:folder`.
-1. Kopiera paketet `myBundle-0.0.1-SNAPSHOT.jar` och lagra det under `/apps/myApp/install` (till exempel med WebDAV). Den nya texthanteraren är nu aktiv i AEM.
+1. Kopiera paketet `myBundle-0.0.1-SNAPSHOT.jar` och lagra det under `/apps/myApp/install` (till exempel med WebDAV). Den nya texthanteraren är nu aktiv i [!DNL Experience Manager].
 1. Öppna [!UICONTROL Apache Felix Web Management Console]webbläsaren. Markera [!UICONTROL Components] fliken och inaktivera standardtexthanteraren `com.day.cq.dam.core.impl.handler.TextHandler`.
 
 ## Kommandoradsbaserad mediehanterare {#command-line-based-media-handler}
 
-Med AEM kan du köra valfritt kommandoradsverktyg i ett arbetsflöde för att konvertera resurser (till exempel ImageMagick) och lägga till den nya återgivningen i resursen. Du behöver bara installera kommandoradsverktyget på den disk där AEM-servern finns och lägga till och konfigurera ett processsteg i arbetsflödet. Den anropade processen, som kallas `CommandLineProcess`, gör det även möjligt att filtrera efter specifika MIME-typer och skapa flera miniatyrbilder baserat på den nya återgivningen.
+[!DNL Experience Manager] Med kan du köra valfritt kommandoradsverktyg i ett arbetsflöde för att konvertera resurser (till exempel [!DNL ImageMagick]) och lägga till den nya återgivningen i resursen. Du behöver bara installera kommandoradsverktyget på den disk som är värd för [!DNL Experience Manager] servern och lägga till och konfigurera ett processsteg i arbetsflödet. Den anropade processen, som kallas `CommandLineProcess`, gör det även möjligt att filtrera efter specifika MIME-typer och skapa flera miniatyrbilder baserat på den nya återgivningen.
 
-Följande konverteringar kan automatiskt köras och lagras i AEM Resurser:
+Följande konverteringar kan köras och lagras automatiskt i [!DNL Assets]:
 
 * EPS- och AI-omvandling med [ImageMagick](https://www.imagemagick.org/script/index.php) och [Ghostscript](https://www.ghostscript.com/).
 * FLV-videotranskodning med [FFmpeg](https://ffmpeg.org/).
@@ -451,27 +453,27 @@ Följande konverteringar kan automatiskt köras och lagras i AEM Resurser:
 
 >[!NOTE]
 >
->I andra system än Windows returnerar mpeg-verktyget ett fel när återgivningar genereras för en videoresurs som har ett enkelt citattecken (&#39;) i filnamnet. Om namnet på videofilen innehåller ett enkelt citattecken tar du bort det innan du överför det till AEM.
+>I andra system än Windows returnerar mpeg-verktyget ett fel när återgivningar genereras för en videoresurs som har ett enkelt citattecken (&#39;) i filnamnet. Om namnet på videofilen innehåller ett enkelt citattecken tar du bort det innan du överför det till [!DNL Experience Manager].
 
 Processen `CommandLineProcess` utför följande åtgärder i den ordning de anges:
 
 * Filtrerar filen enligt specifika MIME-typer, om det anges.
-* Skapar en tillfällig katalog på den disk som är värd för AEM-servern.
+* Skapar en tillfällig katalog på den disk som är värd för [!DNL Experience Manager] servern.
 * Direktuppspelar originalfilen till den tillfälliga katalogen.
-* Kör det kommando som definieras av argumenten i steget. Kommandot körs i den tillfälliga katalogen med behörigheten för den användare som kör AEM.
-* Flyttar tillbaka resultatet till AEM-serverns återgivningsmapp.
+* Kör det kommando som definieras av argumenten i steget. Kommandot körs i den tillfälliga katalogen med behörighet för den användare som kör [!DNL Experience Manager].
+* Flyttar tillbaka resultatet till [!DNL Experience Manager] serverns återgivningsmapp.
 * Tar bort den tillfälliga katalogen.
 * Skapar miniatyrbilder baserade på dessa återgivningar, om de anges. Miniatyrbildernas antal och mått definieras av stegets argument.
 
-### Ett exempel med ImageMagick {#an-example-using-imagemagick}
+### Ett exempel som använder [!DNL ImageMagick] {#an-example-using-imagemagick}
 
-I följande exempel visas hur du ställer in kommandoradsprocessteget så att varje gång en resurs med mime-type gif eller tiff läggs till i /content/dam på AEM-servern skapas en vänd bild av originalet tillsammans med tre ytterligare miniatyrbilder (140x100, 48x48 och 10x250).
+I följande exempel visas hur du ställer in kommandoradsprocesssteget så att varje gång en resurs med e-typen miMIME GIF eller TIFF läggs till `/content/dam` på [!DNL Experience Manager] servern skapas en bild med den ursprungliga bilden tillsammans med ytterligare tre miniatyrbilder (140x100, 48x48 och 10x250).
 
-För att göra detta använder du ImageMagick. ImageMagick är en kostnadsfri programsvit för att skapa, redigera och komponera bitmappsbilder och används vanligtvis från kommandoraden.
+Använd [!DNL ImageMagick]för att göra detta. [!DNL ImageMagick] är ett kostnadsfritt kommandoradsprogram som används för att skapa, redigera och komponera bitmappsbilder.
 
-Installera först ImageMagick på disken som är värd för AEM-servern:
+Installera [!DNL ImageMagick] på disken som är värd för [!DNL Experience Manager] servern:
 
-1. Installera ImageMagick: finns i dokumentationen [till](https://www.imagemagick.org/script/download.php)ImageMagick.
+1. Installera [!DNL ImageMagick]: Se [dokumentationen](https://www.imagemagick.org/script/download.php)för ImageMagick.
 1. Konfigurera verktyget så att du kan köra konverteringen på kommandoraden.
 1. Om du vill se om verktyget är korrekt installerat kör du följande kommando `convert -h` på kommandoraden.
 
@@ -479,22 +481,12 @@ Installera först ImageMagick på disken som är värd för AEM-servern:
 
    >[!NOTE]
    >
-   >I vissa versioner av Windows (till exempel Windows SE) kanske inte kommandot convert körs eftersom det står i konflikt med det inbyggda konverteringsverktyget som ingår i Windows-installationen. I det här fallet anger du den fullständiga sökvägen för verktyget ImageMagick som används för att konvertera bildfiler till miniatyrer. Till exempel, `"C:\Program Files\ImageMagick-6.8.9-Q16\convert.exe" -define jpeg:size=319x319 ${filename} -thumbnail 319x319 cq5dam.thumbnail.319.319.png`.
+   >I vissa versioner av Windows kan kommandot convert misslyckas eftersom det står i konflikt med det inbyggda konverteringsverktyget som är en del av [!DNL Windows] installationen. I det här fallet anger du den fullständiga sökvägen till den programvara som används för att konvertera bildfiler till miniatyrbilder. [!DNL ImageMagick] Till exempel, `"C:\Program Files\ImageMagick-6.8.9-Q16\convert.exe" -define jpeg:size=319x319 ${filename} -thumbnail 319x319 cq5dam.thumbnail.319.319.png`.
 
-1. Om du vill se om verktyget fungerar som det ska lägger du till en JPG-bild i arbetskatalogen och kör kommandot convert `<image-name>.jpg -flip <image-name>-flipped.jpg` på kommandoraden.
-
-   En speglad bild läggs till i katalogen.
-
-Lägg sedan till kommandoradsprocessteget i arbetsflödet **[!UICONTROL DAM Update Asset]**:
-
+1. Om du vill se om verktyget fungerar som det ska lägger du till en JPG-bild i arbetskatalogen och kör kommandot convert `<image-name>.jpg -flip <image-name>-flipped.jpg` på kommandoraden. En speglad bild läggs till i katalogen. Then, add the command line process step to the **[!UICONTROL DAM Update Asset]** workflow.
 1. Gå till **[!UICONTROL Workflow]** konsolen.
 1. Redigera **[!UICONTROL Models]** modellen på **[!UICONTROL DAM Update Asset]** fliken.
-1. Ändra inställningarna för **[!UICONTROL Web enabled rendition]** steget enligt följande:
-
-   **Argument**:
-
-   `mime:image/gif,mime:image/tiff,tn:140:100,tn:48:48,tn:10:250,cmd:convert ${directory}/${filename} -flip ${directory}/${basename}.flipped.jpg`
-
+1. Ändra [!UICONTROL Arguments] stegets **[!UICONTROL Web enabled rendition]** status till: `mime:image/gif,mime:image/tiff,tn:140:100,tn:48:48,tn:10:250,cmd:convert ${directory}/${filename} -flip ${directory}/${basename}.flipped.jpg`.
 1. Spara arbetsflödet.
 
 Om du vill testa det ändrade arbetsflödet lägger du till en resurs i `/content/dam`.
@@ -511,21 +503,21 @@ Använd kommatecken för att avgränsa värdena för [!UICONTROL Process Argumen
 
 | Argument-Format | Beskrivning |
 |---|---|
-| mime:&lt;mime-type> | Valfritt argument. Processen används om tillgången har samma MIME-typ som argumentet. <br>Flera MIME-typer kan definieras. |
+| mime:&lt;mime-type> | Valfritt argument. Processen används om resursen har samma MIME-typ som argumentet. <br>Flera MIME-typer kan definieras. |
 | tn:&lt;width>:&lt;height> | Valfritt argument. Processen skapar en miniatyrbild med de dimensioner som definieras i argumentet. <br>Flera miniatyrbilder kan definieras. |
-| cmd: &lt;kommando> | Definierar det kommando som ska köras. Syntaxen beror på kommandoradsverktyget. Endast ett kommando kan definieras. <br>Följande variabler kan användas för att skapa kommandot:<br>`${filename}`: indatafilens namn, till exempel original.jpg <br> `${file}`: den fullständiga sökvägen till indatafilen, till exempel /tmp/cqdam0816.tmp/original.jpg <br> `${directory}`: indatafilens katalog, till exempel /tmp/cqdam0816.tmp <br>`${basename}`: namnet på indatafilen utan filnamnstillägg, till exempel original <br>`${extension}`: tillägg för indatafilen, till exempel jpg |
+| cmd: &lt;kommando> | Definierar det kommando som ska köras. Syntaxen beror på kommandoradsverktyget. Endast ett kommando kan definieras. <br>Följande variabler kan användas för att skapa kommandot:<br>`${filename}`: indatafilens namn, till exempel original.jpg <br> `${file}`: den fullständiga sökvägen till indatafilen, till exempel /tmp/cqdam0816.tmp/original.jpg <br> `${directory}`: indatafilens katalog, till exempel /tmp/cqdam0816.tmp <br>`${basename}`: namnet på indatafilen utan filnamnstillägg, till exempel original <br>`${extension}`: tillägg för indatafilen, till exempel JPG. |
 
-Om till exempel ImageMagick är installerat på den disk som är värd för AEM-servern och du skapar ett processsteg med [!UICONTROL CommandLineProcess] som implementering och följande värden som [!UICONTROL Process Arguments]:
+Om [!DNL ImageMagick] till exempel är installerat på den disk som är värd för [!DNL Experience Manager] servern och du skapar ett processsteg med [!UICONTROL CommandLineProcess] implementering och följande värden som [!UICONTROL Process Arguments]:
 
 `mime:image/gif,mime:image/tiff,tn:140:100,tn:48:48,tn:10:250,cmd:convert ${directory}/${filename} -flip ${directory}/${basename}.flipped.jpg`
 
 När arbetsflödet körs gäller steget endast resurser som har `image/gif` eller `mime:image/tiff` som `mime-types`skapas en bild som vänds av originalet, konverteras till JPG och tre miniatyrbilder med följande dimensioner skapas: 140x100, 48x48 och 10x250.
 
-Använd följande [!UICONTROL Process Arguments] för att skapa de tre standardminiatyrbilderna med ImageMagick:
+Använd följande [!UICONTROL Process Arguments] för att skapa de tre standardminiatyrbilderna med [!DNL ImageMagick]:
 
 `mime:image/tiff,mime:image/png,mime:image/bmp,mime:image/gif,mime:image/jpeg,cmd:convert ${filename} -define jpeg:size=319x319 -thumbnail "319x319>" -background transparent -gravity center -extent 319x319 -write png:cq5dam.thumbnail.319.319.png -thumbnail "140x100>" -background transparent -gravity center -extent 140x100 -write cq5dam.thumbnail.140.100.png -thumbnail "48x48>" -background transparent -gravity center -extent 48x48 cq5dam.thumbnail.48.48.png`
 
-Använd följande [!UICONTROL Process Arguments] för att skapa den webbaktiverade återgivningen med ImageMagick:
+Använd följande [!UICONTROL Process Arguments] för att skapa den webbaktiverade återgivningen med [!DNL ImageMagick]:
 
 `mime:image/tiff,mime:image/png,mime:image/bmp,mime:image/gif,mime:image/jpeg,cmd:convert ${filename} -define jpeg:size=1280x1280 -thumbnail "1280x1280>" cq5dam.web.1280.1280.jpeg`
 
