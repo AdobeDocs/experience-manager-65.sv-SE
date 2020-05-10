@@ -3,7 +3,10 @@ title: Referens för metadatamappningar
 description: 'Lär dig mer om standardkonventioner för att beskriva metadata för resurser, inklusive Dublin Core, IPTC och andra metadatamatchningar. '
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
+workflow-type: tm+mt
+source-wordcount: '393'
+ht-degree: 2%
 
 ---
 
@@ -18,16 +21,16 @@ Dublin Core-metadata innehåller en standardiserad uppsättning konventioner fö
 
 Den enkla DCMES-uppsättningen (Dublin Core Metadata Element Set) innehåller 15 metadataelement som listas i följande tabell. Varje Dublin Core-element är valfritt och kan upprepas. Du kan lägga till eller ta bort metadata för Dublin Core på samma sätt som du gör för medietypsspecifika metadata.
 
-Förutom DCMES finns det andra metadataelement som skapats av Dublin Core Initiative. Mer information finns i [Dublin Core Initiative](https://dublincore.org/) .
+Förutom DCMES finns det andra metadataelement som skapats av Dublin Core Initiative. Mer information finns i [Dublin Core-initiativet](https://dublincore.org/) .
 
 | Egenskap | Beskrivning |
-|---|---|
+| ----------- | ------------------------------------------------------------------------------------------------------------------------ |
 | medverkande | Den person eller det företag som är ansvarigt för att bidra till innehållet. |
 | täckning | Den geografiska plats eller tidsperiod som tillgången täcker. |
 | skapare | Den person eller det företag som ansvarar för att skapa innehållet. |
 | date | Datum eller tidsperiod som är associerad med tillgången. |
 | description | Mer information om resursen. |
-| format | Filformat, fysiskt medium eller dimensioner för resursen. AEM använder dc:format för att ange resursens mime-typ. |
+| format | Filformat, fysiskt medium eller dimensioner för resursen. AEM använder `dc:format` för att beteckna resursens MIME-typ. |
 | identifierare | En unik referens till tillgången. |
 | language | Språket för resursen (t.ex. en för engelska). |
 | utgivare | Den person eller det företag som ansvarar för att göra tillgången tillgänglig. |
