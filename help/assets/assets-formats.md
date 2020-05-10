@@ -1,34 +1,32 @@
 ---
-title: Format som stöds för resurser
-description: Lista över filformat som stöds av AEM Assets och Dynamic Media samt funktioner som stöds för varje format.
+title: Filformat som stöds för bearbetning i [!DNL Adobe Experience Manager Assets].
+description: Filformat och MIME-typer som stöds av [!DNL Assets] och [!DNL Dynamic Media] samt de funktioner som stöds för varje format.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 99ce6e0572797b7bccf755aede93623be6bd5698
+source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
 workflow-type: tm+mt
-source-wordcount: '1760'
+source-wordcount: '1757'
 ht-degree: 2%
 
 ---
 
 
-# Resursformat som stöds {#assets-supported-formats}
+# Format som stöds i [!DNL Adobe Experience Manager Assets] {#assets-supported-formats}
 
-AEM Resurser har stöd för ett stort antal filformat och alla funktioner har olika stöd för olika MIME-typer.
-
-Använd Adobes Extensible Metadata Platform (XMP) för att integrera AEM Assets med andra standardbaserade DAM-lösningar och datorprogramvara.
+[!DNL Experience Manager Assets] har stöd för ett stort antal filformat och alla funktioner har olika stöd för olika MIME-typer. Om du vill integrera [!DNL Assets] med andra standardbaserade DAM-lösningar (Digital Asset Management) och datorprogram använder du Adobes [!DNL Extensible Metadata Platform] (XMP).
 
 Använd teckenförklaringen för att förstå supportnivån.
 
 | Supportnivå | Beskrivning |
-|:---:|---|
+| :-----------: | ------------------------------ |
 | ✓ | Stöds |
 | * | Stöds med tilläggsfunktioner |
 | − | Ej relevant |
 
-## Rasterbildformat som stöds i AEM Assets {#supported-raster-image-formats}
+## Rasterbildformat som stöds i [!DNL Assets] {#supported-raster-image-formats}
 
 | Format | Lagring | Metadatahantering | Extrahering av metadata | Generering av miniatyrbilder | Redigering | Återskrivning av metadata | Insikter |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| ------------ | :------: | :-----------------: | :-----------------: | :------------------: | :------: | :----------------: | :------: |
 | PNG | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | GIF | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ |
 | TIFF | ✓ | ✓ | ✓ | ✓ |  | ✓ | ✓ |
@@ -45,7 +43,7 @@ Använd teckenförklaringen för att förstå supportnivån.
 
 ‡ Den sammanfogade bilden extraheras från PSD-filen. Det är en bild som genereras av Adobe Photoshop och inkluderas i PSD-filen. Beroende på inställningarna kan den sammanfogade bilden vara den faktiska bilden eller inte.
 
-## Rasterbildformat som stöds i Dynamic Media {#supported-raster-image-formats-dynamic-media}
+## Rasterbildformat som stöds i [!DNL Dynamic Media] {#supported-raster-image-formats-dynamic-media}
 
 | Format | Överför<br> (indataformat) | Skapa<br> bildförinställning<br><br> (utdataformat) | Förhandsgranska<br> dynamisk<br> återgivning | Leverera<br> dynamisk<br> återgivning | Hämta<br> dynamisk<br> återgivning |
 |---|:---:|:---:|:---:|:---:|:---:|
@@ -66,7 +64,7 @@ Utöver informationen ovan bör du tänka på följande:
 
 * Metadatatillbakaskrivning fungerar för PSB-filformat när det läggs till i `NComm` hanteraren.
 
-* Information om hur du använder Dynamic Media för att förhandsgranska och generera dynamiska renderingar för EPS-filer finns i [Adobe Illustrator (AI), PostScript (EPS) och PDF-filformat.](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
+* Information om hur du använder [!DNL Dynamic Media] för att förhandsgranska och generera dynamiska renderingar för EPS-filer finns i [Adobe Illustrator (AI), Postscript (EPS) och PDF-filformat.](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
 * För EPS-filer stöds tillbakaskrivning av metadata i PostScript Document Structuring Convention (PS-Adobe) version 3.0 eller senare.
 
@@ -263,7 +261,7 @@ En lista över MIME-typer som stöds finns i CRXDE Lite på `/conf/global/settin
 
 | Filtillägg | MIME-typ/ Internetmedietyp | Standardvärde för jobParam | Tillåtet jobParam-värde |
 |---|---|---|---|
-| Bild | bild/s7resurs | `usmAmount=1.75&usmRadius=0.2`<br>`&usmThreshold=2&usmMonochrome=0&` | Standardvärdet jobParam gäller för alla bildresurser av MIME-typ.<ul><li>[knockoutBackgroundOptions](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/types/r_knockout_background_options.html)</li><li>manualCropOptions</li><li>[autoColorCropOptions](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/types/index.html?f=r_auto_color_crop_options)</li><li>[autoTransparentCropOptions](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/?f=r_auto_transparent_crop_options)</li><li>[colorManagementOptions](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/types/r_color_management_options.html)</li><li>[autoSetCreationOptions](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/types/r_auto_set_creation_options.html)</li><li>[emailSetting](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/string_constants/index.html?f=r_email_settings)</li><li>[xmpKeywords](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/types/index.html?f=r_xmp_keywords)</li><li>[unsharpMaskOptions](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/types/r_unsharp_mask_options.html)</li></ul> |
+| Bild | bild/s7resurs | `usmAmount=1.75&usmRadius=0.2`<br>`&usmThreshold=2&usmMonochrome=0&` | Standardvärdet jobParam gäller för alla MIME-bildresurser.<ul><li>[knockoutBackgroundOptions](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/types/r_knockout_background_options.html)</li><li>manualCropOptions</li><li>[autoColorCropOptions](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/types/index.html?f=r_auto_color_crop_options)</li><li>[autoTransparentCropOptions](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/?f=r_auto_transparent_crop_options)</li><li>[colorManagementOptions](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/types/r_color_management_options.html)</li><li>[autoSetCreationOptions](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/types/r_auto_set_creation_options.html)</li><li>[emailSetting](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/string_constants/index.html?f=r_email_settings)</li><li>[xmpKeywords](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/types/index.html?f=r_xmp_keywords)</li><li>[unsharpMaskOptions](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/types/r_unsharp_mask_options.html)</li></ul> |
 | 3G2 | video/3gpp2 |  | [ExcludeMasterVideoFromAVS](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/types/r_exclude_master_video_from_avs.html) |
 | 3GP | video/3gpp |  | [ExcludeMasterVideoFromAVS](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/?f=r_exclude_master_video_from_avs) |
 | AAC | audio/x-aac |  |  |
