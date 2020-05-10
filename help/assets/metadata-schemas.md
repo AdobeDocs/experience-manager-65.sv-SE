@@ -3,9 +3,9 @@ title: 'Metadata-scheman för att definiera layouten för metadataegenskapssidan
 description: Metadata-schemat definierar layouten för egenskapssidan och de metadataegenskaper som visas för resurser. Lär dig hur du skapar anpassade metadatamatcheman, redigerar metadatamatchema och hur du använder metadatamatchema på resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
+source-git-commit: 6151c1afe3006e8d4b93648fc9eb779c73df4181
 workflow-type: tm+mt
-source-wordcount: '2568'
+source-wordcount: '2617'
 ht-degree: 7%
 
 ---
@@ -17,7 +17,9 @@ Organisationer har en metadatamodell som förbättrar tillgångsidentifiering, a
 
 I [!DNL Adobe Experience Manager Assets]innehåller scheman specifika fält för specifik information som ska fyllas i. Den innehåller även layoutinformation för att visa metadatafält på ett användarvänligt sätt. Metadataegenskaperna innehåller titel, beskrivning, MIME-typer, taggar med mera. Du kan använda redigeraren för att ändra befintliga scheman eller lägga till anpassade metadatamatcheman [!UICONTROL Metadata Schema Forms] .
 
-1. Om du vill visa [!UICONTROL Properties] sidan för en resurs klickar du på **[!UICONTROL View Properties]** snabbåtgärder på resurspanelen i kortvyn. Du kan också markera resursen i gränssnittet och sedan klicka på **[!UICONTROL Properties]** i verktygsfältet.
+Så här visar du egenskapssidan för en resurs:
+
+1. Klicka på eller tryck på **[!UICONTROL View Properties]** ikonen från Snabbåtgärder på resurspanelen i kortvyn.
 
    ![Snabbåtgärder på resurspanelen](assets/chlimage_1-170.png)
 
@@ -25,28 +27,44 @@ I [!DNL Adobe Experience Manager Assets]innehåller scheman specifika fält för
 
    ![Fliken Grundläggande i resursegenskaper, där resurstypen inte kan ändras](assets/asset-properties-basic-tab.png)
 
-   *Bild: Fliken Grundläggande för resurs[!UICONTROL Properties].*
+1. Du kan redigera olika metadataegenskaper under de tillgängliga flikarna. Du kan dock inte ändra resursen [!UICONTROL Type] på egenskapsfliken [!UICONTROL Basic] .
 
-   Om du vill ändra MIME-typen för en resurs använder du ett anpassat metadatamatchschema eller ändrar ett befintligt formulär. Mer information finns i [Redigera metadata-schemaformulär](/help/assets/metadata-schemas.md#edit-metadata-schema-forms) . Om du ändrar metadataschemat för en viss MIME-typ ändras egenskapssidlayouten för resurser med den aktuella MIME-typen och alla resursundertyper. Om du till exempel ändrar ett jpeg-schema under `default/image` endast ändras metadatalayouten (resursegenskaper) för resurser med MIME-typ `image/jpeg`. Om du redigerar standardschemat ändrar du metadatalayouten för alla typer av resurser.
+   ![Fliken Grundläggande i resursegenskaper, där resurstypen inte kan ändras](assets/asset-properties-basic-tab.png)
+
+*Bild: Fliken Grundläggande för resurs[!UICONTROL Properties].*
+
+Om du vill ändra MIME-typen för en resurs använder du ett anpassat metadatamatchschema eller ändrar ett befintligt formulär. Mer information finns i [Redigera metadata-schemaformulär](/help/assets/metadata-schemas.md#edit-metadata-schema-forms) . Om du ändrar metadataschemat för en viss MIME-typ ändras egenskapssidlayouten för resurser med den aktuella MIME-typen och alla resursundertyper. Om du till exempel ändrar ett jpeg-schema under `default/image` endast ändras metadatalayouten (resursegenskaper) för resurser med MIME-typ `image/jpeg`. Om du redigerar standardschemat ändrar du metadatalayouten för alla typer av resurser.
 
 1. Om du vill visa en lista med formulär/mallar går du till [!DNL Experience Manager] > **[!UICONTROL Tools]** > **[!UICONTROL Assets]** i **[!UICONTROL Metadata Schemas]** gränssnittet.
 
-   [!DNL Experience Manager] innehåller följande mallar:
-   * **standard**: Basmetadataschemaformuläret för resurser.
+## Metadata Schema Forms finns som standard {#available-metadata-schema-templates}
 
-      Följande underordnade formulär ärver egenskaperna för standardformuläret:
+[!DNL Experience Manager] innehåller följande mallar:
 
-      1. **bild**: Schemaformulär för resurser med MIME-typen &quot;image&quot;, till exempel `image/jpeg`, `image/png`osv.
+### standard {#default-template}
 
-         &quot;Bildsformuläret har följande underordnade formulärmallar:
-         * **jpeg**: Schemaformulär för resurser med undertyp `jpeg`.
-         * **tiff**: Schemaformulär för resurser med undertyp `tiff`.
-      1. **program**: Schemaformulär för resurser med MIME-typ, `application`till exempel `application/pdf`, `application/zip`och så vidare.
-         * **pdf**: Schemaformulär för resurser med undertyp `pdf`.
-      1. **video**: Schemaformulär för resurser med MIME-typ `video`som `video/avi`, `video/mp4`osv.
-   * **samling**: Schemaformulär för samlingar.
-   * **innehållfragment:** Schemaformulär för innehållsfragment.
-   * **formulär**: Det här schemaformuläret gäller [Adobe Experience Manager Forms](/help/forms/home.md).
+Detta [!UICONTROL default] är basmetadatamatchschemaformuläret för resurser. Följande underordnade formulär ärver egenskaperna för standardformuläret:
+
+**image** är schemaformuläret för resurser med MIME-typen &quot;image&quot;. Till exempel `image/jpeg`, `image/png`och så vidare. &quot;Bildsformuläret har följande underordnade formulärmallar:
+* **jpeg** är schemaformuläret för resurser med undertyp `jpeg`.
+
+* **tiff** är schemaformuläret för resurser med undertyp `tiff`.
+
+**program** är schemaformuläret för resurser med MIME-typ `application`. Till exempel `application/pdf`, `application/zip`och så vidare. **pdf** är schemaformuläret för resurser med undertyp `pdf`.
+
+**video** är schemaformuläret för resurser med MIME-typ `video`som `video/avi`, `video/mp4`och så vidare.
+
+### collection {#collection-template}
+
+Detta [!UICONTROL collection] är schemaformuläret för samlingar.
+
+### innehållfragment {#contentfragment-template}
+
+Detta [!UICONTROL contentfragment] är schemaformuläret för innehållsfragment.
+
+### formulär {#forms-template}
+
+Schemaformuläret är [!UICONTROL forms] relaterat till [Adobe Experience Manager Forms](/help/forms/home.md).
 
 >[!NOTE]
 >
