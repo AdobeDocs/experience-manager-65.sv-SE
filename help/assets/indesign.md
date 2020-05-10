@@ -3,12 +3,15 @@ title: Integrera [!DNL Adobe Experience Manager Assets] med [!DNL Adobe InDesign
 description: Lär dig hur du integrerar [!DNL Adobe Experience Manager Assets] med [!DNL Adobe InDesign Server].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
+source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
+workflow-type: tm+mt
+source-wordcount: '1548'
+ht-degree: 1%
 
 ---
 
 
-# Integrera [!DNL Adobe Experience Manager Assets] med [!DNL Adobe InDesign Server]{#integrating-aem-assets-with-indesign-server}
+# Integrera [!DNL Adobe Experience Manager Assets] med [!DNL Adobe InDesign Server] {#integrating-aem-assets-with-indesign-server}
 
 [!DNL Adobe Experience Manager Assets] använder:
 
@@ -64,7 +67,7 @@ Om du vill integrera [!DNL InDesign Server] för användning med [!DNL Experienc
 Detta är bara nödvändigt om standardvärdena inte passar för din instans.
 1. Konfigurera en [proxyarbetare för InDesign Server](#configuring-the-proxy-worker-for-indesign-server).
 
-### Installera [!DNL InDesign Server]{#installing-the-indesign-server}
+### Installera [!DNL InDesign Server] {#installing-the-indesign-server}
 
 Så här installerar och startar du programmet [!DNL InDesign Server] för användning med [!DNL Experience Manager]:
 
@@ -85,7 +88,7 @@ Så här installerar och startar du programmet [!DNL InDesign Server] för anvä
 
 ### Konfigurera [!DNL Experience Manager Assets] arbetsflödet {#configuring-the-aem-assets-workflow}
 
-[!DNL Experience Manager Assets] har ett förkonfigurerat arbetsflöde för **[!UICONTROL DAM Update Asset]**, som har flera processsteg specifikt för [!DNL InDesign]:
+[!DNL Experience Manager Assets] har ett förkonfigurerat arbetsflöde **[!UICONTROL DAM Update Asset]** som innehåller flera processsteg särskilt för [!DNL InDesign]:
 
 * [Medieextrahering](#media-extraction)
 * [Sidextrahering](#page-extraction)
@@ -98,7 +101,7 @@ Efter konfigurationen utlöses arbetsflödet när [!DNL InDesign] filer överfö
 
 Det här steget styr extraheringen av media från INDD-filen.
 
-Om du vill anpassa kan du redigera fliken **[!UICONTROL Argument]** i steget **[!UICONTROL Medieextrahering]**.
+Om du vill anpassa kan du redigera **[!UICONTROL Arguments]** fliken i **[!UICONTROL Media Extraction]** steget.
 
 ![Medieextraheringsargument och skriptsökvägar](assets/media_extraction_arguments_scripts.png)
 
@@ -116,13 +119,13 @@ Mer information om InDesign-skript finns i [dokumentationen för InDesign-utveck
 
 Skriptet som körs av arbetsflödessteget för medieextrahering genererar en miniatyrrendering i JPG-format. `ThumbnailExport.jsx` Den här återgivningen används i arbetsflödet Bearbeta miniatyrbilder för att generera de statiska återgivningar som krävs av [!DNL Experience Manager].
 
-Du kan konfigurera arbetsflödessteget Bearbeta miniatyrbilder för att generera statiska återgivningar i olika storlekar. Se till att du inte tar bort standardinställningarna eftersom de krävs av [!DNL Experience Manager Assets] gränssnittet. Arbetsflödessteget Ta bort återgivning av bildförhandsvisning tar bort återgivningen av .jpg-miniatyrer eftersom den inte längre behövs.
+Du kan konfigurera arbetsflödessteget Bearbeta miniatyrbilder för att generera statiska återgivningar i olika storlekar. Se till att du inte tar bort standardinställningarna eftersom de krävs av [!DNL Experience Manager Assets] gränssnittet. Arbetsflödessteget Ta bort återgivning av bildförhandsvisning tar bort återgivningen av JPG-miniatyrer eftersom den inte längre behövs.
 
 #### Sidextrahering {#page-extraction}
 
 Då skapas en [!DNL Experience Manager] sida av de extraherade elementen. En extraheringshanterare används för att extrahera data från en återgivning (för närvarande HTML eller IDML). Dessa data används sedan för att skapa en sida med PageBuilder.
 
-Om du vill anpassa kan du redigera fliken **[!UICONTROL Argument]** i steget **[!UICONTROL Sidextrahering]**.
+To customize, you can edit the **[!UICONTROL Arguments]** tab of the **[!UICONTROL Page Extraction]** step.
 
 ![chlimage_1-96](assets/chlimage_1-289.png)
 
@@ -140,7 +143,7 @@ In a standard [!DNL Experience Manager] installation the following is available:
 
 * **Siddesign**: Den siddesign som ska användas när den resulterande sidan genereras.
 
-### Konfigurera proxyarbetaren för [!DNL InDesign Server]{#configuring-the-proxy-worker-for-indesign-server}
+### Konfigurera proxyarbetaren för [!DNL InDesign Server] {#configuring-the-proxy-worker-for-indesign-server}
 
 >[!NOTE]
 >
@@ -148,9 +151,9 @@ In a standard [!DNL Experience Manager] installation the following is available:
 
 1. Expandera **[!UICONTROL Cloud Services Configurations]** i den vänstra rutan i verktygskonsolen. Expandera sedan **[!UICONTROL Cloud Proxy Configuration]**.
 
-1. Dubbelklicka på den **[!UICONTROL IDS-arbetare]** som ska öppnas för konfiguration.
+1. Dubbelklicka på **[!UICONTROL IDS worker]** för att öppna för konfiguration.
 
-1. Klicka på **[!UICONTROL Redigera]** för att öppna konfigurationsdialogrutan och definiera de nödvändiga inställningarna:
+1. Klicka **[!UICONTROL Edit]** för att öppna konfigurationsdialogrutan och definiera de nödvändiga inställningarna:
 
    ![proxy_idsworkerconfig](assets/proxy_idsworkerconfig.png)
 
@@ -160,15 +163,15 @@ In a standard [!DNL Experience Manager] installation the following is available:
 
 ### Konfigurera Dag CQ Link Externalizer {#configuring-day-cq-link-externalizer}
 
-Om [!DNL InDesign Server] och [!DNL Experience Manager] körs på olika värdar eller något eller båda programmen inte körs på standardportar konfigurerar du [!UICONTROL Day CQ Link Externalizer] för att ange värdnamn, port och innehållssökväg för [!DNL InDesign Server].
+Om [!DNL InDesign Server] och [!DNL Experience Manager] körs på olika värdar eller något eller båda programmen inte körs på standardportar, konfigurerar du [!UICONTROL Day CQ Link Externalizer] att ange värdnamnet, porten och innehållssökvägen för [!DNL InDesign Server].
 
 1. Gå till webbkonsolen på `https://[aem_server]:[port]/system/console/configMgr`.
-1. Locate the configuration **[!UICONTROL Day CQ Link Externalizer]**, and tap **[!UICONTROL Edit]** to open it.
+1. Leta reda på konfigurationen **[!UICONTROL Day CQ Link Externalizer]** och öppna den genom **[!UICONTROL Edit]** att trycka.
 1. Ange värdnamnet och kontextsökvägen för [!DNL Indesign Server] och klicka på **Spara**.
 
    ![chlimage_1-97](assets/chlimage_1-290.png)
 
-### Aktivera parallell jobbbearbetning för [!DNL InDesign Server]{#enabling-parallel-job-processing-for-indesign-server-s}
+### Aktivera parallell jobbbearbetning för [!DNL InDesign Server] {#enabling-parallel-job-processing-for-indesign-server-s}
 
 Nu kan du aktivera parallell jobbbearbetning för IDS. Ange det maximala antalet parallella jobb (`x`) som kan [!DNL InDesign Server] bearbetas:
 
@@ -177,7 +180,7 @@ Nu kan du aktivera parallell jobbbearbetning för IDS. Ange det maximala antalet
 
 Så här konfigurerar du antalet parallella IDS-jobb:
 
-1. Öppna fliken **[!UICONTROL Konfigurationer]** i Felix Console; till exempel: `https://[aem_server]:[port]/system/console/configMgr`.
+1. Öppna fliken **[!UICONTROL Configurations]** i Felix Console; till exempel: `https://[aem_server]:[port]/system/console/configMgr`.
 
 1. Välj IDS-bearbetningskön under `Apache Sling Job Queue Configuration`.
 
@@ -197,7 +200,7 @@ Så här konfigurerar du antalet parallella IDS-jobb:
    >Du kan välja att aktivera svartlistning av IDS-arbetare när du arbetar med en grupp arbetare.
    >
    >
-   >Om du vill göra det aktiverar du kryssrutan **[!UICONTROL enable.retry.name]** under `com.day.cq.dam.ids.impl.IDSJobProcessor.name` konfigurationen, vilket aktiverar omprövningar av IDS-jobb.
+   >Om du vill göra det aktiverar du kryssrutan under **[!UICONTROL enable.retry.name]** `com.day.cq.dam.ids.impl.IDSJobProcessor.name` konfigurationen, som aktiverar omprövningar av IDS-jobb.
    >
    >
    >Under `com.day.cq.dam.ids.impl.IDSPoolImpl.name` konfigurationen anger du också ett positivt värde för `max.errors.to.blacklist` parameter som avgör antalet jobbomprövningar innan du tar bort ett ID från jobbhanterarlistan.
@@ -211,7 +214,7 @@ För [!DNL InDesign Server] 10.0 eller senare utför du följande steg för att 
 
 1. Öppna Configuration Manager från din [!DNL Experience Manager Assets] instans `https://[aem_server]:[port]/system/console/configMgr`.
 1. Redigera konfigurationen `com.day.cq.dam.ids.impl.IDSJobProcessor.name`.
-1. Välj **[!UICONTROL alternativet ids.cc.enable]** och klicka på **[!UICONTROL Spara]**.
+1. Markera **[!UICONTROL ids.cc.enable]** alternativet och klicka på **[!UICONTROL Save]**.
 
 >[!NOTE]
 >
