@@ -3,7 +3,10 @@ title: Skapa och konfigurera sidor för Resursredigeraren
 description: Lär dig hur du skapar anpassade sidor i Resursredigeraren och redigerar flera resurser samtidigt.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 70a88085a0fd6e949974aa7f1f92fdc3def3d98e
+source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
+workflow-type: tm+mt
+source-wordcount: '2130'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ I det här dokumentet beskrivs följande:
 * Skapa och anpassa resursredigeringssidor, dvs. WCM-sidor, där du kan visa och redigera metadata samt utföra åtgärder på resursen.
 * Så här redigerar du flera resurser samtidigt.
 
-<!-- TBD: Add UICONTROL tags. Need PM review. Flatten the structure a bit. Re-write to remove Geometrixx mentions and to adhere to 6.5 OOTB samples. -->
+<!-- TBD: Add UICONTROL tags. Need PM review. Flatten the structure a bit. Re-write to remove Geometrixx mentions and to adhere to 6.5 default samples. -->
 
 >[!NOTE]
 >
@@ -26,105 +29,104 @@ I det här dokumentet beskrivs följande:
 
 Digital Asset Management används i allt fler scenarier. När man går över från en småskalig lösning för en liten användargrupp yrkesutbildade användare - till exempel fotografer eller taxonomier - till större och mer mångsidiga användargrupper - t.ex. affärsanvändare, WCM-författare, journalister osv. - kan det kraftfulla användargränssnittet i Adobe Experience Manager (AEM) Assets för professionella användare tillhandahålla för mycket information och intressenter börja begära specifika användargränssnitt eller applikationer för att få tillgång till de digitala resurser som är relevanta för dem.
 
-Dessa resurscentrerade program kan vara enkla fotogallerier i ett intranät där medarbetarna kan ladda upp bilder från mässor eller ett presscenter på en offentlig webbplats, till exempel i Geometrixx. Tillgångscentrerade tillämpningar kan även omfatta kompletta lösningar som kundvagnar, kassor och verifieringsprocesser.
+Dessa resurscentrerade program kan vara enkla fotogallerier i ett intranät där medarbetarna kan ladda upp bilder från mässor eller ett presscenter på en offentlig webbplats. Tillgångscentrerade tillämpningar kan även omfatta kompletta lösningar som kundvagnar, kassor och verifieringsprocesser.
 
 Att skapa ett resurscentrerat program blir i stor utsträckning en konfigurationsprocess som inte kräver kodning, bara kunskap om användargrupper och deras behov samt kunskap om de metadata som används. Resurscentrerade program som skapats med AEM Resurser kan utökas: med måttlig kodningsansträngning kan återanvändbara komponenter för att söka, visa och ändra resurser skapas.
 
 Ett resurscentrerat program i AEM består av en tillgångsredigeringssida, som kan användas för att få en detaljerad vy över en viss resurs. På en resursredigeringssida kan du även redigera metadata, förutsatt att användaren som använder resursen har de behörigheter som krävs.
 
-## Skapa och konfigurera en resursdelningssida {#creating-and-configuring-an-asset-share-page}
+<!--
+## Create and configure an Asset Share page {#creating-and-configuring-an-asset-share-page}
 
-Du kan anpassa DAM Finder-funktionen och skapa sidor som har alla funktioner du behöver, som kallas resursdelningssidor. Om du vill skapa en ny resursdelningssida lägger du till sidan med hjälp av mallen Geometrixx Asset Share och sedan anpassar du de åtgärder som användare kan utföra på den sidan, avgör hur tittarna ser resurserna och avgör hur användarna kan skapa sina frågor.
+You customize the DAM Finder functionality and create pages that have all the functionality you require, which are called Asset Share pages. To create a new Asset Share page, you add the page using the Geometrixx Asset Share template and then you customize the actions users can perform on that page, determine how viewers see the assets, and decide how users can build their queries.
 
-Här är några exempel på hur du kan skapa en anpassad resursdelningssida:
+Here are some use cases for creating a customized Asset Share page:
 
-* Presscenter för journalister
-* Bildsökningsmotor för interna företagsanvändare
-* Bilddatabas för webbplatsanvändare
-* Media Tagging Interface for metadata editors
+* Press Center for Journalists.
+* Image Search Engine for internal business users.
+* Image Database for website users.
+* Media Tagging Interface for metadata editors.
 
-### Skapa en resursdelningssida {#creating-an-asset-share-page}
+### Create an Asset Share page {#creating-an-asset-share-page}
 
-Om du vill skapa en ny resursdelningssida kan du antingen skapa den när du arbetar på webbplatser eller från den digitala resurshanteraren.
+To create a new Asset Share page, you can either create it when you are working on web sites or from the digital asset manager.
 
 >[!NOTE]
 >
->När du skapar en resursdelningssida från **Nytt** i den digitala resurshanteraren skapas som standard en resursvisare och resursredigerare automatiskt.
+>By default, when you create an Asset Share page from **New** in the digital asset manager, an Asset viewer and Asset editor are automatically created for you.
 
-Så här skapar du en ny resursdelningssida i **webbplatskonsolen** :
+To create an new Asset Share page in the **Websites** console:
 
-1. Gå till den plats där du vill skapa en resursdelningssida på fliken **Webbplatser** och klicka på **Ny**.
+1. In the **Websites** tab, navigate to the place where you want to create an asset share page and click **New**.
 
-1. Markera sidan **Resursresurs** och klicka på **Skapa**. Den nya sidan skapas och resursdelningssidan visas på fliken **Webbplatser** .
+1. Select the **Asset Share** page and click **Create**. The new page is created and the asset share page is listed in the **Websites** tab.
 
 ![dam8](assets/dam8.png)
 
-Grundsidan som skapas med hjälp av mallen för resursdelning i Geometrixx DAM ser ut så här:
+The basic page created using the Geometrixx DAM Asset Share template looks as follows:
 
 ![screen_shot_2012-04-18at115456am](assets/screen_shot_2012-04-18at115456am.png)
 
-Om du vill anpassa sidan Resursdelning använder du element från sidosparken och redigerar även egenskaper för frågebyggaren. Sidan **Geometrixx Press Center** är en anpassad version av en sida som är baserad på den här mallen:
+To customize your Asset Share page, you use elements from the sidekick and you also edit query builder properties. The page **Geometrixx Press Center** is a customized version of a page based on this template:
 
 ![screen_shot_2012-04-19at123048pm](assets/screen_shot_2012-04-19at123048pm.png)
 
-Så här skapar du en ny resursdelningssida via den digitala resurshanteraren:
+To create a new asset share page via the digital asset manager:
 
-1. I den digitala resurshanteraren väljer du **Ny resurs i** Ny **resurs**.
-1. Ange namnet på resursdelningssidan i **Rubrik**. Om du vill kan du ange ett namn för URL:en.
+1. In the digital asset manager, in **New**, select **New Asset Share**.
+1. In the **Title**, enter the name of the asset share page. If desired, enter a name for the URL.
 
    ![screen_shot_2012-04-19at23626pm](assets/screen_shot_2012-04-19at23626pm.png)
 
-1. Dubbelklicka på resursdelningssidan för att öppna den och konfigurera sidan.
+1. Double-click the asset share page to open it and configure the page.
 
    ![screen_shot_2012-04-19at24114pm](assets/screen_shot_2012-04-19at24114pm.png)
 
-   När du skapar en resursdelningssida från **Nytt** skapas som standard ett resursvisningsprogram och en resursredigerare automatiskt.
+   By default, when you create an Asset Share page from **New**, an Asset viewer and Asset editor are automatically created for you.
 
-#### Anpassa funktionsmakron {#customizing-actions}
+#### Customize actions {#customizing-actions}
 
-Du kan avgöra vilka åtgärder användare kan utföra på valda digitala resurser från ett urval av fördefinierade åtgärder.
+You can determine what actions users can perform on selected digital assets from a selection of predefined actions.
 
-Så här lägger du till åtgärder på sidan Resursresurs:
+To add actions to the Asset Share page:
 
-1. På sidan Resursresurs som du vill anpassa klickar du på **Åtgärder** i sidosparken.
+1. In the Asset Share page that you want to customize, click **Actions** in the sidekick.
 
-Följande åtgärder är tillgängliga:
+The following actions are available:
 
-![assetshare2](assets/assetshare2.bmp)
+ | Action | Description |
+ |---|---|
+ | [!UICONTROL Delete Action] | Users can delete the selected assets. |
+ | [!UICONTROL Download Action] | Lets users download selected assets to their computers. |
+ | [!UICONTROL Lightbox Action] | Saves assets to a "lightbox"   where you can perform other actions on them. This comes in handy when working   with assets across multiple pages. The lightbox can also be used as a   shopping cart for assets. |
+ | [!UICONTROL Move Action] | Users can move the asset to another   location |
+ | [!UICONTROL Tags Action] | Lets users add tags to selected assets |
+ | [!UICONTROL View Asset Action] | Opens the asset in the Asset editor for   user manipulation. |
 
-| Åtgärd | Beskrivning |
-|---|---|
-| [!UICONTROL Ta bort åtgärd] | Användare kan ta bort de markerade resurserna. |
-| [!UICONTROL Hämta åtgärd] | Tillåter användare att hämta valda resurser till sina datorer. |
-| [!UICONTROL Ljuslådeåtgärd] | Sparar resurser i en&quot;ljuslåda&quot; där du kan utföra andra åtgärder på dem. Detta är praktiskt när du arbetar med resurser på flera sidor. Ljuslådan kan också användas som kundvagn för resurser. |
-| [!UICONTROL Flytta åtgärd] | Användarna kan flytta resursen till en annan plats |
-| [!UICONTROL Taggåtgärd] | Tillåter användare att lägga till taggar i markerade resurser |
-| [!UICONTROL Visa resursåtgärd] | Öppnar resursen i tillgångsredigeraren för användarmanipulering. |
-
-1. Dra lämplig åtgärd till området **Åtgärder** på sidan. När du gör det skapas en knapp som används för att utföra åtgärden.
+1. Drag the appropriate action to the **Actions** area on the page. Doing so creates a button that is used to execute that action.
 
 ![chlimage_1-159](assets/chlimage_1-387.png)
 
-#### Bestämma hur sökresultat visas {#determining-how-search-results-are-presented}
+#### Determine how search results are presented {#determining-how-search-results-are-presented}
 
-Du bestämmer hur resultaten ska visas i en fördefinierad lista med objektiv.
+You determine how results are displayed from a predefined list of lenses.
 
-Så här ändrar du hur sökresultat visas:
+To change how search results are viewed:
 
-1. Klicka på Sök på sidan Resursresurs som du vill anpassa.
+1. In the Asset Share page that you want to customize, click Search.
 
 ![chlimage_1](assets/assetshare3.png)
 
-1. Dra lämplig lins till sidans övre mitt. I Press Center finns objekten redan tillgängliga. Användarna kan visa sökresultaten genom att trycka på motsvarande objektivikon.
+1. Drag the appropriate lens to the top center of the page. In the Press Center, the lenses are already available. Users press the appropriate lens icon to display search results as desired.
 
-Följande linser är tillgängliga:
+The following lenses are available:
 
-| Lins | Beskrivning |
+| Lens | Description |
 |---|---|
-| **[!UICONTROL List Lens]** | Visar resurserna i en lista med detaljer. |
-| **[!UICONTROL Mosaik]** | Presenterar resurser på ett mosaiskt sätt. |
+| **[!UICONTROL List Lens]** |Presents the assets in a list fashion with details. |
+| **[!UICONTROL Mosaic Lens]** |Presents assets in a mosaic fashion. |
 
-#### Mosaik {#mosaic-lens}
+#### Mosaic Lens {#mosaic-lens}
 
 ![chlimage_1-160](assets/chlimage_1-388.png)
 
@@ -132,59 +134,60 @@ Följande linser är tillgängliga:
 
 ![chlimage_1-161](assets/chlimage_1-389.png)
 
-#### Anpassa Query Builder {#customizing-the-query-builder}
+#### Customize the Query Builder {#customizing-the-query-builder}
 
-Med frågebyggaren kan du ange söktermer och skapa innehåll för sidan Resursdelning. När du redigerar frågebyggaren kan du även bestämma hur många sökresultat som ska visas per sida, vilken resursredigerare som ska öppnas när du dubbelklickar på en resurs, vilken sökväg frågan söker i och anpassar nodtyper.
+The query builder lets you enter search terms and create content for the Asset Share page. When you edit the query builder, you also get to determine how many search results are displayed per page, which asset editor opens when you double-click an asset, the path the query searches, and customizes nodetypes.
 
-Så här anpassar du frågeverktyget:
+To customize the query builder:
 
-1. På sidan Resursresurs som du vill anpassa klickar du på **Redigera** i frågeverktyget. Fliken **Allmänt** öppnas som standard.
-1. Välj antalet resultat per sida, sökvägen till resursredigeraren (om du har en anpassad resursredigerare) och åtgärdstiteln.
+1. In the Asset Share page that you want to customize, click **Edit** in the Query Builder. By default, the **General** tab opens.
+1. Select the number of results per page, the path of the asset editor (if you have a customized asset editor) and the Actions title.
 
 ![screen_shot_2012-04-23at15055pm](assets/screen_shot_2012-04-23at15055pm.png)
 
-1. Klicka på fliken **Banor** . Ange en eller flera sökvägar som sökningen ska köras på. Dessa sökvägar skrivs över om användaren använder Banor-predikatet.
+1. Click the **Paths** tab. Enter a path or multiple paths that the search will run. These paths are overwritten if the user uses the Paths predicate.
 
 ![screen_shot_2012-04-23at15150pm](assets/screen_shot_2012-04-23at15150pm.png)
 
-1. Ange en annan nodtyp, om du vill.
+1. Enter another node type, if desired.
 
-1. I URL **-fältet i** Query Builder kan du åsidosätta eller omsluta frågebyggaren och ange de nya webbadresserna med den befintliga frågebyggarkomponenten. I fältet **Feed-URL** kan du även åsidosätta feed-URL:en.
+1. In the **Query Builder URL** field, you can override or wrap the query builder and enter the new servlet URLs with the existing query builder component. In the **Feed URL** field, you can override the Feed URL as well.
 
 ![screen_shot_2012-04-23at15313pm](assets/screen_shot_2012-04-23at15313pm.png)
 
-1. I fältet **Text** anger du den text som du vill ska visas för resultat och sidnummer. Klicka på **OK** när du är klar med ändringarna.
+1. In the **Text** field, enter the text you want to appear for results and page numbers of results. Click **OK** when finished making changes.
 
 ![screen_shot_2012-04-23at15300pm](assets/screen_shot_2012-04-23at15300pm.png)
 
-#### Lägg till predikat {#adding-predicates}
+#### Add predicates {#adding-predicates}
 
-AEM Resurser innehåller ett antal predikat som du kan lägga till på sidan Resursdelning. På så sätt kan användarna begränsa sökningarna ytterligare. I vissa fall kan de åsidosätta en frågebyggarparameter (till exempel parametern Path).
+AEM Assets includes a number of predicates that you can add to the Asset Share page. These let your users further narrow searches. In some cases, they may override a query builder parameter (for example, the Path parameter).
 
-Så här lägger du till predikat:
+To add predicates:
 
-1. På sidan Resursresurs som du vill anpassa klickar du på **Sök**.
+1. In the Asset Share page that you want to customize, click **Search**.
 
 ![assetshare3](assets/assetshare3.png)
 
-1. Dra lämpliga predikat till sidan Resursresurs under frågebyggaren. Då skapas rätt fält.
+1. Drag the appropriate predicates to the Asset Share page underneath the query builder. Doing so creates the appropriate fields.
 
 ![assetshare4](assets/assetshare4.bmp)
 
-Följande predikat är tillgängliga:
+The following predicates are available:
 
-| Förutse | Beskrivning |
+| Predicate | Description |
 |---|---|
-| **[!UICONTROL Datumpredikat]** | Tillåter användare att söka efter resurser som har ändrats före och efter vissa datum. |
-| **[!UICONTROL Alternativ - predikat]** | Webbplatsägaren kan ange en egenskap att söka efter (som i egenskapspredikatet, till exempel cq:tags) och ett innehållsträd att fylla i alternativen från (till exempel taggträdet). Då genereras en lista med alternativ där användarna kan välja de värden (taggar) som den valda egenskapen (taggegenskap) ska ha. Med det här predikatet kan du skapa listkontroller som listan över taggar, filtyper, bildorienteringar och så vidare. Det passar bra för en fast uppsättning alternativ. |
-| **[!UICONTROL Banförutsägelse]** | Tillåter användare att definiera sökvägen och undermapparna, om så önskas. |
-| **[!UICONTROL Egenskapspredikat]** | Webbplatsägaren anger en egenskap att söka efter, t.ex. tiff:ImageLength, och användaren kan sedan ange ett värde, t.ex. 800. Då returneras alla bilder som är 800 pixlar höga. Användbart predikat om egenskapen kan ha godtyckliga värden. |
+| **[!UICONTROL Date Predicate]** |Lets users search for assets that were modified before and after certain dates. |
+| **[!UICONTROL Options Predicate]** |The site owner can specify a property to search for (as in the property predicate, for example cq:tags) and a content tree to populate the options from (for example the tag tree). Doing so generates a list of options where the users can select the values (tags) that the selected property (tag property) should have. This predicate lets you build list controls like the list of tags, file types, image orientations, and so on. It is great for a fixed set of options. |
+| **[!UICONTROL Path Predicate]** |Lets users define the path and subfolders, if desired. |
+| **[!UICONTROL Property Predicate]** |The site owner specifies a property to search for, e.g. tiff:ImageLength and the user can then enter a value, e.g. 800. This returns all images that are 800 pixels high. Useful predicate if your property can have arbitrary values. |
 
-Mer information finns i [predikatet Javadocs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/package-summary.html).
+For more information, see the [predicate Javadocs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/package-summary.html).
 
-1. Dubbelklicka på predikatet om du vill konfigurera det ytterligare. När du t.ex. öppnar Förutsägande av sökväg måste du tilldela rotsökvägen.
+1. To configure the predicate further, double-click it. For example, when you open the Path Predicate, you need to assign the root path.
 
 ![screen_shot_2012-04-23at15640pm](assets/screen_shot_2012-04-23at15640pm.png)
+-->
 
 ## Skapa och konfigurera en resursredigeringssida {#creating-and-configuring-an-asset-editor-page}
 
@@ -192,7 +195,7 @@ Du anpassar resursredigeraren för att avgöra hur användare kan visa och redig
 
 >[!NOTE]
 >
->Om du vill lägga till anpassade fält i DAM-resursredigeraren lägger du till nya cq:Widget-noder i `/apps/dam/content/asseteditors.`
+>Om du vill lägga till anpassade fält i DAM-resursredigeraren lägger du till nya `cq:Widget` noder i `/apps/dam/content/asseteditors.`
 
 ### Skapa en resursredigeringssida {#creating-the-asset-editor-page}
 
@@ -249,11 +252,11 @@ Så här lägger du till komponenterna för redigering av resurser:
 
 | Komponent | Beskrivning |
 |---|---|
-| **[!UICONTROL Metadataformulär]och[!UICONTROL metadatatextfält]** | Gör att du kan lägga till ytterligare metadata för en resurs och utföra en åtgärd, som att skicka, för den resursen. |
-| **[!UICONTROL Deltillgångar]** | Gör att du kan anpassa underresurser. |
+| **[!UICONTROL Metadata Form]and[!UICONTROL Metadata Text Field]** | Gör att du kan lägga till ytterligare metadata för en resurs och utföra en åtgärd, som att skicka, för den resursen. |
+| **[!UICONTROL Sub Assets]** | Gör att du kan anpassa underresurser. |
 | **Taggar** | Tillåter användare att markera och lägga till taggar i en resurs. |
-| **[!UICONTROL Miniatyrbild]** | Visar en miniatyrbild av resursen, dess filnamn och låter dig lägga till en alternativ text. Du kan även lägga till resursredigeringsåtgärder här. |
-| **[!UICONTROL Titel]** | Visar resursens titel, som kan anpassas. |
+| **[!UICONTROL Thumbnail]** | Visar en miniatyrbild av resursen, dess filnamn och låter dig lägga till en alternativ text. Du kan även lägga till resursredigeringsåtgärder här. |
+| **[!UICONTROL Title]** | Visar resursens titel, som kan anpassas. |
 
 ![screen_shot_2012-04-23at22743pm](assets/screen_shot_2012-04-23at22743pm.png)
 
@@ -315,7 +318,7 @@ Komponenten Tags är en komponent där användare kan tilldela befintliga taggar
 
 ![screen_shot_2012-04-23at25031pm](assets/screen_shot_2012-04-23at25031pm.png)
 
-Dubbelklicka på taggkomponenten för att öppna dialogrutan Taggar där du kan ändra titeln från Taggar, om du vill, och där du kan välja de tilldelade namnutrymmena. Om du vill göra det här fältet redigerbart avmarkerar du kryssrutan **[!UICONTROL Dölj redigering]** . Som standard är taggar redigerbara.
+Dubbelklicka på taggkomponenten för att öppna dialogrutan Taggar där du kan ändra titeln från Taggar, om du vill, och där du kan välja de tilldelade namnutrymmena. Om du vill göra det här fältet redigerbart avmarkerar du **[!UICONTROL Hide Edit]** kryssrutan. Som standard är taggar redigerbara.
 
 ![screen_shot_2012-04-23at24731pm](assets/screen_shot_2012-04-23at24731pm.png)
 
@@ -375,12 +378,12 @@ Följande åtgärder är tillgängliga:
 
 | Åtgärd | Beskrivning |
 |---|---|
-| [!UICONTROL Hämta] | Tillåter användare att hämta valda resurser till sina datorer. |
-| [!UICONTROL Redigerare] | Tillåter användare att redigera en bild (interaktiv redigering) |
-| [!UICONTROL Ljuslåda] | Sparar resurser i en&quot;ljuslåda&quot; där du kan utföra andra åtgärder på dem. Detta är praktiskt när du arbetar med resurser på flera sidor. |
-| [!UICONTROL Låsning] | Tillåter användare att låsa en resurs. Den här funktionen är inte aktiverad som standard och måste aktiveras i komponentlistan. |
-| [!UICONTROL Referenser] | Klicka här för att visa på vilka sidor resursen används. |
-| [!UICONTROL Versionshantering] | Gör att du kan skapa och återställa versioner av en resurs. |
+| [!UICONTROL Download] | Tillåter användare att hämta valda resurser till sina datorer. |
+| [!UICONTROL Editors] | Tillåter användare att redigera en bild (interaktiv redigering) |
+| [!UICONTROL Lightbox] | Sparar resurser i en&quot;ljuslåda&quot; där du kan utföra andra åtgärder på dem. Detta är praktiskt när du arbetar med resurser på flera sidor. |
+| [!UICONTROL Locking] | Tillåter användare att låsa en resurs. Den här funktionen är inte aktiverad som standard och måste aktiveras i komponentlistan. |
+| [!UICONTROL References] | Klicka här för att visa på vilka sidor resursen används. |
+| [!UICONTROL Versioning] | Gör att du kan skapa och återställa versioner av en resurs. |
 
 1. Dra lämplig åtgärd till området **Åtgärder** på sidan. När du gör det skapas en knapp som används för att utföra åtgärden.
 
@@ -400,8 +403,8 @@ Så här gör du om du vill redigera flera resurser på sidan Resursredigeraren:
 
 1. Välj resurser:
 
-   * i Windows: `Ctrl + click` varje tillgång.
-   * på Mac: `Cmd + click` varje tillgång.
+   * i Windows: `Ctrl + click` varje resurs.
+   * på Mac: `Cmd + click` varje resurs.
    Så här väljer du en rad resurser: klicka på den första resursen och sedan på `Shift + click` den sista resursen.
 
 1. Klicka på **Redigera metadata** i fältet **Åtgärder** (vänster del av sidan).
