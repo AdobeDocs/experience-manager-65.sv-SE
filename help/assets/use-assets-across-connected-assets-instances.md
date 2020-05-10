@@ -3,10 +3,10 @@ title: Använd anslutna resurser för att dela DAM-resurser i redigeringsarbetsf
 description: Använd resurser som är tillgängliga på en [!DNL Adobe Experience Manager Assets]-fjärrdistribution när du skapar webbsidor på en annan [!DNL Adobe Experience Manager Sites]-distribution.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 3d2f9bf9f8e83a088769507da8a46f1c9ef4e74e
+source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
 workflow-type: tm+mt
-source-wordcount: '2008'
-ht-degree: 50%
+source-wordcount: '2018'
+ht-degree: 48%
 
 ---
 
@@ -41,7 +41,7 @@ Innan du använder eller konfigurerar den här funktionen bör du kontrollera f�
 Författare kan söka efter bilder och följande typer av dokument i Content Finder och använda resurserna i Page Editor. Dokument kan läggas till i `Download`-komponenten och bilder kan läggas till i `Image`-komponenten. Authors can also add the remote assets in any custom [!DNL Experience Manager] component that extends the default `Download` or `Image` components. De format som stöds är:
 
 * **Bildformat**: De format som stöds av [bildkomponenten](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html) . [!DNL Dynamic Media] bilder stöds inte.
-* **Dokumentformat**: Se [Dokumentformat som stöds i Connected Assets](assets-formats.md#supported-document-formats).
+* **Dokumentformat**: Se [vilka dokumentformat som stöds av Anslutna resurser](assets-formats.md#supported-document-formats).
 
 ### Användare och grupper som krävs {#users-and-groups-involved}
 
@@ -185,5 +185,5 @@ De hämtade resurserna kan användas som andra lokala resurser, förutom att ass
 
 Följ dessa steg för att felsöka vanliga fel:
 
-* If you cannot search for remote assets from the [!UICONTROL Content Finder], recheck and ensure that the required roles and permissions are in place.
-* En resurs som hämtats från en DAM-fjärrdistribution kanske inte publiceras på en webbsida av följande skäl: Den finns inte i fjärrdistributionen, lämplig behörighet saknas för att hämta den eller nätverksfel. Se till att resursen inte tas bort från fjärr-DAM eller att behörigheterna inte ändras. Kontrollera att rätt förutsättningar uppfylls. Försök lägga till resursen på sidan igen och publicera den på nytt. Kontrollera i [listan över asynkrona jobb](/help/assets/asynchronous-jobs.md) om fel uppstod vid hämtning av resurser.
+* If you cannot search for remote assets from the [!UICONTROL Content Finder] then ensure that the required roles and permissions are in place.
+* En resurs som hämtats från fjärrdammen kanske inte publiceras på en webbsida av en eller flera orsaker. Den finns inte på fjärrservern, saknar behörighet att hämta den eller så kan nätverksfel vara orsaken. Se till att resursen inte tas bort från fjärr-DAM. Se till att rätt behörigheter finns och att kraven uppfylls. Försök lägga till resursen på sidan igen och publicera den på nytt. Kontrollera i [listan över asynkrona jobb](/help/assets/asynchronous-jobs.md) om fel uppstod vid hämtning av resurser.
