@@ -4,7 +4,10 @@ seo-title: Användarhandbok för AEM 6.5 Assets
 description: Den här guiden täcker alla AEM Assets-uppgifter, t.ex. hur du skapar, hanterar, levererar och optimerar digitala resurser.
 seo-description: Omfattar alla AEM Assets-uppgifter, t.ex. hur man skapar, hanterar, levererar och optimerar digitala resurser.
 translation-type: tm+mt
-source-git-commit: e6c0ee967d1b01da18b538960520c206937599f6
+source-git-commit: db5996bd25c6c35854f8b7164558b41a477b4cd6
+workflow-type: tm+mt
+source-wordcount: '358'
+ht-degree: 9%
 
 ---
 
@@ -25,7 +28,7 @@ Den här guiden täcker alla AEM Assets-uppgifter, t.ex. hur du skapar, hanterar
 | Användarhandbok | Beskrivning |
 |--- |---|
 | [Versionsinformation](/help/release-notes/home.md) | Innehåller viktig information om den senaste versionen av AEM, inklusive vad som är nytt, vilka plattformar som stöds, borttagna och borttagna funktioner samt kända problem |
-| [[Användarhandbok för formulär](/help/forms/home.md) | Den här guiden beskriver hur du skapar, hanterar, publicerar och uppdaterar digitala formulär. |
+| [Användarhandbok för formulär](/help/forms/home.md) | Den här guiden beskriver hur du skapar, hanterar, publicerar och uppdaterar digitala formulär. |
 | [Användarhandbok för Communities](/help/communities/home.md) | Skapa onlineupplevelser som forum, användargrupper, utbildningsresurser och andra sociala funktioner. |
 | [Administratörshandbok](/help/sites-administering/home.md) | Förstå hur man administrerar AEM |
 | [Redigeringshandbok](/help/sites-authoring/home.md) | I den här guiden förklaras begreppen för redigering i AEM. |
