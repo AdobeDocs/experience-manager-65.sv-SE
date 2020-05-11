@@ -3,9 +3,9 @@ title: Filformat som stöds för bearbetning i [!DNL Adobe Experience Manager As
 description: Filformat och MIME-typer som stöds av [!DNL Assets] och [!DNL Dynamic Media] samt de funktioner som stöds för varje format.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 93731c44ae6b2d8617fedea87bce10495384fc52
+source-git-commit: 138c8d960ad8c1de20212b7aeebbda0a486832ee
 workflow-type: tm+mt
-source-wordcount: '1766'
+source-wordcount: '1780'
 ht-degree: 2%
 
 ---
@@ -73,6 +73,8 @@ Utöver informationen ovan bör du tänka på följande:
 ## Rasterbildformat som inte stöds i Dynamic Media {#unsupported-image-formats-dynamic-media}
 
 I följande lista beskrivs de undertyper av rasterbildfilformat som *inte* stöds i Dynamic Media.
+
+Se även [Identifiera filformat som inte stöds för Dynamic Media](https://helpx.adobe.com/experience-manager/kb/detect-unsupported-assets-for-dynamic-media.html).
 
 * PNG-filer som har en IDAT-segmentstorlek som är större än 100 MB.
 * PSB-filer.
