@@ -4,7 +4,10 @@ product: adobe experience manager
 audience: end-user
 user-guide-title: Användarhandbok för AEM 6.5 Assets
 translation-type: tm+mt
-source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
+source-git-commit: 4f580a9e1a43ef59a4991df6bc4a96cfffe5173e
+workflow-type: tm+mt
+source-wordcount: '640'
+ht-degree: 38%
 
 ---
 
@@ -53,7 +56,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
    + [Panoramabilder](panoramic-images.md)
    + [Blandade medieuppsättningar](mixed-media-sets.md)
    + [Snurrande uppsättningar](spin-sets.md)
-   + [Video](video.md)
+   + [Video i Dynamic Media](video.md)
    + [Karusellbanner](carousel-banners.md)
    + [Interaktiva bilder](interactive-images.md)
    + [Interaktiva videoklipp](interactive-videos.md)
