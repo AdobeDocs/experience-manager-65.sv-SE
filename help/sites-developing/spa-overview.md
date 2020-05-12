@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 06b8c0be-4362-4bd1-ad57-ea5503616b17
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3d9bcc706a1fa7a15d0ce8729f7b85c4226b394f
+source-git-commit: 10072609bc371b5f2dce425e90e583f14f96e371
+workflow-type: tm+mt
+source-wordcount: '1686'
+ht-degree: 0%
 
 ---
 
@@ -172,6 +175,10 @@ Tidigare versioner av dessa ramverk kan fungera med AEM SPA Editor SDK, men stö
 ### Ytterligare ramar {#additional-frameworks}
 
 Ytterligare SPA-ramverk kan implementeras för att fungera med AEM SPA Editor SDK. I [SPA-](/help/sites-developing/spa-blueprint.md) designdokumentetfinns information om vilka krav ett ramverk måste uppfylla för att kunna skapa ett ramverksspecifikt lager bestående av moduler, komponenter och tjänster som ska fungera med AEM SPA-redigeraren.
+
+### Använda flera väljare {#multiple-selectors}
+
+Ytterligare anpassade väljare kan definieras och användas som en del av ett SPA som utvecklats för AEM SPA SDK. Det här stödet kräver dock att väljaren är den första väljaren och tillägget är det `model` som JSON-exporteraren `.json` [kräver.](json-exporter-components.md#multiple-selectors)
 
 ### Krav för textredigeraren {#text-editor-requirements}
 
