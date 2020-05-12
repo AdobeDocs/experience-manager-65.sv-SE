@@ -10,7 +10,10 @@ topic-tags: components
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: 4c7e33ea-f2d3-4d69-b676-aeb50c610d70
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 10072609bc371b5f2dce425e90e583f14f96e371
+workflow-type: tm+mt
+source-wordcount: '495'
+ht-degree: 3%
 
 ---
 
@@ -21,7 +24,7 @@ AEM Content Services är utformat för att generalisera beskrivningen och levera
 
 De levererar innehåll till kanaler som inte är traditionella AEM-webbsidor med hjälp av standardiserade metoder som kan användas av alla kunder. Dessa kanaler kan omfatta:
 
-* Enkelsidiga program
+* [Enkelsidiga program](spa-walkthrough.md)
 * Inbyggda mobilprogram
 * andra kanaler och kontaktytor utanför AEM
 
@@ -35,7 +38,7 @@ Med innehållsfragment som använder strukturerat innehåll kan du tillhandahål
 
 Med AEM JSON-exporteraren kan du leverera innehållet på en (y) AEM-sida i JSON-datamodellsformat. Detta kan sedan användas av dina egna program.
 
-Inom AEM uppnås leveransen med suffixet
+Inom AEM uppnås leveransen med väljaren `model` och `.json` tillägget.
 
 `.model.json`
 
@@ -71,13 +74,17 @@ Sidan kan innehålla antingen ett enda innehållsfragment eller flera komponente
    >
    >Ni kan [anpassa era egna komponenter](/help/sites-developing/json-exporter-components.md) för att få tillgång till och använda dessa data.
 
+   >[!NOTE]
+   >
+   >Även om det inte är en standardimplementering stöds [flera väljare,](json-exporter-components.md#multiple-selectors) men `model` måste vara den första.
+
 ### Ytterligare information {#further-information}
 
 Se även:
 
-* Resurser för HTTP API
+* HTTP API för Assets
 
-   * [Resurser för HTTP API](/help/assets/mac-api-assets.md)
+   * [HTTP API för Assets](/help/assets/mac-api-assets.md)
 
 * Sling Models:
 
