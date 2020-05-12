@@ -10,7 +10,10 @@ content-type: reference
 discoiquuid: 04ac8203-320b-4671-aaad-6e1397b12b6f
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2dad220d6593ed542816f8a97b0d4b44f0d57876
+source-git-commit: 10072609bc371b5f2dce425e90e583f14f96e371
+workflow-type: tm+mt
+source-wordcount: '2112'
+ht-degree: 0%
 
 ---
 
@@ -102,7 +105,7 @@ För att underlätta bibliotekens interoperabilitet rekommenderar Adobe den ramv
 
 #### Reagera {#react}
 
-npm-modul: [@adobe/cq-response-editable-components](https://www.npmjs.com/package/@adobe/cq-react-editable-components)
+npm-modul: [@adobe/cq-rea-editable-components](https://www.npmjs.com/package/@adobe/cq-react-editable-components)
 
 #### Vinkel {#angular}
 
@@ -171,7 +174,7 @@ Se även npm-resursen [@adobe/cq-response-editable-components#srccomponentssresp
 
 SPA-komponenten mappas till en grafisk behållare som t.ex. det responsiva stödrastret och måste lägga till en virtuell underordnad platshållare när innehållet skapas. När innehållet i SPA-filen redigeras av sidredigeraren bäddas innehållet in i redigeraren med en iframe och attributet läggs till i dokumentnoden för det innehållet `data-cq-editor` . När attributet finns med måste behållaren innehålla ett HTMLElement som representerar det område som författaren interagerar med när en ny komponent infogas på sidan. `data-cq-editor`
 
-Exempel:
+Till exempel:
 
 ```
 <div data-cq-data-path={"path/to/the/responsivegrid/*"} className="new section aem-Grid-newComponent"/>
@@ -189,7 +192,7 @@ Exempel:
 
 #### Komponentmappning {#component-mapping}
 
-Det underliggande [komponentmappningsbiblioteket](/help/sites-developing/spa-blueprint.md#componentmapping) och dess `MapTo` funktion kan kapslas in och utökas för att tillhandahålla funktioner i förhållande till redigeringskonfigurationen som tillhandahålls bredvid den aktuella komponentklassen.
+Det underliggande [`Component Mapping`](/help/sites-developing/spa-blueprint.md#componentmapping) biblioteket och dess `MapTo` funktion kan kapslas in och utökas för att ge funktioner i förhållande till redigeringskonfigurationen som finns bredvid den aktuella komponentklassen.
 
 ```
 const EditConfig = {
@@ -211,7 +214,7 @@ class MyComponent extends Component {
 MapTo('component/resource/path')(MyComponent, EditConfig);
 ```
 
-I implementeringen ovan utökas projektkomponenten med tomrumsfunktionen innan den registreras i [komponentmappningsarkivet](/help/sites-developing/spa-blueprint.md#componentmapping) . Detta gör du genom att kapsla in och utöka ` [ComponentMapping](/content.md#main-pars_header_906602219)` biblioteket för att ge stöd för `EditConfig` konfigurationsobjektet:
+I implementeringen ovan utökas projektkomponenten med tomrumsfunktionen innan den registreras i [komponentmappningsarkivet](/help/sites-developing/spa-blueprint.md#componentmapping) . Detta gör du genom att kapsla in och utöka [`ComponentMapping`](/help/sites-developing/spa-blueprint.md#componentmapping) biblioteket för att ge stöd för `EditConfig` konfigurationsobjektet:
 
 ```
 /**
@@ -234,7 +237,7 @@ I implementeringen ovan utökas projektkomponenten med tomrumsfunktionen innan d
 ComponentMapping.map = function map (resourceTypes, clazz, editConfig) {};
 ```
 
-## Dra samman med sidredigeraren {#contract-wtih-the-page-editor}
+## Dra samman med sidredigeraren {#contract-with-the-page-editor}
 
 Projektkomponenterna måste generera minst följande dataattribut så att redigeraren kan interagera med dem.
 
