@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: e72da81b-4085-49b0-86c3-11ad48978a8a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bd667ae10b930f6e3b97fb22b4a99b0841fac171
+source-git-commit: 86d3f14ec9e99297ede0aa1c027884d7f73665bc
+workflow-type: tm+mt
+source-wordcount: '5487'
+ht-degree: 0%
 
 ---
 
@@ -36,14 +39,14 @@ Grupper är samlingar av användare och/eller andra grupper. alla kallas medlemm
 
 Deras främsta syfte är att förenkla underhållsprocessen genom att minska antalet enheter som ska uppdateras, eftersom en ändring görs i en grupp tillämpas på alla medlemmar i gruppen. Grupper återspeglar ofta:
 
-* en roll i ansökan, till exempel någon som har rätt att surfa innehållet eller någon som har rätt att bidra med innehåll.
+* En roll i ansökan. till exempel någon som har rätt att surfa innehållet eller någon som har rätt att bidra med innehåll.
 * din egen organisation, kan du utöka rollerna för att skilja mellan medarbetare från olika avdelningar när de är begränsade till olika grenar i innehållsträdet.
 
 Därför tenderar grupperna att förbli stabila, medan användarna kommer och går oftare.
 
 Med planering och en ren struktur kan användningen av grupper återspegla din struktur, vilket ger dig en tydlig översikt och en effektiv mekanism för uppdateringar.
 
-### Inbyggda användare och grupper {#built-in-users-and-groups}
+### Built-in Users and Groups {#built-in-users-and-groups}
 
 AEM WCM installerar ett antal användare och grupper. Dessa kan du se när du först öppnar säkerhetskonsolen efter installationen.
 
@@ -63,7 +66,7 @@ I följande tabeller visas varje objekt tillsammans med:
    <td>Rekommendation</td>
   </tr>
   <tr>
-   <td><p>admin</p> <p>Standardlösenord:admin</p> </td>
+   <td><p>admin</p> <p>Standardlösenord: admin</p> </td>
    <td>Användare</td>
    <td><p>Systemadministratörskonto med fullständig behörighet.</p> <p>Det här kontot används för anslutningen mellan AEM WCM och CRX.</p> <p>Om du råkar ta bort det här kontot återskapas det när databasen startas om (i standardinställningen).</p> <p>Administratörskontot är ett krav för AEM-plattformen. Detta konto kan därför inte tas bort.</p> </td>
    <td><p>Adobe rekommenderar att lösenordet för det här användarkontot ändras från standardvärdet.</p> <p>Bäst vid installationen, men det kan göras i efterhand.</p> <p>Obs! Det här kontot ska inte blandas ihop med administratörskontot för CQ Servlet Engine.</p> </td>
@@ -72,7 +75,7 @@ I följande tabeller visas varje objekt tillsammans med:
    <td><p>anonym</p> <p> </p> </td>
    <td>Användare</td>
    <td><p>Innehåller standardrättigheterna för oautentiserad åtkomst till en instans. Som standard innehåller detta de lägsta åtkomsträttigheterna.</p> <p>Om du råkar ta bort det här kontot återskapas det när du startar det. Den kan inte tas bort permanent, men den kan inaktiveras.</p> </td>
-   <td>Undvik att ta bort eller inaktivera det här kontot eftersom det kommer att påverka författarinstansernas funktion negativt. Om det finns säkerhetskrav som ger dig rätt att ta bort det måste du först testa de effekter det har på dina system.</td>
+   <td>Undvik att ta bort eller inaktivera det här kontot eftersom det kommer att påverka författarinstansernas funktion negativt. Om det finns säkerhetskrav som ger dig rätt att ta bort den måste du först testa de effekter den har på dina system.</td>
   </tr>
   <tr>
    <td><p>author</p> <p>Standardlösenord: författare</p> </td>
@@ -90,7 +93,7 @@ I följande tabeller visas varje objekt tillsammans med:
    <td>innehållsförfattare</td>
    <td>Grupp</td>
    <td><p>Grupp ansvarig för innehållsredigering. Kräver behörighet att läsa, ändra, skapa och ta bort.</p> </td>
-   <td>Du kan skapa egna grupper med innehållsförfattare med projektspecifik behörighet, förutsatt att du lägger till behörighet för att läsa, ändra, skapa och ta bort.</td>
+   <td>Du kan skapa egna grupper med innehållsförfattare med projektspecifika åtkomsträttigheter, förutsatt att du lägger till behörighet för att läsa, ändra, skapa och ta bort.</td>
   </tr>
   <tr>
    <td>medverkande</td>
@@ -175,7 +178,7 @@ Där bockmarkeringen finns i rutnätet visas även vilka behörigheter användar
    <td><p>Användaren kan:</p>
     <ul>
      <li>skapa en ny sida eller underordnad sida.</li>
-    </ul> <p>Om <strong>Modify</strong> (ändra) nekas kommer underträden under jcr:content att exkluderas eftersom skapandet av jcr:content och dess underordnade noder betraktas som en sidändring. Detta gäller endast noder som definierar en underordnad jcr:content-nod.</p> </td>
+    </ul> <p>Om <strong>Modify</strong> (ändra) nekas kommer underträden under jcr:content att exkluderas eftersom skapandet av jcr:content och dess underordnade noder betraktas som en sidändring. Detta gäller endast noder som definierar en jcr:content child-nod.</p> </td>
   </tr>
   <tr>
    <td>Ta bort</td>
@@ -183,7 +186,7 @@ Där bockmarkeringen finns i rutnätet visas även vilka behörigheter användar
     <ul>
      <li>ta bort befintliga stycken från sidan eller en underordnad sida.</li>
      <li>ta bort en sida eller underordnad sida.</li>
-    </ul> <p>Om <strong>modifiering</strong> nekas, utesluts alla underträd under jcr:content specifikt eftersom jcr:content tas bort och dess underordnade noder betraktas som en sidändring. Detta gäller endast noder som definierar en underordnad jcr:content-nod.</p> </td>
+    </ul> <p>Om <strong>modifiering</strong> nekas, utesluts alla underträd under jcr:content specifikt eftersom jcr:content tas bort och dess underordnade noder betraktas som en sidändring. Detta gäller endast noder som definierar en jcr:content child-nod.</p> </td>
   </tr>
   <tr>
    <td>Läs ACL</td>
@@ -293,7 +296,7 @@ Nedan följer några rekommendationer om hur du hanterar åtkomstkontrollistor:
 
 Innan du ändrar någon av behörigheterna måste du se till att du förstår hur de fungerar och fungerar tillsammans. Se CRX-dokumentationen för att illustrera hur AEM WCM [utvärderar åtkomsträttigheter](/help/sites-administering/user-group-ac-admin.md#how-access-rights-are-evaluated) och exempel på hur du ställer in åtkomstkontrollistor.
 
-### Permissions {#permissions}
+### Behörigheter {#permissions}
 
 Behörigheter ger användare och grupper åtkomst till AEM-funktioner på AEM-sidor.
 
@@ -373,7 +376,7 @@ Nedan beskrivs de bästa sätten att arbeta med behörigheter och behörigheter:
 | *Testa* | Använd en testinstallation för att öva och se till att du förstår relationen mellan olika användare och grupper. |
 | *Standardanvändare/grupper* | Uppdatera alltid standardanvändare och standardgrupper omedelbart efter installationen för att förebygga säkerhetsproblem. |
 
-## Hantera användare och grupper {#managing-users-and-groups}
+## Managing Users and Groups {#managing-users-and-groups}
 
 Användare kan vara personer som använder systemet och utländska system som gör förfrågningar till systemet.
 
@@ -418,7 +421,7 @@ Flikarna ger åtkomst till olika konfigurationer:
 | Personifierare | Tillåter en annan användare att personifiera kontot. Användbar när du behöver en användare för att agera för en annan användares räkning. Se [Personifiera användare](#impersonating-another-user). |
 | Inställningar | Anger [inställningar för gruppen eller användaren](#setting-user-and-group-preferences). Till exempel språkinställningar. |
 
-### Filtrera användare och grupper {#filtering-users-and-groups}
+### Filtering Users and Groups {#filtering-users-and-groups}
 
 Du kan filtrera listan genom att ange ett filteruttryck som döljer alla användare och grupper som inte matchar uttrycket. Du kan också dölja användare och grupper med knapparna [Dölj användare och Dölj grupp](#hiding-users-and-groups) .
 
@@ -431,7 +434,7 @@ Så här filtrerar du användare eller grupper:
 
 1. Klicka på **x** när du vill ta bort alla filter.
 
-### Dölja användare och grupper {#hiding-users-and-groups}
+### Hiding Users and Groups {#hiding-users-and-groups}
 
 Att dölja användare eller grupper är ett annat sätt att filtrera listan över alla användare och grupper i ett system. Det finns två växlingsmekanismer. Om du klickar på Dölj användare döljs alla användare och om du klickar på Dölj grupper döljs alla grupper från vyn (du kan inte dölja både användare och grupper samtidigt). Information om hur du filtrerar listan med hjälp av ett filteruttryck finns i [Filtrera användare och grupper](#filtering-users-and-groups).
 
@@ -443,7 +446,7 @@ Så här döljer du användare och grupper:
 
 1. Om du vill visa användare eller grupper igen klickar du på motsvarande knapp igen.
 
-### Skapa användare och grupper {#creating-users-and-groups}
+### Creating Users and Groups {#creating-users-and-groups}
 
 Så här skapar du en ny användare eller grupp:
 
@@ -461,7 +464,7 @@ Så här skapar du en ny användare eller grupp:
 
 1. Klicka på **Skapa**. Användaren eller gruppen som du skapade visas i trädlistan.
 
-### Ta bort användare och grupper {#deleting-users-and-groups}
+### Deleting Users and Groups {#deleting-users-and-groups}
 
 Så här tar du bort en användare eller grupp:
 
@@ -490,7 +493,7 @@ Använd följande procedur för att ändra en användares lösenord.
 >[!NOTE]
 >
 >Du kan inte använda säkerhetskonsolen för att ändra administratörslösenordet. Om du vill ändra lösenordet för administratörskontot använder du [användarkonsolen](/help/sites-administering/granite-user-group-admin.md#changing-the-password-for-an-existing-user) som Granite Operations tillhandahåller.
-
+> Om du använder AEM Forms på JEE ska du inte använda instruktionerna nedan för att ändra lösenord, utan istället använda AEM Forms på JEE Admin Console (/adminui) för att ändra lösenordet.
 
 1. Dubbelklicka på det användarnamn du vill ändra lösenordet för i **säkerhetskonsolen** .
 1. Klicka på fliken **Egenskaper** (om den inte redan är aktiv).
