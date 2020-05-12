@@ -10,7 +10,10 @@ topic-tags: components
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: 448ad337-d4bb-4603-a27b-77da93feadbd
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 10072609bc371b5f2dce425e90e583f14f96e371
+workflow-type: tm+mt
+source-wordcount: '562'
+ht-degree: 3%
 
 ---
 
@@ -50,11 +53,21 @@ Dessutom anger detta att klassen Sling Model kan anpassas till `ComponentExporte
 
 >[!NOTE]
 >
->Jackson-anteckningar anges vanligtvis inte på klassnivå för Sling Model, utan på gränssnittsnivå för Model. Detta för att säkerställa att JSON-exporten betraktas som en del av komponent-API:t.
+>Jackson-anteckningar anges vanligtvis inte på klassnivån Sling Model, utan i stället på gränssnittsnivån Model. Detta för att säkerställa att JSON-exporten betraktas som en del av komponent-API:t.
 
 >[!NOTE]
 >
 >Klasserna `ExporterConstants` och `ComponentExporter` kommer från `com.adobe.cq.export.json` paketet.
+
+### Använda flera väljare {#multiple-selectors}
+
+Även om det inte är ett standardanvändningsfall är det möjligt att konfigurera flera väljare förutom `model` väljaren.
+
+```
+https://<server>:<port>/content/page.model.selector1.selector2.json
+```
+
+I så fall måste dock väljaren vara den första väljaren och tillägget måste vara `model` `.json`.
 
 ## Anteckna gränssnittet för segmenteringsmodellen {#annotate-the-sling-model-interface}
 
