@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d948ea6e6f6983ba0ecfe05710ffa7dedb772075
+source-git-commit: d77296df73861c33720c16c14534c1b448d35d06
 workflow-type: tm+mt
-source-wordcount: '5430'
+source-wordcount: '5434'
 ht-degree: 6%
 
 ---
@@ -499,14 +499,14 @@ Om du vill uppdatera någon av de här parametrarna följer du stegen i [Aktiver
 För att Dynamic Media - Scene7-läget ska fungera smidigt rekommenderar Adobe följande finjusteringstips för synkroniseringsprestanda/skalbarhet:
 
 * Uppdatera de fördefinierade arbetstrådarna för Granite-arbetsflödet (videoresurser).
-* Uppdatera de fördefinierade tillfälliga arbetsflödena för Granite (bilder och andra mediefiler) för köarbetstrådar.
+* Uppdatera det fördefinierade tillfälliga Granite-arbetsflödet (bilder och andra resurser än videor) för köarbetstrådar.
 * Uppdatera de maximala överföringsanslutningarna till Dynamic Media Classic-servern.
 
-#### Uppdaterar kön för Granska tillfälligt arbetsflöde {#updating-the-granite-transient-workflow-queue}
+#### Uppdatera den tillfälliga arbetsflödeskön för Granite {#updating-the-granite-transient-workflow-queue}
 
 Kön för Bevilja överföring av arbetsflöde används för **[!UICONTROL DAM Update Asset]** arbetsflödet. I Dynamic Media används den för bildinläsning och bearbetning.
 
-**Så här uppdaterar du kön för Granska tillfälligt arbetsflöde**
+**Så här uppdaterar du den tillfälliga arbetsflödeskön för Granite**
 
 1. Gå till [https://&lt;server>/system/console/configMgr](https://localhost:4502/system/console/configMgr) och sök efter **kö: Bevilja en tillfällig arbetsflödeskö**.
 
@@ -524,7 +524,7 @@ Kön för Bevilja överföring av arbetsflöde används för **[!UICONTROL DAM U
 
 1. Tryck på **[!UICONTROL Save]**.
 
-#### Uppdaterar kön för Granite-arbetsflöde {#updating-the-granite-workflow-queue}
+#### Uppdaterar arbetsflödeskön Granite {#updating-the-granite-workflow-queue}
 
 Beviljad arbetsflödeskö används för icke-tillfälliga arbetsflöden. I Dynamic Media brukade det bearbeta video med **[!UICONTROL Dynamic Media Encode Video]** arbetsflödet.
 
@@ -546,11 +546,11 @@ Beviljad arbetsflödeskö används för icke-tillfälliga arbetsflöden. I Dynam
 
 1. Tryck på **[!UICONTROL Save]**.
 
-#### Uppdaterar anslutning för överföring av Scene7 {#updating-the-scene-upload-connection}
+#### Uppdaterar anslutningen för Dynamic Media Classic-överföring {#updating-the-scene-upload-connection}
 
 Inställningen Scene7 Upload Connection synkroniserar AEM-resurser till dynamiska Media Classic-servrar.
 
-**Så här uppdaterar du anslutningen för överföring av Scene7**
+**Så här uppdaterar du den dynamiska Media Classic-överföringsanslutningen**
 
 1. Navigera till `https://<server>/system/console/configMgr/com.day.cq.dam.scene7.impl.Scene7UploadServiceImpl`
 1. I **[!UICONTROL Number of connections]** fältet och/eller i **[!UICONTROL Active job timeout]** fältet ändrar du numret.
