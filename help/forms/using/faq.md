@@ -11,7 +11,10 @@ topic-tags: hTML5_forms
 discoiquuid: 4b676e7e-191f-4a19-8b8f-fc3e30244b59
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 407b4d0b86c6bcbff11a085ea10bd3bf90115257
+workflow-type: tm+mt
+source-wordcount: '1970'
+ht-degree: 0%
 
 ---
 
@@ -165,6 +168,10 @@ Det finns några vanliga frågor (FAQ) om layout, skriptstöd och omfång för H
 
    Skärmläsare stöder inte datum-/tidsfält. Du kan dock manuellt ange datum/tid för fältet så att skärmläsaren läser det. Använd verktygstips eller skärmläsartext för att instruera användaren att manuellt välja datum/tid för fältet.
 
+1. Har HTML5-formulär stöd för visningsmönster för flytande fält?
+
+   Svar: HTML5-formulär stöder inte visningsmönster för flytande fält.
+
 ### Skript {#scripting}
 
 1. Finns det några begränsningar i JavaScript-implementeringen för HTML-formulär?
@@ -208,4 +215,4 @@ Det finns några vanliga frågor (FAQ) om layout, skriptstöd och omfång för H
 
 1. Finns det några reserverade nyckelord i HTML5-formulär?
 
-   Svar: Alla HTML5-formulär-API:er är reserverade nyckelord. Använd ett namn som inte är identiskt med API:erna för [HTML5-formulär för anpassade API:er](/help/forms/using/scripting-support.md). Förutom reserverade nyckelord bör du lägga till ett unikt prefix efter understrecket om du använder objektnamn som börjar med ett understreck (_). Genom att lägga till ett prefix undviker du eventuella konflikter med interna API:er för HTML5-formulär. Exempel: `_fpField1`
+   Svar: Alla HTML5-formulär-API:er är reserverade nyckelord. Använd ett namn som inte är identiskt med API:erna för [HTML5-formulär för anpassade API:er](/help/forms/using/scripting-support.md). Förutom reserverade nyckelord bör du lägga till ett unikt prefix efter understrecket om du använder objektnamn som börjar med ett understreck (_). Genom att lägga till ett prefix undviker du eventuella konflikter med interna API:er för HTML5-formulär. Till exempel, `_fpField1`
