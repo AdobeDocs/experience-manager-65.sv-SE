@@ -3,9 +3,9 @@ title: 'Metadata-scheman för att definiera layouten för metadataegenskapssidan
 description: Metadata-schemat definierar layouten för egenskapssidan och de metadataegenskaper som visas för resurser. Lär dig hur du skapar anpassade metadatamatcheman, redigerar metadatamatchema och hur du använder metadatamatchema på resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 530a720a5fbad906e7015aa41a650b31f09fe2c4
+source-git-commit: 39066500057d364ccee57f01f045c11d634b2d0e
 workflow-type: tm+mt
-source-wordcount: '2575'
+source-wordcount: '2589'
 ht-degree: 7%
 
 ---
@@ -22,6 +22,8 @@ Så här visar och redigerar du egenskapssidan för en resurs:
 1. Klicka på eller tryck på **[!UICONTROL View Properties]** ikonen från Snabbåtgärder på resurspanelen i kortvyn.
 
    ![Snabbåtgärder på resurspanelen](assets/chlimage_1-170.png)
+
+   Du kan också markera en resurs och sedan klicka på eller trycka på [!UICONTROL Properties] ikonen i verktygsfältet.
 
 1. Du kan redigera olika metadataegenskaper under de tillgängliga flikarna. Du kan dock inte ändra resursen [!UICONTROL Type] på egenskapsfliken [!UICONTROL Basic] .
 
