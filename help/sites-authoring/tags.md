@@ -11,7 +11,10 @@ topic-tags: site-features
 discoiquuid: 9fb6d603-eb17-4192-bfa6-6c316f14ac7d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
+source-git-commit: 52cb99353ae33c8097b6b5bd29f6c040df30b42d
+workflow-type: tm+mt
+source-wordcount: '584'
+ht-degree: 3%
 
 ---
 
@@ -42,9 +45,9 @@ När du utformar innehållsstrukturen för en plats och metadatarammet för resu
 
 I redigeringsmiljön kan författare lägga till taggar genom att gå till sidegenskaperna och ange en eller flera taggar i fältet **Taggar/nyckelord** .
 
-Om du vill använda [fördefinierade taggar](/help/sites-administering/tags.md)använder du fältet **Taggar** och fönstret **Markera taggar** i fönstret **Sidegenskaper** . Fliken **Standardtaggar** är standardnamnutrymmet, vilket innebär att det inte finns något `namespace-string:` prefix till taxonomin.
+To apply [pre-defined tags](/help/sites-administering/tags.md), in the **Page Properties** window use the **Tags** field and the **Select Tags** window. Fliken **Standardtaggar** är standardnamnutrymmet, vilket innebär att taxonomin inte har prefixet `namespace-string:`. 
 
-![chlimage_1-41](assets/chlimage_1-41.png)
+![Välj taggfönstret; använd X-knappen för att avmarkera de markerade taggarna](assets/chlimage_1-41.png)
 
 ### Publiceringstaggar {#publishing-tags}
 
