@@ -3,9 +3,9 @@ title: 'Metadata-scheman för att definiera layouten för metadataegenskapssidan
 description: Metadata-schemat definierar layouten för egenskapssidan och de metadataegenskaper som visas för resurser. Lär dig hur du skapar anpassade metadatamatcheman, redigerar metadatamatchema och hur du använder metadatamatchema på resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 2366abc3be015fa637621f235edb8e8d79e51372
+source-git-commit: 69506287c1c8e45d99c3229d701604387bd57ca9
 workflow-type: tm+mt
-source-wordcount: '2591'
+source-wordcount: '2579'
 ht-degree: 7%
 
 ---
@@ -43,9 +43,9 @@ Om du vill visa en lista med formulär/mallar går du till [!DNL Experience Mana
 |---|---|---|
 | [!UICONTROL default] |  | Basmetadataschemaformuläret för resurser. |
 |  | Följande underordnade formulär ärver egenskaperna för [!UICONTROL default] formuläret: |  |
-|  | <ul><li> [!UICONTROL image]</li></ul> | Schemaformulär för resurser med MIME-typen &quot;image&quot;, till exempel image/jpeg, image/png o.s.v. <br> Formuläret har [!UICONTROL image] följande underordnade formulärmallar: <ul><li> [!UICONTROL jpeg]: Schemaformulär för resurser med undertyp [!UICONTROL jpeg].</li> <li>[!UICONTROL tiff]: Schemaformulär för resurser med undertyp [!UICONTROL tiff].</li></ul> |
-|  | <ul><li> [!UICONTROL application]</li></ul> | Schemaformulär för resurser med MIME-typen &quot;application&quot;, till exempel application/pdf, application/zip och så vidare. <br>[!UICONTROL pdf]: Schemaformulär för resurser med undertyp pdf. |
-|  | <ul><li>[!UICONTROL video]</li></ul> | Schemaformulär för resurser med MIME-typen &quot;video&quot;, till exempel video/avi, video/mp4 och så vidare. |
+|  | <ul><li> [!UICONTROL image]</li></ul> | Schemaformulär för resurser med MIME-typen &quot;image&quot;, till exempel `image/jpeg`, `image/png`osv. <br> Formuläret har [!UICONTROL image] följande underordnade formulärmallar: <ul><li> [!UICONTROL jpeg]: Schemaformulär för resurser med undertyp [!UICONTROL jpeg].</li> <li>[!UICONTROL tiff]: Schemaformulär för resurser med undertyp [!UICONTROL tiff].</li></ul> |
+|  | <ul><li> [!UICONTROL application]</li></ul> | Schemaformulär för resurser med MIME-typen &quot;application&quot;, till exempel `application/pdf`, `application/zip`och så vidare. <br>[!UICONTROL pdf]: Schemaformulär för resurser med undertyp pdf. |
+|  | <ul><li>[!UICONTROL video]</li></ul> | Schemaformulär för resurser med MIME-typen &quot;video&quot;, t.ex. `video/avi`, `video/mp4` och så vidare. |
 | [!UICONTROL collection] |  | Schemaformulär för samlingar. |
 | [!UICONTROL contentfragment] |  | Schemaformulär för innehållsfragment. |
 | [!UICONTROL forms] |  | Det här schemaformuläret gäller [Adobe Experience Manager Forms](/help/forms/home.md). |
