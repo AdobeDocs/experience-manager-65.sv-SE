@@ -3,7 +3,10 @@ title: Hantera sammansatta resurser med referenser och flersidiga resurser i [!D
 description: Lär dig hur du skapar referenser till digitala resurser från [!DNL Adobe InDesign], [!DNL Adobe Illustrator] och [!DNL Adobe Photoshop]. Använd funktionen för sidvisningsprogram för att visa enskilda underresurssidor för flersidiga filer som PDF-, INDD-, PPT-, PPTX- och AI-filer.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
+source-git-commit: d90a95195a97a1840e1defb49d2a09ffbd3c8650
+workflow-type: tm+mt
+source-wordcount: '1311'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ Att referera till resurser i [!DNL Adobe Creative Cloud] program ger inte bara �
 
 Referenser tolkas utifrån sökväg, dokument-ID och instans-ID för de refererade resurserna.
 
-## Lägg till digitala resurser som referenser i [!DNL Adobe Illustrator]{#refai}
+## Lägg till digitala resurser som referenser i [!DNL Adobe Illustrator] {#refai}
 
 Du kan referera till befintliga digitala resurser inifrån en [!DNL Adobe Illustrator] fil.
 
@@ -27,21 +30,21 @@ Du kan referera till befintliga digitala resurser inifrån en [!DNL Adobe Illust
 
 1. Spara [!DNL Illustrator] filen på den monterade enheten eller [överför](/help/assets/managing-assets-touch-ui.md#uploading-assets) den till [!DNL Experience Manager] databasen.
 
-1. När arbetsflödet är klart går du till sidan med resursinformation för resursen. Referenserna till befintliga digitala resurser visas under **[!UICONTROL Beroenden]** i kolumnen **[!UICONTROL Referenser]** .
+1. När arbetsflödet är klart går du till sidan med resursinformation för resursen. Referenserna till befintliga digitala resurser listas under **[!UICONTROL Dependencies]** i **[!UICONTROL References]** kolumnen.
 
    ![chlimage_1-84](assets/chlimage_1-258.png)
 
-1. De refererade resurserna som visas under **[!UICONTROL Beroenden]** kan också refereras av andra filer än den aktuella. Om du vill visa en lista med referensfiler för en resurs klickar du på resursen under **[!UICONTROL Beroenden]**.
+1. De refererade resurserna som visas under **[!UICONTROL Dependencies]** kan också refereras till av andra filer än den aktuella. Om du vill visa en lista med refererande filer för en resurs klickar du på resursen i **[!UICONTROL Dependencies]** listan under.
 
    ![chlimage_1-85](assets/chlimage_1-259.png)
 
-1. Klicka på **[!UICONTROL Visa egenskaper]** i verktygsfältet. På sidan [!UICONTROL Egenskaper] visas listan med filer som refererar till den aktuella resursen under kolumnen **[!UICONTROL Referenser]** på fliken **[!UICONTROL Grundläggande]** .
+1. Klicka **[!UICONTROL View Properties]** i verktygsfältet. På [!UICONTROL Properties] sidan visas listan med filer som refererar till den aktuella resursen under **[!UICONTROL References]** kolumnen på **[!UICONTROL Basic]** fliken.
 
    ![visa referenserna för Experience Manager Assets i kolumnen Referenser i resursinformationen](assets/asset-references.png)
 
    *Bild: Resursreferenser i tillgångsinformation.*
 
-## Lägg till digitala resurser som referenser i [!DNL Adobe InDesign]{#add-aem-assets-as-references-in-adobe-indesign}
+## Lägg till digitala resurser som referenser i [!DNL Adobe InDesign] {#add-aem-assets-as-references-in-adobe-indesign}
 
 Om du vill referera till digitala resurser från en [!DNL InDesign] fil drar du resurserna till [!DNL InDesign] filen eller exporterar [!DNL InDesign] filen som ett ZIP-arkiv.
 
@@ -63,9 +66,9 @@ Den här proceduren liknar hur du [lägger till digitala resurser som referenser
 1. Starta `Unarchiver` arbetsflödet.
 1. När arbetsflödet är klart refereras referenserna i mappen Länkar automatiskt till underresurser. Om du vill visa en lista med refererade resurser går du till sidan med tillgångsinformation för [!DNL InDesign] resursen och stänger [Rail](/help/sites-authoring/basic-handling.md#rail-selector).
 
-## Lägg till digitala resurser som referenser i [!DNL Adobe Photoshop]{#refps}
+## Lägg till digitala resurser som referenser i [!DNL Adobe Photoshop] {#refps}
 
-1. Använd [!DNL Experience Manager] skrivbordsappen för att komma åt [!DNL Experience Manager Assets]. Hämta och visa resurserna i det lokala filsystemet. Använd funktionen [!UICONTROL Montera länkad] i [!DNL Adobe Photoshop]. Se [placera resurser i skrivbordsappen](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#place-assets-in-native-documents).
+1. Använd [!DNL Experience Manager] skrivbordsappen för att komma åt [!DNL Experience Manager Assets]. Hämta och visa resurserna i det lokala filsystemet. Använd funktionerna [!UICONTROL Place Linked] i [!DNL Adobe Photoshop]. Se [placera resurser i skrivbordsappen](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#place-assets-in-native-documents).
 
    ![chlimage_1-87](assets/chlimage_1-261.png)
 
@@ -86,29 +89,29 @@ För resurser som stöds i flersidiga format - PDF-filer, AI-filer [!DNL Microso
 
 Generering av delresurser är inaktiverat som standard. Så här aktiverar du generering av delresurser:
 
-1. Logga in [!DNL Experience Manager] som administratör. Öppna **[!UICONTROL Verktyg > Arbetsflöde > Modeller]**.
-1. Välj arbetsflöde för **[!UICONTROL DAM-uppdatering av resurser]** och klicka på **[!UICONTROL Redigera]**.
-1. Klicka på **[!UICONTROL Växla sidopanel]** och leta upp steget **[!UICONTROL Skapa underresurs]** . Lägg till steget i arbetsflödet. Klicka på **[!UICONTROL Synkronisera]**.
+1. Logga in [!DNL Experience Manager] som administratör. Öppna **[!UICONTROL Tools > Workflow > Models]**.
+1. Select **[!UICONTROL DAM Update Asset]** workflow and click **[!UICONTROL Edit]**.
+1. Klicka **[!UICONTROL Toggle Side Panel]** och leta upp **[!UICONTROL Create Sub Asset]** steget. Lägg till steget i arbetsflödet. Klicka på **[!UICONTROL Sync]**.
 
 Gör något av följande om du vill generera delresurserna:
 
-* Nya resurser: Arbetsflödet för [!UICONTROL DAM-uppdatering av resurser] körs på alla nya resurser som överförs till [!DNL Experience Manager]. Delresurser genereras automatiskt för nya flersidiga resurser.
-* Befintliga flersidiga resurser: Kör arbetsflödet [!UICONTROL DAM Update Assets] manuellt enligt något av följande:
+* Nya resurser: Arbetsflödet [!UICONTROL DAM Update Assets] körs på alla nya resurser som överförs till [!DNL Experience Manager]. Delresurser genereras automatiskt för nya flersidiga resurser.
+* Befintliga flersidiga resurser: Kör arbetsflödet manuellt [!UICONTROL DAM Update Assets] på något av följande sätt:
 
-   * Markera en resurs och klicka på [!UICONTROL Tidslinje] för att öppna den vänstra panelen. Du kan också använda kortkommandot `alt + 3`. Klicka på [!UICONTROL Starta arbetsflöde], välj [!UICONTROL DAM-uppdateringsresurs], klicka på [!UICONTROL Start]och sedan på [!UICONTROL Fortsätt].
-   * Markera en resurs och klicka på [!UICONTROL Skapa > Arbetsflöde] i verktygsfältet. I popup-dialogrutan väljer du arbetsflöde för [!UICONTROL DAM-uppdatering av resurs] , klickar på [!UICONTROL Start]och sedan på [!UICONTROL Fortsätt].
+   * Markera en resurs och klicka på [!UICONTROL Timeline] för att öppna den vänstra panelen. Du kan också använda kortkommandot `alt + 3`. Klicka [!UICONTROL Start Workflow], markera [!UICONTROL DAM Update Asset], klicka [!UICONTROL Start]och klicka [!UICONTROL Proceed].
+   * Select an asset and click [!UICONTROL Create > Workflow] from the toolbar. I popup-dialogrutan väljer du [!UICONTROL DAM Update Asset] arbetsflöde, klickar [!UICONTROL Start]och klickar på [!UICONTROL Proceed].
 
-För Microsoft Word-dokument gäller att du ska köra arbetsflödet **[!UICONTROL DAM-tolka Word-dokument]** . Det genererar en `cq:Page` komponent från innehållet i Microsoft Word-dokumentet. De bilder som extraheras från dokumentet refereras från `cq:Page` komponenten. Dessa bilder extraheras även om generering av delresurser är inaktiverat.
+Kör arbetsflödet särskilt för Microsoft Word-dokument **[!UICONTROL DAM Parse Word Documents]** . Det genererar en `cq:Page` komponent från innehållet i Microsoft Word-dokumentet. De bilder som extraheras från dokumentet refereras från `cq:Page` komponenten. Dessa bilder extraheras även om generering av delresurser är inaktiverat.
 
 ## Visa delresurser {#viewing-subassets}
 
-Delresurserna visas bara om delresurserna genereras och är tillgängliga för den valda flersidiga resursen. Om du vill visa de genererade delresurserna öppnar du flersidesresursen. Klicka på ikonen ![för](assets/do-not-localize/aem_leftrail_contentonly.png) vänsterkant i det övre vänstra området på sidan och klicka på **[!UICONTROL Delresurser]** i listan. När du väljer **[!UICONTROL Delresurser]** i listan. Du kan också använda kortkommandot `alt + 5`.
+Delresurserna visas bara om delresurserna genereras och är tillgängliga för den valda flersidiga resursen. Om du vill visa de genererade delresurserna öppnar du flersidesresursen. Klicka på ikonen ![för](assets/do-not-localize/aem_leftrail_contentonly.png) vänsterspåret i det övre vänstra området på sidan och klicka på **[!UICONTROL Subassets]** i listan. När du väljer **[!UICONTROL Subassets]** från listan. Du kan också använda kortkommandot `alt + 5`.
 
 ![Visa delresurser för en flersidig resurs](assets/view_subassets_simulation.gif)
 
 ## Visa sidor i en flersidig fil {#view-pages-of-a-multi-page-file}
 
-Du kan visa en flersidig fil, till exempel PDF-, INDD-, PPT-, PPTX- och AI-filer, med hjälp av funktionen för sidvisning i [!DNL Experience Manager Assets]. Öppna en flersidig resurs och klicka på **[!UICONTROL Visa sidor]** i det övre vänstra hörnet på sidan. Sidvisningsprogrammet som öppnas visar sidorna för resursen och kontrollerna för att bläddra igenom och zooma varje sida.
+Du kan visa en flersidig fil, till exempel PDF-, INDD-, PPT-, PPTX- och AI-filer, med hjälp av funktionen för sidvisning i [!DNL Experience Manager Assets]. Öppna en flersidig resurs och klicka **[!UICONTROL View Pages]** i det övre vänstra hörnet på sidan. Sidvisningsprogrammet som öppnas visar sidorna för resursen och kontrollerna för att bläddra igenom och zooma varje sida.
 
 ![Visa och visa sidor för en flersidig resurs](assets/view_multipage_asset_fmr.gif)
 
@@ -116,15 +119,19 @@ Du kan till [!DNL InDesign]exempel extrahera sidor med [!DNL InDesign Server]. O
 
 Följande alternativ är tillgängliga i verktygsfältet, i den vänstra listen och i kontrollerna i sidvisningsprogrammet:
 
-* **[!UICONTROL Skrivbordsåtgärder]** för att öppna eller visa en viss underresurs med [!DNL Experience Manager] datorprogrammet. Se hur du [konfigurerar skrivbordsåtgärder](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#desktopactions-v2) om du använder [!DNL Experience Manager] datorprogrammet.
+* **[!UICONTROL Desktop Actions]** för att öppna eller visa en viss underresurs med [!DNL Experience Manager] skrivbordsappen. Se hur du [konfigurerar skrivbordsåtgärder](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#desktopactions-v2) om du använder [!DNL Experience Manager] datorprogrammet.
 
-* **[!UICONTROL Alternativet Egenskaper]** öppnar sidan [!UICONTROL Egenskaper] för den specifika underresursen.
+* **[!UICONTROL Properties]** öppnar sidan [!UICONTROL Properties] för den specifika underresursen.
 
-* **[!UICONTROL Alternativet Anteckna]** gör att du kan anteckna i den specifika underresursen. De anteckningar du använder på separata underresurser samlas in och visas tillsammans när den överordnade resursen öppnas för visning.
+* **[!UICONTROL Annotate]** kan du göra anteckningar i den specifika underresursen. De anteckningar du använder på separata underresurser samlas in och visas tillsammans när den överordnade resursen öppnas för visning.
 
-* **[!UICONTROL Alternativet Sidöversikt]** visar alla delresurser samtidigt.
+* **[!UICONTROL Page Overview]** visar alla delresurser samtidigt.
 
-* **[!UICONTROL Alternativet Tidslinje]** i den vänstra listen när du har klickat på ikonen ![för](assets/do-not-localize/aem_leftrail_contentonly.png) vänster spår visas filens aktivitetsström.
+* **[!UICONTROL Timeline]** alternativet från den vänstra listen när du har klickat på ikonen ![för](assets/do-not-localize/aem_leftrail_contentonly.png) vänster spår visas filens aktivitetsström.
+
+## God praxis och begränsning {#best-practice-limitation-tips}
+
+* Generering av delresurser kan vara mycket resurskrävande för alla Experience Manager-distributioner. Om du genererar delresurser när komplexa resurser överförs lägger du till steget i arbetsflödet DAM-uppdatering av resurser. Om du genererar delresurser on demand skapar du ett separat arbetsflöde för att generera delresurser. Med ett dedikerat arbetsflöde kan du hoppa över de andra stegen i arbetsflödet för DAM-uppdatering av resurser och spara beräkningsresurser.
 
 >[!MORELIKETHIS]
 >
