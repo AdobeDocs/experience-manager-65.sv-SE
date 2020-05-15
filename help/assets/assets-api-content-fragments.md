@@ -1,6 +1,6 @@
 ---
-title: Stöd för innehållsfragment i AEM Assets HTTP API
-seo-title: Stöd för innehållsfragment i AEM Assets HTTP API
+title: Stöd för Content Fragments i AEM Assets HTTP API
+seo-title: Stöd för Content Fragments i AEM Assets HTTP API
 description: Läs mer om stöd för innehållsfragment i AEM Assets HTTP API.
 seo-description: Läs mer om stöd för innehållsfragment i AEM Assets HTTP API.
 uuid: c500d71e-ceee-493a-9e4d-7016745c544c
@@ -11,12 +11,15 @@ topic-tags: extending-assets
 discoiquuid: 03502b41-b448-47ab-9729-e0a66a3389fa
 docset: aem65
 translation-type: tm+mt
-source-git-commit: eb36f8fe6b08e03eb25e96ed1c31957f7d5aff27
+source-git-commit: 18dc05876337629b7561320ff6f0945e3e785ea3
+workflow-type: tm+mt
+source-wordcount: '1859'
+ht-degree: 2%
 
 ---
 
 
-# Stöd för innehållsfragment i AEM Assets HTTP API{#content-fragments-support-in-aem-assets-http-api}
+# Stöd för Content Fragments i AEM Assets HTTP API{#content-fragments-support-in-aem-assets-http-api}
 
 ## Översikt {#overview}
 
@@ -94,8 +97,8 @@ Detta innebär att efterföljande (`write`) begäranden inte kan kombineras till
   </tr>
   <tr>
    <td>Åtkomst</td>
-   <td><p>Kan nås direkt.</p> <p>Använder <code>/api/assets </code>slutpunkten, mappad till <code>/content/dam</code> (i databasen).</p> <p><code class="code">
-       /content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten</code><br /> Till exempel: begäran:<br /> <code>/api/assets/we-retail/en/experiences/arctic-surfing-in-lofoten.model.json</code></p> </td>
+   <td><p>Kan nås direkt.</p> <p>Använder <code>/api/assets </code>slutpunkten, mappad till <code>/content/dam</code> (i databasen).</p> <p>Till exempel:<code class="code">
+       /content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten</code><br /> begäran:<br /> <code>/api/assets/we-retail/en/experiences/arctic-surfing-in-lofoten.model.json</code></p> </td>
    <td><p>Måste refereras via en AEM-komponent på en AEM-sida.</p> <p>Använder väljaren <code>.model</code> för att skapa JSON-representationen.</p> <p>En exempel-URL skulle se ut så här:<br /> <code>https://localhost:4502/content/we-retail/language-masters/en/experience/arctic-surfing-in-lofoten.model.json</code></p> </td>
   </tr>
   <tr>
@@ -138,7 +141,7 @@ Innehållsfragment är en specifik typ av resurs, se [Arbeta med innehållsfragm
 
 Mer information om funktioner som är tillgängliga via API finns i:
 
-* [Tillgängliga funktioner](/help/assets/mac-api-assets.md#available-features) i REST API:t för resurser
+* [Tillgängliga funktioner](/help/assets/mac-api-assets.md#available-features) för REST API:t för resurser
 * [Enhetstyper](/help/assets/assets-api-content-fragments.md#entity-types)
 
 ### Sidindelning {#paging}
@@ -154,7 +157,7 @@ Svaret kommer att innehålla sidindelningsinformation som en del av `properties`
 >
 >Sidindelning används vanligtvis för behållarentiteter (d.v.s. mappar eller resurser med återgivningar), eftersom det relaterar till den begärda entitetens underordnade.
 
-#### Exempel:Sidindelning {#example-paging}
+#### Exempel: Sidindelning {#example-paging}
 
 `GET /api/assets.json?offset=2&limit=3`
 
@@ -184,7 +187,7 @@ Resursens REST API ger åtkomst till en mapps egenskaper. till exempel namn, tit
 >
 >Beroende på resurstypen kan listan med underordnade enheter redan innehålla den fullständiga uppsättningen egenskaper som definierar respektive underordnade enhet. Alternativt kan bara en reducerad uppsättning egenskaper visas för en enhet i den här listan över underordnade enheter.
 
-### Resurser {#assets}
+### Assets {#assets}
 
 Om en resurs begärs returneras dess metadata. som titel, namn och annan information som definieras i respektive resursschema.
 
@@ -241,7 +244,7 @@ Användning sker via:
 
 `GET /{cfParentPath}/{cfName}.json`
 
-Exempel:
+Till exempel:
 
 `https://localhost:4502/api/assets/we-retail/en/experiences/arctic-surfing-in-lofoten.json`
 
@@ -287,9 +290,9 @@ Det finns några begränsningar:
 
 ## Statuskoder och felmeddelanden {#status-codes-and-error-messages}
 
-Följande statuskoder kan visas under de relevanta omständigheterna:
+Följande statuskoder kan ses under de relevanta omständigheterna:
 
-1. 202 (OK)
+* **202 (OK)**
 
    Returneras när:
 
@@ -297,19 +300,19 @@ Följande statuskoder kan visas under de relevanta omständigheterna:
 
    * uppdaterar ett innehållsfragment via `PUT`
 
-1. 201 (skapad)
+* **201 (skapad)**
 
    Returneras när:
 
    * har skapat ett innehållsfragment via `POST`
 
-1. 404 (Hittades inte)
+* **404 (Hittades inte)**
 
    Returneras när:
 
    * det begärda innehållsfragmentet inte finns
 
-1. 500 (Internt serverfel)
+* **500 (Internt serverfel)**
 
    >[!NOTE]
    >
@@ -362,11 +365,11 @@ Följande statuskoder kan visas under de relevanta omständigheterna:
 Här finns detaljerade API-referenser:
 
 * [Adobe Experience Manager Assets API - innehållsfragment](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/assets-api-content-fragments/index.html)
-* [Resurser för HTTP API](/help/assets/mac-api-assets.md)
+* [HTTP API för Assets](/help/assets/mac-api-assets.md)
 
    * [Tillgängliga funktioner](/help/assets/mac-api-assets.md#available-features)
 
-## Additional Resources {#additional-resources}
+## Ytterligare resurser {#additional-resources}
 
 Mer information finns i:
 
