@@ -3,7 +3,7 @@ title: Resurser för HTTP API i [!DNL Adobe Experience Manager].
 description: Skapa, läsa, uppdatera, ta bort, hantera digitala resurser med HTTP API i [!DNL Adobe Experience Manager Assets].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
+source-git-commit: 34167cd9c03c9bc26aa24e6837dbd144af8bf9bd
 workflow-type: tm+mt
 source-wordcount: '1565'
 ht-degree: 0%
@@ -95,9 +95,9 @@ Resursens HTTP-API innehåller följande funktioner:
 
 **Förutsättningar**
 
-* Gå till `https://[aem_server]:[port]/system/console/configMgr`.
-* Gå till **Adobe Granite CSRF-filter**.
-* Se till att egenskapen **Filtermetoder** innehåller: POST, PUT, DELETE.
+1. Gå till `https://[aem_server]:[port]/system/console/configMgr`.
+1. Gå till **Adobe Granite CSRF-filter**.
+1. Se till att egenskapen **Filtermetoder** innehåller: POST, PUT, DELETE.
 
 ## Hämta en mapplista {#retrieve-a-folder-listing}
 
