@@ -3,7 +3,10 @@ title: Proxyutveckling för resurser
 description: En proxy är en AEM-instans som använder proxyarbetare för att bearbeta jobb. Lär dig hur du konfigurerar en AEM-proxy, åtgärder som stöds, proxykomponenter och hur du utvecklar en anpassad proxyarbetare.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
+source-git-commit: 5cea9ed3be322cb8dedfbc6cb38abbdb72d0b7b7
+workflow-type: tm+mt
+source-wordcount: '900'
+ht-degree: 0%
 
 ---
 
@@ -80,7 +83,7 @@ En proxyarbetare är en processor som hanterar ett jobb och skapar ett resultat.
 
 Här följer ett exempel på API-användning:
 
-```xml
+```java
 @Reference
  JobService proxyJobService;
 
@@ -114,7 +117,7 @@ Både proxy- och proxyarbetarkonfigurationer är tillgängliga via molntjänster
 
 Här följer ett exempel på API-användning:
 
-```xml
+```java
 @Reference(policy = ReferencePolicy.STATIC)
  ProxyConfig proxyConfig;
 
