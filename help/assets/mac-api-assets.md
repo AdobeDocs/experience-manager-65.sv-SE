@@ -3,9 +3,9 @@ title: Resurser för HTTP API i [!DNL Adobe Experience Manager].
 description: Skapa, läsa, uppdatera, ta bort, hantera digitala resurser med HTTP API i [!DNL Adobe Experience Manager Assets].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 34167cd9c03c9bc26aa24e6837dbd144af8bf9bd
+source-git-commit: 5d66bf75a6751e41170e6297d26116ad33c2df44
 workflow-type: tm+mt
-source-wordcount: '1565'
+source-wordcount: '1573'
 ht-degree: 0%
 
 ---
@@ -46,8 +46,8 @@ Mappar är som kataloger i traditionella filsystem. De är behållare för andra
 
 **Egenskaper**:
 
-* `name`  — Namnet på mappen. Detta är samma som det sista segmentet i URL-sökvägen utan tillägget
-* `title` — Valfri rubrik för mappen som kan visas i stället för dess namn
+* `name` är namnet på mappen. Detta är samma som det sista segmentet i URL-sökvägen utan tillägget.
+* `title` är en valfri mapptitel som kan visas i stället för dess namn.
 
 >[!NOTE]
 >
@@ -55,39 +55,39 @@ Mappar är som kataloger i traditionella filsystem. De är behållare för andra
 
 **Länkmappar** visar tre länkar:
 
-* `self`: Länka till sig själv
-* `parent`: Länka till överordnad mapp
-* `thumbnail`: (Valfritt) länk till en mappminiatyrbild
+* `self`: Länka till sig själv.
+* `parent`: Länka till den överordnade mappen.
+* `thumbnail`: (Valfritt) länka till en mappminiatyrbild.
 
 ### Assets {#assets}
 
 I Experience Manager innehåller en resurs följande element:
 
-* Resursens egenskaper och metadata
-* Flera återgivningar, till exempel den ursprungliga återgivningen (som är den ursprungliga överförda resursen), en miniatyrbild och olika andra återgivningar. Ytterligare återgivningar kan vara bilder av olika storlek, olika videokodningar eller extraherade sidor från PDF eller InDesign.
-* Valfria kommentarer
+* Resursens egenskaper och metadata.
+* Flera återgivningar, till exempel den ursprungliga återgivningen (som är den ursprungliga överförda resursen), en miniatyrbild och olika andra återgivningar. Ytterligare återgivningar kan vara bilder av olika storlek, olika videokodningar eller extraherade sidor från PDF- eller Adobe InDesign-filer.
+* Valfria kommentarer.
 
 Mer information om element i innehållsfragment finns i Stöd för [innehållsfragment i HTTP API](/help/assets/assets-api-content-fragments.md#content-fragments)för Experience Manager Assets.
 
 I Experience Manager har en mapp följande komponenter:
 
 * Enheter: Resursernas underordnade är dess återgivningar.
-* Egenskaper
-* Länkar
+* Egenskaper.
+* Länkar.
 
 Resursens HTTP-API innehåller följande funktioner:
 
-* Hämta en mapplista
-* Skapa en mapp
-* Skapa en resurs
-* Uppdatera resursens binära
-* Uppdatera metadata för resurs
-* Skapa en resursåtergivning
-* Uppdatera en resursåtergivning
-* Skapa en resurskommentar
-* Kopiera en mapp eller resurs
-* Flytta en mapp eller resurs
-* Ta bort en mapp, resurs eller återgivning
+* Hämta en mapplista.
+* Skapa en mapp.
+* Skapa en resurs.
+* Uppdatera resursens binärfil.
+* Uppdatera metadata för resurser.
+* Skapa en resursåtergivning.
+* Uppdatera en resursåtergivning.
+* Skapa en resurskommentar.
+* Kopiera en mapp eller resurs.
+* Flytta en mapp eller resurs.
+* Ta bort en mapp, resurs eller återgivning.
 
 >[!NOTE]
 >
@@ -119,7 +119,7 @@ Skapar en ny `sling`: `OrderedFolder` vid den angivna sökvägen. Om ett `*` ang
 
 Ett API-anrop misslyckas med en `500` svarskod om den överordnade noden för den angivna sökvägen inte finns. Ett anrop returnerar en svarskod `409` om mappen redan finns.
 
-**Parametrar**: `name` - Mappnamn
+**Parametrar**: `name` är mappnamnet.
 
 **Begäran**
 
