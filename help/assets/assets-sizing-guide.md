@@ -3,7 +3,10 @@ title: Guide för resursstorlek
 description: Bästa metoder för att fastställa effektiva mätvärden för att uppskatta den infrastruktur och de resurser som krävs för att driftsätta AEM Assets.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 8c907a43b5755de59b2929cf381ea41a7b977e1b
+source-git-commit: 5d66bf75a6751e41170e6297d26116ad33c2df44
+workflow-type: tm+mt
+source-wordcount: '1648'
+ht-degree: 0%
 
 ---
 
@@ -28,23 +31,23 @@ Med tanke på dessa faktorer behöver du en metod för att beräkna ett tillräc
 1. Hämta ett representativt urval av de resurser som ska överföras till AEM. Om du till exempel tänker läsa in PSD-, JPG-, AI- och PDF-filer i systemet behöver du flera exempelbilder för varje filformat. Dessutom bör dessa prover representera de olika filstorlekarna och komplexiteterna i bilderna.
 1. Definiera de återgivningar som ska användas.
 1. Skapa renderingarna i AEM med ImageMagick eller Adobes Creative Cloud-program. Förutom de återgivningar som användarna anger skapar du färdiga återgivningar. För användare som implementerar Scene7 kan du använda IC-binärfilen för att generera PTIFF-återgivningar som ska lagras i AEM.
-1. Om du tänker använda delresurser genererar du dem för rätt filtyper. Mer information finns i onlinedokumentationen om hur du genererar underresurssidor från InDesign-filer eller PNG-/PDF-filer från Illustrator-lager.
+1. Om du tänker använda delresurser genererar du dem för rätt filtyper.
 1. Jämför storleken på utdatabilder, återgivningar och delresurser med originalbilderna. Det gör att du kan generera en förväntad tillväxtfaktor när systemet har lästs in. Om du till exempel genererar återgivningar och delresurser med en kombinerad storlek på 3 GB efter att ha bearbetat 1 GB resurser, blir återgivningens tillväxtfaktor 3.
 1. Fastställer den maximala tid som tillgångsversionerna ska underhållas i systemet.
 1. Bestäm hur ofta befintliga resurser ändras i systemet. Om AEM används som samarbetsnav i kreativa arbetsflöden är antalet ändringar höga. Om endast färdiga resurser överförs till systemet är det här antalet mycket lägre.
 1. Bestäm hur många resurser som ska läsas in i systemet varje månad. Om du är osäker kan du kontrollera antalet tillgängliga resurser och dividera antalet med åldern på den äldsta resursen för att beräkna ett ungefärligt antal.
 
-Om du utför steg 1-9 kan du se följande:
+Genom att utföra ovanstående steg kan du fastställa följande:
 
-* Råstorlek för resurser som ska läsas in
-* Antal resurser som ska läsas in
-* Renderingstillväxtfaktor
-* Antal tillgångsändringar som gjorts per månad
-* Antal månader att underhålla tillgångsversioner
-* Antal nya resurser som läses in varje månad
-* År av tillväxt att allokera utrymme för
+* Råstorlek för resurser som ska läsas in.
+* Antal resurser som ska läsas in.
+* Renderingstillväxtfaktor.
+* Antal tillgångsändringar som gjorts per månad.
+* Antal månader att underhålla tillgångsversioner.
+* Antal nya resurser som läses in varje månad.
+* År av tillväxt för tilldelning av lagringsutrymme.
 
-Du kan ange dessa tal i kalkylbladet Nätverksstorlek för att fastställa det totala utrymmet som krävs för datalagret. Det är också ett användbart verktyg för att avgöra vilken effekt underhåll av resursversioner eller ändring av resurser i AEM har på disktillväxten.
+Du kan ange dessa tal i kalkylbladet Nätverksstorlek för att fastställa det totala utrymmet som krävs för datalagret. Det är också ett användbart verktyg för att avgöra vilken inverkan som underhåll av resursversioner eller ändring av resurser i AEM har på disktillväxten.
 
 De exempeldata som finns i verktyget visar hur viktigt det är att utföra de angivna stegen. Om du ändrar storlek på datalagret baserat enbart på de Raw-bilder som läses in (1 TB) kan du ha underskattat databasstorleken med faktorn 15.
 
@@ -52,7 +55,7 @@ De exempeldata som finns i verktyget visar hur viktigt det är att utföra de an
 
 ### Delade datalager {#shared-datastores}
 
-För stora datalager kan du implementera ett delat datalager antingen via ett delat fildatalager på en nätverksansluten enhet eller via ett S3-datalager. I det här fallet behöver enskilda instanser inte ha en kopia av binärfilerna. Dessutom underlättar ett delat datalager binär replikering utan extra intervall och minskar bandbredden som används för att replikera resurser till publiceringsmiljöer.
+För stora datalager kan du implementera ett delat datalager antingen via ett delat fildatalager på en nätverksansluten enhet eller via ett Amazon S3-datalager. I det här fallet behöver enskilda instanser inte ha en kopia av binärfilerna. Dessutom underlättar ett delat datalager binär replikering utan extra intervall och minskar bandbredden som används för att replikera resurser till publiceringsmiljöer.
 
 #### Användningsexempel {#use-cases}
 
@@ -72,7 +75,7 @@ Att distribuera AWS S3-tjänsten för delade datalager är att föredra eftersom
 
 Delade datastores ökar även komplexiteten i åtgärder, till exempel skräpinsamling. Vanligtvis kan skräpinsamlingen för ett fristående datalager initieras med ett enda klick. Delade datalager kräver dock markeringssvepning för varje medlem som använder datalagret, förutom att den faktiska samlingen körs på en enskild nod.
 
-För AWS-åtgärder kan en implementering av en central plats (via S3) i stället för att bygga en RAID-matris med EBS-volymer avsevärt kompensera för komplexiteten och driftriskerna i systemet.
+För AWS-åtgärder kan en implementering av en central plats (via Amazon S3) i stället för att bygga en RAID-matris med EBS-volymer avsevärt kompensera för komplexiteten och driftriskerna i systemet.
 
 #### Prestandafrågor {#performance-concerns}
 
