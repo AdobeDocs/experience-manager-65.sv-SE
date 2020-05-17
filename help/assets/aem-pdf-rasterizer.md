@@ -3,9 +3,9 @@ title: Använd PDF-rastrering för att generera återgivningar av PDF-filer.
 description: Generera högkvalitativa miniatyrbilder och renderingar med Adobe PDF Rasterizer-biblioteket i [!DNL Adobe Experience Manager].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
+source-git-commit: 5d66bf75a6751e41170e6297d26116ad33c2df44
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '673'
 ht-degree: 0%
 
 ---
@@ -63,6 +63,7 @@ Miniatyrbilder och förhandsgranskningar som genererats med PDF Rasterizer har b
 
 
 1. Om du vill ta bort mellanliggande återgivningar markerar du **[!UICONTROL Delete Generated Rendition]**.
+
 1. Om du vill att PDF-rastreraren ska kunna generera webbåtergivningar väljer du **[!UICONTROL Generate Web Rendition]**.
 
    ![generate_web_renditions1](assets/generate_web_renditions1.png)
@@ -72,8 +73,11 @@ Miniatyrbilder och förhandsgranskningar som genererats med PDF Rasterizer har b
    ![web_enabled_image1](assets/web_enabled_image1.png)
 
 1. Spara arbetsflödet.
-1. Om du vill att PDF-rastreraren ska kunna bearbeta PDF-sidor med PDF-bibliotek öppnar du **[!UICONTROL DAM Process Subasset]** modellen från arbetsflödeskonsolen.
+
+1. Om du vill att PDF-rastreraren ska kunna bearbeta PDF-sidor med PDF-bibliotek öppnar du **[!UICONTROL DAM Process Subasset]** modellen från [!UICONTROL Workflow] konsolen.
+
 1. Dra steget PDF-rastreringshanteraren från sidopanelen under **[!UICONTROL Create Web-Enabled Image Rendition]** steget.
+
 1. Konfigurera följande argument för **[!UICONTROL PDF Rasterizer Handler]** steget:
 
    * MIME-typer: `application/pdf` eller `application/postscript`
