@@ -4,10 +4,10 @@ description: Lär dig mer om hur du hanterar samlingar med resurser, som att ska
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
+source-git-commit: 5d66bf75a6751e41170e6297d26116ad33c2df44
 workflow-type: tm+mt
-source-wordcount: '2080'
-ht-degree: 11%
+source-wordcount: '2065'
+ht-degree: 12%
 
 ---
 
@@ -149,26 +149,26 @@ Smarta samlingar skapas genom att en sökning sparas så att du kan ändra deras
 
 Samlingsmetadata omfattar data om samlingen, inklusive taggar som läggs till.
 
-1. Välj en samling i konsolen Samlingar och klicka på **[!UICONTROL Properties]** ikonen i verktygsfältet.
+1. Välj en samling i [!UICONTROL Collections] konsolen och klicka på **[!UICONTROL Properties]** i verktygsfältet.
 1. In the **[!UICONTROL Collection Metadata]** page, view the collection metadata from the **[!UICONTROL Basic]** and **[!UICONTROL Advanced]** tabs.
-1. Ändra metadata efter behov och klicka sedan på **[!UICONTROL Save & Close]** i verktygsfältet för att spara ändringarna.
+1. Ändra metadata efter behov. Spara ändringarna genom att klicka **[!UICONTROL Save & Close]** i verktygsfältet.
 
 ## Redigera metadata för flera samlingar samtidigt {#editing-collection-metadata-in-bulk}
 
 Du kan redigera metadata för flera samlingar samtidigt. Med den här funktionen kan du snabbt replikera vanliga metadata i flera samlingar.
 
-1. I konsolen Samlingar väljer du två eller flera samlingar som du vill redigera metadata för.
+1. Välj två eller flera samlingar i konsolen Samlingar.
 1. From the toolbar, click the **[!UICONTROL Properties]** icon.
 1. På sidan **[!UICONTROL Collection Metadata]** redigerar du metadata på flikarna **[!UICONTROL Basic]** och **[!UICONTROL Advanced]** efter behov.
 1. Om du vill visa metadataegenskaperna för en viss samling avmarkerar du de återstående samlingarna i samlingslistan. Metadataredigeringsfälten fylls i med metadata för den aktuella samlingen.
 
    >[!NOTE]
    >
-   >* På sidan med samlingsegenskaper kan du ta bort samlingar från listan med samlingar genom att avmarkera dem. I samlingslistan är alla samlingar markerade som standard. Metadata för samlingar som du tar bort uppdateras inte.
+   >* På [!UICONTROL Properties] sidan kan du ta bort samlingar från listan med samlingar genom att avmarkera dem. I samlingslistan är alla samlingar markerade som standard. Metadata för de samlingar du tar bort uppdateras inte i Experience Manager.
    >* Överst i listan markerar du kryssrutan nära **[!UICONTROL Title]** för att växla mellan att markera samlingarna och rensa listan.
 
 
-1. Klicka **[!UICONTROL Save & Close]** i verktygsfältet och stäng sedan bekräftelsedialogrutan för att slutföra processen.
+1. Klicka **[!UICONTROL Save & Close]** i verktygsfältet och stäng sedan bekräftelsedialogrutan.
 1. Om du vill lägga till nya metadata till de befintliga metadata väljer du **[!UICONTROL Append mode]**. Om du inte markerar det här alternativet ersätter de nya metadata de data som finns i fälten. Klicka på **[!UICONTROL Submit]**.
 
    >[!NOTE]
