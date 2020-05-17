@@ -3,9 +3,9 @@ title: Redigera eller lägga till metadata
 description: Läs om metadata för resurser i [!DNL Adobe Experience Manager Assets] och olika sätt att redigera metadata för resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 99ce6e0572797b7bccf755aede93623be6bd5698
+source-git-commit: 5d66bf75a6751e41170e6297d26116ad33c2df44
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '414'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 Metadata är ytterligare information om resursen som kan sökas igenom. Den extraheras automatiskt när du överför en bild. Du kan redigera befintliga metadata eller lägga till nya metadataegenskaper i befintliga fält (till exempel när ett metadatafält är tomt).
 
-Eftersom organisationer behöver kontrollerade och tillförlitliga metadata-ordlistor går det inte att lägga till nya metadataegenskaper [!DNL Experience Manager Assets] för hand. Även om författare inte kan lägga till nya metadatafält för resurser kan utvecklare göra det. Se [Skapa ny metadataegenskap för resurser](meta-edit.md#editing-metadata-schema).
+Eftersom organisationer behöver styrda och tillförlitliga metadata-ordlistor går det inte att lägga till nya metadataegenskaper på begäran [!DNL Experience Manager Assets] . Även om författare inte kan lägga till nya metadatafält för resurser kan utvecklare göra det. Se [Skapa metadataegenskap för resurser](meta-edit.md#editing-metadata-schema).
 
 ## Redigera metadata för en resurs {#editing-metadata-for-an-asset}
 
@@ -32,13 +32,13 @@ Så här redigerar du metadata:
 
    *Bild: Redigera eller lägga till metadata på[!UICONTROL Properties]resurssidan.*
 
-1. Make edits to the metadata under the various tabs, as required, and when completed, click **[!UICONTROL Save]** from the toolbar to save your changes. Click **[!UICONTROL Close]** to return to the Assets web interface.
+1. Make edits to the metadata under the various tabs, as required, and when completed, click **[!UICONTROL Save]** from the toolbar to save your changes. Click **[!UICONTROL Close]** to return to the [!DNL Assets] web interface.
 
    >[!NOTE]
    >
    >Om ett textfält är tomt finns det ingen befintlig metadatauppsättning. Du kan ange ett värde i fältet och spara det för att lägga till metadataegenskapen.
 
-Alla ändringar av metadata för en resurs skrivs tillbaka till den ursprungliga binärfilen som en del av dess XMP-data. Detta görs via arbetsflödet för återskrivning av [!DNL Experience Manager] metadata. Ändringar som görs i befintliga egenskaper (t.ex. `dc:title`) skrivs över och nya egenskaper (inklusive anpassade egenskaper som `cq:tags`) läggs ihop med schemat.
+Alla ändringar av metadata för en resurs skrivs tillbaka till den ursprungliga binärfilen som en del av dess XMP-data. Metadataåterskrivningsarbetsflödet lägger till metadata i den ursprungliga binärfilen. Ändringar som görs i befintliga egenskaper (till exempel `dc:title`) skrivs över och nya egenskaper (inklusive anpassade egenskaper som `cq:tags`) läggs till i schemat.
 
 XMP-återskrivning stöds och är aktiverat för de plattformar och filformat som beskrivs i de [tekniska kraven.](/help/sites-deploying/technical-requirements.md)
 
