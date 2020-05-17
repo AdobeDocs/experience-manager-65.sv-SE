@@ -3,12 +3,15 @@ title: Utöka resursredigeraren
 description: Lär dig hur du utökar funktionerna i Resursredigeraren med hjälp av anpassade komponenter.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 70a88085a0fd6e949974aa7f1f92fdc3def3d98e
+source-git-commit: 5cea9ed3be322cb8dedfbc6cb38abbdb72d0b7b7
+workflow-type: tm+mt
+source-wordcount: '701'
+ht-degree: 13%
 
 ---
 
 
-# Utöka resursredigeraren {#extending-asset-editor}
+# Extend Asset Editor {#extending-asset-editor}
 
 Resursredigeraren är den sida som öppnas när användaren klickar på en resurs som hittas via Resursresurs, så att användaren kan redigera sådana aspekter av resursen som metadata, miniatyrbilder, rubrik och taggar.
 
@@ -32,7 +35,7 @@ Jämfört med standardinläsningen av klientlib (i kärnan `init.jsp`) måste en
 
 * Mallen måste innehålla `cq.dam.edit` clientlib (i stället för `cq.wcm.edit`).
 
-* Klientlib måste också inkluderas i inaktiverat WCM-läge (t.ex. inläst vid **publicering**) för att kunna återge predikaten, åtgärderna och objekten.
+* Clientlib måste också inkluderas i inaktiverat WCM-läge (t.ex. läsas in vid **publicering**) för att kunna återge predikat, åtgärder och linser.
 
 I de flesta fall bör kopieringen av det befintliga exemplet `init.jsp` (`/apps/geometrixx/components/asseteditor/init.jsp`) uppfylla dessa behov.
 
@@ -40,7 +43,7 @@ I de flesta fall bör kopieringen av det befintliga exemplet `init.jsp` (`/apps/
 
 Vissa av AEM Assets-komponenterna kräver JS-funktioner som definieras i `component.js`. Kopiera den här filen till komponentkatalogen och länka den.
 
-```xml
+```javascript
 <script type="text/javascript" src="<%= component.getPath() %>/component.js"></script>
 ```
 
@@ -50,7 +53,7 @@ Exemplet läser in den här javascript-källan i `head.jsp`(`/apps/geometrixx/co
 
 Vissa av komponenterna i AEM Assets använder AEM-widgetbiblioteket. För att kunna återges korrekt i innehållskontexten måste ytterligare en formatmall läsas in. Kodåtgärdskomponenten kräver en till.
 
-```xml
+```css
 <link href="/etc/designs/geometrixx/ui.widgets.css" rel="stylesheet" type="text/css">
 ```
 
@@ -62,7 +65,7 @@ Komponenterna för exempelsidan kräver att alla väljare börjar med `.assetedi
 
 Resursredigeraren använder formulärväljaren, som gör att du kan redigera resurser - i det här fallet resurser - på samma formulärsida genom att lägga till en formulärväljare och formulärsökvägen till resursens URL.
 
-Exempel:
+Till exempel:
 
 * Oformaterad formulärsida: [http://localhost:4502/content/geometrixx/en/press/asseteditor.html](http://localhost:4502/content/geometrixx/en/press/asseteditor.html)
 * Resursen har lästs in på formulärsidan: [http://localhost:4502/content/dam/geometrixx/icons/diamond.png.form.html/content/geometrixx/en/press/asseteditor.html](http://localhost:4502/content/dam/geometrixx/icons/diamond.png.form.html/content/geometrixx/en/press/asseteditor.html)
@@ -73,7 +76,7 @@ Exempelhandtagen i `head.jsp` (`/apps/geometrixx/components/asseteditor/head.jsp
 * Om en resurs läses in kan de inaktivera WCM-läget som parsys bara redigeras på en vanlig formulärsida.
 * Om en resurs läses in använder de dess titel i stället för den på formulärsidan.
 
-```java
+```javascript
  List<Resource> resources = FormsHelper.getFormEditResources(slingRequest);
     if (resources != null) {
         if (resources.size() == 1) {
@@ -113,7 +116,7 @@ Exempelhandtagen i `head.jsp` (`/apps/geometrixx/components/asseteditor/head.jsp
 
 Använd den föregående titeluppsättningen (antingen resurs eller sidrubrik) i HTML-delen:
 
-```xml
+```html
 <title><%= title %></title>
 ```
 
@@ -136,7 +139,7 @@ I det här exemplet beskrivs hur du skapar en komponent som visar och visar meta
 
 1. Lägg till `samplemeta.jsp` med följande kodutdrag:
 
-   ```xml
+   ```javascript
    <%--
    
      Sample metadata field component
@@ -192,11 +195,11 @@ I det här exemplet beskrivs hur du skapar en komponent som visar och visar meta
    </div>
    ```
 
-1. Om du vill göra komponenten tillgänglig måste du kunna redigera den. Om du vill göra en komponent redigerbar lägger du i CRXDE Lite till en nod `cq:editConfig` av primär typ `cq:EditConfig`. Du kan ta bort stycken genom att lägga till en flervärdesegenskap `cq:actions` med ett enda värde på `DELETE`.
+1. Om du vill göra komponenten tillgänglig måste du kunna redigera den. To make a component editable, in CRXDE Lite, add a node `cq:editConfig` of primary type `cq:EditConfig`. Du kan ta bort stycken genom att lägga till en egenskap med flera värden `cq:actions` med ett enda värde på `DELETE`.
 
 1. Navigera till webbläsaren och på exempelsidan (till exempel `asseteditor.html`) växla till designläge och aktivera den nya komponenten för styckesystemet.
 
-1. I **redigeringsläget** är den nya komponenten (till exempel **Exempelmetadata**) nu tillgänglig i sidosparken (finns i gruppen **Resursredigeraren** ). Infoga komponenten. För att kunna lagra metadata måste de läggas till i metadataformuläret.
+1. I **redigeringsläget** är den nya komponenten (till exempel **Exempelmetadata**) nu tillgänglig i assistenten (finns i gruppen **Resursredigeraren**). Infoga komponenten. För att metadata ska kunna lagras måste de läggas till i metadataformuläret.
 
 ## Ändra metadataalternativ {#modifying-metadata-options}
 
