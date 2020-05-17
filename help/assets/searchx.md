@@ -3,7 +3,10 @@ title: Utöka sökfunktionerna i Adobe Experience Manager Assets
 description: Utöka sökfunktionerna i Adobe Experience Manager Assets utöver standardvärdena.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
+source-git-commit: 2348df62f970d7e2ff41ad386f29c1550ea94e48
+workflow-type: tm+mt
+source-wordcount: '856'
+ht-degree: 15%
 
 ---
 
@@ -18,7 +21,7 @@ Du kan också lägga till fler flikar på [!DNL Assets] administratörspanelen.
 
 >[!CAUTION]
 >
->Från och med [!DNL Experience Manager] 6.4 används inte det klassiska användargränssnittet. Information finns i [Borttagna och borttagna funktioner](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/deprecated-removed-features.html). Adobe rekommenderar att du använder ett användargränssnitt med pekskärm. Mer information om anpassning finns i [Sök efter ansikten](/help/assets/search-facets.md).
+>Från och med [!DNL Experience Manager] 6.4 används inte det klassiska användargränssnittet. Information finns i [Borttagna och borttagna funktioner](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/deprecated-removed-features.html). Adobe rekommenderar att du använder ett användargränssnitt med pekskärm. Mer information om anpassning finns i [sökfaktorer](/help/assets/search-facets.md).
 
 ## Övertäckning {#overlaying}
 
@@ -70,7 +73,7 @@ Så här skapar du ett egenskapspredikat:
 
 1. Lägg till `titlepredicate.jsp`.
 
-   ```xml
+   ```java
    <%--
    
      Sample title predicate component
@@ -163,7 +166,7 @@ Så här skapar du ett grupppredikat:
 
 1. Lägg till **titlepreate.jsp**:
 
-   ```xml
+   ```java
    <%--
    
      Sample group predicate component
@@ -251,32 +254,32 @@ Följande predikat är tillgängliga som förkonfigurerade ExtJS-widgetar.
 
 | Egenskap | Typ | Beskrivning |
 |---|---|---|
-| predikateName | Sträng | Predikatets namn. Standardvärdet är `fulltext` |
-| searchCallback |  -funktion | Återanrop för att utlösa sökning vid händelse `keyup`. Standardvärdet är `CQ.wcm.SiteAdmin.doSearch` |
+| predikateName | Sträng | Predikatets namn. Defaults to `fulltext` |
+| searchCallback |  -funktion | Återanrop för att utlösa sökning vid händelse `keyup`. Defaults to `CQ.wcm.SiteAdmin.doSearch` |
 
 ### PropertyPredicate {#propertypredicate}
 
 | Egenskap | Typ | Beskrivning |
 |---|---|---|
-| predikateName | Sträng | Predikatets namn. Standardvärdet är `property` |
-| propertyName | Sträng | Namn på JCR-egenskapen. Standardvärdet är `jcr:title` |
+| predikateName | Sträng | Predikatets namn. Defaults to `property` |
+| propertyName | Sträng | Namn på JCR-egenskapen. Defaults to `jcr:title` |
 | defaultValue | Sträng | Förfyllt standardvärde. |
 
 ### PathPredicate {#pathpredicate}
 
 | Egenskap | Typ | Beskrivning |
 |---|---|---|
-| predikateName | Sträng | Predikatets namn. Standardvärdet är `path` |
-| rootPath | Sträng | Predikatets rotsökväg. Standardvärdet är `/content/dam` |
-| pathFieldPredicateName | Sträng | Standardvärdet är `folder` |
+| predikateName | Sträng | Predikatets namn. Defaults to `path` |
+| rootPath | Sträng | Predikatets rotsökväg. Defaults to `/content/dam` |
+| pathFieldPredicateName | Sträng | Defaults to `folder` |
 | showFlatOption | Boolesk | Flagga som visar kryssrutan `search in subfolders`. Standardvärdet är true. |
 
 ### DatePredicate {#datepredicate}
 
 | Egenskap | Typ | Beskrivning |
 |---|---|---|
-| predikateName | Sträng | Predikatets namn. Standardvärdet är `daterange` |
-| egenskapsnamn | Sträng | Namn på JCR-egenskapen. Standardvärdet är `jcr:content/jcr:lastModified` |
+| predikateName | Sträng | Predikatets namn. Defaults to `daterange` |
+| egenskapsnamn | Sträng | Namn på JCR-egenskapen. Defaults to `jcr:content/jcr:lastModified` |
 | defaultValue | Sträng | Förfyllt standardvärde |
 
 ### OptionsPredicate {#optionspredicate}
@@ -284,11 +287,11 @@ Följande predikat är tillgängliga som förkonfigurerade ExtJS-widgetar.
 | Egenskap | Typ | Beskrivning |
 |---|---|---|
 | title | Sträng | Lägger till ytterligare en rubrik |
-| predikateName | Sträng | Predikatets namn. Standardvärdet är `daterange` |
-| egenskapsnamn | Sträng | Namn på JCR-egenskapen. Standardvärdet är `jcr:content/metadata/cq:tags` |
-| komprimera | Sträng | Komprimera nivå. Standardvärdet är `level1` |
+| predikateName | Sträng | Predikatets namn. Defaults to `daterange` |
+| egenskapsnamn | Sträng | Namn på JCR-egenskapen. Defaults to `jcr:content/metadata/cq:tags` |
+| komprimera | Sträng | Komprimera nivå. Defaults to `level1` |
 | triggerSearch | Boolesk | Flagga för att utlösa sökning vid kontroll. Standardvärdet är false |
-| searchCallback |  -funktion | Återanrop för att utlösa sökning. Standardvärdet är `CQ.wcm.SiteAdmin.doSearch` |
+| searchCallback |  -funktion | Återanrop för att utlösa sökning. Defaults to `CQ.wcm.SiteAdmin.doSearch` |
 | searchTimeoutTime | Siffra | Timeout innan searchCallback aktiveras. Standardvärdet är 800 ms |
 
 ## Anpassa sökresultat {#customizing-search-results}
