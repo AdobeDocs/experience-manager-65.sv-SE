@@ -10,7 +10,10 @@ topic-tags: operations
 content-type: reference
 discoiquuid: d4ceb82e-2889-4507-af22-b051af83be38
 translation-type: tm+mt
-source-git-commit: 7ee76afa11384aedc79b17e823c8dc9594662388
+source-git-commit: 4eb5f1c4aa6631d2570279eb1d4bf17a928e3b9f
+workflow-type: tm+mt
+source-wordcount: '890'
+ht-degree: 0%
 
 ---
 
@@ -60,7 +63,7 @@ I följande steg beskrivs hur du gör detta genom att skapa en ny sida i webblä
 
    ![chlimage_1-68](assets/chlimage_1-68a.png)
 
-1. Kopiera kommandot cURL till ett textredigeringsprogram och ta bort alla rubriker från kommandot, som börjar med `-H` (markeras med blå i bilden nedan) och lägger till rätt autentiseringsparameter, till exempel `-u admin:admin`.
+1. Kopiera kommandot cURL till ett textredigeringsprogram och ta bort alla rubriker från kommandot, som börjar med `-H` (markeras med blå i bilden nedan) och lägger till rätt autentiseringsparameter, till exempel `-u <user>:<password>`.
 
    ![chlimage_1-69](assets/chlimage_1-69a.png)
 
@@ -78,22 +81,28 @@ Här är en lista med AEM cURL-kommandon för vanliga administrativa och operati
 
 ### Pakethantering {#package-management}
 
+#### Visa alla installerade paket
+
+```shell
+curl -u <user>:<password> http://<host>:<port>/crx/packmgr/service.jsp?cmd=ls
+```
+
 #### Skapa ett paket {#create-a-package}
 
 ```shell
-curl -u admin:admin -X POST http://localhost:4502/crx/packmgr/service/.json/etc/packages/mycontent.zip?cmd=create -d packageName=<name> -d groupName=<name>
+curl -u <user>:<password> -X POST http://localhost:4502/crx/packmgr/service/.json/etc/packages/mycontent.zip?cmd=create -d packageName=<name> -d groupName=<name>
 ```
 
 #### Förhandsgranska ett paket {#preview-a-package}
 
 ```shell
-curl -u admin:admin -X POST http://localhost:4502/crx/packmgr/service/.json/etc/packages/mycontent.zip?cmd=preview
+curl -u <user>:<password> -X POST http://localhost:4502/crx/packmgr/service/.json/etc/packages/mycontent.zip?cmd=preview
 ```
 
 #### Innehåll i listpaket {#list-package-content}
 
 ```shell
-curl -u admin:admin -X POST http://localhost:4502/crx/packmgr/service/console.html/etc/packages/mycontent.zip?cmd=contents
+curl -u <user>:<password> -X POST http://localhost:4502/crx/packmgr/service/console.html/etc/packages/mycontent.zip?cmd=contents
 ```
 
 #### Skapa ett paket {#build-a-package}
@@ -105,43 +114,43 @@ curl -X POST http://localhost:4502/crx/packmgr/service/.json/etc/packages/mycont
 #### Radbryt ett paket {#rewrap-a-package}
 
 ```shell
-curl -u admin:admin -X POST http://localhost:4502/crx/packmgr/service/.json/etc/packages/mycontent.zip?cmd=rewrap
+curl -u <user>:<password> -X POST http://localhost:4502/crx/packmgr/service/.json/etc/packages/mycontent.zip?cmd=rewrap
 ```
 
 #### Byta namn på ett paket {#rename-a-package}
 
 ```shell
-curl -u admin:admin -X POST -Fname=<New Name> http://localhost:4502/etc/packages/<Group Name>/<Package Name>.zip/jcr:content/vlt:definition
+curl -u <user>:<password> -X POST -Fname=<New Name> http://localhost:4502/etc/packages/<Group Name>/<Package Name>.zip/jcr:content/vlt:definition
 ```
 
 #### Överföra ett paket {#upload-a-package}
 
 ```shell
-curl -u admin:admin -F cmd=upload -F force=true -F package=@test.zip http://localhost:4502/crx/packmgr/service/.json
+curl -u <user>:<password> -F cmd=upload -F force=true -F package=@test.zip http://localhost:4502/crx/packmgr/service/.json
 ```
 
 #### Installera ett paket {#install-a-package}
 
 ```shell
-curl -u admin:admin -F cmd=install http://localhost:4502/crx/packmgr/service/.json/etc/packages/my_packages/test.zip
+curl -u <user>:<password> -F cmd=install http://localhost:4502/crx/packmgr/service/.json/etc/packages/my_packages/test.zip
 ```
 
 #### Avinstallera ett paket {#uninstall-a-package}
 
 ```shell
-curl -u admin:admin -F cmd=uninstall http://localhost:4502/crx/packmgr/service/.json/etc/packages/my_packages/test.zip
+curl -u <user>:<password> -F cmd=uninstall http://localhost:4502/crx/packmgr/service/.json/etc/packages/my_packages/test.zip
 ```
 
 #### Ta bort ett paket {#delete-a-package}
 
 ```shell
-curl -u admin:admin -F cmd=delete http://localhost:4502/crx/packmgr/service/.json/etc/packages/my_packages/test.zip
+curl -u <user>:<password> -F cmd=delete http://localhost:4502/crx/packmgr/service/.json/etc/packages/my_packages/test.zip
 ```
 
 #### Hämta ett paket {#download-a-package}
 
 ```shell
-curl -u admin:admin http://localhost:4502/etc/packages/my_packages/test.zip
+curl -u <user>:<password> http://localhost:4502/etc/packages/my_packages/test.zip
 ```
 
 ### Användarhantering {#user-management}
@@ -149,61 +158,61 @@ curl -u admin:admin http://localhost:4502/etc/packages/my_packages/test.zip
 #### Skapa en ny användare {#create-a-new-user}
 
 ```shell
-curl -u admin:admin -FcreateUser= -FauthorizableId=hashim -Frep:password=hashim http://localhost:4502/libs/granite/security/post/authorizables
+curl -u <user>:<password> -FcreateUser= -FauthorizableId=hashim -Frep:password=hashim http://localhost:4502/libs/granite/security/post/authorizables
 ```
 
 #### Skapa en ny grupp {#create-a-new-group}
 
 ```shell
-curl -u admin:admin -FcreateGroup=group1 -FauthorizableId=testGroup1 http://localhost:4502/libs/granite/security/post/authorizables
+curl -u <user>:<password> -FcreateGroup=group1 -FauthorizableId=testGroup1 http://localhost:4502/libs/granite/security/post/authorizables
 ```
 
 #### Lägg till en egenskap för en befintlig användare {#add-a-property-to-an-existing-user}
 
 ```shell
-curl -u admin:admin -Fprofile/age=25 http://localhost:4502/home/users/h/hashim.rw.html
+curl -u <user>:<password> -Fprofile/age=25 http://localhost:4502/home/users/h/hashim.rw.html
 ```
 
 #### Skapa en användare med en profil {#create-a-user-with-a-profile}
 
 ```shell
-curl -u admin:admin -FcreateUser=testuser -FauthorizableId=hashimkhan -Frep:password=hashimkhan -Fprofile/gender=male http://localhost:4502/libs/granite/security/post/authorizables
+curl -u <user>:<password> -FcreateUser=testuser -FauthorizableId=hashimkhan -Frep:password=hashimkhan -Fprofile/gender=male http://localhost:4502/libs/granite/security/post/authorizables
 ```
 
 #### Skapa en ny användare som medlem i en grupp {#create-a-new-user-as-a-member-of-a-group}
 
 ```shell
-curl -u admin:admin -FcreateUser=testuser -FauthorizableId=testuser -Frep:password=abc123 -Fmembership=contributor http://localhost:4502/libs/granite/security/post/authorizables
+curl -u <user>:<password> -FcreateUser=testuser -FauthorizableId=testuser -Frep:password=abc123 -Fmembership=contributor http://localhost:4502/libs/granite/security/post/authorizables
 ```
 
 #### Lägga till en användare i en grupp {#add-a-user-to-a-group}
 
 ```shell
-curl -u admin:admin -FaddMembers=testuser1 http://localhost:4502/home/groups/t/testGroup.rw.html
+curl -u <user>:<password> -FaddMembers=testuser1 http://localhost:4502/home/groups/t/testGroup.rw.html
 ```
 
 #### Ta bort en användare från en grupp {#remove-a-user-from-a-group}
 
 ```shell
-curl -u admin:admin -FremoveMembers=testuser1 http://localhost:4502/home/groups/t/testGroup.rw.html
+curl -u <user>:<password> -FremoveMembers=testuser1 http://localhost:4502/home/groups/t/testGroup.rw.html
 ```
 
 #### Ange användarens gruppmedlemskap {#set-a-user-s-group-membership}
 
 ```shell
-curl -u admin:admin -Fmembership=contributor -Fmembership=testgroup http://localhost:4502/home/users/t/testuser.rw.html
+curl -u <user>:<password> -Fmembership=contributor -Fmembership=testgroup http://localhost:4502/home/users/t/testuser.rw.html
 ```
 
 #### Ta bort en användare {#delete-a-user}
 
 ```shell
-curl -u admin:admin -FdeleteAuthorizable= http://localhost:4502/home/users/t/testuser 
+curl -u <user>:<password> -FdeleteAuthorizable= http://localhost:4502/home/users/t/testuser 
 ```
 
 #### Ta bort en grupp {#delete-a-group}
 
 ```shell
-curl -u admin:admin -FdeleteAuthorizable= http://localhost:4502/home/groups/t/testGroup
+curl -u <user>:<password> -FdeleteAuthorizable= http://localhost:4502/home/groups/t/testGroup
 ```
 
 ### Säkerhetskopiering {#backup}
@@ -215,13 +224,13 @@ Mer information finns i [Säkerhetskopiera och återställ](/help/sites-administ
 #### Starta ett paket {#starting-a-bundle}
 
 ```shell
-curl -u admin:admin -Faction=start http://localhost:4502/system/console/bundles/<bundle-name>
+curl -u <user>:<password> -Faction=start http://localhost:4502/system/console/bundles/<bundle-name>
 ```
 
 #### Stoppa ett paket {#stopping-a-bundle}
 
 ```shell
-curl -u admin:admin -Faction=stop http://localhost:4502/system/console/bundles/<bundle-name>
+curl -u <user>:<password> -Faction=stop http://localhost:4502/system/console/bundles/<bundle-name>
 ```
 
 ### Dispatcher {#dispatcher}
@@ -243,32 +252,32 @@ curl -H "CQ-Action: Deactivate" -H "CQ-Handle: /content/test-site/" -H "CQ-Path:
 #### Kontrollera status för en agent {#check-the-status-of-an-agent}
 
 ```shell
-curl -u admin:admin "http://localhost:4502/etc/replication/agents.author/publish/jcr:conten t.queue.json?agent=publish"
+curl -u <user>:<password> "http://localhost:4502/etc/replication/agents.author/publish/jcr:conten t.queue.json?agent=publish"
 http://localhost:4502/etc/replication/agents.author/publish/jcr:content.queue.js on?agent=publish
 ```
 
 #### Ta bort en agent {#delete-an-agent}
 
 ```shell
-curl -X DELETE http://localhost:4502/etc/replication/agents.author/replication99 -u admin:admin
+curl -X DELETE http://localhost:4502/etc/replication/agents.author/replication99 -u <user>:<password>
 ```
 
 #### Skapa en agent {#create-an-agent}
 
 ```shell
-curl -u admin:admin -F "jcr:primaryType=cq:Page" -F "jcr:content/jcr:title=new-replication" -F "jcr:content/sling:resourceType=/libs/cq/replication/components/agent" -F "jcr:content/template=/libs/cq/replication/templates/agent" -F "jcr:content/transportUri=http://localhost:4503/bin/receive?sling:authRequestLogin=1" -F "jcr:content/transportUser=admin" -F "jcr:content/transportPassword={DES}8aadb625ced91ac483390ebc10640cdf"http://localhost:4502/etc/replication/agents.author/replication99
+curl -u <user>:<password> -F "jcr:primaryType=cq:Page" -F "jcr:content/jcr:title=new-replication" -F "jcr:content/sling:resourceType=/libs/cq/replication/components/agent" -F "jcr:content/template=/libs/cq/replication/templates/agent" -F "jcr:content/transportUri=http://localhost:4503/bin/receive?sling:authRequestLogin=1" -F "jcr:content/transportUser=admin" -F "jcr:content/transportPassword={DES}8aadb625ced91ac483390ebc10640cdf"http://localhost:4502/etc/replication/agents.author/replication99
 ```
 
 #### Pausa en agent {#pause-an-agent}
 
 ```shell
-curl -u admin:admin -F "cmd=pause" -F "name=publish"  http://localhost:4502/etc/replication/agents.author/publish/jcr:content.queue.js on
+curl -u <user>:<password> -F "cmd=pause" -F "name=publish"  http://localhost:4502/etc/replication/agents.author/publish/jcr:content.queue.js on
 ```
 
 #### Rensa en agentkö {#clear-an-agent-queue}
 
 ```shell
-curl -u admin:admin -F "cmd=clear" -F "name=publish"  http://localhost:4502/etc/replication/agents.author/publish/jcr:content.queue.js on
+curl -u <user>:<password> -F "cmd=clear" -F "name=publish"  http://localhost:4502/etc/replication/agents.author/publish/jcr:content.queue.js on
 ```
 
 ### Communities {#communities}
@@ -316,37 +325,37 @@ Här är en lista med AEM cURL-kommandon för innehållsändring.
 #### Sidaktivering {#page-activation}
 
 ```shell
-curl -u admin:admin -X POST -F path="/content/path/to/page" -F cmd="activate" http://localhost:4502/bin/replicate.json
+curl -u <user>:<password> -X POST -F path="/content/path/to/page" -F cmd="activate" http://localhost:4502/bin/replicate.json
 ```
 
 #### Inaktivering av sida {#page-deactivation}
 
 ```shell
-curl -u admin:admin -X POST -F path="/content/path/to/page" -F cmd="deactivate" http://localhost:4502/bin/replicate.json
+curl -u <user>:<password> -X POST -F path="/content/path/to/page" -F cmd="deactivate" http://localhost:4502/bin/replicate.json
 ```
 
 #### Aktivering av träd {#tree-activation}
 
 ```shell
-curl -u admin:admin -F cmd=activate -F ignoredeactivated=true -F onlymodified=true -F path=/content/geometrixx http://localhost:4502/etc/replication/treeactivation.html
+curl -u <user>:<password> -F cmd=activate -F ignoredeactivated=true -F onlymodified=true -F path=/content/geometrixx http://localhost:4502/etc/replication/treeactivation.html
 ```
 
 #### Lås sida {#lock-page}
 
 ```shell
-curl -u admin:admin -X POST -F cmd="lockPage" -F path="/content/path/to/page" -F "_charset_"="utf-8" http://localhost:4502/bin/wcmcommand
+curl -u <user>:<password> -X POST -F cmd="lockPage" -F path="/content/path/to/page" -F "_charset_"="utf-8" http://localhost:4502/bin/wcmcommand
 ```
 
 #### Lås upp sida {#unlock-page}
 
 ```shell
-curl -u admin:admin -X POST -F cmd="unlockPage" -F path="/content/path/to/page" -F "_charset_"="utf-8" http://localhost:4502/bin/wcmcommand
+curl -u <user>:<password> -X POST -F cmd="unlockPage" -F path="/content/path/to/page" -F "_charset_"="utf-8" http://localhost:4502/bin/wcmcommand
 ```
 
 #### Kopiera sida {#copy-page}
 
 ```shell
-curl -u admin:admin -F cmd=copyPage -F destParentPath=/path/to/destination/parent -F srcPath=/path/to/source/location http://localhost:4502/bin/wcmcommand
+curl -u <user>:<password> -F cmd=copyPage -F destParentPath=/path/to/destination/parent -F srcPath=/path/to/source/location http://localhost:4502/bin/wcmcommand
 ```
 
 ### Arbetsflöden {#workflows}
@@ -358,43 +367,43 @@ Mer information finns i [Interagera med arbetsflöden programmatiskt](/help/site
 #### Skapa en mapp {#create-a-folder}
 
 ```shell
-curl -u admin:admin -F jcr:primaryType=sling:Folder http://localhost:4502/etc/test
+curl -u <user>:<password> -F jcr:primaryType=sling:Folder http://localhost:4502/etc/test
 ```
 
 #### Ta bort en nod {#delete-a-node}
 
 ```shell
-curl -u admin:admin -F :operation=delete http://localhost:4502/etc/test/test.properties
+curl -u <user>:<password> -F :operation=delete http://localhost:4502/etc/test/test.properties
 ```
 
 #### Flytta en nod {#move-a-node}
 
 ```shell
-curl -u admin:admin -F":operation=move" -F":applyTo=/sourceurl"  -F":dest=/target/parenturl/" https://localhost:4502/content
+curl -u <user>:<password> -F":operation=move" -F":applyTo=/sourceurl"  -F":dest=/target/parenturl/" https://localhost:4502/content
 ```
 
 #### Kopiera en nod {#copy-a-node}
 
 ```shell
-curl -u admin:admin -F":operation=copy" -F":applyTo=/sourceurl"  -F":dest=/target/parenturl/" https://localhost:4502/content
+curl -u <user>:<password> -F":operation=copy" -F":applyTo=/sourceurl"  -F":dest=/target/parenturl/" https://localhost:4502/content
 ```
 
 #### Överför filer med Sling PostServlet {#upload-files-using-sling-postservlet}
 
 ```shell
-curl -u admin:admin -F"*=@test.properties"  http://localhost:4502/etc/test
+curl -u <user>:<password> -F"*=@test.properties"  http://localhost:4502/etc/test
 ```
 
 #### Överför filer med Sling PostServlet och ange nodnamn {#upload-files-using-sling-postservlet-and-specifying-node-name}
 
 ```shell
-curl -u admin:admin -F"test2.properties=@test.properties"  http://localhost:4502/etc/test
+curl -u <user>:<password> -F"test2.properties=@test.properties"  http://localhost:4502/etc/test
 ```
 
 #### Överför filer som anger en innehållstyp {#upload-files-specifying-a-content-type}
 
 ```shell
-curl -u admin:admin -F "*=@test.properties;type=text/plain" http://localhost:4502/etc/test
+curl -u <user>:<password> -F "*=@test.properties;type=text/plain" http://localhost:4502/etc/test
 ```
 
 ### Tillgångshantering {#asset-manipulation}
