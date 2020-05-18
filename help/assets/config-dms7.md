@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d77296df73861c33720c16c14534c1b448d35d06
+source-git-commit: f96a8fc51ffeef68b2e4c668bc1b2bae4e89133a
 workflow-type: tm+mt
-source-wordcount: '5434'
+source-wordcount: '5453'
 ht-degree: 6%
 
 ---
@@ -480,11 +480,20 @@ När rotationsuppsättningen har överförts och publicerats aktiverar du namnet
 
 ### (Valfritt) Justera prestanda för dynamiska media - Scene7-läge {#optional-tuning-the-performance-of-dynamic-media-scene-mode}
 
-**Optimera jobbparametrar**
+**Finjusteringstips för synkroniseringsprestanda/skalbarhet**
+
+För att Dynamic Media - Scene7-läget ska fungera smidigt rekommenderar Adobe följande finjusteringstips för synkroniseringsprestanda/skalbarhet:
+
+* Uppdaterar de fördefinierade jobbparametrarna för bearbetning av olika filformat.
+* Uppdaterar de fördefinierade arbetstrådarna för Granite-arbetsflödet (videoresurser).
+* Uppdaterar det fördefinierade tillfälliga Granite-arbetsflödet (bilder och icke-videomaterial) för köarbetstrådar.
+* Uppdaterar de maximala överföringsanslutningarna till Dynamic Media Classic-servern.
+
+#### Uppdatera de fördefinierade jobbparametrarna för bearbetning av olika filformat
 
 Du kan justera jobbparametrar för snabbare bearbetning när du överför filer. Om du till exempel överför PSD-filer, men inte vill bearbeta dem som mallar, kan du ange att lagerextraheringen ska vara false (av). I så fall visas den justerade jobbparametern som `process=None&createTemplate=false`.
 
-Adobe rekommenderar att du använder följande&quot;justerade&quot; jobbparametrar för PSD-, PDF- och PostScript-filer:
+Adobe rekommenderar att du använder följande&quot;justerade&quot; jobbparametrar för PDF-, PostScript- och PSD-filer:
 
 | Filtyp | Rekommenderade jobbparametrar |
 | ---| ---|
@@ -493,14 +502,6 @@ Adobe rekommenderar att du använder följande&quot;justerade&quot; jobbparametr
 | PSD | `process=None&layerNaming=Layername&anchor=Center&createTemplate=false&extractText=false&extendLayers=false` |
 
 Om du vill uppdatera någon av de här parametrarna följer du stegen i [Aktivera stöd](#enabling-mime-type-based-assets-scene-upload-job-parameter-support)för MIME-typbaserade resurser/Dynamic Media Classic-överföringsjobbparametrar.
-
-**Finjusteringstips för synkroniseringsprestanda/skalbarhet**
-
-För att Dynamic Media - Scene7-läget ska fungera smidigt rekommenderar Adobe följande finjusteringstips för synkroniseringsprestanda/skalbarhet:
-
-* Uppdatera de fördefinierade arbetstrådarna för Granite-arbetsflödet (videoresurser).
-* Uppdatera det fördefinierade tillfälliga Granite-arbetsflödet (bilder och andra resurser än videor) för köarbetstrådar.
-* Uppdatera de maximala överföringsanslutningarna till Dynamic Media Classic-servern.
 
 #### Uppdatera den tillfälliga arbetsflödeskön för Granite {#updating-the-granite-transient-workflow-queue}
 
