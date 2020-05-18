@@ -3,9 +3,9 @@ title: Resurser för HTTP API i [!DNL Adobe Experience Manager].
 description: Skapa, läsa, uppdatera, ta bort, hantera digitala resurser med HTTP API i [!DNL Adobe Experience Manager Assets].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5d66bf75a6751e41170e6297d26116ad33c2df44
+source-git-commit: 1f41de531d0e1784245c79ab2ace3586fc7dd469
 workflow-type: tm+mt
-source-wordcount: '1573'
+source-wordcount: '1565'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ I Experience Manager innehåller en resurs följande element:
 
 Mer information om element i innehållsfragment finns i Stöd för [innehållsfragment i HTTP API](/help/assets/assets-api-content-fragments.md#content-fragments)för Experience Manager Assets.
 
-I Experience Manager har en mapp följande komponenter:
+I [!DNL Experience Manager] en mapp finns följande komponenter:
 
 * Enheter: Resursernas underordnade är dess återgivningar.
 * Egenskaper.
@@ -95,9 +95,9 @@ Resursens HTTP-API innehåller följande funktioner:
 
 **Förutsättningar**
 
-1. Gå till `https://[aem_server]:[port]/system/console/configMgr`.
-1. Gå till **Adobe Granite CSRF-filter**.
-1. Se till att egenskapen **Filtermetoder** innehåller: POST, PUT, DELETE.
+* Öppna `https://[aem_server]:[port]/system/console/configMgr`.
+* Navigera till **[!UICONTROL Adobe Granite CSRF Filter]**.
+* Kontrollera att egenskapen **[!UICONTROL Filter Methods]** innehåller: `POST`, `PUT`, `DELETE`.
 
 ## Hämta en mapplista {#retrieve-a-folder-listing}
 
@@ -181,14 +181,14 @@ Uppdaterar egenskaperna för resursmetadata. Om du uppdaterar någon egenskap i 
 
 Skapa en ny resursåtergivning för en resurs. Om parameternamnet för begäran inte anges används filnamnet som återgivningsnamn.
 
-**Parametrar** Parametrarna är `name` för återgivningens namn och `file` som en filreferens.
+**Parametrar**: Parametrarna är `name` för återgivningens namn och `file` som en filreferens.
 
 **Begäran**
 
 * `POST /api/assets/myfolder/myasset.png/renditions/web-rendition -H"Content-Type: image/png" --data-binary "@myRendition.png"`
 * `POST /api/assets/myfolder/myasset.png/renditions/* -F"name=web-rendition" -F"file=@myRendition.png"`
 
-**Svarskoder**
+**Svarskoder**: Svarskoderna är:
 
 * 201 - SKAPAD - om återgivningen har skapats.
 * 404 - HITTADES INTE - Om det inte gick att hitta eller få åtkomst till resursen på angiven URI.
@@ -201,7 +201,7 @@ Uppdateringar ersätter en resursåtergivning med nya binära data.
 
 **Begäran**: `PUT /api/assets/myfolder/myasset.png/renditions/myRendition.png -H"Content-Type: image/png" --data-binary @myRendition.png`
 
-**Svarskoder** Svarskoderna är:
+**Svarskoder**: Svarskoderna är:
 
 * 200 - OK - Om återgivningen har uppdaterats.
 * 404 - HITTADES INTE - Om det inte gick att hitta eller få åtkomst till resursen på angiven URI.
