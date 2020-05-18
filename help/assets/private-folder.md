@@ -3,9 +3,9 @@ title: Skapa och dela en privat mapp i AEM
 description: Lär dig hur du skapar en privat mapp i Adobe Experience Manager-resurserna (AEM) och delar den med andra användare och tilldelar olika behörigheter till dem.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 979d5074fcf94ca999fd941c77038ab6305cc67d
+source-git-commit: 02bd337271f0039b354ada2899198f5654f9e8bf
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '499'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,7 @@ Du kan skapa en privat mapp i användargränssnittet för Adobe Experience Manag
 
 >[!NOTE]
 >
-> Privat mapp har alltid minst en medlem med ägarroll.
+> Den privata mappen har minst en medlem med ägarrollen.
 
 
 1. I resurskonsolen: tryck/klicka **[!UICONTROL Create]** i verktygsfältet och välj sedan **[!UICONTROL Folder]** från menyn.
@@ -50,7 +50,7 @@ Du kan skapa en privat mapp i användargränssnittet för Adobe Experience Manag
 
    >[!NOTE]
    >
-   > Privat mapp har alltid minst en medlem med ägarroll. Administratören kan därför inte ta bort alla ägarmedlemmar från en privat mapp. Om du vill ta bort befintliga ägare från den privata mappadministratören måste du lägga till andra användare som ägare.
+   > Den privata mappen har minst en medlem med ägarrollen. Administratören kan därför inte ta bort alla ägarmedlemmar från en privat mapp. Om du vill ta bort befintliga ägare (och själva administratören) från den privata mappen måste administratören lägga till en annan användare som ägare.
 
 1. Klicka på **[!UICONTROL Save]**. Beroende på vilken roll du tilldelar tilldelas användaren en uppsättning behörigheter i din privata mapp när användaren loggar in på AEM Resurser.
 1. Klicka **[!UICONTROL Ok]** för att stänga bekräftelsemeddelandet.
