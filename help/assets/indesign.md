@@ -3,7 +3,7 @@ title: Integrera [!DNL Adobe Experience Manager Assets] med [!DNL Adobe InDesign
 description: Lär dig hur du integrerar [!DNL Adobe Experience Manager Assets] med [!DNL Adobe InDesign Server].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
 workflow-type: tm+mt
 source-wordcount: '1548'
 ht-degree: 1%
@@ -166,7 +166,7 @@ In a standard [!DNL Experience Manager] installation the following is available:
 Om [!DNL InDesign Server] och [!DNL Experience Manager] körs på olika värdar eller något eller båda programmen inte körs på standardportar, konfigurerar du [!UICONTROL Day CQ Link Externalizer] att ange värdnamnet, porten och innehållssökvägen för [!DNL InDesign Server].
 
 1. Gå till webbkonsolen på `https://[aem_server]:[port]/system/console/configMgr`.
-1. Leta reda på konfigurationen **[!UICONTROL Day CQ Link Externalizer]** och öppna den genom **[!UICONTROL Edit]** att trycka.
+1. Leta reda på konfigurationen **[!UICONTROL Day CQ Link Externalizer]** och klicka på **[!UICONTROL Edit]** för att öppna den.
 1. Ange värdnamnet och kontextsökvägen för [!DNL Indesign Server] och klicka på **Spara**.
 
    ![chlimage_1-97](assets/chlimage_1-290.png)
