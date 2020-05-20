@@ -4,10 +4,10 @@ description: Lär dig resurshanteringsåtgärder som överföring, hämtning, re
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 94f7f2cde3c87ed4693b9e2004f80fc5f0cd9855
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
 workflow-type: tm+mt
-source-wordcount: '9131'
-ht-degree: 4%
+source-wordcount: '9082'
+ht-degree: 3%
 
 ---
 
@@ -61,13 +61,13 @@ Innan du överför en resurs måste du se till att den har ett [format](/help/as
 1. Navigera till den plats där du vill lägga till digitala resurser i [!DNL Assets] användargränssnittet.
 1. Gör något av följande om du vill överföra resurserna:
 
-   * Tryck på **[!UICONTROL Create]** ikonen i verktygsfältet. Tryck sedan på **[!UICONTROL Files]** menyn. Du kan byta namn på filen i den dialogruta som visas om det behövs.
+   * Klicka på **[!UICONTROL Create]** ikonen i verktygsfältet. Then on the menu, click **[!UICONTROL Files]**. Du kan byta namn på filen i den dialogruta som visas om det behövs.
    * I en webbläsare som har stöd för HTML5 drar du resurserna direkt till [!DNL Assets] användargränssnittet. Dialogrutan för att byta namn på filen visas inte.
    ![Skapa alternativ för att överföra resurser](assets/create-options.png)
 
    Om du vill markera flera filer trycker du på Ctrl- eller Kommando-tangenten och markerar resurserna i dialogrutan för filväljaren. När du använder en iPad kan du bara markera en fil i taget.
 
-   Du kan pausa överföringen av stora resurser (större än 500 MB) och återuppta den senare från samma sida. Tryck på **[!UICONTROL Pause]** ikonen bredvid förloppsindikatorn som visas när en överföring startar.
+   Du kan pausa överföringen av stora resurser (större än 500 MB) och återuppta den senare från samma sida. Klicka på **[!UICONTROL Pause]** ikonen bredvid förloppsindikatorn som visas när en överföring startar.
 
    ![Förloppsindikator för överföring av resurser](assets/chlimage_1-5.png)
 
@@ -109,7 +109,7 @@ Innan du överför en resurs måste du se till att den har ett [format](/help/as
 
    ![Dialogrutan Duplicera resurs identifierad](assets/chlimage_1-8.png)
 
-   Om du vill behålla den duplicerade resursen i [!DNL Assets]trycker/klickar du **[!UICONTROL Keep]**. Om du vill ta bort den duplicerade resursen som du överförde trycker/klickar du **[!UICONTROL Delete]**.
+   Om du vill behålla den duplicerade resursen i [!DNL Assets]klickar du på **[!UICONTROL Keep]**. Klicka på **[!UICONTROL Delete]** om du vill ta bort den duplicerade resursen som du överförde.
 
    [!DNL Experience Manager Assets] förhindrar att du överför resurser med förbjudna tecken i filnamn. Om du försöker överföra en resurs med ett filnamn som innehåller ett eller flera otillåtna tecken visas ett varningsmeddelande och överföringen stoppas tills du tar bort dessa tecken eller överför med ett tillåtet namn. [!DNL Assets]
 
@@ -154,9 +154,9 @@ Med Dynamic Media kan du batchöverföra resurser via FTP-servern. Om du tänker
 **Så här överför du resurser med FTP**
 
 1. Logga in på FTP-servern med det FTP-användarnamn och lösenord som du fick från e-postmeddelandet om etablering. Överför filer eller mappar till FTP-servern i FTP-klienten.
-1. [Logga in på Dynamic Media Classic](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) med hjälp av autentiseringsuppgifter från e-postmeddelandet om etablering. Tryck på **[!UICONTROL Upload]** i det globala navigeringsfältet.
+1. [Logga in på Dynamic Media Classic](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) med hjälp av autentiseringsuppgifter från e-postmeddelandet om etablering. Klicka på i det globala navigeringsfältet **[!UICONTROL Upload]**.
 
-1. Tryck på **[!UICONTROL Via FTP]** fliken uppe till vänster på sidan Överför.
+1. På sidan Överför klickar du på **[!UICONTROL Via FTP]** fliken uppe till vänster.
 1. Välj en FTP-mapp att överföra filer från till vänster på sidan. till höger på sidan väljer du en målmapp.
 1. Klicka i det nedre högra hörnet av sidan **[!UICONTROL Job Options]** och ange önskade alternativ baserat på resurserna i den mapp du valde.
 
@@ -166,11 +166,11 @@ Med Dynamic Media kan du batchöverföra resurser via FTP-servern. Om du tänker
    >
    >När du överför resurser via FTP får de alternativ för överföringsjobb som du anger i Dynamic Media Classic (S7) företräde framför de parametrar för resursbearbetning som anges i [!DNL Experience Manager].
 
-1. Tryck på i det nedre högra hörnet av dialogrutan Alternativ för överföring av jobb **[!UICONTROL Save]**.
-1. In the lower-right corner of the Upload page, tap **[!UICONTROL Submit Upload]**.
+1. Klicka på i det nedre högra hörnet av dialogrutan Alternativ för överföringsjobb **[!UICONTROL Save]**.
+1. In the lower-right corner of the Upload page, click **[!UICONTROL Submit Upload]**.
 
-   Om du vill visa överföringsförloppet trycker du på **[!UICONTROL Jobs]**. På sidan Jobb visas överföringsförloppet. Du kan när som helst fortsätta arbeta i [!DNL Experience Manager] och gå tillbaka till jobbsidan i Dynamic Media Classic för att granska ett pågående jobb.
-Om du vill avbryta ett pågående överföringsjobb trycker du på **[!UICONTROL Cancel]** bredvid Varaktighet.
+   Om du vill visa överföringsförloppet klickar du på **[!UICONTROL Jobs]**. På sidan Jobb visas överföringsförloppet. Du kan när som helst fortsätta arbeta i [!DNL Experience Manager] och gå tillbaka till jobbsidan i Dynamic Media Classic för att granska ett pågående jobb.
+Om du vill avbryta ett pågående överföringsjobb klickar du på **[!UICONTROL Cancel]** bredvid Varaktighet.
 
 #### Alternativ för överföringsjobb {#upload-job-options}
 
@@ -180,7 +180,7 @@ Om du vill avbryta ett pågående överföringsjobb trycker du på **[!UICONTROL
 | Publicera efter överföring |  | Publicerar automatiskt de resurser som du överför. |
 | Skriv över i valfri mapp, samma basresursnamn oavsett tillägg |  | Välj det här alternativet om du vill att de filer du överför ska ersätta befintliga filer med samma namn. Namnet på det här alternativet kan vara annorlunda beroende på inställningarna i **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]** > **[!UICONTROL Upload to Application]** > **[!UICONTROL Overwrite Images]**. |
 | Ta bort komprimering av ZIP- eller Tjära-filer vid överföring |  |  |
-| Jobbalternativ |  | Tryck/klicka för **[!UICONTROL Job Options]** att öppna [!UICONTROL Upload Job Options] dialogrutan och välj alternativ som påverkar hela överföringsjobbet. De här alternativen är desamma för alla filtyper.<br>Du kan välja standardalternativ för att överföra filer från sidan Allmänna inställningar i programmet. Öppna den här sidan genom att välja **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]**. Tryck på **[!UICONTROL Default Upload Options]** knappen för att öppna [!UICONTROL Upload Job Options] dialogrutan. |
+| Jobbalternativ |  | Klicka **[!UICONTROL Job Options]** för att öppna [!UICONTROL Upload Job Options] dialogrutan och välj alternativ som påverkar hela överföringsjobbet. De här alternativen är desamma för alla filtyper.<br>Du kan välja standardalternativ för att överföra filer från sidan Allmänna inställningar i programmet. Öppna den här sidan genom att välja **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]**. Klicka på **[!UICONTROL Default Upload Options]** knappen för att öppna [!UICONTROL Upload Job Options] dialogrutan. |
 |  | När | Välj En gång eller Återkommande. Om du vill ställa in ett återkommande jobb väljer du alternativet Upprepa - varje dag, Varje vecka, Varje månad eller Anpassa - för att ange när du vill att FTP-överföringsjobbet ska återkomma. Ange sedan schemaläggningsalternativen efter behov. |
 |  | Inkludera undermappar | Överför alla undermappar i mappen som du vill överföra. Namnen på mappen och dess undermappar som du överför anges automatiskt i [!DNL Experience Manager Assets]. |
 |  | Beskärningsalternativ | Om du vill beskära manuellt från sidorna av en bild väljer du Beskär-menyn och sedan Manuell. Ange sedan antalet pixlar att beskära från en sida eller från varje sida av bilden. Hur mycket av bilden som beskärs beror på bildfilens ppi-inställning (pixlar per tum). Om bilden till exempel visar 150 ppi och du anger 75 i textrutorna Överkant, Höger, Underkant och Vänster beskärs en halv tum från varje sida.<br> Om du vill beskära pixlar med tomt utrymme automatiskt från en bild öppnar du menyn Beskär, väljer Manuell och anger pixelmått i fälten Överkant, Höger, Underkant och Vänster för att beskära från sidorna. Du kan också välja Trimma på menyn Beskär och välja följande alternativ:<br> **Trimma bort baserat på** <ul><li>**Färg** - Välj alternativet Färg. Välj sedan menyn Hörn och välj hörnet på bilden med den färg som bäst motsvarar den tomrumsfärg som du vill beskära.</li><li>**Genomskinlighet** - Välj alternativet Genomskinlighet.<br> **Tolerans** - Dra i skjutreglaget för att ange en tolerans mellan 0 och 1. Om du vill trimma baserat på färg anger du 0 för att beskära pixlar endast om de exakt matchar den färg du valde i hörnet av bilden. Nummer som ligger närmare 1 ger större färgskillnader.<br>Om du vill trimma baserat på genomskinlighet anger du 0 så att pixlarna bara beskärs om de är genomskinliga. Siffror närmare 1 ger större genomskinlighet.</li></ul><br>Observera att dessa beskärningsalternativ är icke-förstörande. |
@@ -329,13 +329,13 @@ Vissa begränsningar för funktionen är:
 Följ de här stegen för att förhandsgranska en resurs.
 
 1. Navigera från [!DNL Assets] användargränssnittet till platsen för resursen som du vill förhandsgranska.
-1. Tryck på önskad resurs för att öppna den.
+1. Klicka på önskad resurs för att öppna den.
 
 1. I förhandsgranskningsläget är zoomalternativ tillgängliga för bildtyper [som](/help/assets/assets-formats.md#supported-raster-image-formats) stöds (med interaktiv redigering).
 
-   Om du vill zooma in på en resurs trycker/klickar du `+` (eller trycker/klickar på förstoringsglaset på resursen). Om du vill zooma ut trycker/klickar du `-`. När du zoomar in kan du titta närmare på alla delar av bilden genom att panorera. Med den återställda zoompilen återgår du till den ursprungliga vyn.
+   Om du vill zooma in på en resurs klickar du på `+` (eller på förstoringsglaset på resursen). Om du vill zooma ut klickar du på `-`. När du zoomar in kan du titta närmare på alla delar av bilden genom att panorera. Med den återställda zoompilen återgår du till den ursprungliga vyn.
 
-   Tryck för **[!UICONTROL Reset]** att återställa vyn till den ursprungliga storleken.
+   Klicka **[!UICONTROL Reset]** för att återställa vyn till den ursprungliga storleken.
 
    ![Återställ ikonen så att användaren återgår till den ursprungliga vyn](assets/chlimage_1-11.png)
 
@@ -366,7 +366,7 @@ Så här förhandsgranskar du en resurs med tangentbordet:
 
 1. Navigera till resursens plats för att redigera dess metadata.
 
-1. Markera resursen och tryck/klicka på **[!UICONTROL Properties]** i verktygsfältet för att visa resursegenskaper. Du kan också välja snabbåtgärden på resurskortet **[!UICONTROL Properties]** .
+1. Markera resursen och klicka på **[!UICONTROL Properties]** i verktygsfältet för att visa resursegenskaper. Du kan också välja snabbåtgärden på resurskortet **[!UICONTROL Properties]** .
 
    ![Snabbåtgärden Egenskaper för resurskortvyn](assets/properties_quickaction.png)
 
@@ -394,13 +394,13 @@ Så här förhandsgranskar du en resurs med tangentbordet:
    >
    >Om du vill skapa taggar måste du ha skrivbehörighet i CRX-databasen `/content/cq:tags/default` .
 
-1. Om du vill ge resursen en klassificering trycker/klickar du på fliken **[!UICONTROL Advanced]** och sedan du på stjärnan vid rätt position för att tilldela den önskade klassificeringen.
+1. To provide a rating to the asset, click the **[!UICONTROL Advanced]** tab and then click the star at the appropriate position to assign the desired rating.
 
    ![Fliken Avancerat i resursegenskaper för att tilldela klassificering](assets/ratings.png)
 
    Värderingspoängen som du tilldelar resursen visas under **[!UICONTROL Your Ratings]**. Det genomsnittliga omdöme som resursen fick från användare som värderade resursen visas under **[!UICONTROL Rating]**. Dessutom visas uppdelningen av de omdömen som bidrar till det genomsnittliga omdömet under **[!UICONTROL Rating Breakdown]**. Du kan söka efter resurser baserat på genomsnittliga poäng.
 
-1. Om du vill visa användningsstatistik för resursen klickar/trycker du på **[!UICONTROL Insights]** fliken.
+1. Klicka på **[!UICONTROL Insights]** fliken om du vill visa användningsstatistik för resursen.
 
    Användningsstatistik omfattar följande:
 
@@ -424,7 +424,7 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
 
 Övriga egenskaper och metadatainformation behålls. Ingen del av kopian skapas när en resurs kopieras.
 
-1. I [!DNL Assets] gränssnittet väljer du en eller flera resurser och trycker/klickar på **[!UICONTROL Copy]** ikonen i verktygsfältet. Du kan också välja snabbåtgärden från resurskortet **[!UICONTROL Copy]** .
+1. I [!DNL Assets] gränssnittet väljer du en eller flera resurser och klickar på **[!UICONTROL Copy]** ikonen i verktygsfältet. Du kan också välja snabbåtgärden från resurskortet **[!UICONTROL Copy]** .
    ![Ikonen Kopiera i verktygsfältet i resursens användargränssnitt](assets/copy_icon.png)
 
    >[!NOTE]
@@ -437,7 +437,7 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
    >
    >Om du kopierar en resurs på samma plats genererar automatiskt en variant av namnet. [!DNL Experience Manager] Om du t.ex. kopierar en resurs med namnet `Square`, genererar [!DNL Experience Manager] automatiskt titeln för kopian som `Square1`.
 
-1. Klicka på/tryck på **[!UICONTROL Paste]** resursikonen i verktygsfältet.
+1. Click the **[!UICONTROL Paste]** asset icon from the toolbar.
 
    ![Ikonen Klistra in i resursens verktygsfält](assets/chlimage_1-14.png)
    [!DNL Assets] kopieras sedan till den här platsen.
@@ -450,14 +450,14 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
 
 1. Navigera till platsen för resursen som du vill flytta.
 
-1. Select the asset, and tap/click the **[!UICONTROL Move]** icon from the toolbar.
+1. Markera resursen och klicka på **[!UICONTROL Move]** -ikonen i verktygsfältet.
    ![Ikonen Flytta i verktygsfältet i resursens användargränssnitt](assets/move_icon.png)
 
 1. Gör något av följande i [!UICONTROL Move Assets] guiden:
 
-   * Ange namnet på resursen när den har flyttats. Tryck/klicka sedan **[!UICONTROL Next]** för att fortsätta.
+   * Ange namnet på resursen när den har flyttats. Klicka sedan på **[!UICONTROL Next]** för att fortsätta.
 
-   * Tryck/klicka för **[!UICONTROL Cancel]** att stoppa processen.
+   * Klicka **[!UICONTROL Cancel]** för att stoppa processen.
    >[!NOTE]
    >
    >* Du kan ange samma namn för resursen om det inte finns någon resurs med det namnet på den nya platsen. Du bör emellertid använda ett annat namn om du flyttar resursen till en plats där det finns en resurs med samma namn. Om du använder samma namn genereras automatiskt en variant av namnet. Om resursen till exempel har namnet Fyrkant, genereras namnet Fyrkant1 för kopian.
@@ -466,31 +466,31 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
 
 1. Gör något av följande i **[!UICONTROL Select Destination]** dialogrutan:
 
-   * Navigera till resursernas nya plats och tryck/klicka sedan på **[!UICONTROL Next]** för att fortsätta.
+   * Navigera till den nya platsen för resurserna och klicka sedan på **[!UICONTROL Next]** för att fortsätta.
 
-   * Tryck/klicka för **[!UICONTROL Back]** att gå tillbaka till **[!UICONTROL Rename]** skärmen.
+   * Klicka **[!UICONTROL Back]** för att gå tillbaka till **[!UICONTROL Rename]** skärmen.
 
 1. Om de resurser som flyttas har referenssidor, resurser eller samlingar visas fliken **[!UICONTROL Adjust References]** bredvid **[!UICONTROL Select Destination]** fliken.
 
    Gör något av följande på **[!UICONTROL Adjust References]** skärmen:
 
-   * Ange vilka referenser som ska justeras baserat på de nya detaljerna och tryck/klicka sedan på **[!UICONTROL Move]** för att fortsätta.
+   * Ange vilka referenser som ska justeras baserat på den nya informationen och klicka sedan på **[!UICONTROL Move]** för att fortsätta.
 
    * Markera/avmarkera referenser till resurserna i **[!UICONTROL Adjust]** kolumnen.
-   * Tryck/klicka för **[!UICONTROL Back]** att gå tillbaka till **[!UICONTROL Select Destination]** skärmen.
+   * Klicka **[!UICONTROL Back]** för att gå tillbaka till **[!UICONTROL Select Destination]** skärmen.
 
-   * Tryck/klicka för **[!UICONTROL Cancel]** att avbryta flyttningen.
+   * Klicka **[!UICONTROL Cancel]** för att avbryta flyttningen.
    Om du inte uppdaterar referenser fortsätter de att peka på resursens tidigare sökväg. Om du justerar referenserna uppdateras de till den nya resurssökvägen.
 
 ## Hantera återgivningar {#managing-renditions}
 
 1. Du kan lägga till eller ta bort återgivningar för en resurs, förutom originalet. Navigera till platsen för resursen som du vill lägga till eller ta bort återgivningar för.
 
-1. Tryck/klicka på resursen för att öppna sidan för resursen.
+1. Klicka på resursen för att öppna resurssidan.
 
    ![Sidan Resursdetaljer för att hantera återgivningar](assets/chlimage_1-15.png)
 
-1. Tryck/klicka på ikonen GlobalNav och välj **[!UICONTROL Renditions]** i listan.
+1. Klicka på ikonen GlobalNav och välj **[!UICONTROL Renditions]** i listan.
 
    ![Vänster räl för att öppna menyn och välj alternativet Återgivning](assets/renditions_menu.png)
 
@@ -506,13 +506,13 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
 
    **Ta bort en återgivning**
 
-   Välj en återgivning på **[!UICONTROL Renditions]** panelen och tryck/klicka sedan på **[!UICONTROL Delete Rendition]** -ikonen i verktygsfältet. Det går inte att ta bort återgivningar gruppvis när resursbearbetningen är slutförd. För enskilda resurser kan du ta bort återgivningar manuellt från användargränssnittet. För flera resurser kan du anpassa Experience Manager för att ta bort antingen specifika återgivningar eller ta bort resurserna och överföra de borttagna resurserna igen.
+   Välj en återgivning på **[!UICONTROL Renditions]** panelen och klicka sedan på **[!UICONTROL Delete Rendition]** -ikonen i verktygsfältet. Det går inte att ta bort återgivningar gruppvis när resursbearbetningen är slutförd. För enskilda resurser kan du ta bort återgivningar manuellt från användargränssnittet. För flera resurser kan du anpassa Experience Manager för att ta bort antingen specifika återgivningar eller ta bort resurserna och överföra de borttagna resurserna igen.
 
    ![Alternativ för att ta bort en återgivning](assets/delete_renditionicon.png)
 
    **Överför en ny återgivning**
 
-   Navigera till sidan med resursinformation för resursen och tryck/klicka på ikonen **[!UICONTROL Add Rendition]** i verktygsfältet för att överföra en ny återgivning för resursen.
+   Navigate to the asset details page for the asset, and click the **[!UICONTROL Add Rendition]** icon in the toolbar to upload a new rendition for the asset.
 
    ![Ikonen Lägg till återgivning för att överföra ny återgivning](assets/chlimage_1-16.png)
 
@@ -544,7 +544,7 @@ Du kan även inaktivera Tvinga borttagningsknappen med hjälp av en övertäckni
 
 1. Navigera till platsen för de resurser som du vill ta bort.
 
-1. Select the asset, and tap/click the **[!UICONTROL Delete]** icon from the toolbar.
+1. Markera resursen och klicka på **[!UICONTROL Delete]** -ikonen i verktygsfältet.
 
    ![Ikonen Ta bort](assets/delete_icon.png)
 
@@ -575,14 +575,14 @@ Se [Hämta resurser från Experience Manager](/help/assets/download-assets-from-
 
 1. Navigera till platsen för resursen/mappen som du vill publicera
 
-1. Välj snabbåtgärden **[!UICONTROL Publish]** från resurskortet eller välj resursen och tryck/klicka på ikonen **[!UICONTROL Quick Publish]** i verktygsfältet.
+1. Either select the **[!UICONTROL Publish]** quick action from the asset card, or select the asset and click the **[!UICONTROL Quick Publish]** icon from the toolbar.
 1. Om resursen refererar till andra resurser visas dess referenser i guiden. Endast referenser som antingen är opublicerade eller ändrade sedan de senast publicerades/avpublicerades visas. Välj de referenser som du vill publicera.
 
    >[!NOTE]
    >
    >Tomma mappar som är en del av en mapp som du har publicerat publiceras inte.
 
-1. Tryck/klicka **[!UICONTROL Publish]** för att bekräfta aktiveringen för resurserna.
+1. Klicka **[!UICONTROL Publish]** för att bekräfta aktiveringen av resurserna.
 
 >[!CAUTION]
 >
@@ -592,7 +592,7 @@ Se [Hämta resurser från Experience Manager](/help/assets/download-assets-from-
 
 1. Navigera till platsen för resursmappen/resursmappen som du vill ta bort från publiceringsmiljön (avpublicera).
 
-1. Markera resursen/mappen som ska avpubliceras och tryck/klicka på **[!UICONTROL Manage Publication]** -ikonen i verktygsfältet.
+1. Markera resursen/mappen som ska avpubliceras och klicka på **[!UICONTROL Manage Publication]** ikonen i verktygsfältet.
 
    ![Hantera publikationsikon](assets/manage_publication.png)
 
@@ -602,8 +602,8 @@ Se [Hämta resurser från Experience Manager](/help/assets/download-assets-from-
 
 1. Om du vill avpublicera resursen senare markerar du **[!UICONTROL Unpublish Later]** och väljer sedan ett datum för att avpublicera resursen.
 1. Schemalägg ett datum då resursen inte ska vara tillgänglig från publiceringsmiljön.
-1. Om resursen refererar till andra resurser väljer du de referenser du vill avpublicera. Tryck/klicka på **[!UICONTROL Unpublish]**.
-1. I bekräftelsedialogrutan: tryck/klicka:
+1. Om resursen refererar till andra resurser väljer du de referenser du vill avpublicera. Klicka på **[!UICONTROL Unpublish]**.
+1. I bekräftelsedialogrutan klickar du på:
 
    * **[!UICONTROL Cancel]** för att stoppa åtgärden
    * **[!UICONTROL Unpublish]** för att bekräfta att resurserna är opublicerade (inte längre tillgängliga i publiceringsmiljön) vid det angivna datumet.
@@ -617,7 +617,7 @@ En stängd användargrupp (CUG) används för att begränsa åtkomsten till spec
 
 CUG är ett extra sätt att begränsa åtkomsten till dina resurser. Du kan också konfigurera en inloggningssida för mappen.
 
-1. Välj en mapp i [!DNL Assets] gränssnittet och visa egenskapssidan genom att trycka/klicka på [!UICONTROL Properties] -ikonen i verktygsfältet.
+1. Välj en mapp i [!DNL Assets] gränssnittet och klicka på [!UICONTROL Properties] ikonen i verktygsfältet för att visa egenskapssidan.
 1. Lägg till medlemmar eller grupper under **[!UICONTROL Permissions]** fliken **[!UICONTROL Closed User Group]**.
 
    ![Lägg till användare i stängd användargrupp](assets/add_user.png)
@@ -674,12 +674,12 @@ Med redigeringsverktygen i [!DNL Assets] gränssnittet kan du utföra små redig
 
 1. Gör något av följande om du vill öppna en resurs i redigeringsläge:
 
-   * Select the asset and then click/tap the **[!UICONTROL Edit]** icon in the toolbar.
-   * Tryck/klicka på **[!UICONTROL Edit]** ikonen som visas på en resurs i kortvyn.
-   * In the asset page, tap/click the **[!UICONTROL Edit]** icon in the toolbar.
+   * Markera resursen och klicka sedan på **[!UICONTROL Edit]** -ikonen i verktygsfältet.
+   * Klicka på **[!UICONTROL Edit]** ikonen som visas på en resurs i kortvyn.
+   * Klicka på **[!UICONTROL Edit]** ikonen i verktygsfältet på resurssidan.
    ![Ikonen Redigera i verktygsfältet](assets/edit_icon.png)
 
-1. Om du vill beskära bilden trycker/klickar du på ikonen **Beskär** .
+1. Klicka på ikonen **Beskär** om du vill beskära bilden.
 
    ![Beskärningsikon](assets/chlimage_1-22.png)
 
@@ -696,15 +696,15 @@ Med redigeringsverktygen i [!DNL Assets] gränssnittet kan du utföra små redig
 
    ![Ikonerna Ångra och Gör om](assets/chlimage_1-25.png)
 
-1. Tryck/klicka på lämplig roteringsikon för att rotera bilden medsols eller motsols.
+1. Klicka på lämplig roteringsikon för att rotera bilden medsols eller motsols.
 
    ![Roteringsikoner medsols och motsols](assets/chlimage_1-26.png)
 
-1. Tryck/klicka på motsvarande flip-ikon för att vända bilden vågrätt eller lodrätt.
+1. Klicka på motsvarande Vänd-ikon för att vända bilden vågrätt eller lodrätt.
 
    ![Ikoner för att vända bilden vågrätt eller lodrätt](assets/chlimage_1-27.png)
 
-1. Tryck/klicka på ikonen **Slutför** för att spara ändringarna.
+1. Klicka på ikonen **Slutför** för att spara ändringarna.
 
    ![Ikonen Slutför](assets/chlimage_1-28.png)
 
@@ -745,7 +745,7 @@ Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Vi
 >För innehållsfragment skapas [anteckningar i fragmentredigeraren](/help/assets/content-fragments-variations.md#annotating-a-content-fragment).
 
 1. Navigera till platsen för resursen som du vill lägga till anteckningar i.
-1. Tryck/klicka på **[!UICONTROL Annotate]** ikonen på något av följande sätt:
+1. Klicka på **[!UICONTROL Annotate]** ikonen på något av följande sätt:
 
    * [Snabbåtgärder](/help/assets/managing-assets-touch-ui.md#quick-actions)
    * Från verktygsfältet när du har valt resursen eller navigerat till resurssidan
@@ -771,18 +771,18 @@ Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Vi
    >
    >Du kan lägga till flera anteckningar innan du sparar dem.
 
-1. Tryck/klicka **[!UICONTROL Close]** för att avsluta anteckningsläget.
+1. Klicka **[!UICONTROL Close]** för att avsluta anteckningsläget.
 1. Om du vill visa meddelandet loggar du in [!DNL Assets] med Aaron MacDonalds inloggningsuppgifter och klickar på **[!UICONTROL Notifications]** ikonen för att visa meddelandet.
 
    >[!NOTE]
    >
    >Anteckningar kan också läggas till i videomaterialet. När du kommenterar videoklipp pausas spelaren så att du kan anteckna i en bildruta. Mer information finns i [Hantera videomaterial](/help/assets/managing-video-assets.md).
 
-1. Om du vill välja en annan färg så att du kan skilja på användarna klickar/trycker du på profilikonen och klickar/trycker **[!UICONTROL My Preferences]**.
+1. Om du vill välja en annan färg så att du kan skilja mellan användarna klickar du på profilikonen och sedan på **[!UICONTROL My Preferences]**.
 
    ![Välj ikonen för användarprofilen och sedan Mina inställningar för att öppna Användarinställningar](assets/User-profile-preferences.png)
 
-   Ange önskad färg i rutan **[!UICONTROL Annotation Color]** och klicka/tryck sedan på **[!UICONTROL Accept]**.
+   Specify the desired color in the **[!UICONTROL Annotation Color]** box and then click **[!UICONTROL Accept]**.
 
    ![Välj anteckningsfärg i Användarinställningar för att ange färg för användarens personlighet](assets/Annotation-color.png)
 
@@ -794,7 +794,7 @@ Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Vi
 
 1. Om du vill visa sparade anteckningar för en resurs går du till resursens plats och öppnar resurssidan för resursen.
 
-1. Tryck/klicka på ikonen GlobalNav och välj **[!UICONTROL Timeline]** i listan.
+1. Klicka på ikonen GlobalNav och välj **[!UICONTROL Timeline]** i listan.
 
    ![Alternativ finns på ikonen GlobalNav](assets/chlimage_1-35.png)
 
@@ -802,11 +802,11 @@ Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Vi
 
    ![Visa listan Alla i tidslinjen](assets/chlimage_1-36.png)
 
-   Tryck/klicka på en kommentar på **[!UICONTROL Timeline]** panelen för att visa motsvarande anteckning på bilden.
+   Klicka på en kommentar på **[!UICONTROL Timeline]** panelen för att visa motsvarande anteckning i bilden.
 
    ![Panelen Tidslinje för att visa anteckningar i bilden](assets/chlimage_1-37.png)
 
-   Tryck/klicka **[!UICONTROL Delete]** för att ta bort en viss kommentar.
+   Klicka **[!UICONTROL Delete]** om du vill ta bort en viss kommentar.
 
 ### Skriv ut anteckningar {#printing-annotations}
 
@@ -814,7 +814,7 @@ Om en resurs har anteckningar eller har genomgått ett granskningsarbetsflöde k
 
 Du kan också välja att bara skriva ut anteckningarna eller granskningsstatusen.
 
-Om du vill skriva ut anteckningarna och granskningsstatusen trycker/klickar du på **[!UICONTROL Print]** -ikonen och följer instruktionerna i guiden. Ikonen visas bara i verktygsfältet när resursen har tilldelats minst en antecknings- eller granskningsstatus. **[!UICONTROL Print]**
+Om du vill skriva ut anteckningarna och granskningsstatusen klickar du på **[!UICONTROL Print]** ikonen och följer instruktionerna i guiden. Ikonen visas bara i verktygsfältet när resursen har tilldelats minst en antecknings- eller granskningsstatus. **[!UICONTROL Print]**
 
 1. Öppna förhandsgranskningssidan för en resurs i [!DNL Assets] gränssnittet.
 1. Gör något av följande:
@@ -830,7 +830,7 @@ Om du vill skriva ut anteckningarna och granskningsstatusen trycker/klickar du p
 
    ![Om du bara vill skriva ut granskningsstatusen för anteckningen markerar du den på tidslinjen](assets/chlimage_1-39.png)
 
-1. Tryck/klicka på ikonen **[!UICONTROL Print]** i verktygsfältet.
+1. Click the **[!UICONTROL Print]** icon from the toolbar.
 
    ![Ikonen Skriv ut i verktygsfältet](assets/chlimage_1-40.png)
 
@@ -844,7 +844,7 @@ Om du vill skriva ut anteckningarna och granskningsstatusen trycker/klickar du p
    >
    >Långa anteckningar kanske inte återges korrekt i PDF-filen. För optimal återgivning rekommenderar Adobe att du begränsar anteckningarna till 50 ord.
 
-1. Tryck/klicka på **[!UICONTROL Print]**. Beroende på vilket alternativ du väljer i steg 2 visar den genererade PDF-filen anteckningarna/statusen vid den angivna positionen. Om du till exempel väljer att skriva ut både anteckningar och granskningsstatus med inställningen **Överst till vänster** liknar genererade utdata den PDF-fil som återges här.
+1. Klicka på **[!UICONTROL Print]**. Beroende på vilket alternativ du väljer i steg 2 visar den genererade PDF-filen anteckningarna/statusen vid den angivna positionen. Om du till exempel väljer att skriva ut både anteckningar och granskningsstatus med inställningen **Överst till vänster** liknar genererade utdata den PDF-fil som återges här.
 
    ![Antecknings- och granskningsstatus för genererad PDF](assets/chlimage_1-42.png)
 
