@@ -3,9 +3,9 @@ title: 'Metadata-scheman för att definiera layouten för metadataegenskapssidan
 description: Metadata-schemat definierar layouten för egenskapssidan och de metadataegenskaper som visas för resurser. Lär dig hur du skapar anpassade metadatamatcheman, redigerar metadatamatchema och hur du använder metadatamatchema på resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 265fc8fa6b4d835241b1213d95beaa17db5798ac
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
 workflow-type: tm+mt
-source-wordcount: '2526'
+source-wordcount: '2522'
 ht-degree: 4%
 
 ---
@@ -19,11 +19,11 @@ I [!DNL Adobe Experience Manager Assets]innehåller scheman specifika fält för
 
 Så här visar och redigerar du egenskapssidan för en resurs:
 
-1. Klicka på eller tryck på **[!UICONTROL View Properties]** ikonen från Snabbåtgärder på resurspanelen i kortvyn.
+1. Klicka på **[!UICONTROL View Properties]** ikonen från Snabbåtgärder på resurspanelen i kortvyn.
 
    ![Snabbåtgärder på resurspanelen](assets/chlimage_1-170.png)
 
-   Du kan också markera en resurs och sedan klicka på eller trycka på [!UICONTROL Properties] ikonen i verktygsfältet.
+   Du kan också markera en resurs och sedan klicka på [!UICONTROL Properties] ikonen i verktygsfältet.
 
 1. Du kan redigera de olika redigerbara metadataegenskaperna under de tillgängliga flikarna. Du kan dock inte ändra resursen [!UICONTROL Type] på egenskapsfliken [!UICONTROL Basic] .
 
