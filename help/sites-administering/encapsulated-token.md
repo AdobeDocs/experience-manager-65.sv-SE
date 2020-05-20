@@ -10,7 +10,10 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 2c263c0d-2521-49df-88ba-f304a25af8ab
 translation-type: tm+mt
-source-git-commit: 29328ff7fde4ed0e7f9728af1be911133259dc6c
+source-git-commit: 215f062f80e7abfe35698743ce971394d01d0ed6
+workflow-type: tm+mt
+source-wordcount: '844'
+ht-degree: 0%
 
 ---
 
@@ -52,6 +55,15 @@ Du kan se hur detta fungerar i en geografiskt distribuerad distribution med Mong
 
 ## Konfigurera den inkapslade token {#configuring-the-encapsulated-token}
 
+>[!NOTE]
+>Alla autentiseringshanterare som synkroniserar användare och förlitar sig på tokenautentisering (som SAML och OAuth) fungerar bara med inkapslade tokens om:
+>
+>* Anteckningssessioner är aktiverade, eller
+   >
+   >
+* Användare skapas redan i AEM när synkroniseringen startar. Detta innebär att inkapslade token inte stöds i situationer där hanterarna **skapar** användare under synkroniseringsprocessen.
+
+
 Det finns några saker du behöver tänka på när du konfigurerar den inkapslade token:
 
 1. På grund av kryptografin måste alla instanser ha samma HMAC-nyckel. Sedan AEM 6.3 lagras nyckelmaterialet inte längre i databasen, utan i själva filsystemet. Med detta i åtanke är det bästa sättet att replikera nycklarna att kopiera dem från källinstansens filsystem till målinstansens eller målinstansens eller målinstansernas som du vill replikera nycklarna till. Mer information finns under &quot;Replicating the HMAC key&quot; nedan.
@@ -71,12 +83,12 @@ För att replikera nyckeln mellan instanser måste du:
    * &lt;author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21
    Den `bundle.info` fil som finns i varje mapp identifierar paketnamnet.
 
-1. Navigera till datamappen. Exempel:
+1. Navigera till datamappen. Till exempel:
 
    * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
 
 1. Kopiera HMAC- och mallfilerna.
-1. Gå sedan till den målinstans som du vill duplicera HMAC-nyckeln till och navigera till datamappen. Exempel:
+1. Gå sedan till den målinstans som du vill duplicera HMAC-nyckeln till och navigera till datamappen. Till exempel:
 
    * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
 
