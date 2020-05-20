@@ -3,7 +3,10 @@ title: Förbered resurser för översättning
 description: Skapa rotmappar för språk för att förbereda resurser för översättning för stöd av flerspråkiga resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+workflow-type: tm+mt
+source-wordcount: '439'
+ht-degree: 0%
 
 ---
 
@@ -43,25 +46,25 @@ Om du vill skapa språkroten skapar du en mapp och använder en ISO-språkkod so
 
 Rotsidan för den italienska språkkopian av exempelhierarkin har till exempel `it` egenskapen Namn. Egenskapen Namn används som namn på objektnoden i databasen och avgör därför sökvägen till resurserna. (`https://[aem_server]:[port]/assets.html/content/dam/it/`).
 
-1. I resurskonsolen klickar/trycker du på **[!UICONTROL Skapa]** och väljer **[!UICONTROL Mapp]** på menyn.
+1. From the Assets console, click **[!UICONTROL Create]** and choose **[!UICONTROL Folder]** from the menu.
 
    ![Skapa mapp](assets/Create-folder.png)
 
-1. I fältet **[!UICONTROL Namn]** skriver du landskoden i formatet `<language-code>`.
+1. I fältet skriver du landskoden i formatet **[!UICONTROL Name]** `<language-code>`.
 
    ![Lägg till språkkod i mappen](assets/Add-language-code-in-folder.png)
 
-1. Klicka eller tryck på **[!UICONTROL Skapa]**. Språkroten skapas i resurskonsolen.
+1. Klicka på **[!UICONTROL Create]**. Språkroten skapas i resurskonsolen.
 
 ## Visa språkrötter {#viewing-language-roots}
 
-I AEM-gränssnittet finns en **[!UICONTROL referenspanel]** som visar en lista med språkrötter som har skapats i AEM Resurser.
+I AEM-gränssnittet finns en **[!UICONTROL References]** panel med en lista över språkrötter som har skapats i AEM Resurser.
 
-1. I Resurskonsolen väljer du den språkinställning som du vill skapa språkkopior för.
-1. Klicka på eller tryck på ikonen GlobalNav och välj **[!UICONTROL Referenser]** för att öppna rutan [!UICONTROL Referens] .
+1. I resurskonsolen väljer du den språkinställning som du vill skapa språkkopior för.
+1. Klicka på ikonen GlobalNav och välj **[!UICONTROL References]** att öppna [!UICONTROL Reference] rutan.
 
    ![chlimage_1-122](assets/chlimage_1-122.png)
 
-1. Klicka eller tryck på **[!UICONTROL Språkkopior]** i rutan Referenser. På panelen [!UICONTROL Språkkopior] visas språkkopiorna för resurserna.
+1. Klicka på i rutan Referenser **[!UICONTROL Language Copies]**. På [!UICONTROL Language Copies] panelen visas språkkopiorna för resurserna.
 
    ![chlimage_1-123](assets/chlimage_1-123.png)
