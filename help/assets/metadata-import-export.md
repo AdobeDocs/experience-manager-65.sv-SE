@@ -3,9 +3,9 @@ title: Importera och exportera resursmetadata i grupp.
 description: Importera och exportera metadata från digitalt material i grupp.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 42532bfe73c44ad04b67afa973eef526f47588cf
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: '743'
 ht-degree: 5%
 
 ---
@@ -36,7 +36,7 @@ Import av metadata är asynkron och påverkar inte systemets prestanda. Samtidig
    | [!UICONTROL Launch Workflows] | Falskt som standard. När det är inställt på `true` och standardinställningarna för startprogrammet används för [!UICONTROL DAM Metadata WriteBack] arbetsflödet (som skriver metadata till binära XMP-data). Om du aktiverar startarbetsflöden blir systemet långsammare. |
    | [!UICONTROL Asset Path Column Name] | Definierar kolumnnamnet för CSV-filen med resurser. |
 
-1. Tap/click **[!UICONTROL Import]** from the toolbar. När metadata har importerats visas ett meddelande i [!UICONTROL Notification] inkorgen.
+1. Klicka **[!UICONTROL Import]** i verktygsfältet. När metadata har importerats visas ett meddelande i [!UICONTROL Notification] inkorgen.
 
 1. Om du vill verifiera korrekt import navigerar du till en tillgångs [!UICONTROL Properties] sida och kontrollerar värdena i fälten.
 
