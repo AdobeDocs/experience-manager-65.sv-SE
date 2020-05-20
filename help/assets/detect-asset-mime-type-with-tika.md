@@ -3,7 +3,10 @@ title: Identifiera MIME-typ av resurser med Apache Tika
 description: Aktivera Apache Tika för att hjälpa AEM Assets att identifiera MIME-typen för resurser från innehållsströmmen under överföringen i stället för filtillägget.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+workflow-type: tm+mt
+source-wordcount: '161'
+ht-degree: 0%
 
 ---
 
@@ -14,17 +17,18 @@ I vanliga fall identifierar Adobe Experience Manager (AEM) Assets den MIME-typ a
 
 Om du använder Apache Tika för att överföra resurser, identifierar AEM Resurser deras MIME-typ från innehållsströmmen under överföringen i stället för filtillägget.
 
-Den här funktionen är inaktiverad som standard. Om du vill aktivera funktionen konfigurerar du tjänsten Dag CQ DAM Mime Type **[!UICONTROL från]** Configuration Manager .
+Den här funktionen är inaktiverad som standard. Om du vill aktivera funktionen konfigurerar du **[!UICONTROL Day CQ DAM Mime Type]** tjänsten från [!UICONTROL Configuration Manager].
 
 >[!NOTE]
 >
 >MIME-typidentifiering med Apache Tika-biblioteket är en resurskrävande åtgärd.
 
 1. Om du vill öppna webbkonsolen för Configuration Manager går du till `https://[aem_server]:[port]/system/console/configMgr`.
-1. I listan över tjänster går du till **[!UICONTROL Day CQ DAM Mime Type Service]** och trycker på **[!UICONTROL Edit]** Bside it för att öppna den i Edit-läget.
 
-1. Välj alternativet **[!UICONTROL Identifiera MIME från innehåll]** om du vill aktivera parsning av överförda resurser för att bestämma MIME-typen samtidigt som filtillägg ignoreras. Som standard är det här alternativet avmarkerat.
+1. Leta upp **[!UICONTROL Day CQ DAM Mime Type Service]** och klicka på **[!UICONTROL Edit]** i listan över tjänster.
+
+1. Välj **[!UICONTROL Detect MIME from content]** alternativet för att aktivera parsning av överförda resurser för att bestämma deras MIME-typ samtidigt som filtillägg ignoreras. Som standard är det här alternativet avmarkerat.
 
    ![chlimage_1-333](assets/chlimage_1-333.png)
 
-1. Klicka/tryck på **[!UICONTROL Spara]** för att spara ändringarna.
+1. Click **[!UICONTROL Save]** to save the changes.
