@@ -3,10 +3,10 @@ title: Hantera metadata för många resurser och samlingar i Adobe Enterprise Ma
 description: Redigera metadata för många resurser och samlingar samtidigt för att snabbt sprida vanliga metadataändringar.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5d66bf75a6751e41170e6297d26116ad33c2df44
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
 workflow-type: tm+mt
-source-wordcount: '482'
-ht-degree: 12%
+source-wordcount: '479'
+ht-degree: 11%
 
 ---
 
@@ -30,7 +30,7 @@ Om du vill anpassa sidan med metadataegenskaper, inklusive lägga till, ändra e
 
 1. Navigera till platsen för de resurser som du vill redigera i användargränssnittet Resurser.
 1. Markera de resurser som du vill redigera gemensamma egenskaper för.
-1. I verktygsfältet: tryck/klicka på **[!UICONTROL Properties]** -ikonen för att öppna egenskapssidan för de valda resurserna.
+1. Klicka på **[!UICONTROL Properties]** ikonen i verktygsfältet för att öppna egenskapssidan för de valda resurserna.
 
    >[!NOTE]
    >
@@ -45,9 +45,9 @@ Om du vill anpassa sidan med metadataegenskaper, inklusive lägga till, ändra e
    >* Högst upp i resurslistan markerar du kryssrutan nära **[!UICONTROL Title]** för att växla mellan att markera resurserna och rensa listan.
 
 
-1. Om du vill välja ett annat metadataram för resurserna trycker/klickar du på **[!UICONTROL Settings]** -ikonen i verktygsfältet och väljer önskat schema.
+1. Klicka på ikonen i verktygsfältet och välj önskat schema om du vill välja ett annat metadatamatchschema för resurserna **[!UICONTROL Settings]** .
 1. Spara ändringarna.
-1. Om du vill lägga till nya metadata till befintliga metadata i fält som innehåller flera värden väljer du **[!UICONTROL Append mode]**. Om du inte markerar det här alternativet ersätter de nya metadata de data som finns i fälten. Tryck/klicka på **[!UICONTROL Submit]**.
+1. Om du vill lägga till nya metadata till befintliga metadata i fält som innehåller flera värden väljer du **[!UICONTROL Append mode]**. Om du inte markerar det här alternativet ersätter de nya metadata de data som finns i fälten. Klicka på **[!UICONTROL Submit]**.
 
    >[!CAUTION]
    >
