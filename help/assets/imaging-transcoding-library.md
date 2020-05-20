@@ -3,7 +3,10 @@ title: Konverteringsbibliotek för bildbehandling
 description: Lär dig hur du konfigurerar och använder Adobes Imaging Transcoding Library, en bildbehandlingslösning som kan utföra grundläggande bildhanteringsfunktioner, inklusive kodning, omkodning, bildomsampling och storleksändring.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+workflow-type: tm+mt
+source-wordcount: '898'
+ht-degree: 0%
 
 ---
 
@@ -73,7 +76,7 @@ Om du vill konfigurera biblioteket skapar du en .conf-fil som anger biblioteken 
 
 1. Ladda ned paketet [](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-imaging-transcoding-library-pkg) Imaging Transcoding Library och installera det med Package Manager. Paketet är kompatibelt med AEM 6.5.
 
-1. Om du vill veta ett paket-ID för `com.day.cq.dam.cq-dam-switchengine`loggar du in på webbkonsolen och trycker på **[!UICONTROL OSGi > Bundles]**. Du kan även öppna paketkonsolen genom att gå till `https://[aem_server:[port]/system/console/bundles/` URL. Hitta paketet och dess ID `com.day.cq.dam.cq-dam-switchengine` .
+1. Om du vill veta ett paket-ID för `com.day.cq.dam.cq-dam-switchengine`loggar du in på webbkonsolen och klickar på **[!UICONTROL OSGi > Bundles]**. Du kan även öppna paketkonsolen genom att gå till `https://[aem_server:[port]/system/console/bundles/` URL. Hitta paketet och dess ID `com.day.cq.dam.cq-dam-switchengine` .
 
 1. Kontrollera att alla nödvändiga bibliotek extraheras genom att kontrollera mappen med kommandot `ls -la /aem65/author/crx-quickstart/launchpad/felix/bundle<id>/data/binaries/`där mappnamnet skapas med paket-ID:t. Kommandot är till exempel `ls -la /aem65/author/crx-quickstart/launchpad/felix/bundle588/data/binaries/` om paket-ID är `588`.
 
@@ -98,26 +101,26 @@ Om du vill konfigurera biblioteket skapar du en .conf-fil som anger biblioteken 
 
 1. Om du vill vara säker på att värdet för banan är inställt på `.`använder du `echo $LD_LIBRARY_PATH` kommandot. Utdata ska bara vara `.`. Starta om sessionen om värdet inte är `.`angivet.
 
-### Konfigurera arbetsflöde för [!UICONTROL DAM-uppdatering av] resurser {#configure-dam-asset-update-workflow}
+### Konfigurera [!UICONTROL DAM Update Asset] arbetsflöde {#configure-dam-asset-update-workflow}
 
-Uppdatera arbetsflödet för [!UICONTROL DAM-uppdatering av resurser] om du vill använda biblioteket för bearbetning av bilder.
+Uppdatera arbetsflödet så att det använder biblioteket för bearbetning av bilder. [!UICONTROL DAM Update Asset]
 
-1. Tryck/klicka på AEM-logotypen och gå till **[!UICONTROL Verktyg > Arbetsflöde > Modeller]**.
+1. I användargränssnittet i Experience Manager väljer du **[!UICONTROL Tools > Workflow > Models]**.
 
-1. Öppna arbetsflödesmodellen **[!UICONTROL DAM Update Asset]** på sidan **[!UICONTROL Arbetsflödesmodeller]** i redigeringsläge.
+1. Öppna arbetsflödesmodellen från **[!UICONTROL Workflow Models]** sidan i redigeringsläge **[!UICONTROL DAM Update Asset]** .
 
-1. Öppna steget **[!UICONTROL Bearbeta miniatyrbilder]** i arbetsflödet. På fliken **[!UICONTROL Miniatyrbilder]** lägger du till de MIME-typer för vilka du vill hoppa över standardprocessen för generering av miniatyrbilder i listan **[!UICONTROL Hoppa över Mime-typer]** .
-Om du till exempel vill skapa miniatyrer för en TIFF-bild med hjälp av Imaging Transcoding Library, anger du `image/tiff` i fältet **[!UICONTROL Hoppa över Mime Types]** .
+1. Öppna arbetsflödets **[!UICONTROL Process Thumbnails]** processsteg. Lägg till de MIME-typer som du vill hoppa över standardprocessen för generering av miniatyrbilder för i **[!UICONTROL Thumbnails]** **[!UICONTROL Skip Mime Types]** listan på fliken.
+Om du till exempel vill skapa miniatyrbilder för en TIFF-bild med hjälp av Imaging Transcoding Library, anger du `image/tiff` i **[!UICONTROL Skip Mime Types]** fältet.
 
-1. På fliken **[!UICONTROL Webbaktiverad bild]** lägger du till de MIME-typer som du vill hoppa över standardprocessen för generering av webbåtergivning i **[!UICONTROL Hoppa över lista]**. Om du t.ex. hoppade över MIME-typen `image/tiff` i ovanstående steg lägger du till `image/tiff` i hopplistan.
+1. Lägg till de MIME-typer som du vill hoppa över standardprocessen för generering av webbåtergivning i på **[!UICONTROL Web Enabled Image]** fliken **[!UICONTROL Skip List]**. Om du t.ex. hoppade över MIME-typen `image/tiff` i ovanstående steg lägger du till `image/tiff` i hopplistan.
 
-1. Öppna steget **[!UICONTROL EPS-miniatyrbilder (med ImageMagick)]** och gå till fliken **[!UICONTROL Argument]** . I listan **[!UICONTROL Mime-typer]** lägger du till de MIME-typer som du vill att Imaging Transcoding Library ska bearbeta. Om du t.ex. hoppade över MIME-typen `image/tiff` i ovanstående steg lägger du `image/jpeg` till i listan **[!UICONTROL Mime-typer]** .
+1. Öppna **[!UICONTROL EPS thumbnails (powered by ImageMagick)]** steget och gå till **[!UICONTROL Arguments]** fliken. I **[!UICONTROL Mime Types]** listan lägger du till de MIME-typer som du vill att Imaging Transcoding Library ska bearbeta. Om du t.ex. hoppade över MIME-typen `image/tiff` i ovanstående steg lägger du till `image/jpeg` i **[!UICONTROL Mime Types]** listan.
 
 1. Ta bort eventuella standardkommandon.
 
-1. Växla sidopanelen och lägg till **[!UICONTROL SWitchEngine-hanterare]** från listan med steg.
+1. Växla sidopanelen och lägg till i listan med steg **[!UICONTROL SWitchEngine Handler]**.
 
-1. Lägg till kommandon i [!UICONTROL SwitchEngine-hanteraren] baserat på dina egna krav. Finjustera parametrarna för de kommandon som du anger så att de uppfyller dina krav. Om du till exempel vill bevara färgprofilen i JPEG-bilden lägger du till följande kommandon i **[!UICONTROL kommandolistan]** :
+1. Lägg till kommandon i [!UICONTROL SwitchEngine Handler] baserat på dina egna krav. Finjustera parametrarna för de kommandon som du anger så att de uppfyller dina krav. Om du till exempel vill bevara färgprofilen för JPEG-bilden lägger du till följande kommandon i **[!UICONTROL Commands]** listan:
 
    * `SWitchEngine -input ${file} -destMime PNG -resize 48 -output ${directory}cq5dam.thumbnail.48.48.png`
    * `SWitchEngine -input ${file} -destMime PNG -resize 140x100 -output ${directory}cq5dam.thumbnail.140.100.png`
@@ -129,9 +132,9 @@ Om du till exempel vill skapa miniatyrer för en TIFF-bild med hjälp av Imaging
 
    ![klibbig](assets/chlimage_1-200.png)
 
-1. Om du vill generera webbåtergivningar konfigurerar du parametrar på fliken **[!UICONTROL Webbaktiverad bild]** .
+1. Konfigurera parametrar på **[!UICONTROL Web-Enabled Image]** fliken för att generera webbåtergivningar.
 
-1. Synkronisera den uppdaterade [!UICONTROL arbetsflödesmodellen för DAM-uppdatering av resurser] . Spara arbetsflödet.
+1. Synkronisera den uppdaterade [!UICONTROL DAM Update Asset] arbetsflödesmodellen. Spara arbetsflödet.
 
 Verifiera konfigurationen, ladda upp en TIFF-bild och övervaka filen error.log. Du kommer att lägga märke till `INFO` meddelanden med omnämnanden av `SwitchEngineHandlingProcess execute: executing command line`. Loggarna anger de återgivningar som genereras. När arbetsflödet är klart kan du visa de nya återgivningarna i AEM.
 
