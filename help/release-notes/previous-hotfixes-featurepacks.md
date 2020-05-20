@@ -2,7 +2,7 @@
 title: AEM 6.5 Previous Service Pack Release Notes
 description: Versionsinformation om Adobe Experience Manager 6.5 Service Pack 3 och tidigare.
 translation-type: tm+mt
-source-git-commit: af21ed3cb8b755402ab03a7b624fa1ea99f2035f
+source-git-commit: 321710219053ab43fe5a223665bc20987e1afb31
 workflow-type: tm+mt
 source-wordcount: '6273'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Programfixar och funktionspaket som ingår i tidigare servicepaket {#hotfixes-and-feature-packs-included-in-previous-service-packs}
 
-## Adobe Experience Manager 6.5.3.0 {#aem-6530}
+## Adobe Experience Manager 6.5.3.0 {#aem-6530-rn}
 
 [!DNL Adobe Experience Manager] 6.5.3.0 är en viktig version som innehåller prestanda, stabilitet, säkerhet och viktiga kundkorrigeringar och förbättringar som släppts sedan den allmänna tillgängligheten av 6.5-utgåvan i **april 2019**. Den kan installeras ovanpå [!DNL Adobe Experience Manager] 6.5.
 
@@ -104,7 +104,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 * Enorma snedningsjobb skapas och Bearbetningsbanderollen visas igen när åtgärder som utförs på resurser i [!DNL Experience manager Assets] skickas till Scene 7 (NPR-30947).
 
-* En konflikt inträffar när en språkkopia av resurser skapas och resurser inte överförs till Scene 7 (NPR-30932).
+* En konflikt uppstår när du skapar en språkkopia av resurser och resurser inte överförs till scenen 7 (NPR-30932).
 
 * Dynamiska återgivningar som hämtats från [!DNL Experience Manager] att ha [!DNL Dynamic Media]Hybrid-läge är brutna (de är av texttyp med innehållet&quot;det går inte att hitta bilden&quot; i stället för bildinnehållstypen) (NPR-30876).
 
