@@ -1,48 +1,51 @@
 ---
 title: Aktivera tillgångsinsikter via DTM
-description: Learn how to use Adobe Dynamic Tag Management (DTM) to enable Asset Insights.
+description: Lär dig hur du använder Adobe Dynamic Tag Management (DTM) för att aktivera tillgångsinsikter.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+workflow-type: tm+mt
+source-wordcount: '567'
+ht-degree: 0%
 
 ---
 
 
-# Enable Asset Insights through DTM {#enable-asset-insights-through-dtm}
+# Aktivera tillgångsinsikter via DTM {#enable-asset-insights-through-dtm}
 
-Adobe Dynamic Tag Management is a tool that activates your digital marketing tools. It is provided for free to Adobe Analytics customers.
+Adobe Dynamic Tag Management är ett verktyg som aktiverar era digitala marknadsföringsverktyg. Den tillhandahålls kostnadsfritt till Adobe Analytics-kunder.
 
-Although you can customize your tracking code to enable third-party CMS solutions to use Asset Insights, Adobe recommends that you use DTM to insert Asset Insights tags.
+Även om du kan anpassa din spårningskod så att CMS-lösningar från tredje part kan använda resursinsikter, rekommenderar Adobe att du använder DTM för att infoga resursinsikter-taggar.
 
 >[!NOTE]
 >
->Insights are only supported and provided for images.
+>Insikter stöds endast och tillhandahålls för bilder.
 
-Perform these steps to enable Asset Insights through DTM.
+Utför dessa steg för att aktivera tillgångsinsikter via DTM.
 
-1. Tap/click the AEM logo, and go to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Insights Configuration]**.
-1. [Configure AEM instance with DTM Cloud Service](/help/sites-administering/dtm.md)
+1. Click the AEM logo, and go to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Insights Configuration]**.
+1. [Konfigurera AEM-instans med DTM Cloud-tjänsten](/help/sites-administering/dtm.md)
 
-   API-token bör vara tillgänglig när du loggar in på [https://dtm.adobe.com](https://dtm.adobe.com/) och går till **[!UICONTROL Kontoinställningar]** från profilikonen. This step is not required from the Asset Insights standpoint, because the integration of AEM Sites with Asset Insights is still in the works.
+   API-token bör vara tillgänglig när du har loggat in på [https://dtm.adobe.com](https://dtm.adobe.com/) och går **[!UICONTROL Account Settings]** till Profilikonen. Detta steg är inte nödvändigt från tillgångsinsikter eftersom integrationen av AEM Sites med tillgångsinsikter fortfarande pågår.
 
-1. Log on to [https://dtm.adobe.com](https://dtm.adobe.com/), and select a Company, as appropriate.
-1. Create/Open an the existing Web Property
+1. Logga in på [https://dtm.adobe.com](https://dtm.adobe.com/)och välj ett företag.
+1. Skapa/öppna en befintlig webbegenskap
 
-   * Välj fliken **[!UICONTROL Webbegenskaper]** och tryck/klicka sedan på **[!UICONTROL Lägg till egenskap]**.
+   * Markera **[!UICONTROL Web Properties]** fliken och klicka sedan på **[!UICONTROL Add Property]**.
 
-   * Uppdatera fälten efter behov och tryck/klicka på **[!UICONTROL Skapa egenskap]**. Se [dokumentationen](https://helpx.adobe.com/experience-manager/using/dtm.html).
+   * Uppdatera fälten efter behov och klicka på **[!UICONTROL Create Property]**. Se [dokumentationen](https://helpx.adobe.com/experience-manager/using/dtm.html).
    ![Skapa redigera webbegenskap](assets/Create-edit-web-property.png)
 
-1. På fliken **[!UICONTROL Regler]** väljer du **[!UICONTROL Sidinläsningsregler]** i navigeringsrutan och trycker/klickar på **[!UICONTROL Skapa ny regel]**.
+1. På **[!UICONTROL Rules]** fliken väljer du **[!UICONTROL Page Load Rules]** i navigeringsrutan och klickar på **[!UICONTROL Create New Rule]**.
 
    ![chlimage_1-58](assets/chlimage_1-194.png)
 
-1. Expandera **[!UICONTROL JavaScript/tredjepartstaggar]**. Tryck/klicka sedan på **[!UICONTROL Lägg till nytt skript]** på fliken **[!UICONTROL Sekventiell HTML]** för att öppna skriptdialogrutan.
+1. Expandera **[!UICONTROL Javascript /Third Party Tags]**. Klicka sedan **[!UICONTROL Add New Script]** på **[!UICONTROL Sequential HTML]** fliken för att öppna skriptdialogrutan.
 
    ![chlimage_1-59](assets/chlimage_1-195.png)
 
-1. Tap/click the AEM logo, and go to **[!UICONTROL Tools > Assets]**.
-1. Tryck/klicka på **[!UICONTROL Insights Page Tracker]**, kopiera spårningskoden och klistra sedan in den i skriptdialogrutan som du öppnade i steg 6. Spara ändringarna.
+1. Click the AEM logo, and go to **[!UICONTROL Tools > Assets]**.
+1. Klicka **[!UICONTROL Insights Page Tracker]** på, kopiera spårningskoden och klistra sedan in den i skriptdialogrutan som du öppnade i steg 6. Spara ändringarna.
 
    >[!NOTE]
    >
@@ -52,21 +55,21 @@ Perform these steps to enable Asset Insights through DTM.
    > * För AEM-värdbaserad sidspårare ska källan peka på en publiceringsinstans med värdnamnet för dispatcher-instansen.
 
 
-1. Öppna `https://dtm.adobe.com`. Klicka på **[!UICONTROL Översikt]** i webbegenskapen och klicka på **[!UICONTROL Lägg till verktyg]** eller öppna ett befintligt Adobe Analytics-verktyg. While creating the tool, you can set **[!UICONTROL Configuration Method]** to **[!UICONTROL Automatic]**.
+1. Öppna `https://dtm.adobe.com`. Klicka **[!UICONTROL Overview]** i webbegenskapen och klicka **[!UICONTROL Add Tool]** eller öppna ett befintligt Adobe Analytics-verktyg. När du skapar verktyget kan du ange **[!UICONTROL Configuration Method]** till **[!UICONTROL Automatic]**.
 
    ![Lägg till Adobe Analytics-verktyget](assets/Add-Adobe-Analytics-Tool.png)
 
-   Select Staging/Production report suites, as appropriate.
+   Välj rapportsviter för mellanlagring/produktion efter behov.
 
-1. Expand **[!UICONTROL Library Management]**, and ensure that **[!UICONTROL Load Library at]** is set to **[!UICONTROL Page Top]**.
+1. Expandera **[!UICONTROL Library Management]** och kontrollera att **[!UICONTROL Load Library at]** är inställt på **[!UICONTROL Page Top]**.
 
    ![chlimage_1-61](assets/chlimage_1-197.png)
 
-1. Expand **[!UICONTROL Customize Page Code]**, and click or tap **[!UICONTROL Open Editor]**.
+1. Expandera **[!UICONTROL Customize Page Code]** och klicka på **[!UICONTROL Open Editor]**.
 
    ![chlimage_1-62](assets/chlimage_1-198.png)
 
-1. Paste the following code in the window:
+1. Klistra in följande kod i fönstret:
 
    ```Java
    var sObj;
@@ -104,11 +107,11 @@ Perform these steps to enable Asset Insights through DTM.
    })();
    ```
 
-   * Regeln för sidinläsning i DTM innehåller bara `pagetracker.js` koden. Any `assetAnalytics` fields are considered as overrides for default values. De är inte obligatoriska som standard.
-   * The code calls `assetAnalytics.dispatcher.init()` after making sure that `_satellite.getToolsByType('sc')[0].getS()` is initialized and `assetAnalytics,dispatcher.init` is available. Du kan därför hoppa över att lägga till den i steg 11.
-   * Som framgår av kommentarerna i Insights Page Tracker-koden (**[!UICONTROL Verktyg > Resurser > Insights Page Tracker]**) är de tre första argumenten (RSID, Tracking Server och Visitor Namespace) irrelevanta när sidspåraren inte skapar ett `AppMeasurement` objekt. Empty strings are passed instead to highlight this.\
-      The remaining arguments correspond to what is configured in the Insights Configuration page (**[!UICONTROL Tools > Assets > Insights Configuration]**).
-   * The AppMeasurement object is retrieved by querying `satelliteLib` for all available SiteCatalyst engines. Om flera taggar har konfigurerats ändrar du indexvärdet för arrayväljaren på rätt sätt. Posterna i arrayen ordnas enligt de SiteCatalyst-verktyg som finns i DTM-gränssnittet.
+   * Regeln för sidinläsning i DTM innehåller bara `pagetracker.js` koden. Alla `assetAnalytics` fält betraktas som åsidosättningar för standardvärden. De är inte obligatoriska som standard.
+   * Kodanropet `assetAnalytics.dispatcher.init()` efter att du har kontrollerat att `_satellite.getToolsByType('sc')[0].getS()` är initierad och `assetAnalytics,dispatcher.init` tillgänglig. Du kan därför hoppa över att lägga till den i steg 11.
+   * Om sidspåraren inte skapar ett **[!UICONTROL Tools > Assets > Insights Page Tracker]** objekt är de första tre argumenten (RSID, Tracking Server och Visitor Namespace) irrelevanta, vilket anges i kommentarerna i koden för sidspåraren ( `AppMeasurement` ). Tomma strängar skickas i stället för att markera detta.\
+      De återstående argumenten motsvarar konfigurationen på sidan Insights Configuration (**[!UICONTROL Tools > Assets > Insights Configuration]**).
+   * AppMeasurement-objektet hämtas genom att en fråga skickas `satelliteLib` till alla tillgängliga SiteCatalyst-motorer. Om flera taggar har konfigurerats ändrar du indexvärdet för arrayväljaren på rätt sätt. Posterna i arrayen ordnas enligt de SiteCatalyst-verktyg som finns i DTM-gränssnittet.
 
 1. Spara och stäng fönstret Kodredigeraren och spara sedan ändringarna i verktygskonfigurationen.
-1. In the **[!UICONTROL Approvals]** tab, approve both the pending approvals. The DTM tag is ready for insertion in your web page. For details on how to insert DTM tags in web pages, see [Integrate DTM in custom page templates](https://blogs.adobe.com/experiencedelivers/experience-management/integrating-dtm-custom-aem6-page-template/).
+1. Godkänn båda väntande godkännanden på **[!UICONTROL Approvals]** fliken. DTM-taggen kan infogas på webbsidan. Mer information om hur du infogar DTM-taggar på webbsidor finns i [Integrera DTM i anpassade sidmallar](https://blogs.adobe.com/experiencedelivers/experience-management/integrating-dtm-custom-aem6-page-template/).
