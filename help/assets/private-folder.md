@@ -3,10 +3,10 @@ title: Skapa och dela en privat mapp i AEM
 description: Lär dig hur du skapar en privat mapp i Adobe Experience Manager-resurserna (AEM) och delar den med andra användare och tilldelar olika behörigheter till dem.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 02bd337271f0039b354ada2899198f5654f9e8bf
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
 workflow-type: tm+mt
-source-wordcount: '499'
-ht-degree: 5%
+source-wordcount: '494'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +20,7 @@ Du kan skapa en privat mapp i användargränssnittet för Adobe Experience Manag
 > Den privata mappen har minst en medlem med ägarrollen.
 
 
-1. I resurskonsolen: tryck/klicka **[!UICONTROL Create]** i verktygsfältet och välj sedan **[!UICONTROL Folder]** från menyn.
+1. Klicka på **[!UICONTROL Create]** verktygsfältet i resurskonsolen och välj sedan **[!UICONTROL Folder]** från menyn.
 
    ![Skapa resursmapp](assets/Create-folder.png)
 
@@ -28,11 +28,11 @@ Du kan skapa en privat mapp i användargränssnittet för Adobe Experience Manag
 
    ![Markera kryssrutan Privat om du vill göra mappen privat](assets/private-folder.png)
 
-1. Tryck/klicka på **[!UICONTROL Create]**. En privat mapp skapas i användargränssnittet.
+1. Klicka på **[!UICONTROL Create]**. En privat mapp skapas i användargränssnittet.
 
    ![chlimage_1-413](assets/chlimage_1-413.png)
 
-1. Om du vill dela mappen med andra användare och tilldela behörigheter till dem markerar du mappen och klickar/trycker på ikonen **[!UICONTROL Properties]** i verktygsfältet.
+1. To share the folder with other users and the assign privileges to them, select the folder, and click the **[!UICONTROL Properties]** icon from the toolbar.
 
    ![chlimage_1-414](assets/chlimage_1-414.png)
 
@@ -58,11 +58,11 @@ Du kan skapa en privat mapp i användargränssnittet för Adobe Experience Manag
 
    ![chlimage_1-416](assets/chlimage_1-416.png)
 
-1. Tryck/klicka på meddelandeikonen för att öppna listan med meddelanden.
+1. Klicka på meddelandeikonen för att öppna listan med meddelanden.
 
    ![Förteckning över meddelanden](assets/Assets-Notification.png)
 
-1. Klicka på/tryck på posten för den privata mappen som delas av administratören för att öppna mappen.
+1. Klicka på posten för den privata mappen som delas av administratören för att öppna mappen.
 
 >[!NOTE]
 >
