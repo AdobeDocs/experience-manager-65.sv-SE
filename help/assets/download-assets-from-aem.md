@@ -3,7 +3,7 @@ title: Hämta digitala resurser från [!DNL Adobe Experience Manager].
 description: Lär dig hur du hämtar resurser från [!DNL Adobe Experience Manager] och aktiverar eller inaktiverar hämtningsfunktionen.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5cea9ed3be322cb8dedfbc6cb38abbdb72d0b7b7
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
 workflow-type: tm+mt
 source-wordcount: '755'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Du kan hämta resurser, inklusive statiska och dynamiska återgivningar. Du kan 
 >
 >Mottagare av e-postmeddelanden måste vara medlemmar i gruppen för att få åtkomst till länken för ZIP-hämtning i e-postmeddelandet. `dam-users` För att kunna hämta resurserna måste medlemmarna ha behörighet att starta arbetsflöden som utlöser hämtning av resurser.
 
-Om du vill hämta resurser går du till en resurs, markerar resursen och trycker **[!UICONTROL Download]** i verktygsfältet. I den dialogruta som visas anger du dina hämtningsalternativ.
+Om du vill hämta resurser går du till en resurs, markerar resursen och klickar på **[!UICONTROL Download]** i verktygsfältet. I den dialogruta som visas anger du dina hämtningsalternativ.
 
 Det går inte att hämta resurstyperna Bilduppsättningar, Snurra uppsättningar, Blandade medieuppsättningar och Carousel-uppsättningar.
 
