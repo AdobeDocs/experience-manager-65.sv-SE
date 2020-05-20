@@ -1,20 +1,18 @@
 ---
 title: AEM 6.5 Previous Service Pack Release Notes
 description: Versionsinformation om Adobe Experience Manager 6.5 Service Pack 3 och tidigare.
-uuid: c7bc3705-3d92-4e22-ad84-dc6002f6fa6c
-contentOwner: User
-products: SG_EXPERIENCEMANAGER/6.5
-discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
-docset: aem65
 translation-type: tm+mt
-source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
+source-git-commit: af21ed3cb8b755402ab03a7b624fa1ea99f2035f
+workflow-type: tm+mt
+source-wordcount: '6273'
+ht-degree: 0%
 
 ---
 
 
 # Programfixar och funktionspaket som ingår i tidigare servicepaket {#hotfixes-and-feature-packs-included-in-previous-service-packs}
 
-## Adobe Experience Manager 6.5.3.0
+## Adobe Experience Manager 6.5.3.0 {#aem-6530}
 
 [!DNL Adobe Experience Manager] 6.5.3.0 är en viktig version som innehåller prestanda, stabilitet, säkerhet och viktiga kundkorrigeringar och förbättringar som släppts sedan den allmänna tillgängligheten av 6.5-utgåvan i **april 2019**. Den kan installeras ovanpå [!DNL Adobe Experience Manager] 6.5.
 
@@ -24,9 +22,9 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 * [!DNL Experience Manager Assets] har nu stöd för ZIP-arkiv som skapats med algoritmen Deflate64.
 
-* Ny kolumn för skapat datum, som är sorterbar, har lagts till i DAM-listvyn och i resurssökningsresultat i listvyn.
+* En ny kolumn som visar datum då resursen skapades är tillgänglig när du visar resurser i DAM och i sökresultaten i listvyn. Sortera kolumnen för att ordna resurser i kronologisk eller omvänd kronologisk ordning.
 
-* Resurssortering baserad på namnkolumnen har aktiverats i listvyn.
+* Nu kan du sortera resurser baserat på `Name` kolumnen i listvyn.
 
 * [!DNL Dynamic Media] har nu stöd för videomaterial för Smart Crop. Smart Crop är en maskininlärningsdriven funktion som återbeskär en video medan bildrutan flyttas för att följa scenens fokuspunkt.
 
@@ -46,9 +44,9 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 * [!DNL Experience Manager Assets] har nu stöd för ZIP-arkiv som skapats med algoritmen Deflate64 (NPR-27573).
 
-* Ny kolumn för skapat datum, som är sorterbar, har lagts till i DAM-listvyn och i resurssökningsresultat i listvyn (NPR-31312).
+* En ny kolumn som visar datum då resursen skapades är tillgänglig när du visar resurser i DAM och i sökresultaten i listvyn. Sortera kolumnen för att ordna resurser i kronologisk eller omvänd kronologisk ordning (NPR-31312).
 
-* Resurssortering baserat på namnkolumnen är tillåtet i listvyn (NPR-31299).
+* Nu kan du sortera resurser baserat på kolumnen i listvyn (NPR-31299). `Name`
 
 * Resursfilerna GLB, GLTF, OBJ och STL har stöd för förhandsgranskning av resurser på sidan Resursinformation i DAM (CQ-4282277).
 
@@ -61,6 +59,8 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 * Vyn Sök/bläddra har angetts som standardvy i Foundation-väljaren om frågeparametrar skickas i begäran (NPR-31601).
 
 **Korrigeringar**
+
+* OAuth IMS-providern kan inte ansluta via en proxyserver när Adobe Asset Link används (NPR-30949).
 
 * Metadata för vissa PDF-dokument uppdateras inte och sparas i PDF-filen när titeln ändras (NPR-31629).
 
@@ -82,19 +82,19 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 * Resurser med plustecken (+) i filnamnet kan inte tas bort (NPR-31162).
 
-* Menyn Skapa, som visas på den övre menyn när du väljer en mapp, visar inte &quot;Mapp&quot; som ett alternativ för att skapa (NPR-30877).
+* Ett alternativ för att skapa nya resurser eller mappar är tillgängligt som en popup-meny i Assets-användargränssnittet. När en mapp är markerad visas inte Experience Manager [!UICONTROL Folder] som ett av alternativen på snabbmenyn (NPR-30877).
 
-* Mappval Skapa > FileUpload-åtgärdsobjekt saknas när ACL för Deny jcr:removeChildNodes och jcr:removeNode på sökväg tillämpas för en användare (NPR-30840).
+* Mappval Skapa > FileUpload-åtgärdsobjekt saknas när ACL för Neka `jcr:removeChildNodes` och `jcr:removeNode` på sökväg tillämpas för en användare (NPR-30840).
 
-* DAM-arbetsflöden försätts i viloläge när vissa mp4-resurser överförs, vilket gör att alla återstående arbetsflöden försätts i viloläge (NPR-30662).
+* DAM-arbetsflöden försätts i viloläge när vissa MP4-resurser överförs, vilket gör att alla återstående arbetsflöden försätts i viloläge (NPR-30662).
 
-* Slut på minne uppstår när stora PDF-filer (av flera gigabyte) överförs till DAM och dess underresurser bearbetas (NPR-30614).
+* Minnesbrist uppstår när en stor PDF-fil på flera Gigabyte överförs till DAM och dess underresurser bearbetas (NPR-30614).
 
 * Massförflyttning av resurser misslyckas och ett varningsmeddelande visas (NPR-30610).
 
-* Resursnamn ändras till gemener när du flyttar resurser från en mapp till en annan i [!DNL Experience Manager] läget [!DNL Dynamic Media]-Scene7 (NPR-31630).
+* Resursnamn ändras till gemener när du flyttar resurser från en mapp till en annan i läget [!DNL Dynamic Media]-Scene7 (NPR-31630).
 
-* Ett fel uppstod när en fjärrbilduppsättning redigerades för bilden som finns i mappen som heter same som namnet på Scene 7-företaget (NPR-31340).
+* Ett fel uppstod när en fjärrbilduppsättning redigerades för bilden som finns i mappen som heter same som namnet på Scene7-företaget (NPR-31340).
 
 * [!DNL Dynamic Media] resurser som innehåller referenser publiceras inte (NPR-31180).
 
@@ -326,7 +326,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 * Möjlig XSS-attack (cross-site scripting) via ett begränsat varningsfönster eftersom den injicerade bilden kan ses. NPR-30617: Programfix för CQ-4270133
 * MultiTenant: Innehavare som sparar mappegenskaper observerar både meddelande om att åtgärden lyckades och felmeddelande som beskriver åtgärden misslyckades:&quot;Det går inte att redigera egenskaper. Otillräckliga behörigheter.&quot; och förvirrar dem. NPR-30545: Programfix för CQ-4275333
 * Dialogrutan Resursväljare tillåter inte val av resurs och kan därför inte uppdatera källan med hjälp av funktionen för relaterat källbyte. NPR-30502: Programfix för CQ-4275029
-* [!UICONTROL Arbetsflöde för DAM-uppdatering av resurser] - I inaktivt läge vid överföring av stora mp4-filer. NPR-30480: Programfix för CQ-4271352
+* [!UICONTROL DAM Update Asset] arbetsflöde - I inaktuellt läge vid överföring av stora MP4-filer. NPR-30480: Programfix för CQ-4271352
 * Funktionen Skapa granskningsuppgift fungerar inte eftersom null-nyttolast gör att alla efterföljande granskningsuppgiftrelaterade åtgärder misslyckas. NPR-30468: Programfix för CQ-4274263
 * Adobe Smart Tag-anslutningsproblem via DataPower. NPR-30026: Programfix för CQ-4269457
 * Resursens användargränssnittskolumnvy genererar ett fel vid försök att öppna filtren från listen. NPR-30501: Programfix för CQ-4273862
@@ -390,7 +390,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 * Kortkommandon som utlöser ett fel som gör att användaren inte kan använda &#39;m,&#39; &#39;p,&#39; &#39;e&#39; i ett visst användargränssnitt. NPR-30355: Programfix för GRANITE-26346
 * När du stänger [!DNL Experience Manager Assets] sökgränssnittet återställs inte den vänstra listen till Innehållsval, vilket förhindrar användaren från att öppna filterfältet andra gången. NPR-30509: Programfix för CQ-4274716
-* Flerklientmiljö: Den översta navigeringen i [!DNL Experience Manager Assets] användargränssnittet är inte tillgänglig och orsakar JavaScript-fel. NPR-30104: Programfix för GRANITE-26344
+* Flerklientmiljö: [!DNL Experience Manager Assets] Gränssnittets övre navigering är inte tillgänglig och orsakar JavaScript-fel. NPR-30104: Programfix för GRANITE-26344
 
 ### Översättning {#translation-6520}
 
@@ -688,7 +688,7 @@ De viktigaste högdagrarna för [!DNL Experience Manager Forms] 6.5.1.0 är:
 **Formulär - dokumentsäkerhet**
 
 * Digital signatur med HSM (Hardware Security Module) fungerar inte med OSGi Linux på Java 11 och Java 8\. NPR-29838: Programfix för CQ-4270441
-* Digital signatur med HSM (Hardware Security Module) fungerar inte med JEE Linux och alla appservrar som stöds, dvs. JBoss och Websphere. NPR-29739: Programfix för CQ-4266721
+* Digital signatur med HSM (Hardware Security Module) fungerar inte med JEE Linux och alla appservrar som stöds, dvs. JBoss och Websphere. NPR-29839: Programfix för CQ-4266721
 * Verifiering av signaturer i en PDF med hjälp av PDF Advanced Electronic Signatures (PAdES) genererar InvalidOperationException. NPR-29842: Programfix för CQ-4244837
 * Utökat stöd för Document Security Extension för Office 2019\. Programfix för CQ-4254369, CQ-4259764
 
