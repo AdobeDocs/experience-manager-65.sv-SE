@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: f69db472-9f5c-4c0d-9292-2920ef69feeb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cef5251d6bd72a6fd352f18e31d3f9d787e4320e
+source-git-commit: 4c4a0b1a76f44dcf1084a4651194e60735bc5aea
 workflow-type: tm+mt
-source-wordcount: '1906'
+source-wordcount: '1915'
 ht-degree: 0%
 
 ---
@@ -259,6 +259,10 @@ Det här steget upprepas så länge den efterföljande taggen har en `cq:movedTo
 * Om du vill publicera ändringen när en tagg har flyttats eller sammanfogats måste noden och alla dess bakgrunder replikeras: `cq:Tag` detta görs automatiskt när taggen aktiveras i tagghanteringskonsolen.
 
 * Senare uppdateringar av sidans `cq:tags` egenskap rensar automatiskt de&quot;gamla&quot; referenserna. Detta utlöses eftersom en flyttad tagg som löses via API returnerar måltaggen och därmed anger måltaggens ID.
+
+> [!NOTE]
+>
+> Förflyttning av taggar skiljer sig från migrering av taggar.
 
 ## Migrering av taggar {#tags-migration}
 
