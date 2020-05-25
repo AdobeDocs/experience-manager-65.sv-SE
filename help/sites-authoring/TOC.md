@@ -4,7 +4,10 @@ product: adobe experience manager
 audience: end-user
 user-guide-title: Användarhandbok för AEM 6.5-redigering
 translation-type: tm+mt
-source-git-commit: 187421434882cf61ad17aea9f75920a5d5a76ed1
+source-git-commit: af27ed32c21a338600201e05871c1b18548ecba6
+workflow-type: tm+mt
+source-wordcount: '273'
+ht-degree: 40%
 
 ---
 
@@ -48,7 +51,7 @@ source-git-commit: 187421434882cf61ad17aea9f75920a5d5a76ed1
    + [Komponentkonsol](default-components-console.md)
    + [Responsiv layout](responsive-layout.md)
    + [Content Insight](content-insights.md)
-   + [Skapa hjälpmedelsanpassat innehåll (WCAG 2.0-överensstämmelse)](creating-accessible-content.md)
+   + [Skapa tillgängligt innehåll (WCAG 2.1-överensstämmelse)](creating-accessible-content.md)
    + [Ställning](scaffolding.md)
    + [Konfigurera komponenter i designläge](default-components-designmode.md)
    + [Foundation Components](default-components-foundation.md)
