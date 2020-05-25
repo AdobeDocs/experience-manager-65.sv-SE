@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 21181a6f-b434-40ed-8eb1-ebdfc98964dd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 69e9b7499c1babcf7a6da62b8728bba7f127b4f9
+source-git-commit: 206f4cdf76df2b0be97426993818935a19bb9e63
+workflow-type: tm+mt
+source-wordcount: '3010'
+ht-degree: 3%
 
 ---
 
@@ -80,9 +83,15 @@ De alternativ som är tillgängliga på dessa paneler beskrivs nedan.
 
 ### Navigeringspanel {#navigation-panel}
 
-Navigeringspanelen:
+Navigeringspanelen ger åtkomst till AEM-konsolerna:
 
 ![bh-01](assets/bh-01.png)
+
+Titeln på webbläsarfliken uppdateras för att återspegla din position när du navigerar genom konsolerna och innehållet.
+
+>[!NOTE]
+>
+>Fliktiteln visar var [AEM 6.5 Service Pack 5](https://helpx.adobe.com/experience-manager/update-releases-roadmap.html) finns.
 
 Följande konsoler finns i Navigation:
 
@@ -93,7 +102,7 @@ Följande konsoler finns i Navigation:
    <td><strong>Syfte</strong></td>
   </tr>
   <tr>
-   <td>Resurser<br /> </td>
+   <td>Assets<br /> </td>
    <td>Med dessa konsoler kan du importera och <a href="/help/assets/home.md">hantera digitala resurser</a> som bilder, videor, dokument och ljudfiler. Dessa resurser kan sedan användas av alla webbplatser som körs på samma AEM-instans. </td>
   </tr>
   <tr>
@@ -105,7 +114,7 @@ Följande konsoler finns i Navigation:
    <td>På så sätt kan du hantera produkter, produktkataloger och beställningar som är kopplade till dina <a href="/help/sites-administering/ecommerce.md">Commerce</a> -sajter.</td>
   </tr>
   <tr>
-   <td>Upplevelsefragment</td>
+   <td>Experience Fragments</td>
    <td>Ett <a href="/help/sites-authoring/experience-fragments.md">upplevelsefragment</a> är en fristående upplevelse som kan återanvändas i olika kanaler och ha olika varianter, vilket sparar problem med att kopiera och klistra in upplevelser eller delar av upplevelser upprepade gånger.</td>
   </tr>
   <tr>
@@ -113,7 +122,7 @@ Följande konsoler finns i Navigation:
    <td>Med den här konsolen kan du skapa, hantera och bearbeta <a href="/help/forms/home.md">formulär och dokument</a>.</td>
   </tr>
   <tr>
-   <td>Personalisering</td>
+   <td>Personanpassning</td>
    <td>Den här konsolen innehåller ett <a href="/help/sites-authoring/personalization.md">ramverk med verktyg för att skapa riktat innehåll och presentera personaliserade upplevelser</a>.</td>
   </tr>
   <tr>
@@ -125,7 +134,7 @@ Följande konsoler finns i Navigation:
    <td><a href="https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/authoring/setting-up-projects/creating-a-screens-project.html">Med skärmar</a> kan du hantera alla kundcentrerade skärmar, oavsett storlek och plats.</td>
   </tr>
   <tr>
-   <td>Webbplatser</td>
+   <td>Sites</td>
    <td>På webbplatskonsolerna kan du <a href="/help/sites-authoring/page-authoring.md">skapa, visa och hantera webbplatser</a> som körs på din AEM-instans. Med dessa konsoler kan du skapa, redigera, kopiera, flytta och ta bort webbsidor, starta arbetsflöden och publicera sidor.<br /> </td>
   </tr>
  </tbody>
@@ -133,7 +142,7 @@ Följande konsoler finns i Navigation:
 
 ### Panelen Verktyg {#tools-panel}
 
-På verktygspanelen innehåller varje alternativ på sidopanelen ett intervall med undermenyer. De [verktygskonsoler](/help/sites-administering/tools-consoles.md) som finns här ger tillgång till ett antal specialiserade verktyg och konsoler som hjälper dig att administrera dina webbplatser, digitala resurser och andra aspekter av ditt innehållslager.
+På verktygspanelen innehåller varje alternativ på sidopanelen ett intervall med undermenyer. The [Tools consoles](/help/sites-administering/tools-consoles.md) available here provide access to a number of specialized tools and consoles that help you administer your websites, digital assets and other aspects of your content repository.
 
 ![bh-04](assets/bh-04.png)
 
@@ -149,7 +158,7 @@ Rubriken visas alltid längst upp på skärmen. De flesta alternativen i huvudet
 
    ![screen_shot_2018-03-23at103615](assets/screen_shot_2018-03-23at103615.png)
 
-* [Sök](/help/sites-authoring/search.md)
+* [Sökning](/help/sites-authoring/search.md)
 
    ![](do-not-localize/screen_shot_2018-03-23at103542.png)
 
@@ -217,6 +226,18 @@ Rubriken visas alltid längst upp på skärmen. De flesta alternativen i huvudet
 
    ![bh-09](assets/bh-09.png)
 
+* Tangentbordsnavigering
+
+   Du kan bara navigera på en webbplats med hjälp av tangentbordet. Detta använder standardwebbläsarfunktionen för **TABB** -tangenten (eller **OPT+TAB**) för att flytta dig mellan element på sidan som är *fokuserbara*.
+
+   I **webbplatskonsolen** finns alternativet att **hoppa till huvudinnehållet**. Detta blir synligt när du *tabbar* mellan rubrikalternativen och snabbar upp navigeringen genom att du kan hoppa över standardelementen i verktygsfältet (produkten) och ta dig direkt till huvudinnehållet.
+
+   ![bh-30](assets/bh-30.png)
+
+   >[!NOTE]
+   >
+   >Från och med **AEM 6.5 Service Pack 5** är Gå till huvudinnehållet [](https://helpx.adobe.com/experience-manager/update-releases-roadmap.html) .
+
 ## Få hjälp {#accessing-help}
 
 Det finns olika hjälpresurser:
@@ -270,7 +291,7 @@ Den åtgärd som är tillgänglig i verktygsfältet ändras så att den återspe
 
 Hur du [väljer en resurs](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources) beror på vyn.
 
-På grund av utrymmesbegränsningar i vissa fönster kan verktygsfältet snabbt bli längre än det tillgängliga utrymmet. När detta inträffar visas ytterligare alternativ. Om du klickar eller trycker på ellipsen (de tre punkterna eller **...**) öppnas en listruta med alla återstående åtgärder. När du till exempel har valt en sida i **platskonsolen** :
+På grund av utrymmesbegränsningar i vissa fönster kan verktygsfältet snabbt bli längre än det tillgängliga utrymmet. När detta inträffar visas ytterligare alternativ. Om du klickar eller trycker på ellipsen (de tre punkterna eller **...**) öppnas en listruta med alla återstående åtgärder. När du till exempel har valt en sida i **Sites**-konsolen:
 
 ![bh-12](assets/bh-12.png)
 
@@ -282,7 +303,7 @@ På grund av utrymmesbegränsningar i vissa fönster kan verktygsfältet snabbt 
 
 I [kortvyn](#cardviewquickactions) finns vissa åtgärder som snabbikoner och som finns i verktygsfältet. Snabbåtgärdsikoner är tillgängliga för ett enskilt objekt i taget och eliminerar behovet av att välja i förväg.
 
-Snabbåtgärderna är synliga när du för musen över ett resurskort (en stationär enhet). Vilka snabbåtgärder som är tillgängliga beror på konsolen och sammanhanget. Här följer t.ex. snabbåtgärderna för en sida i konsolen **Platser** :
+Snabbåtgärderna visas när du för musen över ett resurskort (en stationär enhet). Vilka snabbåtgärder som är tillgängliga beror på konsolen och sammanhanget. Här följer t.ex. snabbåtgärderna för en sida i konsolen **Platser** :
 
 ![bh-13](assets/bh-13.png)
 
@@ -316,39 +337,39 @@ Välja en specifik resurs beror på en kombination av vyn och enheten:
    <td>Kolumnvy<br /> </td>
    <td>
     <ul>
-     <li><br /> Skrivbord:Klicka på miniatyrbilden</li>
-     <li><br /> Mobil enhet:Tryck på miniatyrbilden</li>
+     <li>Skrivbord:<br /> Klicka på miniatyrbilden</li>
+     <li>Mobil enhet:<br /> Tryck på miniatyrbilden</li>
     </ul> </td>
    <td>
     <ul>
-     <li><br /> Skrivbord:Klicka på miniatyrbilden</li>
-     <li><br /> Mobil enhet:Tryck på miniatyrbilden</li>
+     <li>Skrivbord:<br /> Klicka på miniatyrbilden</li>
+     <li>Mobil enhet:<br /> Tryck på miniatyrbilden</li>
     </ul> </td>
   </tr>
   <tr>
    <td>Kortvy<br /> </td>
    <td>
     <ul>
-     <li><br /> Skrivbord: För musen över och använd sedan snabbåtgärden bock</li>
-     <li><br /> Mobil enhet: Tryck och håll på kortet</li>
+     <li>Skrivbord:<br /> För musen över och använd sedan snabbåtgärden bock</li>
+     <li>Mobil enhet:<br /> Tryck och håll på kortet</li>
     </ul> </td>
    <td>
     <ul>
-     <li><br /> Skrivbord:Klicka på kortet</li>
-     <li><br /> Mobil enhet:Tryck på kortet</li>
+     <li>Skrivbord:<br /> Klicka på kortet</li>
+     <li>Mobil enhet:<br /> Tryck på kortet</li>
     </ul> </td>
   </tr>
   <tr>
    <td>Listvy</td>
    <td>
     <ul>
-     <li><br /> Skrivbord:Klicka på miniatyrbilden</li>
-     <li><br /> Mobil enhet:Tryck på miniatyrbilden</li>
+     <li>Skrivbord:<br /> Klicka på miniatyrbilden</li>
+     <li>Mobil enhet:<br /> Tryck på miniatyrbilden</li>
     </ul> </td>
    <td>
     <ul>
-     <li><br /> Skrivbord:Klicka på miniatyrbilden</li>
-     <li><br /> Mobil enhet:Tryck på miniatyrbilden</li>
+     <li>Skrivbord:<br /> Klicka på miniatyrbilden</li>
+     <li>Mobil enhet:<br /> Tryck på miniatyrbilden</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -536,7 +557,7 @@ I tidslinjekolumnen kan du:
       * [Kommentarer](#timelineaddingandviewingcomments)
       * Anteckningar
       * Verksamhet
-      * [Startar](/help/sites-authoring/launches.md)
+      * [Launches](/help/sites-authoring/launches.md)
       * [Versioner](/help/sites-authoring/working-with-page-versions.md)
       * [Arbetsflöden](/help/sites-authoring/workflows-applying.md)
 
@@ -544,7 +565,7 @@ I tidslinjekolumnen kan du:
       * och Visa alla
 
 
-* [Lägg till/visa kommentarer](#timelineaddingandviewingcomments) om det markerade objektet. Rutan **Kommentar** visas längst ned i händelselistan. Om du skriver en kommentar följt av Retur registreras kommentaren. Den visas när **Kommentarer** eller **Visa alla** är markerat.
+* [Lägg till/visa kommentarer om det markerade objektet. ](#timelineaddingandviewingcomments) Rutan **Kommentar** visas längst ned i händelselistan. Om du skriver en kommentar följt av Retur registreras kommentaren. Den visas när **Kommentarer** eller **Visa alla** markeras.
 
 * Specifika konsoler har ytterligare funktioner. I Platskonsolen kan du till exempel:
 
@@ -559,7 +580,7 @@ De här alternativen är tillgängliga via markeringen bredvid **kommentarsfält
 
 **Referenser** visar alla anslutningar till den valda resursen. I **Sites** Console [visas t.ex. följande referenser](/help/sites-authoring/author-environment-tools.md#showingpagereferences) för sidor:
 
-* [Startar](/help/sites-authoring/launches.md#launches-in-references-sites-console)
+* [Launches](/help/sites-authoring/launches.md#launches-in-references-sites-console)
 * [Live-kopior](/help/sites-administering/msm-livecopy-overview.md#openingthelivecopyoverviewfromreferences)
 * [Språkversioner](/help/sites-administering/tc-prep.md#seeing-the-status-of-language-roots)
 * Innehållsreferenser:
