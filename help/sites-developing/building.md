@@ -10,7 +10,10 @@ topic-tags: platform
 content-type: reference
 discoiquuid: 032aea1f-0105-4299-8d32-ba6bee78437f
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 1493b301ecf4c25f785495e11ead352de600ddb7
+workflow-type: tm+mt
+source-wordcount: '893'
+ht-degree: 0%
 
 ---
 
@@ -65,7 +68,7 @@ Tag tag = tagManager.resolve("my/tag"); // for existing tags
 Tag tag = tagManager.createTag("my/tag"); // for new tags
 ```
 
-För den JCR-baserade implementeringen, som mappar `Tags` till JCR `Nodes`, kan du använda Slings `adaptTo` -mekanism direkt om du har resursen (t.ex. `/etc/tags/default/my/tag`):
+För den JCR-baserade implementeringen, som mappar `Tags` till JCR `Nodes`, kan du använda Slings `adaptTo` -mekanism direkt om du har resursen (t.ex. `/content/cq:tags/default/my/tag`):
 
 ```java
 Tag tag = resource.adaptTo(Tag.class);
@@ -131,7 +134,7 @@ replicator.replicate(session, replicationActionType, tagPath);
 
 ## Taggskräpinsamlaren {#the-tag-garbage-collector}
 
-Taggskräpinsamlaren är en bakgrundstjänst som rensar de dolda och oanvända taggarna. Dolda och oanvända taggar är taggar under `/etc/tags` som har en `cq:movedTo` egenskap och inte används i en innehållsnod - de har ett antal som är noll. Genom att använda den här lat borttagningsprocessen behöver inte innehållsnoden (dvs. egenskapen `cq:tags` ) uppdateras som en del av flyttningen eller sammanfogningen. Referenserna i `cq:tags` egenskapen uppdateras automatiskt när `cq:tags` egenskapen uppdateras, t.ex. via dialogrutan för sidegenskaper.
+Taggskräpinsamlaren är en bakgrundstjänst som rensar de dolda och oanvända taggarna. Dolda och oanvända taggar är taggar under `/content/cq:tags` som har en `cq:movedTo` egenskap och inte används i en innehållsnod - de har ett antal som är noll. Genom att använda den här lat borttagningsprocessen behöver inte innehållsnoden (dvs. egenskapen `cq:tags` ) uppdateras som en del av flyttningen eller sammanfogningen. Referenserna i `cq:tags` egenskapen uppdateras automatiskt när `cq:tags` egenskapen uppdateras, t.ex. via dialogrutan för sidegenskaper.
 
 Taggskräpinsamlaren körs som standard en gång om dagen. Detta kan konfigureras på:
 
@@ -187,7 +190,7 @@ För taggning beror lokaliseringen på sammanhanget eftersom taggen `titles`kan 
 
 I proceduren nedan beskrivs hur du lägger till ett nytt språk (finska) i dialogrutan **Taggredigering** :
 
-1. I **CRXDE** redigerar du egenskapen multi-value `languages` för noden `/etc/tags`.
+1. I **CRXDE** redigerar du egenskapen multi-value `languages` för noden `/content/cq:tags`.
 
 1. Lägg till `fi_fi` - som representerar den finska språkinställningen - och spara ändringarna.
 
