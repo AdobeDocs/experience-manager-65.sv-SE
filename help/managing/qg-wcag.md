@@ -1,150 +1,156 @@
 ---
-title: Snabbguide till WCAG 2.0
-seo-title: Snabbguide till WCAG 2.0
-description: Läs en kort översikt över riktlinjerna för tillgänglighet i WCAG 2.0.
-seo-description: Läs en kort översikt över riktlinjerna för tillgänglighet i WCAG 2.0.
-uuid: a5cf463e-89e9-4cc0-9c91-69a1fd3d8ea2
-contentOwner: Guillaume Carlino
-products: SG_EXPERIENCEMANAGER/6.5/MANAGING
-topic-tags: managing-accessibility
-content-type: reference
-discoiquuid: 3cac0e34-7514-48ce-a93b-592bbdbcd252
+title: En snabbguide till WCAG 2.1
+description: En snabbguide till WCAG 2.1
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: a8e7fe89376b30df0b1c5403aabea6862cef09fc
+workflow-type: tm+mt
+source-wordcount: '1770'
+ht-degree: 99%
 
 ---
 
 
-# Snabbguide till WCAG 2.0{#quick-guide-to-wcag}
+# En snabbguide till WCAG 2.1{#quick-guide-to-wcag}
 
-AEM har utvecklats för att maximera kompatibiliteten med Web Content Accessibility Guidelines:
+Adobe Experience Manager (AEM) har utvecklats för att maximera kompatibiliteten med riktlinjerna för tillgänglighet för webbinnehåll.
 
-WCAG2 ( [Web Content Accessibility Guidelines version 2.0)](https://www.w3.org/TR/WCAG/) är en uppsättning internationellt erkända riktlinjer som tagits fram av [World Wide Web Consortium (W3C)](https://www.w3.org/) inom ramen för deras [Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/).
+[Web Content Accessibility Guidelines (WCAG) version 2.1](https://www.w3.org/TR/WCAG/) är en uppsättning internationellt erkända riktlinjer som tagits fram av [World Wide Web Consortium (W3C)](https://www.w3.org/) inom ramen för [Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/).
 
-WCAG 2.0 består av en uppsättning teknikoberoende riktlinjer och framgångskriterier som gör webbinnehåll tillgängligt för och användbart för personer med funktionshinder. De ger råd till webbinnehållsförfattare, designers och utvecklare om att se till att de resurser de producerar är så tillgängliga som möjligt för så många människor som möjligt, oavsett vilka funktionshinder de har. t.ex. synnedsättning, hörselbortfall, inlärningssvårigheter, åldersrelaterade begränsningar.
+>[!NOTE]
+> 
+> WCAG 2.1 uppdaterar den föregående versionen, WCAG 2.0, från 2008. Se [WCAG 2.1 - Comparison with WCAG 2.0](https://www.w3.org/TR/WCAG21/#comparison-with-wcag-2-0).
 
-Om du till exempel beskriver en bild (eller något annat innehåll som inte är text) genom att använda attributet `alt` i HTML blir det till stor fördel för personer som är blinda eller som är synkade delvis. Textbeskrivningen i attributet kan antingen konverteras till talutdata eller överföras till elektroniska, uppdateringsbara blindskriftsskärmar. `alt`
+>[!NOTE]
+> 
+>En [uppdaterad version av riktlinjerna, WCAG 2.2,](https://www.w3.org/TR/WCAG22/) håller på att utvecklas, men kommer inte att behandlas just nu.
 
-Dessutom kan WCAG 2.0 leda till fördelar för andra mottagare, inklusive personer som kan anses vara *tillfälligt inaktiverade*. Personer som på grund av exempelvis surfteknik, nätverksanslutningshastighet eller surfmiljö kan uppleva hinder som liknar personer med funktionshinder.
+WCAG 2.1 består av en uppsättning teknikoberoende riktlinjer och framgångskriterier för att göra webbinnehåll tillgängligt för och användbart för personer med funktionshinder. De ger råd till webbinnehållsförfattare, designers och utvecklare som ser till att de resurser de producerar är så tillgängliga som möjligt för så många människor som möjligt, oavsett vilka funktionshinder de har, t.ex. synnedsättning, hörselnedsättning, inlärningssvårigheter, åldersrelaterade begränsningar med mera.
 
-Med Adobe Experience Manager kan skribenter och/eller webbplatsägare skapa webbinnehåll som uppfyller relevanta kriterier för WCAG 2.0-nivå A och nivå AA.
+Om du till exempel beskriver en bild (eller annat innehåll som inte är text) genom att använda attributet `alt` i HTML blir det till stor fördel för personer som är blinda eller har nedsatt syn. Textbeskrivningen i attributet `alt` kan antingen konverteras till tal eller överföras till elektroniska, uppdateringsbara blindskriftsskärmar. 
 
-Därför är det viktigt att förstå syftet med WCAG 2.0 och hur riktlinjerna är upplagda för att förstå webbtillgänglighet och hur riktlinjerna kan hjälpa till att skapa tillgängligt webbinnehåll.
+Dessutom kan WCAG 2.1 leda till fördelar för andra mottagare, inklusive personer som kan begränsas beroende på en viss *situation*. Det kan vara personer som på grund av omständigheter som surfteknik, nätverksanslutningshastighet eller surfmiljö kan uppleva hinder som liknar de personer med funktionshinder har.
 
-WCAG 2.0 har för avsikt att ge riktlinjer som
+Med Adobe Experience Manager kan författare och/eller webbplatsägare skapa webbinnehåll som uppfyller relevanta framgångskriterier för WCAG 2.1 nivå A och nivå AA.
 
-* Är **teknikagnostiska:**
+Därför är det viktigt att förstå syftet med WCAG 2.1 och hur riktlinjerna är upplagda för att förstå webbtillgänglighet och hur riktlinjerna kan hjälpa till att skapa tillgängligt webbinnehåll.
 
-   Riktlinjer som kan tillämpas på en rad olika webbinnehållsformat, inte bara HTML. WCAG 2.0 kan alltså omfatta innehåll som genereras av eller tillhandahålls i PDF, Flash, JavaScript och andra befintliga och framtida webbtekniker. Detta syftar till att åtgärda en svaghet i WCAG 1.0, eftersom det fokuserades på HTML på bekostnad av andra webbinnehållsformat.
+Syftet med WCAG 2.1 är att tillhandahålla riktlinjer som:
+
+* Är **teknikoberoende:**
+Det vill säga riktlinjer som kan tillämpas på en rad olika format för webbinnehåll, inte bara HTML. WCAG 2.1 kan alltså omfatta innehåll som genereras som eller tillhandahålls i PDF, Flash, JavaScript och andra befintliga och framtida webbtekniker.
 
 * Kan **testas:**
-
-   Varje riktlinje är skriven på ett sådant sätt att den kan testas objektivt för att säkerställa att en grupp experter på tillgänglighet i allmänhet håller med om att riktlinjen har följts. En av utmaningarna med riktlinjerna för tillgänglighet är att vissa, även om de kan vara tekniskt testbara, andra kräver en mänsklig bedömning för att avgöra om riktlinjerna har följts eller inte. WCAG 2.0 har skrivits i syfte att minska den subjektivitet som fanns i vissa av WCAG 1.0-riktlinjerna och kontrollpunkterna.
+Varje riktlinje är skriven på ett sådant sätt att den kan testas objektivt för att säkerställa att en allmän grupp tillgänglighetsexperter håller med om att riktlinjen har följts. En av utmaningarna med riktlinjerna för tillgänglighet är att vissa kan testas tekniskt medan andra kräver en mänsklig bedömning för att avgöra om riktlinjerna har följts eller inte.
 
 * Stöd för **prioriterad och sammanhangsbaserad implementering:**
+Riktlinjer för WCAG 2.1 är prioriteringar som rör den troliga effekten av att inte följa en riktlinje för en viss grupp användare med funktionshinder. Detta gör det möjligt för författare att fatta ett välgrundat beslut om de viktigaste riktlinjerna för sin särskilda situation. Dessutom introduceras begreppet *tillgänglighet som stöds*. Detta gör att författare kan fatta beslut om hur de bäst använder webbtekniker som kanske inte har fullständigt stöd för tillgänglighet eller som kan kräva att användarna har särskilda hjälpmedelstekniker och/eller webbläsare för att kunna utnyttja tillgänglighetsfunktionerna.
 
-   Precis som i WCAG 1.0 ges WCAG 2.0-riktlinjerna prioriteringar som rör den troliga effekten av att inte följa en riktlinje för en viss grupp användare med funktionshinder. Detta gör det möjligt för författare att fatta ett välgrundat beslut om de viktigaste riktlinjerna för sin särskilda situation. Dessutom introduceras begreppet *tillgänglighet som stöds* . Detta gör att författare kan fatta beslut om hur de bäst använder webbtekniker som kanske inte har fullständigt stöd för tillgänglighet eller som kan kräva att användarna har särskilda hjälpmedelstekniker och/eller webbläsare för att kunna utnyttja tillgänglighetsfunktionerna.
-
-Dessa mål har i hög grad påverkat strukturen i WCAG 2.0.
-
->[!NOTE]
->
->Det går inte att skapa en webbplats som tar hänsyn till alla tänkbara funktionshinder eller persontyper. Syftet med WCAG 2.0 är att hjälpa webbutvecklare att skapa webbplatser som så långt det är möjligt är tillgängliga under vissa förhållanden och inom vissa ramar.
+Dessa mål har i hög grad påverkat strukturen i WCAG 2.1.
 
 >[!NOTE]
 >
->Om du känner till WCAG 1.0 kommer du att märka vissa förändringar i WCAG 2.0. De rör omfattning, organisation och mål.
+>Det går inte att skapa en webbplats som tar hänsyn till alla tänkbara funktionshinder eller persontyper. Syftet med WCAG 2.1 är att hjälpa webbförfattare att skapa webbplatser som så långt det rimligen är möjligt är tillgängliga under vissa förhållanden.
 
 ## Struktur {#structure}
 
-WCAG 2.0 är strukturerat på ett sätt som introducerar koncept för att skapa tillgängligt webbinnehåll på ett progressivt detaljerat sätt. Detta kan ge intryck av att WCAG 2.0 är en mycket komplex uppsättning sammanlänkade dokument, men målet är att (stegvis) tillhandahålla mer detaljerad information när och när författarna behöver den - istället för att skicka allt i ett mycket stort dokument.
+WCAG 2.1 är strukturerat på ett sätt som introducerar begrepp för att skapa tillgängligt webbinnehåll på ett gradvis mer detaljerat sätt. Det kan ge intryck av att WCAG 2.1 är en mycket komplex uppsättning sammanlänkade dokument, men målet är att (stegvis) tillhandahålla mer detaljerad information när författarna behöver den, i stället för att tillhandahålla allt i ett mycket stort dokument.
 
-WCAG 2.0 består av fyra huvudprinciper för hjälpmedelsanpassad design. Dessa är:
+WCAG 2.1 består av fyra huvudprinciper för hjälpmedelsanpassad design, som ibland kallas för akronymen **POUR**. Dessa är:
 
-1. **Perfekt**: Kan en användare känna av webbinnehållet i fråga?
-1. **Användbar**: Kan en användare navigera, mata in data eller på annat sätt interagera med webbinnehållet?
-1. **Förstå**: kan en användare bearbeta och förstå det webbinnehåll som presenteras för dem?
-1. **Robust**: Är webbinnehållet tillgängligt på det sätt som är avsett för en mängd olika webbläsarmiljöer, inklusive äldre och kommande webbläsarmiljöer?
+1. **Perceivable**: Kan en användare känna av webbinnehållet i fråga?
+1. **Operable**: Kan en användare navigera, mata in data eller på annat sätt interagera med webbinnehållet?
+1. **Understandable**: Kan en användare bearbeta och förstå det webbinnehåll som presenteras?
+1. **Robust**: Är webbinnehållet tillgängligt på det sätt som avses för en mängd olika webbläsarmiljöer, inklusive äldre och kommande webbläsarmiljöer?
 
-Dessa principer kallas ibland akronymen POUR.
-
+För att förtydliga:
 * Varje **princip** består av en eller flera **riktlinjer**.
 
-   * Riktlinjer är skrivna som instruktioner, som antingen är positiva (gör det här..) eller negativa (gör inte det här..).
-   * Riktlinjerna är numrerade 1.1 till 4.1, där den första siffran motsvarar den överordnade principen.
-
-* Varje riktlinje består av ett eller flera **kriterier**.
-
-   * Slutförandevillkor skrivs som programsatser, antingen `True` eller `False` för en given webbsida.
-   * Godkända villkor kan innehålla antingen eller alternativ, eller innehålla undantag; situationer där framgångskriterierna inte behöver uppfyllas.
-   * Godtagandekriterierna är numrerade enligt den överordnade riktlinjen och principen, från 1.1.1 till 4.1.1. De har också ett kort namn som sammanfattar syftet med kriteriet, så att det blir lättare att referera till det. Exempel: kriterium 1.1.1 är icke-text.
-   * Kriterierna för lyckade resultat innehåller en lista med relaterade **tekniker** (beskrivs mer ingående nedan).
+* Riktlinjerna är skrivna som instruktioner som antingen är positiva (gör det här…) eller negativa (gör inte det här…).
+* Riktlinjerna är numrerade från 1.1 till 4.1 där den första siffran motsvarar den överordnade principen.
+* Varje riktlinje består av ett eller flera **framgångskriterier**.
+* Framgångskriterier skrivs som programsatser, antingen `True` eller `False` för en given webbsida.
+* Framgångskriterier kan innehålla antingen/eller-alternativ eller undantag för situationer då framgångskriterierna inte behöver uppfyllas.
+* Framgångskriterierna är numrerade enligt den överordnade riktlinjen och principen, från 1.1.1 till 4.1.1. De har också ett kort namn som sammanfattar syftet med kriteriet för enklare referens. [Framgångskriterium 1.1.1 är till exempel ett innehåll som inte är text](https://www.w3.org/TR/WCAG/#non-text-content).
+* Framgångskriterierna inkluderar en lista med relaterade **tekniker** (beskrivs nedan).
 
 ## Stödresurser {#supporting-resources}
 
-Förutom de viktigaste delarna i WCAG 2.0 i principer, riktlinjer och kriterier för framgång finns det en rad styrkande dokument. Vissa av dem ger specifik rådgivning om hur man uppfyller vissa aspekter av riktlinjerna, andra är mer allmänna referenser som hjälper webbförfattare, designers och utvecklare av alla tänkbara möjligheter att förstå och använda WCAG 2.0 så effektivt som möjligt.
+Förutom WCAG 2.1-huvudkomponenterna som principer, riktlinjer och framgångskriterier finns det en rad stöddokument. Vissa av dem ger specifika råd om hur man uppfyller vissa aspekter av riktlinjerna, andra är mer allmänna referenser som hjälper webbförfattare, designers och utvecklare att förstå och använda WCAG 2.1 så effektivt som möjligt.
 
-WCAG 2.0 är ett stabilt dokument och kommer inte att ändras, men de flesta av dessa resurser är dynamiska dokument. de kommer att förändras och växa med tiden, allt eftersom nya tekniker dyker upp, och nya exempel visas på hur webbtillgänglighet kan uppnås.
+WCAG 2.1 i sig är ett stabilt dokument och kommer inte att ändras, men de flesta av stödresurserna är dynamiska dokument som kommer att förändras och växa med tiden allt eftersom nya tekniker utvecklas och nya exempel upptäcks på hur webbtillgänglighet kan uppnås.
 
-### WCAG 2.0-resurser {#wcag-resources}
+### WCAG 2.1-resurser {#wcag-resources}
 
-* [En översikt över alla WCAG 2.0-relaterade dokument](https://www.w3.org/WAI/intro/wcag.php).
-* [Förklaring av hur olika komponenter relaterar till varandra](https://www.w3.org/WAI/intro/wcag20).
-* [WCAG 2.0 Frågor och svar](https://www.w3.org/WAI/WCAG20/wcag2faq.html);
+Denna förteckning är inte avsedd att vara uttömmande, utan innehåller en introduktion till de tillgängliga resurserna:
+* [En översikt över alla WCAG-relaterade dokument](https://www.w3.org/WAI/standards-guidelines/wcag/)
+* [En sammanfattning av de olika dokumenten](https://www.w3.org/WAI/standards-guidelines/wcag/docs/)
+* [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21/)
+* [New in WCAG 2.1](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-21/)
+* [A Quick Reference Guide for How to Meet WCAG 2.1](https://www.w3.org/WAI/WCAG21/quickref/)
+* [WCAG 2 Frequently Asked Questions](https://www.w3.org/WAI/standards-guidelines/wcag/faq/)
 
-### Tekniker för WCAG 2.0 {#techniques-for-wcag}
 
-Tekniker för WCAG 2.0 finns på sidan [Tekniker för WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/) .
+### What is New in WCAG 2.1 {#what-is-new}
 
-**Tekniker** utgör nivån under framgångskriterierna i WCAG 2.0-hierarkin. De klassas av WAI som informativa, inte normativa. En specifik teknik behöver alltså inte följas för att en resurs ska uppfylla kraven i WCAG 2.0.
+Riktlinjerna innehåller information om nyheter i WCAG 2.1:
 
-Eftersom tekniker är mycket mer specifika än framgångskriterier avser de vanligtvis en viss teknik eller innehållstyp (t.ex. HTML, eller video), eller en situation (t.ex. e-handel eller e-learning-program). Ni kan tänka på tekniker som beprövade exempel på hur specifika riktlinjer och kriterier för framgång kan uppfyllas, så de är till stor hjälp för skribenter och utvecklare som arbetar i särskilda sammanhang.
+* [What&#39;s New in WCAG 2.1](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-21/) ger värdefull information om delta mellan WCAG 2.0 och WCAG 2.1.
+
+* Avsnittet [WCAG 2.0 and 2.1](https://www.w3.org/WAI/standards-guidelines/wcag/#versions) beskriver förhållandet mellan dem ytterligare.
+
+### Techniques for WCAG 2.1 {#techniques-for-wcag}
+
+Techniques for WCAG 2.1 finns på sidan [Techniques for WCAG 2.1](https://www.w3.org/WAI/WCAG21/Techniques/).
+
+**Tekniker** utgör nivån under framgångskriterierna i WCAG 2.1-hierarkin. De klassas av WAI som informativa, inte normativa. En specifik teknik behöver alltså inte följas för att en resurs ska uppfylla kraven i WCAG 2.1.
+
+Eftersom tekniker är mycket mer specifika än framgångskriterier avser de vanligtvis en viss teknologi eller innehållstyp (t.ex. HTML eller video) eller en situation (t.ex. e-handel eller e-utbildningsprogramvara). Du kan tänka på tekniker som beprövade exempel på hur specifika riktlinjer och framgångskriterier kan uppfyllas, därför är de till stor hjälp för författare och utvecklare som arbetar i särskilda sammanhang.
 
 Du kan komma åt tekniker:
 
-* Genom samling (tekniker kan vara allmänna eller relaterade till en viss teknik eller ett visst format, t.ex. HTML, CSS eller Klientskript), eller
-* Från relaterade resultatkriterier. Tekniker kan tillämpas på mer än ett framgångsvillkor.
+* Via samlingar (tekniker kan vara allmänna eller relaterade till en viss teknik eller ett visst format som HTML, CSS eller skript på klientsidan) eller
+* Via relaterade framgångskriterier. Tekniker kan gälla mer än ett framgångskriterium.
 
-Varje teknik har ett unikt nummer som relaterar till dess samling. En av ARIA-teknikerna är till exempel *Technique ARIA2: Identifiera obligatoriska fält med egenskapen*&quot;required&quot;.
+Varje teknik har ett unikt nummer som refererar till dess samling. En av ARIA-teknikerna är till exempel [Technique ARIA2: Identifying a required field with the aria-required property](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA2.html).
 
-Tekniker kan vara tillräckliga, rådgivande eller ett fel:
+Tekniker kan vara tillräckliga, rådgivande eller felaktiga:
 
-* En *Tillräcklig teknik* är en teknik som, om den följs, kommer att vara tillräcklig för att uppfylla ett visst kriterium för framgång.
-* En *rådgivande teknik* är en teknik som, om den följs, kommer att ha en positiv inverkan på tillgängligheten, men kanske inte i sig räcker för att säkerställa att ett visst kriterium uppfylls.
-* Ett *fel* är en teknik som beskriver ett specifikt exempel på var ett lyckat villkor inte uppfylls.
+* En *tillräcklig teknik* är en teknik som, om den följs, kommer att vara tillräcklig för att uppfylla ett visst framgångkriterium.
+* En *rådgivande teknik* är en teknik som, om den följs, kommer att ha en positiv inverkan på tillgängligheten, men kanske inte i sig räcker för att uppfylla ett visst kriterium.
+* En *felaktig teknik* är en teknik som beskriver ett specifikt exempel när ett framgångskriterium inte uppfylls.
 
-Detaljer om tekniker omfattar en beskrivning, tillämplighet, exempel, resurser för mer information och detaljer om hur författare kan testa att tekniken har tillämpats korrekt.
+Informationen om tekniker inkluderar en beskrivning, tillämplighet, exempel, resurser för mer information och detaljer om hur författare kan testa att tekniken har tillämpats korrekt.
 
-Listan över tekniker är inte fullständig och WAI uppdaterar hela tiden listan med nya exempel, som avspeglar utvecklingen inom webbteknik, designstrategier och forskningsresultat. Det är därför mycket värt att regelbundet kontrollera listan över tekniker för nya tillägg.
+Listan över tekniker är inte fullständig och WAI uppdaterar hela tiden listan med nya exempel som återspeglar utvecklingen inom webbteknik, designstrategier och forskningsresultat. Det är därför bra att regelbundet titta efter nyheter i listan över tekniker.
 
-### Om WCAG 2.0 {#understanding-wcag}
+### Understanding WCAG 2.1 {#understanding-wcag}
 
-Det handlar om ett antal dokument som innehåller råd som hjälper läsarna att förstå syftet med specifika riktlinjer och kriterier för framgång. Du kan [ladda ned en introduktion samt länkar till mer detaljerad information](https://www.w3.org/TR/2008/NOTE-UNDERSTANDING-WCAG20-20081211/Overview.html).
+Detta är en serie dokument som innehåller råd som hjälper läsarna att förstå syftet med specifika riktlinjer och framgångskriterier. Du kan [ladda ned en introduktion samt länkar till mer detaljerad information](https://www.w3.org/WAI/WCAG21/Understanding/).
 
-Varje enskild riktlinje och kriterium för framgång har också en egen&quot;Förstå&quot;-sida med information om:
+Varje riktlinje och framgångskriterium har också en egen Understanding-sida med information om:
 
-* Riktlinjens syfte.
-* Särskilda kriterier för framgång.
-* Rådgivande tekniker, som hjälper till att uppfylla kraven i riktlinjen, men som inte omfattas av något särskilt kriterium för framgång.
+* Syftet med riktlinjen
+* Särskilda framgångskriterier
+* Rådgivande tekniker som hjälper till att uppfylla kraven i riktlinjen, men som inte omfattas av något särskilt framgångskriterium.
 
-Varje resultatkriteris sida för&quot;förståelse&quot; innehåller information om:
+Sidan Understanding för varje framgångskriterium innehåller information om:
 
-* Framgångskriteriets avsikt.
-* Allmänna exempel på hur kriteriet om framgång kan uppfyllas.
-* Relaterade (icke-W3C) resurser om hur man uppfyller kriteriet för framgång.
-* Teknik och fel: specifika och detaljerade exempel på hur kriteriet om framgång kan uppfyllas (beskrivs närmare nedan)
-* Viktiga termer - en ordlista med termer som är viktiga för att förstå kriteriet för framgång.
+* Syftet med framgångskriteriet.
+* Allmänna exempel på hur framgångskriteriet kan uppfyllas.
+* Relaterade resurser (ej från W3C) om hur man uppfyller framgångskriteriet.
+* Tekniker och fel: specifika och detaljerade exempel på hur framgångskriteriet kan uppfyllas (beskrivs nedan)
+* Viktiga termer – en ordlista med termer som är viktiga för att förstå framgångskriteriet.
 
-Ett exempel finns på: Om [resultatvillkor 1.1.1 (&quot;Innehåll som inte är text&quot;)](https://www.w3.org/TR/2008/NOTE-UNDERSTANDING-WCAG20-20081211/text-equiv-all.html).
+Ett exempel finns på: [Understanding Success Criterion 1.1.1 (&quot;Non-text content&quot;)](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content).
 
-### Så här uppfyller du WCAG 2.0 {#how-to-meet-wcag}
+### Så här uppfyller du WCAG 2.1 {#how-to-meet-wcag}
 
-Avsnittet&quot;Hur du uppfyller kraven&quot; finns på [sidan How To Meet WCAG 2.0](https://www.w3.org/WAI/WCAG20/quickref/) . I detta avsnitt ges en alternativ presentation av WCAG, som gör det möjligt att förfina innehållet i riktlinjerna till de som är mest relevanta för en läsares egna intressen eller omständigheter. Läsare kan filtrera de framgångskriterier som de vill visa genom att ange särskilda tekniker för webbinnehåll, t.ex. Cascading Style Sheets eller skript, eller genom att ange en eller flera prioritetsnivåer.
+Avsnittet How to Meet finns på sidan [How To Meet WCAG 2.1](https://www.w3.org/WAI/WCAG21/quickref/). Avsnittet innehåller en alternativ presentation av WCAG som låter läsarna förfina innehållet i riktlinjerna till de som är mest relevanta för en deras intressen och/eller omständigheter. Läsare kan filtrera de framgångskriterier som de vill visa genom att ange särskilda tekniker för webbinnehåll, t.ex. Cascading Style Sheets eller skript eller genom att ange en eller flera prioritetsnivåer.
 
-Utan filtrering ger den här resursen alla resultatkriterier grupperade efter riktlinjer. För varje kriterium för framgång anges följande:
+Utan filtrering visar den här resursen alla framgångskriterier grupperade efter riktlinjer. För varje framgångskriterium anges följande:
 
-* Texten till kriteriet om framgång.
-* En länk till motsvarande dokument om&quot;förståelse&quot;.
-* En förteckning över besläktade tillräckligt effektiva tekniker som knyter till detaljerna om varje teknik.
-* En förteckning över tillhörande rådgivningstekniker som knyter till detaljer om varje teknik (om sådan finns).
-* En lista med relaterade fel som länkar till information om varje fel.
+* Texten till framgångskriteriet.
+* En länk till motsvarande Understanding-dokument.
+* En lista över relaterade tillräckliga tekniker med länkar till information om varje teknik.
+* En lista över relaterade rådgivande tekniker med länkar till information om varje teknik (om sådan finns).
+* En lista över relaterade felaktiga tekniker med länkar till information om varje fel.
