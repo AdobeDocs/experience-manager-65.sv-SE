@@ -10,7 +10,10 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 8b607b55-2412-469f-856b-0a3dea4b0efb
 translation-type: tm+mt
-source-git-commit: f763359fb333ef6cc8a6748ccfa39ba9aee9ca48
+source-git-commit: 2d04b33258a3727a088461055649c28d57a271c5
+workflow-type: tm+mt
+source-wordcount: '1055'
+ht-degree: 8%
 
 ---
 
@@ -60,7 +63,7 @@ Från någon av konsolerna visas det aktuella antalet objekt i din inkorg i sidh
 >
 >Vissa åtgärder visas även i [kortvyn för den aktuella resursen](/help/sites-authoring/basic-handling.md#card-view).
 
-## Administrativa arbetsmoment som inte går att köra {#out-of-the-box-administrative-tasks}
+## Administrativa arbetsmoment som inte går att köra  {#out-of-the-box-administrative-tasks}
 
 Körklar AEM levereras förinläst med fyra uppgifter som tilldelats administratörsanvändargruppen.
 
@@ -153,6 +156,11 @@ Alternativet Administratörskontroll är bara synligt för medlemmarna i gruppen
 * **Spara:** Tryck/klicka på det här alternativet om du vill spara inställningarna.
 
 ## Vidta åtgärder för ett objekt {#taking-action-on-an-item}
+
+>[!NOTE]
+>
+>Även om det går att markera mer än ett objekt, kan åtgärder bara vidtas för ett objekt i taget.
+
 
 1. Om du vill utföra en åtgärd för ett objekt markerar du miniatyrbilden för det aktuella objektet. Ikoner för de åtgärder som är tillämpliga på det objektet visas i verktygsfältet:
 
