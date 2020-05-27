@@ -10,7 +10,10 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 5c0fec99-7b1e-45d6-a115-e498d288e9e1
 translation-type: tm+mt
-source-git-commit: e3683f6254295e606e9d85e88979feaaea76c42e
+source-git-commit: f951c195c581f770dcc87fdf4a89d40ee6dd9ec0
+workflow-type: tm+mt
+source-wordcount: '1322'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: e3683f6254295e606e9d85e88979feaaea76c42e
 >
 >I den här dokumentationen beskrivs hur du integrerar AEM med Adobe Campaign Standard, den prenumerationsbaserade lösningen. Om du använder Adobe Campaign 6.1 hittar du dessa anvisningar i [Integrera med Adobe Campaign 6.1](/help/sites-administering/campaignonpremise.md) .
 
-Med Adobe Campaign kan ni hantera e-postinnehåll och formulär direkt i Adobe Experience Manager.
+Med Adobe Campaign kan ni hantera e-postleveransinnehåll och formulär direkt i Adobe Experience Manager.
 
 Om du vill använda båda lösningarna samtidigt måste du först konfigurera dem så att de ansluter till varandra. Detta inbegriper konfigurationssteg i både Adobe Campaign och Adobe Experience Manager. Dessa steg beskrivs i detalj i det här dokumentet.
 
@@ -140,13 +143,13 @@ Innehåll som skapas från AEM-redigeringsinstansen skickas först till publicer
 >[!NOTE]
 >
 >Om du inte vill använda replikerings-URL:en utan i stället använda den offentliga URL:en kan du ange den **offentliga URL:en** i följande konfigurationsinställning i OSGi (**Verktyg** > **Webbkonsol** > **OSGi-konfiguration > AEM Campaign Integration - Configuration**):
-**** Offentlig URL: com.day.cq.mcm.campaign.impl.IntegrationConfigImpl#aem.mcm.campaign.publicUrl
+**Offentlig URL:** com.day.cq.mcm.campaign.impl.IntegrationConfigImpl#aem.mcm.campaign.publicUrl
 
 Det här steget är också nödvändigt för att replikera vissa redigeringsinstanskonfigurationer till publiceringsinstansen.
 
 Så här konfigurerar du replikering mellan AEM-instanser:
 
-1. I utvecklingsinstansen väljer du **AEM-logotyp**> **Verktyg **ikon > **Distribution** > **Replikering** > **Agenter på författare** och klickar sedan på **Standardagent**.
+1. I utvecklingsinstansen väljer du **AEM-logotyp**> **Verktyg** > **Distribution** > **Replikering** > **Agenter på författare****** och klickar sedan på¥Default Agent¥.
 
    ![chlimage_1-126](assets/chlimage_1-126a.png)
 
@@ -167,10 +170,10 @@ Innan ni kan använda AEM och Adobe Campaign tillsammans måste ni etablera län
 
    ![chlimage_1-128](assets/chlimage_1-128a.png)
 
-1. Skapa en ny konfiguration genom att ange en **titel** och klicka på **Skapa**, eller välj den befintliga konfiguration som du vill länka till Adobe Campaign-instansen.
+1. Skapa en ny konfiguration genom att ange en **titel** och klicka på **Skapa**, eller välj den befintliga konfiguration som du vill länka till din Adobe Campaign-instans.
 1. Redigera konfigurationen så att den matchar parametrarna för Adobe Campaign-instansen.
 
-   * **Användarnamn**: Adobe Campaign AEM Integration- **paketoperatören** aemserver skapade länken mellan de två lösningarna.
+   * **Användarnamn**: **aemserver**, den paketansvarige för Adobe Campaign AEM Integration, skapade länken mellan de två lösningarna.
    * **Lösenord**: Lösenord för Adobe Campaign-serveroperatorn. Du kan behöva ange lösenordet för den här operatorn igen direkt i Adobe Campaign.
    * **API-slutpunkt**: Instans-URL för Adobe Campaign.
 
@@ -198,5 +201,5 @@ Se [Konfigurera externaliseraren](/help/sites-developing/externalizer.md) för a
 
 Om den pekar på `localhost:4503` eller någon annan server som Adobe Campaign inte kan nå visas inte dina bilder på Adobe Campaign-konsolen.
 
-![chlimage_1-135](assets/chlimage_1-131a.png)
+![chlimage_1-131](assets/chlimage_1-131a.png)
 
