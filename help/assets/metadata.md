@@ -3,7 +3,7 @@ title: Hantera metadata för digitala resurser i [!DNL Adobe Experience Manager]
 description: Lär dig mer om metadatatyperna och hur [!DNL Adobe Experience Manager Assets] hjälper dig att hantera metadata för resurser så att det blir enklare att kategorisera och ordna resurser. Med [!DNL Experience Manager] går det att automatiskt ordna och bearbeta resurser baserat på deras metadata.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
 source-wordcount: '1437'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ## Understand metadata handling in Experience Manager {#metadata-possibilities-with-aem}
 
-Describe the journey of an assets' metadata. What all happens to metadata when an asset is added to AEM.
+Describe the journey of an assets' metadata. What all happens to metadata when an asset is added to Experience Manager.
 
 ## Add metadata to your digital assets {#add-metadata}
 
