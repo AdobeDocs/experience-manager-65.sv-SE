@@ -1,11 +1,11 @@
 ---
 title: Rapporter om era digitala resurser
-description: Förstå rapporter om era resurser i AEM Assets som hjälper er att förstå hur era digitala resurser används, används och delas.
+description: Förstå rapporter om era resurser i Adobe Experience Manager Assets som hjälper er att förstå hur era digitala resurser används, används och delas.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f66be5de3bbd0051cd677430d5187ace9337b98d
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '926'
+source-wordcount: '925'
 ht-degree: 12%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 12%
 
 # Asset Reports {#asset-reports}
 
-Resursrapportering är ett viktigt verktyg för att utvärdera hur användbart Adobe Experience Manager Assets-distributionen är. Med AEM Assets kan ni generera olika rapporter för era digitala resurser. Rapporterna innehåller användbar information om hur ditt system används, hur användarna interagerar med resurser och vilka resurser som hämtas och delas.
+Resursrapportering är ett viktigt verktyg för att utvärdera hur användbar Adobe Experience Manager Assets-distributionen är. Med Assets kan ni generera olika rapporter för era digitala resurser. Rapporterna innehåller användbar information om hur ditt system används, hur användarna interagerar med resurser och vilka resurser som hämtas och delas.
 
-Använd informationen i rapporterna för att ta fram nyckeltal för att mäta hur AEM Assets används i ert företag och av era kunder.
+Använd informationen i rapporterna för att ta fram nyckeltal för att mäta användningen av resurser inom företaget och hos kunderna.
 
-AEM Assets-rapporteringsramverket använder Sling-jobb för att asynkront bearbeta rapportbegäranden på ett ordnat sätt. Den kan skalas för stora databaser. Asynkron rapportbearbetning ökar effektiviteten och hastigheten med vilken rapporter genereras.
+I ramverket för Assets-rapportering används Sling-jobb för att asynkront bearbeta rapportbegäranden på ett ordnat sätt. Den kan skalas för stora databaser. Asynkron rapportbearbetning ökar effektiviteten och hastigheten med vilken rapporter genereras.
 
 Rapporthanteringsgränssnittet är intuitivt och innehåller detaljerade alternativ och kontroller för att komma åt arkiverade rapporter och visa rapportkörningsstatus (lyckad, misslyckad och köad).
 
@@ -25,7 +25,7 @@ När en rapport skapas meddelas du via ett e-postmeddelande (valfritt) och ett i
 
 ## Generera rapporter {#generate-reports}
 
-AEM Assets genererar följande standardrapporter:
+Experience Manager Assets genererar följande standardrapporter för er:
 
 * Överför
 * Hämta
@@ -37,7 +37,7 @@ AEM Assets genererar följande standardrapporter:
 * Filer
 * Länkdelning
 
-AEM-administratörer kan enkelt generera och anpassa dessa rapporter för implementeringen. Administratören kan följa de här stegen för att skapa en rapport:
+Experience Manager-administratörer kan enkelt generera och anpassa dessa rapporter för er implementering. Administratören kan följa de här stegen för att skapa en rapport:
 
 1. I Experience Manager-gränssnittet klickar du på **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Reports]**.
    ![](assets/AssetsReportNavigation.png)
@@ -53,7 +53,7 @@ AEM-administratörer kan enkelt generera och anpassa dessa rapporter för implem
 
    >[!NOTE]
    >
-   >Som standard inkluderas innehållsfragment och länkdelningar i rapporten Hämtade resurser. Välj lämpligt alternativ för att skapa en rapport över länkdelningar eller för att utesluta innehållsfragment från hämtningsrapporten.
+   >Som standard inkluderas innehållsfragment och länkdelningar i rapporten Hämtade resurser. Välj lämpligt alternativ för att skapa en rapport över länkdelningar eller för att exkludera innehållsfragment från hämtningsrapporten.
 
 1. Konfigurera rapportinformation som titel, beskrivning, miniatyrbild och mappsökväg i CRX-databasen där rapporten lagras. Som standard är mappsökvägen `/content/dam`. Du kan ange en annan sökväg.
 
@@ -79,7 +79,7 @@ AEM-administratörer kan enkelt generera och anpassa dessa rapporter för implem
 
    ![](assets/files_report.png)
 
-   I rapporten **[!UICONTROL Link Share]** visas URL:er till resurser som delas med externa användare inifrån AEM Assets. Den innehåller e-post-ID:n för den användare som delat resurserna, e-post-ID:n för de användare som resurserna delas med, delningsdatum och utgångsdatum för länken. Det går inte att anpassa kolumnerna.
+   I rapporten **[!UICONTROL Link Share]** visas URL:er till resurser som delas med externa användare inifrån Assets. Den innehåller e-post-ID:n för den användare som delat resurserna, e-post-ID:n för de användare som resurserna delas med, delningsdatum och utgångsdatum för länken. Det går inte att anpassa kolumnerna.
 
    The **[!UICONTROL Link Share]** report, does not include options for sub-folders and renditions because it merely publishes the shared URLs that appear under `/var/dam/share`.
 
