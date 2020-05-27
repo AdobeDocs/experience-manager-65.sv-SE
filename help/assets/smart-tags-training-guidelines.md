@@ -4,7 +4,10 @@ description: Utbilda Adobe Senseis AI-tjänst för att använda smarta taggar p�
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+workflow-type: tm+mt
+source-wordcount: '465'
+ht-degree: 7%
 
 ---
 
@@ -17,7 +20,7 @@ För att effektivt märka upp varumärkesbilderna kräver Smart Content Service 
 
 För bästa resultat bör bilderna i din utbildningsserie följa följande riktlinjer:
 
-**** Kvantitet och storlek: Minst 30 bilder per tagg. Minst 500 pixlar på den längre sidan.
+**Kvantitet och storlek:** Minst 30 bilder per tagg. Minst 500 pixlar på den längre sidan.
 
 **Samstämmighet**: Bilderna för en tagg bör vara visuellt lika.
 
@@ -25,7 +28,7 @@ Det är till exempel ingen bra idé att tagga alla dessa bilder som `my-party` (
 
 ![Illustrativa bilder som exempel på riktlinjer för utbildning](/help/assets/assets/do-not-localize/coherence.png)
 
-**Täckning**: Det ska finnas tillräckligt med variation i bilderna i utbildningen. Tanken är att ge några exempel som är ganska olika, men som ändå är ganska olika, så att AEM lär sig att fokusera på rätt saker. Om du använder samma tagg på bilder som ser olika ut bör du ta med minst fem exempel av varje typ.
+**Täckning**: Det ska finnas tillräckligt med variation i bilderna i utbildningen. Tanken är att ge några men relativt olika exempel så att Experience Manager lär sig att fokusera på rätt saker. Om du använder samma tagg på bilder som ser olika ut bör du ta med minst fem exempel av varje typ.
 
 För taggen *model-down* kan du t.ex. inkludera fler utbildningsbilder som liknar den markerade bilden nedan för tjänsten för att identifiera liknande bilder mer exakt under taggningen.
 
@@ -37,7 +40,7 @@ För taggen *casual-shoe*&#x200B;är den andra bilden till exempel inte en bra t
 
 ![Illustrativa bilder som exempel på riktlinjer för utbildning](/help/assets/assets/do-not-localize/distraction.png)
 
-**** Fullständighet: Om en bild kvalificerar för mer än en tagg lägger du till alla tillämpliga taggar innan du inkluderar bilden för utbildning. För taggar, till exempel `raincoat` och `model-side-view`lägger du till båda taggarna i den kvalificerade mediefilen innan du inkluderar den för utbildning.
+**Fullständighet:** Om en bild kvalificerar sig för mer än en tagg lägger du till alla tillämpliga taggar innan du inkluderar bilden för träning. For example, for tags, such as `raincoat` and `model-side-view`, add both the tags on the eligible asset before including it for training.
 
 ![Illustrativa bilder som exempel på riktlinjer för utbildning](/help/assets/assets/do-not-localize/completeness.png)
 
@@ -47,7 +50,7 @@ Förbättrade smarta taggar bygger på inlärningsmodeller för bilder och tagga
 
 * Oförmåga att identifiera små skillnader i bilder. Till exempel tunna eller jämna skjortor.
 * Oförmåga att identifiera taggar baserat på små mönster/delar av en bild. Till exempel logotyper på T-shirts.
-* Taggning stöds i de språkområden som AEM stöds i. En lista med språk finns i Versionsinformation för [Smart Content Services](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/smart-content-service-release-notes.html).
+* Taggning stöds i de språkområden som Experience Manager stöds i. En lista med språk finns i Versionsinformation för [Smart Content Services](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/smart-content-service-release-notes.html).
 
 Om du vill söka efter resurser med smarta taggar (vanliga eller förbättrade) använder du Resursmomenten (fulltextsökning). Det finns inget separat sökpredikat för smarta taggar.
 
