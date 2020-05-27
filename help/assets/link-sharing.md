@@ -1,11 +1,11 @@
 ---
 title: Generera en URL till delade resurser
-description: I den här artikeln beskrivs hur du delar resurser, mappar och samlingar i AEM Resurser som en URL till externa parter.
+description: I den här artikeln beskrivs hur du delar resurser, mappar och samlingar i Experience Manager Assets som en URL till externa parter.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '1129'
+source-wordcount: '1136'
 ht-degree: 4%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 # Dela resurs via en länk {#asset-link-sharing}
 
-Med Adobe Experience Manager Assets (AEM) kan ni dela resurser, mappar och samlingar som en webbadress med medlemmar i organisationen och externa enheter, inklusive partners och leverantörer. Att dela resurser via en länk är ett bekvämt sätt att göra resurser tillgängliga för externa parter utan att de först behöver logga in på AEM Assets.
+Med Adobe Experience Manager Assets kan ni dela resurser, mappar och samlingar som en webbadress med medlemmar i organisationen och externa enheter, inklusive partners och leverantörer. Att dela resurser via en länk är ett bekvämt sätt att göra resurser tillgängliga för externa parter utan att de först behöver logga in på Assets.
 
 >[!NOTE]
 >
@@ -40,7 +40,7 @@ Använd dialogrutan Länkdelning för att generera URL:en för resurser som du v
 
    >[!NOTE]
    >
-   >Om du vill dela länkar från din AEM Author-instans till externa entiteter, ska du se till att du bara visar följande URL:er (som används för länkdelning) för `GET` begäranden. Blockera andra URL:er för att säkerställa säkerheten för AEM Author.
+   >Om du vill dela länkar från utvecklingsinstansen i Experience Manager till externa entiteter, ska du se till att du bara visar följande URL:er (som används för länkdelning) för `GET` begäranden. Blockera andra URL:er för att säkerställa säkerheten för Experience Manager Author.
    >
    >* http://&lt;aem_server>:&lt;port>/linkshare.html
    * http://&lt;aem_server>:&lt;port>/linksharepreview.html
@@ -50,7 +50,7 @@ Använd dialogrutan Länkdelning för att generera URL:en för resurser som du v
    >[!NOTE]
    Om en delad resurs flyttas till en annan plats slutar länken att fungera. Återskapa länken och dela den på nytt med användarna.
 
-1. I AEM-gränssnittet går du till **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
+1. I Experience Manager-gränssnittet kan du gå till **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
 
 1. Öppna **[!UICONTROL Day CQ Link Externalizer]** konfigurationen och ändra följande egenskaper i **[!UICONTROL Domains]** fältet med de värden som anges mot `local`, `author`och `publish`. För egenskaperna `local` och `author` anger du URL:en för den lokala instansen respektive författarinstansen. Både `local` och `author` egenskaper har samma värde om du kör en enda Experience Manager Author-instans. Ange t. `publish`ex. URL:en för Experience Manager-publiceringsinstansen.
 
@@ -92,7 +92,7 @@ Använd dialogrutan Länkdelning för att generera URL:en för resurser som du v
    ![chlimage_1-261](assets/chlimage_1-546.png)
 
    >[!NOTE]
-   AEM stöder generering av förhandsgranskning av resurser av dessa MIME-typer: JPG, PNG, GIF, BMP, INDD, PDF och PPT. Du kan bara hämta resurser från andra MIME-typer.
+   Experience Manager har stöd för att generera en förhandsgranskning av resurser av dessa MIME-typer: JPG, PNG, GIF, BMP, INDD, PDF och PPT. Du kan bara hämta resurser från andra MIME-typer.
 
 1. Om du vill hämta den delade resursen klickar du **[!UICONTROL Select]** i verktygsfältet, på resursen och sedan på **[!UICONTROL Download]** verktygsfältet.
 
@@ -118,9 +118,9 @@ Använd dialogrutan Länkdelning för att generera URL:en för resurser som du v
 
 ## Konfigurera maximal datastorlek {#maxdatasize}
 
-När du hämtar resurser från den länk som delas med funktionen Länkdelning komprimerar AEM resurshierarkin från databasen och returnerar sedan resursen i en ZIP-fil. I avsaknad av begränsningar för den mängd data som kan komprimeras i en ZIP-fil utsätts stora mängder data för komprimering, vilket leder till minnesfel i JVM. För att skydda systemet från en potentiell denial of service-attack på grund av den här situationen måste du konfigurera maxstorleken med hjälp av parametern **[!UICONTROL Max Content Size (uncompressed)]** för [!UICONTROL Day CQ DAM Adhoc Asset Share Proxy Servlet] i Configuration Manager. Om resursens okomprimerade storlek överskrider det konfigurerade värdet, avvisas begäranden om hämtning av resurser. Standardvärdet är 100 MB.
+När du hämtar resurser från den länk som delas med funktionen Länkdelning komprimerar Experience Manager resurshierarkin från databasen och returnerar sedan resursen i en ZIP-fil. I avsaknad av begränsningar för den mängd data som kan komprimeras i en ZIP-fil utsätts stora mängder data för komprimering, vilket leder till minnesfel i JVM. För att skydda systemet från en potentiell denial of service-attack på grund av den här situationen måste du konfigurera maxstorleken med hjälp av parametern **[!UICONTROL Max Content Size (uncompressed)]** för [!UICONTROL Day CQ DAM Adhoc Asset Share Proxy Servlet] i Configuration Manager. Om resursens okomprimerade storlek överskrider det konfigurerade värdet, avvisas begäranden om hämtning av resurser. Standardvärdet är 100 MB.
 
-1. Click the AEM logo and then go to **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
+1. Click the Experience Manager logo and then go to **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
 1. Leta reda på konfigurationen i webbkonsolen **[!UICONTROL Day CQ DAM Adhoc Asset Share Proxy Servlet]** .
 1. Öppna **[!UICONTROL Day CQ DAM Adhoc Asset Share Proxy Servlet]** konfigurationen i redigeringsläge och ändra värdet på **[!UICONTROL Max Content Size (uncompressed)]** parametern.
 
@@ -131,6 +131,6 @@ När du hämtar resurser från den länk som delas med funktionen Länkdelning k
 ## Bästa praxis och felsökning {#bestpractices}
 
 * Resursmappar eller samlingar som innehåller ett tomt utrymme i namnet kanske inte delas.
-* Om användarna inte kan hämta de delade resurserna bör du fråga AEM-administratören om vilka [hämtningsgränser](#maxdatasize) som finns.
-* Om du inte kan skicka e-post med länkar till delade resurser eller om de andra användarna inte kan ta emot din e-post, bör du kontakta AEM-administratören om [e-posttjänsten](#configmailservice) är konfigurerad eller inte.
+* Om användarna inte kan hämta de delade resurserna bör du fråga Experience Manager-administratören om vilka [hämtningsgränser](#maxdatasize) som finns.
+* Om du inte kan skicka e-post med länkar till delade resurser eller om de andra användarna inte kan ta emot din e-post, bör du kontakta Experience Manager-administratören om [e-posttjänsten](#configmailservice) är konfigurerad eller inte.
 * Om du inte kan dela resurser med hjälp av länkdelningsfunktionen måste du se till att du har rätt behörighet. Se [Dela resurser](#sharelink).
