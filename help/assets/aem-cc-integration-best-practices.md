@@ -3,9 +3,9 @@ title: Bästa praxis för integrering av Adobe Creative Cloud och [!DNL Adobe Ex
 description: Bästa tillvägagångssätt för att integrera [!DNL Adobe Experience Manager] med [!DNL Adobe Creative Cloud] för att effektivisera resursöverföringsarbetsflöden och uppnå hög innehållshastighet.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 99ce6e0572797b7bccf755aede93623be6bd5698
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '3266'
+source-wordcount: '3260'
 ht-degree: 15%
 
 ---
@@ -35,7 +35,7 @@ Läs vidare för att ta reda på vilka integreringar som du ska välja mellan st
 
 | Värdeförslag för berörda personer | Erbjudande | Involverade ytor |
 |---|---|---|
-| Creative users upptäcker resurser från [!DNL Experience Manager], öppnar och använder dem, redigerar och överför ändringar till [!DNL Experience Manager]samt överför nya filer till [!DNL Experience Manager], utan att lämna [!DNL Creative Cloud] programmen. | [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) | Photoshop, Illustrator och InDesign |
+| Creative users upptäcker resurser från [!DNL Experience Manager], öppnar och använder dem, redigerar och överför ändringar till [!DNL Experience Manager]samt överför nya filer till [!DNL Experience Manager], utan att lämna [!DNL Creative Cloud] programmen. | [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) | [!DNL Adobe Photoshop], [!DNL Adobe Illustrator]och [!DNL Adobe InDesign]. |
 | Affärsanvändare förenklar öppning och användning av resurser, redigering och överföring av ändringar [!DNL Experience Manager]samt överföring av nya filer till [!DNL Experience Manager] från skrivbordsmiljön. De använder en allmän integrering för att öppna alla resurstyper i det inbyggda datorprogrammet, inklusive sådana som inte kommer från Adobe. | [Experience Manager-datorprogram](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html) | [!DNL Experience Manager] datorprogram på Win- och Mac-datorer |
 | Marknadsförare och företagsanvändare upptäcker, förhandsgranskar, licensierar och sparar samt hanterar [!DNL Adobe Stock] mediefiler inifrån [!DNL Experience Manager]. Licensierade och sparade resurser ger utvalda [!DNL Adobe Stock] metadata för bättre styrning. | [Integrering av Experience Manager och Adobe Stock](aem-assets-adobe-stock.md) | [!DNL Experience Manager] webbgränssnitt |
 
@@ -168,7 +168,7 @@ I sådana fall kan Adobe Asset Link eller [!DNL Experience Manager] skrivbordsap
 
 Externa byråer och frilansare som inte har direkt åtkomst till DAM-instansen kan behöva åtkomst till godkända resurser eller lägga till sina nya designer i DAM.
 
-Använd följande strategier för att ge tillgång till slutliga/godkända mediefiler:
+Använd följande strategier för att ge åtkomst till slutliga/godkända mediefiler:
 
 * Använd skrivbordsappen om Asset Link inte fungerar.
 * Använd [Experience Manager Assets Brand Portal](https://helpx.adobe.com/se/experience-manager/brand-portal/user-guide.html) för säker distribution av resurser till externa partner
@@ -181,7 +181,7 @@ Som beskrivs i det här dokumentet rekommenderar vi att du utför större uppdat
 
 Adobe Asset Link har ett bra stöd för detta:
 
-* När användare i Photoshop, InDesign eller Illustrator tänker redigera en fil utför de en utcheckningsåtgärd på den angivna resursen
+* När användare i [!DNL Photoshop], [!DNL InDesign]eller [!DNL Illustrator] för att redigera en fil utför de en utcheckningsåtgärd för den angivna resursen
 * Resursen hämtas i bakgrunden, läggs till användare Creative Cloud-kontot synkroniserat med disken av Creative Cloud-datorprogrammet och utcheckningsflaggan aktiveras [!DNL Experience Manager] på resursen för att minimera redigeringskonflikter
 * Därifrån arbetar användaren i en fil som lagras lokalt på den synkroniserade platsen och kan fortsätta att arbeta och spara nödvändiga ändringar med den frekvens som behövs
 * Eftersom resursen finns på Creative Cloud-kontot är den dessutom tillgänglig på andra enheter som användaren kan ha (till exempel kan öppnas eller redigeras i en dedikerad Creative Cloud-mobilapp) och kan delas med andra Creative Cloud-användare i samarbetssyfte.
