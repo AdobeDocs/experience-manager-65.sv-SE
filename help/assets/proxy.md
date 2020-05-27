@@ -1,11 +1,11 @@
 ---
 title: Proxyutveckling för resurser
-description: En proxy är en AEM-instans som använder proxyarbetare för att bearbeta jobb. Lär dig hur du konfigurerar en AEM-proxy, åtgärder som stöds, proxykomponenter och hur du utvecklar en anpassad proxyarbetare.
+description: En proxy är en Experience Manager-instans som använder proxyarbetare för att bearbeta jobb. Lär dig hur du konfigurerar en Experience Manager-proxy, åtgärder som stöds, proxykomponenter och hur du utvecklar en anpassad proxyarbetare.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5cea9ed3be322cb8dedfbc6cb38abbdb72d0b7b7
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '891'
 ht-degree: 0%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 # Proxyutveckling för resurser {#assets-proxy-development}
 
-Adobe Experience Manager Assets (AEM) Assets använder en proxy för att distribuera bearbetningen för vissa uppgifter.
+I Adobe Experience Manager Assets används en proxy för att distribuera bearbetning för vissa uppgifter.
 
-En proxy är en specifik (och ibland separat) AEM-instans som använder proxyarbetare som processorer som hanterar ett jobb och skapar ett resultat. En proxyarbetare kan användas för en mängd olika uppgifter. När det gäller en AEM Resurser-proxy kan detta användas för att läsa in resurser för återgivning i AEM Resurser. IDS- [proxyarbetaren](indesign.md) använder till exempel en InDesign-server för att bearbeta filer som ska användas i AEM Resurser.
+En proxy är en specifik (och ibland separat) Experience Manager-instans som använder proxyarbetare som processorer som hanterar ett jobb och skapar ett resultat. En proxyarbetare kan användas för en mängd olika uppgifter. När det gäller en Assets-proxy kan detta användas för att läsa in resurser för återgivning i Assets. IDS- [proxyarbetaren](indesign.md) använder till exempel en [!DNL Adobe InDesign] server för att bearbeta filer som ska användas i Assets.
 
-När proxyn är en separat AEM-instans minskar detta belastningen på AEM-redigeringsinstansen/-instanserna. Som standard kör AEM Resurser resurshanteringsuppgifterna i samma JVM (externaliserat via Proxy) för att minska belastningen på AEM-redigeringsinstansen.
+När proxyn är en separat Experience Manager-instans minskar detta belastningen på Experience Manager-redigeringsinstanserna. Som standard kör Assets resurshanteringsuppgifterna i samma JVM (externaliserat via Proxy) för att minska belastningen på Experience Manager-redigeringsinstansen.
 
 ## Proxy (HTTP Access) {#proxy-http-access}
 
@@ -109,11 +109,11 @@ Här följer ett exempel på API-användning:
 >
 >Referensdokumentation för proxy-API:t finns under [`com.day.cq.dam.api.proxy`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/dam/api/proxy/package-summary.html).
 
-Både proxy- och proxyarbetarkonfigurationer är tillgängliga via molntjänster som nås från AEM Assets **Tools** Console eller under `/etc/cloudservices/proxy`. Varje proxyarbetare förväntas lägga till en nod under `/etc/cloudservices/proxy` för arbetarspecifik konfigurationsinformation (till exempel `/etc/cloudservices/proxy/workername`).
+Både proxy- och proxyarbetskonfigurationer är tillgängliga via molntjänster som är tillgängliga från Assets **Tools** Console eller under `/etc/cloudservices/proxy`. Varje proxyarbetare förväntas lägga till en nod under `/etc/cloudservices/proxy` för arbetarspecifik konfigurationsinformation (till exempel `/etc/cloudservices/proxy/workername`).
 
 >[!NOTE]
 >
->Mer information finns i [konfigurationen](indesign.md#configuring-the-proxy-worker-for-indesign-server) av Proxy Worker för InDesign Server och [Cloud Services-konfigurationen](../sites-developing/extending-cloud-config.md) .
+>Mer information finns i [InDesign Server Proxy Worker-konfiguration](indesign.md#configuring-the-proxy-worker-for-indesign-server) och [Cloud Services-konfiguration](../sites-developing/extending-cloud-config.md) .
 
 Här följer ett exempel på API-användning:
 
@@ -132,9 +132,9 @@ Här följer ett exempel på API-användning:
 
 ### Utveckla en anpassad proxyarbetare {#developing-a-customized-proxy-worker}
 
-IDS- [proxyarbetaren](indesign.md) är ett exempel på en AEM Resurser-proxyarbetare som redan medföljer för att lägga ut bearbetning av InDesign-resurser på entreprenad.
+IDS- [proxyarbetaren](indesign.md) är ett exempel på en Assets-proxyarbetare som redan finns tillgänglig direkt för att lägga ut bearbetning av InDesign-resurser på entreprenad.
 
-Du kan också utveckla och konfigurera din egen AEM Assets-proxyarbetare för att skapa en specialiserad arbetare som kan skicka och lägga ut AEM Assets-bearbetningsuppgifter på entreprenad.
+Du kan också utveckla och konfigurera din egen Assets-proxyarbetare för att skapa en specialiserad arbetare som kan skicka och lägga ut resurshanteringsuppgifter på entreprenad.
 
 Om du konfigurerar en egen anpassad proxyarbetare måste du:
 
@@ -176,12 +176,12 @@ Följande diagram och steg visar hur du fortsätter:
 
 >[!NOTE]
 >
->Det AEM Assets-proxyramverket inte har någon färdig funktion är poolmekanismen.
+>Det som Assets proxy-ramverket inte tillhandahåller är poolmekanismen.
 >
->InDesign-integreringen ger åtkomst till en pool med indesign-servrar (IDSPool). Den här poolen är specifik för InDesign-integrering och ingår inte i AEM Assets-proxyramverket.
+>Integreringen ger [!DNL InDesign] åtkomst till en pool med [!DNL InDesign] servrar (IDSPool). Den här poolen är specifik för [!DNL InDesign] integrering och inte en del av [!DNL Assets] proxyramverket.
 
 >[!NOTE]
 >
 >Synkronisering av resultat:
 >
->Om ingen instans använder samma proxy stannar bearbetningsresultatet kvar hos proxyn. Det är klientens (AEM Author) uppgift att begära resultatet med samma unika jobb-ID som anges för klienten när jobbet skapas. Proxyservern utför jobbet och ser till att resultatet är klart att begäras.
+>Om ingen instans använder samma proxy stannar bearbetningsresultatet kvar hos proxyn. Det är klientens (Experience Manager Author) uppgift att begära resultatet med samma unika jobb-ID som anges för klienten när jobbet skapas. Proxyservern utför jobbet och ser till att resultatet är klart att begäras.
