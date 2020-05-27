@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: dca5a2ac-1fc8-4251-b073-730fd6f49b1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e5e918c0b971159bc99bdcf604c89439c2b08244
+source-git-commit: fb59bd52be86894e93063f4b7c32aef0ed23250b
+workflow-type: tm+mt
+source-wordcount: '1656'
+ht-degree: 44%
 
 ---
 
@@ -75,7 +78,7 @@ Detaljerade instruktioner finns i
 
 * [Versionsinformation om AEM 6.5 Service Pack](https://helpx.adobe.com/experience-manager/6-5/release-notes/sp-release-notes.html)
 
-**Kontakta support** om du inte kan hitta det senaste AEM-paketet eller Service Pack.
+**Kontakta kundtjänst** om du inte hittar det senaste AEM-paketet eller Service Pack.
 
 ## Skapa en konfiguration {#configure-new-integration-65}
 
@@ -100,31 +103,31 @@ IMS-konfigurationen har två steg:
 Med ett offentligt certifikat kan du autentisera din profil på Adobe I/O.
 
 1. Logga in på din AEM Assets-författarinstansStandard-URL: http:// localhost:4502/aem/start.html
-1. Gå till **Säkerhet** > > ![Adobe IMS-konfigurationer](assets/tools.png) på panelen Verktyg **** Verktyg ****.
+1. Gå till **[!UICONTROL Security]** >> **[!UICONTROL Adobe IMS Configurations]** från panelen **Tools** ![Tools](assets/tools.png).
 
    ![Användargränssnittet för konfiguration av Adobe IMS-kontot](assets/ims-config1.png)
 
 1. Sidan Adobe IMS-konfigurationer öppnas.
 
-   Klicka på **[!UICONTROL Skapa]**.
+   Klicka på **[!UICONTROL Create]**.
 
-   Du kommer nu till sidan Konfiguration **[!UICONTROL av]** Adobe IMS Technical Account.
+   Sidan **[!UICONTROL Adobe IMS Technical Account Configuration]** öppnas.
 
 1. Fliken **Certifikat** öppnas som standard.
 
-   I **molnlösning** väljer du **[!UICONTROL Adobe Brand Portal]**.
+   Välj **[!UICONTROL Adobe Brand Portal]** i **Molnlösning**,
 
-1. Mark the checkbox **[!UICONTROL Create new certificate]** and specify an **alias** for the certificate. Aliaset används som namn på dialogrutan.
+1. Markera kryssrutan **[!UICONTROL Create new certificate]** och ange ett **alias** för certifikatet. Aliaset används som namn på dialogrutan.
 
-1. Klicka på **[!UICONTROL Skapa certifikat]**. En dialogruta visas. Click **[!UICONTROL OK]** to generate the public certificate.
+1. Klicka på **[!UICONTROL Create certificate]**. En dialogruta visas. Klicka på **[!UICONTROL OK]** för att generera det offentliga certifikatet.
 
    ![Skapa ett certifikat](assets/ims-config2.png)
 
-1. Click **[!UICONTROL Download Public Key]** and save the *AEM-Adobe-IMS.crt* certificate file on your machine. Certifikatfilen används för att [skapa Adobe I/O-integreringen](#createnewintegration).
+1. Klicka på **[!UICONTROL Download Public Key]** och spara certifikatfilen *AEM-Adobe-IMS.crt* på datorn. Certifikatfilen används för att [skapa Adobe I/O-integreringen](#createnewintegration).
 
    ![Hämta certifikatet](assets/ims-config3.png)
 
-1. Klicka på **[!UICONTROL Nästa]**.
+1. Klicka på **[!UICONTROL Next]**.
 
    Du skapar Adobe IMS-kontot på fliken **Konto**, men för det behöver du integreringsinformationen. Håll den här sidan öppen tills vidare.
 
@@ -138,9 +141,9 @@ Adobe I/O-integreringen genererar en API-nyckel, en klienthemlighet och en nytto
 
    Standard-URL: [https://console.adobe.io/](https://console.adobe.io/)
 
-1. Klicka på **[!UICONTROL Skapa integrering]**.
+1. Klicka på **[!UICONTROL Create Integration]**.
 
-1. Välj **[!UICONTROL Åtkomst till ett API]** och klicka på **[!UICONTROL Fortsätt]**.
+1. Markera **[!UICONTROL Access an API]** och klicka på **[!UICONTROL Continue]**.
 
    ![Skapa en ny integrering](assets/create-new-integration1.png)
 
@@ -148,27 +151,27 @@ Adobe I/O-integreringen genererar en API-nyckel, en klienthemlighet och en nytto
 
    Välj din organisation i listrutan.
 
-   I **[!UICONTROL Experience Cloud]** väljer du **[!UICONTROL AEM Brand Portal]** och klickar på **[!UICONTROL Fortsätt]**.
+   Välj **[!UICONTROL AEM Brand Portal]** och klicka på **[!UICONTROL Continue]** i **[!UICONTROL Experience Cloud]**.
 
-   If the Brand Portal option is disabled for you, ensure that you have selected correct organization from the drop-down box above the **[!UICONTROL Adobe Services]** option. Kontakta administratören om du inte känner till din organisation.
+   Kontrollera att du har valt rätt organisation i listrutan ovanför alternativet **[!UICONTROL Adobe Services]** om alternativet Varumärkesportal är inaktiverat. Kontakta administratören om du inte känner till din organisation.
 
    ![Skapa en integrering](assets/create-new-integration2.png)
 
-1. Ange ett namn och en beskrivning för integrationen. Klicka på **[!UICONTROL Välj en fil på datorn]** och överför den `AEM-Adobe-IMS.crt` fil som laddats ned i avsnittet [Hämta offentliga certifikat](#public-certificate) .
+1. Ange ett namn och en beskrivning för integrationen. Klicka på **[!UICONTROL Select a File from your computer]** och överför filen `AEM-Adobe-IMS.crt` som laddades ner under [Hämta ett offentligt certifikat](#public-certificate) .
 
 1. Välj organisationens profil.
 
-   Du kan också välja standardprofilens **[!UICONTROL resursportal]** och klicka på **[!UICONTROL Skapa integrering]**. Integreringen skapas.
+   Du kan också markera standardprofilen **[!UICONTROL Assets Brand Portal]** och klicka på **[!UICONTROL Create Integration]**. Integreringen skapas.
 
-1. Klicka på **[!UICONTROL Fortsätt om du vill visa integreringsinformationen]** .
+1. Klicka på **[!UICONTROL Continue to integration details]** för att visa integreringsinformationen.
 
-   Kopiera **[!UICONTROL API-nyckeln]**
+   Kopiera **[!UICONTROL API Key]**
 
-   Klicka på **[!UICONTROL Hämta klienthemlighet]** och kopiera klienthemlighet.
+   Klicka på **[!UICONTROL Retrieve Client Secret]** och kopiera nyckeln för klienthemligheten.
 
    ![API-nyckel, klienthemlighet och nyttolastinformation för en integrering](assets/create-new-integration3.png)
 
-1. Navigera till **[!UICONTROL JWT]** -fliken och kopiera **[!UICONTROL JWT-nyttolasten]**.
+1. Gå till fliken **[!UICONTROL JWT]** och kopiera **[!UICONTROL JWT payload]**.
 
    API-nyckeln, nyckeln för klienthemligheten och informationen för JWT-nyttolasten används för att skapa en IMS-kontokonfiguration.
 
@@ -181,24 +184,24 @@ Kontrollera att du har utfört följande steg:
 
 **Så här skapar du en IMS-kontokonfiguration:**
 
-1. Open the IMS Configuration page, **[!UICONTROL Accounts]** tab. Du lämnade den här sidan öppen i slutet av avsnittet [Hämta ett offentligt certifikat ](#public-certificate).
+1. Öppna sidan IMS-konfiguration och fliken **[!UICONTROL Accounts]**. Du lämnade den här sidan öppen i slutet av avsnittet [Hämta ett offentligt certifikat ](#public-certificate).
 
-1. Specify a **[!UICONTROL Title]** for the IMS account.
+1. Ange en **[!UICONTROL Title]** för IMS-kontot.
 
-   In **[!UICONTROL Authorization Server]**, enter the URL: [https://ims-na1.adobelogin.com/](https://ims-na1.adobelogin.com/)
+   Ange URL:en [https://ims-na1.adobelogin.com/](https://ims-na1.adobelogin.com/) i **[!UICONTROL Authorization Server]**.
 
    Klistra in API-nyckeln, klienthemligheten och JWT-nyttolasten som du kopierade i slutet av [Skapa en Adobe I/O-integrering](#createnewintegration).
 
-   Klicka på **[!UICONTROL Skapa]**.
+   Klicka på **[!UICONTROL Create]**.
 
    Integreringen skapas.
 
    ![Konfiguration av ett IMS-konto](assets/create-new-integration6.png)
 
 
-1. Select the IMS configuration and click **[!UICONTROL Check Health]**. En dialogruta visas.
+1. Markera IMS-konfigurationen och klicka på **[!UICONTROL Check Health]**. En dialogruta visas.
 
-   Klicka på **[!UICONTROL Kontrollera]**. Meddelandet *Token har hämtats* visas när en anslutning har skapats.
+   Klicka på **[!UICONTROL Check]**. Meddelandet *Token har hämtats* visas när en anslutning har skapats.
 
    ![](assets/create-new-integration5.png)
 
@@ -216,21 +219,21 @@ Gör så här för att skapa molntjänstkonfigurationen för varumärkesportalen
 1. Logga in på din AEM Assets-författarinstans
 
    Standard-URL: http:// localhost:4502/aem/start.html
-1. Gå till **Cloud Services >> AEM Brand Portal** i panelen ![Verktyg](assets/tools.png) och **[!UICONTROL Verktyg]**.
+1. Gå till **[!UICONTROL Cloud Services >> AEM Brand Portal]** från panelen **Tools** ![Tools](assets/tools.png).
 
    Sidan Konfigurationer för varumärkesportalen öppnas.
 
-1. Klicka på **[!UICONTROL Skapa]**.
+1. Klicka på **[!UICONTROL Create]**.
 
-1. Specify a **[!UICONTROL Title]** for the configuration.
+1. Ange en **[!UICONTROL Title]** för konfigurationen.
 
    Välj den IMS-konfiguration som du har skapat i steget [Skapa en konfiguration för IMS-kontot](#create-ims-account-configuration).
 
-   In **[!UICONTROL Service URL]**, enter your Brand Portal tenant URL.
+   Ange varumärkesportalens klientorganisations-URL i **[!UICONTROL Service URL]**.
 
    ![](assets/create-cloud-service.png)
 
-1. Klicka på **[!UICONTROL Spara och stäng]**. Molnkonfigurationen har skapats. Din instans av AEM Assets-författaren är nu integrerad med innehavaren av varumärkesportalen.
+1. Klicka på **[!UICONTROL Save and Close]**. Molnkonfigurationen har skapats. Din instans av AEM Assets-författaren är nu integrerad med innehavaren av varumärkesportalen.
 
 ### Testa konfigurationen {#test-integration}
 
@@ -238,13 +241,13 @@ Gör så här för att skapa molntjänstkonfigurationen för varumärkesportalen
 
    Standard-URL: http:// localhost:4502/aem/start.html
 
-1. From **Tools** ![Tools](assets/tools.png) panel, navigate to **[!UICONTROL Deployment >> Replication]**.
+1. Gå till **[!UICONTROL Deployment >> Replication]** från panelen **Tools** ![Tools](assets/tools.png).
 
    ![](assets/test-integration1.png)
 
 1. Replikeringssidan öppnas.
 
-   Klicka på **[!UICONTROL Agenter på författaren]**.
+   Klicka på **[!UICONTROL Agents on author]**.
 
    ![](assets/test-integration2.png)
 
@@ -307,11 +310,11 @@ Kontrollera att inget publiceringsjobb körs på AEM Assets-författarinstansen 
 
    Standard-URL: http:// localhost:4502/aem/start.html
 
-1. From **Tools** ![Tools](assets/tools.png) panel, navigate to **[!UICONTROL Deployment >> Replication]**.
+1. Gå till **[!UICONTROL Deployment >> Replication]** från panelen **Tools** ![Tools](assets/tools.png).
 
 1. Replikeringssidan öppnas.
 
-   Klicka på **[!UICONTROL Agenter på författaren]**.
+   Klicka på **[!UICONTROL Agents on author]**.
 
    ![](assets/test-integration2.png)
 
