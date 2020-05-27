@@ -1,26 +1,29 @@
 ---
-title: Stöd för XMP-metadata i AEM Assets
-description: Läs om metadatastandarden XMP (Extensible Metadata Platform) som används av AEM Assets för metadatahantering. XMP har ett standardformat för att skapa, bearbeta och utbyta metadata för ett stort antal program.
+title: Stöd för XMP-metadata i Adobe Experience Manager Assets.
+description: Läs om metadatastandarden XMP (Extensible Metadata Platform) som används av Experience Manager Assets för metadatahantering. XMP har ett standardformat för att skapa, bearbeta och utbyta metadata för ett stort antal program.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+workflow-type: tm+mt
+source-wordcount: '817'
+ht-degree: 18%
 
 ---
 
 
 # XMP-metadata {#xmp-metadata}
 
-XMP (Extensible Metadata Platform) är den metadatastandard som används av AEM Assets för all metadatahantering. XMP har ett standardformat för att skapa, bearbeta och utbyta metadata för ett stort antal program.
+XMP (Extensible Metadata Platform) är den metadatastandard som används av Adobe Experience Manager Assets för all metadatahantering. XMP har ett standardformat för att skapa, bearbeta och utbyta metadata för ett stort antal program.
 
-Förutom universell metadatakodning som kan bäddas in i alla filformat, erbjuder XMP en innehållsmodell [som](xmp.md#xmp-core-concepts) stöds av Adobe [](xmp.md#advantages-of-xmp) och andra företag, så att användare av XMP i kombination med AEM Assets har en kraftfull plattform att bygga vidare på.
+Förutom universell metadatakodning som kan bäddas in i alla filformat, erbjuder XMP en innehållsmodell [som](xmp.md#xmp-core-concepts) stöds av Adobe [](xmp.md#advantages-of-xmp) och andra företag, så att användare av XMP i kombination med Assets har en kraftfull plattform att bygga vidare på.
 
 XMP- [specifikationen](https://www.adobe.com/devnet/xmp.html) finns hos Adobe.
 
 ## Vad är XMP? {#what-is-xmp}
 
-AEM Assets stöder XMP - Extensible Metadata Platform som leds av Adobe. XMP är en standard för bearbetning och lagring av standardiserade och egna metadata i digitala resurser. XMP är en standard som gör att flera program kan arbeta effektivt med metadata.
+Assets native supports the XMP - the Extensible Metadata Platform spearhead by Adobe. XMP är en standard för bearbetning och lagring av standardiserade och egna metadata i digitala resurser. XMP är en standard som gör att flera program kan arbeta effektivt med metadata.
 
-Produktionspersonal kan till exempel använda det inbyggda XMP-stödet i Adobes program för att skicka information till olika filformat. AEM Assets-databasen extraherar XMP-metadata och använder dem för att hantera innehållets livscykel och ger möjlighet att skapa automatiserade arbetsflöden.
+Produktionspersonal kan till exempel använda det inbyggda XMP-stödet i Adobes program för att skicka information till flera filformat. Resurskatalogen extraherar XMP-metadata och använder dem för att hantera innehållets livscykel och ger möjlighet att skapa automatiserade arbetsflöden.
 
 XMP standardiserar hur metadata definieras, skapas och bearbetas genom att tillhandahålla en datamodell, en lagringsmodell och scheman. Alla dessa begrepp beskrivs i detta avsnitt.
 
@@ -34,9 +37,9 @@ Adobe introducerade först XMP-standarden som en del av Adobe Acrobat-produkten.
 
 ### XMP-ekosystem {#xmp-ecosystem}
 
-XMP definierar en [metadatamodell](https://en.wikipedia.org/wiki/Metadata) som kan användas med alla definierade metadataobjekt. XMP definierar också särskilda [scheman](https://en.wikipedia.org/wiki/XML_schema) för grundläggande egenskaper som är användbara för att spela in en resurshistorik när den går igenom flera bearbetningssteg, från att fotograferas, [skannas](https://en.wikipedia.org/wiki/Image_scanner)eller redigeras som text, genom fotoredigeringssteg (som [beskärning](https://en.wikipedia.org/wiki/Cropping_%28image%29) eller färgjustering), till att sammanfoga en slutbild. Med XMP kan varje program eller enhet läggas in i en digital resurs, som sedan kan sparas i den slutliga digitala filen.
+XMP definierar en [metadatamodell](https://sv.wikipedia.org/wiki/Metadata) som kan användas med alla definierade metadataobjekt. XMP definierar också särskilda [scheman](https://en.wikipedia.org/wiki/XML_schema) för grundläggande egenskaper som är användbara för att logga en resurs historik genom olika bearbetningssteg – från fotografering, [skanning](https://sv.wikipedia.org/wiki/Bildl%C3%A4sare) och textredigering via fotoredigeringssteg (som [beskärning](https://sv.wikipedia.org/wiki/Bildbesk%C3%A4rning) eller färgjustering) till den slutliga bilden. Med XMP kan alla program och enheter längs vägen lägga till egen information i en digital resurs, som sedan sparas i den slutliga digitala filen.
 
-XMP är oftast serialiserat och lagras med en delmängd av [W3C](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium) [Resource Description Framework](https://en.wikipedia.org/wiki/Resource_Description_Framework) (RDF), som i sin tur uttrycks i [XML](https://en.wikipedia.org/wiki/XML).
+XMP serialiseras och lagras oftast med en underuppsättning av [W3C](https://sv.wikipedia.org/wiki/World_Wide_Web_Consortium) [Resource Description Framework](https://sv.wikipedia.org/wiki/Resource_Description_Framework) (RDF), som i sin tur uttrycks i [XML](https://sv.wikipedia.org/wiki/XML).
 
 ## Fördelar med XMP {#advantages-of-xmp}
 
