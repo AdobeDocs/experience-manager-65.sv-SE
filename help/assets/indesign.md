@@ -3,7 +3,7 @@ title: Integrera [!DNL Adobe Experience Manager Assets] med [!DNL Adobe InDesign
 description: Lär dig hur du integrerar [!DNL Adobe Experience Manager Assets] med [!DNL Adobe InDesign Server].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
 source-wordcount: '1548'
 ht-degree: 1%
@@ -58,7 +58,7 @@ Detta kommandoskript kommer att:
    * Den extraherade texten och filerna lagras i [!DNL Experience Manager Assets].
    * Alla återgivningar lagras i [!DNL Experience Manager Assets], i själva resursen.
 
-## Integrera [!DNL InDesign Server] med AEM {#integrating-the-indesign-server-with-aem}
+## Integrera [!DNL InDesign Server] med Experience Manager {#integrating-the-indesign-server-with-aem}
 
 Om du vill integrera [!DNL InDesign Server] för användning med [!DNL Experience Manager Assets] och efter att du har konfigurerat din proxy måste du:
 
@@ -111,7 +111,7 @@ Medieextraheringsargument och skriptsökvägar
 
 * **Utöka skript**: Här kan du ange olika skriptkombinationer. Om du vill att dina egna skript ska köras på [!DNL InDesign Server]filen sparar du skripten på `/apps/settings/dam/indesign/scripts`.
 
-Mer information om InDesign-skript finns i [dokumentationen för InDesign-utvecklare](https://www.adobe.com/devnet/indesign/documentation.html#idscripting)
+Mer information om [!DNL Adobe InDesign] skript finns i dokumentationen för [InDesign-utvecklare](https://www.adobe.com/devnet/indesign/documentation.html#idscripting)
 
 >[!CAUTION]
 >
@@ -167,7 +167,7 @@ Om [!DNL InDesign Server] och [!DNL Experience Manager] körs på olika värdar 
 
 1. Gå till webbkonsolen på `https://[aem_server]:[port]/system/console/configMgr`.
 1. Leta reda på konfigurationen **[!UICONTROL Day CQ Link Externalizer]** och klicka på **[!UICONTROL Edit]** för att öppna den.
-1. Ange värdnamnet och kontextsökvägen för [!DNL Indesign Server] och klicka på **Spara**.
+1. Ange värdnamnet och kontextsökvägen för [!DNL Adobe InDesign Server] och klicka på **Spara**.
 
    ![chlimage_1-97](assets/chlimage_1-290.png)
 
