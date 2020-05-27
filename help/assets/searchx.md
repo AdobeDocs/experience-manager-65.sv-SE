@@ -3,9 +3,9 @@ title: Utöka sökfunktionerna i Adobe Experience Manager Assets
 description: Utöka sökfunktionerna i Adobe Experience Manager Assets utöver standardvärdena.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 2348df62f970d7e2ff41ad386f29c1550ea94e48
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: '859'
 ht-degree: 15%
 
 ---
@@ -35,7 +35,7 @@ Om du vill täcka över de förkonfigurerade predikaten kopierar du `facets` nod
 
 ## Lägg till tabbar {#adding-tabs}
 
-Du kan lägga till fler sökflikar genom att konfigurera dem i AEM Resurser Admin. Så här skapar du ytterligare flikar:
+Du kan lägga till fler sökflikar genom att konfigurera dem i gränssnittet Resurser-admin. Så här skapar du ytterligare flikar:
 
 1. Skapa mappstrukturen `/apps/wcm/core/content/damadmin/tabs,`om den inte redan finns, och kopiera `tabs` noden från `/libs/wcm/core/content/damadmin` och klistra in den.
 1. Skapa och konfigurera den andra fliken efter behov.
@@ -48,7 +48,7 @@ Du kan lägga till fler sökflikar genom att konfigurera dem i AEM Resurser Admi
 
 [!DNL Assets] innehåller en uppsättning fördefinierade predikat som kan användas för att anpassa en resursdelssida. Att anpassa en resurs på det här sättet beskrivs i [Skapa och konfigurera en resursdelssida](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page).
 
-Förutom att använda befintliga predikat kan AEM-utvecklare även skapa egna predikat med [Query Builder API](/help/sites-developing/querybuilder-api.md).
+Förutom att använda befintliga predikat kan Experience Manager-utvecklare även skapa egna prediktiv med [Query Builder API](/help/sites-developing/querybuilder-api.md).
 
 Det krävs grundläggande kunskaper om [widgetramverket](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html)för att kunna skapa anpassade predikat.
 
@@ -296,6 +296,6 @@ Följande predikat är tillgängliga som förkonfigurerade ExtJS-widgetar.
 
 ## Anpassa sökresultat {#customizing-search-results}
 
-Presentationen av sökresultaten på en resursdelningssida styrs av det valda objektivet. AEM Assets innehåller en uppsättning fördefinierade objektiv som kan användas för att anpassa en resursdelssida. Att anpassa en resurs på det här sättet beskrivs i [Skapa och konfigurera en resursdelssida](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page).
+Presentationen av sökresultaten på en resursdelningssida styrs av det valda objektivet. Experience Manager Assets innehåller en uppsättning fördefinierade objektiv som kan användas för att anpassa en resursdelningssida. Att anpassa en resurs på det här sättet beskrivs i [Skapa och konfigurera en resursdelssida](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page).
 
-Förutom att använda befintliga linser kan AEM-utvecklare även skapa egna linser.
+Förutom att använda befintliga objektiv kan Experience Manager-utvecklare även skapa egna objektiv.
