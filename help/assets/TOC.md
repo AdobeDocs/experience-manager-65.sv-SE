@@ -2,17 +2,17 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: Användarhandbok för AEM 6.5 Assets
+user-guide-title: Användarhandbok för Experience Manager 6.5 Assets
 translation-type: tm+mt
-source-git-commit: 4f580a9e1a43ef59a4991df6bc4a96cfffe5173e
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: '643'
 ht-degree: 38%
 
 ---
 
 
-# Användarhandbok för AEM 6.5 Assets {#assets}
+# Användarhandbok för Experience Manager 6.5 Assets {#assets}
 
 + [Användarhandbok för [!DNL Assets]](home.md)
 + [Versionsinformation om AEM 6.5 Assets](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/assets.html)
@@ -153,7 +153,7 @@ ht-degree: 38%
    + [Asynkrona åtgärder](asynchronous-jobs.md)
    + [Ljuslåda](touch-ui-light-box.md)
    + [Resursinsikter](touch-ui-asset-insights.md)
-   + [Aktivera tillgångsinsikter via DTM](touch-ui-using-dtm-for-asset-insights.md)
+   + [Aktivera resursinsikter via Adobe Launch](touch-ui-using-dtm-for-asset-insights.md)
    + [Konfigurera resursinsikter](touch-ui-configuring-asset-insights.md)
    + [Checka in och checka ut resurser](check-out-and-submit-assets.md)
    + [Använd översättningsmolntjänster på mappar](transition-cloud-services.md)
