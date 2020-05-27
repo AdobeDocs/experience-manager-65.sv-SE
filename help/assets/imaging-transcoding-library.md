@@ -3,9 +3,9 @@ title: Konverteringsbibliotek för bildbehandling
 description: Lär dig hur du konfigurerar och använder Adobes Imaging Transcoding Library, en bildbehandlingslösning som kan utföra grundläggande bildhanteringsfunktioner, inklusive kodning, omkodning, bildomsampling och storleksändring.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '942'
 ht-degree: 0%
 
 ---
@@ -55,10 +55,10 @@ Kommandoradsargumenten för Imaging Transcoding Library kan innehålla följande
 
 Du kan konfigurera följande alternativ för `-resize` parametern:
 
-* `X`: `Works similar to AEM. For example -resize 319.`
-* `WxH`: `Aspect Ratio will not be maintained, For example -resize 319X319.`
-* `Wx`: `Fixes the width and calculates the height maintaining the aspect ratio. For example -resize 319x.`
-* `xH`: `Fixes the height and calculates the width maintaining the aspect ratio. For example -resize x319.`
+* `X`: Fungerar ungefär som med Experience Manager. Till exempel -resize 319.
+* `WxH`: Proportionerna behålls inte, till exempel `-resize 319x319`.
+* `Wx`: Fastställer bredden och beräknar höjden med bibehållna proportioner. Till exempel `-resize 319x`.
+* `xH`: Korrigerar höjden och beräknar bredden med bibehållna proportioner. Till exempel `-resize x319`.
 
 ```shell
  -AllowUpsampling (Resizes smaller images)
@@ -74,7 +74,7 @@ Om du vill konfigurera ITL-bearbetning skapar du en konfigurationsfil och uppdat
 
 Om du vill konfigurera biblioteket skapar du en .conf-fil som anger biblioteken med följande steg. Du behöver administratörs- eller rotbehörigheter.
 
-1. Ladda ned paketet [](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-imaging-transcoding-library-pkg) Imaging Transcoding Library och installera det med Package Manager. Paketet är kompatibelt med AEM 6.5.
+1. Ladda ned paketet [](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-imaging-transcoding-library-pkg) Imaging Transcoding Library och installera det med Package Manager. Paketet är kompatibelt med Experience Manager 6.5.
 
 1. Om du vill veta ett paket-ID för `com.day.cq.dam.cq-dam-switchengine`loggar du in på webbkonsolen och klickar på **[!UICONTROL OSGi > Bundles]**. Du kan även öppna paketkonsolen genom att gå till `https://[aem_server:[port]/system/console/bundles/` URL. Hitta paketet och dess ID `com.day.cq.dam.cq-dam-switchengine` .
 
@@ -92,7 +92,7 @@ Om du vill konfigurera biblioteket skapar du en .conf-fil som anger biblioteken 
 
 1. Kör `ldconfig` kommando för att skapa nödvändiga länkar och cacheminne.
 
-1. Redigera `.bash_profile` filen på kontot som används för att starta AEM. Lägg till `LD_LIBRARY_PATH` följande:
+1. Redigera `.bash_profile` filen i det konto som används för att starta Experience Manager. Lägg till `LD_LIBRARY_PATH` följande:
 
    ```shell
    LD_LIBRARY_PATH=.
@@ -136,8 +136,9 @@ Om du till exempel vill skapa miniatyrbilder för en TIFF-bild med hjälp av Ima
 
 1. Synkronisera den uppdaterade [!UICONTROL DAM Update Asset] arbetsflödesmodellen. Spara arbetsflödet.
 
-Verifiera konfigurationen, ladda upp en TIFF-bild och övervaka filen error.log. Du kommer att lägga märke till `INFO` meddelanden med omnämnanden av `SwitchEngineHandlingProcess execute: executing command line`. Loggarna anger de återgivningar som genereras. När arbetsflödet är klart kan du visa de nya återgivningarna i AEM.
+Verifiera konfigurationen, ladda upp en TIFF-bild och övervaka filen error.log. Du kommer att lägga märke till `INFO` meddelanden med omnämnanden av `SwitchEngineHandlingProcess execute: executing command line`. Loggarna anger de återgivningar som genereras. När arbetsflödet är klart kan du visa de nya återgivningarna i Experience Manager.
 
 >[!MORELIKETHIS]
 >
 >* [MIME-typer som stöds, artikel](assets-formats.md#supported-image-transcoding-library)
+
