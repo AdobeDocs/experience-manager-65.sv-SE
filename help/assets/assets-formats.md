@@ -3,7 +3,7 @@ title: Filformat som stöds för bearbetning i [!DNL Adobe Experience Manager As
 description: Filformat och MIME-typer som stöds av [!DNL Assets] och [!DNL Dynamic Media] samt de funktioner som stöds för varje format.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 138c8d960ad8c1de20212b7aeebbda0a486832ee
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
 source-wordcount: '1780'
 ht-degree: 2%
@@ -103,7 +103,7 @@ The following table describes the sub-types of raster image formats that are *no
 
 ## PDF Rasterizer-bibliotek som stöds {#supported-pdf-rasterizer-library}
 
-Adobe PDF Rasterizer-biblioteket genererar högkvalitativa miniatyrbilder och förhandsgranskningar för stora och innehållsintensiva Adobe Illustrator- och PDF-filer. Adobe rekommenderar att du använder PDF-rastreringsbiblioteket för följande:
+Adobe PDF Rasterizer-biblioteket genererar högkvalitativa miniatyrbilder och förhandsgranskningar för stora och innehållsintensiva [!DNL Adobe Illustrator] filer och PDF-filer. Adobe rekommenderar att du använder PDF-rastreringsbiblioteket för följande:
 
 * Innehållsintensiva AI/PDF-filer som är resurskrävande att bearbeta.
 * AI/PDF-filer, för vilka miniatyrer inte genereras som standard.
@@ -121,7 +121,7 @@ Se [Bildkonverteringsbibliotek](imaging-transcoding-library.md).
 
 ## Camera Raw som stöds {#supported-camera-raw}
 
-Med Adobe Camera Raw-biblioteket kan AEM Resurser importera råbilder. Se [Stöd](camera-raw.md)för Camera Raw.
+Med Adobe Camera Raw-biblioteket kan Assets importera råbilder. Se [Stöd](camera-raw.md)för Camera Raw.
 
 ## Dokumentformat för Assets som stöds {#supported-document-formats}
 
@@ -234,7 +234,7 @@ Hur vanliga DAM-arbetsflöden kan användas för ett par andra filformat beskriv
 
 ## MIME-typer som stöds {#supported-mime-types}
 
-Som standard identifierar AEM filtypen med hjälp av filtillägget. AEM kan identifiera det från innehållet i filerna. För den senare väljer du [!UICONTROL Detect MIME from content] ett alternativ [!UICONTROL Day CQ DAM Mime Type Service] i AEM Web Console.
+Som standard identifierar Experience Manager filtypen med hjälp av filtillägget. Experience Manager kan identifiera det från filernas innehåll. För det senare väljer du [!UICONTROL Detect MIME from content] ett alternativ [!UICONTROL Day CQ DAM Mime Type Service] i Experience Manager-webbkonsolen.
 
 En lista över MIME-typer som stöds finns i CRXDE Lite på `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`.
 
