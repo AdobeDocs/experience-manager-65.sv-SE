@@ -4,9 +4,9 @@ description: Lär dig mer om hur du hanterar samlingar med resurser, som att ska
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 5d66bf75a6751e41170e6297d26116ad33c2df44
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '2065'
+source-wordcount: '2064'
 ht-degree: 12%
 
 ---
@@ -183,7 +183,7 @@ Om du vill anpassa [!UICONTROL Properties] metadatasidan, inklusive lägga till,
 
 ## Sök i samlingar {#searching-collections}
 
-Du kan söka efter samlingar från samlingskonsolen. När du söker med nyckelord i rutan Omnissearch söker AEM Resurser efter samlingsnamn, metadata och de taggar som har lagts till i samlingarna.
+Du kan söka efter samlingar från samlingskonsolen. När du söker med nyckelord i sökrutan söker Resurser efter samlingsnamn, metadata och de taggar som har lagts till i samlingarna.
 
 Om du söker efter samlingar från den översta nivån returneras bara enskilda samlingar i sökresultaten. Resurser eller mappar i samlingarna exkluderas. I alla andra fall (till exempel i en enskild samling eller i en mapphierarki) returneras alla relevanta resurser, mappar och samlingar.
 
@@ -191,7 +191,7 @@ Om du söker efter samlingar från den översta nivån returneras bara enskilda 
 
 Öppna en samling genom att klicka på den i konsolen Samlingar.
 
-I en samling är sökning efter AEM-resurser begränsad till resurser (och deras taggar och metadata) i den samling som du visar. När du söker i en mapp returneras alla matchande resurser och underordnade mappar i den aktuella mappen. När du söker i en samling returneras endast matchande resurser, mappar och andra samlingar som är direktmedlemmar i samlingen.
+I en samling är Experience Manager-sökningen begränsad till resurser (och deras taggar och metadata) i den samling som du visar. När du söker i en mapp returneras alla matchande resurser och underordnade mappar i den aktuella mappen. När du söker i en samling returneras endast matchande resurser, mappar och andra samlingar som är direktmedlemmar i samlingen.
 
 ## Redigera samlingsinställningar {#editing-collection-settings}
 
