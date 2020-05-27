@@ -4,7 +4,10 @@ description: Förslag och vägledning om konfiguration av [!DNL Experience Manag
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+workflow-type: tm+mt
+source-wordcount: '2669'
+ht-degree: 0%
 
 ---
 
@@ -124,13 +127,13 @@ Din nätverksoptimeringsstrategi är i första hand beroende av hur mycket bandb
 
 ### Övergående arbetsflöden {#transient-workflows}
 
-Ställ in arbetsflödet [!UICONTROL DAM Update Asset] på Transient om det är möjligt. Inställningen minskar avsevärt de allmänna kostnader som krävs för att bearbeta arbetsflöden, eftersom arbetsflöden i det här fallet inte behöver passera genom de normala spårnings- och arkiveringsprocesserna.
+Ställ in arbetsflödet på Övergående när det är möjligt [!UICONTROL DAM Update Asset] . Inställningen minskar avsevärt de allmänna kostnader som krävs för att bearbeta arbetsflöden, eftersom arbetsflöden i det här fallet inte behöver passera genom de normala spårnings- och arkiveringsprocesserna.
 
 1. Navigera till `/miscadmin` i [!DNLEExperience Manager] -instansen `https://[aem_server]:[port]/miscadmin`.
 
-1. Expandera **[!UICONTROL Verktyg]** > **[!UICONTROL Arbetsflöde]** > **[!UICONTROL Modeller]** > **[!UICONTROL dam]**.
+1. Expandera **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]** > **[!UICONTROL dam]**.
 
-1. Öppna **[!UICONTROL DAM-uppdateringsresurs]**. Gå till fliken **[!UICONTROL Sida]** i den flytande verktygspanelen och klicka sedan på **[!UICONTROL Sidegenskaper]**.
+1. Öppna **[!UICONTROL DAM Update Asset]**. I den flytande verktygspanelen växlar du till **[!UICONTROL Page]** fliken och klickar sedan på **[!UICONTROL Page Properties]**.
 
 1. Select **[!UICONTROL Transient Workflow]** and click **[!UICONTROL OK]**.
 
@@ -138,7 +141,7 @@ Ställ in arbetsflödet [!UICONTROL DAM Update Asset] på Transient om det är m
    >
    >Vissa funktioner har inte stöd för tillfälliga arbetsflöden. Om din [!DNL Assets] distribution kräver dessa funktioner ska du inte konfigurera tillfälliga arbetsflöden.
 
-Om det inte går att använda tillfälliga arbetsflöden kör du regelbundet arbetsflödesrensning för att ta bort arkiverade arbetsflöden för [!UICONTROL DAM-uppdatering av tillgångar] för att säkerställa att systemprestanda inte försämras.
+Om det inte går att använda tillfälliga arbetsflöden kör du regelbundet arbetsflödesrensning för att ta bort arkiverade [!UICONTROL DAM Update Asset] arbetsflöden så att systemprestanda inte försämras.
 
 Vanligtvis kör du rensningsarbetsflödena varje vecka. I resurskrävande scenarier, till exempel vid omfattande tillgångsinmatning, kan du dock köra det oftare.
 
@@ -150,27 +153,27 @@ När du till exempel har kört flera icke-tillfälliga arbetsflöden (som skapar
 
 ### Maximalt antal parallella jobb {#maximum-parallel-jobs}
 
-Som standard [!DNLEkör Experience Manager] ett maximalt antal parallella jobb som är lika med antalet processorer på servern. Problemet med den här inställningen är att under perioder med hög belastning används alla processorer av arbetsflödena för [!UICONTROL DAM Update Asset] , vilket gör att användargränssnittet tar längre tid och förhindrar att [!DNLEExperience Manager] kör andra processer som skyddar serverns prestanda och stabilitet. Det är en god vana att ange det här värdet till hälften av de processorer som är tillgängliga på servern genom att utföra följande steg:
+Som standard [!DNLEkör Experience Manager] ett maximalt antal parallella jobb som är lika med antalet processorer på servern. Problemet med den här inställningen är att under perioder med hög belastning så upptar alla processorer [!UICONTROL DAM Update Asset] arbetsflöden, vilket gör att gränssnittets svarstid minskar och förhindrar att [!DNLEExperience Manager] kör andra processer som skyddar serverns prestanda och stabilitet. Det är en god vana att ange det här värdet till hälften av de processorer som är tillgängliga på servern genom att utföra följande steg:
 
 1. Gå till [!DNLEExperience Manager] Author `https://[aem_server]:[port]/system/console/slingevent`.
 
-1. Klicka på **[!UICONTROL Redigera]** i varje arbetsflödeskö som är relevant för implementeringen, till exempel **[!UICONTROL Bevilja tillfällig arbetsflödeskö]**.
+1. Klicka **[!UICONTROL Edit]** på varje arbetsflödeskö som är relevant för implementeringen, till exempel **[!UICONTROL Granite Transient Workflow Queue]**.
 
-1. Uppdatera värdet för **[!UICONTROL maximalt antal parallella jobb]** och klicka på **[!UICONTROL Spara]**.
+1. Uppdatera värdet för **[!UICONTROL Maximum Parallel Jobs]** och klicka **[!UICONTROL Save]**.
 
 Att ställa in en kö på hälften av de tillgängliga processorerna är en användbar lösning att börja med. Du kan dock behöva öka eller minska det här antalet för att få maximal genomströmning och justera det efter miljö. Det finns separata köer för tillfälliga och icke-tillfälliga arbetsflöden samt andra processer, till exempel externa arbetsflöden. Om flera köer är inställda på 50 % av processorerna aktiva samtidigt kan systemet snabbt bli överbelastat. De köer som används ofta varierar mycket mellan olika implementeringar. Därför kan du behöva konfigurera dem noggrant för maximal effektivitet utan att ge avkall på serverstabiliteten.
 
 ### DAM-uppdateringskonfiguration {#dam-update-asset-configuration}
 
-Arbetsflödet för [!UICONTROL DAM-uppdatering av resurser] innehåller en komplett serie steg som är konfigurerade för uppgifter, till exempel Scene7 PTIFF-generering och InDesign Server-integrering. De flesta användare behöver dock inte utföra flera av dessa steg. Adobe rekommenderar att du skapar en anpassad kopia av arbetsflödesmodellen [!UICONTROL DAM Update Asset] och tar bort alla onödiga steg. I det här fallet ska du uppdatera startarna för [!UICONTROL DAM Update Asset] så att de pekar på den nya modellen.
+Arbetsflödet innehåller en komplett serie steg som är konfigurerade för uppgifter, till exempel generering av Scene7 PTIFF och [!UICONTROL DAM Update Asset] [!DNL Adobe InDesign Server] integrering. De flesta användare behöver dock inte utföra flera av dessa steg. Adobe rekommenderar att du skapar en anpassad kopia av arbetsflödesmodellen och tar bort alla onödiga steg. [!UICONTROL DAM Update Asset] I det här fallet uppdaterar du startarna [!UICONTROL DAM Update Asset] så att de pekar på den nya modellen.
 
-Om du kör arbetsflödet för [!UICONTROL DAM-uppdatering av resurser] kraftigt kan du öka storleken på fildatalagret. Resultaten från ett experiment som Adobe har utfört har visat att datalagrets storlek kan öka med ungefär 400 GB om ca 500 arbetsflöden utförs inom 8 timmar.
+Om du kör arbetsflödet intensivt kan du öka storleken på fildatalagret avsevärt. [!UICONTROL DAM Update Asset] Resultaten från ett experiment som Adobe har utfört har visat att datalagrets storlek kan öka med ungefär 400 GB om ca 500 arbetsflöden utförs inom 8 timmar.
 
 Det är en tillfällig ökning och datalagret återställs till den ursprungliga storleken när du har kört skräpinsamlingsaktiviteten för datalagret.
 
 Vanligtvis körs skräpinsamlingsaktiviteten för datalager varje vecka tillsammans med andra schemalagda underhållsaktiviteter.
 
-Om du har begränsat diskutrymme och kör arbetsflödena för [!UICONTROL DAM-uppdatering av resurser] intensivt bör du överväga att schemalägga skräpinsamlingsaktiviteten oftare.
+Om du har begränsat diskutrymme och kör [!UICONTROL DAM Update Asset] arbetsflöden intensivt bör du överväga att schemalägga skräpinsamlingen oftare.
 
 #### Generering av rendering vid körning {#runtime-rendition-generation}
 
@@ -182,7 +185,7 @@ Ett annat sätt är att använda Scene7-teknik för att helt och hållet överl�
 
 #### ImageMagick {#imagemagick}
 
-Om du anpassar arbetsflödet [!UICONTROL DAM Update Asset] för att generera återgivningar med ImageMagick rekommenderar Adobe att du ändrar `policy.xml` filen i `/etc/ImageMagick/`. Som standard använder ImageMagick hela det tillgängliga diskutrymmet på operativsystemsvolymen och det tillgängliga minnet. Gör följande konfigurationsändringar i `policymap` avsnittet av för `policy.xml` att begränsa resurserna.
+Om du anpassar arbetsflödet för att generera återgivningar med ImageMagick rekommenderar Adobe att du ändrar [!UICONTROL DAM Update Asset] filen i `policy.xml` `/etc/ImageMagick/`. Som standard använder ImageMagick hela det tillgängliga diskutrymmet på operativsystemsvolymen och det tillgängliga minnet. Gör följande konfigurationsändringar i `policymap` avsnittet av för `policy.xml` att begränsa resurserna.
 
 ```xml
 <policymap>
@@ -254,7 +257,7 @@ Vissa optimeringar kan göras för Oak-indexkonfigurationer som kan förbättra 
 
 Om dina användare inte behöver göra fulltextsökning av resurser, till exempel söka igenom text i PDF-dokument, kan du inaktivera det. Du förbättrar indexets prestanda genom att inaktivera fulltextindexering. Så här inaktiverar du [!DNL Apache Lucene] textrahering:
 
-1. I [!DNL Experience Manager] gränssnittet öppnar du [!UICONTROL Package Manager].
+1. I [!DNL Experience Manager] gränssnittet, åtkomst [!UICONTROL Package Manager].
 1. Överför och installera det paket som finns på [disable_indexingbinarytextextraction-10.zip](assets/disable_indexingbinarytextextraction-10.zip).
 
 ### Gissa totalt {#guess-total}
@@ -265,7 +268,7 @@ När du skapar frågor som genererar stora resultatuppsättningar bör du använ
 
 ### Stora filer {#large-files}
 
-Det finns två stora kända fel som rör stora filer i [!DNL Experience Manager]. När filer når större storlekar än 2 GB kan synkronisering med vänteläge i kallt läge hamna i en situation där minnet är slut. I vissa fall förhindras att standby-synkronisering körs. I andra fall kraschar den primära instansen. Detta scenario gäller för alla filer i [!DNL Experience Manager] som är större än 2 GB, inklusive innehållspaket.
+Det finns två stora kända fel som rör stora filer i [!DNL Experience Manager]. När filer når större storlekar än 2 GB kan synkronisering med kalla väntelägen hamna i en situation där minnet är slut. I vissa fall förhindras att standby-synkronisering körs. I andra fall kraschar den primära instansen. Detta scenario gäller för alla filer i [!DNL Experience Manager] som är större än 2 GB, inklusive innehållspaket.
 
 På samma sätt kan det ta lite tid innan filen är helt beständig från cachen till filsystemet om filen är 2 GB stor när ett delat S3-datalager används. Detta innebär att om du använder en binär replikering utan binärfiler kan det hända att binära data inte har befunnits beständiga innan replikeringen slutförs. Denna situation kan leda till problem, särskilt om datatillgängligheten är viktig.
 
@@ -300,8 +303,8 @@ För att minimera latens och uppnå hög genomströmning genom effektiv CPU-anv�
 * Möjliggör tillfälliga arbetsflöden.
 * Justera Granite-arbetsflödesköerna för att begränsa antalet samtidiga jobb.
 * Konfigurera [!DNL ImageMagick] för att begränsa resursförbrukning.
-* Ta bort onödiga steg från arbetsflödet för [!UICONTROL DAM-uppdatering av resurser] .
+* Ta bort onödiga steg från [!UICONTROL DAM Update Asset] arbetsflödet.
 * Konfigurera arbetsflöde och versionsrensning.
 * Optimera index med de senaste servicepaketen och snabbkorrigeringarna. Kontakta Adobes kundtjänst för eventuella ytterligare indexoptimeringar.
 * Använd gissningTotal för att optimera frågeprestanda.
-* Om du konfigurerar [!DNL Experience Manager] att identifiera filtyper från filernas innehåll (genom att aktivera **[!UICONTROL Day CQ DAM Mime Type Service]** i **[!UICONTROL AEM Web Console]**) överför du många filer samtidigt under icke-toppade tider eftersom det är resurskrävande.
+* If you configure [!DNL Experience Manager] to detect file types from the content of the files (by enabling **[!UICONTROL Day CQ DAM Mime Type Service]** in the **[!UICONTROL AEM Web Console]**), upload many files in bulk during non-peak hours as it is resource-intensive.
