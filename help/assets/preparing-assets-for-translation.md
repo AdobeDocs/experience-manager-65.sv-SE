@@ -3,9 +3,9 @@ title: Förbered resurser för översättning
 description: Skapa rotmappar för språk för att förbereda resurser för översättning för stöd av flerspråkiga resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '438'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Flerspråkiga resurser innebär resurser med binärfiler, metadata och taggar på flera språk. I allmänhet finns binära filer, metadata och taggar för resurser på ett språk, som sedan översätts till andra språk för användning i flerspråkiga projekt.
 
-I Adobe Experience Manager (AEM) Assets inkluderas flerspråkiga resurser i mappar, där varje mapp innehåller resurserna på ett annat språk.
+I Adobe Experience Manager Assets inkluderas flerspråkiga resurser i mappar, där varje mapp innehåller resurserna på ett annat språk.
 
 Varje språkmapp kallas för en språkkopia. Rotmappen för en språkkopia, som kallas språkrot, identifierar språket för innehållet i språkkopian. Till exempel är */content/dam/it* den italienska språkroten för den italienska språkkopian. För språkkopior måste en [korrekt konfigurerad språkrot](preparing-assets-for-translation.md#creating-a-language-root) användas, så att rätt språk används när översättningar av källresurser utförs.
 
@@ -58,7 +58,7 @@ Rotsidan för den italienska språkkopian av exempelhierarkin har till exempel `
 
 ## Visa språkrötter {#viewing-language-roots}
 
-I AEM-gränssnittet finns en **[!UICONTROL References]** panel med en lista över språkrötter som har skapats i AEM Resurser.
+Experience Manager-gränssnittet innehåller en **[!UICONTROL References]** panel med en lista över språkrötter som har skapats i Assets.
 
 1. I resurskonsolen väljer du den språkinställning som du vill skapa språkkopior för.
 1. Klicka på ikonen GlobalNav och välj **[!UICONTROL References]** att öppna [!UICONTROL Reference] rutan.
