@@ -3,14 +3,17 @@ title: Använda sidspåraren och bädda in kod på webbsidor
 description: Lär dig hur du inkluderar sidspåraren och bäddar in JavaScript-koder i webbplatskoden så att Adobe Analytics kan samla in användningsdata runt resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+workflow-type: tm+mt
+source-wordcount: '180'
+ht-degree: 0%
 
 ---
 
 
 # Använda sidspårning och bädda in kod på webbsidor {#using-page-tracker-and-embed-code-in-web-pages}
 
-Sidspåraren är en del av JavaScript-kod som du inkluderar i koden för tredjepartswebbplatser, så att Adobe Analytics kan samla in användningsdata om Adobe Experience Manager-resurser (AEM) på dessa webbplatser.
+Page Tracker är en del av JavaScript-kod som du inkluderar i kod för tredjepartswebbplatser för att göra det möjligt för Adobe Analytics att samla in användningsdata om Adobe Experience Manager Assets på dessa webbplatser.
 
 Om du vill fånga händelser, t.ex. klick, som är specifika för resurser, inkluderar du även koden för inbäddning i koden för tredjepartswebbplatser.
 
