@@ -3,9 +3,9 @@ title: Hantera videoresurser
 description: Lär dig hur du överför, förhandsgranskar, kommenterar och publicerar videomaterial.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '716'
+source-wordcount: '718'
 ht-degree: 10%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 10%
 
 # Hantera videoresurser {#manage-video-assets}
 
-Lär dig hur du hanterar och redigerar videoresurser i Adobe Experience Manager (AEM) Assets. Om du har licens att använda Dynamic Media läser du dokumentationen [för](/help/assets/video.md)Dynamic Media-videon.
+Lär dig hur du hanterar och redigerar videoresurserna i Adobe Experience Manager Assets. Om du har licens att använda Dynamic Media läser du dokumentationen [för](/help/assets/video.md)Dynamic Media-videon.
 
 ## Överföra och förhandsgranska videomaterial {#upload-and-preview-video-assets}
 
-Adobe Experience Manager Assets genererar förhandsgranskningar för videoresurser med tillägget MP4. Om resursens format inte är MP4 installerar du FFmpeg-paketet för att generera en förhandsvisning. FFmpeg skapar videoåtergivningar av typen OGG och MP4. Du kan förhandsgranska dessa återgivningar i användargränssnittet för AEM Resurser.
+Adobe Experience Manager Assets genererar förhandsgranskningar för videoresurser med tillägget MP4. Om resursens format inte är MP4 installerar du FFmpeg-paketet för att generera en förhandsvisning. FFmpeg skapar videoåtergivningar av typen OGG och MP4. Du kan förhandsgranska dessa återgivningar i Assets-användargränssnittet.
 
 1. Navigera till den plats där du vill lägga till digitala resurser i mappen eller undermapparna Digital Assets.
 1. Om du vill överföra resursen klickar du **[!UICONTROL Create]** i verktygsfältet och väljer sedan **[!UICONTROL Files]**. Du kan också släppa det direkt i resursområdet. Mer information om överföring finns i [Överföra resurser](managing-assets-touch-ui.md#uploading-assets) .
@@ -44,11 +44,11 @@ Förutom Experience Manager Assets-konfigurationen kan du ändra följande konfi
 
 >[!NOTE]
 >
->Användargränssnittet i AEM Classic har ingen begränsning för filstorlek på 2 GB. Slutgiltigt arbetsflöde för stor video stöds inte heller helt.
+>Användargränssnittet i Experience Manager Classic har ingen begränsning för filstorlek på 2 GB. Slutgiltigt arbetsflöde för stor video stöds inte heller helt.
 
 Utför följande steg i `/apps` katalogen för att konfigurera en större filstorleksgräns.
 
-1. I AEM klickar du på **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**.
+1. Klicka på **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]** i Experience Manager.
 1. Navigera till CRXDE Lite `/libs/dam/gui/content/assets/jcr:content/actions/secondary/create/items/fileupload`. Tryck på `>>` ikonen om du vill visa katalogfönstret.
 1. From the toolbar, click the **[!UICONTROL Overlay Node]**. Du kan också välja **[!UICONTROL Overlay Node]** på snabbmenyn.
 1. In the **[!UICONTROL Overlay Node]** dialog, click **[!UICONTROL OK]**.
@@ -59,11 +59,11 @@ Utför följande steg i `/apps` katalogen för att konfigurera en större filsto
 1. Ange ett värde i byte på fliken **[!UICONTROL Properties]** för att öka storleksgränsen till önskad storlek. Om du till exempel vill öka storleksgränsen till 30 GB anger du `{sizeLimit : "32212254720"}` ett värde.
 
 1. From the toolbar, touch **[!UICONTROL Save All]**.
-1. I AEM klickar du på **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
+1. Klicka på **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]** i Experience Manager.
 1. På sidan Adobe Experience Manager Web Console Bundles, under kolumnen Namn i tabellen, letar du reda på och klickar på **[!UICONTROL Adobe Granite Workflow External Process Job Handler]**.
 1. På sidan Extern processhanterare för Adobe Granite-arbetsflöde anger du antalet sekunder för både fältet **[!UICONTROL Default Timeout]** och fältet **[!UICONTROL Max Timeout]** som `18000` (fem timmar).
 1. Klicka på **[!UICONTROL Save]**.
-1. I AEM klickar du på **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
+1. Klicka på **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]** i Experience Manager.
 1. På sidan Arbetsflödesmodeller väljer du **[!UICONTROL Dynamic Media Encode Video]** och klickar sedan på **[!UICONTROL Edit]**.
 1. Dubbelklicka på **[!UICONTROL Dynamic Media Video Service Process]** komponenten på arbetsflödessidan.
 1. I dialogrutan [!UICONTROL Step Properties], på fliken **[!UICONTROL Common]**, expanderar du **Avancerade inställningar**.
