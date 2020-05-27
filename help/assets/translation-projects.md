@@ -3,9 +3,9 @@ title: Skapa översättningsprojekt
 description: Lär dig hur du skapar översättningsprojekt i [!DNL Adobe Experience Manager].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '1766'
+source-wordcount: '1765'
 ht-degree: 10%
 
 ---
@@ -25,7 +25,7 @@ Om du vill skapa en språkkopia utlöser du ett av följande språkkopieringsarb
 
 >[!NOTE]
 >
->Om du startar ett översättningsarbetsflöde för komplexa resurser, som PDF- och InDesign-filer, skickas inte delresurserna eller återgivningarna (om sådana finns) för översättning.
+>Om du startar ett översättningsarbetsflöde för komplexa resurser, till exempel PDF-filer och [!DNL Adobe InDesign] -filer, skickas inte delresurserna eller återgivningarna (om sådana finns) för översättning.
 
 ## Skapa och översätta arbetsflöde {#create-and-translate-workflow}
 
