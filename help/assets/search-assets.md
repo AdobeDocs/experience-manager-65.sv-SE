@@ -4,9 +4,9 @@ description: Lär dig hur du hittar de nödvändiga resurserna i [!DNL Adobe Exp
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '5828'
+source-wordcount: '5822'
 ht-degree: 4%
 
 ---
@@ -162,7 +162,7 @@ Du kan söka efter resurser baserat på exakta värden för specifika metadataf�
 | Originalformat | skapare:John |
 | Plats | plats:NA |
 | Beskrivning | description:&quot;Sample Image&quot; |
-| Skapare | creatortool:&quot;Adobe Photoshop CC 2015&quot; |
+| Skapare | creatortool:&quot;Adobe Photoshop CC 2020&quot; |
 | Copyright-ägare | copyrightowner:&quot;Adobe Systems&quot; |
 | Medarbetare | medarbetare:John |
 | Användningsvillkor | usageterms:&quot;CopyRights Reserved&quot; |
@@ -200,7 +200,7 @@ Här är några exempel på sökformat för komplexa frågor:
 
 ### Söka efter resurser från Adobe Asset Link-panelen {#aal}
 
-Med Adobe Asset Link kan formgivare nu komma åt innehåll som lagras i [!DNL Experience Manager Assets], utan att lämna de Adobe Creative Cloud-program som stöds. Med hjälp av panelen i appen i Creative Cloud-programmen kan du smidigt söka efter, söka efter, checka ut och checka in resurser: Photoshop, Illustrator och InDesign. Med Asset Link kan du också söka visuellt liknande resultat. Visuella sökresultat bygger på Adobe Senseis maskininlärningsalgoritmer och hjälper användarna att hitta estetiskt liknande bilder. Se [söka efter och bläddra bland resurser](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink) med Adobe Asset Link.
+Med Adobe Asset Link kan formgivare nu komma åt innehåll som lagras i [!DNL Experience Manager Assets], utan att lämna de Adobe Creative Cloud-program som stöds. Med panelen i appen i [!DNL Adobe Creative Cloud apps]: [!DNL Adobe Photoshop], [!DNL Adobe Illustrator]och [!DNL Adobe InDesign]. Med Asset Link kan du också söka visuellt liknande resultat. Visuella sökresultat bygger på Adobe Senseis maskininlärningsalgoritmer och hjälper användarna att hitta estetiskt liknande bilder. Se [söka efter och bläddra bland resurser](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink) med Adobe Asset Link.
 
 ### Söka efter resurser i [!DNL Experience Manager] skrivbordsappen {#desktopapp}
 
