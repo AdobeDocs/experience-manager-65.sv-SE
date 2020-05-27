@@ -3,9 +3,9 @@ title: Utöka resursredigeraren
 description: Lär dig hur du utökar funktionerna i Resursredigeraren med hjälp av anpassade komponenter.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5cea9ed3be322cb8dedfbc6cb38abbdb72d0b7b7
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '701'
+source-wordcount: '695'
 ht-degree: 13%
 
 ---
@@ -17,7 +17,7 @@ Resursredigeraren är den sida som öppnas när användaren klickar på en resur
 
 Konfiguration av redigeraren med de fördefinierade redigeringskomponenterna beskrivs i [Skapa och konfigurera en resursredigeringssida](assets-finder-editor.md#creating-and-configuring-an-asset-editor-page).
 
-Förutom att använda befintliga redigeringskomponenter kan utvecklare av Adobe Experience Manager (AEM) även skapa egna komponenter.
+Förutom att använda befintliga redigeringskomponenter kan Adobe Experience Manager-utvecklare även skapa egna komponenter.
 
 ## Skapa en resursredigeringsmall {#creating-an-asset-editor-template}
 
@@ -29,9 +29,9 @@ Följande exempelsidor finns i Geometrixx:
 
 ### Konfigurera Clientlib {#configuring-clientlib}
 
-AEM Resurskomponenter använder ett tillägg till WCM-klienten för redigering. Klientlibs läses vanligtvis in i `init.jsp`.
+Resurskomponenter använder ett tillägg till klientlib för WCM-redigering. Klientlibs läses vanligtvis in i `init.jsp`.
 
-Jämfört med standardinläsningen av klientlib (i kärnan `init.jsp`) måste en AEM Assets-mall ha följande:
+Jämfört med standardinläsningen av klientlib (i kärnan `init.jsp`) måste en resursmall ha följande:
 
 * Mallen måste innehålla `cq.dam.edit` clientlib (i stället för `cq.wcm.edit`).
 
@@ -41,7 +41,7 @@ I de flesta fall bör kopieringen av det befintliga exemplet `init.jsp` (`/apps/
 
 ### Konfigurera JS-åtgärder {#configuring-js-actions}
 
-Vissa av AEM Assets-komponenterna kräver JS-funktioner som definieras i `component.js`. Kopiera den här filen till komponentkatalogen och länka den.
+Vissa Assets-komponenter kräver JS-funktioner som definieras i `component.js`. Kopiera den här filen till komponentkatalogen och länka den.
 
 ```javascript
 <script type="text/javascript" src="<%= component.getPath() %>/component.js"></script>
@@ -51,7 +51,7 @@ Exemplet läser in den här javascript-källan i `head.jsp`(`/apps/geometrixx/co
 
 ### Ytterligare formatmallar {#additional-style-sheets}
 
-Vissa av komponenterna i AEM Assets använder AEM-widgetbiblioteket. För att kunna återges korrekt i innehållskontexten måste ytterligare en formatmall läsas in. Kodåtgärdskomponenten kräver en till.
+Vissa Assets-komponenter använder widgetbiblioteket. För att kunna återges korrekt i innehållskontexten måste ytterligare en formatmall läsas in. Kodåtgärdskomponenten kräver en till.
 
 ```css
 <link href="/etc/designs/geometrixx/ui.widgets.css" rel="stylesheet" type="text/css">
