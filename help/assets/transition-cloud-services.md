@@ -3,7 +3,7 @@ title: Använd översättningsmolntjänster på mappar
 description: Använd översättningsmolntjänster på mappar
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
 source-wordcount: '361'
 ht-degree: 42%
@@ -13,7 +13,7 @@ ht-degree: 42%
 
 # Använd översättningsmolntjänster på mappar {#applying-translation-cloud-services-to-folders}
 
-Med Adobe Experience Manager (AEM) kan ni använda molnbaserade översättningstjänster från den översättningsleverantör ni väljer för att se till att era resurser översätts utifrån era behov.
+Med Adobe Experience Manager kan ni använda molnbaserade översättningstjänster från den översättningsleverantör ni väljer för att se till att era resurser översätts utifrån era behov.
 
 Du kan använda översättningsmolntjänsten direkt i resursmappen så att den kan användas under översättningsarbetsflöden.
 
@@ -42,7 +42,7 @@ Genom att använda översättningsmolntjänster direkt i resursmappen behöver d
 Du kan använda en anpassad koppling för de översättningstjänster som du vill använda i översättningsarbetsflöden. Om du vill använda en anpassad koppling måste du först installera kopplingen från pakethanteraren. Konfigurera sedan kopplingen från Cloud Services-konsolen. När du har konfigurerat kopplingen är den tillgänglig i listan över kopplingar på fliken Cloud Services som beskrivs i [Använda översättningstjänsterna](transition-cloud-services.md#applying-the-translation-services). När du har använt den anpassade kopplingen och kört översättningsarbetsflödena visas kopplingsinformationen under rubrikerna **[!UICONTROL Provider]** och **[!UICONTROL Method]** i rutan **[!UICONTROL Translation Summary]** för översättningsprojektet.
 
 1. Installera kopplingen från Package Manager.
-1. Click the AEM logo, and navigate to **[!UICONTROL Tools > Deployment > Cloud Services]**.
+1. Klicka på Experience Manager-logotypen och navigera till **[!UICONTROL Tools > Deployment > Cloud Services]**.
 1. Leta upp den koppling du installerade under **[!UICONTROL Third Party Services]** på sidan **[!UICONTROL Cloud Services]**.
 
    ![chlimage_1-218](assets/chlimage_1-218.png)
