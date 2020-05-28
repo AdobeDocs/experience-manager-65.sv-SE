@@ -1,6 +1,6 @@
 ---
-title: Använda elektroniska signaturer i ett formulär med (inaktuella) klottersignaturer
-seo-title: Använda elektroniska signaturer i ett formulär med (inaktuella) klottersignaturer
+title: Använda elektroniska signaturer i ett formulär med hjälp av klottersignaturer
+seo-title: Använda elektroniska signaturer i ett formulär med hjälp av klottersignaturer
 description: Signera formulär med klottrar
 seo-description: Signera formulär med klottrar
 uuid: ffeba886-9b24-4ed1-95c0-e19356ff2f23
@@ -9,16 +9,19 @@ topic-tags: author
 discoiquuid: 76d178d1-8e40-41b3-80d4-66b2f8d04211
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 92a64c8a1ba38f592d18355b8233cb79a2575301
+source-git-commit: 68ea2335a8466c3c23b766efb1a04b6a38d7f670
+workflow-type: tm+mt
+source-wordcount: '509'
+ht-degree: 0%
 
 ---
 
 
-# Använda elektroniska signaturer i ett formulär med (inaktuella) klottersignaturer{#apply-electronic-signatures-to-a-form-using-deprecated-scribble-signatures}
+# Använda elektroniska signaturer i ett formulär med hjälp av klottersignaturer{#apply-electronic-signatures-to-a-form-using-deprecated-scribble-signatures}
 
-Du kan använda komponenten (Föråldrat) **Klottsignatur** och komponenten **Signatursteg** för att rita (Klottra) signatur i ett anpassat formulär. Underskriftsstegkomponenten visar en PDF-version av det adaptiva formuläret. Du måste aktivera alternativet Dokument för post eller formulärmallsbaserade adaptiva formulär för att kunna använda signaturstegskomponenten.
+Du kan använda komponenten **Klottsignatur** och **signaturstegskomponenten** för att rita (Klottra) signatur i ett anpassat formulär. Underskriftsstegkomponenten visar en PDF-version av det adaptiva formuläret. Du måste aktivera alternativet Dokument för post eller formulärmallsbaserade adaptiva formulär för att kunna använda signaturstegskomponenten.
 
-Båda komponenterna har ett fönster, som visas nedan, för att signera ett formulär. Du kan också klicka på geopositioneringsikonen ![aem_6_3_geolocation](assets/aem_6_3_geolocation.png) för att lägga till geopositionering i signaturen.
+Båda komponenterna har ett fönster som visas nedan för att signera ett formulär. Du kan också klicka på geopositioneringsikonen ![aem_6_3_geolocation](assets/aem_6_3_geolocation.png) för att lägga till geopositionering i signaturen.
 
 ![Dialogrutan Klottra signering](assets/scribble-signature.png)
 
@@ -43,9 +46,9 @@ Båda komponenterna har ett fönster, som visas nedan, för att signera ett form
 
    * **Elementnamn**: Ange komponentens namn.
 
-   * **** Titel: Ange komponentens unika namn.
-   * **** Mallmeddelande: Ange det meddelande som ska visas när signatur-PDF-filen läses in. Adobe Sign-tjänsterna tar lite tid att förbereda och läsa in PDF-signaturer.
-   * **** Underteckningstjänst: Välj alternativet **Skriptsignatur** .
+   * **Titel:** Ange komponentens unika namn.
+   * **Mallmeddelande:** Ange det meddelande som ska visas när signatur-PDF-filen läses in. Adobe Sign-tjänsterna tar lite tid att förbereda och läsa in PDF-signaturer.
+   * **Underteckningstjänst:** Välj alternativet **Skriptsignatur** .
 
    * **CSS-klass**: Ange CSS-klass för klientbiblioteket, om det finns någon. Vi rekommenderar att du använder [teman](../../forms/using/themes.md) och [infogade format](../../forms/using/inline-style-adaptive-forms.md) i stället för CSS-klassen.
    Tryck på ikonen Klar ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) för att spara ändringarna. Signaturen har konfigurerats.
@@ -58,7 +61,7 @@ Båda komponenterna har ett fönster, som visas nedan, för att signera ett form
 
    ![Signaturskärm för EchoSign-sida](assets/esignscribblesign.jpg)
 
-1. Klicka på **[!UICONTROL Signera]**. Dialogrutan för klottersignering visas. Signera formuläret och klicka på ikonen Klar ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) för att spara signaturen.
+1. Klicka på **[!UICONTROL Sign]**. Dialogrutan för klottersignering visas. Signera formuläret och klicka på ikonen Klar ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) för att spara signaturen.
 
    ![Dialogrutan Klottra signering](assets/scribblewidget.jpg)
 
