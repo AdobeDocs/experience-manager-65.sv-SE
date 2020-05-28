@@ -7,7 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: e8e2e01b-0117-48c3-86d8-609d29a147be
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 33fab976729baa09fdfd3725542f9e6bc7f37eeb
+source-git-commit: 49209cb64c829fde396e87ca4b2e326ecf1dd941
+workflow-type: tm+mt
+source-wordcount: '1634'
+ht-degree: 0%
 
 ---
 
@@ -88,23 +91,6 @@ Kunderna rekommenderas att granska om de använder funktionen/funktionen i den a
    <td>Komponenter (AEM Sites)</td>
    <td>Komponenter för designimporteraren /libs/wcm/designimportör/komponenter har markerats som borttagna från och med 6.5. Adobe planerar inte att ytterligare förbättra implementeringen av designimportören.</td>
    <td>Adobe planerar att tillhandahålla en alternativ implementering av användningsexemplet i framtida versioner.</td>
-  </tr>
-  <tr>
-   <td>Komponenter (AEM Forms)</td>
-   <td><p>Med signatursteget kan användare verifiera och signera ett anpassat formulär. I tidigare versioner kunde signatursteget använda både Adobe Sign- och Klottsigneringskomponenter som signaturfält. I AEM 6.5-formulär används inte längre skriptsignaturbaserad signering i Signature Step.</p> </td>
-   <td>
-    <ul>
-     <li>Om du har gjort en ny installation:
-      <ul>
-       <li>Använd Adobe Sign-baserad signeringsupplevelse i ett signeringssteg i ett anpassat formulär.</li>
-       <li>Använd en fristående komponent för Klottsignering i ett adaptivt formulär, interaktiv kommunikation och HTML5-formulär.</li>
-      </ul> </li>
-     <li>Om du har uppgraderat från en tidigare version till AEM 6.5-formulär:<br />
-      <ul>
-       <li>Fortsätt att använda funktionen för signering med klottersignering i Signature Step med formulär som redan använder funktionen.<br /> </li>
-       <li>Använd en fristående komponent för Klottsignering eller en Adobe Sign-baserad signeringsupplevelse i ett signeringssteg när du skapar ett formulär. </li>
-      </ul> </li>
-    </ul> <p> </p> <p> </p> </td>
   </tr>
   <tr>
    <td>Foundation</td>
