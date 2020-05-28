@@ -10,7 +10,10 @@ topic-tags: publish
 discoiquuid: db38972c-be3f-49fd-8cc1-45b16ed244af
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: 48d18de8c982ab3b92cad4df030cb1e4a1a8dfc4
+workflow-type: tm+mt
+source-wordcount: '7153'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,8 @@ En administratör kan konfigurera en nätverksmapp, en s.k. bevakad mapp, så at
 
 Du kan använda någon av följande metoder för att skapa en bevakad mapp i filsystemet:
 
-* När du konfigurerar egenskaperna för en speciell nod i konfigurationen för bevakad mapp anger du den fullständiga sökvägen till den överordnade katalogen i egenskapen folderPath och lägger till namnet på den bevakade mapp som ska skapas, vilket visas i följande exempel: `C:/MyPDFs/MyWatchedFolder`Mappen `MyWatchedFolder`finns inte. AEM Forms försöker skapa mappen med den angivna sökvägen.
+* När du konfigurerar egenskaperna för en speciell nod i konfigurationen för bevakad mapp anger du den fullständiga sökvägen till den överordnade katalogen i egenskapen folderPath och lägger till namnet på den bevakade mapp som ska skapas, vilket visas i följande exempel: `C:/MyPDFs/MyWatchedFolder`
+Mappen `MyWatchedFolder`finns inte. AEM Forms försöker skapa mappen med den angivna sökvägen.
 
 * Skapa en mapp på filsystemet innan du konfigurerar en bevakad mappslutpunkt och ange sedan den fullständiga sökvägen i egenskapen folderPath. Mer information om egenskapen folderPath finns i Egenskaper [för](#watchedfolderproperties)bevakad mapp.
 
@@ -214,7 +218,7 @@ Du kan skapa variabler som kan ändras för arbetsflödesbaserade filbearbetning
 
 Du kan starta ett arbetsflöde, en tjänst eller ett skript för att bearbeta dokumenten i en bevakad mapp.
 
-### Använda en tjänst för att bearbeta filer i en bevakad mapp {#using-a-service-to-process-files-of-a-watched-folder-nbsp}
+### Använda en tjänst för att bearbeta filer i en bevakad mapp   {#using-a-service-to-process-files-of-a-watched-folder-nbsp}
 
 En tjänst är en anpassad implementering av `com.adobe.aemfd.watchfolder.service.api.ContentProcessor` gränssnittet. Den registreras med OSGi tillsammans med några anpassade egenskaper. Implementeringens anpassade egenskaper gör den unik och hjälper till att identifiera implementeringen.
 
@@ -298,7 +302,7 @@ Nu kan du använda konfigurerad anpassad plats för att spara skripten.
 
 Med arbetsflöden kan ni automatisera Experience Manager-aktiviteter. Arbetsflöden består av en serie steg som körs i en viss ordning. Varje steg utför en distinkt aktivitet som att aktivera en sida eller skicka ett e-postmeddelande. Arbetsflöden kan interagera med resurser i databasen, användarkonton och Experience Manager-tjänster. Därför kan arbetsflöden koordinera komplicerade saker.
 
-* Tänk på följande innan du skapar ett arbetsflöde:
+* Innan du skapar ett arbetsflöde bör du tänka på följande:
 * Resultatet av ett steg måste vara tillgängligt för alla efterföljande steg.
 Stegen måste kunna uppdatera (eller till och med ta bort) befintliga utdata som genererats av föregående steg.
 * Variablerna används för att flöda anpassade dynamiska data mellan stegen.
@@ -633,7 +637,7 @@ ECMAScript använder PDF Generators createPDF-API för att konvertera Microsoft 
 ### Skapa ett arbetsflöde {#create-a-workflow}
 
 1. Öppna gränssnittet för AEM-arbetsflödet i ett webbläsarfönster.
-https://[servernamn]:&#39;port&#39;/worklow
+https://[servernamn]:&#39;port&#39;/workflow
 
 1. Klicka på **Nytt** i modellvyn. Ange **titel** i dialogrutan Nytt arbetsflöde och klicka på **OK**.
 
