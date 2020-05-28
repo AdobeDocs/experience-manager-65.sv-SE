@@ -10,7 +10,10 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 6e913190-be92-4862-a8b9-517f8bde0044
 translation-type: tm+mt
-source-git-commit: 2d0e0325d1fce2587e4766bf2f60fc5d4accf45b
+source-git-commit: fc09ba6cb923d9ea25ec14af093d7f86a4835d85
+workflow-type: tm+mt
+source-wordcount: '3365'
+ht-degree: 0%
 
 ---
 
@@ -43,7 +46,7 @@ Java Content Repository (JCR)-standarden, [JSR 283](https://docs.adobe.com/conte
 
 Adobes forskningschef (Schweiz) AG.
 
-Paketet [JCR API 2.0](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html) , javax.jcr. &amp;ast; används för direkt åtkomst och hantering av databasinnehåll.
+Paketet [JCR API 2.0](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html) , javax.jcr.&amp;ast; används för direkt åtkomst och hantering av databasinnehåll.
 
 ## Experience Server (CRX) och Jackrabbit {#experience-server-crx-and-jackrabbit}
 
@@ -135,8 +138,8 @@ Med Sling anger du vilket skript som ska återge en viss enhet (genom att ange e
 
 Begäran har delats upp och nödvändig information har extraherats. Databasen genomsöks efter den begärda resursen (innehållsnod):
 
-* Först Sling kontrollerar om det finns en nod på den plats som anges i begäran.t.ex. `../content/corporate/jobs/developer.html`
-* Om ingen nod hittas tas tillägget bort och sökningen upprepas.t.ex. `../content/corporate/jobs/developer`
+* Först Sling kontrollerar om det finns en nod på den plats som anges i begäran. t.ex. `../content/corporate/jobs/developer.html`
+* Om ingen nod hittas tas tillägget bort och sökningen upprepas. t.ex. `../content/corporate/jobs/developer`
 * Om ingen nod hittas returnerar Sling http-koden 404 (Hittades inte).
 
 Med Sling kan även andra saker än JCR-noder vara resurser, men det här är en avancerad funktion.
@@ -174,7 +177,7 @@ Om exemplet ovan `sling:resourceType` är `hr/jobs` för:
 
    Skriptet kommer att vara /apps/hr/jobs/jobs.esp; den sista delen av sling:resourceType utgör filnamnet.
 
-* POST-begäranden (alla typer av begäranden utom GET/HEAD, metodnamnet måste vara versaler)
+* POST-begäranden (alla typer av begäranden exklusive GET/HEAD, metodnamnet måste vara versaler)
 
    POST används i skriptnamnet.
 
@@ -182,7 +185,7 @@ Om exemplet ovan `sling:resourceType` är `hr/jobs` för:
 
 * URL-adresser i andra format, slutar inte med .html
 
-   Exempel `../content/corporate/jobs/developer.pdf`
+   Till exempel `../content/corporate/jobs/developer.pdf`
 
    Skriptet ska vara `/apps/hr/jobs/jobs.pdf.esp`; suffixet läggs till i skriptnamnet.
 
@@ -212,7 +215,8 @@ Om exemplet ovan `sling:resourceType` är `hr/jobs` för:
 
 Om flera skript gäller för en viss begäran väljs det skript som matchar bäst. Ju mer specifik en träff är, desto bättre är den. Med andra ord matchar den fler väljaren bättre, oavsett vilket tillägg eller metodnamn som används i begäran.
 
-Ta till exempel en begäran om åtkomst till resursen`/content/corporate/jobs/developer.print.a4.html`av typen`sling:resourceType="hr/jobs"`
+Ta till exempel en begäran om åtkomst till resursen`/content/corporate/jobs/developer.print.a4.html`av typen
+`sling:resourceType="hr/jobs"`
 
 Anta att vi har följande skriptlista på rätt plats:
 
@@ -234,7 +238,7 @@ Resursens överordnade typ kan definieras på två sätt:
 * efter resursens `sling:resourceSuperType` egenskap.
 * av egenskapen `sling:resourceSuperType` för noden som `sling:resourceType` pekar på.
 
-Exempel:
+Till exempel:
 
 * /
 
@@ -256,7 +260,14 @@ Exempel:
 
 
 
-Typphierarkin för /x är [ c, b, a, &lt;default>] medan hierarkin för /y är [ c, a,
+Typhierarkin för:
+
+* `/x`
+   * är `[ c, b, a, <default>]`
+* while för `/y`
+   * hierarkin är `[ c, a, <default>]`
+
+Detta beror på att `/y` har `sling:resourceSuperType` egenskapen men `/x` inte, och dess supertyp hämtas därför från sin resurstyp.
 
 #### Sling Scripts kan inte anropas direkt {#sling-scripts-cannot-be-called-directly}
 
@@ -429,7 +440,7 @@ I följande lista visas en översikt över strukturen som visas i databasen.
 
    Filer som ändras och uppdateras av systemet. som granskningsloggar, statistik, händelsehantering. Undermappen `/var/classes` innehåller java-servlets i källformulär och kompilerade formulär som har genererats från komponentskripten.
 
-## Miljö {#environments}
+## Miljöer {#environments}
 
 Med AEM består en produktionsmiljö ofta av två olika typer av instanser: en [författare och en publiceringsinstans](/help/sites-deploying/deploy.md#author-and-publish-installs).
 
