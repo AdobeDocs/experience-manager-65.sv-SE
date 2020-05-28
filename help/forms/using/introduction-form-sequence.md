@@ -10,7 +10,10 @@ topic-tags: author
 discoiquuid: 0f335ea0-504f-4cc0-b97b-c3fc715bcc2e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5a76200a573d95026e2347d2049a089d975b5619
+source-git-commit: 68ea2335a8466c3c23b766efb1a04b6a38d7f670
+workflow-type: tm+mt
+source-wordcount: '542'
+ht-degree: 0%
 
 ---
 
@@ -38,11 +41,11 @@ Låt oss ta ett exempel där du behöver skapa en sekvens för att fylla i, veri
    * **E-signatur**: Den innehåller **Sign** -komponenten som kan användas i ett XFA-baserat adaptivt formulär. den tillhandahåller följande signeringstjänster:
 
       * Adobe Document Cloud eSign-tjänster
-      * (Borttagen) Klottsignatur
+      * Klottra signaturer
    * **Bekräftelse**: Den innehåller komponenten **Sammanfattning** som visar ett meddelande som bekräftar att formuläret skickas när en användare har signerat formuläret och når steget Bekräfta (Sammanfattning) i sekvensen. Författare kan konfigurera texten i komponenten Sammanfattning, visa ett tackmeddelande, visa en länk till den genererade PDF-filen och så vidare.
 
 
-1. Välj layouten för rotpanelen som **[!UICONTROL guide]**.
+1. Välj layouten för rotpanelen som **[!UICONTROL Wizard]**.
 1. Slutför de återstående stegen för att skapa formulärmallen. Mer information finns i [Skapa en anpassad adaptiv formulärmall](../../forms/using/custom-adaptive-forms-templates.md).
 
 När du har definierat formulärsekvensen i formulärmallen kan du använda den för att skapa formulär som har den grundläggande strukturen definierad som sekvensen på plats, även om du alltid kan anpassa formuläret efter dina behov.
