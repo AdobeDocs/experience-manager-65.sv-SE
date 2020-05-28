@@ -9,7 +9,10 @@ topic-tags: publish
 discoiquuid: 89bcc76d-122f-4a3f-b857-16e5376e1624
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 182043b43e9fdb2e7e6de982bceb87b43f36a3ba
+source-git-commit: 48d18de8c982ab3b92cad4df030cb1e4a1a8dfc4
+workflow-type: tm+mt
+source-wordcount: '869'
+ht-degree: 18%
 
 ---
 
@@ -331,7 +334,7 @@ Formulärbaserade AEM-arbetsflöden i OSGi- och AEM Forms JEE-arbetsflöden (AEM
 
 1. Du kan använda formulärbaserade AEM-arbetsflöden i OSGi för att signera ett ifyllt anpassat formulär. Formulärbaserade AEM-arbetsflöden i OSGi stöder inte formulärsignering. Signeringsfunktionen [i form](../../forms/using/working-with-adobe-sign.md#create-in-form-signing-experience) stöds inte.
 
-1. Du måste ha tillgång till AEM Inbox för att kunna köra och övervaka formulärbaserade arbetsflöden på AEM Forms OSGi och HTML Workspace för att kunna köra och övervaka AEM Forms JEE-arbetsflöden.
+1. Du måste ha tillgång till AEM Inbox för att kunna köra och övervaka formulärcentrerade arbetsflöden på AEM Forms OSGi och HTML Workspace för att kunna köra och övervaka AEM Forms JEE-arbetsflöden.
 1. AEM Forms Document Services finns för både formulärbaserade AEM-arbetsflöden i OSGi- och AEM Forms i JEE-arbetsflöden. AEM Workflow använder inbyggda dokumenttjänster för formulärbaserade AEM-arbetsflöden i OSGi- och AEM Forms JEE-arbetsflöden (Process Management).
 1. AEM Forms JEE-arbetsflöden kan bara återge ett anpassat formulär. Det stöder inte återgivning av anpassningsbara formulär som PDF-dokument.
 1. JEE-arbetsflöden för AEM-formulär har inget separat steg för Adobe Sign. Du behöver ett anpassningsbart formulär aktiverat för AEM-formulär i JEE-arbetsflöden. Mer information finns i [Adobe Sign-dokumentationen](../../forms/using/working-with-adobe-sign.md#add-and-configure-the-signature-step-component).
