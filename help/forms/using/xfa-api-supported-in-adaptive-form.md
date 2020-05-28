@@ -9,7 +9,10 @@ topic-tags: develop
 discoiquuid: 05303b29-9058-4723-b134-4ba605fe40c7
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4ecf5efc568cd21f11801a71d491c3d75ca367fe
+source-git-commit: 68ea2335a8466c3c23b766efb1a04b6a38d7f670
+workflow-type: tm+mt
+source-wordcount: '700'
+ht-degree: 5%
 
 ---
 
@@ -58,7 +61,7 @@ När ett adaptivt formulär skapas med en XDP-fil kan du dra och släppa ett XFA
   </tr>
   <tr>
    <td><p>Signature Scribble</p> </td>
-   <td><p>(Föråldrat) Skriptsignatur</p> </td>
+   <td><p>Klottersignatur</p> </td>
   </tr>
   <tr>
    <td><p>Numeriskt fält </p> </td>
