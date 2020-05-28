@@ -10,7 +10,10 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: f23408c3-6b37-4047-9cce-0cab97bb6c5c
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 48d18de8c982ab3b92cad4df030cb1e4a1a8dfc4
+workflow-type: tm+mt
+source-wordcount: '3587'
+ht-degree: 1%
 
 ---
 
@@ -30,7 +33,7 @@ Du kan också [interagera med arbetsflödena från program och skript](/help/sit
 
 En arbetsflödesstegkomponent definierar utseendet och beteendet för steget när du skapar arbetsflödesmodeller:
 
-* Kategori- och stegnamn i arbetsflödets sidospark.
+* Kategori- och stegnamn i arbetsflödets sidbrytning.
 * Stegen i arbetsflödesmodeller.
 * Redigeringsdialogrutan för konfiguration av komponentegenskaper.
 * Tjänsten eller skriptet som körs vid körning.
@@ -854,7 +857,7 @@ Ett enkelt sätt att börja skapa ett eget anpassat steg är att kopiera ett bef
 
    ![wf-37](assets/wf-37.png)
 
-   Om ingen `cq:icon` har definierats för steget återges en standardikon med de två första bokstäverna i titeln. Exempel:
+   Om ingen `cq:icon` har definierats för steget återges en standardikon med de två första bokstäverna i titeln. Till exempel:
 
    ![wf-38](assets/wf-38.png)
 
@@ -1029,7 +1032,7 @@ Det exempel som används i det här exemplet `_cq_dialog/.content.xml` :
 >
 >Även om AEM har ett [dialogkonverteringsverktyg](/help/sites-developing/dialog-conversion.md) om du vill uppgradera dina klassiska dialogrutor för användargränssnittssteg till standarddialogrutor för användargränssnitt. Efter konverteringen finns det fortfarande några manuella förbättringar som kan göras i dialogrutan för vissa fall.
 >
->* Om en uppgraderad dialogruta är tom kan du titta på dialogrutor i `/libs` som har liknande funktionalitet som exempel på hur en lösning kan tillhandahållas. Exempel:
+>* Om en uppgraderad dialogruta är tom kan du titta på dialogrutor i `/libs` som har liknande funktionalitet som exempel på hur en lösning kan tillhandahållas. Till exempel:
    >
    >
 * `/libs/cq/workflow/components/model`
