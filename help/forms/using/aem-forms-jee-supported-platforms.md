@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a6b4a32b320d53c41ebf9615895dbf17ab722f19
+source-git-commit: 18345e6519169cfceb01ab56821b596e284f3303
+workflow-type: tm+mt
+source-wordcount: '3202'
+ht-degree: 0%
 
 ---
 
@@ -114,10 +117,8 @@ Adobe Experience Manager Forms kräver att en Java Virtual Machine körs, vilket
 
 >[!NOTE]
 >
->* AEM Forms på JEE har endast stöd för 64-bitars JVM i produktionsmiljöer.
 >* Vi rekommenderar att du följer säkerhetsbulletinerna från Java-leverantören för att säkerställa säkerheten i produktionsmiljöer och installerar de senaste Java-uppdateringarna.
->
-
+>* AEM Forms på JEE har endast stöd för 64-bitars JVM i produktionsmiljöer.
 
 
 ### Databaser och CRX-beständighet {#databases-and-crx-persistence}
@@ -598,7 +599,7 @@ Ytterligare krav finns i:
   </tr>
   <tr>
    <td>Google Chrome och Firefox på MAC OS X</td>
-   <td>S: Stöds<br /><br /> </td>
+   <td>S: Stöds<br /> <br /> </td>
    <td>Alla uppdateringar</td>
   </tr>
   <tr>
@@ -607,7 +608,7 @@ Ytterligare krav finns i:
    <td>Alla uppdateringar</td>
   </tr>
   <tr>
-   <td>Apple Safari 12.x<br /><br /> </td>
+   <td>Apple Safari 12.x<br /> <br /> </td>
    <td>S: Stöds</td>
    <td>Alla uppdateringar</td>
   </tr>
