@@ -13,7 +13,10 @@ docset: aem65
 legacypath: /content/docs/en/aem/6-2/author/page-authoring/default-components/editmode
 pagetitle: Foundation Components
 translation-type: tm+mt
-source-git-commit: bec587e3722c4c2e5aebd2579a2a7acbf807587a
+source-git-commit: 071f4a292343f0ad52ca3700c95bf60f03c307cc
+workflow-type: tm+mt
+source-wordcount: '7287'
+ht-degree: 3%
 
 ---
 
@@ -192,7 +195,7 @@ Beroende på vilket objekt du väljer visas en ny panel:
 
          * **Querybuilder-predikatnotation**Du kan ange en sökfråga med Querybuilder-predikatnotation. Du kan till exempel ange &quot;fulltext=Marketing&quot; om du vill att alla sidor med &quot;Marketing&quot; i innehållet ska visas i Carousel.
 Se [QueryBuilder API](/help/sites-developing/querybuilder-api.md) för en fullständig diskussion om frågeuttryck och fler exempel.
-   * **Ordna efter** Välj `jcr:title`, `jcr:created``cq:lastModified`eller `cq:template` från listrutan.
+   * **Sortera efter** Välj `jcr:title`, `jcr:created``cq:lastModified`eller `cq:template` från listrutan.
 
    * **Begränsa** det högsta antal objekt som du vill använda i Carousel; detta är valfritt.
 
@@ -575,7 +578,7 @@ Om du vill ange sökvägen till ett stycke måste du lägga till ett suffix till
 
 `.../jcr:content/par/<paragraph-ID>`
 
-Exempel:
+Till exempel:
 
 `/content/geometrixx-outdoors/en/equipment/biking/cajamara/jcr:content/par/similar-products`
 
@@ -583,7 +586,7 @@ Förutom att referera till ett visst stycke, kan sökvägen även ändras för a
 
 `/jcr:content/par`
 
-Exempel:
+Till exempel:
 
 `/content/geometrixx-outdoors/en/equipment/biking/cajamara/jcr:content/par`
 
@@ -591,7 +594,7 @@ När innehållet har konfigurerats visas det exakt som på källsidan. Det faktu
 
 ![chlimage_1-96](assets/chlimage_1-96.png)
 
-### Sök {#searching}
+### Sökning {#searching}
 
 >[!CAUTION]
 Den här Foundation-komponenten har tagits bort. Adobe rekommenderar att du använder kärnkomponenten för [snabbsökning](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/quick-search.html) i stället.
@@ -600,7 +603,7 @@ Sökkomponenten lägger till sökfunktioner på sidan.
 
 Du kan konfigurera:
 
-* Sök
+* Sökning
 
    * **Nodtyper**
 
@@ -964,7 +967,7 @@ När du konfigurerar någon av formulärkomponenterna är följande flikar tillg
 >[!NOTE]
 Fälten som visas varierar avsevärt beroende på den enskilda komponenten.
 
-Dessa flikar ger dig de parametrar som behövs. dessa kan bero på den enskilda komponenttypen, men kan omfatta:
+Dessa flikar ger dig de parametrar som behövs. de kan vara beroende av den enskilda komponenttypen, men kan innehålla:
 
 * **Titel och text**
 
@@ -1090,7 +1093,7 @@ En rad åtgärdstyper ingår i en AEM-standardinstallation:
 
       Sökvägen till nodegenskaper som används för att läsa in fördefinierade värden i formulärfälten.
 
-      Detta är ett valfritt fält som anger sökvägen till en nod i databasen. När den här noden har egenskaper som matchar fältnamnen förinläses motsvarande fält i formuläret med egenskapsvärdet. Om det inte finns någon matchning innehåller fältet standardvärdet.
+      Detta är ett valfritt fält som anger sökvägen till en nod i databasen. När den här noden har egenskaper som matchar fältnamnen, fylls lämpliga fält i formuläret i förväg med värdet för dessa egenskaper. Om det inte finns någon matchning innehåller fältet standardvärdet.
 
       Med **Läs in sökväg** kan du läsa in formuläret i förväg med värden i de obligatoriska fälten. Se [Förhandsladda formulärvärden](/help/sites-developing/developing-forms.md#preloading-form-values).
 
