@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 97a5f018-8255-4b87-9d21-4a0fdf740e4d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 876589d26f17dc088531c3f34deea0fab4c7726a
+source-git-commit: b6a7648699bc8e8e041749fb03998f86a27292ce
 workflow-type: tm+mt
-source-wordcount: '3005'
+source-wordcount: '2999'
 ht-degree: 8%
 
 ---
@@ -29,7 +29,7 @@ Du lägger till Dynamic Media-resurser direkt på sidan om du använder AEM som 
 
 ## Lägga till en Dynamic Media-komponent på en sida {#adding-a-dynamic-media-component-to-a-page}
 
-Att lägga till en Dynamic Media-, Interactive Media-, Panoramic Media- eller Video 360 Media-komponent på en sida är detsamma som att lägga till en komponent på en sida. Komponenterna för dynamiska media beskrivs i följande avsnitt.
+Att lägga till en 3D-mediekomponent, Dynamic Media, Interactive Media, Panoramic Media, Smart Crop Video eller Video 360 Media på en sida är detsamma som att lägga till en komponent på en sida. Komponenterna för dynamiska media beskrivs i följande avsnitt.
 
 1. Öppna sidan där du vill lägga till komponenten Dynamic Media i AEM.
 1. Klicka på **[!UICONTROL Components]** ikonen i panelen till vänster på sidan (du kan behöva växla visningen av sidopanelen).
@@ -40,10 +40,6 @@ Att lägga till en Dynamic Media-, Interactive Media-, Panoramic Media- eller Vi
    ![6_5_360video_wcmcomponent](assets/6_5_360video_wcmcomponent.png)
 
 1. Dra en **[!UICONTROL Dynamic Media]** komponent som du vill använda och släpp den på önskad plats på sidan.
-
-   I exemplet nedan används **[!UICONTROL Video 360 Media]** komponenten.
-
-   ![6_5_360video_wcmComponentdrag](assets/6_5_360video_wcmcomponentdrag.png)
 
 1. Håll muspekaren direkt på komponenten. När komponenten är omgiven av en blå ruta trycker du en gång för att visa komponentens verktygsfält. Tryck på **[!UICONTROL Configuration (wrench)]** ikonen.
 
@@ -57,7 +53,7 @@ Att lägga till en Dynamic Media-, Interactive Media-, Panoramic Media- eller Vi
 
    Dynamic Media Video 360 Media-komponenten.
 
-1. När du är klar, nära dialogrutans övre högra hörn, trycker du på bockmarkeringen för att spara ändringarna.
+1. När du är klar trycker du på bockmarkeringen i dialogrutans övre högra hörn för att spara ändringarna.
 
 ### Aktivera komponenter för dynamiska media {#enabling-dynamic-media-components}
 
@@ -152,7 +148,7 @@ Du *måste* redigera följande dynamiska mediainställningar genom att trycka p�
 >
 >Som standard är Dynamic Media-bildkomponenten adaptiv. Om du vill att den ska ha en fast storlek anger du det i komponenten på fliken **[!UICONTROL Advanced]** med **[!UICONTROL Width]** och **[!UICONTROL Height]**.
 
-* **[!UICONTROL Viewer preset]**- Välj en befintlig visningsförinställning i listrutan. Om den visningsförinställning som du söker efter inte visas kan du behöva göra den synlig. Se Hantera förinställningar för visningsprogram. Du kan inte välja en visningsförinställning om du använder en bildförinställning och vice versa.
+* **[!UICONTROL Viewer preset]**- Välj en befintlig visningsförinställning i listrutan. Om den visningsförinställning som du söker efter inte visas kanske du måste göra den synlig. Se Hantera förinställningar för visningsprogram. Du kan inte välja en visningsförinställning om du använder en bildförinställning och vice versa.
 
    Det här är det enda tillgängliga alternativet om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar. De visningsförinställningar som visas är också smarta - endast relevanta visningsprogramförinställningar visas.
 
@@ -199,7 +195,7 @@ Du måste redigera följande dynamiska mediainställningar genom att klicka **[!
 >
 >Som standard är videokomponenten för dynamiska media adaptiv. If you want to make it a fixed size, set it in the component with the **[!UICONTROL Width]** and **[!UICONTROL Height]** in the **[!UICONTROL Advanced]** tab.
 
-* **[!UICONTROL Viewer preset**- Välj en befintlig förinställning för visningsprogrammet för video i listrutan. Om den visningsförinställning som du söker efter inte visas kan du behöva göra den synlig. Se Hantera förinställningar för visningsprogram.
+* **[!UICONTROL Viewer preset**- Välj en befintlig förinställning för visningsprogrammet för video i listrutan. Om den visningsförinställning som du söker efter inte visas kanske du måste göra den synlig. Se Hantera förinställningar för visningsprogram.
 
 * **[!UICONTROL Viewer modifiers**- Viewer modifiers har formen av name=value-par med en &amp;-avgränsare och du kan ändra visningsprogram enligt riktlinjerna i referenshandboken för Adobe Viewer. Ett exempel på en visningsmodifierare är `posterimage=img.jpg&caption=text.vtt,1`
 
@@ -267,11 +263,11 @@ Tänk på att det inte går att tilldela olika visningsprogramförinställningar
 >
 >Du kan dock använda samma visningsförinställning för alla interaktiva mediekomponenter som använder resurser av samma typ på sidan.
 
-![chlimage_1-175](assets/chlimage_1-541.png)
+![chlimage_1-174](assets/chlimage_1-541.png)
 
 Du kan redigera följande **[!UICONTROL General]** inställningar genom att trycka på **[!UICONTROL Edit]** i komponenten.
 
-* **[!UICONTROL Viewer preset]**- Välj en befintlig visningsförinställning i listrutan. Om den visningsförinställning som du söker efter inte visas kan du behöva göra den synlig. Förinställningar för visningsprogram måste publiceras innan de kan användas. Se Hantera förinställningar för visningsprogram.
+* **[!UICONTROL Viewer preset]**- Välj en befintlig visningsförinställning i listrutan. Om den visningsförinställning som du söker efter inte visas kanske du måste göra den synlig. Förinställningar för visningsprogram måste publiceras innan de kan användas. Se Hantera förinställningar för visningsprogram.
 
 * **[!UICONTROL Title]**—Ändra videons titel.
 
