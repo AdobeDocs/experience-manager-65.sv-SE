@@ -4,18 +4,23 @@ description: Lär dig hur du förhandsgranskar 3D-resurser
 contentOwner: Rick Brough
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
+source-git-commit: 85a93dfa3bcacfb0820029642c03b2d35552121f
+workflow-type: tm+mt
+source-wordcount: '567'
+ht-degree: 4%
 
 ---
 
 
-# Förhandsgranska 3D-resurser{#previewing-3d-assets}
+# Förhandsgranska 3D-resurser i AEM{#previewing-3d-assets-aem}
 
-Experience Manager stöder överföring, leverans och interaktiv förhandsgranskning av 3D-resurser som en del av utvecklingsprocessen.
+Adobe Experience Manager har stöd för överföring, leverans och interaktiv förhandsgranskning av 3D-resurser som en del av utvecklingsprocessen.
 
 Det interaktiva 3D-visningsprogrammet finns på sidan med resursinformation i AEM. Visningsprogrammet innehåller bland annat en samling interaktiva kamerakontroller som du kan använda för att rotera, zooma och panorera 3D-resursen.
 
-## Format som stöds för 3D-förhandsgranskning{#supported-3d-previewing-assets}
+Se även [Arbeta med 3D-resurser i Dynamic Media](/help/assets/assets-3d.md).
+
+## Format som stöds för 3D-förhandsgranskning i AEM {#supported-3d-previewing-assets}
 
 Interaktiv 3D-förhandsgranskning stöder följande filformat:
 
@@ -37,21 +42,21 @@ Interaktiv 3D-förhandsgranskning stöder följande filformat:
     material_0_baseColor.
     jpegmaterial_0_normal.jpeg
 
-## Prestandaöverväganden när du förhandsgranskar 3D-resurser{#performance-3d-previewing-assets}
+## Prestandaöverväganden när du förhandsgranskar 3D-resurser i AEM{#performance-3d-previewing-assets}
 
 Hur lång tid det tar att öppna en 3D-resurs på visningssidan för resursinformation beror på flera faktorer, till exempel bandbredd, bildkomplexitet och fördröjningar för servern.
 
 Dessutom är funktioner i klientdatorn - t.ex. en arbetsstation, bärbar dator eller en mobil touchenhet - också viktiga att tänka på när du manipulerar kameran interaktivt. Ett relativt kraftfullt system med bra grafikfunktioner kan göra den interaktiva 3D-visningen smidigare och mer gynnsam.
 
-**Förhandsgranska 3D-resurser**
+**Förhandsgranska 3D-resurser i AEM**
 
 1. Kontrollera att du har överfört 3D-resurser till AEM.
-Se [Format som stöds för 3D-förhandsgranskning](#supported-3d-previewing-assets) och [Överföra resurser](/help/assets/managing-assets-touch-ui.md#uploading-assets).
-1. Från AEM, på **[!UICONTROL navigeringssidan]** , trycker du på **[!UICONTROL Resurser > Filer]**.
+See [Supported formats for 3D preview](#supported-3d-previewing-assets) and [Uploading assets](/help/assets/managing-assets-touch-ui.md#uploading-assets).
+1. Tryck på AEM på **[!UICONTROL Navigation]** sidan **[!UICONTROL Assets > Files]**.
 
    ![Navigeringssida](/help/assets/assets-dm/navigation-assets.png)
 
-1. I närheten av sidans övre högra hörn går du till listrutan Visa, trycker på **[!UICONTROL kortvyn]** och navigerar sedan till en 3D-resurs som du vill förhandsgranska.
+1. I närheten av det övre högra hörnet på sidan trycker du på **[!UICONTROL Card View]** i listrutan Visa och navigerar sedan till en 3D-resurs som du vill förhandsgranska.
 
    ![Välj 3D-kort](/help/assets/assets-dm/3d-card-select.png)
    _I kortvyn: tryck på kortet för den 3D-resurs som du vill förhandsgranska._
@@ -76,4 +81,4 @@ Se [Format som stöds för 3D-förhandsgranskning](#supported-3d-previewing-asse
    * **Återställ**- I närheten av det nedre högra hörnet av sidan trycker du på ikonen Återställ för att återställa vymålpunkten till mitten av 3D-resursen. Återställ flyttar också kameran närmare eller längre bort för att visa resursen i dess helhet och med en rimlig visningsstorlek.
    * **Helskärmsläge**- Tryck på ikonen Helskärm i det nedre högra hörnet av sidan för att öppna helskärmsläget.
 
-1. När du är klar trycker du på **[!UICONTROL Stäng]** i det övre högra hörnet på sidan.
+1. When you are finished, near the upper-right corner of the page, tap **[!UICONTROL Close]**.
