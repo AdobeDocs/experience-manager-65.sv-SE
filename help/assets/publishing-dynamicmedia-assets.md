@@ -8,18 +8,21 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 99d7025f-d022-4213-83c0-815a4712c573
 translation-type: tm+mt
-source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
+source-git-commit: b8fe3267a808f1a64b78620156826e0b6e3a5676
+workflow-type: tm+mt
+source-wordcount: '421'
+ht-degree: 3%
 
 ---
 
 
-# Publicera dynamiska medieresurser {#publishing-dynamic-media-assets}
+# Publishing Dynamic Media Assets {#publishing-dynamic-media-assets}
 
-Du publicerar dina dynamiska medieresurser genom att välja resurserna och trycka på **[!UICONTROL Publicera]**. När dina dynamiska medieresurser har publicerats är de tillgängliga för dig så att du kan inkludera dem på en webbsida via URL eller genom att bädda in dem.
+Du publicerar dina dynamiska medieresurser genom att välja de resurser du redan har överfört och trycka **[!UICONTROL Publish]** eller **[!UICONTROL Quick Publish]**. När dina Dynamic Media-resurser har publicerats kan du inkludera dem på en webbsida via en URL-adress eller genom att bädda in koden på sidan.
 
 Du kan också publicera resurser som du överför direkt - utan att behöva göra något från användaren. Se [Konfigurera dynamiska media - Scene7-läge](config-dms7.md).
 
-I **[!UICONTROL kortvyn]** visas en liten globikon direkt under namnet på en resurs som anger att den är publicerad. I **[!UICONTROL listvyn]** visar en kolumn som är **[!UICONTROL Publicerad]** vilka resurser som är publicerade eller inte.
+I **[!UICONTROL Card View]** visas en liten globikon direkt under namnet på en resurs och till vänster om datumet och tiden för att ange att den publiceras. I **[!UICONTROL List View]** anger kolumnen **[!UICONTROL Published]** vilka resurser som har publicerats och inte.
 
 >[!NOTE]
 >
@@ -27,9 +30,9 @@ I **[!UICONTROL kortvyn]** visas en liten globikon direkt under namnet på en re
 
 Om du tänker publicera videomaterial direkt efter kodningen bör du kontrollera att kodningen är helt klar. När videoklipp fortfarande kodas visas ett arbetsflöde för videobearbetning. När videokodningen är klar bör du kunna förhandsgranska videoåtergivningarna. Då är det säkert att publicera videoklippen utan att det uppstår några publiceringsfel.
 
-Se även [Länka URL:er till ditt webbprogram](linking-urls-to-yourwebapplication.md).
+See also [Linking URLs to your Web Application](linking-urls-to-yourwebapplication.md).
 
-Se även [Bädda in videovisningsprogrammet på en webbsida.](embed-code.md)
+See also [Embedding the Dynamic Media Video or Image viewer on a web page](embed-code.md)
 
 >[!NOTE]
 >
