@@ -9,7 +9,10 @@ content-type: reference
 discoiquuid: bb8c355c-4475-45ec-9096-0975f0ce2c27
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 43bf1416d9a35b979431466cc83b9baec66ae848
+source-git-commit: d77ee4377934a2ea3291a9beac7c1a8d1c5aeca6
+workflow-type: tm+mt
+source-wordcount: '1339'
+ht-degree: 3%
 
 ---
 
@@ -27,25 +30,44 @@ Förutom att använda den dedikerade förhandsvisningsfunktionen för video, snu
 
 >[!NOTE]
 >
->När du är på en webbsida (Sites) i AEM kan du inte förhandsgranska resurser i **redigeringsläget**. Du måste gå till **förhandsgranskningsläget** genom att klicka på **Förhandsgranska** i det övre högra hörnet.
+>När du är på en webbsida (Sites) i AEM kan du inte förhandsgranska resurser i **redigeringsläget**. You need to go to **Preview** mode by clicking **Preview** in the upper right-hand corner of the page.
 
 Information om hur du aktiverar eller inaktiverar visningsförinställningar i användargränssnittet finns i [Hantera visningsförinställningar](/help/assets/managing-viewer-presets.md).
 
-**Förhandsgranska resurser med användargränssnittet**
+**Förhandsgranska resurser med hjälp av programgränssnittet**
 
-1. From **[!UICONTROL Adobe Experience Manager**, on the **[!UICONTROL Navigation** page, tap **[!UICONTROL Assets]**, then **[!UICONTROL Files]** to access assets.
-1. I närheten av det övre högra hörnet på sidan, i listrutan **[!UICONTROL Visa]** , trycker du på **[!UICONTROL listvyn]**.
-1. (Valfritt) Använd kolumnen **[!UICONTROL Typ]** för att sortera resurserna efter den typ som du vill förhandsgranska.
-1. Klicka på titelnamnet (inte miniatyrbilden) för resursen som du vill förhandsgranska i kolumnen **[!UICONTROL Titel]** .
+1. Från **[!UICONTROL Adobe Experience Manager]**, på sidan **[!UICONTROL Navigering]**, trycker du på **[!UICONTROL Assets]** och sedan på **[!UICONTROL Files]** för att komma åt resurserna.
+1. Near the upper-right corner of the page, from the **[!UICONTROL View]** drop-down list, tap **[!UICONTROL List View]**.
+1. (Valfritt) Använd **[!UICONTROL Type]** kolumnen för att sortera resurserna efter den typ som du vill förhandsgranska.
+1. Under **[!UICONTROL Title]** kolumnen klickar du på titelnamnet (inte miniatyrbilden) för resursen som du vill förhandsgranska.
 1. Beroende på vilken resurstyp du klickade på gör du något av följande:
+
 
    <table>
     <tbody>
       <tr>
       <td><strong>Resurstyp som du klickade på</strong><br /> </td>
       <td><strong>Kan du förhandsgranska mediefilen i en viss återgivning?</strong></td>
-      <td><strong>Kan du förhandsgranska mediefilen i ett visst visningsprogram?</strong></td>
+      <td><strong>Kan du förhandsgranska resurser i ett visningsprogram?</strong></td>
       </tr>
+      <tr>
+      <td><p>3D</p> </td>
+      <td>Nej</td>
+      <td>Ja</td>
+      <td><p><strong>Förhandsgranska en 3D-resurs i Dimensional Viewer</strong></p>
+        <ul>
+        <li>Klicka på ikonen i det övre vänstra hörnet av sidan så att listrutan visas. Klicka på <strong>Visare</strong> i listan och välj sedan Dimensional Viewer.
+        <li>Tryck på <strong>Återställ</strong> om du vill återställa bilden till den ursprungliga zoomningen.</li>
+        <li>Tryck på <strong>Helskärm</strong> för att maximera visningsprogrammet på visningsenheten.
+        </ul>
+        <p><strong>Navigera i 3D-scenen</strong></p>
+        <ul>
+        <li><p><strong>Vrid din 3D-kamera</strong> - rotera vyn runt 3D-scenen och objekten.</p> Mus: Vänsterklicka och dra. </p> Pekskärm: Tryck på + dra.</p>
+        <li><p><strong>Panorera kameran</strong> - Panorera åt vänster, åt höger, uppåt och nedåt.</p> Mus: Högerklicka och dra. </p> Pekskärm: Tryck med två fingrar och dra.</p>
+        <li><p><strong>Zooma kameran</strong> - Zooma kameran för att flytta in och ut i områden i 3D-scenen.</p> Mus: Rullningshjul. </p> Pekskärm: Fingernyp.</p>
+        <li><p><strong>Centrera kameran</strong> igen - Dra vyer runt 3D-scenen och objekten.</p> Mus: Dubbelklicka. </p> Pekskärm: Dubbeltryck.</li></p></td>
+
+   </tr>
       <tr>
       <td><p>Bild</p> </td>
       <td>Ja</td>
@@ -56,7 +78,7 @@ Information om hur du aktiverar eller inaktiverar visningsförinställningar i a
         </ul> <p><strong>Förhandsgranska resurs i ett visst visningsprogram</strong></p>
         <ul>
         <li>Klicka på ikonen i det övre vänstra hörnet av sidan så att listrutan visas. Klicka på <strong>Visare</strong> i listan och välj sedan ett visningsprogram som du vill använda på resursen.</li>
-        </ul> <p>Använd ikonerna <strong>+</strong> och <strong>-</strong> om du vill öka respektive minska zoomningen för den markerade bilden. Klicka på <strong>Återställ</strong> om du vill återställa bilden till den ursprungliga zoomningen.<br /> Om du använder en mobil enhet dubbeltrycker du på bilden för att zooma in steg. När du har uppnått maximal zoom dubbeltrycker du på bilden igen för att återställa zoomläget. Dra över bilden för att panorera.</p> </td>
+        </ul> <p>Använd ikonerna <strong>+</strong> och <strong>-</strong> om du vill öka respektive minska zoomningen för den markerade bilden. Klicka på <strong>Återställ</strong> om du vill återställa bilden till den ursprungliga zoomningen.<br /> Om du använder en pekskärm kan du zooma in steg för att dubbeltrycka på bilden. När du har uppnått maximal zoom dubbeltrycker du på bilden igen för att återställa zoomläget. Dra över bilden för att panorera.</p> </td>
       </tr>
       <tr>
       <td>Multimedia</td>
@@ -77,7 +99,7 @@ Information om hur du aktiverar eller inaktiverar visningsförinställningar i a
       <td><p><strong>Förhandsgranska en resurs i ett visst visningsprogram</strong></p>
         <ul>
         <li>Klicka på ikonen i det övre vänstra hörnet av sidan så att listrutan visas. Klicka på <strong>Visare</strong> i listan och välj sedan ett visningsprogram som du vill använda på resursen.</li>
-        </ul> <p>Använd ikonerna <strong>+</strong> och <strong>-</strong> om du vill öka respektive minska zoomningen för den markerade bilden. Klicka på <strong>Återställ</strong> om du vill återställa bilden till den ursprungliga zoomningen.<br /> Om du använder en mobil enhet dubbeltrycker du på bilden för att zooma in steg. När du har uppnått maximal zoom dubbeltrycker du på bilden igen för att återställa zoomläget. Dra över bilden för att panorera.</p> </td>
+        </ul> <p>Använd ikonerna <strong>+</strong> och <strong>-</strong> om du vill öka respektive minska zoomningen för den markerade bilden. Klicka på <strong>Återställ</strong> om du vill återställa bilden till den ursprungliga zoomningen.<br /> Om du använder en pekskärm kan du zooma in steg för att dubbeltrycka på bilden. När du har uppnått maximal zoom dubbeltrycker du på bilden igen för att återställa zoomläget. Dra över bilden för att panorera.</p> </td>
       </tr>
       <tr>
       <td>Rotation</td>
@@ -86,7 +108,7 @@ Information om hur du aktiverar eller inaktiverar visningsförinställningar i a
       <td><p><strong>Förhandsgranska en resurs i ett visst visningsprogram</strong></p>
         <ul>
         <li>Klicka på ikonen i det övre vänstra hörnet av sidan så att listrutan visas. Klicka på <strong>Visare</strong> i listan och välj sedan ett visningsprogram som du vill använda på resursen.</li>
-        </ul> <p>Använd ikonerna <strong>+</strong> och <strong>-</strong> om du vill öka respektive minska zoomningen för den markerade bilden. Klicka på <strong>Återställ</strong> om du vill återställa bilden till den ursprungliga zoomningen.<br /> Om du använder en mobil enhet dubbeltrycker du på bilden för att zooma in steg. När du har uppnått maximal zoom dubbeltrycker du på bilden igen för att återställa zoomläget. Dra över bilden för att panorera.</p> </td>
+        </ul> <p>Använd ikonerna <strong>+</strong> och <strong>-</strong> om du vill öka respektive minska zoomningen för den markerade bilden. Klicka på <strong>Återställ</strong> om du vill återställa bilden till den ursprungliga zoomningen.<br /> Om du använder en pekskärm kan du zooma in steg för att dubbeltrycka på bilden. När du har uppnått maximal zoom dubbeltrycker du på bilden igen för att återställa zoomläget. Dra över bilden för att panorera.</p> </td>
       </tr>
       <tr>
       <td>Blandad medieuppsättning</td>
@@ -95,7 +117,7 @@ Information om hur du aktiverar eller inaktiverar visningsförinställningar i a
       <td><p><strong>Förhandsgranska en resurs i ett visst visningsprogram</strong></p>
         <ul>
         <li>Klicka på ikonen i det övre vänstra hörnet av sidan så att listrutan visas. Klicka på <strong>Visare</strong> i listan och välj sedan ett visningsprogram som du vill använda på resursen.</li>
-        </ul> <p>Använd ikonerna <strong>+</strong> och <strong>-</strong> om du vill öka respektive minska zoomningen för den markerade bilden. Klicka på <strong>Återställ</strong> om du vill återställa bilden till den ursprungliga zoomningen.<br /> Om du använder en mobil enhet dubbeltrycker du på bilden för att zooma in steg. När du har uppnått maximal zoom dubbeltrycker du på bilden igen för att återställa zoomläget. Dra över bilden för att panorera.</p> </td>
+        </ul> <p>Använd ikonerna <strong>+</strong> och <strong>-</strong> om du vill öka respektive minska zoomningen för den markerade bilden. Klicka på <strong>Återställ</strong> om du vill återställa bilden till den ursprungliga zoomningen.<br /> Om du använder en pekskärm kan du zooma in steg för att dubbeltrycka på bilden. När du har uppnått maximal zoom dubbeltrycker du på bilden igen för att återställa zoomläget. Dra över bilden för att panorera.</p> </td>
       </tr>
       <tr>
       <td>Carousel set</td>
@@ -116,7 +138,7 @@ Information om hur du aktiverar eller inaktiverar visningsförinställningar i a
         </ul> <p><strong>Förhandsgranska resurs i ett visst visningsprogram</strong></p>
         <ul>
         <li>I närheten av sidans övre vänstra hörn trycker du på ikonen så att listrutan visas. Välj <strong>visningsprogram</strong>och sedan det visningsprogram som du vill använda för resursen.</li>
-        </ul> <p>Använd ikonerna <strong>+</strong> och <strong>-</strong> om du vill öka respektive minska zoomningen för den markerade bilden. Klicka på <strong>Återställ</strong> om du vill återställa bilden till den ursprungliga zoomningen.<br /> Om du använder en mobil enhet dubbeltrycker du på bilden för att zooma in steg. När du har uppnått maximal zoom dubbeltrycker du på bilden igen för att återställa zoomläget. Dra över bilden för att panorera.</p> </td>
+        </ul> <p>Använd ikonerna <strong>+</strong> och <strong>-</strong> om du vill öka respektive minska zoomningen för den markerade bilden. Klicka på <strong>Återställ</strong> om du vill återställa bilden till den ursprungliga zoomningen.<br /> Om du använder en pekskärm kan du zooma in steg för att dubbeltrycka på bilden. När du har uppnått maximal zoom dubbeltrycker du på bilden igen för att återställa zoomläget. Dra över bilden för att panorera.</p> </td>
       </tr>
     </tbody>
     </table>
