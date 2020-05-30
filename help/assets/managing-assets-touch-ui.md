@@ -4,9 +4,9 @@ description: Lär dig resurshanteringsåtgärder som överföring, hämtning, re
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 85a93dfa3bcacfb0820029642c03b2d35552121f
 workflow-type: tm+mt
-source-wordcount: '9082'
+source-wordcount: '9088'
 ht-degree: 3%
 
 ---
@@ -301,11 +301,11 @@ Mer information om hur du skapar förinställningar för gruppuppsättningar fin
 
 ### Strömmade överföringar {#streamed-uploads}
 
-Om du överför många resurser till [!DNL Experience Manager]servern ökar I/O-förfrågningarna drastiskt, vilket minskar överföringseffektiviteten och kan till och med leda till att en del överföringsåtgärder tar slut. [!DNL Experience Manager Assets] har stöd för direktuppspelad överföring av resurser. Direktuppspelad överföring minskar I/O-disken under överföringen genom att resurslagring undviks i en tillfällig mapp på servern innan den kopieras till databasen. I stället överförs data direkt till databasen. På så sätt minskas tiden det tar att överföra stora resurser och möjligheten till timeout. Direktuppspelad överföring är aktiverad som standard i [!DNL Assets].
+Om du överför många resurser till Adobe Experience Manager ökar I/O-begäranden till servern drastiskt, vilket minskar uppladdningseffektiviteten och kan till och med leda till att vissa uppladdningsuppgifter blir timeout. [!DNL Experience Manager Assets] har stöd för direktuppspelad överföring av resurser. Direktuppspelad överföring minskar I/O-disken under överföringen genom att resurslagring undviks i en tillfällig mapp på servern innan den kopieras till databasen. I stället överförs data direkt till databasen. På så sätt minskas tiden det tar att överföra stora resurser och möjligheten till timeout. Direktuppspelad överföring är aktiverad som standard i [!DNL Assets].
 
 >[!NOTE]
 >
->Direktuppspelningsöverföring är inaktiverat för [!DNL Experience Manager] körning på JEE-server med en servlet-api-version som är lägre än 3.1.
+>Direktuppspelning är inaktiverat för Adobe Experience Manager som körs på JEE-servern med en servlet-api-version som är lägre än 3.1.
 
 ### Extrahera ZIP-arkiv som innehåller resurser {#extractzip}
 
@@ -573,7 +573,7 @@ Se [Hämta resurser från Experience Manager](/help/assets/download-assets-from-
 >
 >Mer information om Dynamic Media finns i [Publicera dynamiska medieresurser.](/help/assets/publishing-dynamicmedia-assets.md)
 
-1. Navigera till platsen för resursen/mappen som du vill publicera
+1. Navigera till platsen för resursen/mappen som du vill publicera.
 
 1. Either select the **[!UICONTROL Publish]** quick action from the asset card, or select the asset and click the **[!UICONTROL Quick Publish]** icon from the toolbar.
 1. Om resursen refererar till andra resurser visas dess referenser i guiden. Endast referenser som antingen är opublicerade eller ändrade sedan de senast publicerades/avpublicerades visas. Välj de referenser som du vill publicera.
