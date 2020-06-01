@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS and AEM as a Cloud Service
 topic-tags: introduction
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 7c6655342256922473ec51dc1a58b2d08034b65b
+source-git-commit: 46848fee0a3f838354ec65f2ea733cf70ac53deb
 workflow-type: tm+mt
-source-wordcount: '2102'
+source-wordcount: '2097'
 ht-degree: 1%
 
 ---
@@ -170,9 +170,7 @@ Se även [Förhandsgranska resurser i programgränssnittet](/help/assets/preview
 
 ## Arbeta med 3D Media-komponenten {#working-with-three-d-media-component}
 
-Dynamic Media innehåller en 3D-mediakomponent för dynamiska media som du kan använda i AEM Sites för att aktivera interaktiv visning av 3D-modeller på webbsidor.
-
-Detta avsnitt innehåller följande ämnen:
+Dynamic Media innehåller en 3D-mediakomponent för dynamiska media som du kan använda i AEM Sites för att aktivera interaktiv visning av 3D-modeller på dina webbsidor.
 
 * [Lägga till komponenten 3D Media i sidmallen](#adding-three-d-media-component-to-page-template)
 * [Lägga till komponenten 3D Media på en webbsida](#adding-the-three-d-media-component-to-a-web-page)
