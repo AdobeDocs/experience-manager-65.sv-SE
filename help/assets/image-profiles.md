@@ -8,9 +8,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 translation-type: tm+mt
-source-git-commit: e78b3701e57b1954f03591c38b72e3dd33e8ef46
+source-git-commit: d40488ce830eb15b4209145df03dff027f9a2470
 workflow-type: tm+mt
-source-wordcount: '2589'
+source-wordcount: '2597'
 ht-degree: 11%
 
 ---
@@ -23,6 +23,10 @@ När du överför bilder kan du beskära bilden automatiskt vid överföring gen
 >[!NOTE]
 >
 >Smart beskärning är bara tillgängligt i läget Dynamic Media - Scene7.
+
+>[!IMPORTANT]
+>
+>Bildprofiler kan inte användas för PDF-filer.
 
 ## Beskärningsalternativ {#crop-options}
 
