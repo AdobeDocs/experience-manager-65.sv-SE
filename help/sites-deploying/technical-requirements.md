@@ -11,7 +11,7 @@ topic-tags: platform
 discoiquuid: 16c7a97d-884a-447e-9aad-18a2db1bda1d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f16c25468418b6f228132e9d06017d32466cf43a
+source-git-commit: a299e26668b1f1f08cca8d4a8085da185522ec96
 workflow-type: tm+mt
 source-wordcount: '3118'
 ht-degree: 0%
@@ -100,7 +100,7 @@ Adobe Experience Manager fungerar med följande versioner av Java Virtual Machin
  <tbody>
   <tr>
    <td>Plattform</td>
-   <td>Supportnivå<br /> </td>
+   <td>Supportnivå</td>
   </tr>
   <tr>
    <td>Oracle Java SE 12 JDK [1]</td>
@@ -144,15 +144,15 @@ Det finns olika alternativ för att distribuera Adobe Experience Manager-databas
 
 | **Plattform** | **Beskrivning** | **Supportnivå** |
 |---|---|---|
-| **Filsystem med TAR-filer[1 ]** | Databas | S: Stöds |
-| **Filsystem med datastore[1 ]** | Binärfiler | S: Stöds |
-| Lagra binärfiler i TAR-filer i filsystem [1] | Binärfiler | Z: Stöds inte för produktion |
+| **Filsystem med TAR-filer** `[1]` | Databas | S: Stöds |
+| **Filsystem med datastore** `[1]` | Binärfiler | S: Stöds |
+| Lagra binärfiler i TAR-filer i filsystemet `[1]` | Binärfiler | Z: Stöds inte för produktion |
 | Amazon S3 | Binärfiler | S: Stöds |
 | Microsoft Azure Blob Storage | Binärfiler | S: Stöds |
-| MongoDB Enterprise 4.0 | Databas | S: Stöds [2, 3] |
+| MongoDB Enterprise 4.0 | Databas | S: Stöds `[2, 3]` |
 | MongoDB Enterprise 3.6 | Databas | Z: Stöds inte |
 | MongoDB Enterprise 3.4 | Databas | Z: Stöds inte |
-| IBM DB2 10.5 | Databas för databas och formulär | R: Begränsad support [4] |
+| IBM DB2 10.5 | Databas för databas och formulär | R: Begränsat stöd `[4]` |
 | Oracle Database 12c (12.1.x) | Databas för databas och formulär | R: Begränsat stöd |
 | Microsoft SQL Server 2016 | Formulärdatabas | S: Stöds |
 | **Apache Lucene (inbyggt i Quickstart)** | Söktjänst | S: Stöds |
@@ -199,11 +199,11 @@ Den lägsta servlet API-version som krävs är Servlet 3.1
 |---|---|
 | **Quickstart inbyggd servermotor (9.4)** | S: Stöds |
 | Oracle WebLogic Server 12.2 (12cR2) | Z: Stöds inte |
-| IBM WebSphere Application Server Continuous Delivery (LibertyProfile) med Web Profile 7.0 och IBM JRE 1.8 | R: Begränsad support för nya kontrakt [2] |
-| IBM WebSphere Application Server 9.0 och IBM JRE 1.8 | R: Begränsad support för nya kontrakt [1] [2] |
-| Apache Tomcat 8.5.x | R: Begränsad support för nya kontrakt [2] |
+| IBM WebSphere Application Server Continuous Delivery (LibertyProfile) med Web Profile 7.0 och IBM JRE 1.8 | R: Begränsad support för nya kontrakt `[2]` |
+| IBM WebSphere Application Server 9.0 och IBM JRE 1.8 | R: Begränsad support för nya kontrakt `[1]` `[2]` |
+| Apache Tomcat 8.5.x | R: Begränsad support för nya kontrakt `[2]` |
 | JBoss EAP 7.2.x med JBoss Application Server | Z: Stöds inte |
-| JBoss EAP 7.1.4 med JBoss Application Server | R: Begränsad support för nya kontrakt [1] [2] |
+| JBoss EAP 7.1.4 med JBoss Application Server | R: Begränsad support för nya kontrakt `[1]` `[2]` |
 | JBoss EAP 7.0.x med JBoss Application Server | Z: Stöds inte |
 
 1. Rekommenderas för användning med AEM Forms.
@@ -215,11 +215,11 @@ Adobe Experience Manager fungerar med följande serverplattformar för produktio
 
 | **Plattform** | **Supportnivå** |
 |---|---|
-| **Linux, baserat på Red Hat-distribution** | S: Stöds [1] [3] |
-| Linux baserat på Debian-distribution inkl. Ubuntu | S: Stöds [2] |
+| **Linux, baserat på Red Hat-distribution** | S: Stöds `[1]` `[3]` |
+| Linux baserat på Debian-distribution inkl. Ubuntu | S: Stöds `[2]` |
 | Linux, baserat på SUSE-distribution | S: Stöds |
-| Microsoft Windows Server 2019 [4] | R: Begränsad support för nya kontrakt |
-| Microsoft Windows Server 2016 [4] | R: Begränsad support för nya kontrakt [5] |
+| Microsoft Windows Server 2019 `[4]` | R: Begränsad support för nya kontrakt |
+| Microsoft Windows Server 2016 `[4]` | R: Begränsad support för nya kontrakt `[5]` |
 | Microsoft Windows Server 2012 R2 | Z: Stöds inte |
 | Oracle Solaris 11 | Z: Stöds inte |
 | IBM AIX 7.2 | Z: Stöds inte |
@@ -248,7 +248,7 @@ Följande webbservrar kan användas med Dispatcher version 4.3.2:
 
 | Plattform | Supportnivå |
 |---|---|
-| **Apache httpd 2.4.x** [1,2] | S: Stöds |
+| **Apache httpd 2.4.x** `[1,2]` | S: Stöds |
 | Microsoft IIS 10 (Internet Information Server) | S: Stöds |
 | Microsoft IIS 8.5 (Internet Information Server) | Z: Stöds inte |
 
