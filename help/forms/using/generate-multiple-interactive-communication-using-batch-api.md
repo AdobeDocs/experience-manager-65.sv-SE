@@ -6,7 +6,10 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: interactive-communication
 translation-type: tm+mt
-source-git-commit: 6a29cf13c89b71f851c67f85b01e8e648c0896b9
+source-git-commit: 5a97dd9a34d42bfbf3e2185763e4040e1190f297
+workflow-type: tm+mt
+source-wordcount: '2197'
+ht-degree: 1%
 
 ---
 
@@ -78,13 +81,13 @@ Så här skapar du interaktiv kommunikation från poster som sparats i en JSON-f
 
 1. Skapa en [bevakad mapp](https://docs.adobe.com/content/help/en/experience-manager-64/forms/publish-process-aem-forms/creating-configure-watched-folder.html) och konfigurera den så att den använder batch-API:t:
    1. Logga in på AEM Forms författarinstans.
-   1. Navigera till **[!UICONTROL Verktyg]** > **[!UICONTROL Formulär]** > **[!UICONTROL Konfigurera bevakad mapp]**. Tryck på **[!UICONTROL Nytt]**.
-   1. Ange mappens **[!UICONTROL namn]** och fysiska **[!UICONTROL sökväg]** . Exempel, `c:\batchprocessing`.
-   1. Välj alternativet **[!UICONTROL Tjänst]** i fältet **[!UICONTROL Bearbeta fil med]** .
-   1. Markera **[!UICONTROL tjänsten com.adobe.fd.ccm.multichannel.batch.impl.service.InteractiveCommunicationBatchServiceImpl]** i fältet **[!UICONTROL Tjänstnamn]** .
-   1. Ange ett **[!UICONTROL utdatafilmönster]**. Exempelvis anger [mönstret](https://helpx.adobe.com/experience-manager/6-5/forms/using/admin-help/configuring-watched-folder-endpoints.html#about_file_patterns) %F/ att den bevakade mappen kan hitta indatafiler i en undermapp till mappen Bevakade mappar\indatamapp.
+   1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Forms]** > **[!UICONTROL Configure Watched Folder]**. Tryck på **[!UICONTROL New]**.
+   1. Ange **[!UICONTROL Name]** och fysisk **[!UICONTROL Path]** information om mappen. Till exempel, `c:\batchprocessing`.
+   1. Markera **[!UICONTROL Service]** alternativet i **[!UICONTROL Process File Using]** fältet.
+   1. Markera **[!UICONTROL com.adobe.fd.ccm.multichannel.batch.impl.service.InteractiveCommunicationBatchServiceImpl]** tjänsten i **[!UICONTROL Service Name]** fältet.
+   1. Ange en **[!UICONTROL Output File Pattern]**. Exempelvis anger [mönstret](https://helpx.adobe.com/experience-manager/6-5/forms/using/admin-help/configuring-watched-folder-endpoints.html#about_file_patterns) %F/ att den bevakade mappen kan hitta indatafiler i en undermapp till mappen Bevakade mappar\indatamapp.
 1. Konfigurera avancerade parametrar:
-   1. Öppna fliken **[!UICONTROL Avancerat]** och lägg till följande anpassade egenskaper:
+   1. Öppna **[!UICONTROL Advanced]** fliken och lägg till följande anpassade egenskaper:
 
       | Egenskap | Typ | Beskrivning |
       |--- |--- |--- |
@@ -94,7 +97,7 @@ Så här skapar du interaktiv kommunikation från poster som sparats i en JSON-f
       | batchType | Sträng | Ange värdet PRINT, WEB eller WEB_AND_PRINT. Standardvärdet är WEB_AND_PRINT. |
       | locale | Sträng | Ange språkinställningen för interaktiv kommunikation vid utdata. Körklara tjänster använder inte språkområdesalternativet, men du kan skapa en anpassad tjänst för att generera lokaliserad interaktiv kommunikation. Standardvärdet är en_US |
 
-   1. Tryck på **[!UICONTROL Skapa]** den bevakade mappen skapas.
+   1. Tryck på **[!UICONTROL Create]** Den bevakade mappen skapas.
 1. Använd bevakad mapp för att generera interaktiv kommunikation:
    1. Öppna den bevakade mappen. Navigera till indatamappen.
    1. Skapa en mapp i indatamappen och placera JSON-filen i den nya mappen.
@@ -140,13 +143,13 @@ Du kombinerar data (poster) som sparats i en extern datakälla med en interaktiv
 
 1. Skapa en [bevakad mapp](https://docs.adobe.com/content/help/en/experience-manager-64/forms/publish-process-aem-forms/creating-configure-watched-folder.html) och konfigurera den så att den använder API-tjänsten för grupper:
    1. Logga in på AEM Forms författarinstans.
-   1. Navigera till **[!UICONTROL Verktyg]** > **[!UICONTROL Formulär]** > **[!UICONTROL Konfigurera bevakad mapp]**. Tryck på **[!UICONTROL Nytt]**.
-   1. Ange mappens **[!UICONTROL namn]** och fysiska **[!UICONTROL sökväg]** . Exempel, `c:\batchprocessing`.
-   1. Välj alternativet **[!UICONTROL Tjänst]** i fältet **[!UICONTROL Bearbeta fil med]** .
-   1. Markera **[!UICONTROL tjänsten com.adobe.fd.ccm.multichannel.batch.impl.service.InteractiveCommunicationBatchServiceImpl]** i fältet **[!UICONTROL Tjänstnamn]** .
-   1. Ange ett **[!UICONTROL utdatafilmönster]**. Exempelvis anger [mönstret](https://helpx.adobe.com/experience-manager/6-5/forms/using/admin-help/configuring-watched-folder-endpoints.html#about_file_patterns) %F/ att den bevakade mappen kan hitta indatafiler i en undermapp till mappen Bevakade mappar\indatamapp.
+   1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Forms]** > **[!UICONTROL Configure Watched Folder]**. Tryck på **[!UICONTROL New]**.
+   1. Ange **[!UICONTROL Name]** och fysisk **[!UICONTROL Path]** information om mappen. Till exempel, `c:\batchprocessing`.
+   1. Markera **[!UICONTROL Service]** alternativet i **[!UICONTROL Process File Using]** fältet.
+   1. Markera **[!UICONTROL com.adobe.fd.ccm.multichannel.batch.impl.service.InteractiveCommunicationBatchServiceImpl]** tjänsten i **[!UICONTROL Service Name]** fältet.
+   1. Ange en **[!UICONTROL Output File Pattern]**. Exempelvis anger [mönstret](https://helpx.adobe.com/experience-manager/6-5/forms/using/admin-help/configuring-watched-folder-endpoints.html#about_file_patterns) %F/ att den bevakade mappen kan hitta indatafiler i en undermapp till mappen Bevakade mappar\indatamapp.
 1. Konfigurera avancerade parametrar:
-   1. Öppna fliken **[!UICONTROL Avancerat]** och lägg till följande anpassade egenskaper:
+   1. Öppna **[!UICONTROL Advanced]** fliken och lägg till följande anpassade egenskaper:
 
       | Egenskap | Typ | Beskrivning |
       |--- |--- |--- |
@@ -156,7 +159,7 @@ Du kombinerar data (poster) som sparats i en extern datakälla med en interaktiv
       | batchType | Sträng | Ange värdet PRINT, WEB eller WEB_AND_PRINT. Standardvärdet är WEB_AND_PRINT. |
       | locale | Sträng | Ange språkinställningen för interaktiv kommunikation vid utdata. Körklara tjänster använder inte språkområdesalternativet, men du kan skapa en anpassad tjänst för att generera lokaliserad interaktiv kommunikation. Standardvärdet är en_US. |
 
-   1. Tryck på **[!UICONTROL Skapa]** den bevakade mappen skapas.
+   1. Tryck på **[!UICONTROL Create]** Den bevakade mappen skapas.
 1. Använd bevakad mapp för att generera interaktiv kommunikation:
    1. Öppna den bevakade mappen. Navigera till indatamappen.
    1. Skapa en mapp i indatamappen. Placera JSON-filen som skapades i steg 2 i den nya mappen.
@@ -174,20 +177,13 @@ Innan du distribuerar Java-servern måste du se till att du har en interaktiv ko
 
 1. Logga in på din AEM-instans och skapa en interaktiv kommunikation. Om du vill använda den interaktiva kommunikation som anges i exempelkoden nedan [klickar du här](assets/SimpleMediumIC.zip).
 1. [Bygg och driftsätt ett AEM-projekt med Apache Maven](https://helpx.adobe.com/experience-manager/using/maven_arch13.html) i din AEM-instans.
-1. Lägg till [AEM Forms Client SDK version 6.0.12](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/) eller senare och senaste [AEM Uber Jar](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/service-pack/sp-release-notes.html#uber-jar) i beroendelistan för POm-filen i ditt AEM-projekt. Exempel:
+1. Lägg till [AEM Forms Client SDK version 6.0.12](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/) eller senare i listan över beroenden av POM-filen för ditt AEM-projekt. Till exempel,
 
    ```XML
        <dependency>
            <groupId>com.adobe.aemfd</groupId>
            <artifactId>aemfd-client-sdk</artifactId>
            <version>6.0.122</version>
-       </dependency>
-       <dependency>
-          <groupId>com.adobe.aem</groupId>
-          <artifactId>uber-jar</artifactId>
-          <version>6.5.0</version>
-          <classifier>apis</classifier>
-          <scope>provided</scope>
        </dependency>
    ```
 
@@ -201,18 +197,9 @@ Innan du distribuerar Java-servern måste du se till att du har en interaktiv ko
            import java.io.FileOutputStream;
            import java.io.IOException;
            import java.io.InputStream;
-           import java.io.OutputStream;
            import java.io.PrintWriter;
            import java.util.List;
-           import java.util.logging.FileHandler;
-           import java.util.logging.Logger;
-           import java.util.logging.SimpleFormatter;
-   
            import javax.servlet.Servlet;
-           import javax.servlet.ServletContext;
-   
-           import com.adobe.aemfd.watchfolder.service.api.ContentProcessor;
-   
            import org.apache.commons.io.IOUtils;
            import org.apache.sling.api.SlingHttpServletRequest;
            import org.apache.sling.api.SlingHttpServletResponse;
@@ -222,8 +209,7 @@ Innan du distribuerar Java-servern måste du se till att du har en interaktiv ko
            import org.osgi.service.component.annotations.Component;
            import org.osgi.service.component.annotations.Reference;
    
-           import com.adobe.aemfd.docmanager.Document;
-           import com.adobe.aemfd.docmanager.passivation.DocumentPassivationHandler;
+           import com.adobe.fd.ccm.multichannel.batch.api.builder.BatchConfigBuilder;
            import com.adobe.fd.ccm.multichannel.batch.api.factory.BatchComponentBuilderFactory;
            import com.adobe.fd.ccm.multichannel.batch.api.model.BatchConfig;
            import com.adobe.fd.ccm.multichannel.batch.api.model.BatchInput;
@@ -233,21 +219,8 @@ Innan du distribuerar Java-servern måste du se till att du har en interaktiv ko
            import com.adobe.fd.ccm.multichannel.batch.api.model.RenditionResult;
            import com.adobe.fd.ccm.multichannel.batch.api.service.BatchGeneratorService;
            import com.adobe.fd.ccm.multichannel.batch.util.BatchConstants;
-           import com.adobe.icc.render.obj.Content;
-   
-           import javax.annotation.PostConstruct;
-           import javax.inject.Inject;
-           import javax.inject.Named;
-   
-           import org.apache.sling.api.resource.Resource;
-           import org.apache.sling.models.annotations.Default;
-           import org.apache.sling.models.annotations.Model;
-           import org.apache.sling.settings.SlingSettingsService;
-           import org.apache.sling.api.resource.ResourceUtil;
-   
-   
-           import org.slf4j.*;
            import java.util.Date;
+   
    
            @Component(service=Servlet.class,
            property={
@@ -361,11 +334,13 @@ Innan du distribuerar Java-servern måste du se till att du har en interaktiv ko
 
 När du anger batchType för att återge webbkanalen genererar API:t en JSON-fil för varje datapost. Du kan använda följande syntax för att sammanfoga JSON-filen med motsvarande webbkanal för att generera en interaktiv kommunikation:
 
-**Syntax**`http://host:port/<template-path>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=<guide-merged-json-path>`
+**Syntax**
+`http://host:port/<template-path>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=<guide-merged-json-path>`
 
 **Exempel**: Om JSON-filen finns på `C:\batch\mergedJsonPath.json` och du använder den interaktiva kommunikationsmallen nedan: `http://host:port/content/dam/formsanddocuments/testsample/mediumic/jcr:content?channel=web`
 
-Sedan visas webbkanalen för den interaktiva kommunikationen i följande URL på noden publish`http://host:port/<path-to-ic>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=file:///C:/batch/mergedJsonData.json`
+Sedan visas webbkanalen för den interaktiva kommunikationen i följande URL på noden publish
+`http://host:port/<path-to-ic>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=file:///C:/batch/mergedJsonData.json`
 
 Förutom att spara data i filsystemet kan du lagra JSON-filer i CRX-databas, filsystem, webbserver eller få åtkomst till data via OSGI-förifyllningstjänsten. Syntax för att sammanfoga data med olika protokoll är:
 
