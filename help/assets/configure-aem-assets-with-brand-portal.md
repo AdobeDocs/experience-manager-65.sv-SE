@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: dca5a2ac-1fc8-4251-b073-730fd6f49b1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cdcea49a25807e125ea15e7132ac9f188d3525bc
+source-git-commit: 9a27aabef07d5b5104c08c414138fbb22e284a68
 workflow-type: tm+mt
 source-wordcount: '1972'
 ht-degree: 14%
@@ -24,7 +24,7 @@ Adobe Experience Manager Assets (AEM) är konfigurerat med varumärkesportalen v
 
 >[!NOTE]
 >
->Konfigurering av AEM Assets med varumärkesportalen via Adobe I/O stöds i AEM 6.5.4.0 och senare.
+>Konfigurering av AEM-resurser med varumärkesportalen via Adobe Developer Console stöds på AEM 6.5.4.0 och senare.
 >
 >Tidigare konfigurerades varumärkesportalen i Classic UI via äldre OAuth Gateway, som använder JWT-tokenutbyte för att erhålla en IMS Access-token för auktorisering.
 >
@@ -35,13 +35,13 @@ Adobe Experience Manager Assets (AEM) är konfigurerat med varumärkesportalen v
 >
 >***Endast för befintliga kunder***
 >
->Vi rekommenderar att du fortsätter använda den befintliga äldre OAuth Gateway-konfigurationen. Om du får problem med äldre OAuth Gateway-konfiguration tar du bort den befintliga konfigurationen och skapar en ny konfiguration via Adobe I/O.
+>Vi rekommenderar att du fortsätter använda den befintliga äldre OAuth Gateway-konfigurationen. Om du får problem med äldre OAuth Gateway-konfiguration tar du bort den befintliga konfigurationen och skapar en ny konfiguration via Adobe Developer Console.
 
 
 
 I den här hjälpen beskrivs följande två användningsområden:
-* [Ny konfiguration](#configure-new-integration-65): Om du är en ny Brand Portal-användare och vill konfigurera AEM Assets-författarinstansen med Brand Portal kan du skapa en ny konfiguration på Adobe I/O.
-* [Uppgraderingskonfiguration](#upgrade-integration-65): Om du är en befintlig Brand Portal-användare med en AEM Assets-författarinstans konfigurerad med Brand Portal i äldre OAuth Gateway rekommenderar vi att du tar bort de befintliga konfigurationerna och skapar en ny konfiguration på Adobe I/O.
+* [Ny konfiguration](#configure-new-integration-65): Om du är en ny Brand Portal-användare och vill konfigurera AEM Assets-författarinstansen med Brand Portal kan du skapa en ny konfiguration på Adobe Developer Console.
+* [Uppgraderingskonfiguration](#upgrade-integration-65): Om du är en befintlig Brand Portal-användare med en AEM Resurser-författarinstans konfigurerad med Brand Portal i äldre OAuth Gateway rekommenderar vi att du tar bort de befintliga konfigurationerna och skapar en ny konfiguration på Adobe Developer Console.
 
 Informationen baseras på antagandet att alla som läser den här hjälpen känner till följande tekniker:
 
