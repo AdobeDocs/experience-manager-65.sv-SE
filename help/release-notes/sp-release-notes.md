@@ -1,14 +1,13 @@
 ---
 title: Versionsinformation om AEM 6.5 Service Pack
-description: Versionsinformation om Adobe Experience Manager 6.5 Service Pack 4.
-uuid: c7bc3705-3d92-4e22-ad84-dc6002f6fa6c
-contentOwner: User
-products: SG_EXPERIENCEMANAGER/6.5
-discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
+description: Versionsinformation om Adobe Experience Manager 6.5 Service Pack 5.
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 9daad219d885c1c6972ace0b247f3537dcdc38a9
+source-git-commit: d51577195e969ff8af31be49159ff575e3654cc9
+workflow-type: tm+mt
+source-wordcount: '4364'
+ht-degree: 0%
 
 ---
 
@@ -19,292 +18,358 @@ source-git-commit: 9daad219d885c1c6972ace0b247f3537dcdc38a9
 
 | Produkter | **Adobe Experience Manager 6.5** |
 |---|---|
-| Version | 6.5.4.0 |
+| Version | 6.5.5.0 |
 | Typ | Service Pack-version |
-| Date | 5 mars 2020 |
-| Hämta URL | [PackageShare](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/AEM-6.5.4.0), [Software Distribution(beta)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.4.zip) |
+| Date | 4 juni 2020 |
+| Hämta URL | [Paketresurs](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/AEM-6.5.5.0), [programdistribution ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.5.zip) |
 
-## Vad ingår i Adobe Experience Manager 6.5.4.0 {#what-s-included-in-aem}
+## Vad ingår i Adobe Experience Manager 6.5.5.0 {#what-s-included-in-aem}
 
-Adobe Experience Manager 6.5.4.0 är en viktig uppdatering som innehåller nya funktioner, viktiga förbättringar som kunderna efterfrågat och prestanda, stabilitet, säkerhetsförbättringar som släppts sedan den allmänna tillgängligheten av 6.5-utgåvan i **april 2019**. Den kan installeras ovanpå Adobe Experience Manager (AEM) 6.5.
+Adobe Experience Manager 6.5.5.0 är en viktig uppdatering som innehåller nya funktioner, viktiga förbättringar som kunderna efterfrågat och prestanda, stabilitet, säkerhetsförbättringar som släppts sedan den allmänna tillgängligheten av 6.5-utgåvan i **april 2019**. Den kan installeras ovanpå Adobe Experience Manager (AEM) 6.5.
 
-Några viktiga funktioner och förbättringar i AEM 6.5.4.0:
+Några viktiga funktioner och förbättringar i AEM 6.5.5.0:
 
-* AEM Assets har nu konfigurerats med en varumärkesportal via Adobe I/O Console.
+* Anpassa kolumnnamnen som visas i AEM Inbox.
 
-* Ett nytt [genereringssteg för utskrift](../forms/using/aem-forms-workflow-step-reference.md) är nu tillgängligt för arbetsflöden i AEM Forms.
+* Förbättra tillgängligheten inom olika områden i AEM Web Content Management (WCM), t.ex. sidredigeraren, kärnkomponenter, RTE och administratörsgränssnittet.
 
-* [Flerkolumnsstöd](../forms/using/resize-using-layout-mode.md) för layoutläge för adaptiva formulär och interaktiv kommunikation.
+* Spara en interaktiv kommunikation som ett utkast.
 
-* Stöd för [RTF](../forms/using/designing-form-template.md) i HTML5-formulär.
+* Stöd [!DNL Oracle WebLogic 12] för AEM Forms på JEE.
 
-* [Tillgänglighetsförbättringar](new-features-latest-service-pack.md#accessibility-enhancements) i Experience Manager Assets.
+* Undantagshanteringen har förbättrats i [!DNL Adobe Experience Manager] Assets-gränssnittsflödet.
 
-* Den inbyggda databasen (Apache Jackrabbit Oak) uppdateras till version 1.10.8.
+* En ny metod `getRemoteAssetPublishURL` läggs till i `com.day.cq.dam.api.s7dam.scene7.ImageUrlApi` gränssnittet för att hämta publicerings-URL för Dynamic Media Scene7.
 
-* Nu kan du synkronisera selektiva underträd till *Dynamic Media - Scene7-läge* i stället för alla tillgängliga på `content/dam`.
+* [Tillgänglighetsförbättringar](#assets-6550-changes) i [!DNL Adobe Experience Manager] Assets i enlighet med Web Content Accessibility Guidelines (WCAG).
 
-* Integrering av formulärdatamodell med SOAP-webbtjänst har nu stöd för urvalsgrupper eller attribut för element.
+* Borttagen Paketdelningsintegrering med Adobe Experience Manager.
 
-* SOAP-indata eller -utdata och komplexa datastrukturer har nu stöd för dynamisk gruppersättning.
+* Den inbyggda databasen (Apache Jackrabbit Oak) uppdateras till version 1.2.3.
 
-En fullständig lista över funktioner, viktiga högdagrar, viktiga funktioner som introducerats i tidigare AEM 6.5-servicepaket finns i [Nyheter i Adobe Experience Manager 6.5 Service Pack 4](new-features-latest-service-pack.md).
+En fullständig lista över funktioner, viktiga högdagrar, viktiga funktioner som introducerades i AEM 6.5 Service Pack 5 finns i [Nyheter i Adobe Experience Manager 6.5 Service Pack 5](new-features-latest-service-pack.md) .
 
-### Sites {#sites-fixes}
+Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6.5.5.0.
 
-* När en URL för en AEM Sites-sida innehåller ett kolon (: ) eller procentsymbol (%), svarar den underliggande webbläsaren inte och CPU-cyklerna uppvisar en topp (NPR-32369, NPR-31918).
+### Sites {#sites-6550}
 
-* När en AEM Sites-sida öppnas för redigering och en komponent kopieras, är inklistringsåtgärden inte tillgänglig för vissa platshållare (NPR-32317).
+* Med AEM Sites kan du publicera eller avpublicera en sida från dess alias. Alternativet fungerar inte (NPR-33415).
+* När en layoutbehållare tas bort från en mall som innehåller flera mallar återges inte mallen korrekt (NPR-33347).
+* När en AEM Sites-sida är en del av en stor innehållsuppsättning med flera live-kopior går det inte att läsa in förhandsgranskningen av sidversionshistoriken (NPR-33311).
+* När du använder kommandot Flytta för att byta namn på en AEM Sites-sida uppdateras inte sidtiteln (NPR-33264).
+* När du flyttar sidor genom kolumnvyn försvinner kolumnerna (NPR-33216).
+* När namnet på en lokal komponent i en språkkopia är identiskt med namnet på en komponent i utkastet och komponenten rullas ut från utkast, läggs termen _msm_move inte till i namnet på den lokala komponenten (NPR-33208).
+* Servern för omdirigering av sida lägger till .html till en AEM Sites URL där ResourceType inte är cq:Page (NPR-33176).
+* När du klistrar in ett underträd finns det inget alternativ för att bestämma om motsvarande undersidor ska klistras in eller inte (NPR-33149).
+* Antalet resultat i direktanvändning av en komponent är begränsat till nummer 49 (NPR-33058).
+* När du baserar ett innehållsfragment på ett schema och det innehåller ett obligatoriskt textområde eller ett sökvägsfält, kan innehållsfragmentet inte sparas (NPR-33007).
+* När du skapar en anpassad komponent med hjälp av fragmentkomponenten för körklar upplevelse och använder den på AEM Sites-sidor, visar inte AEM referenser (användning) för den anpassade komponenten (NPR-32852).
+* När du byter namn på en mapp med ett stort antal referenser uppdateras inte många referenser till mappen (NPR-32765).
+* När du aktiverar källredigeringsalternativet blir det tillgängligt för alternativ för helskärmsvisning, men saknas för redigeringsdialogruta och helskärmsalternativ i textredigeraren (NPR-32763).
+* Om du har ett flerfält och det innehåller ett obligatoriskt fält (t.ex. en listruta eller ett sökvägsfält) i sidegenskaperna för en plan sparas inte sidegenskaperna för live-kopian när en sida som innehåller ett sådant flerfält öppnas. (NPR-32751)
+* Skärmläsare kan inte använda rubrikstrukturen för att navigera på en sida. Dessutom har fliken Komponenter fel etikett (NPR-32648).
+* När sidnumreringen startar läses inte Experience Fragments Picker in alla objekt (NPR-32605).
+* Författarbehörigheter för att läsa, ändra, skapa och ta bort live-kopior återkallas. Varje författare måste uttryckligen ange läs- och ändringsbehörigheter för att kunna flytta sidor i en utkast (NPR-32550).
+* Innehållsförfattare kan inte skapa Launch för en sida som är integrerad med Adobe Analytics (NPR-32548).
+* När en användare återupptar arv med synkronisering synkroniseras inte den överordnade sidans live-kopia med ritningen och visar en felaktig status (NPR-32500).
+* Det tar mer än 15 sekunder att läsa in AEM Sites Editor-sidan (NPR-32413).
+* I vissa fält visas inte alternativet Avbryt arv (NPR-32362).
+* När du markerar en sökväg för en Experience Fragment-komponent och markerar kryssrutan Öppna dialogrutan Markering, navigeras du inte till den valda sökvägen i sökvägsläsaren (NPR-32308).
+* När du uppgraderar från AEM 6.2 till AEM 6.5 visas inte Parsys-komponenten för statiska mallar korrekt. Höjden på Parsys-komponenten är inställd på 0 och komponenterna i den är inte synliga. (NPR-33663).
+* När en användare kopierar och klistrar in en layoutbehållare på samma sida visas inte komponenterna i en layoutbehållare (NPR-33648).
+* Hälsokontrollen för utskickaren visar `Invalid cookie header` varningsmeddelandet i loggfilerna (NPR-33629).
 
-* När guiden Hantera publikation öppnas visas inte ett Experience Fragment som är länkat till en Core-komponent i listorna med publicerade referenser (NPR-32233).
+### Assets {#assets-6550-changes}
 
-* Översikt över Live-kopian i Touch-gränssnittet tar mycket längre tid än det klassiska användargränssnittet att återge (NPR-32149).
+**Tillgänglighetsförbättringar i Experience Manager Assets**
 
-* När servertid och maskintid är i olika tidszoner visar schemalagd publiceringstid servertid i Touch UI, medan datortid visas i Classic UI (NPR-32077).
+* Nu går det att sätta tangentbordsfokus på [!UICONTROL Comments] listan och klickbara alternativ till [!UICONTROL Create] versionskommentarer under [!UICONTROL Create new version] i [!UICONTROL Timeline] resurspanelen (NPR-33424).
 
-* AEM Sites kan inte öppna en sida med ett suffix i URL:en (NPR-32072).
+* Nu går det att nå [!UICONTROL View Settings] alternativ för resurser och ändra inställningar i [!UICONTROL View Settings] dialogrutan med hjälp av tangentbordstangenter (NPR-33420).
 
-* När en användare redigerar ett innehållsfragment återställs en borttagen variant av innehållsfragmentet (NPR-32062).
+* Listrutan med kombinationsrutor (i olika fält på olika sidor) visar nu poster som en lista med alternativ som skärmläsare kan meddela (NPR-33516).
 
-* Användare kan spara ett innehållsfragment utan att lämna någon information i de obligatoriska fälten (NPR-31988).
+* Sorteringsfunktionerna för sorterbara rubriker (i listvyn, [!UICONTROL Timeline] vyn och [!UICONTROL Manage Publication] sidan) presenteras nu av skärmläsare och sorteringskontrollerna för kolumnrubriker är tillgängliga via tangentbordet (NPR-32979).
 
-* kernel.js och ui.js är inte i förväg ifyllda eller cachelagrade. Det leder till extra tid vid återgivning av sidor (NPR-31891).
+* De klickbara elementen (som kommentarkort, versionsuppdateringar, kombinationsrutor och ikoner i form av en ikon) kan nu fokuseras och åtgärdas med tangentbordet (NPR-33514).
 
-* När PageEventAuditListener är aktiverat ökar längden på implementeringskön. Det påverkar prestandan för många verksamheter, t.ex. bulkpublicering, navigering och flyttning av bulktillgångar (NPR-31890).
+* Funktionaliteten (eller syftet med åtgärden) för insikter-ikoner (för användning, visningar och klickningar) på [!UICONTROL Insights View] presenteras nu korrekt av skärmläsare (NPR-33513).
 
-* När Experience Fragments dras, observeras en hög responstid (NPR-31878).
+* Skrivskyddade formulärfält (t.ex. inaktiverade fält på [!UICONTROL Basic tab] resurser [!UICONTROL Properties]) kan nu fokuseras med tangentbordet (NPR-33493, CQ-4273031).
 
-* När du markerar alternativet Drag-komponenten här i platshållaren för ett responsivt rutnät, skickas en GET-begäran och begäran resulterar i HTTP 403-fel (NPR-31845).
+* Etiketter i olika indatafält är nu permanenta etiketter (så att de är tillgängliga) och inte bara platshållaretiketter, som försvinner när texten skrivs (NPR-33475).
 
-* När du flyttar innehållet i samma mapp är alternativet för sidflyttning inaktiverat (NPR-31840).
+* Olika rubriknivåer (t.ex. sidrubriker och avsnittsrubriker) uppfattas nu som rubriker med olika nivåer för skärmläsaranvändare (NPR-33471).
 
-* I strukturläget för redigerbara mallar visas felaktiga resultat i listan över tillåtna komponenter i layoutbehållaren. Endast komponenter med designdialogrutan visas i layoutbehållaren (NPR-31816).
+* Interaktiva element i användargränssnittet, t.ex. länkar och alternativ (för rubrik- och zoomalternativ på tillgångssidan, mappnavigering), är nu tillgängliga via ett tangentbord (NPR-33468, CQ-4271412).
 
-* När en sida har skrivskyddad behörighet för en användare visas alternativet Öppna egenskaper i sites.html, men inte i editor.html (NPR-31770).
+* Indikatorerna för [!UICONTROL Options], [!UICONTROL Scope]och [!UICONTROL Workflows] förlopp på [!UICONTROL Manage Publication] sidan läses nu ut korrekt av skärmläsare som förloppsindikatorer, i stället för som tabbar (NPR-33416).
 
-* När en användare klickar på knappen Skapa är sidalternativet inte tillgängligt (NPR-31756).
+* Färgen på stjärngraderingsikoner (t.ex. i [!UICONTROL Rating] avsnitt på [!UICONTROL Advanced] fliken i resursen [!UICONTROL Properties] eller i kortvyn) ändras så att lämplig kontrast blir synlig för användare med begränsad syn och utan att de uppfattar färg (NPR-33414).
 
-* Det går inte att synkronisera kampanjen i Adobe-kampanjen som innehåller OTB-designimportkomponenten (utanför rutan) (NPR-31728).
+* Du kan nu komma åt uppåtpilen för spolen bredvid [!UICONTROL Comment] fältet på sidan med tillgångsinformation med hjälp av tangentbordstangenter (NPR-33397).
 
-* När du försöker ändra en punktlista till en numrerad lista ändras bara de två första punkterna i listan (NPR-31636).
+* De utökade och komprimerade lägena i [!UICONTROL Tags] dialogrutan för navigering till resurser [!UICONTROL Properties] och vänster järnväg (i användargränssnittet för resurser) presenteras nu korrekt av skärmläsare (NPR-33396).
 
-* När en sida inte har skapats och den underordnade noden har valts visas den inledande noden fortfarande i urvalsdialogrutan. När sidan har skapats och användaren klickar på Bläddra, dirigeras sidan om till rotnoden i stället för den redigerade noden (NPR-31618).
+* Titlarna på alla bläddrade sidor på [!DNL Adobe Experience Manager] Assets är nu unika (NPR-33343).
 
-* Visningskonfigurationsdialogrutan fungerar inte som den ska för funktionen för anpassning av inkorgen (NPR-32503 och NPR-32492).
+* När du navigerar i trädstrukturen visas nu olika element i trädvykontrollen korrekt av skärmläsare (NPR-33304).
 
-* Ett felmeddelande visas när arbetsflödesinformation visas med Inbox (CQ-4282168).
+* Olika versioner av resurser i [!UICONTROL Timeline] vyn på sidan med tillgångsinformation är nu tillgängliga med tangentbordstangenter (NPR-33283).
 
-### Assets {#assets-6540-enhancements}
+* Namn på sökförslag som visas i kombinationsrutan Omnissearch meddelas nu av skärmläsare när sökfunktionen används (NPR-33280).
 
-* Knappen som utlöser arbetsflödet på sidan för resurssamling är inaktiverad (NPR-32471).
+* Klickbara element och [!UICONTROL Go to link] i [!UICONTROL References rail] presenteras nu som klickbara element av skärmläsare (NPR-33278).
 
-* En mapp utan namn skapas i SPS (Scene7 Publishing System) när en resurs flyttas från en mapp till en annan i Experience Manager med Dynamic Media Scene7-konfiguration (NPR-32440).
+* Tabellstrukturinformation (t.ex. rad 1, cell 1, tabell) i dialogrutan visas inte längre av skärmläsare när dialogrutan öppnas (NPR-33268). [!UICONTROL Share Link]
 
-* Åtgärden för att flytta alla resurser (med Markera alla och sedan flytta) till en mapp som innehåller publicerade resurser misslyckas med felet (NPR-32366).
+* Syftet med olika kombinationsruteelement (t.ex. fältet Sökväg och alternativet att öppna dialogrutan Markering på fliken Grundläggande i resursegenskaper) har nu annonserats korrekt av skärmläsare (NPR-33235).
 
-* Återgivningsgenerering för resurser med ${extension} misslyckas (NPR-32294).
+* Information om att raderna i listvytabellen kan markeras skickas nu till skärmläsaranvändare när tangentbordsfokus är på dem. Denna information meddelas när musen förs över raderna (NPR-33234).
 
-* Versionshistorik-URL:er visas under fältet Refererat av på egenskapssidan för resurser (NPR-31889).
+* Alternativen ( [!UICONTROL x]att ta bort) för de markerade taggarna under [!UICONTROL Tags] fältet på fliken [!UICONTROL Basic] i [!UICONTROL Properties] är nu tillgängliga för skärmläsare (NPR-33206).
 
-* ZIP-filen som hämtas från DAM kan inte öppnas med WinZip (NPR-32293).
+* Kalenderns datumväljare kan nu fokuseras och användas med tangentbordet av skärmläsaranvändare och synkade tangentbordsanvändare (NPR-33200).
 
-* Ursprungliga behörigheter för en mapp uppdateras när mappinställningar öppnas för att ändra mappens titel eller miniatyrbild och sedan sparas (NPR-32292).
+* Växlingen mellan listvyn och kortvyn visar nu funktionen (vid justering av vyer) korrekt för skärmläsaren (NPR-33069).
 
-* Kalenderikonen för den schemalagda aktiveringen visas inte i statuskolumnen (i Klassiskt användargränssnitt för DAM-tillgångslista) för resurser vars aktivering är schemalagd för ett senare datum och en senare tid (NPR-32291).
+* Menyn i den vänstra listen är nu tillgänglig. Funktionaliteten och syftet med att expandera menyn meddelas av skärmläsare (NPR-33068).
 
-* När du skapar fragment med fragmentmallar uppstår ett fel när du söker efter samlingar när fragmentet skapas (NPR-32290).
+* Listrutan och många andra element i användargränssnittet är nu tillgängliga för användare med skärmläsare som inte är synliga, och följande information om dem presenteras av skärmläsare (NPR-33040):
 
-* Flera sökfrågor utlöses när flera taggar väljs från sökfiltret (NPR-32143).
+   * om användarindata krävs för ett element innan formuläret skickas.
+   * om ett element inte kan redigeras.
+   * om en widget är markerad eller inte.
 
-* Användargränssnittet i Experience Manager Assets visar trunkerade filnamn när resurser med fler än 50 tecken i filnamnet överförs (NPR-32054).
+* Nu går det att öppna filtersidofältet med tangentbordet (NPR-32842, CQ-4273018).
 
-* Alla kryssrutor på panelen Filter avmarkeras när den första och den andra kryssrutan avmarkeras när du har markerat två kryssrutor i kryssruteträdet i Adobe Stock (NPR-31919).
+* Kryssrutekontrollen i kolumnrubriken i listvyn är nu tillgänglig och syftet med att använda kontrollen presenteras av skärmläsare (NPR-32722, NPR-33005).
 
-* Filer- och mappsökning med Omnisearch-ansikten ger undantag (NPR-31872).
+* Etiketter för timmar (HH) och minuter (mm) i kalenderdatumväljaren är nu permanenta etiketter i stället för platshållaretiketter, och försvinner inte när användaren skriver text i dessa fält (NPR-32720).
 
-* Fältmarkering för obligatoriskt fältval i metadataredigeraren tas inte bort även efter att det obligatoriska fältet har markerats, när beroendereglerna har angetts i motsvarande metadatamatchformulär (NPR-31834).
+* Länktexten i meddelanden (som visas när du har klickat på klockikonen) visas nu för skärmläsaranvändare som använder tabb för att komma åt varje länk (NPR-32645).
 
-* Fullständiga namn på taggar på lövnivå (från tagghierarkin) visas inte på egenskapssidan för resurser (NPR-31820).
+* [!UICONTROL Select], [!UICONTROL Download], [!UICONTROL Properties]och [!UICONTROL More Actions] alternativ på tillgångskort i [!UICONTROL Insights View] är nu tillgängliga via tangentbordet (NPR-32609).
 
-* Om du använder kommandot back från objektets egenskapssida i webbläsaren Safari uppstår ett fel (NPR-31753).
+* Visuellt dolt innehåll (t.ex. innehåll i sidhuvudsmenyraden i sökresultat) annonseras inte längre av skärmläsare när de öppnas med tangentbordet (NPR-32606).
 
-* Touch UI-sökning (utförd via Omnissearch)-resultatsidan rullar automatiskt upp och förlorar användarens rullningsposition (NPR-31307).
+* Ändamålet med etiketterna på kontroller för att gå över till nästa och föregående månad i datumväljaren presenteras nu av skärmläsare (NPR-32604).
 
-* Assets detail page of PDF assets does not show action buttons except To Collection and Add Rendition buttons in Experience Manager running mode on Dynamic Media Scene7 (CQ-4286705).
+* Stjärngraderingsikoner kan nu fokuseras och användas med tangentbordstangenter (NPR-32513).
 
-* Resurserna tar för lång tid att bearbeta genom batchöverföringen i Scene7 (CQ-4286445).
+* Funktioner för att styra videovolymen är nu tillgängliga via tabb (för att fokusera på volymreglaget) och piltangenter (för att justera volymen) på tangentbordet (NPR-32065).
 
-* Knappen Spara importerar inte fjärruppsättningen när användaren inte har gjort några ändringar i Set Editor i Dynamic Media Client (CQ-4285690).
+* Syftet med indatafält med nedre gräns ([!UICONTROL From]) och övre gräns ([!UICONTROL To]) för filstorleksfiltret har nu annonserats för användare med skärmläsare som inte är synkade (NPR-32064).
 
-* Miniatyrbilden av 3D-resursen är inte informativ när en 3D-modell som stöds har importerats till AEM (CQ-4283701).
+* Menyn [!UICONTROL Languages] i [!UICONTROL Create and Translate] formuläret är nu tillgänglig för skärmläsare i bläddringsläge (CQ-4293906).
 
-* Den obearbetade statusen för visningsförinställningen för smart beskärning visas två gånger på banderolltexten bredvid förinställningsnamnet (CQ-4283517).
+* Panelen är nu tillgänglig med följande förbättringar (NPR-33261, CQ-4293798): [!UICONTROL References]
 
-* Felaktig behållarhöjd för en överförd 3D-modell som förhandsvisats i 3D-visningsprogrammet visas på objektets informationssida (CQ-4283309).
+   * I bläddringsläge flyttas inte längre skärmläsarens fokus till dolda redigeringsfält med flera rader under [!UICONTROL Site References], [!UICONTROL Asset References], [!UICONTROL Copies]och [!UICONTROL Form References] avsnitt.
 
-* Carousel Editor öppnas inte i IE 11 i läget Dynamic Media Hybrid i Experience Manager (CQ-425590).
+   * Skärmläsare presenterar nu rollen för [!UICONTROL Site References] och [!UICONTROL Language Copies] element.
 
-* Tangentbordsfokus fastnar i den nedrullningsbara menyn E-post i hämtningsdialogrutan i webbläsarna Chrome och Safari (NPR-32067).
+   * Skärmläsarnas fokus i bläddringsläge ändras i en meningsfull sekvens till olika element.
 
-* Kryssrutan Synkronisera allt innehåll är inte aktiverad som standard när du försöker lägga till DM-molnkonfiguration på AEM (CQ-4288533).
+* [!UICONTROL Metadata Schema Editor] sidan och dess element är nu tillgängliga via tangentbordet och är skärmläsarvänliga (CQ-4290962, CQ-4272953).
 
-### Foundation UI {#foundation-ui-6540}
+* Syftet med [!UICONTROL x] ikonen om alternativet att ta bort markerade taggar visas också tillsammans med antalet markerade taggar (CQ-4273017).
 
-* Muskontrollen flyttas till föregående filterfält i stället för att finnas kvar i det befintliga filterfältet när resurser söks med hjälp av filterpanelen (NPR-32538).
+* Dekorativa ikoner och bilder ignoreras nu av skärmläsare, för att undvika förvirring för användare som inte ser bilden med skärmläsaren (CQ-4272944).
 
-* Plattformstaggning: Om du söker efter taggar genom att skriva i taggfälten visas taggar utanför rotgränserna och egenskapen för taggfält respekteras inte (NPR-31895). `rootPath`
+**Problem som har korrigerats i Experience Manager Assets**
 
-* Plattformsgränssnitt: Webbläsaren för sökvägen bryts om en ogiltig sökväg läggs till i textfältet (NPR-31884).
+[!DNL Adobe Experience Manager] 6.5.5.0 Resurser innehåller korrigeringar av följande:
 
-* Meddelande döljs bakom en klistermeny vid sidval (NPR-31628).
+* [!UICONTROL Start] i dialogrutan för resurser i en samling är inaktiverat, vilket förhindrar att arbetsflödet aktiveras (NPR-32471). [!UICONTROL Create Workflow]
 
-### Platform {#platform-sling-6540}
+* När du använder listrutan för överlappande i metadatamatcheman försvinner det valda alternativet för apostrof när du väljer och sparar ett nedrullningsbart alternativ som innehåller en apostrof (från den underordnade listrutan) efter att resursen öppnats [!UICONTROL Properties] (NPR-32649).
 
-* (HTL) Understrykningar ersätter kolon i sökvägsavsnittet i URL (NPR-32231).
+* [!UICONTROL Asset Insights Sync Job] stoppar och misslyckas om ogiltiga poster påträffas (på analyssidan) i stället för att nästa post (NPR-32674) flyttas.
 
-### Projekt {#projects-6540}
+* Gyroscope fungerar inte eftersom rörelsesensorerna är inaktiverade som standard i mobilwebbläsare i panoramavisare (CQ-4272937).
 
-* Knappen Skapa är inte synlig för användaren även om användaren har behörighet att skapa projekt i undermappen (NPR-31832).
+* [!UICONTROL Connected Assets Configuration] guide fungerar inte med 404-fel vid installation av 6.5.3 i 6.5.1 (NPR-32730).
 
-### Projektöversättning {#projects-translation-6540}
+* Under XMP-tillbakaskrivningen ändras namnutrymmesmetadataegenskaperna för alla anpassade namnutrymmesmetadataegenskaper till ns2 i motsats till det namnområdesprefix som har konfigurerats (NPR-32748).
 
-* När ett översättningsprojekt skapas bryts gränssnittet när alternativet Trimma mellanslag aktiveras i `Apache Sling JSP Script Handler` (NPR-32154).
+* Lazy-inläsning aktiveras inte och endast 100 resurser visas när du väljer att granska uppgifter från meddelandeinkorgen (NPR-32750).
 
-* Fel i användargränssnitt och Null-punktsundantag i felloggar observeras när en tagg, som ska översättas, läggs till i ett översättningsprojekt (NPR-31896).
+* `NullPointerException` observeras på grund av att nodinställningar saknas i den nyligen skapade användarprofilen (SAML/SSO). Detta fel förhindrar att nyinloggade användare använder [!DNL Adobe Experience Manager Stock] integrering (NPR-32777).
 
-### Integreringar {#integrations-6540}
+* Traversal-varningar observeras i loggar när en smart samling som innehåller mer än 10 000 resurser öppnas (NPR-32980).
 
-* Generering av URL för startbibliotek baseras endast på `path` och `library_name` värden från API:t Launch och är inte baserat på `library_path` värde (NPR-31550).
+* Resursnamn ändras till gemener när resurser flyttas från en mapp till en annan i [!DNL Adobe Experience Manager] läget Dynamic Media Scene7 (NPR-32995).
 
-* Ett felmeddelande visas när LiveFyre-relaterade objekt bearbetas (FYR-12420).
+* Det går inte att ta bort en sökresurs efter att ha navigerat till dess egenskaper från sökresultaten och sedan gå tillbaka till sökresultaten för att ta bort den (NPR-32998).
 
-* ReportSuitesServlet är sårbart för SSRF (NPR-32156).
+* [!UICONTROL Next] alternativet förblir inaktiverat när målmappen väljs i [!UICONTROL Move Assets] gränssnittet (NPR-33356).
 
-### WCM-mallredigerare {#wcm-template-editor-6540}
+* [!UICONTROL Next] är inte aktiverat när du väljer överordnad nod (där en underordnad mapp är synlig) och sedan väljer underordnad mapp (NPR-33275).
 
-* I redigerbart mallstrukturläge visas inte länkknappskomponenten i listan över tillåtna komponenter i layoutbehållaren (CQ-4282099).
+* Inchecknings- och utcheckningsbehörigheter är inaktiverade för Adobe Asset Link (AAL) för användare med borttagningsbehörighet, även om andra behörigheter som läsning, skapande eller ändring tillåts för dem (NPR-33272).
 
-### WCM Page Editor {#wcm-page-editor-6540}
+* Smart Crop-renderingar är inte tillgängliga i dialogrutan för hämtning av resurser (NPR-33167).
 
-* Det uppstod ett fel när en övertäckning skulle markeras och därefter när responsiva rutnätskomponenter skulle markeras här (CQ-4283342).
+* Undantag observeras i loggar vid öppning av renderingsspår för en PDF-fil i en mapp med en smart beskärningsprofil (CQ-4294201).
 
-### Kampanjanpassning {#campaign-targeting-6540}
+* Bildförinställningar publiceras inte om [!UICONTROL Dynamic Media sync mode] är inaktiverat som standard i AEM med körläge för Dynamic Media Scene7 (CQ-4294200).
 
-* Målmolnkonfigurationen misslyckades med felet när mbox-begäran skulle hämtas (CQ-4279880).
+* Resursbearbetning när massöverföring fastnar och arbetsflödesinstansen visar fasta instanser av DAM-uppdateringsresurs (CQ-4293916).
 
-### Varumärkesportal {#assets-brand-portal}
+* Det går att skapa en dynamisk mediekonfiguration i AEM, men i användargränssnittet händer inget när du väljer Spara (CQ-4292442).
 
-* Användare av varumärkesportalen kan inte publicera resurser i mappen för bidrag till AEM Assets när de uppgraderar till Adobe I/O på AEM 6.5.4 (CQDOC-15655).
+* Förhandsgranskning av f4v-videomaterial fungerar inte i progressiv uppspelning på Safari/Mac (CQ-4289844).
 
-   Problemet åtgärdas i nästa Service Pack AEM 6.5.5.
+* En extra mapp skapas vid smart beskärning av en resurs som finns i en överordnad mapp med ett punkttecken i namnet (CQ-4289337). `.`
 
-   Om du vill åtgärda AEM 6.5.4 direkt rekommenderar vi att du [hämtar snabbkorrigeringen](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/hotfix/cq-6.5.0-hotfix-33041) och installerar den på din författarinstans.
+* Miniatyrbilden är trasig och videobearbetningsbanderollen visas inte när en video kopieras (CQ-4284125).
 
+* Dimensionella visningsprogram visar felaktigt tomma miniatyrbilder i Firefox för vissa modeller med tomma kameravinklar (CQ-4283447).
 
-* Värden för rullgardinsmenyer för metadatamatchning visas inte i resursegenskaper (CQ-4283287).
+* Prestandaproblem som åtgärdas i 6.5.5.0 är (CQ-4279206):
 
-* Delschemat Metadata visar inte tabbar baserade på mimeType i resursegenskaper (CQ-4283288).
+   * Det tar för lång tid att överföra stora binära filer till servrar för bildbearbetning i dynamiska media.
 
-* Ett felmeddelande fylls i när metadatamatchemat avpubliceras, även om schemat tas bort vid backend.
+   * Genereringstiden för miniatyrbilder på AEM ökar på grund av Dynamic Media Scene7-arkitekturen.
 
-* Förhandsvisningsbilden visas inte för en publicerad resurs (CQ-4285886).
+* Migreringsproblem med Dynamic Media Scene7 misslyckas för kunder med ett stort antal mediefiler (CQ-4279206).
 
-* Användaren kan inte publicera eller avpublicera resurser som innehåller ett enkelt citattecken i namnet (CQ-4272686).
+* Layouten i visningsprogrammet för video 360 bryts om `setVideo` används, och videon ändras när den används `video= modifier` (CQ-4263201).
 
-* Villkoren visas inte vid hämtning av flera resurser (CQ-4281224).
+* Ett felmeddelande visas när AEM SDL-paketet installeras (NPR-33175).
 
-* Mindre säkerhetsluckor har åtgärdats.
+### Platform {#platform-6550}
 
-### Communities {#communities}
+* Filtret anropas inte om [!DNL Sling] mappningsposten skapas under `sling:match` `/etc/maps` (NPR-33362).
+* AEM kraschar på grund av segmenteringsfel med [!DNL Apache Lucene] (NPR-32988).
+* [!DNL Jackson] kärnpaket saknas i AEM uber jar-filen (NPR-32848).
+* CRXDE Lite läser inte in innehåll för användare utan LÄS-behörighet för en nods egenskap (NPR-32611). `jcr:primaryType`
+* [!DNL Granite] Schemaläggaren för underhållsaktiviteter initieras om för ofta under AEM-distributioner (CQ-4294627).
+* När en SQL-fråga körs längre, till exempel 7 timmar, slutar AEM svara (NPR-33044).
 
-* Formuläret Skapa medlem visas som en tom sida (NPR-31997).
+### Användargränssnitt {#ui-6550}
 
-* Användaren kan inte visa Analytics-rapporten för författarinstansen (NPR-30913).
+* Alternativknappsmarkeringen finns inte kvar i ett multifält (NPR-33309).
+* Lazy-inläsningsgränsen fungerar inte för listvyn (NPR-33124).
+* Sidan med omsökningsresultat visar inget meddelande om det inte finns några matchningar (NPR-32974).
+* Omsökningsfiltret returnerar alla matchningar under `/content` noden som ignorerar den valda platsen (NPR-32849).
 
-### Oak-indexering och frågor {#oak-indexing-6540}
+### Integreringar {#integrations-6550}
 
-* MS Word- och MS Excel-dokument som innehåller JPEG-bilder kan inte tolkas när de tolkas med Tika-tolken, och fel som inte hittas av klassen observeras (NPR-31952).
+* Intern cache rensas när en sida med en Adobe Target-komponent publiceras (NPR-33162).
+* Integrering med Adobe Target fungerar inte på [!DNL Windows Internet Explorer] 11 (NPR-33111).
+* När du konfigurerar Adobe Target visas inte fälten [!UICONTROL Company] och [!UICONTROL Report Suite] när du väljer en rapportkälla (NPR-32502).
+* Vid export av upplevelsefragment med Adobe I/O exporteras inte metadata som Source Product till Adobe Target (NPR-32159).
+* Auktoriserade IMS-användare i den lokala AEM-administratörsgruppen kan inte skapa eller ändra IMS-konfigurationer (NPR-33045).
+* Konfigurationssidan för Adobe Launch visar inte alla poster (NPR-33011).
+* Användare i gruppen content-authors kan inte redigera egenskaper för en Adobe Target-komponent på grund av ett JavaScript-fel (NPR-32996).
 
-### Formulär {#forms-6530}
+### Översättningsprojekt {#translation-6550}
+
+* Översatta taggar importeras inte till AEM från översättningstjänster från tredje part (NPR-33154).
+* Översättningskonfigurationssidan visar en felaktig översättningsprovider än den som används för översättningen (NPR-32971).
+* Om du lägger till en upplevelsefragmentmapp i ett befintligt översättningsprojekt skapas ett nytt projekt (NPR-32843).
+* Ett `NullPointerException` fel visas i loggarna när ett översättningsjobb körs (NPR-32628).
+
+### WCM {#wcm-6550}
+
+* Page Editor - [!DNL Sites] Page Editor tillåter inte att användare med endast tangentbord hoppar över huvudinnehållet i stället för att växla tabbfokus mellan alla alternativ som är tillgängliga i sidhuvudet (CQ-4293883).
+* Page Editor - Paneler som använder Well-komponenten och inkluderar sparade data visas inte på grund av uppdateringar i [!DNL Chrome] - och [!DNL Firefox] -versioner (CQ-4292995).
+* MSM - Om du tar bort en komponent från sidan tas inte komponenten bort från den publicerade versionen av sidan (CQ-4292360).
+
+### Varumärkesportal {#assets-brand-portal-6550}
+
+* Om du tar bort ett publicerat metadataschema från [!DNL Brand Portal] skapas ett fel (CQ-4292063).
+* Om en administratör konfigurerar [!DNL Experience Manager Assets] 6.5.4 med varumärkesportalen via Adobe Developer Console kan [!DNL Brand Portal] användaren inte publicera en resurs i en mapp från [!DNL Brand Portal] till [!DNL Experience Manager]. (NPR-33046).
+* Duplicerad replikering av de överordnade mapparna som orsakar konflikter (NPR-33001).
+
+### Communities {#communities-6550}
+
+* Det går inte att ta bort ett kort i en moderationskonsol med hjälp av snabbredigeringsmenyalternativet (NPR-33117).
+* Ett fel inträffar vid åtkomst till [!UICONTROL Activity Stream] sidan (NPR-33146).
+* Grupper som tas bort från författarinstansen tas inte bort från alla publiceringsinstanser (NPR-33199).
+* Författare som har skapat en ny grupp omdirigeras inte till avsnittet [!UICONTROL Community Group] i [!DNL Internet Explorer] 11 (NPR-33205).
+* När du öppnar ett meddelande i AEM Inbox ändras inte meddelandets status till Läs (NPR-32764).
+* När du redigerar en [!DNL Communities] grupp och ändrar miniatyrbilden uppdateras inte gruppens miniatyrbild (NPR-32599).
+* En användare kan inte skicka ett e-postmeddelande till en annan användare i en community (NPR-32598).
+* En skickad blogg visas inte förrän användaren uppdaterar sidan (NPR-32391).
+* När du skapar en version av meddelanden och prenumerationer på användargenererat innehåll (UGC) lagras ett felaktigt ID för källsidan (CQ-4279355, CQ-4289703).
+
+### Arbetsflöde {#workflow-6550}
+
+* Alternativet [!UICONTROL Timeline] i den vänstra listen tar längre tid att ladda än förväntat (NPR-32851).
+* När du har startat om en AEM-instans innehåller e-postmeddelandet för granskningsaktiviteten för en samling en felaktig nyttolastlänk (NPR-32774).
+
+### Formulär {#forms-6550}
 
 >[!NOTE]
 >
 >AEM Service Pack innehåller inte korrigeringar för AEM Forms. De levereras med ett separat Forms-tilläggspaket. Dessutom släpps ett kumulativt installationsprogram med korrigeringar för AEM Forms på JEE. Mer information finns i [Installera tillägget](#install-aem-forms-add-on-package) AEM Forms och [Installera AEM Forms på JEE](#install-aem-forms-jee-installer).
 
-* Korrespondenshantering: Bokstäverna visar extra tecken efter överföring för att bokföra processarbetsflöden (NPR-32626).
+* Korrespondenshantering: Ordningen på tillgångarna i ett målområde blandas efter att en skrivelse har lämnats in (NPR-33359, NPR-33153).
+* Adaptiva former: När en användare redigerar ett anpassat formulär fungerar inte det [!UICONTROL Start Workflow] alternativ som finns på [!UICONTROL Page Information] menyn (NPR-33004).
+* Adaptiva former: Användaren kan inte spara ett anpassat formulär med mer än en bifogad fil (NPR-32997).
+* Adaptiva former: Om du ändrar panellayouten i ett adaptivt formulär uppstår ett fel (CQ-4293880).
+* Adaptiva former: En ny rad i en sträng i en ordlista med adaptiva formulär lägger till `&#xa;` tecken i ordlistan (NPR-33266).
+* Tillgänglighet för adaptiva formulär: När en användare förhandsgranskar ett anpassat formulär som ett HTML-formulär kan [!UICONTROL Scribble Signature] fältet inte behålla tabbfokus (NPR-33159).
+* Tillgänglighet för adaptiva formulär: Felmeddelandena som visas när ett anpassat formulär skickas länkar inte till ett `aria-describedBy` -attribut (NPR-33071).
+* Tillgänglighet för adaptiva formulär: Fält som markerats som obligatoriska i en adaptiv form har inte det obligatoriska attributet inställt på True i ARIA-hjälpmedelsschemat (NPR-33070).
+* PDFG-tjänst: När en användare konverterar en textfil till en PDF-fil återges inte japanska tecken korrekt (NPR-33238).
+* PDFG-tjänst: `CreatePDF` kan inte konvertera en PDF-fil till PDF OCR-format (NPR-32994).
+* PDFG-tjänst: PDF-konverteringen misslyckas för den 200:e instansen av ett [!DNL OpenOffice] dokument (NPR-32766).
+* BackendIntegration: Begäranden från formulärdatamodellen misslyckas eftersom uppdateringstoken förfaller på grund av ett inaktivt tillstånd (NPR-33169).
+* Designer: Skärmläsare kör tabbordningen baserat på den geografiska standardordningen i stället för den anpassade tabbordningen som definieras i XDP-filen (NPR-32160).
+* Designer: Om taggningsalternativet är aktiverat försvinner delformulärsramen i den genererade PDF-utdatafilen (NPR-32778).
 
-* Korrespondenshantering: Bokstäverna visar en nedrullningsbar platshållare som en textkomponent efter att de skickats in till arbetsflöden efter bearbetning (NPR-32539).
-
-* Korrespondenshantering: Standardvärdena som definieras i brevmallen visas inte i förhandsvisningsläget (NPR-32511).
-
-* Mobilformulär: Skicka-knappen visas som utökad när ett XDP-formulär återges i en HTML-version (NPR-32514).
-
-* Dokumenttjänster: Problem med URL-åtkomst för brev och vissa andra sidor efter att Service Pack 2 har tillämpats (NPR-32508, NPR-32509).
-
-* Dokumenttjänster: Om antalet transaktioner på en server överstiger en viss gräns misslyckas konverteringen från HTML till PDF och filtypsinställningarna tas bort från AEM Forms-servern (NPR-32204).
-
-* Adaptiva former: Verktyget Webbläsartillgänglighet rapporterar fel i adaptiva formulär enligt riktlinjerna för WCAG2 Level AA (NPR-32312, NPR-32309, CQ-4285439).
-
-* Adaptiva former: Webbläsarhjälpmedelsverktyget i Chrome rapporterar ett fel med bästa praxis (NPR-32310).
-
-* Adaptiva former: Översättningsproblem vid konfigurering av ett adaptivt formulär inbäddat på en AEM Sites-sida (NPR-32168).
-
-* Workbench: Ett felmeddelande visas när åtgärden Hämta PDF-egenskaper används för tjänsten PDF Utilities (NPR-32150).
-
-* Dokumentsäkerhet: En skyddad PDF-fil kan inte öppnas offline med alternativet DisableGlobalOfflineSynchronizationData inställt på True (NPR-32078).
-
-* Designer: Om taggningsalternativet är aktiverat försvinner delformulärsramen i den genererade PDF-utdatafilen (NPR-32547, NPR-31983, NPR-31950).
-
-* Designer: Om det finns sammanfogade celler i en tabell misslyckas hjälpmedelstestet för PDF-utdatafilen som konverterats från ett XDP-formulär med hjälp av utdatatjänsten (CQ-4285372).
-
-* Foundation JEE: Om en AEM Forms-server är frånkopplad från ett kluster kan den inte återansluta till servern med hjälp av cachelagring (NPR-32412).
-
-## Installera 6.5.4.0 {#install}
+## Installera 6.5.5.0 {#install}
 
 **Installationskrav**
 
-* AEM 6.5.4.0 kräver AEM 6.5. Detaljerade instruktioner finns i [uppgraderingsdokumentationen](/help/sites-deploying/upgrade.md) .
+* AEM 6.5.5.0 kräver AEM 6.5. Detaljerade instruktioner finns i [uppgraderingsdokumentationen](/help/sites-deploying/upgrade.md) .
 * Nedladdningen av Service Pack finns på Adobe Package Share, som du kommer åt direkt från AEM 6.5-instansen.
-* På en distribution med MongoDB och flera instanser installerar du AEM 6.5.4.0 på en av Author-instanserna med hjälp av Package Manager.
-* Innan du installerar Service Pack bör du kontrollera att du har en ögonblicksbild eller en ny säkerhetskopia av AEM-instansen.
+* På en distribution med MongoDB och flera instanser installerar du AEM 6.5.5.0 på en av Author-instanserna med hjälp av Package Manager.
+* Ta en ögonblicksbild eller en ny säkerhetskopia av AEM-instansen innan du installerar.
 * Starta om instansen innan du installerar den. Detta behövs bara när instansen fortfarande är i uppdateringsläge (och detta är fallet när instansen uppdaterades från en tidigare version), men vi rekommenderar att instansen körs under en längre period.
-
->[!CAUTION]
->
->Adobe rekommenderar inte att du tar bort eller avinstallerar AEM 6.5.4.0-paketet.
-
-### Installera Service Pack via paketresurs {#install-service-pack-via-package-share}
-
-Så här installerar du Service Pack på en befintlig AEM 6.5-instans:
-
-1. Logga in på Package Share inifrån AEM eller direkt från webbläsaren och ladda ned [AEM 6.5.4.0-paketet](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/AEM-6.5.4.0).
-
-1. Installera det hämtade paketet med hjälp av Package Manager.
 
 >[!NOTE]
 >
->**Dialogrutan i användargränssnittet för Package Manager avslutas ibland felaktigt under installationen av 6.5.4.0**
+>Adobe rekommenderar inte att du tar bort eller avinstallerar AEM 6.5.5.0-paketet.
+
+### Installera Service Pack {#install-service-pack}
+
+Så här installerar du Service Pack på en befintlig AEM 6.5-instans:
+
+1. Klicka på länken [Paketresurs](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/AEM-6.5.5.0) eller [Programdistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.5.zip) för att hämta paketet.
+
+1. Öppna [Pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp) och klicka på **Överför paket** för att överföra paketet.
+
+1. Markera paketnamnet och klicka på **Installera**.
+
+>[!NOTE]
+>
+>**Dialogrutan i användargränssnittet för Package Manager avslutas ibland felaktigt under installationen av 6.5.5.0**
 >
 >Därför rekommenderar vi att du väntar på att felloggarna ska stabiliseras innan du får åtkomst till instansen. Användaren måste vänta på specifika loggar som rör avinstallation av uppdateringspaketet innan den kan vara säker på att installationen lyckas. Det händer vanligtvis på Safari, men kan hända i olika webbläsare.
 
 **Automatisk installation**
 
-Det finns två sätt att automatiskt installera AEM 6.5.4.0 i en instans som körs:
+Det finns två sätt att automatiskt installera AEM 6.5.5.0 i en instans som körs:
 
-S. Placera paketet i ..*/crx-quickstart/install* -mappen när servern är tillgänglig online. Paketet installeras automatiskt.
+S. Placera paketet i en `../crx-quickstart/install ` mapp när servern är tillgänglig online. Paketet installeras automatiskt.
 
-B. Använd [HTTP-API:t från Package Manager](https://docs.adobe.com/content/docs/en/crx/2-3/how_to/package_manager.html) - kontrollera att du använder cmd=install&amp;recursive=true - så att kapslade paket installeras.
+B. Använd [HTTP API:t från Package Manager](https://docs.adobe.com/content/docs/en/crx/2-3/how_to/package_manager.html) - kontrollera att du använder `cmd=install&recursive=true` - så att kapslade paket installeras.
 
 >[!NOTE]
 >
->AEM 6.5.4.0 stöder inte Bootstrap-installation.
+>AEM 6.5.5.0 stöder inte Bootstrap-installation.
 
 **Validera installation**
 
-1. På sidan Produktinformation (/system/console/ producto) visas den uppdaterade versionssträngen `Adobe Experience Manager, Version 6.5.4.0` under Installerade produkter.
+1. På sidan Produktinformation (/system/console/ producto) visas den uppdaterade versionssträngen `Adobe Experience Manager, Version 6.5.5.0` under Installerade produkter.
 
-1. Alla OSGi-paket är antingen **[!UICONTROL AKTIVA]** eller **[!UICONTROL FRAGMENT]** i OSGi-konsolen (använd webbkonsol: /system/console/bundles).
-1. OSGI-paketet org.apache.jackrabbit.oak-core finns i version 1.10.6 eller senare (Använd webbkonsol: /system/console/bundles).
+1. Alla OSGi-paket finns antingen **[!UICONTROL ACTIVE]** eller **[!UICONTROL FRAGMENT]** i OSGi Console (Använd webbkonsol: /system/console/bundles).
+1. OSGI-paketet `org.apache.jackrabbit.oak-core` finns i version 1.10.6 eller senare (Använd webbkonsol: `/system/console/bundles`).
 
 För att se vilka plattformar som är certifierade att köras med den här versionen, se de [tekniska kraven](/help/sites-deploying/technical-requirements.md).
 
@@ -313,10 +378,6 @@ För att se vilka plattformar som är certifierade att köras med den här versi
 >[!NOTE]
 >
 >Hoppa över om du inte använder AEM Forms. Korrigeringar i AEM Forms levereras via ett separat tilläggspaket.
-
->[!NOTE]
->
->AEM 6.5.4.0 innehåller en ny version av [AEM Forms-kompatibilitetspaketet](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/compatpack/AEM-FORMS-6.5.3.0-COMPAT). Om du använder en äldre version av AEM Forms-kompatibilitetspaketet och uppdaterar till AEM 6.5.4.0 installerar du den senaste versionen av AEM Forms-kompatibilitetspaketet efter installationen av Forms-tilläggspaketet.
 
 1. Kontrollera att du har installerat AEM Service Pack.
 1. Hämta motsvarande tilläggspaket för Forms som finns i [AEM Forms-versioner](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) för ditt operativsystem.
@@ -328,15 +389,11 @@ För att se vilka plattformar som är certifierade att köras med den här versi
 >
 >Hoppa över om du inte använder AEM Forms på JEE. Korrigeringar i AEM Forms på JEE levereras via ett separat installationsprogram.
 
-Information om hur du installerar det kumulativa installationsprogrammet för AEM Forms på JEE och konfigurationen efter distributionen finns i [versionsinformationen för korrigering 0011](https://helpx.adobe.com/aem-forms/quick-fixes/6-5/jee-patch-0011.html).
-
-#### Installationsprogram för Workbench
-
-Eftersom det är ett fullständigt installationsprogram är filstorleken större än korrigeringsversionen. Avinstallera den tidigare Workbench-versionen innan du installerar den nya.
+Information om hur du installerar det kumulativa installationsprogrammet för AEM Forms på JEE och konfigurationen efter distributionen finns i [versionsinformationen för korrigering 0014](https://helpx.adobe.com/aem-forms/quick-fixes/6-5/jee-patch-0014.html).
 
 ### UberJar {#uber-jar}
 
-UberJar för AEM 6.5.4.0 finns i [Adobe Public Maven-databasen](https://repo.adobe.com/nexus/content/groups/public/com/adobe/aem/uber-jar/6.5.4/).
+UberJar för AEM 6.5.5.0 finns i [Adobe Public Maven-databasen](https://repo.adobe.com/nexus/content/groups/public/com/adobe/aem/uber-jar/6.5.5/).
 
 Om du vill använda UberJar i ett Maven-projekt kan du läsa artikeln [Så här använder du UberJar](/help/sites-developing/ht-projects-maven.md) och inkludera följande beroende i projektstrukturen:
 
@@ -344,21 +401,7 @@ Om du vill använda UberJar i ett Maven-projekt kan du läsa artikeln [Så här 
 <dependency>
       <groupId>com.adobe.aem</groupId>
       <artifactId>uber-jar</artifactId>
-      <version>6.5.4</version>
-      <classifier>apis</classifier>
-      <scope>provided</scope>
-</dependency>
-```
-
-Den uppdaterade versionen av UberJar för 6.5.4.0 som innehåller paketet **com.fasterxml.jackson.core.async** finns på [Adobe Public Maven-arkivet](https://repo.adobe.com/nexus/content/groups/public/com/adobe/aem/uber-jar/6.5.4-1.0/).
-
-Om du använder den uppdaterade versionen av UberJar ska du inkludera följande beroende i projektstrukturen:
-
-```shell
-<dependency>
-      <groupId>com.adobe.aem</groupId>
-      <artifactId>uber-jar</artifactId>
-      <version> 6.5.4-1.0</version>
+      <version>6.5.5</version>
       <classifier>apis</classifier>
       <scope>provided</scope>
 </dependency>
@@ -366,44 +409,51 @@ Om du använder den uppdaterade versionen av UberJar ska du inkludera följande 
 
 ## Föråldrade funktioner {#removed-deprecated-features}
 
-I det här avsnittet listas funktioner som har markerats som borttagna i AEM 6.5.4.0. Funktioner som ska tas bort i en framtida version är först inaktuella, med ett alternativt alternativ att använda.
+I det här avsnittet listas funktioner som har markerats som borttagna i AEM 6.5.5.0. Funktioner som ska tas bort i en framtida version är först inaktuella, med ett alternativt alternativ att använda.
 
 Kunderna rekommenderas att granska om de använder funktionen eller funktionen i den aktuella distributionen och planera för att ändra implementeringen så att den använder det alternativa alternativet.
 
 | Yta | Funktion | Ersättning |
 |---|---|---|
-| Integreringar | Inställningsskärmen för **[!UICONTROL AEM Cloud-tjänster]** har tagits bort. Med integreringen av AEM och Target uppdaterad i AEM 6.5 för att stödja Target Standard API, som använder autentisering via Adobe IMS och I/O, och den växande rollen hos Adobe Launch för att instrumentera AEM-sidor för analys och personalisering, har Opt-In Wizard blivit funktionellt irrelevant. | Konfigurera systemanslutningar, Adobe IMS-autentisering och Adobe I/O-integreringar via respektive AEM-molntjänster |
+| Integreringar | Skärmen har tagits bort **[!UICONTROL AEM Cloud Services Opt-In]** . Med integreringen av AEM och Target uppdaterad i AEM 6.5 för att stödja Target Standard API, som använder autentisering via Adobe IMS och I/O, och den växande rollen hos Adobe Launch för att instrumentera AEM-sidor för analys och personalisering, har Opt-In Wizard blivit funktionellt irrelevant. | Konfigurera systemanslutningar, Adobe IMS-autentisering och Adobe I/O-integreringar via respektive AEM-molntjänster |
 
 ## Known issues {#known-issues}
 
-* Om konfigurationsguiden för **anslutna resurser** returnerar ett 404-felmeddelande efter installationen måste du manuellt installera om **cq-remotedam-client-ui-content** och **cq-remotedam-client-ui-components** -paketen med hjälp av Package Manager.
+* Om du installerar [!DNL Experience Manager] 6.5.5.0 med [!DNL Java] 11 startar du om servern när du har installerat Service Pack. Du behöver inte starta om om du installerar Service Pack med [!DNL Java] 8.
+
+* Om en mapp i hierarkin byter namn i [!DNL Experience Manager Assets] och den kapslade mappen som innehåller en resurs publiceras [!DNL Brand Portal]i, uppdateras inte mappens rubrik [!DNL Brand Portal] förrän rotmappen publiceras igen.
+
+* Uppdatering av [!DNL chrome] version 83 orsakar ett problem när paket byggs. Lös problemet genom att använda andra tillgängliga webbläsare, som [!DNL Internet Explorer] och [!DNL Firefox]eller andra installationsalternativ för AEM-standardpaket.
+
+* Det går inte att skicka ett e-postmeddelande till SMTP-fjärrservern med hjälp av AEM-standardavsändaren eftersom den bara tillåter kommunikation med TLS v1.2. Ta bort paketet `javax.mail:mail:1.5.0-b01` från `system/console` och uppdatera paketen för att lösa problemet.
+
+* När en användare väljer att konfigurera ett fält för första gången i ett adaptivt formulär visas inte alternativet att spara en konfiguration i egenskapsläsaren. Om du väljer att konfigurera ett annat fält i det adaptiva formuläret i samma redigerare åtgärdas problemet.
+
+* Om [!UICONTROL Connected assets configuration] guiden returnerar ett 404-felmeddelande efter installationen måste du installera om `cq-remotedam-client-ui-content` - och `cq-remotedam-client-ui-components` -paketen manuellt med hjälp av pakethanteraren.
+
 * Följande fel och varningsmeddelanden kan visas under installationen av AEM 6.5.x.x:
    * &quot;När Target-integreringen konfigureras i AEM med Target Standard API (IMS-autentisering) skapas felaktiga erbjudandetyper när Experience Fragments exporteras till Target. I stället för att skriva&quot;Experience Fragment&quot;/källan&quot;Adobe Experience Manager&quot; skapar Target flera erbjudanden med typen&quot;HTML&quot;/källan&quot;Adobe Target Classic&quot;.
-   * com.adobe.granite.Maintenance.impl.TaskScheduler: Inga underhållsfönster hittades vid granit/drift/underhåll.
+   * `com.adobe.granite.maintenance.impl.TaskScheduler`: Inga underhållsfönster hittades vid granit/drift/underhåll.
    * Validering på serversidan av adaptiva formulär misslyckas när sammanställningsfunktioner som SUM, MAX och MIN används. CQ-4274424
-   * com.adobe.granite.Maintenance.impl.TaskScheduler - Inga underhållsfönster hittades vid granit/operations/Maintenance.
+   * `com.adobe.granite.maintenance.impl.TaskScheduler` - Inga underhållsfönster hittades vid granit/drift/underhåll.
    * Aktiveringspunkten i en Dynamic Media Interactive-bild syns inte när du förhandsgranskar resursen via visningsprogrammet för den köpbara kanalen.
 
 ## OSGi-paket och innehållspaket som ingår {#osgi-bundles-and-content-packages-included}
 
-Följande textdokument listar OSGi-paketen och innehållspaketen som ingår i AEM 6.5.4.0
+Följande textdokument listar de OSGi-paket och innehållspaket som ingår i AEM 6.5.5.0:
 
-Lista över OSGi-paket som ingår i AEM 6.5.4.0
+* [Lista över OSGi-paket som ingår i AEM 6.5.5.0](assets/6550_bundles.txt)
 
-[Hämta fil](assets/6540_bundles.txt)
-
-Lista över innehållspaket som ingår i AEM 6.5.4.0
-
-[Hämta fil](assets/6540_packages.txt)
+* [Lista över innehållspaket som ingår i AEM 6.5.5.0](assets/6550_packages.txt)
 
 ## Begränsade platser {#restricted-sites}
 
 Dessa webbplatser är bara tillgängliga för kunder. Om du är kund och behöver åtkomst kontaktar du din kontoansvarige på Adobe.
 
 * [Nedladdning av produkt på licensing.adobe.com](https://licensing.adobe.com/)
-* [Kontakta kundsupport](https://daycare.day.com/public/contact.html)Mer information om hur du går till supportportalen finns i [Gå till supportportalen](https://helpx.adobe.com/experience-manager/kb/accessing-aem-support-portal.html).
+* [Kontakta kundsupport](https://docs.adobe.com/content/help/en/customer-one/using/home.html)Mer information om hur du går till supportportalen finns i [Gå till supportportalen](https://helpx.adobe.com/experience-manager/kb/accessing-aem-support-portal.html).
 
->[!MORE SOM DET HÄR]
+>[!MORELIKETHIS]
 >
 >* [Versionsinformation om AEM 6.5](/help/release-notes/release-notes.md)
 >* [AEM - produktsida](https://www.adobe.com/solutions/web-experience-management.html)
