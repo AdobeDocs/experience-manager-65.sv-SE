@@ -10,7 +10,10 @@ content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: 80bd707f-c02d-4616-9b45-90f6c726abea
 translation-type: tm+mt
-source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
+source-git-commit: 6396660b642fd78ac7f311fa416efe0e0d52a9e3
+workflow-type: tm+mt
+source-wordcount: '2721'
+ht-degree: 1%
 
 ---
 
@@ -21,6 +24,7 @@ Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.5](/
 
 **Med 6.5-uppgradering**
 
+* [ContextHub-konfigurationer](#contexthub-6.5)
 * [Arbetsflödesinstanser](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#workflow-instances)
 * [Arbetsflödesmodeller](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#workflow-models)
 * [Starta arbetsflöden](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#workflow-launchers)
@@ -40,7 +44,7 @@ Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.5](/
 * [Gadgetkonfigurationer för AEM Projects Dashboard](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#aem-projects-dashboard-gadget-configurations)
 * [E-postmall för replikeringsmeddelande](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#replication-notification-e-mail-template)
 * [Taggar](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#tags)
-* [Översättningsmolntjänster](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#translation-cloud-services)
+* [Cloud Services för översättning](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#translation-cloud-services)
 * [Översättningsspråk](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#translation-languages)
 * [Översättningsregler](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#translation-rules)
 * [Klientbibliotek för översättningswidget](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#translation-widget-client-library)
@@ -49,6 +53,21 @@ Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.5](/
 * [E-postmallar för arbetsflödesmeddelanden](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#workflow-notification-email-templates)
 
 ## Med 6.5-uppgradering {#with-upgrade}
+
+### ContextHub-konfigurationer {#contexthub-6.5}
+
+Från och med AEM 6.4 finns det ingen standardkonfiguration för ContextHub. På platsens rotnivå `cq:contextHubPathproperty` bör därför en inställning anges för att ange vilken konfiguration som ska användas.
+
+1. Navigera till platsens rot.
+1. Öppna sidegenskaperna för rotsidan och välj fliken Personalisering.
+1. I fältet Contexthub Path anger du din egen konfigurationssökväg för ContextHub.
+
+Dessutom måste ContextHub-konfigurationen uppdateras så att den `sling:resourceType` är relativ och inte absolut.
+
+1. Öppna egenskaperna för ContextHub-konfigurationsnoden i CRX DE Lite, t.ex. `/apps/settings/cloudsettings/legacy/contexthub`
+1. Ändra `sling:resourceType` från `/libs/granite/contexthub/cloudsettings/components/baseconfiguration` till `granite/contexthub/cloudsettings/components/baseconfiguration`
+
+Värdet `sling:resourceType` för ContextHub-konfigurationen måste vara relativ och inte absolut.
 
 ### Arbetsflödesmodeller {#workflow-models}
 
@@ -243,7 +262,7 @@ Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.5](/
        </code>:
        <code>
         designPath
-       </code></span> egenskap.</li>
+       </code></span> -egenskap.</li>
      <li>Uppdatera alla sidor som refererar till föregående plats så att den nya kategorin Klientbibliotek används (detta kräver uppdatering av koden för sidimplementering).</li>
      <li>Uppdatera AEM Dispatcher-reglerna så att du kan visa klientbibliotek via /etc.clientlibs/.. proxyserver.</li>
     </ol> <p>För alla designer som INTE hanterats i SCM och som ändrats under körning via designdialogrutor.</p>
@@ -279,9 +298,9 @@ Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.5](/
      <li>Uppdatera referenser till föregående plats i <code>
        cq
       </code>:
-       <code>
+      <code>
        designPath
-      </code> egenskap.</li>
+      </code> -egenskap.</li>
      <li>Uppdatera alla sidor som refererar till föregående plats så att den nya kategorin Klientbibliotek används (detta kräver uppdatering av koden för sidimplementering).</li>
      <li>Uppdatera AEM Dispatcher-reglerna så att du kan visa klientbibliotek via /etc.clientlibs/.. proxyserver.</li>
     </ol> <p>För alla designer som INTE hanterats i SCM och som ändrats under körning via designdialogrutor.</p>
@@ -317,9 +336,9 @@ Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.5](/
      <li>Uppdatera referenser till föregående plats i <code>
        cq
       </code>:
-       <code>
+      <code>
        designPath
-      </code> egenskap.</li>
+      </code> -egenskap.</li>
      <li>Uppdatera alla sidor som refererar till föregående plats så att den nya kategorin Klientbibliotek används (detta kräver uppdatering av koden för sidimplementering).</li>
      <li>Uppdatera AEM Dispatcher-reglerna så att du kan visa klientbibliotek via /etc.clientlibs/.. proxyserver.</li>
     </ol> <p>För alla designer som INTE hanterats i SCM och som ändrats under körning via designdialogrutor.</p>
@@ -355,9 +374,9 @@ Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.5](/
      <li>Uppdatera referenser till föregående plats i <code>
        cq
       </code>:
-       <code>
+      <code>
        designPath
-      </code> egenskap.</li>
+      </code> -egenskap.</li>
      <li>Uppdatera alla sidor som refererar till föregående plats så att den nya kategorin Klientbibliotek används (detta kräver uppdatering av koden för sidimplementering).</li>
      <li>Uppdatera AEM Dispatcher-reglerna så att du kan visa klientbibliotek via /etc.clientlibs/.. proxyserver.</li>
     </ol> <p>För alla designer som INTE hanterats i SCM och som ändrats under körning via designdialogrutor.</p>
@@ -567,7 +586,7 @@ Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.5](/
  </tbody>
 </table>
 
-### Översättningsmolntjänster {#translation-cloud-services}
+### Cloud Services för översättning {#translation-cloud-services}
 
 <table>
  <tbody>
@@ -695,9 +714,9 @@ Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.5](/
      <li>Uppdatera referenser till föregående plats i <code>
        cq
       </code>:
-       <code>
+      <code>
        designPath
-      </code> egenskap.</li>
+      </code> -egenskap.</li>
      <li>Uppdatera alla sidor som refererar till föregående plats så att den nya kategorin Klientbibliotek används (detta kräver uppdatering av koden för sidimplementering).</li>
      <li>Uppdatera AEM Dispatcher-reglerna så att du kan visa klientbibliotek via /etc.clientlibs/.. proxyserver.</li>
     </ol> <p>För alla designer som INTE hanterats i SCM och som ändrats under körning via designdialogrutor.</p>
