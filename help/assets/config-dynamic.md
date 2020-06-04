@@ -10,7 +10,10 @@ discoiquuid: 7d8e7273-29f3-4a45-ae94-aad660d2c71d
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config-dynamic
 translation-type: tm+mt
-source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
+source-git-commit: b2628d37c3ad158913c28ecd890aee9fd0106de4
+workflow-type: tm+mt
+source-wordcount: '7792'
+ht-degree: 1%
 
 ---
 
@@ -190,12 +193,12 @@ I AEM:
 * Den **egna** domänen i [externalizer](/help/sites-developing/externalizer.md) används för att hämta både portnumret och kontextsökvägen.
 * Om ingen **egen** domän har konfigurerats hämtas portnumret och kontextsökvägen från HTTP-tjänsten Jetty.
 
-I en AEM QuickStart WAR-distribution går det inte att härleda portnumret och kontextsökvägen. Du måste därför konfigurera en **egen** domän. Mer information finns i [dokumentationen](/help/sites-developing/externalizer.md) för externalisering om hur du konfigurerar den **egna** domänen.
+I en AEM QuickStart WAR-distribution går det inte att härleda portnumret och kontextsökvägen. Du måste därför konfigurera en **egen** domän. Se [dokumentationen](/help/sites-developing/externalizer.md) för externalisering om hur du konfigurerar **självdomänen** .
 
 >[!NOTE]
 I en fristående [AEM Quickstart-distribution](/help/sites-deploying/deploy.md)behöver en **självdomän** vanligtvis inte konfigureras eftersom portnumret och kontextsökvägen kan konfigureras automatiskt. Om alla nätverksgränssnitt är inaktiverade måste du konfigurera **egen** domän.
 
-## Inaktivera dynamiska media {#disabling-dynamic-media}
+## Inaktivera dynamiska media  {#disabling-dynamic-media}
 
 Dynamiska medier är inte aktiverade som standard. Om du tidigare har aktiverat dynamiska medier kan du stänga av det vid ett senare tillfälle.
 
@@ -219,9 +222,9 @@ Om du vill inaktivera dynamiska medier efter att du har aktiverat dem tar du bor
 
 ## (Valfritt) Migrera förinställningar och konfigurationer för dynamiska media från 6.3 till 6.5 Zero Downtime {#optional-migrating-dynamic-media-presets-and-configurations-from-to-zero-downtime}
 
-Om du uppgraderar AEM Dynamic Media från 6.3 till 6.5 (som nu har funktioner för att inte ha några driftavbrott) måste du köra följande kommando för att migrera alla förinställningar och konfigurationer från `/etc` till `/conf` i CRXDE Lite.
+Om du uppgraderar AEM Dynamic Media från 6.3 till 6.5 (som nu kan köras utan driftavbrott) måste du köra följande kommando för att migrera alla förinställningar och konfigurationer från `/etc` till `/conf` i CRXDE Lite.
 
-**Obs**:Om du kör AEM-instansen i kompatibilitetsläge, d.v.s. har kompatibilitetspaketet installerat, behöver du inte köra dessa kommandon.
+**Obs**: Om du kör AEM-instansen i kompatibilitetsläge, d.v.s. har kompatibilitetspaketet installerat, behöver du inte köra dessa kommandon.
 
 För alla uppgraderingar, antingen med eller utan kompatibilitetspaketet, kan du kopiera de förinställda visningsprogrammen som ursprungligen levererades med Dynamic Media genom att köra följande kommando för Linux-vändning:
 
@@ -248,56 +251,56 @@ När du har konfigurerat replikeringsagenten måste du [validera och testa att d
 Standardminnesgränsen för att skapa PTIFF är 3 GB för alla arbetsflöden. Du kan till exempel bearbeta en bild som kräver 3 GB minne medan andra arbetsflöden är pausade, eller så kan du bearbeta 10 bilder parallellt som kräver 300 MB minne vardera.
 Minnesgränsen kan konfigureras och bör passa systemresursens tillgänglighet och den typ av bildinnehåll som bearbetas. Om du har många mycket stora resurser och tillräckligt med minne i systemet kan du öka den här gränsen för att se till att bilderna bearbetas parallellt.
 En bild som kräver mer än den maximala minnesgränsen kommer att refuseras.
-Om du vill ändra minnesgränsen för att skapa PTIFF går du till **[!UICONTROL Verktyg > Åtgärder > Webbkonsol > Adobe CQ Scene7 PTiffManager]** och ändrar **[!UICONTROL maxMemory]** -värdet.
+Om du vill ändra minnesgränsen för att skapa PTIFF navigerar du till **[!UICONTROL Tools > Operations > Web Console > Adobe CQ Scene7 PTiffManager]** och ändrar **[!UICONTROL maxMemory]** värdet.
 
 ### Konfigurera autentisering {#setting-up-authentication}
 
-Du måste konfigurera replikeringsverifiering för författaren för att kunna replikera bilder till tjänsten Dynamic Media Image delivery. Detta gör du genom att hämta en KeyStore och sedan spara den under **[!UICONTROL Dynamic-media-replication]** -användaren och konfigurera den. Din företagsadministratör bör ha fått ett välkomstmeddelande med KeyStore-filen och nödvändiga autentiseringsuppgifter under etableringsprocessen. Kontakta kundtjänst om du inte fått något sådant.
+Du måste konfigurera replikeringsverifiering för författaren för att kunna replikera bilder till tjänsten Dynamic Media Image delivery. Du gör detta genom att hämta en KeyStore och sedan spara den under **[!UICONTROL dynamic-media-replication]** användaren och konfigurera den. Din företagsadministratör bör ha fått ett välkomstmeddelande med KeyStore-filen och nödvändiga autentiseringsuppgifter under etableringsprocessen. Kontakta kundtjänst om du inte fått något sådant.
 
 **Ställa in autentisering**
 
 1. Kontakta kundtjänst för din KeyStore-fil och ditt lösenord om du inte redan har detta. Detta är en del av etableringen och kopplar nycklarna till ditt konto.
-1. I AEM trycker du på AEM-logotypen för att komma åt den globala navigeringskonsolen och sedan på **[!UICONTROL Verktyg > Säkerhet > Användare]**.
-1. På sidan Användarhantering går du till **[!UICONTROL Dynamic-media-replication]** user och trycker sedan för att öppna.
+1. I AEM trycker du på AEM-logotypen för att komma åt den globala navigeringskonsolen och sedan trycker du på **[!UICONTROL Tools > Security > Users]**.
+1. Navigera till **[!UICONTROL dynamic-media-replication]** användaren på sidan Användarhantering och öppna den genom att trycka.
 
    ![dm-replikering](assets/dm-replication.png)
 
-1. På sidan Redigera användarinställningar för dynamisk mediareplikering trycker du på fliken **[!UICONTROL Nyckelbehållare]** och sedan på **[!UICONTROL Skapa nyckelbehållare]**.
+1. Gå till sidan Redigera användarinställningar för dynamisk mediareplikering och tryck på **[!UICONTROL Keystore]** fliken och klicka sedan på **[!UICONTROL Create KeyStore]**.
 
    ![dm-replication-keystore](assets/dm-replication-keystore.png)
 
-1. Ange ett lösenord och bekräfta lösenordet i dialogrutan **[!UICONTROL Ange lösenord]** för KeyStore-åtkomst.
+1. Ange ett lösenord och bekräfta lösenordet i **[!UICONTROL Set KeyStore Access Password]** dialogrutan.
 
    >[!NOTE]
    Kom ihåg lösenordet som du anger. Du måste ange den igen när du konfigurerar replikeringsagenten senare.
 
    ![chlimage_1-508](assets/chlimage_1-508.png)
 
-1. På sidan **[!UICONTROL Redigera användarinställningar för dynamisk mediareplikering]** expanderar du filområdet **** Lägg till privat nyckel från KeyStore och lägger till följande (se bilderna som följer):
+1. På **[!UICONTROL Edit User Settings For dynamic-media-replication]** sidan expanderar du filområdet **Lägg till privat nyckel från KeyStore** och lägger till följande (se bilderna som följer):
 
-   * I fältet **[!UICONTROL Nytt alias]** anger du namnet på ett alias som du senare kommer att använda i replikeringskonfigurationen. till exempel `replication`.
-   * Tryck på **[!UICONTROL KeyStore-filen]**. Navigera till den KeyStore-fil som du har fått från Adobe, markera den och tryck sedan på **[!UICONTROL Öppna]**.
-   * I fältet **[!UICONTROL KeyStore-fillösenord]** anger du lösenordet för KeyStore-filen. Det här är **inte** det KeyStore-lösenord som du skapade i steg 5, men det är det KeyStore-fillösenord som Adobe anger i det välkomstmeddelande som skickas till dig under etableringen. Kontakta Adobes kundtjänst om du inte fått något lösenord för KeyStore-filen.
-   * I fältet Lösenord **[!UICONTROL för]** privat nyckel anger du lösenordet för den privata nyckeln (kan vara samma lösenord för den privata nyckeln som angavs i föregående steg). Adobe tillhandahåller lösenordet för den privata nyckeln i det välkomstmeddelande som skickas till dig under etableringen. Kontakta Adobes kundtjänst om du inte har fått något lösenord för privat nyckel.
-   * I fältet Alias för **[!UICONTROL privat nyckel]** anger du alias för den privata nyckeln. Exempel, `*companyname*-alias`. Adobe tillhandahåller alias för den privata nyckeln i det välkomstmeddelande som skickas till dig under etableringen. Kontakta Adobes kundtjänst om du inte har fått något alias för privat nyckel.
+   * I **[!UICONTROL New Alias]** fältet anger du namnet på ett alias som du senare kommer att använda i replikeringskonfigurationen; till exempel `replication`.
+   * Tryck på **[!UICONTROL KeyStore File]**. Navigera till den KeyStore-fil du fått från Adobe, markera den och tryck sedan på **[!UICONTROL Open]**.
+   * Ange lösenordet för KeyStore-filen i **[!UICONTROL KeyStore File Password]** fältet. Det här är **inte** det KeyStore-lösenord som du skapade i steg 5, men det är det KeyStore-fillösenord som Adobe anger i det välkomstmeddelande som skickas till dig under etableringen. Kontakta Adobes kundtjänst om du inte fått något lösenord för KeyStore-filen.
+   * I **[!UICONTROL Private Key Password]** fältet anger du lösenordet för den privata nyckeln (kan vara samma lösenord för den privata nyckeln som angavs i föregående steg). Adobe tillhandahåller lösenordet för den privata nyckeln i det välkomstmeddelande som skickas till dig under etableringen. Kontakta Adobes kundtjänst om du inte har fått något lösenord för privat nyckel.
+   * Ange alias för den privata nyckeln i **[!UICONTROL Private Key Alias]** fältet. Till exempel, `*companyname*-alias`. Adobe tillhandahåller alias för den privata nyckeln i det välkomstmeddelande som skickas till dig under etableringen. Kontakta Adobes kundtjänst om du inte har fått något alias för privat nyckel.
    ![edit_settings_for dynamic-media-replication2](assets/edit_settings_fordynamic-media-replication2.png)
 
-1. Tryck på **[!UICONTROL Spara och stäng]** för att spara ändringarna för den här användaren.
+1. Tryck för **[!UICONTROL Save & Close]** att spara ändringarna för den här användaren.
 
    Därefter måste du [konfigurera replikeringsagenten.](#configuring-the-replication-agent)
 
 ### Konfigurera replikeringsagenten {#configuring-the-replication-agent}
 
-1. I AEM trycker du på AEM-logotypen för att komma åt den globala navigeringskonsolen och sedan trycker du på **[!UICONTROL Verktyg > Distribution > Replikering > Agenter på författaren]**.
-1. Tryck på **[!UICONTROL Dynamic Media Hybrid Image Replication (s7delivery)]** på sidan Agents på författare.
-1. Tryck på **[!UICONTROL Redigera]**.
-1. Tryck på fliken **[!UICONTROL Inställningar]** och ange följande:
+1. I AEM trycker du på AEM-logotypen för att komma åt den globala navigeringskonsolen och sedan trycker du på **[!UICONTROL Tools > Deployment > Replication > Agents on author]**.
+1. Tryck på Agents på författarsidan **[!UICONTROL Dynamic Media Hybrid Image Replication (s7delivery)]**.
+1. Tryck på **[!UICONTROL Edit]**.
+1. Tryck på **[!UICONTROL Settings]** fliken och ange följande:
 
-   * **[!UICONTROL Aktiverad]** - Markera den här kryssrutan om du vill aktivera replikeringsagenten.
+   * **[!UICONTROL Enabled]** - Markera den här kryssrutan om du vill aktivera replikeringsagenten.
    * **[!UICONTROL Region]** - Ange lämplig region: Nordamerika, Europa eller Asien
-   * **[!UICONTROL Klient-ID]** - Det här värdet är namnet på det företag/den klient som publicerar till replikeringstjänsten. Det här värdet är det klient-ID som Adobe tillhandahåller i det välkomstmeddelande som skickas till dig under etableringen. Kontakta Adobes kundtjänst om du inte fått detta.
-   * **[!UICONTROL Alias]** för nyckelbehållare - Detta värde är detsamma som det** nya aliasvärdet** som angavs när nyckeln genererades i [Konfigurera autentisering](#setting-up-authentication). till exempel `replication`. (Se steg 7 i [Konfigurera autentisering](#setting-up-authentication).)
-   * **[!UICONTROL Nyckelarkivlösenord]** - Det här är det KeyStore-lösenord som skapades när du tryckte på **[!UICONTROL Create KeyStore]**. Adobe tillhandahåller inte detta lösenord. Se steg 5 i [Konfigurera autentisering](#setting-up-authentication).
+   * **[!UICONTROL Tenant ID]** - Det här värdet är namnet på det företag/den klient som publicerar till replikeringstjänsten. Det här värdet är det klient-ID som Adobe tillhandahåller i det välkomstmeddelande som skickas till dig under etableringen. Kontakta Adobes kundtjänst om du inte fått detta.
+   * **[!UICONTROL Key Store Alias]** - Det här värdet är samma som det** nya alias**-värde som angavs när nyckeln genererades i [Konfigurera autentisering](#setting-up-authentication). till exempel `replication`. (Se steg 7 i [Konfigurera autentisering](#setting-up-authentication).)
+   * **[!UICONTROL Key Store Password]** - Det här är det KeyStore-lösenord som skapades när du knackade på **[!UICONTROL Create KeyStore]**. Adobe tillhandahåller inte detta lösenord. Se steg 5 i [Konfigurera autentisering](#setting-up-authentication).
    Följande bild visar replikeringsagenten med exempeldata:
 
    ![chlimage_1-509](assets/chlimage_1-509.png)
@@ -308,7 +311,7 @@ Du måste konfigurera replikeringsverifiering för författaren för att kunna r
 
 Så här validerar du replikeringsagenten för dynamiska media:
 
-Tryck på **[!UICONTROL Testa anslutning]**. Exempelutdata är följande:
+Tryck på **[!UICONTROL Test Connection]**. Exempelutdata är följande:
 
 ```shell
 11.03.2016 10:57:55 - Transferring content for ReplicationAction{type=TEST, path[0]='/content/dam', time=1457722675402, userId='admin', revision='null'}
@@ -327,7 +330,7 @@ Replication test succeeded
 >[!NOTE]
 Du kan även kontrollera genom att göra något av följande:
 * Kontrollera replikeringsloggarna för att se till att resursen är replikerad.
-* Publicera en bild. Tryck på bilden och välj **[!UICONTROL Visare]** i listrutan. Välj sedan en visningsförinställning, klicka på URL-adressen och kopiera/klistra in URL-adressen i webbläsaren för att bekräfta att du kan se bilden.
+* Publicera en bild. Tryck på bilden och välj **[!UICONTROL Viewers]** i listrutan. Välj sedan en visningsförinställning, klicka på URL-adressen och kopiera/klistra in URL-adressen i webbläsaren för att bekräfta att du kan se bilden.
 
 
 
@@ -358,7 +361,7 @@ Replication test to s7delivery:https://s7bern.macromedia.com:8580/is-publish/
  Server returned status code 401 with message: Authorization required.
 ```
 
-**Lösning**: Kontrollera att `KeyStore` filen har sparats till en **användare med dynamisk mediareplikering** och att rätt lösenord har angetts.
+**Lösning**: Kontrollera att `KeyStore` filen har sparats till en **dynamisk replikeringsanvändare** och att rätt lösenord har angetts.
 
 #### Problem: Det gick inte att dekryptera nyckeln - det gick inte att dekryptera data {#problem-could-not-decrypt-key-could-not-decrypt-data}
 
@@ -416,14 +419,14 @@ Replication test to s7delivery:https://replicate-na.assetsadobe.com/is-publish
 
 1. Gå till sidan Användarhantering:
    `localhost:4502/libs/granite/security/content/useradmin.html`
-1. Navigera till `dynamic-media-replication` användaren på sidan Användarhantering och öppna sedan genom att trycka.
-1. Klicka på fliken **[!UICONTROL KeyStore]** . Om knappen **[!UICONTROL Skapa KeyStore]** visas måste du göra om stegen under [Konfigurera autentisering](#setting-up-authentication) tidigare.
+1. Navigera till `dynamic-media-replication` användaren på sidan Användarhantering och öppna den genom att trycka.
+1. Click the **[!UICONTROL KeyStore]** tab. Om **[!UICONTROL Create KeyStore]** knappen visas måste du göra om stegen under [Konfigurera autentisering](#setting-up-authentication) tidigare.
 1. Om du måste göra om installationen av KeyStore kan du behöva göra om [konfigurationen av replikeringsagenten](/help/assets/config-dynamic.md#configuring-the-replication-agent) .
 
    Konfigurera om s7delivery Replication Agent.
    `localhost:4502/etc/replication/agents.author/s7delivery.html`
 
-1. Tryck på **[!UICONTROL Testa anslutning]** för att kontrollera att konfigurationen är giltig.
+1. Tryck för **[!UICONTROL Test Connection]** att verifiera att konfigurationen är giltig.
 
 #### Problem: Publiceringsagenten använder SSL i stället för OAuth {#problem-publish-agent-is-using-ssl-instead-of-oauth}
 
@@ -443,7 +446,7 @@ Exempel på replikeringslogg:
 
 **Lösning:**
 
-1. I AEM klickar du på **[!UICONTROL Verktyg > Allmänt > CRXDE Lite]**.
+1. I AEM klickar du på **[!UICONTROL Tools > General > CRXDE Lite]**.
 
    `localhost:4502/crx/de/index.jsp`
 
@@ -454,7 +457,7 @@ Exempel på replikeringslogg:
 
    `enableOauth=true`
 
-1. I det övre vänstra hörnet av sidan trycker du på **[!UICONTROL Spara alla]**.
+1. Near the upper-left corner of the page, tap **[!UICONTROL Save All]**.
 
 ### Testa konfigurationen {#testing-your-configuration}
 
@@ -463,19 +466,19 @@ Adobe rekommenderar att du utför ett helhetstest av konfigurationen.
 Kontrollera att du redan har gjort följande innan du påbörjar testet:
 
 * Lagt till bildförinställningar.
-* Konfigurera **[!UICONTROL dynamisk mediekonfiguration (före 6.3)]** under molntjänster. URL till bildtjänsten krävs för det här testet
+* Konfigurera **[!UICONTROL Dynamic Media Configuration (Pre 6.3)]** under molntjänster. URL till bildtjänsten krävs för det här testet
 
 **Testa konfigurationen**
 
-1. Överför en bildresurs. (Tryck på **[!UICONTROL Skapa > Filer]** i Resurser och markera filen.)
+1. Överför en bildresurs. (I Resurser trycker du **[!UICONTROL Create > Files]** och väljer filen.)
 1. Vänta tills arbetsflödet är klart.
-1. Publicera bildresursen. (Markera resursen och tryck på **[!UICONTROL Snabbpublicering]**.)
-1. Navigera till återgivningarna för bilden genom att öppna bilden och trycka på **[!UICONTROL Återgivningar]**.
+1. Publicera bildresursen. (Markera resursen och tryck **[!UICONTROL Quick Publish]**.)
+1. Navigera till återgivningarna för bilden genom att öppna bilden och trycka på **[!UICONTROL Renditions]**.
 
    ![chlimage_1-510](assets/chlimage_1-510.png)
 
 1. Välj en dynamisk återgivning.
-1. Klicka på **[!UICONTROL URL]** för att hämta resursens URL.
+1. Klicka **[!UICONTROL URL]** för att hämta URL:en för resursen.
 1. Navigera till den valda URL:en och kontrollera om bilden fungerar som förväntat.
 
 Ett annat sätt att testa att dina resurser har levererats är att lägga till req=exists till din URL.
@@ -491,25 +494,25 @@ Innan du konfigurerar Dynamic Media Cloud-tjänster måste du se till att du har
 
 Så här konfigurerar du molntjänster för dynamiska media:
 
-1. I AEM trycker du på AEM-logotypen för att komma åt den globala navigeringskonsolen och trycker på **[!UICONTROL Verktyg > Cloud Services > Dynamic Media Configuration (Pre-6.3)]**.
-1. På sidan Dynamic Media Configuration Browser väljer du **[!UICONTROL global]** i den vänstra rutan och trycker sedan på **[!UICONTROL Create]**.
-1. I dialogrutan **[!UICONTROL Skapa dynamisk mediekonfiguration]** skriver du en titel i fältet Titel.
+1. In AEM, tap the AEM logo to access the global navigation console and tap **[!UICONTROL Tools > Cloud Services > Dynamic Media Configuration (Pre-6.3)]**.
+1. På sidan Dynamic Media Configuration Browser väljer du **[!UICONTROL global]** och trycker sedan på **[!UICONTROL Create]**.
+1. Skriv en titel i fältet Titel i dialogrutan **[!UICONTROL Create Dynamic Media Configuration]** .
 1. Om du konfigurerar Dynamic Media för video,
 
-   * Ange ditt registrerings-ID i fältet **[!UICONTROL Registrerings-ID]** .
-   * I fältet URL **[!UICONTROL för ]**videotjänsten anger du URL:en för den dynamiska mediagatewayen.
+   * Skriv ditt registrerings-ID i **[!UICONTROL Registration ID]** fältet.
+   * I fältet **V[!UICONTROL ideo Service URL]**anger du URL:en för videotjänsten för Dynamic Media Gateway.
 
-1. Om du konfigurerar Dynamic Media för bildbehandling anger du bildtjänstens URL **[!UICONTROL i fältet]** Image Service URL (Bildtjänstadress) för Dynamic Media Gateway.
-1. Tryck på **[!UICONTROL Spara]** för att återgå till sidan Dynamic Media Configuration Browser.
+1. Om du konfigurerar Dynamic Media för bildbehandling anger du bildtjänstens URL i **[!UICONTROL Image Service URL]** fältet för Dynamic Media Gateway.
+1. Tryck för **[!UICONTROL Save]** att gå tillbaka till sidan Dynamic Media Configuration Browser.
 1. Tryck på AEM-logotypen för att komma åt den globala navigeringskonsolen.
 
 ## Konfigurera videorapportering {#configuring-video-reporting}
 
 Du kan konfigurera videorapportering för flera installationer av AEM med Dynamic Media Hybrid.
 
-**** När ska du använda: När du konfigurerar Dynamic Media Configuration (Pre 6.3) startas flera funktioner, bland annat videorapportering. Konfigurationen skapar en rapportserie i ett regionalt Analytics-företag. Om du konfigurerar flera författarnoder skapar du en separat rapportserie för var och en av dem. Därför är rapportering av data inkonsekvent mellan anläggningar. Om varje Author-nod refererar till samma Hybrid Publish-server, ändrar den senaste Author-installationen målrapportsviten för alla videorapporter. Det här problemet överbelastar analyssystemet med för många rapportsviter.
+**När ska du använda:** När du konfigurerar Dynamic Media Configuration (Pre 6.3) startas flera funktioner, bland annat videorapportering. Konfigurationen skapar en rapportserie i ett regionalt Analytics-företag. Om du konfigurerar flera författarnoder skapar du en separat rapportserie för var och en av dem. Därför är rapportering av data inkonsekvent mellan anläggningar. Om varje Author-nod refererar till samma Hybrid Publish-server, ändrar den senaste Author-installationen målrapportsviten för alla videorapporter. Det här problemet överbelastar analyssystemet med för många rapportsviter.
 
-**** Kom igång: Konfigurera videorapportering genom att utföra följande tre uppgifter.
+**Kom igång:** Konfigurera videorapportering genom att utföra följande tre uppgifter.
 
 1. Skapa ett förinställt paket för videoanalys när du har konfigurerat Dynamic Media Configuration (Pre 6.3) på den första Author-noden. Den här initiala aktiviteten är viktig eftersom den tillåter en ny konfiguration att fortsätta använda samma rapportserie.
 1. Installera förinställningspaketet för Video Analytics på en ***ny*** författarnod ***innan*** du konfigurerar Dynamic Media Configuration (Pre 6.3).
@@ -554,7 +557,7 @@ dam/dm/presets/analytics/jcr:content/userdata`
 
    * **Kontrollera förinställningen för videoanalys via bildservern**
 
-      Du kan validera Video Analytics-förinställningen direkt genom att göra en Image Server req=userdata-begäran.
+      Du kan validera Video Analytics-förinställningen direkt genom att göra en Image Server req=userdata-förfrågan.
 Om du till exempel vill se Analytics-förinställningen på författarnoden kan du göra följande begäran:
 
       `https://localhost:4502/is/image/conf/global/settings/dam/dm/presets/analytics?req=userdata`
@@ -568,14 +571,14 @@ Om du till exempel vill se Analytics-förinställningen på författarnoden kan 
        trackingServer=aemvideodal.d2.sc.omtrdc.net
       ```
 
-   * **Kontrollera förinställningen för videoanalys med videorapporteringsverktyget i AEM** Tryck på **[!UICONTROL Verktyg > Resurser > Videorapportering]**
+   * **Kontrollera förinställningen för videoanalys med videorapporteringsverktyget i AEM** Tap **[!UICONTROL Tools > Assets > Video Reporting]**
 
       `https://localhost:4502/mnt/overlay/dam/gui/content/s7dam/videoreports/videoreport.html`
 
       Om följande felmeddelande visas är rapportsviten tillgänglig, men inte ifylld. Felet är korrekt - och önskat - i en ny installation innan systemet samlar in data.
    ![screen_shot_2018-05-23at52254pm](assets/screen_shot_2018-05-23at52254pm.png)
 
-   Om du vill generera rapportdata överför och publicerar du en video. Använd **[!UICONTROL Kopiera URL]** och kör videon minst en gång.
+   Om du vill generera rapportdata överför och publicerar du en video. Använd **[!UICONTROL Copy URL]** och kör videon minst en gång.
 
    Tänk på att det kan ta upp till 12 timmar innan rapportdata fylls i från Video Viewer-användningen.
 
@@ -587,7 +590,7 @@ Om du till exempel vill se Analytics-förinställningen på författarnoden kan 
 
 ### Felsöka konfigurationen för videorapportering {#troubleshooting-the-video-reporting-configuration}
 
-* Under installationen kan anslutningar till API-servern för Analytics göra timeout. Installationen försöker ansluta igen 20 gånger, men den misslyckas fortfarande. När detta inträffar registreras flera fel i loggfilen. Sök efter `SiteCatalystReportService`.
+* Under installationen kan anslutningar till API-servern för Analytics göra timeout. Installationen försöker ansluta igen 20 gånger, men den misslyckas fortfarande. När detta inträffar registreras flera fel i loggfilen. Search for `SiteCatalystReportService`.
 * Om Analytics Preset-paketet inte installeras först kan en ny rapportserie skapas.
 * Om du uppgraderar från AEM 6.3 till AEM 6.4 eller AEM 6.4.1 och sedan konfigurerar Dynamic Media Configuration (Pre 6.3) skapas fortfarande en rapportserie. Det här problemet är känt och är kopplat till att åtgärdas för AEM 6.4.2.
 
@@ -616,16 +619,16 @@ Du måste publicera dina egna standardkataloginställningar som en del av konfig
 
    `https://<*server*>:<*port*>/crx/de/index.jsp#/conf/global/settings/dam/dm/imageserver/`
 
-1. Tryck på fliken **[!UICONTROL Replikering]** .
-1. Tryck på **[!UICONTROL Replikera]**.
+1. Tryck på fliken **[!UICONTROL Replication]**. 
+1. Tryck på **[!UICONTROL Replicate]**.
 
 ## Replikera visningsförinställningar {#replicating-viewer-presets}
 
-Om du vill leverera *en resurs med en visningsförinställning måste du replikera/publicera* visningsförinställningen. (Alla förinställningar för visningsprogram måste aktiveras *och* replikeras för att URL-adressen eller inbäddningskoden för en resurs ska kunna hämtas.
+Om du vill leverera *en resurs med en visningsförinställning måste du replikera/publicera* visningsförinställningen. (All viewer presets must be activated *and* replicated to obtain the URL or embed code for an asset.
 Mer information finns i [Publicera förinställningar](/help/assets/managing-viewer-presets.md#publishing-viewer-presets) för visningsprogram.
 
 >[!NOTE]
-Som standard visas en mängd olika återgivningar när du väljer **[!UICONTROL Återgivningar]** och en mängd förinställningar för visningsprogram när du väljer **[!UICONTROL Visningsprogram]** i resursens detaljvy. Du kan öka eller minska antalet som visas. Se [Öka antalet bildförinställningar som visas](/help/assets/managing-image-presets.md#increasingthenumberofimagepresetsthatdisplay) eller [Öka antalet visningsförinställningar som visas](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
+By default, the system shows a variety of renditions when you select **[!UICONTROL Renditions]** and a variety of viewer presets when you select **[!UICONTROL Viewers]** in the asset&#39;s detail view. Du kan öka eller minska antalet som visas. See [Increasing the number of image presets that display](/help/assets/managing-image-presets.md#increasingthenumberofimagepresetsthatdisplay) or [Increasing the number of viewer presets that display](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
 
 ## Filtrera resurser för replikering {#filtering-assets-for-replication}
 
@@ -670,7 +673,7 @@ Om du använder Dynamic Media för (1) bildåtergivning i produktion **eller** (
    <td>"filter-video" som är klar att användas:
     <ul>
      <li>Inkludera proxyvideorenderingar, videominiatyr/filmminiatyrbild, metadata (både vid överordnad video och videorenderingar) för replikering (alla renderingar som börjar med <strong>cqdam</strong>).</li>
-     <li>Undanta återgivningar av originalvideo och statiska miniatyrer från replikering.<br /><br /> <strong> Obs! </strong>Obs! Proxyvideorenderingarna innehåller inga binärfiler, utan är bara nodegenskaper. Det påverkar således inte utgivarens databasstorlek.</li>
+     <li>Undanta återgivningar av originalvideo och statiska miniatyrer från replikering.<br /> <br /> <strong>Obs!</strong> Proxyvideorenderingarna innehåller inga binärfiler, utan är bara nodegenskaper. Det påverkar således inte utgivarens databasstorlek.</li>
     </ul> </td>
   </tr>
   <tr>
@@ -693,16 +696,16 @@ Filter gäller för MIME-typer och kan inte vara sökvägsspecifika.
 
 Om du använder Dynamic Media endast för video gör du så här för att ställa in resursfilter för replikering:
 
-1. I AEM trycker du på AEM-logotypen för att komma åt den globala navigeringskonsolen och trycker på **[!UICONTROL Verktyg > Distribution > Replikering > Agenter på författaren]**.
-1. Tryck på **[!UICONTROL Standardagent (publicera)]** på sidan Agenter på författare.
-1. Tryck på **[!UICONTROL Redigera]**.
-1. I dialogrutan **[!UICONTROL Agentinställningar]** , på fliken **[!UICONTROL Inställningar]** , markerar du **[!UICONTROL Aktiverad]** för att aktivera agenten.
+1. In AEM, tap the AEM logo to access the global navigation console and tap **[!UICONTROL Tools > Deployment > Replication > Agents on author]**.
+1. Tryck på Agents på författarsidan **[!UICONTROL Default Agent (publish)]**.
+1. Tryck på **[!UICONTROL Edit]**.
+1. I **[!UICONTROL Agent Settings]** dialogrutan på **[!UICONTROL Settings]** fliken markerar du **[!UICONTROL Enabled]** för att aktivera agenten.
 1. Tryck på **[!UICONTROL OK]**.
-1. I AEM trycker du på **[!UICONTROL Verktyg > Allmänt > CRXDE Lite]**.
+1. I AEM trycker du på **[!UICONTROL Tools > General > CRXDE Lite]**.
 1. I det vänstra mappträdet navigerar du till `/etc/replication/agents.author/dynamic_media_replication/jcr:content/damRenditionFilters`
-1. Leta upp **[!UICONTROL filter-video]**, högerklicka på den och välj **[!UICONTROL Kopiera]**.
+1. Leta upp **[!UICONTROL filter-video]**, högerklicka på den och välj **[!UICONTROL Copy]**.
 1. I det vänstra mappträdet navigerar du till `/etc/replication/agents.author/publish`
-1. Leta upp **[!UICONTROL jcr:content]**, högerklicka på den och välj **[!UICONTROL Klistra in]**.
+1. Leta upp **[!UICONTROL jcr:content]**, högerklicka på den och välj **[!UICONTROL Paste]**.
 
 Detta ställer in AEM-publiceringsinstansen så att den levererar videobilden samt de videomaterial som krävs för uppspelning, medan videon själv levereras av molntjänsten Dynamic Media. Filtret exkluderar även den ursprungliga videon och statiska miniatyrrenderingar, som inte behövs i publiceringsinstansen, från replikeringen.
 
@@ -710,20 +713,20 @@ Detta ställer in AEM-publiceringsinstansen så att den levererar videobilden sa
 
 Om du använder Dynamic Media för bildåtergivning i icke-produktionsdistributioner följer du de här stegen för att konfigurera resursfilter för replikering:
 
-1. I AEM trycker du på AEM-logotypen för att komma åt den globala navigeringskonsolen och trycker på **[!UICONTROL Verktyg > Distribution > Replikering > Agenter på författaren]**.
-1. Tryck på **[!UICONTROL Standardagent (publicera)]** på sidan Agenter på författare.
-1. Tryck på **[!UICONTROL Redigera]**.
-1. I dialogrutan **[!UICONTROL Agentinställningar]** , på fliken **[!UICONTROL Inställningar]** , markerar du **[!UICONTROL Aktiverad]** för att aktivera agenten.
+1. In AEM, tap the AEM logo to access the global navigation console and tap **[!UICONTROL Tools > Deployment > Replication > Agents on author]**.
+1. Tryck på Agents på författarsidan **[!UICONTROL Default Agent (publish)]**.
+1. Tryck på **[!UICONTROL Edit]**.
+1. I **[!UICONTROL Agent Settings]** dialogrutan på **[!UICONTROL Settings]** fliken markerar du **[!UICONTROL Enabled]** för att aktivera agenten.
 1. Tryck på **[!UICONTROL OK]**.
-1. I AEM trycker du på **[!UICONTROL Verktyg > Allmänt > CRXDE Lite]**.
+1. I AEM trycker du på **[!UICONTROL Tools > General > CRXDE Lite]**.
 1. I det vänstra mappträdet navigerar du till `/etc/replication/agents.author/dynamic_media_replication/jcr:content/damRenditionFilters`
 
    ![image-2018-01-16-10-22-40-410](assets/image-2018-01-16-10-22-40-410.png)
 
-1. Leta upp **[!UICONTROL filterbilder]**, högerklicka på den och välj **[!UICONTROL Kopiera]**.
+1. Leta upp **[!UICONTROL filter-images]**, högerklicka på den och välj **[!UICONTROL Copy]**.
 1. I det vänstra mappträdet navigerar du till `/etc/replication/agents.author/publish`
-1. Leta upp **[!UICONTROL jcr:content]**, högerklicka på den och välj **[!UICONTROL Skapa > Skapa nod]**. Ange namnet `damRenditionFilters` på typen `nt:unstructured`.
-1. Leta upp `damRenditionFilters`, högerklicka på den och välj **[!UICONTROL Klistra in]**.
+1. Leta upp **[!UICONTROL jcr:content]**, högerklicka på den och välj **[!UICONTROL Create > Create Node]**. Ange namnet `damRenditionFilters` på typen `nt:unstructured`.
+1. Leta upp `damRenditionFilters`, högerklicka på den och välj **[!UICONTROL Paste]**.
 
 Detta ställer in AEM-publiceringsinstansen så att bilderna levereras till din icke-produktionsmiljö. Filtret exkluderar även den ursprungliga bilden och statiska återgivningar som inte behövs i publiceringsinstansen från replikeringen.
 
@@ -737,14 +740,14 @@ Om du använder mer än ett filter på en server, till exempel ett filter för r
 
 Om du vill anpassa resursfilter för replikering:
 
-1. I AEM trycker du på AEM-logotypen för att komma åt den globala navigeringskonsolen och trycker på **[!UICONTROL Verktyg > Allmänt > CRXDE Lite]**.
+1. In AEM, tap the AEM logo to access the global navigation console and tap **[!UICONTROL Tools > General > CRXDE Lite]**.
 1. Navigera till det vänstra mappträdet för `/etc/replication/agents.author/dynamic_media_replication/jcr:content/damRenditionFilters` att granska filtren.
 
    ![chlimage_1-511](assets/chlimage_1-511.png)
 
 1. Du definierar Mime-typen för filtret genom att leta reda på Mime-typen enligt följande:
 
-   Utöka `content > dam > <locate_your_asset> >  jcr:content > metadata` och gå sedan till tabellen och leta upp **[!UICONTROL dc:format]** i den vänstra listen.
+   Expandera i den vänstra listen `content > dam > <locate_your_asset> >  jcr:content > metadata` och gå sedan till tabellen **[!UICONTROL dc:format]**.
 
    Följande bild är ett exempel på en resurs sökväg till dc:format.
 
@@ -785,7 +788,7 @@ Navigera till `content/dam/<locate your asset>/jcr:content/renditions`.
 
 Följande grafik är ett exempel på en resurs återgivningar.
 
-![chlimage_1-510](assets/chlimage_1-4.png)
+![chlimage_1-513](assets/chlimage_1-4.png)
 
 Om du bara vill replikera PTIFF (Pyramid TIFF) i exemplet ovan anger du `+cqdam,*` som innehåller alla återgivningar som börjar med `cqdam`. I exemplet är den återgivningen `cqdam.pyramid.tiff`.
 
@@ -798,12 +801,12 @@ När du konfigurerar Dynamic Media Image Server måste du redigera paketet Adobe
 >[!NOTE]
 Dynamic Media fungerar som det ska [när det är aktiverat](#enabling-dynamic-media). Du kan dock välja att finjustera installationen genom att konfigurera Dynamic Media Image Server så att den uppfyller vissa specifikationer eller krav.
 
-**Krav**: Kontrollera *att din virtuella dator för Windows innehåller en installation av Microsoft Visual C++-biblioteken innan* du konfigurerar Dynamic Media Image Server. Biblioteken krävs för att köra Dynamic Media Image Server. Du kan [hämta Microsoft Visual C++ 2010 Redistributable Package (x64) här](https://www.microsoft.com/en-us/download/details.aspx?id=14632).
+**Krav**: *Innan* du konfigurerar Dynamic Media Image Server bör du kontrollera att din virtuella dator för Windows har en installation av Microsoft Visual C++ Libraries. Biblioteken krävs för att köra Dynamic Media Image Server. Du kan [hämta Microsoft Visual C++ 2010 Redistributable Package (x64) här](https://www.microsoft.com/en-us/download/details.aspx?id=14632).
 
 Så här konfigurerar du inställningar för Dynamic Media Image Server:
 
-1. I det övre vänstra hörnet av AEM trycker du på **[!UICONTROL Adobe Experience Manager]** för att komma åt den globala navigeringskonsolen och sedan på **[!UICONTROL Verktyg > Åtgärder > Webbkonsol]**.
-1. På sidan Konfiguration av Adobe Experience Manager Web Console trycker du på **[!UICONTROL OSGi > Konfiguration]** för att visa alla paket som körs i AEM.
+1. I det övre vänstra hörnet av AEM trycker du **[!UICONTROL Adobe Experience Manager]** för att komma åt den globala navigeringskonsolen och sedan på **[!UICONTROL Tools > Operations > Web Console]**.
+1. På sidan Konfiguration av Adobe Experience Manager Web Console trycker du **[!UICONTROL OSGi > Configuration]** för att visa alla paket som körs i AEM.
 
    Dynamic Media Delivery Servers finns under följande namn i listan:
 
@@ -856,8 +859,8 @@ Så här konfigurerar du inställningar för Dynamic Media Image Server:
  </tbody>
 </table>
 
-1. Tryck på **[!UICONTROL Spara]**.
-1. I listan över paket till höger om Adobe CQ Scene7 PlatformServer trycker du på **[!UICONTROL Redigera]** -ikonen.
+1. Tryck på **[!UICONTROL Save]**.
+1. I listan med paket till höger om Adobe CQ Scene7 PlatformServer: tryck på **[!UICONTROL Edit]** -ikonen.
 1. I dialogrutan Adobe CQ Scene7 PlatformServer anger du följande standardvärdealternativ:
 
    >[!NOTE]
@@ -874,7 +877,7 @@ Så här konfigurerar du inställningar för Dynamic Media Image Server:
 
 Med standardmanifestet kan du konfigurera standardinställningarna som används för att generera svar för dynamisk medieleverans. Du kan finjustera kvaliteten (JPEG-kvalitet, upplösning, omsamplingsläge), cachning (förfaller) och förhindra återgivning av bilder som är för stora (standardvärde, standardvärde för miniatyrbild, maxpix).
 
-Platsen för standardmanifestkonfigurationen hämtas från **[!UICONTROL katalogrotens]** standardvärde i **[!UICONTROL Adobe CQ Scene7 PlatformServer]** -paketet. Som standard finns det här värdet på följande sökväg under **[!UICONTROL Verktyg > Allmänt > CRXDE Lite]**:
+Platsen för standardmanifestkonfigurationen hämtas från **[!UICONTROL Catalog root]** standardvärdet för **[!UICONTROL Adobe CQ Scene7 PlatformServer]** paketet. Som standard finns det här värdet på följande sökväg i **[!UICONTROL Tools > General > CRXDE Lite]**:
 
 `/conf/global/settings/dam/dm/imageserver/`
 
@@ -882,9 +885,9 @@ Platsen för standardmanifestkonfigurationen hämtas från **[!UICONTROL katalog
 
 Du kan ändra egenskapernas värden enligt beskrivningen i tabellen nedan genom att ange nya värden.
 
-När du är klar med ändringarna av standardmanifestet trycker du på **[!UICONTROL Spara alla]** i det övre vänstra hörnet på sidan.
+När du är klar med ändringarna av standardmanifestet trycker du på **[!UICONTROL Save All]**.
 
-Se till att du trycker på fliken **[!UICONTROL Åtkomstkontroll]** (till höger om fliken Egenskaper) och sedan anger du åtkomstkontrollbehörighet för `jcr:read` alla användare och användare med dynamisk mediareplikering.
+Kontrollera att du trycker på **[!UICONTROL Access Control]** fliken (till höger om fliken Egenskaper) och sedan anger du åtkomstkontrollbehörighet till `jcr:read` för alla och användare med dynamisk mediareplikering.
 
 ![configimageservercrxdeliteaccess, kontrollflik](assets/configimageservercrxdeliteaccesscontroltab.png)
 
@@ -920,7 +923,7 @@ Manifestinställningar och deras standardvärden:
   <tr>
    <td>jpegquality</td>
    <td>80</td>
-   <td><p>Standardattribut för JPEG-kodning. Anger standardattributen för JPEG-svarsbilder.</p> <p>Heltal och flagga, avgränsade med kommatecken. Det första värdet ligger inom intervallet 1..100 och definierar kvaliteten. Det andra värdet kan vara 0 för normalt beteende, eller 1 för att inaktivera nedsampling av RGB-kromaticitet, som vanligtvis används av JPEG-kodare.</p> <p>Se även <a href="https://microsite.omniture.com/t2/help/en_US/s7/is_ir_api/is_api/image_catalog/r_jpegquality.html">JpegQuality</a> i API:t för bildservrar.</p> </td>
+   <td><p>Standardattribut för JPEG-kodning. Anger standardattributen för JPEG-svarsbilder.</p> <p>Heltal och flagga, avgränsade med kommatecken. Det första värdet ligger inom intervallet 1..100 och definierar kvaliteten. Det andra värdet kan vara 0 för normalt beteende, eller 1 för att inaktivera nedsampling av RGB-kromaticitet som vanligtvis används av JPEG-kodare.</p> <p>Se även <a href="https://microsite.omniture.com/t2/help/en_US/s7/is_ir_api/is_api/image_catalog/r_jpegquality.html">JpegQuality</a> i API:t för bildservrar.</p> </td>
   </tr>
   <tr>
    <td>maxpix</td>
@@ -962,7 +965,7 @@ I avancerade användningsfall kan en manuell konfigurationsmodifierare användas
 * `iccEmbed` - [https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/http_ref/r_iccembed.html](https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/http_ref/r_iccembed.html)
 
 >[!NOTE]
-Adobes standardfärgprofiler är bara tillgängliga om du har [Feature Pack 12445](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445) installerat. Alla funktionspaket och servicepaket är tillgängliga via [Paketresurs](https://www.adobeaemcloud.com/content/packageshare.html). Funktionspaket 12445 innehåller Adobes färgprofiler.
+Adobes standardfärgprofiler är bara tillgängliga om du har [Feature Pack 12445](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445) från Package Share eller [Feature Pack 12445 från Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445) installerat. Alla funktionspaket och servicepaket är tillgängliga via [Paketresurs](https://www.adobeaemcloud.com/content/packageshare.html) och [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). Funktionspaket 12445 innehåller Adobes färgprofiler.
 
 ### Installerar funktionspaket 12445 {#installing-feature-pack}
 
@@ -970,7 +973,7 @@ Du måste installera funktionspaket 12445 för att kunna använda de dynamiska f
 
 **Installera funktionspaketet 12445**
 
-1. Navigera till [Paketresurs](https://www.adobeaemcloud.com/content/packageshare.html) och hämta båda `cq-6.3.0-featurepack-12445`.
+1. Navigera till [Paketresurs](https://www.adobeaemcloud.com/content/packageshare.html) eller [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) och hämta båda `cq-6.3.0-featurepack-12445`.
 
    Mer information om hur du använder paketdelning och paket i AEM finns i [Arbeta med paket](/help/sites-administering/package-manager.md) .
 
@@ -982,15 +985,15 @@ När du har installerat funktionspaketet måste du konfigurera rätt standardfä
 
 **Konfigurera standardfärgprofiler**
 
-1. Gå till **[!UICONTROL Verktyg > Allmänt > CRXDE Lite]** och navigera till `/conf/global/settings/dam/dm/imageserver/jcr:content` som innehåller standardfärgprofilerna för Adobe.
+1. I **[!UICONTROL Tools > General > CRXDE Lite]** navigerar du till `/conf/global/settings/dam/dm/imageserver/jcr:content` vilket innehåller standardfärgprofilerna för Adobe.
 
    ![chlimage_1-514](assets/chlimage_1-514.png)
 
-1. Lägg till en färgkorrigeringsegenskap genom att bläddra längst ned på fliken **[!UICONTROL Egenskaper]** och manuellt ange egenskapsnamnet, typen och värdet, som beskrivs i följande tabeller. När du har angett värdena trycker du på **[!UICONTROL Lägg till]** och sedan på **[!UICONTROL Spara alla]** för att spara värdena.
+1. Lägg till en färgkorrigeringsegenskap genom att bläddra längst ned på **[!UICONTROL Properties]** fliken och manuellt ange egenskapsnamnet, typen och värdet, som beskrivs i följande tabeller. När du har angett värdena trycker du på **[!UICONTROL Add]** och sedan **[!UICONTROL Save All]** för att spara värdena.
 
    Egenskaper för färgkorrigering beskrivs i tabellen Egenskaper för **färgkorrigering** . Värden som du kan tilldela till färgkorrigeringsegenskaper finns i tabellen **Färgprofil** .
 
-   I **[!UICONTROL Namn]** lägger du till `iccprofilecmyk`och väljer **[!UICONTROL Text]** `String`och lägger till `WebCoated` som **[!UICONTROL värde]**. Tryck sedan på **[!UICONTROL Lägg till]** och sedan på **[!UICONTROL Spara alla]** för att spara värdena.
+   I **[!UICONTROL Name]** kan du till exempel lägga till, `iccprofilecmyk`markera **[!UICONTROL Type]** `String`och lägga till `WebCoated` som en **[!UICONTROL Value]**. Tryck sedan på **[!UICONTROL Add]** och sedan **[!UICONTROL Save All]** för att spara värdena.
 
    ![chlimage_1-515](assets/chlimage_1-515.png)
 
@@ -1056,7 +1059,7 @@ När du har installerat funktionspaketet måste du konfigurera rätt standardfä
    <td><a href="https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/image_catalog/r_iccrenderintent.html">iccrenderintent</a></td>
    <td>Sträng</td>
    <td>relativ</td>
-   <td><p>Anger återgivningsmetod. Godtagbara värden är: perceptuell, relativ, <strong>mättnad, absolut. </strong><i></i>Adobe rekommenderar <strong>relativt </strong><i></i>som standard.</p> </td>
+   <td><p>Anger återgivningsmetod. Godtagbara värden är: <strong>perceptuell, relativ, mättnad, absolut. </strong><i></i>Adobe rekommenderar <strong>relativt </strong><i></i>som standard.</p> </td>
   </tr>
  </tbody>
 </table>
@@ -1238,9 +1241,9 @@ Följande färgprofiler är installerade:
  </tbody>
 </table>
 
-1. Tryck på **[!UICONTROL Spara alla]**.
+1. Tryck på **[!UICONTROL Save All]**.
 
-Du kan till exempel ställa in **[!UICONTROL iccprofilergb]** på `sRGB`och **[!UICONTROL iccprofilecmyk]** på **[!UICONTROL WebCoated]**.
+Du kan till exempel ställa in **[!UICONTROL iccprofilergb]** på `sRGB` och **[!UICONTROL iccprofilecmyk]** på **[!UICONTROL WebCoated]**.
 
 Om du gör det gör du så här:
 
@@ -1252,9 +1255,9 @@ Om du gör det gör du så här:
 
 ## Leverera resurser {#delivering-assets}
 
-När du har slutfört alla uppgifter ovan hämtas aktiverade Dynamic Media-resurser från bild- eller videotjänsten. I AEM visas den här funktionen i en URL **[!UICONTROL för]** Kopiera bild, URL **[!UICONTROL för]** Kopiera visningsprogram, **[!UICONTROL Bädda in visningsprogramkod]** och i WCM-filen.
+När du har slutfört alla uppgifter ovan hämtas aktiverade Dynamic Media-resurser från bild- eller videotjänsten. I AEM visas den här möjligheten i en **[!UICONTROL Copy Image URL]**, **[!UICONTROL Copy Viewer URL]**, **[!UICONTROL Embed Viewer Code]** och i WCM.
 
-Se [Leverera dynamiska medieresurser](/help/assets/delivering-dynamic-media-assets.md).
+See [Delivering Dynamic Media Assets](/help/assets/delivering-dynamic-media-assets.md).
 
 <table>
  <tbody>
