@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: e637ba54-7ce1-414f-9558-1d758d05877a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 49874dc723c3659550d891e786ddc178b30834ec
+source-git-commit: b68dd6c48d03e233265a2c93e61c0aeb768fa408
 workflow-type: tm+mt
-source-wordcount: '2350'
-ht-degree: 4%
+source-wordcount: '2334'
+ht-degree: 5%
 
 ---
 
@@ -279,9 +279,6 @@ Du kan kopiera en sida och alla dess underordnade sidor till en ny plats:
    Du kan antingen:
    * Markera själva ikonen **Klistra in** : En kopia av originalsidan och eventuella underordnade sidor skapas på den här platsen.
    * Markera listrutepilen för att visa alternativet **Klistra in utan underordnade** . En kopia av originalsidan kommer att skapas på denna plats. underordnade sidor kopieras inte.
-   >[!NOTE]
-   Alternativet **Klistra in utan underordnade** är tillgängligt från och med [AEM 6.5 Service Pack 5](https://helpx.adobe.com/experience-manager/update-releases-roadmap.html) .
-
    >[!NOTE]
    Om du kopierar sidan till en plats där det redan finns en sida med samma namn som originalet, kommer systemet automatiskt att generera en variant av namnet genom att lägga till en siffra. Om det till exempel `winter` redan finns `winter` blir det `winter1`.
 
