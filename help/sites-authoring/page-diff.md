@@ -11,7 +11,10 @@ topic-tags: site-features
 discoiquuid: 8386a16a-9d47-46d5-bc60-5f290c59e60e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
+source-git-commit: eb9a4792f4d64f98805919f00bb62193a6a7dafc
+workflow-type: tm+mt
+source-wordcount: '664'
+ht-degree: 1%
 
 ---
 
@@ -24,9 +27,7 @@ Att skapa innehåll är en repetitiv process. Effektiv redigering kräver att ma
 
 Med funktionen för sidskillnader kan du enkelt jämföra två sidor sida vid sida med skillnaderna markerade.
 
->[!CAUTION]
->
->Användaren måste ha behörigheten **Ändra/Skapa/Ta bort** på noden `/content/versionhistory` för att kunna använda funktionen.
+>[!TIP]
 >
 >Mer teknisk information om den här funktionen finns i [Developing and Page Diff](/help/sites-developing/pagediff.md#operation-details) .
 
