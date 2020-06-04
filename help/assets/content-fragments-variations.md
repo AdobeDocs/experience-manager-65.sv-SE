@@ -1,6 +1,6 @@
 ---
-title: Variationer - innehåll för redigeringsfragment
-seo-title: Variationer - innehåll för redigeringsfragment
+title: Variationer – redigera innehållsfragment
+seo-title: Variationer – redigera innehållsfragment
 description: Med variationer kan du skapa innehåll för fragmentet och sedan skapa variationer av innehållet utifrån syfte (om det behövs).
 seo-description: Med variationer kan du skapa innehåll för fragmentet och sedan skapa variationer av innehållet utifrån syfte (om det behövs).
 uuid: 0844f271-79bc-4f76-8031-d388b81d6feb
@@ -11,12 +11,15 @@ content-type: reference
 discoiquuid: 324df1da-78fa-460f-a744-3504259f1d4a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9d5fa8b85f6724097e34edd66745e0daf95d66cc
+source-git-commit: b2628d37c3ad158913c28ecd890aee9fd0106de4
+workflow-type: tm+mt
+source-wordcount: '1827'
+ht-degree: 14%
 
 ---
 
 
-# Variationer - innehåll för redigeringsfragment{#variations-authoring-fragment-content}
+# Variationer – redigera innehållsfragment{#variations-authoring-fragment-content}
 
 [Variationer](/help/assets/content-fragments.md#constituent-parts-of-a-content-fragment) är en viktig egenskap i innehållsfragment, eftersom de gör att du kan skapa och redigera kopior av huvudinnehållet för användning i specifika kanaler och/eller scenarier.
 
@@ -43,7 +46,7 @@ Utför en rad andra åtgärder beroende på vilken datatyp som redigeras. till e
 
 ## Redigera ditt innehåll {#authoring-your-content}
 
-När du öppnar ditt innehållsfragment för redigering öppnas fliken **Variationer** som standard. Här kan du skapa innehållet, för mallsidor eller andra varianter som du har. Du kan:
+När du öppnar ditt innehållsfragment för redigering öppnas fliken **Variationer** som standard. Här kan du skapa innehållet, för mallen eller eventuella varianter som du har. Du kan:
 
 * gör redigeringar direkt på fliken **Variationer**
 * öppna [helskärmsredigeraren](#full-screen-editor) för att:
@@ -53,7 +56,7 @@ När du öppnar ditt innehållsfragment för redigering öppnas fliken **Variati
 
    * få tillgång till ett antal [åtgärder](#actions)
 
-Exempel:
+Till exempel:
 
 * Redigera ett enkelt fragment
 
@@ -99,7 +102,7 @@ Vilka alternativ du kan använda för att redigera text med flera rader beror p�
 
 * [RTF-text](#rich-text)
 * [Oformaterad text](#plain-text)
-* [Markering](#markdown)
+* [Markdown](#markdown)
 
 Formatet kan väljas när helskärmsredigeraren används.
 
@@ -121,7 +124,7 @@ Med textredigering kan du formatera:
    * Infoga en tabell
    * Styckeformat: Stycke, Rubrik 1/2/3
    * [Infoga visuella resurser](#inserting-assets-into-your-fragment)
-   * Sök
+   * Sökning
    * Sök/ersätt
    * Stavningskontroll
    * [Anteckningar](/help/assets/content-fragments-variations.md#annotating-a-content-fragment)
@@ -134,9 +137,9 @@ Med oformaterad text kan du snabbt lägga in innehåll utan formaterings- eller 
 
 >[!CAUTION]
 >
->Om du väljer **Oformaterad text** kan du förlora formatering, markeringar och/eller resurser som du har infogat i **RTF** eller **Markering**.
+>Om du väljer **Oformaterad text** kan du förlora formatering, markdown-kod och/eller resurser som du har infogat i **RTF** eller **Markdown-kod**.
 
-### Markering {#markdown}
+### Markdown {#markdown}
 
 >[!NOTE]
 >
@@ -158,11 +161,11 @@ Du kan även öppna helskärmsredigeraren för ytterligare [åtgärder](#actions
 
 >[!CAUTION]
 >
->Om du växlar mellan **RTF** och **Markdown** kan du få oväntade effekter med Blockcitattecken och Kodblock, eftersom dessa två format kan ha skillnader i hur de hanteras.
+>Om du växlar mellan **RTF** och **Markdown-kod** kan du få oväntade effekter med Blockcitattecken och Kodblock, eftersom dessa båda format kan hanteras på olika sätt.
 
 ### Visa nyckelstatistik {#viewing-key-statistics}
 
-När helskärmsredigeraren är öppen visas ett intervall med information om texten i **textstatistiken** . Exempel:
+När helskärmsredigeraren är öppen visar åtgärden **Textstatistik** information om texten. Till exempel:
 
 ![cfx-6420-22](assets/cfx-6420-22.png)
 
@@ -190,12 +193,12 @@ Att sammanfatta text är utformat för att hjälpa användare att minska längde
 >
 >Engelska finns i körklart skick.
 >
->Andra språk är tillgängliga som språkmodellpaket från paketresurs:
+>Andra språk är tillgängliga som språkmodellpaket från paketresurs eller programdistribution:
 >
->* [Franska (fr)](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-fr)
->* [German (de)](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-de)
->* [Italienska (it)](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-it)
->* [Spanska (es)](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-es)
+>* [Franska (fr) från Package Share](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-fr) eller [franska (fr) från Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
+>* [German (de) from Package Share](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-de) or [German (de) from Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
+>* [Italian (it) from Package Share](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-it) or [Italian (it) from Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
+>* [Spanska (es) från Package Share](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-es) eller [Spanska (es) från Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
 >
 
 
@@ -282,8 +285,8 @@ De läggs till i fragmentets styckesekvens utan formatering. formatering kan gö
    >
    >Om du efter att ha lagt till en resurs ändrar formatet till:
    >
-   >* **Oformaterad text**: resursen kommer att förloras helt från fragmentet.
-   >* **Markering**: resursen visas inte, men finns fortfarande kvar när du återgår till **RTF**.
+   >* **Oformaterad text**: Resursen kommer att förloras helt från fragmentet.
+   >* **Markdown-kod**: Resursen visas inte, men finns fortfarande kvar när du återgår till **RTF**.
 
 
 ## Hantera variationer {#managing-variations}
@@ -298,7 +301,7 @@ Så här skapar du en ny variant:
 1. Välj **Variationer** i ikonfältet på sidpanelen.
 1. Välj **Skapa variation**.
 1. En dialogruta öppnas där du anger **titel** och **beskrivning** för den nya varianten.
-1. Välj **Lägg till**; fragmentmallsidan **** kopieras till den nya varianten som nu är öppen för [redigering](#editing-a-variation).
+1. Välj **Lägg till**. **Fragmentmastern** kopieras till den nya varianten, som nu är öppen för [redigering](#editing-a-variation).
 
    >[!NOTE]
    >
@@ -317,7 +320,7 @@ Du kan ändra variantinnehållet efter antingen:
 
 Så här byter du namn på en befintlig variant:
 
-1. Öppna fragmentet och välj **Variationer** på sidpanelen.
+1. Open your fragment and select **Variations** from the side panel.
 1. Välj önskad variant.
 1. Välj **Byt namn** i listrutan **Åtgärder** .
 
@@ -333,7 +336,7 @@ Så här byter du namn på en befintlig variant:
 
 Så här tar du bort en befintlig variant:
 
-1. Öppna fragmentet och välj **Variationer** på sidpanelen.
+1. Open your fragment and select **Variations** from the side panel.
 1. Välj önskad variant.
 1. Välj **Ta bort** i listrutan **Åtgärder** .
 
@@ -351,13 +354,13 @@ När du redigerar en variant har du tillgång till åtgärden för att synkronis
 
 >[!CAUTION]
 >
->Synkronisering är bara tillgängligt för att kopiera ändringar *från **mallsida**till varianten*.
+>Synkronisering är bara tillgängligt för att kopiera ändringar *från **mastern**till varianten*.
 >
 >Endast det aktuella elementet i variationen synkroniseras.
 >
->Synkronisering fungerar bara på datatypen **Flerradig text** .
+>Synkronisering fungerar bara på datatypen **Flerradig text**.
 >
->Du kan inte överföra ändringar *från en variant till **mallsida ***.
+>Du kan inte överföra ändringar *från en variant till **mastern ***.
 
 1. Öppna ditt innehållsfragment i fragmentredigeraren. Kontrollera att **mallsidan** har redigerats.
 1. Välj en specifik variant och sedan lämplig synkroniseringsåtgärd från antingen:
