@@ -3,9 +3,9 @@ title: 'Metadata-scheman för att definiera layouten för metadataegenskapssidan
 description: Metadata-schemat definierar layouten för egenskapssidan och de metadataegenskaper som visas för resurser. Lär dig hur du skapar anpassade metadatamatcheman, redigerar metadatamatchema och hur du använder metadatamatchema på resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 8490b81242ee284208d0f7fd90797f411e2b99b2
+source-git-commit: 505ee267534b7b3de1f85fb6782b855dbf3c371d
 workflow-type: tm+mt
-source-wordcount: '2570'
+source-wordcount: '2514'
 ht-degree: 4%
 
 ---
@@ -119,7 +119,7 @@ Följande är giltiga värden för den här egenskapen:
 
 * `./jcr:content/metadata/dc:title`: Lagrar värdet vid resursens metadatanod som egenskapen `dc:title`.
 
-* `./jcr:created`: Visar JCR-egenskapen vid objektets nod. Om du konfigurerar de här egenskaperna bör du markera dem som Inaktivera redigering och inte binda något datumfält till `./jcr:created`. Det är en skyddad egenskap. När DAM-användare försöker uppdatera resurser uppstår ett fel [!UICONTROL Asset(s) failed to modify]. Om du bestämmer dig för att mappa ett datumfält till den här JCR-egenskapen använder du standardschemat. Kopiera det Adobe-medföljande standardmetadatamatchemat och ändra det eftersom datumfältet i standardschemat mappas till `./jcr:created`.
+* `./jcr:created`: Lagrar datum och tid för när en resurs skapades. Det är en skyddad egenskap. Om du konfigurerar de här egenskaperna bör du markera dem som Inaktivera redigering.
 
 För att komponenten ska visas korrekt i metadataschemaformuläret bör egenskapssökvägen inte innehålla några blanksteg.
 
