@@ -11,7 +11,7 @@ topic-tags: extending-assets
 discoiquuid: 03502b41-b448-47ab-9729-e0a66a3389fa
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 18dc05876337629b7561320ff6f0945e3e785ea3
+source-git-commit: 13cf9930876af3dd27b2fcb3e1059dae61769803
 workflow-type: tm+mt
 source-wordcount: '1859'
 ht-degree: 2%
@@ -292,7 +292,7 @@ Det finns några begränsningar:
 
 Följande statuskoder kan ses under de relevanta omständigheterna:
 
-* **202 (OK)**
+* **200 (OK)**
 
    Returneras när:
 
