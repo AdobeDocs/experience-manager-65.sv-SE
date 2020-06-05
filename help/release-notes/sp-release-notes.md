@@ -4,9 +4,9 @@ description: Versionsinformation om Adobe Experience Manager 6.5 Service Pack 5.
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: d51577195e969ff8af31be49159ff575e3654cc9
+source-git-commit: 46f28926af6cbf3999a4c81cb1f1297b09c07f9f
 workflow-type: tm+mt
-source-wordcount: '4364'
+source-wordcount: '4374'
 ht-degree: 0%
 
 ---
@@ -423,7 +423,7 @@ Kunderna rekommenderas att granska om de använder funktionen eller funktionen i
 
 * Om en mapp i hierarkin byter namn i [!DNL Experience Manager Assets] och den kapslade mappen som innehåller en resurs publiceras [!DNL Brand Portal]i, uppdateras inte mappens rubrik [!DNL Brand Portal] förrän rotmappen publiceras igen.
 
-* Uppdatering av [!DNL chrome] version 83 orsakar ett problem när paket byggs. Lös problemet genom att använda andra tillgängliga webbläsare, som [!DNL Internet Explorer] och [!DNL Firefox]eller andra installationsalternativ för AEM-standardpaket.
+* Vid installation av AEM 6.5.5.0 orsakar uppdateringen av [!DNL Chrome] version 83 ett problem när paket byggs. Lös problemet genom att använda andra tillgängliga webbläsare, som [!DNL Internet Explorer] och [!DNL Firefox]eller andra installationsalternativ för AEM-standardpaket. Problemet åtgärdas efter installation av AEM 6.5.5.0.
 
 * Det går inte att skicka ett e-postmeddelande till SMTP-fjärrservern med hjälp av AEM-standardavsändaren eftersom den bara tillåter kommunikation med TLS v1.2. Ta bort paketet `javax.mail:mail:1.5.0-b01` från `system/console` och uppdatera paketen för att lösa problemet.
 
