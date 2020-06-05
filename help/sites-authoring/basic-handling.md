@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 21181a6f-b434-40ed-8eb1-ebdfc98964dd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 206f4cdf76df2b0be97426993818935a19bb9e63
+source-git-commit: b68dd6c48d03e233265a2c93e61c0aeb768fa408
 workflow-type: tm+mt
-source-wordcount: '3010'
+source-wordcount: '2979'
 ht-degree: 3%
 
 ---
@@ -88,10 +88,6 @@ Navigeringspanelen ger åtkomst till AEM-konsolerna:
 ![bh-01](assets/bh-01.png)
 
 Titeln på webbläsarfliken uppdateras för att återspegla din position när du navigerar genom konsolerna och innehållet.
-
->[!NOTE]
->
->Fliktiteln visar var [AEM 6.5 Service Pack 5](https://helpx.adobe.com/experience-manager/update-releases-roadmap.html) finns.
 
 Följande konsoler finns i Navigation:
 
@@ -233,10 +229,6 @@ Rubriken visas alltid längst upp på skärmen. De flesta alternativen i huvudet
    I **webbplatskonsolen** finns alternativet att **hoppa till huvudinnehållet**. Detta blir synligt när du *tabbar* mellan rubrikalternativen och snabbar upp navigeringen genom att du kan hoppa över standardelementen i verktygsfältet (produkten) och ta dig direkt till huvudinnehållet.
 
    ![bh-30](assets/bh-30.png)
-
-   >[!NOTE]
-   >
-   >Från och med **AEM 6.5 Service Pack 5** är Gå till huvudinnehållet [](https://helpx.adobe.com/experience-manager/update-releases-roadmap.html) .
 
 ## Få hjälp {#accessing-help}
 
