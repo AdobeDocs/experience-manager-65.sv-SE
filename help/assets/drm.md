@@ -3,9 +3,9 @@ title: Digital Rights Management i [!DNL Adobe Experience Manager Assets].
 description: Lär dig hur du hanterar förfallotillstånd för mediefiler och information om licensierade mediefiler i [!DNL Experience Manager].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 20f337ea2e4f369eb6eb760d312199fa39556513
+source-git-commit: ee54a3fa395e2c1ab4a5895a0bb8fc251d24a35a
 workflow-type: tm+mt
-source-wordcount: '1361'
+source-wordcount: '1353'
 ht-degree: 6%
 
 ---
@@ -96,9 +96,7 @@ To enable the [!DNL Assets] console to display the referencing compound assets a
    >
    >Det är bara den som har skapat mediefilen (den person som överför en viss mediefil till [!DNL Assets]) som får ett e-postmeddelande när mediefilen förfaller. Se [hur du konfigurerar e-postmeddelanden](/help/sites-administering/notification.md) för mer information om hur du konfigurerar e-postmeddelanden på den övergripande [!DNL Experience Manager] nivån.
 
-1. I **[!UICONTROL Prior notification in seconds]** fältet anger du tiden i sekunder innan en resurs förfaller när du vill få ett meddelande om förfallotiden. Om du är administratör eller den som har skapat resursen får du ett meddelande innan resursen upphör att gälla om att resursen håller på att gå ut efter den angivna tiden.
-
-   När resursen har gått ut får du ett meddelande som bekräftar att den har gått ut. Dessutom inaktiveras utgångna resurser.
+1. I **[!UICONTROL Prior notification in seconds]** fältet anger du tiden i sekunder innan en resurs förfaller när du vill få ett meddelande om förfallotiden. Tillgångsskaparna får ett meddelande innan resursen upphör att gälla om att resursen håller på att gå ut efter den angivna tiden. När resursen har gått ut får du ett meddelande som bekräftar att den har gått ut. Dessutom inaktiveras utgångna resurser.
 
 1. Klicka på **[!UICONTROL Save]**.
 
