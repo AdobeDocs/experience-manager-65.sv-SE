@@ -11,7 +11,10 @@ topic-tags: Configuration
 discoiquuid: 1717b1b4-1c2a-450e-8e79-4156a974d5fa
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
+source-git-commit: dbb99875cc6f3c8810670ffe923756f7c13d4ace
+workflow-type: tm+mt
+source-wordcount: '279'
+ht-degree: 0%
 
 ---
 
@@ -66,14 +69,6 @@ När du har installerat [AEM Forms-tilläggspaketet](../../forms/using/installin
     </ul> </td> 
   </tr>
   <tr>
-   <td>template-power-user</td> 
-   <td>
-    <ul> 
-     <li>Skapa och förhandsgranska anpassningsbara formulär eller mallar för interaktiv kommunikation</li> 
-     <li>Skapa skript för adaptiva formulär eller interaktiva kommunikationsmallar med kodredigeraren</li> 
-    </ul> </td> 
-  </tr>
-  <tr>
    <td><p>fdm-authors</p> </td> 
    <td>
     <ul> 
@@ -99,7 +94,7 @@ När du har installerat [AEM Forms-tilläggspaketet](../../forms/using/installin
    <td>arbetsflöde-användare</td> 
    <td>
     <ul> 
-     <li>Använd AEM-inkorgsprogram<br /> <strong>Obs! </strong>Du måste ha grupptilldelningar för cm-agent-users och arbetsflödesanvändare för att få tillgång till gränssnittet för Interactive Communications Agent i AEM-inkorgen.</li> 
+     <li>Använd AEM-inkorgsprogram<br /> <strong>Obs! </strong>Du måste ha grupptilldelningar för cm-agent-users och arbetsflödesanvändare för att få tillgång till gränssnittet för Interactive Communications Agent i AEM-inkorg.</li> 
      <li>Hantera arbetsflödesinstanser</li> 
     </ul> </td> 
   </tr>
