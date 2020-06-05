@@ -4,7 +4,7 @@ product: adobe experience manager
 audience: end-user
 user-guide-title: Användarhandbok för Experience Manager 6.5 Assets
 translation-type: tm+mt
-source-git-commit: 4f1aea28b94e037da5cefedd46228026299a3ddc
+source-git-commit: db60a7297defa2ed8e7f30f148d0f74a73a49893
 workflow-type: tm+mt
 source-wordcount: '645'
 ht-degree: 37%
@@ -52,7 +52,7 @@ ht-degree: 37%
    + [Leverera innehåll med HTTP2](http2.md)
    + [Leverera Dynamic Media-material](delivering-dynamic-media-assets.md)
    + [Aktivera hotlink-skydd i Dynamic Media](hotlink-protection.md)
-   + [3D-bilder](/help/assets/assets-3d.md)
+   + [Stöd för 3D](/help/assets/assets-3d.md)
    + [Bilduppsättningar](image-sets.md)
    + [Panoramabilder](panoramic-images.md)
    + [Blandade medieuppsättningar](mixed-media-sets.md)
