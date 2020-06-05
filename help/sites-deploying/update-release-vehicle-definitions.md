@@ -10,7 +10,10 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 32695db5-d62d-4959-8a24-3d56b4a19904
 translation-type: tm+mt
-source-git-commit: b827c8acb1db158060d209c819fc72ffbfeca65f
+source-git-commit: 6a5a8e64c6eaab816d07d8206601849c974d1e26
+workflow-type: tm+mt
+source-wordcount: '769'
+ht-degree: 2%
 
 ---
 
@@ -143,7 +146,7 @@ Det här dokumentet innehåller information om de olika typerna av Adobe Experie
  </tbody>
 </table>
 
-## Kumulativt korrigeringspaket {#cumulative-fix-pack-aem}
+## Kumulativt korrigeringspaket  {#cumulative-fix-pack-aem}
 
 <table>
  <tbody>
@@ -186,93 +189,6 @@ Det här dokumentet innehåller information om de olika typerna av Adobe Experie
   <tr>
    <td><strong>Testnivå</strong></td>
    <td>QA validerat på integreringsnivå och regressionstestning</td>
-  </tr>
- </tbody>
-</table>
-
-## Eak Cumulative Fix Pack {#oak-cumulative-fix-pack}
-
-<table>
- <tbody>
-  <tr>
-   <td><strong>Definition</strong></td>
-   <td>
-    <ul>
-     <li>Liknar en vanlig bestruket finpapper, men innehåller endast ekrelaterade korrigeringar</li>
-     <li>COFP är självberoende (inga beroenden). Kunderna behöver inte bekymra sig om att hitta/lösa beroenden. [1]</li>
-    </ul> </td>
-  </tr>
-  <tr>
-   <td><strong>Namngivning</strong></td>
-   <td>oak &lt;version&gt;</td>
-  </tr>
-  <tr>
-   <td><strong>Inkluderingar</strong></td>
-   <td>COFP är ett kumulativt korrigeringspaket som innehåller korrigeringar av alla Oak-komponenter för en viss 1.x-version. Om kunden t.ex. använder COHF 1.x.3, så COHF 1.x.3. = COHF 1.x.1 + COHF 1.x.2.</td>
-  </tr>
-  <tr>
-   <td><strong>Dokumentation</strong></td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td><strong>Cadence</strong></td>
-   <td><p>Vid behov</p> </td>
-  </tr>
-  <tr>
-   <td><strong>Tillgänglighet och installation</strong></td>
-   <td>
-    <ul>
-     <li>Installationsprocessen för COFP har förenklats för att förbättra kundupplevelsen. (Kunderna kan bara installera ett enda paket för alla komponenter).</li>
-    </ul> </td>
-  </tr>
-  <tr>
-   <td><strong>Testnivå</strong></td>
-   <td><p>Kvalitetsvaliderade</p> </td>
-  </tr>
- </tbody>
-</table>
-
-## Snabbkorrigering {#hot-fix}
-
-<table>
- <tbody>
-  <tr>
-   <td><strong>Definition</strong></td>
-   <td><p>Paket som innehåller en eller flera filer som skapats för att åtgärda en produktdefekt som avsevärt försämrar viktiga tjänster eller som i hög grad påverkar verksamheten. </p> </td>
-  </tr>
-  <tr>
-   <td><strong>Namngivning</strong></td>
-   <td>cq-&lt;Release Version&gt;-hotfix-&lt;hotfix ID&gt;-&lt;hotfix-version&gt;</td>
-  </tr>
-  <tr>
-   <td><strong>Inkluderingar</strong></td>
-   <td>Innehåller korrigeringar för ett specifikt problem</td>
-  </tr>
-  <tr>
-   <td><strong>Dokumentation</strong></td>
-   <td>Versionsinformation om de offentliga snabbkorrigeringarna är endast tillgängliga baserat på kundens begäran via AEM Support Portal.</td>
-  </tr>
-  <tr>
-   <td><strong>Cadence</strong></td>
-   <td>Vid behov</td>
-  </tr>
-  <tr>
-   <td><strong>Tillgänglighet och installation</strong></td>
-   <td>
-    <ul>
-     <li>Levereras som ett paket</li>
-     <li>Finns på paketresurs</li>
-     <li>Beroende på det senaste Service Pack-versionen</li>
-     <li>De flesta snabbkorrigeringar är fristående, om inte annat anges. Kan installeras i valfri ordning. Kan verifieras via fliken Paketdelningsinformation i elementet Beroenden.</li>
-    </ul> </td>
-  </tr>
-  <tr>
-   <td><strong>Testnivå</strong></td>
-   <td>
-    <ul>
-     <li>Validerad av Kundtjänst</li>
-     <li>AEM-snabbkorrigeringar har inte samma kvalitetssäkring som servicepaket eller produktreleaser. Därför bör de först valideras i en testmiljö som en del av kvalitetsdistributionsprocesserna.</li>
-    </ul> </td>
   </tr>
  </tbody>
 </table>
