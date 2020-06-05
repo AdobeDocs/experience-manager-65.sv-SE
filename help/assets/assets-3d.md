@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: introduction
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 2f0e626aa16a62203755e29800a5935b350ffe79
+source-git-commit: d17500ea7b95c90069d9c51fac5d4f3706ee4c71
 workflow-type: tm+mt
-source-wordcount: '2097'
+source-wordcount: '2071'
 ht-degree: 1%
 
 ---
@@ -20,11 +20,11 @@ ht-degree: 1%
 
 Med Dynamic Media kan du överföra, hantera, visa och leverera 3D-resurser som engagerande upplevelser.
 
-* Publicera 3D-bilder med ett klick (med **[!UICONTROL Quick Publish]** i verktygsfältet) för att generera webbadressen.
-* Optimerat stöd för 3D-material med den högkvalitativa, interaktiva Dimensional-visningsförinställningen som bygger på Adobe Dimension. Visningsförinställningen innehåller bland annat en samling interaktiva kamerakontroller som du kan använda för att rotera, zooma och panorera.
+* Publicera 3D-resurser med ett klick (med **[!UICONTROL Quick Publish]** i verktygsfältet) för att generera en URL.
+* Optimerat stöd för 3D-material med den högkvalitativa, interaktiva Dimensional-visningsförinställningen som bygger på Adobe Dimension.
 * Med 3D Media WCM-komponenten kan du enkelt lägga till 3D-resurser på dina AEM Sites-sidor.
 
-Det finns ingen installation eller konfiguration av något slag för att använda 3D-resurser i Dynamic Media.
+Det krävs ingen ytterligare konfiguration för att använda 3D-resurser i Dynamic Media.
 
 ![sko i 3d](/help/assets/assets-dm/3d-dimensional-viewer-quickpublish-url-embed2.png)
 
@@ -36,10 +36,10 @@ Dynamic Media har stöd för följande 3D-filformat:
 
 | 3D-filtillägg | Filformat | MIME-typ | Anteckningar |
 |---|---|---|---|
-| GLB | Binär GL-överföring | model/gltf-binary | Inkluderar texturerna med resursen i stället för att referera till dem som externa bilder. |
+| GLB | Binär GL-överföring | model/gltf-binary | Materialen och texturerna inkluderas som en enda resurs. |
 | OBJ | WaveFront 3D-objektfil | application/x-tgif |  |
 | STL | Stereolitografi | application/vnd.ms-pki.stl |  |
-| USDZ | Zip-arkiv för universell scenbeskrivning | model/vnd.usdz+zip | *Stöd endast för förtäring. ingen visning eller interaktion är tillgänglig.* USDZ är Apples egna 3D-format som endast kan läsas av Safari eller iOS. |
+| USDZ | Zip-arkiv för universell scenbeskrivning | model/vnd.usdz+zip | *Stöd endast för förtäring. ingen visning eller interaktion är tillgänglig.* USDZ är ett tillverkarspecifikt 3D-format som kan visas direkt på Safari- och iOS-enheter. |
 
 ## Snabbstart: 3D-resurser i Dynamic Media {#quick-start-three-d}
 
