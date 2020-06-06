@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 135b3077-5343-4888-858d-de5e9b1d4b04
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
+source-git-commit: fb7d2a3cebda86fa4d91d2ea89ae459fa4b86fa0
+workflow-type: tm+mt
+source-wordcount: '318'
+ht-degree: 0%
 
 ---
 
@@ -34,7 +37,7 @@ För närvarande visas emblem som en medlem i communityn får eller tilldelas ti
 
 För att nå Badges-konsolen i redigeringsmiljön
 
-* Navigera från global navigering till **[!UICONTROL Verktyg > Communities > Badges]**
+* Navigera från global navigering till **[!UICONTROL Tools > Communities > Badges]**
 
 Den här konsolen visar de emblem som är tillgängliga för tillfället och från vilka nya emblem kan läggas till.
 
@@ -42,7 +45,7 @@ Den här konsolen visar de emblem som är tillgängliga för tillfället och fr�
 
 ## Skapa märke {#create-badge}
 
-Ett märke skapas genom att en lämplig liten bild (72 dpi med en höjd på mellan 26 och 32 pixlar) överförs och ett namn anges. Badge-bilden lagras i databasen på `/etc/community/badging/images` och replikeras automatiskt till publiceringsmiljön.
+Ett märke skapas genom att en lämplig liten bild (72 dpi med en höjd på mellan 26 och 32 pixlar) överförs och ett namn anges. Badge-bilden lagras i databasen på `/libs/settings/community/badging/images` och replikeras automatiskt till publiceringsmiljön.
 
 Om publiceringsmiljön är en grupp utgivare måste du konfigurera [användarsynkronisering](/help/communities/sync.md).
 
