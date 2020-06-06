@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 9045ce2e-a06d-4da5-9b83-56dd823007bb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
+source-git-commit: fb7d2a3cebda86fa4d91d2ea89ae459fa4b86fa0
+workflow-type: tm+mt
+source-wordcount: '409'
+ht-degree: 0%
 
 ---
 
@@ -110,9 +113,9 @@ Komponentkonfiguration för överordnad panel:
 
 * Fliken Regler:
 
-   * Regelplats = `/content/sites/communities/jcr:content`
-   * Poängregel = `/etc/community/scoring/rules/forums-scoring`
-   * Badningsregel = `/etc/community/badging/rules/reference-badging`
+   * Regelplats = `/content/sites/<site name>/jcr:content`
+   * Poängregel = `/libs/settings/community/scoring/rules/forums-scoring`
+   * Badningsregel = `/libs/settings/community/badging/rules//reference-badging`
    * Visningsgräns = `10`
 
 ![chlimage_1-22](assets/chlimage_1-22.png)
@@ -133,9 +136,9 @@ Komponentkonfiguration för överordnad panel:
 
 * Fliken Regler:
 
-   * Regelplats = `/content/sites/communities/jcr:content`
-   * Poängregel = `/etc/community/scoring/rules/adv-forums-scoring`
-   * Badningsregel = `/etc/community/badging/rules/adv-forums-badging`
+   * Regelplats = `/content/sites/<site name>/jcr:content`
+   * Poängregel = `/libs/settings/community/scoring/rules/adv-forums-scoring`
+   * Badningsregel = `/libs/settings/community/badging/rules/adv-forums-badging`
    * Visningsgräns = `10`
 
 ![chlimage_1-23](assets/chlimage_1-23.png)
