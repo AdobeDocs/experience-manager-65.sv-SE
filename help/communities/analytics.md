@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: e6fdaf56-402f-418d-96d8-e46bd3ad1e8c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
+source-git-commit: fb7d2a3cebda86fa4d91d2ea89ae459fa4b86fa0
+workflow-type: tm+mt
+source-wordcount: '2751'
+ht-degree: 2%
 
 ---
 
@@ -140,7 +143,7 @@ Om du använder en **befintlig rapportserie** kan det vara nödvändigt att [än
 
 ### Analys av pulsslag för video {#video-heartbeat-analytics}
 
-När Video Heartbeat Analytics är licensierat `Marketing Cloud Org Id` tilldelas ett videomaterial.
+När Video Heartbeat Analytics är licensierad `Marketing Cloud Org Id` tilldelas en
 
 Så här aktiverar du rapportering av pulsslag i videomaterial efter [att du har konfigurerat Analytics-rapportsviten för videorapportering](#adobe-analytics-report-suite-for-video-reporting):
 
@@ -160,15 +163,15 @@ Om det inte är aktiverat instansieras aldrig videons hjärtslagskod och endast 
 
 Så här skapar du en ny Analytics-integrering, som integrerar Adobe Analytics med AEM-communitywebbplatsen, med standardgränssnittet på författarinstansen:
 
-* Från global navigering: **[!UICONTROL Verktyg > Distribution > Molntjänster]**
+* Från global navigering: **[!UICONTROL Tools > Deployment > Cloud Services]**
 * Rulla ned till **[!UICONTROL Adobe Analytics]**
-* Välj **[!UICONTROL Konfigurera nu]** eller **[!UICONTROL Visa konfigurationer]**
+* Markera **[!UICONTROL Configure Now]** eller **[!UICONTROL Show Configurations]**
 
 ![chlimage_1-178](assets/chlimage_1-178.png)
 
 ### Dialogrutan Skapa konfiguration {#create-configuration-dialog}
 
-* Välj `[+]` ikon bredvid **[!UICONTROL Tillgängliga konfigurationer]** för att skapa en ny konfiguration
+* Välj `[+]` ikon bredvid **[!UICONTROL  Available Configurations]** för att skapa en ny konfiguration
 
 I dialogrutan Skapa konfiguration anger de värden som ska anges konfigurationen.
 
@@ -246,7 +249,7 @@ Så här sparar du inställningarna:
 
 När du har konfigurerat den grundläggande anslutningen till Adobe Analytics måste du skapa eller redigera ett ramverk för communitywebbplatsen. Syftet med ramverket är att mappa AEM-variabler (Communities feature) till analysvariabler (report suite).
 
-* Välj `[+]` ikon bredvid **[!UICONTROL Tillgängliga ramverk]** för att skapa ett nytt ramverk
+* Välj `[+]` ikon bredvid **[!UICONTROL  Available Frameworks]** för att skapa ett nytt ramverk
 
 ![chlimage_1-182](assets/chlimage_1-182.png)
 
@@ -519,13 +522,14 @@ Här följer ett exempel på standardmappningar efter att du har följt självst
 * *[community site title](/help/communities/sites-console.md#step13asitetemplate)*: Geometrixx Communities
 * *[communityfunktionsnamn](/help/communities/functions.md)*: Forum
 * *[communitygruppsnamn](/help/communities/creating-groups.md#creating-a-new-group)*: Vattna
-* *väg till communitygruppsinnehåll*: `/content/sites/communities/en/groups/hiking`
+* *väg till communitygruppsinnehåll*: `/content/sites/<site name>/en/groups/hiking`
 * *[Resurstyp](/help/communities/essentials.md)*för UGC-komponent:`social/forum/components/hbs/topic`
 * *UGC-komponenttitel*: Hiking Topics
 * *login (authzableId)*: `aaron.mcdonald@mailinator.com`
-* *SRP-sökväg till UGC*: `/content/usergenerated/asi/.../forum/jmtz-topic3`eller *komponentbanan som ska följas*: `/content/sites/communities/en/jcr:content/content/primary/forum`
+* *SRP-sökväg till UGC*: `/content/usergenerated/asi/.../forum/jmtz-topic3`
+eller *komponentbanan som ska följas*: `/content/sites/<site name>/en/jcr:content/content/primary/forum`
 
-* *sökväg till innehåll* på communitywebbplatsen: `/content/sites/community/en`
+* *sökväg till innehåll* på communitywebbplatsen: `/content/sites/<site name>/en`
 
 ### Ändra variabelmappning för analys {#modifying-analytics-variable-mapping}
 
@@ -657,7 +661,7 @@ Adobe Analytics innehåller API:er som gör att du kan komma åt, exportera och 
 
 ## Resurser {#resources}
 
-* Adobe Marketing Cloud: Hjälp och referens [för analyser](https://marketing.adobe.com/resources/help/en_US/reference/)
+* Adobe Marketing Cloud: [Hjälp och referens för analyser](https://marketing.adobe.com/resources/help/en_US/reference/)
 * AEM: [Integrating with Adobe Analytics](/help/sites-administering/adobeanalytics.md)
 * AEM: [Analyser med externa leverantörer](/help/sites-administering/external-providers.md)
 
