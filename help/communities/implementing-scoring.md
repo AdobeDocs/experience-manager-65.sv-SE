@@ -12,7 +12,10 @@ discoiquuid: ea033bb9-cb92-4c93-855f-8c902999378c
 docset: aem65
 tagskeywords: scoring, badging, badges, gamification
 translation-type: tm+mt
-source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
+source-git-commit: fb7d2a3cebda86fa4d91d2ea89ae459fa4b86fa0
+workflow-type: tm+mt
+source-wordcount: '2896'
+ht-degree: 1%
 
 ---
 
@@ -43,7 +46,7 @@ Beteckningar placeras under en medlems namn för att ange antingen deras roll el
 
 Som standard finns emblem i databasen på
 
-* `/etc/community/badging/images`
+* `/libs/settings/community/badging/images`
 
 Om de lagras på en annan plats bör de vara tillgängliga för alla.
 
@@ -62,13 +65,13 @@ Tilldelade (och tilldelade) märken lagras i den valda [SRP](/help/communities/s
 I releasen ingår tre rollbaserade märken:
 
 * **moderator**
-   `/etc/community/badging/images/moderator/jcr:content/moderator.png`
+   `/libs/settings/community/badging/images/moderator/jcr:content/moderator.png`
 
 * **gruppansvarig**
-   `/etc/community/badging/images/group-manager/jcr:content/group-manager.png`
+   `/libs/settings/community/badging/images/group-manager/jcr:content/group-manager.png`
 
 * **behörig medlem**
-   `/etc/community/badging/images/privileged-member/jcr:content/privileged-member.png`
+   `/libs/settings/community/badging/images/privileged-member/jcr:content/privileged-member.png`
 
 ![chlimage_1-98](assets/chlimage_1-98.png)
 
@@ -84,13 +87,13 @@ För att emblem ska visas som en belöning för aktivitet måste två saker hän
 I releasen ingår tre belöningsbaserade märken:
 
 * **guld**
-   `/etc/community/badging/images/gold-badge/jcr:content/gold.png`
+   `/libs/settings/community/badging/images/gold-badge/jcr:content/gold.png`
 
 * **silver**
-   `/etc/community/badging/images/silver-badge/jcr:content/silver.png`
+   `/libs/settings/community/badging/images/silver-badge/jcr:content/silver.png`
 
 * **brons**
-   `/etc/community/badging/images/bronze-badge/jcr:content/bronze.png`
+   `/libs/settings/community/badging/images/bronze-badge/jcr:content/bronze.png`
 
 ![chlimage_1-99](assets/chlimage_1-99.png)
 
@@ -182,8 +185,8 @@ Bakgrundsmusik lagras i SRP.
 >Poängregelnamnen ska vara globalt unika. de ska inte sluta med samma namn.
 >
 >Ett exempel på vad som *inte* ska göras:
->/etc/community/scoring/rules/site1/forums-scoring
->/etc/community/scoring/rules/site2/forums-scoring
+>/libs/settings/community/scoring/rules/site1/forums-scoring
+>/libs/settings/community/scoring/rules/site2/forums-scoring
 
 
 ### Underregler för poängsättning {#scoring-sub-rules}
@@ -274,13 +277,13 @@ Underregler är noder av typen `cq:Page` med egenskaper på dess `jcr:content`no
 
 I releasen finns två poängregler för [forumfunktionen](/help/communities/functions.md#forum-function) (en för respektive forum och kommentarkomponenter för forumfunktionen):
 
-1. /etc/community/scoring/rules/comments-scoring
+1. /libs/settings/community/scoring/rules/comments-scoring
 
-   * subRules[] =/etc/community/scoring/rules/sub-rules/member-comment-create/etc/community/scoring/rules/sub-rules/member-receive-voice/etc/community/scoring/rules/sub-rules/Member-give-voice/etc/community/scoring/rules/sub-rules/member-is-moderated
+   * subRules[] =/libs/settings/community/scoring/rules/sub-rules/member-comment-create/libs/settings/community/scoring/rules/sub-rules/member-receive-voice/libs/settings/community/scoring/rules/sub-rules/member-give-voice/libs/settings/community/scoring/rules/sub-rules/member-is-moderated
 
-1. /etc/community/scoring/rules/forums-scoring
+1. /libs/settings/community/scoring/rules/forums-scoring
 
-   * subRules[] =/etc/community/scoring/rules/sub-rules/Member-forum-create/etc/community/scoring/rules/sub-rules/Member-receive-voice/etc/community/scoring/rules/sub-rules/Member-give-voice/etc/community/scoring/rules/sub-rules/member-is-moderated
+   * subRules[] =/libs/settings/community/scoring/rules/sub-rules/member-forum-create/libs/settings/community/scoring/rules/sub-rules/member-receive-voice/libs/settings/community/scoring/rules/sub-rules/member-give-voice/libs/settings/community/scoring/rules/sub-rules/member-is-moderated
 
 **Anteckningar:**
 
@@ -295,7 +298,7 @@ I releasen finns två poängregler för [forumfunktionen](/help/communities/func
 
 ### Aktivera anpassade poängsättningsregler {#activating-custom-scoring-rules}
 
-Alla ändringar eller tillägg som görs i resultatregler eller underregler i redigeringsmiljön måste installeras vid publicering.
+Alla ändringar eller tillägg som görs i poängsättningsregler eller underregler i redigeringsmiljön måste installeras vid publicering.
 
 ## Badningsregler {#badging-rules}
 
@@ -308,15 +311,15 @@ Badging-regler är noder av typen `cq:Page` med egenskaper på dess `jcr:content
 
 Reglerna för märkning består av en obligatorisk `thresholds` egenskap som är en ordnad lista med bakgrundsmusik som är mappade till emblem. Poängen måste ordnas i högre värde. Till exempel:
 
-* `1|/etc/community/badging/images/bronze-badge/jcr:content/bronze.png`
+* `1|/libs/settings/community/badging/images/bronze-badge/jcr:content/bronze.png`
 
    * Ett bronze-märke tilldelas för 1 poäng.
 
-* `60|/etc/community/badging/images/silver-badge/jcr:content/silver.png`
+* `60|/libs/settings/community/badging/images/silver-badge/jcr:content/silver.png`
 
    * En silverbricka tilldelas när 60 poäng har samlats.
 
-* `80|/etc/community/badging/images/gold-badge/jcr:content/gold.png`
+* `80|/libs/settings/community/badging/images/gold-badge/jcr:content/gold.png`
 
    * En guldbricka utmärks när 80 poäng har samlats.
 
@@ -346,7 +349,7 @@ Egenskapen `scoringRules` för en badging-regel begränsar helt enkelt vilka po�
      <li>number = score</li>
      <li>| = den lodräta linjen char (U+007C)</li>
      <li>sökväg = fullständig sökväg till badge-bildresurs</li>
-    </ul> Strängarna måste ordnas så att siffrorna ökar i värde och inget mellanrum ska visas mellan talet och sökvägen.<br /> Exempelpost:<br /> <code>80|/etc/community/badging/images/gold-badge/jcr:content/gold.png</code></td>
+    </ul> Strängarna måste ordnas så att siffrorna ökar i värde och inget mellanrum ska visas mellan talet och sökvägen.<br /> Exempelpost:<br /> <code>80|/libs/settings/community/badging/images/gold-badge/jcr:content/gold.png</code></td>
   </tr>
   <tr>
    <td>badgingType</td>
@@ -365,8 +368,9 @@ Egenskapen `scoringRules` för en badging-regel begränsar helt enkelt vilka po�
 
 I den här versionen finns två regler för taggning som motsvarar [reglerna](#includedscoringrules)för forum och kommentarer.
 
-* /etc/community/badging/rules/comments-badging
-* /etc/community/badging/rules/forums-badging
+* /libs/settings/community/badging/rules/comments-badging
+
+* /libs/settings/community/badging/rules/forums-badging
 
 **Anteckningar:**
 
@@ -395,7 +399,7 @@ cURL -i -X POST -H *header* -u *signin* -F *operation* -F *badge* *member-profil
 
 *badge* = &quot;badgeContentPath=*badge-image-file*&quot;
 
-*badge-image-file* = platsen för badge-bildfilen i databasen, till exempel: /etc/community/badging/images/moderator/jcr:content/moderator.png
+*badge-image-file* = platsen för badge-bildfilen i databasen, till exempel: /libs/settings/community/badging/images/moderator/jcr:content/moderator.png
 
 *member-profile-url* = slutpunkten för medlemmens profil vid publicering, till exempel: https://&lt;server>:&lt;port>/home/users/community/riley/profile.social.json
 
@@ -414,13 +418,13 @@ cURL -i -X POST -H *header* -u *signin* -F *operation* -F *badge* *member-profil
 #### Tilldela ett moderatormärke {#assign-a-moderator-badge}
 
 ```shell
-curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=social:assignBadge" -F "badgeContentPath=/etc/community/badging/images/moderator/jcr:content/moderator.png" /home/users/community/updcs9DndLEI74DB9zsB/profile.social.json
+curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=social:assignBadge" -F "badgeContentPath=/libs/settings/community/badging/images/moderator/jcr:content/moderator.png" /home/users/community/updcs9DndLEI74DB9zsB/profile.social.json
 ```
 
 #### Återkalla ett tilldelat silvermärke {#revoke-an-assigned-silver-badge}
 
 ```shell
-curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=social:deleteBadge" -F "badgeContentPath=/etc/community/badging/images/silver/jcr:content/silver.png" /home/users/community/updcs9DndLEI74DB9zsB/profile.social.json
+curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=social:deleteBadge" -F "badgeContentPath=/libs/settings/community/badging/images/silver/jcr:content/silver.png" /home/users/community/updcs9DndLEI74DB9zsB/profile.social.json
 ```
 
 >[!NOTE]
@@ -574,9 +578,9 @@ Det går snabbt att testa poängsättning och märkning med hjälp av [Komma ig�
    * **Typ**: `String`
    * Markera **flera**
    * Välj **Lägg till**
-   * Enter `/etc/community/badging/rules/forums-badging`
+   * Enter `/libs/settings/community/badging/rules/forums-badging`
    * Välj **+**
-   * Enter `/etc/community/badging/rules/comments-badging`
+   * Enter `/libs/settings/community/badging/rules/comments-badging`
    * Välj **OK**
 
 * Lägg till egenskapen scoringRules:
@@ -585,9 +589,9 @@ Det går snabbt att testa poängsättning och märkning med hjälp av [Komma ig�
    * **Typ**: `String`
    * Markera **flera**
    * Välj **Lägg till**
-   * Enter `/etc/community/scoring/rules/forums-scoring`
+   * Enter `/libs/settings/community/scoring/rules/forums-scoring`
    * Välj **+**
-   * Enter `/etc/community/scoring/rules/comments-scoring`
+   * Enter `/libs/settings/community/scoring/rules/comments-scoring`
    * Välj **OK**
 
 * Välj **Spara alla**.
