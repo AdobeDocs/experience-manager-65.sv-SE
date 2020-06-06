@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: eb3d5c37-8097-46de-8c4f-804ea723f1c5
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
+source-git-commit: fb7d2a3cebda86fa4d91d2ea89ae459fa4b86fa0
+workflow-type: tm+mt
+source-wordcount: '1060'
+ht-degree: 1%
 
 ---
 
@@ -63,7 +66,7 @@ Den avancerade bedömningsmotorn tillhandahåller en OSGi-konfiguration med para
 * **Poängvikter**
 
    För ett ämne anger du det verb som ska ha högst prioritet när du beräknar poängen. Ett eller flera ämnen kan anges, men begränsas till **ett verb per ämne**. Se [Ämnen och Verb](/help/communities/implementing-scoring.md#topics-and-verbs).
-Angicks som `topic,verb` med kommatecknet escape. Exempel:
+Angicks som `topic,verb` med kommatecknet escape. Till exempel:
    `/social/forum/hbs/social/forum\,ADD`
 Standardvärdet är ADD-verbet för QnA- och forumkomponenter.
 
@@ -105,7 +108,7 @@ Se [Underregler](/help/communities/implementing-scoring.md#scoring-sub-rules)fö
 
 Det avancerade poängsättningspaketet installerar en konfigurationsmapp som innehåller en stoppordsfil:
 
-* `/etc/community/scoring/configuration/stopwords`
+* `/libs/settings/community/scoring/configuration/stopwords`
 
 Den avancerade bedömningsalgoritmen använder listan med ord i stoppordsfilen för att identifiera vanliga engelska ord som ignoreras under innehållsbearbetningen.
 
@@ -131,7 +134,7 @@ I stället för att associera punkter med en badge-bild är det bara nödvändig
   <tr>
    <td>badgingPath</td>
    <td>Sträng[]</td>
-   <td><em>(Obligatoriskt)</em> En sträng med flera värden av badge-bilder upp till antalet badgingLevels. Sökvägarna för taggbilder måste beställas så att den första tilldelas den högsta experten. Om det finns färre emblem än vad som anges av badgingLevels fyller det sista märket i arrayen ut resten av arrayen. Exempelpost:<br /> <code>/etc/community/badging/images/expert-badge/jcr:content/expert.png</code></td>
+   <td><em>(Obligatoriskt)</em> En sträng med flera värden av badge-bilder upp till antalet badgingLevels. Sökvägarna för taggbilder måste beställas så att den första tilldelas den högsta experten. Om det finns färre emblem än vad som anges av badgingLevels fyller det sista märket i arrayen ut resten av arrayen. Exempelpost:<br /> <code>/libs/settings/community/badging/images/expert-badge/jcr:content/expert.png</code></td>
   </tr>
   <tr>
    <td>badgingLevels</td>
@@ -146,7 +149,7 @@ I stället för att associera punkter med en badge-bild är det bara nödvändig
   <tr>
    <td>scoringRules</td>
    <td>Sträng[]</td>
-   <td><em>(Valfritt)</em> En sträng med flera värden som begränsar badging-regeln till de poäng som identifieras av de poängsättningsregler som visas.<br /> Exempelpost:<br /> <code>/etc/community/scoring/rules/adv-comments-scoring</code><br /> Standard är ingen begränsning.</td>
+   <td><em>(Valfritt)</em> En sträng med flera värden som begränsar badging-regeln till de poäng som identifieras av de poängsättningsregler som visas.<br /> Exempelpost:<br /> <code>/libs/settings/community/scoring/rules/adv-comments-scoring</code><br /> Standard är ingen begränsning.</td>
   </tr>
  </tbody>
 </table>
@@ -159,7 +162,7 @@ I den här betaversionen ingår ett belöningsbaserat expertmärke:
 
 * `expert`
 
-   `/etc/community/badging/images/expert-badge/jcr:content/expert.png`
+   `/libs/settings/community/badging/images/expert-badge/jcr:content/expert.png`
 
 ![chlimage_1-142](assets/chlimage_1-142.png)
 
@@ -178,19 +181,19 @@ Se den grundläggande informationen för:
 
 I betaversionen finns två avancerade poängregler för [forumfunktionen](/help/communities/functions.md#forum-function) (en för forumfunktionen och kommentarkomponenterna i forumfunktionen):
 
-1. `/etc/community/scoring/rules/adv-comments-scoring`
+1. `/libs/settings/community/scoring/rules/adv-comments-scoring`
 
    * `subRules[] =
-/etc/community/scoring/rules/sub-rules/adv-comments-rule
-/etc/community/scoring/rules/sub-rules/adv-voting-rule-owner
-/etc/community/scoring/rules/sub-rules/adv-voting-rule`
+/libs/settings/community/scoring/rules/sub-rules/adv-comments-rule
+/libs/settings/community/scoring/rules/sub-rules/adv-voting-rule-owner
+/libs/settings/community/scoring/rules/sub-rules/adv-voting-rule`
 
-1. `/etc/community/scoring/rules/adv-forums-scoring`
+1. `/libs/settings/community/scoring/rules/adv-forums-scoring`
 
    * `subRules[] =
-/etc/community/scoring/rules/sub-rules/adv-forums-rule
-/etc/community/scoring/rules/sub-rules/adv-comments-rule
-/etc/community/scoring/rules/sub-rules/adv-voting-rule-owner`
+/libs/settings/community/scoring/rules/sub-rules/adv-forums-rule
+/libs/settings/community/scoring/rules/sub-rules/adv-comments-rule
+/libs/settings/community/scoring/rules/sub-rules/adv-voting-rule-owner`
 
 **Anteckningar:**
 
@@ -208,8 +211,8 @@ I betaversionen finns två avancerade poängregler för [forumfunktionen](/help/
 
 I releasen finns två avancerade regler för märkning som motsvarar de [avancerade forumen och kommentarsreglerna](#included-scoring-rules-and-sub-rules).
 
-* `/etc/community/badging/rules/adv-comments-badging`
-* `/etc/community/badging/rules/adv-forums-badging`
+* `/libs/settings/community/badging/rules/adv-comments-badging`
+* `/libs/settings/community/badging/rules/adv-forums-badging`
 
 **Anteckningar:**
 
