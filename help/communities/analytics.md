@@ -308,7 +308,7 @@ Den idekiske behövs inte och kan minimeras så att den inte förhindrar åtkoms
 
 1. Välj **Publicera**
 
-![chlimage_1-185](assets/chlimage_1-185.png)
+![chlimage_1-186](assets/chlimage_1-185.png)
 
 Molntjänsten och ramverket för Analytics är nu färdiga. Mappningarna definieras när en communitywebbplats har skapats med den här analystjänsten aktiverad.
 
@@ -376,7 +376,7 @@ Om nya anpassade komponenter skapas som är instrumenterade för Analytics, bör
 
 ### Komponentkonfiguration {#component-configuration}
 
-![chlimage_1-186](assets/chlimage_1-186.png)
+![chlimage_1-185](assets/chlimage_1-186.png)
 
 >[!NOTE]
 >
