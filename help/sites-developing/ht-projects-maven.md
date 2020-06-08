@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 3ebc1d22-a7a2-4375-9aa5-a18a7ceb446a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9d42526ff4c7b7d8a31690ebfb8b45d0e951ebac
+source-git-commit: 1669412afb670a9f55f02476e828de55b4f7a55a
+workflow-type: tm+mt
+source-wordcount: '2424'
+ht-degree: 0%
 
 ---
 
@@ -57,10 +60,10 @@ Den andra Uber Jar rensar bort alla inaktuella klasser, metoder och egenskaper s
 
 AEM 6.5 finns i två versioner av Uber Jar:
 
-1. Uber Jar - Inkluderar endast de publika gränssnitt som inte är markerade för borttagning. Det här är den **rekommenderade** UberJar-metoden som används för att framtidssäkra kodbasen från att förlita sig på inaktuella API:er.
+1. Uber Jar - Inkluderar endast de publika gränssnitt som inte är markerade för borttagning. Detta är den **rekommenderade** funktionen för UberJar som hjälper till att framtidssäkra kodbasen från att förlita sig på inaktuella API:er.
 1. Uber Jar med inaktuella API:er - Innehåller alla publika gränssnitt, inklusive de som markerats för borttagning i en framtida version av AEM.
 
-### Hur använder jag UberJars? {#how-to-i-use-the-uberjars}
+### Hur använder jag UberJars? {#how-do-i-use-the-uberjars}
 
 Om du använder Apache Maven som ett byggsystem (vilket är fallet för de flesta AEM Java-projekt) måste du lägga till ett eller två element i *filen pom.xml* . Det första är ett *beroendeelement* som lägger till det faktiska beroendet i ditt projekt:
 
@@ -372,7 +375,7 @@ Den här filen används på flera olika sätt:
 Beroende på programmets krav kan det vara bra att lägga till mer innehåll i sökvägarna, till exempel:
 
 * Konfigurationer för utrullning
-* Blueprints
+* Ritningar
 * Arbetsflödesmodeller
 * Designsidor
 * Exempelinnehåll
@@ -456,7 +459,7 @@ Du måste också konfigurera om plugin-programmet maven-resources-plugin för at
 
 ### Så här arbetar du med JSP:er {#how-to-work-with-jsps}
 
-I Maven-konfigurationen som beskrivits hittills skapas ett innehållspaket som även kan innehålla komponenter och motsvarande JSP:er. Men Maven behandlar dem som andra filer som är en del av innehållspaketet och känner inte ens igen dem som JSP:er.
+I Maven-konfigurationen som beskrivs hittills skapas ett innehållspaket som även kan innehålla komponenter och motsvarande JSP:er. Men Maven behandlar dem som andra filer som är en del av innehållspaketet och känner inte ens igen dem som JSP:er.
 
 De resulterande komponenterna fungerar på samma sätt i AEM, men det finns två stora fördelar med att göra Maven medveten om JSP:erna
 
@@ -576,16 +579,16 @@ För att de klasser som kompileras från JSP:n ska kunna tas bort konfigurerar v
 >
 >Om du till exempel inkluderar `/libs/foundation/global.jsp`kan du använda följande konfiguration för `maven-resources-plugin` i stället för den konfiguration över som helt hoppar över `/libs`.
 >
->```
-> <resource>  
->      <directory>src/main/content/jcr_root</directory>  
->      <includes>  
->          <include>apps/**</include>  
->          <include>libs/foundation/global.jsp</include>
->    </includes>  
->  </resource>  
->```
 >
+```
+> <resource>  
+>           <directory>src/main/content/jcr_root</directory>  
+>           <includes>  
+>                   <include>apps/**</include>  
+>                   <include>libs/foundation/global.jsp</include>
+>       </includes>  
+>   </resource>  
+>```
 
 ### Så här arbetar du med SCM-system {#how-to-work-with-scm-systems}
 
