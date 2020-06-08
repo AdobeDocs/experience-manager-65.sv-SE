@@ -10,14 +10,17 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 6ed09b5d-5089-43d2-b9d5-e7db57be5c02
 translation-type: tm+mt
-source-git-commit: a44d655871308dac34671f0af2c4a0017eba5793
+source-git-commit: d559a15e3c1c65c39e38935691835146f54a356e
+workflow-type: tm+mt
+source-wordcount: '846'
+ht-degree: 0%
 
 ---
 
 
 # SAML 2.0-autentiseringshanterare{#saml-authentication-handler}
 
-AEM levereras med en [SAML](http://saml.xml.org/saml-specifications) -autentiseringshanterare. Den här hanteraren har stöd för [SAML](http://saml.xml.org/saml-specifications) 2.0 Authentication Request Protocol (Web-SSO-profil) med `HTTP POST` bindning.
+AEM levereras med en [SAML](http://saml.xml.org/saml-specifications) -autentiseringshanterare. Den här hanteraren har stöd för [SAML](http://saml.xml.org/saml-specifications) 2.0 Authentication Request Protocol (Web-SSO-profil) med hjälp av `HTTP POST` bindningen.
 
 Det har stöd för:
 
@@ -30,9 +33,9 @@ Den här hanteraren lagrar det krypterade SAML-svarsmeddelandet i användarnoden
 
 >[!NOTE]
 >
->Se [en demonstration av AEM- och SAML-integrering](https://helpx.adobe.com/cq/kb/saml-demo.html).
+>Se [en demonstration av AEM- och SAML-integrering](https://helpx.adobe.com/experience-manager/kb/simple-saml-demo.html).
 >
->Om du vill läsa en community-artikel från början till slut klickar du på: Integrera [SAML med Adobe Experience Manager](https://helpx.adobe.com/experience-manager/using/aem63_saml.html).
+>Om du vill läsa en community-artikel från början till slut klickar du på: [Integrera SAML med Adobe Experience Manager](https://helpx.adobe.com/experience-manager/using/aem63_saml.html).
 
 ## Konfigurera autentiseringshanteraren för SAML 2.0 {#configuring-the-saml-authentication-handler}
 
@@ -50,7 +53,7 @@ Via [webbkonsolen](/help/sites-deploying/configuring-osgi.md) får du tillgång 
 
 >[!NOTE]
 >
->SAML-försäkringar är signerade och kan eventuellt krypteras. För att detta ska fungera måste du tillhandahålla minst det offentliga certifikatet för identitetsleverantören i TrustStore. Mer information finns i [Lägga till IdP-certifikatet i avsnittet TrustStore](/help/sites-administering/saml-2-0-authenticationhandler.md#add-the-idp-certificate-to-the-aem-truststore) .
+>SAML-försäkringar är signerade och kan eventuellt krypteras. För att detta ska fungera måste du tillhandahålla minst det offentliga certifikatet för identitetsleverantören i TrustStore. Mer information finns i [Lägga till IdP-certifikatet i TrustStore](/help/sites-administering/saml-2-0-authenticationhandler.md#add-the-idp-certificate-to-the-aem-truststore) .
 
 **Sökväg** till sökvägsdatabas som den här autentiseringshanteraren ska användas för av Sling. Om detta är tomt inaktiveras autentiseringshanteraren.
 
@@ -96,11 +99,11 @@ Via [webbkonsolen](/help/sites-deploying/configuring-osgi.md) får du tillgång 
 SAML-försäkringar är signerade och kan eventuellt krypteras. För att detta ska fungera måste du ange minst det offentliga certifikatet för IdP i databasen. För att göra detta måste du:
 
 1. Gå till *http:/serveraddress:serverport/libs/granite/security/content/truststore.html*
-1. Klicka på länken **[!UICONTROL Create TrustStore]**
+1. Tryck på **[!UICONTROL Create TrustStore link]**
 1. Ange lösenordet för TrustStore och tryck på **[!UICONTROL Save]**.
-1. Klicka på **[!UICONTROL Hantera TrustStore]**.
+1. Klicka på **[!UICONTROL Manage TrustStore]**.
 1. Överför IdP-certifikatet.
-1. Notera certifikatet Alias. Aliaset är **[!UICONTROL admin#1436172864930]** i exemplet nedan.
+1. Notera certifikatet Alias. Aliaset finns **[!UICONTROL admin#1436172864930]** i exemplet nedan.
 
    ![chlimage_1-372](assets/chlimage_1-372.png)
 
@@ -132,7 +135,7 @@ Du kan konfigurera en loggare för att felsöka problem som kan uppstå när SAM
 1. Sök efter och klicka på posten **Apache Sling Logger Configuration**
 1. Skapa en loggare med följande konfiguration:
 
-   * **** Loggnivå: Felsök
-   * **** Loggfil: logs/saml.log
-   * **** Logger: com.adobe.granite.auth.saml
+   * **Loggnivå:** Felsök
+   * **Loggfil:** logs/saml.log
+   * **Logger:** com.adobe.granite.auth.saml
 
