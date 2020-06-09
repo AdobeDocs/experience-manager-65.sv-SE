@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 1099cc44-de6d-499e-8b52-f2f5811ae086
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+source-git-commit: 3954178cc660368a2b374bbb4d05d93d7309d4eb
+workflow-type: tm+mt
+source-wordcount: '3210'
+ht-degree: 0%
 
 ---
 
@@ -50,7 +53,7 @@ Det här dokumentet förutsätter att du redan är bekant med att skapa och redi
 >Följande självstudiekurs kan också vara intressant för att konfigurera en redigerbar sidmall i ett nytt projekt:
 >[Getting Started with AEM Sites Part 2 - Creating a Base Page and Template](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop/part2.html)
 
-## Skapa en ny mall {#creating-a-new-template}
+## Creating a New Template {#creating-a-new-template}
 
 Skapandet av redigerbara mallar görs huvudsakligen med [mallkonsolen och mallredigeraren](/help/sites-authoring/templates.md) av en mallskapare. I det här avsnittet ges en översikt över processen och en beskrivning av vad som händer på teknisk nivå.
 
@@ -194,7 +197,7 @@ Om du vill skapa en ny mapp kan du göra det här:
 
    * Värde: Titeln (för mappen) som du vill ska visas i **mallkonsolen** .
 
-1. Förutom ** de vanliga redigeringsbehörigheterna och -behörigheterna (t.ex. `content-authors`) du måste nu tilldela grupper och definiera de åtkomstbehörigheter som krävs för att författarna ska kunna skapa mallar i den nya mappen.
+1. Förutom ** de vanliga redigeringsbehörigheterna och -behörigheterna (t.ex. `content-authors`) måste du nu tilldela grupper och definiera de åtkomstbehörigheter som krävs för att författarna ska kunna skapa mallar i den nya mappen.
 
    Gruppen är den `template-authors` grupp som ska tilldelas som standard. Mer information finns i följande avsnitt [för åtkomstkontrollistor och grupper](/help/sites-developing/page-templates-editable.md#acls-and-groups) .
 
@@ -241,7 +244,7 @@ Följande tabell visar vilka behörigheter som krävs för mallredigering.
   <tr>
    <th>Bana</th>
    <th>Roll/grupp</th>
-   <th>Permissions<br /> </th>
+   <th>Behörigheter<br /> </th>
    <th>Beskrivning</th>
   </tr>
   <tr>
@@ -301,7 +304,7 @@ Mallar bör inte längre lagras i `/conf/global`men för vissa äldre installati
   <tr>
    <th>Bana</th>
    <th>Roll/grupp</th>
-   <th>Permissions<br /> </th>
+   <th>Behörigheter<br /> </th>
    <th>Beskrivning</th>
   </tr>
   <tr>
@@ -383,7 +386,7 @@ Platsspecifika malltyper bör lagras på samma plats som:
 
 * `/apps/settings/wcm/template-types`
 
-Definitioner för dina anpassade malltyper bör lagras i användardefinierade mappar (rekommenderas) eller i `global`. Exempel:
+Definitioner för dina anpassade malltyper bör lagras i användardefinierade mappar (rekommenderas) eller i `global`. Till exempel:
 
 * `/conf/<my-folder-01>/<my-folder-02>/settings/wcm/template-types`
 * `/conf/<my-folder>/settings/wcm/template-types`
@@ -432,7 +435,7 @@ Koden för den här sidan finns på GitHub
 
 ## Malldefinitioner {#template-definitions}
 
-Definitioner för redigerbara mallar lagras i [användardefinierade mappar](/help/sites-developing/page-templates-editable.md#template-folders) (rekommenderas) eller i `global`. Exempel:
+Definitioner för redigerbara mallar lagras i [användardefinierade mappar](/help/sites-developing/page-templates-editable.md#template-folders) (rekommenderas) eller i `global`. Till exempel:
 
 * `/conf/<my-folder>/settings/wcm/templates`
 * `/conf/<my-folder-01>/<my-folder-02>/settings/wcm/templates`
@@ -480,7 +483,7 @@ Huvudelementen är:
    * ` [policies](#policies)`
    * `thumbnail.png`
 
-### jcr:innehåll {#jcr-content}
+### jcr:content {#jcr-content}
 
 Den här noden innehåller egenskaper för mallen:
 
@@ -567,8 +570,8 @@ Med sidprofiler kan du definiera sidans [innehållsprincip](#content-policies) (
 
       * Definiera egenskapen:
 
-         * Namn:status
-         * Typ:Sträng
+         * Namn: status
+         * Typ: Sträng
          * Värde: `enabled`
 
 1. **Tillåtna mallar**
