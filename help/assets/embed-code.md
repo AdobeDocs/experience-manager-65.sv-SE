@@ -8,20 +8,23 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 4ae76d8a-208f-4099-9f17-a94df424685e
 translation-type: tm+mt
-source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
+source-git-commit: 572b856fbdd1ef916f8f897ba86ddefafee324fc
+workflow-type: tm+mt
+source-wordcount: '362'
+ht-degree: 21%
 
 ---
 
 
-# Bädda in Dynamic Media Video eller Image Viewer på en webbsida {#embedding-the-video-or-image-viewer-on-a-web-page}
+# Bädda in Dynamic Media Video, Image Viewer eller Dimensional Viewer på en webbsida {#embedding-the-video-or-image-viewer-on-a-web-page}
 
-Använd funktionen **[!UICONTROL Bädda in kod]** när du vill spela upp videon eller visa en resurs som är inbäddad på en webbsida. Du kopierar inbäddningskoden till Urklipp så att du kan klistra in den på dina webbsidor. Det är inte tillåtet att redigera koden i dialogrutan **[!UICONTROL Bädda in kod]** .
+Använd funktionen **[!UICONTROL Embed Code]** när du vill spela upp videon eller visa en resurs som är inbäddad på en webbsida. Du kopierar inbäddningskoden till Urklipp så att du kan klistra in den på webbsidorna. Det är inte tillåtet att redigera koden i dialogrutan **[!UICONTROL Embed Code]**.
 
 Du bäddar bara in URL:er om du _inte_ använder AEM som WCM. Om du använder AEM som WCM-fil lägger [du till resurserna direkt på sidan.](adding-dynamic-media-assets-to-pages.md)
 
-Se [Länka URL:er till ditt webbprogram.](linking-urls-to-yourwebapplication.md)
+See [Linking URLs to your Web Application.](linking-urls-to-yourwebapplication.md)
 
-Se [Leverera optimerade bilder för en responsiv webbplats.](responsive-site.md)
+See [Delivering Optimized Images for a Responsive Site.](responsive-site.md)
 
 >[!NOTE]
 >
@@ -37,7 +40,7 @@ Se [Leverera optimerade bilder för en responsiv webbplats.](responsive-site.md)
 
 1. Navigera till den *publicerade* video- eller bildresurs vars inbäddningskod du vill kopiera.
 
-   Kom ihåg att inbäddningskoden endast är tillgänglig att kopiera *när* du först har *publicerat* resurserna. Dessutom måste visningsförinställningen eller bildförinställningen också publiceras.
+   Kom ihåg att inbäddningskoden endast går att kopiera *efter* att du har *publicerat* resurserna. Dessutom måste visningsförinställningen eller bildförinställningen också publiceras.
 
    Se [Publicera resurser.](publishing-dynamicmedia-assets.md)
 
@@ -45,10 +48,10 @@ Se [Leverera optimerade bilder för en responsiv webbplats.](responsive-site.md)
 
    Se [Publicera bildförinställningar](managing-image-presets.md#publishing-image-presets).
 
-1. I den vänstra listen väljer du listrutan och trycker på **[!UICONTROL visningsprogram]**.
+1. Markera listrutan i den vänstra listen och tryck sedan på **[!UICONTROL Viewers]**.
 1. Tryck på ett namn på en visningsförinställning i den vänstra listen. Visningsförinställningen används på resursen.
-1. Tryck på **[!UICONTROL Bädda in]**.
-1. Kopiera hela koden till Urklipp i dialogrutan **[!UICONTROL Bädda in kod]** och tryck sedan på **[!UICONTROL Stäng]**.
+1. Tryck på **[!UICONTROL Embed]**.
+1. Kopiera hela koden till Urklipp i **[!UICONTROL Embed Code]** dialogrutan och tryck sedan på **[!UICONTROL Close]**.
 1. Klistra in inbäddningskoden på dina webbsidor.
 
 ## Använda HTTP/2 för att leverera dina dynamiska medieresurser {#using-http-to-deliver-your-dynamic-media-assets}
