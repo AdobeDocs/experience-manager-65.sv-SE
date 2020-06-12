@@ -3,10 +3,10 @@ title: XMP-tillbakaskrivning till återgivningar
 description: Lär dig hur XMP-återskrivningsfunktionen sprider metadataändringar för en resurs till alla eller vissa återgivningar av resursen.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
 workflow-type: tm+mt
-source-wordcount: '702'
-ht-degree: 8%
+source-wordcount: '726'
+ht-degree: 3%
 
 ---
 
@@ -68,26 +68,36 @@ Metadataändringarna sprids till miniatyrbilden för återgivningarna.140.100.pn
 
 ## Filtrera XMP-metadata {#filtering-xmp-metadata}
 
-[!DNL Experience Manager Assets] har stöd för både svartlistsfiltrering och vitlistsfiltrering av egenskaper/noder för XMP-metadata som läses från resurbinärfiler och lagras i JCR när resurser hämtas.
+[!DNL Experience Manager Assets] har stöd för både blockerad lista och tillåten listfiltrering av egenskaper/noder för XMP-metadata som läses från objektbinärfiler och lagras i JCR när resurser hämtas.
 
-Med svartlistsfiltrering kan du importera alla XMP-metadataegenskaper utom de egenskaper som anges för uteslutning. För resurstyper som INDD-filer som har stora mängder XMP-metadata (till exempel 1 000 noder med 10 000 egenskaper) är namnen på de noder som ska filtreras inte alltid kända i förväg. Om svartlistsfiltrering tillåter ett stort antal resurser med flera XMP-metadata att importeras, kan Experience Manager-distributionen stöta på stabilitetsproblem, till exempel övervakningsköer som stoppats.
+Genom att filtrera med hjälp av en blockerad lista kan du importera alla XMP-metadataegenskaper utom de egenskaper som har angetts för undantag. För resurstyper som INDD-filer som har stora mängder XMP-metadata (till exempel 1 000 noder med 10 000 egenskaper) är namnen på de noder som ska filtreras inte alltid kända i förväg. Om filtrering med hjälp av en blockerad lista tillåter att ett stort antal resurser med flera XMP-metadata importeras, kan AEM-instansen/klustret stöta på stabilitetsproblem, till exempel övervakningskö med stoppning.
 
-Vitlistsfiltrering av XMP-metadata löser problemet genom att du kan definiera de XMP-egenskaper som ska importeras. På så sätt ignoreras andra/okända XMP-egenskaper. Du kan lägga till några av dessa egenskaper i svartlistningsfiltret för bakåtkompatibilitet.
+Filtrering av XMP-metadata via tillåten lista löser problemet genom att du kan definiera XMP-egenskaperna som ska importeras. På så sätt ignoreras alla andra eller okända XMP-egenskaper. För bakåtkompatibilitet kan du lägga till några av dessa egenskaper i filtret som använder en blockerad lista.
 
 >[!NOTE]
 >
 >Filtrering fungerar bara för egenskaper som härletts från XMP-källor i objektbinärfiler. För egenskaper som härleds från andra källor än XMP, t.ex. EXIF- och IPTC-format, fungerar inte filtreringen. Datumet då resursen skapades sparas till exempel i egenskapen EXIF TIFF `CreateDate` . Det här värdet lagras i ett metadatafält med namnet `exif:DateTimeOriginal`. Eftersom källan inte är en XMP-källa fungerar inte filtrering på den här egenskapen.
 
+<!-- TBD: The instructions don't seem to match the UI. I see com.day.cq.dam.commons.metadata.XmpFilterBlackWhite.description
+in Config Manager. And the settings are,
+com.day.cq.dam.commons.metadata.XmpFilterBlackWhite.xmp.filter.apply_whitelist.name
+com.day.cq.dam.commons.metadata.XmpFilterBlackWhite.xmp.filter.whitelist.name
+com.day.cq.dam.commons.metadata.XmpFilterBlackWhite.xmp.filter.apply_blacklist.name
+com.day.cq.dam.commons.metadata.XmpFilterBlackWhite.xmp.filter.blacklist.name
+ 
+TBD: Make updates to configurations for allow and block list after product updates are done.
+-->
+
 1. Öppna Configuration Manager genom att gå till `https://[aem_server]:[port]/system/console/configMgr`.
 1. Öppna **[!UICONTROL Adobe CQ DAM XmpFilter]** konfigurationen.
-1. Om du vill använda vitlistefiltrering markerar du **[!UICONTROL Apply Whitelist to XMP Properties]** och anger de egenskaper som ska importeras i rutan **[!UICONTROL Whitelisted XML Names for XMP filtering]**.
+1. Om du vill använda filtrering via en tillåten lista markerar du **[!UICONTROL Apply Whitelist to XMP Properties]** och anger de egenskaper som ska importeras i **[!UICONTROL Whitelisted XML Names for XMP filtering]** rutan.
 
    ![chlimage_1-136](assets/chlimage_1-347.png)
 
-1. Om du vill filtrera bort svartlistade XMP-egenskaper efter att ha använt vitlistefiltrering anger du dem i rutan **[!UICONTROL Blacklisted XML Names for XMP filtering]**.
+1. Om du vill filtrera bort blockerade XMP-egenskaper efter att ha använt filtrering via tillåten lista anger du egenskaperna i **[!UICONTROL Blacklisted XML Names for XMP filtering]** rutan.
 
    >[!NOTE]
    >
-   >The **[!UICONTROL Apply Blacklist to XMP Properties]** option is selected by default. Svartlistsfiltrering är alltså aktiverat som standard. Om du vill inaktivera filtrering av svarta listor avmarkerar du **[!UICONTROL Apply Blacklist to XMP Properties]** alternativet.
+   >The **[!UICONTROL Apply Blacklist to XMP Properties]** option is selected by default. Som standard är filtrering med hjälp av en blockerad lista aktiverat. Om du vill inaktivera sådan filtrering avmarkerar du **[!UICONTROL Apply Blacklist to XMP Properties]** alternativet.
 
 1. Spara ändringarna.
