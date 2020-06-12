@@ -3,7 +3,7 @@ title: Ordna dina digitala resurser
 description: Ordna digitala resurser, bilder, filer, mappar och så vidare med Experience Manager.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
 workflow-type: tm+mt
 source-wordcount: '811'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Det mest grundläggande sättet att ordna resurser är att spara dessa i mappar.
 
    * **Utvecklingsmappar**: innehåller digitala resurser som du arbetar med just nu.
    * **Klientmappar**: innehåller digitala resurser baserade på klienter eller projektnamn.
-   * **Huvudmappar**: innehåller digitala källresurser.
+   * **Primära mappar**: innehåller digitala källresurser.
    * **Återgivningsmappar**: innehåller återgivningar och kopior av det ursprungliga digitala källmaterialet.
    * **Filstorleksmappar**: innehåller digitala resurser baserade på små, medelstora eller stora filstorlekar.
    * **Mellanlagringsmappar**: innehåller digitala resurser som är klara att publiceras live på din webbplats.
