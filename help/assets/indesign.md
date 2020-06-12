@@ -3,9 +3,9 @@ title: Integrera [!DNL Adobe Experience Manager Assets] med [!DNL Adobe InDesign
 description: Lär dig hur du integrerar [!DNL Adobe Experience Manager Assets] med [!DNL Adobe InDesign Server].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
 workflow-type: tm+mt
-source-wordcount: '1548'
+source-wordcount: '1547'
 ht-degree: 1%
 
 ---
@@ -195,18 +195,19 @@ Så här konfigurerar du antalet parallella IDS-jobb:
 
    Om flera datorer körs [!DNL InDesign Server]lägger du till SOAP-slutpunkter (antal processorer per dator -1) för varje dator.
 
-   >[!NOTE]
-   >
-   >Du kan välja att aktivera svartlistning av IDS-arbetare när du arbetar med en grupp arbetare.
-   >
-   >
-   >Om du vill göra det aktiverar du kryssrutan under **[!UICONTROL enable.retry.name]** `com.day.cq.dam.ids.impl.IDSJobProcessor.name` konfigurationen, som aktiverar omprövningar av IDS-jobb.
-   >
-   >
-   >Under `com.day.cq.dam.ids.impl.IDSPoolImpl.name` konfigurationen anger du också ett positivt värde för `max.errors.to.blacklist` parameter som avgör antalet jobbomprövningar innan du tar bort ett ID från jobbhanterarlistan.
-   >
-   >
-   >Som standard valideras IDS-arbetaren efter den konfigurerbara tiden (retry.interval.to.whitelist.name) i minuter. Om arbetaren hittas online tas den bort från svartlistan.
+<!-- 
+TBD: Make updates to configurations for allow and block list after product updates are done.
+-->
+
+>[!NOTE]
+>
+>När du arbetar med en pool med arbetare kan du aktivera en lista med blockerade IDS-arbetare.
+>
+>Om du vill göra det aktiverar du kryssrutan under **[!UICONTROL enable.retry.name]** `com.day.cq.dam.ids.impl.IDSJobProcessor.name` konfigurationen, som aktiverar omprövningar av IDS-jobb.
+>
+>Under `com.day.cq.dam.ids.impl.IDSPoolImpl.name` konfigurationen anger du också ett positivt värde för `max.errors.to.blacklist` parameter som avgör antalet jobbomprövningar innan du tar bort ett ID från jobbhanterarlistan.
+>
+>Som standard valideras IDS-arbetaren efter den konfigurerbara (`retry.interval.to.whitelist.name`) tiden i minuter. Om arbetaren hittas online tas den bort från listan Blockerade.
 
 ## Aktivera stöd för [!DNL InDesign Server] 10.0 eller senare {#enabling-support-for-indesign-server-or-later}
 
