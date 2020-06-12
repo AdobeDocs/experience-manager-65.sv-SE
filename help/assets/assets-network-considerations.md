@@ -3,9 +3,9 @@ title: Resurser för nätöverväganden och krav
 description: Diskutera nätverksaspekter när du utformar en Adobe Experience Manager Assets-distribution.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
 workflow-type: tm+mt
-source-wordcount: '1026'
+source-wordcount: '1029'
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ Företagets brandväggar och proxies kan också forma bandbredden på många oli
 
 I det här exemplet har företaget en upplänk på 10 Gbit/s. Den borde vara tillräckligt stor för flera kunder. Dessutom har brandväggen en värdhastighetsgräns på 10 Mbit/s. Denna begränsning kan potentiellt begränsa trafiken till en enda värd till 10 Mbit/s, även om uppkopplingen till Internet är på 10 Gbit/s.
 
-Det här är den minsta klientorienterade kodpunkten. Du kan dock utvärdera om det finns några ändringar eller vitlistor hos den nätverksåtgärdsgrupp som ansvarar för den här brandväggen.
+Det här är den minsta klientorienterade kodpunkten. Du kan dock utvärdera om det finns en ändring eller konfigurera en tillåten lista med den nätverksåtgärdsgrupp som ansvarar för den här brandväggen.
 
 I exempeldiagrammen kan du dra slutsatsen att sex enheter delar en konceptuell kanal på 10 Mbit/s. Beroende på storleken på de tillgångar som används kan detta vara otillräckligt för att uppfylla användarnas förväntningar.
 
