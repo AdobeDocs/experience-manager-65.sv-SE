@@ -1,20 +1,23 @@
 ---
 title: Återanvänd resurser med MSM för [!DNL Adobe Experience Manager Assets].
-description: Använd resurser på flera sidor/mappar som är härledda från och länkade till överordnade resurser. Resurserna hålls synkroniserade med en huvudkopia och med några klick får du uppdateringarna från de överordnade resurserna.
+description: Använd resurser på flera sidor/mappar som är härledda från och länkade till överordnade resurser. Resurserna är synkroniserade med en primär kopia och med några klick får du uppdateringar från överordnade resurser.
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
+source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
+workflow-type: tm+mt
+source-wordcount: '3264'
+ht-degree: 10%
 
 ---
 
 
-# Återanvänd resurser med MSM för [!DNL Assets]{#reuse-assets-using-msm-for-assets}
+# Återanvänd resurser med MSM för [!DNL Assets] {#reuse-assets-using-msm-for-assets}
 
 Med Multi Site Manager (MSM)-funktionaliteten i [!DNL Adobe Experience Manager] kan användare återanvända innehåll som har skapats en gång och återanvänds på flera olika webbplatser. Samma sak gäller för digitala resurser som MSM för [!DNL Assets] funktionalitet. Med MSM for [!DNL Assets]kan du
 
 * Skapa resurser en gång och gör sedan kopior av dessa resurser för återanvändning i andra delar av webbplatsen.
-* Håll flera kopior synkroniserade och uppdatera originaloriginalkopian en gång för att överföra ändringarna till de underordnade kopiorna.
+* Håll flera kopior synkroniserade och uppdatera originalkopian en gång för att överföra ändringarna till de underordnade kopiorna.
 * Gör lokala ändringar genom att tillfälligt eller permanent avbryta länkningen mellan överordnade och underordnade resurser.
 
 ## Förutsättningar {#configprereq}
@@ -25,7 +28,7 @@ Installera minst Service Pack 1 om du vill använda MSM för [!DNL Assets]. Mer 
 
 ### Så fungerar det och fördelarna {#how-it-works-and-the-benefits}
 
-Om du vill veta mer om användningsscenarierna för att återanvända samma innehåll (text och resurser) på flera webbplatser läser du i [möjliga MSM-scenarier](/help/sites-administering/msm.md). [!DNL Experience Manager] behåller en länk mellan den ursprungliga resursen och dess länkade kopior, som kallas live-kopior. Tack vare den bevarade länken kan centraliserade ändringar skickas till många aktiva kopior. Detta ger snabbare uppdateringar och eliminerar samtidigt begränsningarna med att hantera duplicerade kopior. Spridningen av ändringar är felfri och centraliserad. Funktionen ger utrymme för uppdateringar som är begränsade till valda kopior. Användare kan koppla loss länken, d.v.s. bryta arv, och göra lokala redigeringar som inte skrivs över nästa gång huvudkopian uppdateras och ändringarna introduceras. Frånkopplingen kan göras för ett fåtal metadatafält eller för en hel resurs. Det ger flexibilitet att lokalt uppdatera resurser som ursprungligen ärvts från en huvudkopia.
+Om du vill veta mer om användningsscenarierna för att återanvända samma innehåll (text och resurser) på flera webbplatser läser du i [möjliga MSM-scenarier](/help/sites-administering/msm.md). [!DNL Experience Manager] behåller en länk mellan den ursprungliga resursen och dess länkade kopior, som kallas live-kopior. Tack vare den bevarade länken kan centraliserade ändringar skickas till många aktiva kopior. Detta ger snabbare uppdateringar och eliminerar samtidigt begränsningarna med att hantera duplicerade kopior. Spridningen av ändringar är felfri och centraliserad. Funktionen ger utrymme för uppdateringar som är begränsade till valda kopior. Användare kan koppla loss länken, d.v.s. bryta arv, och göra lokala redigeringar som inte skrivs över nästa gång den primära kopian uppdateras och ändringarna introduceras. Frånkopplingen kan göras för ett fåtal metadatafält eller för en hel resurs. Det ger flexibilitet att lokalt uppdatera resurser som ursprungligen ärvts från en primär kopia.
 
 MSM upprätthåller en aktiv relation mellan källresursen och dess livekopior så att:
 
@@ -34,7 +37,7 @@ MSM upprätthåller en aktiv relation mellan källresursen och dess livekopior s
 
 ### Ordlista för MSM för [!DNL Assets] termer {#glossary}
 
-**Källa:** De ursprungliga resurserna eller mapparna. Huvudkopia som live-kopior härleds från.
+**Källa:** De ursprungliga resurserna eller mapparna. Primär kopia som live-kopior härleds från.
 
 **Live copy:** Kopian av källresurserna/källmapparna som är synkroniserad med källan. Live-kopior kan vara en källa till fler live-kopior. Se hur du skapar LC:er.
 
@@ -58,35 +61,35 @@ MSM upprätthåller en aktiv relation mellan källresursen och dess livekopior s
 
 Om du vill skapa en live-kopia av en eller flera källresurser eller mappar gör du något av följande:
 
-* Metod 1: Markera källresurserna och klicka på **[!UICONTROL Skapa > Live-kopia]** från verktygsfältet överst.
-* Metod 2: I [!DNL Experience Manager] användargränssnittet klickar du på **[!UICONTROL Skapa > Live-kopia]** i det övre högra hörnet av gränssnittet.
+* Metod 1: Välj källresurserna och klicka på **[!UICONTROL Create > Live Copy]** i verktygsfältet högst upp.
+* Metod 2: I [!DNL Experience Manager] användargränssnittet klickar du **[!UICONTROL Create > Live Copy]** i det övre högra hörnet av gränssnittet.
 
 Du kan skapa live-kopior av en resurs eller en mapp åt gången. Du kan skapa live-kopior som är härledda från en resurs eller en mapp som är en live-kopia. Content Fragments (CF) stöds inte för användningsfallet. När de försöker skapa sina live-kopior kopieras CF-filer som de är utan någon relation. De kopierade CF:erna är en ögonblicksbild i tid och uppdateras inte när ursprungliga CF:er uppdateras.
 
 Så här skapar du live-kopior med den första metoden:
 
-1. Välj källmaterial eller mappar. Klicka på **[!UICONTROL Skapa > Live-kopia]** i verktygsfältet.
+1. Välj källmaterial eller mappar. Klicka på **[!UICONTROL Create > Live Copy]** i verktygsfältet.
 
    ![Skapa en live-kopia från Experience Manager-gränssnittet](assets/create_lc1.png)
 
    *Bild: Skapa en live-kopia från[!DNL Experience Manager]gränssnittet.*
 
-1. Välj en målmapp. Klicka på **[!UICONTROL Nästa]**.
+1. Välj en målmapp. Klicka på **[!UICONTROL Next]**.
 1. Ange titel och namn. Resurserna har inga underordnade. När du skapar en live-kopia av mappar kan du välja att ta med eller exkludera underordnade.
-1. Välj en utrullningskonfiguration. Klicka på **[!UICONTROL Skapa]**.
+1. Välj en utrullningskonfiguration. Klicka på **[!UICONTROL Create]**.
 
 Så här skapar du live-kopior med den andra metoden:
 
-1. I [!DNL Experience Manager] gränssnittet klickar du på **[!UICONTROL Skapa > Live-kopia]** i det övre högra hörnet.
+1. I [!DNL Experience Manager] gränssnittet klickar du i det övre högra hörnet **[!UICONTROL Create > Live Copy]**.
 
    ![Skapa en live-kopia från Experience Manager-gränssnittet](assets/create_lc2.png)
 
    *Bild: Skapa en live-kopia från[!DNL Experience Manager]gränssnittet.*
 
-1. Välj källresurs eller källmapp. Klicka på **[!UICONTROL Nästa]**.
-1. Välj målmapp. Klicka på **[!UICONTROL Nästa]**.
+1. Välj källresurs eller källmapp. Klicka på **[!UICONTROL Next]**.
+1. Välj målmapp. Klicka på **[!UICONTROL Next]**.
 1. Ange titel och namn. Resurserna har inga underordnade. När du skapar en live-kopia av mappar kan du välja att ta med eller exkludera underordnade.
-1. Välj en utrullningskonfiguration. Klicka på **[!UICONTROL Skapa]**.
+1. Välj en utrullningskonfiguration. Klicka på **[!UICONTROL Create]**.
 
 >[!NOTE]
 >
@@ -99,17 +102,17 @@ Du kan visa information och MSM-relaterade statusar för en live-kopia som relat
 Följande två metoder fungerar för resurser och mappar:
 
 * Välj en live-kopia och hitta informationen på sidan Egenskaper.
-* Välj källmapp och sök efter detaljerad information om varje live-kopia på [!UICONTROL Live Copy-konsolen].
+* Välj källmapp och sök efter detaljerad information om varje live-kopia i [!UICONTROL Live Copy Console].
 
 >[!TIP]
 >
->Om du vill kontrollera status för några separata live-kopior använder du den första metoden som finns på sidan Egenskaper. To check statuses of many live copies, use the second method, that is, see the **[!UICONTROL Relationship Status]** page.
+>Om du vill kontrollera status för några separata live-kopior använder du den första metoden som finns på sidan Egenskaper. Om du vill kontrollera status för många live-kopior använder du den andra metoden, som beskrivs på sidan **[!UICONTROL Relationship Status]**.
 
 ### Information om och status för en live-kopia {#statuslcasset}
 
 Följ de här stegen för att kontrollera information och status för en live-kopia-resurs eller en mapp.
 
-1. Välj en live-kopia eller en mapp. Klicka på **[!UICONTROL Egenskaper]** i verktygsfältet. Du kan också använda kortkommandot `p`.
+1. Välj en live-kopia eller en mapp. Klicka **[!UICONTROL Properties]** i verktygsfältet. Du kan också använda kortkommandot `p`.
 1. Klicka på **[!UICONTROL Live Copy]**. Du kan kontrollera sökvägen till källan, avbrottsstatus, synkroniseringsstatus, det senaste utrullningsdatumet och den användare som gjorde den senaste utrullningen.
 
    ![Live-kopieringsinformation och status visas i en konsol i Egenskaper](assets/lcfolder_info_properties.png)
@@ -124,14 +127,14 @@ Följ de här stegen för att kontrollera information och status för en live-ko
 
 [!DNL Experience Manager] innehåller en konsol för att kontrollera status för alla live-kopior av en källmapp. Den här konsolen visar status för alla underordnade resurser.
 
-1. Välj en källmapp. Klicka på **[!UICONTROL Egenskaper]** i verktygsfältet. Du kan också använda kortkommandot `p`.
+1. Välj en källmapp. Klicka **[!UICONTROL Properties]** i verktygsfältet. Du kan också använda kortkommandot `p`.
 1. Klicka på **[!UICONTROL Live Copy Source]**. Klicka på **[!UICONTROL Live Copy Overview]** för att öppna konsolen. På den här kontrollpanelen visas status på den översta nivån för alla underordnade resurser.
 
    ![Visa status för live-kopior i Live Copy-konsolen](assets/livecopy-statuses.png)
 
-   *Bild: Visa status för live-kopior i[!UICONTROL Live Copy Console]för källan.*
+   *Bild: Visa status för live-kopior i[!UICONTROL Live Copy Console]källan.*
 
-1. To view the detailed information about each asset in the live copy folder, select an asset and click **[!UICONTROL Relationship Status]** from the toolbar.
+1. Om du vill visa detaljerad information om alla resurser i mappen med live-kopian markerar du en resurs och klickar på **[!UICONTROL Relationship Status]** i verktygsfältet.
 
    ![Detaljerad information om och status för en underordnad live-kopia i en mapp](assets/livecopy_relationship_status.png)
 
@@ -139,7 +142,7 @@ Följ de här stegen för att kontrollera information och status för en live-ko
 
 >[!TIP]
 >
->Du kan snabbt se status för live-kopior av andra mappar utan att behöva bläddra för mycket. Det är bara att ändra mappen i popup-listan i den övre mellersta delen av **[!UICONTROL Live Copy Overview]** .
+>Du kan snabbt se status för live-kopior av andra mappar utan att behöva bläddra för mycket. Ändra bara mappen i popup-listan i den övre mellersta delen av **[!UICONTROL Live Copy Overview]** gränssnittet.
 
 ### Snabbåtgärder från referensfältet för källan {#refrailsource}
 
@@ -151,13 +154,13 @@ För en källresurs eller källmapp kan du se följande information och utföra 
 * Pausa relationen eller ändra utrullningskonfiguration för en specifik live-kopia.
 * Få åtkomst till översiktskonsolen för live-kopian.
 
-Markera källresursen eller källmappen, öppna den vänstra listen och klicka på **[!UICONTROL Referenser]**. Du kan också markera en resurs eller mapp och använda kortkommandot `Alt + 4`.
+Select the source asset or folder, open the left rail, and click **[!UICONTROL References]**. Du kan också markera en resurs eller mapp och använda kortkommandot `Alt + 4`.
 
 ![Åtgärder och information som är tillgänglig i referensfältet för den valda källan](assets/referencerail_source.png)
 
 *Bild: Åtgärder och information som finns i referensfältet för den valda källan.*
 
-Om det är en specifik live-kopia klickar du på **[!UICONTROL Redigera Live-kopia]** för att göra uppehåll i relationen eller ändra utrullningskonfigurationen.
+För en specifik live-kopia klickar du på **[!UICONTROL Edit Live Copy]** för att pausa relationen eller ändra utrullningskonfigurationen.
 
 ![För en specifik live-kopia är alternativet att inaktivera relationen eller ändra utrullningskonfigurationen tillgängligt från referenslisten när källresurs har valts](assets/referencerail_editlc_options.png)
 
@@ -171,7 +174,7 @@ För en resurs eller mapp för en live-kopia kan du se följande information och
 * Öppna eller visa en specifik live-kopia i [!DNL Experience Manager] användargränssnittet.
 * Fyll i uppdateringarna.
 
-Select a live copy asset or folder, open the left rail, and click **[!UICONTROL References]**. Du kan också markera en resurs eller mapp och använda kortkommandot `Alt + 4`.
+Välj en resurs eller mapp med en live-kopia, öppna den vänstra rutan och klicka på **[!UICONTROL References]**. Du kan också markera en resurs eller mapp och använda kortkommandot `Alt + 4`.
 
 ![Åtgärder som är tillgängliga i referensrutan för den valda live-kopian](assets/referencerail_livecopy.png)
 
@@ -185,9 +188,9 @@ När en källa har ändrats kan ändringarna spridas till live-kopiorna med anti
 
 Du kan initiera en utrullningsåtgärd från källresursen och uppdatera alla eller några utvalda live-kopior.
 
-1. Välj en live-kopia eller en mapp. Klicka på **[!UICONTROL Egenskaper]** i verktygsfältet. Du kan också använda kortkommandot `p`.
-1. Klicka på **[!UICONTROL Live Copy Source]**. Click **[!UICONTROL Rollout]** from the toolbar at the top.
-1. Markera de live-kopior som du vill uppdatera. Klicka på **[!UICONTROL Överrullning]**. Om du vill ta med uppdateringarna som gjorts för de underordnade resurserna väljer du **[!UICONTROL Utrullningskälla och Alla underordnade]**.
+1. Välj en live-kopia eller en mapp. Klicka **[!UICONTROL Properties]** i verktygsfältet. Du kan också använda kortkommandot `p`.
+1. Klicka på **[!UICONTROL Live Copy Source]**. Klicka på **[!UICONTROL Rollout]** i verktygsfältet längst upp.
+1. Markera de live-kopior som du vill uppdatera. Klicka på **[!UICONTROL Rollout]**. Om du vill ta med uppdateringarna av de underordnade resurserna väljer du **[!UICONTROL Rollout Source and all Children]**.
 
    ![Fyll ut ändringarna av källan till några eller alla live-kopior](assets/livecopy_rollout_page.png)
 
@@ -209,13 +212,13 @@ Med en synkroniseringsåtgärd hämtas ändringarna från en källa endast till 
 
 | Var i [!DNL Experience Manager] gränssnittet | När och varför ska du använda | Så här använder du |
 |---|---|---|
-| [!UICONTROL Referenser] - rälsreferenser | Synkronisera snabbt när du redan har markerat källan. | Se [Snabbåtgärder från referensfältet för källa](#refrailsource) |
-| Verktygsfält på sidan [!UICONTROL Egenskaper] | Starta en synkronisering när du redan har live-kopieringsegenskaperna öppna. | Se [Synkronisera en live-kopia](#synclc) |
-| [!UICONTROL Översiktskonsol för] Live Copy | Synkronisera snabbt flera resurser (inte nödvändigtvis alla) när källmappen är markerad eller [!UICONTROL Live Copy Overview] Console redan är öppen. Synkroniseringsåtgärden initieras för en resurs i taget men är ett snabbare sätt att synkronisera flera resurser på en gång. | Se [Åtgärder för många resurser i en mapp för live-kopior](#bulkactions) |
+| [!UICONTROL References] järnväg | Synkronisera snabbt när du redan har markerat källan. | Se [Snabbåtgärder från referensfältet för källa](#refrailsource) |
+| Verktygsfält på [!UICONTROL Properties] sidan | Starta en synkronisering när du redan har live-kopieringsegenskaperna öppna. | Se [Synkronisera en live-kopia](#synclc) |
+| [!UICONTROL Live Copy Overview] konsol | Synkronisera snabbt flera resurser (inte nödvändigtvis alla) när källmappen är markerad eller [!UICONTROL Live Copy Overview] konsolen redan är öppen. Synkroniseringsåtgärden initieras för en resurs i taget men är ett snabbare sätt att synkronisera flera resurser på en gång. | Se [Åtgärder för många resurser i en mapp för live-kopior](#bulkactions) |
 
 ### Synkronisera en live-kopia {#synclc}
 
-To start a sync action, open **[!UICONTROL Properties]** page of a live copy, click **[!UICONTROL Live Copy]** and click the desired action from the toolbar.
+Om du vill starta en synkroniseringsåtgärd öppnar du sidan **[!UICONTROL Properties]** för en live-kopia, klickar på **[!UICONTROL Live Copy]** och klickar sedan på önskad åtgärd i verktygsfältet.
 
 Om du vill se status och information om en synkroniseringsåtgärd läser du [Information om och status för en live-kopia](#statuslcasset) samt [Information och status för alla live-kopior av en mapp](#statuslcfolder).
 
@@ -231,17 +234,17 @@ Om du vill se status och information om en synkroniseringsåtgärd läser du [In
 
 Du kan tillfälligt inaktivera relationen för att förhindra att en live-kopia tar emot ändringar som gjorts i källresursen eller källmappen. Relationen kan även återupptas för live-kopiering för att börja ta emot ändringarna från källan.
 
-To suspend or resume, open **[!UICONTROL Properties]** page of a live copy, click **[!UICONTROL Live Copy]** and click the desired action from the toolbar.
+Om du vill pausa eller återuppta öppnar du sidan **[!UICONTROL Properties]** för en live-kopia, klickar på **[!UICONTROL Live Copy]** och klickar sedan på önskad åtgärd i verktygsfältet.
 
-Alternatively, you can quickly suspend or resume relationships of multiple assets in a live copy folder from the **[!UICONTROL Live Copy Overview]** console. Se [Utföra åtgärder för många resurser i mappar med live-kopior](#bulkactions).
+Du kan också snabbt pausa eller återuppta relationer för flera resurser i en mapp med live-kopior på konsolen **[!UICONTROL Live Copy Overview]**. Se [Utföra åtgärder för många resurser i mappar med live-kopior](#bulkactions).
 
 ## Göra lokala ändringar i en live-kopia {#localmods}
 
 En live-kopia är en kopia av den ursprungliga källan när den skapas. Metadatavärdena för en live-kopia ärvs från källan. Metadatafälten behåller enskilt arv med respektive fält i källresursen.
 
-Du kan dock göra lokala ändringar i en live-kopia för att ändra vissa egenskaper. Om du vill göra lokala ändringar avbryter du arvet av den önskade egenskapen. När arvet efter ett eller flera metadatafält avbryts behålls resursens live-relation och arvet efter de andra metadatafälten. Synkronisering eller utrullning skriver inte över lokala ändringar. To do so, open **[!UICONTROL Properties]** page of a live copy asset, click **[!UICONTROL cancel inheritance]** icon next to a metadata field.
+Du kan dock göra lokala ändringar i en live-kopia för att ändra vissa egenskaper. Om du vill göra lokala ändringar avbryter du arvet av den önskade egenskapen. När arvet efter ett eller flera metadatafält avbryts behålls resursens live-relation och arvet efter de andra metadatafälten. Synkronisering eller utrullning skriver inte över lokala ändringar. Det gör du genom att öppna sidan **[!UICONTROL Properties]** för en live-kopia och klicka på ikonen **[!UICONTROL cancel inheritance]** bredvid ett metadatafält.
 
-Du kan ångra alla lokala ändringar och återställa resursen till källans läge. Återställ åtgärd oåterkalleligt och omedelbart åsidosätter alla lokala ändringar och återupprättar arv på alla metadatafält. Om du vill återställa från sidan **[!UICONTROL Egenskaper]** för en live-kopia klickar du på **[!UICONTROL Återställ]** i verktygsfältet.
+Du kan ångra alla lokala ändringar och återställa resursen till källans läge. Återställ åtgärd oåterkalleligt och omedelbart åsidosätter alla lokala ändringar och återupprättar arv på alla metadatafält. Om du vill återgå klickar du på verktygsfältet från sidan **[!UICONTROL Properties]** för en live-kopia **[!UICONTROL Reset]** .
 
 ![Återställ-åtgärden skriver över lokala redigeringar och delar av den aktiva kopian med källan.](assets/livecopy_reset.png)
 
@@ -251,9 +254,9 @@ Du kan ångra alla lokala ändringar och återställa resursen till källans lä
 
 Du kan ta bort relationen mellan en källa och en live-kopia helt med åtgärden Koppla loss. Den aktiva kopian blir en fristående resurs eller mapp när den har kopplats loss. Den visas som en ny resurs i [!DNL Experience Manager] gränssnittet omedelbart efter att den kopplats loss. Följ de här stegen för att koppla loss en live-kopia från källan.
 
-1. Välj en resurs eller mapp för en live-kopia. Klicka på **[!UICONTROL Egenskaper]** i verktygsfältet. Du kan också använda kortkommandot `p`.
+1. Välj en resurs eller mapp för en live-kopia. Klicka **[!UICONTROL Properties]** i verktygsfältet. Du kan också använda kortkommandot `p`.
 
-1. Klicka på **[!UICONTROL Live Copy]**. Klicka på **[!UICONTROL Koppla loss]** i verktygsfältet. Klicka på **[!UICONTROL Koppla loss]** i den dialogruta som visas.
+1. Klicka på **[!UICONTROL Live Copy]**. Click **[!UICONTROL Detach]** in the toolbar. Klicka **[!UICONTROL Detach]** i den dialogruta som visas.
 
    ![Koppla loss-åtgärden tar helt bort relationen mellan källa och live-kopia](assets/livecopy_detach.png)
 
@@ -261,23 +264,23 @@ Du kan ta bort relationen mellan en källa och en live-kopia helt med åtgärden
 
    >[!CAUTION]
    >
-   >Relationen tas bort omedelbart när du klickar på **[!UICONTROL Koppla loss]** från dialogrutan. Du kan inte ångra den genom att klicka på **[!UICONTROL Avbryt]** på sidan Egenskaper.
+   >Relationen tas bort omedelbart när du klickar **[!UICONTROL Detach]** i dialogrutan. Du kan inte ångra den genom att klicka **[!UICONTROL Cancel]** på sidan Egenskaper.
 
-Du kan också snabbt frigöra flera resurser i en live-kopiemapp från **[!UICONTROL Live Copy Overview]** Console. Se [Utföra åtgärder för många resurser i mappar med live-kopior](#bulkactions).
+Du kan också snabbt frigöra flera resurser i en live-kopieringsmapp från **[!UICONTROL Live Copy Overview]** konsolen. Se [Utföra åtgärder för många resurser i mappar med live-kopior](#bulkactions).
 
 ## Vidta åtgärder för många resurser i en mapp för live-kopior {#bulkactions}
 
 Om du har flera resurser i en live-kopieringsmapp kan initieringsåtgärder för varje resurs vara långsamma. Du kan snabbt initiera grundläggande åtgärder för många resurser från [!UICONTROL Live Copy Console]. Ovanstående metoder fortsätter att fungera för enskilda resurser.
 
-1. Välj en källmapp. Klicka på **[!UICONTROL Egenskaper]** i verktygsfältet. Du kan också använda kortkommandot `p`.
+1. Välj en källmapp. Klicka **[!UICONTROL Properties]** i verktygsfältet. Du kan också använda kortkommandot `p`.
 1. Klicka på **[!UICONTROL Live Copy Source]**. Klicka på **[!UICONTROL Live Copy Overview]** för att öppna konsolen.
-1. På den här kontrollpanelen väljer du en live-resurs från en live-mapp. Klicka på önskade åtgärder i verktygsfältet. De tillgängliga åtgärderna är **[!UICONTROL Synkronisera]**, **[!UICONTROL Återställ]**, **[!UICONTROL Gör uppehåll]** och **[!UICONTROL Frigör]**. Du kan snabbt initiera dessa åtgärder för alla resurser i valfritt antal kopiamappar som finns i en direktrelation med den valda källmappen.
+1. På den här kontrollpanelen väljer du en live-resurs från en live-mapp. Klicka på önskade åtgärder i verktygsfältet. De tillgängliga åtgärderna är **[!UICONTROL Synchronize]**, **[!UICONTROL Reset]**, **[!UICONTROL Suspend]** och **[!UICONTROL Detach]**. Du kan snabbt initiera dessa åtgärder för alla resurser i valfritt antal kopiamappar som finns i en direktrelation med den valda källmappen.
 
    ![Uppdatera enkelt många resurser i kopiemappar från Live Copy Overview-konsolen](assets/livecopyconsole_update_many_assets.png)
 
-   *Bild: Uppdatera enkelt mycket material i kopiemappar från[!UICONTROL Live Copy Overview]Console.*
+   *Bild: Uppdatera enkelt många resurser i live-kopiemappar från[!UICONTROL Live Copy Overview]konsolen.*
 
-## Utöka MSM för [!DNL Assets]{#extendapi}
+## Utöka MSM för [!DNL Assets] {#extendapi}
 
 [!DNL Experience Manager] Med kan du utöka funktionaliteten med MSM Java API:er. Utbyggnaden [!DNL Assets]fungerar alltså på samma sätt som för MSM [!DNL Sites]. Mer information finns i [Utöka MSM](/help/sites-developing/extending-msm.md) och följande för information om specifika uppgifter:
 
@@ -304,7 +307,7 @@ Live-kopior och källor är resurser eller mappar som i viss utsträckning kan h
 * För källmappen är alternativet att skapa granskningsåtgärder tillgängligt.
 * När du visar resursexemplet i listvyn och kolumnvyn visas live-kopia av en resurs eller mapp. På så sätt kan du enkelt identifiera live-kopior i en mapp.
 
-## Jämför MSM för [!DNL Assets] och [!DNL Sites]{#comparison}
+## Jämför MSM för [!DNL Assets] och [!DNL Sites] {#comparison}
 
 I fler scenarier matchar MSM för [!DNL Assets] funktionerna i MSM för platser. Några viktiga skillnader är:
 
@@ -314,7 +317,7 @@ I fler scenarier matchar MSM för [!DNL Assets] funktionerna i MSM för platser.
 * Webbplatser har vanligtvis barn, men [!DNL Assets] har det inte. Alternativet att inkludera eller exkludera underordnade objekt finns inte när du skapar direktkopior av enskilda resurser.
 * Det går inte att ta bort kapitelsteget i guiden Skapa plats i MSM för [!DNL Assets].
 * Det går inte att konfigurera MSM-lås för sidegenskaper (Touch-aktiverat gränssnitt) i MSM för [!DNL Assets].
-* För MSM for [!DNL Assets]ska du bara använda **[!UICONTROL standardkonfigurationen]**. De andra utrullningskonfigurationerna är inte tillgängliga för MSM för [!DNL Assets].
+* För MSM for [!DNL Assets]ska du bara använda **[!UICONTROL Standard rollout config]**. De andra utrullningskonfigurationerna är inte tillgängliga för MSM för [!DNL Assets].
 
 ## God praxis {#bestpractices}
 
@@ -322,7 +325,7 @@ Några av de bästa sätten att använda MSM är:
 
 * Planera relationer mellan överordnade och underordnade för resurser och innehåll innan implementeringen startas.
 
-## Begränsningar och kända problem med MSM för [!DNL Assets]{#limitations}
+## Begränsningar och kända problem med MSM för [!DNL Assets] {#limitations}
 
 Här följer en begränsning för MSM för [!DNL Assets].
 
