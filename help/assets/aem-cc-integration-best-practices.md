@@ -3,9 +3,9 @@ title: Bästa praxis för integrering av Adobe Creative Cloud och [!DNL Adobe Ex
 description: Bästa tillvägagångssätt för att integrera [!DNL Adobe Experience Manager] med [!DNL Adobe Creative Cloud] för att effektivisera resursöverföringsarbetsflöden och uppnå hög innehållshastighet.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
 workflow-type: tm+mt
-source-wordcount: '3260'
+source-wordcount: '3262'
 ht-degree: 15%
 
 ---
@@ -160,7 +160,7 @@ Nedan följer exempel på uppdateringar som vanligtvis inte är relevanta:
 
 #### Kreativa användare med direkt åtkomst till DAM {#creative-users-with-direct-access-to-dam}
 
-Vanligtvis har interna kreativa team, byråer/kreatörer som är anställda på det interna nätverket tillgång till DAM-instansen, inklusive [!DNL Experience Manager] inloggning. [!DNL Experience Manager] och nätverksinfrastruktur kan konfigureras för att ge direktåtkomst till externa parter - vanligen betrodda organisationer som byråer som arbetar för en kund - för att få åtkomst till [!DNL Experience Manager] via nätverket, till exempel via VPN eller IP-vitlistning.
+Vanligtvis har interna kreativa team, byråer/kreatörer som är anställda på det interna nätverket tillgång till DAM-instansen, inklusive [!DNL Experience Manager] inloggning. [!DNL Experience Manager] och nätverksinfrastruktur kan konfigureras för att ge direktåtkomst till externa parter - vanligen betrodda organisationer som byråer som arbetar för en klient - för att få åtkomst till [!DNL Experience Manager] via nätverket, till exempel via VPN eller IP-listan.
 
 I sådana fall kan Adobe Asset Link eller [!DNL Experience Manager] skrivbordsappen enkelt ge åtkomst till slutliga/godkända resurser och göra det möjligt att spara kreativa resurser på DAM.
 
@@ -173,7 +173,7 @@ Använd följande strategier för att ge åtkomst till slutliga/godkända medief
 * Använd skrivbordsappen om Asset Link inte fungerar.
 * Använd [Experience Manager Assets Brand Portal](https://helpx.adobe.com/se/experience-manager/brand-portal/user-guide.html) för säker distribution av resurser till externa partner
 * Använd en anpassad implementering av en distributions- och källportal baserad på [resursdelningskommentarer](https://adobe-marketing-cloud.github.io/asset-share-commons/)
-* Använd den åtkomstkontroll som har konfigurerats i [!DNL Experience Manager] och nödvändig nätverksinfrastruktur (till exempel vitlista för VPN och IP) för att ge externa parter åtkomst till ett dedikerat innehållsområde i din DAM. De kan använda [!DNL Experience Manager] webbgränssnittet för att hämta resurser och överföra nytt innehåll till din DAM.
+* Använd den åtkomstkontroll som har konfigurerats i [!DNL Experience Manager] och nödvändig nätverksinfrastruktur (till exempel listan över tillåtna VPN- och IP-adresser) för att ge externa parter åtkomst till ett dedikerat innehållsområde i din DAM. De kan använda [!DNL Experience Manager] webbgränssnittet för att hämta resurser och överföra nytt innehåll till din DAM.
 
 #### Pågående arbete med resurser från [!DNL Experience Manager] {#work-in-progress-on-assets-from-aem}
 
