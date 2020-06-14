@@ -4,9 +4,9 @@ description: Versionsinformation om Adobe Experience Manager 6.5 Service Pack 5.
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: cb48bba01b78a0724f3a07875f601367520b2a8e
+source-git-commit: d7276f332bece4f736d92e5723d79ffc2d27e900
 workflow-type: tm+mt
-source-wordcount: '4392'
+source-wordcount: '4394'
 ht-degree: 0%
 
 ---
@@ -173,7 +173,7 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 
 * [!UICONTROL Metadata Schema Editor] sidan och dess element är nu tillgängliga via tangentbordet och är skärmläsarvänliga (CQ-4290962, CQ-4272953).
 
-* Symbolen för att ta bort de markerade taggarna visas nu av skärmläsare tillsammans med antalet markerade taggar (CQ-4273017). `X`
+* Symbolens syfte att ta bort de markerade taggarna visas nu av skärmläsare tillsammans med antalet markerade taggar (CQ-4273017). `X`
 
 * För att undvika förvirring för användare som inte är synkade med skärmläsare ignoreras nu dekorativa ikoner och bilder av skärmläsare (CQ-4272944).
 
