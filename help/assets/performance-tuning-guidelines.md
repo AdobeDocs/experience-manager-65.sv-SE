@@ -4,9 +4,9 @@ description: Förslag och vägledning om konfiguration av [!DNL Experience Manag
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: da2e435f33e8527793e009700c30e60868d196be
 workflow-type: tm+mt
-source-wordcount: '2669'
+source-wordcount: '2722'
 ht-degree: 0%
 
 ---
@@ -268,7 +268,7 @@ När du skapar frågor som genererar stora resultatuppsättningar bör du använ
 
 ### Stora filer {#large-files}
 
-Det finns två stora kända fel som rör stora filer i [!DNL Experience Manager]. När filer når större storlekar än 2 GB kan synkronisering med kalla väntelägen hamna i en situation där minnet är slut. I vissa fall förhindras att standby-synkronisering körs. I andra fall kraschar den primära instansen. Detta scenario gäller för alla filer i [!DNL Experience Manager] som är större än 2 GB, inklusive innehållspaket.
+Det finns två stora kända fel som rör stora filer i [!DNL Experience Manager]. När filer når större storlekar än 2 GB kan synkronisering med vänteläge i kallt läge hamna i en situation där minnet är slut. I vissa fall förhindras att standby-synkronisering körs. I andra fall kraschar den primära instansen. Detta scenario gäller för alla filer i [!DNL Experience Manager] som är större än 2 GB, inklusive innehållspaket.
 
 På samma sätt kan det ta lite tid innan filen är helt beständig från cachen till filsystemet om filen är 2 GB stor när ett delat S3-datalager används. Detta innebär att om du använder en binär replikering utan binärfiler kan det hända att binära data inte har befunnits beständiga innan replikeringen slutförs. Denna situation kan leda till problem, särskilt om datatillgängligheten är viktig.
 
@@ -300,6 +300,7 @@ För att minimera latens och uppnå hög genomströmning genom effektiv CPU-anv�
 * Driftsätt med Java 8.
 * Ange optimala JVM-parametrar.
 * Konfigurera ett datalager i filsystemet eller ett S3-datalager.
+* Inaktivera generering av underresurser. Om det är aktiverat skapar AEM:s arbetsflöde en separat resurs för varje sida i en flersidig resurs. Var och en av dessa sidor är en enskild resurs som förbrukar mer diskutrymme, kräver versionshantering och ytterligare arbetsflödesbearbetning. Om du inte behöver separata sidor inaktiverar du generering av delresurser och sidextrahering.
 * Möjliggör tillfälliga arbetsflöden.
 * Justera Granite-arbetsflödesköerna för att begränsa antalet samtidiga jobb.
 * Konfigurera [!DNL ImageMagick] för att begränsa resursförbrukning.
