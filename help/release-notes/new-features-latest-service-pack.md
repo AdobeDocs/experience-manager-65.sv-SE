@@ -4,7 +4,7 @@ description: Nyheter i Adobe Experience Manager 6.5 Service Pack 5
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b2b8178f96d1e0a551a58ba649443aa03f0608ac
+source-git-commit: d7276f332bece4f736d92e5723d79ffc2d27e900
 workflow-type: tm+mt
 source-wordcount: '1839'
 ht-degree: 0%
@@ -56,9 +56,9 @@ I den här artikeln beskrivs de funktioner som ingår i det senaste 6.5 Service 
 
 * Många gränssnittselement, kontroller och inmatningsfält är tillgängliga via tangentbordet.
 
-* Färg- och kontrastförhållandet för vissa element i användargränssnittet har uppdaterats så att användare med begränsad syn eller användare utan att uppfatta färg kan särskilja dessa element i användargränssnittet. Färgen på stjärngraderingsikonerna (t.ex. i [!UICONTROL Rating] avsnittet på [!UICONTROL Advanced] fliken i resursen [!UICONTROL Properties] eller i kortvyn) ändras för lämplig kontrast.
+* Färgen och kontrasten i vissa element i användargränssnittet uppdateras så att användare med begränsad syn eller användare utan att uppfatta färger kan särskilja dessa element i användargränssnittet. Färgen på stjärngraderingsikonerna (t.ex. i [!UICONTROL Rating] avsnittet på [!UICONTROL Advanced] fliken i resursen [!UICONTROL Properties] eller i kortvyn) ändras för lämplig kontrast.
 
-   ![Klassificeringsikoner med förbättrat kontrastförhållande](assets/star-rating-icons.png)
+   ![Klassificeringsikoner med förbättrad kontrast](assets/star-rating-icons.png)
 
 ### Förbättrad undantagshantering {#exception-handling}
 
@@ -146,9 +146,10 @@ Vilka steg som ska konfigureras [!DNL Experience Manager Assets] med [!DNL Brand
 
 * Kryssrutorna för blandat läge (där kryssrutorna på första nivån inte markeras och genomstrykas) på panelen Filter kan läsas av skärmläsare om du inte markerar alla kapslade alternativ.
 
-* Begränsningar för datum- och tidsformat finns i fältetiketter för datumfält, så att användarna kan ange datumet i korrekt format med tangentbordet. Till exempel, `On Time (MM-DD-YYYY HH:mm)`. Här är MM månad i tvåsiffrigt format, YYYY är år, DD är dag i tvåsiffrigt format, HH är timme i 24-timmars militärt format och mm är minut.
+* Begränsningar för datum- och tidsformat finns i fältetiketter för datumfält, så att användarna kan ange datumet i korrekt format med tangentbordet.
+Till exempel, `On Time (MM-DD-YYYY HH:mm)`. Här är MM månad i tvåsiffrigt format, YYYY är år, DD är dag i tvåsiffrigt format, HH är timme i 24-timmars militärt format och mm är minut.
 
-* Skärmläsare meddelar symbolen som `X` tar bort de markerade taggarna och antalet markerade taggar.
+* Skärmläsare meddelar nu att `X` symbolen tar bort de markerade taggarna tillsammans med antalet markerade taggar.
 
 #### Visuell sökning efter [!DNL Adobe Experience Manager Assets] (6.5.2.0) {#visual-search}
 
