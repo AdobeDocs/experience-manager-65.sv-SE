@@ -3,9 +3,9 @@ title: Versionsinformation om Adobe Experience Manager 6.5 Previous Service Pack
 description: Versionsinformation om Adobe Experience Manager 6.5 Service Pack 3 och tidigare.
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: b2b8178f96d1e0a551a58ba649443aa03f0608ac
+source-git-commit: d7276f332bece4f736d92e5723d79ffc2d27e900
 workflow-type: tm+mt
-source-wordcount: '8084'
+source-wordcount: '8083'
 ht-degree: 0%
 
 ---
@@ -125,7 +125,7 @@ En fullständig lista över funktioner och viktiga högdagrar som introducerats 
 
 * Knappen Spara importerar inte fjärruppsättningen när användaren inte har gjort några ändringar i Set Editor i Dynamic Media Client (CQ-4285690).
 
-* Miniatyrbilden av 3D-resursen är inte informativ när en 3D-modell som stöds hämtas till Experience Manager (CQ-4283701).
+* Miniatyrbilden av 3D-resursen är inte informativ när en 3D-modell som stöds har importerats till Experience Manager (CQ-4283701).
 
 * Den obearbetade statusen för visningsförinställningen för smart beskärning visas två gånger på banderolltexten bredvid förinställningsnamnet (CQ-4283517).
 
@@ -295,10 +295,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 * Resursdelning fungerar inte för en resurs som har plustecken (`+`) i filnamnet (NPR-31547).
 
-* Redigeringar i standardsökformuläret Resurser Admin * Search Rail fungerar inte som förväntat (NPR-31502).
-
-<!-- Review: Check if this seemingly stray asterisk is needed there or not.
--->
+* Redigeringar i standardsökformuläret Resurser Admin Search Rail fungerar inte som förväntat (NPR-31502).
 
 * Förslag visas inte när du använder Omnissearch on assets view för att söka efter resurser (NPR-31496).
 
@@ -312,7 +309,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 * Det går inte att ta bort alla medlemmar (användare/grupper) från en mapps medlemsdel. När användaren försöker ta bort alla användare läggs den inloggade användaren till i listan (NPR-31171).
 
-* Resurser med ett plustecken (`+`) i filnamnet kan inte tas bort (NPR-31162).
+* Resurser med plustecken (`+`) i filnamnet kan inte tas bort (NPR-31162).
 
 * Menyn Skapa, som visas på den övre menyn när du väljer en mapp, visar inte &quot;Mapp&quot; som ett alternativ för att skapa (NPR-30877).
 
@@ -653,7 +650,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 ### Integrering {#integration}
 
 * Det anpassade innehållet visas inte korrekt på publiceringsinstansen förrän instansen startas om. NPR-30377: Programfix för CQ-4273706
-* När du konfigurerar Launch på en webbplats har biblioteksadressen ett snedstreck (/) som är förinställt, vilket kan orsaka manuella åtgärder varje gång. NPR-30694: Programfix för CQ-4275501
+* När du konfigurerar Launch på en webbplats har biblioteksadressen ett snedstreck (/) som är förinställt, vilket ger manuella åtgärder varje gång. NPR-30694: Programfix för CQ-4275501
 
 ### Formulär {#forms-6520}
 
