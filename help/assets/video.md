@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4f580a9e1a43ef59a4991df6bc4a96cfffe5173e
+source-git-commit: df89d5cfd5060d493babb89e92a9a98e851b8879
 workflow-type: tm+mt
-source-wordcount: '11401'
+source-wordcount: '11410'
 ht-degree: 7%
 
 ---
@@ -27,28 +27,28 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
 
 >[!NOTE]
 >
->Innan du arbetar med video i Dynamic Media måste du kontrollera att AEM-administratören redan har aktiverat och konfigurerat Dynamic Media Cloud Services i läget Dynamic Media - Scene7 eller Dynamic Media - Hybrid.
+>Innan du arbetar med video i Dynamic Media bör du kontrollera att AEM-administratören redan har aktiverat och konfigurerat Dynamic Media-Cloud Service i antingen Dynamic Media - Scene7 eller Dynamic Media - Hybrid.
 >
->* Se [Konfigurera Dynamic Media Cloud-tjänster](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services) i Konfigurera Dynamic Media - Scene7-läge och [Felsökning av Dynamic Media - Scene7-läge.](/help/assets/troubleshoot-dms7.md)
+>* Se [Konfigurera Dynamic Media-Cloud Service](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services) i Konfigurera Dynamic Media - Scene7-läge och [Felsökning av Dynamic Media - Scene7-läge.](/help/assets/troubleshoot-dms7.md)
    >
    >
-* Se [Konfigurera Dynamic Media Cloud-tjänster](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services) i Konfigurera Dynamic Media - hybrid-läge.
+* Se [Konfigurera Dynamic Media-Cloud Service](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services) i Konfigurera Dynamic Media - hybrid-läge.
 >
 
 
 
-1. **Ladda upp dina dynamiska medievideor** genom att göra följande:
+1. **Överför dina Dynamic Media-videor** genom att göra följande:
 
    * Skapa en egen videokodningsprofil. Du kan också helt enkelt använda den fördefinierade _adaptiva videokodningsprofilen_ som medföljer Dynamic Media.
 
       * [Skapa en videokodningsprofil](/help/assets/video-profiles.md#creating-a-video-encoding-profile-for-adaptive-streaming).
       * Läs mer om [Bästa tillvägagångssätt för videokodning](#best-practices-for-encoding-videos).
-   * Koppla videobearbetningsprofilen till en eller flera mappar där du ska överföra dina mastervideor.
+   * Koppla videobearbetningsprofilen till en eller flera mappar där du ska överföra dina primära källvideor.
 
       * [Tillämpa en videoprofil på mappar](/help/assets/video-profiles.md#applying-a-video-profile-to-folders).
       * Läs mer om [de bästa sätten att ordna digitala resurser för bearbetning av profiler](/help/assets/organize-assets.md).
       * Läs mer om [att ordna digitala resurser](/help/assets/organize-assets.md).
-   * Överför dina huvudvideor till mapparna. Du kan överföra videofiler som är upp till 15 GB vardera. När du lägger till videofilmer i mappen kodas de enligt den videobearbetningsprofil som du tilldelade mappen.
+   * Överför dina primära källvideor till mapparna. Du kan överföra videofiler som är upp till 15 GB vardera. När du lägger till videofilmer i mappen kodas de enligt den videobearbetningsprofil som du tilldelade mappen.
 
       * [Ladda upp videor](/help/assets/managing-video-assets.md#uploadingandpreviewingvideoassets).
       * Läs mer om [indatafilformat](/help/assets/assets-formats.md#supported-multimedia-formats)som stöds.
@@ -57,7 +57,7 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
 
 
 
-1. **Hantera dina dynamiska medievideor** genom att göra något av följande:
+1. **Hantera dina Dynamic Media-videofilmer** genom att göra något av följande:
 
    * Ordna, bläddra bland och söka efter videomaterial
 
@@ -96,7 +96,7 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
 
 
 
-1. **Publicera dina Dynamic Media-videor** genom att göra något av följande:
+1. **Publicera dina Dynamic Media** genom att göra något av följande:
 
    * Om du använder Adobe Experience Manager som webbinnehållshanteringssystem kan du lägga till videofilmer direkt på dina webbsidor.
 
@@ -117,7 +117,7 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
 
 ## Arbeta med video i Dynamic Media {#working-with-video-in-dynamic-media}
 
-Video in Dynamic Media är en totallösning som gör det enkelt att publicera högkvalitativ adaptiv video för direktuppspelning på flera skärmar, inklusive datorer, iOS, Android, Blackberry och Windows-enheter. En adaptiv videouppsättning grupperar versioner av samma video som är kodade med olika bithastigheter och format som 400 kbit/s, 800 kbit/s och 1 000 kbit/s. Den stationära datorn eller mobila enheten känner av den tillgängliga bandbredden.
+Video i Dynamic Media är en totallösning som gör det enkelt att publicera högkvalitativ adaptiv video för direktuppspelning på flera skärmar, inklusive datorer, iOS, Android, Blackberry och Windows-enheter. En adaptiv videouppsättning grupperar versioner av samma video som är kodade med olika bithastigheter och format som 400 kbit/s, 800 kbit/s och 1 000 kbit/s. Den stationära datorn eller mobila enheten känner av den tillgängliga bandbredden.
 
 På en iOS-mobil enhet upptäcker den till exempel en bandbredd som 3G, 4G eller Wi-Fi. Sedan väljs automatiskt rätt kodad video bland de olika videobithastigheterna i den adaptiva videouppsättningen. Videon strömmas till datorer, mobila enheter eller surfplattor.
 
@@ -261,7 +261,7 @@ I följande tabell beskrivs enheten, webbläsaren och uppspelningsmetoden för v
  </tbody>
 </table>
 
-## Arkitektur för Dynamic Media Video Solution {#architecture-of-dynamic-media-video-solution}
+## Arkitektur för Dynamic Media-videolösning {#architecture-of-dynamic-media-video-solution}
 
 Följande bild visar det övergripande arbetsflödet för redigering av videoklipp som har överförts och kodats med hjälp av DMGGateway (i Dynamic Media Hybrid-läge) och som har gjorts tillgängliga för offentlig användning.
 
@@ -304,7 +304,7 @@ Du kan hämta metadata för en fil genom att visa dess metadata med ett videored
 
 ### Proportioner {#aspect-ratio}
 
-När du väljer eller skapar en förinställning för videokodning för huvudvideofilen måste du se till att förinställningen har samma proportioner som huvudvideofilen. Proportionerna är proportionerna mellan videons bredd och höjd.
+När du väljer eller skapar en förinställning för videokodning för den primära källvideofilen måste du se till att förinställningen har samma proportioner som den primära källvideofilen. Proportionerna är proportionerna mellan videons bredd och höjd.
 
 Om du vill ta reda på videofilens proportioner hämtar du filens metadata och noterar filens bredd och höjd (se Hämta filens metadata ovan). Använd sedan den här formeln för att bestämma proportionerna:
 
@@ -371,7 +371,7 @@ Eftersom upplösning och datahastighet är länkade finns det två alternativ n�
 * Välj en datahastighet och koda sedan med den högsta upplösningen som ser bra ut med den datahastighet du väljer.
 * Välj en upplösning och koda sedan med den datahastighet som krävs för att få en video med hög kvalitet med den upplösning du väljer.
 
-När du väljer (eller skapar) en förinställning för videokodning för huvudvideofilen använder du den här tabellen för att ange rätt upplösning:
+När du väljer (eller skapar) en förinställning för videokodning för den primära källvideofilen använder du den här tabellen för att ange rätt upplösning:
 
 | Upplösning | Höjd (pixlar) | Skärmstorlek |
 |--- |--- |--- |
@@ -386,7 +386,7 @@ När du väljer (eller skapar) en förinställning för videokodning för huvudv
 
 I USA och Japan spelas de flesta videoklipp in med 29,97 bildrutor per sekund (fps). i Europa spelas de flesta videoklipp in med 25 bildrutor per sekund. Film filmas med 24 fps.
 
-Välj en förinställning för videokodning som matchar fps-hastigheten för huvudvideofilen. Om huvudvideon till exempel är 25 fps väljer du en kodningsförinställning med 25 fps. Som standard används mastervideofilens fps för all anpassad kodning. Därför behöver du inte uttryckligen ange fps-inställningen när du skapar en förinställning för videokodning.
+Välj en förinställning för videokodning som matchar fps-hastigheten för den primära källvideofilen. Om den primära källvideon till exempel är 25 fps väljer du en kodningsförinställning med 25 fps. Som standard används den primära källvideofilens fps för all anpassad kodning. Därför behöver du inte uttryckligen ange fps-inställningen när du skapar en förinställning för videokodning.
 
 ### Videokodningsdimensioner {#video-encoding-dimensions}
 
@@ -415,9 +415,9 @@ Du kan publicera lokala AEM-videor direkt till en YouTube-kanal som du tidigare 
 
 Om du vill publicera videomaterial på YouTube skapar du AEM Assets med taggar. Du kopplar dessa taggar till en YouTube-kanal. Om taggen för en videoresurs matchar taggen för en YouTube-kanal publiceras videon på YouTube. Publicera på YouTube sker tillsammans med en normal publicering av videon så länge som en associerad tagg används.
 
-YouTube gör sin egen kodning. Den ursprungliga videofilen som överfördes till AEM publiceras på YouTube i stället för en videoåtergivning som Dynamic Medias kodning har skapat. Även om det inte krävs för att bearbeta videofilmer med Dynamic Media, förväntas de göra det om en visningsförinställning behövs för uppspelning.
+YouTube gör sin egen kodning. Den ursprungliga videofilen som överfördes till AEM publiceras på YouTube i stället för den videoåtergivning som Dynamic Medias kodning har skapat. Även om det inte krävs för att bearbeta videofilmer med Dynamic Media, förväntas de göra det om en visningsförinställning behövs för uppspelning.
 
-När du åsidosätter videobearbetningsprofilen och publicerar direkt på YouTube innebär det helt enkelt att din videoresurs i AEM Asset kanske inte får en miniatyrbild som kan visas. Det innebär också att om du kör i körningslägena dynamicmedia eller dynamicmedia_scene7 kommer videor som inte är kodade inte att fungera med någon av resurstyperna för Dynamic Media.
+När du åsidosätter videobearbetningsprofilen och publicerar direkt på YouTube innebär det helt enkelt att din videoresurs i AEM Asset kanske inte får en miniatyrbild som kan visas. Det innebär också att om du kör i körningslägena dynamicmedia eller dynamicmedia_scene7 kommer videoklipp som inte är kodade inte att fungera med någon av Dynamic Media-resurstyperna.
 
 När du publicerar videomaterial till YouTube-servrar utför du följande uppgifter för att säkerställa säker server-till-server-autentisering med YouTube:
 
@@ -619,7 +619,7 @@ Lämna sidan Skapa YouTube-konfiguration öppen; kommer du tillbaka till den om 
 
    Du kommer nu att konfigurera taggar för publicering.
 
-1. **[!UICONTROL Setting up tags for publishing]** - På sidan Molntjänster > YouTube trycker du på pennikonen för att redigera listan med taggar som du vill använda.
+1. **[!UICONTROL Setting up tags for publishing]** - På Cloud Service > YouTube-sidan trycker du på pennikonen för att redigera listan med taggar som du vill använda.
 1. Tryck på listruteikonen (upp-och-ned-cirkumflex) för att visa listan med tillgängliga taggar i AEM.
 1. Tryck på en eller flera taggar för att lägga till dem.
 
@@ -665,7 +665,7 @@ Lämna dialogrutan YouTube-kontoinställning öppen; kommer du tillbaka till den
 
    Du kommer nu att konfigurera taggar för publicering.
 
-1. **[!UICONTROL Setting up tags for publishing]** - På sidan Molntjänster > YouTube trycker du på pennikonen för att redigera listan med taggar som du vill använda.
+1. **[!UICONTROL Setting up tags for publishing]** - På Cloud Service > YouTube-sidan trycker du på pennikonen för att redigera listan med taggar som du vill använda.
 1. Tryck på listruteikonen (upp-och-ned-cirkumflex) för att visa listan med tillgängliga taggar i AEM.
 1. Tryck på en eller flera taggar för att lägga till dem.
 
@@ -744,9 +744,9 @@ Nu kopplar du taggarna som du lade till tidigare till videoresurser. Denna proce
 
 >[!NOTE]
 >
->När du kör i läget Dynamic Media - Scene7 bör du tänka på att publicering direkt inte automatiskt publicerar på YouTube. When Dynamic Media - Scene7 mode is set up, there are two publish options to choose from: **[!UICONTROL Immediately]** or **[!UICONTROL Upon Activation]**.
+>När du kör i Dynamic Media - Scene7-läge bör du tänka på att publicering direkt inte automatiskt publicerar på YouTube. When Dynamic Media - Scene7 mode is set up, there are two publish options to choose from: **[!UICONTROL Immediately]** or **[!UICONTROL Upon Activation]**.
 >
->**[!UICONTROL Publish Immediately]** betyder att den överförda resursen - när den har synkroniserats med IPS - publiceras automatiskt till leveranssystemet. Det gäller Dynamic Media, men inte YouTube. Om du vill publicera på YouTube måste du publicera med hjälp av AEM Author.
+>**[!UICONTROL Publish Immediately]** betyder att den överförda resursen - när den har synkroniserats med IPS - publiceras automatiskt till leveranssystemet. Detta gäller för Dynamic Media, men inte för YouTube. Om du vill publicera på YouTube måste du publicera via AEM Author.
 
 >[!NOTE]
 >
@@ -780,13 +780,13 @@ Du kan också övervaka förloppet för din YouTube-publicering (eller avpublice
 
 Se [Övervaka videokodning och publiceringsförlopp på YouTube](#monitoring-video-encoding-and-youtube-publishing-progress).
 
-Publiceringstiderna kan variera avsevärt beroende på olika faktorer, bland annat huvudvideons format, filstorlek och överföringstrafik. Publiceringsprocessen kan ta från några minuter till flera timmar. Tänk också på att format med högre upplösning återges mycket långsammare. 720p och 1080p tar till exempel betydligt längre tid att visa än 480p.
+Publiceringstiderna kan variera avsevärt beroende på olika faktorer, bland annat formatet för den primära källvideon, filstorleken och överföringstrafiken. Publiceringsprocessen kan ta från några minuter till flera timmar. Tänk också på att format med högre upplösning återges mycket långsammare. 720p och 1080p tar till exempel betydligt längre tid att visa än 480p.
 
 Efter åtta timmar, om du fortfarande ser ett statusmeddelande, kan du försöka ta bort videon från vår webbplats och ladda upp den igen. **[!UICONTROL Uploaded (processing, please wait)]**
 
 ### Linking YouTube URLs to your Web Application {#linking-youtube-urls-to-your-web-application}
 
-Du kan hämta en YouTube URL-sträng som genereras av Dynamic Media när du har publicerat videon. När du kopierar YouTube-URL:en markeras den i Urklipp så att du kan klistra in den på sidorna på webbplatsen eller i programmet.
+Du kan hämta en YouTube URL-sträng som genereras av Dynamic Media efter att du har publicerat videon. När du kopierar YouTube-URL:en markeras den i Urklipp så att du kan klistra in den på sidorna på webbplatsen eller i programmet.
 
 >[!NOTE]
 >
@@ -951,7 +951,7 @@ Hur du konfigurerar meddelanden beror på om du vill ha meddelanden för kodning
 
 >[!NOTE]
 >
->Videorapporter är bara tillgängliga när du kör Dynamic Media - hybridläge.
+>Videorapporter är bara tillgängliga när du kör Dynamic Media - hybrid-läge.
 
 Videorapporter visar flera sammanställda mätvärden under en angiven tidsperiod för att hjälpa dig att övervaka att *publicerade *enskilda och sammanställda videor fungerar som förväntat. Följande viktigaste mätdata samlas in för alla publicerade videor på hela webbplatsen:
 
@@ -965,9 +965,9 @@ En tabell över alla *publicerade* videoklipp listas också så att du kan spår
 
 När du trycker på ett videonamn i listan visas videons rapport för att behålla (lämna av) publik i form av ett linjediagram. Diagrammet visar antalet vyer för en given tidpunkt under videouppspelning. När du spelar upp videon synkroniseras det lodräta strecket med tidsindikatorn i spelaren. Släppningar i linjediagramdata indikerar var publiken slutar intressera sig.
 
-Om videon kodades utanför Adobe Experience Manager Dynamic Media är inte data om målgruppsinnehållande (bortfall) och uppspelningsprocent i tabellen tillgängliga.
+Om videon kodades utanför Adobe Experience Manager-Dynamic Media är inte målgruppsinnehållandediagrammet (drop-off) och uppspelningsprocentdata i tabellen tillgängliga.
 
-Se även [Konfigurera Dynamic Media Cloud-tjänster](/help/assets/config-dynamic.md).
+Se även [Konfigurera Dynamic Media-Cloud Service](/help/assets/config-dynamic.md).
 
 >[!NOTE]
 >
@@ -975,7 +975,7 @@ Se även [Konfigurera Dynamic Media Cloud-tjänster](/help/assets/config-dynamic
 
 Första gången du anger Videorapporter visas som standard videodata från och med den första i den aktuella månaden och till och med den aktuella månadens datum. Du kan dock åsidosätta standarddatumintervallet genom att ange ett eget datumintervall. Nästa gång du anger Videorapporter används det datumintervall du har angett.
 
-För att videorapporter ska fungera på rätt sätt skapas ett Report Suite-ID automatiskt när Dynamic Media Cloud Services konfigureras. Samtidigt skickas Report Suite-ID:t till publiceringsservern så att det är tillgängligt för funktionen Kopiera URL när du förhandsgranskar resurser. Detta kräver dock att publiceringsservern redan har konfigurerats. Om publiceringsservern inte är konfigurerad kan du fortfarande publicera för att se videorapporten, men du måste gå tillbaka till Dynamic Media Cloud Configuration och trycka på **[!UICONTROL OK]**.
+För att videorapporter ska fungera på rätt sätt skapas ett Report Suite-ID automatiskt när Dynamic Media-Cloud Service konfigureras. Samtidigt skickas Report Suite-ID:t till publiceringsservern så att det är tillgängligt för funktionen Kopiera URL när du förhandsgranskar resurser. Detta kräver dock att publiceringsservern redan har konfigurerats. Om publiceringsservern inte är konfigurerad kan du fortfarande publicera för att se videorapporten, men du måste gå tillbaka till Dynamic Media Cloud Configuration och trycka på **[!UICONTROL OK]**.
 
 Så här visar du videorapporter:
 
@@ -993,7 +993,7 @@ Ange start- och slutdatumintervallet som du vill ha videodata för och tryck sed
 
 ### Visa videorapporter baserade på ett videovisningsprogram som du har skapat med Scene7 HTML5 Viewer SDK {#viewing-video-reports-based-on-a-video-viewer-that-you-created-using-the-scene-hmtl-viewer-sdk}
 
-Om du använder ett visningsprogram som inte är installerat från Dynamic Media, eller om du har skapat en anpassad visningsförinställning baserad på ett videoredigeringsprogram som inte är i kartong, krävs inga ytterligare steg för att visa videorapporter. Om du har skapat ett eget videovisningsprogram baserat på SDK:t för Scene7 HTML5 Viewer ska du följa de här stegen för att se till att videovisningsprogrammet skickar spårningshändelser till videorapporter för dynamiska media.
+Om du använder ett användningsklart visningsprogram som tillhandahålls av Dynamic Media, eller om du har skapat en anpassad visningsförinställning baserad på ett skräddarsytt visningsprogram, krävs inga ytterligare steg för att visa videorapporter. Om du har skapat ett eget videovisningsprogram baserat på Scene7 HTML5 Viewer SDK ska du följa de här stegen för att se till att videovisningsprogrammet skickar spårningshändelser till Dynamic Media videorapporter.
 
 Använd Scene7 Viewer Reference och Scene7 HTML5 Viewer SDK för att skapa egna videovisningsprogram.
 
@@ -1117,7 +1117,7 @@ Du kan göra det enklare att titta på och navigera i videoklipp med långa form
 
 >[!NOTE]
 >
->Den videospelare som används måste ha stöd för kapitelmarkörer. Dynamiska mediespelare har stöd för kapitelmarkörer, men det kanske inte går att använda tredjepartsvideospelare.
+>Den videospelare som används måste ha stöd för kapitelmarkörer. Dynamic Media videospelare har stöd för kapitelmarkörer, men det är inte säkert att de använder tredjepartsvideospelare.
 
 Om du vill kan du skapa och märka ut ett eget anpassat visningsprogram med kapitel i stället för att använda en förinställning för visningsprogrammet för video. Instruktioner om hur du skapar ett eget HTML5-visningsprogram med kapitelnavigering finns i handboken Adobe Scene7 Viewer SDK för HTML5 under klasserna `s7sdk.video.VideoPlayer` och `s7sdk.video.VideoScrubber`. Adobe Scene7 Viewer SDK kan hämtas från [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html).
 
@@ -1201,11 +1201,11 @@ Observera att en anpassad videominiatyrbild som du väljer från en video inte e
 
 Möjligheten att anpassa en videominiatyr är endast tillgänglig efter att du har tillämpat en videoprofil på den mapp där videon finns.
 
-Se även [Om videominiatyrer i läget](#about-video-thumbnails-in-dynamic-media-hybrid-mode)Dynamic Media - Hybrid.
+Se även [Om videominiatyrbilder i Dynamic Media - hybridläge](#about-video-thumbnails-in-dynamic-media-hybrid-mode).
 
 ### Lägga till en anpassad videominiatyr {#adding-a-custom-video-thumbnail}
 
-Dessa steg gäller endast för Dynamic Media som körs i läget &quot;DynamicMedia_Scene7&quot;.
+De här stegen gäller endast för Dynamic Media som körs i läget &quot;Dynamicmedia_Scene7&quot;.
 
 Om du **vill lägga till en anpassad videominiatyr**,
 
@@ -1239,7 +1239,7 @@ Om du **vill lägga till en anpassad videominiatyr**,
 
 ## Om videominiatyrer i Dynamic Media - hybrid-läge {#about-video-thumbnails-in-dynamic-media-hybrid-mode}
 
-Du kan välja mellan en av tio miniatyrbilder som har genererats automatiskt av Dynamic Media och lägga till dem i videon. Videospelaren visar den valda miniatyrbilden när en videoresurs används med komponenten Dynamic Media i redigeringsmiljön på AEM Sites, AEM Mobile eller AEM Screens. Miniatyrbilden fungerar som en statisk bild som bäst motsvarar innehållet i hela videon och uppmuntrar dessutom användarna att klicka på knappen Spela upp.
+Du kan välja mellan en av tio miniatyrbilder som automatiskt genereras av Dynamic Media och lägga till dem i videon. Videospelaren visar den valda miniatyrbilden när en videoresurs används med Dynamic Media-komponenten i redigeringsmiljön i AEM Sites, AEM Mobile eller AEM Screens. Miniatyrbilden fungerar som en statisk bild som bäst motsvarar innehållet i hela videon och uppmuntrar dessutom användarna att klicka på knappen Spela upp.
 
 Baserat på den totala tiden för videon hämtar Dynamic Media tio (standard) miniatyrbilder med 1 %, 11 %, 21 %, 31 %, 41 %, 51 %, 61 %, 71 %, 81 % och 91 % i videon. De tio miniatyrbilderna finns kvar, vilket innebär att om du väljer en annan miniatyrbild senare behöver du inte återskapa serien. Du förhandsgranskar de tio miniatyrbilderna och väljer sedan den som du vill använda med videon. Om du vill ändra till standard kan du använda CRXDE Lite för att konfigurera det tidsintervall som miniatyrbilder genereras. Om du till exempel bara vill generera en serie med fyra miniatyrbilder med jämna mellanrum från videon kan du konfigurera intervalltiden till 24 %, 49 %, 74 % och 99 %.
 
@@ -1268,7 +1268,7 @@ Om du **vill lägga till en videominiatyr**
 
    Videons miniatyrbild uppdateras till att använda den miniatyrbild du valde. Om du senare bestämmer dig för att ändra miniatyrbilden kan du gå tillbaka till **[!UICONTROL Change Thumbnail]** sidan och välja en ny.
 
-   Om du har konfigurerat nya standardtidsintervall, eller om du har överfört en ny video för att ersätta den befintliga videon, måste du generera om miniatyrbilderna.
+   Om du har konfigurerat nya standardtidsintervall, eller om du har överfört en ny video för att ersätta den befintliga videon, måste Dynamic Media generera om miniatyrbilderna.
 
    Se [Konfigurera det standardtidsintervall som videominiatyrer genererar](#configuring-the-default-time-interval-that-video-thumbnails-are-generated).
 
