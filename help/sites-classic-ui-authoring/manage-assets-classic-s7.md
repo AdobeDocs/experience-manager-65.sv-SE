@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: dc0191d0-f181-4e1e-b3f4-73427aa22073
 docset: aem65
 translation-type: tm+mt
-source-git-commit: dc1985c25c797f7b994f30195d0586f867f9b3ee
+source-git-commit: df89d5cfd5060d493babb89e92a9a98e851b8879
+workflow-type: tm+mt
+source-wordcount: '3221'
+ht-degree: 0%
 
 ---
 
@@ -85,13 +88,13 @@ Så här publicerar du till Scene7 direkt från en digital resurs:
 
    ![screen_shot_2012-02-22at34828pm](assets/screen_shot_2012-02-22at34828pm.png)
 
-1. **Länken ändras till** Publicera ... och sedan **Publicerad**. Gå till Scene7 och bekräfta att resursen är tillgänglig.
+1. Länken ändras till **Publicera ...** och sedan **Publicerad**. Gå till Scene7 och bekräfta att resursen är tillgänglig.
 
    >[!NOTE]
    >
-   >Om resursen inte publiceras korrekt på Scene7 ändras länken till **Publicering misslyckades**. Om resursen redan har publicerats till Scene7 läser länken **Publicera igen till Scene7**. Med återpublicering kan du göra ändringar i en mediefil i AEM och publicera om dem.
+   >Om resursen inte publiceras korrekt på Scene7 ändras länken till **Publicering misslyckades**. Om resursen redan har publicerats till Scene7 läser länken **Publicera igen till Scene7**. Med återpublicering kan du göra ändringar i en resurs i AEM och publicera dem på nytt.
 
-### Publicera resurser utanför CQ-målmappen {#publishing-assets-from-outside-the-cq-target-folder}
+### Publicera resurser utanför Target-mappen CQ {#publishing-assets-from-outside-the-cq-target-folder}
 
 Adobe rekommenderar att du endast publicerar resurser till Scene7 från resurser i målmappen Scene7. Men om du behöver överföra resurser från en mapp utanför målmappen kan du ändå göra det genom att överföra dem till en **ad hoc** -mapp på Scene7.
 
@@ -107,7 +110,7 @@ Så här publicerar du resurser som finns utanför CQ-målmappen:
 
 1. Klicka på ikonen **Sida** i sidbrytaren och klicka på **Sidegenskaper**.
 
-1. Klicka på **molntjänster** och klicka på **Lägg till tjänster** och välj **Scene7**.
+1. Klicka på **Cloud Service** , klicka på **Lägg till tjänster** och välj **Scene7**.
 1. Välj önskad konfiguration i listrutan **Adobe Scene7** och klicka på **OK**.
 
    ![chlimage_1-49](assets/chlimage_1-49.png)
@@ -147,7 +150,7 @@ När de har gjorts tillgängliga i designläge kan du lägga till komponenterna 
 >
 >Om du skapar och utvecklar anpassade S7-visningsprogram och använder Content Finder måste du lägga till parametern **allowfullscreen** explicit.
 
-### Meddelande om att Flash-visningsprogrammet har upphört att gälla {#flash-viewers-end-of-life-notice}
+### Meddelande om att Flash Viewer har upphört {#flash-viewers-end-of-life-notice}
 
 Från och med den 31 januari 2017 kommer Adobe Scene7 officiellt att ha stöd för Flash-visningsprogrammets plattform.
 
@@ -177,7 +180,7 @@ Responsiv design för dina resurser innebär att dina resurser anpassas beroende
 
 Så här lägger du till en interaktiv visningsupplevelse på en responsiv webbplats i det klassiska användargränssnittet:
 
-1. Logga in på AEM och kontrollera att du har [konfigurerat Adobe Scene7 Cloud Services](/help/sites-administering/scene7.md#configuring-scene-integration) och att Scene7-komponenterna är tillgängliga.
+1. Logga in på AEM och kontrollera att du har [konfigurerat Adobe Scene7-Cloud Service](/help/sites-administering/scene7.md#configuring-scene-integration) och att Scene7-komponenterna är tillgängliga.
 
    >[!NOTE]
    >
@@ -315,7 +318,7 @@ Mer information om hur videoklipp fungerar med Scene7-integrering finns i [Video
 
 ### Kända begränsningar för videokomponenten {#known-limitations-for-the-video-component}
 
-Adobe DAM och WCM visar om en mastervideo har överförts. De visar inte följande proxyresurser:
+Adobe DAM och WCM visar om en primär källvideo har överförts. De visar inte följande proxyresurser:
 
 * Scene7-kodade återgivningar
 * Scene7 adaptiva videouppsättningar
@@ -374,7 +377,7 @@ Du kan använda det klassiska användargränssnittet eller det pekoptimerade anv
 
 När du söker i något av användargränssnitten kan du filtrera efter följande villkor (visas här i det pekoptimerade användargränssnittet):
 
-**Ange nyckelord** Du kan söka efter resurser efter namn. När du söker efter nyckelord som du anger är det filnamnet börjar med. Om du t.ex. skriver ordet &quot;simning&quot; söker du efter alla resursfilnamn som börjar med de bokstäverna i den ordningen. Var noga med att klicka på Ange när du har skrivit in termen för att hitta resursen.
+**Ange nyckelord** Du kan söka efter resurser efter namn. När du söker efter nyckelord som du anger är det filnamnet börjar med. Om du till exempel skriver ordet &quot;simning&quot; söker du efter alla resursfilnamn som börjar med de bokstäverna i den ordningen. Var noga med att klicka på Ange när du har skrivit in termen för att hitta resursen.
 
 ![chlimage_1-65](assets/chlimage_1-65.png)
 
@@ -390,7 +393,7 @@ Som standard söker AEM igenom den markerade mappen och alla undermappar.
 
 ![chlimage_1-67](assets/chlimage_1-67.png)
 
-**Konfiguration** Om du har definierat mer än en Scene7-konfiguration i molntjänster kan du välja den här. Därför ändras mappen baserat på den konfiguration du har valt.
+**Konfiguration** Om du har definierat mer än en Scene7-konfiguration i Cloud Service kan du markera den här. Därför ändras mappen baserat på den konfiguration du har valt.
 
 ![chlimage_1-68](assets/chlimage_1-68.png)
 
