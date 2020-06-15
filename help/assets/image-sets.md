@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: ccc4eb23-934c-4e67-860b-a6faa2bcaafc
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 7c6655342256922473ec51dc1a58b2d08034b65b
+source-git-commit: df89d5cfd5060d493babb89e92a9a98e851b8879
 workflow-type: tm+mt
-source-wordcount: '2015'
+source-wordcount: '2016'
 ht-degree: 19%
 
 ---
@@ -39,11 +39,11 @@ Anta till exempel att du vill visa bilder med olika färgskalor; räkningarna ä
 
 Så här kommer du igång snabbt:
 
-1. [Ladda upp dina huvudbilder för flera vyer.](#uploading-assets-in-image-sets)
+1. [Överför dina primära källbilder för flera vyer.](#uploading-assets-in-image-sets)
 
    Börja med att ladda upp bilderna för dina bilduppsättningar. Eftersom användare kan zooma in på bilder i bilduppsättningsvisningsprogrammet bör du ta hänsyn till zoomning när du väljer bilder. Se till att bilderna har minst 2 000 pixlar i den största dimensionen för optimal zoomdetaljrikedom. Dynamic Media kan återge bilder på upp till 25 megapixlar vardera. Du kan till exempel använda en 5 000 × 5 000 megapixelbild eller någon annan storlekskombination på upp till 25 megapixlar.
 
-   AEM Assets stöder många bildfilsformat, men förlustfria TIFF-, PNG- och EPS-bilder rekommenderas.
+   AEM Assets har stöd för många bildfilsformat, men förlustfria TIFF-, PNG- och EPS-bilder rekommenderas.
 
 1. [Skapa bilduppsättningar.](#creating-image-sets)
 
@@ -54,7 +54,7 @@ Så här kommer du igång snabbt:
    You can also create image sets automatically through [batch set presets](/help/assets/config-dms7.md).
    >[!IMPORTANT]
    >
-   >Batchuppsättningar skapas av IPS (Image Production System) som en del av tillgångsintag och är endast tillgängliga i läget Dynamic Media - Scene7.
+   >Batchuppsättningar skapas av IPS (Image Production System) som en del av tillgångsintag och är endast tillgängliga i Dynamic Media - Scene7-läge.
 
    Se [Förbereda bilduppsättningsresurser för överföring och överföring av filer](#uploading-assets-in-image-sets).
 
@@ -77,7 +77,7 @@ Så här kommer du igång snabbt:
 
 1. [Länka URL:er till webbprogrammet](/help/assets/linking-urls-to-yourwebapplication.md) eller [bädda in video- eller bildvisningsprogrammet](/help/assets/embed-code.md).
 
-   AEM Resurser skapar URL-anrop för bilduppsättningar och aktiverar dem när du har publicerat bilduppsättningarna. Du kan kopiera dessa URL:er när du förhandsgranskar resurser. Du kan även bädda in dem på din webbplats.
+   AEM Assets skapar URL-anrop för bilduppsättningar och aktiverar dem när du har publicerat bilduppsättningarna. Du kan kopiera dessa URL:er när du förhandsgranskar resurser. Du kan även bädda in dem på din webbplats.
 
    Markera bilduppsättningen och välj sedan **[!UICONTROL Viewers]** i listrutan till vänster.
 
@@ -85,7 +85,7 @@ Så här kommer du igång snabbt:
 
 Mer information om hur du redigerar bilduppsättningar finns i [Redigera bilduppsättningar.](#editing-image-sets) Dessutom kan du visa och redigera [bilduppsättningsegenskaper](/help/assets/managing-assets-touch-ui.md#editing-properties).
 
-Om du har problem med att skapa uppsättningar kan du läsa Bilder och uppsättningar i [Felsökning av dynamiska media - Scene7-läge](/help/assets/troubleshoot-dms7.md#images-and-sets).
+Om du har problem med att skapa uppsättningar kan du läsa Bilder och uppsättningar i [Felsökning av Dynamic Media - Scen7-läge](/help/assets/troubleshoot-dms7.md#images-and-sets).
 
 ## Överför resurser i bilduppsättningar {#uploading-assets-in-image-sets}
 
@@ -118,7 +118,7 @@ Du kan skapa bilduppsättningar via användargränssnittet eller API:t. I det h�
 >[!NOTE]
 >
 >You can also create image sets automatically through [batch set presets](/help/assets/config-dms7.md#creating%20batch%20set%20presets%20to%20auto-generate%20image%20sets%20and%20spin%20sets).
->**Viktigt:**Batchuppsättningar skapas av IPS (Image Production System) som en del av tillgångsintag och är endast tillgängliga i läget Dynamic Media - Scene7.
+>**Viktigt:**Batchuppsättningar skapas av IPS (Image Production System) som en del av tillgångsintag och är endast tillgängliga i Dynamic Media - Scene7-läge.
 
 När du lägger till resurser i uppsättningen läggs de automatiskt till i alfanumerisk ordning. Du kan ändra ordning på eller sortera resurser manuellt när de har lagts till.
 
