@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 06b8c0be-4362-4bd1-ad57-ea5503616b17
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 10072609bc371b5f2dce425e90e583f14f96e371
+source-git-commit: fe81a72a6269060a7ec1283f817920618ba715ef
 workflow-type: tm+mt
-source-wordcount: '1686'
+source-wordcount: '1691'
 ht-degree: 0%
 
 ---
@@ -167,8 +167,8 @@ Om du vill att författaren ska kunna använda sidredigeraren för att redigera 
 
 SPA Editor SDK har stöd för följande minimiversioner:
 
-* Reaktion 16.3
-* Vinkel 6.x
+* Reagera 16.x och uppåt
+* Vinkel 6.x och uppåt
 
 Tidigare versioner av dessa ramverk kan fungera med AEM SPA Editor SDK, men stöds inte.
 
