@@ -1,6 +1,6 @@
 ---
-title: Konfigurera dynamiska media - hybridläge
-description: Lär dig hur du konfigurerar läget Dynamic Media - hybrid.
+title: Konfigurera Dynamic Media - hybridläge
+description: Lär dig hur du konfigurerar Dynamic Media - hybridläge.
 uuid: 39ad7d83-d310-4baf-9d85-5532c2f201f3
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -10,15 +10,15 @@ discoiquuid: 7d8e7273-29f3-4a45-ae94-aad660d2c71d
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config-dynamic
 translation-type: tm+mt
-source-git-commit: 5eb05c69b2236d92504305ca076734bf7fac21e2
+source-git-commit: df89d5cfd5060d493babb89e92a9a98e851b8879
 workflow-type: tm+mt
-source-wordcount: '7792'
+source-wordcount: '7793'
 ht-degree: 1%
 
 ---
 
 
-# Konfigurera dynamiska media - hybridläge{#configuring-dynamic-media-hybrid-mode}
+# Konfigurera Dynamic Media - hybridläge{#configuring-dynamic-media-hybrid-mode}
 
 Dynamic Media-Hybrid måste aktiveras och konfigureras för användning. Beroende på ditt sätt att arbeta har Dynamic Media flera konfigurationer som [stöds](#supported-dynamic-media-configurations).
 
@@ -32,11 +32,11 @@ Läs mer om hur du arbetar med [video](/help/assets/video.md) i Dynamic Media.
 
 >[!NOTE]
 >
->Om du använder Adobe Experience Manager som konfigurerats för olika miljöer, till exempel en för utveckling, en för testning och en för liveproduktion, måste du konfigurera Dynamic Media Cloud-tjänster för var och en av dessa miljöer.
+>Om du använder Adobe Experience Manager som konfigurerats för olika miljöer, till exempel en för utveckling, en för staging och en för liveproduktion, måste du konfigurera Dynamic Media-Cloud Service för var och en av dessa miljöer.
 
 >[!NOTE]
 >
->Om du har problem med din dynamiska mediekonfiguration är det viktigt att du tittar på loggfilerna som är specifika för dynamiska media. Dessa installeras automatiskt när du aktiverar dynamiska media:
+>Om du har problem med Dynamic Media-konfigurationen är det viktigt att du tittar på loggfilerna som är specifika för dynamiska media. Dessa installeras automatiskt när du aktiverar dynamiska media:
 >
 >* `s7access.log`
 >* `ImageServing.log`
@@ -44,11 +44,11 @@ Läs mer om hur du arbetar med [video](/help/assets/video.md) i Dynamic Media.
 >
 De beskrivs i [Övervaka och underhålla din AEM-instans](/help/sites-deploying/monitoring-and-maintaining.md).
 
-Hybridpublicering och -leverans är en viktig funktion i Dynamic Media som tillägg till Adobe Experience Manager. Med hybridpublicering kan ni leverera Dynamic Media-resurser, som bilder, uppsättningar och video, från molnet i stället för från AEM-publiceringsnoderna.
+Hybridpublicering och -leverans är en viktig egenskap i Dynamic Media förutom Adobe Experience Manager. Med hybridpublicering kan du leverera Dynamic Media-resurser, som bilder, uppsättningar och video, från molnet i stället för från AEM-publiceringsnoderna.
 
-Annat innehåll, som Dynamic Media-visningsprogram, webbplatssidor och statiskt innehåll kommer även i fortsättningen att hanteras från AEM-publiceringsnoderna.
+Annat innehåll, t.ex. Dynamic Media-visningsprogram, webbplatssidor och statiskt innehåll kommer även i fortsättningen att hanteras från AEM-publiceringsnoderna.
 
-Om du använder Dynamic Media måste du använda hybridleverans som leveransmekanism för allt dynamiskt medieinnehåll.
+Om du är kund med Dynamic Media måste du använda hybridleverans som leveransmekanism för allt innehåll i Dynamic Media.
 
 ## Hybrid publiceringsarkitektur för videor {#hybrid-publishing-architecture-for-videos}
 
@@ -58,17 +58,17 @@ Om du använder Dynamic Media måste du använda hybridleverans som leveransmeka
 
 ![chlimage_1-507](assets/chlimage_1-507.png)
 
-## Dynamiska mediekonfigurationer som stöds {#supported-dynamic-media-configurations}
+## Dynamic Media-konfigurationer som stöds {#supported-dynamic-media-configurations}
 
 Konfigurationsåtgärderna som följer refererar till följande termer:
 
-| **Term** | **Dynamiska media aktiverat** | **Beskrivning** |
+| **Term** | **Dynamic Media aktiverat** | **Beskrivning** |
 |---|---|---|
 | AEM-författarnod | Vit bock i en grön cirkel | Författarnoden som du distribuerar till lokal eller via hanterade tjänster. |
 | AEM-publiceringsnod | Vitt &quot;X&quot; i en röd kvadrat. | Den publiceringsnod som du distribuerar till lokal eller via hanterade tjänster. |
 | Publiceringsnod för bildtjänst | Vit bock i en grön cirkel. | Den publiceringsnod som du kör på datacenter som hanteras av Adobe. Hänvisar till bildtjänstens URL. |
 
-Du kan välja att implementera Dynamic Media endast för bildåtergivning, endast för video eller både för bildåtergivning och video. Om du vill se hur du konfigurerar Dynamic Media för ditt specifika scenario använder du följande tabell.
+Du kan välja att implementera Dynamic Media endast för bildåtergivning, endast för video eller för både bildåtergivning och video. Om du vill se hur du konfigurerar Dynamic Media för ditt specifika scenario använder du följande tabell.
 
 <table>
  <tbody>
@@ -83,7 +83,7 @@ Du kan välja att implementera Dynamic Media endast för bildåtergivning, endas
    <td>
     <ol>
      <li>På AEM- <strong>författarnoden</strong> <a href="#enabling-dynamic-media">aktiverar du dynamiska medier</a>.</li>
-     <li>Konfigurera bildbehandling i <a href="#configuring-dynamic-media-cloud-services">Dynamic Media Cloud Services</a>.</li>
+     <li>Konfigurera bildbehandling i <a href="#configuring-dynamic-media-cloud-services">Dynamic Media-Cloud Service</a>.</li>
      <li><a href="#configuring-image-replication">Konfigurera bildreplikering</a>.</li>
      <li><a href="#replicating-catalog-settings">Replikera kataloginställningar</a>.</li>
      <li><a href="#replicating-viewer-presets">Replikera visningsförinställningar</a>.</li>
@@ -112,7 +112,7 @@ Du kan välja att implementera Dynamic Media endast för bildåtergivning, endas
     <ol>
      <li>På AEM- <strong>författarnoden</strong> <a href="#enabling-dynamic-media">aktiverar du dynamiska medier</a>.</li>
      <li>På AEM- <strong>publiceringsnoden</strong> <a href="#enabling-dynamic-media">aktiverar du dynamiska medier</a> (publiceringsinstansen visar videobilden och tillhandahåller metadata för videouppspelning).</li>
-     <li>Konfigurera video i <a href="#configuring-dynamic-media-cloud-services">Dynamic Media Cloud Services.</a></li>
+     <li>Konfigurera video i <a href="#configuring-dynamic-media-cloud-services">Dynamic Media-Cloud Service.</a></li>
      <li><a href="#replicating-viewer-presets">Replikera visningsförinställningar</a>.</li>
      <li>Ställ in <a href="#setting-up-asset-filters-for-video-only-deployments">resursfilter för enbart</a>video.</li>
      <li><a href="#delivering-assets">Leverera resurser.</a></li>
@@ -124,8 +124,8 @@ Du kan välja att implementera Dynamic Media endast för bildåtergivning, endas
    <td>
     <ol>
      <li>På AEM- <strong>författarnoden</strong> <a href="#enabling-dynamic-media">aktiverar du dynamiska medier</a>.</li>
-     <li>Konfigurera video i <a href="#configuring-dynamic-media-cloud-services">Dynamic Media Cloud Services.</a></li>
-     <li>Konfigurera bildbehandling i <a href="#configuring-dynamic-media-cloud-services">Dynamic Media Cloud Services.</a></li>
+     <li>Konfigurera video i <a href="#configuring-dynamic-media-cloud-services">Dynamic Media-Cloud Service.</a></li>
+     <li>Konfigurera bildbehandling i <a href="#configuring-dynamic-media-cloud-services">Dynamic Media-Cloud Service.</a></li>
      <li><a href="#configuring-image-replication">Konfigurera bildreplikering</a>.</li>
      <li><a href="#replicating-catalog-settings">Replikera kataloginställningar</a>.</li>
      <li><a href="#replicating-viewer-presets">Replikera visningsförinställningar</a>.</li>
@@ -137,7 +137,7 @@ Du kan välja att implementera Dynamic Media endast för bildåtergivning, endas
  </tbody>
 </table>
 
-## Aktivera dynamiska media {#enabling-dynamic-media}
+## Aktivera Dynamic Media {#enabling-dynamic-media}
 
 [Dynamiska medier](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html) är inaktiverade som standard. För att kunna utnyttja funktionerna för dynamiska medier måste du aktivera dynamiska medier genom att använda körningsläget på samma sätt som du till exempel använder `dynamicmedia` `publish` körningsläget. Kontrollera de [tekniska kraven innan du aktiverar.](/help/sites-deploying/technical-requirements.md#dynamicmediaaddonprerequisites)
 
@@ -145,9 +145,9 @@ Du kan välja att implementera Dynamic Media endast för bildåtergivning, endas
 >
 >Om du aktiverar dynamiska medier via körningsläget ersätts funktionerna i AEM 6.1 och AEM 6.0, där du aktiverade dynamiska medier genom att du anger `dynamicMediaEnabled` flaggan som **[!UICONTROL true]**. Den här flaggan har ingen funktion i AEM 6.2 och senare. Du behöver inte heller starta om snabbstarten för att aktivera dynamiska medier.
 
-Genom att aktivera Dynamic Media blir de dynamiska mediefunktionerna tillgängliga i användargränssnittet och varje överförd bildresurs får en *cqdam.pyramid.tiff* -rendering som används för snabb leverans av dynamiska bildrenderingar. Dessa PTIFF-filer har avsevärda fördelar, bland annat (1) möjligheten att hantera endast en huvudbild och generera oändliga återgivningar direkt utan ytterligare lagringsutrymme och (2) möjligheten att använda interaktiv visualisering som zoomning, panorering, rotation och så vidare.
+Genom att aktivera Dynamic Media blir de dynamiska mediefunktionerna tillgängliga i användargränssnittet och varje överförd bildresurs får en rendering *cqdam.pyramid.tiff* som används för snabb leverans av dynamiska bildrenderingar. Dessa PTIFF-filer har avsevärda fördelar, bland annat (1) möjligheten att hantera endast en enda bild från en primär källa och generera oändliga återgivningar direkt utan ytterligare lagringsutrymme och (2) möjligheten att använda interaktiv visualisering som zoom, panorering, rotation och så vidare.
 
-Om du vill använda Dynamic Media Classic (Scene7) i AEM bör du inte aktivera Dynamic Media om du inte använder ett [specifikt scenario](/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media). Dynamiska media är inaktiverat om du inte aktiverar dynamiska media i körningsläge.
+Om du vill använda Dynamic Media Classic (Scene7) i AEM bör du inte aktivera Dynamic Media om du inte använder ett [specifikt scenario](/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media). Dynamic Media är inaktiverade om du inte aktiverar dynamiska medier i körningsläge.
 
 Om du vill aktivera dynamiska medier måste du aktivera körningsläget för dynamiska media antingen från kommandoraden eller från snabbstartfilens namn.
 
@@ -173,20 +173,20 @@ Om du vill aktivera dynamiska medier måste du aktivera körningsläget för dyn
 
    >[!NOTE]
    >
-   >Om du vill felsöka problem med Dynamic Media läser du följande loggar i `crx-quickstart/logs/` katalogen:
+   >Om du vill felsöka problem med Dynamic Media kan du läsa följande loggar i `crx-quickstart/logs/` katalogen:
    >
    >* ImageServer-&lt;PortId>-&lt;ååå>&lt;mm>&lt;dd>.log - Loggen för ImageServer innehåller statistik och analytisk information som används för att analysera beteendet hos den interna ImageServer-processen.
    Exempel på ett loggfilsnamn för en Image Server: `ImageServer-57346-2020-07-25.log`
    * s7access-&lt;åååå>&lt;mm>&lt;dd>.log - s7access-loggen registrerar varje begäran som gjorts till Dynamic Media via `/is/image` och `/is/content`.
-   Dessa loggar används bara när Dynamic Media är aktiverat. De ingår inte i det **nedladdningsbara, fullständiga** paketet som genereras från `system/console/status-Bundlelist` sidan. när du ringer kundsupport om du har ett problem med dynamiska media, bifoga båda dessa loggar till problemet.
+   Dessa loggar används bara när Dynamic Media är aktiverat. De ingår inte i det **nedladdningsbara, fullständiga** paketet som genereras från `system/console/status-Bundlelist` sidan. när du ringer kundsupport om du har ett problem med Dynamic Media, bifoga båda loggarna till problemet.
 
 ### Om du har installerat AEM på en annan port eller kontextsökväg ... {#if-you-installed-aem-to-a-different-port-or-context-path}
 
-Om du distribuerar [AEM till en programserver](/help/sites-deploying/application-server-install.md) och har Dynamic Media aktiverat, måste du konfigurera **självdomänen** i externaliseraren. Annars fungerar inte generering av miniatyrbilder för resurser korrekt för dynamiska medieresurser.
+Om du distribuerar [AEM till en programserver](/help/sites-deploying/application-server-install.md) och har aktiverat Dynamic Media måste du konfigurera **själv** -domänen i externaliseraren. Annars fungerar inte generering av miniatyrbilder för resurser korrekt för dynamiska medieresurser.
 
 Om du kör snabbstart på en annan port eller kontextsökväg måste du dessutom ändra **egen** domän.
 
-När Dynamic Media är aktiverat genereras statiska miniatyråtergivningar för bildresurser med Dynamic Media. För att miniatyrbildsgenerering ska fungera för dynamiska medier måste AEM utföra en URL-begäran till sig själv och känna till både portnumret och kontextsökvägen.
+När Dynamic Media är aktiverat genereras de statiska miniatyråtergivningarna för bildobjekt med hjälp av Dynamic Media. För att miniatyrbildsgenerering ska fungera för dynamiska medier måste AEM utföra en URL-begäran till sig själv och känna till både portnumret och kontextsökvägen.
 
 I AEM:
 
@@ -198,13 +198,13 @@ I en AEM QuickStart WAR-distribution går det inte att härleda portnumret och k
 >[!NOTE]
 I en fristående [AEM Quickstart-distribution](/help/sites-deploying/deploy.md)behöver en **självdomän** vanligtvis inte konfigureras eftersom portnumret och kontextsökvägen kan konfigureras automatiskt. Om alla nätverksgränssnitt är inaktiverade måste du konfigurera **egen** domän.
 
-## Inaktivera dynamiska media  {#disabling-dynamic-media}
+## Inaktivera Dynamic Media  {#disabling-dynamic-media}
 
 Dynamiska medier är inte aktiverade som standard. Om du tidigare har aktiverat dynamiska medier kan du stänga av det vid ett senare tillfälle.
 
 Om du vill inaktivera dynamiska medier efter att du har aktiverat dem tar du bort flaggan för `-r dynamicmedia` körningsläge.
 
-**Så här inaktiverar du dynamiska media när det har aktiverats**
+**Så här inaktiverar du Dynamic Media efter att det har aktiverats**
 
 1. När du startar snabbstarten på kommandoraden kan du göra något av följande:
 
@@ -217,16 +217,16 @@ Om du vill inaktivera dynamiska medier efter att du har aktiverat dem tar du bor
 1. Begäran `https://localhost:4502/is/image`. Du får ett meddelande om att Dynamic Media är inaktiverat.
 
    >[!NOTE]
-   När körningsläget Dynamic Media har inaktiverats hoppas det arbetsflödessteg som genererar `cqdam.pyramid.tiff` återgivningen över automatiskt. Detta inaktiverar även stöd för dynamisk återgivning och andra dynamiska mediefunktioner.
-   Observera också att när körningsläget Dynamic Media är inaktiverat efter att AEM-servern har konfigurerats är alla resurser som har överförts i det körningsläget nu ogiltiga.
+   När körningsläget för Dynamic Media har inaktiverats hoppas det arbetsflödessteg som genererar `cqdam.pyramid.tiff` återgivningen över automatiskt. Detta inaktiverar även stöd för dynamisk återgivning och andra Dynamic Media-funktioner.
+   Observera också att när Dynamic Media-körningsläget är inaktiverat efter att AEM-servern har konfigurerats är alla resurser som har överförts i det körningsläget nu ogiltiga.
 
-## (Valfritt) Migrera förinställningar och konfigurationer för dynamiska media från 6.3 till 6.5 Zero Downtime {#optional-migrating-dynamic-media-presets-and-configurations-from-to-zero-downtime}
+## (Valfritt) Migrera förinställningar och konfigurationer för Dynamic Media från 6.3 till 6.5 utan driftstopp {#optional-migrating-dynamic-media-presets-and-configurations-from-to-zero-downtime}
 
-Om du uppgraderar AEM Dynamic Media från 6.3 till 6.5 (som nu kan köras utan driftavbrott) måste du köra följande kommando för att migrera alla förinställningar och konfigurationer från `/etc` till `/conf` i CRXDE Lite.
+Om du uppgraderar AEM-Dynamic Media från 6.3 till 6.5 (som nu innehåller funktioner för att inte ha några driftavbrott) måste du köra följande kommando för att migrera alla förinställningar och konfigurationer från `/etc` till `/conf` i CRXDE Lite.
 
 **Obs**: Om du kör AEM-instansen i kompatibilitetsläge, d.v.s. har kompatibilitetspaketet installerat, behöver du inte köra dessa kommandon.
 
-För alla uppgraderingar, antingen med eller utan kompatibilitetspaketet, kan du kopiera de förinställda visningsprogrammen som ursprungligen levererades med Dynamic Media genom att köra följande kommando för Linux-vändning:
+För alla uppgraderingar, antingen med eller utan kompatibilitetspaketet, kan du kopiera de förinställningar för visningsprogram som ursprungligen ingick i Dynamic Media genom att köra följande kommando för Linux-kurva:
 
 `curl -u admin:admin -X POST https://<server_address>:<server_port>/libs/settings/dam/dm/presets/viewer.pushviewerpresets.json`
 
@@ -236,14 +236,14 @@ Om du vill migrera anpassade förinställningar och konfigurationer för visning
 
 ## Konfigurerar avbildningsreplikering {#configuring-image-replication}
 
-Dynamic Media-leverans fungerar genom att publicera bildresurser, inklusive videominiatyrer, från AEM Author och replikera dem till Adobes replikeringstjänst på begäran (URL:en för replikeringstjänsten). Resurserna levereras sedan via tjänsten för bildleverans på begäran (URL:en för bildtjänsten).
+Dynamic Medias bildleverans fungerar genom att publicera bildresurser, inklusive videominiatyrer, från AEM Author och replikera dem till Adobes replikeringstjänst på begäran (URL:en för replikeringstjänsten). Resurserna levereras sedan via tjänsten för bildleverans på begäran (URL:en för bildtjänsten).
 
 Du måste göra följande:
 
 1. [Konfigurera autentisering](#setting-up-authentication).
 1. [Konfigurera replikeringsagenten](#configuring-the-replication-agent).
 
-Replikeringsagenten publicerar Dynamic Media-resurser som bilder, videometadata och uppsättningar i Adobe Image Service. Replikeringsagenten är inte aktiverad som standard.
+Replikeringsagenten publicerar Dynamic Media-resurser som bilder, videometadata och uppsättningar i Adobe-tjänsten Image Service. Replikeringsagenten är inte aktiverad som standard.
 
 När du har konfigurerat replikeringsagenten måste du [validera och testa att den har konfigurerats](#validating-the-replication-agent-for-dynamic-media). I det här avsnittet beskrivs dessa procedurer.
 
@@ -255,7 +255,7 @@ Om du vill ändra minnesgränsen för att skapa PTIFF navigerar du till **[!UICO
 
 ### Konfigurera autentisering {#setting-up-authentication}
 
-Du måste konfigurera replikeringsverifiering för författaren för att kunna replikera bilder till tjänsten Dynamic Media Image delivery. Du gör detta genom att hämta en KeyStore och sedan spara den under **[!UICONTROL dynamic-media-replication]** användaren och konfigurera den. Din företagsadministratör bör ha fått ett välkomstmeddelande med KeyStore-filen och nödvändiga autentiseringsuppgifter under etableringsprocessen. Kontakta kundtjänst om du inte fått något sådant.
+Du måste konfigurera replikeringsautentisering för författaren för att kunna replikera bilder till tjänsten för leverans av Dynamic Media-avbildningar. Du gör detta genom att hämta en KeyStore och sedan spara den under **[!UICONTROL dynamic-media-replication]** användaren och konfigurera den. Din företagsadministratör bör ha fått ett välkomstmeddelande med KeyStore-filen och nödvändiga autentiseringsuppgifter under etableringsprocessen. Kontakta kundtjänst om du inte fått något sådant.
 
 **Ställa in autentisering**
 
@@ -307,7 +307,7 @@ Du måste konfigurera replikeringsverifiering för författaren för att kunna r
 
 1. Tryck på **[!UICONTROL OK]**.
 
-### Verifierar replikeringsagenten för dynamiska media {#validating-the-replication-agent-for-dynamic-media}
+### Verifierar replikeringsagenten för Dynamic Media {#validating-the-replication-agent-for-dynamic-media}
 
 Så här validerar du replikeringsagenten för dynamiska media:
 
@@ -466,7 +466,7 @@ Adobe rekommenderar att du utför ett helhetstest av konfigurationen.
 Kontrollera att du redan har gjort följande innan du påbörjar testet:
 
 * Lagt till bildförinställningar.
-* Konfigurera **[!UICONTROL Dynamic Media Configuration (Pre 6.3)]** under molntjänster. URL till bildtjänsten krävs för det här testet
+* Konfigurera **[!UICONTROL Dynamic Media Configuration (Pre 6.3)]** under Cloud Service. URL till bildtjänsten krävs för det här testet
 
 **Testa konfigurationen**
 
@@ -483,44 +483,44 @@ Kontrollera att du redan har gjort följande innan du påbörjar testet:
 
 Ett annat sätt att testa att dina resurser har levererats är att lägga till req=exists till din URL.
 
-## Konfigurera Dynamic Media Cloud Services {#configuring-dynamic-media-cloud-services}
+## Konfigurera Dynamic Media-Cloud Service {#configuring-dynamic-media-cloud-services}
 
-Tjänsten Dynamic Media Cloud ger stöd för molntjänster som hybridpublicering och leverans av bilder och video, videoanalys och videokodning, bland annat.
+Dynamic Media Cloud-tjänsten ger stöd för molntjänster som hybridpublicering och leverans av bilder och video, videoanalys och videokodning, bland annat.
 
-Som en del av konfigurationen måste du ange ett registrerings-ID, en URL för videotjänst, en URL för bildtjänst, en URL för replikeringstjänsten och ställa in autentisering. Du bör ha fått all den här informationen som en del av kontoetableringsprocessen. Om du inte har fått den här informationen kontaktar du Adobe Experience Manager Administrator eller Adobes tekniska support för att få informationen.
+Som en del av konfigurationen måste du ange ett registrerings-ID, en URL för videotjänst, en URL för bildtjänst, en URL för replikeringstjänsten och ställa in autentisering. Du bör ha fått all den här informationen som en del av kontoetableringsprocessen. Om du inte har fått den här informationen kontaktar du Adobe Experience Manager Administrator eller Adobe Technical Support för att få informationen.
 
 >[!NOTE]
-Innan du konfigurerar Dynamic Media Cloud-tjänster måste du se till att du har konfigurerat din publiceringsinstans. Du måste också ha konfigurerat replikeringen innan du konfigurerar tjänsterna i Dynamic Media Cloud.
+Innan du konfigurerar Dynamic Media Cloud-tjänster måste du se till att du har konfigurerat din publiceringsinstans. Du måste också ha konfigurerat replikering innan du konfigurerar Dynamic Media Cloud-tjänster.
 
 Så här konfigurerar du molntjänster för dynamiska media:
 
 1. In AEM, tap the AEM logo to access the global navigation console and tap **[!UICONTROL Tools > Cloud Services > Dynamic Media Configuration (Pre-6.3)]**.
-1. På sidan Dynamic Media Configuration Browser väljer du **[!UICONTROL global]** och trycker sedan på **[!UICONTROL Create]**.
+1. På sidan Dynamic Media Configuration Browser (Konfigurationsläsare) i den vänstra rutan väljer du **[!UICONTROL global]** och trycker sedan på **[!UICONTROL Create]**.
 1. Skriv en titel i fältet Titel i dialogrutan **[!UICONTROL Create Dynamic Media Configuration]** .
 1. Om du konfigurerar Dynamic Media för video,
 
    * Skriv ditt registrerings-ID i **[!UICONTROL Registration ID]** fältet.
-   * I fältet **V[!UICONTROL ideo Service URL]**anger du URL:en för videotjänsten för Dynamic Media Gateway.
+   * I fältet **V[!UICONTROL ideo Service URL]**anger du webbadressen till videotjänsten för Dynamic Media Gateway.
 
-1. Om du konfigurerar Dynamic Media för bildbehandling anger du bildtjänstens URL i **[!UICONTROL Image Service URL]** fältet för Dynamic Media Gateway.
-1. Tryck för **[!UICONTROL Save]** att gå tillbaka till sidan Dynamic Media Configuration Browser.
+1. Om du konfigurerar Dynamic Media för bildbehandling anger du bildtjänstens URL för Dynamic Media Gateway i **[!UICONTROL Image Service URL]** fältet.
+1. Tryck för **[!UICONTROL Save]** att gå tillbaka till Dynamic Media Configuration Browser.
 1. Tryck på AEM-logotypen för att komma åt den globala navigeringskonsolen.
 
 ## Konfigurera videorapportering {#configuring-video-reporting}
 
 Du kan konfigurera videorapportering för flera installationer av AEM med Dynamic Media Hybrid.
 
-**När ska du använda:** När du konfigurerar Dynamic Media Configuration (Pre 6.3) startas flera funktioner, bland annat videorapportering. Konfigurationen skapar en rapportserie i ett regionalt Analytics-företag. Om du konfigurerar flera författarnoder skapar du en separat rapportserie för var och en av dem. Därför är rapportering av data inkonsekvent mellan anläggningar. Om varje Author-nod refererar till samma Hybrid Publish-server, ändrar den senaste Author-installationen målrapportsviten för alla videorapporter. Det här problemet överbelastar analyssystemet med för många rapportsviter.
+**När ska du använda:** När du konfigurerar Dynamic Media Configuration (Pre 6.3) startas flera funktioner, bland annat videorapportering. Konfigurationen skapar en rapportserie i ett regionalt Analytics-företag. Om du konfigurerar flera författarnoder skapar du en separat rapportserie för var och en av dem. Därför är rapportering av data inkonsekvent mellan anläggningar. Om varje Author-nod refererar till samma Hybrid Publish-server, ändrar den senaste Author-installationen målrapportsviten för alla videorapporter. Problemet överbelastar Analytics-systemet med för många rapportsviter.
 
 **Kom igång:** Konfigurera videorapportering genom att utföra följande tre uppgifter.
 
-1. Skapa ett förinställt paket för videoanalys när du har konfigurerat Dynamic Media Configuration (Pre 6.3) på den första Author-noden. Den här initiala aktiviteten är viktig eftersom den tillåter en ny konfiguration att fortsätta använda samma rapportserie.
+1. Skapa ett förinställningspaket för Video Analytics när du har konfigurerat Dynamic Media Configuration (Pre 6.3) på den första Author-noden. Den här initiala aktiviteten är viktig eftersom den tillåter en ny konfiguration att fortsätta använda samma rapportserie.
 1. Installera förinställningspaketet för Video Analytics på en ***ny*** författarnod ***innan*** du konfigurerar Dynamic Media Configuration (Pre 6.3).
 1. Verifiera och felsök paketinstallationen.
 
-### Skapa ett förinställningspaket för videoanalys efter att du har konfigurerat den första redigeringsnoden {#creating-a-video-analytics-preset-package-after-configuring-the-first-author-node}
+### Skapa ett förinställningspaket för video-Analytics efter att du har konfigurerat den första författarnoden {#creating-a-video-analytics-preset-package-after-configuring-the-first-author-node}
 
-När du är klar med den här uppgiften har du en paketfil som innehåller förinställningarna för videoanalys. Dessa förinställningar innehåller en rapportserie, spårningsservern, spårningsnamnutrymmet och Marketing Cloud Organization ID (om tillgängligt).
+När du är klar med den här uppgiften har du en paketfil som innehåller Video Analytics-förinställningarna. Dessa förinställningar innehåller en rapportserie, spårningsservern, spårningsnamnutrymmet och Marketing Cloud Organization ID (om tillgängligt).
 
 1. Om du inte redan har gjort det konfigurerar du Dynamic Media Configuration (Pre 6.3).
 1. (Valfritt) Visa och kopiera Report Suite-ID:t (du måste ha tillgång till JCR:et). Även om det inte krävs något ID för Report Suite gör det valideringen enklare.
@@ -530,23 +530,23 @@ När du är klar med den här uppgiften har du en paketfil som innehåller föri
    I AEM: `/conf/global/settings/dam/dm/presets/analytics/jcr:content/userdata`
 
 1. Bygg paketet.
-1. Hämta eller dela förinställningspaketet för Video Analytics så att det kan delas med efterföljande nya redigeringsnoder.
+1. Hämta eller dela förinställningspaketet Video Analytics så att det kan delas med efterföljande nya redigeringsnoder.
 
-### Installera förinställningspaketet för videoanalys innan du konfigurerar ytterligare redigeringsnoder {#installing-the-video-analytics-preset-package-before-you-configure-additional-author-nodes}
+### Installera förinställningspaketet för Video Analytics innan du konfigurerar ytterligare redigeringsnoder {#installing-the-video-analytics-preset-package-before-you-configure-additional-author-nodes}
 
-Se till att du slutför den här uppgiften ***innan*** du konfigurerar Dynamic Media Configuration (Pre 6.3). Om du inte gör det skapas en annan oanvänd rapportserie. Dessutom är datainsamlingen inte optimerad även om videorapporteringen fortfarande fungerar som den ska.
+Se till att du slutför den här åtgärden ***innan*** du konfigurerar Dynamic Media (före 6.3). Om du inte gör det skapas en annan oanvänd rapportserie. Dessutom är datainsamlingen inte optimerad även om videorapporteringen fortfarande fungerar som den ska.
 
-Kontrollera att förinställningspaketet för Video Analytics från den första författarnoden är tillgängligt på den nya författarnoden.
+Kontrollera att Video Analytics-förinställningspaketet från den första författarnoden är tillgängligt på den nya författarnoden.
 
-1. Överför förinställningspaketet för Video Analytics som du skapade tidigare till Package Manager.
+1. Överför Video Analytics-förinställningspaketet som du skapade tidigare till Package Manager.
 1. Installera förinställningspaketet för Video Analytics.
-1. Konfigurera dynamisk mediekonfiguration (före 6.3).
+1. Konfigurera Dynamic Media-konfiguration (före 6.3).
 
 ### Verifiera och felsöka paketinstallationen {#verifying-and-debugging-the-package-installation}
 
 1. Gör något av följande för att verifiera och, om det behövs, felsöka paketinstallationen:
 
-   * **Kontrollera förinställningen Video Analytics med JCR** För att kontrollera förinställningen Video Analytics med JCR måste du ha tillgång till CRXDE Lite.
+   * **Kontrollera Video Analytics-förinställningen med JCR** För att kontrollera Video Analytics-förinställningen med JCR måste du ha tillgång till CRXDE Lite.
 
       AEM - I CRXDE Lite går du till `/conf/global/settings/
 dam/dm/presets/analytics/jcr:content/userdata`
@@ -555,10 +555,10 @@ dam/dm/presets/analytics/jcr:content/userdata`
 
       Om du inte har tillgång till CRXDE Lite på författarnoden kan du kontrollera förinställningen via publiceringsservern.
 
-   * **Kontrollera förinställningen för videoanalys via bildservern**
+   * **Kontrollera Video Analytics-förinställningen via Image Server**
 
-      Du kan validera Video Analytics-förinställningen direkt genom att göra en Image Server req=userdata-begäran.
-Om du till exempel vill se Analytics-förinställningen på författarnoden kan du göra följande begäran:
+      Du kan validera Video Analytics-förinställningen direkt genom att göra en Image Server req=userdata-förfrågan.
+Om du till exempel vill se förinställningen för Analytics på noden Författare kan du göra följande:
 
       `https://localhost:4502/is/image/conf/global/settings/dam/dm/presets/analytics?req=userdata`
 
@@ -571,7 +571,7 @@ Om du till exempel vill se Analytics-förinställningen på författarnoden kan 
        trackingServer=aemvideodal.d2.sc.omtrdc.net
       ```
 
-   * **Kontrollera förinställningen för videoanalys med videorapporteringsverktyget i AEM** Tap **[!UICONTROL Tools > Assets > Video Reporting]**
+   * **Kontrollera Video Analytics-förinställningen via videorapporteringsverktyget i AEM** Tap **[!UICONTROL Tools > Assets > Video Reporting]**
 
       `https://localhost:4502/mnt/overlay/dam/gui/content/s7dam/videoreports/videoreport.html`
 
@@ -586,17 +586,17 @@ Om du till exempel vill se Analytics-förinställningen på författarnoden kan 
 
    ![screen_shot_2018-05-23at52612pm](assets/screen_shot_2018-05-23at52612pm.png)
 
-   Det här felet visas också om videorapporteringen körs innan du konfigurerar tjänsterna för dynamisk mediekonfiguration (före 6.3).
+   Det här felet visas också om videorapporteringen körs innan du konfigurerar Dynamic Media Configuration (Pre 6.3)-tjänster.
 
 ### Felsöka konfigurationen för videorapportering {#troubleshooting-the-video-reporting-configuration}
 
-* Under installationen kan anslutningar till API-servern för Analytics göra timeout. Installationen försöker ansluta igen 20 gånger, men den misslyckas fortfarande. När detta inträffar registreras flera fel i loggfilen. Search for `SiteCatalystReportService`.
-* Om Analytics Preset-paketet inte installeras först kan en ny rapportserie skapas.
+* Under installationen kan vissa anslutningar till Analytics API-servern göra timeout. Installationen försöker ansluta igen 20 gånger, men den misslyckas fortfarande. När detta inträffar registreras flera fel i loggfilen. Search for `SiteCatalystReportService`.
+* Om du inte installerar Analytics Preset-paketet först kan det leda till att en ny rapportserie skapas.
 * Om du uppgraderar från AEM 6.3 till AEM 6.4 eller AEM 6.4.1 och sedan konfigurerar Dynamic Media Configuration (Pre 6.3) skapas fortfarande en rapportserie. Det här problemet är känt och är kopplat till att åtgärdas för AEM 6.4.2.
 
-### Om förinställningen Videoanalys {#about-the-video-analytics-preset}
+### Om Video Analytics-förinställningen {#about-the-video-analytics-preset}
 
-Förinställningen Video Analytics (Videoanalys), som ibland helt enkelt kallas analysförinställning, lagras bredvid visningsförinställningarna i Dynamic Media. Det är i princip detsamma som en visningsprogramförinställning, men med information som används för att konfigurera AppMeasurement- och Video Heartbeat-rapporter.
+Video-förinställningen för Analytics, som ibland helt enkelt kallas analysförinställning, lagras bredvid visningsförinställningarna i Dynamic Media. Det är i princip detsamma som en visningsprogramförinställning, men med information som används för att konfigurera AppMeasurement- och Video Heartbeat-rapporter.
 
 Förinställningens egenskaper är följande:
 
@@ -632,9 +632,9 @@ By default, the system shows a variety of renditions when you select **[!UICONTR
 
 ## Filtrera resurser för replikering {#filtering-assets-for-replication}
 
-I distributioner av icke-dynamiska media replikerar du *alla* resurser (både bilder och video) från AEM-redigeringsmiljön till AEM-publiceringsnoden. Det här arbetsflödet är nödvändigt eftersom AEM-publiceringsservrarna också levererar resurserna.
+I distributioner som inte kommer från Dynamic Media replikerar du *alla* resurser (både bilder och video) från AEM-redigeringsmiljön till AEM-publiceringsnoden. Det här arbetsflödet är nödvändigt eftersom AEM-publiceringsservrarna också levererar resurserna.
 
-I Dynamic Media-distributioner behöver du dock inte replikera samma resurser till AEM-publiceringsnoder eftersom resurserna levereras via molnet. Ett sådant&quot;hybridpubliceringsarbetsflöde&quot; undviker extra lagringskostnader och längre bearbetningstider för att replikera resurser. Annat innehåll, som Dynamic Media-visningsprogram, webbplatssidor och statiskt innehåll, fortsätter att hanteras från AEM-publiceringsnoderna.
+I distributioner av Dynamic Media finns det dock inget behov av att replikera samma resurser till AEM-publiceringsnoder eftersom resurserna levereras via molnet. Ett sådant&quot;hybridpubliceringsarbetsflöde&quot; undviker extra lagringskostnader och längre bearbetningstider för att replikera resurser. Annat innehåll, t.ex. Dynamic Media-visningsprogram, webbplatssidor och statiskt innehåll, fortsätter att hanteras från AEM-publiceringsnoderna.
 
 Förutom att replikera resurserna replikeras även följande icke-resurser:
 
@@ -680,10 +680,10 @@ Om du använder Dynamic Media för (1) bildåtergivning i produktion **eller** (
    <td>Integrering med Dynamic Media Classic (Scene7)</td>
    <td><p>filterbilder</p> <p>filteruppsättningar</p> <p>filter-video</p> </td>
    <td><p>Börjar med <strong>bild/</strong></p> <p>Innehåller <strong>program/</strong> och slutar med <strong>en uppsättning</strong>.</p> <p>Börjar med <strong>video/</strong></p> </td>
-   <td><p>Du konfigurerar transport-URI:n så att den pekar på AEM-publiceringsservern i stället för URL:en för Adobe Dynamic Media Cloud Replication Service. Om du konfigurerar det här filtret kan Dynamic Media Classic leverera resurser i stället för AEM-publiceringsinstansen.</p> <p>De färdiga filterbilderna, filteruppsättningarna och filtervideon kommer att:</p>
+   <td><p>Du konfigurerar transport-URI:n så att den pekar på AEM-publiceringsservern i stället för på URL:en för Adobe Dynamic Media Cloud Replication Service. Om du konfigurerar det här filtret kan Dynamic Media Classic leverera resurser i stället för AEM-publiceringsinstansen.</p> <p>De färdiga filterbilderna, filteruppsättningarna och filtervideon kommer att:</p>
     <ul>
-     <li>Inkludera PTIFF-bild, proxyvideorenderingar och metadata för replikering. Men eftersom de inte finns i JCR för dem som kör AEM - integrering med Dynamic Media Classic gör det ingenting alls.</li>
-     <li>Undvik replikering av originalbilden, statiska bildåtergivningar, originalvideo och statiska miniatyråtergivningar. Dynamic Media Classic levererar istället bild- och videomaterial.</li>
+     <li>Inkludera PTIFF-bild, proxyvideorenderingar och metadata för replikering. Men eftersom de inte finns i JCR för dem som kör AEM - integrering av Dynamic Media Classic - gör det ingenting alls.</li>
+     <li>Undvik replikering av originalbilden, statiska bildåtergivningar, originalvideo och statiska miniatyråtergivningar. I stället kommer Dynamic Media Classic att leverera bild- och videomaterial.</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -694,7 +694,7 @@ Filter gäller för MIME-typer och kan inte vara sökvägsspecifika.
 
 ### Ställa in resursfilter för distributioner endast för video {#setting-up-asset-filters-for-video-only-deployments}
 
-Om du använder Dynamic Media endast för video gör du så här för att ställa in resursfilter för replikering:
+Om du använder Dynamic Media för enbart video följer du de här stegen för att konfigurera resursfilter för replikering:
 
 1. In AEM, tap the AEM logo to access the global navigation console and tap **[!UICONTROL Tools > Deployment > Replication > Agents on author]**.
 1. Tryck på Agents på författarsidan **[!UICONTROL Default Agent (publish)]**.
@@ -707,7 +707,7 @@ Om du använder Dynamic Media endast för video gör du så här för att ställ
 1. I det vänstra mappträdet navigerar du till `/etc/replication/agents.author/publish`
 1. Leta upp **[!UICONTROL jcr:content]**, högerklicka på den och välj **[!UICONTROL Paste]**.
 
-Detta ställer in AEM-publiceringsinstansen så att den levererar videobilden samt de videomaterial som krävs för uppspelning, medan videon själv levereras av molntjänsten Dynamic Media. Filtret exkluderar även den ursprungliga videon och statiska miniatyrrenderingar, som inte behövs i publiceringsinstansen, från replikeringen.
+Detta ställer in AEM-publiceringsinstansen så att den levererar filmminiatyrbilden samt de videometadata som krävs för uppspelning, medan själva videon levereras av molntjänsten i Dynamic Media. Filtret exkluderar även den ursprungliga videon och statiska miniatyrrenderingar, som inte behövs i publiceringsinstansen, från replikeringen.
 
 ### Ställa in resursfilter för bildåtergivning vid icke-produktionsdistributioner {#setting-up-asset-filters-for-imaging-in-non-production-deployments}
 
@@ -796,17 +796,17 @@ Om du bara vill replikera originalet skriver du `+original`.
 
 ## Konfigurera inställningar för Dynamic Media Image Server {#configuring-dynamic-media-image-server-settings}
 
-När du konfigurerar Dynamic Media Image Server måste du redigera paketet Adobe CQ Scene7 ImageServer och paketet Adobe CQ Scene7 PlatformServer.
+När du konfigurerar Dynamic Media Image Server måste du redigera Adobe CQ Scene7 ImageServer-paketet och Adobe CQ Scene7 PlatformServer-paketet.
 
 >[!NOTE]
 Dynamic Media fungerar som det ska [när det är aktiverat](#enabling-dynamic-media). Du kan dock välja att finjustera installationen genom att konfigurera Dynamic Media Image Server så att den uppfyller vissa specifikationer eller krav.
 
-**Krav**: *Innan* du konfigurerar Dynamic Media Image Server bör du kontrollera att din virtuella dator för Windows har en installation av Microsoft Visual C++ Libraries. Biblioteken krävs för att köra Dynamic Media Image Server. Du kan [hämta Microsoft Visual C++ 2010 Redistributable Package (x64) här](https://www.microsoft.com/en-us/download/details.aspx?id=14632).
+**Krav**: *Innan* du konfigurerar Dynamic Media Image Server bör du kontrollera att din virtuella dator för Windows innehåller en installation av Microsoft Visual C++-biblioteken. Biblioteken behövs för att köra Dynamic Media Image Server. Du kan [hämta Microsoft Visual C++ 2010 Redistributable Package (x64) här](https://www.microsoft.com/en-us/download/details.aspx?id=14632).
 
-Så här konfigurerar du inställningar för Dynamic Media Image Server:
+Så här konfigurerar du inställningarna för Dynamic Media Image Server:
 
 1. I det övre vänstra hörnet av AEM trycker du **[!UICONTROL Adobe Experience Manager]** för att komma åt den globala navigeringskonsolen och sedan på **[!UICONTROL Tools > Operations > Web Console]**.
-1. På sidan Konfiguration av Adobe Experience Manager Web Console trycker du **[!UICONTROL OSGi > Configuration]** för att visa alla paket som körs i AEM.
+1. På Adobe Experience Manager Web Console Configuration-sidan trycker du på **[!UICONTROL OSGi > Configuration]** för att visa alla paket som körs i AEM.
 
    Dynamic Media Delivery Servers finns under följande namn i listan:
 
@@ -860,7 +860,7 @@ Så här konfigurerar du inställningar för Dynamic Media Image Server:
 </table>
 
 1. Tryck på **[!UICONTROL Save]**.
-1. I listan med paket till höger om Adobe CQ Scene7 PlatformServer: tryck på **[!UICONTROL Edit]** -ikonen.
+1. I listan med paket till höger om Adobe CQ Scene7 PlatformServer trycker du på **[!UICONTROL Edit]** -ikonen.
 1. I dialogrutan Adobe CQ Scene7 PlatformServer anger du följande standardvärdealternativ:
 
    >[!NOTE]
@@ -875,7 +875,7 @@ Så här konfigurerar du inställningar för Dynamic Media Image Server:
 
 ### Standardinställningar för manifest {#default-manifest-settings}
 
-Med standardmanifestet kan du konfigurera standardinställningarna som används för att generera svar för dynamisk medieleverans. Du kan finjustera kvaliteten (JPEG-kvalitet, upplösning, omsamplingsläge), cachning (förfaller) och förhindra återgivning av bilder som är för stora (standardvärde, standardvärde för miniatyrbild, maxpix).
+Med standardmanifestet kan du konfigurera standardinställningarna som används för att generera Dynamic Media-leveranssvar. Du kan finjustera kvaliteten (JPEG-kvalitet, upplösning, omsamplingsläge), cachning (förfaller) och förhindra återgivning av bilder som är för stora (standardvärde, standardvärde för miniatyrbild, maxpix).
 
 Platsen för standardmanifestkonfigurationen hämtas från **[!UICONTROL Catalog root]** standardvärdet för **[!UICONTROL Adobe CQ Scene7 PlatformServer]** paketet. Som standard finns det här värdet på följande sökväg i **[!UICONTROL Tools > General > CRXDE Lite]**:
 
@@ -948,7 +948,7 @@ Manifestinställningar och deras standardvärden:
  </tbody>
 </table>
 
-## Konfigurera Dynamic Media Color Management {#configuring-dynamic-media-color-management}
+## Konfigurera Dynamic Media färghantering {#configuring-dynamic-media-color-management}
 
 Med dynamisk mediefärghantering kan du färgkorrigera resurser för förhandsgranskning.
 
@@ -1267,11 +1267,11 @@ See [Delivering Dynamic Media Assets](/help/assets/delivering-dynamic-media-asse
   </tr>
   <tr>
    <td>Kopiera en bild-URL</td>
-   <td><p>I dialogrutan Kopiera URL visas en URL som liknar följande (URL är endast avsedd som exempel):</p> <p><code>https://IMAGESERVICEPUBLISHNODE/is/image/content/dam/path/to/Image.jpg?$preset$</code></p> <p>Där <code>IMAGESERVICEPUBLISHNODE</code> refererar till bildtjänstens URL.</p> <p>Se även <a href="/help/assets/delivering-dynamic-media-assets.md">Leverera dynamiska medieresurser</a>.</p> </td>
+   <td><p>I dialogrutan Kopiera URL visas en URL som liknar följande (URL är endast avsedd som exempel):</p> <p><code>https://IMAGESERVICEPUBLISHNODE/is/image/content/dam/path/to/Image.jpg?$preset$</code></p> <p>Där <code>IMAGESERVICEPUBLISHNODE</code> refererar till bildtjänstens URL.</p> <p>Se även <a href="/help/assets/delivering-dynamic-media-assets.md">Leverera Dynamic Media-resurser</a>.</p> </td>
   </tr>
   <tr>
    <td>Kopiera en visningsprogramURL</td>
-   <td><p>I dialogrutan Kopiera URL visas en URL som liknar följande (URL är endast avsedd som exempel):</p> <p><code>https://PUBLISHNODE/etc/dam/viewers/s7viewers/html5/BasicZoomViewer.html?asset=/content/dam/path/to/Image.jpg&amp;config=/conf/global/settings/dam/dm/presets/viewer/Zoom_dark&amp;serverUrl=https://IMAGESERVICEPUBLISHNODE/is/image/&amp;contentRoot=%2F</code></p> <p>Där <code>PUBLISHNODE</code> refererar till den vanliga AEM-publiceringsnoden och <code>IMAGESERVICEPUBLISHNODE</code> refererar till Image Service URL.</p> <p>Se även <a href="/help/assets/delivering-dynamic-media-assets.md">Leverera dynamiska medieresurser</a>.</p> </td>
+   <td><p>I dialogrutan Kopiera URL visas en URL som liknar följande (URL är endast avsedd som exempel):</p> <p><code>https://PUBLISHNODE/etc/dam/viewers/s7viewers/html5/BasicZoomViewer.html?asset=/content/dam/path/to/Image.jpg&amp;config=/conf/global/settings/dam/dm/presets/viewer/Zoom_dark&amp;serverUrl=https://IMAGESERVICEPUBLISHNODE/is/image/&amp;contentRoot=%2F</code></p> <p>Där <code>PUBLISHNODE</code> refererar till den vanliga AEM-publiceringsnoden och <code>IMAGESERVICEPUBLISHNODE</code> refererar till Image Service URL.</p> <p>Se även <a href="/help/assets/delivering-dynamic-media-assets.md">Leverera Dynamic Media-resurser</a>.</p> </td>
   </tr>
   <tr>
    <td>Kopiera inbäddningskod för ett visningsprogram</td>
@@ -1293,11 +1293,11 @@ See [Delivering Dynamic Media Assets](/help/assets/delivering-dynamic-media-asse
        "config" : "/conf/global/settings/dam/dm/presets/viewer/Zoom_dark",
        "asset" : "/content/dam/path/to/Image.jpg" }
        }).init();
-       &lt;/script&gt;</code></p> <p>Där <code>PUBLISHNODE</code> refererar till den vanliga AEM-publiceringsnoden och <code>IMAGESERVICEPUBLISHNODE</code> refererar till Image Service URL.</p> <p>Se även <a href="/help/assets/delivering-dynamic-media-assets.md">Leverera dynamiska medieresurser</a>.</p> </td>
+       &lt;/script&gt;</code></p> <p>Där <code>PUBLISHNODE</code> refererar till den vanliga AEM-publiceringsnoden och <code>IMAGESERVICEPUBLISHNODE</code> refererar till Image Service URL.</p> <p>Se även <a href="/help/assets/delivering-dynamic-media-assets.md">Leverera Dynamic Media-resurser</a>.</p> </td>
   </tr>
  </tbody>
 </table>
 
-### WCM Dynamic Media och Interactive Media Components {#wcm-dynamic-media-and-interactive-media-components}
+### WCM-Dynamic Media och interaktiva mediekomponenter {#wcm-dynamic-media-and-interactive-media-components}
 
-WCM-sidor som refererar till komponenterna Dynamic Media och Interactive Media refererar till leveranstjänsten.
+WCM-sidor som refererar till Dynamic Media och interaktiva mediekomponenter refererar till leveranstjänsten.
