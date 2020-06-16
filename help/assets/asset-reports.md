@@ -1,45 +1,54 @@
 ---
-title: Rapporter om era digitala resurser
-description: Förstå rapporter om era resurser i Adobe Experience Manager Assets som hjälper er att förstå hur era digitala resurser används, används och delas.
+title: Rapporter om användning och delning av digitala resurser.
+description: Rapporterar om dina resurser i [!DNL Adobe Experience Manager Assets] som hjälper dig att förstå användningen, aktiviteten och delningen av dina digitala resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 2faf210d4177d6b2e29795b5668f8199816097eb
+source-git-commit: bc08b0039f8be92a7638245b1770c2ad21503f63
 workflow-type: tm+mt
-source-wordcount: '983'
-ht-degree: 11%
+source-wordcount: '959'
+ht-degree: 8%
 
 ---
 
 
 # Asset Reports {#asset-reports}
 
-Resursrapportering är ett viktigt verktyg för att utvärdera hur användbar Adobe Experience Manager Assets-distributionen är. Med Assets kan ni generera olika rapporter för era digitala resurser. Rapporterna innehåller användbar information om hur ditt system används, hur användarna interagerar med resurser och vilka resurser som hämtas och delas.
+Med tillgångsrapportering kan du utvärdera hur användbar din [!DNL Adobe Experience Manager Assets] distribution är. Med [!DNL Assets]kan ni generera olika rapporter för era digitala resurser. Rapporterna innehåller användbar information om hur ditt system används, hur användarna interagerar med resurser och vilka resurser som hämtas och delas.
 
-Använd informationen i rapporterna för att ta fram nyckeltal för att mäta användningen av resurser inom företaget och hos kunderna.
+Använd informationen i rapporterna för att ta fram nyckeltal för att mäta hur väl ert företag och era kunder börjar använda [!DNL Assets] dem.
 
-I ramverket för Assets-rapportering används Sling-jobb för att asynkront bearbeta rapportbegäranden på ett ordnat sätt. Den kan skalas för stora databaser. Asynkron rapportbearbetning ökar effektiviteten och hastigheten med vilken rapporter genereras.
+I [!DNL Assets] rapporteringsramverket används [!DNL Sling] jobb för att asynkront bearbeta rapportbegäranden på ett ordnat sätt. Den kan skalas för stora databaser. Asynkron rapportbearbetning ökar effektiviteten och hastigheten med vilken rapporter genereras.
 
 Rapporthanteringsgränssnittet är intuitivt och innehåller detaljerade alternativ och kontroller för att komma åt arkiverade rapporter och visa rapportkörningsstatus (lyckad, misslyckad och köad).
 
 När en rapport skapas meddelas du via ett e-postmeddelande (valfritt) och ett inkorgsmeddelande. Du kan visa, hämta eller ta bort en rapport från rapportlistsidan, där alla tidigare genererade rapporter visas.
 
+## Förutsättning {#prerequisite-for-reporting}
+
+Om du vill generera rapporter måste du se till att:
+
+* Aktivera [!UICONTROL Day CQ DAM Event Recorder] tjänsten från **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
+* Välj de aktiviteter eller händelser som du vill rapportera om. Om du till exempel vill generera en rapport om hämtade resurser väljer du [!UICONTROL Asset downloaded (DOWNLOADED)].
+
+![Aktivera tillgångsrapportering i webbkonsolen](assets/reports-config-day-cq-dam-event-recorder.png)
+
 ## Generera rapporter {#generate-reports}
 
-Experience Manager Assets genererar följande standardrapporter för er:
+[!DNL Experience Manager Assets] genererar följande standardrapporter:
 
 * Överför
 * Hämta
 * Förfaller
 * Ändring
 * Publicera
-* Publicera varumärkesportalen
+* [!DNL Brand Portal] publicera
 * Diskanvändning
 * Filer
 * Länkdelning
 
 [!DNL Adobe Experience Manager] administratörer kan enkelt generera och anpassa dessa rapporter för din implementering. Administratören kan följa de här stegen för att skapa en rapport:
 
-1. I Experience Manager-gränssnittet klickar du på **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Reports]**.
+1. I [!DNL Experience Manager] gränssnittet klickar du på **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Reports]**.
 
 ![Verktygssida för att navigera bland resurser - rapport](assets/AssetsReportNavigation.png)
 
@@ -47,10 +56,6 @@ Experience Manager Assets genererar följande standardrapporter för er:
 1. På **[!UICONTROL Create Report]** sidan väljer du den rapport som du vill skapa och klickar på **[!UICONTROL Next]**.
 
    ![Välj rapporttyp](assets/choose_report.png)
-
-   >[!NOTE]
-   >
-   >Innan du kan generera en **[!UICONTROL Asset Downloaded]**-rapport måste du kontrollera att tjänsten för hämtning av resurser är aktiverad. Från webbkonsolen (`https://[aem_server]:[port]/system/console/configMgr`) öppnar du konfigurationen **[!UICONTROL Day CQ DAM Event Recorder]** och väljer alternativet **[!UICONTROL Asset Downloaded (DOWNLOADED)]** i Händelsetyper, om det inte redan är valt.
 
    >[!NOTE]
    >
@@ -80,7 +85,7 @@ Experience Manager Assets genererar följande standardrapporter för er:
 
    ![Detaljsida för rapporten Filer](assets/files_report.png)
 
-   I rapporten **[!UICONTROL Link Share]** visas URL:er till resurser som delas med externa användare inifrån Assets. Den innehåller e-post-ID:n för den användare som delat resurserna, e-post-ID:n för de användare som resurserna delas med, delningsdatum och utgångsdatum för länken. Det går inte att anpassa kolumnerna.
+   I rapporten **[!UICONTROL Link Share]** visas URL:er till resurser som delas med externa användare inifrån [!DNL Assets]. Den innehåller e-post-ID:n för den användare som delat resurserna, e-post-ID:n för de användare som resurserna delas med, delningsdatum och utgångsdatum för länken. Det går inte att anpassa kolumnerna.
 
    The **[!UICONTROL Link Share]** report, does not include options for sub-folders and renditions because it merely publishes the shared URLs that appear under `/var/dam/share`.
 
@@ -92,12 +97,12 @@ Experience Manager Assets genererar följande standardrapporter för er:
 
    ![Markera eller avmarkera rapportkolumner](assets/configure_columns.png)
 
-   Om du vill visa ett anpassat kolumnnamn eller en egenskapssökväg konfigurerar du egenskaperna för resursens binärfil under noden jcr:content i CRX. Du kan också lägga till den via egenskapssökvägsväljaren.
+   Om du vill visa ett anpassat kolumnnamn eller en egenskapssökväg konfigurerar du egenskaperna för resursens binärfil under `jcr:content` noden i CRX. Du kan också lägga till den via egenskapssökvägsväljaren.
 
    ![Markera eller avmarkera rapportkolumner](assets/custom_columns.png)
 
 1. Klicka **[!UICONTROL Create]** i verktygsfältet. Ett meddelande meddelar att rapportgenereringen har initierats.
-1. På sidan Resursrapporter baseras rapportgenereringsstatusen på rapportjobbets aktuella tillstånd, till exempel Slutfört, Misslyckades, Köat eller Schemalagt. Samma status visas i inkorgen för meddelanden.Om du vill visa rapportsidan klickar du på rapportlänken. Alternatively, select the report, and click **[!UICONTROL View]** from the toolbar.
+1. På [!UICONTROL Asset Reports] sidan baseras rapportgenereringsstatusen på rapportjobbets aktuella tillstånd, till exempel [!UICONTROL Success], [!UICONTROL Failed], [!UICONTROL Queued]eller [!UICONTROL Scheduled]. Samma status visas i inkorgen för meddelanden.Om du vill visa rapportsidan klickar du på rapportlänken. Alternatively, select the report, and click **[!UICONTROL View]** from the toolbar.
 
    ![En genererad rapport](assets/report_page.png)
 
@@ -112,12 +117,12 @@ Du kan lägga till anpassade kolumner i följande rapporter om du vill visa mer 
 * Förfaller
 * Ändring
 * Publicera
-* Publicera varumärkesportalen
+* [!DNL Brand Portal] publicera
 * Filer
 
 Följ de här stegen för att lägga till anpassade kolumner i de här rapporterna:
 
-1. Klicka på **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Reports]** i Experience Manager-gränssnittet.
+1. I [!DNL Manager interface]klickar du på **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Reports]**.
 1. På [!UICONTROL Asset Reports] sidan klickar du **[!UICONTROL Create]** i verktygsfältet.
 
 1. På **[!UICONTROL Create Report]** sidan väljer du den rapport som du vill skapa och klickar på **[!UICONTROL Next]**.
