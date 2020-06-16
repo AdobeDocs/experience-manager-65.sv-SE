@@ -1,8 +1,8 @@
 ---
 title: Communities Scoring and Badges
 seo-title: Communities Scoring and Badges
-description: Med AEM Communities-poäng och -märken kan ni identifiera och belöna communitymedlemmar
-seo-description: Med AEM Communities-poäng och -märken kan ni identifiera och belöna communitymedlemmar
+description: Med AEM Communities poäng och emblem kan ni identifiera och belöna communitymedlemmar
+seo-description: Med AEM Communities poäng och emblem kan ni identifiera och belöna communitymedlemmar
 uuid: d73683df-a413-4b3c-869c-67568bfdfcf6
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -12,9 +12,9 @@ discoiquuid: ea033bb9-cb92-4c93-855f-8c902999378c
 docset: aem65
 tagskeywords: scoring, badging, badges, gamification
 translation-type: tm+mt
-source-git-commit: fb7d2a3cebda86fa4d91d2ea89ae459fa4b86fa0
+source-git-commit: df59879cfa6b0bc7eba13f679e833fabbcbe92f2
 workflow-type: tm+mt
-source-wordcount: '2896'
+source-wordcount: '2897'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 ## Översikt {#overview}
 
-Funktionen AEM Communities-poäng och -badges gör det möjligt att identifiera och belöna communitymedlemmar.
+Med funktionen för poängsättning och märkning av AEM Communities kan man identifiera och belöna communitymedlemmar.
 
 De viktigaste aspekterna på poängsättning och märkning är:
 
@@ -126,7 +126,7 @@ Se avsnittet [Snabbtest](#quick-test) för att aktivera poängsättning för en 
 
 Om du vill aktivera poängsättning och märken lägger du till egenskaperna `scoringRules` och `badgingRules` till i en nod i platsens innehållsträd.
 
-Om webbplatsen redan är publicerad, efter att ha tillämpat alla regler och aktiverat komponenter, publicerar du om webbplatsen.
+Om webbplatsen redan är publicerad, efter att ha tillämpat alla regler och aktiverat komponenter, publicerar du om den.
 
 Reglerna som gäller för en komponent som har aktiverats för badging är reglerna för den aktuella noden eller dess överordnade nod.
 
@@ -298,7 +298,7 @@ I releasen finns två poängregler för [forumfunktionen](/help/communities/func
 
 ### Aktivera anpassade poängsättningsregler {#activating-custom-scoring-rules}
 
-Alla ändringar eller tillägg som görs i poängsättningsregler eller underregler i redigeringsmiljön måste installeras vid publicering.
+Alla ändringar eller tillägg som görs i resultatregler eller underregler i redigeringsmiljön måste installeras vid publicering.
 
 ## Badningsregler {#badging-rules}
 
@@ -349,7 +349,7 @@ Egenskapen `scoringRules` för en badging-regel begränsar helt enkelt vilka po�
      <li>number = score</li>
      <li>| = den lodräta linjen char (U+007C)</li>
      <li>sökväg = fullständig sökväg till badge-bildresurs</li>
-    </ul> Strängarna måste ordnas så att siffrorna ökar i värde och inget mellanrum ska visas mellan talet och sökvägen.<br /> Exempelpost:<br /> <code>80|/libs/settings/community/badging/images/gold-badge/jcr:content/gold.png</code></td>
+    </ul> Strängarna måste ordnas så att siffrorna ökar i värde och inget tomt utrymme ska visas mellan talet och banan.<br /> Exempelpost:<br /> <code>80|/libs/settings/community/badging/images/gold-badge/jcr:content/gold.png</code></td>
   </tr>
   <tr>
    <td>badgingType</td>
@@ -455,7 +455,7 @@ För de communitykomponenter som levereras beskrivs de `verbs` definierade för 
 | POST | medlem skapar en kalenderhändelse |
 | LÄGG TILL | kommentarer från medlemmar i en kalenderhändelse |
 | UPPDATERA | medlemmens kalenderhändelse eller -kommentar har redigerats |
-| TA BORT | medlemmens kalenderhändelse eller -kommentar tas bort |
+| DELETE | medlemmens kalenderhändelse eller -kommentar tas bort |
 
 **[Comments Component](/help/communities/comments.md)**SocialEvent`topic`= com/adobe/cq/social/comment
 
@@ -464,7 +464,7 @@ För de communitykomponenter som levereras beskrivs de `verbs` definierade för 
 | POST | medlem skapar en kommentar |
 | LÄGG TILL | medlemssvar på kommentarer |
 | UPPDATERA | Medlemmens kommentar har redigerats |
-| TA BORT | medlemmens kommentar har tagits bort |
+| DELETE | medlemmens kommentar har tagits bort |
 
 **[File Library Component](/help/communities/file-library.md)**SocialEvent`topic`= com/adobe/cq/social/fileLibrary
 
@@ -473,7 +473,7 @@ För de communitykomponenter som levereras beskrivs de `verbs` definierade för 
 | POST | medlem skapar en mapp |
 | BIFOGA | medlem överför en fil |
 | UPPDATERA | medlemmen uppdaterar en mapp eller fil |
-| TA BORT | medlem tar bort en mapp eller fil |
+| DELETE | medlem tar bort en mapp eller fil |
 
 **[Forum Component](/help/communities/forum.md)**SocialEvent`topic`= com/adobe/cq/social/forum
 
@@ -482,7 +482,7 @@ För de communitykomponenter som levereras beskrivs de `verbs` definierade för 
 | POST | medlem skapar forumämne |
 | LÄGG TILL | medlemssvar på forumämnet |
 | UPPDATERA | Medlemmens forumämne eller svar har redigerats |
-| TA BORT | forumämnet eller svaret för en medlem tas bort |
+| DELETE | forumämnet eller svaret för en medlem tas bort |
 
 **[Journal Component](/help/communities/blog-feature.md)**SocialEvent`topic`= com/adobe/cq/social/journal
 
@@ -491,7 +491,7 @@ För de communitykomponenter som levereras beskrivs de `verbs` definierade för 
 | POST | medlem skapar en bloggartikel |
 | LÄGG TILL | kommentarerna på en bloggartikel |
 | UPPDATERA | Medlemmens bloggartikel eller kommentar redigeras |
-| TA BORT | Medlemmens bloggartikel eller kommentar tas bort |
+| DELETE | Medlemmens bloggartikel eller kommentar tas bort |
 
 **[QnA Component](/help/communities/working-with-qna.md)**SocialEvent`topic`= com/adobe/cq/social/qna
 
@@ -502,7 +502,7 @@ För de communitykomponenter som levereras beskrivs de `verbs` definierade för 
 | UPPDATERA | -medlemmens fråga eller svar har redigerats |
 | MARKERA | Medlemmens svar har valts |
 | AVMARKERA | Medlemmens svar är avmarkerat |
-| TA BORT | en medlems fråga eller svar tas bort |
+| DELETE | en medlems fråga eller svar tas bort |
 
 **[Review Component](/help/communities/reviews.md)**SocialEvent`topic`= com/adobe/cq/social/review
 
@@ -510,7 +510,7 @@ För de communitykomponenter som levereras beskrivs de `verbs` definierade för 
 |---|---|
 | POST | medlem skapar granskning |
 | UPPDATERA | Medlemmens granskning har redigerats |
-| TA BORT | Medlemmens granskning har tagits bort |
+| DELETE | Medlemmens granskning har tagits bort |
 
 **[Värderingskomponent](/help/communities/rating.md)**SocialEvent`topic`= com/adobe/cq/social/tally/rating
 
