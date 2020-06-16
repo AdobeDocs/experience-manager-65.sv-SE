@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 873ce073-0055-4e1b-b3c6-ae7967700894
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a268b7046430cc17c8b59b9306cf3533d73bb4a2
+source-git-commit: f64eb57a69f2124523bd6eaed3e2f58a54c1ea8e
+workflow-type: tm+mt
+source-wordcount: '4989'
+ht-degree: 0%
 
 ---
 
@@ -26,16 +29,16 @@ Mer information om hur du skapar MBeans för att hantera tjänster med JMX-konso
 
 ## Underhåll av arbetsflöden {#workflow-maintenance}
 
-Åtgärder för att administrera instanser av arbetsflöden som körs, har slutförts, inaktuella och misslyckats.
+Åtgärder för att administrera körda, slutförda, inaktuella och misslyckade arbetsflödesinstanser.
 
 * Domän: com.adobe.granite.workflow
-* Typ:Underhåll
+* Typ: Underhåll
 
 >[!NOTE]
 >
 >I [arbetsflödeskonsolen](/help/sites-administering/workflows-administering.md) finns ytterligare administrationsverktyg för arbetsflöden och beskrivningar av möjliga statusvärden för arbetsflödesinstanser.
 
-### Operationer {#operations}
+### Användning {#operations}
 
 **listRunningWorkflowsPerModel** Visar antalet arbetsflödesinstanser som körs för varje arbetsflödesmodell.
 
@@ -217,7 +220,7 @@ Mer information om hur du skapar MBeans för att hantera tjänster med JMX-konso
 Information om CRX-databasen
 
 * Domän: com.adobe.granite
-* Typ:Databas
+* Typ: Databas
 
 ### Attribut {#attributes}
 
@@ -250,7 +253,7 @@ Information om CRX-databasen
    <td>Anger om en nod och en egenskap för noden kan ha samma namn. true anger att samma namn stöds, false anger att det inte stöds. </td>
   </tr>
   <tr>
-   <td>identifierare.stabilitet</td>
+   <td>identifier.stability</td>
    <td>Anger stabiliteten för nodidentifierare som inte kan refereras. Följande värden är möjliga:
     <ul>
      <li>identifier.ability.indefinite.duration: Identifierare ändras inte.</li>
@@ -264,7 +267,7 @@ Information om CRX-databasen
    <td>Anger om JCR 1.0 XPath-frågespråket stöds. true anger stöd och false anger inget stöd.</td>
   </tr>
   <tr>
-   <td>crx.database.systemid</td>
+   <td>crx.repository.systemid</td>
    <td>Den systemidentifierare som finns i filen system.id.</td>
   </tr>
   <tr>
@@ -272,7 +275,7 @@ Information om CRX-databasen
    <td>Anger om JCR 1.0 XPath-frågespråket stöds. true anger stöd och false anger inget stöd.</td>
   </tr>
   <tr>
-   <td>jcr.database.version</td>
+   <td>jcr.repository.version</td>
    <td>Versionen för databasimplementeringen.</td>
   </tr>
   <tr>
@@ -296,7 +299,7 @@ Information om CRX-databasen
    <td><p>true anger att pseudoegenskapen jcr:score är tillgänglig i XPath- och SQL-frågor som innehåller en jcrfn:contains (in XPath) eller CONTAINS (in SQL)-funktion för fulltextsökning.</p> </td>
   </tr>
   <tr>
-   <td>option.simple.version.supported</td>
+   <td>option.simple.versioning.supported</td>
    <td>true anger att databasen har stöd för enkel versionshantering. Med enkel versionshantering upprätthåller databasen en sekventiell serie med versioner av en nod.</td>
   </tr>
   <tr>
@@ -328,7 +331,7 @@ Information om CRX-databasen
    <td>Den version av JCR-specifikationen som databasen implementerar.</td>
   </tr>
   <tr>
-   <td>option.Journaled.Observation.supported</td>
+   <td>option.journaled.observation.supported</td>
    <td>true anger att program kan utföra journalförd observation av databasen. med journalförd observation kan en uppsättning ändringsmeddelanden inhämtas för en viss tidsperiod. </td>
   </tr>
   <tr>
@@ -356,7 +359,7 @@ Information om CRX-databasen
    <td>true anger att databasen stöder skapande av delningsbara noder.</td>
   </tr>
   <tr>
-   <td>crx.Cluster.id</td>
+   <td>crx.cluster.id</td>
    <td>Identifieraren för databasklustret.</td>
   </tr>
   <tr>
@@ -368,19 +371,19 @@ Information om CRX-databasen
    <td>true anger att databasen stöder fulltextsökning.</td>
   </tr>
   <tr>
-   <td>node.type.management.arv</td>
+   <td>node.type.management.inheritance</td>
    <td><p>Anger nivån på databasstöd för nodtyparv. Följande värden är möjliga:</p> <p>node.type.management.inherance.minimum: Registrering av primära nodtyper är begränsad till dem som bara har not:base som supertyp. Registrering av blandnodtyper är begränsad till dem som saknar supertyp.</p> <p>node.type.management.inheritance.single: Registrering av primära nodtyper är begränsad till dem med en supertyp. Registrering av blandnodtyper är begränsad till dem med högst en supertyp.</p> <p><br /> node.type.management.inheritance.multiple: Primära nodtyper kan registreras med en eller flera supertyper. Blandnodtyper kan registreras med noll eller flera supertyper.</p> </td>
   </tr>
   <tr>
-   <td>crx.Cluster.preferredMaster</td>
+   <td>crx.cluster.preferredMaster</td>
    <td>true anger att den här klusternoden är den primära huvudnoden i klustret.</td>
   </tr>
   <tr>
-   <td>option.transaction.supported</td>
+   <td>option.transactions.supported</td>
    <td>true anger att databasen stöder transaktioner.</td>
   </tr>
   <tr>
-   <td>jcr.database.vendor.url</td>
+   <td>jcr.repository.vendor.url</td>
    <td>Databasleverantörens URL.</td>
   </tr>
   <tr>
@@ -396,7 +399,7 @@ Information om CRX-databasen
    <td>true anger att databasen stöder bevarande av ordningen för underordnade noder.</td>
   </tr>
   <tr>
-   <td>jcr.database.vendor</td>
+   <td>jcr.repository.vendor</td>
    <td>Namnet på databasleverantören.</td>
   </tr>
   <tr>
@@ -409,7 +412,7 @@ Information om CRX-databasen
     </ul> </td>
   </tr>
   <tr>
-   <td>org.apache.jackrabbit.spi.Commons.AdditionalEventInfo</td>
+   <td>org.apache.jackrabbit.spi.commons.AdditionalEventInfo</td>
    <td> </td>
   </tr>
   <tr>
@@ -429,7 +432,7 @@ Information om CRX-databasen
    <td>true anger att databasen stöder noder på samma nivå (noder med samma överordnade nod) med samma namn.</td>
   </tr>
   <tr>
-   <td>node.type.management.rest.definitions.supported</td>
+   <td>node.type.management.residual.definitions.supported</td>
    <td>true anger att databasen stöder namnegenskaper med restdefinitioner. Om det stöds kan namnattributet för en objektdefinition vara en asterisk ("*").</td>
   </tr>
   <tr>
@@ -437,7 +440,7 @@ Information om CRX-databasen
    <td>true anger att databasen automatiskt stöder skapande av underordnade objekt (noder eller egenskaper) för en nod när noden skapas.</td>
   </tr>
   <tr>
-   <td>crx.Cluster.master</td>
+   <td>crx.cluster.master</td>
    <td>true anger att den här databasnoden är huvudnoden i klustret.</td>
   </tr>
   <tr>
@@ -445,7 +448,7 @@ Information om CRX-databasen
    <td>true anger att option.xml.export.support är true och query.languages har en längd som inte är noll.</td>
   </tr>
   <tr>
-   <td>option.unfied.content.supported</td>
+   <td>option.unfiled.content.supported</td>
    <td>true anger att databasen stöder osorterat innehåll. Osorterade noder ingår inte i databashierarkin.</td>
   </tr>
   <tr>
@@ -457,7 +460,7 @@ Information om CRX-databasen
    <td>true anger att databasen har stöd för fullständig versionshantering.</td>
   </tr>
   <tr>
-   <td>jcr.database.name</td>
+   <td>jcr.repository.name</td>
    <td>Namnet på databasen.</td>
   </tr>
   <tr>
@@ -465,15 +468,15 @@ Information om CRX-databasen
    <td>true anger att databasen stöder låsning av noder. Låsning gör att användaren tillfälligt kan förhindra att andra användare gör ändringar.</td>
   </tr>
   <tr>
-   <td>jcr.database.version.display</td>
+   <td>jcr.repository.version.display</td>
    <td> </td>
   </tr>
   <tr>
-   <td>option.activity.supported</td>
+   <td>option.activities.supported</td>
    <td>true anger att databasen stöder aktiviteter. Aktiviteter är en uppsättning ändringar som utförs på en arbetsyta som sammanfogas till en annan arbetsyta.</td>
   </tr>
   <tr>
-   <td>node.type.management.multivalue.properties.supported</td>
+   <td>node.type.management.multivalued.properties.supported</td>
    <td>true anger att databasen stöder nodegenskaper som kan ha noll eller flera värden.</td>
   </tr>
   <tr>
@@ -525,7 +528,7 @@ Skrivskyddad.
 
 **ClusterNodeId** Identifieraren för den här noden i databaskluster. Skrivskyddad.
 
-### Operationer {#operations-1}
+### Användning {#operations-1}
 
 **createWorkspace** Skapar en arbetsyta i den här databasen.
 
@@ -595,12 +598,12 @@ Skrivskyddad.
 
 * Returnerat värde: ingen
 
-**becomesClusterMaster** Anger den här databasnoden som huvudnod i klustret. Om det inte redan är en huvudserver stoppar det här kommandot den aktuella huvudinstansens avlyssnare och startar en huvudavlyssnare på den aktuella noden. Den här noden anges sedan som huvudnod och startas om, vilket gör att alla slavnoder ansluter till den här instansen.
+**becomesClusterMaster** Anger denna databasnod som huvudnod i klustret. Om det inte redan är en huvudserver stoppar det här kommandot den aktuella huvudinstansens avlyssnare och startar en huvudavlyssnare på den aktuella noden. Den här noden anges sedan som huvudnod och startas om, vilket gör att alla andra noder i klustret (dvs. de som styrs av huvudnoden) ansluter till den här instansen.
 
 * Argument: ingen
 * Returnerat värde: ingen
 
-**joinCluster** Lägger till den här databasen i ett kluster som en slavnod. Du måste ange ett användarnamn och lösenord för autentisering. Anslutningen använder grundläggande autentisering. Säkerhetsuppgifterna är base-64-kodade innan de skickas till servern.
+**joinCluster** Lägger till den här databasen i ett kluster som en nod som styrs av klusterhanteraren. Du måste ange ett användarnamn och lösenord för autentisering. Anslutningen använder grundläggande autentisering. Säkerhetsuppgifterna är base-64-kodade innan de skickas till servern.
 
 * Argument:
 
@@ -671,7 +674,7 @@ Statistisk information om databasfrågor.
 
 **PopularQueriesQueueSize** Det maximala antalet frågor i PopularQueries-listan. Läs/skriv.
 
-### Operationer {#operations-2}
+### Användning {#operations-2}
 
 **clearSlowQueriesQueue** Tar bort alla frågor från listan SlowQueries.
 
@@ -687,10 +690,10 @@ Statistisk information om databasfrågor.
 
 Övervaka tjänsterna för varje replikeringsagent. När du skapar en replikeringsagent visas tjänsten automatiskt i JMX-konsolen.
 
-* **** Domän: com.adobe.granite.replication
-* **** Typ: agent
-* **** Namn: inget värde
-* **** Egenskaper: {id=&quot;*Name*&quot;}, där *Name* är värdet för agentens Name-egenskap.
+* **Domän:** com.adobe.granite.replication
+* **Typ:** agent
+* **Namn:** inget värde
+* **Egenskaper:** {id=&quot;*Name*&quot;}, där *Name* är värdet för agentens Name-egenskap.
 
 ### Attribut {#attributes-3}
 
@@ -732,7 +735,7 @@ Läs/skriv.
 
 **QueueLastProcessTime** Ett Date-värde som anger när det föregående jobbet slutfördes. Skrivskyddad.
 
-### Operationer {#operations-3}
+### Användning {#operations-3}
 
 **queueForceRetry** för blockerade köer skickar kommandot Försök igen till kön.
 
@@ -746,7 +749,7 @@ Läs/skriv.
 
 ## Sling Engine {#sling-engine}
 
-Tillhandahåller statistik om HTTP-begäranden så att du kan övervaka prestandan för SlingRequestProcessor-tjänsten.
+Tillhandahåller statistik om HTTP-begäranden så att du kan övervaka prestanda för tjänsten SlingRequestProcessor.
 
 * Domän: org.apache.sling
 * Typ: motor
@@ -764,7 +767,7 @@ Tillhandahåller statistik om HTTP-begäranden så att du kan övervaka prestand
 
 **MeanRequestDurationMsec** Den genomsnittliga tid som krävs för att bearbeta en begäran. Medelvärdet beräknas med hjälp av alla begäranden sedan statistiken senast återställdes
 
-### Operationer {#operations-4}
+### Användning {#operations-4}
 
 **resetStatistics** Anger att all statistik ska vara noll. Återställ statistiken när du behöver analysera bearbetningsprestanda för begäranden under en viss tidsperiod.
 
@@ -792,7 +795,7 @@ Information om startprocessen och Snabbstart.
 * Domän: com.adobe.granite.quickstart
 * Typ: Startprogram
 
-### Operationer {#operations-5}
+### Användning {#operations-5}
 
 **logg**
 
@@ -863,9 +866,9 @@ Flera tredjepartsserverresurser installerar MBeans som visar attribut och åtgä
    <td><a href="https://docs.oracle.com/javase/8/docs/api/javax/management/package-summary.html">javax.management</a> -paket</td>
   </tr>
   <tr>
-   <td>java.util.log</td>
+   <td>java.util.logging</td>
    <td> </td>
-   <td><a href="https://docs.oracle.com/javase/8/docs/api/java/util/logging/LoggingMXBean.html">java.util.log.LoggingMXBean</a></td>
+   <td><a href="https://docs.oracle.com/javase/8/docs/api/java/util/logging/LoggingMXBean.html">java.util.logging.LoggingMXBean</a></td>
   </tr>
   <tr>
    <td>osgi.core</td>
