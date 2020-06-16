@@ -11,7 +11,7 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 378bc33d-ab6c-4651-9688-102c961561fc
 translation-type: tm+mt
-source-git-commit: af27ed32c21a338600201e05871c1b18548ecba6
+source-git-commit: df992fc0204519509c4662a7d4315939af2fc92c
 workflow-type: tm+mt
 source-wordcount: '9241'
 ht-degree: 9%
@@ -94,7 +94,7 @@ För statisk grafik är det grundläggande kravet att tillhandahålla ett motsva
 
 >[!NOTE]
 >
->I vissa färdiga komponenter, som **karuseller** och **bildspel**, går det inte att lägga till alternativa textbeskrivningar för bilder. När versioner av dessa implementeras för er AEM-instans måste ert utvecklingsteam konfigurera dessa komponenter så att de stöder attributet `alt`[, så att författare kan lägga till det i innehållet (se Lägga till stöd för ytterligare HTML-element och attribut](/help/sites-administering/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
+>I vissa färdiga komponenter, som **karuseller** och **bildspel**, går det inte att lägga till alternativa textbeskrivningar för bilder. När versioner av dessa implementeras för er AEM-instans måste ert utvecklingsteam konfigurera dessa komponenter så att de stöder attributet `alt`[, så att författare kan lägga till det i innehållet (se Lägga till stöd för ytterligare HTML-element och attribut](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
 
 Fältet **Alt-text** finns på fliken **Avancerade** bildegenskaper i dialogrutan **Bildkomponent** :
 
@@ -447,7 +447,7 @@ Du kan se till att dina webbsidor får rätt struktur genom att:
    * Elementet gör det enklare för användare som inte är synkade att förstå den information som presenteras i en tabell genom att ge en sammanfattning av vad en synkad användare kan se. `<h3 class="summary">` Detta är särskilt användbart när komplexa eller okonventionella tabellayouter används (det här attributet visas inte i webbläsaren, det läses bara ut för hjälpfunktioner).
    * Attributet `scope` för `<th>` elementet används för att ange om en cell representerar en rubrik för en viss rad eller för en viss kolumn. Ett liknande sätt är att använda attributen header och id i komplexa tabeller, där dataceller kan kopplas till en eller flera rubriker.
    >[!NOTE]
-   Som standard är dessa element och attribut inte direkt tillgängliga, men systemadministratören kan lägga till stöd för dessa värden i dialogrutan **Tabellegenskaper**[ (se Lägga till stöd för ytterligare HTML-element och attribut](/help/sites-administering/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
+   Som standard är dessa element och attribut inte direkt tillgängliga, men systemadministratören kan lägga till stöd för dessa värden i dialogrutan **Tabellegenskaper**[ (se Lägga till stöd för ytterligare HTML-element och attribut](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
 
    När du lägger till en **tabell** kan du konfigurera **tabellegenskaper** med hjälp av dialogrutan.
 
@@ -674,7 +674,7 @@ Poängen är:
 1. Krav som rör flimmer eller blinkande innehåll finns i [Designa inte innehåll på ett sätt som är känt för att orsaka kramper (2.3)](#seizures).
 1. Eftersom innehåll som inte uppfyller detta kriterium kan påverka användarens möjlighet att använda hela sidan, måste allt innehåll på webbsidan (vare sig det används för att uppfylla andra kriterier för framgång eller inte) uppfylla detta kriterium. Se [Krav på överensstämmelse 5: Icke-interferens](https://www.w3.org/TR/WCAG20/#cc5).
 1. Innehåll som uppdateras regelbundet av programvara eller som direktuppspelas till användaragenten behöver inte bevara eller presentera information som genereras eller tas emot mellan inledandet av paus och återupptagandet, eftersom detta kanske inte är tekniskt möjligt, och i många situationer kan det vara vilseledande.
-1. En animering som är en del av en förinläsningsfas eller liknande situation kan anses vara nödvändig om interaktion inte kan ske under den fasen för alla användare och om inte förloppet visar sig kan det förvirra användarna eller få dem att tro att innehållet frystes eller förstörs.
+1. En animering som är en del av en förinläsningsfas eller liknande situation kan anses vara nödvändig om interaktion inte kan ske under den fasen för alla användare, och om inte förloppet visar sig kan det förvirra användarna eller få dem att tro att innehållet har frysts eller brutits.
 
 #### Syfte - Pausa, stoppa, dölj (2.2.2) {#purpose-pause-stop-hide}
 
@@ -693,7 +693,7 @@ Beroende på innehållets natur kan du använda ett eller flera av följande fö
 #### Mer information - Pausa, Stoppa, Dölj (2.2.2) {#more-information-pause-stop-hide}
 
 * [Förstå villkor för framgång 2.2.2](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
-* [Hur man uppfyller kriterierna för framgång 2.4.2](https://www.w3.org/WAI/WCAG20/quickref/#qr-time-limits-pause)
+* [Hur man uppfyller kriterierna för framgång 2.2.2](https://www.w3.org/WAI/WCAG20/quickref/#qr-time-limits-pause)
 
 ### Kramper (2.3) {#seizures}
 
@@ -743,7 +743,7 @@ You can also edit the page title when editing a page, which is accessible by **S
 #### Mer information - sida titel (2.4.2) {#more-information-page-titled}
 
 * [Förstå villkor för framgång 2.4.2](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html)
-* [Hur man uppfyller kriterierna för framgång 2.2.2](https://www.w3.org/WAI/WCAG20/quickref/#qr-navigation-mechanisms-title)
+* [Hur man uppfyller kriterierna för framgång 2.4.2](https://www.w3.org/WAI/WCAG20/quickref/#qr-navigation-mechanisms-title)
 
 ### Länksyfte (i sitt sammanhang) (2.4.4)  {#link-purpose-in-context}
 
@@ -887,7 +887,7 @@ På samma sätt kan webbläsaren återge ett ovanligt låneord eller en ovanlig 
 >[!NOTE]
 Det är inte nödvändigt att följa detta kriterium när man inkluderar namn eller städer på olika språk, eller när man använder låneord eller fraser som har blivit vanliga på standardspråket (t.ex. *schadenfreude* på engelska).
 
-Om du vill lägga till intervallelementet med ett lämpligt språk kan du redigera HTML-koden manuellt i källredigeringsläget för textredigeraren så att den läses som ovan. Alternativt kan attributet inkluderas i textredigeringsfilen av en systemadministratör (se `lang` Lägga till stöd för ytterligare HTML-element och attribut [](/help/sites-administering/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
+Om du vill lägga till intervallelementet med ett lämpligt språk kan du redigera HTML-koden manuellt i källredigeringsläget för textredigeraren så att den läses som ovan. Alternativt kan attributet inkluderas i textredigeringsfilen av en systemadministratör (se `lang` Lägga till stöd för ytterligare HTML-element och attribut [](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
 
 #### Mer information - Språk för delar (3.1.2) {#more-information-language-of-parts}
 
@@ -928,7 +928,7 @@ Om det finns en grupp med relaterade kontroller, t.ex. **alternativknappar**, ka
 
 ![Lägger till objekt i gruppen med alternativknappar. Grupptiteln är &#39;Kontakta mig via&#39; - definieras i fältet Titel.](assets/chlimage_1-24a.png)
 
-Det finns dock ingen programmatisk koppling mellan grupptiteln och alternativknapparna själva. Mallredigerare måste kapsla in titeln i de nödvändiga `fieldset`- och `legend`-taggarna för att skapa den här kopplingen. Detta kan bara göras genom att redigera sidans källkod. En systemadministratör kan också lägga till stöd för dessa element så att de visas i dialogrutan **Fältegenskaper**[ (se Lägga till stöd för ytterligare HTML-element och attribut](/help/sites-administering/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
+Det finns dock ingen programmatisk koppling mellan grupptiteln och alternativknapparna själva. Mallredigerare måste kapsla in titeln i de nödvändiga `fieldset`- och `legend`-taggarna för att skapa den här kopplingen. Detta kan bara göras genom att redigera sidans källkod. En systemadministratör kan också lägga till stöd för dessa element så att de visas i dialogrutan **Fältegenskaper**[ (se Lägga till stöd för ytterligare HTML-element och attribut](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
 
 #### Ytterligare överväganden för formulär {#additional-considerations-for-forms}
 
