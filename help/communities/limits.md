@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: d855aac2-f34d-402f-9dc3-c7ad494b45f2
 translation-type: tm+mt
-source-git-commit: e4456e80059479ca874681e20f8546f29ac92597
+source-git-commit: df59879cfa6b0bc7eba13f679e833fabbcbe92f2
+workflow-type: tm+mt
+source-wordcount: '436'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +30,7 @@ Tilläggsgränser kan aktiveras individuellt från [medlemskonsolen](members.md)
 
 Med hjälp av medlemskonsolen kan bidragsgränser tas bort proaktivt för en medlem av en community-chef när som helst, eller tas bort reaktivt när en medlem skickar ett meddelande till en community-administratör som gör en sådan begäran.
 
-## Konfiguration av AEM Communities User Generated Content Contribution Limits {#aem-communities-user-generated-content-contribution-limits-configuration}
+## Konfiguration av AEM Communities-användargenererat innehållsavgiftsbegränsning {#aem-communities-user-generated-content-contribution-limits-configuration}
 
 Den här OSGi-konfigurationen:
 
@@ -48,33 +51,33 @@ Så här når du OSGi-konfigurationen:
 
 ![chlimage_1-127](assets/chlimage_1-127.png)
 
-* **[!UICONTROL Använd UGC-bidragsgränser automatiskt]**
+* **[!UICONTROL Automatically Apply UGC Contribution Limits]**
 
-   Om det här alternativet är markerat anger automatiskt bidragsgränser för användare när de registrerar sig som community-medlemmar. Detta återspeglas i communitymedlemmens profil och kan aktiveras/inaktiveras från [medlemskonsolen](members.md). Nya medlemmar med en e-postadress från en vitlistad domän begränsas aldrig.
+   Om det här alternativet är markerat anger automatiskt bidragsgränser för användare när de registrerar sig som community-medlemmar. Detta återspeglas i communitymedlemmens profil och kan aktiveras/inaktiveras från [medlemskonsolen](members.md). Nya medlemmar med en e-postadress från en lista över tillåtna domäner begränsas aldrig.
 
    Standard är avmarkerat.
 
-* **[!UICONTROL UGC-gräns]**
+* **[!UICONTROL UGC Limit]**
 
    Högsta antal bidrag.
 
    Standard är 10 inlägg.
 
-* **[!UICONTROL UGC-gränsfrekvens]**
+* **[!UICONTROL UGC Limit Frequency]**
 
    Den tidsperiod som begränsar UGC-gränsen.
 
    Standardvärdet är 60 minuter.
 
-* **[!UICONTROL Domäner]**
+* **[!UICONTROL Domains]**
 
-   En vit lista med en eller flera e-postdomäner. Markera +-ikonen om du vill göra ytterligare inmatningar.
+   En lista över tillåtna domäner för en eller flera e-postdomäner. Markera +-ikonen om du vill göra ytterligare inmatningar.
 
-   Användare med e-postadresser i de vita angivna domänerna påverkas inte när UGC-bidragsgränser tillämpas automatiskt. Om till exempel en domän `mycompany.com` läggs till i listan över domäner `me@mycompany.com` begränsas aldrig en medlem med e-postadress från publicering.
+   Användare med e-postadresser i listan över tillåtna domäner påverkas inte när UGC-bidragsgränser tillämpas automatiskt. Om till exempel en domän `mycompany.com` läggs till i listan över domäner `me@mycompany.com` begränsas aldrig en medlem med e-postadress från publicering.
 
-   Standard är en tom vit lista.
+   Standard är en tom lista över tillåtna användare.
 
-* **[!UICONTROL Meddelandemottagare]**
+* **[!UICONTROL Messaging Recipients]**
 
    Lista över ett eller flera auktoriserbara ID:n för medlemmar som kan ändra bidragsgränserna för medlemmar. Markera +-ikonen om du vill göra ytterligare inmatningar.
 
