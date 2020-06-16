@@ -10,7 +10,10 @@ topic-tags: platform
 content-type: reference
 discoiquuid: 5773ec1a-f15b-462d-8f9f-54ee1d7ead44
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: f64eb57a69f2124523bd6eaed3e2f58a54c1ea8e
+workflow-type: tm+mt
+source-wordcount: '576'
+ht-degree: 2%
 
 ---
 
@@ -104,7 +107,7 @@ Ett booleskt värde för `true` om en cookie hittas som inte anger något samtyc
 
 ### Funktionen maySetCookie(cookieName) {#maysetcookie-cookiename-function}
 
-Avgör om en viss cookie kan användas i användarens webbläsare. Den här funktionen motsvarar att använda `isOptedOut` funktionen tillsammans med att bestämma om den angivna cookien finns med i listan som `getWhitelsitCookieNames` funktionen returnerar.
+Avgör om en viss cookie kan användas i användarens webbläsare. Den här funktionen motsvarar att använda `isOptedOut` funktionen tillsammans med att bestämma om den angivna cookien finns med i listan som `getWhitelistCookieNames` funktionen returnerar.
 
 **Parametrar**
 
