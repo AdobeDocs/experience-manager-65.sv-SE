@@ -11,7 +11,10 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
+source-git-commit: df59879cfa6b0bc7eba13f679e833fabbcbe92f2
+workflow-type: tm+mt
+source-wordcount: '1884'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 * [AEM 6.5 Platform](/help/sites-deploying/deploy.md)
 
-* AEM Communities-licens
+* AEM Communities licens
 
 * Valfria licenser för:
 
@@ -76,7 +79,7 @@ source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
    * [Installera och konfigurera FFmpeg](/help/communities/ffmpeg.md)
    * [Installera JDBC-drivrutinen för MySQL](#jdbc-driver-for-mysql)
-   * [Installera AEM Communities SCORM-Engine](#scorm-package)
+   * [Installera AEM Communities SCORM-motorn](#scorm-package)
    * [Installera och konfigurera MySQL för aktivering](/help/communities/mysql.md)
 
 
@@ -92,11 +95,11 @@ AEM 6.5 Communities GA levereras med Communities-paket. Om du vill veta mer om u
 
 Från och med AEM 6.4 levereras uppdateringar av Communities som en del av AEM Cumulative Fix Packs och Service Packs.
 
-De senaste uppdateringarna till AEM 6.5 finns i [Adobe Experience Manager 6.4 Cumulative Fix Packs och Service Packs](https://helpx.adobe.com/experience-manager/aem-releases-updates.html).
+De senaste uppdateringarna till AEM 6.5 finns i [Adobe Experience Manager 6.4 Cumulative Fix Packs and Service Packs](https://helpx.adobe.com/experience-manager/aem-releases-updates.html).
 
 ### Versionshistorik {#version-history}
 
-Precis som med AEM 6.4 och senare är AEM Communities-funktioner och snabbkorrigeringar en del av AEM Communities kumulativa korrigeringspaket och servicepaket. Det finns därför inga separata funktionspaket.
+Precis som i AEM 6.4 och senare är AEM Communities funktioner och snabbkorrigeringar en del av AEM Communities kumulativa korrigeringspaket och servicepaket. Det finns därför inga separata funktionspaket.
 
 ### JDBC-drivrutin för MySQL {#jdbc-driver-for-mysql}
 
@@ -207,7 +210,7 @@ Den gemensamma lagringsplatsen stöder moderering av och analys av UGC i publice
 
 När du uppgraderar till AEM 6.5-plattformen från tidigare versioner av AEM är det viktigt att du läser [Uppgradera till AEM 6.5](/help/sites-deploying/upgrade.md).
 
-Förutom att uppgradera plattformen kan du läsa [Uppgradera till AEM Communities 6.5](/help/communities/upgrade.md) för att få information om ändringar i Communities.
+Förutom att uppgradera plattformen kan du läsa [Uppgradera till AEM Communities 6.5](/help/communities/upgrade.md) om du vill veta mer om communityförändringar.
 
 ## Konfigurationer {#configurations}
 
@@ -245,7 +248,7 @@ Det finns två replikeringsagenter i författarmiljön som kräver att transport
 
 * Åtkomst till replikeringskonsolen på författaren
 
-   * Navigera från global navigering till **[!UICONTROL Verktyg > Distribution > Replikering > Agenter på författare]**
+   * Navigera från global navigering till **[!UICONTROL Tools > Deployment > Replication > Agents on author]**
 
 * Följ samma procedur för båda agenterna:
 
@@ -257,7 +260,7 @@ Det finns två replikeringsagenter i författarmiljön som kräver att transport
       1. Välj fliken **Transport**
       1. Om porten inte `4503`finns kan du redigera **URI** för att ange rätt port
 
-      1. Om ingen användare `admin`är det, redigera **Användare** och **lösenord** för att ange en medlem i `administrators` användargruppen
+      1. Om användaren inte `admin`gör det redigerar du **Användare** och **lösenord** för att ange en medlem i `administrators` användargruppen
 
 I följande bilder visas resultatet av en ändring av porten från 4503 till 6103 med :
 
@@ -309,7 +312,7 @@ Om du vill kopiera nyckelmaterialet från författaren till alla andra instanser
    * Navigera till datamappen, till exempel
 
       * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
-   * Kopiera hmac- och mallfilerna
+   * Kopiera hmac- och primär nodfiler
 
 
 
@@ -388,11 +391,11 @@ Var särskilt försiktig med att använda rätt servernamn, inte `localhost`i `R
 
 ### Dispatcher {#dispatcher}
 
-Om du använder en Dispatcher läser du:
+Om du använder Dispatcher kan du läsa:
 
 * AEM&#39;s [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html) documentation
-* [Installerar Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html)
-* [Konfigurera Dispatcher för Communities](/help/communities/dispatcher.md)
+* [Installera Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html)
+* [Konfigurera Dispatcher för webbgrupper](/help/communities/dispatcher.md)
 * [Kända fel](/help/communities/troubleshooting.md#dispatcher-refetch-fails)
 
 ## Dokumentation för relaterade communities {#related-communities-documentation}
