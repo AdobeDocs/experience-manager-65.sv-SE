@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 232a0ec1-8dfc-41ec-84cc-69f9db494ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f7e5afe46100db7837647ac89aaf58cf101143b0
+source-git-commit: df59879cfa6b0bc7eba13f679e833fabbcbe92f2
+workflow-type: tm+mt
+source-wordcount: '826'
+ht-degree: 0%
 
 ---
 
@@ -44,9 +47,9 @@ Så som visas nedan finns det en konfiguration av tjänsten för webbplatser som
 
 Om du vill lägga till en ny konfiguration väljer du plusikonen &quot;**+**&quot; bredvid tjänstens namn:
 
-* **Vitlista för meddelandefält**
+* **Tillåtna meddelandefält**
 
-   Anger egenskaperna för den Compose Message-komponent som användare kan redigera och behålla. Om nya formulärelement läggs till måste element-ID läggas till om det ska lagras i SRP. Standard är två poster: ämne ** och *innehåll*.
+   Anger egenskaperna för den Compose Message-komponent som användare kan redigera och behålla. Om nya formulärelement läggs till måste element-ID läggas till om det ska lagras i SRP. Standard är två poster: *ämne* och *innehåll*.
 
 * **Storleksgräns för meddelanderuta**
 
@@ -108,13 +111,13 @@ Om du vill lägga till en ny konfiguration väljer du plusikonen &quot;**+**&quo
 
    Om supportAttachments är markerat anger det här värdet den största tillåtna totala storleken (i byte) för alla bilagor. Standardvärdet är *104857600* (100 MB).
 
-* **Svartlista för bilagetyp**
+* **Blocklista för bilagetyp**
 
-   En svartlista med filnamnstillägg, prefix med &#39;**.**&#39;, som kommer att refuseras av systemet. Om inte svartlistas är tillägget tillåtet. Tillägg kan läggas till eller tas bort med ikonerna **+** och **-**.
+   En blocklista med filnamnstillägg, prefix med &#39;**.**&#39;, som kommer att refuseras av systemet. Om det inte blockeras tillåts tillägget. Tillägg kan läggas till eller tas bort med ikonerna **+** och **-**.
 
 * **Tillåtna bilagetyper**
 
-   **(*Åtgärd krävs*)** En vitlista med filnamnstillägg, motsatsen till svartlistan. Om du vill tillåta alla filnamnstillägg, förutom de som är svartlistade, använder du ikonen &#39;**-**&#39; för att ta bort den tomma posten.
+   **(*Åtgärd krävs*)** En lista över filnamnstillägg, motsatsen till blocklistan. Om du vill tillåta alla filnamnstillägg, förutom de som är blocklistade, använder du ikonen &quot;**-**&quot; för att ta bort den tomma posten.
 
 * **Tjänstväljare**
 
@@ -122,15 +125,15 @@ Om du vill lägga till en ny konfiguration väljer du plusikonen &quot;**+**&quo
 
    Standardvärdet är */bin/messaging* .
 
-* **Fältvitlista**
+* **Tillåten fältlista**
 
-   Använd vitlistan **Meddelandefält**.
+   Använd listan Tillåtna **meddelandefält**.
 
 >[!CAUTION]
 >
 >Varje gång en `Messaging Operations Service` konfiguration öppnas för redigering, om den `allowedAttachmentTypes.name` tagits bort, läggs en tom post till så att egenskapen kan konfigureras. En enda tom post inaktiverar effektivt bifogade filer.
 >
->Om du vill tillåta alla filnamnstillägg, förutom de som visas svartlistade, använder du ikonen **-** för att (igen) ta bort den tomma posten innan du klickar på **Spara**.
+>Om du vill tillåta alla filnamnstillägg, förutom de som visas i listan, använder du ikonen &quot;**-**&quot; för att (en gång till) ta bort den tomma posten innan du klickar på **Spara**.
 
 
 ## Gruppmeddelanden {#group-messaging}
