@@ -2,7 +2,7 @@
 title: Creating Accessible Content for Adobe Experience Manager (WCAG 2.1-överensstämmelse)
 description: Använd AEM för att göra webbmaterial tillgängligt och användbart för personer med funktionshinder
 translation-type: tm+mt
-source-git-commit: cb7df7301364eb1ce3a1ca376256d2cd5afcb2c8
+source-git-commit: df992fc0204519509c4662a7d4315939af2fc92c
 workflow-type: tm+mt
 source-wordcount: '13956'
 ht-degree: 5%
@@ -73,7 +73,7 @@ För statisk grafik är det grundläggande kravet att tillhandahålla ett motsva
 >
 >Vissa färdiga kärnkomponenter, som **[Carousel](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/carousel.html)**, innehåller inte något**alternativt textfält **för att lägga till alternativa textbeskrivningar till enskilda bilder, men det finns ett**etikettfält **(fliken**[Tillgänglighet](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/carousel.html#accessibility-tab)** ) för hela komponenten.
 >
->När versioner av dessa implementeras för er AEM-instans måste ert utvecklingsteam konfigurera dessa komponenter så att de stöder attributet `alt`[, så att författare kan lägga till det i innehållet (se Lägga till stöd för ytterligare HTML-element och attribut](/help/sites-administering/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
+>När versioner av dessa implementeras för er AEM-instans måste ert utvecklingsteam konfigurera dessa komponenter så att de stöder attributet `alt`[, så att författare kan lägga till det i innehållet (se Lägga till stöd för ytterligare HTML-element och attribut](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
 
 AEM kräver att fältet **Alternativ text** ska fyllas i som standard. Om bilden är enbart dekorativ och alternativ text inte behövs kan alternativet **Bild** vara dekorativ kontrolleras.
 
@@ -330,7 +330,7 @@ Du kan se till att dina webbsidor får rätt struktur genom att använda följan
    * Attributet `scope` för `<th>` elementet används för att ange om en cell representerar en rubrik för en viss rad eller för en viss kolumn. Ett liknande sätt är att använda attributen header och id i komplexa tabeller, där dataceller kan kopplas till en eller flera rubriker.
    >[!NOTE]
    >
-   >Som standard är dessa element och attribut inte direkt tillgängliga, men systemadministratören kan lägga till stöd för dessa värden i dialogrutan **Tabellegenskaper**[ (se Lägga till stöd för ytterligare HTML-element och attribut](/help/sites-administering/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes).
+   >Som standard är dessa element och attribut inte direkt tillgängliga, men systemadministratören kan lägga till stöd för dessa värden i dialogrutan **Tabellegenskaper**[ (se Lägga till stöd för ytterligare HTML-element och attribut](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes).
 
    Så här öppnar du dialogrutan **Tabell** där du kan välja fliken **Tabellegenskaper** :
 
@@ -719,7 +719,7 @@ Beroende på innehållets natur kan du använda ett eller flera av följande fö
 #### Mer information - Pausa, Stoppa, Dölj (2.2.2) {#more-information-pause-stop-hide}
 
 * [Förstå villkor för framgång 2.2.2](https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide.html)
-* [Hur man uppfyller kriterierna för framgång 2.4.2](https://www.w3.org/WAI/WCAG21/quickref/#pause-stop-hide)
+* [Hur man uppfyller kriterierna för framgång 2.2.2](https://www.w3.org/WAI/WCAG21/quickref/#pause-stop-hide)
 
 ### Kramper och fysiska reaktioner (2.3) {#seizures-and-physcial-reactions}
 
@@ -795,7 +795,7 @@ Du kan också redigera sidans titel när du redigerar en sida, tillgänglig via 
 #### Mer information - sida titel (2.4.2) {#more-information-page-titled}
 
 * [Förstå villkor för framgång 2.4.2](https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html)
-* [Hur man uppfyller kriterierna för framgång 2.2.2](https://www.w3.org/WAI/WCAG21/quickref/#page-titled)
+* [Hur man uppfyller kriterierna för framgång 2.4.2](https://www.w3.org/WAI/WCAG21/quickref/#page-titled)
 
 ### Fokusordning (2.4.3)  {#focus-order}
 
@@ -1004,7 +1004,7 @@ Sidor som använder det här framgångsvillkoret tillåter:
 
 #### Hur man uppfyller kraven - Språk för delar (3.1.2) {#how-to-meet-language-of-parts}
 
-Attributet `lang` kan användas för att identifiera ändringar i innehållsspråket. En offert på tyska (ISO 639-1-kod &quot;de&quot;) kan till exempel visas på följande sätt:
+Attributet `lang` kan användas för att identifiera ändringar i innehållsspråket. Exempelvis kan en offert på tyska (ISO 639-1-kod &quot;de&quot;) visas på följande sätt:
 
 ```xml
 <blockquote cite = "John F. Kennedy" lang = "de">
@@ -1026,7 +1026,7 @@ På samma sätt kan webbläsaren återge ett ovanligt låneord eller en ovanlig 
 >
 >Det är inte nödvändigt att följa detta kriterium när man inkluderar namn eller städer på olika språk, eller när man använder låneord eller fraser som har blivit vanliga på standardspråket (t.ex. *schadenfreude* på engelska).
 
-Om du vill lägga till intervallelementet med ett lämpligt språk kan du redigera HTML-koden manuellt i källredigeringsläget för textredigeraren så att den läses som ovan. Alternativt kan attributet inkluderas i textredigeringsfilen av en systemadministratör (se `lang` Lägga till stöd för ytterligare HTML-element och attribut [](/help/sites-administering/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
+Om du vill lägga till intervallelementet med ett lämpligt språk kan du redigera HTML-koden manuellt i källredigeringsläget för textredigeraren så att den läses som ovan. Alternativt kan attributet inkluderas i textredigeringsfilen av en systemadministratör (se `lang` Lägga till stöd för ytterligare HTML-element och attribut [](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
 
 #### Mer information - Språk för delar (3.1.2) {#more-information-language-of-parts}
 
@@ -1190,7 +1190,7 @@ Where image buttons are used (for example, the **Image Button** component of the
 
 In the WKND project, where there is a group of related controls, such as **Radio Group**, a title may be needed for the group, as well as individual controls. När du lägger till en uppsättning med alternativknappar i AEM visas den här grupptiteln i fältet **Titel**, medan enskilda titlar anges när alternativknapparna (**Objekt**) skapas.
 
-Det finns dock ingen programmatisk koppling mellan grupptiteln och alternativknapparna själva. Mallredigerare måste kapsla in titeln i de nödvändiga `fieldset`- och `legend`-taggarna för att skapa den här kopplingen. Detta kan bara göras genom att redigera sidans källkod. En systemadministratör kan också lägga till stöd för dessa element så att de visas i dialogrutan **Fältegenskaper**[ (se Lägga till stöd för ytterligare HTML-element och attribut](/help/sites-administering/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
+Det finns dock ingen programmatisk koppling mellan grupptiteln och alternativknapparna själva. Mallredigerare måste kapsla in titeln i de nödvändiga `fieldset`- och `legend`-taggarna för att skapa den här kopplingen. Detta kan bara göras genom att redigera sidans källkod. En systemadministratör kan också lägga till stöd för dessa element så att de visas i dialogrutan **Fältegenskaper**[ (se Lägga till stöd för ytterligare HTML-element och attribut](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
 
 ###### Ytterligare överväganden för formulär {#additional-considerations-for-forms}
 
@@ -1291,7 +1291,7 @@ Följ riktlinjerna under [Så här uppfyller du kriterierna för framgång 4.1.1
 #### Mer information - Analys (4.1.1) {#more-information-parsing}
 
 * [Om villkor för att lyckas 4.1.1](https://www.w3.org/WAI/WCAG21/Understanding/parsing.html)
-* [Så här uppfyller du kriterierna för framgång 4.1.1](https://www.w3.org/WAI/WCAG21/quickref/#parsing)
+* [Hur man uppfyller kriterierna för framgång 4.1.1](https://www.w3.org/WAI/WCAG21/quickref/#parsing)
 
 ### Namn, roll, värde (4.1.2)  {#name-role-value}
 
