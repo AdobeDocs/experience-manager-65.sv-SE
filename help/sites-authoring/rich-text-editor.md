@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: 813fda6a-e877-452b-82c3-e758720e7dd0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d3dbf4cf522441561d6ac6eeeff0e63e7bbb5e38
+source-git-commit: df992fc0204519509c4662a7d4315939af2fc92c
+workflow-type: tm+mt
+source-wordcount: '276'
+ht-degree: 1%
 
 ---
 
@@ -24,7 +27,7 @@ RTE (Rich Text Editor) är en grundläggande byggsten för att infoga textinneh�
 
 ## Direktredigering {#in-place-editing}
 
-Om du markerar en textbaserad komponent med ett enda tryck eller klick visas [komponentens verktygsfält](/help/sites-authoring/editing-content.md#editmovecopypastedeletetouchoptimizedui) som alla andra komponenter.
+Om du markerar en textbaserad komponent med ett enda tryck eller klick visas [komponentens verktygsfält](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) som alla andra komponenter.
 
 ![screen_shot_2018-03-21at163054](assets/screen_shot_2018-03-21at163054.png)
 
@@ -44,7 +47,7 @@ Det här verktygsfältet innehåller följande alternativ:
 
 ## Helskärmsredigering {#full-screen-editing}
 
-Om du trycker på helskärmsläget i [verktygsfältet](#componenttoolbar) för textbaserade komponenter ![](do-not-localize/screen_shot_2018-03-21at163236.png) öppnas textredigeraren och resten av sidinnehållet döljs.
+Om du trycker på helskärmsläget i verktygsfältet för textbaserade komponenter ![](do-not-localize/screen_shot_2018-03-21at163236.png) öppnas textredigeraren och resten av sidinnehållet döljs.
 
 I helskärmsläge visas alla konfigurerade alternativ som du kan använda för att skapa. Vilka alternativ som är tillgängliga beror [på konfigurationen](/help/sites-administering/rich-text-editor.md).
 
