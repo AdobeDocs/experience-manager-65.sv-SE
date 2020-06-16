@@ -1,8 +1,8 @@
 ---
 title: ASRP - Adobe Storage Resource Provider
 seo-title: ASRP - Adobe Storage Resource Provider
-description: Konfigurera AEM Communities så att en relationsdatabas används som gemensam butik
-seo-description: Konfigurera AEM Communities så att en relationsdatabas används som gemensam butik
+description: Konfigurera AEM Communities för att använda en relationsdatabas som gemensam lagringsplats
+seo-description: Konfigurera AEM Communities för att använda en relationsdatabas som gemensam lagringsplats
 uuid: abe47ad9-9f72-4dad-a5e9-6d621a9722d4
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 3e81b519-57ca-4ee1-94bd-7adac4605407
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
+source-git-commit: df59879cfa6b0bc7eba13f679e833fabbcbe92f2
+workflow-type: tm+mt
+source-wordcount: '815'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 ## Om ASRP {#about-asrp}
 
-När AEM Communities har konfigurerats att använda ASRP som gemensam lagringsplats är användargenererat innehåll (UGC) tillgängligt från alla författare och publiceringsinstanser utan behov av synkronisering eller replikering.
+När AEM Communities har konfigurerats att använda ASRP som gemensam lagringsplats är användargenererat innehåll (UGC) tillgängligt från alla författare- och publiceringsinstanser utan behov av synkronisering eller replikering.
 
 Se även [egenskaper för SRP-alternativ](/help/communities/working-with-srp.md#characteristics-of-srp-options) och [rekommenderade topologier](/help/communities/topologies.md).
 
@@ -28,7 +31,7 @@ Se även [egenskaper för SRP-alternativ](/help/communities/working-with-srp.md#
 
 Ytterligare en licens krävs för ASRP.
 
-Om du vill konfigurera din AEM Communities-webbplats så att den använder ASRP för UGC kontaktar du din kontorepresentant för:
+Kontakta din kontorepresentant för att konfigurera din AEM Communities-webbplats så att den använder ASRP för UGC:
 
 * URL till datacenter (adress till ASRP-slutpunkten)
 * Konsumentnyckel
@@ -45,7 +48,7 @@ Med konsolen [för](/help/communities/srp-config.md) lagringskonfiguration kan d
 
 **I AEM Author-instans:**
 
-* Navigera från global navigering till **[!UICONTROL Verktyg > Communities > Storage Configuration]** och välj **[!UICONTROL Adobe Storage Resource Provider (ASRP)]**.
+* Navigera till **[!UICONTROL Tools > Communities > Storage Configuration]** och markera **[!UICONTROL Adobe Storage Resource Provider (ASRP)]**.
 
 ![chlimage_1-30](assets/chlimage_1-30.png)
 
@@ -72,7 +75,7 @@ Testa anslutningen när konfigurationen har skickats:
 
 ### Replikera krypteringsnyckeln {#replicate-the-crypto-key}
 
-Konsumentnyckeln och hemlig nyckel är krypterade. För att nycklarna ska kunna krypteras eller dekrypteras på rätt sätt måste huvudkrypteringsnyckeln för Granite vara vara densamma för alla AEM-instanser.
+Konsumentnyckeln och hemlig nyckel är krypterade. För att nycklarna ska kunna krypteras eller dekrypteras på rätt sätt måste den primära krypteringsnyckeln för Granite vara vara densamma för alla AEM-instanser.
 
 Följ instruktionerna på [Replikera krypteringsnyckeln](/help/communities/deploy-communities.md#replicate-the-crypto-key).
 
@@ -94,7 +97,7 @@ Så här gör du den identiska konfigurationen tillgänglig i publiceringsmiljö
 
 I AEM Author-instans:
 
-* Navigera från huvudmenyn till **[!UICONTROL Verktyg > Åtgärder > Replikering]**.
+* Navigera från huvudmenyn till **[!UICONTROL Tools > Operations > Replication]**.
 * Välj **Aktivera träd**
 * **Startsökväg**: bläddra till `/etc/socialconfig/srpc/`
 * Avmarkera **endast ändrade**
