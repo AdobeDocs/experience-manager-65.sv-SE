@@ -11,10 +11,10 @@ mini-toc-levels: 2
 git-repo: https://github.com/AdobeDocs/experience-manager-65.en
 index: y
 translation-type: tm+mt
-source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
+source-git-commit: f483581a80faf0e6160d3b9cbc3fcdb8e8171dec
 workflow-type: tm+mt
-source-wordcount: '152'
-ht-degree: 5%
+source-wordcount: '155'
+ht-degree: 8%
 
 ---
 
@@ -26,16 +26,16 @@ Filen metadata.md innehåller metadata på postnivå som skickas till TOC.md-fil
 | metadata | vad den gör |
 |--- |--- |
 | solution-title | Används i artikelrubriken som länk. |
-| solution-hub-url | Öppnar navet för hjälpavsnitt. |
+| solution-hub-url | Öppnar navet för utbildning och support. |
 | solution-icon | Visar lösningsikonen bredvid lösningsrubriken. Inte implementerat ännu. |
-| getting-started-url | Länk till hjälpsidan Komma igång. |
-| tutorials-url | Länka till självstudiekurser på video - antingen hjälpstudiekurser eller självstudiekurser på KT. |
+| getting-started-url | Länk till startsidan. |
+| tutorials-url | Länka till självstudiekurser på video. |
 | mini-toc-nivåer | Anger antalet rubriknivåer som visas i den högra listen. Standardvärdet är 2. |
-| git-repo | Anger platsen för den primära rapporten för intern användning. |
+| git-repo | Anger platsen för huvudrapporten för intern användning. |
 
 I filen TOC.md
 
 | metadata | vad den gör |
 |--- |--- |
-| user-guide-title | Används i artikelrubriken som länk |
-| user-guide-url | Öppnar navet för hjälpfunktioner |
+| user-guide-title | Används i artikelrubriken som länk. |
+| user-guide-url | Öppnar navet för utbildning och support. |
