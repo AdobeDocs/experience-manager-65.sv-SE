@@ -1,27 +1,16 @@
 ---
 title: Dekoration-tagg
-seo-title: Dekoration-tagg
 description: När en komponent på en webbsida återges kan ett HTML-element genereras och den återgivna komponenten kapslas in i sig själv. För utvecklare erbjuder AEM tydlig och enkel logik som styr de dekorationstaggar som omsluter de inkluderade komponenterna.
-seo-description: När en komponent på en webbsida återges kan ett HTML-element genereras och den återgivna komponenten kapslas in i sig själv. För utvecklare erbjuder AEM tydlig och enkel logik som styr de dekorationstaggar som omsluter de inkluderade komponenterna.
-uuid: db796a22-b053-48dd-a50c-354dead7e8ec
-contentOwner: user
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: components
-content-type: reference
-discoiquuid: 8cb9fd6e-5e1f-43cd-8121-b490dee8c2be
 translation-type: tm+mt
-source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
+source-git-commit: be1c0e21216b1014a36f88d13557f6e1d7a87c0a
+workflow-type: tm+mt
+source-wordcount: '878'
+ht-degree: 0%
 
 ---
 
 
 # Dekoration-tagg{#decoration-tag}
-
->[!NOTE]
->
->Beteendet för dekorationstaggen och alternativen som beskrivs i den här artikeln baseras på [AEM 6.3 CFP1](https://helpx.adobe.com/experience-manager/release-notes--aem-6-3-cumulative-fix-pack.html).
->
->Beteendet hos dekorationstaggen i 6.3 före CFP1 liknar beteendet hos AEM 6.2.
 
 När en komponent på en webbsida återges kan ett HTML-element genereras och den återgivna komponenten kapslas in i sig själv. Detta har främst två syften:
 
@@ -40,7 +29,7 @@ För utvecklare erbjuder AEM tydlig och enkel logik som styr de dekorationstagga
 
 Här följer några allmänna rekommendationer för när wrapper-elementet ska tas med, som hjälper dig att undvika att stöta på oväntade problem:
 
-* Närvaron av wrapper-elementet får inte skilja sig mellan WCMModes (redigerings- eller förhandsgranskningsläge), instanser (författare eller publicering) eller miljö (staging eller produktion), så att sidans CSS och JavaScript fungerar likadant i alla fall.
+* Närvaron av wrapper-elementet får inte skilja sig mellan WCMModes (redigerings- eller förhandsgranskningsläge), instanser (författare eller publicering) eller miljö (staging eller produktion), så att CSS och JavaScript för sidan fungerar likadant i alla fall.
 * Radbrytningselementet bör läggas till i alla komponenter som är redigerbara, så att sidredigeraren kan initiera och uppdatera dem på rätt sätt.
 * För icke-redigerbara komponenter kan wrapper-elementet undvikas om det inte har någon speciell funktion, så att den resulterande koden inte blir onödigt utdragen.
 
@@ -48,12 +37,12 @@ Här följer några allmänna rekommendationer för när wrapper-elementet ska t
 
 Följande egenskaper och noder kan tillämpas på komponenterna för att styra beteendet för deras dekorationstagg:
 
-* **`cq:noDecoration {boolean}`**: Den här egenskapen kan läggas till i en komponent och ett true-värde tvingar AEM att inte generera några wrapper-element över komponenten.
+* **`cq:noDecoration {boolean}`:**Den här egenskapen kan läggas till i en komponent och ett true-värde tvingar AEM att inte generera några wrapper-element över komponenten.
 
-* **`cq:htmlTag`**node : Den här noden kan läggas till under en komponent och kan ha följande egenskaper:
+* **`cq:htmlTag`node :**Den här noden kan läggas till under en komponent och kan ha följande egenskaper:
 
-   * **`cq:tagName {String}`**: Detta kan användas för att ange en anpassad HTML-tagg som ska användas för att kapsla in komponenterna i stället för DIV-standardelementet.
-   * **`class {String}`**: Detta kan användas för att ange CSS-klassnamn som ska läggas till i wrapper.
+   * **`cq:tagName {String}`:**Detta kan användas för att ange en anpassad HTML-tagg som ska användas för att kapsla in komponenterna i stället för DIV-standardelementet.
+   * **`class {String}`:**Detta kan användas för att ange CSS-klassnamn som ska läggas till i wrapper.
    * Andra egenskapsnamn läggs till som HTML-attribut med samma String-värde som anges.
 
 ## Skriptkontroller {#script-controls}
