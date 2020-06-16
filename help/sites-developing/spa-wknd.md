@@ -10,7 +10,10 @@ topic-tags: spa
 content-type: reference
 discoiquuid: 2dbe18c1-8d79-4685-911b-3c6fe87d7e2c
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: b67693829e1fa16e29b8fb6293e4212ac866130d
+workflow-type: tm+mt
+source-wordcount: '173'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,10 @@ Utveckla SPA-material med denna självstudiekurs i flera delar som leder dig gen
 
 ## Självstudiekurser {#tutorials}
 
-Ett heltäckande exempel på hur du skapar ett eget ensidigt program som kan redigeras med AEM från början med projektkonfigurationen via programroutning finns i [Komma igång med AEM SPA Editor - WKND Events-självstudiekursen](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-spa-wknd-tutorial-develop.html). Det finns versioner av självstudiekursen för ramverken React och Angular.
+Ett komplett exempel på hur du skapar ett eget ensidigt program som kan redigeras med AEM från och med projektkonfigurationen via programroutning finns i WKND SPA-självstudiekurserna:
+
+* [Komma igång med AEM SPA Editor och Angular](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
+* [Komma igång med AEM SPA Editor och React](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
 
 Innan du börjar ett eget SPA-projekt för AEM måste du dock även läsa igenom [Developing SPA for AEM](/help/sites-developing/spa-architecture.md) -dokumentet.
 
