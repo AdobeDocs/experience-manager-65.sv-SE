@@ -3,9 +3,9 @@ title: Hämta digitala resurser från [!DNL Adobe Experience Manager].
 description: Lär dig hur du hämtar resurser från [!DNL Adobe Experience Manager] och aktiverar eller inaktiverar hämtningsfunktionen.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 527b2f50efac606a0a696c8f56b0d725f79cd692
 workflow-type: tm+mt
-source-wordcount: '755'
+source-wordcount: '782'
 ht-degree: 0%
 
 ---
@@ -19,27 +19,32 @@ Du kan hämta resurser, inklusive statiska och dynamiska återgivningar. Du kan 
 >
 >Mottagare av e-postmeddelanden måste vara medlemmar i gruppen för att få åtkomst till länken för ZIP-hämtning i e-postmeddelandet. `dam-users` För att kunna hämta resurserna måste medlemmarna ha behörighet att starta arbetsflöden som utlöser hämtning av resurser.
 
-Om du vill hämta resurser går du till en resurs, markerar resursen och klickar på **[!UICONTROL Download]** i verktygsfältet. I den dialogruta som visas anger du dina hämtningsalternativ.
-
 Det går inte att hämta resurstyperna Bilduppsättningar, Snurra uppsättningar, Blandade medieuppsättningar och Carousel-uppsättningar.
 
-![Tillgängliga alternativ vid hämtning av resurser från Experience Manager Assets](assets/asset_download_dialog.png)
+**Om du vill hämta resurser**
 
-*Bild: Tillgängliga alternativ när du hämtar resurser från[!DNL Experience Manager Assets].*
+1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Navigation]** (Compass icon).
+1. Tryck på **[!UICONTROL Assets > Files]** på navigeringssidan.
+1. Navigera till en mapp som innehåller resurser som du vill hämta.
+1. Markera mappen eller välj en eller flera resurser i mappen.
+1. Tryck på i verktygsfältet **[!UICONTROL Download]**.
 
-Följande är de tillgängliga export- och nedladdningsalternativen. Dynamiska renderingar är unika för [!DNL Dynamic Media] erbjudandet. Med det här alternativet kan du generera nya återgivningar i realtid, utöver den resurs du valt. Alternativet är bara tillgängligt om du har [!DNL Dynamic Media] aktiverat.
+   ![Tillgängliga alternativ vid hämtning av resurser från Experience Manager Assets](/help/assets/assets/asset-download.png)
 
-| Export- eller nedladdningsalternativ | Beskrivningar |
-|---|---|
-| [!UICONTROL Assets] | Välj alternativet om du vill hämta resursen i dess ursprungliga format utan några återgivningar. |
-| [!UICONTROL Renditions] | En återgivning är den binära representationen av en resurs. Resurser har en primär representation - den som utgörs av den överförda filen. De kan ha valfritt antal representationer. <br> Med det här alternativet kan du välja de återgivningar du vill hämta. Vilka renderingar som är tillgängliga beror på vilken resurs du väljer. |
-| [!UICONTROL Dynamic Renditions] | En dynamisk återgivning genererar andra återgivningar i realtid. När du väljer det här alternativet väljer du också de återgivningar som du vill skapa dynamiskt genom att välja i listan [Bildförinställning](image-presets.md) . <br>Du kan dessutom välja storlek och måttenhet, format, färgrymd, upplösning och alla bildmodifierare (t.ex. för att invertera bilden) |
-| [!UICONTROL Email] | Ett e-postmeddelande skickas till användaren. Standardmallar för e-post finns på följande platser:<ul><li>`/libs/settings/dam/workflow/notification/email/downloadasset`.</li><li>`/libs/settings/dam/workflow/notification/email/transientworkflowcompleted`.</li></ul> Mallar som du anpassar under distributionen bör finnas på följande platser: <ul><li>`/apps/settings/dam/workflow/notification/email/downloadasset`.</li><li>`/apps/settings/dam/workflow/notification/email/transientworkflowcompleted`.</li></ul>Du kan lagra klientspecifika anpassade mallar på följande platser:<ul><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/downloadasset`.</li><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/transientworkflowcompleted`.</li></ul> |
-| [!UICONTROL Create separate folder for each asset] | Välj alternativet att bevara mapphierarkin när resurser hämtas. Som standard ignoreras mapphierarkin och alla resurser hämtas i en mapp i det lokala filsystemet. |
+   *Alternativ i dialogrutan Hämta.*
 
-Alternativet Återgivningar är tillgängligt om resursen har några återgivningar. Alternativet Delresurser är tillgängligt om den ursprungliga tillgången har delresurser.
+1. I dialogrutan Hämta väljer du de hämtningsalternativ som du vill använda.
 
-När du väljer en mapp att hämta hämtas hela resurshierarkin under mappen. Om du vill inkludera varje resurs som du hämtar (inklusive resurser i underordnade mappar som är kapslade under den överordnade mappen) i en enskild mapp väljer du **[!UICONTROL Create separate folder for each asset]**.
+   | Hämtningsalternativ | Beskrivning |
+   |---|---|
+   | **[!UICONTROL Create separate folder for each asset]** | Välj det här alternativet om du vill inkludera varje resurs som du hämtar, inklusive resurser, i underordnade mappar som är kapslade under resursens överordnade mapp i en mapp på den lokala datorn. När det här alternativet *inte* är markerat ignoreras mapphierarkin som standard och alla resurser hämtas till en mapp på den lokala datorn. |
+   | **[!UICONTROL Email]** | Välj det här alternativet om du vill att ett e-postmeddelande ska skickas till mottagaren. Standardmallar för e-post finns på följande platser:<ul><li>`/libs/settings/dam/workflow/notification/email/downloadasset`.</li><li>`/libs/settings/dam/workflow/notification/email/transientworkflowcompleted`.</li></ul> Mallar som du anpassar under distributionen finns på följande platser: <ul><li>`/apps/settings/dam/workflow/notification/email/downloadasset`.</li><li>`/apps/settings/dam/workflow/notification/email/transientworkflowcompleted`.</li></ul>Du kan lagra klientspecifika anpassade mallar på följande platser:<ul><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/downloadasset`.</li><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/transientworkflowcompleted`.</li></ul> |
+   | **[!UICONTROL Asset(s)]** | Välj det här alternativet om du vill hämta resursen i dess ursprungliga form utan några återgivningar.<br>Alternativet Delresurser är tillgängligt om den ursprungliga tillgången har delresurser. |
+   | **[!UICONTROL Rendition(s)]** | En återgivning är den binära representationen av en resurs. Resurser har en primär representation - den som utgörs av den överförda filen. De kan ha valfritt antal representationer. <br> Med det här alternativet kan du välja de återgivningar du vill hämta. Vilka återgivningar som är tillgängliga beror på vilken resurs du har valt. |
+   | **[!UICONTROL Smart Crops]** | Välj det här alternativet om du vill hämta alla smarta beskärningsåtergivningar av den valda resursen från AEM. En ZIP-fil med renderingarna Smart Crop skapas och hämtas till din lokala dator. |
+   | **[!UICONTROL Dynamic Rendition(s)]** | Välj det här alternativet om du vill generera en serie alternativa återgivningar i realtid. När du väljer det här alternativet väljer du också de återgivningar som du vill skapa dynamiskt genom att välja i listan [Bildförinställning](image-presets.md) . <br>Du kan dessutom välja storlek och måttenhet, format, färgrymd, upplösning och alla valfria bildmodifierare, t.ex. invertering av bilden. Alternativet är bara tillgängligt om du har [!DNL Dynamic Media] aktiverat. |
+
+1. In the dialog box, tap **[!UICONTROL Download]**.
 
 ## Aktivera resurshämtningsserver {#enable-asset-download-servlet}
 
@@ -68,6 +73,6 @@ Du `Asset Download Servlet` kan inaktivera funktionen på en [!DNL Experience Ma
 >[!MORELIKETHIS]
 >
 >* [Hämta DRM-skyddade resurser](drm.md).
->* [Hämta resurser med Experience Manager-datorprogrammet på Win- eller Mac-datorer](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html).
+>* [Hämta resurser med datorprogrammet Experience Manager på Win- eller Mac-datorer](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html).
 >* [Hämta resurser med Adobe Assets Link inifrån de Adobe Creative Cloud-program](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html)som stöds.
 
