@@ -1,12 +1,12 @@
 ---
 title: Versionsinformation om Adobe Experience Manager 6.5 Service Pack
-description: Versionsinformation om Adobe Experience Manager 6.5 Service Pack 5.
+description: Versionsinformation för Adobe Experience Manager 6.5 Service Pack 5.
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: d7276f332bece4f736d92e5723d79ffc2d27e900
+source-git-commit: 1eca1fcce90dfde8b512414249eb8cc05323c5cc
 workflow-type: tm+mt
-source-wordcount: '4394'
+source-wordcount: '4396'
 ht-degree: 0%
 
 ---
@@ -25,13 +25,13 @@ ht-degree: 0%
 
 ## Vad ingår i Adobe Experience Manager 6.5.5.0 {#what-s-included-in-aem}
 
-Adobe Experience Manager 6.5.5.0 är en viktig uppdatering som innehåller nya funktioner, viktiga förbättringar som kunderna efterfrågat, samt prestanda-, stabilitets- och säkerhetsförbättringar, som släpps sedan den allmänna tillgängligheten av 6.5-utgåvan i **april 2019**. Den kan installeras ovanpå Adobe Experience Manager 6.5.
+Adobe Experience Manager 6.5.5.0 är en viktig uppdatering som innehåller nya funktioner, viktiga förbättringar som kunderna efterfrågat samt prestanda-, stabilitets- och säkerhetsförbättringar som släppts sedan den allmänna tillgängligheten av 6.5-utgåvan i **april 2019**. Den kan installeras ovanpå Adobe Experience Manager 6.5.
 
-Några viktiga funktioner och förbättringar i Adobe Experience Manager 6.5.5.0:
+Några viktiga funktioner och förbättringar som introducerades i Adobe Experience Manager 6.5.5.0 är:
 
-* Anpassa kolumnnamnen som visas i Adobe Experience Manager Inbox.
+* Anpassa kolumnnamnen som visas i Inkorgen för Adobe Experience Manager.
 
-* Förbättrad tillgänglighet inom olika områden i Experience Manager Web Content Management (WCM), till exempel sidredigeraren, kärnkomponenter, RTE och administratörsgränssnittet.
+* Förbättrad tillgänglighet inom olika områden i Experience Manager Web Content Management (WCM), t.ex. sidredigeraren, kärnkomponenter, RTE och administratörsgränssnittet.
 
 * Spara ett [!DNL Interactive Communication] utkast.
 
@@ -47,7 +47,7 @@ Några viktiga funktioner och förbättringar i Adobe Experience Manager 6.5.5.0
 
 * Den inbyggda databasen (Apache Jackrabbit Oak) uppdateras till version 1.2.3.
 
-En fullständig lista över funktioner, viktiga högdagrar, viktiga funktioner som introducerats i Experience Manager 6.5 Service Pack 5 finns i [Nyheter i Adobe Experience Manager 6.5 Service Pack 5](new-features-latest-service-pack.md) .
+En fullständig lista över funktioner, viktiga högdagrar, viktiga funktioner som introducerades i Service Pack 5 för Experience Manager 6.5 finns i [Nyheter i Adobe Experience Manager 6.5 Service Pack 5](new-features-latest-service-pack.md) .
 
 Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6.5.5.0.
 
@@ -56,14 +56,14 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 * Med Experience Manager Sites kan du publicera eller avpublicera en sida från dess alias. Alternativet fungerar inte (NPR-33415).
 * När en layoutbehållare tas bort från en mall som innehåller flera mallar återges inte mallen korrekt (NPR-33347).
 * När en Experience Manager Sites-sida är en del av en stor innehållsuppsättning med flera live-kopior går det inte att läsa in förhandsgranskningen av sidversionshistoriken (NPR-33311).
-* När du använder kommandot Flytta för att byta namn på en Experience Manager Sites-sida uppdateras inte sidtiteln (NPR-33264).
+* När du använder kommandot Flytta för att byta namn på en Experience Manager-platssida uppdateras inte sidtiteln (NPR-33264).
 * När du flyttar sidor genom kolumnvyn försvinner kolumnerna (NPR-33216).
 * När namnet på en lokal komponent i en språkkopia är identiskt med namnet på en komponent i utkastet och komponenten rullas ut från utkast, läggs termen inte till i namnet på den lokala komponenten (NPR-33208). `_msm_moved`
-* Servern för omdirigering av sida lägger till .html i en URL för Experience Manager Sites där ResourceType inte är `cq:Page` (NPR-33176).
+* Servern för sidomdirigering lägger till .html till en URL för Experience Manager-platser där ResourceType inte är `cq:Page` (NPR-33176).
 * När du klistrar in ett underträd finns det inget alternativ för att bestämma om motsvarande undersidor ska klistras in eller inte (NPR-33149).
 * Antalet resultat i direktanvändning av en komponent är begränsat till nummer 49 (NPR-33058).
 * När du baserar ett innehållsfragment på ett schema och det innehåller ett obligatoriskt textområde eller ett sökvägsfält, kan innehållsfragmentet inte sparas (NPR-33007).
-* När du skapar en anpassad komponent med standardkomponenten för Experience Fragment och använder den på Experience Manager Sites-sidor, visar Experience Manager inte referenser (användning) för den anpassade komponenten (NPR-32852).
+* När du skapar en anpassad komponent med hjälp av standardkomponenten för Experience Fragment och använder den på Experience Manager Sites-sidor, visar inte Experience Manager referenser (användning) för den anpassade komponenten (NPR-32852).
 * När du byter namn på en mapp med ett stort antal referenser uppdateras inte många referenser till mappen (NPR-32765).
 * När du aktiverar källredigeringsalternativet blir det tillgängligt för alternativ för helskärmsvisning, men saknas för redigeringsdialogruta och helskärmsalternativ i textredigeraren (NPR-32763).
 * Om du har ett flerfält och det innehåller ett obligatoriskt fält (till exempel en listruta eller ett sökvägsfält) i sidegenskaperna för en plan, sparas inte sidegenskaperna för live-kopian när en sida som innehåller ett sådant flerfält öppnas (NPR-32751).
@@ -72,12 +72,12 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 * Författarbehörigheter för att läsa, ändra, skapa och ta bort live-kopior återkallas. Varje författare måste uttryckligen ange läs- och ändringsbehörigheter för att kunna flytta sidor i en utkast (NPR-32550).
 * Innehållsförfattare kan inte skapa Launch för en sida som är integrerad med Adobe Analytics (NPR-32548).
 * När en användare återupptar arv med synkronisering synkroniseras inte den överordnade sidans live-kopia med ritningen och visar en felaktig status (NPR-32500).
-* Det tar mer än 15 sekunder att läsa in Experience Manager Sites Editor-sidan (NPR-32413).
+* Det tar mer än 15 sekunder att läsa in redigeringssidan för Experience Manager Sites (NPR-32413).
 * I vissa fält visas inte alternativet Avbryt arv (NPR-32362).
 * När du markerar en sökväg för en Experience Fragment-komponent och markerar kryssrutan Öppna dialogrutan Markering, navigeras du inte till den valda sökvägen i sökvägsläsaren (NPR-32308).
 * När du uppgraderar från Experience Manager 6.2 till Experience Manager 6.5 visas inte Parsys-komponenten för statiska mallar korrekt. Parsys-komponentens höjd anges till 0 och komponenterna i den är inte synliga (NPR-33663).
 * När en användare kopierar och klistrar in en layoutbehållare på samma sida visas inte komponenterna i en layoutbehållare (NPR-33648).
-* Hälsokontrollen för utskickaren visar `Invalid cookie header` varningsmeddelandet i loggfilerna (NPR-33629).
+* I Dispatcher hälsokontroll visas `Invalid cookie header` ett varningsmeddelande i loggfilerna (NPR-33629).
 
 ### [!DNL Assets] {#assets-6550}
 
@@ -125,7 +125,7 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 
 * Syftet med olika kombinationsruteelement (t.ex. fältet Sökväg och alternativet att öppna dialogrutan Markering på fliken Grundläggande i resursegenskaper) har nu annonserats korrekt av skärmläsare (NPR-33235).
 
-* Information om att raderna i listvytabellen kan markeras skickas nu till skärmläsaranvändare när tangentbordsfokus är på dem. Denna information meddelas när musen förs över raderna (NPR-33234).
+* Information om att raderna i listvytabellen kan markeras skickas nu till skärmläsaranvändare när tangentbordsfokus är på dem. När en pekare placeras på raderna visas informationen (NPR-33234).
 
 * Alternativen ( [!UICONTROL x]att ta bort) för de markerade taggarna under [!UICONTROL Tags] fältet på fliken [!UICONTROL Basic] i [!UICONTROL Properties] är nu tillgängliga för skärmläsare (NPR-33206).
 
@@ -185,7 +185,7 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 
 * När du använder överlappande popup-fönster i metadatamatcheringar försvinner det valda alternativet för apostrof när du väljer och sparar ett nedrullningsbart alternativ som innehåller en apostrof (från den underordnade listrutan) efter att resursen öppnats [!UICONTROL Properties] (NPR-32649).
 
-* [!UICONTROL Asset Insights Sync Job] stoppar och misslyckas om ogiltiga poster påträffas (på analyssidan) i stället för att nästa post (NPR-32674) flyttas.
+* [!UICONTROL Asset Insights Sync Job] stoppar och misslyckas om ogiltiga poster påträffas (på Analytics-sidan) i stället för att gå till nästa post (NPR-32674).
 
 * Gyroscope fungerar inte eftersom rörelsesensorerna är inaktiverade som standard i mobilwebbläsare i panoramavisare (CQ-4272937).
 
@@ -199,7 +199,7 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 
 * Traversal-varningar observeras i loggar när en smart samling som innehåller mer än 10 000 resurser öppnas (NPR-32980).
 
-* Resursnamn ändras till gemener när resurser flyttas från en mapp till en annan i [!DNL Adobe Experience Manager] läget Dynamic Media Scene7 (NPR-32995).
+* Resursnamn ändras till gemener när du flyttar resurser från en mapp till en annan i [!DNL Adobe Experience Manager] Dynamic Media Scene7-körningsläge (NPR-32995).
 
 * Det går inte att ta bort en sökresurs efter att ha navigerat till dess egenskaper från sökresultaten och sedan gå tillbaka till sökresultaten för att ta bort den (NPR-32998).
 
@@ -213,11 +213,11 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 
 * Undantag observeras i loggar vid öppning av renderingsspår för en PDF-fil i en mapp med en smart beskärningsprofil (CQ-4294201).
 
-* Bildförinställningar publiceras inte om [!UICONTROL Dynamic Media sync mode] är inaktiverat som standard i Experience Manager med körläget Dynamic Media Scene7 (CQ-4294200).
+* Bildförinställningar publiceras inte om [!UICONTROL Dynamic Media sync mode] är inaktiverat som standard i Experience Manager med Dynamic Media Scene7 runmode (CQ-4294200).
 
 * Resursbearbetning när massöverföring fastnar och arbetsflödesinstansen visar fasta instanser av DAM-uppdateringsresurs (CQ-4293916).
 
-* Det går att skapa en dynamisk mediekonfiguration i Experience Manager, men i användargränssnittet händer inget när du väljer Spara (CQ-4292442).
+* Det går att skapa en Dynamic Media-konfiguration i Experience Manager, men i användargränssnittet händer inget när du väljer Spara (CQ-4292442).
 
 * Förhandsgranskning av F4V-videomaterial fungerar inte i progressiv uppspelning på Safari/Mac (CQ-4289844).
 
@@ -229,23 +229,23 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 
 * Prestandaproblem som åtgärdas i 6.5.5.0 är (CQ-4279206):
 
-   * Det tar för lång tid att överföra stora binära filer till servrar för bildbearbetning i dynamiska media.
+   * Det tar för lång tid att överföra stora binära filer till Dynamic Media Image Processing-servrar.
 
-   * Tiden för generering av miniatyrbilder i Experience Manager ökar på grund av Dynamic Media Scene7-arkitekturen.
+   * Genereringstiden för miniatyrbilder på Experience Manager ökar på grund av Dynamic Media Scene7-arkitekturen.
 
 * Migreringsproblem med Dynamic Media Scene7 misslyckas för kunder med ett stort antal mediefiler (CQ-4279206).
 
 * Layouten i visningsprogrammet för video 360 bryts om `setVideo` används, och videon ändras när den används `video= modifier` (CQ-4263201).
 
-* Ett felmeddelande visas när Experience Manager SDL-paketet installeras (NPR-33175).
+* Ett felmeddelande visas när Experience Manager SDL-paketet (NPR-33175) installeras.
 
 ### Platform {#platform-6550}
 
 * Filtret anropas inte om [!DNL Sling] mappningsposten skapas under `sling:match` `/etc/maps` (NPR-33362).
 * Experience Manager kraschar på grund av segmenteringsfel med [!DNL Apache Lucene] (NPR-32988).
-* [!DNL Jackson] kärnpaket saknas i Experience Manager-filen uberjar (NPR-32848).
+* [!DNL Jackson] kärnpaket saknas i filen Experience Manager uberjar (NPR-32848).
 * CRXDE Lite läser inte in innehåll för användare utan läsbehörighet för en nods egenskap (NPR-32611). `jcr:primaryType`
-* [!DNL Granite] Schemaläggaren för underhållsaktiviteter initieras om för ofta under Experience Manager-distributioner (CQ-4294627).
+* [!DNL Granite] Schemaläggaren för underhållsaktiviteter initieras om för ofta under distributioner av Experience Manager (CQ-4294627).
 * När en SQL-fråga körs länge, till exempel 7 timmar, slutar Experience Manager svara (NPR-33044).
 
 ### Användargränssnitt {#ui-6550}
@@ -263,7 +263,7 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 * Vid export [!DNL Experience Fragments] med Adobe I/O exporteras inte metadata som Source Product till Adobe Target (NPR-32159).
 * Auktoriserade IMS-användare i den lokala Experience Manager-administratörsgruppen kan inte skapa eller ändra IMS-konfigurationer (NPR-33045).
 * Konfigurationssidan för Adobe Launch visar inte alla poster (NPR-33011).
-* Användare i gruppen content-authors kan inte redigera egenskaper för en Adobe Target-komponent på grund av ett JavaScript-fel (NPR-32996).
+* Användare i gruppen content-authors kan inte redigera egenskaper för en Adobe Target-komponent på grund av JavaScript-fel (NPR-32996).
 
 ### Översättningsprojekt {#translation-6550}
 
@@ -290,7 +290,7 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 * Ett fel inträffar vid åtkomst till [!UICONTROL Activity Stream] sidan (NPR-33146).
 * Grupper som tas bort från författarinstansen tas inte bort från alla publiceringsinstanser (NPR-33199).
 * Författare som har skapat en ny grupp omdirigeras inte till avsnittet [!UICONTROL Community Group] i [!DNL Internet Explorer] 11 (NPR-33205).
-* Om du får åtkomst till ett meddelande i Experience Manager Inbox ändras inte meddelandets status till Läs (NPR-32764).
+* Om du öppnar ett meddelande i Inkorgen i Experience Manager ändras inte meddelandets status till Läs (NPR-32764).
 * När du redigerar en [!DNL Communities] grupp och ändrar miniatyrbilden uppdateras inte gruppens miniatyrbild (NPR-32599).
 * En användare kan inte skicka ett e-postmeddelande till en annan användare i en community (NPR-32598).
 * En skickad blogg visas inte förrän användaren uppdaterar sidan (NPR-32391).
@@ -334,7 +334,7 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 
 >[!NOTE]
 >
->Adobe rekommenderar inte att du tar bort eller avinstallerar Adobe Experience Manager 6.5.5.0-paketet.
+>Adobe rekommenderar inte att du tar bort eller avinstallerar paketet Adobe Experience Manager 6.5.5.0.
 
 ### Installera Service Pack {#install-service-pack}
 
@@ -352,7 +352,7 @@ Så här installerar du Service Pack på en befintlig instans av Adobe Experienc
 
 **Automatisk installation**
 
-Det finns två sätt att automatiskt installera Adobe Experience Manager 6.5.5.0 på en fungerande instans:
+Det finns två sätt att installera Adobe Experience Manager 6.5.5.0 automatiskt på en fungerande instans:
 
 S. Placera paketet i en `../crx-quickstart/install` mapp när servern är tillgänglig online. Paketet installeras automatiskt.
 
@@ -360,7 +360,7 @@ B. Använd [HTTP API från Package Manager](https://docs.adobe.com/content/docs/
 
 >[!NOTE]
 >
->Adobe Experience Manager 6.5.5.0 stöder inte Bootstrap-installation.
+>Adobe Experience Manager 6.5.5.0 stöder inte installation av Bootstrap.
 
 **Validera installation**
 
@@ -372,7 +372,7 @@ B. Använd [HTTP API från Package Manager](https://docs.adobe.com/content/docs/
 
 Om du vill veta vilka plattformar som är certifierade för att fungera med den här versionen läser du de [tekniska kraven](/help/sites-deploying/technical-requirements.md).
 
-### Installera tilläggspaketet Adobe Experience Manager Forms {#install-aem-forms-add-on-package}
+### Installera tilläggspaket för Adobe Experience Manager Forms {#install-aem-forms-add-on-package}
 
 >[!NOTE]
 >
@@ -386,9 +386,9 @@ Om du vill veta vilka plattformar som är certifierade för att fungera med den 
 
 >[!NOTE]
 >
->Hoppa över om du inte använder AEM Forms på JEE. Korrigeringar i Adobe Experience Manager Forms för JEE levereras via ett separat installationsprogram.
+>Hoppa över om du inte använder AEM Forms på JEE. Korrigeringar i Adobe Experience Manager Forms på JEE levereras via ett separat installationsprogram.
 
-Information om hur du installerar det kumulativa installationsprogrammet för Experience Manager Forms på JEE och konfigurationen efter distributionen finns i [versionsinformationen för korrigering 0014](https://helpx.adobe.com/aem-forms/quick-fixes/6-5/jee-patch-0014.html).
+Information om hur du installerar det kumulativa installationsprogrammet för Experience Manager Forms på JEE och konfigurationen efter distributionen finns i [versionsinformationen för patch 0014](https://helpx.adobe.com/aem-forms/quick-fixes/6-5/jee-patch-0014.html).
 
 ### UberJar {#uber-jar}
 
@@ -406,7 +406,7 @@ Om du vill använda UberJar i ett Maven-projekt ska du läsa [hur du använder U
 </dependency>
 ```
 
-## Föråldrade funktioner {#removed-deprecated-features}
+## Deprecated features {#removed-deprecated-features}
 
 I det här avsnittet listas funktioner som har markerats som borttagna i AEM 6.5.5.0. Funktioner som ska tas bort i en framtida version är först inaktuella, med ett alternativt alternativ att använda.
 
@@ -414,7 +414,7 @@ Kunderna rekommenderas att granska om de använder funktionen eller funktionen i
 
 | Yta | Funktion | Ersättning |
 |---|---|---|
-| Integreringar | Skärmen är föråldrad **[!UICONTROL AEM Cloud Services Opt-In]** . Med integreringen av AEM och Target uppdaterad i AEM 6.5 för att stödja Target Standard API, som använder autentisering via Adobe IMS och I/O, och den växande rollen hos Adobe Launch för att instrumentera AEM-sidor för analys och personalisering, har Opt-In Wizard blivit funktionellt irrelevant. | Konfigurera systemanslutningar, Adobe IMS-autentisering och Adobe I/O-integreringar via respektive AEM-molntjänster. |
+| Integreringar | Skärmen är föråldrad **[!UICONTROL AEM Cloud Services Opt-In]** . Med integreringen av AEM och Target uppdaterad i AEM 6.5 som stöd för Target Standard-API, som använder autentisering via Adobe IMS och I/O, och den växande rollen hos Adobe Launch för att instrumentera AEM- för analys och personalisering, har Opt-In Wizard blivit funktionellt irrelevant. | Konfigurera systemanslutningar, Adobe IMS-autentisering och Adobe I/O-integreringar via respektive AEM cloud services. |
 
 ## Known issues {#known-issues}
 
@@ -431,11 +431,11 @@ Kunderna rekommenderas att granska om de använder funktionen eller funktionen i
 * Om [!UICONTROL Connected assets configuration] guiden returnerar ett 404-felmeddelande efter installationen måste du installera om `cq-remotedam-client-ui-content` - och `cq-remotedam-client-ui-components` -paketen manuellt med hjälp av pakethanteraren.
 
 * Följande fel och varningsmeddelanden kan visas under installationen av AEM 6.5.x.x:
-   * &quot;När Target-integreringen konfigureras i AEM med Target Standard API (IMS-autentisering) skapas felaktiga erbjudandetyper när Experience Fragments exporteras till Target. I stället för att skriva&quot;Experience Fragment&quot;/källan&quot;Adobe Experience Manager&quot; skapar Target flera erbjudanden med typen&quot;HTML&quot;/källan&quot;Adobe Target Classic&quot;.
+   * &quot;När Target-integreringen konfigureras i AEM med Target Standard-API (IMS-autentisering) skapas felaktiga erbjudandetyper när Experience Fragments exporteras till Target. I stället för att skriva &quot;Experience Fragment&quot;/källa &quot;Adobe Experience Manager&quot; skapar Target flera erbjudanden med typen &quot;HTML&quot;/källa &quot;Adobe Target Classic&quot;.
    * `com.adobe.granite.maintenance.impl.TaskScheduler`: Inga underhållsfönster hittades vid granit/drift/underhåll.
    * Validering på serversidan av adaptiva formulär misslyckas när sammanställningsfunktioner som SUM, MAX och MIN används. CQ-4274424
    * `com.adobe.granite.maintenance.impl.TaskScheduler` - Inga underhållsfönster hittades vid granit/drift/underhåll.
-   * Aktiveringspunkten i en interaktiv bild i Dynamic Media är inte synlig när du förhandsgranskar resursen via visningsprogrammet för den köpbara kanalen.
+   * Aktiveringspunkten i en interaktiv Dynamic Media-bild syns inte när du förhandsvisar mediefilen via visningsprogrammet för den köpbara kanalen.
 
 ## OSGi-paket och innehållspaket som ingår {#osgi-bundles-and-content-packages-included}
 
