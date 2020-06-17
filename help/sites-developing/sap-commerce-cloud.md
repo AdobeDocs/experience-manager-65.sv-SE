@@ -10,7 +10,10 @@ content-type: reference
 topic-tags: platform
 discoiquuid: 96dc0c1a-b21d-480a-addf-c3d0348bd3ad
 translation-type: tm+mt
-source-git-commit: b3e1493811176271ead54bae55b1cd0cf759fe71
+source-git-commit: 07eb53f19cf7c7c2799c95ba9df54f4673d72fdc
+workflow-type: tm+mt
+source-wordcount: '2331'
+ht-degree: 0%
 
 ---
 
@@ -38,7 +41,7 @@ Ett antal färdiga AEM-komponenter finns för att använda integreringslagret. F
 * en kundvagn
 * utcheckning
 
-För sökningar finns en integreringsfunktion som gör att du kan använda AEM-sökningen, sökningen i e-handelssystemet, en tredjepartssökning (som Search&amp;Promote) eller en kombination av dessa.
+För sökning tillhandahålls en integreringsfunktion som gör att du kan använda AEM-sökningen, sökningen i e-handelssystemet, en sökning från tredje part (som Search&amp;Promote) eller en kombination av dessa.
 
 ## Val av e-handelsmotor {#ecommerce-engine-selection}
 
@@ -65,7 +68,7 @@ eCommerce-ramverket kan användas med alla e-handelslösningar, och den motor so
 
 Se följande exempel nedan:
 
-| `cq:commerceProvider = geometrixx` | I en AEM-standardinstallation krävs en specifik implementering. Exempel på geometrixx, som innehåller minimala tillägg till det generiska API:t |
+| `cq:commerceProvider = geometrixx` | I en AEM-standardinstallation krävs en specifik implementering. till exempel exemplet geometrixx, som innehåller minimala tillägg till det generiska API:t |
 |---|---|
 | `cq:commerceProvider = hybris` | hybriimplementering |
 
@@ -109,8 +112,7 @@ För att utveckla för Hybris 4 krävs följande:
 
    `-P hybris4`
 
-   
-Den hämtar den förkonfigurerade distributionen av Hybris 4 och bäddar in den i paketet:
+   Den hämtar den förkonfigurerade distributionen av Hybris 4 och bäddar in den i paketet:
 
    ```
    cq-commerce-hybris-server
@@ -195,7 +197,7 @@ Produktdata som underhålls i hybris måste finnas tillgängliga i AEM. Följand
 
 * Aktiverade produktsidor måste ha tillgång till produktdatans **onlineversion** (d).
 
-* AEM-publiceringsinstansen kräver åtkomst till hybris för hämtning av produktdata och personaliserade data (d).
+* AEM-publiceringsinstansen kräver tillgång till hybris för hämtning av produktdata och personaliserade data (d).
 
 ### Arkitektur {#architecture}
 
@@ -286,7 +288,7 @@ public interface Product extends Adaptable {
 }
 ```
 
-#### com.adobe.cq.commerce.api.VariantFilter {#com-adobe-cq-commerce-api-variantfilter}
+#### com.adobe.cq.commerce.api.VariantFilter  {#com-adobe-cq-commerce-api-variantfilter}
 
 ```java
 /**
@@ -429,7 +431,7 @@ public class AxisFilter implements VariantFilter {
    * I hybris-fallet äger hybris-servern kundvagnen.
    * I det generiska AEM-fallet lagras kundvagnar i [ClientContext](/help/sites-administering/client-context.md).
 
-**Personalisering**
+**Personanpassning**
 
 * Personalisering bör alltid drivas via [ClientContext](/help/sites-administering/client-context.md).
 * En ClientContext `/version/` i kundvagnen skapas i samtliga fall:
@@ -540,13 +542,11 @@ Det finns flera allmänna/hjälpklasser i huvudprojektet:
 
 1. `CommerceQuery`
 
-   
-Används för att beskriva en sökfråga (innehåller information om frågetext, aktuell sida, sidstorlek, sortering och valda aspekter). Alla e-handelstjänster som implementerar söknings-API:t får instanser av den här klassen för att kunna utföra sökningen. En `CommerceQuery` instans kan skapas från ett begäranobjekt ( `HttpServletRequest`).
+   Används för att beskriva en sökfråga (innehåller information om frågetext, aktuell sida, sidstorlek, sortering och valda aspekter). Alla e-handelstjänster som implementerar söknings-API:t får instanser av den här klassen för att kunna utföra sökningen. En `CommerceQuery` instans kan skapas från ett begäranobjekt ( `HttpServletRequest`).
 
 1. `FacetParamHelper`
 
-   
-Är en verktygsklass som innehåller en statisk metod - `toParams` - som används för att generera `GET` parametersträngar från en lista med facets och ett växlat värde. Detta är användbart på användargränssnittssidan, där du behöver visa en hyperlänk för varje värde i varje aspekt, så att respektive värde växlas när användaren klickar på hyperlänken (d.v.s. om den markerats tas det bort från frågan, annars läggs det till). Detta tar hand om all logik för hantering av flera-/enkelvärdesfaktorer, åsidosättningsvärden osv.
+   Är en verktygsklass som innehåller en statisk metod - `toParams` - som används för att generera `GET` parametersträngar från en lista med facets och ett växlat värde. Detta är användbart på användargränssnittssidan, där du behöver visa en hyperlänk för varje värde i varje aspekt, så att respektive värde växlas när användaren klickar på hyperlänken (d.v.s. om den markerats tas det bort från frågan, annars läggs det till). Detta tar hand om all logik för hantering av flera-/enkelvärdesfaktorer, åsidosättningsvärden osv.
 
 Startpunkten för söknings-API är den `CommerceService#search` metod som returnerar ett `CommerceResult` objekt. Mer information om det här avsnittet finns i [API-dokumentationen](/help/sites-developing/ecommerce.md#api-documentation) .
 
@@ -558,9 +558,9 @@ Integrering sker mellan AEM och olika e-handelssystem. Detta kräver en strategi
 
    AEM antas vara den *enda* frontwebben och utför därför *all* autentisering.
 
-* Slavkonton
+* Konton i Hybris
 
-   AEM skapar ett slavkonto i hybris för varje kund. Slavkontots användarnamn är samma som AEM-användarnamnet. Ett kryptografiskt slumpmässigt lösenord genereras automatiskt och lagras (krypteras) i AEM.
+   AEM skapar ett motsvarande (underordnat) konto i hybris för varje kund. Användarnamnet för det här kontot är detsamma som AEM-användarnamnet. Ett kryptografiskt slumpmässigt lösenord genereras automatiskt och lagras (krypteras) i AEM.
 
 #### Befintliga användare {#pre-existing-users}
 
