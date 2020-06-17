@@ -11,7 +11,10 @@ topic-tags: deploying
 discoiquuid: 492741d5-8d2b-4a81-8f21-e621ef3ee685
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/queries-and-indexing
 translation-type: tm+mt
-source-git-commit: 1f7a45adc73b407c402a51b061632e72d97ca306
+source-git-commit: b01f6d3726fd6aa06ffedaf10dfde9526479a2a3
+workflow-type: tm+mt
+source-wordcount: '2880'
+ht-degree: 0%
 
 ---
 
@@ -65,7 +68,7 @@ Därefter används varje index för att beräkna kostnaden för frågan. När de
 
 >[!NOTE]
 >
->För stora databaser är det tidskrävande att skapa ett index. Detta gäller både när ett index skapas första gången och när ett index indexeras om (när definitionen har ändrats). Se även [Felsöka ekindex](/help/sites-deploying/troubleshooting-oak-indexes.md) och [förhindra långsam omindexering](/help/sites-deploying/troubleshooting-oak-indexes.md#preventing-slow-re-indexing).
+>För stora databaser är det tidskrävande att skapa ett index. Detta gäller både när ett index skapas första gången och när ett index indexeras om (när definitionen ändrats). Se även [Felsöka ekindex](/help/sites-deploying/troubleshooting-oak-indexes.md) och [förhindra långsam omindexering](/help/sites-deploying/troubleshooting-oak-indexes.md#preventing-slow-re-indexing).
 
 Om omindexering behövs i mycket stora databaser, särskilt när du använder MongoDB och fulltextindex, bör du överväga att extrahera text och använda eko-run för att skapa det ursprungliga indexet och indexera om.
 
@@ -82,8 +85,8 @@ Egenskapsindexet är vanligtvis användbart för frågor som har egenskapsbegrä
 1. Namnge noden **PropertyIndex** och ange nodtypen till **oak:QueryIndexDefinition**
 1. Ange följande egenskaper för den nya noden:
 
-   * **** typ:  `property` (av typen String)
-   * **** propertyNames:  `jcr:uuid` (av typen Namn)
+   * **typ:**  `property` (av typen String)
+   * **propertyNames:**  `jcr:uuid` (av typen Namn)
    I det här exemplet indexeras `jcr:uuid` egenskapen, vars jobb är att visa den universellt unika identifieraren (UUID) för noden som den är kopplad till.
 
 1. Spara ändringarna.
@@ -119,8 +122,8 @@ Du kan konfigurera ett fulltextindex för Lucene enligt följande procedur:
 1. Namnge noden **LuceneIndex** och ange nodtypen **oak:QueryIndexDefinition**
 1. Lägg till följande egenskaper i noden:
 
-   * **** typ:  `lucene` (av typen String)
-   * **** asynk:  `async` (av typen String)
+   * **typ:**  `lucene` (av typen String)
+   * **asynk:**  `async` (av typen String)
 
 1. Spara ändringarna.
 
@@ -129,7 +132,7 @@ Lucene-indexet har följande konfigurationsalternativ:
 * Den **type** -egenskap som anger indextypen måste anges till **lucene**
 * Den **asynkrona** egenskapen som måste anges som **asynkron**. Detta skickar indexuppdateringsprocessen till en bakgrundstråd.
 * Egenskapen **includePropertyTypes** , som definierar vilken delmängd av egenskapstyper som ska inkluderas i indexet.
-* Egenskapen **excludePropertyNames** som definierar en svart lista med egenskapsnamn - egenskaper som ska exkluderas från indexet.
+* Egenskapen **excludePropertyNames** som definierar en lista med egenskapsnamn - egenskaper som ska uteslutas från indexet.
 * Flaggan **reindex** som, när den anges till **true**, aktiverar ett fullständigt innehållsindexvärde.
 
 ### Egenskapsindexet Lucene {#the-lucene-property-index}
@@ -146,8 +149,8 @@ select * from [nt:base] where [alias] = '/admin'
 
 Om du vill definiera ett Lucene-egenskapsindex för frågan ovan kan du lägga till följande definition genom att skapa en ny nod under **oak:index:**
 
-* **** Namn: `LucenePropertyIndex`
-* **** Typ: `oak:QueryIndexDefinition`
+* **Namn:** `LucenePropertyIndex`
+* **Typ:** `oak:QueryIndexDefinition`
 
 När noden har skapats lägger du till följande egenskaper:
 
@@ -169,7 +172,7 @@ När noden har skapats lägger du till följande egenskaper:
    false (of type Boolean)
    ```
 
-* **** includePropertyNames: `["alias"] (of type String)`
+* **includePropertyNames:** `["alias"] (of type String)`
 
 >[!NOTE]
 >
@@ -205,22 +208,22 @@ Om du vill använda någon av de färdiga analysverktygen kan du konfigurera den
 
 1. Lägg till en egenskap i standardnoden med följande egenskaper:
 
-   * **** Namn: `class`
-   * **** Typ: `String`
-   * **** Värde: `org.apache.lucene.analysis.standard.StandardAnalyzer`
+   * **Namn:** `class`
+   * **Typ:** `String`
+   * **Värde:** `org.apache.lucene.analysis.standard.StandardAnalyzer`
    Värdet är namnet på den analyserarklass som du vill använda.
 
    Du kan också ange att analyseraren ska användas med en specifik lucene-version genom att använda den valfria `luceneMatchVersion` strängegenskapen. Ett giltigt syntaxvärde för användning med Lucene 4.7 är:
 
-   * **** Namn: `luceneMatchVersion`
-   * **** Typ: `String`
-   * **** Värde: `LUCENE_47`
+   * **Namn:** `luceneMatchVersion`
+   * **Typ:** `String`
+   * **Värde:** `LUCENE_47`
    Om `luceneMatchVersion` inte anges kommer Oak att använda den version av Lucene som levereras med.
 
 1. Om du vill lägga till en stoppordsfil i analyskonfigurationerna kan du skapa en ny nod under den med följande egenskaper: `default`
 
-   * **** Namn: `stopwords`
-   * **** Typ: `nt:file`
+   * **Namn:** `stopwords`
+   * **Typ:** `nt:file`
 
 #### Skapa analytiker via Composition {#creating-analyzers-via-composition}
 
@@ -228,37 +231,37 @@ Analysatorer kan också sättas samman baserat på `Tokenizers`, `TokenFilters` 
 
 Se den här nodstrukturen som ett exempel:
 
-* **** Namn: `analyzers`
+* **Namn:** `analyzers`
 
-   * **** Namn: `default`
+   * **Namn:** `default`
 
-      * **** Namn: `charFilters`
-      * **** Typ: `nt:unstructured`
+      * **Namn:** `charFilters`
+      * **Typ:** `nt:unstructured`
 
-         * **** Namn: `HTMLStrip`
-         * **** Namn: `Mapping`
-      * **** Namn: `tokenizer`
+         * **Namn:** `HTMLStrip`
+         * **Namn:** `Mapping`
+      * **Namn:** `tokenizer`
 
-         * **** Egenskapsnamn: `name`
+         * **Egenskapsnamn:** `name`
 
-            * **** Typ: `String`
-            * **** Värde: `Standard`
-      * **** Namn: `filters`
-      * **** Typ: `nt:unstructured`
+            * **Typ:** `String`
+            * **Värde:** `Standard`
+      * **Namn:** `filters`
+      * **Typ:** `nt:unstructured`
 
-         * **** Namn: `LowerCase`
-         * **** Namn: `Stop`
+         * **Namn:** `LowerCase`
+         * **Namn:** `Stop`
 
-            * **** Egenskapsnamn: `words`
+            * **Egenskapsnamn:** `words`
 
-               * **** Typ: `String`
-               * **** Värde: `stop1.txt, stop2.txt`
-            * **** Namn: `stop1.txt`
+               * **Typ:** `String`
+               * **Värde:** `stop1.txt, stop2.txt`
+            * **Namn:** `stop1.txt`
 
-               * **** Typ: `nt:file`
-            * **** Namn: `stop2.txt`
+               * **Typ:** `nt:file`
+            * **Namn:** `stop2.txt`
 
-               * **** Typ: `nt:file`
+               * **Typ:** `nt:file`
 
 
 
@@ -307,9 +310,9 @@ Du kan konfigurera den inbäddade Solr-servern genom att:
 1. Öppna CRXDE och logga in som administratör.
 1. Lägg till en nod med namnet **solnodex** av typen **oak:QueryIndexDefinition** under **oak:index** med följande egenskaper:
 
-   * **** typ: `solr`(av typen String)
-   * **** asynk: `async`(av typen String)
-   * **** omindexera: `true`(av typen Boolean)
+   * **typ:** `solr`(av typen String)
+   * **asynk:** `async`(av typen String)
+   * **omindexera:** `true`(av typen Boolean)
 
 1. Spara ändringarna.
 
@@ -368,9 +371,9 @@ AEM kan även konfigureras för att fungera med en Solr-fjärrserverinstans:
 1. Gå till CRXDE och logga in som administratör.
 1. Skapa en ny nod med namnet **solrIndex** under **oak:index** och ange följande egenskaper:
 
-   * **** typ: solr (av typen String)
-   * **** asynk: async (av typen String)
-   * **** omindexera: true (av typen Boolean)
+   * **typ:** solr (av typen String)
+   * **asynk:** async (av typen String)
+   * **omindexera:** true (av typen Boolean)
 
 1. Spara ändringarna.
 
