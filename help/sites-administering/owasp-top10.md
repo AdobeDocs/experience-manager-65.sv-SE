@@ -10,7 +10,10 @@ topic-tags: Security
 content-type: reference
 discoiquuid: e5323ae8-bc37-4bc6-bca6-9763e18c8e76
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: cd7331f5f57ec90ea72d41d467891dc832347a3c
+workflow-type: tm+mt
+source-wordcount: '509'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ Dessa är listade nedan tillsammans med en förklaring av hur CRX hanterar dem.
 
 ## 1. Injektion {#injection}
 
-* SQL - Förebyggs av design: Standarddatabaskonfigurationen innehåller ingen eller kräver en traditionell databas. Alla data lagras i innehållsdatabasen. All åtkomst är begränsad till autentiserade användare och kan endast utföras via JCR API. SQL stöds endast för sökfrågor (SELECT). Furthemore SQL har stöd för värdebindning.
+* SQL - Förebyggs av design: Standarddatabaskonfigurationen innehåller ingen eller kräver en traditionell databas. Alla data lagras i innehållsdatabasen. All åtkomst är begränsad till autentiserade användare och kan endast utföras via JCR API. SQL stöds endast för sökfrågor (SELECT). Dessutom har SQL stöd för värdebindning.
 * LDAP - LDAP-injektion är inte möjlig eftersom autentiseringsmodulen filtrerar indata och utför användarimporten med bind-metoden.
 * OS - Ingen skalkörning utförs inifrån programmet.
 
@@ -45,7 +48,7 @@ All åtkomst till dataobjekt förmedlas av databasen och begränsas därför av 
 
 CSRF (Cross-Site Request Forgery) reduceras genom att en kryptografisk token automatiskt matas in i alla formulär och AJAX-begäranden och denna token verifieras på servern för varje POST.
 
-Dessutom levereras AEM med ett hänvisningsrubrikbaserat filter, som bara kan konfigureras för att tillåta POST-begäranden från specifika vita värdar.
+Dessutom levereras AEM med ett hänvisningsrubrikbaserat filter, som kan konfigureras för att *endast* tillåta POST-begäranden från specifika värdar (definieras i en lista).
 
 ## 6. Felkonfiguration av säkerhet {#security-misconfiguration}
 
