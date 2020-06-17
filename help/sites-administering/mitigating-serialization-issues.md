@@ -10,7 +10,10 @@ topic-tags: Security
 content-type: reference
 discoiquuid: f3781d9a-421a-446e-8b49-40744b9ef58e
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 3cbbad3ce9d93a353f48fc3206df989a8bf1991a
+workflow-type: tm+mt
+source-wordcount: '969'
+ht-degree: 0%
 
 ---
 
@@ -23,15 +26,15 @@ AEM-teamet på Adobe har samarbetat nära med öppen källkodsprojektet [NotSoSe
 
 Agentbehållaren som ingår i paketet är Adobes ändrade distribution av NotSoSerial.
 
-NotSoSerial är en Java-nivålösning på ett Java-nivåproblem och är inte AEM-specifikt. En preflight-kontroll läggs till i ett försök att avserialisera ett objekt. Med den här kontrollen testas ett klassnamn mot en vitlista och/eller svartlista i brandväggsstil. På grund av det begränsade antalet klasser i standardsvartlistan är det osannolikt att detta påverkar dina system eller din kod.
+NotSoSerial är en Java-nivålösning på ett Java-nivåproblem och är inte AEM-specifikt. En preflight-kontroll läggs till i ett försök att avserialisera ett objekt. Den här kontrollen testar ett klassnamn mot en brandväggslista som tillåter och/eller blocklista. På grund av det begränsade antalet klasser i standardblocklistan är det osannolikt att detta påverkar dina system eller din kod.
 
-Som standard utför agenten en svartlistningskontroll mot aktuella kända sårbara klasser. Denna svarta lista är avsedd att skydda dig från den aktuella listan över explosioner som använder denna typ av sårbarhet.
+Som standard utför agenten en kontroll av blockeringslistan mot aktuella kända sårbara klasser. Den här blockeringslistan är avsedd att skydda dig från den aktuella listan över explosioner som använder den här typen av sårbarhet.
 
-Svartlistan och vitlistan kan konfigureras genom att följa instruktionerna i avsnittet [Konfigurera agenten](/help/sites-administering/mitigating-serialization-issues.md#configuring-the-agent) i den här artikeln.
+Blocklistan och listan över tillåtna kan konfigureras genom att följa instruktionerna i avsnittet [Konfigurera agenten](/help/sites-administering/mitigating-serialization-issues.md#configuring-the-agent) i den här artikeln.
 
 Medlet är avsett att bidra till att minska de senaste kända sårbara klasserna. Om ditt projekt avserialiserar otillförlitliga data kan det fortfarande vara känsligt för denial of service-attacker, slut på minnesattacker och okända framtida avserialiseringsattacker.
 
-Adobe har officiellt stöd för Java 6, 7 och 8, men vi har förstått att NotSoSerial även har stöd för Java 5.
+Adobe har officiellt stöd för Java 6, 7 och 8, men vi är överens om att NotSoSerial även har stöd för Java 5.
 
 ## Installera agenten {#installing-the-agent}
 
@@ -66,7 +69,7 @@ NotSoSerial-agenten ingår inte i standarddistributionen av AEM för programserv
 
 ## Konfigurera agenten {#configuring-the-agent}
 
-Standardkonfigurationen räcker för de flesta installationer. Detta inkluderar en svart lista över kända sårbara klasser för fjärrexekvering och en vitlista över paket där avserialisering av tillförlitliga data bör vara relativt säker.
+Standardkonfigurationen räcker för de flesta installationer. Detta inkluderar en blocklista över kända sårbara klasser för fjärrexekvering och en lista över tillåtna paket där deserialisering av tillförlitliga data bör vara relativt säker.
 
 Brandväggskonfigurationen är dynamisk och kan ändras när som helst genom att:
 
@@ -80,15 +83,15 @@ Brandväggskonfigurationen är dynamisk och kan ändras när som helst genom att
    >* `https://server:port/system/console/configMgr/com.adobe.cq.deserfw.impl.DeserializationFirewallImpl`
 
 
-Den här konfigurationen innehåller loggning av vitlista, svartlista och deserialisering.
+Den här konfigurationen innehåller en lista över tillåtna användare, en blockeringslista och en loggning för deserialisering.
 
-**Vitlista**
+**Tillåt lista**
 
-I vitlistningsavsnittet är dessa klasser eller paketprefix som tillåts för deserialisering. Observera att om du avserialiserar egna klasser måste du lägga till antingen klasserna eller paketen i den här vitlistan.
+I avsnittet Tillåt är dessa klasser eller paketprefix som tillåts för deserialisering. Observera att om du avserialiserar egna klasser måste du lägga till antingen klasserna eller paketen i listan Tillåt.
 
-**Blacklisting**
+**Blocklista**
 
-I avsnittet med svartlistning är klasser som aldrig tillåts för deserialisering. Den första uppsättningen av dessa klasser är begränsad till klasser som har befunnits sårbara för attacker på fjärrbasis. Svartlistan används före alla vitlistade poster.
+I avsnittet med blocklistor är klasser som aldrig tillåts för deserialisering. Den första uppsättningen av dessa klasser är begränsad till klasser som har befunnits sårbara för attacker på fjärrbasis. Blocklistan tillämpas före alla poster i listan över tillåtna.
 
 **Diagnostikloggning**
 
@@ -110,7 +113,7 @@ Mer information om felsökning av problem med agenten finns i [Hantera fel med d
 
 >[!NOTE]
 >
->Om du lägger `org.apache.commons.collections.functors` till i vitlistan misslyckas alltid hälsokontrollen.
+>Om du lägger `org.apache.commons.collections.functors` till i listan Tillåt misslyckas alltid hälsokontrollen.
 
 ## Hantera fel med dynamisk agentinläsning {#handling-errors-with-dynamic-agent-loading}
 
@@ -139,4 +142,3 @@ Följ instruktionerna nedan för att läsa in agenten manuellt:
 ## Andra överväganden {#other-considerations}
 
 Om du kör på en IBM JVM läser du dokumentationen om stöd för Java Attach API på [den här platsen](https://www.ibm.com/support/knowledgecenter/SSSTCZ_2.0.0/com.ibm.rt.doc.20/user/attachapi.html).
-
