@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 907316d1-3d23-4c46-bccb-bad6fe1bd1bb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
+source-git-commit: 5d74f3510ff20e062f1e78f61d98e9c2e7a0414f
+workflow-type: tm+mt
+source-wordcount: '1599'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,7 @@ SharePoint-anslutningen stöder följande grundfunktioner:
 * Bekräftar SharePoint-säkerhetsinställningar för åtkomst av innehåll genom att tillämpa intern SharePoint-autentisering och -auktorisering
 * Innehållsintegrering med Content Finder
 * Använda AEM-komponenter, till exempel Extern resurs, för att visa SharePoint-bilder och -videor
-* Synkroniserar SharePoint med AEM Resurser
+* Synkroniserar SharePoint med AEM Assets
 
 Alla funktioner implementeras med SharePoint-webbtjänster som gränssnitt till SharePoint-innehåll och -tjänster.
 
@@ -88,11 +91,11 @@ Kopplingen stöder följande:
 
 AEM Package Share används för att distribuera produktfunktioner, exempel och snabbkorrigeringar. Mer information finns i dokumentationen [för](/help/sites-administering/package-manager.md#package-share)paketdelning.
 
-Tryck/klicka på **Verktyg** och välj sedan **Paketresurs** för att öppna Paketdelning på AEM-välkomstsidan. Du måste ha ett giltigt Adobe-ID som innehåller företagets e-postadress. När du har loggat in på ditt konto ansöker du dessutom om åtkomst till paketdelning.
+Tryck/klicka på **Verktyg** och välj sedan **Paketresurs** för att öppna Paketdelning på AEM-välkomstsidan. Du behöver ett giltigt Adobe ID som innehåller företagets e-postadress. När du har loggat in på ditt konto ansöker du dessutom om åtkomst till paketdelning.
 
 #### Integrera med AEM {#integrating-with-aem}
 
-Installera innehållspaketet för anslutningsprogrammet.
+Så här installerar du innehållspaketet för anslutningsprogrammet.
 
 1. Öppna en Adobe Support-biljett och begär anslutningsfunktionen.
 1. Hämta paketet när det är tillgängligt och öppna sedan Package Manager för din AEM-instans.
@@ -128,14 +131,14 @@ Som standard visar kopplingen en enda JCR-arbetsyta. SharePoint-servern som visa
 Kopplingen kan även konfigureras för flera arbetsytor. I det här fallet är varje arbetsyta associerad med URL:en för respektive SharePoint-server som visas via arbetsytan. Om du vill lägga till en arbetsyta lägger du till en arbetsytedefinition i parametern Arbetsytor. En arbetsytedefinition har följande format:
 `<name>`= `<url>` där`<name>` är namnet på JCR-arbetsytan och`<url>` är URL:en för SharePoint-servern för den arbetsytan.
 
-I AEM utför du ett steg till utöver konfigurationsstegen ovan. Ta en vitlista med paketet &#39;**com.day.cq.dam.cq-dam-jcr-connectors**&#39;.
+I AEM utför du ett steg till utöver konfigurationsstegen ovan. Tillåt lista med paketet &#39;**com.day.cq.dam.cq-dam-jcr-connectors**&#39;.
 
-Så här vitlistar du paket i AEM:
+Så här tillåter du listpaket i AEM:
 
 1. Gå till OSGi Management Console: http://localhost:4502/system/console/configMgr.
 1. Sök efter tjänsten Apache Sling Login Admin Whitelist.
-1. Välj Kringgå vitlistan.
-1. Lägg till &#39;**com.day.cq.dam.cq-dam-jcr-connectors**&#39; i standardpaket för vitlistpaket
+1. Välj **Åsidosätt vitlistan**.
+1. Lägg till `com.day.cq.dam.cq-dam-jcr-connectors` i vitlistningspaket som standard
 1. Klicka på Spara.
 
 ![chlimage_1-82](assets/chlimage_1-82a.png)
@@ -213,7 +216,7 @@ Gå till: [http://localhost:4502/system/console/bundles](http://localhost:4502/s
 1. Gå till [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles).
 1. Klicka på OSGI > Konfiguration.
 1. Sök efter JCR Connector för **Dag för Microsoft Sharepoint**.
-1. Click `Edit the configuration values`.
+1. Klicka på `Edit the configuration values`.
 1. Ange värdet för Sharepoint Connection Factory till `com.day.crx.spi.sharepoint.security.WindowsAuthenticationConnectionFactory`.
 1. Click **Save**.
 
