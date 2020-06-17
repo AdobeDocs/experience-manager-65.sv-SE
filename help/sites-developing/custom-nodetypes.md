@@ -10,7 +10,10 @@ topic-tags: platform
 content-type: reference
 discoiquuid: aae186eb-e059-4a9d-b02d-86a86c86589d
 translation-type: tm+mt
-source-git-commit: d83cd0695f69d82e49b1761df2d8c64b0037e1f9
+source-git-commit: 07eb53f19cf7c7c2799c95ba9df54f4673d72fdc
+workflow-type: tm+mt
+source-wordcount: '1918'
+ht-degree: 7%
 
 ---
 
@@ -318,7 +321,7 @@ Definierar konfigurationen för&quot;redigeringsfältet&quot;.
 
 Konfigurerar ett släppmål för en komponent. Namnet på den här noden används som ett ID för dra och släpp.
 
-* `@prop accept` - Förteckning över MIME-typer som accepteras av detta släppmål.t.ex. `["image/*"]`
+* `@prop accept` - Förteckning över MIME-typer som accepteras av detta släppmål. t.ex. `["image/*"]`
 * `@prop groups` - Lista med dra och släpp-grupper som accepterar en källa.
 * `@prop propertyName` - Namnet på egenskapen som används för att lagra referensen.
 
@@ -490,7 +493,7 @@ Avsökningskonfiguration.
 * `@prop source (String) mandatory` - Datakällans URI, detta är obligatoriskt och får inte vara tomt
 * `@prop target (String)` - Målplatsen där data som hämtats från datakällan lagras. Detta är valfritt och standard är cq:PollConfig-noden.
 * `@prop interval (Long)` - Intervallet i sekunder som nya eller uppdaterade data från datakällan ska avsökas. Detta är valfritt och standardvärdet är 30 minuter (1 800 sekunder).
-* [Skapa anpassade dataimporttjänster för Adobe Experience Manager](https://helpx.adobe.com/experience-manager/using/polling.html)
+* [Skapar anpassade dataimporttjänster för Adobe Experience Manager](https://helpx.adobe.com/experience-manager/using/polling.html)
 
 **Definition**
 
@@ -550,7 +553,7 @@ MailerService-nodtyper. Mejlaren använder noder som har den här mixinen som ro
 
 **Beskrivning**
 
-Definierar en LiveRelationship-blandning. En huvudnod och en slavnod kan länkas via en LiveRelationship.
+Definierar en LiveRelationship-blandning. En primär källnod (kontrollnod) och en live-kopia (kontrollerad)-nod kan vara praktiskt taget länkad via en LiveRelationship.
 
 **Definition**
 
@@ -563,9 +566,9 @@ Definierar en LiveRelationship-blandning. En huvudnod och en slavnod kan länkas
 
 **Beskrivning**
 
-Definierar en LiveSync-blandning. Om en nod ingår i en LiveRelationship med en huvudnod som en slav, markeras den som en LiveSync.
+Definierar en LiveSync-blandning. Om en nod ingår i en LiveRelationship med en primär källnod (kontrollnod) och en live-kopia (kontrollerad)-nod, markeras den som LiveSync.
 
-* `@prop cq:master` - Sökväg till huvudnoden för LiveRelationship.
+* `@prop cq:master` - Sökväg till den primära källan (kontroll) för LiveRelationship.
 * `@prop cq:isDeep` - Definierar om relationen är tillgänglig för underordnade.
 * `@prop cq:syncTrigger` - Definierar när synkroniseringen aktiveras.
 * `@node * LiveSyncAction` - Åtgärder som ska utföras vid synkronisering
@@ -580,7 +583,7 @@ Definierar en LiveSync-blandning. Om en nod ingår i en LiveRelationship med en 
 
 **Beskrivning**
 
-Definierar en LiveSyncCanceled-blandning. Avbryt LiveSync-beteendet för en slavnod som kan ingå i en LiveRelationship på grund av någon av dess överordnade noder.
+Definierar en LiveSyncCanceled-blandning. Avbryt LiveSync-beteendet för en live-kopia (kontrollerad)-nod som kan ingå i en LiveRelationship på grund av en av dess överordnade noder.
 
 * `@prop cq:isCancelledForChildren` - Definierar om en LiveSync-åtgärd ska avbrytas. även för barn.
 
@@ -762,7 +765,7 @@ Definierar en blandningstyp som markerar filer som kan öppnas med komponentextr
 
 `[cq:ComponentExtractorSource] mixin`
 
-## Taggning {#tagging}
+## Taggar {#tagging}
 
 ### cq:Tagg {#cq-tag}
 
