@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: ed3a858c-7a43-4515-a2ff-43ca465c7d7d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0849cfdd0e4f9a614c455214e6520ead07ae6da0
+source-git-commit: 474fc122f557f32d34fddd9d35a113431f6ce491
+workflow-type: tm+mt
+source-wordcount: '3805'
+ht-degree: 0%
 
 ---
 
@@ -106,7 +109,7 @@ Du bör inte inaktivera JSON.
 
 Vissa inställningar kan påverka prestandan. De bör inaktiveras där det är möjligt, särskilt för en produktionsinstans.
 
-* VM **** från källa och VM **med** mål definierar JDK-versionen som den som används som JVM vid körning
+* Den virtuella **källdatorn** och **Target VM** definierar JDK-versionen som den som används som JVM vid körning
 
 * för produktionsinstanser:
 
@@ -187,7 +190,7 @@ Refererarfiltertjänsten är en OSGi-tjänst som gör att du kan konfigurera:
 
 * vilka http-metoder som ska filtreras
 * om en tom referensrubrik tillåts
-* och en vit lista över servrar som ska tillåtas utöver servervärden.
+* och en lista över servrar som ska tillåtas utöver servervärden.
 
 Mer information finns i [checklistan - Problem med smidning av begäran mellan webbplatser](/help/sites-administering/security-checklist.md#protect-against-cross-site-request-forgery) .
 
@@ -246,7 +249,7 @@ Om ett konfigurerat sökvägsvärde avslutas med ett snedstreck genomsöks hela 
 **Day Commons GFX Font Helper** När du återger grafik kan du använda DrawText för att bädda in text. För detta kan du även installera egna teckensnitt:
 
 * Definiera **teckensnittssökvägen** som ska genomsökas efter projektspecifika teckensnitt.
-Exempel, `/apps/myapp/fonts`.
+Till exempel, `/apps/myapp/fonts`.
 
 **Konfiguration av proxy för konfiguration** av Apache HTTP Components Proxy för all kod med Apache HTTP-klienten, som används när en HTTP görs. till exempel vid replikering.
 
@@ -312,7 +315,7 @@ När du använder [stängda användargrupper](/help/sites-administering/cug.md) 
 
 **Konfigurera CQ-rotmappning** för dag:
 
-* **Målsökväg** som definierar var en begäran till &quot; `/`&quot; kommer att omdirigeras till.
+* **Target Path** för att definiera var en begäran till &quot; `/`&quot; ska omdirigeras.
 
 Det finns två gränssnitt i AEM:
 
@@ -321,13 +324,13 @@ Det finns två gränssnitt i AEM:
 
 Med hjälp av AEM Root Mapping kan du konfigurera det användargränssnitt som du vill använda som standard för din instans:
 
-* Om du vill att det pekaktiverade användargränssnittet ska vara standardgränssnittet **pekar målsökvägen** på:
+* Om du vill att det pekaktiverade användargränssnittet ska vara standardgränssnittet pekar **Target Path** på:
 
    ```
       /projects.html
    ```
 
-* Om du vill att det klassiska användargränssnittet ska vara standardgränssnittet **pekar målsökvägen** på:
+* Om du vill använda det klassiska användargränssnittet som standardgränssnitt ska **Target Path** peka på:
 
    ```
       /welcome.html
