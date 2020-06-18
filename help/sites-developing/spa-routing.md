@@ -10,7 +10,10 @@ topic-tags: spa
 content-type: reference
 discoiquuid: d9f1e24e-51a9-4f28-b2cd-2e97aed63a24
 translation-type: tm+mt
-source-git-commit: 2dad220d6593ed542816f8a97b0d4b44f0d57876
+source-git-commit: 4ea1bad1fb76142be7f6d564ecf30ed85a6da694
+workflow-type: tm+mt
+source-wordcount: '515'
+ht-degree: 0%
 
 ---
 
@@ -61,7 +64,7 @@ Som standard aktiveras det här beteendet automatiskt. Om du vill inaktivera den
 <meta property="cq:pagemodel_router" content="disable"\>
 ```
 
-Observera att alla vägar i SPA bör motsvara en tillgänglig resurs i AEM (t.ex. &quot; `/content/mysite/mypage"`) eftersom användaren `PageModelManager` automatiskt försöker att läsa in motsvarande sidmodell när flödet har valts. Vid behov kan SPA även definiera en&quot;svart lista&quot; med vägar som ska ignoreras av `PageModelManager`:
+Observera att alla vägar i SPA bör motsvara en tillgänglig resurs i AEM (t.ex. &quot; `/content/mysite/mypage"`) eftersom användaren `PageModelManager` automatiskt försöker att läsa in motsvarande sidmodell när flödet har valts. Vid behov kan SPA även definiera en&quot;blocklista&quot; med vägar som ska ignoreras av `PageModelManager`:
 
 ```
 <meta property="cq:pagemodel_route_filters" content="route/not/found,^(.*)(?:exclude/path)(.*)"/>
