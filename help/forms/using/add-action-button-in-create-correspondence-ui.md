@@ -10,7 +10,10 @@ topic-tags: correspondence-management
 discoiquuid: 046e3314-b436-47ed-98be-43d85f576789
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+workflow-type: tm+mt
+source-wordcount: '1910'
+ht-degree: 0%
 
 ---
 
@@ -376,7 +379,7 @@ Den LiveCycle-process som krävs för e-posttjänstprocessen.
 
 1. Klicka på **Importera**.
 
-#### Lägger till ServiceName i listan med vitaListade tjänster {#adding-servicename-to-the-whitelisted-service-list}
+#### Lägger till ServiceName i listan över tillåtna listtjänster {#adding-servicename-to-the-allowlist-service-list}
 
 I AEM-servern anger du vilka LiveCycle-tjänster du vill ha tillgång till AEM-servern.
 
@@ -395,7 +398,7 @@ I det här fallet måste du konfigurera e-posttjänsten i LiveCycle-servern för
 
 1. Navigera till **Hem > Tjänster > Program och tjänster > Tjänsthantering**.
 
-1. Leta upp och klicka på **E-posttjänst**.
+1. Locate and click **EmailService**.
 
 1. Konfigurera e-posttjänsten i **SMTP-värden**.
 
@@ -405,7 +408,7 @@ I det här fallet måste du konfigurera e-posttjänsten i LiveCycle-servern för
 
 Om du vill använda Correspondence Management API hämtar du DSCSample.jar (som bifogas i det här dokumentet som en del av components.zip) och överför den till LiveCycle-servern. När filen DSCSample.jar har överförts till LiveCycle-servern använder AEM-servern filen DSCSample.jar för att komma åt API:t renderLetter.
 
-Mer information finns i [Ansluta AEM-formulär till Adobe LiveCycle](/help/forms/using/aem-livecycle-connector.md).
+Mer information finns i [Koppla AEM Forms till Adobe LiveCycle](/help/forms/using/aem-livecycle-connector.md).
 
 1. Uppdatera AEM-serverns URL i cmsa.properties i DSCSample.jar, som finns på följande plats:
 
