@@ -1,14 +1,17 @@
 ---
 title: Installera och konfigurera interaktiv kommunikation
 seo-title: Installera och konfigurera interaktiv kommunikation
-description: Installera och konfigurera AEM Forms Interactive Communications för att skapa affärskommunikation, dokument, kontoutdrag, förmånsmeddelanden, marknadsföringsmejl, fakturor och välkomstpaket.
-seo-description: Installera och konfigurera AEM Forms Interactive Communications för att skapa affärskommunikation, dokument, kontoutdrag, förmånsmeddelanden, marknadsföringsmejl, fakturor och välkomstpaket.
+description: Installera och konfigurera AEM Forms Interactive Communications för att skapa affärskorrespondenser, dokument, kontoutdrag, förmånsmeddelanden, marknadsföringsmejl, fakturor och välkomstpaket.
+seo-description: Installera och konfigurera AEM Forms Interactive Communications för att skapa affärskorrespondenser, dokument, kontoutdrag, förmånsmeddelanden, marknadsföringsmejl, fakturor och välkomstpaket.
 uuid: 8acb7f68-0b52-4acd-97e2-af31c9408e8d
 topic-tags: installing
 discoiquuid: 225f2bc1-6842-4c79-a66d-8024a29325c0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+workflow-type: tm+mt
+source-wordcount: '1490'
+ht-degree: 0%
 
 ---
 
@@ -17,17 +20,17 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ## Introduktion {#introduction}
 
-AEM Form kan centralisera framtagning, sammanställning, hantering och distribution av säkra och interaktiva dokument som affärskommunikation, dokument, kontoutdrag, förmånsmeddelanden, marknadsmeddelanden, räkningar och välkomstpaket. Den här funktionen kallas interaktiv kommunikation. Funktionen ingår i AEM Forms-tilläggspaketet. Tilläggspaketet distribueras på en Author- eller Publish-instans av AEM.
+AEM Form kan centralisera framtagning, sammanställning, hantering och distribution av säkra och interaktiva dokument som affärskommunikation, dokument, kontoutdrag, förmånsmeddelanden, marknadsmeddelanden, räkningar och välkomstpaket. Den här funktionen kallas interaktiv kommunikation. Funktionen ingår i tilläggspaketet AEM Forms. Tilläggspaketet distribueras på en Author- eller Publish-instans av AEM.
 
 Du kan använda den interaktiva kommunikationsfunktionen för att producera kommunikation i flera format. Till exempel webb och PDF. Ni kan integrera interaktiv kommunikation med AEM Workflow för att bearbeta och leverera den sammanställda kommunikationen till kunderna via valfri kanal. Du kan till exempel skicka en kommunikation till slutanvändaren via e-post.
 
 Om du uppgraderar från en tidigare version och redan har investerat i korrespondenshantering kan du installera [kompatibilitetspaketet](../../forms/using/installing-configuring-intreactive-communication-correspondence-management.md#install-compatibility-package) för att fortsätta använda korrespondenshantering. Mer information om skillnaderna mellan interaktiv kommunikation och korrespondenshantering finns i Översikt över [interaktiv kommunikation](/help/forms/using/interactive-communications-overview.md#interactive-communications-vs-correspondence-management).
 
-AEM Forms är en kraftfull plattform i företagsklass. Interaktiv kommunikation är bara en av funktionerna i AEM Forms. En fullständig lista över funktioner finns i [Introduktion till AEM Forms](../../forms/using/introduction-aem-forms.md).
+AEM Forms är en kraftfull plattform för större företag. Interaktiv kommunikation är bara en av AEM Forms:s möjligheter. En fullständig lista med funktioner finns i [Introduktion till AEM Forms](../../forms/using/introduction-aem-forms.md).
 
 ## Distributionstopologi {#deployment-topology}
 
-AEM Forms-tilläggspaketet är ett program som distribueras till AEM. Du behöver bara minst en instans av AEM Author och Processing för att kunna köra funktionen Interactive Communications. Följande topologi är en indikativ topologi för att köra AEM Forms Interactive Communications, Correspondence Management, AEM Forms data capture och Forms-Centric workflow på OSGi-funktioner. Mer information om topologin finns i [Arkitektur och distributionstopologier för AEM Forms](/help/forms/using/aem-forms-architecture-deployment.md).
+AEM Forms är ett program som distribueras till AEM. Du behöver bara ha minst en instans av AEM Author och Bearbetning för att köra funktionen Interactive Communications. Följande topologi är en indikativ topologi för att köra AEM Forms Interactive Communications, Correspondence Management, AEM Forms data capture och Forms-Centric workflow på OSGi-funktioner. Mer information om topologin finns i [Arkitektur och distributionstopologier för AEM Forms](/help/forms/using/aem-forms-architecture-deployment.md).
 
 ![rekommenderad topologi](assets/recommended-topology.png)
 
@@ -35,19 +38,19 @@ AEM Forms Interactive Communications kör administratörs-, redigerings- och age
 
 ## Systemkrav {#system-requirements}
 
-Innan du börjar installera och konfigurera funktioner för interaktiv kommunikation och korrespondenshantering i AEM Forms måste du se till att:
+Innan du börjar installera och konfigurera interaktiva kommunikations- och korrespondenshanteringsfunktioner i AEM Forms måste du se till att:
 
 * Maskinvaru- och programvaruinfrastruktur finns på plats. En detaljerad lista över maskin- och programvara som stöds finns i [tekniska krav](/help/sites-deploying/technical-requirements.md).
 
 * Installationssökvägen för AEM-instansen innehåller inte blanksteg.
-* En AEM-instans körs. I AEM-terminologi är &quot;instance&quot; en kopia av AEM som körs på en server i författar- eller publiceringsläge. Du behöver minst en AEM-instans (Författare eller Bearbetning) för att köra AEM Forms-interaktiva funktioner för kommunikation och korrespondenshantering:
+* En AEM-instans körs. I AEM-terminologi är &quot;instance&quot; en kopia av AEM som körs på en server i författar- eller publiceringsläge. Du behöver minst en AEM-instans (Författare eller Bearbetning) för att kunna köra interaktiv kommunikation och korrespondenshantering i AEM Forms:
 
    * **Författare**: En AEM-instans som används för att skapa, överföra och redigera innehåll och för att administrera webbplatsen. När innehållet är klart att publiceras replikeras det till publiceringsinstansen.
-   * **Bearbetar:** En bearbetningsinstans är en instans av en [AEM Author](/help/forms/using/hardening-securing-aem-forms-environment.md) . Du kan ställa in en Author-instans och göra den oskarp efter att du har utfört installationen.
+   * **Bearbetar:** En bearbetningsinstans är en [instans av AEM Author](/help/forms/using/hardening-securing-aem-forms-environment.md) med hög densitet. Du kan ställa in en Author-instans och göra den oskarp efter att du har utfört installationen.
 
    * **Publicera**: En AEM-instans som skickar det publicerade innehållet till allmänheten via Internet eller ett internt nätverk.
 
-* Minneskraven uppfylls. AEM Forms-tilläggspaket kräver:
+* Minneskraven uppfylls. AEM Forms tilläggspaket kräver:
 
    * 15 GB temporärt utrymme för Microsoft Windows-baserade installationer.
    * 6 GB temporärt utrymme för UNIX-baserade installationer.
@@ -83,18 +86,18 @@ Innan du börjar installera och konfigurera funktioner för interaktiv kommunika
  </tbody>
 </table>
 
-## Installera AEM Forms-tilläggspaket {#install-aem-forms-add-on-package}
+## Installera tilläggspaket för AEM Forms {#install-aem-forms-add-on-package}
 
-AEM Forms-tilläggspaketet är ett program som distribueras till AEM. Paketet innehåller interaktiv kommunikation med AEM Forms, korrespondenshantering och andra funktioner. Så här installerar du tilläggspaketet:
+AEM Forms är ett program som distribueras till AEM. Paketet innehåller interaktiv kommunikation med AEM Forms, korrespondenshantering och andra funktioner. Så här installerar du tilläggspaketet:
 
-1. Logga in på [AEM-servern](https://localhost:4502) som administratör och öppna [paketresursen](https://localhost:4502/crx/packageshare). Du måste ha ett Adobe-id för att kunna logga in på paketresursen.
+1. Logga in på [AEM-servern](https://localhost:4502) som administratör och öppna [paketresursen](https://localhost:4502/crx/packageshare). Du måste ha ett Adobe ID för att kunna logga in på paketresursen.
 1. I [AEM-paketresursen](https://localhost:4502/crx/packageshare/login.html)söker du efter tilläggspaket **för** AEM 6.5-formulär eller **senaste servicepaket**, klickar på det paket som gäller för ditt operativsystem och klickar på **Hämta**. Läs och godkänn licensavtalet och klicka på **OK**. Nedladdningen startar. När du har hämtat **visas ordet Hämtad** bredvid paketet.
 
-   Du kan också använda versionsnumret för att söka efter ett tilläggspaket. Versionsnummer för det senaste paketet finns i artikeln om [AEM Forms-versioner](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) .
+   Du kan också använda versionsnumret för att söka efter ett tilläggspaket. Versionsnummer för det senaste paketet finns i artikeln om [AEM Forms-releaser](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) .
 
 1. När nedladdningen är klar klickar du på **Nedladdad**. Du omdirigeras till pakethanteraren. I pakethanteraren söker du efter det hämtade paketet och klickar på **Installera**.
 
-   Om du hämtar paketet manuellt via den direktlänk som visas i artikeln [AEM Forms Relases](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) loggar du in på pakethanteraren, klickar på **Överför paket**, markerar det hämtade paketet och klickar på Överför. När paketet har överförts klickar du på paketnamnet och sedan på **Installera.**
+   Om du hämtar paketet manuellt via den direktlänk som visas i artikeln om [AEM Forms-versioner](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) loggar du in på pakethanteraren, klickar på **Överför paket**, markerar det hämtade paketet och klickar på Överför. När paketet har överförts klickar du på paketnamnet och sedan på **Installera.**
 
 1. När paketet har installerats uppmanas du att starta om AEM-instansen. **Starta inte om servern omedelbart.** Innan du stoppar AEM Forms-servern väntar du tills meddelandena ServiceEvent REGISTERED och ServiceEvent UNREGISTERED inte visas i filen [AEM-Installation-Directory]/crx-quickstart/logs/error.log och loggen är stabil.
 1. Upprepa steg 1-4 för alla författarinstanser och publiceringsinstanser.
@@ -105,7 +108,7 @@ AEM Forms har några obligatoriska och valfria konfigurationer. De obligatoriska
 
 ### Obligatoriska efterinstallationskonfigurationer {#mandatory-post-installation-configurations}
 
-#### Konfigurera RSA- och BouncyCastle-bibliotek {#configure-rsa-and-bouncycastle-libraries}
+#### Konfigurera RSA- och BouncyCastle-bibliotek  {#configure-rsa-and-bouncycastle-libraries}
 
 Utför följande steg på alla författare- och publiceringsinstanser för att starta delegeringen av biblioteken:
 
@@ -126,11 +129,11 @@ Utför följande steg på alla författare- och publiceringsinstanser för att s
 
 #### Konfigurera serialiseringsagenten {#configure-the-serialization-agent}
 
-Utför följande steg på alla Author- och Publish-instanser för att vitlista paketet:
+Utför följande steg på alla författare- och publiceringsinstanser för att lägga till paketet i listan över tillåtna:
 
 1. Öppna AEM Configuration Manager i ett webbläsarfönster. Standardwebbadressen är https://&#39;[server]:[port]&#39;/system/console/configMgr.
 1. Sök efter och öppna **Brandväggskonfiguration** för deserialisering.
-1. Lägg till paketet **sun.util.calendar** i **vitlistefältet** . Klicka på Spara.
+1. Lägg till paketet **sun.util.calendar** i **allowlist** -fältet. Klicka på Spara.
 1. Upprepa steg 1-3 för alla författare- och publiceringsinstanser.
 
 ### Ytterligare konfigurationer efter installation {#optional-post-installation-configurations}
@@ -148,7 +151,7 @@ Med AEMFD-kompatibilitetspaketet kan du använda följande resurser från AEM 6.
 
 #### Konfigurera Dispatcher {#configure-dispatcher}
 
-Dispatcher är ett verktyg för cachelagring och lastbalansering för AEM. AEM Dispatcher skyddar även AEM-servern mot attacker. Du kan öka säkerheten för din AEM-instans genom att använda Dispatcher tillsammans med en webbserver i företagsklass. Om du använder [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html)gör du följande konfigurationer för AEM Forms:
+Dispatcher är ett verktyg för cachelagring och lastbalansering för AEM. AEM Dispatcher skyddar också AEM-servern mot attacker. Du kan öka säkerheten för din AEM-instans genom att använda Dispatcher tillsammans med en webbserver i företagsklass. Om du använder [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html)ska du göra följande konfigurationer för AEM Forms:
 
 1. Konfigurera åtkomst för AEM Forms:
 
@@ -166,11 +169,11 @@ Dispatcher är ett verktyg för cachelagring och lastbalansering för AEM. AEM D
 
 Kunderna överger troligen interaktiv kommunikation om upplevelsen inte är engagerande. Även om det är frustrerande för kunderna kan det också öka supportvolymen och kostnaderna för organisationen. Det är viktigt och utmanande att identifiera och tillhandahålla rätt kundupplevelse som ökar konverteringsgraden. AEM-formulär innehåller nyckeln till det här problemet.
 
-AEM-formulär integreras med Adobe Target, en Adobe Marketing Cloud-lösning, för att leverera personaliserade och engagerande kundupplevelser i flera digitala kanaler. Om du vill använda Adobe Target för att personalisera en interaktiv kommunikation [integrerar du Adobe Target med AEM Forms](../../forms/using/ab-testing-adaptive-forms.md#setupandintegratetargetinaemforms).
+AEM-formulär kan integreras med Adobe Target, en Adobe Marketing Cloud-lösning, för att leverera personaliserade och engagerande kundupplevelser i flera digitala kanaler. Om du vill använda Adobe Target för att personalisera en interaktiv kommunikation, [integrerar du Adobe Target med AEM Forms](../../forms/using/ab-testing-adaptive-forms.md#setupandintegratetargetinaemforms).
 
-#### Konfigurera SSL-kommunikation för formulärdatamodell {#configure-ssl-communcation-for-form-data-model}
+#### Konfigurera SSL-kommunikation för formulärdatamodell  {#configure-ssl-communcation-for-form-data-model}
 
-Du kan aktivera SSL-kommunikation för formulärdatamodellen. Om du vill aktivera SSL-kommunikation för formulärdatamodellen ska du lägga till certifikat i Java Trust Store för alla instanser innan du startar en AEM Forms-instans. Du kan köra följande kommando för att lägga till certifikaten:
+Du kan aktivera SSL-kommunikation för formulärdatamodellen. Om du vill aktivera SSL-kommunikation för formulärdatamodellen, innan du startar en AEM Forms-instans, lägger du till certifikat i Java Trust Store för alla instanser. Du kan köra följande kommando för att lägga till certifikaten:
 
 `keytool -import -alias <alias-name> -file <pathTo .cer certificate file> -keystore <<pathToJRE>\lib\security\cacerts>`
 
