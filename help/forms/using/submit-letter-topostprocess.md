@@ -10,7 +10,10 @@ topic-tags: correspondence-management
 discoiquuid: 9b06c394-8e26-429c-b78f-22afa271aeb3
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
+source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+workflow-type: tm+mt
+source-wordcount: '855'
+ht-degree: 0%
 
 ---
 
@@ -25,49 +28,49 @@ Agenter kan associera och köra arbetsflöden för efterbearbetning av brev och 
 
 Om du vill associera postprocesser med brev eller interaktiv kommunikation måste du först konfigurera postprocesserna. Två typer av arbetsflöden kan utföras på skickade brev:
 
-1. **Formulärarbetsflöde:** Det här är AEM Forms om arbetsflöden för JEE-processhantering. Instruktioner för att konfigurera [formulärarbetsflöde](#formsworkflow).
+1. **Formulärarbetsflöde:** Detta är AEM Forms på arbetsflöden för processhantering i JEE. Instruktioner för att konfigurera [formulärarbetsflöde](#formsworkflow).
 
 1. **AEM-arbetsflöde:** AEM-arbetsflöden kan också användas som efterbearbetning för skickade brev. Instruktioner för att konfigurera [AEM-arbetsflöde](../../forms/using/aem-forms-workflow.md).
 
 ## Formulärarbetsflöde {#formsworkflow}
 
-1. Öppna Adobe Experience Manager Web Console-konfiguration för servern i AEM med följande URL: `https://<server>:<port>/<contextpath>/system/console/configMgr`
+1. I AEM öppnar du Konfiguration av Adobe Experience Manager Web Console för din server med följande URL: `https://<server>:<port>/<contextpath>/system/console/configMgr`
 
    ![Config Manager](assets/2configmanager-1.png)
 
-1. På den här sidan letar du upp SDK-konfigurationen för AEM Forms-klienten och expanderar den genom att klicka på den.
-1. Ange namnet på AEM-formulären på JEE-servern i URL-adressen för servern, inloggningsinformation och klicka sedan på **Spara**.
+1. På den här sidan letar du upp AEM Forms Client SDK Configuration och expanderar den genom att klicka på den.
+1. Ange namnet på AEM Forms på JEE-servern i URL-adressen för servern, inloggningsinformation och klicka sedan på **Spara**.
 
    ![Ange namnet på LiveCycle-servern](assets/1cofigmanager.png)
 
 1. Ange användarnamn och lösenord.
 1. Kontrollera att sun.util.calendar har lagts till i Brandväggskonfiguration för deserialisering.
 
-   Gå till Konfiguration av brandvägg för deserialisering och lägg till sun.util.calendar under Whitelisted-klasser för paketprefix.
+   Gå till Konfiguration av brandvägg för deserialisering och lägg till sun.util.calendar under Allowlists-klasser för paketprefix.
 
 1. Nu är dina servrar mappade och postprocesserna i AEM Forms på JEE är tillgängliga i AEM-användargränssnittet när du skapar brev.
 
    ![Skapa brevskärm med publicerade processer](assets/0configmanager.png)
 
-1. Om du vill autentisera en process/tjänst kopierar du processens namn och går tillbaka till sidan Adobe Experience Manager Web Console Console Configurations > AEM Forms Client SDK Configuration och lägger till processen som en ny tjänst.
+1. Om du vill autentisera en process/tjänst kopierar du processens namn och går tillbaka till Adobe Experience Manager Web Console Console Configurations > AEM Forms Client SDK Configuration och lägger till processen som en ny tjänst.
 
    Om listrutan på egenskapssidan för brevet till exempel visar processens namn som Forms Workflow -> ValidCCPostProcess/SaveXML lägger du till ett tjänstnamn som `ValidCCPostProcess/SaveXML`.
 
 1. Om du vill använda AEM Forms i JEE-arbetsflöden för efterbearbetning ställer du in de parametrar och utdata som behövs. Standardvärden för parametrarna anges nedan.
 
-   Gå till sidan Konfiguration av Adobe Experience Manager Web Console > **[!UICONTROL Konfiguration]** för korrespondenshantering och ange följande parametrar:
+   Gå till Adobe Experience Manager Web Console Console Configurations > **[!UICONTROL Correspondence Management Configurations]** och ange följande parametrar:
 
    1. **inPDFDoc (PDF-dokumentparameter):** Ett PDF-dokument som indata. Indata innehåller den återgivna bokstaven som indata. De angivna parameternamnen kan konfigureras. De kan konfigureras från Correspondence Management-konfigurationer från konfigurationen.
    1. **inXMLDoc (XML-dataparameter):** Ett XML-dokument som indata. Indata innehåller data som användaren anger i form av XML.
    1. **inXDPDoc (XDP-dokumentparameter):** Ett XML-dokument som indata. Indata innehåller underliggande layout (XDP).
    1. **inAttachmentDocs (parametern Bifogade dokument):** En listindataparameter. Indata innehåller alla bilagor som indata.
    1. **redirectURL (Redirect URL Output):** En utdatatyp som anger den URL som ska omdirigeras till.
-   Ditt formulärarbetsflöde måste ha antingen PDF-dokumentparameter eller XML-dataparameter som indata med samma namn som anges i **[!UICONTROL Correspondence Management Configurations]**. Detta krävs för att processen ska visas i listrutan Efterprocess.
+   Formulärarbetsflödet måste ha antingen PDF-dokumentparameter eller XML-dataparameter som indata med samma namn som anges i **[!UICONTROL Correspondence Management Configurations]**. Detta krävs för att processen ska visas i listrutan Efterprocess.
 
 ## Inställningar för Publish-instansen {#settings-on-the-publish-instance}
 
 1. logga in på `https://localhost:publishport/aem/forms`.
-1. Navigera till **[!UICONTROL Bokstäver]** för att visa det publicerade brevet som är tillgängligt på publiceringsinstansen.
+1. Navigera till **[!UICONTROL Letters]** det publicerade brevet som är tillgängligt på publiceringsinstansen.
 1. Konfigurera AEM DS-inställningarna. Se [Konfigurera AEM DS-inställningar](../../forms/using/configuring-the-processing-server-url-.md).
 
 >[!NOTE]
@@ -118,7 +121,7 @@ I användargränssnittet för CCR utför du följande steg för att associera en
 1. Tryck på **Spara**.
 1. När du har konfigurerat brevet med Post Process, publicerar du brevet och kan välja att göra det på publiceringsinstansen, anger du behandlings-URL:en i tjänsten AEM DS Settings. Detta garanterar att efterbearbetningen körs på bearbetningsinstansen.
 
-## Läsa in ett utkast {#reloaddraft}
+## Läsa in ett utkast  {#reloaddraft}
 
 En förekomst av ett utkast till bokstav kan läsas in på nytt i användargränssnittet med följande URL:
 
