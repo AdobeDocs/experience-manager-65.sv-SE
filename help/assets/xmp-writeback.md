@@ -3,10 +3,10 @@ title: XMP-tillbakaskrivning till återgivningar
 description: Lär dig hur XMP-återskrivningsfunktionen sprider metadataändringar för en resurs till alla eller vissa återgivningar av resursen.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 711cd438cc8962d310bb2bfbb14f079161aacce0
+source-git-commit: c1c845a479fcf04db1b2da8bcb9cf765fedd58b6
 workflow-type: tm+mt
 source-wordcount: '726'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -77,16 +77,6 @@ Filtrering av XMP-metadata via tillåten lista löser problemet genom att du kan
 >[!NOTE]
 >
 >Filtrering fungerar bara för egenskaper som härletts från XMP-källor i objektbinärfiler. För egenskaper som härleds från andra källor än XMP, t.ex. EXIF- och IPTC-format, fungerar inte filtreringen. Datumet då resursen skapades sparas till exempel i egenskapen EXIF TIFF `CreateDate` . Experience Manager lagrar det här värdet i ett metadatafält med namnet `exif:DateTimeOriginal`. Eftersom källan inte är en XMP-källa fungerar inte filtrering på den här egenskapen.
-
-<!-- TBD: The instructions don't seem to match the UI. I see com.day.cq.dam.commons.metadata.XmpFilterBlackWhite.description
-in Config Manager. And the settings are,
-com.day.cq.dam.commons.metadata.XmpFilterBlackWhite.xmp.filter.apply_whitelist.name
-com.day.cq.dam.commons.metadata.XmpFilterBlackWhite.xmp.filter.whitelist.name
-com.day.cq.dam.commons.metadata.XmpFilterBlackWhite.xmp.filter.apply_blacklist.name
-com.day.cq.dam.commons.metadata.XmpFilterBlackWhite.xmp.filter.blacklist.name
- 
-TBD: Make updates to configurations for allow and block list after product updates are done.
--->
 
 1. Öppna Configuration Manager genom att gå till `https://[aem_server]:[port]/system/console/configMgr`.
 1. Öppna **[!UICONTROL Adobe CQ DAM XmpFilter]** konfigurationen.
