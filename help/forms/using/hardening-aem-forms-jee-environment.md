@@ -1,6 +1,6 @@
 ---
-title: Förbättra dina AEM-formulär i JEE-miljön
-seo-title: Förbättra dina AEM-formulär i JEE-miljön
+title: Förbättra AEM Forms på JEE-miljön
+seo-title: Förbättra AEM Forms på JEE-miljön
 description: Lär dig en mängd olika säkerhetsinställningar för att förbättra säkerheten för AEM Forms på JEE som körs i ett intranät.
 seo-description: Lär dig en mängd olika säkerhetsinställningar för att förbättra säkerheten för AEM Forms på JEE som körs i ett intranät.
 uuid: f6c63690-6376-4fe1-9df2-a14fbfd62aff
@@ -9,21 +9,24 @@ topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 translation-type: tm+mt
-source-git-commit: dee9f9c9d3dfb916d1feaa0d258c883686e1a1dc
+source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+workflow-type: tm+mt
+source-wordcount: '7445'
+ht-degree: 0%
 
 ---
 
 
-# Förbättra dina AEM-formulär i JEE-miljön {#hardening-your-aem-forms-on-jee-environment}
+# Förbättra AEM Forms på JEE-miljön {#hardening-your-aem-forms-on-jee-environment}
 
 Lär dig en mängd olika säkerhetsinställningar för att förbättra säkerheten för AEM Forms på JEE som körs i ett intranät.
 
-Artikeln beskriver rekommendationer och bästa praxis för att skydda servrar som kör AEM Forms på JEE. Det här är inte ett omfattande dokument för värdskydd för ditt operativsystem och dina programservrar. I den här artikeln beskrivs i stället en rad olika säkerhetsinställningar som du bör implementera för att förbättra säkerheten för AEM Forms på JEE som körs i ett intranät för företag. För att säkerställa att AEM-formulären på JEE-programservrar förblir säkra bör du även implementera säkerhetsövervakning, identifiering och svarsprocedurer.
+Artikeln beskriver rekommendationer och bästa praxis för att skydda servrar som kör AEM Forms på JEE. Det här är inte ett omfattande dokument för värdskydd för ditt operativsystem och dina programservrar. I den här artikeln beskrivs i stället en rad olika säkerhetsinställningar som du bör implementera för att förbättra säkerheten för AEM Forms på JEE som körs i ett företagsintranät. För att säkerställa att AEM Forms på JEE-programservrar förblir säkert bör du även implementera säkerhetsövervakning, identifiering och svarsprocedurer.
 
 Artikeln beskriver härdningstekniker som ska användas under följande faser under installations- och konfigurationscykeln:
 
 * **Förinstallation:** Använd dessa tekniker innan du installerar AEM Forms på JEE.
-* **Installation:** Använd dessa tekniker under installationen av AEM Forms on JEE.
+* **Installation:** Använd dessa tekniker under AEM Forms on JEE-installationen.
 * **Efter installation:** Använd dessa tekniker efter installation och regelbundet därefter.
 
 AEM Forms på JEE är mycket anpassningsbart och kan fungera i många olika miljöer. Vissa av rekommendationerna kanske inte passar organisationens behov.
@@ -38,7 +41,7 @@ Du bör inte installera eller konfigurera AEM Forms på JEE med ett rotskal. Som
 
 **Installation och konfiguration i Windows**
 
-Du bör utföra installationen i Windows som administratör om du installerar AEM Forms på JEE på JBoss med hjälp av den nyckelfärdiga metoden eller om du installerar PDF Generator. När du installerar PDF Generator i Windows med inbyggt programstöd måste du köra installationen som samma Windows-användare som installerade Microsoft Office. Mer information om installationsprivilegier finns i dokumentet* Installera och distribuera AEM Forms på JEE* för programservern.
+Du bör utföra installationen i Windows som administratör om du installerar AEM Forms på JEE på JBoss med hjälp av den körklara metoden eller om du installerar PDF Generator. När du installerar PDF Generator i Windows med inbyggt programstöd måste du köra installationen som samma Windows-användare som installerade Microsoft Office. Mer information om installationsprivilegier finns i dokumentet* Installera och distribuera AEM Forms på JEE* för programservern.
 
 ### Säkerhet för nätverkslager {#network-layer-security}
 
@@ -56,11 +59,11 @@ I följande tabell beskrivs vanliga processer som minskar säkerhetsluckorna i n
  <tbody>
   <tr> 
    <td><p>DMZ (Demilitarized Zone)</p> </td> 
-   <td><p>Driftsätt blankettservrar inom en demilitariserad zon (DMZ). Segmentering bör finnas på minst två nivåer med programservern som används för att köra AEM Forms på JEE bakom den inre brandväggen. Skilj det externa nätverket från det DMZ som innehåller webbservrarna, som i sin tur måste separeras från det interna nätverket. Använd brandväggar för att implementera separationslagren. Kategorisera och kontrollera den trafik som passerar genom varje nätverkslager för att säkerställa att endast absolut minimum av nödvändiga data tillåts.</p> </td> 
+   <td><p>Driftsätt blankettservrar inom en demilitariserad zon (DMZ). Segmentering bör finnas på minst två nivåer med den programserver som används för att köra AEM Forms på JEE bakom den inre brandväggen. Skilj det externa nätverket från det DMZ som innehåller webbservrarna, som i sin tur måste separeras från det interna nätverket. Använd brandväggar för att implementera separationslagren. Kategorisera och kontrollera den trafik som passerar genom varje nätverkslager för att säkerställa att endast absolut minimum av nödvändiga data tillåts.</p> </td> 
   </tr> 
   <tr> 
    <td><p>Privata IP-adresser</p> </td> 
-   <td><p>Använd NAT (Network Address Translation) med privata RFC 1918-IP-adresser på AEM Forms-programserver. Tilldela privata IP-adresser (10.0.0.0/8, 172.16.0.0/12 och 192.168.0.0/16) för att göra det svårare för en angripare att dirigera trafik till och från en NAT:s interna värd via Internet.</p> </td> 
+   <td><p>Använd NAT (Network Address Translation) med privata RFC 1918-adresser på AEM Forms-programservern. Tilldela privata IP-adresser (10.0.0.0/8, 172.16.0.0/12 och 192.168.0.0/16) för att göra det svårare för en angripare att dirigera trafik till och från en NAT:s interna värd via Internet.</p> </td> 
   </tr> 
   <tr> 
    <td><p>Brandväggar</p> </td> 
@@ -73,7 +76,7 @@ I följande tabell beskrivs vanliga processer som minskar säkerhetsluckorna i n
   </tr> 
   <tr> 
    <td><p>Databasportar</p> </td> 
-   <td><p>Använd inte standardlyssningsportar för databaser (MySQL - 3306, Oracle - 1521, MS SQL - 1433). Mer information om hur du ändrar databasportar finns i dokumentationen för databasen.</p> <p>Om du använder en annan databasport påverkas den övergripande AEM Forms i JEE-konfigurationen. Om du ändrar standardportar måste du göra motsvarande ändringar i andra konfigurationsområden, t.ex. datakällorna för AEM Forms på JEE.</p> <p>Information om hur du konfigurerar datakällor i AEM Forms på JEE finns i Installera och uppgradera AEM Forms på JEE eller Uppgradera till AEM Forms på JEE för programservern i användarhandboken <a href="/help/forms/using/introduction-aem-forms.md" target="_blank">för</a>AEM Forms.</p> </td> 
+   <td><p>Använd inte standardlyssningsportar för databaser (MySQL - 3306, Oracle - 1521, MS SQL - 1433). Mer information om hur du ändrar databasportar finns i dokumentationen för databasen.</p> <p>Om du använder en annan databasport påverkas den övergripande AEM Forms i JEE-konfigurationen. Om du ändrar standardportar måste du göra motsvarande ändringar i andra konfigurationsområden, till exempel datakällorna för AEM Forms på JEE.</p> <p>Information om hur du konfigurerar datakällor i AEM Forms på JEE finns i Installera och uppgradera AEM Forms på JEE eller Uppgradera till AEM Forms på JEE för programservern i användarhandboken <a href="/help/forms/using/introduction-aem-forms.md" target="_blank">för</a>AEM Forms.</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -109,7 +112,7 @@ Mer säkerhetsinformation om ditt operativsystem finns i [&quot;Säkerhetsinform
 
 ## Installation {#installation}
 
-I det här avsnittet beskrivs tekniker som du kan använda under installationen av AEM Forms för att minska säkerhetsluckorna. I vissa fall använder dessa tekniker alternativ som ingår i installationsprocessen. I följande tabell beskrivs dessa tekniker.
+I det här avsnittet beskrivs tekniker som du kan använda under AEM Forms installationsprocess för att minska säkerhetsluckorna. I vissa fall använder dessa tekniker alternativ som ingår i installationsprocessen. I följande tabell beskrivs dessa tekniker.
 
 <table> 
  <thead> 
@@ -129,7 +132,7 @@ I det här avsnittet beskrivs tekniker som du kan använda under installationen 
   </tr> 
   <tr> 
    <td><p>Diskpartitioner</p> </td> 
-   <td><p>Placera AEM Forms på JEE på en dedikerad diskpartition. Disksegmentering är en process som sparar specifika data på servern på separata fysiska diskar för ökad säkerhet. Genom att ordna data på det här sättet minskar risken för kataloggenombrottsattacker. Planera att skapa en partition som är skild från den systempartition där du kan installera AEM Forms i JEE-innehållskatalogen. (I Windows innehåller systempartitionen katalogen system32 eller startpartitionen.)</p> </td> 
+   <td><p>Placera AEM Forms på JEE på en dedikerad diskpartition. Disksegmentering är en process som sparar specifika data på servern på separata fysiska diskar för ökad säkerhet. Genom att ordna data på det här sättet minskar risken för kataloggenombrottsattacker. Planera att skapa en partition som är skild från den systempartition där du kan installera AEM Forms på JEE-innehållskatalogen. (I Windows innehåller systempartitionen katalogen system32 eller startpartitionen.)</p> </td> 
   </tr> 
   <tr> 
    <td><p>Komponenter</p> </td> 
@@ -152,19 +155,19 @@ När du har installerat AEM Forms på JEE är det viktigt att regelbundet upprä
 
 I följande avsnitt beskrivs i detalj de olika åtgärder som rekommenderas för att skydda den distribuerade formulärservern.
 
-### Säkerhet med AEM Forms {#aem-forms-security}
+### AEM Forms säkerhet {#aem-forms-security}
 
-Följande rekommenderade inställningar gäller för AEM Forms på JEE-servern utanför det administrativa webbprogrammet. Du kan minska säkerhetsriskerna för servern genom att tillämpa de här inställningarna omedelbart efter installation av AEM Forms på JEE.
+Följande rekommenderade inställningar gäller för AEM Forms på JEE-servern utanför det administrativa webbprogrammet. Du kan minska säkerhetsriskerna för servern genom att tillämpa de här inställningarna omedelbart efter att du har installerat AEM Forms på JEE.
 
 **Säkerhetsuppdateringar**
 
-Det finns en ökad risk för att en obehörig användare får åtkomst till programservern om leverantörens säkerhetsuppdateringar och uppgraderingar inte tillämpas i tid. Testa säkerhetsuppdateringarna innan du använder dem på produktionsservrar för att säkerställa kompatibilitet och tillgänglighet för program. Du kan också skapa principer och procedurer för att regelbundet kontrollera och installera korrigeringsfiler. AEM Forms på JEE-uppdateringar finns på webbplatsen för hämtning av företagsprodukter.
+Det finns en ökad risk för att en obehörig användare får åtkomst till programservern om leverantörens säkerhetsuppdateringar och uppgraderingar inte tillämpas i tid. Testa säkerhetsuppdateringarna innan du använder dem på produktionsservrar för att säkerställa kompatibilitet och tillgänglighet för program. Du kan också skapa principer och procedurer för att regelbundet kontrollera och installera korrigeringsfiler. AEM Forms på JEE-uppdateringar finns på hämtningswebbplatsen för Enterprise-produkter.
 
 **Tjänstkonton (endast JBoss-körningsnyckel i Windows)**
 
-Med AEM Forms på JEE installeras en tjänst som standard med hjälp av kontot LocalSystem. Det inbyggda LocalSystem-användarkontot har hög tillgänglighet. den ingår i gruppen Administratörer. Om en arbetarprocessidentitet körs som ett LocalSystem-användarkonto har arbetsprocessen fullständig åtkomst till hela systemet.
+AEM Forms på JEE installerar som standard en tjänst med hjälp av kontot LocalSystem. Det inbyggda LocalSystem-användarkontot har hög tillgänglighet. den ingår i gruppen Administratörer. Om en arbetarprocessidentitet körs som ett LocalSystem-användarkonto har arbetsprocessen fullständig åtkomst till hela systemet.
 
-Följ dessa anvisningar för att köra den programserver där AEM Forms på JEE distribueras med ett specifikt icke-administrativt konto:
+Följ dessa anvisningar för att köra den programserver där AEM Forms on JEE distribueras med ett specifikt icke-administrativt konto:
 
 1. I Microsoft Management Console (MMC) skapar du en lokal användare som formulärservertjänsten ska logga in som:
 
@@ -184,7 +187,7 @@ Följ dessa anvisningar för att köra den programserver där AEM Forms på JEE 
    * Neka lokal inloggning
    * Logga in som tjänst (bör vara inställd)
 
-1. Ge det nya användarkontot behörighet att läsa och köra, skriva, ändra, lista mappinnehåll och läsa för att slutföra AEM Forms i JEE-installationskatalogen och GDS-katalogen (Global Document Storage). Platsen för GDS-katalogen konfigureras manuellt under installationen av AEM Forms. Om platsinställningen är tom under installationen blir platsen som standard en katalog under programserverinstallationen vid [JBoss root]/server/[type]/svcnative/DocumentStorage.
+1. Ge det nya användarkontot behörighet att läsa och köra, skriva, ändra, lista mappinnehåll och läsa för att slutföra AEM Forms i JEE-installationskatalogen och GDS-katalogen (Global Document Storage). Platsen för GDS-katalogen konfigureras manuellt under AEM Forms installationsprocess. Om platsinställningen är tom under installationen blir platsen som standard en katalog under programserverinstallationen vid [JBoss root]/server/[type]/svcnative/DocumentStorage.
 1. Starta programservern.
 
 **Inaktivera starttjänsten för Configuration Manager**
@@ -253,7 +256,7 @@ Vissa formulärservertjänster har åtgärder som kan anropas av en anonym anrop
 
 #### Ändra standardadministratörslösenordet {#change-the-default-administrator-password}
 
-När AEM Forms på JEE är installerat konfigureras ett standardanvändarkonto för superadministratör/ inloggnings-id-administratör med standardlösenordet *för* lösenord. Du bör omedelbart ändra det här lösenordet med Configuration Manager.
+När AEM Forms på JEE är installerat konfigureras ett enda standardanvändarkonto för superadministratör/inloggnings-id-administratör med standardlösenordet *för* lösenord. Du bör omedelbart ändra det här lösenordet med Configuration Manager.
 
 1. Skriv följande URL i en webbläsare:
 
@@ -326,9 +329,9 @@ I följande tabell beskrivs några tekniker för att skydda programservern efter
 
 ### Databassäkerhet {#database-security}
 
-När du skyddar din databas bör du implementera de åtgärder som beskrivs av din databasleverantör. Du bör tilldela en databasanvändare med de lägsta databasbehörigheter som krävs och som AEM Forms måste ha för JEE. Använd till exempel inte ett konto med databasadministratörsbehörighet.
+När du skyddar din databas bör du implementera de åtgärder som beskrivs av din databasleverantör. Du bör tilldela en databasanvändare med de lägsta databasbehörigheter som krävs och som AEM Forms måste ha för att kunna använda på JEE. Använd till exempel inte ett konto med databasadministratörsbehörighet.
 
-I Oracle behöver det databaskonto du använder bara behörigheterna CONNECT, RESOURCE och CREATE VIEW. Liknande krav för andra databaser finns i [Förbereda för att installera AEM Forms på JEE (Single Server)](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64).
+I Oracle behöver det databaskonto du använder bara behörigheterna CONNECT, RESOURCE och CREATE VIEW. Liknande krav för andra databaser finns i [Förbereda installation av AEM Forms på JEE (Single Server)](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64).
 
 #### Konfigurera integrerad säkerhet för SQL Server i Windows för JBoss {#configuring-integrated-security-for-sql-server-on-windows-for-jboss}
 
@@ -339,7 +342,7 @@ I Oracle behöver det databaskonto du använder bara behörigheterna CONNECT, RE
    ```
 
 1. Lägg till filen sqljdbc_auth.dll i Windows-systemsökvägen på den dator som kör programservern. Filen sqljdbc_auth.dll finns med drivrutinsinstallationen för Microsoft SQL JDBC 6.2.1.0.
-1. Ändra egenskapen JBoss Windows-tjänst (JBoss för AEM Forms på JEE) för inloggning från det lokala systemet till ett inloggningskonto som har en AEM Forms-databas och en minimiuppsättning behörigheter. Om du kör JBoss från kommandoraden i stället för som en Windows-tjänst behöver du inte utföra det här steget.
+1. Ändra egenskapen JBoss Windows-tjänst (JBoss för AEM Forms på JEE) för inloggning som från det lokala systemet till ett inloggningskonto som har AEM Forms-databas och en minimiuppsättning behörigheter. Om du kör JBoss från kommandoraden i stället för som en Windows-tjänst behöver du inte utföra det här steget.
 1. Ange säkerhet för SQL Server från **blandat** läge till endast **** Windows-autentisering.
 
 #### Konfigurera integrerad säkerhet för SQL Server i Windows för WebLogic {#configuring-integrated-security-for-sql-server-on-windows-for-weblogic}
@@ -377,7 +380,7 @@ På WebSphere kan du bara konfigurera integrerad säkerhet när du använder en 
 
 ### Skydda åtkomst till känsligt innehåll i databasen {#protecting-access-to-sensitive-content-in-the-database}
 
-AEM Forms databasschema innehåller känslig information om systemkonfiguration och affärsprocesser och bör döljas bakom brandväggen. Databasen bör beaktas inom samma förtroendegräns som formulärservern. För att skydda mot informationsexponering och stöld av affärsdata måste databasen konfigureras av databasadministratören så att endast behöriga administratörer får åtkomst till databasen.
+AEM Forms databasschemat innehåller känslig information om systemkonfiguration och affärsprocesser och bör döljas bakom brandväggen. Databasen bör beaktas inom samma förtroendegräns som formulärservern. För att skydda mot informationsexponering och stöld av affärsdata måste databasen konfigureras av databasadministratören så att endast behöriga administratörer får åtkomst till databasen.
 
 Som en extra försiktighetsåtgärd bör du överväga att använda leverantörsspecifika verktyg för att kryptera kolumner i tabeller som innehåller följande data:
 
@@ -395,7 +398,7 @@ En LDAP-katalog (Lightweight Directory Access Protocol) används vanligtvis av A
 
 En vanlig attack med LDAP innebär att en angripare avsiktligt misslyckas med att autentisera flera gånger. Detta tvingar LDAP-katalogservern att låsa ut en användare från alla LDAP-beroende tjänster.
 
-Du kan ange antalet misslyckade försök och efterföljande låsningstid som AEM Forms implementerar när en användare upprepade gånger inte kan autentisera till AEM Forms. Välj låga värden i administrationskonsolen. När du väljer antalet misslyckade försök är det viktigt att du förstår att AEM Forms efter alla försök låser användaren innan LDAP-katalogservern gör det.
+Du kan ange antalet misslyckade försök och efterföljande låsningstid som AEM Forms implementerar när en användare upprepade gånger inte kan autentisera till AEM Forms. Välj låga värden i administrationskonsolen. När du väljer antalet misslyckade försök är det viktigt att förstå att AEM Forms efter alla försök låser ut användaren innan LDAP-katalogservern gör det.
 
 #### Ange automatisk låsning av konton {#set-automatic-account-locking}
 
@@ -426,7 +429,7 @@ I den här tabellen beskrivs teknik för granskning och loggning som du kan anv�
  <tbody>
   <tr> 
    <td><p>Loggfils-ACL:er</p> </td> 
-   <td><p>Ange lämpliga AEM-formulär i JEE-loggfilens åtkomstkontrollistor.</p> <p>Genom att ange rätt autentiseringsuppgifter förhindrar du att angripare tar bort filerna.</p> <p>Säkerhetsbehörigheterna i loggfilskatalogen bör vara Full kontroll för administratörer och SYSTEM-grupper. AEM Forms-användarkontot bör endast ha läs- och skrivbehörighet.</p> </td> 
+   <td><p>Ange lämplig AEM Forms på åtkomstkontrollistor för JEE-loggfiler (ACL).</p> <p>Genom att ange rätt autentiseringsuppgifter förhindrar du att angripare tar bort filerna.</p> <p>Säkerhetsbehörigheterna i loggfilskatalogen bör vara Full kontroll för administratörer och SYSTEM-grupper. Användarkontot AEM Forms ska endast ha läs- och skrivbehörighet.</p> </td> 
   </tr> 
   <tr> 
    <td><p>Loggfilsredundans</p> </td> 
@@ -437,11 +440,11 @@ I den här tabellen beskrivs teknik för granskning och loggning som du kan anv�
 
 ## Konfigurera AEM Forms på JEE för åtkomst utanför företaget {#configuring-aem-forms-on-jee-for-access-beyond-the-enterprise}
 
-När du har installerat AEM Forms på JEE är det viktigt att regelbundet upprätthålla säkerheten i din miljö. I det här avsnittet beskrivs de åtgärder som rekommenderas för att upprätthålla säkerheten för dina AEM Forms på JEE-produktionsservern.
+När du har installerat AEM Forms på JEE är det viktigt att regelbundet upprätthålla din miljös säkerhet. I det här avsnittet beskrivs de åtgärder som rekommenderas för att upprätthålla AEM Forms säkerhet på JEE-produktionsservern.
 
 ### Konfigurera en omvänd proxy för webbåtkomst {#setting-up-a-reverse-proxy-for-web-access}
 
-En *omvänd proxy* kan användas för att säkerställa att en uppsättning URL:er för AEM Forms i JEE-webbprogram är tillgängliga för både externa och interna användare. Den här konfigurationen är säkrare än att användarna kan ansluta direkt till programservern som AEM Forms på JEE körs på. Den omvända proxyn utför alla HTTP-begäranden för programservern som kör AEM Forms på JEE. Användare har bara nätverksåtkomst till den omvända proxyn och kan bara försöka ansluta till URL som stöds av den omvända proxyn.
+En *omvänd proxy* kan användas för att se till att en uppsättning URL:er för AEM Forms på JEE-webbprogram är tillgängliga för både externa och interna användare. Den här konfigurationen är säkrare än att tillåta användare att ansluta direkt till programservern som AEM Forms på JEE körs på. Den omvända proxyn utför alla HTTP-begäranden för den programserver som kör AEM Forms på JEE. Användare har bara nätverksåtkomst till den omvända proxyn och kan bara försöka ansluta till URL som stöds av den omvända proxyn.
 
 **AEM Forms på JEE-rot-URL:er för användning med omvänd proxyserver**
 
@@ -599,7 +602,7 @@ Vissa URL:er markeras som användarvänliga webbprogram. Du bör undvika att exp
   </tr> 
   <tr> 
    <td><p>/CoreSystemConfig/*</p> </td> 
-   <td><p>Inställningssidan för AEM-formulär på JEE Core-konfigurationsinställningar</p> </td> 
+   <td><p>AEM Forms på inställningssidan för JEE Core-konfiguration</p> </td> 
    <td><p>Ja</p> </td> 
    <td><p>Nej</p> </td> 
   </tr> 
@@ -637,7 +640,7 @@ Följande egenskaper är gemensamma för CSRF:
 * Testa användarens webbläsare för att skicka HTTP-begäranden till en målplats.
 * Involvera HTTP-begäranden som har sidoeffekter.
 
-I AEM Forms on JEE används funktionen Refererarfilter för att blockera CSRF-attacker. Följande termer används i det här avsnittet för att beskriva mekanismen för referensfiltrering:
+AEM Forms på JEE använder funktionen för referensfilter för att blockera CSRF-attacker. Följande termer används i det här avsnittet för att beskriva mekanismen för referensfiltrering:
 
 * **Tillåten referent:** En referent är adressen till källsidan som skickar en begäran till servern. För JSP-sidor eller -formulär är referensen vanligtvis föregående sida i webbläsarhistoriken. Referent för bilder är vanligtvis de sidor där bilderna visas. Du kan identifiera den referent som har behörighet till serverresurserna genom att lägga till dem i listan över tillåtna referenter.
 * **Tillåtna referensundantag:** Du kanske vill begränsa åtkomsten för en viss referent i listan över tillåtna referenter. Om du vill tillämpa den här begränsningen kan du lägga till enskilda sökvägar för den referenten i listan med tillåtna undantag för referenten. Begäranden som kommer från sökvägar i listan över tillåtna referensundantag förhindras från att anropa resurser på formulärservern. Du kan definiera tillåtna referensundantag för ett visst program och även använda en global lista med undantag som gäller för alla program.
@@ -653,10 +656,10 @@ Refererarfiltreringsprocessen kan beskrivas så här:
    1. Om det är POST utför formulärservern kontrollen av referensrubriken.
    1. Om det är GET åsidosätter formulärservern referenskontrollen, såvida inte *CSRF_CHECK_GETS* är inställd på true. I så fall utförs referentrubrikkontrollen. *CSRF_CHECK_GETS* anges i *filen web.xml* för ditt program.
 
-1. Formulärservern kontrollerar om den begärda URI:n är vitlistad:
+1. Formulärservern kontrollerar om den begärda URI:n finns i allowlist:
 
-   1. Om URI:n vitlistas accepterar servern begäran.
-   1. Om den begärda URI:n inte vitlistas hämtar servern referenten för begäran.
+   1. Om URI:n tillåts, accepterar servern begäran.
+   1. Om den begärda URI:n inte tillåts, hämtar servern referenten för begäran.
 
 1. Om det finns en referent i begäran kontrollerar servern om det är en tillåten referent. Om det är tillåtet söker servern efter ett referensundantag:
 
@@ -670,9 +673,9 @@ Refererarfiltreringsprocessen kan beskrivas så här:
 
 ### Hantera referensfiltrering {#managing-referer-filtering}
 
-I AEM Forms på JEE finns ett referensfilter som anger vilken referent som har åtkomst till serverresurserna. Som standard filtrerar inte referensfiltret begäranden som använder en säker HTTP-metod, t.ex. GET, om inte *CSRF_CHECK_GETS* är inställd på true. Om portnumret för en post med tillåten referens är 0, tillåter AEM Forms på JEE alla begäranden med Referer från den värden oavsett portnummer. Om inget portnummer anges tillåts endast begäranden från standardporten 80 (HTTP) eller port 443 (HTTPS). Referensfiltrering är inaktiverat om alla poster i listan över tillåtna referenter tas bort.
+AEM Forms på JEE har ett referensfilter som anger vilken referent som har behörighet till serverresurserna. Som standard filtrerar inte referensfiltret begäranden som använder en säker HTTP-metod, t.ex. GET, om inte *CSRF_CHECK_GETS* är inställd på true. Om portnumret för en post med tillåten referens är 0, tillåter AEM Forms på JEE alla förfrågningar från den värden oavsett portnumret. Om inget portnummer anges tillåts endast begäranden från standardporten 80 (HTTP) eller port 443 (HTTPS). Referensfiltrering är inaktiverat om alla poster i listan över tillåtna referenter tas bort.
 
-När du först installerar Document Services uppdateras listan över tillåtna referenter med adressen till den server där Document Services är installerat. Posterna för servern omfattar servernamnet, IPv4-adressen, IPv6-adressen om IPv6 är aktiverat, loopback-adressen och en localhost-post. Namnen som läggs till i listan över tillåtna referenter returneras av värdoperativsystemet. En server med IP-adressen 10.40.54.187 kommer till exempel att innehålla följande poster: `https://server-name:0, https://10.40.54.187:0, https://127.0.0.1:0, http://localhost:0`. Den vita listan över icke-kvalificerade namn som returneras av värdoperativsystemet (namn som inte har IPv4-adress, IPv6-adress eller kvalificerat domännamn) uppdateras inte för alla okvalificerade namn. Ändra listan över tillåtna referenter så att den passar din affärsmiljö. Distribuera inte formulärservern i produktionsmiljön med standardlistan Tillåten referent. När du har ändrat någon av de tillåtna referenserna, referensundantagen eller URI:erna måste du starta om servern för att ändringarna ska börja gälla.
+När du först installerar Document Services uppdateras listan över tillåtna referenter med adressen till den server där Document Services är installerat. Posterna för servern omfattar servernamnet, IPv4-adressen, IPv6-adressen om IPv6 är aktiverat, loopback-adressen och en localhost-post. Namnen som läggs till i listan över tillåtna referenter returneras av värdoperativsystemet. En server med IP-adressen 10.40.54.187 kommer till exempel att innehålla följande poster: `https://server-name:0, https://10.40.54.187:0, https://127.0.0.1:0, http://localhost:0`. Ersättningslistan uppdateras inte för okvalificerade namn som returneras av värdoperativsystemet (namn som inte har IPv4-adress, IPv6-adress eller kvalificerat domännamn). Ändra listan över tillåtna referenter så att den passar din affärsmiljö. Distribuera inte formulärservern i produktionsmiljön med standardlistan Tillåten referent. När du har ändrat någon av de tillåtna referenserna, referensundantagen eller URI:erna måste du starta om servern för att ändringarna ska börja gälla.
 
 **Hantera listan Tillåten referent**
 
@@ -680,7 +683,7 @@ Du kan hantera listan Tillåten referent från användarhanteringsgränssnittet 
 
 **Hantera listor över tillåtna referensundantag och tillåtna URI**
 
-AEM Forms på JEE innehåller API:er för hantering av listan över tillåtna referensundantag och listan över tillåtna URI:er. Du kan använda dessa API:er för att hämta, skapa, redigera eller ta bort listan. Här följer en lista över tillgängliga API:er:
+AEM Forms på JEE innehåller API:er för att hantera listan över tillåtna referensundantag och listan över tillåtna URI:er. Du kan använda dessa API:er för att hämta, skapa, redigera eller ta bort listan. Här följer en lista över tillgängliga API:er:
 
 * createAllowedURIsList
 * getAllowedURIsList
@@ -695,7 +698,7 @@ Mer information om API:erna finns i* AEM Forms on JEE API Reference*.
 
 Använd listan ***LC_GLOBAL_ALLOWED_REFERER_EXCEPTION*** för tillåtna referensundantag på global nivå, d.v.s. för att definiera undantag som gäller för alla program. Den här listan innehåller bara URI:er med antingen en absolut sökväg (t.ex. `/index.html`) eller en relativ sökväg (t.ex. `/sample/`). Du kan också lägga till ett reguljärt uttryck i slutet av en relativ URI, t.ex. `/sample/(.)*`.
 
-List-ID:t ***LC_GLOBAL_ALLOWED_REFERER_EXCEPTION*** definieras som en konstant i `UMConstants` klassen för `com.adobe.idp.um.api` namnutrymmet, som finns i `adobe-usermanager-client.jar`. Du kan använda API:erna för AEM Forms för att skapa, ändra eller redigera den här listan. Om du till exempel vill skapa listan Global Allowed Referrer Exceptions använder du:
+List-ID:t ***LC_GLOBAL_ALLOWED_REFERER_EXCEPTION*** definieras som en konstant i `UMConstants` klassen för `com.adobe.idp.um.api` namnutrymmet, som finns i `adobe-usermanager-client.jar`. Du kan använda AEM Forms-API:erna för att skapa, ändra eller redigera den här listan. Om du till exempel vill skapa listan Global Allowed Referrer Exceptions använder du:
 
 ```as3
 addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arrays.asList("/index.html", "/sample/(.)*"))
@@ -775,9 +778,9 @@ Om berättigade serverförfrågningar blockeras av CSRF-filtret kan du försöka
 
 I det här avsnittet beskrivs de protokoll och portar som krävs av AEM Forms på JEE och innehåller rekommendationer för att distribuera AEM Forms på JEE i en säker nätverkskonfiguration.
 
-### Nätverksprotokoll som används av AEM Forms i JEE {#network-protocols-used-by-aem-forms-on-jee}
+### Nätverksprotokoll som används av AEM Forms på JEE {#network-protocols-used-by-aem-forms-on-jee}
 
-När du konfigurerar en säker nätverksarkitektur enligt beskrivningen i föregående avsnitt krävs följande nätverksprotokoll för interaktion mellan AEM Forms i JEE och andra system i företagsnätverket.
+När du konfigurerar en säker nätverksarkitektur enligt beskrivningen i föregående avsnitt krävs följande nätverksprotokoll för interaktion mellan AEM Forms på JEE och andra system i företagsnätverket.
 
 <table> 
  <thead> 
@@ -820,7 +823,7 @@ När du konfigurerar en säker nätverksarkitektur enligt beskrivningen i föreg
   </tr> 
   <tr> 
    <td><p>UNC-fil-I</p> </td> 
-   <td><p>AEM Forms on JEE monitor of watch folders for input to a service (watch folder endpoint)</p> </td> 
+   <td><p>AEM Forms på JEE-övervakning av bevakade mappar för indata i en tjänst (bevakad mappslutpunkt)</p> </td> 
   </tr> 
   <tr> 
    <td><p>LDAP</p> </td> 
@@ -835,16 +838,16 @@ När du konfigurerar en säker nätverksarkitektur enligt beskrivningen i föreg
    <td> 
     <ul> 
      <li><p>Fråga efter och bearbeta anrop till en extern databas när en process körs med JDBC-tjänsten</p> </li> 
-     <li><p>Intern åtkomst till AEM Forms i JEE-databas</p> </li> 
+     <li><p>AEM Forms för intern åtkomst i JEE-databas</p> </li> 
     </ul> </td> 
   </tr> 
   <tr> 
    <td><p>WebDAV</p> </td> 
-   <td><p>Möjliggör fjärrsurfning av AEM Forms i JEE-databasen (formulär, fragment och så vidare) av alla WebDAV-klienter</p> </td> 
+   <td><p>Möjliggör fjärrsurfning av AEM Forms i JEE-databasen (formulär, fragment o.s.v.) av alla WebDAV-klienter</p> </td> 
   </tr> 
   <tr> 
    <td><p>AMF</p> </td> 
-   <td><p>Adobe Flash-program, där AEM Forms på JEE-servertjänster har konfigurerats med en slutpunkt för fjärrstyrning</p> </td> 
+   <td><p>Adobe Flash-program, där AEM Forms på JEE-servertjänster har konfigurerats med en fjärrslutpunkt</p> </td> 
   </tr> 
   <tr> 
    <td><p>JMX</p> </td> 
@@ -902,7 +905,7 @@ I det här avsnittet beskrivs standardportarna (och alternativa konfigurationsin
     </ul> </td> 
   </tr> 
   <tr> 
-   <td><p>Administrationsportar för WebLogic krävs inte för åtkomst till AEM Forms på JEE</p> </td> 
+   <td><p>WebLogic-administrationsportar krävs inte för åtkomst till AEM Forms på JEE</p> </td> 
    <td> 
     <ul> 
      <li><p>Hanterad serverlyssningsport: Kan konfigureras från 1 till 65534</p> </li> 
@@ -915,7 +918,7 @@ I det här avsnittet beskrivs standardportarna (och alternativa konfigurationsin
 
 **WebSphere-portar**
 
-Information om WebSphere-portar som krävs för AEM Forms på JEE finns i inställningen Portnummer i WebSphere Application Server UI.
+Mer information om WebSphere-portar som krävs av AEM Forms på JEE finns i inställningen Portnummer i WebSphere Application Server-gränssnittet.
 
 ### Konfigurerar SSL {#configuring-ssl}
 
@@ -951,11 +954,11 @@ Information om hur du konfigurerar SSL-omdirigering för WebSphere eller WebLogi
 
 ## Windows-specifika säkerhetsrekommendationer {#windows-specific-security-recommendations}
 
-Det här avsnittet innehåller säkerhetsrekommendationer som är specifika för Windows när de används för att köra AEM Forms på JEE.
+Det här avsnittet innehåller säkerhetsrekommendationer som är specifika för Windows när det används för att köra AEM Forms på JEE.
 
 ### JBoss-tjänstkonton {#jboss-service-accounts}
 
-Vid installationen av nyckelord för AEM Forms på JEE skapas ett tjänstkonto som standard med hjälp av kontot Lokalt system. Det inbyggda användarkontot för det lokala systemet har hög tillgänglighet. den ingår i gruppen Administratörer. Om en arbetsprocessidentitet körs som det lokala systemanvändarkontot har den arbetsprocessen fullständig åtkomst till hela systemet.
+AEM Forms på JEE-körkortsinstallationen skapar som standard ett tjänstkonto med hjälp av kontot Lokalt system. Det inbyggda användarkontot för det lokala systemet har hög tillgänglighet. den ingår i gruppen Administratörer. Om en arbetsprocessidentitet körs som det lokala systemanvändarkontot har den arbetsprocessen fullständig åtkomst till hela systemet.
 
 #### Kör programservern med ett icke-administrativt konto {#run-the-application-server-using-a-non-administrative-account}
 
@@ -973,7 +976,7 @@ Vid installationen av nyckelord för AEM Forms på JEE skapas ett tjänstkonto s
    * Neka inloggning locallyxx
    * Logga in som tjänst (bör vara inställd)
 
-1. Ge det nya användarkontot behörighet att läsa och köra, skriva, ändra, lista mappinnehåll och läsa för att slutföra AEM Forms i JEE-installationskatalogen och GDS-katalogen (Global Document Storage). Platsen för GDS-katalogen konfigureras manuellt under installationen av AEM Forms. Om platsinställningen är tom under installationen blir platsen som standard en katalog under programserverinstallationen vid [JBoss root]/server/[type]/svcnative/DocumentStorage.
+1. Ge det nya användarkontot behörighet att läsa och köra, skriva, ändra, lista mappinnehåll och läsa för att slutföra AEM Forms i JEE-installationskatalogen och GDS-katalogen (Global Document Storage). Platsen för GDS-katalogen konfigureras manuellt under AEM Forms installationsprocess. Om platsinställningen är tom under installationen blir platsen som standard en katalog under programserverinstallationen vid [JBoss root]/server/[type]/svcnative/DocumentStorage.
 
 1. Starta programservertjänsten.
 
@@ -989,11 +992,11 @@ När du använder bevakade mappar som ett sätt att skicka och ta emot dokument 
 
 ## JBoss-specifika säkerhetsrekommendationer {#jboss-specific-security-recommendations}
 
-Det här avsnittet innehåller programserverkonfigurationsrekommendationer som är specifika för JBoss 7.0.6 när de används för att köra AEM Forms på JEE.
+Det här avsnittet innehåller programserverkonfigurationsrekommendationer som är specifika för JBoss 7.0.6 när det används för att köra AEM Forms på JEE.
 
 ### Inaktivera JBoss-hanteringskonsolen och JMX-konsolen {#disable-jboss-management-console-and-jmx-console}
 
-Åtkomst till JBoss Management Console och JMX Console har redan konfigurerats (JMX-övervakning är inaktiverad) när du installerar AEM Forms på JEE på JBoss med den körklara installationsmetoden. Om du använder en egen JBoss-programserver kontrollerar du att åtkomsten till JBoss Management Console och JMX-övervakningskonsolen är skyddade. Åtkomst till JMX-övervakningskonsolen ställs in i JBoss-konfigurationsfilen som kallas jmx-invoker-service.xml.
+Åtkomst till JBoss Management Console och JMX Console är redan konfigurerad (JMX-övervakning är inaktiverad) när du installerar AEM Forms på JEE på JBoss med körningsmetoden. Om du använder en egen JBoss-programserver kontrollerar du att åtkomsten till JBoss Management Console och JMX-övervakningskonsolen är skyddade. Åtkomst till JMX-övervakningskonsolen ställs in i JBoss-konfigurationsfilen som kallas jmx-invoker-service.xml.
 
 ### Inaktivera katalogbläddring {#disable-directory-browsing}
 
@@ -1006,7 +1009,7 @@ https://<servername>:8080/um/
 
 ## WebLogic-specifika säkerhetsrekommendationer {#weblogic-specific-security-recommendations}
 
-Det här avsnittet innehåller rekommendationer för programserverkonfiguration för att skydda WebLogic 9.1 när AEM Forms körs på JEE.
+Det här avsnittet innehåller rekommendationer för programserverkonfiguration för att skydda WebLogic 9.1 när du kör AEM Forms på JEE.
 
 ### Inaktivera katalogbläddring {#disable_directory_browsing-1}
 
