@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f192a8a3-1116-4d32-9b57-b53d532c0dbf
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+workflow-type: tm+mt
+source-wordcount: '1520'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 Om AEM-formulärimplementeringen lagrar ytterligare anpassade data i en annan databas ansvarar du för att implementera en strategi för att säkerhetskopiera dessa data och se till att de är synkroniserade med AEM-formulärdata. Dessutom måste programmet vara utformat så att det är tillräckligt robust för att hantera ett scenario där ytterligare databaser inte är synkroniserade. Vi rekommenderar starkt att alla databasåtgärder som utförs utförs i samband med en transaktion för att upprätthålla ett konsekvent tillstånd.
 
-När du har identifierat hur AEM-formulär används, ska du bestämma vilka filer som ska säkerhetskopieras, hur ofta och vilket säkerhetskopieringsfönster som ska göras tillgängligt.
+När du har identifierat hur AEM-formulär ska användas, bestämmer du vilka filer som ska säkerhetskopieras, hur ofta och vilket säkerhetskopieringsfönster som ska göras tillgängligt.
 
 >[!NOTE]
 >
@@ -85,7 +88,7 @@ Innan du startar om formulärservern efter en återställning gör du följande:
    1. Klicka på **Administratörsalternativ**.
    1. Klicka på **Start** för att synkronisera resurser från databasen.
 
-1. I en klustrad miljö bör huvudnoden (med avseende på AEM) vara uppe före slavnoderna.
+1. I en klustrad miljö bör den primära noden (med avseende på AEM) vara uppe före de sekundära noderna.
 1. Se till att inga processer initieras från interna eller externa källor som Web-, SOAP- eller EJB-processinitierare förrän systemets normala funktion har validerats.
 
 Om huvuddatabasen för AEM-formulär flyttas eller ändras läser du de installationsguider som är relevanta för programservern för att få information om hur du uppdaterar databasanslutningsinformationen för AEM-formulärdatakällorna IDP_DS och EDC_DS.
