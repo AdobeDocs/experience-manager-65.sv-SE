@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 6f9a294d-24bd-4e4b-b929-2809f5e6cef9
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+workflow-type: tm+mt
+source-wordcount: '2190'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ De program- och datafiler som måste säkerhetskopieras beskrivs mer ingående i
 Tänk på följande när det gäller säkerhetskopiering och återställning:
 
 * Databasen bör säkerhetskopieras före GDS- och AEM-databasen.
-* Om du behöver ta ned noderna i en klustrad klustermiljö för säkerhetskopiering kontrollerar du att slavnoderna är avstängda före huvudnoden. Annars kan det leda till inkonsekvens i klustret eller servern. Dessutom bör huvudnoden göras live före en slave-nod.
+* Om du behöver ta ned noderna i en klustrad klustermiljö för säkerhetskopiering måste du se till att de sekundära noderna stängs av före den primära noden. Annars kan det leda till inkonsekvens i klustret eller servern. Dessutom bör den primära noden göras live före en sekundär nod.
 * För återställningsåtgärden i ett kluster bör programservern stoppas för varje nod i klustret.
 
 ## Katalog för global dokumentlagring {#global-document-storage-directory}
@@ -54,7 +57,7 @@ GDS-platserna kan ändras under en återställning om den ursprungliga platsen i
 
 Du kan aktivera dokumentlagring för AEM-formulär i AEM-formulärdatabasen med administrationskonsolen. Även om det här alternativet behåller alla beständiga dokument i databasen, kräver AEM-formulär fortfarande den filsystembaserade GDS-katalogen eftersom den används för att lagra permanenta och tillfälliga filer och resurser relaterade till sessioner och anrop av AEM-formulär.
 
-När du väljer alternativet &quot;Aktivera dokumentlagring i databasen&quot; i Core System Settings i administrationskonsolen eller med Configuration Manager, tillåter inte AEM-formulär att ögonblicksbilder säkerhetskopieras och rullande säkerhetskopieringsläge. Därför behöver du inte hantera säkerhetskopieringslägen med AEM-formulär. Om du använder det här alternativet bör du endast säkerhetskopiera GDS en gång efter att du har aktiverat alternativet. När du återställer AEM-formulär från en säkerhetskopia behöver du inte byta namn på säkerhetskopieringskatalogen för GDS eller återställa GDS.
+När du väljer alternativet Aktivera dokumentlagring i databasen i Core System Settings i administrationskonsolen eller med Configuration Manager, tillåter inte AEM-formulär läge för säkerhetskopiering av ögonblicksbilder och rullande säkerhetskopieringsläge. Därför behöver du inte hantera säkerhetskopieringslägen med AEM-formulär. Om du använder det här alternativet bör du endast säkerhetskopiera GDS en gång efter att du har aktiverat alternativet. När du återställer AEM-formulär från en säkerhetskopia behöver du inte byta namn på säkerhetskopieringskatalogen för GDS eller återställa GDS.
 
 ## AEM-databas {#aem-repository}
 
@@ -70,7 +73,7 @@ En enkel konfiguration av Correspondence Management Solution innehåller en för
 
 blanketthanteraren effektiviserar processen att uppdatera, hantera och ta tillbaka blanketter.
 
-### AEM Forms Workspace {#html-workspace}
+### arbetsytan AEM Forms {#html-workspace}
 
 AEM Forms Workspace matchar funktionerna i (Borttaget för AEM-formulär i JEE) Flex Workspace och lägger till nya funktioner för att utöka och integrera Workspace och göra det mer användarvänligt.
 
@@ -78,11 +81,11 @@ AEM Forms Workspace matchar funktionerna i (Borttaget för AEM-formulär i JEE) 
 >
 >Flex Workspace används inte i AEM-formulärsversioner.
 
-Den möjliggör uppgiftshantering för klienter utan Flash Player och Adobe Reader. Det underlättar återgivning av HTML-formulär, förutom PDF-formulär och Flex-formulär.
+Den möjliggör uppgiftshantering för klienter utan Flash Player och Adobe Reader. Det underlättar återgivning av HTML-formulär, förutom PDF forms och Flex-formulär.
 
 ## AEM-formulärdatabas {#aem-forms-database}
 
-AEM-formulärdatabasen lagrar innehåll som formulärartefakter, tjänstkonfigurationer, processtillstånd och databasreferenser till filer i GDS och rotkatalogen för innehållslagring (för Content Services). Säkerhetskopiering av databaser kan utföras i realtid utan avbrott i tjänsten, och återställningen kan ske till en viss tidpunkt eller till en viss ändring. I det här avsnittet beskrivs hur du konfigurerar databasen så att den kan säkerhetskopieras i realtid.
+AEM-formulärdatabasen lagrar innehåll som formulärartefakter, tjänstkonfigurationer, processtillstånd och databasreferenser till filer i GDS och rotkatalogen för innehållslagring (för Content Services). Säkerhetskopiering av databaser kan utföras i realtid utan avbrott i tjänsten, och återställning kan ske till en viss tidpunkt eller till en viss ändring. I det här avsnittet beskrivs hur du konfigurerar databasen så att den kan säkerhetskopieras i realtid.
 
 I ett korrekt konfigurerat AEM-formulärsystem kan systemadministratören och databasadministratören enkelt samarbeta för att återställa systemet till ett konsekvent och känt tillstånd.
 
@@ -136,7 +139,8 @@ Använd MySQLAdmin eller ändra INI-filerna i Windows för att konfigurera MySQL
 
 >[!NOTE]
 >
->Standardläget för binär loggning för MySQL är &quot;Statement&quot;, vilket är inkompatibelt med tabeller som används av Content Services (utgått). Om du använder binär loggning i det här standardläget misslyckas Content Services (Borttagen). Om ditt system innehåller innehållstjänster (borttaget) använder du loggningsläget Blandat. Om du vill aktivera&quot;blandad&quot; loggning lägger du till följande argument i file:*`binlog_format=mixed log-bin=logname`
+>Standardläget för binär loggning för MySQL är &quot;Statement&quot;, vilket är inkompatibelt med tabeller som används av Content Services (utgått). Om du använder binär loggning i det här standardläget misslyckas Content Services (Borttagen). Om ditt system innehåller innehållstjänster (borttaget) använder du loggningsläget Blandat. Om du vill aktivera&quot;blandad&quot; loggning lägger du till följande argument i file:*
+`binlog_format=mixed log-bin=logname`
 
 Du kan använda verktyget mysqldump för att få en fullständig säkerhetskopiering av databasen. Fullständig säkerhetskopiering krävs, men är inte alltid lämplig. De producerar stora säkerhetskopior och tar tid att generera. Om du vill göra en stegvis säkerhetskopiering måste du starta servern med alternativet - `log-bin` enligt beskrivningen i föregående avsnitt. Varje gång MySQL-servern startas om slutar den skriva till den aktuella binära loggen, skapar en ny och från och med då blir den nya den aktuella. Du kan tvinga en växel manuellt med `FLUSH LOGS SQL` kommandot. Efter den första fullständiga säkerhetskopieringen utförs efterföljande stegvisa säkerhetskopieringar med hjälp av verktyget mysqladmin med `flush-logs` kommandot, som skapar nästa loggfil.
 
