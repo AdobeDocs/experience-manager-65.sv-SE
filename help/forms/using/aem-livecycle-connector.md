@@ -1,6 +1,6 @@
 ---
-title: Ansluta AEM-formulär till Adobe LiveCycle
-seo-title: Ansluta AEM-formulär till Adobe LiveCycle
+title: Koppla AEM Forms till Adobe LiveCycle
+seo-title: Koppla AEM Forms till Adobe LiveCycle
 description: Med AEM LiveCycle-kopplingen kan du starta LiveCycle ES4 Document Services inifrån AEM-program och arbetsflöden.
 seo-description: Med AEM LiveCycle-kopplingen kan du starta LiveCycle ES4 Document Services inifrån AEM-program och arbetsflöden.
 uuid: 7dc9d5ec-7b19-4d93-936d-81ceb45dfffa
@@ -9,14 +9,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 discoiquuid: 7e404b45-1302-4dd1-b3c9-3f47fedb5f94
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+workflow-type: tm+mt
+source-wordcount: '1029'
+ht-degree: 0%
 
 ---
 
 
-# Ansluta AEM-formulär till Adobe LiveCycle {#connecting-aem-forms-with-adobe-livecycle}
+# Koppla AEM Forms till Adobe LiveCycle {#connecting-aem-forms-with-adobe-livecycle}
 
-Med Adobe Experience Manager (AEM) LiveCycle Connector kan Adobe LiveCycle ES4 Document Services anropas smidigt inifrån AEM-webbprogram och arbetsflöden. LiveCycle har en omfattande klient-SDK som gör att klientapplikationer kan starta LiveCycle-tjänster med Java API:er. AEM LiveCycle Connector förenklar användningen av dessa API:er i OSGi-miljön.
+Adobe Experience Manager (AEM) LiveCycle-kopplingen möjliggör smidigt anrop av Adobe LiveCycle ES4 Document Services inifrån AEM-webbprogram och arbetsflöden. LiveCycle har en omfattande klient-SDK som gör att klientapplikationer kan starta LiveCycle-tjänster med Java API:er. AEM LiveCycle Connector förenklar användningen av dessa API:er i OSGi-miljön.
 
 ## Ansluta AEM-server till Adobe LiveCycle {#connecting-aem-server-to-adobe-livecycle}
 
@@ -153,7 +156,7 @@ ServiceClientFactory scf = scfProvider.getDefaultServiceClientFactory();
 
 Nästan alla dokumenttjänster i LiveCycle kräver autentisering. Du kan använda något av följande alternativ för att starta de här tjänsterna utan att ange specifika autentiseringsuppgifter i koden:
 
-### Konfiguration av vitlista {#whitelist-configuration}
+### Tillåt listkonfiguration {#allowlist-configuration}
 
 LiveCycle Client SDK-konfigurationen innehåller en inställning för tjänstnamn. Den här konfigurationen är en lista över tjänster som anropslogiken använder administratörsautentiseringsuppgifter för. Om du till exempel lägger till DirectoryManager-tjänster (som ingår i API:t för användarhantering) i den här listan, kan all klientkod använda tjänsten direkt och anropslagret skickar automatiskt de konfigurerade autentiseringsuppgifterna som en del av den begäran som skickas till LiveCycle-servern
 
