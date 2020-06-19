@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: a3cbffb7-c1d1-47c2-bcfd-70f1e2d81ac9
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+workflow-type: tm+mt
+source-wordcount: '990'
+ht-degree: 0%
 
 ---
 
@@ -25,11 +28,11 @@ Tänk dig till exempel ett scenario där du är inloggad på administrationskons
 
 ## CSRF-relaterade termer {#csrf-related-terms}
 
-**** Referens: Adressen till källsidan som en begäran kommer från. En webbsida på webbplats1.com innehåller till exempel en länk till webbplats2.com. När du klickar på länken skickas en begäran till site2.com. Referenten till denna begäran är site1.com eftersom begäran görs från en sida vars källa är site1.com.
+**Referens:** Adressen till källsidan som en begäran kommer från. En webbsida på webbplats1.com innehåller till exempel en länk till webbplats2.com. När du klickar på länken skickas en begäran till site2.com. Referenten till denna begäran är site1.com eftersom begäran görs från en sida vars källa är site1.com.
 
-**** Godkända URI:er: URI:er identifierar resurser på formulärservern som begärs, till exempel /adminui eller /contentspace. Vissa resurser kan tillåta att en begäran skickas till programmet från externa platser. Dessa resurser betraktas som godkända URI:er. Formulärservern utför aldrig någon referenskontroll från godkända URI:er.
+**Tillåtna URI:er:** URI:er identifierar resurser på formulärservern som begärs, till exempel /adminui eller /contentspace. Vissa resurser kan tillåta att en begäran skickas till programmet från externa platser. Dessa resurser betraktas som tillåtna URI:er. Formulärservern utför aldrig någon referenskontroll från tillåtna URI:er.
 
-**** Null-referens: När du öppnar ett nytt webbläsarfönster eller en ny flik, skriver en adress och trycker på Retur är referenten null. Begäran är helt ny och kommer inte från en överordnad webbsida. Det finns därför ingen hänvisning till begäran. Formulärservern kan ta emot en null-referens från:
+**Null-referens:** När du öppnar ett nytt webbläsarfönster eller en ny flik, skriver en adress och trycker på Retur är referenten null. Begäran är helt ny och kommer inte från en överordnad webbsida. Det finns därför ingen hänvisning till begäran. Formulärservern kan ta emot en null-referens från:
 
 * begäranden som gjorts på SOAP- eller REST-slutpunkter från Acrobat
 * alla skrivbordsklienter som gör en HTTP-begäran på en AEM-formulärs SOAP- eller REST-slutpunkt
@@ -37,7 +40,7 @@ Tänk dig till exempel ett scenario där du är inloggad på administrationskons
 
 Tillåt en null-referens för SOAP- och REST-slutpunkter. Tillåt även en null-referens på alla URI-inloggningssidor som /adminui och /contentspace och deras motsvarande mappade resurser. Den mappade serverleten för /contentspace är till exempel /contentspace/faces/jsp/login.jsp, som bör vara ett null-referensundantag. Det här undantaget är bara nödvändigt om du aktiverar GET-filtrering för webbprogrammet. Programmen kan ange om null-referenser ska tillåtas. Se&quot;Skydda från attacker med smidning av förfrågningar mellan webbplatser&quot; i [Förbättring och säkerhet för AEM-formulär](https://help.adobe.com/en_US/livecycle/11.0/HardeningSecurity/index.html).
 
-**** Undantag för tillåten referens: Tillåtet referensundantag är en underlista till listan över tillåtna referenser, från vilka begäranden blockeras. Tillåtna referensundantag gäller endast för webbprogram. Om en delmängd av Tillåtna referenter inte ska kunna anropa ett visst webbprogram kan du svartlista hänvisarna via Tillåtna referensundantag. Tillåtna referensundantag anges i filen web.xml för ditt program. (Se&quot;Skydda mot attacker med förfalskade korswebbplatser&quot; på sidan Hjälp och självstudiekurser för AEM-formulär.)
+**Undantag för tillåten referens:** Tillåtet referensundantag är en underlista till listan över tillåtna referenser, från vilka begäranden blockeras. Tillåtna referensundantag gäller endast för webbprogram. Om en delmängd av Tillåtna referenter inte ska kunna anropa ett visst webbprogram kan du blockera hänvisarna via Tillåtna referensundantag. Tillåtna referensundantag anges i filen web.xml för ditt program. (Se&quot;Skydda mot attacker med förfalskade korswebbplatser&quot; på sidan Hjälp och självstudiekurser för AEM-formulär.)
 
 ## Hur tillåtna referenser fungerar {#how-allowed-referers-work}
 
@@ -48,10 +51,10 @@ AEM-formulär har referensfiltrering som kan förhindra CSRF-attacker. Så här 
    * Om det är POST utför formulärservern kontrollen av referensrubriken.
    * Om det är GET åsidosätter formulärservern referenskontrollen, såvida inte CSRF_CHECK_GETS är inställt på true, vilket innebär att referenthuvudet kontrolleras. CSRF_CHECK_GETS anges i filen web.xml för ditt program. (Se&quot;Skydda mot attacker med förfalskning av förfrågningar mellan webbplatser&quot; i [Försvårande och säkerhetsanvisning](https://help.adobe.com/en_US/livecycle/11.0/HardeningSecurity/index.html).)
 
-1. Formulärservern kontrollerar om den begärda URI:n är vitlistad:
+1. Formulärservern kontrollerar om begärd URI tillåts:
 
-   * Om URI:n vitlistas, skickas begäran av servern.
-   * Om den begärda URI:n inte är vitlistad hämtar servern referensen för begäran.
+   * Om URI:n tillåts, skickas begäran av servern.
+   * Om den begärda URI:n inte tillåts, hämtar servern referensen för begäran.
 
 1. Om det finns en referens i begäran kontrollerar servern om det är en tillåten referens. Om det är tillåtet söker servern efter ett referensundantag:
 
