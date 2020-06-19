@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 7eebef08-83b9-4b56-90ec-35ab3b0c27e8
 noindex: true
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+workflow-type: tm+mt
+source-wordcount: '671'
+ht-degree: 0%
 
 ---
 
@@ -24,34 +27,34 @@ Utför följande steg för att göra det möjligt för AEM att söka i dokuments
 ## Innan du startar {#before-you-start}
 
 * Installera och konfigurera dokumentsäkerhet för AEM Forms.
-* Lägg till paketet sun.util.calendar i listan över godkända **brandväggskonfigurationer.** Konfigurationen visas på `https://'[server]:[port]'/system/console/configMgr`.
+* Lägg till paketet sun.util.calendar i listan över tillåtna värden för **brandväggskonfigurationen för deserialisering.** Konfigurationen visas på `https://'[server]:[port]'/system/console/configMgr`.
 * Kontrollera att alla AEM-paket är igång. Paketen listas på `https://'[server]:[port]'/system/console/bundles`. Om alla paket inte är aktiva väntar du och kontrollerar paketens status efter några minuter.
 
-## Skapa en säker anslutning i arbetsflödet för AEM Forms (AEM Forms on JEE) {#establish-a-secure-connection-within-aem-forms-workflow-aem-forms-on-jee}
+## Upprätta en säker anslutning i arbetsflödet i AEM Forms (AEM Forms på JEE) {#establish-a-secure-connection-within-aem-forms-workflow-aem-forms-on-jee}
 
-En säker anslutning möjliggör smidigt informationsflöde mellan AEM Forms på JEE och OSGi-tjänsterna som körs på samma server. Använd någon av följande metoder för att upprätta en säker anslutning:
+En säker anslutning möjliggör ett smidigt informationsflöde mellan AEM Forms på JEE och OSGi-tjänsterna som körs på samma server. Använd någon av följande metoder för att upprätta en säker anslutning:
 
-* Konfigurera AEM Forms Client SDK Bundle med AEM Forms på JEE-administratörsautentiseringsuppgifter
-* Konfigurera SDK-paketet för AEM Forms-klienten med hjälp av ömsesidig autentisering
+* Konfigurera AEM Forms Client SDK Bundle med autentiseringsuppgifter för AEM Forms på JEE-administratör
+* Konfigurera AEM Forms Client SDK Bundle med hjälp av ömsesidig autentisering
 
-### Konfigurera AEM Forms Client SDK Bundle med AEM Forms på JEE-administratörsautentiseringsuppgifter {#configure-aem-forms-client-sdk-bundle-with-aem-forms-on-jee-admin-credentials}
+### Konfigurera AEM Forms Client SDK Bundle med autentiseringsuppgifter för AEM Forms på JEE-administratör {#configure-aem-forms-client-sdk-bundle-with-aem-forms-on-jee-admin-credentials}
 
 1. Öppna konfigurationshanteraren för AEM och logga in som administratör. Standardwebbadressen är https://&lt;serverName>:&lt;port>/lc/system/console/configMgr.
 1. Sök efter och öppna AEM Forms Client SDK Bundle. Ange värde för följande egenskaper:
 
-   * **Server-URL:** Ange HTTP-URL för AEM Forms på JEE-server. Om du vill aktivera kommunikation via https startar du om AEM Forms på JEE-servern med parametern -Djavax.net.ssl.trustStore=&lt;sökväg till AEM Forms i JEE-nyckelfil>.
+   * **Server-URL:** Ange HTTP-URL för AEM Forms på JEE-server. Om du vill aktivera kommunikation över https startar du om AEM Forms på JEE-servern med parametern -Djavax.net.ssl.trustStore=&lt;sökväg till AEM Forms på JEE-nyckelfil>.
    * **Tjänstnamn**: Lägg till RightsManagementService i listan över angivna tjänster.
-   * **Användarnamn:** Ange användarnamn för det AEM Forms på JEE-konto som ska användas för att initiera anrop från AEM Forms på JEE-server. Det angivna kontot måste ha behörighet att anropa Document Services på AEM Forms på JEE-servern.
+   * **Användarnamn:** Ange användarnamn för det AEM Forms på JEE-konto som ska användas för att initiera anrop från AEM Forms på JEE-servern. Det angivna kontot måste ha behörighet att anropa Document Services på AEM Forms på JEE-servern.
    * **Lösenord**: Ange lösenordet för AEM Forms på JEE-kontot som anges i fältet Användarnamn.
    Click **Save**. AEM är aktiverat för att söka i dokumentskyddade PDF- och Microsoft Office-dokument.
 
-### Konfigurera SDK-paketet för AEM Forms-klienten med hjälp av ömsesidig autentisering {#configure-aem-forms-client-sdk-bundle-using-mutual-authentication}
+### Konfigurera AEM Forms Client SDK Bundle med hjälp av ömsesidig autentisering {#configure-aem-forms-client-sdk-bundle-using-mutual-authentication}
 
 1. Aktivera ömsesidig autentisering för AEM Forms på JEE. Mer information finns i [CAC och ömsesidig autentisering](https://helpx.adobe.com/livecycle/kb/cac-mutual-authentication.html).
 1. Öppna konfigurationshanteraren för AEM och logga in som administratör. Standardwebbadressen är https://&lt;serverName>:&lt;port>/lc/system/console/configMgr.
 1. Sök efter och öppna AEM Forms Client SDK Bundle. Ange värde för följande egenskaper:
 
-   * **Server-URL:** Ange HTTPS-URL för AEM Forms på JEE-server. Om du vill aktivera kommunikation via https startar du om AEM Forms på JEE-servern med parametern -Djavax.net.ssl.trustStore=&lt;sökväg till AEM Forms i JEE-nyckelfil>.
+   * **Server-URL:** Ange HTTPS-URL för AEM Forms på JEE-server. Om du vill aktivera kommunikation över https startar du om AEM Forms på JEE-servern med parametern -Djavax.net.ssl.trustStore=&lt;sökväg till AEM Forms på JEE-nyckelfil>.
    * **Aktivera tvåvägs SSL**: Aktivera alternativet Aktivera tvåvägs SSL.
    * **KeyStore-fil-URL**: Ange URL:en för nyckelfilen.
    * **TrustStore-fil-URL**: Ange URL-adressen för förvaltarfilen.
