@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c187daa4-41b7-47dc-9669-d7120850cafd
 translation-type: tm+mt
-source-git-commit: e4d84b5c6f7d2bfcac942b0b685a8f1fd11274f0
+source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+workflow-type: tm+mt
+source-wordcount: '923'
+ht-degree: 0%
 
 ---
 
@@ -30,7 +33,7 @@ I denna procedur:
 
 1. I en kommandotolk går du till *[JAVA HOME]*/bin och skriver följande kommando för att skapa autentiseringsuppgifter och nyckelbehållare:
 
-   `keytool -genkey -dname "CN=`*Värdnamn *`, OU=`*Gruppnamn* `, O=`*Företagsnamn *`,L=`*Ortnamn* `, S=`*Stat *`, C=``-alias "AEMForms Cert"``-keyalg RSA -keypass`** `-keystore`**Landskod&quot; key_password¥keystorename`.keystore`
+   `keytool -genkey -dname "CN=`*Värdnamn *`, OU=`*Gruppnamn* `, O=`*Företagsnamn *`,L=`*Ortnamn* `, S=`*Stat *`, C=``-alias "AEMForms Cert"``-keyalg RSA -keypass`** `-keystore`*Landskod&quot; key_password¥keystorename *`.keystore`
 
    >[!NOTE]
    >
@@ -44,7 +47,7 @@ I denna procedur:
 
 1. Kopiera *keystorename*.keystore till `[appserver root]/server/[type]/conf` katalogen genom att skriva något av följande kommandon:
 
-   * (Windows Single Server) `copy``keystorename.keystore[appserver root]\standalone\configuration`
+   * (Windows Single Server) `copy` `keystorename.keystore[appserver root]\standalone\configuration`
    * (Windows Server Cluster) copy `keystorename.keystore[appserver root]\domain\configuration`
    * (Linux Single Server) `cp keystorename.keystore [appserver root]/standalone/configuration`
    * (Linux-serverkluster) `cp <em>keystorename</em>.keystore<em>[appserver root]</em>/domain/configuration`
@@ -75,7 +78,7 @@ I denna procedur:
 
 1. Importera certifikatet genom att skriva följande kommando:
 
-   `keytool -import -alias “AEMForms Cert” -file`*AEMForms_cert *`.cer -keystore`*JAVA_HOME*`\jre\lib\security\cacerts`
+   `keytool -import -alias “AEMForms Cert” -file`*AEMForms_cert *`.cer -keystore`*JAVA_HOME* `\jre\lib\security\cacerts`
 
 1. Ange `changeit` som lösenord. Det här lösenordet är standardlösenordet för en Java-installation och kan ha ändrats av systemadministratören.
 1. När du uppmanas till `Trust this certificate? [no]`:, skriv `yes`. Bekräftelsen &quot;Certificate was added to keystore&quot; visas.
@@ -123,7 +126,7 @@ I denna procedur:
    </security-realm>
    ```
 
-   På huvudnoden i serverklustret hittar du avsnittet &lt;server> i [appserverroten]\domain\configuration\domain_&lt;dbname>.xml efter följande kod:
+   På den primära noden i serverklustret, i [appserver root]\domain\configuration\domain_&lt;dbname>.xml, letar du reda på &lt;server>-avsnittet som finns efter följande kod:
 
    `<http-listener name="default" socket-binding="http" redirect-socket="https" max-post-size="104857600"/>`
 
@@ -166,7 +169,7 @@ I denna procedur:
 
 1. I en kommandotolk går du till *[JAVA HOME]*/bin och skriver följande kommando för att skapa nyckelbehållaren och nyckeln:
 
-   `keytool -genkey -dname "CN=`*Värdnamn *`, OU=`*Gruppnamn* `, O=`*Företagsnamn *`, L=`*Ortnamn* `, S=`*Delstat *`, C=`**`-alias "AEMForms Cert"` `-keyalg RSA -keypass`** `-keystore`**Landskod&quot;-key_password nyckelordsnamn¥`.keystore`
+   `keytool -genkey -dname "CN=`*Värdnamn *`, OU=`*Gruppnamn* `, O=`*Företagsnamn *`, L=`*Ortnamn* `, S=`*Delstat *`, C=`**`-alias "AEMForms Cert"` `-keyalg RSA -keypass`** `-keystore`*Landskod&quot;-Nyckelnamn_lösenordnyckelnamn *`.keystore`
 
    >[!NOTE]
    >
@@ -192,7 +195,7 @@ I denna procedur:
 
 1. I en kommandotolk navigerar du till *`[JAVA HOME]`*/bin och skriver följande kommando för att importera autentiseringsuppgifterna till nyckelbehållaren:
 
-   `keytool -import -trustcacerts -file`*CACertificateName *`.crt -keystore`*keystorename*`.keystore`
+   `keytool -import -trustcacerts -file`*CACertificateName *`.crt -keystore`*keystorename* `.keystore`
 
    >[!NOTE]
    >
