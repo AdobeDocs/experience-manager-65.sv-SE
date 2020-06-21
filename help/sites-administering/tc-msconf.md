@@ -10,7 +10,10 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: a7958411-b509-428e-bbe2-42efe8fd1add
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 8b6801a4efd45fa49e009e1d6876d21c4cded957
+workflow-type: tm+mt
+source-wordcount: '616'
+ht-degree: 0%
 
 ---
 
@@ -30,17 +33,17 @@ När du har skapat konfigurationen måste du [aktivera den](/help/sites-administ
 
 Följande procedur använder det pekoptimerade användargränssnittet för att skapa en Microsoft Translator-konfiguration.
 
-1. Klicka på eller tryck på Verktyg > Cloud Services (molntjänster).
+1. Klicka på eller tryck på Verktyg > Cloud Service på listen.
 1. Klicka eller tryck på Visa konfigurationer i området Microsoft Translator.
 1. Klicka på länken + bredvid Tillgängliga konfigurationer.
 
    ![chlimage_1-382](assets/chlimage_1-382.png)
 
-1. Ange en rubrik för konfigurationen. Titeln identifierar konfigurationen i Cloud Services-konsolen samt i listrutor med sidegenskaper. Standardnamnet baseras på titeln. Du kan också ange ett namn som ska användas för databasnoden som lagrar konfigurationen. Du bör använda standardvärdet för egenskapen Överordnad konfiguration, som är sökvägen till databasnoden.
+1. Ange en rubrik för konfigurationen. Titeln identifierar konfigurationen i konsolen Cloud Service samt i listrutor för sidegenskaper. Standardnamnet baseras på titeln. Du kan också ange ett namn som ska användas för databasnoden som lagrar konfigurationen. Du bör använda standardvärdet för egenskapen Överordnad konfiguration, som är sökvägen till databasnoden.
 1. Klicka på Skapa.
 1. I dialogrutan som visas skriver du värden för egenskaperna och klickar sedan på OK.
 
-## Exempel på tjänstkonfigurationer för Microsoft Translator Cloud {#sample-microsoft-translator-cloud-service-configurations}
+## Exempel på konfiguration av Microsoft Translator-Cloud Service {#sample-microsoft-translator-cloud-service-configurations}
 
 Följande molntjänstkonfigurationer för Microsoft Translator installeras med Geometrixx-exemplen. I vissa exempelkonfigurationer används ett Microsoft Translation-konto med en provversion som tillåter högst 2 000 000 kostnadsfria översatta tecken per månad.
 
@@ -58,7 +61,7 @@ Den här Microsoft Translator-konfigurationen är optimerad för användning med
 
 Konfigurationssidorna för Microsoft Translation är en praktisk länk till Microsofts webbplats för att få en kontoprenumeration som passar för produktionssystem.
 
-1. Klicka på eller tryck på Verktyg > Åtgärder > Cloud > Cloud-tjänster.
+1. Klicka på eller tryck på Verktyg > Åtgärder > Moln > Cloud Service.
 1. Klicka eller tryck på Show Configurations (Visa konfigurationer) i området Microsoft Translator och klicka eller tryck sedan på Microsoft Translator Trial License (Microsoft Translation Configuration).
 
    ![chlimage_1-383](assets/chlimage_1-383.png)
@@ -71,7 +74,7 @@ Konfigurationssidorna för Microsoft Translation är en praktisk länk till Micr
 
 Konfigurationssidorna för Microsoft Translation är en praktisk länk till Microsofts webbplats där du kan anpassa Microsoft Translator-motorn. ([https://hub.microsofttranslator.com](https://hub.microsofttranslator.com/))
 
-1. Klicka på eller tryck på Verktyg > Åtgärder > Cloud > Cloud-tjänster.
+1. Klicka på eller tryck på Verktyg > Åtgärder > Moln > Cloud Service.
 1. Klicka eller tryck på Show Configurations (Visa konfigurationer) i området Microsoft Translator och klicka eller tryck sedan på den konfiguration som du vill anpassa.
 1. På konfigurationssidan klickar du på Anpassa översättare. Använd Microsofts webbsida som öppnas för att anpassa tjänsten.
 
@@ -79,6 +82,6 @@ Konfigurationssidorna för Microsoft Translation är en praktisk länk till Micr
 
 Du måste aktivera dina molntjänstkonfigurationer för att stödja översatt innehåll som replikeras till publiceringsinstansen. Använd metoden för att [aktivera ett komplett avsnitt (träd)](/help/sites-authoring/publishing-pages.md#publishing-and-unpublishing-a-tree) för att aktivera databasnoderna som lagrar Microsoft Translator-konfigurationer eller molntjänstkonfigurationer från tredje part. Noderna finns under följande överordnade noder:
 
-* Microsoft Translation Service: /etc/cloudservices/msft-translation
+* Microsoft Translation Service: /libs/settings/cloudconfigs/translation/msft-translation
 * Översättning från tredje part: /etc/cloudservices/machine-translation
 
