@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 6bcf0fcc-481a-4283-b30d-80b517701280
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
+source-git-commit: 37c9cb6db35cb941a117a03aadf7a9815809c85e
+workflow-type: tm+mt
+source-wordcount: '2684'
+ht-degree: 0%
 
 ---
 
@@ -64,7 +67,7 @@ I följande tabell visas de utrullningskonfigurationer som har installerats med 
   <tr>
    <td>Aktivera vid aktivering av utkast</td>
    <td>Publicerar live-kopian när källan publiceras.</td>
-   <td> Vid aktivering</td>
+   <td>Vid aktivering</td>
    <td>targetActivate</td>
   </tr>
   <tr>
@@ -283,7 +286,7 @@ I följande tabell beskrivs egenskaperna som du kan konfigurera:
    <th>Beskrivning</th>
   </tr>
   <tr>
-   <td><p>Undantagna nodtyper</p> <p>cq.wcm.msm.action.excludedetypes</p> </td>
+   <td><p>Undantagna nodtyper</p> <p>cq.wcm.msm.action.excludednodetypes</p> </td>
    <td>Ett reguljärt uttryck som matchar de nodtyper som ska uteslutas från synkroniseringsåtgärden.</td>
   </tr>
   <tr>
@@ -295,7 +298,7 @@ I följande tabell beskrivs egenskaperna som du kan konfigurera:
    <td>Ett reguljärt uttryck som matchar sidegenskaperna som ska uteslutas från synkroniseringsåtgärden.</td>
   </tr>
   <tr>
-   <td><p>Ignorerade Mixin NodeTypes</p> <p>cq.wcm.msm.action.ignoreMixin</p> </td>
+   <td><p>Ignorerade Mixin NodeTypes</p> <p>cq.wcm.msm.action.ignoredMixin</p> </td>
    <td>Finns endast för CQ MSM Content Update Action. Ett reguljärt uttryck som matchar namnen på de mixin-nodtyper som ska uteslutas från synkroniseringsåtgärden.</td>
   </tr>
  </tbody>
@@ -323,12 +326,6 @@ Om du t.ex. vill att **sidans titel** ska inkluderas i ändringarna som gäller 
 
 `jcr:(?!(title)$).*`
 
->[!CAUTION]
->
->Före 5.5 SP2 konfigurerades de undantagna sidegenskaperna i systemkonsolen under WCM-rullningshanteraren för **Dag**. Med 5.5 SP2 och senare versioner ignoreras inställningarna för de undantagna sidegenskaperna på den panelen. Undantaget av egenskaper vid utrullning är konfigurerat enligt beskrivningen ovan i **CQ MSM Content Update Action**.
->
->Om du har justerat den här inställningen manuellt i en installation före 5.5 SP2 och uppgraderar till 5.5 SP2 eller senare måste *du därför överföra inställningarna manuellt från den gamla konfigurationspanelen till den nya*.
-
 ### Konfigurerar synkronisering för uppdatering av referenser {#configuring-synchronization-for-updating-references}
 
 Du kan konfigurera flera OSGi-tjänster som stöder motsvarande synkroniseringsåtgärder som är relaterade till uppdatering av referenser.
@@ -344,7 +341,7 @@ I följande tabell visas de synkroniseringsåtgärder som du kan ange referensup
    <th>Beskrivning</th>
   </tr>
   <tr>
-   <td><p>Uppdatera referens i kapslade LiveCopies</p> <p>cq.wcm.msm.impl.action.referencesUpdate.prop_updateNested</p> </td>
+   <td><p>Uppdatera referens i kapslade LiveCopies</p> <p>cq.wcm.msm.impl.action.referencesupdate.prop_updateNested</p> </td>
    <td>Endast tillgängligt för CQ MSM Reference Update Action. Välj det här alternativet (Webbkonsol) eller ange den här booleska egenskapen till true (databaskonfiguration) för att ersätta referenser som är avsedda för alla resurser som finns i grenen i den översta LiveCopy.</td>
   </tr>
   <tr>
@@ -360,10 +357,10 @@ Med MSM kan du ange uppsättningar av utrullningskonfigurationer som används ge
 
 I följande lista över platser där du kan ange vilka rollout-konfigurationer som ska användas beskrivs hur MSM avgör vilka rollout-konfigurationer som ska användas för en live-kopia:
 
-* **[](/help/sites-administering/msm-sync.md#setting-the-rollout-configurations-for-a-live-copy-page)Egenskaper **för Live copy-sida: När en live-kopia-sida har konfigurerats för att använda en eller flera utrullningskonfigurationer, använder MSM dessa rollout-konfigurationer.
-* **[](/help/sites-administering/msm-sync.md#setting-the-rollout-configuration-for-a-blueprint-page)Egenskaper **för designsida: När en live-kopia baseras på en plan, och live-kopieringssidan inte har konfigurerats med en utrullningskonfiguration, används den rollout-konfiguration som är associerad med den blå källsidan.
-* **** Egenskaper för överordnad sida för Live-kopia: När varken den aktiva kopieringssidan eller den blå källsidan har konfigurerats med en utrullningskonfiguration, används den utrullningskonfiguration som gäller för den aktiva kopieringssidans överordnade sida.
-* **[](/help/sites-administering/msm-sync.md#setting-the-system-default-rollout-configuration)Systemstandard **: När utrullningskonfigurationen för den aktiva kopians överordnade sida inte kan fastställas, används systemets standardkonfiguration för utrullning.
+* **[Egenskaper](/help/sites-administering/msm-sync.md#setting-the-rollout-configurations-for-a-live-copy-page)för Live copy-sida:**När en live-kopia-sida har konfigurerats för att använda en eller flera utrullningskonfigurationer, använder MSM dessa rollout-konfigurationer.
+* **[Egenskaper](/help/sites-administering/msm-sync.md#setting-the-rollout-configuration-for-a-blueprint-page)för designsida:**När en live-kopia baseras på en plan, och live-kopieringssidan inte har konfigurerats med en utrullningskonfiguration, används den rollout-konfiguration som är associerad med den blå källsidan.
+* **Egenskaper för överordnad sida för Live-kopia:** När varken den aktiva kopieringssidan eller den blå källsidan har konfigurerats med en utrullningskonfiguration, används den utrullningskonfiguration som gäller för den aktiva kopieringssidans överordnade sida.
+* **[Systemstandard](/help/sites-administering/msm-sync.md#setting-the-system-default-rollout-configuration):**När utrullningskonfigurationen för den aktiva kopians överordnade sida inte kan fastställas, används systemets standardkonfiguration för utrullning.
 
 I en plan används till exempel referensplatsen We.Retail som källinnehåll. En webbplats skapas utifrån planen. Varje post i följande lista beskriver olika scenarier för användning av utrullningskonfigurationer:
 
