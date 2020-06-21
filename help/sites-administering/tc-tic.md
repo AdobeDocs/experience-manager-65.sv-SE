@@ -10,7 +10,10 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: 200f51ab-f9bf-4989-91af-c3904fc673e5
 translation-type: tm+mt
-source-git-commit: d01b36770ea1cc7f8d780c49bf8c2af70915c553
+source-git-commit: 49b18b780c87501dcb2d9a00930da8eb5e51cff2
+workflow-type: tm+mt
+source-wordcount: '1563'
+ht-degree: 0%
 
 ---
 
@@ -27,21 +30,21 @@ En översikt över funktionerna för innehållsöversättning i AEM finns i [Öv
 
 ## Ansluta till en översättningstjänstleverantör {#connecting-to-a-translation-service-provider}
 
-Skapa en molnkonfiguration som ansluter AEM till din översättningstjänstleverantör. AEM har funktioner för att ansluta till Microsoft Translator som standard. För andra översättningsleverantörer hämtar du kopplingspaketet från [paketresurs](/help/sites-administering/package-manager.md#package-share).
-Följande översättningsleverantörer tillhandahåller en implementering av det nya API:t för översättningsprojekten. Länkar för mer information om integrering och hur du hämtar från paketresurs:
+Skapa en molnkonfiguration som ansluter AEM till din översättningstjänstleverantör. AEM har funktioner för att ansluta till Microsoft Translator som standard.
+Följande översättningsleverantörer tillhandahåller en implementering av det nya API:t för översättningsprojekten. Länkar för mer information om integrationen:
 
 * [Translations.com](https://exchange.adobe.com/experiencecloud.details.90104.globallink-connect-plus-for-aem.html) (Adobe Exchange Premier Partner)
-* [Lera Tablet Technologies](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/clay-tablet-translation-connector-for-aem.html) (not on PackageShare, contact vendor directly)
-* [Lionbridge](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/lionbridge-for-adobe-experience-manager.html)
-* [Molnord](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/cloudwords-for-adobe-translations-connector.html)
-* [CrossLang NV](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/crosslang-xtm-for-adobe-experience-manager.html)
-* [Lingotek](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/lingotek-for-adobe-experience-manager.html)
+* [Clay Tablet Technologies](https://exchange.adobe.com/experiencecloud.details.90064.clay-tablet-translation-for-experience-manager.html)
+* [Lionbridge](https://exchange.adobe.com/experiencecloud.details.100064.lionbridge-connector-for-experience-manager-63.html)
+* [Memsource](https://exchange.adobe.com/experiencecloud.details.103166.memsource-connector-for-adobe-experience-manager.html)
+* [Molnord](https://exchange.adobe.com/experiencecloud.details.90019.html)
+* [CrossLang NV](https://exchange.adobe.com/experiencecloud.details.90049.crosslang-xtm-for-adobe-experience-manager.html)
+* [Lingotek](https://exchange.adobe.com/experiencecloud.details.90088.lingotek-collaborative-translation-platform.html)
+* [Smartling](https://exchange.adobe.com/experiencecloud.details.90101.smartling-connector-for-adobe-experience-manager.html)
+* [SDL](https://exchange.adobe.com/experiencecloud.details.100110.sdl-translation-management.html)
+* [Systran](https://exchange.adobe.com/experiencecloud.details.90233.systran-for-adobe-experience-manager.html)
+* [Altlang](https://exchange.adobe.com/experiencecloud.details.90222.altlang.html)
 * Microsoft (Microsoft Translator är förinstallerat i AEM)
-* [Smartling](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/smartling-connector-for-adobe-experience-manager.html)
-* [SDL WorldServer](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/sdlworldserver-connector.html)
-* [SDL TMS](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/sdl-tms-translation-connector-for-adobe-experience-manager.html)
-* [Systran](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/systran-for-adobe-experience-manager.html)
-* [Altlang](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/Altlang.html)
 
 >[!NOTE]
 >
@@ -182,7 +185,7 @@ Resursegenskaperna styr hur resurser konfigureras. Mer information om översätt
  </tbody>
 </table>
 
-1. Klicka eller tryck på Verktyg > Åtgärder > Moln > Molntjänster i sidofältet.
+1. Klicka på eller tryck på Verktyg > Åtgärder > Moln > Cloud Service i sidofältet.
 1. I området Översättningsintegrering avgör om några konfigurationer har skapats vilken länk som visas:
 
    * Om inga konfigurationer har skapats klickar du på eller trycker på Konfigurera nu.
@@ -211,7 +214,7 @@ Dessutom, för alla communitykomponenter [för](/help/communities/scf.md) SCF p�
 Koppla en sida till översättningsleverantören som du använder för att översätta sidan och underordnade sidor.
 
 1. På webbplatskonsolen markerar du sidan som du vill konfigurera och klickar eller trycker på Visa egenskaper.
-1. Klicka eller tryck på Redigera och sedan på eller klicka på fliken Molntjänster.
+1. Klicka eller tryck på Redigera och sedan på fliken Cloud Service.
 1. Klicka eller tryck på Add Configuration (Lägg till konfiguration) > Translation Integration (Översättningsintegrering).
 1. Välj den översättningsleverantör som ska användas och klicka eller tryck sedan på Klar.
 
@@ -220,7 +223,7 @@ Koppla en sida till översättningsleverantören som du använder för att över
 Koppla en sida till översättningsintegreringsramverket som definierar hur du vill översätta sidan och underordnade sidor.
 
 1. På webbplatskonsolen markerar du sidan som du vill konfigurera och klickar eller trycker på Visa egenskaper.
-1. Klicka eller tryck på Redigera och sedan på eller klicka på fliken Molntjänster.
+1. Klicka eller tryck på Redigera och sedan på fliken Cloud Service.
 1. Klicka eller tryck på Add Configuration (Lägg till konfiguration) > Translation Integration (Översättningsintegrering).
 1. Markera det översättningsintegreringsramverk som ska användas och klicka eller tryck sedan på Klar.
 
