@@ -10,7 +10,10 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: fe61ee4b-51b6-4a6f-91d8-1c02b29cc1db
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: d14688b17f47a2b1c11833eac10413d58276f6be
+workflow-type: tm+mt
+source-wordcount: '441'
+ht-degree: 2%
 
 ---
 
@@ -19,12 +22,12 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 [Med gruppredigering av sidegenskaper](/help/sites-authoring/editing-page-properties.md#from-the-sites-console-multiple-pages) kan du redigera egenskaperna för flera sidor samtidigt.
 
-På grund av möjligheten att det finns olika värden är sidegenskaperna inte aktiverade för massredigering som standard. De måste vara uttryckligt vitlistade (aktiverade). När du definierar vilka sidegenskaper som ska vara tillgängliga för massredigering måste du ta hänsyn till vissa konsekvenser, till exempel:
+På grund av möjligheten att det finns olika värden är sidegenskaperna inte aktiverade för massredigering som standard. De måste vara uttryckligen tillåtna (aktiverade). När du definierar vilka sidegenskaper som ska vara tillgängliga för massredigering måste du ta hänsyn till vissa konsekvenser, till exempel:
 
 * Vissa fält är vanligtvis unika. till exempel en sidrubrik. Du måste bestämma om det är meningsfullt att aktivera sådana fält för massredigering, när ett värde ska användas.
 * Vissa fält kan ha flera värden - detta kräver en meningsfull representation vid återgivningen.
 
-   Till exempel en kryssruta som anger&quot;Klart för publikation&quot;. Detta kan ha flera värden före gruppredigering (t.ex. ready, in-review, in-progress).
+   Till exempel en kryssruta som anger&quot;Klart för publicering&quot;. Detta kan ha flera värden före gruppredigering (t.ex. ready, in-review, in-progress).
 
 >[!CAUTION]
 >
@@ -61,7 +64,7 @@ Fält är aktiverade i sidkomponenten (*inte* i mallen):
 
 1. Om du använder CRXDE Lite (eller en motsvarande metod) öppnar du sidkomponenten.
 
-   Exempel: `/apps/core/wcm/components/page/v1/page`
+   Till exempel: `/apps/core/wcm/components/page/v1/page`
 
    >[!NOTE]
    >
