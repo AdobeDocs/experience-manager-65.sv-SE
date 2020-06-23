@@ -10,7 +10,7 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: dfaa4b3f-f65a-4fe3-87a7-f3bc71015e56
 translation-type: tm+mt
-source-git-commit: df89d5cfd5060d493babb89e92a9a98e851b8879
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '1692'
 ht-degree: 0%
@@ -74,7 +74,7 @@ Om du inte behöver ett arbetsflöde eller en versionshantering för dina resurs
 
 **Så här konfigurerar du universella förinställningar**:
 
-1. Navigera **[!UICONTROL Cloud Services]** till din **[!UICONTROL Dynamic Media Classic]** konfiguration och klicka på **[!UICONTROL Edit]**.
+1. I **[!UICONTROL Cloud Services]** navigerar du till din **[!UICONTROL Dynamic Media Classic]** konfiguration och klickar på **[!UICONTROL Edit.]**
 1. Klicka på **[!UICONTROL Video]** fliken.
 
    >[!NOTE]
@@ -151,8 +151,8 @@ De olika videokodningarna skapas enligt de kodningsförinställningar för Dynam
 >
 >Nya videoprofiler och ändringar av dem måste aktiveras för publicering.
 
-1. I AEM går du till **[!UICONTROL Tools]** och väljer **[!UICONTROL Configuration Console]**. Gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]** i navigeringsträdet i Configuration Console.
-1. Skapa en ny Dynamic Media Classic-videoprofil. På **[!UICONTROL New...]** menyn markerar du **[!UICONTROL Create Page]** och väljer sedan mallen Dynamic Media Classic Video Profile. Ge den nya videoprofilsidan ett namn och klicka på **[!UICONTROL Create]**.
+1. I AEM går du till **[!UICONTROL Tools]** och väljer sedan **[!UICONTROL Configuration Console.]** Navigera i konfigurationskonsolen till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]** i navigeringsträdet.
+1. Skapa en ny Dynamic Media Classic-videoprofil. På **[!UICONTROL New...]** menyn markerar du **[!UICONTROL Create Page]** och väljer sedan mallen Dynamic Media Classic Video Profile. Ge den nya videoprofilsidan ett namn och klicka på **[!UICONTROL Create.]**
 
    ![chlimage_1-133](assets/chlimage_1-133.png)
 
