@@ -8,10 +8,10 @@ content-type: reference
 topic-tags: managing-assets
 discoiquuid: e7b95732-a571-48e8-afad-612059cdbde7
 translation-type: tm+mt
-source-git-commit: df89d5cfd5060d493babb89e92a9a98e851b8879
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '2742'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -87,7 +87,7 @@ Att lägga till en Dynamic Media Classic-komponent (Scene7) på en sida är dets
 
 1. I AEM öppnar du den sida där du vill lägga till komponenten Dynamic Media Classic (Scene7).
 
-1. Om det inte finns några tillgängliga Dynamic Media Classic-komponenter klickar du på **[!UICONTROL Design]** läge, trycker på en komponent med en blå kant, trycker på **[!UICONTROL Parent]** -ikonen och sedan på **[!UICONTROL Configuration]** -ikonen. I **[!UICONTROL Parsys (Design)]** markerar du alla Dynamic Media Classic-komponenter som du vill göra dem tillgängliga och klickar på **[!UICONTROL OK]**.
+1. Om det inte finns några tillgängliga Dynamic Media Classic-komponenter klickar du på **[!UICONTROL Design]** läge, trycker på en komponent med en blå kant, trycker på **[!UICONTROL Parent]** -ikonen och sedan på **[!UICONTROL Configuration]** -ikonen. I **[!UICONTROL Parsys (Design)]** markerar du alla Dynamic Media Classic-komponenter och klickar på **[!UICONTROL OK.]**
 
    ![chlimage_1-224](assets/chlimage_1-224.png)
 
@@ -210,7 +210,7 @@ Tryck **[!UICONTROL Edit]** för att konfigurera komponenten. Du kan konfigurera
 
 #### Ändra text dynamiskt {#changing-text-dynamically}
 
-Om du vill ändra texten dynamiskt anger du ny text i fälten och klickar på **[!UICONTROL OK]**. I det här exemplet **[!UICONTROL Price]** är nu 50 dollar och frakten 99 cent.
+Om du vill ändra texten dynamiskt anger du ny text i fälten och klickar på **[!UICONTROL OK.]** I det här exemplet **[!UICONTROL Price]** är nu $50 och frakten är 99 cent.
 
 ![chlimage_1-234](assets/chlimage_1-234.png)
 
@@ -220,7 +220,7 @@ Texten i bilden ändras. Du kan återställa texten till det ursprungliga värde
 
 #### Ändra text så att värdet för en klientkontext återspeglas {#changing-text-to-reflect-the-value-of-a-client-context-value}
 
-Om du vill länka ett fält till ett klientkontextvärde trycker du **[!UICONTROL Select]** för att öppna klientsnabbmenyn, markerar klientkontexten och trycker på **[!UICONTROL OK]**. I det här exemplet ändras namnet baserat på att namnet länkas till det formaterade namnet i profilen.
+Om du vill länka ett fält till ett klientkontextvärde trycker du på **[!UICONTROL Select]** för att öppna klientsnabbmenyn, markerar klientkontexten och trycker på **[!UICONTROL OK.]** I det här exemplet ändras namnet baserat på att namnet länkas till det formaterade namnet i profilen.
 
 ![chlimage_1-236](assets/chlimage_1-236.png)
 
@@ -230,12 +230,12 @@ Texten återspeglar namnet på den inloggade användaren. Du kan återställa te
 
 #### Göra Dynamic Media Classic Image Template till en länk {#making-the-scene-image-template-a-link}
 
-1. Tryck på på sidan med **[!UICONTROL Image Template]** komponenten Dynamic Media Classic **[!UICONTROL Edit]**.
+1. Tryck på på den sida som innehåller **[!UICONTROL Image Template]** komponenten Dynamic Media Classic **[!UICONTROL Edit.]**
 1. I **[!UICONTROL URL]** fältet anger du den URL som användarna ska gå till när användaren trycker på bilden. I **[!UICONTROL Open in]** fältet väljer du om du vill att målet ska öppnas (ett nytt fönster eller samma fönster).
 
    ![chlimage_1-238](assets/chlimage_1-238.png)
 
-1. Tryck på **[!UICONTROL OK]**.
+1. Tryck på **[!UICONTROL OK.]**
 
 ### Videokomponent {#video-component}
 
@@ -341,7 +341,7 @@ Som standard söker AEM igenom den markerade mappen och alla undermappar.
 
 
 
-**[!UICONTROL Publish Status]** - Du kan filtrera efter resurser baserat på publiceringsstatus: **[!UICONTROL Unpublished]** eller **[!UICONTROL Published]**. Om du inte väljer något **[!UICONTROL Publish Status]** söker AEM som standard igenom alla publiceringsstatusar.
+**[!UICONTROL Publish Status]** - Du kan filtrera efter resurser baserat på publiceringsstatus: **[!UICONTROL Unpublished]** eller **[!UICONTROL Published.]** Om du inte väljer något **[!UICONTROL Publish Status]** söker AEM som standard igenom alla publiceringsstatusar.
 
 ![chlimage_1-247](assets/chlimage_1-247.png)
 
