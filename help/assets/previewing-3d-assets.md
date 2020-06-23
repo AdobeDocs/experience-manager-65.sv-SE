@@ -4,7 +4,7 @@ description: Lär dig hur du förhandsgranskar 3D-resurser
 contentOwner: Rick Brough
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1cabc87dc58a4dbcac64a2797a3b1e0cca995d63
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '558'
 ht-degree: 4%
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 # Förhandsgranska 3D-resurser i AEM{#previewing-3d-assets-aem}
 
-Adobe Experience Manager har stöd för överföring, leverans och interaktiv förhandsgranskning av 3D-resurser som en del av utvecklingsprocessen.
+Adobe Experience Manager stöder överföring, leverans och interaktiv förhandsgranskning av 3D-resurser som en del av utvecklingsprocessen.
 
 Det interaktiva 3D-visningsprogrammet finns på sidan med resursinformation i AEM. Visningsprogrammet innehåller bland annat en samling interaktiva kamerakontroller som du kan använda för att rotera, zooma och panorera 3D-resursen.
 
@@ -52,7 +52,7 @@ Dessutom är funktioner i klientdatorn - t.ex. en arbetsstation, bärbar dator e
 
 1. Kontrollera att du har överfört 3D-resurser till AEM.
 See [Supported formats for 3D preview](#supported-3d-previewing-assets) and [Uploading assets](/help/assets/managing-assets-touch-ui.md#uploading-assets).
-1. Tryck på AEM på **[!UICONTROL Navigation]** sidan **[!UICONTROL Assets > Files]**.
+1. Från AEM, på **[!UICONTROL Navigation]** sidan, tryck **[!UICONTROL Assets > Files.]**
 
    ![Navigeringssida](/help/assets/assets-dm/navigation-assets.png)
 
@@ -81,4 +81,4 @@ See [Supported formats for 3D preview](#supported-3d-previewing-assets) and [Upl
    * **Återställ**- I närheten av det nedre högra hörnet av sidan trycker du på ikonen Återställ för att återställa vymålpunkten till mitten av 3D-resursen. Återställ flyttar också kameran närmare eller längre bort för att visa resursen i dess helhet och med en rimlig visningsstorlek.
    * **Helskärmsläge**- Tryck på ikonen Helskärm i det nedre högra hörnet av sidan för att öppna helskärmsläget.
 
-1. When you are finished, near the upper-right corner of the page, tap **[!UICONTROL Close]**.
+1. When you are finished, near the upper-right corner of the page, tap **[!UICONTROL Close.]**
