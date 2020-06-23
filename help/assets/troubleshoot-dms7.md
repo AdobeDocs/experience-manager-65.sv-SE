@@ -1,5 +1,5 @@
 ---
-title: Felsökning av dynamiska media - Scene7-läge
+title: Felsöka Dynamic Media - Scene7-läge
 description: Felsöka Dynamic Media i Scene7 runmode.
 uuid: 77e04ccf-33dc-4d2f-8950-318d4b008f74
 contentOwner: Rick Brough
@@ -9,12 +9,15 @@ content-type: reference
 discoiquuid: 0d48c031-d3ee-4143-b739-a79ba28fd63a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+workflow-type: tm+mt
+source-wordcount: '1280'
+ht-degree: 0%
 
 ---
 
 
-# Felsökning av dynamiska media - Scene7-läge{#troubleshooting-dynamic-media-scene-mode}
+# Felsöka Dynamic Media - Scene7-läge{#troubleshooting-dynamic-media-scene-mode}
 
 I följande dokument beskrivs felsökning för Dynamic Media som kör körningsläget **dynamicmedia_scene7** .
 
@@ -23,12 +26,12 @@ I följande dokument beskrivs felsökning för Dynamic Media som kör körningsl
 Kontrollera att Dynamic Media har konfigurerats korrekt genom att göra följande:
 
 * Kommandot Start innehåller argumentet runmode `-r dynamicmedia_scene7` .
-* Alla kumulativa AEM 6.4-korrigeringspaket (CFP) har installerats först *före* eventuella tillgängliga Dynamic Media Feature Packs.
+* Alla kumulativa AEM 6.4-korrigeringspaket (CFP) har installerats först *före* eventuella Dynamic Media-funktionspaket.
 * Tillvalspaket 18912 är installerat.
 
-   Det här tillvalspaketet är till för FTP-stöd eller om du migrerar resurser till Dynamic Media från Dynamic Media Classic (Scene7).
+   Det här valfria funktionspaketet är till för FTP-stöd eller om du migrerar resurser till Dynamic Media från Dynamic Media Classic (Scene7).
 
-* Navigera till användargränssnittet för molntjänster och bekräfta att det tilldelade kontot visas under **[!UICONTROL Tillgängliga konfigurationer]**.
+* Navigera till användargränssnittet för Cloud Service och bekräfta att det tilldelade kontot visas under **[!UICONTROL Available Configurations.]**
 * Kontrollera att `Dynamic Media Asset Activation (scene7)` replikeringsagenten är aktiverad.
 
    Den här replikeringsagenten finns under Agenter på författare.
@@ -45,7 +48,7 @@ Följande resursegenskaper kan granskas i CRXDE Lite för att bekräfta den lyck
 |---|---|---|
 | `<object_node>/jcr:content/metadata/dam:scene7ID` | **`a|364266`** | En allmän indikator på att noden är länkad till Dynamic Media. |
 | `<object_node>/jcr:content/metadata/dam:scene7FileStatus` | **PublishComplete** eller feltext | Status för överföring av resurs till Dynamic Media. |
-| `<object_node>/jcr:content/metadata/dam:scene7File` | **myCompany/myAssetID** | Måste fyllas i för att URL:er ska kunna genereras till en fjärrresurs av Dynamic Media. |
+| `<object_node>/jcr:content/metadata/dam:scene7File` | **myCompany/myAssetID** | Måste fyllas i för att URL:er ska kunna genereras till Dynamic Medias fjärrresurser. |
 | `<object_node>/jcr:content/dam:lastSyncStatus` | **lyckades** eller **misslyckades:`<error text>`** | Synkroniseringsstatus för uppsättningar (snurra uppsättningar, bilduppsättningar o.s.v.), bildförinställningar, visningsförinställningar, uppdateringar av bildscheman för en resurs eller bilder som har redigerats. |
 
 ### Synkroniseringsloggning {#synchronization-logging}
@@ -66,7 +69,7 @@ När du ersätter en befintlig Dynamic Media-resurs (samma namn och plats) kan d
 
 * Om båda behålls skapas en ny resurs med ett unikt namn för den publicerade resursens URL. Exempel: `image.jpg` är den ursprungliga resursen och `image1.jpg` är den nyligen överförda resursen.
 
-* Det går inte att skapa en version i Dynamic Media - Scene7-läge. Den nya versionen ersätter den befintliga mediefilen som levereras.
+* Det går inte att skapa en version i Dynamic Media - leverans i Scene7-läge. Den nya versionen ersätter den befintliga mediefilen som levereras.
 
 ## Bilder och uppsättningar {#images-and-sets}
 
@@ -157,7 +160,7 @@ Om du har problem med video kan du läsa följande felsökningsguide.
      <li>Tilldela en videoprofil till mappen.</li>
      <li>Redigera videoprofilen så att den innehåller fler än en kodningsförinställning.</li>
      <li>Vänta tills videon har bearbetats klart.</li>
-     <li>Kontrollera att arbetsflödet Dynamic Media Encode Video inte körs när du läser in videon igen.<br /> </li>
+     <li>Kontrollera att arbetsflödet för videokodning i Dynamic Media inte körs när du läser in videon igen.<br /> </li>
      <li>Ladda upp videon igen.</li>
     </ol> </td>
   </tr>
@@ -166,7 +169,7 @@ Om du har problem med video kan du läsa följande felsökningsguide.
    <td>
     <ul>
      <li>Kontrollera att körningsläget är <code>dynamicmedia_scene7</code>.</li>
-     <li>Kontrollera om molntjänsten Dynamic Media är konfigurerad.</li>
+     <li>Kontrollera om molntjänsten i Dynamic Media har konfigurerats.</li>
      <li>Kontrollera om en videoprofil är kopplad till mappen för överföring.</li>
     </ul> </td>
    <td>
@@ -215,7 +218,7 @@ Om du har problem med visningsprogram kan du läsa följande felsökningsguide.
   <tr>
    <td>Visningsförinställningar publiceras inte</td>
    <td><p>Gå till diagnostiksidan för provhanteraren: <code>https://localhost:4502/libs/dam/gui/content/s7dam/samplemanager/samplemanager.html</code></p> <p>Lägg märke till beräknade värden. När du arbetar korrekt bör du se:</p> <p><code>_DMSAMPLE status: 0 unsyced assets - activation not necessary
-       _OOTB status: 0 unsyced assets - 0 unactivated assets</code></p> <p><strong>Obs</strong>: Det kan ta ca 10 minuter efter konfigurationen av inställningarna för Dynamic Media-molnet för de visningsprogramresurser som ska synkroniseras.</p> <p>Om det finns oaktiverade resurser kvar klickar du på någon av knapparna <strong>Visa alla oaktiverade resurser</strong> för att visa information.</p> </td>
+       _OOTB status: 0 unsyced assets - 0 unactivated assets</code></p> <p><strong>Obs</strong>: Det kan ta ca 10 minuter efter konfigurationen av molninställningarna för Dynamic Media för visningsprogramresurserna som ska synkroniseras.</p> <p>Om det finns oaktiverade resurser kvar klickar du på någon av knapparna <strong>Visa alla oaktiverade resurser</strong> för att visa information.</p> </td>
    <td>
     <ol>
      <li>Navigera till förinställningslistan för visningsprogrammet i administratörsverktygen: <code>https://localhost:4502/libs/dam/gui/content/s7dam/samplemanager/samplemanager.html</code></li>
@@ -227,7 +230,7 @@ Om du har problem med visningsprogram kan du läsa följande felsökningsguide.
    <td>Bilder med visningsförinställningar returnerar 404 från förhandsgranskningen i resursinformationen eller kopierar URL/inbäddningskod</td>
    <td><p>Gör följande i CRXDE Lite:</p>
     <ol>
-     <li>Navigera till <code>&lt;sync-folder&gt;/_CSS/_OOTB</code> en mapp i Synkroniseringsmappen för dynamiska media (till exempel <code>/content/dam/_CSS/_OOTB</code>),</li>
+     <li>Navigera till <code>&lt;sync-folder&gt;/_CSS/_OOTB</code> en mapp i synkroniseringsmappen för Dynamic Media (till exempel <code>/content/dam/_CSS/_OOTB</code>),</li>
      <li>Hitta metadatanoden för den problematiska resursen (till exempel <code>&lt;sync-folder&gt;/_CSS/_OOTB/CarouselDotsLeftButton_dark_sprite.png/jcr:content/metadata/</code>).</li>
      <li>Kontrollera om det finns <code>dam:scene7*</code> egenskaper. Om resursen synkroniserades och publicerades ser du att uppsättningen är <code>dam:scene7FileStatus</code> till <strong>PublishComplete</strong>.</li>
      <li>Försök att begära teckningen direkt från Dynamic Media genom att sammanfoga värdena för följande egenskaper och stränglitteraler
@@ -250,7 +253,7 @@ Om du har problem med visningsprogram kan du läsa följande felsökningsguide.
        <li>Sök efter visningsprogrampaket i listan (börjar med <code>cq-dam-scene7-viewers-content</code>)</li>
        <li>Klicka på <strong>Installera</strong>om.</li>
       </ol> </li>
-     <li>Gå till sidan Dynamisk mediekonfiguration under Cloud Services och öppna sedan konfigurationsdialogrutan för din Dynamic Media - S7-konfiguration.
+     <li>Under Cloud Service navigerar du till konfigurationssidan för Dynamic Media och öppnar sedan konfigurationsdialogrutan för Dynamic Media - S7-konfigurationen.
       <ul>
        <li>Klicka på <strong>Spara</strong>om du inte vill göra några ändringar. Detta utlöser logiken igen för att skapa och synkronisera exempelresurserna, CSS för visningsförinställningar och teckningar.<br />  </li>
       </ul> </li>
