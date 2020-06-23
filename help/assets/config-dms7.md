@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: df89d5cfd5060d493babb89e92a9a98e851b8879
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '5450'
 ht-degree: 6%
@@ -79,11 +79,11 @@ Mer information finns i [Installera funktionspaket 18912 för migrering](/help/a
 
 **Skapa en Dynamic Media-konfiguration**
 
-1. I AEM trycker du på AEM-logotypen för att komma åt den globala navigeringskonsolen, trycker eller klickar på verktygsikonen och sedan på **[!UICONTROL Cloud Services > Dynamic Media Configuration]**.
-1. På sidan Läsare för Dynamic Media-konfiguration trycker du i den vänstra rutan på **[!UICONTROL global]** (tryck inte på och välj inte mappikonen till vänster om **[!UICONTROL global]**) och sedan trycker du på **[!UICONTROL Create]**.
+1. I AEM trycker du på AEM-logotypen för att komma åt den globala navigeringskonsolen, trycker eller klickar på verktygsikonen, och sedan trycker du på **[!UICONTROL Cloud Services > Dynamic Media Configuration.]**
+1. På sidan Läsare för Dynamic Media-konfiguration trycker du i den vänstra rutan på **[!UICONTROL global]** (tryck inte på och välj inte mappikonen till vänster om **[!UICONTROL global]**) och sedan trycker du på **[!UICONTROL Create.]**
 1. På sidan Skapa Dynamic Media-konfiguration anger du en rubrik, e-postadress för Dynamic Media-kontot, lösenord och markerar sedan din region. Dessa tillhandahålls av Adobe i e-postmeddelandet om etablering. Kontakta supporten om du inte fått detta.
 
-   Klicka på **[!UICONTROL Connect to Dynamic Media]**.
+   Klicka på **[!UICONTROL Connect to Dynamic Media.]**
 
    >[!NOTE]
    >
@@ -106,7 +106,7 @@ Om du inte har ett särskilt arrangemang för att använda ditt företags server
    * **[!UICONTROL Dynamic Media sync mode]**
       * **[!UICONTROL Enabled by default]** - Konfigurationen används som standard på alla mappar såvida du inte markerar en mapp som är exkluderad. <!-- you can then deselect the folders that you do not want the configuration applied to.-->
       * **[!UICONTROL Disabled by default]** - Konfigurationen tillämpas inte på någon mapp förrän du uttryckligen markerar en markerad mapp för synkronisering med Dynamic Media.
-Markera en markerad mapp för synkronisering med Dynamic Media genom att markera en resursmapp och sedan klicka på **[!UICONTROL Properties]** i verktygsfältet. Välj bland följande tre alternativ i **[!UICONTROL Details]** listrutan på **[!UICONTROL Dynamic Media sync mode]** fliken. När du är klar trycker du **[!UICONTROL Save]**. *Kom ihåg: Dessa tre alternativ är inte tillgängliga om du valde **Synkronisera allt innehåll**tidigare.*
+Om du vill markera en markerad mapp för synkronisering med Dynamic Media markerar du en resursmapp och klickar sedan på **[!UICONTROL Properties.]** På **[!UICONTROL Details]** -fliken i **[!UICONTROL Dynamic Media sync mode]** listrutan på följande tre alternativ. När du är klar trycker du på **[!UICONTROL Save.]** *Kom ihåg: Dessa tre alternativ är inte tillgängliga om du valde **Synkronisera allt innehåll**tidigare.*
          * **[!UICONTROL Inherited]** - Det finns inget explicit synkroniseringsvärde i mappen; I stället ärver mappen synkroniseringsvärdet från någon av dess överordnade mappar eller standardläget i molnkonfigurationen. Detaljerad status för ärvda program genom ett verktygstips.
          * **[!UICONTROL Enable for sub-folders]** - Inkludera allt i det här underträdet för synkronisering med Dynamic Media. De mappspecifika inställningarna åsidosätter standardläget i molnkonfigurationen.
          * **[!UICONTROL Disabled for sub-folders]** - Uteslut allt i det här underträdet från synkronisering till Dynamic Media.
@@ -117,16 +117,16 @@ Markera en markerad mapp för synkronisering med Dynamic Media genom att markera
    >
    >När en mediefil har aktiverats publiceras uppdateringar direkt till S7 Delivery.
 
-1. Tryck på **[!UICONTROL Save]**.
+1. Tryck på **[!UICONTROL Save.]**
 1. Om du vill förhandsgranska Dynamic Media-innehåll på ett säkert sätt innan det publiceras måste du&quot;tillåta&quot; AEM-författarinstansen för att ansluta till Dynamic Media:
 
    * Logga in på ditt Dynamic Media Classic-konto: [https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html). Dina autentiseringsuppgifter och din inloggning tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
-   * Klicka på i navigeringsfältet uppe till höger på sidan **[!UICONTROL Setup > Application Setup > Publish Setup > Image Server]**.
+   * Klicka på i navigeringsfältet uppe till höger på sidan **[!UICONTROL Setup > Application Setup > Publish Setup > Image Server.]**
 
-   * Välj **[!UICONTROL Test Image Serving]** i listrutan Publiceringskontext på sidan Image Server Publish Context.
-   * Tryck på **[!UICONTROL Add]** Klientadressfiltret.
+   * På sidan Image Server Publish (Publicera kontext) väljer du **[!UICONTROL Test Image Serving.]**
+   * Tryck på för klientadressfiltret **[!UICONTROL Add.]**
    * Markera kryssrutan för att aktivera (aktivera) adressen och ange sedan IP-adressen för instansen AEM Author (inte Dispatcher IP).
-   * Klicka på **[!UICONTROL Save]**.
+   * Klicka på **[!UICONTROL Save.]**
 
 Du är nu klar med den grundläggande konfigurationen; är du redo att använda Dynamic Media - Scene7-läge.
 
@@ -161,7 +161,7 @@ Installations- och konfigureringsuppgifter omfattar följande:
 
 Publiceringsinställningarna avgör hur resurser levereras som standard från Dynamic Media. Om ingen inställning anges levererar Dynamic Media en resurs enligt standardinställningarna som definierats i Publiceringsinställningar. En begäran om att leverera en bild som inte innehåller ett upplösningsattribut ger till exempel en bild med inställningen för standardobjektupplösning.
 
-Så här konfigurerar du publiceringsinställningar: i Dynamic Media Classic klickar du på **[!UICONTROL Setup > Application Setup > Publish Setup > Image Server]**.
+Så här konfigurerar du publiceringsinställningar: i Dynamic Media Classic klickar du på **[!UICONTROL Setup > Application Setup > Publish Setup > Image Server.]**
 
 Bildserverskärmen anger standardinställningar för att leverera bilder. I gränssnittsskärmen finns en beskrivning av varje inställning.
 
@@ -175,7 +175,7 @@ Bildserverskärmen anger standardinställningar för att leverera bilder. I grä
 
 #### Konfigurera allmänna inställningar för programmet {#configuring-application-general-settings}
 
-Om du vill öppna sidan Allmänna inställningar för programmet klickar du på i det globala navigeringsfältet i Dynamic Media Classic **[!UICONTROL Setup > Application Setup > General Settings]**.
+Om du vill öppna sidan Allmänna inställningar för programmet klickar du i det globala navigeringsfältet i Dynamic Media Classic **[!UICONTROL Setup > Application Setup > General Settings.]**
 
 **Servrar - **Vid kontoetablering tillhandahåller Dynamic Media automatiskt de tilldelade servrarna för ditt företag. De här servrarna används för att skapa URL-strängar för din webbplats och dina program. Dessa URL-anrop är specifika för ditt konto. Ändra inte något av servernamnen såvida inte AEM-stödet uttryckligen har instruerat att göra det.
 
@@ -203,8 +203,8 @@ Med dynamisk mediefärghantering kan du färgkorrigera resurser. Med färgkorrig
 
 Så här konfigurerar du standardfärgegenskaperna så att färgkorrigering aktiveras när du begär bilder:
 
-1. [Logga in i Dynamic Media Classic](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) med de autentiseringsuppgifter som angavs under etableringen. Navigera till **[!UICONTROL Setup > Application Setup]**.
-1. Expandera området **[!UICONTROL Publish Setup]** och markera **[!UICONTROL Image Server]**. Ange **[!UICONTROL Publish Context]** som **[!UICONTROL Image Serving]** när du anger standardvärden för publiceringsinstanser.
+1. [Logga in i Dynamic Media Classic](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) med de autentiseringsuppgifter som angavs under etableringen. Navigera till **[!UICONTROL Setup > Application Setup.]**
+1. Expandera **[!UICONTROL Publish Setup]** området och välj **[!UICONTROL Image Server.]** Ange **[!UICONTROL Publish Context]** till **[!UICONTROL Image Serving]** när du anger standardvärden för publiceringsinstanser.
 1. Bläddra till den egenskap som du behöver ändra, till exempel en egenskap i **[!UICONTROL Color Management Attributes]** området.
 
    Du kan ange följande egenskaper för färgkorrigering:
@@ -212,9 +212,9 @@ Så här konfigurerar du standardfärgegenskaperna så att färgkorrigering akti
    * **[!UICONTROL CMYK Default Color Space]** - Namn på CMYK-standardfärgprofil
    * **[!UICONTROL Gray-Scale Default Color Space]** - Namn på standardfärgprofilen för gråskala
    * **[!UICONTROL RGB Default Color Space]** - Namn på standardfärgprofilen för RGB
-   * **[!UICONTROL Color Conversion Rendering Intent]** - Anger återgivningsmetod. Godtagbara värden är: **[!UICONTROL perceptual]**, **[!UICONTROL relative colometric]**, **[!UICONTROL saturation]**, **[!UICONTROL absolute colometric]**. Adobe rekommenderar **[!UICONTROL relative]]**som standard.
+   * **[!UICONTROL Color Conversion Rendering Intent]** - Anger återgivningsmetod. Godtagbara värden är: **[!UICONTROL perceptual]**, **[!UICONTROL relative colometric]**, **[!UICONTROL saturation]**, **[!UICONTROL absolute colometric.]** Adobe rekommenderar **[!UICONTROL relative]]**som standard.
 
-1. Tryck på **[!UICONTROL Save]**.
+1. Tryck på **[!UICONTROL Save.]**
 
 Du kan till exempel ställa in **[!UICONTROL RGB Default Color Space]** på *sRGB* och **[!UICONTROL CMYK Default Color Space]** på *WebCoated*.
 
@@ -239,7 +239,7 @@ Se [Överföra resurser](/help/assets/managing-assets-touch-ui.md#uploading-asse
 
 **Så här konfigurerar du bearbetning av resurser**
 
-1. In AEM, click the AEM logo to access the global navigation console, then click **[!UICONTROL Tools > General > CRXDE Lite]**.
+1. In AEM, click the AEM logo to access the global navigation console, then click **[!UICONTROL Tools > General > CRXDE Lite.]**
 1. Navigera till följande i den vänstra listen:
 
    `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`
@@ -249,24 +249,24 @@ Se [Överföra resurser](/help/assets/managing-assets-touch-ui.md#uploading-asse
 1. Välj en mime-typ i mappen mimeTypes.
 1. Till höger på CRXDE Lite-sidan i den nedre delen:
 
-   * dubbelklicka på **[!UICONTROL enabled]** fältet. Som standard är alla resursens MIME-typer aktiverade (inställda på **[!UICONTROL true]**), vilket innebär att resurserna synkroniseras till Dynamic Media för bearbetning. Om du vill utesluta den här resursens MIME-typ från bearbetningen ändrar du den här inställningen till **[!UICONTROL false]**.
+   * dubbelklicka på **[!UICONTROL enabled]** fältet. Som standard är alla resursens MIME-typer aktiverade (inställda på **[!UICONTROL true]**), vilket innebär att resurserna synkroniseras till Dynamic Media för bearbetning. Om du vill utesluta den här resursens MIME-typ från bearbetningen ändrar du den här inställningen till **[!UICONTROL false.]**
 
    * dubbelklicka **[!UICONTROL jobParam]** för att öppna det tillhörande textfältet. Se [Mime-typer](/help/assets/assets-formats.md#supported-mime-types) som stöds för en lista över tillåtna värden för processparametrar som du kan använda för en viss MIME-typ.
 
 1. Gör något av följande:
 
    * Upprepa steg 3-4 om du vill redigera ytterligare MIME-typer.
-   * Klicka på på menyraden på sidan CRXDE Lite **[!UICONTROL Save All]**.
+   * På menyraden på sidan CRXDE Lite klickar du på **[!UICONTROL Save All.]**
 
 1. Tryck för **[!UICONTROL CRXDE Lite]** att gå tillbaka till AEM i det övre vänstra hörnet på sidan.
 
 #### Lägga till anpassade MIME-typer för format som inte stöds {#adding-custom-mime-types-for-unsupported-formats}
 
-Du kan lägga till anpassade MIME-typer för format som inte stöds i AEM Assets. För att säkerställa att nya noder som du lägger till i CRXDE Lite inte tas bort av AEM måste du se till att du placerar MIME-typen före `image_` och att dess aktiverade värde är inställt på **[!UICONTROL false]**.
+Du kan lägga till anpassade MIME-typer för format som inte stöds i AEM Assets. För att säkerställa att nya noder som du lägger till i CRXDE Lite inte tas bort av AEM måste du se till att du placerar MIME-typen före `image_` och att dess aktiverade värde är inställt på **[!UICONTROL false.]**
 
 **Lägga till anpassade MIME-typer för format som inte stöds**
 
-1. Från AEM, tryck **[!UICONTROL Tools > Operations > Web Console]**.
+1. Från AEM, tryck **[!UICONTROL Tools > Operations > Web Console.]**
 
    ![2019-08-02_16-13-14](assets/2019-08-02_16-13-14.png)
 
@@ -288,12 +288,12 @@ Du kan lägga till anpassade MIME-typer för format som inte stöds i AEM Assets
 
    ![2019-08-02_16-36-36](assets/2019-08-02_16-36-36.png)
 
-1. In the lower-right corner of the page, tap **[!UICONTROL Save]**.
+1. In the lower-right corner of the page, tap **[!UICONTROL Save.]**
 
    Nu kan du stänga webbläsarfliken som har den öppna konfigurationssidan för Adobe Experience Manager Web Console.
 
 1. Gå tillbaka till webbläsarfliken med din öppna AEM-konsol.
-1. Från AEM, tryck **[!UICONTROL Tools > General > CRXDE Lite]**.
+1. Från AEM, tryck **[!UICONTROL Tools > General > CRXDE Lite.]**
 
    ![2019-08-02_16-55-41](assets/2019-08-02_16-55-41.png)
 
@@ -310,7 +310,7 @@ Du kan lägga till anpassade MIME-typer för format som inte stöds i AEM Assets
 
    ![2019-08-02_16-60-30](assets/2019-08-02_16-60-30.png)
 
-1. Near the upper-left corner of the CRXDE Lite page, click **[!UICONTROL Save All]**.
+1. Near the upper-left corner of the CRXDE Lite page, click **[!UICONTROL Save All.]**
 
 #### Skapa gruppuppsättningsförinställningar för automatisk generering av bilduppsättningar och snurpuppsättningar {#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets}
 
@@ -326,7 +326,7 @@ Skapa en standardnamnkonvention som används i alla förinställda gruppuppsätt
 
 När det inte krävs någon standardnamnkonvention för att använda funktionen för gruppuppsättningsförinställningar rekommenderar vi att du använder standardnamnkonventionen för att definiera så många element i namnkonventionen som du vill gruppera i en uppsättning så att du kan effektivisera skapandet av gruppuppsättningar.
 
-Observera att du kan använda **[!UICONTROL View Code]** utan några formulärfält. I den här vyn skapar du namnkonventionens definitioner helt med hjälp av reguljära uttryck.
+Observera också att du kan använda **[!UICONTROL View Code]** utan formulärfält. I den här vyn skapar du namnkonventionens definitioner helt med hjälp av reguljära uttryck.
 
 Det finns två element för definition, Matcha och Basnamn. Med dessa fält kan du definiera alla element i en namnkonvention och identifiera den del av konventionen som används för att namnge den uppsättning i vilken de finns. Ett företags personliga namnkonvention kan använda en eller flera definitionsrader för vart och ett av dessa element. Du kan använda så många rader för din unika definition och gruppera dem i distinkta element, t.ex. för Huvudbild, Färgelement, Alternativa vyer och Färgruteelement.
 
@@ -336,7 +336,7 @@ Det finns två element för definition, Matcha och Basnamn. Med dessa fält kan 
 
    Dina autentiseringsuppgifter och din inloggning tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
 
-1. Tryck på i navigeringsfältet uppe på sidan **[!UICONTROL Setup > Application Setup > Batch Set Presets > Default Naming]**.
+1. Tryck på **[!UICONTROL Setup > Application Setup > Batch Set Presets > Default Naming.]**
 1. Välj **[!UICONTROL View Form]** eller **[!UICONTROL View Code]** för att ange hur du vill visa och ange information om varje element.
 
    Du kan markera kryssrutan om du vill visa värdeuppbyggnaden för det reguljära uttrycket tillsammans med dina formulärval. **[!UICONTROL View Code]** Du kan ange eller ändra dessa värden för att underlätta definitionen av elementen i namnkonventionen, om formulärvyn begränsar dig av någon anledning. Om dina värden inte kan tolkas i formulärvyn blir formulärfälten inaktiva.
@@ -370,7 +370,7 @@ Du kan antingen använda formulärfältsmetoden för att definiera en gruppupps�
 
    Dina autentiseringsuppgifter och din inloggning tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
 
-1. Tryck på i navigeringsfältet uppe på sidan **[!UICONTROL Setup > Application Setup > Batch Set Presets > Batch Set Preset]**.
+1. Tryck på **[!UICONTROL Setup > Application Setup > Batch Set Presets > Batch Set Preset.]**
 
    Observera att **[!UICONTROL View Form]** standardvyn är inställd i det övre högra hörnet på detaljsidan.
 
@@ -379,9 +379,9 @@ Du kan antingen använda formulärfältsmetoden för att definiera en gruppupps�
 1. Välj en förinställningstyp i listrutan Gruppuppsättningstyp.
 1. Gör något av följande:
 
-   * Om du använder en standardnamnkonvention som du tidigare har konfigurerat under **[!UICONTROL Application Setup > Batch Set Presets > Default Naming]** expanderar du **[!UICONTROL Asset Naming Conventions]** och trycker sedan på **[!UICONTROL Default]** i listrutan Namnge fil.
+   * Om du använder en standardnamnkonvention som du tidigare har konfigurerat under **[!UICONTROL Application Setup > Batch Set Presets > Default Naming]** expanderar du **[!UICONTROL Asset Naming Conventions]** och trycker sedan på **[!UICONTROL Default.]**
 
-   * To define a new naming convention as you set up the preset, expand **[!UICONTROL Asset Naming Conventions]**, and then in the File Naming drop-down list, click **[!UICONTROL Custom]**.
+   * To define a new naming convention as you set up the preset, expand **[!UICONTROL Asset Naming Conventions]**, and then in the File Naming drop-down list, click **[!UICONTROL Custom.]**
 
 1. I Sekvensordning definierar du i vilken ordning bilderna ska visas efter att uppsättningen har grupperats tillsammans i Dynamic Media.
 
@@ -391,7 +391,7 @@ Du kan antingen använda formulärfältsmetoden för att definiera en gruppupps�
 
    Om du definierar ett stort antal uppsättningar kanske du föredrar att hålla dessa åtskilda från de mappar som innehåller själva resurserna. Du kan till exempel skapa en mapp för bilduppsättningar och placera genererade uppsättningar här.
 
-1. Tryck på **[!UICONTROL Save]** detaljpanelen.
+1. Tryck på **[!UICONTROL Save.]**
 1. Tryck **[!UICONTROL Active]** bredvid den nya förinställningens namn.
 
    När du aktiverar förinställningen används den för att generera uppsättningen när du överför resurser till Dynamic Media.
@@ -432,9 +432,9 @@ När rotationsuppsättningen har överförts och publicerats aktiverar du namnet
 
 1. Klicka på panelen Förinställningslista för **[!UICONTROL Add]** att aktivera definitionsfälten på panelen Detaljer till höger på skärmen.
 1. Skriv ett namn på förinställningen i fältet Förinställningsnamn på panelen Detaljer.
-1. I listrutan Gruppuppsättningstyp väljer du **[!UICONTROL Asset Set]**.
-1. I listrutan Undertyp väljer du **[!UICONTROL Multi-Axis Spin Set]**.
-1. Expandera **[!UICONTROL Asset Naming Conventions]** och klicka sedan på **[!UICONTROL Custom]** i listrutan Namnge fil.
+1. I listrutan Gruppuppsättningstyp väljer du **[!UICONTROL Asset Set.]**
+1. I listrutan Undertyp väljer du **[!UICONTROL Multi-Axis Spin Set.]**
+1. Expandera **[!UICONTROL Asset Naming Conventions]** och klicka sedan på i listrutan Namnge fil **[!UICONTROL Custom.]**
 1. Använd attributen **[!UICONTROL Match]** och eventuellt **[!UICONTROL Base Name]** för att definiera ett reguljärt uttryck för namngivning av bildresurser som utgör grupperingen.
 
    Det reguljära uttrycket för literal Match kan till exempel se ut så här:
@@ -473,7 +473,7 @@ När rotationsuppsättningen har överförts och publicerats aktiverar du namnet
 
    Om du definierar ett stort antal uppsättningar kanske du föredrar att hålla dessa åtskilda från de mappar som innehåller själva resurserna. Du kan till exempel skapa en mapp för snurruppsättningar där du kan placera genererade uppsättningar här.
 
-1. Klicka på panelen Detaljer **[!UICONTROL Save]**.
+1. Klicka på panelen Detaljer **[!UICONTROL Save.]**
 1. Klicka **[!UICONTROL Active]** bredvid den nya förinställningens namn.
 
    När du aktiverar förinställningen används den för att generera uppsättningen när du överför resurser till Dynamic Media.
@@ -521,7 +521,7 @@ Kön för Bevilja överföring av arbetsflöde används för **[!UICONTROL DAM U
 
    ![chlimage_1](assets/chlimage_1.jpeg)
 
-1. Tryck på **[!UICONTROL Save]**.
+1. Tryck på **[!UICONTROL Save.]**
 
 #### Uppdaterar arbetsflödeskön Granite {#updating-the-granite-workflow-queue}
 
@@ -543,7 +543,7 @@ Beviljad arbetsflödeskö används för icke-tillfälliga arbetsflöden. I Dynam
 
    ![chlimage_1-1](assets/chlimage_1-1.jpeg)
 
-1. Tryck på **[!UICONTROL Save]**.
+1. Tryck på **[!UICONTROL Save.]**
 
 #### Uppdaterar Dynamic Media Classic-överföringsanslutningen {#updating-the-scene-upload-connection}
 
@@ -562,7 +562,7 @@ Inställningen Scene7 Upload Connection synkroniserar AEM-resurser till Dynamic 
 
    ![chlimage_1-2](assets/chlimage_1-2.jpeg)
 
-1. Tryck på **[!UICONTROL Save]**.
+1. Tryck på **[!UICONTROL Save.]**
 
 ### (Valfritt) Filtrera resurser för replikering {#optional-filtering-assets-for-replication}
 
@@ -611,7 +611,7 @@ Om du använder Dynamic Media för bild och/eller video kan du använda de stand
 
 #### Anpassa resursfilter för replikering {#customizing-asset-filters-for-replication}
 
-1. In AEM, tap the AEM logo to access the global navigation console and tap the **[!UICONTROL Tools > General > CRXDE Lite]**.
+1. In AEM, tap the AEM logo to access the global navigation console and tap the **[!UICONTROL Tools > General > CRXDE Lite.]**
 1. Navigera till det vänstra mappträdet för `/etc/replication/agents.author/publish/jcr:content/damRenditionFilters` att granska filtren.
 
    ![chlimage_1-17](assets/chlimage_1-2.png)
