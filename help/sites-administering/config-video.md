@@ -10,7 +10,7 @@ topic-tags: operations
 content-type: reference
 discoiquuid: a1efef3c-0e4b-4a17-bcad-e3cc17adbbf7
 translation-type: tm+mt
-source-git-commit: 071f4a292343f0ad52ca3700c95bf60f03c307cc
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '448'
 ht-degree: 0%
@@ -74,7 +74,7 @@ Så här **konfigurerar du AEM**:
    >
    >Lägg över och redigera hela profilnoden och inte bara den egenskap som behöver ändras. Sådana resurser löses inte via SlingResourceMerger.
 
-4. Om du har ändrat någon av egenskaperna klickar du på **[!UICONTROL Save All]**.
+4. Om du har ändrat någon av egenskaperna klickar du på **[!UICONTROL Save All.]**
 
 >[!NOTE]
 >
