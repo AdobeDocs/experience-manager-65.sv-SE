@@ -3,7 +3,7 @@ title: Hämta digitala resurser från [!DNL Adobe Experience Manager].
 description: Lär dig hur du hämtar resurser från [!DNL Adobe Experience Manager] och aktiverar eller inaktiverar hämtningsfunktionen.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 64c09e454960a40632059a85f0861deed1899b86
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '782'
 ht-degree: 0%
@@ -24,10 +24,10 @@ Det går inte att hämta resurstyperna Bilduppsättningar, Snurra uppsättningar
 **Om du vill hämta resurser**
 
 1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Navigation]** (Compass icon).
-1. Tryck på **[!UICONTROL Assets > Files]** på navigeringssidan.
+1. Tryck på **[!UICONTROL Assets > Files.]**
 1. Navigera till en mapp som innehåller resurser som du vill hämta.
 1. Markera mappen eller välj en eller flera resurser i mappen.
-1. Tryck på i verktygsfältet **[!UICONTROL Download]**.
+1. Tryck på i verktygsfältet **[!UICONTROL Download.]**
 
    ![Tillgängliga alternativ vid hämtning av resurser från Experience Manager Assets](/help/assets/assets/asset-download1.png)
 
@@ -44,7 +44,7 @@ Det går inte att hämta resurstyperna Bilduppsättningar, Snurra uppsättningar
    | **[!UICONTROL Smart Crops]** | Välj det här alternativet om du vill hämta alla smarta beskärningsåtergivningar av den valda resursen från AEM. En ZIP-fil med renderingarna Smart Crop skapas och hämtas till din lokala dator. |
    | **[!UICONTROL Dynamic Rendition(s)]** | Välj det här alternativet om du vill generera en serie alternativa återgivningar i realtid. När du väljer det här alternativet väljer du också de återgivningar som du vill skapa dynamiskt genom att välja i listan [Bildförinställning](image-presets.md) . <br>Du kan dessutom välja storlek och måttenhet, format, färgrymd, upplösning och alla valfria bildmodifierare, t.ex. invertering av bilden. Alternativet är bara tillgängligt om du har [!DNL Dynamic Media] aktiverat. |
 
-1. In the dialog box, tap **[!UICONTROL Download]**.
+1. In the dialog box, tap **[!UICONTROL Download.]**.
 
 ## Aktivera resurshämtningsserver {#enable-asset-download-servlet}
 
