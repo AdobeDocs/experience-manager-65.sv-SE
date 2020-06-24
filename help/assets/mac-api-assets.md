@@ -3,7 +3,7 @@ title: Resurser för HTTP API i [!DNL Adobe Experience Manager].
 description: Skapa, läsa, uppdatera, ta bort, hantera digitala resurser med HTTP API i [!DNL Adobe Experience Manager Assets].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 307a1db2e5bbb72d730c89ba14f5ce02b96c108d
 workflow-type: tm+mt
 source-wordcount: '1563'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Efter [!UICONTROL Off Time]detta är en resurs och dess återgivningar inte till
 
 ## Innehållsfragment {#content-fragments}
 
-Ett [innehållsfragment](/help/assets/content-fragments.md) är en särskild typ av resurs. Den kan användas för att komma åt strukturerade data, t.ex. texter, siffror och datum. Eftersom det finns flera skillnader mellan `standard` resurser (t.ex. bilder eller dokument) gäller vissa ytterligare regler för hantering av innehållsfragment.
+Ett [innehållsfragment](/help/assets/content-fragments/content-fragments.md) är en särskild typ av resurs. Den kan användas för att komma åt strukturerade data, t.ex. texter, siffror och datum. Eftersom det finns flera skillnader mellan `standard` resurser (t.ex. bilder eller dokument) gäller vissa ytterligare regler för hantering av innehållsfragment.
 
 Mer information finns i Stöd för [innehållsfragment i Experience Manager Assets HTTP API](/help/assets/assets-api-content-fragments.md).
 
@@ -67,7 +67,7 @@ I Experience Manager innehåller en resurs följande element:
 * Flera återgivningar, till exempel den ursprungliga återgivningen (som är den ursprungliga överförda resursen), en miniatyrbild och olika andra återgivningar. Ytterligare återgivningar kan vara bilder av olika storlek, olika videokodningar eller extraherade sidor från PDF-filer eller [!DNL Adobe InDesign] -filer.
 * Valfria kommentarer.
 
-Mer information om element i innehållsfragment finns i Stöd för [innehållsfragment i HTTP API](/help/assets/assets-api-content-fragments.md#content-fragments)för Experience Manager Assets.
+Mer information om element i innehållsfragment finns i Stöd för [innehållsfragment i Experience Manager Assets HTTP API](/help/assets/assets-api-content-fragments.md#content-fragments).
 
 I [!DNL Experience Manager] en mapp finns följande komponenter:
 
