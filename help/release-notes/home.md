@@ -2,7 +2,10 @@
 title: Versionsinformation om AEM 6.5
 description: AEM Release Notes innehåller viktig information om den senaste utgåvan av AEM, inklusive vad som är nytt, vilka plattformar som stöds, borttagna och borttagna funktioner samt kända problem.
 translation-type: tm+mt
-source-git-commit: 57bad4e74b2dfd9e389643bfe58ef25564c5c545
+source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+workflow-type: tm+mt
+source-wordcount: '369'
+ht-degree: 16%
 
 ---
 
@@ -21,7 +24,7 @@ AEM Release Notes innehåller viktig information om den senaste utgåvan av AEM,
 
 | Användarhandbok | Beskrivning |
 |--- |---|
-| [Användarhandbok för resurser](/help/assets/home.md) | Skapa, hantera, leverera och optimera digitala resurser. |
+| [Användarhandbok för Assets](/help/assets/home.md) | Skapa, hantera, leverera och optimera digitala resurser. |
 | [Användarhandbok för formulär](/help/forms/home.md) | Den här guiden beskriver hur du skapar, hanterar, publicerar och uppdaterar digitala formulär. |
 | [Användarhandbok för Communities](/help/communities/home.md) | Skapa onlineupplevelser som forum, användargrupper, utbildningsresurser och andra sociala funktioner. |
 | [Administratörshandbok](/help/sites-administering/home.md) | Förstå hur man administrerar AEM |
@@ -32,18 +35,18 @@ AEM Release Notes innehåller viktig information om den senaste utgåvan av AEM,
 | [Utveckla användarhandbok](/help/sites-developing/home.md) | Lär dig hur du bygger upp din AEM-instans. |
 | [Hantera användarhandbok](/help/managing/home.md) | I den här guiden beskrivs hur du hanterar ett AEM-projekt. |
 | [Användarhandbok för mobiler](/help/mobile/home.md) | I den här guiden beskrivs hur du skapar och hanterar innehåll för mobilprogram. |
-| [AEM Livefyre](https://marketing.adobe.com/resources/help/en_US/livefyre/home.html) | Den här guiden visar hur du delar användargenererat innehåll med Livefyre. |
+| [AEM Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/home.html) | Den här guiden visar hur du delar användargenererat innehåll med Livefyre. |
 
 ## Viktiga AEM-resurser
 
 * [AEM-självstudiekurser](https://helpx.adobe.com/experience-manager/kt/index/aem-6-4-videos.html)
-* [Användarhandbok för Dispatcher](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)
+* [Dispatcher Användarhandbok](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)
 * [Användarhandbok för HTML](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)
 * [Användarhandbok för kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
-* [GDPR-beredskap](/help/managing/data-protection-and-privacy.md)
-* [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&mv=other#solutions/experience-manager)
-* [AEM Community Forum](https://forums.adobe.com/community/experience-cloud/marketing-cloud/experience-manager)
+* [GDPR-efterlevnad](/help/managing/data-protection-and-privacy.md)
+* [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#solutions/experience-manager)
+* [AEM-communityforum](https://forums.adobe.com/community/experience-cloud/marketing-cloud/experience-manager)
 
 ## Copyright, licenser och friskrivningsklausuler {#copyright-licenses-and-disclaimers}
 
