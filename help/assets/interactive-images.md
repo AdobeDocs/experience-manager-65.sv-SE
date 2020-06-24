@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: a6f58f6a-015a-4ced-941c-ef1b6d3e1d6f
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5015a55b79d363a8b7364f154921e956a818ce19
+source-git-commit: 2014e4f28c63f6268606d46b5019d654bbe4aa08
 workflow-type: tm+mt
-source-wordcount: '4312'
+source-wordcount: '4301'
 ht-degree: 1%
 
 ---
@@ -108,7 +108,7 @@ När nätverksövervakning är aktiverat i webbläsaren utlöser du snabbvyn på
 
 Nu kan du hitta Quickview Ajax-URL:en i nätverksloggen och kopiera den inspelade URL:en för framtida analys. I de flesta fall när du utlöser snabbvyn skickas flera begäranden till servern. Vanligtvis är Quickview Ajax-URL en en av de första i listan. Den har antingen en komplex frågesträngsdel eller -sökväg och dess MIME-svarstyp är antingen `text/html`, `text/xml`eller `text/javascript`.
 
-Under den här processen är det viktigt att du besöker olika delar av webbplatsen, med olika produktkategorier och typer. Anledningen är att URL:er för snabbvyn kan ha delar som är gemensamma för en viss webbplatskategori, men bara ändras om du besöker ett annat område på webbplatsen.
+Under den här processen är det viktigt att du besöker olika delar av webbplatsen, med olika produktkategorier och typer. Anledningen är att URL:er för snabbvyn kan ha delar som är gemensamma för en viss webbplatskategori, men endast ändras om du besöker ett annat område på webbplatsen.
 
 I det enklaste fallet är den enda variabeldelen i snabbvyns URL produktens SKU. I det här fallet är SKU-värdet den enda datadel som du behöver för att lägga till aktiveringspunkter i banderollbilden.
 
@@ -374,9 +374,9 @@ Integrationen är lika enkel som att ta bort `IMG` taggen och ersätta den med d
 
 Om du vill tillämpa en beskärning på en interaktiv bild för en responsiv miljö kan du inkludera konfigurationsattributet Interactive Image `ZoomView.iscommand` på sökvägen, där `ZoomView` är den komponent som ska anropas och `iscommand` är det beskärningsbildserverkommando som du använder.
 
-Se [Konfigurationsattribut för ZoomView.iscommand](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/r_html5_aem_interactive_image_config_attrib_zoomview_iscommand.html) .
+Se [Konfigurationsattribut för ZoomView.iscommand](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/command-reference-configuration-attributes-interactive-images/r-html5-aem-interactive-image-config-attrib-zoomview-iscommand.html) .
 
-Se [kommandot för att beskära](https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/http_ref/r_crop.html) bilder.
+Se [kommandot för att beskära](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-crop.html) bilder.
 
 Nu kan du integrera den interaktiva bilden med en befintlig Quickview på webbplatsen.
 
