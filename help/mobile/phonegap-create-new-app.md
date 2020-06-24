@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
 discoiquuid: 27605eb7-59b2-42d4-8cc5-02cfa52b4491
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+workflow-type: tm+mt
+source-wordcount: '679'
+ht-degree: 0%
 
 ---
 
@@ -23,19 +26,19 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 AEM Mobile-appar bygger på en plan som definierar en sidstruktur och egenskaper. Du kan konfigurera följande programegenskaper:
 
-* **** Titel: Programtitel.
-* **** Målsökväg: Platsen i databasen där programmet lagras. Låt standardinställningen vara om du vill skapa en sökväg baserat på programnamnet.
+* **Titel:** Programtitel.
+* **Målsökväg:** Platsen i databasen där programmet lagras. Låt standardinställningen vara om du vill skapa en sökväg baserat på programnamnet.
 
-* **** Namn: Standardvärdet är värdet för egenskapen Title med blankstegstecken borttagna. Namnet används i AEM för att referera till programmet, till exempel för databasnoden som representerar programmet.
-* **** Beskrivning: En beskrivning av programmet.
-* **** Server-URL: Den URL som innehåller OTA-innehåll (Over-the-Air) uppdateras i programmet. Standardvärdet är publiceringsserverns URL-adress för instansen som används för att skapa ett program (hämtas från externaliseringstjänsten). Observera att detta måste vara en publiceringsserverinstans i stället för en författare, vilket kräver autentisering.
+* **Namn:** Standardvärdet är värdet för egenskapen Title med blankstegstecken borttagna. Namnet används i AEM för att referera till programmet, till exempel för databasnoden som representerar programmet.
+* **Beskrivning:** En beskrivning av programmet.
+* **Server-URL:** Den URL som innehåller OTA-innehåll (Over-the-Air) uppdateras i programmet. Standardvärdet är publiceringsserverns URL-adress för instansen som används för att skapa ett program (hämtas från externaliseringstjänsten). Observera att detta måste vara en publiceringsserverinstans i stället för en författare, vilket kräver autentisering.
 
-Du kan också tillhandahålla en bildfil som du kan använda som programminiatyr, välja den PhoneGap Build-konfiguration som du vill använda och välja den mobilappsanalyskonfiguration som ska användas. Den här bilden används bara som miniatyrbild för att representera ditt mobilprogram i konsolen för mobilappar i Experience Manager.
+Du kan också tillhandahålla en bildfil som du kan använda som programminiatyr, välja den PhoneGap Build-konfiguration som du vill använda och välja den mobilappsanalyskonfiguration som ska användas. Den här bilden används bara som miniatyrbild för att representera ditt mobilprogram i mobilappskonsolen i Experience Manager.
 
 Det finns ytterligare flikar (och valfria) för att bygga molntjänster och integrera Adobe Mobile Services SDK-pluginen i appen.
 
 * Bygg: Klicka på Hantera konfigurationer och konfigurera bygg.phonegap.com här. I listrutan kan du sedan välja den nya molntjänsten PhoneGap build.
-* Analyser: Klicka på Hantera konfigurationer och konfigurera molntjänsten [Adobe Mobile Services SDK](https://marketing.adobe.com/developer/en_US/get-started/mobile/c-measuring-mobile-applications) . I listrutan kan du sedan välja den nya mobiltjänsten som ska integreras i din mobilapp.
+* Analytics: Klicka på Hantera konfigurationer och konfigurera molntjänsten [Adobe Mobile Services SDK](https://docs.adobe.com/content/help/en/mobile-services/using/home.html) . I listrutan kan du sedan välja den nya mobiltjänsten som ska integreras i din mobilapp.
 
 ## Använda appmallar {#using-app-templates}
 
@@ -73,7 +76,7 @@ Läs mer om andra författarroller i följande resurser:
 * [Importera en befintlig hybridapp](/help/mobile/phonegap-adding-content-to-imported-app.md)
 * [Innehållstjänster](/help/mobile/develop-content-as-a-service.md)
 
-## Additional Resources {#additional-resources}
+## Ytterligare resurser {#additional-resources}
 
 Mer information om roller och ansvar för en administratör och utvecklare finns i resurserna nedan:
 
