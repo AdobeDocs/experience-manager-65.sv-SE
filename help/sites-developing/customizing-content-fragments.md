@@ -1,6 +1,6 @@
 ---
-title: Anpassa och utöka innehållsfragment
-seo-title: Anpassa och utöka innehållsfragment
+title: Anpassa och utöka Content Fragments
+seo-title: Anpassa och utöka Content Fragments
 description: Ett innehållsfragment utökar en standardresurs.
 seo-description: Ett innehållsfragment utökar en standardresurs.
 uuid: f72c3a23-9b0d-4fab-a960-bb1350f01175
@@ -11,32 +11,35 @@ content-type: reference
 discoiquuid: d0770bee-4be5-4a6a-8415-70fdfd75015c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
+source-git-commit: afed13a2f832b91d0df825d1075852cc84443646
+workflow-type: tm+mt
+source-wordcount: '2749'
+ht-degree: 1%
 
 ---
 
 
-# Anpassa och utöka innehållsfragment{#customizing-and-extending-content-fragments}
+# Anpassa och utöka Content Fragments{#customizing-and-extending-content-fragments}
 
 Ett innehållsfragment utökar en standardresurs; se:
 
-* [Skapa och hantera innehållsfragment](/help/assets/content-fragments.md) och [sidredigering med innehållsfragment](/help/sites-authoring/content-fragments.md) för mer information om innehållsfragment.
+* [Skapa och hantera innehållsfragment](/help/assets/content-fragments/content-fragments.md) och [sidredigering med innehållsfragment](/help/sites-authoring/content-fragments.md) för mer information om innehållsfragment.
 
 * [Hantera resurser](/help/assets/managing-assets-touch-ui.md) och [anpassa och utöka resurser](/help/assets/extending-assets.md) för mer information om standardresurser.
 
 ## Arkitektur {#architecture}
 
-De grundläggande [beståndsdelarna](/help/assets/content-fragments.md#constituent-parts-of-a-content-fragment) i ett innehållsfragment är:
+De grundläggande [beståndsdelarna](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) i ett innehållsfragment är:
 
 * Ett *innehållsfragment,*
-* bestående av ett eller flera *innehållselement* och
+* består av ett eller flera *innehållselement*,
 * och som kan ha en eller flera *innehållsvariationer*.
 
 Beroende på fragmenttypen används även modeller eller mallar:
 
 >[!CAUTION]
 >
->[Modeller](/help/assets/content-fragments-models.md) för innehållsfragment rekommenderas nu för att skapa alla dina fragment.
+>[Modeller](/help/assets/content-fragments/content-fragments-models.md) för innehållsfragment rekommenderas nu för att skapa alla dina fragment.
 >
 >Modeller för innehållsfragment används för alla exempel i We.Retail.
 
@@ -62,7 +65,7 @@ Beroende på fragmenttypen används även modeller eller mallar:
 
 ### Integrering med Assets {#integration-with-assets}
 
-CFM (Content Fragment Management) ingår i AEM Assets som:
+Content Fragment Management (CFM) ingår i AEM Assets som:
 
 * Innehållsfragment är resurser.
 * De använder befintliga Assets-funktioner.
@@ -79,7 +82,8 @@ Innehållsfragment med strukturerat innehåll (dvs. baserat på en innehållsfra
    * Elementdata lagras under huvudundernoden:
       `jcr:content/data/master`
 
-   * Variationer lagras under en undernod som har variantens namn:t.ex. `jcr:content/data/myvariation`
+   * Variationer lagras under en undernod som har variantens namn:
+t.ex. `jcr:content/data/myvariation`
 
    * Data för varje element lagras i respektive undernod som en egenskap med elementnamnet:
 Elementets innehåll `text` lagras som egenskap `text` på `jcr:content/data/master`
@@ -110,7 +114,7 @@ Precis som med standardresurser finns ett innehållsavdrag under:
 
 #### Tillgångsbehörigheter {#asset-permissions}
 
-Mer information finns i [Innehållsfragment - Ta bort överväganden](/help/assets/content-fragments-delete.md).
+Mer information finns i [Innehållsfragment - Ta bort överväganden](/help/assets/content-fragments/content-fragments-delete.md).
 
 #### Funktionsintegrering {#feature-integration}
 
@@ -179,7 +183,7 @@ Det finns fortfarande några riktlinjer som du måste följa för att se till at
 
 * Om fragmentet återges för `displayMode` == `singleText` (implicit eller explicit) spelas följande ytterligare egenskaper upp:
 
-   * `paragraphScope` definierar om alla stycken, eller bara ett styckeintervall, ska återges (värden: jämfört `all` med `range`)
+   * `paragraphScope` definierar om alla stycken, eller bara ett styckeintervall, ska återges (värden: `all` jämfört med `range`)
 
    * if `paragraphScope` == `range` definierar egenskapen `paragraphRange` det styckeintervall som ska återges
 
@@ -472,7 +476,7 @@ För att uppnå detta kan du anpassa resursen som representerar API:t till:
 
 `com.adobe.cq.dam.cfm.ContentFragment`
 
-Exempel:
+Till exempel:
 
 ```java
 // first, get the resource
@@ -490,7 +494,7 @@ Om du vill skapa ett nytt innehållsfragment programmatiskt måste du använda:
 
 `com.adobe.cq.dam.cfm.ContentFragmentManager#create`
 
-Exempel:
+Till exempel:
 
 ```java
 Resource templateOrModelRsc = resourceResolver.getResource("...");
