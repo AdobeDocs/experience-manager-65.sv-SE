@@ -3,7 +3,10 @@ title: AEM Fluid Experiences Feature List
 description: Lista med flytande upplevelser
 index: n
 translation-type: tm+mt
-source-git-commit: 378cdba999365083a2f585ad4f4ccd1c7ad7d4ce
+source-git-commit: 307a1db2e5bbb72d730c89ba14f5ce02b96c108d
+workflow-type: tm+mt
+source-wordcount: '350'
+ht-degree: 6%
 
 ---
 
@@ -19,7 +22,7 @@ I följande tabeller definieras funktionerna i AEM Fluid Experiences och länken
 * [Databas](#repository-features)
 * [Åtkomst, API:er och leverans](#access-api-and-delivery-features)
 * [Administratörer och integreringar](#admin-and-integration-features)
-* [Analyser och personalisering](#analytics-and-personalization)
+* [Analytics och personalisering](#analytics-and-personalization)
 
 >[!NOTE]
 >
@@ -45,7 +48,7 @@ I följande tabeller definieras funktionerna i AEM Fluid Experiences och länken
 |  |
 |---|
 | [HTTP-API](/help/assets/mac-api-assets.md) |
-| [Strukturerade innehållsmodeller](/help/assets/content-fragments.md) |
+| [Strukturerade innehållsmodeller](/help/assets/content-fragments/content-fragments.md) |
 | [Innehållstjänster](https://helpx.adobe.com/experience-manager/kt/sites/using/content-services-tutorial-use.html) |
 | [Upplevelsefragment](/help/sites-authoring/experience-fragments.md) |
 | HTTP API för strukturerat innehåll (läs) |
@@ -69,7 +72,7 @@ I följande tabeller definieras funktionerna i AEM Fluid Experiences och länken
 | [Arbetsflöden](/help/sites-administering/workflows-starting.md) |
 | Anslutning (molntjänster) |
 
-## Analyser och personalisering {#analytics-and-personalization}
+## Analytics och personalisering {#analytics-and-personalization}
 
 |  |
 |---|
