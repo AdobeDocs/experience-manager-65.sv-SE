@@ -10,10 +10,10 @@ discoiquuid: cf7823f4-82c2-4e36-9b65-3c58359b8104
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer-presets
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
 workflow-type: tm+mt
-source-wordcount: '4303'
-ht-degree: 15%
+source-wordcount: '4264'
+ht-degree: 14%
 
 ---
 
@@ -27,7 +27,7 @@ Instruktioner om hur du skapar och anpassar egna HTML5-visningsförinställninga
 Path: `<scene7_domain>/s7sdk/<library_version>/docs/jsdocs/index.html`.
 Exempel: 3.5 SDK: [https://s7d1.scene7.com/s7sdk/3.5/docs/jsdoc/index.html](https://s7d1.scene7.com/s7sdk/3.5/docs/jsdoc/index.html)
 
-Se även [Adobe Viewer Reference Guide](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/).
+Se även [Adobe Viewer Reference Guide](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html).
 
 I det här avsnittet beskrivs hur du skapar, redigerar och hanterar visningsprogramförinställningar. Du kan använda en visningsförinställning för en resurs när du vill förhandsgranska den. Se [Använda visningsförinställningar](#applying-a-viewer-preset-to-an-asset).
 
@@ -39,7 +39,7 @@ I det här avsnittet beskrivs hur du skapar, redigerar och hanterar visningsprog
 
 Alla färdiga visningsprogram har stöd för tangentbordstillgänglighet.
 
-Se även [Tangentbordstillgänglighet och -navigering](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/c_keyboard_accessibility.html).
+Se även [Tangentbordstillgänglighet och -navigering](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/c-keyboard-accessibility.html).
 
 ## Managing Viewer Presets {#managing-viewer-presets-1}
 
@@ -55,7 +55,7 @@ Du kan lägga till, redigera, ta bort, publicera, avpublicera och förhandsgrans
 
 Olika webbsidor har olika behov. Ibland kanske du vill ha en webbsida som innehåller en länk som öppnar HTML5 Viewer i ett separat webbläsarfönster. I andra fall kan det vara nödvändigt att bädda in HTML5 Viewer direkt på värdsidan. I det senare fallet kan webbsidan ha en statisk layout. Det kan också vara&quot;responsivt&quot; och visas på olika enheter eller för olika webbläsarfönsterstorlekar. För att tillgodose dessa behov har alla fördefinierade färdiga HTML5-visningsprogram som medföljer Dynamic Media stöd för både statiska webbsidor och responsiva webbsidor.
 
-Mer information om hur du bäddar in responsiva visningsprogram på dina webbsidor finns i [Responsive Image Library](https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/c_about_responsive_static_image_library.html) i API-hjälpen *för* Scene7 Image Serving.
+Mer information om hur du bäddar in responsiva visningsprogram på dina webbsidor finns i [Responsive Image Library](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/responsive-static-image-library/c-about-responsive-static-image-library.html) i API-hjälpen *för* Scene7 Image Serving.
 
 >[!NOTE]
 >
@@ -154,11 +154,11 @@ Administratörer kan lägga till och anpassa följande typer av multimedia när 
 
 I följande tabell visas alla fördefinierade, färdiga visningsförinställningar som medföljer Dynamic Media.
 
-Se även [Exempel på referensbibliotek för visningsprogram](https://marketing.adobe.com/resources/help/en_US/s7/vlist/vlist.html) och [live-demonstrationer](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/live-demos.html).
+Se även <!-- KEEP THIS REFERENCE FOR NOW [Viewers Reference Library Examples](https://marketing.adobe.com/resources/help/en_US/s7/vlist/vlist.html) --> [Live Demos](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/live-demos.html).
 
 Information om vilka webbläsare och operativsystemversioner som stöds för visningsprogram finns i Viewer Release Notes.
 
-Se&quot;Versionsinformation för visningsprogram&quot; i innehållsförteckningen i referenshandboken för [visningsprogram](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/).
+Se&quot;Versionsinformation för visningsprogram&quot; i innehållsförteckningen i referenshandboken för [visningsprogram](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html).
 
 >[!NOTE]
 >
@@ -438,13 +438,13 @@ Se [Specialöverväganden när du skapar en förinställning](#special-considera
 
       Med den visuella redigeraren kan du se vilken effekt en viss egenskap har på ett format. Du behöver bara ställa in eller justera en egenskap för att omedelbart se vilken effekt den har på visningsprogrammet med exemplet till vänster om redigeraren.
 
-      CSS-formategenskaperna för varje typ av visningsförinställningar beskrivs i hjälpavsnittet Anpassa *`<viewer name>`* visningsprogram i [referenshandboken](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/)för visningsprogram. Om du till exempel skapar en visningsförinställning av den här typen `Mixed_Media`kan du läsa [Anpassa blandad medievisare](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/c_html5_mixedmedia_viewer_customizingviewer.html) för en lista och en beskrivning av varje egenskap.
+      CSS-formategenskaperna för varje typ av visningsförinställningar beskrivs i hjälpavsnittet Anpassa *`<viewer name>`* visningsprogram i [referenshandboken](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html)för visningsprogram. Om du till exempel skapar en visningsförinställning av den här typen `Mixed_Media`kan du läsa [Anpassa blandad medievisare](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/mixed-media/customing-mixed-media/c-html5-mixedmedia-viewer-customizingviewer.html) för en lista och en beskrivning av varje egenskap.
 
    * Om du har definierat formatinställningar i en separat CSS-fil kan du överföra CSS-filen till AEM Assets. Tap **[!UICONTROL Import CSS]** below the **[!UICONTROL Selected Type]** pull-down menu (you may need to scroll the visual editor up to see it) to find the uploaded CSS file and associate it with the viewer preset.
 
       När du importerar en CSS-fil kontrollerar den visuella redigeraren om rätt visningsmarkörer används i CSS. Om du till exempel skapar ett Zoom-visningsprogram måste alla CSS-regler som du importerar definieras med hjälp av visningsprogrammets klassnamn som `.s7mixedmediaviewer` definieras för ett överordnat visningsprogramelement.
 
-      Du kan importera godtycklig, handgjord CSS så länge den definierar CSS-markörerna för ett visst visningsprogram. (CSS-markörer beskrivs i hjälpavsnittet Anpassa *&lt;visningsprogramnamn>* visningsprogram&quot; i [referenshandboken](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/)för visningsprogram. Om du till exempel vill läsa om CSS-markörer för Zoomvisningsprogrammet läser du [Anpassa zoomvisningsprogrammet](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/c_html5_20_zoom_viewer_customizingviewer.html).) Det är dock möjligt att den visuella redigeraren kanske inte förstår vissa CSS-värden. I sådana fall försöker den visuella redigeraren åsidosätta felen så att CSS fortfarande fungerar.
+      Du kan importera godtycklig, handgjord CSS så länge den definierar CSS-markörerna för ett visst visningsprogram. (CSS-markörer beskrivs i hjälpavsnittet Anpassa *&lt;visningsprogramnamn>* visningsprogram&quot; i [referenshandboken](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html)för visningsprogram. Om du till exempel vill läsa om CSS-markörer för Zoomvisningsprogrammet läser du [Anpassa zoomvisningsprogrammet](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/zoom/customizing-zoom/c-html5-20-zoom-viewer-customizingviewer.html).) Det är dock möjligt att den visuella redigeraren kanske inte förstår vissa CSS-värden. I sådana fall försöker den visuella redigeraren åsidosätta felen så att CSS fortfarande fungerar.
    >[!NOTE]
    >
    >Om du föredrar att redigera CSS direkt i dess råformat trycker du på **[!UICONTROL Show/Hide CSS]** under listrutan Vald typ (du kan behöva rulla den visuella redigeraren uppåt för att se den).
@@ -460,7 +460,7 @@ Se [Specialöverväganden när du skapar en förinställning](#special-considera
 
    Många komponenter i den visuella redigeraren har en detaljerad beskrivning. Dessa beskrivningar visas i blå rutor när du expanderar en komponent för att visa dess associerade parametrar.
 
-   Vissa typer av visningsprogram har komponenter som gör att du kan ange bildserverkommandon i ett **[!UICONTROL IS Command]**-textfält. En lista med kommandon som du kan använda finns i [API-referenshandboken för bildservrar](https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/image_serving_api_ref.html).
+   Vissa typer av visningsprogram har komponenter som gör att du kan ange bildserverkommandon i ett **[!UICONTROL IS Command]**-textfält. En lista med kommandon som du kan använda finns i [API-referenshandboken för bildservrar](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-is-home.html).
 
    >[!NOTE]
    >
