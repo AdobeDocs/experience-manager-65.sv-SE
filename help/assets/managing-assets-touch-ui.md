@@ -1,10 +1,10 @@
 ---
-title: Hantera digitala resurser i [!DNL Adobe Experience Manager Assets].
+title: Hantera dina digitala resurser i [!DNL Adobe Experience Manager Assets].
 description: Lär dig resurshanteringsåtgärder som överföring, hämtning, redigering, sökning, borttagning, anteckning och version av digitala resurser.
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
+source-git-commit: afed13a2f832b91d0df825d1075852cc84443646
 workflow-type: tm+mt
 source-wordcount: '9087'
 ht-degree: 3%
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 I kan [!DNL Adobe Experience Manager Assets] ni göra mer än att bara lagra och styra era resurser. [!DNL Experience Manager] har funktioner för resurshantering i enterpriseklass. Du kan redigera och dela resurser, utföra avancerade sökningar, skapa flera renderingar av dussintals filformat som stöds, hantera versioner och digitala rättigheter, automatisera bearbetningen av resurser, hantera och styra metadata, samarbeta med anteckningar och mycket annat.
 
-I den här artikeln beskrivs de grundläggande tillgångshanteringsuppgifterna, som att skapa eller överföra. metadatauppdateringar, kopiera, flytta och ta bort, publicera, avpublicera och söka resurser. Mer information om användargränssnittet finns i [Komma igång med användargränssnittet](/help/sites-authoring/basic-handling.md)för resurser. Mer information om hur du hanterar innehållsfragment finns i [Hantera resurser för innehållsfragment](content-fragments-managing.md) .
+I den här artikeln beskrivs de grundläggande tillgångshanteringsuppgifterna, som att skapa eller överföra. metadatauppdateringar, kopiera, flytta och ta bort, publicera, avpublicera och söka resurser. Mer information om användargränssnittet finns i [Komma igång med användargränssnittet](/help/sites-authoring/basic-handling.md)för resurser. Mer information om hur du hanterar innehållsfragment finns i [Hantera resurser för innehållsfragment](/help/assets/content-fragments/content-fragments-managing.md) .
 
 ## Skapa mappar {#creating-folders}
 
@@ -50,7 +50,7 @@ Du kan överföra olika typer av resurser (inklusive bilder, PDF-filer, RAW-file
 
 >[!NOTE]
 >
->I läget Dynamic Media - Scene7 kan du bara överföra resurser vars filstorlek är 2 GB eller mindre.
+>I Dynamic Media - Scene7-läge kan du bara överföra resurser vars filstorlek är 2 GB eller mindre.
 
 Du kan välja att överföra resurser till mappar med eller utan en bearbetningsprofil tilldelad dem.
 
@@ -99,7 +99,7 @@ Innan du överför en resurs måste du se till att den har ett [format](/help/as
    >
    >När du väljer **[!UICONTROL Replace]** i [!UICONTROL Name Conflict] dialogrutan genereras resurs-ID om för den nya resursen. Detta ID skiljer sig från ID:t för föregående resurs.
    >
-   >Om tillgångsinsikter är aktiverat för att spåra visningar/klickningar med Adobe Analytics blir det återskapade resurs-ID:t ogiltigt för de data som samlats in för resursen i Analytics.
+   >Om resursinsikter är aktiverat för att spåra visningar/klickningar med Adobe Analytics blir det återskapade resurs-ID:t ogiltigt för de data som hämtats för resursen på Analytics.
 
    Om resursen som du överför finns i [!DNL Assets]visas en varning i **[!UICONTROL Duplicates Detected]** dialogrutan om att du försöker överföra en dubblettresurs. Dialogrutan visas bara om kontrollsummevärdet för den befintliga resursens binärfil matchar kontrollsummevärdet för den resurs du överför. `SHA 1` I det här fallet spelar resursernas namn ingen roll.
 
@@ -139,24 +139,24 @@ Seriell överföring av resurser är aktiverat som standard. Om du vill inaktive
 
 ### Överför resurser med FTP {#uploading-assets-using-ftp}
 
-Med Dynamic Media kan du batchöverföra resurser via FTP-servern. Om du tänker överföra stora resurser (> 1 GB) eller överföra hela mappar och undermappar bör du använda FTP. Du kan till och med konfigurera FTP-överföring så att den sker regelbundet.
+Dynamic Media möjliggör batchöverföring av resurser via FTP-server. Om du tänker överföra stora resurser (> 1 GB) eller överföra hela mappar och undermappar bör du använda FTP. Du kan till och med konfigurera FTP-överföring så att den sker regelbundet.
 
 >[!NOTE]
 >
->I läget Dynamic Media - Scene7 kan du bara överföra resurser vars filstorlek är 2 GB eller mindre.
+>I Dynamic Media - Scene7-läge kan du bara överföra resurser vars filstorlek är 2 GB eller mindre.
 
 >[!NOTE]
 >
->Om du vill överföra resurser via FTP i läget Dynamic Media - Scene7 installerar du Feature Pack 18912 på [!DNL Experience Manager] författarinstanserna. Kontakta [Adobes kundtjänst](https://helpx.adobe.com/se/contact/enterprise-support.ec.html) för att få tillgång till FP-18912 och slutföra konfigurationen av ditt FTP-konto. Mer information finns i [Installera funktionspaket 18912 för migrering](/help/assets/bulk-ingest-migrate.md)av gruppresurser.
+>Om du vill överföra resurser via FTP i Dynamic Media - Scene7-läge installerar du Feature Pack 18912 på [!DNL Experience Manager] författarinstanserna. Kontakta [Adobes kundtjänst](https://helpx.adobe.com/se/contact/enterprise-support.ec.html) för att få tillgång till FP-18912 och slutföra konfigurationen av ditt FTP-konto. Mer information finns i [Installera funktionspaket 18912 för migrering](/help/assets/bulk-ingest-migrate.md)av gruppresurser.
 >
->Om du använder FTP för att överföra resurser, ignoreras de överföringsinställningar som anges i [!DNL Experience Manager] . I stället används filbearbetningsregler, enligt definition i Dynamic Media Classic,.
+>Om du använder FTP för att överföra resurser, ignoreras de överföringsinställningar som anges i [!DNL Experience Manager] . I stället används filbearbetningsregler, enligt definitionen i Dynamic Media Classic.
 
 **Så här överför du resurser med FTP**
 
 1. Logga in på FTP-servern med det FTP-användarnamn och lösenord som du fick från e-postmeddelandet om etablering. Överför filer eller mappar till FTP-servern i FTP-klienten.
-1. [Logga in på Dynamic Media Classic](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) med hjälp av autentiseringsuppgifter från e-postmeddelandet om etablering. Klicka på i det globala navigeringsfältet **[!UICONTROL Upload]**.
+1. [Logga in på Dynamic Media Classic](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) med hjälp av autentiseringsuppgifter som du fått från e-postmeddelandet om etablering. Klicka på i det globala navigeringsfältet **[!UICONTROL Upload]**.
 
-1. Klicka på **[!UICONTROL Via FTP]** fliken på sidan Överför, i det övre vänstra hörnet.
+1. På sidan Överför klickar du på **[!UICONTROL Via FTP]** fliken uppe till vänster.
 1. Välj en FTP-mapp att överföra filer från till vänster på sidan. till höger på sidan väljer du en målmapp.
 1. Klicka i det nedre högra hörnet av sidan **[!UICONTROL Job Options]** och ange önskade alternativ baserat på resurserna i den mapp du valde.
 
@@ -191,7 +191,7 @@ Om du vill avbryta ett pågående överföringsjobb klickar du på **[!UICONTROL
 |  | PDF-alternativ | Du kan rastrera filerna, extrahera sökord och länkar, automatiskt generera en e-katalog, ange upplösningen och välja en färgrymd.<br> Observera att e-kataloger inte stöds i [!DNL Experience Manager]. <br> Se [Ange överföringsalternativ](#setting-pdf-upload-options)för PDF. |
 |  | Illustrator-alternativ | Du kan rastrera Adobe Illustrator®-filer, behålla genomskinliga bakgrunder, välja en upplösning och välja en färgrymd.<br> Se [Ange överföringsalternativ](#setting-postscript-and-illustrator-upload-options)för PostScript och Illustrator. |
 |  | EVideoalternativ | Du kan omkoda en videofil genom att välja en videoförinställning.<br> Se [Ange alternativ](#setting-evideo-upload-options)för eVideo-överföring. |
-|  | Förinställningar för gruppuppsättning | Om du vill skapa en bilduppsättning, eller en snurra uppsättning, från de överförda filerna klickar du på kolumnen Aktiv för den förinställning som du vill använda. Du kan markera flera förinställningar. Du skapar förinställningarna på sidan Programinställningar/Gruppinställningar i Dynamic Media Classic.<br> Mer information om hur du skapar förinställningar för gruppuppsättningar finns i [Konfigurera förinställningar för gruppuppsättningar för att automatiskt generera bilduppsättningar och](config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) snurruppsättningar.<br> Se [Ställa in förinställningar för gruppuppsättning vid överföring](#setting-batch-set-presets-at-upload). |
+|  | Förinställningar för gruppuppsättning | Om du vill skapa en bilduppsättning, eller en snurra uppsättning, från de överförda filerna klickar du på kolumnen Aktiv för den förinställning som du vill använda. Du kan markera flera förinställningar. Du skapar förinställningarna på sidan Programinställningar/Gruppuppsättningsförinställningar i Dynamic Media Classic.<br> Mer information om hur du skapar förinställningar för gruppuppsättningar finns i [Konfigurera förinställningar för gruppuppsättningar för att automatiskt generera bilduppsättningar och](config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) snurruppsättningar.<br> Se [Ställa in förinställningar för gruppuppsättning vid överföring](#setting-batch-set-presets-at-upload). |
 
 #### Ange bildredigeringsalternativ vid överföring {#setting-image-editing-options-at-upload}
 
@@ -238,7 +238,7 @@ När du överför PostScript- (EPS) eller Illustrator-bildfiler (AI) kan du form
 
 Photoshop-dokumentfiler (PSD) används oftast för att skapa bildmallar. När du överför en PSD-fil kan du skapa en bildmall automatiskt från filen (välj alternativet på skärmen Överför). [!UICONTROL Create Template]
 
-Dynamic Media skapar flera bilder från en PSD-fil med lager om du använder filen för att skapa en mall; skapas en bild för varje lager.
+I Dynamic Media skapas flera bilder från en PSD-fil med lager om du använder filen för att skapa en mall. skapas en bild för varje lager.
 
 Använd [!UICONTROL Crop Options] och [!UICONTROL Color Profile Options], som beskrivs ovan, med uppladdningsalternativ för Photoshop.
 
@@ -301,11 +301,11 @@ Mer information om hur du skapar förinställningar för gruppuppsättningar fin
 
 ### Strömmade överföringar {#streamed-uploads}
 
-Om du överför många resurser till Adobe Experience Manager ökar I/O-begäranden till servern drastiskt, vilket minskar uppladdningseffektiviteten och kan till och med leda till att vissa uppladdningsuppgifter blir timeout. [!DNL Experience Manager Assets] har stöd för direktuppspelad överföring av resurser. Direktuppspelad överföring minskar I/O-disken under överföringen genom att resurslagring undviks i en tillfällig mapp på servern innan den kopieras till databasen. I stället överförs data direkt till databasen. På så sätt minskas tiden det tar att överföra stora resurser och möjligheten till timeout. Direktuppspelad överföring är aktiverad som standard i [!DNL Assets].
+Om du överför många resurser till Adobe Experience Manager ökar I/O-begäranden till servern drastiskt, vilket minskar uppladdningseffektiviteten och kan till och med leda till att en del överföringsåtgärder tar slut. [!DNL Experience Manager Assets] har stöd för direktuppspelad överföring av resurser. Direktuppspelad överföring minskar I/O-disken under överföringen genom att resurslagring undviks i en tillfällig mapp på servern innan den kopieras till databasen. I stället överförs data direkt till databasen. På så sätt minskas tiden det tar att överföra stora resurser och möjligheten till timeout. Direktuppspelad överföring är aktiverad som standard i [!DNL Assets].
 
 >[!NOTE]
 >
->Direktuppspelning är inaktiverat för Adobe Experience Manager som körs på JEE-servern med en servlet-api-version som är lägre än 3.1.
+>Direktuppspelning är inaktiverat för Adobe Experience Manager som körs på JEE-server med en servlet-api-version som är lägre än 3.1.
 
 ### Extrahera ZIP-arkiv som innehåller resurser {#extractzip}
 
@@ -358,7 +358,7 @@ Så här förhandsgranskar du en resurs med tangentbordet:
 
 >[!MORELIKETHIS]
 >
->* [Förhandsgranska dynamiska medieresurser](/help/assets/previewing-assets.md).
+>* [Förhandsgranska Dynamic Media Assets](/help/assets/previewing-assets.md).
 >* [Visa delresurser](managing-linked-subassets.md#viewing-subassets).
 
 
@@ -571,7 +571,7 @@ Se [Hämta resurser från Experience Manager](/help/assets/download-assets-from-
 
 >[!NOTE]
 >
->Mer information om Dynamic Media finns i [Publicera dynamiska medieresurser.](/help/assets/publishing-dynamicmedia-assets.md)
+>Mer information om Dynamic Media finns i [Publicera Dynamic Media.](/help/assets/publishing-dynamicmedia-assets.md)
 
 1. Navigera till platsen för resursen/mappen som du vill publicera.
 
@@ -732,7 +732,7 @@ På tidslinjen kan du visa olika händelser för ett markerat objekt, t.ex. akti
 
 >[!NOTE]
 >
->Tidslinjen innehåller flera [alternativ som är specifika för innehållsfragment](/help/assets/content-fragments-managing.md#timeline-for-content-fragments).
+>Tidslinjen innehåller flera [alternativ som är specifika för innehållsfragment](/help/assets/content-fragments/content-fragments-managing.md#timeline-for-content-fragments).
 
 ## Anteckna resurser {#annotating}
 
@@ -742,7 +742,7 @@ Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Vi
 
 >[!NOTE]
 >
->För innehållsfragment skapas [anteckningar i fragmentredigeraren](/help/assets/content-fragments-variations.md#annotating-a-content-fragment).
+>För innehållsfragment skapas [anteckningar i fragmentredigeraren](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment).
 
 1. Navigera till platsen för resursen som du vill lägga till anteckningar i.
 1. Klicka på **[!UICONTROL Annotate]** ikonen på något av följande sätt:
