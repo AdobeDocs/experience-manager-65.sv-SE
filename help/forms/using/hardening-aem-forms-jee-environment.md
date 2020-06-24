@@ -9,9 +9,9 @@ topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 translation-type: tm+mt
-source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+source-git-commit: 6cb05cab9ecbb9fc88e16cc1ab24cafccf7d0b16
 workflow-type: tm+mt
-source-wordcount: '7445'
+source-wordcount: '7603'
 ht-degree: 0%
 
 ---
@@ -187,7 +187,25 @@ Följ dessa anvisningar för att köra den programserver där AEM Forms on JEE d
    * Neka lokal inloggning
    * Logga in som tjänst (bör vara inställd)
 
-1. Ge det nya användarkontot behörighet att läsa och köra, skriva, ändra, lista mappinnehåll och läsa för att slutföra AEM Forms i JEE-installationskatalogen och GDS-katalogen (Global Document Storage). Platsen för GDS-katalogen konfigureras manuellt under AEM Forms installationsprocess. Om platsinställningen är tom under installationen blir platsen som standard en katalog under programserverinstallationen vid [JBoss root]/server/[type]/svcnative/DocumentStorage.
+1. Ge det nya användarkontot behörighet att ändra i följande kataloger:
+   * **GDS-katalog**(Global Document Storage): Platsen för GDS-katalogen konfigureras manuellt under AEM Forms installationsprocess. Om platsinställningen är tom under installationen blir platsen som standard en katalog under programserverinstallationen på `[JBoss root]/server/[type]/svcnative/DocumentStorage`
+   * **Katalogen** CRX-Repository: Standardplatsen är `[AEM-Forms-installation-location]\crx-repository`
+   * **AEM Forms temporära kataloger**:
+      * (Windows) TMP- eller TEMP-sökväg som angetts i miljövariablerna
+      * (AIX, Linux eller Solaris) Inloggad användares arbetskatalogPå UNIX-baserade system kan en icke-rotanvändare använda följande katalog som tillfällig katalog:
+      * (Linux) /var/tmp eller /usr/tmp
+      * (AIX) /tmp eller /usr/tmp
+      * (Solaris) /var/tmp eller /usr/tmp
+1. Ge det nya användarkontot skrivbehörighet i följande kataloger:
+   * [JBoss-directory]\standalone\deployment
+   * [JBoss-directory]\standalone\
+   * [JBoss-directory]\bin\
+   >[!NOTE]
+   >
+   > Standardinstallationsplatsen för JBoss Application Server:
+   > * Windows: C:\Adobe\Adobe_Experience_Manager_Forms\jboss
+   > * Linux: /opt/jboss/
+
 1. Starta programservern.
 
 **Inaktivera starttjänsten för Configuration Manager**
@@ -976,7 +994,25 @@ AEM Forms på JEE-körkortsinstallationen skapar som standard ett tjänstkonto m
    * Neka inloggning locallyxx
    * Logga in som tjänst (bör vara inställd)
 
-1. Ge det nya användarkontot behörighet att läsa och köra, skriva, ändra, lista mappinnehåll och läsa för att slutföra AEM Forms i JEE-installationskatalogen och GDS-katalogen (Global Document Storage). Platsen för GDS-katalogen konfigureras manuellt under AEM Forms installationsprocess. Om platsinställningen är tom under installationen blir platsen som standard en katalog under programserverinstallationen vid [JBoss root]/server/[type]/svcnative/DocumentStorage.
+1. Ge det nya användarkontot behörighet att ändra i följande kataloger:
+   * **GDS-katalog**(Global Document Storage): Platsen för GDS-katalogen konfigureras manuellt under AEM Forms installationsprocess. Om platsinställningen är tom under installationen blir platsen som standard en katalog under programserverinstallationen på `[JBoss root]/server/[type]/svcnative/DocumentStorage`
+   * **Katalogen** CRX-Repository: Standardplatsen är `[AEM-Forms-installation-location]\crx-repository`
+   * **AEM Forms temporära kataloger**:
+      * (Windows) TMP- eller TEMP-sökväg som angetts i miljövariablerna
+      * (AIX, Linux eller Solaris) Inloggad användares arbetskatalogPå UNIX-baserade system kan en icke-rotanvändare använda följande katalog som tillfällig katalog:
+      * (Linux) /var/tmp eller /usr/tmp
+      * (AIX) /tmp eller /usr/tmp
+      * (Solaris) /var/tmp eller /usr/tmp
+1. Ge det nya användarkontot skrivbehörighet i följande kataloger:
+   * [JBoss-directory]\standalone\deployment
+   * [JBoss-directory]\standalone\
+   * [JBoss-directory]\bin\
+   >[!NOTE]
+   >
+   > Standardinstallationsplatsen för JBoss Application Server:
+   > * Windows: C:\Adobe\Adobe_Experience_Manager_Forms\jboss
+   > * Linux: /opt/jboss/.
+
 
 1. Starta programservertjänsten.
 
