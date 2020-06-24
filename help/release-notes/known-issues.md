@@ -7,14 +7,17 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: d11fc727-f23a-4cde-9fa6-97e2c81b4ad0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 86dbd52d44a78401aa50cce299850469c51b691c
+source-git-commit: 6943eb3d0b73a348fc7bb5a713813bf73f8e7e79
+workflow-type: tm+mt
+source-wordcount: '559'
+ht-degree: 0%
 
 ---
 
 
 # Kända fel {#known-issues}
 
-På den här sidan finns en lista över kända fel i Adobe Experience Manager 6.5 som släpptes i april 2019.
+På den här sidan finns en lista över kända fel från Adobe Experience Manager 6.5 som släpptes i april 2019.
 
 [Kontakta supporten](https://helpx.adobe.com/support/experience-manager.html) om du behöver mer information om kända fel.
 
@@ -56,7 +59,7 @@ Så här löser du felet:
 
 ## Formulär {#forms}
 
-* När AEM Forms är installerat i Linux fungerar inte den digitala signaturen med maskinvarusäkerhetsmodulen. (CQ-4266721)
+* När AEM Forms är installerat på Linux-operativsystemet fungerar inte Digital Signature with Hardware Security Module. (CQ-4266721)
 * (Endast AEM Forms på WebSphere) Alternativet **Formulärarbetsflöde**> **Uppgiftssökning** returnerar inget resultat om du söker efter en **administratör** med **användarnamn** som sökvillkor. (CQ-4266457)
 
 * AEM Forms kan inte konvertera tif- och tiff-filer med JPEG-komprimering till PDF-dokument. (CQ-4265972)
@@ -64,7 +67,7 @@ Så här löser du felet:
 
 * (Endast JBoss 7) När du uppgraderar från en tidigare version till AEM 6.5 Forms och den tidigare versionen hade processer (.lca) som skapade och använde en kopia av standardåtergivningsprocessen, misslyckas HTML5 Forms som använder sådana processer (.lca) att utföra de åtgärder som krävs. (CQ-4243928)
 * När en formulärdatamodelltjänst anropas från regelredigeraren för att dynamiskt uppdatera värden för bildvalskomponenten, uppdateras inte värdena för bildvalskomponenten i en adaptiv varifrån. (CQ-4254754)
-* Installationsprogrammet för AEM Forms Designer kräver 32-bitarsversionen av omdistribuerbara [Visual C++-miljöpaket 2012](https://support.microsoft.com/en-in/help/2977003/the-latest-supported-visual-c-downloads) och omdistribuerbara [Visual C++-miljöpaket 2013](https://support.microsoft.com/en-in/help/3179560/update-for-visual-c-2013-and-visual-c-redistributable-package). Kontrollera att ovannämnda omdistribuerbara körtidspaket är installerade innan du startar installationen. (CQ-4265668)
+* Installationsprogrammet för AEM Forms Designer kräver 32-bitarsversionen av omdistribuerbara [Visual C++-körtidspaket 2012](https://support.microsoft.com/en-in/help/2977003/the-latest-supported-visual-c-downloads) och omdistribuerbara [Visual C++-körtidspaket 2013](https://support.microsoft.com/en-in/help/3179560/update-for-visual-c-2013-and-visual-c-redistributable-package). Kontrollera att ovannämnda omdistribuerbara körtidspaket är installerade innan du startar installationen. (CQ-4265668)
 
 * När ett adaptivt formulär har konfigurerats för att dynamiskt uppdatera värden för en komponent och den publiceringsinstans som är värd för formuläret nås via dispatchern, slutar funktionen att dynamiskt uppdatera värden för ett fält att fungera. Du löser problemet genom att öppna CRXDE på publiceringsinstansen, navigera till /libs/fd/af/runtime/clientlibs/guideChartReducer och skapa egenskapen som listas nedan.
 
@@ -75,6 +78,7 @@ Så här löser du felet:
    * Obligatoriskt: Falskt
    * Flera: Falskt
    * Automatiskt skapad: Fas
+   Egenskapen gör att klientbiblioteken under körningsmappen kan komma åt proxy. (CQ-4268679)
 
-Egenskapen gör att klientbiblioteken under körningsmappen kan komma åt proxy. (CQ-4268679)
-
+* 
+   * När AEM Forms startas visas en varning `SAX Security Manager could not be setup` .
