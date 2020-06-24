@@ -11,7 +11,7 @@ topic-tags: extending-assets
 discoiquuid: 03502b41-b448-47ab-9729-e0a66a3389fa
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 13cf9930876af3dd27b2fcb3e1059dae61769803
+source-git-commit: 307a1db2e5bbb72d730c89ba14f5ce02b96c108d
 workflow-type: tm+mt
 source-wordcount: '1859'
 ht-degree: 2%
@@ -33,7 +33,7 @@ ht-degree: 2%
 >
 Den aktuella implementeringen av AEM Assets HTTP API är REST.
 
-Med Adobe Experience Manager (AEM) [Assets REST API](/help/assets/mac-api-assets.md) kan utvecklare komma åt innehåll (som lagras i AEM) direkt via HTTP API:t via CRUD-åtgärder (Create, Read, Update, Delete).
+Med Adobe Experience Manager (AEM) [Assets REST API](/help/assets/mac-api-assets.md) kan utvecklare få åtkomst till innehåll (som lagras i AEM) direkt via HTTP-API:t via CRUD-åtgärder (Skapa, Läs, Uppdatera, Ta bort).
 
 Med API kan du använda AEM som headless CMS (Content Management System) genom att tillhandahålla Content Services till ett JavaScript-klientprogram. Eller något annat program som kan köra HTTP-begäranden och hantera JSON-svar.
 
@@ -62,7 +62,7 @@ HTTP-metoden avgör vilken åtgärd som ska utföras:
 * **GET** - för att hämta en JSON-representation av en resurs eller en mapp
 * **POST** - för att skapa nya resurser eller mappar
 * **PUT** - för att uppdatera egenskaperna för en resurs eller mapp
-* **TA BORT** - för att ta bort en resurs eller mapp
+* **DELETE** - för att ta bort en resurs eller mapp
 
 >[!NOTE]
 >
@@ -137,7 +137,7 @@ I miljöer med specifika autentiseringskrav rekommenderas OAuth.
 
 ## Tillgängliga funktioner {#available-features}
 
-Innehållsfragment är en specifik typ av resurs, se [Arbeta med innehållsfragment](/help/assets/content-fragments.md).
+Innehållsfragment är en specifik typ av resurs, se [Arbeta med innehållsfragment](/help/assets/content-fragments/content-fragments.md).
 
 Mer information om funktioner som är tillgängliga via API finns i:
 
@@ -197,7 +197,7 @@ Resurser kan ha flera renderingar. Dessa visas vanligtvis som underordnade enhet
 
 ### Innehållsfragment {#content-fragments}
 
-Ett [innehållsfragment](/help/assets/content-fragments.md) är en särskild typ av resurs. De kan användas för att komma åt strukturerade data, t.ex. texter, siffror och datum.
+Ett [innehållsfragment](/help/assets/content-fragments/content-fragments.md) är en särskild typ av resurs. De kan användas för att komma åt strukturerade data, t.ex. texter, siffror och datum.
 
 Eftersom det finns flera skillnader mellan *standardresurser* (t.ex. bilder och ljud) gäller vissa ytterligare regler för att hantera dem.
 
@@ -236,7 +236,7 @@ Användningssättet kan variera beroende på om du använder en AEM-författare 
 
 >[!NOTE]
 >
->Mer information finns i [API-referensen](/help/assets/assets-api-content-fragments.md#api-reference). Särskilt [Adobe Experience Manager Assets API - innehållsfragment](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/assets-api-content-fragments/index.html).
+>Mer information finns i [API-referensen](/help/assets/assets-api-content-fragments.md#api-reference). I synnerhet [Adobe Experience Manager Assets API - Content Fragments](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/assets-api-content-fragments/index.html).
 
 ### Läsning/leverans {#read-delivery}
 
