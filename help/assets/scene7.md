@@ -8,9 +8,9 @@ content-type: reference
 topic-tags: managing-assets
 discoiquuid: e7b95732-a571-48e8-afad-612059cdbde7
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
 workflow-type: tm+mt
-source-wordcount: '2742'
+source-wordcount: '2731'
 ht-degree: 1%
 
 ---
@@ -170,7 +170,7 @@ Med **[!UICONTROL Image]** komponenten Dynamic Media Classic kan du lägga till 
 
 ![chlimage_1-230](assets/chlimage_1-230.png)
 
-**[!UICONTROL Viewer preset]** - Välj en befintlig visningsförinställning i listrutan. Om den visningsförinställning som du söker efter inte visas kan du behöva göra den synlig. Se [Hantera visningsförinställningar](/help/assets/managing-viewer-presets.md). Du kan inte välja en visningsförinställning om du använder en bildförinställning och vice versa.
+**[!UICONTROL Viewer preset]** - Välj en befintlig visningsförinställning i listrutan. Om den visningsförinställning som du söker efter inte visas kanske du måste göra den synlig. Se [Hantera visningsförinställningar](/help/assets/managing-viewer-presets.md). Du kan inte välja en visningsförinställning om du använder en bildförinställning och vice versa.
 
 **[!UICONTROL Dynamic Media Classic Configuration]** - Välj den Dynamic Media Classic-konfiguration som du vill använda för att hämta aktiva bildförinställningar från SPS.
 
@@ -180,13 +180,13 @@ Med **[!UICONTROL Image]** komponenten Dynamic Media Classic kan du lägga till 
 
 **[!UICONTROL Sharpening]** - Välj hur du vill öka skärpan i bilden. Skärpeinställningen förklaras i detalj i [Bästa praxis](/help/assets/managing-image-presets.md#image-preset-options) för bildförinställningar och [Bästa tillvägagångssätt](/help/assets/assets/s7_sharpening_images.pdf)för skärpeökning.
 
-**[!UICONTROL URL Modifiers]** - Du kan ändra bildeffekter genom att ange ytterligare bildkommandon i Dynamic Media Classic. Dessa beskrivs i [Bildförinställningar](/help/assets/managing-image-presets.md) och [Kommandoradsreferensen](https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/http_ref/c_command_reference.html).
+**[!UICONTROL URL Modifiers]** - Du kan ändra bildeffekter genom att ange ytterligare bildkommandon i Dynamic Media Classic. Dessa beskrivs i [Bildförinställningar](/help/assets/managing-image-presets.md) och [Kommandoradsreferensen](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html).
 
 **[!UICONTROL Breakpoints]** - Om webbplatsen är responsiv vill du justera brytpunkterna. Brytpunkter måste avgränsas med kommatecken ( , ).
 
 ### Bildmall {#image-template}
 
-[Dynamic Media Classic-bildmallar](https://help.adobe.com/en_US/scene7/using/WS60B68844-9054-4099-BF69-3DC998A04D3C.html) är lageruppbyggt Photoshop-innehåll som importerats till Dynamic Media Classic, där innehåll och egenskaper parametriserats för variabilitet. Med **[!UICONTROL Image template]** komponenten kan du importera bilder och ändra texten dynamiskt i AEM. Dessutom kan du konfigurera **[!UICONTROL Image template]** komponenten så att värden från klientkontexten används, så att varje användare upplever bilden på ett personligt sätt.
+[Dynamic Media Classic-bildmallar](https://docs.adobe.com/help/en/dynamic-media-classic/using/template-basics/quick-start-template-basics.html) är lageruppbyggt Photoshop-innehåll som importerats till Dynamic Media Classic, där innehåll och egenskaper parametriserats för variabilitet. Med **[!UICONTROL Image template]** komponenten kan du importera bilder och ändra texten dynamiskt i AEM. Dessutom kan du konfigurera **[!UICONTROL Image template]** komponenten så att värden från klientkontexten används, så att varje användare upplever bilden på ett personligt sätt.
 
 Tryck **[!UICONTROL Edit]** för att konfigurera komponenten. Du kan konfigurera [inställningar som är gemensamma för alla Dynamic Media Classic-komponenter](#settings-common-to-all-scene-components) samt andra inställningar som beskrivs i det här avsnittet.
 
