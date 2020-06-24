@@ -12,7 +12,10 @@ discoiquuid: b7777dc5-a867-4799-9e2c-a1f4bb5dd96a
 docset: aem65
 pagetitle: Components for Content Fragments
 translation-type: tm+mt
-source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+source-git-commit: afed13a2f832b91d0df825d1075852cc84443646
+workflow-type: tm+mt
+source-wordcount: '960'
+ht-degree: 1%
 
 ---
 
@@ -39,7 +42,7 @@ Se API:t för hantering av [innehållsfragment - klientsidan](/help/sites-develo
 >
 >Mer information finns även i [Innehållsfragment Konfigurera komponenter för återgivning](/help/sites-developing/content-fragments-config-components-rendering.md) .
 
-Adobe Experience Manager-innehållsfragment (AEM) [skapas och hanteras som sidoberoende resurser](/help/assets/content-fragments.md). Med dem kan du skapa kanalneutralt innehåll tillsammans med (eventuellt kanalspecifika) variationer. [Du kan sedan använda dessa fragment och deras variationer när du redigerar innehållssidorna](/help/sites-authoring/content-fragments.md). Du kan också använda en befintlig resurs för innehållsfragment genom [att dra den från resursläsaren till sidan](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page) (som för andra resursbaserade komponenter, som exempelvis image-konfigurationen för grundkomponenten). Komponenten för innehållsfragment som inte är klar att användas visar bara ett [element](/help/assets/content-fragments.md#constituent-parts-of-a-content-fragment) i det refererade innehållsfragmentet. Med komponentdialogrutan kan du definiera [element, variationer och intervall för fragmentstycken](/help/assets/content-fragments.md#constituent-parts-of-a-content-fragment) som du vill visa på sidan.
+Innehållsfragment i Adobe Experience Manager (AEM) [skapas och hanteras som sidoberoende resurser](/help/assets/content-fragments/content-fragments.md). Med dem kan du skapa kanalneutralt innehåll tillsammans med (eventuellt kanalspecifika) variationer. [Du kan sedan använda dessa fragment och deras variationer när du redigerar innehållssidorna](/help/sites-authoring/content-fragments.md). Du kan också använda en befintlig resurs för innehållsfragment genom [att dra den från resursläsaren till sidan](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page) (som för andra resursbaserade komponenter, som exempelvis image-konfigurationen för grundkomponenten). Komponenten för innehållsfragment som inte är klar att användas visar bara ett [element](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) i det refererade innehållsfragmentet. Med komponentdialogrutan kan du definiera [element, variationer och intervall för fragmentstycken](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) som du vill visa på sidan.
 
 >[!NOTE]
 >
@@ -67,7 +70,7 @@ Det här biblioteket lägger till funktioner som är specifika för innehållsfr
 
 ### Mellan innehåll {#in-between-content}
 
-Med komponenten **Content** Fragment kan du släppa ytterligare komponenter mellan de olika styckena i det visade [elementet](/help/assets/content-fragments.md#constituent-parts-of-a-content-fragment). Elementet som visas består i själva verket av olika stycken (varje stycke markeras med en radmatning). Du kan infoga innehåll med andra komponenter mellan styckena.
+Med komponenten **Content** Fragment kan du släppa ytterligare komponenter mellan de olika styckena i det visade [elementet](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment). Elementet som visas består i själva verket av olika stycken (varje stycke markeras med en radmatning). Du kan infoga innehåll med andra komponenter mellan styckena.
 
 Ur teknisk synvinkel finns varje stycke i det visade elementet* *i en egen parsys, och varje komponent som du lägger till mellan styckena infogas (under huven) i parsytan.
 
@@ -105,7 +108,7 @@ Om du vill använda fragmentkomponenten som finns i kartongen som en plan för t
 
    * Avlyssnarna `afterinsert`/ `afteredit`/ `afterdelete` används för att utlösa JS-händelser. Dessa händelser hanteras i `cq.authoring.editor.plugin.cfm` klientbiblioteket för att visa det associerade innehållet på sidopanelen.
    * De `cq:dropTargets` är konfigurerade att ha stöd för att dra innehållsfragmentresurser.
-   * `cq:inplaceEditing` är konfigurerat för att stödja redigering av ett innehållsfragment i sidredigeraren. Fragmentets redigerare på plats definieras i `cq.authoring.editor.plugin.cfm` klientbiblioteket och tillåter en snabblänk att öppna det aktuella [elementet/varianten](/help/assets/content-fragments.md#constituent-parts-of-a-content-fragment) i [fragmentredigeraren](/help/assets/content-fragments-variations.md).
+   * `cq:inplaceEditing` är konfigurerat för att stödja redigering av ett innehållsfragment i sidredigeraren. Fragmentets redigerare på plats definieras i `cq.authoring.editor.plugin.cfm` klientbiblioteket och tillåter en snabblänk att öppna det aktuella [elementet/varianten](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) i [fragmentredigeraren](/help/assets/content-fragments/content-fragments-variations.md).
 
 ### Återgivning av resurser före återgivning {#asset-rewriting-before-rendering}
 
