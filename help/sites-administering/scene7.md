@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: f55e68c3-3309-4400-bef9-fd3afa6e2b5f
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
 workflow-type: tm+mt
-source-wordcount: '5290'
+source-wordcount: '5289'
 ht-degree: 1%
 
 ---
@@ -569,7 +569,7 @@ Du konfigurerar det godkända filformatet efter MIME-typ i OSGi-området (Open S
 
    Till exempel, `psprocess="rasterize"&psresolution=120` .
 
-   Se API:t för [Adobe Dynamic Media Classic Image Production System](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/) för ytterligare parametrar för överföringsjobb som du kan använda.
+   Se API:t för [Adobe Dynamic Media Classic Image Production System](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-production-api/c-overview.html) för ytterligare parametrar för överföringsjobb som du kan använda.
 
    >[!NOTE]
    >
