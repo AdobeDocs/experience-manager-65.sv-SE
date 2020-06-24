@@ -1,20 +1,23 @@
 ---
-title: Versionsinformation för AEM Sites
-description: Versionsinformation om webbplatser i Adobe Experience Manager 6.5.
+title: Versionsinformation om AEM Sites
+description: Versionsinformation för webbplatser som tillhör Adobe Experience Manager 6.5.
 uuid: 676ead61-3d97-4f23-b616-c647d590bc8f
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: f82e9bd4-f7b6-492d-8e02-593e74fa1058
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e3f32b526d8a619b8bacfc85e7dce4a7bf5d23a7
+source-git-commit: a430c4de89bde3b907d342106465d3b5a7c75cc8
+workflow-type: tm+mt
+source-wordcount: '856'
+ht-degree: 0%
 
 ---
 
 
-# Versionsinformation för AEM Sites{#aem-sites-release-notes}
+# Versionsinformation om AEM Sites{#aem-sites-release-notes}
 
-Se följande för förbättringar av AEM Sites 6.5 i detalj:
+Se följande för AEM Sites 6.5-förbättringar i detalj:
 
 ## Utveckling av komponenter och mallar {#component-amp-template-development}
 
@@ -73,17 +76,17 @@ Se följande för förbättringar av AEM Sites 6.5 i detalj:
 
 ## Content Fragments &amp; Editor {#content-fragments-amp-editor}
 
-* Ny [anteckningsruta](/help/assets/content-fragments-variations.md#viewing-editing-deleting-annotations) i Content Fragment Editor för att göra allmänna kommentarer och se kommentarer som görs i texten (visas även i tidslinjen)
-* Möjlighet att ange standardinnehållstypen för ett flerradigt textelement i en [Content Fragment-modell](/help/assets/content-fragments-models.md) till enkel text, formaterad text eller markering
-* Lägga till [kommentarer/anteckningar](/help/assets/content-fragments-variations.md#annotating-a-content-fragment) genom att markera text i textredigeraren (helskärmsläge)
-* [Jämför versioner](/help/assets/content-fragments-managing.md#comparing-fragment-versions) av ett innehållsfragment sida vid sida via referensspåret
+* Ny [anteckningsruta](/help/assets/content-fragments/content-fragments-variations.md#viewing-editing-deleting-annotations) i Content Fragment Editor för att göra allmänna kommentarer och se kommentarer som görs i texten (visas även i tidslinjen)
+* Möjlighet att ange standardinnehållstypen för ett flerradigt textelement i en [Content Fragment-modell](/help/assets/content-fragments/content-fragments-models.md) till enkel text, formaterad text eller markering
+* Lägga till [kommentarer/anteckningar](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment) genom att markera text i textredigeraren (helskärmsläge)
+* [Jämför versioner](/help/assets/content-fragments/content-fragments-managing.md#comparing-fragment-versions) av ett innehållsfragment sida vid sida via referensspåret
 * Resurserna i hämtningsrapporten visar nu innehållsfragment utifrån detta
 * Lägg till stöd för [innehållsfragment i Assets HTTP API](/help/assets/assets-api-content-fragments.md) via /api.json. Det finns API:er för att skapa, uppdatera, läsa och ta bort innehållsfragment.
 
 ## Experience Fragments {#experience-fragments}
 
 * Förbättrad indexering av [Experience Fragments](/help/sites-authoring/experience-fragments.md), så deras innehåll hittas i sökningen efter sidor där de används
-* Med alternativet [Exportera till mål](/help/sites-administering/experience-fragments-target.md) kan du nu skicka Experience Fragment som JSON (standard är HTML), eller både och
+* Med alternativet [Exportera till Target](/help/sites-administering/experience-fragments-target.md) kan du nu skicka Experience Fragment som JSON (standard är HTML), eller både och
 
 ## Översättning {#translation}
 
@@ -114,7 +117,7 @@ Se följande för förbättringar av AEM Sites 6.5 i detalj:
 >
 >at.js 2.x stöds inte med AEM i den version av AEM 6.5 som finns. Använd den senaste versionen av at.js 1.x
 
-* Integreringen av Adobe Target kan nu använda Target Standard API. I tidigare versioner av AEM används Target Classic HTTP API, som nu är föråldrat.
+* Integreringen av Adobe Target kan nu använda Target Standard-API:t. I tidigare versioner av AEM används Target Classic HTTP API, som nu är föråldrat.
 * Adobe Target `mbox.js` version 63 ingår. Adobe rekommenderar att du byter implementering till `at.js` v1.x.
 * `at.js` version 1.5.0 ingår nu. Adobe rekommenderar att du använder [Adobe Experience Platform Launch](https://www.adobe.com/experience-platform/launch.html) för att distribuera `at.js` v1.x till webbplatsen.
 
@@ -137,4 +140,4 @@ Se sidan [Versionsinformation för webbgrupper](../release-notes/communities-rel
 * Uppspelning med datapriser i en sekvenskanal
 * Skapa projektstruktur automatiskt med hjälp av en källfil, t.ex. Excel-blad
 
-Mer information om ändringar av AEM-skärmar finns i versionsinformationen i användarhandboken för [AEM-skärmar](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html).
+Mer information om ändringar av AEM Screens finns i versionsinformationen i användarhandboken [för](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html)AEM Screens.
