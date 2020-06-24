@@ -1,20 +1,20 @@
 ---
 title: Användarhandbok för Adobe Experience Manager 6.5 Assets
 seo-title: Användarhandbok för Adobe Experience Manager 6.5 Assets
-description: Den här guiden täcker alla Experience Manager Assets-uppgifter, till exempel hur du skapar, hanterar, levererar och optimerar digitala resurser.
-seo-description: Omfattar alla uppgifter som rör Experience Manager Assets, till exempel hur man skapar, hanterar, levererar och optimerar digitala resurser.
+description: Den här guiden täcker alla Experience Manager Assets-uppgifter, t.ex. hur du skapar, hanterar, levererar och optimerar digitala resurser.
+seo-description: täcker alla Experience Manager Assets-uppgifter, t.ex. hur man skapar, hanterar, levererar och optimerar digitala resurser.
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
 workflow-type: tm+mt
 source-wordcount: '378'
-ht-degree: 9%
+ht-degree: 11%
 
 ---
 
 
 # Användarhandbok för Adobe Experience Manager 6.5 Assets
 
-Den här guiden täcker alla Experience Manager Assets-uppgifter, till exempel hur du skapar, hanterar, levererar och optimerar digitala resurser.
+Den här guiden täcker alla Experience Manager Assets-uppgifter, t.ex. hur du skapar, hanterar, levererar och optimerar digitala resurser.
 
 ## Viktiga Experience Manager-artiklar
 
@@ -30,15 +30,15 @@ Den här guiden täcker alla Experience Manager Assets-uppgifter, till exempel h
 | [Versionsinformation](/help/release-notes/home.md) | Innehåller viktig information om den senaste versionen, inklusive nyheter, plattformar som stöds, borttagna och borttagna funktioner samt kända fel |
 | [Användarhandbok för formulär](/help/forms/home.md) | Den här guiden beskriver hur du skapar, hanterar, publicerar och uppdaterar digitala formulär. |
 | [Användarhandbok för Communities](/help/communities/home.md) | Skapa onlineupplevelser som forum, användargrupper, utbildningsresurser och andra sociala funktioner. |
-| [Administratörshandbok](/help/sites-administering/home.md) | Lär dig hur du administrerar Experience Manager. |
-| [Redigeringshandbok](/help/sites-authoring/home.md) | I den här guiden förklaras begreppen för utveckling i Experience Manager. |
-| [Användargränssnittets skrivguide](/help/sites-classic-ui-authoring/home.md) | I den här guiden förklaras begreppen för utveckling i Experience Manager i det klassiska användargränssnittet. |
+| [Administratörshandbok](/help/sites-administering/home.md) | Förstå hur du administrerar Experience Manager. |
+| [Redigeringshandbok](/help/sites-authoring/home.md) | I den här guiden förklaras koncepten för redigering i Experience Manager. |
+| [Användargränssnittets skrivguide](/help/sites-classic-ui-authoring/home.md) | I den här handboken förklaras begreppen för att skapa i Experience Manager i det klassiska användargränssnittet. |
 | [Användarhandbok för skärmar](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html) | Lär dig mer om den digitala signeringslösningen för att publicera dynamiska och interaktiva digitala upplevelser. |
 | [Distribuera användarhandbok](/help/sites-deploying/home.md) | Den här guiden visar grunderna i Experience Manager. |
-| [Utveckla användarhandbok](/help/sites-developing/home.md) | Lär dig hur du bygger ut Experience Manager-instansen. |
-| [Hantera användarhandbok](/help/managing/home.md) | I den här guiden beskrivs hur du hanterar ett Experience Manager-projekt. |
+| [Utveckla användarhandbok](/help/sites-developing/home.md) | Lär dig hur du skapar din Experience Manager-instans. |
+| [Hantera användarhandbok](/help/managing/home.md) | I den här guiden beskrivs hur du hanterar ett Experience Manager-projekt utan problem. |
 | [Användarhandbok för mobiler](/help/mobile/home.md) | I den här guiden beskrivs hur du skapar och hanterar innehåll för mobilprogram. |
-| [Experience Manager Livefyre](https://marketing.adobe.com/resources/help/en_US/livefyre/home.html) | Den här guiden visar hur du delar användargenererat innehåll med [!DNL Livefyre]. |
+| [Experience Manager Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/home.html) | Den här guiden visar hur du delar användargenererat innehåll med [!DNL Livefyre]. |
 
 ## Viktiga Experience Manager-resurser
 
@@ -46,7 +46,7 @@ Den här guiden täcker alla Experience Manager Assets-uppgifter, till exempel h
 * [GDPR-efterlevnad](/help/managing/data-protection-and-privacy.md)
 * [Experience League](https://guided.adobe.com/?mv=other#recommended/solutions/experience-manager)
 * [Experience Manager Assets Community Forum](https://experienceleaguecommunities.adobe.com/t5/Adobe-Experience-Manager-Assets/ct-p/experience-manager-assets-community)
-* [Användarhandbok för Dispatcher](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)
+* [Dispatcher Användarhandbok](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)
 * [Användarhandbok för HTML](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)
 * [Användarhandbok för kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
