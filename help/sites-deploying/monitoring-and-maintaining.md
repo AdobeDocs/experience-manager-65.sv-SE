@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4244ebbe8ceb3bef8d47e1e32817edbd11db4d9a
+source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
+workflow-type: tm+mt
+source-wordcount: '5899'
+ht-degree: 0%
 
 ---
 
@@ -194,12 +197,14 @@ Modereringsåtgärder registreras här.
    * `error.log`
 Felmeddelanden (av varierande allvarlighetsgrad) registreras här.
 
-   * [ Den `ImageServer-<PortId>-yyyy>-<mm>-<dd>.log`](https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/c_image_server_log.html)här loggen används bara om [!DNL Dynamic Media] är aktiverad. Det innehåller statistik och analysinformation som används för att analysera beteendet i den interna ImageServer-processen.
+   * [ `ImageServer-<PortId>-yyyy>-<mm>-<dd>.log`](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/config-admin/server-logging/c-image-server-log.html)
+Den här loggen används bara om den [!DNL Dynamic Media] är aktiverad. Det innehåller statistik och analysinformation som används för att analysera beteendet i den interna ImageServer-processen.
 
    * `request.log`
 Varje åtkomstbegäran registreras här tillsammans med svaret.
 
-   * [ Den `s7access-<yyyy>-<mm>-<dd>.log`](https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/c_Access_Log.html)här loggen används bara om [!DNL Dynamic Media] är aktiverad. I s7access-loggen registreras alla förfrågningar som gjorts till [!DNL Dynamic Media] genom `/is/image` och `/is/content`.
+   * [ `s7access-<yyyy>-<mm>-<dd>.log`](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/config-admin/server-logging/c-access-log.html)
+Den här loggen används bara om den [!DNL Dynamic Media] är aktiverad. I s7access-loggen registreras alla förfrågningar som gjorts till [!DNL Dynamic Media] genom `/is/image` och `/is/content`.
 
    * `stderr.log`
 Innehåller felmeddelanden, återigen av varierande allvarlighetsgrad, som genereras under start. Som standard är loggnivån inställd på `Warning` ( `WARN`)
@@ -227,7 +232,7 @@ Om du vill aktivera felsökningsloggnivån för en loggare anger du egenskapen `
 >[!CAUTION]
 Lämna inte loggen på felsökningsloggnivån längre än nödvändigt eftersom den genererar många loggposter och förbrukar därmed resurser.
 
-En rad i felsökningsfilen börjar oftast med DEBUG och anger sedan loggnivån, installationsåtgärden och loggmeddelandet. Exempel:
+En rad i felsökningsfilen börjar oftast med DEBUG och anger sedan loggnivån, installationsåtgärden och loggmeddelandet. Till exempel:
 
 ```shell
 DEBUG 3 WebApp Panel: WebApp successfully deployed
@@ -255,7 +260,7 @@ I vissa fall kanske du vill skapa en anpassad loggfil med en annan loggnivå. Du
 
       Där `<*identifier*>` ersätts av fri text som du (måste) anger för att identifiera förekomsten (du kan inte utelämna den här informationen).
 
-      Exempel: `org.apache.sling.commons.log.LogManager.factory.config-MINE`
+      Till exempel, `org.apache.sling.commons.log.LogManager.factory.config-MINE`
 
    * Typ: `sling:OsgiConfig`
    >[!NOTE]
@@ -328,7 +333,7 @@ I vissa fall kanske du vill skapa en anpassad loggfil med en annan loggnivå. Du
 
    * Namn: `org.apache.sling.commons.log.LogManager.factory.writer-<*identifier*>` (eftersom detta är ett skrivprogram)
 
-      Precis som med Logger `<*identifier*>` ersätts den av fri text som du (måste) anger för att identifiera instansen (du kan inte utelämna den här informationen). Exempel: `org.apache.sling.commons.log.LogManager.factory.writer-MINE`
+      Precis som med Logger `<*identifier*>` ersätts den av fri text som du (måste) anger för att identifiera instansen (du kan inte utelämna den här informationen). Till exempel, `org.apache.sling.commons.log.LogManager.factory.writer-MINE`
 
    * Typ: `sling:OsgiConfig`
    >[!NOTE]
@@ -898,11 +903,11 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
 Om du vill se det totala antalet sidaktiveringar sedan serverinstallationen använder en databasfråga, via CRXDE - Tools - Query:
 
-* **Typ**`XPath`
+* **Typ** `XPath`
 
-* **Bana**`/`
+* **Bana** `/`
 
-* **Fråga**`//element(*, cq:AuditEvent)[@cq:type='Activate']`
+* **Fråga** `//element(*, cq:AuditEvent)[@cq:type='Activate']`
 
 Beräkna sedan medelvärdet genom att beräkna antalet dagar som har gått sedan installationen.
 
@@ -910,21 +915,21 @@ Beräkna sedan medelvärdet genom att beräkna antalet dagar som har gått sedan
 
 Om du vill se antalet sidor som för närvarande finns på servern använder du en databasfråga; via CRXDE - Tools - Query:
 
-* **Typ**`XPath`
+* **Typ** `XPath`
 
-* **Bana**`/`
+* **Bana** `/`
 
-* **Fråga**`//element(*, cq:Page)`
+* **Fråga** `//element(*, cq:Page)`
 
 #### Om du använder MSM, vilket är det genomsnittliga antalet utrullningar per månad? {#if-you-use-msm-what-is-the-average-number-of-rollouts-per-month}
 
 För att fastställa det totala antalet utrullningar sedan installationen använder du en databasfråga. via CRXDE - Tools - Query:
 
-* **Typ**`XPath`
+* **Typ** `XPath`
 
-* **Bana**`/`
+* **Bana** `/`
 
-* **Fråga**`//element(*, cq:AuditEvent)[@cq:type='PageRolledOut']`
+* **Fråga** `//element(*, cq:AuditEvent)[@cq:type='PageRolledOut']`
 
 Beräkna medelvärdet genom att beräkna antalet månader som har gått sedan installationen.
 
@@ -932,11 +937,11 @@ Beräkna medelvärdet genom att beräkna antalet månader som har gått sedan in
 
 För att fastställa det totala antalet live-kopior som gjorts sedan installationen använder du en databasfråga. via CRXDE - Tools - Query:
 
-* **Typ**`XPath`
+* **Typ** `XPath`
 
-* **Bana**`/`
+* **Bana** `/`
 
-* **Fråga**`//element(*, cq:LiveSyncConfig)`
+* **Fråga** `//element(*, cq:LiveSyncConfig)`
 
 Använd återigen antalet månader som har gått sedan installationen för att beräkna genomsnittet.
 
@@ -944,9 +949,9 @@ Använd återigen antalet månader som har gått sedan installationen för att b
 
 Om du vill se hur många DAM-resurser du för närvarande har använder du en databasfråga; via CRXDE - Tools - Query:
 
-* **Typ**`XPath`
-* **Bana**`/`
-* **Fråga**`/jcr:root/content/dam//element(*, dam:Asset)`
+* **Typ** `XPath`
+* **Bana** `/`
+* **Fråga** `/jcr:root/content/dam//element(*, dam:Asset)`
 
 #### Vilken är den genomsnittliga storleken på resurserna? {#what-is-the-average-size-of-the-assets}
 
@@ -967,17 +972,17 @@ Så här avgör du den totala storleken på `/var/dam` mappen:
 
 Om du vill se antalet mallar som för närvarande finns på servern använder du en databasfråga. via CRXDE - Tools - Query:
 
-* **Typ**`XPath`
-* **Bana**`/`
-* **Fråga**`//element(*, cq:Template)`
+* **Typ** `XPath`
+* **Bana** `/`
+* **Fråga** `//element(*, cq:Template)`
 
 #### Hur många komponenter används för närvarande? {#how-many-components-are-currently-used}
 
 Om du vill se antalet komponenter som för närvarande finns på servern använder du en databasfråga. via CRXDE - Tools - Query:
 
-* **Typ**`XPath`
-* **Bana**`/`
-* **Fråga**`//element(*, cq:Component)`
+* **Typ** `XPath`
+* **Bana** `/`
+* **Fråga** `//element(*, cq:Component)`
 
 #### Hur många förfrågningar per timme har du på författarsystemet vid maximal tid? {#how-many-requests-per-hour-do-you-have-on-the-author-system-at-peak-time}
 
@@ -1050,7 +1055,7 @@ Om det inte finns tillräckligt med diskutrymme på datorn eller om disktrassel 
    * [Konfiguration av Apache Sling-loggning](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingconfiguration)
    * [CQ HTML Library Manager](/help/sites-deploying/osgi-configuration-settings.md#daycqhtmllibrarymanager)
    * [CQ WCM-felsökningsfilter](/help/sites-deploying/osgi-configuration-settings.md#daycqwcmdebugfilter)
-   * [Loggare](/help/sites-deploying/monitoring-and-maintaining.md#activating-the-debug-log-level)[](/help/sites-deploying/configuring.md#loggersandwritersforindividualservices)
+   * [Loggare](/help/sites-deploying/monitoring-and-maintaining.md#activating-the-debug-log-level) [](/help/sites-deploying/configuring.md#loggersandwritersforindividualservices)
 
 * Om och hur du har konfigurerat [versionsrensning](/help/sites-deploying/version-purging.md)
 * Kunskapsbasen:
