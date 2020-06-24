@@ -10,7 +10,10 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: f50150af-deff-4c29-bfe0-1cfc67b29d51
 translation-type: tm+mt
-source-git-commit: 5597fb39500ac1f85d03263bfa1e5239d35d2a2c
+source-git-commit: 307a1db2e5bbb72d730c89ba14f5ce02b96c108d
+workflow-type: tm+mt
+source-wordcount: '779'
+ht-degree: 3%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 5597fb39500ac1f85d03263bfa1e5239d35d2a2c
 
 ## Introduktion {#introduction}
 
-Vi.Retail är en referensimplementering och exempelinnehåll som illustrerar det rekommenderade sättet att skapa en onlinenärvaro med Adobe Experience Manager.
+Vi.Retail är en referensimplementering och exempelinnehåll som illustrerar det rekommenderade sättet att konfigurera en onlinenärvaro med Adobe Experience Manager.
 
 Vi.Retail använder de senaste AEM-teknikerna som HTML, responsiva layouter, redigerbara mallar, kärnkomponenter med mera.
 
@@ -38,8 +41,8 @@ Som AEM:s standardimplementering av referenser presenterar vi några av de mest 
 | [eCommerce-funktioner](/help/sites-developing/ecommerce.md) | Innehåller en produktkatalog |  |
 | [Communities](/help/communities/overview.md) | Låt besökarna delta i communitydiskussioner, läsa bloggar och mycket mer |  |
 | [Kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) | Alla komponenter baseras på de nya kärnkomponenterna och är mer användbara och användarkonfigurerbara. | [Prova!](/help/sites-developing/we-retail-core-components.md) |
-| [Innehållsfragment](/help/assets/content-fragments.md) | Avsnittet&quot;We.Retail Experiences&quot; visar möjligheterna att återanvända innehåll via innehållsfragment. | [Prova dem!](/help/sites-developing/we-retail-content-fragments.md) |
-| [Upplevelsefragment](/help/sites-authoring/experience-fragments.md) | Ett Experience Fragment är en grupp med en eller flera komponenter, inklusive innehåll och layout, som kan refereras till på sidor. | [Prova dem!](/help/sites-developing/we-retail-experience-fragments.md) |
+| [Innehållsfragment](/help/assets/content-fragments/content-fragments.md) | Avsnittet&quot;We.Retail Experiences&quot; visar möjligheterna att återanvända innehåll via innehållsfragment. | [Prova dem!](/help/sites-developing/we-retail-content-fragments.md) |
+| [Experience Fragments](/help/sites-authoring/experience-fragments.md) | Ett Experience Fragment är en grupp med en eller flera komponenter, inklusive innehåll och layout, som kan refereras till på sidor. | [Prova dem!](/help/sites-developing/we-retail-experience-fragments.md) |
 
 ## Komma igång {#getting-started}
 
@@ -81,7 +84,7 @@ Tabellen nedan ger en översikt över de viktigaste funktionerna som är tillgä
 |---|---|---|
 | Globaliserad webbplatsstruktur | Språkmallsidor som live-kopieras till landsspecifika webbplatser | Inte tillgängligt |
 | Innehållsfragment | Tillgänglig | Inte tillgängligt |
-| Upplevelsefragment | Tillgänglig | Inte tillgängligt |
+| Experience Fragments | Tillgänglig | Inte tillgängligt |
 | Responsiv layout | För alla sidor | Endast Geometrixx-media |
 | Redigerbara mallar | För alla sidor | Inte tillgängligt |
 | HTL | Alla komponenter | Begränsad |
