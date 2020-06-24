@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: b210f5d7-1d68-49ee-ade7-667c6ab11d2b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3dd3f700cd473570889f8d4ced09281a577e2ef8
+source-git-commit: 9eb8f3921e7d485ca4eb035cd04a9d8731dd6b06
+workflow-type: tm+mt
+source-wordcount: '6229'
+ht-degree: 0%
 
 ---
 
@@ -51,7 +54,7 @@ Gränssnittet Hälsorapporter finns på **Verktyg** - **Åtgärder** - **Hälsor
 
 ![chlimage_1-116](assets/chlimage_1-116.png)
 
-Kortsystemet visar tre möjliga lägen: **OK**, **VARNA** och **KRITISK**. Lägen är ett resultat av regler och tröskelvärden, som kan konfigureras genom att du håller muspekaren över kortet och sedan klickar på kugghjulsikonen i åtgärdsfältet:
+Kortsystemet visar tre möjliga lägen: **OK**, **WARN** och **CRITICAL**. Lägen är ett resultat av regler och tröskelvärden, som kan konfigureras genom att du håller muspekaren över kortet och sedan klickar på kugghjulsikonen i åtgärdsfältet:
 
 ![chlimage_1-117](assets/chlimage_1-117.png)
 
@@ -62,7 +65,7 @@ Det finns två typer av hälsokontroller i AEM 6:
 1. Individuella hälsokontroller
 1. Sammansatta hälsokontroller
 
-En **enskild hälsokontroll** är en enda hälsokontroll som motsvarar ett statuskort. Enskilda hälsokontroller kan konfigureras med regler eller tröskelvärden och de kan ge ett eller flera tips och länkar för att lösa identifierade hälsoproblem. Låt oss ta kontrollen &quot;Loggfel&quot; som ett exempel: Om det finns FEL-poster i instansloggarna finns de på informationssidan i hälsokontrollen. Längst upp på sidan finns en länk till &quot;Loggmeddelandeanalyseraren&quot; i avsnittet Diagnosverktyg, där du kan analysera felen mer ingående och konfigurera om loggarna.
+En **enskild hälsokontroll** är en enda hälsokontroll som motsvarar ett statuskort. Enskilda hälsokontroller kan konfigureras med regler eller tröskelvärden och de kan ge ett eller flera tips och länkar för att lösa identifierade hälsoproblem. Låt oss ta kontrollen &quot;Loggfel&quot; som ett exempel: Om det finns FEL-poster i instansloggarna finns de på informationssidan i hälsokontrollen. Längst upp på sidan finns en länk till &quot;Loggmeddelandeanalyseraren&quot; i avsnittet Diagnosverktyg, där du kan analysera felen mer detaljerat och konfigurera om loggarna.
 
 En **sammansatt hälsokontroll** är en kontroll som samlar in information från flera enskilda kontroller.
 
@@ -78,7 +81,7 @@ Du skapar en enskild hälsokontroll i två steg: implementera en kontroll av ski
 
 1. För att kunna skapa en Sling Health Check måste du skapa en OSGI-komponent som implementerar Sling HealthCheck-gränssnittet. Du lägger till den här komponenten i ett paket. Komponentens egenskaper identifierar hälsokontrollen fullständigt. När komponenten har installerats skapas en JMX MBean automatiskt för hälsokontrollen. Mer information finns i dokumentationen om [hälsokontroll](https://sling.apache.org/documentation/bundles/sling-health-check-tool.html) vid sjösling.
 
-   Exempel på en Sling Health Check-komponent, skriven med OSGI-tjänstkomponentanteckningar:
+   Exempel på en Sling Health Check-komponent, skriven med OSGI-tjänstkomponentsanteckningar:
 
    ```java
    @Component(service = HealthCheck.class,
@@ -104,14 +107,14 @@ Du skapar en enskild hälsokontroll i två steg: implementera en kontroll av ski
 
    Följande egenskaper ska anges för den nya noden:
 
-   * **** Namn: `sling:resourceType`
+   * **Namn:** `sling:resourceType`
 
-      * **** Typ: `String`
-      * **** Värde: `granite/operations/components/mbean`
-   * **** Namn: `resource`
+      * **Typ:** `String`
+      * **Värde:** `granite/operations/components/mbean`
+   * **Namn:** `resource`
 
-      * **** Typ: `String`
-      * **** Värde: `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/exampleHealthCheck`
+      * **Typ:** `String`
+      * **Värde:** `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/exampleHealthCheck`
    >[!NOTE]
    >
    >Resurssökvägen ovan skapas enligt följande: Om huvudnamnet för din hälsokontroll är &quot;test&quot; lägger du till &quot;test&quot; i slutet av sökvägen `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck`
@@ -122,7 +125,7 @@ Du skapar en enskild hälsokontroll i två steg: implementera en kontroll av ski
 
    >[!NOTE]
    >
-   >Kontrollera att följande egenskaper har angetts till true för `/apps/settings/granite/operations/hc` sökvägen:
+   >Kontrollera att följande egenskaper är angivna till true för `/apps/settings/granite/operations/hc` banan:
    >
    >
    >`sling:configCollectionInherit`
@@ -146,10 +149,10 @@ En sammansatt hälsokontroll har till uppgift att sammanställa ett antal enskil
 
    Syftet med varje konfigurationsegenskap är följande:
 
-   * **** Namn (hc.name): Namnet på den sammansatta hälsokontrollen. Ett beskrivande namn rekommenderas.
-   * **** Taggar (hc.tags): Taggarna för den här hälsokontrollen. Om den här sammansatta hälsokontrollen är avsedd att ingå i en annan sammansatt hälsokontroll (till exempel i en hierarki av hälsokontroller) lägger du till de taggar som den sammansatta kontrollen är relaterad till.
-   * **** MBean-namn (hc.mbean.name): Namnet på den böna som ska ges till JMX MBean för den här sammansatta hälsokontrollen.
-   * **** Filtertaggar (filter.tags): Detta är en egenskap som är specifik för sammansatta hälsokontroller. Det här är de taggar som det sammansatta objektet ska aggregera. Den sammansatta hälsokontrollen sammanfogas under sin grupp med alla hälsokontroller som har en tagg som matchar någon av filtertaggarna i den sammansatta samlingen. En sammansatt hälsokontroll med filtertaggarna **test** och **check** sammanställer till exempel alla enskilda och sammansatta hälsokontroller som har någon av **test** - och **check** -taggarna i taggegenskapen ( `hc.tags`).
+   * **Namn (hc.name):** Namnet på den sammansatta hälsokontrollen. Ett beskrivande namn rekommenderas.
+   * **Taggar (hc.tags):** Taggarna för den här hälsokontrollen. Om den här sammansatta hälsokontrollen är avsedd att ingå i en annan sammansatt hälsokontroll (till exempel i en hierarki av hälsokontroller) lägger du till de taggar som den sammansatta kontrollen är relaterad till.
+   * **MBean-namn (hc.mbean.name):** Namnet på den böna som ska ges till JMX MBean för den här sammansatta hälsokontrollen.
+   * **Filtertaggar (filter.tags):** Detta är en egenskap som är specifik för sammansatta hälsokontroller. Det här är de taggar som det sammansatta objektet ska aggregera. Den sammansatta hälsokontrollen sammanfogas under sin grupp med alla hälsokontroller som har en tagg som matchar någon av filtertaggarna i den sammansatta samlingen. En sammansatt hälsokontroll med filtertaggarna **test** och **check** sammanställer till exempel alla enskilda och sammansatta hälsokontroller som har någon av **test** - och **check** -taggarna i taggegenskapen ( `hc.tags`).
    >[!NOTE]
    >
    >En ny JMX Mbean skapas för varje ny konfiguration av den sammansatta hälsokontrollen för Apache Sling.**
@@ -158,19 +161,19 @@ En sammansatt hälsokontroll har till uppgift att sammanställa ett antal enskil
 
    Om du till exempel har skapat en konfiguration och angett värdet **hc.mbean.name** till **diskus ålder**, ser konfigurationsnoderna ut så här:
 
-   * **** Namn: `Composite Health Check`
+   * **Namn:** `Composite Health Check`
 
-      * **** Typ: `nt:unstructured`
+      * **Typ:** `nt:unstructured`
    Med följande egenskaper:
 
-   * **** Namn: `sling:resourceType`
+   * **Namn:** `sling:resourceType`
 
-      * **** Typ: `String`
-      * **** Värde: `granite/operations/components/mbean`
-   * **** Namn: `resource`
+      * **Typ:** `String`
+      * **Värde:** `granite/operations/components/mbean`
+   * **Namn:** `resource`
 
-      * **** Typ: `String`
-      * **** Värde: `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/diskusage`
+      * **Typ:** `String`
+      * **Värde:** `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/diskusage`
    >[!NOTE]
    >
    >Om du skapar enskilda hälsokontroller som logiskt sett hör till en sammansatt kontroll som redan finns på kontrollpanelen som standard, hämtas de automatiskt och grupperas under respektive sammansatta kontroll. På grund av detta behöver du inte skapa en ny konfigurationsnod för dessa kontroller.
@@ -226,7 +229,7 @@ En sammansatt hälsokontroll har till uppgift att sammanställa ett antal enskil
        <li>returnerar OK-status om det är mindre än 45 minuter sedan </li>
       </ul> </li>
      <li>om inget av dessa villkor uppfylls returneras OK-statusen</li>
-    </ul> <p>Både statuströskelvärdena Kritisk och Varna är konfigurerbara. Mönstret för den här hälsokontrollen är <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DasyncIndexHealthCheck%2Ctype%3DHealthCheck">org.apache.sling.healthCheck:name=asyncIndexHealthCheck,type=HealthCheck</a>.</p> <p><strong>Obs! Den </strong>här hälsokontrollen är tillgänglig med AEM 6.4 och har backporterats till AEM 6.3.0.1.</p> </td>
+    </ul> <p>Både statuströskelvärdena Kritisk och Varna är konfigurerbara. Mönstret för den här hälsokontrollen är <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DasyncIndexHealthCheck%2Ctype%3DHealthCheck">org.apache.sling.healthCheck:name=asyncIndexHealthCheck,type=HealthCheck</a>.</p> <p><strong>Obs! </strong>Den här hälsokontrollen är tillgänglig med AEM 6.4 och har backporterats till AEM 6.3.0.1.</p> </td>
   </tr>
   <tr>
    <td>Stora Lucene-index</td>
@@ -234,7 +237,7 @@ En sammansatt hälsokontroll har till uppgift att sammanställa ett antal enskil
     <ul>
      <li>en varningsstatus om det finns ett index med mer än 1 miljard dokument</li>
      <li>en kritisk status om det finns ett index med mer än 1,5 miljarder dokument</li>
-    </ul> <p>Tröskelvärdena kan konfigureras och MBean för hälsokontrollen är <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DlargeIndexHealthCheck%2Ctype%3DHealthCheck">org.apache.sling.hälsocheck:name=largeIndexHealthCheck,type=HealthCheck.</a></p> <p><strong>Obs! Den </strong>här kontrollen är tillgänglig med AEM 6.4 och har backporterats till AEM 6.3.2.0.</p> </td>
+    </ul> <p>Tröskelvärdena kan konfigureras och MBean för hälsokontrollen är <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DlargeIndexHealthCheck%2Ctype%3DHealthCheck">org.apache.sling.hälsocheck:name=largeIndexHealthCheck,type=HealthCheck.</a></p> <p><strong>Obs! </strong>Den här kontrollen är tillgänglig med AEM 6.4 och har backporterats till AEM 6.3.2.0.</p> </td>
   </tr>
   <tr>
    <td>Systemunderhåll</td>
@@ -412,7 +415,7 @@ Exempel:
 * Om du planerar att hämta alla **FELMEDDELANDEN** krävs ingen konfiguration. Alla FELmeddelanden hämtas som standard.
 * Om du planerar att hämta alla **FEL**-, **WARN** - och **INFO** -meddelanden ska loggningsnamnet anges som: &quot;**root**&quot; och loggningsnivån till: **INFORMATION**.
 
-* Om du planerar att hämta alla meddelanden som kommer från ett visst paket (till exempel com.adobe.granite) ska loggningsnamnet anges till: &quot;com.adobe.granite&quot; och loggningsnivån till: **DEBUG** (då hämtas alla **FEL**-, **VARN**-, **INFO** - och **DEBUG** -meddelanden), vilket visas i bilden nedan.
+* Om du planerar att hämta alla meddelanden som kommer från ett visst paket (till exempel com.adobe.granite) ska loggningsnamnet anges till: &quot;com.adobe.granite&quot; och loggningsnivån till: **FELSÖK** (då hämtas alla **FEL**-, **VARN**-, **INFO** - och **DEBUG** -meddelanden) enligt bilden nedan.
 
 ![chlimage_1-121](assets/chlimage_1-121.png)
 
@@ -459,7 +462,7 @@ Som standard hämtas de långsammaste 20 sidbegäranden, men gränsen kan ändra
 
 ### Frågeprestanda {#query-performance}
 
-På sidan Frågeprestanda kan du analysera de långsammaste frågorna som har utförts av systemet. Denna information tillhandahålls av databasen i en JMX Mbean. JMX Mbean tillhandahåller den här informationen i Jackrabbit, medan den i Oak-databasen finns i `com.adobe.granite.QueryStat``org.apache.jackrabbit.oak.QueryStats.`
+På sidan Frågeprestanda kan du analysera de långsammaste frågorna som har utförts av systemet. Denna information tillhandahålls av databasen i en JMX Mbean. JMX Mbean tillhandahåller den här informationen i Jackrabbit, medan den i Oak-databasen finns i `com.adobe.granite.QueryStat` `org.apache.jackrabbit.oak.QueryStats.`
 
 Sidan visar:
 
@@ -512,7 +515,7 @@ Gränssnittet kan användas för att filtrera index i tabellen genom att skriva 
 
 ### Download Status ZIP {#download-status-zip}
 
-Detta aktiverar nedladdningen av en zip som innehåller användbar information om systemstatus och konfiguration. Arkivet innehåller instanskonfigurationer, en lista över paket, OSGI, Sling-statistik och statistik. Detta kan resultera i en stor fil. Du kan minska effekten av stora statusfiler genom att använda **fönstret** Download Status ZIP. **Du kommer åt fönstret från: AEM > Verktyg > Åtgärder > Diagnos > Download Status ZIP.**
+Detta aktiverar nedladdningen av en zip som innehåller användbar information om systemstatus och konfiguration. Arkivet innehåller instanskonfigurationer, en lista över paket, OSGI, Sling-statistik och statistik. Detta kan resultera i en stor fil. Du kan minska effekten av stora statusfiler genom att använda **fönstret** Download Status ZIP. Du kommer åt fönstret från:**AEM > Verktyg > Åtgärder > Diagnos > Download Status ZIP.**
 
 I det här fönstret kan du välja vad som ska exporteras (loggfiler och/eller tråddumpar) och antalet loggdagar som ska inkluderas i hämtningen i förhållande till det aktuella datumet.
 
@@ -626,31 +629,31 @@ Anpassade underhållsåtgärder kan implementeras som OSGi-tjänster. Eftersom i
    <td><strong>Typ</strong></td>
   </tr>
   <tr>
-   <td>granite.Maintenance.isStoppable</td>
+   <td>granite.maintenance.isStoppable</td>
    <td>Booleskt attribut som definierar om aktiviteten kan stoppas av användaren. Om en uppgift deklarerar att den kan avbrytas måste den under körningen kontrollera om den har stoppats och sedan vidta åtgärder i enlighet med detta. Standardvärdet är false.</td>
    <td>true</td>
-   <td>valfritt</td>
+   <td>Valfritt</td>
   </tr>
   <tr>
-   <td>granit.underhåll.mandatory</td>
+   <td>granite.maintenance.mandatory</td>
    <td>Booleskt attribut som definierar om en uppgift är obligatorisk och måste köras regelbundet. Om en uppgift är obligatorisk men inte finns i något aktivt schemafönster visas en hälsokontroll som ett fel. Standardvärdet är false.</td>
    <td>true</td>
-   <td>valfritt</td>
+   <td>Valfritt</td>
   </tr>
   <tr>
-   <td>granite.maint.name</td>
+   <td>granite.maintenance.name</td>
    <td>Ett unikt namn för aktiviteten - det används för att referera till uppgiften. Det här är vanligtvis ett enkelt namn.</td>
    <td>MyMaintenanceTask</td>
    <td>Krävs</td>
   </tr>
   <tr>
-   <td>granite.Maintenance.title</td>
+   <td>granite.maintenance.title</td>
    <td>En titel som visas för den här uppgiften</td>
    <td>Min speciella underhållsuppgift</td>
    <td>Krävs</td>
   </tr>
   <tr>
-   <td>jobb.topics</td>
+   <td>job.topics</td>
    <td>Detta är ett unikt ämne i underhållsaktiviteten.<br /> Jobbhanteringen i Apache Sling startar ett jobb med exakt det här avsnittet för att utföra underhållsaktiviteten. När aktiviteten registreras för det här avsnittet körs den.<br /> Ämnet måste börja med <i>com/adobe/granite/Maintenance/job/</i></td>
    <td>com/adobe/granite/Maintenance/job/MyMaintenanceTask</td>
    <td>Krävs</td>
@@ -728,7 +731,7 @@ Du kan också hämta en `JSON` fil som sammanfattar instrumentpanelsinformatione
     </ul> </td>
   </tr>
   <tr>
-   <td>Underhållsaktiviteter</td>
+   <td>Underhållsåtgärder</td>
    <td>
     <ul>
      <li>en lista över misslyckade uppgifter</li>
@@ -761,7 +764,7 @@ Du kan också hämta en `JSON` fil som sammanfattar instrumentpanelsinformatione
    <td>Ej tillämpligt</td>
   </tr>
   <tr>
-   <td>Instance</td>
+   <td>Instans</td>
    <td>
     <ul>
      <li>AEM-versionen</li>
@@ -879,7 +882,7 @@ Du kan också hämta en `JSON` fil som sammanfattar instrumentpanelsinformatione
    <td>Ej tillämpligt</td>
   </tr>
   <tr>
-   <td>Säkerhetskopiera</td>
+   <td>Säkerhetskopiering</td>
    <td>Visar "Onlinesäkerhetskopiering pågår" om så är fallet.</td>
    <td>Ej tillämpligt</td>
    <td>Ej tillämpligt</td>
