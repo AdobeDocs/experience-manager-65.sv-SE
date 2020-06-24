@@ -8,7 +8,10 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: abcff903-204b-4ab6-87d8-6f0ce63d7b41
 translation-type: tm+mt
-source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
+source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
+workflow-type: tm+mt
+source-wordcount: '757'
+ht-degree: 3%
 
 ---
 
@@ -33,14 +36,14 @@ Du kan distribuera regeluppsättningar i Dynamic Media för att omvandla URL:er.
 
    Se [Ta bort specialtecken från URL-adresser](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/remove-special-characters-urls.html).
 
-När det gäller Dynamic Media kan webbplatser som använder ett XML-baserat system för att hantera resursinformation överföra XML-filer till Dynamic Media. Du kan ange en av dessa filer som förbearbetningsregeluppsättningsfil för att hantera Dynamic Media-resurser. Den här filen omstrukturerar standardformatet för URL-protokoll så att det uppfyller affärslogiken i system som integreras med Dynamic Media. Du anger en XML-fil som ska fungera som sökväg till definitionsfilen för regeluppsättningen.
+När det gäller Dynamic Media kan webbplatser som använder ett XML-baserat system för att hantera resursinformation överföra XML-filer till Dynamic Media. Du kan ange en av dessa filer som förbearbetningsregeluppsättningsfil för att hantera Dynamic Media-resurser. Den här filen omstrukturerar URL-protokollets standardformat så att det uppfyller affärslogiken i system som integreras med Dynamic Media. Du anger en XML-fil som ska fungera som sökväg till definitionsfilen för regeluppsättningen.
 
 >[!CAUTION]
 >
->Var försiktig när du använder linjaler. kan de förhindra att dynamiskt medieinnehåll visas på webbplatsen.
+>Var försiktig när du använder linjaler. kan de förhindra att Dynamic Medias innehåll visas på webbplatsen.
 
 Det finns exempellinjaler som kan hjälpa dig att skapa en egen linjaluppsättning.
-Se Referens för [regeluppsättning](https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/image_catalog/c_rule_set_reference.html).
+Se Referens för [regeluppsättning](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/rule-set-reference/c-rule-set-reference.html).
 
 Precis som när du skapar alla regeluppsättningar måste du se till att XML-filen är giltig innan du överför den med ett XML-valideringsprogram som xmlvalid.
 Se även [Felsökningsregeluppsättningar](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/scene7-ruleset-troubleshooting.html).
@@ -56,7 +59,7 @@ Se även [Använda&quot;resurs&quot; i stället för&quot;is&quot;-bild i en reg
 
 **Så här distribuerar du XML-regeluppsättningar:**
 
-1. Logga in på ditt konto för Dynamic Media Classic:
+1. Logga in på ditt Dynamic Media Classic-konto:
 
    [https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)
 
@@ -64,22 +67,22 @@ Se även [Använda&quot;resurs&quot; i stället för&quot;is&quot;-bild i en reg
 
 1. Överför regeluppsättningsfilen genom att göra följande:
 
-   * Klicka på **[!UICONTROL Överför]** i fältet Global navigering.
-   * Klicka på **[!UICONTROL Bläddra på sidan]** Överför **[!UICONTROL , i det övre vänstra hörnet]**.
-   * I dialogrutan **[!UICONTROL Öppna]** bläddrar du till regeluppsättningsfilen (XML).
-   * Markera filen och klicka sedan på **[!UICONTROL Öppna]**.
-   * Till höger på sidan **[!UICONTROL Överför]** väljer du en målmapp för regeluppsättningsfilen.
-   * Kontrollera att **[!UICONTROL Publicera efter överföring]** är markerat längst ned på sidan.
-   * Klicka på **[!UICONTROL Skicka överföring]** längst ned till höger på sidan.
-   * Klicka på **[!UICONTROL Jobb]** i fältet Global navigering för att kontrollera överföringsjobbets status. När kolumnen **[!UICONTROL Status]** på sidan **[!UICONTROL Jobb]** säger Överför slutförd fortsätter du till nästa steg.
+   * Klicka på i fältet Global navigering **[!UICONTROL Upload]**.
+   * Klicka på på **[!UICONTROL Upload]** sidan i det övre vänstra hörnet **[!UICONTROL Browse]**.
+   * Bläddra till regeluppsättningsfilen (XML) i dialogrutan **[!UICONTROL Open]** .
+   * Markera filen och klicka sedan på **[!UICONTROL Open]**.
+   * On the right side of the **[!UICONTROL Upload]** page, select a destination folder for the rule set file.
+   * Kontrollera att **[!UICONTROL Publish After Uploading]** är markerat i närheten av sidans nederkant.
+   * In the bottom right corner of the page, click **[!UICONTROL Submit Upload]**.
+   * Klicka på i fältet Global navigering för **[!UICONTROL Jobs]** att kontrollera överföringsjobbets status. Fortsätt till nästa steg när **[!UICONTROL Status]** kolumnen på **[!UICONTROL Job]** sidan visar Överför klar.
 
-1. Klicka på **[!UICONTROL Inställningar > Programinställningar > Publiceringsinställningar > Bildserver]** i navigeringsfältet uppe på sidan.
-1. Gå till gruppen **[!UICONTROL Kataloghantering]** på **[!UICONTROL Image Server Publish]** -sidan och leta reda på sökvägen **[!UICONTROL till]** regeluppsättningsdefinitionsfilen. Klicka sedan på **[!UICONTROL Välj]**.
-1. På sidan **[!UICONTROL Välj XML (Rule Set Definition File)]** bläddrar du till regeluppsättningsfilen och klickar sedan på **[!UICONTROL Välj]** i det nedre högra hörnet på sidan.
-1. Klicka på **[!UICONTROL Stäng]** i det nedre högra hörnet på sidan Inställningar.
+1. Klicka på i navigeringsfältet uppe på sidan **[!UICONTROL Setup > Application Setup > Publish Setup > Image Server]**.
+1. På sidan **[!UICONTROL Image Server Publish]**, under gruppen **[!UICONTROL Catalog Management]**, letar du upp **[!UICONTROL Rule Set Definition File Path]** och klickar sedan på **[!UICONTROL Select]**.
+1. På sidan **[!UICONTROL Select Rule Set Definition File (XML)]** bläddrar du till regeluppsättningsfilen och klickar sedan på **[!UICONTROL Select]** i den nedre högra hörnet av sidan.
+1. In the lower-right corner of the Setup page, click **[!UICONTROL Close]**.
 1. Kör ett Image Server-publiceringsjobb.
 
-   Regeluppsättningsvillkoren tillämpas på begäranden till dynamiska mediabildsservrar.
+   Regeluppsättningsvillkoren används på begäranden till Dynamic Media Image Servers.
 
    Om du gör ändringar i regeluppsättningsfilen tillämpas ändringarna omedelbart när du överför och publicerar den uppdaterade regeluppsättningsfilen igen.
 
