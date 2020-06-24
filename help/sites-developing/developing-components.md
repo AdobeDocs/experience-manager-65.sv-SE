@@ -12,7 +12,10 @@ discoiquuid: 8cdb6db4-adaa-4eda-af7d-310a0b44b80b
 docset: aem65
 legacypath: /content/docs/en/aem/6-2/develop/components/components-touch-optimized
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: a430c4de89bde3b907d342106465d3b5a7c75cc8
+workflow-type: tm+mt
+source-wordcount: '3452'
+ht-degree: 1%
 
 ---
 
@@ -133,7 +136,7 @@ I dialogrutor kan författaren interagera med komponenten. Med hjälp av en dial
 
 [Granite-gränssnittet innehåller ett stort urval av de grundläggande komponenter (widgetar)](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html) som behövs för att skapa en dialogruta i redigeringsmiljön. Vid behov kan du utöka den här markeringen och [skapa en egen widget](#creatinganewwidget).
 
-Mer information om hur du utvecklar komponenter med resurstyperna Koral och Granite finns i: [Skapa Experience Manager-komponenter med resurstyperna](https://helpx.adobe.com/experience-manager/using/aem64_coral_resourcetypes.html)Coral/Granite.
+Mer information om hur du utvecklar komponenter med resurstyperna Koral och Granite finns i: [Skapa Experience Manager-komponenter med resurstyperna](https://helpx.adobe.com/experience-manager/using/aem64_coral_resourcetypes.html)Koral/Granite.
 
 Mer information finns i:
 
@@ -340,7 +343,7 @@ Om den nya komponenten refererar till innehåll från andra sidor kan du överv�
 
 Körklar AEM-kontroll kontrollerar bara Reference-komponenten. Om du vill lägga till din komponent måste du konfigurera OSGi-paketet med **WCM-redigeringsreferenskonfiguration**.
 
-Skapa en ny post i definitionen som anger komponenten tillsammans med den egenskap som ska kontrolleras. Exempel:
+Skapa en ny post i definitionen som anger komponenten tillsammans med den egenskap som ska kontrolleras. Till exempel:
 
 `/apps/<*your-Project*>/components/reference@parentPath`
 
@@ -363,7 +366,7 @@ Med AEM kan du konfigurera ett styckesystem på sidan så att [en instans av den
 
 Detta beteende och den nödvändiga relationen mellan resurser och komponenter kan konfigureras:
 
-1. Under styckedefinitionen för siddesignen. Exempel:
+1. Under styckedefinitionen för siddesignen. Till exempel:
 
    * `/etc/designs/<myApp>/page/par`
    Skapa en ny nod:
@@ -386,8 +389,7 @@ Detta beteende och den nödvändiga relationen mellan resurser och komponenter k
    * `assetGroup`:
 
       * Typ: `String`
-      * Värde: den grupp som den relaterade tillgången tillhör,
-till exempel `media`
+      * Värde: den grupp som den relaterade tillgången tillhör, till exempel `media`
    * `assetMimetype`:
 
       * Typ: `String`
@@ -395,13 +397,11 @@ till exempel `media`
    * `droptarget`:
 
       * Typ: `String`
-      * Värde: släppmålet,
-till exempel `image`
+      * Värde: släppmålet, till exempel `image`
    * `resourceType`:
 
       * Typ: `String`
-      * Värde: den tillhörande komponentresursen,
-till exempel `foundation/components/image`
+      * Värde: den tillhörande komponentresursen, till exempel `foundation/components/image`
    * `type`:
 
       * Typ: `String`
@@ -467,7 +467,7 @@ När du migrerar en komponent som har utformats för användning med det klassis
 
 ### Migrera cq:avlyssnarkod {#migrating-cq-listener-code}
 
-Om du migrerar ett projekt som har utformats för det klassiska användargränssnittet kan det hända att `cq:listener` funktioner som är specifika för det klassiska användargränssnittet (t.ex. `CQ.wcm.*`) används i koden (och komponentrelaterade klienter). För migreringen måste du uppdatera sådan kod med motsvarande objekt/funktioner i det beröringsaktiverade användargränssnittet.
+Om du migrerar ett projekt som är utformat för det klassiska användargränssnittet kan det hända att `cq:listener` koden (och komponentrelaterade klienter) använder funktioner som är specifika för det klassiska användargränssnittet (till exempel `CQ.wcm.*`). För migreringen måste du uppdatera sådan kod med motsvarande objekt/funktioner i det beröringsaktiverade användargränssnittet.
 
 Om ditt projekt ska migreras helt till det beröringskänsliga användargränssnittet måste du ersätta den koden för att använda de objekt och funktioner som är relevanta för det beröringskänsliga användargränssnittet.
 
@@ -499,4 +499,4 @@ Allt du behöver göra är att placera en `README.md` fil i komponentstrukturen.
 
 ![chlimage_1-7](assets/chlimage_1-7.png)
 
-Den kod som stöds är densamma som för [innehållsfragment](/help/assets/content-fragments-markdown.md).
+Den kod som stöds är densamma som för [innehållsfragment](/help/assets/content-fragments/content-fragments-markdown.md).
