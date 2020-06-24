@@ -4,10 +4,10 @@ product: adobe experience manager
 audience: end-user
 user-guide-title: Användarhandbok för Experience Manager 6.5 Assets
 translation-type: tm+mt
-source-git-commit: db60a7297defa2ed8e7f30f148d0f74a73a49893
+source-git-commit: d870e80e33c5ba36a43ff45ba2dc82551491bb18
 workflow-type: tm+mt
 source-wordcount: '645'
-ht-degree: 37%
+ht-degree: 38%
 
 ---
 
@@ -18,25 +18,25 @@ ht-degree: 37%
 + [Versionsinformation om AEM 6.5 Assets](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/assets.html)
 + [Om DAM](assets.md)
 + [Metodtips för resurser](best-practices-for-assets.md)
-+ Använd AEM Resurser {#using}
-   + [AEM Assets - startsida](assets-home-page.md)
++ Använd AEM Assets {#using}
+   + [AEM Assets hemsida](assets-home-page.md)
    + [Söka efter resurser i AEM](search-assets.md)
    + [Flerspråkiga resurser](multilingual-assets.md)
-   + [Använd [!DNL Adobe Stock]-resurser i AEM Resurser](aem-assets-adobe-stock.md)
+   + [Använd [!DNL Adobe Stock]-resurser i AEM Assets](aem-assets-adobe-stock.md)
    + [Förhandsgranska 3D-resurser](previewing-3d-assets.md)
    + [Granska resurser i mappar och samlingar](bulk-approval.md)
    + [Aktivitetsström på tidslinjen](activity-stream.md)
    + [Bearbeta resurser](assets-workflow.md)
    + [Lägg till bildscheman](image-maps.md)
    + [Återanvända resurser med MSM](reuse-assets-using-msm.md)
-   + [Anslutna resurser till AEM-platser](use-assets-across-connected-assets-instances.md)
+   + [Kopplade resurser med AEM Sites](use-assets-across-connected-assets-instances.md)
 + Dynamic Media{#dynamic}
    + [Dynamic Media-nyhetsbrev från Experience League](dynamic-media-newsletter.md)
    + [Installera Dynamic Media](administering-dynamic-media.md)
    + [Arbeta med Dynamic Media](dynamic-media.md)
-   + [Konfigurera dynamiska media - Scene7-läge](config-dms7.md)
-   + [Konfigurera dynamiska media - hybridläge](config-dynamic.md)
-   + [Felsökning av dynamiska media - Scene7-läge](troubleshoot-dms7.md)
+   + [Konfigurera Dynamic Media - Scene7-läge](config-dms7.md)
+   + [Konfigurera Dynamic Media - hybridläge](config-dynamic.md)
+   + [Felsöka Dynamic Media - Scene7-läge](troubleshoot-dms7.md)
    + [Migrera från Dynamic Media - hybrid-läge till Dynamic Media - S7-läge](migrate-from-hybrid-to-dms7.md)
    + [Hantera Dynamic Media-resurser](managing-assets.md)
    + [Bästa tillvägagångssätt för att optimera bildkvalitet](best-practices-for-optimizing-the-quality-of-your-images.md)
@@ -131,14 +131,14 @@ ht-degree: 37%
    + [Publicera mappar på varumärkesportalen](brand-portal-publish-folder.md)
    + [Publicera samlingar på varumärkesportalen](brand-portal-publish-collection.md)
 + Innehållsfragment {#fragments}
-   + [Arbeta med innehållsfragment](content-fragments.md)
-   + [Hantera innehållsfragment](content-fragments-managing.md)
-   + [Modeller för innehållsfragment](content-fragments-models.md)
-   + [Variationer – redigera innehållsfragment](content-fragments-variations.md)
-   + [Innehållsfragment med associerat innehåll](content-fragments-assoc-content.md)
-   + [Metadata – fragmentegenskaper](content-fragments-metadata.md)
-   + [Innehållsfragment – ta bort överväganden](content-fragments-delete.md)
-   + [Content Fragments - Markdown](content-fragments-markdown.md)
+   + [Arbeta med innehållsfragment](content-fragments/content-fragments.md)
+   + [Hantera innehållsfragment](content-fragments/content-fragments-managing.md)
+   + [Modeller för innehållsfragment](content-fragments/content-fragments-models.md)
+   + [Variationer – redigera innehållsfragment](content-fragments/content-fragments-variations.md)
+   + [Innehållsfragment med associerat innehåll](content-fragments/content-fragments-assoc-content.md)
+   + [Metadata – fragmentegenskaper](content-fragments/content-fragments-metadata.md)
+   + [Innehållsfragment – ta bort överväganden](content-fragments/content-fragments-delete.md)
+   + [Content Fragments - Markdown](content-fragments/content-fragments-markdown.md)
    + [Skapa översättningsprojekt för innehållsfragment](creating-translation-projects-for-content-fragments.md)
 + Hantera resurser {#managing}
    + [Hantera digitala resurser](managing-assets-touch-ui.md)
