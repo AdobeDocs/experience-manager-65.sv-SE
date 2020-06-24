@@ -10,7 +10,10 @@ topic-tags: integration
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: bb3fcb53-b8c3-4b1d-9125-4715f34ceb0b
 translation-type: tm+mt
-source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
+source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+workflow-type: tm+mt
+source-wordcount: '1706'
+ht-degree: 3%
 
 ---
 
@@ -147,7 +150,7 @@ Du kan importera användargenererat Twitter- och Instagram-innehåll (UGC) från
 
 >[!NOTE]
 >
->Innan du kan använda Assets för att importera UGC måste du konfigurera konton för konton för sociala konton och rättighetsbegäranden i Livefyre Studio. Se [Inställning: Rättighetsförfrågningar](https://marketing.adobe.com/resources/help/en_US/livefyre/c_how_requesting_rights_works.html) för mer information.
+>Innan du kan använda Assets för att importera UGC måste du konfigurera konton för konton för sociala konton och rättighetsbegäranden i Livefyre Studio. Se [Inställning: Rättighetsförfrågningar](https://docs.adobe.com/content/help/en/livefyre/using/rights-requests/c-how-requesting-rights-works.html) för mer information.
 
 Så här importerar du UGC till AEM Assets:
 
@@ -163,7 +166,7 @@ Så här importerar du UGC till AEM Assets:
 
 1. Markera de resurser som du vill importera. De resurser du väljer räknas automatiskt och sparas under fliken **Markerade** .
 1. **Valfritt**: Klicka på fliken **Markerat** och granska det UGC-innehåll du vill importera.
-1. Click **Next**.
+1. Klicka på **Nästa**.
 
    ![livefyre-aem-import-ugc2](assets/livefyre-aem-import-ugc2.png)
 
@@ -197,7 +200,7 @@ Så här importerar du UGC till AEM Assets:
 
 1. Klicka på **Klar** i det övre högra hörnet för att avsluta arbetsflödet för rättighetsbegäran.
 
-   Du kan se statusen för en väntande rättighetsbegäran för en resurs i Livefyre Studio. Om innehåll väntar på en rättighetsbegäran kommer resursen inte att visas i AEM Resurser förrän rättigheter har beviljats. Resursen visas automatiskt i AEM Resurser när en rättighetsbegäran beviljas.
+   Du kan se statusen för en väntande rättighetsbegäran för en resurs i Livefyre Studio. Om innehåll väntar på en rättighetsbegäran kommer resursen inte att visas i AEM Assets förrän rättigheter har beviljats. Resursen visas automatiskt i AEM Assets när en rättighetsbegäran beviljas.
 
    För Instagram måste du spåra innehållsägarens svar och manuellt tilldela rättigheter om de ges behörighet till innehållet.
 
@@ -235,5 +238,5 @@ När du har importerat produktkatalogen visas produkterna i realtid i Livefyre-i
 | Ett kort | X | X | X | X |
 | Storify 2 |  | X | X | X |
 | Trender |  | X | X | X |
-| Överföringsknapp |  | X | X | X |
+| Knappen Överför |  | X | X | X |
 
