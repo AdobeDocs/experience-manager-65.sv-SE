@@ -11,14 +11,17 @@ content-type: reference
 discoiquuid: 4049a7a5-4b33-4462-a25f-3c0daeb6a8a9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4d47310ebf9d450de52c925642978ba92ef9c1d4
+source-git-commit: 759d2dd8d12861757bf7f54b77d8d3ca170887fe
+workflow-type: tm+mt
+source-wordcount: '1158'
+ht-degree: 5%
 
 ---
 
 
 # Sidredigering med innehållsfragment{#page-authoring-with-content-fragments}
 
-Adobe Experience Manager-innehållsfragment (AEM) [skapas och hanteras som sidoberoende resurser](/help/assets/content-fragments.md).
+Innehållsfragment i Adobe Experience Manager (AEM) [skapas och hanteras som sidoberoende resurser](/help/assets/content-fragments/content-fragments.md).
 
 Med dem kan du skapa kanalneutralt innehåll tillsammans med (eventuellt kanalspecifika) variationer. Du kan sedan använda dessa fragment och deras variationer när du redigerar innehållssidorna.
 
@@ -36,7 +39,7 @@ Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men in
 
 >[!CAUTION]
 >
->Den här sidan måste läsas tillsammans med [Arbeta med innehållsfragment](/help/assets/content-fragments.md) (och relaterade sidor) eftersom den innehåller grundläggande terminologi och koncept samt skapar och hanterar fragment.
+>Den här sidan måste läsas tillsammans med [Arbeta med innehållsfragment](/help/assets/content-fragments/content-fragments.md) (och relaterade sidor) eftersom den innehåller grundläggande terminologi och koncept samt skapar och hanterar fragment.
 
 Innehållsfragmenten aktiverar:
 
@@ -111,15 +114,15 @@ I rätt konfigurationsdialogruta kan du välja tillgängliga parametrar, bland a
 
 * **Element**
 
-   * Standard **Main** är alltid tillgängligt.
+   * The default **Main** will always be available.
    * En markering blir tillgänglig om fragmentet skapades med en lämplig mall.
    >[!NOTE]
    >
    >Vilka element som är tillgängliga beror på vilken mall som används.
 
-* **Variation**
+* **Variant**
 
-   * Standardmallsidan **** är alltid tillgänglig.
+   * **Standardmastern** är alltid tillgänglig.
    * En markering blir tillgänglig om variationer har skapats för fragmentet.
 
 * **Stycken**: ange det eller de stycken som ska ingå:
@@ -133,7 +136,7 @@ I rätt konfigurationsdialogruta kan du välja tillgängliga parametrar, bland a
 
 ### Snabb anslutning till Fragment Editor {#quick-connection-to-fragment-editor}
 
-Du kan öppna fragmentkällan för redigering (resursen) med ikonen **Redigera** i komponentverktygsfältet. På så sätt kan du [redigera och hantera innehållsfragmentet](/help/assets/content-fragments.md).
+Du kan öppna fragmentkällan för redigering (resursen) med ikonen **Redigera** i komponentverktygsfältet. På så sätt kan du [redigera och hantera innehållsfragmentet](/help/assets/content-fragments/content-fragments.md).
 
 >[!CAUTION]
 >
@@ -143,7 +146,7 @@ Du kan öppna fragmentkällan för redigering (resursen) med ikonen **Redigera**
 
 När ett visst innehållsfragment läggs till på sidan finns det en **Drag-komponent här** som platshållare mellan varje HTML-stycke (och längst upp/längst ned) i fragmentet.
 
-På så sätt kan du lägga till extra innehåll [däremellan (dvs. mellanliggande innehåll)](/help/assets/content-fragments.md#inbetweencontent) i fragmentinnehållet (vid någon av de tillgängliga punkterna) utan att behöva ändra rotfragmentet.
+På så sätt kan du lägga till extra innehåll [däremellan (dvs. mellanliggande innehåll)](/help/assets/content-fragments/content-fragments.md#inbetweencontent) i fragmentinnehållet (vid någon av de tillgängliga punkterna) utan att behöva ändra rotfragmentet.
 
 För mellanliggande innehåll kan du:
 
@@ -159,7 +162,7 @@ För mellanliggande innehåll kan du:
 
 >[!NOTE]
 >
->Du kan också [infoga visuella resurser (bilder) i själva](/help/assets/content-fragments-variations.md#inserting-assets-into-your-fragment)fragmentet.
+>Du kan också [infoga visuella resurser (bilder) i själva](/help/assets/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment)fragmentet.
 >
 >Visuella resurser som infogats i själva fragmentet kopplas till föregående stycke i fragmentet. Det innebär att du inte kan placera innehåll mellan en visuell resurs och föregående stycke.
 
@@ -178,11 +181,11 @@ För mellanliggande innehåll kan du:
 
 ### Använda associerat innehåll {#using-associated-content}
 
-Om du har [associerat innehåll](/help/assets/content-fragments-assoc-content.md) med [innehållsfragmentet](/help/assets/content-fragments.md) är dessa resurser tillgängliga från sidopanelen (när du har placerat fragmentet på innehållssidan). Associerat innehåll är i själva verket en särskild innehållskälla för [mellanliggande innehåll](#adding-in-between-content).
+Om du har [associerat innehåll](/help/assets/content-fragments/content-fragments-assoc-content.md) med [innehållsfragmentet](/help/assets/content-fragments/content-fragments.md) är dessa resurser tillgängliga från sidopanelen (när du har placerat fragmentet på innehållssidan). Associerat innehåll är i själva verket en särskild innehållskälla för [mellanliggande innehåll](#adding-in-between-content).
 
 >[!NOTE]
 >
->Det finns olika metoder för att lägga till [visuella resurser (t.ex. bilder)](/help/assets/content-fragments.md#fragments-with-visual-assets) till fragmentet och/eller sidan.
+>Det finns olika metoder för att lägga till [visuella resurser (t.ex. bilder)](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets) till fragmentet och/eller sidan.
 
 >[!NOTE]
 >
@@ -211,6 +214,6 @@ Andra ändringar, till exempel move, copy, delete, måste göras i fragmentredig
 
 Fragment måste publiceras så att de kan användas på dina publicerade webbsidor:
 
-* Ett fragment kan publiceras efter [att fragmentet har skapats i resurskonsolen](/help/assets/content-fragments.md#publishingandreferencingafragment).
+* Ett fragment kan publiceras efter [att fragmentet har skapats i resurskonsolen](/help/assets/content-fragments/content-fragments.md#publishingandreferencingafragment).
 * Om ett *opublicerat fragment* används på en sida som publiceras kan fragmentet också publiceras just nu.
 
