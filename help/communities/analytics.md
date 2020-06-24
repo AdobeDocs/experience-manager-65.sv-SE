@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: e6fdaf56-402f-418d-96d8-e46bd3ad1e8c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: df59879cfa6b0bc7eba13f679e833fabbcbe92f2
+source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
 workflow-type: tm+mt
-source-wordcount: '2751'
+source-wordcount: '2746'
 ht-degree: 2%
 
 ---
@@ -89,17 +89,17 @@ Om du vill konfigurera funktionerna i Analytics for Communities måste du samarb
 
 ## Adobe Analytics Report Suite for Video Reporting {#adobe-analytics-report-suite-for-video-reporting}
 
-Med Adobe Marketing Cloud [Report Suite Manager](https://marketing.adobe.com/resources/help/en_US/reference/new_report_suite.html)kan Analytics rapportsviter konfigureras så att en communitywebbplats kan aktiveras för att tillhandahålla rapporter för communityfunktioner.
+Med Adobe Marketing Cloud [Report Suite Manager](https://docs.adobe.com/content/help/en/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html)kan Analytics rapportsviter konfigureras så att en communitywebbplats kan aktiveras för att tillhandahålla rapporter för communityfunktioner.
 
-Genom att logga in på [Adobe Marketing Cloud](https://marketing.adobe.com/resources/help/en_US/analytics/getting-started/analytics-navigation.html) med [företagsnamn och användarnamn](/help/communities/analytics.md#prerequisites)kan du konfigurera en ny eller befintlig rapportserie så att den har:
+Genom att logga in på [Adobe Experience Cloud](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/home.html) med [företagsnamn och användarnamn](/help/communities/analytics.md#prerequisites)kan du konfigurera en ny eller befintlig rapportserie så att den har:
 
-* [11 Konverteringsvariabler](https://marketing.adobe.com/resources/help/en_US/reference/conversion_var_admin.html) (eVars)
+* [11 Konverteringsvariabler](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) (eVars)
 
    * **`evar1`** via **`evar11`** aktiverad
 
    * Kan återanvända (byta namn på) befintliga e-variabler eller skapa nya som kan användas för webbgruppsfunktioner
 
-* [7 Success Events](https://marketing.adobe.com/resources/help/en_US/reference/success_event.html) (events)
+* [7 Success Events](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/success-events/success-event.html) (events)
 
    * **`event1`** via **`event7`** aktiverad
 
@@ -107,9 +107,11 @@ Genom att logga in på [Adobe Marketing Cloud](https://marketing.adobe.com/resou
 
       * not **`Counter (no subrelations)`**
    * Kan återanvända (byta namn på) befintliga händelser eller skapa nya som kan användas för communityfunktioner
+   <!--
+    NOTE TO WRITER: The following link was broken, so I replaced it. Check for accuracy https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/hbvideo/video_analytics_config.html 
+    -->
 
-
-* [Videohantering](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/hbvideo/video_analytics_config.html)
+* [Videohantering](https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html)
 
    * Videorapportkonsol
 
@@ -308,7 +310,7 @@ Den idekiske behövs inte och kan minimeras så att den inte förhindrar åtkoms
 
 1. Välj **Publicera**
 
-![chlimage_1-186](assets/chlimage_1-185.png)
+![chlimage_1-185](assets/chlimage_1-185.png)
 
 Molntjänsten och ramverket för Analytics är nu färdiga. Mappningarna definieras när en community-webbplats har skapats med den här Analytics-tjänsten aktiverad.
 
@@ -657,11 +659,10 @@ Till exempel, **`analytics/reportConfigs/social_forum_components_hbs_topic`**
 
 ## Hantera användardata i Analytics {#manage-user-data-in-analytics}
 
-Adobe Analytics innehåller API:er som gör att du kan komma åt, exportera och ta bort användardata. Mer information finns i [Skicka begäran](https://marketing.adobe.com/resources/help/en_US/analytics/gdpr/gdpr_submit_access_delete.html)om åtkomst och borttagning.
+Adobe Analytics innehåller API:er som gör att du kan komma åt, exportera och ta bort användardata. Mer information finns i [Skicka begäran](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/gdpr-submit-access-delete.html)om åtkomst och borttagning.
 
 ## Resurser {#resources}
 
-* Adobe Marketing Cloud: [Analytics - hjälp och referens](https://marketing.adobe.com/resources/help/en_US/reference/)
+* Adobe Experience Cloud: [Analytics - hjälp och referens](https://docs.adobe.com/content/help/en/analytics/landing/home.html)
 * AEM: [Integrating with Adobe Analytics](/help/sites-administering/adobeanalytics.md)
 * AEM: [Analytics med externa leverantörer](/help/sites-administering/external-providers.md)
-
