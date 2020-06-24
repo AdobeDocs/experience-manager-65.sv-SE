@@ -4,7 +4,10 @@ product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.5 Developing User Guide
 translation-type: tm+mt
-source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
+source-git-commit: 62be4d88f6ed3df68a77a4b61f7e113bdf03002d
+workflow-type: tm+mt
+source-wordcount: '821'
+ht-degree: 6%
 
 ---
 
@@ -13,7 +16,7 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
 
 + [Utveckla användarhandboken - översikt](home.md)
 + Introduktion för utvecklare{#introduction}
-   + [Komma igång med utveckling av AEM-webbplatser - WKND-självstudiekurs](getting-started.md)
+   + [Komma igång med utveckling i AEM Sites – WKND-självstudiekurs](getting-started.md)
    + [AEM Core Concepts](the-basics.md)
    + [Struktur för det AEM Touch-aktiverade gränssnittet](touch-ui-structure.md)
    + [AEM Touch-aktiverat användargränssnitt](touch-ui-concepts.md)
@@ -33,7 +36,7 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
    + [Sling Cheatsheet](sling-cheatsheet.md)
    + [Använda delningsadaptrar](sling-adapters.md)
    + [Taggbibliotek](taglib.md)
-   + Templates{#templates}
+   + Mallar{#templates}
       + [Mallar](templates.md)
       + [Sidmallar - redigerbara ](page-templates-editable.md)
       + [Sidmallar - statiska](page-templates-static.md)
@@ -47,8 +50,8 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
       + [Implementera en anpassad predikatutvärderare för Query Builder](implementing-custom-predicate-evaluator.md)
       + [Predikatreferens för Query Builder](querybuilder-predicate-reference.md)
       + [Query Builder API](querybuilder-api.md)
-   + Taggning{#tagging}
-      + [Taggning](tags.md)
+   + Taggar{#tagging}
+      + [Taggar](tags.md)
       + [AEM Tagging Framework](framework.md)
       + [Bygga taggar i ett AEM-program](building.md)
    + [Anpassa sidor som visas av felhanteraren](customizing-errorhandler-pages.md)
@@ -113,8 +116,8 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
       + [SPA och serversidesrendering](spa-ssr.md)
       + [SPA Javascript API-referenser](spa-reference-materials.md)
    + [HTTP-API](/help/assets/mac-api-assets.md)
-   + [Innehållsfragment](/help/assets/content-fragments.md)
-   + [Upplevelsefragment](/help/sites-authoring/experience-fragments.md)
+   + [Innehållsfragment](/help/assets/content-fragments/content-fragments.md)
+   + [Experience Fragments](/help/sites-authoring/experience-fragments.md)
    + [Förstå innehållsfragment och innehållstjänster i AEM](https://helpx.adobe.com/experience-manager/kt/sites/using/content-fragments-content-services-feature-video-understand.html)
 + Utvecklingsverktyg{#devtools}
    + [Utvecklingsverktyg](dev-tools.md)
@@ -131,7 +134,7 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
    + [AEM Brackets Extension](aem-brackets.md)
    + [AEM Developer Tools for Eclipse](aem-eclipse.md)
    + [AEM Repo Tool](aem-repo-tool.md)
-+ Personalisering{#personlization}
++ Personanpassning{#personlization}
    + [ContextHub](contexthub.md)
    + [ContextHub Javascript API-referens](contexthub-api.md)
    + [Utökar ContextHub](ch-extend.md)
@@ -148,9 +151,9 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
    + [Anpassa konsolerna](customizing-consoles-touch.md)
    + [Anpassa vyer av Sidegenskaper](page-properties-views.md)
    + [Konfigurera din sida för gruppredigering av sidegenskaper](bulk-editing.md)
-   + [Anpassa och utöka innehållsfragment](customizing-content-fragments.md)
-   + [Innehållsfragment Konfigurera komponenter för återgivning](content-fragments-config-components-rendering.md)
-   + [Upplevelsefragment](experience-fragments.md)
+   + [Anpassa och utöka Content Fragments](customizing-content-fragments.md)
+   + [Content Fragments – konfigurera komponenter för återgivning](content-fragments-config-components-rendering.md)
+   + [Experience Fragments](experience-fragments.md)
    + Utöka arbetsflöden{#extending-workflows}
       + [Utveckla och utöka arbetsflöden](workflows.md)
       + [Skapa arbetsflödesmodeller](workflows-models.md)
@@ -161,14 +164,14 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
       + [Referens för arbetsflödesprocess](workflows-process-ref.md)
       + [Variabler i AEM-arbetsflöden](/help/sites-developing/using-variables-in-aem-workflows.md)
    + [Utöka Multi Site Manager](extending-msm.md)
-   + Spårning och analys{#extending-analytics}
+   + Spårning och Analytics{#extending-analytics}
       + [Utöka händelsespårning](extending-analytics.md)
-      + [Lägga till Adobe Analytics-spårning i komponenter](extending-analytics-components.md)
+      + [Lägga till Adobe Analytics Tracking i komponenter](extending-analytics-components.md)
       + [Anpassa Adobe Analytics Framework](extending-analytics-framework.md)
-      + [Implementera sidnamngivning på serversidan för analys](extending-analytics-pa-naming.md)
-   + Molntjänster{#extending-cloud-services}
-      + [Konfigurationer av molntjänster](extending-cloud-config.md)
-      + [Skapa en anpassad molntjänst](extending-cloud-config-custom-cloud.md)
+      + [Implementera sidnamngivning på serversidan för Analytics](extending-analytics-pa-naming.md)
+   + Cloud Services{#extending-cloud-services}
+      + [Cloud Service Configurations](extending-cloud-config.md)
+      + [Skapa en anpassad Cloud Service](extending-cloud-config-custom-cloud.md)
    + [Skapa anpassade tillägg](extending-campaign-extensions.md)
    + Formulär{#extending-forms}
       + [Skapa anpassade formulärmappningar](extending-campaign-form-mapping.md)
