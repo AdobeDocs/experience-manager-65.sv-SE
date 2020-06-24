@@ -1,8 +1,8 @@
 ---
-title: Lägg till Adobe Analytics i er mobilapplikation
-seo-title: Lägg till Adobe Analytics i er mobilapplikation
-description: Följ den här sidan för att lära dig mer om hur du kan använda mobilappsanalys i dina AEM-appar genom att integrera med Adobes mobiltjänster.
-seo-description: Följ den här sidan för att lära dig mer om hur du kan använda mobilappsanalys i dina AEM-appar genom att integrera med Adobes mobiltjänster.
+title: Lägg till Adobe Analytics i ditt mobilprogram
+seo-title: Lägg till Adobe Analytics i ditt mobilprogram
+description: Följ den här sidan för att lära dig mer om hur du kan använda Analytics för mobilappar i dina AEM-appar genom att integrera med Adobes mobiltjänster.
+seo-description: Följ den här sidan för att lära dig mer om hur du kan använda Analytics för mobilappar i dina AEM-appar genom att integrera med Adobes mobiltjänster.
 uuid: d3ff6f9b-0467-4abe-9a59-b3495a6af0f8
 contentOwner: User
 content-type: reference
@@ -10,12 +10,15 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: cd9d2bea-48d8-4a17-8544-ea25dcad69f3
 translation-type: tm+mt
-source-git-commit: 58fa0f05bae7ab5ba51491be3171b5c6ffbe870d
+source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+workflow-type: tm+mt
+source-wordcount: '1064'
+ht-degree: 0%
 
 ---
 
 
-# Lägg till Adobe Analytics i er mobilapplikation{#add-adobe-analytics-to-your-mobile-application}
+# Lägg till Adobe Analytics i ditt mobilprogram{#add-adobe-analytics-to-your-mobile-application}
 
 >[!NOTE]
 >
@@ -25,23 +28,23 @@ Vill du skapa engagerande och relevanta upplevelser för mobilanvändare? Om du 
 
 Kommer användarna åt allt innehåll? Överger de appen, och i så fall, var? Hur ofta stannar de i appen och hur ofta de kommer tillbaka för att använda appen? Vilka förändringar kan ni införa och sedan mäta den ökade lojaliteten? Vad gäller för kraschfrekvenser, kraschar din app för dina användare?
 
-Dra nytta av [mobilappsanalys](https://www.adobe.com/ca/solutions/digital-analytics/mobile-web-apps-analytics.html) i dina AEM-appar genom att integrera med [Adobes mobiltjänster](https://www.adobe.com/marketing-cloud/mobile-marketing.html).
+Dra nytta av Analytics [för](https://www.adobe.com/ca/solutions/digital-analytics/mobile-web-apps-analytics.html) mobilappar i dina AEM-appar genom att integrera med [Adobes mobiltjänster](https://www.adobe.com/marketing-cloud/mobile-marketing.html).
 
 Instrumentera era AEM-appar för att spåra, rapportera och förstå hur användarna interagerar med mobilappen och -innehållet och för att mäta nyckeltal under livscykeln, som starter, apptid och kraschfrekvens.
 
 I det här avsnittet beskrivs hur AEM- *utvecklare* kan:
 
-* Integrera mobilanalys i mobilapplikationer
+* Integrera Mobile Analytics i mobilapplikationen
 * Testa er analysspårning med Bloodhound
 
 ## Förinställningar {#prerequisties}
 
-AEM Mobile kräver ett Adobe Analytics-konto för att samla in och rapportera spårningsdata i appen. Som en del av konfigurationen måste AEM- *administratören* först:
+AEM Mobile kräver ett Adobe Analytics-konto för att samla in och rapportera spårningsdata i din app. Som en del av konfigurationen måste AEM- *administratören* först:
 
 * Konfigurera ett Adobe Analytics-konto och skapa en rapportserie för ditt program i Mobile Services.
-* Konfigurera en AMS Cloud-tjänst i Adobe Experience Manager (AEM).
+* Konfigurera en AMS-Cloud Service i Adobe Experience Manager (AEM).
 
-## För utvecklare - Integrera mobilanalys i appen {#for-developers-integrate-mobile-analytics-into-your-app}
+## För utvecklare - Integrera Mobile Analytics i appen {#for-developers-integrate-mobile-analytics-into-your-app}
 
 ### Konfigurera ContentSync för att hämta konfigurationsfilen {#configure-contentsync-to-pull-in-configuration-file}
 
@@ -49,7 +52,7 @@ När Analytics-kontot har konfigurerats måste du skapa en konfiguration för in
 
 Mer information finns i Konfigurera innehåll för innehållssynkronisering. Konfigurationen måste instruera Content Sync att lägga ADBMobleConfig i katalogen /www. I till exempel Geometrixx Outdoor App finns konfigurationen för innehållssynkronisering på: */content/phonegap/geometrixx-outdoor/shell/jcr:content/page-app/app-config/ams-ADBMobleConfig*. Det finns även en konfiguration för utveckling. Den är dock identisk med den icke-utvecklingsrelaterade konfigurationen när det gäller utvändiga Geometrixer.
 
-Mer information om hur du hämtar ADBMomobileConfig från kontrollpanelen för AEM-program för mobilprogram finns i Analytics - Mobile Services - Adobe Mobile Services SDK Config-filen.
+Mer information om hur du hämtar ADBMomobileConfig från kontrollpanelen för AEM-program för mobilprogram finns i konfigurationsfilen Analytics - Mobiltjänster - Adobe Mobile Services SDK.
 
 ```xml
 <jcr:root xmlns:jcr="https://www.jcp.org/jcr/1.0" xmlns:nt="https://www.jcp.org/jcr/nt/1.0"
@@ -102,9 +105,9 @@ När du har utfört dessa steg aktiveras appen för att rapportera alla livscyke
 
 ### Instrumentera koden för fullständig appspårning {#instrument-your-code-for-full-app-tracking}
 
-Det finns flera API:er för spårning i API:t för [AMS PhoneGap Plugin.](https://marketing.adobe.com/resources/help/en_US/mobile/ios/phonegap_methods.html)
+Det finns flera API:er för spårning i API:t för [AMS PhoneGap Plugin.](https://docs.adobe.com/content/help/en/mobile-services/ios/phonegap-ios/phonegap-methods.html)
 
-På så sätt kan du spåra lägen och åtgärder, t.ex. var sidor användarna navigerar till i appen, vilka kontroller som används mest. Det enklaste sättet att mäta vilket instrument ni använder för spårning är att använda de API:er för analys som tillhandahålls av plugin-programmet för AMS.
+På så sätt kan du spåra lägen och åtgärder, t.ex. var sidor användarna navigerar till i appen, vilka kontroller som används mest. Det enklaste sättet att använda det instrument som du använder för att spåra är att använda Analytics API:er från plugin-programmet för AMS.
 
 * ADB.trackState()
 * ADB.trackAction()
@@ -113,9 +116,11 @@ Som referens kan du titta på koden i appen Geometrixx Outdoor. I programmet Geo
 
 Genom att instrumentera källkoden med dessa metodanrop kan du samla in fullständiga mätvärden mot programmet.
 
-### Testa Analytics-spårning med Bloodhound {#testing-analytics-tracking-with-bloodhound}
+### Testa Analytics tracking med Bloodhound  {#testing-analytics-tracking-with-bloodhound}
 
 ![](do-not-localize/chlimage_1.jpeg)
+
+<!--NOTE TO WRITER: Bloodhound is no longer available.-->
 
 Innan du distribuerar till produktion kan du använda Adobe-verktyget [Bloodhound](https://marketing.adobe.com/developer/gallery/bloodhound-app-measurement-qa-tool-1) för att testa analyskonfigurationen. Om du vill testa analyskonfigurationen måste du redigera filen ADBMobilConfig.json så att den pekar på servern där Bloodhound körs i stället för på den faktiska Analytics-servern. Om du vill göra den här ändringen ändrar du följande post i ADBMobilConfig.json.
 
