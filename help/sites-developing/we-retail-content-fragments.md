@@ -10,7 +10,10 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: d1326737-f378-46d0-9916-61ead4d31639
 translation-type: tm+mt
-source-git-commit: dca52c05c413fc96bf7fab012a3be52f6769c2e0
+source-git-commit: 759d2dd8d12861757bf7f54b77d8d3ca170887fe
+workflow-type: tm+mt
+source-wordcount: '454'
+ht-degree: 4%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: dca52c05c413fc96bf7fab012a3be52f6769c2e0
 
 Med innehållsfragment kan du skapa kanalneutralt innehåll tillsammans med (eventuellt kanalspecifika) variationer. **We.Retail** (som tillgängligt i en körklar instans av AEM) innehåller fragmentet **Arktis Surfing i Lofoten** som ett grundläggande exempel. Detta visar att:
 
-* Adobe Experience Manager-innehållsfragment (AEM) [skapas och hanteras som sidoberoende resurser](/help/assets/content-fragments.md). Med dem kan du skapa kanalneutralt innehåll tillsammans med (eventuellt kanalspecifika) variationer.
+* Innehållsfragment i Adobe Experience Manager (AEM) [skapas och hanteras som sidoberoende resurser](/help/assets/content-fragments/content-fragments.md). Med dem kan du skapa kanalneutralt innehåll tillsammans med (eventuellt kanalspecifika) variationer.
 
    * Se [var innehållsfragmentresurser ska hittas i Web.Retail](#where-to-find-content-fragments-in-we-retail)
 
@@ -57,13 +60,13 @@ Du kan markera och redigera den **arktiska surfningen i fragmentet Lofoten** :
 
 * [http://localhost:4502/editor.html/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten/arctic-surfing-in-lofoten](http://localhost:4502/editor.html/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten/arctic-surfing-in-lofoten)
 
-Här kan du [redigera och hantera](/help/assets/content-fragments.md) fragment med hjälp av flikarna (vänstra panelen):
+Här kan du [redigera och hantera](/help/assets/content-fragments/content-fragments.md) fragment med hjälp av flikarna (vänstra panelen):
 
 <!--![](do-not-localize/cf-45-aa.png) ![](do-not-localize/cf-45-a.png) ASSET does not exist-->
 
-* **[Variationer](/help/assets/content-fragments-variations.md)**inklusive[Markering](/help/assets/content-fragments-markdown.md)
-* **[Associerat innehåll](/help/assets/content-fragments-assoc-content.md)**
-* **[Metadata](/help/assets/content-fragments-metadata.md)**
+* **[Variationer](/help/assets/content-fragments/content-fragments-variations.md)**inklusive[Markering](/help/assets/content-fragments/content-fragments-markdown.md)
+* **[Associerat innehåll](/help/assets/content-fragments/content-fragments-assoc-content.md)**
+* **[Metadata](/help/assets/content-fragments/content-fragments-metadata.md)**
 
 ![cf-46](assets/cf-46.png)
 
@@ -85,7 +88,7 @@ Till exempel refereras **arktisk surfning i innehållsavsnittet Lofoten** på si
 
 Mer information finns i:
 
-* [Arbeta med innehållsfragment](/help/assets/content-fragments.md)
+* [Arbeta med innehållsfragment](/help/assets/content-fragments/content-fragments.md)
 
    * Lär dig hur du skapar, redigerar och hanterar resurser för innehållsfragment.
 
