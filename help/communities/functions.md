@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 91833914-b811-4355-a97d-e1a9cb7441f1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 58a06c1a16c62bffad2893fbec0b32d2ce7267a7
+source-git-commit: 1b200f9dd5fc99b37bcc629be7a785e02e8320c0
+workflow-type: tm+mt
+source-wordcount: '2454'
+ht-degree: 0%
 
 ---
 
@@ -29,11 +32,11 @@ När en community-webbplats har skapats kan innehåll läggas till på de result
 
 ## Community Function Console {#community-functions-console}
 
-För att nå användarfunktionskonsolen i redigeringsmiljön:
+Så här når du användarfunktionskonsolen i författarmiljön:
 
-* Från global navigering: **[!UICONTROL Verktyg]** > **[!UICONTROL Communities]** > **[!UICONTROL Community]**.
+* Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Communities]** > **[!UICONTROL Community Functions]**.
 
-![chlimage_1-106](assets/chlimage_1-106.png)
+![chlimage_1-379](assets/chlimage_1-379.png)
 
 ## Fördefinierade funktioner {#pre-built-functions}
 
@@ -43,13 +46,13 @@ En mall för en community-webbplats innehåller strukturen för en community-web
 
 ### Titel- och URL-inställningar {#title-and-url-settings}
 
-**Titel **och **URL **är egenskaper som är gemensamma för alla communityfunktioner.
+**Titel** och **URL** är egenskaper som är gemensamma för alla communityfunktioner.
 
 När en communityfunktion läggs till i en mall för en community-webbplats eller läggs till när du [ändrar](/help/communities/sites-console.md#modifying-site-properties) strukturen för en community-webbplats öppnas funktionens dialogruta så att titeln och URL-adressen kan konfigureras.
 
 #### Information om konfigurationsfunktion {#configuration-function-details}
 
-![chlimage_1-107](assets/chlimage_1-107.png)
+![chlimage_1-380](assets/chlimage_1-380.png)
 
 * **Titel**
 
@@ -68,7 +71,7 @@ Därefter är URL:en till sidan https://localhost:4503/content/sites/engage/en/p
 
 och menylänken för sidan visas som:
 
-![chlimage_1-108](assets/chlimage_1-108.png)
+![chlimage_1-381](assets/chlimage_1-381.png)
 
 ### Funktion för aktivitetsström {#activity-stream-function}
 
@@ -78,7 +81,7 @@ När du lägger till en mall öppnas följande dialogruta:
 
 #### Information om konfigurationsfunktion {#configuration-function-details-1}
 
-![chlimage_1-109](assets/chlimage_1-109.png)
+![chlimage_1-382](assets/chlimage_1-382.png)
 
 * [Titel- och URL-inställningar](#title-and-url-settings)
 
@@ -108,7 +111,7 @@ Bloggfunktionen är en sida med en [Blog-komponent](/help/communities/blog-featu
 
 När du lägger till en mall öppnas följande dialogruta:
 
-![chlimage_1-110](assets/chlimage_1-110.png)
+![chlimage_1-383](assets/chlimage_1-383.png)
 
 * [Titel- och URL-inställningar](#title-and-url-settings)
 
@@ -134,7 +137,7 @@ Kalenderfunktionen är en sida med en [kalenderkomponent](/help/communities/cale
 
 När du lägger till en mall öppnas följande dialogruta:
 
-![chlimage_1-111](assets/chlimage_1-111.png)
+![chlimage_1-384](assets/chlimage_1-384.png)
 
 * [Titel- och URL-inställningar](#title-and-url-settings)
 
@@ -199,7 +202,7 @@ När du lägger till en mall öppnas följande dialogruta:
 
 #### Information om konfigurationsfunktion {#configuration-function-details-2}
 
-![chlimage_1-112](assets/chlimage_1-112.png)
+![chlimage_1-384](assets/chlimage_1-384.png)
 
 * [Titel- och URL-inställningar](#title-and-url-settings)
 
@@ -227,7 +230,7 @@ När du lägger till en mall öppnas följande dialogruta:
 
 >[!CAUTION]
 >
->Gruppfunktionen får inte *vara den *första eller enda* funktionen i en webbplats struktur eller i en mall för communityplats.
+>Gruppfunktionen får *inte* vara den *första eller enda* funktionen i en webbplats struktur eller i en community-platsmall.
 >
 >Alla andra funktioner, till exempel [sidfunktionen](#page-function), måste inkluderas och listas först.
 
@@ -242,7 +245,7 @@ När det gäller [funktionspaket 1](/help/communities/deploy-communities.md#late
 
 När du lägger till en mall öppnas följande dialogruta:
 
-![chlimage_1-113](assets/chlimage_1-113.png)
+![chlimage_1-386](assets/chlimage_1-386.png)
 
 * [Titel- och URL-inställningar](#title-and-url-settings)
 
@@ -265,7 +268,7 @@ Idéfunktionen är en sida med en [Ideation-komponent](/help/communities/ideatio
 
 När du lägger till en mall öppnas följande dialogruta, som anger standardnamn för titel och URL samt standardvisningsinställningar för mallen:
 
-![chlimage_1-114](assets/chlimage_1-114.png)
+![chlimage_1-387](assets/chlimage_1-387.png)
 
 * [Titel- och URL-inställningar](#title-and-url-settings)
 
@@ -293,7 +296,7 @@ Ledpanelsfunktionen är en sida med en [huvudpanelskomponent](/help/communities/
 
 När du lägger till en mall öppnas följande dialogruta, som anger standardnamn för titel och URL samt standardvisningsinställningar för mallen:
 
-![chlimage_1-115](assets/chlimage_1-115.png)
+![chlimage_1-388](assets/chlimage_1-388.png)
 
 * [Titel- och URL-inställningar](#title-and-url-settings)
 
@@ -324,7 +327,7 @@ QnA-funktionen är en sida med en [QnA-komponent](/help/communities/working-with
 
 När konfigurationen läggs till i en mall tillåts begränsningar för behöriga medlemmar:
 
-![chlimage_1-116](assets/chlimage_1-116.png)
+![chlimage_1-384](assets/chlimage_1-384.png)
 
 * [Titel- och URL-inställningar](#title-and-url-settings)
 
@@ -352,11 +355,11 @@ När konfigurationen läggs till i en mall tillåts begränsningar för behörig
 
 Du kan skapa en communityfunktion genom att välja `Create Community Function` -ikonen längst upp i användarfunktionskonsolen. Flera funktioner som är baserade på samma AEM-skiss kan skapas och sedan anpassas unikt genom att man öppnar dem i redigeringsläget.
 
-![chlimage_1-117](assets/chlimage_1-117.png)
+![chlimage_1-390](assets/chlimage_1-390.png)
 
 ### Community-funktionsnamn {#community-function-name}
 
-![chlimage_1-118](assets/chlimage_1-118.png)
+![chlimage_1-391](assets/chlimage_1-391.png)
 
 På panelen Community Function Name konfigureras ett namn, en beskrivning och om funktionen är aktiverad eller inaktiverad:
 
@@ -374,7 +377,7 @@ På panelen Community Function Name konfigureras ett namn, en beskrivning och om
 
 ### AEM Blueprint {#aem-blueprint}
 
-![chlimage_1-119](assets/chlimage_1-119.png)
+![chlimage_1-392](assets/chlimage_1-392.png)
 
 På `AEM Blueprint` panelen är det möjligt att välja en plan som är den underliggande implementeringen av communityfunktionen.
 
@@ -386,13 +389,13 @@ Se även [Multi Site Manager](/help/sites-administering/msm.md).
 
 ### Miniatyrbild {#thumbnail}
 
-![chlimage_1-120](assets/chlimage_1-120.png)
+![chlimage_1-393](assets/chlimage_1-393.png)
 
 På miniatyrpanelen kan en bild överföras för visning i [användarfunktionskonsolen](#community-functions-console).
 
 ## Öppen communityfunktion {#open-community-function}
 
-![chlimage_1-121](assets/chlimage_1-121.png)
+![chlimage_1-394](assets/chlimage_1-394.png)
 
 Markera `Open Community Function` ikonen om du vill aktivera redigeringsläget för författare när du redigerar sidinnehållet och ändrar konfigurationen för funktionskomponenterna.
 
@@ -408,6 +411,6 @@ Mer konfigurationsinformation finns i Komponenter [för](/help/communities/autho
 
 ## Redigera communityfunktion {#edit-community-function}
 
-![chlimage_1-122](assets/chlimage_1-122.png)
+![chlimage_1-395](assets/chlimage_1-395.png)
 
 Markera `Edit Community Function` ikonen om du vill redigera funktionens egenskaper med samma paneler som när du [skapar en communityfunktion](#create-community-function), inklusive aktivering eller inaktivering av funktionen.
