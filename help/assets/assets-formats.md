@@ -3,9 +3,9 @@ title: Filformat som stöds för bearbetning i [!DNL Adobe Experience Manager As
 description: Filformat och MIME-typer som stöds av [!DNL Assets] och [!DNL Dynamic Media] samt de funktioner som stöds för varje format.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f47f5e45c64e3cbbe0b68d449a5ef8d4b7dd7f38
+source-git-commit: 62085bdd8fa576e0d4eaeae19076d6edbf8c484a
 workflow-type: tm+mt
-source-wordcount: '1647'
+source-wordcount: '1648'
 ht-degree: 2%
 
 ---
@@ -74,7 +74,7 @@ Utöver informationen ovan bör du tänka på följande:
 
 Följande lista över 3D-format stöds.
 
-Se [Arbeta med 3D-resurser i Dynamic Media.](/help/assets/assets-3d.md)
+Se även [Arbeta med 3D-resurser i Dynamic Media.](/help/assets/assets-3d.md)
 
 | Format | Lagring | Versionshantering | Arbetsflöde | Publicering | Åtkomstkontroll | Förhandsvisning av miniatyrbilder | Förhandsgranska 3D | Leverans av Dynamic Media |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
