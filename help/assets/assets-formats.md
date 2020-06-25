@@ -3,9 +3,9 @@ title: Filformat som stöds för bearbetning i [!DNL Adobe Experience Manager As
 description: Filformat och MIME-typer som stöds av [!DNL Assets] och [!DNL Dynamic Media] samt de funktioner som stöds för varje format.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
+source-git-commit: f47f5e45c64e3cbbe0b68d449a5ef8d4b7dd7f38
 workflow-type: tm+mt
-source-wordcount: '1608'
+source-wordcount: '1647'
 ht-degree: 2%
 
 ---
@@ -69,6 +69,21 @@ Utöver informationen ovan bör du tänka på följande:
 * Information om hur du använder [!DNL Dynamic Media] för att förhandsgranska och generera dynamiska renderingar för EPS-filer finns i [Adobe Illustrator (AI), Postscript (EPS) och PDF-filformat.](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
 * För EPS-filer stöds tillbakaskrivning av metadata i PostScript Document Structuring Convention (PS-Adobe) version 3.0 eller senare.
+
+## 3D-format som stöds {#support-3d-formats}
+
+Följande lista över 3D-format stöds.
+
+Se [Arbeta med 3D-resurser i Dynamic Media.](/help/assets/assets-3d.md)
+
+| Format | Lagring | Versionshantering | Arbetsflöde | Publicering | Åtkomstkontroll | Förhandsvisning av miniatyrbilder | Förhandsgranska 3D | Leverans av Dynamic Media |
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| DN | ✓ | ✓ | ✓ |  | ✓ | ✓ |  |  |
+| gLB | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ | ✓ |
+| gLTF | ✓ | ✓ | ✓ |  | ✓ |  | ✓ |  |
+| OBJ | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ | ✓ |
+| STL | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ | ✓ |
+| USDz | ✓ | ✓ | ✓ | ✓ | ✓ |  |  | ✓ |
 
 ## Rasterbildformat som inte stöds i Dynamic Media {#unsupported-image-formats-dynamic-media}
 
