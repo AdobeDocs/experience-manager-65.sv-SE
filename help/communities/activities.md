@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 89f3630f-c01a-4dc0-9ff5-169785f22c01
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
+source-git-commit: 10c17fc199c476ec66059cc6bf4cbb4a0ff1af40
+workflow-type: tm+mt
+source-wordcount: '464'
+ht-degree: 0%
 
 ---
 
@@ -41,17 +44,17 @@ Mer information finns i Grunderna för [communitykomponenter](/help/communities/
 
 När de [nödvändiga klientbiblioteken](/help/communities/essentials-activities.md#essentials-for-client-side) inkluderas visas `Activity Streams` komponenten så här:
 
-![chlimage_1-24](assets/chlimage_1-24.png)
+![chlimage_1-195](assets/chlimage_1-195.png)
 
 ### Konfigurera aktivitetsströmmar {#configuring-activity-streams}
 
 Markera den monterade `Activity Streams` komponent som du vill öppna och välj den `Configure` ikon som öppnar redigeringsdialogrutan.
 
-![chlimage_1-25](assets/chlimage_1-25.png)
+![chlimage_1-494](assets/chlimage_1-494.png)
 
 Ange vilka aktiviteter som ska visas på fliken **Användaraktiviteter** :
 
-![chlimage_1-26](assets/chlimage_1-26.png)
+![användaraktiviteter](assets/user-activities.png)
 
 * **Maximalt antal aktiviteter**
 
@@ -77,22 +80,22 @@ Ange vilka aktiviteter som ska visas på fliken **Användaraktiviteter** :
 
 Komponenter måste konfigureras för att aktivera följande. Funktioner som tillåter följande är [blogg](/help/communities/blog-feature.md), [forum](/help/communities/forum.md), [QnA](/help/communities/working-with-qna.md), [kalender](/help/communities/calendar.md), [filbibliotek](/help/communities/file-library.md)[](/help/communities/comments.md)och¥comments.
 
-![chlimage_1-27](assets/chlimage_1-27.png)
+![chlimage_1-5](assets/chlimage_1-5.png)
 
 Med knappen **Följ** kan du följa inmatningar som aktiviteter, [meddelanden](/help/communities/notifications.md)eller [prenumerationer](/help/communities/subscriptions.md). Varje gång knappen **Följ** är markerad går det att aktivera eller inaktivera en markering. Markeringen visas bara när den är konfigurerad. `Email Subscriptions`
 
 Om någon av följande metoder är markerad ändras texten för knappen till **Följ**. Du kan välja `Unfollow All` att inaktivera alla metoder.
 
-Knappen **Följ** visas
+Knappen **Följ** visas:
 
-* när du visar en annan medlems profil
-* på en huvudfunktionssida, t.ex. forum, QnA och bloggar
+* När en annan medlems profil visas.
+* På en huvudfunktionssida, till exempel forum, QnA och bloggar.
 
-   * följer all aktivitet för den allmänna funktionen
+   * Följer alla aktiviteter för den allmänna funktionen.
 
-* för ett visst inlägg, t.ex. ett forumämne, en QnA-fråga eller en bloggartikel
+* För ett visst inlägg, t.ex. ett forumämne, en QnA-fråga eller en bloggartikel.
 
-   * följer all aktivitet för den specifika posten
+   * Följer all aktivitet för den specifika posten.
 
 ### Additional Information {#additional-information}
 
