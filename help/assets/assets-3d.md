@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: introduction
 content-type: reference
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 56c9bc1ea99dcb93af21d8b26bac8792512f4d42
 workflow-type: tm+mt
-source-wordcount: '2230'
+source-wordcount: '2233'
 ht-degree: 2%
 
 ---
@@ -30,9 +30,11 @@ Det krävs ingen ytterligare konfiguration för att använda 3D-resurser i Dynam
 
 <!-- See also [Dynamic Media 3D Release Notes](/help/release-notes/aem3d-release-notes.md). -->
 
-## 3D-filformat som stöds i Dynamic Media {#supported-three-d-file-formats-in-dm}
+## 3D-format som stöds i Dynamic Media {#supported-three-d-file-formats-in-dm}
 
-Dynamic Media har stöd för följande 3D-filformat:
+Dynamic Media har stöd för följande 3D-format.
+
+Se även [3D-format som stöds.](/help/assets/assets-formats.md)
 
 | 3D-filtillägg | Filformat | MIME-typ | Anteckningar |
 |---|---|---|---|
