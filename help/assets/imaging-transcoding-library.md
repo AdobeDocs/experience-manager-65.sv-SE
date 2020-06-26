@@ -3,9 +3,9 @@ title: Konverteringsbibliotek för bildbehandling
 description: Lär dig hur du konfigurerar och använder Adobes Imaging Transcoding Library, en bildbehandlingslösning som kan utföra grundläggande bildhanteringsfunktioner, inklusive kodning, omkodning, bildomsampling och storleksändring.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b2628d37c3ad158913c28ecd890aee9fd0106de4
+source-git-commit: bccc937c1e1a349ab292a748c3c7b9d0c68b6199
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '952'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ Kommandoradsargumenten för Imaging Transcoding Library kan innehålla följande
 
 Du kan konfigurera följande alternativ för `-resize` parametern:
 
-* `X`: Fungerar ungefär som med Experience Manager. Till exempel -resize 319.
+* `X`: Fungerar ungefär som Experience Manager. Till exempel -resize 319.
 * `WxH`: Proportionerna behålls inte, till exempel `-resize 319x319`.
 * `Wx`: Fastställer bredden och beräknar höjden med bibehållna proportioner. Till exempel `-resize 319x`.
 * `xH`: Korrigerar höjden och beräknar bredden med bibehållna proportioner. Till exempel `-resize x319`.
@@ -74,7 +74,7 @@ Om du vill konfigurera ITL-bearbetning skapar du en konfigurationsfil och uppdat
 
 Om du vill konfigurera biblioteket skapar du en .conf-fil som anger biblioteken med följande steg. Du behöver administratörs- eller rotbehörigheter.
 
-1. Hämta paketet [Imaging Transcoding Library från Package Share](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-imaging-transcoding-library-pkg) eller från [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-imaging-transcoding-library-pkg) och installera det med Package Manager. Paketet är kompatibelt med Experience Manager 6.5.
+1. Hämta paketet [Imaging Transcoding Library från Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-imaging-transcoding-library-pkg) och installera det med Package Manager. Paketet är kompatibelt med Experience Manager 6.5.
 
 1. Om du vill veta ett paket-ID för `com.day.cq.dam.cq-dam-switchengine`loggar du in på webbkonsolen och klickar på **[!UICONTROL OSGi > Bundles]**. Du kan även öppna paketkonsolen genom att gå till `https://[aem_server:[port]/system/console/bundles/` URL. Hitta paketet och dess ID `com.day.cq.dam.cq-dam-switchengine` .
 
@@ -105,7 +105,7 @@ Om du vill konfigurera biblioteket skapar du en .conf-fil som anger biblioteken 
 
 Uppdatera arbetsflödet så att det använder biblioteket för bearbetning av bilder. [!UICONTROL DAM Update Asset]
 
-1. I användargränssnittet i Experience Manager väljer du **[!UICONTROL Tools > Workflow > Models]**.
+1. I användargränssnittet för Experience Manager väljer du **[!UICONTROL Tools > Workflow > Models]**.
 
 1. Öppna arbetsflödesmodellen från **[!UICONTROL Workflow Models]** sidan i redigeringsläge **[!UICONTROL DAM Update Asset]** .
 
