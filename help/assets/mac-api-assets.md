@@ -3,7 +3,7 @@ title: Resurser för HTTP API i [!DNL Adobe Experience Manager].
 description: Skapa, läsa, uppdatera, ta bort, hantera digitala resurser med HTTP API i [!DNL Adobe Experience Manager Assets].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 307a1db2e5bbb72d730c89ba14f5ce02b96c108d
+source-git-commit: f64df3a706762cdef631e18ad1a6fdd7044a551f
 workflow-type: tm+mt
 source-wordcount: '1563'
 ht-degree: 0%
@@ -77,17 +77,17 @@ I [!DNL Experience Manager] en mapp finns följande komponenter:
 
 Resursens HTTP-API innehåller följande funktioner:
 
-* Hämta en mapplista.
-* Skapa en mapp.
-* Skapa en resurs.
-* Uppdatera resursens binärfil.
-* Uppdatera metadata för resurser.
-* Skapa en resursåtergivning.
-* Uppdatera en resursåtergivning.
-* Skapa en resurskommentar.
-* Kopiera en mapp eller resurs.
-* Flytta en mapp eller resurs.
-* Ta bort en mapp, resurs eller återgivning.
+* [Hämta en mapplista](#retrieve-a-folder-listing).
+* [Skapa en mapp](#create-a-folder).
+* [Skapa en resurs](#create-an-asset).
+* [Uppdatera resursens binärfil](#update-asset-binary).
+* [Uppdatera metadata](#update-asset-metadata)för resurser.
+* [Skapa en resursåtergivning](#create-an-asset-rendition).
+* [Uppdatera en resursåtergivning](#update-an-asset-rendition).
+* [Skapa en resurskommentar](#create-an-asset-comment).
+* [Kopiera en mapp eller resurs](#copy-a-folder-or-asset).
+* [Flytta en mapp eller resurs](#move-a-folder-or-asset).
+* [Ta bort en mapp, resurs eller återgivning](#delete-a-folder-asset-or-rendition).
 
 >[!NOTE]
 >
