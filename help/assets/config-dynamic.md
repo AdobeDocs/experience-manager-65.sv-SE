@@ -10,15 +10,15 @@ discoiquuid: 7d8e7273-29f3-4a45-ae94-aad660d2c71d
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config-dynamic
 translation-type: tm+mt
-source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
+source-git-commit: bccc937c1e1a349ab292a748c3c7b9d0c68b6199
 workflow-type: tm+mt
-source-wordcount: '7713'
+source-wordcount: '7674'
 ht-degree: 1%
 
 ---
 
 
-# Konfigurera Dynamic Media - hybridläge{#configuring-dynamic-media-hybrid-mode}
+# Konfigurera Dynamic Media - hybridläge {#configuring-dynamic-media-hybrid-mode}
 
 Dynamic Media-Hybrid måste aktiveras och konfigureras för användning. Beroende på ditt sätt att arbeta har Dynamic Media flera konfigurationer som [stöds](#supported-dynamic-media-configurations).
 
@@ -707,7 +707,7 @@ Om du använder Dynamic Media för enbart video följer du de här stegen för a
 1. I det vänstra mappträdet navigerar du till `/etc/replication/agents.author/publish`
 1. Leta rätt på **[!UICONTROL jcr:content]** filen, högerklicka på den och välj **[!UICONTROL Paste.]**
 
-Detta ställer in AEM-publiceringsinstansen så att den levererar filmminiatyrbilden samt de videometadata som krävs för uppspelning, medan själva videon levereras av Dynamic Media molntjänst. Filtret exkluderar även den ursprungliga videon och statiska miniatyrrenderingar, som inte behövs i publiceringsinstansen, från replikeringen.
+Detta ställer in AEM-publiceringsinstansen så att den levererar filmminiatyrbilden samt de videometadata som krävs för uppspelning, medan själva videon levereras av molntjänsten i Dynamic Media. Filtret exkluderar även den ursprungliga videon och statiska miniatyrrenderingar, som inte behövs i publiceringsinstansen, från replikeringen.
 
 ### Ställa in resursfilter för bildåtergivning vid icke-produktionsdistributioner {#setting-up-asset-filters-for-imaging-in-non-production-deployments}
 
@@ -965,7 +965,7 @@ I avancerade användningsfall kan en manuell konfigurationsmodifierare användas
 * `iccEmbed` - [https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-iccembed.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-iccembed.html)
 
 >[!NOTE]
-Adobes standardfärgprofiler är bara tillgängliga om du har [Feature Pack 12445 från Package Share](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445) eller [Feature Pack 12445 från Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445) installerat. Alla funktionspaket och servicepaket är tillgängliga via [Paketresurs](https://www.adobeaemcloud.com/content/packageshare.html) och [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). Funktionspaket 12445 innehåller Adobes färgprofiler.
+Adobes standardfärgprofiler är bara tillgängliga om du har [Feature Pack 12445 från Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445) installerat. Alla funktionspaket och servicepaket finns på [Programdistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). Funktionspaket 12445 innehåller Adobes färgprofiler.
 
 ### Installerar funktionspaket 12445 {#installing-feature-pack}
 
@@ -973,9 +973,9 @@ Du måste installera funktionspaket 12445 för att kunna använda de dynamiska f
 
 **Installera funktionspaketet 12445**
 
-1. Navigera till [Paketresurs](https://www.adobeaemcloud.com/content/packageshare.html) eller [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) och hämta båda `cq-6.3.0-featurepack-12445`.
+1. Navigera till [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) och hämta båda `cq-6.3.0-featurepack-12445`.
 
-   Mer information om hur du använder paketdelning och paket i AEM finns i [Arbeta med paket](/help/sites-administering/package-manager.md) .
+   Mer information om hur du använder paket i [finns i Arbeta med paket](/help/sites-administering/package-manager.md) i [!DNL Adobe Experience Manager].
 
 1. Installera funktionspaketet.
 
