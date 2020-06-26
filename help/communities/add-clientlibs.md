@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 46f81c3f-6512-43f1-8ec1-cc717ab6f6ff
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
+source-git-commit: 2b1cc29fbfdb80aff6b6fc5c6c4fc9093d12e418
+workflow-type: tm+mt
+source-wordcount: '687'
+ht-degree: 2%
 
 ---
 
@@ -33,12 +36,12 @@ Det `categories`egenskapsvärde som anges för det här klientbiblioteket är de
 
 1. Click **OK**
 
-![chlimage_1-47](assets/chlimage_1-47.png)
+![chlimage_1-220](assets/chlimage_1-220.png)
 
 På fliken **Egenskaper** för den nya `clientlibs` noden anger du egenskapen **categories** :
 
 * Namn: **kategorier**
-* Typ: **String**
+* Typ: **Sträng**
 * Värde: **apps.an-scf-sandbox**
 * Click **Add**
 * Klicka på **Spara alla**
@@ -52,7 +55,7 @@ Obs! för att visa kategorivärdet med appar. är en konvention som identifierar
 1. Ange **namn:** `js.txt`
 1. Klicka på **Spara alla**
 
-![chlimage_1-48](assets/chlimage_1-48.png)
+![chlimage_1-221](assets/chlimage_1-221.png)
 
 Den första raden i css.txt och js.txt identifierar den basplats från vilken följande fillistor ska hittas.
 
@@ -96,15 +99,15 @@ I det här fallet är det bäst att inkludera alla och så att de mer grundlägg
       * **`cq.social.author.hbs.rating`**
       * **`cq.social.author.hbs.reviews`**
       * **`cq.social.author.hbs.voting`**
-      * click **OK**
+      * Click **OK**
 
 * Klicka på **Spara alla**
 
-![chlimage_1-49](assets/chlimage_1-49.png)
+![chlimage_1-222](assets/chlimage_1-222.png)
 
 Så här `/etc/designs/an-scf-sandbox/clientlibs` ska nu visas i databasen:
 
-![chlimage_1-50](assets/chlimage_1-50.png)
+![chlimage_1-223](assets/chlimage_1-223.png)
 
 ### Inkludera klienter i PlayPage-mallen {#include-clientlibs-in-playpage-template}
 
@@ -112,11 +115,11 @@ Utan att ta med kategorin `apps.an-scf-sandbox` ClientLibraryFolder på sidan ko
 
 Utan att ta med clientlibs visas SCF-kommentarkomponenten som stylfri:
 
-![chlimage_1-51](assets/chlimage_1-51.png)
+![chlimage_1-224](assets/chlimage_1-224.png)
 
 När clientlibs för apps.an-scf-sandbox ingår formateras SCF-kommentarskomponenten:
 
-![chlimage_1-52](assets/chlimage_1-52.png)
+![chlimage_1-225](assets/chlimage_1-225.png)
 
 Programsatsen include tillhör i `head` avsnittet i `html` skriptet. Standardvärdet **`foundation head.jsp`** innehåller ett skript som kan överlappas: **`headlibs.jsp`**.
 
@@ -147,7 +150,7 @@ Läs in webbplatsen i webbläsaren och se om bakgrunden inte är en blå nyans.
 
 [https://localhost:4502/content/an-scf-sandbox/en/play.html](https://localhost:4502/content/an-scf-sandbox/en/play.html)
 
-![chlimage_1-53](assets/chlimage_1-53.png)
+![chlimage_1-226](assets/chlimage_1-226.png)
 
 ### Spara ditt arbete hittills {#saving-your-work-so-far}
 
