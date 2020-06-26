@@ -10,14 +10,17 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 8799386a-c3b8-43cf-9f71-580ff2a81abc
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 2bd74d5e90aff1146de5c5a0dffd99fc7dd9031c
+workflow-type: tm+mt
+source-wordcount: '478'
+ht-degree: 0%
 
 ---
 
 
 # Communities Sites {#communities-sites}
 
-Det här avsnittet är avsett för dem som administrerar AEM Communities och som är vana vid funktionerna i AEM Communities.
+Det här avsnittet är avsett för dem som administrerar AEM Communities och antar att de känner till AEM Communities funktioner.
 
 ## Översikt {#overview}
 
@@ -33,7 +36,7 @@ En översikt och självstudiekurser för att komma igång finns på:
 
 * Communities- [konsoler](consoles.md)
 
-   * [Webbplatser](sites-console.md)
+   * [Sites](sites-console.md)
 
       * [Grupper (undergrupper)](groups.md)
    * [Moderering](moderation.md)
@@ -59,27 +62,27 @@ En viktig egenskap hos AEM Communities är att skapa användargenererat innehål
 * [Vanligt UGC-arkiv](working-with-srp.md): val av SRP för delad lagring av UGC
 * [Modererar UGC](moderate-ugc.md): pålitliga medlemmar kan moderera UGC-innehåll i bulk eller kontext
 * [Taggning UGC](tag-ugc.md): funktioner kan konfigureras så att medlemmar kan tagga innehåll
-* [Översätter UGC](translate-ugc.md): funktioner kan konfigureras för att översätta alla användargenererat innehåll eller tillåta medlemmar att översätta valda inlägg
-* [Analyskonfiguration](analytics.md): göra det möjligt för Adobe Analytics att rapportera olika mätvärden för medlemsaktivitet
+* [Översätter UGC](translate-ugc.md): funktioner kan konfigureras för att översätta alla UGC eller tillåta medlemmar att översätta valda inlägg
+* [Analytics-konfiguration](analytics.md): göra det möjligt för Adobe Analytics att rapportera olika mätvärden för medlemsaktivitet
 
 ### Community-medlemmar {#community-members}
 
-* [Hantera användare och användargrupper](users.md): information om communitymedlemmar och medlemsgrupper, inklusive behöriga medlemmar
-* [Bidragsgränser](limits.md): möjlighet att begränsa bokföring av nya medlemmar
-* [Tunneltjänst](deploy-communities.md#tunnel-service-on-author): ger åtkomst till medlemmar på publiceringssidan och medlemsgrupper från författarmiljön
-* [Konsoler för medlemmar och grupper](members.md): tillåter att medlemmar och medlemsgrupper på publiceringssidan skapas och hanteras från författarmiljön
-* [Användarsynkronisering](sync.md): för synkronisering av medlemmar och medlemsgrupper i flera publiceringsinstanser
-* [Social inloggning med Facebook och Twitter](social-login.md): möjlighet för besökare att bli community-medlem med sina Facebook- eller Twitter-behörigheter
-* [Betyg och märken](implementing-scoring.md): möjlighet att tilldelas emblem för att identifiera en medlems roll(er) och för medlemmar att få brickor genom sitt deltagande i communityn
-* [Meddelanden](notifications.md): möjlighet för medlemmar att underrättas om den aktivitet de följer
-* [Prenumerationer](subscriptions.md): möjlighet för medlemmarna att interagera med communityn via extern e-post
-* [Meddelanden](messaging.md): möjlighet för medlemmarna att interagera med communityn med hjälp av interna meddelanden
+* [Hantera användare och användargrupper](users.md): Uppgifter om communitymedlemmar och medlemsgrupper, inklusive behöriga medlemmar.
+* [Bidragsgränser](limits.md): möjlighet att begränsa bokföring av nya medlemmar.
+* [Tunneltjänst](deploy-communities.md#tunnel-service-on-author): gör att medlemmar och medlemsgrupper på publiceringssidan kan nås från redigeringsmiljön.
+* [Konsoler för medlemmar och grupper](members.md): tillåter att medlemmar och medlemsgrupper på publiceringssidan skapas och hanteras från författarmiljön.
+* [Användarsynkronisering](sync.md): för synkronisering av medlemmar och medlemsgrupper i flera publiceringsinstanser.
+* [Social inloggning med Facebook och Twitter](social-login.md): möjlighet för besökare att bli community-medlem med sina inloggningsuppgifter för Facebook eller Twitter.
+* [Betyg och märken](implementing-scoring.md): Möjlighet att tilldela emblem till att identifiera en medlems roll(er) och för medlemmar att få brickor genom sitt deltagande i communityn.
+* [Meddelanden](notifications.md): möjlighet för medlemmar att underrättas om den aktivitet de följer.
+* [Prenumerationer](subscriptions.md): möjlighet för medlemmarna att interagera med communityn via extern e-post.
+* [Meddelanden](messaging.md): möjlighet för medlemmarna att interagera med communityn med hjälp av interna meddelanden.
 
 ### Aktiveringsfunktioner {#enablement-features}
 
-* [Konfigurerar aktivering](enablement.md): nödvändig information för att korrekt konfigurera aktiveringsfunktionerna
-* [Analyskonfiguration](analytics.md): nödvändig information för att aktivera funktioner i Adobe Analytics for Communities
-* [Aktiveringsresurser](tag-resources.md)för taggning: nödvändig för att skapa aktiveringskataloger
+* [Konfigurerar aktivering](enablement.md): nödvändig information för att korrekt konfigurera aktiveringsfunktionerna.
+* [Analytics-konfiguration](analytics.md): nödvändig information för att aktivera funktioner i Adobe Analytics for Communities.
+* [Aktiveringsresurser](tag-resources.md)för taggning: behövs för att skapa aktiveringskataloger.
 
 ### Distribution {#deployment}
 
