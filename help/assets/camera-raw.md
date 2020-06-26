@@ -3,17 +3,17 @@ title: Stöd för [!DNL Adobe Camera Raw].
 description: Lär dig hur du aktiverar stödet för [!DNL Adobe Camera Raw] i [!DNL Adobe Experience Manager Assets].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: bf840b0e13e58f961c32b0231e4b691cb47b947a
+source-git-commit: bccc937c1e1a349ab292a748c3c7b9d0c68b6199
 workflow-type: tm+mt
-source-wordcount: '384'
-ht-degree: 0%
+source-wordcount: '345'
+ht-degree: 2%
 
 ---
 
 
 # Bearbeta bilder med Camera Raw {#camera-raw-support}
 
-Du kan aktivera stöd för [!DNL Adobe Camera Raw] bearbetning av råfilsformat, t.ex. CR2, NEF och RAF, och återge bilderna i JPEG-format. Funktionen stöds i [!DNL Adobe Experience Manager Assets] med [Camera Raw-paketet](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) som är tillgängligt via Paketresurs eller från [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg).
+Du kan aktivera stöd för [!DNL Adobe Camera Raw] bearbetning av råfilsformat, t.ex. CR2, NEF och RAF, och återge bilderna i JPEG-format. Funktionen stöds i [!DNL Adobe Experience Manager Assets] det [Camera Raw-paket](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) som finns tillgängligt från Software Distribution.
 
 >[!NOTE]
 >
@@ -21,7 +21,7 @@ Du kan aktivera stöd för [!DNL Adobe Camera Raw] bearbetning av råfilsformat,
 
 Så här aktiverar du [!DNL Camera Raw] stöd i [!DNL Experience Manager Assets]:
 
-1. Hämta [Camera Raw-paketet](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) från paketresursen eller från [programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg).
+1. Hämta [Camera Raw-paketet](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) från Software Distribution.
 1. Öppna `https://[aem_server]:[port]/workflow`. Öppna **[!UICONTROL DAM Update Asset]** arbetsflödet.
 1. Öppna **[!UICONTROL Process Thumbnails]** steget.
 1. Ange följande konfiguration på **[!UICONTROL Thumbnails]** fliken:
