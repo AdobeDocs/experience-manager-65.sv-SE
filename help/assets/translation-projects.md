@@ -3,10 +3,10 @@ title: Skapa översättningsprojekt
 description: Lär dig hur du skapar översättningsprojekt i [!DNL Adobe Experience Manager].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '1765'
-ht-degree: 10%
+source-wordcount: '1763'
+ht-degree: 13%
 
 ---
 
@@ -151,7 +151,7 @@ Om du använder det här alternativet körs översättningsarbetsflödet för re
 
 1. Välj ett projekt i **[!UICONTROL Existing translation project]** listan för att lägga till resursen för översättning.
 
-   ![chlimage_1-70](assets/chlimage_1-78.png)
+   ![chlimage_1-78](assets/chlimage_1-78.png)
 
 1. Klicka på **[!UICONTROL Create]**. Resurserna som ska översättas läggs till i målmappen. Den uppdaterade mappen listas i avsnittet **[!UICONTROL Language Copies]**.
 
@@ -286,7 +286,7 @@ När du kör ett översättningsarbetsflöde för att uppdatera en språkkopia m
 
    ![chlimage_1-99](assets/chlimage_1-99.png)
 
-1. I [!DNL Assets] gränssnittet väljer du en resurs som du redan har översatt och klickar på **[!UICONTROL Edit]** ikonen i verktygsfältet för att öppna resursen i redigeringsläge.
+1. I [!DNL Assets] gränssnittet väljer du en resurs som du redan har översatt och klickar på **[!UICONTROL Edit]** i verktygsfältet för att öppna resursen i redigeringsläge.
 1. Redigera resursen och spara sedan ändringarna.
 1. Uppdatera språkkopian genom att utföra steg 2-14 i proceduren [Lägg till i befintligt översättningsprojekt](#add-to-existing-translation-project) .
 1. Klicka på ellipsen längst ned i **[!UICONTROL Translation Job]** rutan. I listan med resurser på **[!UICONTROL Translation Job]** sidan kan du tydligt visa den tillfälliga plats där den översatta versionen av resursen lagras.
