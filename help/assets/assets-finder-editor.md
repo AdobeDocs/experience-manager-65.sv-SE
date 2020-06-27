@@ -3,9 +3,9 @@ title: Skapa och konfigurera sidor för Resursredigeraren
 description: Lär dig hur du skapar anpassade sidor i Resursredigeraren och redigerar flera resurser samtidigt.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '2129'
+source-wordcount: '2116'
 ht-degree: 0%
 
 ---
@@ -27,13 +27,13 @@ I det här dokumentet beskrivs följande:
 
 ## Varför skapa och konfigurera sidor i Resursredigeraren? {#why-create-and-configure-asset-editor-pages}
 
-Digital Asset Management används i allt fler scenarier. När man går över från en småskalig lösning för en liten användargrupp yrkesutbildade användare - till exempel fotografer eller taxonomier - till större och mer mångsidiga användargrupper - t.ex. affärsanvändare, WCM-författare, journalister osv. - kan det kraftfulla användargränssnittet i Adobe Experience Manager Assets ge professionella användare alltför mycket information och intressenter börja begära specifika användargränssnitt eller applikationer för att komma åt de digitala resurserna som är relevanta för dem.
+Digital Asset Management används i allt fler scenarier. När man går över från en småskalig lösning för en liten användargrupp yrkesutbildade användare - till exempel fotografer eller taxonomier - till större och mer mångsidiga användargrupper - t.ex. affärsanvändare, WCM-författare, journalister osv. - kan det kraftfulla användargränssnittet i Adobe Experience Manager Assets för professionella användare tillhandahålla för mycket information och intressenter börjar begära specifika användargränssnitt eller applikationer för att få tillgång till de digitala resurserna som är relevanta för dem.
 
 Dessa resurscentrerade program kan vara enkla fotogallerier i ett intranät där medarbetarna kan ladda upp bilder från mässor eller ett presscenter på en offentlig webbplats. Tillgångscentrerade tillämpningar kan även omfatta kompletta lösningar som kundvagnar, kassor och verifieringsprocesser.
 
 Att skapa ett resurscentrerat program blir i stor utsträckning en konfigurationsprocess som inte kräver kodning, bara kunskap om användargrupper och deras behov samt kunskap om de metadata som används. Resurscentrerade program som skapats med Assets kan utökas: med måttlig kodningsansträngning kan återanvändbara komponenter för att söka, visa och ändra resurser skapas.
 
-Ett resurscentrerat program i Experience Manager består av en resursredigeringssida, som kan användas för att få en detaljerad vy över en viss resurs. På en resursredigeringssida kan du även redigera metadata, förutsatt att användaren som använder resursen har de behörigheter som krävs.
+Ett resurscentrerat program i Experience Manager består av en tillgångsredigeringssida, som kan användas för att få en detaljerad vy över en viss resurs. På en resursredigeringssida kan du även redigera metadata, förutsatt att användaren som använder resursen har de behörigheter som krävs.
 
 <!--
 ## Create and configure an Asset Share page {#creating-and-configuring-an-asset-share-page}
@@ -203,7 +203,7 @@ När du skapar sidan Resursredigerare kan det vara bra att skapa sidan direkt un
 
 Så här skapar du en resursredigeringssida:
 
-1. Gå till den plats där du vill skapa en resursredigeringssida på fliken **Webbplatser** och klicka på **Ny**.
+1. Gå till den plats där du vill skapa en resursredigeringssida på **[!UICONTROL Websites]** fliken och klicka på **Ny**.
 1. Välj **Geometrixx Resursredigerare** och klicka på **Skapa**. Den nya sidan skapas och sidan visas på fliken **Webbplatser** .
 
 ![screen_shot_2012-04-23at15858pm](assets/screen_shot_2012-04-23at15858pm.png)
@@ -356,7 +356,7 @@ Som standard är den i skrivskyddat läge, så användare kan inte redigera den.
 
 Om du kan redigera titeln kan du lägga till en titel och en beskrivning genom att klicka på pennan för att öppna fönstret **Resursegenskaper** . Dessutom kan du aktivera och inaktivera resursen genom att välja datum och tid.
 
-När användare redigerar titeln genom att klicka på pennikonen kan de ändra **titel**, **beskrivning** och ange **På** - och **Av-tider** för att aktivera och inaktivera resursen.
+När du redigerar [!UICONTROL Title]kan du ändra **titel**, **beskrivning** och ange **På** - och **Av-tider** för att aktivera och inaktivera resursen.
 
 ![screen_shot_2012-04-23at35241pm](assets/screen_shot_2012-04-23at35241pm.png)
 
@@ -391,7 +391,7 @@ Följande åtgärder är tillgängliga:
 
 ## Flera redigeringsresurser med sidan Resursredigeraren {#multi-editing-assets-with-the-asset-editor-page}
 
-Med Experience Manager Assets kan ni ändra flera resurser samtidigt. När du har valt resurser kan du ändra deras:
+Med Experience Manager Assets kan du ändra flera resurser samtidigt. När du har valt resurser kan du ändra deras:
 
 * Taggar
 * Metadata
@@ -414,15 +414,15 @@ Så här gör du om du vill redigera flera resurser på sidan Resursredigeraren:
    * En tagg som gäller för alla resurser visas med ett vanligt teckensnitt.
    * Andra metadata än taggar: värdet för fältet visas bara om det är samma för alla markerade resurser.
 
-1. Klicka på **Hämta** för att hämta en zip-fil som innehåller resursens ursprungliga återgivningar.
-1. Klicka på pennikonen bredvid fältet **Taggar** för att redigera taggarna:
+1. Klicka på **Hämta** för att hämta en ZIP-fil som innehåller de ursprungliga resursåtergivningarna.
+1. Klicka på Redigera taggalternativet som finns bredvid fältet **Taggar** .
 
    * En tagg som inte gäller för alla resurser, men bara för ett fåtal har en grå bakgrund.
    * En tagg som gäller för alla resurser har en vit bakgrund.
    Du kan:
 
-   * Klicka på **x** -ikonen för att ta bort taggen för alla resurser.
-   * Klicka på **+** -ikonen för att lägga till taggen i alla resurser.
+   * Klicka `x` för att ta bort taggen för alla resurser.
+   * Klicka `+` för att lägga till taggen i alla resurser.
    * Klicka på **pilen** och välj en tagg för att lägga till en ny tagg till alla resurser.
    Klicka på **OK** för att skriva ändringarna i formuläret. Rutan bredvid fältet **Taggar** markeras automatiskt.
 
