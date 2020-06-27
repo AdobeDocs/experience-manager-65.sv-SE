@@ -3,10 +3,10 @@ title: Relaterade tillgångar
 description: Lär dig hur du relaterar digitala resurser som delar vissa gemensamma attribut. Skapa också källbaserade relationer mellan digitala resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '615'
-ht-degree: 0%
+source-wordcount: '611'
+ht-degree: 3%
 
 ---
 
@@ -22,7 +22,7 @@ Med den här funktionen kan du dela en lågupplöst PDF- eller JPG-fil med lever
 
 ## Relatera resurser {#relating-assets}
 
-1. I Experience Manager-gränssnittet öppnar du **[!UICONTROL Properties]** sidan för en resurs som du vill relatera.
+1. I gränssnittet Experience Manager öppnar du **[!UICONTROL Properties]** sidan för en resurs som du vill relatera.
 
    ![öppna en tillgångs egenskapssida för att relatera resursen](assets/asset-properties-relate-assets.png)
 
@@ -36,7 +36,7 @@ Med den här funktionen kan du dela en lågupplöst PDF- eller JPG-fil med lever
 
    ![chlimage_1-274](assets/chlimage_1-274.png)
 
-1. Om du vill koppla en annan resurs till den valda resursen klickar du på **[!UICONTROL Relate]** ikonen i verktygsfältet.
+1. Om du vill koppla en annan resurs till den valda resursen klickar du på **[!UICONTROL Relate]** i verktygsfältet.
 
    ![chlimage_1-275](assets/chlimage_1-275.png)
 
@@ -51,7 +51,7 @@ Med den här funktionen kan du dela en lågupplöst PDF- eller JPG-fil med lever
 
    ![chlimage_1-277](assets/chlimage_1-277.png)
 
-1. Klicka på **[!UICONTROL Confirm]** ikonen.
+1. Klicka på **[!UICONTROL Confirm]**.
 1. Klicka **[!UICONTROL OK]** för att stänga dialogrutan. Beroende på ditt val av relation i steg 3 listas den relaterade resursen under en lämplig kategori i **[!UICONTROL Related]** avsnittet. Om den resurs du har relaterat är källfilen för den aktuella resursen visas den under **[!UICONTROL Source]**.
 
    ![chlimage_1-278](assets/chlimage_1-278.png)
