@@ -3,9 +3,9 @@ title: Hantera sammansatta resurser med referenser och flersidiga resurser i [!D
 description: Lär dig hur du skapar referenser till digitala resurser från [!DNL Adobe InDesign], [!DNL Adobe Illustrator] och [!DNL Adobe Photoshop]. Använd funktionen för sidvisningsprogram för att visa enskilda underresurssidor för flersidiga filer som PDF-, INDD-, PPT-, PPTX- och AI-filer.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: d90a95195a97a1840e1defb49d2a09ffbd3c8650
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '1311'
+source-wordcount: '1315'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Referenser tolkas utifrån sökväg, dokument-ID och instans-ID för de referera
 
 Du kan referera till befintliga digitala resurser inifrån en [!DNL Adobe Illustrator] fil.
 
-1. Hämta digitala resurser till det lokala filsystemet med hjälp av [Experience Manager-datorprogrammet](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html). Navigera till filsystemplatsen för resursen som du vill referera till.
+1. Hämta de digitala resurserna på det lokala filsystemet med hjälp av [Experience Manager-datorprogrammet](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html). Navigera till filsystemplatsen för resursen som du vill referera till.
 1. Dra resursen från den lokala mappen till [!DNL Illustrator] filen.
 
 1. Spara [!DNL Illustrator] filen på den monterade enheten eller [överför](/help/assets/managing-assets-touch-ui.md#uploading-assets) den till [!DNL Experience Manager] databasen.
@@ -38,9 +38,9 @@ Du kan referera till befintliga digitala resurser inifrån en [!DNL Adobe Illust
 
    ![chlimage_1-85](assets/chlimage_1-259.png)
 
-1. Klicka **[!UICONTROL View Properties]** i verktygsfältet. På [!UICONTROL Properties] sidan visas listan med filer som refererar till den aktuella resursen under **[!UICONTROL References]** kolumnen på **[!UICONTROL Basic]** fliken.
+1. Klicka på **[!UICONTROL View Properties]** i verktygsfältet. På [!UICONTROL Properties] sidan visas listan med filer som refererar till den aktuella resursen under **[!UICONTROL References]** kolumnen på **[!UICONTROL Basic]** fliken.
 
-   ![visa referenserna för Experience Manager Assets i kolumnen Referenser i resursinformationen](assets/asset-references.png)
+   ![visa referenserna för Experience Manager Assets i kolumnen Referenser i tillgångsinformationen](assets/asset-references.png)
 
    *Bild: Resursreferenser i tillgångsinformation.*
 
@@ -105,7 +105,7 @@ Kör arbetsflödet särskilt för Microsoft Word-dokument **[!UICONTROL DAM Pars
 
 ## Visa delresurser {#viewing-subassets}
 
-Delresurserna visas bara om delresurserna genereras och är tillgängliga för den valda flersidiga resursen. Om du vill visa de genererade delresurserna öppnar du flersidesresursen. Klicka på ikonen ![för](assets/do-not-localize/aem_leftrail_contentonly.png) vänsterspåret i det övre vänstra området på sidan och klicka på **[!UICONTROL Subassets]** i listan. När du väljer **[!UICONTROL Subassets]** från listan. Du kan också använda kortkommandot `alt + 5`.
+Delresurserna visas bara om delresurserna genereras och är tillgängliga för den valda flersidiga resursen. Om du vill visa de genererade delresurserna öppnar du flersidesresursen. Klicka på ![Alternativ i det övre vänstra området på sidan för att öppna den vänstra listen](assets/do-not-localize/aem_leftrail_contentonly.png) och klicka på **[!UICONTROL Subassets]** i listan. När du väljer **[!UICONTROL Subassets]** från listan. Du kan också använda kortkommandot `alt + 5`.
 
 ![Visa delresurser för en flersidig resurs](assets/view_subassets_simulation.gif)
 
@@ -127,7 +127,7 @@ Följande alternativ är tillgängliga i verktygsfältet, i den vänstra listen 
 
 * **[!UICONTROL Page Overview]** visar alla delresurser samtidigt.
 
-* **[!UICONTROL Timeline]** alternativet från den vänstra listen när du har klickat på ikonen ![för](assets/do-not-localize/aem_leftrail_contentonly.png) vänster spår visas filens aktivitetsström.
+* **[!UICONTROL Timeline]** efter att du klickat på ![Alternativ för att öppna den vänstra listen](assets/do-not-localize/aem_leftrail_contentonly.png) visas filens aktivitetsström.
 
 ## God praxis och begränsning {#best-practice-limitation-tips}
 
@@ -139,3 +139,4 @@ Följande alternativ är tillgängliga i verktygsfältet, i den vänstra listen 
 >* [Konfigurera skrivbordsåtgärder i Adobe Experience Manager](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#desktopactions-v2)
 >* [Skapa länkade smarta objekt i Adobe Photoshop](https://helpx.adobe.com/photoshop/using/create-smart-objects.html#create-linked-smart-objects)
 >* [Montera bilder i Adobe InDesign](https://helpx.adobe.com/indesign/using/placing-graphics.html)
+
