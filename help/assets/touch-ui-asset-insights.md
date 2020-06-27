@@ -3,10 +3,10 @@ title: 'Asset Insights '
 description: Lär dig hur funktionen för tillgångsinsikter gör att du kan spåra användarbetyg och användningsstatistik för bilder som används på tredjepartswebbplatser, marknadsföringskampanjer och Adobes kreativa lösningar.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '700'
-ht-degree: 2%
+source-wordcount: '698'
+ht-degree: 3%
 
 ---
 
@@ -47,7 +47,7 @@ Du kan visa poängen för resursinsikter från metadatasidan.
 
    >[!NOTE]
    >
-   >Eftersom funktionen för tillgångsinsikter vanligtvis hämtar data från lösningar från Adobe Analytics regelbundet, kanske inte avsnittet Lösningar visar de senaste data. Den tidsperiod som data visas för beror på schemat för hämtningsåtgärden som resursinsikter körs för att hämta analysdata.
+   >Eftersom funktionen för tillgångsinsikter vanligtvis hämtar data från Adobe Analytics i lösningar regelbundet, kanske inte avsnittet Lösningar visar de senaste data. Den tidsperiod som data visas för beror på schemat för hämtningsåtgärden som resursinsikter körs för att hämta Analytics-data.
 
 1. To view performance statistics for the asset graphically over a period of time, select period in the **[!UICONTROL Performance Statistics]** section. Detaljer, inklusive klick och visningar, visas som trendlinjer i ett diagram.
 
@@ -66,12 +66,12 @@ Du kan visa poängen för resursinsikter från metadatasidan.
 You can view scores of all assets within a folder simultaneously using **[!UICONTROL Insights View]**.
 
 1. I Assets-användargränssnittet navigerar du till den mapp som innehåller de resurser som du vill visa insikter för.
-1. Klicka på layoutikonen i verktygsfältet och välj sedan **[!UICONTROL Insights View]**.
+1. Klicka på Layout i verktygsfältet och välj sedan **[!UICONTROL Insights View]**.
 1. På sidan visas användningsresultat för resurserna. Jämför omdömen om de olika tillgångarna och få insikter.
 
 ## Schemalägg bakgrundsjobb {#scheduling-background-job}
 
-Resursinsikter hämtar användningsdata för resurser från Adobe Analytics-rapportsviter regelbundet. Som standard körs ett bakgrundsjobb var 24:e timme i resursinsikter för att hämta data. Du kan dock ändra både frekvens och tid genom att konfigurera **[!UICONTROL Adobe CQ DAM Asset Performance Report Sync Job]** tjänsten från webbkonsolen.
+Resursinsikter hämtar användningsdata för resurser från Adobe Analytics rapporteringsprogram regelbundet. Som standard körs ett bakgrundsjobb var 24:e timme i resursinsikter för att hämta data. Du kan dock ändra både frekvens och tid genom att konfigurera **[!UICONTROL Adobe CQ DAM Asset Performance Report Sync Job]** tjänsten från webbkonsolen.
 
 1. Klicka på Experience Manager-logotypen och gå till **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
 1. Öppna **[!UICONTROL Adobe CQ DAM Asset Performance Report Sync Job]** tjänstkonfigurationen.
