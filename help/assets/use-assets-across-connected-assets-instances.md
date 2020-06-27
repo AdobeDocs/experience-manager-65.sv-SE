@@ -1,11 +1,11 @@
 ---
-title: Använd anslutna resurser för att dela DAM-resurser i redigeringsarbetsflödet för [!DNL Adobe Experience Manager Sites].
-description: Använd resurser som är tillgängliga på en [!DNL Adobe Experience Manager Assets]-fjärrdistribution när du skapar webbsidor på en annan [!DNL Adobe Experience Manager Sites]-distribution.
+title: Använd Anslutna resurser för att dela DAM-resurser i arbetsflödet för att skapa webbplatser i [!DNL Adobe Experience Manager].
+description: Använd resurser som är tillgängliga på en fjärrdistribution av [!DNL Adobe Experience Manager Assets] när du skapar webbsidor på en annan distribution av [!DNL Adobe Experience Manager Sites].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 3e43e46b37ea5a9449da4a98d94fdc22f6c4ee8c
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '2018'
+source-wordcount: '2019'
 ht-degree: 48%
 
 ---
@@ -28,11 +28,11 @@ For the [!DNL Sites] authors, the remote assets are available as read-only local
 Innan du använder eller konfigurerar den här funktionen bör du kontrollera följande:
 
 * Användarna ingår i lämpliga användargrupper för varje distribution.
-* Ett av villkoren som stöds för Adobe Experience Manager-distributionstyper är uppfyllt. [!DNL Experience Manager] 6.5 [!DNL Assets] fungerar med [!DNL Experience Manager] molntjänster. Mer information finns i Funktionen [Anslutna resurser i Experience Manager som en molntjänst](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/admin/use-assets-across-connected-assets-instances.html).
+* Ett av villkoren som stöds för distributionstyperna Adobe Experience Manager är uppfyllt. [!DNL Experience Manager] 6.5 [!DNL Assets] fungerar med [!DNL Experience Manager] som Cloud Service. Mer information finns i Funktionen [Anslutna resurser i Experience Manager som en Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/admin/use-assets-across-connected-assets-instances.html).
 
-   |  | [!DNL Sites] som molntjänst | [!DNL Experience Manager] 6.5 [!DNL Sites] på AMS | [!DNL Experience Manager] 6.5 [!DNL Sites] på plats |
+   |  | [!DNL Sites] som en Cloud Service | [!DNL Experience Manager] 6.5 [!DNL Sites] på AMS | [!DNL Experience Manager] 6.5 [!DNL Sites] på plats |
    |---|---|---|---|
-   | **[!DNL Experience Manager Assets]som molntjänst ** | Stöds | Stöds | Stöds |
+   | **[!DNL Experience Manager Assets]som en Cloud Service ** | Stöds | Stöds | Stöds |
    | **[!DNL Experience Manager]6.5[!DNL Assets]på AMS ** | Stöds | Stöds | Stöds |
    | **[!DNL Experience Manager]6.5[!DNL Assets]på plats ** | Stöds ej | Stöds ej | Stöds ej |
 
@@ -105,7 +105,7 @@ To configure Connected Assets and local [!DNL Sites] connectivity, follow these 
 
    1. Logga in med administratörsautentiseringsuppgifterna. Search for `Cross-Origin`. Öppna **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
 
-   1. To create a CORS configuration for [!DNL Sites] instance, click ![aem_assets_add_icon](assets/do-not-localize/aem_assets_add_icon.png) icon next to **[!UICONTROL Adobe Granite Cross-Origin Resource Sharing Policy]**.
+   1. To create a CORS configuration for [!DNL Sites] instance, click add option ![aem_assets_add_icon](assets/do-not-localize/aem_assets_add_icon.png) next to **[!UICONTROL Adobe Granite Cross-Origin Resource Sharing Policy]**.
 
    1. In the field **[!UICONTROL Allowed Origins]**, input the URL of the local [!DNL Sites], that is, `https://[local_sites]:[port]`. Spara konfigurationen.
 
