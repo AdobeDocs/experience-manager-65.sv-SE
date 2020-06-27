@@ -3,34 +3,32 @@ title: Lägga till bildscheman med hyperlänkar till digitala bilder
 description: Lär dig hur du lägger till bildschema med hyperlänkar till en bild.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '274'
-ht-degree: 0%
+source-wordcount: '246'
+ht-degree: 2%
 
 ---
 
 
 # Lägg till bildscheman {#adding-image-maps}
 
-Lär dig hur du lägger till hyperlänkade bildscheman i bildresurser.
-
 Med bildscheman kan du lägga till ett eller flera hyperlänkade områden som fungerar som andra hyperlänkar.
 
 1. Öppna något av följande **[!UICONTROL In-place Image Editor]**:
 
-   * Använd snabbåtgärder och klicka på **[!UICONTROL Edit]** ikonen som visas på en resurs i **[!UICONTROL Card]** vyn. Markera resursen i listvyn och klicka på **redigeringsikonen** i verktygsfältet.
+   * Använd snabbåtgärder för att klicka **[!UICONTROL Edit]** som visas på en resurs i **[!UICONTROL Card]** vyn. Markera resursen i listvyn och klicka på **[!UICONTROL Edit]** alternativet i verktygsfältet.
 
       >[!NOTE]
       >
       >Snabbåtgärder är inte tillgängliga i **[!UICONTROL List]** vyn.
 
-   * Markera resursen i **[!UICONTROL Card]** eller **[!UICONTROL List]** vyn och klicka på **[!UICONTROL Edit]** -ikonen i verktygsfältet.
-   * Klicka på **[!UICONTROL Edit]** ikonen på resurssidan.
+   * Markera resursen i vyn **[!UICONTROL Card]** eller **[!UICONTROL List]** vyn och klicka **[!UICONTROL Edit]** på verktygsfältet.
+   * Klicka **[!UICONTROL Edit]** på resurssidan.
 
       ![chlimage_1-420](assets/chlimage_1-420.png)
 
-1. Om du vill infoga ett bildschema klickar du på **[!UICONTROL Launch Map]** ikonen i verktygsfältet.
+1. Om du vill infoga ett bildschema klickar du **[!UICONTROL Launch Map]** i verktygsfältet.
 
    ![chlimage_1-421](assets/chlimage_1-421.png)
 
@@ -42,11 +40,11 @@ Med bildscheman kan du lägga till ett eller flera hyperlänkade områden som fu
 
    ![chlimage_1-423](assets/chlimage_1-423.png)
 
-1. Klicka på **[!UICONTROL Confirm]** ikonen och sedan på **[!UICONTROL Finish]** ikonen i verktygsfältet för att spara ändringarna.
+1. Klicka på **[!UICONTROL Confirm]** och sedan på **[!UICONTROL Finish]** i verktygsfältet för att spara ändringarna.
 
    ![chlimage_1-424](assets/chlimage_1-424.png)
 
-   Om du vill ta bort bildschemat klickar du på aktiveringspunkten och sedan på **[!UICONTROL Delete]** -ikonen.
+   Om du vill ta bort bildschemat klickar du på den aktiva punkten och sedan på **[!UICONTROL Delete]**.
 
    ![chlimage_1-425](assets/chlimage_1-425.png)
 
@@ -54,4 +52,4 @@ Med bildscheman kan du lägga till ett eller flera hyperlänkade områden som fu
 
    ![chlimage_1-426](assets/chlimage_1-426.png)
 
-   Om alternativet Dynamic Media är aktiverat går du till resursredigeraren och klickar på **[!UICONTROL Map]** ikonen för att visa alla använda bildscheman.
+   Om alternativet Dynamic Media är aktiverat går du till resursredigeraren och klickar på **[!UICONTROL Map]** för att visa alla använda bildscheman.
