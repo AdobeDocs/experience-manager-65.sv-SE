@@ -1,12 +1,12 @@
 ---
 title: Sök efter digitala resurser och bilder i [!DNL Adobe Experience Manager].
-description: Lär dig hur du hittar de nödvändiga resurserna i [!DNL Adobe Experience Manager] genom att använda panelen Filter och hur du använder de resurser som visas i sökningen.
+description: Lär dig hur du hittar de nödvändiga resurserna i [!DNL Adobe Experience Manager] med hjälp av panelen Filter och hur du använder de resurser som visas i sökningen.
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '5822'
+source-wordcount: '5821'
 ht-degree: 4%
 
 ---
@@ -26,12 +26,12 @@ ht-degree: 4%
 | [Förstå sökresultat och beteenden](#searchbehavior) | [Ändra sökfaktorer](#searchfacets) | [Massmetadatauppdateringar](#metadataupdates) |
 | [Sökrankning och förstärkning](#searchrank) | [Textextrahering](#extracttextupload) | [Smarta samlingar](#collections) |
 | [Avancerad sökning: filtrering och sökningens omfattning](#scope) | [Anpassade predikat](#custompredicates) | [Förstå oväntade resultat och felsökning](#troubleshoot-unexpected-search-results-and-issues) |
-| [Sök bland andra lösningar och appar](#beyondomnisearch):<ul><li>[Adobe Asset Link](#aal)</li><li>[Varumärkesportal](#brandportal)</li><li>[Experience Manager-datorprogram](#desktopapp)</li><li>[Adobe Stock-bilder](#adobestock)</li><li>[Dynamiska medieresurser](#dynamicmedia)</li></ul> |  |  |
+| [Sök bland andra lösningar och appar](#beyondomnisearch):<ul><li>[Adobe Asset Link](#aal)</li><li>[Varumärkesportal](#brandportal)</li><li>[Experience Manager](#desktopapp)</li><li>[Adobe Stock-bilder](#adobestock)</li><li>[Dynamic Media-resurser](#dynamicmedia)</li></ul> |  |  |
 | [Resursväljaren](#assetselector) |  |  |
 | [Begränsningar](#limitations) och [tips](#tips) |  |  |
 | [Illustrerade exempel](#samples) |  |  |
 
-Sök efter resurser med hjälp av Omnissearch-fältet högst upp i [!DNL Experience Manager] webbgränssnittet. Gå till **[!UICONTROL Assets]** > **[!UICONTROL Files]** i [!DNL Experience Manager], klicka på sökikonen i det övre fältet, ange söknyckelord och tryck på Retur. Du kan också använda kortkommandot / (snedstreck) för att öppna Omnissearch-fältet. `Location:Assets` är förvalt för att begränsa sökningarna till DAM-resurser. [!DNL Experience Manager] innehåller förslag när du börjar skriva ett söknyckelord.
+Sök efter resurser med hjälp av Omnissearch-fältet högst upp i [!DNL Experience Manager] webbgränssnittet. Gå till **[!UICONTROL Assets]** > **[!UICONTROL Files]** i [!DNL Experience Manager], klicka på Sök i det övre fältet, ange söknyckelord och tryck på Retur. Du kan också använda kortkommandot / (snedstreck) för att öppna Omnissearch-fältet. `Location:Assets` är förvalt för att begränsa sökningarna till DAM-resurser. [!DNL Experience Manager] innehåller förslag när du börjar skriva ett söknyckelord.
 
 Använd panelen för att begränsa sökningen genom att filtrera sökresultaten baserat på olika alternativ (prediktiv), t.ex. filtyp, filstorlek, senaste ändringsdatum, resursens status, insiktdata och Adobe Stock-licensiering. **[!UICONTROL Filters]** Administratörerna kan anpassa filterpanelen och lägga till eller ta bort sökpredikt med hjälp av sökfaktorer. Filtret [!UICONTROL File Type] på [!UICONTROL Filters] panelen har kryssrutor för olika lägen. Om du inte markerar alla kapslade predikat (eller format) markeras därför kryssrutorna på första nivån delvis.
 
@@ -41,7 +41,7 @@ Använd panelen för att begränsa sökningen genom att filtrera sökresultaten 
 
 Bekanta dig med sökgränssnittet och de tillgängliga åtgärderna.
 
-![Förstå gränssnittet för Experience Manager Assets-sökresultat](assets/aem_search_results.png)
+![Förstå gränssnittet för sökresultat i Experience Manager Assets](assets/aem_search_results.png)
 
 *Bild: Förstå gränssnittet för[!DNL Experience Manager Assets]sökresultat.*
 
@@ -118,7 +118,7 @@ Du kan förbättra nyckelordens relevans för vissa resurser för att öka sökn
 1. I **[!UICONTROL Search Promote]** rutan anger du ett nyckelord som du vill göra sökningen efter bilden snabbare och klickar sedan på **[!UICONTROL Add]**. Du kan ange flera nyckelord på samma sätt.
 1. Klicka på **[!UICONTROL Save & Close]**. Den resurs som du befordrade för det här nyckelordet visas bland de översta sökresultaten.
 
-Du kan använda detta till din fördel genom att öka rankningen för vissa resurser i sökresultaten för nyckelordet target. Se exempelvideon nedan. Mer information finns i [Sök i Experience Manager](https://helpx.adobe.com/experience-manager/kt/assets/using/search-feature-video-use.html).
+Du kan använda detta till din fördel genom att öka rankningen för vissa resurser i sökresultaten för nyckelordet target. Se exempelvideon nedan. Mer information finns i [Söka i Experience Manager](https://helpx.adobe.com/experience-manager/kt/assets/using/search-feature-video-use.html).
 
 >[!VIDEO](https://video.tv.adobe.com/v/16766/?quality=6)
 
@@ -148,7 +148,7 @@ Om du vill söka efter bilder som visuellt liknar en användarvald bild klickar 
 
 I [!DNL Experience Manager] användargränssnittet kan användarna söka efter [Adobe Stock-mediefiler](/help/assets/aem-assets-adobe-stock.md) och licensiera de mediefiler som behövs. Lägg till `Location: Adobe Stock` i omsökningsfältet. Du kan också använda panelen Filter för att hitta alla licensierade eller olicensierade mediefiler eller söka efter en viss mediefil med hjälp av Adobe Stock-filnumret.
 
-### Dynamiska medieresurser {#dmassets}
+### Dynamic Media-resurser {#dmassets}
 
 Du kan filtrera efter dynamiska mediebilder genom att välja **[!UICONTROL Dynamic Media]** > **[!UICONTROL Sets]** på panelen **[!UICONTROL Filters]**. Den filtrerar och visar resurser som bilduppsättningar, karuseller, blandade medieuppsättningar och rotationsuppsättningar.
 
@@ -214,7 +214,7 @@ Affärsanvändare och marknadsförare använder Brand Portal för att effektivt 
 
 I [!DNL Experience Manager] användargränssnittet kan användarna söka efter Adobe Stock-mediefiler och licensiera de mediefiler som behövs. Lägg till `Location: Adobe Stock` i Omnissearch-fältet. Du kan också använda **[!UICONTROL Filters]** panelen för att hitta alla licensierade eller olicensierade mediefiler eller söka efter en viss mediefil med hjälp av Adobe Stock-filnumret. Se [Hantera Adobe Stock-bilder i Experience Manager](/help/assets/aem-assets-adobe-stock.md#usemanage).
 
-### Sök efter Dynamic Media-resurser {#dynamicmedia}
+### Söka efter Dynamic Media-resurser {#dynamicmedia}
 
 Du kan filtrera efter dynamiska mediebilder genom att välja **[!UICONTROL Dynamic Media]** > **[!UICONTROL Sets]** på panelen **[!UICONTROL Filters]**. Den filtrerar och visar resurser som bilduppsättningar, karuseller, blandade medieuppsättningar och rotationsuppsättningar. När författarna redigerar webbsidor kan de söka efter uppsättningar inifrån Content Finder. Det finns ett filter för uppsättningar på en snabbmeny.
 
@@ -354,7 +354,7 @@ Visuell sökning använder smart taggning och kräver [!DNL Experience Manager] 
 1. I CRXDE i `/oak-index/damAssetLucene` noden anger du `reindex` egenskapen till `true`. Spara ändringarna.
 1. (Valfritt) Om du har skapat ett anpassat sökformulär kopierar du `/libs/settings/dam/search/facets/assets/jcr%3Acontent/items/similaritysearch` noden till `/conf/global/settings/dam/search/facets/assets/jcr:content/items`. Spara alla ändringar.
 
-Relaterad information finns i [Lär dig mer om smarta taggar i Experience Manager](https://helpx.adobe.com/experience-manager/kt/assets/using/smart-tags-feature-video-understand.html) och [hur du hanterar smarta taggar](/help/assets/managing-smart-tags.md).
+Mer information finns i [Lär dig mer om smarta taggar i Experience Manager](https://helpx.adobe.com/experience-manager/kt/assets/using/smart-tags-feature-video-understand.html) och [hur du hanterar smarta taggar](/help/assets/managing-smart-tags.md).
 
 ### Obligatoriska metadata {#mandatorymetadata}
 
