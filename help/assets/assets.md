@@ -1,11 +1,11 @@
 ---
 title: Om Adobe Experience Manager Assets
-description: Lär dig vad som är digital resurshantering, användningsexempel och Adobes Experience Manager Asset-erbjudande
+description: Läs om vad som är digital resurshantering, användningsexempel och Adobes Experience Manager Asset-erbjudande
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '878'
+source-wordcount: '875'
 ht-degree: 0%
 
 ---
@@ -13,13 +13,13 @@ ht-degree: 0%
 
 # Administrera resurser {#administering-assets}
 
-Assets är ett DAM-verktyg (Digital Asset Management) som är helt integrerat med Experience Manager-plattformen och som gör att ert företag kan dela och distribuera digitala resurser. Användare i en hel organisation kan hantera, lagra och komma åt bilder, videor, dokument, ljudklipp och multimedia som Flash-filer för användning på webben, i tryck och för digital distribution.
+Resurser är ett DAM-verktyg (Digital Asset Management) som är helt integrerat med Experience Manager och gör det möjligt för företaget att dela och distribuera digitala resurser. Användare i en hel organisation kan hantera, lagra och komma åt bilder, videor, dokument, ljudklipp och multimedia som Flash-filer för användning på webben, i tryck och för digital distribution.
 
 ## Vad är Digital Asset Management? {#what-is-digital-asset-management}
 
 Resurser ger möjlighet till företagsövergripande delning och distribution av en organisations viktigaste digitala resurser. Användare i en hel organisation kan lagra, hantera och komma åt digitala resurser som bilder, grafik, ljud, video och dokument via ett webbgränssnitt (eller en CIFS- eller WebDAV-mapp).
 
-Funktionen är väl integrerad i Experience Manager och gör följande:
+Med Assets-funktionen, som är väl integrerad i Experience Manager, kan du göra följande:
 
 * Lägg in och dela bilder, dokument, ljudfiler och videofiler i en mängd olika filformat.
 * Hantera resurser genom att gruppera dem efter taggar, ljusbord eller stjärnor (dina favoriter). Lägg till anteckningar i resurser.
@@ -30,7 +30,7 @@ Funktionen är väl integrerad i Experience Manager och gör följande:
 
 ### Experience Manager Assets är integrerat med Experience Manager Sites {#aem-assets-fully-integrated-in-cq-wcm}
 
-Resurserna är helt integrerade med Sites och funktionaliteten är tillgänglig med DAM-ikonen. De digitala resurserna som hanteras i Assets-databasen kan sedan nås via innehållssökaren när du redigerar webbsidor.
+Resurserna är helt integrerade med Sites och alla funktioner är sömlöst tillgängliga. De digitala resurserna som hanteras i Assets-databasen kan sedan nås via innehållssökaren när du redigerar webbsidor.
 
 Det grundläggande användargränssnittet är detsamma som för Sites. Mer information finns i [Översikt över platserna](/help/sites-authoring/page-authoring.md) .
 
@@ -84,6 +84,6 @@ De uppgifter du kan utföra med dessa förkonfigurerade arbetsflöden:
 
 Du kan förstås även använda arbetsflöden manuellt. En lista med standardarbetsflöden finns i [Assets Media](/help/assets/media-handlers.md)Handler.
 
-## Experience Manager Assets och MediaLibrary {#cq-dam-vs-cq-medialibrary}
+## Experience Manager Assets and MediaLibrary {#cq-dam-vs-cq-medialibrary}
 
 Mer information om skillnaderna finns i [Resurser och MediaLibrary](/help/assets/medialibrary.md) .
