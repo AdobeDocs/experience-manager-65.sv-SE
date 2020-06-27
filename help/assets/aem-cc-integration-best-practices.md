@@ -3,9 +3,9 @@ title: Bästa praxis för integrering av Adobe Creative Cloud och [!DNL Adobe Ex
 description: Bästa tillvägagångssätt för att integrera [!DNL Adobe Experience Manager] med [!DNL Adobe Creative Cloud] för att effektivisera resursöverföringsarbetsflöden och uppnå hög innehållshastighet.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '3262'
+source-wordcount: '3263'
 ht-degree: 15%
 
 ---
@@ -21,7 +21,7 @@ Läs vidare för att ta reda på vilka integreringar som du ska välja mellan st
 
 >[!NOTE]
 >
->[!DNL Experience Manager] till- [!DNL Creative Cloud] mappdelning är föråldrat och ingår inte längre i den här guiden. Adobe rekommenderar att du använder nyare funktioner som [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) eller [Experience Manager-datorprogrammet](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/introduction.html) för att ge kreativa användare tillgång till resurser som hanteras i [!DNL Experience Manager].
+>[!DNL Experience Manager] till- [!DNL Creative Cloud] mappdelning är föråldrat och ingår inte längre i den här guiden. Adobe rekommenderar att du använder nyare funktioner som [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) eller [Experience Manager för att ge den kreativa användaren tillgång till resurser som hanteras i](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/introduction.html) [!DNL Experience Manager].
 
 ## Samarbete mellan kreatörer, marknadsförare och DAM-användare {#collaboration-needs-of-creatives-marketers-and-dam-users}
 
@@ -36,12 +36,12 @@ Läs vidare för att ta reda på vilka integreringar som du ska välja mellan st
 | Värdeförslag för berörda personer | Erbjudande | Involverade ytor |
 |---|---|---|
 | Creative users upptäcker resurser från [!DNL Experience Manager], öppnar och använder dem, redigerar och överför ändringar till [!DNL Experience Manager]samt överför nya filer till [!DNL Experience Manager], utan att lämna [!DNL Creative Cloud] programmen. | [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) | [!DNL Adobe Photoshop], [!DNL Adobe Illustrator]och [!DNL Adobe InDesign]. |
-| Affärsanvändare förenklar öppning och användning av resurser, redigering och överföring av ändringar [!DNL Experience Manager]samt överföring av nya filer till [!DNL Experience Manager] från skrivbordsmiljön. De använder en allmän integrering för att öppna alla resurstyper i det inbyggda datorprogrammet, inklusive sådana som inte kommer från Adobe. | [Experience Manager-datorprogram](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html) | [!DNL Experience Manager] datorprogram på Win- och Mac-datorer |
+| Affärsanvändare förenklar öppning och användning av resurser, redigering och överföring av ändringar [!DNL Experience Manager]samt överföring av nya filer till [!DNL Experience Manager] från skrivbordsmiljön. De använder en allmän integrering för att öppna alla resurstyper i det inbyggda datorprogrammet, inklusive sådana som inte kommer från Adobe. | [Experience Manager](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html) | [!DNL Experience Manager] datorprogram på Win- och Mac-datorer |
 | Marknadsförare och företagsanvändare upptäcker, förhandsgranskar, licensierar och sparar samt hanterar [!DNL Adobe Stock] mediefiler inifrån [!DNL Experience Manager]. Licensierade och sparade resurser ger utvalda [!DNL Adobe Stock] metadata för bättre styrning. | [Integrering av Experience Manager och Adobe Stock](aem-assets-adobe-stock.md) | [!DNL Experience Manager] webbgränssnitt |
 
 Den här artikeln fokuserar främst på de två första aspekterna av samarbetsbehovet. Distribution och anskaffning av resurser i stor skala omnämns kortfattat som ett användningsexempel. Överväg Adobes varumärkesportal eller Assets Share Commons för sådana behov. Alternate solutions such as [Brand Portal](https://helpx.adobe.com/se/experience-manager/brand-portal/user-guide.html), solutions that can be built based on [Asset Share Commons](https://adobe-marketing-cloud.github.io/asset-share-commons/) components, [Link Share](/help/assets/link-sharing.md), using [Experience Manager Assets](/help/assets/managing-assets-touch-ui.md) should be reviewed based on specific requirement.
 
-![Creative Cloud-anslutningar för Experience Manager, avgöra vilka funktioner som ska användas](assets/creative-connections-aem.png)
+![Creative Cloud-anslutningar för Experience Manager, avgör vilka funktioner som ska användas](assets/creative-connections-aem.png)
 
 ### Mappning av användningsfall och Adobe-lösningar {#mapping-of-use-cases-and-adobe-solutions}
 
@@ -99,18 +99,18 @@ Detta är en kort sammanfattning av bästa praxis för [!DNL Experience Manager]
 
 ### Åtkomst till [!DNL Adobe Stock] resurser från [!DNL Assets] {#access-to-adobe-stock-assets-from-aem-assets}
 
-[Integreringen](/help/assets/aem-assets-adobe-stock.md) med Experience Manager och Adobe Stock ger [!DNL Experience Manager] användarna möjlighet att söka, förhandsgranska, licensiera och spara resurser från [!DNL Adobe Stock] till [!DNL Experience Manager]. Licensierade och sparade [!DNL Stock] resurser har valt [!DNL Stock] metadata som kan användas för att söka efter dem med extra filter.
+[Integreringen](/help/assets/aem-assets-adobe-stock.md) mellan Experience Manager och Adobe Stock ger [!DNL Experience Manager] användarna möjlighet att söka, förhandsgranska, licensiera och spara resurser från [!DNL Adobe Stock] till [!DNL Experience Manager]. Licensierade och sparade [!DNL Stock] resurser har valt [!DNL Stock] metadata som kan användas för att söka efter dem med extra filter.
 
 Några viktiga punkter om den här integreringen:
 
 * När resurser från Adobe Stock sparas i [!DNL Experience Manager]blir de vanliga [!DNL Assets]och binära sparas i [!DNL Experience Manager] databasen. Vissa metadata som är relaterade till [!DNL Adobe Stock] sparas för resursen i, [!DNL Experience Manager]annars ser det ut som för andra filer. Om till exempel smarta taggar är aktiva läggs taggarna till i de här resurserna när de sparas.
 * Resursen som sparas i [!DNL Experience Manager] är en kopia, inte en länk tillbaka till [!DNL Adobe Stock].
 
-**Arbeta med resurser som sparats[!DNL Adobe Stock]i[!DNL Experience Manager]In[!DNL Creative Cloud]**. Den här integreringen är oberoende av[!DNL Adobe Asset Link], men[!DNL Adobe Asset Link]känner igen dessa resurser som sparats på[!DNL Stock]det sättet och visar ytterligare metadata och[!DNL Stock]ikoner för dessa resurser i[!DNL Adobe Asset Link]tilläggsgränssnittet i[!DNL Photoshop],[!DNL Illustrator]eller[!DNL InDesign]. Filerna är tillgängliga för att bläddra, öppna och så vidare, eftersom de är vanliga resurser när de sparas i[!DNL Experience Manager].
+**Arbeta med resurser som sparats[!DNL Adobe Stock]i[!DNL Experience Manager]In[!DNL Creative Cloud]**. Den här integreringen är oberoende av[!DNL Adobe Asset Link], men[!DNL Adobe Asset Link]känner igen dessa resurser som sparats på[!DNL Stock]det sättet och visar ytterligare metadata och en[!DNL Adobe Stock]logotyp för dessa resurser i[!DNL Adobe Asset Link]tillägget UI i[!DNL Photoshop],[!DNL Illustrator]eller[!DNL InDesign]. Filerna är tillgängliga för att bläddra, öppna och så vidare, eftersom de är vanliga resurser när de sparas i[!DNL Experience Manager].
 Creative-användare som arbetar i[!DNL Creative Cloud]program med[!DNL Adobe Asset Link]tillägg kan, förutom att ha tillgång till redan licensierade resurser från[!DNL Adobe Stock]till[!DNL Experience Manager], även använda[!DNL Creative Cloud]Libraries-panelen för att söka efter, förhandsgranska och licensiera[!DNL Adobe Stock]resurser.[!DNL Assets]från[!DNL Adobe Stock]licensierade och sparade i[!DNL Experience Manager]blir tillgängliga för de större team som får tillgång till[!DNL Experience Manager Assets]distributionen, medan kreatörer som licensierar mediefiler från[!DNL Adobe Stock]via[!DNL Creative Cloud]Libraries-panelen endast gör dem tillgängliga för sig själva som standard på sina[!DNL Creative Cloud]konton.
 
 <!-- 
-TBD: A condensed version of the below content is better placed in the Adobe DAM article.
+TBD: A condensed version of the below content is better placed in the Adobe DAM introduction article.
 -->
 
 ## Lagra resurser i ett resurshanteringssystem {#about-storing-assets-in-a-dam}
@@ -121,7 +121,7 @@ För att skapa ett effektivt arbetsflöde mellan kreatörer och marknadsförare/
 
 Genom att lagra resurser i DAM blir de enkelt tillgängliga och sökbara. Det ser till att resurserna kan utnyttjas av många användare i organisationen eller ekosystemet, bland annat partners, kunder och så vidare.
 
-De flesta organisationer väljer att endast lagra resurser som är relevanta för marknadsförings-/LOB-processerna längre fram i kedjan (publicera till kanaler som webbkanaler via [!DNL Experience Manager Sites] eller andra kanaler som hanteras av Adobe Experience Cloud - Marketing Cloud, Advertising Cloud, och som mäts av Analytics Cloud, som tillhandahålls användare/partner och så vidare). Dessutom lagrar organisationer resurser som kan bli föremål för en gransknings-/godkännandeprocess i DAM. På så sätt lagrar DAM de flesta resurser som har stora chanser att utnyttjas och undviker att lagra inaktiva resurser.
+De flesta organisationer väljer att endast lagra resurser som är relevanta för marknadsförings-/LOB-processerna längre fram i kedjan (publicera till kanaler som webbkanaler via [!DNL Experience Manager Sites] eller andra kanaler via Adobe Experience Cloud - Marketing Cloud, Advertising Cloud, och som mäts av Analytics Cloud, som tillhandahåller till användare/partner och så vidare). Dessutom lagrar organisationer resurser som kan bli föremål för en gransknings-/godkännandeprocess i DAM. På så sätt lagrar DAM de flesta resurser som har stora chanser att utnyttjas och undviker att lagra inaktiva resurser.
 
 Lagring av resurser är också beroende av tekniska aspekter och resursutnyttjande. DAM tillhandahåller ytterligare tjänster runt lagrade resurser, inklusive extrahering av metadata, versionshantering, generering av förhandsgranskning/omkodning, hantering av referenser och tillägg av åtkomstkontrollsinformation. Dessa tjänster kräver extra tid och infrastrukturresurser.
 
@@ -171,7 +171,7 @@ Externa byråer och frilansare som inte har direkt åtkomst till DAM-instansen k
 Använd följande strategier för att ge åtkomst till slutliga/godkända mediefiler:
 
 * Använd skrivbordsappen om Asset Link inte fungerar.
-* Använd [Experience Manager Assets Brand Portal](https://helpx.adobe.com/se/experience-manager/brand-portal/user-guide.html) för säker distribution av resurser till externa partner
+* Använd [Experience Manager Assets Brand Portal](https://helpx.adobe.com/se/experience-manager/brand-portal/user-guide.html) för säker distribution av material till externa partners
 * Använd en anpassad implementering av en distributions- och källportal baserad på [resursdelningskommentarer](https://adobe-marketing-cloud.github.io/asset-share-commons/)
 * Använd den åtkomstkontroll som har konfigurerats i [!DNL Experience Manager] och nödvändig nätverksinfrastruktur (till exempel listan över tillåtna VPN- och IP-adresser) för att ge externa parter åtkomst till ett dedikerat innehållsområde i din DAM. De kan använda [!DNL Experience Manager] webbgränssnittet för att hämta resurser och överföra nytt innehåll till din DAM.
 
@@ -221,6 +221,6 @@ Information om hur du planerar och kör resursmigreringar från ett befintligt s
 >
 >* [Adobe Asset Link](https://helpx.adobe.com/in/enterprise/using/adobe-asset-link.html)
 >* [Bästa praxis för Experience Manager-datorprogram](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/archive/best-practices-for-v1.html)
->* [Experience Manager Brand Portal](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/introduction/brand-portal.html)
+>* [Experience Manager varumärkesportal](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/introduction/brand-portal.html)
 >* [Integrering av Experience Manager och Adobe Stock](aem-assets-adobe-stock.md)
 
