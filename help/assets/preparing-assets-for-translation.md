@@ -3,7 +3,7 @@ title: Förbered resurser för översättning
 description: Skapa rotmappar för språk för att förbereda resurser för översättning för stöd av flerspråkiga resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
 source-wordcount: '438'
 ht-degree: 0%
@@ -58,10 +58,10 @@ Rotsidan för den italienska språkkopian av exempelhierarkin har till exempel `
 
 ## Visa språkrötter {#viewing-language-roots}
 
-Experience Manager-gränssnittet innehåller en **[!UICONTROL References]** panel med en lista över språkrötter som har skapats i Assets.
+I gränssnittet Experience Manager finns en **[!UICONTROL References]** panel som visar en lista med språkrötter som har skapats i Assets.
 
 1. I resurskonsolen väljer du det språk som är primärt för vilket du vill skapa språkkopior.
-1. Klicka på ikonen GlobalNav och välj **[!UICONTROL References]** att öppna [!UICONTROL Reference] rutan.
+1. Välj alternativet att öppna **[!UICONTROL References]** rutan från den vänstra listen [!UICONTROL Reference] .
 
    ![chlimage_1-122](assets/chlimage_1-122.png)
 
