@@ -3,9 +3,9 @@ title: Hämta digitala resurser från [!DNL Adobe Experience Manager].
 description: Lär dig hur du hämtar resurser från [!DNL Adobe Experience Manager] och aktiverar eller inaktiverar hämtningsfunktionen.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '782'
+source-wordcount: '780'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Det går inte att hämta resurstyperna Bilduppsättningar, Snurra uppsättningar
 
 **Om du vill hämta resurser**
 
-1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Navigation]** (Compass icon).
+1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Navigation]**.
 1. Tryck på **[!UICONTROL Assets > Files.]**
 1. Navigera till en mapp som innehåller resurser som du vill hämta.
 1. Markera mappen eller välj en eller flera resurser i mappen.
