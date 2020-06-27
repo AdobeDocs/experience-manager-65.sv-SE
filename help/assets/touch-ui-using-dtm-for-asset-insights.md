@@ -3,17 +3,17 @@ title: Aktivera tillgångsinsikter via DTM
 description: Lär dig hur du använder Adobe Dynamic Tag Management (DTM) för att aktivera tillgångsinsikter.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
 source-wordcount: '573'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 
 # Aktivera tillgångsinsikter via DTM {#enable-asset-insights-through-dtm}
 
-Adobe Dynamic Tag Management är ett verktyg som aktiverar era digitala marknadsföringsverktyg. Den tillhandahålls kostnadsfritt till Adobe Analytics-kunder.
+Adobe Dynamic Tag Management är ett verktyg som aktiverar era digitala marknadsföringsverktyg. Det ingår kostnadsfritt för kunder som har Adobe Analytics.
 
 Även om du kan anpassa din spårningskod så att CMS-lösningar från tredje part kan använda resursinsikter, rekommenderar Adobe att du använder DTM för att infoga resursinsikter-taggar.
 
@@ -24,12 +24,12 @@ Adobe Dynamic Tag Management är ett verktyg som aktiverar era digitala marknads
 Utför dessa steg för att aktivera tillgångsinsikter via DTM.
 
 1. Klicka på Experience Manager-logotypen och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Insights Configuration]**.
-1. [Konfigurera Experience Manager-instans med DTM Cloud-tjänsten](/help/sites-administering/dtm.md)
+1. [Konfigurera Experience Manager-instans med DTM-Cloud Service](/help/sites-administering/dtm.md)
 
-   API-token bör vara tillgänglig när du har loggat in på [https://dtm.adobe.com](https://dtm.adobe.com/) och går **[!UICONTROL Account Settings]** till Profilikonen. Det här steget krävs inte från tillgångsinsikter eftersom integreringen av Experience Manager Sites med tillgångsinsikter fortfarande är i arbetet.
+   API-token bör vara tillgänglig när du har loggat in på [https://dtm.adobe.com](https://dtm.adobe.com/) och besöker **[!UICONTROL Account Settings]** i användarprofilen. Det här steget krävs inte från tillgångsinsikter eftersom integreringen av Experience Manager Sites med tillgångsinsikter fortfarande pågår.
 
 1. Logga in på [https://dtm.adobe.com](https://dtm.adobe.com/)och välj ett företag.
-1. Skapa/öppna en befintlig webbegenskap
+1. Skapa eller öppna en befintlig webbegenskap
 
    * Markera **[!UICONTROL Web Properties]** fliken och klicka sedan på **[!UICONTROL Add Property]**.
 
@@ -40,7 +40,7 @@ Utför dessa steg för att aktivera tillgångsinsikter via DTM.
 
    ![chlimage_1-58](assets/chlimage_1-194.png)
 
-1. Expandera **[!UICONTROL Javascript /Third Party Tags]**. Klicka sedan **[!UICONTROL Add New Script]** på **[!UICONTROL Sequential HTML]** fliken för att öppna skriptdialogrutan.
+1. Expandera **[!UICONTROL JavaScript /Third Party Tags]**. Klicka sedan **[!UICONTROL Add New Script]** på **[!UICONTROL Sequential HTML]** fliken för att öppna skriptdialogrutan.
 
    ![chlimage_1-59](assets/chlimage_1-195.png)
 
@@ -52,12 +52,12 @@ Utför dessa steg för att aktivera tillgångsinsikter via DTM.
    > * `AppMeasurement.js` tas bort. Den förväntas bli tillgänglig via DTM:s Adobe Analytics-verktyg.
    > * Anropet till `assetAnalytics.dispatcher.init`() har tagits bort. Funktionen förväntas anropas när inläsningen av DTM:s Adobe Analytics-verktyg är klar.
    > * Beroende på var sidspåraren för tillgångsinsikter finns (till exempel Experience Manager, CDN och så vidare) kan skriptkällans ursprung kräva ändringar.
-   > * För Experience Manager-värdbaserad sidspårare ska källan peka på en publiceringsinstans med värdnamnet för dispatcher-instansen.
+   > * För sidspåraren som är värd för Experience Manager ska källan peka på en publiceringsinstans med hjälp av värdnamnet för dispatcher-instansen.
 
 
 1. Öppna `https://dtm.adobe.com`. Klicka **[!UICONTROL Overview]** i webbegenskapen och klicka **[!UICONTROL Add Tool]** eller öppna ett befintligt Adobe Analytics-verktyg. När du skapar verktyget kan du ange **[!UICONTROL Configuration Method]** till **[!UICONTROL Automatic]**.
 
-   ![Lägg till Adobe Analytics-verktyget](assets/Add-Adobe-Analytics-Tool.png)
+   ![Lägg till Adobe Analytics](assets/Add-Adobe-Analytics-Tool.png)
 
    Välj rapportsviter för mellanlagring/produktion efter behov.
 
