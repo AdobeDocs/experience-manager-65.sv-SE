@@ -3,22 +3,21 @@ title: Skapa och dela en privat mapp i Adobe Experience Manager.
 description: Lär dig hur du skapar en privat mapp i Adobe Experience Manager Assets och delar den med andra användare och tilldelar olika behörigheter till dem.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '492'
-ht-degree: 0%
+source-wordcount: '489'
+ht-degree: 1%
 
 ---
 
 
 # Delning av privata mappar {#private-folder-sharing}
 
-Du kan skapa en privat mapp i Adobe Experience Manager Assets-användargränssnittet som är exklusivt tillgänglig för dig. Du kan dela den här privata mappen med andra användare och tilldela andra användare olika behörigheter. Beroende på vilken behörighetsnivå du tilldelar kan användare utföra olika åtgärder i mappen, till exempel visa resurser i mappen eller redigera resurserna.
+Du kan skapa en privat mapp i användargränssnittet för Adobe Experience Manager Assets som är exklusivt tillgänglig för dig. Du kan dela den här privata mappen med andra användare och tilldela andra användare olika behörigheter. Beroende på vilken behörighetsnivå du tilldelar kan användare utföra olika åtgärder i mappen, till exempel visa resurser i mappen eller redigera resurserna.
 
 >[!NOTE]
 >
 > Den privata mappen har minst en medlem med ägarrollen.
-
 
 1. Klicka på **[!UICONTROL Create]** verktygsfältet i resurskonsolen och välj sedan **[!UICONTROL Folder]** från menyn.
 
@@ -32,7 +31,7 @@ Du kan skapa en privat mapp i Adobe Experience Manager Assets-användargränssni
 
    ![chlimage_1-413](assets/chlimage_1-413.png)
 
-1. To share the folder with other users and the assign privileges to them, select the folder, and click the **[!UICONTROL Properties]** icon from the toolbar.
+1. To share the folder with other users and the assign privileges to them, select the folder, and click **[!UICONTROL Properties]** from the toolbar.
 
    ![chlimage_1-414](assets/chlimage_1-414.png)
 
@@ -58,7 +57,7 @@ Du kan skapa en privat mapp i Adobe Experience Manager Assets-användargränssni
 
    ![chlimage_1-416](assets/chlimage_1-416.png)
 
-1. Klicka på meddelandeikonen för att öppna listan med meddelanden.
+1. Klicka på Notifications (Meddelanden) för att öppna listan med meddelanden.
 
    ![Förteckning över meddelanden](assets/Assets-Notification.png)
 
