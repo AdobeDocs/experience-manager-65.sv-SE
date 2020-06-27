@@ -1,11 +1,11 @@
 ---
 title: Sök efter ansikten
-description: I den här artikeln beskrivs hur du skapar, ändrar och använder sökfunktioner i Adobe Experience Manager.
+description: I den här artikeln beskrivs hur du skapar, ändrar och använder sökfaktorer i Adobe Experience Manager.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '2375'
+source-wordcount: '2380'
 ht-degree: 15%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 15%
 
 # Search Facets {#search-facets}
 
-En företagsövergripande distribution av Adobe Experience Manager Assets har kapacitet att lagra många resurser. Ibland kan det vara besvärligt och tidskrävande att hitta rätt resurs om du bara använder de allmänna sökfunktionerna i Experience Manager.
+En företagsövergripande driftsättning av Adobe Experience Manager Assets har kapacitet att lagra många resurser. Ibland kan det vara besvärligt och tidskrävande att hitta rätt resurs om du bara använder de allmänna sökfunktionerna i Experience Manager.
 
 Använd sökfaktorer på panelen Filter för att göra sökningen mer detaljerad och göra sökfunktionen mer effektiv och flexibel. Sökfaktorer lägger till flera dimensioner (predikat) som gör att du kan utföra mer komplicerade sökningar. Panelen Filter innehåller några standardaspekter. Du kan också lägga till anpassade sökfaktorer.
 
@@ -115,7 +115,7 @@ Om du vill använda en befintlig nod anger du den i valdialogrutan.
 >Alternativpredikatet är en anpassad wrapper som innehåller egenskapspredikat som demonstrerar det beskrivna beteendet. För närvarande finns det ingen tillgänglig REST-slutpunkt som stöder funktionen internt.
 
 1. Click the Experience Manager logo, and then go to **[!UICONTROL Tools > General > Search Forms]**.
-1. From the **[!UICONTROL Search Forms]** page, select **[!UICONTROL Assets Admin Search Rail]**, then click the Edit icon.
+1. Markera på **[!UICONTROL Search Forms]** sidan **[!UICONTROL Assets Admin Search Rail]** och klicka sedan på **[!UICONTROL Edit]**.
 1. På sidan **[!UICONTROL Edit Search Form]** drar du **[!UICONTROL Options Predicate]** från fliken **[!UICONTROL Select Predicate]** till huvudrutan.
 1. Ange en etikett och ett namn för egenskapen på fliken **[!UICONTROL Settings]**. Om du till exempel vill söka efter resurser baserat på deras format anger du ett användarvänligt namn på etiketten, till exempel **[!UICONTROL File Type]**. Ange egenskapen som ska användas för sökningen i egenskapsfältet, till exempel `jcr:content/metadata/dc:format.`
 1. Gör något av följande:
@@ -164,9 +164,9 @@ Med taggpredikatet kan du utföra taggbaserade sökningar efter resurser. Som st
 1. Navigera till sökpanelen. The **[!UICONTROL Tags]** predicate is added to the Search panel.
 1. Ange taggar baserat på vilka du vill söka efter resurser eller välj från listan med förslag.
 
-   ![Förslag från Experience Manager när taggens namn skrivs](assets/chlimage_1-419.png)
+   ![Experience Manager-visat förslag när taggens namn skrivs](assets/chlimage_1-419.png)
 
-   *Bild: Experience Manager-förslag visas när namnet på taggen skrivs.*
+   *Bild: Förslag som visas av Experience Manager när du skriver namnet på taggen.*
 
 1. Select **[!UICONTROL Match all]** to search for matches that include all tags that you specify.
 
@@ -193,20 +193,17 @@ På samma sätt som du lägger till ett egenskapsprediat eller ett alternativpre
 
 ## Återställ standardsökfaktorer {#restoring-default-search-facets}
 
-Som standard visas en låsikon före **[!UICONTROL Assets Admin Search Rail]** på **[!UICONTROL Search Forms]** sidan. Ikonen Lås försvinner om du lägger till sökfaktorer i formuläret, vilket anger att standardformuläret har ändrats.
+Som standard visas en låsikon som ![låser stängd ikon](assets/do-not-localize/lock_closed_icon.svg) före **[!UICONTROL Assets Admin Search Rail]** på **[!UICONTROL Search Forms]** sidan. Ikonen Lås för ett alternativ på sidan Sökformulär anger att standardinställningarna är intakta och inte anpassade. Ikonen ![lås stängd](assets/do-not-localize/lock_closed_icon.svg) försvinner om du lägger till sökfaktorer i formuläret, vilket anger att standardformuläret har ändrats.
 
 ![Ikonen Lås för ett alternativ på sidan Sökformulär anger att standardinställningarna är intakta och inte anpassade.](assets/locked_admin_rail.png)
-
-Ikonen Lås för ett alternativ på sidan Sökformulär anger att standardinställningarna är intakta och inte anpassade.
 
 Så här återställer du standardsökaspekten:
 
 1. Markera **[!UICONTROL Assets Admin Search Rail]** på **[!UICONTROL Search Forms]** sidan.
-1. Click **[!UICONTROL Delete]** in the toolbar.
-   ![ta bort](assets/deleteoutline.png)
+1. Klicka på **[!UICONTROL Delete]** Ta ![bort kontur](assets/deleteoutline.png) i verktygsfältet.
 1. Klicka på **[!UICONTROL Delete]** för att ta bort de anpassade ändringarna i bekräftelsedialogrutan.
 
-   När du har tagit bort de anpassade ändringarna för sökfasetter visas låsikonen igen före **[!UICONTROL Assets Admin Search Rail]** på sidan **[!UICONTROL Search Forms]**.
+   After you delete the custom changes to search facets, the lock icon ![lock closed icon](assets/do-not-localize/lock_closed_icon.svg) reappears before **[!UICONTROL Assets Admin Search Rail]** in the **[!UICONTROL Search Forms]** page.
 
 ## Användarbehörigheter {#user-permissions}
 
