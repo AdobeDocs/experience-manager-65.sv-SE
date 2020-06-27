@@ -3,9 +3,9 @@ title: Hantera videomaterial i [!DNL Adobe Experience Manager].
 description: Överför, förhandsgranska, kommentera och publicera videomaterial i [!DNL Adobe Experience Manager].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 46568322e75669532734dddda91a781f45a398d4
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '739'
 ht-degree: 8%
 
 ---
@@ -29,7 +29,7 @@ Lär dig hur du hanterar och redigerar videoresurserna i [!DNL Adobe Experience 
 
    Du kan bara pausa eller spela upp video i kortvyn. Knapparna [!UICONTROL Play] och [!UICONTROL Pause] är inte tillgängliga i listvyn.
 
-1. Om du vill förhandsgranska videon på sidan med resursinformation klickar du på **[!UICONTROL Edit]** -ikonen på kortet.
+1. Om du vill förhandsgranska videon på sidan med resursinformation klickar du **[!UICONTROL Edit]** på kortet.
 
    Videon spelas upp i webbläsarens inbyggda videospelare. Du kan spela upp, pausa, styra volymen och zooma videon till helskärm.
 
