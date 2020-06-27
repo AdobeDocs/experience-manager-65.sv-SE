@@ -3,9 +3,9 @@ title: 'Metadata-scheman för att definiera layouten för metadataegenskapssidan
 description: Metadata-schemat definierar layouten för egenskapssidan och de metadataegenskaper som visas för resurser. Lär dig hur du skapar anpassade metadatamatcheman, redigerar metadatamatchema och hur du använder metadatamatchema på resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 505ee267534b7b3de1f85fb6782b855dbf3c371d
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '2514'
+source-wordcount: '2510'
 ht-degree: 4%
 
 ---
@@ -19,11 +19,11 @@ I [!DNL Adobe Experience Manager Assets]innehåller scheman specifika fält för
 
 Så här visar och redigerar du egenskapssidan för en resurs:
 
-1. Klicka på **[!UICONTROL View Properties]** ikonen från Snabbåtgärder på resurspanelen i kortvyn.
+1. Klicka på **[!UICONTROL View Properties]** alternativet i snabbåtgärderna på resurspanelen i kortvyn.
 
    ![Snabbåtgärder på resurspanelen](assets/chlimage_1-170.png)
 
-   Du kan också markera en resurs och sedan klicka på [!UICONTROL Properties] ikonen i verktygsfältet.
+   Du kan också markera en resurs och sedan klicka på **[!UICONTROL Properties]** i verktygsfältet.
 
 1. Du kan redigera de olika redigerbara metadataegenskaperna under de tillgängliga flikarna. Du kan dock inte ändra resursen [!UICONTROL Type] på egenskapsfliken [!UICONTROL Basic] .
 
@@ -68,7 +68,7 @@ Följ de här stegen för att lägga till ett metadataschemaformulär:
 
    >[!NOTE]
    >
-   >En låsikon visas med de oredigerade mallarna. Om du anpassar en mall visas inte låsikonen.
+   >En låssymbol visas med de oredigerade mallarna. Om du anpassar en mall är den inte låst ![och stängd](assets/do-not-localize/lock_closed_icon.svg).
 
 1. Ange schemaformulärets rubrik i dialogrutan och klicka **[!UICONTROL Create]** för att slutföra formulärskapandet.
 
@@ -175,7 +175,7 @@ Om du vill ta bort ett formulär markerar du det och klickar på Ta bort.
 
 >[!NOTE]
 >
->* När du har tagit bort anpassade ändringar i ett standardformulär visas låsikonen igen före den i gränssnittet för metadatamodeller. Det anger att formuläret återställs till standardläget.
+>* När du har tagit bort anpassade ändringar i ett standardformulär visas det låsta ![låset som stängts](assets/do-not-localize/lock_closed_icon.svg) igen före formuläret. Det anger att formuläret återställs till standardläget.
 >* Du kan inte ta bort standardmetadatamatchformulären i [!DNL Assets].
 
 
