@@ -3,10 +3,10 @@ title: Hantera [!DNL Adobe Stock]-resurser i [!DNL Adobe Experience Manager Asse
 description: Sök, hämta, licensiera och hantera [!DNL Adobe Stock]-resurser inifrån [!DNL Adobe Experience Manager]. Använd de licensierade mediefilerna som andra digitala resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c1c845a479fcf04db1b2da8bcb9cf765fedd58b6
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '1018'
-ht-degree: 5%
+source-wordcount: '1016'
+ht-degree: 6%
 
 ---
 
@@ -70,7 +70,7 @@ Dina [!DNL Experience Manager] användare kan söka efter resurser i både [!DNL
 
 * Om du vill söka efter [!DNL Adobe Stock] resurser klickar du på **[!UICONTROL Navigation]** > **[!UICONTROL Assets]** > **[!UICONTROL Search Adobe Stock]**.
 
-* Om du vill söka efter resurser på andra sidan [!DNL Adobe Stock] och [!DNL Experience Manager Assets]klickar du på sökikonen ![search_icon](assets/search_icon.png).
+* Om du vill söka efter resurser i [!DNL Adobe Stock] och [!DNL Experience Manager Assets]i klickar du på ![search_icon](assets/search_icon.png).
 
 Du kan också börja skriva `Location: Adobe Stock` i sökfältet för att välja [!DNL Adobe Stock] resurser. [!DNL Experience Manager] har avancerade filtreringsfunktioner för de sökbara resurserna, vilket gör att användarna snabbt kan nollställa de resurser som behövs med hjälp av filter, som typer av resurser som stöds, bildorientering och licensierat läge.
 
