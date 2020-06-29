@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: df1ac689-33db-4e30-9f75-3bda2a485652
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
+source-git-commit: cf2733ecee5c74b79b85267191fbdf3cbce9c98b
+workflow-type: tm+mt
+source-wordcount: '295'
+ht-degree: 2%
 
 ---
 
@@ -20,7 +23,7 @@ source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
 
 ## Introduktion {#introduction}
 
-När AEM Communities är licensierat går det, utöver att skapa communitysajter, att lägga till Communities-funktioner på alla AEM-sajter med standardverktyg för AEM-utveckling.
+När AEM Communities är licensierad går det, förutom att skapa communitysajter, att lägga till Communities-funktioner på alla AEM-sajter med hjälp av standardverktygen för AEM-utveckling.
 
 Mer information om hur du skapar en community-webbplats finns på:
 
@@ -31,6 +34,7 @@ Mer information om hur du skapar en community-webbplats finns på:
 >[!NOTE]
 >
 >Om du inte känner till redigeringsmiljön kan du läsa dokumentationen om [grundläggande hantering](/help/sites-authoring/basic-handling.md) och en [snabbguide till redigeringssidorna](/help/sites-authoring/qg-page-authoring.md).
+
 
 ## Tillgängliga webbgruppskomponenter {#available-communities-components}
 
@@ -77,7 +81,8 @@ Se även handboken [för interaktiva](/help/communities/components-guide.md)comm
 
 >[!NOTE]
 >
->Avsökningskomponenten är inte längre tillgänglig och stöds inte i Experience Manager Communities.
+>Avsökningskomponenten är inte längre tillgänglig och stöds i Experience Manager Communities.
+
 
 ## Dokumentation för relaterade communities {#related-communities-documentation}
 
