@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: e6fdaf56-402f-418d-96d8-e46bd3ad1e8c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+source-git-commit: 342e148ba183782e4c8b0f08328b9d87685ca08e
 workflow-type: tm+mt
 source-wordcount: '2746'
 ht-degree: 2%
@@ -155,7 +155,7 @@ Så här aktiverar du rapportering av pulsslag i videomaterial efter [att du har
 
 Du kan `Marketing Cloud Org Id` ange detta när en [community-webbplats skapas](/help/communities/sites-console.md#enablement) eller senare genom att [ändra](/help/communities/sites-console.md#modifying-site-properties) egenskaperna för communitywebbplatsen. [](#aem-analytics-cloud-service-configuration)
 
-![chlimage_1-177](assets/chlimage_1-177.png)
+![chlimage_1-264](assets/chlimage_1-264.png)
 
 När Video Heartbeat Analytics är aktiverat instansierar JavaScript-koden (JS) för videospelaren bibliotekskoden för pulsslag (även i JS), som hanterar all logik för att skicka videostatusuppdateringar till Analytics videospårningsservrar var 10:e sekund (inte konfigurerbar) och slutligen skickar en kumulativ rapport av videosessionen till Analytics huvudservrar.
 
@@ -169,7 +169,7 @@ Så här skapar du en ny Analytics-integrering, som integrerar Adobe Analytics m
 * Rulla ned till **[!UICONTROL Adobe Analytics]**
 * Markera **[!UICONTROL Configure Now]** eller **[!UICONTROL Show Configurations]**
 
-![chlimage_1-178](assets/chlimage_1-178.png)
+![chlimage_1-265](assets/chlimage_1-265.png)
 
 ### Dialogrutan Skapa konfiguration {#create-configuration-dialog}
 
@@ -177,7 +177,7 @@ Så här skapar du en ny Analytics-integrering, som integrerar Adobe Analytics m
 
 I dialogrutan Skapa konfiguration anger de värden som ska anges konfigurationen.
 
-![chlimage_1-179](assets/chlimage_1-179.png)
+![chlimage_1-266](assets/chlimage_1-266.png)
 
 * **Titel**
 
@@ -201,37 +201,39 @@ For example, enter *communities*
 
 När du skapar en ny Analytics-konfiguration första gången visas konfigurationen och en ny dialogruta där du kan ange Analytics-inställningarna. Den här dialogrutan kräver den [nödvändiga kontoinformationen](#prerequisites) från kontoombudet.
 
-![chlimage_1-180](assets/chlimage_1-180.png)
+![chlimage_1-267](assets/chlimage_1-267.png)
 
 * **Företag**
 
-   Det företag som är associerat med Adobe Analytics-kontot
+   Det företag som är associerat med Adobe Analytics-kontot.
 
 * **Användarnamn**
 
-   Inloggningsanvändarnamnet för den användare som har behörighet att hantera Analytics-kontot
+   Inloggningsanvändarnamnet för den användare som har behörighet att hantera Analytics-kontot.
 
 * **Lösenord**
 
-   Inloggningslösenordet för den behöriga användaren
+   Inloggningslösenordet för den behöriga användaren.
 
 * **Datacenter**
 
-   Välj det Analytics datacenter som är värd för rapportsviten
+   Välj det datacenter i Analytics som är värd för rapportsviten.
 
 * **Lägg inte till spårningstagg på sida**
 
-   Låt vara som standard (avmarkerat)
+   Låt vara som standard (avmarkerat).
 
 * **Använd AppMeasurement**
 
-   Låt vara som standard (avmarkerat)
+   Låt vara som standard (avmarkerat).
 
 * **Importera inte sidvisningar varje kväll (författare)**
 
-   Låt vara som standard (avmarkerat)
+   Låt vara som standard (avmarkerat).
 
-* **Importera inte sidvisningar varje natt (publicera)** lämna dem som standard (avmarkerat)
+* **Importera inte sidvisningar direkt (publicera)**
+
+   Låt vara som standard (avmarkerat).
 
 Så här sparar du inställningarna:
 
@@ -239,13 +241,13 @@ Så här sparar du inställningarna:
 
    * Om det inte lyckas
 
-      * Verifiera att posterna inte innehåller inledande blanksteg
-      * Testa ett annat datacenter
-      * Kontakta din kontorepresentant
+      * Verifiera att posterna inte innehåller inledande blanksteg.
+      * Testa ett annat datacenter.
+      * Kontakta din kontorepresentant.
 
-* Välj **OK**
+* Välj **OK**.
 
-![chlimage_1-181](assets/chlimage_1-181.png)
+   ![chlimage_1-268](assets/chlimage_1-268.png)
 
 ### Skapa ramverk {#create-framework}
 
@@ -253,22 +255,22 @@ När du har konfigurerat den grundläggande anslutningen till Adobe Analytics m�
 
 * Välj `[+]` ikon bredvid **[!UICONTROL  Available Frameworks]** för att skapa ett nytt ramverk
 
-![chlimage_1-182](assets/chlimage_1-182.png)
+   ![chlimage_1-269](assets/chlimage_1-269.png)
 
 * **Titel**
 
-   (Obligatoriskt) En visningsrubrik för ramverket. Ange t.ex. *Aktivera Community Framework*
+   (Obligatoriskt) En visningsrubrik för ramverket. Ange t.ex. *Aktivera Community Framework*.
 
 * **Namn**
 
    (Valfritt) Om inget anges används som standard ett giltigt nodnamn som härleds från titeln.
-For example, enter *communities*
+For example, enter *communities*.
 
 * *Mall*
 
-   Välj `Adobe Analytics Framework`
+   Välj `Adobe Analytics Framework`.
 
-* Välj **Skapa**
+* Välj **Skapa**.
 
 När du skapar Analytics Framework öppnas ramverket för konfiguration.
 
@@ -276,7 +278,7 @@ När du skapar Analytics Framework öppnas ramverket för konfiguration.
 
 Syftet med ramverket är att mappa AEM-variabler till Analytics-variabler (eVars och events). De Analytics-variabler som är tillgängliga för mappning [definieras i rapportsviten](#adobe-analytics-report-suite-for-video-reporting).
 
-![chlimage_1-183](assets/chlimage_1-183.png)
+![chlimage_1-270](assets/chlimage_1-270.png)
 
 ### Välj Report Suite {#select-report-suite}
 
@@ -289,9 +291,9 @@ Den idekiske behövs inte och kan minimeras så att den inte förhindrar åtkoms
 
 #### Dialogrutan Rapportsviter före och efter alternativet Lägg till objekt {#report-suites-dialog-before-and-after-selecting-add-item}
 
-![chlimage_1-184](assets/chlimage_1-184.png)
+![chlimage_1-271](assets/chlimage_1-271.png)
 
-1. Välj **Lägg till objekt +**
+1. Välj **Lägg till objekt +**.
 
    Två listrutor visas.
 
@@ -306,11 +308,11 @@ Den idekiske behövs inte och kan minimeras så att den inte förhindrar åtkoms
     Do you want to load the default server settings and overwrite current values in the Server section?
    ```
 
-1. Välj en `Run Mode`
+1. Välj en `Run Mode`.
 
-1. Välj **Publicera**
+1. Välj **Publicera**.
 
-![chlimage_1-185](assets/chlimage_1-185.png)
+![chlimage_1-272](assets/chlimage_1-272.png)
 
 Molntjänsten och ramverket för Analytics är nu färdiga. Mappningarna definieras när en community-webbplats har skapats med den här Analytics-tjänsten aktiverad.
 
@@ -355,7 +357,7 @@ För att Analytics tracking och import ska fungera korrekt för en community-web
 </div>
 ```
 
-Om du vill ha en **anpassad communitywebbplats** som täcker över `sitepage.hbs` skriptet kontrollerar du att elementet finns. Variabeln `siteUrl`ställs in när den återges på servern innan den skickas till klienten.
+Om du vill ha en **anpassad communitywebbplats** som täcker över `sitepage.hbs` skriptet kontrollerar du att elementet finns. Variabeln ställs in när den återges på servern innan den skickas till klienten. `siteUrl`
 
 För en **allmän AEM-webbplats** som innehåller webbgruppskomponenter, men som inte har skapats med guiden [Skapa](/help/communities/sites-console.md)webbplats, måste du lägga till elementet. Värdet för href bör vara sökvägen till platsen. Om till exempel platssökvägen är `/content/my/company/en`använder du:
 
@@ -378,11 +380,12 @@ Om nya anpassade komponenter skapas som är instrumenterade för Analytics bör 
 
 ### Komponentkonfiguration {#component-configuration}
 
-![chlimage_1-186](assets/chlimage_1-186.png)
+![chlimage_1-273](assets/chlimage_1-273.png)
 
 >[!NOTE]
 >
 >Journalkomponenterna används för att implementera bloggfunktionen.
+
 
 ### Mappat Analytics till AEM-variabler {#mapped-analytics-to-aem-variables}
 
@@ -392,7 +395,7 @@ Om du använder en befintlig rapportserie som mappade någon av variablerna inom
 
 Här följer ett exempel på standardmappningar efter att du har följt självstudiekursen [](/help/communities/getting-started-enablement.md)Komma igång:
 
-![chlimage_1-187](assets/chlimage_1-187.png)
+![chlimage_1-274](assets/chlimage_1-274.png)
 
 #### Karta över eVars som skickas med varje händelse {#map-of-evars-sent-with-each-event}
 
@@ -549,15 +552,15 @@ Om Communities eVars och Events skriver över mappningar som fanns tidigare i ra
 
 #### Exempelsteg 1: Dra Analytics evar14 till mappningstabellen {#example-step-dragging-analytics-evar-into-mapping-table}
 
-![chlimage_1-188](assets/chlimage_1-188.png)
+![chlimage_1-275](assets/chlimage_1-275.png)
 
 #### Exempelsteg 2: Välja &#39;x&#39; för att ta bort ersatt evar11 {#example-step-selecting-x-to-remove-replaced-evar}
 
-![chlimage_1-189](assets/chlimage_1-189.png)
+![chlimage_1-276](assets/chlimage_1-276.png)
 
 #### Exempelsteg 3: AEM var eventdata.siteId mappas om till Analytics evar14 {#example-step-aem-var-eventdata-siteid-remapped-to-analytics-evar}
 
-![chlimage_1-190](assets/chlimage_1-190.png)
+![chlimage_1-277](assets/chlimage_1-277.png)
 
 ## Publicera communitywebbplatsen {#publishing-the-community-site}
 
@@ -622,7 +625,7 @@ Frågeintervallet är som standard 10 sekunder.
 
 ### Rapportimporteraren {#report-importer}
 
-När en Analytics-aktiverad communitywebbplats har publicerats kan den primära utgivarens [OSGi-konfiguration](/help/sites-deploying/configuring-osgi.md)`AEM Communities Analytics Report Importer`konfigureras att ange standardavsökningsintervallet för de konfigurationer som inte konfigureras individuellt i CRXDE.
+När en Analytics-aktiverad communitywebbplats har publicerats kan den primära utgivarens [OSGi-konfiguration](/help/sites-deploying/configuring-osgi.md), `AEM Communities Analytics Report Importer`, konfigureras att ange standardavsökningsintervallet för de konfigurationer som inte konfigureras individuellt i CRXDE.
 
 Avsökningsintervallet styr hur ofta Adobe Analytics begär data som ska hämtas och sparas i [SRP](/help/communities/working-with-srp.md).
 
@@ -630,7 +633,7 @@ När data kan kategoriseras som&quot;big data&quot; kan en mer frekvent undersö
 
 Standardavsökningsintervallet **för** import är 12 timmar.
 
-![chlimage_1-191](assets/chlimage_1-191.png)
+![chlimage_1-278](assets/chlimage_1-278.png)
 
 ### Anpassning av komponentrapport {#component-report-customization}
 
@@ -655,7 +658,7 @@ Till exempel, **`analytics/reportConfigs/social_forum_components_hbs_topic`**
    * Om du ändrar **`interval`** egenskapen åsidosätts intervallet för rapportimporteraren.
    * Värdet anges i sekunder och är inställt på 4 timmar (1 400 sekunder).
 
-![chlimage_1-192](assets/chlimage_1-192.png)
+![chlimage_1-279](assets/chlimage_1-279.png)
 
 ## Hantera användardata i Analytics {#manage-user-data-in-analytics}
 
