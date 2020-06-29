@@ -10,13 +10,16 @@ topic-tags: developing
 content-type: reference
 discoiquuid: e1b5c25d-cbdd-421c-b81a-feb6039610a3
 translation-type: tm+mt
-source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
+source-git-commit: 342e148ba183782e4c8b0f08328b9d87685ca08e
+workflow-type: tm+mt
+source-wordcount: '531'
+ht-degree: 0%
 
 ---
 
 
 
-# Skapa en SCF-sandlåda {#create-an-scf-sandbox}
+# Skapa en SCF-sandlåda  {#create-an-scf-sandbox}
 
 
 Från och med AEM 6.1 Communities är det enklaste sättet att snabbt skapa en sandlåda att skapa en community-webbplats. Se [Komma igång med AEM Communities](getting-started.md).
@@ -50,10 +53,10 @@ I den här självstudien antas att du har en AEM-författare och en AEM-publicer
 
 Nedan följer några praktiska länkar för utvecklare som är nya på AEM-plattformen:
 
-* [Komma igång](../../help/sites-deploying/deploy.md#getting-started): för distribution av AEM-instanser
+* [Komma igång](../../help/sites-deploying/deploy.md#getting-started): för distribution av AEM-instanser.
 
-   * [Grunderna](../../help/sites-developing/the-basics.md): för utvecklare av webbplatser och funktioner
-   * [Steg 1 för författare](../../help/sites-authoring/first-steps.md): för att skapa sidinnehåll
+   * [Grunderna](../../help/sites-developing/the-basics.md): för utvecklare av webbplatser och funktioner.
+   * [Steg 1 för författare](../../help/sites-authoring/first-steps.md): för att skapa sidinnehåll.
 
 ## Använda CRXDE Lite Development Environment {#using-crxde-lite-development-environment}
 
@@ -61,11 +64,11 @@ AEM-utvecklare tillbringar mycket tid i utvecklingsmiljön [CRXDE Lite](../../he
 
 När du har loggat in med administratörsbehörighet finns det olika sätt att få åtkomst till CRXDE Lite:
 
-1. Välj Navigeringsverktyg **[!UICONTROL > CRXDE Lite]** i den globala navigeringen.
+1. Välj navigering från global navigering **[!UICONTROL Tools > CRXDE Lite]**.
 
    ![chlimage_1-350](assets/chlimage_1-350.png)
 
-2. På välkomstsidan [för det](http://localhost:4502/welcome.html)klassiska användargränssnittet bläddrar du nedåt och klickar på **[!UICONTROL CRXDE Lite]** i den högra panelen.
+2. Bläddra nedåt från den [klassiska användargränssnittets välkomstsida](http://localhost:4502/welcome.html)och klicka **[!UICONTROL CRXDE Lite]** på den högra panelen.
 
    ![chlimage_1-351](assets/chlimage_1-351.png)
 
