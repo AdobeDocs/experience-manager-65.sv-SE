@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 135b3077-5343-4888-858d-de5e9b1d4b04
 docset: aem65
 translation-type: tm+mt
-source-git-commit: fb7d2a3cebda86fa4d91d2ea89ae459fa4b86fa0
+source-git-commit: cf2733ecee5c74b79b85267191fbdf3cbce9c98b
 workflow-type: tm+mt
-source-wordcount: '318'
-ht-degree: 0%
+source-wordcount: '316'
+ht-degree: 1%
 
 ---
 
@@ -35,9 +35,9 @@ För närvarande visas emblem som en medlem i communityn får eller tilldelas ti
 * [Ledartavlor](/help/communities/enabling-leaderboard.md)
 * [Ideation](/help/communities/ideation-feature.md)
 
-För att nå Badges-konsolen i redigeringsmiljön
+Navigera till Badges-konsolen i redigeringsmiljön:
 
-* Navigera från global navigering till **[!UICONTROL Tools > Communities > Badges]**
+* Från global navigering: **[!UICONTROL Tools]** > **[!UICONTROL Communities]** > **[!UICONTROL Badges]**
 
 Den här konsolen visar de emblem som är tillgängliga för tillfället och från vilka nya emblem kan läggas till.
 
