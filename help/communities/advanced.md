@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: eb3d5c37-8097-46de-8c4f-804ea723f1c5
 docset: aem65
 translation-type: tm+mt
-source-git-commit: fb7d2a3cebda86fa4d91d2ea89ae459fa4b86fa0
+source-git-commit: 9ea2efb7409ae38c8771815336ae0d9388d923fa
 workflow-type: tm+mt
 source-wordcount: '1060'
 ht-degree: 1%
@@ -33,11 +33,11 @@ Den avancerade bedömningsmotorn kräver därför tillräckligt med data för at
 
 Att ställa in avancerad poängsättning är i stort sett detsamma som grundläggande poängsättning:
 
-* Grundläggande och avancerade regler för poängsättning och märkning [tillämpas på innehåll](/help/communities/implementing-scoring.md#apply-rules-to-content) på samma sätt
+* Grundläggande och avancerade regler för poängsättning och märkning [tillämpas på innehåll](/help/communities/implementing-scoring.md#apply-rules-to-content) på samma sätt.
 
-   * Grundläggande och avancerade regler för poängsättning och märkning kan tillämpas på samma innehåll
+   * Grundläggande och avancerade regler för poängsättning och märkning kan tillämpas på samma innehåll.
 
-* [Att aktivera märken för komponenter](/help/communities/implementing-scoring.md#enable-badges-for-component) är generiskt
+* [Att aktivera emblem för komponenter](/help/communities/implementing-scoring.md#enable-badges-for-component) är generiskt.
 
 Skillnaderna i hur du ställer in poängsättnings- och badging-regler är:
 
@@ -45,23 +45,24 @@ Skillnaderna i hur du ställer in poängsättnings- och badging-regler är:
 * Avancerade poängregler:
 
    * `scoringType` ange till `advanced`
-   * kräver `stopwords`
+   * Kräver `stopwords`
 
 * Avancerade märkningsregler:
 
    * `badgingType` ange till `advanced`
    * `badgingLevels` ange till **antalet expertnivåer att tilldela**
-   * kräver `badgingPaths` en matris med emblem i stället för att mappa punkter till badges i en tröskel
+   * Kräver `badgingPaths` en array med emblem i stället för med mappningspunkter för trösklar till badges.
 
 >[!NOTE]
 >
 >Om du vill använda avancerade funktioner för bedömning och märkning installerar du [expertpaketet](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/cq-social-expert-identification-pkg).
 
+
 ## Konfigurerbar bedömningsmotor {#configurable-scoring-engine}
 
 Den avancerade bedömningsmotorn tillhandahåller en OSGi-konfiguration med parametrar som påverkar den avancerade bedömningsalgoritmen.
 
-![chlimage_1-139](assets/chlimage_1-139.png)
+![chlimage_1-260](assets/chlimage_1-260.png)
 
 * **Poängvikter**
 
@@ -102,7 +103,7 @@ Om du vill anropa den avancerade bedömningsmotorn `scoringType`bör du ange den
 
 Se [Underregler](/help/communities/implementing-scoring.md#scoring-sub-rules)för poängsättning.
 
-![chlimage_1-140](assets/chlimage_1-140.png)
+![chlimage_1-261](assets/chlimage_1-261.png)
 
 ### Stoppord {#stopwords}
 
@@ -122,7 +123,7 @@ De avancerade egenskaperna för märkningsregeln skiljer sig från de [grundläg
 
 I stället för att associera punkter med en badge-bild är det bara nödvändigt att identifiera det antal experter som tillåts och den badge-bild som ska tilldelas.
 
-![chlimage_1-141](assets/chlimage_1-141.png)
+![chlimage_1-262](assets/chlimage_1-262.png)
 
 <table>
  <tbody>
@@ -164,7 +165,7 @@ I den här betaversionen ingår ett belöningsbaserat expertmärke:
 
    `/libs/settings/community/badging/images/expert-badge/jcr:content/expert.png`
 
-![chlimage_1-142](assets/chlimage_1-142.png)
+![chlimage_1-263](assets/chlimage_1-263.png)
 
 För att expertmärket ska visas som en belöning för aktiviteten måste du se till att:
 
@@ -197,15 +198,15 @@ I betaversionen finns två avancerade poängregler för [forumfunktionen](/help/
 
 **Anteckningar:**
 
-* Både `rules`och `sub-rules` noder är av typen `cq:Page`
+* Både `rules` och `sub-rules` noder är av typen `cq:Page`.
 
-* `subRules`är ett attribut av typen String[] i regelns `jcr:content` nod
+* `subRules` är ett attribut av typen String[] i regelns `jcr:content` nod.
 
-* `sub-rules` kan delas mellan olika poängregler
+* `sub-rules` kan delas mellan olika poängregler.
 
-* `rules`ska finnas på en databasplats med läsbehörighet för alla
+* `rules` ska finnas på en databasplats med läsbehörighet för alla.
 
-   * Regelnamn måste vara unika oavsett plats
+* Regelnamn måste vara unika oavsett plats.
 
 ### Inkluderade märkningsregler {#included-badging-rules}
 
@@ -216,8 +217,7 @@ I releasen finns två avancerade regler för märkning som motsvarar de [avancer
 
 **Anteckningar:**
 
-* `rules` noder är av typen cq:Page
-* `rules` ska finnas på en databasplats med läsbehörighet för alla
-
-   * Regelnamn måste vara unika oavsett plats
+* `rules` noder är av typen cq:Page.
+* `rules` ska finnas på en databasplats med läsbehörighet för alla.
+* Regelnamn måste vara unika oavsett plats.
 
