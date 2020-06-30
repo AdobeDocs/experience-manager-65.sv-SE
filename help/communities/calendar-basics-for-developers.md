@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 88932a3c-ba7f-47ba-9e0b-206755c2d42e
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 82affd528f2526384b319fe89082e0f574ab5855
+workflow-type: tm+mt
+source-wordcount: '220'
+ht-degree: 0%
 
 ---
 
@@ -63,7 +66,7 @@ Den här sidan innehåller viktig information om hur du arbetar med kalenderfunk
 
 ### Kalenderfunktion {#calendar-function}
 
-En community-platsstruktur som innehåller [kalenderfunktionen](functions.md#calendar-function) kommer att ha en konfigurerad c- `alendar`komponent. Kalenderfunktionen stöder identifiering av en [behörig medlemsgrupp](users.md#privileged-members-group).
+En community-platsstruktur som innehåller [kalenderfunktionen](functions.md#calendar-function) kommer att ha en konfigurerad `calendar` komponent. Kalenderfunktionen stöder identifiering av en [behörig medlemsgrupp](users.md#privileged-members-group).
 
 ### Åtkomst till kalenderinlägg (UGC) {#accessing-calendar-posts-ugc}
 
