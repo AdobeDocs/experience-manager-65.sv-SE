@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: cf8b3d72-30ba-40ca-ae48-b61abbb28802
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 272eedc1585dbdea315b49d010e4b1d78cedc360
+source-git-commit: e74d39e63f8b3b5961ea2c31e0ef99c3ab8b06dd
+workflow-type: tm+mt
+source-wordcount: '1682'
+ht-degree: 0%
 
 ---
 
@@ -42,9 +45,10 @@ I det här avsnittet av dokumentationen beskrivs:
 
 >[!NOTE]
 >
->Komponenterna `Journal`och `Journal Sidebar` kallas `Blog` och `Blog Sidebar`.
+>Komponenterna `Journal` och `Journal Sidebar` kallas `Blog` och `Blog Sidebar`.
 >
 >Bloggfunktionen i AEM 6.0 och tidigare versioner har nu tagits bort. Det baserades på en mall och tilläts endast författare att skapa innehåll i författarmiljön.
+
 
 ## Lägga till bloggkomponenter på en sida {#adding-blog-components-to-a-page}
 
@@ -57,19 +61,21 @@ och dra dem till en plats på en sida där bloggen ska visas.
 
 Mer information finns i Grunderna för [communitykomponenter](/help/communities/basics.md).
 
-När de [nödvändiga klientbiblioteken](/help/communities/blog-developer-basics.md#essentials-for-client-side) inkluderas visas `Blog`komponenten så här:
+När de [nödvändiga klientbiblioteken](/help/communities/blog-developer-basics.md#essentials-for-client-side) inkluderas visas `Blog` komponenten så här:
 
-![chlimage_1-229](assets/chlimage_1-229.png)
+![chlimage_1-147](assets/chlimage_1-147.png)
 
 Och hur `Blog Sidebar` visas:
 
-![chlimage_1-230](assets/chlimage_1-230.png)
+![chlimage_1-148](assets/chlimage_1-148.png)
 
 ### Konfigurerar blogg {#configuring-blog}
 
 Markera den monterade `Blog` komponent som du vill öppna och välj den `Configure` ikon som öppnar redigeringsdialogrutan.
 
-![chlimage_1-231](assets/chlimage_1-231.png) ![Blog settings](assets/blog-configure.png)
+![chlimage_1-149](assets/chlimage_1-149.png)
+
+![Blogginställningar](assets/blog-configure.png)
 
 #### Fliken Inställningar {#settings-tab}
 
@@ -111,6 +117,7 @@ Ange bloggens grundläggande funktioner på fliken **Inställningar** :
 >
 >Journaltiteln används för att automatiskt skapa en URL för bloggen.
 >Maximalt 50 tecken (med ytterligare 5 tecken för unikt utseende) används från journaltiteln som du anger här för att skapa en URL för bloggen.
+
 
 * **Journalbeskrivning**
 
@@ -162,7 +169,7 @@ Ange bloggens grundläggande funktioner på fliken **Inställningar** :
 
 * **Tillåt användare att ta bort kommentarer och ämnen**
 
-   Om det här alternativet är markerat kan medlemmar ta bort kommentarer och blogginlägg som de har skickat in. Standardvärdet är** **unchecked.
+   Om det här alternativet är markerat kan medlemmar ta bort kommentarer och blogginlägg som de har skickat in. Standard är avmarkerat.
 
 * **Tillåt följande**
 
@@ -208,7 +215,7 @@ Under fliken **Användarmoderering** anger du modereringsinställningarna:
 
 * **Flagga inlägg**
 
-   Om det här alternativet är markerat kan medlemmar flagga andras ämnen eller kommentarer som olämpliga. Standard är avmarkerat**.**
+   Om det här alternativet är markerat kan medlemmar flagga andras ämnen eller kommentarer som olämpliga. Standard är avmarkerat.
 
 * **Flaggorsakslista**
 
@@ -216,7 +223,7 @@ Under fliken **Användarmoderering** anger du modereringsinställningarna:
 
 * **Anledning till anpassad flagga**
 
-   Om det här alternativet är markerat kan medlemmarna ange en egen orsak till att ett ämne eller en kommentar flaggas som olämplig. Standard är avmarkerat**.**
+   Om det här alternativet är markerat kan medlemmarna ange en egen orsak till att ett ämne eller en kommentar flaggas som olämplig. Standard är avmarkerat.
 
 * **Modereringströskel**
 
@@ -232,7 +239,7 @@ Under fliken **Tagg** anger du vilka taggar som kan användas om **Tillåt taggn
 
 * **Tillåtna namnutrymmen**
 
-   Relevant om `Allow Tagging` är markerat under fliken **Inställningar **. De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som kontrolleras. Listan med namnutrymmen innehåller &quot;Standardtaggar&quot; (standardnamnutrymmet) och &quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
+   Relevant om `Allow Tagging` är markerat under fliken **Inställningar** . De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som kontrolleras. Listan med namnutrymmen innehåller &quot;Standardtaggar&quot; (standardnamnutrymmet) och &quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
 
 * **Förslagsgräns**
 
@@ -269,7 +276,7 @@ Under fliken Inställningar **för** journalmarginaler anger du datumformatet f�
 
    *(Valfritt)* Platsen för den bloggresurs som bloggartiklar ska listas från. Om det lämnas tomt används komponenten för resourceType `social/journal/components/hbs/journal` som visas på samma sida.
 
-   * Exempel: `/content/sites/engage/en/blog/jcr:content/content/primary/blog`
+   * Till exempel, `/content/sites/engage/en/blog/jcr:content/content/primary/blog`
 
 * **Förslagsgräns**
 
@@ -299,7 +306,7 @@ Bloggartiklarna visas under lämplig flik (Publicerad, Utkast eller Schemalagd) 
 
 När den inloggade användaren har moderator- eller administratörsbehörighet kan han/hon utföra [modereringsåtgärder](/help/communities/moderate-ugc.md) (som tillåts av komponentens konfiguration) på alla bloggartiklar och kommentarer som publiceras på en blogg.
 
-![chlimage_1-232](assets/chlimage_1-232.png)
+![chlimage_1-152](assets/chlimage_1-152.png)
 
 #### Medlemmar {#members}
 
@@ -314,13 +321,15 @@ De får särskilt
 * Ta bort en egen bloggartikel eller kommentar
 * Flagga andras blogginlägg eller kommentarer
 
-![chlimage_1-233](assets/chlimage_1-233.png) ![chlimage_1-234](assets/chlimage_1-234.png)
+![chlimage_1-153](assets/chlimage_1-153.png)
+
+![chlimage_1-154](assets/chlimage_1-154.png)
 
 #### Anonym {#anonymous}
 
 Besökare som inte är inloggade kan endast läsa inlagda bloggartiklar och kommentarer, översätta dem om de stöds, men kan inte lägga till en bloggartikel eller kommentar eller flagga andras artiklar eller kommentarer.
 
-![chlimage_1-235](assets/chlimage_1-235.png)
+![chlimage_1-155](assets/chlimage_1-155.png)
 
 ## Additional Information {#additional-information}
 
