@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: eece7b8f-6ccd-4037-8713-0cd36cfd9e73
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 272eedc1585dbdea315b49d010e4b1d78cedc360
+source-git-commit: e74d39e63f8b3b5961ea2c31e0ef99c3ab8b06dd
+workflow-type: tm+mt
+source-wordcount: '446'
+ht-degree: 1%
 
 ---
 
@@ -27,6 +30,7 @@ Den här sidan innehåller viktig information om hur du arbetar med bloggfunktio
 >[!NOTE]
 >
 >Den underliggande infrastrukturen för bloggfunktionen är journalfunktionen.
+
 
 ## Grundläggande för klientsidan {#essentials-for-client-side}
 
@@ -98,10 +102,10 @@ Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](
 
 Se :
 
-* [Översikt över](/help/communities/srp.md) lagringsresursprovidern - introduktion och databasanvändning - översikt
-* [SRP och UGC Essentials](/help/communities/srp-and-ugc.md) - SRP-verktygsmetoder och -exempel
-* [Åtkomst till UGC med SRP](/help/communities/accessing-ugc-with-srp.md) - riktlinjer för kodning
-* [Omfaktorisering för SocialUtils](/help/communities/socialutils.md) - mappning av utgått verktygsmetoder till aktuella SRP-verktygsmetoder
+* [Översikt över](/help/communities/srp.md) lagringsresursprovidern - introduktion och översikt över databasanvändningen.
+* [SRP och UGC Essentials](/help/communities/srp-and-ugc.md) - SRP-verktygsmetoder och exempel.
+* [Åtkomst till UGC med SRP](/help/communities/accessing-ugc-with-srp.md) - riktlinjer för kodning.
+* [Omfaktorisering för SocialUtils](/help/communities/socialutils.md) - mappning av utfasade verktygsmetoder till aktuella SRP-verktygsmetoder.
 
 ## Primär utgivare {#primary-publisher}
 
@@ -119,5 +123,5 @@ Från och med AEM 6.2 inkluderas de ändringar som tidigare krävdes för att g�
 
 Multimedia bäddas in i en bloggartikel genom att du väljer `Embed Media from External Sites` ikonen :
 
-![chlimage_1-199](assets/chlimage_1-199.png)
+![chlimage_1-471](assets/chlimage_1-471.png)
 
