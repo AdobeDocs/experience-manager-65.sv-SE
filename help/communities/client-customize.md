@@ -10,12 +10,15 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 24b6d1d2-c118-4a25-959f-2783961c4ae3
 translation-type: tm+mt
-source-git-commit: 5b8b1544645465d10e7c2018364b6a74f1ad9a8e
+source-git-commit: efa6c7be93908b2f264da4689caa9c02912c0f0a
+workflow-type: tm+mt
+source-wordcount: '1239'
+ht-degree: 0%
 
 ---
 
 
-# Anpassning på klientsidan {#client-side-customization}
+# Anpassning på klientsidan  {#client-side-customization}
 
 | **[⇐ - funktioner](essentials.md)** | **[Anpassning på serversidan](server-customize.md)** |
 |---|---|
@@ -106,17 +109,18 @@ De anpassade formaten åsidosätter nu standardramverksformaten och komponenten 
 >
 >Även om `scf-js` klasserna inte påverkar format kan klassnamnen användas i formatmallar med det intrycket att det kan finnas biverkningar när de styr elementens lägen.
 
+
 ## Utöka JavaScript {#extending-javascript}
 
-Om du vill utöka en Javascript-implementering av komponenter behöver du bara
+Om du vill utöka en Javascript-implementering för komponenter måste du:
 
-1. Skapa en komponent för ditt program med jcr:resourceSuperType inställd på värdet för den utökade komponentens jcr:resourceType, t.ex. social/forum/components/hbs/forum
-1. Granska JavaScript-komponentens standardkomponent för att ta reda på vilka metoder som behöver registreras med SCF.registerComponent()
-1. Kopiera den utökade komponentens JavaScript eller börja från början
-1. Utöka metoden
+1. Skapa en komponent för ditt program med jcr:resourceSuperType inställd på värdet för den utökade komponentens jcr:resourceType, t.ex. social/forum/components/hbs/forum.
+1. Granska JavaScript-komponentens standardkomponent för att ta reda på vilka metoder som behöver registreras med SCF.registerComponent().
+1. Kopiera den utökade komponentens JavaScript eller börja från början.
+1. Utöka metoden.
 1. Använd SCF.registerComponent() för att registrera alla metoder med antingen standardvärdena eller anpassade objekt och vyer.
 
-### forum.js: Exempeltillägg för forum - HBS {#forum-js-sample-extension-of-forum-hbs}
+### forum.js: Exempeltillägg för forum - HBS  {#forum-js-sample-extension-of-forum-hbs}
 
 ```xml
 (function($CQ, _, Backbone, SCF) {
@@ -166,7 +170,7 @@ Dessa versioner finns i:
 
 * `/etc/clientlibs/social/hbs/&lt;component name&gt;`
 
-Exempel:
+Till exempel:
 
 * Klientmappsnod: `/etc/clientlibs/social/hbs/forum`
 * Egenskapen Kategorier: `cq.social.hbs.forum`
@@ -185,7 +189,7 @@ Dessa versioner finns i mappen SCF libs:
 
 * `/libs/social/&lt;feature&gt;/components/hbs/&lt;component name&gt;/clientlibs`
 
-Exempel:
+Till exempel:
 
 * Klientmappsnod: `/libs/social/forum/hbs/forum/clientlibs`
 * Egenskapen Kategorier: `cq.social.author.hbs.forum`
