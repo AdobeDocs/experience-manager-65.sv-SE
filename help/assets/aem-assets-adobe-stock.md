@@ -3,10 +3,10 @@ title: Hantera [!DNL Adobe Stock]-resurser i [!DNL Adobe Experience Manager Asse
 description: Sök, hämta, licensiera och hantera [!DNL Adobe Stock]-resurser inifrån [!DNL Adobe Experience Manager]. Använd de licensierade mediefilerna som andra digitala resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 97e17df1f79450b5aed5867633c129a1c21a17ac
+source-git-commit: 376940612066123a8f84fe6c30ff3002cda08079
 workflow-type: tm+mt
-source-wordcount: '1065'
-ht-degree: 4%
+source-wordcount: '1056'
+ht-degree: 3%
 
 ---
 
@@ -31,7 +31,7 @@ Om du vill tillåta kommunikation mellan [!DNL Experience Manager] och [!DNL Ado
 
 ### Create an IMS configuration {#create-an-ims-configuration}
 
-1. Click on [!DNL Experience Manager] logo. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**. Klicka på **[!UICONTROL Create]** och välj **[!UICONTROL Cloud Solution]** > **[!UICONTROL Adobe Stock]**.
+1. In the [!DNL Experience Manager] user interface, navigate to **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**. Klicka på **[!UICONTROL Create]** och välj **[!UICONTROL Cloud Solution]** > **[!UICONTROL Adobe Stock]**.
 1. Återanvänd ett befintligt certifikat eller välj **[!UICONTROL Create new certificate]**.
 1. Klicka på **[!UICONTROL Create certificate]**. Ladda ned den offentliga nyckeln när du har skapat den. Klicka på **[!UICONTROL Next]**.
 1. Lägg till den hämtade offentliga nyckeln till ditt [!DNL Adobe Developer Console] tjänstkonto. Klicka på **[!UICONTROL Next]**. Lämna skärmen öppen så att du kan ange värdena inom kort [!UICONTROL Adobe IMS Technical Account Configuration] .
@@ -52,7 +52,7 @@ Om du vill tillåta kommunikation mellan [!DNL Experience Manager] och [!DNL Ado
 
 >[!NOTE]
 >
->Om det finns flera [!DNL Adobe Stock] konfigurationer väljer du den önskade konfigurationen på [!UICONTROL User Preferences] panelen. Klicka på *användarens* logotyp i det övre högra hörnet av [!DNL Experience Manager] användargränssnittet.
+>Om det finns flera [!DNL Adobe Stock] konfigurationer väljer du den önskade konfigurationen på panelen Användarinställningar (**[!UICONTROL AEM]** > **[!UICONTROL User Icon]** > **[!UICONTROL User Preferences]** > **[!UICONTROL Stock Configuration]**).
 
 ## Använd och hantera [!DNL Adobe Stock] resurser i [!DNL Experience Manager] {#usemanage}
 
