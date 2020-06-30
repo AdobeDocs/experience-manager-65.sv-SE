@@ -10,7 +10,10 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 21714581-7645-4b47-a9b0-9f1424013240
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: f1870c1222004f582ccf337a59e1f30e2dc2cf32
+workflow-type: tm+mt
+source-wordcount: '380'
+ht-degree: 2%
 
 ---
 
@@ -35,6 +38,7 @@ Tillgängliga webbgruppskomponenter listas [här](author-communities.md#availabl
 >
 >Om du inte känner till AEM läser du dokumentationen om [grundläggande hantering](../../help/sites-authoring/basic-handling.md).
 
+
 ### Gå in i designläge {#entering-design-mode}
 
 Om en **webbgruppskomponent** inte hittas i komponentwebbläsaren (sidespark) måste du ange `Design Mode` att andra webbgruppskomponenter ska läggas till. [Nödvändiga klientbibliotek](#required-clientlibs) (klientbibliotek) kan också behöva läggas till.
@@ -53,7 +57,7 @@ De valda komponenterna är nu tillgängliga i komponentwebbläsaren:
 
 [Klientbaserade bibliotek](../../help/sites-developing/clientlibs.md) (clientlibs) krävs för att en komponent ska fungera korrekt (JavaScript) och formatera (CSS).
 
-När du lägger till en webbgruppskomponent på en sida, om resultatet är ett fel eller ett oväntat utseende, är det första du bör försöka att lägga till de nödvändiga klientlibs för webbkomponenterna. Mer information finns i [Clientlibs for Communities Components](clientlibs.md).
+När du lägger till en webbgruppskomponent på en sida, om resultatet är ett fel eller ett oväntat utseende, är det första du ska försöka att lägga till de nödvändiga klientlibs för webbkomponenterna. Mer information finns i [Clientlibs for Communities Components](clientlibs.md).
 
 ### Exempel: Inledningsvis placerade granskningar utan klientbibliotek... {#example-initially-placed-reviews-without-client-libraries}
 
@@ -63,7 +67,7 @@ När du lägger till en webbgruppskomponent på en sida, om resultatet är ett f
 
 ![chlimage_1-427](assets/chlimage_1-427.png)
 
-## Taggning {#tagging}
+## Taggar {#tagging}
 
 Många webbgruppsfunktioner kan konfigureras så att medlemmar kan tagga innehåll som anges (publiceras) i publiceringsmiljön.
 
@@ -71,7 +75,7 @@ Om taggning tillåts kan communityplatsens konfiguration ställas in så att den
 
 Funktioner som tillåter taggning: [blogg](blog-feature.md), [kalender](calendar.md), [filbibliotek](file-library.md), [forum](forum.md)
 
-Funktioner som använder taggar: [katalog](catalog.md), [sökning](search.md), [socialt taggmoln](tagcloud.md)
+Funktioner som använder taggar: [katalog](catalog.md), [sökning](search.md), moln för [sociala taggar](tagcloud.md)
 
 För redigeringsinformation:
 
@@ -79,7 +83,7 @@ För redigeringsinformation:
 
 För administrativ information:
 
-* Skapa taggnamnutrymmen (taxonomi): Administrera [taggar](../../help/sites-administering/tags.md)
+* Skapa taggnamnutrymmen (taxonomi): [Administrera taggar](../../help/sites-administering/tags.md)
 * Konfiguration av communityplats: se [TAGGNING](sites-console.md#tagging)
 * [Tagga användargenererat innehåll](../../help/sites-authoring/tags.md)
 * [Aktiveringsresurser för taggning](tag-resources.md)
