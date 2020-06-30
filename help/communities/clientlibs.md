@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 68ce47c8-a03f-40d6-a7f3-2cc64aee0594
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5b8b1544645465d10e7c2018364b6a74f1ad9a8e
+source-git-commit: efa6c7be93908b2f264da4689caa9c02912c0f0a
+workflow-type: tm+mt
+source-wordcount: '402'
+ht-degree: 1%
 
 ---
 
@@ -38,11 +41,11 @@ När de nödvändiga klientlibs saknas kan det leda till javascript-fel och ett 
 
 ### Exempel: Monterade granskningar utan Clientlibs {#example-placed-reviews-without-clientlibs}
 
-![chlimage_1-132](assets/chlimage_1-132.png)
+![chlimage_1-426](assets/chlimage_1-426.png)
 
 ### Exempel: Monterade granskningar med Clientlibs {#example-placed-reviews-with-clientlibs}
 
-![chlimage_1-133](assets/chlimage_1-133.png)
+![chlimage_1-427](assets/chlimage_1-427.png)
 
 ## Identifiera nödvändiga klienter {#identifying-required-clientlibs}
 
@@ -55,7 +58,7 @@ Till exempel, högst upp på sidan [](https://localhost:4502/content/community-c
 * cq.ckeditor
 * cq.social.hbs.reviews
 
-![chlimage_1-134](assets/chlimage_1-134.png)
+![chlimage_1-246](assets/chlimage_1-246.png)
 
 ## Lägga till nödvändiga klienter {#adding-required-clientlibs}
 
@@ -63,32 +66,33 @@ När du vill lägga till en webbgruppskomponent på en sida måste du lägga til
 
 Använd [CRXDE|Lite](#using-crxde-lite) för att ändra en befintlig klientlibslista för en communitywebbplatssida.
 
-Så här lägger du till en klientlib för en community-webbplats med [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) :
+Så här lägger du till en klientlib för en community-webbplats med [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md):
 
-* Gå till [https://&lt;server>:&lt;port>/crx/de](https://localhost:4502/crx/de)
-* Leta reda på `clientlibslist` noden för sidan där du vill lägga till komponenten
+* Gå till [https://&lt;server>:&lt;port>/crx/de](https://localhost:4502/crx/de).
+* Leta reda på `clientlibslist` noden för sidan där du vill lägga till komponenten:
 
    * `/content/sites/sample/en/page/jcr:content/clientlibslist`
 
-* Med `clientlibslist` nod markerad
+* Med `clientlibslist` nod markerad:
 
-   * Leta reda på[] egenskapen String `scg:requiredClientLibs`
-   * Markera dess innehåll `Value` för att komma åt dialogrutan String-array
+   * Leta reda på egenskapen String[] `scg:requiredClientLibs`.
+   * Välj dess `Value` för att öppna dialogrutan String-array.
 
-      * Bläddra nedåt om det behövs
-      * Välj + för att ange ett nytt klientbibliotek
+      * Bläddra nedåt om det behövs.
+      * Välj + för att ange ett nytt klientbibliotek.
 
-         * Upprepa för att lägga till fler klientbibliotek
-      * Välj **OK**
-   * Välj **Spara alla**
+         * Upprepa om du vill lägga till fler klientbibliotek.
 
+         * Välj **OK**.
+   * Välj **Spara alla**.
 
 
 >[!NOTE]
 >
 >Om webbplatsen inte är en communitywebbplats måste förekomsten eller platsen för klientbiblioteken som används för webbplatsen identifieras.
 
+
 I exemplet [Komma igång med AEM Communities](/help/communities/getting-started.md) , där `site-name` är *engagerande*, visas klienten så här om du lägger till granskningskomponenten:
 
-![chlimage_1-135](assets/chlimage_1-135.png)
+![chlimage_1-247](assets/chlimage_1-247.png)
 
