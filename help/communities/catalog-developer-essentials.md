@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 542467ef-3793-4347-8424-c365c5a166f6
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 82affd528f2526384b319fe89082e0f574ab5855
+workflow-type: tm+mt
+source-wordcount: '357'
+ht-degree: 3%
 
 ---
 
@@ -75,17 +78,16 @@ Använda exemplet med [självstudiekursen](getting-started-enablement.md):
 
 * Navigera till katalogresursen på katalogsidan
 
-   * Exempel, `/content/sites/enable/en/catalog/jcr:content/content/primary/catalog`
+   * Till exempel, `/content/sites/enable/en/catalog/jcr:content/content/primary/catalog`
 
 * Lägga till en underordnad filternod
 
    * Markera `catalog`noden
-   * Välj **[!UICONTROL Skapa nod]**
+   * Välj **[!UICONTROL Create Node]**
 
       * Namn: `filters`
       * Typ: `nt:unstructured`
-   * Välj **[!UICONTROL Spara alla]**
-
+      * Välj **[!UICONTROL Save All]**
 
 * Lägg till `se_resource-tags` egenskap till `filters` noden
 
@@ -93,12 +95,12 @@ Använda exemplet med [självstudiekursen](getting-started-enablement.md):
    * Lägg till en Multi-egenskap
 
       * Namn: `se_resource-tags`
-      * Typ:Sträng
+      * Typ: Sträng
       * Värde: *&lt;ange ett[tagg-ID](#pre-filter-tagids)>*
-      * Markera **[!UICONTROL flera]**
-      * Välj **[!UICONTROL Lägg till]**
+         * Välj **[!UICONTROL Multi]**
+         * Välj **[!UICONTROL Add]**
 
-         * I popup-dialogrutan väljer du `+` att lägga till ytterligare förfiltertagg-ID:n
+            * I popup-dialogrutan väljer du `+` att lägga till ytterligare förfiltertagg-ID:n
 
 * Publicera communitywebbplatsen igen
 
@@ -116,5 +118,5 @@ Förfiltreringen av [TagID:n](../../help/sites-developing/framework.md#tagid) m�
 
 * [Rapporterings-API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/enablement/client/reporting/api/package-summary.html)
 
-* [API för rapporteringsanalys](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/enablement/client/reporting/analytics/api/package-summary.html)
+* [Rapportera Analytics API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/enablement/client/reporting/analytics/api/package-summary.html)
 
