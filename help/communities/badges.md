@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 135b3077-5343-4888-858d-de5e9b1d4b04
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cf2733ecee5c74b79b85267191fbdf3cbce9c98b
+source-git-commit: f1870c1222004f582ccf337a59e1f30e2dc2cf32
 workflow-type: tm+mt
 source-wordcount: '316'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -41,7 +41,7 @@ Navigera till Badges-konsolen i redigeringsmiljön:
 
 Den här konsolen visar de emblem som är tillgängliga för tillfället och från vilka nya emblem kan läggas till.
 
-![chlimage_1-123](assets/chlimage_1-123.png)
+![badges-homepage](assets/badges-homepage.png)
 
 ## Skapa märke {#create-badge}
 
@@ -49,7 +49,7 @@ Ett märke skapas genom att en lämplig liten bild (72 dpi med en höjd på mell
 
 Om publiceringsmiljön är en grupp utgivare måste du konfigurera [användarsynkronisering](/help/communities/sync.md).
 
-![chlimage_1-124](assets/chlimage_1-124.png)
+![badges-1](assets/badges-1.png)
 
 * **Överför bild**
 
