@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 216cfb3e-777e-4773-afba-749debdca000
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5b8b1544645465d10e7c2018364b6a74f1ad9a8e
+source-git-commit: 15bebf5727e0a575d65806375840a44e423efaa0
+workflow-type: tm+mt
+source-wordcount: '994'
+ht-degree: 0%
 
 ---
 
@@ -24,16 +27,17 @@ Kommentarsfunktionen används för att låta besökare (medlemmar) på den inlog
 
 Dokumentet beskriver:
 
-* Lägga `Comments`till på en sida.
-* Konfigurationsinställningar för `Comments`komponenten.
+* Lägga till `Comments` på en sida.
+* Konfigurationsinställningar för `Comments` komponenten.
 
 >[!NOTE]
 >
 >Anonym publicering av en kommentar stöds inte. Besökarna måste registrera sig (bli medlem) och logga in för att kunna delta.
 
+
 ### Lägga till kommentarer på en sida {#adding-comments-to-a-page}
 
-Om du vill lägga till en `Comments`komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att leta reda på
+Om du vill lägga till en `Comments` komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att leta reda på
 
 * `Communities / Comments`
 
@@ -41,19 +45,22 @@ och dra den till rätt plats på en sida, t.ex. en position i förhållande till
 
 Mer information finns i Grunderna för [communitykomponenter](/help/communities/basics.md).
 
-När de [nödvändiga klientbiblioteken](/help/communities/essentials-comments.md#essentials-for-client-side) inkluderas visas `Comments`komponenten på det här sättet.
+När de [nödvändiga klientbiblioteken](/help/communities/essentials-comments.md#essentials-for-client-side) inkluderas visas `Comments` komponenten på det här sättet.
 
-![chlimage_1-143](assets/chlimage_1-143.png)
+![chlimage_1-428](assets/chlimage_1-428.png)
 
 >[!NOTE]
 >
->Det får bara finnas en `Comments`komponent på en sida. Observera att flera communityfunktioner redan innehåller kommentarer, t.ex. en blogg, kalender, forum, QnA och recensioner.
+>Det får bara finnas en `Comments` komponent på en sida. Observera att flera communityfunktioner redan innehåller kommentarer, t.ex. en blogg, kalender, forum, QnA och recensioner.
+
 
 ### Konfigurera kommentarer {#configuring-comments}
 
 Markera den monterade `Comments` komponent som du vill öppna och välj den `Configure` ikon som öppnar redigeringsdialogrutan.
 
-![konfigurera](assets/configure.png) inställningar för ikonkommentarer ![](assets/commentssettings.png)
+![konfigurera ikon](assets/configure.png)
+
+![kommentarinställningar](assets/commentssettings.png)
 
 #### Fliken Kommentarer {#comments-tab}
 
@@ -157,19 +164,19 @@ Genom att ändra kommentarsresurstypen genererar inte längre kommentarsystemet 
 
 När du känner till de anpassade resurstyperna anger du [designläge](/help/sites-authoring/default-components-designmode.md) och dubbelklickar på den monterade `Comments` komponenten för att öppna en dialogruta med en extra flik.
 
-Under fliken **Resurstyper** anger du anpassad resourceType för nya instanser av `Comments or Voting`komponenterna:
+Under fliken **Resurstyper** anger du anpassad resourceType för nya instanser av `Comments or Voting` komponenterna:
 
-![chlimage_1-144](assets/chlimage_1-144.png)
+![chlimage_1-429](assets/chlimage_1-429.png)
 
 * **Resurstyp för kommentar**
 
-   Navigera till resourceType för en utökad `comment`komponent (en kommentar) i /apps. Exempel: `/apps/social/commons/components/hbs/comments/comment`
+   Navigera till resourceType för en utökad `comment` komponent (en kommentar) i /apps. Till exempel, `/apps/social/commons/components/hbs/comments/comment`
 
    Den här resursen identifierar den resourceType för den UGC som skapas när en besökare publicerar en kommentar.
 
 * **Typ av röstningsresurs**
 
-   Navigera till resourceType för en utökad `voting`komponent i /apps. Exempel: `/apps/social/components/hbs/voting`
+   Navigera till resourceType för en utökad `voting` komponent i /apps. Till exempel, `/apps/social/components/hbs/voting`
 
    Den här resursen identifierar resurstypen för användargenererat innehåll som skapas när en besökare publicerar en röst.
 
