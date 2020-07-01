@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 628b6dcd-8b1c-4166-8fc2-843baa86ac1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4170c7fe48a740e0574a32c7823841dc311fd565
+source-git-commit: 56c2e6b55964ea5f3e180b17bd2a244882aa62ea
 workflow-type: tm+mt
 source-wordcount: '965'
 ht-degree: 0%
@@ -264,7 +264,7 @@ I undersökningssyfte, till exempel med JSRP, är baskappen som innehåller info
 
 * `/content/usergenerated/asi/jcr`
 
-Följs av sökvägen till användarens profil och avslutas i en badges-mapp, till exempel
+Följs av sökvägen till användarens profil och avslutas i en badges-mapp, till exempel:
 
 * `/home/users/community/w271OOup2Z4DjnOQrviv/profile/badges`
 
