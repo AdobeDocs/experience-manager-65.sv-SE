@@ -10,18 +10,21 @@ topic-tags: developing
 content-type: reference
 discoiquuid: fbfe8097-3c3f-4a05-97ad-1ce526362a26
 translation-type: tm+mt
-source-git-commit: 5b8b1544645465d10e7c2018364b6a74f1ad9a8e
+source-git-commit: 56c2e6b55964ea5f3e180b17bd2a244882aa62ea
+workflow-type: tm+mt
+source-wordcount: '406'
+ht-degree: 1%
 
 ---
 
 
-# Utveckla webbgrupper {#developing-communities}
+# Utveckla webbgrupper  {#developing-communities}
 
 ## Översikt {#overview}
 
-AEM Communities förenklar skapandet och anpassningen av communityfunktioner som forum, användargrupper, bloggar, frågor och svar, kalendrar, kommentarer, granskningar, omröstningar, omdömen och uppdrag. Dessa funktioner gör att användargenererat innehåll (UGC) anges i publiceringsmiljön.
+AEM Communities förenklar framtagning och anpassning av communityfunktioner som forum, användargrupper, bloggar, frågor och svar, kalendrar, kommentarer, granskningar, omröstningar, omdömen och uppdrag. Dessa funktioner gör att användargenererat innehåll (UGC) anges i publiceringsmiljön.
 
-Grunden för en [communitywebbplats](overview.md#communitiessites) är den [sociala komponentens ramverk](scf.md) (SCF). Skapandet av en communitywebbplats börjar med att en mall [för en](sites-console.md) community väljs som består av [communityfunktioner](functions.md).
+Grunden för en [communitywebbplats](overview.md#communitiessites) är den [sociala komponentens ramverk](scf.md) (SCF). Skapandet av en community-webbplats börjar med att en mall [för en](sites-console.md) community väljs som består av [communityfunktioner](functions.md).
 
 En översikt och självstudiekurser för att komma igång finns på:
 
@@ -30,8 +33,9 @@ En översikt och självstudiekurser för att komma igång finns på:
 * [Komma igång med AEM Communities för aktivering](getting-started-enablement.md)
 
 >[!NOTE]
->
+> 
 >Vi rekommenderar att du håller dig uppdaterad med de [senaste versionerna](deploy-communities.md#latest-releases).
+
 
 ## Rekommenderade distributioner {#recommended-deployments}
 
@@ -40,17 +44,17 @@ En översikt och självstudiekurser för att komma igång finns på:
 
 ## Ramverk för sociala komponenter {#social-component-framework}
 
-* [Ramverk](scf.md)för sociala komponenter: översikt över ramverk och API:er
-* [SCF Handlebars Helpers](handlebars-helpers.md): standardhjälpredor och skriva anpassade hjälpprogram
-* [Anpassning](client-customize.md)på klientsidan: anpassa kod som körs i webbläsaren
-* [Anpassning](server-customize.md)på serversidan: anpassa kod som körs på servern
-* [Lagringsresursprovider (SRP)](srp.md): översikt över lagring av communityinnehåll
-* [Riktlinjer](code-guide.md)för kodning: riktlinjer, tips och tricks
-* [Community Components Guide](components-guide.md): interaktivt utvecklingsverktyg
+* [Ramverk](scf.md)för sociala komponenter: översikt över ramverk och API:er.
+* [SCF Handlebars Helpers](handlebars-helpers.md): standardhjälpprogram och hur du skriver anpassade hjälpprogram.
+* [Anpassning](client-customize.md)på klientsidan: anpassa kod som körs i webbläsaren.
+* [Anpassning](server-customize.md)på serversidan: anpassa kod som körs på servern.
+* [Lagringsresursprovider (SRP)](srp.md): Översikt över lagring av communityinnehåll.
+* [Riktlinjer](code-guide.md)för kodning: riktlinjer, tips och tricks.
+* [Community Components Guide](components-guide.md): interaktivt utvecklingsverktyg.
 
 ## Grundläggande om komponenter, funktioner och funktioner {#component-function-and-feature-essentials}
 
-Komponenter, funktioner och funktioner i AEM Communities utgör byggstenarna för [communitysajter](sites-console.md).
+AEM Communities komponenter, funktioner och funktioner utgör byggstenarna för [communitysajter](sites-console.md).
 
 * [Grundläggande om komponenter, funktioner och funktioner](essentials.md)
 * [Clientlibs for Communities Components](clientlibs.md)
