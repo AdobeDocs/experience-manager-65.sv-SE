@@ -10,7 +10,10 @@ content-type: reference
 topic-tags: developing
 discoiquuid: a03145f7-6697-4797-b73e-6f8d241ce469
 translation-type: tm+mt
-source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
+source-git-commit: 56c2e6b55964ea5f3e180b17bd2a244882aa62ea
+workflow-type: tm+mt
+source-wordcount: '414'
+ht-degree: 3%
 
 ---
 
@@ -33,7 +36,7 @@ Den största skillnaden är att den här självstudiekursen kommer att skapa en 
 
 Börja med att skapa en enkel mall [för en](sites.md)community-webbplats.
 
-Från global navigering på en författarinstans väljer du **[!UICONTROL Verktyg > Communities > Site Templates]**.
+Från global navigering på en författarinstans väljer du **[!UICONTROL Tools]** > **[!UICONTROL Communities]** > **[!UICONTROL Site Templates]**.
 
 ![chlimage_1-82](assets/chlimage_1-82.png)
 
@@ -63,7 +66,7 @@ Från global navigering på en författarinstans väljer du **[!UICONTROL Verkty
 
 Skapa nu en ny communitywebbplats som bygger på den enkla webbplatsmallen.
 
-När du har skapat platsmallen väljer du **[!UICONTROL Communities > Sites]** från global navigering.
+När du har skapat platsmallen väljer du från global navigering **[!UICONTROL Communities > Sites]**.
 
 ![chlimage_1-85](assets/chlimage_1-85.png)
 
@@ -78,10 +81,10 @@ När du har skapat platsmallen väljer du **[!UICONTROL Communities > Sites]** f
    * `Name`: exempel
 
       * url = http://localhost:4502/content/sites/sample
-   * `Template`: välj `Single Page Template`
 
+      * `Template`: välj `Single Page Template`
+      ![chlimage_1-86](assets/chlimage_1-86.png)
 
-![chlimage_1-86](assets/chlimage_1-86.png)
 
 * Välj `Next`
 * Step `2 - Design`
@@ -95,7 +98,7 @@ När du har skapat platsmallen väljer du **[!UICONTROL Communities > Sites]** f
 
 * Välj `Create`
 
-![chlimage_1-87](assets/chlimage_1-87.png)
+   ![chlimage_1-87](assets/chlimage_1-87.png)
 
 ## Publicera webbplatsen {#publish-the-site}
 
