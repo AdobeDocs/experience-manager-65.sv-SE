@@ -11,20 +11,35 @@ content-type: reference
 discoiquuid: 9d952604-f9ef-498f-937b-871817c80226
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
+source-git-commit: 56c2e6b55964ea5f3e180b17bd2a244882aa62ea
+workflow-type: tm+mt
+source-wordcount: '932'
+ht-degree: 0%
 
 ---
 
 
 # Meddelandefunktion {#messaging-feature}
 
-Förutom de allmänt synliga interaktioner som förekommer i forum och kommentarer, gör meddelandefunktionen i AEM Communities det möjligt för communitymedlemmar att interagera med varandra mer privat.
+Förutom de synliga interaktioner som förekommer i forum och kommentarer, gör meddelandefunktionen i AEM Communities det möjligt för communitymedlemmar att interagera med varandra mer privat.
 
 Den här funktionen kan inkluderas när en [communitywebbplats](/help/communities/overview.md#communitiessites) skapas.
 
 Med meddelandefunktionen kan du:
 
-**A** - skicka ett meddelande till en eller flera communitymedlemmar **B** - skicka direktmeddelanden i [grupp till communitymedlemsgrupper](/help/communities/messaging.md#group-messaging)**C** - skicka ett meddelande med bilagor **D** - vidarebefordra ett meddelande ************ E - svara på ett meddelandeF¥ - ta bort ett meddelande✔GUnder - återställ ett borttaget meddelande
+**A** - skicka ett meddelande till en eller flera community-medlemmar
+
+**B** - skicka direktmeddelanden i [grupp till communitymedlemsgrupper](/help/communities/messaging.md#group-messaging)
+
+**C** - skicka ett meddelande med bilagor
+
+**D** - vidarebefordra ett meddelande
+
+**E** - svara på ett meddelande
+
+**F** - ta bort ett meddelande
+
+**G** - återställ ett borttaget meddelande
 
 ![messaging-section](assets/messaging-section.png) ![restore-message](assets/restore-message.png)
 
@@ -37,6 +52,7 @@ Information om hur du aktiverar och ändrar meddelandefunktionen finns i:
 >
 >Det går inte att lägga till `Compose Message, Message, or Message List` komponenter (finns i `Communities`komponentgruppen) på en sida i redigeringsläge för författare.
 
+
 ## Konfigurera meddelandekomponenter {#configure-messaging-components}
 
 När meddelanden har aktiverats för en community-webbplats konfigureras den utan någon ytterligare konfiguration. Informationen tillhandahålls om det finns behov av att ändra standardkonfigurationen.
@@ -45,10 +61,10 @@ När meddelanden har aktiverats för en community-webbplats konfigureras den uta
 
 Om du vill ändra konfigurationen för listan med meddelanden för **sidorna Inkorgen**, **Skickat** och **Papperskorgen** i meddelandefunktionen öppnar du webbplatsen i [redigeringsläge](/help/communities/sites-console.md#authoring-site-content).
 
-1. I `Preview`läget väljer du länken **Meddelanden** för att öppna huvudmeddelandesidan. Välj sedan **Inkorg**, **Skickat** eller **Papperskorgen** för att konfigurera komponenten för den meddelandelistan.
+1. I `Preview` läget väljer du länken **Meddelanden** för att öppna huvudmeddelandesidan. Välj sedan **Inkorg**, **Skickat** eller **Papperskorgen** för att konfigurera komponenten för den meddelandelistan.
 
 1. Markera komponenten på sidan i `Edit` läget.
-1. Om du vill öppna konfigurationsdialogrutan avbryter du arv genom att markera `link`ikonen.
+1. Om du vill öppna konfigurationsdialogrutan avbryter du arv genom att välja `link` ikonen.
 När arvet har avbrutits går det att välja konfigurationsikonen för att öppna konfigurationsdialogrutan.
 
 1. När konfigurationen är klar är det nödvändigt att återställa arvet genom att markera `broken link` -ikonen.
@@ -61,7 +77,7 @@ När arvet har avbrutits går det att välja konfigurationsikonen för att öppn
 
 * **Tjänstväljare**
 
-   (*Obligatoriskt*) Ange det här värdet för egenskapen **`serviceSelector.name`** från tjänsten [AEM](/help/communities/messaging.md#messaging-operations-service)Communities Messaging Operations.
+   (*Obligatoriskt*) Ange det här värdet för egenskapen **`serviceSelector.name`** från tjänsten [](/help/communities/messaging.md#messaging-operations-service)AEM Communities Messaging Operations.
 
 * **Skapa sida**
 
@@ -97,7 +113,7 @@ När arvet har avbrutits går det att välja konfigurationsikonen för att öppn
 
 * **Ta bort-knapp**
 
-   Om det här alternativet är markerat visas en `Delete`knapp som gör att ett meddelande kan markeras som läst. Duplicerar borttagningsfunktionen om **`Message Options`** även den är markerad.
+   Om det här alternativet är markerat visas en `Delete` knapp som gör att ett meddelande kan markeras som läst. Duplicerar borttagningsfunktionen om **`Message Options`** även den är markerad.
 
 * **Meddelandealternativ**
 
@@ -135,11 +151,11 @@ När arvet har avbrutits går det att välja konfigurationsikonen för att öppn
 
 * **Omdirigerings-URL**
 
-   Ange URL-adressen till sidan som visas när meddelandet har skickats. Exempel, `../messaging.html`.
+   Ange URL-adressen till sidan som visas när meddelandet har skickats. Till exempel, `../messaging.html`.
 
 * **Avbryt URL**
 
-   Ange URL-adressen till sidan som visas om avsändaren avbryter meddelandet. Exempel, `../messaging.html`.
+   Ange URL-adressen till sidan som visas om avsändaren avbryter meddelandet. Till exempel, `../messaging.html`.
 
 * **Maximal längd för meddelandets ämne**
 
@@ -151,7 +167,7 @@ När arvet har avbrutits går det att välja konfigurationsikonen för att öppn
 
 * **Tjänstväljare**
 
-   (*Obligatoriskt*) Ange det här värdet för egenskapen **`serviceSelector.name`** från tjänsten [AEM](/help/communities/messaging.md#messaging-operations-service)Communities Messaging Operations.
+   (*Obligatoriskt*) Ange det här värdet för egenskapen **`serviceSelector.name`** från tjänsten [](/help/communities/messaging.md#messaging-operations-service)AEM Communities Messaging Operations.
 
 #### Fliken Visa {#display-tab-1}
 
