@@ -1,8 +1,8 @@
 ---
 title: Skapa en ny communitywebbplats
 seo-title: Skapa en ny communitywebbplats
-description: Skapa en ny AEM Communities-webbplats
-seo-description: Skapa en ny AEM Communities-webbplats
+description: Så här skapar du en ny AEM Communities-webbplats
+seo-description: Så här skapar du en ny AEM Communities-webbplats
 uuid: 4f609f5f-ef07-44fc-aeb3-1c616e120d46
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 8ae324ea-8b84-47a3-aabf-1fee2a3bd46d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
+source-git-commit: d5f4b8a8c42df86831bb57b73949e443ec19d7ea
+workflow-type: tm+mt
+source-wordcount: '1642'
+ht-degree: 1%
 
 ---
 
@@ -29,7 +32,7 @@ Konsolen Communities Sites innehåller en guide som hjälper dig att skapa en co
 
 Så här börjar du skapa en ny community-webbplats:
 
-* Markera `Create`knappen.
+* Markera `Create` knappen.
 
 ![createcommunitysite](assets/createcommunitysite.png)
 
@@ -54,7 +57,7 @@ I steget [](/help/communities/sites-console.md#step2013asitetemplate)Webbplatsma
 
 * **Mall**: dra nedåt för att välja `Reference Site`
 
-Markera **nästa**
+* Välj **Nästa**.
 
 ### Steg 2: Design {#step-design}
 
@@ -68,7 +71,9 @@ Välj det format som du vill använda på mallen. När du väljer det här alter
 
 (Valfritt) Ladda upp en banderollbild som ska visas på webbplatsens sidor. Banderollen är fäst vid webbläsarens vänstra kant, mellan communitysidhuvudet och navigeringslänkarna. Banderollhöjden beskärs till 120 pixlar. Banderollens storlek ändras inte så att den passar webbläsarens bredd och höjden 120 pixlar.
 
-![chlimage_1-58](assets/chlimage_1-58.png) ![chlimage_1-59](assets/chlimage_1-59.png)
+![chlimage_1-284](assets/chlimage_1-284.png)
+
+![upload-image-site](assets/upload-image-site.png)
 
 Välj **Nästa**.
 
@@ -76,7 +81,7 @@ Välj **Nästa**.
 
 Observera, innan du väljer Inställningar, att det finns sju avsnitt som ger åtkomst till konfigurationer som användarhantering, taggning, moderering, grupphantering, analys, översättning och aktivering. `Next`
 
-Gå till [självstudiekursen Komma igång med AEM Communities för att få](/help/communities/getting-started-enablement.md) hjälp med att aktivera funktioner.
+Gå till självstudiekursen [Komma igång med AEM Communities för att se om du kan](/help/communities/getting-started-enablement.md) använda aktiveringsfunktionerna.
 
 #### Användarhantering {#user-management}
 
@@ -92,6 +97,7 @@ Markera alla kryssrutor för [användarhantering](/help/communities/sites-consol
 >
 >För en produktionsmiljö är det nödvändigt att skapa anpassade Facebook- och Twitter-program. Se [Social Login med Facebook och Twitter](/help/communities/social-login.md).
 
+
 ![communityinställningar](assets/site-settings.png)
 
 #### TAGGING {#tagging}
@@ -103,7 +109,7 @@ Det är enkelt att hitta namnutrymmen med typsnittssökning. Till exempel,
 * Typ `tut`
 * Välj `Tutorial`
 
-![chlimage_1-60](assets/chlimage_1-60.png)
+![chlimage_1-286](assets/chlimage_1-286.png)
 
 #### ROLLER {#roles}
 
@@ -120,21 +126,22 @@ Till exempel,
 >
 >[Tunneltjänsten](https://helpx.adobe.com/experience-manager/6-3/help/communities/deploy-communities.html#tunnel-service-on-author) tillåter endast urval av medlemmar och grupper som finns i publiceringsmiljön.
 
+
 ![användarroller på ny plats](assets/site-admin-1.png)
 
 #### MODERATION {#moderation}
 
 Acceptera de globala standardinställningarna för [moderering](/help/communities/sites-console.md#moderation) av användargenererat innehåll (UGC).
 
-![chlimage_1-61](assets/chlimage_1-61.png)
+![chlimage_1-287](assets/chlimage_1-287.png)
 
-#### ANALYS {#analytics}
+#### ANALYTICS {#analytics}
 
-Om Adobe Analytics är licensierat och en molntjänst och ett ramverk i Analytics har konfigurerats går det att aktivera Analytics och välja ramverket.
+Om Adobe Analytics är licensierat och en molntjänst och ett ramverk från Analytics har konfigurerats går det att aktivera Analytics och välja ramverket.
 
-Se [Analyskonfiguration för communityfunktioner](/help/communities/analytics.md).
+Se [Analytics Configuration for Communities Features](/help/communities/analytics.md).
 
-![chlimage_1-62](assets/chlimage_1-62.png)
+![chlimage_1-288](assets/chlimage_1-288.png)
 
 #### ÖVERSÄTTNING {#translation}
 
@@ -147,7 +154,7 @@ I [översättningsinställningarna](/help/communities/sites-console.md#translati
 * Markera **Översätt hela sidan**
 * Lämna standardalternativet för beständighet
 
-![chlimage_1-63](assets/chlimage_1-63.png)
+![chlimage_1-289](assets/chlimage_1-289.png)
 
 #### AKTIVERING {#enablement}
 
@@ -157,11 +164,13 @@ En liknande självstudiekurs för att snabbt skapa en [aktiveringscommunity](/he
 
 Välj **Nästa**.
 
+![chlimage_1-290](assets/chlimage_1-290.png)
+
 ### Steg 4: Skapa webbgruppsplats {#step-create-communities-site}
 
 Välj **Skapa.**
 
-![chlimage_1-64](assets/chlimage_1-64.png)
+![chlimage_1-291](assets/chlimage_1-291.png)
 
 När processen är klar visas mappen för den nya platsen i konsolen Communities - Sites.
 
@@ -200,7 +209,7 @@ Observera att UGC inte ingår i platspaketet.
 
 * **Ta bort plats**
 
-   Välj ikonen Ta bort om du vill ta bort communitywebbplatsen från **[!UICONTROL webbgrupper > Webbplatskonsolen]**. Den här åtgärden tar bort alla objekt som är associerade med platsen, till exempel UGC, användargrupper, resurser och databasposter.
+   Välj ikonen Ta bort om du vill ta bort communitywebbplatsen från **[!UICONTROL Communities > Sites console]**. Den här åtgärden tar bort alla objekt som är associerade med platsen, till exempel UGC, användargrupper, resurser och databasposter.
 
 ![webbplatseråtgärder](assets/siteactions.png)
 
@@ -210,18 +219,15 @@ Observera att UGC inte ingår i platspaketet.
 >
 >På författarinstansen från huvudmenyn:
 >
->1. Navigera till **[!UICONTROL Verktyg > Åtgärder > Replikering]** .
->1. Välj **[!UICONTROL Agenter på författare]**.
->1. Välj **[!UICONTROL standardagent (publicera)]**.
->1. Vid **[!UICONTROL Inställningar]** väljer du **[!UICONTROL Redigera]**.
->1. I popup-dialogrutan för agentinställningar väljer du fliken **[!UICONTROL Transport]** .
->1. I URI ändrar du portnumret 4503 till önskat portnummer >
-   >    * Om du till exempel vill använda port 6103:
-      >      https://localhost:6103/bin/receive?sling:authRequestLogin=1
+>1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Replication]** -menyn.
+>1. Välj **[!UICONTROL Agents on author]**.
+>1. Välj **[!UICONTROL Default Agent (publish)]**.
+>1. Bredvid **[!UICONTROL Settings]** väljer du **[!UICONTROL Edit]**.
+>1. I popup-dialogrutan för agentinställningar väljer du **[!UICONTROL Transport]** flik.
+>1. I URI ändrar du portnumret 4503 till önskat portnummer. Om du till exempel vill använda port 6103: https://localhost:6103/bin/receive?sling:authRequestLogin=1
+>1. Välj **[!UICONTROL OK]**.
+>1. (Valfritt) Välj **[!UICONTROL Clear]** eller **[!UICONTROL Force Retry]** återställ replikeringskön.
 >
-1. Välj **[!UICONTROL OK]**.
-1. (Valfritt) Välj **[!UICONTROL Rensa]** eller **[!UICONTROL Tvinga igen]** för att återställa replikeringskön.
-
 
 
 
@@ -229,11 +235,11 @@ Observera att UGC inte ingår i platspaketet.
 
 När du har kontrollerat att publiceringsservern körs väljer du världsikonen för att publicera communitywebbplatsen.
 
-![chlimage_1-65](assets/chlimage_1-65.png)
+![chlimage_1-292](assets/chlimage_1-292.png)
 
 När communitywebbplatsen har publicerats visas ett kort meddelande:
 
-![chlimage_1-66](assets/chlimage_1-66.png)
+![chlimage_1-293](assets/chlimage_1-293.png)
 
 ### Nya användargrupper {#new-community-user-groups}
 
@@ -254,11 +260,11 @@ Observera att [Aaron McDonald](/help/communities/tutorials.md#demo-users) är me
 * Moderatorer för communityengagemang
 * Medlemmar i communityn (indirekt som medlem i gruppen Moderatorer)
 
-![chlimage_1-67](assets/chlimage_1-67.png)
+![chlimage_1-294](assets/chlimage_1-294.png)
 
 #### https://localhost:4503/content/sites/engage/en.html {#http-localhost-content-sites-engage-en-html}
 
-![chlimage_1-68](assets/chlimage_1-68.png)
+![chlimage_1-311](assets/chlimage_1-311.png)
 
 ## Konfigurera för autentiseringsfel {#configure-for-authentication-error}
 
@@ -293,7 +299,7 @@ Så här kommer du igång:
 
    * Lägg till egenskap:
 
-      * **Namnsling** :match
+   * **Namnsling** :match
       * **Type** String
       * **Värde** localhost.4503/$(måste sluta med tecknet &#39;$&#39;)
    * Lägg till egenskap:
@@ -313,13 +319,14 @@ Så här kommer du igång:
 >
 >Om du vill inaktivera det anger du bara ett prefix för egenskapsvärdet med ett &quot;x&quot; - `sling:match` - och `xlocalhost.4503/$` Spara alla ****.
 
-![chlimage_1-69](assets/chlimage_1-69.png)
+
+![chlimage_1-297](assets/chlimage_1-297.png)
 
 #### Felsökning: Fel när kartan sparades {#troubleshooting-error-saving-map}
 
 Om det inte går att spara ändringarna måste du se till att nodnamnet är `localhost.4503`, med en punktavgränsare och inte `localhost:4503` med en kolonavgränsare, vilket inte `localhost`är ett giltigt namnområdesprefix.
 
-![chlimage_1-70](assets/chlimage_1-70.png)
+![chlimage_1-298](assets/chlimage_1-298.png)
 
 #### Felsökning: Det gick inte att omdirigera {#troubleshooting-fail-to-redirect}
 
@@ -336,4 +343,5 @@ Kom ihåg att **spara** och **publicera** webbplatsen igen efter eventuella änd
 >[!NOTE]
 >
 >Om du inte känner till AEM läser du dokumentationen om [grundläggande hantering](/help/sites-authoring/basic-handling.md) och en [snabbguide till redigeringssidorna](/help/sites-authoring/qg-page-authoring.md).
+
 
