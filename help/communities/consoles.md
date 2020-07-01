@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 5fa9ee8b-5893-4ae9-a986-bfdbb00f355f
 translation-type: tm+mt
-source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
+source-git-commit: 56c2e6b55964ea5f3e180b17bd2a244882aa62ea
+workflow-type: tm+mt
+source-wordcount: '344'
+ht-degree: 1%
 
 ---
 
@@ -34,6 +37,7 @@ När du har loggat in med administratörsbehörighet i redigeringsmiljön är ko
 >[!NOTE]
 >
 >I publiceringsmiljön visar en [communitywebbplats](sites-console.md) ett `Administration` menyalternativ när den inloggade medlemmen har lämplig behörighet.
+
 
 ## Global navigeringspanel {#global-navigation-panel}
 
@@ -72,4 +76,4 @@ Om du vill komma åt de olika webbgruppskonsolerna väljer du **navigering, Webb
 
 ## Verktygskonsol {#tools-console}
 
-Så här kommer du åt [webbgruppsverktyg](tools.md) (tidigare administrationskonsolen) från global navigering: **[!UICONTROL Verktyg > Communities]**
+Så här kommer du åt [webbgruppsverktyg](tools.md) (tidigare administrationskonsolen) från global navigering: **[!UICONTROL Tools]** > **[!UICONTROL Communities]**
