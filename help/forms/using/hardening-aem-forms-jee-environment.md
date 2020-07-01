@@ -9,9 +9,9 @@ topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 translation-type: tm+mt
-source-git-commit: 6cb05cab9ecbb9fc88e16cc1ab24cafccf7d0b16
+source-git-commit: 36c9b3d60331e7482655bc8039153b6b86d721f9
 workflow-type: tm+mt
-source-wordcount: '7603'
+source-wordcount: '7665'
 ht-degree: 0%
 
 ---
@@ -394,7 +394,7 @@ På WebSphere kan du bara konfigurera integrerad säkerhet när du använder en 
 1. Välj **Start** > **Kontrollpanelen** > **Tjänster**, högerklicka på Windows-tjänsten för WebSphere (IBM WebSphere Application Server &lt;version> - &lt;node>) och välj **Egenskaper**.
 1. Klicka på fliken **Logga in** i dialogrutan Egenskaper.
 1. Välj **Det här kontot** och ange den information som krävs för att ställa in det inloggningskonto som du vill använda.
-1. Ange säkerhet på SQL Server från **blandat** läge till enbart **** Windows-autentisering.
+1. Ange säkerhet på SQL Server från **blandat** läge till endast **** Windows-autentisering.
 
 ### Skydda åtkomst till känsligt innehåll i databasen {#protecting-access-to-sensitive-content-in-the-database}
 
@@ -455,6 +455,16 @@ I den här tabellen beskrivs teknik för granskning och loggning som du kan anv�
   </tr> 
  </tbody> 
 </table>
+
+### Möjliggör för användare som inte är administratörer att köra PDF Generator
+
+Du kan göra det möjligt för en icke-administratörsanvändare att använda PDF Generator. Normalt kan bara användare med administratörsbehörighet använda PDF Generator. Utför följande steg för att göra det möjligt för en icke-administratörsanvändare att köra PDF Generator:
+
+1. Skapa en miljövariabel med namnet PDFG_NON_ADMIN_ENABLED.
+
+1. Ange värdet för variabeln till TRUE.
+
+1. Starta om instansen av AEM-formulär.
 
 ## Konfigurera AEM Forms på JEE för åtkomst utanför företaget {#configuring-aem-forms-on-jee-for-access-beyond-the-enterprise}
 
@@ -674,10 +684,10 @@ Refererarfiltreringsprocessen kan beskrivas så här:
    1. Om det är POST utför formulärservern kontrollen av referensrubriken.
    1. Om det är GET åsidosätter formulärservern referenskontrollen, såvida inte *CSRF_CHECK_GETS* är inställd på true. I så fall utförs referentrubrikkontrollen. *CSRF_CHECK_GETS* anges i *filen web.xml* för ditt program.
 
-1. Formulärservern kontrollerar om den begärda URI:n finns i allowlist:
+1. Formulärservern kontrollerar om den begärda URI:n finns i tillåtelselista:
 
-   1. Om URI:n tillåts, accepterar servern begäran.
-   1. Om den begärda URI:n inte tillåts, hämtar servern referenten för begäran.
+   1. Om URI:n är tillåtelselistad accepterar servern begäran.
+   1. Om den begärda URI:n inte är tillåtelselistad hämtar servern referenten för begäran.
 
 1. Om det finns en referent i begäran kontrollerar servern om det är en tillåten referent. Om det är tillåtet söker servern efter ett referensundantag:
 
@@ -693,7 +703,7 @@ Refererarfiltreringsprocessen kan beskrivas så här:
 
 AEM Forms på JEE har ett referensfilter som anger vilken referent som har behörighet till serverresurserna. Som standard filtrerar inte referensfiltret begäranden som använder en säker HTTP-metod, t.ex. GET, om inte *CSRF_CHECK_GETS* är inställd på true. Om portnumret för en post med tillåten referens är 0, tillåter AEM Forms på JEE alla förfrågningar från den värden oavsett portnumret. Om inget portnummer anges tillåts endast begäranden från standardporten 80 (HTTP) eller port 443 (HTTPS). Referensfiltrering är inaktiverat om alla poster i listan över tillåtna referenter tas bort.
 
-När du först installerar Document Services uppdateras listan över tillåtna referenter med adressen till den server där Document Services är installerat. Posterna för servern omfattar servernamnet, IPv4-adressen, IPv6-adressen om IPv6 är aktiverat, loopback-adressen och en localhost-post. Namnen som läggs till i listan över tillåtna referenter returneras av värdoperativsystemet. En server med IP-adressen 10.40.54.187 kommer till exempel att innehålla följande poster: `https://server-name:0, https://10.40.54.187:0, https://127.0.0.1:0, http://localhost:0`. Ersättningslistan uppdateras inte för okvalificerade namn som returneras av värdoperativsystemet (namn som inte har IPv4-adress, IPv6-adress eller kvalificerat domännamn). Ändra listan över tillåtna referenter så att den passar din affärsmiljö. Distribuera inte formulärservern i produktionsmiljön med standardlistan Tillåten referent. När du har ändrat någon av de tillåtna referenserna, referensundantagen eller URI:erna måste du starta om servern för att ändringarna ska börja gälla.
+När du först installerar Document Services uppdateras listan över tillåtna referenter med adressen till den server där Document Services är installerat. Posterna för servern omfattar servernamnet, IPv4-adressen, IPv6-adressen om IPv6 är aktiverat, loopback-adressen och en localhost-post. Namnen som läggs till i listan över tillåtna referenter returneras av värdoperativsystemet. En server med IP-adressen 10.40.54.187 kommer till exempel att innehålla följande poster: `https://server-name:0, https://10.40.54.187:0, https://127.0.0.1:0, http://localhost:0`. tillåtelselista uppdateras inte för alla okvalificerade namn som returneras av värdoperativsystemet (namn som inte har IPv4-adress, IPv6-adress eller kvalificerat domännamn). Ändra listan över tillåtna referenter så att den passar din affärsmiljö. Distribuera inte formulärservern i produktionsmiljön med standardlistan Tillåten referent. När du har ändrat någon av de tillåtna referenserna, referensundantagen eller URI:erna måste du starta om servern för att ändringarna ska börja gälla.
 
 **Hantera listan Tillåten referent**
 
@@ -936,7 +946,7 @@ I det här avsnittet beskrivs standardportarna (och alternativa konfigurationsin
 
 **WebSphere-portar**
 
-Mer information om WebSphere-portar som krävs av AEM Forms på JEE finns i inställningen Portnummer i WebSphere Application Server-gränssnittet.
+Mer information om WebSphere-portar som krävs av AEM Forms på JEE finns i inställningen Portnummer i WebSphere Application Server UI.
 
 ### Konfigurerar SSL {#configuring-ssl}
 
@@ -1077,4 +1087,4 @@ Ange egenskapen `directoryBrowsingEnabled` i filen ibm-web-ext.xml till `false`.
 1. Välj **Aktivera administrativ säkerhet**.
 1. Avmarkera både **Aktivera programsäkerhet** och **Använd Java 2-säkerhet**.
 1. Klicka på **OK** eller **Använd**.
-1. I rutan **Meddelanden** klickar du på **Spara direkt i huvudkonfigurationen**.
+1. I rutan **Meddelanden** klickar du på **Spara direkt i den överordnad konfigurationen**.
