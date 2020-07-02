@@ -10,9 +10,9 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 8b607b55-2412-469f-856b-0a3dea4b0efb
 translation-type: tm+mt
-source-git-commit: 2d04b33258a3727a088461055649c28d57a271c5
+source-git-commit: 530b1c3c1922eb10622888804a603cc82b3eb3aa
 workflow-type: tm+mt
-source-wordcount: '1055'
+source-wordcount: '1148'
 ht-degree: 8%
 
 ---
@@ -67,7 +67,7 @@ Från någon av konsolerna visas det aktuella antalet objekt i din inkorg i sidh
 
 Körklar AEM levereras förinläst med fyra uppgifter som tilldelats administratörsanvändargruppen.
 
-* [Konfigurera analys och målgruppsanpassning](/help/sites-administering/opt-in.md)
+* [Konfigurera Analytics och målinriktning](/help/sites-administering/opt-in.md)
 * [Använd AEM Security Checklist](/help/sites-administering/security-checklist.md)
 * Aktivera insamling av aggregerad användningsstatistik
 * [Konfigurera HTTPS](/help/sites-administering/ssl-by-default.md)
@@ -137,22 +137,29 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
 
 Med alternativet Admin Control kan administratörer:
 
+* Anpassa kolumnerna i AEM Inbox
+
 * Anpassa rubriktext och logotyp
 
 * Styra visningen av navigeringslänkar i sidhuvudet
 
-Alternativet Administratörskontroll är bara synligt för medlemmarna i gruppen Administratörer eller Arbetsflödesadministratörer.
+Alternativet Administratörskontroll är bara synligt för medlemmarna i `administrators` eller `workflow-administrators` gruppen.
 
-![admin-control](assets/admin-control.png)
+* **Kolumnanpassning**: Anpassa en AEM-inkorg om du vill ändra standardrubriken för en kolumn, ändra ordning på positionen för en kolumn och visa ytterligare kolumner baserat på data i ett arbetsflöde.
+   * **Lägg till kolumn**: Markera en kolumn som ska läggas till i AEM Inbox.
+   * **Redigera kolumn**: Håll muspekaren över kolumnrubriken och tryck på ![redigeringsikonen](assets/edit.svg) för att ange ett kolumnvisningsnamn.
+   * **Ta bort kolumn**: Tryck på ikonen ![Ta bort](assets/delete_updated.svg) för att ta bort kolumnen från AEM Inbox.
+   * **Flytta kolumn**: Dra ![flyttningsikonen](assets/move_updated.svg) om du vill flytta en kolumn till en ny plats i AEM Inbox.
+   ![admin-control](assets/admin-control-column-customize.png)
 
 * **Anpassning av varumärkesprofilering**
 
-   * **Anpassa rubriktext:** Ange den text som ska visas i rubriken för att ersätta **Adobe Experience Manager** -standardtexten.
+   * **Anpassa rubriktext:** Ange den text som ska visas i sidhuvudet för att ersätta standardtexten **Adobe Experience Manager** .
 
    * **Anpassa logotyp:** Ange bilden som ska visas i sidhuvudet som logotyp. Överför en bild i DAM (Digital Asset Management) och hänvisa till den bilden i fältet.
 
 * **Användarnavigering**
-   * **Dölj navigeringsalternativ:** Välj det här alternativet om du vill dölja navigeringsalternativ som är tillgängliga i sidhuvudet. Navigeringsalternativen inkluderar länkar till andra lösningar, hjälplänken och de redigeringsalternativ som finns när man trycker på Adobe Experience Manager-logotypen eller -texten.
+   * **Dölj navigeringsalternativ:** Välj det här alternativet om du vill dölja navigeringsalternativ som är tillgängliga i sidhuvudet. Navigeringsalternativen inkluderar länkar till andra lösningar, hjälplänken och de redigeringsalternativ som finns när man trycker på Adobe Experience Manager logotyp eller text.
 * **Spara:** Tryck/klicka på det här alternativet om du vill spara inställningarna.
 
 ## Vidta åtgärder för ett objekt {#taking-action-on-an-item}
