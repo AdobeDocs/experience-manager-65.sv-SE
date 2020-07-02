@@ -9,16 +9,19 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c04c488b-73f3-49ba-9e89-f97497965757
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 4ee3b99a3f0a5d37441eee76c3ec747afcf2e32e
+workflow-type: tm+mt
+source-wordcount: '857'
+ht-degree: 0%
 
 ---
 
 
 # Visa och förstå transaktionsrapporter{#viewing-and-understanding-transaction-reports}
 
-Med transaktionsrapporter kan du samla in och spåra antalet skickade formulär, bearbetade dokument och återgivna dokument. Målet med att spåra dessa transaktioner är att fatta ett välgrundat beslut om produktanvändningen och att balansera investeringar i maskinvara och programvara. Mer information finns i Översikt över [transaktionsrapporter för AEM-formulär](../../forms/using/transaction-reports-overview.md).
+Med transaktionsrapporter kan du samla in och spåra antalet skickade formulär, bearbetade dokument och återgivna dokument. Målet med att spåra dessa transaktioner är att fatta ett välgrundat beslut om produktanvändningen och att balansera investeringar i maskinvara och programvara. Mer information finns i Översikt över transaktionsrapporter för [AEM Forms](../../forms/using/transaction-reports-overview.md).
 
-## Ställa in transaktionsrapporter {#setting-up-transaction-reports}
+## Ställa in transaktionsrapporter  {#setting-up-transaction-reports}
 
 Funktionen för transaktionsrapporter är tillgänglig som en del av tilläggspaketet för AEM-formulär. Information om hur du installerar tilläggspaketet på alla författare- och publiceringsinstanser finns i [Installera och konfigurera AEM-formulär](/help/forms/using/installing-configuring-aem-forms-osgi.md). När du har installerat tilläggspaketet för AEM-formulär gör du följande:
 
@@ -83,11 +86,11 @@ AEM Forms visar transaktionsrapporter sedan det konfigurerade datumet, vilket vi
 
 * Använd alternativet **Återställ datum till idag** om du vill återställa transaktionsposter. När du återställer datumet till i dag går alla tidigare transaktionsposter förlorade. När du återställer datumet för en författarinstans påverkar ändringen inte transaktionsrapporter för publiceringsinstanser och omvänt.
 * Använd **Visa transaktioner för enbart publiceringsinstanser** för att visa alla transaktioner som bara inträffade i den konfigurerade publiceringsinstansen eller publiceringsgruppen.
-* Använd kategorierna: Bearbetat **dokument**, **dokument återgivna** och **formulär skickade** för att visa motsvarande transaktioner. Information om vilken typ av transaktioner som ingår i dessa kategorier finns i API:er för [fakturerbara transaktionsrapporter](../../forms/using/transaction-reports-billable-apis.md).
+* Använd kategorierna: **Dokumentet har bearbetats**, **dokument har återgetts** och **formulär har skickats** för att visa motsvarande transaktioner. Information om vilken typ av transaktioner som ingår i dessa kategorier finns i API:er för [fakturerbara transaktionsrapporter](../../forms/using/transaction-reports-billable-apis.md).
 
 ## Visa transaktionsrapporteringsloggar {#view-transaction-reporting-logs}
 
-Transaktionsrapportering placerar all information som visas i rapporten och viss ytterligare information i loggarna. Informationen i loggarna är användbar för avancerade användare. I loggar delas transaktioner upp i flera detaljerade kategorier jämfört med tre konsoliderade kategorier som visas i rapporten. Loggarna finns på /crx-quickstart/logs/aem-forms-transaction.log.
+Transaktionsrapportering placerar all information som visas i rapporten och viss ytterligare information i loggarna. Informationen i loggarna är användbar för avancerade användare. I loggar delas transaktioner upp i flera detaljerade kategorier jämfört med tre konsoliderade kategorier som visas i rapporten. Loggarna finns i `error.log` filen i `/crx-repository/logs/` katalogen. Loggarna är tillgängliga även om du inte aktiverar transaktionsrapporterna från AEM Web Console.
 
 ## Relaterade artiklar {#related-articles}
 
