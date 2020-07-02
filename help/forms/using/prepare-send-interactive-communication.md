@@ -8,7 +8,10 @@ topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 110c86ea-9bd8-4018-bfcc-ca33e6b3f3ba
 translation-type: tm+mt
-source-git-commit: 06335b9a85414b6b1141dd19c863dfaad0812503
+source-git-commit: 4c4a5a15e9cbb5cc22bc5999fb40f1d6db3bb091
+workflow-type: tm+mt
+source-wordcount: '1614'
+ht-degree: 0%
 
 ---
 
@@ -29,8 +32,8 @@ När agenten förbereder den interaktiva kommunikationen med hjälp av agentgrä
 
 ## Förbereda interaktiv kommunikation med hjälp av agentgränssnittet {#prepare-interactive-communication-using-the-agent-ui}
 
-1. Välj **[!UICONTROL Formulär]** > **[!UICONTROL Formulär och dokument]**.
-1. Välj lämplig interaktiv kommunikation och tryck på **[!UICONTROL Open Agent-gränssnittet]**.
+1. Välj **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
+1. Välj lämplig interaktiv kommunikation och tryck **[!UICONTROL Open Agent UI]**.
 
    >[!NOTE]
    >
@@ -54,7 +57,7 @@ När agenten förbereder den interaktiva kommunikationen med hjälp av agentgrä
 
 På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsvariabler i den interaktiva kommunikationen.
 
-1. Välj **[!UICONTROL Innehåll]**. Fliken Innehåll i den interaktiva kommunikationen visas.
+1. Välj **[!UICONTROL Content]**. Fliken Innehåll i den interaktiva kommunikationen visas.
 
    ![agentuicontenttab](assets/agentuicontenttab.png)
 
@@ -86,7 +89,7 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
 
 ### Hantera bifogade filer {#manage-attachments}
 
-1. Välj **[!UICONTROL Bifogad fil]**. Agentgränssnittet visar de tillgängliga bifogade filerna som de har konfigurerats när interaktiv kommunikation skapas.
+1. Välj **[!UICONTROL Attachment]**. Agentgränssnittet visar de tillgängliga bifogade filerna som de har konfigurerats när interaktiv kommunikation skapas.
 
    Du kan välja att inte skicka en bifogad fil tillsammans med den interaktiva kommunikationen genom att trycka på visningsikonen och du kan trycka på krysset i den bifogade filen för att ta bort den (om agenten får ta bort eller dölja den bifogade filen) från den interaktiva kommunikationen. Ikonerna Visa och Ta bort är inaktiverade för bilagor som anges som obligatoriska när interaktiv kommunikation skapas.
 
@@ -101,7 +104,7 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
 1. Om ordningen på de bifogade filerna inte var låst när du skapade den interaktiva kommunikationen kan du ändra ordningen på de bifogade filerna genom att markera en bifogad fil och trycka på nedåtpilen och uppåtpilen.
 1. Använd Förhandsgranska via webben och Förhandsgranska för att se om de två utdatafilerna är som du vill ha dem.
 
-   Om du tycker att förhandsvisningarna är tillräckliga trycker du på **[!UICONTROL Skicka]** för att skicka/skicka interaktiv kommunikation till en postprocess. Om du vill göra ändringar avslutar du förhandsgranskningen och går tillbaka till ändringarna.
+   Om du tycker att förhandsvisningarna är tillräckliga trycker du för **[!UICONTROL Submit]** att skicka/skicka interaktiv kommunikation till en postprocess. Om du vill göra ändringar avslutar du förhandsgranskningen och går tillbaka till ändringarna.
 
 ## Formatera text {#formattingtext}
 
@@ -167,3 +170,41 @@ Agentgränssnittet har inbyggt stöd för 210 specialtecken. Administratören ka
 * Hoppa över punkter/nummer: Aktivera det här alternativet om du vill hoppa över punkter/numrering i listdokumentfragmentet.
 * Ofyllda värden (info): Anger antalet ofyllda variabler i dokumentfragmentet.
 
+## Spara interaktiv kommunikation som utkast {#save-as-draft}
+
+Du kan använda agentgränssnittet för att spara ett eller flera utkast för varje interaktiv kommunikation och hämta utkastet senare för att fortsätta arbeta med det. Du kan ange olika namn för varje utkast för att identifiera det.
+
+Adobe rekommenderar att du kör dessa instruktioner i följd för att spara ett interaktivt meddelande som ett utkast.
+
+### Aktivera funktionen Spara som utkast {#before-save-as-draft}
+
+Funktionen Spara som utkast är inte aktiverad som standard. Gör så här för att aktivera funktionen:
+
+1. Implementera SPI ( [ccrDocumentInstance](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html) Service Provider Interface). Med SPI kan du spara utkastet till version av den interaktiva kommunikationen i databasen med ett utkast-ID som unik identifierare.
+1. Gå till `https://'[server]:[port]'/system/console/configMgr`.
+1. Tryck på **[!UICONTROL Create Correspondence Configuration]**.
+1. Markera **[!UICONTROL Enable Save Using CCRDocumentInstanceService]** och tryck **[!UICONTROL Save]**.
+
+### Spara interaktiv kommunikation som utkast {#save-as-draft-agent-ui}
+
+Så här sparar du en interaktiv kommunikation som ett utkast:
+
+1. Välj en interaktiv kommunikation i Forms Manager och tryck på **[!UICONTROL Open Agent UI]**.
+
+1. Gör lämpliga ändringar i agentens användargränssnitt och tryck på **[!UICONTROL Save as Draft]**.
+
+1. Ange namnet på utkastet i **[!UICONTROL Name]** fältet och tryck sedan på **[!UICONTROL Done]**.
+
+När du har sparat det interaktiva meddelandet som ett utkast trycker du på **[!UICONTROL Save Changes]** för att spara ytterligare ändringar i utkastet.
+
+### Hämta utkastet till interaktiv kommunikation {#retrieve-draft}
+
+När du har sparat ett utkast för interaktiv kommunikation kan du hämta det och fortsätta arbeta med det. Hämta interaktiv kommunikation med:
+
+`https://server:port/aem/forms/createcorrespondence.hmtl?draftid=[draftid]`
+
+[DRAFID] refererar till den unika identifieraren för utkastversionen som genereras när en interaktiv kommunikation har sparats som ett utkast.
+
+>[!NOTE]
+>
+>Om du gör några ändringar i det interaktiva meddelandet när du har sparat det som ett utkast, kommer utkastet inte att öppnas.
