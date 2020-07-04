@@ -3,9 +3,9 @@ title: Bästa tillvägagångssätt för att översätta resurser
 description: Bästa tillvägagångssätt för effektiv hantering av resurser för att synkronisera olika översatta versioner och effektivisera översättningsarbetsflöden.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 29f8e59e3fc9d3c089ee3b78c24638cd3cd2e96b
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '412'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 # Bästa tillvägagångssätt för att översätta resurser {#best-practices-for-translating-assets-efficiently}
 
-Adobe Experience Manager Assets har stöd för flerspråkiga arbetsflöden för att översätta binära filer, metadata och taggar för digitala resurser till flera språkområden och för att hantera översatta resurser. Mer information finns i [Flerspråkiga resurser](multilingual-assets.md).
+Adobe Experience Manager Assets stöder flerspråkiga arbetsflöden för att översätta binära filer, metadata och taggar för digitala resurser till flera språkområden och för att hantera översatta resurser. Mer information finns i [Flerspråkiga resurser](multilingual-assets.md).
 
 För effektiv hantering av resurser, för att säkerställa att olika översatta versioner förblir synkroniserade, skapar du [språkkopior](preparing-assets-for-translation.md) av resurser innan du kör översättningsarbetsflöden.
 
@@ -32,13 +32,15 @@ Du kan också göra några konfigurationsändringar i ett par arbetsflöden och 
    * [Konfigurera arkiv för fildata](/help/sites-deploying/data-store-config.md)
    * [Konfigurera Amazon S3-datalagret](/help/sites-deploying/data-store-config.md)
 
-1. Inaktivera arbetsflödet för [DAM MetaData Write-back](/help/sites-administering/workflow-offloader.md#disable-offloading) .
+<!--
+1. Disable the [DAM MetaData Write-back](/help/sites-administering/workflow-offloader.md#disable-offloading) workflow.
 
-   Som namnet antyder skriver arbetsflödet om metadata till den binära filen [!UICONTROL DAM Metadata Writeback] . Eftersom metadata ändras efter översättning, genereras en annan binär fil för en språkkopia när du skriver tillbaka den till den binära filen.
+   As the name suggests, the [!UICONTROL DAM Metadata Writeback] workflow rewrites the metadata to the binary file. Because the metadata changes after translation, writing it back to the binary file generates a different binary for a language copy.
 
    >[!NOTE]
    >
-   >Om du inaktiverar arbetsflödet inaktiveras skrivningen av XMP-metadata för resurbinärfiler. [!UICONTROL DAM MetaData Writeback] Därför sparas inte längre framtida metadataändringar i resurserna. Utvärdera konsekvenserna innan du inaktiverar arbetsflödet.
+   >Disabling the [!UICONTROL DAM MetaData Writeback] workflow turns off XMP metadata write-back on asset binaries. Consequently, future metadata changes are no longer be saved within the assets. Evaluate the consequences before disabling this workflow.
+-->
 
 1. Aktivera [!UICONTROL Set last modified date] arbetsflödet.
 
