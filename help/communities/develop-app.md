@@ -10,12 +10,15 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 910229a3-38b1-44f1-9c09-55f8fd6cbb1d
 translation-type: tm+mt
-source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
+source-git-commit: 2b04724138f28cd7f357d155b88daf964632f3bc
+workflow-type: tm+mt
+source-wordcount: '592'
+ht-degree: 2%
 
 ---
 
 
-# Utveckla sandlådeprogram {#develop-sandbox-application}
+# Utveckla sandlådeprogram  {#develop-sandbox-application}
 
 I det här avsnittet, nu när mallen har konfigurerats i det [inledande programavsnittet](initial-app.md) , och startsidorna i det [inledande innehållsavsnittet](initial-content.md) , kan programmet utvecklas med grundläggande skript, inklusive möjligheten att aktivera redigering med communitykomponenter. I slutet av det här avsnittet kommer webbplatsen att fungera.
 
@@ -34,53 +37,53 @@ Använda CRXDE Lite:
     Typ: `
     Värde: &quot;foundation/components/page&quot;
 
-1. Klicka på det gröna **[!UICONTROL [+]Lägg till]**
-1. Klicka på **[!UICONTROL Spara alla]**
+1. Klicka på den gröna **[!UICONTROL[+]Add]**
+1. Klicka på **[!UICONTROL Save All]**
 
-![chlimage_1-231](assets/chlimage_1-231.png)
+   ![chlimage_1-231](assets/chlimage_1-231.png)
 
 ### Head- och body-skript {#head-and-body-scripts}
 
 1. I rutan **CRXDE Lite** explorer navigerar du till `/apps/an-scf-sandbox/components/playpage` och dubbelklickar på filen `playpage.jsp` för att öppna den i redigeringsrutan.
 
-#### /apps/an-scf-sandbox/components/playpage/playpage.jsp {#apps-an-scf-sandbox-components-playpage-playpage-jsp}
+   `/apps/an-scf-sandbox/components/playpage/playpage.jsp`
 
-```xml
-<%--
-
-  An SCF Sandbox Play Component component.
-
-  This is the component which renders content for An SCF Sandbox page.
-
---%><%
-%><%@include file="/libs/foundation/global.jsp"%><%
-%><%@page session="false" %><%
-%><%
- // TODO add your code here
-%>
-```
+   ```xml
+   <%--
+   
+     An SCF Sandbox Play Component component.
+   
+     This is the component which renders content for An SCF Sandbox page.
+   
+   --%><%
+   %><%@include file="/libs/foundation/global.jsp"%><%
+   %><%@page session="false" %><%
+   %><%
+    // TODO add your code here
+   %>
+   ```
 
 1. Ersätt &quot; // TODO ...&quot; eftersom du är medveten om att det finns öppna/stängda skripttaggar. med skript för huvud- och kroppsdelar i &lt;html>.
 
    Med den överordnade typen `foundation/components/page`kommer alla skript som inte är definierade i samma mapp att matchas till ett skript i `/apps/foundation/components/page` mappen (om det finns), annars till ett skript i `/libs/foundation/components/page` mappen.
 
-#### /apps/an-scf-sandbox/components/playpage/playpage.jsp {#apps-an-scf-sandbox-components-playpage-playpage-jsp-1}
+   `/apps/an-scf-sandbox/components/playpage/playpage.jsp`
 
-```xml
-<%--
-
-    An SCF Sandbox Play Component component: playpage.jsp
-
-  This is the component which renders content for An SCF Sandbox page.
-
---%><%
-%><%@include file="/libs/foundation/global.jsp"%><%
-%><%@page session="false" %>
-<html>
-  <cq:include script="head.jsp"/>
-  <cq:include script="body.jsp"/>
-</html>
-```
+   ```xml
+   <%--
+   
+       An SCF Sandbox Play Component component: playpage.jsp
+   
+     This is the component which renders content for An SCF Sandbox page.
+   
+   --%><%
+   %><%@include file="/libs/foundation/global.jsp"%><%
+   %><%@page session="false" %>
+   <html>
+     <cq:include script="head.jsp"/>
+     <cq:include script="body.jsp"/>
+   </html>
+   ```
 
 1. Grundskriptet `head.jsp` behöver inte överlappas, men grundskriptet `body.jsp` är tomt.
 
@@ -91,7 +94,7 @@ Använda CRXDE Lite:
    1. Högerklicka och välj `Create > Create File...`
 
       * Namn: **body.jsp**
-   1. Klicka på **[!UICONTROL Spara alla]**
+   1. Klicka på **[!UICONTROL Save All]**
    Öppna `/apps/an-scf-sandbox/components/playpage/body.jsp` och klistra in följande text:
 
    ```xml
@@ -110,7 +113,7 @@ Använda CRXDE Lite:
    </body>
    ```
 
-1. Klicka på **[!UICONTROL Spara alla]**
+1. Klicka på **[!UICONTROL Save All]**
 
 **Visa sidan i en webbläsare i redigeringsläge:**
 
@@ -143,7 +146,7 @@ I den här sandlådan börjar du med följande **webbgruppskomponenter** (aktive
 * Sammanfattning av granskningar (visning)
 * Omröstning
 
-Välj dessutom **[!UICONTROL Allmänna]** komponenter, som
+Välj dessutom **[!UICONTROL General]** komponenter, till exempel
 
 * Bild
 * Tabell
@@ -155,7 +158,8 @@ Välj dessutom **[!UICONTROL Allmänna]** komponenter, som
 >Komponenterna som är aktiverade för sidans del lagras i databasen som värdet på egenskapen `components` för
 >`/etc/designs/an-scf-sandbox/jcr:content/playpage/par` nod.
 
-## Landningssida {#landing-page}
+
+## Landing Page {#landing-page}
 
 I en flerspråkig miljö innehåller rotsidan ett skript som tolkar klientens begäran för att avgöra vilket språk som ska användas.
 
@@ -164,13 +168,13 @@ I det här enkla exemplet ställs rotsidan in statiskt för att dirigera om till
 Ändra webbläsarens URL till rotsidan: [http://localhost:4502/editor.html/content/an-scf-sandbox.html](https://locahost:4502/editor.html/content/an-scf-sandbox.html)
 
 * Välj ikonen Sidinformation
-* Välj **[!UICONTROL Öppna egenskaper]**
+* Välj **[!UICONTROL Open Properties]**
 * På fliken AVANCERAT
 
-   * Bläddra till **[!UICONTROL Webbplatser > SCF Sandbox Site > SCF Sandbox]**
-   * Click **[!UICONTROL OK]**
+   * Gå till **[!UICONTROL Websites]** > **[!UICONTROL SCF Sandbox Site]** > **[!UICONTROL SCF Sandbox]**
+   * Klicka på **[!UICONTROL OK]**
 
-* Click **[!UICONTROL OK]**
+* Klicka på **[!UICONTROL OK]**
 
 När webbplatsen har publicerats dirigeras en gång till den engelska sidan om du bläddrar till rotsidan på en publiceringsinstans.
 
