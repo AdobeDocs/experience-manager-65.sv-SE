@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: edc3043c-7ec4-4e4a-b008-95f1784f012e
 translation-type: tm+mt
-source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
+source-git-commit: 29f150215052d61c1e20d25b0c095ea6582e26f7
+workflow-type: tm+mt
+source-wordcount: '728'
+ht-degree: 1%
 
 ---
 
@@ -23,7 +26,7 @@ Dessa instruktioner beskriver hur du ansluter till MySQL-servern och skapar UGC-
 
 ## Krav {#requirements}
 
-* [senaste webbgruppsfunktionspaket](deploy-communities.md#latestfeaturepack)
+* [Funktionspaket för senaste webbgrupper](deploy-communities.md#latestfeaturepack)
 * [JDBC-drivrutin för MySQL](deploy-communities.md#jdbc-driver-for-mysql)
 * En relationsdatabas:
 
@@ -54,7 +57,7 @@ För att få bättre stöd för flera språk måste du använda teckenuppsättni
 
 Ändra MySQL till att ha UTF8 som teckenuppsättning:
 
-* mysql> SET NAMES &#39;utf8&#39;;
+* mysql > SET NAME &#39;utf8&#39;;
 
 Ändra MySQL-databasen till standard till UTF8:
 
@@ -121,7 +124,7 @@ SQL-skriptet hämtas från AEM-databasen:
 1. Välj mappen /libs/social/config/datastore/dsrp/schema
 1. Hämta `init-schema.sql`
 
-![chlimage_1-107](assets/chlimage_1-107.png)
+   ![chlimage_1-107](assets/chlimage_1-107.png)
 
 En metod för att hämta schemat är att
 
@@ -167,36 +170,35 @@ Alla AEM-instanser för publicering och författare ska peka på samma MySQL-ser
 
 När MySQL körs på en annan server än AEM måste servervärdnamnet anges i stället för localhost i JDBC-anslutningen.
 
-* På varje författare och publicera AEM-instansen
-* Inloggad med administratörsbehörighet
-* Åtkomst till [webbkonsolen](../../help/sites-deploying/configuring-osgi.md)
+* På varje författare och publicera AEM-instansen.
+* Inloggad med administratörsbehörighet.
+* Gå till [webbkonsolen](../../help/sites-deploying/configuring-osgi.md).
 
    * Till exempel [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)
 
 * Leta reda på `Day Commons JDBC Connections Pool`
-* Välj `+` ikonen för att skapa en ny anslutningskonfiguration
+* Välj `+` ikonen om du vill skapa en ny anslutningskonfiguration.
 
-![chlimage_1-111](assets/chlimage_1-111.png)
+   ![chlimage_1-111](assets/chlimage_1-111.png)
 
 * Ange följande värden:
 
-   * **[!UICONTROL JDBC-drivrutinsklass]**: `com.mysql.jdbc.Driver`
-   * **[!UICONTROL JDBC-anslutnings-URI]**: `jdbc:mysql://localhost:3306/communities?characterEncoding=UTF-8`
+   * **[!UICONTROL JDBC driver class]**: `com.mysql.jdbc.Driver`
+   * **[!UICONTROL JDBC connection URI]**: `jdbc:mysql://localhost:3306/communities?characterEncoding=UTF-8`
 
-      Ange en server i stället för localhost om MySQL-servern inte är samma som den här AEM-servern
+      Ange en server i stället för localhost om MySQL-servern inte är densamma som &quot;this&quot; AEM- *servergrupper* är standarddatabasens (schemats) namn.
 
-      *Communities* är standarddatabasens (schemats) namn
+   * **[!UICONTROL Username]**: `root`
 
-   * **[!UICONTROL Användarnamn]**: `root`
+      Eller ange det konfigurerade användarnamnet för MySQL-servern, om inte &#39;root&#39;.
 
-      Eller ange det konfigurerade användarnamnet för MySQL-servern, om inte &#39;root&#39;
-
-   * **[!UICONTROL Lösenord]**:
+   * **[!UICONTROL Password]**:
 
       Rensa det här fältet om inget lösenord har angetts för MySQL,
 
-      Annars anger du det konfigurerade lösenordet för MySQL-användarnamnet
-   * **[!UICONTROL Datakällans namn]**: namn som angetts för [MySQL-anslutningen](#new-connection-settings), till exempel &#39;communities&#39;
+      I annat fall anger du det konfigurerade lösenordet för MySQL-användarnamnet.
 
-* Välj **[!UICONTROL Spara]**
+   * **[!UICONTROL Datasource name]**: namn som angetts för [MySQL-anslutningen](#new-connection-settings), till exempel &#39;communities&#39;.
+
+* Välj **[!UICONTROL Save]**
 
