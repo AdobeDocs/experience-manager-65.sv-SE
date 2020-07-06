@@ -1,8 +1,8 @@
 ---
 title: DSRP - Resursprovider för relativ databaslagring
 seo-title: DSRP - Resursprovider för relativ databaslagring
-description: Konfigurera AEM Communities så att en relationsdatabas används som gemensam butik
-seo-description: Konfigurera AEM Communities så att en relationsdatabas används som gemensam butik
+description: Konfigurera AEM Communities för att använda en relationsdatabas som gemensam lagringsplats
+seo-description: Konfigurera AEM Communities för att använda en relationsdatabas som gemensam lagringsplats
 uuid: f364e7da-ee54-4ab2-a630-7ec9239005ac
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: d23acb18-6761-4290-9e7a-a434582791bd
 translation-type: tm+mt
-source-git-commit: b7c790681034e9950aa43738310f7af8b1dd0085
+source-git-commit: 29f150215052d61c1e20d25b0c095ea6582e26f7
+workflow-type: tm+mt
+source-wordcount: '622'
+ht-degree: 0%
 
 ---
 
@@ -19,14 +22,14 @@ source-git-commit: b7c790681034e9950aa43738310f7af8b1dd0085
 
 ## Om DSRP {#about-dsrp}
 
-När AEM Communities är konfigurerat att använda en relationsdatabas som gemensam lagringsplats är användargenererat innehåll (UGC) tillgängligt från alla författare och publiceringsinstanser utan behov av synkronisering eller replikering.
+När AEM Communities är konfigurerat att använda en relationsdatabas som gemensam lagringsplats är användargenererat innehåll (UGC) tillgängligt från alla författare- och publiceringsinstanser utan behov av synkronisering eller replikering.
 
 Se även [egenskaper för SRP-alternativ](working-with-srp.md#characteristics-of-srp-options) och [rekommenderade topologier](topologies.md).
 
 ## Krav {#requirements}
 
-* [MySQL](#mysql-configuration), en relationsdatabas
-* [Apache Solr](#solr-configuration), en sökplattform
+* [MySQL](#mysql-configuration), en relationsdatabas.
+* [Apache Solr](#solr-configuration), en sökplattform.
 
 >[!NOTE]
 >
@@ -60,27 +63,26 @@ På författaren, för att komma åt lagringskonsolen
 * Logga in med administratörsbehörighet
 * Från **huvudmenyn**
 
-   * Välj **[!UICONTROL Verktyg]** (från den vänstra rutan)
+   * Välj **[!UICONTROL Tools]** (från den vänstra rutan)
    * Välj **[!UICONTROL Communities]**
-   * Välj **[!UICONTROL lagringskonfiguration]**
+   * Välj **[!UICONTROL Storage Configuration]**
 
       * Som ett exempel är den resulterande platsen: [http://localhost:4502/communities/admin/defaultsrp](http://localhost:4502/communities/admin/defaultsrp)
       >[!NOTE]
       >
       >Standardlagringskonfigurationen lagras nu i conf-sökvägen(`/conf/global/settings/community/srpc/defaultconfiguration`) i stället för etc-sökvägen (`/etc/socialconfig/srpc/defaultconfiguration`). Du rekommenderas att följa [migreringsstegen](#zerodt-migration-steps) för att få standardinställningarna att fungera som förväntat.
+   ![chlimage_1-128](assets/chlimage_1-128.png)
 
-![chlimage_1-128](assets/chlimage_1-128.png)
-
-* Välj **[!UICONTROL provider för databaslagringsresurs (DSRP)]**
+* Välj **[!UICONTROL Database Storage Resource Provider (DSRP)]**
 * **Databaskonfiguration**
 
-   * **[!UICONTROL Namn på JDBC-datakälla]**
+   * **[!UICONTROL JDBC datasource name]**
 
       Namnet som ges till MySQL-anslutningen måste vara samma som det som anges i [JDBC OSGi-konfigurationen](dsrp-mysql.md#configurejdbcconnections)
 
       *standard*: communities
 
-   * **[!UICONTROL Databasnamn]**
+   * **[!UICONTROL Database name]**
 
       Namn som ges till schema i [init_schema.sql](dsrp-mysql.md#obtain-the-sql-script) -skript
 
@@ -94,7 +96,7 @@ På författaren, för att komma åt lagringskonsolen
 
       *standard*: *&lt;blank>*
 
-   * **[!UICONTROL Solr-URL]**
+   * **[!UICONTROL Solr URL]**
 
       *standard*: https://127.0.0.1:8983/solr/
 
@@ -102,14 +104,14 @@ På författaren, för att komma åt lagringskonsolen
 
       *standard*: collection1
 
-* Välj **[!UICONTROL Skicka]**.
+* Välj **[!UICONTROL Submit]**.
 
 ### Migreringssteg utan driftstopp för standardstart {#zerodt-migration-steps}
 
 Följ de här stegen för att se till att standardsidan [http://localhost:4502/communities/admin/defaultsrp](http://localhost:4502/communities/admin/defaultsrp) fungerar som förväntat:
 
 1. Byt namn på sökvägen `/etc/socialconfig` till `/etc/socialconfig_old`, så att systemkonfigurationen återgår till jsrp (standard).
-1. Gå till standardsidan [http://localhost:4502/communities/admin/defaultsrp](http://localhost:4502/communities/admin/defaultsrp)där jsrp är konfigurerat. Klicka på knappen **[!UICONTROL Skicka]** så att en ny standardkonfigurationsnod skapas `/conf/global/settings/community/srpc`.
+1. Gå till standardsidan [http://localhost:4502/communities/admin/defaultsrp](http://localhost:4502/communities/admin/defaultsrp)där jsrp är konfigurerat. Klicka på **[!UICONTROL submit]** knappen så att en ny standardkonfigurationsnod skapas `/conf/global/settings/community/srpc`.
 1. Ta bort den skapade standardkonfigurationen `/conf/global/settings/community/srpc/defaultconfiguration`.
 1. Kopiera den gamla konfigurationen `/etc/socialconfig_old/srpc/defaultconfiguration` i stället för den borttagna noden (`/conf/global/settings/community/srpc/defaultconfiguration`) i föregående steg.
 1. Ta bort den gamla etc-noden `/etc/socialconfig_old`.
@@ -122,18 +124,18 @@ Så här gör du den identiska konfigurationen tillgänglig i publiceringsmiljö
 
 * On author:
 
-   * Navigera från huvudmenyn till **[!UICONTROL Verktyg > Åtgärder > Replikering]**
-   * Dubbelklicka på **Aktivera träd **
-   * **Startsökväg:**
+   * Navigera från huvudmenyn till **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Replication]**
+   * Dubbelklicka **[!UICONTROL Activate Tree]**
+   * **Startsökväg**:
 
       * Bläddra till `/etc/socialconfig/srpc/`
    * Kontrollera att `Only Modified` inte är markerat.
-   * Välj **[!UICONTROL Aktivera]**
+   * Välj **[!UICONTROL Activate]**.
 
 
 ## Hantera användardata {#managing-user-data}
 
-Information om *användare*, *användarprofiler* och *användargrupper* som ofta används i publiceringsmiljön finns på
+Information om *användare*, *användarprofiler* och *användargrupper* som ofta används i publiceringsmiljön finns på:
 
 * [Användarsynkronisering](sync.md)
 * [Hantera användare och användargrupper](users.md)
