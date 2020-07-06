@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 0b126218-b142-4d33-a28c-a91ab4fe99ac
 translation-type: tm+mt
-source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
+source-git-commit: 43663703a79b95ccdb83eb9b5730143bde101305
+workflow-type: tm+mt
+source-wordcount: '790'
+ht-degree: 1%
 
 ---
 
@@ -49,15 +52,15 @@ Den här konfigurationen är lämplig för *icke-produktionsmiljöer* som utveck
 
 * Grundkonfiguration
 
-   * Följ installationsanvisningarna för MongoDB
-   * Konfigurera för mongod
+   * Följ installationsanvisningarna för MongoDB.
+   * Konfigurera för mongod:
 
-      * Du behöver inte konfigurera mongor eller delningar
-   * Den installerade MongoDB-mappen kallas &lt;mongo-install>
-   * Den definierade datakatalogsökvägen kallas &lt;mongo-dbpath>
+      * Du behöver inte konfigurera mongor eller delningar.
+   * Den installerade MongoDB-mappen kallas &lt;mongo-install>.
+   * Den definierade datakatalogsökvägen kallas &lt;mongo-dbpath>.
 
 
-* MongoDB kan köras på samma värd som AEM eller fjärrköras
+* MongoDB kan köras på samma värd som AEM eller fjärrköras.
 
 ### Starta MongoDB {#start-mongodb}
 
@@ -71,23 +74,24 @@ Detta startar en MongoDB-server med standardport 27017.
 >
 >Om MongoDB startas *efter* AEM **startar du om** alla **AEM** -instanser så att de kan ansluta till MongoDB.
 
+
 ### Demo Production Option: Konfigurera MongoDB-replikuppsättning {#demo-production-option-setup-mongodb-replica-set}
 
 Följande kommandon är ett exempel på hur du konfigurerar en replikuppsättning med 3 noder på localhost:
 
-* bin/mongod —port 27017 —dbpath data —replSet rs0&amp;
-* bin/mongo
+* `bin/mongod --port 27017 --dbpath data --replSet rs0&`
+* `bin/mongo`
 
-   * cfg = {&quot;_id&quot;: &quot;rs0&quot;,&quot;version&quot;: 1,&quot;medlemmar&quot;: [{&quot;_id&quot;: 0,&quot;värd&quot;: &quot;127.0.0.1:27017&quot;}]}
-   * rs.starting(cfg)
+   * `cfg = {"_id": "rs0","version": 1,"members": [{"_id": 0,"host": "127.0.0.1:27017"}]}`
+   * `rs.initiate(cfg)`
 
-* bin/mongod —port 27018 —dbpath data1 —replSet rs0&amp;
-* bin/mongod —port 27019 —dbpath data2 —replSet rs0&amp;
-* bin/mongo
+* `bin/mongod --port 27018 --dbpath data1 --replSet rs0&`
+* `bin/mongod --port 27019 --dbpath data2 --replSet rs0&`
+* `bin/mongo`
 
-   * rs.add(&quot;127.0.0.1:27018&quot;)
-   * rs.add(&quot;127.0.0.1:27019&quot;)
-   * rs.status()
+   * `rs.add("127.0.0.1:27018")`
+   * `rs.add("127.0.0.1:27019")`
+   * `rs.status()`
 
 ## Solr {#solr}
 
@@ -95,22 +99,22 @@ Följande kommandon är ett exempel på hur du konfigurerar en replikuppsättnin
 
 * Hämta Solr från [Apache Lucene](https://archive.apache.org/dist/lucene/solr/):
 
-   * Passar alla operativsystem
-   * Använd version 4.10 eller version 5
-   * Solr kräver Java 1.7 eller senare
+   * Passar alla operativsystem.
+   * Använd version 4.10 eller version 5.
+   * Solr kräver Java 1.7 eller senare.
 
 * Grundkonfiguration
 
-   * Följ exempelinställningarna för Solr
-   * Ingen tjänst behövs
-   * Den installerade Solr-mappen kallas &lt;solr-install>
+   * Följ exemplet Solr-konfigurationen.
+   * Ingen tjänst behövs.
+   * Den installerade Solr-mappen kallas &lt;solr-install>.
 
 ### Konfigurera Solr för AEM Communities {#configure-solr-for-aem-communities}
 
 Om du vill konfigurera en Solr-samling för MSRP för demo måste du fatta två beslut (markera länkarna till huvuddokumentationen för mer information):
 
-1. Kör Solr i fristående läge eller [SolrCloud-läge](msrp.md#solrcloudmode)
-1. Installera [standard](msrp.md#installingstandardmls) eller [avancerad](msrp.md#installingadvancedmls) flerspråkig sökning (MLS)
+1. Kör Solr i fristående läge eller [SolrCloud-läge](msrp.md#solrcloudmode).
+1. Installera [standard](msrp.md#installingstandardmls) eller [avancerad](msrp.md#installingadvancedmls) flerspråkig sökning (MLS).
 
 ### Fristående solr {#standalone-solr}
 
@@ -130,11 +134,12 @@ Detta startar en Solr HTTP-server med standardport 8983. Du kan bläddra till So
 >Om Solr Console inte är tillgänglig kontrollerar du loggarna under &lt;solrinstall>/example/logs. Kontrollera om SOLR försöker binda till ett specifikt värdnamn som inte kan matchas (t.ex. &quot;user-macbook-pro&quot;).
 Om så är fallet kan du uppdatera etc/hosts-filen med en ny post för detta värdnamn (t.ex. 127.0.0.1 user-macbook-pro) och Solr startas korrekt.
 
+
 ### SolrCloud {#solrcloud}
 
 Om du vill köra en mycket grundläggande (inte produktion) solrCloud-installation börjar du med:
 
-* java -Dbootstrap_confidir=./solr/collection1/conf -Dbootstrap_conf=true -DzkRun -jar start.jar
+* `java -Dbootstrap_confdir=./solr/collection1/conf -Dbootstrap_conf=true -DzkRun -jar start.jar`
 
 ## Identifiera MongoDB som Common Store {#identify-mongodb-as-common-store}
 
@@ -150,7 +155,7 @@ Om du vill testa och verifiera den gemensamma lagringsplatsen för MongoDB skick
 
 1. På publiceringsinstansen bläddrar du till sidan [Community Components Guide](http://localhost:4503/content/community-components/en/comments.html) och väljer komponenten Comments.
 1. Logga in för att publicera en kommentar:
-1. Ange text i kommentartextrutan och klicka på **[!UICONTROL Skicka]**
+1. Ange text i kommentartextrutan och klicka på **[!UICONTROL Post]**
 
    ![chlimage_1-191](assets/chlimage_1-191.png)
 
@@ -160,7 +165,7 @@ Om du vill testa och verifiera den gemensamma lagringsplatsen för MongoDB skick
 
    Obs! Även om det finns JCR-noder under *asipath* on author är de för SCF-ramverket. Den faktiska UGC:n finns inte i JCR, utan i MongoDB.
 
-1. Visa användargenererat innehåll i mongodb **[!UICONTROL Communities > Collections > Content]**
+1. Se användargenerationen i mongudb **[!UICONTROL Communities > Collections > Content]**
 
    ![chlimage_1-193](assets/chlimage_1-193.png)
 
@@ -181,12 +186,12 @@ Om du vill testa och verifiera den gemensamma lagringsplatsen för MongoDB skick
 1. Kontrollera att MSRP har konfigurerats som standardprovider:
 
    * Gå till konsolen [Lagringskonfiguration för alla författare och publicera AEM-instanser](srp-config.md)
-   eller kontrollera AEM-databasen:
+   Eller kontrollera AEM-databasen:
 
    * I JCR, if [/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/)
 
-      * Innehåller ingen [srpc](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc) -nod, vilket betyder att lagringsprovidern är JSRP
-      * Om srpc-noden finns och innehåller [standardkonfiguration](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)för nod, ska standardkonfigurationens egenskaper definiera MSRP som standardprovider
+   * Innehåller ingen [srpc](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc) -nod, vilket betyder att lagringsprovidern är JSRP
+   * Om srpc-noden finns och innehåller [standardkonfiguration](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)för nod, ska standardkonfigurationens egenskaper definiera MSRP som standardprovider
 
 
 1. Kontrollera att AEM startades om när MSRP har valts.
