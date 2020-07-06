@@ -11,10 +11,10 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: df59879cfa6b0bc7eba13f679e833fabbcbe92f2
+source-git-commit: 85d4cdf0e2cfcb8b5e70387ce2dc556df9033257
 workflow-type: tm+mt
-source-wordcount: '1884'
-ht-degree: 0%
+source-wordcount: '1893'
+ht-degree: 1%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 * AEM Communities licens
 
-* Valfria licenser för:
+* Ytterligare licenser för:
 
    * [Funktioner i Adobe Analytics for Communities](/help/communities/analytics.md)
    * [MongoDB för MSRP](/help/communities/msrp.md)
@@ -74,14 +74,14 @@ ht-degree: 0%
 
          * UGC replikeras aldrig
          * UGC är bara synligt på AEM-instansen eller klustret där det angavs
-      * Standard är JSRP
+
+         * Standard är JSRP
    För **[aktiveringsfunktionen](/help/communities/overview.md#enablement-community)**
 
    * [Installera och konfigurera FFmpeg](/help/communities/ffmpeg.md)
    * [Installera JDBC-drivrutinen för MySQL](#jdbc-driver-for-mysql)
    * [Installera AEM Communities SCORM-motorn](#scorm-package)
    * [Installera och konfigurera MySQL för aktivering](/help/communities/mysql.md)
-
 
 
 
@@ -95,7 +95,7 @@ AEM 6.5 Communities GA levereras med Communities-paket. Om du vill veta mer om u
 
 Från och med AEM 6.4 levereras uppdateringar av Communities som en del av AEM Cumulative Fix Packs och Service Packs.
 
-De senaste uppdateringarna till AEM 6.5 finns i [Adobe Experience Manager 6.4 Cumulative Fix Packs and Service Packs](https://helpx.adobe.com/experience-manager/aem-releases-updates.html).
+De senaste uppdateringarna av AEM 6.5 finns i [Adobe Experience Manager 6.4 Cumulative Fix Packs and Service Packs](https://helpx.adobe.com/experience-manager/aem-releases-updates.html).
 
 ### Versionshistorik {#version-history}
 
@@ -103,14 +103,14 @@ Precis som i AEM 6.4 och senare är AEM Communities funktioner och snabbkorriger
 
 ### JDBC-drivrutin för MySQL {#jdbc-driver-for-mysql}
 
-Två webbgruppsfunktioner använder en MySQL-databas:
+Två Communities-funktioner använder en MySQL-databas:
 
-* För [aktivering](/help/communities/enablement.md) : spela in SCORM-aktiviteter
-* För [DSRP](/help/communities/dsrp.md) : lagra användargenererat innehåll (UGC)
+* För [aktivering](/help/communities/enablement.md): spela in SCORM-aktiviteter
+* För [DSRP](/help/communities/dsrp.md): lagra användargenererat innehåll (UGC)
 
 MySQL-kopplingen måste hämtas och installeras separat.
 
-De nödvändiga stegen är:
+Nödvändiga steg är:
 
 1. Hämta ZIP-arkivet från [https://dev.mysql.com/downloads/connector/j/](https://dev.mysql.com/downloads/connector/j/)
 
@@ -125,7 +125,6 @@ De nödvändiga stegen är:
    * Kontrollera att *Oracle Corporations JDBC-drivrutin för MySQLcom.mysql.jdbc* är aktiv och starta den om inte (eller kontrollera loggarna)
 
 1. Om du installerar på en befintlig distribution efter att JDBC har konfigurerats, binder du om JDBC till den nya anslutningen genom att spara om JDBC-konfigurationen från webbkonsolen:
-
    * Till exempel https://localhost:4502/system/console/configMgr
    * Hitta `Day Commons JDBC Connections Pool` konfigurationen
    * Markera för att öppna
@@ -137,7 +136,7 @@ Mer information om hur du installerar paket finns på [webbkonsolsidan](/help/si
 
 #### Exempel: Installerat MySQL Connector-paket {#example-installed-mysql-connector-bundle}
 
-![](/help/communities/assets/chlimage_1-125.png)
+![chlimage-bundles](assets/chlimage-bundles.png)
 
 ### SCORM-paket {#scorm-package}
 
@@ -222,7 +221,7 @@ Som standard är `AEM Communities Publisher Configuration` OSGi-konfigurationen 
 
 Det är därför nödvändigt att **redigera konfigurationen för alla sekundära publiceringsinstanser** för att avmarkera **`Primary Publisher`** kryssrutan.
 
-![](/help/communities/assets/chlimage_1-126.png)
+![chlimage_1-411](assets/chlimage_1-411.png)
 
 För alla andra (sekundära) publiceringsinstanser i en publiceringsgrupp:
 
@@ -248,7 +247,7 @@ Det finns två replikeringsagenter i författarmiljön som kräver att transport
 
 * Åtkomst till replikeringskonsolen på författaren
 
-   * Navigera från global navigering till **[!UICONTROL Tools > Deployment > Replication > Agents on author]**
+   * Navigera från global navigering till **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Replication]** > **[!UICONTROL Agents on author]**
 
 * Följ samma procedur för båda agenterna:
 
@@ -262,15 +261,15 @@ Det finns två replikeringsagenter i författarmiljön som kräver att transport
 
       1. Om användaren inte `admin`gör det redigerar du **Användare** och **lösenord** för att ange en medlem i `administrators` användargruppen
 
-I följande bilder visas resultatet av en ändring av porten från 4503 till 6103 med :
+I följande bilder visas resultatet av en ändring av porten från 4503 till 6103 med:
 
 #### Standardagent (publicera) {#default-agent-publish}
 
-![](/help/communities/assets/chlimage_1-127.png)
+![chlimage_1-412](assets/chlimage_1-412.png)
 
 #### Agenten för omvänd replikering (publicera omvänd) {#reverse-replication-agent-publish-reverse}
 
-![](/help/communities/assets/chlimage_1-128.png)
+![chlimage_1-413](assets/chlimage_1-413.png)
 
 ### Tunneltjänst på författare {#tunnel-service-on-author}
 
@@ -280,8 +279,7 @@ Tunneltjänsten ger denna åtkomst med replikeringsagenten på författaren.
 
 Så här aktiverar du tunneltjänsten:
 
-* On **author**
-* Logga in med administratörsbehörighet
+* Logga in med administratörsbehörighet för din författarinstans.
 * Om utgivaren inte är localhost:4503 eller om transportanvändaren inte är det `admin`ska du [konfigurera replikeringsagenten](#replication-agents-on-author)
 
 * Åtkomst till [webbkonsolen](/help/sites-deploying/configuring-osgi.md)
@@ -293,7 +291,7 @@ Så här aktiverar du tunneltjänsten:
 * Markera **aktiveringsrutan**
 * Välj **Spara**
 
-![](/help/communities/assets/chlimage_1-129.png)
+   ![chlimage_1-414](assets/chlimage_1-414.png)
 
 ### Replikera krypteringsnyckeln {#replicate-the-crypto-key}
 
@@ -305,15 +303,15 @@ Om du vill kopiera nyckelmaterialet från författaren till alla andra instanser
 
 * Få åtkomst till AEM-instansen, vanligtvis en författarinstans, som innehåller det nyckelmaterial som ska kopieras
 
-   * Leta upp paketet i det lokala filsystemet, till exempel: `com.adobe.granite.crypto.file`
+   * Leta upp paketet i det lokala filsystemet, t.ex. `com.adobe.granite.crypto.file`
 
       * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21`
       * Filen identifierar `bundle.info` paketet
    * Navigera till datamappen, till exempel
 
       * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
-   * Kopiera hmac- och primär nodfiler
 
+      * Kopiera hmac- och primär nodfiler
 
 
 * För varje AEM-målinstans
@@ -329,6 +327,7 @@ Om du vill kopiera nyckelmaterialet från författaren till alla andra instanser
 >
 >Om en annan säkerhetsfunktion redan har konfigurerats som baseras på krypteringsnycklarna kan konfigurationen skadas om du replikerar krypteringsnycklarna. Om du behöver hjälp [kontaktar du kundtjänst](https://helpx.adobe.com/marketing-cloud/contact-support.html).
 
+
 #### Databasreplikering {#repository-replication}
 
 Att ha nyckelmaterialet lagrat i databasen, som var fallet i AEM 6.2 och tidigare, kan bevaras genom att ange följande systemegenskap vid första starten av varje AEM-instans (som skapar den ursprungliga databasen):
@@ -339,9 +338,10 @@ Att ha nyckelmaterialet lagrat i databasen, som var fallet i AEM 6.2 och tidigar
 >
 >Det är viktigt att kontrollera att [replikeringsagenten på författaren](#replication-agents-on-author) är korrekt konfigurerad.
 
+
 Med nyckelmaterialet som lagras i databasen replikeras krypteringsnyckeln från författaren till andra instanser på följande sätt:
 
-Använda [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) :
+Använda [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md):
 
 * Gå till [https://&lt;server>:&lt;port>/crx/de](https://localhost:4502/crx/de)
 * Välj `/etc/key`
@@ -350,7 +350,7 @@ Använda [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) :
 
 * [Uppdatera Granite Crypto-paketet](#refresh-the-granite-crypto-bundle)
 
-![](/help/communities/assets/chlimage_1-130.png)
+   ![chlimage_1-415](assets/chlimage_1-415.png)
 
 #### Uppdatera Granite Crypto Bundle {#refresh-the-granite-crypto-bundle}
 
@@ -361,7 +361,7 @@ Använda [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) :
 * Hitta `Adobe Granite Crypto Support` paketet (com.adobe.granite.crypto)
 * Välj **Uppdatera**
 
-![](/help/communities/assets/chlimage_1-131.png)
+   ![chlimage_1-416](assets/chlimage_1-416.png)
 
 * Efter en stund visas dialogrutan **Slutfört** :
    `Operation completed successfully.`
