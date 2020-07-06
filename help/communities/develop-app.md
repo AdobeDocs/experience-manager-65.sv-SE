@@ -10,10 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 910229a3-38b1-44f1-9c09-55f8fd6cbb1d
 translation-type: tm+mt
-source-git-commit: 2b04724138f28cd7f357d155b88daf964632f3bc
+source-git-commit: d0b333ffa6cad4841e70e652328e92554fb2a7a1
 workflow-type: tm+mt
-source-wordcount: '592'
-ht-degree: 2%
+source-wordcount: '598'
+ht-degree: 3%
 
 ---
 
@@ -32,13 +32,17 @@ Det första steget är att lägga till en supertypsegenskap för resursen till `
 
 Använda CRXDE Lite:
 
-<!--Resolve steps below-->
-    Namn: `sling:resourceSuperType`
-    Typ: `
-    Värde: &quot;foundation/components/page&quot;
+1. Välj nod `/apps/an-scf-sandbox/components/playpage`.
+1. Ange en ny egenskap med följande värden på fliken Egenskaper:
 
-1. Klicka på den gröna **[!UICONTROL[+]Add]**
-1. Klicka på **[!UICONTROL Save All]**
+   Namn: `sling:resourceSuperType`
+
+   Typ: `String`
+
+   Värde: `foundation/components/page`
+
+1. Klicka på den gröna **[!UICONTROL +Add]** knappen.
+1. Klicka på **[!UICONTROL Save All]**.
 
    ![chlimage_1-231](assets/chlimage_1-231.png)
 
@@ -89,12 +93,12 @@ Använda CRXDE Lite:
 
    Om du vill ställa in redigering ska du lägga `body.jsp` över med ett lokalt skript och inkludera ett styckesystem (parsys) i brödtexten:
 
-   1. Navigera till `/apps/an-scf-sandbox/components`
-   1. Markera `playpage`noden
+   1. Navigera till `/apps/an-scf-sandbox/components`.
+   1. Select the `playpage` node.
    1. Högerklicka och välj `Create > Create File...`
 
       * Namn: **body.jsp**
-   1. Klicka på **[!UICONTROL Save All]**
+   1. Klicka på **[!UICONTROL Save All]**.
    Öppna `/apps/an-scf-sandbox/components/playpage/body.jsp` och klistra in följande text:
 
    ```xml
@@ -113,7 +117,7 @@ Använda CRXDE Lite:
    </body>
    ```
 
-1. Klicka på **[!UICONTROL Save All]**
+1. Klicka på **[!UICONTROL Save All]**.
 
 **Visa sidan i en webbläsare i redigeringsläge:**
 
