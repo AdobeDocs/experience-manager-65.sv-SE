@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 0b126218-b142-4d33-a28c-a91ab4fe99ac
 translation-type: tm+mt
-source-git-commit: 43663703a79b95ccdb83eb9b5730143bde101305
+source-git-commit: c3438cff60901edad8b81fe1a1bfddbbbe39a18d
 workflow-type: tm+mt
 source-wordcount: '790'
 ht-degree: 1%
@@ -165,7 +165,7 @@ Om du vill testa och verifiera den gemensamma lagringsplatsen för MongoDB skick
 
    Obs! Även om det finns JCR-noder under *asipath* on author är de för SCF-ramverket. Den faktiska UGC:n finns inte i JCR, utan i MongoDB.
 
-1. Se användargenerationen i mongudb **[!UICONTROL Communities > Collections > Content]**
+1. Visa UGC i mongudb **[!UICONTROL Communities]** > **[!UICONTROL Collections]** > **[!UICONTROL Content]**
 
    ![chlimage_1-193](assets/chlimage_1-193.png)
 
