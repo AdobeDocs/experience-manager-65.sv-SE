@@ -4,7 +4,7 @@ description: Använd resurser på flera sidor/mappar som är härledda från och
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
 source-wordcount: '3265'
 ht-degree: 10%
@@ -28,7 +28,7 @@ Installera minst Service Pack 1 om du vill använda MSM för [!DNL Assets]. Mer 
 
 ### Så fungerar det och fördelarna {#how-it-works-and-the-benefits}
 
-Om du vill veta mer om användningsscenarierna för att återanvända samma innehåll (text och resurser) på flera webbplatser läser du i [möjliga MSM-scenarier](/help/sites-administering/msm.md). [!DNL Experience Manager] behåller en länk mellan den ursprungliga resursen och dess länkade kopior, som kallas live-kopior. Tack vare den bevarade länken kan centraliserade ändringar skickas till många aktiva kopior. Detta ger snabbare uppdateringar och eliminerar samtidigt begränsningarna med att hantera duplicerade kopior. Spridningen av ändringar är felfri och centraliserad. Funktionen ger utrymme för uppdateringar som är begränsade till valda kopior. Användare kan koppla loss länken, d.v.s. bryta arv, och göra lokala redigeringar som inte skrivs över nästa gång den primära kopian uppdateras och ändringarna introduceras. Frånkopplingen kan göras för ett fåtal metadatafält eller för en hel resurs. Det ger flexibilitet att lokalt uppdatera resurser som ursprungligen ärvts från en primär kopia.
+Om du vill veta mer om användningsscenarierna för återanvändning av samma innehåll (text och resurser) på flera webbplatser kan du läsa om [möjliga MSM-scenarier](/help/sites-administering/msm.md). [!DNL Experience Manager] behåller en länk mellan den ursprungliga resursen och dess länkade kopior, som kallas live-kopior. Tack vare den bevarade länken kan centraliserade ändringar skickas till många aktiva kopior. Detta ger snabbare uppdateringar och eliminerar samtidigt begränsningarna med att hantera duplicerade kopior. Spridningen av ändringar är felfri och centraliserad. Funktionen ger utrymme för uppdateringar som är begränsade till valda kopior. Användare kan koppla loss länken, d.v.s. bryta arv, och göra lokala redigeringar som inte skrivs över nästa gång den primära kopian uppdateras och ändringarna introduceras. Frånkopplingen kan göras för ett fåtal metadatafält eller för en hel resurs. Det ger flexibilitet att lokalt uppdatera resurser som ursprungligen ärvts från en primär kopia.
 
 MSM upprätthåller en aktiv relation mellan källresursen och dess livekopior så att:
 
@@ -61,14 +61,14 @@ MSM upprätthåller en aktiv relation mellan källresursen och dess livekopior s
 
 Om du vill skapa en live-kopia av en eller flera källresurser eller mappar gör du något av följande:
 
-* Metod 1: Välj källresurserna och klicka på **[!UICONTROL Create > Live Copy]** i verktygsfältet högst upp.
-* Metod 2: I [!DNL Experience Manager] användargränssnittet klickar du **[!UICONTROL Create > Live Copy]** i det övre högra hörnet av gränssnittet.
+* Metod 1: Markera källresurserna och klicka på **[!UICONTROL Create]** > **[!UICONTROL Live Copy]** i verktygsfältet högst upp.
+* Metod 2: I [!DNL Experience Manager] användargränssnittet klickar du på **[!UICONTROL Create]** > **[!UICONTROL Live Copy]** i det övre högra hörnet av gränssnittet.
 
 Du kan skapa live-kopior av en resurs eller en mapp åt gången. Du kan skapa live-kopior som är härledda från en resurs eller en mapp som är en live-kopia. Content Fragments (CF) stöds inte för användningsfallet. När de försöker skapa sina live-kopior kopieras CF-filer som de är utan någon relation. De kopierade CF:erna är en ögonblicksbild i tid och uppdateras inte när ursprungliga CF:er uppdateras.
 
 Så här skapar du live-kopior med den första metoden:
 
-1. Välj källmaterial eller mappar. Klicka på **[!UICONTROL Create > Live Copy]** i verktygsfältet.
+1. Välj källmaterial eller mappar. From the toolbar, click **[!UICONTROL Create]** > **[!UICONTROL Live Copy]**.
 
    ![Skapa en live-kopia från Experience Manager](assets/create_lc1.png)
 
@@ -80,7 +80,7 @@ Så här skapar du live-kopior med den första metoden:
 
 Så här skapar du live-kopior med den andra metoden:
 
-1. I [!DNL Experience Manager] gränssnittet klickar du i det övre högra hörnet **[!UICONTROL Create > Live Copy]**.
+1. I [!DNL Experience Manager] gränssnittet, från det övre högra hörnet, klickar du **[!UICONTROL Create]** > **[!UICONTROL Live Copy]**.
 
    ![Skapa en live-kopia från Experience Manager](assets/create_lc2.png)
 
@@ -282,7 +282,7 @@ Om du har flera resurser i en live-kopieringsmapp kan initieringsåtgärder för
 
 ## Utöka MSM för [!DNL Assets] {#extendapi}
 
-[!DNL Experience Manager] Med kan du utöka funktionaliteten med MSM Java API:er. Utbyggnaden [!DNL Assets]fungerar alltså på samma sätt som för MSM [!DNL Sites]. Mer information finns i [Utöka MSM](/help/sites-developing/extending-msm.md) och följande för information om specifika uppgifter:
+[!DNL Experience Manager] Med kan du utöka funktionaliteten med MSM Java API:er. Utbyggnaden [!DNL Assets]fungerar alltså på samma sätt som för MSM [!DNL Sites]. Mer information finns i [Extending the MSM](/help/sites-developing/extending-msm.md) och följande för information om specifika uppgifter:
 
 * [Översikt över API:er](/help/sites-developing/extending-msm.md#overview-of-the-java-api)
 * [Skapa en ny synkroniseringsåtgärd](/help/sites-developing/extending-msm.md#creating-a-new-synchronization-action)
