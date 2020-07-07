@@ -3,10 +3,10 @@ title: Metadataprofiler för att anpassa metadatakrav för resurser
 description: Lär dig mer om metadataprofiler för resurser. Lär dig hur du skapar en metadataprofil och använder den på mappresurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
 source-wordcount: '1310'
-ht-degree: 16%
+ht-degree: 17%
 
 ---
 
@@ -17,7 +17,7 @@ Med en metadataprofil kan du använda standardmetadata för resurser i en mapp. 
 
 ## Lägg till en metadataprofil {#adding-a-metadata-profile}
 
-1. Navigera till **[!UICONTROL Tools > Assets > Metadata Profiles]** och klicka **[!UICONTROL Create]**.
+1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Profiles]** och klicka **[!UICONTROL Create]**.
 1. Ange en rubrik för metadataprofilen, till exempel Exempelmetadata, och klicka på **[!UICONTROL Create]**. Metadataprofilens [!UICONTROL Edit Form] namn visas.
 
    ![chlimage_1-197](assets/chlimage_1-480.png)
@@ -65,7 +65,7 @@ Med en metadataprofil kan du använda standardmetadata för resurser i en mapp. 
 
    ![chlimage_1-203](assets/chlimage_1-486.png)
 
-1. Klicka **[!UICONTROL Copy]** i verktygsfältet.
+1. Klicka på **[!UICONTROL Copy]** i verktygsfältet.
 1. I **[!UICONTROL Copy Metadata Profile]** dialogrutan anger du en rubrik för den nya kopian av metadataprofilen.
 1. Klicka på **[!UICONTROL Copy]**. Kopian av metadataprofilen visas i listan med profiler på sidan **[!UICONTROL Metadata Profiles]**.
 
@@ -106,7 +106,7 @@ Du kan bearbeta resurser i en mapp som redan har en befintlig videoprofil som du
 
 Så här använder du metadataprofilen:
 
-1. Klicka på Experience Manager-logotypen och navigera till **[!UICONTROL Tools > Assets > Metadata Profiles]**.
+1. Klicka på Experience Manager-logotypen och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Profiles]**.
 1. Välj den metadataprofil som du vill använda för en eller flera mappar.
 
    ![chlimage_1-207](assets/chlimage_1-490.png)
@@ -148,7 +148,7 @@ You can remove a metadata profile from a folder from within the **[!UICONTROL To
 
 ### Ta bort metadataprofiler från mappar via användargränssnittet Profiler {#removing-metadata-profiles-from-folders-via-profiles-user-interface}
 
-1. Klicka på Experience Manager-logotypen och navigera till **[!UICONTROL Tools > Assets > Metadata Profiles]**.
+1. Klicka på Experience Manager-logotypen och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Profiles]**.
 1. Markera den metadataprofil som du vill ta bort från en eller flera mappar.
 1. Click **[!UICONTROL Remove Metadata Profile from Folder(s)]** and select the folder or multiple folders you want use to remove a profile from and click **[!UICONTROL Done]**.
 
@@ -156,11 +156,11 @@ You can remove a metadata profile from a folder from within the **[!UICONTROL To
 
 ### Ta bort metadataprofiler från mappar via Egenskaper {#removing-metadata-profiles-from-folders-via-properties}
 
-1. Klicka på Experience Manager-logotypen och navigera **[!UICONTROL Assets]** sedan till mappen som du vill ta bort en metadataprofil från.
+1. Klicka på Experience Manager-logotypen och navigera **[!UICONTROL Assets]** sedan till den mapp som du vill ta bort en metadataprofil från.
 1. Markera mappen genom att klicka på bockmarkeringen och klicka sedan på **[!UICONTROL Properties]**.
 1. Välj fliken **[!UICONTROL Metadata Profiles]**, välj **[!UICONTROL None]** i listrutan och klicka på **[!UICONTROL Save]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
 
-## Begränsningar och bästa metoder {#limitations-best-practices-tips}
+## Limitations and best practices {#limitations-best-practices-tips}
 
 * Det kan finnas befintliga metadataprofiler sedan du uppgraderade till [!DNL Experience Manager] 6.5. Om du tillämpar en sådan profil i mappen [!UICONTROL Properties] på [!UICONTROL Metadata Profiles] fliken efter uppgraderingen visas inte metadatafälten. Om du däremot använder en ny metadataprofil visas formulärfälten, men de är inte tillgängliga som förväntat. Funktionsbortfall är inte kvar, men om du vill se (ej tillgängliga) formulärfält redigerar du och sparar de befintliga metadataprofilerna.
 
