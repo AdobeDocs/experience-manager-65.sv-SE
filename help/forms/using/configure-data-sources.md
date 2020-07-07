@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9df949b0069dad7fc1627977097cec5546cd845f
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
 workflow-type: tm+mt
-source-wordcount: '1450'
+source-wordcount: '1446'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ Du kan konfigurera relationsdatabaser med hjälp av AEM Web Console Configuratio
    * Java-klassnamn för JDBC-drivrutinen
    * URI för JDBC-anslutning
    * Användarnamn och lösenord för anslutning till JDBC-drivrutinen
-   >[!NOTE] {graybox=&quot;true&quot;}
+   >[!NOTE]
    >
    >Kontrollera att du krypterar känslig information, t.ex. lösenord, innan du konfigurerar datakällan. Så här krypterar du:
    >
@@ -79,7 +79,7 @@ Du kan konfigurera AEM-användarprofilen med hjälp av konfigurationen för ansl
 
    * `name=profile/phoneNumber,type=string`
    * `name=profile/empLocation/*/city,type=string`
-   >[!NOTE] {graybox=&quot;true&quot;}
+   >[!NOTE]
    >
    >I ***** i ovanstående exempel anges alla noder under `profile/empLocation/` noden i AEM-användarprofilen i CRXDE-strukturen. Det innebär att formulärdatamodellen kan komma åt den `city` egenskap av typen som `string` finns i en nod under `profile/empLocation/` noden. Noderna som innehåller den angivna egenskapen måste dock följa en konsekvent struktur.
 
