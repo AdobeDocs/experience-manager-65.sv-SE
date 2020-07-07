@@ -1,6 +1,6 @@
 ---
-title: ' Concepts'
-seo-title: ' Concepts'
+title: Concepts
+seo-title: Concepts
 description: Allmänna koncept för e-handel med AEM.
 seo-description: Allmänna koncept för e-handel med AEM.
 uuid: 9a4cc154-d82b-43e0-a66c-3edf059e8b75
@@ -11,12 +11,15 @@ content-type: reference
 discoiquuid: 6d595c46-b04e-400b-a014-fbecd2010f5f
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 69dfd6b41b32cb9131fd90fd7039a0c224889db5
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+workflow-type: tm+mt
+source-wordcount: '4532'
+ht-degree: 0%
 
 ---
 
 
-#  Concepts{#concepts}
+# Concepts{#concepts}
 
 Integreringsramverket innehåller mekanismer och komponenter för att
 
@@ -132,10 +135,9 @@ AEM eCommerce genomförs med en e-handelsmotor:
 >AEM eCommerce som implementeras i AEM med allmän utveckling baserad på JCR är:
 >
 >* Ett fristående, AEM-inbyggt e-handelsexempel som illustrerar användningen av API:t. Detta kan användas för att kontrollera produktdata, varukorgar och utcheckning i samband med befintliga dataspresentations- och marknadsföringskampanjer. I det här fallet lagras produktdatabasen i den databas som är inbyggd i AEM (Adobes implementering av [JCR](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/index.html)).
-   >  Standardinstallationen av AEM innehåller grunderna i den [allmänna implementeringen](/help/sites-administering/generic.md)av e-handel.
 >
-
-
+>  
+Standardinstallationen av AEM innehåller grunderna i den [allmänna implementeringen](/help/sites-administering/generic.md)av e-handel.
 
 ### Leverantörer av handel {#commerce-providers}
 
@@ -157,7 +159,7 @@ Vanligtvis måste ett projekt utveckla en egen, anpassad e-handelsleverantör so
 >
 >Geometriximportörerna använder CSV-filer. det finns en beskrivning av det godkända schemat (med anpassade egenskaper tillåtna) i kommentarerna ovanför implementeringen.
 
-I [ProductServicesManager](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/commerce/pim/api/ProductServicesManager.html) (via [OSGi](/help/sites-deploying/configuring.md#osgi-configuration-settings)) finns en lista med implementeringar av gränssnitten [ProductImporter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/commerce/pim/api/ProductImporter.html) och [CatalogBlueImporter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/commerce/pim/api/CatalogBlueprintImporter.html) . De listas i listrutan **för import-/handelsleverantör** i importguiden (med `commerceProvider` egenskapen som namn).
+I [ProductServicesManager](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/commerce/pim/api/ProductServicesManager.html) (via [OSGi](/help/sites-deploying/configuring.md#osgi-configuration-settings)) finns en lista med implementeringar av gränssnitten [ProductImporter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/commerce/pim/api/ProductImporter.html) och [CatalogBlueImporter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/commerce/pim/api/CatalogBlueprintImporter.html) . De listas i listrutan **för import-/handelsleverantör** i importguiden (med egenskapen `commerceProvider` som namn).
 
 När en viss importör/e-handelsleverantör är tillgänglig från listrutan måste alla kompletterande uppgifter som den behöver definieras (beroende på importörens typ) i antingen
 
@@ -195,17 +197,17 @@ Det integrerade systemet fångar upp följande roller för att underhålla data:
    * Kolla in deras order.
    * Förväntade orderuppfyllelse.
 
-Även om den faktiska platsen kan vara beroende av din implementering, till exempel generisk eller med en e-handelsmotor:
+Även om den faktiska platsen kan vara beroende av din implementering, t.ex. generisk eller med en e-handelsmotor:
 
 ![chlimage_1-6](assets/chlimage_1-6.png)
 
 ## Produkter {#products}
 
-### Produktdata kontra marknadsföringsdata {#product-data-versus-marketing-data}
+### Produkt Data kontra marknadsföringsdata {#product-data-versus-marketing-data}
 
 #### Strukturella kontra marknadsföringskategorier {#structural-versus-marketing-categories}
 
-Om följande två kategorier kan särskiljas kan du på så sätt skapa tydliga URL:er med en meningsfull struktur (träd med `cq:Page` noder) och därför mycket nära klassisk AEM-innehållshantering):
+Om följande två kategorier kan särskiljas kan du på så sätt skapa tydliga URL:er med en meningsfull struktur (träd i `cq:Page` noder) och därför mycket nära klassisk AEM-innehållshantering):
 
 * *Strukturella *kategorier
 
@@ -357,7 +359,7 @@ Det finns olika strategier du kan välja mellan för att lösa dessa problem:
 
 #### Bucketing {#bucketing}
 
-Om en JCR-nod har många direkta underordnade noder (t.ex. 1000 eller fler) krävs det bucket (phantom-mappar) för att prestandan inte ska påverkas. Dessa genereras enligt en algoritm vid import.
+Om en JCR-nod har många direkta underordnade noder (t.ex. 1000 eller fler) krävs det bucket (phantom-mappar) för att säkerställa att prestandan inte påverkas. Dessa genereras enligt en algoritm vid import.
 
 De här bucklarna har formen av fantommappar som introduceras i katalogstrukturen, men kan konfigureras så att de inte visas i offentliga URL:er.
 
@@ -365,13 +367,13 @@ De här bucklarna har formen av fantommappar som introduceras i katalogstrukture
 
 I det här scenariot ställs två författarinstanser in:
 
-1. Författarinstans
+1. Överordnad författarinstans
 
    Importerar produktdata från PIM, där efterbearbetning för resurssökvägar är inaktiverat.
 
 1. Dedikerad DAM-författarinstans
 
-   Importerar och efterbearbetar produktresurser från PIM-filen och replikerar dem sedan tillbaka till masterförfattarinstansen för användning.
+   Importerar och efterbearbetar produktresurser från PIM och återskapar dem sedan till den överordnad författarinstansen för användning.
 
 ![Arkitektur](assets/chlimage_1-8.png)
 
@@ -406,7 +408,7 @@ Observera att denna prestandatestning kräver kunskap om och analys av ditt mål
 
 * Innehållsvolymer
 
-   * Resurser
+   * Assets
    * Lokaliserade I18end-produkter och SKU:er
 
 * Användaraktivitet:
@@ -433,7 +435,7 @@ För alla implementeringar kan följande punkter beaktas:
 * Undvik så mycket du kan (se lokalisering) eller när du gör det, och tänk på hur många noder dupliceringen kommer att leda till.
 * Försök att tagga innehållet så mycket du kan för att förbereda frågeoptimeringen.
 
-   Exempel:
+   Till exempel:
 
    `/content/products/france/fr/shoe/reebok/pump/46 SKU`
 
@@ -466,7 +468,7 @@ I katalogavsnitten finns exempel:
 
 ### Produktsidor {#product-pages}
 
-På produktsidorna finns omfattande information om enskilda produkter. Dynamiska uppdateringar från återspeglas också. till exempel prisändringar som registreras i e-handelsmotorn.
+Produktsidorna innehåller omfattande information om de enskilda produkterna. Dynamiska uppdateringar från återspeglas också. till exempel prisändringar som registreras i e-handelsmotorn.
 
 Produktsidor är AEM-sidor som använder **produktkomponenten** . i **Commerce Product** template:
 
@@ -591,7 +593,7 @@ En kampanj kan hållas antingen som en upplevelse eller direkt i kampanjen:
 >
 >[hybris-kampanjer](https://www.hybris.com/modules/promotion) och [hybris-vouchers](https://www.hybris.com/en/modules/voucher) täcker allt som påverkar kundvagnen och är kopplat till prissättningen. Marknadsföringsspecifikt innehåll (t.ex. banners) ingår inte i hybris-kampanjen.
 
-## Personalisering {#personalization}
+## Personanpassning {#personalization}
 
 ### Kundregistrering och konton {#customer-registration-and-accounts}
 
@@ -666,7 +668,7 @@ Adressbokskomponenten kan nås från sidan **Mitt konto** genom att klicka på *
 
 ![chlimage_1-14](assets/chlimage_1-14.png)
 
-**Du kan klicka på** Lägg till ny adress.. om du vill lägga till en ny adress i adressboken. Det öppnar ett formulär som du kan fylla i och sedan klicka på **Lägg till adress**.
+Du kan klicka på **Lägg till ny adress..** om du vill lägga till en ny adress i adressboken. Det öppnar ett formulär som du kan fylla i och sedan klicka på **Lägg till adress**.
 
 >[!NOTE]
 >
@@ -729,7 +731,7 @@ Kundvagnen sparas enligt den motor som används:
 * AEM generic lagrar vagnen i en cookie.
 * Vissa e-handelsmotorer kan lagra vagnen i en session.
 
-I båda fallen behålls objekten i vagnen (och kan återställas) mellan inloggning/utloggning (men endast på samma dator/webbläsare). Exempel:
+I båda fallen behålls objekten i vagnen (och kan återställas) mellan inloggning/utloggning (men endast på samma dator/webbläsare). Till exempel:
 
 * bläddra efter `anonymous` och lägg till produkter i kundvagnen
 * logga in som `Allison Parker` - hennes kundvagn är tom
@@ -846,7 +848,7 @@ Efter att ha gjort en beställning kommer kunderna ofta tillbaka till:
 
 Efter att ha tagit emot beställningsleveransen kanske kunderna också vill se historiken över beställningar som gjorts under en viss tidsperiod.
 
-Beställningsleveranser och -spårning hanteras vanligtvis av e-handelsmotorn. Information kan visas av AEM med komponenten Orderhistorik, som visar all relevant information, inklusive kuponger och erbjudanden som används. Exempel:
+Beställningsleveranser och -spårning hanteras vanligtvis av e-handelsmotorn. Information kan visas av AEM med komponenten Orderhistorik, som visar all relevant information, inklusive kuponger och erbjudanden som används. Till exempel:
 
 ![chlimage_1-17](assets/chlimage_1-17.png)
 
@@ -866,7 +868,7 @@ Kompatibilitet med betalkortsbranschen (PCI) kan uppnås.
 
 Ordningen bekräftas på skärmen och kan spåras med [orderspårning](#order-tracking).
 
-## Sök {#search-features}
+## Sökning {#search-features}
 
 ![chlimage_1-18](assets/chlimage_1-18.png)
 
@@ -877,5 +879,5 @@ Om du behöver en mer detaljerad implementering kan du antingen:
 * Utöka standardsökkomponenten med de funktioner du behöver.
 * Implementera sökmetoden i `CommerceService` och använd sedan sökkomponenten för eCommerce på söksidan.
 
-När du använder en eCommerce-motor kan e-handelssöknings-API:t implementeras helt i eCommerce-motorlösningen, så att du kan använda eCommerce-sökkomponenten som medföljer direkt. Med den fasetterade sökningen kan du söka i antingen JCR och/eller motorn:
+När du använder en eCommerce-motor kan e-handelssöknings-API:t implementeras helt i eCommerce-motorlösningen, så att du kan använda eCommerce-sökkomponenten som medföljer. Med den fasetterade sökningen kan du söka i antingen JCR och/eller motorn:
 
