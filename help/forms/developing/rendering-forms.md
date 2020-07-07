@@ -11,7 +11,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: f8749793-e53f-4812-a093-8278f480e6a8
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+workflow-type: tm+mt
+source-wordcount: '556'
+ht-degree: 0%
 
 ---
 
@@ -32,7 +35,7 @@ Beroende på vilken typ av klientprogram du använder kan du skriva formuläret 
 
 >[!NOTE]
 >
-> Mer information om hur du skapar ett webbprogram som använder java-servrar för att anropa Forms-tjänsten finns i [Skapa webbprogram som återger formulär](/help/forms/developing/creating-web-applications-renders-forms.md).
+>Mer information om hur du skapar ett webbprogram som använder java-servrar för att anropa Forms-tjänsten finns i [Skapa webbprogram som återger formulär](/help/forms/developing/creating-web-applications-renders-forms.md).
 
 Du kan skicka en formulärdesign (en XDP-fil) eller ett PDF-dokument till Forms-tjänsten på något av två sätt:
 
@@ -41,7 +44,7 @@ Du kan skicka en formulärdesign (en XDP-fil) eller ett PDF-dokument till Forms-
 
 Du kan utföra följande uppgifter med hjälp av Forms-tjänsten:
 
-* Återge interaktiva PDF-formulär. (Se [Återge interaktiva PDF-formulär](/help/forms/developing/rendering-interactive-pdf-forms.md).)
+* Återge interaktiv PDF forms. (Se [Återge interaktiv PDF forms](/help/forms/developing/rendering-interactive-pdf-forms.md).)
 * Återge formulär på klienten. (Se [Återge formulär på klienten](/help/forms/developing/rendering-forms-client.md).)
 * Rendera formulär baserat på fragment. (Se [Återge formulär baserat på fragment](/help/forms/developing/rendering-forms-based-fragments.md).)
 * Återge rättighetsaktiverade formulär. (Se [Rendering Rights-Enabled Forms](/help/forms/developing/rendering-rights-enabled-forms.md).)
