@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 589e3a83-7d1a-43fd-98b7-3b947122829d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2b0ef111f2f393fac2da1eef76c2ec79a471ff3f
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+workflow-type: tm+mt
+source-wordcount: '708'
+ht-degree: 1%
 
 ---
 
@@ -36,7 +39,9 @@ Detta hjälper en utvecklare att:
 >
 >* Är bara tillgängligt i det beröringsaktiverade användargränssnittet (vid redigering av sidor).
 >* Är inte tillgängligt på mobila enheter eller små fönster på skrivbordet (på grund av utrymmesbegränsningar).
-   >   * Detta inträffar när bredden är mindre än 1024px.
+   >
+   >   
+   * Detta inträffar när bredden är mindre än 1024px.
 >* Är bara tillgängligt för användare som är medlemmar i `administrators` gruppen.
 
 
