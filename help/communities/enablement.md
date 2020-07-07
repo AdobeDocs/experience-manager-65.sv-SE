@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 765a3d9b-4552-403e-872c-fdf684ac271d
 translation-type: tm+mt
-source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
+source-git-commit: ce21755263a2e8a3f0e97acb7f586e32cedde83a
+workflow-type: tm+mt
+source-wordcount: '447'
+ht-degree: 0%
 
 ---
 
@@ -49,7 +52,7 @@ Valfri konfiguration av:
 
 * **Adobe Analytics**
 
-   Integrationen med Adobe Analytics ger omfattande rapportfunktioner och stöder tillägget Video Heartbeat i Analytics.
+   Integrationen med Adobe Analytics ger omfattande rapportfunktioner och stöder tillägget Videopuls i Analytics.
 
 * **Dispatcher**
 
@@ -63,9 +66,14 @@ Varje steg länkar till dokumentation med nödvändig information.
 
 1. **[Installera JDBC-drivrutin för MySQL](deploy-communities.md#jdbc-driver-for-mysql)**
 
-   Använd webbkonsol (paket): *http://localhost:4502/system/console/bundles* Installera *innan* du installerar SCORM-paketet
+   Använd webbkonsol (paket): *http://localhost:4502/system/console/bundles*
 
-1. **[Installera SCORM-paketet](deploy-communities.md#scorm-package)**Använd pakethanteraren:*http://localhost:4502/crx/packmgr/*
+   Installera *innan* du installerar SCORM-paketet
+
+1. **[Installera SCORM-paket](deploy-communities.md#scorm-package)**
+
+
+   Använd pakethanteraren: *http://localhost:4502/crx/packmgr/*
 
 **På alla servrar:**
 
@@ -73,7 +81,9 @@ Varje steg länkar till dokumentation med nödvändig information.
 
 1. **[Installera MySQL-databaser](mysql.md#database-setup)**
 
-   Kör SQL-skript som hämtats från författarinstansenAnvänd MySQL Workbench
+   Kör SQL-skript som hämtats från författarinstansen
+
+   Använd MySQL Workbench
 
 **På samma server som är värd för författarinstans:**
 
@@ -95,9 +105,9 @@ Varje steg länkar till dokumentation med nödvändig information.
 
 **On author instance:**
 
-1. (*Valfritt*) **[Konfigurera analystjänsten](analytics.md)**
+1. (*Valfritt*) **[Konfigurera tjänsten Analytics](analytics.md)**
 
-   Använd verktygs-, distributions- och molntjänstkonsolen: *http://localhost:4502/etc/cloudservices/sitecatalyst.html*
+   Använd verktygs-, distributions- och Cloud Services-konsolen: *http://localhost:4502/etc/cloudservices/sitecatalyst.html*
 
 1. **[Konfigurera FFmpeg](ffmpeg.md#configure-ffmpeg-transcoding-service)**
 
@@ -109,7 +119,9 @@ Varje steg länkar till dokumentation med nödvändig information.
 
 1. **[Skapa communityadministratörer](users.md#creating-community-members)**
 
-   I författarmiljön använder du Classic-UI Security console: *http://localhost:4502/useradmin* skapa användare med sökväg = /home/users/community
+   I författarmiljön använder du Classic-UI Security console: *http://localhost:4502/useradmin*
+
+   Skapa användare med sökväg = /home/users/community
 
    * Lägg till medlemmar i följande grupper:
 
@@ -118,4 +130,4 @@ Varje steg länkar till dokumentation med nödvändig information.
 
 ## Dispatcher {#dispatcher}
 
-När distributionen inkluderar [AEM&#39;s Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)måste avsnitten `clientheader` och `filter` ändras för att aktiveringsfunktionerna ska fungera korrekt. Se [Konfigurera Dispatcher för Communities](dispatcher.md#enablement).
+När driftsättningen omfattar [AEM:s Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)måste avsnitten `clientheader` och `filter` ändras för att aktiveringsfunktionerna ska fungera korrekt. Se [Konfigurera Dispatcher för webbgrupper](dispatcher.md#enablement).
