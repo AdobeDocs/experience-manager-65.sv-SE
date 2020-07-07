@@ -2,7 +2,7 @@
 title: En snabbguide till WCAG 2.1
 description: En snabbguide till WCAG 2.1
 translation-type: tm+mt
-source-git-commit: a8e7fe89376b30df0b1c5403aabea6862cef09fc
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
 workflow-type: tm+mt
 source-wordcount: '1770'
 ht-degree: 99%
@@ -12,16 +12,16 @@ ht-degree: 99%
 
 # En snabbguide till WCAG 2.1{#quick-guide-to-wcag}
 
-Adobe Experience Manager (AEM) har utvecklats för att maximera kompatibiliteten med riktlinjerna för tillgänglighet för webbinnehåll.
+Adobe Experience Manager (AEM) har utvecklats för att maximera efterlevnaden av riktlinjerna för tillgänglighet för webbinnehåll.
 
 [Web Content Accessibility Guidelines (WCAG) version 2.1](https://www.w3.org/TR/WCAG/) är en uppsättning internationellt erkända riktlinjer som tagits fram av [World Wide Web Consortium (W3C)](https://www.w3.org/) inom ramen för [Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/).
 
 >[!NOTE]
-> 
-> WCAG 2.1 uppdaterar den föregående versionen, WCAG 2.0, från 2008. Se [WCAG 2.1 - Comparison with WCAG 2.0](https://www.w3.org/TR/WCAG21/#comparison-with-wcag-2-0).
+>
+>WCAG 2.1 uppdaterar den föregående versionen, WCAG 2.0, från 2008. Se [WCAG 2.1 - Comparison with WCAG 2.0](https://www.w3.org/TR/WCAG21/#comparison-with-wcag-2-0).
 
 >[!NOTE]
-> 
+>
 >En [uppdaterad version av riktlinjerna, WCAG 2.2,](https://www.w3.org/TR/WCAG22/) håller på att utvecklas, men kommer inte att behandlas just nu.
 
 WCAG 2.1 består av en uppsättning teknikoberoende riktlinjer och framgångskriterier för att göra webbinnehåll tillgängligt för och användbart för personer med funktionshinder. De ger råd till webbinnehållsförfattare, designers och utvecklare som ser till att de resurser de producerar är så tillgängliga som möjligt för så många människor som möjligt, oavsett vilka funktionshinder de har, t.ex. synnedsättning, hörselnedsättning, inlärningssvårigheter, åldersrelaterade begränsningar med mera.
