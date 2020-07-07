@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 999ae2be-56ba-48c1-861b-8d4c991a0206
 translation-type: tm+mt
-source-git-commit: 68ea2335a8466c3c23b766efb1a04b6a38d7f670
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
 workflow-type: tm+mt
 source-wordcount: '1180'
 ht-degree: 0%
@@ -49,7 +49,7 @@ PDF-dokument som skapas i Acrobat 5.0 eller senare innehåller dokumentmetadata 
 
 Dokumentets metadata innehåller (men är inte begränsade till) information som också visas på fliken Beskrivning i dialogrutan Dokumentegenskaper i Acrobat. Ändringar som görs på fliken Beskrivning återspeglas i dokumentets metadata. Dokumentets metadata kan utökas och ändras med tredjepartsprodukter.
 
-Adobe Extensible Metadata Platform (XMP) förser Adobe-programmen med ett gemensamt XML-ramverk som standardiserar generering, bearbetning och utbyte av dokumentmetadata mellan olika publiceringsarbetsflöden. Du kan spara och importera XML-källkoden för dokumentmetadata i XMP-format, vilket gör det enkelt att dela metadata mellan olika dokument. Mer information om XMP-filer finns i [Extensible Metadata Platform (XMP)](https://www.adobe.com/products/xmp/) och [Adobe XMP Developer Center](https://www.adobe.com/devnet/xmp.html).
+Adobe Extensible Metadata Platform (XMP) har ett gemensamt XML-ramverk som standardiserar generering, bearbetning och utbyte av dokumentmetadata mellan olika publiceringsarbetsflöden. Du kan spara och importera XML-källkoden för dokumentmetadata i XMP-format, vilket gör det enkelt att dela metadata mellan olika dokument. Mer information om XMP-filer finns i [Extensible Metadata Platform (XMP)](https://www.adobe.com/products/xmp/) och [Adobe XMP Developer Center](https://www.adobe.com/devnet/xmp.html).
 
 Du kan skapa XMP-filer i Acrobat.
 
@@ -66,19 +66,21 @@ Om ZIP-filen innehåller mer än en HTML-fil på den lägsta nivån i mapphierar
 >
 >* Funktionen HTML till PDF kräver vissa teckensnitt i systemets teckensnittskatalog. I Linux, Solaris och AIX måste systemteckensnittskatalogen innehålla teckensnittet Courier. I Windows måste systemteckensnittskatalogen innehålla Times New Roman.
    >
-   > 
+   >
 * (Endast UNIX-baserat system) Ett av följande japanska teckensnitt bör vara tillgängligt på AEM Forms-servern för att konvertera en webbsida med japanskt teckensnitt till ett PDF-dokument.
    >
-   >   
-   * &quot;Sazanami Gothic&quot;
-   >   * &quot;Kozuka Gothic Pro-VI&quot;
-   >   * ’Kozuka Mincho Pro-VI’
-   >   * &quot;Sazanami Gothic&quot;
-   >   * &quot;Kozuka Mincho Pr6N&quot;
-   >   * &quot;Sazanami Mincho&quot;
-   >   * &quot;Adobe Heiti Std&quot;
-   >   * &quot;Adobe Song Std&quot;
->* Om du vill överföra en fil från det lokala filsystemet använder du alternativet Överför fil på sidan HTML till PDF.
+   >  
+* &quot;Sazanami Gothic&quot;
+>  * &quot;Kozuka Gothic Pro-VI&quot;
+>  * ’Kozuka Mincho Pro-VI’
+>  * &quot;Sazanami Gothic&quot;
+>  * &quot;Kozuka Mincho Pr6N&quot;
+>  * &quot;Sazanami Mincho&quot;
+>  * &quot;Adobe Heiti Std&quot;
+>  * &quot;Adobe Song Std&quot;
+   >
+   >
+* Om du vill överföra en fil från det lokala filsystemet använder du alternativet Överför fil på sidan HTML till PDF.
 
 
 1. I administrationskonsolen klickar du på Tjänster > PDF Generator > HTML till PDF.
