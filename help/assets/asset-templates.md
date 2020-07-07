@@ -1,12 +1,12 @@
 ---
 title: Resursmallar i [!DNL Adobe Experience Manager Assets].
-description: Lär dig mer om tillgångsmallar i [!DNL Adobe Experience Manager Assets] och hur du använder resursmallar för att skapa marknadsföringsmaterial.
+description: Lär dig mer om tillgångsmallar i [!DNL Adobe Experience Manager Assets] och hur du använder resursmallar för att skapa marknadsmaterial.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 99ce6e0572797b7bccf755aede93623be6bd5698
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
 source-wordcount: '1522'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -131,17 +131,17 @@ Du kan redigera en sammanställning direkt när du har skapat den. Du kan också
 
    >[!NOTE]
    >
-   >Ikonerna Förhandsvisa och Klar är bara aktiverade när de redigerbara bildfälten i den sammansatta bilden inte har några ikoner som saknas. Om det finns saknade ikoner i din säkerhetsinformation beror det på att [!DNL Experience Manager] det inte går att matcha bilderna i [!DNL InDesign] mallen. Vanligtvis [!DNL Experience Manager] kan inte lösa bilder i följande fall:
+   >Alternativen Förhandsvisa och Klar är bara aktiverade när de redigerbara bildfälten i den sammansatta bilden inte har några ikoner som saknas. Om det finns saknade ikoner i din säkerhetsinformation beror det på att [!DNL Experience Manager] det inte går att matcha bilderna i [!DNL InDesign] mallen. Vanligtvis [!DNL Experience Manager] kan inte lösa bilder i följande fall:
    >
-   >    * Bilder bäddas inte in i den underliggande [!DNL InDesign] mallen.
-   >    * Bilderna länkas från det lokala filsystemet.
+   >* Bilder bäddas inte in i den underliggande [!DNL InDesign] mallen.
+   >* Bilderna länkas från det lokala filsystemet.
    >
    >Så här aktiverar du [!DNL Experience Manager] bildupplösning:
    >
-   >    * Bädda in bilder när du skapar [!DNL InDesign] mallar (Se [Länkar och inbäddade bilder](https://helpx.adobe.com/indesign/using/graphics-links.html)).
-   >    * Montera [!DNL Experience Manager] i det lokala filsystemet och mappa sedan saknade ikoner med befintliga resurser i [!DNL Experience Manager].
+   >* Bädda in bilder när du skapar [!DNL InDesign] mallar (Se [Länkar och inbäddade bilder](https://helpx.adobe.com/indesign/using/graphics-links.html)).
+   >* Montera [!DNL Experience Manager] i det lokala filsystemet och mappa sedan saknade ikoner med befintliga resurser i [!DNL Experience Manager].
    >
-   >Mer information om hur du arbetar med [!DNL InDesign] dokument finns i [Bästa metoder för att arbeta med InDesign-dokument i Experience Manager](https://helpx.adobe.com/experience-manager/kb/best-practices-idd-docs-aem.html).
+   >Mer information om hur du arbetar med [!DNL InDesign] dokument finns i [Bästa tillvägagångssätt för att arbeta med InDesign-dokument i Experience Manager](https://helpx.adobe.com/experience-manager/kb/best-practices-idd-docs-aem.html).
 
 1. Om du vill generera en PDF-återgivning för broschyren väljer du alternativet Acrobat i dialogrutan och klickar sedan på **[!UICONTROL Continue]**.
 1. Säkerheten skapas i den mapp du började med. Om du vill visa återgivningarna öppnar du materialet och väljer **[!UICONTROL Renditions]** i listan GlobalNav.
@@ -182,7 +182,7 @@ Du kan redigera en sammanställning direkt när du har skapat den. Du kan också
 
    ![chlimage_1-125](assets/chlimage_1-330.png)
 
-1. Klicka **[!UICONTROL Next]** i verktygsfältet.
+1. Klicka på **[!UICONTROL Next]** i verktygsfältet.
 1. Ordna om mallarna om det behövs på **[!UICONTROL Preview & Reorder]** skärmen och förhandsgranska valet av mallar som ska sammanfogas. Then, click **[!UICONTROL Next]** from the toolbar.
 
    ![chlimage_1-126](assets/chlimage_1-331.png)
