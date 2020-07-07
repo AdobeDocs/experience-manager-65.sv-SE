@@ -1,8 +1,8 @@
 ---
-title: Exportera Experience Fragments till Adobe Target
-seo-title: Exportera Experience Fragments till Adobe Target
-description: Exportera Experience Fragments till Adobe Target
-seo-description: Exportera Experience Fragments till Adobe Target
+title: Exportera upplevelsefragment till Adobe Target
+seo-title: Exportera upplevelsefragment till Adobe Target
+description: Exportera upplevelsefragment till Adobe Target
+seo-description: Exportera upplevelsefragment till Adobe Target
 uuid: 2df0faab-5d5e-4fc1-93b3-28b7e6f3c306
 contentOwner: carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,12 +11,15 @@ content-type: reference
 discoiquuid: d4152b4d-531b-4b62-8807-a5bc5afe94c6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 6723b12bebba2f239c0886e5f378f1dc70e5e247
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+workflow-type: tm+mt
+source-wordcount: '1170'
+ht-degree: 0%
 
 ---
 
 
-# Exportera Experience Fragments till Adobe Target{#exporting-experience-fragments-to-adobe-target}
+# Exportera upplevelsefragment till Adobe Target{#exporting-experience-fragments-to-adobe-target}
 
 >[!CAUTION]
 >
@@ -30,7 +33,9 @@ source-git-commit: 6723b12bebba2f239c0886e5f378f1dc70e5e247
 6.5.2.0:
 >
 >* Upplevelsefragment kan exporteras till:
-   >   * standardarbetsytan.
+   >
+   >   
+   * standardarbetsytan.
    >   * en namngiven arbetsyta som anges i molnkonfigurationen.
 >* AEM måste vara [integrerat med Adobe Target med hjälp av Adobe I/O](/help/sites-administering/integration-ims-adobe-io.md).
 >
@@ -41,9 +46,9 @@ AEM 6.5.0.0 och 6.5.1.0:
 >* AEM måste integreras med Adobe Target enligt instruktionerna under [Integrering med Adobe Target](/help/sites-administering/target.md).
 
 
-Du kan exportera [Experience Fragments](/help/sites-authoring/experience-fragments.md), som har skapats i Adobe Experience Manager (AEM), till Adobe Target (Target). De kan sedan användas som erbjudanden i Target-aktiviteter för att testa och personalisera upplevelser i stor skala.
+Du kan exportera [Experience Fragments](/help/sites-authoring/experience-fragments.md), som skapats i Adobe Experience Manager (AEM), till Adobe Target (Target). De kan sedan användas som erbjudanden i Target aktiviteter för att testa och personalisera upplevelser i stor skala.
 
-Det finns tre formatalternativ för att exportera en Experience Fragment till Adobe Target:
+Det finns tre formatalternativ för att exportera ett Experience Fragment till Adobe Target:
 
 * HTML (standard): Stöd för leverans av webb- och hybridinnehåll
 * JSON: Stöd för leverans av headless-material
@@ -53,17 +58,17 @@ AEM Experience Fragments kan exporteras till standardarbetsytan i Adobe Target e
 
 >[!NOTE]
 >
->Adobe Target-arbetsytorna finns inte i Adobe Target. De definieras och hanteras i Adobe IMS (Identity Management System) och väljs sedan ut för användning i olika lösningar med hjälp av Adobe I/O-integreringar.
+>Arbetsytorna i Adobe Target finns inte i själva Adobe Target. De definieras och hanteras i Adobe IMS (Identity Management System) och väljs sedan ut för användning i olika lösningar med hjälp av Adobe I/O-integreringar.
 
 >[!NOTE]
 >
->Adobe Target-arbetsytor kan användas för att tillåta medlemmar i en organisation (grupp) att skapa och hantera erbjudanden och aktiviteter endast för den här organisationen. utan att ge åtkomst till andra användare. Till exempel landsspecifika organisationer inom ett globalt område.
+>Arbetsytor i Adobe Target kan användas för att tillåta medlemmar i en organisation (grupp) att skapa och hantera erbjudanden och aktiviteter endast för denna organisation. utan att ge åtkomst till andra användare. Till exempel landsspecifika organisationer inom ett globalt område.
 
 >[!NOTE]
 >
 >Mer information finns också i:
 >
->* [Utveckling med Adobe Target](https://www.adobe.io/apis/experiencecloud/target.html)
+>* [Adobe Target-utveckling](https://www.adobe.io/apis/experiencecloud/target.html)
 >* [Kärnkomponenter - Upplevelsefragment](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/experience-fragment.html)
 >
 
@@ -77,7 +82,7 @@ AEM Experience Fragments kan exporteras till standardarbetsytan i Adobe Target e
 
 Du måste utföra olika åtgärder:
 
-1. Du måste [integrera AEM med Adobe Target med Adobe I/O](/help/sites-administering/integration-ims-adobe-io.md).
+1. Du måste [integrera AEM med Adobe Target med hjälp av Adobe I/O](/help/sites-administering/integration-ims-adobe-io.md).
 2. Experience Fragments exporteras från AEM-författarinstansen, så du måste [konfigurera AEM Link Externalizer](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer) för författarinstansen för att se till att alla referenser i Experience Fragment är externaliserade för webbleverans.
 
    >[!NOTE]
@@ -89,7 +94,7 @@ Du måste utföra olika åtgärder:
 Innan du exporterar ett fragment måste du lägga till **molnkonfigurationen** för **Adobe Target** i fragmentet eller mappen. Detta gör även att du kan:
 
 * ange de formatalternativ som ska användas för exporten
-* välj en målarbetsyta som mål
+* välja en Target-arbetsyta som mål
 * välj en externaliseringsdomän för att skriva om referenser i Experience Fragment (valfritt)
 
 De obligatoriska alternativen kan väljas i **Sidegenskaper** för den mapp och/eller det fragment som krävs. specifikationen ärvs vid behov.
@@ -105,14 +110,14 @@ De obligatoriska alternativen kan väljas i **Sidegenskaper** för den mapp och/
    >
    >Om du lägger till molnkonfigurationen i själva Experience Fragment ärvs konfigurationen av alla variationer.
 
-1. Välj fliken **Molntjänster** .
+1. Klicka på fliken **Cloud Service** .
 
-1. Välj **Adobe Target** i listrutan under Konfiguration **av** molntjänster.
+1. Under **Konfigurera** Cloud Service väljer du **Adobe Target** i listrutan.
 
 1. 
    >[!NOTE]
    >
-   >JSON-formatet i ett Experience Fragment-erbjudande kan anpassas. Om du vill göra det definierar du en Customer Experience Fragment-komponent och kommenterar sedan hur egenskaperna ska exporteras i komponentens Sling Model.
+   >JSON-formatet i ett Experience Fragment-erbjudande kan anpassas. Om du vill göra det definierar du en Customer Experience Fragment-komponent och kommenterar sedan hur dess egenskaper ska exporteras i komponentens Sling Model.
    >
    >Se kärnkomponenten:
    >
@@ -122,7 +127,7 @@ De obligatoriska alternativen kan väljas i **Sidegenskaper** för den mapp och/
 
    * lämplig konfiguration
    * det obligatoriska formatalternativet
-   * en Adobe Target-arbetsyta
+   * en arbetsyta i Adobe Target
    * om det behövs - externaliseringsdomänen
    >[!CAUTION]
    >
@@ -130,17 +135,17 @@ De obligatoriska alternativen kan väljas i **Sidegenskaper** för den mapp och/
 
    För en mapp:
 
-   ![Mapp - molntjänster](assets/xf-target-integration-01.png "Mapp - molntjänster")
+   ![Mapp - Cloud](assets/xf-target-integration-01.png "ServicesFolder - Cloud Service")
 
 1. **Spara och stäng**.
 
-## Exportera en Experience Fragment till Adobe Target {#exporting-an-experience-fragment-to-adobe-target}
+## Exportera ett Experience Fragment till Adobe Target {#exporting-an-experience-fragment-to-adobe-target}
 
 >[!CAUTION]
 >
->För medieresurser, till exempel bilder, exporteras bara en referens till Target. Resursen lagras i AEM Resurser och levereras från AEM-publiceringsinstansen.
+>För medieresurser, till exempel bilder, exporteras bara en referens till Target. Resursen lagras i AEM Assets och levereras från AEM-publiceringsinstansen.
 >
->På grund av detta måste Experience Fragment, med alla relaterade resurser, publiceras före export till Target.
+>På grund av detta måste Experience Fragment, med alla relaterade resurser, publiceras innan du exporterar till Target.
 
 Så här exporterar du ett upplevelsefragment från AEM till Target (efter att du har angett molnkonfigurationen):
 
@@ -179,9 +184,9 @@ Så här exporterar du ett upplevelsefragment från AEM till Target (efter att d
 >
 >Du kan också exportera från sidredigeraren med hjälp av jämförbara kommandon på menyn [Sidinformation](/help/sites-authoring/author-environment-tools.md#page-information) .
 
-## Använda dina upplevelsefragment i Adobe Target {#using-your-experience-fragments-in-adobe-target}
+## Använda era upplevelsefragment i Adobe Target {#using-your-experience-fragments-in-adobe-target}
 
-När du har utfört de föregående åtgärderna visas upplevelsefragmentet på sidan Erbjudanden i Target. Ta en titt på den [specifika Target-dokumentationen](https://experiencecloud.adobe.com/resources/help/en_US/target/target/aem-experience-fragments.html) och lär dig mer om vad du kan uppnå där.
+När du har utfört de föregående uppgifterna visas upplevelsefragmentet på offertsidan i Target. Ta en titt på den [specifika Target-dokumentationen](https://experiencecloud.adobe.com/resources/help/en_US/target/target/aem-experience-fragments.html) och lär dig mer om vad du kan uppnå där.
 
 >[!NOTE]
 >
@@ -198,7 +203,7 @@ För att undvika sådana situationer:
 
    Felmeddelandet i AEM förhindrar inte användaren från att (tvinga) ta bort Experience Fragment. Om Experience Fragment tas bort:
 
-   * Target-erbjudandet med AEM Experience Fragment kan visa oönskat beteende
+   * Target erbjudande med AEM Experience Fragment kan visa oönskat beteende
 
       * Erbjudandet kommer troligtvis fortfarande att återges eftersom Experience Fragment HTML överfördes till Target
       * Eventuella referenser i Experience Fragment kanske inte fungerar korrekt om refererade resurser även har tagits bort i AEM.
