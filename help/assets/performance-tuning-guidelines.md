@@ -4,9 +4,9 @@ description: Förslag och vägledning om konfiguration av [!DNL Experience Manag
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: da2e435f33e8527793e009700c30e60868d196be
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
-source-wordcount: '2722'
+source-wordcount: '2713'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Här är några viktiga fokusområden där du kan identifiera och åtgärda pres
 
 ## Platform {#platform}
 
-Experience Manager stöds på ett antal plattformar, men Adobe har funnit det bästa stödet för inbyggda verktyg i Linux och Windows, vilket ger optimala prestanda och förenklad implementering. Bäst är att du driftsätter ett 64-bitars operativsystem för att uppfylla de höga minneskraven för en [!DNL Experience Manager Assets] driftsättning. Precis som med andra Experience Manager-distributioner bör ni implementera tarMK där det är möjligt. Även om TonaMK inte kan skalas bortom en enda författarinstans, fungerar det bättre än MongoMK. Du kan lägga till instanser för TjärMK-avlastning för att öka arbetsflödets bearbetningskraft i din [!DNL Experience Manager Assets] distribution.
+Experience Manager stöds på ett antal plattformar, men Adobe har funnit det bästa stödet för inbyggda verktyg i Linux och Windows, vilket ger optimala prestanda och förenklad implementering. Bäst är att du driftsätter ett 64-bitars operativsystem för att uppfylla de höga minneskraven för en [!DNL Experience Manager Assets] driftsättning. Precis som med andra Experience Manager-distributioner bör du implementera tarMK där det är möjligt. Även om TonaMK inte kan skalas bortom en enda författarinstans, fungerar det bättre än MongoMK. Du kan lägga till instanser för TjärMK-avlastning för att öka arbetsflödets bearbetningskraft i din [!DNL Experience Manager Assets] distribution.
 
 ### Tillfällig mapp {#temp-folder}
 
@@ -55,9 +55,8 @@ När den tillfälliga volymen med höga prestanda är klar anger du JVM-paramete
 
 Adobe rekommenderar att du använder Java 8 [!DNL Experience Manager Assets] för optimala prestanda.
 
->[!NOTE]
->
->Oracle slutade släppa uppdateringar för Java 7 från april 2015.
+<!-- TBD: Link to the latest official word around Java.
+-->
 
 ### JVM-parametrar {#jvm-parameters}
 
@@ -81,7 +80,7 @@ När du överför stora mängder resurser till [!DNLAAdobe Experience Manager]ka
 
 Konfigurera den buffrade cachestorleken i OSGi-webbkonsolen. Vid `https://host:port/system/console/configMgr/com.day.cq.dam.core.impl.cache.CQBufferedImageCache`anger du egenskapen `cq.dam.image.cache.max.memory` i byte. 1073741824 är till exempel 1 GB (1 024 x 1 024 x 1 024 = 1 GB).
 
-Om du använder en nod för att konfigurera den här egenskapen i Experience Manager 6.1 SP1 måste du ställa in datatypen på Long. Detta gör du i stället. `sling:osgiConfig` Mer information finns i [CQBufferedImageCache förbrukar heap under överföring](https://helpx.adobe.com/experience-manager/kb/cqbufferedimagecache-consumes-heap-during-asset-uploads.html)av resurser.
+Om du använder en nod för att konfigurera den här egenskapen från Experience Manager 6.1 SP1 måste du ange datatypen till Long, om du använder en `sling:osgiConfig` nod. Mer information finns i [CQBufferedImageCache förbrukar heap under överföring](https://helpx.adobe.com/experience-manager/kb/cqbufferedimagecache-consumes-heap-during-asset-uploads.html)av resurser.
 
 ### Gemensamma datalager {#shared-data-stores}
 
@@ -118,7 +117,7 @@ Adobe rekommenderar att du aktiverar HTTPS eftersom många företag har brandvä
 
 Din nätverksoptimeringsstrategi är i första hand beroende av hur mycket bandbredd som finns tillgänglig och hur stor belastning din [!DNLEExperience Manager] -instans har. Gemensamma konfigurationsalternativ, inklusive brandväggar och proxies, kan förbättra nätverkets prestanda. Här följer några viktiga punkter att tänka på:
 
-* Beroende på vilken instanstyp du har (liten, måttlig, stor) kontrollerar du att du har tillräcklig nätverksbandbredd för Experience Manager-instansen. Tillräcklig bandbreddsallokering är särskilt viktigt om Experience Manager [!DNLE] finns på AWS.
+* Beroende på vilken instanstyp du har (liten, måttlig, stor) kontrollerar du att du har tillräcklig nätverksbandbredd för instansen Experience Manager. Tillräcklig bandbreddsallokering är särskilt viktigt om Experience Manager [!DNLE] finns på AWS.
 * Om din [!DNLEExperience Manager] -instans finns på AWS kan du dra nytta av en mångsidig skalningsprincip. Överför instansen om användarna förväntar sig hög belastning. Minska storleken för måttlig/låg belastning.
 * HTTPS: De flesta användare har brandväggar som tolkar HTTP-trafik, vilket kan påverka överföringen av filer negativt eller till och med skada filer under överföringen.
 * Stora filöverföringar: Se till att användarna har kabelanslutna anslutningar till nätverket (WiFi-anslutningar blir snabbt mättade).
@@ -165,7 +164,7 @@ Att ställa in en kö på hälften av de tillgängliga processorerna är en anv�
 
 ### DAM-uppdateringskonfiguration {#dam-update-asset-configuration}
 
-Arbetsflödet innehåller en komplett serie steg som är konfigurerade för uppgifter, till exempel generering av Scene7 PTIFF och [!UICONTROL DAM Update Asset] [!DNL Adobe InDesign Server] integrering. De flesta användare behöver dock inte utföra flera av dessa steg. Adobe rekommenderar att du skapar en anpassad kopia av arbetsflödesmodellen och tar bort alla onödiga steg. [!UICONTROL DAM Update Asset] I det här fallet uppdaterar du startarna [!UICONTROL DAM Update Asset] så att de pekar på den nya modellen.
+Arbetsflödet innehåller en komplett serie steg som är konfigurerade för uppgifter, till exempel generering av Scene7 PTIFF och [!UICONTROL DAM Update Asset] [!DNL Adobe InDesign Server] integrering. De flesta användare behöver dock inte utföra flera av dessa steg. Adobe rekommenderar att du skapar en anpassad kopia av arbetsflödesmodellen och tar bort alla onödiga steg. [!UICONTROL DAM Update Asset] I det här fallet ska du uppdatera startarna [!UICONTROL DAM Update Asset] så att de pekar på den nya modellen.
 
 Om du kör arbetsflödet intensivt kan du öka storleken på fildatalagret avsevärt. [!UICONTROL DAM Update Asset] Resultaten från ett experiment som Adobe har utfört har visat att datalagrets storlek kan öka med ungefär 400 GB om ca 500 arbetsflöden utförs inom 8 timmar.
 
@@ -212,7 +211,7 @@ Dessutom anger du sökvägen till ImageMagick:s tillfälliga mapp i `configure.x
 >
 >ImageMagick `policy.xml` - och `configure.xml` -filerna är tillgängliga `/usr/lib64/ImageMagick-&#42;/config/` i stället för `/etc/ImageMagick/`.Mer information om var konfigurationsfilerna finns i [dokumentationen](https://www.imagemagick.org/script/resources.php) till ImageMagick.
 
-Om du använder Adobe Managed Services (AMS) kan du kontakta Adobes kundtjänst om du tänker bearbeta många stora PSD- eller PSB-filer. [!DNL Experience Manager] Samarbeta med Adobes kundtjänstrepresentant för att implementera de bästa metoderna för driftsättningen av AMS och för att välja de bästa möjliga verktygen och modellerna för Adobes egna format. [!DNL Experience Manager] kan inte bearbeta PSB-filer med hög upplösning som är större än 30000 x 23000 pixlar.
+Om du använder [!DNL Experience Manager] i Adobe Managed Services (AMS) kan du kontakta Adobes kundtjänst om du tänker bearbeta många stora PSD- eller PSB-filer. Samarbeta med Adobes kundtjänstrepresentant för att implementera de bästa metoderna för driftsättningen av AMS och för att välja de bästa möjliga verktygen och modellerna för Adobes egna format. [!DNL Experience Manager] kan inte bearbeta PSB-filer med hög upplösning som är större än 30000 x 23000 pixlar.
 
 ### XMP-tillbakaskrivning {#xmp-writeback}
 
