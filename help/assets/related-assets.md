@@ -3,7 +3,7 @@ title: Relaterade tillgångar
 description: Lär dig hur du relaterar digitala resurser som delar vissa gemensamma attribut. Skapa också källbaserade relationer mellan digitala resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
 workflow-type: tm+mt
 source-wordcount: '611'
 ht-degree: 3%
@@ -17,8 +17,9 @@ ht-degree: 3%
 
 Med den här funktionen kan du dela en lågupplöst PDF- eller JPG-fil med leverantörer eller myndigheter och göra den högupplösta INDD-filen tillgänglig endast på begäran.
 
->[!NOTE] Endast användare med redigeringsbehörighet för resurser kan relatera och ta bort kopplingen för resurserna.
+>[!NOTE]
 >
+>Endast användare med redigeringsbehörighet för resurser kan relatera och ta bort kopplingen för resurserna.
 
 ## Relatera resurser {#relating-assets}
 
