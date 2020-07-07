@@ -6,7 +6,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: interactive-communication
 translation-type: tm+mt
-source-git-commit: 5a97dd9a34d42bfbf3e2185763e4040e1190f297
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
 workflow-type: tm+mt
 source-wordcount: '2197'
 ht-degree: 1%
@@ -68,7 +68,7 @@ Du kombinerar en post med en interaktiv kommunikationsmall för att skapa en int
 
 ### Använda batch-API:t med bevakade mappar {#using-the-batch-api-watched-folders}
 
-För att göra det enkelt att uppleva API:t tillhandahåller AEM Forms en speciell tjänst för bevakad mapp som är konfigurerad att använda batch-API:t. Du kan få åtkomst till tjänsten via användargränssnittet för AEM Forms för att generera flera interaktiva kommunikationer. Du kan också skapa anpassade tjänster efter dina behov. Du kan använda metoderna nedan för att använda Batch-API med bevakad mapp:
+För att göra det enkelt att uppleva API:t tillhandahåller AEM Forms en speciell tjänst för bevakade mappar som är konfigurerad att använda batch-API:t. Du kan få åtkomst till tjänsten via användargränssnittet i AEM Forms för att generera flera interaktiva kommunikationer. Du kan också skapa anpassade tjänster efter dina behov. Du kan använda metoderna nedan för att använda Batch-API med bevakad mapp:
 
 * Ange indata (poster) i JSON-filformat för att skapa en interaktiv kommunikation
 * Använd indata (poster) som sparats i en extern datakälla och som nås via en formulärdatamodell för att skapa en interaktiv kommunikation
@@ -80,7 +80,7 @@ Du kombinerar en post med en interaktiv kommunikationsmall för att skapa en int
 Så här skapar du interaktiv kommunikation från poster som sparats i en JSON-fil:
 
 1. Skapa en [bevakad mapp](https://docs.adobe.com/content/help/en/experience-manager-64/forms/publish-process-aem-forms/creating-configure-watched-folder.html) och konfigurera den så att den använder batch-API:t:
-   1. Logga in på AEM Forms författarinstans.
+   1. Logga in på författarinstansen för AEM Forms.
    1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Forms]** > **[!UICONTROL Configure Watched Folder]**. Tryck på **[!UICONTROL New]**.
    1. Ange **[!UICONTROL Name]** och fysisk **[!UICONTROL Path]** information om mappen. Till exempel, `c:\batchprocessing`.
    1. Markera **[!UICONTROL Service]** alternativet i **[!UICONTROL Process File Using]** fältet.
@@ -142,7 +142,7 @@ Du kombinerar data (poster) som sparats i en extern datakälla med en interaktiv
    1. Spara och stäng filen.
 
 1. Skapa en [bevakad mapp](https://docs.adobe.com/content/help/en/experience-manager-64/forms/publish-process-aem-forms/creating-configure-watched-folder.html) och konfigurera den så att den använder API-tjänsten för grupper:
-   1. Logga in på AEM Forms författarinstans.
+   1. Logga in på författarinstansen för AEM Forms.
    1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Forms]** > **[!UICONTROL Configure Watched Folder]**. Tryck på **[!UICONTROL New]**.
    1. Ange **[!UICONTROL Name]** och fysisk **[!UICONTROL Path]** information om mappen. Till exempel, `c:\batchprocessing`.
    1. Markera **[!UICONTROL Service]** alternativet i **[!UICONTROL Process File Using]** fältet.
@@ -177,7 +177,7 @@ Innan du distribuerar Java-servern måste du se till att du har en interaktiv ko
 
 1. Logga in på din AEM-instans och skapa en interaktiv kommunikation. Om du vill använda den interaktiva kommunikation som anges i exempelkoden nedan [klickar du här](assets/SimpleMediumIC.zip).
 1. [Bygg och driftsätt ett AEM-projekt med Apache Maven](https://helpx.adobe.com/experience-manager/using/maven_arch13.html) i din AEM-instans.
-1. Lägg till [AEM Forms Client SDK version 6.0.12](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/) eller senare i listan över beroenden av POM-filen för ditt AEM-projekt. Till exempel,
+1. Lägg till [AEM Forms Client SDK version 6.0.12](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/) eller senare i listan över beroenden för POM-filen i ditt AEM-projekt. Till exempel,
 
    ```XML
        <dependency>
@@ -361,4 +361,5 @@ Förutom att spara data i filsystemet kan du lagra JSON-filer i CRX-databas, fil
    `http://host:port/<path-to-ic>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=http://localhost:8000/somesamplexmlfile.xml`
 
 >[!NOTE]
-> Endast CRX-protokoll är aktiverat som standard. Information om hur du aktiverar andra protokoll som stöds finns i [Konfigurera förifyllningstjänsten med Configuration Manager](https://helpx.adobe.com/experience-manager/6-5/forms/using/prepopulate-adaptive-form-fields.html#ConfiguringprefillserviceusingConfigurationManager).
+>
+>Endast CRX-protokoll är aktiverat som standard. Information om hur du aktiverar andra protokoll som stöds finns i [Konfigurera förifyllningstjänsten med Configuration Manager](https://helpx.adobe.com/experience-manager/6-5/forms/using/prepopulate-adaptive-form-fields.html#ConfiguringprefillserviceusingConfigurationManager).
