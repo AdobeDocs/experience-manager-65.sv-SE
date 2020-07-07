@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 1f9867f1-5089-46d0-8e21-30d62dbf4f45
 legacypath: /content/docs/en/aem/6-0/develop/components/components-develop
 translation-type: tm+mt
-source-git-commit: 00c98c4c1178f88844f6bec8a214d096205c58cd
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+workflow-type: tm+mt
+source-wordcount: '4719'
+ht-degree: 0%
 
 ---
 
@@ -47,7 +50,7 @@ Innan du börjar konfigurera eller koda komponenten bör du fråga:
 Innan du börjar diskutera hur du utvecklar komponenter måste du veta vilket gränssnitt författarna kommer att använda:
 
 * **Pekaktiverat användargränssnitt**
-   [Standardanvändargränssnittet](/help/sites-developing/touch-ui-concepts.md) bygger på den enhetliga användarupplevelsen för Adobe Marketing Cloud, med hjälp av de underliggande teknikerna i [Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui) och [Granite UI](/help/sites-developing/touch-ui-concepts.md#granite-ui).
+   [Standardanvändargränssnittet](/help/sites-developing/touch-ui-concepts.md) baseras på den enhetliga användarupplevelsen för Adobe Marketing Cloud och använder de underliggande teknikerna i [Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui) och [Granite UI](/help/sites-developing/touch-ui-concepts.md#granite-ui).
 * **Klassiskt användargränssnitt** som bygger på ExtJS-teknik och som har tagits bort med AEM 6.4.
 
 Mer information finns i [Gränssnittsrekommendationer för kunder](/help/sites-deploying/ui-recommendations.md) .
@@ -57,9 +60,10 @@ Komponenter kan implementeras för att stödja det beröringsaktiverade använda
 Därför ska vi ta upp grunderna för båda och hur de ska kännas igen på den här sidan.
 
 >[!NOTE]
-> Adobe rekommenderar att du utnyttjar det pekaktiverade användargränssnittet för att dra nytta av den senaste tekniken. [AEM Modernination Tools&amp;(modernization-tools.md) kan göra migreringen enklare.
+>
+>Adobe rekommenderar att du utnyttjar det pekaktiverade användargränssnittet för att dra nytta av den senaste tekniken. [AEM Modernination Tools&amp;(modernization-tools.md) kan göra migreringen enklare.
 
-### Innehållslogik och återgivningsmarkeringar {#content-logic-and-rendering-markup}
+### Innehållslogik och återgivningsmarkeringar  {#content-logic-and-rendering-markup}
 
 Vi rekommenderar att koden som ansvarar för kod och återgivning hålls åtskild från koden som styr logiken som används för att markera komponentens innehåll.
 
@@ -821,7 +825,7 @@ Följande konfiguration hämtas från komponenten Download. Det gör att alla re
 
 ### cq:actionConfigs (endast Classic UI) {#cq-actionconfigs-classic-ui-only}
 
-Noden ( `cq:actionConfigs` nodtyp `nt:unstructured`) definierar en lista med nya åtgärder som läggs till i listan som definieras av `cq:actions` egenskapen. Varje underordnad nod i `cq:actionConfigs` definierar en ny åtgärd genom att definiera en widget.
+Noden ( `cq:actionConfigs` nodtyp `nt:unstructured`) definierar en lista med nya åtgärder som läggs till i listan som definieras av `cq:actions` egenskapen. Varje underordnad nod till `cq:actionConfigs` definierar en ny åtgärd genom att definiera en widget.
 
 I följande exempelkonfiguration definieras en ny knapp (med en avgränsare för det klassiska användargränssnittet):
 
@@ -988,10 +992,10 @@ Noden ( `cq:listeners` nodtyp `cq:EditListenersConfig`) definierar vad som händ
 >[!NOTE]
 >
 >För kapslade komponenter finns det vissa begränsningar för åtgärder som definierats som egenskaper på `cq:listeners` noden:
-
+>
 >* För kapslade komponenter *måste* värdena för följande egenskaper vara `REFRESH_PAGE`: >
->* `aftermove`
-* `aftercopy`
+>  * `aftermove`
+>  * `aftercopy`
 
 
 Händelsehanteraren kan implementeras med en anpassad implementering. (där `project.customerAction` är en statisk metod):
@@ -1003,7 +1007,8 @@ Följande exempel motsvarar `REFRESH_INSERTED` konfigurationen:
 `afterinsert="function(path, definition) { this.refreshCreated(path, definition); }"`
 
 >[!NOTE]
-Det klassiska användargränssnittet visar vilka parametrar som kan användas i hanterarna i avsnittet `before<action>` och `after<action>` händelser i dokumentationen för [ `CQ.wcm.EditBar`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.EditBar) och [`CQ.wcm.EditRollover`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.EditRollover) widgeten.
+>
+>Det klassiska användargränssnittet visar vilka parametrar som kan användas i hanterarna i avsnittet `before<action>` och `after<action>` händelser i dokumentationen för [ `CQ.wcm.EditBar`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.EditBar) och [`CQ.wcm.EditRollover`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.EditRollover) widgeten.
 
 Med följande konfiguration uppdateras sidan när komponenten har tagits bort, redigerats, infogats eller flyttats:
 
