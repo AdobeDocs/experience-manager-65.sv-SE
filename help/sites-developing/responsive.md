@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 532544b0-1932-419a-b6bd-ecf57a926fef
 legacypath: /content/docs/en/aem/6-0/develop/mobile/responsive
 translation-type: tm+mt
-source-git-commit: b3e1493811176271ead54bae55b1cd0cf759fe71
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+workflow-type: tm+mt
+source-wordcount: '5327'
+ht-degree: 0%
 
 ---
 
@@ -33,13 +36,13 @@ Utforma dina webbsidor så att de anpassas till den klientvisningsruta där de v
 
 ![chlimage_1-4](assets/chlimage_1-4a.png)
 
-Utveckla Adobe Experience Manager-applikationer (AEM) som genererar HTML5-sidor som anpassar sig efter olika fönsterstorlekar och orienteringar. Följande intervall med visningsrutebredder motsvarar till exempel olika enhetstyper och orienteringar
+Utveckla Adobe Experience Manager-program (AEM) som genererar HTML5-sidor som anpassar sig efter olika fönsterstorlekar och orienteringar. Följande intervall med visningsrutebredder motsvarar till exempel olika enhetstyper och orienteringar
 
 * Maximal bredd på 480 pixlar (telefon, stående)
 * Maximal bredd på 767 pixlar (telefon, liggande)
 * Bredd mellan 768 pixlar och 979 pixlar (surfplatta, stående)
 * Bredd mellan 980 pixlar och 1 199 pixlar (surfplatta, liggande)
-* Bredd 1 200 pixlar eller mer (skrivbord)
+* Bredd 1200px eller högre (skrivbord)
 
 Mer information om hur du implementerar responsiva designbeteenden finns i följande avsnitt:
 
@@ -98,38 +101,33 @@ I följande tabell visas filerna i css-mappen.
   </tr>
   <tr>
    <td>bootstrap.css</td>
-   <td>Vanliga format, definierade av Twitter Bootstrap.</td>
+   <td>Vanliga format som definieras av Twitter Bootstrap.</td>
    <td>Ej tillämpligt</td>
   </tr>
   <tr>
    <td>responsive-1200px.css</td>
    <td>Format för alla medier som är 1 200 pixlar breda eller bredare.</td>
-   <td><p><br /> @media (min-width: 1200px) {<br /> ...
-}</p> </td>
+   <td><p>@media (min-width: 1200px) {<br /> ...<br /> }</p> </td>
   </tr>
   <tr>
    <td>responsive-980px-1199px.css</td>
    <td>Format för media som är mellan 980 pixlar och 1 199 pixlar breda.</td>
-   <td><p><br /> @media (min-width: 980px) och (max-width: 1199px) {<br /> ...
-}</p> </td>
+   <td><p>@media (min-width: 980px) och (max-width: 1199px) {<br /> ...<br /> }</p> </td>
   </tr>
   <tr>
    <td>responsive-768px-979px.css</td>
    <td>Format för media som är mellan 768 pixlar och 979 pixlar breda. </td>
-   <td><p><br /> @media (min-width: 768px) och (max-width: 979px) {<br /> ...
-}</p> </td>
+   <td><p>@media (min-width: 768px) och (max-width: 979px) {<br /> ...<br /> }</p> </td>
   </tr>
   <tr>
    <td>responsive-767px-max.css</td>
    <td>Format för alla medier som är mindre än 768 pixlar breda.</td>
-   <td><p><br /> @media (max-width: 767px) {<br /> ...
-}</p> </td>
+   <td><p>@media (max-width: 767px) {<br /> ...<br /> }</p> </td>
   </tr>
   <tr>
    <td>responsive-480px.css</td>
    <td>Format för alla medier som är mindre än 481 pixlar breda.</td>
-   <td><br /> @media (max-width: 480) {<br /> ...
-}</td>
+   <td>@media (max-width: 480) {<br /> ...<br /> }</td>
   </tr>
  </tbody>
 </table>
@@ -162,8 +160,8 @@ Inkludera klientbiblioteksmappen i JSP-skriptet för sidkomponenten för att gen
 ```
 
 >[!NOTE]
-> Klientbiblioteksmappen `apps.weretail.all` bäddar in clientlibs-biblioteket.
-
+>
+>Klientbiblioteksmappen `apps.weretail.all` bäddar in clientlibs-biblioteket.
 
 JSP-skriptet genererar följande HTML-kod som refererar till formatmallarna:
 
@@ -174,15 +172,15 @@ JSP-skriptet genererar följande HTML-kod som refererar till formatmallarna:
 
 ## Förhandsgranska för specifika enheter {#previewing-for-specific-devices}
 
-Se förhandsvisningar av sidorna i olika visningsrutor för att testa hur den responsiva designen fungerar. I **[!UICONTROL förhandsgranskningsläget]** innehåller **[!UICONTROL Sidekick]** en **[!UICONTROL meny för enheter]** som du använder för att välja en enhet. När du väljer en enhet ändras sidan så att den anpassas till visningsrutans storlek.
+Se förhandsvisningar av sidorna i olika visningsrutor för att testa hur den responsiva designen fungerar. I **[!UICONTROL Preview]** läget **[!UICONTROL Sidekick]** innehåller en **[!UICONTROL Devices]** listruta som du använder för att välja en enhet. När du väljer en enhet ändras sidan så att den anpassas till visningsrutans storlek.
 
 ![chlimage_1-5](assets/chlimage_1-5a.png)
 
-Om du vill aktivera enhetsförhandsvisningen i **[!UICONTROL Sidekick]** måste du konfigurera sidan och **[!UICONTROL MobileEmulatorProvider]** -tjänsten. En annan sidkonfiguration styr listan med enheter som visas i listan **[!UICONTROL Enheter]** .
+Om du vill aktivera enhetsförhandsvisningen i **[!UICONTROL Sidekick]** måste du konfigurera sidan och **[!UICONTROL MobileEmulatorProvider]** tjänsten. En annan sidkonfiguration styr listan med enheter som visas i **[!UICONTROL Devices]** listan.
 
 ### Lägga till enhetslistan {#adding-the-devices-list}
 
-Listan **[!UICONTROL Enheter]** visas i **[!UICONTROL Sidekick]** när sidan innehåller JSP-skriptet som återger **[!UICONTROL enhetslistan]** . Om du vill lägga till listan **[!UICONTROL Enheter]** i **[!UICONTROL Sidspark]** inkluderar du `/libs/wcm/mobile/components/simulator/simulator.jsp` skriptet i `head` sidans avsnitt.
+Listan visas i **[!UICONTROL Devices]** när sidan innehåller JSP-skriptet som återger **[!UICONTROL Sidekick]** **[!UICONTROL Devices]** listan. Om du vill lägga till **[!UICONTROL Devices]** listan i **[!UICONTROL Sidekick]** tar du med `/libs/wcm/mobile/components/simulator/simulator.jsp` skriptet i `head` delen av sidan.
 
 Inkludera följande kod i JSP som definierar `head` avsnittet:
 
@@ -303,11 +301,11 @@ Hämta följande javascript-bibliotek och inkludera dem i en klientbiblioteksmap
 * jquery.js (tillgänglig via `/etc/clientlibs/granite/jquery` klientbiblioteksmappen (category = jquery)
 * [jquery.debouncedresize.js](https://github.com/louisremi/jquery-smartresize) (en jquery-händelse som inträffar en gång efter att fönstret har ändrat storlek)
 
-**** Tips: Du kan automatiskt sammanfoga flera klientbiblioteksmappar genom att [bädda](/help/sites-developing/clientlibs.md#embedding-code-from-other-libraries)in.
+**Tips:** Du kan automatiskt sammanfoga flera klientbiblioteksmappar genom att [bädda](/help/sites-developing/clientlibs.md#embedding-code-from-other-libraries)in.
 
 **HTML**
 
-Skapa en komponent som genererar de div-element som förväntas av koden picturefill.js. På en AEM-sida är värdet för data-src-attributet sökvägen till en resurs i databasen. En sidkomponent kan till exempel hårdkoda mediefrågor och tillhörande sökvägar för bildåtergivningar i DAM. Du kan också skapa en anpassad bildkomponent som gör att författare kan välja bildåtergivningar eller ange alternativ för körtidsåtergivning.
+Skapa en komponent som genererar de div-element som förväntas av koden picturefill.js. På en AEM-sida är värdet för data-src-attributet sökvägen till en resurs i databasen. En sidkomponent kan till exempel hårdkoda mediefrågor och tillhörande sökvägar för bildåtergivningar i DAM. Du kan också skapa en anpassad bildkomponent som gör att författare kan välja bildåtergivningar eller ange alternativ för körningsåtergivning.
 
 I följande exempel väljer HTML två DAM-renderingar av samma bild.
 
@@ -332,7 +330,7 @@ Följande avsnitt innehåller information om den här komponenten.
 
 ### Bildåtergivning i AEM {#understanding-image-rendering-in-aem}
 
-Om du vill anpassa bildåtergivning bör du känna till standardimplementeringen för statisk AEM-bildåtergivning. AEM innehåller bildkomponenten och en bildåtergivningsservett som fungerar tillsammans för att återge bilder för webbsidor. Följande händelsesekvens inträffar när bildkomponenten inkluderas i sidans styckesystem:
+Om du vill anpassa bildåtergivning bör du känna till den statiska AEM-återgivningsimplementeringen. AEM innehåller bildkomponenten och en bildåtergivningsservett som fungerar tillsammans för att återge bilder för webbsidor. Följande händelsesekvens inträffar när bildkomponenten inkluderas i sidans styckesystem:
 
 1. Redigering: Författare redigerar bildkomponenten för att ange vilken bildfil som ska inkluderas på en HTML-sida. Filsökvägen lagras som ett egenskapsvärde för Image-komponentnoden.
 1. Sidbegäran: Sidkomponentens JSP genererar HTML-koden. JSP för Image-komponenten genererar och lägger till ett img-element på sidan.
@@ -499,7 +497,7 @@ Mer information om hur du konfigurerar AEM-tjänster finns i [Konfigurera OSGi](
      <li>Om du vill ta bort en bredd som stöds klickar du på den associerade knappen -.</li>
      <li>Om du vill ändra en bredd som stöds redigerar du fältvärdet.</li>
     </ul> </td>
-   <td><p>customize.supported.widths</p>
+   <td><p>adapt.supported.widths</p>
     <ul>
      <li>Egenskapen är ett strängvärde med flera värden.</li>
     </ul> </td>
@@ -750,7 +748,7 @@ Följande exempel på CSS är en deluppsättning av dessa format. Den här delm�
 
 Sidorna i Geometrixx Media-programmet distribuerar rader med innehållsblock vågrätt i breda visningsrutor. I mindre visningsrutor fördelas samma block lodrätt. I följande exempel visas CSS-formaten som implementerar det här beteendet för HTML-koden som genereras av sidkomponenten media-home:
 
-* CSS-standardformatet för sidan mediavälkomstsida tilldelar formatet `float:left` för `span*` klasser som finns inuti `row-fluid` klasser.
+* CSS-standardformatet för sidan mediavälkomstsida tilldelar `float:left` formatet för `span*` klasser som finns inuti `row-fluid` klasser.
 
 * Mediefrågor för mindre visningsrutor tilldelar formatet för samma klasser `float:none` .
 
@@ -779,7 +777,7 @@ Skapa en huvudsideskomponent som innehåller skript för generering av olika del
 
 Skapa andra sidkomponenter som använder huvudsideskomponenten som `cq:resourceSuperType`. Dessa komponenter innehåller skript som åsidosätter skripten på huvudsidan efter behov.
 
-Till exempel innehåller goemetrixx-media-programmet sidkomponenten ( `sling:resourceSuperType` är bassidkomponenten). Flera underordnade komponenter (som artikel, kategori och media-home) använder den här sidkomponenten som `sling:resourceSuperType`. Varje underordnad komponent innehåller en content.jsp-fil som åsidosätter content.jsp-filen för sidkomponenten.
+Till exempel innehåller goemetrixx-media-programmet sidkomponenten ( `sling:resourceSuperType` är bassidans komponent). Flera underordnade komponenter (som artikel, kategori och media-home) använder den här sidkomponenten som `sling:resourceSuperType`. Varje underordnad komponent innehåller en content.jsp-fil som åsidosätter content.jsp-filen för sidkomponenten.
 
 **Återanvända skript**
 
