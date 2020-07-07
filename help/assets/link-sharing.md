@@ -3,7 +3,7 @@ title: Generera en URL till delade resurser
 description: I den här artikeln beskrivs hur du delar resurser, mappar och samlingar i Experience Manager Assets som en URL till externa parter.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
 source-wordcount: '1136'
 ht-degree: 4%
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 # Dela resurs via en länk {#asset-link-sharing}
 
-Med Adobe Experience Manager Assets kan ni dela resurser, mappar och samlingar som en webbadress med medlemmar i organisationen och externa enheter, inklusive partners och leverantörer. Att dela resurser via en länk är ett bekvämt sätt att göra resurser tillgängliga för externa parter utan att de först behöver logga in på Assets.
+Med Adobe Experience Manager Assets kan du dela resurser, mappar och samlingar som en URL till medlemmar i din organisation och externa enheter, inklusive partners och leverantörer. Att dela resurser via en länk är ett bekvämt sätt att göra resurser tillgängliga för externa parter utan att de först behöver logga in på Assets.
 
 >[!NOTE]
 >
@@ -40,19 +40,20 @@ Använd dialogrutan Länkdelning för att generera URL:en för resurser som du v
 
    >[!NOTE]
    >
-   >Om du vill dela länkar från utvecklingsinstansen i Experience Manager till externa entiteter, ska du se till att du bara visar följande URL:er (som används för länkdelning) för `GET` begäranden. Blockera andra URL:er för att säkerställa säkerheten för Experience Manager Author.
+   >Om du vill dela länkar från författarinstansen i Experience Manager till externa entiteter, ska du se till att du bara visar följande URL:er (som används för länkdelning) för `GET` begäranden. Blockera andra URL:er för att säkerställa säkerheten för författaren av Experience Manager.
    >
-   >* http://&lt;aem_server>:&lt;port>/linkshare.html
-   * http://&lt;aem_server>:&lt;port>/linksharepreview.html
-   * http://&lt;aem_server>:&lt;port>/linkexpired.html
+   >* http://[aem_server]:[port]/linkshare.html
+   >* http://[aem_server]:[port]/linksharepreview.html
+   >* http://[aem_server]:[port]/linkexpired.html
 
 
    >[!NOTE]
-   Om en delad resurs flyttas till en annan plats slutar länken att fungera. Återskapa länken och dela den på nytt med användarna.
+   >
+   >Om en delad resurs flyttas till en annan plats slutar länken att fungera. Återskapa länken och dela den på nytt med användarna.
 
-1. I Experience Manager-gränssnittet kan du gå till **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
+1. Gå till **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]** i gränssnittet Experience Manager.
 
-1. Öppna **[!UICONTROL Day CQ Link Externalizer]** konfigurationen och ändra följande egenskaper i **[!UICONTROL Domains]** fältet med de värden som anges mot `local`, `author`och `publish`. För egenskaperna `local` och `author` anger du URL:en för den lokala instansen respektive författarinstansen. Både `local` och `author` egenskaper har samma värde om du kör en enda Experience Manager Author-instans. Ange t. `publish`ex. URL:en för Experience Manager-publiceringsinstansen.
+1. Öppna **[!UICONTROL Day CQ Link Externalizer]** konfigurationen och ändra följande egenskaper i **[!UICONTROL Domains]** fältet med de värden som anges mot `local`, `author`och `publish`. För egenskaperna `local` och `author` anger du URL:en för den lokala instansen respektive författarinstansen. Både `local` och `author` egenskaper har samma värde om du kör en enda Experience Manager Author-instans. Ange till `publish`exempel URL:en för publiceringsinstansen Experience Manager.
 
 1. Skriv e-post-ID:t för den användare som du vill dela länken med i rutan för e-postadress i dialogrutan **[!UICONTROL Link Sharing]**. Du kan också dela länken med flera användare.
 
@@ -65,7 +66,8 @@ Använd dialogrutan Länkdelning för att generera URL:en för resurser som du v
    *Bild: Dela länkar till resurser direkt från[!UICONTROL Link Sharing]dialogrutan.*
 
    >[!NOTE]
-   Om du anger ett e-post-ID för en användare som inte är medlem i din organisation, [!UICONTROL External User] föregås orden av användarens e-post-ID.
+   >
+   >Om du anger ett e-post-ID för en användare som inte är medlem i din organisation, [!UICONTROL External User] föregås orden av användarens e-post-ID.
 
 1. I **[!UICONTROL Subject]** fältet anger du ett ämne för resursen som du vill dela.
 
@@ -78,7 +80,8 @@ Använd dialogrutan Länkdelning för att generera URL:en för resurser som du v
 1. Om du vill att användarna ska kunna hämta originalbilden tillsammans med återgivningarna väljer du **[!UICONTROL Allow download of original file]**.
 
    >[!NOTE]
-   Som standard kan användare bara hämta återgivningar av resursen som du delar som en länk.
+   >
+   >Som standard kan användare bara hämta återgivningar av resursen som du delar som en länk.
 
 1. Klicka på **[!UICONTROL Share]**. Ett meddelande bekräftar att länken delas med användarna via ett e-postmeddelande.
 1. Om du vill visa den delade resursen klickar du på länken i e-postmeddelandet som skickas till användaren. Den delade resursen visas på **[!UICONTROL Adobe Marketing Cloud]** sidan.
@@ -92,7 +95,8 @@ Använd dialogrutan Länkdelning för att generera URL:en för resurser som du v
    ![chlimage_1-261](assets/chlimage_1-546.png)
 
    >[!NOTE]
-   Experience Manager har stöd för att generera en förhandsgranskning av resurser av dessa MIME-typer: JPG, PNG, GIF, BMP, INDD, PDF och PPT. Du kan bara hämta resurser från andra MIME-typer.
+   >
+   >Experience Manager har stöd för att generera förhandsgranskning av resurser av dessa MIME-typer: JPG, PNG, GIF, BMP, INDD, PDF och PPT. Du kan bara hämta resurser från andra MIME-typer.
 
 1. Om du vill hämta den delade resursen klickar du **[!UICONTROL Select]** i verktygsfältet, på resursen och sedan på **[!UICONTROL Download]** verktygsfältet.
 
@@ -104,7 +108,7 @@ Använd dialogrutan Länkdelning för att generera URL:en för resurser som du v
 
 ## Konfigurera daglig CQ Mail-tjänst {#configmailservice}
 
-1. På Experience Managers hemsida går du till **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
+1. På startsidan för Experience Manager går du till **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
 1. I listan med tjänster går du till **[!UICONTROL Day CQ Mail Service]**.
 1. Click **[!UICONTROL Edit]** beside the service, and configure the following parameters for **[!UICONTROL Day CQ Mail Service]** with the details mentioned against their names:
 
@@ -131,6 +135,6 @@ När du hämtar resurser från den länk som delas med funktionen Länkdelning k
 ## Bästa praxis och felsökning {#bestpractices}
 
 * Resursmappar eller samlingar som innehåller ett tomt utrymme i namnet kanske inte delas.
-* Om användarna inte kan hämta de delade resurserna bör du fråga Experience Manager-administratören om vilka [hämtningsgränser](#maxdatasize) som finns.
+* Om användare inte kan hämta de delade resurserna, bör du fråga Experience Manager-administratören om vilka [hämtningsgränser](#maxdatasize) som finns.
 * Om du inte kan skicka e-post med länkar till delade resurser eller om de andra användarna inte kan ta emot din e-post, bör du kontakta Experience Manager-administratören om [e-posttjänsten](#configmailservice) är konfigurerad eller inte.
 * Om du inte kan dela resurser med hjälp av länkdelningsfunktionen måste du se till att du har rätt behörighet. Se [Dela resurser](#sharelink).
