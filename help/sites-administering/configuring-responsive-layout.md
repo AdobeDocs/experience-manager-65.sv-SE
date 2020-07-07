@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 10940000-808a-48ae-8e46-61eccef71eab
 legacypath: /content/docs/en/aem/6-2/administer/operations/page-authoring/configuring-responsive-layouting
 translation-type: tm+mt
-source-git-commit: 710958ceecc8bbbbdae5e836ec0571a9eeaf6a9a
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+workflow-type: tm+mt
+source-wordcount: '1324'
+ht-degree: 1%
 
 ---
 
@@ -113,10 +116,9 @@ Om du migrerar ett befintligt projekt (med befintligt innehåll) måste du:
 >
 >* lägga till brytpunkter i mallar
 >* lägga till samma brytpunkter på befintliga sidor
-   >  När arv används kan du begränsa detta till innehållets rotsida.
 >
-
-
+>  
+När arv används kan du begränsa detta till innehållets rotsida.
 
 #### Konfigurera brytpunkter med CRXDE Lite {#configuring-breakpoints-using-crxde-lite}
 
@@ -238,7 +240,7 @@ Basrutnätsdefinitionen finns under:
 
 Komponenter som finns i en responsiv behållare ändrar storlek (tillsammans med deras respektive HTML DOM-element) beroende på stödrastrets responsiva storlek. Därför bör du under dessa omständigheter undvika (eller uppdatera) definitioner av DOM-element med fast bredd (som finns).
 
-Exempel:
+Till exempel:
 
 * Före:
 
@@ -260,7 +262,7 @@ Om du ändrar storlek på en komponent i rutnätet utlöses följande avlyssnare
 
 Om du vill ändra storlek på och uppdatera innehållet i en adaptiv bild som ingår i ett responsivt rutnät måste du lägga till en uppsättning som `afterEdit` avlyssnare i `REFRESH_PAGE` `EditConfig` filen för varje ingående komponent.
 
-Exempel:
+Till exempel:
 
 `<cq:listeners jcr:primaryType="cq:EditListenersConfig" afteredit="REFRESH_PAGE" />`
 
@@ -288,7 +290,7 @@ Om du vill att författare ska kunna lägga till fler responsiva rutnät på inn
 
 ### Konfigurera stödrastret för layoutbehållaren {#configure-the-grid-of-the-layout-container}
 
-Du kan konfigurera antalet kolumner som är tillgängliga för varje specifik instans av layoutbehållaren:
+Du kan konfigurera antalet kolumner som är tillgängliga för varje särskild instans av layoutbehållaren:
 
 1. **Författarmiljö**
 
