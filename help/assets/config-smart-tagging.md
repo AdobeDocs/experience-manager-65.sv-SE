@@ -3,10 +3,10 @@ title: Konfigurera resurstaggning med Smart Content Service.
 description: Lär dig hur du konfigurerar smart taggning och förbättrad smart taggning i [!DNL Adobe Experience Manager] med hjälp av Smart Content Service.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: dfac819018e85e0e8221bfcc57bc1eaf43b7ff25
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
-source-wordcount: '952'
-ht-degree: 55%
+source-wordcount: '949'
+ht-degree: 53%
 
 ---
 
@@ -93,7 +93,7 @@ Om du vill använda API:er för smarta innehållstjänster skapar du en integrer
 
 Om du vill konfigurera integreringen använder du nyckelfälten Teknisk konto-ID, Organisations-ID, Klienthemlighet, Auktoriseringsserver och API från Adobe Developer Console-integreringen. Creating a Smart Tags cloud configuration allows authentication of API requests from the [!DNL Experience Manager] deployment.
 
-1. I [!DNL Experience Manager] navigerar du till **[!UICONTROL Tools > Cloud Service > Legacy Cloud Services]** för att öppna konsolen [!UICONTROL Cloud Services].
+1. In [!DNL Experience Manager], navigate to **[!UICONTROL Tools]** > **[!UICONTROL Cloud Service]** > **[!UICONTROL Legacy Cloud Services]** to open the [!UICONTROL Cloud Services] console.
 1. Öppna konfigurationen som skapats ovan under **[!UICONTROL Assets Smart Tags]**. Klicka på **[!UICONTROL Edit]** på tjänstinställningssidan.
 1. I dialogrutan **[!UICONTROL AEM Smart Content Service]** använder du de förifyllda värdena för fälten **[!UICONTROL Service URL]** och **[!UICONTROL Authorization Server]**.
 1. För fälten **[!UICONTROL API Key]**, **[!UICONTROL Technical Account Id]**, **[!UICONTROL Organization Id]** och **[!UICONTROL Client Secret]** använder du värdena som genereras ovan.
@@ -103,15 +103,13 @@ Om du vill konfigurera integreringen använder du nyckelfälten Teknisk konto-ID
 När du är klar med konfigurationen kan du använda en JMX MBean för att validera konfigurationen. Följ de här stegen för att validera.
 
 1. Gå till din [!DNL Experience Manager]-server på `https://[aem_server]:[port]`.
-1. Gå till **[!UICONTROL Tools > Operations > Web Console]** för att öppna OSGi-konsolen. Klicka på **[!UICONTROL Main > JMX]**.
-1. Klicka på **[!UICONTROL com.day.cq.dam.similaritysearch.internal.impl]**. Det öppnar **[!UICONTROL SimilaritySearch Miscellaneous Tasks]**.
-1. Klicka på **[!UICONTROL validateConfigs()]**. I dialogrutan **[!UICONTROL Validate Configurations]** klickar du på **[!UICONTROL Invoke]**.
+1. Go to **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]** to open the OSGi console. Klicka på **[!UICONTROL Main]>[!UICONTROL JMX]**.
+1. Klicka på `com.day.cq.dam.similaritysearch.internal.impl`. Det öppnar **[!UICONTROL SimilaritySearch Miscellaneous Tasks]**.
+1. Klicka på `validateConfigs()`. I dialogrutan **[!UICONTROL Validate Configurations]** klickar du på **[!UICONTROL Invoke]**. Valideringsresultaten visas i samma dialogruta.
 
-   Valideringsresultatet visas i samma dialogruta.
+## Aktivera smart taggning i [!UICONTROL DAM Update Asset] arbetsflödet (valfritt) {#enable-smart-tagging-in-the-update-asset-workflow-optional}
 
-## Aktivera smart taggning i arbetsflödet DAM-uppdatering (valfritt) {#enable-smart-tagging-in-the-update-asset-workflow-optional}
-
-1. I [!DNL Experience Manager] går du till **[!UICONTROL Tools > Workflow > Models]**.
+1. I [!DNL Experience Manager] går du till **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
 1. Välj arbetsflödesmodellen **[!UICONTROL DAM Update Asset]** på sidan **[!UICONTROL Workflow Models]**.
 1. Klicka på **[!UICONTROL Edit]** i verktygsfältet.
 1. Expandera sidopanelen för att visa stegen. Dra steget **[!UICONTROL Smart Tag Asset]** som finns i avsnittet med DAM-arbetsflöden och placera det efter steget **[!UICONTROL Process Thumbnails]**.
