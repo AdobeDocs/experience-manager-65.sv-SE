@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: dc0191d0-f181-4e1e-b3f4-73427aa22073
 docset: aem65
 translation-type: tm+mt
-source-git-commit: df89d5cfd5060d493babb89e92a9a98e851b8879
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
 workflow-type: tm+mt
 source-wordcount: '3221'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -338,12 +338,12 @@ Om du har flera konfigurationer visar AEM som standard [standardkonfigurationen]
 >* Om du inte ser **Scene7** eller **S7** -ikonen som ett alternativ i webbläsaren måste du [konfigurera Scene7 så att det fungerar med AEM](/help/sites-administering/scene7.md).
    >
    >
-* För video har Scene7:s innehållsläsare stöd för: >
-   >    * Adaptiva videouppsättningar: behållare för alla videoåtergivningar som behövs för sömlös uppspelning på flera skärmar
-   >    * Enkel MP4-video
-   >    * En F4V-video
->
-
+* För video har Scene7:s innehållsläsare stöd för:
+   >
+   >  
+* Adaptiva videouppsättningar: behållare för alla videoåtergivningar som behövs för sömlös uppspelning på flera skärmar
+>  * Enkel MP4-video
+>  * En F4V-video
 
 
 ### Bläddra i innehåll {#browsing-content-in-the-classic-ui}
