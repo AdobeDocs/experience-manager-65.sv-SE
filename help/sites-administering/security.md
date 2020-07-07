@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: e72da81b-4085-49b0-86c3-11ad48978a8a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 86d3f14ec9e99297ede0aa1c027884d7f73665bc
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
 workflow-type: tm+mt
 source-wordcount: '5487'
 ht-degree: 0%
@@ -104,7 +104,7 @@ I följande tabeller visas varje objekt tillsammans med:
   <tr>
    <td>dam-users</td>
    <td>Grupp</td>
-   <td>Körklar referensgrupp för en typisk AEM Resurser-användare. Medlemmar i den här gruppen har lämplig behörighet för att aktivera överföring/delning av resurser och samlingar.</td>
+   <td>Körklar referensgrupp för en typisk AEM Assets-användare. Medlemmar i den här gruppen har lämplig behörighet för att aktivera överföring/delning av resurser och samlingar.</td>
    <td> </td>
   </tr>
   <tr>
@@ -493,11 +493,11 @@ Använd följande procedur för att ändra en användares lösenord.
 >[!NOTE]
 >
 >Du kan inte använda säkerhetskonsolen för att ändra administratörslösenordet. Om du vill ändra lösenordet för administratörskontot använder du [användarkonsolen](/help/sites-administering/granite-user-group-admin.md#changing-the-password-for-an-existing-user) som Granite Operations tillhandahåller.
-> Om du använder AEM Forms på JEE ska du inte använda instruktionerna nedan för att ändra lösenord, utan istället använda AEM Forms på JEE Admin Console (/adminui) för att ändra lösenordet.
+>
+>Om du använder AEM Forms på JEE ska du inte använda nedanstående instruktioner för att ändra lösenord, utan i stället använda AEM Forms på JEE-administratörskonsolen (/adminui) för att ändra lösenordet.
 
 1. Dubbelklicka på det användarnamn du vill ändra lösenordet för i **säkerhetskonsolen** .
 1. Klicka på fliken **Egenskaper** (om den inte redan är aktiv).
-
 1. Klicka på **Ange lösenord**. Fönstret Ange lösenord öppnas där du kan ändra ditt lösenord.
 
    ![cqsecurityuslösenord](assets/cqsecurityuserpassword.png)
