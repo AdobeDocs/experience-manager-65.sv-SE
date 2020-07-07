@@ -10,7 +10,10 @@ topic-tags: author
 discoiquuid: 4c53dfc0-25ca-419d-abfe-cf31fc6ebf61
 docset: aem65
 translation-type: tm+mt
-source-git-commit: abfb6dced1ffd8d0dd11eaab1e66c78704df543f
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+workflow-type: tm+mt
+source-wordcount: '647'
+ht-degree: 0%
 
 ---
 
@@ -19,9 +22,9 @@ source-git-commit: abfb6dced1ffd8d0dd11eaab1e66c78704df543f
 
 CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Apart) är ett program som ofta används vid onlinetransaktioner för att skilja mellan människor och automatiserade program eller organ. Det utgör en utmaning och utvärderar användarens svar för att avgöra om det är en människa eller en robot som interagerar med webbplatsen. Det förhindrar användaren att fortsätta om testet misslyckas och gör onlinetransaktionerna säkra genom att förhindra att skräppost eller skadliga syften publiceras.
 
-AEM Forms har stöd för CAPTCHA i anpassningsbara formulär. Du kan använda tjänsten reCAPTCHA av Google för att implementera CAPTCHA.
+AEM Forms stöder CAPTCHA i adaptiva former. Du kan använda tjänsten reCAPTCHA av Google för att implementera CAPTCHA.
 
->[!NOTE] {graybox=&quot;true&quot;}
+>[!NOTE]
 >
 >* AEM Forms har endast stöd för reCaptcha v2. Andra versioner stöds inte.
 >* CAPTCHA i adaptiva formulär stöds inte i offlineläge i appen AEM Forms.
@@ -40,23 +43,23 @@ Så här implementerar du tjänsten reCAPTCHA i AEM Forms:
 1. Hämta [reCAPTCHA API-nyckelpar](https://www.google.com/recaptcha/admin) från Google. Den innehåller en webbplatsnyckel och hemlighet.
 1. Skapa konfigurationsbehållare för molntjänster.
 
-   1. Gå till **[!UICONTROL Verktyg > Allmänt > Konfigurationsläsaren]**.
+   1. Gå till **[!UICONTROL Tools > General > Configuration Browser]**.
    1. Gör följande för att aktivera den globala mappen för molnkonfigurationer eller hoppa över det här steget för att skapa och konfigurera en annan mapp för molntjänstkonfigurationer.
 
-      1. Markera den **[!UICONTROL globala]** mappen i Configuration Browser och tryck på **[!UICONTROL Properties]**.
+      1. Markera mappen i Configuration Browser och tryck på **[!UICONTROL global]** den **[!UICONTROL Properties]**.
 
-      1. Aktivera **[!UICONTROL molnkonfigurationer]** i dialogrutan Konfigurationsegenskaper.
-      1. Tryck på **[!UICONTROL Spara och stäng]** för att spara konfigurationen och stänga dialogrutan.
-   1. Tryck på **[!UICONTROL Skapa]** i Configuration Browser.
-   1. I dialogrutan Skapa konfiguration anger du en rubrik för mappen och aktiverar **[!UICONTROL molnkonfigurationer]**.
-   1. Tryck på **[!UICONTROL Skapa]** för att skapa den mapp som är aktiverad för molntjänstkonfigurationer.
+      1. Aktivera **[!UICONTROL Cloud Configurations]** i dialogrutan Konfigurationsegenskaper.
+      1. Tryck för **[!UICONTROL Save & Close]** att spara konfigurationen och stänga dialogrutan.
+   1. Tryck på **[!UICONTROL Create]** i Configuration Browser.
+   1. I dialogrutan Skapa konfiguration anger du en rubrik för mappen och aktiverar **[!UICONTROL Cloud Configurations]**.
+   1. Tryck för **[!UICONTROL Create]** att skapa mappen som är aktiverad för molntjänstkonfigurationer.
 
 
 1. Konfigurera molntjänsten för reCAPTCHA.
 
-   1. Gå till ![tools-1](assets/tools-1.png) > **Cloud Services** i din AEM-författarinstans.
-   1. Tryck på **[!UICONTROL reCAPTCHA]**. Sidan Konfigurationer öppnas. Välj den konfigurationsbehållare som skapades i föregående steg och tryck sedan på **[!UICONTROL Skapa]**.
-   1. Ange Namn, Webbplatsnyckel och Hemlig nyckel för reCAPTCHA-tjänsten och tryck på **[!UICONTROL Skapa]** för att skapa molntjänstkonfigurationen.
+   1. Gå till ![tools-1](assets/tools-1.png) > **Cloud Service** i din AEM-författarinstans.
+   1. Tryck på **[!UICONTROL reCAPTCHA]**. Sidan Konfigurationer öppnas. Välj den konfigurationsbehållare som skapades i föregående steg och tryck sedan på **[!UICONTROL Create]**.
+   1. Ange Namn, Webbplatsnyckel och Hemlig nyckel för reCAPTCHA-tjänsten och tryck för **[!UICONTROL Create]** att skapa molntjänstkonfigurationen.
    1. I dialogrutan Redigera komponent anger du platsen och de hemliga nycklarna som fås i steg 1. Tryck på **Spara inställningar** och tryck sedan på **OK** för att slutföra konfigurationen.
    När reCAPTCHA-tjänsten har konfigurerats är den tillgänglig för användning i adaptiva formulär. Mer information finns i [Använda CAPTCHA i adaptiva formulär](#using-captcha).
 
@@ -86,7 +89,7 @@ Så här använder du CAPTCHA i adaptiva former:
 
    >[!NOTE]
    >
-   >Välj inte **[!UICONTROL Standard]** i listrutan Captcha-tjänst eftersom standardtjänsten AEM CAPTCHA är inaktuell.
+   >Välj inte **[!UICONTROL Default]** i listrutan Captcha-tjänst eftersom standardtjänsten AEM CAPTCHA är inaktuell.
 
 1. Spara egenskaperna.
 
