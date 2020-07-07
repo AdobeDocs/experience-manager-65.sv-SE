@@ -3,7 +3,7 @@ title: Aktivera tillgångsinsikter via DTM
 description: Lär dig hur du använder Adobe Dynamic Tag Management (DTM) för att aktivera tillgångsinsikter.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
 source-wordcount: '573'
 ht-degree: 1%
@@ -44,15 +44,15 @@ Utför dessa steg för att aktivera tillgångsinsikter via DTM.
 
    ![chlimage_1-59](assets/chlimage_1-195.png)
 
-1. Klicka på Experience Manager-logotypen och gå till **[!UICONTROL Tools > Assets]**.
+1. Klicka på Experience Manager-logotypen och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]**.
 1. Klicka **[!UICONTROL Insights Page Tracker]** på, kopiera spårningskoden och klistra sedan in den i skriptdialogrutan som du öppnade i steg 6. Spara ändringarna.
 
    >[!NOTE]
    >
-   > * `AppMeasurement.js` tas bort. Den förväntas bli tillgänglig via DTM:s Adobe Analytics-verktyg.
-   > * Anropet till `assetAnalytics.dispatcher.init`() har tagits bort. Funktionen förväntas anropas när inläsningen av DTM:s Adobe Analytics-verktyg är klar.
-   > * Beroende på var sidspåraren för tillgångsinsikter finns (till exempel Experience Manager, CDN och så vidare) kan skriptkällans ursprung kräva ändringar.
-   > * För sidspåraren som är värd för Experience Manager ska källan peka på en publiceringsinstans med hjälp av värdnamnet för dispatcher-instansen.
+   >* `AppMeasurement.js` tas bort. Den förväntas bli tillgänglig via DTM:s Adobe Analytics-verktyg.
+   >* Anropet till `assetAnalytics.dispatcher.init()` tas bort. Funktionen förväntas anropas när inläsningen av DTM:s Adobe Analytics-verktyg är klar.
+   >* Beroende på var sidspåraren för tillgångsinsikter finns (till exempel Experience Manager, CDN och så vidare) kan skriptkällans ursprung kräva ändringar.
+   >* För sidspåraren som är värd för Experience Manager ska källan peka på en publiceringsinstans med hjälp av värdnamnet för dispatcher-instansen.
 
 
 1. Öppna `https://dtm.adobe.com`. Klicka **[!UICONTROL Overview]** i webbegenskapen och klicka **[!UICONTROL Add Tool]** eller öppna ett befintligt Adobe Analytics-verktyg. När du skapar verktyget kan du ange **[!UICONTROL Configuration Method]** till **[!UICONTROL Automatic]**.
