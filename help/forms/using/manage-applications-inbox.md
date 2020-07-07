@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dd11fd83-3df1-4727-8340-8c5426812823
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+workflow-type: tm+mt
+source-wordcount: '934'
+ht-degree: 0%
 
 ---
 
@@ -25,15 +28,15 @@ Användargränssnittet i Inkorgen innehåller lista- och kalendervyer för att v
 
 Sammanfattningsvis kan du i Inkorgen skapa ett nytt program och hantera tilldelade uppgifter.
 
->[!NOTE] {graybox=&quot;true&quot;}
+>[!NOTE]
 >
 >Du måste vara medlem i gruppen med arbetsflödesanvändare för att kunna använda AEM Inbox.
 
 ## Skapa program {#create-application}
 
 1. Gå till AEM Inbox på https://&#39;[server]:[port]&#39;/aem/inbox.
-1. Tryck på **[!UICONTROL Skapa > Program]** i Inkorgen. Sidan Välj program visas.
-1. Markera ett program och klicka på **[!UICONTROL Skapa]**. Det adaptiva formulär som är associerat med programmet öppnas. Fyll i informationen i det adaptiva formuläret och tryck på **[!UICONTROL Skicka]**. Det startar det associerade arbetsflödet och skapar en uppgift i den tilldelades inkorg.
+1. Tryck på i Inkorgen **[!UICONTROL Create > Application]**. Sidan Välj program visas.
+1. Markera ett program och klicka på **[!UICONTROL Create]**. Det adaptiva formulär som är associerat med programmet öppnas. Fyll i informationen i det adaptiva formuläret och tryck på **[!UICONTROL Submit]**. Det startar det associerade arbetsflödet och skapar en uppgift i den tilldelades inkorg.
 
 ## Hantera uppgifter {#manage-tasks}
 
@@ -49,10 +52,10 @@ Uppgifter som tilldelas en grupp visas i Inkorgen för alla gruppmedlemmar. Alla
 
 1. Gör något av följande:
 
-   * Om du vill delegera uppgiften trycker du på **[!UICONTROL Delegera]**. Dialogrutan Delegera objekt öppnas. Välj en användare, lägg till en kommentar om du vill och tryck på **[!UICONTROL OK]**.
+   * Tryck på **[!UICONTROL Delegate]** om du vill delegera uppgiften. Dialogrutan Delegera objekt öppnas. Välj en användare, lägg till en kommentar och tryck på **[!UICONTROL OK]**.
    ![delegera](assets/delegate.png)
 
-   * Tryck på **[!UICONTROL Öppna]** för att göra anspråk på uppgiften. Dialogrutan Tilldela till mig själv öppnas. Tryck på **[!UICONTROL Fortsätt]** för att göra anspråk på uppgiften. Uppgiften visas med dig som tilldelad i din inkorg.
+   * Tryck för att göra anspråk på uppgiften **[!UICONTROL Open]**. Dialogrutan Tilldela till mig själv öppnas. Tryck **[!UICONTROL Proceed]** för att göra anspråk på uppgiften. Uppgiften visas med dig som tilldelad i din inkorg.
    ![krav](assets/claim.png)
 
 ### Visa information och utför åtgärder på uppgifter {#view-details-and-perform-actions-on-tasks}
@@ -87,7 +90,7 @@ Fliken Formulär i området för huvudinnehållet visar eventuella bifogade form
 
 Fliken Arbetsflödesinformation överst visar förloppet för uppgiften genom olika steg i arbetsflödet. Här visas slutförda, aktuella och väntande faser för uppgiften. Stegen för ett arbetsflöde definieras i steget [](/help/sites-developing/workflows-step-ref.md) Tilldela uppgift i det associerade arbetsflödet.
 
-Fliken visar också aktivitetshistorik för varje slutförd fas i arbetsflödet. Du kan trycka på **[!UICONTROL Visa detaljer]** för en slutförd fas för att få information om den scenen. Här visas kommentarer, formulär och uppgiftsbilagor, status, start- och slutdatum och så vidare om uppgiften.
+Fliken visar också aktivitetshistorik för varje slutförd fas i arbetsflödet. Om du vill ha mer information om scenen trycker du **[!UICONTROL View Details]** på en färdig fas. Här visas kommentarer, formulär och uppgiftsbilagor, status, start- och slutdatum och så vidare om uppgiften.
 
 ![arbetsflödesinformation](assets/workflow-details.png)
 
@@ -102,11 +105,11 @@ När du utför en åtgärd fortsätter den i arbetsflödet.
 AEM Inbox visar endast aktiva uppgifter. Slutförda uppgifter visas inte i listan. Du kan emellertid använda inkorgsfilter för att filtrera uppgifter baserat på flera parametrar, t.ex. uppgiftstyp, status, start- och slutdatum. Så här visar du slutförda uppgifter:
 
 1. I AEM Inbox trycker du på ![växlingspanel1](assets/toggle-side-panel1.png) för att öppna filterväljaren.
-1. Tryck på **[!UICONTROL åtgärdsstatusdragspelet]** och välj **[!UICONTROL Slutförd]**. Alla slutförda uppgifter visas.
+1. Tryck på **[!UICONTROL Task Status]** dragspelspanelen och välj **[!UICONTROL Complete]**. Alla slutförda uppgifter visas.
 
    ![filter](assets/filter.png)
 
-1. Tryck för att markera en uppgift och klicka på **[!UICONTROL Öppna]**.
+1. Tryck för att markera en uppgift och klicka på **[!UICONTROL Open]**.
 
 Uppgiften öppnas och visar dokumentet eller det adaptiva formulär som är kopplat till uppgiften. För anpassningsbara formulär visar uppgiften det skrivskyddade anpassningsbara formuläret eller dess PDF-dokument med poster som konfigurerats på fliken Formulär/Dokument i arbetsflödessteget [](/help/sites-developing/workflows-step-ref.md)Tilldela uppgift.
 
@@ -114,7 +117,7 @@ I avsnittet med aktivitetsinformation visas information om till exempel åtgärd
 
 ![slutförd uppgift](assets/completed-task.png)
 
-På fliken **[!UICONTROL Arbetsflödesinformation]** visas varje steg i arbetsflödet. Tryck på **[!UICONTROL Visa detaljer]** för att få mer information.
+På fliken **[!UICONTROL Workflow Details]** visas varje steg i arbetsflödet. Tryck **[!UICONTROL View details]** för att få detaljerad information.
 
 ![complete-task-workflow](assets/completed-task-workflow.png)
 
