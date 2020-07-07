@@ -2,7 +2,7 @@
 title: Adobe Experience Manager (AEM) och riktlinjerna för webbtillgänglighet
 description: En introduktion till Adobe Experience Manager (AEM) och riktlinjerna för webbtillgänglighet
 translation-type: tm+mt
-source-git-commit: 7d2996b425db3115851ad35a446ec6b2ed4a32f3
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
 workflow-type: tm+mt
 source-wordcount: '415'
 ht-degree: 69%
@@ -28,7 +28,7 @@ Adobe Experience Manager works with the [guidelines](#wcag-accessibility-guideli
 
 >[!NOTE]
 >
-> Mer information finns i [tillgänglighetsöverensstämmelserapporter för Adobes lösningar](https://www.adobe.com/accessibility/compliance.html).
+>Mer information finns i [tillgänglighetsöverensstämmelserapporter för Adobes lösningar](https://www.adobe.com/accessibility/compliance.html).
 
 ## World Wide Web Consortium {#world-wide-web-consortium}
 
@@ -53,7 +53,7 @@ Med Adobe Experience Manager kan författare och/eller webbplatsägare skapa web
 * [Att skapa AEM (Accessible Adaptive Forms](/help/forms/using/creating-accessible-adaptive-forms.md)Adobe Experience Manager) innehåller ett antal funktioner som gör det enklare att använda adaptiva formulär för användare med olika funktioner. Lösningen hjälper också formulärförfattare att skapa tillgängliga adaptiva formulär.
 
 >[!NOTE]
-> 
+>
 >När du skapar din webbplats bör du bestämma den övergripande nivån som du vill att din plats ska anpassas efter.
 
 ## Tillgänglighet på Adobe {#accessibility-at-adobe}
