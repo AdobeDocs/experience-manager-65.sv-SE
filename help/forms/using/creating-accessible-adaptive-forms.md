@@ -1,15 +1,18 @@
 ---
 title: Skapa hjälpmedelsförberedda adaptiva formulär
 seo-title: Skapa hjälpmedelsförberedda adaptiva formulär
-description: Med AEM Forms får du verktyg och verktyg för att skapa hjälpmedelsförberedda formulär som uppfyller alla tillgänglighetsstandarder.
-seo-description: Med AEM Forms får du verktyg och verktyg för att skapa hjälpmedelsförberedda formulär som uppfyller alla tillgänglighetsstandarder.
+description: AEM Forms har verktyg och verktyg för att skapa hjälpmedelsförberedda adaptiva formulär som uppfyller tillgänglighetsstandarder.
+seo-description: AEM Forms har verktyg och verktyg för att skapa hjälpmedelsförberedda adaptiva formulär som uppfyller tillgänglighetsstandarder.
 uuid: 6472bc2d-47ca-4883-88b7-5de0b758fd00
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 1e95c66b-d132-4c44-a1dc-31fd09af8113
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5a76200a573d95026e2347d2049a089d975b5619
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+workflow-type: tm+mt
+source-wordcount: '1780'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ source-git-commit: 5a76200a573d95026e2347d2049a089d975b5619
 
 ## Introduktion {#introduction}
 
-Ett hjälpmedelsanpassat formulär är ett formulär som alla kan använda, inklusive användare med särskilda behov. Adaptiva formulär innehåller ett antal funktioner som gör dem mer användbara för användare med olika funktioner. Att bygga in tillgänglighet i anpassningsbara formulär ger inte bara en så bred publik som möjligt, utan det är också ett krav när det gäller att leverera dokument i områden där det krävs överensstämmelse med tillgänglighetsstandarder. AEM Forms hjälper formulärutvecklare att följa tillgänglighetsstandarderna.
+Ett hjälpmedelsanpassat formulär är ett formulär som alla kan använda, inklusive användare med särskilda behov. Adaptiva formulär innehåller ett antal funktioner som gör dem mer användbara för användare med olika funktioner. Att bygga in tillgänglighet i anpassningsbara formulär ger inte bara en så bred publik som möjligt, utan det är också ett krav när det gäller att leverera dokument i områden där det krävs överensstämmelse med tillgänglighetsstandarder. AEM Forms hjälpmedelsutvecklare följer standarderna för tillgänglighet.
 
 När du skapar ett anpassat formulär bör du tänka på följande när du skapar hjälpmedelsförberedda formulär:
 
@@ -38,7 +41,7 @@ Med verktyget för hjälpmedelsförberedda namn- och beskrivningsgranskare (ANDI
 
 * Hjälper dig att identifiera tillgänglighetsproblem &#x200B; en webbsida
 * Tillhandahåller förslag för att förbättra &#x200B;
-* Upptäcker problem med tangentbordstillgänglighet och färgkontrast
+* Identifierar problem med tangentbordstillgänglighet och färgkontrast
 * Identifierar tydligt skärmläsarinnehållet enligt standarderna
 
 ANDI fungerar med alla större webbläsare. I [ANDI:s dokumentation](https://www.ssa.gov/accessibility/andi/help/install.html) finns detaljerade anvisningar om hur du konfigurerar och använder verktyget.
@@ -48,8 +51,8 @@ ANDI fungerar med alla större webbläsare. I [ANDI:s dokumentation](https://www
 Temat Ultramarine-Accessible är ett referenstema. Det visar hur du åtgärdar färgkontrast och andra tillgänglighetsrelaterade problem i en adaptiv form. Adobe rekommenderar att du skapar ett anpassat tema för produktionsmiljön baserat på de format som din organisation har godkänt. Utför följande steg för att överföra temat till din AEM-instans:
 
 1. Hämta temapaketet.
-1. Navigera till **[!UICONTROL Experience Manager]** > **[!UICONTROL Navigation]** ![Navigation](assets/Smock_Compass_18_N.svg) > **[!UICONTROL Forms]** i din AEM-instans.
-1. Tryck på **[!UICONTROL Skapa]** > **[!UICONTROL Filöverföring]**. Markera och överför filen x Ultramarine-Accessible-Theme.zip. Temat överförs till din AEM-instans.
+1. Navigera till **[!UICONTROL Experience Manager]** > **[!UICONTROL Navigation]**![ Navigering](assets/Smock_Compass_18_N.svg) > **[!UICONTROL Forms]** i din AEM-instans.
+1. Tryck på **[!UICONTROL Create]** > **[!UICONTROL File Upload]**. Markera och överför filen x Ultramarine-Accessible-Theme.zip. Temat överförs till din AEM-instans.
 
 ## Göra ett anpassat formulär tillgängligt
 
@@ -60,8 +63,8 @@ Du bör fokusera på fyra viktiga aspekter: tangentbordsnavigering, färgkontras
 Använd temat Ultramarine-Accessible i din befintliga adaptiva form. Så här använder du temat:
 
 1. Öppna det adaptiva formuläret för redigering.
-1. Markera en komponent och tryck på den överordnade ikonen. Tryck på **[!UICONTROL Adaptiv formulärbehållare]** på snabbmenyn och tryck sedan på konfigurationsikonen.
-1. Välj temat Ultramarine-Accessible i egenskapswebbläsaren och tryck på **[!UICONTROL ikonen Save]** (Spara).
+1. Markera en komponent och tryck på den överordnade ikonen. Tryck på **[!UICONTROL Adaptive Form Container]** och sedan på konfigurationsikonen på snabbmenyn.
+1. Välj temat Ultramarine-Accessible i egenskapswebbläsaren och tryck på **[!UICONTROL Save]** -ikonen.
 1. Uppdatera webbläsarfönstret. Temat används på det anpassade formuläret.
 
 När du har tillämpat ett tillgängligt tema utför du följande korrigeringar. Förutom tillgänglighetskorrigeringar som ingår i det tillgängliga temat finns det korrigeringar:
@@ -103,7 +106,7 @@ Etiketten som upplevs av skärmläsare behöver inte nödvändigtvis vara samma 
 Så här använder du alternativet Hjälpmedel:
 
 1. Markera en komponent och tryck på ![cmpr](assets/cmppr.png).
-1. Klicka på **[!UICONTROL Tillgänglighet]** i sidlisten för att välja det önskade hjälpmedelsalternativet.
+1. Klicka **[!UICONTROL Accessibility]** i sidlisten för att välja ett hjälpmedelsalternativ.
 
 ### Tillgänglighetsalternativ i formulärkomponenter {#accessibility-options-in-form-components}
 
@@ -113,7 +116,7 @@ Så här använder du alternativet Hjälpmedel:
 
 **Kort beskrivning** För de flesta komponenter visas den korta beskrivningen vid körning när användaren placerar pekaren över komponenten. Du kan ange det här alternativet i fältet för kort beskrivning under alternativet för hjälpinnehåll.
 
-**Titel** Använd det här alternativet om du vill att AEM Forms ska använda den visuella etikett som är kopplad till formulärfältet som skärmläsartext.
+**Titel** Använd det här alternativet om du vill att AEM Forms ska kunna använda den visuella etikett som är kopplad till formulärfältet som skärmläsartext.
 
 **Namn** Du kan ange ett värde i fältet Namn på fliken Bindning. Namnet får inte innehålla blanksteg.
 
@@ -121,7 +124,7 @@ Så här använder du alternativet Hjälpmedel:
 
 >[!NOTE]
 >
-> * Alternativknapp och kryssruta kan bara ha två alternativ för tillgänglighet: Anpassad text och Titel.
+>* Alternativknapp och kryssruta kan bara ha två alternativ för tillgänglighet: Anpassad text och Titel.
 >* För XFA-baserade adaptiva formulär ärvs hjälpmedelsalternativet från de hjälpmedelsalternativ som angetts i XDP. Verktygstips från XDP mappas till Short Description och Caption mappas till Title. De andra alternativen fungerar som de är.
 
 
@@ -165,5 +168,5 @@ Följande kortkommandon finns i AEM Forms.
 Med hjälp av ANDI (Accessible Name and Description Inspector) kan du identifiera och åtgärda tillgänglighetsrelaterade problem i en adaptiv form. Så här använder du ANDI-verktyget för att hitta hjälpmedelsproblemen i en adaptiv form:
 
 1. Öppna det adaptiva formuläret i förhandsgranskningsläge.
-1. Klicka på den bokmärkta ikonen för verktyget ANDI. ANDI-verktyget analyserar det anpassningsbara formuläret och visar tillgänglighetsproblem. Mer information om hur du använder verktyget finns i [ANDI-dokumentationen](https://www.ssa.gov/accessibility/andi/help/howtouse.html).
+1. Klicka på den bokmärkta ikonen för verktyget ANDI. ANDI-verktyget analyserar den anpassningsbara formen och visar tillgänglighetsproblem. Mer information om hur du använder verktyget finns i [ANDI-dokumentationen](https://www.ssa.gov/accessibility/andi/help/howtouse.html).
 1. Granska och åtgärda de problem som rapporterats av ANDI.
