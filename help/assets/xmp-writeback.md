@@ -3,9 +3,9 @@ title: XMP-tillbakaskrivning till återgivningar
 description: Lär dig hur XMP-återskrivningsfunktionen sprider metadataändringar för en resurs till alla eller vissa återgivningar av resursen.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c1c845a479fcf04db1b2da8bcb9cf765fedd58b6
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
-source-wordcount: '726'
+source-wordcount: '724'
 ht-degree: 4%
 
 ---
@@ -64,15 +64,15 @@ Metadataändringarna sprids till miniatyrbilden för återgivningarna.140.100.pn
 >
 >Information om XMP-återskrivningsproblem i 64-bitars Linux finns i [Så här aktiverar du XMP-återskrivningsproblem i 64-bitars RedHat Linux](https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html).
 >
->Mer information om vilka plattformar som stöds finns i [XMP-metadatavillkor](/help/sites-deploying/technical-requirements.md#requirements-for-aem-assets-xmp-metadata-write-back).
+>Information om vilka plattformar som stöds finns i Krav för [återskrivning av XMP-metadata](/help/sites-deploying/technical-requirements.md#requirements-for-aem-assets-xmp-metadata-write-back).
 
 ## Filtrera XMP-metadata {#filtering-xmp-metadata}
 
-[!DNL Experience Manager Assets] har stöd för både blockerad lista och tillåten listfiltrering av egenskaper/noder för XMP-metadata som läses från objektbinärfiler och lagras i JCR när resurser hämtas.
+[!DNL Experience Manager Assets] har stöd för både blockeringslista och tillåtelselista-filtrering av egenskaper/noder för XMP-metadata som läses från objektbinärfiler och lagras i JCR när resurser hämtas.
 
-Genom att filtrera med hjälp av en blockerad lista kan du importera alla XMP-metadataegenskaper utom de egenskaper som har angetts för undantag. För resurstyper som INDD-filer som har stora mängder XMP-metadata (till exempel 1 000 noder med 10 000 egenskaper) är namnen på de noder som ska filtreras inte alltid kända i förväg. Om filtrering med hjälp av en blockerad lista tillåter att ett stort antal resurser med flera XMP-metadata importeras, kan AEM-instansen/klustret stöta på stabilitetsproblem, till exempel övervakningskö med stoppning.
+Om du filtrerar med blockeringslista kan du importera alla XMP-metadataegenskaper utom de egenskaper som anges för undantag. För resurstyper som INDD-filer som har stora mängder XMP-metadata (till exempel 1 000 noder med 10 000 egenskaper) är namnen på de noder som ska filtreras inte alltid kända i förväg. Om filtrering med hjälp av blockeringslista tillåter att ett stort antal resurser med flera XMP-metadata importeras, kan AEM-instansen/klustret stöta på stabilitetsproblem, till exempel övervakningskö med stoppning.
 
-Filtrering av XMP-metadata via tillåten lista löser problemet genom att du kan definiera XMP-egenskaperna som ska importeras. På så sätt ignoreras alla andra eller okända XMP-egenskaper. För bakåtkompatibilitet kan du lägga till några av dessa egenskaper i filtret som använder en blockerad lista.
+Filtrering av XMP-metadata via tillåtelselista löser problemet genom att du kan definiera XMP-egenskaperna som ska importeras. På så sätt ignoreras alla andra eller okända XMP-egenskaper. För bakåtkompatibilitet kan du lägga till några av dessa egenskaper i filtret som använder blockeringslista.
 
 >[!NOTE]
 >
@@ -80,14 +80,14 @@ Filtrering av XMP-metadata via tillåten lista löser problemet genom att du kan
 
 1. Öppna Configuration Manager genom att gå till `https://[aem_server]:[port]/system/console/configMgr`.
 1. Öppna **[!UICONTROL Adobe CQ DAM XmpFilter]** konfigurationen.
-1. Om du vill använda filtrering via en tillåten lista markerar du **[!UICONTROL Apply Allowlist to XMP Properties]** och anger de egenskaper som ska importeras i **[!UICONTROL Allowed XML Names for XMP filtering]** rutan.
+1. Om du vill använda filtrering via tillåtelselista markerar du **[!UICONTROL Apply Allowlist to XMP Properties]** och anger de egenskaper som ska importeras i **[!UICONTROL Allowed XML Names for XMP filtering]** rutan.
 
    ![chlimage_1-136](assets/chlimage_1-347.png)
 
-1. Om du vill filtrera bort blockerade XMP-egenskaper efter att ha använt filtrering via tillåten lista anger du egenskaperna i **[!UICONTROL Blocked XML Names for XMP filtering]** rutan.
+1. Om du vill filtrera bort blockerade XMP-egenskaper efter att du har använt filtrering via tillåtelselista anger du egenskaperna i **[!UICONTROL Blocked XML Names for XMP filtering]** rutan.
 
    >[!NOTE]
    >
-   >The **[!UICONTROL Apply Blocklist to XMP Properties]** option is selected by default. Som standard är filtrering med hjälp av en blockerad lista aktiverat. Om du vill inaktivera sådan filtrering avmarkerar du **[!UICONTROL Apply Blocklist to XMP Properties]** alternativet.
+   >The **[!UICONTROL Apply Blocklist to XMP Properties]** option is selected by default. Filtrering med blockeringslista är alltså aktiverat som standard. Om du vill inaktivera sådan filtrering avmarkerar du **[!UICONTROL Apply Blocklist to XMP Properties]** alternativet.
 
 1. Spara ändringarna.
