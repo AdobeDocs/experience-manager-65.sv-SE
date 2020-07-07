@@ -3,10 +3,10 @@ title: Metadataschema för mapp
 description: Lär dig hur du skapar metadatamatchning för resursmappar i Adobe Experience Manager Assets
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
 source-wordcount: '947'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -20,7 +20,7 @@ Med Adobe Experience Manager Assets kan du skapa metadatamappar för resursmappa
 Använd redigeraren för schemaformulär för mappmetadata när du vill skapa och redigera metadatascheman för mappar.
 
 1. I gränssnittet Experience Manager går du till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Folder Metadata Schemas]**.
-1. On the [!UICONTROL Folder Metadata Schema Forms] page, click **[!UICONTROL Create]**.
+1. På sidan [!UICONTROL Folder Metadata Schema Forms] klickar du på **[!UICONTROL Create]**.
 1. Ange ett namn för formuläret och klicka på **[!UICONTROL Create]**. Det nya schemaformuläret visas på [!UICONTROL Schema Forms] sidan.
 
 ## Redigera schemaformulär för mappmetadata {#edit-folder-metadata-schema-forms}
@@ -108,7 +108,7 @@ Om du konfigurerar ett metadataschema för en mapp lagras sökvägen till schema
 
 ### Tilldela till ett schema från sidan Mappmetadatamatchema {#assign-to-a-schema-from-the-folder-metadata-schema-page}
 
-1. I gränssnittet Experience Manager går du till **[!UICONTROL Tools]** > **[!UICONTROL Assets]**> **[!UICONTROL Folder Metadata Schemas]**.
+1. I gränssnittet Experience Manager går du till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Folder Metadata Schemas]**.
 1. På sidan Schemaformulär för mappmetadata väljer du det schemaformulär som du vill tillämpa på en mapp.
 1. Klicka på **[!UICONTROL Apply to Folder(s)]** i verktygsfältet.
 
