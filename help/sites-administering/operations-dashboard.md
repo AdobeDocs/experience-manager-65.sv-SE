@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: b210f5d7-1d68-49ee-ade7-667c6ab11d2b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9eb8f3921e7d485ca4eb035cd04a9d8731dd6b06
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
 workflow-type: tm+mt
 source-wordcount: '6229'
 ht-degree: 0%
@@ -125,7 +125,7 @@ Du skapar en enskild hälsokontroll i två steg: implementera en kontroll av ski
 
    >[!NOTE]
    >
-   >Kontrollera att följande egenskaper är angivna till true för `/apps/settings/granite/operations/hc` banan:
+   >Kontrollera att följande egenskaper har angetts till true för `/apps/settings/granite/operations/hc` sökvägen:
    >
    >
    >`sling:configCollectionInherit`
@@ -584,7 +584,7 @@ Arbetsflöden kan också rensas från kontrollpanelen för underhåll. För att 
 
 >[!NOTE]
 >
-> Mer detaljerad information om underhåll av arbetsflöden finns på [den här sidan](/help/sites-administering/workflows-administering.md#regular-purging-of-workflow-instances).
+>Mer detaljerad information om underhåll av arbetsflöden finns på [den här sidan](/help/sites-administering/workflows-administering.md#regular-purging-of-workflow-instances).
 
 ### Underhåll av granskningslogg {#audit-log-maintenance}
 
