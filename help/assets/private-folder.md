@@ -3,7 +3,7 @@ title: Skapa och dela en privat mapp i Adobe Experience Manager.
 description: Lär dig hur du skapar en privat mapp i Adobe Experience Manager Assets och delar den med andra användare och tilldelar olika behörigheter till dem.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
 workflow-type: tm+mt
 source-wordcount: '489'
 ht-degree: 1%
@@ -17,7 +17,7 @@ Du kan skapa en privat mapp i användargränssnittet för Adobe Experience Manag
 
 >[!NOTE]
 >
-> Den privata mappen har minst en medlem med ägarrollen.
+>Den privata mappen har minst en medlem med ägarrollen.
 
 1. Klicka på **[!UICONTROL Create]** verktygsfältet i resurskonsolen och välj sedan **[!UICONTROL Folder]** från menyn.
 
