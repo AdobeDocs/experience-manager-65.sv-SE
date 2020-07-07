@@ -3,9 +3,9 @@ title: Bearbeta resurser med mediehanterare och arbetsflöden i [!DNL Adobe Expe
 description: Lär dig mer om mediehanterarna och hur du använder arbetsflöden för att utföra uppgifter i dina digitala resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
+source-git-commit: 39bbb1d663bb54ef425dfeb5e0fc10ea37eb5708
 workflow-type: tm+mt
-source-wordcount: '2052'
+source-wordcount: '2042'
 ht-degree: 1%
 
 ---
@@ -27,9 +27,7 @@ Mediehanterare är tjänster i [!DNL Assets] som utför specifika åtgärder fö
 
 Följande mediehanterare är tillgängliga i [!DNL Assets] och hanterar de vanligaste MIME-typerna:
 
-<!-- TBD: 
-* Apply correct formatting once table is moved to MD.
-* Java versions shouldn't be set to 1.5. Must be updated.
+<!-- TBD: Java versions shouldn't be set to 1.5. Must be updated.
 -->
 
 | Hanterarnamn | Tjänstnamn (i systemkonsolen) | MIME-typer som stöds |
@@ -140,7 +138,7 @@ När du har utfört följande procedur extraheras filens metadata när du överf
 
 1. I Eclipse skapar du `myBundle`[!DNL Maven] projekt:
 
-   1. Klicka på i menyraden **[!UICONTROL File > New > Other]**.
+   1. Klicka på **[!UICONTROL File]** > **[!UICONTROL New]** > **[!UICONTROL Other]** i menyraden.
    1. Expandera [!DNL Maven] mappen i dialogrutan, markera [!DNL Maven] projekt och klicka på **[!UICONTROL Next]**.
    1. Markera kryssrutan Skapa ett enkelt projekt och rutan Använd standardplatser för arbetsyta och klicka sedan på **[!UICONTROL Next]**.
    1. Definiera ett [!DNL Maven] projekt:
@@ -481,7 +479,7 @@ Installera [!DNL ImageMagick] på disken som är värd för [!DNL Experience Man
 
    >[!NOTE]
    >
-   >I vissa versioner av Windows kan kommandot convert misslyckas eftersom det står i konflikt med det inbyggda konverteringsverktyget som är en del av [!DNL Windows] installationen. I det här fallet anger du den fullständiga sökvägen till den programvara som används för att konvertera bildfiler till miniatyrbilder. [!DNL ImageMagick] Till exempel, `"C:\Program Files\ImageMagick-6.8.9-Q16\convert.exe" -define jpeg:size=319x319 ${filename} -thumbnail 319x319 cq5dam.thumbnail.319.319.png`.
+   >I vissa versioner av Windows kan kommandot convert misslyckas eftersom det står i konflikt med det inbyggda konverteringsverktyget som är en del av [!DNL Windows] installationen. I det här fallet anger du den fullständiga sökvägen för den programvara som används för att konvertera bildfiler till miniatyrbilder. [!DNL ImageMagick] Till exempel, `"C:\Program Files\ImageMagick-6.8.9-Q16\convert.exe" -define jpeg:size=319x319 ${filename} -thumbnail 319x319 cq5dam.thumbnail.319.319.png`.
 
 1. Om du vill se om verktyget fungerar som det ska lägger du till en JPG-bild i arbetskatalogen och kör kommandot convert `<image-name>.jpg -flip <image-name>-flipped.jpg` på kommandoraden. En speglad bild läggs till i katalogen. Then, add the command line process step to the **[!UICONTROL DAM Update Asset]** workflow.
 1. Gå till **[!UICONTROL Workflow]** konsolen.
@@ -505,7 +503,7 @@ Använd kommatecken för att avgränsa värdena för [!UICONTROL Process Argumen
 |---|---|
 | mime:&lt;mime-type> | Valfritt argument. Processen används om resursen har samma MIME-typ som argumentet. <br>Flera MIME-typer kan definieras. |
 | tn:&lt;width>:&lt;height> | Valfritt argument. Processen skapar en miniatyrbild med de dimensioner som definieras i argumentet. <br>Flera miniatyrbilder kan definieras. |
-| cmd: &lt;kommando> | Definierar det kommando som ska köras. Syntaxen beror på kommandoradsverktyget. Endast ett kommando kan definieras. <br>Följande variabler kan användas för att skapa kommandot:<br>`${filename}`: indatafilens namn, till exempel original.jpg <br> `${file}`: den fullständiga sökvägen till indatafilen, till exempel /tmp/cqdam0816.tmp/original.jpg <br> `${directory}`: indatafilens katalog, till exempel /tmp/cqdam0816.tmp <br>`${basename}`: namnet på indatafilen utan filnamnstillägg, till exempel original <br>`${extension}`: tillägg för indatafilen, till exempel JPG. |
+| cmd: &lt;kommando> | Definierar det kommando som körs. Syntaxen beror på kommandoradsverktyget. Endast ett kommando kan definieras. <br>Följande variabler kan användas för att skapa kommandot:<br>`${filename}`: indatafilens namn, till exempel original.jpg <br> `${file}`: den fullständiga sökvägen till indatafilen, till exempel `/tmp/cqdam0816.tmp/original.jpg` <br> `${directory}`: indatafilens katalog, till exempel `/tmp/cqdam0816.tmp`<br>`${basename}`: namnet på indatafilen utan filnamnstillägg, till exempel original <br>`${extension}`: tillägg för indatafilen, till exempel JPG. |
 
 Om [!DNL ImageMagick] till exempel är installerat på den disk som är värd för [!DNL Experience Manager] servern och du skapar ett processsteg med [!UICONTROL CommandLineProcess] implementering och följande värden som [!UICONTROL Process Arguments]:
 
