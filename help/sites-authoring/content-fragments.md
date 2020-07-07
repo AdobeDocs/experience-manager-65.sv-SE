@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 4049a7a5-4b33-4462-a25f-3c0daeb6a8a9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 759d2dd8d12861757bf7f54b77d8d3ca170887fe
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
 workflow-type: tm+mt
 source-wordcount: '1158'
 ht-degree: 5%
@@ -82,7 +82,7 @@ Innehållsfragmenten aktiverar:
    >
    >Ett annat sätt är att dra ett visst innehållsfragment direkt till sidan. Då skapas automatiskt den associerade komponenten (innehållsfragment).
 
-1. Inledningsvis visas innehållet från **Huvudelementet** och **mallsidan** (variant). Du kan [markera andra element och/eller variationer](#selecting-the-element-or-variation) efter behov.
+1. Inledningsvis visas innehållet från **Main** Element och **Överordnad** (variation). Du kan [markera andra element och/eller variationer](#selecting-the-element-or-variation) efter behov.
 
    ![cfm-6420-01](assets/cfm-6420-01.png)
 
@@ -173,7 +173,9 @@ För mellanliggande innehåll kan du:
 >När detta inträffar behålls det mellanliggande innehållet som det är:
 >
 >* Mellanliggande komponenter har en absolut position inom komponentsekvensen i fragmentflödet. Den här positionen ändras inte, även när innehållet i styckena i fragmentet ändras.
-   >  Detta kan få det att se ut som om den relativa placeringen har ändrats, eftersom mellanliggande stycken inte har någon kontextuell relation till (fragmentet) stycken som de är placerade bredvid.
+>
+>  
+Detta kan få det att se ut som om den relativa placeringen har ändrats, eftersom mellanliggande stycken inte har någon kontextuell relation till (fragmentet) stycken som de är placerade bredvid.
 >* Om inte de två styckestrukturerna står i konflikt med varandra. I så fall visas inte det mellanliggande innehållet (även om det fortfarande finns internt).
 >
 
