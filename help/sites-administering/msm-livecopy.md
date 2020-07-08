@@ -1,16 +1,11 @@
 ---
 title: Skapa och synkronisera Live-kopior
-seo-title: Skapa och synkronisera Live-kopior
 description: Lär dig hur du skapar och synkroniserar Live-kopior.
-seo-description: Lär dig hur du skapar och synkroniserar Live-kopior.
-uuid: f6f410d4-8c72-48b7-a217-afd6076b512d
-contentOwner: Alison Heimoz
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: site-features
-content-type: reference
-discoiquuid: 161b591b-5871-4b5f-9c63-823b6e67b1fd
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 90364cdf6044616d43c1851b3def9b1f063449ca
+workflow-type: tm+mt
+source-wordcount: '4116'
+ht-degree: 1%
 
 ---
 
@@ -77,6 +72,7 @@ Du kan redigera eller ta bort en befintlig ritningskonfiguration:
 
    * **Egenskaper**; kan du använda detta för att visa och sedan redigera egenskaperna för konfigurationen.
    * **Ta bort**
+
    ![chlimage_1-211](assets/chlimage_1-211.png)
 
 ## Skapa en Live Copy {#creating-a-live-copy}
@@ -105,7 +101,7 @@ Så här skapar du en live-kopia:
 
    ![chlimage_1-212](assets/chlimage_1-212.png)
 
-1. Välj källsidan och klicka eller tryck på **Nästa**. Exempel:
+1. Välj källsidan och klicka eller tryck på **Nästa**. Till exempel:
 
    ![chlimage_1-213](assets/chlimage_1-213.png)
 
@@ -121,6 +117,7 @@ Så här skapar du en live-kopia:
 
    * en **rubrik** för sidan.
    * ett **namn** som används i URL:en.
+
    ![chlimage_1-215](assets/chlimage_1-215.png)
 
 1. Använd kryssrutan **Uteslut undersidor** :
@@ -163,7 +160,7 @@ Så här skapar du en live-kopia av en webbplats från en designkonfiguration:
 
    Alla tillgängliga språk är markerade som standard. Om du vill ta bort ett språk klickar eller trycker du på det **X** som visas bredvid språket.
 
-   Exempel:
+   Till exempel:
 
    ![chlimage_1-217](assets/chlimage_1-217.png)
 
@@ -193,7 +190,7 @@ Så här visar du egenskaperna:
 1. I **Sites** -konsolen väljer du den aktiva kopieringssidan och öppnar egenskaperna.
 1. Välj fliken **Live-kopia** .
 
-   Exempel:
+   Till exempel:
 
    ![chlimage_1-218](assets/chlimage_1-218.png)
 
@@ -203,7 +200,7 @@ Så här visar du egenskaperna:
 
 ### Visa Live-kopior av en blå sida {#seeing-the-live-copies-of-a-blueprint-page}
 
-Utskriftssidor (som refereras i en ritningskonfiguration) ger dig en lista över de aktiva kopieringssidor som använder den aktuella (blå) sidan som källa. Använd den här listan för att hålla reda på live-kopior. Listan visas på fliken **Utskrift** i [sidegenskaperna](/help/sites-authoring/editing-page-properties.md).
+Utskriftssidor (som refereras i en ritningskonfiguration) ger dig en lista över de live-kopieringssidor som använder den aktuella (blå) sidan som källa. Använd den här listan för att hålla reda på live-kopior. Listan visas på fliken **Utskrift** i [sidegenskaperna](/help/sites-authoring/editing-page-properties.md).
 
 ![chlimage_1-219](assets/chlimage_1-219.png)
 
@@ -232,6 +229,16 @@ Rulla ut en ritningssida för att överföra innehållsändringar till live-kopi
 
    ![chlimage_1-221](assets/chlimage_1-221.png)
 
+1. Ange om utrullningsjobbet ska köras omedelbart (**nu**) eller vid ett annat datum/tid (**senare**).
+
+   ![Rityta](assets/rollout-blueprint.png)
+
+Utsläppen bearbetas som asynkrona jobb och kan kontrolleras på kontrollpanelen [**Status **för asynkrona jobb på](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)Global Navigation**->**Verktyg**->**Åtgärder**->**** Jobb **
+
+>[!NOTE]
+>
+>Asynkron utrullningsbearbetning kräver AEM 6.5.3.0 eller senare. I tidigare versioner bearbetades sidorna direkt och synkront.
+
 #### Rulla ut en skiss från referensspåret {#roll-out-a-blueprint-from-the-reference-rail}
 
 1. På **webbplatskonsolen** markerar du sidan i utkastet och öppnar panelen **[Referenser](/help/sites-authoring/basic-handling.md#references)**(i verktygsfältet).
@@ -244,12 +251,19 @@ Rulla ut en ritningssida för att överföra innehållsändringar till live-kopi
 
       Ange om omfånget gäller enbart för den valda sidan eller om det ska omfatta underordnade sidor.
 
-   * **Bakgrundslayout**:
+   * **Schema**:
 
-      Om det finns många sidor/undersidor kan du köra utrullningen som en bakgrundsuppgift.
-   ![chlimage_1-222](assets/chlimage_1-222.png)
+      Ange om utrullningsjobbet ska köras omedelbart (**nu**) eller vid ett senare datum/tid (**senare**).
+
+      ![chlimage_1-222](assets/rollout-live-copy.png)
 
 1. När du har bekräftat dessa uppgifter väljer du **Rollout** för att utföra åtgärden.
+
+Utsläppen bearbetas som asynkrona jobb och kan kontrolleras på kontrollpanelen [**Status **för asynkrona jobb på](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)Global Navigation**->**Verktyg**->**Åtgärder**->**** Jobb **
+
+>[!NOTE]
+>
+>Asynkron utrullningsbearbetning kräver AEM 6.5.3.0 eller senare. I tidigare versioner bearbetades sidorna omedelbart och synkront såvida inte alternativet **Bakgrundsutrullning** markerats.
 
 #### Rulla ut en utkast från Live Copy-översikt {#roll-out-a-blueprint-from-the-live-copy-overview}
 
@@ -260,6 +274,16 @@ Rulla ut en ritningssida för att överföra innehållsändringar till live-kopi
 1. Ange sidorna och eventuella underordnade sidor och bekräfta sedan med bockmarkeringen:
 
    ![chlimage_1-223](assets/chlimage_1-223.png)
+
+1. Ange om utrullningsjobbet ska köras omedelbart (**nu**) eller vid ett annat datum/tid (**senare**).
+
+   ![Rityta](assets/rollout-blueprint.png)
+
+Utsläppen bearbetas som asynkrona jobb och kan kontrolleras på kontrollpanelen [**Status **för asynkrona jobb på](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)Global Navigation**->**Verktyg**->**Åtgärder**->**** Jobb **
+
+>[!NOTE]
+>
+>Asynkron utrullningsbearbetning kräver AEM 6.5.3.0 eller senare. I tidigare versioner bearbetades sidorna direkt och synkront.
 
 ### Synkronisera en Live-kopia {#synchronizing-a-live-copy}
 
@@ -281,7 +305,7 @@ Synkronisera en live-kopia för att dra ändringar från källan till livecopy.
 
    Bekräftelse kommer att begäras. Använd **Synkronisera** för att fortsätta.
 
-#### Synkronisera en Live-kopia från Live-kopieringsöversikten {#synchronize-a-live-copy-from-the-live-copy-overview}
+#### Synkronisera en Live-kopia från Live Copy-översikt {#synchronize-a-live-copy-from-the-live-copy-overview}
 
 Åtgärden [Synkronisera är också tillgänglig från Live-kopieringsöversikten](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)när en Live-kopia-sida är markerad.
 
@@ -291,6 +315,7 @@ Synkronisera en live-kopia för att dra ändringar från källan till livecopy.
 
    * **Sidor och undersidor**
    * **Endast sida**
+
    ![chlimage_1-225](assets/chlimage_1-225.png)
 
 ## Ändra innehåll i Live Copy {#changing-live-copy-content}
@@ -337,7 +362,7 @@ Du kan göra uppehåll i arvet av live-kopior för en live-kopieringssida så at
 
 Så här gör du uppehåll i arv på en sida:
 
-1. Öppna egenskaperna för live-kopieringssidan antingen med kommandot **Visa egenskaper** i konsolen **Platser** eller med **Sidinformation** i verktygsfältet för sidan.
+1. Öppna egenskaperna för live-kopieringssidan antingen med kommandot **Visa egenskaper** i **Sites** -konsolen eller med **Sidinformation** i sidverktygsfältet.
 1. Klicka på eller tryck på fliken **Live Copy** .
 1. Välj **Gör uppehåll** i verktygsfältet. Du kan sedan välja något av följande:
 
@@ -356,9 +381,10 @@ Så här gör du uppehåll i arv på en sida:
 
    * **Gör uppehåll**
    * **Pausa med barn**
+
    ![chlimage_1-226](assets/chlimage_1-226.png)
 
-1. Bekräfta åtgärden **Gör uppehåll** i dialogrutan **Gör uppehåll i Live Copy **:
+1. Bekräfta åtgärden **Gör uppehåll** i dialogrutan **Gör uppehåll i Live-kopia** :
 
    ![chlimage_1-227](assets/chlimage_1-227.png)
 
@@ -392,7 +418,7 @@ När du väljer det här alternativet visas dialogrutan. Du kan välja en synkro
 
 1. Öppna [Live Copy Overview](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview) och välj en Live Copy Page som har pausats. visas som **ARV AVBRUTEN**.
 1. Välj **Återuppta** i verktygsfältet.
-1. Ange om du vill synkronisera sidan efter att du har återställt arv och bekräfta sedan åtgärden **Återuppta** i dialogrutan **Återuppta Live-kopia **.
+1. Ange om du vill synkronisera sidan när arvet har återställts och bekräfta sedan åtgärden **Återuppta** i dialogrutan **Återuppta Live-kopia** .
 
 ### Ändra arvsdjup (grund/djup) {#changing-inheritance-depth-shallow-deep}
 
@@ -403,8 +429,8 @@ På en befintlig live-kopia kan du ändra djupet för en sida; dvs. om underordn
    * Kommer att ha omedelbar effekt och är icke-reversibel.
 
       * Underordnade sidor kopplas explicit från live-kopian. Ytterligare ändringar av underordnade kan inte bevaras om de ångras.
-   * Tar bort alla underordnade `LiveRelationships` även om det finns kapslade `LiveCopies`.
 
+      * Tar bort alla underordnade `LiveRelationships` även om det finns kapslade `LiveCopies`.
 
 * Byt till en djup live-kopia:
 
@@ -423,6 +449,7 @@ Så här anger eller ändrar du djup:
 
    * checked - a deep copy (the child pages are included)
    * clear - a shallow live copy (child pages are exclude)
+
    >[!CAUTION]
    >
    >Att byta till en ytlig live-kopia har omedelbar effekt och går inte att ångra.
@@ -447,7 +474,7 @@ Avbryt arv för att ändra komponentinnehållet eller ta bort komponenten:
 
 1. Klicka på eller tryck på ikonen **Avbryt arv** i komponentens verktygsfält.
 
-   ![](do-not-localize/chlimage_1-8.png)
+   ![Bild](do-not-localize/chlimage_1-8.png)
 
 1. Bekräfta åtgärden med **Ja** i dialogrutan Avbryt arv.
 
@@ -457,7 +484,7 @@ Avbryt arv för att ändra komponentinnehållet eller ta bort komponenten:
 
 Om du vill aktivera arv för en komponent klickar eller trycker du på ikonen **Aktivera arv** igen i komponentens verktygsfält.
 
-![](do-not-localize/chlimage_1-9.png)
+![bild](do-not-localize/chlimage_1-9.png)
 
 ### Ändra ordning på komponenter på en Live Copy-sida {#changing-the-order-of-components-on-a-live-copy-page}
 
@@ -495,10 +522,10 @@ Du kan senare återaktivera arv för en egenskap om det behövs.
 >
 >När du återaktiverar arv synkroniseras inte egenskapen för live-kopieringssidan automatiskt med egenskapen source. Du kan begära en synkronisering manuellt om det behövs.
 
-1. Öppna egenskaperna för live-kopieringssidan med alternativet **Visa egenskaper** i **Sites** -konsolen eller med ikonen **Sidinformation** i sidverktygsfältet.
+1. Öppna egenskaperna för live-kopieringssidan med **alternativet Visa egenskaper** i **Sites** -konsolen eller med ikonen **Sidinformation** i sidverktygsfältet.
 1. Om du vill avbryta arvet av en egenskap klickar eller trycker du på länkikonen som visas till höger om egenskapen.
 
-   ![](do-not-localize/chlimage_1-10.png)
+   ![bild](do-not-localize/chlimage_1-10.png)
 
 1. Klicka på eller tryck på **Ja** i bekräftelsedialogrutan för avbryt arv ****.
 
@@ -506,7 +533,7 @@ Du kan senare återaktivera arv för en egenskap om det behövs.
 
 Om du vill aktivera arv för en egenskap klickar eller trycker du på ikonen **Återställ arv** som visas bredvid egenskapen.
 
-![](do-not-localize/chlimage_1-11.png)
+![bild](do-not-localize/chlimage_1-11.png)
 
 ### Återställa en Live Copy-sida {#resetting-a-live-copy-page}
 
@@ -551,7 +578,8 @@ Om du vill spåra de ändringar du har gjort kan du visa planeringsidan i **Refe
 
    * **Jämför med utkast** (när en live-kopieringssida är markerad)
    * **Jämför med Live Copy** (när en ritningssida är markerad)
-   Exempel:
+
+   Till exempel:
 
    ![chlimage_1-235](assets/chlimage_1-235.png)
 
@@ -583,12 +611,14 @@ Det påverkar var i trädet du använder **Koppla loss**:
 
    * direktrelationen tas bort för den undersidan (eller grenen)
    * och (sub-)sidorna i livekopiegrenen behandlas som om de skapats manuellt.
+
    *Undersidorna är dock fortfarande beroende* av den överordnade grenens aktiva relation, så en ytterligare utrullning av ritningssidan/-sidorna kommer att båda:
 
    1. Byt namn på den eller de frånkopplade sidorna:
 
       * Detta beror på att MSM betraktar dem som manuellt skapade sidor som orsakar en konflikt eftersom de har samma namn som de livecopy-sidor som de försöker skapa.
    1. Skapa en ny (livecopy) sida med det ursprungliga namnet som innehåller ändringarna från utrullningen.
+
    >[!NOTE]
    >
    >Se [MSM-utrullningskonflikter](/help/sites-administering/msm-rollout-conflicts.md) för mer information om sådana situationer.
@@ -614,4 +644,3 @@ Så här frigör du en live-kopia:
 1. Bekräfta åtgärden **Koppla loss** i dialogrutan **Koppla loss live-kopia** :
 
    ![chlimage_1-237](assets/chlimage_1-237.png)
-
