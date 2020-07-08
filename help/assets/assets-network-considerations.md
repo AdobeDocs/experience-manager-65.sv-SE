@@ -1,9 +1,9 @@
 ---
 title: Resurser för nätöverväganden och krav
-description: Diskutera nätverksaspekter när du utformar en Adobe Experience Manager Assets-distribution.
+description: Diskutera nätverksaspekter när du utformar en distribution av Adobe Experience Manager Assets.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
 source-wordcount: '1029'
 ht-degree: 0%
@@ -17,12 +17,12 @@ Att förstå ert nätverk är lika viktigt som att förstå Adobe Experience Man
 
 Se till att du inkluderar följande i nätverksdiagrammet:
 
-* Anslutning från klientenheten (till exempel dator, mobil och surfplatta) till nätverket
-* Företagets topologi
-* Länka till Internet från företagsnätverket och Experience Manager-miljön
-* Topologi för Experience Manager-miljön
-* Definiera samtidiga användare av Experience Managers nätverksgränssnitt
-* Definierade arbetsflöden för Experience Manager-instansen
+* Anslutning från klientenheten (till exempel dator, mobil och surfplatta) till nätverket.
+* Företagsnätets topologi.
+* Länka upp till Internet från företagets nätverk och Experience Manager.
+* Topologi för Experience Manager-miljön.
+* Definiera samtidiga användare av nätverksgränssnittet i Experience Manager.
+* Definierade arbetsflöden för driftsättningen i Experience Manager.
 
 ## Anslutning från klientenheten till företagsnätverket {#connectivity-from-the-client-device-to-the-corporate-network}
 
@@ -46,7 +46,7 @@ Den dator som visas till höger har en begränsad uppström till företagsnätve
 
 Diagrammet visar högre hastigheter för överordnad länk inom företagsnätverket än vad som vanligtvis används. Dessa rör är delade resurser. Om den delade växeln förväntas hantera 50 klienter kan det vara en krymppunkt. I det inledande diagrammet delar bara två datorer den aktuella anslutningen.
 
-## Länka till Internet från företagsnätverket och Experience Manager-miljön {#uplink-to-the-internet-from-the-corporate-network-and-aem-environment}
+## Länka upp till Internet från företagets nätverk och Experience Manager {#uplink-to-the-internet-from-the-corporate-network-and-aem-environment}
 
 ![chlimage_1-355](assets/chlimage_1-355.png)
 
@@ -58,25 +58,25 @@ Företagets brandväggar och proxies kan också forma bandbredden på många oli
 
 I det här exemplet har företaget en upplänk på 10 Gbit/s. Den borde vara tillräckligt stor för flera kunder. Dessutom har brandväggen en värdhastighetsgräns på 10 Mbit/s. Denna begränsning kan potentiellt begränsa trafiken till en enda värd till 10 Mbit/s, även om uppkopplingen till Internet är på 10 Gbit/s.
 
-Det här är den minsta klientorienterade kodpunkten. Du kan dock utvärdera om det finns en ändring eller konfigurera en tillåten lista med den nätverksåtgärdsgrupp som ansvarar för den här brandväggen.
+Det här är den minsta klientorienterade kodpunkten. Du kan dock utvärdera om en tillåtelselista har ändrats eller konfigurerats med den nätverksåtgärdsgrupp som ansvarar för den här brandväggen.
 
 I exempeldiagrammen kan du dra slutsatsen att sex enheter delar en konceptuell kanal på 10 Mbit/s. Beroende på storleken på de tillgångar som används kan detta vara otillräckligt för att uppfylla användarnas förväntningar.
 
-## Topologi för Experience Manager-miljön {#topology-of-the-aem-environment}
+## Topologi i Experience Manager-miljön {#topology-of-the-aem-environment}
 
 ![chlimage_1-356](assets/chlimage_1-356.png)
 
-För att kunna utforma topologin i Experience Manager-miljön krävs detaljerade kunskaper om systemkonfigurationen och hur nätverket är anslutet i användarmiljön.
+För att kunna designa topologin i Experience Manager-miljön krävs detaljerade kunskaper om systemkonfigurationen och hur nätverket är anslutet i användarmiljön.
 
-Exempelscenariot innehåller en publiceringsgrupp med fem servrar, ett binärt S3-arkiv och Dynamic Media konfigurerat.
+Exempelscenariot innehåller en publiceringsgrupp med fem servrar, en binär S3-butik och konfigurerade Dynamic Media.
 
-Dispatchern delar med sig av sin 100 Mbit/s-anslutning med två enheter, den externa världen och Experience Manager-instansen. För samtidiga överförings- och nedladdningsåtgärder bör du dividera numret med två. Den anslutna externa lagringsplatsen använder en separat anslutning.
+Dispatchern delar med sig av sin 100 Mbit/s-anslutning med två enheter, världen utanför och Experience Manager-driftsättningen. För samtidiga överförings- och nedladdningsåtgärder bör du dividera numret med två. Den anslutna externa lagringsplatsen använder en separat anslutning.
 
-Experience Manager-instansen delar sin 1 Gbit/s-anslutning med flera tjänster. Från ett nätverkstopologiperspektiv motsvarar det att dela en kanal med olika tjänster.
+Experience Manager-distributionen delar med sig av sin 1 Gbit/s-anslutning med flera tjänster. Från ett nätverkstopologiperspektiv motsvarar det att dela en kanal med olika tjänster.
 
-Om du granskar nätverket från klientenheten till Experience Manager-instansen verkar den minsta kodpunkten vara begränsningen för företagets brandvägg på 10 Mbit. Du kan använda de här värdena i storlekskalkylatorn i [storleksändringshandboken](assets-sizing-guide.md) för resurser för att avgöra användarupplevelsen.
+När du granskar nätverket från klientenheten till driftsättningen i Experience Manager verkar den minsta chokpunkten vara begränsningen för företagets brandvägg på 10 Mbit. Du kan använda de här värdena i storlekskalkylatorn i [storleksändringshandboken](assets-sizing-guide.md) för resurser för att avgöra användarupplevelsen.
 
-## Definierade arbetsflöden för Experience Manager-instansen {#defined-workflows-of-the-aem-instance}
+## Definierade arbetsflöden för distributionen av Experience Manager {#defined-workflows-of-the-aem-deployment}
 
 När du tar hänsyn till nätverksprestanda kan det vara viktigt att tänka på arbetsflödena och publiceringen som kommer att ske i systemet. Dessutom använder S3 eller annan nätverksansluten lagring som du använder och I/O-begäranden nätverksbandbredd. Det innebär att även i ett helt optimerat nätverk kan prestanda begränsas av disk-I/O.
 
