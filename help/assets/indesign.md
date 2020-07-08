@@ -1,11 +1,11 @@
 ---
 title: Integrera [!DNL Adobe Experience Manager Assets] med [!DNL Adobe InDesign Server]
-description: Lär dig hur du integrerar [!DNL Adobe Experience Manager Assets] med [!DNL Adobe InDesign Server].
+description: Lär dig hur du [!DNL Adobe Experience Manager Assets] kan integrera med [!DNL Adobe InDesign Server].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
-source-wordcount: '1547'
+source-wordcount: '1528'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 * En proxyarbetare som definierar och hanterar en viss uppgift.
 Dessa kan omfatta en mängd olika arbetsuppgifter. till exempel använda en [!DNL InDesign Server] för att bearbeta filer.
 
-Om du vill överföra filer till [!DNL Experience Manager Assets] den som du har skapat med [!DNL Adobe InDesign] en proxy används de. Detta använder en proxyarbetare för att kommunicera med [!DNL Adobe InDesign Server], där [skript](https://www.adobe.com/devnet/indesign/documentation.html#idscripting) körs för att extrahera metadata och generera olika återgivningar för [!DNL Experience Manager Assets]. Proxyarbetaren möjliggör tvåvägskommunikation mellan [!DNL InDesign Server] och [!DNL Experience Manager] instansen/instanserna i en molnkonfiguration.
+Om du vill överföra filer till [!DNL Experience Manager Assets] den som du har skapat med [!DNL Adobe InDesign] en proxy används de. Detta använder en proxyarbetare för att kommunicera med [!DNL Adobe InDesign Server], där [skript](https://www.adobe.com/devnet/indesign/documentation.html#idscripting) körs för att extrahera metadata och generera olika återgivningar för [!DNL Experience Manager Assets]. Proxyarbetaren möjliggör tvåvägskommunikation mellan [!DNL InDesign Server] och [!DNL Experience Manager] instanser i en molnkonfiguration.
 
 >[!NOTE]
 >
@@ -44,6 +44,7 @@ Detta kommandoskript kommer att:
       * PDF- och JPG-renderingar genereras.
       * HTML- och IDML-renderingar genereras.
    * Lägg tillbaka de resulterande filerna i [!DNL Experience Manager Assets].
+
    >[!NOTE]
    >
    >IDML är ett XML-baserat format som återger allt innehåll i [!DNL InDesign] filen. Den lagras som ett komprimerat paket med [ZIP](https://www.techterms.com/definition/zip) -komprimering. Mer information finns i [InDesign Interchange Formats INX och IDML](http://www.peachpit.com/articles/article.aspx?p=1381880&amp;seqNum=8).
@@ -63,7 +64,7 @@ Detta kommandoskript kommer att:
 Om du vill integrera [!DNL InDesign Server] för användning med [!DNL Experience Manager Assets] och efter att du har konfigurerat din proxy måste du:
 
 1. [Installera InDesign Server](#installing-the-indesign-server).
-1. Om det behövs [konfigurerar du Experience Manager Assets-arbetsflödet](#configuring-the-aem-assets-workflow).
+1. Om det behövs [konfigurerar du arbetsflödet](#configuring-the-aem-assets-workflow)i Experience Manager Assets.
 Detta är bara nödvändigt om standardvärdena inte passar för din instans.
 1. Konfigurera en [proxyarbetare för InDesign Server](#configuring-the-proxy-worker-for-indesign-server).
 
@@ -201,13 +202,13 @@ TBD: Make updates to configurations for allow and block list after product updat
 
 >[!NOTE]
 >
->När du arbetar med en pool med arbetare kan du aktivera en lista med blockerade IDS-arbetare.
+>När du arbetar med en grupp arbetare kan du aktivera blockeringslista för IDS-arbetare.
 >
 >Om du vill göra det aktiverar du kryssrutan under **[!UICONTROL enable.retry.name]** `com.day.cq.dam.ids.impl.IDSJobProcessor.name` konfigurationen, som aktiverar omprövningar av IDS-jobb.
 >
 >Under `com.day.cq.dam.ids.impl.IDSPoolImpl.name` konfigurationen anger du också ett positivt värde för `max.errors.to.blacklist` parameter som avgör antalet jobbomprövningar innan du tar bort ett ID från jobbhanterarlistan.
 >
->Som standard valideras IDS-arbetaren efter den konfigurerbara (`retry.interval.to.whitelist.name`) tiden i minuter. Om arbetaren hittas online tas den bort från listan Blockerade.
+>Som standard valideras IDS-arbetaren efter den konfigurerbara (`retry.interval.to.whitelist.name`) tiden i minuter. Om arbetaren hittas online tas den bort från blockeringslista.
 
 ## Aktivera stöd för [!DNL InDesign Server] 10.0 eller senare {#enabling-support-for-indesign-server-or-later}
 
@@ -223,7 +224,7 @@ För [!DNL InDesign Server] 10.0 eller senare utför du följande steg för att 
 
 ## Konfigurera [!DNL Experience Manager] autentiseringsuppgifter {#configure-aem-credentials}
 
-Du kan ändra administratörens standardautentiseringsuppgifter (användarnamn och lösenord) för att komma åt [!DNL InDesign Server] från din [!DNL Experience Manager] instans utan att integreringen med [!DNL InDesign Server]avbryts.
+Du kan ändra administratörens standardautentiseringsuppgifter (användarnamn och lösenord) för att komma åt [!DNL InDesign Server] från din [!DNL Experience Manager] distribution utan att integreringen med [!DNL InDesign Server]avbryts.
 
 1. Gå till `/etc/cloudservices/proxy.html`.
 1. Ange det nya användarnamnet och lösenordet i dialogrutan.
