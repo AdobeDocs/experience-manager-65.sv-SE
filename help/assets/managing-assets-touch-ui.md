@@ -1,12 +1,12 @@
 ---
-title: Hantera dina digitala resurser i [!DNL Adobe Experience Manager Assets].
+title: Hantera era digitala resurser i [!DNL Adobe Experience Manager Assets].
 description: Lär dig resurshanteringsåtgärder som överföring, hämtning, redigering, sökning, borttagning, anteckning och version av digitala resurser.
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
-source-wordcount: '9031'
+source-wordcount: '9026'
 ht-degree: 3%
 
 ---
@@ -63,6 +63,7 @@ Innan du överför en resurs måste du se till att den har ett [format](/help/as
 
    * On the toolbar, click **[!UICONTROL Create]**. Then on the menu, click **[!UICONTROL Files]**. Du kan byta namn på filen i den dialogruta som visas om det behövs.
    * I en webbläsare som har stöd för HTML5 drar du resurserna direkt till [!DNL Assets] användargränssnittet. Dialogrutan för att byta namn på filen visas inte.
+
    ![Skapa alternativ för att överföra resurser](assets/create-options.png)
 
    Om du vill markera flera filer trycker du på Ctrl- eller Kommando-tangenten och markerar resurserna i dialogrutan för filväljaren. När du använder en iPad kan du bara markera en fil i taget.
@@ -119,6 +120,7 @@ Innan du överför en resurs måste du se till att den har ett [format](/help/as
 
    * resursens filnamn får inte innehålla `* / : [ \\ ] | # % { } ? &`
    * resursmappens namn får inte innehålla `* / : [ \\ ] | # % { } ? \" . ^ ; + & \t`
+
    Inkludera inte specialtecken i filnamnstilläggen för resurser.
 
    ![I dialogrutan för överföring av förlopp visas status för överförda filer och filer som inte kan överföras](assets/chlimage_1-10.png)
@@ -131,7 +133,7 @@ Innan du överför en resurs måste du se till att den har ett [format](/help/as
 
 ### Serieuppladdningar {#serialuploads}
 
-Att överföra flera resurser i grupp förbrukar betydande I/O-resurser, vilket kan påverka prestanda i din [!DNL Assets] instans negativt. Om du har en långsam internetanslutning ökar tiden det tar att överföra drastiskt på grund av att disk-I/O-inläsningen har ökat. Dessutom kan din webbläsare införa ytterligare begränsningar för antalet POST-begäranden som [!DNL Assets] kan hantera samtidiga överföringar av resurser. Därför misslyckas överföringen eller avslutas i förtid. Det innebär att vissa filer kanske [!DNL Experience Manager Assets] saknas när en grupp filer importeras eller att någon fil inte kan importeras alls.
+Att överföra många resurser i grupp förbrukar betydande I/O-resurser, vilket kan påverka [!DNL Assets] driftsättningens prestanda negativt. Om du har en långsam internetanslutning ökar tiden det tar att överföra drastiskt på grund av att disk-I/O-inläsningen har ökat. Dessutom kan din webbläsare införa ytterligare begränsningar för antalet POST-begäranden som [!DNL Assets] kan hantera samtidiga överföringar av resurser. Därför misslyckas överföringen eller avslutas i förtid. Det innebär att vissa filer kanske [!DNL Experience Manager Assets] saknas när en grupp filer importeras eller att någon fil inte kan importeras alls.
 
 För att lösa den här situationen [!DNL Assets] infogar en resurs i taget (seriell överföring) under en gruppöverföring, i stället för att alla resurser hämtas samtidigt.
 
@@ -156,7 +158,7 @@ Dynamic Media möjliggör batchöverföring av resurser via FTP-server. Om du t�
 1. Logga in på FTP-servern med det FTP-användarnamn och lösenord som du fick från e-postmeddelandet om etablering. Överför filer eller mappar till FTP-servern i FTP-klienten.
 1. [Logga in på Dynamic Media Classic](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) med hjälp av autentiseringsuppgifter som du fått från e-postmeddelandet om etablering. Klicka på i det globala navigeringsfältet **[!UICONTROL Upload]**.
 
-1. Klicka på fliken på sidan Överför, i det övre vänstra hörnet **[!UICONTROL Via FTP]** .
+1. Klicka på **[!UICONTROL Via FTP]** fliken på sidan Överför, i det övre vänstra hörnet.
 1. Välj en FTP-mapp att överföra filer från till vänster på sidan. till höger på sidan väljer du en målmapp.
 1. Klicka i det nedre högra hörnet av sidan **[!UICONTROL Job Options]** och ange önskade alternativ baserat på resurserna i den mapp du valde.
 
@@ -350,6 +352,7 @@ Så här förhandsgranskar du en resurs med tangentbordet:
 1. Så här zoomar du in i resursen:
    1. Använd `Tab` tangenten för att flytta fokus till inzoomningsalternativet.
    1. Använd `Enter` tangenten för att zooma in i bilden.
+
    Om du vill zooma ut använder du `Tab` tangenten för att flytta fokus till utzoomningsalternativet och trycker på `Enter`.
 
 1. Använd `Shift` + `Tab` -tangenterna för att flytta tillbaka fokus på bilden.
@@ -407,6 +410,7 @@ Så här förhandsgranskar du en resurs med tangentbordet:
    * Antal gånger som resursen visats eller hämtats
    * Kanaler/enheter som resursen användes via
    * Kreativa lösningar där resursen nyligen användes
+
    Mer information finns i [Resursinsikter](/help/assets/touch-ui-asset-insights.md).
 
 1. Klicka på **[!UICONTROL Save & Close]**.
@@ -480,6 +484,7 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
    * Klicka **[!UICONTROL Back]** för att gå tillbaka till **[!UICONTROL Select Destination]** skärmen.
 
    * Klicka **[!UICONTROL Cancel]** för att avbryta flyttningen.
+
    Om du inte uppdaterar referenser fortsätter de att peka på resursens tidigare sökväg. Om du justerar referenserna uppdateras de till den nya resurssökvägen.
 
 ## Hantera återgivningar {#managing-renditions}
@@ -555,6 +560,7 @@ Du kan även inaktivera Tvinga borttagningsknappen med hjälp av en övertäckni
 
       * Om resursen inte har några referenser tas resursen bort.
       * Om resursen har referenser visas ett felmeddelande om att det finns referenser till **en eller flera resurser.** Du kan välja **[!UICONTROL Force Delete]** eller **[!UICONTROL Cancel]**.
+
    >[!NOTE]
    >
    >Användaren måste ha borttagningsbehörighet för att kunna ta bort resurser `dam/asset`. Om du bara har ändringsbehörighet kan du bara redigera metadata för resursen och lägga till anteckningar till resursen. Du kan dock inte ta bort resursen eller dess metadata.
@@ -607,6 +613,7 @@ Se [Hämta resurser från Experience Manager](/help/assets/download-assets-from-
 
    * **[!UICONTROL Cancel]** för att stoppa åtgärden
    * **[!UICONTROL Unpublish]** för att bekräfta att resurserna är opublicerade (inte längre tillgängliga i publiceringsmiljön) vid det angivna datumet.
+
    >[!NOTE]
    >
    >När du avpublicerar en komplex resurs avpublicerar du bara resursen. Undvik att avpublicera referenserna eftersom andra publicerade resurser kan referera till dem.
@@ -677,6 +684,7 @@ Med redigeringsverktygen i [!DNL Assets] gränssnittet kan du utföra små redig
    * Markera resursen och klicka sedan **[!UICONTROL Edit]** i verktygsfältet.
    * Klicka på **[!UICONTROL Edit]** det alternativ som visas på en resurs i kortvyn.
    * Klicka på **[!UICONTROL Edit]** i verktygsfältet.
+
    ![Alternativet Redigera i verktygsfältet](assets/edit_icon.png)
 
 1. Beskär bilden genom att klicka på **[!UICONTROL Crop]** Alternativ för att beskära en bild ![](assets/chlimage_1-22.png).
@@ -742,6 +750,7 @@ Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Vi
 
    * [Snabbåtgärder](/help/assets/managing-assets-touch-ui.md#quick-actions)
    * Från verktygsfältet när du har valt resursen eller navigerat till resurssidan
+
    ![Alternativet Anteckningar](assets/chlimage_1-29.png)
 
 1. Lägg till en kommentar i rutan **[!UICONTROL Comment]** längst ned på tidslinjen. Du kan också markera ett område i bilden och lägga till en anteckning i dialogrutan **[!UICONTROL Add Annotation]**.
@@ -870,7 +879,7 @@ Om en resurs innehåller anteckningar på främmande språk (särskilt icke-lati
 
    * Inkludera strängen `<font_family_name_of_custom_font, sans-serif>` i alternativet för teckensnittsfamilj. Om du till exempel vill skriva ut anteckningar i CJK (kinesiska, japanska och koreanska), inkluderar du strängen `Arial Unicode MS, Noto Sans, Noto Sans CJK JP, sans-serif` i alternativet för teckensnittsfamilj. Om du vill skriva ut anteckningar på hindi hämtar du lämpligt teckensnitt och konfigurerar teckensnittsfamiljen som Arial Unicode MS, Noto Sans, Noto Sans CJK JP, Noto Sans Devanagari, sans-serif.
 
-1. Starta om [!DNL Experience Manager] instansen.
+1. Starta om [!DNL Experience Manager] distributionen.
 
 Här är ett exempel på hur du kan konfigurera [!DNL Experience Manager] att skriva ut anteckningar i CJK (kinesiska, japanska och koreanska):
 
@@ -933,6 +942,7 @@ Du kan även aktivera automatisk versionshantering via ett arbetsflöde. När du
 1. Så här jämför du två versioner av en bild:
    * Klicka på den version som ska jämföras med den aktuella versionen.
    * Dra skjutreglaget åt vänster om du vill lägga den här versionen ovanpå den aktuella versionen och jämföra.
+
    ![Använd reglaget för att jämföra de valda versionerna av en resurs med den aktuella versionen](assets/version-slider.gif)
 
    *Bild: Använd skjutreglaget för att enkelt jämföra de valda versionerna av en resurs med den aktuella versionen.*
