@@ -3,7 +3,7 @@ title: Förbättrade smarta taggar
 description: Förbättrade smarta taggar
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
 source-wordcount: '1496'
 ht-degree: 10%
@@ -27,7 +27,7 @@ När en tagg har tränats och är klar kan tjänsten nu använda dessa taggar p�
 
 I bakgrunden använder smarta innehållstjänster Adobe Sensei AI-ramverket för att utbilda sin bildigenkänningsalgoritm i er taggstruktur och i er affärsklonomi. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på en annan uppsättning resurser.
 
-Smart Content Service är en molntjänst som tillhandahålls via Adobe I/O. Om du vill använda den i Adobe Experience Manager måste systemadministratören integrera din Experience Manager-instans med Adobe I/O.
+Smart Content Service är en molntjänst som tillhandahålls via Adobe I/O. För att kunna använda programmet i Adobe Experience Manager måste systemadministratören integrera driftsättningen i Experience Manager med Adobe I/O.
 
 Här är sammanfattningsvis de viktigaste stegen för att använda tjänsten Smart Content:
 
