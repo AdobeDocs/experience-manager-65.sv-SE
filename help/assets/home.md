@@ -4,7 +4,7 @@ seo-title: Användarhandbok för Adobe Experience Manager 6.5 Assets
 description: Den här guiden täcker alla Experience Manager Assets-uppgifter, t.ex. hur du skapar, hanterar, levererar och optimerar digitala resurser.
 seo-description: täcker alla Experience Manager Assets-uppgifter, t.ex. hur man skapar, hanterar, levererar och optimerar digitala resurser.
 translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 11%
@@ -35,7 +35,7 @@ Den här guiden täcker alla Experience Manager Assets-uppgifter, t.ex. hur du s
 | [Användargränssnittets skrivguide](/help/sites-classic-ui-authoring/home.md) | I den här handboken förklaras begreppen för att skapa i Experience Manager i det klassiska användargränssnittet. |
 | [Användarhandbok för skärmar](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html) | Lär dig mer om den digitala signeringslösningen för att publicera dynamiska och interaktiva digitala upplevelser. |
 | [Distribuera användarhandbok](/help/sites-deploying/home.md) | Den här guiden visar grunderna i Experience Manager. |
-| [Utveckla användarhandbok](/help/sites-developing/home.md) | Lär dig hur du skapar din Experience Manager-instans. |
+| [Utveckla användarhandbok](/help/sites-developing/home.md) | Lär dig hur du bygger ut driftsättningen i Experience Manager. |
 | [Hantera användarhandbok](/help/managing/home.md) | I den här guiden beskrivs hur du hanterar ett Experience Manager-projekt utan problem. |
 | [Användarhandbok för mobiler](/help/mobile/home.md) | I den här guiden beskrivs hur du skapar och hanterar innehåll för mobilprogram. |
 | [Experience Manager Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/home.html) | Den här guiden visar hur du delar användargenererat innehåll med [!DNL Livefyre]. |
