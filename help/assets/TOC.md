@@ -4,17 +4,17 @@ product: adobe experience manager
 audience: end-user
 user-guide-title: Användarhandbok för Experience Manager 6.5 Assets
 translation-type: tm+mt
-source-git-commit: d870e80e33c5ba36a43ff45ba2dc82551491bb18
+source-git-commit: e3907ac1c6e3900f280b2570b93053b10128cc6d
 workflow-type: tm+mt
-source-wordcount: '645'
-ht-degree: 38%
+source-wordcount: '638'
+ht-degree: 39%
 
 ---
 
 
 # Användarhandbok för Experience Manager 6.5 Assets {#assets}
 
-+ [Användarhandbok för [!DNL Assets]](home.md)
++ [[!DNL Assets] användarhandbok](home.md)
 + [Versionsinformation om AEM 6.5 Assets](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/assets.html)
 + [Om DAM](assets.md)
 + [Metodtips för resurser](best-practices-for-assets.md)
@@ -22,7 +22,7 @@ ht-degree: 38%
    + [AEM Assets hemsida](assets-home-page.md)
    + [Söka efter resurser i AEM](search-assets.md)
    + [Flerspråkiga resurser](multilingual-assets.md)
-   + [Använd [!DNL Adobe Stock]-resurser i AEM Assets](aem-assets-adobe-stock.md)
+   + [Använda [!DNL Adobe Stock] resurser i AEM Assets](aem-assets-adobe-stock.md)
    + [Förhandsgranska 3D-resurser](previewing-3d-assets.md)
    + [Granska resurser i mappar och samlingar](bulk-approval.md)
    + [Aktivitetsström på tidslinjen](activity-stream.md)
@@ -78,7 +78,7 @@ ht-degree: 38%
    + [Anpassa och utöka AEM Assets](extending-assets.md)
    + [Bearbeta resurser med mediehanterare och arbetsflöden](media-handlers.md)
    + [Utöka sökfunktionen](searchx.md)
-   + [Installera och konfigurera [!DNL ImageMagick] så att det fungerar med AEM Assets](best-practices-for-imagemagick.md)
+   + [Installera och [!DNL ImageMagick] konfigurera för AEM Assets](best-practices-for-imagemagick.md)
    + [Integrera resurser med aktivitetsströmmen](extending-activity-stream.md)
    + [Utöka resursredigeraren](asseteditorx.md)
    + [HTTP API för Assets](mac-api-assets.md)
@@ -151,7 +151,7 @@ ht-degree: 38%
    + [Skapa översättningsprojekt](translation-projects.md)
    + [Förbered resurser för översättning](preparing-assets-for-translation.md)
    + [Hämta resurser från AEM](download-assets-from-aem.md)
-   + [Asynkrona åtgärder](asynchronous-jobs.md)
+   + [Asynkrona åtgärder](/help/sites-administering/asynchronous-jobs.md)
    + [Ljuslåda](touch-ui-light-box.md)
    + [Resursinsikter](touch-ui-asset-insights.md)
    + [Aktivera resursinsikter via Adobe Launch](touch-ui-using-dtm-for-asset-insights.md)
