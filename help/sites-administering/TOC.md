@@ -4,9 +4,9 @@ product: adobe experience manager
 audience: admin-user
 user-guide-title: Användarhandbok för AEM 6.5-administration
 translation-type: tm+mt
-source-git-commit: 29f8e59e3fc9d3c089ee3b78c24638cd3cd2e96b
+source-git-commit: 8d000088f4fd0ff1f85f11818d4e72337da5a280
 workflow-type: tm+mt
-source-wordcount: '622'
+source-wordcount: '624'
 ht-degree: 6%
 
 ---
@@ -17,6 +17,7 @@ ht-degree: 6%
 + [Administrera användarhandboken - översikt](home.md)
 + Webbplatsfunktioner {#introduction}
    + [Webbplatsadministration](msm-and-translation.md)
+   + [Asynkrona jobb](asynchronous-jobs.md)
    + [Återanvända innehåll: Multi Site Manager och Live Copy](msm.md)
    + [Översiktskonsol för Live Copy](msm-livecopy-overview.md)
    + [Konfigurera Live Copy-synkronisering](msm-sync.md)
