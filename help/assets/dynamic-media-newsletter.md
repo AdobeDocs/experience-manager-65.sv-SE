@@ -5,9 +5,9 @@ keywords: dynamic media;newsletter;product updates;tips and tricks;events;custom
 contentOwner: Rick Brough
 solution: Dynamic Media
 translation-type: tm+mt
-source-git-commit: 7dce19107539bc4fd986d894b681ed6e1b99e4fc
+source-git-commit: aeb1dde163a295047ca515d9a8089238a112cdf4
 workflow-type: tm+mt
-source-wordcount: '1200'
+source-wordcount: '1151'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ I det här enastående nyhetsbrevet får du uppleva värdefulla resurser för ku
     * Connect with the Adobe Experience Manager Community.
     * Fast-track your Adobe expertise with Adobe Experience League. -->
 
-* **[April 2020, utgåva 3](http://amc-mkt-prod1-t.adobe-campaign.com/rest/head/mirrorPage/@DRPFipWV_3bgH_oxl1monOhd4auNDxFVTBWB-uKB6lM_BixlVqja2E5Ml7DbtOy6pARL78LPxljqgxEEAr7RBsRp8WOyn-Zw6hQ8MNoFn9i9WMXm.html)**
+* **[April 2020, utgåva 3](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_04_2020_April.html)**
 
    I detta nummer:
 
@@ -50,11 +50,12 @@ I det här enastående nyhetsbrevet får du uppleva värdefulla resurser för ku
    * Se Dynamic Media från Adobe Summit 2020 online.
    * Läs mer om våra kostnadsfria Dynamic Media Classic-granskningar.
    * Möt John Monroe, Senior Program Manager för Customer Success Services.
+
    >[!IMPORTANT]
    >
    >Vi vill bara skicka nyhetsbrevet Dynamic Media till dem som vill ha det. Om du vill fortsätta få nyhetsbrevet efter det här numret måste du registrera dig [här](https://nam04.safelinks.protection.outlook.com/?url=http%3A%2F%2Ft.messages.adobe.com%2Fr%2F%3Fid%3Dha6c66e%2C266d7ba%2C26edbee&amp;data=02%7C01%7Crbrough%40adobe.com%7Ce0ec0f8dde0f4eb03d9c08d7e2173fd3%7Cfa7b1b5a7b34438794aed2c178decee1%7C0%7C0%7C637226461801398160&amp;sdata=3c1oREsqy%2FeDPKC3dd4IO9dXomQ1XbokaBAYQl8obrk%3D&amp;reserved=0).
 
-* **[Februari 2020, utgåva 2](http://amc-mkt-prod1-t.adobe-campaign.com/rest/head/mirrorPage/@5lYjerUalNCDQd6ABlMufSyP3GqbFDn747uBiom3-3_efxsaEjuw8LNhJxrs89ft1vcsQzjvxTGMo55w-4k0YyBVGiL6m5AWSe9I7H7wIXKT0Efz.html)**
+* **[Februari 2020, utgåva 2](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_02_2020_Feb.html)**
 
    I detta nummer:
 
@@ -65,7 +66,7 @@ I det här enastående nyhetsbrevet får du uppleva värdefulla resurser för ku
    * Läs om det nya användargränssnittet för Dynamic Media Classic.
    * Träffa Georgia Myers, chef för Customer Success för Adobe Experience Cloud.
 
-* **[Januari 2020, utgåva 1](http://amc-mkt-prod1-t.adobe-campaign.com/rest/head/mirrorPage/@NpvOA7LHuVbd-W1B5pENdSLNFZ4L4ZeEkA_bVd4reX31KUOs3uaPFEuEx2mWz-3oNkVBcY5fdimoW3RM-SzTt6QXI4l1Rd2mEwrYsWp7C1LnUMVp.html)**
+* **[Januari 2020, utgåva 1](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_01_2020_Jan.html)**
 
    I detta nummer:
 
@@ -156,7 +157,7 @@ I det här enastående nyhetsbrevet får du uppleva värdefulla resurser för ku
    Välkommen till invigningsutgåvan av Dynamic Media Newsletter, vårt nya månatliga nyhetsbrev med nyheter, evenemang och resurser för användare av Dynamic Media Assets och Adobe Dynamic Media Classic.
 
    I detta nummer:
-   * Anmäl dig till vårt webbinarium om dolda funktioner i Dynamic Media Classic.
+   * Anmäl dig till vårt Dynamic Media Classic Hidden Features-webbinarium.
    * Läs mer om våra on-demand-webbinarier för att utveckla er multimediestrategi.
    * Läs om användningsexempel och lösningar för multimedia.
    * ... och mycket mer!
