@@ -1,18 +1,18 @@
 ---
-title: Asynkrona åtgärder
+title: Asynkrona jobb
 description: Adobe Experience Manager optimerar prestanda genom att asynkront slutföra vissa resurskrävande uppgifter.
 translation-type: tm+mt
-source-git-commit: 69b90432ac6028a64f36300819e1bead1ae8d671
+source-git-commit: 198593fa456780816216a63790fea8cca469f8c7
 workflow-type: tm+mt
-source-wordcount: '771'
-ht-degree: 2%
+source-wordcount: '801'
+ht-degree: 3%
 
 ---
 
 
 # Asynkrona åtgärder {#asynchronous-operations}
 
-För att minska den negativa inverkan på prestandan bearbetar Adobe Experience Manager vissa långvariga och resurskrävande åtgärder asynkront.
+För att minska den negativa inverkan på prestandan bearbetar Adobe Experience Manager vissa långvariga och resurskrävande åtgärder asynkront. Asynkron bearbetning innebär att du måste köa flera jobb och köra dem på ett seriellt sätt beroende på om det finns systemresurser tillgängliga.
 
 Dessa åtgärder omfattar:
 
@@ -22,8 +22,6 @@ Dessa åtgärder omfattar:
 * Hämtar resurser, som ligger över den angivna tröskelgränsen, från en Experience Manager-fjärrdistribution
 * Flytta sidor
 * Öppnar Live-kopior
-
-Asynkron bearbetning innebär att du måste köa flera jobb och köra dem på ett seriellt sätt beroende på om det finns systemresurser tillgängliga.
 
 Du kan visa status för asynkrona jobb från **[!UICONTROL Async Job Status]** instrumentpanelen på **Global Navigation** -> **Tools** -> **Operations** -> **Jobs**.
 
@@ -35,7 +33,7 @@ Du kan visa status för asynkrona jobb från **[!UICONTROL Async Job Status]** i
 
 ## Övervaka status för asynkrona åtgärder {#monitor-the-status-of-asynchronous-operations}
 
-När AEM bearbetar en åtgärd asynkront får du ett meddelande i din inkorg och via e-post (om det är aktiverat).
+När AEM bearbetar en åtgärd asynkront får du ett meddelande i din [inkorg](/help/sites-authoring/inbox.md) och via e-post (om den är aktiverad).
 
 Om du vill visa status för asynkrona åtgärder i detalj går du till **[!UICONTROL Async Job Status]** sidan.
 
@@ -142,3 +140,12 @@ Om antalet referenser till de sidor som ska flyttas överstiger tröskelvärdet,
    ![MSM-konfiguration](assets/async-msm.png)
 
 1. Spara ändringarna.
+
+>[!MORELIKETHIS]
+>
+>* [Skapa och ordna sidor](/help/sites-authoring/managing-pages.md)
+>* [Skapa och synkronisera Live-kopior](/help/sites-administering/msm-livecopy.md)
+>* [Konfigurera e-post i Experience Manager](/help/sites-administering/notification.md).
+>* [Importera och exportera resursmetadata gruppvis](/help/assets/metadata-import-export.md).
+>* [Använd anslutna resurser för att dela DAM-resurser från fjärrdistributioner](/help/assets/use-assets-across-connected-assets-instances.md).
+
