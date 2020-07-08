@@ -1,11 +1,11 @@
 ---
-title: Migrera resurser till [!DNL Adobe Experience Manager Assets] i grupp.
-description: Beskriver hur du hämtar resurser till [!DNL Adobe Experience Manager], använder metadata, genererar återgivningar och aktiverar dem för publiceringsinstanser.
+title: Migrera resurser [!DNL Adobe Experience Manager Assets] åt gången.
+description: Beskriver hur du hämtar resurser till [!DNL Adobe Experience Manager], använder metadata, genererar återgivningar och aktiverar dem för att publicera instanser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
-source-wordcount: '1791'
+source-wordcount: '1782'
 ht-degree: 8%
 
 ---
@@ -28,6 +28,7 @@ Innan du utför något av stegen i den här metoden bör du granska och implemen
 >* ACS Commons - massarbetsflödeshanterare
 >* Snabbåtgärdshanteraren för ACS-kommandon
 >* Syntetiskt arbetsflöde
+
 >
 >
 Programvaran är öppen källkod och täcks av [Apache v2-licensen](https://adobe-consulting-services.github.io/pages/license.html). Om du vill ställa en fråga eller rapportera ett problem går du till [GitHub Issues for ACS AEM Tools](https://github.com/Adobe-Consulting-Services/acs-aem-commons/issues) eller [ACS AEM Commons](https://github.com/Adobe-Consulting-Services/acs-aem-tools/issues).
@@ -61,7 +62,7 @@ Det finns två sätt att läsa in resurser i systemet: en push-baserad metod med
 
 #### Skicka via HTTP {#pushing-through-http}
 
-Adobes Managed Services-team använder ett verktyg som kallas Glutton för att läsa in data i kundmiljöer. Glutton är ett litet Java-program som läser in alla resurser från en katalog till en annan katalog i en [!DNL Experience Manager] instans. I stället för Glutton kan du också använda verktyg som Perl-skript för att publicera resurserna i databasen.
+Adobes Managed Services-team använder ett verktyg som kallas Glutton för att läsa in data i kundmiljöer. Glutton är ett litet Java-program som läser in alla resurser från en katalog till en annan i en [!DNL Experience Manager] distribution. I stället för Glutton kan du också använda verktyg som Perl-skript för att publicera resurserna i databasen.
 
 Det finns två nackdelar med att använda metoden att gå igenom https:
 
@@ -72,7 +73,7 @@ Det andra sättet att importera resurser är att hämta resurser från det lokal
 
 #### Hämta från det lokala filsystemet {#pulling-from-the-local-filesystem}
 
-CSV-resursimporteraren [för](https://adobe-consulting-services.github.io/acs-aem-tools/features/csv-asset-importer/index.html) ACS AEM-verktyg hämtar resurser från filsystemet och metadata för resurser från en CSV-fil för resursimporten. Experience Manager Asset Manager API används för att importera resurserna till systemet och tillämpa de konfigurerade metadataegenskaperna. Resurser monteras helst på servern via en nätverksfilmontering eller via en extern enhet.
+CSV-resursimporteraren [för](https://adobe-consulting-services.github.io/acs-aem-tools/features/csv-asset-importer/index.html) ACS AEM-verktyg hämtar resurser från filsystemet och metadata för resurser från en CSV-fil för resursimporten. Experience Manager Asset Manager API används för att importera resurserna till systemet och använda de konfigurerade metadataegenskaperna. Resurser monteras helst på servern via en nätverksfilmontering eller via en extern enhet.
 
 Eftersom resurser inte behöver överföras via ett nätverk förbättras prestandan avsevärt, och den här metoden anses generellt vara det mest effektiva sättet att läsa in resurser i databasen. Eftersom verktyget har stöd för metadatainmatning kan du dessutom importera alla resurser och metadata i ett enda steg i stället för att skapa ett andra steg för att använda metadata med hjälp av ett separat verktyg.
 
@@ -117,15 +118,15 @@ När migreringen är klar bör startarna för arbetsflödena återaktiveras för
 
 ## Migrera mellan [!DNL Experience Manager] distributioner {#migrating-between-aem-instances}
 
-Även om det inte är nästan lika vanligt behöver du ibland migrera stora mängder data från en [!DNL Experience Manager] instans till en annan. till exempel när du utför en [!DNL Experience Manager] uppgradering, uppgraderar maskinvaran eller migrerar till ett nytt datacenter, till exempel med en AMS-migrering.
+Även om det inte är nästan lika vanligt behöver du ibland migrera stora mängder data från en [!DNL Experience Manager] distribution till en annan, till exempel när du utför en [!DNL Experience Manager] uppgradering, uppgraderar maskinvaran eller migrerar till ett nytt datacenter, till exempel med en AMS-migrering.
 
-I det här fallet är dina resurser redan ifyllda med metadata och återgivningar har redan genererats. Du kan helt enkelt fokusera på att flytta resurser från en instans till en annan. När du migrerar mellan [!DNL Experience Manager] instanser utför du följande steg:
+I det här fallet är dina resurser redan ifyllda med metadata och återgivningar har redan genererats. Du kan helt enkelt fokusera på att flytta resurser från en instans till en annan. När du migrerar mellan [!DNL Experience Manager] distributioner utför du följande steg:
 
 1. Inaktivera arbetsflöden: Eftersom du migrerar återgivningar tillsammans med våra resurser, vill du inaktivera arbetsflödets startprogram för [!UICONTROL DAM Update Asset] arbetsflödet.
 
-1. Migrera taggar: Eftersom du redan har taggar inlästa i källinstansen kan du skapa dem i ett innehållspaket och installera paketet på målinstansen. [!DNL Experience Manager]
+1. Migrera taggar: Eftersom du redan har taggar inlästa i källdistributionen kan du skapa dem i ett innehållspaket och installera paketet på målinstansen. [!DNL Experience Manager]
 
-1. Migrera resurser: Det finns två verktyg som rekommenderas för att flytta resurser från en [!DNL Experience Manager] instans till en annan:
+1. Migrera resurser: Det finns två verktyg som rekommenderas för att flytta resurser från en [!DNL Experience Manager] distribution till en annan:
 
    * **Med Vault Remote Copy** eller vlt rcp kan du använda VLT i ett nätverk. Du kan ange en käll- och målkatalog och hämta alla databasdata från en instans och läsa in dem i en annan. Vlt rcp finns på [https://jackrabbit.apache.org/filevault/rcp.html](https://jackrabbit.apache.org/filevault/rcp.html)
    * **Grabbit** är ett verktyg för innehållssynkronisering med öppen källkod som utvecklats av Time Warner Cable för deras [!DNL Experience Manager] implementering. Eftersom den använder kontinuerliga dataströmmar har den en lägre fördröjning jämfört med vlt rcp och kräver en hastighetsförbättring på två till tio gånger snabbare än vlt rcp. Grabbit har även stöd för synkronisering av deltainnehåll, vilket gör att det kan synkronisera ändringar efter att en första migreringspass har slutförts.
@@ -134,4 +135,4 @@ I det här fallet är dina resurser redan ifyllda med metadata och återgivninga
 
 1. Klonpublicering: Precis som med en ny migrering är det effektivare att läsa in en publiceringsinstans och klona den än att aktivera innehållet på båda noderna. Se [Klona publicering.](#cloning-publish)
 
-1. Aktivera arbetsflöden: När du är klar med migreringen kan du aktivera startfunktionerna för arbetsflödet på nytt så att du kan generera renderingar och extrahera metadata för att använda systemet. [!UICONTROL DAM Update Asset]
+1. Aktivera arbetsflöden: När du är klar med migreringen kan du aktivera startprogrammet för arbetsflödet på nytt så att det går att generera återgivningar och extrahera metadata för den dagliga systemanvändningen. [!UICONTROL DAM Update Asset]
