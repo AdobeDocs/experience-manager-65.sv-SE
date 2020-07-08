@@ -1,12 +1,12 @@
 ---
-title: Använd Anslutna resurser för att dela DAM-resurser i arbetsflödet för att skapa webbplatser i [!DNL Adobe Experience Manager].
-description: Använd resurser som är tillgängliga på en fjärrdistribution av [!DNL Adobe Experience Manager Assets] när du skapar webbsidor på en annan distribution av [!DNL Adobe Experience Manager Sites].
+title: Use Connected Assets to share DAM assets in [!DNL Adobe Experience Manager Sites] authoring workflow.
+description: Använd resurser som är tillgängliga på en [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] fjärrdistribution.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: e3907ac1c6e3900f280b2570b93053b10128cc6d
 workflow-type: tm+mt
-source-wordcount: '2019'
-ht-degree: 48%
+source-wordcount: '1996'
+ht-degree: 49%
 
 ---
 
@@ -78,6 +78,7 @@ To configure Connected Assets and local [!DNL Sites] connectivity, follow these 
    1. In **[!UICONTROL Mount Point]** field, enter the local [!DNL Experience Manager] path where [!DNL Experience Manager] fetches the assets. Till exempel, mappen `remoteassets`.
    1. Justera värdena för **[!UICONTROL Original Binary transfer optimization Threshold]** beroende på ditt nätverk. En resursåtergivning med en storlek som är större än detta tröskelvärde överförs asynkront.
    1. Select **[!UICONTROL Datastore Shared with Connected Assets]**, if you use a datastore to store your assets and the Datastore is the common storage between both deployments. I det här fallet spelar tröskelvärdet ingen roll eftersom resursernas binärfiler finns i datalagret och de inte överförs.
+
    ![En typisk konfiguration för Connected Assets](assets/connected-assets-typical-config.png)
 
    *Bild: En typisk konfiguration för Connected Assets.*
@@ -91,6 +92,7 @@ To configure Connected Assets and local [!DNL Sites] connectivity, follow these 
    1. Välj startprogrammet för arbetsflödet och klicka på **[!UICONTROL Properties]** i åtgärdsfältet.
 
    1. In the [!UICONTROL Properties] wizard, change the **[!UICONTROL Path]** fields as the following mappings to update their regular expressions to exclude the mount point **[!UICONTROL connectedassets]**.
+
    | Före | Efter |
    |---|---|
    | `/content/dam(/((?!/subassets).)*/)renditions/original` | `/content/dam(/((?!/subassets)(?!connectedassets).)*/)renditions/original` |
@@ -137,13 +139,13 @@ Använd konfigurationen ovan när du vill prova redigeringsfunktionen och se hur
 
    *Bild: Alternativ för att filtrera dokumenttyper och bilder vid sökning efter resurser på DAM-fjärrdistribution.*
 
-1. En Sites-författare meddelas om en resurs hämtas asynkront och om en hämtningsåtgärd misslyckas. Under eller efter redigeringen kan författare se detaljerad information om hämtningsåtgärder och fel i användargränssnittet för [asynkrona jobb](/help/assets/asynchronous-jobs.md).
+1. En Sites-författare meddelas om en resurs hämtas asynkront och om en hämtningsåtgärd misslyckas. Under eller efter redigeringen kan författare se detaljerad information om hämtningsåtgärder och fel i användargränssnittet för [asynkrona jobb](/help/sites-administering/asynchronous-jobs.md).
 
    ![Meddelande om asynkron hämtning av resurser som sker i bakgrunden.](assets/assets_async_transfer_fails.png)
 
    *Bild: Meddelande om asynkron hämtning av resurser som sker i bakgrunden.*
 
-1. When publishing a page, [!DNL Experience Manager] displays a complete list of assets that are used in the page. Kontrollera att fjärresurserna har hämtats vid publiceringen. Se [användargränssnittet för asynkrona jobb](/help/assets/asynchronous-jobs.md) om du vill kontrollera status för varje hämtad resurs.
+1. When publishing a page, [!DNL Experience Manager] displays a complete list of assets that are used in the page. Kontrollera att fjärresurserna har hämtats vid publiceringen. Se [användargränssnittet för asynkrona jobb](/help/sites-administering/asynchronous-jobs.md) om du vill kontrollera status för varje hämtad resurs.
 
    >[!NOTE]
    >
@@ -187,4 +189,4 @@ De hämtade resurserna kan användas som andra lokala resurser, förutom att ass
 Följ dessa steg för att felsöka vanliga fel:
 
 * If you cannot search for remote assets from the [!UICONTROL Content Finder] then ensure that the required roles and permissions are in place.
-* En resurs som hämtats från fjärrdammen kanske inte publiceras på en webbsida av en eller flera orsaker. Den finns inte på fjärrservern, saknar behörighet att hämta den eller så kan nätverksfel vara orsaken. Se till att resursen inte tas bort från fjärr-DAM. Se till att rätt behörigheter finns och att kraven uppfylls. Försök lägga till resursen på sidan igen och publicera den på nytt. Kontrollera i [listan över asynkrona jobb](/help/assets/asynchronous-jobs.md) om fel uppstod vid hämtning av resurser.
+* En resurs som hämtats från fjärrdammen kanske inte publiceras på en webbsida av en eller flera orsaker. Den finns inte på fjärrservern, saknar behörighet att hämta den eller så kan nätverksfel vara orsaken. Se till att resursen inte tas bort från fjärr-DAM. Se till att rätt behörigheter finns och att kraven uppfylls. Försök lägga till resursen på sidan igen och publicera den på nytt. Kontrollera i [listan över asynkrona jobb](/help/sites-administering/asynchronous-jobs.md) om fel uppstod vid hämtning av resurser.
