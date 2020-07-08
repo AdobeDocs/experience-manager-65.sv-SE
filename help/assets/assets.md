@@ -1,11 +1,11 @@
 ---
-title: Introduktion till [!DNL Adobe Experience Manager Assets].
-description: Läs om vad som är digital resurshantering, användningsexempel och [!DNL Adobe Experience Manager Asset].
+title: Introduction to [!DNL Adobe Experience Manager Assets].
+description: Lär dig vad som är digital resurshantering, användningsexempel och [!DNL Adobe Experience Manager Asset] erbjudanden.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0d5b3a442756e95c15cb01c4117a83b761dc8367
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
-source-wordcount: '862'
+source-wordcount: '852'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ En resurs är i stort sett en binär resurs plus metadata plus återgivningar pl
 
 >[!CAUTION]
 >
->Överföring och/eller redigering av en stor mängd resurser (särskilt bilder) kan påverka [!DNL Experience Manager] instansens prestanda.
+>Överföring och/eller redigering av en stor mängd resurser (särskilt bilder) kan påverka prestanda för din [!DNL Experience Manager] distribution.
 
 ### [!DNL Experience Manager Assets] terminologi {#aem-assets-terminology}
 
