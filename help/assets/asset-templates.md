@@ -1,11 +1,11 @@
 ---
 title: Resursmallar i [!DNL Adobe Experience Manager Assets].
-description: Lär dig mer om tillgångsmallar i [!DNL Adobe Experience Manager Assets] och hur du använder resursmallar för att skapa marknadsmaterial.
+description: Lär dig mer om tillgångsmallar [!DNL Adobe Experience Manager Assets] och hur du använder tillgångsmallar för att skapa marknadsföringsmaterial.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
-source-wordcount: '1522'
+source-wordcount: '1512'
 ht-degree: 1%
 
 ---
@@ -79,6 +79,7 @@ Du kan redigera en sammanställning direkt när du har skapat den. Du kan också
    * Navigera från sidan Mallar till en mapp där du skapade materialet och klicka på snabbåtgärden på miniatyrbilden av en [!UICONTROL Edit] materialet.
    * Klicka på verktygsfältet på tillgångssidan för säkerheten **[!UICONTROL Edit]** .
    * Select the collateral and click **[!UICONTROL Edit]** from the toolbar.
+
    <!--![chlimage_1-108](assets/chlimage_1-313.png) -->
 
    Resurssökaren och textredigeraren visas till vänster på sidan. Textredigeraren är öppen som standard.
@@ -95,7 +96,7 @@ Du kan redigera en sammanställning direkt när du har skapat den. Du kan också
 
    >[!NOTE]
    >
-   >Se till att din [!DNL Experience Manager] instans är integrerad med en [!DNL InDesign Server] så att du kan extrahera data från [!DNL Experience Manager Assets] [!DNL InDesign] mallen och göra den tillgänglig för redigering. Mer information finns i [Integrera Experience Manager Assets med InDesign Server](/help/assets/indesign.md).
+   >Se till att din [!DNL Experience Manager] distribution är integrerad med en [!DNL InDesign Server] så att du kan extrahera data från [!DNL Experience Manager Assets] [!DNL InDesign] mallen och göra den tillgänglig för redigering. Mer information finns i [Integrera Experience Manager Assets med InDesign Server](/help/assets/indesign.md).
 
 1. Om du vill ändra texten i ett redigerbart fält klickar du på textfältet i listan med redigerbara fält och redigerar texten i fältet.
 
@@ -135,11 +136,13 @@ Du kan redigera en sammanställning direkt när du har skapat den. Du kan också
    >
    >* Bilder bäddas inte in i den underliggande [!DNL InDesign] mallen.
    >* Bilderna länkas från det lokala filsystemet.
+
    >
    >Så här aktiverar du [!DNL Experience Manager] bildupplösning:
    >
    >* Bädda in bilder när du skapar [!DNL InDesign] mallar (Se [Länkar och inbäddade bilder](https://helpx.adobe.com/indesign/using/graphics-links.html)).
    >* Montera [!DNL Experience Manager] i det lokala filsystemet och mappa sedan saknade ikoner med befintliga resurser i [!DNL Experience Manager].
+
    >
    >Mer information om hur du arbetar med [!DNL InDesign] dokument finns i [Bästa tillvägagångssätt för att arbeta med InDesign-dokument i Experience Manager](https://helpx.adobe.com/experience-manager/kb/best-practices-idd-docs-aem.html).
 
