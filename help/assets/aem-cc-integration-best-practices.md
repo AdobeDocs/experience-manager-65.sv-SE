@@ -1,11 +1,11 @@
 ---
-title: Bästa praxis för integrering av Adobe Creative Cloud och [!DNL Adobe Experience Manager].
-description: Bästa tillvägagångssätt för att integrera [!DNL Adobe Experience Manager] med [!DNL Adobe Creative Cloud] för att effektivisera resursöverföringsarbetsflöden och uppnå hög innehållshastighet.
+title: Adobe Creative Cloud [!DNL Adobe Experience Manager] och bästa praxis för integrering.
+description: Bästa tillvägagångssätt för att [!DNL Adobe Experience Manager] with [!DNL Adobe Creative Cloud] integrera för att effektivisera arbetsflöden för överföring av resurser och uppnå hög innehållshastighet.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
-source-wordcount: '3263'
+source-wordcount: '3251'
 ht-degree: 15%
 
 ---
@@ -45,6 +45,9 @@ Den här artikeln fokuserar främst på de två första aspekterna av samarbetsb
 
 ### Mappning av användningsfall och Adobe-lösningar {#mapping-of-use-cases-and-adobe-solutions}
 
+<!-- TBD: Add some info about XD integration and possibly info about DA v2.0.
+-->
+
 | Användningsfall | [!DNL Adobe Asset Link] | [!DNL Experience Manager] datorprogram | Anmärkningar/andra lösningar |
 |---|---|---|---|
 | Upptäck - bläddra bland DAM-mappar | Ja | [!DNL Experience Manager] Webbgränssnitt och skrivbordsfunktioner |  |
@@ -73,7 +76,7 @@ För att stödja användningsexemplen på resursfördelning bör andra lösninga
 ### Ordlista med vanliga termer {#glossary-of-common-terms}
 
 * **Pågående arbeten eller pågående designarbeten (WIP):** En fas i en resurs livscykel där den genomgår flera ändringar och oftast inte är redo att delas med större team.
-* **Kreativa resurser:** [!DNL Assets] som är redo att delas med ett större team, eller som har valts ut/godkänts av det kreativa teamet för att delas med marknadsförings- eller LOB-team.
+* **Kreativa resurser:** [!DNL Assets] som är redo att delas med ett större team, eller som har valts ut eller godkänts av det kreativa teamet för att delas med marknadsförings- eller LOB-team.
 * **Godkännanden av resurser:** Godkännandeprocessen som körs för resurser som redan har överförts till DAM, som vanligtvis omfattar varumärkesgodkännanden, juridiska godkännanden och så vidare.
 * **Slutlig resurs:** En resurs som har genomgått alla godkännanden och all metadatataggning och är klar att användas av teamet. En sådan resurs lagras i DAM och är tillgänglig för alla (intresserade) användare. Den kan användas i marknadsföringskanaler eller av designteam för att skapa material.
 * **Mindre uppdatering/ändring av resurs:** En snabb och liten ändring av en digital resurs. Ändringarna är ofta retuscheringar, smärre redigeringar, resursgranskningar eller godkännanden (t.ex. omplacering, ändring av textstorlek, justering av mättnad/intensitet eller färg).
@@ -160,20 +163,20 @@ Nedan följer exempel på uppdateringar som vanligtvis inte är relevanta:
 
 #### Kreativa användare med direkt åtkomst till DAM {#creative-users-with-direct-access-to-dam}
 
-Vanligtvis har interna kreativa team, byråer/kreatörer som är anställda på det interna nätverket tillgång till DAM-instansen, inklusive [!DNL Experience Manager] inloggning. [!DNL Experience Manager] och nätverksinfrastruktur kan konfigureras för att ge direktåtkomst till externa parter - vanligen betrodda organisationer som byråer som arbetar för en klient - för att få åtkomst till [!DNL Experience Manager] via nätverket, till exempel via VPN eller IP-listan.
+Vanligtvis har interna kreativa team, byråer/kreatörer som är anställda på det interna nätverket tillgång till driftsättningen av DAM, inklusive [!DNL Experience Manager] inloggning. [!DNL Experience Manager] och nätverksinfrastruktur kan konfigureras för att ge direktåtkomst till externa parter - vanligen betrodda organisationer som byråer som arbetar för en kund - för att få åtkomst till [!DNL Experience Manager] via nätverket, till exempel via VPN eller IP tillåtelselista.
 
 I sådana fall kan Adobe Asset Link eller [!DNL Experience Manager] skrivbordsappen enkelt ge åtkomst till slutliga/godkända resurser och göra det möjligt att spara kreativa resurser på DAM.
 
 #### Kreativa användare utan åtkomst till DAM {#creative-users-without-access-to-dam}
 
-Externa byråer och frilansare som inte har direkt åtkomst till DAM-instansen kan behöva åtkomst till godkända resurser eller lägga till sina nya designer i DAM.
+Externa byråer och frilansare som inte har direkt åtkomst till DAM-distributionen kan behöva åtkomst till godkända resurser eller lägga till sina nya designer i DAM.
 
 Använd följande strategier för att ge åtkomst till slutliga/godkända mediefiler:
 
 * Använd skrivbordsappen om Asset Link inte fungerar.
 * Använd [Experience Manager Assets Brand Portal](https://helpx.adobe.com/se/experience-manager/brand-portal/user-guide.html) för säker distribution av material till externa partners
 * Använd en anpassad implementering av en distributions- och källportal baserad på [resursdelningskommentarer](https://adobe-marketing-cloud.github.io/asset-share-commons/)
-* Använd den åtkomstkontroll som har konfigurerats i [!DNL Experience Manager] och nödvändig nätverksinfrastruktur (till exempel listan över tillåtna VPN- och IP-adresser) för att ge externa parter åtkomst till ett dedikerat innehållsområde i din DAM. De kan använda [!DNL Experience Manager] webbgränssnittet för att hämta resurser och överföra nytt innehåll till din DAM.
+* Använd den åtkomstkontroll som har konfigurerats i [!DNL Experience Manager] och nödvändig nätverksinfrastruktur (till exempel VPN och IP tillåtelselista) för att ge externa parter åtkomst till ett dedikerat innehållsområde i din DAM. De kan använda [!DNL Experience Manager] webbgränssnittet för att hämta resurser och överföra nytt innehåll till din DAM.
 
 #### Pågående arbete med resurser från [!DNL Experience Manager] {#work-in-progress-on-assets-from-aem}
 
