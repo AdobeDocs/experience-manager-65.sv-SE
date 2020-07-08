@@ -1,9 +1,9 @@
 ---
-title: Adobe Experience Manager Assets - startsida
+title: Adobe Experience Manager Assets Home Page Experience
 description: Anpassa startsidan för Experience Manager Assets för en rik välkomstskärm, inklusive en ögonblicksbild av nyligen gjorda aktiviteter kring resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
 source-wordcount: '536'
 ht-degree: 1%
@@ -11,7 +11,7 @@ ht-degree: 1%
 ---
 
 
-# Adobe Experience Manager Assets - startsida {#aem-assets-home-page-experience}
+# Adobe Experience Manager Assets Home Page Experience {#aem-assets-home-page-experience}
 
 Anpassa startsidan för Adobe Experience Manager Assets för en rik välkomstskärm, inklusive en ögonblicksbild av nyligen gjorda aktiviteter kring resurser.
 
@@ -19,7 +19,7 @@ Assets home page ger en rik och personlig välkomstskärm, som innehåller en ö
 
 Hemsidan Resurser är inaktiverad som standard. Så här aktiverar du den:
 
-1. Öppna Experience Manager Configuration Manager `https://[aem_server]:[port]/system/console/configMgr`.
+1. Öppna Konfigurationshanteraren för Experience Manager `https://[aem_server]:[port]/system/console/configMgr`.
 1. Öppna **[!UICONTROL Day CQ DAM Event Recorder]** tjänsten.
 1. Markera alternativet **[!UICONTROL Enable this service]** för att aktivera aktivitetsinspelning.
 
@@ -69,7 +69,7 @@ Det här avsnittet visas under välkomstavsnittet och visar widgetar som inte fi
 
 **Senaste**: Widgeten under det här avsnittet visar nyligen använda enheter som den inloggade användaren har använt, inklusive mappar, samlingar och projekt. **[!UICONTROL Recently Viewed]**
 
-**Upptäck**: Widgeten under det här avsnittet visar resurser och återgivningar som nyligen har överförts till Assets-instansen. **[!UICONTROL New]**
+**Upptäck**: Widgeten under det här avsnittet visar resurser och återgivningar som nyligen har överförts till Assets-distributionen. **[!UICONTROL New]**
 
 Aktivera alternativet från Configuration Manager om du vill aktivera rensning av användaraktivitetsdata **[!UICONTROL DAM Event Purge Service]** . När du har aktiverat den här tjänsten tas aktiviteter av den inloggade användaren som överskrider ett angivet nummer bort av systemet.
 
@@ -77,7 +77,7 @@ Välkomstskärmen innehåller enkla navigeringshjälpmedel, t.ex. ikoner i verkt
 
 >[!NOTE]
 >
->Om du aktiverar [!UICONTROL Day CQ DAM Event Recorder] och [!UICONTROL DAM Event Purge] tjänster ökar skrivåtgärderna till JCR och sökindexering, vilket avsevärt ökar belastningen på Experience Manager-servern. Den extra belastningen på Experience Manager-servern kan påverka dess prestanda.
+>Om du aktiverar [!UICONTROL Day CQ DAM Event Recorder] och [!UICONTROL DAM Event Purge] tjänster ökar skrivåtgärderna till JCR och sökindexering, vilket avsevärt ökar belastningen på Experience Manager-servern. Den extra belastningen på Experience Manager-servern kan påverka serverns prestanda.
 
 >[!CAUTION]
 >
