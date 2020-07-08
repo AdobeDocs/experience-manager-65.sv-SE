@@ -3,7 +3,7 @@ title: Aktivera tillgångsinsikter via DTM
 description: Lär dig hur du använder Adobe Dynamic Tag Management (DTM) för att aktivera tillgångsinsikter.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
 source-wordcount: '573'
 ht-degree: 1%
@@ -24,7 +24,7 @@ Adobe Dynamic Tag Management är ett verktyg som aktiverar era digitala marknads
 Utför dessa steg för att aktivera tillgångsinsikter via DTM.
 
 1. Klicka på Experience Manager-logotypen och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Insights Configuration]**.
-1. [Konfigurera Experience Manager-instans med DTM-Cloud Service](/help/sites-administering/dtm.md)
+1. [Konfigurera driftsättning av Experience Manager med DTM-Cloud Service](/help/sites-administering/dtm.md)
 
    API-token bör vara tillgänglig när du har loggat in på [https://dtm.adobe.com](https://dtm.adobe.com/) och besöker **[!UICONTROL Account Settings]** i användarprofilen. Det här steget krävs inte från tillgångsinsikter eftersom integreringen av Experience Manager Sites med tillgångsinsikter fortfarande pågår.
 
@@ -34,6 +34,7 @@ Utför dessa steg för att aktivera tillgångsinsikter via DTM.
    * Markera **[!UICONTROL Web Properties]** fliken och klicka sedan på **[!UICONTROL Add Property]**.
 
    * Uppdatera fälten efter behov och klicka på **[!UICONTROL Create Property]**. Se [dokumentationen](https://helpx.adobe.com/experience-manager/using/dtm.html).
+
    ![Skapa redigera webbegenskap](assets/Create-edit-web-property.png)
 
 1. På **[!UICONTROL Rules]** fliken väljer du **[!UICONTROL Page Load Rules]** i navigeringsrutan och klickar på **[!UICONTROL Create New Rule]**.
