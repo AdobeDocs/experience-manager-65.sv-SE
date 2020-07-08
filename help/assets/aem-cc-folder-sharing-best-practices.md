@@ -3,7 +3,7 @@ title: Adobe Experience Manager till Adobe Creative Cloud-mappen där du kan del
 description: Konfigurera Adobe Experience Manager så att användare i Experience Manager Assets kan utbyta mappar med Adobe Creative Cloud-användare (CC).
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
 source-wordcount: '1079'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 >
 >Mappdelningsfunktionen Experience Manager till Creative Cloud är föråldrad. Adobe rekommenderar starkt att du använder nyare funktioner som [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) eller [Experience Manager](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html). Läs mer om de bästa sätten att integrera [Experience Manager och Creative Cloud](/help/assets/aem-cc-integration-best-practices.md).
 
-Adobe Experience Manager kan konfigureras så att användare i Resurser kan dela mappar med användare i Adobe Creative Cloud-program, så att de är tillgängliga som delade mappar i Adobe Creative Cloud Resurser-tjänsten. Funktionen kan användas för att utbyta filer mellan kreativa team och Assets-användare, särskilt när de kreativa användarna inte har tillgång till Assets-instansen (de finns inte i företagsnätverket).
+Adobe Experience Manager kan konfigureras så att användare i Resurser kan dela mappar med användare i Adobe Creative Cloud-program, så att de är tillgängliga som delade mappar i Adobe Creative Cloud Resurser-tjänsten. Funktionen kan användas för att utbyta filer mellan kreativa team och Assets-användare, särskilt när de kreativa användarna inte har tillgång till Assets-distributionen (de finns inte i företagsnätverket).
 
 Den här typen av integrering kan användas i följande fall, särskilt när du arbetar med användare som inte har direkt åtkomst till Assets:
 
@@ -39,7 +39,7 @@ I följande diagram visas en översikt över integreringen.
 Integreringen innehåller följande element:
 
 * **Experience Manager Assets-server** som distribueras i företagsnätverket (hanterade tjänster eller lokalt): Mappdelning initieras här.
-* **Adobe Marketing Cloud Assets core service**: fungerar som en mellanhand mellan Experience Manager och Creative Cloud-lagringstjänster. Administratören för det företag som använder integreringen måste upprätta en förtroenderelation mellan Marketing Cloud-organisationen och Assets-instansen. De [definierar också en lista över godkända Creative Cloud-medarbetare](https://docs.adobe.com/content/help/en/core-services/interface/assets/t-admin-add-cc-user.html), som Assets-användare kan dela mappar för att öka säkerheten.
+* **Adobe Marketing Cloud Assets core service**: fungerar som en mellanhand mellan Experience Manager och Creative Cloud-lagringstjänster. Administratören för det företag som använder integreringen behöver upprätta en betrodd relation mellan Marketing Cloud-organisationen och Assets-distributionen. De [definierar också en lista över godkända Creative Cloud-medarbetare](https://docs.adobe.com/content/help/en/core-services/interface/assets/t-admin-add-cc-user.html), som Assets-användare kan dela mappar för att öka säkerheten.
 
 * **Webbtjänster** för Creative Cloud Assets (lagring och webbgränssnittet för Creative Cloud Files): Det är här specifika Creative Cloud-appanvändare, som har en resursmapp delad, kan acceptera inbjudan och se mappen i sitt Creative Cloud-konto.
 * **Creative Cloud-datorprogrammet**: (Valfritt) Ger direkt åtkomst till delade mappar/filer från den kreativa användarens skrivbord via synkronisering med Creative Cloud Assets-lagring.
