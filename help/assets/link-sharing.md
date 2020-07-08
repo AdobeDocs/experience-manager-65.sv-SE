@@ -3,7 +3,7 @@ title: Generera en URL till delade resurser
 description: I den här artikeln beskrivs hur du delar resurser, mappar och samlingar i Experience Manager Assets som en URL till externa parter.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
 source-wordcount: '1136'
 ht-degree: 4%
@@ -40,7 +40,7 @@ Använd dialogrutan Länkdelning för att generera URL:en för resurser som du v
 
    >[!NOTE]
    >
-   >Om du vill dela länkar från författarinstansen i Experience Manager till externa entiteter, ska du se till att du bara visar följande URL:er (som används för länkdelning) för `GET` begäranden. Blockera andra URL:er för att säkerställa säkerheten för författaren av Experience Manager.
+   >Om du vill dela länkar från din Experience Manager Author-distribution till externa entiteter, ska du se till att du bara visar följande URL:er (som används för länkdelning) för `GET` begäranden. Blockera andra URL:er för att säkerställa säkerheten för författaren av Experience Manager.
    >
    >* http://[aem_server]:[port]/linkshare.html
    >* http://[aem_server]:[port]/linksharepreview.html
@@ -116,6 +116,7 @@ Använd dialogrutan Länkdelning för att generera URL:en för resurser som du v
    * SMTP-serverport: e-postserverport
    * SMTP-användare: e-postserverns användarnamn
    * SMTP-lösenord: e-postserverlösenord
+
    ![chlimage_1-263](assets/chlimage_1-548.png)
 
 1. Klicka på **[!UICONTROL Save]**.
