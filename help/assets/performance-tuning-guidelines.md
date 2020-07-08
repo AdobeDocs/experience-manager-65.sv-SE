@@ -1,12 +1,12 @@
 ---
 title: Prestandajustering för [!DNL Adobe Experience Manager Assets].
-description: Förslag och vägledning om konfiguration av [!DNL Experience Manager], ändringar av maskinvara, programvara och nätverkskomponenter för att ta bort flaskhalsar och optimera prestanda för [!DNL Experience Manager Assets].
+description: Förslag och vägledning [!DNL Experience Manager] om konfiguration, ändringar av maskinvara, programvara och nätverkskomponenter för att ta bort flaskhalsar och optimera prestanda för [!DNL Experience Manager Assets].
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
-source-wordcount: '2713'
+source-wordcount: '2701'
 ht-degree: 0%
 
 ---
@@ -128,7 +128,7 @@ Din nätverksoptimeringsstrategi är i första hand beroende av hur mycket bandb
 
 Ställ in arbetsflödet på Övergående när det är möjligt [!UICONTROL DAM Update Asset] . Inställningen minskar avsevärt de allmänna kostnader som krävs för att bearbeta arbetsflöden, eftersom arbetsflöden i det här fallet inte behöver passera genom de normala spårnings- och arkiveringsprocesserna.
 
-1. Navigera till `/miscadmin` i [!DNLEExperience Manager] -instansen `https://[aem_server]:[port]/miscadmin`.
+1. Navigera till `/miscadmin` i [!DNLEExperience Manager] -distributionen på `https://[aem_server]:[port]/miscadmin`.
 
 1. Expandera **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]** > **[!UICONTROL dam]**.
 
@@ -164,7 +164,7 @@ Att ställa in en kö på hälften av de tillgängliga processorerna är en anv�
 
 ### DAM-uppdateringskonfiguration {#dam-update-asset-configuration}
 
-Arbetsflödet innehåller en komplett serie steg som är konfigurerade för uppgifter, till exempel generering av Scene7 PTIFF och [!UICONTROL DAM Update Asset] [!DNL Adobe InDesign Server] integrering. De flesta användare behöver dock inte utföra flera av dessa steg. Adobe rekommenderar att du skapar en anpassad kopia av arbetsflödesmodellen och tar bort alla onödiga steg. [!UICONTROL DAM Update Asset] I det här fallet ska du uppdatera startarna [!UICONTROL DAM Update Asset] så att de pekar på den nya modellen.
+Arbetsflödet innehåller en komplett serie steg som är konfigurerade för uppgifter, till exempel generering av Scene7 PTIFF och [!UICONTROL DAM Update Asset] [!DNL Adobe InDesign Server] integrering. De flesta användare behöver dock inte utföra flera av dessa steg. Adobe rekommenderar att du skapar en anpassad kopia av arbetsflödesmodellen och tar bort alla onödiga steg. [!UICONTROL DAM Update Asset] I det här fallet uppdaterar du startarna [!UICONTROL DAM Update Asset] så att de pekar på den nya modellen.
 
 Om du kör arbetsflödet intensivt kan du öka storleken på fildatalagret avsevärt. [!UICONTROL DAM Update Asset] Resultaten från ett experiment som Adobe har utfört har visat att datalagrets storlek kan öka med ungefär 400 GB om ca 500 arbetsflöden utförs inom 8 timmar.
 
@@ -285,11 +285,11 @@ Utför följande uppgifter för alla problem med nätverkets prestanda från kun
 * Genom att använda ett prestandatest för nätverk
 * Testa mot dispatchern
 
-### [!DNL Experience Manager] instanstestning {#aem-instance-testing}
+### [!DNL Experience Manager] driftsättningstest {#aem-deployment-testing}
 
-För att minimera latens och uppnå hög genomströmning genom effektiv CPU-användning och lastdelning ska du regelbundet övervaka prestanda för din [!DNL Experience Manager] instans. Särskilt gäller följande:
+För att minimera latens och uppnå hög genomströmning genom effektiv processoranvändning och lastdelning ska du regelbundet övervaka prestanda för din [!DNL Experience Manager] driftsättning. Särskilt gäller följande:
 
-* Kör inläsningstester mot [!DNL Experience Manager] instansen.
+* Kör lasttester mot [!DNL Experience Manager] distributionen.
 * Övervaka uppladdningsprestanda och användargränssnittets svarstider.
 
 ## [!DNL Experience Manager Assets] resultatchecklista och påverkan av tillgångshanteringsåtgärder {#checklist}
