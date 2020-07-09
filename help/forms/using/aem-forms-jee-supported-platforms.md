@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d1584bc5034e7d4a549a5f824a89e8cf0c06ac3c
+source-git-commit: 5ae20c36efe40e7228488a59ffc27f86e56e2d48
 workflow-type: tm+mt
-source-wordcount: '3217'
+source-wordcount: '3225'
 ht-degree: 0%
 
 ---
@@ -32,6 +32,7 @@ I det här dokumentet visas vilka klient- och serverplattformar som stöds för 
 >
 >* En fullständig lista över undantag för serverplattformar som stöds finns i [Undantag för serverplattformar](../../forms/using/aem-forms-jee-supported-platforms.md#p-exceptions-to-supported-server-platforms-p)som stöds.
 >* AEM Forms på JEE har endast stöd för engelska, franska, tyska och japanska versioner av de operativsystem och program som stöds.
+
 >
 
 
@@ -155,7 +156,7 @@ Adobe Experience Manager Forms kräver att en Java Virtual Machine körs, vilket
    <td>Stöds</td>
   </tr> 
    <tr>
-   <td>Oracle Database 19c </td>
+   <td>Oracle Database 19c (Standard, Real Application Clusters (RAC) och Enterprise Edition) </td>
    <td>Repository Microkernal </td>
    <td>Stöds</td>
   </tr>
@@ -452,9 +453,11 @@ AEM Forms App har nu stöd för Apache Cordova. Följande plattformsspecifika ve
 >* PDF Generator-konverteringar för OpenOffice stöds bara i Windows och Linux.
 >* Funktionerna OCR PDF, Optimera PDF och Exportera PDF stöds bara i Windows.
 >* En version av Acrobat medföljer AEM Forms för att aktivera PDF Generator-funktioner. Den paketerade versionen ska endast nås via programmering med AEM Forms, under AEM Forms licensperiod, för användning med AEM Forms PDF Generator. Mer information finns i produktbeskrivningen för AEM Forms enligt din distribution ([lokal](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) eller [hanterade tjänster](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))&quot;
+
    >
    >
 * PDF Generator-tjänsten stöder inte Microsoft Windows 10.
+
 >
 
 
@@ -634,6 +637,7 @@ Ytterligare krav finns i:
 >* Administration Console stöds inte i Safari.
 >* Correspondence Management stöder inte Windows® Internet Explorer 9.0 för AEM 6.1-formulär.
 >* Formulärportalen har stöd för skärmläsarprogram JAWS 14.0 i Internet Explorer 11.
+
 >
 
 
@@ -668,6 +672,7 @@ Ytterligare krav finns i:
 >[!NOTE]
 >
 >* Forms Portal stöds endast på Safari på iPad.
+
 >
 
 
