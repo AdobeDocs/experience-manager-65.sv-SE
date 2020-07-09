@@ -9,7 +9,7 @@ topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 translation-type: tm+mt
-source-git-commit: 36c9b3d60331e7482655bc8039153b6b86d721f9
+source-git-commit: f9b11eee4c044a8df4e694aa5f660b5ea375ca3c
 workflow-type: tm+mt
 source-wordcount: '7665'
 ht-degree: 0%
@@ -173,6 +173,7 @@ Följ dessa anvisningar för att köra den programserver där AEM Forms on JEE d
 
    * Välj **Användare kan inte ändra lösenord**.
    * På fliken **Medlem** ser du till att gruppen **Användare** visas.
+
    >[!NOTE]
    >
    >Du kan inte ändra den här inställningen för PDF Generator.
@@ -200,6 +201,7 @@ Följ dessa anvisningar för att köra den programserver där AEM Forms on JEE d
    * [JBoss-directory]\standalone\deployment
    * [JBoss-directory]\standalone\
    * [JBoss-directory]\bin\
+
    >[!NOTE]
    >
    > Standardinstallationsplatsen för JBoss Application Server:
@@ -464,7 +466,7 @@ Du kan göra det möjligt för en icke-administratörsanvändare att använda PD
 
 1. Ange värdet för variabeln till TRUE.
 
-1. Starta om instansen av AEM-formulär.
+1. Starta om instansen AEM Forms.
 
 ## Konfigurera AEM Forms på JEE för åtkomst utanför företaget {#configuring-aem-forms-on-jee-for-access-beyond-the-enterprise}
 
@@ -946,7 +948,7 @@ I det här avsnittet beskrivs standardportarna (och alternativa konfigurationsin
 
 **WebSphere-portar**
 
-Mer information om WebSphere-portar som krävs av AEM Forms på JEE finns i inställningen Portnummer i WebSphere Application Server UI.
+Mer information om WebSphere-portar som krävs av AEM Forms på JEE finns i inställningen Portnummer i WebSphere Application Server-gränssnittet.
 
 ### Konfigurerar SSL {#configuring-ssl}
 
@@ -1017,6 +1019,7 @@ AEM Forms på JEE-körkortsinstallationen skapar som standard ett tjänstkonto m
    * [JBoss-directory]\standalone\deployment
    * [JBoss-directory]\standalone\
    * [JBoss-directory]\bin\
+
    >[!NOTE]
    >
    > Standardinstallationsplatsen för JBoss Application Server:
