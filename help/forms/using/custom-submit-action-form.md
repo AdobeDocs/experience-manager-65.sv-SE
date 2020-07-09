@@ -10,18 +10,21 @@ topic-tags: customization
 discoiquuid: 2a2e1156-4a54-4b0a-981c-d527fe22a27e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: dfa983db4446cbb0cbdeb42297248aba55b3dffd
+source-git-commit: a399b2cb2e0ae4f045f7e0fddf378fdcd80bb848
+workflow-type: tm+mt
+source-wordcount: '1660'
+ht-degree: 0%
 
 ---
 
 
 # Skriva anpassad skickaåtgärd för anpassningsbara formulär{#writing-custom-submit-action-for-adaptive-forms}
 
-För adaptiva formulär krävs Skicka-åtgärder för att bearbeta användarspecificerade data. En Skicka-åtgärd avgör vilken uppgift som utförs på de data som du skickar med ett anpassat formulär. Adobe Experience Manager (AEM) innehåller [OOTB-överföringsåtgärder](../../forms/using/configuring-submit-actions.md) som demonstrerar anpassade uppgifter som du kan utföra med hjälp av data som skickas av användaren. Du kan till exempel utföra uppgifter som att skicka e-post eller lagra data.
+För adaptiva formulär krävs skicka-åtgärder för att bearbeta användarspecificerade data. En Skicka-åtgärd avgör vilken uppgift som utförs på de data som du skickar med ett anpassat formulär. Adobe Experience Manager (AEM) innehåller [OOTB-överföringsåtgärder](../../forms/using/configuring-submit-actions.md) som demonstrerar anpassade åtgärder som du kan utföra med hjälp av data som skickas av användaren. Du kan till exempel utföra uppgifter som att skicka e-post eller lagra data.
 
 ## Arbetsflöde för en Skicka-åtgärd {#workflow-for-a-submit-action}
 
-Flödesdiagrammet visar arbetsflödet för en Skicka-åtgärd som aktiveras när du klickar på knappen **[!UICONTROL Skicka]** i ett anpassat formulär. Filerna i komponenten Bifogad fil överförs till servern och formulärdata uppdateras med URL:erna för de överförda filerna. I klienten lagras data i JSON-format. Klienten skickar en Ajax-begäran till en intern server som masserar de data du har angett och returnerar dem i XML-format. Klienten samlar in dessa data med åtgärdsfält. Den skickar data till den sista servern (Guide Submit servlet) via en åtgärd för att skicka formulär. Sedan vidarebefordrar servern kontrollen till åtgärden Skicka. Åtgärden Skicka kan vidarebefordra begäran till en annan försäljningsresurs eller dirigera om webbläsaren till en annan URL.
+Flödesdiagrammet visar arbetsflödet för en Skicka-åtgärd som aktiveras när du klickar på **[!UICONTROL Submit]** knappen i ett anpassat formulär. Filerna i komponenten Bifogad fil överförs till servern och formulärdata uppdateras med URL:erna för de överförda filerna. I klienten lagras data i JSON-format. Klienten skickar en Ajax-begäran till en intern server som masserar de data du har angett och returnerar dem i XML-format. Klienten samlar in dessa data med åtgärdsfält. Den skickar data till den sista servern (Guide Submit servlet) via en åtgärd för att skicka formulär. Sedan vidarebefordrar servern kontrollen till åtgärden Skicka. Åtgärden Skicka kan vidarebefordra begäran till en annan försäljningsresurs eller dirigera om webbläsaren till en annan URL.
 
 ![Flödesschema som visar arbetsflödet för åtgärden Skicka](assets/diagram1.png)
 
@@ -75,13 +78,13 @@ for (Map.Entry<String, RequestParameter[]> param : requestParameterMap.entrySet(
 
 ### Vidarebefordra sökväg och omdirigerings-URL {#forward-path-and-redirect-url}
 
-När du har utfört den nödvändiga åtgärden vidarebefordrar servern Skicka begäran till den framåtriktade sökvägen. En åtgärd använder API:t setForwardPath för att ställa in framåtsökvägen på tjänsten Skicka stödlinje.
+När du har utfört den nödvändiga åtgärden vidarebefordrar servern Skicka begäran till sökvägen framåt. En åtgärd använder API:t setForwardPath för att ställa in framåtsökvägen på tjänsten Skicka stödlinje.
 
 Om åtgärden inte har någon framåtriktad sökväg dirigeras webbläsaren om med hjälp av omdirigerings-URL:en. Författaren konfigurerar omdirigerings-URL:en med hjälp av Tack-sidan i dialogrutan Redigera anpassat formulär. Du kan också konfigurera omdirigerings-URL:en via åtgärden Submit eller API:t setRedirectUrl i webbplansguiden. Du kan också konfigurera de Request-parametrar som skickas till Redirect URL med API:t setRedirectParameters i guiden Submit.
 
 >[!NOTE]
 >
->En författare tillhandahåller en omdirigerings-URL (med hjälp av Tack-sidkonfigurationen). [OOTB-överföringsåtgärder](../../forms/using/configuring-submit-actions.md) använder omdirigerings-URL:en för att dirigera om webbläsaren från resursen som sökvägen refererar till.
+>En författare tillhandahåller en omdirigerings-URL (med hjälp av Tack-sidkonfigurationen). [OTB-överföringsåtgärder](../../forms/using/configuring-submit-actions.md) använder omdirigerings-URL:en för att dirigera om webbläsaren från resursen som sökvägen refererar till.
 >
 >Du kan skriva en anpassad Skicka-åtgärd som vidarebefordrar en begäran till en resurs eller server. Adobe rekommenderar att det skript som utför resurshantering för vidarebefordringssökvägen omdirigerar begäran till omdirigerings-URL:en när bearbetningen är klar.
 
