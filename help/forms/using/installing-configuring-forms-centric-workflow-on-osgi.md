@@ -8,7 +8,7 @@ topic-tags: installing
 discoiquuid: de292a19-07db-4ed3-b13a-7a2f1cd9e0dd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+source-git-commit: aaedec7314b0fa8551df560eef2574a53c20d1c5
 workflow-type: tm+mt
 source-wordcount: '1700'
 ht-degree: 0%
@@ -26,11 +26,11 @@ Du kan använda [formulärbaserade arbetsflöden i OSGi](../../forms/using/aem-f
 
 När du väl har konfigurerat arbetsflödena kan de aktiveras manuellt för att slutföra en definierad process eller köras programmatiskt när användare skickar ett formulär eller en interaktiv kommunikation. Funktionen ingår i tilläggspaketet AEM Forms.
 
-AEM Forms är en kraftfull plattform för större företag. Formulärcentrerat arbetsflöde i OSGi är bara en av AEM Forms möjligheter. En fullständig lista med funktioner finns i [Introduktion till AEM Forms](../../forms/using/introduction-aem-forms.md).
+AEM Forms är en kraftfull plattform för större företag. Formulärcentrerat arbetsflöde i OSGi är bara en av AEM Forms möjligheter. En fullständig lista med funktioner finns i [Introduktion till AEM Forms](introduction-aem-forms.md).
 
 >[!NOTE]
 >
->Med ett formulärbaserat arbetsflöde i OSGi kan du snabbt skapa och distribuera arbetsflöden för olika uppgifter i OSGi-stacken, utan att behöva installera den fullständiga processhanteringsfunktionen i JEE-stacken. Se en [jämförelse](../../forms/using/capabilities-osgi-jee-workflows.md) av de formulärbaserade AEM-arbetsflödena om OSGi och Process Management på JEE för att lära dig skillnaden och likheterna i funktionerna.
+>Med ett formulärbaserat arbetsflöde i OSGi kan du snabbt skapa och distribuera arbetsflöden för olika uppgifter i OSGi-stacken, utan att behöva installera den fullständiga processhanteringsfunktionen i JEE-stacken. Se en [jämförelse](capabilities-osgi-jee-workflows.md) av de formulärbaserade AEM-arbetsflödena om OSGi och Process Management på JEE för att lära dig skillnaden och likheterna i funktionerna.
 >
 >Efter jämförelsen finns mer detaljerad information om hur du installerar och konfigurerar JEE-stacken i [Installera eller uppgradera AEM Forms på JEE](/help/forms/home.md) om du väljer att installera processhanteringsfunktionen på JEE-stacken.
 
@@ -141,11 +141,11 @@ Utför följande steg på alla författare- och publiceringsinstanser för att s
 
 #### Konfigurera serialiseringsagenten {#configure-the-serialization-agent}
 
-Utför följande steg på alla författare- och publiceringsinstanser för att lägga till paketet i listan över tillåtna:
+Utför följande steg på alla Author- och Publish-instanser för att lägga till paketet i tillåtelselista:
 
 1. Öppna AEM Configuration Manager i ett webbläsarfönster. Standardwebbadressen är https://&#39;[server]:[port]&#39;/system/console/configMgr.
 1. Sök efter och öppna **Brandväggskonfiguration** för deserialisering.
-1. Lägg till paketet **sun.util.calendar** i **allowlist** -fältet. Klicka på Spara.
+1. Lägg till paketet **sun.util.calendar** i fältet **tillåtelselista** . Klicka på Spara.
 1. Upprepa steg 1-3 för alla författare- och publiceringsinstanser.
 
 ### Ytterligare konfigurationer efter installation {#optional-post-installation-configurations}
@@ -164,7 +164,7 @@ Dispatcher är ett verktyg för cachelagring och lastbalansering för AEM. AEM D
 
 1. Konfigurera tjänsten för refererarfilter:
 
-   Logga in som administratör i konfigurationshanteraren för Apache Felix. Konfigurationshanterarens standard-URL är https://&#39;server&#39;:[port_number]/system/console/configMgr. På menyn **Konfigurationer** väljer du alternativet **Apache Sling Reference Filter** . I fältet Tillåt värdar anger du värdnamnet för dispatchern så att den kan användas som referent och klickar på **Spara**. Formatet på posten är `https://'[server]:[port]'`.
+   Logga in som administratör i konfigurationshanteraren för Apache Felix. Konfigurationshanterarens standard-URL är https://&#39;server&#39;:[port_number]/system/console/configMgr. På menyn **Konfigurationer** väljer du alternativet **Apache Sling Reference Filter** . I fältet Tillåt värdar anger du värdnamnet för dispatchern så att den kan användas som referent och klickar på **Spara**. The format of the entry is `https://'[server]:[port]'`.
 
 #### Konfigurera cache {#configure-cache}
 
