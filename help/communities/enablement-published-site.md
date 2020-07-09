@@ -10,7 +10,10 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 26715b94-e2ea-4da7-a0e2-3e5a367ac1cd
 translation-type: tm+mt
-source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
+source-git-commit: e795a647b8728b224792f342200a700169a5e87b
+workflow-type: tm+mt
+source-wordcount: '1210'
+ht-degree: 1%
 
 ---
 
@@ -42,35 +45,36 @@ Vid första ankomsten till den publicerade webbplatsen är besökaren vanligtvis
 
 En anonym besökare visas omedelbart på inloggningssidan för den här privata aktiveringscommunityn. Observera att det inte finns något alternativ för självregistrering eller inloggning på Facebook eller Twitter.
 
-Observera att den här startsidan innehåller fyra menyalternativ: och `Assignments, Ski Catalog, What's New` `Discussions`men ingen kan nås utan att logga in.
+Observera att den här startsidan innehåller fyra menyalternativ: `Assignments, Ski Catalog, What's New` och `Discussions`, men ingen kan nås utan att logga in.
 
 >[!NOTE]
 >
 >Det går att ge anonym åtkomst till en aktiveringswebbplats utan att tillåta besökare att registrera sig själva.
 >Om en aktiveringsresurs är inställd på `show in catalog` och `allow anonymous access`kan anonyma webbplatsbesökare visa resurser i katalogen.
 
+
 ### Förhindra anonym åtkomst på JCR {#prevent-anonymous-access-on-jcr}
 
-En känd begränsning exponerar communityinnehållet för anonyma besökare via jcr-innehåll och json, även om anonym åtkomst **** är inaktiverat för webbplatsens innehåll. Det här beteendet kan dock styras med delningsbegränsningar som en tillfällig lösning.
+En känd begränsning visar communityinnehållet för anonyma besökare via jcr-innehåll och json, även om det **[!UICONTROL allow anonymous access]** är inaktiverat för webbplatsens innehåll. Det här beteendet kan dock styras med delningsbegränsningar som en tillfällig lösning.
 
 Följ de här stegen för att skydda communityplatsens innehåll från anonyma användare genom jcr-innehåll och json:
 
-1. På AEM Author-instansen går du till https://&lt;host>:&lt;port>/editor.html/content/site/&lt;sitename>.html.
+1. I AEM Author-instansen går du till https://&lt;host>:&lt;port>/editor.html/content/site/&lt;sitename>.html.
 
    >[!NOTE]
    >
    >Gå inte till den lokaliserade webbplatsen.
 
-1. Gå till **[!UICONTROL Sidegenskaper]**.
+1. Gå till **[!UICONTROL Page Properties]**.
 
-   ![page-properties-1](assets/page-properties-1.png)
+   ![page-properties](assets/page-properties.png)
 
-1. Gå till fliken **[!UICONTROL Avancerat]** .
-1. Aktivera **[!UICONTROL autentiseringskrav]**.
+1. Gå till **[!UICONTROL Advanced]** fliken.
+1. Aktivera **[!UICONTROL Authentication Requirement]**.
 
    ![site-authentication-1](assets/site-authentication-1.png)
 
-1. Lägg till inloggningssidans sökväg. Exempel, `/content/......./GetStarted`.
+1. Lägg till inloggningssidans sökväg. Till exempel, `/content/......./GetStarted`.
 1. Publicera sidan.
 
 ## Registrerad medlem {#enrolled-member}
@@ -82,7 +86,7 @@ Logga in med
 * `Username: riley`
 * `Password: password`
 
-Om användarprofilen inte skapades genom självregistrering visas profilsidan den första gången en medlem loggar in, så att de kan verifiera och ändra den om det behövs.
+Om användarprofilen inte skapades genom självregistrering visas profilsidan den första gången en medlem loggar in, så att de kan verifiera och ändra den efter behov.
 
 Nästa gång medlemmen loggar in visas startsidan, som identifieras av det första menyalternativet.
 
@@ -92,7 +96,7 @@ Nästa gång medlemmen loggar in visas startsidan, som identifieras av det förs
 
 På uppdragssidan visas alla utbildningsvägar och aktiveringsresurser som är specifikt tilldelade till medlemmarna.
 
-Varje uppdrag innehåller grundläggande information om
+Varje uppdrag innehåller grundläggande information om:
 
 * Tilldelningstypen
 * Om det är ett nytt uppdrag
@@ -136,7 +140,7 @@ Observera, förutom intern moderering, att det finns alternativ för att dela ä
 
 ![chlimage_1-439](assets/chlimage_1-439.png)
 
-### Nyheter {#what-s-new}
+### What&#39;s New {#what-s-new}
 
 Menyalternativet är den titel som anges av `What's New` aktivitetsströmsfunktionen [](functions.md#activity-stream-function) i den här communityplatsens struktur.
 
@@ -206,7 +210,7 @@ Med lite aktivitet och interaktion med resurserna när de publiceras är det vä
 * Välj `Report` ikonen om du vill se en sammanfattning av alla resurser
 * Välj en resurs och sedan `Report` ikonen för en rapport om resursen
 
-Observera att det troligen är för tidigt att visa data från Adobe Analytics, som kan ta mellan 1 och 12 timmar att visa. Men grundläggande SCORM-rapportering är redan tillgänglig.
+Observera att det troligtvis är för tidigt att visa data från Adobe Analytics, som kan ta mellan 1 och 12 timmar att visa. Men grundläggande SCORM-rapportering är redan tillgänglig.
 
 #### Resursrapport för SKI-lektioner {#ski-lessons-resource-report}
 
@@ -234,29 +238,28 @@ För rapporter om tilldelningar:
 
 * On author
 * Logga in med administratörsbehörighet
-* Navigera till **[!UICONTROL Communities > Reports > Assignments Report]**
-* Välj en **[!UICONTROL plats]** i listrutan (välj `Enablement Tutorial`)
+* Navigera till **[!UICONTROL Communities]** > **[!UICONTROL Reports]** > **[!UICONTROL Assignments Report]**
+* Välj en **[!UICONTROL Site]** i listrutan (välj `Enablement Tutorial`)
 
-* Markera **[!UICONTROL grupp]** (välj `Community Ski Class`)
+* Markera **[!UICONTROL Group]** (välj `Community Ski Class`)
 
-* Markera ett **[!UICONTROL uppdrag]** (välj `Ski Lessons`)
+* Markera en **[!UICONTROL Assignment]** (markera `Ski Lessons`)
 
-* Välj **[!UICONTROL Generera]**
+* Välj **[!UICONTROL Generate]**
 
 ![chlimage_1-445](assets/chlimage_1-445.png)
 
 För rapporter om vyer:
 
-* On author
-* Logga in med administratörsbehörighet
-* Navigera till **[!UICONTROL Communities > Reports > Views Report]**
+* Logga in med administratörsbehörighet på författaren
+* Navigera till **[!UICONTROL Communities]** > **[!UICONTROL Reports]** > **[!UICONTROL Views Report]**
 * Välj en **plats **i listrutan (välj`Enablement Tutorial`)
 
-* Välj **[!UICONTROL innehållstyp]** (välj `all`)
+* Markera **[!UICONTROL Content Type]** (välj `all`)
 
-* Välj ett **[!UICONTROL datumintervall]** (välj `Last 7 days`)
+* Markera en **[!UICONTROL date range]** (markera `Last 7 days`)
 
-* Välj **[!UICONTROL Generera]**
+* Välj **[!UICONTROL Generate]**
 
 ![chlimage_1-446](assets/chlimage_1-446.png)
 
