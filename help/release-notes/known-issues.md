@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: d11fc727-f23a-4cde-9fa6-97e2c81b4ad0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 6943eb3d0b73a348fc7bb5a713813bf73f8e7e79
+source-git-commit: 0a55ed44cb7fe3320b2196df38fe8492ee03912d
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '586'
 ht-degree: 0%
 
 ---
@@ -30,6 +30,7 @@ På den här sidan finns en lista över kända fel från Adobe Experience Manage
    1. Anropar&quot;*/libs/granite/ui/content/dumplibs.rebuild.html?invalidate=true*&quot;.
    2. Uppgraderar till AEM 6.5.
    3. Kör&quot;migrering av lat innehåll&quot; på AEM 6.5.
+
    Det finns en [kunskapsbasartikel](https://helpx.adobe.com/experience-manager/kb/avoid-crx-quickstart-deletion-in-aem-6-5.html) med mer information och en lösning på problemet.
 
 * Om du använder JDK 11 med AEM 6.5-instansen kan vissa sidor visas som tomma efter distributionen av vissa paket. Följande felmeddelande visas i loggfilen:
@@ -69,6 +70,8 @@ Så här löser du felet:
 * När en formulärdatamodelltjänst anropas från regelredigeraren för att dynamiskt uppdatera värden för bildvalskomponenten, uppdateras inte värdena för bildvalskomponenten i en adaptiv varifrån. (CQ-4254754)
 * Installationsprogrammet för AEM Forms Designer kräver 32-bitarsversionen av omdistribuerbara [Visual C++-körtidspaket 2012](https://support.microsoft.com/en-in/help/2977003/the-latest-supported-visual-c-downloads) och omdistribuerbara [Visual C++-körtidspaket 2013](https://support.microsoft.com/en-in/help/3179560/update-for-visual-c-2013-and-visual-c-redistributable-package). Kontrollera att ovannämnda omdistribuerbara körtidspaket är installerade innan du startar installationen. (CQ-4265668)
 
+* PDF Generator stöder inte autentisering med smartkort.  När en administratör aktiverar grupprincipen `Interactive Logon: Require Smart card` på en Windows-server blir alla befintliga PDF Generator-användare ogiltiga.
+
 * När ett adaptivt formulär har konfigurerats för att dynamiskt uppdatera värden för en komponent och den publiceringsinstans som är värd för formuläret nås via dispatchern, slutar funktionen att dynamiskt uppdatera värden för ett fält att fungera. Du löser problemet genom att öppna CRXDE på publiceringsinstansen, navigera till /libs/fd/af/runtime/clientlibs/guideChartReducer och skapa egenskapen som listas nedan.
 
    * Namn: allowProxy
@@ -78,6 +81,7 @@ Så här löser du felet:
    * Obligatoriskt: Falskt
    * Flera: Falskt
    * Automatiskt skapad: Fas
+
    Egenskapen gör att klientbiblioteken under körningsmappen kan komma åt proxy. (CQ-4268679)
 
 * 
