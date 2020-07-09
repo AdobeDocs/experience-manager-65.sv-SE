@@ -1,27 +1,21 @@
 ---
-title: Åtgärder och funktioner i formulärbaserade AEM-arbetsflöden i arbetsflöden med OSGi och AEM Forms JEE
-seo-title: Åtgärder och funktioner i formulärbaserade AEM-arbetsflöden i arbetsflöden med OSGi och AEM Forms JEE
-description: 'null'
-seo-description: 'null'
-uuid: 8af9527d-fa5e-4fcb-88e1-49571528fca6
+title: Åtgärder och funktioner i formulärcentrerade AEM-arbetsflöden för OSGi- och AEM Forms JEE-arbetsflöden
+description: Åtgärder och funktioner i formulärcentrerade AEM-arbetsflöden för OSGi- och AEM Forms JEE-arbetsflöden
 contentOwner: khsingh
-topic-tags: publish
-discoiquuid: 89bcc76d-122f-4a3f-b857-16e5376e1624
-docset: aem65
 translation-type: tm+mt
-source-git-commit: 7cc206dc95e6975f61ea9343dea67fa2681a9ae1
+source-git-commit: d5d30e16d2561c020a82cdda847a9dd9b48acd3b
 workflow-type: tm+mt
-source-wordcount: '868'
-ht-degree: 18%
+source-wordcount: '914'
+ht-degree: 19%
 
 ---
 
 
-# Åtgärder och funktioner i formulärbaserade AEM-arbetsflöden i arbetsflöden med OSGi och AEM Forms JEE {#actions-and-capabilities-of-form-centric-aem-workflows-on-osgi-and-aem-forms-jee-workflows}
+# Åtgärder och funktioner i formulärcentrerade AEM-arbetsflöden för OSGi- och AEM Forms JEE-arbetsflöden {#actions-and-capabilities-of-form-centric-aem-workflows-on-osgi-and-aem-forms-jee-workflows}
 
 ## AEM Inbox och HTML Workspace {#aem-inbox-and-html-workspace}
 
-Du kan använda AEM Inbox för att köra och övervaka formulärbaserade AEM-arbetsflöden på OSGi. HTML-arbetsytan gör att du kan köra och övervaka AEM Forms JEE-arbetsflöden. Följande tabell hjälper dig att förstå olika viktiga åtgärder som är tillgängliga i AEM Inbox för formulärbaserade AEM-arbetsflöden i OSGi och i HTML-arbetsytan för AEM Forms JEE-arbetsflöden.
+Du kan använda AEM Inbox för att köra och övervaka formulärbaserade AEM-arbetsflöden på OSGi. HTML-arbetsytan gör att du kan köra och övervaka JEE-arbetsflöden för AEM Forms. Följande tabell hjälper dig att förstå olika viktiga åtgärder som är tillgängliga i AEM Inbox för formulärbaserade AEM-arbetsflöden i OSGi och i HTML-arbetsytan för AEM Forms JEE-arbetsflöden.
 
 <table>
  <tbody>
@@ -105,14 +99,14 @@ Du kan använda AEM Inbox för att köra och övervaka formulärbaserade AEM-arb
 
 ## Formulärbaserade AEM-arbetsflöden i OSGi- och AEM Forms JEE-arbetsflöden {#form-centric-aem-workflows-on-osgi-and-aem-forms-jee-workflows}
 
-Formulärbaserade AEM-arbetsflöden i OSGi- och AEM Forms JEE-arbetsflöden (AEM Forms on JEE Process Management) har en annan uppsättning funktioner. Följande tabell hjälper dig att förstå viktiga funktioner som är tillgängliga i formulärbaserade AEM-arbetsflöden i OSGi- och AEM-formulär i JEE-arbetsflöden:
+Formulärbaserade AEM-arbetsflöden i OSGi- och AEM Forms JEE-arbetsflöden (AEM Forms on JEE Process Management) har en annan uppsättning funktioner. Följande tabell hjälper dig att förstå viktiga funktioner som är tillgängliga i formulärbaserade AEM-arbetsflöden på OSGi och AEM Forms i JEE-arbetsflöden:
 
 <table>
  <tbody>
   <tr>
    <td>Funktioner</td>
    <td>Formulärbaserade AEM-arbetsflöden i OSGi<br /> </td>
-   <td>JEE-arbetsflöden för AEM Forms</td>
+   <td>AEM Forms JEE-arbetsflöden</td>
   </tr>
   <tr>
    <td>Adaptiva former</td>
@@ -210,19 +204,64 @@ Formulärbaserade AEM-arbetsflöden i OSGi- och AEM Forms JEE-arbetsflöden (AEM
    <td>Stöds ej</td>
   </tr>
   <tr>
-   <td>HTML5-formulär, interaktiva PDF-formulär, formuläruppsättning<br /> </td>
-   <td>Stöds ej<br /> </td>
+   <td>Avsökning/schemaläggning</td>
+   <td>Finns att köpa direkt</td>
+   <td>Anpassad implementering krävs</td>
+  </tr>
+  <tr>
+   <td>Adaptiv formulärapp</td>
+   <td>Stöds</td>
+   <td>Stöds</td>
+  </tr>
+  <tr>
+   <td>Assembler Service</td>
+   <td>Stöds</td>
+   <td>Stöds</td>
+  </tr>
+  <tr>
+   <td>Tjänsten PDF Generator</td>
+   <td>Stöds</td>
+   <td>Stöds</td>
+  </tr>
+  <tr>
+   <td>Forms Service</td>
+   <td>Stöds</td>
+   <td>Stöds</td>
+  </tr>
+  <tr>
+   <td>Utdatatjänst</td>
+   <td>Stöds</td>
+   <td>Stöds</td>
+  </tr>
+  <tr>
+   <td>Dokumentsäkerhet</td>
+   <td>Stöds</td>
+   <td>Stöds </td>
+  </tr>
+  <tr>
+   <td>Kör skript</td>
+   <td>Stöder ECMAScript</td>
+   <td>Stöder Java-kodfragment</td>
+  </tr>
+  <tr>
+   <td>Assembler</td>
+   <td>Stöds</td>
+   <td>Stöds</td>
+  </tr>  
+  <tr>
+   <td>HTML5-formulär, interaktiv PDF forms, formuläruppsättning</td>
+   <td>Stöds ej</td>
    <td>Stöds</td>
   </tr>
   <tr>
    <td>Processrapportering</td>
-   <td>Stöds ej<br /> </td>
-   <td>Stöds<br /> </td>
+   <td>Stöds ej</td>
+   <td>Stöds</td>
   </tr>
   <tr>
    <td>Digital signatur</td>
-   <td>Stöds<br /> </td>
-   <td>Stöds<br /> </td>
+   <td>Stöds</td>
+   <td>Stöds</td>
   </tr>
   <tr>
    <td>Startpunktskategorier</td>
@@ -334,16 +373,16 @@ Formulärbaserade AEM-arbetsflöden i OSGi- och AEM Forms JEE-arbetsflöden (AEM
 
 1. Du kan använda formulärbaserade AEM-arbetsflöden i OSGi för att signera ett ifyllt anpassat formulär. Formulärbaserade AEM-arbetsflöden i OSGi stöder inte formulärsignering. Signeringsfunktionen [i form](../../forms/using/working-with-adobe-sign.md#create-in-form-signing-experience) stöds inte.
 
-1. Du måste ha tillgång till AEM Inbox för att kunna köra och övervaka formulärcentrerade arbetsflöden på AEM Forms OSGi och HTML Workspace för att kunna köra och övervaka AEM Forms JEE-arbetsflöden.
-1. AEM Forms Document Services finns för både formulärbaserade AEM-arbetsflöden i OSGi- och AEM Forms i JEE-arbetsflöden. AEM Workflow använder inbyggda dokumenttjänster för formulärbaserade AEM-arbetsflöden i OSGi- och AEM Forms JEE-arbetsflöden (Process Management).
+1. Du måste ha tillgång till AEM Inbox för att kunna köra och övervaka formulärbaserade arbetsflöden på AEM Forms OSGi och HTML Workspace för att kunna köra och övervaka AEM Forms JEE-arbetsflöden.
+1. Inbyggda AEM Forms Document Services är tillgängliga för både formulärbaserade AEM-arbetsflöden i OSGi och AEM Forms i JEE-arbetsflöden. I AEM Workflow används inbyggda dokumenttjänster för formulärbaserade AEM-arbetsflöden i arbetsflöden för OSGi och AEM Forms JEE (Process Management).
 1. AEM Forms JEE-arbetsflöden kan bara återge ett anpassat formulär. Det stöder inte återgivning av anpassningsbara formulär som PDF-dokument.
 1. JEE-arbetsflöden för AEM-formulär har inget separat steg för Adobe Sign. Du behöver ett anpassningsbart formulär aktiverat för AEM-formulär i JEE-arbetsflöden. Mer information finns i [Adobe Sign-dokumentationen](../../forms/using/working-with-adobe-sign.md#add-and-configure-the-signature-step-component).
 1. Du kan använda steget [Anropa datamodelltjänst](../../forms/using/aem-forms-workflow-step-reference.md#p-invoke-form-data-model-service-step-p) för att anropa en webbtjänst och publicera eller hämta data från ett tredjepartsprogram.
 1. Du kan använda steget [Skicka e-post](../../forms/using/aem-forms-workflow-step-reference.md#send-email-step) för att skicka e-postmeddelanden.
 
-## Skillnader mellan funktionerna i AEM Inbox och AEM Forms-appen {#differences-between-aem-inbox-and-aem-forms-app-features}
+## Skillnader mellan funktionerna i AEM Inbox och AEM Forms {#differences-between-aem-inbox-and-aem-forms-app-features}
 
-Två av de framträdande sätten att starta ett formulärcentrerat arbetsflöde är att använda [AEM Inbox](../../forms/using/manage-applications-inbox.md) och appen AEM Forms. Funktionerna i AEM Inbox och AEM Forms-appen skiljer sig dock åt. AEM Inbox fungerar endast med [formulärcentrerade arbetsflöden](../../forms/using/aem-forms-workflow.md) medan AEM Forms-appen fungerar med både formulärcentrerade arbetsflöden och processhantering.
+Två av de framträdande sätten att starta ett formulärcentrerat arbetsflöde är att använda [AEM Inbox](../../forms/using/manage-applications-inbox.md) och AEM Forms. Funktionerna i AEM Inbox och appen AEM Forms skiljer sig dock åt. AEM Inbox fungerar endast med [formulärcentrerade arbetsflöden](../../forms/using/aem-forms-workflow.md) medan AEM Forms-appen fungerar med både formulärcentrerade arbetsflöden och processhantering.
 
 I följande tabell visas funktionerna i AEM Inbox och appen AEM Forms:
 
