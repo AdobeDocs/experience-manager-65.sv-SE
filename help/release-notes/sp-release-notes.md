@@ -4,9 +4,9 @@ description: Versionsinformation för Adobe Experience Manager 6.5 Service Pack 
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 1eca1fcce90dfde8b512414249eb8cc05323c5cc
+source-git-commit: 6686c10f1af24cc4fbdcf6d4e8b07f7dc0e2a8bb
 workflow-type: tm+mt
-source-wordcount: '4396'
+source-wordcount: '4413'
 ht-degree: 0%
 
 ---
@@ -415,6 +415,7 @@ Kunderna rekommenderas att granska om de använder funktionen eller funktionen i
 | Yta | Funktion | Ersättning |
 |---|---|---|
 | Integreringar | Skärmen är föråldrad **[!UICONTROL AEM Cloud Services Opt-In]** . Med integreringen av AEM och Target uppdaterad i AEM 6.5 som stöd för Target Standard-API, som använder autentisering via Adobe IMS och I/O, och den växande rollen hos Adobe Launch för att instrumentera AEM- för analys och personalisering, har Opt-In Wizard blivit funktionellt irrelevant. | Konfigurera systemanslutningar, Adobe IMS-autentisering och Adobe I/O-integreringar via respektive AEM cloud services. |
+| Anslutningar | Adobe JCR Connector för Microsoft SharePoint 2010 och Microsoft SharePoint 2013 har tagits bort för AEM 6.5. | Ej tillämpligt |
 
 ## Known issues {#known-issues}
 
