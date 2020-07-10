@@ -1,11 +1,14 @@
 ---
 cloud: experience-cloud
 product: adobe experience manager
-sub-product: forms
+sub-product: formulär
 audience: end-user
-user-guide-title: AEM 6.5 Forms User Guide
+user-guide-title: Användarhandbok för AEM 6.5-formulär
 translation-type: tm+mt
-source-git-commit: 42a08dca17df382b875c5326a64b5584028741d8
+source-git-commit: 8bb5e92140371fbfee0f946ed3701cd40a972702
+workflow-type: tm+mt
+source-wordcount: '3695'
+ht-degree: 0%
 
 ---
 
@@ -17,11 +20,11 @@ source-git-commit: 42a08dca17df382b875c5326a64b5584028741d8
    + [Sammanfattning av nya funktioner](using/whats-new.md)
    + [Föråldrade funktioner](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/deprecated-removed-features.html)
 + Komma igång {#getting-started}
-   + [Introduktion till AEM-formulär](using/introduction-aem-forms.md)
+   + [Introduktion till AEM Forms](using/introduction-aem-forms.md)
    + [Introduktion till utveckling av anpassningsbara formulär](using/introduction-forms-authoring.md)
    + [Introduktion till interaktiv kommunikation](using/interactive-communications-overview.md)
    + [Introduktion till hantering av formulär](using/introduction-managing-forms.md)
-   + [Introduktion till tjänsten Automatiserad formulärkonvertering](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/table-of-contents/introduction.html)
+   + [Introduktion till den automatiserade konverteringstjänsten för formulär](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/table-of-contents/introduction.html)
    + Självstudiekurs: Skapa ditt första adaptiva formulär {#create-first-adaptive-form}
       + [Självstudiekurs: Skapa ditt första anpassningsbara formulär](using/create-your-first-adaptive-form.md)
       + [Självstudiekurs: Skapa ett anpassat formulär](using/create-adaptive-form.md)
@@ -50,7 +53,7 @@ source-git-commit: 42a08dca17df382b875c5326a64b5584028741d8
       + [Referensteman](using/reference-themes.md)
       + [Mallar för referensbrev](using/reference-cm-layout-templates.md)
       + [Konfigurera Microsoft Dynamics 365 för arbetsflödet för bostadslån på referensplatsen Web.Finance](using/ms-dynamics-configuration-home-mortgage.md)
-+ Installera och konfigurera AEM-formulär {#install-aem-forms}
++ Installera och konfigurera AEM Forms {#install-aem-forms}
    + [Arkitektur och driftsättningstopologier för AEM Forms](using/aem-forms-architecture-deployment.md)
    + [Välja en beständig typ för en AEM Forms-installation](using/choosing-persistence-type-for-aem-forms.md)
    + Installera AEM Forms på OSGi {#osgi-installation}
@@ -62,39 +65,42 @@ source-git-commit: 42a08dca17df382b875c5326a64b5584028741d8
       + [Installera och konfigurera tjänsten Automatisk formulärkonvertering](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/table-of-contents/configure-service.html)
    + Installera AEM Forms på JEE {#jee-installation}
       + [Plattformar som stöds för AEM-formulär på JEE](using/aem-forms-jee-supported-platforms.md)
-      + [Installera och distribuera AEM Forms på JEE med nyckelord för JBoss](http://www.adobe.com/go/learn_aemforms_upgradeTurnkey_65)
-      + [Installera och konfigurera AEM Forms Document Security-server](using/installing-and-configuring-the-document-security-server.md)
-      + [Förbered installation av en enda server för AEM Forms](http://www.adobe.com/go/learn_aemforms_prepareInstallsingle_65)
-      + [Installera och distribuera AEM-formulär på JEE för JBoss](http://www.adobe.com/go/learn_aemforms_installJBoss_65)
+      + [Installera och distribuera AEM Forms på JEE med JBoss-körningsnyckel](http://www.adobe.com/go/learn_aemforms_installTurnkey_65)
+      + [Installera och konfigurera AEM Forms Document Security-servern](using/installing-and-configuring-the-document-security-server.md)
+      + [Förbered installation av AEM Forms single server](http://www.adobe.com/go/learn_aemforms_prepareInstallsingle_65)
+      + [Installera och distribuera AEM Forms på JEE för JBoss](http://www.adobe.com/go/learn_aemforms_installJBoss_65)
       + [Installera och distribuera AEM Forms på JEE för WebSphere](http://www.adobe.com/go/learn_aemforms_installWebSphere_65)
+      + [Installera och distribuera AEM Forms på JEE för WebLogic](http://www.adobe.com/go/learn_aemforms_installWebLogic_65)
       + [Installera AEM Forms Workbench](using/install-workbench.md)
       + [Installera och konfigurera Designer](using/installing-configuring-designer.md)
       + [Förbered installation av serverklustret för AEM Forms](http://www.adobe.com/go/learn_aemforms_prepareInstallcluster_65)
-      + [Konfigurera AEM-formulär på JEE i JBoss-kluster](http://www.adobe.com/go/learn_aemforms_clusterJBoss_65)
+      + [Konfigurera AEM Forms på JEE i JBoss-kluster](http://www.adobe.com/go/learn_aemforms_clusterJBoss_65)
       + [Konfigurera AEM Forms på JEE i WebSphere-kluster](http://www.adobe.com/go/learn_aemforms_clusterWebSphere_65)
-   + Konfigurera AEM-formulär {#configure-aem-forms}
+      + [Konfigurera AEM Forms på JEE i WebLogic-kluster](http://www.adobe.com/go/learn_aemforms_clusterWebLogic_65)
+   + Konfigurera AEM Forms {#configure-aem-forms}
       + [Prestandajustering av AEM Forms-server](using/performance-tuning-aem-forms.md)
       + [Konfigurera cacheminne för adaptiva formulär](using/configure-adaptive-forms-cache.md)
       + [Konfigurerar AEM DS-inställningar](using/configuring-the-processing-server-url-.md)
       + [Konfigurera synkroniseringsplaneraren](using/configure-synchronization-scheduler.md)
       + [Konfigurera anslutningsprogrammet för Microsoft SharePoint](http://help.adobe.com/en_US/AEMForms/6.1/SharePointConfig/index.html)
-      + [Ansluta AEM-formulär till Adobe LiveCycle](using/aem-livecycle-connector.md)
-      + [Konfigurera AEM Forms för att skicka formulärdata till en AEM Forms på JEE-process](using/submit-form-data-livecycle-process.md)
+      + [Koppla AEM Forms till Adobe LiveCycle](using/aem-livecycle-connector.md)
+      + [Konfigurera AEM Forms för att skicka formulärdata till en JEE-process för AEM Forms](using/submit-form-data-livecycle-process.md)
       + [AEM-datorprogram för AEM Forms](/help/forms/using/aem-desktop-app-for-aem-forms.md)
-+ Uppgradera AEM-formulär {#upgrade-aem-forms}
++ Uppgradera AEM Forms {#upgrade-aem-forms}
    + [Tillgängliga uppgraderingssökvägar](using/upgrade.md)
    + Uppgradera AEM Forms på OSGi {#aem-forms-osgi-upgrade}
       + [Uppgradera till AEM 6.5-formulär på OSGi](using/upgrade-forms-osgi.md)
       + [Installera kompatibilitetspaket](using/compatibility-package.md)
-      + [Migrera AEM Forms-resurser och dokument](using/migration-utility.md)
+      + [Migrera AEM Forms resurser och dokument](using/migration-utility.md)
    + Uppgradera AEM Forms på JEE {#aem-forms-jee-upgrade}
       + [Förbered uppgradering av AEM Forms](http://www.adobe.com/go/learn_aemforms_prepareupgrade_65)
       + [Upgrade checklist and planning](http://www.adobe.com/go/learn_aemforms_upgrade_checklist_65)
       + [Uppgradera till AEM 6.5-formulär på JEE](using/upgrade-forms-jee.md)
       + [Uppgradera från en AEM Forms-version till AEM 6.5 Forms on JEE for JBoss](http://www.adobe.com/go/learn_aemforms_upgradeJBoss_65)
-      + [Uppgradera från en AEM Forms-version till AEM 6.5 Forms on JEE for JBoss - nyckelord](http://www.adobe.com/go/learn_aemforms_upgradeTurnkey_65)
+      + [Uppgradera från en AEM Forms-version till AEM 6.5 Forms on JEE for JBoss körklar](http://www.adobe.com/go/learn_aemforms_upgradeTurnkey_65)
       + [Uppgradera från en AEM Forms-version till AEM 6.5 Forms on JEE for WebSphere](http://www.adobe.com/go/learn_aemforms_upgradeWebSphere_65)
-+ Hantera AEM-formulär {#manage-administer-aem-forms}
+      + [Uppgradera från en AEM Forms-version till AEM 6.5 Forms on JEE for WebLogic](http://www.adobe.com/go/learn_aemforms_upgradeWebLogic_65)
++ Hantera AEM Forms {#manage-administer-aem-forms}
    + [AEM Forms on OSGi Groups and Privileges](using/forms-groups-privileges-tasks.md)
    + [Skapa nya mappar för att kategorisera formulär](using/creating-new-folders-categorize-forms.md)
    + [Söka efter formulär och resurser](using/searching-forms-or-assets.md)
@@ -102,7 +108,7 @@ source-git-commit: 42a08dca17df382b875c5326a64b5584028741d8
    + [Hämta en XFA- eller PDF-formulärmall](using/download-xfa-or-pdf-form.md)
    + [Ta bort formulär och relaterade resurser](using/deleting-forms-related-resources.md)
    + [Hämta XDP- och PDF-dokument i AEM Forms](using/get-xdp-pdf-documents-aem.md)
-   + [Importera och exportera resurser till AEM-formulär](using/import-export-forms-templates.md)
+   + [Importera och exportera resurser till AEM Forms](using/import-export-forms-templates.md)
    + [Stöd för nya språk för lokalisering av adaptiva formulär](using/supporting-new-language-localization.md)
    + Hantera användardata {#handling-user-data}
       + [Formulärbaserade arbetsflöden i OSGi](using/forms-workflow-osgi-handling-user-data.md)
@@ -112,13 +118,13 @@ source-git-commit: 42a08dca17df382b875c5326a64b5584028741d8
       + [Korrespondenshantering](using/correspondence-management-handling-user-data.md)
       + [Integrering med Adobe Sign](/help/forms/using/integration-adobe-sign-handling-user-data.md)
       + [Dokumentsäkerhet](/help/forms/using/document-security-handling-user-data.md)
-   + Förbättra AEM Forms-miljön {#hardening-aem-forms-environment}
+   + Försvårande AEM Forms-miljö {#hardening-aem-forms-environment}
       + [Förbättra och skydda AEM-formulär i OSGi-miljö](using/hardening-securing-aem-forms-environment.md)
       + [Allmänna säkerhetsfrågor för AEM Forms på JEE](using/general-security-considerations.md)
-      + [Förbättra dina AEM-formulär i JEE-miljön](using/hardening-aem-forms-jee-environment.md)
+      + [Förbättra AEM Forms på JEE-miljön](using/hardening-aem-forms-jee-environment.md)
       + [Konfigurera inställningar för säker administration för AEM Forms på JEE](using/configuring-secure-administration-settings-aem.md)
 + Formulärdatamodell {#form-data-model}
-   + [Introduktion till integrering av AEM Forms-data](using/data-integration.md)
+   + [Introduktion till dataintegrering i AEM Forms](using/data-integration.md)
    + [Konfigurera datakällor](using/configure-data-sources.md)
    + [Microsoft Dynamics Odata-konfiguration](using/ms-dynamics-odata-configuration.md)
    + [Skapa formulärdatamodell](using/create-form-data-models.md)
@@ -141,12 +147,12 @@ source-git-commit: 42a08dca17df382b875c5326a64b5584028741d8
    + [Textbunden formatering av adaptiva formulärkomponenter](using/inline-style-adaptive-forms.md)
    + [Introduktion till formulärsekvenser i flera steg](using/introduction-form-sequence.md)
    + [Layoutfunktioner i anpassningsbara formulär](using/layout-capabilities-adaptive-forms.md)
-   + [Platshållartext i AEM-formulär](using/placeholder-text-in-aem-forms-.md)
+   + [Platshållartext i AEM Forms](using/placeholder-text-in-aem-forms-.md)
    + [Förhandsgranska ett formulär](using/previewing-forms.md)
    + [Återanvända adaptiva formulär](using/reusing-adaptive-forms.md)
    + [Avgränsningskomponent i adaptiva formulär](using/separator-component-in-adaptive-forms.md)
    + [Använda elektroniska signaturer i ett formulär med hjälp av klottersignaturer](using/signing-forms-using-scribble.md)
-   + [Kortkommandon för AEM Forms](using/keyboard-shortcuts.md)
+   + [AEM Forms-kortkommandon](using/keyboard-shortcuts.md)
    + [Koppla granskare som skickar in svar till ett formulär](using/adding-reviewers-form.md)
    + [Sammanhangsberoende hjälp för formulärfält](using/authoring-in-field-help.md)
    + [Använd layoutläget för att ändra storlek på komponenter](/help/forms/using/resize-using-layout-mode.md)
@@ -175,7 +181,7 @@ source-git-commit: 42a08dca17df382b875c5326a64b5584028741d8
    + [Synkronisera adaptiva formulär med XFA-formulärmallar](using/synchronizing-adaptive-forms-xfa.md)
    + [Integrera Adobe Sign med AEM Forms](using/adobe-sign-integration-adaptive-forms.md)
    + [Skapa och hantera granskningar av resurser i formulär](using/create-reviews-forms.md)
-   + [Bädda in ett anpassningsbart formulär eller interaktiv kommunikation i AEM Sites Single Page Application](/help/forms/using/embed-adaptive-form-aem-sites-spa.md)
+   + [Bädda in ett adaptivt formulär eller interaktiv kommunikation i AEM Sites Single Page Application](/help/forms/using/embed-adaptive-form-aem-sites-spa.md)
    + [Standardvalideringsfelmeddelanden Adaptiva formulär](/help/forms/using/standard-validation-error-messages-adaptive-forms.md)
 + Interaktiv kommunikation {#interactive-communications}
    + [Introduktion till gränssnittet för utveckling av interaktiv kommunikation](using/introduction-interactive-communication-authoring.md)
@@ -190,27 +196,27 @@ source-git-commit: 42a08dca17df382b875c5326a64b5584028741d8
 + Arbetsflöden {#workflows}
    + [Formulärbaserat arbetsflöde i OSGi](using/aem-forms-workflow.md)
    + [Formulärcentrerat arbetsflöde i OSGi - stegreferens](using/aem-forms-workflow-step-reference.md)
-   + [Välj en användare eller grupp dynamiskt för AEM Forms-baserade arbetsflödessteg](using/dynamically-select-a-user-or-group-for-aem-workflow.md)
-   + [Åtgärder och funktioner i formulärbaserade AEM-arbetsflöden i arbetsflöden med OSGi och AEM Forms JEE](using/capabilities-osgi-jee-workflows.md)
+   + [Markera en användare eller grupp dynamiskt för steg i ett AEM Forms-baserat arbetsflöde](using/dynamically-select-a-user-or-group-for-aem-workflow.md)
+   + [Åtgärder och funktioner i formulärcentrerade AEM-arbetsflöden för OSGi- och AEM Forms JEE-arbetsflöden](using/capabilities-osgi-jee-workflows.md)
    + [Initiera API:er för dokumenttjänster från AEM Workflow](using/initiating-document-services-apis-aem.md)
-   + [Logga in i arbetsflöden för AEM Forms](/help/forms/using/forms-workflow-logs.md)
+   + [Inloggning i arbetsflöden för AEM Forms](/help/forms/using/forms-workflow-logs.md)
    + [Variabler i AEM-arbetsflöden](using/variable-in-aem-workflows.md)
    + [Dela och begära åtkomst till inkorgsobjekt från en användare](using/configure-shared-queues-osgi.md)
    + [Konfigurera frånvaro](using/configure-out-of-office-settings.md)
-+ AEM Forms Workspace {#use-aem-forms-workspace}
++ arbetsytan AEM Forms {#use-aem-forms-workspace}
    + [Introduktion till arbetsytan i AEM Forms](using/introduction-html-workspace.md)
-   + [Arbeta med arbetsytan i AEM Forms](using/html-workspace-overview.md)
-   + [AEM Forms Workspace-arkitektur](using/html-workspace-architecture.md)
+   + [Arbeta med arbetsytan AEM Forms](using/html-workspace-overview.md)
+   + [AEM Forms Workspace Architecture](using/html-workspace-architecture.md)
    + [Funktioner i arbetsytan AEM Forms är inte tillgängliga i Flex-arbetsytan](using/features-html-workspace-available-flex.md)
-   + [Funktioner i Flex-arbetsytan är inte tillgängliga i AEM Forms-arbetsytan](using/features-flex-workspace-available-html.md)
+   + [Funktioner i Flex-arbetsytan är inte tillgängliga i AEM Forms](using/features-flex-workspace-available-html.md)
    + [Interaktion med ryggraden](using/backbone-interaction.md)
    + [Beskrivning av återanvändbara komponenter](using/description-reusable-components.md)
    + [Dokumentinformation för återgivning](using/document-details-renderer.md)
-   + [Integrera AEM Forms-arbetsytekomponenter i webbprogram](using/integrating-html-ws-components-web.md)
+   + [Integrera arbetsytekomponenter i AEM Forms i webbprogram](using/integrating-html-ws-components-web.md)
    + [Ny renderings- och skicka-tjänst](using/new-render-submit-service.md)
    + [Mappstrukturen](using/folder-structure.md)
-   + [Integrera tredjepartsprogram i AEM Forms-arbetsytan](using/integrating-correspondence-management-html-workspace.md)
-   + [Beskrivning av JSON-objekt på arbetsytan för AEM Forms](using/html-workspace-json-object-description.md)
+   + [Integrera tredjepartsprogram i arbetsytan AEM Forms](using/integrating-correspondence-management-html-workspace.md)
+   + [JSON-objektbeskrivning för arbetsytan AEM Forms](using/html-workspace-json-object-description.md)
    + [Introduktion till anpassning av arbetsytan i AEM-formulär](using/introduction-customizing-html-workspace.md)
    + [Allmänna steg för anpassning av arbetsytan i AEM Forms](using/generic-steps-html-workspace-customization.md)
    + [Ändra språkområdet för arbetsytan i AEM Forms](using/changing-locale-user-interface.md)
@@ -226,10 +232,10 @@ source-git-commit: 42a08dca17df382b875c5326a64b5584028741d8
    + [Miniatyrbilder av JavaScript-filer](using/minification-javascript-files.md)
    + [Anpassa spårningstabeller](using/sorting-tracking-tables-add-columns.md)
    + [Uppdaterar länken till dokumentationen](using/updating-link-help-documentation.md)
-   + [Arbeta med formulär i AEM Forms-arbetsytan](using/form-sets-html-workspace.md)
+   + [Arbeta med formulär på arbetsytan AEM Forms](using/form-sets-html-workspace.md)
    + [API:er som används i arbetsytan i AEM Forms](using/apis-used-html-workspace.md)
-   + [Initiera en ny process med befintliga processdata på arbetsytan i AEM Forms](using/initiating-new-process-existing-process.md)
-   + [Två AEM Forms-instanser finns på en server](using/two-html-workspace-instances-one.md)
+   + [Initiera en ny process med befintliga processdata på arbetsytan AEM Forms](using/initiating-new-process-existing-process.md)
+   + [Två AEM Forms-arbetsyteinstanser finns på en server](using/two-html-workspace-instances-one.md)
    + [Ändra gränssnittets färgschema](using/changing-color-scheme-interface.md)
    + [Ändra teckensnitt i gränssnittet](using/changing-font-interface.md)
    + [Ändra organisationslogotyp för varumärken](using/changing-organization-logo-branding.md)
@@ -244,15 +250,15 @@ source-git-commit: 42a08dca17df382b875c5326a64b5584028741d8
    + [Integrera AEM-formulärarbetsytan med Microsoft Office SharePoint Server](using/integrating-aem-forms-workspace-with-microsoft-office-sharepoint-server.md)
    + [Arbeta med att göra-listor](using/todo-lists.md)
    + [Felsökningsriktlinjer för arbetsytan i AEM Forms](using/troubleshooting-guidelines-html-workspace.md)
-+ Appen AEM Forms {#aem-forms-app}
++ AEM Forms {#aem-forms-app}
    + [Introduktion till appen AEM Forms](using/aem-forms-app.md)
    + [Konfigurera miljö för appen AEM Forms](using/setup-environment-mobile-workspace.md)
    + [Konfigurera Xcode-projektet och bygg iOS-appen](using/setup-xcode-project-build-installer.md)
    + [Bygga en säker AEM Forms-app för iOS](using/building-secure-mobile-workspace-app.md)
    + [Konfigurera Visual Studio-projektet och bygg Windows-appen](using/setup-visual-studio-project-build-installer.md)
    + [Konfigurera Android-studioprojektet och bygg Android-appen](using/setup-android-studio-project-build-installer.md)
-   + [Bygg Android-appen AEM Forms](using/setup-eclipse-project-build-installer.md)
-   + [Distribuera appen AEM Forms](using/distribute-mobile-workspace-app.md)
+   + [Bygg Android-appen för AEM Forms](using/setup-eclipse-project-build-installer.md)
+   + [Distribuera AEM Forms](using/distribute-mobile-workspace-app.md)
    + [Gestanpassning](using/gesture-customization.md)
    + [Anpassning av varumärkesprofilering](using/branding-customization.md)
    + [Temaanpassning](using/theme-customization.md)
@@ -263,7 +269,7 @@ source-git-commit: 42a08dca17df382b875c5326a64b5584028741d8
    + [Arbeta med startpunkter](using/working-with-startpoints.md)
    + [Öppna en uppgift](using/open-task.md)
    + [Spara en uppgift eller ett formulär som ett utkast](using/save-as-draft.md)
-   + [Använda automatiskt sparande i appen AEM Forms](using/autosave-data-app.md)
+   + [Använda autosparfunktionen i appen AEM Forms](using/autosave-data-app.md)
    + [Spara formulär som mallar](using/save-forms-and-start-points-as-templates.md)
    + [Lägga till bilagor](using/add-attachments.md)
    + [Arbeta i offlineläge](using/work-offline-mode.md)
@@ -273,7 +279,7 @@ source-git-commit: 42a08dca17df382b875c5326a64b5584028741d8
    + [Introduktion till HTML5-formulär](using/introduction.md)
    + [Komma igång med HTML5-formulär](using/get-started.md)
    + [Arkitektur för HTML5-formulär](using/html5-forms-architecture.md)
-   + [Skillnaden mellan HTML5-formulär och PDF-formulär](using/feature-differentiation-html5-forms-pdf-forms.md)
+   + [Skillnaden mellan HTML5-formulär och PDF forms](using/feature-differentiation-html5-forms-pdf-forms.md)
    + [Vanliga frågor och svar om HTML5-formulär](using/faq.md)
    + [Utforma formulärmallar för HTML5-formulär](using/designing-form-template.md)
    + [Metodtips för HTML5-formulär](using/best-practices-for-html5-forms.md)
@@ -297,7 +303,7 @@ source-git-commit: 42a08dca17df382b875c5326a64b5584028741d8
    + [Aktivera loggning för HTML5-formulär](using/enable-logs.md)
    + [Felsöka HTML5-formulär](using/debug.md)
    + [Skriptstöd för HTML5-formulär](using/scripting-support.md)
-   + [Formuläret har angetts i AEM-formulär](using/formset-in-aem-forms.md)
+   + [Formuläruppsättning i AEM Forms](using/formset-in-aem-forms.md)
 + Bokstäver och korrespondens {#letters-correspondences}
    + [Översikt över korrespondenshantering](using/cm-overview.md)
    + [Layoutdesign](using/layout-design-details.md)
@@ -322,13 +328,13 @@ source-git-commit: 42a08dca17df382b875c5326a64b5584028741d8
    + [Infogade villkor och upprepningar i interaktiv kommunikation och brev](using/cm-inline-condition.md)
    + [Dokumentfragment](using/lists.md)
    + [Egenskaper för konfiguration av korrespondenshantering](using/cm-configuration-properties.md)
-+ Integrera AEM Forms med Experience Cloud-lösningar {#integrate-aem-forms-with-experience-cloud-solutions}
-   + [Skapa riktade upplevelser i AEM-formulär](/help/forms/using/experience-targeting-forms.md)
++ Integrera AEM Forms med lösningar från Experience Cloud {#integrate-aem-forms-with-experience-cloud-solutions}
+   + [Skapa riktade upplevelser i AEM Forms](/help/forms/using/experience-targeting-forms.md)
    + [Mät och förbättra effektiviteten och konverteringen av blanketter](using/measure-improve-performance-forms-documents.md)
    + [Konfigurera analyser och rapporter](using/configure-analytics-forms-documents.md)
-   + [Visa och förstå analysrapporter för AEM Forms](using/view-understand-aem-forms-analytics-reports.md)
+   + [Visa och förstå AEM Forms analysrapporter](using/view-understand-aem-forms-analytics-reports.md)
    + [Skapa och hantera A/B-tester för adaptiva formulär](using/ab-testing-adaptive-forms.md)
-+ Publicera och bearbeta AEM-formulär {#publish-process-aem-forms}
++ Publicera och bearbeta AEM Forms {#publish-process-aem-forms}
    + [Introduktion till att publicera formulär på en portal](using/introduction-publishing-forms.md)
    + [Exempel för att integrera komponent för utkast och inlämning med databas](using/integrate-draft-submission-database.md)
    + [Konfigurera lagringstjänster för utkast och överföringar](using/configuring-draft-submission-storage.md)
@@ -373,7 +379,7 @@ source-git-commit: 42a08dca17df382b875c5326a64b5584028741d8
    + [Skriptreferens för Designer](http://www.adobe.com/go/learn_aemforms_scriptingReference_65)
    + [FormCalc-referens för Designer](http://www.adobe.com/go/learn_aemforms_formCalc_65)
    + [Använda klottersignaturer i HTML5-formulär](using/scribble-signature.md)
-+ Anpassa AEM-formulär {#customize-aem-forms}
++ Anpassa AEM Forms {#customize-aem-forms}
    + [Utseenderamverk för adaptiva formulär och HTML5-formulär](using/introduction-widgets.md)
    + [Skapa en anpassad anpassad formulärmall](using/custom-adaptive-forms-templates.md)
    + [Skapa anpassade layoutkomponenter för anpassade formulär](using/custom-layout-components-forms.md)
@@ -395,7 +401,7 @@ source-git-commit: 42a08dca17df382b875c5326a64b5584028741d8
    + [Registrera en transaktion för anpassade implementeringar](using/record-transaction-custom-implementation.md)
 + Administratörshjälp för AEM Forms på JEE {#administrator-help}
    + Kom igång {#get-started}
-      + [Allmänna inställningar för AEM-formulär](/help/forms/using/admin-help/configure-general-aem-forms-settings.md)
+      + [Allmänna inställningar för AEM Forms](/help/forms/using/admin-help/configure-general-aem-forms-settings.md)
       + [Uppdatera licenstypen för distributionen](/help/forms/using/admin-help/update-license-type-deployment.md)
    + Konfigurera och hantera domäner {#setup-manage-domains}
       + [Lägga till domäner](/help/forms/using/admin-help/adding-domains.md)
@@ -578,11 +584,11 @@ source-git-commit: 42a08dca17df382b875c5326a64b5584028741d8
    + [API:er för Form Bridge för HTML5-formulär](using/form-bridge-apis.md)
    + [Assembler Service och DDX Reference](http://www.adobe.com/go/learn_aemforms_ddxRef_65)
    + [Workbench Hjälp](http://www.adobe.com/go/learn_aemforms_workbench_65)
-   + Programmera med AEM Forms på JEE {#programming-aem-forms-jee}
+   + Programmering med AEM Forms på JEE {#programming-aem-forms-jee}
       + Introduktion till programmering med AEM Forms på JEE {#introduction-programming-aem-forms-jee}
          + [Introduktion till Java API QuickStart](developing/introducing-java-api-soap-quick.md)
-         + [Anropa AEM-formulär med API:er](developing/invoking-aem-forms-using-apis.md)
-         + [Förstå AEM-formulärprocesser](developing/aem-forms-processes.md)
+         + [Anropa AEM Forms med API:er](developing/invoking-aem-forms-using-apis.md)
+         + [Förstå AEM Forms-processer](developing/aem-forms-processes.md)
          + [Tjänstbehållare](developing/service-container.md)
       + Snabbstart för Java API - kodexempel {#java-api-quick-start-code-examples}
          + [JavaAPI-snabbstart för Application Manager-klient (SOAP)](developing/application-manager-client-java-api.md)
@@ -613,11 +619,11 @@ source-git-commit: 42a08dca17df382b875c5326a64b5584028741d8
          + [Java API-snabbstart för användarhanteraren (SOAP)](developing/user-manager-java-api-quick.md)
          + [XMP Utilities Service Java APIQuick Start(SOAP)](developing/xmp-utilities-service-java-api.md)
       + Anropa AEM Forms på JEE med API:er {#invoking-aem-forms-jee-apis}
-         + [Anropa AEM-formulär med REST-begäran](developing/invoking-aem-forms-using-rest.md)
-         + [Anropa AEM-formulär med webbtjänster](developing/invoking-aem-forms-using-web.md)
-         + [Anropa AEM-formulär med fjärrstyrning](developing/invoking-aem-forms-using-remoting.md)
-         + [Anropa AEM-formulär med webbtjänster](developing/invoking-human-centric-long-lived.md)
-         + [Anropa AEM-formulär med JavaAPI](developing/invoking-aem-forms-using-java.md)
+         + [Anropa AEM Forms med REST-begäran](developing/invoking-aem-forms-using-rest.md)
+         + [Anropa AEM Forms med webbtjänster](developing/invoking-aem-forms-using-web.md)
+         + [Anropa AEM Forms med fjärrstyrning](developing/invoking-aem-forms-using-remoting.md)
+         + [Anropa AEM Forms med webbtjänster](developing/invoking-human-centric-long-lived.md)
+         + [Anropa AEM Forms med JavaAPI](developing/invoking-aem-forms-using-java.md)
          + [Skapa Flash Builder-program som utför SSO-autentisering med HTTP-tokens](developing/creating-flash-builder-applications-perform.md)
       + Utföra serviceåtgärder med API:er {#performing-service-operations-using-apis}
          + [Utföra serviceåtgärder med API:er](developing/performing-service-operations-using-apis.md)
@@ -649,7 +655,7 @@ source-git-commit: 42a08dca17df382b875c5326a64b5584028741d8
          + [Återge formulär på klienten](developing/rendering-forms-client.md)
          + [Återge HTML-formulär med anpassade CSS-filer](developing/rendering-html-forms-using-custom.md)
          + [Återge HTML-formulär med anpassade verktygsfält](developing/rendering-html-forms-custom-toolbars.md)
-         + [Återgivning av interaktiva PDF-formulär](developing/rendering-interactive-pdf-forms.md)
+         + [Återger interaktiv PDF forms](developing/rendering-interactive-pdf-forms.md)
          + [Rendering Rights-aktiverade formulär](developing/rendering-rights-enabled-forms.md)
          + [Validerar DDX-dokument](developing/validating-ddx-documents.md)
          + [Konvertera PDF till PostScript och bildfiler](developing/converting-pdf-postscript-image-files.md)
@@ -659,13 +665,13 @@ source-git-commit: 42a08dca17df382b875c5326a64b5584028741d8
          + [Kryptera och dekryptera PDF-dokument](developing/encrypting-decrypting-pdf-documents.md)
          + [Importera och exportera data](developing/importing-exporting-data.md)
          + [Hantera användare](developing/users.md)
-         + [Arbeta med AEM Forms-databasen](developing/aem-forms-repository.md)
+         + [Arbeta med AEM Forms Repository](developing/aem-forms-repository.md)
          + [Arbeta med streckkodade formulär](developing/barcoded-forms.md)
          + [Arbeta med autentiseringsuppgifter](developing/credentials.md)
          + [Arbeta med PDF/A-dokument](developing/pdf-a-documents.md)
          + [Arbeta med PDF-verktyg](developing/pdf-utilities.md)
          + [Arbeta med XMP-verktyg](developing/xmp-utilities.md)
-         + [Förbereder AEM-formulär för säkerhetskopiering](developing/preparing-aem-forms-backup.md)
+         + [Förbereder AEM Forms för säkerhetskopiering](developing/preparing-aem-forms-backup.md)
          + [Hantera slutpunkter programmatiskt](developing/programmatically-endpoints.md)
          + [Hantera inställningsnoderna programmatiskt](developing/programmatically-preferences-nodes.md)
          + [Skydda dokument med regler](developing/protecting-documents-policies.md)
