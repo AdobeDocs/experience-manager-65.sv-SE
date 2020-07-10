@@ -1,19 +1,22 @@
 ---
 title: Genomgång av vår Gov-referenswebbplats
 seo-title: Genomgång av vår Gov-referenswebbplats
-description: Använd fiktiva användare och grupper för att utföra AEM Forms-åtgärder med hjälp av demopaketet We.Gov.
-seo-description: Använd fiktiva användare och grupper för att utföra AEM Forms-åtgärder med hjälp av demopaketet We.Gov.
+description: Använd fiktiva användare och grupper för att utföra AEM Forms med hjälp av demopaketet We.Gov.
+seo-description: Använd fiktiva användare och grupper för att utföra AEM Forms med hjälp av demopaketet We.Gov.
 uuid: 797e301a-36ed-4bae-9ea8-ee77285c786d
 contentOwner: anujkapo
 discoiquuid: ddb3778b-be06-4cde-bc6e-0994efa42b18
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: 29b1a151a6c284fcb0bf01de425dfba79f5943c2
+workflow-type: tm+mt
+source-wordcount: '2422'
+ht-degree: 0%
 
 ---
 
 
-# Genomgång av vår Gov-referenswebbplats{#we-gov-reference-site-walkthrough}
+# Genomgång av vår Gov-referenswebbplats {#we-gov-reference-site-walkthrough}
 
 ## Krav {#pre-requisites}
 
@@ -21,19 +24,27 @@ Konfigurera referenswebbplatsen enligt beskrivningen i [Konfigurera och konfigur
 
 ## Användarberättelse {#user-story}
 
-* AEM-formulär
+* AEM Forms
+
+   * Automatisk formulärkonvertering
+   * Redigering
+   * Formulärdatamodeller/datakällor
+
+* AEM Forms
 
    * Datainhämtning
-   * Dataintegrering (MS Dynamics)
-   * Adobe Sign
+   * (Valfritt) Dataintegrering (MS Dynamics)
+   * (Valfritt) Adobe Sign
 
 * Arbetsflöde
-* Kundkommunikation
+* E-postmeddelanden
+* (Valfritt) Kundkommunikation
 
    * Utskriftskanal
    * Webbkanal
 
 * Adobe Analytics
+* Integrering av datakällor
 
 ### Fictitious users and groups {#fictitious-users-and-groups}
 
@@ -87,8 +98,73 @@ Följande grupper ingår också:
 1. **E-postklient**: Önskat sätt att visa e-postmeddelanden (Gmail, Outlook)
 1. **CTA**: Uppmaning
 1. **Navigera**: Om du vill hitta en specifik referenspunkt på webbläsarsidan.
+1. **AFC**: Automatisk formulärkonvertering
 
-## Mobil vy - demo {#mobile-view-demo}
+## Automatiserad formulärkonvertering (Camila) {#automated-forms-conversion}
+
+**Detta avsnitt**: Camila the CX Lead har ett äldre PDF-baserat formulär som användes som en del av en pappersbaserad process. Som en del i en moderniseringssatsning vill hon använda det här PDF-formuläret för att automatiskt skapa nya moderna adaptiva formulär.
+
+### Automatiserad formulärkonvertering - We.gov (Camila) {#automated-forms-conversion-wegov}
+
+1. Gå till *https://&lt;aemserver>:&lt;port>/aem/start.html*
+
+1. Logga in med:
+   * **Användare**: camila.santos
+   * **Lösenord**: lösenord
+1. På huvudsidan väljer du Formulär > Formulär och dokument > AEM Forms Web.gov Forms > AFC.
+1. Camila överför PDF-filen till AEM Forms.
+
+   ![Överför formulär](assets/aftia-upload-form.jpg)
+
+1. Camilla väljer sedan en åtgärd för automatisk formulärkonvertering
+
+   >[!NOTE]
+   >
+   >Observera att inställningarna i AFC är förkonfigurerade för slutanvändaren, vilket betyder att de inte bör ändras.
+
+   * **Valfritt**: Om du vill använda temat Accessible Ultramarine klickar du bara på Specificera ett adaptivt formulärtema och väljer temat Accessible-Ultramarine som visas i listan med alternativ.
+
+   ![Ultramarintema](assets/aftia-upload-conversion-settings.jpg)
+
+   ![Starta konvertering](assets/aftia-start-conversion.jpg)
+
+1. Camilla granskar sedan formuläret och ser till att alla fält finns
+
+   ![Granska konvertering](assets/aftia-review-conversion.jpg)
+
+1. Camilla börjar sedan redigera formuläret som hon väljer Rootpanel > Redigera (skiftnyckel) > Markerar flikar överst på panellayoutmenyn > Markera kryssrutan.
+
+   ![Granska egenskaper](assets/aftia-review-properties.jpg)
+
+1. Camilla lägger sedan till alla CSS- och fältändringar som behövs för att producera slutprodukten.
+
+   ![Lägg till CSS](assets/aftia-add-css.jpg)
+
+### Formulärdatamodell och datakällor (Camila) {#data-sources}
+
+**Detta avsnitt**: När dokumentet har konverterats och skapats i ett adaptivt formulär måste Camila sedan ansluta det adaptiva formuläret till en datakälla.
+
+1. Camila öppnar egenskaperna i formuläret som har konverterats i [automatisk formulärkonvertering - We.Gov](#automated-forms-conversion-wegov).
+
+1. Camila väljer sedan Formulärmodell > Väljer formulärdatamodell i listrutan Välj från > Väljer FDM för registrering hos Web.gov i listan med alternativ.
+
+1. Klicka på knappen Spara och stäng.
+
+   ![FDM-markering](assets/aftia-select-fdm.jpg)
+
+### Testning av formulärtillgänglighet (Camila) {#form-accessibility-testing}
+
+Camila kontrollerar också att det skapade innehållet är korrekt och fullt tillgängligt enligt företagsstandarder.
+
+1. Camila öppnar det ifyllda formuläret We.Gov.
+
+1. Öppnar fliken Granska i Chrome Developer Tool.
+
+1. Utför en tillgänglighetskontroll för att validera det adaptiva formuläret.
+
+   ![Tillgänglighetskontroll](assets/aftia-accessibility.jpg)
+
+## Demo av mobilvyn Adaptiv form (Aya) {#mobile-view-demo}
 
 **Detta avsnitt måste utföras före demonstrationen.**
 
@@ -102,13 +178,13 @@ Följande grupper ingår också:
 
 1. Ändra storlek på webbläsarfönstret eller använd webbläsarens emulator för att replikera en mobilenhetsstorlek.
 
-### Aya User Story (webbsidan We.Gov) {#aya-user-story-we-gov-website}
+### Webbplats för Web.Gov (Aya) {#aya-user-story-we-gov-website}
 
 ![Fantastiska användare](/help/forms/using/assets/aya_tan_new-1.png)
 
 **Detta avsnitt**: Aya är medborgare. Hon hör från en vän att hon kan vara berättigad till en tjänst från en myndighet. Aya navigerar till webbsidan We.Gov från sin mobiltelefon för att lära sig mer om tjänster som hon är berättigad till.
 
-### Aya User Story (We.Gov pre-screener) {#aya-user-story-we-gov-pre-screener}
+### We.GOV Pre-Screener (Aya) {#aya-user-story-we-gov-pre-screener}
 
 Svar på några frågor som bekräftar hennes behörighet genom att fylla i ett kort anpassningsbart formulär på mobiltelefonen.
 
@@ -125,11 +201,11 @@ Svar på några frågor som bekräftar hennes behörighet genom att fylla i ett 
 
    ![Länken Använd nu](/help/forms/using/assets/apply_now_link.png)
 
-### Aya User Story (anpassningsbart webbformulär) {#aya-user-story-we-gov-adaptive-form}
+### Adaptiv form (AYA) {#aya-user-story-we-gov-adaptive-form}
 
 Aya får reda på att hon är berättigad och börjar fylla i sin ansökan för att få service på sin mobila enhet.
 
-Du måste granska vissa dokument hemma innan hon kan slutföra tjänstbegäran. Hon sparar och avslutar programmet.
+Du måste granska vissa dokument hemma innan hon kan slutföra tjänstbegäran. Hon sparar och avslutar programmet från sin mobila enhet.
 
 **Användarinstruktioner:**
 
@@ -176,7 +252,7 @@ Du måste granska vissa dokument hemma innan hon kan slutföra tjänstbegäran. 
 
 **Detta avsnitt:** Hemma har Aya hittat den information hon behövde och återupptar programmet från sin dator. Gå till onlineformulärportalen och återuppta hennes ansökan. Med viss enkel anpassning kan man också automatiskt generera och mejla en länk för att återuppta ansökningen.
 
-### Aya User Story (forts. adaptive form) {#aya-user-story-continued-adaptive-form}
+### Fortsatt adaptiv form (AYA) {#aya-user-story-continued-adaptive-form}
 
 **Användarinstruktioner:**
 
@@ -198,11 +274,16 @@ Du måste granska vissa dokument hemma innan hon kan slutföra tjänstbegäran. 
 
    ![Skicka det anpassade formuläret](/help/forms/using/assets/submit_adaptive_form.png)
 
-   När Aya har skickat in ett e-postmeddelande som hon öppnar och är redo att signera elektroniskt med Adobe Sign.
+   >[!NOTE]
+   >
+   >När Aya fyller i telefonnummerfältet måste hon fylla i det som ett kontinuerligt 11-siffrigt nummer utan bindestreck, blanksteg eller bindestreck.
+
+   När du har skickat in Aya får du en tacksida. Hon kan också få ett e-postmeddelande som hon kan öppna för att signera arkivhandlingar elektroniskt med Adobe Sign.
+
+### Valfritt: Adobe Sign (Aya) {#adobe-sign}
 
 **Användarinstruktioner:**
 
-1. Efter överföring visas sidan Tack.
 1. Navigera till din e-postklient och hitta e-postadressen till Adobe Sign.
 1. Klicka på länken till Adobe Sign.
 
@@ -223,7 +304,7 @@ Du måste granska vissa dokument hemma innan hon kan slutföra tjänstbegäran. 
 
 **Detta avsnitt:** George är affärsanalytiker på den statliga myndigheten Aya begär en tjänst från. George har en enda kontrollpanel där han kan se alla serviceförfrågningar som han har tilldelats för granskning.
 
-### George User Story (AEM inbox) {#george-user-story-aem-inbox}
+### AEM Inbox (George) {#george-user-story-aem-inbox}
 
 **Användarinstruktioner:**
 
@@ -247,7 +328,7 @@ Du måste granska vissa dokument hemma innan hon kan slutföra tjänstbegäran. 
 
    ![Granskning av program för hälsoförmåner](/help/forms/using/assets/health_benefits.png)
 
-### George User Story (AEM inbox och MS Dynamics) {#george-user-story-aem-inbox-and-ms-dynamics}
+### Valfritt: AEM Inbox &amp; MS Dynamics (George) {#george-user-story-aem-inbox-and-ms-dynamics}
 
 Tack vare dataintegreringar och automatiserade arbetsflöden visas Ayas program tillsammans med en CRM-post som automatiskt har genererats när data skickades.
 
@@ -263,7 +344,7 @@ Tack vare dataintegreringar och automatiserade arbetsflöden visas Ayas program 
 
    ![MS Dynamics-post](/help/forms/using/assets/ms_dynamics.png)
 
-### George User Story (tillbaka till AEM Inbox) {#george-user-story-back-to-aem-inbox}
+### Tillbaka till AEM Inbox (George) {#george-user-story-back-to-aem-inbox}
 
 George godkänner Ayas ansökan, och tack vare ett befintligt automatiserat arbetsflöde skickas även ett bekräftelsemeddelande via e-post till Aya.
 
@@ -282,7 +363,7 @@ George godkänner Ayas ansökan, och tack vare ett befintligt automatiserat arbe
 
 **Detta avsnitt:** Camila på CX Lead ringer ett välkomstsamtal med Aya för att förklara hur man använder de myndighetstjänster hon har godkänts för.
 
-### Camila User Story (AEM inbox &amp; MS Dynamics) {#camila-user-story-aem-inbox-ms-dynamics}
+### (Valfritt) AEM Inbox &amp; MS Dynamics {#camila-user-story-aem-inbox-ms-dynamics}
 
 **Användarinstruktioner:**
 
@@ -304,9 +385,9 @@ George godkänner Ayas ansökan, och tack vare ett befintligt automatiserat arbe
 1. Klicka på&#x200B;**Visa alla** för att gå till Inkorgen.
 1. Öppna den senaste aktiviteten&quot;**Nytt kontaktgodkännande**&quot; i Inkorgen.
 
-   ![Nytt godkännande av kontakt](/help/forms/using/assets/new_contact_approval.png)
+![Nytt godkännande av kontakt](/help/forms/using/assets/new_contact_approval.png)
 
-   **Användarinstruktioner:**
+**(Valfritt) Användarinstruktioner:**
 
 1. Öppna och inspektera det skrivskyddade anpassningsbara formuläret.
 1. Klicka på knappen &quot;**Öppna MS Dynamics**&quot; för att öppna MS Dynamics-posten i ett nytt fönster.
@@ -324,11 +405,11 @@ George godkänner Ayas ansökan, och tack vare ett befintligt automatiserat arbe
 
    ![Fliken](/help/forms/using/assets/activities_tab.png) Aktiviteter ![Bekräfta ny kontakt](/help/forms/using/assets/confirm_new_contact.png)
 
-## Welcome Kit-medborgare (Aya) {#welcome-kit-citizen-aya}
+## (Valfritt) Välkomstpaket (Aya) {#welcome-kit-citizen-aya}
 
 **Detta avsnitt:** Aya får ett e-postmeddelande med en länk till ett interaktivt meddelande som sammanfattar hennes fördelar och även innehåller formulärfält som ska fyllas i. Med PDF-förmånsutdrag bifogat och länk till interaktivt brev i e-postmeddelandet (med samma tema/varumärke som det interaktiva meddelandet).
 
-### Aya User Story (e-postklient) {#aya-user-story-email-client}
+### E-postklientmeddelande (AYA) {#aya-user-story-email-client}
 
 **Användarinstruktioner:**
 
@@ -353,7 +434,7 @@ George godkänner Ayas ansökan, och tack vare ett befintligt automatiserat arbe
 
 **Detta avsnitt:** Camila schemalägger också en påminnelse så ett år senare. (Arbetsflödessteg som automatiserar/kör och skickar e-post).
 
-### Aya User Story (e-postklient) {#aya-user-story-email-client-1}
+### E-postklientmeddelande (AYA) {#aya-user-story-email-client-updated}
 
 **Användarinstruktioner:**
 
@@ -362,21 +443,66 @@ George godkänner Ayas ansökan, och tack vare ett befintligt automatiserat arbe
 1. Klicka på knappen&quot;**Skicka ett nytt program**&quot; för att öppna det anpassade formuläret.
 
    1. Detta avsnitt är avsiktligt tomt för att stödja förifyllning av data i fas 2.
+
    ![Påminnelse om förnyelse - e-post](/help/forms/using/assets/renewal_reminder_email.png)
 
-## Analytics CX Lead (Camila) {#analytics-cx-lead-camila}
+## (Valfritt) Formulärdatamodell (Camila) {#form-data-model}
+
+**Detta avsnitt**: Camila navigerar till dataintegreringar i AEM Forms där hon kan göra ett snabbt test för att se att det finns information som skickas till den externa datakällan via integrering med formulärdatamodellen.
+
+### Formulärdatamodell (Camila) {#form-data-model-camila}
+
+**Detta avsnitt**: Camila navigerar till sidan Datakällor för att validera data som servern har replikerat i Derby-databasen.
+
+1. När användarupplevelsen är klar och användarinlämningen är klar navigerar Camila till fliken Datakällor i AEM Forms (**Formulär** > **Dataintegreringar**).
+
+1. Camila väljer sedan AEM Forms **We.gov FDM** och redigerar sedan **We.gov Enrollment FDM**.
+
+1. Camila väljer sedan den **kontakt** > **lästjänst** som ska testas.
+
+   ![Läsningstjänst](assets/aftia-contact-read-service.jpg)
+
+1. Camila förser sedan testtjänsten med ett kontakt-ID och klickar sedan på knappen Test.
+
+   ![Läsningstjänst](assets/aftia-test-service.jpg)
+
+1. Camila kan sedan validera att data har infogats i datakällan.
+
+   * Uppgifterna i Derby DS liknar följande format:
+
+   ```xml
+      [
+         {
+         "ADDRESS_COUNTRY": "USA",
+         "LAST_NAME": "Tan",
+         "ADDRESS_CITY": "New York",
+         "FIRST_NAME": "Aya",
+         "ADDRESS_STATE": "AL",
+         "ADDRESS_LINE1": "123 Street crescent",
+         "GENDER_CODE": "2",
+         "ADDRESS_LINE2": "123 Street crescent",
+         "ADDRESS_POSTAL_CODE": "90210",
+         "BIRTH_DATE": "1991-12-12",
+         "CONTACT_ID": 1,
+         "MIDDLE_NAME": "M",
+         "HAS_CHILDREN_CODE": "0"
+         }
+   ]
+   ```
+
+## (Valfritt) Analytics (Camila) {#analytics-cx-lead-camila}
 
 **Detta avsnitt:** Camila navigerar till en kontrollpanel där hon kan se nyckeltal från olika myndigheter, t.ex. procent av de medborgare som börjar fylla i ett formulär och överge det, den genomsnittliga tiden från att begära in det till svar på ansökan om godkännande/avslag, och engagemangsstatistik för de förmånsböcker hon har skickat till medborgarna.
 
-### Camila granskar rapporter om webbplatser (Web.Gov Adobe Analytics) {#camila-reviews-sites-reporting-we-gov-adobe-analytics}
+### Adobe Analytics Sites Reporting (Camila) {#camila-reviews-sites-reporting-we-gov-adobe-analytics}
 
 1. Gå till *https://&lt;aemserver>:&lt;port>/sites.html/content*
-1. Välj&quot;**AEM Forms We.Gov Site**&quot; för att visa webbplatssidorna.
-1. Välj en av webbplatssidorna (t.ex. Hem) och välj&quot;**Analys och rekommendationer**&quot;.
+1. Markera&quot;**AEM Forms Web.Gov Site**&quot; för att visa webbplatssidorna.
+1. Välj en av webbplatssidorna (t.ex. Hem) och välj&quot;**Analytics &amp; Recommendations**&quot;.
 
-   ![Analyser och rekommendationer](/help/forms/using/assets/analytics_recommendation.jpg)
+   ![Analytics och rekommendation](/help/forms/using/assets/analytics_recommendation.jpg)
 
-1. På den här sidan ser du hämtad information från Adobe Analytics som gäller AEM Sites-sidan (Obs! den här informationen uppdateras regelbundet från Adobe Analytics och visas inte i realtid).
+1. På den här sidan ser du hämtad information från Adobe Analytics som gäller AEM Sites (Obs! den här informationen uppdateras regelbundet från Adobe Analytics och visas inte i realtid).
 
    ![Nyckeltal för Adobe Analytics](/help/forms/using/assets/analytics_key_metrics.jpg)
 
@@ -393,17 +519,17 @@ George godkänner Ayas ansökan, och tack vare ett befintligt automatiserat arbe
 
    ![Gör nya kolumner tillgängliga](/help/forms/using/assets/new_columns_available.jpg)
 
-### Camila granskar Forms-rapportering (Adobe Analytics, Web.Gov) {#camila-reviews-forms-reporting-we-gov-adobe-analytics}
+### Adobe Analytics Forms Reporting (Camila) {#camila-reviews-forms-reporting-we-gov-adobe-analytics}
 
 1. Navigera till
 
    *https://&lt;aemserver>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/adobe-gov-forms*
 
-1. Välj anpassningsformuläret &quot;**Registreringsprogram för hälsoförmåner**&quot; och välj alternativet &quot;**Analysrapport**&quot;.
+1. Markera anpassningsformuläret &quot;**Registreringsprogram för hälsoförmåner**&quot; och välj alternativet &quot;**Analytics-rapport**&quot;.
 
    ![Registreringsprogram för hälsoförmåner](/help/forms/using/assets/analytics_report_benefits.jpg)
 
-1. Vänta tills sidan har lästs in och visa analysrapportdata.
+1. Vänta tills sidan har lästs in och visa Analytics rapportdata.
 
-   ![Data för analysrapport](/help/forms/using/assets/analytics_report_data_updated.jpg)
+   ![Analytics rapportdata](/help/forms/using/assets/analytics_report_data_updated.jpg)
 
