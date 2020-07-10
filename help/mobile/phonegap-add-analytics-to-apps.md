@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: cd9d2bea-48d8-4a17-8544-ea25dcad69f3
 translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+source-git-commit: 8279cd590244a7f2d20cfaf1c7505a3ef57fae4a
 workflow-type: tm+mt
-source-wordcount: '1064'
+source-wordcount: '971'
 ht-degree: 0%
 
 ---
@@ -115,34 +115,6 @@ På så sätt kan du spåra lägen och åtgärder, t.ex. var sidor användarna n
 Som referens kan du titta på koden i appen Geometrixx Outdoor. I programmet Geometrixx Outdoor spåras alla sidnavigeringar med metoden ADB.trackState(). Mer information finns i källkoden för /libs/mobileapps/components/angular/ng-page/clientlibs/app-navigation.js
 
 Genom att instrumentera källkoden med dessa metodanrop kan du samla in fullständiga mätvärden mot programmet.
-
-### Testa Analytics tracking med Bloodhound  {#testing-analytics-tracking-with-bloodhound}
-
-![](do-not-localize/chlimage_1.jpeg)
-
-<!--NOTE TO WRITER: Bloodhound is no longer available.-->
-
-Innan du distribuerar till produktion kan du använda Adobe-verktyget [Bloodhound](https://marketing.adobe.com/developer/gallery/bloodhound-app-measurement-qa-tool-1) för att testa analyskonfigurationen. Om du vill testa analyskonfigurationen måste du redigera filen ADBMobilConfig.json så att den pekar på servern där Bloodhound körs i stället för på den faktiska Analytics-servern. Om du vill göra den här ändringen ändrar du följande post i ADBMobilConfig.json.
-
-```xml
-...
-"analytics": {
-    "rsids": "YOUR_RSID",
-    "server": "YOUR_TRACKING_SERVER:YOUR_TRACKING_PORT",
-...
-```
-
-Ändra så att den matchar den här posten:
-
-```xml
-...
-"analytics": {
-    "rsids": "YOUR_RSID",
-    "server": "localhost:50000",
-...
-```
-
-Detta dirigerar om alla data som samlas in av AMS-pluginen till Bloodhound så att du kan se resultatet.
 
 #### Egenskaper för anslutning till AMS {#properties-for-connecting-to-ams}
 
