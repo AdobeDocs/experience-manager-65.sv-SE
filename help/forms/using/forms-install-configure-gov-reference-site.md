@@ -1,19 +1,22 @@
 ---
 title: Konfigurera referenswebbplatsen för Web.Gov
 seo-title: Konfigurera referenswebbplatsen för Web.Gov
-description: Installera, konfigurera och anpassa ett AEM Forms-demopaket.
-seo-description: Installera, konfigurera och anpassa ett AEM Forms-demopaket.
+description: Installera, konfigurera och anpassa ett demopaket för AEM Forms.
+seo-description: Installera, konfigurera och anpassa ett demopaket för AEM Forms.
 uuid: 0a6ad8f9-0d38-40c3-ad8d-e705edef55f8
 contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
+source-git-commit: 38f40badf8a850de363fa3f28232d3037fbf209b
+workflow-type: tm+mt
+source-wordcount: '5037'
+ht-degree: 0%
 
 ---
 
 
-# Konfigurera referenswebbplatsen för Web.Gov{#set-up-and-configure-we-gov-reference-site}
+# Konfigurera referenswebbplatsen för Web.Gov {#set-up-and-configure-we-gov-reference-site}
 
 ## Information om demopaket {#demo-package-details}
 
@@ -25,6 +28,7 @@ Paketet skapades för **AEM Forms 6.4 OSGI Author**, har testats och stöds där
 |---|---|---|
 | 6.4 | 5.0.86 | **Stöds** |
 | 6.5 | 6.0.80 | **Stöds** |
+| 6.5.3 | 6.0.122 | **Stöds** |
 
 Paketet innehåller en molnkonfiguration som stöder följande plattformsversioner:
 
@@ -32,7 +36,7 @@ Paketet innehåller en molnkonfiguration som stöder följande plattformsversion
 |---|---|---|
 | Adobe Sign | v5 API | **Stöds** |
 | Microsoft Dynamics 365 | 1710 (9.1.0.3020) | **Stöds** |
-
+| Adobe Analytics | v1.4 Rest API | **Stöds** |
 **Paketinstallationshänsyn:**
 
 * Paketet förväntas installeras på en ren server, utan andra demopaket eller äldre versioner av demopaket
@@ -48,10 +52,14 @@ AEM Forms We.Gov demopaket (**we-gov-forms.pkg.all-&lt;version>.zip**) levereras
 
       * **we-gov-forms.core-&lt;version>.jar** - *Innehåller alla OSGI-tjänster, anpassad implementering av arbetsflödessteg osv.*
 
+      * **we-gov-forms.derby&lt;version>.jar** - *Innehåller alla OSGI-tjänster, databasschema osv.*
+
       * **core.wcm.components.all-2.0.4.zip** - *Samling av WCM-exempelkomponenter*
 
-      * **grid-aem.ui.apps-1.0-SNAPSHOT.zip** - *Layoutpaket för AEM Sites Grid för kolumnkontroll för Sites*
+      * **grid-aem.ui.apps-1.0-SNAPSHOT.zip** - *AEM Sites stödrasterlayoutpaket för kolumnkontroll för webbplatser*
    * **we-gov-forms.ui.content-&lt;version>.zip** - *Innehåller allt innehåll, alla sidor, bilder, formulär, interaktiva kommunikationsresurser osv.*
+
+   * **we-gov-forms.ui.analytics-&lt;version>.zip** - *Innehåller alla Web.Gov Forms Analytics-data som ska lagras i databasen.*
 
    * **we-gov-forms.config.public-&lt;version>.zip** - *Innehåller alla standardkonfigurationsnoder inklusive platshållarmolnkonfigurationer för att undvika problem med formulärdatamodell och tjänstbindning.*
 
@@ -59,17 +67,40 @@ AEM Forms We.Gov demopaket (**we-gov-forms.pkg.all-&lt;version>.zip**) levereras
 De tillgångar som ingår i detta paket omfattar:
 
 * AEM-webbplatssidor med redigerbara mallar
-* AEM Forms Adaptive Forms
+* AEM Forms Adaptiva former
 * AEM Forms Interactive Communications (Print and Web Channel)
-* AEM Forms XDP - arkivhandling
-* AEM Forms MS Dynamics Forms datamodell
+* AEM Forms XDP-dokument för inspelning
+* AEM Forms MS Dynamics Forms-datamodell
 * Integrering med Adobe Sign
 * AEM Workflow Model
 * Exempelbilder för AEM Assets
+* Exempel (i minnet) på Apache Derby-databas
+* Apache Derby-datakälla (för användning med formulärdatamodell)
 
 ## Konfigurationsalternativ {#configuration-options}
 
-Det här avsnittet innehåller information om konfigurationsalternativ. För närvarande är det här avsnittet avsiktligt tomt.
+Användare kan konfigurera olika alternativ för arbetsflödestjänster, som omfattar följande:
+
+1. Microsoft Dynamics-post
+1. Adobe Sign
+1. AEM Custom Communication Management
+1. Adobe Analytics
+
+För att kunna konfigurera dem så att de aktiveras i arbetsflödet måste användarna utföra följande uppgifter.
+
+1. Gå till https://&#39;[server]:[port]&#39;/system/console/configMgr.
+
+1. Leta upp *WebGov-konfigurationer*.
+
+1. Öppna tjänstdefinitionen och aktivera de valda tjänsterna för att anropas i arbetsflödet.
+
+>[!NOTE]
+>
+>Bara för att en användare aktiverar tjänsten på Configuration Manager-sidan måste användaren ändå konfigurera en tjänstkonfiguration för att kunna kommunicera med de externa tjänster som efterfrågas.
+
+![web gov-formulärpaket](assets/aftia-configuration-options.jpg)
+
+1. Klicka på knappen Spara när du är klar för att spara inställningarna.
 
 ## Installation av demopaket {#demo-package-installation}
 
@@ -83,7 +114,7 @@ Det här avsnittet innehåller information om hur du installerar demopaketet.
 
    ![Ikon för paketdelning](assets/package_share_icon.jpg)
 
-1. Logga in med ditt Adobe ID.
+1. Logga in med Adobe ID.
 1. Sök efter och hitta paketet **we-gov-forms.pkg.all-&lt;version>** .
 1. Välj&quot;Ladda ned&quot; och acceptera villkoren.
 1. När du har hämtat paketet väljer du alternativet &quot;Hämtad&quot; för att leta reda på paketet i pakethanteraren.
@@ -131,6 +162,7 @@ Det här avsnittet innehåller information och instruktioner om konfigurationen 
 ### Konfiguration av praktisk användare {#fictional-user-configuration}
 
 1. Gå till *https://&lt;aemserver>:&lt;port>/libs/granite/security/content/groupadmin.html*
+1. Logga in som administratör för att utföra uppgifterna nedan.
 1. Sök efter&quot;**arbetsflöde**&quot;.
 1. Markera gruppen&quot;**workflow-users**&quot; och klicka på&quot;Properties&quot;.
 1. Gå till fliken Medlemmar.
@@ -140,14 +172,14 @@ Det här avsnittet innehåller information och instruktioner om konfigurationen 
    ![Redigera gruppinställningar för arbetsflödesanvändare](assets/edit_group_settings.jpg)
 
 1. Klicka på&quot;Spara och stäng&quot; i menyraden.
-1. Upprepa steg 2-7 genom att söka efter&quot;**analyser**&quot;, markera gruppen&quot;**Analysadministratörer**&quot; och lägga till gruppen&quot;**Vi.Gov-formuläranvändare**&quot; som medlem.
+1. Upprepa steg 2-7 genom att söka efter&quot;**analyser**&quot;, markera gruppen&quot;**Analytics-administratörer**&quot; och lägga till gruppen&quot;**Vi.Gov-formuläranvändare**&quot; som medlem.
 1. Upprepa steg 2-7 genom att söka efter&quot;**formuläranvändare**&quot;, markera gruppen&quot;**forms-power-users**&quot; och lägga till gruppen&quot;**We.Gov Form Users**&quot; som medlem.
 1. Upprepa steg 2-7 genom att söka efter&quot;**formuläranvändare**&quot;, välja gruppen&quot;**formuläranvändare**&quot; och lägga till gruppen&quot;**Vi.Gov-användare**&quot; som medlem.
 
 ### E-postserverkonfiguration {#email-server-configuration}
 
 1. Granska installationsdokumentation [Konfigurera e-postmeddelande](/help/sites-administering/notification.md)
-
+1. Logga in som administratör för att utföra den här uppgiften.
 1. Gå till *https://&lt;aemserver>:&lt;port>/system/console/configMgr*
 1. Leta upp och klicka på **Day CQ Mail Service** .
 
@@ -159,11 +191,12 @@ Det här avsnittet innehåller information och instruktioner om konfigurationen 
    1. **Serverport**: t.ex. (465) för gmail med SSL
    1. **SMTP-användare:** demo@ &lt;företagsnamn>.com
    1. **&quot;Från&quot;-adress**: aemformsdemo@adobe.com
+
    ![Konfigurera SMTP](assets/configure_smtp.jpg)
 
 1. Klicka på Spara för att spara konfigurationen.
 
-### AEM SSL-konfiguration {#aemsslconfig}
+### (Valfritt) AEM SSL-konfiguration {#aemsslconfig}
 
 Det här avsnittet innehåller information om hur du konfigurerar SSL på AEM-instansen för att kunna konfigurera Adobe Sign Cloud-konfigurationen.
 
@@ -174,15 +207,20 @@ Det här avsnittet innehåller information om hur du konfigurerar SSL på AEM-in
 **Anteckningar:**
 
 1. Gå till https://&lt;port>/aem/inbox där du kan slutföra processen som beskrivs i länken för referensdokumentation ovan.
-1. Paketet **we-gov-forms.pkg.all-&lt;version>.zip** innehåller ett exempel på en SSL-nyckel och ett certifikat som du kan komma åt genom att extrahera mappen **we-gov-forms.pkg.all-&lt;version>.zip/ssl** som ingår i paketet.
+1. Paketet innehåller ett exempel på en SSL-nyckel och ett certifikat som du kan komma åt genom att extrahera den `we-gov-forms.pkg.all-[version].zip` `we-gov-forms.pkg.all-[version].zip/ssl` mapp som är en del av paketet.
 
 1. SSL-certifikat och nyckelinformation:
 
    1. utfärdas till &quot;CN=localhost&quot;
    1. 10 års giltighet
    1. lösenordsvärde för password
+1. Den privata nyckeln är *localhostprivate.der*.
+1. Certifikatet är *localhost.crt*.
+1. Klicka på Nästa.
+1. HTTPS-värdnamn ska anges som *lokal värd*.
+1. Porten bör anges till en port som systemet har exponerat.
 
-### Molnkonfiguration för Adobe Sign {#adobe-sign-cloud-configuration}
+### (Valfritt) Adobe Sign-molnkonfiguration {#adobe-sign-cloud-configuration}
 
 Det här avsnittet innehåller information och instruktioner om Adobe Sign-molnkonfigurationen.
 
@@ -192,7 +230,7 @@ Det här avsnittet innehåller information och instruktioner om Adobe Sign-molnk
 
 #### Molnkonfiguration {#cloud-configuration}
 
-1. **Granska förutsättningarna. Se[AEM SSL-konfiguration](../../forms/using/forms-install-configure-gov-reference-site.md#aemsslconfig)för nödvändig SSL-konfiguration.**
+1. Granska förutsättningarna. Se [AEM SSL-konfiguration](../../forms/using/forms-install-configure-gov-reference-site.md#aemsslconfig) för nödvändig SSL-konfiguration.
 1. Navigera till:
 
    *https://&lt;aemserver>:&lt;port>/libs/adobesign/cloudservices/adobesign.html/conf/we-gov*
@@ -209,14 +247,14 @@ Det här avsnittet innehåller information och instruktioner om Adobe Sign-molnk
 1. Klicka på&quot;Anslut till Adobe Sign&quot;.
 1. När anslutningen är klar klickar du på Spara och stäng för att slutföra integreringen.
 
-### MS Dynamics molnkonfiguration {#ms-dynamics-cloud-configuration}
+### (Valfritt) MS Dynamics-molnkonfiguration {#ms-dynamics-cloud-configuration}
 
 Det här avsnittet innehåller information och instruktioner om konfigurationen för MS Dynamics Cloud.
 
 **Referenser:**
 
 1. [Microsoft Dynamics OData-konfiguration](https://docs.adobe.com/content/help/en/experience-manager-64/forms/form-data-model/ms-dynamics-odata-configuration.html)
-1. [Konfigurerar Microsoft Dynamics för AEM-formulär](https://helpx.adobe.com/experience-manager/kt/forms/using/config-dynamics-for-aem-forms.html)
+1. [Konfigurerar Microsoft Dynamics för AEM Forms](https://helpx.adobe.com/experience-manager/kt/forms/using/config-dynamics-for-aem-forms.html)
 
 #### Molntjänsten MS Dynamics OData {#ms-dynamics-odata-cloud-service}
 
@@ -226,10 +264,10 @@ Det här avsnittet innehåller information och instruktioner om konfigurationen 
 
    1. Se till att du använder samma omdirigerings-URL som konfigurerats i MS Dynamics-programregistreringen.
 
-1. Välj konfigurationen för Microsoft Dynamics OData Cloud Service.
+1. Markera konfigurationen för Microsoft Dynamics OData-Cloud Service.
 1. Klicka på &quot;Egenskaper&quot;.
 
-   ![Egenskaper för Microsoft OData Cloud-tjänsten](assets/properties_odata_cloud_service.jpg)
+   ![Egenskaper för Microsoft OData-Cloud Service](assets/properties_odata_cloud_service.jpg)
 
 1. Gå till fliken Autentiseringsinställningar.
 1. Ange följande information:
@@ -279,7 +317,7 @@ Stegen som beskrivs i det här avsnittet finns för att hjälpa dig att hitta kl
 
    *[https://docs.microsoft.com/en-us/rest/api/datacatalog/authenticate-a-client-app](https://docs.microsoft.com/en-us/rest/api/datacatalog/authenticate-a-client-app)*
 
-#### Testa formulärdatamodellen {#testing-the-form-data-model}
+#### Testa formulärdatamodellen (Dynamics) {#testing-the-form-data-model}
 
 När molnkonfigurationen är klar kanske du vill testa formulärdatamodellen.
 
@@ -298,15 +336,37 @@ När molnkonfigurationen är klar kanske du vill testa formulärdatamodellen.
 
 1. Redigera formulärdatamodellen.
 
-   >[!NOTE]
-   Klicka på **Avbryt** i stället för **Spara och stäng** för att undvika problem som kräver ominstallation.
-
 1. Testa tjänsterna för att kontrollera att de är anslutna till den konfigurerade datakällan.
+
+   >[!NOTE]
+   När du har testat tjänsterna klickar du på **Avbryt** för att kontrollera att ofrivilliga ändringar inte sprids till formulärdatamodellen.
 
    >[!NOTE]
    Det har rapporterats att en omstart av AEM-servern krävdes för att datakällan skulle kunna binda till FDM.
 
-### Adobe Analytics-konfiguration {#adobe-analytics-configuration}
+#### Testa formulärdatamodellen (Derby) {#test-fdm-derby}
+
+När molnkonfigurationen är klar kanske du vill testa formulärdatamodellen.
+
+1. Gå till *https://&lt;aemserver>:&lt;port>/aem/forms.html/content/dam/formsanddocuments-fdm/we-gov*
+
+1. Välj **We.gov Enrollment FDM** och välj **Properties**.
+
+   ![Egenskaper för Dynamics CRM FDM](assets/aftia-enrollment-fdm.jpg)
+
+1. Gå till fliken **Uppdatera källa** .
+
+1. Kontrollera att den **kontextmedvetna konfigurationen** är inställd på `/conf/we-gov` och att den konfigurerade datakällan är **We.Gov Derby DS**.
+
+   ![Egenskaper för Dynamics CRM FDM](assets/aftia-update-data-source.jpg)
+
+1. Klicka på **Spara och stäng**.
+
+1. Testa tjänsterna för att kontrollera att de är anslutna till den konfigurerade datakällan
+
+   * Om du vill testa anslutningen väljer du **HOMEMORTGAGEACCOUNT** och ger den en get-tjänst. Testa tjänsten och systemadministratörerna för att se data som hämtas.
+
+### Adobe Analytics (tillval) {#adobe-analytics-configuration}
 
 Det här avsnittet innehåller information och instruktioner om Adobe Analytics Cloud-konfigurationen.
 
@@ -316,48 +376,94 @@ Det här avsnittet innehåller information och instruktioner om Adobe Analytics 
 
 * [Ansluta till Adobe Analytics och skapa ramverk](../../sites-administering/adobeanalytics-connect.md)
 
-* [Visa sidanalysdata](../../sites-authoring/pa-using.md)
+* [Visa Analytics-data för sidan](../../sites-authoring/pa-using.md)
 
 * [Konfigurera analyser och rapporter](configure-analytics-forms-documents.md)
 
-* [Visa och förstå analysrapporter för AEM Forms](view-understand-aem-forms-analytics-reports.md)
+* [Visa och förstå AEM Forms analysrapporter](view-understand-aem-forms-analytics-reports.md)
 
-### Konfiguration av molntjänster för Adobe Analytics {#adobe-analytics-cloud-service-configuration}
+### Adobe Analytics molntjänstkonfiguration {#adobe-analytics-cloud-service-configuration}
 
 Det här paketet levereras förkonfigurerat för att ansluta till Adobe Analytics. Följ stegen nedan för att tillåta att konfigurationen uppdateras.
 
 1. Gå till *https://&lt;aemserver>:&lt;port>/libs/cq/core/content/tools/cloudservices.html*
-1. Gå till avsnittet Adobe Analytics och välj länken Show Configurations (Visa konfigurationer).
-1. Välj konfigurationen &quot;Web.Gov Adobe Analytics (Analytics-konfiguration)&quot;.
+1. Gå till Adobe Analytics och välj länken &quot;Visa konfigurationer&quot;.
+1. Välj konfigurationen &quot;We.Gov Adobe Analytics (Analytics Configuration)&quot;.
 
-   ![Konfiguration av molntjänster för Analytics](assets/analytics_config.jpg)
+   ![Analytics molntjänstkonfiguration](assets/analytics_config.jpg)
 
-1. Klicka på knappen Redigera om du vill uppdatera Adobe Analytics-konfigurationen (du måste ange Delad hemlighet). Klicka på Anslut till analys för att ansluta och OK för att slutföra.
+1. Klicka på knappen&quot;Redigera&quot; för att uppdatera Adobe Analytics-konfigurationen (du måste ange den delade hemligheten). Klicka på Anslut till Analytics för att ansluta och OK för att slutföra.
 
-   ![Adobe Analytics](assets/wegov_adobe_analytics.jpg)
+   ![We.Gov Adobe Analytics](assets/wegov_adobe_analytics.jpg)
 
-1. På samma sida klickar du på&quot;We.Gov Adobe Analytics Framework (Analytics Framework)&quot; om du vill uppdatera ramverkskonfigurationerna (se [Aktivera AEM-redigering](../../forms/using/forms-install-configure-gov-reference-site.md#enableauthoring) för att aktivera redigering).
+1. På samma sida klickar du på&quot;We.Gov Adobe Framework (Analytics Framework)&quot; om du vill uppdatera ramverkskonfigurationerna (se [Aktivera AEM-redigering](../../forms/using/forms-install-configure-gov-reference-site.md#enableauthoring) för att aktivera redigering).
 
-### Adobe Analytics-rapportering {#adobe-analytics-reporting}
+#### Adobe Analytics Hitta användaruppgifter {#analytics-locating-user-credentials}
 
-#### Visa rapporter om Adobe Analytics-webbplatser {#view-adobe-analytics-sites-reporting}
+Kontoadministratören måste utföra följande uppgifter för att kunna hitta inloggningsuppgifterna för ett Adobe Analytics-konto.
+
+1. Gå till Adobe Experience Cloud-portalen.
+   * Logga in med dina administratörsuppgifter
+1. Välj ikonen Adobe Analytics på huvudkontrollpanelen.
+   ![Snabb åtkomst](assets/aftia-quick-access.jpg)
+1. Navigera till fliken Admin och markera alternativet Användarhantering (äldre)
+   ![Rapporter](assets/aftia-reports.jpg)
+1. Välj fliken **Användare** .
+   ![Användarhantering](assets/aftia-user-management.jpg)
+1. Välj önskad användare i listan över användare.
+1. Rulla längst ned på sidan så visas inloggningsinformationen längst ned på sidan.
+   ![Hantera åtkomst](assets/aftia-admin-user-access.jpg)
+1. Användarnamnet och den delade hemliga informationen visas till höger om behörighetsrutan.
+1. Observera att användarnamnet kommer att ha ett kolon i namnet. All information till vänster om kolonet är användarnamnet, och all information till höger om kolonet kommer att vara företagsnamnet.
+   * Här är ett exempel: *användarnamn: företagsnamn*
+
+#### Konfigurera användarautentisering i Adobe Analytics {#setup-user-authentication}
+
+Administratörer kan ge användarna AEM-analysbehörigheter genom att utföra följande åtgärder.
+
+1. Gå till Adobe Admin Console.
+
+1. Klicka på den Analytics-instans som visas för Admin Console.
+
+   * Detta finns på administratörsidans huvudsida.
+
+1. Välj fullständig administratörsåtkomst för Analytics.
+
+1. Lägg till en användare i profilen.
+
+   ![Fullständig administratörsåtkomst för Analytics](assets/aftia-full-admin-access.jpg)
+
+1. Klicka på fliken Behörigheter när användar-ID:t har mappats till profilen.
+
+1. Kontrollera att alla behörigheter är mappade till profilen.
+
+   ![Redigera behörigheter](assets/aftia-admin-access-edit.jpg)
+
+1. Observera att när behörigheterna har mappats kan det ta några timmar för en användare att logga in.
+
+### Rapporter från Adobe Analytics {#adobe-analytics-reporting}
+
+#### Visa rapporter om Analytics-webbplatser {#view-adobe-analytics-sites-reporting}
+
+>[!NOTE]
+AEM Forms Analytics-data är tillgängliga offline eller utan någon Adobe Analytics-molnkonfiguration om `we-gov-forms.ui.analytics-<version>.zip` paketet är installerat, men AEM Sites-data kräver en aktiv molnkonfiguration.
 
 1. Gå till *https://&lt;aemserver>:&lt;port>/sites.html/content*
-1. Välj&quot;AEM Forms We.Gov Site&quot; för att visa webbplatssidorna.
-1. Välj en av webbplatssidorna (t.ex. Hem) och välj Analys och rekommendationer.
+1. Markera AEM Forms We.Gov Site om du vill visa webbplatssidorna.
+1. Välj en av webbplatssidorna (t.ex. Hem) och välj&quot;Analytics &amp; Recommendations&quot;.
 
    ![Analys och rekommendationer](assets/analytics_recommendations.jpg)
 
-1. På den här sidan ser du hämtad information från Adobe Analytics som gäller sidan AEM Sites (Obs! den här informationen uppdateras regelbundet från Adobe Analytics och visas inte i realtid).
+1. På den här sidan ser du hämtad information från Adobe Analytics som gäller AEM Sites (Obs! den här informationen uppdateras regelbundet från Adobe Analytics och visas inte i realtid).
 
-   ![AEM Sites analysis](assets/sites_analysis.jpg)
+   ![AEM Sites analys](assets/sites_analysis.jpg)
 
 1. På sidan för sidvisning (som du kommer åt i steg 3.0) kan du även visa sidvisningsinformationen genom att ändra visningsinställningen så att objekt i listvyn visas.
 1. Leta upp listrutan Visa och välj Listvy.
 
    ![Listvy](assets/list_view.jpg)
 
-1. På samma meny väljer du &quot;Visningsinställning&quot; och markerar de kolumner som du vill visa under &quot;Analys&quot;.
+1. På samma meny väljer du &quot;Visningsinställning&quot; och markerar de kolumner som du vill visa under &quot;Analytics&quot;.
 
    ![Konfigurera kolumner](assets/configure_columns.jpg)
 
@@ -365,28 +471,31 @@ Det här paketet levereras förkonfigurerat för att ansluta till Adobe Analytic
 
    ![Visa nya kolumner](assets/new_columns_display.jpg)
 
-#### Visa rapporter om Adobe Analytics-formulär {#view-adobe-analytics-forms-reporting}
+#### Visa rapporter om Analytics-formulär {#view-adobe-analytics-forms-reporting}
+
+>[!NOTE]
+AEM Forms Analytics-data är tillgängliga offline eller utan någon Adobe Analytics-molnkonfiguration om `we-gov-forms.ui.analytics-<version>.zip` paketet är installerat, men AEM Sites-data kräver en aktiv molnkonfiguration.
 
 1. Navigera till
 
    *https://&lt;aemserver>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/adobe-gov-forms*
 
-1. Välj anpassningsformuläret &quot;Registreringsprogram för hälsoförmåner&quot; och välj alternativet &quot;Analysrapport&quot;.
+1. Markera anpassningsformuläret &quot;Registreringsprogram för hälsoförmåner&quot; och välj alternativet &quot;Analytics-rapport&quot;.
 
-   ![Analysrapport](assets/analytics_report.jpg)
+   ![Analytics Report](assets/analytics_report.jpg)
 
-1. Vänta tills sidan har lästs in och visa analysrapportdata.
+1. Vänta tills sidan har lästs in och visa rapportdata för Analytics.
 
-   ![Visa analysrapportdata](assets/analytics_report_data.jpg)
+   ![Visa rapportdata för Analytics](assets/analytics_report_data.jpg)
 
-#### Visa Adobe Analytics-rapporter {#view-adobe-analytics-reporting}
+#### Visa rapporter om Adobe Analytics {#view-adobe-analytics-reporting}
 
-Du kan också navigera till Adobe Analytics direkt för att se analysdata.
+Du kan även navigera till Adobe Analytics direkt för att se analysdata.
 
 1. Navigera till [https://my.omniture.com/login/](https://my.omniture.com/login/)
 1. Logga in med dina inloggningsuppgifter:
 
-   1. **Företag:** AEM Forms - demo
+   1. **Företag:** AEM Forms Demo
    1. **Användare:** &lt;tillgängligt på begäran>
    1. **Lösenord:** &lt;tillgängligt på begäran>
 
@@ -396,23 +505,248 @@ Du kan också navigera till Adobe Analytics direkt för att se analysdata.
 
 1. Välj en av de tillgängliga rapporterna om du vill visa analysdata för den rapporten.
 
-   ![Analysdata för en rapport](assets/analytics_data.jpg)
+   ![Analytics data från en rapport](assets/analytics_data.jpg)
+
+### Aktivera automatisk formulärkonfiguration för Adobe {#automated-forms-enablement}
+
+För att kunna installera och konfigurera AEM Forms med Adobe Forms måste användare av konverteringsverktyget ha följande:
+
+1. Tillgång till Adobe IO.
+
+1. Behörighet att skapa en integrering med tjänsten Adobe Forms Conversion.
+
+1. Adobe AEM 6.5 senaste Service Pack som körs som författare.
+
+Läs mer här:
+
+* [Konfigurera den automatiserade konverteringstjänsten för formulär](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/configure-service.html)
+
+#### Skapa en IMS-konfiguration, del 1 {#creating-ims-config}
+
+För att kunna konfigurera tjänsten så att den kommunicerar korrekt med formulärkonverteringsverktyget måste användarna konfigurera tjänsten Identity Management System (IMS) så att den kan registreras hos Adobe I/O.
+
+1. Navigera till https://&lt;adserver>:&lt;port> > Klicka på Adobe Experience Manager överst till vänster > Verktyg > Dokumentskydd > Adobe IMS-konfiguration.
+
+1. Klicka på Skapa.
+
+1. Utför åtgärderna i bilden nedan.
+
+   ![Konfiguration av IMS-konto](assets/aftia-technical-account-configuration.jpg)
+
+1. Glöm inte att hämta certifikatet.
+
+1. Fortsätt inte med resten av konfigurationsavsnittet - granskningsavsnittet (TBD)
+
+>[!NOTE]
+Certifikatet som skapas i det här avsnittet kommer att användas för att skapa integreringstjänsten i Adobe I/O. När användarna har skapat integreringstjänsten kan de använda informationen från Adobe I/O för att slutföra konfigurationen.
+
+#### Skapa integrering i Adobe I/O {#create-integration-adobeio}
+
+Se till att du har möjlighet att skapa en integrering inom din Adobe-domän om du inte kontaktar systemadministratören för att göra det.
+
+1. Gå till [Adobe I/O Console](https://console.adobe.io/).
+
+1. Klicka på Skapa integrering.
+
+1. Välj Åtkomst till ett API.
+
+1. Se till att du är i rätt grupp (den övre högra listrutan).
+
+1. I avsnittet Experience Cloud väljer du verktyget för formulärkonvertering.
+
+1. Klicka på Fortsätt.
+
+1. Ange integreringens namn och beskrivning.
+
+1. Använd den publika nyckeln från Avsnitt 2.1 för att placera den i integreringen av nyckeln.
+
+1. Välj en profil för automatisk formulärkonvertering.
+
+   ![Skapa ny integrering](assets/aftia-create-new-integration.jpg)
+
+#### Skapar IMS-konfigurationsdel 2 {#create-ims-config-part-next}
+
+Nu när du har skapat en integrering kan vi slutföra installationen av IMS-konfigurationen.
+
+1. Klicka på integreringen i Adobe I/O för att visa anslutningsinformationen.
+
+1. Navigera till din IMS-konfiguration i AEM (Verktyg > Säkerhet > IMS)
+
+1. Klicka på Nästa på skärmen IMS-konfiguration.
+
+1. Ange auktoriseringsservern (värdet visas på skärmbilden).
+
+1. Ange API-nyckeln.
+
+1. Ange klienthemligheten (måste klicka på exponera på integreringen i Adobe I/O för att den ska visas).
+
+1. Klicka på JWT-fliken i Adobe I/O för att hämta JWT-nyttolasten och klistra in den i nyttolasten för IMS-konfigurationen.
+
+   ![IMS-konfiguration för nyttolast](assets/aftia-payload-ims-config.jpg)
+
+1. Klicka på IMS-konfigurationen och välj Hälsokontroll för att se följande resultat.
+
+   ![Hälsobekräftelse](assets/aftia-health-confirmation.jpg)
+
+#### Konfigurera molnkonfiguration (Web.Gov AFC-produktion) {#configure-cloud-configuration}
+
+När IMS-konfigurationen är klar kan vi fortsätta att skapa molnkonfigurationen i AEM.
+
+1. Öppna webbläsaren och gå till system-URL:en https://&lt;domän_namn>:&lt;system_port>
+
+1. Klicka Adobe Experience Manager i skärmens övre vänstra hörn > Verktyg > Cloud Service > Automatiserad formulärkonversationskonfiguration.
+
+1. Markera konfigurationsmappen som du vill montera konfigurationen i.
+
+1. Klicka på Skapa.
+
+1. Ange informationen i skärmbilden nedan.
+
+   ![AFC-produktion](assets/aftia-afc-production.jpg)
+
+1. Ange en titel och ett namn för konfigurationen.
+
+1. Tjänst-URL:en för systemet är inställd på https://aemformsconversion.adobe.io/.
+
+1. Mallens URL */conf/we-gov/settings/wcm/templates/we-gov-flamingo-template*.
+
+1. Temats-URL: */content/dam/formSanddocuments-themes/adobe-gov-forms-themes/we-gov-theme*
+
+1. Klicka på Nästa.
+
+1. För den här konfigurationen lämnade vi de två värdena för kryssrutorna tomma.
+
+   * Mer information om de här alternativen finns i [Konfigurera molntjänsten](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/configure-service.html#configure-the-cloud-service).
+
+#### Konfigurera molnkonfiguration (Web.Finance AFC Production) {#configure-cloud-configuration-wefinance}
+
+När IMS-konfigurationen är klar kan vi fortsätta att skapa molnkonfigurationen i AEM.
+
+1. Öppna webbläsaren och gå till system-URL:en https://&lt;domän_namn>:&lt;system_port>
+
+1. Klicka Adobe Experience Manager i skärmens övre vänstra hörn > Verktyg > Cloud Service > Automatiserad formulärkonversationskonfiguration.
+
+1. Markera konfigurationsmappen som du vill montera konfigurationen i.
+
+1. Klicka på Skapa.
+
+1. Ange informationen i skärmbilden nedan.
+
+   ![Web.Finance AFC Production](assets/aftia-wefinance-afc-prod.jpg)
+
+1. Ange en titel och ett namn för konfigurationen.
+
+1. Tjänst-URL:en för systemet är inställd på https://aemformsconversion.adobe.io/
+
+1. Mall-URL: */conf/we-Finance/settings/wcm/templates/we-Finance-adaptive-form*
+
+1. Temats-URL: */content/dam/formsanddocuments-themes/adobe-Finance-forms-themes/we-Finance-theme*
+
+1. Klicka på Nästa.
+
+1. För den här konfigurationen lämnade vi de två värdena för kryssrutorna tomma.
+
+   * Mer information om de här alternativen finns i [Konfigurera molntjänsten](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/configure-service.html#configure-the-cloud-service).
+
+#### Testa formulärkonverteringen (Anmälningsprogram för Web.GOV) {#test-forms-conversion}
+
+När konfigurationen är klar kan användarna testa den genom att ladda upp ett PDF-dokument.
+
+1. Navigera till AEM-systemet https://&lt;domän_namn>:&lt;system_port>
+
+1. Klicka på Formulär > Formulär och dokument > AEM Forms Web.gov Forms > AFC.
+
+1. Välj PDF-filen till registreringsprogrammet Web.GOV.
+
+1. Klicka på knappen **Starta automatisk konvertering** i det övre högra hörnet.
+
+1. Användarna ska kunna se alternativet som visas nedan.
+
+   ![Konverterat adaptivt formulär](assets/aftia-converted-adaptive-form.jpg)
+
+1. När knappen har valts visas följande alternativ för användarna
+
+   * Se till att användarna väljer *Web.Gov AFC Production* configuration
+
+   ![Konverteringsinställningar](assets/aftia-conversion-settings.jpg)
+
+   ![Avancerade konverteringsinställningar](assets/aftia-conversion-settings-2.jpg)
+
+1. Välj att starta konverteringen när du har konfigurerat alla alternativ som du vill använda
+
+   >[!NOTE]
+   *Ange ett temaavsnitt* för adaptiv form där användarna kan ange temat Accessible-Ultramarine.
+
+   >[!NOTE]
+   Om du vill binda det genererade formuläret till en FDM, eller något annat, måste du markera kryssrutan *Generera anpassade formulär utan databindningar*.
+
+1. När konverteringsprocessen börjar bör användarna se följande skärm:
+
+   ![Konverteringsinställningar](assets/aftia-conversion-in-progress.jpg)
+
+1. När konverteringen är klar visas följande skärm:
+
+   ![Konverterat adaptivt formulär](assets/aftia-converted-adaptive-form-2.jpg)
+
+#### Testa formulärkonverteringen (We.Finance-kreditkortsprogram) {#testing-forms-conversion-wefinance}
+
+När konfigurationen är klar kan användarna testa den genom att ladda upp ett PDF-dokument.
+
+1. Navigera till AEM-systemet https://&lt;domän_namn>:&lt;system_port>
+
+1. Klicka på Formulär > Formulär och dokument > AEM Forms Web.Finance Forms > PDF forms.
+
+1. Välj programmet We.Finance Credit Card.
+
+1. Klicka på knappen **Starta automatisk konvertering** i det övre högra hörnet.
+
+1. Användarna ska kunna se alternativet som visas nedan.
+
+   ![PDF forms](assets/aftia-pdf-forms.jpg)
+
+1. När knappen har valts visas följande alternativ för användarna.
+
+   * Se till att användarna väljer *Web.Finance AFC Production* configuration
+
+   ![Välj Web.Finance AFC Production](assets/aftia-select-production-configuration.jpg)
+
+   ![Avancerade konverteringsinställningar](assets/aftia-advanced-conversion-settings-wefinance.jpg)
+
+1. Välj att starta konverteringen när du har konfigurerat alla alternativ som du vill använda
+
+   >[!NOTE]
+   *Ange ett temaavsnitt* för adaptiv form där användarna kan ange temat Accessible-Ultramarine.
+
+   >[!NOTE]
+   Om du vill binda det genererade formuläret till en FDM, eller något annat, måste du markera kryssrutan *Generera anpassade formulär utan databindningar*.
+
+   >[!NOTE]
+   Användare bör ange platsen för utdatamappen till */content/dam/formsanddocuments/adobe-Finance-forms/afc-convert-forms* för att det återgivna formuläret ska visas i formulärportalen på webbplatsen We.Gov.
+
+1. När konverteringsprocessen börjar bör användarna se följande skärm:
+
+   ![Konvertering pågår](assets/aftia-conversion-progress.jpg)
+
+   >[!NOTE]
+   Det rapporteras om ett fel, där en utdatamapp skapas lokalt och det genererade formuläret placeras på rätt plats även om du väljer en separat mapp från den som finns i molnkonfigurationen.
+
+1. När konverteringen är klar visas följande skärm:
+
+   ![Konvertering pågår](assets/aftia-conversion-complete.jpg)
+
+1. Användarna kan också granska konverteringsprocessen och redigera resultatet för att ge systemet bättre konverteringsmöjligheter.
+
+#### Kända fel och anteckningar {#known-issues-notes}
+
+Formulärkonverteringsprocessen har vissa begränsningar och kan visas på Adobes webbplats. Se [Kända fel](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/known-issues.html) för att se om dina formulär är kompatibla med den här processen.
+
+1. Generera formuläret med Skapa anpassningsbara formulär utan aktiverade databindningar om du vill binda formuläret till en FDM efter konverteringen.
+
+1. Se till att mallmappen har jcr:read för alla behörigheter aktiverade, annars kan tjänstanvändaren inte läsa mallen från databasen och konverteringen misslyckas.
 
 ## Anpassningar av demopaket {#demo-package-customizations}
 
 I det här avsnittet finns anvisningar om hur du anpassar demon.
-
-### Aktivera AEM-redigering {#enableauthoring}
-
-Det här demopaketet innehåller en OSGI-tjänstkonfigurationsfil som styr beteendet för WCM-filtertjänsten på målförfattarservern. Den här konfigurationen gör att servern arbetar i inaktiverat författarläge (motsvarar ?wcmmode=disabled) för att tillåta demonstration. Så här uppdaterar du konfigurationen och aktiverar redigering:
-
-1. Gå till *https://&lt;aemserver>:&lt;port>/system/console/configMgr*
-1. Leta upp och klicka på **Dag CQ WCM Filter** Service för att konfigurera.
-
-   ![Dag CQ WCM-filter](assets/day_cq_wcm_filter.jpg)
-
-1. Ange värdet för **WCM-läge** till **Redigera**.
-1. Klicka på&#x200B;**Spara** för att använda konfigurationen.
 
 ### Anpassning av mallar {#templates-customization}
 
@@ -430,7 +764,7 @@ Den här webbplatsen innehåller även klientbibliotek, varav ett importerar Boo
 
 *https://&lt;aemserver>:&lt;port>/crx/de/index.jsp#/apps/we-gov/clientlibs/clientlib-base/css/bootstrap*
 
-De redigerbara mallarna som ingår i det här paketet levereras även förkonfigurerade med mall-/sidprinciper som använder CSS-klasserna för Bootstrap 4 för sidnumrering, formatering osv. Alla klasser har inte lagts till i mallprofilerna, men alla klasser som stöds av Bootstrap 4 kan läggas till i profilerna. På sidan Komma igång finns en lista med tillgängliga klasser:
+De redigerbara mallarna som ingår i det här paketet levereras även förkonfigurerade med mall-/sidprinciper som använder CSS-klasserna i Bootstrap 4 för sidnumrering, formatering osv. Alla klasser har inte lagts till i mallprofilerna, men alla klasser som stöds av Bootstrap 4 kan läggas till i profilerna. På sidan Komma igång finns en lista med tillgängliga klasser:
 
 [https://getbootstrap.com/docs/4.1/getting-started/introduction/](https://getbootstrap.com/docs/4.1/getting-started/introduction/)
 
@@ -503,12 +837,37 @@ Det här avsnittet innehåller information om demonstrationsfunktioner och desig
 
 * Enligt AGRS-159 ska namnet (för-, mitten- och efternamn) på kontakten som används i det anpassade registreringsformuläret vara unikt.
 * Det anpassningsbara registreringsformuläret skickar e-postmeddelandet från Adobe Sign till det e-postmeddelande som anges i formulärets e-postfält. E-postadressen får inte vara samma e-postadress som e-postadressen som används för att konfigurera Adobe Sign-molnkonfigurationen.
-* Som standard innehåller demopaketet flera OSGI-tjänstkonfigurationer som styr det övergripande beteendet för målservern som är värd för demonstrationen. Den här konfigurationen innehåller en WCM-filtertjänstkonfiguration som som standard gör att servern fungerar i **inaktiverat författarläge** (motsvarar ?wcmmode=disabled). Se [Aktivera AEM-redigering](../../forms/using/forms-install-configure-gov-reference-site.md#enableauthoring) för att tillåta sidredigering.
 
 ### Known issues {#known-issues}
 
 * (AGRS-120) Webbplatsnavigeringskomponenten stöder för närvarande inte kapslade underordnade sidor som är mer än två nivåer djupa.
 * (AGRS-159) Aktuell MS Dynamics FDM måste utföra två åtgärder först, först POST av data i det anpassade registreringsformuläret till Dynamics och sedan hämta användarposten för att hämta kontakt-ID:t. I det aktuella läget kommer hämtning av kontakt-ID att misslyckas om fler än två användare med samma namn finns i Dynamics, vilket inte tillåter att det anpassade registreringsformuläret skickas.
+
+## Konfigurera hjälpmedelstestning {#configure-accessibility-testing}
+
+### Aktivera hjälpmedelstestning av Chrome Lägg till på {#enable-chrome-add-on}
+
+För att kunna utföra tillgänglighetstestning först måste du installera Chrome-plugin-programmet, [här](https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en).
+
+När den är installerad läser du in sidan som du vill testa i webbläsaren Chrome (Obs! Om du har flera flikar öppna kan det påverka poängen, du bör bara ha en flik öppen). När sidan har lästs in **högerklickar du** på sidan och väljer fliken **Granskningar** . Utvecklarna kan välja vilken typ av granskning som ska utföras av plugin-programmet för tillgänglighet. När alla önskade alternativ har valts kan användaren välja knappen Generera rapport. Detta genererar ett PDF-dokument som visar den övergripande tillgänglighetsgraderingen och vad som kan användas för att öka tillgänglighetsgraderingen generellt.
+
+När rapporten har körts kan användarna förvänta sig följande:
+
+![Tillgänglighetsrapport](assets/aftia-accessibility.jpg)
+
+Antalet som visas framför användarna är den övergripande tillgänglighetsgraderingen som de har fått. Det finns också en beskrivning av hur detta beräknades efter poängen.
+
+Om du vill exportera det här kan du klicka på de tre knapparna till höger på skärmen och välja bland de andra alternativ som finns i plugin-programmet.
+
+![Tillgänglighetsrapport](assets/aftia-accessibility-report.jpg)
+
+### Ultramarintema {#ultramarine-theme}
+
+Det allmänt tillgängliga Ultramarine-temat som hanteras av Adobe är inbyggt i den`we-gov-forms.pkg.all-<version>.zip` installationsbara ZIP-filen. När paketet har installerats med CRX.
+
+Med Package Manager kan man komma åt Ultramarine-temat i AEM Forms genom att gå till **Forms** > **Themes** > **Reference Themes** > **Ultramarine-Accessible**.
+
+![Ultramarintema](assets/aftia-ultramarine-theme.jpg)
 
 ## Nästa steg {#next-steps}
 
