@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6b545a51-3677-4ea1-ac7e-2d01ba19283e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+source-git-commit: 8279cd590244a7f2d20cfaf1c7505a3ef57fae4a
 workflow-type: tm+mt
-source-wordcount: '1544'
+source-wordcount: '1550'
 ht-degree: 1%
 
 ---
@@ -47,9 +47,9 @@ Adobe Analytics-kontot måste
 
 Innan du fortsätter bör du kontrollera att du har behörighet att logga in på Adobe Analytics. Via antingen:
 
-* [https://marketing.adobe.com](https://marketing.adobe.com)
+* [Adobe Experience Cloud - logga in](https://login.experiencecloud.adobe.com/exc-content/login.html)
 
-* [https://sc.omniture.com/login/](https://sc.omniture.com/login/)
+* [Adobe Analytics Sign In](https://sc.omniture.com/login/)
 
 ### Konfigurera AEM för användning av dina Adobe Analytics datacenter {#configuring-aem-to-use-your-adobe-analytics-data-centers}
 
@@ -121,6 +121,7 @@ För det Report Suite-ID (RSID) som du använder kan du styra vilka serverinstan
    * Ange en **titel**.
    * Du kan också ange **Namn** för noden som lagrar ramverkets information i databasen.
    * Välj **Adobe Analytics Framework**
+
    Klicka på **Skapa**.
 
    Ramverket öppnas för redigering.
