@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 907316d1-3d23-4c46-bccb-bad6fe1bd1bb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5d74f3510ff20e062f1e78f61d98e9c2e7a0414f
+source-git-commit: 6686c10f1af24cc4fbdcf6d4e8b07f7dc0e2a8bb
 workflow-type: tm+mt
 source-wordcount: '1599'
 ht-degree: 0%
@@ -74,7 +74,7 @@ Kopplingen stöder följande:
 
 * AEM-versioner:
 
-   * AEM 6.5, 6.4, 6.3
+   * AEM 6.4, 6.3
 
 * Microsoft SharePoint-versioner:
 
@@ -131,9 +131,9 @@ Som standard visar kopplingen en enda JCR-arbetsyta. SharePoint-servern som visa
 Kopplingen kan även konfigureras för flera arbetsytor. I det här fallet är varje arbetsyta associerad med URL:en för respektive SharePoint-server som visas via arbetsytan. Om du vill lägga till en arbetsyta lägger du till en arbetsytedefinition i parametern Arbetsytor. En arbetsytedefinition har följande format:
 `<name>`= `<url>` där`<name>` är namnet på JCR-arbetsytan och`<url>` är URL:en för SharePoint-servern för den arbetsytan.
 
-I AEM utför du ett steg till utöver konfigurationsstegen ovan. Tillåt lista med paketet &#39;**com.day.cq.dam.cq-dam-jcr-connectors**&#39;.
+I AEM utför du ett steg till utöver konfigurationsstegen ovan. Tillåtelselista i paketet &#39;**com.day.cq.dam.cq-dam-jcr-connectors**&#39;.
 
-Så här tillåter du listpaket i AEM:
+Gör så här för att tillåtelselista-paket i AEM:
 
 1. Gå till OSGi Management Console: http://localhost:4502/system/console/configMgr.
 1. Sök efter tjänsten Apache Sling Login Admin Whitelist.
