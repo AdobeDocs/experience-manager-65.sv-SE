@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: e6fdaf56-402f-418d-96d8-e46bd3ad1e8c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 342e148ba183782e4c8b0f08328b9d87685ca08e
+source-git-commit: 8279cd590244a7f2d20cfaf1c7505a3ef57fae4a
 workflow-type: tm+mt
 source-wordcount: '2746'
 ht-degree: 2%
@@ -107,9 +107,7 @@ Genom att logga in på [Adobe Experience Cloud](https://docs.adobe.com/content/h
 
       * not **`Counter (no subrelations)`**
    * Kan återanvända (byta namn på) befintliga händelser eller skapa nya som kan användas för communityfunktioner
-   <!--
-    NOTE TO WRITER: The following link was broken, so I replaced it. Check for accuracy https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/hbvideo/video_analytics_config.html 
-    -->
+
 
 * [Videohantering](https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html)
 
@@ -532,7 +530,8 @@ Här följer ett exempel på standardmappningar efter att du har följt självst
 * *UGC-komponenttitel*: Hiking Topics
 * *login (authzableId)*: `aaron.mcdonald@mailinator.com`
 * *SRP-sökväg till UGC*: `/content/usergenerated/asi/.../forum/jmtz-topic3`
-eller *komponentbanan som ska följas*: `/content/sites/<site name>/en/jcr:content/content/primary/forum`
+eller 
+*Komponentsökväg som ska följas*: `/content/sites/<site name>/en/jcr:content/content/primary/forum`
 
 * *sökväg till innehåll* på communitywebbplatsen: `/content/sites/<site name>/en`
 
@@ -625,7 +624,7 @@ Frågeintervallet är som standard 10 sekunder.
 
 ### Rapportimporteraren {#report-importer}
 
-När en Analytics-aktiverad communitywebbplats har publicerats kan den primära utgivarens [OSGi-konfiguration](/help/sites-deploying/configuring-osgi.md), `AEM Communities Analytics Report Importer`, konfigureras att ange standardavsökningsintervallet för de konfigurationer som inte konfigureras individuellt i CRXDE.
+När en Analytics-aktiverad communitywebbplats har publicerats kan den primära utgivarens [OSGi-konfiguration](/help/sites-deploying/configuring-osgi.md)`AEM Communities Analytics Report Importer`konfigureras att ange standardavsökningsintervallet för de konfigurationer som inte konfigureras individuellt i CRXDE.
 
 Avsökningsintervallet styr hur ofta Adobe Analytics begär data som ska hämtas och sparas i [SRP](/help/communities/working-with-srp.md).
 
