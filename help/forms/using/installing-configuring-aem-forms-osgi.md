@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dfc473eb-6091-4f5d-a5a0-789972c513a9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
 workflow-type: tm+mt
-source-wordcount: '1875'
+source-wordcount: '1802'
 ht-degree: 0%
 
 ---
@@ -98,6 +98,7 @@ Innan du börjar installera och konfigurera datainhämtningsfunktionen för AEM 
 >
 >* Om OpenSSL redan är installerat på servern uppgraderar du det till den senaste versionen.
 >* Skapa symbolerna libcurl.so, libcrypto.so och libssl.so som pekar på den senaste versionen av biblioteken libcurl, libcrypto och libssl.
+
 >
 
 
@@ -110,15 +111,16 @@ Innan du börjar installera och konfigurera datainhämtningsfunktionen för AEM 
 
 AEM Forms är ett program som distribueras till AEM. Paketet innehåller datainhämtning från AEM Forms och andra funktioner. Så här installerar du tilläggspaketet:
 
-1. Logga in på [AEM-servern](https://localhost:4502) som administratör och öppna [paketresursen](https://localhost:4502/crx/packageshare). Du måste ha ett Adobe ID för att kunna logga in på paketresursen.
-1. I [AEM-paketresursen](https://localhost:4502/crx/packageshare/login.html)söker du i tilläggspaket **för** AEM 6.5-formulär, klickar på det paket som gäller för ditt operativsystem och klickar på **Hämta**. Läs och godkänn licensavtalet och klicka på **OK**. Nedladdningen startar. När du har hämtat **visas ordet Hämtad** bredvid paketet.
+1. Öppna [programvarudistribution](https://experience.adobe.com/downloads). Du måste ha ett Adobe ID för att kunna logga in på Software Distribution.
+1. Tryck **[!UICONTROL Adobe Experience Manager]** på rubrikmenyn.
+1. I **[!UICONTROL Filters]** avsnittet:
+   1. Välj **[!UICONTROL Forms]** i **[!UICONTROL Solution]** listrutan.
+   2. Välj version och typ för paketet. Du kan också använda alternativet **[!UICONTROL Search Downloads]** för att filtrera resultaten.
+1. Tryck på det paketnamn som gäller för ditt operativsystem, markera **[!UICONTROL Accept EULA Terms]** och tryck **[!UICONTROL Download]**.
+1. Öppna [Pakethanteraren](https://docs.adobe.com/content/help/en/experience-manager-65/administering/contentmanagement/package-manager.html) och klicka **[!UICONTROL Upload Package]** för att överföra paketet.
+1. Markera paketet och klicka på **[!UICONTROL Install]**.
 
-   Du kan också använda versionsnumret för att söka efter ett tilläggspaket. Versionsnummer för det senaste paketet finns i artikeln om [AEM Forms-releaser](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) .
-
-1. När nedladdningen är klar klickar du på **Nedladdad**. Du omdirigeras till pakethanteraren. I pakethanteraren söker du efter det hämtade paketet och klickar på **Installera**.
-
-   Om du hämtar paketet manuellt via den direktlänk som visas i artikeln om [AEM Forms-versioner](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) loggar du in på pakethanteraren, klickar på **Överför paket**, markerar det hämtade paketet och klickar på Överför. När paketet har överförts klickar du på paketnamnet och sedan på **Installera.**
-
+   Du kan även hämta paketet via länken direkt i artikeln om [AEM Forms-versioner](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) .
 1. När paketet har installerats uppmanas du att starta om AEM-instansen. **Starta inte om servern omedelbart.** Innan du stoppar AEM Forms-servern väntar du tills ServiceEvent REGISTERED- och ServiceEvent UNREGISTERED-meddelandena inte längre visas i `[AEM-Installation-Directory]/crx-quickstart/logs/error.log` filen och loggen är stabil.
 1. Upprepa steg 1-4 för alla författarinstanser och publiceringsinstanser.
 
@@ -149,11 +151,11 @@ Utför följande steg på alla författare- och publiceringsinstanser för att s
 
 #### Konfigurera serialiseringsagenten {#configure-the-serialization-agent}
 
-Utför följande steg på alla författare- och publiceringsinstanser för att lägga till paketet i listan över tillåtna:
+Utför följande steg på alla Author- och Publish-instanser för att lägga till paketet i tillåtelselista:
 
 1. Öppna AEM Configuration Manager i ett webbläsarfönster. Standardwebbadressen är `https://'[server]:[port]'/system/console/configMgr`.
 1. Sök efter **com.adobe.cq.deserfw.impl.DeserializationFirewallImpl.name** och öppna konfigurationen.
-1. Lägg till paketet **sun.util.calendar** i **allowlist** -fältet. Click **Save**.
+1. Lägg till paketet **sun.util.calendar** i fältet **tillåtelselista** . Click **Save**.
 1. Upprepa steg 1-3 för alla författarinstanser och publiceringsinstanser.
 
 ### Ytterligare konfigurationer efter installation {#optional-post-installation-configurations}
