@@ -7,9 +7,9 @@ uuid: 908806a9-b0d4-42d3-9fe4-3eae44cf4326
 topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
 workflow-type: tm+mt
-source-wordcount: '4183'
+source-wordcount: '4122'
 ht-degree: 0%
 
 ---
@@ -42,6 +42,7 @@ AEM Forms tillhandahåller en uppsättning OSGi-tjänster för att utföra olika
    * AEM-servern certifierar ett formulär innan det skickas till en användare för att öppnas med Acrobat eller Adobe Reader.
    * AEM-servern validerar en signatur som har lagts till i ett formulär med Acrobat eller Adobe Reader.
    * AEM-servern signerar ett formulär för en offentlig notarius publicus.
+
    Signaturtjänsten får åtkomst till certifikat och autentiseringsuppgifter som lagras i förtroendearkivet. Mer information finns i [Signaturtjänst](/help/forms/using/aem-document-services-programmatically.md).
 
 AEM Forms är en kraftfull plattform för större företag och dokumenttjänsterna är bara en av AEM Forms möjligheter. En fullständig lista med funktioner finns i [Introduktion till AEM Forms](/help/forms/using/introduction-aem-forms.md).
@@ -82,6 +83,7 @@ Innan du börjar installera och konfigurera AEM Forms Document Services bör du 
 >
 >* I Microsoft Windows stöder PDF Generator konverteringsvägar för WebKit, Acrobat WebCapture och PhantomJS för att konvertera HTML-filer till PDF-dokument.
 >* På UNIX-baserade operativsystem stöder PDF Generator konverteringsvägar för WebKit och PhantomJS för att konvertera HTML-filer till PDF-dokument.
+
 >
 
 
@@ -202,6 +204,7 @@ Om du ska använda tjänsten PDF Generator för att konvertera filformat som Mic
 >* Adobe Acrobat, Microsoft Word, Excel och PowerPoint finns endast för Microsoft Windows. Om du använder det UNIX-baserade operativsystemet måste du installera OpenOffice för att konvertera RTF-filer och kompatibla Microsoft Office-filer till PDF-dokument.
 >* Stäng alla dialogrutor som visas när du har installerat Adobe Acrobat och tredjepartsprogram för alla användare som har konfigurerats att använda PDF Generator-tjänsten.
 >* Starta alla installerade program minst en gång. Stäng alla dialogrutor för alla användare som har konfigurerats att använda PDF Generator-tjänsten.
+
 >
 
 
@@ -255,6 +258,7 @@ Ange miljövariabler för 32- och 64-bitars Java Development Kit, tredjepartspro
 >* Ställ inte in miljövariabler för Microsoft Office-program som Word, PowerPoint, Excel och Project, eller för AutoCAD. Om dessa program är installerade på servern startar tjänsten Generera PDF automatiskt dessa program.
 >* Installera OpenOffice som /root på UNIX-baserade plattformar. Om OpenOffice inte är installerat som rot kan inte PDF Generator-tjänsten konvertera OpenOffice-dokument till PDF-dokument. Om du måste installera och köra OpenOffice som en icke-rotanvändare anger du sudo-rättigheter till användaren som inte är rotanvändare.
 >* Om du använder OpenOffice på en UNIX-baserad plattform kör du följande kommando för att ange variabeln path:
+
 >
 >  
 `export OpenOffice_PATH=/opt/openoffice.org4`
@@ -378,6 +382,7 @@ Kopiera Unicode-teckensnittet till någon av följande kataloger som passar ditt
 >* Kontrollera att alla teckensnitt (Unicode och icke-unicode) är tillgängliga i katalogen /usr/share/fonts eller /usr/share/X11/fonts.
 >* När du kör PDF Generator-tjänsten som en icke-rotanvändare måste du ge icke-rotanvändaren läs- och skrivåtkomst till alla teckensnittskataloger.
 >* När du installerar nya teckensnitt i teckensnittsmappen startar du om AEM Forms-instansen.
+
 >
 
 
@@ -386,15 +391,16 @@ Kopiera Unicode-teckensnittet till någon av följande kataloger som passar ditt
 
 AEM Forms är ett program som distribueras till AEM. Paketet innehåller AEM Forms Document Services och andra AEM Forms-funktioner. Så här installerar du paketet:
 
-1. Logga in på [AEM-servern](http://localhost:4502) som administratör och öppna [paketresursen](http://localhost:4502/crx/packageshare). Du måste ha ett Adobe ID för att kunna logga in på paketresursen.
+1. Öppna [programvarudistribution](https://experience.adobe.com/downloads). Du måste ha ett Adobe ID för att kunna logga in på Software Distribution.
+1. Tryck **[!UICONTROL Adobe Experience Manager]** på rubrikmenyn.
+1. I **[!UICONTROL Filters]** avsnittet:
+   1. Välj **[!UICONTROL Forms]** i **[!UICONTROL Solution]** listrutan.
+   2. Välj version och typ för paketet. Du kan också använda alternativet **[!UICONTROL Search Downloads]** för att filtrera resultaten.
+1. Tryck på det paketnamn som gäller för ditt operativsystem, markera **[!UICONTROL Accept EULA Terms]** och tryck **[!UICONTROL Download]**.
+1. Öppna [Pakethanteraren](https://docs.adobe.com/content/help/en/experience-manager-65/administering/contentmanagement/package-manager.html) och klicka **[!UICONTROL Upload Package]** för att överföra paketet.
+1. Markera paketet och klicka på **[!UICONTROL Install]**.
 
-1. I [AEM-paketresursen](http://localhost:4502/crx/packageshare/login.html)söker du **[!UICONTROL AEM 6.4 Forms add-on packages]** efter, klickar på det paket som gäller för ditt operativsystem och klickar på **[!UICONTROL Download]**. Läs och godkänn licensavtalet och klicka på **[!UICONTROL OK]**. Nedladdningen startar. Ordet **[!UICONTROL Downloaded]** visas bredvid paketet när du har hämtat det.
-
-   Du kan också använda versionsnumret för att söka efter ett tilläggspaket. Versionsnummer för det senaste paketet finns i artikeln om [AEM Forms-releaser](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) .
-
-1. När nedladdningen är klar klickar du på **[!UICONTROL Downloaded]**. Du omdirigeras till pakethanteraren. I pakethanteraren söker du efter det hämtade paketet och klickar på **[!UICONTROL Install]**.
-
-   Om du hämtar paketet manuellt via den direktlänk som visas i artikeln om [AEM Forms-releaser](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) loggar du in på pakethanteraren, klickar **[!UICONTROL Upload Package]** på det hämtade paketet och klickar på Överför. När paketet har överförts klickar du på paketnamnet och sedan på **[!UICONTROL Install]**.
+   Du kan även hämta paketet via länken direkt i artikeln om [AEM Forms-versioner](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) .
 
 1. När paketet har installerats uppmanas du att starta om AEM-instansen. **Stoppa inte servern omedelbart.** Innan du stoppar AEM Forms-servern väntar du tills ServiceEvent REGISTERED- och ServiceEvent UNREGISTERED-meddelandena inte längre visas i filen `[AEM-Installation-Directory]/crx-quickstart/logs/error`.log och loggen är stabil.
 
