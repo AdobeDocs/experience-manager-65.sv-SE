@@ -1,29 +1,35 @@
 ---
 title: Konfigurera Visual Studio-projektet och bygg Windows-appen
 seo-title: Konfigurera Visual Studio-projektet och bygg Windows-appen
-description: Lär dig hur du konfigurerar ett Visual Studio-projekt för att bygga mobilappen AEM Forms Windows.
-seo-description: Lär dig hur du konfigurerar ett Visual Studio-projekt för att bygga mobilappen AEM Forms Windows.
+description: Lär dig hur du konfigurerar ett Visual Studio-projekt för att skapa AEM Forms Windows-mobilappen.
+seo-description: Lär dig hur du konfigurerar ett Visual Studio-projekt för att skapa AEM Forms Windows-mobilappen.
 uuid: 9559e584-2a40-4740-a29a-d7ad66220224
 topic-tags: forms-app
 discoiquuid: c71c2a17-54f9-4c95-a90a-3c89d6d45721
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
+workflow-type: tm+mt
+source-wordcount: '925'
+ht-degree: 0%
 
 ---
 
 
 # Konfigurera Visual Studio-projektet och bygg Windows-appen{#set-up-the-visual-studio-project-and-build-the-windows-app}
 
-AEM Forms tillhandahåller den fullständiga källkoden för appen AEM Forms. Källan innehåller alla komponenter för att skapa ett anpassat arbetsyteprogram. Källkodsarkivet, `adobe-lc-mobileworkspace-src-<version>.zip`är en del av `adobe-aemfd-forms-app-src-pkg-<version>.zip` paketet för paketresursen.
+AEM Forms tillhandahåller den fullständiga källkoden för AEM Forms-appen. Källan innehåller alla komponenter för att skapa ett anpassat arbetsyteprogram. Källkodsarkivet `adobe-lc-mobileworkspace-src-<version>.zip`ingår i `adobe-aemfd-forms-app-src-pkg-<version>.zip` paketet om programvarudistribution.
 
-Så här hämtar du AEM Forms-appkällan:
+Så här hämtar du appkällan för AEM Forms:
 
-1. Navigera till paketresursen\
-   Webbadress: `https://<server>:<port>/crx/packageshare`.
-
-1. Hämta källpaketet. När du hämtar paketet läggs det till i din AEM Forms-pakethanterare.
-1. När nedladdningen är klar går du till: `https://<server>:<port>/crx/packmgr/index.jsp`, och installera `adobe-aemfd-forms-app-src-pkg-<version>.zip`.
+1. Öppna [programvarudistribution](https://experience.adobe.com/downloads). Du måste ha ett Adobe ID för att kunna logga in på Software Distribution.
+1. Tryck **[!UICONTROL Adobe Experience Manager]** på rubrikmenyn.
+1. I **[!UICONTROL Filters]** avsnittet:
+   1. Välj **[!UICONTROL Forms]** i **[!UICONTROL Solution]** listrutan.
+   2. Välj version och typ för paketet. Du kan också använda alternativet **[!UICONTROL Search Downloads]** för att filtrera resultaten.
+1. Tryck på det paketnamn som gäller för ditt operativsystem, markera **[!UICONTROL Accept EULA Terms]** och tryck **[!UICONTROL Download]**.
+1. Öppna [Pakethanteraren](https://docs.adobe.com/content/help/en/experience-manager-65/administering/contentmanagement/package-manager.html) och klicka **[!UICONTROL Upload Package]** för att överföra paketet.
+1. Markera paketet och klicka på **[!UICONTROL Install]**.
 
 1. Om du vill hämta källkodsarkivet öppnar du `https://<server>:<port>/crx/de/content/forms/mobileapps/src/adobe-lc-mobileworkspace-src-<version>.zip` i webbläsaren.\
    Källpaketet hämtas till din enhet.
@@ -44,13 +50,13 @@ För Windows-enheter behöver du:
 * Microsoft Visual Studio 2015
 * Microsoft Visual Studio Tools for Apache Cordova
 
-## Konfigurera Visual Studio Project för AEM Forms-appen {#setting-up-visual-studio-project-for-aem-forms-app}
+## Konfigurera Visual Studio-projekt för AEM Forms-appen {#setting-up-visual-studio-project-for-aem-forms-app}
 
 Utför följande steg för att konfigurera AEM Forms-appprojektet i Visual Studio.
 
 1. Kopiera `adobe-lc-mobileworkspace-src-<version>.zip` arkivet till `%HOMEPATH%\Projects` mappen i Windows 8.1- eller Windows 10-enheten med Visual Studio 2015 installerat och konfigurerat.
 1. Extrahera arkivet i `%HOMEPATH%\Projects\MobileWorkspace` katalogen.
-1. Navigera till `%HOMEPATH%\Projects\MobileWorkspace\adobe-lc-mobileworkspace-src-[versionsrc]\windows` katalogen.
+1. Navigate to the `%HOMEPATH%\Projects\MobileWorkspace\adobe-lc-mobileworkspace-src-[versionsrc]\windows` directory.
 1. Öppna `CordovaApp.sln` filen med Visual Studio 2015 och fortsätt med att skapa appen AEM Forms.
 
 ## Bygg appen AEM Forms {#build-aem-forms-app}
@@ -88,11 +94,13 @@ Utför följande steg för att skapa och distribuera appen AEM Forms.
 
    * Windows PowerShell
    * Visual Studio
+
    Följande objekt krävs för att installationen ska lyckas: `.appx`
 
    1. WinJS-bibliotek
    1. Kontrollera att paketet innehåller ett självsignerat certifikat eller ett betrott certifikat som signerats av en utfärdare, till exempel VeriSign.
    1. Utvecklarlicens
+
    Katalogen Platforms\windows\AppPackages\CordovaApp.Windows_3.0.2.0_anycpu_Test innehåller de fyra huvudkomponenterna:
 
    1. `.appx` fil
