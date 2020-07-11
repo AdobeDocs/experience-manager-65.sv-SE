@@ -1,8 +1,8 @@
 ---
 title: Konfigurera Xcode-projektet och bygg iOS-appen
 seo-title: Konfigurera Xcode-projektet och bygg iOS-appen
-description: Beskriver hur du skapar en standardapp för AEM Forms för iOS.
-seo-description: Beskriver hur du skapar en standardapp för AEM Forms för iOS.
+description: Beskriver hur du skapar en AEM Forms-standardapp för iOS.
+seo-description: Beskriver hur du skapar en AEM Forms-standardapp för iOS.
 uuid: 29779bbb-06b4-4ece-9f29-786afab59eaf
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,21 +10,28 @@ topic-tags: forms-app
 discoiquuid: 88555db2-712f-4ef9-bf47-76c7ba83d964
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
+source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
+workflow-type: tm+mt
+source-wordcount: '818'
+ht-degree: 0%
 
 ---
 
 
 # Konfigurera Xcode-projektet och bygg iOS-appen{#set-up-the-xcode-project-and-build-the-ios-app}
 
-AEM Forms tillhandahåller den fullständiga källkoden för appen AEM Forms. Källan innehåller alla komponenter för att skapa en anpassad AEM Forms-app. Källkodsarkivet, `adobe-lc-mobileworkspace-src-<version>.zip` är en del av paketet för `adobe-aemfd-forms-app-src-pkg-<version>.zip` paketresursen.
+AEM Forms tillhandahåller den fullständiga källkoden för AEM Forms-appen. Källan innehåller alla komponenter som kan användas för att skapa en anpassad AEM Forms-app. Källkodsarkivet `adobe-lc-mobileworkspace-src-<version>.zip` är en del av paketet `adobe-aemfd-forms-app-src-pkg-<version>.zip` om programvarudistribution.
 
-Så här hämtar du AEM Forms-appkällan:
+Så här hämtar du appkällan för AEM Forms:
 
-1. Navigera till paketets shareURL: `https://<server>:<port>/crx/packageshare`.
-
-1. Hämta källpaketet. När du hämtar paketet läggs det till i din AEM Forms-pakethanterare.
-1. När nedladdningen är klar går du till: `https://<server>:<port>/crx/packmgr/index.jsp`, och installera `adobe-aemfd-forms-app-src-pkg-<version>.zip`.
+1. Öppna [programvarudistribution](https://experience.adobe.com/downloads). Du måste ha ett Adobe ID för att kunna logga in på Software Distribution.
+1. Tryck **[!UICONTROL Adobe Experience Manager]** på rubrikmenyn.
+1. I **[!UICONTROL Filters]** avsnittet:
+   1. Välj **[!UICONTROL Forms]** i **[!UICONTROL Solution]** listrutan.
+   2. Välj version och typ för paketet. Du kan också använda alternativet **[!UICONTROL Search Downloads]** för att filtrera resultaten.
+1. Tryck på det paketnamn som gäller för ditt operativsystem, markera **[!UICONTROL Accept EULA Terms]** och tryck **[!UICONTROL Download]**.
+1. Öppna [Pakethanteraren](https://docs.adobe.com/content/help/en/experience-manager-65/administering/contentmanagement/package-manager.html) och klicka **[!UICONTROL Upload Package]** för att överföra paketet.
+1. Markera paketet och klicka på **[!UICONTROL Install]**.
 
 1. Om du vill hämta källkodsarkivet öppnar du `https://<server>:<port>/crx/de/content/forms/mobileapps/src/adobe-lc-mobileworkspace-src-<version>.zip` i webbläsaren.
 Källpaketet hämtas till din enhet.
@@ -51,11 +58,11 @@ Följande tabell innehåller information om innehållet i `adobe-lc-mobileworksp
   </tr>
   <tr>
    <td><p><code>AEM Forms.xcodeproj</code></p> </td>
-   <td><p>Xcode project for AEM Forms app</p> </td>
+   <td><p>Xcode-projekt för appen AEM Forms</p> </td>
   </tr>
   <tr>
    <td><p><code>www</code></p> </td>
-   <td><p>HTML, CSS, bilder och JavaScript-filer för AEM Forms-appprojektet</p> </td>
+   <td><p>HTML-, CSS-, images- och JavaScript-filer för AEM Forms-appprojektet</p> </td>
   </tr>
  </tbody>
 </table>
@@ -119,9 +126,9 @@ Detaljerad information om kodsignering och hur du lägger till enheter till iOS 
 
    >[!NOTE]
    >
-   >Det här steget krävs bara om appen AEM Forms behöver ansluta till en server som inte uppfyller kraven för App Transport Security.
+   >Det här steget krävs bara om AEM Forms-appen behöver ansluta till en server som inte uppfyller säkerhetskraven för App Transport.
 
-1. Under **PROJEKT** väljer du **AEM Forms** och ser till att rätt signatur är markerat för **kodsigneringsidentitet**, **felsökning**, **release** **** och¥Any iOS SDK.
+1. Under **PROJEKT** väljer du **AEM Forms** och ser till att rätt signatur är markerat för **Kodsigneringsidentitet**, **Felsök**, **Frigör** **** och¥Any iOS SDK¥.
 1. Anslut en provisionerad iPad till en Mac-dator.
 1. Välj den tilldelade enheten för **AEM Forms** -projektet.
 
@@ -132,7 +139,7 @@ Detaljerad information om kodsignering och hur du lägger till enheter till iOS 
 1. Välj **Produkt** > **Rengör**.
 1. Välj **Produkt** > **Skapa**.
 
-## Skapa installationsprogrammet för appen AEM Forms {#build-the-installer-for-the-mobile-workspace-app}
+## Bygg installationsprogrammet för appen AEM Forms {#build-the-installer-for-the-mobile-workspace-app}
 
 Du måste arkivera Xcode-projektet för att skapa installationsprogrammet (en IPA-fil) och en egenskapslista (en PLIST-fil). Egenskapslistfilen innehåller konfigurationsinformation för det värdbaserade interna programmet, till exempel namnet och appens värdplats. Mer information om egenskapslistfiler finns i [Om egenskapslistefiler](https://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html).
 
@@ -151,7 +158,7 @@ Du måste arkivera Xcode-projektet för att skapa installationsprogrammet (en IP
 1. Välj lämplig **kodsigneringsidentitet** och klicka på **Nästa**. Klicka på **Tillåt** för att använda signaturen.
 1. Ange appens namn och välj **Spara för företagsdistribution**.
 1. Ange programmets **program-URL** . Ange till exempel URL om du vill ha programmet på en CRX-server `https://[LC_host]:'port'/lc/content/distribution/mobileworkspace/APP_NAME.ipa`.
-1. Ange AEM-formulär i fältet **Titel** .
+1. Ange AEM Forms i fältet **Titel** .
 1. Klicka på **Spara** och stäng Xcode.
 
    En installationsfil `AEM Forms.ipa`och egenskapslistefil `AEM Forms-info.plist`skapas på den angivna platsen.
