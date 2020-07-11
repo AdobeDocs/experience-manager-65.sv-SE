@@ -4,9 +4,9 @@ description: Nyheter i Adobe Experience Manager 6.5 Service Pack 5
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: d7276f332bece4f736d92e5723d79ffc2d27e900
+source-git-commit: 71c0d0263e1d0da7e33762a3b22773f38db3ba52
 workflow-type: tm+mt
-source-wordcount: '1839'
+source-wordcount: '1863'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # Nyheter i Adobe Experience Manager 6.5 Service Pack 5 {#aem-whats-new-service-pack-5}
 
-Service Pack för Adobe Experience Manager 6.5 innehåller nya funktioner, förbättringar som kunderna efterfrågat samt prestanda-, stabilitets- och säkerhetsförbättringar med kvartalsvisa intervall. Den kvartalsvisa tillgängligheten gör det enkelt att komma åt och anta nya funktioner och innovationer.
+Service Pack för Adobe Experience Manager 6.5 innehåller nya funktioner, kundefterfrågade förbättringar samt prestanda, stabilitet och säkerhetsförbättringar med kvartalsvisa intervall. Den kvartalsvisa tillgängligheten gör det enkelt att komma åt och anta nya funktioner och innovationer.
 
-I den här artikeln beskrivs de funktioner som ingår i det senaste 6.5 Service Pack-versionen, [de viktigaste funktionerna i det tidigare 6.5 Service Pack-paketet](#key-features-previous-service-packs)och några av de [viktigaste versionerna sedan Experience Manager 6.5.4.0](#key-releases-since-last-sp) -versionen.
+I den här artikeln beskrivs de funktioner som ingår i det senaste 6.5 Service Pack-versionen, [de viktigaste funktionerna i det tidigare 6.5 Service Pack-](#key-features-previous-service-packs)paketet [och några av de](#key-releases-since-last-sp) viktigaste versionerna sedan Experience Manager 6.5.4.0-versionen.
 
 ## Adobe Experience Manager Sites {#aem-sites}
 
@@ -76,15 +76,15 @@ Stöd för 3D-bilder i [!DNL Dynamic Media] gör att man kan publicera och lägg
 
 ## Adobe Experience Manager Forms {#aem-forms}
 
-### Anpassa kolumnerna i Adobe Experience Manager Inbox {#customize-aem-inbox-columns}
+### Anpassa kolumnerna i Inkorgen för Adobe Experience Manager {#customize-aem-inbox-columns}
 
-Du kan anpassa en [!DNL Experience Manager] inkorg om du vill ändra standardtiteln för en kolumn, ändra ordningen på en kolumns position och visa ytterligare kolumner baserat på data i ett arbetsflöde. Medlemmar i `administrators` eller `workflow-administrators` grupper kan anpassa kolumnerna.
+Du kan anpassa en [!DNL Experience Manager] inkorg om du vill ändra standardtiteln för en kolumn, ändra ordningen på en kolumns position och visa ytterligare kolumner baserat på data i ett arbetsflöde. Medlemmar i `administrators` eller `workflow-administrators` grupper kan anpassa kolumnerna. Mer information finns i [Administratörskontroll](../sites-authoring/inbox.md#inbox-admin-control).
 
-![Anpassa Experience Manager Inbox-kolumner](assets/customize-columns.gif)
+![Anpassa Experience Manager-inkorgskolumner](assets/customize-columns.gif)
 
 ### Spara interaktiv kommunikation som utkast {#save-as-draft}
 
-Du kan använda agentgränssnittet för att spara ett eller flera utkast för varje interaktiv kommunikation och hämta utkastet senare för att fortsätta arbeta med det. Du kan ange olika namn för varje utkast för att identifiera det.
+Du kan använda agentgränssnittet för att spara ett eller flera utkast för varje interaktiv kommunikation och hämta utkastet senare för att fortsätta arbeta med det. Du kan ange olika namn för varje utkast för att identifiera det. Mer information finns i [Spara interaktiv kommunikation som ett utkast](../forms/using/prepare-send-interactive-communication.md#save-as-draft).
 
 ![Spara som utkast](assets/save-as-draft.gif)
 
@@ -104,15 +104,15 @@ Adobe Experience Manager Forms innehåller följande tillgänglighetsförbättri
 
 ### X-509 certifikatbaserad autentisering för SOAP-baserade webbtjänster i formulärdatamodell {#x509-based-authentication-soap}
 
-Formulärdatamodellen har nu stöd för X-509-certifikatbaserad autentisering när SOAP-webbtjänster används som datakälla.
+Formulärdatamodellen har nu stöd för X-509-certifikatbaserad autentisering när SOAP-webbtjänster används som datakälla. Mer information finns i [Konfigurera SOAP-webbtjänster](../forms/using/configure-data-sources.md#configure-soap-web-services).
 
 ### Andra viktiga förbättringar {#other-improvements}
 
-* Experience Manager 6.5 Forms on JEE Document Security bygger nu på [!DNL Apache Struts 2].
+* Experience Manager 6.5 Forms on JEE Document Security baseras nu på [!DNL Apache Struts 2].
 
 * Stöd för [!DNL Oracle Real Applications Cluster (RAC) 19c].
 
-## Viktiga funktioner i tidigare Service Pack för Experience Manager 6.5 {#key-features-previous-service-packs}
+## Viktiga funktioner i tidigare Experience Manager 6.5 Service Packs {#key-features-previous-service-packs}
 
 ### Experience Manager Sites {#aem-sites-previous-service-packs}
 
@@ -136,7 +136,7 @@ Nu kan du välja format i komponentdialogrutan med det förbättrade formatsyste
 
 Auktoriseringskanalen mellan [!DNL Experience Manager Assets] och [!DNL Brand Portal] ändras. Tidigare [!DNL Brand Portal] konfigurerades i Classic UI via äldre OAuth-gateway, som använder JWT-tokenutbyte för att erhålla en IMS-åtkomsttoken för auktorisering. [!DNL Experience Manager Assets] har nu konfigurerats med [!DNL Brand Portal] hjälp av Adobe I/O, som anskaffar en IMS-token för godkännande av din [!DNL Brand Portal] klientorganisation.
 
-Vilka steg som ska konfigureras [!DNL Experience Manager Assets] med [!DNL Brand Portal] varierar beroende på [!DNL Experience Manager] version, om du konfigurerar för första gången eller om du uppgraderar befintliga konfigurationer. Mer information finns i [Konfigurera Experience Manager Assets med varumärkesportalen](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html) .
+Vilka steg som ska konfigureras [!DNL Experience Manager Assets] med [!DNL Brand Portal] varierar beroende på [!DNL Experience Manager] version, om du konfigurerar för första gången eller om du uppgraderar befintliga konfigurationer. Mer information finns i [Konfigurera Experience Manager Assets with Brand Portal](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html) .
 
 #### Tillgänglighetsförbättringar (6.5.4.0) {#accessibility-enhancements}
 
@@ -153,11 +153,11 @@ Till exempel, `On Time (MM-DD-YYYY HH:mm)`. Här är MM månad i tvåsiffrigt fo
 
 #### Visuell sökning efter [!DNL Adobe Experience Manager Assets] (6.5.2.0) {#visual-search}
 
-[!DNL Assets] -användare kan söka visuellt liknande bilder. Experience Manager visar de smarta taggade bilderna från DAM-databasen som liknar den bild som användaren har valt. Se [Visuell sökning](../assets/search-assets.md).
+[!DNL Assets] -användare kan söka visuellt liknande bilder. Experience Manager visar de smarta taggade bilder från DAM-databasen som liknar den bild som användaren har valt. Se [Visuell sökning](../assets/search-assets.md).
 
 ### Dynamic Media {#dynamic-media-previous-service-packs}
 
-#### Smart Imaging for Dynamic Media {#smart-imaging}
+#### Smart Imaging för Dynamic Media {#smart-imaging}
 
 Smart bildbehandling använder varje användares unika visningsegenskaper för att automatiskt leverera rätt bilder som är optimerade för sin upplevelse, vilket ger bättre prestanda och engagemang. Smart bildbehandling fungerar med befintliga bildförinställningar och använder intelligens under de sista millisekunderna i leveransen för att ytterligare minska bildfilens storlek baserat på webbläsarens eller nätverkets anslutningshastighet. Se [Smart bildbehandling](../assets/imaging-faq.md).
 
@@ -167,7 +167,7 @@ Smart beskärning för video - en valfri funktion i videoprofiler - är ett verk
 
 ### Experience Manager Forms {#aem-forms-previous-service-packs}
 
-#### Generera utskrifter i Experience Manager Forms-arbetsflöden (6.5.4.0) {#generate-printable-output}
+#### Generera utskrift i arbetsflöden för Experience Manager Forms (6.5.4.0) {#generate-printable-output}
 
 Med arbetsflödessteget Generera utskrift kan du integrera en källmallsfil med en datafil. Tack vare den här integreringen kan du skriva ut eller spara olika kopior av mallfilen. Steget genererar PCL-, PostScript-, ZPL-, IPL-, TPCL- eller DPL-utdata. Mer information om den här funktionen finns i [Formulärcentrerat arbetsflöde i OSGi - stegreferens](../forms/using/aem-forms-workflow-step-reference.md).
 
@@ -179,7 +179,7 @@ Nu kan du definiera antalet kolumner för en panel i adaptiva formulär och inte
 
 ![Flerspaltig layout](assets/multi-column-layout.gif)
 
-#### Anpassa Experience Manager Inbox (6.5.4.0) {#aem-inbox}
+#### Anpassningar av Inkorgen för Experience Manager (6.5.4.0) {#aem-inbox}
 
 Med det nya alternativet Admin Control kan administratörer:
 
@@ -201,7 +201,7 @@ Experience Manager Forms innehåller följande tillgänglighetsförbättringar:
 
 * Varje sida i ett adaptivt formulär innehåller nu en rubrik och en huvudlandmärkesetikett.
 
-#### Dela och begära åtkomst till inkorgsobjekt för en Experience Manager Forms-användare (6.5.3.0) {#share-request-access}
+#### Dela och begära åtkomst till inkorgsobjekt som tillhör en Experience Manager-formuläranvändare (6.5.3.0) {#share-request-access}
 
 Du kan dela dina inkorgsobjekt med en annan användare. När en annan användare får tillgång till dina inkorgsobjekt kan användaren göra anspråk på och vidta lämpliga åtgärder för delade objekt. På samma sätt kan du begära åtkomst till inkorgsobjekt från andra användare. Se [Dela och begära åtkomst till inkorgsobjekt för en användare](../forms/using/configure-shared-queues-osgi.md).
 
@@ -218,17 +218,17 @@ Du kan använda batch-API:t för att skapa flera interaktiva dokument från en m
 
 Mellan 5 mars 2020 och 4 juni 2020 släppte Adobe följande, förutom servicepaket och kumulativa korrigeringspaket:
 
-* [Programdistributionsportalen](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) är tillgänglig för hämtning av Experience Manager-tjänstpaket, kumulativa korrigeringspaket, snabbkorrigeringar och funktionspaket.
+* [Programdistributionsportalen](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) är tillgänglig för nedladdning av Experience Manager Service Pack, kumulativa korrigeringspaket, snabbkorrigeringar och funktionspaket.
 
 * [!DNL Adobe Experience Manager Cloud Manager] [2020.3.0](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/release-notes/release-notes-2020-3-0.html), [20.4.0](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/release-notes/release-notes-2020-4-0.html)och [2020.5.0](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/release-notes/release-notes-current.html).
 
-* [Experience Manager-datorprogrammet 2.0.2.0](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html).
+* [Experience Manager desktop app 2.0.2.0](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html).
 
-* [Experience Manager Screens: Feature Pack 20204](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/release-notes/release-notes-fp-202004.html).
+* [Experience Manager skärmar: Feature Pack 20204](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/release-notes/release-notes-fp-202004.html).
 
 >[!MORELIKETHIS]
 >
 >* [Adobe Experience Manager 6.5 - dokumentation](../user-guide/home.md)
->* [Allmän versionsinformation om Adobe Experience Manager 6.5](release-notes.md)
->* [Versionsinformation om Service Pack för Adobe Experience Manager 6.5](sp-release-notes.md)
+>* [Allmän versionsinformation för Adobe Experience Manager 6.5](release-notes.md)
+>* [Versionsinformation för Service Pack för Adobe Experience Manager 6.5](sp-release-notes.md)
 
