@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: forms-app
 discoiquuid: fabc981e-0c9e-4157-b0a1-0c13717fb6cd
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
+workflow-type: tm+mt
+source-wordcount: '596'
+ht-degree: 0%
 
 ---
 
@@ -18,20 +21,18 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 Den här artikeln handlar om att skapa AEM Forms App 6.3.1.1 och senare versioner. Information om hur du skapar en app från källkoden för källkoden i AEM Forms App 6.3 finns i [Konfigurera Eclipse-projektet och skapa Android™-appen](/help/forms/using/setup-eclipse-project-build-installer.md).
 
-AEM Forms tillhandahåller den fullständiga källkoden för appen AEM Forms. Källan innehåller alla komponenter för att skapa en anpassad AEM Forms-app. Källkodsarkivet, `adobe-lc-mobileworkspace-src-<version>.zip` är en del av paketet för `adobe-aemfd-forms-app-src-pkg-<version>.zip` paketresursen.
+AEM Forms tillhandahåller den fullständiga källkoden för AEM Forms-appen. Källan innehåller alla komponenter för att skapa en anpassad AEM Forms-app. Källkodsarkivet `adobe-lc-mobileworkspace-src-<version>.zip` är en del av paketet `adobe-aemfd-forms-app-src-pkg-<version>.zip` om programvarudistribution.
 
-Så här hämtar du AEM Forms-appkällan:
+Så här hämtar du appkällan för AEM Forms:
 
-1. Navigera till paketresursen
-
-   Webbadress: `https://<server>:<port>/crx/packageshare`.
-
-1. Hämta källpaketet. När du hämtar paketet läggs det till i din AEM Forms-pakethanterare.
-1. När nedladdningen är klar går du till: `https://<server>:<port>/crx/packmgr/index.jsp`, och installera `adobe-aemfd-forms-app-src-pkg-<version>.zip`.
-
-1. Om du vill hämta källkodsarkivet öppnar du `https://<server>:<port>/crx/de/content/forms/mobileapps/src/adobe-lc-mobileworkspace-src-<version>.zip` i webbläsaren.
-
-   Källpaketet hämtas till din enhet.
+1. Öppna [programvarudistribution](https://experience.adobe.com/downloads). Du måste ha ett Adobe ID för att kunna logga in på Software Distribution.
+1. Tryck **[!UICONTROL Adobe Experience Manager]** på rubrikmenyn.
+1. I **[!UICONTROL Filters]** avsnittet:
+   1. Välj **[!UICONTROL Forms]** i **[!UICONTROL Solution]** listrutan.
+   2. Välj version och typ för paketet. Du kan också använda alternativet **[!UICONTROL Search Downloads]** för att filtrera resultaten.
+1. Tryck på det paketnamn som gäller för ditt operativsystem, markera **[!UICONTROL Accept EULA Terms]** och tryck **[!UICONTROL Download]**.
+1. Öppna [Pakethanteraren](https://docs.adobe.com/content/help/en/experience-manager-65/administering/contentmanagement/package-manager.html) och klicka **[!UICONTROL Upload Package]** för att överföra paketet.
+1. Markera paketet och klicka på **[!UICONTROL Install]**.
 
 I följande bild visas det extraherade innehållet i `adobe-lc-mobileworkspace-src-<version>.zip`.
 
@@ -73,13 +74,13 @@ Följande bild visar katalogstrukturen för `android`mappen i `src`mappen.
 
    **För Windows®-användare**: Uppdatera `local.properties` filen som finns i `%HOMEPATH%\Projects\[your-project]\android` mappen och peka på `sdk.dir` variabeln på `SDK` skrivbordet.
 
-1. Klicka på **[!UICONTROL Slutför]** för att skapa projektet.
+1. Klicka **[!UICONTROL Finish]** för att skapa projektet.
 
    Projektet är tillgängligt i ADT Project Explorer.
 
    ![Förmörka projekt efter att appen har skapats](assets/eclipsebuildmws.png)
 
-1. I Android™ Studio väljer du **[!UICONTROL Importera projekt (Eclipse ADT, Gradle, etc.)]**.
+1. I Android™ Studio väljer du **[!UICONTROL Import Project (Eclipse ADT, Gradle, Etc.)]**.
 1. I projektutforskaren väljer du rotkatalogen för projektet som du vill skapa i textrutan **Rotkatalog** :
 
    **För Mac:** [User_Home]/Projects/MobileWorkspace/src/android
@@ -90,7 +91,7 @@ Följande bild visar katalogstrukturen för `android`mappen i `src`mappen.
 
    ![dontremindmeagainforisproject](assets/dontremindmeagainforthisproject.png)
 
-1. När du har skapat en övertoning visas följande skärm. Anslut lämplig enhet eller emulator till systemet och klicka på **[!UICONTROL Kör Android™]**.
+1. När du har skapat en övertoning visas följande skärm. Anslut lämplig enhet eller emulator till systemet och klicka på **[!UICONTROL Run Android™]**.
 
    ![graderskonsol](assets/gradleconsole.png)
 
