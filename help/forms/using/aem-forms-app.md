@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: e18aa345-034c-473b-b4c2-01678bb10616
 translation-type: tm+mt
-source-git-commit: aaedec7314b0fa8551df560eef2574a53c20d1c5
+source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
 workflow-type: tm+mt
-source-wordcount: '2403'
+source-wordcount: '2440'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 Med appen AEM Forms kan du synkronisera adaptiva formulär, mobilformulär och formuläruppsättningar på mobila enheter, baserat på din server. Du kan definiera arbetsflöden som är [formulärbaserade arbetsflöden i OSGi](/help/forms/using/aem-forms-workflow.md) - eller [Forms-arbetsflöden i JEE](/help/forms/using/finance-reference-site-walkthrough.md#approving-the-application). Du driver t.ex. ett bankföretag och använder AEM Forms för att hantera kundapplikationer och kommunikation. Era kunder fyller i en blankett och skickar in den för verifiering. Om du aktiverar formuläret på mobila enheter kan dina kunder fylla i formuläret i appen AEM Forms. Du kan också hantera verifieringsarbetsflödet genom att aktivera verifieringsformuläret på mobila enheter. Din fältarbetare kan bära en mobil enhet med sig till kunden, verifiera informationen och skicka formuläret. Appen AEM Forms synkroniseras med AEM Forms-servern och hämtar formulären som är aktiverade för mobila enheter. Om programmet är offline lagras data lokalt.
 
-AEM Forms-appens källkod är tillgänglig för kunder via paketdelning. Källkodspaketet i paketresursen är tillgängligt som: `adobe-aemfd-forms-app-src-pkg-<version>.zip`.
+AEM Forms-appens källkod är tillgänglig för kunder via programvarudistribution. Källkodspaketet i Programvarudistribution är tillgängligt som: `adobe-aemfd-forms-app-src-pkg-<version>.zip`.
 
 Appen AEM Forms stöds på iOS-, Android- och Windows-enheter. Du kan installera appen AEM Forms för Android från Google Play, iOS från App Store och Windows från Windows Store.
 
@@ -179,20 +179,18 @@ Mer information om hur du konfigurerar ett AEM Forms-appprojekt för anpassning 
 
 ### Bygg och distribuera {#build-and-distribute}
 
-Källkoden för appen AEM Forms kan extraheras från adobe-lc-mobileworkspace-src.zip som är tillgänglig som en del av AEM Forms appens källpaket på paketresursen.
+Källkoden för AEM Forms-appen kan extraheras från den `adobe-lc-mobileworkspace-src.zip` som är tillgänglig som en del av AEM Forms-appens källpaket för programvarudistribution.
 
 Så här hämtar du appkällan för AEM Forms:
 
-1. Navigera till paketresursen
-
-   Webbadress: `https://<server>:<port>/crx/packageshare`.
-
-1. Hämta källpaketet. När du hämtar paketet läggs det till i AEM Forms pakethanteraren.
-1. När nedladdningen är klar går du till: `https://<server>:<port>/crx/packmgr/index.jsp`och installera `adobe-aemfd-forms-app-src-pkg-<version>.zip`.
-
-1. Om du vill hämta paketet öppnar du det `https://<server>:<port>/crx/de/content/forms/mobileapps/src/adobe-lc-mobileworkspace-src-<version>.zip` i webbläsaren.
-
-   Källpaketet hämtas till din enhet.
+1. Öppna [programvarudistribution](https://experience.adobe.com/downloads). Du måste ha ett Adobe ID för att kunna logga in på Software Distribution.
+1. Tryck **[!UICONTROL Adobe Experience Manager]** på rubrikmenyn.
+1. I **[!UICONTROL Filters]** avsnittet:
+   1. Välj **[!UICONTROL Forms]** i **[!UICONTROL Solution]** listrutan.
+   2. Välj version och typ för paketet. Du kan också använda alternativet **[!UICONTROL Search Downloads]** för att filtrera resultaten.
+1. Tryck på det paketnamn som gäller för ditt operativsystem, markera **[!UICONTROL Accept EULA Terms]** och tryck **[!UICONTROL Download]**.
+1. Öppna [Pakethanteraren](https://docs.adobe.com/content/help/en/experience-manager-65/administering/contentmanagement/package-manager.html) och klicka **[!UICONTROL Upload Package]** för att överföra paketet.
+1. Markera paketet och klicka på **[!UICONTROL Install]**.
 
 **För iOS**:
 
