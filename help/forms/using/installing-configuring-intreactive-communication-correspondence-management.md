@@ -8,7 +8,7 @@ topic-tags: installing
 discoiquuid: 225f2bc1-6842-4c79-a66d-8024a29325c0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
+source-git-commit: a18a018181a779b9f48ef3e39c26410a1bc4919b
 workflow-type: tm+mt
 source-wordcount: '1413'
 ht-degree: 0%
@@ -102,7 +102,7 @@ AEM Forms är ett program som distribueras till AEM. Paketet innehåller interak
    Du kan även hämta paketet via länken direkt i artikeln om [AEM Forms-versioner](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) .
 
 1. När paketet har installerats uppmanas du att starta om AEM-instansen. **Starta inte om servern omedelbart.** Innan du stoppar AEM Forms-servern väntar du tills meddelandena ServiceEvent REGISTERED och ServiceEvent UNREGISTERED inte visas i filen [AEM-Installation-Directory]/crx-quickstart/logs/error.log och loggen är stabil.
-1. Upprepa steg 1-4 för alla författarinstanser och publiceringsinstanser.
+1. Upprepa steg 1-7 för alla författare- och publiceringsinstanser.
 
 ## Konfiguration efter installation {#post-installation-configurations}
 
