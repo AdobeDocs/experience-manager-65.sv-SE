@@ -10,9 +10,9 @@ topic-tags: integration
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: bb3fcb53-b8c3-4b1d-9125-4715f34ceb0b
 translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+source-git-commit: d6ae8bffa2d9d59f5656b9344d8826128f12885c
 workflow-type: tm+mt
-source-wordcount: '1706'
+source-wordcount: '1653'
 ht-degree: 3%
 
 ---
@@ -39,22 +39,13 @@ AEM 6.5 innehåller funktionspaketet Livefyre 1.2.6 förinstallerat. Det här pa
 
    ![livefyre-aem-uninstall-64](assets/livefyre-aem-uninstall-64.png)
 
-1. Återgå till AEM-hemsidan, klicka på Verktyg och gå sedan till **Distribution > Paketresurs**.
+1. Ladda ned Livefyre-paketet från [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html).
 
-   En lista över funktionspaket och snabbkorrigeringar som är tillgängliga för nedladdningsskärmar.
-
-1. Sök efter&quot;Livefyre&quot; i nyckelordssökningen och välj sedan det Livefyre-funktionspaket som motsvarar din AEM-version.
-
-   ![livefyre-aem3-6-4](assets/livefyre-aem3-6-4.png)
-
-1. Klicka på **Hämta** på informationssidan för funktionspaket, läs paketlicensavtalet och klicka på **Godkänn**.
-1. Gå tillbaka till Pakethanteraren, leta upp det hämtade paketet och klicka på **Installera**.
+1. Installera det hämtade paketet från pakethanteraren. Mer information om [hur du använder programdistribution och paket i AEM finns i Arbeta med paket](/help/sites-administering/package-manager.md) .
 
    ![livefyre-aem4-6-4](assets/livefyre-aem4-6-4.png)
 
    Ditt Livefyre-AEM-paket är nu installerat. Innan du kan börja använda integreringsfunktionerna måste du konfigurera AEM för att använda Livefyre.
-
-   Mer information om paket finns i [Arbeta med paket](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/package-manager.html).
 
    Mer information och versionsinformation om funktionspaket finns i [Funktionspaket](https://helpx.adobe.com/experience-manager/6-3/release-notes/feature-packs-release-notes.html).
 
@@ -176,6 +167,7 @@ Så här importerar du UGC till AEM Assets:
 
    * **Begär rättigheter** manuellt för att få ett meddelande som kan kopieras och klistras in och skickas manuellt till innehållsägarna via Instagram.
    * **Attributera innehållsrättigheter** manuellt för att åsidosätta rättigheterna för enskilda resurser.
+
    >[!NOTE]
    >
    >På grund av uppdateringar som påverkar sammanställningen av innehåll från icke-kommersiella användarkonton kan vi inte längre lägga in kommentarer åt dig eller automatiskt söka efter svar från författaren. [Klicka här om du vill veta mer](https://developers.facebook.com/blog/post/2018/04/04/facebook-api-platform-product-changes/).
