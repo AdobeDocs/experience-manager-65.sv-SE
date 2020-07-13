@@ -10,14 +10,17 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 2d308756-79d1-4d69-b51c-d4b6e692a137
 translation-type: tm+mt
-source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
+source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+workflow-type: tm+mt
+source-wordcount: '221'
+ht-degree: 2%
 
 ---
 
 
-# Grundläggande om komponenter, funktioner och funktioner {#component-function-and-feature-essentials}
+# Grundläggande om komponenter, funktioner och funktioner  {#component-function-and-feature-essentials}
 
-Funktionerna i AEM Communities kräver att besökarna blir medlemmar och loggar in på [communitywebbplatsen](overview.md#communitiessites) innan de kan publicera innehållet. Därför är mallarna [för](sites.md)communitysajter, som används för att [skapa](sites-console.md)en communitywebbplats, utformade för att innehålla en inloggningsfunktion samt användarprofiler, meddelanden, sökning, moderering och översättning.
+AEM Communities funktioner kräver att besökarna blir medlemmar och loggar in på [communitywebbplatsen](overview.md#communitiessites) innan de kan publicera innehåll. Därför är mallarna [för](sites.md)communitysajter, som används för att [skapa](sites-console.md)en communitywebbplats, utformade för att innehålla en inloggningsfunktion samt användarprofiler, meddelanden, sökning, moderering och översättning.
 
 En communitywebbplats kommer att stödja medlemmar som skapar communitygrupper när funktionen [för](functions.md#groups-function) communitygrupper ingår i den valda communitywebbplatsmallen.
 
@@ -48,7 +51,7 @@ Nedan följer länkar till viktig information för Communities-komponenter, -fun
 * [Grupper](essentials-groups.md)
 * [Ideation](ideation.md)
 * [Ledartavla](leaderboard.md)
-* [Frågor och svar](qna-essentials.md)`(QnA)`
+* [Frågor och svar](qna-essentials.md) `(QnA)`
 
 ## Funktioner {#features}
 
@@ -61,7 +64,7 @@ Nedan följer länkar till viktig information för Communities-komponenter, -fun
 * [Betygsättning och emblem](configure-scoring.md)
 * [Sökning](search-implementation.md)
 * [Social Graph](essentials-socialgraph.md)
-* [Lagringsresursprovider](srp-and-ugc.md)`(SRP)`
+* [Lagringsresursprovider](srp-and-ugc.md) `(SRP)`
 
 * [Taggar](tag.md)
 
