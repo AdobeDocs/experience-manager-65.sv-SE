@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 1a947a06-6a5c-4be9-b2fa-e5fa809ff3b8
 translation-type: tm+mt
-source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
+source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+workflow-type: tm+mt
+source-wordcount: '289'
+ht-degree: 0%
 
 ---
 
@@ -37,7 +40,7 @@ Anonym publicering av en röst stöds inte. Besökare på platsen måste registr
   </tr>
   <tr>
    <td> <a href="client-customize.md#clientlibs-for-scf"><strong>klientlibs</strong></a></td>
-   <td> cq.social.hbs.röstning</td>
+   <td> cq.social.hbs.voting</td>
   </tr>
   <tr>
    <td> <strong>templates</strong></td>
@@ -49,7 +52,7 @@ Anonym publicering av en röst stöds inte. Besökare på platsen måste registr
   </tr>
   <tr>
    <td><strong>egenskaper</strong></td>
-   <td><p>Se, <a href="voting.md">Använda röstning</a></p> </td>
+   <td><p>Se <a href="voting.md">Använda röstning</a></p> </td>
   </tr>
  </tbody>
 </table>
@@ -75,8 +78,8 @@ Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](
 
 Se:
 
-* [Översikt över](srp.md) lagringsresursprovidern - introduktion och databasanvändning - översikt
-* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och -exempel
-* [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - riktlinjer för kodning
-* [Omfaktorisering för SocialUtils](socialutils.md) - mappning av utgått verktygsmetoder till aktuella SRP-verktygsmetoder
+* [Översikt över](srp.md) lagringsresursprovidern - introduktion och översikt över databasanvändningen.
+* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och exempel.
+* [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - riktlinjer för kodning.
+* [Omfaktorisering för SocialUtils](socialutils.md) - mappning av utfasade verktygsmetoder till aktuella SRP-verktygsmetoder.
 
