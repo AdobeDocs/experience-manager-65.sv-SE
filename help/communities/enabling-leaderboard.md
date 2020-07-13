@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 9045ce2e-a06d-4da5-9b83-56dd823007bb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: fb7d2a3cebda86fa4d91d2ea89ae459fa4b86fa0
+source-git-commit: 6720d5a0fdf1facc0b10011ec306dffbb31f4ac5
 workflow-type: tm+mt
-source-wordcount: '409'
-ht-degree: 0%
+source-wordcount: '408'
+ht-degree: 1%
 
 ---
 
@@ -27,10 +27,10 @@ Komponenten `Leaderboard` ger möjlighet att få en uppfattning om hur medlemmar
 
 Innan du tar med huvudpanelskomponenten på en sida måste du konfigurera [Scoring and Badges](/help/communities/implementing-scoring.md)för Communities.
 
-Detta avsnitt i dokumentationen beskriver
+I det här avsnittet av dokumentationen beskrivs:
 
-* Lägga till `Leaderboard` komponenten på en [communitywebbplats](/help/communities/overview.md#community-sites)
-* Konfigurationsinställningar för `Leaderboard` komponenten
+* Lägga till `Leaderboard` komponenten på en [communitywebbplats](/help/communities/overview.md#community-sites).
+* Konfigurationsinställningar för `Leaderboard` komponenten.
 
 ### Lägga till en huvudpanel på en sida {#adding-a-leaderboard-to-a-page}
 
@@ -44,17 +44,19 @@ Mer information finns i Grunderna för [communitykomponenter](/help/communities/
 
 När komponenten placeras på en sida i en community-webbplats är det så här den visas:
 
-![chlimage_1-19](assets/chlimage_1-19.png)
+![chlimage_1-8](assets/chlimage_1-8.png)
 
 ### Konfigurerar huvudpanel {#configuring-leaderboard}
 
 Markera den monterade `Leaderboard` komponent som du vill öppna och välj den `Configure` ikon som öppnar redigeringsdialogrutan.
 
-![chlimage_1-20](assets/chlimage_1-20.png) ![chlimage_1-21](assets/chlimage_1-21.png)
+![chlimage_1-9](assets/chlimage_1-9.png)
+
+![chlimage_1-10](assets/chlimage_1-10.png)
 
 #### Fliken Inställningar {#settings-tab}
 
-På fliken **Inställningar** anger du vilken information om medlemmen som ska visas:
+Under **[!UICONTROL Settings]** fliken anger du vilken information om medlemmen som ska visas:
 
 * **Visningsnamn**
 
@@ -100,7 +102,7 @@ Under fliken **Regler** , communitywebbplatsen och dess regler för poäng och b
 
 Den här resultatöversikten är en följd av att grundläggande poängregler har tillämpats.
 
-Komponentkonfiguration för överordnad panel:
+Konfiguration av huvudpanelskomponent:
 
 * Fliken Inställningar:
 
@@ -118,13 +120,13 @@ Komponentkonfiguration för överordnad panel:
    * Badningsregel = `/libs/settings/community/badging/rules//reference-badging`
    * Visningsgräns = `10`
 
-![chlimage_1-22](assets/chlimage_1-22.png)
+![chlimage_1-11](assets/chlimage_1-11.png)
 
 ### Exempel: Experter Leaderboard {#example-experts-leaderboard}
 
 Den här resultatöversikten är en följd av att avancerade poängregler har tillämpats.
 
-Komponentkonfiguration för överordnad panel:
+Konfiguration av huvudpanelskomponent:
 
 * Fliken Inställningar:
 
@@ -141,7 +143,7 @@ Komponentkonfiguration för överordnad panel:
    * Badningsregel = `/libs/settings/community/badging/rules/adv-forums-badging`
    * Visningsgräns = `10`
 
-![chlimage_1-23](assets/chlimage_1-23.png)
+![chlimage_1-12](assets/chlimage_1-12.png)
 
 ### Additional Information {#additional-information}
 
