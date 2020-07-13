@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 8714b456-527a-457b-82c4-21bd445dfd9c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
+source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+workflow-type: tm+mt
+source-wordcount: '319'
+ht-degree: 0%
 
 ---
 
@@ -60,7 +63,7 @@ Ett *[socialt diagram](/help/communities/essentials-socialgraph.md)*fångar föl
   </tr>
   <tr>
    <td><strong> egenskaper</strong></td>
-   <td>se <a href="/help/communities/activities.md">Funktionen Aktivitetsströmmar</a></td>
+   <td>Se <a href="/help/communities/activities.md">Funktionen Aktivitetsströmmar</a></td>
   </tr>
  </tbody>
 </table>
