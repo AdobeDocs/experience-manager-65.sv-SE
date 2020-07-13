@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: f176c42b-b16b-42c9-af22-4b6421de5a90
 pagetitle: Liking Essentials
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+workflow-type: tm+mt
+source-wordcount: '295'
+ht-degree: 0%
 
 ---
 
@@ -38,7 +41,7 @@ Anonym publicering av en gilla-markering stöds inte. Besökare på webbplatsen 
   </tr>
   <tr>
    <td> <a href="client-customize.md#clientlibs-for-scf"><strong>klientlibs</strong></a></td>
-   <td> cq.social.hbs.like</td>
+   <td> cq.social.hbs.liking</td>
   </tr>
   <tr>
    <td> <strong>templates</strong></td>
@@ -76,8 +79,8 @@ Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](
 
 Se:
 
-* [Översikt över](srp.md) lagringsresursprovidern - introduktion och databasanvändning - översikt
-* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och -exempel
-* [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - riktlinjer för kodning
-* [Omfaktorisering för SocialUtils](socialutils.md) - mappning av utgått verktygsmetoder till aktuella SRP-verktygsmetoder
+* [Översikt över](srp.md) lagringsresursprovidern - introduktion och översikt över databasanvändningen.
+* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och exempel.
+* [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - riktlinjer för kodning.
+* [Omfaktorisering för SocialUtils](socialutils.md) - mappning av utfasade verktygsmetoder till aktuella SRP-verktygsmetoder.
 
