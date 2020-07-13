@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 26715b94-e2ea-4da7-a0e2-3e5a367ac1cd
 translation-type: tm+mt
-source-git-commit: e795a647b8728b224792f342200a700169a5e87b
+source-git-commit: b242163267b43507e1cb9c6d4c36bb65385afc62
 workflow-type: tm+mt
 source-wordcount: '1210'
 ht-degree: 1%
@@ -59,7 +59,7 @@ En känd begränsning visar communityinnehållet för anonyma besökare via jcr-
 
 Följ de här stegen för att skydda communityplatsens innehåll från anonyma användare genom jcr-innehåll och json:
 
-1. I AEM Author-instansen går du till https://&lt;host>:&lt;port>/editor.html/content/site/&lt;sitename>.html.
+1. På AEM-författarinstansen går du till https://&lt;host>:&lt;port>/editor.html/content/site/&lt;sitename>.html.
 
    >[!NOTE]
    >
@@ -182,7 +182,7 @@ Navigera till **Communities,[Resources console](resources.md)**, där aktivering
 * Alla aktiveringsresurser och utbildningsvägar
 * En specifik aktiveringsresurs eller utbildningsväg
 
-Navigera till **Communities,[Reports console](reports.md)**och generera rapporter enligt
+Navigera till **Communities,[Reports console](reports.md)**och generera rapporter enligt:
 
 * Tilldelningar för aktiveringsresurser och utbildningsvägar
 * Publicerar på en communitywebbplats under en viss period
@@ -203,12 +203,11 @@ Navigera till **Communities,[Reports console](reports.md)**och generera rapporte
 
 Med lite aktivitet och interaktion med resurserna när de publiceras är det värt att titta närmare på rapporterna om författaren.
 
-* On author
-* Logga in med administratörsbehörighet
-* Navigera från huvudmenyn till **[!UICONTROL Communities > Resources]**
-* Markera `Enablement Tutorial` platsen
-* Välj `Report` ikonen om du vill se en sammanfattning av alla resurser
-* Välj en resurs och sedan `Report` ikonen för en rapport om resursen
+* Logga in med administratörsbehörighet på författaren.
+* Navigera från huvudmenyn till **[!UICONTROL Communities]** > **[!UICONTROL Resources]**.
+* Markera `Enablement Tutorial` platsen.
+* Klicka på `Report` ikonen om du vill se en sammanfattning av alla resurser.
+* Välj en resurs och sedan `Report` ikonen för en rapport om den resursen.
 
 Observera att det troligtvis är för tidigt att visa data från Adobe Analytics, som kan ta mellan 1 och 12 timmar att visa. Men grundläggande SCORM-rapportering är redan tillgänglig.
 
@@ -236,10 +235,9 @@ Med rapportkonsolen kan du skapa rapporter på
 
 För rapporter om tilldelningar:
 
-* On author
-* Logga in med administratörsbehörighet
-* Navigera till **[!UICONTROL Communities]** > **[!UICONTROL Reports]** > **[!UICONTROL Assignments Report]**
-* Välj en **[!UICONTROL Site]** i listrutan (välj `Enablement Tutorial`)
+* Logga in med administratörsbehörighet på författaren.
+* Navigera till **[!UICONTROL Communities]** > **[!UICONTROL Reports]** > **[!UICONTROL Assignments Report]**.
+* Välj en **[!UICONTROL Site]** i listrutan (välj `Enablement Tutorial`).
 
 * Markera **[!UICONTROL Group]** (välj `Community Ski Class`)
 
@@ -251,15 +249,15 @@ För rapporter om tilldelningar:
 
 För rapporter om vyer:
 
-* Logga in med administratörsbehörighet på författaren
-* Navigera till **[!UICONTROL Communities]** > **[!UICONTROL Reports]** > **[!UICONTROL Views Report]**
-* Välj en **plats **i listrutan (välj`Enablement Tutorial`)
+* Logga in med administratörsbehörighet på författaren.
+* Navigera till **[!UICONTROL Communities]** > **[!UICONTROL Reports]** > **[!UICONTROL Views Report]**.
+* Välj en **plats **i listrutan (välj`Enablement Tutorial`).
 
-* Markera **[!UICONTROL Content Type]** (välj `all`)
+* Markera **[!UICONTROL Content Type]** (markera `all`).
 
-* Markera en **[!UICONTROL date range]** (markera `Last 7 days`)
+* Markera en **[!UICONTROL date range]** (markera `Last 7 days`).
 
-* Välj **[!UICONTROL Generate]**
+* Välj **[!UICONTROL Generate]**.
 
 ![chlimage_1-446](assets/chlimage_1-446.png)
 
