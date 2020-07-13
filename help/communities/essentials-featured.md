@@ -10,16 +10,20 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 781625f1-39a0-4e34-948c-d4eab35dd5c1
 translation-type: tm+mt
-source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
+source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+workflow-type: tm+mt
+source-wordcount: '113'
+ht-degree: 2%
 
 ---
 
 
-# Content Essentials {#featured-content-essentials}
+# Content Essentials  {#featured-content-essentials}
 
 Den här sidan innehåller viktig information för att arbeta med aktuellt innehåll.
 
 I motsats till att fästa ett inlägg överst i ett forum kan den här funktionen markera innehåll var som helst i communitywebbplatsen.
+
 
 ## Grundläggande för klientsidan {#essentials-for-client-side}
 
