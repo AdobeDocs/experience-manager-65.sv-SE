@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 6bac681e-59e1-4786-9c50-6679c936cfd1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
+source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+workflow-type: tm+mt
+source-wordcount: '221'
+ht-degree: 0%
 
 ---
 
@@ -48,7 +51,7 @@ Tilldelningsfunktionen är möjligheten att tilldela aktiveringsresurser och utb
   </tr>
   <tr>
    <td><strong> egenskaper</strong></td>
-   <td>Se, <a href="/help/communities/assignments.md">Uppdragsfunktion</a></td>
+   <td>Se <a href="/help/communities/assignments.md">Uppdragsfunktion</a></td>
   </tr>
  </tbody>
 </table>
@@ -91,5 +94,5 @@ En community-platsstruktur som innehåller [uppdragsfunktionen](/help/communitie
 
 * [Rapporterings-API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/reporting/dv/api/package-summary.html)
 
-* [API för rapporteringsanalys](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/reporting/analytics/api/package-summary.html)
+* [Rapportera Analytics API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/reporting/analytics/api/package-summary.html)
 
