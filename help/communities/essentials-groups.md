@@ -10,12 +10,15 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 4f85cd3c-5158-4f23-abe2-7e375fd0c8d4
 translation-type: tm+mt
-source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
+source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+workflow-type: tm+mt
+source-wordcount: '425'
+ht-degree: 0%
 
 ---
 
 
-# Grundläggande om communitygrupper {#community-group-essentials}
+# Grundläggande om communitygrupper  {#community-group-essentials}
 
 Funktionen för communitygrupper är möjligheten för en undercommunity att skapas dynamiskt på en community-webbplats av behöriga användare från publicerings- och författarmiljöerna.
 
@@ -95,10 +98,11 @@ Om flera communitygruppsmallar ingår visas ett urval av designalternativ för d
 
 Från och med Communities [FP1](deploy-communities.md#latestfeaturepack)är det möjligt att inkludera en gruppfunktion i en gruppmall, vilket möjliggör kapslade grupper (undergrupper).
 
-När en communitywebbplats eller gruppmall innehåller funktionen Grupper är det möjligt att
+När en communitywebbplats eller gruppmall innehåller funktionen Grupper kan du:
 
-* Skapa en undercommunity i författarmiljön
-* Skapa en grupp i publiceringsmiljön när den är konfigurerad för att tillåta den
+* Skapa en undercommunity i författarmiljön.
+
+* Skapa en grupp i publiceringsmiljön när den är konfigurerad för att tillåta det.
 
 När du skapar en grupp i författarmiljön måste du först publicera communitywebbplatsen och sedan publicera gruppen. När du publicerar communitywebbplatsen publiceras gruppens sidor, utan att det skapas undercommunityns medlemsgrupper som åtkomstkontrollistorna ställs in på. En begränsad (hemlig) grupp kan därför vara synlig tills gruppen uttryckligen publiceras.
 
