@@ -10,12 +10,15 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 25b7ac08-6cdc-4dd5-a756-d6169b86f9ab
 translation-type: tm+mt
-source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
+source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+workflow-type: tm+mt
+source-wordcount: '679'
+ht-degree: 1%
 
 ---
 
 
-# OSGi Events for Communities-komponenter {#osgi-events-for-communities-components}
+# OSGi Events for Communities-komponenter  {#osgi-events-for-communities-components}
 
 ## Översikt {#overview}
 
@@ -31,72 +34,72 @@ För de webbdelar som levereras i releasen beskrivs i följande tabeller `verbs`
 
 | **Verb** | **Beskrivning** |
 |---|---|
-| POST | medlem skapar en kalenderhändelse |
-| LÄGG TILL | kommentarer från medlemmar i en kalenderhändelse |
-| UPPDATERA | medlemmens kalenderhändelse eller -kommentar har redigerats |
-| TA BORT | medlemmens kalenderhändelse eller -kommentar tas bort |
+| POST | Medlemmen skapar en kalenderhändelse |
+| LÄGG TILL | Kommentarer från en kalenderhändelse |
+| UPPDATERA | Medlemmens kalenderhändelse eller kommentar har redigerats |
+| DELETE | Medlemmens kalenderhändelse eller kommentar tas bort |
 
 [Comments Component](essentials-comments.md)SocialEvent `topic`= com/adobe/cq/social/comment
 
 | **Verb** | **Beskrivning** |
 |---|---|
-| POST | medlem skapar en kommentar |
-| LÄGG TILL | medlemssvar på kommentarer |
+| POST | Medlemmen skapar en kommentar |
+| LÄGG TILL | Medlemmens svar på kommentarer |
 | UPPDATERA | Medlemmens kommentar har redigerats |
-| TA BORT | medlemmens kommentar har tagits bort |
+| DELETE | Medlemmens kommentar har tagits bort |
 
 [File Library Component](essentials-file-library.md)SocialEvent `topic`= com/adobe/cq/social/fileLibrary
 
 | **Verb** | **Beskrivning** |
 |---|---|
-| POST | medlem skapar en mapp |
-| BIFOGA | medlem överför en fil |
-| UPPDATERA | medlemmen uppdaterar en mapp eller fil |
-| TA BORT | medlem tar bort en mapp eller fil |
+| POST | Medlemmen skapar en mapp |
+| BIFOGA | Medlemmen överför en fil |
+| UPPDATERA | Medlemmen uppdaterar en mapp eller fil |
+| DELETE | Medlemmen tar bort en mapp eller fil |
 
 [Forum Component](essentials-forum.md)SocialEvent `topic`= com/adobe/cq/social/forum
 
 | **Verb** | **Beskrivning** |
 |---|---|
-| POST | medlem skapar forumämne |
-| LÄGG TILL | medlemssvar på forumämnet |
-| UPPDATERA | Medlemmens forumämne eller svar har redigerats |
-| TA BORT | forumämnet eller svaret för en medlem tas bort |
+| POST | Medlem skapar forumämne |
+| LÄGG TILL | Medlemmens svar på forumämnet |
+| UPPDATERA | Ämnet eller svaret för en medlem redigeras |
+| DELETE | Ämnet eller svaret för en medlem tas bort |
 
 [Journal Component](blog-developer-basics.md)SocialEvent `topic`= com/adobe/cq/social/journal
 
 | **Verb** | **Beskrivning** |
 |---|---|
-| POST | medlem skapar en bloggartikel |
-| LÄGG TILL | kommentarerna på en bloggartikel |
+| POST | Medlemmen skapar en bloggartikel |
+| LÄGG TILL | Kommentarer till en bloggartikel |
 | UPPDATERA | Medlemmens bloggartikel eller kommentar redigeras |
-| TA BORT | Medlemmens bloggartikel eller kommentar tas bort |
+| DELETE | Medlemmens bloggartikel eller kommentar tas bort |
 
 [QnA Component](qna-essentials.md)SocialEvent `topic` = com/adobe/cq/social/qna
 
 | **Verb** | **Beskrivning** |
 |---|---|
-| POST | medlem skapar en QnA-fråga |
-| LÄGG TILL | medlem skapar ett QnA-svar |
-| UPPDATERA | -medlemmens fråga eller svar har redigerats |
+| POST | Medlemmen skapar en QnA-fråga |
+| LÄGG TILL | Medlem skapar ett QnA-svar |
+| UPPDATERA | Ledamotens fråga eller svar har redigerats |
 | MARKERA | Medlemmens svar har valts |
-| AVMARKERA | Medlemmens svar är avmarkerat |
-| TA BORT | en medlems fråga eller svar tas bort |
+| AVMARKERA | Medlemmens svar har avmarkerats |
+| DELETE | Medlemsens fråga eller svar tas bort |
 
 [Review Component](reviews-basics.md)SocialEvent `topic`= com/adobe/cq/social/review
 
 | **Verb** | **Beskrivning** |
 |---|---|
-| POST | medlem skapar granskning |
+| POST | Medlemmen skapar en granskning |
 | UPPDATERA | Medlemmens granskning har redigerats |
-| TA BORT | Medlemmens granskning har tagits bort |
+| DELETE | Medlemmens granskning har tagits bort |
 
 [Värderingskomponent](rating-basics.md)SocialEvent `topic`= com/adobe/cq/social/tally
 
 | **Verb** | **Beskrivning** |
 |---|---|
-| LÄGG TILL KLASSIFICERING | Medlemmens innehåll har fått en högre gradering |
-| TA BORT KLASSIFICERING | medlemmens innehåll har nedgraderats |
+| LÄGG TILL KLASSIFICERING | Medlemmens innehåll har fått ett högre omdöme |
+| TA BORT KLASSIFICERING | Medlemmens innehåll har nedgraderats |
 
 [Röstkomponent](essentials-voting.md)SocialEvent `topic`= com/adobe/cq/social/tally
 
@@ -109,12 +112,12 @@ För de webbdelar som levereras i releasen beskrivs i följande tabeller `verbs`
 
 | **Verb** | **Beskrivning** |
 |---|---|
-| NEKA | medlemmens innehåll nekas |
-| FLAGGA-SOM-OLÄMPLIGT | medlemmens innehåll är flaggat |
-| OLÄMPLIG FLAGNING SOM | medlemmens innehåll är oflaggat |
+| NEKA | Medlemmens innehåll nekas |
+| FLAGGA-SOM-OLÄMPLIGT | Medlemmens innehåll är flaggat |
+| OLÄMPLIG FLAGNING SOM | Medlemmens innehåll är oflaggat |
 | ACCEPTERA | Medlemmens innehåll godkänns av moderatorn |
-| STÄNG | medlem stänger kommentarer till redigeringar och svar |
-| ÖPPNA | medlem öppnar kommentaren igen |
+| STÄNG | Medlemmen stänger kommentarer till redigeringar och svar |
+| ÖPPNA | Kommentar för att öppna igen |
 
 ## Händelser för anpassade komponenter {#events-for-custom-components}
 
@@ -125,6 +128,7 @@ Den anpassade händelsen åsidosätter metoden `getVerb()` så att en lämplig h
 >[!NOTE]
 >
 >Se till att ett anpassat tillägg är registrerat med en lägre rankning än någon befintlig implementering i produkten.
+
 
 ### Pseudokod för anpassad komponenthändelse {#pseudo-code-for-custom-component-event}
 
