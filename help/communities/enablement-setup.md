@@ -10,12 +10,15 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: f2ac3d66-cc79-498f-83fb-dd96feb88de2
 translation-type: tm+mt
-source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
+source-git-commit: 6720d5a0fdf1facc0b10011ec306dffbb31f4ac5
+workflow-type: tm+mt
+source-wordcount: '857'
+ht-degree: 0%
 
 ---
 
 
-# Inledande inställning för aktivering {#initial-setup-for-enablement}
+# Inledande inställning för aktivering  {#initial-setup-for-enablement}
 
 ## Starta författare- och publiceringsinstanser {#start-author-and-publish-instances}
 
@@ -26,24 +29,25 @@ Följ de grundläggande [anvisningarna i AEM Getting Started](../../help/sites-d
 * Redigeringsmiljö på [localhost:4502](http://localhost:4502/)
 * Publiceringsmiljö på [localhost:4503](http://localhost:4503/)
 
-För AEM Communities,
+AEM Communities,
 
-* Författarmiljön är till för
+* Författarmiljön är till för:
 
-   * Utveckling av webbplatser, mallar, komponenter, hjälpmedel och utbildningsvägar
-   * Tilldelning av medlemmar och grupper av medlemmar för att aktivera resurser och utbildningsvägar
-   * Generera rapporter om uppdrag, vyer och inlägg
-   * Administrations- och konfigureringsuppgifter
+   * Utveckling av webbplatser, mallar, komponenter, hjälpmedel och utbildningsvägar.
+   * Tilldelning av medlemmar och grupper av medlemmar för att aktivera resurser och utbildningsvägar.
+   * Generera rapporter om uppdrag, vyer och inlägg.
+   * Administrations- och konfigureringsuppgifter.
 
-* Publiceringsmiljön är avsedd för
+* Publiceringsmiljön är avsedd för:
 
-   * Utbildning baserad på ämnen som hanteras av Enablement Manager
-   * Kommentarer och omdömen om aktiveringsresurser och utbildningsvägar
-   * Komma i kontakt med resurskontakterna
+   * Utbildning baserad på ämnen som hanteras av Enablement Manager.
+   * Kommenterings- och klassificeringsresurser och utbildningsvägar.
+   * Få kontakt med resurskontakterna.
 
 >[!NOTE]
 >
 >Om du inte känner till AEM läser du dokumentationen om [grundläggande hantering](../../help/sites-authoring/basic-handling.md) och en [snabbguide till redigeringssidorna](../../help/sites-authoring/qg-page-authoring.md).
+
 
 ## Installera senaste versionen av Communities {#install-latest-communities-release}
 
@@ -51,15 +55,15 @@ Den här självstudiekursen skapar en [aktiveringscommunitywebbplats](overview.m
 
 * [Senaste releaser](deploy-communities.md#latest-releases)
 
-En självstudiekurs som skapar en [engagemangscommunity](overview.md#engagement-community)finns på [Komma igång med AEM Communities](getting-started.md).
+En självstudiekurs som skapar en [engagemangscommunitysajt](overview.md#engagement-community)finns på [Komma igång med AEM Communities](getting-started.md).
 
 ## Konfigurera aktiveringsfunktioner {#configure-enablement-features}
 
 Om du vill följa den här självstudiekursen måste du installera och [konfigurera aktivering](enablement.md)korrekt, vilket kräver produkter från tredje part, som MySQL och FFmpeg.
 
-## Konfigurera analys {#configure-analytics}
+## Konfigurera Analytics {#configure-analytics}
 
-När [Adobe Analytics har konfigurerats för communitywebbplatsen](analytics.md)finns mer information i [rapporterna](reports.md) som genereras om aktiveringsresurser och utbildningsvägar som tilldelats communitymedlemmar (studerande).
+När [Adobe Analytics har konfigurerats för communitywebbplatsen](analytics.md)finns mer information i [rapporterna](reports.md) om aktiveringsresurser och utbildningsvägar som tilldelats communitymedlemmar (studerande).
 
 ## Konfigurera e-post för meddelanden {#configure-email-for-notifications}
 
@@ -92,12 +96,12 @@ Använd [taggningskonsolen](../../help/sites-administering/tags.md#tagging-conso
 
 ![chlimage_1-417](assets/chlimage_1-417.png)
 
-Följ sedan instruktionerna för att
+Följ sedan instruktionerna för att:
 
 1. [Ange taggbehörigheter](../../help/sites-administering/tags.md#setting-tag-permissions)
 1. [Publicera taggarna](../../help/sites-administering/tags.md#publishing-tags)
 
-Exempelpaket med taggar som skapats för självstudiekurserna Komma igång för AEM Communities
+Exempelpaket med taggar som skapats för självstudiekurserna Komma igång med AEM Communities
 
 [Hämta fil](assets/communities_tutorialtags-10.zip)
 
@@ -119,9 +123,10 @@ En fjärde användare skapas i författarmiljön och tilldelas rollerna Webbgrup
 >
 >I stället [tilldelas de medlemsgruppen](enablement-create-site.md#assignuserstocommunityenablemembersgroup)senare.
 
+
 ### Riley Taylor - anmälare {#riley-taylor-enrollee}
 
-[Skapa en medlem](members.md#create-new-member) som ska läggas till i en grupp med elev - Community Ski Class-gruppen.
+[Skapa en medlem](members.md#create-new-member) som ska läggas till i en grupp med elev - gruppen Community Ski Class.
 
 * **ID**: riley
 * **E-post**: riley.taylor@mailinator.com
@@ -164,7 +169,7 @@ En fjärde användare skapas i författarmiljön och tilldelas rollerna Webbgrup
    * riley
    * sidney
 
-* Välj **[!UICONTROL Spara]**
+* Välj **[!UICONTROL Save]**
 
 ### Egenskaper för Community-skalklassen {#community-ski-class-properties}
 
@@ -173,6 +178,7 @@ En fjärde användare skapas i författarmiljön och tilldelas rollerna Webbgrup
 >[!NOTE]
 >
 >När en community-webbplats skapas kan befintliga medlemmar och grupper läggas till i communityplatsens medlemsgrupp.
+
 
 ## Rollen Community Administrator {#community-administrator-role}
 
@@ -190,10 +196,10 @@ Skapa en användare på *författaren* som får rollen som Community Administrat
 
    * Till exempel användarnamn &#39;admin&#39; / lösenord &#39;admin&#39;
 
-* Navigera från huvudkonsolen till **[!UICONTROL Verktyg, Åtgärder > Säkerhet > Användare]**
-* Välj **[!UICONTROL Lägg till användare på menyn]** Redigera ****
+* Navigera från huvudkonsolen till **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Security]** > **[!UICONTROL Users]**.
+* From the **[!UICONTROL Edit]** menu, select **[!UICONTROL Add User]**.
 
-* In the `Create New User` dialog enter
+* In the `Create New User` dialog enter:
 
    * **ID&amp;ast;**: sirius
    * **E-postadress**: sirius.nilson@mailinator.com
@@ -211,7 +217,7 @@ Bläddra ned till `Add User to Groups`:
    * Välj `Community Administrators`
    * Välj `Community Enablement Managers`
 
-* Välj **[!UICONTROL Spara]**
+* Välj **[!UICONTROL Save]**
 
 ![chlimage_1-419](assets/chlimage_1-419.png)
 
