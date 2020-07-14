@@ -8,10 +8,10 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 38f40badf8a850de363fa3f28232d3037fbf209b
+source-git-commit: 60a5bb489c1f473f3f848909b8c2eb3192c49e88
 workflow-type: tm+mt
-source-wordcount: '5037'
-ht-degree: 0%
+source-wordcount: '4685'
+ht-degree: 1%
 
 ---
 
@@ -77,31 +77,6 @@ De tillgångar som ingår i detta paket omfattar:
 * Exempel (i minnet) på Apache Derby-databas
 * Apache Derby-datakälla (för användning med formulärdatamodell)
 
-## Konfigurationsalternativ {#configuration-options}
-
-Användare kan konfigurera olika alternativ för arbetsflödestjänster, som omfattar följande:
-
-1. Microsoft Dynamics-post
-1. Adobe Sign
-1. AEM Custom Communication Management
-1. Adobe Analytics
-
-För att kunna konfigurera dem så att de aktiveras i arbetsflödet måste användarna utföra följande uppgifter.
-
-1. Gå till https://&#39;[server]:[port]&#39;/system/console/configMgr.
-
-1. Leta upp *WebGov-konfigurationer*.
-
-1. Öppna tjänstdefinitionen och aktivera de valda tjänsterna för att anropas i arbetsflödet.
-
->[!NOTE]
->
->Bara för att en användare aktiverar tjänsten på Configuration Manager-sidan måste användaren ändå konfigurera en tjänstkonfiguration för att kunna kommunicera med de externa tjänster som efterfrågas.
-
-![web gov-formulärpaket](assets/aftia-configuration-options.jpg)
-
-1. Klicka på knappen Spara när du är klar för att spara inställningarna.
-
 ## Installation av demopaket {#demo-package-installation}
 
 Det här avsnittet innehåller information om hur du installerar demopaketet.
@@ -163,18 +138,19 @@ Det här avsnittet innehåller information och instruktioner om konfigurationen 
 
 1. Gå till *https://&lt;aemserver>:&lt;port>/libs/granite/security/content/groupadmin.html*
 1. Logga in som administratör för att utföra uppgifterna nedan.
+1. Bläddra ned till slutet av sidan om du vill läsa in alla användargrupper.
 1. Sök efter&quot;**arbetsflöde**&quot;.
 1. Markera gruppen&quot;**workflow-users**&quot; och klicka på&quot;Properties&quot;.
 1. Gå till fliken Medlemmar.
 1. Skriv in **wegov** i fältet Välj användare eller grupp.
-1. Välj i listrutan &quot;**Vi.Gov Form Users**&quot;.
+1. Välj &quot;**We.Gov Forms Users**&quot; i listrutan.
 
    ![Redigera gruppinställningar för arbetsflödesanvändare](assets/edit_group_settings.jpg)
 
 1. Klicka på&quot;Spara och stäng&quot; i menyraden.
-1. Upprepa steg 2-7 genom att söka efter&quot;**analyser**&quot;, markera gruppen&quot;**Analytics-administratörer**&quot; och lägga till gruppen&quot;**Vi.Gov-formuläranvändare**&quot; som medlem.
-1. Upprepa steg 2-7 genom att söka efter&quot;**formuläranvändare**&quot;, markera gruppen&quot;**forms-power-users**&quot; och lägga till gruppen&quot;**We.Gov Form Users**&quot; som medlem.
-1. Upprepa steg 2-7 genom att söka efter&quot;**formuläranvändare**&quot;, välja gruppen&quot;**formuläranvändare**&quot; och lägga till gruppen&quot;**Vi.Gov-användare**&quot; som medlem.
+1. Upprepa steg 2-7 genom att söka efter&quot;**analys**&quot;, markera gruppen&quot;**Analytics-administratörer**&quot; och lägga till gruppen&quot;**Web.Gov Forms Users**&quot; som medlem.
+1. Upprepa steg 2-7 genom att söka efter&quot;**formuläranvändare**&quot;, markera gruppen&quot;**forms-power-users**&quot; och lägga till gruppen&quot;**We.Gov Forms Users**&quot; som medlem.
+1. Upprepa steg 2-7 genom att söka efter&quot;**forms-users**&quot;, markera gruppen&quot;**forms-users**&quot; och den här gången lägga till gruppen&quot;**We.Gov Users**&quot; som medlem.
 
 ### E-postserverkonfiguration {#email-server-configuration}
 
@@ -362,7 +338,7 @@ När molnkonfigurationen är klar kanske du vill testa formulärdatamodellen.
 
 1. Klicka på **Spara och stäng**.
 
-1. Testa tjänsterna för att kontrollera att de är anslutna till den konfigurerade datakällan
+1. [Testa tjänsterna](work-with-form-data-model.md#test-data-model-objects-and-services) för att kontrollera att de är anslutna till den konfigurerade datakällan
 
    * Om du vill testa anslutningen väljer du **HOMEMORTGAGEACCOUNT** och ger den en get-tjänst. Testa tjänsten och systemadministratörerna för att se data som hämtas.
 
@@ -488,25 +464,6 @@ AEM Forms Analytics-data är tillgängliga offline eller utan någon Adobe Analy
 
    ![Visa rapportdata för Analytics](assets/analytics_report_data.jpg)
 
-#### Visa rapporter om Adobe Analytics {#view-adobe-analytics-reporting}
-
-Du kan även navigera till Adobe Analytics direkt för att se analysdata.
-
-1. Navigera till [https://my.omniture.com/login/](https://my.omniture.com/login/)
-1. Logga in med dina inloggningsuppgifter:
-
-   1. **Företag:** AEM Forms Demo
-   1. **Användare:** &lt;tillgängligt på begäran>
-   1. **Lösenord:** &lt;tillgängligt på begäran>
-
-1. Välj &quot;Referenswebbplats för Web.GOV&quot; i rapportsviterna.
-
-   ![Rapportsviter](assets/report_suites.jpg)
-
-1. Välj en av de tillgängliga rapporterna om du vill visa analysdata för den rapporten.
-
-   ![Analytics data från en rapport](assets/analytics_data.jpg)
-
 ### Aktivera automatisk formulärkonfiguration för Adobe {#automated-forms-enablement}
 
 För att kunna installera och konfigurera AEM Forms med Adobe Forms måste användare av konverteringsverktyget ha följande:
@@ -535,7 +492,7 @@ För att kunna konfigurera tjänsten så att den kommunicerar korrekt med formul
 
 1. Glöm inte att hämta certifikatet.
 
-1. Fortsätt inte med resten av konfigurationsavsnittet - granskningsavsnittet (TBD)
+1. Fortsätt inte med resten av konfigurationen - gå igenom avsnittet [Skapa integrering i Adobe I/O](#create-integration-adobeio)
 
 >[!NOTE]
 Certifikatet som skapas i det här avsnittet kommer att användas för att skapa integreringstjänsten i Adobe I/O. När användarna har skapat integreringstjänsten kan de använda informationen från Adobe I/O för att slutföra konfigurationen.
@@ -590,7 +547,7 @@ Nu när du har skapat en integrering kan vi slutföra installationen av IMS-konf
 
 #### Konfigurera molnkonfiguration (Web.Gov AFC-produktion) {#configure-cloud-configuration}
 
-När IMS-konfigurationen är klar kan vi fortsätta att skapa molnkonfigurationen i AEM.
+När IMS-konfigurationen är klar kan vi fortsätta att granska molnkonfigurationen i AEM. Om konfigurationen inte finns skapar du molnkonfigurationen i AEM enligt följande:
 
 1. Öppna webbläsaren och gå till system-URL:en https://&lt;domän_namn>:&lt;system_port>
 
@@ -672,13 +629,7 @@ När konfigurationen är klar kan användarna testa den genom att ladda upp ett 
 
    ![Avancerade konverteringsinställningar](assets/aftia-conversion-settings-2.jpg)
 
-1. Välj att starta konverteringen när du har konfigurerat alla alternativ som du vill använda
-
-   >[!NOTE]
-   *Ange ett temaavsnitt* för adaptiv form där användarna kan ange temat Accessible-Ultramarine.
-
-   >[!NOTE]
-   Om du vill binda det genererade formuläret till en FDM, eller något annat, måste du markera kryssrutan *Generera anpassade formulär utan databindningar*.
+1. Välj att starta konverteringen när du har konfigurerat alla alternativ som du vill använda.
 
 1. När konverteringsprocessen börjar bör användarna se följande skärm:
 
@@ -688,57 +639,11 @@ När konfigurationen är klar kan användarna testa den genom att ladda upp ett 
 
    ![Konverterat adaptivt formulär](assets/aftia-converted-adaptive-form-2.jpg)
 
-#### Testa formulärkonverteringen (We.Finance-kreditkortsprogram) {#testing-forms-conversion-wefinance}
-
-När konfigurationen är klar kan användarna testa den genom att ladda upp ett PDF-dokument.
-
-1. Navigera till AEM-systemet https://&lt;domän_namn>:&lt;system_port>
-
-1. Klicka på Formulär > Formulär och dokument > AEM Forms Web.Finance Forms > PDF forms.
-
-1. Välj programmet We.Finance Credit Card.
-
-1. Klicka på knappen **Starta automatisk konvertering** i det övre högra hörnet.
-
-1. Användarna ska kunna se alternativet som visas nedan.
-
-   ![PDF forms](assets/aftia-pdf-forms.jpg)
-
-1. När knappen har valts visas följande alternativ för användarna.
-
-   * Se till att användarna väljer *Web.Finance AFC Production* configuration
-
-   ![Välj Web.Finance AFC Production](assets/aftia-select-production-configuration.jpg)
-
-   ![Avancerade konverteringsinställningar](assets/aftia-advanced-conversion-settings-wefinance.jpg)
-
-1. Välj att starta konverteringen när du har konfigurerat alla alternativ som du vill använda
-
-   >[!NOTE]
-   *Ange ett temaavsnitt* för adaptiv form där användarna kan ange temat Accessible-Ultramarine.
-
-   >[!NOTE]
-   Om du vill binda det genererade formuläret till en FDM, eller något annat, måste du markera kryssrutan *Generera anpassade formulär utan databindningar*.
-
-   >[!NOTE]
-   Användare bör ange platsen för utdatamappen till */content/dam/formsanddocuments/adobe-Finance-forms/afc-convert-forms* för att det återgivna formuläret ska visas i formulärportalen på webbplatsen We.Gov.
-
-1. När konverteringsprocessen börjar bör användarna se följande skärm:
-
-   ![Konvertering pågår](assets/aftia-conversion-progress.jpg)
-
-   >[!NOTE]
-   Det rapporteras om ett fel, där en utdatamapp skapas lokalt och det genererade formuläret placeras på rätt plats även om du väljer en separat mapp från den som finns i molnkonfigurationen.
-
-1. När konverteringen är klar visas följande skärm:
-
-   ![Konvertering pågår](assets/aftia-conversion-complete.jpg)
-
-1. Användarna kan också granska konverteringsprocessen och redigera resultatet för att ge systemet bättre konverteringsmöjligheter.
+   Klicka på mappen **Utdata** för att visa det skapade adaptiva formuläret.
 
 #### Kända fel och anteckningar {#known-issues-notes}
 
-Formulärkonverteringsprocessen har vissa begränsningar och kan visas på Adobes webbplats. Se [Kända fel](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/known-issues.html) för att se om dina formulär är kompatibla med den här processen.
+Tjänsten Automated Forms Conversion innehåller vissa [metodtips, kända komplexa mönster](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/styles-and-pattern-considerations-and-best-practices.html)och [kända problem](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/known-issues.html). Granska dessa innan du börjar använda tjänsten AEM Forms Automated Forms Conversion.
 
 1. Generera formuläret med Skapa anpassningsbara formulär utan aktiverade databindningar om du vill binda formuläret till en FDM efter konverteringen.
 
@@ -849,7 +754,7 @@ Det här avsnittet innehåller information om demonstrationsfunktioner och desig
 
 För att kunna utföra tillgänglighetstestning först måste du installera Chrome-plugin-programmet, [här](https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en).
 
-När den är installerad läser du in sidan som du vill testa i webbläsaren Chrome (Obs! Om du har flera flikar öppna kan det påverka poängen, du bör bara ha en flik öppen). När sidan har lästs in **högerklickar du** på sidan och väljer fliken **Granskningar** . Utvecklarna kan välja vilken typ av granskning som ska utföras av plugin-programmet för tillgänglighet. När alla önskade alternativ har valts kan användaren välja knappen Generera rapport. Detta genererar ett PDF-dokument som visar den övergripande tillgänglighetsgraderingen och vad som kan användas för att öka tillgänglighetsgraderingen generellt.
+När den är installerad läser du in sidan som du vill testa i webbläsaren Chrome (Obs! Om du har flera flikar öppna kan det påverka poängen, du bör bara ha en flik öppen). När sidan har lästs in **högerklickar du** på sidan och väljer fliken **Granskningar** . Det finns utvecklare som kan välja vilken typ av granskning som ska utföras av plugin-programmet för tillgänglighet. När alla önskade alternativ har valts kan användaren välja knappen Generera rapport. Detta genererar ett PDF-dokument som visar den övergripande tillgänglighetsgraderingen och vad som kan användas för att öka tillgänglighetsgraderingen generellt.
 
 När rapporten har körts kan användarna förvänta sig följande:
 
@@ -868,6 +773,30 @@ Det allmänt tillgängliga Ultramarine-temat som hanteras av Adobe är inbyggt i
 Med Package Manager kan man komma åt Ultramarine-temat i AEM Forms genom att gå till **Forms** > **Themes** > **Reference Themes** > **Ultramarine-Accessible**.
 
 ![Ultramarintema](assets/aftia-ultramarine-theme.jpg)
+
+## Konfigurationsalternativ {#configuration-options}
+
+Användare kan konfigurera olika alternativ för arbetsflödestjänster, som omfattar följande:
+
+1. Microsoft Dynamics-post
+1. Adobe Sign
+1. AEM Custom Communication Management
+1. Adobe Analytics
+
+För att kunna konfigurera dem så att de aktiveras i arbetsflödet måste användarna utföra följande uppgifter.
+
+1. Gå till https://&#39;[server]:[port]&#39;/system/console/configMgr.
+
+1. Leta upp *WebGov-konfigurationer*.
+
+1. Öppna tjänstdefinitionen och aktivera de valda tjänsterna för att anropas i arbetsflödet.
+
+>[!NOTE]
+Bara för att en användare aktiverar tjänsten på Configuration Manager-sidan måste användaren ändå konfigurera en tjänstkonfiguration för att kunna kommunicera med de externa tjänster som efterfrågas.
+
+![web gov-formulärpaket](assets/aftia-configuration-options.jpg)
+
+1. Klicka på knappen Spara när du är klar för att spara inställningarna.
 
 ## Nästa steg {#next-steps}
 
