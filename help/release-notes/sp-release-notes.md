@@ -4,7 +4,7 @@ description: Versionsinformation för Adobe Experience Manager 6.5 Service Pack 
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 6686c10f1af24cc4fbdcf6d4e8b07f7dc0e2a8bb
+source-git-commit: 97714abf86a80f6b3d1c68c85ccf443482da22bf
 workflow-type: tm+mt
 source-wordcount: '4413'
 ht-degree: 0%
@@ -368,7 +368,7 @@ B. Använd [HTTP API från Package Manager](https://docs.adobe.com/content/docs/
 
 1. Alla OSGi-paket finns antingen **[!UICONTROL ACTIVE]** eller **[!UICONTROL FRAGMENT]** i OSGi Console (Använd webbkonsol: `/system/console/bundles`).
 
-1. OSGI-paketet `org.apache.jackrabbit.oak-core` är version 1.10.6 eller senare (Använd webbkonsol: `/system/console/bundles`).
+1. OSGI-paketet `org.apache.jackrabbit.oak-core` är version 1.2.2.3 eller senare (Använd webbkonsol: `/system/console/bundles`).
 
 Om du vill veta vilka plattformar som är certifierade för att fungera med den här versionen läser du de [tekniska kraven](/help/sites-deploying/technical-requirements.md).
 
