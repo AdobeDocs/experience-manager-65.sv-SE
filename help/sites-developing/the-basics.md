@@ -10,9 +10,9 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 6e913190-be92-4862-a8b9-517f8bde0044
 translation-type: tm+mt
-source-git-commit: fc09ba6cb923d9ea25ec14af093d7f86a4835d85
+source-git-commit: d621a612556f0bea032444c2e07be101868b1905
 workflow-type: tm+mt
-source-wordcount: '3365'
+source-wordcount: '3371'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Innan Adobe ger sig in i koncepten för AEM rekommenderar vi att du slutför WKND-självstudiekursen i dokumentet [Getting Started Developing AEM Sites](/help/sites-developing/getting-started.md) . Där finns en översikt över AEM-utvecklingsprocessen och en introduktion till de viktigaste begreppen.
+>Innan Adobe ger sig in i koncepten för AEM rekommenderar vi att du slutför WKND-självstudiekursen i dokumentet [Getting Started Developing AEM Sites](/help/sites-developing/getting-started.md) . Där finns en översikt över AEM-utvecklingsprocessen och en introduktion till de centrala begreppen.
 
 ## Krav för utveckling på AEM {#prerequisites-for-developing-on-aem}
 
@@ -68,11 +68,11 @@ Se [Discover Sling på 15 minuter](https://sling.apache.org/documentation/gettin
 
 I följande diagram förklaras Sling-skriptupplösningen: visar hur du hämtar från HTTP-begäran till innehållsnod, från innehållsnod till resurstyp, från resurstyp till skript och vilka skriptvariabler som är tillgängliga.
 
-![chlimage_1-84](assets/chlimage_1-97.png)
+![Om Apache Sling-skriptupplösningen](assets/sling-cheatsheet-01.png)
 
 I följande diagram förklaras alla dolda, men kraftfulla, frågeparametrar som du kan använda när du arbetar med SlingPostServlet, standardhanteraren för alla POST-begäranden som ger dig oändliga alternativ för att skapa, ändra, ta bort, kopiera och flytta noder i databasen.
 
-![chlimage_1-85](assets/chlimage_1-98.png)
+![Använda SlingPostServlet](assets/sling-cheatsheet-02.png)
 
 ### Sling är innehållscentrerat {#sling-is-content-centric}
 
@@ -177,7 +177,7 @@ Om exemplet ovan `sling:resourceType` är `hr/jobs` för:
 
    Skriptet kommer att vara /apps/hr/jobs/jobs.esp; den sista delen av sling:resourceType utgör filnamnet.
 
-* POST-begäranden (alla typer av begäranden exklusive GET/HEAD, metodnamnet måste vara versaler)
+* POST-begäranden (alla typer av begäranden utom GET/HEAD, metodnamnet måste vara versaler)
 
    POST används i skriptnamnet.
 
@@ -315,7 +315,7 @@ Ett OSGi-ramverk ger dig dynamisk inläsning/borttagning, konfigurering och kont
 >
 >På sidan Grundläggande utbildning finns en samling presentationer och självstudiekurser.
 
-Med den här arkitekturen kan du utöka Sling med programspecifika moduler. Sling, och därmed CQ5, använder [Apache Felix](https://felix.apache.org/) -implementeringen av OSGI (Open Services Gateway-initiativet) och baseras på specifikationerna för OSGi Service Platform version 4 version 4.2. De är båda samlingar av OSGi-paket som körs i ett OSGi-ramverk.
+Med den här arkitekturen kan du utöka Sling med programspecifika moduler. Sling, och därmed CQ5, använder [Apache Felix](https://felix.apache.org/) -implementeringen av OSGI (Open Services Gateway-initiativet) och baseras på OSGi Service Platform version 4 version 4.2-specifikationerna. De är båda samlingar av OSGi-paket som körs i ett OSGi-ramverk.
 
 Detta gör att du kan utföra följande åtgärder på något av paketen i din installation:
 
@@ -446,7 +446,7 @@ Med AEM består en produktionsmiljö ofta av två olika typer av instanser: en [
 
 ## Dispatcher {#the-dispatcher}
 
-Dispatcher är Adobes verktyg för både cachelagring och/eller belastningsutjämning. Mer information finns under [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html).
+Dispatcher är Adobes verktyg för både cachelagring och/eller lastbalansering. Mer information finns under [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html).
 
 ## FileVault (system för källrevision) {#filevault-source-revision-system}
 
