@@ -1,5 +1,5 @@
 ---
-title: Allmän versionsinformation om Adobe Experience Manager 6.5
+title: Allmän versionsinformation för Adobe Experience Manager 6.5
 description: Adobe Experience Manager 6.5 innehåller en beskrivning av versionsinformation, nyheter, hur man installerar och detaljerade ändringslistor.
 uuid: b916624e-9486-4391-8c6f-cb4045e78490
 contentOwner: chuesler
@@ -7,12 +7,15 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: 7d3ceccb-4f00-4e11-9c9f-6de46a455e02
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 57bad4e74b2dfd9e389643bfe58ef25564c5c545
+source-git-commit: 23dfcc944a83dd683078cfe00f85c4cc734e7752
+workflow-type: tm+mt
+source-wordcount: '2182'
+ht-degree: 1%
 
 ---
 
 
-# Allmän versionsinformation om Adobe Experience Manager 6.5{#general-release-notes-for-adobe-experience-manager}
+# Allmän versionsinformation för Adobe Experience Manager 6.5{#general-release-notes-for-adobe-experience-manager}
 
 ## Versionsinformation {#release-information}
 
@@ -43,13 +46,13 @@ source-git-commit: 57bad4e74b2dfd9e389643bfe58ef25564c5c545
 
 ### Trivia {#trivia}
 
-Versionscykeln för den här versionen av Adobe Experience Manager inleddes den 4 april 2018, genomgick 23 versioner av kvalitetssäkring och felkorrigering och avslutades den 28 mars 2019. Det totala antalet kundrelaterade problem, inklusive förbättringar och nya funktioner som har korrigerats i den här versionen, är 1345.
+Versionscykeln för den här versionen av Adobe Experience Manager började 4 april 2018, genomgick 23 versioner av kvalitetssäkring och felkorrigering och slutade 28 mars 2019. Det totala antalet kundrelaterade problem, inklusive förbättringar och nya funktioner som har korrigerats i den här versionen, är 1345.
 
 Adobe Experience Manager 6.5 är generellt tillgängligt sedan 8 april 2019.
 
 ![AEM 6.5 Inloggningsskärm](/help/assets/assets/aem65-login-v4.png)
 
-## Nyheter {#what-s-new}
+## What&#39;s New {#what-s-new}
 
 Adobe Experience Manager 6.5 är en uppgraderingsversion till kodbasen Adobe Experience Manager 6.4. Den innehåller nya och förbättrade funktioner, viktiga kundkorrigeringar, högprioriterade kundförbättringar och allmänna felkorrigeringar som är inriktade på produktstabilisering. Den innehåller även Adobe Experience Manager 6.4 Service Pack-versioner upp till SP4.
 
@@ -63,7 +66,7 @@ Plattformen för Adobe Experience Manager 6.5 bygger på uppdaterade versioner a
 
 Quickstart använder Eclipse Jetty 9.4.15 som servermotor.
 
-#### Java-stöd {#java-support}
+#### Java-stöd  {#java-support}
 
 * Nytt stöd för Java 11 samt Java 8 som redan stöds
 * För optimala prestanda bör du åsidosätta GC-standardvärden med andra värden. Mer information finns i avsnittet [Installera och uppdatera](/help/sites-deploying/custom-standalone-install.md) .
@@ -102,7 +105,7 @@ Ett antal förbättringar har gjorts i användargränssnittet för att göra det
 
 ### Experience Manager Sites {#experience-manager-sites}
 
-Fullständig lista över ändringar i [AEM Sites och Add-ons](/help/release-notes/sites.md).
+Fullständig lista över ändringar i [AEM Sites och tillägg](/help/release-notes/sites.md).
 
 #### Hanterade single-page-appar {#managed-single-page-apps}
 
@@ -140,9 +143,9 @@ Designa, leverera och optimera effektivt upplevelser på alla digitala skärmar,
 **Optimera**
 
 * Anpassa efter plats eller konfiguration av data som triggat innehåll med hjälp av dynamiska platshållare.
-* Enhetliga insikter som bygger på Adobe Analytics-integrering i AEM Screens Player
+* Enhetliga insikter som bygger på Adobe Analytics integration i AEM Screens Player
 
-Mer information om ändringar av AEM-skärmar finns i versionsinformationen i användarhandboken för [AEM-skärmar](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html).
+Mer information om ändringar av AEM Screens finns i versionsinformationen i användarhandboken [för](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html)AEM Screens.
 
 ### Experience Manager Assets {#experience-manager-assets}
 
@@ -150,7 +153,7 @@ Fullständig lista över ändringar i versionsinformationen [för](/help/release
 
 AEM 6.5 innehåller följande funktioner och förbättringar som ökar produktiviteten för AEM-användare, DAM-roller och associerade kreativa roller och marknadsföringsroller.
 
-#### Integrering med Adobe Creative Cloud {#integration-with-adobe-creative-cloud}
+#### Integration with Adobe Creative Cloud {#integration-with-adobe-creative-cloud}
 
 Introduktionen av [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html), en upplevelse i appen för kreativa användare som arbetar i Adobe Creative Cloud-program, inklusive Photoshop, Illustrator och InDesign, effektiviserar samarbetet mellan kreatörer och marknadsförare när det gäller att skapa innehåll. AEM-skrivbordsappen fortsätter att stödja behoven hos användare som arbetar med resurser från AEM på datorn, oavsett filtyp och datorprogram.
 
@@ -160,11 +163,11 @@ Dessutom kan AEM integreras med Adobe Stock för att hjälpa till att hitta, fö
 
 #### Anslutna resurser {#connected-assets}
 
-Funktionen för sammankopplade resurser är avsedd för större driftsättningar med ett antal AEM Sites-driftsättningar som behöver utnyttja resurser från en central AEM Assets DAM-driftsättning. Det gör det möjligt att förbättra styrningen av resurser som hanteras centralt samtidigt som det blir mycket effektivt att leverera resurser till de olika platsernas driftsättningar.
+Funktionen för sammankopplade resurser är avsedd för större driftsättningar med ett antal driftsättningar av AEM Sites som behöver utnyttja resurser från en central AEM Assets DAM-driftsättning. Det gör det möjligt att förbättra styrningen av resurser som hanteras centralt samtidigt som det blir mycket effektivt att leverera resurser till de olika platsernas driftsättningar.
 
-### Dynamiska medier {#dynamic-media}
+### Dynamic Media {#dynamic-media}
 
-Med Dynamic Media får du förbättrade funktioner för framtagning och leverans av multimedia i AEM Assets för att skapa avancerade upplevelser som är både engagerande och personaliserade. Med ett och samma högklassiga mastermaterial kan ni utnyttja vår avancerade molnrendering, Smart Crop och förstklassiga visningsprogram för att leverera de mest engagerande upplevelserna med branschledande prestanda.
+Dynamic Media har förbättrat multimedieredigering och leverans i AEM Assets för att skapa avancerade upplevelser som är både engagerande och personaliserade. Med en enda högklassig överordnad resurs kan ni utnyttja vår avancerade molnrendering, Smart Crop och förstklassiga visningsprogram för att leverera de mest engagerande upplevelserna med branschledande prestanda.
 
 Nya funktioner:
 
@@ -184,7 +187,7 @@ AEM 6.5 Forms innehåller flera nya funktioner och förbättringar. Högdagrarna
 * Transaktionsrapporter för att spåra antalet skickade formulär, bearbetade dokument och återgivna dokument
 * Förbättrad användning av interaktiv kommunikation
 * Molnbaserade digitala signaturer i anpassningsbara formulär
-* Bädda in adaptiva formulär och interaktiv kommunikation i en AEM Sites Single-page application (SPA).
+* Bädda in adaptiva formulär och interaktiv kommunikation i AEM Sites Single-page applications (SPA).
 * Stöd för variabler i AEM-arbetsflöden
 * Stöd för datavisningsmönster i interaktiv kommunikation
 * Sortera adaptiva formulär och interaktiva kommunikationstabeller
@@ -233,7 +236,7 @@ Denna prioriteringsprocess har resulterat i över 750 kundfokuserade förändrin
 * Tillägg för Brackets Code Editor ([läs mer och ladda ned](/help/sites-developing/aem-brackets.md))
 * Maven/Gradle-beroenden ([nedladdningslänk](https://repo.adobe.com/nexus/content/repositories/releases/com/adobe/aem/uber-jar/6.5.0/))
 
-**Webbplatser**
+**Sites**
 
 * Kärnkomponenter ([GitHub-projekt](https://github.com/adobe/aem-core-wcm-components))
 * Implementering av referens för butik ([läs mer](/help/sites-developing/we-retail.md))
@@ -242,18 +245,18 @@ Denna prioriteringsprocess har resulterat i över 750 kundfokuserade förändrin
    * för fullstacksplatser: [GitHub-projekt](https://github.com/adobe/aem-project-archetype)
    * för ensidiga appar med React/Angular: [GitHub-projekt](https://github.com/adobe/aem-spa-project-archetype)
 
-* AEM Screens Players för olika målplattformar ([ladda ned](https://download.macromedia.com/screens/))
+* AEM Screens Players for various target platforms ([download](https://download.macromedia.com/screens/))
 
 * Språkmodeller för smart innehåll. Engelska är förinstallerat - fler språk kan hämtas
 
-   * [Tyska](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-de)
-   * [Spanska](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-es)
-   * [Italienska](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-it)
-   * [Franska](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-fr)
+   * [Tyska](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
+   * [Spanska](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
+   * [Italienska](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
+   * [Franska](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
 
 * AEM Modernize Tools Suite, t.ex. Dialog Conversion Tool. ([GitHub-projekt](https://github.com/adobe/aem-modernize-tools))
 
-**Resurser**
+**Assets**
 
 * Paket för att lägga till förbättrad PDF-rastrerare ([läs mer](/help/assets/aem-pdf-rasterizer.md))
 * Paket för att lägga till stöd för utökad RAW-bild ([läs mer](/help/assets/camera-raw.md))
@@ -278,7 +281,7 @@ Användargränssnittet finns på följande språk:
 * Traditionell kinesiska (begränsat stöd)
 * Koreanska
 
-Experience Manager 6.5 har certifierats för GB18030-2005 CITS för att använda den kinesiska kodningsstandarden.
+Experience Manager 6.5 har certifierats för GB18030-2005 CITS att använda den kinesiska kodningsstandarden.
 
 ## Installera och uppdatera {#install-update}
 
@@ -300,7 +303,7 @@ Oak MicroKernel forOak MicroKernel for
 
 Adobe utvärderar ständigt funktionerna i produkten och planerar att ersätta funktioner med kraftfullare versioner, eller bestämmer sig för att omimplementera utvalda delar så att de blir bättre förberedda för framtida förväntningar eller tillägg.
 
-För Adobe Experience Manager 6.5, [läs listan över borttagna funktioner](/help/release-notes/deprecated-removed-features.md). Sidan innehåller även förhandsmeddelanden om förändringar inom en nära framtid och viktiga meddelanden för kunder som uppdaterar från tidigare versioner.
+För Adobe Experience Manager 6.5 [läser du listan över borttagna funktioner](/help/release-notes/deprecated-removed-features.md). Sidan innehåller även förhandsmeddelanden om förändringar inom den närmaste framtiden och viktiga meddelanden för kunder som uppdaterar från tidigare versioner.
 
 ## Kända fel {#known-issues}
 
@@ -310,7 +313,7 @@ För Adobe Experience Manager 6.5, [läs listan över borttagna funktioner](/hel
 
 Dessa webbplatser är bara tillgängliga för kunder. Om du är kund och behöver åtkomst kontaktar du din kontoansvarige på Adobe.
 
-* [](https://daycare.day.com) Hämta [produkt på licensing.adobe.com](https://licensing.adobe.com/)
+* [](https://daycare.day.com) [Produktnedladdning på licensing.adobe.com](https://licensing.adobe.com/)
 
 * [Kundsupport på day.day.com](https://daycare.day.com)
 
