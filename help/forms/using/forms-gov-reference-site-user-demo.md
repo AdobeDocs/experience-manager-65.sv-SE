@@ -8,9 +8,9 @@ contentOwner: anujkapo
 discoiquuid: ddb3778b-be06-4cde-bc6e-0994efa42b18
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 29b1a151a6c284fcb0bf01de425dfba79f5943c2
+source-git-commit: f4dcf58d70ea5a17617ef1e80942de7db3233031
 workflow-type: tm+mt
-source-wordcount: '2422'
+source-wordcount: '2464'
 ht-degree: 0%
 
 ---
@@ -83,7 +83,7 @@ Följande grupper ingår också:
 1. **Länkar**: Finns högst upp på huvudmenyn på webbplatsen We.Gov.
 1. **Användarinstruktioner**: En uppsättning numeriska steg som du kan följa när du navigerar i användarens berättelse.
 1. **Formulärportal**: *https://&lt;aemserver>:&lt;port>/content/we-gov/formsportal.html*
-1. **Mobilvy**:We.Gov-användare som vill replikera en mobilvy med en ny webbläsare.
+1. **Mobilvy**:Vi.Gov-användare som vill replikera en mobilvy med en ny webbläsare.
 1. **Skrivbordsvy**: Vi.gov-användare kan se en demo på en bärbar eller stationär dator.
 1. **Pre-screener Form**: Formulär på startsidan för webbsidan We.Gov.
 1. **Adaptiv form**: Anmälningsansökningsformulär för Web.gov demo.
@@ -102,7 +102,7 @@ Följande grupper ingår också:
 
 ## Automatiserad formulärkonvertering (Camila) {#automated-forms-conversion}
 
-**Detta avsnitt**: Camila the CX Lead har ett äldre PDF-baserat formulär som användes som en del av en pappersbaserad process. Som en del i en moderniseringssatsning vill hon använda det här PDF-formuläret för att automatiskt skapa nya moderna adaptiva formulär.
+**Detta avsnitt**: Camila the CX Lead har ett befintligt PDF-baserat formulär som användes som en del av en pappersbaserad process. Som en del i en moderniseringssatsning vill hon använda det här PDF-formuläret för att automatiskt skapa nya moderna adaptiva formulär.
 
 ### Automatiserad formulärkonvertering - We.gov (Camila) {#automated-forms-conversion-wegov}
 
@@ -116,7 +116,7 @@ Följande grupper ingår också:
 
    ![Överför formulär](assets/aftia-upload-form.jpg)
 
-1. Camilla väljer sedan en åtgärd för automatisk formulärkonvertering
+1. Camilla väljer sedan PDF-formuläret och klickar på **Starta automatisk konvertering** för att starta konverteringen. Du kan behöva klicka på **Skriv över konvertering** om du har konverterat formuläret.
 
    >[!NOTE]
    >
@@ -124,9 +124,11 @@ Följande grupper ingår också:
 
    * **Valfritt**: Om du vill använda temat Accessible Ultramarine klickar du bara på Specificera ett adaptivt formulärtema och väljer temat Accessible-Ultramarine som visas i listan med alternativ.
 
+   ![Starta konvertering](assets/aftia-start-conversion.jpg)
+
    ![Ultramarintema](assets/aftia-upload-conversion-settings.jpg)
 
-   ![Starta konvertering](assets/aftia-start-conversion.jpg)
+   Statusen för Procent färdigt visas under konverteringen. När statusen visas **Konverterad** klickar du på **utdatamappen** , markerar det adaptiva formuläret och klickar på **Redigera** för att öppna det konverterade formuläret.
 
 1. Camilla granskar sedan formuläret och ser till att alla fält finns
 
@@ -156,7 +158,7 @@ Följande grupper ingår också:
 
 Camila kontrollerar också att det skapade innehållet är korrekt och fullt tillgängligt enligt företagsstandarder.
 
-1. Camila öppnar det ifyllda formuläret We.Gov.
+1. Camila klickar på **utdatamappen** , väljer det adaptiva formuläret och klickar på **Förhandsgranska** för att öppna det färdiga We.Gov-formuläret.
 
 1. Öppnar fliken Granska i Chrome Developer Tool.
 
@@ -214,24 +216,9 @@ Du måste granska vissa dokument hemma innan hon kan slutföra tjänstbegäran. 
    1. Grundläggande information
 
       1. Förnamn
-      1. Mellannamn
       1. Efternamn
-      1. Önskat namn
       1. DOB
-      1. Kön
-   1. Kontaktinformation
-
-      1. Gatuadress
-      1. Ort
-      1. Telefonnummer
-      1. Postnummer
       1. E-post
-      1. Läge
-   1. Martialstatus
-
-      1. Familjestatus
-
-
 
 1. Använd följande **dynamiska logik** för att demonstrera den dynamiska funktionen i listrutan **Familjestatus** :
 
