@@ -10,7 +10,7 @@ topic-tags: platform
 content-type: reference
 discoiquuid: c081b242-67e4-4820-9bd3-7e4495df459e
 translation-type: tm+mt
-source-git-commit: 4949eeb190f26850f80e1ad107f2057c661ed23d
+source-git-commit: bac56cb8e172d826114e1e607dc24b0a17821f8c
 workflow-type: tm+mt
 source-wordcount: '2100'
 ht-degree: 0%
@@ -34,7 +34,7 @@ Det finns följande användningsområden:
 
 * Få implementeringsspecifika objekt.
 
-   En JCR-baserad implementering av det generiska [`Resource`](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/resource/Resource.html) gränssnittet ger till exempel tillgång till den underliggande JCR-referensen [`Node`](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html).&quot;
+   En JCR-baserad implementering av det generiska [`Resource`](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/resource/Resource.html) gränssnittet ger till exempel tillgång till den underliggande JCR-koden [`Node`](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html).
 
 * Skapa genvägar för objekt som kräver att interna kontextobjekt skickas.
 
@@ -70,7 +70,7 @@ Det finns dock ingen allmän regel - objektet kan vara antingen en ny eller en b
 Det finns olika sätt att `Adaptable.adaptTo()` implementera:
 
 * själva objektet, implementera själva metoden och mappa till vissa objekt.
-* Med [`AdapterFactory`](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/adapter/AdapterFactory.html)` kan godtyckliga objekt mappas.
+* Med en [`AdapterFactory`](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/adapter/AdapterFactory.html)som kan mappa godtyckliga objekt.
 
    Objekten måste fortfarande implementera `Adaptable` gränssnittet och måste utöka [`SlingAdaptable`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/adapter/SlingAdaptable.html) (som skickar `adaptTo` anropet till en central adapterhanterare).
 
