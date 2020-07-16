@@ -8,7 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: aa3e50f1-8f5a-489d-a42e-a928e437ab79
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: adf1ac2cb84049ca7e42921ce31135a6149ef510
+workflow-type: tm+mt
+source-wordcount: '513'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +20,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## Översikt {#overview}
 
-Med AEM Forms kan formulärförfattare ytterligare förenkla och förbättra ifyllandet genom att anropa tjänster som konfigurerats i en formulärdatamodell inifrån ett adaptivt formulärfält. Om du vill anropa en datamodelltjänst kan du antingen skapa en regel i den visuella redigeraren eller ange ett JavaScript med `guidelib.dataIntegrationUtils.executeOperation` -API:t i kodredigeraren för [regelredigeraren](/help/forms/using/rule-editor.md).
+AEM Forms gör det möjligt för formulärförfattare att ytterligare förenkla och förbättra formulärifyllningen genom att anropa tjänster som konfigurerats i en formulärdatamodell inifrån ett adaptivt formulärfält. Om du vill anropa en datamodelltjänst kan du antingen skapa en regel i den visuella redigeraren eller ange ett JavaScript med `guidelib.dataIntegrationUtils.executeOperation` -API:t i kodredigeraren för [regelredigeraren](/help/forms/using/rule-editor.md).
 
 Det här dokumentet fokuserar på att skriva ett JavaScript-skript med API:t för att anropa en tjänst. `guidelib.dataIntegrationUtils.executeOperation`
 
@@ -28,14 +31,6 @@ API:t anropar `guidelib.dataIntegrationUtils.executeOperation` en tjänst inifr�
 ```
 guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs)
 ```
-
-API kräver följande parametrar.
-
-| Parameter | Beskrivning |
-|---|---|
-| `operationInfo` | Struktur för att ange identifierare för formulärdatamodell, åtgärdstitel och åtgärdsnamn |
-| `inputs` | Struktur för att ange formulärobjekt vars värden är indata till serviceåtgärden |
-| `outputs` | Struktur för att ange formulärobjekt som ska fyllas med värden som returneras av tjänståtgärden |
 
 API:ts struktur anger `guidelib.dataIntegrationUtils.executeOperation` information om tjänståtgärden. Strukturen har följande syntax.
 
@@ -64,20 +59,32 @@ API-strukturen anger följande information om tjänståtgärden.
    <th>Beskrivning</th>
   </tr>
   <tr>
-   <td><code>forDataModelId</code></td>
-   <td>Ange databassökvägen till formulärdatamodellen inklusive dess namn</td>
+   <td><code>operationInfo</code></td>
+   <td>Struktur för att ange identifierare för formulärdatamodell, åtgärdstitel och åtgärdsnamn</td>
+  </tr>
+  <tr>
+   <td><code>formDataModelId</code></td>
+   <td>Anger databassökvägen till formulärdatamodellen inklusive dess namn</td>
   </tr>
   <tr>
    <td><code>operationName</code></td>
-   <td>Ange namnet på den tjänståtgärd som ska köras</td>
+   <td>Anger namnet på den tjänståtgärd som ska köras</td>
   </tr>
   <tr>
-   <td><code>input</code></td>
-   <td>Mappa ett eller flera formulärobjekt till indataargumenten för serviceåtgärden</td>
+   <td><code>inputs</code></td>
+   <td>Kopplar ett eller flera formulärobjekt till indataargumenten för tjänståtgärden</td>
   </tr>
   <tr>
-   <td>Utdata</td>
-   <td>Mappa ett eller flera formulärobjekt till utdatavärden från tjänståtgärden för att fylla i formulärfält<br /> </td>
+   <td><code>Outputs</code></td>
+   <td>Kopplar ett eller flera formulärobjekt till utdatavärden från tjänståtgärden för att fylla i formulärfält<br /> </td>
+  </tr>
+  <tr>
+   <td><code>success</code></td>
+   <td>Returnerar värden baserat på indataargumenten för serviceåtgärden. Det är en valfri parameter som används som en callback-funktion.<br /> </td>
+  </tr>
+  <tr>
+   <td><code>failure</code></td>
+   <td>Visar ett felmeddelande om återanropsfunktionen lyckas inte visa utdatavärden baserat på indataargumenten. Det är en valfri parameter som används som en callback-funktion.<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -104,3 +111,41 @@ var outputs = {
 guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs);
 ```
 
+## Använda API:t med återanropsfunktionen {#using-the-api-callback}
+
+Du kan också anropa datamodelltjänsten för formulär med API:t med en callback-funktion `guidelib.dataIntegrationUtils.executeOperation` . API-syntaxen är följande:
+
+```
+guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs, callbackFunction)
+```
+
+Återanropsfunktionen kan ha `success` - och `failure` återanropsfunktioner.
+
+### Exempelskript med återanropsfunktioner för lyckade och misslyckade åtgärder {#callback-function-success-failure}
+
+I följande exempelskript används API:t för att `guidelib.dataIntegrationUtils.executeOperation` anropa den `GETOrder` tjänståtgärd som konfigurerats i `employeeOrder` formulärdatamodellen.
+
+Åtgärden tar `GETOrder` värdet i `Order ID` formulärfältet som indata för `orderId` argumentet och returnerar orderkvantitetsvärdet i `success` callback-funktionen.  Om återanropsfunktionen inte returnerar `success` ordningsantalet, visas `failure` meddelandet av återanropsfunktionen `Error occured` .
+
+>[!NOTE]
+>
+> Om du använder återanropsfunktionen fylls inte utdatavärdena i de angivna formulärfälten. `success`
+
+```
+var operationInfo = {
+    "formDataModelId": "/content/dam/formsanddocuments-fdm/employeeOrder",
+    "operationTitle": "GETOrder",
+    "operationName": "GETOrder"
+};
+var inputs = {
+    "orderId" : Order ID
+};
+var outputs = {};
+var success = function (wsdlOutput, textStatus, jqXHR) {
+order_quantity.value = JSON.parse(wsdlOutput).quantity;
+ };
+var failure = function(){
+alert('Error occured');
+};
+guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs, success, failure);
+```
