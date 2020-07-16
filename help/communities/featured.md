@@ -10,7 +10,10 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: ee39435d-80f5-4758-ae01-1ea0d221b00b
 translation-type: tm+mt
-source-git-commit: 58a06c1a16c62bffad2893fbec0b32d2ce7267a7
+source-git-commit: cbb5a6bac5e9932fd36abf20d4424890080d39bf
+workflow-type: tm+mt
+source-wordcount: '339'
+ht-degree: 2%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 58a06c1a16c62bffad2893fbec0b32d2ce7267a7
 
 ## Introduktion {#introduction}
 
-Funktionen för innehåll är ett område där besökare på den inloggade webbplatsen (community-medlemmar) i publiceringsmiljön kan markera innehåll för
+Funktionen för innehåll är ett område där besökare på den inloggade webbplatsen (community-medlemmar) i publiceringsmiljön kan markera innehåll för:
 
 * [Bloggar](blog-feature.md)
 * [Kalendrar](calendar.md)
@@ -33,8 +36,8 @@ Möjligheten att använda innehåll kan vara tillåten eller otillåten per komp
 
 I det här avsnittet av dokumentationen beskrivs:
 
-* Lägga till aktuellt innehåll på en communitywebbplats
-* Konfigurationsinställningar för `Featured Content` komponenten
+* Lägga till aktuellt innehåll på en communitywebbplats.
+* Konfigurationsinställningar för `Featured Content` komponenten.
 
 ## Lägga till innehåll på en sida {#adding-featured-content-to-a-page}
 
@@ -54,18 +57,25 @@ När de [nödvändiga klientbiblioteken](essentials-featured.md#essentials-for-c
 
 Markera den monterade `Featured Content` komponent som du vill öppna och välj den `Configure` ikon som öppnar redigeringsdialogrutan.
 
-![chlimage_1-14](assets/chlimage_1-14.png) ![chlimage_1-15](assets/chlimage_1-15.png)
+![chlimage_1-14](assets/chlimage_1-14.png)
+
+![chlimage_1-15](assets/chlimage_1-15.png)
 
 ### Fliken Inställningar {#settings-tab}
 
-Under fliken **[!UICONTROL Inställningar]** identifierar du innehållet som ska visas:
+Under **[!UICONTROL Settings]** fliken identifierar du innehållet som ska visas:
 
-* **[!UICONTROL Visningsnamn]** Titeln för listan med aktuellt innehåll. For example `Featured Questions` or `Featured Ideas`. Standard är `Featured Content` om det lämnas tomt.
+* **[!UICONTROL Display Name]**
 
-* **[!UICONTROL Plats för det aktuella innehållet]**
-   *(Obligatoriskt)* Bläddra till sidan med innehållet som kan vara funktionellt (komponenterna på den sidan måste konfigureras för att tillåta aktuellt innehåll). Till exempel, `/content/sites/engage/en/forum`
+   Namnet på listan med aktuellt innehåll. For example `Featured Questions` or `Featured Ideas`. Standard är `Featured Content` om det lämnas tomt.
 
-* **[!UICONTROL Visningsgräns]** Det maximala antalet funktioner som kan visas. Standardvärdet är 5.
+* **[!UICONTROL Location of the Featured Content]**
+
+   *(Obligatoriskt)* Bläddra till sidan med innehållet som kan vara funktionellt (komponenterna på den sidan måste konfigureras för att tillåta aktuellt innehåll). Till exempel, `/content/sites/engage/en/forum`.
+
+* **[!UICONTROL Display Limit]**
+
+   Det maximala antalet innehåll som kan visas. Standardvärdet är 5.
 
 ## Site Visitor Experience {#site-visitor-experience}
 
