@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: e0da09b3-725d-4ed1-9273-2532132f6918
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
+source-git-commit: 618464d1e01986786a47a4e9c6ecce87e2a77ec3
+workflow-type: tm+mt
+source-wordcount: '270'
+ht-degree: 1%
 
 ---
 
@@ -26,28 +29,29 @@ För en enkel demonstration, en visuell funktion, tas den avatar som visas för 
 >
 >Om du vill använda tillägget måste instansen av kommentarsystemet på en webbplats som ska påverkas (/content) ange att dess resourceType ska vara det anpassade kommentarsystemet.
 
+
 ## Ändra HBS-skript {#modify-the-hbs-scripts}
 
 Använda [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md):
 
-* Open [/apps/custom/components/comments/comment/**comment.hbs **](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment/comment.hbs)
+* Open [/apps/custom/components/comments/comment/**comment.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment/comment.hbs)
 
-   * kommentera taggen som innehåller avataren för ett kommentarinlägg (~ line 21):
-
-      ```
-      <!--
-       <<img class="scf-comment-avatar {{#if topLevel}}withTopLevel{{/if}}" src="{{author.avatarUrl}}"></img>
-       -->
-      ```
-
-* Open [/apps/custom/components/comments/**comments.hbs **](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comments.hbs)
-
-   * kommentera taggen som innehåller avataren för nästa kommentarspost (~ line 44):
+   * Kommentera taggen som innehåller avataren för ett kommentarinlägg (~ line 21):
 
       ```
-      <!--
-       <img class="scf-composer-avatar" src="{{loggedInUser.avatarUrl}}"></img>
-       -->
+        <!--
+         <<img class="scf-comment-avatar {{#if topLevel}}withTopLevel{{/if}}" src="{{author.avatarUrl}}"></img>
+         -->
+      ```
+
+* Open [/apps/custom/components/comments/**comments.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comments.hbs)
+
+   * Kommentera taggen som innehåller avataren för nästa kommentarspost (~ line 44):
+
+      ```
+        <!--
+         <img class="scf-composer-avatar" src="{{loggedInUser.avatarUrl}}"></img>
+         -->
       ```
 
 * Välj **Spara alla**
@@ -56,21 +60,21 @@ Använda [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md):
 
 När programmet har ändrats måste den anpassade komponenten replikeras om.
 
-Ett sätt att göra detta är att
+Ett sätt är att
 
 * Från huvudmenyn
 
-   * välj **Verktyg > Åtgärder > Replikering**
-   * select `Activate Tree`
-   * uppsättning `Start Path`: till `/apps/custom`
-   * avmarkera `Only Modified`
-   * välj `Activate`knapp
+   * Välj **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Replication]**.
+   * Välj **[!UICONTROL Activate Tree]**.
+   * Ange `Start Path` till `/apps/custom`.
+   * Avmarkera **[!UICONTROL Only Modified]**.
+   * Välj **[!UICONTROL Activate]** knapp.
 
 ### Visa ändrad kommentar på publicerad exempelsida {#view-modified-comment-on-published-sample-page}
 
 [Nu kan du uppdatera sidan i publiceringsmiljön och visa ändringen för att ta bort avataren genom att fortsätta med upplevelsen](/help/communities/extend-sample-page.md#publish-sample-page) på publiceringsinstansen, som fortfarande är inloggad som samma användare:
 
-![chlimage_1-136](assets/chlimage_1-136.png)
+![chlimage_1-81](assets/chlimage_1-81.png)
 
 ### Exempel på kommentartillägg {#sample-comment-extension-package}
 
