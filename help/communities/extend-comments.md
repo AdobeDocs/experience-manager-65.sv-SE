@@ -10,12 +10,15 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a07a4690-0e47-4a76-84cb-96abdc70b835
 translation-type: tm+mt
-source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
+source-git-commit: 230c700d87d82d248b7d0bbc45c69c5c2b0e3ff8
+workflow-type: tm+mt
+source-wordcount: '271'
+ht-degree: 0%
 
 ---
 
 
-# Komponenten Utöka kommentarer {#extend-comments-component}
+# Komponenten Utöka kommentarer  {#extend-comments-component}
 
 Avsikten med att [utöka](client-customize.md#extensions) en standardkomponent är att ändra en komponents utseende eller beteende för specifika användningsområden.
 
@@ -24,6 +27,7 @@ Sökvägen till komponenten är unik och refererar standardkomponenten som en ö
 >[!NOTE]
 >
 >Det går inte att utöka en [överlagrad](client-customize.md#overlays) komponent.
+
 
 ## Exempel {#example}
 
