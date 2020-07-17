@@ -8,9 +8,9 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 60a5bb489c1f473f3f848909b8c2eb3192c49e88
+source-git-commit: 419ca05287368235b292e1133c35c2680e6022fc
 workflow-type: tm+mt
-source-wordcount: '4685'
+source-wordcount: '5004'
 ht-degree: 1%
 
 ---
@@ -222,6 +222,48 @@ Det här avsnittet innehåller information och instruktioner om Adobe Sign-molnk
 1. Ange konfigurerat klient-ID och klienthemlighet från den konfigurerade Adobe Sign-instansen.
 1. Klicka på&quot;Anslut till Adobe Sign&quot;.
 1. När anslutningen är klar klickar du på Spara och stäng för att slutföra integreringen.
+
+### Fylla i och signera flera formulär {#fill-sign-multiple-forms}
+
+I det här dokumentet förklaras de steg som krävs för att ställa in möjligheten att fylla i och signera flera formulär. Du kan också prova [samma funktion här](https://forms.enablementadobe.com/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled). Det här exemplet lagrar nödvändiga data för det här exemplet i AME-databasen. Detta görs för att säkerställa en smidig upplevelse vid driftsättningen av demoresurser på den lokala servern. I verkligheten kommer vi att lagra samma information i valfritt RDMS.
+
+#### Förutsättningar {#pre-requisites-fill-sign-multiple-forms}
+
+* [Konfigurera daglig CQ Mail-tjänst](https://docs.adobe.com/content/help/en/experience-manager-65/communities/administer/email.html)
+
+* [Konfigurera AEM Forms med Adobe Sign](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-advanced-authoring/adobe-sign-integration-adaptive-forms.html)
+
+#### Konfigurera exemplet på den lokala servern {#setup-sample-local-server}
+
+Utför följande steg för att konfigurera exemplet på den lokala servern:
+
+1. Installera paketet. Paketet innehåller följande:
+   * Adaptiva former. Formulären finns i mappen **formsandsigndemo**
+   * Anpassade OSGI-paket
+   * Arbetsflöden
+1. Konfigurera [medgivandeformulär](http://localhost:4502/editor.html/content/forms/af/formsandsigndemo/consentform.html) för att använda din Adobe Sign-konfiguration.
+1. Konfigurera formuläret för låsning av [flerlägesintresse](http://localhost:4502/editor.html/content/forms/af/formsandsigndemo/multistateinterestratelock.html) för att använda din Adobe Sign-konfiguration.
+1. Arbetsflödesmodell för Open [Formsandsigningdemo](http://localhost:4502/editor.html/conf/global/settings/workflow/models/formsandsigningdemo.html) :
+   1. Öppna steget Spara formulär i CRX.
+   1. Ändra localhost till din AEM Server IP-adress.
+   1. Spara ändringarna.
+   1. Synkronisera arbetsflödet för att generera körningsmodellen.
+
+      ![Signera flera formulär](assets/sign-multiple-forms.jpg)
+
+   1. Öppna [refinansieringsblanketten](http://localhost:4502/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled).
+   1. Fyll i de obligatoriska fälten. Se till att du anger en giltig e-postadress och välj ett eller flera formulär att signera och skicka formuläret med.
+Du får ett e-postmeddelande med en länk för att fylla i och signera formulären.
+
+#### Felsökning {#troubleshoot-sign-multiple-forms}
+
+* Felsökningsloggarna skrivs till `signingmultipleforms.log` filen i serverns loggmapp.
+
+* Formulären som ska signeras lagras under `/content/formsforsigning`.
+
+* Se till att du har alla paket i aktivt läge.
+
+* Kontrollera e-postserverkonfigurationen.
 
 ### (Valfritt) MS Dynamics-molnkonfiguration {#ms-dynamics-cloud-configuration}
 
