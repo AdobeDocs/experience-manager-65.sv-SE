@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: d936cef5-ad76-482d-97bf-c40137185812
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 58a06c1a16c62bffad2893fbec0b32d2ce7267a7
+source-git-commit: 9e941ce092f7d3248c11886d6bf1e54f2e726362
+workflow-type: tm+mt
+source-wordcount: '1226'
+ht-degree: 0%
 
 ---
 
@@ -32,7 +35,7 @@ Forumfunktionen tillhandahåller ett område där besökare (community-medlemmar
 I det här avsnittet av dokumentationen beskrivs:
 
 * Lägga till forumfunktionen på en AEM-webbplats.
-* Konfigurationsinställningar för `Forum`komponenten.
+* Konfigurationsinställningar för `Forum` komponenten.
 
 ### Lägga till ett forum på en sida {#adding-a-forum-to-a-page}
 
@@ -44,15 +47,17 @@ och dra den till rätt plats på en sida där forumet ska visas.
 
 Mer information finns i Grunderna för [communitykomponenter](/help/communities/basics.md).
 
-När de [nödvändiga klientbiblioteken](/help/communities/essentials-forum.md#essentials-for-client-side) inkluderas visas `Forum`komponenten så här:
+När de [nödvändiga klientbiblioteken](/help/communities/essentials-forum.md#essentials-for-client-side) inkluderas visas `Forum` komponenten så här:
 
-![chlimage_1-104](assets/chlimage_1-104.png)
+![chlimage_1-60](assets/chlimage_1-60.png)
 
 ### Konfigurera ett forum {#configuring-a-forum}
 
 Markera den monterade `Forum` komponent som du vill öppna och välj den `Configure` ikon som öppnar redigeringsdialogrutan.
 
-![chlimage_1-105](assets/chlimage_1-105.png) ![forum-config](assets/forum-config.png)
+![chlimage_1-61](assets/chlimage_1-61.png)
+
+![forum-config](assets/forum-config.png)
 
 #### Fliken Inställningar {#settings-tab}
 
@@ -240,7 +245,9 @@ På fliken **Sorteringsinställningar** anger du hur de skickade kommentarerna s
 
 * **Välj tidsalternativ för Analytics-sortering**
 
-   Dra ned för att välja ett av `All, Last 24 Hours, Last 7 Days, Last 30 Days`. Standardvärdet är `All`.
+   Dra nedåt för att välja något av följande alternativ: `All, Last 24 Hours, Last 7 Days, Last 30 Days`.
+
+   Standardvärdet är `All`.
 
 ### Additional Information {#additional-information}
 
