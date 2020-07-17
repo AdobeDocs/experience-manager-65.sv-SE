@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: ea2b23af-49c3-409b-a041-43c42d846f21
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 58a06c1a16c62bffad2893fbec0b32d2ce7267a7
+source-git-commit: 9e941ce092f7d3248c11886d6bf1e54f2e726362
+workflow-type: tm+mt
+source-wordcount: '753'
+ht-degree: 0%
 
 ---
 
@@ -29,7 +32,7 @@ I det här avsnittet av dokumentationen beskrivs:
 
 ### Lägga till ett filbibliotek på en sida {#adding-a-file-library-to-a-page}
 
-Om du vill lägga till en `File Library` komponent på en sida i redigeringsläge letar du reda på komponenten
+Om du vill lägga till en `File Library` komponent på en sida i redigeringsläge letar du reda på komponenten:
 
 * `Communities / File Library`
 
@@ -39,13 +42,15 @@ Mer information finns i Grunderna för [communitykomponenter](/help/communities/
 
 När de [nödvändiga klientbiblioteken](/help/communities/essentials-file-library.md#essentials-for-client-side) inkluderas visas `File Library` komponenten så här:
 
-![chlimage_1-145](assets/chlimage_1-145.png)
+![chlimage_1-430](assets/chlimage_1-430.png)
 
 ### Konfigurerar filbibliotek {#configuring-file-library}
 
 Markera den monterade `File Library` komponent som du vill öppna och välj den `Configure` ikon som öppnar redigeringsdialogrutan.
 
-![chlimage_1-146](assets/chlimage_1-146.png) ![forum-config-1](assets/forum-config-1.png)
+![chlimage_1-431](assets/chlimage_1-431.png)
+
+![chlimage_1-432](assets/chlimage_1-432.png)
 
 #### Fliken Kommentarer {#comments-tab}
 
