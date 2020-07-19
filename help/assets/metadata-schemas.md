@@ -1,11 +1,11 @@
 ---
-title: 'Metadata-scheman för att definiera layouten för metadataegenskapssidan i [!DNL Adobe Experience Manager Assets]. '
+title: 'Metadata-scheman för att definiera layouten för metadataegenskapssida i [!DNL Adobe Experience Manager Assets]. '
 description: Metadata-schemat definierar layouten för egenskapssidan och de metadataegenskaper som visas för resurser. Lär dig hur du skapar anpassade metadatamatcheman, redigerar metadatamatchema och hur du använder metadatamatchema på resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 0496d2d541be052e1201ada2bff99a2ed6fef4f3
 workflow-type: tm+mt
-source-wordcount: '2510'
+source-wordcount: '2527'
 ht-degree: 4%
 
 ---
@@ -43,16 +43,17 @@ Om du vill visa en lista med formulär eller mallar går du till [!DNL Experienc
 |---|---|---|
 | [!UICONTROL default] |  | Basmetadataschemaformuläret för resurser. |
 |  | Följande underordnade formulär ärver egenskaperna för [!UICONTROL default] formuläret: |  |
+|  | [!UICONTROL dm_video] | Schemaformulär för Dynamic Media-videofilmer. |
 |  | [!UICONTROL image] | Schemaformulär för bilder med MIME-typen som `image/jpeg` och `image/png`. <br> Formuläret har [!UICONTROL image] följande underordnade formulärmallar: <ul><li> [!UICONTROL jpeg]: Schemaformulär för resurser med undertyp [!UICONTROL jpeg].</li> <li>[!UICONTROL tiff]: Schemaformulär för resurserna med undertypen TIFF.</li></ul> |
 |  | [!UICONTROL application] | Schemaformulär för resurser med MIME-typ som `application/pdf` och `application/zip`. <br>[!UICONTROL pdf]: Schemaformulär för resurser med undertyp PDF. |
 |  | [!UICONTROL video] | Schemaformulär för videomaterial med MIME-typ som `video/avi` och `video/mp4`. |
 | [!UICONTROL collection] |  | Schemaformulär för samlingar. |
 | [!UICONTROL contentfragment] |  | [Schemaformulär för innehållsfragment](/help/sites-developing/customizing-content-fragments.md). |
 | [!UICONTROL forms] |  | Det här schemaformuläret gäller [Adobe Experience Manager Forms](/help/forms/home.md). |
+| [!UICONTROL ugc_contentfragment] |  | Schemaformulär för användargenererade innehållskomponenter och resurser som är integrerade i Experience Manager från sociala medier. |
 
 <!-- 
-TBD: Add dm_video child for the default form OOTB.
-video doesn't contain any sub types as listed above OOTB.
+TBD: video doesn't contain any sub types as listed above OOTB.
 application doesn't contain the sub type zip OOTB.
 -->
 
