@@ -26,8 +26,9 @@ En administratör kan konfigurera en nätverksmapp, en s.k. bevakad mapp, så at
 
 Du kan använda någon av följande metoder för att skapa en bevakad mapp i filsystemet:
 
-* När du konfigurerar egenskaperna för en speciell nod i konfigurationen för bevakad mapp anger du den fullständiga sökvägen till den överordnade katalogen i egenskapen folderPath och lägger till namnet på den bevakade mapp som ska skapas, vilket visas i följande exempel: `C:/MyPDFs/MyWatchedFolder`
-AEM Forms försöker skapa mappen med den angivna sökvägen eftersom `MyWatchedFolder`mappen inte finns.
+* När du konfigurerar egenskaperna för en nod för konfiguration av bevakad mapp anger du den fullständiga sökvägen till den överordnade katalogen i egenskapen folderPath och lägger till namnet på den bevakade mapp som ska skapas, vilket visas i följande exempel: `C:/MyPDFs/MyWatchedFolder`
+The 
+`MyWatchedFolder`mappen finns inte, AEM Forms försöker skapa mappen med den angivna sökvägen.
 
 * Skapa en mapp på filsystemet innan du konfigurerar en bevakad mappslutpunkt och ange sedan den fullständiga sökvägen i egenskapen folderPath. Mer information om egenskapen folderPath finns i Egenskaper [för](#watchedfolderproperties)bevakad mapp.
 
@@ -53,6 +54,7 @@ Om du vill konfigurera en bevakad mapp skapar du en konfigurationsnod för bevak
    * `inputProcessorType`
    * `inputProcessorId`
    * `outputFilePattern`
+
    En fullständig lista över egenskaper som stöds finns i Egenskaper [för](#watchedfolderproperties)bevakad mapp.
 
 1. Klicka på **Spara alla**. När noden har skapats och egenskaperna har sparats. Mapparna `input`, `result`, `failure`, `preserve`och `stage`skapas på den sökväg som anges i `folderPath` egenskapen.
@@ -141,6 +143,7 @@ Mer information om filmönster finns i [Om filmönster](../../forms/using/watche
    * %l = millisekund
    * %R = slumptal (mellan 0 och 9)
    * %P = process- eller jobb-ID
+
    Om den till exempel är 2009-08-17 och du anger C:/Test/WF0/error/%Y/%M/%D/%H/ är resultatmappen C:/Test/WF0/error/2009/07/17/20
 
    Om sökvägen inte är absolut men relativ skapas mappen i den bevakade mappen. Standardvärdet är result/%Y/%M/%D/, som är resultatmappen i den bevakade mappen. Mer information om filmönster finns i [Om filmönster](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p).
@@ -163,8 +166,8 @@ Mer information om filmönster finns i [Om filmönster](../../forms/using/watche
 
 * **overwriteDuplicateFilename (Boolean)**: När värdet är True skrivs filerna i resultatmappen och i den bevarade mappen över. Om värdet är Falskt används filer och mappar med ett numeriskt indexsuffix för namnet. Standardvärdet är Falskt.
 * **preserveOnFailure (Boolean)**: Bevara indatafiler om det inte går att utföra åtgärden på en tjänst. Standardvärdet är true.
-* **inputFilePattern (String)**: Anger mönstret för indatafilerna för en bevakad mapp. Skapar en lista över tillåtna filer.
-* **asynk (Boolean)**: Identifierar anropstypen som asynkron eller synkron. Standardvärdet är true (asynkront). Filbearbetningen är en resurskrävande uppgift. Behåll värdet för asynch-flaggan till true för att förhindra att huvudtråden i sökningsjobbet kvävs. I en klustermiljö är det viktigt att flaggan är true för att det ska gå att använda belastningsutjämning för de filer som bearbetas på de tillgängliga servrarna. Om flaggan är false försöker sökningsjobbet att bearbeta varje fil/mapp på den översta nivån sekventiellt i sin egen tråd. Ange inte flaggan till false utan en specifik orsak, till exempel arbetsflödesbaserad bearbetning i en enskild serverkonfiguration.
+* **inputFilePattern (String)**: Anger mönstret för indatafilerna för en bevakad mapp. Skapar en tillåtelselista av filerna.
+* **asynk (Boolean)**: Identifierar anropstypen som asynkron eller synkron. Standardvärdet är true (asynkront). Filbearbetningen är en resurskrävande uppgift. Behåll värdet för asynch-flaggan till true för att förhindra att huvudtråden i sökningsjobbet kvävs. I en klustermiljö är det viktigt att flaggan är true för att det ska gå att använda belastningsutjämning för de filer som bearbetas på de tillgängliga servrarna. Om flaggan är false försöker sökningsjobbet att utföra bearbetning för varje fil/mapp på den översta nivån sekventiellt i sin egen tråd. Ange inte flaggan till false utan en specifik orsak, till exempel arbetsflödesbaserad bearbetning i en enskild serverkonfiguration.
 
 >[!NOTE]
 >
@@ -538,13 +541,14 @@ Om den bevakade mappen inte kan bearbeta källfilerna i scenmappen kan du åters
 
    * Ändra egenskapen includeFilePattern för den bevakade mappen till något som inte matchar någon av de nya indatafilerna (ange till exempel NOMATCH).
    * Skjut upp processen som skapar nya indatafiler.
+
    Vänta tills AEM Forms återställer och bearbetar alla filer. De flesta filerna bör återställas och alla nya indatafiler bearbetas korrekt. Hur lång tid du väntar på att Bevakade mappar ska återställas och bearbetas beror på hur lång åtgärden ska vara och hur många filer som ska återställas.
 
 1. Avgör vilka filer som inte kan bearbetas. Om du väntade en viss tid och slutförde det föregående steget och det fortfarande finns obearbetade filer kvar i scenmappen går du till nästa steg.
 
    >[!NOTE]
    >
-   >Du kan titta på datum- och tidsstämpeln för filerna i scenkatalogen. Beroende på antalet filer och den normala bearbetningstiden kan du avgöra vilka filer som är tillräckligt gamla för att betraktas som fasta.
+   >Du kan titta på datum- och tidsstämpeln för filerna i scenkatalogen. Beroende på antalet filer och den normala bearbetningstiden kan du avgöra vilka filer som är tillräckligt gamla för att anses ha fastnat.
 
 1. Kopiera de obearbetade filerna från scenkatalogen till indatakatalogen.
 
