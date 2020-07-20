@@ -45,7 +45,8 @@ AEM implementerar responsiv layout för dina sidor med en kombination av mekanis
 
          Du kan ha layoutbehållaren som standard för sidan, samtidigt som användaren kan lägga till fler layoutbehållare i den här versionen. till exempel för att uppnå kolumnkontroll.
 
-* **[Layoutläge](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)**När layoutbehållaren har placerats på sidan kan du använda **layoutläget**för att placera innehåll i det responsiva rutnätet.
+* **[Layoutläge](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)**När layoutbehållaren har placerats på sidan kan du använda
+**Layoutläge** för att placera innehåll i det responsiva rutnätet.
 
 * [**Emulator **](/help/sites-authoring/responsive-layout.md#selecting-a-device-to-emulate)Med den här funktionen kan du skapa och redigera responsiva webbplatser som ordnar om layouten enligt enhetens/fönstrets storlek genom att ändra storlek på komponenterna interaktivt. Användaren kan sedan se hur innehållet återges med hjälp av emulatorn.
 
@@ -116,6 +117,7 @@ Om du migrerar ett befintligt projekt (med befintligt innehåll) måste du:
 >
 >* lägga till brytpunkter i mallar
 >* lägga till samma brytpunkter på befintliga sidor
+
 >
 >  
 När arv används kan du begränsa detta till innehållets rotsida.
@@ -290,7 +292,7 @@ Om du vill att författare ska kunna lägga till fler responsiva rutnät på inn
 
 ### Konfigurera stödrastret för layoutbehållaren {#configure-the-grid-of-the-layout-container}
 
-Du kan konfigurera antalet kolumner som är tillgängliga för varje särskild instans av layoutbehållaren:
+Du kan konfigurera antalet kolumner som är tillgängliga för varje specifik instans av layoutbehållaren:
 
 1. **Författarmiljö**
 
