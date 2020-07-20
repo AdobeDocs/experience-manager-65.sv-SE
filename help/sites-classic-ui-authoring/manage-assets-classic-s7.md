@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: dc0191d0-f181-4e1e-b3f4-73427aa22073
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: eb5ec39431d365ed6ba274018bbca437a58bfafe
 workflow-type: tm+mt
 source-wordcount: '3221'
 ht-degree: 1%
@@ -291,7 +291,7 @@ Om du vill länka ett fält till ett klientkontextvärde klickar du på **Välj*
 
 ![chlimage_1-60](assets/chlimage_1-60.png)
 
-Texten återspeglar namnet på den inloggade användaren. Du kan återställa texten till det ursprungliga värdet genom att klicka på **Återställ **intill fältet.
+Texten återspeglar namnet på den inloggade användaren. Du kan återställa texten till det ursprungliga värdet genom att klicka på **Återställ** bredvid fältet.
 
 ![chlimage_1-61](assets/chlimage_1-61.png)
 
@@ -336,14 +336,15 @@ Om du har flera konfigurationer visar AEM som standard [standardkonfigurationen]
 >* Resurser som finns i ad hoc-mappen visas inte i Scene7-innehållsläsaren.
 >* När [Säker förhandsvisning är aktiverat](/help/sites-administering/scene7.md#configuring-the-state-published-unpublished-of-assets-pushed-to-scene)visas både publicerade och opublicerade resurser på Scene7 i innehållsläsaren Scene7.
 >* Om du inte ser **Scene7** eller **S7** -ikonen som ett alternativ i webbläsaren måste du [konfigurera Scene7 så att det fungerar med AEM](/help/sites-administering/scene7.md).
+
    >
    >
 * För video har Scene7:s innehållsläsare stöd för:
    >
-   >  
-* Adaptiva videouppsättningar: behållare för alla videoåtergivningar som behövs för sömlös uppspelning på flera skärmar
->  * Enkel MP4-video
->  * En F4V-video
+   >   
+   * Adaptiva videouppsättningar: behållare för alla videoåtergivningar som behövs för sömlös uppspelning på flera skärmar
+   >   * Enkel MP4-video
+   >   * En F4V-video
 
 
 ### Bläddra i innehåll {#browsing-content-in-the-classic-ui}
@@ -365,6 +366,7 @@ Som standard visas resurser efter filnamn. Du kan också filtrera resultat efter
 >* Adaptiva videouppsättningar: behållare för alla videoåtergivningar som behövs för sömlös uppspelning på flera skärmar
 >* Enkel MP4-video
 >* En F4V-video
+
 >
 
 
