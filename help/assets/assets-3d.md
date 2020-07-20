@@ -10,7 +10,7 @@ content-type: reference
 translation-type: tm+mt
 source-git-commit: 56c9bc1ea99dcb93af21d8b26bac8792512f4d42
 workflow-type: tm+mt
-source-wordcount: '2233'
+source-wordcount: '2241'
 ht-degree: 2%
 
 ---
@@ -152,7 +152,8 @@ Se även [Förhandsgranska resurser i programgränssnittet.](/help/assets/previe
 
    * Klicka i det övre högra hörnet på sidan för **[!UICONTROL Preview]** att gå in i **[!UICONTROL Preview]** läget.
    * Ta bort `/editor.html` från sidans URL i webbläsaren.
-   ![3D-resurs som visas inuti 3D Media-komponenten](/help/assets/assets-dm/3d-asset-in-3d-media.png)En helt interaktiv 3D-resurs som visas i **[!UICONTROL Preview]** läget.
+
+En helt interaktiv 3D-resurs som visas i    ![3D-resurs som visas inuti 3D Media-komponenten](/help/assets/assets-dm/3d-asset-in-3d-media.png)En helt interaktiv 3D-resurs som visas i **[!UICONTROL Preview]** läget.
 
 1. Gör något av följande när du är i **[!UICONTROL Preview]** läget:
 
@@ -280,6 +281,7 @@ Se även [Publicera sidor.](/help/sites-authoring/publishing-pages.md)
    * 3D-resursen har ett format som stöds (GLB, OBJ, STL och USDZ).
    * 3D-resursen har importerats till Dynamic Media Image Production System (IPS).
    * 3D-resursen publiceras.
+
    ![3d-asset-url](/help/assets/assets-dm/3d-asset-url.png)
 
 1. Tryck för **[!UICONTROL URL]** att visa 3D-resursens URL för direktproduktion som du kan kopiera och använda på webbsidor.
