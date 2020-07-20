@@ -3,9 +3,9 @@ title: Bearbeta material för att genomföra affärsprocesser, utföra revisione
 description: Resursbearbetning för att konvertera format, skapa renderingar, hantera resurser, validera resurser och köra arbetsflöden.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 94f7f2cde3c87ed4693b9e2004f80fc5f0cd9855
+source-git-commit: f6c770e8830bd2fe7c436c4bfe9725564c49a08f
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '941'
 ht-degree: 3%
 
 ---
@@ -52,7 +52,7 @@ Så här använder du ett arbetsflöde för en resurs:
 
 1. Klicka **[!UICONTROL Actions]** längst ned för att öppna en lista med tillgängliga åtgärder för resursen.
 
-1. Klicka **[!UICONTROL Start Workflow]** i listan.
+1. Click **[!UICONTROL Start Workflow]** from the list.
 
 1. Välj en arbetsflödesmodell i listan i **[!UICONTROL Start Workflow]** dialogrutan.
 
@@ -103,6 +103,7 @@ För en arbetsflödesmodell kan användare skapa en startfil för arbetsflödet 
 ## God praxis och begränsningar {#best-practices-limitations-tips}
 
 * Tänk på dina behov av alla typer av återgivningar när du utformar arbetsflöden. Om du inte förutser att en återgivning behövs i framtiden tar du bort steget när du skapar den från arbetsflödet. Det går inte att ta bort återgivningar gruppvis efteråt. Oönskade återgivningar kan ta upp mycket lagringsutrymme efter långvarig användning av [!DNL Experience Manager]. För enskilda resurser kan du ta bort återgivningar manuellt från användargränssnittet. För flera resurser kan du antingen anpassa [!DNL Experience Manager] för att ta bort specifika återgivningar eller ta bort resurserna och överföra dem igen.
+* Som standard innehåller arbetsflödet några steg för att skapa miniatyrbilder och webbåtergivningar [!UICONTROL DAM Update Asset] . Om några standardåtergivningar tas bort från arbetsflödet återges inte användargränssnittet i [!DNL Assets] korrekt.
 
 >[!MORELIKETHIS]
 >
