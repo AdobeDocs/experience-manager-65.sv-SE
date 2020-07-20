@@ -207,13 +207,15 @@ Varje åtkomstbegäran registreras här tillsammans med svaret.
 Den här loggen används bara om den [!DNL Dynamic Media] är aktiverad. I s7access-loggen registreras alla förfrågningar som gjorts till [!DNL Dynamic Media] genom `/is/image` och `/is/content`.
 
    * `stderr.log`
-Innehåller felmeddelanden, återigen av varierande allvarlighetsgrad, som genereras under start. Som standard är loggnivån inställd på `Warning` ( `WARN`)
+Innehåller felmeddelanden, återigen av varierande allvarlighetsgrad, som genereras under start. Som standard är loggnivån inställd på 
+`Warning` ( `WARN`)
 
    * `stdout.log`
 Innehåller loggningsmeddelanden som anger händelser under start.
 
    * `upgrade.log`
-Innehåller en logg över alla uppgraderingsåtgärder som körs från `com.day.compat.codeupgrade` - och `com.adobe.cq.upgradesexecutor` paketen.
+Tillhandahåller en logg över alla uppgraderingsåtgärder som körs från 
+`com.day.compat.codeupgrade` och `com.adobe.cq.upgradesexecutor` paket.
 
 * `<*cq-installation-dir*>/crx-quickstart/repository`
 
@@ -366,9 +368,11 @@ I vissa fall kanske du vill skapa en anpassad loggfil med en annan loggnivå. Du
    `org.apache.sling.commons.log.file.size` styr rotationen av loggfilen genom att ange antingen:
    * maximal filstorlek
    * ett tids-/datumschema
+
    för att ange när en ny fil ska skapas (och den befintliga filen får ett nytt namn enligt namnmönstret).
    * En storleksgräns kan anges med ett tal. Om ingen storleksindikator anges används detta som antal byte, eller så kan du lägga till en av storleksindikatorerna - `KB`, `MB`eller `GB` (versaler ignoreras).
    * Ett tids-/datumschema kan anges som ett `java.util.SimpleDateFormat` mönster. Detta anger den tidsperiod efter vilken filen ska roteras. det suffix som läggs till i den roterade filen (för identifiering).
+
    Standardvärdet är &#39;.&#39;yyyy-MM-dd (för daglig loggrotation)
    Så vid midnatt den 20 januari 2010 (eller när det första loggmeddelandet efter detta blir exakt) kommer ../logs/error.log att byta namn till ../logs/error.log.2010-01-20. Loggning för den 21 januari kommer att skickas till (en ny och tom) ../logs/error.log tills den överförs vid nästa ändring av dagen.
    | `'.'yyyy-MM` | Rotation i början av varje månad |
@@ -449,6 +453,7 @@ Så här övervakar du en replikeringsagent:
    * **Visa logg** för att komma åt loggen för eventuella åtgärder som utförs av replikeringsagenten.
    * **Testa Connection** till målinstansen.
    * **Tvinga Försök igen** för alla köobjekt om det behövs.
+
    >[!CAUTION]
    Använd inte länken Testa anslutning för den omvända replikeringsutkorgen på en publiceringsinstans.
    Om ett replikeringstest utförs för en Utkorgskö kommer alla objekt som är äldre än testreplikeringen att bearbetas på nytt med varje omvänd replikering.
