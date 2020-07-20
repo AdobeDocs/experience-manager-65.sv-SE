@@ -185,7 +185,8 @@ Beroende på vilket objekt du väljer visas en ny panel:
          * **Överordnad sida** Ange en bana antingen manuellt eller med väljaren. Lämna tomt om du vill använda den aktuella sidan som överordnad.
       * **Alternativ för fast lista**
 
-         * **Sidor** Välj en lista med sidor. Använd `+` för att lägga till fler poster och upp-/nedknapparna för att justera ordningen.
+         * **Sidor** Välj en lista med sidor. Användning 
+`+` om du vill lägga till fler poster och upp-/nedknapparna för att justera ordningen.
       * **Alternativ för sökning**
 
          * **Börja i** Ange en startbana, antingen manuellt eller med väljaren.
@@ -195,7 +196,8 @@ Beroende på vilket objekt du väljer visas en ny panel:
 
          * **Querybuilder-predikatnotation**Du kan ange en sökfråga med Querybuilder-predikatnotation. Du kan till exempel ange &quot;fulltext=Marketing&quot; om du vill att alla sidor med &quot;Marketing&quot; i innehållet ska visas i Carousel.
 Se [QueryBuilder API](/help/sites-developing/querybuilder-api.md) för en fullständig diskussion om frågeuttryck och fler exempel.
-   * **Sortera efter** Välj `jcr:title`, `jcr:created``cq:lastModified`eller `cq:template` från listrutan.
+   * **Sortera efter** val 
+`jcr:title`, `jcr:created`, `cq:lastModified`eller `cq:template` från listrutan.
 
    * **Begränsa** det högsta antal objekt som du vill använda i Carousel; detta är valfritt.
 
@@ -281,7 +283,7 @@ Med den externa programintegrationskomponenten (**extern**) kan du bädda in ext
 
 * **Extern**
 
-   * **Målapplikation** Ange webbadressen till den webbapplikation som ska integreras. till exempel:
+   * **Target-program** Ange URL-adressen till det webbprogram som ska integreras. till exempel:
 
       ```
       https://en.wikipedia.org/wiki/Main_Page
@@ -291,7 +293,7 @@ Med den externa programintegrationskomponenten (**extern**) kan du bädda in ext
 
    * **Bredd och Höjd**Ange storleken på iframe-elementet
 
-Den externa tillämpningen är integrerad i AEM-sidans styckesystem. till exempel när du använder ett Target-program av `https://en.wikipedia.org/wiki/Main_Page`:
+Den externa tillämpningen är integrerad i AEM-sidans styckesystem. Om du till exempel använder ett Target-program med `https://en.wikipedia.org/wiki/Main_Page`:
 
 ![chlimage_1-90](assets/chlimage_1-90.png)
 
@@ -684,7 +686,7 @@ Om det behövs kan du konfigurera:
 >[!CAUTION]
 Den här Foundation-komponenten har tagits bort. Adobe rekommenderar att du använder [Carousel Core-komponenten](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/carousel.html) istället.
 
-Med den här komponenten kan du läsa in en serie bilder som ska visas som ett bildspel på sidan.Du kan lägga till eller ta bort bilder och tilldela varje rubrik. Under Avancerat kan du även ange storleken på visningsområdet.
+Med den här komponenten kan du läsa in en serie bilder som ska visas som ett bildspel på sidan.Du kan lägga till eller ta bort bilder och tilldela varje rubrik. Under Avancerat kan du även ange visningsområdets storlek.
 
 Du kan konfigurera:
 
@@ -1093,7 +1095,7 @@ En rad åtgärdstyper ingår i en AEM-standardinstallation:
 
       Sökvägen till nodegenskaper som används för att läsa in fördefinierade värden i formulärfälten.
 
-      Detta är ett valfritt fält som anger sökvägen till en nod i databasen. När den här noden har egenskaper som matchar fältnamnen, fylls lämpliga fält i formuläret i förväg med värdet för dessa egenskaper. Om det inte finns någon matchning innehåller fältet standardvärdet.
+      Detta är ett valfritt fält som anger sökvägen till en nod i databasen. När den här noden har egenskaper som matchar fältnamnen förinläses motsvarande fält i formuläret med egenskapsvärdet. Om det inte finns någon matchning innehåller fältet standardvärdet.
 
       Med **Läs in sökväg** kan du läsa in formuläret i förväg med värden i de obligatoriska fälten. Se [Förhandsladda formulärvärden](/help/sites-developing/developing-forms.md#preloading-form-values).
 
