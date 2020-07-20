@@ -149,6 +149,7 @@ Så här konfigurerar du vilka format som tillåts när du klistrar in text i AE
    * **Namn** `underline`
    * **Namn** `anchor` (för både länkar och namngivna ankare)
    * **Namn** `image`
+
    Alla egenskaper är av **typen** `Boolean`, så i rätt **värde** kan du antingen markera eller ta bort markeringen för att aktivera eller inaktivera funktionen.
 
    >[!NOTE]
@@ -270,6 +271,7 @@ Ange sedan platsen/platserna för de formatmallar som du vill referera till:
    * **Namn** `externalStyleSheets`
    * **Typ** `String[]` (multisträng; klicka på **Flera** i CRXDE)
    * **Värden** Sökvägen och filnamnet för alla formatmallar som du vill ta med. Använd databassökvägar.
+
    >[!NOTE]
    >
    >Du kan när som helst lägga till referenser till ytterligare formatmallar.
@@ -346,7 +348,8 @@ Så här skapar du det format som författare kan använda på japansk text:
 
 1. Lägg till egenskapstexten i samma nod. Värdet är namnet på formatet som författarna ser när de väljer formatet.
    * Namn: `text`
-*Typ: `String`
+*Typ: 
+`String`
    * Värde: `Japanese word-wrap`
 
 1. Skapa en formatmall och ange dess sökväg. Se [Ange plats för formatmallen](#locationofstylesheet). Lägg till följande innehåll i formatmallen. Ändra bakgrundsfärgen efter behov.
@@ -498,10 +501,12 @@ I CRXDE visas det representerade tecknet när egenskapen har sparats. Se exemple
 1. Lägg till följande två egenskaper under den här noden (namngivna enligt ditt teckenintervall):
 
    * **Namn** `rangeStart`
+
       **Typ** `Long`
       **Värde** för [Unicode](https://unicode.org/) -representationen (decimal) för det första tecknet i intervallet
 
    * **Namn** `rangeEnd`
+
       **Typ** `Long`
       **Värde** för [Unicode](https://unicode.org/) -representationen (decimal) av det sista tecknet i intervallet
 
@@ -531,6 +536,7 @@ Kopiering och inklistring av tabeller i eller från RTE-komponenten är webbläs
    * **Namn** `features`
    * **Typ** `String`
    * **Värde** `*`
+
    >[!NOTE]
    Om du inte vill aktivera alla tabellfunktioner kan du skapa `features` egenskapen som:
    * **Typ** `String[]`
@@ -583,7 +589,7 @@ Ibland kan du skapa datatabeller utan visuell text i en kolumnrubrik om rubriken
 RTE har stöd för dolda rubrikceller för att förbättra tillgängligheten i sådana scenarier. Dessutom innehåller den konfigurationsinställningar för dolda rubriker i tabeller. Med de här inställningarna kan du använda CSS-format på dolda rubriker i redigerings- och förhandsgranskningslägena. Om du vill hjälpa författare att identifiera dolda rubriker i redigeringsläget kan du inkludera följande parametrar i koden:
 
 * `hiddenHeaderEditingCSS`: Anger namnet på CSS-klassen som används i den dolda rubrikcellen när RTE redigeras.
-* `hiddenHeaderEditingStyle`: Anger en formatsträng som används i cellen med dolda rubriker när textredigeringsredigering används.
+* `hiddenHeaderEditingStyle`: Anger en formatsträng som används på cellen med dolda rubriker när textredigeringsredigering används.
 
 Om du anger både CSS och formatsträngen i koden har CSS-klassen företräde framför formatsträngen och kan skriva över alla konfigurationsändringar som formatsträngen gör.
 
@@ -676,6 +682,7 @@ Du kan ange höjden på det redigerbara området som visas i komponentdialogruta
    * **Namn** `height`
    * **Typ** `Long`
    * **Ange höjden** för redigeringsytan i pixlar.
+
    >[!NOTE]
    Detta ändrar inte höjden på dialogrutans fönster.
 
@@ -695,11 +702,13 @@ Om du vill konfigurera hur länkar läggs till i AEM från ett annat program def
 
    * **Namn** `htmlRules`
    * **Typ** `nt:unstructured`
+
    >[!NOTE]
    Noden har `../items/text` egenskapen:
    * **Namn** `xtype`
    * **Typ** `String`
    * **Värde** `richtext`
+
    Platsen för `../items/text` noden kan variera beroende på dialogstrukturen. två exempel:
    * `/apps/myProject>/components/text/dialog/items/text`
    * `/apps/<myProject>/components/text/dialog/items/panel/items/text`
@@ -736,6 +745,7 @@ Om du vill konfigurera hur länkar läggs till i AEM från ett annat program def
 
       * **Namn** `targetConfig`
       * **Typ** `nt:unstructured`
+
       På noden `targetConfig`: definiera de egenskaper som krävs:
 
       * Ange målläge:
