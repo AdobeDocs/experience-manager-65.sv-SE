@@ -1,11 +1,11 @@
 ---
 title: Redigera eller lägga till metadata
-description: Läs om metadata för resurser i [!DNL Adobe Experience Manager Assets] och olika sätt att redigera metadata för resurser.
+description: Lär dig mer om metadata för resurser [!DNL Adobe Experience Manager Assets] på olika sätt där du kan redigera metadata för resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5d66bf75a6751e41170e6297d26116ad33c2df44
+source-git-commit: 4748eed3ce484e8446b641ccbc7b5d76cb66f428
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '424'
 ht-degree: 1%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 1%
 
 # Redigera eller lägga till metadata {#how-to-edit-or-add-metadata}
 
-Metadata är ytterligare information om resursen som kan sökas igenom. Den extraheras automatiskt när du överför en bild. Du kan redigera befintliga metadata eller lägga till nya metadataegenskaper i befintliga fält (till exempel när ett metadatafält är tomt).
+Metadata är ytterligare information om resursen som kan sökas igenom. Den extraheras automatiskt när du överför en bild. Du kan redigera befintliga metadata eller lägga till nya metadataegenskaper i befintliga fält, till exempel när ett metadatafält är tomt.
 
-Eftersom organisationer behöver styrda och tillförlitliga metadata-ordlistor går det inte att lägga till nya metadataegenskaper på begäran [!DNL Experience Manager Assets] . Även om författare inte kan lägga till nya metadatafält för resurser kan utvecklare göra det. Se [Skapa metadataegenskap för resurser](meta-edit.md#editing-metadata-schema).
+Organisationer behöver kontrollerade och tillförlitliga metadata-språk. Det går alltså [!DNL Experience Manager Assets] inte att lägga till nya metadataegenskaper på begäran. Utvecklare och inte författare kan lägga till nya metadatafält för resurser. Se [Skapa metadataegenskap för resurser](meta-edit.md#editing-metadata-schema).
 
 ## Redigera metadata för en resurs {#editing-metadata-for-an-asset}
 
@@ -25,10 +25,11 @@ Så här redigerar du metadata:
 
    * I [!DNL Assets] gränssnittet markerar du resursen och klickar på **[!UICONTROL View Properties]** i verktygsfältet.
    * Välj snabbåtgärden från miniatyrbilden av resursen **[!UICONTROL View Properties]** .
-   * Klicka på **[!UICONTROL View Properties]** chlimage_1-168 ![](assets/chlimage_1-168.png) i verktygsfältet på resurssidan.
+   * På sidan Resurser klickar du på ikonen **[!UICONTROL View Properties]** ![](assets/do-not-localize/info-circle-icon.png) Resurser i verktygsfältet.
+
    Resurssidan visar alla metadata för resursen. Metadata extraheras när resursen överförs (hämtas) till [!DNL Experience Manager].
 
-   ![välj resursegenskaper för att visa metadata](assets/asset-metadata.png)
+   ![Välj Egenskaper för en resurs för att visa dess metadata](assets/asset-metadata.png)
 
    *Bild: Redigera eller lägga till metadata på[!UICONTROL Properties]resurssidan.*
 
@@ -50,8 +51,14 @@ Mer information finns i [Redigera schemaformulär](metadata-schemas.md#edit-meta
 
 Du kan lägga till egna namnutrymmen i [!DNL Experience Manager]. Precis som det finns fördefinierade namnutrymmen som `cq`, `jcr`och `sling`kan du ha ett namnutrymme för databasens metadata och XML-bearbetning.
 
-1. Gå till administrationssidan för nodtypen `https:[aem_server]:[port]/crx/explorer/nodetypes/index.jsp`.
-1. Klicka **[!UICONTROL Namespaces]** överst på sidan. Namnutrymmesadministrationssidan visas i ett fönster.
+1. Gå till administrationssidan för nodtypen `https://[aem_server]:[port]/crx/explorer/nodetypes/index.jsp`.
+1. Du öppnar sidan för namnutrymmesadministration genom att klicka på **[!UICONTROL Namespaces]** överst på sidan.
+1. Om du vill lägga till ett namnutrymme klickar du **[!UICONTROL New]** längst ned på sidan.
+1. Ange ett anpassat namnutrymme i XML-namnutrymmeskonventionen. Ange ID:t i form av en URI och ett associerat prefix för ID:t. Klicka på **[!UICONTROL Save]**.
 
-1. Klicka **[!UICONTROL New]** längst ned om du vill lägga till ett namnutrymme.
-1. Ange ett anpassat namnutrymme i XML-namnutrymmeskonventionen. Ange ID:t i form av en URI och ett associerat prefix för id:t. Klicka på **[!UICONTROL Save]**.
+>[!MORELIKETHIS]
+>
+>* [Om metadata och dess behov i Assets](metadata.md)
+>* [XMP-metadata](xmp.md)
+>* [Referens för metadatamappningar](meta-ref.md)
+
