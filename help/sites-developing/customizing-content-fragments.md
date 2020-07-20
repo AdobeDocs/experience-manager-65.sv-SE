@@ -50,6 +50,7 @@ Beroende på fragmenttypen används även modeller eller mallar:
    * Ett fragment refererar till modellen. så ändringar i modellen kan/kommer att påverka beroende fragment.
    * Modeller är inbyggda i datatyper.
    * Funktioner för att lägga till nya varianter, osv., måste uppdatera fragmentet därefter.
+
    >[!CAUTION]
    >
    >Alla ändringar i en befintlig innehållsfragmentmodell kan påverka beroende fragment. detta kan leda till egenskaper som är överblivna i dessa fragment.
@@ -79,7 +80,7 @@ Innehållsfragment med strukturerat innehåll (dvs. baserat på en innehållsfra
 
 * Allt innehåll lagras under resursens `jcr:content/data` nod:
 
-   * Elementdata lagras under huvudundernoden:
+   * Elementdata lagras under den överordnad undernoden:
       `jcr:content/data/master`
 
    * Variationer lagras under en undernod som har variantens namn:
@@ -88,7 +89,8 @@ t.ex. `jcr:content/data/myvariation`
    * Data för varje element lagras i respektive undernod som en egenskap med elementnamnet:
 Elementets innehåll `text` lagras som egenskap `text` på `jcr:content/data/master`
 
-* Metadata och tillhörande innehåll lagras nedan `jcr:content/metadata`förutom rubriken och beskrivningen, som inte betraktas som traditionella metadata och lagras på `jcr:content`
+* Metadata och tillhörande innehåll lagras nedan `jcr:content/metadata`förutom rubriken och beskrivningen, som inte betraktas som traditionella metadata och lagras på 
+`jcr:content`
 
 #### Mappa enkla innehållsfragment till resurser {#mapping-simple-content-fragments-to-assets}
 
@@ -158,7 +160,8 @@ Serverdelsimplementeringen av innehållsfragment ansvarar till exempel för att 
 
 Parametrarna för detta kan konfigureras i [webbkonsolen](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)för OSGi-paketet **Content Fragment Component Configuration**.
 
-* **Resurstyper** En lista med `sling:resourceTypes` kan tillhandahållas för att definiera komponenter som används för att återge innehållsfragment och var bakgrundsbearbetningen ska användas.
+* **Resurstyper** En lista med 
+`sling:resourceTypes` kan anges för att definiera komponenter som används för att återge innehållsfragment och var bakgrundsbearbetningen ska användas.
 
 * **Referensegenskaper** En lista med egenskaper kan konfigureras för att ange var referensen till fragmentet lagras för respektive komponent.
 
@@ -262,6 +265,7 @@ Följande tre gränssnitt kan fungera som startpunkter:
 
    * antingen en modell för innehållsfragment eller en mall för innehållsfragment från vilken ett innehållsfragment ska skapas,
    * och (efter det att fragmentet har skapats) strukturinformationen
+
    Denna information kan omfatta:
 
    * Få tillgång till grundläggande data (titel, beskrivning)
@@ -276,6 +280,7 @@ Följande tre gränssnitt kan fungera som startpunkter:
       * Hämta strukturinformation för en viss variation
       * Åtkomst till variantmallen (se `VariationTemplate`)
    * Hämta initialt associerat innehåll
+
    Gränssnitt som representerar viktig information:
 
    * `ElementTemplate`
@@ -318,6 +323,7 @@ Följande tre gränssnitt kan fungera som startpunkter:
       * Lägg till samlingar
       * Ta bort samlingar
    * Åtkomst till fragmentets modell eller mall
+
    Gränssnitt som representerar de primära elementen i ett fragment är:
 
    * **Innehållselement** ([ContentElement](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/dam/cfm/ContentElement.html))
@@ -337,6 +343,7 @@ Följande tre gränssnitt kan fungera som startpunkter:
       * Hämta grundläggande data (namn, titel, beskrivning)
       * Hämta/ange innehåll
       * Enkel synkronisering, baserat på den senast ändrade informationen
+
    Alla tre gränssnitten (, `ContentFragment`, `ContentElement`, `ContentVariation`) utökar `Versionable` gränssnittet, med nya versionshanteringsfunktioner som krävs för innehållsfragment:
 
    * Skapa en ny version av elementet
@@ -527,7 +534,7 @@ Mer information finns i Mallar [för](/help/sites-developing/content-fragment-te
 
 ## Komponenter för sidredigering {#components-for-page-authoring}
 
-Mer information finns på
+Mer information finns i
 
 * [Kärnkomponenter - Innehållsfragmentkomponent](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html) (rekommenderas)
 * [Content Fragment Components - Components for Page Authoring](/help/sites-developing/components-content-fragments.md#components-for-page-authoring)
