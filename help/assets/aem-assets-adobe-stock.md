@@ -1,12 +1,12 @@
 ---
-title: Hantera [!DNL Adobe Stock]-resurser i [!DNL Adobe Experience Manager Assets].
-description: Sök, hämta, licensiera och hantera [!DNL Adobe Stock]-resurser inifrån [!DNL Adobe Experience Manager]. Använd de licensierade mediefilerna som andra digitala resurser.
+title: Hantera [!DNL Adobe Stock] resurser i [!DNL Adobe Experience Manager Assets].
+description: Sök, hämta, licensiera och [!DNL Adobe Stock] hantera resurser inifrån [!DNL Adobe Experience Manager]. Använd de licensierade mediefilerna som andra digitala resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 376940612066123a8f84fe6c30ff3002cda08079
+source-git-commit: 2701c64b3e049ac423ef74147930de2da78a3d81
 workflow-type: tm+mt
-source-wordcount: '1056'
-ht-degree: 3%
+source-wordcount: '1030'
+ht-degree: 4%
 
 ---
 
@@ -19,7 +19,7 @@ Organisationer kan integrera sin [!DNL Adobe Stock] Enterprise-plan med [!DNL Ex
 
 ## Förutsättningar {#prerequisites}
 
-Integreringen kräver en Adobe Stock-plan [för](https://stockenterprise.adobe.com/) företag och [!DNL Experience Manager] 6.5 eller senare. Mer information om [!DNL Experience Manager] 6.5-Service Pack finns i [versionsinformationen](/help/release-notes/sp-release-notes.md).
+Integreringen kräver en Adobe Stock-plan [för](https://stockenterprise.adobe.com/)företag.
 
 ## Integrera [!DNL Experience Manager] och [!DNL Adobe Stock] {#integrate-aem-and-adobe-stock}
 
