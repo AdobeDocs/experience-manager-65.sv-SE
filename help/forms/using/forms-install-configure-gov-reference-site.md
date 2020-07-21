@@ -8,9 +8,9 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 419ca05287368235b292e1133c35c2680e6022fc
+source-git-commit: a0717f5bf9ceb2e6def7feb37de4aa114de48938
 workflow-type: tm+mt
-source-wordcount: '5004'
+source-wordcount: '5020'
 ht-degree: 1%
 
 ---
@@ -81,19 +81,16 @@ De tillgångar som ingår i detta paket omfattar:
 
 Det här avsnittet innehåller information om hur du installerar demopaketet.
 
-### Från paketresurs {#from-package-share}
+### Från programvarudistribution {#from-software-distribution}
 
-1. Gå till *https://&lt;aemserver>:&lt;port>/crx/packageshare/*
-
-   Du kan också klicka på Distribution i AEM och navigera till ikonen Paketdelning.
-
-   ![Ikon för paketdelning](assets/package_share_icon.jpg)
-
-1. Logga in med Adobe ID.
-1. Sök efter och hitta paketet **we-gov-forms.pkg.all-&lt;version>** .
-1. Välj&quot;Ladda ned&quot; och acceptera villkoren.
-1. När du har hämtat paketet väljer du alternativet &quot;Hämtad&quot; för att leta reda på paketet i pakethanteraren.
-1. Välj alternativet Install för att installera paketet.
+1. Öppna [programvarudistribution](https://experience.adobe.com/downloads). Du måste ha ett Adobe ID för att kunna logga in på Software Distribution.
+1. Tryck **[!UICONTROL Adobe Experience Manager]** på rubrikmenyn.
+1. I **[!UICONTROL Filters]** avsnittet:
+   1. Välj **[!UICONTROL Forms]** i **[!UICONTROL Solution]** listrutan.
+   2. Välj version och typ för paketet. Du kan också använda alternativet **[!UICONTROL Search Downloads]** för att filtrera resultaten.
+1. Tryck på paketnamnet **we-gov-forms.pkg.all-&lt;version>.zip** , markera **[!UICONTROL Accept EULA Terms]** och tryck **[!UICONTROL Download]**.
+1. Öppna [Pakethanteraren](https://docs.adobe.com/content/help/en/experience-manager-65/administering/contentmanagement/package-manager.html) och klicka **[!UICONTROL Upload Package]** för att överföra paketet.
+1. Markera paketet och klicka på **[!UICONTROL Install]**.
 
    ![web gov-formulärpaket](assets/wegov_forms_package.jpg)
 
@@ -796,7 +793,7 @@ Det här avsnittet innehåller information om demonstrationsfunktioner och desig
 
 För att kunna utföra tillgänglighetstestning först måste du installera Chrome-plugin-programmet, [här](https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en).
 
-När den är installerad läser du in sidan som du vill testa i webbläsaren Chrome (Obs! Om du har flera flikar öppna kan det påverka poängen, du bör bara ha en flik öppen). När sidan har lästs in **högerklickar du** på sidan och väljer fliken **Granskningar** . Det finns utvecklare som kan välja vilken typ av granskning som ska utföras av plugin-programmet för tillgänglighet. När alla önskade alternativ har valts kan användaren välja knappen Generera rapport. Detta genererar ett PDF-dokument som visar den övergripande tillgänglighetsgraderingen och vad som kan användas för att öka tillgänglighetsgraderingen generellt.
+När den är installerad läser du in sidan som du vill testa i webbläsaren Chrome (Obs! Om du har flera flikar öppna kan det påverka poängen, du bör bara ha en flik öppen). När sidan har lästs in **högerklickar du** på sidan och väljer fliken **Granskningar** . Utvecklarna kan välja vilken typ av granskning som ska utföras av plugin-programmet för tillgänglighet. När alla önskade alternativ har valts kan användaren välja knappen Generera rapport. Detta genererar ett PDF-dokument som visar den övergripande tillgänglighetsgraderingen och vad som kan användas för att öka tillgänglighetsgraderingen generellt.
 
 När rapporten har körts kan användarna förvänta sig följande:
 
