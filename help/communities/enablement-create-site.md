@@ -154,7 +154,8 @@ I [översättningsinställningarna](/help/communities/sites-console.md#translati
 
 För en aktiveringscommunity måste du identifiera en eller flera aktiveringsansvariga i communityn.
 
-* **Aktivitetshanterare**(krävs) Medlemmar i `Community Enablement Managers` gruppen kan väljas för att hantera den här communitywebbplatsen.
+* **Aktivera hanterare**(krävs) Medlemmar i 
+`Community Enablement Managers` gruppen är tillgänglig för att väljas för att hantera den här communitywebbplatsen.
 
    * Typ `s`
    * Välj `Sirius Nilson`
@@ -295,6 +296,7 @@ Så här kommer du igång:
       * **Namnsling** :match
       * **Type** String
       * **Värde** localhost.4503/$
+
    (måste sluta med tecknet &#39;$&#39;)
 
    * Lägg till egenskap
