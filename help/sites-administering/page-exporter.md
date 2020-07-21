@@ -1,25 +1,26 @@
 ---
 title: Sidexporteraren
-seo-title: Sidexporteraren
 description: Lär dig hur du använder AEM Page Exporter.
-seo-description: Lär dig hur du använder AEM Page Exporter.
-uuid: 2ca2b8f1-c723-4e6b-8c3d-f5886cd0d3f1
-contentOwner: Chiradeep Majumdar
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: content
-content-type: reference
-discoiquuid: 6ab07b5b-ee37-4029-95da-be2031779107
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 000666e0c3f05635a9469d3571a10c67b3b21613
+workflow-type: tm+mt
+source-wordcount: '1071'
+ht-degree: 0%
 
 ---
 
 
 # Sidexporteraren{#the-page-exporter}
 
-Med AEM kan du exportera en sida som en komplett webbsida med bilder, .js- och .css-filer.
+Med AEM kan du exportera en sida som en komplett webbsida, inklusive bilder `.js` och `.css` filer.
 
-När exporten är konfigurerad begär du bara en sida i webbläsaren genom att ersätta `html` med `export.zip` i URL:en så får du en ZIP-filnedladdning som innehåller den återgivna sidan i html-format och de refererade resurserna. Alla sökvägar på sidan, t.ex. sökvägar till bilder, skrivs om så att de pekar antingen på filerna som finns i zip-filen eller på resurserna på servern.
+När konfigurationen är klar begär du en sidexport från webbläsaren genom att ersätta `html` med `export.zip` i URL:en. Detta genererar en arkivfil (ZIP) som innehåller den återgivna sidan i html-format, tillsammans med de refererade resurserna. Alla sökvägar på sidan (till exempel sökvägar till bilder) skrivs om så att de pekar på antingen filerna som finns i arkivet eller på resurserna på servern. Arkivfilen (ZIP) kan sedan laddas ned från webbläsaren.
+
+>!![NOTE]
+Beroende på vilken webbläsare du använder och vilka inställningar du har blir hämtningen antingen:
+* en arkivfil (`<page-name>.export.zip`)
+* en mapp (`<page-name>`); arkivfilen har redan utökats
+
 
 ## Exportera en sida {#exporting-a-page}
 
@@ -27,110 +28,156 @@ I följande steg beskrivs hur du exporterar en sida och förutsätter att det fi
 
 Så här exporterar du en sida:
 
-1. Öppna sidan i webbläsaren. Exempel:
-1. `http://localhost:4502/content/geometrixx/en/products/triangle.html`
-1. Öppna dialogrutan för sidegenskaper, välj fliken **Avancerat** och expandera fältuppsättningen **Exportera** .
+1. Navigera till önskad sida, markera sidan och öppna sedan dialogrutan **Egenskaper** .
 
-1. Klicka på förstoringsikonen och välj en konfigurationsmall. Välj **geometrixx** -mallen som standard för Geometrixx-platsen. Click **OK**.
+1. Välj fliken **Avancerat** .
 
-1. Klicka på **OK** för att stänga dialogrutan för sidegenskaper.
-1. Begär sidan genom att ersätta den `html` med `export.zip` i URL:en.
+1. Expandera fältet **Exportera** för att välja en konfigurationsmall.
+Välj önskad mall för platsen och bekräfta med **OK**.
 
-1. Hämta `<page-name>.export.zip` filen till filsystemet.
+1. Välj **Spara och stäng** för att stänga dialogrutan för sidegenskaper.
 
-1. Zippa upp filen i filsystemet:
+1. Begär att sidan ska exporteras och ersätt suffixet `html` med `export.zip` i URL:en.
 
-   * HTML-sidfilen ( `<page-name>.html`) är tillgänglig nedan `<unzip-dir>/<page-path>`
-   * andra resurser (.js-filer, .css-filer, bilder, ...) finns enligt inställningarna i exportmallen. I det här exemplet visas några resurser nedan `<unzip-dir>/etc`och några nedan `<unzip-dir>/<page-path>`.
+   Till exempel:
+   * localhost:4502/content/we-retail/language-masters/en.html
 
-1. Öppna HTML-sidfilen ( `<unzip-dir>/<page-path>.html`) i webbläsaren för att kontrollera återgivningen.
+   Används via:
+   * localhost:4502/content/we-retail/language-masters/en.export.zip
+
+
+1. Hämta arkivfilen till filsystemet.
+
+1. Zippa upp filen i filsystemet om det behövs. När den är utökad finns det en mapp med samma namn som den markerade sidan. Mappen innehåller:
+
+   * undermappen `content`, som är roten till en serie undermappar som återspeglar sökvägen till sidan i databasen
+
+   * i den här strukturen finns HTML-filen för den valda sidan (`<page-name>.html`)
+
+   * andra resurser (`.js` filer, `.css` filer, bilder etc.) är placerade enligt inställningarna i exportmallen
+
+1. Öppna HTML-sidfilen (`<unzip-dir>/<path>/<to>/<page>/<page-path>.html`) i webbläsaren för att kontrollera återgivningen.
 
 ## Skapa en sidexportkonfiguration för platsen {#creating-a-page-exporter-configuration-for-your-site}
 
-Sidexporteraren baseras på ramverket för innehållssynkronisering. De konfigurationer som är tillgängliga i dialogrutan för sidegenskaper är konfigurationsmallar. De definierar alla nödvändiga beroenden för en sida. När en sidexport aktiveras används konfigurationsmallen och både sidsökvägen och designsökvägen tillämpas dynamiskt på konfigurationen. ZIP-filen skapas sedan med standardfunktionen för innehållssynkronisering.
+Sidexporteraren baseras på ramverket för innehållssynkronisering. De konfigurationer som är tillgängliga i dialogrutan **Sidegenskaper** är exportmallar som definierar nödvändiga beroenden för en sida.
 
-AEM bäddar in några mallar, bland annat:
+När en sidexport aktiveras refereras exportmallen och både sidsökvägen och designsökvägen tillämpas dynamiskt. ZIP-filen skapas sedan med standardfunktionen för innehållssynkronisering.
 
-* En standardversion på `/etc/contentsync/templates/default`. Den här mallen:
+AEM bäddar in en standardmall under `/etc/contentsync/templates/default`.
 
-   * Är reservmallen när ingen konfigurationsmall hittas i databasen.
-   * Kan fungera som bas för en ny konfigurationsmall.
+* Den här mallen är reservmallen när ingen konfigurationsmall hittas i databasen.
 
-* En som är dedikerad till **Geometrixx** -webbplatsen, på `/etc/contentsync/templates/geometrixx`. Den här mallen kan användas som exempel för att skapa en ny mall.
+* I mallen `default` visas hur en sidexport kan konfigureras så att den kan fungera som bas för en ny konfigurationsmall.
 
-Så här skapar du en konfigurationsmall för sidexporterare:
+* Om du vill visa nodstrukturen för mallen i webbläsaren som JSON-format begär du följande URL:
+   `http://localhost:4502/etc/contentsync/templates/default.json`
+
+Det enklaste sättet att skapa en ny sidexportmall är att:
+
+* kopiera `default` mallen,
+
+* tilldela ett nytt namn som passar din webbplats,
+
+* gör sedan nödvändiga uppdateringar.
+
+Så här skapar du en helt ny mall:
 
 1. Skapa en nod nedan i **CRXDE Lite**`/etc/contentsync/templates`:
 
-   * Namn:t.ex. `mysite`. Namnet visas i dialogrutan för sidegenskaper när du väljer sidexportmall.
-   * Typ: `nt:unstructured`
+   * `Name`: ett namn som passar er plats, till exempel `<mysite>`. Namnet visas i dialogrutan för sidegenskaper när du väljer sidexportmall.
+
+   * `Type`: `nt:unstructured`
 
 1. Under mallnoden, som anropas här, `mysite`skapar du en nodstruktur med hjälp av konfigurationsnoderna som beskrivs nedan.
 
+## Aktivera en sidexportmall för dina sidor {#activating-a-page-exporter-configuration-for-your-pages}
+
+När mallen har konfigurerats måste du göra den tillgänglig:
+
+1. Gå till önskad sida i CRXDE.
+
+1. Skapa egenskapen på `jcr:content` noden:
+   * `Name`: `cq:exportTemplate`
+   * `Type`: `String`
+   * `Value`: Sökväg till mallen. till exempel: `/etc/contentsync/templates/mysite`
+
 ### Konfigurationsnoder för sidexport {#page-exporter-configuration-nodes}
 
-Konfigurationsmallen består av en nodstruktur. Varje nod har en `type` egenskap som definierar en specifik åtgärd när zip-filen skapas. Mer information om type-egenskapen finns i avsnittet Översikt över konfigurationstyper på ramverkssidan för innehållssynkronisering.
+Mallen består av en nodstruktur. Varje nod har en `type` egenskap som definierar en specifik åtgärd när zip-filen skapas. Mer information om type-egenskapen finns i avsnittet Översikt över konfigurationstyper på ramverkssidan för innehållssynkronisering.
 
 Följande noder kan användas för att skapa en exportkonfigurationsmall:
 
-**sidnod** Sidnoden används för att kopiera sidans HTML-kod till zip-filen. Den har följande egenskaper:
+* `page`
+Sidnoden används för att kopiera sidans HTML-kod till zip-filen. Den har följande egenskaper:
 
-* Är en obligatorisk nod.
-* Finns nedan `/etc/contentsync/templates/<sitename>`.
-* Det heter `page`.
-* Dess nodtyp är `nt:unstructured`
+   * Är en obligatorisk nod.
+   * Finns nedan `/etc/contentsync/templates/<sitename>`.
+   * Det heter `page`.
+   * Dess nodtyp är `nt:unstructured`
 
-Noden har `page` följande egenskaper:
+   Noden har `page` följande egenskaper:
 
-* En `type` egenskapsuppsättning med värdet `pages`.
+   * En `type` egenskapsuppsättning med värdet `pages`.
 
-* Den har ingen `path` egenskap eftersom den aktuella sidsökvägen kopieras dynamiskt till konfigurationen.
+   * Den har ingen `path` egenskap eftersom den aktuella sidsökvägen kopieras dynamiskt till konfigurationen.
 
-* De andra egenskaperna beskrivs i avsnittet Översikt över konfigurationstyper i ramverket för innehållssynkronisering.
+   * De andra egenskaperna beskrivs i avsnittet Översikt över konfigurationstyper i ramverket för innehållssynkronisering.
 
-**omwrite node** The rewrite node define how the links are rewritten in the exported page. De omskrivna länkarna kan antingen peka på filerna som finns i ZIP-filen eller på resurserna på servern.
 
-En fullständig beskrivning av `rewrite` noden finns på sidan Innehållssynkronisering.
+* `rewrite`
+Noden rewrite definierar hur länkarna skrivs om på den exporterade sidan. De omskrivna länkarna kan antingen peka på filerna som finns i ZIP-filen eller på resurserna på servern.
 
-**designnod** Designnoden används för att kopiera designen som används för den exporterade sidan. Den har följande egenskaper:
+   En fullständig beskrivning av `rewrite` noden finns på sidan Innehållssynkronisering.
 
-* Är valfritt.
-* Finns nedan `/etc/contentsync/templates/<sitename>`.
-* Det heter `design`.
-* Dess nodtyp är `nt:unstructured`.
+* `design`
+Designnoden används för att kopiera designen som används för den exporterade sidan. Den har följande egenskaper:
 
-Noden har `design` följande egenskaper:
+   * Är valfritt.
+   * Finns nedan `/etc/contentsync/templates/<sitename>`.
+   * Det heter `design`.
+   * Dess nodtyp är `nt:unstructured`.
 
-* En `type` egenskap som är inställd på värdet `copy`.
+   Noden har `design` följande egenskaper:
 
-* Den har ingen `path` egenskap eftersom den aktuella sidsökvägen kopieras dynamiskt till konfigurationen.
+   * En `type` egenskap som är inställd på värdet `copy`.
 
-**generisk nod** En generisk nod används för att kopiera resurser som clientlibs- .js- eller .css-filer till zip-filen. Den har följande egenskaper:
+   * Den har ingen `path` egenskap eftersom den aktuella sidsökvägen kopieras dynamiskt till konfigurationen.
 
-* Är valfritt.
-* Finns nedan `/etc/contentsync/templates/<sitename>`.
-* Har inget specifikt namn.
-* Dess nodtyp är `nt:unstructured`.
-* Har en `type` egenskap och alla `type` relaterade egenskaper enligt definitionen i avsnittet Översikt över konfigurationstyper i ramverket för innehållssynkronisering.
 
-Följande konfigurationsnod kopierar till exempel geometrixx clientlibs .js-filer till zip-filen:
+* `generic`
+En allmän nod används för att kopiera resurser som .js- eller .css-filer med klienten till zip-filen. Den har följande egenskaper:
 
-```xml
-"geometrixx.clientlibs.js": {
-    "extension": "js",
-    "type": "clientlib",
-    "path": "/etc/designs/geometrixx/clientlibs",
-    "jcr:primaryType": "nt:unstructured"
-}
-```
+   * Är valfritt.
 
-Konfigurationsmallen för export av **Geometrixx** -sidor visar hur en sidexport kan konfigureras. Om du vill visa nodstrukturen för mallen i webbläsaren som json-format begär du följande URL:
+   * Finns nedan `/etc/contentsync/templates/<sitename>`.
 
-`http://localhost:4502/etc/contentsync/templates/geometrixx.-1.json`
+   * Har inget specifikt namn.
+
+   * Dess nodtyp är `nt:unstructured`.
+
+   * Har en `type` egenskap och alla `type` relaterade egenskaper enligt definitionen i avsnittet Översikt över konfigurationstyper i ramverket för innehållssynkronisering.
+
+   Följande konfigurationsnod kopierar till exempel `mysite.clientlibs.js` filerna till zip-filen:
+
+   ```xml
+   "mysite.clientlibs.js": {
+       "extension": "js",
+       "type": "clientlib",
+       "path": "/etc/designs/mysite/clientlibs",
+       "jcr:primaryType": "nt:unstructured"
+   }
+   ```
 
 **Implementera en anpassad konfiguration**
 
-Som du kanske har märkt i nodstrukturen har **mallen för konfiguration av sidexport Geometrixx** en `logo` nod med en `type` egenskap som är inställd på `image`. Detta är en speciell konfigurationstyp som har skapats för att kopiera bildlogotypen till zip-filen. För att uppfylla vissa specifika krav kan du behöva implementera en anpassad `type` egenskap: Mer information finns i avsnittet Implementera en anpassad uppdateringshanterare på sidan Innehållssynkronisering.
+Anpassade konfigurationer är också möjliga.
+
+<!--
+As you may have noticed in the node structure, the **Geometrixx** page export configuration template has a `logo` node with a `type` property set to `image`. This is a special configuration type that has been created to copy the image logo to the zip file. 
+-->
+
+För att uppfylla vissa specifika krav kan du behöva implementera en anpassad `type` egenskap: Mer information finns i avsnittet Implementera en anpassad uppdateringshanterare på sidan Innehållssynkronisering.
 
 ## Programmatisk export av en sida {#programmatically-exporting-a-page}
 
