@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: dc0191d0-f181-4e1e-b3f4-73427aa22073
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9bd71115dac8109c9a47155ab60ac7573d88014c
+source-git-commit: 81707b4d57f7f15106459b91f95b1bc6ec333bf4
 workflow-type: tm+mt
 source-wordcount: '3221'
 ht-degree: 1%
@@ -237,7 +237,7 @@ Med komponenten Scene7 Image kan du lägga till funktionerna Scene7 i dina bilde
 
 ![chlimage_1-54](assets/chlimage_1-54.png)
 
-**Visningsförinställning** Välj en befintlig visningsförinställning i listrutan. Om den visningsförinställning som du söker efter inte visas kan du behöva göra den synlig. Se Hantera förinställningar för visningsprogram. Du kan inte välja en visningsförinställning om du använder en bildförinställning och vice versa.
+**Visningsförinställning** Välj en befintlig visningsförinställning i listrutan. Om den visningsförinställning som du söker efter inte visas kanske du måste göra den synlig. Se Hantera förinställningar för visningsprogram. Du kan inte välja en visningsförinställning om du använder en bildförinställning och vice versa.
 
 **Scene7 Configuration** Välj den Scene7-konfiguration som du vill använda för att hämta aktiva bildförinställningar från SPS.
 
@@ -336,10 +336,7 @@ Om du har flera konfigurationer visar AEM som standard [standardkonfigurationen]
 >* Resurser som finns i ad hoc-mappen visas inte i Scene7-innehållsläsaren.
 >* När [Säker förhandsvisning är aktiverat](/help/sites-administering/scene7.md#configuring-the-state-published-unpublished-of-assets-pushed-to-scene)visas både publicerade och opublicerade resurser på Scene7 i innehållsläsaren Scene7.
 >* Om du inte ser **Scene7** eller **S7** -ikonen som ett alternativ i webbläsaren måste du [konfigurera Scene7 så att det fungerar med AEM](/help/sites-administering/scene7.md).
-
-   >
-   >
-* För video har Scene7:s innehållsläsare stöd för:
+>* För video har Scene7:s innehållsläsare stöd för:
    >   * Adaptiva videouppsättningar: behållare för alla videoåtergivningar som behövs för sömlös uppspelning på flera skärmar
    >   * Enkel MP4-video
    >   * En F4V-video
