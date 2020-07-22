@@ -12,7 +12,10 @@ discoiquuid: d381ea40-fe49-4d32-bfad-1379c7a02aba
 docset: aem65
 pagetitle: Community Groups Console
 translation-type: tm+mt
-source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
+source-git-commit: ee0d4aa07db6f00409cace8664d02c545e7d6550
+workflow-type: tm+mt
+source-wordcount: '1676'
+ht-degree: 0%
 
 ---
 
@@ -57,13 +60,15 @@ Så här kommer du åt gruppkonsolen:
    * Strukturen på communitywebbplatsen måste innehålla en gruppfunktion.
    * Skärmbilderna kommer från självstudiekursen Komma igång när du har [skapat grupper vid publicering](/help/communities/published-site.md).
 
+   ![create-group](assets/create-group.png)
+
 * Öppna **gruppmappen** .
 
    När de öppnas visas alla befintliga grupper, oavsett om de har skapats vid författare eller publicering.
 
    Från den här gruppkonsolen går det att skapa nya grupper.
 
-   ![chlimage_1-200](assets/chlimage_1-200.png)
+   ![create-new-group](assets/create-new-group.png)
 
 * Klicka på knappen **Skapa grupp** .
 
@@ -106,7 +111,9 @@ Standardroten är den överordnade platsen, men roten kan flyttas till valfri pl
 
 ### SAMHÄLLSGRUPPTEMA {#community-group-theme}
 
-Ramverket använder [Twitter Bootstrap](https://twitterbootstrap.org/) för att ge webbplatsen en responsiv, flexibel design. Ett av många förinlästa Bootstrap-teman kan väljas för att formatera den valda communitygruppsmallen, eller så kan ett Bootstrap-tema överföras.
+![communitygrouptema](assets/communitygrouptheme.png)
+
+Ramverket använder [Twitter Bootstrap](https://twitterbootstrap.org/) för att ge webbplatsen en responsiv, flexibel design. Ett av de många förinlästa Bootstrap-temana kan väljas för att formatera den valda communitygruppsmallen, eller så kan ett Bootstrap-tema överföras.
 
 När du väljer det här alternativet överlagras temat med en ogenomskinlig blå bockmarkering.
 
@@ -116,7 +123,7 @@ När communitywebbplatsen har publicerats går det att [redigera egenskaperna](#
 
 ### GEMENSKAPSGRUPPENS VARUMÄRKE {#community-group-branding}
 
-![chlimage_1-201](assets/chlimage_1-201.png)
+![community-group-branding](assets/community-group-branding.png)
 
 Webbplatsmärkning är en bild som visas som en rubrik högst upp på varje sida. Det går att visa en banderoll för gruppen som skiljer sig från andra webbplatssidor.
 
@@ -155,7 +162,7 @@ En användare U1 kan därför vara administratör i en grupp G1 och en vanlig an
 
 Med inställningen för medlemskap kan du välja ett av tre sätt att skydda en community-grupp.
 
-![chlimage_1-202](assets/chlimage_1-202.png)
+![community-group-membership](assets/community-group-membership.png)
 
 * **Valfritt medlemskap**
 
@@ -171,7 +178,7 @@ Med inställningen för medlemskap kan du välja ett av tre sätt att skydda en 
 
 **MINIATYRBILD**
 
-![chlimage_1-203](assets/chlimage_1-203.png)
+![community-group-thumbnail](assets/community-group-thumbnail.png)
 
 Miniatyrbilden är en bild som ska visas för gruppen vid författare och publicering.
 
@@ -179,13 +186,13 @@ Den optimala storleken för en gruppbild är 170 x 90 pixlar i ett bildformat so
 
 Om ingen bild läggs till visas en standardbild.
 
-![chlimage_1-204](assets/chlimage_1-204.png)
+![miniatyrbild](assets/thumbnail-image.png)
 
 ### Steg 4: Skapa grupp {#step-create-group}
 
-![chlimage_1-205](assets/chlimage_1-205.png)
+![community-create-group](assets/community-create-group.png)
 
-Om du behöver göra några justeringar använder du **Bakåt **knappen för att göra dem.
+Om det behövs justeringar använder du knappen **Bakåt** för att göra dem.
 
 När **Skapa** har valts och startats kan processen att skapa gruppen inte avbrytas.
 
@@ -200,7 +207,7 @@ När processen är klar visas kortet för den nya undercommunitywebbplatsen (gru
 
 ## Författargruppinnehåll {#author-group-content}
 
-![chlimage_1-206](assets/chlimage_1-206.png)
+![öppen webbplats](assets/open-site.png)
 
 Sidinnehållet i en grupp kan redigeras med samma verktyg som andra AEM-sidor. Om du vill öppna gruppen för redigering väljer du ikonen Öppna plats som visas när du håller pekaren över gruppkortet.
 
@@ -208,11 +215,11 @@ Sidinnehållet i en grupp kan redigeras med samma verktyg som andra AEM-sidor. O
 
 Egenskaperna för en befintlig undergruppsplats, som anges när en community-grupp skapas, kan ändras genom att välja ikonen Redigera plats, som visas när du hovrar över gruppkortet:
 
-![chlimage_1-207](assets/chlimage_1-207.png)
+![edit-site](assets/edit-site.png)
 
 Information om följande egenskaper matchar beskrivningarna i avsnittet Skapa [grupp](#group-creation) . Alla kapslade grupper kan ändras, oavsett om de har skapats i publiceringsmiljön eller författarmiljön.
 
-![chlimage_1-208](assets/chlimage_1-208.png)
+![community-group-basic](assets/community-group-basic.png)
 
 ### Ändra grundläggande {#modify-basic}
 
@@ -235,7 +242,7 @@ STRUKTURpanelen gör det möjligt att ändra den struktur som ursprungligen skap
 * En instans av en communityfunktion i webbplatsstrukturen:
 
    * **`Gear icon`**
-Redigera inställningar, inklusive visningsrubrik och URL-namn*och [behöriga medlemsgrupper](/help/communities/users.md#privilegedmembersgroups).
+Redigera inställningar, inklusive visningsrubrik, URL och [behöriga medlemsgrupper](/help/communities/users.md#privilegedmembersgroups).
 
    * **`Trashcan icon`**
 Ta bort funktioner från platsstrukturen.
@@ -259,7 +266,7 @@ Ta bort funktioner från platsstrukturen.
 
 **Exempel: Lägga till en kalenderfunktion i en undergruppsstruktur**
 
-![chlimage_1-209](assets/chlimage_1-209.png)
+![community-group-add-calendar](assets/community-group-add-calendar.png)
 
 ### Ändra design {#modify-design}
 
@@ -284,13 +291,13 @@ På panelen [MINIATYRBILD](#thumbnail) kan en bild överföras för att represen
 
 ## Publicera gruppen {#publish-the-group}
 
-![chlimage_1-210](assets/chlimage_1-210.png)
+![publicera-webbplats](assets/publish-site.png)
 
 När en communitygrupp har skapats eller ändrats kan du publicera (aktivera) gruppen genom att välja `Publish Site` -ikonen.
 
 När gruppen har publicerats visas ett meddelande:
 
-![chlimage_1-211](assets/chlimage_1-211.png)
+![grupppublicerad](assets/group-published.png)
 
 >[!CAUTION]
 >
@@ -301,7 +308,7 @@ När gruppen har publicerats visas ett meddelande:
 
 ## Ta bort gruppen {#delete-the-group}
 
-![ta bort ikon]()
+![ta bort ikon](assets/deleteicon.png)
 
 Ta bort en grupp från gruppkonsolen genom att markera ikonen Ta bort grupp, som visas när du håller muspekaren över gruppen.
 
