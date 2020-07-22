@@ -3,9 +3,9 @@ title: Resursmallar i [!DNL Adobe Experience Manager Assets].
 description: Lär dig mer om tillgångsmallar [!DNL Adobe Experience Manager Assets] och hur du använder tillgångsmallar för att skapa marknadsföringsmaterial.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
-source-wordcount: '1512'
+source-wordcount: '1513'
 ht-degree: 1%
 
 ---
@@ -165,9 +165,7 @@ Du kan redigera en sammanställning direkt när du har skapat den. Du kan också
 
    ![chlimage_1-120](assets/chlimage_1-325.png)
 
-1. From the [!UICONTROL Template Merge] page, click **[!UICONTROL Merge]**.
-
-   ![chlimage_1-121](assets/chlimage_1-326.png)
+1. På [!UICONTROL Template Merge] sidan klickar du på **[!UICONTROL Merge]** Lägg ![till resurser](assets/do-not-localize/assets_add_icon.png).
 
 1. Navigera till platsen för den säkerhet som du vill sammanfoga och klicka på miniatyrbilderna för den säkerhet som du vill sammanfoga för att markera dem.
 
