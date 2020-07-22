@@ -1,12 +1,12 @@
 ---
 title: Digital Rights Management i [!DNL Adobe Experience Manager Assets].
-description: Lär dig hur du hanterar förfallotillstånd för mediefiler och information om licensierade mediefiler i [!DNL Experience Manager].
+description: Lär dig hur du hanterar förfallotillstånd för mediefiler och information för licensierade mediefiler i [!DNL Experience Manager].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: ee54a3fa395e2c1ab4a5895a0bb8fc251d24a35a
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
-source-wordcount: '1353'
-ht-degree: 6%
+source-wordcount: '1347'
+ht-degree: 7%
 
 ---
 
@@ -108,10 +108,7 @@ Konsolen kan [!DNL Assets] visa olika lägen för resurser. Beroende på det akt
 
    ![chlimage_1-155](assets/chlimage_1-155.png)
 
-1. Klicka **[!UICONTROL Publish]** i verktygsfältet. Om du inte ser **Publicera** i verktygsfältet klickar du **[!UICONTROL More]** i verktygsfältet och letar upp **[!UICONTROL Publish]** alternativet.
-
-   ![chlimage_1-156](assets/chlimage_1-156.png)
-
+1. Klicka på **[!UICONTROL Publish]** i verktygsfältet. Om du inte ser **Publicera** i verktygsfältet klickar du **[!UICONTROL More]** i verktygsfältet och letar upp **[!UICONTROL Publish]** alternativet ![för](assets/do-not-localize/publish-globe.png) publicering.
 1. Välj **[!UICONTROL Publish]** på menyn och stäng sedan bekräftelsedialogrutan.
 1. Avsluta markeringsläget. Publiceringsstatusen för resursen visas längst ned på miniatyrbilden av resursen i kortvyn. I listvyn visar kolumnen Publicerad den tidpunkt då resursen publicerades.
 
@@ -138,10 +135,7 @@ Konsolen kan [!DNL Assets] visa olika lägen för resurser. Beroende på det akt
 
    ![chlimage_1-161](assets/chlimage_1-161.png)
 
-1. Om du vill söka efter resurser baserat på deras status, klickar du **[!UICONTROL Search]** för att visa omsökningsfältet.
-
-   ![chlimage_1-162](assets/chlimage_1-162.png)
-
+1. Om du vill söka efter resurser baserat på deras status klickar du på **[!UICONTROL Search]** sökalternativet ![](assets/do-not-localize/search_icon.png) för att visa omsökningsfältet.
 1. Tryck på Retur och klicka [!DNL Experience Manager] för att visa sökpanelen.
 1. In the search panel, click **[!UICONTROL Publish Status]** and select **[!UICONTROL Published]** to search for published assets in [!DNL Assets].
 
