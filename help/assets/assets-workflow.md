@@ -3,9 +3,9 @@ title: Bearbeta material för att genomföra affärsprocesser, utföra revisione
 description: Resursbearbetning för att konvertera format, skapa renderingar, hantera resurser, validera resurser och köra arbetsflöden.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f6c770e8830bd2fe7c436c4bfe9725564c49a08f
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
-source-wordcount: '941'
+source-wordcount: '942'
 ht-degree: 3%
 
 ---
@@ -72,10 +72,7 @@ Så här använder du ett arbetsflöde för en resurs:
 
    ![screen_shot_2019-03-06at123325pm](assets/chlimage_1-136.png)
 
-1. Klicka **[!UICONTROL Actions]** längst ned.
-
-   ![chlimage_1-30](assets/chlimage_1-137.png)
-
+1. Klicka **[!UICONTROL Actions]** nedåt på ![vinklingslisten](assets/do-not-localize/chevron-up-icon.png) .
 1. Klicka på **[!UICONTROL Start Workflow]**. Välj en arbetsflödesmodell i listan i **[!UICONTROL Start Workflow]** dialogrutan.
 
    ![chlimage_1-31](assets/chlimage_1-138.png)
