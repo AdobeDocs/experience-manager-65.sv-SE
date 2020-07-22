@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: dca5a2ac-1fc8-4251-b073-730fd6f49b1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d7e2d33b81847b15d1e33b3aa406e5e91d44a5f8
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
 source-wordcount: '1943'
 ht-degree: 14%
@@ -129,7 +129,7 @@ Med ett offentligt certifikat kan du autentisera din profil på Adobe Developer 
 
 1. Logga in på AEM Assets författarinstans. Standardwebbadressen är
    `http:// localhost:4502/aem/start.html`
-1. From the **Tools** ![Tools](assets/tools.png) panel, navigate to **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**.
+1. From the **Tools** ![Tools](assets/do-not-localize/tools.png) panel, navigate to **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**.
 
    ![Användargränssnittet för konfiguration av Adobe IMS-kontot](assets/ims-config1.png)
 
@@ -302,7 +302,7 @@ Så här skapar du molntjänsten Brand Portal:
 
 1. Logga in på AEM Assets författarinstans.
 
-1. From the **Tools** ![Tools](assets/tools.png) panel, navigate to **[!UICONTROL Cloud Services]** > **[!UICONTROL AEM Brand Portal]**.
+1. From the **Tools** ![Tools](assets/do-not-localize/tools.png) panel, navigate to **[!UICONTROL Cloud Services]** > **[!UICONTROL AEM Brand Portal]**.
 
 1. Klicka på **[!UICONTROL Create]** på sidan Varumärksportal-konfigurationer.
 
@@ -322,7 +322,7 @@ Utför följande steg för att validera konfigurationen:
 
 1. Logga in på din AEM Assets-molninstans.
 
-1. From the **Tools** ![Tools](assets/tools.png) panel, navigate to **[!UICONTROL Deployment]** > **[!UICONTROL Replication]**.
+1. From the **Tools** ![Tools](assets/do-not-localize/tools.png) panel, navigate to **[!UICONTROL Deployment]** > **[!UICONTROL Replication]**.
 
    ![](assets/test-integration1.png)
 
@@ -379,7 +379,7 @@ Kontrollera att inget publiceringsjobb körs på AEM Assets författarinstans in
 
 1. Logga in på AEM Assets författarinstans.
 
-1. From the **Tools** ![Tools](assets/tools.png) panel, navigate to **[!UICONTROL Deployment]** > **[!UICONTROL Deployment Replication]**.
+1. From the **Tools** ![Tools](assets/do-not-localize/tools.png) panel, navigate to **[!UICONTROL Deployment]** > **[!UICONTROL Deployment Replication]**.
 
 1. Klicka på på sidan Replikering **[!UICONTROL Agents on author]**.
 
