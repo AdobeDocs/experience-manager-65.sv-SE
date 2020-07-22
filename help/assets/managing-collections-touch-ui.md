@@ -4,10 +4,10 @@ description: Lär dig mer om hur du hanterar samlingar med resurser, som att ska
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 983f281b77a122c757bb508bee570c6c8490a2b9
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
-source-wordcount: '2041'
-ht-degree: 12%
+source-wordcount: '2044'
+ht-degree: 11%
 
 ---
 
@@ -124,10 +124,7 @@ Du kan lägga till resurser i en samling som innehåller en lista med refererade
 
 Smarta samlingar skapas genom att en sökning sparas så att du kan ändra deras innehåll genom att ändra sökparametrarna för den [sparade sökningen](#saved-searches).
 
-1. Klicka på sökalternativet i verktygsfältet i användargränssnittet Resurser.
-
-   ![chlimage_1-9](assets/chlimage_1-110.png)
-
+1. Klicka på sökalternativet ![sökalternativ](assets/do-not-localize/search_icon.png) i verktygsfältet i användargränssnittet Resurser.
 1. Tryck på returtangenten när markören är i Omnissearch-rutan.
 1. Öppna panelen Filter i gränssnittet Experience Manager.
 1. Välj den smarta samling du vill ändra i listan **[!UICONTROL Saved Searches]**. På sökpanelen visas de filter som har konfigurerats för den sparade sökningen.
@@ -256,12 +253,9 @@ Att redigera sparade sökningar är detsamma som att redigera smarta samlingar. 
 
 Så här tar du bort sparade sökningar:
 
-1. Klicka på ![chlimage_1-13](assets/chlimage_1-114.png)i användargränssnittet Resurser.
-
-1. Tryck på Retur när markören är i omsökningsfältet.
-
+1. Klicka på ![sökalternativet](assets/do-not-localize/search_icon.png)i användargränssnittet Resurser.
+1. Tryck på returtangenten när markören är i omsökningsfältet.
 1. Öppna panelen Filter i gränssnittet Experience Manager.
-
 1. From the **[!UICONTROL Saved Searches]** list, click **[!UICONTROL Delete]** next to the smart collection that you want to delete.
 
    ![select_smart_collection](assets/select_smart_collection.png)
@@ -273,7 +267,7 @@ Så här tar du bort sparade sökningar:
 Du kan köra ett arbetsflöde för resurserna i en samling. Om samlingen innehåller kapslade samlingar körs arbetsflödet även på resurserna i de kapslade samlingarna. Om samlingen och den kapslade samlingen innehåller duplicerade resurser körs arbetsflödet bara en gång för sådana resurser.
 
 1. Öppna **[!UICONTROL Assets]** > **[!UICONTROL Collections]**. Om du vill köra ett arbetsflöde på en viss samling markerar du den.
-1. Open **[!UICONTROL Timeline]** rail. Klicka på ![chlimage_1-14](assets/chlimage_1-137.png) och klicka på **[!UICONTROL Start Workflow]**.
+1. Open **[!UICONTROL Timeline]** rail. Klicka ![upp](assets/do-not-localize/chevron-up-icon.png) och sedan på **[!UICONTROL Start Workflow]**.
 1. In the **[!UICONTROL Start Workflow]** section, select a workflow model from the list. For example, select the **[!UICONTROL DAM Update Asset]** model.
 1. Ange en rubrik för arbetsflödet och klicka på **[!UICONTROL Start]**.
 1. Klicka på **[!UICONTROL Proceed]** i dialogrutan. Arbetsflödet bearbetar alla resurser i den valda samlingen.
