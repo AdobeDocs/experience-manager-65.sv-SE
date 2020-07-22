@@ -2,7 +2,7 @@
 title: Sidexporteraren
 description: Lär dig hur du använder AEM Page Exporter.
 translation-type: tm+mt
-source-git-commit: b0126894dec33648a24c0308972aa5b47d7e4b84
+source-git-commit: c152cf4bf8cf19e0fa7b328241ced753fa42f7a4
 workflow-type: tm+mt
 source-wordcount: '1052'
 ht-degree: 0%
@@ -16,10 +16,11 @@ Med AEM kan du exportera en sida som en komplett webbsida, inklusive bilder `.js
 
 När konfigurationen är klar begär du en sidexport från webbläsaren genom att ersätta `html` med `export.zip` i URL:en. Detta genererar en arkivfil (ZIP) som innehåller den återgivna sidan i html-format, tillsammans med de refererade resurserna. Alla sökvägar på sidan (till exempel sökvägar till bilder) skrivs om så att de pekar på antingen filerna som finns i arkivet eller på resurserna på servern. Arkivfilen (ZIP) kan sedan laddas ned från webbläsaren.
 
->!![NOTE]
-Beroende på vilken webbläsare du använder och vilka inställningar du har blir hämtningen antingen:
-* en arkivfil (`<page-name>.export.zip`)
-* en mapp (`<page-name>`); arkivfilen har redan utökats
+>[!NOTE]
+>
+>Beroende på vilken webbläsare du använder och vilka inställningar du har blir hämtningen antingen:
+>* en arkivfil (`<page-name>.export.zip`)
+>* en mapp (`<page-name>`); arkivfilen har redan utökats
 
 
 ## Exportera en sida {#exporting-a-page}
