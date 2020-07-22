@@ -4,9 +4,9 @@ description: Lär dig resurshanteringsåtgärder som överföring, hämtning, re
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
-source-wordcount: '9026'
+source-wordcount: '9016'
 ht-degree: 3%
 
 ---
@@ -158,7 +158,7 @@ Dynamic Media möjliggör batchöverföring av resurser via FTP-server. Om du t�
 1. Logga in på FTP-servern med det FTP-användarnamn och lösenord som du fick från e-postmeddelandet om etablering. Överför filer eller mappar till FTP-servern i FTP-klienten.
 1. [Logga in på Dynamic Media Classic](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) med hjälp av autentiseringsuppgifter som du fått från e-postmeddelandet om etablering. Klicka på i det globala navigeringsfältet **[!UICONTROL Upload]**.
 
-1. Klicka på **[!UICONTROL Via FTP]** fliken på sidan Överför, i det övre vänstra hörnet.
+1. Klicka på fliken på sidan Överför, i det övre vänstra hörnet **[!UICONTROL Via FTP]** .
 1. Välj en FTP-mapp att överföra filer från till vänster på sidan. till höger på sidan väljer du en målmapp.
 1. Klicka i det nedre högra hörnet av sidan **[!UICONTROL Job Options]** och ange önskade alternativ baserat på resurserna i den mapp du valde.
 
@@ -335,11 +335,7 @@ Följ de här stegen för att förhandsgranska en resurs.
 
 1. I förhandsgranskningsläget är zoomalternativ tillgängliga för bildtyper [som](/help/assets/assets-formats.md#supported-raster-image-formats) stöds (med interaktiv redigering).
 
-   Om du vill zooma in på en resurs klickar du på `+` (eller på förstoringsglaset på resursen). Om du vill zooma ut klickar du på `-`. När du zoomar in kan du titta närmare på alla delar av bilden genom att panorera. Med den återställda zoompilen återgår du till den ursprungliga vyn.
-
-   Klicka **[!UICONTROL Reset]** för att återställa vyn till den ursprungliga storleken.
-
-   ![Återställ för att återta användaren till den ursprungliga vyn](assets/chlimage_1-11.png)
+   Om du vill zooma in på en resurs klickar du på `+` (eller på förstoringsglaset på resursen). Om du vill zooma ut klickar du på `-`. När du zoomar in kan du titta närmare på alla delar av bilden genom att panorera. Med den återställda zoompilen återgår du till den ursprungliga vyn. Om du vill återställa vyn till den ursprungliga storleken klickar du på **[!UICONTROL Reset]** Återställ ![vy](assets/do-not-localize/revert.png).
 
 **Förhandsgranska resurser endast med tangentbordstangenter**
 
@@ -428,8 +424,7 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
 
 Övriga egenskaper och metadatainformation behålls. Ingen del av kopian skapas när en resurs kopieras.
 
-1. I [!DNL Assets] gränssnittet väljer du en eller flera resurser och klickar på **[!UICONTROL Copy]** i verktygsfältet. Du kan också välja snabbåtgärden från resurskortet **[!UICONTROL Copy]** .
-   ![Kopieringsalternativ i verktygsfältet i Assets-gränssnittet](assets/copy_icon.png)
+1. I [!DNL Assets] gränssnittet väljer du en eller flera resurser och klickar på **[!UICONTROL Copy]** i verktygsfältet. Du kan också välja alternativet **[!UICONTROL Copy]** Kopiera i verktygsfältet i snabbåtgärden för gränssnittet ![](assets/do-not-localize/copy_icon.png) Resurser från resurskortet.
 
    >[!NOTE]
    >
@@ -441,10 +436,7 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
    >
    >Om du kopierar en resurs på samma plats genererar automatiskt en variant av namnet. [!DNL Experience Manager] Om du t.ex. kopierar en resurs med namnet `Square`, genererar [!DNL Experience Manager] automatiskt titeln för kopian som `Square1`.
 
-1. Klicka på **[!UICONTROL Paste]** resursalternativet i verktygsfältet.
-
-   ![Alternativet Klistra in i verktygsfältet Resurser](assets/chlimage_1-14.png)
-   [!DNL Assets] kopieras sedan till den här platsen.
+1. Klicka på alternativet **[!UICONTROL Paste]** Klistra in i verktygsfältet ![](assets/do-not-localize/paste.png) Resurser i verktygsfältet. Resurserna kopieras sedan till den här platsen.
 
    >[!NOTE]
    >
@@ -455,7 +447,7 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
 1. Navigera till platsen för resursen som du vill flytta.
 
 1. Select the asset, and click **[!UICONTROL Move]** option from the toolbar.
-   ![Alternativet Flytta i verktygsfältet Resurser](assets/move_icon.png)
+   ![Alternativet Flytta i verktygsfältet Resurser](assets/do-not-localize/move.png)
 
 1. Gör något av följande i [!UICONTROL Move Assets] guiden:
 
@@ -685,9 +677,9 @@ Med redigeringsverktygen i [!DNL Assets] gränssnittet kan du utföra små redig
    * Klicka på **[!UICONTROL Edit]** det alternativ som visas på en resurs i kortvyn.
    * Klicka på **[!UICONTROL Edit]** i verktygsfältet.
 
-   ![Alternativet Redigera i verktygsfältet](assets/edit_icon.png)
+   ![Alternativet Redigera i verktygsfältet](assets/do-not-localize/edit_icon.png)
 
-1. Beskär bilden genom att klicka på **[!UICONTROL Crop]** Alternativ för att beskära en bild ![](assets/chlimage_1-22.png).
+1. Beskär bilden genom att klicka på **[!UICONTROL Crop]** Alternativ för att beskära en bild ![](assets/do-not-localize/crop.png).
 
 1. Välj önskat alternativ i listan. Beskärningsområdet visas på bilden baserat på det alternativ du väljer. Med alternativet **Frihand** kan du beskära bilden utan proportionsbegränsningar.
 
@@ -695,19 +687,19 @@ Med redigeringsverktygen i [!DNL Assets] gränssnittet kan du utföra små redig
 
 1. Markera området som ska beskäras och ändra storlek på det eller flytta det på bilden.
 
-1. Use the **Undo** and **Redo** options to revert to the uncropped image or retain the cropped image, respectively.
+1. Använd alternativen **[!UICONTROL Undo]** och **[!UICONTROL Redo]** för att återgå till den obeskurna bilden eller behålla den beskurna bilden.
 
    ![Ångra och gör om](assets/chlimage_1-25.png)
 
-1. Klicka på lämpligt **roteringsalternativ** för att rotera bilden medsols eller motsols.
+1. Klicka på lämpligt **[!UICONTROL Rotate]** alternativ för att rotera bilden medsols eller motsols.
 
    ![Roteringsalternativ medsols och motsols](assets/chlimage_1-26.png)
 
-1. Klicka på lämpligt **vändalternativ** om du vill vända bilden vågrätt eller lodrätt.
+1. Klicka på lämpligt **[!UICONTROL Flip]** alternativ för att vända bilden vågrätt eller lodrätt.
 
    ![alternativ för att vända en bild vågrätt eller lodrätt](assets/chlimage_1-27.png)
 
-1. Klicka på **alternativet** Slutför ![för att slutföra bildredigeringen](assets/chlimage_1-24.png) . När du klickar på **Slutför** startas även omgenereringen av återgivningar.
+1. Slutför bildredigeringen genom att klicka på alternativet **[!UICONTROL Finish]** ![](assets/do-not-localize/check-ok-done-icon.png)Slutför. När du klickar på **Slutför** startas även omgenereringen av återgivningar.
 
 >[!NOTE]
 >
@@ -834,7 +826,7 @@ Om du vill skriva ut anteckningarna och granskningsstatusen klickar du på **[!U
 
 1. Klicka på **[!UICONTROL Print]** i verktygsfältet.
 
-   ![Utskriftsalternativ i verktygsfältet](assets/chlimage_1-40.png)
+   ![Utskriftsalternativ i verktygsfältet](assets/do-not-localize/print.png)
 
 1. I dialogrutan Skriv ut väljer du den position du vill att anteckningarna/granskningsstatusen ska visas i PDF-filen. Om du till exempel vill att anteckningarna/statusen ska skrivas ut längst upp till höger på sidan som innehåller den utskrivna bilden använder du inställningen **Uppifrån vänster** . Det är markerat som standard.
 
