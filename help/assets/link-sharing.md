@@ -3,9 +3,9 @@ title: Generera en URL till delade resurser
 description: I den här artikeln beskrivs hur du delar resurser, mappar och samlingar i Experience Manager Assets som en URL till externa parter.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
-source-wordcount: '1136'
+source-wordcount: '1137'
 ht-degree: 4%
 
 ---
@@ -28,7 +28,7 @@ Använd dialogrutan Länkdelning för att generera URL:en för resurser som du v
 >Innan du delar en länk med användarna måste du kontrollera att Dag CQ Mail Service har konfigurerats. Ett fel uppstår om du försöker dela en länk utan att först [konfigurera Day CQ Mail Service](/help/assets/link-sharing.md#configmailservice).
 
 1. I Assets-användargränssnittet väljer du den resurs som ska delas som en länk.
-1. Klicka på **[!UICONTROL Share Link]** assets_share ![](assets/assets_share.png)i verktygsfältet.
+1. Klicka på ikonen **[!UICONTROL Share Link]** för att ![](assets/do-not-localize/assets_share.png)dela resurser i verktygsfältet.
 
    En resurslänk skapas automatiskt i **[!UICONTROL Share Link]** fältet. Kopiera den här länken och dela den med användarna. Länkens standardförfallotid är en dag.
 
