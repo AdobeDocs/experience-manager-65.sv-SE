@@ -8,7 +8,7 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a0717f5bf9ceb2e6def7feb37de4aa114de48938
+source-git-commit: 5412d788ccebe00707f2d94dfb1e40da6cb0471c
 workflow-type: tm+mt
 source-wordcount: '5020'
 ht-degree: 1%
@@ -222,7 +222,7 @@ Det här avsnittet innehåller information och instruktioner om Adobe Sign-molnk
 
 ### Fylla i och signera flera formulär {#fill-sign-multiple-forms}
 
-I det här dokumentet förklaras de steg som krävs för att ställa in möjligheten att fylla i och signera flera formulär. Du kan också prova [samma funktion här](https://forms.enablementadobe.com/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled). Det här exemplet lagrar nödvändiga data för det här exemplet i AME-databasen. Detta görs för att säkerställa en smidig upplevelse vid driftsättningen av demoresurser på den lokala servern. I verkligheten kommer vi att lagra samma information i valfritt RDMS.
+I det här dokumentet förklaras de steg som krävs för att ställa in möjligheten att fylla i och signera flera formulär. Du kan också prova [samma funktion här](https://forms.enablementadobe.com/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled). I det här exemplet lagras de data som behövs för det här exemplet i AEM-databasen. Detta görs för att säkerställa en smidig upplevelse vid driftsättningen av demoresurser på den lokala servern. I verkligheten kommer vi att lagra samma information i valfritt RDMS.
 
 #### Förutsättningar {#pre-requisites-fill-sign-multiple-forms}
 
@@ -793,7 +793,7 @@ Det här avsnittet innehåller information om demonstrationsfunktioner och desig
 
 För att kunna utföra tillgänglighetstestning först måste du installera Chrome-plugin-programmet, [här](https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en).
 
-När den är installerad läser du in sidan som du vill testa i webbläsaren Chrome (Obs! Om du har flera flikar öppna kan det påverka poängen, du bör bara ha en flik öppen). När sidan har lästs in **högerklickar du** på sidan och väljer fliken **Granskningar** . Utvecklarna kan välja vilken typ av granskning som ska utföras av plugin-programmet för tillgänglighet. När alla önskade alternativ har valts kan användaren välja knappen Generera rapport. Detta genererar ett PDF-dokument som visar den övergripande tillgänglighetsgraderingen och vad som kan användas för att öka tillgänglighetsgraderingen generellt.
+När den är installerad läser du in sidan som du vill testa i webbläsaren Chrome (Obs! Om du har flera flikar öppna kan det påverka poängen, du bör bara ha en flik öppen). När sidan har lästs in **högerklickar du** på sidan och väljer fliken **Granskningar** . Det finns utvecklare som kan välja vilken typ av granskning som ska utföras av plugin-programmet för tillgänglighet. När alla önskade alternativ har valts kan användaren välja knappen Generera rapport. Detta genererar ett PDF-dokument som visar den övergripande tillgänglighetsgraderingen och vad som kan användas för att öka tillgänglighetsgraderingen generellt.
 
 När rapporten har körts kan användarna förvänta sig följande:
 
