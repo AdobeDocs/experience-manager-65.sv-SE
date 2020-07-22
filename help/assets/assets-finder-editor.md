@@ -3,7 +3,7 @@ title: Skapa och konfigurera sidor för Resursredigeraren
 description: Lär dig hur du skapar anpassade sidor i Resursredigeraren och redigerar flera resurser samtidigt.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
 source-wordcount: '2116'
 ht-degree: 0%
@@ -290,7 +290,7 @@ Mer information om hur du ändrar de namnutrymmen som finns i metadataformuläre
 
 Följande är ett exempel på ett metadataformulär med olika fält:
 
-![chlimage_1-162](assets/chlimage_1-390.png)
+![metadata](assets/chlimage_1-390.png)
 
 På sidan Resursredigeraren kan användare sedan ange värden i metadatafälten (om de är redigerbara) och utföra slutåtgärden (till exempel skicka ändringarna).
 
@@ -405,6 +405,7 @@ Så här gör du om du vill redigera flera resurser på sidan Resursredigeraren:
 
    * i Windows: `Ctrl + click` varje resurs.
    * på Mac: `Cmd + click` varje resurs.
+
    Så här väljer du en rad resurser: klicka på den första resursen och sedan på `Shift + click` den sista resursen.
 
 1. Klicka på **Redigera metadata** i fältet **Åtgärder** (vänster del av sidan).
@@ -419,11 +420,13 @@ Så här gör du om du vill redigera flera resurser på sidan Resursredigeraren:
 
    * En tagg som inte gäller för alla resurser, men bara för ett fåtal har en grå bakgrund.
    * En tagg som gäller för alla resurser har en vit bakgrund.
+
    Du kan:
 
    * Klicka `x` för att ta bort taggen för alla resurser.
    * Klicka `+` för att lägga till taggen i alla resurser.
    * Klicka på **pilen** och välj en tagg för att lägga till en ny tagg till alla resurser.
+
    Klicka på **OK** för att skriva ändringarna i formuläret. Rutan bredvid fältet **Taggar** markeras automatiskt.
 
 1. Redigera beskrivningsfältet. Ange det till exempel till:
