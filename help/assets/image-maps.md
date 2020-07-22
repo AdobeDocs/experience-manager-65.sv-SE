@@ -3,10 +3,10 @@ title: Lägga till bildscheman med hyperlänkar till digitala bilder
 description: Lär dig hur du lägger till bildschema med hyperlänkar till en bild.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
-source-wordcount: '246'
-ht-degree: 2%
+source-wordcount: '250'
+ht-degree: 1%
 
 ---
 
@@ -26,12 +26,9 @@ Med bildscheman kan du lägga till ett eller flera hyperlänkade områden som fu
    * Markera resursen i vyn **[!UICONTROL Card]** eller **[!UICONTROL List]** vyn och klicka **[!UICONTROL Edit]** på verktygsfältet.
    * Klicka **[!UICONTROL Edit]** på resurssidan.
 
-      ![chlimage_1-420](assets/chlimage_1-420.png)
+      ![redigeringsalternativ](assets/do-not-localize/edit_icon.png)
 
-1. Om du vill infoga ett bildschema klickar du **[!UICONTROL Launch Map]** i verktygsfältet.
-
-   ![chlimage_1-421](assets/chlimage_1-421.png)
-
+1. Om du vill infoga ett bildschema klickar du på **[!UICONTROL Launch Map]** bildschemat ![](assets/do-not-localize/image-map-icon.png) i verktygsfältet.
 1. Markera formen på bildschemat. Den aktiva punkten för den markerade formen placeras på bilden.
 
    ![chlimage_1-422](assets/chlimage_1-422.png)
@@ -40,13 +37,9 @@ Med bildscheman kan du lägga till ett eller flera hyperlänkade områden som fu
 
    ![chlimage_1-423](assets/chlimage_1-423.png)
 
-1. Klicka på **[!UICONTROL Confirm]** och sedan på **[!UICONTROL Finish]** i verktygsfältet för att spara ändringarna.
+1. Klicka på **[!UICONTROL Confirm]** och sedan på **[!UICONTROL Finish]** välj ![kryssrutan klar](assets/do-not-localize/check-ok-done-icon.png) i verktygsfältet för att spara ändringarna.
 
-   ![chlimage_1-424](assets/chlimage_1-424.png)
-
-   Om du vill ta bort bildschemat klickar du på den aktiva punkten och sedan på **[!UICONTROL Delete]**.
-
-   ![chlimage_1-425](assets/chlimage_1-425.png)
+   Om du vill ta bort bildschemat klickar du på den aktiva punkten och sedan på **[!UICONTROL Delete]** Ta ![bort](assets/do-not-localize/delete-solid-line.png).
 
 1. Om du vill visa bildschemat går du till sidan med resursinformation och för markören över bilden.
 
