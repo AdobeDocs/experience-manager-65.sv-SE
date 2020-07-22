@@ -3,9 +3,9 @@ title: Relaterade tillgångar
 description: Lär dig hur du relaterar digitala resurser som delar vissa gemensamma attribut. Skapa också källbaserade relationer mellan digitala resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
-source-wordcount: '611'
+source-wordcount: '613'
 ht-degree: 3%
 
 ---
@@ -37,15 +37,13 @@ Med den här funktionen kan du dela en lågupplöst PDF- eller JPG-fil med lever
 
    ![chlimage_1-274](assets/chlimage_1-274.png)
 
-1. Om du vill koppla en annan resurs till den valda resursen klickar du på **[!UICONTROL Relate]** i verktygsfältet.
-
-   ![chlimage_1-275](assets/chlimage_1-275.png)
-
+1. Om du vill koppla en annan resurs till den valda resursen klickar du på **[!UICONTROL Relate]** Relatera ![resurser](assets/do-not-localize/link-relate.png) i verktygsfältet.
 1. Gör något av följande:
 
    * Om du vill relatera källfilen för resursen väljer du **[!UICONTROL Source]** i listan.
    * Om du vill relatera en härledd fil väljer du **[!UICONTROL Derived]** i listan.
    * Om du vill skapa en dubbelriktad relation mellan resurserna väljer du **[!UICONTROL Others]** i listan.
+
    ![chlimage_1-276](assets/chlimage_1-276.png)
 
 1. Navigera från **[!UICONTROL Select Asset]** skärmen till platsen för resursen som du vill relatera och markera den.
@@ -59,7 +57,7 @@ Med den här funktionen kan du dela en lågupplöst PDF- eller JPG-fil med lever
 
 1. Om du vill ta bort kopplingen för en resurs klickar du på **[!UICONTROL Unrelate]** i verktygsfältet.
 
-   ![chlimage_1-279](assets/chlimage_1-279.png)
+   ![ej hänförliga tillgångar](assets/do-not-localize/link-unrelate-icon.png)
 
 1. Markera de resurser som du vill ta bort kopplingen för i **[!UICONTROL Remove Relations]** dialogrutan och klicka på **[!UICONTROL Unrelate]**.
 
