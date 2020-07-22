@@ -2,9 +2,9 @@
 title: Sidexporteraren
 description: Lär dig hur du använder AEM Page Exporter.
 translation-type: tm+mt
-source-git-commit: 000666e0c3f05635a9469d3571a10c67b3b21613
+source-git-commit: b0126894dec33648a24c0308972aa5b47d7e4b84
 workflow-type: tm+mt
-source-wordcount: '1071'
+source-wordcount: '1052'
 ht-degree: 0%
 
 ---
@@ -24,15 +24,17 @@ Beroende på vilken webbläsare du använder och vilka inställningar du har bli
 
 ## Exportera en sida {#exporting-a-page}
 
-I följande steg beskrivs hur du exporterar en sida och förutsätter att det finns en exportkonfigurationsmall för platsen. En konfigurationsmall definierar hur en sida exporteras och är specifik för din plats. Om du vill skapa en konfigurationsmall läser du avsnittet [Skapa en sidexportkonfiguration för platsen](#creating-a-page-exporter-configuration-for-your-site) .
+I följande steg beskrivs hur du exporterar en sida och förutsätter att det finns en exportmall för platsen. En exportmall definierar hur en sida exporteras och är specifik för din plats. Om du vill skapa en exportmall läser du avsnittet [Skapa en sidexportkonfiguration för platsen](#creating-a-page-exporter-configuration-for-your-site) .
 
 Så här exporterar du en sida:
 
-1. Navigera till önskad sida, markera sidan och öppna sedan dialogrutan **Egenskaper** .
+1. Navigera till önskad sida i **webbplatskonsolen** .
+
+1. Markera sidan och öppna sedan dialogrutan **Egenskaper** .
 
 1. Välj fliken **Avancerat** .
 
-1. Expandera fältet **Exportera** för att välja en konfigurationsmall.
+1. Expandera fältet **Exportera** för att välja en exportmall.
 Välj önskad mall för platsen och bekräfta med **OK**.
 
 1. Välj **Spara och stäng** för att stänga dialogrutan för sidegenskaper.
@@ -52,23 +54,23 @@ Välj önskad mall för platsen och bekräfta med **OK**.
 
    * undermappen `content`, som är roten till en serie undermappar som återspeglar sökvägen till sidan i databasen
 
-   * i den här strukturen finns HTML-filen för den valda sidan (`<page-name>.html`)
-
+      * i den här strukturen finns HTML-filen för den valda sidan (`<page-name>.html`)
    * andra resurser (`.js` filer, `.css` filer, bilder etc.) är placerade enligt inställningarna i exportmallen
+
 
 1. Öppna HTML-sidfilen (`<unzip-dir>/<path>/<to>/<page>/<page-path>.html`) i webbläsaren för att kontrollera återgivningen.
 
 ## Skapa en sidexportkonfiguration för platsen {#creating-a-page-exporter-configuration-for-your-site}
 
-Sidexporteraren baseras på ramverket för innehållssynkronisering. De konfigurationer som är tillgängliga i dialogrutan **Sidegenskaper** är exportmallar som definierar nödvändiga beroenden för en sida.
+Sidexporteraren baseras på ramverket för [innehållssynkronisering](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/contentsync/package-summary.html). De konfigurationer som är tillgängliga i dialogrutan **Sidegenskaper** är exportmallar som definierar nödvändiga beroenden för en sida.
 
 När en sidexport aktiveras refereras exportmallen och både sidsökvägen och designsökvägen tillämpas dynamiskt. ZIP-filen skapas sedan med standardfunktionen för innehållssynkronisering.
 
-AEM bäddar in en standardmall under `/etc/contentsync/templates/default`.
+En körklar AEM-installation innehåller en standardmall under `/etc/contentsync/templates/default`.
 
-* Den här mallen är reservmallen när ingen konfigurationsmall hittas i databasen.
+* Den här mallen är en reservmall när ingen exportmall hittas i databasen.
 
-* I mallen `default` visas hur en sidexport kan konfigureras så att den kan fungera som bas för en ny konfigurationsmall.
+* I mallen `default` visas hur en sidexport kan konfigureras så att den kan fungera som bas för en ny exportmall.
 
 * Om du vill visa nodstrukturen för mallen i webbläsaren som JSON-format begär du följande URL:
    `http://localhost:4502/etc/contentsync/templates/default.json`
@@ -89,32 +91,35 @@ Så här skapar du en helt ny mall:
 
    * `Type`: `nt:unstructured`
 
-1. Under mallnoden, som anropas här, `mysite`skapar du en nodstruktur med hjälp av konfigurationsnoderna som beskrivs nedan.
+2. Under mallnoden, som anropas här, `mysite`skapar du en nodstruktur med hjälp av konfigurationsnoderna som beskrivs nedan.
 
 ## Aktivera en sidexportmall för dina sidor {#activating-a-page-exporter-configuration-for-your-pages}
 
 När mallen har konfigurerats måste du göra den tillgänglig:
 
-1. Gå till önskad sida i CRXDE.
+1. I CRXDE navigerar du till önskad sida i `/content` grenen.
 
-1. Skapa egenskapen på `jcr:content` noden:
+1. Skapa egenskapen på sidans nod `jcr:content` :
    * `Name`: `cq:exportTemplate`
    * `Type`: `String`
    * `Value`: Sökväg till mallen. till exempel: `/etc/contentsync/templates/mysite`
 
 ### Konfigurationsnoder för sidexport {#page-exporter-configuration-nodes}
 
-Mallen består av en nodstruktur. Varje nod har en `type` egenskap som definierar en specifik åtgärd när zip-filen skapas. Mer information om type-egenskapen finns i avsnittet Översikt över konfigurationstyper på ramverkssidan för innehållssynkronisering.
+Mallen består av en nodstruktur som använder ramverket för [innehållssynkronisering](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/contentsync/package-summary.html).  Varje nod har en `type` egenskap som definierar en specifik åtgärd när zip-filen skapas.
 
-Följande noder kan användas för att skapa en exportkonfigurationsmall:
+<!-- For more details about the type property, refer to the Overview of configuration types section in the Content Sync framework page.
+-->
+
+Följande noder kan användas för att skapa en exportmall:
 
 * `page`
 Sidnoden används för att kopiera sidans HTML-kod till zip-filen. Den har följande egenskaper:
 
    * Är en obligatorisk nod.
-   * Finns nedan `/etc/contentsync/templates/<sitename>`.
-   * Det heter `page`.
-   * Dess nodtyp är `nt:unstructured`
+   * Finns nedan `/etc/contentsync/templates/<mysite>`.
+   * Definieras med egenskapen `Name`inställd på `page`.
+   * Nodtypen är `nt:unstructured`
 
    Noden har `page` följande egenskaper:
 
@@ -122,21 +127,21 @@ Sidnoden används för att kopiera sidans HTML-kod till zip-filen. Den har följ
 
    * Den har ingen `path` egenskap eftersom den aktuella sidsökvägen kopieras dynamiskt till konfigurationen.
 
-   * De andra egenskaperna beskrivs i avsnittet Översikt över konfigurationstyper i ramverket för innehållssynkronisering.
-
+   <!--
+  * The other properties are described in the Overview of configuration types section of the Content Sync framework.
+  -->
 
 * `rewrite`
 Noden rewrite definierar hur länkarna skrivs om på den exporterade sidan. De omskrivna länkarna kan antingen peka på filerna som finns i ZIP-filen eller på resurserna på servern.
-
-   En fullständig beskrivning av `rewrite` noden finns på sidan Innehållssynkronisering.
+   <!-- Please refer to the Content Sync page for a complete description of the `rewrite` node. -->
 
 * `design`
 Designnoden används för att kopiera designen som används för den exporterade sidan. Den har följande egenskaper:
 
    * Är valfritt.
-   * Finns nedan `/etc/contentsync/templates/<sitename>`.
-   * Det heter `design`.
-   * Dess nodtyp är `nt:unstructured`.
+   * Finns nedan `/etc/contentsync/templates/<mysite>`.
+   * Definieras med egenskapen `Name` inställd på `design`.
+   * Nodtypen är `nt:unstructured`.
 
    Noden har `design` följande egenskaper:
 
@@ -146,17 +151,14 @@ Designnoden används för att kopiera designen som används för den exporterade
 
 
 * `generic`
-En allmän nod används för att kopiera resurser som .js- eller .css-filer med klienten till zip-filen. Den har följande egenskaper:
+En allmän nod används för att kopiera resurser som clientlibs 
+`.js` eller `.css` filer till zip-filen. Den har följande egenskaper:
 
    * Är valfritt.
-
-   * Finns nedan `/etc/contentsync/templates/<sitename>`.
-
+   * Finns nedan `/etc/contentsync/templates/<mysite>`.
    * Har inget specifikt namn.
-
-   * Dess nodtyp är `nt:unstructured`.
-
-   * Har en `type` egenskap och alla `type` relaterade egenskaper enligt definitionen i avsnittet Översikt över konfigurationstyper i ramverket för innehållssynkronisering.
+   * Nodtypen är `nt:unstructured`.
+   * Har en `type` egenskap och `type` relaterade egenskaper. <!--Has a `type` property and any `type` related properties as defined in the Overview of configuration types section of the Content Sync framework.-->
 
    Följande konfigurationsnod kopierar till exempel `mysite.clientlibs.js` filerna till zip-filen:
 
@@ -174,10 +176,13 @@ En allmän nod används för att kopiera resurser som .js- eller .css-filer med 
 Anpassade konfigurationer är också möjliga.
 
 <!--
-As you may have noticed in the node structure, the **Geometrixx** page export configuration template has a `logo` node with a `type` property set to `image`. This is a special configuration type that has been created to copy the image logo to the zip file. 
+As you may have noticed in the node structure, the **Geometrixx** page export template has a `logo` node with a `type` property set to `image`. This is a special configuration type that has been created to copy the image logo to the zip file. 
 -->
 
-För att uppfylla vissa specifika krav kan du behöva implementera en anpassad `type` egenskap: Mer information finns i avsnittet Implementera en anpassad uppdateringshanterare på sidan Innehållssynkronisering.
+För att uppfylla vissa specifika krav kan du behöva implementera en [anpassad uppdateringshanterare](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/contentsync/handler/package-summary.html).
+
+<!-- To meet some specific requirements, you may need to implement a custom `type` property: to do so, refer to the Implementing a custom update handler section in the Content Sync page.
+-->
 
 ## Programmatisk export av en sida {#programmatically-exporting-a-page}
 
@@ -191,4 +196,3 @@ Servern som är bunden till `export` väljaren och `zip` tillägget använder tj
 ## Felsökning {#troubleshooting}
 
 Om du får problem med nedladdningen av zip-filen kan du ta bort noden i databasen och skicka exportbegäran igen. `/var/contentsync`
-
