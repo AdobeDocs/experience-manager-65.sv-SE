@@ -2,14 +2,17 @@
 title: Versionsinformation om Adobe Experience Manager Assets
 description: De nya funktionerna och förbättringarna i Adobe Experience Manager 6.5 Assets.
 translation-type: tm+mt
-source-git-commit: a6f95e04fd5b8ed28beaa12e9fd170ed495397b8
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+workflow-type: tm+mt
+source-wordcount: '916'
+ht-degree: 2%
 
 ---
 
 
 # Versionsinformation om Adobe Experience Manager Assets {#aem-assets-release-notes}
 
-Här är de viktigaste funktionerna och nyheterna i Adobe Experience Manager 6.5 Assets.
+Här är de viktigaste funktionerna och nyheterna i Adobe Experience Manager 6.5 Assets-versionen.
 
 ## Integration med [!DNL Adobe Creative Cloud] kreativa arbetsflöden {#integration-with-adobe-creative-cloud-and-creative-workflows}
 
@@ -31,9 +34,9 @@ Organisationen kan använda sin [!DNL Adobe Stock] Enterprise-plan i för [!DNL 
 
 [!DNL Adobe Stock] ger designers och företag tillgång till miljontals utvalda och royaltyfria foton, vektorer, illustrationer, videor, mallar och 3D-resurser av hög kvalitet för alla kreativa projekt.
 
-Mer information finns i [Använda [!DNL Adobe Stock]-resurser i Experience Manager Assets](/help/assets/aem-assets-adobe-stock.md).
+Mer information finns i [Använda Adobe Stock-resurser i Experience Manager-resurser](/help/assets/aem-assets-adobe-stock.md).
 
-![Förhandsgranska Adobe Stock-bilder och -licenser inifrån Experience Manager Assets](assets/stock_image_preview_license_options.png)
+![Förhandsgranska Adobe Stock-bild och licensiera inifrån Experience Manager Assets](assets/stock_image_preview_license_options.png)
 
 *Bild: Förhandsgranska[!DNL Adobe Stock]bild och licensiera inifrån[!DNL Experience Manager Assets].*
 
@@ -41,7 +44,7 @@ Mer information finns i [Använda [!DNL Adobe Stock]-resurser i Experience Manag
 
 *Bild: Sök efter och filtrera licensierade[!DNL Adobe Stock]bilder i[!DNL Experience Manager].*
 
-### Dynamiska referenser i [!DNL Adobe InDesign]{#dynamic-references-in-indesign}
+### Dynamiska referenser i [!DNL Adobe InDesign] {#dynamic-references-in-indesign}
 
 [!DNL Experience Manager Assets] som används i [!DNL Adobe InDesign] filer är dynamiska. Referenserna uppdateras automatiskt om de refererade resurserna flyttas i databasen. Mer information finns i [Hantera sammansatta resurser](/help/assets/managing-linked-subassets.md).
 
@@ -63,9 +66,9 @@ I stora företag kan den infrastruktur som krävs för att skapa webbplatser dis
 
 ## Dynamic Media {#dynamic-media}
 
-[!DNL Dynamic Media] ger förbättrad multimediaproduktion och -leverans i [!DNL Experience Manager Assets] för att skapa engagerande och personaliserade upplevelser. Genom att överföra en enda högkvalitativ masterresurs och använda vår avancerade molnrendering och våra visningsprogram kan ni leverera vilken kombination av renderingar som helst direkt för att stödja er organisations mediestrategi.
+[!DNL Dynamic Media] ger förbättrad multimediaproduktion och -leverans i [!DNL Experience Manager Assets] för att skapa engagerande och personaliserade upplevelser. Genom att överföra en enda högkvalitativ överordnad resurs och använda vår avancerade molnrendering och våra visningsprogram kan ni leverera vilken kombination av renderingar som helst direkt för att stödja er organisations mediestrategi.
 
-Mer information om nya [!DNL Dynamic Media] funktioner finns i [Dynamic Media Release Notes](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/release-notes/s7rn2017.html).
+Mer information om nya [!DNL Dynamic Media] funktioner finns i [Dynamic Media Versionsinformation](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/release-notes/s7rn2017.html).
 
 ### Stöd för 360-video {#video-support}
 
@@ -77,7 +80,7 @@ Nu kan du anpassa miniatyrbilderna för videomaterialet med hjälp av bildrutor 
 
 ### Förbättringar av hjälpmedel {#accessibility-enhancements}
 
-[!DNL Dynamic Media] visningsprogrammen har nu stöd för förbättrade hjälpmedelsfunktioner som Aria-support, skärmläsare och Alt-text. Mer information finns i [Versionsinformation](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html)för Dynamic Media Viewer.
+[!DNL Dynamic Media] visningsprogrammen har nu stöd för förbättrade hjälpmedelsfunktioner som Aria-support, skärmläsare och Alt-text. Mer information finns i Versionsinformation om [Dynamic Media-visningsprogram](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html).
 
 ## Förbättrad sökupplevelse {#search-experience-enhancement}
 
