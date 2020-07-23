@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: bb8c355c-4475-45ec-9096-0975f0ce2c27
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: a1e4d64a9ac7dc02c5cf2ac6b01994736c45b449
 workflow-type: tm+mt
-source-wordcount: '1339'
-ht-degree: 3%
+source-wordcount: '1333'
+ht-degree: 2%
 
 ---
 
@@ -36,7 +36,7 @@ Information om hur du aktiverar eller inaktiverar visningsförinställningar i a
 
 **Förhandsgranska resurser med hjälp av programgränssnittet**
 
-1. Från **[!UICONTROL Adobe Experience Manager]**, på sidan **[!UICONTROL Navigering]**, trycker du på **[!UICONTROL Assets]** och sedan på **[!UICONTROL Files]** för att komma åt resurserna.
+1. Tryck på **[!UICONTROL Adobe Experience Manager]** på **[!UICONTROL Navigation]** sidan **[!UICONTROL Assets]** och sedan **[!UICONTROL Files]** för att komma åt resurser.
 1. Near the upper-right corner of the page, from the **[!UICONTROL View]** drop-down list, tap **[!UICONTROL List View.]**
 1. (Valfritt) Använd **[!UICONTROL Type]** kolumnen för att sortera resurserna efter den typ som du vill förhandsgranska.
 1. Under **[!UICONTROL Title]** kolumnen klickar du på titelnamnet (inte miniatyrbilden) för resursen som du vill förhandsgranska.
