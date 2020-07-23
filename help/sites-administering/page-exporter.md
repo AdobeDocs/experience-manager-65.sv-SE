@@ -2,9 +2,9 @@
 title: Sidexporteraren
 description: Lär dig hur du använder AEM Page Exporter.
 translation-type: tm+mt
-source-git-commit: c152cf4bf8cf19e0fa7b328241ced753fa42f7a4
+source-git-commit: 6aee1506b54a932bae8f2521fce4488de7d2a52a
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1065'
 ht-degree: 0%
 
 ---
@@ -98,7 +98,7 @@ Så här skapar du en helt ny mall:
 
 När mallen har konfigurerats måste du göra den tillgänglig:
 
-1. I CRXDE navigerar du till önskad sida i `/content` grenen.
+1. I CRXDE navigerar du till önskad sida i `/content` grenen. Det kan vara en enskild sida eller en rotsida i ett underträd.
 
 1. Skapa egenskapen på sidans nod `jcr:content` :
    * `Name`: `cq:exportTemplate`
