@@ -2,9 +2,9 @@
 title: Skapa och synkronisera Live-kopior
 description: Lär dig hur du skapar och synkroniserar Live-kopior.
 translation-type: tm+mt
-source-git-commit: 90364cdf6044616d43c1851b3def9b1f063449ca
+source-git-commit: 4755f33ed27bb876bfb70bab35d411d9b06788b0
 workflow-type: tm+mt
-source-wordcount: '4116'
+source-wordcount: '4115'
 ht-degree: 1%
 
 ---
@@ -86,7 +86,7 @@ Du kan skapa en live-kopia av vilken sida eller gren som helst. När du skapar e
 
 Du kan skapa en live-kopia av vilken sida som helst:
 
-* Sidorna refereras till av en [ritningskonfiguration](#creating-a-blueprint-configuration),
+* Sidor som refereras av en [ritningskonfiguration](#creating-a-blueprint-configuration).
 * Och sidor som inte har någon anslutning till en konfiguration.
 * AEM har även stöd för att skapa en live-kopia på sidorna i en annan live-kopia.
 
@@ -151,8 +151,8 @@ När du skapar platsen anger du värden för följande egenskaper:
 
 Så här skapar du en live-kopia av en webbplats från en designkonfiguration:
 
-1. Välj **Skapa** i konsolen **Platser** och sedan **Plats** i listrutan.
-1. Välj den designkonfiguration som ska användas som källa för live-kopian och fortsätt med **nästa**:
+1. I **Sites** -konsolen väljer du **Skapa** och sedan **Plats** i listrutan.
+1. Välj den designkonfiguration som ska användas som källa för live-kopian och fortsätt med **Nästa**:
 
    ![chlimage_1-216](assets/chlimage_1-216.png)
 
