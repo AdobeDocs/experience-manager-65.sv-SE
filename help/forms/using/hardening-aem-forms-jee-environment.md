@@ -9,9 +9,9 @@ topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 translation-type: tm+mt
-source-git-commit: f9b11eee4c044a8df4e694aa5f660b5ea375ca3c
+source-git-commit: 9e1d77b8696436b392f0d9209ddcb2c9196f3c09
 workflow-type: tm+mt
-source-wordcount: '7665'
+source-wordcount: '7698'
 ht-degree: 0%
 
 ---
@@ -396,7 +396,7 @@ På WebSphere kan du bara konfigurera integrerad säkerhet när du använder en 
 1. Välj **Start** > **Kontrollpanelen** > **Tjänster**, högerklicka på Windows-tjänsten för WebSphere (IBM WebSphere Application Server &lt;version> - &lt;node>) och välj **Egenskaper**.
 1. Klicka på fliken **Logga in** i dialogrutan Egenskaper.
 1. Välj **Det här kontot** och ange den information som krävs för att ställa in det inloggningskonto som du vill använda.
-1. Ange säkerhet på SQL Server från **blandat** läge till endast **** Windows-autentisering.
+1. Ange säkerhet på SQL Server från **blandat** läge till enbart **** Windows-autentisering.
 
 ### Skydda åtkomst till känsligt innehåll i databasen {#protecting-access-to-sensitive-content-in-the-database}
 
@@ -955,6 +955,8 @@ Mer information om WebSphere-portar som krävs av AEM Forms på JEE finns i inst
 Med hänvisning till den fysiska arkitekturen som beskrivs i avsnittet [AEM Forms på den fysiska JEE-arkitekturen](hardening-aem-forms-jee-environment.md#aem-forms-on-jee-physical-architecture)bör du konfigurera SSL för alla anslutningar som du tänker använda. I synnerhet måste alla SOAP-anslutningar utföras över SSL för att förhindra exponering av användarreferenser i ett nätverk.
 
 Instruktioner om hur du konfigurerar SSL för JBoss, WebLogic och WebSphere finns i&quot;Configuring SSL&quot; i [administrationshjälpen](https://www.adobe.com/go/learn_aemforms_admin_64).
+
+Instruktioner om hur du importerar certifikat till JVM (Java Virtual Machine) som konfigurerats för en AEM Forms-server finns i avsnittet om ömsesidig autentisering i hjälpen [för](http://www.adobe.com/go/learn_aemforms_workbench_65)AEM Forms Workbench.
 
 ### Konfigurerar SSL-omdirigering {#configuring-ssl-redirect}
 
