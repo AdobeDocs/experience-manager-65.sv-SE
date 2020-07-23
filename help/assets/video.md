@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
+source-git-commit: a1e4d64a9ac7dc02c5cf2ac6b01994736c45b449
 workflow-type: tm+mt
-source-wordcount: '11362'
-ht-degree: 7%
+source-wordcount: '11360'
+ht-degree: 6%
 
 ---
 
@@ -33,6 +33,7 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
    >
    >
 * Se [Konfigurera Dynamic Media-Cloud Service](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services) i Konfigurera Dynamic Media - hybrid-läge.
+
 >
 
 
@@ -138,7 +139,7 @@ Följande stöds för hantering av enstaka video och adaptiva videouppsättninga
 * Överföra video från ett antal videoformat och ljudformat som stöds och koda video till MP4 H.264-format för uppspelning på flera skärmar. Du kan använda fördefinierade adaptiva videoförinställningar, enskilda videokodningsförinställningar eller anpassa din egen kodning för att styra videons kvalitet och storlek.
 
    * När en adaptiv videouppsättning genereras innehåller den MP4-videor.
-   * **Obs**: Huvud-/källvideor läggs inte till i en adaptiv videouppsättning.
+   * **Obs**: Överordnad videoklipp/källvideoklipp läggs inte till i en adaptiv videouppsättning.
 
 * Videobildtext i alla HTML5-videovisningsprogram.
 * Ordna, bläddra bland och sök videoklipp med fullt stöd för metadata för effektiv hantering av videomaterial.
@@ -472,6 +473,7 @@ Så här konfigurerar du Google Cloud-inställningar:
 
    * Tryck på Komma igång-kortet på Dashboard i ditt projekt **[!UICONTROL Explore and enable APIs.]**
    * I Dashboard för ditt projekt trycker du på **[!UICONTROL Go to APIs overview.]**
+
    ![6_5_googleaccount-apis-enable2](assets/6_5_googleaccount-apis-enable2.png)
 
 1. I början av sidan API:er och tjänster trycker du på **[!UICONTROL Enable APIs and Services.]**
@@ -491,6 +493,7 @@ Så här konfigurerar du Google Cloud-inställningar:
    * I listrutan **[!UICONTROL Where will you be calling the API from?]** väljer du **[!UICONTROL Web Server (e.g. node.js, Tomcat)]**
 
    * From the **[!UICONTROL What data will you be accessing?]** drop-down list, tap **[!UICONTROL User data.]**
+
    ![6_5_googleaccount-apis-createcredentials2](assets/6_5_googleaccount-apis-createcredentials2.png)
 
 1. Tryck på **[!UICONTROL What credentials do I need?]**
@@ -548,7 +551,7 @@ Så här skapar du en YouTube-kanal:
 1. Gå till [https://www.youtube.com](https://www.youtube.com/) och logga in med inloggningsuppgifterna för ditt Google-konto.
 1. Klicka på din profilbild i det övre högra hörnet på YouTube-sidan (kan också visas som en bokstav i en enfärgad cirkel) och klicka sedan på **[!UICONTROL YouTube settings]** (den runda kugghjulsikonen).
 1. På sidan Översikt, under rubriken Ytterligare funktioner, klickar du på **[!UICONTROL See all my channels or create a new channel.]**
-1. På sidan Kanaler klickar du på **[!UICONTROL Create a new channel.]**
+1. On the Channels page, click **[!UICONTROL Create a new channel.]**
 1. På sidan Varumärkeskonto anger du ett företagsnamn eller ett annat kanalnamn som du väljer var du vill publicera videoresurserna. Klicka sedan på **[!UICONTROL Create.]**
 
    Kom ihåg det namn du anger här eftersom du måste ange det igen när du konfigurerar YouTube i AEM.
@@ -836,9 +839,11 @@ Så här övervakar du förloppet (inklusive misslyckad kodning/YouTube-publicer
 1. Visa kodningsförloppet för video i resursmappen:
 
    * I kortvyn visas videokodningsförloppet för resursen i procent. Om ett fel uppstår visas även den här informationen på resursen.
+
    ![chlimage_1-429](assets/chlimage_1-429.png)
 
    * In list view, video encoding progress displays in the **[!UICONTROL Processing Status]** column. Om ett fel uppstår visas det här meddelandet i samma kolumn.
+
    ![chlimage_1-430](assets/chlimage_1-430.png)
 
    Den här kolumnen visas inte som standard. Om du vill aktivera kolumnen väljer du **[!UICONTROL View Settings]** i listrutan Vyer, lägger till kolumnen **[!UICONTROL Processing Status]** och trycker eller klickar på **[!UICONTROL Update.]**
@@ -858,6 +863,7 @@ Så här övervakar du förloppet (inklusive misslyckad kodning/YouTube-publicer
    >    * Konfiguration av Apache Sling-jobbkö
    >    * Extern processhanterare för Adobe Granite-arbetsflöde
    >    * Timeoutkö för Granite-arbetsflöde
+
    >
    >Du kan justera egenskaperna **[!UICONTROL retries]**, **[!UICONTROL retry delay]** och **[!UICONTROL timeout]** i dessa konfigurationer.
 
@@ -892,6 +898,7 @@ Så här övervakar du förloppet (inklusive misslyckad kodning/YouTube-publicer
    >    * Konfiguration av Apache Sling-jobbkö
    >    * Extern processhanterare för Adobe Granite-arbetsflöde
    >    * Timeoutkö för Granite-arbetsflöde
+
    >
    >
    >Du kan justera egenskaperna **[!UICONTROL retries]**, **[!UICONTROL retry delay]** och **[!UICONTROL timeout]** i dessa konfigurationer.
@@ -938,6 +945,7 @@ Hur du konfigurerar meddelanden beror på om du vill ha meddelanden för kodning
    * Publicera start
    * Publiceringsfel
    * Slutförd publicering - innehåller information om kanaler och URL:er
+
    Om du rensar en kryssruta innebär det att du inte får det angivna e-postmeddelandet från YouTubes publiceringsarbetsflöde.
 
    >[!NOTE]
@@ -987,6 +995,7 @@ Du behöver bara använda Uppdatera om rapportens slutdatum är den aktuella dag
 
    * I det övre högra hörnet trycker du på ikonen **Datumväljaren **.
 Ange start- och slutdatumintervallet som du vill ha videodata för och tryck sedan på **[!UICONTROL Run Report.]**
+
    I grupprutan Top Metrics (Toppvärden) identifieras olika aggregerade mått för alla *publicerade *videor på webbplatsen.
 
 1. I tabellen som visar de publicerade videoklippen trycker du på ett videonamn för att spela upp videon och ser även videons återgivningsrapport.
@@ -1080,7 +1089,7 @@ Så här lägger du till bildtexter eller undertexter till video:
 
    Du får bäst resultat om du använder verktyget i Internet Explorer 9 eller senare, Google Chrome eller Safari.
 
-   Klistra in den kopierade URL-adressen för videofilen i fältet **[!UICONTROL Enter URL of video file]** i verktyget och klicka sedan på **[!UICONTROL Läs in]**. Se [Hämta en URL för en resurs](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset) för att hämta URL-adressen till själva videofilen som du sedan kan klistra in i **[!UICONTROL Enter URL of video file field.]** Internet Explorer, Chrome eller Safari för att sedan spela upp videon.
+   In the tool, in the **[!UICONTROL Enter URL of video file]** field, paste the copied URL of your video file and then click **[!UICONTROL Load]**. Se [Hämta en URL för en resurs](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset) för att hämta URL-adressen till själva videofilen som du sedan kan klistra in i **[!UICONTROL Enter URL of video file field.]** Internet Explorer, Chrome eller Safari för att sedan spela upp videon.
 
    Följ nu instruktionerna på skärmen för att skapa och spara WebVTT-filen. När du är klar kopierar du bildtextfilens innehåll och klistrar in det i en vanlig textredigerare och sparar det med filnamnstillägget .vtt.
 
