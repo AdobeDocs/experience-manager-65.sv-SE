@@ -12,7 +12,7 @@ discoiquuid: ea033bb9-cb92-4c93-855f-8c902999378c
 docset: aem65
 tagskeywords: scoring, badging, badges, gamification
 translation-type: tm+mt
-source-git-commit: df59879cfa6b0bc7eba13f679e833fabbcbe92f2
+source-git-commit: a76707e16aa7054078bcfffe43476e4bd83d83e3
 workflow-type: tm+mt
 source-wordcount: '2897'
 ht-degree: 1%
@@ -62,15 +62,18 @@ Rollbaserade märken tilldelas av en administratör till communitymedlemmar base
 
 Tilldelade (och tilldelade) märken lagras i den valda [SRP](/help/communities/srp.md) och är inte direkt tillgängliga. Det enda sättet att tilldela rollbaserade emblem är att göra det med kod eller cURL tills ett GUI är tillgängligt. Instruktioner för cURL finns i avsnittet [Tilldela och återkalla märken](#assign-and-revoke-badges).
 
-I releasen ingår tre rollbaserade märken:
+I releasen finns tre rollbaserade märken:
 
 * **moderator**
+
    `/libs/settings/community/badging/images/moderator/jcr:content/moderator.png`
 
 * **gruppansvarig**
+
    `/libs/settings/community/badging/images/group-manager/jcr:content/group-manager.png`
 
 * **behörig medlem**
+
    `/libs/settings/community/badging/images/privileged-member/jcr:content/privileged-member.png`
 
 ![chlimage_1-98](assets/chlimage_1-98.png)
@@ -87,12 +90,15 @@ För att emblem ska visas som en belöning för aktivitet måste två saker hän
 I releasen ingår tre belöningsbaserade märken:
 
 * **guld**
+
    `/libs/settings/community/badging/images/gold-badge/jcr:content/gold.png`
 
 * **silver**
+
    `/libs/settings/community/badging/images/silver-badge/jcr:content/silver.png`
 
 * **brons**
+
    `/libs/settings/community/badging/images/bronze-badge/jcr:content/bronze.png`
 
 ![chlimage_1-99](assets/chlimage_1-99.png)
@@ -302,7 +308,7 @@ Alla ändringar eller tillägg som görs i resultatregler eller underregler i re
 
 ## Badningsregler {#badging-rules}
 
-Märkordsregler länkar poängregler till märken genom att ange :
+Regler för märkning länkar till poängregler genom att ange:
 
 * Poängregel.
 * Poängen som krävs för att tilldelas ett specifikt märke.
@@ -409,6 +415,7 @@ cURL -i -X POST -H *header* -u *signin* -F *operation* -F *badge* *member-profil
 >
 >* Kan referera till en författarinstans om [tunneltjänsten](/help/communities/users.md#tunnel-service) är aktiverad.
 >* Kan vara ett otydligt, slumpmässigt namn - se [Säkerhetschecklista](/help/sites-administering/security-checklist.md#verify-that-you-are-not-disclosing-personally-identifiable-information-in-the-users-home-path) för auktoriseringsbart ID.
+
 >
 
 
