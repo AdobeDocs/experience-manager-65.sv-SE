@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: e9bfbbce-93fc-455c-a2f7-4ee44e63c03f
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
+source-git-commit: 17088abc71bb820693259088c8a9b938a43cd9d3
+workflow-type: tm+mt
+source-wordcount: '542'
+ht-degree: 0%
 
 ---
 
@@ -35,7 +38,7 @@ När en åtgärd vidtas för att skapa en ny community-grupp väljs gruppens mal
 
 Så här når du gruppmallskonsolen i AEM Author-miljön:
 
-* Välj **verktyg| Communities| Gruppmallar,** från global navigering.
+* Välj **verktyg | Communities | Gruppmallar,** från global navigering.
 
 Den här konsolen visar mallarna som en [communitywebbplats](/help/communities/sites-console.md) kan skapas från och tillåter att nya gruppmallar skapas.
 
@@ -49,7 +52,7 @@ Då öppnas panelen Platsredigeraren som innehåller tre underpaneler:
 
 ### Grundläggande information {#basic-info}
 
-![chlimage_1-137](assets/chlimage_1-137.png)
+![site-basic-info](assets/site-basic-info.png)
 
 På panelen Grundläggande information konfigureras ett namn, en beskrivning och huruvida mallen är aktiverad eller inaktiverad:
 
@@ -67,7 +70,7 @@ På panelen Grundläggande information konfigureras ett namn, en beskrivning och
 
 #### Miniatyrbild {#thumbnail}
 
-![chlimage_1-138](assets/chlimage_1-138.png)
+![webbplatsminiatyr](assets/site-thumbnail.png)
 
 (Valfritt) Markera ikonen Överför bild om du vill visa en miniatyrbild tillsammans med namnet och beskrivningen för användare som skapar communitywebbplatser.
 
