@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 8e9b3815-2893-4e6b-ac41-77720b42d56b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: a1e4d64a9ac7dc02c5cf2ac6b01994736c45b449
 workflow-type: tm+mt
-source-wordcount: '1767'
+source-wordcount: '1765'
 ht-degree: 9%
 
 ---
@@ -59,7 +59,7 @@ Så här kommer du igång snabbt med Spin Sets:
 
 1. [Visar snurruppsättningar](#viewing-spin-sets).
 
-   Du kan visa och komma åt uppsättningar som skapats med förinställningar för gruppuppsättningar på tre olika sätt. (Uppsättningar som skapats med gruppuppsättningsförinställningar visas *inte* i användargränssnittet.)
+   Du kan visa och komma åt uppsättningar som skapats med hjälp av gruppuppsättningsförinställningar på tre olika sätt. (Uppsättningar som skapats med gruppuppsättningsförinställningar visas *inte* i användargränssnittet.)
 
 1. [Förhandsgranska snurra uppsättningar.](/help/assets/previewing-assets.md)
 
@@ -205,6 +205,7 @@ Om du tar bort den bild som AEM använder som miniatyrbild genom att ersätta de
    * Om du vill ta bort en resurs markerar du den och klickar eller trycker **[!UICONTROL Delete Asset.]**
    * Om du vill använda en förinställning trycker eller klickar du på förinställningsikonen och väljer en förinställning.
    * Om du vill ta bort en hel snurruppsättning går du till snurra-uppsättningen, markerar den och markerar den **[!UICONTROL Delete]**
+
    >[!NOTE]
    >
    >You can edit the images in a Spin Set by navigating to the set, tap **[!UICONTROL Set Members]** in the left rail, and then tap the Pencil icon on an individual asset to open the editing window.
