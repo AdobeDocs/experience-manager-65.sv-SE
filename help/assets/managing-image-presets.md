@@ -10,9 +10,9 @@ discoiquuid: cc1111c4-6e24-4570-9ac7-97c25cf24ede
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-presets
 translation-type: tm+mt
-source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
+source-git-commit: a1e4d64a9ac7dc02c5cf2ac6b01994736c45b449
 workflow-type: tm+mt
-source-wordcount: '3703'
+source-wordcount: '3699'
 ht-degree: 8%
 
 ---
@@ -98,7 +98,7 @@ Du kommer åt alternativen för `Rasterize PDF/AI Image Preview Rendition` proce
 
 Tryck på Adobe Experience Manager i det övre vänstra hörnet, navigera till **[!UICONTROL Tools > Workflow > Models.]** På sidan Arbetsflödesmodeller, markera **[!UICONTROL DAM Update Asset]** och dubbeltryck sedan på **[!UICONTROL Edit.]** processkomponenten i verktygsfältet på sidan [!UICONTROL DAM Update Asset] `Rasterize PDF/AI Image Preview Rendition` Arbetsflöde för att öppna dialogrutan Stegegenskaper.
 
-#### Rastrera renderingsalternativen PDF/AI-förhandsvisning {#rasterize-pdf-ai-image-preview-rendition-options}
+#### Rastrera alternativ för PDF/AI-förhandsvisning av återgivning {#rasterize-pdf-ai-image-preview-rendition-options}
 
 ![Argument för att rastrera PDF- eller AI-arbetsflödet](assets/rasterize_pdf_ai_image_preview.png)
 
@@ -195,6 +195,7 @@ Storleksändring för miniatyrbilder definieras i följande format: **[!UICONTRO
    >
    >
 * Miniatyrbildsstorleken för videoklipp konfigureras i steget **[!UICONTROL FFmpeg thumbnails]** på fliken **[!UICONTROL Process]** under **[!UICONTROL Arguments.]**
+
 >
 
 
@@ -290,7 +291,7 @@ Om du lämnar dem tomma visas information om att den här bildförinställningen
 
 När du skapar eller redigerar bildförinställningar finns alternativen som beskrivs i det här avsnittet. Dessutom rekommenderar Adobe att du börjar med följande alternativ:
 
-* **[!UICONTROL Format]** (fliken **[!UICONTROL Basic]**) – Välj **[!UICONTROL JPEG]** eller ett annat format som uppfyller kraven. Alla webbläsare har stöd för JPEG-bildformatet. Det ger en bra balans mellan små filstorlekar och bildkvalitet. I bilder med JPEG-format används dock förstörande komprimering, som kan ge upphov till oönskade bildartefakter om komprimeringsinställningen är för låg. Därför rekommenderar Adobe att du ställer in komprimeringskvaliteten på 75. Den här inställningen ger en bra balans mellan bildkvalitet och liten filstorlek.
+* **[!UICONTROL Format]** (**[!UICONTROL Basic]** flik) - Välj **[!UICONTROL JPEG]** eller något annat format som uppfyller dina krav. Alla webbläsare har stöd för JPEG-bildformatet. Det ger en bra balans mellan små filstorlekar och bildkvalitet. I bilder med JPEG-format används dock förstörande komprimering, som kan ge upphov till oönskade bildartefakter om komprimeringsinställningen är för låg. Därför rekommenderar Adobe att du ställer in komprimeringskvaliteten på 75. Den här inställningen ger en bra balans mellan bildkvalitet och liten filstorlek.
 
 * **[!UICONTROL Enable Simple Sharpening]** – Markera inte **[!UICONTROL Enable Simple Sharpening]** (det här skärpefiltret ger mindre kontroll än inställningarna för Oskarp mask).
 
@@ -360,7 +361,7 @@ När du skapar eller redigerar bildförinställningar finns alternativen som bes
   </tr>
   <tr>
    <td><strong>Återgivningsmetod</strong></td>
-   <td>Du kan åsidosätta standardåtergivningsmetoden. Återgivningsmetoden bestämmer vad som händer med färger som inte kan återges i målfärgprofilen (ej tryckbart). Återgivningsmetoden ignoreras om den inte är kompatibel med ICC-profilen.
+   <td>Du kan åsidosätta standardåtergivningsmetoden. Återgivningsmetoden avgör vad som händer med färger som inte kan återges i målfärgprofilen (ej tryckbart). Återgivningsmetoden ignoreras om den inte är kompatibel med ICC-profilen.
     <ul>
      <li>Välj <strong>Perceptuell</strong> om du vill komprimera det totala färgomfånget från en färgrymd till en annan om en eller flera färger i den ursprungliga bilden ligger utanför färgomfånget för målfärgrymden.</li>
      <li>Välj <strong>Relativa färgvärden</strong> när en färg i den aktuella färgrymden ligger utanför färgomfånget i målfärgrymden och du vill mappa den till den närmaste möjliga färgen inom färgomfånget för målfärgrymden utan att påverka några andra färger. </li>
@@ -503,5 +504,5 @@ Om du kör Dynamic Media - hybrid-läge måste du publicera bildförinställning
 
 1. I AEM trycker eller klickar du på AEM-logotypen för att komma åt den globala navigeringskonsolen.
 1. Tryck på **[!UICONTROL Tools]** ikonen och navigera sedan till **[!UICONTROL Assets > Image Presets.]**
-1. Markera en förinställning och klicka sedan på **[!UICONTROL Delete**. Dynamic Media bekräftar att du vill ta bort den. Tryck för **[!UICONTROL Delete]** att ta bort eller tryck för **[!UICONTROL Cancel]** att avbryta.
+1. Markera en förinställning och klicka sedan på **[!UICONTROL Delete]**. Dynamic Media bekräftar att du vill ta bort den. Tryck för **[!UICONTROL Delete]** att ta bort eller tryck för **[!UICONTROL Cancel]** att avbryta.
 
