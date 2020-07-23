@@ -12,7 +12,7 @@ discoiquuid: d381ea40-fe49-4d32-bfad-1379c7a02aba
 docset: aem65
 pagetitle: Community Groups Console
 translation-type: tm+mt
-source-git-commit: ee0d4aa07db6f00409cace8664d02c545e7d6550
+source-git-commit: a76707e16aa7054078bcfffe43476e4bd83d83e3
 workflow-type: tm+mt
 source-wordcount: '1676'
 ht-degree: 0%
@@ -259,7 +259,7 @@ Ta bort funktioner från platsstrukturen.
 
 >[!CAUTION]
 >
->Gruppfunktionen får inte *vara den *första eller enda* funktionen i platsstrukturen.
+>Gruppfunktionen får *inte* vara den *första eller enda* funktionen i platsstrukturen.
 >
 >Alla andra funktioner, till exempel [sidfunktionen](/help/communities/functions.md#page-function), måste inkluderas och listas först.
 
