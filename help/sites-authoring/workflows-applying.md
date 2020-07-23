@@ -11,7 +11,10 @@ topic-tags: site-features
 discoiquuid: 6472dc94-96e0-4286-8f86-d85726cc843c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
+source-git-commit: 611743cc4144f99968845093b3903fe7df8bf9d9
+workflow-type: tm+mt
+source-wordcount: '674'
+ht-degree: 12%
 
 ---
 
@@ -22,15 +25,15 @@ När du redigerar kan du anropa arbetsflöden för att göra något på sidorna;
 
 När du använder arbetsflödet anger du följande information:
 
-* Arbetsflödet som ska användas.
-Du kan tillämpa vilket arbetsflöde som helst (som du har tillgång till, enligt din AEM-administratörs anvisningar).
+* Det arbetsflöde som ska användas.
+Du kan använda vilket arbetsflöde som helst (som du fått tillgång till av AEM-administratören).
 * Alternativt kan du använda en titel som hjälper till att identifiera arbetsflödesinstansen i en användares inkorg.
 * Arbetsflödets nyttolast. detta kan vara en eller flera sidor.
 
 Arbetsflöden kan startas från:
 
-* [på **Sites** -konsolen](#starting-a-workflow-from-the-sites-console).
-* [när du redigerar en sida, från **Sidinformation **](#starting-a-workflow-from-the-page-editor).
+* [Sites-konsolen](#starting-a-workflow-from-the-sites-console).
+* [när du redigerar en sida, från Sidinformation](#starting-a-workflow-from-the-page-editor).
 
 >[!NOTE]
 >
@@ -38,6 +41,7 @@ Arbetsflöden kan startas från:
 >
 >* [Använda arbetsflöden för DAM-resurser](/help/assets/assets-workflow.md).
 >* [Arbeta med projektarbetsflöden](/help/sites-authoring/projects-with-workflows.md).
+
 >
 
 
@@ -50,8 +54,8 @@ Arbetsflöden kan startas från:
 
 Du kan starta ett arbetsflöde från:
 
-* [alternativet **Skapa** i verktygsfältet](#starting-a-workflow-from-the-sites-toolbar)Platser.
-* [tidslinjen **i** platskonsolen](#starting-a-workflow-from-the-timeline).
+* [alternativet Skapa i verktygsfältet](#starting-a-workflow-from-the-sites-toolbar)Platser.
+* [tidslinjen i webbplatskonsolen](#starting-a-workflow-from-the-timeline).
 
 I båda fallen måste du:
 
@@ -86,8 +90,8 @@ Guiden **Skapa arbetsflöde** hjälper dig att välja arbetsflöde och ange nöd
 
 När du har öppnat guiden **Skapa arbetsflöde** från:
 
-* [alternativet **Skapa** i verktygsfältet](#starting-a-workflow-from-the-sites-toolbar)Platser.
-* [tidslinjen **i** platskonsolen](#starting-a-workflow-from-the-timeline).
+* [alternativet Skapa i verktygsfältet](#starting-a-workflow-from-the-sites-toolbar)Platser.
+* [tidslinjen i webbplatskonsolen](#starting-a-workflow-from-the-timeline).
 
 Du kan ange information:
 
@@ -97,6 +101,7 @@ Du kan ange information:
    * **Arbetsflödets titel**
 
       * Du kan ange en titel för den här instansen så att du lättare kan identifiera den i ett senare skede.
+
    Beroende på arbetsflödesmodellen är följande alternativ också tillgängliga. Dessa gör att det paket som skapas som nyttolast kan behållas när arbetsflödet har slutförts.
 
    * **Behåll arbetsflödespaket**
@@ -105,7 +110,7 @@ Du kan ange information:
       * Du kan ange en rubrik för paketet för att underlätta identifieringen.
    >[!NOTE]
    >
-   >Alternativet **Behåll arbetsflödespaket** är tillgängligt när arbetsflödet har konfigurerats för [Multi Resource Support](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support) och flera resurser har valts.
+   >Alternativet **Behåll arbetsflödespaket** är tillgängligt när arbetsflödet har konfigurerats med stöd för flera resurser och flera resurser har valts.[](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support)
 
    När du är klar använder du **Nästa** för att fortsätta.
 
@@ -117,20 +122,22 @@ Du kan ange information:
 
    * En befintlig resurs som visar ytterligare åtgärder:
 
-      * **Inkludera underordnade objekt** för att ange att underordnade för den resursen ska inkluderas i arbetsflödet.
+      * **Inkludera underordnade objekt** för att ange att underordnade resurser ska inkluderas i arbetsflödet.
 En dialogruta öppnas där du kan förfina markeringen enligt:
 
          * Inkludera endast omedelbara barn.
          * Inkludera endast ändrade sidor.
          * Inkludera endast redan publicerade sidor.
+
          Alla underordnade objekt läggs till i listan över resurser som arbetsflödet gäller för.
 
       * **Ta bort markeringen** för att ta bort resursen från arbetsflödet.
+
    ![wf-53](assets/wf-53.png)
 
    >[!NOTE]
    >
-   >Om du lägger till ytterligare resurser kan du använda **Bakåt** för att justera inställningen för **Behåll arbetsflödespaket** i **egenskapssteget** .
+   >Om du lägger till ytterligare resurser kan du använda **Bakåt** för att justera inställningen för **Behåll arbetsflödespaket** i steget **Egenskaper**.
 
 1. Använd **Skapa** för att stänga guiden och skapa arbetsflödesinstansen. Ett meddelande visas i webbplatskonsolen.
 
