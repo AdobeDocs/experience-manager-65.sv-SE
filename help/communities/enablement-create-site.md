@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: b9333558-6af9-46b2-9f03-3722645c69a6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ce21755263a2e8a3f0e97acb7f586e32cedde83a
+source-git-commit: 17088abc71bb820693259088c8a9b938a43cd9d3
 workflow-type: tm+mt
 source-wordcount: '1727'
 ht-degree: 1%
@@ -256,7 +256,7 @@ I det här exemplet `Community Ski Class` läggs gruppen till som medlem i grupp
 
 `https://localhost:4503/content/sites/enable/en.html {#http-localhost-content-sites-enable-en-html}`
 
-![chlimage_1-433](assets/chlimage_1-433.png)
+![enablement-login](assets/enablement-login.png)
 
 ### Konfigurera för autentiseringsfel {#configure-for-authentication-error}
 
