@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: a3f5a21d-2df6-4663-a1ea-3a067c46f860
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
+source-git-commit: f62fb1eb760ddd7baee9ba5a631ff4b921e2d08b
+workflow-type: tm+mt
+source-wordcount: '1113'
+ht-degree: 0%
 
 ---
 
@@ -44,17 +47,19 @@ Mer information finns i Grunderna för [communitykomponenter](/help/communities/
 
 När de [nödvändiga klientbiblioteken](/help/communities/ideation.md#essentials-for-client-side) inkluderas visas `Ideation` komponenten så här:
 
-![chlimage_1-71](assets/chlimage_1-71.png)
+![ideation](assets/ideation.png)
 
 ### Konfigurera en idé {#configuring-an-ideation}
 
 Markera den monterade `Ideation` komponent som du vill öppna och välj den `Configure` ikon som öppnar redigeringsdialogrutan.
 
-![chlimage_1-72](assets/chlimage_1-72.png) ![ideation-settings](assets/ideation-settings.png)
+![configure-new](assets/configure-new.png)
+
+![ideation-settings](assets/ideation-settings.png)
 
 #### Fliken Inställningar {#settings-tab}
 
-Ange inställningar för idéer och kommentarer på fliken **[!UICONTROL Inställningar]** :
+Ange inställningar för idéer och kommentarer under **[!UICONTROL Settings]** fliken:
 
 * **Tillåt miniatyrbild för bifogad fil**
 * **Maximal storlek på miniatyrbild**
@@ -88,7 +93,7 @@ Ange inställningar för idéer och kommentarer på fliken **[!UICONTROL Instäl
 
 * **Tillåt taggning**
 
-   Om det här alternativet är markerat kan medlemmar lägga till taggetiketter i sina inlägg (se fliken **[!UICONTROL Taggfält]** ). Standard är avmarkerat.
+   Om det här alternativet är markerat kan medlemmar lägga till taggetiketter i sina inlägg (se **[!UICONTROL Tag field]** flik). Standard är avmarkerat.
 
 * **Tillåt filöverföringar**
 
@@ -146,7 +151,7 @@ Ange inställningar för idéer och kommentarer på fliken **[!UICONTROL Instäl
 
 #### Fliken Användarmoderering {#user-moderation-tab}
 
-På fliken **[!UICONTROL Användarmoderering]** anger du hur publicerade idéer och kommentarer (användargenererat innehåll) ska hanteras. Mer information finns i [Hantera användargenererat innehåll](/help/communities/moderate-ugc.md).
+Under **[!UICONTROL User Moderation]** fliken anger du hur publicerade idéer och kommentarer (användargenererat innehåll) ska hanteras. Mer information finns i [Hantera användargenererat innehåll](/help/communities/moderate-ugc.md).
 
 * **Neka inlägg**
 
@@ -178,11 +183,11 @@ På fliken **[!UICONTROL Användarmoderering]** anger du hur publicerade idéer 
 
 #### Fliken Taggfält {#tag-field-tab}
 
-Under fliken **[!UICONTROL Tagg]** begränsas de taggar som kan användas, om de tillåts under fliken **[!UICONTROL Inställningar]** , enligt de namnutrymmen som valts.
+Under **[!UICONTROL Tag field]** fliken är de taggar som kan användas, om de tillåts under **[!UICONTROL Settings]** fliken, begränsade enligt de namnutrymmen som har valts.
 
 * **Tillåtna namnutrymmen**
 
-   Relevant om `Allow Tagging` är markerat under fliken **[!UICONTROL Inställningar]** . De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som kontrolleras. Listan med namnutrymmen innehåller &quot;Standardtaggar&quot; (standardnamnutrymmet) och &quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
+   Relevant om `Allow Tagging` är markerat under **[!UICONTROL Settings]** fliken. De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som kontrolleras. Listan med namnutrymmen innehåller &quot;Standardtaggar&quot; (standardnamnutrymmet) och &quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
 
 * **Förslagsgräns**
 
@@ -190,7 +195,7 @@ Under fliken **[!UICONTROL Tagg]** begränsas de taggar som kan användas, om de
 
 #### Fliken Sorteringsinställningar {#sort-settings-tab}
 
-På fliken **[!UICONTROL Sorteringsinställningar]** anger du hur de skickade kommentarerna ska sorteras när de visas.
+Under **[!UICONTROL Sort Settings]** fliken anger du hur de bokförda kommentarerna ska sorteras när de visas.
 
 * **Sortera efter**
 
@@ -212,23 +217,23 @@ Precis som med alla communityfunktioner kan en besökare på webbplatsen endast 
 
 När medlemmen har loggat in kan han eller hon skapa en ny idé.
 
-![chlimage_1-73](assets/chlimage_1-73.png)
+![create-new-idé](assets/create-new-idea.png)
 
 Innan du skickar in en idé kan medlemmen spara ett utkast.
 
 Genom att markera `Save as Draft` knappen sparas ett utkast.
 
-![chlimage_1-74](assets/chlimage_1-74.png)
+![save-ideas](assets/save-idea.png)
 
 När du visar sparade utkast på `My Drafts` fliken väljer du `Read More` att återgå till redigeringsläget:
 
-![chlimage_1-75](assets/chlimage_1-75.png)
+![edit-ideas](assets/edit-idea.png)
 
 #### Ge feedback {#providing-feedback}
 
 När idén har publicerats kan andra medlemmar logga in, öppna idén ( `Read More`) och gilla idén, och på så sätt lägga till fler röster och göra kommentarer.
 
-![chlimage_1-76](assets/chlimage_1-76.png)
+![feedback](assets/feedback-idea.png)
 
 ### Additional Information {#additional-information}
 
