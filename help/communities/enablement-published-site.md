@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 26715b94-e2ea-4da7-a0e2-3e5a367ac1cd
 translation-type: tm+mt
-source-git-commit: b242163267b43507e1cb9c6d4c36bb65385afc62
+source-git-commit: 8738989c18c6f09452da95d0b9f2c05b0a2a1a81
 workflow-type: tm+mt
 source-wordcount: '1210'
 ht-degree: 1%
@@ -39,7 +39,7 @@ Vid första ankomsten till den publicerade webbplatsen är besökaren vanligtvis
 
 **http://localhost:4503/content/sites/enable/en.html**
 
-![chlimage_1-433](assets/chlimage_1-433.png)
+![enablement-login](assets/enablement-login.png)
 
 ## Anonym webbplatsbesökare {#anonymous-site-visitor}
 
@@ -72,7 +72,7 @@ Följ de här stegen för att skydda communityplatsens innehåll från anonyma a
 1. Gå till **[!UICONTROL Advanced]** fliken.
 1. Aktivera **[!UICONTROL Authentication Requirement]**.
 
-   ![site-authentication-1](assets/site-authentication-1.png)
+   ![webbplatsautentisering](assets/site-authentication.png)
 
 1. Lägg till inloggningssidans sökväg. Till exempel, `/content/......./GetStarted`.
 1. Publicera sidan.
@@ -86,7 +86,7 @@ Logga in med
 * `Username: riley`
 * `Password: password`
 
-Om användarprofilen inte skapades genom självregistrering visas profilsidan den första gången en medlem loggar in, så att de kan verifiera och ändra den efter behov.
+Om användarprofilen inte skapades genom självregistrering visas profilsidan den första gången en medlem loggar in, så att de kan verifiera och ändra den om det behövs.
 
 Nästa gång medlemmen loggar in visas startsidan, som identifieras av det första menyalternativet.
 
