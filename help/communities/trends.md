@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 4a0debdd-acb9-4646-80bb-fec66fae4088
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
+source-git-commit: 17088abc71bb820693259088c8a9b938a43cd9d3
+workflow-type: tm+mt
+source-wordcount: '357'
+ht-degree: 2%
 
 ---
 
@@ -30,9 +33,9 @@ Dokumentet beskriver:
 
 ### Krav {#requirement}
 
-Data för webbplatsen `Community Activity List` är bara tillgängliga när Adobe Analytics är licensierat och konfigurerat för communitywebbplatsen.
+Data för `Community Activity List` programmet är bara tillgängliga när Adobe Analytics har licens och konfigurerats för communitywebbplatsen.
 
-Se [Analyskonfiguration för communityfunktioner](/help/communities/analytics.md).
+Se [Analytics Configuration for Communities Features](/help/communities/analytics.md).
 
 ### Lägga till en lista med communityaktiviteter på en sida {#adding-a-community-activity-list-to-a-page}
 
@@ -46,9 +49,9 @@ Mer information finns i Grunderna för [communitykomponenter](/help/communities/
 
 När komponenten placeras på en sida i en community-webbplats är det så här den visas:
 
-![chlimage_1-54](assets/chlimage_1-54.png)
+![communityaktivitet](assets/community-activity.png)
 
-### Konfigurerar lista över communityaktiviteter {#configuring-community-activity-list}
+### Konfigurerar lista över communityaktiviteter  {#configuring-community-activity-list}
 
 Markera den monterade `Community Activity List` komponent som du vill öppna och välj den `Configure` ikon som öppnar redigeringsdialogrutan.
 
@@ -66,6 +69,7 @@ Under fliken **Kommentarer** anger du om och hur kommentarer för överförda fi
 
    * `Members`
    * `Content`
+
    Standardvärdet är `Members`.
 
 * **Visa titel**
@@ -86,6 +90,7 @@ Standardvärdet är 10.
    * `Posts`(skapa UGC)
    * `Follows`
    * `Likes`
+
    Standardvärdet är Vyer.
 
 * **Tidsperiod**
@@ -98,6 +103,7 @@ Standardvärdet är 10.
    * `Last 90 days`
    * `This year (since Jan 1st)`
    * `Total`
+
    Standardvärdet är `Total`.
 
 * **Kontextbana**
