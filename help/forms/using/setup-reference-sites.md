@@ -10,9 +10,9 @@ topic-tags: introduction
 discoiquuid: 03886dd3-5873-4908-912b-fbbddb26c322
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
+source-git-commit: 371ecbdaad97b7111353f40d1ddfb686e99d46c5
 workflow-type: tm+mt
-source-wordcount: '2788'
+source-wordcount: '2802'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ Referenswebbplatserna innehåller återanvändbara resurser som du kan använda 
 
 Innan du konfigurerar referensplatsen måste du ha följande:
 
-* **Grundläggande AEM** -funktioner, AEM QuickStart, tilläggspaket för AEM Forms samt referenspaket för webbplatser. Mer information om paket med tillägg och referensplatser finns i [AEM Forms-releaser](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) .
+* **Grundläggande AEM** -funktioner, AEM QuickStart, tilläggspaket för AEM Forms och referenspaket för webbplatser. Mer information om paket med tillägg och referensplatser finns i [AEM Forms-releaser](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) .
 
 * **En SMTP-tjänst** Du kan använda vilken SMTP-tjänst som helst.
 
@@ -216,8 +216,8 @@ I AEM DS-inställningstjänsten anger du URL:en för publiceringsservern i stäl
 
 Installera referensplatspaketen med hjälp av [Programvarudistribution](https://docs.adobe.com/content/help/en/experience-cloud/software-distribution/home.html).
 
-* [AEM Forms FSI Reference Site Package](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/fd/AEM-FORMS-6.5-FSI-REF-SITE)
-* [AEM Forms GOV Reference Site Package](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/fd/AEM-FORMS-6.5-GOV-REF-SITE)
+* [AEM Forms FSI Reference Site Package](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffd%2FAEM-FORMS-6.5-FSI-REF-SITE)
+* [AEM Forms GOV Reference Site Package](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffd%2FAEM-FORMS-6.5-GOV-REF-SITE)
 
 Mer information om hur du använder paket finns i [Arbeta med paket](/help/sites-administering/package-manager.md).
 
