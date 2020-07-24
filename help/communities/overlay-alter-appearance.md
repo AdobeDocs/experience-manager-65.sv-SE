@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: c9d31ed8-c105-453b-bd3c-4660dfd81272
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 48afa2146d0dcbab4beaa1044645c269b49fd7ff
+source-git-commit: 4e823136604d291c5b867634268f67e003185a15
+workflow-type: tm+mt
+source-wordcount: '213'
+ht-degree: 0%
 
 ---
 
@@ -60,11 +63,11 @@ Radera raderna eller omge dem med `<!--` och kommentera `-->` ut dem. Dessutom l
 >En robustare form av replikering skulle vara att skapa ett paket i Package Manager och [aktivera](/help/sites-administering/package-manager.md#replicating-packages) det. Ett paket kan exporteras och arkiveras.
 
 
-I den globala navigeringen väljer du **[!UICONTROL Verktyg]** > **[!UICONTROL Distribution]** > **[!UICONTROL Replikering]** och klickar på **[!UICONTROL Aktivera träd]**.
+I den globala navigeringen väljer du **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Replication]** och klickar på **[!UICONTROL Activate Tree]**.
 
-Ange `/apps/social/commons` och välj **[!UICONTROL Aktivera]** som startsökväg.
+Ange `/apps/social/commons` och välj Start Path **[!UICONTROL Activate]**.
 
-![chlimage_1-77](assets/chlimage_1-77.png)
+![verify-content-template](assets/verify-content-template.png)
 
 ### Visa resultat {#view-results}
 
@@ -72,5 +75,5 @@ Om du loggar in på publiceringsinstansen som administratör, t.ex. https://loca
 
 Om du loggar ut och loggar in igen som `aaron.mcdonald@mailinator.com/password` och uppdaterar sidan, kommer du att märka att den publicerade kommentaren inte längre visas med en avatar, i stället visas en enkel &#39;xxx&#39;.
 
-![chlimage_1-78](assets/chlimage_1-78.png)
+![create-template-component](assets/create-template-component.png)
 
