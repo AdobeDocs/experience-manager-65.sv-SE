@@ -3,9 +3,9 @@ title: Bearbeta material för att genomföra affärsprocesser, utföra revisione
 description: Resursbearbetning för att konvertera format, skapa renderingar, hantera resurser, validera resurser och köra arbetsflöden.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
 workflow-type: tm+mt
-source-wordcount: '942'
+source-wordcount: '949'
 ht-degree: 3%
 
 ---
@@ -56,11 +56,9 @@ Så här använder du ett arbetsflöde för en resurs:
 
 1. Välj en arbetsflödesmodell i listan i **[!UICONTROL Start Workflow]** dialogrutan.
 
-   ![chlimage_1-254](assets/chlimage_1-50.png)
-
 1. (Valfritt) Ange en rubrik för arbetsflödet som kan användas för att referera till arbetsflödets instans.
 
-   ![chlimage_1-255](assets/chlimage_1-51.png)
+   ![välj arbetsflöde, ange en titel och klicka på början](assets/start-workflow.png)
 
 1. Click **[!UICONTROL Start]** and then click **[!UICONTROL Proceed]**. Varje steg i arbetsflödet visas på tidslinjen som en händelse.
 
@@ -75,7 +73,7 @@ Så här använder du ett arbetsflöde för en resurs:
 1. Klicka **[!UICONTROL Actions]** nedåt på ![vinklingslisten](assets/do-not-localize/chevron-up-icon.png) .
 1. Klicka på **[!UICONTROL Start Workflow]**. Välj en arbetsflödesmodell i listan i **[!UICONTROL Start Workflow]** dialogrutan.
 
-   ![chlimage_1-31](assets/chlimage_1-138.png)
+   ![starta arbetsflöde](assets/start-workflow.png)
 
 1. (Valfritt) Ange en rubrik för arbetsflödet som kan användas som referens för arbetsflödesinstansen.
 1. Klicka på **[!UICONTROL Start]** och sedan på **[!UICONTROL Confirm]** i dialogrutan. Arbetsflödet körs på alla resurser som du har valt.
