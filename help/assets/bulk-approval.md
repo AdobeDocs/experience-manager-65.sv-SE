@@ -3,10 +3,10 @@ title: Granska resurser i mappar och samlingar
 description: Ställ in granskningsarbetsflöden för material i en mapp eller en samling och dela dem med granskare eller kreativa partners för att få feedback.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
 workflow-type: tm+mt
-source-wordcount: '742'
-ht-degree: 4%
+source-wordcount: '746'
+ht-degree: 5%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 Ställ in granskningsarbetsflöden för material i en mapp eller en samling och dela dem med granskare eller kreativa partners för att få feedback.
 
-Med Adobe Experience Manager Assets kan ni skapa ett ad hoc-granskningsarbetsflöde för resurser i en mapp eller samling och dela det med granskare eller kreativa partner för att få feedback.
+Med Adobe Experience Manager Assets kan du skapa ett ad hoc-granskningsarbetsflöde för resurser i en mapp eller samling och dela det med granskare eller kreativa partner för att få feedback.
 
 Du kan antingen associera granskningsarbetsflödet med ett projekt eller skapa en oberoende granskningsåtgärd.
 
@@ -26,9 +26,7 @@ När granskaren har slutfört granskningen (godkänner eller avvisar resurser) f
 ## Skapa en granskningsuppgift för mappar {#creating-a-review-task-for-folders}
 
 1. I Assets-användargränssnittet väljer du den mapp som du vill skapa en granskningsuppgift för.
-1. Öppna **[!UICONTROL Create Review Task]** sidan genom **[!UICONTROL Review Task]** att klicka i verktygsfältet. If you cannot see the option in the toolbar, click **[!UICONTROL More]** and then select the option.
-
-   ![chlimage_1-403](assets/chlimage_1-403.png)
+1. Öppna **[!UICONTROL Create Review Task]** sidan genom att klicka på ![Skapa](assets/do-not-localize/create-review-task.png) granskningsåtgärd **[!UICONTROL Review Task]** i verktygsfältet. If you cannot see the option in the toolbar, click **[!UICONTROL More]** and then select the option.
 
 1. (Valfritt) I **[!UICONTROL Project]** listan väljer du det projekt som du vill associera granskningsuppgiften med. Som standard är **[!UICONTROL None]** alternativet markerat. Om du inte vill associera något projekt med granskningsaktiviteten ska du behålla det här valet.
 
@@ -60,7 +58,7 @@ När granskaren har slutfört granskningen (godkänner eller avvisar resurser) f
 
    ![review_task](assets/review_task.png)
 
-1. Klicka **[!UICONTROL Complete]** i verktygsfältet. Skriv en kommentar i dialogrutan och klicka på **[!UICONTROL Complete]** för att bekräfta.
+1. Klicka på **[!UICONTROL Complete]** i verktygsfältet. Skriv en kommentar i dialogrutan och klicka på **[!UICONTROL Complete]** för att bekräfta.
 1. Navigera till Assets-användargränssnittet och öppna mappen. Ikonerna för godkännandestatus för resurserna visas i kortvyn och listvyn.
 
    **Kortvy**
@@ -74,9 +72,7 @@ När granskaren har slutfört granskningen (godkänner eller avvisar resurser) f
 ## Skapa en granskningsuppgift för samlingar {#creating-a-review-task-for-collections}
 
 1. På sidan Samlingar väljer du den samling som du vill skapa en granskningsuppgift för.
-1. Öppna **[!UICONTROL Create Review Task]** sidan genom **[!UICONTROL Review Task]** att klicka i verktygsfältet. If you cannot see the option on the toolbar, click **[!UICONTROL More]** and then select the option.
-
-   ![chlimage_1-405](assets/chlimage_1-405.png)
+1. Öppna **[!UICONTROL Create Review Task]** sidan genom att klicka på ![Skapa](assets/do-not-localize/create-review-task.png) granskningsåtgärd **[!UICONTROL Review Task]** i verktygsfältet. If you cannot see the option on the toolbar, click **[!UICONTROL More]** and then select the option.
 
 1. (Valfritt) I **[!UICONTROL Project]** listan väljer du det projekt som du vill associera granskningsuppgiften med. Som standard är **[!UICONTROL None]** alternativet markerat. Om du inte vill associera något projekt med granskningsaktiviteten ska du behålla det här valet.
 
@@ -101,7 +97,7 @@ När granskaren har slutfört granskningen (godkänner eller avvisar resurser) f
 
    ![review_task_collection](assets/review_task_collection.png)
 
-1. Klicka **[!UICONTROL Complete]** i verktygsfältet. Skriv en kommentar i dialogrutan och klicka på **[!UICONTROL Complete]** för att bekräfta.
+1. Klicka på **[!UICONTROL Complete]** i verktygsfältet. Skriv en kommentar i dialogrutan och klicka på **[!UICONTROL Complete]** för att bekräfta.
 1. Navigera till samlingskonsolen och öppna samlingen. Ikonerna för godkännandestatus för resurserna visas både i kort- och listvyn.
 
    ![collection_reviewstatuscardview](assets/collection_reviewstatuscardview.png)
