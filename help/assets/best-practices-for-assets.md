@@ -3,9 +3,9 @@ title: Metodtips för Assets
 description: Beroende på hur ni använder Experience Manager Assets och vilka funktioner ni använder för materialintag, renderingsgenerering och metadataextrahering kan det vara bra att identifiera och följa bästa praxis inom olika områden, vilket förbättrar systemets stabilitet och prestanda vid inläsning.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '557'
 ht-degree: 0%
 
 ---
@@ -24,5 +24,5 @@ När du har granskat följande riktlinjer får du de kunskaper och verktyg du be
 * Handboken för [resursmigrering](/help/assets/assets-migration-guide.md): Om du vill migrera resurser från ditt äldre system till Assets finns det flera steg som ska övervägas för att effektivisera migreringsprocessen. Migreringsguiden innehåller metodtips för de uppgifter du utför för att ta in resurserna i Experience Manager på ett fasvis sätt. Detta inkluderar att lägga till metadata, generera återgivningar och aktivera resurserna för att publicera instanser.
 * Dokumentet [Assets Network Considerations](/help/assets/assets-network-considerations.md): När du hanterar driftsättning i Experience Manager är det viktigt att förstå nätverkstopologin för att förstå nätverksprestanda, identifiera kontrollpunkter och beskriva den förväntade användarupplevelsen. Dokumentet Assets Network Considerations behandlar nätverksaspekter när du designar din resursdistribution.
 * The [Assets Monitoring Guide](/help/assets/assets-monitoring-best-practices.md): När distributionen av Experience Manager är klar bör du övervaka vissa uppgifter och systemet i allmänhet för att säkerställa systemintegriteten och effektiviteten i åtgärderna. Övervakningsguiden innehåller bästa praxis för övervakning av olika aspekter av ditt system.
-* [Bästa praxis](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app-best-practices.html)för Experience Manager-datorprogram: Skrivbordsappen Experience Manager länkar din DAM-lösning (Digital Asset Management) till skrivbordet så att du kan öppna de filer som finns i användargränssnittet för Experience Manager direkt på skrivbordet. Skrivbordsappens lättanvända arbetsflöde aktiveras med hjälp av nätverksdelningsteknik från operativsystemen på datorn. I den här guiden förklaras de viktigaste funktionerna och den rekommenderade användningen av datorprogrammet Experience Manager.
+* [Bästa praxis](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/introduction.html)för Experience Manager-datorprogram: Skrivbordsappen Experience Manager länkar din DAM-lösning (Digital Asset Management) till skrivbordet så att du kan öppna de filer som finns i användargränssnittet för Experience Manager direkt på skrivbordet. Skrivbordsappens lättanvända arbetsflöde aktiveras med hjälp av nätverksdelningsteknik från operativsystemen på datorn. I den här guiden förklaras de viktigaste funktionerna och den rekommenderade användningen av datorprogrammet Experience Manager.
 * [Bästa praxis](/help/assets/aem-cc-integration-best-practices.md)för integrering mellan Experience Manager och Creative Cloud: Du kan integrera din Experience Manager-distribution med Creative Cloud på flera sätt. Om du följer några metodtips för att effektivisera arbetsflödena för integrering och överföring av resurser blir det effektivare. Den här guiden innehåller metodtips om hur du integrerar resurser med Adobe Creative Cloud.
