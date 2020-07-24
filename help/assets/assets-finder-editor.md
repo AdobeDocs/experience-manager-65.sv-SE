@@ -3,9 +3,9 @@ title: Skapa och konfigurera sidor för Resursredigeraren
 description: Lär dig hur du skapar anpassade sidor i Resursredigeraren och redigerar flera resurser samtidigt.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
 workflow-type: tm+mt
-source-wordcount: '2116'
+source-wordcount: '2111'
 ht-degree: 0%
 
 ---
@@ -298,8 +298,6 @@ På sidan Resursredigeraren kan användare sedan ange värden i metadatafälten 
 
 I delresurskomponenten kan du visa och välja delresurser. Du kan bestämma vilka namn som ska visas under [huvudresursen](/help/assets/assets.md#what-are-digital-assets) och underresurserna.
 
-![screen_shot_2012-04-23at24025pm](assets/screen_shot_2012-04-23at24025pm.png)
-
 Dubbelklicka på delresurskomponenten för att öppna dialogrutan med delresurser där du kan ändra rubrikerna för huvudresursen och eventuella delresurser. Standardvärdena visas under motsvarande fält.
 
 ![screen_shot_2012-04-23at23907pm](assets/screen_shot_2012-04-23at23907pm.png)
@@ -347,8 +345,6 @@ Följande är ett exempel på en fylld miniatyrkomponent:
 #### Titel {#title}
 
 Rubrikkomponenten visar resursens namn och en beskrivning.
-
-![chlimage_1-163](assets/chlimage_1-391.png)
 
 Som standard är den i skrivskyddat läge, så användare kan inte redigera den. Dubbelklicka på komponenten och avmarkera kryssrutan **Dölj redigeringsknapp** om du vill göra den redigerbar. Ange dessutom en titel för flera resurser.
 
