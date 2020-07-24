@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a1e4d64a9ac7dc02c5cf2ac6b01994736c45b449
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
 workflow-type: tm+mt
-source-wordcount: '11360'
+source-wordcount: '11362'
 ht-degree: 6%
 
 ---
@@ -773,7 +773,7 @@ Så här publicerar du videor till din YouTube-kanal:
 1. Klicka på i det övre högra hörnet på egenskapssidan för videon **[!UICONTROL Save and Close.]**
 1. On the toolbar, click **[!UICONTROL Quick Publish.]**
 
-   Se även [Använda Publication Management med AEM Sites](https://helpx.adobe.com/experience-manager/kt/sites/using/publication-management-feature-video-use.html).
+   Se även [Använda Publication Management med AEM Sites](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/publication-management-feature-video-use.html).
 
    Du kan även verifiera den publicerade videon på din YouTube-kanal.
 
