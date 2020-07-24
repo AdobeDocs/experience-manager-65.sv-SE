@@ -1,5 +1,5 @@
 ---
-title: Bästa tillvägagångssätt för att optimera bildkvaliteten
+title: Bästa tillvägagångssätt för att optimera bildkvalitet
 description: Lär dig de bästa sätten att optimera bildkvaliteten i Dynamic Media
 uuid: b73f0918-c723-4a0d-a63f-4242223c2d47
 contentOwner: Rick Brough
@@ -8,21 +8,24 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 12baf001-dfc9-410a-9821-a3bae1324392
 translation-type: tm+mt
-source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
+workflow-type: tm+mt
+source-wordcount: '1460'
+ht-degree: 5%
 
 ---
 
 
-# Bästa tillvägagångssätt för att optimera bildkvaliteten {#best-practices-for-optimizing-the-quality-of-your-images}
+# Bästa tillvägagångssätt för att optimera bildkvalitet {#best-practices-for-optimizing-the-quality-of-your-images}
 
 Att optimera bildkvaliteten kan vara en tidskrävande process eftersom många faktorer bidrar till att återge godtagbara resultat. Resultatet är delvis subjektivt eftersom individer upplever olika bildkvalitet. Strukturerade experiment är avgörande.
 
-AEM innehåller över 100 kommandon för leverans av dynamiska media-bilder för justering och optimering av bilder och återgivning. Följande riktlinjer kan hjälpa dig att effektivisera processen och uppnå goda resultat snabbt med några viktiga kommandon och bästa metoder.
+I AEM finns över 100 kommandon för bildleverans i Dynamic Media för justering och optimering av bilder och återgivning. Följande riktlinjer kan hjälpa dig att effektivisera processen och uppnå goda resultat snabbt med några viktiga kommandon och bästa metoder.
 
 ## Bästa tillvägagångssätt för bildformat (`&fmt=`) {#best-practices-for-image-format-fmt}
 
 * JPG eller PNG är de bästa alternativen för att leverera bilder med god kvalitet och hanterbar storlek och vikt.
-* Om inget formatkommando anges i URL:en används JPG som standard för leverans av dynamiska bilder.
+* Om inget formatkommando anges i URL:en används som standard JPG för leverans i Dynamic Media Image Delivery.
 * JPG komprimeras med förhållandet 10:1 och ger vanligtvis mindre bildfilsstorlekar. PNG komprimeras med ett förhållande på cirka 2:1, utom i vissa fall, till exempel när bilder innehåller en vit bakgrund. Vanligtvis är PNG-filernas storlek större än JPG-filer.
 * JPG använder förstörande komprimering, vilket innebär att bildelement (pixlar) tas bort under komprimeringen. PNG använder däremot förlustfri komprimering.
 * JPG komprimerar ofta fotografiska bilder med bättre återgivning än syntetiska bilder med skarpa kanter och kontrast.
@@ -45,7 +48,8 @@ Bildskärpa är den mest komplicerade aspekten när det gäller att styra bilder
 
 De bästa sätten att arbeta med [informationsbilder i Adobe Scene7 Publishing System och i Image Server](/help/assets/assets/s7_sharpening_images.pdf) gäller även för AEM.
 
-Se även [Öka skärpan i en bild med oskarp mask](https://helpx.adobe.com/photoshop/atv/cs6-tutorials/sharpening-an-image-with-unsharp-mask.html).
+<!-- To be reviewed and updated: Broken link.
+See also [Sharpening an image with unsharp mask](https://helpx.adobe.com/photoshop/atv/cs6-tutorials/sharpening-an-image-with-unsharp-mask.html). -->
 
 Med AEM kan du förbättra skärpan i bilder vid intag, vid leverans eller både och. I de flesta fall bör du emellertid skärpa upp bilder med endast en metod eller med en annan, men inte med båda metoderna. Att skärpa bilderna vid leverans, på en URL-adress, ger oftast bäst resultat.
 
@@ -56,14 +60,14 @@ Det finns två metoder för bildskärpa:
 
    * `&op_sharpen=`belopp,radie,tröskelvärde
 
-      * **[!UICONTROL mängd]** (0-5, effektens styrka).
-      * **[!UICONTROL radie]** (0-250, bredden på de&quot;skärpelinjer&quot; som ritas runt det skarpa objektet, mätt i pixlar.)
+      * **[!UICONTROL amount]** (0-5, effektens styrka.)
+      * **[!UICONTROL radius]** (0-250, bredden på de&quot;skärpelinjer&quot; som ritas runt objektet med skärpa, mätt i pixlar.)
 
          Tänk på att parametrarnas radie och mängd fungerar mot varandra. Reducerad radie kan kompenseras genom ett ökat belopp. Med radie får du bättre kontroll eftersom ett lägre värde ökar skärpan endast för kantpixlarna, medan ett högre värde ökar skärpan för ett större antal pixlar.
 
-      * **[!UICONTROL tröskelvärde]** (0-255, effektkänslighet).
+      * **[!UICONTROL threshold]** (0-255, effektkänslighet.)
 
-         Den här parametern avgör hur annorlunda de pixlar som ska göras skarpare måste vara från det omgivande området innan de betraktas som kantpixlar och filtret gör dem skarpare. Parametern **[!UICONTROL threshold]** undviker du för mycket skärpa i områden med liknande färger, som hudtoner. Ett tröskelvärde på 12 ignorerar till exempel små variationer i hudtonens ljusstyrka för att undvika att lägga till&quot;brus&quot;, medan kantkontrasten läggs till i områden med hög kontrast, till exempel där ögonfransarna möter huden.
+         Den här parametern avgör hur annorlunda de pixlar som ska göras skarpare måste vara jämfört med det omgivande området innan de betraktas som kantpixlar och filtret gör dem skarpare. The **[!UICONTROL threshold]** parameter helps to avoid over-sharpening areas with similar colors, such as skin tones. Ett tröskelvärde på 12 ignorerar till exempel små variationer i hudtonens ljusstyrka för att undvika att lägga till ”brus”, men lägger ändå till kantkontrast i områden med hög kontrast, till exempel där ögonfransarna möter huden.
       Mer information om hur du ställer in de här tre parametrarna, inklusive de bästa sätten att använda med filtret, finns i följande resurser:
 
       AEM Help topic on Sharpening an image.
@@ -75,10 +79,10 @@ Det finns två metoder för bildskärpa:
 
 Det bästa sättet är att börja med parametern oskarp maskradie. Radie-inställningar som du kan börja med är följande:
 
-* **[!UICONTROL Webbplats]**: 0,2-0,3 pixlar
-* **[!UICONTROL Fotografisk utskrift (250-300 ppi)]**: 0,3-0,5 pixlar
-* **[!UICONTROL Offsettryck (266-300 ppi)]**: 0,7-1,0 pixlar
-* **[!UICONTROL Arbetsyteutskrift (150 ppi)]**: 1,5-2,0 pixlar
+* **[!UICONTROL Website]**: 0,2-0,3 pixlar
+* **[!UICONTROL Photographic printing (250-300 ppi)]**: 0,3-0,5 pixlar
+* **[!UICONTROL Offset printing (266-300 ppi)]**: 0,7-1,0 pixlar
+* **[!UICONTROL Canvas printing (150 ppi)]**: 1,5-2,0 pixlar
 
 Öka mängden gradvis från 1,75 till 4. Om skärpan fortfarande inte är som du vill ha den ökar du radien med ett decimalkomma och kör mängden igen från 1,75 till 4. Upprepa vid behov.
 
@@ -121,6 +125,6 @@ Om skärpeeffekten fortfarande inte är tillräcklig ökar du radien i decimalst
 När du experimenterar kan du också hitta följande allmänna förslag som kan hjälpa dig att optimera arbetsflödet:
 
 * Testa och testa olika parametrar i realtid, antingen direkt på en URL eller med Scene7 Publishing System bildjusteringsfunktion som ger förhandsgranskning i realtid för justeringsåtgärder.
-* Det är en god vana att gruppera kommandona Dynamic Media Image Serving i en bildförinställning. En bildförinställning är i princip URL-kommandomakron med anpassade förinställningsnamn som `$thumb_low$` och `&product_high$`. Det anpassade förinställningsnamnet i en URL-sökväg gör att dessa förinställningar anropas. Den här funktionen hjälper dig att hantera kommandon och kvalitetsinställningar för olika användningsmönster för bilder på webbplatsen och förkortar den totala längden på URL-adresser.
+* Det är en god vana att gruppera Dynamic Media Image Serving-kommandon i en bildförinställning. En bildförinställning är i princip URL-kommandomakron med anpassade förinställningsnamn som `$thumb_low$` och `&product_high$`. Det anpassade förinställningsnamnet i en URL-sökväg gör att dessa förinställningar anropas. Den här funktionen hjälper dig att hantera kommandon och kvalitetsinställningar för olika användningsmönster för bilder på webbplatsen och förkortar den totala längden på URL-adresser.
 * AEM erbjuder också mer avancerade sätt att finjustera bildkvaliteten, t.ex. att använda skärpebilder vid inhämtning. I avancerade fall där detta kan vara ett alternativ för att ytterligare finjustera och optimera återgivningsresultaten kan [Adobe Professional Services](https://www.adobe.com/experience-cloud/consulting-services.html) hjälpa dig med anpassade insikter och bästa metoder.
 
