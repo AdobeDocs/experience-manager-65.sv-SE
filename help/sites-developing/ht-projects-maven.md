@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 3ebc1d22-a7a2-4375-9aa5-a18a7ceb446a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1669412afb670a9f55f02476e828de55b4f7a55a
+source-git-commit: 3b64b1fe5d47f115681608f38e7e53d078c4698e
 workflow-type: tm+mt
 source-wordcount: '2424'
 ht-degree: 0%
@@ -46,7 +46,7 @@ Adobe tillhandahåller två Maven-arkitekter som kan fungera som baslinje för d
 
 ### Vad är UberJar? {#what-is-the-uberjar}
 
-&quot;UberJar&quot; är det informella namn som ges till en särskild Java Archives-fil (JAR) från Adobe. Dessa JAR-filer innehåller alla publika Java-API:er som exponeras av Adobe Experience Manager. De innehåller även begränsade externa bibliotek, särskilt alla publika API:er i AEM som kommer från Apache Sling, Apache Jackrabbit, Apache Lucene, Google Guava och två bibliotek som används för bildbearbetning (Werner Randelshofer&#39;s CYMK JPEG ImageIO-bibliotek och TwelveMonkeys bildbibliotek). UberJars innehåller bara API-gränssnitt och klasser, vilket innebär att de bara innehåller gränssnitt och klasser som exporteras av ett OSGi-paket i AEM. De innehåller också en *MANIFEST.MF* -fil som innehåller rätt paketexportversioner för alla dessa exporterade paket, vilket säkerställer att projekt som skapats mot UberJar har rätt paketimportintervall.
+&quot;UberJar&quot; är det informella namn som ges till en särskild Java Archives-fil (JAR) från Adobe. Dessa JAR-filer innehåller alla publika Java-API:er som visas av Adobe Experience Manager. De innehåller även begränsade externa bibliotek, särskilt alla publika API:er i AEM som kommer från Apache Sling, Apache Jackrabbit, Apache Lucene, Google Guava och två bibliotek som används för bildbearbetning (Werner Randelshofer&#39;s CYMK JPEG ImageIO-bibliotek och TwelveMonkeys bildbibliotek). UberJars innehåller bara API-gränssnitt och klasser, vilket innebär att de bara innehåller gränssnitt och klasser som exporteras av ett OSGi-paket i AEM. De innehåller också en *MANIFEST.MF* -fil som innehåller rätt paketexportversioner för alla dessa exporterade paket, vilket säkerställer att projekt som skapats mot UberJar har rätt paketimportintervall.
 
 ### Varför skapade Adobe UberJars? {#why-did-adobe-create-the-uberjars}
 
@@ -386,10 +386,6 @@ Lägg till fler `<filter>` element i banorna:
 <?xml version="1.0" encoding="UTF-8"?>
 <workspaceFilter version="1.0">
     <filter root="/apps/myproject"/>
-    <filter root="/etc/msm/rolloutconfigs/myrolloutconfig"/>
-    <filter root="/etc/blueprints/mysite/globalsite"/>
-    <filter root="/etc/workflow/models/myproject"/>
-    <filter root="/etc/designs/myproject"/>
     <filter root="/content/myproject/sample-content"/>
 </workspaceFilter>
 ```
@@ -699,8 +695,8 @@ $ mvn -PautoInstallPackagePublish -PintegrationServer install
 </profiles>
 ```
 
-### Hur man arbetar med AEM Communities {#how-to-work-with-aem-communities}
+### Arbeta med AEM Communities {#how-to-work-with-aem-communities}
 
-Om du har licens för AEM Communities-funktionen krävs ytterligare en API-behållare.
+När licens för AEM Communities krävs ytterligare en API-behållare.
 
 Mer information finns i [Använda Maven för grupper](/help/communities/maven.md)
