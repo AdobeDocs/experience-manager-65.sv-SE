@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: ee104f6f-123b-4a6e-9031-849fc1318cc5
 translation-type: tm+mt
-source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
+source-git-commit: 917fceffb58883df83e96f60da4769046a18f3c0
+workflow-type: tm+mt
+source-wordcount: '796'
+ht-degree: 0%
 
 ---
 
@@ -37,7 +40,7 @@ Användargränssnittet som visas för moderatorn i publiceringsinstansen finns i
 
 ## Exempel {#example}
 
-På den [Geometrixx Engage](http://localhost:4503/content/sites/engage/en.html) -webbplats som skapades när AEM Communities [](getting-started.md)startades går det snabbt att skapa en tråd i ett forum där olika modereringsaktiviteter i publiceringsmiljön kan visas, vilket framgår nedan.
+Med hjälp av den [Geometrixx Engage](http://localhost:4503/content/sites/engage/en.html) -webbplats som skapades när du [kom igång med AEM Communities](getting-started.md)kan du snabbt konfigurera en tråd i ett forum där du kan uppleva olika modereringsaktiviteter i publiceringsmiljön, vilket visas nedan.
 
 Aaron McDonald (aaron.mcdonald@mailinator.com) identifierades som en betrodd community-medlem genom att han lades till i gruppen community-engage-moderators när webbplatsen skapades.
 
@@ -58,6 +61,7 @@ Mer information om användargrupper finns på [Hantera användare och användarg
    * Ange brödtexten
 
       Jag har inte haft så stor framgång när jag hänger upp en matare för en hummeringfågel varje år. De verkar komma en dag eller två, då är det klart. Jag ändrar det en gång i veckan är det för långt? Måste jag ändra den tidigare?
+
    * Välj inlägg
    * Välj Logga ut
 
@@ -89,7 +93,7 @@ Här följer en översikt över det forum som visas av en besökare som inte är
 
 En anonym besökare kan endast visa forumet, men inte publicera något innehåll eller utföra några modereringsåtgärder.
 
-![chlimage_1](assets/chlimage_1.png)
+![community-forum-visitor](assets/community-forum-visitor.png)
 
 ### Ny medlem (#4) {#new-member}
 
@@ -107,7 +111,7 @@ Låt Boyd markera Flagga för att flagga innehållet som publicerats av Andrew.
 
 Logga ut
 
-![chlimage_1-1](assets/chlimage_1-1.png)
+![community-forum-medlem](assets/community-forum-member.png)
 
 ### Administratör (#3) {#administrator}
 
@@ -118,7 +122,7 @@ Obs!
 * Administratören kan flagga, ta bort, redigera, neka, klippa ut, stänga, fästa, använda.
 * Administratören kan välja Administration för att komma åt modereringskonsolen.
 
-![communityadmin-forum](assets/communityadmin-forum.png)
+![community-admin-forum](assets/community-admin-forum.png)
 
 Välj menyalternativet Administration om du vill öppna [moderationskonsolen](moderation.md) från publiceringsmiljön.
 
@@ -128,7 +132,7 @@ Sökfiltret är en sidopanel som växlar mellan att öppna och stänga.
 
 Logga ut.
 
-![moderationconsole-publish](assets/moderationconsole-publish.png)
+![moderation-console-publish](assets/moderation-console-publish.png)
 
 ### Community Moderator (#2) {#community-moderator}
 
@@ -141,7 +145,7 @@ Obs!
 * Aaron kan klippa ut forumämnet och flytta det till ett annat forum som han modererar för.
 * Aaron kan välja Administration för att komma åt moderationskonsolen.
 
-![chlimage_1-2](assets/chlimage_1-2.png)
+![community-forum-moderator](assets/community-forum-moderator.png)
 
 Välj menyalternativet Administration om du vill öppna [moderationskonsolen](moderation.md) från publiceringsmiljön.
 
@@ -151,7 +155,7 @@ Observera att community-moderatorn har samma alternativ som administratören (bi
 
 Logga ut.
 
-![moderatoråtkomst](assets/moderatoraccess.png)
+![moderatoråtkomst](assets/moderator-access.png)
 
 ### Innehållsförfattare (#1) {#content-author}
 
@@ -163,5 +167,5 @@ Obs!
 * Rebekah kan även svara på eller flagga annat innehåll.
 * Rebekah har inte åtkomst till moderationskonsolen.
 
-![chlimage_1-3](assets/chlimage_1-3.png)
+![community-forum-author](assets/community-forum-author.png)
 
