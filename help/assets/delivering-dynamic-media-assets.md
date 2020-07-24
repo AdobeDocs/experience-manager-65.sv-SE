@@ -1,5 +1,5 @@
 ---
-title: Leverera dynamiska medieresurser
+title: Leverera Dynamic Media Assets
 description: Lär dig leverera dynamiska medieresurser
 uuid: 23eddf83-34f5-4aae-8b81-d1cd7a098a7e
 contentOwner: Rick Brough
@@ -9,16 +9,19 @@ content-type: reference
 discoiquuid: e3b44330-d476-49c6-b7ba-079d0d60e500
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
+workflow-type: tm+mt
+source-wordcount: '302'
+ht-degree: 1%
 
 ---
 
 
-# Leverera dynamiska medieresurser{#delivering-dynamic-media-assets}
+# Delivering Dynamic Media Assets{#delivering-dynamic-media-assets}
 
 Hur du kan leverera dynamiska medieresurser - både video och bilder - beror på hur webbplatsen implementeras.
 
-Med Dynamic Media har du flera alternativ:
+I Dynamic Media finns flera alternativ:
 
 * Om din webbplats ligger hos AEM vill du lägga till de dynamiska medieresurserna direkt på sidan.
 * Om din webbplats inte finns på AEM kan du välja något av följande:
@@ -33,9 +36,9 @@ Med Dynamic Media har du flera alternativ:
 
 Mer information finns i följande avsnitt:
 
-* [Lägga till dynamiska medieresurser på webbsidor](/help/assets/adding-dynamic-media-assets-to-pages.md)
+* [Lägga till Dynamic Media-resurser på webbsidor](/help/assets/adding-dynamic-media-assets-to-pages.md)
 * [Bädda in video- eller bildvisningsprogrammet på en webbsida](/help/assets/embed-code.md)
-* [Aktivera hotlink-skydd i Dynamic Media](https://helpx.adobe.com/experience-manager/6-4/help/assets/hotlink-protection.html)
+* [Aktivera hotlink-skydd i Dynamic Media](hotlink-protection.md)
 * [Länka URL:er till ditt webbprogram](/help/assets/linking-urls-to-yourwebapplication.md)
 * [Leverera optimerade bilder för en responsiv webbplats](/help/assets/responsive-site.md)
 * [HTTP2-leverans av innehåll](/help/assets/http2.md)
@@ -44,6 +47,6 @@ Mer information finns i följande avsnitt:
 
 ## HTTP/2-leverans av Dynamic Media-resurser {#http-delivery-of-dynamic-media-assets}
 
-AEM har nu stöd för leverans av allt dynamiskt medieinnehåll (bilder och video) via HTTP/2. Det betyder att en publicerad URL eller inbäddningskod för bilden eller videon är tillgänglig för integrering med alla program som accepterar en värdbaserad resurs. Den publicerade resursen levereras sedan via HTTP/2-protokollet. Den här leveransmetoden förbättrar sättet som webbläsare och servrar kommunicerar på, vilket ger bättre respons och laddningstider för alla dynamiska medieresurser.
+AEM har nu stöd för leverans av allt Dynamic Media-innehåll (bilder och video) via HTTP/2. Det betyder att en publicerad URL eller inbäddningskod för bilden eller videon är tillgänglig för integrering med alla program som accepterar en värdbaserad resurs. Den publicerade resursen levereras sedan via HTTP/2-protokollet. Den här leveransmetoden förbättrar kommunikationen mellan webbläsare och servrar, vilket ger bättre respons och laddningstider för alla dina Dynamic Media-resurser.
 
 Mer information finns i [HTTP/2 Delivery of Content Frequently Asked Questions](/help/sites-administering/scene7-http2faq.md) .
