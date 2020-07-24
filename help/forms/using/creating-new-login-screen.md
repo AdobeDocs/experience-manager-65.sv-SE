@@ -10,7 +10,7 @@ topic-tags: forms-workspace
 discoiquuid: 35497785-263d-44b1-9ee4-85921997295b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e345fbff7030dbdeb3710e34599c0087eed4b1b8
+source-git-commit: 81249e13db9bd173d4251683ccaacbb7f71b3209
 workflow-type: tm+mt
 source-wordcount: '483'
 ht-degree: 2%
@@ -27,9 +27,15 @@ Du kan ändra inloggningsskärmen för alla AEM Forms-moduler som använder inlo
 1. Logga in `/lc/crx/de` med administratörsbehörighet.
 1. Utför följande åtgärder:
 
-   1. Replikera den hierarkiska strukturen: på `/libs/livecycle/core/content` kl `/apps/livecycle/core/content`. Behåll samma egenskaper (nod/mapp) och åtkomstkontroll.
+   1. Replikera den hierarkiska strukturen: på `/libs/livecycle/core/content` kl `/apps/livecycle/core/content`.
 
-   1. Kopiera innehållsmappen: från `/libs/livecycle/core` till `/apps/livecycle/core`.
+      Behåll samma egenskaper (nod/mapp) och åtkomstkontroll.
+
+   1. Kopiera innehållsmappen:
+
+      från: `/libs/livecycle/core`
+
+      to: `/apps/livecycle/core`.
 
    1. Ta bort innehållet i `/apps/livecycle/core` mappen.
 
@@ -244,6 +250,7 @@ String browserLocale = "en";
 
       * to `/apps/livecycle/core/components/login`
    1. Ändra om du `/apps/livecycle/core/components/login/login.jsp` vill använda de nya formaten.
+
 
 
 Till exempel:
