@@ -4,9 +4,9 @@ description: Lär dig resurshanteringsåtgärder som överföring, hämtning, re
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
 workflow-type: tm+mt
-source-wordcount: '9016'
+source-wordcount: '9005'
 ht-degree: 3%
 
 ---
@@ -158,7 +158,7 @@ Dynamic Media möjliggör batchöverföring av resurser via FTP-server. Om du t�
 1. Logga in på FTP-servern med det FTP-användarnamn och lösenord som du fick från e-postmeddelandet om etablering. Överför filer eller mappar till FTP-servern i FTP-klienten.
 1. [Logga in på Dynamic Media Classic](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) med hjälp av autentiseringsuppgifter som du fått från e-postmeddelandet om etablering. Klicka på i det globala navigeringsfältet **[!UICONTROL Upload]**.
 
-1. Klicka på fliken på sidan Överför, i det övre vänstra hörnet **[!UICONTROL Via FTP]** .
+1. Klicka på **[!UICONTROL Via FTP]** fliken på sidan Överför, i det övre vänstra hörnet.
 1. Välj en FTP-mapp att överföra filer från till vänster på sidan. till höger på sidan väljer du en målmapp.
 1. Klicka i det nedre högra hörnet av sidan **[!UICONTROL Job Options]** och ange önskade alternativ baserat på resurserna i den mapp du valde.
 
@@ -377,15 +377,11 @@ Så här förhandsgranskar du en resurs med tangentbordet:
 
 1. Om du vill schemalägga ett visst datum/tid för att aktivera resursen använder du datumväljaren bredvid fältet **[!UICONTROL On Time]**.
 
-   ![Datumtidsväljaren eller använd tangentbordstangenter i fältet I tid för att lägga till datum och tid för resursaktivering](assets/schedule-activation.png)
+   ![Datumtidsväljaren eller använd tangentbordstangenter i fältet I tid för att lägga till datum och tid för resursaktivering](assets/datepicker.png)
 
-   *Bild: Schemalägg aktivering av resurser.*
+   *Bild: Använd datumväljaren för att schemalägga resursaktivering.*
 
 1. Om du vill inaktivera tillgången efter en viss tid väljer du datum/tid för inaktiveringen i datumväljaren bredvid **[!UICONTROL Off Time]** fältet. Inaktiveringsdatumet ska vara senare än aktiveringsdatumet för en tillgång. Efter [!UICONTROL Off Time]detta är en resurs och dess återgivningar inte tillgängliga via [!DNL Assets] webbgränssnittet eller HTTP API.
-
-   ![Datumtidsväljaren eller använd tangentbordstangenter i fältet Fråntid för att lägga till datum och tid för inaktivering av resurser](assets/schedule-deactivation.png)
-
-   *Bild: Schemalägg inaktivering av tillgångar.*
 
 1. Markera en eller flera taggar i **[!UICONTROL Tags]** fältet. Om du vill lägga till en egen tagg skriver du namnet på taggen i rutan och trycker på Retur. Den nya taggen sparas i [!DNL Experience Manager]. [!DNL YouTube] kräver att taggar publiceras. Se [Publicera videor på YouTube](video.md#publishing-videos-to-youtube).
 
@@ -503,15 +499,11 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
 
    **Ta bort en återgivning**
 
-   Välj en återgivning på **[!UICONTROL Renditions]** panelen och klicka sedan på **[!UICONTROL Delete Rendition]** alternativet i verktygsfältet. Det går inte att ta bort återgivningar gruppvis när resursbearbetningen är slutförd. För enskilda resurser kan du ta bort återgivningar manuellt från användargränssnittet. För flera resurser kan du anpassa Experience Manager för att ta bort antingen specifika återgivningar eller ta bort resurserna och överföra de borttagna resurserna igen.
-
-   ![Alternativ för att ta bort en återgivning](assets/delete_renditionicon.png)
+   Välj en återgivning på **[!UICONTROL Renditions]** panelen och klicka sedan på **[!UICONTROL Delete Rendition]** alternativet för att ta bort ett återgivningsalternativ ![](assets/do-not-localize/deleteoutline.png) från verktygsfältet. Det går inte att ta bort återgivningar gruppvis när resursbearbetningen är slutförd. För enskilda resurser kan du ta bort återgivningar manuellt från användargränssnittet. För flera resurser kan du anpassa Experience Manager för att ta bort antingen specifika återgivningar eller ta bort resurserna och överföra de borttagna resurserna igen.
 
    **Överför en ny återgivning**
 
-   Navigate to the asset details page for the asset, and click the **[!UICONTROL Add Rendition]** option in the toolbar to upload a new rendition for the asset.
-
-   ![Alternativet Lägg till återgivning för att överföra ny återgivning](assets/chlimage_1-16.png)
+   Navigera till resursinformationssidan för resursen och klicka på alternativet **[!UICONTROL Add Rendition]** Lägg till ![återgivning för att överföra en ny återgivning](assets/do-not-localize/add.png) i verktygsfältet för att överföra en ny återgivning för resursen.
 
    >[!NOTE]
    >
@@ -541,11 +533,9 @@ Du kan även inaktivera Tvinga borttagningsknappen med hjälp av en övertäckni
 
 1. Navigera till platsen för de resurser som du vill ta bort.
 
-1. Select the asset, and click **[!UICONTROL Delete]** from the toolbar.
+1. Markera resursen och klicka på alternativet **[!UICONTROL Delete]** ![](assets/do-not-localize/deleteoutline.png) Ta bort i verktygsfältet.
 
-   ![Ta bort alternativ](assets/delete_icon.png)
-
-1. I bekräftelsedialogrutan klickar du på:
+1. Välj något av följande alternativ i bekräftelsedialogrutan:
 
    * **[!UICONTROL Cancel]** för att stoppa åtgärden
    * **[!UICONTROL Delete]** för att bekräfta åtgärden:
@@ -590,9 +580,7 @@ Se [Hämta resurser från Experience Manager](/help/assets/download-assets-from-
 
 1. Navigera till platsen för resursmappen/resursmappen som du vill ta bort från publiceringsmiljön (avpublicera).
 
-1. Markera resursen/mappen som ska avpubliceras och klicka på **[!UICONTROL Manage Publication]** alternativet i verktygsfältet.
-
-   ![Hantera publikation, alternativ](assets/manage_publication.png)
+1. Markera resursen/mappen som ska avpubliceras och klicka på alternativet **[!UICONTROL Manage Publication]** ![](assets/do-not-localize/globe-publication.png) Hantera publikation i verktygsfältet.
 
 1. Select the **[!UICONTROL Unpublish]** action from the list.
 
@@ -788,7 +776,7 @@ Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Vi
 
 1. Om du vill visa sparade anteckningar för en resurs går du till resursens plats och öppnar resurssidan för resursen.
 
-1. I Experience Manager-gränssnittet väljer du **[!UICONTROL Timeline]**.
+1. In the Experience Manager interface, choose **[!UICONTROL Timeline]**.
 
    ![Alternativ i Experience Manager](assets/chlimage_1-35.png)
 
@@ -842,9 +830,7 @@ Om du vill skriva ut anteckningarna och granskningsstatusen klickar du på **[!U
 
    ![Antecknings- och granskningsstatus för genererad PDF](assets/chlimage_1-42.png)
 
-1. Hämta eller skriv ut PDF-filen med alternativen längst upp till höger.
-
-   ![Alternativ för hämtning och utskrift av PDF](assets/chlimage_1-43.png)
+1. Ladda ned ![nedladdningsalternativ för PDF](assets/do-not-localize/download.png) eller ![utskriftsalternativ för PDF](assets/do-not-localize/print.png) -filen med alternativen överst till höger.
 
    >[!NOTE]
    >
