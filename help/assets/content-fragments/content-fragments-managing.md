@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 21a18d60-f3fe-4048-9949-8416b5cb4596
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a430c4de89bde3b907d342106465d3b5a7c75cc8
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
 workflow-type: tm+mt
-source-wordcount: '1483'
+source-wordcount: '1486'
 ht-degree: 10%
 
 ---
@@ -51,6 +51,7 @@ Metoden för att skapa ett innehållsfragment är (i princip) densamma för båd
 
       * [Modell](/help/assets/content-fragments/content-fragments-models.md) - används för att skapa ett fragment som kräver strukturerat innehåll. till exempel **flygplatsmodellen**
    * Alla tillgängliga mallar och modeller visas.
+
    Efter markeringen använder du **Nästa** för att fortsätta.
 
    ![cfm-6420-15](assets/cfm-6420-15.png)
@@ -119,7 +120,7 @@ Markera fragmentet för att visa verktygsfältet med tillämpliga åtgärder:
 
 >[!NOTE]
 >
->Många av dessa åtgärder är [standardåtgärder för Assets](/help/assets/managing-assets-touch-ui.md) och/eller [AEM-datorprogrammet](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html).
+>Många av dessa åtgärder är [standardåtgärder för Assets](/help/assets/managing-assets-touch-ui.md) och/eller [AEM-datorprogrammet](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html).
 
 ## Öppna fragmentredigeraren {#opening-the-fragment-editor}
 
@@ -134,6 +135,7 @@ Så här öppnar du fragmentet för redigering:
 
    * Klicka/tryck på fragment- eller fragment-länken (detta beror på konsolvyn).
    * Markera fragmentet och **redigera** sedan i verktygsfältet.
+
    Fragmentredigeraren öppnas:
 
    ![cfm-6420-18](assets/cfm-6420-18.png)
@@ -155,6 +157,7 @@ Så här öppnar du fragmentet för redigering:
    * [Anteckningar](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment)
    * [Associerat innehåll](#associating-content-with-your-fragment)
    * [Metadata](#viewing-and-editing-the-metadata-properties-of-your-fragment)
+
    ![cfm-10](assets/cfm-10.png)
 
 1. När du har gjort ändringarna använder du **Spara** eller **Avbryt** efter behov.
@@ -222,7 +225,7 @@ När du har öppnat fragmentet kan du använda fliken [Variationer](/help/assets
 
 ## Skapa och hantera variationer i fragment {#creating-and-managing-variations-within-your-fragment}
 
-När du har skapat mallinnehållet kan du skapa och hantera [varianter](/help/assets/content-fragments/content-fragments-variations.md) av det innehållet.
+När du har skapat det Överordnad innehållet kan du skapa och hantera [varianter](/help/assets/content-fragments/content-fragments-variations.md) av det innehållet.
 
 ## Koppla innehåll till fragment {#associating-content-with-your-fragment}
 
@@ -258,12 +261,14 @@ Förutom standardalternativen innehåller [tidslinjen](/help/assets/managing-ass
 >* Standardfunktionalitet för alla resurser
 >* Skapat i tidslinjen
 >* Relaterat till fragmentresursen
+
 >
 >
 Anteckningar (för innehållsfragment) är:
 >
 >* Anges i fragmentredigeraren
 >* Specifik för ett markerat textsegment i fragmentet
+
 >
 
 
