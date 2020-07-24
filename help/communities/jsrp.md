@@ -10,9 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: f5316a73-84e2-4a18-98c1-a384eeaa77cf
 translation-type: tm+mt
-source-git-commit: c798eb79dc9f8e58cef86cf90af02622c3a2ed78
+source-git-commit: e7268e43620860b7a1f7aa0a1f1a54199dadcf17
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '444'
 ht-degree: 1%
 
 ---
@@ -44,20 +44,18 @@ För att nå konsolen Lagringskonfiguration i redigeringsmiljön
 
 * Välj **[!UICONTROL Submit]**
 
-![chlimage_1-234](assets/chlimage_1-234.png)
+![jsrp-configuration](assets/jsrp-configuration.png)
 
 ### Publicera konfigurationen {#publishing-the-configuration}
 
-JSRP är standardkonfigurationen, och för att säkerställa att den identiska konfigurationen ställs in i publiceringsmiljön:
+När JSRP är standardkonfigurationen, kontrollerar du att den identiska konfigurationen är inställd i publiceringsmiljön:
 
-* On author:
+* Från global navigering: **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Replication]**
+* Välj **[!UICONTROL Activate Tree]** > **[!UICONTROL Start Path]**:
 
-   * Från global navigering: **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Replication]**
-   * Välj **[!UICONTROL Activate Tree]** > **[!UICONTROL Start Path]**:
+   * Bläddra till `/conf/global/settings/community/srpc/`
 
-      * Bläddra till `/conf/global/settings/community/srpc/`
-   * Välj **[!UICONTROL Activate]**
-
+* Välj **[!UICONTROL Activate]**
 
 ## Hantera användardata {#managing-user-data}
 
