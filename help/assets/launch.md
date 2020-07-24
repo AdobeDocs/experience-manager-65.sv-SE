@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: f4051767-182e-4cfd-9dfc-8f516378e0b6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
 workflow-type: tm+mt
-source-wordcount: '6278'
+source-wordcount: '6239'
 ht-degree: 15%
 
 ---
@@ -141,7 +141,9 @@ Om du vill spåra visningsprogram för Dynamic Media i AEM Sites måste du utfö
 
 När konfigurationen är korrekt spåras data automatiskt i alla Dynamic Media-visningsprogram som du lägger till på en Sites-sida, med en WCM-komponent som stöds av Dynamic Media, till Adobe Analytics, Adobe Analytics for Video eller båda.
 
-Se [Lägga till Dynamic Media-resurser på sidor med Adobe Sites](https://helpx.adobe.com/experience-manager/6-5/help/assets/adding-dynamic-media-assets-to-pages.html).
+<!-- To be reviewed and updated:
+See [Adding Dynamic Media Assets to Pages using Adobe Sites](https://helpx.adobe.com/experience-manager/6-5/help/assets/adding-dynamic-media-assets-to-pages.html).
+-->
 
 ### Spåra Dynamic Media för visningsprogram med hjälp av inbäddningskod {#tracking-dynamic-media-viewers-using-embed-code}
 
@@ -153,7 +155,9 @@ Om konfigurationen är korrekt kan du lägga till stöd för Adobe Launch på en
 
 Läs [Lägg till startkoden](https://docs.adobe.com/content/help/en/launch/using/implement/configure/implement-the-launch-install-code.html) för inbäddning om du vill veta mer om hur du använder Adobe Launch-bibliotekets inbäddningskod.
 
-Mer information om hur du använder inbäddningsfunktionen i AEM-Dynamic Media finns i [Bädda in video- eller bildvisningsprogrammet på en webbsida](https://helpx.adobe.com/experience-manager/6-5/help/assets/embed-code.html) .
+<!-- To be reviewed and updated:
+See [Embedding the Video or Image Viewer on a Web Page](https://helpx.adobe.com/experience-manager/6-5/help/assets/embed-code.html) to learn more about how to use the embed code feature of AEM Dynamic Media.
+-->
 
 **Så här spårar du visningsprogram för Dynamic Media med hjälp av inbäddningskod**:
 
@@ -712,10 +716,11 @@ AEM-konfigurationen består av följande två huvudsteg:
    * Välj under **[!UICONTROL Select a role for Experience Platform Launch API]** rubriken **[!UICONTROL Admin]**.
 
    * Under **[!UICONTROL Select one or more product profiles for Experience Platform Launch API]** rubriken väljer du produktprofilen **[!UICONTROL Launch - <your_company_name>]**.
+
    ![2019-07-25_13-49-18](assets/2019-07-25_13-49-18.png)
 
 1. Klicka på **[!UICONTROL Create integration]**.
-1. On the **[!UICONTROL Integration created]** page, click **[!UICONTROL Continue to integration details]**.
+1. På sidan **[!UICONTROL Integration created]** klickar du på **[!UICONTROL Continue to integration details]**.
 
    ![2019-07-25_14-16-33](assets/2019-07-25_14-16-33.png)
 
@@ -747,7 +752,8 @@ AEM-konfigurationen består av följande två huvudsteg:
 
    * **[!UICONTROL Title]** - Ange en beskrivande kontotitel.
    * **[!UICONTROL Authorization Server]** - Gå tillbaka till sidan Integreringsinformation som du öppnade tidigare. Click the **[!UICONTROL JWT]** tab. Kopiera servernamnet - utan sökvägen - enligt markeringen nedan.
-   Gå tillbaka till sidan **[!UICONTROL Account]** och klistra sedan in namnet i respektive fält.
+
+(exempelservernamnet är endast för illustrationsändamål)   Gå tillbaka till sidan **[!UICONTROL Account]** och klistra sedan in namnet i respektive fält.
 Exempelservernamnet `https://ims-na1.adobelogin.com/`(är till exempel endast för illustrationsändamål)
 
    ![2019-07-25_15-01-53](assets/2019-07-25_15-01-53.png)
