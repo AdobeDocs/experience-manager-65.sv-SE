@@ -3,9 +3,9 @@ title: Adobe Experience Manager till Adobe Creative Cloud-mappen där du kan del
 description: Konfigurera Adobe Experience Manager så att användare i Experience Manager Assets kan utbyta mappar med Adobe Creative Cloud-användare (CC).
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
 workflow-type: tm+mt
-source-wordcount: '1079'
+source-wordcount: '1082'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->Mappdelningsfunktionen Experience Manager till Creative Cloud är föråldrad. Adobe rekommenderar starkt att du använder nyare funktioner som [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) eller [Experience Manager](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html). Läs mer om de bästa sätten att integrera [Experience Manager och Creative Cloud](/help/assets/aem-cc-integration-best-practices.md).
+>Mappdelningsfunktionen Experience Manager till Creative Cloud är föråldrad. Adobe rekommenderar starkt att du använder nyare funktioner som [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) eller [Experience Manager](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html). Läs mer om de bästa sätten att integrera [Experience Manager och Creative Cloud](/help/assets/aem-cc-integration-best-practices.md).
 
 Adobe Experience Manager kan konfigureras så att användare i Resurser kan dela mappar med användare i Adobe Creative Cloud-program, så att de är tillgängliga som delade mappar i Adobe Creative Cloud Resurser-tjänsten. Funktionen kan användas för att utbyta filer mellan kreativa team och Assets-användare, särskilt när de kreativa användarna inte har tillgång till Assets-distributionen (de finns inte i företagsnätverket).
 
