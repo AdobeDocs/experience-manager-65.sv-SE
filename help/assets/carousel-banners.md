@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: e26c7f7f-bdd7-421a-8614-ba48abf381d2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
 workflow-type: tm+mt
-source-wordcount: '4729'
+source-wordcount: '4732'
 ht-degree: 3%
 
 ---
@@ -94,7 +94,7 @@ Så här kommer du igång snabbt:
       ](/help/assets/adding-dynamic-media-assets-to-pages.md)Om du är AEM Sites-kund kan du lägga till karuselluppsättningen direkt på sidan i AEM med hjälp av komponenten Interactive Media.
 
 
-Om du behöver redigera Carousel-uppsättningar läser du [redigera Carousel-uppsättningar.](#editing-carousel-sets) Dessutom kan du visa och redigera [Carousel Set-egenskaper](https://helpx.adobe.com/experience-manager/6-5/help/assets/managing-assets-touch-ui.md#editingproperties).
+Om du behöver redigera Carousel-uppsättningar läser du [redigera Carousel-uppsättningar.](#editing-carousel-sets) Dessutom kan du visa och redigera [Carousel Set-egenskaper](https://docs.adobe.com/content/help/en/experience-manager-65/assets/managing/managing-assets-touch-ui.html#editing-properties).
 
 ## Identifiera variabler för aktiveringspunkt och bildschema {#identifying-hotspot-and-image-map-variables}
 
@@ -200,6 +200,7 @@ Mer information om hur du överför bildbanderoller finns i [Överföra resurser
    * Near the upper-left corner of the page, tap **[!UICONTROL Add Slide]** icon.
 
    * I mitten av sidan trycker du på **[!UICONTROL Tap to open Asset Selector.]**
+
    Tryck här för att välja resurser som du vill inkludera i karuselluppsättningen. De markerade resurserna visas med en bock. När du är klar trycker du på **[!UICONTROL Välj]** längst upp till höger på sidan.
 
    Med resursväljaren kan du söka efter resurser genom att skriva ett nyckelord och trycka eller klicka på **[!UICONTROL Return.]** . Du kan också använda filter för att förfina sökresultaten. Du kan filtrera efter sökväg, samling, filtyp och tagg. Markera filtret och tryck sedan på ikonen **[!UICONTROL Filter]** i verktygsfältet. Ändra vyn genom att trycka på ikonen Visa och sedan välja **[!UICONTROL Column View]**, **[!UICONTROL Card View]** eller **[!UICONTROL List View.]**
@@ -226,6 +227,7 @@ Mer information om hur du överför bildbanderoller finns i [Överföra resurser
    >    * Knapparnas format. Användarna kan rotera genom banners genom att trycka på varje punkt eller nummer. Du kan ändra var de angivna indikatorknapparna visas (och om de är numeriska eller prickade) och hur stora de är.
    >    * Ändra markeringsformatet för ett bildschema eller ikonen som används för aktiveringspunkter.
    >    * Innan du redigerar en visningsförinställning väljer du det format du vill basera förinställningen på. Om du inte gör det kommer du att förlora alla ändringar när du börjar redigera visningsförinställningen om du väljer att ändra till en annan förinställning
+
    >
    >
    >Se [Specialöverväganden för Carousel Banners](/help/assets/viewer-presets.md#specialconsiderationsforcreatingacarouselbannerviewerpreset) för detaljerade instruktioner och mer information om visningsprogrammet.
@@ -274,6 +276,7 @@ Se även [Lägga till bildscheman](/help/assets/image-maps.md).
 
    * För aktiveringspunkter: Tryck på den plats i bilden där du vill att hotspot-området ska visas.
    * För bildscheman: Klicka på bilden och dra sedan från det övre vänstra hörnet till det nedre högra hörnet för att skapa bildschemaområdet. Du kan justera storleken på bildschemat genom att dra i hörnen.
+
    Om det behövs drar du hotspot- eller bildschemat till en ny plats. Lägg till ytterligare hotspot-områden eller bildscheman efter behov.
 
    Tryck på fliken **[!UICONTROL Actions]** om du vill ta bort ett hotspot-område eller bildschema. Under rubriken **[!UICONTROL Maps & Hotspots]** i listrutan **[!UICONTROL Selected Type]** väljer du namnet på det hotspot-område eller bildschema som du vill ta bort. Tryck på ikonen **[!UICONTROL Trash]** bredvid menyn och tryck sedan på **[!UICONTROL Delete.]**
@@ -298,6 +301,7 @@ Se även [Lägga till bildscheman](/help/assets/image-maps.md).
          Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till AEM Sites-sidor.
 
       * Om du är en fristående kund anger du den fullständiga URL-sökvägen till en länkad webbsida i textfältet HREF.
+
    Var noga med att ange om länken ska öppnas på en ny webbläsarflik (rekommenderat standardvärde) eller på samma flik.
 
    Mer information finns i [Arbeta med väljare](/help/assets/working-with-selectors.md) .
@@ -356,6 +360,7 @@ Du kan utföra en mängd redigeringsuppgifter på Carousel Sets, till exempel:
    * Om du vill ta bort en bildruta markerar du den och trycker sedan **[!UICONTROL Delete Slide]** på verktygsfältet.
    * To apply a preset, near the upper-right corner of the page, tap the **[!UICONTROL Preset]** drop-down list, then select a viewer preset.
    * Om du vill ta bort en hel Carousel-uppsättning går du till Carousel-uppsättningen, markerar den och trycker sedan **[!UICONTROL Delete.]**
+
    >[!NOTE]
    Om du redigerar interaktiva bilder med aktiveringspunkter och beskär bilden tas dina aktiveringspunkter bort.
 
