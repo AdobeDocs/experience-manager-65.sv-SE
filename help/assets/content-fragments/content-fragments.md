@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 7ecc1bcf-38a9-4a59-8dd3-79cb90dec33d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a430c4de89bde3b907d342106465d3b5a7c75cc8
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
 workflow-type: tm+mt
-source-wordcount: '1971'
+source-wordcount: '1973'
 ht-degree: 3%
 
 ---
@@ -32,7 +32,7 @@ På den här och följande sidor beskrivs hur du skapar, konfigurerar och underh
 
 * [Hantera innehållsfragment](/help/assets/content-fragments/content-fragments-managing.md) - skapa dina innehållsfragment; redigera, publicera och referera
 * [Content Fragment Models](/help/assets/content-fragments/content-fragments-models.md) - aktivera, skapa och definiera dina modeller
-* [Variationer - Innehåll](/help/assets/content-fragments/content-fragments-variations.md) för redigeringsfragment - skapa fragmentinnehållet och skapa varianter av mallsidan
+* [Variationer - Innehåll](/help/assets/content-fragments/content-fragments-variations.md) för redigeringsfragment - skapa fragmentinnehållet och skapa varianter av det Överordnad
 * [Markering](/help/assets/content-fragments/content-fragments-markdown.md) - med markeringssyntax för ditt fragment
 * [Använda associerat innehåll](/help/assets/content-fragments/content-fragments-assoc-content.md) - lägga till associerat innehåll
 * [Metadata - Fragmentegenskaper](/help/assets/content-fragments/content-fragments-metadata.md) - visa och redigera fragmentegenskaperna
@@ -79,11 +79,12 @@ Tillsammans med JSON-exportfunktionerna i AEM Core-komponenterna kan detta struk
 >**Innehållsfragment** och **[Experience Fragments](/help/sites-authoring/experience-fragments.md)**är olika funktioner i AEM:
 >* **Innehållsfragment** är redaktionellt innehåll, främst text och relaterade bilder. De är rent innehåll, utan design och layout.
 >* **Experience Fragments** är helt utformat för innehåll, ett fragment av en webbsida.
+
 >
 >
 Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
 >
->Mer information finns också i [Förstå innehållsfragment och Upplevelsefragment i AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/content-fragments-experience-fragments-article-understand.html).
+>Mer information finns också i [Förstå innehållsfragment och Upplevelsefragment i AEM](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html).
 
 >[!CAUTION]
 >
@@ -138,6 +139,7 @@ Resurser kan användas med ett innehållsfragment på flera sätt. var och en me
    * Är en integrerad del av fragmentet (se [Ingående delar i ett innehållsfragment](#constituent-parts-of-a-content-fragment)).
    * Definiera tillgångens position.
    * Mer information finns i [Infoga resurser i fragmentredigeraren](/help/assets/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment) .
+
    >[!NOTE]
    >
    >Visuella resurser som infogats i själva innehållsfragmentet kopplas till föregående stycke. När fragmentet läggs till på en sida flyttas dessa resurser i relation till det stycket när mellanliggande innehåll läggs till.
@@ -189,6 +191,7 @@ Resurserna för innehållsfragmentet består av följande delar (antingen direkt
    * Kan endast läggas till, tas bort från eller flyttas inom ett fragment med [RTF-format i fragmentredigeraren](/help/assets/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment).
    * Kan endast läggas till i flerradiga textelement (alla fragmenttyper).
    * Kopplas till föregående text (stycke).
+
    >[!CAUTION]
    >
    >Kan tas bort (oavsiktligt) från ett fragment genom att växla till oformaterad text.
@@ -218,27 +221,28 @@ Resurserna för innehållsfragmentet består av följande delar (antingen direkt
 
          * Genom att visa/redigera **fragmentegenskaperna** från konsolen
          * Genom att redigera **metadata** i fragmentredigeraren
+
    >[!CAUTION]
    >
    >Metadatabearbetningsprofiler gäller inte för innehållsfragment.
 
-* **Master**
+* **Överordnad**
 
    * En integrerad del av fragmentet
 
-      * Alla innehållsfragment har en instans av Master.
-      * Mallen kan inte tas bort.
-   * Mallen är tillgänglig i fragmentredigeraren under **[Variationer](/help/assets/content-fragments/content-fragments-variations.md)**.
-   * Huvudet är inte en variation i sig, utan baserar alla variationer.
+      * Alla innehållsfragment har en instans av Överordnad.
+      * Överordnad kan inte tas bort.
+   * Överordnad är tillgängligt i fragmentredigeraren under **[Variationer](/help/assets/content-fragments/content-fragments-variations.md)**.
+   * Överordnad är inte en variation i sig, utan är grunden för alla variationer.
 
 
 * **Variationer**
 
    * Återgivning av fragmenttext som är specifik för redaktionella ändamål. kan vara relaterat till kanalen men inte obligatoriskt, kan också vara för lokala ad hoc-ändringar.
-   * skapas som kopior av **mallsida**, men kan sedan redigeras efter behov, det ofta finns innehållsöverlappning mellan själva variationerna.
+   * skapas som kopior av **Överordnad**, men kan sedan redigeras efter behov, det ofta finns innehållsöverlappning mellan själva variationerna.
    * Kan definieras under fragmentutveckling eller fördefinieras i fragmentmallar.
    * Lagras i fragmentet för att undvika spridning av innehållskopior.
-   * Variationer kan [synkroniseras](/help/assets/content-fragments/content-fragments-variations.md#synchronizing-with-master) med mallsidan om mallinnehållet har uppdaterats.
+   * Variationer kan [synkroniseras](/help/assets/content-fragments/content-fragments-variations.md#synchronizing-with-master) med Överordnad om det Överordnad innehållet har uppdaterats.
    * Kan [sammanfattas](/help/assets/content-fragments/content-fragments-variations.md#summarizing-text) för att snabbt korta av texten till en fördefinierad längd.
    * Tillgängligt på fliken [Variationer](/help/assets/content-fragments/content-fragments-variations.md) i fragmentredigeraren.
 
