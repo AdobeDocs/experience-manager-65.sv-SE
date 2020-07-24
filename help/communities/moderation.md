@@ -11,14 +11,17 @@ content-type: reference
 discoiquuid: 404582ab-bb4c-4775-9ae3-17356d376dca
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f7e5afe46100db7837647ac89aaf58cf101143b0
+source-git-commit: 4e823136604d291c5b867634268f67e003185a15
+workflow-type: tm+mt
+source-wordcount: '2108'
+ht-degree: 1%
 
 ---
 
 
 # Modereringskonsol {#moderation-console}
 
-I AEM Communities är det möjligt att [moderera communityinnehåll](/help/communities/moderate-ugc.md) både från författaren och publiceringsmiljöer av administratörer och community moderators (betrodda communitymedlemmar som utsetts till moderatorer).
+I AEM Communities är det möjligt att [moderera communityinnehåll](/help/communities/moderate-ugc.md) både från författaren och publiceringsmiljöer av administratörer och community-moderatorer (betrodda communitymedlemmar som utsetts som moderatorer).
 
 Administratörer och moderatorer för communityn kan också utföra moderering [i sitt sammanhang](/help/communities/in-context.md) i publiceringsmiljön.
 
@@ -45,13 +48,13 @@ Det är bara när du är inloggad som administratör, eller som medlem med ` [mo
 
 Genom att välja administrationslänken visas modereringskonsolen:
 
-![moderationconsole-publish](assets/moderationconsole-publish.png)
+![moderation-console-publish](assets/moderation-console-publish.png)
 
 ## Åtkomst till författarmiljö {#author-environment-access}
 
 I författarmiljön kan du nå Kontrollen för moderering
 
-* Välj **[!UICONTROL Communities]** > **[!UICONTROL Moderation]** i global navigering.
+* Välj **[!UICONTROL Communities]** > **[!UICONTROL Moderation]**.
 
 Modereringsåtgärder kan bara utföras om du är inloggad som administratör eller som medlem med [moderatorbehörighet](/help/communities/in-context.md#identifyingtrustedmembers). Det enda communityinnehåll som visas är det som den inloggade medlemmen får moderera.
 
@@ -245,7 +248,7 @@ Så här installerar du exemplet för taggfiltret:
 
 1. Öppna pakethanteraren på instansen AEM Author ([https://[aem-author]:4502/crx/packmgr/index.jsp](https://aem65-communities-demo.corp.adobe.com:4502/crx/packmgr/index.jsp)) och instansen AEM Publish ([https://[aem-publish]:4503/crx/packmgr/index.jsp](https://aem65-communities-demo.corp.adobe.com:4502/crx/packmgr/index.jsp)).
 1. Bygg paketet `com.adobe.social.sample.moderation.filter.ui.apps-1.0-SNAPSHOT.zip` från Github-koden och installera och aktivera det.
-1. Öppna paketkonsolen på AEM Author-instansen ( `https://[aem-author]:4502/system/console/bundles`) och AEM Publish-instansen ( `https://[aem-publish]:4503/system/console/bundles`).
+1. Öppna paketkonsolen på instansen AEM Author ( `https://[aem-author]:4502/system/console/bundles`) och instansen AEM Publish ( `https://[aem-publish]:4503/system/console/bundles`).
 1. Bygg paketet ` [com](https://sample-moderation-filter.com/).adobe.social.sample.moderation.filter.core-1.0-SNAPSHOT.jar` från Github och installera och aktivera det.
 1. Gå till **/apps/social/moderation/facets** -noden på AEM Author ([https://[aem-author]:4502/crx/de/index.jsp#/apps/social/moderation/facets](https://aem65-communities-demo.corp.adobe.com:4502/crx/de/index.jsp#/apps/social/moderation/facets)) och AEM Publish ([https://[aem-publish]:4502/crx/de/index.jsp#/apps/social/moderation/facets](https://aem65-communities-demo.corp.adobe.com:4502/crx/de/index.jsp#/apps/social/moderation/facets)).
 1. Lägg till en teknisk **användarcommunity-utility-reader** med `jcr:read` behörigheter.
