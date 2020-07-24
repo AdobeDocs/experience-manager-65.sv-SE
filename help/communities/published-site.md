@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: dd0cbc05-a361-46bc-b9f1-d045f8f23890
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ca15258a5dc7ca99b6c9d6ae85e42c77a3802c87
+source-git-commit: 65e2b98cfd980f17302b4751127e25827decec22
+workflow-type: tm+mt
+source-wordcount: '1202'
+ht-degree: 0%
 
 ---
 
@@ -54,7 +57,7 @@ En känd begränsning exponerar communityinnehållet för anonyma besökare via 
 
 Följ de här stegen för att skydda communityplatsens innehåll från anonyma användare genom jcr-innehåll och json:
 
-1. På AEM Author-instansen går du till https://: port/editor.html/content/site/sitename.html.
+1. Gå till https:// värdnamn i AEM Author-instansen:port/editor.html/content/site/sitename.html.
 
    >[!NOTE]
    >
@@ -89,7 +92,7 @@ När du har loggat in som registrerad community-medlem kan du lägga märke till
    1. Skapa nya direktmeddelanden att skicka till enskilda personer och grupper.
 
 * [Alternativet Meddelanden](/help/communities/notifications.md) dirigerar dig till meddelandeavsnittet, där du kan visa dina intressanta händelser och redigera meddelandeinställningar.
-* [Administrationen](/help/communities/published-site.md#moderationlink) dirigerar dig till AEM Communities Moderation Page, om du har modereringsbehörighet.
+* [Administrationen](/help/communities/published-site.md#moderationlink) dirigerar dig till sidan för moderering av AEM Communities, om du har modereringsbehörighet.
 
 ![chlimage_1-33](assets/chlimage_1-33.png)
 
@@ -103,6 +106,7 @@ Observera att kalendersidan är hemsidan eftersom den valda referensplatsmallen 
 >
 >* [Communities-komponenter](/help/communities/author-communities.md) (för författare)
 >* [Komponent-, funktions- och](/help/communities/essentials.md) funktionsfunktioner (för utvecklare)
+
 >
 
 
@@ -125,7 +129,7 @@ Detta är ett exempel där en grupp skapas i publiceringsmiljön.
 
 Grupper kan också skapas i författarmiljön och hanteras i communitywebbplatsen i författarmiljön ([Community Groups console](/help/communities/groups.md)). Upplevelsen av [att skapa grupper på författare](/help/communities/nested-groups.md) är nästa i den här självstudiekursen.
 
-![chlimage_1-36](assets/chlimage_1-36.png)
+![classic-ui](assets/classic-ui.png)
 
 Skapa en referensgrupp:
 
@@ -143,11 +147,11 @@ Skapa en referensgrupp:
 
 1. Välj **Skapa grupp**
 
-![chlimage_1-37](assets/chlimage_1-37.png)
+![classic-ui-website](assets/classic-ui-website.png)
 
 När en ny grupp har skapats **väljer du den nya sportgruppen** för att skapa två grupper (kapslade) i den. Eftersom en platsstruktur inte kan börja med gruppfunktionen måste du välja länken Grupper när du har öppnat gruppen Sport:
 
-![chlimage_1-38](assets/chlimage_1-38.png)
+![classic-ui-create-page](assets/classic-ui-create-page.png)
 
 Den andra uppsättningen länkar, med början `Blog`, tillhör den markerade gruppen, `Sports` gruppen. Genom att välja `Groups` länken Sport är det möjligt att kapsla två grupper i gruppen Sport.
 
@@ -175,7 +179,7 @@ När båda grupperna har skapats väljer du Baseball-gruppen, en öppen grupp, o
 
 Gruppens länkar visas under huvudplatsens länkar och ger följande resultat:
 
-![chlimage_1-39](assets/chlimage_1-39.png)
+![classic-ui-website-page](assets/classic-ui-website-page.png)
 
 Vid författare - med administratörsbehörighet går du till konsolen [](/help/communities/members.md) Communities Groups (Communities Groups) och lägger till Weston McCall i `Community Engage Gymnastics <uid> Members` gruppen.
 
@@ -190,7 +194,7 @@ Bara Baseball-gruppen syns.
 
 Logga in som Weston McCall (weston.mccall@dodgit.com / lösenord) och navigera till samma plats. Observera att Weston kan `Join` den öppna `Baseball` gruppen och antingen `enter or Leave` den privata `Gymnastics` gruppen.
 
-![chlimage_1-40](assets/chlimage_1-40.png)
+![classic-ui-database-view](assets/classic-ui-repository-view.png)
 
 ### Länk till webbsida {#web-page-link}
 
@@ -198,7 +202,7 @@ Visa den grundläggande webbsidan som finns på webbplatsen genom att välja lä
 
 Gå till exempel till **författarinstansen** , öppna `engage` mappen i [webbgruppskonsolen](/help/communities/sites-console.md)och välj ikonen **Öppna webbplats** för att öppna redigeringsläget. Välj sedan förhandsvisningsläget för att markera `Web Page` länken och välj sedan redigeringsläget för att lägga till titel- och textkomponenter. Publicera sedan om antingen bara sidan eller hela webbplatsen.
 
-![chlimage_1-41](assets/chlimage_1-41.png)
+![classic-ui-database-path](assets/classic-ui-repository-path.png)
 
 ### Modereringslänk {#moderationlink}
 
