@@ -4,9 +4,9 @@ description: Lär dig hur du söker efter nödvändiga resurser [!DNL Adobe Expe
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 8ca4e3057ec13762404a8b7fb6f6bdf5dd562281
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
 workflow-type: tm+mt
-source-wordcount: '5777'
+source-wordcount: '5781'
 ht-degree: 4%
 
 ---
@@ -118,7 +118,7 @@ Du kan förbättra nyckelordens relevans för vissa resurser för att öka sökn
 1. I **[!UICONTROL Search Promote]** rutan anger du ett nyckelord som du vill göra sökningen efter bilden snabbare och klickar sedan på **[!UICONTROL Add]**. Du kan ange flera nyckelord på samma sätt.
 1. Klicka på **[!UICONTROL Save & Close]**. Den resurs som du befordrade för det här nyckelordet visas bland de översta sökresultaten.
 
-Du kan använda detta till din fördel genom att öka rankningen för vissa resurser i sökresultaten för nyckelordet target. Se exempelvideon nedan. Mer information finns i [Söka i Experience Manager](https://helpx.adobe.com/experience-manager/kt/assets/using/search-feature-video-use.html).
+Du kan använda detta till din fördel genom att öka rankningen för vissa resurser i sökresultaten för nyckelordet target. Se exempelvideon nedan. Mer information finns i [Söka i Experience Manager](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/search-and-discovery/search.html).
 
 >[!VIDEO](https://video.tv.adobe.com/v/16766/?quality=6)
 
@@ -351,7 +351,7 @@ Visuell sökning använder smart taggning och kräver [!DNL Experience Manager] 
 1. I CRXDE i `/oak-index/damAssetLucene` noden anger du `reindex` egenskapen till `true`. Spara ändringarna.
 1. (Valfritt) Om du har skapat ett anpassat sökformulär kopierar du `/libs/settings/dam/search/facets/assets/jcr%3Acontent/items/similaritysearch` noden till `/conf/global/settings/dam/search/facets/assets/jcr:content/items`. Spara ändringarna.
 
-Mer information finns i [Lär dig mer om smarta taggar i Experience Manager](https://helpx.adobe.com/experience-manager/kt/assets/using/smart-tags-feature-video-understand.html) och [hur du hanterar smarta taggar](/help/assets/managing-smart-tags.md).
+Mer information finns i [Lär dig mer om smarta taggar i Experience Manager](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/smart-tags-feature-video-use.html) och [hur du hanterar smarta taggar](/help/assets/managing-smart-tags.md).
 
 ### Obligatoriska metadata {#mandatorymetadata}
 
