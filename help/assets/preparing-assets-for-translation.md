@@ -3,9 +3,9 @@ title: Förbered resurser för översättning
 description: Skapa rotmappar för språk för att förbereda resurser för översättning för stöd av flerspråkiga resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '439'
 ht-degree: 0%
 
 ---
@@ -67,4 +67,4 @@ I gränssnittet Experience Manager finns en **[!UICONTROL References]** panel so
 
 1. Klicka på i rutan Referenser **[!UICONTROL Language Copies]**. På [!UICONTROL Language Copies] panelen visas språkkopiorna för resurserna.
 
-   ![chlimage_1-123](assets/chlimage_1-123.png)
+   ![språkversioner](assets/lang-copy2.png)
