@@ -3,9 +3,9 @@ title: Hämta digitala resurser från [!DNL Adobe Experience Manager].
 description: Lär dig hur du hämtar resurser [!DNL Adobe Experience Manager] från och aktiverar eller inaktiverar hämtningsfunktionen.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 3602a39e03536696911b39cceb20f10dfd3a9347
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '824'
 ht-degree: 0%
 
 ---
@@ -74,6 +74,6 @@ Du `Asset Download Servlet` kan inaktivera funktionen på en [!DNL Experience Ma
 >[!MORELIKETHIS]
 >
 >* [Hämta DRM-skyddade resurser](drm.md).
->* [Hämta resurser med datorprogrammet Experience Manager på Win- eller Mac-datorer](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html).
+>* [Hämta resurser med datorprogrammet Experience Manager på Win- eller Mac-datorer](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#download-assets).
 >* [Hämta resurser med Adobe Assets Link inifrån de Adobe Creative Cloud-program](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html)som stöds.
 
