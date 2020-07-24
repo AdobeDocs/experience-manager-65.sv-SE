@@ -1,12 +1,12 @@
 ---
 title: Konfigurera resurstaggning med Smart Content Service.
-description: Lär dig hur du konfigurerar smart taggning och förbättrad smart taggning i [!DNL Adobe Experience Manager] med hjälp av Smart Content Service.
+description: Lär dig hur du konfigurerar smart taggning och förbättrad smart taggning [!DNL Adobe Experience Manager]med hjälp av Smart Content Service.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
 workflow-type: tm+mt
-source-wordcount: '949'
-ht-degree: 53%
+source-wordcount: '931'
+ht-degree: 54%
 
 ---
 
@@ -17,8 +17,8 @@ Du kan integrera [!DNL Adobe Experience Manager] med Smart Content Service via A
 
 Artikeln innehåller information om följande viktiga uppgifter som krävs för att konfigurera Smart Content Service. At the back end, the [!DNL Experience Manager] server authenticates your service credentials with the Adobe Developer Console gateway before forwarding your request to the Smart Content Service.
 
-1. Skapa en konfiguration för Smart Content Service i [!DNL Experience Manager] för att generera en offentlig nyckel. [Hämta ett offentligt certifikat för OAuth-integrering.](#obtain-public-certificate)
-1. [Skapa en integrering i Adobe Developer Console och överför den genererade offentliga nyckeln.](#create-adobe-i-o-integration)
+1. Skapa en konfiguration för Smart Content Service i [!DNL Experience Manager] för att generera en offentlig nyckel. [Hämta ett offentligt certifikat](#obtain-public-certificate) för OAuth-integrering.
+1. [Skapa en integrering i Adobe Developer Console](#create-adobe-i-o-integration) och överför den genererade offentliga nyckeln.
 1. [Konfigurera distributionen](#configure-smart-content-service) med API-nyckeln och andra autentiseringsuppgifter från Adobe Developer Console.
 1. [Testa konfigurationen](#validate-the-configuration).
 1. Optionally, [enable auto-tagging on asset upload](#enable-smart-tagging-in-the-update-asset-workflow-optional).
@@ -124,11 +124,9 @@ När du är klar med konfigurationen kan du använda en JMX MBean för att valid
 
 1. In the **[!UICONTROL Arguments]** tab, select **[!UICONTROL Ignore Errors]** if you want the workflow to complete even if the automatic tagging step fails.
 
-   ![Konfigurera arbetsflödet för DAM-uppdatering av resurser för att lägga till smart tagg och markera hanterarframsteg](assets/smart-tag-step-properties-workflow2.png)
-
    Om du vill tagga resurser när de överförs, oavsett om smart taggning är aktiverat för mappar eller inte, markerar du **[!UICONTROL Ignore Smart Tag Flag]**.
 
-   ![Konfigurera arbetsflödet för DAM-uppdatering av resurser för att lägga till smart tagg och markera ignorera smart tagg](assets/smart-tag-step-properties-workflow3.png)
+   ![Konfigurera arbetsflödet för DAM-uppdatering av resurser för att lägga till smart tagg och markera ignorera smart tagg](assets/smart-tag-step-properties-workflow2.png)
 
 1. Klicka på **[!UICONTROL OK]** för att stänga processsteget och spara sedan arbetsflödet.
 
