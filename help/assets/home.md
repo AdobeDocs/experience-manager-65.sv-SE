@@ -4,10 +4,10 @@ seo-title: Användarhandbok för Adobe Experience Manager 6.5 Assets
 description: Den här guiden täcker alla Experience Manager Assets-uppgifter, t.ex. hur du skapar, hanterar, levererar och optimerar digitala resurser.
 seo-description: täcker alla Experience Manager Assets-uppgifter, t.ex. hur man skapar, hanterar, levererar och optimerar digitala resurser.
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
 workflow-type: tm+mt
 source-wordcount: '378'
-ht-degree: 11%
+ht-degree: 12%
 
 ---
 
@@ -18,9 +18,12 @@ Den här guiden täcker alla Experience Manager Assets-uppgifter, t.ex. hur du s
 
 ## Viktiga Experience Manager-artiklar
 
+<!-- TBD: Some of these links will soon be updated. Change these when new articles go live on docs.adobe.com.
+-->
+
 * [Komma igång med Experience Manager](https://helpx.adobe.com/experience-manager/get-started.html)
 * [Versionsinformation om Experience Manager 6.5](/help/release-notes/home.md)
-* [Senaste dokumentationsuppdateringar](https://helpx.adobe.com/experience-manager/documentation-updates.html)
+* [Senaste dokumentationsuppdateringarna](https://helpx.adobe.com/experience-manager/documentation-updates.html)
 * [Säkerhetschecklista](/help/sites-administering/security-checklist.md)
 
 ## Användarhandböcker för Experience Manager 6.5
