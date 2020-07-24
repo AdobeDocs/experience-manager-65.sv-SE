@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: f5316a73-84e2-4a18-98c1-a384eeaa77cf
 translation-type: tm+mt
-source-git-commit: e4456e80059479ca874681e20f8546f29ac92597
+source-git-commit: c798eb79dc9f8e58cef86cf90af02622c3a2ed78
+workflow-type: tm+mt
+source-wordcount: '446'
+ht-degree: 1%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: e4456e80059479ca874681e20f8546f29ac92597
 
 ## Om JSRP {#about-jsrp}
 
-När AEM Communities använder JSRP som lagringsalternativ (standard) lagras community-innehåll i JCR och användargenererat innehåll (UGC) är endast tillgängligt från författaren eller den publiceringsinstans som det publicerades i.
+När AEM Communities använder JSRP som lagringsalternativ (standard) lagras communityinnehåll i JCR och användargenererat innehåll (UGC) är endast tillgängligt från författaren eller den publiceringsinstans som det publicerades i.
 
 På grund av enkelheten i distributionen passar JSRP oftast bäst för demonstrations- eller utvecklingsmiljöer med en publiceringsinstans och en författarinstans.
 
@@ -35,12 +38,13 @@ Med konsolen [för](srp-config.md) lagringskonfiguration kan du välja standardl
 
 För att nå konsolen Lagringskonfiguration i redigeringsmiljön
 
-* Från global navigering: **[!UICONTROL Verktyg]** > **[!UICONTROL Communities]** > **[!UICONTROL Storage Configuration]**
+* Från global navigering: **[!UICONTROL Tools]** > **[!UICONTROL Communities]** > **[!UICONTROL Storage Configuration]**
+
+* Välj **[!UICONTROL JCR Storage Resource Provider (JSRP)]**
+
+* Välj **[!UICONTROL Submit]**
 
 ![chlimage_1-234](assets/chlimage_1-234.png)
-
-* Välj **[!UICONTROL JSRP (JCR Storage Resource Provider)]**
-* Välj **[!UICONTROL Skicka]**
 
 ### Publicera konfigurationen {#publishing-the-configuration}
 
@@ -48,11 +52,11 @@ JSRP är standardkonfigurationen, och för att säkerställa att den identiska k
 
 * On author:
 
-   * Från global navigering: **[!UICONTROL Verktyg]** > **[!UICONTROL Distribution]** > **[!UICONTROL Replikering]**
-   * Välj **[!UICONTROL Aktivera träd]** > **[!UICONTROL Startsökväg]**:
+   * Från global navigering: **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Replication]**
+   * Välj **[!UICONTROL Activate Tree]** > **[!UICONTROL Start Path]**:
 
       * Bläddra till `/conf/global/settings/community/srpc/`
-   * Välj **[!UICONTROL Aktivera]**
+   * Välj **[!UICONTROL Activate]**
 
 
 ## Hantera användardata {#managing-user-data}
