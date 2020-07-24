@@ -4,9 +4,9 @@ description: Lär dig mer om hur du hanterar samlingar med resurser, som att ska
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
 workflow-type: tm+mt
-source-wordcount: '2044'
+source-wordcount: '2047'
 ht-degree: 11%
 
 ---
@@ -102,19 +102,14 @@ Så här skapar du en smart samling:
 
    ![collection_listing](assets/collection_listing.png)
 
-   Etiketten på knappen **[!UICONTROL Create Smart Selection]** ändras till **[!UICONTROL Edit Smart Selection]**. Om du vill redigera inställningarna för den smarta samlingen väljer du **[!UICONTROL Files]** i listan **[!UICONTROL Files & Folders]**. Then, Click the **[!UICONTROL Edit Smart Selection]** button.
-
-   ![chlimage_1-7](assets/chlimage_1-112.png)
+   The label of the **[!UICONTROL Create Smart Selection]** option changes to **[!UICONTROL Edit Smart Selection]**. Om du vill redigera inställningarna för den smarta samlingen väljer du **[!UICONTROL Files]** i listan **[!UICONTROL Files & Folders]**. Klicka på **[!UICONTROL Edit Smart Selection]** alternativet ![Redigera smart samling](assets/do-not-localize/edit-smart-collection.png) .
 
 ## Lägga till resurser i en samling {#adding-assets-to-a-collection}
 
 Du kan lägga till resurser i en samling som innehåller en lista med refererade resurser eller mappar. Smarta samlingar använder en sökfråga för att fylla i resurser. Statiska referenser till resurser och mappar kan därför inte användas för dem.
 
-1. Markera resursen i användargränssnittet för Resurser och klicka på **[!UICONTROL To Collection]** i verktygsfältet.
-
-   ![chlimage_1-8](assets/chlimage_1-113.png)
-
-   Du kan också dra resursen till **[!UICONTROL Drop in Collection]** området i gränssnittet. Lägg till resurserna när regionens etikett ändras till **[!UICONTROL Drop to Add]**.
+1. I resursanvändargränssnittet markerar du resursen och klickar på **[!UICONTROL To Collection]** Lägg ![till i samling](assets/do-not-localize/add-to-collection.png) i verktygsfältet.
+Du kan också dra resursen till **[!UICONTROL Drop in Collection]** området i gränssnittet. Lägg till resurserna när regionens etikett ändras till **[!UICONTROL Drop to Add]**.
 
 1. På **[!UICONTROL Add To Collection]** sidan väljer du den samling som du vill lägga till resursen i.
 
