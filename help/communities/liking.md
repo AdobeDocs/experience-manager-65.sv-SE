@@ -10,7 +10,10 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: dcde4e03-78ab-4779-96a1-05ac41f14701
 translation-type: tm+mt
-source-git-commit: e4456e80059479ca874681e20f8546f29ac92597
+source-git-commit: e7268e43620860b7a1f7aa0a1f1a54199dadcf17
+workflow-type: tm+mt
+source-wordcount: '224'
+ht-degree: 1%
 
 ---
 
@@ -21,7 +24,7 @@ Komponenten är ett användbart verktyg som gör att användare kan uttrycka sin
 
 ## Lägga till länkning på en sida {#adding-liking-to-a-page}
 
-Om du vill lägga till en `Liking` komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att leta reda på:
+Om du vill lägga till en `Liking` komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att leta reda på
 
 * `Communities / Liking`
 
@@ -39,19 +42,19 @@ Markera den monterade `Liking` komponent som du vill öppna och välj den `Confi
 
 ![chlimage_1-94](assets/chlimage_1-94.png)
 
-Under fliken **[!UICONTROL Texter och etiketter]** anger du vilka egenskaper som ska användas för att spela in gilla-markeringar.
+Ange de egenskaper som ska användas för att spela in gilla-markeringar på fliken **[!UICONTROL Texts & Labels]** .
 
 ![chlimage_1-95](assets/chlimage_1-95.png)
 
-* **[!UICONTROL Etikett för positivt svar]**
+* **[!UICONTROL Positive Response Label]**
 
    (*Obligatoriskt*) Egenskapsnamnet för ett positivt svar.
 
-* **[!UICONTROL Etikett för negativt svar]**
+* **[!UICONTROL Negative Response Label]**
 
    (*Obligatoriskt*) Egenskapsnamnet för ett negativt svar.
 
-* **[!UICONTROL Namn]**
+* **[!UICONTROL Tally Name]**
 
    (*Obligatoriskt*) Det interna, identifierbara egenskapsnamnet för den här instansen av en röstkomponent.
 
