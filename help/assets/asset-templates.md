@@ -3,9 +3,9 @@ title: Resursmallar i [!DNL Adobe Experience Manager Assets].
 description: Lär dig mer om tillgångsmallar [!DNL Adobe Experience Manager Assets] och hur du använder tillgångsmallar för att skapa marknadsföringsmaterial.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
 workflow-type: tm+mt
-source-wordcount: '1513'
+source-wordcount: '1515'
 ht-degree: 1%
 
 ---
@@ -106,7 +106,7 @@ Du kan redigera en sammanställning direkt när du har skapat den. Du kan också
 
 1. Klicka **[!UICONTROL Preview]** för att förhandsgranska textändringarna.
 
-   ![chlimage_1-112](assets/chlimage_1-317.png)
+   ![visa ändringar](assets/view-changes.png)
 
 1. Om du vill byta ut en bild klickar du på **[!UICONTROL Asset Finder]**.
 
@@ -122,11 +122,11 @@ Du kan redigera en sammanställning direkt när du har skapat den. Du kan också
 
 1. Klicka **[!UICONTROL Preview]** för att förhandsgranska bilden.
 
-   ![chlimage_1-116](assets/chlimage_1-321.png)
+   ![visa ändringar](assets/view-changes.png)
 
 1. Om du vill redigera en viss sida i en flersidig säkerhetssida använder du sidnavigeraren längst ned.
 
-   ![chlimage_1-117](assets/chlimage_1-322.png)
+   ![sidnavigeraren](assets/page-navigator.png)
 
 1. Klicka **[!UICONTROL Preview]** i verktygsfältet för att förhandsgranska alla ändringar. Klicka **[!UICONTROL Done]** för att spara redigeringsändringarna för den aktuella informationen.
 
@@ -172,8 +172,6 @@ Du kan redigera en sammanställning direkt när du har skapat den. Du kan också
    ![chlimage_1-122](assets/chlimage_1-327.png)
 
    Du kan också söka efter mallar från sökrutan.
-
-   ![chlimage_1-123](assets/chlimage_1-328.png)
 
    Du kan bläddra genom databasen eller samlingarna och navigera till platsen för de önskade mallarna och sedan välja dem att sammanfoga. [!DNL Experience Manager Assets]
 
