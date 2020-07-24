@@ -1,8 +1,8 @@
 ---
 title: Skapa en ny inloggningsskärm
 seo-title: Skapa en ny inloggningsskärm
-description: Hur man ändrar inloggningssidan för LiveCycle-moduler, till exempel arbetsytan i AEM Forms eller Forms Manager.
-seo-description: Hur man ändrar inloggningssidan för LiveCycle-moduler, till exempel arbetsytan i AEM Forms eller Forms Manager.
+description: Så här ändrar du inloggningssidan för LiveCycle-moduler, till exempel arbetsytan i AEM Forms eller Forms Manager.
+seo-description: Så här ändrar du inloggningssidan för LiveCycle-moduler, till exempel arbetsytan i AEM Forms eller Forms Manager.
 uuid: 2d4a72f4-cc9a-412d-856d-0fca75f1272b
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,14 +10,17 @@ topic-tags: forms-workspace
 discoiquuid: 35497785-263d-44b1-9ee4-85921997295b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: e345fbff7030dbdeb3710e34599c0087eed4b1b8
+workflow-type: tm+mt
+source-wordcount: '483'
+ht-degree: 2%
 
 ---
 
 
 # Skapa en ny inloggningsskärm{#creating-a-new-login-screen}
 
-Du kan ändra inloggningsskärmen för alla AEM Forms-moduler som använder inloggningsskärmen i AEM Forms. Ändringarna påverkar till exempel inloggningsskärmen för både Forms Manager och AEM Forms.
+Du kan ändra inloggningsskärmen för alla AEM Forms-moduler som använder inloggningsskärmen för AEM Forms. Ändringarna påverkar till exempel inloggningsskärmen för både Forms Manager och AEM Forms.
 
 ## Förutsättning {#prerequisite}
 
@@ -42,13 +45,15 @@ Du kan ändra inloggningsskärmen för alla AEM Forms-moduler som använder inlo
 
 1. Kopiera `i18n` mappen:
 
-   * from `/libs/livecycle/core/components/login`
+   * från `/libs/livecycle/core/components/login`
    * to `/apps/livecycle/core/components/login`
 
 1. Ta bort alla mappar inuti `i18n` utom en, till exempel `en`.
+
 1. Utför följande åtgärder i mappen `en`:
 
-   1. Byt namn på mappen till det språknamn som du vill ha stöd för. Exempel, `ar`.
+   1. Byt namn på mappen till det språknamn som du vill ha stöd för. Till exempel, `ar`.
+
    1. Ändra egenskapsvärdet `jcr:language` till `ar`(för `ar` mappen).
    >[!NOTE]
    >
@@ -56,15 +61,15 @@ Du kan ändra inloggningsskärmen för alla AEM Forms-moduler som använder inlo
 
 1. Kopiera `login.jsp`:
 
-   * from `/libs/livecycle/core/components/login`
+   * från `/libs/livecycle/core/components/login`
    * to `/apps/livecycle/core/components/login`
 
 1. Ändra följande kodfragment för `/apps/livecycle/core/components/login/login.jsp`:
 
-   ***Språkinställningen är språkkod***
+***Språkinställningen är språkkod***
 
-   ```
-   String browserLocale = "en";
+```
+String browserLocale = "en";
        for(int i=0; i<locales.length; i++)
        {
            String prioperty = locales[i];
@@ -85,9 +90,9 @@ Du kan ändra inloggningsskärmen för alla AEM Forms-moduler som använder inlo
                break;
            }
        }
-   
+
    To
-   
+
    String browserLocale = "en";
        for(int i=0; i<locales.length; i++)
        {
@@ -113,12 +118,13 @@ Du kan ändra inloggningsskärmen för alla AEM Forms-moduler som använder inlo
                break;
            }
        }
-   ```
+```
 
-   ***Språkkoden är***
 
-   ```
-   String browserLocale = "en";
+***Språkkoden är***
+
+```
+String browserLocale = "en";
        for(int i=0; i<locales.length; i++)
        {
            String prioperty = locales[i];
@@ -139,9 +145,9 @@ Du kan ändra inloggningsskärmen för alla AEM Forms-moduler som använder inlo
                break;
            }
        }
-   
+
    To
-   
+
    String browserLocale = "en";
        for(int i=0; i<locales.length; i++)
        {
@@ -167,61 +173,64 @@ Du kan ändra inloggningsskärmen för alla AEM Forms-moduler som använder inlo
                break;
            }
        }
-   ```
+```
 
-   ***Ändra standardspråk***
+***Ändra standardspråk***
 
-   ```
-   String browserLocale = "en";
+```
+String browserLocale = "en";
    for(int i=0; i<locales.length; i++)
-   
+
    To
-   
+
    String browserLocale = "ar";
    for(int i=0; i<locales.length; i++)
-   ```
+```
 
 ### Lägga till ny text eller ändra befintlig text {#adding-new-text-or-modifying-existing-text}
 
 1. Kopiera `i18n` mapp:
 
-   * from `/libs/livecycle/core/components/login`
+   * från `/libs/livecycle/core/components/login`
    * to `/apps/livecycle/core/components/login`
 
 1. Ändra nu värdet på egenskapen för noden ( `sling:message` under den önskade språkkodsmappen) som du vill ändra texten för. Översättningen görs via den nyckel som anges i värdet för nodens `sling:key` egenskap.
+
 1. Utför följande åtgärder om du vill lägga till ett nytt nyckelvärdepar. Markera ett exempel i skärmbilden som följer.
 
    1. Skapa en nod av typen `sling:MessageEntry`, eller kopiera en befintlig nod och byt namn på den, under alla språkmappar.
    1. Kopiera `login.jsp` :
 
-      * from `/libs/livecycle/core/components/login`
+      * från `/libs/livecycle/core/components/login`
 
       * to `/apps/livecycle/core/components/login`
    1. Ändra `/apps/livecycle/core/components/login/login.jsp` så att den nya texten läggs till.
+
    ![Lägg till nytt nyckelvärdepar](assets/capture_new.png)
 
-   ```
-   div class="loginContent">
+
+```
+<div class="loginContent">
                        <span class="loginFlow"></code>
                        <span class="loginVersion"><%= i18n.get("Version: 11.0.0") %></code>
                        <span class="loginTitle"><%= i18n.get("Login") %></code>
                        <% if (loginFailed) {%>
-   
+
    To
-   
-   div class="loginContent">
+
+   <div class="loginContent">
                        <span class="loginFlow"></code>
                        <span class="loginVersion"><%= i18n.get("My Welcome Message") %></code>
                        <span class="loginVersion"><%= i18n.get("Version: 11.0.0") %></code>
                        <span class="loginTitle"><%= i18n.get("Login") %></code>
                        <% if (loginFailed) {%>
-   ```
+```
 
 ### Lägga till ett nytt format eller ändra ett befintligt format {#adding-new-style-or-modifying-existing-style}
 
 1. Kopiera `login` nod:
 
-   * from `/libs/livecycle/core/content`
+   * från `/libs/livecycle/core/content`
    * to `/apps/livecycle/core/content`
 
 1. Ta bort filer `login.js` och `jquery-1.8.0.min.js`från noden `/apps/livecycle/core/content/login.`
@@ -231,36 +240,37 @@ Du kan ändra inloggningsskärmen för alla AEM Forms-moduler som använder inlo
    1. Lägg till nya format i `/apps/livecycle/core/content/login/login.css`
    1. Kopiera `login.jsp`
 
-      * from `/libs/livecycle/core/components/login`
+      * från `/libs/livecycle/core/components/login`
 
       * to `/apps/livecycle/core/components/login`
    1. Ändra om du `/apps/livecycle/core/components/login/login.jsp` vill använda de nya formaten.
 
 
-1. Exempel:
+Till exempel:
 
-   * Lägg till följande i `/apps/livecycle/core/content/login/login.css`.
+* Lägg till följande i `/apps/livecycle/core/content/login/login.css`.
 
-   ```css
-   .newLoginContentArea {
+```
+css.newLoginContentArea {
     width: 700px;
     padding: 100px 0px 0px 100px;
    }
-   ```
+```
 
-   * Ändra följande i /apps/livecycle/core/components/login.jsp.
+* Ändra följande i `/apps/livecycle/core/components/login.jsp`.
 
-   ```
-   <div class="loginContentArea">
-   
+```
+<div class="loginContentArea">
+
    To
-   
+
    <div class="newLoginContentArea">
-   ```
+```
 
 >[!NOTE]
 >
 >Om de befintliga bilderna i `/apps/livecycle/core/content/login` (kopieras från `/libs/livecycle/core/content/login`) tas bort, tar du bort motsvarande referenser i CSS.
+
 
 ### Lägg till nya bilder {#add-new-images}
 
@@ -274,25 +284,27 @@ Du kan ändra inloggningsskärmen för alla AEM Forms-moduler som använder inlo
 
 1. Lägg till nya format i `/apps/livecycle/core/content/login/login.css,` som motsvarar nya bilder som lagts till i `/apps/livecycle/core/content/login`.
 1. Använd de nya formaten i `login.jsp``/apps/livecycle/core/components`.
-1. Exempel:
 
-   * Lägg till följande i `/apps/livecycle/core/content/login/login.css`
+Exempel:
 
-   ```css
-   .newLoginContainerBkg {
+* Lägg till följande i `/apps/livecycle/core/content/login/login.css`
+
+```
+css.newLoginContainerBkg {
     background-image: url(my_Bg.gif);
     background-repeat: no-repeat;
     background-position: left top;
     width: 727px;
    }
-   ```
+```
 
-   * Ändra följande i /apps/livecycle/core/components/login.jsp.
+* Ändra följande i `/apps/livecycle/core/components/login.jsp`.
 
-   ```
-   <div class="loginContainerBkg">
-   
+```
+<div class="loginContainerBkg">
+
    To
-   
+
    <div class="newLginContainerBkg">
-   ```
+```
+
