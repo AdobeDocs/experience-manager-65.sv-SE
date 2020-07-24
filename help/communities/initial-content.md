@@ -10,10 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: e8f28cd5-7950-4aab-bf62-3d4ed3d33cbd
 translation-type: tm+mt
-source-git-commit: c798eb79dc9f8e58cef86cf90af02622c3a2ed78
+source-git-commit: 65e2b98cfd980f17302b4751127e25827decec22
 workflow-type: tm+mt
 source-wordcount: '439'
-ht-degree: 5%
+ht-degree: 4%
 
 ---
 
@@ -38,13 +38,13 @@ Nu när det finns en [sidmall](initial-app.md#createthepagetemplate)kan vi skapa
 
    Om du vill växla till det klassiska användargränssnittet väljer du global navigering och håller pekaren över den högra sidan av projektikonen. Välj ikonen *Växla till klassiskt gränssnitt* som visas:
 
-   ![chlimage_1-36](assets/chlimage_1-36.png)
+   ![classic-ui](assets/classic-ui.png)
 
    Möjligheten att växla till det klassiska användargränssnittet måste [aktiveras av en administratör](../../help/sites-administering/enable-classic-ui.md).
 
 1. På välkomstsidan [för det](http://localhost:4502/welcome.html)klassiska användargränssnittet väljer du **[!UICONTROL Websites]**.
 
-   ![chlimage_1-37](assets/chlimage_1-37.png)
+   ![classic-ui-website](assets/classic-ui-website.png)
 
    Du kan även få tillgång till det klassiska användargränssnittet för webbplatser direkt genom att gå till [/siteAdmin.](http://localhost:4502/siteadmin)
 
@@ -57,7 +57,7 @@ Nu när det finns en [sidmall](initial-app.md#createthepagetemplate)kan vi skapa
    * Välj **[!UICONTROL An SCF Sandbox Play Template]**
    * Klicka på **[!UICONTROL Create]**
 
-   ![chlimage_1-38](assets/chlimage_1-38.png)
+   ![classic-ui-create-page](assets/classic-ui-create-page.png)
 
 1. Markera den sida du just skapade i Utforskarfönstret `/Websites/SCF Sandbox Site`och klicka på **[!UICONTROL New]** > **[!UICONTROL New Page]**:
 
@@ -75,11 +75,11 @@ Nu när det finns en [sidmall](initial-app.md#createthepagetemplate)kan vi skapa
 
 1. Så här visas webbplatsen nu i webbplatskonsolen. Observera att underordnade sidor för objektet som är markerat i utforskarrutan visas i den högra rutan där de kan hanteras.
 
-   ![chlimage_1-39](assets/chlimage_1-39.png)
+   ![classic-ui-website-page](assets/classic-ui-website-page.png)
 
    Det här är databasvyn över vad som har skapats med webbplatsverktyget och mallen:
 
-   ![chlimage_1-40](assets/chlimage_1-40.png)
+   ![classic-ui-database-view](assets/classic-ui-repository-view.png)
 
 ## Lägg till designbanan {#add-the-design-path}
 
@@ -100,7 +100,7 @@ har definierats, vilket ger möjlighet att referera till designresurser i ett sk
 
 Databasen ska vara som följer:
 
-![chlimage_1-41](assets/chlimage_1-41.png)
+![classic-ui-database-path](assets/classic-ui-repository-path.png)
 
 * Klicka på **[!UICONTROL Save All]**
 
