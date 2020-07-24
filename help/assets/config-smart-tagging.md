@@ -3,7 +3,7 @@ title: Konfigurera resurstaggning med Smart Content Service.
 description: Lär dig hur du konfigurerar smart taggning och förbättrad smart taggning [!DNL Adobe Experience Manager]med hjälp av Smart Content Service.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
 workflow-type: tm+mt
 source-wordcount: '931'
 ht-degree: 54%
@@ -29,6 +29,9 @@ Innan du kan använda tjänsten Smart Content måste du göra följande för att
 
 * Ett Adobe ID-konto som har administratörsbehörighet för organisationen.
 * Att Smart Content Service är aktiverad för din organisation.
+
+<!-- TBD: This link will update soon after the new articles goes live on docs.adobe.com. Change it when new URL is available.
+-->
 
 Om du vill aktivera förbättrade smarta taggar installerar du förutom ovanstående även det senaste [AEM-Service Pack](https://helpx.adobe.com/experience-manager/aem-releases-updates.html).
 
