@@ -3,9 +3,9 @@ title: Digital Rights Management i [!DNL Adobe Experience Manager Assets].
 description: Lär dig hur du hanterar förfallotillstånd för mediefiler och information för licensierade mediefiler i [!DNL Experience Manager].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
 workflow-type: tm+mt
-source-wordcount: '1347'
+source-wordcount: '1346'
 ht-degree: 7%
 
 ---
@@ -65,9 +65,6 @@ Du kan söka efter utgångna resurser, inklusive underresurser som gått ut, på
    ![chlimage_1-150](assets/chlimage_1-150.png)
 
 1. Klicka på [!DNL Experience Manager] logotypen för att visa sökpanelen.
-
-   ![chlimage_1-151](assets/chlimage_1-151.png)
-
 1. Click the **[!UICONTROL Expiry Status]** option to expand it.
 
    ![chlimage_1-152](assets/chlimage_1-152.png)
@@ -114,11 +111,9 @@ Konsolen kan [!DNL Assets] visa olika lägen för resurser. Beroende på det akt
 
    ![chlimage_1-157](assets/chlimage_1-157.png)
 
-1. Om du vill visa sidan med resursinformation väljer du en resurs i [!DNL Assets] gränssnittet och klickar på **[!UICONTROL Properties]**.
+1. Om du vill visa sidan med resursinformation väljer du en resurs i [!DNL Assets] gränssnittet och klickar på **[!UICONTROL Properties]** Visa egenskaper ![](assets/do-not-localize/info-circle-icon.png).
 
-   ![chlimage_1-158](assets/chlimage_1-158.png)
-
-1. Ange ett förfallodatum för resursen från **[!UICONTROL Expires]** fältet på fliken Avancerat.
+1. Ange ett förfallodatum för resursen från [!UICONTROL Advanced] **[!UICONTROL Expires]** fältet på fliken.
 
    ![ange förfallodatum och förfallotid för resurs i fältet Förfaller](assets/asset-properties-advanced-tab.png)
 
