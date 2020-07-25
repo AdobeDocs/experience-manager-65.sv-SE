@@ -3,8 +3,9 @@ cloud: experience-cloud
 product: experience manager
 audience: end-user
 user-guide-title: Versionsinformation om AEM 6.5
+user-guide-description: Learn about the latest new features in AEM 6.5 in the release notes.
 translation-type: tm+mt
-source-git-commit: 46f28926af6cbf3999a4c81cb1f1297b09c07f9f
+source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 3%
@@ -17,11 +18,11 @@ ht-degree: 3%
 + [AEM 6.5 - översikt](home.md)
 + [Allmän versionsinformation](release-notes.md)
 + Versionsinformation för Service Pack {#service-pack}
-   + [Nyheter](new-features-latest-service-pack.md)
+   + [What&#39;s New](new-features-latest-service-pack.md)
    + [Versionsinformation för Service Pack 5](sp-release-notes.md)
    + [Versionsinformation för föregående Service Pack](previous-hotfixes-featurepacks.md)
-+ [Versionsinformation för AEM Sites](sites.md)
-+ [Versionsinformation om AEM Resurser](assets.md)
++ [Versionsinformation om AEM Sites](sites.md)
++ [Versionsinformation om AEM Assets](assets.md)
 + [Versionsinformation om AEM Communities](communities-release-notes.md)
 + [Föråldrade och borttagna funktioner](deprecated-removed-features.md)
 + [Kända fel](known-issues.md)
