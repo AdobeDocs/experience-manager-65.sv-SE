@@ -2,9 +2,13 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: AEM 6.5 Communities User Guide
+user-guide-title: Användarhandbok för AEM 6.5 Communities
+user-guide-description: Create online experiences such as forums, user groups, learning resources, and other social features.
 translation-type: tm+mt
-source-git-commit: e9e7112cb1188de465b4c233292f6eec7d5d82c6
+source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
+workflow-type: tm+mt
+source-wordcount: '466'
+ht-degree: 0%
 
 ---
 
@@ -30,12 +34,12 @@ source-git-commit: e9e7112cb1188de465b4c233292f6eec7d5d82c6
    + [Distribuera webbgrupper](deploy-communities.md)
    + [Uppgradera till AEM 6.5 Communities](upgrade.md)
    + [Rekommenderade topologier för communities](topologies.md)
-   + [Konfigurera Dispatcher för Communities](dispatcher.md)
+   + [Konfigurera Dispatcher för webbgrupper](dispatcher.md)
 + Administratör {#administer}
    + [Tjänsten för hantering av användare och användargenererat innehåll i AEM Communities](user-ugc-management-service.md)
    + [Communities Sites](administer-landing.md)
    + [Communities-konsoler](consoles.md)
-   + [Analyskonfiguration för communityfunktioner](analytics.md)
+   + [Analytics Configuration for Communities - funktioner](analytics.md)
    + [Konfigurera aktiveringsfunktioner](enablement.md)
    + [Konfigurerar meddelanden](messaging.md)
    + [Moderating Community Content](moderate-ugc.md)
@@ -74,7 +78,7 @@ source-git-commit: e9e7112cb1188de465b4c233292f6eec7d5d82c6
    + [Översätter användargenererat innehåll](translate-ugc.md)
    + [Användarsynkronisering för Communities](sync.md)
    + [Gränser för medlemsbidrag](limits.md)
-+ Utvecklar {#develop}
++ Utveckling {#develop}
    + [Utveckla webbgrupper](communities.md)
    + [Ramverk för sociala komponenter](scf.md)
    + [Community Components Guide](components-guide.md)
