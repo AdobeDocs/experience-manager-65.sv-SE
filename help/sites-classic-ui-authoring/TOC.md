@@ -2,9 +2,13 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: AEM 6.5 Classic UI Authoring User Guide
+user-guide-title: Användarhandbok för AEM 6.5 Classic UI Authoring
+user-guide-description: This guide covers the concepts of authoring in AEM in the classic user interface.
 translation-type: tm+mt
-source-git-commit: c34993650bbd309b036085abfae4f7db547c7104
+source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
+workflow-type: tm+mt
+source-wordcount: '266'
+ht-degree: 21%
 
 ---
 
@@ -32,7 +36,7 @@ source-git-commit: c34993650bbd309b036085abfae4f7db547c7104
    + [Redigera sidegenskaper](classic-page-author-edit-page-properties.md)
    + [Anteckningar vid redigering av en sida](classic-page-author-annotations.md)
    + [Felsöka AEM vid redigering](classic-page-author-troubleshooting.md)
-   + [Skapa hjälpmedelsanpassat innehåll (WCAG 2.0-överensstämmelse)](classic-page-author-accessible-content.md)
+   + [Skapa tillgängligt innehåll (WCAG 2.0-överensstämmelse)](classic-page-author-accessible-content.md)
    + [Skapa en sida för mobila enheter](classic-feature-mobile.md)
    + [Komponenter för sidredigering](classic-page-author-edit-mode.md)
    + [Kortkommandon vid sidredigering](classic-page-author-keyboard-shortcuts.md)
@@ -43,7 +47,7 @@ source-git-commit: c34993650bbd309b036085abfae4f7db547c7104
    + [Använda taggar](classic-feature-tags.md)
    + [Ställning](classic-feature-scaffolding.md)
    + [Konfigurera komponenter i designläge](classic-page-author-design-mode.md)
-   + [Lägga till sök&amp;höj upp funktioner på din sida](classic-feature-search-promote.md)
+   + [Lägga till Search&amp;Promote på sidan](classic-feature-search-promote.md)
    + [Komponenter](classic-page-author-default-components.md)
 + Arbetsflöden {#workflows}
    + [Delta i arbetsflöden](classic-workflows-participating.md)
@@ -59,7 +63,7 @@ source-git-commit: c34993650bbd309b036085abfae4f7db547c7104
    + [Kampanjhantering](classic-personalization-campaigns.md)
    + [Lärare och strategier](classic-personalization-campaigns-teasers-strategy.md)
    + [Landningssidor](classic-personalization-campaigns-landingpage.md)
-   + [Målerbjudanden](classic-personalization-campaigns-target-offers.md)
+   + [Target erbjuder](classic-personalization-campaigns-target-offers.md)
    + [Arbeta med Marketing Campaign Manager](classic-personalization-campaigns-mktg-manager.md)
    + [E-postmarknadsföring](classic-personalization-campaigns-email.md)
    + [Spåra studsade e-postmeddelanden](classic-personalization-campaigns-email-tracking-bounces.md)
@@ -73,12 +77,12 @@ source-git-commit: c34993650bbd309b036085abfae4f7db547c7104
    + [Arbeta med Adobe Campaign 6.1 och Adobe Campaign Standard](classic-personalization-ac-campaign.md)
    + [Arbeta med Adobe Campaign](classic-personalization-ac.md)
    + [Adobe Campaign-komponenter](classic-personalization-ac-components.md)
-   + [Inrikta er på Adobe Campaign](classic-personalization-ac-target.md)
+   + [Inrikta er mot Adobe Campaign](classic-personalization-ac-target.md)
    + [Skapa Adobe Campaign-formulär i AEM](classic-personalization-ac-forms.md)
 + Skapa resurser i det klassiska användargränssnittet {#assets}
    + [Arbeta med resurser](classicui-assets.md)
-   + [Leverera dynamiska medieresurser](dynamic-media-assets-delivering.md)
-   + [Lägga till dynamiska medieresurser på sidor](dynamic-media-assets-adding-to-page.md)
+   + [Leverera Dynamic Media Assets](dynamic-media-assets-delivering.md)
+   + [Adding Dynamic Media Assets to Pages](dynamic-media-assets-adding-to-page.md)
    + [Lägga till Scene7-funktioner på sidan](manage-assets-classic-s7.md)
    + [Video](manage-assets-classic-s7-video.md)
    + [Arbeta med Dynamic Media](dynamic-media-assets.md)
