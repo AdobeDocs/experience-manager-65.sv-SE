@@ -2,9 +2,13 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: AEM 6.5 Deploying Guide
+user-guide-title: AEM 6.5 - driftsättningshandbok
+user-guide-description: Learn more about installing, deploying, and the architecture of Adobe Experience Manager 6.5, including our Adobe Managed Services cloud deployment.
 translation-type: tm+mt
-source-git-commit: 47bd0c5327f4127080ca65f4f84db4c643c34e7c
+source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
+workflow-type: tm+mt
+source-wordcount: '319'
+ht-degree: 1%
 
 ---
 
@@ -78,10 +82,10 @@ source-git-commit: 47bd0c5327f4127080ca65f4f84db4c643c34e7c
    + [Omstrukturering av gemensamma lager i AEM 6.5](all-repository-restructuring-in-aem-6-5.md)
    + [Omstrukturering av anläggningstillgångar i AEM 6.5](sites-repository-restructuring-in-aem-6-5.md)
    + [Omstrukturering av tillgångar i AEM 6.5](assets-repository-restructuring-in-aem-6-5.md)
-   + [Omstrukturering av Dynamic Media Repository i AEM 6.5](dynamicmedia-repository-restructuring-in-aem-6-5.md)
+   + [Omstrukturering av Dynamic Media-databasen i AEM 6.5](dynamicmedia-repository-restructuring-in-aem-6-5.md)
    + [Omstrukturering av formulärarkiv i AEM 6.5](forms-repository-restructuring-in-aem-6-5.md)
    + [Omstrukturering av e-handelslager i AEM 6.5](ecommerce-repository-restructuring-in-aem-6-5.md)
-   + [Repositionsomstrukturering av AEM Communities i 6.5](communities-repository-restructuring-in-aem-6-5.md)
+   + [Omstrukturering av lager för AEM Communities i 6.5](communities-repository-restructuring-in-aem-6-5.md)
 + eCommerce {#ecommerce}
    + [e-handel - översikt](ecommerce.md)
    + [SAP Commerce Cloud](sap-commerce-cloud.md)
