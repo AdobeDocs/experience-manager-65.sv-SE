@@ -3,11 +3,12 @@ cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
 user-guide-title: Användarhandbok för AEM 6.5-redigering
+user-guide-description: Learn key concepts for creating content and authoring in AEM.
 translation-type: tm+mt
-source-git-commit: af27ed32c21a338600201e05871c1b18548ecba6
+source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
 workflow-type: tm+mt
 source-wordcount: '273'
-ht-degree: 40%
+ht-degree: 41%
 
 ---
 
@@ -56,7 +57,7 @@ ht-degree: 40%
    + [Konfigurera komponenter i designläge](default-components-designmode.md)
    + [Foundation Components](default-components-foundation.md)
    + [Ställning](scaffolding.md)
-   + [Visa sidanalysdata](page-analytics-using.md)
+   + [Visa Analytics-data för sidan](page-analytics-using.md)
 + Projekt {#projects}
    + [Projekt](projects.md)
    + [Hantera projekt](touch-ui-managing-projects.md)
@@ -76,8 +77,8 @@ ht-degree: 40%
 + Sidprestanda {#page-performance}
    + [Content Insight](content-insights.md)
    + [Analyserar sidprestanda](ci-analyze.md)
-   + [Visa sidanalysdata](pa-using.md)
-   + [Lägga till sök&amp;höj upp funktioner på din sida](search-and-promote.md)
+   + [Visa Analytics-data för sidan](pa-using.md)
+   + [Lägga till Search&amp;Promote på sidan](search-and-promote.md)
 + Personanpassning {#personalization}
    + [Personanpassning](personalization.md)
    + [Förhandsgranska sidor med ContextHub-data](ch-previewing.md)
@@ -91,6 +92,6 @@ ht-degree: 40%
 + AEM och Adobe Campaign {#aem-adobe-campaign}
    + [Arbeta med Adobe Campaign](adobe-campaign.md)
    + [Arbeta med Adobe Campaign Classic och Adobe Campaign Standard](campaign.md)
-   + [Inrikta er på Adobe Campaign](target-adobe-campaign.md)
+   + [Inrikta er mot Adobe Campaign](target-adobe-campaign.md)
    + [Skapa Adobe Campaign-formulär i AEM](adobe-campaign-forms.md)
    + [Adobe Campaign-komponenter](adobe-campaign-components.md)
