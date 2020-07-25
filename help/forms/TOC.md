@@ -4,8 +4,9 @@ product: adobe experience manager
 sub-product: formulär
 audience: end-user
 user-guide-title: Användarhandbok för AEM 6.5-formulär
+user-guide-description: Create, manage, publish, and update digital forms.
 translation-type: tm+mt
-source-git-commit: 8bb5e92140371fbfee0f946ed3701cd40a972702
+source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
 workflow-type: tm+mt
 source-wordcount: '3695'
 ht-degree: 0%
@@ -323,24 +324,24 @@ ht-degree: 0%
    + [API:er för åtkomst till bokstavsinstanser](using/cm-apis-to-access-letter-instances.md)
    + [Integrera Create Correspondence UI med din anpassade portal](using/integrating-create-correspondence-ui-with-your-portal.md)
    + [Anpassade specialtecken i korrespondenshantering](using/custom-special-characters.md)
-   + [Egen vattenstämpel i PDF-förhandsgranskning med bokstav](using/custom-watermark.md)
+   + [Custom watermark in letter PDF preview](using/custom-watermark.md)
    + [Konfigurera en Correspondence Management-lösning](using/configuring-a-cm-solution.md)
-   + [Infogade villkor och upprepningar i interaktiv kommunikation och brev](using/cm-inline-condition.md)
-   + [Dokumentfragment](using/lists.md)
-   + [Egenskaper för konfiguration av korrespondenshantering](using/cm-configuration-properties.md)
-+ Integrera AEM Forms med lösningar från Experience Cloud {#integrate-aem-forms-with-experience-cloud-solutions}
-   + [Skapa riktade upplevelser i AEM Forms](/help/forms/using/experience-targeting-forms.md)
-   + [Mät och förbättra effektiviteten och konverteringen av blanketter](using/measure-improve-performance-forms-documents.md)
-   + [Konfigurera analyser och rapporter](using/configure-analytics-forms-documents.md)
-   + [Visa och förstå AEM Forms analysrapporter](using/view-understand-aem-forms-analytics-reports.md)
-   + [Skapa och hantera A/B-tester för adaptiva formulär](using/ab-testing-adaptive-forms.md)
-+ Publicera och bearbeta AEM Forms {#publish-process-aem-forms}
-   + [Introduktion till att publicera formulär på en portal](using/introduction-publishing-forms.md)
+   + [Inline condition and repeat in Interactive Communications and letters](using/cm-inline-condition.md)
+   + [Document Fragments](using/lists.md)
+   + [Correspondence Management Configuration Properties](using/cm-configuration-properties.md)
++ Integrate AEM Forms with Experience Cloud solutions {#integrate-aem-forms-with-experience-cloud-solutions}
+   + [Create targeted experiences in AEM Forms](/help/forms/using/experience-targeting-forms.md)
+   + [Measure and improve effectiveness and conversion of forms](using/measure-improve-performance-forms-documents.md)
+   + [Configuring analytics and reports](using/configure-analytics-forms-documents.md)
+   + [View and understand AEM Forms analytics reports](using/view-understand-aem-forms-analytics-reports.md)
+   + [Create and manage A/B test for adaptive forms](using/ab-testing-adaptive-forms.md)
++ Publish and process AEM Forms {#publish-process-aem-forms}
+   + [Introduction to publishing forms on a portal](using/introduction-publishing-forms.md)
    + [Exempel för att integrera komponent för utkast och inlämning med databas](using/integrate-draft-submission-database.md)
-   + [Konfigurera lagringstjänster för utkast och överföringar](using/configuring-draft-submission-storage.md)
+   + [Configuring storage services for drafts and submissions](using/configuring-draft-submission-storage.md)
    + [Hantera formulärprogram och uppgifter i AEM Inbox](using/manage-applications-inbox.md)
    + [Bevakad mapp i AEM Forms](using/watched-folder-in-aem-forms.md)
-   + [Komponenten Utkast och inskickat material](using/draft-submission-component.md)
+   + [Drafts and submissions component](using/draft-submission-component.md)
    + [Bädda in länkkomponent på en sida](using/embedding-link-component-page.md)
    + [Publicera och avpublicera formulär och dokument](using/publishing-unpublishing-forms.md)
    + [Visa formulär på en webbsida med API:er](using/listing-forms-webpage-using-apis.md)
@@ -464,27 +465,27 @@ ht-degree: 0%
       + [Aktivera onlinekommentarer för Adobe Reader-plugin-programmet för webbläsare](/help/forms/using/admin-help/enabling-online-commenting-reader-web.md)
       + [Ange timeoutvärden för användning med Acrobat Reader DC-tillägg](/help/forms/using/admin-help/setting-timeout-values-acrobat-reader.md)
    + Arbeta med PDF Generator {#work-with-pdf-generator}
-      + [Introduktion till arbete med PDF Generator](/help/forms/using/admin-help/overview-5.md)
-      + [Aktivera filkonvertering med flera trådar](/help/forms/using/admin-help/enabling-multi-threaded-file-conversions.md)
+      + [Introduction to working with PDF Generator](/help/forms/using/admin-help/overview-5.md)
+      + [Enabling multi-threaded file conversions](/help/forms/using/admin-help/enabling-multi-threaded-file-conversions.md)
       + [Konfigurera Adobe PDF-inställningar](/help/forms/using/admin-help/configuring-pdf-settings.md)
-      + [Konfigurera säkerhetsinställningar](/help/forms/using/admin-help/configuring-security-settings.md)
+      + [Configuring security settings](/help/forms/using/admin-help/configuring-security-settings.md)
       + [Konfigurerar filtypsinställningar](/help/forms/using/admin-help/configuring-file-type-settings.md)
       + [Importera och exportera PDF Generator-konfigurationsfiler](/help/forms/using/admin-help/importing-exporting-pdf-generator-configuration.md)
       + [Aktivera stöd för PDF/A](/help/forms/using/admin-help/enable-pdf-a-support.md)
       + [Konfigurera en PDFG-nätverksskrivare (endast Windows)](/help/forms/using/admin-help/setting-pdfg-network-printer-windows.md)
       + [Konfigurera reservteckensnitt](/help/forms/using/admin-help/configuring-fallback-fonts.md)
       + [Ändra konverteringsinställningarna för PDF-export](/help/forms/using/admin-help/modifying-pdf-export-conversion-settings.md)
-      + [Konvertera filer med PDF Generator](/help/forms/using/admin-help/converting-files-using-pdf-generator.md)
-   + Konfigurerar SSL {#configure-ssl}
-      + [Översikt över konfigurering av SSL](/help/forms/using/admin-help/overview-6.md)
-      + [Konfigurera SSL för JBoss Application Server](/help/forms/using/admin-help/configuring-ssl-jboss-application-server.md)
-      + [Konfigurera SSL i Windows Vista](/help/forms/using/admin-help/configuring-ssl-windows-vista.md)
-      + [Konfigurera SSL för WebSphere Application Server](/help/forms/using/admin-help/configuring-ssl-websphere-application-server.md)
-   + Arbeta med dokumentsäkerhet {#work-with-document-security}
-      + [Om dokumentsäkerhet](/help/forms/using/admin-help/document-security.md)
-      + [Säker informationsleverans i stora volymer](/help/forms/using/admin-help/high-volume-secure-information-delivery.md)
-      + [Konfigurera klient- och serveralternativ](/help/forms/using/admin-help/configuring-client-server-options.md)
-      + [Hantera inbjudna och lokala användarkonton](/help/forms/using/admin-help/invited-local-user-accounts.md)
+      + [Converting files using PDF Generator](/help/forms/using/admin-help/converting-files-using-pdf-generator.md)
+   + Configuring SSL {#configure-ssl}
+      + [Overview of configuring SSL](/help/forms/using/admin-help/overview-6.md)
+      + [Configuring SSL for JBoss Application Server](/help/forms/using/admin-help/configuring-ssl-jboss-application-server.md)
+      + [Configuring SSL on Windows Vista](/help/forms/using/admin-help/configuring-ssl-windows-vista.md)
+      + [Configuring SSL for WebSphere Application Server](/help/forms/using/admin-help/configuring-ssl-websphere-application-server.md)
+   + Working with document security {#work-with-document-security}
+      + [About document security](/help/forms/using/admin-help/document-security.md)
+      + [High-volume secure information delivery](/help/forms/using/admin-help/high-volume-secure-information-delivery.md)
+      + [Configuring client and server options](/help/forms/using/admin-help/configuring-client-server-options.md)
+      + [Managing invited and local user accounts](/help/forms/using/admin-help/invited-local-user-accounts.md)
       + [Styra åtkomsten till profilskyddade dokument](/help/forms/using/admin-help/controlling-access-policy-protected-documents.md)
       + [Övervakningshändelser](/help/forms/using/admin-help/monitoring-events.md)
       + [Skapa och hantera profiler](/help/forms/using/admin-help/creating-policies.md)
@@ -493,9 +494,9 @@ ht-degree: 0%
       + [Registrera som användare](/help/forms/using/admin-help/registering-as-a-user.md)
    + Konfigurera formulär {#configure-forms}
       + [Grunderna för att konfigurera formulär](/help/forms/using/admin-help/overview-7.md)
-      + [Ange alternativ för internationalisering](/help/forms/using/admin-help/setting-internationalization-options.md)
+      + [Setting internationalization options](/help/forms/using/admin-help/setting-internationalization-options.md)
       + [Konfigurera cachning för formulär](/help/forms/using/admin-help/configuring-caching-forms.md)
-      + [Ange XCI-konfigurationsalternativ](/help/forms/using/admin-help/specifying-xci-configuration-options.md)
+      + [Specifying XCI configuration options](/help/forms/using/admin-help/specifying-xci-configuration-options.md)
       + [Konfigurera formulärutdata](/help/forms/using/admin-help/configuring-form-output.md)
       + [Ange teckensnitt som ska bäddas in](/help/forms/using/admin-help/specifying-fonts-embed.md)
       + [Konfigurera platser för formulär](/help/forms/using/admin-help/configuring-locations-forms.md)
@@ -522,7 +523,7 @@ ht-degree: 0%
       + [Arbeta med fasta operationer och grenar](/help/forms/using/admin-help/stalled-operations-branches.md)
       + [Konfigurera delade köer](/help/forms/using/admin-help/configuring-shared-queues.md)
       + [Arbeta med uppgifter](/help/forms/using/admin-help/tasks.md)
-   + Konfigurera arbetsyta {#configure-workspace}
+   + Configuring Workspace {#configure-workspace}
       + [Översikt över arbetsytan](/help/forms/using/admin-help/overview-10.md)
       + [Importera och exportera globala inställningar](/help/forms/using/admin-help/importing-exporting-global-settings.md)
       + [Ställa in dagens meddelande](/help/forms/using/admin-help/setting-message-day.md)
@@ -533,37 +534,37 @@ ht-degree: 0%
       + [Finjustera prestanda för hälsoövervakning](/help/forms/using/admin-help/fine-tuning-health-monitor-performance.md)
       + [Visa statistik för Work Manager](/help/forms/using/admin-help/view-statistics-related-manager.md)
       + [Visa systeminformation](/help/forms/using/admin-help/view-system-information.md)
-      + [Rensa poster från Job Manager-databasen](/help/forms/using/admin-help/purge-records-job-manager-database.md)
+      + [Purge records from the Job Manager database](/help/forms/using/admin-help/purge-records-job-manager-database.md)
    + Underhåll AEM-formulär {#maintain-aem-forms}
       + [Loggfiler](/help/forms/using/admin-help/log-files.md)
       + [Användarhantering](/help/forms/using/admin-help/user-management.md)
-      + [Övervaka användning av AEM-formulär](/help/forms/using/admin-help/monitoring-aem-forms-deployments.md)
-      + [Arbetshanteraren och begränsning](/help/forms/using/admin-help/manager-throttling.md)
-      + [Köra AEM-formulär i underhållsläge](/help/forms/using/admin-help/running-aem-forms-maintenance-mode.md)
-   + Underhålla AEM-formulärdatabasen {#maintain-aem-forms-database}
-      + [DB2-databas: Köra en process varje vecka](/help/forms/using/admin-help/db2-database-running-process-weekly.md)
-      + [Gräns för högsta antal öppna markörer i Oracle-databasen](/help/forms/using/admin-help/oracle-database-maximum-open-cursors.md)
-      + [IBM DB2-databas: Kör kommandon för regelbundet underhåll](/help/forms/using/admin-help/ibm-db2-database-running-commands.md)
-      + [Rensningsprocessdata](/help/forms/using/admin-help/purging-process-data.md)
+      + [Monitoring AEM forms deployments](/help/forms/using/admin-help/monitoring-aem-forms-deployments.md)
+      + [Work Manager and throttling](/help/forms/using/admin-help/manager-throttling.md)
+      + [Running AEM forms in maintenance mode](/help/forms/using/admin-help/running-aem-forms-maintenance-mode.md)
+   + Maintaining the AEM forms Database {#maintain-aem-forms-database}
+      + [DB2 database: Running a process weekly](/help/forms/using/admin-help/db2-database-running-process-weekly.md)
+      + [Oracle database maximum open cursors threshold](/help/forms/using/admin-help/oracle-database-maximum-open-cursors.md)
+      + [IBM DB2 database: Running commands for regular maintenance](/help/forms/using/admin-help/ibm-db2-database-running-commands.md)
+      + [Purging process data](/help/forms/using/admin-help/purging-process-data.md)
       + [Microsoft SQL Server-databas: Finjustera konfigurationen](/help/forms/using/admin-help/microsoft-sql-server-database-fine.md)
       + [Tips för att minimera databastillväxt](/help/forms/using/admin-help/tips-minimizing-database-growth.md)
    + Underhåll programservern {#manage-application-server}
       + [Programserverwebbplatser](/help/forms/using/admin-help/application-server-websites.md)
-      + [Global dokumentlagringskatalog](/help/forms/using/admin-help/global-document-storage-directory.md)
+      + [Global document storage directory](/help/forms/using/admin-help/global-document-storage-directory.md)
       + [Att tänka på vid körning av AdministrationConsole](/help/forms/using/admin-help/considerations-running-administration-console.md)
-      + [Förbättra programserverns prestanda](/help/forms/using/admin-help/enhancing-application-server-performance.md)
+      + [Enhancing application server performance](/help/forms/using/admin-help/enhancing-application-server-performance.md)
       + [Startar och stoppar WebSphere Application Server](/help/forms/using/admin-help/starting-stopping-websphere-application-server.md)
    + Säkerhetskopiering och återställning av AEM-formulär {#aem-forms-backup-recovery}
       + [Säkerhetskopiera och återställa EMC Documentum-databasen](/help/forms/using/admin-help/backing-recovering-emc-documentum-repository.md)
       + [Aktivera och inaktivera säkert säkerhetskopieringsläge](/help/forms/using/admin-help/enabling-disabling-safe-backup-mode.md)
       + [Säkerhetskopiera AEM-formulärdata](/help/forms/using/admin-help/backing-aem-forms-data.md)
-      + [Filer som ska säkerhetskopieras och återställas](/help/forms/using/admin-help/files-back-recover.md)
+      + [Files to back up and recover](/help/forms/using/admin-help/files-back-recover.md)
       + [Säkerhetskopierings- och återställningsstrategi för AEM-formulär](/help/forms/using/admin-help/backup-recovery-strategy-aem-forms.md)
       + [Begränsningar för PDF Generator-säkerhetskopiering](/help/forms/using/admin-help/pdf-generator-backup-limitations.md)
       + [Strategier för säkerhetskopiering av bevakade mappar](/help/forms/using/admin-help/backup-strategies-watched-folders.md)
       + [Återställa AEM-formulärdata](/help/forms/using/admin-help/recovering-aem-forms-data.md)
       + [Säkerhetskopieringsstrategi för Connector for EMC Documentum-användare](/help/forms/using/admin-help/backup-strategy-connector-emc-documentum.md)
-      + [Strategi för säkerhetskopiering och återställning i en klustrad miljö](/help/forms/using/admin-help/strategy-backup-restore-clustered-environment.md)
+      + [Strategy for backup and restore in a clustered environment](/help/forms/using/admin-help/strategy-backup-restore-clustered-environment.md)
    + Systeminformationstjänst {#system-information-service}
       + [Konfigurera systeminformationstjänsten](/help/forms/using/admin-help/set-system-information-service.md)
       + [API:er för systeminformationstjänst](/help/forms/using/admin-help/system-information-service-apis.md)
@@ -581,23 +582,23 @@ ht-degree: 0%
    + [AEM-plugin för att felsöka adaptiva formulär](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/adaptive-form/)
    + [AEM Forms Java API Reference](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html)
    + [AEM Forms on JEE Java API Reference](https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/index.html)
-   + [API:er för Form Bridge för HTML5-formulär](using/form-bridge-apis.md)
-   + [Assembler Service och DDX Reference](http://www.adobe.com/go/learn_aemforms_ddxRef_65)
+   + [Form Bridge APIs for HTML5 forms](using/form-bridge-apis.md)
+   + [Assembler Service and DDX Reference](http://www.adobe.com/go/learn_aemforms_ddxRef_65)
    + [Workbench Hjälp](http://www.adobe.com/go/learn_aemforms_workbench_65)
-   + Programmering med AEM Forms på JEE {#programming-aem-forms-jee}
+   + Programming with AEM Forms on JEE {#programming-aem-forms-jee}
       + Introduktion till programmering med AEM Forms på JEE {#introduction-programming-aem-forms-jee}
-         + [Introduktion till Java API QuickStart](developing/introducing-java-api-soap-quick.md)
-         + [Anropa AEM Forms med API:er](developing/invoking-aem-forms-using-apis.md)
-         + [Förstå AEM Forms-processer](developing/aem-forms-processes.md)
-         + [Tjänstbehållare](developing/service-container.md)
-      + Snabbstart för Java API - kodexempel {#java-api-quick-start-code-examples}
+         + [Introducing Java API QuickStart](developing/introducing-java-api-soap-quick.md)
+         + [Invoking AEM Forms using APIs](developing/invoking-aem-forms-using-apis.md)
+         + [Understanding AEM Forms Processes](developing/aem-forms-processes.md)
+         + [Service container](developing/service-container.md)
+      + Java API Quick Start - Code Examples {#java-api-quick-start-code-examples}
          + [JavaAPI-snabbstart för Application Manager-klient (SOAP)](developing/application-manager-client-java-api.md)
-         + [JavaAPI-snabbstart (SOAP) för Application Manager-tjänsten](developing/application-manager-service-java-api.md)
+         + [Application Manager Service JavaAPI Quick Start(SOAP)](developing/application-manager-service-java-api.md)
          + [Java API QuickStart(SOAP) för Assembler Service](developing/assembler-service-java-api-quick.md)
          + [Acrobat Reader DC-tillägg ServiceJava API Quick Start (SOAP)](developing/acrobat-reader-dc-extensions-service.md)
-         + [APIQuick Starts för säkerhetskopiering och återställning](developing/backup-restore-service-api-quick.md)
-         + [Java APIQuick Start(SOAP) för streckkodsblanketttjänst](developing/barcoded-forms-service-java-api.md)
-         + [Komponenter och tjänster - Java APIQuick Start(SOAP)](developing/components-services-java-api-quick.md)
+         + [Backup and Restore Service APIQuick Starts](developing/backup-restore-service-api-quick.md)
+         + [Barcoded Forms Service Java APIQuick Start(SOAP)](developing/barcoded-forms-service-java-api.md)
+         + [Components and Services Java APIQuick Start(SOAP)](developing/components-services-java-api-quick.md)
          + [Konvertera PDF Service Java API QuickStart(SOAP)](developing/convert-pdf-service-java-api.md)
          + [Java API QuickStart(SOAP) för autentiseringsuppgiftstjänst](developing/credential-service-java-api-quick.md)
          + [Distiller Service Java API QuickStart(SOAP)](developing/distiller-service-java-api-quick.md)
