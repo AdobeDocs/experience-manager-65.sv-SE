@@ -2,9 +2,13 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: AEM 6.5 Mobile User Guide
+user-guide-title: Användarhandbok för AEM 6.5 Mobile
+user-guide-description: Create and manage content for mobile apps.
 translation-type: tm+mt
-source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
+source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
+workflow-type: tm+mt
+source-wordcount: '315'
+ht-degree: 0%
 
 ---
 
@@ -73,9 +77,9 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
    + [Skapa och redigera appar med Apps-konsolen](phonegap-apps-console.md)
    + [Är din hybridapp redo för AEM Mobile?](phonegap-adding-content-to-imported-app.md)
    + [Åtkomst till enhetsfunktioner](phonegap-access-device-features.md)
-   + [Lägg till Adobe Analytics i er mobilapplikation](phonegap-add-analytics-to-apps.md)
+   + [Lägg till Adobe Analytics i ditt mobilprogram](phonegap-add-analytics-to-apps.md)
    + [Sidmallar för mobilappar](phonegap-apps-arch-page-templates.md)
-   + [Konfigurera Adobe Target Cloud-tjänsten](aem-mobile-configuring-cloud-service.md)
+   + [Konfigurera Cloud Servicen Adobe Target](aem-mobile-configuring-cloud-service.md)
    + [Enkelsidiga program](phonegap-single-page-applications.md)
    + [Modeller i databas](administer-mobile-apps.md)
    + [Startar AEM PhoneGap](starting-aem-phonegap-app.md)
@@ -85,7 +89,7 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
 + Administrera Adobe PhoneGap Enterprise {#administering-phonegap}
    + [Mobile Quickstart](phonegap-mobile-quickstart.md)
    + [Administrera innehåll för Adobe PhoneGap Enterprise med AEM](administer-phonegap.md)
-   + [Konfigurera din Adobe PhoneGap Build-molntjänst](configure-phonegap-build-cloud.md)
+   + [Konfigurera din Adobe PhoneGap Build-Cloud Service](configure-phonegap-build-cloud.md)
    + [Ange att referensfiltret ska vara tomt](setting-referrer-filter-empty.md)
-   + [Konfigurera din Adobe Mobile Services Cloud-tjänst](configure-adobe-mobile-cloud-service.md)
+   + [Konfigurera din Adobe Mobile Services-Cloud Service](configure-adobe-mobile-cloud-service.md)
    + [Konfigurera dina användare och användargrupper](configure-users-groups.md)
