@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: a7c0c4cf-7476-41e7-8d4e-564e6a21458d
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '299'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +28,7 @@ Java API Quick Start (SOAP) är tillgängligt för tjänsten Generera PDF.
 
 [Snabbstart (SOAP-läge): Konvertera ett PDF-dokument till en RTF-fil med Java API (SOAP-läge)](generate-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-an-rtf-file-using-the-java-api-soap-mode)
 
-AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda typer och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms-API:t med stark typning och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
@@ -35,7 +38,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda ty
 
 I följande kodexempel konverteras en Word-fil med namnet *Loan.doc* till ett PDF-dokument med namnet *Loan.pdf*. (Se [Konvertera Word-dokument till PDF-dokument](/help/forms/developing/converting-file-formats-pdf.md#converting-word-documents-to-pdf-documents).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -149,7 +152,7 @@ I följande kodexempel konverteras en Word-fil med namnet *Loan.doc* till ett PD
 
 I följande Java-kodexempel konverteras HTML-innehåll som finns på https://www.adobe.com till ett PDF-dokument med namnet *AdobeHTML.pdf*. (Se [Konvertera HTML-dokument till PDF-dokument](/help/forms/developing/converting-file-formats-pdf.md#converting-html-documents-to-pdf-documents).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -255,7 +258,7 @@ I följande Java-kodexempel konverteras HTML-innehåll som finns på https://www
 
 I följande kodexempel konverteras ett PDF-dokument med namnet *Loan.pdf* till ett RTF-dokument med namnet *Loan.rtf*. (Se [Konvertera PDF-dokument till format](/help/forms/developing/converting-file-formats-pdf.md#converting-pdf-documents-to-non-image-formats)som inte är bilder.)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
