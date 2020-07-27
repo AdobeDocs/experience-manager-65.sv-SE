@@ -9,7 +9,10 @@ topic-tags: develop
 discoiquuid: 2fd2276e-cfe3-47ad-94c1-9c7af56b7a17
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '2766'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ JavaScript är uttrycksspråket i adaptiva formulär. Alla uttryck är giltiga J
 
 ## Bästa tillvägagångssätt för att skriva uttryck {#best-practices-for-writing-expressions}
 
-* När du skriver uttryck kan du använda namnet på fältet eller panelen för att komma åt fält och paneler. Använd egenskapen value om du vill komma åt ett fälts värde. Exempel: `field1.value`
+* När du skriver uttryck kan du använda namnet på fältet eller panelen för att komma åt fält och paneler. Använd egenskapen value om du vill komma åt ett fälts värde. Till exempel, `field1.value`
 * Använd unika namn för fält och paneler i hela formuläret. Det hjälper till att undvika eventuella konflikter med fältnamn som används när uttryck skrivs.
 * När du skriver flerradsuttryck kan du använda ett semikolon för att avsluta en -programsats.
 
@@ -68,7 +71,7 @@ Du kan använda åtkomstuttrycket för att aktivera eller inaktivera ett fält. 
 
 ### Beräkna uttryck {#calculate-expression}
 
-Beräkningsuttrycket används för att automatiskt beräkna värdet för ett fält med hjälp av ett uttryck. Vanligtvis används egenskapen value för andra fält i ett sådant uttryck. Exempel, `field2.value + field3.value`. När värdet för `field2`eller `field3`ändras, hämtas uttrycket och värdet beräknas om.
+Beräkningsuttrycket används för att automatiskt beräkna värdet för ett fält med hjälp av ett uttryck. Vanligtvis används egenskapen value för andra fält i ett sådant uttryck. Till exempel, `field2.value + field3.value`. När värdet för `field2`eller `field3`ändras, hämtas uttrycket och värdet beräknas om.
 
 **Gäller**: fält
 
@@ -85,7 +88,7 @@ Klickuttrycket hanterar de åtgärder som utförs på en knapps klickningshände
 
 **Returtyp**: Klickuttrycket returnerar inget värde. Om något uttryck returnerar ett värde ignoreras värdet.
 
-**Exempel**: Om du vill fylla i en textruta **textruta 1** vid klickåtgärden för en knapp med värdet **AEM Forms**, är knappens klickuttryck `textbox1.value="AEM Forms"`
+**Exempel**: Om du vill fylla i en textruta **textruta1** vid klickåtgärden för en knapp med värdet **AEM Forms**, är knappens klickuttryck `textbox1.value="AEM Forms"`
 
 ### Initieringsskript {#initialization-script}
 
@@ -143,7 +146,7 @@ Om det icke-tomma värdet inte matchar mönstret returnerar uttrycket **false** 
 
 >[!NOTE]
 >
->Om du skriver ett valideringsuttryck för ett icke-obligatoriskt eller obligatoriskt fält utvärderas uttrycket oavsett fältets synlighetsstatus. Om du vill stoppa valideringen för de dolda fälten anger du egenskapen validationsDisabled i Initialization eller Value Commit Script till true. Exempel: `this.validationsDisabled=true`
+>Om du skriver ett valideringsuttryck för ett icke-obligatoriskt eller obligatoriskt fält utvärderas uttrycket oavsett fältets synlighetsstatus. Om du vill stoppa valideringen för de dolda fälten anger du egenskapen validationsDisabled i Initialization eller Value Commit Script till true. Till exempel, `this.validationsDisabled=true`
 
 ### Värde för implementeringsskript {#value-commit-script}
 
@@ -224,13 +227,13 @@ GuideBridge är en samling API:er som kan användas för att interagera med adap
 
 * Om du vill validera ett anpassat formulär eller dess specifika paneler använder du `guideBridge.validate(errorList, somExpression).`
 
-#### Använda GuideBridge utanför uttryck {#using-guidebridge-outside-expressions-nbsp}
+#### Använda GuideBridge utanför uttryck  {#using-guidebridge-outside-expressions-nbsp}
 
 Du kan också använda API:erna för GuideBridge utanför uttrycken. Du kan till exempel använda API:t för GuideBridge för att ställa in kommunikation mellan HTML-sidans värd för det adaptiva formuläret och formulärmodellen. Dessutom kan du ange det värde som kommer från den överordnade delen av Iframe som är värd för formuläret.
 
 Om du vill använda API:t för GuideBridge för ovanstående exempel hämtar du en instans av GuideBridge. Om du vill hämta instansen lyssnar du på `bridgeInitializeStart`händelsen för ett `window`objekt:
 
-```
+```javascript
 window.addEventListener("bridgeInitializeStart", function(evnt) {
 
      // get hold of the guideBridge object
@@ -260,7 +263,7 @@ GuideBridge innehåller även vissa händelser för externa skript på värdsida
 
 Använd följande kod för att registrera hanterare:
 
-```
+```javascript
 guideBridge.on("elementValueChanged", function (event, data)  {
 
       // execute some logic when value of a field is changed
