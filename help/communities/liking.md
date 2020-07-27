@@ -10,10 +10,10 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: dcde4e03-78ab-4779-96a1-05ac41f14701
 translation-type: tm+mt
-source-git-commit: e7268e43620860b7a1f7aa0a1f1a54199dadcf17
+source-git-commit: c9fa5624a59f4b9a6f970628b03bbd8b7a277a73
 workflow-type: tm+mt
 source-wordcount: '224'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -34,17 +34,17 @@ Mer information finns i Grunderna för [communitykomponenter](basics.md).
 
 När de [nödvändiga klientbiblioteken](essentials-liking.md#essentials-for-client-side) inkluderas visas `Liking` komponenten på det här sättet.
 
-![chlimage_1-93](assets/chlimage_1-93.png)
+![liking-component](assets/liking-component.png)
 
 ## Konfigurerar länk {#configuring-liking}
 
 Markera den monterade `Liking` komponent som du vill öppna och välj den `Configure` ikon som öppnar redigeringsdialogrutan.
 
-![chlimage_1-94](assets/chlimage_1-94.png)
+![configure-new](assets/configure-new.png)
 
 Ange de egenskaper som ska användas för att spela in gilla-markeringar på fliken **[!UICONTROL Texts & Labels]** .
 
-![chlimage_1-95](assets/chlimage_1-95.png)
+![configure-läning](assets/configure-liking.png)
 
 * **[!UICONTROL Positive Response Label]**
 
