@@ -11,7 +11,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 8a75c201-bd88-4809-be08-69de94656489
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1760'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ Du kan sätta ihop ett icke-interaktivt PDF-dokument när du använder ett inter
 
 Anta att följande DDX-dokument används för den här diskussionen.
 
-```as3
+```xml
  <?xml version="1.0" encoding="UTF-8"?>
  <DDX xmlns="https://ns.adobe.com/DDX/1.0/">
       <PDF result="out.pdf">
@@ -46,7 +49,7 @@ Med Assembler-tjänsten kan du sammanställa icke-interaktiva PDF-dokument utan 
 
 >[!NOTE]
 >
->Mer information om tjänsten Assembler finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Assembler finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 >[!NOTE]
 >
@@ -76,7 +79,7 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 * adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss)
 * jbossall-client.jar (krävs om AEM Forms distribueras på JBoss)
 
-Om AEM Forms används på en annan J2EE-programserver än JBoss måste du ersätta filerna adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern som AEM Forms distribueras på.
+Om AEM Forms distribueras på en annan J2EE-programserver än JBoss måste du ersätta filerna adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern som AEM Forms distribueras på.
 
 **Skapa en Assembler-klient**
 
@@ -131,7 +134,7 @@ Sammanställa ett icke-interaktivt PDF-dokument med Assembler Service API (Java)
 1. Referera till ett interaktivt PDF-dokument.
 
    * Skapa ett `java.io.FileInputStream` objekt med hjälp av dess konstruktor och skicka platsen för ett interaktivt PDF-dokument.
-   * Skapa ett `com.adobe.idp.Document` objekt och skicka `java.io.FileInputStream` objektet som innehåller PDF-dokumentet. Detta `com.adobe.idp.Document` objekt skickas till `invokeOneDocument` metoden.
+   * Skapa ett `com.adobe.idp.Document` objekt och skicka `java.io.FileInputStream` objektet som innehåller PDF-dokumentet. Det här `com.adobe.idp.Document` objektet skickas till `invokeOneDocument` metoden.
 
 1. Ange körningsalternativ.
 
@@ -145,6 +148,7 @@ Sammanställa ett icke-interaktivt PDF-dokument med Assembler Service API (Java)
    * Ett `com.adobe.idp.Document` objekt som representerar DDX-dokumentet. Kontrollera att det här DDX-dokumentet innehåller värdet `inDoc` för PDF-källelementet.
    * Ett `com.adobe.idp.Document` objekt som innehåller det interaktiva PDF-dokumentet.
    * Ett `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` objekt som anger körningsalternativen, inklusive standardteckensnitt och jobbloggsnivå.
+
    Metoden returnerar `invokeOneDocument` ett `com.adobe.idp.Document` objekt som innehåller ett icke-interaktivt PDF-dokument.
 
 1. Spara det icke-interaktiva PDF-dokumentet.
@@ -207,6 +211,7 @@ Sammanställa ett icke-interaktivt PDF-dokument med Assembler Service API (webbt
    * Ett `BLOB` objekt som representerar DDX-dokumentet
    * Ett `BLOB` objekt som representerar det interaktiva PDF-dokumentet
    * Ett `AssemblerOptionSpec` objekt som anger körningsalternativ
+
    Metoden returnerar `invokeOneDocument` ett `BLOB` objekt som innehåller ett icke-interaktivt PDF-dokument.
 
 1. Spara det icke-interaktiva PDF-dokumentet.
@@ -220,4 +225,4 @@ Sammanställa ett icke-interaktivt PDF-dokument med Assembler Service API (webbt
 
 **Se även**
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
