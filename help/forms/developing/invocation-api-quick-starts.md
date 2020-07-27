@@ -10,14 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: dcf83c9f-b818-44a2-9079-80a4fc357c4f
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1231'
+ht-degree: 0%
 
 ---
 
 
 # Snabbstart för anrops-API {#invocation-api-quick-starts}
 
-Följande snabbstarter är tillgängliga för programmässig anrop av AEM Forms-tjänster:
+Följande snabbstarter är tillgängliga för programmatiskt anrop av AEM Forms-tjänster:
 
 <table>
  <thead>
@@ -31,7 +34,7 @@ Följande snabbstarter är tillgängliga för programmässig anrop av AEM Forms-
  <tbody>
   <tr>
    <td><p><a href="/help/forms/developing/invoking-human-centric-long-lived.md#invoking_human_centric_long_lived_processes">Anropa personalcentrerade, långlivade processer</a></p></td>
-   <td><p><a href="/help/forms/developing/invoking-human-centric-long-lived.md#invoking-a-long-lived-process-using-remoting">Anropa en långvarig process med AEM Forms Remoting (borttaget för AEM-formulär)</a></p></td>
+   <td><p><a href="/help/forms/developing/invoking-human-centric-long-lived.md#invoking-a-long-lived-process-using-remoting">Anropa en långvarig process med hjälp av (borttaget för AEM-formulär) AEM Forms Remoting</a></p></td>
    <td><p><a href="/help/forms/developing/invoking-human-centric-long-lived.md#quick_start_invoking_a_long_lived_process_using_the_invocation_api">Snabbstart: Anropa en långvarig process med anrops-API</a></p></td>
    <td><p><a href="/help/forms/developing/invoking-human-centric-long-lived.md#quick_start_invoking_a_long_lived_process_using_the_web_service_api">Snabbstart: Anropa en långvarig process med webbtjänstens API</a></p></td>
   </tr>
@@ -42,31 +45,31 @@ Följande snabbstarter är tillgängliga för programmässig anrop av AEM Forms-
    <td><p>Ej tillämpligt</p></td>
   </tr>
   <tr>
-   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding">Anropa AEM-formulär med Base64-kodning</a> (Java web service proxy)</p></td>
+   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding">Anropa AEM Forms med Base64-kodning</a> (Java web service proxy)</p></td>
    <td><p>Ej tillämpligt</p></td>
    <td><p>Ej tillämpligt</p></td>
    <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_java_proxy_files_and_base64_encoding">Snabbstart: Anropa en tjänst med Java-proxyfiler och Base64-kodning</a></p></td>
   </tr>
   <tr>
-   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding">Anropa AEM-formulär med Base64-kodning</a> (.NET web service proxy)</p></td>
+   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding">Anropa AEM Forms med Base64-kodning</a> (.NET web service proxy)</p></td>
    <td><p>Ej tillämpligt</p></td>
    <td><p>Ej tillämpligt</p></td>
    <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_base64_in_a_microsoft_net_project">Snabbstart: Anropa en tjänst med base64 i ett Microsoft .NET-projekt</a></p></td>
   </tr>
   <tr>
-   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom">Anropa AEM-formulär med MTOM</a> (.NET web service example)</p></td>
+   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom">Anropa AEM Forms med MTOM</a> (.NET web service example)</p></td>
    <td><p>Ej tillämpligt</p></td>
    <td><p>Ej tillämpligt</p></td>
    <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_mtom_in_a_net_project">Snabbstart: Anropa en tjänst med MTOM i ett .NET-projekt</a></p></td>
   </tr>
   <tr>
-   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref">Anropa AEM-formulär med SwaRef</a> (Exempel på Java-webbtjänst)</p></td>
+   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref">Anropa AEM Forms med SwaRef</a> (Java-webbtjänstexempel)</p></td>
    <td><p>Ej tillämpligt</p></td>
    <td><p>Ej tillämpligt</p></td>
    <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_swaref_in_a_java_project">Snabbstart: Anropa en tjänst med SwaRef i ett Java-projekt</a></p></td>
   </tr>
   <tr>
-   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http">Anropa AEM-formulär med BLOB-data via HTTP</a> (Exempel på Java-webbtjänst)</p></td>
+   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http">Anropa AEM Forms med BLOB-data via HTTP</a> (Java-webbtjänstexempel)</p></td>
    <td><p>Ej tillämpligt</p></td>
    <td><p>Ej tillämpligt</p></td>
    <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_blob_data_over_http_in_a_net_project">Snabbstart: Anropa en tjänst med BLOB-data via HTTP i ett .NET-projekt</a></p></td>
@@ -78,33 +81,33 @@ Följande snabbstarter är tillgängliga för programmässig anrop av AEM Forms-
    <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_blob_data_over_http_in_a_java_project">Snabbstart: Anropa en tjänst med BLOB-data över HTTP i ett Java-projekt</a></p></td>
   </tr>
   <tr>
-   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-dime">Anropa AEM-formulär med DIME</a> (Exempel på Java-webbtjänst)</p></td>
+   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-dime">Anropa AEM Forms med DIME</a> (Java-webbtjänstexempel)</p></td>
    <td><p>Ej tillämpligt</p></td>
    <td><p>Ej tillämpligt</p></td>
    <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_dime_in_a_java_project">Snabbstart: Anropa en tjänst med DIME i ett Java-projekt</a></p></td>
   </tr>
   <tr>
-   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting">Anropa AEM Forms Using (Borttaget för AEM-formulär) AEM Forms Remoting</a></p></td>
-   <td><p><a href="invocation-api-quick-starts.md#quick-start-invoking-a-short-lived-process-by-passing-an-unsecure-document-using-deprecated-for-aem-forms-aem-forms-remoting">Snabbstart: Anropa en kort process genom att skicka ett osäkert dokument med hjälp av (borttaget för AEM-formulär) AEM Forms Remoting</a></p></td>
+   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting">Anropa AEM Forms-fjärrkommunikation med AEM Forms (borttagen för AEM-formulär)</a></p></td>
+   <td><p><a href="invocation-api-quick-starts.md#quick-start-invoking-a-short-lived-process-by-passing-an-unsecure-document-using-deprecated-for-aem-forms-aem-forms-remoting">Snabbstart: Anropa en kortvarig process genom att skicka ett osäkert dokument med hjälp av (borttaget för AEM-formulär) AEM Forms Remoting</a></p></td>
    <td><p>Ej tillämpligt</p></td>
    <td><p>Ej tillämpligt</p></td>
   </tr>
   <tr>
    <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#passing_secure_documents_to_invoke_processes_using_remoting">Skicka säkra dokument för att starta processer med Remoting</a></p></td>
-   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#quick-start-invoking-a-short-lived-process-by-passing-a-secure-document-using-remoting">Snabbstart: Anropa en kort process genom att skicka ett säkert dokument med hjälp av (borttaget för AEM-formulär) AEM Forms Remoting</a></p></td>
+   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#quick-start-invoking-a-short-lived-process-by-passing-a-secure-document-using-remoting">Snabbstart: Anropa en kortvarig process genom att skicka ett säkert dokument med hjälp av (borttaget för AEM-formulär) AEM Forms Remoting</a></p></td>
    <td><p>Ej tillämpligt</p></td>
    <td><p>Ej tillämpligt</p></td>
   </tr>
   <tr>
    <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking_custom_component_services_using_remoting">Anropa anpassade komponenttjänster med Remoting</a></p></td>
-   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#quick-start-invoking-the-customer-custom-service-using-remoting">Snabbstart: Anropa kundens anpassade tjänst med AEM Forms Remoting (borttaget för AEM-formulär)</a></p></td>
+   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#quick-start-invoking-the-customer-custom-service-using-remoting">Snabbstart: Anropa kundens anpassade tjänst med hjälp av (borttaget för AEM-formulär) AEM Forms Remoting</a></p></td>
    <td><p>Ej tillämpligt</p></td>
    <td><p>Ej tillämpligt</p></td>
   </tr>
  </tbody>
 </table>
 
-AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda typer och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms-API:t med stark typning och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
@@ -114,7 +117,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda ty
 
 I följande Java-kodexempel anropas en kortlivad process med namnet `MyApplication/EncryptDocument`. Observera att den här processen anropas synkront. Indataparametern för den här processen namnges `inDoc`. Utdataparametern för den här processen namnges `outDoc`. Lösenordskrypterade PDF-dokument sparas som en PDF-fil med namnet `EncryptLoan.pdf`. (Se [Anropa en kort process med anrops-API](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-a-short-lived-process-using-the-invocation-api).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -226,11 +229,11 @@ I följande Java-kodexempel anropas en kortlivad process med namnet `MyApplicati
 
 ## Snabbstart: Anropa en tjänst med base64 i ett Microsoft .NET-projekt {#quick-start-invoking-a-service-using-base64-in-a-microsoft-net-project}
 
-Följande exempel på C#-kod anropar en process med namnet `MyApplication/EncryptDocument` från ett Microsoft .NET-projekt som använder Base64-kodning. (Se [Anropa AEM-formulär med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).)
+Följande exempel på C#-kod anropar en process med namnet `MyApplication/EncryptDocument` från ett Microsoft .NET-projekt som använder Base64-kodning. (Se [Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).)
 
-Ett oskyddat PDF-dokument som är baserat på en PDF-fil med namnet *Loan.pdf* skickas till AEM Forms-processen. Processen returnerar ett lösenordskrypterat PDF-dokument som sparas som en PDF-fil med namnet *EncryptedPDF.pdf*.
+Ett oskyddat PDF-dokument som är baserat på en PDF-fil med namnet *Loan.pdf* skickas till AEM Forms. Processen returnerar ett lösenordskrypterat PDF-dokument som sparas som en PDF-fil med namnet *EncryptedPDF.pdf*.
 
-```as3
+```java
  /*
      * Ensure that you create a .NET client assembly that uses
      * base64 encoding. This is required to populate a BLOB
@@ -307,11 +310,11 @@ Ett oskyddat PDF-dokument som är baserat på en PDF-fil med namnet *Loan.pdf* s
 
 ## Snabbstart: Anropa en tjänst med Java-proxyfiler och Base64-kodning {#quick-start-invoking-a-service-using-java-proxy-files-and-base64-encoding}
 
-I följande Java-kodexempel anropas en process med namnet `MyApplication/EncryptDocument` som använder Java-proxyfiler som skapats med JAX-WS och Base64-kodning. (Se [Anropa AEM-formulär med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).)
+I följande Java-kodexempel anropas en process med namnet `MyApplication/EncryptDocument` som använder Java-proxyfiler som skapats med JAX-WS och Base64-kodning. (Se [Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).)
 
-Ett oskyddat PDF-dokument som är baserat på en PDF-fil med namnet *Loan.pdf* skickas till AEM Forms-processen. Processen returnerar ett lösenordskrypterat PDF-dokument som sparas som en PDF-fil med namnet *EncryptedDocument.pdf*.
+Ett oskyddat PDF-dokument som är baserat på en PDF-fil med namnet *Loan.pdf* skickas till AEM Forms. Processen returnerar ett lösenordskrypterat PDF-dokument som sparas som en PDF-fil med namnet *EncryptedDocument.pdf*.
 
-```as3
+```java
  /**
      * Ensure that you create Java proxy files that consume
      *theAEM Forms service WSDL. You can use JAX-WS to create
@@ -391,15 +394,15 @@ Ett oskyddat PDF-dokument som är baserat på en PDF-fil med namnet *Loan.pdf* s
  
 ```
 
-## Snabbstart: Anropa en kort process genom att skicka ett osäkert dokument med hjälp av (borttaget för AEM-formulär) AEM Forms Remoting {#quick-start-invoking-a-short-lived-process-by-passing-an-unsecure-document-using-deprecated-for-aem-forms-aem-forms-remoting}
+## Snabbstart: Anropa en kortvarig process genom att skicka ett osäkert dokument med hjälp av (borttaget för AEM-formulär) AEM Forms Remoting {#quick-start-invoking-a-short-lived-process-by-passing-an-unsecure-document-using-deprecated-for-aem-forms-aem-forms-remoting}
 
-I följande Flex-kodexempel anropas en kortlivad process med namnet `MyApplication/EncryptDocument`. (Se [Anropa AEM-formulär med (borttaget för AEM-formulär) AEM Forms Remoting](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting).)
+I följande Flex-kodexempel anropas en kortlivad process med namnet `MyApplication/EncryptDocument`. (Se [Anropa AEM Forms med (borttaget för AEM-formulär) AEM Forms Remoting](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting).)
 
 >[!NOTE]
 >
->Den här snabbstarten anropar en AEM Forms-process och överför ett osäkert dokument. För att kunna starta detta snabbt måste AEM Forms vara konfigurerat att överföra osäkra dokument. Information om hur du konfigurerar AEM-formulär för att acceptera osäkra dokument finns i [Konfigurera AEM-formulär för att acceptera säkra och osäkra dokument](/help/forms/developing/invoking-aem-forms-using-remoting.md#configuring-aem-forms-to-accept-secure-and-unsecure-documents).
+>Den här snabbstarten anropar en AEM Forms-process och överför ett osäkert dokument. AEM Forms måste vara konfigurerat att överföra osäkra dokument för att kunna köra den här snabbstarten. Mer information om hur du konfigurerar AEM Forms att acceptera osäkra dokument finns i [Konfigurera AEM Forms för att acceptera säkra och osäkra dokument](/help/forms/developing/invoking-aem-forms-using-remoting.md#configuring-aem-forms-to-accept-secure-and-unsecure-documents).
 
-```as3
+```java
  <?xml version="1.0" encoding="utf-8"?>
  <mx:Application  xmlns="*"
       creationComplete="initializeChannelSet();">
@@ -550,11 +553,11 @@ I följande Flex-kodexempel anropas en kortlivad process med namnet `MyApplicati
 
 ## Snabbstart: Anropa en tjänst med DIME i ett .NET-projekt {#quick-start-invoking-a-service-using-dime-in-a-net-project}
 
-Följande exempel på C#-kod anropar en process med namnet `MyApplication/EncryptDocument` från ett Microsoft .NET-projekt med Dime. (Se [Anropa AEM-formulär med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).)
+Följande exempel på C#-kod anropar en process med namnet `MyApplication/EncryptDocument` från ett Microsoft .NET-projekt med Dime. (Se [Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).)
 
-Ett oskyddat PDF-dokument som är baserat på en PDF-fil med namnet *map.pdf* skickas till AEM Forms-processen med DIME. Processen returnerar ett lösenordskrypterat PDF-dokument som sparas som en PDF-fil med namnet *mapEncrypt.pdf*.
+Ett oskyddat PDF-dokument som är baserat på en PDF-fil med namnet *map.pdf* skickas till AEM Forms med DIME. Processen returnerar ett lösenordskrypterat PDF-dokument som sparas som en PDF-fil med namnet *mapEncrypt.pdf*.
 
-```as3
+```java
  /**
      *
      * Ensure that you create a .NET project that uses
@@ -655,11 +658,11 @@ Ett oskyddat PDF-dokument som är baserat på en PDF-fil med namnet *map.pdf* sk
 
 ## Snabbstart: Anropa en tjänst med DIME i ett Java-projekt {#quick-start-invoking-a-service-using-dime-in-a-java-project}
 
-I följande Java-kodexempel anropas en process med namnet `MyApplication/EncryptDocument` DIME. (Se [Anropa AEM-formulär med DIME](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-dime).)
+I följande Java-kodexempel anropas en process med namnet `MyApplication/EncryptDocument` DIME. (Se [Anropa AEM Forms med DIME](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-dime).)
 
-Ett oskyddat PDF-dokument som är baserat på en PDF-fil med namnet *Loan.pdf* skickas till AEM Forms-processen med DIME. Processen returnerar ett lösenordskrypterat PDF-dokument som sparas som en PDF-fil med namnet *EncryptLoan.pdf*.
+Ett oskyddat PDF-dokument som är baserat på en PDF-fil med namnet *Loan.pdf* skickas till AEM Forms med DIME. Processen returnerar ett lösenordskrypterat PDF-dokument som sparas som en PDF-fil med namnet *EncryptLoan.pdf*.
 
-```as3
+```java
  /**
      * Ensure that you create Java Axis files that
      * are required to send a AEM Forms process
@@ -756,11 +759,11 @@ Ett oskyddat PDF-dokument som är baserat på en PDF-fil med namnet *Loan.pdf* s
 
 ## Snabbstart: Anropa en tjänst med BLOB-data över HTTP i ett Java-projekt {#quick-start-invoking-a-service-using-blob-data-over-http-in-a-java-project}
 
-I följande Java-kodexempel anropas en process med namnet `MyApplication/EncryptDocument` using data over HTTP. (Se [Anropa AEM-formulär med BLOB-data via HTTP](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http).)
+I följande Java-kodexempel anropas en process med namnet `MyApplication/EncryptDocument` using data over HTTP. (Se [Anropa AEM Forms med BLOB-data via HTTP](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http).)
 
-Ett oskyddat PDF-dokument som är baserat på en PDF-fil med namnet *Loan.pdf* skickas till AEM Forms-processen med SOAP via HTTP. PDF-filen finns på följande URL: `https://'[server]:[port]'/FormsQS`. Processen returnerar ett lösenordskrypterat PDF-dokument som sparas som en PDF-fil med namnet *EncryptedDocument.pdf*.
+Ett oskyddat PDF-dokument som är baserat på en PDF-fil med namnet *Loan.pdf* skickas till AEM Forms med SOAP via HTTP. PDF-filen finns på följande URL: `https://'[server]:[port]'/FormsQS`. Processen returnerar ett lösenordskrypterat PDF-dokument som sparas som en PDF-fil med namnet *EncryptedDocument.pdf*.
 
-```as3
+```java
  /**
      * Ensure that you create Java proxy files that consume
      *theAEM Forms service WSDL. You can use JAX-WS to create
@@ -831,11 +834,11 @@ Ett oskyddat PDF-dokument som är baserat på en PDF-fil med namnet *Loan.pdf* s
 
 ## Snabbstart: Anropa en tjänst med BLOB-data via HTTP i ett .NET-projekt {#quick-start-invoking-a-service-using-blob-data-over-http-in-a-net-project}
 
-I följande exempel på C#-kod anropas en process med namnet `MyApplication/EncryptDocument` från ett Microsoft .NET-projekt som använder data via HTTP. (Se [Anropa AEM-formulär med BLOB-data via HTTP](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http).)
+I följande exempel på C#-kod anropas en process med namnet `MyApplication/EncryptDocument` från ett Microsoft .NET-projekt som använder data via HTTP. (Se [Anropa AEM Forms med BLOB-data via HTTP](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http).)
 
-Ett oskyddat PDF-dokument som är baserat på en PDF-fil med namnet *Loan.pdf* skickas till AEM Forms-processen med BLOB över HTTP. Processen returnerar ett lösenordskrypterat PDF-dokument som sparas som en PDF-fil med namnet *EncryptedPDF.pdf*.
+Ett oskyddat PDF-dokument som är baserat på en PDF-fil med namnet *Loan.pdf* skickas till AEM Forms med BLOB via HTTP. Processen returnerar ett lösenordskrypterat PDF-dokument som sparas som en PDF-fil med namnet *EncryptedPDF.pdf*.
 
-```as3
+```java
  /*
      * Ensure that you create a .NET client assembly that uses
      * SOAP over HTTP. This is required to populate a BLOB
@@ -931,11 +934,11 @@ Ett oskyddat PDF-dokument som är baserat på en PDF-fil med namnet *Loan.pdf* s
 
 ## Snabbstart: Anropa en tjänst med MTOM i ett .NET-projekt {#quick-start-invoking-a-service-using-mtom-in-a-net-project}
 
-Följande exempel på C#-kod anropar en process med namnet `MyApplication/EncryptDocument` från ett Microsoft .NET-projekt med MTOM. (Se [Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom).)
+Följande exempel på C#-kod anropar en process med namnet `MyApplication/EncryptDocument` från ett Microsoft .NET-projekt med MTOM. (Se [Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom).)
 
-Ett oskyddat PDF-dokument som är baserat på en PDF-fil med namnet *lån.pdf* skickas till AEM Forms-processen med MTOM. Processen returnerar ett lösenordskrypterat PDF-dokument som sparas som en PDF-fil med namnet *EncryptedDocument.pdf*.
+Ett oskyddat PDF-dokument som är baserat på en PDF-fil med namnet *lån.pdf* skickas till AEM Forms med hjälp av MTOM. Processen returnerar ett lösenordskrypterat PDF-dokument som sparas som en PDF-fil med namnet *EncryptedDocument.pdf*.
 
-```as3
+```java
  ???/**
      * Ensure that you create a .NET project that uses
      * MS Visual Studio 2008 and version 3.5 of the .NET
@@ -1017,15 +1020,15 @@ Ett oskyddat PDF-dokument som är baserat på en PDF-fil med namnet *lån.pdf* s
 
 >[!NOTE]
 >
->Många snabbstarter som visar hur du utför AEM Forms-tjänståtgärder innehåller ett exempel på en MTOM-kod.
+>Många snabbstarter som visar hur du utför AEM Forms-serviceåtgärder innehåller ett exempel på en MTOM-kod.
 
 ## Snabbstart: Anropa en tjänst med SwaRef i ett Java-projekt {#quick-start-invoking-a-service-using-swaref-in-a-java-project}
 
-I följande Java-kodexempel anropas en process med namnet `MyApplication/EncryptDocument` från ett Java-projekt. Detta Java-projekt använder proxyklasser som har skapats med JAX-WS och SwaRef som kodningstyp. (Se [Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref).)
+I följande Java-kodexempel anropas en process med namnet `MyApplication/EncryptDocument` från ett Java-projekt. Detta Java-projekt använder proxyklasser som har skapats med JAX-WS och SwaRef som kodningstyp. (Se [Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref).)
 
-Ett oskyddat PDF-dokument som är baserat på en PDF-fil med namnet *Loan.pdf* skickas till AEM Forms-processen med SwaRef. Det krypterade PDF-dokumentet sparas som en PDF-fil med namnet *EncryptedDocument.pdf*.
+Ett oskyddat PDF-dokument som är baserat på en PDF-fil med namnet *Loan.pdf* skickas till AEM Forms med SwaRef. Det krypterade PDF-dokumentet sparas som en PDF-fil med namnet *EncryptedDocument.pdf*.
 
-```as3
+```java
  /**
      * Ensure that you create Java proxy files that consume
      *theAEM Forms service WSDL. You can use JAX-WS to create
