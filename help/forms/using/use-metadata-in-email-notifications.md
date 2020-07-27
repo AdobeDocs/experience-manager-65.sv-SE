@@ -8,7 +8,10 @@ topic-tags: publish
 discoiquuid: d48b5137-c866-43cd-925b-7a6a8eac8c0b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '913'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ Du kan använda metadata i en e-postmall för att dynamiskt fylla i information 
 
 Metadata lagras i nyckelvärdepar. Du kan ange nyckeln i e-postmallen och nyckeln ersätts med ett värde vid körningen (när ett e-postmeddelande genereras). I följande kodexempel är &quot;$ {workitem_title} &quot; en nyckel. Den ersätts med värdet&quot;Lånebegäran&quot; vid körningen.
 
-```xml
+```html
 subject=Task Assigned - ${workitem_title}
 
 message=<html><body>\n\
@@ -151,7 +154,7 @@ Ett AEM Forms-program innehåller flera metadatavariabler (nyckelvärdepar). Du 
 
 Du kan också använda anpassade metadata i ett e-postmeddelande. Anpassade metadata innehåller information utöver systemgenererade metadata. Exempel: principinformation som hämtats från en databas. Du kan använda ett ECMAScript- eller OSGi-paket för att lägga till anpassade metadata i crx-databasen:
 
-### Använd ECMAScript för att lägga till anpassade metadata {#use-ecmascript-to-add-custom-metadata}
+### Använd ECMAScript för att lägga till anpassade metadata  {#use-ecmascript-to-add-custom-metadata}
 
 [ECMAScript](https://en.wikipedia.org/wiki/ECMAScript) är ett skriptspråk. Det används för skript och serverprogram på klientsidan. Utför följande steg för att använda ECMAScript för att lägga till anpassade metadata för en e-postmall:
 
@@ -163,7 +166,7 @@ Du kan också använda anpassade metadata i ett e-postmeddelande. Anpassade meta
 
 1. Lägg till kod i .ecma-filen som har logik att generera anpassade metadata i nyckelvärdepar. Följande ECMAScript-kod genererar anpassade metadata för en försäkringsprofil:
 
-   ```
+   ```javascript
    function getUserMetaData()  {
        //Commented lines below provide an overview on how to set user metadata in map and return it.
        var HashMap = Packages.java.util.HashMap;
@@ -183,7 +186,7 @@ Du kan också använda anpassade metadata i ett e-postmeddelande. Anpassade meta
 
    Om du inte anger titeln visas den fullständiga sökvägen till ECMAScript-filen i fältet Egna metadata. Utför följande steg för att ange en beskrivande titel för skriptet:
 
-   1. Expandera skriptnoden, högerklicka på noden **[!UICONTROL jcr:content]** och klicka på **[!UICONTROL Mixins]**.
+   1. Expandera skriptnoden, högerklicka på **[!UICONTROL jcr:content]** noden och klicka på **[!UICONTROL Mixins]**.
    1. Textblandning:titel i dialogrutan Redigera mixar och klicka **+**.
    1. Lägg till en egenskap med följande värden.
 
@@ -196,7 +199,7 @@ Du kan också använda anpassade metadata i ett e-postmeddelande. Anpassade meta
 
 Du kan använda Java-gränssnittet WorkitemUserMetadataService för att lägga till anpassade metadata för e-postmallar. Du kan skapa ett OSGi-paket som använder Java-gränssnittet WorkitemUserMetadataService och distribuera det till AEM Forms-servern. Metadata blir tillgängliga för val i steget Tilldela uppgift.
 
-Om du vill skapa ett OSGi-paket med Java-gränssnitt lägger du till [AEM Forms Client SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) jar- och [granite jar](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/) -filer som externa beroenden till OSGi-paketprojektet. Du kan använda vilken Java-utvecklingsmiljö som helst för att skapa ett OSGi-paket. I följande procedur beskrivs hur du använder Eclipse för att skapa ett OSGi-paket:
+Om du vill skapa ett OSGi-paket med Java-gränssnitt lägger du till [AEM Forms Client SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) jar- och [granite jar](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/) -filer som externa beroenden i OSGi-paketprojektet. Du kan använda vilken Java-utvecklingsmiljö som helst för att skapa ett OSGi-paket. I följande procedur beskrivs hur du använder Eclipse för att skapa ett OSGi-paket:
 
 1. Öppna Eclipse IDE. Navigera till Arkiv > Nytt projekt.
 
@@ -205,10 +208,6 @@ Om du vill skapa ett OSGi-paket med Java-gränssnitt lägger du till [AEM Forms 
 1. I New Maven Project, keep defaults, and click Next. Markera en arketyp och klicka på Nästa. Exempel: maven-arketype-quickstart. Ange grupp-ID, artefakt-ID, version och paket för projektet och klicka på Slutför. Projektet skapas.
 
 1. Öppna filen pom.xml och redigera och ersätt allt innehåll i filen med följande:
-
-   ```
-   
-   ```
 
 1. Lägg till källkod som använder Java-gränssnittet WorkitemUserMetadataService för att lägga till anpassade metadata för e-postmallar. En exempelkod visas nedan:
 
