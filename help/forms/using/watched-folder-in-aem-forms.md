@@ -10,7 +10,7 @@ topic-tags: publish
 discoiquuid: db38972c-be3f-49fd-8cc1-45b16ed244af
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '7153'
 ht-degree: 0%
@@ -26,7 +26,7 @@ En administratör kan konfigurera en nätverksmapp, en s.k. bevakad mapp, så at
 
 Du kan använda någon av följande metoder för att skapa en bevakad mapp i filsystemet:
 
-* När du konfigurerar egenskaperna för en nod för konfiguration av bevakad mapp anger du den fullständiga sökvägen till den överordnade katalogen i egenskapen folderPath och lägger till namnet på den bevakade mapp som ska skapas, vilket visas i följande exempel: `C:/MyPDFs/MyWatchedFolder`
+* När du konfigurerar egenskaperna för en speciell nod i konfigurationen för bevakad mapp anger du den fullständiga sökvägen till den överordnade katalogen i egenskapen folderPath och lägger till namnet på den bevakade mapp som ska skapas, vilket visas i följande exempel: `C:/MyPDFs/MyWatchedFolder`
 The 
 `MyWatchedFolder`mappen finns inte, AEM Forms försöker skapa mappen med den angivna sökvägen.
 
@@ -305,7 +305,7 @@ Nu kan du använda konfigurerad anpassad plats för att spara skripten.
 
 Med arbetsflöden kan du automatisera aktiviteter i Experience Manager. Arbetsflöden består av en serie steg som körs i en viss ordning. Varje steg utför en distinkt aktivitet som att aktivera en sida eller skicka ett e-postmeddelande. Arbetsflöden kan samverka med resurser i databasen, användarkonton och Experience Manager-tjänster. Därför kan arbetsflöden koordinera komplicerade saker.
 
-* Tänk på följande innan du skapar ett arbetsflöde:
+* Innan du skapar ett arbetsflöde bör du tänka på följande:
 * Resultatet av ett steg måste vara tillgängligt för alla efterföljande steg.
 Stegen måste kunna uppdatera (eller till och med ta bort) befintliga utdata som genererats av föregående steg.
 * Variablerna används för att flöda anpassade dynamiska data mellan stegen.
@@ -360,7 +360,7 @@ Namnet på utdatamappen är en kombination av aktuellt stegnummer, det ursprungl
 
 ECMAScript hämtar en referens för arbetsflödets kontexttjänst och skapar en implementering av WorkflowContextProcessor-gränssnittet. Implementeringen av WorkflowContextProcessor accepterar indatafiler, kopierar filen till en tillfällig plats och returnerar ett dokument som representerar den kopierade filen. Baserat på värdet för den booleska variabeln purgePrevious, tar det aktuella steget bort utdata som genererades senast i samma steg när steget startades i den aktuella arbetsflödesinstansen. Slutligen anropas metoden wfSvc.execute för att köra WorkflowContextProcessor-implementeringen. Innehållet i utdatadokumentet sparas i resultatmappen på den fysiska sökvägen som anges i konfigurationsnoden Bevakade mappar.
 
-```java
+```javascript
 log.error("Watch-folder workflow script called for step: " + graniteWorkItem.getNode().getTitle());
 var wfSvc = sling.getService(Packages.com.adobe.aemfd.watchfolder.workflow.api.WorkflowContextService);
 // Custom WorkflowContextProcessor implementation which defines the processWorkflowContext() method purely in JS
@@ -548,7 +548,7 @@ Om den bevakade mappen inte kan bearbeta källfilerna i scenmappen kan du åters
 
    >[!NOTE]
    >
-   >Du kan titta på datum- och tidsstämpeln för filerna i scenkatalogen. Beroende på antalet filer och den normala bearbetningstiden kan du avgöra vilka filer som är tillräckligt gamla för att anses ha fastnat.
+   >Du kan titta på datum- och tidsstämpeln för filerna i scenkatalogen. Beroende på antalet filer och den normala bearbetningstiden kan du avgöra vilka filer som är tillräckligt gamla för att betraktas som fasta.
 
 1. Kopiera de obearbetade filerna från scenkatalogen till indatakatalogen.
 
@@ -613,7 +613,7 @@ ECMAScript använder PDF Generators createPDF-API för att konvertera Microsoft 
 
 1. I PDFG-mappen skapar du en fil med namnet pdfg-openOffice-sample.ecma och lägger till följande kod i filen:
 
-   ```java
+   ```javascript
    var wfSvc = sling.getService(Packages.com.adobe.aemfd.watchfolder.workflow.api.WorkflowContextService);
    // Custom ContentProcessor implementation which defines the processInputs() method purely in JS
    var impl = { processWorkflowContext: function (wrkfContext) {
