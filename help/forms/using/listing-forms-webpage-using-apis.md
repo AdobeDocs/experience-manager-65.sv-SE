@@ -9,14 +9,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: 515ceaf6-c132-4e1a-b3c6-5d2c1ccffa7c
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '719'
+ht-degree: 1%
 
 ---
 
 
 # Visa formulär på en webbsida med API:er {#listing-forms-on-a-web-page-using-apis}
 
-AEM Forms innehåller ett REST-baserat söknings-API som webbutvecklare kan använda för att fråga efter och hämta en uppsättning formulär som uppfyller sökvillkoren. Du kan använda API:er för att söka efter formulär baserat på olika filter. Svarsobjektet innehåller formulärattribut, egenskaper och återge formulärens slutpunkter.
+AEM Forms tillhandahåller ett REST-baserat söknings-API som webbutvecklare kan använda för att fråga och hämta en uppsättning formulär som uppfyller sökvillkoren. Du kan använda API:er för att söka efter formulär baserat på olika filter. Svarsobjektet innehåller formulärattribut, egenskaper och återge formulärens slutpunkter.
 
 Om du vill söka efter formulär med REST API skickar du en GET-begäran till servern `https://'[server]:[port]'/libs/fd/fm/content/manage.json` med frågeparametrar som beskrivs nedan.
 
@@ -30,7 +33,7 @@ Om du vill söka efter formulär med REST API skickar du en GET-begäran till se
   </tr>
   <tr>
    <td>func<br /> </td>
-   <td><p>Anger den funktion som ska anropas. Om du vill söka efter formulär anger du värdet för <code>func </code>attributet till <code>searchForms</code>.</p> <p>Exempel: <code class="code">
+   <td><p>Anger den funktion som ska anropas. Om du vill söka efter formulär anger du värdet för <code>func </code>attributet till <code>searchForms</code>.</p> <p>Till exempel, <code class="code">
        URLParameterBuilder entityBuilder=new URLParameterBuilder ();
        entityBuilder.add("func", "searchForms");</code></p> <p><strong>Obs!</strong> <em>Den här parametern är obligatorisk.</em><br /> </p> </td>
   </tr>
@@ -40,7 +43,7 @@ Om du vill söka efter formulär med REST API skickar du en GET-begäran till se
   </tr>
   <tr>
    <td>cutPoints<br /> </td>
-   <td><p>Anger vilka egenskaper som ska hämtas med resurserna. Du kan använda asterisk (*) för att hämta alla egenskaper samtidigt. Använd vertikalstrecksoperatorn (|) om du vill ange flera egenskaper. </p> <p>Exempel: <code>cutPoints=propertyName1|propertyName2|propertyName3</code></p> <p><strong>Obs</strong>: </p>
+   <td><p>Anger vilka egenskaper som ska hämtas med resurserna. Du kan använda asterisk (*) för att hämta alla egenskaper samtidigt. Använd vertikalstrecksoperatorn (|) om du vill ange flera egenskaper. </p> <p>Till exempel, <code>cutPoints=propertyName1|propertyName2|propertyName3</code></p> <p><strong>Obs</strong>: </p>
     <ul>
      <li><em>Egenskaper som id, sökväg och namn hämtas alltid. </em></li>
      <li><em>Alla resurser har olika egenskapsuppsättningar. Egenskaper som formUrl, pdfUrl och guideUrl är inte beroende av attributet cutpoints. Dessa egenskaper beror på resurstypen och hämtas därefter. </em></li>
@@ -69,7 +72,7 @@ Om du vill söka efter formulär med REST API skickar du en GET-begäran till se
   </tr>
   <tr>
    <td>programsatser</td>
-   <td><p>Anger listan med programsatser. Frågorna körs i listan med programsatser som anges i JSON-format. </p> <p>Exempel:</p> <p><code class="code">JSONArray statementArray=new JSONArray();
+   <td><p>Anger listan med programsatser. Frågorna körs i listan med programsatser som anges i JSON-format. </p> <p>Till exempel,</p> <p><code class="code">JSONArray statementArray=new JSONArray();
        JSONObject statement=new JSONObject();
        statement.put("name", "title");
        statement.put("value", "SimpleSurveyAF");
@@ -91,12 +94,12 @@ Om du vill söka efter formulär med REST API skickar du en GET-begäran till se
        <li>ENDSWITH - A slutar med B om B är slutdelen av A</li>
        <li>LIKE - Implementerar operatorn LIKE</li>
        <li>AND - Kombinera flera programsatser</li>
-      </ul> <p><strong>Obs!</strong> Operatorer för <em>GT, LT, GTEQ och LTEQ kan användas för egenskaper av linjär typ, till exempel LONG, DUBLE och DATE.</em></p> </li>
+      </ul> <p><strong>Obs!</strong> <em>GT-, LT-, GTEQ- och LTEQ-operatorer kan användas för egenskaper av linjär typ som LONG, DUBLE och DATE.</em></p> </li>
     </ul> </td>
   </tr>
   <tr>
    <td>orderfunktioner<br /> </td>
-   <td><p>Anger sökresultatens ordningsvillkor. Kriterierna definieras i JSON-formatet. Du kan sortera sökresultat i mer än ett fält. Resultatet sorteras i den ordning som fälten visas i frågan.</p> <p>Exempel:</p> <p>Om du vill hämta frågeresultat ordnade efter title-egenskap i stigande ordning lägger du till följande parameter: </p> <p><code class="code">JSONArray orderingsArray=new JSONArray();
+   <td><p>Anger sökresultatens ordningsvillkor. Kriterierna definieras i JSON-formatet. Du kan sortera sökresultat i mer än ett fält. Resultatet sorteras i den ordning som fälten visas i frågan.</p> <p>Till exempel,</p> <p>Om du vill hämta frågeresultat ordnade efter title-egenskap i stigande ordning lägger du till följande parameter: </p> <p><code class="code">JSONArray orderingsArray=new JSONArray();
        JSONObject orderings=new JSONObject();
        orderings.put("name", "title");
        orderings.put("criteria", "ASC");
@@ -124,7 +127,7 @@ Om du vill söka efter formulär med REST API skickar du en GET-begäran till se
 
 ## Exempelbegäran {#sample-request}
 
-```
+```json
 func : searchForms
 appPath : /content/dam/formsanddocuments/MyApplication23
 cutPoints : title|description|author|status|creationDate|lastModifiedDate|activationDate|expiryDate|tags|allowedRenderFormat|formmodel
@@ -144,7 +147,7 @@ orderings:[{"name" :“lastModifiedDate“:”order”:”ASC”}]
 
 ## Exempelsvar {#sample-response}
 
-```
+```json
 [
 {"resultCount":2},
     {"assetType":"FORM","name":"ExpenseClaim.xdp","id":"509fa2d5-e3c9-407b-b8dc-fa0ba08eb0ce",
