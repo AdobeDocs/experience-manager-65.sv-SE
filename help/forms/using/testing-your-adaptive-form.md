@@ -8,9 +8,9 @@ contentOwner: khsingh
 discoiquuid: ecddb22e-c148-441f-9088-2e5b35c7021b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 252dac988c8256cf99ee8487feb937d5345ed797
 workflow-type: tm+mt
-source-wordcount: '933'
+source-wordcount: '936'
 ht-degree: 1%
 
 ---
@@ -213,8 +213,8 @@ En åtgärd är en specifik aktivitet i ett adaptivt formulär som att klicka p�
 
 En testsvit kan ha flera testfall. Du kan köra alla testfall i en testsvit samtidigt eller individuellt. När du kör ett test anger ikonerna resultatet:
 
-* En bockmarkeringsikon anger att testet har slutförts: ![](assets/save_icon.svg)
-* En X-ikon anger att testet misslyckades: ![](assets/close-icon.svg)
+* En bockmarkeringsikon anger att testet har slutförts: ![save_icon](assets/save_icon.svg)
+* En X-ikon anger att testet misslyckades: ![närikon](assets/close-icon.svg)
 
 1. Navigera till AEM-ikonen > **[!UICONTROL Tools]**> **[!UICONTROL Operations]**> **[!UICONTROL Testing]**
 1. Så här kör du alla tester i Test Suite:
