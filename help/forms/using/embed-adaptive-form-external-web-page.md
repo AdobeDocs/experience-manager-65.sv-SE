@@ -9,7 +9,7 @@ topic-tags: author
 discoiquuid: d739c6da-3b41-4452-8728-d7cd1a3ae20b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '979'
 ht-degree: 0%
@@ -120,14 +120,14 @@ Låt oss titta på ett exempel på hur du kan konfigurera en omvänd Apache 2.4-
 
 1. Öppna `httpd.conf` konfigurationsfilen och avkommentera följande kodrader. Du kan också lägga till de här kodraderna i filen.
 
-   ```
+   ```text
    LoadModule proxy_html_module modules/mod_proxy_html.so
    LoadModule proxy_http_module modules/mod_proxy_http.so
    ```
 
 1. Ställ in proxyregler genom att lägga till följande kodrader i `httpd-proxy.conf` konfigurationsfilen.
 
-   ```
+   ```text
    ProxyPass /forms https://[AEM_Instance]/forms
    ProxyPassReverse /forms https://[AEM_Instance]/forms
    ```
@@ -136,7 +136,7 @@ Låt oss titta på ett exempel på hur du kan konfigurera en omvänd Apache 2.4-
 
 Om du inte monterar AEM-servern på en kontextsökväg, kommer proxyreglerna i Apache-lagret att vara följande:
 
-```java
+```text
 ProxyPass /content https://<AEM_Instance>/content
 ProxyPass /etc https://<AEM_Instance>/etc
 ProxyPass /etc.clientlibs https://<AEM_Instance>/etc.clientlibs
@@ -151,7 +151,7 @@ ProxyPassReverse /content https://<AEM_Instance>/content
 
 >[!NOTE]
 >
->Om du konfigurerar någon annan topologi måste du lägga till överförings-, förifyllnings- och andra URL-adresser i listan över tillåtna adresser i lagret dispatcher.
+>Om du konfigurerar någon annan topologi måste du lägga till webbadresserna för Skicka, Förifyll och andra URL:er till tillåtelselista i dispatcherlagret.
 
 ## Best practices {#best-practices}
 
@@ -166,6 +166,6 @@ Tänk på följande när du bäddar in ett anpassat formulär på en webbsida:
 ## Aktivera AEM Forms för att skicka anpassade formulär till en domänövergripande webbplats {#cross-site}
 
 1. På AEM-författarinstansen går du till AEM Web Console Configuration Manager på `https://'[server]:[port]'/system/console/configMgr`.
-1. Leta reda på och öppna **filterkonfigurationen för** Apache Sling Referrer.
+1. Leta reda på och öppna **konfigurationen för filtret** för Apache Sling Referrer.
 1. I fältet Tillåtna värdar anger du den domän där webbsidan finns. Det gör att värden kan göra POST-begäranden till AEM-servern. Du kan också använda reguljära uttryck för att ange en serie externa programdomäner.
 
