@@ -8,7 +8,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: aa3e50f1-8f5a-489d-a42e-a928e437ab79
 translation-type: tm+mt
-source-git-commit: adf1ac2cb84049ca7e42921ce31135a6149ef510
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '513'
 ht-degree: 0%
@@ -28,13 +28,13 @@ Det här dokumentet fokuserar på att skriva ett JavaScript-skript med API:t fö
 
 API:t anropar `guidelib.dataIntegrationUtils.executeOperation` en tjänst inifrån ett adaptivt formulärfält. API-syntaxen är följande:
 
-```
+```javascript
 guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs)
 ```
 
 API:ts struktur anger `guidelib.dataIntegrationUtils.executeOperation` information om tjänståtgärden. Strukturen har följande syntax.
 
-```
+```javascript
 var operationInfo = {
 formDataModelId,
 operationTitle,
@@ -95,7 +95,7 @@ I följande exempelskript används API:t för att `guidelib.dataIntegrationUtils
 
 Åtgärden tar `getAccountById` värdet i `employeeID` formulärfältet som indata för `empId` argumentet och returnerar medarbetarens namn, kontonummer och kontosaldo för motsvarande medarbetare. Utdatavärdena fylls i i de angivna formulärfälten. Värdet i `name` argumentet fylls till exempel i `fullName` formulärelementet och värdet för `accountNumber` argument i `account` formulärelementet.
 
-```
+```javascript
 var operationInfo = {
 "formDataModelId": "/content/dam/formsanddocuments-fdm/employeeAccount",
 "operationName": "getAccountDetails"
@@ -115,7 +115,7 @@ guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs);
 
 Du kan också anropa datamodelltjänsten för formulär med API:t med en callback-funktion `guidelib.dataIntegrationUtils.executeOperation` . API-syntaxen är följande:
 
-```
+```javascript
 guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs, callbackFunction)
 ```
 
@@ -131,7 +131,7 @@ I följande exempelskript används API:t för att `guidelib.dataIntegrationUtils
 >
 > Om du använder återanropsfunktionen fylls inte utdatavärdena i de angivna formulärfälten. `success`
 
-```
+```javascript
 var operationInfo = {
     "formDataModelId": "/content/dam/formsanddocuments-fdm/employeeOrder",
     "operationTitle": "GETOrder",
