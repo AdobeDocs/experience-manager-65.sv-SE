@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 9b1d2bf3-f28c-41b2-9026-1f3311556422
 translation-type: tm+mt
-source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '15466'
+ht-degree: 0%
 
 ---
 
@@ -66,7 +69,7 @@ Med hjälp av profiler kan du utföra följande uppgifter:
 
 När du skapar en profil med webbtjänstens API ska du referera till en befintlig PDF-fil (Portable Document Rights Language) som beskriver principen. Principbehörigheter och huvudnamn definieras i PDRL-dokumentet. Följande XML-dokument är ett exempel på ett PDRL-dokument.
 
-```as3
+```xml
  <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
  <Policy PolicyInstanceVersion="1" PolicyID="5DA3F847-DE76-F9CC-63EA-49A8D59154DE" PolicyCreationTime="2004-08-30T00:02:28.294+00:00" PolicyType="1" PolicySchemaVersion="1.0" PolicyName="SDK Test Policy -4344050357301573237" PolicyDescription="An SDK Test policy" xmlns="https://www.adobe.com/schema/1.0/pdrl">
        <PolicyEntry>
@@ -186,13 +189,13 @@ När du anger attribut som tillhör en profil kan du även ange krypteringsinst�
 
 * **AES256**: Representerar AES-krypteringsalgoritmen med en 256-bitars nyckel.
 * **AES128**: Representerar AES-krypteringsalgoritmen med en 128-bitars nyckel.
-* **** NoEncryption: Representerar ingen kryptering.
+* **NoEncryption:** Representerar ingen kryptering.
 
 När du anger `NoEncryption` alternativet kan du inte ange `PlaintextMetadata` alternativet till `false`. Om du försöker göra det genereras ett undantag.
 
 >[!NOTE]
 >
->Mer information om andra attribut som du kan ange finns i gränssnittsbeskrivningen i `Policy` AEM Forms API Reference [](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+>Mer information om andra attribut som du kan ange finns i gränssnittsbeskrivningen i `Policy` AEM Forms API-referens [](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
 **Skapa en princippost**
 
@@ -247,6 +250,7 @@ Skapa en profil med hjälp av API:t för dokumentsäkerhet (Java):
 
       * Det objekt `Policy` som representerar principen som ska registreras.
    * Ett strängvärde som representerar den principuppsättning som principen tillhör.
+
    Om du använder ett AEM-formuläradministratörskonto i anslutningsinställningarna för att skapa `DocumentSecurityClient` objektet anger du namnet på principuppsättningen när du anropar `registerPolicy` metoden. Om du skickar ett `null` värde för principuppsättningen skapas principen i principuppsättningen för administratörer *Mina principer* .
 
    Om du använder en dokumentsäkerhetsanvändare i anslutningsinställningarna kan du anropa den överlagrade `registerPolicy` metoden som bara accepterar profilen. Du behöver alltså inte ange namnet på principuppsättningen. Principen läggs dock till i principuppsättningen med namnet *Mina principer*. Om du inte vill lägga till den nya principen i den här principinställningen anger du ett principuppsättningsnamn när du anropar `registerPolicy` metoden.
@@ -304,6 +308,7 @@ Skapa en profil med hjälp av API:t för dokumentsäkerhet (webbtjänsten):
 
    * Det objekt `PolicySpec` som representerar principen som ska registreras.
    * Ett strängvärde som representerar den principuppsättning som principen tillhör. Du kan ange ett `null` värde som resulterar i att profilen läggs till i *MyPolices* -principuppsättningen.
+
    Om du använder ett AEM-formuläradministratörskonto i anslutningsinställningarna för att skapa `DocumentSecurityClient` objektet anger du namnet på principuppsättningen när du anropar `registerPolicy` metoden.
 
    Om du använder en Document SecurityDocument Security-användare i anslutningsinställningarna kan du anropa den överlagrade `registerPolicy` metoden som bara accepterar profilen. Du behöver alltså inte ange namnet på principuppsättningen. Principen läggs dock till i principuppsättningen med namnet *Mina principer*. Om du inte vill lägga till den nya principen i den här principinställningen anger du ett principuppsättningsnamn när du anropar `registerPolicy` metoden.
@@ -359,7 +364,7 @@ När du ändrar en princips låneperiod offline med hjälp av en webbtjänst ign
 
 >[!NOTE]
 >
->Mer information om andra attribut som du kan ange finns i gränssnittsbeskrivningen i `Policy` AEM Forms API Reference [](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+>Mer information om andra attribut som du kan ange finns i gränssnittsbeskrivningen i `Policy` AEM Forms API-referens [](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
 **Uppdatera profilen**
 
@@ -555,7 +560,7 @@ Du kan övervaka användningen av ett profilskyddat dokument när du har distrib
 
 ### Sammanfattning av steg {#summary_of_steps-3}
 
-Så här använder du en profil i ett PDF-dokument:
+Gör så här för att tillämpa en profil på ett PDF-dokument:
 
 1. Inkludera projektfiler.
 1. Skapa ett API-objekt för Document Security Client.
@@ -621,6 +626,7 @@ Tillämpa en profil på ett PDF-dokument med dokumentets säkerhets-API (Java):
       * Ett strängvärde som representerar namnet på användarhanterardomänen för den användare som är dokumentets utgivare. Det här parametervärdet är valfritt och kan vara null (om parametern är null måste nästa parametervärde vara null).
       * Ett strängvärde som representerar namnet på den kanoniska användaren av användarhanteraren som är dokumentets utgivare. Det här parametervärdet är valfritt och kan vara `null` (om parametern är null måste det föregående parametervärdet vara `null`).
       * A `com.adobe.livecycle.rightsmanagement.Locale` som representerar det språkområde som används för att välja MS Office-mallen. Det här parametervärdet är valfritt och används inte för PDF-dokument. Om du vill skydda ett PDF-dokument anger du `null`.
+
       Metoden returnerar `protectDocument` ett `RMSecureDocumentResult` objekt som innehåller det principskyddade PDF-dokumentet.
 
 
@@ -691,6 +697,7 @@ Tillämpa en profil på ett PDF-dokument med hjälp av API:t för dokumentsäker
    * En strängutdataparameter som används för att lagra principens identifierarvärde.
    * En strängutdataparameter som används för att lagra det principskyddade identifierarvärdet.
    * En strängutdataparameter som används för att lagra mime-typen (till exempel `application/pdf`).
+
    Metoden returnerar `protectDocument` ett `BLOB` objekt som innehåller det principskyddade PDF-dokumentet.
 
 1. Spara PDF-dokumentet.
@@ -739,7 +746,7 @@ Du kan hämta ett profilskyddat PDF-dokument för att ta bort en profil. Om du f
 
 **Ta bort profilen från PDF-dokumentet**
 
-Du kan ta bort en profil från ett profilskyddat PDF-dokument under förutsättning att en administratör anges i anslutningsinställningarna. Om inte måste profilen som används för att skydda ett dokument innehålla behörigheten för att kunna ta bort en profil från ett PDF-dokument. `SWITCH_POLICY` Dessutom måste användaren som anges i inställningarna för AEM Forms-anslutningen också ha den behörigheten. Annars genereras ett undantag.
+Du kan ta bort en profil från ett profilskyddat PDF-dokument under förutsättning att en administratör anges i anslutningsinställningarna. Om inte måste profilen som används för att skydda ett dokument innehålla behörigheten för att kunna ta bort en profil från ett PDF-dokument. `SWITCH_POLICY` Dessutom måste användaren som anges i anslutningsinställningarna för AEM Forms också ha den behörigheten. Annars genereras ett undantag.
 
 **Spara det oskyddade PDF-dokumentet**
 
@@ -840,9 +847,9 @@ Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäke
 
 **Se även**
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## Återkalla åtkomst till dokument {#revoking-access-to-documents}
 
@@ -984,9 +991,9 @@ Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäke
 
 [Ta bort profiler från Word-dokument](protecting-documents-policies.md#removing-policies-from-word-documents)
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## Återställa åtkomst till återkallade dokument {#reinstating-access-to-revoked-documents}
 
@@ -1110,15 +1117,15 @@ Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäke
 
 **Se även**
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## Inspektera skyddade PDF-dokument med policyer {#inspecting-policy-protected-pdf-documents}
 
 Du kan använda API:t för dokumentsäkerhetstjänsten (Java och webbtjänsten) för att inspektera profilskyddade PDF-dokument. När du inspekterar profilskyddade PDF-dokument returneras information om det profilskyddade PDF-dokumentet. Du kan till exempel bestämma vilken profil som användes för att skydda dokumentet och datumet då dokumentet var skyddat.
 
-Du kan inte utföra den här uppgiften om din version av LiveCycle är 8.x eller en tidigare version. Stöd för granskning av principskyddade dokument finns i AEM Forms. Om du försöker inspektera ett principskyddat dokument med LiveCycle 8.x (eller tidigare) genereras ett undantag.
+Du kan inte utföra den här uppgiften om din version av LiveCycle är 8.x eller en tidigare version. Det finns stöd för att inspektera policyskyddade dokument i AEM Forms. Om du försöker inspektera ett principskyddat dokument med LiveCycle 8.x (eller tidigare) genereras ett undantag.
 
 >[!NOTE]
 >
@@ -1169,7 +1176,7 @@ Inspektera ett profilskyddat PDF-dokument med hjälp av dokumentsäkerhetstjäns
 
 1. Inkludera projektfiler.
 
-   Inkludera JAR-klientfiler, t.ex. adobe-rightsmanagement-client.jar, i Java-projektets klassökväg. Mer information om var dessa filer finns i [Inkludera Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)för AEM Forms.
+   Inkludera JAR-klientfiler, t.ex. adobe-rightsmanagement-client.jar, i Java-projektets klassökväg. Mer information om platsen för dessa filer finns i [Inkludera Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)för AEM Forms.
 
 1. Skapa ett API-objekt för Document Security Client.
 
@@ -1247,9 +1254,9 @@ Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäke
 
 **Se även**
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## Skapa vattenstämplar {#creating-watermarks}
 
@@ -1466,9 +1473,9 @@ Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäke
 
 **Se även**
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## Ändra vattenstämplar {#modifying-watermarks}
 
@@ -1626,7 +1633,7 @@ Du kan söka efter specifika händelser genom att använda Java API:t för Right
 
 >[!NOTE]
 >
->Mer information om Rights Management-tjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om Rights Management-tjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-10}
 
@@ -1675,7 +1682,8 @@ Sök efter händelser med Rights Management API (Java):
 
    * Skapa ett `EventManager` objekt genom att anropa `DocumentSecurityClient` objektets `getEventManager` metod. Den här metoden returnerar ett `EventManager` objekt.
    * Skapa ett `EventSearchFilter` objekt genom att anropa dess konstruktor.
-   * Ange den händelse som ska sökas igenom genom att anropa `EventSearchFilter` objektets `setEventCode` metod och skicka en statisk datamedlem som tillhör den `EventManager` klass som representerar händelsen som ska sökas efter. Om du till exempel vill söka efter principens händelse create skickar du `EventManager.POLICY_CREATE_EVENT`.
+   * Ange den händelse som ska sökas igenom genom att anropa `EventSearchFilter` objektets `setEventCode` metod och skicka en statisk datamedlem som tillhör den `EventManager` klass som representerar händelsen som ska sökas efter. Om du till exempel vill söka efter principskapningshändelsen skickar du `EventManager.POLICY_CREATE_EVENT`.
+
    >[!NOTE]
    >
    >Du kan definiera ytterligare sökvillkor genom att anropa `EventSearchFilter` objektmetoder. Anropa till exempel `setUserName` metoden för att ange en användare som är associerad med händelsen.
@@ -1724,6 +1732,7 @@ Sök efter händelser med Rights Management API (webbtjänsten):
    * Ange slutet på den tidsperiod under vilken händelsen inträffade genom att ange `EventSpec` objektets `lastTime.date` datamedlem med `DataTime` instansen som representerar slutet på datumintervallet när händelsen inträffade.
    * Tilldela värdet `true` till `EventSpec` objektets `lastTime.dateSpecified` datamedlem.
    * Ange händelsen som ska sökas efter genom att tilldela ett strängvärde till `EventSpec` objektets `eventCode` datamedlem. I följande tabell visas de numeriska värden som du kan tilldela den här egenskapen:
+
    <table>
     <thead>
     <tr>
@@ -1936,9 +1945,9 @@ Följande snabbstarter innehåller kodexempel på hur Rights Management-tjänste
 
 **Se även**
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## Tillämpa profiler på Word-dokument {#applying-policies-to-word-documents}
 
@@ -2018,6 +2027,7 @@ Tillämpa en profil på ett Word-dokument med hjälp av dokumentets säkerhets-A
       * Ett strängvärde som representerar namnet på användarhanterardomänen för den användare som är dokumentets utgivare. Det här parametervärdet är valfritt och kan vara null (om parametern är null måste nästa parametervärde vara null).
       * Ett strängvärde som representerar namnet på den kanoniska användaren av användarhanteraren som är dokumentets utgivare. Det här parametervärdet är valfritt och kan vara `null` (om parametern är `null`måste det föregående parametervärdet vara `null`).
       * A `com.adobe.livecycle.rightsmanagement.Locale` som representerar det språkområde som används för att välja MS Office-mallen. Det här parametervärdet är valfritt och du kan ange det `null`.
+
       Metoden returnerar `protectDocument` ett `RMSecureDocumentResult` objekt som innehåller det principskyddade Word-dokumentet.
 
 
@@ -2081,6 +2091,7 @@ Tillämpa en profil på ett Word-dokument med hjälp av API:t för dokumentsäke
    * En strängutdataparameter som används för att lagra principens identifierarvärde.
    * En strängutdataparameter som används för att lagra det principskyddade identifierarvärdet.
    * En strängutdataparameter som används för att lagra mime-typen (till exempel `application/doc`).
+
    Metoden returnerar `protectDocument` ett `BLOB` objekt som innehåller det principskyddade Word-dokumentet.
 
 1. Spara Word-dokumentet.
@@ -2128,7 +2139,7 @@ Du måste hämta ett principskyddat Word-dokument för att kunna ta bort en prof
 
 **Ta bort profilen från Word-dokumentet**
 
-Du kan ta bort en princip från ett principskyddat Word-dokument förutsatt att en administratör har angetts i anslutningsinställningarna. Annars måste profilen som används för att skydda ett dokument innehålla behörigheten för att kunna ta bort en profil från ett Word-dokument `SWITCH_POLICY` . Dessutom måste användaren som anges i inställningarna för AEM Forms-anslutningen också ha den behörigheten. Annars genereras ett undantag.
+Du kan ta bort en princip från ett principskyddat Word-dokument förutsatt att en administratör har angetts i anslutningsinställningarna. Annars måste profilen som används för att skydda ett dokument innehålla behörigheten för att kunna ta bort en profil från ett Word-dokument `SWITCH_POLICY` . Dessutom måste användaren som anges i anslutningsinställningarna för AEM Forms också ha den behörigheten. Annars genereras ett undantag.
 
 **Spara det oskyddade Word-dokumentet**
 
@@ -2228,4 +2239,4 @@ Följande snabbstart innehåller kodexempel på hur du använder dokumentsäkerh
 
 **Se även**
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
