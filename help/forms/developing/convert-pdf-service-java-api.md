@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: bdd9bb56-14f6-448b-be4a-7c11f670e901
 translation-type: tm+mt
-source-git-commit: e103640784f9d5b00a2a78cead6e904017ad7a53
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '253'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ Följande snabbstarter är tillgängliga för konvertering av PDF-tjänstens API
 
 [Snabbstart (SOAP-läge): Konvertera ett PDF-dokument till JPEG-filer med Java API](convert-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-jpeg-files-using-the-java-api)
 
-AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda typer och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms-API:t med stark typning och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
@@ -33,7 +36,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda ty
 
 I följande kodexempel konverteras ett PDF-dokument med namnet *Loan.pdf* till ett PostScript-dokument med namnet *Loan.ps*. (Se [Konvertera PDF-dokument till PostScript](/help/forms/developing/converting-pdf-postscript-image-files.md#converting-pdf-documents-to-postscript).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -148,7 +151,7 @@ I följande kodexempel konverteras ett PDF-dokument med namnet *Loan.pdf* till e
 
 I följande Java-kodexempel konverteras ett PDF-dokument med namnet *Loan.pdf* till en uppsättning JPEG-filer och lagras i mappen C:\Adobe directory. Varje fil namnges `tempFile[index].jpg`där den första bildfilen heter *tempFile0.jpg*. (Se [Konvertera PDF-dokument till bildformat](/help/forms/developing/converting-pdf-postscript-image-files.md#converting-pdf-documents-to-image-formats).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
