@@ -11,7 +11,7 @@ topic-tags: hTML5_forms
 discoiquuid: 4b676e7e-191f-4a19-8b8f-fc3e30244b59
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 407b4d0b86c6bcbff11a085ea10bd3bf90115257
+source-git-commit: c74d9e86727f2deda62b8d1eb105b28ef4b6d184
 workflow-type: tm+mt
 source-wordcount: '1970'
 ht-degree: 0%
@@ -27,11 +27,11 @@ Det finns några vanliga frågor (FAQ) om layout, skriptstöd och omfång för H
 
 1. Varför visas inte streckkoder och signaturfält i mitt formulär?
 
-   Svar: Streckkoder och signaturfält är inte relevanta i HTML- och mobilscenarier. Dessa fält visas som icke-interaktiva områden. Men AEM Forms Designer har ett nytt signaturskriptfält som kan användas istället för signaturfält. Du kan också lägga till en [anpassad widget](../../forms/using/custom-widgets.md) för streckkoder och integrera den.
+   Svar: Streckkoder och signaturfält är inte relevanta i HTML- och mobilscenarier. Dessa fält visas som icke-interaktiva områden. AEM Forms Designer har dock ett nytt signaturskriptfält som kan användas i stället för signaturfält. Du kan också lägga till en [anpassad widget](../../forms/using/custom-widgets.md) för streckkoder och integrera den.
 
 1. Stöds RTF för XFA-textfältet?
 
-   Svar: XFA-fältet, som tillåter avancerat innehåll i AEM Forms Designer, stöds inte och återges som normal text utan stöd för formatering av texten från användargränssnittet. Dessutom visas XFA-fält med kombinationsegenskaper som ett vanligt fält, även om det fortfarande finns begränsningar för antalet tillåtna tecken baserat på värdet för kombinationssiffror.
+   Svar: XFA-fältet, som tillåter RTF-innehåll i AEM Forms Designer, stöds inte och återges som vanlig text utan stöd för formatering av texten från användargränssnittet. Dessutom visas XFA-fält med kombinationsegenskaper som ett vanligt fält, även om det fortfarande finns begränsningar för antalet tillåtna tecken baserat på värdet för kombinationssiffror.
 
 1. Finns det några begränsningar för användning av repeterbara delformulär?
 
@@ -43,7 +43,7 @@ Det finns några vanliga frågor (FAQ) om layout, skriptstöd och omfång för H
 
    1. Använd händelsen initialize för formuläret för att dölja den primära instansen av delformuläret. Koden nedan döljer till exempel den primära instansen av delformuläret vid formulärinitiering. Den verifierar också apptypen för att säkerställa att skriptet bara körs på klientsidan:
 
-      ```
+      ```javascript
       if ((xfa.host.appType == "HTML 5" || xfa.host.appType == "Exchange-Pro" || xfa.host.appType == "Reader")&&(_RepeatSubform.count == 1)&&(form1.Page1.Subform1.RepeatSubform.Key.rawValue == null)) {
       RepeatSubform.presence = "hidden";
       }
@@ -53,7 +53,7 @@ Det finns några vanliga frågor (FAQ) om layout, skriptstöd och omfång för H
 
       Koden nedan kontrollerar den dolda instansen av delformuläret. Om den dolda instansen av delformuläret hittas tar du bort den dolda instansen av delformuläret och infogar en ny instans av delformuläret. Om den dolda instansen av delformuläret inte hittas infogar du bara en ny instans av delformuläret.
 
-      ```
+      ```javascript
       if (RepeatSubform.presence == "hidden")
       {
       RepeatSubform.instanceManager.insertInstance(0);
@@ -69,7 +69,7 @@ Det finns några vanliga frågor (FAQ) om layout, skriptstöd och omfång för H
 
       Antal kodkontroller för delformulären. Om antalet delformulär är 1 döljs delformuläret i stället för att delformuläret tas bort.
 
-      ```
+      ```javascript
       if (RepeatSubform.instanceManager.count == 1) {
       RepeatSubform.presence = "hidden";
       } else {
@@ -79,7 +79,7 @@ Det finns några vanliga frågor (FAQ) om layout, skriptstöd och omfång för H
 
    1. Öppna händelsen för att skicka formuläret i förväg för redigering. Lägg till följande skript i händelsen för att ta bort den dolda instansen av skriptet innan du redigerar. Det förhindrar att data i det dolda delformuläret skickas in.
 
-      ```
+      ```javascript
       if(RepeatSubform.instanceManager.count == 1 && RepeatSubform.presence == "hidden") {
       RepeatSubform.instanceManager.removeInstance(0);
       }
@@ -91,15 +91,15 @@ Det finns några vanliga frågor (FAQ) om layout, skriptstöd och omfång för H
 
 1. Varför viss text trunkeras eller visas felaktigt i HTML5?
 
-   Svar: Om ett Draw- eller Caption-textelement inte har fått tillräckligt med utrymme för att visa innehåll, visas texten som trunkerad i mobil formuläråtergivning. Den här trunkeringen visas också i designvyn i AEM Forms Designer. Även om den här trunkeringen kan hanteras i PDF-filer kan den inte hanteras i HTML5-formulär. Du kan undvika problemet genom att ange tillräckligt med utrymme för att rita eller bildtext så att den inte kortas av i designläget i AEM Forms Designer.
+   Svar: Om ett Draw- eller Caption-textelement inte har fått tillräckligt med utrymme för att visa innehåll, visas texten som trunkerad i mobil formuläråtergivning. Den här trunkeringen visas även i designvyn i AEM Forms Designer. Även om den här trunkeringen kan hanteras i PDF-filer kan den inte hanteras i HTML5-formulär. Du kan undvika problemet genom att ange tillräckligt med utrymme för Rita eller Bildtext så att den inte kortas av i designläget för AEM Forms Designer.
 
 1. Jag observerar layoutproblem med saknat innehåll eller överlappande innehåll. Vad är orsaken?
 
-   Svar: Om det finns ett element av typen Rita text eller Rita bild tillsammans med ett annat överlappande element på samma plats (till exempel en rektangel), visas inte innehållet i Rita text om det kommer senare i dokumentordningen (i hierarkivyn i AEM Forms Designer). PDF har stöd för genomskinliga lager, men HTML/webbläsare har inte stöd för genomskinliga lager.
+   Svar: Om det finns ett element av typen Rita text eller Rita bild tillsammans med ett annat överlappande element på samma plats (t.ex. en rektangel), visas inte innehållet i Rita text om det kommer senare i dokumentordningen (i hierarkivyn i AEM Forms Designer). PDF har stöd för genomskinliga lager, men HTML/webbläsare har inte stöd för genomskinliga lager.
 
 1. Varför visas vissa teckensnitt i HTML-formuläret på ett annat sätt än de som används när formuläret utformas?
 
-   Svar: HTML5-formulär bäddar inte in teckensnitt (till skillnad från PDF-formulär där teckensnitt är inbäddade i formuläret). För att HTML-versionen av formuläret ska kunna återges som förväntat måste teckensnitten som anges i XDP-filen vara tillgängliga på servern och på klientdatorn. Om de nödvändiga teckensnitten inte finns på servern används de som standard. Om du dessutom använder teckensnitt i formulärmallen som inte finns på klientenheten, används webbläsarens standardteckensnitt för att återge texten.
+   Svar: HTML5-formulär bäddar inte in teckensnitt (till skillnad från PDF forms där teckensnitt är inbäddade i formuläret). För att HTML-versionen av formuläret ska kunna återges som förväntat måste teckensnitten som anges i XDP-filen vara tillgängliga på servern och på klientdatorn. Om de nödvändiga teckensnitten inte finns på servern används de som standard. Om du dessutom använder teckensnitt i formulärmallen som inte finns på klientenheten, används webbläsarens standardteckensnitt för att återge texten.
 
 1. Stöds vAlign- och hAlign-attribut i HTML-formulär?
 
@@ -113,13 +113,13 @@ Det finns några vanliga frågor (FAQ) om layout, skriptstöd och omfång för H
 
    Svar: Ja, HTML5-formulär har några begränsningar. Om antalet siffror är fler än antalet som anges i bildsatsen, lokaliseras inte siffrorna och visas på engelska.
 
-1. Varför är HTML-formulär större än PDF-formulär?
+1. Varför är HTML-formulär större än PDF forms?
 
    Det krävs många mellanliggande datastrukturer och objekt som formulärdom, datatilldom och layoutdom för att återge en XDP till ett HTML-formulär.
 
-   För PDF-formulär har Adobe Acrobat en inbyggd XTG-motor för att skapa mellanliggande datastrukturer och objekt. Acrobat hanterar också layout och skript.
+   För PDF forms har Adobe Acrobat en inbyggd XTG-motor för att skapa mellanliggande datastrukturer och objekt. Acrobat hanterar också layout och skript.
 
-   För HTML5-formulär har webbläsarna ingen inbyggd XTG-motor för att skapa mellanliggande datastrukturer och objekt från rå XDP-byte. För HTML5-formulär genereras därför mellanliggande strukturer på servern och skickas till klienten. På klienten använder javascript-baserade skript- och layoutmotorer dessa mellanliggande strukturer.
+   För HTML5-formulär har webbläsarna ingen inbyggd XTG-motor för att skapa mellanliggande datastrukturer och objekt från rå XDP-byte. För HTML5-formulär genereras därför mellanliggande strukturer på servern och skickas till klienten. På klienten använder JavaScript-baserade skript- och layoutmotorer dessa mellanliggande strukturer.
 
    Storleken på den mellanliggande strukturen beror på storleken på den ursprungliga XDP-filen och de data som sammanfogas med XDP-filen.
 
@@ -188,7 +188,7 @@ Det finns några vanliga frågor (FAQ) om layout, skriptstöd och omfång för H
 
 1. Finns det någon rekommenderad namnkonvention och finns det några reserverade nyckelord att undvika?
 
-   * I AEM Forms Designer rekommenderar vi att du inte börjar namnet på ett objekt (till exempel ett delformulär eller ett textfält) med ett understreck (_). Om du vill använda understreck i början av namnet lägger du till ett prefix efter understrecket _&lt;prefix>&lt;objectname>.
+   * I AEM Forms Designer bör du inte börja namnet på ett objekt (till exempel ett delformulär eller ett textfält) med ett understreck (_). Om du vill använda understreck i början av namnet lägger du till ett prefix efter understrecket _&lt;prefix>&lt;objectname>.
    * Alla HTML5-formulär-API:er är reserverade nyckelord. Använd ett namn som inte är identiskt med API:erna för [HTML5-formulär för anpassade API:er](/help/forms/using/scripting-support.md).
 
 1. Har HTML5-formulär stöd för flytande fält?
