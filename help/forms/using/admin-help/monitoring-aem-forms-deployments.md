@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/maintaining_aem_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: b3e7bca0-5aaf-4f28-bddb-fd7e8ed72ee8
 translation-type: tm+mt
-source-git-commit: 215ba1cb3e98954418b844849c812c9ba6cf572b
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '634'
+ht-degree: 0%
 
 ---
 
@@ -23,16 +26,16 @@ Mer information om hur du övervakar AEM-formulärdistributioner finns i [En tek
 
 ## Övervaka med MBeans {#monitoring-using-mbeans}
 
-AEM-formulär innehåller två registrerade MBeans som tillhandahåller navigering och statistisk information. Detta är de enda MBeans som stöds för integrering och inspektion:
+AEM-formulär innehåller två registrerade MBeans som tillhandahåller navigering och statistisk information. Det här är de enda MBeans som stöds för integrering och inspektion:
 
-* **** ServiceStatistic: Denna MBean ger information om tjänstens namn och version.
-* **** OperationStatistic: Denna MBean ger statistik för alla formulärservertjänster. Här kan administratörer få information om en viss tjänst, t.ex. starttid, antal fel osv.
+* **ServiceStatistic:** Denna MBean ger information om tjänstens namn och version.
+* **OperationStatistic:** Denna MBean ger statistik för alla formulärservertjänster. Här kan administratörer få information om en viss tjänst, t.ex. starttid, antal fel osv.
 
 ### ServiceStatisticMbean public interfaces {#servicestatisticmbean-public-interfaces}
 
 Dessa publika gränssnitt för ServiceStatistic MBean kan användas i testsyfte:
 
-```as3
+```java
  public String getServiceId();
  public int getMajorVersion();
  public int getMinorVersion();
@@ -42,7 +45,7 @@ Dessa publika gränssnitt för ServiceStatistic MBean kan användas i testsyfte:
 
 Dessa publika gränssnitt för OperationStatistic MBean kan användas i testsyfte:
 
-```as3
+```java
  // InvocationCount: The number of times the method is invoked.
  public long getInvocationCount();
  // InvocationStartTime: The time at which the method started to execute.
@@ -72,33 +75,33 @@ Med en JMX-konsol (JConsole) finns statistik från OperationStatistic MBean till
 
 **MBean-träd**
 
-**** Adobe-domännamn: Beroende på programserver. Om programservern inte definierar domänen är adobe.com som standard.
+**Adobe-domännamn:** Beroende på programserver. Om programservern inte definierar domänen är adobe.com som standard.
 
-**** ServiceType: AdobeService är det namn som används för att lista alla tjänster.
+**ServiceType:** AdobeService är det namn som används för att lista alla tjänster.
 
-**** AdobeServiceName: Tjänstnamn eller tjänst-ID.
+**AdobeServiceName:** Tjänstnamn eller tjänst-ID.
 
-**** Version: Tjänstens version.
+**Version:** Tjänstens version.
 
 **Åtgärdsstatistik**
 
-**** Anropstid: Tidsåtgång för körning av metoden. Detta inkluderar inte den tidpunkt då begäran serialiseras, överförs från klient till server och avserialiseras.
+**Anropstid:** Tidsåtgång för körning av metoden. Detta inkluderar inte den tidpunkt då begäran serialiseras, överförs från klient till server och avserialiseras.
 
-**** Antal anrop: Antalet gånger som tjänsten anropas.
+**Antal anrop:** Antalet gånger som tjänsten anropas.
 
-**** Genomsnittlig anropstid: Genomsnittlig tid för alla anrop som har körts sedan servern startades.
+**Genomsnittlig anropstid:** Genomsnittlig tid för alla anrop som har körts sedan servern startades.
 
-**** Maximal starttid: Varaktigheten för det längsta anropet som har körts sedan servern startades.
+**Maximal starttid:** Varaktigheten för det längsta anropet som har körts sedan servern startades.
 
-**** Minsta anropstid: Varaktigheten för det kortaste anropet som har körts sedan servern startades.
+**Minsta anropstid:** Varaktigheten för det kortaste anropet som har körts sedan servern startades.
 
-**** Antal undantag: Antal anrop som har resulterat i fel.
+**Antal undantag:** Antal anrop som har resulterat i fel.
 
-**** Undantagsmeddelande: Felmeddelandet för det senaste undantaget som inträffade.
+**Undantagsmeddelande:** Felmeddelandet för det senaste undantaget som inträffade.
 
-**** Datum och tid för senaste provtagning: Datum för det senaste anropet.
+**Datum och tid för senaste provtagning:** Datum för det senaste anropet.
 
-**** Tidsenhet: Standardvärdet är millisekunder.
+**Tidsenhet:** Standardvärdet är millisekunder.
 
 För att JMX-övervakning ska kunna aktiveras behöver programservrarna vanligtvis någon konfiguration. Mer information finns i programserverdokumentationen.
 
@@ -111,7 +114,7 @@ Om du vill visa MBeans från JConsole konfigurerar du JBoss-programserverns JVM-
 1. Redigera filen run.bat som finns under InstallJBoss/bin.
 1. Hitta raden JAVA_OPTS och lägg till följande:
 
-   ```as3
+   ```shell
     -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9088 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
    ```
 
@@ -120,7 +123,7 @@ Om du vill visa MBeans från JConsole konfigurerar du JBoss-programserverns JVM-
 1. Redigera filen startWebLogic.bat som finns under `[WebLogic home]/user_projects/domains/Adobe_Live_Cycle/bin`.
 1. Hitta raden JAVA_OPTS och lägg till följande:
 
-   ```as3
+   ```shell
     -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9088 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
    ```
 
@@ -139,13 +142,13 @@ Om du vill visa MBeans från JConsole konfigurerar du JBoss-programserverns JVM-
 
 1. Lägg till följande rad i fältet för allmänt JVM-argument i Admin Console (Programserver > server1 > Processdefinition > JVM):
 
-   ```as3
+   ```shell
     -Djavax.management.builder.initial= -Dcom.sun.management.jmxremote
    ```
 
 1. Lägg till eller ta bort kommentarer för följande tre rader i /opt/IBM/WebSphere/AppServer/java/jre/lib/management/management.properties (eller &lt;Your Websphere JRE>/ lib/management/management.properties):
 
-   ```as3
+   ```shell
     com.sun.management.jmxremote.port=9999 //any port you like, but make sure you use this port when you connect
     com.sun.management.jmxremote.authenticate=false
     com.sun.management.jmxremote.ssl=false
