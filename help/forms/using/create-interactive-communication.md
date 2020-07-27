@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f4d98cb9-84d8-4735-91d2-b9ceec861e5e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3271ad3a7d0daac731803975e12d79b77905068a
+source-git-commit: bd70508b361ac8b62ebc0344538a18369a075f3e
 workflow-type: tm+mt
-source-wordcount: '5933'
+source-wordcount: '5946'
 ht-degree: 0%
 
 ---
@@ -187,7 +187,7 @@ Tryck på dokumentfragmentet, tryck på ![configure_icon](assets/configure_icon.
 
    ![webbkanalresurser](assets/webchannelassets.png)
 
-   Tryck på dokumentfragmentet, tryck på ![configure_icon](assets/configure_icon.png) (Configure) och sedan på **[!UICONTROL Properties]** sidan för Interactive Communication. I avsnittet visas variablerna, inklusive de dolda variablerna och datamodellsobjekten som används i dokumentfragmenten **[!UICONTROL Variables and Data Model Objects]** . Använd ![redigeringsikonen](assets/edit.svg) (Redigera) bredvid varje datamodellsobjekt eller variabel för att redigera egenskaperna. För dokumentfragment som har genererats [](#synchronize) automatiskt i en webbkanal med hjälp av kanalen Skriv ut använder du ikonen ![](assets/cancelinheritance.png) (avbryt arv) bredvid varje datamodellsobjekt och variabel för att [avbryta arv](#cancelinheritance) och för att kunna redigera dem.
+   Tryck på dokumentfragmentet, tryck på ![configure_icon](assets/configure_icon.png) (Configure) och sedan på **[!UICONTROL Properties]** sidan för Interactive Communication. I avsnittet visas variablerna, inklusive de dolda variablerna och datamodellsobjekten som används i dokumentfragmenten **[!UICONTROL Variables and Data Model Objects]** . Använd ![redigeringsikonen](assets/edit.svg) (Redigera) bredvid varje datamodellsobjekt eller variabel för att redigera egenskaperna. För dokumentfragment som har genererats [](#synchronize) automatiskt i en webbkanal med hjälp av kanalen Skriv ut använder du ikonen ![cancelarance](assets/cancelinheritance.png) (Cancel Inheritance) bredvid varje datamodellsobjekt och variabel för att [avbryta arv](#cancelinheritance) och för att kunna redigera dem.
 
 1. Om du vill lägga till fler komponenter i webbkanalen trycker du på **[!UICONTROL Components]**. Dra och släpp komponenter i webbkanalen i din interaktiva kommunikation efter behov och fortsätt att konfigurera dem.
 
@@ -386,12 +386,12 @@ Tryck på rotpanelen i webbmallen och tryck **+** för att lägga till en **tabe
 
 #### Lägga till eller redigera text i tabellceller {#addedittexttable}
 
-1. Markera standardtextrutan i tabellcellen och tryck på ![](assets/edit.png) (Redigera).
-1. Skriv texten i tabellcellen och tryck på ![](assets/done_icon.png) den för att spara den.
+1. Markera standardtextrutan i tabellcellen och tryck på ![Redigera](assets/edit.png) (Redigera).
+1. Skriv texten i tabellcellen och tryck på ![made_icon](assets/done_icon.png) för att spara den.
 
 #### Skapa bindning mellan tabellceller och datamodellobjektselement {#createbindingtablecells}
 
-1. Markera standardtextrutan i tabellraden och tryck på ![](assets/edit.png) (Redigera).
+1. Markera standardtextrutan i tabellraden och tryck på ![Redigera](assets/edit.png) (Redigera).
 1. Tryck på listrutan Datamodellsobjekt och välj egenskapen.
 1. Tryck för att spara och skapa en bindning mellan tabellcellen och datamodellens objektegenskap.
 
@@ -399,10 +399,10 @@ Tryck på rotpanelen i webbmallen och tryck **+** för att lägga till en **tabe
 
 #### Skapa en hyperlänk för text i tabellcellen {#createhyperlinktable}
 
-1. Markera standardtextrutan i tabellcellen och tryck på ![](assets/edit.svg) (Redigera).
+1. Markera standardtextrutan i tabellcellen och tryck på ![Redigera](assets/edit.svg) (Redigera).
 1. Markera texten i tabellcellen och tryck på ikonen Hyperlänk.
 1. Ange URL:en i fältet **Sökväg** .
-1. Tryck ![](assets/done_icon.png) för att spara hyperlänksegenskaperna.
+1. Tryck på ![made_icon](assets/done_icon.png) för att spara hyperlänksegenskaperna.
 
 ![Skapa hyperlänk](assets/create_hyperlink_table_new.png)
 
@@ -426,9 +426,9 @@ Sortering kan användas för tabellkolumner som innehåller:
 
 Så här aktiverar du sortering:
 
-1. Markera tabellen och tryck på ![](assets/configure_icon.png) (Konfigurera). Du kan också markera tabellen med hjälp av **innehållsläsaren** i sidokickaren i den interaktiva kommunikationen.
+1. Markera tabellen och tryck på ![configure_icon](assets/configure_icon.png) (Configure). Du kan också markera tabellen med hjälp av **innehållsläsaren** i sidokickaren i den interaktiva kommunikationen.
 1. Välj **Aktivera sortering.**
-1. Tryck ![](assets/done_icon.png) för att spara tabellegenskaperna. Sorteringsikonerna, uppåt- och nedåtpilarna, i kolumnrubriker representerar att sorteringen har aktiverats.
+1. Tryck på ![made_icon](assets/done_icon.png) för att spara tabellegenskaperna. Sorteringsikonerna, uppåt- och nedåtpilarna, i kolumnrubriker representerar att sorteringen har aktiverats.
 
    ![Aktivera sortering](assets/enable_sorting_new-1.png)
 
@@ -479,7 +479,7 @@ Du kan lägga till en knapp som en komponent i webbkanalen i den interaktiva kom
 Så här lägger du till en knapp och definierar regler för den:
 
 1. Tryck på rotpanelen i webbmallen och tryck **+** för att lägga till **Button** -komponenten i den interaktiva kommunikationen.
-1. Tryck på knappkomponenten och tryck på ![](assets/edit-rules.png) för att definiera regler vid knapptryckningen.
+1. Tryck på knappkomponenten och tryck på ![redigeringsregler](assets/edit-rules.png) för att definiera regler vid knapptryckningen.
 1. I **området När** väljer du **klickad** i läget för knapplistrutan.
 1. Under **Sedan** :
 
