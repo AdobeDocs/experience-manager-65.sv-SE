@@ -8,7 +8,10 @@ uuid: ffb2cc22-baaf-4525-a2e3-29f39271c670
 topic-tags: introduction
 discoiquuid: 655303a4-99bb-4ba3-9d50-a178f5edcf85
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: bd70508b361ac8b62ebc0344538a18369a075f3e
+workflow-type: tm+mt
+source-wordcount: '2077'
+ht-degree: 4%
 
 ---
 
@@ -21,9 +24,9 @@ Lär dig skapa ett anpassat tema, formatera enskilda komponenter och använda we
 
 Den här självstudiekursen är ett steg i serien [Create Your First Adaptive Form](https://helpx.adobe.com/experience-manager/6-3/forms/using/create-your-first-adaptive-form.html) . Vi rekommenderar att du följer serien i kronologisk ordning för att förstå, utföra och demonstrera det fullständiga exemplet på självstudiekurser.
 
-## Om självstudiekursen {#about-the-tutorial}
+## Om självstudiekursen  {#about-the-tutorial}
 
-Du kan använda teman för att ge ett anpassat formulär ett unikt utseende och en unik stil. Du kan använda färdiga teman som medföljer redigeringsprogrammet för anpassade formulär eller skapa egna teman. I AEM Forms finns en [temaredigerare](https://helpx.adobe.com/experience-manager/6-3/forms/using/themes.html) för att skapa anpassade teman. Ett och samma tema kan ge olika utseenden till samma adaptiva formulär som öppnas på mobilen, surfplattan eller datorn. Du behöver inte ha någon tidigare kunskap om CSS eller LESS för att kunna använda temaredigeraren, men du vill ha den.
+Du kan använda teman för att ge ett anpassat formulär ett unikt utseende och en unik stil. Du kan använda färdiga teman som medföljer redigeringsprogrammet för anpassade formulär eller skapa egna teman. AEM Forms tillhandahåller en [temaredigerare](https://helpx.adobe.com/experience-manager/6-3/forms/using/themes.html) för att skapa anpassade teman. Ett och samma tema kan ge olika utseenden till samma adaptiva formulär som öppnas på mobilen, surfplattan eller datorn. Du behöver inte ha någon tidigare kunskap om CSS eller LESS för att kunna använda temaredigeraren, men du vill ha den.
 
 I slutet av självstudiekursen kommer du att lära dig att:
 
@@ -57,11 +60,11 @@ Adaptiv formulärredigerare har flera färdiga teman. Om du inte tänker använd
 
 ![Adaptiv form med standardtemat](assets/default-adaptive-form.png)
 
-**Bild:** Anpassa form *med standardtemat*
+**Bild:** *Adaptiv form med standardtemat*
 
 ![Adaptiv form med undersökningstemat](assets/adaptive-form-with-survey-theme.png)
 
-**Bild:** *Adaptiv form med Undersökningstemat*
+**Bild:** *Adaptiv form med undersökningstemat*
 
 ## Steg 2: Uppdatera ditt anpassningsbara formulär {#step-update-your-adaptive-form}
 
@@ -76,6 +79,7 @@ Den design som visas ovan kräver ändringar i platshållartext och logotyp i di
    1. Tryck på logotypbilden i rubrikkomponenten och tryck på ![cmpr](assets/cmppr.png) -egenskaper. Tryck på X i egenskapen image för att ta bort den befintliga logotypbilden.
    1. Tryck på upload, välj logo.png och tryck på ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) för att spara ändringarna. Bilden hämtades i avsnittet [Innan du började](/help/forms/using/style-your-adaptive-form.md#before-you-start) .
    1. Tryck på rubriktext `We.Retail`och tryck på ![aem_6_3_edit](assets/aem_6_3_edit.png) **edit**. Ändra rubriktext till `we retail`. Använd endast fet stil `we`i `we retail`.
+
    ![we-retail-logo-text](assets/we-retail-logo-text.png)
 
 1. Ta bort rubrik och lägg till platshållartext:
@@ -84,6 +88,7 @@ Den design som visas ovan kräver ändringar i platshållartext och logotyp i di
    1. Kopiera innehållet i **titelfältet** till **platshållartextfältet** .
    1. Ta bort innehållet i fältet **Titel** och tryck på ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
    1. Upprepa de tre föregående stegen för alla textrutor, numeriska rutor och e-postfält i formuläret.
+
    ![updated-adaptive-form](assets/updated-adaptive-form.png)
 
 ## Steg 3: Skapa ett anpassat tema för ditt anpassade formulär {#step-create-a-custom-theme-for-your-adaptive-form}
@@ -97,7 +102,7 @@ I den här självstudiekursen kommer du att formatera sidhuvud och sidfot, text 
 ### Skapa ett tema {#create-a-theme}
 
 1. Logga in på AEM-författarinstansen och gå till **Adobe Experience Manager** > **Formulär** > **Teman**. Standardwebbadressen är [http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes).
-1. Tryck på **[!UICONTROL Skapa]** och välj **[!UICONTROL tema]**. Sidan Skapa tema med de fält som krävs för att skapa ett tema visas. Fälten Titel och Namn är obligatoriska:
+1. Tryck **[!UICONTROL Create]** och välj **[!UICONTROL Theme]**. Sidan Skapa tema med de fält som krävs för att skapa ett tema visas. Fälten Titel och Namn är obligatoriska:
 
    * **Titel:** Ange en titel på temat. Exempel: **Globalt tema.** Titeln hjälper dig att identifiera temat från listan med teman.
    * **Namn:** Ange namnet på temat. Exempel: **Global-Theme.** En nod med det angivna namnet skapas i databasen. När du börjar skriva en titel genereras värdet för namnfältet automatiskt. Du kan ändra det föreslagna värdet. Namnfältet får endast innehålla alfanumeriska tecken, bindestreck och understreck. Alla ogiltiga indata ersätts med ett bindestreck.
@@ -110,17 +115,17 @@ I den här självstudiekursen kommer du att formatera sidhuvud och sidfot, text 
 
    ![anpassat tema](assets/custom-theme.png)
 
-   **Bild:** Redigera *teman med anpassningsbara formulär för leverans-adress-add-update-form*
+   **Bild:** *Theme editor with the shipping-address-add-update-form adaptive form*
 
    ![create-a-theme](assets/create-a-theme.png)
 
-   **Bild:** Anpassningsbart *formulär med standardformuläret*
+   **Bild:** *Anpassningsbart formulär med standardformuläret*
 
 ### Formatera sidhuvud och sidfot {#style-header-and-footer}
 
 Sidhuvud och sidfot ger ett konsekvent och distinkt utseende i en adaptiv form. I allmänhet innehåller sidhuvudet organisationens logotyp och namn, sidfoten innehåller copyrightinformation och dessa är identiska i flera former av en organisation. Gör så här för att formatera sidhuvud och sidfot i anpassat formulär för leverans-address-add-update:
 
-1. Navigera till alternativet **Sidhuvud** > **Text** på panelen Väljare. Väljarpanelen är till vänster om temaredigeraren. Om panelen inte visas trycker du på ![](assets/toggle-side-panel.png) Växla sidopanel.
+1. Navigera till alternativet **Sidhuvud** > **Text** på panelen Väljare. Väljarpanelen är till vänster om temaredigeraren. Om panelen inte visas trycker du på växlingspanelen ![på](assets/toggle-side-panel.png) växlingspanelen.
 
 1. Ange följande egenskaper i dragspelet **Text** och tryck på ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
@@ -137,7 +142,7 @@ Sidhuvud och sidfot ger ett konsekvent och distinkt utseende i en adaptiv form. 
 
    | Egenskap | Värde |
    |---|---|
-   | image | Överför header-style.png. Bilden hämtades i avsnittet [Innan du började](/help/forms/using/style-your-adaptive-form.md#before-you-start) . |
+   | bild | Överför header-style.png. Bilden hämtades i avsnittet [Innan du började](/help/forms/using/style-your-adaptive-form.md#before-you-start) . |
    | Position | Höger nerifrån |
    | Passram | Ingen upprepning |
 
@@ -155,7 +160,7 @@ Sidhuvud och sidfot ger ett konsekvent och distinkt utseende i en adaptiv form. 
     <ul> 
      <li>Överkant: 1,5 rem</li> 
      <li>Underkant: -35px</li> 
-     <li>Vänster: 1rem<strong><br /></strong></li> 
+     <li>Vänster: 1 rem<strong><br /> </strong></li> 
     </ul> <p><strong>Tips:</strong> Tryck på <img src="assets/link.png"> länkikonen för att ange olika värden för varje fält.<br /> </p> </td> 
   </tr> 
   <tr> 
@@ -443,7 +448,7 @@ Adobe Typekit är en webbteckensnittstjänst. Du kan konfigurera och använda tj
 >![Typekit-to-adobe-fonts](assets/typekit-to-adobe-fonts.png) heter nu Adobe Fonts och ingår i Creative Cloud och andra prenumerationer. [Läs mer](https://fonts.adobe.com/).
 
 1. Skapa ett [Adobe Typekit](https://typekit.com/) -konto, skapa ett kit, lägg till teckensnittet Myriad Pro i paketet, publicera paketet och få ditt Kit-ID. Du måste använda Adobe Typekit-teckensnitt (webbteckensnitt) i en anpassningsbar form.
-1. Navigera till ![adobeexperienceManager](assets/adobeexperiencemanager.png) **Adobe Experience Manager** > **Tools** ![hammer](assets/hammer.png) > **Deployment** ****> Cloud Services på AEM Forms-servern. På sidan Cloud Services går du till **Tredjepartstjänster** > **Typekit** och klickar på **Configure** Now under Typekit. Om det redan finns en konfiguration klickar du på plusknappen (+) för att skapa en ny instans.
+1. Gå till ![adobeexperienceManager](assets/adobeexperiencemanager.png) **Adobe Experience Manager** > **Tools** ![hammer](assets/hammer.png) > **Deployment** >¥Cloud Services på AEM Forms-servern ****. På sidan Cloud Service går du till **Tredjepartstjänster** > **Typekit** och klickar på **Konfigurera** nu under Typekit. Om det redan finns en konfiguration klickar du på plusknappen (+) för att skapa en ny instans.
 
    I dialogrutan Skapa konfiguration anger du en **rubrik** för konfigurationen och klickar på **Skapa**. Du omdirigeras till konfigurationssidan. Ange ditt **kit-ID** i dialogrutan Redigera komponent som visas och klicka på **OK**.
 
