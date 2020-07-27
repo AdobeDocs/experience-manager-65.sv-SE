@@ -9,7 +9,7 @@ topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 translation-type: tm+mt
-source-git-commit: 9e1d77b8696436b392f0d9209ddcb2c9196f3c09
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '7698'
 ht-degree: 0%
@@ -218,7 +218,7 @@ Configuration Manager använde en serverlet som distribuerats på programservern
 1. Öppna filen META-INF/application.xml.
 1. Sök efter avsnittet adobe-bootstrapper.war:
 
-   ```as3
+   ```java
    <!-- bootstrapper start --> 
    <module id="WebApp_adobe_bootstrapper"> 
        <web> 
@@ -238,7 +238,7 @@ Configuration Manager använde en serverlet som distribuerats på programservern
 1. Stoppa AEM Forms-servern.
 1. Kommentera adobe-bootstrapper.war och katalogen adobe-lcm-bootstrapper-redirectory. Krigsmoduler enligt följande:
 
-   ```as3
+   ```java
    <!-- bootstrapper start --> 
    <!-- 
    <module id="WebApp_adobe_bootstrapper"> 
@@ -280,7 +280,7 @@ När AEM Forms på JEE är installerat konfigureras ett enda standardanvändarko
 
 1. Skriv följande URL i en webbläsare:
 
-   ```as3
+   ```java
    https://[host name]:[port]/adminui
    ```
 
@@ -313,7 +313,7 @@ WSDL-generering (Web Service Definition Language) ska endast aktiveras för utve
 
 1. Skriv följande URL i en webbläsare:
 
-   ```as3
+   ```java
    https://[host name]:[port]/adminui
    ```
 
@@ -357,7 +357,7 @@ I Oracle behöver det databaskonto du använder bara behörigheterna CONNECT, RE
 
 1. Modifiera [JBOSS_HOME]\\standalone\configuration\lc_{datasource.xml} för att lägga `integratedSecurity=true` till i anslutnings-URL:en, som i det här exemplet:
 
-   ```as3
+   ```java
     jdbc:sqlserver://<serverhost>:<port>;databaseName=<dbname>;integratedSecurity=true
    ```
 
@@ -369,7 +369,7 @@ I Oracle behöver det databaskonto du använder bara behörigheterna CONNECT, RE
 
 1. Starta administrationskonsolen för WebLogic Server genom att skriva följande URL på URL-raden i en webbläsare:
 
-   ```as3
+   ```java
    https://[host name]:7001/console
    ```
 
@@ -730,7 +730,7 @@ Använd listan ***LC_GLOBAL_ALLOWED_REFERER_EXCEPTION*** för tillåtna referens
 
 List-ID:t ***LC_GLOBAL_ALLOWED_REFERER_EXCEPTION*** definieras som en konstant i `UMConstants` klassen för `com.adobe.idp.um.api` namnutrymmet, som finns i `adobe-usermanager-client.jar`. Du kan använda AEM Forms-API:erna för att skapa, ändra eller redigera den här listan. Om du till exempel vill skapa listan Global Allowed Referrer Exceptions använder du:
 
-```as3
+```java
 addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arrays.asList("/index.html", "/sample/(.)*"))
 ```
 
@@ -758,7 +758,7 @@ Du kan ha skapat anpassade WAR-filer för att arbeta med AEM Forms på JEE för 
 
 Här följer ett exempel på filterposten i *web.xml* -filen för en ***SAMPLE*** WAR-fil:
 
-```as3
+```java
 <filter> 
        <filter-name> filter-name </filter-name> 
        <filter-class> com.adobe.idp.um.auth.filter.RemoteCSRFFilter </filter-class> 
@@ -948,7 +948,7 @@ I det här avsnittet beskrivs standardportarna (och alternativa konfigurationsin
 
 **WebSphere-portar**
 
-Mer information om WebSphere-portar som krävs av AEM Forms på JEE finns i inställningen Portnummer i WebSphere Application Server-gränssnittet.
+Mer information om WebSphere-portar som krävs av AEM Forms på JEE finns i inställningen Portnummer i WebSphere Application Server UI.
 
 ### Konfigurerar SSL {#configuring-ssl}
 
@@ -976,7 +976,7 @@ Information om hur du konfigurerar SSL-omdirigering för WebSphere eller WebLogi
 
 1. Lägg till följande kod i https-anslutningselementet:
 
-   ```
+   ```xml
    <connector name="https" protocol="HTTP/1.1" scheme="https" socket-binding="https" secure="true" enabled="true"> 
     <ssl name="jboss7_ssl" key-alias="jboss71" password="Tibco321" certificate-key-file="../standalone/configuration/server.keystore" protocol="TLSv1"/> 
     </connector>
@@ -1053,7 +1053,7 @@ Det här avsnittet innehåller programserverkonfigurationsrekommendationer som �
 
 När du har loggat in på administrationskonsolen går det att bläddra i konsolens kataloglista genom att ändra URL:en. Om du till exempel ändrar URL-adressen till någon av följande URL-adresser kan en kataloglista visas:
 
-```as3
+```java
 https://<servername>:8080/adminui/secured/ 
 https://<servername>:8080/um/
 ```
@@ -1066,7 +1066,7 @@ Det här avsnittet innehåller rekommendationer för programserverkonfiguration 
 
 Ange egenskaperna för index-directories i filen weblogic.xml till `false`, vilket visas i följande exempel:
 
-```as3
+```xml
 <container-descriptor> 
     <index-directory-enabled>false 
     </index-directory-enabled> 
