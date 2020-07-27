@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 91b738ec-aa00-4f05-bf42-2574ced8d993
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '240'
 ht-degree: 0%
@@ -36,7 +36,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms-API:t med stark typning och ansl
 
 I följande Java-kodexempel importeras data till ett PDF-formulär. Data finns i en XML-fil med namnet *Loan_data.xml* och PDF-formuläret sparas som en PDF-fil med namnet *ResultLoanForm.pdf*. (Se [Importera formulärdata](/help/forms/developing/importing-exporting-data.md#importing-form-data).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -138,7 +138,7 @@ I följande Java-kodexempel importeras data till ett PDF-formulär. Data finns i
 
 I följande Java-kodexempel exporteras data från ett PDF-formulär. Formulärdata sparas som en XML-fil med namnet *Loan_data.xml*. (Se [Exportera formulärdata](/help/forms/developing/importing-exporting-data.md#exporting-form-data).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
