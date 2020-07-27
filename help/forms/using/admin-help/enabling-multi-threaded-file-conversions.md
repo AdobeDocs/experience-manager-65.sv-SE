@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 85d655bb-1b6b-4b4d-ae39-eca3ef9b7fd7
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '880'
+ht-degree: 0%
 
 ---
 
@@ -59,7 +62,7 @@ Om du kör OpenOffice, Microsoft Word eller Microsoft PowerPoint på Windows Ser
 1. Därefter gör du ändringar i filen /etc/sudoers. Standardbehörigheten för den här filen är 440. Ändra behörigheten för den här filen till skrivbar.
 1. Lägg till poster för ytterligare användare (andra än administratören som kör formulärservern) i filen /etc/sudoers. Om du till exempel kör AEM-formulär som en användare med namnet lcadm och en server med namnet myhost, och du vill personifiera användare1 och användare2, lägger du till följande poster i /etc/sudoers:
 
-   ```as3
+   ```shell
     lcadm myhost=(user1) NOPASSWD: ALL
     lcadm myhost=(user2) NOPASSWD: ALL
    ```
@@ -72,7 +75,7 @@ Om du kör OpenOffice, Microsoft Word eller Microsoft PowerPoint på Windows Ser
 
 1. I /etc/sudoers-filen kan du söka efter och kommentera den här raden genom att lägga till ett nummertecken (#) i början av raden:
 
-   ```as3
+   ```shell
    Defaults requiretty
    ```
 
