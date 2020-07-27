@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: b7b17cf8-def5-4a77-a872-c1f286814881
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1003'
+ht-degree: 0%
 
 ---
 
@@ -41,7 +44,7 @@ Java API Quick Start (SOAP) är tillgängligt för Assembler-tjänsten
 
 [Snabbstart (SOAP-läge): Sammanställa flera XDP-fragment med Java API](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api)
 
-AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda typer och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms-API:t med stark typning och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
@@ -51,7 +54,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda ty
 
 I följande Java-kodexempel sammanfogas två PDF-källdokument med namnen *map.pdf* och *direction.pdf* till ett enda PDF-dokument. Namnet på det enskilda PDF-dokumentet är *AssemblerResultPDF.pdf*. DDX-dokumentets namn är *shell.xml*. (Se [Sammanställa PDF-dokument](/help/forms/developing/assembling-pdf-documents.md#programmatically-assembling-pdf-documents)programmatiskt.)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -195,7 +198,7 @@ I följande Java-kodexempel sammanfogas två PDF-källdokument med namnen *map.p
 
 I följande Java-kodexempel demonteras ett PDF-dokument med namnet *AssemblerResultPDF.pdf*. Observera att namnet på DDX-dokumentet är *shell_disassemble.xml*. Alla uppdelade PDF-dokument namnges `ResultPDF[Number].pdf`. Det vill säga, det första upplösta PDF-dokumentet heter *ResultPDF1.pdf.* Information om *dx-dokumentet shell_disassemble.xml* som används i det här kodexemplet finns i [Dela upp PDF-dokument](/help/forms/developing/assembling-pdf-documents.md#programmatically-disassembling-pdf-documents)programmatiskt.
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -334,7 +337,7 @@ I följande Java-kodexempel demonteras ett PDF-dokument med namnet *AssemblerRes
 
 I följande Java-kodexempel sätts ett lösenordskrypterat PDF-dokument samman. Det oskyddade PDF-dokumentet heter *Loan.pdf*. Observera att namnet på DDX-dokumentet är *shell_Encrypt.xml*. Det krypterade PDF-dokumentet heter *AssemblerEncryptedPDF.pdf*. (Se [Sammanställa krypterade PDF-dokument](/help/forms/developing/assembling-pdf-documents.md#assembling-encrypted-pdf-documents).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -457,7 +460,7 @@ I följande Java-kodexempel sätts ett lösenordskrypterat PDF-dokument samman. 
 
 Följande Java-kodexempel sätter ihop ett PDF-dokument med unika sididentifierare (bates-numrering). Observera att namnet på DDX-dokumentet är *shell_Bates.xml*. PDF-dokumentet som returneras från Assembler-tjänsten sparas som en PDF-fil med namnet *AssemblerResultBatesPDF.pdf*. (Se [Sammanställa dokument med Bates-numrering](/help/forms/developing/assembling-pdf-documents.md#assembling-documents-using-bates-numbering).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -615,7 +618,7 @@ Följande Java-kodexempel sätter ihop ett PDF-dokument med unika sididentifiera
 
 I följande Java-kodexempel sätts ett icke-interaktivt PDF-dokument samman. Det interaktiva PDF-dokumentet som skickas till Assembler-tjänsten heter *Loan.pdf*. Observera att namnet på DDX-dokumentet är *shell_XFA.xml*. Det icke-interaktiva PDF-dokumentet sparas som en PDF-fil med namnet *AssembleNonInteractivePDF.pdf*. (Se [Sammanställa icke-interaktiva PDF-dokument](/help/forms/developing/assembling-pdf-documents.md#assembling-non-interactive-pdf-documents).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -739,7 +742,7 @@ I följande Java-kodexempel sätts ett icke-interaktivt PDF-dokument samman. Det
 
 I följande Java-kodexempel avgörs om PDF-indatadokumentet är PDF/A-kompatibelt. PDF-indatadokumentet som skickas till Assembler-tjänsten heter *Loan.pdf*. DDX-dokumentets namn är shell_PDFA.xml. Det XML-dokument som returneras från Assembler-tjänsten och anger om PDF-indatadokumentet är PDF/A-kompatibelt sparas som en XML-fil med namnet result.xml. Information om *dx-dokumentet shell_PDFA.xml* som används i det här kodexemplet finns i [Kontrollera om dokumenten är PDF/A-kompatibla](/help/forms/developing/assembling-pdf-documents.md#determining-whether-documents-are-pdf-a-compliant).
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -885,7 +888,7 @@ I följande Java-kodexempel avgörs om PDF-indatadokumentet är PDF/A-kompatibel
 
 I följande Java-kodexempel valideras ett DX-dokument baserat på en fil med namnet *bookmarkDDX.xml*. (Se [Validera DDX-dokument](/help/forms/developing/assembling-pdf-documents.md#validating-ddx-documents).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -1016,7 +1019,7 @@ I följande Java-kodexempel valideras ett DX-dokument baserat på en fil med nam
 
 I följande Java-kodexempel sammanställs ett PDF-dokument som innehåller bokmärken. DDX-dokumentets namn är *bookmarkDDX.xml*. Namnet på det XML-dokument för bokmärken som beskriver de bokmärken som ska läggas till i PDF-dokumentet är bookmarks.xml. Det resulterande PDF-dokumentet sparas som en PDF-fil med namnet AssemblerResultBookmarks.pdf. (Se [Sammanställa PDF-dokument med bokmärken](/help/forms/developing/assembling-pdf-documents.md#assembling-pdf-documents-with-bookmarks).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -1382,7 +1385,7 @@ public class AssemblePDFWithDynamicDDXSOAP {
 
 I följande Java-kodexempel skapas en PDF-portfölj. PDF-portföljen sparas som en PDF-fil med namnet *AssemblerResultPortfolio.pdf*. (Se [Sammanställa PDF-portföljer](/help/forms/developing/assembling-pdf-documents.md#assembling-pdf-portfolios).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -1533,7 +1536,7 @@ I följande Java-kodexempel skapas en PDF-portfölj. PDF-portföljen sparas som 
 
 I följande Java-kodexempel sätts XDP-fragment samman som är baserade på följande XDP-filer: *tuc018_template_flowed.xdp*, *tuc018_contact.xdp* och* tuc018_patient.xdp*. Det monterade XDP-dokumentet som innehåller alla fragment sparas som en XDP-fil med namnet *AssemblerResultXDP.xdp*. (Se [Sammanställa flera XDP-fragment](/help/forms/developing/assembling-pdf-documents.md#assembling-multiple-xdp-fragments).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -1690,7 +1693,7 @@ I följande kodexempel tas ett PDF-dokument bort med `PDFUtility`.
 >
 >`PDFUtility` kan bara redigera bort PDF-filer som har markerats för bortredigering med Acrobat.
 
-```as3
+```java
 /*
  * This Java Quick Start uses the SOAP mode and contains the following JAR files
  * in the class path:
