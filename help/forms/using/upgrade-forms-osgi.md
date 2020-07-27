@@ -10,7 +10,7 @@ topic-tags: installing
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: e745033f-8015-4fae-9d82-99d35802c0a6
 translation-type: tm+mt
-source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '940'
 ht-degree: 0%
@@ -54,7 +54,7 @@ Gör följande för att uppgradera från AEM 6.3-formulär eller AEM 6.4-formul�
    1. Öppna [Pakethanteraren](https://docs.adobe.com/content/help/en/experience-manager-65/administering/contentmanagement/package-manager.html) och klicka **[!UICONTROL Upload Package]** för att överföra paketet.
    1. Markera paketet och klicka på **[!UICONTROL Install]**.
 
-      Du kan också hämta paketet via länken i [AEM Forms-releaseartikeln](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) .
+      Du kan även hämta paketet via länken i [AEM Forms-releaseartikeln](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) .
 
       >[!NOTE]
       >
@@ -70,14 +70,14 @@ Gör följande för att uppgradera från AEM 6.3-formulär eller AEM 6.4-formul�
 
       Om du använder [Sample för att integrera utkast och inskickskomponenter](https://helpx.adobe.com/experience-manager/6-3/forms/using/integrate-draft-submission-database.html) i databasen och uppgradera från en tidigare version kör du följande SQL-frågor när du har utfört uppgraderingen:
 
-      ```
+      ```sql
       UPDATE metadata m, additionalmetadatatable am
       SET m.dataType = am.value
       WHERE m.id = am.id
       AND am.key = 'dataType'
       ```
 
-      ```
+      ```sql
       DELETE from additionalmetadatatable
       WHERE `key` = 'dataType'
       ```
