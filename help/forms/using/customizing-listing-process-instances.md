@@ -9,16 +9,19 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 40d7d43f-ee0a-4e34-ae93-20c9c940f76b
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '302'
+ht-degree: 0%
 
 ---
 
 
 # Anpassa listan över processinstanser {#customizing-the-listing-of-process-instances}
 
-Processinstanslistan visas på fliken Spårning på arbetsytan i AEM Forms.
+Processinstanslistan visas på fliken Spåra på arbetsytan i AEM Forms.
 
-I processinstanslistan visar AEM Forms-arbetsytan några egenskaper för den instansen för varje processinstans. Följande egenskaper är tillgängliga för varje processinstans. Dessa egenskaper lagras som attribut i processinstansens komponentmodell och är tillgängliga för användning i dess vy och mall.
+I processinstanslistan visar arbetsytan i AEM Forms vissa egenskaper för den instansen för varje processinstans. Följande egenskaper är tillgängliga för varje processinstans. Dessa egenskaper lagras som attribut i processinstansens komponentmodell och är tillgängliga för användning i dess vy och mall.
 
 <table>
  <tbody>
@@ -75,7 +78,7 @@ Utför följande steg för att visa `description` egenskapen för processinstans
    1. Kopiera /libs/ws/js/runtime/templates/processinstance.html till/apps/ws/js/runtime/templates/, om den inte finns. Klicka på **Spara alla**.
    1. Lägg till processbeskrivning div med klass = &#39;processDescription&#39; inprocessinstance.html.
 
-   ```
+   ```jsp
    <div class="processDescription" title="<%= description%>"><%= description%></div>
    ```
 
