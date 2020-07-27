@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 30a12fc6-07b8-4c7c-b9e2-caa2bec0ac48
 translation-type: tm+mt
-source-git-commit: ebb60e79aa7fb45e059e2d2451f6d549cd24b8b0
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '3489'
+ht-degree: 0%
 
 ---
 
@@ -36,11 +39,11 @@ Det måste finnas ett XML-element för varje formulärfält som du vill fylla i 
 
 När du fyller i ett formulär som redan innehåller data i förväg måste du ange de data som redan visas i XML-datakällan. Anta att ett formulär som innehåller 10 fält innehåller data i fyra fält. Anta sedan att du vill fylla i de återstående sex fälten i förväg. I det här fallet måste du ange 10 XML-element i XML-datakällan som används för att fylla i formuläret i förväg. Om du bara anger sex element är de fyra ursprungliga fälten tomma.
 
-Du kan t.ex. fylla i ett formulär i förväg, t.ex. exempelbekräftelseformuläret. (Se&quot;Bekräftelseformulär&quot; i [Återge interaktiva PDF-formulär](/help/forms/developing/rendering-interactive-pdf-forms.md).)
+Du kan t.ex. fylla i ett formulär i förväg, t.ex. exempelbekräftelseformuläret. (Se&quot;Bekräftelseformulär&quot; i [Återgivning av interaktiv PDF forms](/help/forms/developing/rendering-interactive-pdf-forms.md).)
 
 Om du vill fylla i exempelbekräftelseformuläret i förväg måste du skapa en XML-datakälla som innehåller tre XML-element som matchar de tre fälten i formuläret. Formuläret innehåller följande tre fält: `FirstName`, `LastName`och `Amount`. Det första steget är att skapa en XML-datakälla som innehåller XML-element som matchar fälten i formulärdesignen. Nästa steg är att tilldela datavärden till XML-elementen, vilket visas i följande XML-kod.
 
-```as3
+```xml
      <Untitled>
          <FirstName>Jerry</FirstName>
          <LastName>Johnson</LastName>
@@ -111,7 +114,7 @@ En XML-datakälla som används för att fylla i inköpsorderformuläret som visa
 
 Följande XML-datakälla används för att fylla i inköpsorderformuläret i förväg.
 
-```as3
+```xml
      <header>
          <!-- XML elements used to prepopulate non-repeating fields such as address
          <!and city
@@ -231,7 +234,7 @@ Du återger ett förifyllt formulär precis som andra formulär. Den enda skilln
 
 [Snabbstart för Forms Service API](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
-[Återgivning av interaktiva PDF-formulär](/help/forms/developing/rendering-interactive-pdf-forms.md)
+[Återger interaktiv PDF forms](/help/forms/developing/rendering-interactive-pdf-forms.md)
 
 [Skapa webbprogram som återger formulär](/help/forms/developing/creating-web-applications-renders-forms.md)
 
@@ -241,7 +244,7 @@ Så här fyller du i ett formulär i förväg med en flödeslayout med hjälp av
 
 1. Inkludera projektfiler
 
-   Inkludera JAR-klientfiler, t.ex. adobe-forms-client.jar, i Java-projektets klassökväg. Mer information om var dessa filer finns i [Inkludera Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)för AEM Forms.
+   Inkludera JAR-klientfiler, t.ex. adobe-forms-client.jar, i Java-projektets klassökväg. Mer information om platsen för dessa filer finns i [Inkludera Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)för AEM Forms.
 
 1. Skapa en XML-datakälla i minnet
 
@@ -294,6 +297,7 @@ Så här fyller du i ett formulär i förväg med en flödeslayout med hjälp av
    * Ett `PDFFormRenderSpec` objekt som lagrar körningsalternativ.
    * Ett `URLSpec` objekt som innehåller URI-värden som krävs av Forms-tjänsten.
    * Ett `java.util.HashMap` objekt som lagrar bifogade filer. Det här är en valfri parameter och du kan ange `null` om du inte vill bifoga filer till formuläret.
+
    Metoden returnerar `renderPDFForm` ett `FormsResult` objekt som innehåller en formulärdataström som måste skrivas till klientens webbläsare.
 
    * Skapa ett `javax.servlet.ServletOutputStream` objekt som används för att skicka en formulärdataström till klientens webbläsare.
@@ -367,13 +371,14 @@ Så här fyller du i ett formulär med flödeslayout med Forms API (webbtjänste
 
    * Ett strängvärde som anger formulärdesignens namn, inklusive filnamnstillägget.
    * Ett `BLOB` objekt som innehåller data som ska sammanfogas med formuläret. Se till att du använder det objekt `BLOB` som skapades i steg ett och två.
-   * Ett `PDFFormRenderSpecc` objekt som lagrar körningsalternativ. Mer information finns i API-referens för [AEM-formulär](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+   * Ett `PDFFormRenderSpecc` objekt som lagrar körningsalternativ. Mer information finns i [AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
    * Ett `URLSpec` objekt som innehåller URI-värden som krävs av Forms-tjänsten.
    * Ett `java.util.HashMap` objekt som lagrar bifogade filer. Det här är en valfri parameter och du kan ange `null` om du inte vill bifoga filer till formuläret.
    * Ett tomt `com.adobe.idp.services.holders.BLOBHolder` objekt som fylls i av metoden. Detta används för att lagra det återgivna PDF-formuläret.
    * Ett tomt `javax.xml.rpc.holders.LongHolder` objekt som fylls i av metoden. (Det här argumentet lagrar antalet sidor i formuläret).
    * Ett tomt `javax.xml.rpc.holders.StringHolder` objekt som fylls i av metoden. (Det här argumentet lagrar språkets värde).
    * Ett tomt `com.adobe.idp.services.holders.FormsResultHolder` objekt som innehåller resultatet av den här åtgärden.
+
    Metoden `renderPDFForm` fyller i det `com.adobe.idp.services.holders.FormsResultHolder` objekt som skickas som det sista argumentvärdet med en formulärdataström som måste skrivas till klientens webbläsare.
 
    * Skapa ett `FormResult` objekt genom att hämta värdet för `com.adobe.idp.services.holders.FormsResultHolder` objektets `value` datamedlem.
@@ -383,11 +388,12 @@ Så här fyller du i ett formulär med flödeslayout med Forms API (webbtjänste
    * Skapa ett `javax.servlet.ServletOutputStream` objekt som används för att skriva formulärdataströmmen till klientens webbläsare genom att anropa `javax.servlet.http.HttpServletResponse` objektets `getOutputStream` metod.
    * Skapa en bytearray och fyll i den genom att anropa `BLOB` objektets `getBinaryData` metod. Den här aktiviteten tilldelar innehållet i `FormsResult` objektet till bytearrayen.
    * Anropa `javax.servlet.http.HttpServletResponse` objektets `write` metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till `write` metoden.
+
    >[!NOTE]
    >
    >Metoden `renderPDFForm` fyller i det `com.adobe.idp.services.holders.FormsResultHolder` objekt som skickas som det sista argumentvärdet med en formulärdataström som måste skrivas till klientens webbläsare.
 
 **Se även**
 
-[Anropa AEM-formulär med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[Anropar AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
 
