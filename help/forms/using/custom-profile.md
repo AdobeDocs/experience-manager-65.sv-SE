@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 9cd22244-9aa6-4b5f-96cf-c9cb3d6f9c8a
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: c74d9e86727f2deda62b8d1eb105b28ef4b6d184
+workflow-type: tm+mt
+source-wordcount: '688'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +31,7 @@ En profil innehåller olika moduler. Modulerna är formRuntime.jsp, config.jsp, 
 
 ## formRuntime.jsp {#formruntime-jsp-br}
 
-Modulerna formRuntime.jsp innehåller referenser till klientbiblioteken. Det visar också metoder för att extrahera språkinformation från begäran och inkludera lokaliserade meddelanden i begäran. Du kan inkludera egna javascript-libs eller -stilar i formRuntime.jsp.
+Modulerna formRuntime.jsp innehåller referenser till klientbiblioteken. Det visar också metoder för att extrahera språkinformation från begäran och inkludera lokaliserade meddelanden i begäran. Du kan inkludera egna anpassade JavaScript-bibliotek eller -format i formRuntime.jsp.
 
 ## config.jsp {#config-jsp}
 
@@ -56,7 +59,7 @@ Så här skapar du en anpassad profil:
 
 ### Skapa profilnod {#create-profile-node}
 
-1. Navigera till CRX DE-gränssnittet på URL:en: och logga `https://'[server]:[port]'/crx/de` in i gränssnittet med administratörsautentiseringsuppgifter.
+1. Navigera till CRX DE-gränssnittet på URL:en: `https://'[server]:[port]'/crx/de` och logga in i gränssnittet med administratörsuppgifter.
 
 1. Navigera till platsen */content/xfaforms/profiles* i den vänstra rutan.
 
@@ -80,4 +83,4 @@ När du har skapat en anpassad profil lägger du till återgivningsinformation i
 
 1. Kontrollera att profilen har skapats genom att öppna URL `https://'[server]:[port]'/content/xfaforms/profiles/hrform.html`
 
-Verifiera formulären genom att [importera formulären](/help/forms/using/get-xdp-pdf-documents-aem.md) från det lokala filsystemet till AEM Forms och [förhandsgranska formuläret](/help/forms/using/previewing-forms.md) på AEM-serverns författarinstans.
+Kontrollera formulären genom att [importera formulären](/help/forms/using/get-xdp-pdf-documents-aem.md) från det lokala filsystemet till AEM Forms och [förhandsgranska formuläret](/help/forms/using/previewing-forms.md) i AEM-serverns författarinstans.
