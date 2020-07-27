@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 6f9a294d-24bd-4e4b-b929-2809f5e6cef9
 translation-type: tm+mt
-source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '2190'
 ht-degree: 0%
@@ -30,7 +30,7 @@ Tänk på följande när det gäller säkerhetskopiering och återställning:
 
 ## Katalog för global dokumentlagring {#global-document-storage-directory}
 
-GDS är en katalog som används för att lagra långlivade filer som används i en process. Långvariga filer är avsedda att omfatta en eller flera lanseringar av ett AEM-formulärsystem och kan omfatta flera dagar och till och med år. Dessa långa filer kan innehålla PDF-filer, profiler och formulärmallar. Långvariga filer är en viktig del av det övergripande tillståndet för många AEM-formulärdistributioner. Om vissa eller alla långlivade dokument förloras eller skadas kan formulärservern bli instabil.
+GDS är en katalog som används för att lagra långlivade filer som används i en process. Långvariga filer är avsedda att omfatta en eller flera lanseringar av ett AEM-formulärsystem och kan sträcka sig över flera dagar och till och med år. Dessa långa filer kan innehålla PDF-filer, profiler och formulärmallar. Långvariga filer är en viktig del av det övergripande tillståndet för många AEM-formulärdistributioner. Om vissa eller alla långlivade dokument förloras eller skadas kan formulärservern bli instabil.
 
 Indatadokument för asynkrona jobbanrop lagras också i GDS och måste vara tillgängliga för bearbetning av begäranden. Därför är det viktigt att du ser tillförlitligheten i det filsystem som är värd för GDS och använder en redundant uppsättning av oberoende diskar (RAID) eller annan teknik som passar för dina krav på kvalitet och servicenivå.
 
@@ -57,7 +57,7 @@ GDS-platserna kan ändras under en återställning om den ursprungliga platsen i
 
 Du kan aktivera dokumentlagring för AEM-formulär i AEM-formulärdatabasen med administrationskonsolen. Även om det här alternativet behåller alla beständiga dokument i databasen, kräver AEM-formulär fortfarande den filsystembaserade GDS-katalogen eftersom den används för att lagra permanenta och tillfälliga filer och resurser relaterade till sessioner och anrop av AEM-formulär.
 
-När du väljer alternativet Aktivera dokumentlagring i databasen i Core System Settings i administrationskonsolen eller med Configuration Manager, tillåter inte AEM-formulär läge för säkerhetskopiering av ögonblicksbilder och rullande säkerhetskopieringsläge. Därför behöver du inte hantera säkerhetskopieringslägen med AEM-formulär. Om du använder det här alternativet bör du endast säkerhetskopiera GDS en gång efter att du har aktiverat alternativet. När du återställer AEM-formulär från en säkerhetskopia behöver du inte byta namn på säkerhetskopieringskatalogen för GDS eller återställa GDS.
+När du väljer alternativet &quot;Aktivera dokumentlagring i databasen&quot; i Core System Settings i administrationskonsolen eller med Configuration Manager, tillåter inte AEM-formulär att ögonblicksbilder säkerhetskopieras och rullande säkerhetskopieringsläge. Därför behöver du inte hantera säkerhetskopieringslägen med AEM-formulär. Om du använder det här alternativet bör du endast säkerhetskopiera GDS en gång efter att du har aktiverat alternativet. När du återställer AEM-formulär från en säkerhetskopia behöver du inte byta namn på säkerhetskopieringskatalogen för GDS eller återställa GDS.
 
 ## AEM-databas {#aem-repository}
 
@@ -146,7 +146,7 @@ Du kan använda verktyget mysqldump för att få en fullständig säkerhetskopie
 
 Se [Sammanfattning](https://dev.mysql.com/doc/refman/5.5/en/backup-strategy-summary.html)av säkerhetskopieringsstrategi.
 
-```as3
+```text
 binlog_format=mixed
 log-bin=logname
 ```
