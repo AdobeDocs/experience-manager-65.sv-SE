@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: b624e255-ae71-4d9c-8554-d48f3e77b799
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '221'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ Java API Quick Start (SOAP) är tillgängligt för tjänsten Credential.
 
 [Snabbstart (SOAP-läge): Ta bort autentiseringsuppgifter med Java API](credential-service-java-api-quick.md#quick-start-soap-mode-deleting-credentials-using-the-java-api)
 
-AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda typer och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms-API:t med stark typning och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
@@ -37,7 +40,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda ty
 
 I följande kodexempel importeras en referens baserat på en fil med namnet *cred.p12*. Aliasvärdet som används för att importera autentiseringsuppgifterna är `Secure`. (Se [Importera autentiseringsuppgifter med Trust Manager API](/help/forms/developing/credentials.md#importing-credentials-by-using-the-trust-manager-api).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -138,7 +141,7 @@ I följande kodexempel importeras en referens baserat på en fil med namnet *cre
 
 I följande kodexempel tas en referens bort baserat på ett aliasvärde som är *säkert*. (Se [Ta bort autentiseringsuppgifter med Trust Manager API](/help/forms/developing/credentials.md#deleting-credentials-by-using-the-trust-manager-api).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
