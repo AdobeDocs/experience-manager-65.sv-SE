@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: d855aac2-f34d-402f-9dc3-c7ad494b45f2
 translation-type: tm+mt
-source-git-commit: df59879cfa6b0bc7eba13f679e833fabbcbe92f2
+source-git-commit: d80c6609b5a0ac299b57b1d0c0e8d6210e595b97
 workflow-type: tm+mt
 source-wordcount: '436'
 ht-degree: 0%
@@ -49,11 +49,11 @@ Så här når du OSGi-konfigurationen:
 * Hitta `AEM Communities User Generated Content Contribution Limits Configuration`.
 * Välj redigeringsikonen.
 
-![chlimage_1-127](assets/chlimage_1-127.png)
+![configure-limits](assets/configure-limits.png)
 
 * **[!UICONTROL Automatically Apply UGC Contribution Limits]**
 
-   Om det här alternativet är markerat anger automatiskt bidragsgränser för användare när de registrerar sig som community-medlemmar. Detta återspeglas i communitymedlemmens profil och kan aktiveras/inaktiveras från [medlemskonsolen](members.md). Nya medlemmar med en e-postadress från en lista över tillåtna domäner begränsas aldrig.
+   Om det här alternativet är markerat anger automatiskt bidragsgränser för användare när de registrerar sig som community-medlemmar. Detta återspeglas i communitymedlemmens profil och kan aktiveras/inaktiveras från [medlemskonsolen](members.md). Nya medlemmar med en e-postadress från tillåtelselista i domäner begränsas aldrig.
 
    Standard är avmarkerat.
 
@@ -71,11 +71,11 @@ Så här når du OSGi-konfigurationen:
 
 * **[!UICONTROL Domains]**
 
-   En lista över tillåtna domäner för en eller flera e-postdomäner. Markera +-ikonen om du vill göra ytterligare inmatningar.
+   En lista med tillåtelselista i en eller flera e-postdomäner. Markera +-ikonen om du vill göra ytterligare inmatningar.
 
-   Användare med e-postadresser i listan över tillåtna domäner påverkas inte när UGC-bidragsgränser tillämpas automatiskt. Om till exempel en domän `mycompany.com` läggs till i listan över domäner `me@mycompany.com` begränsas aldrig en medlem med e-postadress från publicering.
+   Användare med e-postadresser tillåtelselista i domäner påverkas inte när UGC-bidragsgränser tillämpas automatiskt. Om till exempel en domän `mycompany.com` läggs till i listan över domäner `me@mycompany.com` begränsas aldrig en medlem med e-postadress från publicering.
 
-   Standard är en tom lista över tillåtna användare.
+   Standard är en tom tillåtelselista.
 
 * **[!UICONTROL Messaging Recipients]**
 
