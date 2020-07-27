@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 232a0ec1-8dfc-41ec-84cc-69f9db494ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: df59879cfa6b0bc7eba13f679e833fabbcbe92f2
+source-git-commit: eb5317be52eec39b947ccb3c456d21d567ef2841
 workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 0%
@@ -47,7 +47,7 @@ Så som visas nedan finns det en konfiguration av tjänsten för webbplatser som
 
 Om du vill lägga till en ny konfiguration väljer du plusikonen &quot;**+**&quot; bredvid tjänstens namn:
 
-* **Tillåtna meddelandefält**
+* **Meddelandefält Tillåtslista**
 
    Anger egenskaperna för den Compose Message-komponent som användare kan redigera och behålla. Om nya formulärelement läggs till måste element-ID läggas till om det ska lagras i SRP. Standard är två poster: *ämne* och *innehåll*.
 
@@ -85,11 +85,11 @@ Om du vill lägga till en ny konfiguration väljer du plusikonen &quot;**+**&quo
 
 * **Inkorgsbana**
 
-   (*Obligatoriskt*) Sökvägen, i förhållande till användarens nod (/home/users/*username*), som ska användas för **`inbox`** mappen. Sökvägen får INTE avslutas med ett avslutande snedstreck (/). Standard är */e-post/inkorg*.
+   (*Obligatoriskt*) Sökvägen, i förhållande till användarens nod (/home/users/*username*), som ska användas för `inbox` mappen. Sökvägen får INTE avslutas med ett avslutande snedstreck (/). Standard är */e-post/inkorg*.
 
 * **Sökväg för skickade objekt**
 
-   (*Obligatoriskt*) Sökvägen, i förhållande till användarens nod (/home/users/*username*), som ska användas för **`send items`** mappen. Sökvägen får INTE avslutas med ett avslutande snedstreck (/). Standardvärdet är */mail/sentists* .
+   (*Obligatoriskt*) Sökvägen, i förhållande till användarens nod (/home/users/*username*), som ska användas för `sent items` mappen. Sökvägen får INTE avslutas med ett avslutande snedstreck (/). Standardvärdet är */mail/sentists* .
 
 * **Supportbilagor**
 
@@ -111,13 +111,13 @@ Om du vill lägga till en ny konfiguration väljer du plusikonen &quot;**+**&quo
 
    Om supportAttachments är markerat anger det här värdet den största tillåtna totala storleken (i byte) för alla bilagor. Standardvärdet är *104857600* (100 MB).
 
-* **Blocklista för bilagetyp**
+* **Bilagetyp blockeringslista**
 
-   En blocklista med filnamnstillägg, prefix med &#39;**.**&#39;, som kommer att refuseras av systemet. Om det inte blockeras tillåts tillägget. Tillägg kan läggas till eller tas bort med ikonerna **+** och **-**.
+   En blockeringslista med filnamnstillägg, prefix med &#39;**.**&#39;, som kommer att refuseras av systemet. Om tillägget inte blocklist tillåts det. Tillägg kan läggas till eller tas bort med ikonerna **+** och **-**.
 
 * **Tillåtna bilagetyper**
 
-   **(*Åtgärd krävs*)** En lista över filnamnstillägg, motsatsen till blocklistan. Om du vill tillåta alla filnamnstillägg, förutom de som är blocklistade, använder du ikonen &quot;**-**&quot; för att ta bort den tomma posten.
+   **(*Åtgärd krävs*)** En tillåtelselista med filnamnstillägg, motsatsen till blockeringslista. Om du vill tillåta alla filnamnstillägg, förutom de som är blocklist, använder du ikonen **-** för att ta bort den tomma posten.
 
 * **Tjänstväljare**
 
@@ -125,15 +125,15 @@ Om du vill lägga till en ny konfiguration väljer du plusikonen &quot;**+**&quo
 
    Standardvärdet är */bin/messaging* .
 
-* **Tillåten fältlista**
+* **Tillåtelselista i fält**
 
-   Använd listan Tillåtna **meddelandefält**.
+   Använd **meddelandefält Tillåtelselista**.
 
 >[!CAUTION]
 >
 >Varje gång en `Messaging Operations Service` konfiguration öppnas för redigering, om den `allowedAttachmentTypes.name` tagits bort, läggs en tom post till så att egenskapen kan konfigureras. En enda tom post inaktiverar effektivt bifogade filer.
 >
->Om du vill tillåta alla filnamnstillägg, förutom de som visas i listan, använder du ikonen &quot;**-**&quot; för att (en gång till) ta bort den tomma posten innan du klickar på **Spara**.
+>Om du vill tillåta alla filnamnstillägg, förutom de som är blocklist, använder du ikonen **-** för att (igen) ta bort den tomma posten innan du klickar på **Spara**.
 
 
 ## Gruppmeddelanden {#group-messaging}
