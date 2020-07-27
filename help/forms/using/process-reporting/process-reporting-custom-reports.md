@@ -1,8 +1,8 @@
 ---
 title: Anpassade rapporter i processrapportering
 seo-title: Anpassade rapporter i processrapportering
-description: Du kan skapa anpassade rapporter och lägga till dessa rapporter i gränssnittet för AEM Forms on JEE Process Reporting.
-seo-description: Du kan skapa anpassade rapporter och lägga till dessa rapporter i gränssnittet för AEM Forms on JEE Process Reporting.
+description: Du kan skapa anpassade rapporter och lägga till dessa rapporter i användargränssnittet för JEE-processrapportering i AEM Forms.
+seo-description: Du kan skapa anpassade rapporter och lägga till dessa rapporter i användargränssnittet för JEE-processrapportering i AEM Forms.
 uuid: 81039fe8-d757-4c85-a1eb-88e4e6aa8500
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,7 +10,10 @@ topic-tags: process-reporting
 discoiquuid: 222daab8-4514-44a5-b5c9-c5510809c74e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: c74d9e86727f2deda62b8d1eb105b28ef4b6d184
+workflow-type: tm+mt
+source-wordcount: '1033'
+ht-degree: 0%
 
 ---
 
@@ -45,20 +48,20 @@ CRX QueryBuilder REST-gränssnittet exponerar funktionerna i Asset Share Query B
    >
    >I varje fråga pekar parametern path på lagringsplatsen crx och tecknen escape-konverteras enligt URL-standarden.
 
-## Skapa en tjänst med hjälp av Query Builder API {#creating-a-service-using-query-builder-api-nbsp}
+## Skapa en tjänst med hjälp av Query Builder API  {#creating-a-service-using-query-builder-api-nbsp}
 
 Förutsättningen för att skapa en tjänst med hjälp av Query Builder API är [att skapa och distribuera CQ OSGI-paket](https://docs.adobe.com/docs/v5_2/html-resources/cq5_guide_developer/cq5_guide_developer.html) och [använda Query Builder API](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html).
 
 1. Skapa en OSGi-tjänst med lämpliga anteckningar. Så här kommer du åt QueryBuilder:
 
-   ```
+   ```java
    @Reference(referenceInterface = QueryBuilder.class)
     private QueryBuilder queryBuilder;
    ```
 
 1. Skapa en predikatgrupp. Kod för att skapa en predikatgrupp är:
 
-   ```
+   ```java
    PredicateGroup predicateGroup = new PredicateGroup();
     predicateGroup.setAllRequired(true);
    ```
@@ -340,7 +343,7 @@ public class PeriodicProcessVolume {
 
 Exempelfilen `pom.xml`som ska skapas ovanför tjänsten är:
 
-```java
+```xml
 <project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
@@ -420,7 +423,7 @@ Exempelfilen `pom.xml`som ska skapas ovanför tjänsten är:
 </project>
 ```
 
-## Skapa ett separat gränssnitt {#creating-a-separate-ui-nbsp}
+## Skapa ett separat gränssnitt  {#creating-a-separate-ui-nbsp}
 
 Förutsättningen för att skapa ett separat användargränssnitt för att visa resultat är [Sling Basics](https://docs.adobe.com/docs/en/cq/5-6-1/developing/the_basics.html), [Creating a CRX Node](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Creating%20a%20Node) och som ger rätt [åtkomstbehörighet](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Access%20Control).
 
@@ -432,7 +435,7 @@ Förutsättningen för att skapa ett separat användargränssnitt för att visa 
 
    En exempelnod med JSP- och CSS-filer
 
-1. Lägg till javascript-kod för att starta ett Ajax-anrop till querybuilder REST API eller till tjänsten. Lägg också till lämpliga argument.
+1. Lägg till JavaScript-kod för att starta ett Ajax-anrop till querybuilder REST API eller till tjänsten. Lägg också till lämpliga argument.
 
 1. Lägg till en lämplig hanterare i Ajax-anropet för att tolka och visa resultatet. Du kan analysera resultatet i flera format (json/csv/user defined) och visa det i en tabell eller i andra former.
 
@@ -440,7 +443,7 @@ Förutsättningen för att skapa ett separat användargränssnitt för att visa 
 
 Ett exempel på JSP-kod som använder både OSGi Service och QueryBuilder API är:
 
-```
+```html
 <%@taglib prefix="sling" uri="https://sling.apache.org/taglibs/sling/1.0"%>
 <%request.setAttribute("silentAuthor", new Boolean(true));%>
 <%@include file="/libs/foundation/global.jsp"%>
@@ -628,7 +631,7 @@ response.setCharacterEncoding("utf-8");
 </html>
 ```
 
-## Integrera rapportgränssnitt i befintligt processrapporteringsgränssnitt {#integrating-report-ui-in-existing-process-reporting-ui-nbsp}
+## Integrera rapportgränssnitt i befintligt processrapporteringsgränssnitt  {#integrating-report-ui-in-existing-process-reporting-ui-nbsp}
 
 Förutsättningen för att skapa ett separat användargränssnitt för att visa resultat är [Sling Basics](https://wem.help.adobe.com/enterprise/en_US/10-0/wem/developing/the_basics.html), [Creating a CRX Node](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Creating%20a%20Node) och som ger rätt [åtkomstbehörighet](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Access%20Control).
 
@@ -640,6 +643,7 @@ Förutsättningen för att skapa ett separat användargränssnitt för att visa 
    * **link**- Anger relativ länk till renderaren för det separata användargränssnittet. Länken skapas i steg 1.
    * **description**- Anger rapportens enradsbeskrivning. Du kan lämna beskrivningsfältet tomt.
    * **icon**- Anger bilden som ska representera rapporten i bilder. Du kan lämna ikonfältet tomt.
+
    ![Egenskaper för nod ](assets/node_properties_new.png)
 
    Egenskaper för nod
