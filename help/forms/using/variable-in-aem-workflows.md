@@ -10,9 +10,9 @@ topic-tags: publish
 discoiquuid: cbf4e35a-7905-44ab-ab68-fb443443f02d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 252dac988c8256cf99ee8487feb937d5345ed797
 workflow-type: tm+mt
-source-wordcount: '2090'
+source-wordcount: '2101'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ Skapa en variabel genom att utföra följande steg:
    * Formulärdatamodell - Ange en formulärdatamodell.
    * ArrayList - Ange en undertyp för samlingen.
 
-1. Ange en valfri beskrivning för variabeln och tryck på ![](assets/done_icon.png) för att spara ändringarna. Variabeln visas i listan som är tillgänglig i den vänstra rutan.
+1. Ange en valfri beskrivning för variabeln och tryck på ![made_icon](assets/done_icon.png) för att spara ändringarna. Variabeln visas i listan som är tillgänglig i den vänstra rutan.
 
 Tänk på följande när du skapar variabler:
 
@@ -97,10 +97,10 @@ Du kan också uppdatera specifika element i en JSON- eller XML-typvariabel med J
 Utför följande steg för att lägga till mappning mellan variabler:
 
 1. Tryck på ikonen Steg i arbetsflödesmodellens sidokicka på arbetsflödets redigeringssida.
-1. Dra och släpp steget **Ange variabel** till arbetsflödesredigeraren, tryck på steget och välj ![](assets/configure_icon.png) (Konfigurera).
+1. Dra och släpp steget **Ange variabel** till arbetsflödesredigeraren, tryck på steget och välj ![configure_icon](assets/configure_icon.png) (Konfigurera).
 1. I dialogrutan Ange variabel väljer du **[!UICONTROL Mapping]** > **[!UICONTROL Add Mapping]**.
 1. I avsnittet **Mappningsvariabel** väljer du variabeln där data ska lagras, väljer mappningsläget och anger ett värde som ska lagras i variabeln. Mappningslägena varierar beroende på variabeltypen.
-1. Mappa fler variabler för att skapa ett meningsfullt uttryck. Tap ![](assets/done_icon.png) to save the changes.
+1. Mappa fler variabler för att skapa ett meningsfullt uttryck. Tryck på ![made_icon](assets/done_icon.png) för att spara ändringarna.
 
 ### Exempel 1: Fråga en XML-variabel för att ange ett värde för en strängvariabel {#example-query-an-xml-variable-to-set-value-for-a-string-variable}
 
@@ -273,8 +273,8 @@ workflowSession.startWorkflow(model, wfData, metaData);
 ## Redigera en variabel {#edit-a-variable}
 
 1. Tryck på ikonen Variabler i sidledaren i arbetsflödesmodellen på sidan Redigera arbetsflöde. I avsnittet Variabler i den vänstra rutan visas alla befintliga variabler.
-1. Tryck på ikonen ![](assets/edit.png) (Redigera) bredvid variabelnamnet som du vill redigera.
-1. Redigera variabelinformationen och tryck på ![](assets/done_icon.png) för att spara ändringarna. Du kan inte redigera **[!UICONTROL Name]** - och **[!UICONTROL Type]** -fälten för en variabel.
+1. Tryck på ![redigeringsikonen](assets/edit.png) (Redigera) bredvid variabelnamnet som du vill redigera.
+1. Redigera variabelinformationen och tryck på ![made_icon](assets/done_icon.png) för att spara ändringarna. Du kan inte redigera **[!UICONTROL Name]** - och **[!UICONTROL Type]** -fälten för en variabel.
 
 ## Ta bort en variabel {#delete-a-variable}
 
@@ -284,7 +284,7 @@ Så här tar du bort en variabel:
 
 1. Tryck på ikonen Variabler i sidledaren i arbetsflödesmodellen på sidan Redigera arbetsflöde. I avsnittet Variabler i den vänstra rutan visas alla befintliga variabler.
 1. Tryck på ikonen Ta bort bredvid variabelnamnet som du vill ta bort.
-1. Tryck för ![](assets/done_icon.png) att bekräfta och ta bort variabeln.
+1. Tryck på ![made_icon](assets/done_icon.png) för att bekräfta och ta bort variabeln.
 
 ## Referenser {#references}
 
