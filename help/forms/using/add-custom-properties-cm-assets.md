@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 79437b96-7b57-4581-b7e7-fcaedc3d05de
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '4460'
+ht-degree: 2%
 
 ---
 
@@ -147,7 +150,7 @@ I det här scenariot visas hur du kan lägga till en anpassad egenskap för alla
 
 1. Lägg till en ny nod med namnet under egenskapsnoden (här geografisk placering) `items`. Under noden items lägger du till en nod för varje värde i listrutan. Som en god vana lägger du till den första noden så tom att den fungerar som standardvärde för listrutan och ett alternativ för användaren att inte ange något värde för fältet. Om du vill lägga till flera alternativ/nedrullningsbara värden upprepar du följande steg:
 
-   1. Högerklicka på egenskapsnoden (här geografisk placering) och välj **Skapa** > **Skapa nod**.
+   1. Högerklicka på egenskapsnoden (här geografisk plats) och välj **Skapa** > **Skapa nod**.
    1. Ange namnet på fältet med bibehållen typ som inte:ostrukturerad och klicka på `item1,` OK ****.
    1. Lägg till följande egenskaper i den nya noden (här post1) och klicka sedan på **Spara alla**:
 
@@ -677,13 +680,13 @@ Följ de här stegen för att visa den anpassade egenskapen i resurslistan för 
 
    1. Lägg till följande på rad 19 i filen (efter copyright-programsatsen).
 
-      ```
+      ```jsp
       <%@page import="java.util.Map"%>
       ```
 
    1. Lägg till följande kod för en funktion som hämtar värde för varje anpassad egenskap i slutet av filen:
 
-      ```
+      ```jsp
       <%!
           private String getCustomPropertyValue(Map<String, Object> extendedProperties, String propertyName) {
       
@@ -699,7 +702,7 @@ Följ de här stegen för att visa den anpassade egenskapen i resurslistan för 
 
    1. Lägg till följande innan &lt;tr>-taggen börjar (&lt;tr &lt;%= attributes.build() %>>):
 
-      ```
+      ```jsp
       <%
           String GeoLocation = "";
           if (asset != null) {
@@ -715,7 +718,7 @@ Följ de här stegen för att visa den anpassade egenskapen i resurslistan för 
 
    1. Om du vill visa den nya egenskapen i gränssnittet lägger du till en TD-tagg enligt följande före den avslutande tr-taggen (&lt;/tr>):
 
-      ```
+      ```jsp
       <td is="coral-td" value="<%= xssAPI.encodeForHTMLAttr(geographicalLocation) %>"><%= xssAPI.encodeForHTML(geographicalLocation) %></td>
       ```
 
