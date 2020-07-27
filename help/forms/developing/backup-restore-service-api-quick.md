@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 813162be-dbf5-4dc1-80ff-e37dbc25ef60
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '238'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ Java API Quick Start (SOAP) är tillgängligt för API:t för säkerhetskopierin
 
 [Snabbstart: Lämna säkerhetskopieringsläge med Java API(SOAP)](backup-restore-service-api-quick.md#quick-start-soap-mode-leaving-backup-mode-using-the-java-api)
 
-AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda typer och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms-API:t med stark typning och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
@@ -33,7 +36,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda ty
 
 Följande Java-kodexempel försätts i säkerhetskopieringsläge med en unik etikett i två timmar. När säkerhetskopieringstiden har gått ut eller om säkerhetskopieringsläget uttryckligen har avslutats, återgår formulärservern till att rensa filer från den globala dokumentlagringen. (Se [Ange säkerhetskopieringsläge på formulärservern](/help/forms/developing/preparing-aem-forms-backup.md#entering-backup-mode-on-the-forms-server).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -148,7 +151,7 @@ Följande Java-kodexempel försätts i säkerhetskopieringsläge med en unik eti
 
 Följande Java-kodexempel gör att en Forms-server lämnar säkerhetskopieringsläget och återgår till att rensa filer från den globala dokumentlagringen. (Se [Lämna säkerhetskopieringsläge på formulärservern](/help/forms/developing/preparing-aem-forms-backup.md#leaving-backup-mode-on-the-forms-server).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
