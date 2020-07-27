@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 375ba8fc-3152-4564-aec5-fcff2a95cf4c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4ecf5efc568cd21f11801a71d491c3d75ca367fe
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1469'
+ht-degree: 2%
 
 ---
 
@@ -23,21 +26,21 @@ Om du skapar ett anpassat formulär med ett JSON-schema som formulärmodell mås
 * [Skapa ett anpassat formulär](../../forms/using/creating-adaptive-form.md)
 * [JSON-schema](https://json-schema.org/)
 
-## Använda ett JSON-schema som formulärmodell {#using-a-json-schema-as-form-model}
+## Använda ett JSON-schema som formulärmodell  {#using-a-json-schema-as-form-model}
 
-AEM Forms har stöd för att skapa ett anpassningsbart formulär genom att använda ett befintligt JSON-schema som formulärmodell. Detta JSON-schema representerar strukturen i vilken data produceras eller används av det bakomliggande systemet i din organisation. Det JSON-schema som du använder ska vara kompatibelt med [v4-specifikationerna](https://json-schema.org/draft-04/schema).
+AEM Forms har stöd för att skapa ett anpassat formulär genom att använda ett befintligt JSON-schema som formulärmodell. Detta JSON-schema representerar strukturen i vilken data produceras eller används av det bakomliggande systemet i din organisation. Det JSON-schema som du använder ska vara kompatibelt med [v4-specifikationerna](https://json-schema.org/draft-04/schema).
 
 De viktigaste funktionerna i ett JSON-schema är:
 
 * Strukturen för JSON visas som ett träd på fliken Innehållssökning i redigeringsläget för ett anpassat formulär. Du kan dra och lägga till element från JSON-hierarkin i det adaptiva formuläret.
 * Du kan fylla i formuläret i förväg med JSON som är kompatibel med det associerade schemat.
-* När data skickas skickas skickas de som anges av användaren som JSON som är anpassad efter det associerade schemat.
+* När data skickas skickas skickas de som anges av användaren som JSON som är i linje med det associerade schemat.
 
 Ett JSON-schema består av enkla och komplexa elementtyper. Elementen har attribut som lägger till regler i elementet. När dessa element och attribut dras till ett adaptivt formulär mappas de automatiskt till motsvarande adaptiv formulärkomponent.
 
 Den här mappningen av JSON-element med adaptiva formulärkomponenter är följande:
 
-```
+```json
 "birthDate": {
               "type": "string",
               "format": "date",
@@ -125,7 +128,7 @@ Det adaptiva formuläret använder information som finns i JSON-schemat för att
 
 Här är ett exempel på ett JSON-schema.
 
-```
+```json
 {
  "$schema": "https://json-schema.org/draft-04/schema#",
  "definitions": {
@@ -307,7 +310,7 @@ Här är ett exempel på ett JSON-schema.
 
 Definitionsnycklar används för att identifiera återanvändbara scheman. Återanvändbara schemadefinitioner används för att skapa fragment. Det liknar att identifiera komplexa typer i XSD. Ett exempel på JSON-schema med definitioner ges nedan:
 
-```
+```json
 {
   "$schema": "https://json-schema.org/draft-04/schema#",
 
@@ -338,7 +341,7 @@ Exemplet ovan definierar en kundpost där varje kund har både en leveransadress
 
 Du kan använda egenskapen **aem:afProperties** för att förkonfigurera JSON-schemafältet för att mappa till en anpassad adaptiv formulärkomponent. Ett exempel visas nedan:
 
-```
+```json
 {
     "properties": {
         "sizeInMB": {
@@ -356,13 +359,13 @@ Du kan använda egenskapen **aem:afProperties** för att förkonfigurera JSON-sc
 }
 ```
 
-## Konfigurera skript eller uttryck för formulärobjekt {#configure-scripts-or-expressions-for-form-objects}
+## Konfigurera skript eller uttryck för formulärobjekt  {#configure-scripts-or-expressions-for-form-objects}
 
 JavaScript är uttrycksspråket i adaptiva formulär. Alla uttryck är giltiga JavaScript-uttryck och använder API:er för skriptmodell för adaptiva formulär. Du kan förkonfigurera formulärobjekt för att [utvärdera ett uttryck](../../forms/using/adaptive-form-expressions.md) i en formulärhändelse.
 
 Använd egenskapen aem:afproperties för att förkonfigurera adaptiva formuläruttryck eller skript för adaptiva formulärkomponenter. När initialize-händelsen till exempel aktiveras, ställer koden nedan in värdet för telefonfältet och skriver ut ett värde till loggen:
 
-```
+```json
 "telephone": {
   "type": "string",
   "pattern": "/\\d{10}/",
@@ -390,7 +393,7 @@ Du bör vara medlem i gruppen [](/help/forms/using/forms-groups-privileges-tasks
    <td>Validera</td>
    <td>Aktiverad</td>
    <td>Bekräfta värde</td>
-   <td>Klicka </td>
+   <td>Klicka på </td>
    <td>Alternativ</td>
   </tr>
   <tr>
@@ -589,7 +592,7 @@ Här är JSON-exempelkoden för de tidigare nämnda exemplen.
 
 ### Dölja ett fält vid händelsen initialize {#hiding-a-field-on-initialize-event}
 
-```
+```json
 "name": {
     "type": "string",
     "aem:afProperties": {
@@ -602,7 +605,7 @@ Här är JSON-exempelkoden för de tidigare nämnda exemplen.
 
 #### Konfigurera värdet för ett annat fält för värdeimplementeringshändelsen {#configure-value-of-another-field-on-value-commit-event}
 
-```
+```json
 "Income": {
     "type": "object",
     "properties": {
@@ -722,7 +725,7 @@ Du kan lägga till följande begränsningar i JSON-schemaelement för att begrä
  </tbody>
 </table>
 
-## Konstruktioner som inte stöds {#non-supported-constructs}
+## Konstruktioner som inte stöds  {#non-supported-constructs}
 
 Adaptiva formulär stöder inte följande JSON-schemakonstruktioner:
 
@@ -731,7 +734,7 @@ Adaptiva formulär stöder inte följande JSON-schemakonstruktioner:
 * OneOf, AnyOf, AllOf, och NOT
 * Endast homogena arrayer stöds. Objektbegränsningen måste därför vara ett objekt och inte en array.
 
-## Frågor och svar {#frequently-asked-questions}
+## Vanliga frågor {#frequently-asked-questions}
 
 **Varför kan jag inte dra enskilda element i ett delformulär (struktur som genereras från en komplex typ) för repeterbara delformulär (värdena minOcCours och maxOccurs är större än 1)?**
 
