@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 0ff30df7-b3ad-4c34-9644-87c689acc294
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1761'
+ht-degree: 0%
 
 ---
 
@@ -23,15 +26,15 @@ Du kan skapa ett klientprogram med Flash Builder som utför SSO-autentisering (s
 
 >[!NOTE]
 >
->Innan du läser det här avsnittet bör du känna till hur du anropar AEM Forms med Remoting. (Se [Anropa AEM-formulär med AEM Forms Remoting](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting).)
+>Innan du läser det här avsnittet bör du känna till hur du anropar AEM Forms med Remoting. (Se [Anropa AEM Forms med AEM Forms Remoting](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting).)
 
-Följande kortvariga AEM Forms-process med namnet `MyApplication/EncryptDocument`anropas när en användare autentiseras med enkel inloggning. (Mer information om den här processen, till exempel in- och utdatavärden, finns i Exempel på [kortlivade processer](/help/forms/developing/aem-forms-processes.md).)
+Följande kortlivade AEM Forms-process, med namnet `MyApplication/EncryptDocument`, anropas efter att en användare har autentiserats med enkel inloggning. (Mer information om den här processen, till exempel in- och utdatavärden, finns i Exempel på [kortlivade processer](/help/forms/developing/aem-forms-processes.md).)
 
 ![cf_cf_encryptdocument process2](assets/cf_cf_encryptdocumentprocess2.png)
 
 >[!NOTE]
 >
->Den här processen baseras inte på en befintlig AEM Forms-process. Om du vill följa med i kodexemplen som beskriver hur du anropar den här processen skapar du en process med namnet `MyApplication/EncryptDocument` workbench. (Se [Använda Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).)
+>Denna process bygger inte på en befintlig AEM Forms-process. Om du vill följa med i kodexemplen som beskriver hur du anropar den här processen skapar du en process med namnet `MyApplication/EncryptDocument` workbench. (Se [Använda Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).)
 
 Klientprogrammet som skapats med Flash Builder interagerar med användarhanterarens säkerhetstjänst som konfigurerats på `/um/login` och `/um/logout`. Det innebär att klientprogrammet skickar en begäran till URL:en under `/um/login` start för att fastställa användarens status. Användarhanteraren svarar sedan med användarstatus. Klientprogrammet och säkerhetstjänsten för användarhanteraren kommunicerar med HTTP.
 
@@ -66,7 +69,7 @@ Säkerhetstjänsten som konfigurerats på `/um/login` svarar med `URLVariables` 
 
 **Inloggningsprocess**
 
-När ett klientprogram startas kan du göra en POST-begäran till `/um/login` säkerhetsservern. Exempel, `https://<your_serverhost>:<your_port>/um/login?um_no_redirect=true`. När begäran når användarhanterarens säkerhetstjänst utför den följande steg:
+När ett klientprogram startas kan du göra en POST-begäran till `/um/login` säkerhetsservern. Till exempel, `https://<your_serverhost>:<your_port>/um/login?um_no_redirect=true`. När begäran når användarhanterarens säkerhetstjänst utför den följande steg:
 
 1. Den söker efter en kaka med namnet `lcAuthToken`. Om användaren redan har loggat in i ett annat Forms-program finns denna cookie. Om cookien hittas valideras innehållet.
 1. Om huvudbaserad enkel inloggning är aktiverad letar servern efter konfigurerade rubriker för att fastställa användarens identitet.
@@ -101,7 +104,7 @@ I föregående bild beskrivs det programflöde som inträffar när klientprogram
 
 1. Klientprogrammet utlöser `applicationComplete` händelsen.
 1. Anropet `ISSOManager.singleSignOn` görs. Klientprogrammet skickar en begäran till säkerhetstjänsten för användarhanteraren.
-1. Om säkerhetsservern autentiserar användaren skickas `ISSOManager` meddelandet `SSOEvent.AUTHENTICATION_SUCCESS`. Som svar visar klientprogrammet huvudsidan. I det här exemplet anropar huvudsidan den kortlivade AEM Forms-processen MyApplication/EncryptDocument.
+1. Om säkerhetsservern autentiserar användaren skickas `ISSOManager` meddelandet `SSOEvent.AUTHENTICATION_SUCCESS`. Som svar visar klientprogrammet huvudsidan. I det här exemplet anropar huvudsidan den kortlivade AEM Forms MyApplication/EncryptDocument.
 1. Om säkerhetsservern inte kan avgöra om användaren är giltig begär programmet inloggningsuppgifter igen. Klassen `ISSOManager` skickar `SSOEvent.AUTHENTICATION_REQUIRED` händelsen. Inloggningssidan visas i klientprogrammet.
 1. Autentiseringsuppgifterna som anges på inloggningssidan skickas till `ISSOManager.login` metoden. Om autentiseringen lyckas leder det till steg 3. Annars aktiveras `SSOEvent.AUTHENTICATION_FAILED` händelsen. Klientprogrammet visar inloggningssidan och ett felmeddelande.
 
@@ -117,7 +120,7 @@ Klientprogrammet består av följande filer:
 * `views/login.mxml`: Representerar inloggningsskärmen. (Se [Skapa filen](creating-flash-builder-applications-perform.md#creating-the-login-mxml-file)login.mxml.)
 * `views/logout.mxml`: Representerar utloggningsskärmen. (Se [Skapa filen](creating-flash-builder-applications-perform.md#creating-the-logout-mxml-file)logOut.mxml.)
 * `views/progress.mxml`: Representerar en förloppsvy. (Se [Skapa filen](creating-flash-builder-applications-perform.md#creating-the-progress-mxml-file)progress.mxml.)
-* `views/remoting.mxml`: Representerar vyn som anropar den kortvariga AEM Forms-processen som heter MyApplication/EncryptDocument med hjälp av fjärrkommunikation. (Se [Skapa filen](creating-flash-builder-applications-perform.md#creating-the-remoting-mxml-file)remoting.mxml.)
+* `views/remoting.mxml`: Representerar vyn som anropar den kortlivade AEM Forms MyApplication/EncryptDocument med hjälp av fjärrkommunikation. (Se [Skapa filen](creating-flash-builder-applications-perform.md#creating-the-remoting-mxml-file)remoting.mxml.)
 
 Följande bild ger en visuell representation av klientprogrammet.
 
@@ -131,7 +134,7 @@ Följande bild ger en visuell representation av klientprogrammet.
 
 Följande kod representerar filen SSOStandalone.mxml.
 
-```as3
+```xml
  <?xml version="1.0" encoding="utf-8"?>
  <mx:Application
                  layout="absolute"
@@ -248,7 +251,7 @@ Följande kod representerar filen SSOStandalone.mxml.
 
 Följande kod representerar filen ISSOManager.as.
 
-```as3
+```java
  package um
  {
      import flash.events.IEventDispatcher;
@@ -299,7 +302,7 @@ Följande kod representerar filen ISSOManager.as.
 
 Följande kod representerar filen SSOEvent.as.
 
-```as3
+```java
  package um
  {
      import flash.events.Event;
@@ -371,7 +374,7 @@ Följande kod representerar filen SSOEvent.as.
 
 Följande kod representerar filen SSOManager.as.
 
-```as3
+```java
  package um
  {
      import flash.events.Event;
@@ -535,7 +538,7 @@ Följande kod representerar filen SSOManager.as.
 
 Följande kod representerar filen UserManager.as.
 
-```as3
+```java
  package um
  {
      import flash.events.Event;
@@ -601,7 +604,7 @@ Följande kod representerar filen UserManager.as.
 
 Följande kod representerar filen login.mxml.
 
-```as3
+```xml
  <?xml version="1.0" encoding="utf-8"?>
  <mx:Canvas  width="500" height="400">
      <mx:Script>
@@ -644,7 +647,7 @@ Följande kod representerar filen login.mxml.
 
 Följande kod representerar filen logOut.mxml.
 
-```as3
+```xml
  <?xml version="1.0" encoding="utf-8"?>
  <mx:Canvas  width="500" height="400">
      <mx:Label x="97" y="188" text="You have successfully logged out from the application"/>
@@ -657,7 +660,7 @@ Följande kod representerar filen logOut.mxml.
 
 Följande kod representerar filen progress.mxml.
 
-```as3
+```xml
  <?xml version="1.0" encoding="utf-8"?>
  <mx:Canvas >
      <mx:Label x="151" y="141" text="Wait...."/>
@@ -669,7 +672,7 @@ Följande kod representerar filen progress.mxml.
 
 Följande kod representerar filen remoting.mxml som anropar `MyApplication/EncryptDocument` processen. Eftersom ett dokument skickas till processen finns den programlogik som ansvarar för att skicka ett säkert dokument till AEM Forms i den här filen. (Se [Skicka säkra dokument för att anropa processer med Remoting](/help/forms/developing/invoking-aem-forms-using-remoting.md#passing-secure-documents-to-invoke-processes-using-remoting).)
 
-```as3
+```xml
  <?xml version="1.0" encoding="utf-8"?>
  <mx:Canvas  width="664" height="400" creationComplete="initializeChannelSet()" xmlns:views="views.*">
      <mx:Script>
@@ -885,7 +888,7 @@ Som svar på det här värdet skickas ett `SSOEvent.AUTHENTICATION_REQUIRED` vä
 
 Användarhanterarens säkerhetstjänst svarar med följande värde:
 
-```as3
+```verilog
  HTTP/1.1 200 OK
  Set-Cookie: lcAuthToken=53630BC8-F6D4-F588-5D5B-4668EFB2EC7A; Path=/
  authenticated=true&authstate=COMPLETE&assertionid=53630BC8-F6D4-F588-5D5B-4668EFB2EC7A
@@ -895,16 +898,16 @@ Därför `authstate=COMPLETE the SSOEvent.AUTHENTICATION_SUCCESS` skickas. Klien
 
 ### Användaren är redan autentiserad {#the-user-is-already-authenticated}
 
-I den här situationen har användaren redan loggat in på AEM Forms och sedan navigerat till klientprogrammet. Klientprogrammet ansluter till säkerhetstjänsten för användarhanteraren under start.
+I den här situationen har användaren redan loggat in på AEM Forms och sedan navigerar till klientprogrammet. Klientprogrammet ansluter till säkerhetstjänsten för användarhanteraren under start.
 
-```as3
+```verilog
  GET /um/login?um%5Fno%5Fredirect=true HTTP/1.1
  Cookie: JSESSIONID=A4E0BCC2DD4BCCD3167C45FA350BD72A; lcAuthToken=53630BC8-F6D4-F588-5D5B-4668EFB2EC7A
 ```
 
 Eftersom användaren redan är autentiserad finns cookie-filen för användarhanteraren och skickas till säkerhetsservern för användarhanteraren. Servern hämtar sedan `assertionId` värdet och verifierar om det är giltigt. Om den är giltig `authstate=COMPLETE` returneras den. Annars `authstate=CREDENTIAL_CHALLENGE` returneras. Här följer ett typiskt svar:
 
-```as3
+```verilog
  HTTP/1.1 200 OK
         authenticated=true&authstate=COMPLETE&assertionid=53630BC8-F6D4-F588-5D5B-4668EFB2EC7A
 ```
