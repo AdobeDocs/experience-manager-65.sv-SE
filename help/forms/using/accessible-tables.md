@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 3504afe1-abf5-4fbf-a0d2-e093361764bd
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '283'
+ht-degree: 0%
 
 ---
 
@@ -25,21 +28,21 @@ För att undvika tillgänglighetsproblem med skärmläsare som inte har fullt st
 
 Om du vill använda det nya formatet i HTML5-formulär markerar du tabellen som komplex. Om du vill markera tabellen som komplex lägger du till `extras` -taggen i XML-källan för tabelldelformuläret enligt följande:
 
-```
+```xml
 </extras>
  <text name="complexTable">1</text>
  </extras>
 ```
 
-Tabellerna som markeras som *complexTable* följer den inbyggda HTML-återgivningen och ger bättre stöd för tillgänglighet för vissa skärmläsare.  Om du vill skapa ett radintervall markerar du flera celler i en tabell i följd i samma kolumn, högerklickar på markeringen och klickar sedan på **[!UICONTROL Sammanfoga celler]**.
+Tabellerna som markeras som *complexTable* följer den inbyggda HTML-återgivningen och ger bättre stöd för tillgänglighet för vissa skärmläsare.  Om du vill skapa ett radintervall markerar du celler i en tabell i följd i samma kolumn, högerklickar på markeringen och klickar sedan på **[!UICONTROL Merge Cells]**.
 
 >[!NOTE]
 >
 >Det går bara att skapa ett radintervall för celler längst till vänster.
 
-Om du vill markera en rad som en radrubrik markerar du alla celler i raden, högerklickar på markeringen och klickar sedan på **[!UICONTROL Markera rubrik]**.
+Om du vill markera en rad som radhuvud markerar du alla celler i raden, högerklickar på markeringen och klickar sedan på **[!UICONTROL Mark Header]**.
 
-Om du vill markera en cell som kolumnrubrik markerar du en cell i kolumnen, högerklickar på markeringen och klickar sedan på **[!UICONTROL Markera rubrik]**.
+Om du vill markera en cell som kolumnrubrik markerar du en cell i kolumnen, högerklickar på markeringen och klickar sedan på **[!UICONTROL Mark Header]**.
 
 Begränsningar i det nya *AccessibleTable* -formatet:
 
