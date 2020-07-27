@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/setting_up_and_organizing_users
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e80c3f98-baa1-45bc-b713-51a2eb5ec165
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '599'
+ht-degree: 0%
 
 ---
 
@@ -27,11 +30,11 @@ Så här fungerar traditionell autentisering:
 1. Autentiseringsprovidern validerar inloggningsuppgifterna.
 1. Autentiseringsprovidern kontrollerar sedan om användaren finns i databasen för användarhantering. Följande resultat är möjliga:
 
-   **** Finns: Om användaren är aktuell och olåst returnerar Hantering av användare autentiseringen. Om användaren inte är aktuell eller låst returneras ett autentiseringsfel.
+   **Finns:** Om användaren är aktuell och olåst returnerar Hantering av användare autentiseringen. Om användaren inte är aktuell eller låst returneras ett autentiseringsfel.
 
-   **** Finns inte: Användarhantering returnerar autentiseringsfel.
+   **Finns inte:** Användarhantering returnerar autentiseringsfel.
 
-   **** Ogiltig: Användarhantering returnerar autentiseringsfel.
+   **Ogiltig:** Användarhantering returnerar autentiseringsfel.
 
 1. Resultatet som returneras av autentiseringsprovidern utvärderas. Om autentiseringsprovidern returnerade autentiseringen kan användaren logga in. Annars kontrolleras användarhanteringen med nästa autentiseringsprovider (steg 2-3).
 1. Autentiseringsfel returneras om ingen tillgänglig autentiseringsprovider validerar inloggningsuppgifterna.
@@ -44,7 +47,7 @@ När etablering bara är i tid implementeras skapas en ny användare dynamiskt i
 
 AEM-formulär innehåller följande API:er för etablering i precis tid:
 
-```as3
+```java
 package com.adobe.idp.um.spi.authentication  ;
 publ ic interface IdentityCreator {
 /**
