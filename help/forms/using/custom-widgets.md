@@ -11,7 +11,10 @@ topic-tags: hTML5_forms
 discoiquuid: 17a86543-30d3-4e16-a373-67b46d551da9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '671'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,7 @@ Ett exempel på standardwidget och anpassad widget
 
 ## Integrera anpassade widgetar med HTML5-formulär {#integrating-custom-widgets-with-html-forms}
 
-### Skapa en profil {#create-a-profile-nbsp}
+### Skapa en profil  {#create-a-profile-nbsp}
 
 Du kan skapa en profil eller välja en befintlig profil för att lägga till en anpassad widget. Mer information om hur du skapar profiler finns i [Skapa anpassad profil](/help/forms/using/custom-profile.md).
 
@@ -69,15 +72,15 @@ HTML5-formulär innehåller en implementering av widgetramverket som kan utökas
 
 Om du vill skapa en egen widget inkluderar du referenser till JavaScript-filen som innehåller åsidosatta funktioner och nyligen tillagda funktioner i den profil som skapas ovan. Exempelvis är *sliderNumericFieldWidget* en widget för numeriska fält. Om du vill använda widgeten i din profil i rubrikavsnittet inkluderar du följande rad:
 
-```
+```javascript
 window.formBridge.registerConfig("widgetConfig" , widgetConfigObject);
 ```
 
-### Registrera anpassad widget med XFA Scripting Engine {#register-custom-widget-with-xfa-scripting-engine-nbsp}
+### Registrera anpassad widget med XFA Scripting Engine  {#register-custom-widget-with-xfa-scripting-engine-nbsp}
 
 När den anpassade widgetkoden är klar registrerar du widgeten med skriptmotorn genom att använda `registerConfig`API för [Form Bridge](/help/forms/using/form-bridge-apis.md). WidgetConfigObject används som indata.
 
-```
+```javascript
 window.formBridge.registerConfig("widgetConfig",
         {
         ".<field-identifier>":"<name-of-the-widget>"
