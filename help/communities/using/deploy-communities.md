@@ -11,9 +11,9 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: df59879cfa6b0bc7eba13f679e833fabbcbe92f2
+source-git-commit: d80c6609b5a0ac299b57b1d0c0e8d6210e595b97
 workflow-type: tm+mt
-source-wordcount: '1893'
+source-wordcount: '1894'
 ht-degree: 0%
 
 ---
@@ -75,6 +75,7 @@ ht-degree: 0%
          * UGC replikeras aldrig
          * UGC är bara synligt på AEM-instansen eller klustret där det angavs
       * standard är JSRP
+
    För **[aktiveringsfunktionen](/help/communities/overview.md#enablement-community)**
 
    * [installera och konfigurera FFmpeg](/help/communities/ffmpeg.md)
@@ -137,7 +138,7 @@ Mer information om hur du installerar paket finns på [webbkonsolsidan](/help/si
 
 #### Exempel: Installerat MySQL Connector-paket {#example-installed-mysql-connector-bundle}
 
-![](/help/communities/assets/chlimage_1-125.png)
+![](../assets/chlimage_1-125.png)
 
 ### SCORM-paket {#scorm-package}
 
@@ -221,7 +222,7 @@ Som standard är `AEM Communities Publisher Configuration` OSGi-konfigurationen 
 
 Det är därför nödvändigt att **redigera konfigurationen för alla sekundära publiceringsinstanser** för att avmarkera **`Primary Publisher`** kryssrutan.
 
-![](/help/communities/assets/chlimage_1-126.png)
+![](../assets/chlimage_1-126.png)
 
 För alla andra (sekundära) publiceringsinstanser i en publiceringsgrupp:
 
@@ -265,11 +266,11 @@ I följande bilder visas resultatet av en ändring av porten från 4503 till 610
 
 #### Standardagent (publicera) {#default-agent-publish}
 
-![](/help/communities/assets/chlimage_1-127.png)
+![configure-limits](../assets/configure-limits.png)
 
 #### Agenten för omvänd replikering (publicera omvänd) {#reverse-replication-agent-publish-reverse}
 
-![](/help/communities/assets/chlimage_1-128.png)
+![](../assets/chlimage_1-128.png)
 
 ### Tunneltjänst på författare {#tunnel-service-on-author}
 
@@ -292,7 +293,7 @@ Så här aktiverar du tunneltjänsten:
 * markera rutan **enable **box
 * välj **Spara**
 
-![](/help/communities/assets/chlimage_1-129.png)
+![](../assets/chlimage_1-129.png)
 
 ### Replikera krypteringsnyckeln {#replicate-the-crypto-key}
 
@@ -349,7 +350,7 @@ Använda [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) :
 
 * [uppdatera Granite Crypto-paketet](#refresh-the-granite-crypto-bundle)
 
-![](/help/communities/assets/chlimage_1-130.png)
+![](../assets/chlimage_1-130.png)
 
 #### Uppdatera Granite Crypto Bundle {#refresh-the-granite-crypto-bundle}
 
@@ -360,7 +361,7 @@ Använda [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) :
 * locate `Adobe Granite Crypto Support` bundle (com.adobe.granite.crypto)
 * välj **Uppdatera**
 
-![](/help/communities/assets/chlimage_1-131.png)
+![](../assets/chlimage_1-131.png)
 
 * Efter ett ögonblick visas en **Success **dialog:
    `Operation completed successfully.`
