@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 1b905e66-dc05-4f14-8025-62a78feef12a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '6774'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ## Översikt {#overview}
 
-Regelredigeringsfunktionen i Adobe Experience Manager Forms ger formuläranvändare och utvecklare möjlighet att skriva regler för anpassningsbara formulärobjekt. Dessa regler definierar åtgärder som ska utlösas av formulärobjekt baserat på förinställda villkor, användarindata och användaråtgärder i formuläret. Det effektiviserar formulärifyllningen ytterligare och ger större precision och hastighet.
+Regelredigerarfunktionen i Adobe Experience Manager Forms gör det möjligt för användare och utvecklare av formulär att skriva regler för anpassningsbara formulärobjekt. Dessa regler definierar åtgärder som ska utlösas av formulärobjekt baserat på förinställda villkor, användarindata och användaråtgärder i formuläret. Det effektiviserar formulärifyllningen ytterligare och ger större precision och hastighet.
 
 Regelredigeraren har ett intuitivt och förenklat användargränssnitt för att skriva regler. Regelredigeraren erbjuder en visuell redigerare för alla användare. Regelredigeraren är dessutom bara avsedd för användare som har behörighet att använda formulär och har en kodredigerare som kan skriva regler och skript. Några av de viktigaste åtgärderna som du kan utföra på anpassningsbara formulärobjekt med hjälp av regler är:
 
@@ -134,11 +137,11 @@ När du skriver en When-regel kan du utlösa åtgärden Clear Value Of. Med åtg
 
 Utöver formulärdatamodelltjänsten kan du ange en direkt WSDL-URL för att anropa en webbtjänst. En datamodelltjänst för formulär har dock många fördelar och det rekommenderade sättet att anropa en tjänst.
 
-Mer information om hur du konfigurerar tjänster i formulärdatamodell finns i [AEM Forms-dataintegrering](/help/forms/using/data-integration.md).
+Mer information om hur du konfigurerar tjänster i formulärdatamodellen finns i [AEM Forms Data Integration](/help/forms/using/data-integration.md).
 
 **Ange värdet för** Computes och ställer in värdet för det angivna objektet. Du kan ställa in objektvärdet på en sträng, värdet för ett annat objekt, det beräknade värdet med hjälp av matematiska uttryck eller funktioner, värdet för ett objekts egenskap eller utdatavärdet från en konfigurerad datamodelltjänst för formulär. När du väljer webbtjänstalternativet visas alla tjänster som konfigurerats i alla formulärdatamodeller på din AEM-instans. När du väljer en datamodelltjänst för ett formulär visas ytterligare fält där du kan mappa formulärobjekt med in- och utdataparametrar för den angivna tjänsten.
 
-Mer information om hur du konfigurerar tjänster i formulärdatamodell finns i [AEM Forms-dataintegrering](/help/forms/using/data-integration.md).
+Mer information om hur du konfigurerar tjänster i formulärdatamodellen finns i [AEM Forms Data Integration](/help/forms/using/data-integration.md).
 
 Med regeltypen **Ange egenskap** kan du ange värdet för en egenskap för det angivna objektet baserat på en villkorsåtgärd.
 
@@ -176,7 +179,7 @@ I följande bild visas ett exempel på hur du dynamiskt lägger till kryssrutor 
 
 ### Ange värdet för {#set-value-of}
 
-Med **[!UICONTROL Ange värde för]** regeltyp kan du ange värdet för ett formulärobjekt beroende på om det angivna villkoret är uppfyllt eller inte. Värdet kan anges till ett värde för ett annat objekt, en stränglitteral, ett värde som härleds från ett matematiskt uttryck eller en funktion, ett värde för en egenskap för ett annat objekt eller utdata från en datamodelltjänst för ett formulär. På samma sätt kan du söka efter ett villkor för en komponent, en sträng, en egenskap eller värden som härletts från en funktion eller ett matematiskt uttryck.
+Regeltypen gör att du kan ange ett formulärobjekts värde beroende på om det angivna villkoret är uppfyllt eller inte. **[!UICONTROL Set Value of]** Värdet kan anges till ett värde för ett annat objekt, en stränglitteral, ett värde som härleds från ett matematiskt uttryck eller en funktion, ett värde för en egenskap för ett annat objekt eller utdata från en datamodelltjänst för ett formulär. På samma sätt kan du söka efter ett villkor för en komponent, en sträng, en egenskap eller värden som härletts från en funktion eller ett matematiskt uttryck.
 
 Observera att regeltypen Ange värde för inte är tillgänglig för alla formulärobjekt, till exempel paneler och knappar i verktygsfält. En standarduppsättningsvärde för regel har följande struktur:
 
@@ -294,7 +297,7 @@ En vanlig valideringsregel är strukturerad enligt följande:
 
 >[!NOTE]
 >
->Om det angivna värdet inte överensstämmer med regeln Validera kan du visa ett valideringsmeddelande för användaren. Du kan ange meddelandet i **[!UICONTROL skriptvalideringsmeddelandefältet]** i komponentegenskaperna i sidofältet.
+>Om det angivna värdet inte överensstämmer med regeln Validera kan du visa ett valideringsmeddelande för användaren. Du kan ange meddelandet i **[!UICONTROL Script validation message]** fältet i komponentegenskaperna i sidofältet.
 
 ![skriptvalidering](assets/script-validation.png)
 
@@ -330,7 +333,7 @@ Så här startar du användargränssnittet för regelredigeraren:
 
    Alla befintliga regler för de markerade formulärobjekten visas i den här vyn. Mer information om hur du hanterar befintliga regler finns i [Hantera regler](../../forms/using/rule-editor.md#p-manage-rules-p).
 
-1. Tryck på **[!UICONTROL Skapa]** för att skriva en ny regel. Den visuella redigeraren för regelredigerarens användargränssnitt öppnas som standard när du startar regelredigeraren första gången.
+1. Tryck för **[!UICONTROL Create]** att skriva en ny regel. Den visuella redigeraren för regelredigerarens användargränssnitt öppnas som standard när du startar regelredigeraren första gången.
 [ ![Regelredigerarens användargränssnitt](assets/rule-editor-ui.png)
 
    Klicka för att visa förstorad bild
@@ -343,7 +346,7 @@ Visar titeln på det adaptiva formulärobjektet genom vilket du startade regelre
 
 ### B. Formulärobjekt och -funktioner {#b-form-objects-and-functions-br}
 
-Panelen till vänster i regelredigerarens användargränssnitt innehåller två flikar - **[!UICONTROL Formulärobjekt]** och **[!UICONTROL Funktioner]**.
+Panelen till vänster i regelredigerarens användargränssnitt innehåller två flikar - **[!UICONTROL Forms Objects]** och **[!UICONTROL Functions]**.
 
 På fliken Formulärobjekt visas en hierarkisk vy över alla objekt som finns i det anpassade formuläret. Där visas objektens namn och typ. När du skriver en regel kan du dra och släppa formulärobjekt till regelredigeraren. När du skapar eller redigerar en regel när du drar och släpper ett objekt eller en funktion till en platshållare, får platshållaren automatiskt rätt värdetyp.
 
@@ -373,19 +376,19 @@ Mer information om hur du använder den visuella regelredigeraren finns i [Skriv
 
 Användare i gruppen för formuläranvändare har åtkomst till kodredigeraren. Kodredigeraren är inte tillgänglig för andra användare. Om du har behörighet kan du växla från visuellt redigeringsläge till kodredigeringsläge för regelredigeraren, och vice versa, med väljaren precis ovanför regelredigeraren. När du startar regelredigeraren första gången öppnas den i det visuella redigeringsläget. Du kan skriva regler i det visuella redigeringsläget eller växla till kodredigeringsläget för att skriva ett regelskript. Observera dock att om du ändrar en regel eller skriver en regel i kodredigeraren kan du inte växla tillbaka till den visuella redigeraren för den regeln om du inte rensar kodredigeraren.
 
-AEM Forms spårar det regelredigeringsläge som du använde när du skrev en regel. När du startar regelredigeraren nästa gång öppnas den i det läget. Du kan dock konfigurera ett standardläge så att regelredigeraren öppnas i det angivna läget. Så här gör du:
+AEM Forms spårar det regelredigeringsläge som du använde senast för att skriva en regel. När du startar regelredigeraren nästa gång öppnas den i det läget. Du kan dock konfigurera ett standardläge så att regelredigeraren öppnas i det angivna läget. Så här gör du:
 
 1. Gå till AEM-webbkonsolen på `https://[host]:[port]/system/console/configMgr`.
-1. Klicka för att redigera tjänsten **[!UICONTROL för konfiguration av]** adaptiva formulär.
-1. välj **[!UICONTROL Visuell redigerare]** eller **[!UICONTROL kodredigerare]** i listrutan **[!UICONTROL Standardläge för regelredigeraren]**
+1. Klicka för att redigera **[!UICONTROL Adaptive Form Configuration Service]**.
+1. välj **[!UICONTROL Visual Editor]** eller **[!UICONTROL Code Editor]** från **[!UICONTROL Default Mode for Rule Editor]** listrutan
 
-1. Click **[!UICONTROL Save]**.
+1. Klicka på **[!UICONTROL Save]**.
 
 ### F. Knapparna Klar och Avbryt {#f-done-and-cancel-buttons}
 
-Knappen **[!UICONTROL Klar]** används för att spara en regel. Du kan spara en ofullständig regel. Ofullständiga är dock ogiltiga och kan inte köras. Sparade regler för ett formulärobjekt visas nästa gång du startar regelredigeraren från samma formulärobjekt. Du kan hantera befintliga regler i den vyn. Mer information finns i [Hantera regler](../../forms/using/rule-editor.md#p-manage-rules-p).
+Knappen **[!UICONTROL Done]** används för att spara en regel. Du kan spara en ofullständig regel. Ofullständiga är dock ogiltiga och kan inte köras. Sparade regler för ett formulärobjekt visas nästa gång du startar regelredigeraren från samma formulärobjekt. Du kan hantera befintliga regler i den vyn. Mer information finns i [Hantera regler](../../forms/using/rule-editor.md#p-manage-rules-p).
 
-Knappen **[!UICONTROL Avbryt]** tar bort alla ändringar du har gjort i en regel och stänger regelredigeraren.
+Knappen **[!UICONTROL Cancel]** tar bort alla ändringar du har gjort i en regel och stänger regelredigeraren.
 
 ## Skriv regler {#write-rules}
 
@@ -408,7 +411,7 @@ Utför följande steg för att skriva regler:
 
 1. Först skriver du regeln för att styra synligheten för fältet för makslön baserat på det alternativ som användaren väljer för alternativknappen för civilstånd.
 
-   Öppna låneansökningsformuläret i redigeringsläge. Tryck på **Marital Status** -komponenten och tryck på ![edit-rules](assets/edit-rules.png). Tryck sedan på **[!UICONTROL Skapa]** för att starta regelredigeraren.
+   Öppna låneansökningsformuläret i redigeringsläge. Tryck på **Marital Status** -komponenten och tryck på ![edit-rules](assets/edit-rules.png). Starta sedan regelredigeraren genom **[!UICONTROL Create]** att trycka.
 
    ![write-rules-visual-editor-1](assets/write-rules-visual-editor-1.png)
 
@@ -416,7 +419,7 @@ Utför följande steg för att skriva regler:
 
    Du kan inte ändra eller ändra det markerade objektet, men du kan välja en annan regeltyp med hjälp av den nedrullningsbara menyn. Om du vill skapa en regel för ett annat objekt trycker du på Avbryt för att avsluta regelredigeraren och starta den igen från det önskade formulärobjektet.
 
-1. Tryck på listrutan **[!UICONTROL Välj läge]** och markera **[!UICONTROL är lika med]**. Fältet **[!UICONTROL Ange en sträng]** visas.
+1. Tryck på **[!UICONTROL Select State]** listrutan och välj **[!UICONTROL is equal to]**. Fältet **[!UICONTROL Enter a String]** visas.
 
    ![write-rules-visual-editor-2](assets/write-rules-visual-editor-2.png)
 
@@ -430,7 +433,7 @@ Utför följande steg för att skriva regler:
 
    Du har definierat villkoret som `When Marital Status is equal to Married`. Definiera sedan åtgärden som ska utföras om villkoret är sant.
 
-1. Välj **[!UICONTROL Visa]** i listrutan **[!UICONTROL Välj åtgärd]** i programsatsen sedan.
+1. Välj **[!UICONTROL Show]** från **[!UICONTROL Select Action]** listrutan i programsatsen Sedan.
 
    ![write-rules-visual-editor-5](assets/write-rules-visual-editor-5.png)
 
@@ -456,13 +459,13 @@ Utför följande steg för att skriva regler:
 
 1. Skriv sedan en regel för att beräkna lånebeloppet, som är 50 % av den totala lönen, och visa det i fältet Låneberättigande. För att uppnå detta skapar du **Ange värde för** regler i fältet Låneberättigande.
 
-   I redigeringsläget trycker du på fältet **[!UICONTROL Låneberättigande]** och trycker på ![redigeringsregler](assets/edit-rules.png). Tryck sedan på **[!UICONTROL Skapa]** för att starta regelredigeraren.
+   I redigeringsläget trycker du på **[!UICONTROL Loan Eligibility]** fältet och trycker på ![redigeringsregler](assets/edit-rules.png). Starta sedan regelredigeraren genom **[!UICONTROL Create]** att trycka.
 
-1. Välj **[!UICONTROL Ange värde för]** regel i listrutan Regel.
+1. Välj **[!UICONTROL Set Value Of]** regel i listrutan Regel.
 
    ![write-rules-visual-editor-10](assets/write-rules-visual-editor-10.png)
 
-1. Tryck på **[!UICONTROL Välj alternativ]** och välj **[!UICONTROL Matematiskt uttryck]**. Ett fält som skriver matematiskt uttryck öppnas.
+1. Tryck **[!UICONTROL Select Option]** och välj **[!UICONTROL Mathematical Expression]**. Ett fält som skriver matematiskt uttryck öppnas.
 
    ![write-rules-visual-editor-11](assets/write-rules-visual-editor-11.png)
 
@@ -473,6 +476,7 @@ Utför följande steg för att skriva regler:
    * Välj **Plus** i fältet **Välj operator** .
 
    * Markera eller dra och släpp från fliken Formulärobjekt i fältet **Makuslön** i det andra **Släpp-objektet eller välj här** .
+
    ![write-rules-visual-editor-12](assets/write-rules-visual-editor-12.png)
 
 1. Tryck sedan på det markerade området runt uttrycksfältet och tryck på **Extend Expression**.
@@ -500,6 +504,7 @@ Utför följande steg för att skriva regler:
    * Välj **är lika med** i fältet **Välj operator** .
 
    * Välj String i det andra **Drop-objektet eller markera här** -fältet och ange **Gift** i fältet **Ange en sträng** .
+
    Regeln visas slutligen så här i regelredigeraren.  ![write-rules-visual-editor-16](assets/write-rules-visual-editor-16.png)
 
    Tryck på **Klar** för att spara regeln.
@@ -546,30 +551,40 @@ For more information, see [usejsdoc.org](https://usejsdoc.org/).
 
 Taggar `jsdoc` som stöds:
 
-* **Privat** syntax: `@private`En privat funktion ingår inte som en anpassad funktion.
+* **Privat**syntax: 
+En privat funktion ingår inte som en anpassad funktion.`@private`
+En privat funktion ingår inte som en anpassad funktion.
 
-* **Namnsyntax**: Du kan `@name funcName <Function Name>`också `,` använda: `@function funcName <Function Name>` eller ****`@func` `funcName <Function Name>`.
+* **Namnsyntax**: 
+Alternativt `@name funcName <Function Name>`kan `,` du använda: `@function funcName <Function Name>` **eller** `@func` `funcName <Function Name>`.
    `funcName` är namnet på funktionen (inga blanksteg tillåts).
    `<Function Name>` är funktionens visningsnamn.
 
-* **Medlemssyntax**: Kopplar `@memberof namespace`ett namnutrymme till funktionen.
+* **Medlemssyntax**: 
+Kopplar ett namnutrymme till funktionen.`@memberof namespace`
+Kopplar ett namnutrymme till funktionen.
 
-* **Parametersyntax**: Du kan `@param {type} name <Parameter Description>`också använda: `@argument``{type} name <Parameter Description>` eller **** `@arg``{type}` `name <Parameter Description>`.
+* **Parametersyntax**: 
+Du kan också använda: `@param {type} name <Parameter Description>`
+Du kan också använda: `@argument` `{type} name <Parameter Description>` **eller** `@arg` `{type}` `name <Parameter Description>`.
 Visar parametrar som används av funktionen. En funktion kan ha flera parametertaggar, en tagg för varje parameter i ordningen för förekomst.
    `{type}` representerar parametertyp. Tillåtna parametertyper är:
 
    1. string
    1. tal
    1. boolean
+
    Alla andra parametertyper kategoriseras under någon av ovanstående. Ingen stöds inte. Välj en av typerna ovan. Typer är inte skiftlägeskänsliga. Blanksteg tillåts inte i parametern `name`. `<Parameter Descrption>` `<parameter>  can have multiple words. </parameter>`
 
-* **Returtypssyntax**: Du kan `@return {type}`också använda `@returns {type}`.
+* **Returtypssyntax**: 
+Du kan också använda `@return {type}`Alternativt kan du använda `@returns {type}`.
 Lägger till information om funktionen, till exempel dess mål.
 {type} representerar funktionens returtyp. Tillåtna returtyper är:
 
    1. string
    1. tal
    1. boolean
+
    Alla andra returtyper kategoriseras under en av ovanstående. Ingen stöds inte. Välj en av typerna ovan. Returtyperna är inte skiftlägeskänsliga.
 
 >[!NOTE]
@@ -600,13 +615,13 @@ Om du vill öppna ett formulär i redigeringsläge markerar du ett formulär och
 
 1. Markera den numeriska rutan och tryck på ![redigeringsregler](assets/edit-rules.png) för att öppna regelredigeraren.
 1. Tryck på **Skapa regel**. Använd alternativen som visas nedan för att skapa en regel som sparar indatavärdet i fyrkantiga värden i formulärutdatafältet.
-   [ ![Använda anpassade funktioner för att skapa en](assets/add_custom_rule_new.png)](assets/add-custom-rule.png)regelTryck **på Klar**. Din anpassade funktion har lagts till.
+   [ ![Använda anpassade funktioner för att skapa en](assets/add_custom_rule_new.png)](assets/add-custom-rule.png)ruleTap **Done**. Din anpassade funktion har lagts till.
 
 #### Typer som stöds för funktionsdeklaration {#function-declaration-supported-types}
 
 **Funktionssats**
 
-```
+```javascript
 function area(len) {
     return len*len;
 }
@@ -616,7 +631,7 @@ Den här funktionen inkluderas utan `jsdoc` kommentarer.
 
 **Funktionsuttryck**
 
-```
+```javascript
 var area;
 //Some codes later
 /** */
@@ -750,7 +765,7 @@ När användaren uppger att han/hon har bott på sin nuvarande adress i mindre �
 
 ## Regelredigerarens effekt på befintliga skript {#impact-of-rule-editor-on-existing-scripts}
 
-I AEM Forms-versioner före AEM 6.1 Forms-funktionspaket 1 använde formulärförfattare och utvecklare för att skriva uttryck på fliken Skript i dialogrutan Redigera komponent för att lägga till dynamiskt beteende i adaptiva formulär. Fliken Skript har ersatts av regelredigeraren.
+I AEM Forms-versioner före AEM 6.1 Forms-funktionspaket 1 använde formulärförfattare och utvecklare för att skriva uttryck på fliken Skript i dialogrutan Redigera komponent för att lägga till dynamiskt beteende i anpassningsbara formulär. Fliken Skript har ersatts av regelredigeraren.
 
 Alla skript och uttryck som du måste ha skrivit på fliken Skript är tillgängliga i regelredigeraren. Du kan inte visa eller redigera dem i den visuella redigeraren, men om du är en del av gruppen för användare med funktionshinder kan du redigera skript i kodredigeraren.
 
