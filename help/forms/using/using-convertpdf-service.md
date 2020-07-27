@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 discoiquuid: 5ec4f0ec-a9fd-4571-9b9a-278f4622c028
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '414'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +28,7 @@ Du kan göra följande med tjänsten Konvertera PDF:
 * Konvertera PDF-dokument till PostScript. När du konverterar till PostScript kan du använda konverteringsåtgärden för att ange källdokumentet och om det ska konverteras till PostScript-nivå 2 eller 3. PDF-dokumentet som du konverterar till en PostScript-fil måste vara icke-interaktivt.
 * Konvertera PDF-dokument till bildformaten JPEG, JPEG 2000, PNG och TIFF. När du konverterar till något av dessa bildformat kan du använda konverteringsåtgärden för att ange källdokumentet och en bildalternativsspecifikation. Specifikationen innehåller olika inställningar, till exempel bildkonverteringsformat, bildupplösning och färgkonvertering.
 
-## Konfigurera egenskaper för tjänsten {#properties}
+## Konfigurera egenskaper för tjänsten   {#properties}
 
 Du kan använda **AEMFD ConvertPDF-tjänsten** i AEM Console för att konfigurera egenskaper för den här tjänsten. Standardwebbadressen för AEM-konsolen är `https://[host]:'port'/system/console/configMgr`.
 
@@ -39,7 +42,7 @@ ConvertPDF-tjänsten tillhandahåller följande två API:er:
 
 ### Använda toPS API med en JSP eller Servlets {#using-tops-api-with-a-jsp-or-servlets}
 
-```java
+```jsp
 <%@ page import="java.util.List, java.io.File,
 
                 com.adobe.fd.cpdf.api.ConvertPdfService,
@@ -83,7 +86,7 @@ String documentPath = "/content/dam/formsanddocuments/ExpenseClaimFlat.pdf";
 
 ### Använda toImage API med en JSP eller Servlets {#using-toimage-api-with-a-jsp-or-servlets}
 
-```java
+```jsp
 <%@ page import="java.util.List, java.io.File,
 
                 com.adobe.fd.cpdf.api.ConvertPdfService,
@@ -136,7 +139,7 @@ Den enda skillnaden är när tjänsten körs från JSP/Servlet som dokumentobjek
 
 Följande exempelarbetsflödesprocess konverterar indatadokumentet till ett PostScript-dokument. Koden skrivs i ECMAScript och dokumentet skickas som arbetsflödets nyttolast:
 
-```
+```javascript
 /*
  * Imports
  */
