@@ -1,8 +1,8 @@
 ---
 title: Visa användarens avatar
 seo-title: Visa användarens avatar
-description: Hur man anpassar arbetsytan i AEM Forms så att bilden för en inloggad användare visas.
-seo-description: Hur man anpassar arbetsytan i AEM Forms så att bilden för en inloggad användare visas.
+description: Så här anpassar du arbetsytan AEM Forms för att visa bilden för en inloggad användare.
+seo-description: Så här anpassar du arbetsytan AEM Forms för att visa bilden för en inloggad användare.
 uuid: 2961dc93-f0d0-4842-80f1-3c239a20e348
 contentOwner: robhagat
 content-type: reference
@@ -10,23 +10,26 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: aec03ea5-17a6-4775-92cb-2ad361895fdf
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '211'
+ht-degree: 0%
 
 ---
 
 
 # Visa användarens avatar {#displaying-the-user-avatar}
 
-Avatar för den inloggade användaren visas i det övre högra hörnet på arbetsytan i AEM Forms. Variatarerna för direkta rapporter i organisationshierarkin visas också i hanterarvyn. Du kan konfigurera arbetsytan för AEM Forms så att du kan välja användarbilder från din databas, till exempel LDAP-server.
+Avatar för den inloggade användaren visas i det övre högra hörnet av arbetsytan i AEM Forms. Variatarerna för direkta rapporter i organisationshierarkin visas också i hanterarvyn. Du kan konfigurera arbetsytan i AEM Forms för att välja användarbilder från din databas, till exempel LDAP-server.
 
 >[!NOTE]
 >
 >De proportioner som stöds för användarbilderna är 1:1.
 
-1. Skapa en DSC med hjälp av de uppgifter som anges i nästa steg. Mer information finns i avsnittet&quot;Utveckla komponenter för AEM Forms&quot; i [Programmering med AEM Forms](https://www.adobe.com/go/learn_aemforms_programming_63) -guiden.
+1. Skapa en DSC med hjälp av de uppgifter som anges i nästa steg. Mer information finns i&quot;Developing Components for AEM Forms topic in [Programming with AEM Forms](https://www.adobe.com/go/learn_aemforms_programming_63) guide.
 1. I DSC definierar du en ny SPI som visar metoderna getCurrentUserImageUrl och getUserImageUrl för att hämta en bild-URL för en AEM Forms-användare. Här följer ett exempel på ett Java™-kodfragment:
 
-   ```as3
+   ```java
    public class DemoUserImageURLProviderService {
      public String getCurrentUserImageUrl()
      {
@@ -43,7 +46,7 @@ Avatar för den inloggade användaren visas i det övre högra hörnet på arbet
 
    Följande kodfragment är ett exempel. Anpassa den efter dina specifika behov.
 
-   ```as3
+   ```java
    <component xmlns="https://adobe.com/idp/dsc/component/document">
        <component-id>com.adobe.sample.DemoUsersComponent</component-id>
        <version>1.1</version>
