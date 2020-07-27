@@ -9,7 +9,10 @@ topic-tags: author
 discoiquuid: 9459c414-eac9-4bd9-a773-cceaeb736c56
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5a76200a573d95026e2347d2049a089d975b5619
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1155'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ Med Adobe Experience Manager (AEM) kan ni skapa lättanvända, anpassningsbara f
 
 Innan du får veta mer om de olika layoutfunktionerna i adaptiva formulär kan du läsa följande artiklar för att få mer information om adaptiva formulär.
 
-[Introduktion till AEM-formulär](../../forms/using/introduction-aem-forms.md)
+[Introduktion till AEM Forms](../../forms/using/introduction-aem-forms.md)
 
 [Introduktion till att skapa formulär](../../forms/using/introduction-forms-authoring.md)
 
@@ -60,7 +63,7 @@ Lista över panellayouter i anpassningsbara formulär
 
 Använd den här panellayouten för att skapa en responsiv layout som anpassar sig efter enhetens skärmstorlek utan att behöva använda någon särskild navigering.
 
-Med den här layouten kan du montera flera **[!UICONTROL paneladaptiva]** formulärkomponenter efter varandra på panelen.
+Med den här layouten kan du montera flera **[!UICONTROL Panel adaptive form]** komponenter i en och samma komponent i panelen.
 
 ![Ett formulär med responsiv layout som det visas på en liten skärm](assets/responsive_layout_seen_on_small_screen.png)
 
@@ -76,7 +79,7 @@ Använd den här panellayouten för guidad navigering i ett formulär. Använd t
 
 Använd `Panel adaptive form` komponenten för att stegvis navigera i en panel. När du använder den här layouten flyttas användaren till nästa steg först när det aktuella steget är klart
 
-```
+```javascript
 window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpression)
 ```
 
