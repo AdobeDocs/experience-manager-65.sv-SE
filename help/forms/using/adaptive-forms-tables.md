@@ -1,15 +1,18 @@
 ---
 title: Tabeller i anpassningsbara former
 seo-title: Tabeller i anpassningsbara former
-description: Med tabellkomponenten i AEM Forms kan du skapa tabeller i adaptiva formulär som svarar på mobila layouter, och som även tillåter användning av XDP-tabellkomponenter.
-seo-description: Med tabellkomponenten i AEM Forms kan du skapa tabeller i adaptiva formulär som svarar på mobila layouter, och som även tillåter användning av XDP-tabellkomponenter.
+description: Med tabellkomponenten i AEM Forms kan du skapa tabeller i adaptiva formulär som är responsiva för mobila layouter, och som även tillåter användning av XDP-tabellkomponenter.
+seo-description: Med tabellkomponenten i AEM Forms kan du skapa tabeller i adaptiva formulär som är responsiva för mobila layouter, och som även tillåter användning av XDP-tabellkomponenter.
 uuid: 03436c81-42f0-430f-9e52-14a4ab0e877d
 topic-tags: author
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: fc418da9-496f-4a2b-bfe4-2add3ac4f468
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: bd70508b361ac8b62ebc0344538a18369a075f3e
+workflow-type: tm+mt
+source-wordcount: '2301'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 Att använda tabeller är ett effektivt, förenklat och organiserat sätt att presentera komplexa data. Det gör det enkelt för användarna att identifiera information och ge indata i en ordnad ordning av rader och kolumner. De flesta formulär från finanssektorn och myndigheter kräver stora datatabeller för att skicka siffror och utföra beräkningar.
 
-AEM Forms innehåller en tabellkomponent i komponentwebbläsaren i sidofältet som gör att du kan skapa tabeller i anpassningsbara formulär. Några av de viktigaste funktionerna i den är:
+AEM Forms tillhandahåller en tabellkomponent i komponentwebbläsaren i sidofältet som gör att du kan skapa tabeller i anpassningsbara formulär. Några av de viktigaste funktionerna i den är:
 
 * Responsiv layout på mobila enheter
 * Konfigurerbara rader och kolumner
@@ -88,9 +91,9 @@ Om du vill använda sortering på tabellkolumner måste tabellkolumncellerna inn
 
 Så här aktiverar du sortering:
 
-1. Markera tabellen och tryck på ![](assets/configure_icon.png) (Konfigurera). Du kan också markera tabellen med hjälp av **innehållsläsaren** i sidokickaren i den interaktiva kommunikationen.
+1. Markera tabellen och tryck på ![configure_icon](assets/configure_icon.png) (Configure). Du kan också markera tabellen med hjälp av **innehållsläsaren** i sidokickaren i den interaktiva kommunikationen.
 1. Välj **Aktivera sortering**.
-1. Tryck ![](assets/done_icon.png) för att spara tabellegenskaperna. Sorteringsikonerna, uppåt- och nedåtpilarna, i kolumnrubriker representerar att sorteringen har aktiverats.
+1. Tryck på ![made_icon](assets/done_icon.png) för att spara tabellegenskaperna. Sorteringsikonerna, uppåt- och nedåtpilarna, i kolumnrubriker representerar att sorteringen har aktiverats.
 
    ![Aktivera sortering](assets/enable_sorting_new.png)
 
@@ -118,7 +121,7 @@ Du kan se formategenskaperna i sidofältet.
 
 >[!NOTE]
 >
->Du kan ändra färgtemat för huvud- och innehållsrader genom att ändra värdena för LESS-variabler. Mer information finns i [Teman i AEM-formulär](/help/forms/using/themes.md) [](/help/forms/using/creating-custom-adaptive-form-themes.md).
+>Du kan ändra färgtemat för huvud- och innehållsrader genom att ändra värdena för LESS-variabler. Mer information finns i [Teman i AEM Forms](/help/forms/using/themes.md) [](/help/forms/using/creating-custom-adaptive-form-themes.md).
 
 ## Lägga till eller ta bort en rad dynamiskt {#add-or-delete-a-row-dynamically}
 
@@ -160,7 +163,7 @@ En fullständig lista över adaptiva formulärklasser, händelser, objekt och of
 
 ## Mobillayouter {#mobile-layouts}
 
-Tabeller i anpassningsbara formulär ger oöverträffad upplevelse i mobila enheter tack vare dess flytande och responsiva layouter. AEM Forms erbjuder två typer av mobila layouter för tabeller - rubriker till vänster och fällbara kolumner.
+Tabeller i anpassningsbara formulär ger oöverträffad upplevelse i mobila enheter tack vare dess flytande och responsiva layouter. AEM Forms har två typer av mobila layouter för tabeller - rubriker till vänster och fällbara kolumner.
 
 Du kan konfigurera en mobil layout för en tabell på fliken Format i dialogrutan Redigera komponent för en tabell.
 
