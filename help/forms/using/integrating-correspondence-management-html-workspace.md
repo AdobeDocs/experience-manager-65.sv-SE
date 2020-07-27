@@ -1,7 +1,7 @@
 ---
-title: Integrera tredjepartsprogram i AEM Forms-arbetsytan
-seo-title: Integrera tredjepartsprogram i AEM Forms-arbetsytan
-description: Integrera tredjepartsprogram som Correspondence Management i AEM Forms-arbetsytan.
+title: Integrera tredjepartsprogram i arbetsytan AEM Forms
+seo-title: Integrera tredjepartsprogram i arbetsytan AEM Forms
+description: Integrera tredjepartsprogram som Correspondence Management i AEM Forms.
 seo-description: Hur man integrerar tredjepartsappar som Correspondence Management på arbetsytan i AEM Forms.
 uuid: 7654cf86-b896-4db2-8f5d-6c1b2e6c229f
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -9,18 +9,21 @@ topic-tags: forms-workspace
 discoiquuid: f70f21e3-3bec-490d-889e-faf496fb738b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '650'
+ht-degree: 0%
 
 ---
 
 
-# Integrera tredjepartsprogram i AEM Forms-arbetsytan{#integrating-third-party-applications-in-aem-forms-workspace}
+# Integrera tredjepartsprogram i arbetsytan AEM Forms{#integrating-third-party-applications-in-aem-forms-workspace}
 
-Arbetsytan i AEM Forms hanterar uppgiftstilldelning och slutförande av formulär och dokument. Dessa formulär och dokument kan vara XDP-formulär, Flex®-formulär eller stödlinjer (borttagna) som har återgetts i formaten XDP, PDF, HTML eller Flex.
+Arbetsytan i AEM Forms har stöd för hantering av uppgiftstilldelning och slutförandeaktiviteter för formulär och dokument. Dessa formulär och dokument kan vara XDP-formulär, Flex®-formulär eller stödlinjer (borttagna) som har återgetts i formaten XDP, PDF, HTML eller Flex.
 
-Dessa funktioner har förbättrats ytterligare. AEM Forms har nu stöd för samarbete med tredjepartsprogram som stöder funktioner som liknar arbetsytan i AEM Forms. En vanlig del av den här funktionen är arbetsflödet för tilldelning och efterföljande godkännande av en uppgift. AEM Forms ger en enhetlig upplevelse för AEM Forms företagsanvändare så att alla sådana tilldelningar eller godkännanden av de program som stöds kan hanteras via arbetsytan i AEM Forms.
+Dessa funktioner har förbättrats ytterligare. AEM Forms har nu stöd för samarbete med tredjepartsprogram som stöder funktioner som liknar arbetsytan i AEM Forms. En vanlig del av den här funktionen är arbetsflödet för tilldelning och efterföljande godkännande av en uppgift. AEM Forms ger en enhetlig upplevelse för AEM Forms Enterprise-användare så att alla sådana uppgiftstilldelningar eller godkännanden för de program som stöds kan hanteras via arbetsytan i AEM Forms.
 
-Låt oss som exempel se Correspondence Management som ett kandidatexempel för integrering med arbetsytan i AEM Forms. Correspondence Management har begreppet&quot;Letter&quot; som kan återges och möjliggöra åtgärder.
+Låt oss som exempel se Korrespondenshantering som ett exempel på en kandidat för integrering med arbetsytan AEM Forms. Correspondence Management har begreppet&quot;Letter&quot; som kan återges och möjliggöra åtgärder.
 
 ## Skapa Correspondence Management-resurser {#create-correspondence-management-assets}
 
@@ -64,7 +67,7 @@ Följ de här stegen för att skapa en uppgift som återger och skickar ett brev
 
    Ett exempel på en anpassad wrapper visas nedan:
 
-   ```java
+   ```javascript
    public LetterInstanceInfo getLetterInstanceInfo(Document dataXML) throws Exception {
    try {
    if(dataXML == null)
