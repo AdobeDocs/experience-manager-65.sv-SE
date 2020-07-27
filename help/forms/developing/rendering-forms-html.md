@@ -11,7 +11,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 669ede46-ea55-444b-a23f-23a86e5aff8e
 translation-type: tm+mt
-source-git-commit: 9f3129aff8a3e389231b0fe0973794e5d34480a0
+source-git-commit: c74d9e86727f2deda62b8d1eb105b28ef4b6d184
+workflow-type: tm+mt
+source-wordcount: '4108'
+ht-degree: 1%
 
 ---
 
@@ -34,7 +37,7 @@ Om du vill återge ett formulär som HTML måste formulärdesignen sparas som en
 
 När en formulärdesign återges som ett HTML-formulär återges varje delformulär på andra nivån som en HTML-sida (panel). Du kan visa ett delformulärs hierarki i Designer. Underordnade delformulär som tillhör rotdelformuläret (standardnamnet för ett rotdelformulär är formulär1) är paneldelformulär. I följande exempel visas delformulären för en formulärdesign.
 
-```as3
+```java
      form1
          Master Pages
          PanelSubform1
@@ -50,7 +53,7 @@ När en formulärdesign återges som ett HTML-formulär återges varje delformul
 
 När formulärdesigner återges som HTML-formulär begränsas inte panelerna till någon viss sidstorlek. Om du har dynamiska delformulär bör de vara kapslade i paneldelformuläret. Dynamiska delformulär kan expandera till ett obegränsat antal HTML-sidor.
 
-När ett formulär återges som ett HTML-formulär har sidstorlekar (som krävs för att sidnumrera formulär som återges som PDF) ingen betydelse. Eftersom ett formulär med flödeslayout kan expandera till ett obegränsat antal HTML-sidor är det viktigt att undvika sidfötter på mallsidan. En sidfot under innehållsområdet på en mallsida kan skriva över HTML-innehåll som flödar förbi en sidgräns.
+När ett formulär återges som ett HTML-formulär har sidstorlekar (som krävs för att sidnumrera formulär som återges som PDF) ingen betydelse. Eftersom ett formulär med flödeslayout kan expandera till ett obegränsat antal HTML-sidor är det viktigt att undvika sidfötter på den överordnad sidan. En sidfot under innehållsområdet på en överordnad sida kan skriva över HTML-innehåll som flödar förbi en sidgräns.
 
 Du måste gå från panel till panel med metoderna `xfa.host.pageUp` och `xfa.host.pageDown` . Du ändrar sidor genom att skicka ett formulär till Forms-tjänsten och låta Forms-tjänsten återge formuläret till klientenheten, vanligtvis en webbläsare.
 
@@ -86,24 +89,24 @@ Vi rekommenderar att du inte ger skriptvariabler och formulärfält samma namn, 
 
 När du återger HTML-formulär som innehåller både sidnavigeringsfunktioner och formulärskript (t.ex. anta att ett skript hämtar fältdata från en databas varje gång formuläret återges), kontrollerar du att formulärskriptet finns i händelsen form:calculate i stället för i formen:readyevent.
 
-Formulärskript som finns i formen:ready-händelsen körs bara en gång under den inledande återgivningen av formuläret och körs inte för efterföljande sidhämtningar. Händelsen form:calculate körs däremot för varje sidnavigering där formuläret återges.
+Formulärskript som finns i händelsen form:ready körs bara en gång under den första återgivningen av formuläret och körs inte för efterföljande sidhämtningar. Händelsen form:calculate körs däremot för varje sidnavigering där formuläret återges.
 
 >[!NOTE]
 På ett flersidigt formulär behålls inte ändringar som JavaScript gjort på en sida om du flyttar till en annan sida.
 
 Du kan anropa egna skript innan du skickar in ett formulär. Den här funktionen fungerar i alla tillgängliga webbläsare. Den kan dock bara användas när användarna återger det HTML-formulär som har egenskapen `Output Type` inställd på `Form Body`. Det kommer inte att fungera när det `Output Type` är `Full HTML`. Mer information om hur du konfigurerar den här funktionen finns i Konfigurera formulär i administrationshjälpen.
 
-Du måste definiera en callback-funktion som anropas innan du skickar formuläret, där funktionens namn är `_user_onsubmit`. Det antas att funktionen inte genererar något undantag, eller att undantaget ignoreras om det gör det. Vi rekommenderar att du placerar JavaScript-funktionen i huvudet i html. Du kan emellertid deklarera det var som helst före slutet av de script-taggar som innehåller `xfasubset.js`.
+Du måste definiera en callback-funktion som anropas innan du skickar formuläret, där funktionens namn är `_user_onsubmit`. Det antas att funktionen inte genererar något undantag, eller att undantaget ignoreras om det gör det. Vi rekommenderar att du placerar JavaScript-funktionen i huvudet i html. Du kan emellertid deklarera den var som helst före slutet av de skripttaggar som innehåller `xfasubset.js`.
 
 När formserver återger en XDP-fil som innehåller en nedrullningsbar lista skapas även två dolda textfält förutom att listrutan skapas. Dessa textfält lagrar data i den nedrullningsbara listan (ett lagrar alternativens visningsnamn och andra lagrar alternativens värden). Därför skickas alla data i den nedrullningsbara listan varje gång en användare skickar formuläret. Om du inte vill skicka så mycket data varje gång kan du skriva ett eget skript som inaktiverar det. Till exempel: Listrutans namn är `drpOrderedByStateProv` och omsluts av delformulärsrubriken. Namnet på HTML-indataelementet blir `header[0].drpOrderedByStateProv[0]`. Namnet på de dolda fält som lagrar och skickar data i listrutan har följande namn: `header[0].drpOrderedByStateProv_DISPLAYITEMS_[0] header[0].drpOrderedByStateProv_VALUEITEMS_[0]`
 
 Du kan inaktivera dessa indataelement på följande sätt om du inte vill publicera data. `var __CUSTOM_SCRIPTS_VERSION = 1; //enabling the feature function _user_onsubmit() { var elems = document.getElementsByName("header[0].drpOrderedByStateProv_DISPLAYITEMS_[0]"); elems[0].disabled = true; elems = document.getElementsByName("header[0].drpOrderedByStateProv_VALUEITEMS_[0]"); elems[0].disabled = true; }`
 
-```as3
+```java
 header[0].drpOrderedByStateProv_DISPLAYITEMS_[0] header[0].drpOrderedByStateProv_VALUEITEMS_[0]
 ```
 
-```as3
+```java
 var __CUSTOM_SCRIPTS_VERSION = 1; //enabling the feature
     function _user_onsubmit() {
     var elems = document.getElementsByName("header[0].drpOrderedByStateProv_DISPLAYITEMS_[0]");
@@ -115,7 +118,7 @@ var __CUSTOM_SCRIPTS_VERSION = 1; //enabling the feature
 
 ## XFA-delmängder {#xfa-subsets}
 
-När du skapar formulärdesigner som ska återges som HTML måste du begränsa skripten till XFA-delmängden för skript på javascript-språket.
+När du skapar formulärdesigner som ska återges som HTML måste du begränsa skripten till XFA-delmängden för skript i JavaScript-språket.
 
 Skript som körs på klienten eller körs både på klienten och servern måste skrivas i XFA-delmängden. Skript som körs på servern kan använda den fullständiga XFA-skriptmodellen och även FormCalc. Mer information om att använda JavaScript finns i [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63).
 
@@ -154,7 +157,7 @@ När du förflyttar dig mellan HTML-sidor (paneler) bevaras endast datastatus. I
 
 Följande skript bevarar `fillColor` fältets innehåll baserat på värdet för `hiddenField`. Anta att det här skriptet finns i ett fälts `Calculate` händelse.
 
-```as3
+```java
      If (hiddenField.rawValue == 1)
          this.fillColor = "255,0,0"
      else
@@ -246,7 +249,7 @@ När Forms-tjänsten återger ett HTML-formulär returneras en formulärdatastr�
 
 [Snabbstart för Forms Service API](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
-[Återgivning av interaktiva PDF-formulär](/help/forms/developing/rendering-interactive-pdf-forms.md)
+[Återger interaktiv PDF forms](/help/forms/developing/rendering-interactive-pdf-forms.md)
 
 [Återge HTML-formulär med anpassade verktygsfält](/help/forms/developing/rendering-html-forms-custom-toolbars.md)
 
@@ -271,8 +274,9 @@ När Forms-tjänsten återger ett HTML-formulär returneras en formulärdatastr�
    * Om du vill återge ett HTML-formulär med ett verktygsfält anropar du `HTMLRenderSpec` objektets `setHTMLToolbar` metod och skickar ett `HTMLToolbar` uppräkningsvärde. Om du till exempel vill visa ett lodrätt HTML-verktygsfält skickar du `HTMLToolbar.Vertical`.
    * Om du vill ange språkvärdet för HTML-formuläret anropar du `HTMLRenderSpec` objektets `setLocale` metod och skickar ett strängvärde som anger språkvärdet. (Det här är en valfri inställning.)
    * Om du vill återge HTML-formuläret med fullständiga HTML-taggar anropar du `HTMLRenderSpec` objektets `setOutputType` -metod och skickar `OutputType.FullHTMLTags`. (Det här är en valfri inställning.)
+
    >[!NOTE]
-   Formulär återges inte korrekt i HTML när `StandAlone` alternativet är `true` och `ApplicationWebRoot` refererar till en annan server än J2EE-programservern som är värd för AEM Forms ( `ApplicationWebRoot` värdet anges med `URLSpec` objektet som skickas till `FormsServiceClient` objektets `(Deprecated) renderHTMLForm` -metod). När servern `ApplicationWebRoot` är en annan server från den där AEM Forms finns, måste värdet för webrot-URI:n i administrationskonsolen anges som formulärets webbprogram-URI-värde. Detta kan du göra genom att logga in på administrationskonsolen, klicka på Tjänster > Formulär och ange webbrots-URI:n som https://server-name:port/FormServer. Spara sedan inställningarna.
+   Formulär återges inte korrekt i HTML när `StandAlone` alternativet är `true` och `ApplicationWebRoot` refererar till en annan server än J2EE-programservern som är värd för AEM Forms ( `ApplicationWebRoot` värdet anges med `URLSpec` objektet som skickas till `FormsServiceClient` objektets `(Deprecated) renderHTMLForm` -metod). När servern `ApplicationWebRoot` är en annan server från den som är värd för AEM Forms måste värdet för webb-URI:n i administrationskonsolen anges som formulärets webbprogram-URI-värde. Detta kan du göra genom att logga in på administrationskonsolen, klicka på Tjänster > Formulär och ange webbrots-URI:n som https://server-name:port/FormServer. Spara sedan inställningarna.
 
 1. Återge ett HTML-formulär
 
@@ -285,6 +289,7 @@ När Forms-tjänsten återger ett HTML-formulär returneras en formulärdatastr�
    * Ett strängvärde som anger `HTTP_USER_AGENT` rubrikvärdet; till exempel `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`.
    * Ett `URLSpec` objekt som lagrar de URI-värden som krävs för att återge ett HTML-formulär.
    * Ett `java.util.HashMap` objekt som lagrar bifogade filer. Det här är en valfri parameter och du kan ange `null` om du inte vill bifoga filer till formuläret.
+
    Metoden returnerar `(Deprecated) renderHTMLForm` ett `FormsResult` objekt som innehåller en formulärdataström som kan skrivas till klientens webbläsare.
 
 1. Skriv formulärdataströmmen till klientens webbläsare
@@ -324,10 +329,11 @@ När Forms-tjänsten återger ett HTML-formulär returneras en formulärdatastr�
 
    * Skapa ett `HTMLRenderSpec` objekt med hjälp av dess konstruktor.
    * Om du vill återge ett HTML-formulär med ett verktygsfält anropar du `HTMLRenderSpec` objektets `setHTMLToolbar` metod och skickar ett `HTMLToolbar` uppräkningsvärde. Om du till exempel vill visa ett lodrätt HTML-verktygsfält skickar du `HTMLToolbar.Vertical`.
-   * Om du vill ange språkvärdet för HTML-formuläret anropar du `HTMLRenderSpec` objektets `setLocale` metod och skickar ett strängvärde som anger språkvärdet. Mer information finns i API-referens för [AEM-formulär](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+   * Om du vill ange språkvärdet för HTML-formuläret anropar du `HTMLRenderSpec` objektets `setLocale` metod och skickar ett strängvärde som anger språkvärdet. Mer information finns i [AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
    * Om du vill återge HTML-formuläret med fullständiga HTML-taggar anropar du `HTMLRenderSpec` objektets `setOutputType` -metod och skickar `OutputType.FullHTMLTags`.
+
    >[!NOTE]
-   Formulär återges inte korrekt i HTML när `StandAlone` alternativet är `true` och `ApplicationWebRoot` refererar till en annan server än J2EE-programservern som är värd för AEM Forms ( `ApplicationWebRoot` värdet anges med `URLSpec` objektet som skickas till `FormsServiceClient` objektets `(Deprecated) renderHTMLForm` -metod). När servern `ApplicationWebRoot` är en annan server från den där AEM Forms finns, måste värdet för webrot-URI:n i administrationskonsolen anges som formulärets webbprogram-URI-värde. Detta kan du göra genom att logga in på administrationskonsolen, klicka på Tjänster > Formulär och ange webbrots-URI:n som https://server-name:port/FormServer. Spara sedan inställningarna.
+   Formulär återges inte korrekt i HTML när `StandAlone` alternativet är `true` och `ApplicationWebRoot` refererar till en annan server än J2EE-programservern som är värd för AEM Forms ( `ApplicationWebRoot` värdet anges med `URLSpec` objektet som skickas till `FormsServiceClient` objektets `(Deprecated) renderHTMLForm` -metod). När servern `ApplicationWebRoot` är en annan server från den som är värd för AEM Forms måste värdet för webb-URI:n i administrationskonsolen anges som formulärets webbprogram-URI-värde. Detta kan du göra genom att logga in på administrationskonsolen, klicka på Tjänster > Formulär och ange webbrots-URI:n som https://server-name:port/FormServer. Spara sedan inställningarna.
 
 1. Återge ett HTML-formulär
 
@@ -346,6 +352,7 @@ När Forms-tjänsten återger ett HTML-formulär returneras en formulärdatastr�
    * Ett tomt `javax.xml.rpc.holders.StringHolder` objekt som fylls i av metoden. Det här argumentet lagrar språkets värde.
    * Ett tomt `javax.xml.rpc.holders.StringHolder` objekt som fylls i av metoden. Det här argumentet lagrar det HTML-återgivningsvärde som används.
    * Ett tomt `com.adobe.idp.services.holders.FormsResultHolder` objekt som innehåller resultatet av den här åtgärden.
+
    Metoden `(Deprecated) renderHTMLForm` fyller i det `com.adobe.idp.services.holders.FormsResultHolder` objekt som skickas som det sista argumentvärdet med en formulärdataström som måste skrivas till klientens webbläsare.
 
 1. Skriv formulärdataströmmen till klientens webbläsare
@@ -362,5 +369,5 @@ När Forms-tjänsten återger ett HTML-formulär returneras en formulärdatastr�
 
 [Återger formulär som HTML](#rendering-forms-as-html)
 
-[Anropa AEM-formulär med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[Anropar AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
 
