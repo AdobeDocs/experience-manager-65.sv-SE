@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: ac5d8d4f-fc13-4e8d-819c-c5db07fa6870
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e545fc5e2ea139bd8ebb7f84138ba68e03d71d19
+source-git-commit: bd70508b361ac8b62ebc0344538a18369a075f3e
+workflow-type: tm+mt
+source-wordcount: '2002'
+ht-degree: 0%
 
 ---
 
@@ -22,13 +25,13 @@ Den här självstudiekursen är ett steg i [Skapa din första interaktiva kommun
 
 När du har skapat alla byggstenar, t.ex. formulärdatamodell, dokumentfragment, mallar och teman för webbversionen, kan du börja skapa en interaktiv kommunikation.
 
-Interaktiv kommunikation kan levereras via två kanaler: Tryck och webb. Du kan också skapa en interaktiv kommunikationskanal med utskriftskanalen som master. Skriv ut som huvudalternativ för webbkanal säkerställer att innehållet, arvet och databindningen för webbkanalen hämtas från utskriftskanalen. Det ser också till att ändringarna som görs i utskriftskanalen synkroniseras i webbkanalen. De som skapar interaktiv kommunikation får dock bryta arvet för vissa komponenter i webbkanalen.
+Interaktiv kommunikation kan levereras via två kanaler: Tryck och webb. Du kan också skapa en interaktiv kommunikationskanal med utskriftskanalen som överordnad. Med alternativet Skriv ut som överordnad för webbkanalen kan du säkerställa att innehållet, arvet och databindningen för webbkanalen hämtas från Print-kanalen. Det ser också till att ändringarna som görs i utskriftskanalen synkroniseras i webbkanalen. De som skapar interaktiv kommunikation får dock bryta arvet för vissa komponenter i webbkanalen.
 
 I den här självstudiekursen får du hjälp med att skapa interaktiv kommunikation för tryck- och webbkanaler. I slutet av den här självstudiekursen kan du:
 
 * Skapa interaktiv kommunikation för tryckkanalen
 * Skapa interaktiv kommunikation för webbkanalen
-* Skapa trycksaker och webbinteraktiv kommunikation med Skriv ut som mall
+* Skapa trycksaker och interaktiv webbkommunikation med Överordnad trycksaksproduktion
 
 ## Skapa interaktiv kommunikation för tryck och webb utan synkronisering {#create-interactive-communications-for-print-and-web-with-no-synchronization}
 
@@ -40,29 +43,30 @@ Nedan följer en lista över resurser som redan har skapats i den här självstu
 
 **Formulärdatamodell:** [FDM_Create_First_IC](../../forms/using/create-form-data-model0.md)
 
-**Dokumentfragment:** Bill_details_first_ic, customer_details_first_ic, Bill_summary_first_ic, summary_Charts_first_ic [](../../forms/using/create-document-fragments.md)
+**Dokumentfragment:** [Bill_details_first_ic, customer_details_first_ic, Bill_summary_first_ic, summary_addas_first_ic](../../forms/using/create-document-fragments.md)
 
 **Layoutfragment:** [table_lf](../../forms/using/create-templates-print-web.md)
 
 **Bilder:** PayNow och ValueAddedServices
 
-1. Logga in på AEM-författarinstansen och gå till **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Formulär]** > **[!UICONTROL Formulär och dokument]**.
+1. Logga in på AEM-författarinstansen och navigera till **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
 1. Tryck på **Skapa** och välj **Interaktiv kommunikation**. Guiden **Skapa interaktiv kommunikation** visas.
 1. Ange **create_first_ic** i fälten **Titel** och **Namn** . Välj **FDM_Create_First_IC** som formulärdatamodell och tryck på **Nästa**.
 1. I guiden **Kanaler** :
 
-   1. Ange **create_first_ic_print_template** som utskriftsmall och tryck på **Select**. Kontrollera att kryssrutan **Använd Skriv ut som mallsida för webbkanal** inte är markerad.
+   1. Ange **create_first_ic_print_template** som utskriftsmall och tryck på **Select**. Kontrollera att kryssrutan **Använd Skriv ut som Överordnad för webbkanal** inte är markerad.
 
    1. Ange **mappen Create_First_IC_templates** > **Create_First_IC_Web_Template** som webbmall och tryck på **Select**.
 
    1. Tryck på **Skapa**.
+
    Ett bekräftelsemeddelande visas om att den interaktiva kommunikationen har skapats.
 
 1. Tryck på **Redigera** för att öppna den interaktiva kommunikationen i den högra rutan.
 1. Gå till fliken **Resurser** och tillämpa filtret för att endast visa dokumentfragmenten i den vänstra rutan.
 1. Dra och släpp följande dokumentfragment till målområdena i interaktiv kommunikation:
 
-   | Dokumentfragment | Målområde |
+   | Dokumentfragment | Target Area |
    |---|---|
    | Bill_details_first_ic | BillDetails |
    | customer_details_first_ic | CustomerDetails |
@@ -72,27 +76,27 @@ Nedan följer en lista över resurser som redan har skapats i den här självstu
    ![Dokumentfragment för interaktiv kommunikation](assets/create_first_ic_doc_fragments_new.png)
 
 1. Tryck på målområdet för **diagram** och tryck **+** för att lägga till en **diagramkomponent** .
-1. Tryck på diagramkomponenten och välj ![](assets/configure_icon.png) (Konfigurera). Diagramegenskaperna visas i den vänstra rutan:
+1. Tryck på diagramkomponenten och välj ![configure_icon](assets/configure_icon.png) (Configure). Diagramegenskaperna visas i den vänstra rutan:
 
    1. Ange ett namn för diagrammet.
    1. Välj **Cirkel** i listrutan **Diagramtyp** .
-   1. Välj **calltype** -egenskapen i **anropet** av datamodellens objekttyp i **X-axelavsnittet** . Tryck på ![](assets/done_icon.png).
+   1. Välj **calltype** -egenskapen i **anropet** av datamodellens objekttyp i **X-axelavsnittet** . Tryck på ![made_icon](assets/done_icon.png).
    1. Välj **Frekvens** i listrutan **Funktion** .
-   1. Välj **calltype** -egenskapen i **anropet** av datamodellens objekttyp i avsnittet **Y-axel** . Tryck på ![](assets/done_icon.png).
-   1. Tryck ![](assets/done_icon.png) för att spara diagramegenskaperna.
+   1. Välj **calltype** -egenskapen i **anropet** av datamodellens objekttyp i avsnittet **Y-axel** . Tryck på ![made_icon](assets/done_icon.png).
+   1. Tryck på ![made_icon](assets/done_icon.png) för att spara diagramegenskaperna.
 
 1. Gå till fliken **Resurser** och tillämpa filtret för att endast visa layoutfragmenten i den vänstra rutan. Dra och släpp layoutfragmentet **table_lf** till målområdet **Specificerade anrop** .
-1. Markera textfältet i kolumnen **Datum** och tryck på ![](assets/configure_icon.png) (Konfigurera).
-1. Välj **Datamodellobjekt** i listrutan **Bindningstyp** och välj **anrop** > **calldate**. Tryck ![](assets/done_icon.png) två gånger för att spara egenskaperna.
+1. Markera textfältet i kolumnen **Datum** och tryck på ![configure_icon](assets/configure_icon.png) (Configure).
+1. Välj **Datamodellobjekt** i listrutan **Bindningstyp** och välj **anrop** > **calldate**. Tryck på ![made_icon](assets/done_icon.png) två gånger för att spara egenskaperna.
 
    Du kan på liknande sätt skapa bindning med **calltime**, **callnumber**, **callduration** och **callCharges** för textfält i kolumnerna **Time************** ,¥Number,¥Duration¥ och¥Charges¥.
 
 1. Tryck på målområdet **PayNow** och tryck **+** för att lägga till en **Image** -komponent.
-1. Tryck på bildkomponenten och välj ![](assets/configure_icon.png) (Konfigurera). Bildegenskaperna visas i den vänstra rutan:
+1. Tryck på bildkomponenten och välj ![configure_icon](assets/configure_icon.png) (Configure). Bildegenskaperna visas i den vänstra rutan:
 
    1. Ange **PayNow** som bildens namn i fältet **Namn** .
    1. Tryck på **Överför**, markera bilden som sparats i det lokala filsystemet och tryck sedan på **Öppna**.
-   1. Tryck ![](assets/done_icon.png) för att spara bildegenskaperna.
+   1. Tryck på ![made_icon](assets/done_icon.png) för att spara bildegenskaperna.
 
 1. Upprepa steg 13 och 14 för att lägga till **ValueAddedServices** -bilden i **ValueAddedServices** -målområdet.
 
@@ -104,20 +108,21 @@ Nedan följer en lista över resurser som redan har skapats i kursen och som beh
 
 **Formulärdatamodell:** [FDM_Create_First_IC](../../forms/using/create-form-data-model0.md)
 
-**Dokumentfragment:** Bill_details_first_ic, customer_details_first_ic, Bill_summary_first_ic, summary_Charts_first_ic [](../../forms/using/create-document-fragments.md)
+**Dokumentfragment:** [Bill_details_first_ic, customer_details_first_ic, Bill_summary_first_ic, summary_addas_first_ic](../../forms/using/create-document-fragments.md)
 
 **Bilder:** PayNowWeb och ValueAddedServicesWeb
 
-1. Logga in på AEM-författarinstansen och gå till **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Formulär]** > **[!UICONTROL Formulär och dokument]**.
+1. Logga in på AEM-författarinstansen och navigera till **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
 1. Tryck på **Skapa** och välj **Interaktiv kommunikation**. Guiden **Skapa interaktiv kommunikation** visas.
 1. Ange **create_first_ic** i fälten **Titel** och **Namn** . Välj **FDM_Create_First_IC** som formulärdatamodell och tryck på **Nästa**.
 1. I guiden **Kanaler** :
 
-   1. Ange **create_first_ic_print_template** som utskriftsmall och tryck på **Select**. Kontrollera att kryssrutan **Använd Skriv ut som mallsida för webbkanal** inte är markerad.
+   1. Ange **create_first_ic_print_template** som utskriftsmall och tryck på **Select**. Kontrollera att kryssrutan **Använd Skriv ut som Överordnad för webbkanal** inte är markerad.
 
    1. Ange **mappen Create_First_IC_templates** > **Create_First_IC_Web_Template** som webbmall och tryck på **Select**.
 
    1. Tryck på **Skapa**.
+
    Ett bekräftelsemeddelande visas om att den interaktiva kommunikationen har skapats.
 
 1. Tryck på **Redigera** för att öppna den interaktiva kommunikationen i den högra rutan.
@@ -125,7 +130,7 @@ Nedan följer en lista över resurser som redan har skapats i kursen och som beh
 1. Gå till fliken **Resurser** och tillämpa filtret för att endast visa dokumentfragmenten i den vänstra rutan.
 1. Dra och släpp följande dokumentfragment till målområdena i interaktiv kommunikation:
 
-   | Dokumentfragment | Målområde |
+   | Dokumentfragment | Target Area |
    |---|---|
    | Bill_details_first_ic | BillDetails |
    | customer_details_first_ic | CustomerDetails |
@@ -133,18 +138,18 @@ Nedan följer en lista över resurser som redan har skapats i kursen och som beh
    | summary_Charts_first_interactive_communication | Avgifter |
 
 1. Tryck på målområdet **Sammanfattning av avgifter** och tryck **+** för att lägga till en **diagramkomponent** .
-1. Tryck på diagramkomponenten och välj ![](assets/configure_icon.png) (Konfigurera). Diagramegenskaperna visas i den vänstra rutan:
+1. Tryck på diagramkomponenten och välj ![configure_icon](assets/configure_icon.png) (Configure). Diagramegenskaperna visas i den vänstra rutan:
 
    1. Ange ett namn för diagrammet.
    1. Välj **Cirkel** i listrutan **Diagramtyp** .
 
-   1. Välj **calltype** -egenskapen i **anropet** av datamodellens objekttyp i **X-axelavsnittet** . Tryck på ![](assets/done_icon.png).
+   1. Välj **calltype** -egenskapen i **anropet** av datamodellens objekttyp i **X-axelavsnittet** . Tryck på ![made_icon](assets/done_icon.png).
 
    1. Välj **Frekvens** i listrutan **Funktion** .
 
-   1. Välj **calltype** -egenskapen i **anropet** av datamodellens objekttyp i avsnittet **Y-axel** . Tryck på ![](assets/done_icon.png).
+   1. Välj **calltype** -egenskapen i **anropet** av datamodellens objekttyp i avsnittet **Y-axel** . Tryck på ![made_icon](assets/done_icon.png).
 
-   1. Tryck ![](assets/done_icon.png) för att spara diagramegenskaperna.
+   1. Tryck på ![made_icon](assets/done_icon.png) för att spara diagramegenskaperna.
 
 1. Välj fliken **Datakällor** i den vänstra rutan och dra och släpp **anropsdatamodellsobjektet** till målområdet för **Specificerade samtal** . Alla egenskaper i **anropets** datamodellobjekt visas som tabellkolumner i målområdet **Specificerade anrop** i den högra rutan.
 
@@ -162,9 +167,9 @@ Nedan följer en lista över resurser som redan har skapats i kursen och som beh
    1. Byt namn på texten till **Betala nu**.
    1. Markera texten och tryck på ikonen Hyperlänk.
    1. Ange betalnings-URL i fältet **Sökväg** .
-   1. Välj **Ny flik** i listrutan **Mål** .
+   1. Välj **Ny flik** i listrutan **Target** .
 
-   1. Tryck ![](assets/done_icon.png) för att spara hyperlänksegenskaperna.
+   1. Tryck på ![made_icon](assets/done_icon.png) för att spara hyperlänksegenskaperna.
 
 1. Välj **Format** i listrutan bredvid alternativet **Förhandsgranska** .
 
@@ -177,16 +182,17 @@ Nedan följer en lista över resurser som redan har skapats i kursen och som beh
 
    1. Välj Röd som bakgrundsfärg för knappen i avsnittet **Bakgrund** .
    1. I fältet **Marginal** för avsnittet **Dimensioner och position** trycker du på ikonen **Redigera samtidigt** och anger **högermarginalen** till **450 px**. Fälten Överkant, Underkant och Vänster är tomma.
+
    ![Infoga hyperlänk i interaktiv kommunikation](assets/ic_web_hyperlink_new.png)
 
 1. Tryck på **målområdet Betala nu** och tryck **+** för att lägga till en **Image** -komponent.
-1. Tryck på bildkomponenten och välj ![](assets/configure_icon.png) (Konfigurera). Bildegenskaperna visas i den vänstra rutan:
+1. Tryck på bildkomponenten och välj ![configure_icon](assets/configure_icon.png) (Configure). Bildegenskaperna visas i den vänstra rutan:
 
    1. Ange **PayNow** som bildens namn i fältet **Namn** .
 
    1. Tryck på **Överför**, markera bilden **PayNowWeb** som har sparats i det lokala filsystemet och tryck sedan på **Öppna**.
 
-   1. Tryck ![](assets/done_icon.png) för att spara bildegenskaperna.
+   1. Tryck på ![made_icon](assets/done_icon.png) för att spara bildegenskaperna.
 
 1. Baserat på användningsexemplet infogar du en **prenumerationsknapp** i interaktiv kommunikation som ger användaren ett alternativ att prenumerera på mervärdesskapande tjänster genom att klicka på knappen.
 
@@ -194,27 +200,28 @@ Nedan följer en lista över resurser som redan har skapats i kursen och som beh
 
 ## Skapa interaktiv kommunikation för tryck och webb med automatisk synkronisering {#create-interactive-communications-for-print-and-web-with-auto-synchronization}
 
-Du kan också skapa en interaktiv kommunikation genom att aktivera automatisk synkronisering mellan utskrifts- och webbkanaler. Om du vill aktivera automatisk synkronisering väljer du Skriv ut som mall när du skapar den interaktiva kommunikationen. Om du väljer alternativet Skriv ut som mallsida kommer innehållet, arvet och databindningen för webbkanalen att härledas från utskriftskanalen. Det ser också till att de ändringar som görs i utskriftskanalen återspeglas i webbkanalen.
+Du kan också skapa en interaktiv kommunikation genom att aktivera automatisk synkronisering mellan utskrifts- och webbkanaler. Om du vill aktivera automatisk synkronisering väljer du Skriv ut som överordnad när du skapar den interaktiva kommunikationen. Om du väljer alternativet Skriv ut som överordnad kommer webbkanalens innehåll, arv och databindning att härledas från utskriftskanalen. Det ser också till att de ändringar som görs i utskriftskanalen återspeglas i webbkanalen.
 
 Utför följande steg för att härleda webbkanalsinnehållet med hjälp av Print channel:
 
-1. Logga in på AEM-författarinstansen och gå till **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Formulär]** > **[!UICONTROL Formulär och dokument]**.
+1. Logga in på AEM-författarinstansen och navigera till **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
 1. Tryck på **Skapa** och välj **Interaktiv kommunikation**. Guiden **Skapa interaktiv kommunikation** visas.
 1. Ange **create_first_ic** i fälten **Titel** och **Namn** . Välj **FDM_Create_First_IC** som formulärdatamodell och tryck på **Nästa**.
 1. I guiden **Kanaler** :
 
    1. Ange **create_first_ic_print_template** som utskriftsmall och tryck på **Select**.
 
-   1. Markera kryssrutan **Använd utskrift som mallsida för webbkanal** .
+   1. Markera kryssrutan **Använd utskrift som Överordnad för webbkanal** .
    1. Ange **mappen Create_First_IC_templates** > **Create_First_IC_Web_Template** som webbmall och tryck på **Select**.
 
    1. Tryck på **Skapa**.
+
    Ett bekräftelsemeddelande visas om att den interaktiva kommunikationen har skapats.
 
 1. Tryck på **Redigera** för att öppna den interaktiva kommunikationen i den högra rutan.
 1. Utför steg 6-15 i [Skapa interaktiv kommunikation för](../../forms/using/create-interactive-communication0.md#create-interactive-communication-for-print-channel) tryckkanaler.
 1. Tryck på fliken **Kanaler** i den vänstra rutan och tryck på **Webb** för att automatiskt generera innehåll för webbkanalen från Print-kanalen.
-1. När kryssrutan **Använd utskrift som mallsida för webbkanal** är markerad i steg 4 genereras innehållet och bindningarna automatiskt för webbkanalen från utskriftskanalen.
+1. När kryssrutan **Använd Skriv ut som Överordnad för webbkanal** har markerats i steg 4 genereras innehåll och bindningar automatiskt för webbkanalen från utskriftskanalen.
 
    Utskriftskanalinnehållet infogas under webbkanalens mallinnehåll. Om du vill ändra webbkanalsinnehållet som har genererats automatiskt från utskriftskanalen kan du avbryta arvet för alla målområden.
 
@@ -232,6 +239,7 @@ Utför följande steg för att härleda webbkanalsinnehållet med hjälp av Prin
    * Faktureringssammanfattningskomponent till faktureringssammanfattningspanelen
    * Sammanfattning av avgiftskomponenten till panelen Sammanfattning av avgifter
    * Layoutfragment (tabell) till panelen Specificerade samtal
+
    ![Webbinnehållsträd](assets/ic_web_content_tree_new.png)
 
 1. Upprepa steg 13-18 i [Create Interactive Communication for Web channel](../../forms/using/create-interactive-communication0.md#create-interactive-communication-for-web-channel) för att lägga in hyperlänkarna **Pay Now** och **Subscribe** i webbkanalen i Interactive Communication.
