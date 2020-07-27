@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: b89293c4-ea2e-4fa4-9e5e-ef4f548e9608
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1071'
+ht-degree: 0%
 
 ---
 
@@ -43,17 +46,17 @@ Java API Quick Start (SOAP) är tillgängligt för Rights Management-tjänsten:
 
 [Snabbstart (SOAP-läge): Ta bort en profil från ett Word-dokument med Java API](document-security-service-java-api.md#quick-start-soap-mode-removing-a-policy-from-a-word-document-using-the-java-api)
 
-AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda typer och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms-API:t med stark typning och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
->Snabbstart som finns i Programmering med AEM Forms är baserat på operativsystemet på Forms-servern. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>Snabbstart i Programmering med AEM Forms är baserat på operativsystemet för Forms-servern. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## Snabbstart (SOAP-läge): Skapa en profil med Java API {#quick-start-soap-mode-creating-a-policy-using-the-java-api}
 
 I följande Java-kodexempel skapas en ny princip med namnet *Tillåt kopia*. Principuppsättningen som principen läggs till i heter *Global principuppsättning*. Den här principuppsättningen finns som standard. (Se [Skapa profiler](/help/forms/developing/protecting-documents-policies.md#creating-policies).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -182,7 +185,7 @@ I följande Java-kodexempel skapas en ny princip med namnet *Tillåt kopia*. Pri
 
 I följande Java-kodexempel ändras en princip med namnet *Tillåt kopia* genom att offlinelåneperioden ställs in på 40 dagar. (Se [Ändra profiler](/help/forms/developing/protecting-documents-policies.md#modifying-policies).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -283,7 +286,7 @@ I följande Java-kodexempel ändras en princip med namnet *Tillåt kopia* genom 
 
 I följande Java-kodexempel tas en princip med namnet *Tillåt kopia* bort. (Se [Ta bort profiler](/help/forms/developing/protecting-documents-policies.md#deleting-policies).)
 
-```as3
+```java
  /*
      * * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -375,7 +378,7 @@ I följande Java-kodexempel tas en princip med namnet *Tillåt kopia* bort. (Se 
 
 I följande Java-kodexempel tillämpas en princip med namnet *Tillåt kopiering* till ett PDF-dokument med namnet *Loan.pdf*. Principuppsättningen som principen läggs till i heter *Global principuppsättning*. Det principskyddade dokumentet sparas som en PDF-fil med namnet *PolicyProtectedLoanDoc.pdf. *(Se [Tillämpa profiler på PDF-dokument](/help/forms/developing/protecting-documents-policies.md#applying-policies-to-pdf-documents).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -481,7 +484,7 @@ I följande Java-kodexempel tillämpas en princip med namnet *Tillåt kopiering*
 
 I följande kodexempel tas en princip bort från ett PDF-dokument med namnet *PolicyProtectedLoanDoc.pdf*. Det oskyddade PDF-dokumentet sparas som *unProtectedLoan.pdf*. (Se [Ta bort profiler från PDF-dokument](/help/forms/developing/protecting-documents-policies.md#removing-policies-from-pdf-documents).)
 
-```as3
+```java
  /*
      * * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -588,7 +591,7 @@ I följande kodexempel tas en princip bort från ett PDF-dokument med namnet *Po
 
 I följande Java-kodexempel återkallas ett principskyddat dokument med namnet *PolicyProtectedLoanDoc.pdf*. Ett reviderat PDF-dokument finns på följande URL-plats `https://'[server]:[port]'/RightsManagement/UpdatedLoan.pdf`. (Se [Återkalla åtkomst till dokument](/help/forms/developing/protecting-documents-policies.md#revoking-access-to-documents).)
 
-```as3
+```java
  /*
      * * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -702,7 +705,7 @@ I följande Java-kodexempel återkallas ett principskyddat dokument med namnet *
 
 Följande Java-kodexempel undersöker ett policyskyddat PDF-dokument med namnet *PolicyProtectedLoanDoc.* pdf. (Se [Inspektera skyddade PDF-dokument](/help/forms/developing/protecting-documents-policies.md#inspecting-policy-protected-pdf-documents).)
 
-```as3
+```java
  /*
      * * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -820,7 +823,7 @@ Följande Java-kodexempel undersöker ett policyskyddat PDF-dokument med namnet 
 
 I följande Java-kodexempel återställs åtkomsten till ett återkallat PDF-dokument med namnet *PolicyProtectedLoanDoc.pdf*. (Se [Återställa åtkomst till återkallade dokument](/help/forms/developing/protecting-documents-policies.md#reinstating-access-to-revoked-documents).)
 
-```as3
+```java
  /*
      * * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -926,7 +929,7 @@ I följande Java-kodexempel återställs åtkomsten till ett återkallat PDF-dok
 
 I följande Java-kodexempel skapas en ny PDF-vattenstämpel med namnet &#39;Exempel på PDF-vattenstämpel&#39;. Den här vattenstämpeln innehåller ett enda element (se [Skapa vattenstämplar](/help/forms/developing/protecting-documents-policies.md#creating-watermarks)).
 
-```as3
+```java
 /*
  * This Java Quick Start uses the SOAP mode and contains the following JAR files
  * in the class path:
@@ -1059,7 +1062,7 @@ public class PDFWatermarksSOAPMode {
 
 I följande Java-kodexempel skapas en ny textvattenstämpel med namnet *Exempel på textvattenstämpel*. Den här vattenstämpeln innehåller ett enda element.
 
-```as3
+```java
 /*
  * This Java Quick Start uses the SOAP mode and contains the following JAR files
  * in the class path:
@@ -1208,7 +1211,7 @@ public class TextWatermarks {
 
 I följande Java-kodexempel ändras en vattenstämpel med namnet &#39;Exempel på textvattenstämpel&#39; och opaciteten för det första elementet ställs in på 100.
 
-```as3
+```java
 /*
  * This Java Quick Start uses the SOAP mode and contains the following JAR files
  * in the class path:
@@ -1320,7 +1323,7 @@ public class ModifyWatermarks {
 
 I följande Java-kodexempel ändras vattenstämpeln *Konfidentiellt* genom att värdet för `opacity` attributet ändras till 80.
 
-```as3
+```java
  /*
      * * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -1418,7 +1421,7 @@ I följande Java-kodexempel ändras vattenstämpeln *Konfidentiellt* genom att v
 
 I följande Java-kodexempel söks det efter händelsen create policy.
 
-```as3
+```java
  /*
      * * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -1531,7 +1534,7 @@ I följande Java-kodexempel söks det efter händelsen create policy.
 
 I följande Java-kodexempel tillämpas en princip med namnet *Tillåt kopiering* till ett Word-dokument med namnet *Loan.doc*. Principuppsättningen som principen läggs till i heter *Global principuppsättning*. Det principskyddade dokumentet sparas som en DOC-fil med namnet *PolicyProtectedLoanDoc.doc. *(Se [Tillämpa profiler på PDF-dokument](/help/forms/developing/protecting-documents-policies.md#applying-policies-to-pdf-documents).)
 
-```as3
+```java
  /*
      * * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -1646,7 +1649,7 @@ I följande Java-kodexempel tillämpas en princip med namnet *Tillåt kopiering*
 
 I följande kodexempel tas en princip bort från ett Word-dokument med namnet *PolicyProtectedLoanDoc.doc*. Det oskyddade Word-dokumentet sparas som *unProtectedLoan.doc*. (Se [Ta bort profiler från Word-dokument](/help/forms/developing/protecting-documents-policies.md#removing-policies-from-word-documents).)
 
-```as3
+```java
  /*
      * * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -1754,7 +1757,7 @@ I följande kodexempel tas en princip bort från ett Word-dokument med namnet *P
 
 I följande Java-kodexempel skapas en ny abstrakt princip med namnet AllowCopy. Principuppsättningen som principen läggs till i heter Global principuppsättning. Den här principuppsättningen finns som standard. (Se Skapa profiler.)
 
-```as3
+```java
 /*
  * This Java Quick Start uses the SOAP mode and contains the following JAR files
  * in the class path:
@@ -1871,7 +1874,7 @@ public class CreateAbstractPolicySoap {
 
 I följande Java-kodexempel ändras en abstrakt princip med namnet AllowCopy. Principuppsättningen som principen ändras i heter Global principuppsättning. Den här principuppsättningen finns som standard. (Se Skapa profiler.)
 
-```as3
+```java
 /*
  * This Java Quick Start uses the SOAP mode and contains the following JAR files
  * in the class path:
@@ -1970,7 +1973,7 @@ public class ModifyingAbstractPolicySoap {
 
 I följande Java-kodexempel tas en abstrakt princip som heter AllowCopy bort. Principuppsättningen som principen tas bort från har namnet Global principuppsättning. Den här principuppsättningen finns som standard. (Se Skapa profiler.)
 
-```as3
+```java
 /*
  * This Java Quick Start uses the SOAP mode and contains the following JAR files
  * in the class path:
@@ -2057,7 +2060,7 @@ public class DeleteAbstractPolicySoap {
 
 I följande Java-kodexempel demonstreras metoden för att skydda ett dokument i ett Statement Workflow för en befintlig användare.
 
-```as3
+```java
 /*
  * This Java Quick Start uses the SOAP mode and contains the following JAR files
  * in the class path:
@@ -2168,7 +2171,7 @@ I följande Java-kodexempel visas hur du kan skydda ett dokument i Statement Wor
 * En ny användare, licens och policy skapas.
 * Användaren är kopplad till licensen och profilen är skyddad.
 
-```as3
+```java
 /*
  * This Java Quick Start uses the SOAP mode and contains the following JAR files
  * in the class path:
