@@ -11,7 +11,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: b4f57e42-60a6-407d-9764-15a11615827d
 translation-type: tm+mt
-source-git-commit: 2e4b8ee13257758cba6b76012fed4958f7eabbd7
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1842'
+ht-degree: 0%
 
 ---
 
@@ -77,7 +80,7 @@ För att illustrera användningen av ett formulärdesignskript undersöker det h
 
 Skriptet i den här formulärdesignen har följande syntax:
 
-```as3
+```javascript
      NumericField3 = NumericField2 + NumericField1
 ```
 
@@ -120,7 +123,7 @@ När du har verifierat att det bearbetningstillstånd som är kopplat till ett s
 
 **Se även**
 
-[Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)[Beräkna formulärdata med Java API](/help/forms/developing/calculating-form-data.md#calculate-form-data-using-the-java-api)[Calculate-formulärdata med webbtjänstens API](/help/forms/developing/calculating-form-data.md#calculate-form-data-using-the-web-service-api)[Ställa in anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)[Forms Service API Snabbstart](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)[](/help/forms/developing/rendering-interactive-pdf-forms.md)[Återgivning av interaktiva PDF-formulär¥Skapa webbprogram som återger formulär](/help/forms/developing/creating-web-applications-renders-forms.md)
+[Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)[Beräkna formulärdata med Java API](/help/forms/developing/calculating-form-data.md#calculate-form-data-using-the-java-api)[Calculate-formulärdata med webbtjänstens API](/help/forms/developing/calculating-form-data.md#calculate-form-data-using-the-web-service-api)[Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)[Forms Service API Quick Starts](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)[](/help/forms/developing/rendering-interactive-pdf-forms.md)[Rendering Interactive PDF forms¥Skapa webbprogram som återger formulär](/help/forms/developing/creating-web-applications-renders-forms.md)
 
 ## Beräkna formulärdata med Java API {#calculate-form-data-using-the-java-api}
 
@@ -144,6 +147,7 @@ Beräkna formulärdata med hjälp av Forms API (Java):
       * Ett strängvärde som anger miljövariabler inklusive alla relevanta HTTP-huvuden. Du måste ange vilken innehållstyp som ska hanteras genom att ange ett eller flera värden för `CONTENT_TYPE` miljövariabeln. Om du till exempel vill hantera XML- och PDF-data anger du följande strängvärde för den här parametern: `CONTENT_TYPE=application/xml&CONTENT_TYPE=application/pdf`
       * Ett strängvärde som anger `HTTP_USER_AGENT` rubrikvärdet; till exempel `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`.
       * Ett `RenderOptionsSpec` objekt som lagrar körningsalternativ.
+
       Metoden returnerar `processFormSubmission` ett `FormsResult` objekt som innehåller resultaten av formuläröverföringen.
 
    * Kontrollera att bearbetningstillståndet som är associerat med ett skickat formulär är `1` genom att anropa `FormsResult` objektets `getAction` metod. Om den här metoden returnerar värdet `1`utfördes beräkningen och data kan skrivas tillbaka till klientens webbläsare.
@@ -160,7 +164,7 @@ Beräkna formulärdata med hjälp av Forms API (Java):
 **Se även**
 
 
-[Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)[Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)[Ställa in anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
 ## Beräkna formulärdata med webbtjänstens API {#calculate-form-data-using-the-web-service-api}
 
@@ -197,6 +201,7 @@ Beräkna formulärdata med Forms API (webbtjänsten):
       * Ett tomt `javax.xml.rpc.holders.ShortHolder` objekt som fylls i av metoden.
       * Ett tomt `MyArrayOf_xsd_anyTypeHolder` objekt som fylls i av metoden. Den här parametern används för att lagra bifogade filer som skickas tillsammans med formuläret.
       * Ett tomt `FormsResultHolder` objekt som fylls i av metoden med det formulär som skickas.
+
       Metoden `processFormSubmission` fyller i `FormsResultHolder` parametern med resultaten av formuläröverföringen. Metoden returnerar `processFormSubmission` ett `FormsResult` objekt som innehåller resultaten av formuläröverföringen.
 
    * Kontrollera att bearbetningstillståndet som är associerat med ett skickat formulär är `1` genom att anropa `FormsResult` objektets `getAction` metod. Om den här metoden returnerar värdet `1`utfördes beräkningen och data kan skrivas tillbaka till klientens webbläsare.
@@ -209,4 +214,4 @@ Beräkna formulärdata med Forms API (webbtjänsten):
    * Skapa en bytearray och fyll i den genom att anropa `BLOB` objektets `getBinaryData` metod. Den här aktiviteten tilldelar innehållet i `FormsResult` objektet till bytearrayen.
    * Anropa `javax.servlet.http.HttpServletResponse` objektets `write` metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till `write` metoden.
 
-**Se även**[Anropa AEM-formulär med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+**Se även**[Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
