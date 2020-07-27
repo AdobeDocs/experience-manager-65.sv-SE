@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 532e607d-5bc5-4ccc-92c6-30efe1081872
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '503'
+ht-degree: 0%
 
 ---
 
@@ -33,7 +36,7 @@ Följande snabbstarter är tillgängliga för tjänsten Task Manager.
 
 [Snabbstart (SOAP-läge): Hämta aktivitetsinformation med Java API](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-task-information-using-the-java-api)
 
-AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda typer och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms-API:t med stark typning och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
@@ -41,13 +44,13 @@ AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda ty
 
 >[!NOTE]
 >
->Snabbstart som finns i Programmering med AEM Forms är baserat på operativsystemet på Forms-servern. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>Snabbstart i Programmering med AEM Forms är baserat på operativsystemet för Forms-servern. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## Snabbstart (SOAP-läge): Tilldela uppgifter med Java API {#quick-start-soap-mode-assigning-tasks-using-the-java-api}
 
 I följande Java-kodexempel tilldelas en uppgift till användaren Tony Blue.
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-taskmanager-client.jar
@@ -180,7 +183,7 @@ I följande Java-kodexempel tilldelas en uppgift till användaren Tony Blue.
 
 I följande Java-kodexempel låses en aktivitet som motsvarar aktivitetsidentifierarvärdet 2.
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-taskmanager-client.jar
@@ -269,7 +272,7 @@ I följande Java-kodexempel låses en aktivitet som motsvarar aktivitetsidentifi
 
 I följande Java-kodexempel hämtas alla uppgifter som tilldelats en användare med namnet *tony blue*. Observera att den här användaren anges i anslutningsegenskaperna. Information om returnerade uppgifter, som identifierarvärde och beskrivning, visas.
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-taskmanager-client.jar
@@ -395,7 +398,7 @@ I följande Java-kodexempel hämtas alla uppgifter som tilldelats en användare 
 
 I följande Java-kodexempel hämtas formulärdata från en uppgift med identifierarvärdet 304. Formulärdata skrivs till en XML-fil med namnet *FormData.xml* som finns på C:\Adobe.
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-taskmanager-client.jar
@@ -501,7 +504,7 @@ I följande Java-kodexempel hämtas formulärdata från en uppgift med identifie
 
 I följande Java-kodexempel uppdateras ett formulär med data som finns i *filen FormData.xml* .
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-taskmanager-client.jar
@@ -611,7 +614,7 @@ I följande Java-kodexempel uppdateras ett formulär med data som finns i *filen
 
 Följande Java-kodexempel hämtar bifogade filer. Varje bifogad fil sparas som en TXT-fil.
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-taskmanager-client.jar
@@ -715,7 +718,7 @@ Följande Java-kodexempel hämtar bifogade filer. Varje bifogad fil sparas som e
 
 I följande Java-kodexempel hämtas alla uppgifter som är baserade på en process som heter *MortgageLoan - Prebuilt*. Statusen för varje returnerad uppgift kontrolleras för att säkerställa att den är en slutförd uppgift. Information som namnet på den användare som slutförde uppgiften och datumet då uppgiften slutfördes hämtas och visas.
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-taskmanager-client.jar
