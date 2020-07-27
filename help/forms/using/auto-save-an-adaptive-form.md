@@ -8,7 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: d519ac4e-6d29-4a69-874e-792acabe87ff
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '669'
+ht-degree: 0%
 
 ---
 
@@ -26,22 +29,24 @@ Du kan konfigurera ett anpassningsbart formulär så att innehållet automatiskt
 
 Alternativet för att spara automatiskt är inte aktiverat i ett anpassat formulär. Du kan aktivera alternativet för att spara automatiskt i avsnittet **Spara** automatiskt i egenskaperna för ett anpassat formulär. I avsnittet **Spara** automatiskt finns även flera andra konfigurationsalternativ. Utför följande steg för att aktivera och konfigurera alternativet för att spara automatiskt för ett anpassat formulär:
 
-1. Om du vill komma åt avsnittet Spara automatiskt i egenskaperna markerar du en komponent, trycker på ![fältnivå](assets/field-level.png) > **[!UICONTROL Adaptiv formulärbehållare]** och sedan på ![cmpr](assets/cmppr.png).
-1. I avsnittet **[!UICONTROL Spara]** automatiskt **[!UICONTROL aktiverar]** du alternativet Spara automatiskt.
-1. I rutan **[!UICONTROL Adaptiv formulärhändelse]** anger du 1 eller TRUE för att automatiskt börja spara formuläret när formuläret läses in i webbläsaren. Du kan också ange ett villkorsuttryck för en händelse som när den aktiveras och returnerar true börjar spara formulärets innehåll.
+1. Om du vill komma åt avsnittet Spara automatiskt i egenskaperna markerar du en komponent, trycker på ![fältnivå](assets/field-level.png) > **[!UICONTROL Adaptive Form Container]** och sedan på ![cmpr](assets/cmppr.png).
+1. I **[!UICONTROL Auto Save]** avsnittet väljer du **[!UICONTROL Enable]** alternativet för att spara automatiskt.
+1. I **[!UICONTROL Adaptive Form Event]** rutan anger du 1 eller TRUE för att automatiskt börja spara formuläret när formuläret har lästs in i webbläsaren. Du kan också ange ett villkorsuttryck för en händelse som när den aktiveras och returnerar true börjar spara formulärets innehåll.
 1. Ange utlösaren. Automatiskt sparande aktiveras baserat på din konfiguration. Dina alternativ är:
 
-   * **[!UICONTROL Tidsbaserad:]** Välj alternativet för att börja spara innehållet baserat på ett visst tidsintervall.
-   * **[!UICONTROL Händelsebaserad:]** Välj alternativet för att börja spara innehållet baserat på när en händelse utlöses.
+   * **[!UICONTROL Time based:]** Välj alternativet för att börja spara innehållet baserat på ett visst tidsintervall.
+   * **[!UICONTROL Event based:]** Välj alternativet för att börja spara innehållet baserat på när en händelse utlöses.
+
    När du väljer en utlösare aktiveras rutan Strategisk konfiguration. I rutan Strategisk konfiguration kan du:
 
-   * Ange ett tidsintervall om du väljer **[!UICONTROL Tidsbaserad]** utlösare.
-   * Ange ett händelsenamn om du väljer **[!UICONTROL Händelsebaserad]** utlösare.
+   * Ange ett tidsintervall om du väljer **[!UICONTROL Time based]** utlösare.
+   * Ange ett händelsenamn om du väljer **[!UICONTROL Event based]** utlösare.
+
    Du kan också skapa och lägga till en egen anpassad strategi i listan. Mer information finns i [Implementera en anpassad strategi för att automatiskt spara formulären](/help/forms/using/auto-save-an-adaptive-form.md#p-implement-a-custom-strategy-to-enable-autosave-for-adaptive-forms-p).
 
 1. (Endast tidsbaserad autosparfunktion) Utför följande steg för att konfigurera alternativ för tidsbaserad autosparning.
 
-   1. Ange tidsintervallet i sekunder i rutan **[!UICONTROL Spara automatiskt för det här intervallet]** . Formuläret sparas upprepade gånger efter det antal sekunder som anges i intervallrutan.
+   1. Ange tidsintervallet i sekunder i **[!UICONTROL Auto save on this interval]** rutan. Formuläret sparas upprepade gånger efter det antal sekunder som anges i intervallrutan.
 
 1. (Endast händelsebaserad autosparning) Utför följande steg för att konfigurera alternativ för händelsebaserad autosparning.
 
@@ -53,7 +58,7 @@ Alternativet för att spara automatiskt är inte aktiverat i ett anpassat formul
    >
    >För att alternativet Spara automatiskt ska fungera för anonyma användare måste du konfigurera Forms Common Configuration Service så att alla användare kan förhandsgranska, verifiera och signera formulär.
    >
-   >Om du vill konfigurera tjänsten går du till AEM Web Console-konfigurationen på `https://server:port/system/console/configMgr` och redigerar **[!UICONTROL Forms Common Configuration Service]** , väljer alternativet **[!UICONTROL Alla användare]** i fältet **[!UICONTROL Tillåt]** och sparar konfigurationen.
+   >Om du vill konfigurera tjänsten går du till AEM Web Console-konfigurationen på `https://server:port/system/console/configMgr` och redigerar **[!UICONTROL Forms Common Configuration Service]** för att välja **[!UICONTROL All Users]** alternativet i **[!UICONTROL Allow]** fältet och sparar konfigurationen.
 
 ## Implementera en anpassad strategi för att aktivera automatiskt sparande för anpassningsbara formulär {#implement-a-custom-strategy-to-enable-autosave-for-adaptive-forms}
 
@@ -63,7 +68,7 @@ Du kan implementera en anpassad händelse för att aktivera autosparfunktionen. 
 
    Följande skript använder till exempel den anpassade `emailFocusChange`händelsen för att aktivera funktionen för automatiskt sparande:
 
-   ```
+   ```javascript
    window.addEventListener("bridgeInitializeStart", function (){
        guideBridge.connect(function () { guideBridge.on("elementFocusChanged", function (event,data) {
            if(data.target.name === 'Email') {
@@ -80,7 +85,7 @@ Du kan implementera en anpassad händelse för att aktivera autosparfunktionen. 
 
 1. Öppna det adaptiva formuläret i redigeringsläge.
 
-1. Markera en komponent i redigeringsläget, tryck sedan på ![fältnivå](assets/field-level.png) > **[!UICONTROL Adaptiv formulärbehållare]** och tryck sedan på ![cmpr](assets/cmppr.png).
-1. Öppna **[!UICONTROL avsnittet Grundläggande]** i egenskaperna. Ange värdet för kategoriegenskapen som definierats i rutan Kategori **[!UICONTROL för]** klientbibliotek när du skapar klientbiblioteksmapparna.
-1. Öppna avsnittet Spara automatiskt. I rutan **[!UICONTROL Spara automatiskt efter den här händelsen]** anger du en anpassad händelse som redan har definierats i klientbiblioteket. Click **[!UICONTROL OK]**.
+1. Markera en komponent i redigeringsläget, tryck sedan på ![fältnivå](assets/field-level.png) > **[!UICONTROL Adaptive Form Container]** och tryck sedan på ![cmpr](assets/cmppr.png).
+1. I egenskaperna öppnar du **[!UICONTROL Basic]** avsnittet. I **[!UICONTROL Client Library Category]** rutan anger du värdet för kategoriegenskapen som definierades när klientbiblioteksmapparna skapades.
+1. Öppna avsnittet Spara automatiskt. I **[!UICONTROL Auto save after this event]** rutan anger du en anpassad händelse som redan har definierats i klientbiblioteket. Klicka på **[!UICONTROL OK]**.
 
