@@ -11,7 +11,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 023f0d9e-bfde-4879-a839-085fadffb48e
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1785'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,7 @@ Följande bild är en skärmbild av en portfölj med layouten *På en bild* .
 
 Att skapa en PDF-portfölj fungerar som ett papperslöst alternativ till att skicka en dokumentsamling. Med AEM Forms kan du skapa portföljer genom att anropa Assembler-tjänsten med ett strukturerat DDX-dokument. Följande DDX-dokument är ett exempel på ett DDX-dokument som skapar en PDF-portfölj.
 
-```as3
+```xml
  <DDX xmlns="https://ns.adobe.com/DDX/1.0/">
      <PDF result="portfolio1.pdf">
          <Portfolio>
@@ -52,7 +55,7 @@ DXX-dokumentet måste innehålla en `Portfolio` tagg med en kapslad `Navigator` 
 
 >[!NOTE]
 >
->Mer information om tjänsten Assembler finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Assembler finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 >[!NOTE]
 >
@@ -168,6 +171,7 @@ Sammanställa en PDF-portfölj med Assembler Service API (Java):
    * Ett `com.adobe.idp.Document` objekt som representerar det DDX-dokument som ska användas
    * Ett `java.util.Map` objekt som innehåller de filer som krävs för att skapa en PDF-portfölj.
    * Ett `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` objekt som anger körningsalternativen, inklusive standardteckensnittet och jobbloggsnivån
+
    Metoden returnerar `invokeDDX` ett `com.adobe.livecycle.assembler.client.AssemblerResult` objekt som innehåller den sammansatta PDF-portföljen och eventuella undantag.
 
 1. Spara den monterade portföljen.
@@ -244,6 +248,7 @@ Sammanställa en PDF-portfölj med Assembler Service API (webbtjänsten):
    * Ett `BLOB` objekt som representerar DDX-dokumentet
    * Det `MyMapOf_xsd_string_To_xsd_anyType` objekt som innehåller de nödvändiga filerna
    * Ett `AssemblerOptionSpec` objekt som anger körningsalternativ
+
    Metoden returnerar ett `invokeDDX` `AssemblerResult` objekt som innehåller resultatet av jobbet och eventuella undantag som inträffade.
 
 1. Spara den monterade portföljen.
@@ -256,6 +261,6 @@ Sammanställa en PDF-portfölj med Assembler Service API (webbtjänsten):
 
 **Se även**
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
