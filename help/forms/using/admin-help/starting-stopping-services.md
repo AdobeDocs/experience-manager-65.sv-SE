@@ -1,8 +1,8 @@
 ---
 title: Starta och stoppa tjänster
 seo-title: Starta och stoppa tjänster
-description: Lär dig hur du startar och stoppar tjänster som är kopplade till AEM Forms-modulerna samt programservern och databasen.
-seo-description: Lär dig hur du startar och stoppar tjänster som är kopplade till AEM Forms-modulerna samt programservern och databasen.
+description: Lär dig hur du startar och stoppar tjänster som är kopplade till AEM Forms-moduler samt programservern och databasen.
+seo-description: Lär dig hur du startar och stoppar tjänster som är kopplade till AEM Forms-moduler samt programservern och databasen.
 uuid: 8c831cb2-4165-4118-8a09-764cec4e5e05
 contentOwner: admin
 content-type: reference
@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/managing_services
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: b93060bd-c6e1-40d2-8acd-ccafb8ed56da
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '287'
+ht-degree: 0%
 
 ---
 
@@ -45,7 +48,7 @@ Starta eller stoppa dessa tjänster genom att markera dem i listan på panelen T
 
 I UNIX® eller Linux anger du följande text från en kommandorad, där *`[service name]`* är namnet på den tjänst du verifierar:
 
-```as3
+```java
      ps -A | grep [service name]
 ```
 
