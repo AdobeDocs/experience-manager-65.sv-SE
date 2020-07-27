@@ -1,8 +1,8 @@
 ---
 title: Miniatyrbilder av JavaScript-filer
 seo-title: Miniatyrbilder av JavaScript-filer
-description: Instruktioner för att generera minierad kod efter att arbetsytan i AEM Forms har anpassats för att optimera JS-filerna för webben.
-seo-description: Instruktioner för att generera minierad kod efter att arbetsytan i AEM Forms har anpassats för att optimera JS-filerna för webben.
+description: Instruktioner för att generera minierad kod efter anpassning av arbetsytan i AEM Forms för att optimera JS-filerna för webben.
+seo-description: Instruktioner för att generera minierad kod efter anpassning av arbetsytan i AEM Forms för att optimera JS-filerna för webben.
 uuid: ad91e380-a988-4740-9534-e09657e0322a
 contentOwner: robhagat
 content-type: reference
@@ -10,14 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: c88a3013-5da2-4b09-9f29-ac1fb00822ec
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '208'
+ht-degree: 0%
 
 ---
 
 
-# Minification of the JavaScript files {#minification-of-the-javascript-files}
+# Miniatyrbilder av JavaScript-filer {#minification-of-the-javascript-files}
 
-Med miniatyr tas de redundanta tecknen bort från källkoden, till exempel blanksteg, ny rad och kommentarer. This improves the performance by reducing the size of the code. Miniatyrfunktionen påverkar inte funktionen, men den minskar kodens läsbarhet.
+Med miniatyr tas de redundanta tecknen bort från källkoden, till exempel blanksteg, ny rad och kommentarer. Detta förbättrar prestandan genom att minska storleken på koden. Miniatyrfunktionen påverkar inte funktionen, men den minskar kodens läsbarhet.
 
 Följ de här stegen för att generera miniatyrkod för semantiska ändringar.
 
@@ -25,17 +28,19 @@ Följ de här stegen för att generera miniatyrkod för semantiska ändringar.
 
    >[!NOTE]
    >
-   >Mer information om paketen finns i [Introduktion till anpassning av arbetsytan](/help/forms/using/introduction-customizing-html-workspace.md) i AEM-formulär.
+   >Mer information om paketen finns i [Introduktion till att anpassa arbetsytan](/help/forms/using/introduction-customizing-html-workspace.md) AEM Forms.
 
 1. Uppdatera sökvägar i `main.js` som finns under client-html/src/main/webapp/js, för tillagda/uppdaterade modeller/vyer.
 
    Om du till exempel lägger till en ny Sharequeue-modell, till exempel mySharequeue, ändrar du:
 
-   ```
+   ```javascript
    sharequeuemodel : pathprefix + 'runtime/models/sharequeue',
-   
-   To
-   
+   ```
+
+   Till
+
+   ```javascript
    sharequeuemodel : pathprefix + 'runtime/myModels/mySharequeue',
    ```
 
@@ -48,9 +53,11 @@ Följ de här stegen för att generera miniatyrkod för semantiska ändringar.
                name="sharequeue"
                path="runtime/models/sharequeue.js"
                service="service"/>
-   
-   To
-   
+   ```
+
+   Till
+
+   ```xml
    <sharequeue
                name="sharequeue"
                path="runtime/myModels/mySharequeue.js"
