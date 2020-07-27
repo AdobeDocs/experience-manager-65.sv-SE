@@ -10,7 +10,10 @@ topic-tags: customization
 discoiquuid: d4ae432d-557d-4e89-92b8-dca5f37cb6f8
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5f470768fd3368e3b2118333b8a84f8331e7fa2e
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '286'
+ht-degree: 0%
 
 ---
 
@@ -88,7 +91,7 @@ qtip
    }
    ```
 
-   ```
+   ```javascript
    /** function for toggling the navigators **/
    var toggleNav = function () {
    
@@ -116,7 +119,7 @@ qtip
 
    Uppdatera dessutom sökvägarna för inkluderade skript i .jsp-filer. Uppdatera till exempel `customPanelLayout.jsp` filen så här:
 
-   ```
+   ```html
    <%-- jsp encapsulating navigator container and panel container divs --%>
    
    <%@include file="/libs/fd/af/components/guidesglobal.jsp"%>
@@ -145,7 +148,7 @@ qtip
 
    The `/apps/af-custom-layout/customPanelLayout/defaultNavigatorLayout.jsp` file:
 
-   ```
+   ```html
    <%-- jsp governing the navigation part --%>
    
    <%@include file="/libs/fd/af/components/guidesglobal.jsp"%>
@@ -174,7 +177,7 @@ qtip
 
    Uppdaterat `/apps/af-custom-layout/customPanelLayout/panelContainer.jsp`:
 
-   ```
+   ```html
    <%-- jsp governing the panel content --%>
    
    <%@include file="/libs/fd/af/components/guidesglobal.jsp"%>
