@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 9c17fa2d-0337-4204-822e-dcdafebf0e4d
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '403'
+ht-degree: 0%
 
 ---
 
@@ -31,7 +34,7 @@ Java API(SOAP) Quick Start är tillgängligt för processer. En *processinstans*
 
 [Snabbstart (SOAP-läge): Hämta status för ett jobb med Java API](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-retrieving-the-status-of-a-job-using-the-java-api)
 
-AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda typer och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms-API:t med stark typning och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
@@ -41,7 +44,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda ty
 
 I följande Java-kodexempel söks det efter processinstanser som är baserade på *processen MortgageLoan - Prebuilt* .
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-taskmanager-client.jar
@@ -159,7 +162,7 @@ I följande Java-kodexempel söks det efter processinstanser som är baserade p�
 
 I följande Java-kodexempel pausas en processinstans. Om du vill göra uppehåll i en processinstans måste du ha den processanropsidentifierare som kan hämtas när en långvarig process anropas med API:t för anrop.
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-taskmanager-client.jar
@@ -251,7 +254,7 @@ I följande Java-kodexempel pausas en processinstans. Om du vill göra uppehåll
 
 I följande Java-kodexempel startas en instans av en pausad process.
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-taskmanager-client.jar
@@ -339,7 +342,7 @@ I följande Java-kodexempel startas en instans av en pausad process.
 
 I följande Java-kodexempel avslutas en processinstans med identifierarvärdet 756c2860a242fb101ec7a5bc0977fd6.
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-taskmanager-client.jar
@@ -430,7 +433,7 @@ I följande Java-kodexempel avslutas en processinstans med identifierarvärdet 7
 
 Följande Java-kod rensar data från en process som heter *SecureDocument*. Ett filter används som anger att data ska rensas för de processinstanser där processvariabeln *inValue* är större än 200.
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-taskmanager-client.jar
@@ -537,7 +540,7 @@ Följande Java-kod rensar data från en process som heter *SecureDocument*. Ett 
 
 I följande kodexempel hämtas statusen för 10 AEM Forms-jobb.
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
