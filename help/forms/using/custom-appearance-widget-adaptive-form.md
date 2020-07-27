@@ -10,7 +10,10 @@ topic-tags: customization
 discoiquuid: d388acef-7313-4e68-9395-270aef6ef2c6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1718'
+ht-degree: 0%
 
 ---
 
@@ -120,18 +123,18 @@ När projektmallen har skapats gör du följande ändringar efter behov:
 <table>
  <tbody>
   <tr>
-   <td><strong>Funktion</strong></td>
+   <td><strong> -funktion</strong></td>
    <td><strong>Beskrivning</strong></td>
   </tr>
   <tr>
    <td><code>render</code></td>
-   <td>Återgivningsfunktionen returnerar jQuery-objektet för standard-HTML-elementet i widgeten. HTML-standardelementet ska vara av fokuserbar typ. Till exempel <code>&lt;a&gt;</code>, <code>&lt;input&gt;</code>och <code>&lt;li&gt;</code>. Det returnerade elementet används som <code>$userControl</code>. Om begränsningen <code>$userControl</code> anger fungerar funktionerna i <code>AbstractWidget</code> klassen som förväntat, men vissa av de gemensamma API:erna (focus, click) kräver ändringar. </td>
+   <td>Återgivningsfunktionen returnerar jQuery-objektet för standard-HTML-elementet i widgeten. HTML-standardelementet ska vara av fokuserbar typ. Till exempel <code>&lt;a&gt;</code>, <code>&lt;input&gt;</code>och <code>&lt;li&gt;</code>. Det returnerade elementet används som <code>$userControl</code>. Om begränsningen <code>$userControl</code> anger fungerar funktionerna i <code>AbstractWidget</code> klassen som förväntat, men vissa av de vanliga API:erna (focus, click) kräver ändringar. </td>
   </tr>
   <tr>
    <td><code>getEventMap</code></td>
    <td>Returnerar en karta som konverterar HTML-händelser till XFA-händelser. <br /> <code class="code">{
       blur: XFA_EXIT_EVENT,
-      }</code><br /> Det här exemplet visar att <code>blur</code> är en HTML-händelse och <code>XFA_EXIT_EVENT</code> är motsvarande XFA-händelse. </td>
+      }</code><br /> I det här exemplet visas att <code>blur</code> är en HTML-händelse och <code>XFA_EXIT_EVENT</code> att det är motsvarande XFA-händelse. </td>
   </tr>
   <tr>
    <td><code>getOptionsMap</code></td>
@@ -186,9 +189,9 @@ Så här använder du det anpassade utseendet på ett anpassat formulärfält:
 
 1. Öppna det adaptiva formuläret i redigeringsläge.
 1. Öppna dialogrutan **Egenskap** för det fält som du vill använda det anpassade utseendet på.
-1. Uppdatera **egenskapen på fliken** Format `CSS class` för att lägga till utseendenamnet i `widget_<widgetName>` formatet. Till exempel: **widget_numerisk nummerlista**
+1. Uppdatera **egenskapen på fliken** Format `CSS class` för att lägga till utseendenamnet i `widget_<widgetName>` formatet. Till exempel: **widget_numeriskStepper**
 
-## Exempel: Skapa ett anpassat utseende {#sample-create-a-custom-appearance-nbsp}
+## Exempel: Skapa ett anpassat utseende   {#sample-create-a-custom-appearance-nbsp}
 
 Nu ska vi titta på ett exempel för att skapa ett anpassat utseende så att ett numeriskt fält visas som en nummerlista eller ett reglage. Utför följande steg:
 
@@ -219,11 +222,11 @@ Nu ska vi titta på ett exempel för att skapa ett anpassat utseende så att ett
 
 1. Öppna Eclipse-verktyget och gör följande för att importera Eclipse-projektet:
 
-   1. Välj **[!UICONTROL Arkiv > Importera > Befintliga projekt till arbetsytan]**.
+   1. Välj **[!UICONTROL File > Import > Existing Projects into Workspace]**.
 
    1. Bläddra och välj den mapp där du utförde `archetype:generate` kommandot.
 
-   1. Click **[!UICONTROL Finish]**.
+   1. Klicka på **[!UICONTROL Finish]**.
 
       ![eclipse-screenshot](assets/eclipse-screenshot.png)
 
@@ -246,7 +249,7 @@ Nu ska vi titta på ett exempel för att skapa ett anpassat utseende så att ett
 1. Ersätt innehållet i `bootstrap-number-input.js` (jQuery plugin) med innehållet i `numericStepper-plugin.js` filen.
 1. Lägg till följande kod i `numericStepper-widget.js` filen för att åsidosätta återgivningsmetoden för att anropa plugin-programmet och returnera `$userControl` objektet:
 
-   ```java
+   ```javascript
    render : function() {
         var control = $.xfaWidget.numericInput.prototype.render.apply(this, arguments);
         var $control = $(control);
@@ -266,7 +269,7 @@ Nu ska vi titta på ett exempel för att skapa ett anpassat utseende så att ett
 
 1. I `numericStepper-widget.js` filen åsidosätter du `getOptionsMap` egenskapen för att åsidosätta åtkomstalternativet och döljer knapparna + och - i inaktiverat läge.
 
-   ```java
+   ```javascript
    getOptionsMap: function(){
        var parentOptionsMap = $.xfaWidget.numericInput.prototype.getOptionsMap.apply(this,arguments),
    
@@ -314,8 +317,8 @@ Nu ska vi titta på ett exempel för att skapa ett anpassat utseende så att ett
 
 1. Öppna det adaptiva formuläret i redigeringsläge som du vill använda det anpassade utseendet på och gör följande:
 
-   1. Högerklicka på det fält som du vill använda utseendet på och klicka på **[!UICONTROL Redigera]** för att öppna dialogrutan Redigera komponent.
+   1. Högerklicka på det fält som du vill använda utseendet på och klicka på **[!UICONTROL Edit]** för att öppna dialogrutan Redigera komponent.
 
-   1. Uppdatera **[!UICONTROL CSS-klassegenskapen]** på fliken Format för att lägga till `widget_numericStepper`.
+   1. Uppdatera egenskapen som ska läggas till på fliken Format **[!UICONTROL CSS class]** `widget_numericStepper`.
 
 Det nya utseendet som du nyss skapade kan nu användas.
