@@ -10,7 +10,10 @@ topic-tags: correspondence-management
 discoiquuid: 6378ae30-a351-49f7-8e9a-f0bd4287b9d3
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1381'
+ht-degree: 1%
 
 ---
 
@@ -168,7 +171,7 @@ Följ de här stegen för att anpassa Correspondence Management så att använda
 
       Lägg sedan till följande kod i slutet av filen formaction.js (under grenen /apps) och klicka på **Spara alla**:
 
-      ```
+      ```javascript
       /* Action url for xml file to be added.*/
       var ACTION_URL = "/apps/fd/cm/ma/gui/content/commons/actionhandlers/items/letterpdfdownloader.html";
       
@@ -276,7 +279,7 @@ Följ de här stegen för att anpassa Correspondence Management så att använda
    1. Dubbelklicka på **POST.jsp** -filen för att öppna den i CRX.
    1. Lägg till följande kod i filen POST.jsp och klicka på **Spara alla**:
 
-      Den här koden är specifik för bokstavsåtergivningstjänsten. För andra resurser lägger du till resursens java-bibliotek i den här koden. Mer information om API:er för AEM Forms finns i API:t för [AEM Forms](https://adobe.com/go/learn_aemforms_javadocs_63_en).
+      Den här koden är specifik för bokstavsåtergivningstjänsten. För andra resurser lägger du till resursens java-bibliotek i den här koden. Mer information om AEM Forms API:er finns i [AEM Forms API](https://adobe.com/go/learn_aemforms_javadocs_63_en).
 
       Mer information om AEM-bibliotek finns i AEM- [komponenter](/help/sites-developing/components.md).
 
