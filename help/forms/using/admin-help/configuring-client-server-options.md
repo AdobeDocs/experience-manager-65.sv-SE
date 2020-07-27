@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0f069fbc-10c2-403e-9419-5e9920035d75
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '10273'
+ht-degree: 0%
 
 ---
 
@@ -116,7 +119,7 @@ Med utökad autentisering aktiverat får användare som öppnar ett policyskydda
 1. Öppna filen i en redigerare och leta upp noden AllowedUrls.
 1. Lägg till följande rader i `AllowedUrls` noden: `<entry key="sso-l" value="/ssoexample/login.jsp"/> <entry key="sso-s" value="/ssoexample"/> <entry key="sso-o" value="/ssoexample/logout.jsp"/>`
 
-   ```as3
+   ```xml
    <entry key="sso-l" value="/ssoexample/login.jsp"/>
    <entry key="sso-s" value="/ssoexample"/>
    <entry key="sso-o" value="/ssoexample/logout.jsp"/>
@@ -168,7 +171,7 @@ Av sekretesskäl ger dokumentskyddet ett automatiskt nyckelrolloveralternativ me
 
 **Överför huvudnycklar manuellt**
 
-Om du vill behålla sekretessen för offlinedokument kan du manuellt föra över huvudnycklar. Du kan behöva rulla över en nyckel manuellt (t.ex. om nyckeln komprometteras av någon som hämtar den från en dator där den cache-lagras för att kunna aktivera offlineåtkomst till ett dokument).
+För att sekretessen för offlinedokument ska kunna bevaras kan du manuellt föra över huvudnycklar. Du kan behöva rulla över en nyckel manuellt (t.ex. om nyckeln komprometteras av någon som hämtar den från en dator där den cache-lagras för att kunna aktivera offlineåtkomst till ett dokument).
 
 >[!NOTE]
 >
@@ -819,7 +822,7 @@ Acrobat Reader DC-tillägg för Microsoft Office är ett plugin-program som anv�
 1. Exportera konfigurationsfilen för dokumentsäkerhet. (Se [Redigera dokumentets säkerhetskonfigurationsfil](configuring-client-server-options.md#manually-editing-the-document-security-configuration-file)manuellt.)
 1. Öppna konfigurationsfilen i en redigerare och leta upp `PolicyServer` noden. Lägg till en `ClientVersionRules` nod som direkt underordnad till `PolicyServer` noden, om en sådan inte finns:
 
-   ```as3
+   ```java
     <node name="ClientVersionRules">
         <map>
             <entry key="infoURL" value="URL"/>
@@ -855,6 +858,7 @@ Acrobat Reader DC-tillägg för Microsoft Office är ett plugin-program som anv�
    * Apple OS X
    * Sun Solaris
    * HP-UX
+
    `SDKVersions` Anger vilken version av dokumentsäkerhets-API:t för C++-klient som används av klientprogrammet. Till exempel, `"8.2"`.
 
    `APPFamilies` definieras av klient-API:t.
@@ -875,7 +879,7 @@ Acrobat Reader DC-tillägg för Microsoft Office är ett plugin-program som anv�
 
 I det här exemplet nekas alla Windows-klienter åtkomst.
 
-```as3
+```java
  <node name="ClientVersionRules">
      <map>
          <entry key="infoURL" value="https://www.dont.use/windows.html"/>
@@ -893,7 +897,7 @@ I det här exemplet nekas alla Windows-klienter åtkomst.
 
 I det här exemplet nekas åtkomst till My Application version 3.0 och My Other Application version 2.0. Samma URL för information om avslag används oavsett orsak till nekande.
 
-```as3
+```java
  <node name="ClientVersionRules">
      <map>
          <entry key="infoURL" value=”https://get.a.new/version.html”/>
@@ -918,7 +922,7 @@ I det här exemplet nekas åtkomst till My Application version 3.0 och My Other 
 
 I det här exemplet nekas alla begäranden från en Microsoft PowerPoint 2007- eller Microsoft PowerPoint 2010-installation av Acrobat Reader DC-tillägg för Microsoft Office.
 
-```as3
+```java
  <node name="ClientVersionRules">
      <map>
          <entry key="infoURL" value=”https://get.a.new/version.html”/>
@@ -951,7 +955,7 @@ Som standard kan du ange högst fem element i en vattenstämpel. Den maximala fi
 
    Den andra posten, *max elements* , är det maximala antalet element som tillåts i en vattenstämpel. Standardvärdet är 5.
 
-   ```as3
+   ```java
    <entry key="maximumSizeOfWatermarkElement" value="max filesize in KB"/>
    <entry key="maximumWatermarkElementsPerWatermark" value="max elements"/>
    ```
@@ -971,7 +975,7 @@ Följande ändringar av config.xml inaktiverar alla externa länkar från använ
 1. Öppna konfigurationsfilen i en redigerare och leta upp `DisplaySettings` noden.
 1. Om du vill inaktivera alla externa länkar lägger du till följande post i noden och sparar sedan filen: `DisplaySettings` `<entry key="ExternalLinksAllowed" value="false"/>`
 
-   ```as3
+   ```java
    <entry key="ExternalLinksAllowed" value="false"/>
    ```
 
@@ -985,7 +989,7 @@ Följande ändringar av config.xml aktiverar TLS-stöd för funktionen Inbjuden 
 1. Öppna konfigurationsfilen i en redigerare och leta upp `DisplaySettings` noden.
 1. Leta reda på följande nod: `<node name="ExternalUser">`
 
-   ```as3
+   ```java
    <node name="ExternalUser">
    ```
 
@@ -1001,7 +1005,7 @@ Följande ändringar av config.xml för att inaktivera SOAP-slutpunkter för dok
 1. Exportera konfigurationsfilen för dokumentsäkerhet. (Se [Redigera dokumentets säkerhetskonfigurationsfil](configuring-client-server-options.md#manually-editing-the-document-security-configuration-file)manuellt.)
 1. Öppna konfigurationsfilen i en redigerare och leta upp följande nod: `<node name="DRM">`
 
-   ```as3
+   ```java
    <node name="DRM">
    ```
 
@@ -1011,7 +1015,7 @@ Följande ändringar av config.xml för att inaktivera SOAP-slutpunkter för dok
 
 1. Om du vill inaktivera SOAP-slutpunkter för dokumentsäkerhetsdokument anger du värdeattributet till **false**.
 
-   ```as3
+   ```java
    <node name="DRM">
        <map>
            <entry key="AllowUnencryptedVoucher" value="false"/>
