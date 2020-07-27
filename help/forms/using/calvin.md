@@ -10,7 +10,10 @@ topic-tags: develop
 discoiquuid: 1cb54c8a-9322-4b5a-b5a7-0eef342cee54
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1283'
+ht-degree: 1%
 
 ---
 
@@ -130,7 +133,7 @@ Följande exempel visar hur du skapar en testsvit för att testa flera adaptiva 
 1. Högerklicka på testnoden (här **afTestRegistration)** och klicka sedan på **Skapa** > **Skapa fil**. Ge filen namnet js.txt och klicka på **OK**.
 1. Lägg till följande text i filen js.txt:
 
-   ```
+   ```javascript
    #base=.
    js.txt
    ```
@@ -139,7 +142,7 @@ Följande exempel visar hur du skapar en testsvit för att testa flera adaptiva 
 1. Högerklicka på testnoden (här **afTestRegistration)** och klicka på **Skapa** > **Skapa fil**. Ge filen namnet init.js och klicka på **OK**.
 1. Kopiera följande kod till filen init.js och klicka på **Spara alla**:
 
-   ```
+   ```javascript
    (function(window, hobs) {
        'use strict';
        window.testsuites = window.testsuites || {};
@@ -177,7 +180,7 @@ Följande exempel visar hur du skapar en testsvit för att testa flera adaptiva 
 
    Om du vill använda följande kod för att testa ett annat adaptivt formulär ändrar du sökvägen och namnet på formuläret i **navigateTo** (raderna 11, 36 och 62) och respektive testfall. Mer information om API:er för att testa olika aspekter av formulär och formulärobjekt finns i [Calvin-API:er](https://helpx.adobe.com/aem-forms/6-3/calvin-sdk-javascript-api/calvin.html).
 
-   ```
+   ```javascript
    (function(window, hobs) {
        'use strict';
    
