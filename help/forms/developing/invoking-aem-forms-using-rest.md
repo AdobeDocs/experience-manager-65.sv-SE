@@ -1,6 +1,6 @@
 ---
-title: Anropa AEM-formulär med REST-begäran
-seo-title: Anropa AEM-formulär med REST-begäran
+title: Anropa AEM Forms med REST-begäran
+seo-title: Anropa AEM Forms med REST-begäran
 description: 'null'
 seo-description: 'null'
 uuid: 3a19a296-f3fe-4e50-9143-b68aed37f9ef
@@ -10,12 +10,15 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: df7b60bb-4897-479e-a05e-1b1e9429ed87
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '2492'
+ht-degree: 0%
 
 ---
 
 
-# Anropa AEM-formulär med REST-begäran {#invoking-aem-forms-using-rest-requests}
+# Anropa AEM Forms med REST-begäran {#invoking-aem-forms-using-rest-requests}
 
 Processer som skapas i Workbench kan konfigureras så att du kan anropa dem via REST-begäranden (Representational State Transfer). REST-begäranden skickas från HTML-sidor. Det innebär att du kan anropa en formulärprocess direkt från en webbsida med hjälp av en REST-begäran. Du kan till exempel öppna en ny instans av en webbsida. Sedan kan du anropa en formulärprocess och läsa in ett återgivet PDF-dokument med data som skickades i en HTTP POST-begäran.
 
@@ -29,7 +32,7 @@ Konfigurera en REST-slutpunkt om du vill anropa en formulärtjänst (en process 
 
 När en REST-slutpunkt har konfigurerats kan du anropa en Forms-tjänst med hjälp av en HTTP GET-metod eller en POST-metod.
 
-```as3
+```java
  action="https://hiro-xp:8080/rest/services/[ServiceName]/[OperationName]:[ServiceVersion]" method="post" enctype="multipart/form-data"
 ```
 
@@ -37,7 +40,7 @@ Det obligatoriska `ServiceName` värdet är namnet på den formulärtjänst som 
 
 ## Datatyper som stöds {#supported-data-types}
 
-Följande datatyper stöds när AEM Forms-tjänster anropas med REST-begäran:
+Följande datatyper stöds när AEM Forms-tjänster anropas med REST-begäranden:
 
 * primitiva Java-datatyper, som strängar och heltal
 * `com.adobe.idp.Document` datatyp
@@ -59,7 +62,7 @@ Följande datatyper stöds när AEM Forms-tjänster anropas med REST-begäran:
 
    Om en AEM Forms-tjänst kräver flera indataparametrar måste HTTP-begärandetexten vara ett MIME-meddelande i flera delar enligt RFC 1867. (RFC 1867 är en standard som används av webbläsare för att överföra filer till webbplatser.) Varje indataparameter måste skickas som en separat del av multipart-meddelandet och kodas i `multipart/form-data` formatet. Namnet på varje del måste matcha parameterns namn.
 
-   Listor och kartor används också som indatavärden till AEM Forms-processer som skapats i Workbench. Du kan därför använda dessa datatyper när du använder en REST-begäran. Java-matriser stöds inte eftersom de inte används som indatavärde i en AEM Forms-process.
+   Listor och kartor används också som indatavärden till AEM Forms-processer som skapats i Workbench. Du kan därför använda dessa datatyper när du använder en REST-begäran. Java-matriser stöds inte eftersom de inte används som indatavärde till en AEM Forms-process.
 
    Om en indataparameter är en lista kan en REST-klient skicka den genom att ange parametern flera gånger (en gång för varje objekt i listan). Om A till exempel är en lista med dokument måste indata vara ett multipart-meddelande som består av flera delar med namnet A. I det här fallet blir varje del med namnet A ett objekt i indatalistan. Om B är en lista med strängar kan indata vara ett `application/x-www-form-urlencoded` meddelande som består av flera fält med namnet B. I det här fallet blir varje formulärfält med namnet B ett objekt i indatalistan.
 
@@ -86,19 +89,19 @@ Följande datatyper stöds när AEM Forms-tjänster anropas med REST-begäran:
 
 ## Asynkrona anrop {#asynchronous-invocations}
 
-Vissa AEM Forms-tjänster, till exempel humancentrerade långvariga processer, kräver lång tid att slutföra. Dessa tjänster kan anropas asynkront på ett icke-blockerande sätt. (Se [Anropa humancentrerade, långvariga processer](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes).)
+Vissa AEM Forms, till exempel humancentrerade långvariga processer, kräver lång tid att slutföra. Dessa tjänster kan anropas asynkront på ett icke-blockerande sätt. (Se [Anropa humancentrerade, långvariga processer](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes).)
 
 En AEM Forms-tjänst kan anropas asynkront genom att ersätta `services` med `async_invoke` i anrops-URL:en, vilket visas i följande exempel.
 
-```as3
+```java
  http://localhost:8080/rest/async_invoke/SomeService. SomeOperation?integer_input_variable=123&string_input_variable=abc
 ```
 
 Den här URL:en returnerar identifierarvärdet (i formatet &quot;text/plain&quot;) för jobbet som är ansvarig för anropet.
 
-Status för asynkront anrop kan hämtas med en anrops-URL som `services` ersätts med `async_status`. URL:en måste innehålla en `job_id` parameter som anger ID-värdet för jobbet som är associerat med det här anropet. Exempel:
+Status för asynkront anrop kan hämtas med en anrops-URL som `services` ersätts med `async_status`. URL:en måste innehålla en `job_id` parameter som anger ID-värdet för jobbet som är associerat med det här anropet. Till exempel:
 
-```as3
+```java
  http://localhost:8080/rest/async_status/SomeService.SomeOperation?job_id=2345353443366564
 ```
 
@@ -106,9 +109,9 @@ Den här URL:en returnerar ett heltalsvärde (i formatet &quot;text/plain&quot;)
 
 Om jobbet är klart returnerar URL-adressen samma resultat som om tjänsten anropades synkront.
 
-När jobbet har slutförts och resultatet har hämtats kan jobbet tas bort med hjälp av en anrops-URL med som `services` ersätts med `async_dispose`. URL:en ska även innehålla en `job_id` parameter som anger jobbets identifierarvärde. Exempel:
+När jobbet har slutförts och resultatet har hämtats kan jobbet tas bort med hjälp av en anrops-URL med som `services` ersätts med `async_dispose`. URL:en ska även innehålla en `job_id` parameter som anger jobbets identifierarvärde. Till exempel:
 
-```as3
+```java
  http://localhost:8080/rest/async_dispose/SomeService.SomeOperation?job_id=2345353443366564
 ```
 
@@ -120,7 +123,7 @@ Om en synkron eller asynkron anropsbegäran inte kan slutföras på grund av att
 
 Om anrops-URL:en (eller URL:en vid asynkront anrop) har suffixet .xml returnerar REST-providern HTTP-koden `async_result` `200 OK`följt av ett XML-dokument som beskriver undantaget i följande format.
 
-```as3
+```xml
  <exception>
        <exception_class_name>[
        <DSCError>
@@ -148,9 +151,9 @@ För att tillhandahålla REST-anrop med en säker transport kan en AEM-formulär
 >
 >Som Workbench-utvecklare som vill visa dina processer via en REST-slutpunkt bör du tänka på XSS-problemet. XSS-säkerhetsluckor kan användas för att stjäla eller manipulera cookies, ändra presentationen av innehåll och äventyra konfidentiell information. Vi rekommenderar att du utökar processlogiken med ytterligare valideringsregler för in- och utdata om XSS-sårbarheten är ett problem.
 
-## AEM Forms-tjänster som stöder REST-anrop {#aem-forms-services-that-support-rest-invocation}
+## AEM Forms som stöder REST-anrop {#aem-forms-services-that-support-rest-invocation}
 
-Även om vi rekommenderar att du anropar processer som skapats med Workbench i motsats till tjänster direkt, finns det vissa AEM Forms-tjänster som stöder REST-anrop. Orsaken till att du bör anropa en process i stället för en tjänst direkt är att det är mer effektivt att anropa en process. Tänk på följande scenario. Anta att du vill skapa en princip från en REST-klient. Det innebär att du vill att REST-klienten ska definiera värden som principnamn och offlinelåneperiod.
+Även om vi rekommenderar att du anropar processer som skapats med Workbench i motsats till tjänster direkt, finns det vissa AEM Forms som stöder REST-anrop. Orsaken till att du bör anropa en process i stället för en tjänst direkt är att det är mer effektivt att anropa en process. Tänk på följande scenario. Anta att du vill skapa en princip från en REST-klient. Det innebär att du vill att REST-klienten ska definiera värden som principnamn och offlinelåneperiod.
 
 Om du vill skapa en profil måste du definiera komplexa datatyper, till exempel ett `PolicyEntry` objekt. Ett `PolicyEntry` objekt definierar attribut som behörigheter som är kopplade till profilen. (Se [Skapa profiler](/help/forms/developing/protecting-documents-policies.md#creating-policies).)
 
@@ -158,7 +161,7 @@ I stället för att skicka en REST-begäran för att skapa en princip (som skull
 
 På så sätt behöver du inte skapa en REST-anropsbegäran som innehåller komplexa datatyper som krävs för åtgärden. Processen definierar de komplexa datatyperna och allt du gör från REST-klienten anropar processen och skickar primitiva datatyper. Mer information om hur du anropar en process med REST finns i [Anropa MyApplication/EncryptDocument-processen med REST](#rest-invocation-examples).
 
-Följande listor anger vilka AEM Forms-tjänster som stöder direkt REST-anrop.
+I följande listor anges vilka AEM Forms-tjänster som har stöd för direkt REST-anrop.
 
 * Distiller Service
 * Rights Management-tjänst
@@ -170,11 +173,11 @@ Följande listor anger vilka AEM Forms-tjänster som stöder direkt REST-anrop.
 
 Följande exempel på REST-anrop finns:
 
-* Skicka booleska värden till en AEM-formulärprocess
-* Skicka datumvärden till en AEM-formulärprocess
-* Skicka dokument till en AEM-formulärprocess
-* Skicka dokument- och textvärden till en AEM-formulärsprocess
-* Skicka uppräkningsvärden till en AEM-formulärprocess
+* Skicka booleska värden till en AEM Forms-process
+* Skicka datumvärden till en AEM Forms-process
+* Skicka dokument till en AEM Forms-process
+* Skicka dokument- och textvärden till en AEM Forms-process
+* Skicka uppräkningsvärden till en AEM Forms-process
 * Anropa processen MyApplication/EncryptDocument med REST
 * Anropa MyApplication/EncryptDocument-processen från Acrobat
 
@@ -184,7 +187,7 @@ Följande exempel på REST-anrop finns:
 
 I följande HTML-exempel skickas två `Boolean` värden till en AEM Forms-process med namnet `RestTest2`. Anropsmetodens namn är `invoke` och versionen är 1.0. Observera att metoden HTML Post används.
 
-```as3
+```html
  <html>
  <body>
  
@@ -204,7 +207,7 @@ I följande HTML-exempel skickas två `Boolean` värden till en AEM Forms-proces
 
 I följande HTML-exempel skickas ett datumvärde till en AEM Forms-process med namnet `SOAPEchoService`. Anropsmetodens namn är `echoCalendar`. Observera att HTML- `Post` metoden används.
 
-```as3
+```html
  <html>
  <body>
  
@@ -221,9 +224,9 @@ I följande HTML-exempel skickas ett datumvärde till en AEM Forms-process med n
 
 **Skicka dokument till en process**
 
-I följande HTML-exempel anropas en AEM Forms-process med namnet `MyApplication/EncryptDocument` som kräver ett PDF-dokument. Mer information om detta finns i [Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom).
+I följande HTML-exempel anropas en AEM Forms-process med namnet `MyApplication/EncryptDocument` som kräver ett PDF-dokument. Mer information om den här processen finns i [Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom).
 
-```as3
+```html
  <html>
  <body>
  
@@ -243,7 +246,7 @@ I följande HTML-exempel anropas en AEM Forms-process med namnet `MyApplication/
 
 I följande HTML-exempel anropas en AEM Forms-process med namnet `RestTest3` som kräver ett dokument och två textvärden. Observera att metoden HTML Post används.
 
-```as3
+```html
  <html>
  <body>
  
@@ -265,7 +268,7 @@ I följande HTML-exempel anropas en AEM Forms-process med namnet `RestTest3` som
 
 I följande HTML-exempel anropas en AEM Forms-process med namnet `SOAPEchoService` som kräver ett uppräkningsvärde. Observera att metoden HTML Post används.
 
-```as3
+```html
  <html>
  <body>
  
@@ -282,11 +285,11 @@ I följande HTML-exempel anropas en AEM Forms-process med namnet `SOAPEchoServic
 
 **Anropa processen MyApplication/EncryptDocument med REST**
 
-Du kan anropa en kort AEM Forms-process med namnet *MyApplication/EncryptDocument* genom att använda REST.
+Du kan anropa en kortlivad AEM Forms-process med namnet *MyApplication/EncryptDocument* genom att använda REST.
 
 >[!NOTE]
 >
->Den här processen baseras inte på en befintlig AEM Forms-process. Om du vill följa med i kodexemplet skapar du en process med namnet `MyApplication/EncryptDocument` med workbench. (Se [Använda Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).)
+>Denna process bygger inte på en befintlig AEM Forms-process. Om du vill följa med i kodexemplet skapar du en process med namnet `MyApplication/EncryptDocument` med workbench. (Se [Använda Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).)
 
 När den här processen anropas utför den följande åtgärder:
 
@@ -295,7 +298,7 @@ När den här processen anropas utför den följande åtgärder:
 
    När den här processen anropas med en REST-begäran visas det krypterade PDF-dokumentet i webbläsaren. Innan du visar PDF-dokumentet anger du lösenordet (om inte skyddet är inaktiverat). Följande HTML-kod representerar en REST-anropsbegäran till `MyApplication/EncryptDocument` processen.
 
-   ```as3
+   ```html
     <html>
     <body>
     <form action="https://hiro-xp:8080/rest/services/MyApplication/EncryptDocument" method="post" enctype="multipart/form-data">
@@ -310,7 +313,7 @@ När den här processen anropas utför den följande åtgärder:
     </body>
    ```
 
-**Anropa MyApplication/EncryptDocument-processen från Acrobat**{#invoke-process-acrobat}
+**Anropa MyApplication/EncryptDocument-processen från Acrobat** {#invoke-process-acrobat}
 
 Du kan anropa en formulärprocess från Acrobat genom att använda en REST-begäran. Du kan till exempel anropa processen *MittProgram/KrypteraDokument* . Om du vill starta en formulärprocess från Acrobat placerar du en Skicka-knapp i en XDP-fil i Designer. (Se [Designer-hjälpen](https://www.adobe.com/go/learn_aemforms_designer_63).)
 
