@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 07fffbd5-5430-4abc-b532-0840ecc7b1b0
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '793'
+ht-degree: 0%
 
 ---
 
@@ -37,17 +40,17 @@ Java API Quick Start (SOAP) är tillgängligt för signaturtjänsten:
 
 [Snabbstart (SOAP-läge): Ta bort en digital signatur med Java API](signature-service-java-api-quick.md#quick-start-soap-mode-removing-a-digital-signature-using-the-java-api)
 
-AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda typer och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms-API:t med stark typning och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
->Snabbstart som finns i Programmering med AEM Forms baseras på den Forms-server som distribueras på JBoss Application Server och operativsystemet Microsoft Windows. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>Snabbstart i Programmering med AEM Forms baseras på den formulärserver som distribueras på JBoss Application Server och operativsystemet Microsoft Windows. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## Snabbstart (SOAP-läge): Lägga till ett signaturfält i ett PDF-dokument med Java API {#quick-start-soap-mode-adding-a-signature-field-to-a-pdf-document-using-the-java-api}
 
 I följande Java-kodexempel läggs ett signaturfält med namnet *SignatureField1* till i ett PDF-dokument som är baserat på en PDF-fil *med namnetLoan.pdf*. PDF-dokumentet som innehåller det nya signaturfältet sparas som en PDF-fil med namnet *LoanSig.pdf*. (Se [Lägga till signaturfält](/help/forms/developing/digitally-signing-certifying-documents.md#adding-signature-fields).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -163,7 +166,7 @@ I följande Java-kodexempel läggs ett signaturfält med namnet *SignatureField1
 
 I följande Java-kodexempel hämtas namnen på signaturfält som finns i ett PDF-dokument med namnet *LoanSig.pdf*. (Se [Hämta namn på](/help/forms/developing/digitally-signing-certifying-documents.md#retrieving-signature-field-names)signaturfält.)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -269,7 +272,7 @@ I följande Java-kodexempel hämtas namnen på signaturfält som finns i ett PDF
 
 I följande Java-kodexempel ändras ett signaturfält med namnet SignatureField1 genom att alla fält i formuläret låses när en signatur tillämpas på signaturfältet och inga ändringar tillåts. När signaturtjänsten returnerar PDF-dokumentet som innehåller det ändrade signaturfältet, sparas PDF-dokumentet som en PDF-fil med namnet LoanSig.pdf. (Det här exemplet skriver över PDF-filen som skickas till signaturtjänsten.) (Se [Ändra signaturfält](/help/forms/developing/digitally-signing-certifying-documents.md#modifying-signature-fields).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -397,7 +400,7 @@ I följande Java-kodexempel ändras ett signaturfält med namnet SignatureField1
 
 I följande Java-kodexempel signeras ett PDF-dokument som är baserat på en PDF-fil med namnet *LoanSig.pdf* digitalt. Aliaset som har angetts för säkerhetsuppgifter är säkert och spärrkontroll utförs. Eftersom ingen information om CRL- eller OCSP-server har angetts hämtas serverinformationen från certifikatet som används för att digitalt signera PDF-dokumentet. Det signerade dokumentet sparas som en PDF-fil med namnet *LoanSigned.pdf*. (Se [Signera PDF-dokument](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)digitalt.)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -546,7 +549,7 @@ I följande Java-kodexempel signeras ett PDF-dokument som är baserat på en PDF
 
 I följande Java-kodexempel signeras ett interaktivt formulär som renderas av Forms-tjänsten. Den `com.adobe.idp.Document` instans som returneras av Forms-tjänsten skickas till Signature-tjänsten. Det signerade interaktiva formuläret sparas som en PDF-fil med namnet *LoanXFASigned.pdf*.
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -758,7 +761,7 @@ I följande Java-kodexempel signeras ett interaktivt formulär som renderas av F
 
 I följande Java-kodexempel certifieras ett PDF-dokument som är baserat på en PDF-fil med namnet *LoanSig.pdf*. Aliaset som har angetts för säkerhetsuppgifter är säkert och spärrkontroll utförs inte. Det certifierade dokumentet sparas som en PDF-fil med namnet *LoanCertified.pdf*. (Se [Certifiera PDF-dokument](/help/forms/developing/digitally-signing-certifying-documents.md#certifying-pdf-documents).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -907,7 +910,7 @@ I följande Java-kodexempel certifieras ett PDF-dokument som är baserat på en 
 
 Följande Java-kodexempel verifierar en digital signatur som finns i ett signerat PDF-dokument som är baserat på en PDF-fil med namnet LoanSigned.pdf. Verifieringstiden är inställd på aktuell tid och alternativet för spärrkontroll är inställt på bästa möjliga åtgärd. (Se [Verifiera digitala signaturer](#verifying-digital-signatures).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-signatures-client.jar
@@ -1071,7 +1074,7 @@ Följande Java-kodexempel verifierar en digital signatur som finns i ett signera
 
 Följande Java-kodexempel verifierar flera digitala signaturer som finns i ett signerat PDF-dokument som är baserat på en PDF-fil med namnet LoanAllSigs.pdf. Verifieringstiden är inställd på aktuell tid och alternativet för spärrkontroll är inställt på bästa möjliga åtgärd. (Se [Verifiera flera digitala signaturer](signature-service-java-api-quick.md#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -1233,7 +1236,7 @@ Följande Java-kodexempel verifierar flera digitala signaturer som finns i ett s
 
 I följande Java-kodexempel tas en digital signatur bort från ett signaturfält med namnet *SignatureField1*. Namnet på PDF-filen som innehåller signaturfältet är *LoanSigned.pdf*. (Se [Ta bort digitala signaturer](/help/forms/developing/digitally-signing-certifying-documents.md#removing-digital-signatures).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
