@@ -10,7 +10,10 @@ topic-tags: customization
 discoiquuid: ad6db3fd-0d26-4241-bf73-be74b7f6e509
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '346'
+ht-degree: 0%
 
 ---
 
@@ -155,7 +158,7 @@ Tänk dig ett scenario där du vill fylla i listrutan **Läge** baserat på ett 
 
    ![Lägga till landsnamn](assets/country-dropdown.png) ![Lägga till skript för att fylla i listrutorna med](assets/state-dropdown.png) delstatsnamn ![Land och delstat för att samla in](assets/2dropdowns.png)
 
-   ```
+   ```javascript
    JSON.parse(
        $.ajax({
            url: "/apps/myfolder/demo/dropdown",
@@ -171,6 +174,6 @@ Tänk dig ett scenario där du vill fylla i listrutan **Läge** baserat på ett 
    .responseText);
    ```
 
-Innehållspaketet som innehåller ett exempel på en adaptiv form (demo/AFdemo) med ovanstående kod implementerad.
+Innehållspaketet som innehåller ett exempel på en adaptiv form (demo/AFdemo) med koden ovan implementerad.
 
 [Hämta fil](assets/dropdown-demo-content-1.0.1-snapshot.zip)
