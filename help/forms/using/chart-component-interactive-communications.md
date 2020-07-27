@@ -2,7 +2,7 @@
 title: Använda diagram i interaktiv kommunikation
 seo-title: Diagramkomponent i interaktiv kommunikation
 description: Med diagram i en interaktiv kommunikation kan du komprimera stora mängder information till ett enkelt visuellt format
-seo-description: AEM Forms innehåller en diagramkomponent som du kan använda för att skapa diagram i din interaktiva kommunikation. I det här dokumentet förklaras grundläggande konfigurationer och agentkonfigurationer för diagramkomponenten.
+seo-description: AEM Forms tillhandahåller en diagramkomponent som du kan använda för att skapa diagram i din interaktiva kommunikation. I det här dokumentet förklaras grundläggande konfigurationer och agentkonfigurationer för diagramkomponenten.
 uuid: 978aa431-9a5b-4964-b37c-7bfa8c3f49b9
 content-type: reference
 topic-tags: interactive-communications
@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e21714ad-d445-4aff-b0db-d577061e0907
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '2613'
+ht-degree: 0%
 
 ---
 
@@ -28,10 +31,10 @@ Gör så här för att lägga till och konfigurera ett diagram i en interaktiv k
 1. Tryck på **Komponenter** i sidosparken i den interaktiva kommunikationen.
 1. Dra och släpp **diagramkomponenten** till någon av följande komponenter:
 
-   * Utskriftskanal: Målområde eller bildfält
-   * Webbkanal: Panel- eller målområde
+   * Utskriftskanal: Target-område eller bildfält
+   * Webbkanal: Panel eller Target
 
-1. Tryck på diagramkomponenten i redigeraren för interaktiv kommunikation och välj **[!UICONTROL Konfigurera (]** configure_icon ![](assets/configure_icon.png)) i verktygsfältet Komponent.
+1. Tryck på diagramkomponenten i redigeraren för interaktiv kommunikation och välj **[!UICONTROL Configure (]** configure_ ![icon](assets/configure_icon.png)) i verktygsfältet Komponent.
 
    Diagramegenskaperna visas i den vänstra rutan.
 
@@ -44,13 +47,13 @@ Gör så här för att lägga till och konfigurera ett diagram i en interaktiv k
    Grundläggande egenskaper för ett linjediagram i en webbkanal
 
 1. Konfigurera [diagramegenskaperna](../../forms/using/chart-component-interactive-communications.md#configure-chart-properties) baserat på kanaltyp.
-1. (Endast skrivarkanal) Ange om det är obligatoriskt för agenten att använda det här diagrammet i **[!UICONTROL agentinställningarna]**. Om alternativet **[!UICONTROL Det är obligatoriskt för agenten att använda det här diagrammet]** inte är markerat kan agenten trycka på ögonikonen för diagrammet på fliken **[!UICONTROL Innehåll]** i agentanvändargränssnittet för att visa eller dölja diagrammet.
+1. (Endast skrivarkanal) I **[!UICONTROL Agent Settings]** anger du om det är obligatoriskt för agenten att använda det här diagrammet. Om det här **[!UICONTROL t Is Mandatory For the Agent To Use This Chart]** alternativet inte är markerat kan agenten trycka på ögonikonen för diagrammet på fliken **[!UICONTROL Content]** i agentanvändargränssnittet för att visa eller dölja diagrammet.
 
    ![chart_agentproperties](assets/chart_agentproperties.png)
 
 1. Tryck på ![made_icon](assets/done_icon.png) för att spara diagramegenskaperna.
 
-   Tryck på **[!UICONTROL Förhandsgranska]** för att visa diagrammets utseende och data. Tryck på **[!UICONTROL Redigera]** för att konfigurera om diagrammets egenskaper.
+   Tryck för **[!UICONTROL Preview]** att visa utseendet och data som är kopplade till diagrammet. Tryck för **[!UICONTROL Edit]** att konfigurera om diagrammets egenskaper.
 
 ## Konfigurera diagramegenskaper {#configure-chart-properties}
 
@@ -157,22 +160,22 @@ Konfigurera följande egenskaper när du skapar diagram för tryck- och webbkana
    <td>Diagramspecifika konfigurationer</td>
    <td><p>Förutom vanliga konfigurationer finns följande diagramspecifika konfiguration tillgänglig:</p>
     <ul>
-     <li><strong>Visa förklaring: Visar </strong>en förklaring för cirkeldiagrammet eller mundiagrammet när det är aktiverat.</li>
+     <li><strong>Visa förklaring: </strong>Visar en förklaring för cirkeldiagrammet eller mundiagrammet när det är aktiverat.</li>
      <li><strong>Förklaringens position: </strong>Anger förklaringens position i förhållande till diagrammet. De tillgängliga alternativen är Höger, Vänster, Upptill och Nedtill. Vi rekommenderar att du använder högersidesförklaringen i utskriftskanalen.</li>
      <li><strong>Innerradie</strong>: Finns för Donut-diagram för att ange radien (i pixlar) för den inre cirkeln i diagrammet.</li>
      <li><strong>Linjefärg</strong>: Finns för linjediagram, linjediagram, punktdiagram och ytdiagram för att ange linjefärgen i diagrammet.</li>
      <li><strong>Punktfärg</strong>: Det här alternativet är tillgängligt för punkttecken och linje- och punktdiagram för att ange färg för punkterna i diagrammet.<br /> </li>
      <li><strong>Områdesfärg</strong>: Finns för ytdiagram för att ange färgen för området under linjen i diagrammet.</li>
-     <li><strong>Referenspunkt &gt; Bindningstyp: </strong>Tillgängligt för kvadrantdiagram för att<strong> </strong>ange referenspunktens bindningstyp. Använd den statiska text- eller datamodellens objektegenskap för att definiera värdet för referenspunkten.</li>
+     <li><strong>Referenspunkt &gt; Bindningstyp: </strong>Det här alternativet är tillgängligt för kvadrantdiagram för att<strong> </strong>ange referenspunktens bindningstyp. Använd den statiska text- eller datamodellens objektegenskap för att definiera värdet för referenspunkten.</li>
      <li><strong>Referenspunkt &gt; X-axel: </strong>Tillgängligt för kvadrantdiagram om du väljer <span class="uicontrol">Statisk</code> i listrutan Bindningstyp för att ange X-axelvärdet för referenspunkten.</code></li>
      <li><strong>Referenspunkt &gt; Y-axel: </strong>Tillgängligt för kvadrantdiagram om du väljer <span class="uicontrol">Statisk</code> i listrutan Bindningstyp för att ange Y-axelvärdet för referenspunkten.</code></li>
-     <li><strong>Referenspunkt &gt; Datamodellobjekt för serie: </strong>Tillgängligt för flera seriers kvadrantdiagram om du väljer <span class="uicontrol">Datamodellobjekt</code> i listrutan Bindningstyp. Definiera objektegenskapen för formulärdatamodellen för att identifiera serien för referenspunkten. </code></li>
-     <li><strong>Referenspunkt &gt; Datamodellobjektvärde för serie: </strong>Tillgängligt för flera seriers kvadrantdiagram om du väljer <span class="uicontrol">Datamodellobjekt</code> i listrutan Bindningstyp. Använd objektegenskapen för formulärdatamodellen för serie och det värde som definieras i det här fältet för att identifiera serien för referenspunkten.</code></li>
+     <li><strong>Referenspunkt &gt; Datamodellobjekt för serie: </strong>Tillgängligt för flera seriens kvadrantdiagram om du väljer <span class="uicontrol">Datamodellobjekt</code> i listrutan Bindningstyp. Definiera objektegenskapen för formulärdatamodellen för att identifiera serien för referenspunkten. </code></li>
+     <li><strong>Referenspunkt &gt; Datamodellobjektvärde för serie: </strong>Tillgängligt för flera seriens kvadrantdiagram om du väljer <span class="uicontrol">Datamodellobjekt</code> i listrutan Bindningstyp. Använd objektegenskapen för formulärdatamodellen för serie och det värde som definieras i det här fältet för att identifiera serien för referenspunkten.</code></li>
      <li><strong>Referenspunkt &gt; Datamodellobjekt för referenspunkt: </strong>Tillgängligt för kvadrantdiagram om du väljer <span class="uicontrol">Datamodellobjekt</code> i listrutan Bindningstyp. Definiera en objektegenskap för formulärdatamodellen som är jämställd med egenskaperna som ritas på X- och Y-axeln. För flera serier definierar du dessutom en datamodellsobjektegenskap som är en underordnad enhet till datamodellens objektegenskap som definierats för serien.</code></li>
-     <li><strong>Referenspunkt &gt; Datamodellobjektvärde för referenspunkt: </strong>Tillgängligt för kvadrantdiagram om du väljer <span class="uicontrol">Datamodellobjekt</code> i listrutan Bindningstyp. Använd objektegenskapen för formulärdatamodellen som referenspunkt och det värde som definieras i det här fältet för att identifiera referenspunkten för diagrammet.<br /> Kvadrantens <strong>etiketter &gt; Övre vänster:</strong> Finns för kvadrantdiagram för att ange namnet på den övre vänstra kvadranten.</code></li>
+     <li><strong>Referenspunkt &gt; Datamodellobjektvärde för referenspunkt: </strong>Tillgängligt för kvadrantdiagram om du väljer <span class="uicontrol">Datamodellobjekt</code> i listrutan Bindningstyp. Använd objektegenskapen för formulärdatamodellen som referenspunkt och det värde som definieras i det här fältet för att identifiera referenspunkten för diagrammet.<br /> <strong>Quadrant Labels &gt; Top Left:</strong> Finns för kvadrantdiagram för att ange namnet på den övre vänstra kvadranten.</code></li>
      <li><strong>Quadrant Labels &gt; Top Right:</strong> Finns för kvadrantdiagram för att ange namnet på den övre högra kvadranten.</li>
-     <li><strong>Quadrant Labels &gt; Bottom Right: </strong>Tillgängligt för kvadrantdiagram för att ange namnet på den nedre högra kvadranten.</li>
-     <li><strong>Quadrant Labels &gt; Bottom Left: Det </strong>finns för kvadrantdiagram som anger namnet på den nedre vänstra kvadranten.</li>
+     <li><strong>Quadrant Labels &gt; Bottom Right: </strong>Finns för kvadrantdiagram för att ange namnet på den nedre högra kvadranten.</li>
+     <li><strong>Quadrant Labels &gt; Bottom Left: </strong>Finns för kvadrantdiagram för att ange namnet på den nedre vänstra kvadranten.</li>
     </ul> </td>
    <td>Tryck och webb</td>
   </tr>
@@ -211,9 +214,9 @@ Mer information finns i [exempel 2: Användning av summerings- och frekvensfunkt
 
 Förutom att använda standardfunktionerna i diagram kan du skriva anpassade funktioner i JavaScript™ och göra dem tillgängliga i listan med funktioner i diagramkomponenten för webbkanalen.
 
-En funktion tar en eller flera matriser och ett kategorinamn som indata och returnerar ett värde. Exempel:
+En funktion tar en eller flera matriser och ett kategorinamn som indata och returnerar ett värde. Till exempel:
 
-```
+```javascript
 Multiply(valueArray, category) {
  var val = 1;
  _.each(valueArray, function(value) {
@@ -250,10 +253,10 @@ Låt oss i detalj förstå vilken information som minst krävs i grundläggande 
 
 För att uppnå detta anger du följande egenskaper:
 
-* **[!UICONTROL Namn]** - Ange diagrammets namn.
-* **[!UICONTROL Diagramtyp]** - Välj **kolumn** i listrutan.
-* **[!UICONTROL Titel]** - Ange utgiftstyp för X-axeln och Transaktionsbelopp för Y-axeln.
-* **[!UICONTROL Datamodellobjekt]** - Välj datamodellens objektegenskaper för att skapa databindningar för X-axeln (utgiftstyp) och Y-axeln (transaktionsmängd).
+* **[!UICONTROL Name]** - Ange diagrammets namn.
+* **[!UICONTROL Chart Type]** - Välj **Kolumn** i listrutan.
+* **[!UICONTROL Title]** - Ange utgiftstyp för X-axeln och Transaktionsbelopp för Y-axeln.
+* **[!UICONTROL Data Model Objects]** - Välj datamodellens objektegenskaper för att skapa databindningar för X-axeln (Utgiftstyp) och Y-axeln (Transaktionsmängd).
 
 ![Kolumndiagram i tryckkanaler i en interaktiv kommunikation](assets/sample_chart_print_column_new.png)
 
@@ -263,11 +266,11 @@ Kolumndiagram i tryckkanaler i en interaktiv kommunikation
 
 För att uppnå detta anger du följande egenskaper:
 
-* **[!UICONTROL Namn]** - Ange diagrammets namn.
-* **[!UICONTROL Diagramtyp]** - Välj **[!UICONTROL Ring]** i listrutan.
-* **[!UICONTROL Datamodellobjekt]** - Välj datamodellens objektegenskaper för att skapa databindningar för X-axeln (utgiftstyp) och Y-axeln (transaktionsmängd).
-* **[!UICONTROL Innerradie]** - Ange värdet för innerradie som 150 för att ange radien (i pixlar) för den inre cirkeln i diagrammet.
-* **[!UICONTROL Verktygstips]** - Använd standardformatet ${x}(${y}) för att visa verktygstipset. Verktygstipset visas som: Utgiftstyp (transaktionsbelopp). Exempel: Debit för Bitmynt (10000).
+* **[!UICONTROL Name]** - Ange diagrammets namn.
+* **[!UICONTROL Chart Type]** - Välj **[!UICONTROL Donut]** i listrutan.
+* **[!UICONTROL Data Model Objects]** - Välj datamodellens objektegenskaper för att skapa databindningar för X-axeln (Utgiftstyp) och Y-axeln (Transaktionsmängd).
+* **[!UICONTROL Inner Radius]** - Ange innerradievärdet som 150 för att ange radien (i pixlar) för den inre cirkeln i diagrammet.
+* **[!UICONTROL Tooltip]** - Använd standardformatet ${x}(${y}) för att visa verktygstipset. Verktygstipset visas som: Utgiftstyp (transaktionsbelopp). Exempel: Debit för Bitmynt (10000).
 
 ![Ringdiagram i webbkanalen i en interaktiv kommunikation](assets/sample_chart_web_new.png)
 
