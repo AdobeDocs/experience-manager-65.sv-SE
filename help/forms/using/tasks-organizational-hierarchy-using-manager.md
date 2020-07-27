@@ -1,8 +1,8 @@
 ---
 title: Hantera uppgifter i en organisationshierarki med hjälp av hanterarvyn
 seo-title: Hantera uppgifter i en organisationshierarki med hjälp av hanterarvyn
-description: Hur chefer och organisationschefer kan komma åt och arbeta med uppgifter i sina direkta och indirekta rapporter på fliken Att göra på arbetsytan i AEM Forms.
-seo-description: Hur chefer och organisationschefer kan komma åt och arbeta med uppgifter i sina direkta och indirekta rapporter på fliken Att göra på arbetsytan i AEM Forms.
+description: Hur chefer och organisationschefer kan komma åt och arbeta med uppgifterna i sina direkta och indirekta rapporter på fliken Att göra på arbetsytan i AEM Forms.
+seo-description: Hur chefer och organisationschefer kan komma åt och arbeta med uppgifterna i sina direkta och indirekta rapporter på fliken Att göra på arbetsytan i AEM Forms.
 uuid: c44c55e6-6cc1-417d-8e89-c8d5c32914c8
 contentOwner: robhagat
 content-type: reference
@@ -11,14 +11,17 @@ topic-tags: forms-workspace
 discoiquuid: 2e60df86-d8ff-4cf9-b801-9559857b5ff4
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '379'
+ht-degree: 0%
 
 ---
 
 
 # Hantera uppgifter i en organisationshierarki med hjälp av hanterarvyn{#managing-tasks-in-an-organizational-hierarchy-using-manager-view}
 
-På arbetsytan i AEM Forms kan chefer nu komma åt uppgifter som tilldelats alla i deras hierarki - direkta eller indirekta rapporter - och utföra olika åtgärder på dem. Uppgifterna är tillgängliga på fliken Att göra på arbetsytan i AEM Forms. De åtgärder som stöds för de direkta rapporterna är:
+På arbetsytan i AEM Forms kan chefer nu komma åt uppgifter som tilldelats alla i deras hierarki - direkta eller indirekta rapporter - och utföra olika åtgärder på dem. Uppgifterna är tillgängliga på fliken Att göra på arbetsytan AEM Forms. De åtgärder som stöds för de direkta rapporterna är:
 
 **Vidarebefordra** en uppgift från en direkt rapport till valfri användare.
 
@@ -30,10 +33,10 @@ På arbetsytan i AEM Forms kan chefer nu komma åt uppgifter som tilldelats alla
 
 AEM Forms begränsar en användares åtkomst till endast de uppgifter som användaren har åtkomstkontroll för. En sådan kontroll säkerställer att en användare bara kan hämta de uppgifter som användaren har åtkomstbehörighet för. Med hjälp av webbtjänster och implementeringar från tredje part för att definiera hierarkin kan en organisation anpassa definitionen av chef och dirigera rapporter efter deras behov.
 
-1. Skapa en DSC. Mer information finns i avsnittet&quot;Utveckla komponenter för AEM Forms&quot; i [Programmering med AEM Forms](https://www.adobe.com/go/learn_aemforms_programming_63) -guiden.
-1. I DSC definierar du en ny SPI för hierarkihantering för att definiera direkta rapporter och hierarki inom AEM Forms-användarna. Här följer ett exempel på Java™-kodfragment.
+1. Skapa en DSC. Mer information finns i&quot;Developing Components for AEM Forms topic in [Programming with AEM Forms](https://www.adobe.com/go/learn_aemforms_programming_63) guide.
+1. I DSC definierar du en ny SPI för hierarkihantering för att definiera direkta rapporter och hierarki inom AEM Forms-användare. Här följer ett exempel på Java™-kodfragment.
 
-   ```as3
+   ```java
    public class MyHierarchyMgmtService
    {
         /*
@@ -68,7 +71,7 @@ AEM Forms begränsar en användares åtkomst till endast de uppgifter som använ
 
 1. Skapa en component.xml-fil. Kontrollera att spec-id måste vara samma som i kodutdraget nedan. Här följer ett exempel på ett kodfragment som du kan återanvända.
 
-   ```as3
+   ```xml
    <component xmlns="https://adobe.com/idp/dsc/component/document">
        <component-id>com.adobe.sample.SampleDSC</component-id>
        <version>1.1</version>
