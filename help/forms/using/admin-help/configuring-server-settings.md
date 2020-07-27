@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e047a95e-0acb-438a-8d27-f005c0adc508
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '2657'
+ht-degree: 0%
 
 ---
 
@@ -51,19 +54,19 @@ Om processerna har utformats och implementerats utan att e-post krävs behöver 
 >
 >Om du anger felaktig information kan du klicka på Avbryt för att gå tillbaka till sidan som visades tidigare.
 
-### Konfigurera e-postmallar för att använda AEM Forms Workspace {#configuring-email-templates-to-use-html-workspace}
+### Konfigurera e-postmallar för att använda arbetsytan i AEM Forms {#configuring-email-templates-to-use-html-workspace}
 
 >[!NOTE]
 >
 >Flex Workspace är föråldrat för AEM-formulärreleaser.
 
-Som standard innehåller e-postmeddelanden som skickas från AEM-formulär länkar till (borttagna för AEM-formulär i JEE) Flex Workspace. Du kan konfigurera AEM-formulär så att e-postmeddelanden skickas med länkar till AEM Forms Workspace. Mer information om fördelarna med AEM Forms Workspace (Borttaget för AEM-formulär i JEE) finns i [den här](/help/forms/using/features-html-workspace-available-flex.md) artikeln.
+Som standard innehåller e-postmeddelanden som skickas från AEM-formulär länkar till (borttagna för AEM-formulär i JEE) Flex Workspace. Du kan konfigurera AEM-formulär så att e-postmeddelanden skickas med länkar till arbetsytan i AEM Forms. Mer information om fördelarna med AEM Forms Workspace framför (Borttaget för AEM-formulär i JEE) Flex Workspace finns i [den här](/help/forms/using/features-html-workspace-available-flex.md) artikeln.
 
 1. I administrationskonsolen klickar du på Hem > Tjänster > Formulärarbetsflöde > Serverinställningar > Aktivitetsmeddelanden.
 1. Öppna mall för uppgiftstilldelning.
 1. Ställ in mallen i åtgärdsmeddelandena på följande: `https://@@notification-host@@:8080/lc/libs/ws/index.html?taskId=@@taskid@@`
 
-   ```as3
+   ```java
    https://@@notification-host@@:8080/lc/libs/ws/index.html?taskId=@@taskid@@
    ```
 
@@ -126,7 +129,7 @@ Du kan skicka aviseringar om deadline till användare och grupper när deadline 
 
 ### Dölj taggen DO NOT DELETE för alla e-postmeddelanden {#hide-the-do-not-delete-tag-for-all-emails}
 
-Du kan konfigurera e-post så att den döljs till spårningstaggen DO NOT DELETE i alla e-postmeddelanden som skickas i en mänsklig centrerad process. Mer information finns i [Så här döljer du taggen DO-NOT-DELETE med CSS](https://blogs.adobe.com/LiveCycleHelp/2013/09/how-to-hide-the-do-not-delete-tag-with-css.html)
+Du kan konfigurera e-post så att den döljs för spårningstaggen DO NOT DELETE i alla e-postmeddelanden som skickas i en mänsklig centrerad process. Mer information finns i [Så här döljer du taggen DO-NOT-DELETE med CSS](https://blogs.adobe.com/LiveCycleHelp/2013/09/how-to-hide-the-do-not-delete-tag-with-css.html)
 
 ## Konfigurera meddelanden för administratörer {#configuring-notifications-for-administrators}
 
