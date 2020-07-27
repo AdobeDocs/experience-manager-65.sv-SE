@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c47ef627-261e-4b4b-8846-873d3d84234b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '3988'
 ht-degree: 0%
@@ -108,7 +108,7 @@ Så här skapar du en underordnad egenskap:
 
 1. Tryck **[!UICONTROL Done]** för att spara egenskapen child och tryck för **[!UICONTROL Save]** att spara formulärdatamodellen. Egenskapen child läggs nu till i datamodellsobjektet.
 
-När du har skapat datamodellsobjekt och egenskaper kan du fortsätta att skapa anpassningsbara formulär och interaktiv kommunikation baserat på formulärdatamodellen. När du har datakällor tillgängliga och konfigurerade kan du senare binda formulärdatamodellen till datakällor. Bindningen uppdateras automatiskt i tillhörande adaptiva formulär och interaktiv kommunikation. Mer information om hur du skapar adaptiva formulär och interaktiv kommunikation med hjälp av formulärdatamodell finns i [Använda formulärdatamodell](/help/forms/using/using-form-data-model.md).
+När du har skapat datamodellsobjekt och -egenskaper kan du fortsätta att skapa anpassningsbara formulär och interaktiv kommunikation baserat på formulärdatamodellen. När du har datakällor tillgängliga och konfigurerade kan du senare binda formulärdatamodellen till datakällor. Bindningen uppdateras automatiskt i tillhörande adaptiva formulär och interaktiv kommunikation. Mer information om hur du skapar adaptiva formulär och interaktiv kommunikation med hjälp av formulärdatamodell finns i [Använda formulärdatamodell](/help/forms/using/using-form-data-model.md).
 
 ### Binda datamodellsobjekt och egenskaper {#bind-data-model-objects-and-properties}
 
@@ -200,7 +200,7 @@ Använd attributet request för att hämta associerade egenskaper från datakäl
 
 1. Inkludera följande text i filen head.jsp:
 
-   ```
+   ```jsp
    <%Map paraMap = new HashMap();
     paraMap.put("<request_attribute>",request.getParameter("<request_attribute>"));
     request.setAttribute("paramMap",paraMap);%>
@@ -242,6 +242,7 @@ Så här lägger du till en association:
    * Välj associationstyp - en till en eller en till många.
    * Markera datamodellsobjektet som du vill associera med.
    * Markera lästjänsten för att läsa data från det markerade modellobjektet. Lästjänstargumentet visas. Redigera om du vill ändra argumentet, om det behövs, och binda det till egenskapen för datamodellobjektet som ska associeras.
+
    I följande exempel är standardargumentet för läsningstjänsten för datamodellobjektet Beroende `dependentid`.
 
    ![add-association-example](assets/add-association-example.png)
@@ -279,6 +280,7 @@ Så här redigerar du egenskaper:
    * **Datamodellsobjekt**: Ange läs- och skrivtjänster och redigeringsargument.
    * **Egenskap**: Ange typ, undertyp och format för egenskapen. Du kan också ange om den valda egenskapen är primärnyckeln för datamodellobjektet.
    * **Tjänst**: Ange tjänstens indatamodell, utdatatyp och argument. För en Get-tjänst kan du ange om den förväntas returnera en array.
+
    ![edit-properties-service](assets/edit-properties-service.png)
 
    Dialogrutan Redigera egenskaper för en get-tjänst
@@ -508,24 +510,24 @@ I följande tabell visas begränsningarna för indata baserat på datakällan:
 
 I det här exemplet valideras indata baserat på maximala, minimala och obligatoriska begränsningar som definieras i Swagger-filen. Indata uppfyller bara valideringskriterierna om Order Id finns och dess värde är mellan 1 och 10.
 
-```xml
-parameters: [
-{
-name: "orderId",
-in: "path",
-description: "ID of pet that needs to be fetched",
-required: true,
-type: "integer",
-maximum: 10,
-minimum: 1,
-format: "int64"
-}
-]
+```json
+   parameters: [
+   {
+   name: "orderId",
+   in: "path",
+   description: "ID of pet that needs to be fetched",
+   required: true,
+   type: "integer",
+   maximum: 10,
+   minimum: 1,
+   format: "int64"
+   }
+   ]
 ```
 
 Ett undantag visas om indata inte uppfyller valideringskriterierna. Om loggnivån är inställd på **Felsökning** loggas ett fel i filen **error.log** . Till exempel,
 
-```java
+```verilog
 21.01.2019 17:26:37.411 *ERROR* com.adobe.aem.dermis.core.validation.JsonSchemaValidator {"errorCode":"AEM-FDM-001-044","errorMessage":"Input validations failed during operation execution.","violations":{"/orderId":["numeric instance is greater than the required maximum (maximum: 10, found: 16)"]}}
 ```
 
