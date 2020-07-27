@@ -10,7 +10,10 @@ topic-tags: publish
 discoiquuid: f0a5588d-f210-4f04-bc35-b62834f90ab1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '6991'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ## Arbetsflödessteg för formulär {#forms-workflow-steps}
 
-Blankettstegen utför AEM Forms-specifika åtgärder i ett AEM-arbetsflöde. Med de här stegen kan du snabbt skapa anpassningsbara formulärbaserade formulärbaserade arbetsflöden i OSGi. Dessa arbetsflöden kan användas för att utveckla enkla arbetsflöden för granskning och godkännande, interna och övergripande affärsprocesser. Du kan också använda steg i formulärarbetsflödet för att starta dokumenttjänster, integrera med signaturarbetsflödet i Adobe Sign och utföra andra AEM Forms-åtgärder. Du behöver [tillägget](https://www.adobe.com/go/learn_aemforms_documentation_63) AEM Forms för att kunna använda dessa steg i ett arbetsflöde.
+Blankettstegen utför AEM Forms-specifika åtgärder i ett AEM-arbetsflöde. Med de här stegen kan du snabbt skapa anpassningsbara formulärbaserade formulärbaserade arbetsflöden i OSGi. Dessa arbetsflöden kan användas för att utveckla enkla arbetsflöden för granskning och godkännande, interna och övergripande affärsprocesser. Du kan också använda steg i formulärarbetsflödet för att starta dokumenttjänster, integrera med signaturarbetsflödet i Adobe Sign och utföra andra AEM Forms. Du behöver [AEM Forms för att lägga till](https://www.adobe.com/go/learn_aemforms_documentation_63)  för att kunna använda dessa steg i ett arbetsflöde.
 
 ## Tilldela aktivitetssteg {#assign-task-step}
 
@@ -75,11 +78,11 @@ Du kan också använda komponenten för att styra aktivitetens beteende. Du kan 
    * **Spara layoutmall med:** Spara layoutmallen med en sökväg som är relativ till nyttolasten eller lagra den i en variabel av dokumentdatatypen. Layoutmallen [](../../forms/using/layout-design-details.md) refererar till en XDP-fil som du skapar med Forms Designer. Det här alternativet är bara tillgängligt om du väljer gränssnittet för interaktiv kommunikationsagent i listrutan Typ.
 
 * **Tilldelning > Tilldelningsalternativ:** Ange vilken metod som ska användas för att tilldela en användare uppgiften. Du kan dynamiskt tilldela uppgiften till en användare eller grupp med skriptet för deltagarväljaren eller tilldela uppgiften till en viss AEM-användare eller grupp.
-* **Väljare:** Alternativet är tillgängligt när alternativet **Dynamiskt för en användare eller grupp** är markerat i fältet Tilldela alternativ. Du kan använda ett ECMAScript eller en tjänst för att dynamiskt välja en användare eller grupp. Mer information finns i Tilldela användare [ett arbetsflöde](https://helpx.adobe.com/experience-manager/kb/HowToAssignAWorkflowDynamicallyToParticipants.html) dynamiskt och [Skapa ett anpassat Adobe Experience Manager Dynamic Participant-steg.](https://helpx.adobe.com/experience-manager/using/dynamic-steps.html)
+* **Väljare:** Alternativet är tillgängligt när alternativet **Dynamiskt för en användare eller grupp** är markerat i fältet Tilldela alternativ. Du kan använda ett ECMAScript eller en tjänst för att dynamiskt välja en användare eller grupp. Mer information finns i Tilldela användare [ett arbetsflöde](https://helpx.adobe.com/experience-manager/kb/HowToAssignAWorkflowDynamicallyToParticipants.html) dynamiskt och [Skapa ett anpassat steg för dynamisk deltagare i Adobe Experience Manager.](https://helpx.adobe.com/experience-manager/using/dynamic-steps.html)
 
-* **Deltagare:** Fältet är tillgängligt när alternativet **[!UICONTROL com.adobe.granite.workflow.core.process.RandomParticipantChooser]** är markerat i fältet **Deltagare** . I fältet kan du välja användare eller grupper för alternativet RandomParticipantChooser.
+* **Deltagare:** Fältet är tillgängligt när **[!UICONTROL com.adobe.granite.workflow.core.process.RandomParticipantChooser]** alternativet är markerat i fältet **Deltagarväljare** . I fältet kan du välja användare eller grupper för alternativet RandomParticipantChooser.
 
-* **Uppdragare:** Fältet är tillgängligt när **[!UICONTROL com.adobe.fd.workspace.step.service.VariableParticipantChooser]** har valts i fältet **Deltagarväljare** . I fältet kan du välja en variabel av datatypen String för att definiera den som tilldelas.
+* **Uppdragare:** Fältet är tillgängligt när **[!UICONTROL com.adobe.fd.workspace.step.service.VariableParticipantChooser]** är markerat i fältet **Deltagarväljare** . I fältet kan du välja en variabel av datatypen String för att definiera den som tilldelas.
 
 * **Argument:** Fältet är tillgängligt när ett annat skript än skriptet RandomParticipantChoose har valts i fältet för deltagarväljare. I fältet kan du ange en lista med kommaavgränsade argument för det skript som valts i fältet Deltagare.
 
@@ -173,7 +176,7 @@ Om du anger sökvägen till en mapp, till exempel bilagor, bifogas alla filer so
 
 ## Anropa tjänststeg för formulärdatamodell {#invoke-form-data-model-service-step}
 
-Du kan använda [AEM Forms-dataintegrering](../../forms/using/data-integration.md) för att konfigurera och ansluta till olika datakällor. Dessa datakällor kan vara en databas-, webbtjänst-, REST-tjänst-, OData-tjänst- och CRM-lösning. Med dataintegrering i AEM Forms kan du skapa en formulärdatamodell som omfattar olika tjänster som utför datahämtnings-, additions- och uppdateringsåtgärder för den konfigurerade databasen. Du kan använda steget **** Anropa datamodelltjänst för att välja en formulärdatamodell (FDM) och använda tjänsterna i FDM för att hämta, uppdatera eller lägga till data till olika datakällor.
+Du kan använda [AEM Forms Data Integration](../../forms/using/data-integration.md) för att konfigurera och ansluta till olika datakällor. Dessa datakällor kan vara en databas-, webbtjänst-, REST-tjänst-, OData-tjänst- och CRM-lösning. Med dataintegrering i AEM Forms kan du skapa en formulärdatamodell som omfattar olika tjänster för att utföra datahämtnings-, additions- och uppdateringsåtgärder för den konfigurerade databasen. Du kan använda steget **** Anropa datamodelltjänst för att välja en formulärdatamodell (FDM) och använda tjänsterna i FDM för att hämta, uppdatera eller lägga till data till olika datakällor.
 
 Följande databastabell och JSON-filen används som exempel för att förklara indata för stegfält:
 
@@ -206,26 +209,26 @@ Följande databastabell och JSON-filen används som exempel för att förklara i
 
 **JSON-exempelfil**
 
-```
-{ 
-  customer: { 
-   firstName: "Sarah", 
-   lastName:"Rose", 
-   customerId: "1", 
-   emailAddress:"srose@we.info" 
- }, 
-  insurance: {
-   customerId: "1", 
-  policyType: "Premium,
-  policyNumber: "Premium-521499",
-  customerDetails: { 
-   firstName: "Sarah",
-   lastName: "Rose",
-   customerId: "1",
-   emailAddress: "srose@we.info" 
-  }
- }
-}
+```json
+  { 
+    customer: { 
+     firstName: "Sarah", 
+     lastName:"Rose", 
+     customerId: "1", 
+     emailAddress:"srose@we.info" 
+   }, 
+    insurance: {
+     customerId: "1", 
+    policyType: "Premium,
+    policyNumber: "Premium-521499",
+    customerDetails: { 
+     firstName: "Sarah",
+     lastName: "Rose",
+     customerId: "1",
+     emailAddress: "srose@we.info" 
+    }
+   }
+  }
 ```
 
 I steget Anropa formulärdatamodelltjänst visas följande fält för att underlätta formulärdatamodellåtgärder:
@@ -260,7 +263,7 @@ I steget Signera dokument kan du använda Adobe Sign för att signera dokument. 
 
 * **Språk:** Ange språk för alternativen för e-post och verifiering. Du kan antingen lagra språkinställningen i en variabel av datatypen String eller välja **Literal** för att välja språkinställningen i listan med tillgängliga alternativ. Du måste definiera språkkoden medan du lagrar värdet för språkinställningen i en variabel. Ange till exempel **en_US** för engelska och **fr_FR** för franska.
 
-* **Adobe Sign Cloud-konfiguration**: Välj en Adobe Sign Cloud-konfiguration. Om du inte har konfigurerat Adobe Sign för AEM-formulär läser du [Integrera Adobe Sign med AEM-formulär](../../forms/using/adobe-sign-integration-adaptive-forms.md).
+* **Adobe Sign Cloud-konfiguration**: Välj en Adobe Sign Cloud-konfiguration. Om du inte har konfigurerat Adobe Sign för AEM Forms finns mer information i [Integrera Adobe Sign med AEM Forms](../../forms/using/adobe-sign-integration-adaptive-forms.md).
 
 * **Välj dokument som ska signeras med:** Du kan välja ett dokument från en plats som är relativ till nyttolasten, använda nyttolasten som dokument, ange en absolut sökväg för dokumentet eller hämta dokumentet som lagras i en variabel av dokumentdatatypen.
 * **Dagar till deadline:** Ett dokument markeras som förfallodatum (passerad deadline) efter det att ingen aktivitet har gjorts i aktiviteten för det antal dagar som anges i fältet **Dagar till deadline** . Antalet dagar räknas efter att den dokumenterade har tilldelats en användare för signering.
@@ -270,7 +273,7 @@ I steget Signera dokument kan du använda Adobe Sign för att signera dokument. 
 * **Arbetsflödesfas:** Ett arbetsflöde kan ha flera steg. Dessa steg visas i AEM Inbox. Du kan definiera de här stegen i modellens egenskaper (Sidspark > Sida > Sidegenskaper > Steg).
 * **Välj signerare:** Ange metoden för att välja signerare för dokumentet. Du kan dynamiskt tilldela arbetsflödet till en användare eller en grupp eller manuellt lägga till information om en signerare.
 * **Skript eller tjänst för att välja signerare:** Alternativet är bara tillgängligt om alternativet Dynamiskt är markerat i fältet Välj signerare. Du kan ange ett ECMAScript eller en tjänst för att välja signerare och verifieringsalternativ för ett dokument.
-* **Signerarinformation:** Alternativet är bara tillgängligt om alternativet Manuellt är markerat i fältet Välj signerare. Ange e-postadress och välj en valfri verifieringsmekanism. Innan du väljer en verifieringsmekanism i två steg ska du kontrollera att motsvarande verifieringsalternativ är aktiverat för det konfigurerade Adobe Sign-kontot. Du kan använda en variabel av datatypen String för att definiera värden för fälten **[!UICONTROL E-post]**, **[!UICONTROL Landskod]** och **[!UICONTROL Telefonnummer]** . Fälten **[!UICONTROL Landskod]** och **[!UICONTROL Telefonnummer]** visas endast om du väljer **[!UICONTROL Telefonverifiering]** i den **[!UICONTROL 2-stegsvisa]** verifieringslistan.
+* **Signerarinformation:** Alternativet är bara tillgängligt om alternativet Manuellt är markerat i fältet Välj signerare. Ange e-postadress och välj en valfri verifieringsmekanism. Innan du väljer en verifieringsmekanism i två steg ska du kontrollera att motsvarande verifieringsalternativ är aktiverat för det konfigurerade Adobe Sign-kontot. Du kan använda en variabel av datatypen String för att definiera värden för **[!UICONTROL Email]**, **[!UICONTROL Country Code]** och **[!UICONTROL Phone Number]** fält. Fälten **[!UICONTROL Country Code]** och **[!UICONTROL Phone Number]** visas bara om du väljer **[!UICONTROL Phone Verification]** i **[!UICONTROL 2-step verification]** listrutan.
 * **Statusvariabel:** Ett Adobe Sign-aktiverat dokument lagrar dokumentets signeringsstatus i en variabel av datatypen String. Ange namnet på statusvariabeln (adobeSignStatus). En statusvariabel för en instans finns i CRXDE på /etc/workflow/instances/&lt;server>/&lt;datum-tid>/&lt;instans av arbetsflödesmodell>/workItems/&lt;nod>/metaData innehåller status för en variabel.
 * **Spara signerat dokument med följande alternativ:** Ange platsen där signerade dokument ska sparas. Du kan välja att skriva över nyttolastfilen, placera det signerade dokumentet på en plats i nyttolastkatalogen eller lagra det signerade dokumentet i en variabel av Dokumenttyp.
 
@@ -278,7 +281,7 @@ I steget Signera dokument kan du använda Adobe Sign för att signera dokument. 
 
 AEM Document Services är en uppsättning tjänster för att skapa, sammanställa och skydda PDF-dokument. AEM Forms tillhandahåller ett separat AEM Workflow-steg för varje dokumenttjänst.
 
-På samma sätt som andra arbetsflödessteg i AEM Forms, till exempel Tilldela uppgift, Skicka e-post och Signera dokument, kan du använda variabler i alla steg i AEM Document Services. Mer information om att skapa och hantera variabler finns i [Variabler i AEM-arbetsflöden](../../forms/using/variable-in-aem-workflows.md).
+På samma sätt som andra arbetsflödessteg för AEM Forms, som Tilldela uppgift, Skicka e-post och Signera dokument, kan du använda variabler i alla steg i AEM Document Services. Mer information om att skapa och hantera variabler finns i [Variabler i AEM-arbetsflöden](../../forms/using/variable-in-aem-workflows.md).
 
 ### Använd tidsstämpelsteg för dokument {#apply-document-time-stamp-step}
 
@@ -309,7 +312,7 @@ Skapar ett PDF-dokument av den angivna URL-, HTML- och ZIP-filen.
 
 ### Steget Exportera data {#export-data-step}
 
-Exporterar data från ett PDF-formulär eller en XDP-fil. Du måste ange filsökvägen för Input Document och Export Data Format. Alternativen för Exportera dataformat är Auto, XDP och XmlData.
+Exporterar data från en PDF forms- eller XDP-fil. Du måste ange filsökvägen för Input Document och Export Data Format. Alternativen för Exportera dataformat är Auto, XDP och XmlData.
 
 ### Exportera PDF till angivet textsteg {#export-pdf-to-specified-type-step}
 
@@ -341,7 +344,7 @@ Optimerar PDF-filer genom att minska deras storlek. Resultatet av konverteringen
 
 Optimeringsinställningarna anger hur filerna optimeras. Här följer några exempelinställningar:
 
-* Målversion för PDF
+* Target PDF-version
 * Ignorera objekt som JavaScript-åtgärder och inbäddade sidminiatyrer
 * Ignorera användardata som kommentarer och bifogade filer
 * Ignorerar ogiltiga eller oanvända inställningar
@@ -359,7 +362,7 @@ Optimeringsinställningarna anger hur filerna optimeras. Här följer några exe
 
 ### Säkra dokument, steg {#secure-document-step}
 
-Kryptera, signera och certifiera ett dokument. AEM Forms stöder både lösenordsbaserad och certifikatbaserad kryptering. Du kan också välja mellan olika algoritmer för signering av dokument. Exempel: SHA-256 och SH-512. Du kan också använda arbetsflödessteget för att läsa utökade PDF-dokument. Arbetsflödessteget innehåller alternativ för att aktivera streckkodsavkodning, digitala signaturer, import och export av PDF-data och andra alternativ.
+Kryptera, signera och certifiera ett dokument. AEM Forms stöder både lösenordsbaserad kryptering och certifikatbaserad kryptering. Du kan också välja mellan olika algoritmer för signering av dokument. Exempel: SHA-256 och SH-512. Du kan också använda arbetsflödessteget för att läsa utökade PDF-dokument. Arbetsflödessteget innehåller alternativ för att aktivera streckkodsavkodning, digitala signaturer, import och export av PDF-data och andra alternativ.
 
 ### Skicka till skrivare, steg {#send-to-printer-step}
 
@@ -378,52 +381,52 @@ Stegen Generera utskrift har följande egenskaper:
 
 **Indataegenskaper**
 
-* **[!UICONTROL Välj mallfil med]**: Ange sökvägen till mallfilen. Du kan välja mallfilen med hjälp av sökvägen som är relativ till nyttolasten, sparad med en absolut sökväg eller med hjälp av en variabel av datatypen Dokument. Exempel: [Payload_Directory]/Workflow/data.xml. Om sökvägen inte finns i crx-databasen kan en administratör skapa sökvägen innan den används. Dessutom kan du acceptera nyttolast som indatafil.
+* **[!UICONTROL Select template file using]**: Ange sökvägen till mallfilen. Du kan välja mallfilen med hjälp av sökvägen som är relativ till nyttolasten, sparad med en absolut sökväg eller med hjälp av en variabel av datatypen Dokument. Exempel: [Payload_Directory]/Workflow/data.xml. Om sökvägen inte finns i crx-databasen kan en administratör skapa sökvägen innan den används. Dessutom kan du acceptera nyttolast som indatafil.
 
-* **[!UICONTROL Välj datadokument med]**: Ange sökvägen till en indatafil. Du kan markera indatafilen med den sökväg som är relativ till nyttolasten, som har sparats med en absolut sökväg eller med en variabel av dokumentdatatypen. Exempel: [Payload_Directory]/Workflow/data.xml. Om sökvägen inte finns i crx-databasen kan en administratör skapa sökvägen innan den används.
+* **[!UICONTROL Select data document using]**: Ange sökvägen till en indatafil. Du kan markera indatafilen med den sökväg som är relativ till nyttolasten, som har sparats med en absolut sökväg eller med en variabel av dokumentdatatypen. Exempel: [Payload_Directory]/Workflow/data.xml. Om sökvägen inte finns i crx-databasen kan en administratör skapa sökvägen innan den används.
 
-* **[!UICONTROL Skrivarformat]**: Ett värde för Utskriftsformat som anger vilket sidbeskrivningsspråk som ska användas när ingen XDC-fil anges för att generera utdataströmmen. Om du anger ett literalt värde väljer du något av följande värden:
+* **[!UICONTROL Printer Format]**: Ett värde för Utskriftsformat som anger vilket sidbeskrivningsspråk som ska användas när ingen XDC-fil anges för att generera utdataströmmen. Om du anger ett literalt värde väljer du något av följande värden:
 
-   * **[!UICONTROL Anpassad PCL]**: Använd alternativet för att ange en anpassad XDC-fil för PCL.
-   * **[!UICONTROL Eget PostScript]**: Använd alternativet för att ange en anpassad XDC-fil för PostScript.
-   * **[!UICONTROL Anpassad ZPL]**: Använd alternativet för att ange en anpassad XDC-fil för ZPL.
+   * **[!UICONTROL Custom PCL]**: Använd alternativet för att ange en anpassad XDC-fil för PCL.
+   * **[!UICONTROL Custom PostScript]**: Använd alternativet för att ange en anpassad XDC-fil för PostScript.
+   * **[!UICONTROL Custom ZPL]**: Använd alternativet för att ange en anpassad XDC-fil för ZPL.
    * **[!UICONTROL Generic Color PCL (5c)]**: Använd en allmän färg-PCL (5c).
-   * **[!UICONTROL Allmän PostScript Level3]**: Använd allmän PostScript Level 3.
+   * **[!UICONTROL Generic PostScript Level3]**: Använd allmän PostScript Level 3.
    * **[!UICONTROL ZPL 300 DPI]**: Använd ZPL 300 DPI. Zpl300.xdc används.
    * **[!UICONTROL ZPL 600 DPI]**: Använd ZPL 600 DPI. Filen zpl600.xdc används.
-   * **[!UICONTROL Anpassad IPL]**: Använd alternativet för att ange en anpassad XDC-fil för IPL.
+   * **[!UICONTROL Custom IPL]**: Använd alternativet för att ange en anpassad XDC-fil för IPL.
    * **[!UICONTROL IPL 300 DPI]**: Använd IPL 300 DPI. ipl300.xdc används.
    * **[!UICONTROL IPL 400 DPI]**: Använd IPL 400 DPI. Filen ipl400.xdc används.
-   * **[!UICONTROL Anpassad TPCL]**: Använd alternativet för att ange en anpassad XDC-fil för TPCL.
+   * **[!UICONTROL Custom TPCL]**: Använd alternativet för att ange en anpassad XDC-fil för TPCL.
    * **[!UICONTROL TPCL 305 DPI]**: Använd TPCL 300 DPI. Filen tpcl305.xdc används.
    * **[!UICONTROL PCL 600 DPI]**: Använd TPCL 600 DPI. Filen tpcl600.xdc används.
-   * **[!UICONTROL Anpassat DPL]**: Använd alternativet för att ange en anpassad XDC-fil som DPL.
+   * **[!UICONTROL Custom DPL]**: Använd alternativet för att ange en anpassad XDC-fil som DPL.
    * **[!UICONTROL DPL300DPI]**: Använd DPL 300 DPI. Filen dpl300.xdc används.
    * **[!UICONTROL DPL406DPI]**: Använd DPL 400 DPI. dpl406.xdc används.
    * **[!UICONTROL DPL600DPI]**: Använd DPL 600 DPI. dpl600.xdc används.
 
 **Utdataegenskaper**
 
-* **[!UICONTROL Spara utdatadokument med]**: Ange platsen där utdatafilen ska sparas. Du kan spara utdatafilen på en plats som är relativ till nyttolasten, i en variabel eller ange en absolut plats att spara utdatafilen på. Om sökvägen inte finns i crx-databasen kan en administratör skapa sökvägen innan den används.
+* **[!UICONTROL Save output document using]**: Ange platsen där utdatafilen ska sparas. Du kan spara utdatafilen på en plats som är relativ till nyttolasten, i en variabel eller ange en absolut plats att spara utdatafilen på. Om sökvägen inte finns i crx-databasen kan en administratör skapa sökvägen innan den används.
 
 **Avancerade egenskaper**
 
-* **[!UICONTROL Välj innehållets rotplats med]**: Innehållsroten är ett strängvärde som anger URI, absolut referens eller plats i databasen för att hämta relativa resurser som används i formulärdesignen. Om formulärdesignen till exempel refererar till en bild relativt, som ../myImage.gif, måste myImage.gif finnas på repository://. Standardvärdet är repository://, som pekar på databasens rotnivå.
+* **[!UICONTROL Select Content Root location using]**: Innehållsroten är ett strängvärde som anger URI, absolut referens eller plats i databasen för att hämta relativa resurser som används i formulärdesignen. Om formulärdesignen till exempel refererar till en bild relativt, som ../myImage.gif, måste myImage.gif finnas på repository://. Standardvärdet är repository://, som pekar på databasens rotnivå.
 
    När du väljer en resurs från ditt program måste innehållsrots-URI-sökvägen ha rätt struktur. Om ett formulär till exempel hämtas från ett program med namnet SampleApp och placeras på SampleApp/1.0/forms/Test.xdp, måste innehållets rot-URI anges som repository://administrator@password/Applications/SampleApp/1.0/forms/, eller databasen:/Applications/SampleApp/1.0/forms/ (när behörigheten är null). När innehållets rot-URI anges på det här sättet kommer sökvägarna för alla refererade resurser i formuläret att matchas mot denna URI.
 
-* **[!UICONTROL Välj XCI-fil med]**: XCI-filer används för att beskriva teckensnitt och andra egenskaper som används för formulärdesignelement. Du kan behålla en XCI-fil i förhållande till nyttolasten, på en absolut sökväg eller med en variabel av dokumentdatatypen.
+* **[!UICONTROL Select XCI file using]**: XCI-filer används för att beskriva teckensnitt och andra egenskaper som används för formulärdesignelement. Du kan behålla en XCI-fil i förhållande till nyttolasten, på en absolut sökväg eller med en variabel av dokumentdatatypen.
 
-* **[!UICONTROL Språk]**: Anger det språk som används för att generera PDF-dokumentet. Om du anger ett literalt värde väljer du ett språk i listan eller något av dessa värden:
+* **[!UICONTROL Locale]**: Anger det språk som används för att generera PDF-dokumentet. Om du anger ett literalt värde väljer du ett språk i listan eller något av dessa värden:
    * **Så här använder du serverstandard**:
 (Standard) Använd språkinställningen som är konfigurerad på AEM Forms-servern. Inställningen Språk konfigureras med administrationskonsolen. (Se [Designer-hjälpen](http://www.adobe.com/go/learn_aemforms_designer_65).)
 
    * **Så här använder du ett anpassat värde**:
 Skriv språkkoden i den litterala rutan eller välj en strängvariabel som innehåller språkkoden. En fullständig lista över språkkoder som stöds finns på http://java.sun.com/j2se/1.5.0/docs/guide/intl/locale.doc.html.
 
-* **[!UICONTROL Kopior]**: Ett heltalsvärde som anger antalet kopior som ska genereras för utdata. Standardvärdet är 1.
+* **[!UICONTROL Copies]**: Ett heltalsvärde som anger antalet kopior som ska genereras för utdata. Standardvärdet är 1.
 
-* **[!UICONTROL Dubbelsidig utskrift]**:  Ett sidnumreringsvärde som anger om dubbelsidig eller enkelsidig utskrift ska användas. Skrivare som stöder PostScript och PCL använder det här värdet.Om du anger ett literalt värde väljer du något av följande värden:
-   * **[!UICONTROL Dubbelsidig långsida]**: Använd dubbelsidig utskrift och utskrift med sidnumrering i långkant.
-   * **[!UICONTROL Dubbelsidig kortsida]**: Använd dubbelsidig utskrift och utskrift med hjälp av sidnumrering med kort kant.
-   * **[!UICONTROL Enkelsidigt]**: Använd enkelsidig utskrift.
+* **[!UICONTROL Duplex Printing]**:  Ett sidnumreringsvärde som anger om dubbelsidig eller enkelsidig utskrift ska användas. Skrivare som stöder PostScript och PCL använder det här värdet.Om du anger ett literalt värde väljer du något av följande värden:
+   * **[!UICONTROL Duplex Long Edge]**: Använd dubbelsidig utskrift och utskrift med sidnumrering i långkant.
+   * **[!UICONTROL Duplex Short Edge]**: Använd dubbelsidig utskrift och utskrift med hjälp av sidnumrering med kort kant.
+   * **[!UICONTROL Simplex]**: Använd enkelsidig utskrift.
