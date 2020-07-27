@@ -10,7 +10,10 @@ topic-tags: develop
 discoiquuid: 0a0d2109-ee1f-43f6-88e5-1108cd215da6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '697'
+ht-degree: 0%
 
 ---
 
@@ -25,20 +28,20 @@ Läs vidare för mer information om asynkron överföring i adaptiva formulär.
 
 ## Konfigurera asynkron överföring {#configure}
 
-Så här konfigurerar du asynkron sändning för ett anpassat formulär:
+Så här konfigurerar du asynkron sändning för ett adaptivt formulär:
 
 1. I redigeringsläget för anpassningsbara formulär väljer du objektet Formulärbehållare och trycker på ![cmpr1](assets/cmppr1.png) för att öppna dess egenskaper.
-1. Aktivera **[!UICONTROL Använd asynkron sändning]** i avsnittet **[!UICONTROL Sändningsegenskaper]**.
-1. Under **[!UICONTROL Vid sändning]** väljer du något av följande alternativ för att skicka formulär.
+1. Aktivera i delen **[!UICONTROL Submission]** Egenskaper **[!UICONTROL Use asynchronous submission]**.
+1. I **[!UICONTROL On Submit]** avsnittet väljer du ett av följande alternativ för att skicka formulär.
 
-   * **[!UICONTROL Omdirigera till URL]**: Omdirigerar till angiven URL eller sida när formulär skickas. Du kan ange en URL eller bläddra för att välja sökvägen till en sida i fältet **[!UICONTROL Omdirigera URL/sökväg]** .
-   * **[!UICONTROL Visa meddelande]**: Visar ett meddelande om att formulär har skickats. Du kan skriva ett meddelande i textfältet under alternativet Visa meddelande. Textfältet har stöd för RTF-formatering.
+   * **[!UICONTROL Redirect to URL]**: Omdirigerar till angiven URL eller sida när formulär skickas. Du kan ange en URL eller bläddra för att välja sökvägen till en sida i **[!UICONTROL Redirect URL/Path]** fältet.
+   * **[!UICONTROL Show Message]**: Visar ett meddelande om att formulär har skickats. Du kan skriva ett meddelande i textfältet under alternativet Visa meddelande. Textfältet har stöd för RTF-formatering.
 
 1. Tryck på ![bockknapp1](assets/check-button1.png) för att spara egenskaperna.
 
 ## Hur asynkron inlämning fungerar {#how-asynchronous-submission-works}
 
-AEM Forms har färdiga funktioner och felhanterare för att skicka in formulär. Hanterare är funktioner på klientsidan som körs baserat på serversvaret. När ett formulär skickas skickas data till servern för validering, som returnerar ett svar till klienten med information om om huruvida överföringen lyckades eller inte. Informationen skickas som parametrar till den relevanta hanteraren för att köra funktionen.
+AEM Forms har färdiga funktioner och felhanterare för att skicka formulär. Hanterare är funktioner på klientsidan som körs baserat på serversvaret. När ett formulär skickas skickas data till servern för validering, som returnerar ett svar till klienten med information om om huruvida överföringen lyckades eller inte. Informationen skickas som parametrar till den relevanta hanteraren för att köra funktionen.
 
 Dessutom kan formulärförfattare och utvecklare skriva regler på formulärnivå för att åsidosätta standardhanterare. Mer information finns i [Åsidosätta standardhanterare med hjälp av regler](#custom).
 
@@ -48,7 +51,7 @@ Låt oss först granska serversvaret för att se om det har lyckats eller inte.
 
 Strukturen för serversvaret för händelsen att överföringen lyckades är följande:
 
-```
+```json
 {
   contentType : "<xmlschema or jsonschema>",
   data : "<dataXML or dataJson>" ,
@@ -70,7 +73,7 @@ Hanteraren för lyckade åtgärder läser serversvaret och dirigerar därför om
 
 Strukturen för serversvaret för en felhändelse vid överföring är följande:
 
-```
+```json
 {
    errorCausedBy : "<CAPTCHA_VALIDATION or SERVER_SIDE_VALIDATION>",
 
@@ -97,9 +100,9 @@ Formulärutvecklare och författare kan skriva regler på formulärnivå i kodre
 Utför följande steg för att skriva regler i kodredigeraren för att hantera lyckade händelser och felhändelser.
 
 1. Öppna det adaptiva formuläret i redigeringsläge, markera ett formulärobjekt och tryck på ![edit-rules1](assets/edit-rules1.png) för att öppna regelredigeraren.
-1. Välj **[!UICONTROL Formulär]** i trädet Formulärobjekt och tryck på **[!UICONTROL Skapa]**.
-1. Välj **[!UICONTROL Kodredigeraren]** i listrutan för lägesval.
-1. Tryck på **[!UICONTROL Redigera kod]** i kodredigeraren. Tryck på **[!UICONTROL Redigera]** i bekräftelsedialogrutan.
-1. Välj **[!UICONTROL Slutförd sändning]** eller **[!UICONTROL Fel i överföring]** i **[!UICONTROL listrutan Händelse]** .
-1. Skriv en regel för den valda händelsen och tryck på **[!UICONTROL Klar]** för att spara regeln.
+1. Markera **[!UICONTROL Form]** i trädet Formulärobjekt och tryck på **[!UICONTROL Create]**.
+1. Välj **[!UICONTROL Code Editor]** i listrutan för lägesval.
+1. Tryck på **[!UICONTROL Edit Code]** i kodredigeraren. Tryck **[!UICONTROL Edit]** på bekräftelsedialogrutan.
+1. Välj **[!UICONTROL Successful Submission]** eller **[!UICONTROL Error in Submission]** från **[!UICONTROL Event]** listrutan.
+1. Skriv en regel för den valda händelsen och tryck för **[!UICONTROL Done]** att spara regeln.
 
