@@ -11,7 +11,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: ebe8136b-2a79-4035-b9d5-aa70a5bbd4af
 translation-type: tm+mt
-source-git-commit: 868936e0fd20d3867e31f0351d7b388149472fd2
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '2092'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,7 @@ Om du vill samla ihop två eller flera PDF-dokument till ett enda PDF-dokument b
 
 Anta att följande DDX-dokument används för den här diskussionen.
 
-```as3
+```xml
  <?xml version="1.0" encoding="UTF-8"?>
  <DDX xmlns="https://ns.adobe.com/DDX/1.0/">
      <PDF result="out.pdf">
@@ -44,7 +47,7 @@ Det här DDX-dokumentet sammanfogar två PDF-dokument med namnen *map.pdf* och *
 
 >[!NOTE]
 >
->Mer information om tjänsten Assembler finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Assembler finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 >[!NOTE]
 >
@@ -82,7 +85,7 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 * adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss)
 * jbossall-client.jar (krävs om AEM Forms distribueras på JBoss)
 
-Om AEM Forms används på en annan J2EE-programserver än JBoss måste du ersätta filerna adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern där AEM Forms används.
+Om AEM Forms distribueras på en annan J2EE-programserver än JBoss måste du ersätta filerna adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern där AEM Forms distribueras.
 
 **Skapa en PDF Assembler-klient**
 
@@ -104,7 +107,7 @@ Både filen map.pdf och filen Directions.pdf måste placeras i ett samlingsobjek
 
 **Ange körningsalternativ**
 
-Du kan ställa in körningsalternativ som styr beteendet för Assembler-tjänsten när den utför ett jobb. Du kan till exempel ange ett alternativ som instruerar Assembler-tjänsten att fortsätta bearbeta ett jobb om ett fel uppstår. Mer information om de körningsalternativ du kan ange finns i klassreferensen `AssemblerOptionSpec` i API-referens [för](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)AEM Forms.
+Du kan ställa in körningsalternativ som styr beteendet för Assembler-tjänsten när den utför ett jobb. Du kan till exempel ange ett alternativ som instruerar Assembler-tjänsten att fortsätta bearbeta ett jobb om ett fel uppstår. Mer information om de körningsalternativ du kan ange finns i klassreferensen `AssemblerOptionSpec` i [AEM Forms API-referens](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
 **Sammanställa PDF-indata**
 
@@ -191,6 +194,7 @@ Sammanställa ett PDF-dokument med Assembler Service API (Java):
    * Ett `com.adobe.idp.Document` objekt som representerar det DDX-dokument som ska användas
    * Ett `java.util.Map` objekt som innehåller PDF-indatafilerna som ska monteras
    * Ett `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` objekt som anger körningsalternativen, inklusive standardteckensnitt och jobbloggsnivå
+
    Metoden returnerar `invokeDDX` ett `com.adobe.livecycle.assembler.client.AssemblerResult` objekt som innehåller resultatet av jobbet och eventuella undantag som inträffade.
 
 1. Extrahera resultaten.
@@ -200,6 +204,7 @@ Sammanställa ett PDF-dokument med Assembler Service API (Java):
    * Anropa `AssemblerResult` objektets `getDocuments` metod. Detta returnerar ett `java.util.Map` objekt.
    * Upprepa genom `java.util.Map` objektet tills du hittar det resulterande `com.adobe.idp.Document` objektet. (Du kan använda det PDF-resultatelement som anges i DDX-dokumentet för att hämta dokumentet.)
    * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att extrahera PDF-dokumentet.
+
    >[!NOTE]
    >
    >Om `LOG_LEVEL` var inställt på att generera en logg kan du extrahera loggen med hjälp av `AssemblerResult` objektets `getJobLog` metod.
@@ -270,6 +275,7 @@ Sammanställa PDF-dokument med Assembler Service API (webbtjänst):
    * Ett `BLOB` objekt som representerar DDX-dokumentet.
    * Arrayen `mapItem` som innehåller PDF-indatadokumenten. Nycklarna måste matcha namnen på PDF-källfilerna och deras värden måste vara de `BLOB` objekt som motsvarar dessa filer.
    * Ett `AssemblerOptionSpec` objekt som anger körningsalternativ.
+
    Metoden returnerar ett `invoke` `AssemblerResult` objekt som innehåller resultatet av jobbet och eventuella undantag som kan ha inträffat.
 
 1. Extrahera resultaten.
@@ -279,10 +285,11 @@ Sammanställa PDF-dokument med Assembler Service API (webbtjänst):
    * Få åtkomst till `AssemblerResult` objektets `documents` fält, som är ett `Map` objekt som innehåller PDF-dokumentets resultat.
    * Iterera genom objektet tills du hittar den tangent som matchar namnet på det resulterande dokumentet. `Map` Sedan konverterar du arraymedlemmens `value` till en `BLOB`.
    * Extrahera de binära data som representerar PDF-dokumentet genom att få åtkomst till dess `BLOB` objektegenskap `MTOM` . Detta returnerar en array med byte som du kan skriva till en PDF-fil.
+
    >[!NOTE]
    >
    >Om `LOG_LEVEL` var inställd på att generera en logg kan du extrahera loggen genom att hämta värdet för `AssemblerResult` objektets `jobLog` datamedlem.
 
 **Se även**
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
