@@ -10,7 +10,10 @@ topic-tags: customization
 discoiquuid: 7566203f-2f80-4ce7-bff9-073d67119f64
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1239'
+ht-degree: 0%
 
 ---
 
@@ -43,6 +46,7 @@ Utför följande steg för att skapa en anpassad mall för olika komponenter i F
       * Avsnittet Utkast: /libs/fd/fp/draftTemplate
       * Inlämningsavsnitt: /libs/fd/fp/sendingTemplate
    * Länkkomponent: /libs/fd/fp/linkTemplate
+
    Lägg till en titel som du vill ska visas när du väljer layoutmallar.
 
    >[!NOTE]
@@ -59,7 +63,7 @@ Utför följande steg för att skapa en anpassad mall för olika komponenter i F
 
 Nedan följer ett exempel på implementering av en anpassad mall där Forms Portal förvärvar en anpassad Geometrixx Gov-kortlayout för komponenten Sök och Lister.
 
-```mxml
+```xml
 <div class="__FP_boxes-container __FP_single-color">
     <div class="boxes __FP_boxes __FP_single-color" data-repeatable="true">
  <div class="__FP_boxes-thumbnail">
@@ -126,7 +130,7 @@ För rubrikrubriken i stödrastervyn är värdet för rubriken&quot;data-sortKey
 
 * **Titel:** Formulärets namn
 * **formUrl**: URL för att återge formuläret som HTML
-* **mål**: Länkens målattribut. Giltiga värden är &quot;_blank&quot; och &quot;_self&quot;.
+* **mål**: Länkens Target-attribut. Giltiga värden är &quot;_blank&quot; och &quot;_self&quot;.
 * **linkText**: Länkbeskrivning
 
 ### Komponenten Utkast och inskickat material {#drafts-amp-submissions-component}
