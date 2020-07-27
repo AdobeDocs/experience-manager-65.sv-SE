@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 9cffdb77-c8a4-4a15-b64f-1d3aadaa60c7
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '645'
+ht-degree: 0%
 
 ---
 
@@ -39,7 +42,7 @@ Följande snabbstarter är tillgängliga för dokumenthanteringstjänsten (bortt
 
 [Snabbstart (SOAP-läge): Ange behörigheter för innehållstjänster med Java API](document-management-service-deprecated-java.md#quick-start-soap-mode-setting-content-services-permissions-using-the-java-api-deprecated)
 
-AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda typer och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms-API:t med stark typning och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 
@@ -49,7 +52,7 @@ Snabbstart i Programmering med AEM-formulär baseras på den Forms Server som di
 
 I följande Java-kodexempel skapas ett nytt space med namnet *Test Directory* som finns i Företagets startsida. ID-värdet för det nya utrymmet skrivs till konsolen.
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -145,7 +148,7 @@ I följande Java-kodexempel skapas ett nytt space med namnet *Test Directory* so
 
 I följande Java-kodexempel tas ett blanksteg med namnet /Company Home/Test Directory bort.
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -245,7 +248,7 @@ I följande Java-kodexempel tas ett blanksteg med namnet /Company Home/Test Dire
 
 I följande Java-kodexempel läggs en PDF-fil med namnet *MortgageForm.pdf* till i en mapp med namnet /Company Home/Test Directory. Attributen creator och description har angetts. Identifieringsvärdet för det nya innehållet skrivs till konsolen.
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -368,7 +371,7 @@ I följande Java-kodexempel läggs en PDF-fil med namnet *MortgageForm.pdf* till
 
 I följande Java-kodexempel hämtas en PDF-fil med namnet *MortgageForm.pdf* från /Company Home. PDF-filen sparas i det lokala filsystemet och heter *UpdatedMortgageForm.pdf*.
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -474,7 +477,7 @@ I följande Java-kodexempel hämtas en PDF-fil med namnet *MortgageForm.pdf* fr�
 
 I följande Java-kodexempel flyttas en PDF-fil med namnet *MortgageForm.pdf* från /Company Home/Test Directory till /Company Home. Identifieringsvärdet för det flyttade innehållet skrivs till konsolen.
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -575,7 +578,7 @@ I följande Java-kodexempel flyttas en PDF-fil med namnet *MortgageForm.pdf* fr�
 
 I följande Java-kodexempel visas innehåll som finns i /Company Home. Varje nodtyp och nodnamn visas.
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -688,7 +691,7 @@ I följande Java-kodexempel visas innehåll som finns i /Company Home. Varje nod
 
 Följande Java-kod söker efter ett dokument som innehåller texten MortgageForm /Company Home. Undermapparna söks också igenom.
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -798,7 +801,7 @@ Följande Java-kod söker efter ett dokument som innehåller texten MortgageForm
 
 I följande Java-kodexempel anges en behörighet för en användare med namnet tony blue. Den angivna domänen är standarddomän. Konsumentbehörigheten anges och noden är `/Company Home/Test Directory`.
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -908,7 +911,7 @@ I följande Java-kodexempel anges en behörighet för en användare med namnet t
 
 Följande Java-kod skapar en association för en XML-datafil och ett PDF-formulär. Den här associationstypen heter LinkedBy. PDF-dokumentet måste ha proportionslänkningsfunktionen tillämpad.
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
