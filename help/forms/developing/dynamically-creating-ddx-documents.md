@@ -11,7 +11,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 2ad227de-68a8-446f-8c4f-a33a6f95bec8
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '2123'
+ht-degree: 0%
 
 ---
 
@@ -24,7 +27,7 @@ Innan du kan skicka DDX-dokumentet till Assembler-tjänsten måste du konvertera
 
 Anta att följande DDX-dokument skapas dynamiskt för den här diskussionen.
 
-```as3
+```xml
  <?xml version="1.0" encoding="UTF-8"?>
  <DDX xmlns="https://ns.adobe.com/DDX/1.0/">
       <PDFsFromBookmarks prefix="stmt">
@@ -37,7 +40,7 @@ Det här DDX-dokumentet demonterar ett PDF-dokument. Vi rekommenderar att du är
 
 >[!NOTE]
 >
->Mer information om tjänsten Assembler finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Assembler finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 >[!NOTE]
 >
@@ -170,6 +173,7 @@ Skapa ett DX-dokument dynamiskt och demontera ett PDF-dokument med Assembler Ser
    * Ett `com.adobe.idp.Document` objekt som representerar det dynamiskt skapade DDX-dokumentet
    * Ett `java.util.Map` objekt som innehåller det PDF-dokument som ska demonteras
    * Ett `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` objekt som anger körningsalternativen, inklusive standardteckensnittet och jobbloggsnivån
+
    Metoden returnerar `invokeDDX` ett `com.adobe.livecycle.assembler.client.AssemblerResult` objekt som innehåller de uppdelade PDF-dokumenten och eventuella undantag som har inträffat.
 
 1. Spara de upplösta PDF-dokumenten.
@@ -258,6 +262,7 @@ Skapa ett DX-dokument dynamiskt och demontera ett PDF-dokument med Assembler Ser
    * Ett `BLOB` objekt som representerar det dynamiskt skapade DDX-dokumentet
    * Arrayen `mapItem` som innehåller PDF-indatadokumentet
    * Ett `AssemblerOptionSpec` objekt som anger körningsalternativ
+
    Metoden returnerar ett `invokeDDX` `AssemblerResult` objekt som innehåller resultatet av jobbet och eventuella undantag som inträffade.
 
 1. Spara de upplösta PDF-dokumenten.
@@ -270,6 +275,6 @@ Skapa ett DX-dokument dynamiskt och demontera ett PDF-dokument med Assembler Ser
 
 **Se även**
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
