@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 180cac3f-6378-42bc-9a47-60f9f08a7103
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '7842'
+ht-degree: 0%
 
 ---
 
@@ -67,8 +70,8 @@ Tjänsten Generate PDF konverterar PDF till följande filformat (endast Windows)
 
 Tjänsten Generera PDF kräver att du utför följande administrativa uppgifter:
 
-* Installera nödvändiga inbyggda program på datorn som är värd för AEM-formulär
-* Installera Adobe Acrobat Professional eller Acrobat Pro Extended 9.2 på den dator där AEM Forms finns
+* Installera nödvändiga inbyggda program på datorn som är värd för AEM Forms
+* Installera Adobe Acrobat Professional eller Acrobat Pro Extended 9.2 på den dator som är värd för AEM Forms
 * Utför konfigurationsuppgifter efter installation
 
 Dessa åtgärder beskrivs i Installera och distribuera AEM-formulär med JBoss-tangenten.
@@ -81,7 +84,7 @@ Du kan utföra följande uppgifter med tjänsten Generera PDF:
 
 >[!NOTE]
 >
->Mer information om tjänsten Generera PDF finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Generera PDF finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ## Konvertera Word-dokument till PDF-dokument {#converting-word-documents-to-pdf-documents}
 
@@ -93,7 +96,7 @@ I det här avsnittet beskrivs hur du kan använda Generate PDF API för att prog
 
 >[!NOTE]
 >
->Mer information om tjänsten Generera PDF finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Generera PDF finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary-of-steps}
 
@@ -166,6 +169,7 @@ Konvertera ett Microsoft Word-dokument till ett PDF-dokument med hjälp av Gener
    * Ett `java.lang.String` objekt som innehåller namnet på de skyddsinställningar som ska användas.
    * Ett valfritt `com.adobe.idp.Document` objekt som innehåller inställningar som ska användas när PDF-dokumentet genereras.
    * Ett valfritt `com.adobe.idp.Document` objekt som innehåller metadatainformation som ska användas i PDF-dokumentet.
+
    Metoden returnerar `createPDF2` ett `CreatePDFResult` objekt som innehåller det nya PDF-dokumentet och en logginformation. Loggfilen innehåller vanligen fel- eller varningsmeddelanden som genererats av konverteringsbegäran.
 
 1. Hämta resultaten.
@@ -174,6 +178,7 @@ Konvertera ett Microsoft Word-dokument till ett PDF-dokument med hjälp av Gener
 
    * Anropa `CreatePDFResult` objektets `getCreatedDocument` metod, som returnerar ett `com.adobe.idp.Document` objekt.
    * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att extrahera PDF-dokumentet från objektet som skapades i föregående steg.
+
    Utför följande åtgärder om du använde metoden för att hämta loggdokumentet (gäller inte för HTML-konverteringar): `createPDF2`
 
    * Anropa `CreatePDFResult` objektets `getLogDocument` metod. Detta returnerar ett `com.adobe.idp.Document` objekt.
@@ -192,7 +197,7 @@ Konvertera ett Microsoft Word-dokument till ett PDF-dokument med hjälp av Gener
 
 ### Konvertera Word-dokument till PDF-dokument med webbtjänstens API {#convert-word-documents-to-pdf-documents-using-the-web-service-api}
 
-Konvertera ett Microsoft Word-dokument till ett PDF-dokument med hjälp av Generera PDF API (webbtjänst):
+Konvertera ett Microsoft Word-dokument till ett PDF-dokument med hjälp av Generate PDF API (webbtjänsten):
 
 1. Inkludera projektfiler.
 
@@ -248,9 +253,9 @@ Konvertera ett Microsoft Word-dokument till ett PDF-dokument med hjälp av Gener
 
 [Sammanfattning av steg](converting-file-formats-pdf.md#summary-of-steps)
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## Konvertera HTML-dokument till PDF-dokument {#converting-html-documents-to-pdf-documents}
 
@@ -258,7 +263,7 @@ I det här avsnittet beskrivs hur du kan använda Generate PDF API för att prog
 
 >[!NOTE]
 >
->Mer information om tjänsten Generera PDF finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Generera PDF finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-1}
 
@@ -398,9 +403,9 @@ Konvertera HTML-innehåll till ett PDF-dokument med hjälp av Generate PDF API (
 
 [Konvertera HTML-dokument till PDF-dokument](converting-file-formats-pdf.md#converting-html-documents-to-pdf-documents)
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## Konvertera PDF-dokument till andra format än bildformat {#converting-pdf-documents-to-non-image-formats}
 
@@ -408,7 +413,7 @@ I det här avsnittet beskrivs hur du kan använda Generate PDF Java API och webb
 
 >[!NOTE]
 >
->Mer information om tjänsten Generera PDF finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Generera PDF finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-2}
 
@@ -478,6 +483,7 @@ Konvertera ett PDF-dokument till en RTF-fil med hjälp av Generate PDF API (Java
    * Ett `java.lang.String` objekt som innehåller namnet på Adobe PDF-inställningarna.
    * Ett `ConvertPDFFormatType` objekt som anger målfiltypen för konverteringen.
    * Ett valfritt `com.adobe.idp.Document` objekt som innehåller inställningar som ska användas när PDF-dokumentet genereras.
+
    Metoden `exportPDF2` returnerar ett `ExportPDFResult` objekt som innehåller den konverterade filen.
 
 1. Konvertera PDF-dokumentet.
@@ -552,9 +558,9 @@ Konvertera ett PDF-dokument till en RTF-fil med hjälp av Generate PDF API (webb
 
 [Sammanfattning av steg](converting-file-formats-pdf.md#summary-of-steps)
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## Stöd för fler inbyggda filformat {#adding-support-for-additional-native-file-formats}
 
@@ -718,7 +724,7 @@ Om du tänker arbeta med dialogruta- eller skript-XML-filer bör du installera p
 
 Dialogrutan och skriptfilerna finns i filen appmondata.jar. Innan du kan ändra någon av dessa filer eller lägga till nya skript- eller dialogfiler måste du packa upp den här JAR-filen. Anta till exempel att du vill lägga till stöd för programmet EditPlus. Du skapar två XML-filer med namnen appmon.editplus.script.en_US.xml och appmon.editplus.script.addition.en_US.xml. Dessa XML-skript måste läggas till i filen adobe-appmondata.jar på två platser, enligt vad som anges nedan:
 
-* adobe-livecycle-native-jboss-x86_win32.ear > adobe-Native2PDFSvc.war\WEB-INF\lib > adobe-native.jar > Native2PDFSvc-native.jar\bin > adobe-appmondata.jar\com\adobe\appmon. Filen adobe-livecycle-native-jboss-x86_win32.ear finns i exportmappen på `[AEM forms install directory]\configurationManager`. (Om AEM Forms distribueras på en annan J2EE-programserver ersätter du filen adobe-livecycle-native-jboss-x86_win32.ear med den EAR-fil som motsvarar J2EE-programservern.)
+* adobe-livecycle-native-jboss-x86_win32.ear > adobe-Native2PDFSvc.war\WEB-INF\lib > adobe-native.jar > Native2PDFSvc-native.jar\bin > adobe-appmondata.jar\com\adobe\appmon. Filen adobe-livecycle-native-jboss-x86_win32.ear finns i exportmappen på `[AEM forms install directory]\configurationManager`. (om AEM Forms distribueras på en annan J2EE-programserver ersätter du filen adobe-livecycle-native-jboss-x86_win32.ear med den EAR-fil som motsvarar J2EE-programservern.)
 * adobe-generatepdf-dsc.jar > adobe-appmondata.jar\com\adobe\appmon (filen adobe-appmondata.jar finns i filen adobe-generatepdf-dsc.jar). Filen adobe-generatepdf-dsc.jar finns i `[AEM forms install directory]\deploy` mappen.
 
 När du har lagt till dessa XML-filer i filen adobe-appmondata.jar måste du distribuera om komponenten GeneratePDF. Så här lägger du till dialogrute- och skript-XML-filer i filen adobe-appmondata.jar:
@@ -769,7 +775,7 @@ Du kan använda reguljära uttryck i beskrivningsspecifikationer. Tjänsten Gene
 
 **Reguljärt uttryck som tar emot filnamnet som lagts till Anteckningar i banderollen Anteckningar**
 
-```as3
+```xml
  <!-- The regular expression ".*Notepad" means any number of non-terminating characters followed by Notepad. -->
  <step>
      <expectedWindow>
@@ -780,7 +786,7 @@ Du kan använda reguljära uttryck i beskrivningsspecifikationer. Tjänsten Gene
 
 **Reguljärt uttryck som skiljer Skriv ut från Utskriftsformat**
 
-```as3
+```xml
  <!-- This regular expression differentiates the Print dialog box from the Print Setup dialog box. The "^" specifies the beginning of the line, and the "$" specifies the end of the line. -->
  <windowList>
      <window controlID="0x01" caption="^Print$" action="press"/>
@@ -796,7 +802,7 @@ Du måste ordna `window` och `windowList` lägga till element enligt följande:
 
 **Ordna fönsterelement i en dialogrutefil**
 
-```as3
+```xml
  <!-- The caption attribute in the following window element is 40 characters long. It is the longest caption in this example, so its parent window element appears before the others. -->
  <window caption="Unexpected Failure in DebugActiveProcess">
      <…>
@@ -820,7 +826,7 @@ Du måste ordna `window` och `windowList` lägga till element enligt följande:
 
 **Ordna fönsterelement i ett windowList-element**
 
-```as3
+```xml
  <!-- The caption attribute in the following indexes element is 56 characters long. It is the longest caption in this example, so its parent window element appears before the others. -->
  <windowList>
      <window caption="Can&apos;t exit design mode because.* cannot be created"/>
@@ -881,7 +887,7 @@ I det här exemplet ändrades standardkonfigurationsdata som medföljde tjänste
 
 **Modifieringar för att dirigera textfiler till Notepad (native2pdfconfig.xml)**
 
-```as3
+```xml
  <filetype-settings>
 
  <!-- Some native app file types were omitted for brevity. -->
@@ -921,7 +927,7 @@ När du har skapat den nya systemvariabeln måste du starta om servern som tjän
 
 1. I ett kommandoradsfönster skriver du variabeldefinitionen i det här formatet:
 
-   ```as3
+   ```shell
             [applicationname]_PATH=[Full path name]
    ```
 
@@ -939,7 +945,7 @@ Det här exemplet innehåller ytterligare dialogrutor för programmet Anteckning
 
 **Anteckningsdialogrutor (appmon.notepad.addition.en_US.xml)**
 
-```as3
+```xml
  <dialogs app="Notepad" locale="en_US" version="7.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="dialogs.xsd">
      <window caption="Caption Title">
          <windowList>
@@ -955,7 +961,7 @@ I det här exemplet anges hur tjänsten Generate PDF ska samverka med Anteckning
 
 **XML-fil för anteckningsskript (appmon.notepad.script.en_US.xml)**
 
-```as3
+```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--
 *
