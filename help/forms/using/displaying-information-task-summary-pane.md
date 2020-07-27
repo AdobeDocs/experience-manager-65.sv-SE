@@ -1,8 +1,8 @@
 ---
 title: Visa information i åtgärdssammanfattningsrutan
 seo-title: Visa information i åtgärdssammanfattningsrutan
-description: I AEM Forms-arbetsytan kan en åtgärdssammanfattningsruta konfigureras för att sammanfatta uppgiften eller visa en annan webbsida.
-seo-description: I AEM Forms-arbetsytan kan en åtgärdssammanfattningsruta konfigureras för att sammanfatta uppgiften eller visa en annan webbsida.
+description: På arbetsytan i AEM Forms kan en åtgärdssammanfattningsruta konfigureras för att sammanfatta uppgiften eller visa en annan webbsida.
+seo-description: På arbetsytan i AEM Forms kan en åtgärdssammanfattningsruta konfigureras för att sammanfatta uppgiften eller visa en annan webbsida.
 uuid: 2fcc3d9f-0ec2-4250-8dc1-9746fd72ea60
 contentOwner: robhagat
 content-type: reference
@@ -10,16 +10,19 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 90d0f584-b598-4b21-85d7-31da5f13d404
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '305'
+ht-degree: 0%
 
 ---
 
 
 # Visa information i åtgärdssammanfattningsrutan {#displaying-information-in-the-task-summary-pane}
 
-När du öppnar en uppgift på arbetsytan i AEM Forms kan en åtgärdssammanfattning visa en sammanfattning av uppgiften. Denna ytterligare och relevanta information för en uppgift tillför mer värde för slutanvändaren av arbetsytan i AEM Forms.
+När du öppnar en uppgift på arbetsytan i AEM Forms kan en åtgärdssammanfattning visa en sammanfattning av uppgiften. Den här extra och relevanta informationen för en uppgift ger mer värde för slutanvändaren av arbetsytan i AEM Forms.
 
-Med arbetsytan i AEM Forms kan du visa en webbsida som du väljer i rutan Sammanfattning av uppgifter. En process kan skapas för att visa en åtgärdssammanfattningsruta med Workbench.
+På arbetsytan i AEM Forms kan du visa en webbsida som du väljer i rutan Sammanfattning av uppgifter. En process kan skapas för att visa en åtgärdssammanfattningsruta med Workbench.
 
 1. Skapa en process för tilldelning av uppgift i Workbench. Mer information om åtgärden Tilldela uppgift finns i servicereferensavsnittet i hjälpen [för](https://help.adobe.com/en_US/AEMForms/6.1/WorkbenchHelp/)Workbench.
 
@@ -35,7 +38,7 @@ Med arbetsytan i AEM Forms kan du visa en webbsida som du väljer i rutan Samman
    * `Create a folder`**SampleSummary **under`/apps`. Lägg till en post för`/apps/SampleSummary`att tillåta i åtkomstkontrollistan`PERM_WORKSPACE_USER``jcr:readprivileges`.
    * `Create a file `html.esp` at `/apps/`. For example, add the following lines in `SampleSummaryhtml.esp`.`
 
-   ```
+   ```html
    <html>
        <body>
            <h1>Sample Summary</h1>
@@ -49,4 +52,4 @@ Med arbetsytan i AEM Forms kan du visa en webbsida som du väljer i rutan Samman
    ```
 
    * Ange värdet för uppgiftssammanfattnings-URL:en som `/lc/content/SampleSummary.html` i steget Tilldela uppgift.
-   * När den uppgift som är associerad med det här steget Tilldela uppgift öppnas i arbetsytan i AEM Forms, kommer `html.esp` vid `/apps/SampleSummary` att renderas i åtgärdssammanfattningsfönstret.
+   * När den uppgift som är associerad med det här steget Tilldela uppgift öppnas i arbetsytan för AEM Forms, `html.esp` återges den `/apps/SampleSummary` i åtgärdssammanfattningsrutan.
