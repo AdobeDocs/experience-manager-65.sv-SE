@@ -1,15 +1,18 @@
 ---
 title: Anpassa flikar för en uppgift
 seo-title: Anpassa flikar för en uppgift
-description: Anpassa flikarnas namn för dina uppgifter på arbetsytan i LiveCycle AEM Forms.
-seo-description: Anpassa flikarnas namn för dina uppgifter på arbetsytan i LiveCycle AEM Forms.
+description: Anpassa flikarnas namn för dina uppgifter i LiveCycle AEM Forms.
+seo-description: Anpassa flikarnas namn för dina uppgifter i LiveCycle AEM Forms.
 uuid: 77eabb63-f8ea-4ec0-8a41-b51c65cdecc0
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: ac0a281f-f589-4a70-9bc7-1a23e054b02f
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '121'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +28,7 @@ Du kan anpassa fliknamn för `Start Process` komponenten i `Start Process` anvä
 
    * Använd följande utdrag från blocket för uppgifter som initieras i startprocessen `"startprocess" : {}` .
 
-   ```
+   ```json
    "tabname" : {
                "form" : "Application",
                "details" : "Overview",
@@ -36,7 +39,7 @@ Du kan anpassa fliknamn för `Start Process` komponenten i `Start Process` anvä
 
    * För uppgifter i Att göra använder du följande kodutdrag från `"todo" : {}` blocket.
 
-   ```
+   ```json
    "tabname" : {
                "summary" : "Bird's-eye view",
                "history" : "Past",
