@@ -1,8 +1,8 @@
 ---
 title: Uppdaterar länken till dokumentationen
 seo-title: Uppdaterar länken till dokumentationen
-description: Så här uppdaterar du målet för hjälplänken för arbetsytan i AEM Forms-arbetsytan så att den pekar på den anpassade dokumentationslänken.
-seo-description: Så här uppdaterar du målet för hjälplänken för arbetsytan i AEM Forms-arbetsytan så att den pekar på den anpassade dokumentationslänken.
+description: Så här uppdaterar du målet för hjälplänken för arbetsytan i AEM Forms så att den pekar på den anpassade dokumentationslänken.
+seo-description: Så här uppdaterar du målet för hjälplänken för arbetsytan i AEM Forms så att den pekar på den anpassade dokumentationslänken.
 uuid: 64056d10-1451-44ed-8f25-81a21037dc75
 contentOwner: robhagat
 content-type: reference
@@ -10,14 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 788c427f-190f-4580-9efd-6a4c4a008837
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '166'
+ht-degree: 0%
 
 ---
 
 
 # Uppdaterar länken till dokumentationen {#updating-the-link-to-the-documentation}
 
-Du kommer åt standardhjälpinnehållet för AEM Forms-arbetsytan genom att välja **Hjälp > Hjälp** om arbetsyta. Det hänvisar till onlinedokumentationen på Adobes webbplats. Du kan dock uppdatera den så att den pekar på en annan URL.
+Du kommer åt standardhjälpinnehållet för arbetsytan i AEM Forms genom att välja **Hjälp > Hjälp** om arbetsyta. Det hänvisar till onlinedokumentationen på Adobes webbplats. Du kan dock uppdatera den så att den pekar på en annan URL.
 
 Här följer några exempel på hur du kan ändra standardhjälpens URL:
 
@@ -29,7 +32,7 @@ Om du vill uppdatera webbadressen för onlinedokumentationen följer du de [allm
 1. Kopiera `userinfo.html` filen från `/libs/ws/js/runtime/templates` till `/apps/ws/js/runtime/templates`.
 1. Ändra:
 
-   ```
+   ```html
    <ul class="helpmenu">
      <li>
        <a href="https://www.adobe.com/go/learn_aemforms_documentation_63" title="<%= $.t('index.header.dropdown.WorkspaceHelp')%>" target="_blank"><%= $.t('index.header.dropdown.WorkspaceHelp')%></a>
@@ -38,7 +41,7 @@ Om du vill uppdatera webbadressen för onlinedokumentationen följer du de [allm
 
    till
 
-   ```
+   ```html
    <ul class="helpmenu">
      <li>
        <a href="<!--place new help url here-->" title="<%= $.t('index.header.dropdown.WorkspaceHelp')%>" target="_blank"><%= $.t('index.header.dropdown.WorkspaceHelp')%></a>
