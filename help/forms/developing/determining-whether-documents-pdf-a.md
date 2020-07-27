@@ -11,7 +11,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: c429d6e1-7847-43c8-bf75-cb0078dbb9d5
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '2069'
+ht-degree: 0%
 
 ---
 
@@ -24,7 +27,7 @@ PDF/A-1-specifikationen består av två överensstämmelsenivåer, nämligen A o
 
 Anta att följande DDX-dokument används för den här diskussionen.
 
-```as3
+```xml
  <?xml version="1.0" encoding="UTF-8"?>
  <DDX xmlns="https://ns.adobe.com/DDX/1.0/">
          <DocumentInformation source="Loan.pdf" result="Loan_result.xml">
@@ -43,7 +46,7 @@ Assembler-tjänsten returnerar information som anger om PDF-indatadokumentet är
 
 >[!NOTE]
 >
->Mer information om tjänsten Assembler finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Assembler finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 >[!NOTE]
 >
@@ -73,7 +76,7 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 * adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss)
 * jbossall-client.jar (krävs om AEM Forms distribueras på JBoss)
 
-Om AEM Forms används på en annan J2EE-programserver än JBoss måste du ersätta filerna adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern som AEM Forms distribueras på. Information om platsen för alla AEM Forms JAR-filer finns i [Inkludera Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)för AEM Forms.
+Om AEM Forms distribueras på en annan J2EE-programserver än JBoss måste du ersätta filerna adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern som AEM Forms distribueras på. Mer information om platsen för alla JAR-filer i AEM Forms finns i [Inkludera Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)i AEM Forms.
 
 **Skapa en PDF Assembler-klient**
 
@@ -89,7 +92,7 @@ En referens till ett PDF-dokument måste skickas till Assembler-tjänsten för a
 
 **Ange körningsalternativ**
 
-Du kan ställa in körningsalternativ som styr beteendet för Assembler-tjänsten när den utför ett jobb. Du kan till exempel ange ett alternativ som instruerar Assembler-tjänsten att fortsätta bearbeta ett jobb om ett fel uppstår. Mer information om de körningsalternativ du kan ange finns i klassreferensen `AssemblerOptionSpec` i API-referens [för](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)AEM Forms.
+Du kan ställa in körningsalternativ som styr beteendet för Assembler-tjänsten när den utför ett jobb. Du kan till exempel ange ett alternativ som instruerar Assembler-tjänsten att fortsätta bearbeta ett jobb om ett fel uppstår. Mer information om de körningsalternativ du kan ange finns i klassreferensen `AssemblerOptionSpec` i [AEM Forms API-referens](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
 **Hämta information om PDF-dokumentet**
 
@@ -99,7 +102,7 @@ När du har skapat Assembler-tjänstklienten, refererat till DDX-dokumentet, ref
 
 Det XML-dokument som Assembler-tjänsten returnerar anger om PDF-indatadokumentet är PDF/A-kompatibelt. Om PDF-indatadokumentet till exempel inte är PDF/A-kompatibelt returnerar Assembler-tjänsten ett XML-dokument som innehåller följande element:
 
-```as3
+```xml
  <PDFAConformance isCompliant="false" compliance="PDF/A-1b" resultLevel="Detailed" ignoreUnusedResources="true" allowCertificationSignatures="true">
 ```
 
@@ -157,6 +160,7 @@ Bestäm om ett PDF-dokument är PDF/A-kompatibelt med Assembler Service API (Jav
    * Ett `com.adobe.idp.Document` objekt som representerar det DDX-dokument som ska användas
    * Ett `java.util.Map` objekt som innehåller PDF-indatafilen som används för att fastställa PDF/A-kompatibilitet
    * Ett `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` objekt som anger körningsalternativen
+
    Metoden returnerar ett `invokeDDX` `com.adobe.livecycle.assembler.client.AssemblerResult` objekt som innehåller XML-data som anger om PDF-indatadokumentet är PDF/A-kompatibelt.
 
 1. Spara det returnerade XML-dokumentet.
@@ -233,6 +237,7 @@ Bestäm om ett PDF-dokument är PDF/A-kompatibelt med Assembler Service API (web
    * Ett `BLOB` objekt som representerar DDX-dokumentet.
    * Det `MyMapOf_xsd_string_To_xsd_anyType` objekt som innehåller PDF-indatadokumentet. Nycklarna måste matcha namnen på PDF-källfilerna och deras värden måste vara det `BLOB` objekt som motsvarar PDF-indatafilen.
    * Ett `AssemblerOptionSpec` objekt som anger körningsalternativ.
+
    Metoden returnerar ett `invoke` `AssemblerResult` objekt som innehåller XML-data som anger om PDF-indatadokumentet är ett PDF/A-dokument.
 
 1. Spara det returnerade XML-dokumentet.
@@ -245,4 +250,4 @@ Bestäm om ett PDF-dokument är PDF/A-kompatibelt med Assembler Service API (web
 
 **Se även**
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
