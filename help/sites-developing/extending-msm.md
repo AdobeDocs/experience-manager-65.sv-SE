@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 6128c91a-4173-42b4-926f-bbbb2b54ba5b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+source-git-commit: fa99c3bc2110aadb403920aa3e0fcf0919f26735
+workflow-type: tm+mt
+source-wordcount: '2611'
+ht-degree: 0%
 
 ---
 
@@ -28,6 +31,11 @@ På den här sidan kan du utöka funktionerna i Multi Site Manager:
 >[!NOTE]
 >
 >Den här sidan ska läsas tillsammans med [Återanvända innehåll: Multi Site Manager](/help/sites-administering/msm.md).
+>
+>Följande avsnitt av Omstrukturering av Sites Repository i AEM 6.4 kan också vara av intresse:
+>* [Designkonfigurationer för hantering av flera webbplatser](https://docs.adobe.com/content/help/en/experience-manager-64/deploying/restructuring/sites-repository-restructuring-in-aem-6-4.html#multi-site-manager-blueprint-configurations)
+>* [Samlingskonfigurationer för flera platshanterare](https://docs.adobe.com/content/help/en/experience-manager-64/deploying/restructuring/sites-repository-restructuring-in-aem-6-4.html#multi-site-manager-rollout-configurations)
+
 
 >[!CAUTION]
 >
@@ -54,7 +62,7 @@ De huvudsakliga MSM API-objekten interagerar på följande sätt (se även [Anv�
 
       * Tillåter författaren att använda alternativet **Rollout** på källan (för att (explicit) överföra ändringar till live-kopior som ärver från den här källan).
       * Låter författaren använda **Skapa plats**, på så sätt kan användaren enkelt välja språk och konfigurera strukturen för live-kopian.
-      * Definierar standardkonfigurationen för utrullning för alla resulterande live-kopior.
+      * Definierar standardkonfigurationen för utrullning av alla resulterande live-kopior.
 
 * **`LiveRelationship`** Anger `LiveRelationship` anslutningen (relationen) mellan en resurs i livekopiegrenen och dess motsvarande källa/ritresurs.
 
@@ -129,7 +137,7 @@ public LiveAction createAction(Resource resource) throws WCMException {
 }
 ```
 
-### Åtkomst till målnoder, källnoder och LiveRelationship {#accessing-target-nodes-source-nodes-and-the-liverelationship}
+### Åtkomst till Target-noder, källnoder och LiveRelationship {#accessing-target-nodes-source-nodes-and-the-liverelationship}
 
 Följande objekt anges som parametrar för `execute` metoden för `LiveAction` objektet:
 
@@ -169,52 +177,71 @@ Den nya utrullningskonfigurationen är sedan tillgänglig för dig när du stäl
 
 #### Skapa utrullningskonfiguration {#create-the-rollout-configuration}
 
-1. Öppna **verktygskonsolen** i det klassiska användargränssnittet. till exempel [https://localhost:4502/miscadmin#/etc](https://localhost:4502/miscadmin#/etc)
+Så här skapar du en ny utrullningskonfiguration:
+
+1. Open CRXDE Lite; till exempel:
+   [http://localhost:4502/crx/de](http://localhost:4502/crx/de)
+
+1. Navigera till :
+   `/apps/msm/<your-project>/rolloutconfigs`
+
+   >[!NOTE]
+   >Det här är projektets anpassade version av:
+   >`/libs/msm/wcm/rolloutconfigs`
+   >Måste skapas om detta är din första konfiguration.
 
    >[!NOTE]
    >
-   >I det pekaktiverade standardgränssnittet kan du navigera till den klassiska UI-verktygskonsolen med hjälp av **verktygen**, **åtgärderna** och sedan **Konfiguration**.
+   >Du får inte ändra något i sökvägen /libs.
+   >Detta beror på att innehållet i /libs skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
+   >Den rekommenderade metoden för konfiguration och andra ändringar är:
+   >* Återskapa önskat objekt (t.ex. som det finns i /libs) under /apps
+   >* Gör ändringar i /apps
 
-1. I mappträdet väljer du mappen **Verktyg**, **MSM** och **utrullningskonfigurationer** .
-1. Klicka på **Ny** och sedan på **Ny sida** för att definiera egenskaperna för utrullningskonfiguration:
 
-   * **Titel**: Titeln på utrullningskonfigurationen, till exempel Min utrullningskonfiguration
-   * **Namn**: Namnet på noden som lagrar egenskapsvärden, till exempel myrolloutconfig
-   * Välj **RolloutConfig-mall**.
+1. Under den här **Skapa** en nod med följande egenskaper:
 
-1. Klicka på **Skapa**.
-1. Dubbelklicka på den utrullningskonfiguration som du skapade för att öppna den för ytterligare konfiguration.
-1. Click **Edit**.
-1. I dialogrutan **Utbyteskonfiguration** väljer du **[Synkroniseringsutlösare](/help/sites-administering/msm-sync.md#rollout-triggers)**för att definiera åtgärden som orsakar utrullningen.
-1. Spara ändringarna genom att klicka på **OK** .
+   * **Namn**: Nodnamnet för utrullningskonfigurationen. md#installed-synchronization-actions), till exempel `contentCopy` eller `workflow`.
+   * **Typ**: `cq:RolloutConfig`
+
+1. Lägg till följande egenskaper i den här noden:
+   * **Namn**: `jcr:title`
+
+      **Typ**: `String`
+      **Värde**: En identifierande titel som visas i användargränssnittet.
+   * **Namn**: `jcr:description`
+
+      **Typ**: `String`
+      **Värde**: En valfri beskrivning.
+   * **Namn**: `cq:trigger`
+
+      **Typ**: `String`
+      **Värde**: Den [utlösare](/help/sites-administering/msm-sync.md#rollout-triggers) som ska användas. Välj  från:
+      * `rollout`
+      * `modification`
+      * `publish`
+      * `deactivate`
+
+1. Klicka på **Spara alla**.
 
 #### Lägg till synkroniseringsåtgärder i utrullningskonfigurationen {#add-synchronization-actions-to-the-rollout-configuration}
 
-Utrullningskonfigurationer lagras under `/etc/msm/rolloutconfigs` noden. Lägg till underordnade noder av typen `cq:LiveSyncAction` för att lägga till synkroniseringsåtgärder i rollout-konfigurationen. Ordningen på synkroniseringsåtgärdsnoderna avgör i vilken ordning åtgärderna utförs.
+Utrullningskonfigurationer lagras under den [rollout-konfigurationsnod](#create-the-rollout-configuration) som du har skapat under `/apps/msm/<your-project>/rolloutconfigs` noden.
 
-1. Open CRXDE Lite; till exempel [https://localhost:4502/crx/de](https://localhost:4502/crx/de)
-1. Markera `jcr:content` noden under din rollout-konfigurationsnod.
+Lägg till underordnade noder av typen `cq:LiveSyncAction` för att lägga till synkroniseringsåtgärder i rollout-konfigurationen. Ordningen på synkroniseringsåtgärdsnoderna avgör i vilken ordning åtgärderna utförs.
 
-   För utrullningskonfigurationen med egenskapen **Namn** i `myrolloutconfig`väljer du noden:
+1. I CRXDE Lite väljer du noden [Konfiguration](#create-the-rollout-configuration) av utrullning.
 
-   `/etc/msm/rolloutconfigs/myrolloutconfig/jcr:content`
+   Till exempel:
+   `/apps/msm/myproject/rolloutconfigs/myrolloutconfig`
 
-1. Klicka på **Skapa** och sedan **Skapa nod**. Konfigurera sedan följande nodegenskaper och klicka på **OK**:
+1. **Skapa** en nod med följande nodegenskaper:
 
-   * **Namn**: Synkroniseringsåtgärdens nodnamn. Namnet måste vara detsamma som **åtgärdsnamnet** i tabellen under [Synkroniseringsåtgärder](/help/sites-administering/msm-sync.md#installed-synchronization-actions), till exempel `contentCopy` eller `workflow`.
-
+   * **Namn**: Synkroniseringsåtgärdens nodnamn.
+Namnet måste vara detsamma som **åtgärdsnamnet** i tabellen under [Synkroniseringsåtgärder](/help/sites-administering/msm-sync.md#installed-synchronization-actions), till exempel `contentCopy` eller `workflow`.
    * **Typ**: `cq:LiveSyncAction`
 
-1. Markera åtgärdsnoden som nyss skapades och lägg till följande egenskap i noden:
-
-   * **Namn**: Åtgärdens egenskapsnamn. Namnet måste vara detsamma som **egenskapsnamnet** i tabellen under [Synkroniseringsåtgärder](/help/sites-administering/msm-sync.md#installed-synchronization-actions), till exempel `enabled`.
-
-   * **Typ**:Sträng
-
-   * **Värde**: åtgärdens egenskapsvärde. Giltiga värden finns i kolumnen **Egenskaper** i [Synkroniseringsåtgärder](/help/sites-administering/msm-sync.md#installed-synchronization-actions), till exempel `true`.
-
 1. Lägg till och konfigurera så många noder för synkroniseringsåtgärder som du behöver. Ordna om åtgärdsnoderna så att ordningen matchar den ordning i vilken du vill att de ska visas. Den översta åtgärdsnoden inträffar först.
-1. Klicka på **Spara alla**.
 
 ### Skapa och använda en enkel LiveActionFactory-klass {#creating-and-using-a-simple-liveactionfactory-class}
 
@@ -431,7 +458,7 @@ Följande `LiveActionFactory` klass implementerar en `LiveAction` som loggar med
        /* get the source's cq:lastModifiedBy property */
        if (source != null && source.adaptTo(Node.class) !=  null){
         ValueMap sourcevm = source.adaptTo(ValueMap.class);
-        lastMod = sourcevm.get(com.day.cq.wcm.api.NameConstants.PN_PAGE_LAST_MOD_BY, String.class);
+        lastMod = sourcevm.get(com.day.cq.wcm.msm.api.MSMNameConstants.PN_PAGE_LAST_MOD_BY, String.class);
        }
    
        /* set the target node's la-lastModifiedBy property */
@@ -523,26 +550,19 @@ Skapa den MSM-introduktionskonfiguration som använder `LiveActionFactory` den s
 
 1. Skapa och konfigurera en [utrullningskonfiguration med standardproceduren](/help/sites-administering/msm-sync.md#creating-a-rollout-configuration) - och använd egenskaperna:
 
-   1. Skapa:
-
-      1. **Titel**: Exempelkonfiguration
-      1. **Namn**: examplerolloutconfig
-      1. Använda mallen **** RolloutConfig.
-   1. Redigera:
-
-      1. **Synkroniseringsutlösare**: Vid aktivering
-
+   * **Titel**: Exempelkonfiguration
+   * **Namn**: examplerolloutconfig
+   * **cq:trigger**: `publish`
 
 #### Lägg till Live-åtgärden i exempelkonfigurationen för utrullning {#add-the-live-action-to-the-example-rollout-configuration}
 
 Konfigurera den utrullningskonfiguration som du skapade i föregående procedur så att den använder `ExampleLiveActionFactory` klassen.
 
 1. Open CRXDE Lite; till exempel [https://localhost:4502/crx/de](https://localhost:4502/crx/de).
-1. Skapa följande nod under `/etc/msm/rolloutconfigs/examplerolloutconfig/jcr:content`:
+1. Skapa följande nod under `/apps/msm/rolloutconfigs/examplerolloutconfig/jcr:content`:
 
    * **Namn**: `exampleLiveAction`
    * **Typ**: `cq:LiveSyncAction`
-   ![chlimage_1-75](assets/chlimage_1-75.png)
 
 1. Klicka på **Spara alla**.
 1. Markera `exampleLiveAction` noden och lägg till följande egenskap:
@@ -550,6 +570,7 @@ Konfigurera den utrullningskonfiguration som du skapade i föregående procedur 
    * **Namn**: `repLastModBy`
    * **Typ**: `Boolean`
    * **Värde**: `true`
+
    Den här egenskapen anger för `ExampleLiveAction` klassen att `cq:LastModifiedBy` egenskapen ska replikeras från källan till målnoden.
 
 1. Klicka på **Spara alla**.
@@ -569,24 +590,26 @@ Aktivera sidan **Produkter** (engelska) i källgrenen och observera de loggmedde
 16.08.2013 10:53:33.055 *INFO* [Thread-444535] com.adobe.example.msm.ExampleLiveActionFactory$ExampleLiveAction  ***Target node lastModifiedBy property updated: admin ***
 ```
 
-### Ta bort kapitelsteget i guiden Skapa plats {#removing-the-chapters-step-in-the-create-site-wizard}
+<!--
+### Removing the Chapters Step in the Create Site Wizard {#removing-the-chapters-step-in-the-create-site-wizard}
 
-I vissa fall krävs inte valet av **kapitel** i guiden Skapa plats (endast valet **Språk** krävs). Så här tar du bort det här steget i standardversionen av Web.Retail English:
+In some cases, the **Chapters** selection is not required in the create site wizard (only the **Languages** selection is required). To remove this step in the default We.Retail English blueprint:
 
-1. Ta bort noden i CRX Explorer:
+1. In CRX Explorer, remove the node:
    `/etc/blueprints/weretail-english/jcr:content/dialog/items/tabs/items/tab_chap`.
 
-1. Navigera till `/libs/wcm/msm/templates/blueprint/defaults/livecopy_tab/items` och skapa en ny nod:
+1. Navigate to `/libs/wcm/msm/templates/blueprint/defaults/livecopy_tab/items` and create a new node:
 
-   1. **Namn** = `chapters`; **Typ** = `cq:Widget`.
+    1. **Name** = `chapters`; **Type** = `cq:Widget`.
 
-1. Lägg till följande egenskaper i den nya noden:
+1. Add following properties to the new node:
 
-   1. **Namn** = `name`; **Typ** = `String`; **Värde** = `msm:chapterPages`
+    1. **Name** = `name`; **Type** = `String`; **Value** = `msm:chapterPages`
 
-   1. **Namn** = `value`; **Typ** = `String`; **Värde** = `all`
+    1. **Name** = `value`; **Type** = `String`; **Value** = `all`
 
-   1. **Namn** = `xtype`; **Typ** = `String`; **Värde** = `hidden`
+    1. **Name** = `xtype`; **Type** = `String`; **Value** = `hidden`
+-->
 
 ### Ändra språknamn och standardländer {#changing-language-names-and-default-countries}
 
