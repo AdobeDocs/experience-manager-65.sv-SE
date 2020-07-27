@@ -11,7 +11,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 7eb0e8a8-d76a-43f7-a012-c21157b14cd4
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '2304'
+ht-degree: 0%
 
 ---
 
@@ -55,7 +58,7 @@ Du kan hämta JS- och CSS-filerna genom att öppna filen adobe-forms-&lt;appserv
 
 I följande XML-syntax visas ett exempel på filen fscmenu.xml.
 
-```as3
+```html
  <div id="fscmenu" fscJS="FSToolBarURI/scripts/fscmenu.js" fscCSS="FSToolBarURI/fscmenu.css" fscVCSS="FSToolBarURI/fscmenu-v.css" fscIECSS="FSToolBarURI/fscmenu-ie.css">
          <ul class="fscmenuItem" id="Home">
              <li>
@@ -109,7 +112,7 @@ När du anpassar ett verktygsfält kan du ändra det nationella värdet för ver
 
 Om du vill ändra språkvärdet för ett verktygsfält kontrollerar du att filen fscmenu.xml innehåller det språk som du vill visa. Följande XML-syntax visar filen fscmenu.xml som används för att visa ett franskt verktygsfält.
 
-```as3
+```html
  <div id="fscmenu" fscJS="FSToolBarURI/scripts/fscmenu.js" fscCSS="FSToolBarURI/fscmenu.css" fscVCSS="FSToolBarURI/fscmenu-v.css" fscIECSS="FSToolBarURI/fscmenu-ie.css">
          <ul class="fscmenuItem" id="Home">
              <li>
@@ -198,7 +201,7 @@ När Forms-tjänsten återger ett HTML-formulär returneras ett formulärdatafl�
 
 [Snabbstart för Forms Service API](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
-[Återgivning av interaktiva PDF-formulär](/help/forms/developing/rendering-interactive-pdf-forms.md)
+[Återger interaktiv PDF forms](/help/forms/developing/rendering-interactive-pdf-forms.md)
 
 [Återger formulär som HTML](/help/forms/developing/rendering-forms-html.md)
 
@@ -223,6 +226,7 @@ När Forms-tjänsten återger ett HTML-formulär returneras ett formulärdatafl�
    * Om du vill återge ett HTML-formulär med ett verktygsfält anropar du `HTMLRenderSpec` objektets `setHTMLToolbar` metod och skickar ett `HTMLToolbar` uppräkningsvärde. Om du till exempel vill visa ett lodrätt HTML-verktygsfält skickar du `HTMLToolbar.Vertical`.
    * Ange platsen för fscmenu XML-filen genom att anropa `HTMLRenderSpec` objektets `setToolbarURI` metod och skicka ett strängvärde som anger URI-platsen för XML-filen.
    * Om det är tillämpligt anger du språkvärdet genom att anropa `HTMLRenderSpec` objektets `setLocale` -metod och skicka ett strängvärde som anger språkvärdet. Standardvärdet är engelska.
+
    >[!NOTE]
    >
    >Snabbstart som är associerad med det här avsnittet anger det här värdet till `fr_FR`*.*
@@ -238,6 +242,7 @@ När Forms-tjänsten återger ett HTML-formulär returneras ett formulärdatafl�
    * Ett strängvärde som anger `HTTP_USER_AGENT` rubrikvärdet, till exempel `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`.
    * Ett `URLSpec` objekt som lagrar URI-värden som krävs för att återge ett HTML-formulär.
    * Ett `java.util.HashMap` objekt som lagrar bifogade filer. Det här är en valfri parameter, och du kan ange `null` om du inte vill bifoga filer till formuläret.
+
    Metoden returnerar `renderHTMLForm` ett `FormsResult` objekt som innehåller en formulärdataström som måste skrivas till klientens webbläsare.
 
 1. Skriv formulärdataströmmen till klientens webbläsare
@@ -277,6 +282,7 @@ När Forms-tjänsten återger ett HTML-formulär returneras ett formulärdatafl�
    * Om du vill återge ett HTML-formulär med ett verktygsfält anropar du `HTMLRenderSpec` objektets `setHTMLToolbar` metod och skickar ett `HTMLToolbar` uppräkningsvärde. Om du till exempel vill visa ett lodrätt HTML-verktygsfält skickar du `HTMLToolbar.Vertical`.
    * Ange platsen för fscmenu XML-filen genom att anropa `HTMLRenderSpec` objektets `setToolbarURI` metod och skicka ett strängvärde som anger URI-platsen för XML-filen.
    * Om det är tillämpligt anger du språkvärdet genom att anropa `HTMLRenderSpec` objektets `setLocale` -metod och skicka ett strängvärde som anger språkvärdet. Standardvärdet är engelska.
+
    >[!NOTE]
    >
    >Snabbstart som är associerad med det här avsnittet anger det här värdet till `fr_FR`*.*
@@ -298,6 +304,7 @@ När Forms-tjänsten återger ett HTML-formulär returneras ett formulärdatafl�
    * Ett tomt `javax.xml.rpc.holders.StringHolder` objekt som fylls i av `renderHTMLForm` metoden. Det här argumentet lagrar språkets värde.
    * Ett tomt `javax.xml.rpc.holders.StringHolder` objekt som fylls i av `renderHTMLForm` metoden. Det här argumentet lagrar det HTML-återgivningsvärde som används.
    * Ett tomt `com.adobe.idp.services.holders.FormsResultHolder` objekt som innehåller resultatet av den här åtgärden.
+
    Metoden `renderHTMLForm` fyller i det `com.adobe.idp.services.holders.FormsResultHolder` objekt som skickas som det sista argumentvärdet med en formulärdataström som måste skrivas till klientens webbläsare.
 
 1. Skriv formulärdataströmmen till klientens webbläsare
@@ -312,4 +319,4 @@ När Forms-tjänsten återger ett HTML-formulär returneras ett formulärdatafl�
 
 **Se även**
 
-[Anropa AEM-formulär med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[Anropar AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
