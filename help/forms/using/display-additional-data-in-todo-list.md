@@ -10,14 +10,17 @@ topic-tags: forms-workspace
 discoiquuid: fed3b562-bcc2-4fb7-8fd2-35b1ac621e16
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '308'
+ht-degree: 0%
 
 ---
 
 
 # Visa ytterligare data i ToDo-listan{#displaying-additional-data-in-todo-list}
 
-Som standard visas aktivitetens visningsnamn och beskrivning i listan Att göra på arbetsytan i AEM Forms. Du kan dock lägga till annan information, t.ex. skapandedatum och deadlinedatum. Du kan också lägga till ikoner och ändra visningsformatet.
+Som standard visas uppgiftens visningsnamn och beskrivning i arbetsytan AEM Forms. Du kan dock lägga till annan information, t.ex. skapandedatum och deadlinedatum. Du kan också lägga till ikoner och ändra visningsformatet.
 
 ![En titt på fliken Att göra-uppgifter i HTML-arbetsytan som visar standardkonfigurationen](assets/html-todo-list.png)
 
@@ -36,7 +39,7 @@ Mer information om JSON-objektbeskrivningen finns i [den här](/help/forms/using
 
    Ändra t.ex. `/apps/ws/locales/en-US/translation.json` för engelska:
 
-   ```
+   ```json
    "task" : {
            "reminder" : {
                "value" : "Reminder",
@@ -112,7 +115,7 @@ Mer information om JSON-objektbeskrivningen finns i [den här](/help/forms/using
 
 1. Lägg till exempel till information i åtgärdsblocket:
 
-   ```
+   ```json
    "stepname" : {
                "value" : "Step Name",
                "tooltip" : "This task belongs to __stepName__ step"
@@ -135,17 +138,17 @@ Mer information om JSON-objektbeskrivningen finns i [den här](/help/forms/using
 
 ## Lägga till post i HTML-mallen {#adding-entry-in-the-html-template}
 
-Slutligen måste du ta med en post i dev-paketet för varje egenskap som du vill lägga till i uppgiften. Om du vill skapa en hänvisar du till Skapa AEM Forms-arbetsytekod.
+Slutligen måste du ta med en post i dev-paketet för varje egenskap som du vill lägga till i uppgiften. Om du vill skapa en ska du läsa koden för arbetsytan Skapa AEM Forms.
 
 1. Kopiera `task.html`:
 
-   * from: `/libs/ws/js/runtime/templates/`
+   * från: `/libs/ws/js/runtime/templates/`
    * to: `/apps/ws/js/runtime/templates/`
 
 1. Lägg till den nya informationen i `/apps/ws/js/runtime/templates/task.html`.
 
    Lägg till under `div class="taskProperties"`:
 
-   ```
+   ```jsp
    <span class="stepname" alt="<%= $.t('task.stepname.value')%>" title = '<%= $.t("task.stepname.tooltip",{stepName:stepName})%>'/>
    ```
