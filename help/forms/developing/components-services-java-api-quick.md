@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 14f17126-e744-479b-a8e6-24c131615b46
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '450'
+ht-degree: 0%
 
 ---
 
@@ -33,7 +36,7 @@ Java API Quick Start (SOAP) är tillgängligt för komponenter och tjänster.
 [Snabbstart (SOAP-läge): Ta bort komponenter med Java API](components-services-java-api-quick.md#quick-start-soap-mode-removing-components-using-the-java-api)
 
 
-AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda typer och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms-API:t med stark typning och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
@@ -51,7 +54,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda ty
 
 I följande Java-exempel distribueras en komponent som är baserad på en JAR-fil med namnet *adobe-emailSample-dsc.jar*.
 
-```as3
+```java
  /* 
         * This Java Quick Start uses the following JAR files 
         * 1. adobe-taskmanager-client.jar 
@@ -153,7 +156,7 @@ I följande Java-exempel distribueras en komponent som är baserad på en JAR-fi
 
 I följande Java-kodexempel anges körningskontexten för Kör som-anrop till en exempeltjänst med namnet *EncryptDocument*.
 
-```as3
+```java
  /* 
         * This Java Quick Start uses the following JAR files 
         * 1. adobe-taskmanager-client.jar 
@@ -245,7 +248,7 @@ I följande Java-kodexempel anges körningskontexten för Kör som-anrop till en
 
 I följande Java-kodexempel inaktiveras skyddet från exempeltjänsten EncryptDocument och de tjänster som anropas från den här tjänsten (tjänsterna Set Value och Encryption).
 
-```as3
+```java
  /* 
         * This Java Quick Start uses the following JAR files 
         * 1. adobe-taskmanager-client.jar 
@@ -358,7 +361,7 @@ I följande Java-kodexempel inaktiveras skyddet från exempeltjänsten EncryptDo
 
 I följande Java-kodexempel startas en tjänst med namnet *SendEmailService*.
 
-```as3
+```java
  package com.adobe.sample.servicemanager; 
   
  /** 
@@ -416,7 +419,7 @@ I följande Java-kodexempel startas en tjänst med namnet *SendEmailService*.
 
 I följande Java-exempel ändras konfigurationsvärden som tillhör SendEmail Service.
 
-```as3
+```java
  /* 
      * This Java Quick Start uses the following JAR files 
         * 1. adobe-taskmanager-client.jar 
@@ -528,7 +531,7 @@ I följande Java-exempel ändras konfigurationsvärden som tillhör SendEmail Se
 
 I följande Java-kodexempel tas en komponent bort med Java API.
 
-```as3
+```java
  /* 
      * This Java Quick Start uses the following JAR files 
      * 1. adobe-taskmanager-client.jar 
