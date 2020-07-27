@@ -11,7 +11,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 77e9b895-1313-4a5b-a2d5-cdb65bdc1966
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1901'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,7 @@ Följande bild visar ett PDF-dokument som innehåller en unik identifierare som 
 
 I det här avsnittet placeras den unika sididentifieraren i ett dokuments sidhuvud. Anta att följande DDX-dokument används.
 
-```as3
+```xml
  <?xml version="1.0" encoding="UTF-8"?>
  <DDX xmlns="https://ns.adobe.com/DDX/1.0/">
         <PDF result="out.pdf">
@@ -51,7 +54,7 @@ Det här DDX-dokumentet sammanfogar två PDF-dokument med namnen *map.pdf* och *
 
 >[!NOTE]
 >
->Mer information om tjänsten Assembler finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Assembler finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 >[!NOTE]
 >
@@ -81,7 +84,7 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 * adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss)
 * jbossall-client.jar (krävs om AEM Forms distribueras på JBoss)
 
-Om AEM Forms används på en annan J2EE-programserver än JBoss måste du ersätta filerna adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern där AEM Forms används. Information om platsen för alla AEM Forms JAR-filer finns i [Inkludera Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)för AEM Forms.
+Om AEM Forms distribueras på en annan J2EE-programserver än JBoss måste du ersätta filerna adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern där AEM Forms distribueras. Mer information om platsen för alla JAR-filer i AEM Forms finns i [Inkludera Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)i AEM Forms.
 
 **Skapa en PDF Assembler-klient**
 
@@ -159,6 +162,7 @@ Sammanställa ett PDF-dokument som använder unika sididentifierare (Bates-numre
    * Ett `com.adobe.idp.Document` objekt som representerar DDX-dokumentet.
    * Ett `java.util.Map` objekt som innehåller den oskyddade indatafilen.
    * Ett `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` objekt som anger körningsalternativen, inklusive standardteckensnitt och jobbloggsnivå.
+
    Metoden returnerar `invokeDDX` ett `com.adobe.livecycle.assembler.client.AssemblerResult` objekt som innehåller ett lösenordskrypterat PDF-dokument.
 
 1. Extrahera resultaten.
@@ -235,6 +239,7 @@ Sammanställa ett PDF-dokument som använder unika sididentifierare (Bates-numre
    * Ett `BLOB` objekt som representerar DDX-dokumentet.
    * Det `MyMapOf_xsd_string_To_xsd_anyType` objekt som innehåller PDF-indatadokumenten. Nycklarna måste matcha namnen på PDF-källfilerna och deras värden måste vara de `BLOB` objekt som motsvarar dessa filer.
    * Ett `AssemblerOptionSpec` objekt som anger körningsalternativ.
+
    Metoden returnerar ett `invoke` `AssemblerResult` objekt som innehåller resultatet av jobbet och eventuella undantag som inträffade.
 
 1. Extrahera resultaten.
@@ -247,4 +252,4 @@ Sammanställa ett PDF-dokument som använder unika sididentifierare (Bates-numre
 
 **Se även**
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
