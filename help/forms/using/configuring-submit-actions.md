@@ -1,15 +1,18 @@
 ---
 title: Konfigurera åtgärden Skicka
 seo-title: Konfigurera åtgärden Skicka
-description: Med AEM Forms kan du konfigurera en skicka-åtgärd för att definiera hur ett adaptivt formulär ska bearbetas när det har skickats in. Du kan använda inbyggda skicka-åtgärder eller skriva egna från grunden.
-seo-description: Med AEM Forms kan du konfigurera en skicka-åtgärd för att definiera hur ett adaptivt formulär ska bearbetas när det har skickats in. Du kan använda inbyggda skicka-åtgärder eller skriva egna från grunden.
+description: Med AEM Forms kan du konfigurera en skicka-åtgärd för att definiera hur ett anpassat formulär ska behandlas efter överföringen. Du kan använda inbyggda skicka-åtgärder eller skriva egna från grunden.
+seo-description: Med AEM Forms kan du konfigurera en skicka-åtgärd för att definiera hur ett anpassat formulär ska behandlas efter överföringen. Du kan använda inbyggda skicka-åtgärder eller skriva egna från grunden.
 uuid: 4368d648-88ea-4f84-a051-46296a1a084e
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 9d8d7044-ffce-4ab4-9543-a2d2f9da31e3
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: c74d9e86727f2deda62b8d1eb105b28ef4b6d184
+workflow-type: tm+mt
+source-wordcount: '1503'
+ht-degree: 0%
 
 ---
 
@@ -68,7 +71,7 @@ Konfigurerar åtgärden Skicka för resterande slutpunkt
 >[!NOTE]
 Om du vill skicka fälten som parametrar i en REST-URL måste alla fält ha olika elementnamn, även om fälten placeras på olika paneler.
 
-### Bokför skickade data till en resurs eller extern slutpunkt för vila {#post-submitted-data-to-a-resource-or-external-rest-end-point-nbsp}
+### Bokför skickade data till en resurs eller extern slutpunkt för vila  {#post-submitted-data-to-a-resource-or-external-rest-end-point-nbsp}
 
 Använd åtgärden **Skicka till REST-slutpunkt** för att skicka skickade data till en rest-URL. URL:en kan vara en intern (servern som formuläret återges på) eller en extern server.
 
@@ -107,7 +110,7 @@ Den här överföringsåtgärden är tillgänglig för XFA-baserade adaptiva for
 
 ## Anropa ett formulärarbetsflöde {#invoke-a-forms-workflow}
 
-Alternativet Skicka **till formulär-arbetsflödet** skickar en XML-datafil och eventuella bifogade filer till en befintlig Adobe LiveCycle- eller AEM Forms on JEE-process.
+Alternativet Skicka **till formulär-arbetsflödet** skickar en XML-datafil och eventuella bifogade filer till en befintlig Adobe LiveCycle- eller AEM Forms på JEE-process.
 
 Mer information om hur du konfigurerar Skicka till formulär-arbetsflödet finns i [Skicka och bearbeta formulärdata med hjälp av formulärarbetsflöden](../../forms/using/submit-form-data-livecycle-process.md).
 
@@ -117,11 +120,11 @@ Mer information om hur du konfigurerar Skicka till formulär-arbetsflödet finns
 
 Dessutom kan du skicka en bifogad fil med hjälp av en formulärdatamodell och en DoR-fil (Document of Record) till datakällan.
 
-Mer information om formulärdatamodell finns i [AEM Forms-dataintegrering](../../forms/using/data-integration.md).
+Mer information om formulärdatamodell finns i [AEM Forms Data Integration](../../forms/using/data-integration.md).
 
 ## Skicka-åtgärd för formulärportal {#forms-portal-submit-action}
 
-Alternativet **Skicka åtgärd** för formulärportalen gör att formulärdata blir tillgängliga via en AEM Forms-portal.
+Med alternativet Skicka åtgärd **för** formulärportalen blir formulärdata tillgängliga via en AEM Forms-portal.
 
 Mer information om Forms Portal och skicka-åtgärden finns i Komponenten [](../../forms/using/draft-submission-component.md)Utkast och inskickning.
 
@@ -133,9 +136,9 @@ Innan du använder åtgärden **Anropa ett AEM-arbetsflöde** ska du [konfigurer
 
 ## Förtroende på serversidan i adaptiv form {#server-side-revalidation-in-adaptive-form}
 
-I alla onlinesystem för datainhämtning lägger utvecklare vanligtvis in javascript-valideringar på klientsidan för att tillämpa några få affärsregler. Men i moderna webbläsare kan slutanvändarna kringgå valideringarna och skicka in dokument manuellt med hjälp av olika tekniker, till exempel DevTools Console för webbläsare. Sådana tekniker kan också användas för anpassningsbara formulär. En formulärutvecklare kan skapa olika valideringslogik, men tekniskt sett kan slutanvändarna kringgå dessa valideringslogik och skicka ogiltiga data till servern. Ogiltiga data skulle bryta mot de affärsregler som en formulärförfattare har infört.
+I alla onlinesystem för datainhämtning lägger utvecklare vanligtvis in JavaScript-valideringar på klientsidan för att tillämpa några få affärsregler. Men i moderna webbläsare kan slutanvändarna kringgå valideringarna och skicka in dokument manuellt med hjälp av olika tekniker, till exempel DevTools Console för webbläsare. Sådana tekniker kan också användas för anpassningsbara formulär. En formulärutvecklare kan skapa olika valideringslogik, men tekniskt sett kan slutanvändarna kringgå dessa valideringslogik och skicka ogiltiga data till servern. Ogiltiga data skulle bryta mot de affärsregler som en formulärförfattare har infört.
 
-Med funktionen för omvalidering på serversidan kan du även köra de valideringar som en författare av adaptiva formulär har tillhandahållit när de utformar ett adaptivt formulär på servern. Det förhindrar att inskickade data äventyras och affärsregelöverträdelser som representeras i form av formulärvalidering.
+Med funktionen för omvalidering på serversidan kan du även köra de valideringar som en författare av adaptiva formulär har tillhandahållit när de utformar ett adaptivt formulär på servern. Det förhindrar att inskickade data äventyras och att affärsregler som används vid validering av formulär överträds.
 
 ### Vad ska valideras på servern? {#what-to-validate-on-server-br}
 
@@ -163,7 +166,7 @@ När det gäller **komplexa valideringsregler** finns ibland det exakta valideri
 
 Stöd för anpassade funktioner i valideringsuttryck
 
-Författaren kan konfigurera ett anpassat javascript-bibliotek per anpassat formulär. I biblioteket behåller du bara återanvändbara funktioner som är beroende av jQuery och underscore.js från tredje part.
+Författaren kan konfigurera customJavaScript-bibliotek per anpassat formulär. I biblioteket behåller du bara återanvändbara funktioner som är beroende av jQuery och underscore.js från tredje part.
 
 ## Felhantering vid sändning {#error-handling-on-submit-action}
 
