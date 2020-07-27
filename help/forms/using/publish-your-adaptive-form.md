@@ -9,7 +9,10 @@ topic-tags: introduction
 discoiquuid: e24dbd0e-4481-4f9d-9570-3a4046b3ef35
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: bd70508b361ac8b62ebc0344538a18369a075f3e
+workflow-type: tm+mt
+source-wordcount: '989'
+ht-degree: 1%
 
 ---
 
@@ -30,14 +33,14 @@ Du kan publicera ett anpassat formulär på följande sätt:
 
 ## Innan du startar {#before-you-start}
 
-* **[Konfigurera en AEM Forms-publiceringsinstans](https://helpx.adobe.com/experience-manager/6-3/forms/using/installing-configuring-aem-forms-osgi.html)**: Publiceringsinstansen är en offentlig instans av AEM Forms som körs i publiceringsläge. I en produktionsmiljö ligger publiceringsinstansen utanför organisationens brandvägg.
+* **[Konfigurera en publiceringsinstans](https://helpx.adobe.com/experience-manager/6-3/forms/using/installing-configuring-aem-forms-osgi.html)**för AEM Forms: Publiceringsinstansen är en offentlig instans av AEM Forms som körs i publiceringsläge. I en produktionsmiljö ligger publiceringsinstansen utanför organisationens brandvägg.
 * **[Konfigurera replikering och omvänd replikering](https://helpx.adobe.com/experience-manager/6-3/help/sites-deploying/replication.html)**: Vid replikering kopieras innehåll från författarinstansen till en publiceringsinstans och användarindata returneras (till exempel formulärindata) från publiceringsinstansen till författarinstansen.
 
 ## Publicera det adaptiva formuläret som en AEM-sida {#publish-the-adaptive-form-as-an-aem-page}
 
 När det adaptiva formuläret publiceras som en AEM-sida innehåller hela webbsidan bara publicerade formulär. Du kan använda URL:en för det adaptiva formuläret för att länka det från en annan webbsida. Så här publicerar du det anpassningsbara formuläret **** shipping-address-add-update som en AEM-sida:
 
-1. Logga in på AEM Forms författarinstans och leta upp formuläret shipping-address-add-update-form adaptive form i AEM Forms-gränssnittet.
+1. Logga in på författarinstansen av AEM Forms och leta upp formuläret shipping-address-add-update-form adaptive i användargränssnittet för AEM Forms.
    `https://localhost:4502/aem/forms.html/content/dam/formsanddocuments`
 1. Välj adaptiv blankett för leverans-adress-add-update-form och tryck på **Publicera**. En dialogruta med resurser som är kopplade till det adaptiva formuläret visas. Tryck på **Publicera**. Det anpassningsbara formuläret publiceras och en dialogruta visas.
 1. Öppna formuläret i publiceringsinstansen. Formuläret kan fyllas i och skickas av användaren.
@@ -47,7 +50,7 @@ När det adaptiva formuläret publiceras som en AEM-sida innehåller hela webbsi
 
 Med AEM Forms kan formulärutvecklare smidigt bädda in adaptiva formulär på en AEM Sites-sida. Det inbäddade adaptiva formuläret fungerar fullt ut och användarna kan fylla i och skicka formuläret utan att behöva lämna sidan. Det hjälper användaren att stanna kvar i sitt sammanhang för andra element på webbsidan och interagera samtidigt med formuläret.
 
-AEM Forms innehåller en komponent, AEM Forms Container, som bäddar in ett adaptivt formulär på en AEM Sites-sida. Komponenten är som standard inte synlig i AEM Sites-behållaren. Utför följande steg för att aktivera komponenten AEM Forms Container och för att bädda in det adaptiva formuläret på en AEM Sites-sida:
+AEM Forms tillhandahåller en komponent, AEM Forms Container, som bäddar in ett adaptivt formulär på en AEM Sites-sida. Komponenten är som standard inte synlig i AEM Sites-behållaren. Utför följande steg för att aktivera behållarkomponenten för AEM Forms och bädda in det adaptiva formuläret på en AEM Sites-sida:
 
 1. Skapa och öppna en sida på webbplatsen We.Retail för redigering. Till exempel [https://localhost:4502/editor.html/content/we-retail/us/en/user/shipping-and-billing-address.html](https://localhost:4502/editor.html/content/we-retail/us/en/user/shipping-and-billing-address.html). Det anpassningsbara formuläret är inbäddat på webbplatssidan.
 
@@ -56,15 +59,16 @@ AEM Forms innehåller en komponent, AEM Forms Container, som bäddar in ett adap
    Webbplatsen We.Retail levereras med AEM. Om du inte har installerat webbplatsen We.Retail går du till [We.Retail Reference Implementation](https://helpx.adobe.com/experience-manager/6-3/help/sites-developing/we-retail.html) för att installera webbplatsen.
 
 1. Tryck på ![egenskapens](assets/properties.png) sidinformation och välj alternativet **Redigera mall** på den nyligen skapade webbsidan för Vi.Retail. Sidmallen öppnas på en ny flik i webbläsaren.
-1. Tryck inuti **layoutbehållarrutan** och tryck på ![feedhantering](assets/feedmanagement.png). Expandera dragspelsfliken **Allmänt** på fliken **Tillåtna komponenter** , markera alternativet **AEM-formulär** och tryck sedan på ![](assets/save_icon.svg). AEM Forms Container-komponenten är aktiverad för sidan.
+1. Tryck inuti **layoutbehållarrutan** och tryck på ![feedhantering](assets/feedmanagement.png). Expandera dragspelsfliken **Allmänt** på fliken **Tillåtna komponenter** , markera alternativet **AEM-formulär** och tryck på ![save_icon](assets/save_icon.svg). AEM Forms Container-komponenten är aktiverad för sidan.
 
-1. Öppna webbläsarfliken som innehåller sidan AEM Sites som öppnats i steg 1. Tryck på **Dra komponenter här** och tryck på **+.** I rutan **Infoga ny komponent** trycker du på **AEM-formulär.** Komponenten **AEM Forms Container** läggs till på sidan.
-1. Tryck på behållarkomponenten för **AEM Forms** och tryck ![](assets/configure-icon.svg). En dialogruta med egenskaper för AEM Forms Container visas. I fältet **Resurssökväg** bläddrar du till och väljer formuläret shipping-address-add-update-form adaptive. Tryck på ![](assets/save_icon.svg). Det anpassningsbara formuläret är inbäddat på sidan.
+1. Öppna webbläsarfliken som innehåller AEM Sites-sidan som öppnats i steg 1. Tryck på **Dra komponenter här** och tryck på **+.** I rutan **Infoga ny komponent** trycker du på **AEM-formulär.** Komponenten **AEM Forms Container** läggs till på sidan.
+1. Tryck på behållarkomponenten **för** AEM Forms och tryck på ![configure-icon](assets/configure-icon.svg). En dialogruta med egenskaper för AEM Forms Container visas. I fältet **Resurssökväg** bläddrar du till och väljer formuläret shipping-address-add-update-form adaptive. Tryck på ![save_icon](assets/save_icon.svg). Det anpassningsbara formuläret är inbäddat på sidan.
 1. Publicera både adaptiva formulär- och webbplatssidor. Här är några saker du bör hålla i minnet:
 
    * Om du publicerar AEM-webbplatssidan för första gången och den innehåller ett inbäddat formulär publicerar du webbplatssidan och det inbäddade formuläret.
    * Om du bara ändrar det inbäddade formuläret på en publicerad webbplatssida publicerar du det ursprungliga formuläret och ändringarna återspeglas på den publicerade webbplatssidan. Den publicerade webbplatssidan innehåller en referens till formuläret och behöver inte publicera om sidan.
    * Om du ändrar webbplatssidan och det inbäddade formuläret publicerar du webbplatssidan och formuläret igen.
+
    ![embed-in-aem-sites](assets/embed-in-aem-sites.png)
 
    Formuläret för ändring av leverans- och faktureringsadress har lagts till på en AEM Sites-sida.
