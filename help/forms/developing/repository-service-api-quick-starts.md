@@ -10,14 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 2fd1a21a-0f90-49d8-9f62-383b268d540d
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '616'
+ht-degree: 0%
 
 ---
 
 
 # Snabbstart för databastjänst-API {#repository-service-api-quick-starts}
 
-Följande snabbstarter är tillgängliga för AEM Forms-databastjänsten.
+Följande snabbstarter är tillgängliga för AEM Forms Repository-tjänsten.
 
 [Snabbstart (SOAP-läge): Skapa en mapp med Java API](repository-service-api-quick-starts.md#quick-start-soap-mode-creating-a-folder-using-the-java-api)
 
@@ -39,13 +42,13 @@ Följande snabbstarter är tillgängliga för AEM Forms-databastjänsten.
 
 [Snabbstart (SOAP-läge): Ta bort en resurs med Java API](repository-service-api-quick-starts.md#quick-start-soap-mode-deleting-a-resource-using-the-java-api)
 
-AEM Forms-åtgärder kan utföras med AEM Forms-API:t med stark typbestämning och anslutningsläget bör anges till SOAP
+AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och anslutningsläget bör anges till SOAP
 
 **Program/FormsApplication**
 
-De flesta databastjänster för AEM Forms startar snabbt och interagerar med ett program med namnet `Applications/FormsApplication,` , vilket visas på följande bild.
+De flesta databastjänster i AEM Forms börjar fungera ihop med ett program med namnet `Applications/FormsApplication,` som visas på följande bild.
 
-Mappen FormsFolder är en plats i AEM Forms-databasen. Du kan till exempel lägga till den här mappen i `Applications/FormsApplication`. (Se [Snabbstart (SOAP-läge): Skapa en mapp med Java API](repository-service-api-quick-starts.md#quick-start-soap-mode-creating-a-folder-using-the-java-api).)
+Mappen FormsFolder är en plats i AEM Forms databas. Du kan till exempel lägga till den här mappen i `Applications/FormsApplication`. (Se [Snabbstart (SOAP-läge): Skapa en mapp med Java API](repository-service-api-quick-starts.md#quick-start-soap-mode-creating-a-folder-using-the-java-api).)
 
 Sökvägen till en resurs i AEM Forms-databasen är:
 
@@ -63,7 +66,7 @@ Sökvägen till en resurs i AEM Forms-databasen är:
 
 I följande Java-kodexempel skapas en mapp med namnet *FormsFolder* på följande plats `/Applications/FormsApplication/1.0/`. (Se [Skapa mappar](/help/forms/developing/aem-forms-repository.md#creating-folders).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-repository-client.jar
@@ -169,7 +172,7 @@ I följande Java-kodexempel skapas en mapp med namnet *FormsFolder* på följand
 
 I följande Java-kodexempel skrivs en resurs som kallas *lån.xdp* i databasen. Resursen läggs till på `/Applications/FormsApplication/1.0/FormsFolder` platsen. (Se [Skriva resurser](/help/forms/developing/aem-forms-repository.md#writing-resources).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-repository-client.jar
@@ -297,7 +300,7 @@ I följande Java-kodexempel skrivs en resurs som kallas *lån.xdp* i databasen. 
 
 I följande Java-kodexempel visas resurser som finns i `Applications/FormsApplication/1.0/FormsFolder`. (Se [Lista resurser](/help/forms/developing/aem-forms-repository.md#listing-resources).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-repository-client.jar
@@ -396,7 +399,7 @@ I följande Java-kodexempel visas resurser som finns i `Applications/FormsApplic
 
 I följande Java-kodexempel läses en resurs med namnet *Loan.xdp* från databasen. XDP-filen finns i `/Applications/FormsApplication/1.0/FormsFolder/`. (Se [Läsresurser](/help/forms/developing/aem-forms-repository.md#reading-resources).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-repository-client.jar
@@ -497,7 +500,7 @@ I följande Java-kodexempel läses en resurs med namnet *Loan.xdp* från databas
 
 Följande Java-kodexempel uppdateras `/Applications/FormsApplication/1.0/FormsFolder` genom att dess beskrivning ändras. (Se [Uppdatera resurser](/help/forms/developing/aem-forms-repository.md#updating-resources).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-repository-client.jar
@@ -609,7 +612,7 @@ Följande Java-kodexempel uppdateras `/Applications/FormsApplication/1.0/FormsFo
 
 Följande Java-kodexempel söker efter Loan.xdp i `Applications/FormsApplication/1.0/FormsFolder`. (Se [Söka efter resurser](/help/forms/developing/aem-forms-repository.md#searching-for-resources).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-repository-client.jar
@@ -733,7 +736,7 @@ Följande Java-kodexempel söker efter Loan.xdp i `Applications/FormsApplication
 
 I följande Java-kodexempel skapas en relation mellan två resurser i AEM Forms-databasen. (Se [Skapa resursrelationer](/help/forms/developing/aem-forms-repository.md#creating-resource-relationships).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-repository-client.jar
@@ -874,7 +877,7 @@ I följande Java-kodexempel skapas en relation mellan två resurser i AEM Forms-
 
 I följande Java-kodexempel låses /Applications/FormsApplication/1.0/FormsFolder/Loan.xdp. (Se [Låsa resurser](/help/forms/developing/aem-forms-repository.md#locking-resources).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-repository-client.jar
@@ -985,7 +988,7 @@ I följande Java-kodexempel låses /Applications/FormsApplication/1.0/FormsFolde
 
 Följande Java-kodexempel läser och skapar åtkomstkontrollistor (ACL) i databasen.
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-repository-client.jar
@@ -1100,7 +1103,7 @@ Följande Java-kodexempel läser och skapar åtkomstkontrollistor (ACL) i databa
 
 I följande Java-kodexempel tas Loan.xdp bort från `Applications/FormsApplication/1.0/FormsFolder`. Om XDP-filen inte finns i den här mappen genereras ett undantag. (Se [Ta bort resurser](/help/forms/developing/aem-forms-repository.md#deleting-resources).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-repository-client.jar
