@@ -10,7 +10,10 @@ topic-tags: customization
 discoiquuid: 0d817a7e-2758-4308-abda-6194716c2d97
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '552'
+ht-degree: 0%
 
 ---
 
@@ -45,7 +48,7 @@ CustomToolbarLayoutDemo.zip
 
 ## Skapa en anpassad verktygsfältslayout {#layout-1}
 
-1. Skapa en mapp för att behålla dina anpassade verktygsfältslayouter. Exempel:
+1. Skapa en mapp för att behålla dina anpassade verktygsfältslayouter. Till exempel:
 
    `/apps/customlayout/toolbar`.
 
@@ -91,7 +94,7 @@ CustomToolbarLayoutDemo.zip
 
    Exempel `customToolbarLayout.jsp`:
 
-   ```php
+   ```jsp
    <%@include file="/libs/fd/af/components/guidesglobal.jsp" %>
    <cq:includeClientLib categories="customtoolbarlayout" />
    <c:if test="${isEditMode}">
@@ -109,7 +112,7 @@ CustomToolbarLayoutDemo.zip
 
    Exempel `toolBarCommon.jsp`:
 
-   ```php
+   ```jsp
    <%@taglib prefix="fn" uri="https://java.sun.com/jsp/jstl/functions"%>
    <%--------------------
    This code iterates over all the tool bar items using the guideToolbar bean.
