@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 discoiquuid: 154255e7-468a-42e6-a33d-eee691cf854d
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '331'
+ht-degree: 0%
 
 ---
 
@@ -20,9 +23,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 Med AEM Forms kan du spara ett formulär som ett utkast. Med utkastsfunktionen kan du underhålla ett pågående formulär som du kan fylla i och skicka senare från vilken enhet som helst.
 
-Som standard lagrar AEM Forms de användardata som är kopplade till utkastet och överföringen av ett formulär på `/content/forms/fp` noden i Publish-instansen. Dessutom innehåller AEM Forms-portalkomponenterna datatjänster som du kan använda för att anpassa implementeringen av lagring av användardata för utkast och överföringar. Du kan till exempel lagra användardata i ett datalager.
+Som standard lagrar AEM Forms användardata som är kopplade till utkastet och skickandet av ett formulär på `/content/forms/fp` noden i Publish-instansen. Dessutom innehåller AEM Forms portalkomponenterna datatjänster, som du kan använda för att anpassa implementeringen av lagring av användardata för utkast och överföringar. Du kan till exempel lagra användardata i ett datalager.
 
-## Förutsättningar {#prerequisites}
+## Förutsättningar  {#prerequisites}
 
 * Aktivera komponenter för [formulärportalen](/help/forms/using/enabling-forms-portal-components.md)
 * Skapa en [formulärportalsida](/help/forms/using/creating-form-portal-page.md)
@@ -202,8 +205,8 @@ Du kan använda anteckningen nedan för att öka rankningen för anpassade ID:n 
 
 Om du vill använda ovanstående kommentar importerar du följande till ditt projekt:
 
-```
+```java
 import org.apache.felix.scr.annotations.Properties;
- import org.apache.felix.scr.annotations.Property;
+import org.apache.felix.scr.annotations.Property;
 ```
 
