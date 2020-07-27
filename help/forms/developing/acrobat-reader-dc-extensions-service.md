@@ -9,7 +9,10 @@ content-type: reference
 topic-tags: develop
 discoiquuid: 31a9bfc6-462d-4535-888f-31026b8fa674
 translation-type: tm+mt
-source-git-commit: 21efe30c6a69d04c737bc523aeaab504db8f605b
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '282'
+ht-degree: 0%
 
 ---
 
@@ -24,18 +27,18 @@ Följande snabbstarter är tillgängliga för tjänsten Acrobat Reader DC Extens
 
 [Snabbstart (SOAP-läge): Hämta autentiseringsinformation med Java API](acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-retrieving-credential-information-using-the-java-api)
 
-AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda typer och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms-API:t med stark typning och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
->Snabbstarter i Programmering med AEM Forms är baserade på operativsystemet på Forms-servern. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>Snabbstarter i Programmering med AEM Forms baseras på operativsystemet på Forms-servern. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## Snabbstart (SOAP-läge):Tillämpa användningsrättigheter med Java API {#quick-start-soap-mode-applying-usage-rights-using-the-java-api}
 
 I följande Java-kodexempel tillämpas användarrättigheter på ett PDF-dokument med namnet *Loan.pdf*. Det rättighetsaktiverade PDF-dokumentet sparas som en PDF-fil med namnet *LoanUsageRights.pdf*. Följande användarrättigheter gäller för det här PDF-dokumentet: `enabledComments`, `enabledFormFillIn`och `enabledDigitalSignatures`. (Se [Använda användningsrättigheter i PDF-dokument](/help/forms/developing/assigning-usage-rights.md).)
 
 
-```as3
+```java
  /* 
      * This Java Quick Start uses the SOAP mode and contains the following JAR files 
      * in the class path: 
@@ -147,7 +150,7 @@ I följande Java-kodexempel tillämpas användarrättigheter på ett PDF-dokumen
 
 I följande Java-kodexempel tas användarrättigheter bort från ett rättighetsaktiverat PDF-dokument med namnet *LoanUsageRights.pdf*. (Se [Ta bort användningsrättigheter från PDF-dokument](/help/forms/developing/assigning-usage-rights.md).)
 
-```as3
+```java
  /* 
      * This Java Quick Start uses the SOAP mode and contains the following JAR files 
      * in the class path: 
@@ -247,7 +250,7 @@ I följande Java-kodexempel tas användarrättigheter bort från ett rättighets
 
 I följande Java-kodexempel hämtas information om de autentiseringsuppgifter som används för att tillämpa användarrättigheter på ett rättighetsaktiverat PDF-dokument med namnet *LoanUsageRights.pdf*. (Se [Hämta autentiseringsuppgifter](/help/forms/developing/assigning-usage-rights.md).)
 
-```as3
+```java
  /* 
      * This Java Quick Start uses the SOAP mode and contains the following JAR files 
      * in the class path: 
