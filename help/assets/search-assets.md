@@ -4,9 +4,9 @@ description: Lär dig hur du söker efter nödvändiga resurser [!DNL Adobe Expe
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
+source-git-commit: 8f8134d6c4fcc0ef54f9cc8298936c5c7d746c09
 workflow-type: tm+mt
-source-wordcount: '5781'
+source-wordcount: '5811'
 ht-degree: 4%
 
 ---
@@ -325,6 +325,8 @@ Använd citattecken runt nyckelord för att hitta resurser som innehåller den e
 
 Resursidentifiering bygger på indexering av DAM-innehåll, inklusive metadata. Snabbare och exaktare tillgångsidentifiering bygger på optimerad indexering och lämpliga konfigurationer. Se [sökindex](/help/assets/performance-tuning-guidelines.md#search-indexes), [frågor och indexering](/help/sites-deploying/queries-and-indexing.md)samt [metodtips](/help/sites-deploying/best-practices-for-queries-and-indexing.md).
 
+Om du vill exkludera specifika resurser från sökresultaten använder du `excludedPath` egenskapen i Lucene-indexet.
+
 ### Visuell sökning eller likhetssökning {#configvisualsearch}
 
 Visuell sökning använder smart taggning och kräver [!DNL Experience Manager] 6.5.2.0 eller senare. När du har konfigurerat funktionerna för smart taggning gör du så här:
@@ -364,6 +366,8 @@ För att öka hastigheten på identifieringen erbjuder [!DNL Experience Manager 
 ### Extrahera text när resurser överförs {#extracttextupload}
 
 Du kan konfigurera så [!DNL Experience Manager] att texten extraheras från resurserna när användare överför resurser, till exempel PSD- eller PDF-filer. [!DNL Experience Manager] indexerar den extraherade texten och hjälper användarna att söka efter dessa resurser baserat på den extraherade texten. Se [Överföra resurser](/help/assets/managing-assets-touch-ui.md#uploading-assets).
+
+Om textextraheringen blir alltför resurskrävande för distributionen bör du [inaktivera textrahering](https://helpx.adobe.com/experience-manager/kb/Disable-binary-text-extraction-to-optimize-Lucene-indexing-AEM.html).
 
 ### Anpassade predikat för att filtrera sökresultat {#custompredicates}
 
