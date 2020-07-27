@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: da96d3d8-a338-470a-8d20-55ea39bd15bf
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '1439'
 ht-degree: 1%
@@ -76,7 +76,8 @@ Utför följande steg på alla författare- och publiceringsinstanser för att i
 
    Så här anger du ett annat namn för metadatatabellen:
 
-   * I Web Console Configuration söker du efter och klickar på Exempelimplementering av Forms Portal-metadatatjänst. Du kan ändra värdena för datakälla, metadata eller ytterligare metadatatabellnamn.
+   * I Web Console Configuration söker du efter och klickar på Implementering av Exempel på metadatatjänst för Forms Portal. Du kan ändra värdena för datakälla, metadata eller ytterligare metadatatabellnamn.
+
    Så här anger du ett annat namn för datatabellen:
 
    * I Web Console Configuration söker du efter och klickar på Exempelimplementering för Forms Portal Data Service. Du kan ändra värdena för datakällan och datatabellnamnet.
@@ -162,6 +163,7 @@ Utför följande steg på alla författare- och publiceringsinstanser för att i
 >
 > * JDBC-drivrutinen för MySQL ingår inte i exemplet. Se till att du har etablerat dig för den och ange den information som krävs för att konfigurera JDBC-anslutningspoolen.
 > * Peka författaren och publicera instanser för att använda samma databas. Värdet för URI-fältet för JDBC-anslutningen måste vara samma för alla författare- och publiceringsinstanser.
+
 >
 
 
@@ -335,7 +337,7 @@ Så här skapar du [ett klientbibliotek](/help/sites-developing/clientlibs.md) o
 
 1. Högerklicka på noden, klicka **[!UICONTROL create new file]** och skapa en fil med filnamnstillägget .txt. Du kan till exempel `js.txt`lägga till följande kod i den nyligen skapade TXT-filen och klicka på **[!UICONTROL Save All]**.
 
-   ```
+   ```javascript
    #base=util
     util.js
    ```
@@ -346,7 +348,7 @@ Så här skapar du [ett klientbibliotek](/help/sites-developing/clientlibs.md) o
 
 1. Lägg till följande kod i filen util.js och klicka på **[!UICONTROL Save All]**. Koden verifierar längden på filnamnet.
 
-   ```
+   ```javascript
    /*
     * ADOBE CONFIDENTIAL
     * ___________________
