@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 4ef78c8c-783f-4aac-a499-692cd4acef75
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: c74d9e86727f2deda62b8d1eb105b28ef4b6d184
+workflow-type: tm+mt
+source-wordcount: '3909'
+ht-degree: 35%
 
 ---
 
@@ -104,7 +107,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
   <tr>
    <td><code>numPages</code></td>
    <td>Returnerar antalet sidor i dokumentet.</td>
-   <td>Sidnumreringsprincipen för HTML5-formulär är inte identisk med sidnumreringsprincipen för PDF-formulär. API:t numPages kan alltså returnera olika värden i båda fallen.</td>
+   <td>Sidindelningsprincipen för HTML5-formulär är inte identisk med sidiningsprincipen för PDF forms. API:t numPages kan alltså returnera olika värden i båda fallen.</td>
   </tr>
   <tr>
    <td><code>platform</code></td>
@@ -114,7 +117,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
   <tr>
    <td><code>title</code></td>
    <td>Anger dokumentets titel. Den är bara tillgänglig för klientprogram.</td>
-   <td>Det returnerar HTML-dokumentets titel i form av ett formulär i stället för formulärets metadatanamn, som i PDF-formulär.</td>
+   <td>Det returnerar HTML-dokumentets titel i form av ett formulär i stället för formulärets metadatanamn som i PDF forms.</td>
   </tr>
   <tr>
    <td><code>version</code></td>
@@ -1254,12 +1257,12 @@ FormCalc är ett XFA-specifikt språk för att skapa e-formulärbaserade logiska
   </tr>
   <tr>
    <td>console.println()</td>
-   <td>Detta acrobat-API dumpar utdata till javascript-konsolen.</td>
+   <td>Detta acrobat-API dumpar utdata till JavaScript-konsolen.</td>
    <td> </td>
   </tr>
   <tr>
    <td>app.alert()</td>
-   <td>Detta acrobat-API skickar ett varningsmeddelande via popup-fönstret javascript.</td>
+   <td>Detta acrobat-API skickar ett varningsmeddelande via popup-menyn JavaScript.</td>
    <td> </td>
   </tr>
   <tr>
