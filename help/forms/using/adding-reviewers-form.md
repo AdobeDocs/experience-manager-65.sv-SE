@@ -1,15 +1,18 @@
 ---
 title: Koppla granskare som skickar in svar till ett formulär
 seo-title: Koppla granskare som skickar in svar till ett formulär
-description: Lär dig hur du associerar granskare som skickar in svar med ett formulär i AEM Forms. Associerade granskare granskar ett formulär som skickats via formulärportalen.
-seo-description: Lär dig hur du associerar granskare som skickar in svar med ett formulär i AEM Forms. Associerade granskare granskar ett formulär som skickats via formulärportalen.
+description: Lär dig hur du associerar granskare som skickar in ansökningar med ett formulär i AEM Forms. Associerade granskare granskar ett formulär som skickats via formulärportalen.
+seo-description: Lär dig hur du associerar granskare som skickar in ansökningar med ett formulär i AEM Forms. Associerade granskare granskar ett formulär som skickats via formulärportalen.
 uuid: 58c8c8fb-9262-4c37-b9b2-e46fe21b77d9
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 71d1aa10-d191-49bc-a50f-1098324f1cfe
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 55c12683ba66b3aace07ea83931c9c32ea65663e
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '520'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ source-git-commit: 55c12683ba66b3aace07ea83931c9c32ea65663e
 
 När du skapar ett formulär kan du ange vilka användare som ska granska inskickade formulär via formulärportalen och ge feedback. Din organisation kan samla in feedback och omarbeta de inskickade formulären.
 
-Med AEM Forms kan du koppla en granskargrupp till ett formulär. Användare som läggs till i en granskningsgrupp i ett formulär kan se inskickade formulär och ge feedback.
+Med AEM Forms kan du associera en granskargrupp med ett formulär. Användare som läggs till i en granskningsgrupp i ett formulär kan se inskickade formulär och ge feedback.
 
 Granskningsgrupper som tilldelats ett formulär kan bara granska inskickade svar från det angivna formuläret.
 
@@ -35,7 +38,7 @@ Så här redigerar du metadataschema:
 
    Sidans URL är:
 
-   ```
+   ```html
    https://<hostname>:<port>/mnt/overlay/dam/gui/content/metadataschemaeditor/
     schemalist.html/forms/aem-authored
    ```
@@ -58,7 +61,7 @@ Innan du utför följande steg ska du läsa [Förutsättning](../../forms/using/
 
 Om du vill skapa en grupp och lägga till medlemmar i den går du till **Verktyg** > **Åtgärder** > **Säkerhet** > **Grupper**.
 Mer information finns i [Användaradministration och -tjänster](/help/sites-administering/security.md).
-Se till att du lägger till gruppen som du skapar som medlem i den körklara användargruppen: Skicka **blanketter till granskare**. Användargruppen levereras med AEM Forms och ser till att användare läggs till som granskare.
+Se till att du lägger till gruppen som du skapar som medlem i den körklara användargruppen: **formulärinlämning-granskare**. Den här användargruppen levereras med AEM Forms och ser till att användare läggs till som granskare.
 
 Så här associerar du användargrupper med ett anpassat formulär:
 
@@ -71,7 +74,7 @@ Så här associerar du användargrupper med ett anpassat formulär:
 
 >[!NOTE]
 >
->Replikera användare och formulär för att säkerställa tillgänglighet för användare och formulär i fjärrimplementeringen av AEM Forms.
+>Replikera användare och formulär för att säkerställa att användare och formulär är tillgängliga i fjärrimplementeringen av AEM Forms.
 >
 >Se till att alla användare replikeras som granskningsmedlemmar i användargrupperna i fjärrimplementeringen.
 
