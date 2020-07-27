@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/maintaining_the_aem_forms_database
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: a62b68b4-7735-49b1-8938-f0d9e4c4a051
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '413'
+ht-degree: 0%
 
 ---
 
@@ -19,9 +22,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 Följande IBM DB2-kommandon rekommenderas för regelbundet underhåll av din AEM-formulärdatabas. Detaljerad information om underhåll och prestandajustering för din DB2-databas finns i *IBM DB2 Administration Guide*.
 
-* **** runstats: Det här kommandot uppdaterar statistik som beskriver de fysiska egenskaperna i en databastabell, tillsammans med tillhörande index. Dynamiska SQL-satser som genereras av AEM-formulär använder automatiskt den uppdaterade statistiken, men statiska SQL-satser som skapats i en databas kräver att `db2rbind` kommandot också körs.
-* **** db2rbind: Det här kommandot binder om alla paket i databasen. Använd det här kommandot när du har kört `runstats` verktyget för att validera alla paket i databasen igen.
-* **** omordningstabell eller index: Det här kommandot kontrollerar om det krävs en omorganisering av vissa tabeller och index.
+* **runstats:** Det här kommandot uppdaterar statistik som beskriver de fysiska egenskaperna i en databastabell, tillsammans med tillhörande index. Dynamiska SQL-satser som genereras av AEM-formulär använder automatiskt den uppdaterade statistiken, men statiska SQL-satser som skapats i en databas kräver att `db2rbind` kommandot också körs.
+* **db2rbind:** Det här kommandot binder om alla paket i databasen. Använd det här kommandot när du har kört `runstats` verktyget för att validera alla paket i databasen igen.
+* **omordningstabell eller index:** Det här kommandot kontrollerar om det krävs en omorganisering av vissa tabeller och index.
 
    I takt med att databaserna växer och förändras är det viktigt att tabellstatistiken beräknas om för att förbättra databasens prestanda och bör göras regelbundet. Dessa kommandon kan köras antingen manuellt med skript eller med ett cron-jobb.
 
@@ -43,7 +46,7 @@ Kör `runstats` kommandot på följande databastabeller och index för AEM-formu
 
 Korrekt syntax och användning finns i dokumentationen från databastillverkaren. Nedan `<schema>` används för att ange det schema som är associerat med ditt DB2-användarnamn. Om du har en enkel standardinstallation av DB2 är detta databasens schemanamn.
 
-```as3
+```sql
      TABLE <schema>.EDCPRINCIPALGROUPENTITY
  
      TABLE <schema>.EDCPRINCIPALGRPCTMNTENTITY
@@ -69,7 +72,7 @@ Korrekt syntax och användning finns i dokumentationen från databastillverkaren
 
 Kör `reorg` kommandot på följande databastabeller och index för AEM-formulär. Korrekt syntax och användning finns i dokumentationen från databastillverkaren.
 
-```as3
+```sql
      TABLE <schema>.EDCPRINCIPALGROUPENTITY
  
      TABLE <schema>.EDCPRINCIPALGRPCTMNTENTITY
