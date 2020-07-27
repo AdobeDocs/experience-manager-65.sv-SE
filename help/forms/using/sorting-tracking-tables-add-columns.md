@@ -1,15 +1,18 @@
 ---
 title: Anpassa spårningstabeller
 seo-title: Anpassa spårningstabeller
-description: Anpassa visningen av information om användarprocesser i uppgiftstabellen som visas på fliken Spårning på arbetsytan i AEM Forms.
-seo-description: Anpassa visningen av information om användarprocesser i uppgiftstabellen som visas på fliken Spårning på arbetsytan i AEM Forms.
+description: Anpassa visningen av information om användarprocesser i uppgiftstabellen som visas på fliken Spåra på arbetsytan i AEM Forms.
+seo-description: Anpassa visningen av information om användarprocesser i uppgiftstabellen som visas på fliken Spåra på arbetsytan i AEM Forms.
 uuid: 13d6ebf2-99d5-434f-85f9-b0cba5f5751a
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: bb7a6e9f-4f28-4d97-8a0c-949259fd6857
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '356'
+ht-degree: 1%
 
 ---
 
@@ -113,13 +116,13 @@ De återstående attributen i aktivitetsmodellen som är tillgängliga för visn
  </tbody>
 </table>
 
-För följande anpassningar i uppgiftstabellen måste du göra semantiska ändringar i källkoden. Se [Introduktion till anpassning av arbetsytan](/help/forms/using/introduction-customizing-html-workspace.md) i AEM Forms för hur du kan göra semantiska ändringar med hjälp av arbetsytans SDK och skapa ett minipaket från den ändrade källan.
+För följande anpassningar i uppgiftstabellen måste du göra semantiska ändringar i källkoden. Se [Introduktion till att anpassa arbetsytan](/help/forms/using/introduction-customizing-html-workspace.md) AEM Forms för hur du kan göra semantiska ändringar med hjälp av arbetsytans SDK och skapa ett minipaket från den ändrade källan.
 
 ## Ändra tabellkolumner och deras ordning {#changing-table-columns-and-their-order}
 
 1. Om du vill ändra uppgiftsattributen som visas i tabellen och deras ordning konfigurerar du filen /ws/js/runtime/templates/processinstancehistory.html :
 
-   ```as3
+   ```html
    <table>
        <thead>
            <tr>
@@ -134,7 +137,7 @@ För följande anpassningar i uppgiftstabellen måste du göra semantiska ändri
    </table>
    ```
 
-   ```as3
+   ```html
    <table>
        <tbody>
            <%_.each(obj, function(task){%>
@@ -157,7 +160,7 @@ Så här sorterar du uppgiftslisttabellen när du klickar på kolumnrubriken:
 
 1. Registrera en klickningshanterare för `.fixedTaskTableHeader th` i filen `js/runtime/views/processinstancehistory.js`.
 
-   ```as3
+   ```javascript
    events: {
        //other handlers
        "click .fixedTaskTableHeader th": "onTaskTableHeaderClick",
@@ -167,7 +170,7 @@ Så här sorterar du uppgiftslisttabellen när du klickar på kolumnrubriken:
 
    Anropa funktionen för i hanteraren `onTaskTableHeaderClick` `js/runtime/util/history.js`.
 
-   ```as3
+   ```javascript
    onTaskTableHeaderClick: function (event) {
            history.onTaskTableHeaderClick(event);
    }
@@ -179,7 +182,7 @@ Så här sorterar du uppgiftslisttabellen när du klickar på kolumnrubriken:
 
    Sorteringen görs med sorteringsfunktionen för ryggrad i aktivitetslistsamlingen genom att en jämförelsefunktion anges.
 
-   ```as3
+   ```javascript
        return {
            //other methods
            onTaskTableHeaderClick  : onTaskTableHeaderClick,
@@ -187,7 +190,7 @@ Så här sorterar du uppgiftslisttabellen när du klickar på kolumnrubriken:
        };
    ```
 
-   ```as3
+   ```javascript
    onTaskTableHeaderClick = function (event) {
            var target = $(event.target),
             comparator,
