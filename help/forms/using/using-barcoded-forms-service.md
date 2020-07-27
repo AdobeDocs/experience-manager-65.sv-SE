@@ -10,7 +10,10 @@ topic-tags: document_services
 discoiquuid: d431c4cb-e4be-41a5-8085-42393d4d468c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1042'
+ht-degree: 1%
 
 ---
 
@@ -128,7 +131,7 @@ Tänk också på följande begränsningar när du använder tjänsten Barcoded F
 
 Tjänsten kan dessutom avkoda alla streckkoder som har en symbolik som stöds om ovanstående begränsningar iakttas. Mer information om hur du skapar interaktiva streckkodade formulär finns i [Designer-hjälpen](https://www.adobe.com/go/learn_aemforms_designer_63).
 
-## Konfigurera egenskaper för tjänsten {#configureproperties}
+## Konfigurera egenskaper för tjänsten   {#configureproperties}
 
 Du kan använda **AEMFD Barcoded Forms Service** i AEM Console för att konfigurera egenskaper för den här tjänsten. Standardwebbadressen för AEM-konsolen är `https://[host]:'port'/system/console/configMgr`.
 
@@ -144,7 +147,7 @@ Barcoded Forms Service tillhandahåller följande två API:er:
 
 Följande exempelkod avkodar en streckkod i ett dokument och sparar XML-utdata på disken.
 
-```java
+```jsp
 <%@ page import="java.util.List,
                 com.adobe.fd.bcf.api.BarcodedFormsService,
                 com.adobe.fd.bcf.api.CharSet,
