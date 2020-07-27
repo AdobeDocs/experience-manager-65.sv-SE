@@ -1,21 +1,24 @@
 ---
-title: Välj en användare eller grupp dynamiskt för AEM Forms-baserade arbetsflödessteg
-seo-title: Välj en användare eller grupp dynamiskt för AEM Forms-baserade arbetsflödessteg
-description: 'Lär dig hur du väljer en användare eller grupp för ett AEM Forms-arbetsflöde vid körning. '
-seo-description: 'Lär dig hur du väljer en användare eller grupp för ett AEM Forms-arbetsflöde vid körning. '
+title: Markera en användare eller grupp dynamiskt för steg i ett AEM Forms-baserat arbetsflöde
+seo-title: Markera en användare eller grupp dynamiskt för steg i ett AEM Forms-baserat arbetsflöde
+description: 'Lär dig hur du väljer en användare eller grupp för ett arbetsflöde för AEM Forms vid körning. '
+seo-description: 'Lär dig hur du väljer en användare eller grupp för ett arbetsflöde för AEM Forms vid körning. '
 uuid: 19dcbda4-61af-40b3-b10b-68a341373410
 content-type: troubleshooting
 topic-tags: publish
 discoiquuid: e6c9f3bb-8f20-4889-86f4-d30578fb1c51
 translation-type: tm+mt
-source-git-commit: 997a35b331385738a8d4a3fcab89c950ed4b7d33
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '927'
+ht-degree: 0%
 
 ---
 
 
-# Välj en användare eller grupp dynamiskt för AEM Forms-baserade arbetsflödessteg {#dynamically-select-a-user-or-group-for-aem-forms-centric-workflow-steps}
+# Markera en användare eller grupp dynamiskt för steg i ett AEM Forms-baserat arbetsflöde {#dynamically-select-a-user-or-group-for-aem-forms-centric-workflow-steps}
 
-Lär dig hur du väljer en användare eller grupp för ett AEM Forms-arbetsflöde vid körning.
+Lär dig hur du väljer en användare eller grupp för ett arbetsflöde för AEM Forms vid körning.
 
 I stora organisationer finns det krav på att dynamiskt välja användare för en process. Du kan till exempel välja en fältagent som ska betjäna en kund baserat på hur nära kunden är agenten. I så fall väljs agenten dynamiskt.
 
@@ -31,13 +34,13 @@ ECMAScript är ett skriptspråk. Det används för skript och serverprogram på 
    * (Sökväg för steget Tilldela uppgift) `/apps/fd/dashboard/scripts/participantChooser`
    * (Sökväg för signering, steg) `/apps/fd/workflow/scripts/adobesign`
 
-1. Lägg till ECMAScript, som har logiken för att dynamiskt välja en användare, i .ecma-filen. Klicka på **[!UICONTROL Spara alla]**.
+1. Lägg till ECMAScript, som har logiken för att dynamiskt välja en användare, i .ecma-filen. Klicka på **[!UICONTROL Save All]**.
 
    Exempelskript finns i [Exempel på ECMAScript för dynamiskt val av användare eller grupp](/help/forms/using/dynamically-select-a-user-or-group-for-aem-workflow.md#sample-ecmascripts-to-dynamically-choose-a-user-or-a-group).
 
 1. Lägg till skriptets visningsnamn. Det här namnet visas i arbetsflödessteg. Så här anger du namnet:
 
-   1. Expandera skriptnoden, högerklicka på noden **[!UICONTROL jcr:content]** och klicka på **[!UICONTROL Mixins]**.
+   1. Expandera skriptnoden, högerklicka på **[!UICONTROL jcr:content]** noden och klicka på **[!UICONTROL Mixins]**.
    1. Lägg till `mix:title` egenskapen i dialogrutan Redigera mixar och klicka på **OK**.
    1. Lägg till följande egenskap i jcr:content-noden i skriptet:
 
@@ -53,7 +56,7 @@ ECMAScript är ett skriptspråk. Det används för skript och serverprogram på 
 
 I följande exempel på ECMAScript väljs en tilldelad användare dynamiskt för steget Tilldela uppgift. I det här skriptet väljs en användare baserat på sökvägen till nyttolasten. Innan du använder det här skriptet måste du se till att alla användare som nämns i skriptet finns i AEM. Om de användare som anges i skriptet inte finns i AEM kan den relaterade processen misslyckas.
 
-```
+```javascript
 function getParticipant() {
 
 var workflowData = graniteWorkItem.getWorkflowData();
@@ -77,7 +80,7 @@ I följande exempel på ECMAScript väljs dynamiskt en tilldelad för Adobe Sign
 >
 >När du använder ECMAScript för Adobe Sign måste skriptet finnas i crx-database på /apps/fd/workflow/scripts/adobesign/, och det ska ha en funktion som heter getAdobeSignRecipients för att returnera en lista över användarna.
 
-```
+```javascript
 function getAdobeSignRecipients() {
 
     var recipientSetInfos = new Packages.java.util.ArrayList();
@@ -118,9 +121,9 @@ Du kan använda Java-gränssnittet [RecipientInfoSpecifier](https://helpx.adobe.
 
 Du behöver [AEM Forms Client SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) jar- och [granite jar](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/) -filer för att kompilera kodexemplet som listas nedan. Lägg till dessa jar-filer som externa beroenden i OSGi-paketprojektet. Du kan använda vilken Java-utvecklingsmiljö som helst för att skapa ett OSGi-paket. I följande procedur beskrivs hur du använder Eclipse för att skapa ett OSGi-paket:
 
-1. Öppna Eclipse IDE. Navigera till **[!UICONTROL Arkiv]**> **[!UICONTROL Nytt projekt]**.
+1. Öppna Eclipse IDE. Navigera till **[!UICONTROL File]**> **[!UICONTROL New Project]**.
 1. På skärmen Välj en guide väljer du **[!UICONTROL Maven Project]** och klickar på **[!UICONTROL Next]**.
-1. I New Maven Project, keep defaults, and click **[!UICONTROL Next]**. Markera en arketyp och klicka på **[!UICONTROL Nästa]**. Exempel: maven-arketype-quickstart. Ange **[!UICONTROL grupp-ID]**, **[!UICONTROL artefakt-ID]**, **[!UICONTROL version]** och **[!UICONTROL paket]** för projektet och klicka på **[!UICONTROL Slutför]**. Projektet skapas.
+1. I New Maven Project håller du standardinställningarna och klickar **[!UICONTROL Next]**. Markera en arkityp och klicka på **[!UICONTROL Next]**. Exempel: maven-arketype-quickstart. Ange **[!UICONTROL Group Id]**, **[!UICONTROL Artifact Id]**, **[!UICONTROL version]** och **[!UICONTROL package]** för projektet och klicka på **[!UICONTROL Finish]**. Projektet skapas.
 1. Öppna filen pom.xml och redigera och ersätt allt innehåll i filen med följande:
 
    ```xml
