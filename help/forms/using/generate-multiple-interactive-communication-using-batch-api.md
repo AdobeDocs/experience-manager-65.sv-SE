@@ -6,7 +6,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: interactive-communication
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '2197'
 ht-degree: 1%
@@ -28,7 +28,7 @@ Du kombinerar en post med en interaktiv kommunikationsmall för att skapa en int
 
 **En enda post i en JSON-fil**
 
-```JSON
+```json
 {
    "employee": {
        "name": "Sara",
@@ -41,7 +41,7 @@ Du kombinerar en post med en interaktiv kommunikationsmall för att skapa en int
 
 **Flera poster i en JSON-fil**
 
-```JSON
+```json
 [{
    "employee": {
        "name": "John",
@@ -179,7 +179,7 @@ Innan du distribuerar Java-servern måste du se till att du har en interaktiv ko
 1. [Bygg och driftsätt ett AEM-projekt med Apache Maven](https://helpx.adobe.com/experience-manager/using/maven_arch13.html) i din AEM-instans.
 1. Lägg till [AEM Forms Client SDK version 6.0.12](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/) eller senare i listan över beroenden för POM-filen i ditt AEM-projekt. Till exempel,
 
-   ```XML
+   ```xml
        <dependency>
            <groupId>com.adobe.aemfd</groupId>
            <artifactId>aemfd-client-sdk</artifactId>
@@ -345,12 +345,15 @@ Sedan visas webbkanalen för den interaktiva kommunikationen i följande URL på
 Förutom att spara data i filsystemet kan du lagra JSON-filer i CRX-databas, filsystem, webbserver eller få åtkomst till data via OSGI-förifyllningstjänsten. Syntax för att sammanfoga data med olika protokoll är:
 
 * **CRX-protokoll**
+
    `http://host:port/<path-to-ic>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=crx:///tmp/fd/af/mergedJsonData.json`
 
 * **Filprotokoll**
+
    `http://host:port/<path-to-ic>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=file:///C:/Users/af/mergedJsonData.json`
 
 * **Prefill Service-protokoll**
+
    `http://host:port/<path-to-ic>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=service://[SERVICE_NAME]/[IDENTIFIER]`
 
    SERVICE_NAME refererar till namnet på OSGI-förifyllningstjänsten. Se Skapa och kör en förifyllningstjänst.
@@ -358,6 +361,7 @@ Förutom att spara data i filsystemet kan du lagra JSON-filer i CRX-databas, fil
    IDENTIFIER avser alla metadata som krävs av OSGI-förifyllningstjänsten för att hämta förifyllda data. En identifierare för den inloggade användaren är ett exempel på metadata som kan användas.
 
 * **HTTP-protokoll**
+
    `http://host:port/<path-to-ic>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=http://localhost:8000/somesamplexmlfile.xml`
 
 >[!NOTE]
