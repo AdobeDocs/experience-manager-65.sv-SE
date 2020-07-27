@@ -10,12 +10,15 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: de527d50-991b-4ca3-a8ac-44d5cab988e9
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '18972'
+ht-degree: 0%
 
 ---
 
 
-# Skapa dokumentutdataströmmar {#creating-document-output-streams}
+# Skapa dokumentutdataströmmar  {#creating-document-output-streams}
 
 **Om utdatatjänsten**
 
@@ -66,7 +69,7 @@ Du kan utföra följande uppgifter med hjälp av utdatatjänsten:
 
 >[!NOTE]
 >
->Mer information om utdatatjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om utdatatjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ## Skapa PDF-dokument {#creating-pdf-documents}
 
@@ -74,11 +77,11 @@ Du kan använda utdatatjänsten för att skapa ett PDF-dokument som är baserat 
 
 Om du vill skapa ett PDF-dokument som är avsett för långtidsförvaring rekommenderar vi att du skapar ett PDF/A-dokument. (Se [Skapa PDF/A-dokument](creating-document-output-streams.md#creating-pdf-a-documents).)
 
-Använd Forms-tjänsten om du vill skapa ett interaktivt PDF-formulär där användaren kan ange data. (Se [Återge interaktiva PDF-formulär](/help/forms/developing/rendering-forms.md#rendering-interactive-pdf-forms).)
+Använd Forms-tjänsten om du vill skapa ett interaktivt PDF-formulär där användaren kan ange data. (Se [Återge interaktiv PDF forms](/help/forms/developing/rendering-forms.md#rendering-interactive-pdf-forms).)
 
 >[!NOTE]
 >
->Mer information om utdatatjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om utdatatjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary-of-steps}
 
@@ -104,7 +107,7 @@ Följande JAR-filer måste läggas till i projektets klassökväg:
 * adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss)
 * jbossall-client.jar (krävs om AEM Forms distribueras på JBoss)
 
-Om AEM Forms används på en J2EE-programserver som inte är JBoss måste du ersätta filerna adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern där AEM Forms används.
+Om AEM Forms distribueras på en J2EE-programserver som stöds och inte är JBoss, måste du ersätta filerna adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern som AEM Forms är distribuerad på.
 
 **Skapa ett Output Client-objekt**
 
@@ -120,7 +123,7 @@ Titta på följande exempelformulär för låneansökan.
 
 Om du vill sammanfoga data i den här formulärdesignen måste du skapa en XML-datakälla som motsvarar formuläret. Följande XML representerar en XDP XML-datakälla som motsvarar exempelformuläret för låneansökan.
 
-```as3
+```xml
  <?xml version="1.0" encoding="UTF-8" ?>
  - <xfa:datasets xmlns:xfa="https://www.xfa.org/schema/xfa-data/1.0/">
  - <xfa:data>
@@ -167,7 +170,7 @@ Om du använder ett taggat Acrobat-formulär som indata kan du inte använda Jav
 
 >[!NOTE]
 >
->Om du inte anger alternativ för återgivning vid körning används standardvärden. Mer information om alternativ för återgivning vid körning finns i `RenderOptionsSpec` klassreferensen. (Se API-referens för [AEM-formulär](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)).
+>Om du inte anger alternativ för återgivning vid körning används standardvärden. Mer information om alternativ för återgivning vid körning finns i `RenderOptionsSpec` klassreferensen. (Se API-referens för [AEM Forms](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)).
 
 **Generera ett PDF-dokument**
 
@@ -179,7 +182,7 @@ När du genererar ett PDF-dokument anger du de URI-värden som krävs av utdatat
 
 Om du vill få åtkomst till filen Loan.xdp som visas i föregående bild anger du `repository:///Applications/FormsApplication/1.0/FormsFolder/` som den tredje parametern som skickas till `OutputClient` objektets `generatePDFOutput` metod. Ange formulärnamnet (*Loan.xdp*) som den andra parametern som skickas till `OutputClient` objektets `generatePDFOutput` metod.
 
-Om XDP-filen innehåller bilder (eller andra resurser som fragment) placerar du resurserna i samma programmapp som XDP-filen. I AEM Forms används innehållets rot-URI som grundsökväg för att matcha referenser till bilder. Om filen Loan.xdp till exempel innehåller en bild kontrollerar du att du placerar bilden i `Applications/FormsApplication/1.0/FormsFolder/`.
+Om XDP-filen innehåller bilder (eller andra resurser som fragment) placerar du resurserna i samma programmapp som XDP-filen. AEM Forms använder innehållets rot-URI som grundsökväg för att matcha referenser till bilder. Om filen Loan.xdp till exempel innehåller en bild kontrollerar du att du placerar bilden i `Applications/FormsApplication/1.0/FormsFolder/`.
 
 >[!NOTE]
 >
@@ -232,6 +235,7 @@ Skapa ett PDF-dokument med hjälp av utdata-API (Java):
 
    * Skapa ett `RenderOptionsSpec` objekt med hjälp av dess konstruktor.
    * Cachelagra formulärdesignen för att förbättra prestanda för Output-tjänsten genom att anropa `RenderOptionsSpec` objektets `setCacheEnabled` och skicka `true`.
+
    >[!NOTE]
    >
    >Du kan inte ange version av PDF-dokumentet med `RenderOptionsSpec` objektets `setPdfVersion` metod om indatadokumentet är ett Acrobat-formulär (ett formulär som har skapats i Acrobat) eller ett XFA-dokument som är signerat eller certifierat. PDF-utdatadokumentet behåller den ursprungliga PDF-versionen. På samma sätt kan du inte ange alternativet taggad Adobe PDF genom att anropa `RenderOptionsSpec` objektets `setTaggedPDF` metod om indatadokumentet är ett Acrobat-formulär eller ett signerat eller certifierat XFA-dokument.
@@ -250,6 +254,7 @@ Skapa ett PDF-dokument med hjälp av utdata-API (Java):
    * Ett `PDFOutputOptionsSpec` objekt som innehåller alternativ för PDF-körning.
    * Ett `RenderOptionsSpec` objekt som innehåller alternativ för återgivning vid körning.
    * Det objekt `com.adobe.idp.Document` som innehåller XML-datakällan som innehåller data som ska sammanfogas med formulärdesignen.
+
    Metoden returnerar `generatePDFOutput` ett `OutputResult` objekt som innehåller resultatet av åtgärden.
 
    >[!NOTE]
@@ -269,6 +274,7 @@ Skapa ett PDF-dokument med hjälp av utdata-API (Java):
    * Hämta ett `com.adobe.idp.Document` objekt som representerar `generatePDFOutput` åtgärdens status genom att anropa `OutputResult` objektets `getStatusDoc` metod. Den här metoden returnerar status-XML-data som anger om åtgärden lyckades.
    * Skapa ett `java.io.File` objekt som innehåller resultatet av åtgärden. Kontrollera att filnamnstillägget är .xml.
    * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att kopiera innehållet i `com.adobe.idp.Document` objektet till filen (se till att du använder det `com.adobe.idp.Document` objekt som returnerades av `getStatusDoc` metoden).
+
    Även om utdatatjänsten skriver PDF-dokumentet till den plats som anges av argumentet som skickas till `PDFOutputOptionsSpec` objektets `setFileURI` metod, kan du hämta PDF/A-dokumentet genom att anropa `OutputResult` objektets `getGeneratedDoc` metod.
 
 **Se även**
@@ -325,6 +331,7 @@ Skapa ett PDF-dokument med hjälp av Output API (webbtjänsten):
 
    * Skapa ett `RenderOptionsSpec` objekt med hjälp av dess konstruktor.
    * Cachelagra formulärdesignen för att förbättra utdatatjänstens prestanda genom att tilldela värdet `true` till `RenderOptionsSpec` objektets `cacheEnabled` datamedlem.
+
    >[!NOTE]
    >
    >Du kan inte ange version av PDF-dokumentet med `RenderOptionsSpec` objektets `setPdfVersion` metod om indatadokumentet är ett Acrobat-formulär (ett formulär som har skapats i Acrobat) eller ett XFA-dokument som är signerat eller certifierat. PDF-utdatadokumentet behåller den ursprungliga PDF-versionen. På samma sätt kan du inte ange alternativet taggad Adobe PDF genom att anropa `RenderOptionsSpec` objektets `setTaggedPDF`*-metod om indatadokumentet är ett Acrobat-formulär eller ett signerat eller certifierat XFA-dokument.*
@@ -346,6 +353,7 @@ Skapa ett PDF-dokument med hjälp av Output API (webbtjänsten):
    * Ett `BLOB` objekt som fylls i av `generatePDFOutput` metoden. Metoden fyller i det här objektet med genererade metadata som beskriver dokumentet. `generatePDFOutput` (Det här parametervärdet krävs bara för webbtjänstanrop).
    * Ett `BLOB` objekt som fylls i av `generatePDFOutput` metoden. Metoden `generatePDFOutput` fyller i objektet med resultatdata. (Det här parametervärdet krävs bara för webbtjänstanrop).
    * Ett `OutputResult` objekt som innehåller resultatet av åtgärden. (Det här parametervärdet krävs bara för webbtjänstanrop).
+
    >[!NOTE]
    >
    >När du genererar ett PDF-dokument genom att anropa `generatePDFOutput` metoden ska du vara medveten om att du inte kan sammanfoga data med ett signerat eller certifierat XFA PDF-formulär. (Se [Signera och certifiera dokument](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-and-certifying-documents)*digitalt.)*
@@ -360,13 +368,14 @@ Skapa ett PDF-dokument med hjälp av Output API (webbtjänsten):
    * Skapa en bytearray som lagrar datainnehållet för det objekt `BLOB` som fylldes med resultatdata av `OutputServiceService` objektets `generatePDFOutput` -metod (den åttonde parametern). Fyll i bytearrayen genom att hämta värdet för `BLOB` objektets `MTOM``field`.
    * Skapa ett `System.IO.BinaryWriter` objekt genom att anropa dess konstruktor och skicka `System.IO.FileStream` objektet.
    * Skriv bytearrayens innehåll till XML-filen genom att anropa `System.IO.BinaryWriter` objektets `Write` metod och skicka bytearrayen.
+
    Se även
 
    [Sammanfattning av steg](creating-document-output-streams.md#summary-of-steps)
 
-   [Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+   [Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-   [Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+   [Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
    >[!NOTE]
    >
@@ -394,7 +403,7 @@ När ett PDF/A-dokument öppnas i Acrobat visas ett meddelande som bekräftar at
 
 >[!NOTE]
 >
->Mer information om utdatatjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om utdatatjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-1}
 
@@ -420,7 +429,7 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 * adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss)
 * jbossall-client.jar (krävs om AEM Forms distribueras på JBoss)
 
-Om AEM Forms används på en J2EE-programserver som inte är JBoss måste du ersätta filerna adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern där AEM Forms används.
+Om AEM Forms distribueras på en J2EE-programserver som stöds och inte är JBoss, måste du ersätta filerna adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern som AEM Forms är distribuerad på.
 
 **Skapa ett Output Client-objekt**
 
@@ -492,6 +501,7 @@ Skapa ett PDF/A-dokument med hjälp av utdata-API (Java):
    * Skapa ett `RenderOptionsSpec` objekt med hjälp av dess konstruktor.
    * Ange `PDFAConformance` värdet genom att anropa `RenderOptionsSpec` objektets `setPDFAConformance` metod och skicka ett `PDFAConformance` uppräkningsvärde som anger överensstämmelsenivån. Om du till exempel vill ange överensstämmelsenivå A skickar du `PDFAConformance.A`.
    * Ange `PDFARevisionNumber` värdet genom att anropa `RenderOptionsSpec` objektets `setPDFARevisionNumber` metod och skicka `PDFARevisionNumber.Revision_1`.
+
    >[!NOTE]
    >
    >PDF-versionen av ett PDF/A-dokument är 1.4 oavsett vilket värde du anger för `RenderOptionsSpec` objektets `setPdfVersion`*metod.*
@@ -506,6 +516,7 @@ Skapa ett PDF/A-dokument med hjälp av utdata-API (Java):
    * Ett `PDFOutputOptionsSpec` objekt som innehåller alternativ för PDF-körning.
    * Ett `RenderOptionsSpec` objekt som innehåller alternativ för återgivning vid körning.
    * Det objekt `com.adobe.idp.Document` som innehåller XML-datakällan som innehåller data som ska sammanfogas med formulärdesignen.
+
    Metoden returnerar `generatePDFOutput` ett `OutputResult` objekt som innehåller resultatet av åtgärden.
 
    >[!NOTE]
@@ -521,6 +532,7 @@ Skapa ett PDF/A-dokument med hjälp av utdata-API (Java):
    * Skapa ett `com.adobe.idp.Document` objekt som representerar `generatePDFOutput` metodens status genom att anropa `OutputResult` objektets `getStatusDoc` metod.
    * Skapa ett `java.io.File` objekt som innehåller resultatet av åtgärden. Kontrollera att filnamnstillägget är .xml.
    * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att kopiera innehållet i `com.adobe.idp.Document` objektet till filen (se till att du använder det `com.adobe.idp.Document` objekt som returnerades av `getStatusDoc` metoden).
+
    >[!NOTE]
    >
    >Även om utdatatjänsten skriver PDF/A-dokumentet till den plats som anges av argumentet som skickas till `PDFOutputOptionsSpec` objektets `setFileURI` metod, kan du hämta PDF/A-dokumentet genom att anropa `OutputResult` objektets `getGeneratedDoc` metod.
@@ -578,6 +590,7 @@ Skapa ett PDF/A-dokument med hjälp av Output API (webbtjänsten):
    * Skapa ett `RenderOptionsSpec` objekt med hjälp av dess konstruktor.
    * Ange `PDFAConformance` värdet genom att tilldela ett `PDFAConformance` uppräkningsvärde till `RenderOptionsSpec` objektets `PDFAConformance` datamedlem. Om du till exempel vill ange överensstämmelsenivå A tilldelar du `PDFAConformance.A` den här datamedlemmen.
    * Ange `PDFARevisionNumber` värdet genom att tilldela ett `PDFARevisionNumber` uppräkningsvärde till `RenderOptionsSpec` objektets `PDFARevisionNumber` datamedlem. Tilldela `PDFARevisionNumber.Revision_1` den här datamedlemmen.
+
    >[!NOTE]
    >
    >PDF-versionen av ett PDF/A-dokument är 1.4 oavsett vilket värde du anger.
@@ -595,6 +608,7 @@ Skapa ett PDF/A-dokument med hjälp av Output API (webbtjänsten):
    * Ett `BLOB` objekt som fylls i av `generatePDFOutput` metoden. Metoden fyller i det här objektet med genererade metadata som beskriver dokumentet. `generatePDFOutput` (Det här parametervärdet krävs endast för webbtjänstanrop.)
    * Ett `BLOB` objekt som fylls i av `generatePDFOutput` metoden. Metoden `generatePDFOutput` fyller i objektet med resultatdata. (Det här parametervärdet krävs endast för webbtjänstanrop.)
    * Ett `OutputResult` objekt som innehåller resultatet av åtgärden. (Det här parametervärdet krävs endast för webbtjänstanrop.)
+
    >[!NOTE]
    >
    >Du kan också skapa ett PDF/A-dokument genom att anropa `OutputClient` objektets `generatePDFOutput`2-metod. (Se [Skicka dokument i innehållstjänster (borttaget) till utdatatjänsten](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service).)
@@ -610,15 +624,15 @@ Skapa ett PDF/A-dokument med hjälp av Output API (webbtjänsten):
 
 [Sammanfattning av steg](creating-document-output-streams.md#summary-of-steps)
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## Skicka dokument som finns i innehållstjänster (borttagna) till utdatatjänsten {#passing-documents-located-in-content-services-deprecated-to-the-output-service}
 
 Output-tjänsten återger ett icke-interaktivt PDF-formulär som är baserat på en formulärdesign som vanligtvis sparas som en XDP-fil och skapas i Designer. Du kan skicka ett `com.adobe.idp.Document` objekt som innehåller formulärdesignen till utdatatjänsten. Utdatatjänsten återger sedan den formulärdesign som finns i `com.adobe.idp.Document` objektet.
 
-En fördel med att skicka ett `com.adobe.idp.Document` objekt till Output-tjänsten är att andra AEM Forms-tjänståtgärder returnerar en `com.adobe.idp.Document` instans. Det innebär att du kan hämta en `com.adobe.idp.Document` instans från en annan tjänståtgärd och återge den. Anta till exempel att en XDP-fil lagras i en Content Services-nod (utgått) med namnet `/Company Home/Form Designs`, vilket visas i följande bild.
+En fördel med att skicka ett `com.adobe.idp.Document` objekt till utdatatjänsten är att andra AEM Forms-tjänståtgärder returnerar en `com.adobe.idp.Document` instans. Det innebär att du kan hämta en `com.adobe.idp.Document` instans från en annan tjänståtgärd och återge den. Anta till exempel att en XDP-fil lagras i en Content Services-nod (utgått) med namnet `/Company Home/Form Designs`, vilket visas i följande bild.
 
 Du kan hämta Loan.xdp via programkod från Content Services (utgått) och skicka XDP-filen till Output-tjänsten i ett `com.adobe.idp.Document` objekt.
 
@@ -695,6 +709,7 @@ Skicka ett dokument som hämtats från Content Services (utgått) med hjälp av 
    * Ett strängvärde som anger den lagringsplats där innehållet läggs till. Standardbutiken är `SpacesStore`. Detta värde är en obligatorisk parameter.
    * Ett strängvärde som anger den fullständigt kvalificerade sökvägen för innehållet som ska hämtas (till exempel `/Company Home/Form Designs/Loan.xdp`). Detta värde är en obligatorisk parameter.
    * Ett strängvärde som anger versionen. Det här värdet är en valfri parameter och du kan skicka en tom sträng. I det här fallet hämtas den senaste versionen.
+
    Metoden returnerar `retrieveContent` ett `CRCResult` objekt som innehåller XDP-filen. Hämta en `com.adobe.idp.Document` instans genom att anropa `CRCResult` objektets `getDocument` metod.
 
 1. Återge det icke-interaktiva PDF-formuläret.
@@ -707,6 +722,7 @@ Skicka ett dokument som hämtats från Content Services (utgått) med hjälp av 
    * Ett `PDFOutputOptionsSpec` objekt som innehåller alternativ för PDF-körning.
    * Ett `RenderOptionsSpec` objekt som innehåller alternativ för återgivning vid körning.
    * Det objekt `com.adobe.idp.Document` som innehåller XML-datakällan som innehåller data som ska sammanfogas med formulärdesignen.
+
    Metoden returnerar `generatePDFOutput2` ett `OutputResult` objekt som innehåller resultatet av åtgärden.
 
 1. Utför en åtgärd med formulärdataströmmen.
@@ -733,7 +749,7 @@ Skicka ett dokument som hämtats från innehållstjänster (borttaget) med hjäl
 
 1. Inkludera projektfiler.
 
-   Skapa ett Microsoft .NET-projekt som använder MTOM. Eftersom det här klientprogrammet anropar två AEM Forms-tjänster skapar du två tjänstreferenser. Använd följande WSDL-definition för den tjänstreferens som är kopplad till utdatatjänsten: `http://localhost:8080/soap/services/OutputService?WSDL&lc_version=9.0.1`.
+   Skapa ett Microsoft .NET-projekt som använder MTOM. Eftersom klientprogrammet anropar två AEM Forms-tjänster skapar du två tjänstreferenser. Använd följande WSDL-definition för den tjänstreferens som är kopplad till utdatatjänsten: `http://localhost:8080/soap/services/OutputService?WSDL&lc_version=9.0.1`.
 
    Använd följande WSDL-definition för den tjänstreferens som är kopplad till dokumenthanteringstjänsten: `http://localhost:8080/soap/services/DocumentManagementService?WSDL&lc_version=9.0.1`.
 
@@ -755,6 +771,7 @@ Skicka ett dokument som hämtats från innehållstjänster (borttaget) med hjäl
       * Tilldela motsvarande lösenordsvärde till fältet `OutputServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
    * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
+
    >[!NOTE]
    >
    >Upprepa dessa steg för `DocumentManagementServiceClient`tjänstklienten.
@@ -783,6 +800,7 @@ Skicka ett dokument som hämtats från innehållstjänster (borttaget) med hjäl
    * Det objekt `BLOB` som innehåller XML-datakällan som innehåller data som ska sammanfogas med formulärdesignen.
    * Ett utdataobjekt `BLOB` som fylls i av `generatePDFOutput2` metoden. Metoden fyller i det här objektet med genererade metadata som beskriver dokumentet. `generatePDFOutput2` (Det här parametervärdet krävs bara för webbtjänstanrop).
    * Ett utdataobjekt `OutputResult` som innehåller resultatet av åtgärden. (Det här parametervärdet krävs bara för webbtjänstanrop).
+
    Metoden returnerar `generatePDFOutput2` ett `BLOB` objekt som innehåller det icke-interaktiva PDF-formuläret.
 
 1. Utför en åtgärd med formulärdataströmmen.
@@ -796,13 +814,13 @@ Skicka ett dokument som hämtats från innehållstjänster (borttaget) med hjäl
 
 [Sammanfattning av steg](creating-document-output-streams.md#summary-of-steps)
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
 ## Skicka dokument som finns i databasen till utdatatjänsten {#passing-documents-located-in-the-repository-to-the-output-service}
 
 Output-tjänsten återger ett icke-interaktivt PDF-formulär som är baserat på en formulärdesign som vanligtvis sparas som en XDP-fil och skapas i Designer. Du kan skicka ett `com.adobe.idp.Document` objekt som innehåller formulärdesignen till utdatatjänsten. Utdatatjänsten återger sedan den formulärdesign som finns i `com.adobe.idp.Document` objektet.
 
-En fördel med att skicka ett `com.adobe.idp.Document` objekt till Output-tjänsten är att andra AEM Forms-tjänståtgärder returnerar en `com.adobe.idp.Document` instans. Det innebär att du kan hämta en `com.adobe.idp.Document` instans från en annan tjänståtgärd och återge den. Anta till exempel att en XDP-fil lagras i AEM Forms-databasen, vilket visas i följande bild.
+En fördel med att skicka ett `com.adobe.idp.Document` objekt till utdatatjänsten är att andra AEM Forms-tjänståtgärder returnerar en `com.adobe.idp.Document` instans. Det innebär att du kan hämta en `com.adobe.idp.Document` instans från en annan tjänståtgärd och återge den. Anta till exempel att en XDP-fil lagras i AEM Forms-databasen, vilket visas i följande bild.
 
 ![pd_pd_formdatabas](assets/pd_pd_formrepository.png)
 
@@ -810,13 +828,13 @@ Mappen *FormsFolder* är en användardefinierad plats i AEM Forms-databasen (den
 
 `Applications/Application-name/Application-version/Folder.../Filename`
 
-Du kan hämta Loan.xdp programmatiskt från AEM Forms-databasen och skicka det till Output-tjänsten inom ett `com.adobe.idp.Document` objekt.
+Du kan hämta Loan.xdp programmatiskt från AEM Forms-databasen och skicka det till utdatatjänsten inom ett `com.adobe.idp.Document` objekt.
 
 Du kan skapa en PDF-fil baserad på en XDP-fil som finns i databasen på något av två sätt. Du kan skicka XDP-platsen med referens eller så kan du hämta XDP-filen från databasen programmässigt och skicka den till utdatatjänsten i en XDP-fil.
 
 [Snabbstart (EJB-läge): Skapa ett PDF-dokument baserat på en XDP-programfil med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-an-application-xdp-file-using-the-java-api) (visar hur du skickar platsen för XDP-filen med referens).
 
-[Snabbstart (EJB-läge): Skicka ett dokument som finns i AEM Forms-databasen till utdatatjänsten med Java-API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api) (visar hur du programmässigt hämtar XDP-filen från AEM Forms-databasen och skickar den till utdatatjänsten i en `com.adobe.idp.Document` instans). (I det här avsnittet beskrivs hur du utför den här uppgiften)
+[Snabbstart (EJB-läge): Skicka ett dokument som finns i AEM Forms-databasen till utdatatjänsten med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api) (visar hur du programmässigt hämtar XDP-filen från AEM Forms-databasen och skickar den till utdatatjänsten i en `com.adobe.idp.Document` instans). (I det här avsnittet beskrivs hur du utför den här uppgiften)
 
 >[!NOTE]
 >
@@ -842,13 +860,13 @@ Innan du programmässigt kan utföra en API-åtgärd för en utdatatjänst skapa
 
 **Hämta formulärdesignen från AEM Forms Repository**
 
-Hämta XDP-filen från AEM Forms-databasen med API:t för databas. (Se [Läsresurser](/help/forms/developing/aem-forms-repository.md#reading-resources).)
+Hämta XDP-filen från AEM Forms-databasen med hjälp av databas-API:t. (Se [Läsresurser](/help/forms/developing/aem-forms-repository.md#reading-resources).)
 
 XDP-filen returneras i en `com.adobe.idp.Document` instans (eller en `BLOB` instans om du använder webbtjänster). Du kan sedan skicka `com.adobe.idp.Document` instansen till utdatatjänsten.
 
 **Återge det icke-interaktiva PDF-formuläret**
 
-Om du vill återge ett icke-interaktivt formulär skickar du den `com.adobe.idp.Document` instans som returnerades med API:t för AEM Forms-databasen.
+Om du vill återge ett icke-interaktivt formulär skickar du den `com.adobe.idp.Document` instans som returnerades med AEM Forms Repository API.
 
 >[!NOTE]
 >
@@ -886,18 +904,19 @@ Skicka ett dokument som hämtats från databasen med hjälp av utdatatjänsten o
 
 1. Hämta formulärdesignen från AEM Forms Repository.
 
-   Anropa `ResourceRepositoryClient` objektets `readResourceContent` metod och skicka ett strängvärde som anger URI-platsen till XDP-filen. Exempel, `/Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`. Detta värde är obligatoriskt. Den här metoden returnerar en `com.adobe.idp.Document` instans som representerar XDP-filen.
+   Anropa `ResourceRepositoryClient` objektets `readResourceContent` metod och skicka ett strängvärde som anger URI-platsen till XDP-filen. Till exempel, `/Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`. Detta värde är obligatoriskt. Den här metoden returnerar en `com.adobe.idp.Document` instans som representerar XDP-filen.
 
 1. Återge det icke-interaktiva PDF-formuläret.
 
    Anropa `OutputClient` objektets `generatePDFOutput2` metod och skicka följande värden:
 
    * Ett `TransformationFormat` uppräkningsvärde. Om du vill generera ett PDF-dokument anger du `TransformationFormat.PDF`.
-   * Ett strängvärde som anger innehållsroten där de ytterligare resurserna, t.ex. bilderna, finns. Exempel, `repository:///Applications/FormsApplication/1.0/FormsFolder/`.
+   * Ett strängvärde som anger innehållsroten där de ytterligare resurserna, t.ex. bilderna, finns. Till exempel, `repository:///Applications/FormsApplication/1.0/FormsFolder/`.
    * Ett `com.adobe.idp.Document` objekt som representerar formulärdesignen (använd instansen som returneras av `ResourceRepositoryClient` objektets `readResourceContent` -metod).
    * Ett `PDFOutputOptionsSpec` objekt som innehåller alternativ för PDF-körning.
    * Ett `RenderOptionsSpec` objekt som innehåller alternativ för återgivning vid körning.
    * Det objekt `com.adobe.idp.Document` som innehåller XML-datakällan som innehåller data som ska sammanfogas med formulärdesignen.
+
    Metoden returnerar `generatePDFOutput2` ett `OutputResult` objekt som innehåller resultatet av åtgärden.
 
 1. Utför en åtgärd med formulärdataströmmen.
@@ -932,7 +951,7 @@ Innan du läser *Skapa PDF-dokument med fragment* bör du bekanta dig med att an
 
 >[!NOTE]
 >
->Mer information om utdatatjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om utdatatjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-4}
 
@@ -1001,6 +1020,7 @@ Skapa ett PDF-dokument baserat på fragment med hjälp av API:t för utdatatjän
    * Ett `com.adobe.idp.Document` objekt som representerar det DDX-dokument som ska användas.
    * Ett `java.util.Map` objekt som innehåller XDP-indatafilerna.
    * Ett `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` objekt som anger körningsalternativen, inklusive standardteckensnitt och jobbloggsnivå.
+
    Metoden returnerar `invokeDDX` ett `com.adobe.livecycle.assembler.client.AssemblerResult` objekt som innehåller det sammansatta XDP-dokumentet. Så här hämtar du det monterade XDP-dokumentet:
 
    * Anropa `AssemblerResult` objektets `getDocuments` metod. Den här metoden returnerar ett `java.util.Map` objekt.
@@ -1018,6 +1038,7 @@ Skapa ett PDF-dokument baserat på fragment med hjälp av API:t för utdatatjän
    * Ett `PDFOutputOptionsSpec` objekt som innehåller alternativ för PDF-körning
    * Ett `RenderOptionsSpec` objekt som innehåller alternativ för återgivning vid körning
    * Det `com.adobe.idp.Document` objekt som innehåller XML-datakällan som innehåller data som ska sammanfogas med formulärdesignen
+
    Metoden returnerar `generatePDFOutput2` ett `OutputResult` objekt som innehåller resultatet av åtgärden
 
 1. Spara PDF-dokumentet som en PDF-fil.
@@ -1046,13 +1067,13 @@ Skapa ett PDF-dokument baserat på fragment med hjälp av API:t för utdatatjän
 
    Skapa ett Microsoft .NET-projekt som använder MTOM. Använd följande WSDL-definition för den tjänstreferens som är kopplad till utdatatjänsten:
 
-   ```as3
+   ```java
     http://localhost:8080/soap/services/OutputService?WSDL&lc_version=9.0.1.
    ```
 
    Använd följande WSDL-definition för den tjänstreferens som är associerad med Assembler-tjänsten:
 
-   ```as3
+   ```java
     http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1.
    ```
 
@@ -1074,6 +1095,7 @@ Skapa ett PDF-dokument baserat på fragment med hjälp av API:t för utdatatjän
       * Tilldela motsvarande lösenordsvärde till `OutputServiceClient.ClientCredentials.UserName.Password`fältet.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till `BasicHttpBindingSecurity.Transport.ClientCredentialType`fältet.
    * Tilldela `BasicHttpSecurityMode.TransportCredentialOnly` konstantvärdet till `BasicHttpBindingSecurity.Security.Mode`fältet.
+
    >[!NOTE]
    >
    >Upprepa dessa steg för `AssemblerServiceClient`objektet.
@@ -1085,6 +1107,7 @@ Skapa ett PDF-dokument baserat på fragment med hjälp av API:t för utdatatjän
    * Ett `BLOB` objekt som representerar DDX-dokumentet
    * Det `MyMapOf_xsd_string_To_xsd_anyType` objekt som innehåller de nödvändiga filerna
    * Ett `AssemblerOptionSpec` objekt som anger körningsalternativ
+
    Metoden returnerar ett `invokeDDX` `AssemblerResult` objekt som innehåller resultatet av jobbet och eventuella undantag som inträffade. Utför följande åtgärder för att hämta det nya XDP-dokumentet:
 
    * Få åtkomst till `AssemblerResult` objektets `documents` fält, som är ett `Map` objekt som innehåller de resulterande PDF-dokumenten.
@@ -1103,6 +1126,7 @@ Skapa ett PDF-dokument baserat på fragment med hjälp av API:t för utdatatjän
    * Det objekt `BLOB` som innehåller XML-datakällan som innehåller data som ska sammanfogas med formulärdesignen.
    * Ett utdataobjekt `BLOB` som `generatePDFOutput2` metoden fyller i. Metoden fyller i det här objektet med genererade metadata som beskriver dokumentet. `generatePDFOutput2` (Det här parametervärdet krävs bara för webbtjänstanrop).
    * Ett utdataobjekt `OutputResult` som innehåller resultatet av åtgärden. (Det här parametervärdet krävs bara för webbtjänstanrop).
+
    Metoden returnerar `generatePDFOutput2` ett `BLOB` objekt som innehåller det icke-interaktiva PDF-formuläret.
 
 1. Spara PDF-dokumentet som en PDF-fil.
@@ -1116,7 +1140,7 @@ Skapa ett PDF-dokument baserat på fragment med hjälp av API:t för utdatatjän
 
 [Sammanfattning av steg](creating-document-output-streams.md#summary-of-steps)
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
 ## Skriva ut till filer {#printing-to-files}
 
@@ -1135,7 +1159,7 @@ Med hjälp av tjänsten Output kan du sammanfoga XML-data med en formulärdesign
 
 >[!NOTE]
 >
->Mer information om utdatatjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om utdatatjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-5}
 
@@ -1160,7 +1184,7 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 * adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss)
 * jbossall-client.jar (krävs om AEM Forms distribueras på JBoss)
 
-Om AEM Forms används på en J2EE-programserver som inte är JBoss måste du ersätta filerna adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern där AEM Forms används. (Se [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).)
+Om AEM Forms distribueras på en J2EE-programserver som stöds och inte är JBoss, måste du ersätta filerna adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern som AEM Forms är distribuerad på. (Se [Inkludera Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)för AEM Forms.)
 
 **Skapa ett Output Client-objekt**
 
@@ -1176,7 +1200,7 @@ Om du vill skriva ut till en fil måste du ange körningsalternativet Fil-URI ge
 
 >[!NOTE]
 >
->Det finns valfria körningsalternativ som du kan definiera. Mer information om alla alternativ som du kan ange finns i klassreferensen i `PrintedOutputOptionsSpec` AEM Forms API Reference [](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+>Det finns valfria körningsalternativ som du kan definiera. Mer information om alla alternativ som du kan ange finns i klassreferensen `PrintedOutputOptionsSpec` i [AEM Forms API-referens](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
 **Skriva ut utskriftsströmmen till en fil**
 
@@ -1232,6 +1256,7 @@ Skriva ut till en fil med hjälp av utdata-API (Java):
    * Ett strängvärde som anger platsen för XDC-filen som ska användas (du kan skicka `null` om du har angett XDC-filen som ska användas med `PrintedOutputOptionsSpec` objektet).
    * Det objekt `PrintedOutputOptionsSpec` som innehåller körningsalternativ som krävs för att skriva ut till en fil.
    * Det objekt `com.adobe.idp.Document` som innehåller XML-datakällan som innehåller formulärdata.
+
    Metoden returnerar `generatePrintedOutput` ett `OutputResult` objekt som innehåller resultatet av åtgärden.
 
    >[!NOTE]
@@ -1318,9 +1343,9 @@ Skriva ut till en fil med hjälp av Output API (webbtjänsten):
 
 [Sammanfattning av steg](creating-document-output-streams.md#summary-of-steps)
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## Skicka utskriftsströmmar till skrivare {#sending-print-streams-to-printers}
 
@@ -1339,7 +1364,7 @@ Med hjälp av tjänsten Output kan du sammanfoga XML-data med en formulärdesign
 
 >[!NOTE]
 >
->Mer information om utdatatjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om utdatatjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-6}
 
@@ -1364,7 +1389,7 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 * adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss)
 * jbossall-client.jar (krävs om AEM Forms distribueras på JBoss)
 
-Om AEM Forms används på en J2EE-programserver som inte är JBoss måste du ersätta filerna adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern där AEM Forms används.
+Om AEM Forms distribueras på en J2EE-programserver som stöds och inte är JBoss, måste du ersätta filerna adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern som AEM Forms är distribuerad på.
 
 **Skapa ett Output Client-objekt**
 
@@ -1522,6 +1547,7 @@ Skicka en utskriftsström till en nätverksskrivare med hjälp av utdata-API (Ja
       * Ett strängvärde som anger platsen för XDC-filen som ska användas.
       * Det objekt `PrintedOutputOptionsSpec` som innehåller körningsalternativ som krävs för att skriva ut till en fil.
       * Det objekt `com.adobe.idp.Document` som representerar XML-datakällan som innehåller formulärdata som ska sammanfogas med formulärdesignen.
+
       Den här metoden returnerar ett `OutputResult` objekt som innehåller resultatet av åtgärden.
 
    * Skapa ett `com.adobe.idp.Document` objekt som ska skickas till skrivaren genom att anropa `OutputResult` objektets `getGeneratedDoc` metod. Den här metoden returnerar ett `com.adobe.idp.Document` objekt.
@@ -1535,9 +1561,10 @@ Skicka en utskriftsström till en nätverksskrivare med hjälp av utdata-API (Ja
    * Ett `PrinterProtocol` uppräkningsvärde som anger vilket skrivarprotokoll som ska användas. Om du till exempel vill ange SharedPrinter-protokollet skickar du `PrinterProtocol.SharedPrinter`.
    * Ett strängvärde som anger utskriftsserverns namn. Anta att namnet på utskriftsservern är PrintServer1, skicka `\\\PrintSever1`.
    * Ett strängvärde som anger skrivarens namn. Om skrivarens namn till exempel är Skrivare1, skickar du `\\\PrintSever1\Printer1`.
+
    >[!NOTE]
    >
-   >Metoden har lagts till i AEM Forms API i version 8.2.1. `sendToPrinter`
+   >Metoden har lagts till i AEM Forms API:t i version 8.2.1. `sendToPrinter`
 
 ### Skicka en utskriftsström till en skrivare med hjälp av webbtjänstens API {#send-a-print-stream-to-a-printer-using-the-web-service-api}
 
@@ -1605,9 +1632,10 @@ Skicka en utskriftsström till en nätverksskrivare med hjälp av Output API (we
    * Ett `bool` värde som anger om föregående parametervärde ska användas. Skicka värdet `true`. (Det här parametervärdet krävs endast för webbtjänstanrop.)
    * Ett strängvärde som anger utskriftsserverns namn. Om du till exempel antar att namnet på utskriftsservern är PrintServer1, skickar du `\\\PrintSever1`.
    * Ett strängvärde som anger skrivarens namn. Om du till exempel antar att skrivarens namn är Skrivare1, skickar du `\\\PrintSever1\Printer1`.
+
    >[!NOTE]
    >
-   >Metoden har lagts till i AEM Forms API i version 8.2.1. `sendToPrinter`
+   >Metoden har lagts till i AEM Forms API:t i version 8.2.1. `sendToPrinter`
 
 ## Skapa flera utdatafiler {#creating-multiple-output-files}
 
@@ -1621,7 +1649,7 @@ Följande bild visar hur Output-tjänsten bearbetar en XML-datafil som innehåll
 
 Följande XML-data visar ett exempel på en datafil som innehåller tre dataposter.
 
-```as3
+```xml
  <?xml version="1.0" encoding="UTF-8"?>
  <batch>
  <LoanRecord>
@@ -1676,7 +1704,7 @@ Observera att XML-elementet som startar och avslutar varje datapost är `LoanRec
 
 >[!NOTE]
 >
->Mer information om utdatatjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om utdatatjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-7}
 
@@ -1702,7 +1730,7 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 * adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss)
 * jbossall-client.jar (krävs om AEM Forms distribueras på JBoss)
 
-Om AEM Forms används på en J2EE-programserver som inte är JBoss måste du ersätta filerna adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern där AEM Forms används.
+Om AEM Forms distribueras på en J2EE-programserver som stöds och inte är JBoss, måste du ersätta filerna adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern som AEM Forms är distribuerad på.
 
 **Skapa ett Output Client-objekt**
 
@@ -1738,7 +1766,7 @@ När du har refererat till en giltig XML-datakälla som innehåller flera datapo
 
 När utdatatjänsten har utfört en åtgärd returneras XML-data som anger om åtgärden lyckades. Följande XML returneras av Output-tjänsten. I den här situationen genererade Output Service 42 dokument.
 
-```as3
+```xml
  <?xml version="1.0" encoding="UTF-8"?>
  <printResult>
  <status>0</status>
@@ -1815,6 +1843,7 @@ Skapa flera PDF-filer med Output API (Java):
    * Ett `PDFOutputOptionsSpec` objekt som innehåller alternativ för PDF-körning.
    * Ett `RenderOptionsSpec` objekt som innehåller alternativ för återgivning vid körning.
    * Det objekt `com.adobe.idp.Document` som innehåller XML-datakällan som innehåller data som ska sammanfogas med formulärdesignen.
+
    Metoden returnerar `generatePDFOutput` ett `OutputResult` objekt som innehåller resultatet av åtgärden.
 
 1. Hämta resultatet av åtgärden
@@ -1903,9 +1932,9 @@ Skapa flera PDF-filer med hjälp av Output API (webbtjänsten):
 
 [Sammanfattning av steg](creating-document-output-streams.md#summary-of-steps)
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## Skapa sökregler {#creating-search-rules}
 
@@ -1917,7 +1946,7 @@ Dessutom kan utdatatjänsten generera dokumentpaket där flera poster finns i da
 
 >[!NOTE]
 >
->Mer information om utdatatjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om utdatatjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-8}
 
@@ -1944,7 +1973,7 @@ Följande JAR-filer måste läggas till i projektets klassökväg:
 * adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss)
 * jbossall-client.jar (krävs om AEM Forms distribueras på JBoss)
 
-Om AEM Forms används på en J2EE-programserver som inte är JBoss måste du ersätta adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern där AEM Forms används.
+Om AEM Forms distribueras på en J2EE-programserver som stöds och inte är JBoss, måste du ersätta adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern som AEM Forms är distribuerad på.
 
 **Skapa ett Output Client-objekt**
 
@@ -2013,6 +2042,7 @@ Skapa sökregler med hjälp av utdata-API (Java):
    * Skapa ett `Rule` objekt med hjälp av dess konstruktor.
    * Definiera ett textmönster genom att anropa `Rule` objektets `setPattern` metod och skicka ett strängvärde som anger ett textmönster.
    * Definiera motsvarande formulärdesign genom att anropa `Rule` objektets `setForm` metod. Skicka ett strängvärde som anger formulärdesignens namn.
+
    >[!NOTE]
    >
    >För varje textmönster som du vill definiera upprepar du de tre föregående delstegen.
@@ -2043,6 +2073,7 @@ Skapa sökregler med hjälp av utdata-API (Java):
    * Ett `PDFOutputOptionsSpec` objekt som innehåller alternativ för PDF-körning.
    * Ett `RenderOptionsSpec` objekt som innehåller alternativ för återgivning vid körning.
    * Det objekt `com.adobe.idp.Document` som innehåller formulärdata som söks igenom av utdatatjänsten efter definierade textmönster.
+
    Metoden returnerar `generatePDFOutput` ett `OutputResult` objekt som innehåller resultatet av åtgärden.
 
 1. Hämta resultatet av åtgärden.
@@ -2101,6 +2132,7 @@ Skapa sökregler med hjälp av Output API (webbtjänsten):
    * Skapa ett `Rule` objekt med hjälp av dess konstruktor.
    * Definiera ett textmönster genom att tilldela ett strängvärde som anger ett textmönster till `Rule` objektets `pattern` datamedlem.
    * Definiera motsvarande formulärdesign genom att tilldela ett strängvärde som anger formulärdesignen till `Rule` objektets `form` datamedlem.
+
    >[!NOTE]
    >
    >För varje textmönster som du vill definiera upprepar du de tre föregående delstegen.
@@ -2121,6 +2153,7 @@ Skapa sökregler med hjälp av Output API (webbtjänsten):
 
    * Skapa ett `RenderOptionsSpec` objekt med hjälp av dess konstruktor.
    * Cachelagra formulärdesignen för att förbättra utdatatjänstens prestanda genom att tilldela värdet `true` till `RenderOptionsSpec` objektets `cacheEnabled` datamedlem.
+
    >[!NOTE]
    >
    >Du kan inte ange version av PDF-dokumentet genom att använda `RenderOptionsSpec` objektets `pdfVersion` medlem om indatadokumentet är ett Acrobat-formulär. PDF-utdatadokumentet behåller PDF-versionen av Acrobat-formuläret. På samma sätt kan du inte ange alternativet taggad PDF genom att använda `RenderOptionsSpec` objektets `taggedPDF` metod om indatadokumentet är ett Acrobat-formulär.
@@ -2142,6 +2175,7 @@ Skapa sökregler med hjälp av Output API (webbtjänsten):
    * Ett `BLOB` objekt som fylls i av `generatePDFOutput` metoden. Metoden fyller i det här objektet med genererade metadata som beskriver dokumentet. `generatePDFOutput` (Det här parametervärdet krävs bara för webbtjänstanrop).
    * Ett `BLOB` objekt som fylls i av `generatePDFOutput` metoden. Metoden `generatePDFOutput` fyller i objektet med resultatdata. (Det här parametervärdet krävs bara för webbtjänstanrop).
    * Ett `OutputResult` objekt som innehåller resultatet av åtgärden. (Det här parametervärdet krävs bara för webbtjänstanrop).
+
    >[!NOTE]
    >
    >När du genererar ett PDF-dokument genom att anropa `generatePDFOutput` metoden ska du vara medveten om att du inte kan sammanfoga data med ett XFA PDF-formulär som är signerat, certifierat eller innehåller användningsrättigheter. Mer information om användningsrättigheter finns i [Använda användningsrättigheter i PDF-dokument](/help/forms/developing/assigning-usage-rights.md#applying-usage-rights-to-pdf-documents).
@@ -2157,9 +2191,9 @@ Skapa sökregler med hjälp av Output API (webbtjänsten):
 
 [Sammanfattning av steg](creating-document-output-streams.md#summary-of-steps)
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## Förenkla PDF-dokument {#flattening-pdf-documents}
 
@@ -2174,7 +2208,7 @@ Om du försöker förenkla ett PDF-dokument som är ett icke-interaktivt PDF-dok
 
 >[!NOTE]
 >
->Mer information om utdatatjänsten finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om utdatatjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-9}
 
@@ -2198,7 +2232,7 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 * adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss)
 * jbossall-client.jar (krävs om AEM Forms distribueras på JBoss)
 
-Om AEM Forms används på en J2EE-programserver som inte är JBoss måste du ersätta filerna adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern där AEM Forms används. Information om platsen för alla AEM Forms JAR-filer finns i [Inkludera Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)för AEM Forms.
+Om AEM Forms distribueras på en J2EE-programserver som stöds och inte är JBoss, måste du ersätta filerna adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern som AEM Forms är distribuerad på. Mer information om platsen för alla JAR-filer i AEM Forms finns i [Inkludera Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)i AEM Forms.
 
 **Skapa ett Output Client-objekt**
 
@@ -2255,6 +2289,7 @@ Förenkla ett interaktivt PDF-dokument till ett icke-interaktivt PDF-dokument me
    * Ett `PDFARevisionNumber` uppräkningsvärde som anger revisionsnumret. Eftersom den här parametern är avsedd för ett PDF/A-dokument kan du ange `null`.
    * Ett strängvärde som representerar ändringsnumret och året, avgränsat med ett kolon. Eftersom den här parametern är avsedd för ett PDF/A-dokument kan du ange `null`.
    * Ett `PDFAConformance` uppräkningsvärde som representerar PDF/A-överensstämmelsenivån. Eftersom den här parametern är avsedd för ett PDF/A-dokument kan du ange `null`.
+
    Metoden returnerar `transformPDF` ett `com.adobe.idp.Document` objekt som innehåller ett icke-interaktivt PDF-dokument.
 
 1. Spara det icke-interaktiva PDF-dokumentet som en PDF-fil.
@@ -2318,6 +2353,7 @@ Förenkla ett interaktivt PDF-dokument till ett icke-interaktivt PDF-dokument me
    * Ett strängvärde som representerar ändringsnumret och året, avgränsat med ett kolon. Eftersom den här parametern är avsedd för ett PDF/A-dokument kan du ange `null`.
    * Ett `PDFAConformance` uppräkningsvärde som representerar PDF/A-överensstämmelsenivån.
    * Booleskt värde som anger om `PDFAConformance` uppräkningsvärdet används. Eftersom den här parametern är avsedd för ett PDF/A-dokument kan du ange `false`.
+
    Metoden returnerar `transformPDF` ett `BLOB` objekt som innehåller ett icke-interaktivt PDF-dokument.
 
 1. Spara det icke-interaktiva PDF-dokumentet som en PDF-fil.
@@ -2331,6 +2367,6 @@ Förenkla ett interaktivt PDF-dokument till ett icke-interaktivt PDF-dokument me
 
 [Sammanfattning av steg](creating-document-output-streams.md#summary-of-steps)
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
