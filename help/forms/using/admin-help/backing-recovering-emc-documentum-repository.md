@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f146202f-25f1-46a0-9943-c483f5f09f9f
 translation-type: tm+mt
-source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '832'
+ht-degree: 0%
 
 ---
 
@@ -58,7 +61,7 @@ I det här avsnittet beskrivs hur du installerar och konfigurerar EMC NetWorker-
 
    Följande text innehåller formateringstecken för radbrytningar. Om du kopierar den här texten till en plats utanför det här dokumentet kopierar du en del i taget och tar bort formateringstecknen när du klistrar in den på den nya platsen.
 
-   ```as3
+   ```shell
     ################################################
     # NetWorker Module for Documentum v1.2 nsrnmd_win.cfg D5.3+ example with
     # typical set of working parameters.  THIS FILE MUST BE SITE-CUSTOMISED.
@@ -196,7 +199,7 @@ I det här avsnittet beskrivs hur du installerar och konfigurerar EMC NetWorker-
 
    * Fullständig säkerhetskopiering av databasen (nsrnmddbf.bat):
 
-      `NetWorker_database_module_root` `-s`*&lt;NetWorker_Server_Name>*`-U``[username]``-P`*[password ]*`-l full`*&lt;database_name>*
+      `NetWorker_database_module_root` `-s`*&lt;NetWorker_Server_Name>*`-U``[username]``-P`*[lösenord ]*`-l full`*&lt;database_name>*
 
    * Inkrementell säkerhetskopiering av databas (nsrnmddbi.bat):
 
@@ -204,10 +207,9 @@ I det här avsnittet beskrivs hur du installerar och konfigurerar EMC NetWorker-
 
    * Säkerhetskopiering av databaslogg (nsrnmddbl.bat):
 
-      `[NetWorker_database_module_root]` `-s``<NetWorker_Server_Name>` `-U``[username]` `-P``[password]` `-l incr -R`*&lt;database_name>*
+      `[NetWorker_database_module_root]` `-s``<NetWorker_Server_Name>` `-U``[username]` `-P``[password]` `-l incr -R`*&lt;databasnamn>*
 
-      
-Var:
+      Var:
 
       `[NetWorker_database_module_root]` är installationskatalogen för NetWorker-modulen. Standardinstallationskatalogen för NetWorker-modulen för SQL Server är till exempel C:\Program Files\Legato\nsr\bin\nsrsqlsv.
 
@@ -224,9 +226,9 @@ Var:
 1. Högerklicka på Enheter och välj Skapa.
 1. Ange följande värden och klicka på OK:
 
-   **** Namn: Den fullständiga sökvägen till den delade katalogen
+   **Namn:** Den fullständiga sökvägen till den delade katalogen
 
-   **** Medietyp: `File`
+   **Medietyp:** `File`
 
 1. Högerklicka på den nya enheten och välj Åtgärder.
 1. Klicka på Etikett, ange ett namn, klicka på OK och sedan på Montera.
@@ -244,7 +246,7 @@ Utför följande uppgifter när du har slutfört en fullständig säkerhetskopie
 1. Öppna en kommandotolk och ändra till `[NetWorker_root]\Legato\nsr\bin`.
 1. Kör följande kommando:
 
-   ```as3
+   ```shell
     - nsrnmdsv.exe -f <path_to_cfg_file>
    ```
 
@@ -264,6 +266,6 @@ Utför följande åtgärder innan du återställer AEM-formulärdata. (Se [Åter
 1. Öppna en kommandotolk och ändra till *[NetWorker_root]*\Legato\nsr\bin
 1. Kör följande kommando:
 
-   ```as3
+   ```shell
     - nsrnmdrs.exe -B <docbase_name> -f <path_to_cfg_file> -C SA
    ```
