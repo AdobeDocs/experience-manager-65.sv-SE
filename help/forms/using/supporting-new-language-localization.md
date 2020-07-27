@@ -10,7 +10,10 @@ topic-tags: Configuration
 discoiquuid: d4e2acb0-8d53-4749-9d84-15b8136e610b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '715'
+ht-degree: 0%
 
 ---
 
@@ -29,7 +32,8 @@ Lokaliseringen av anpassningsbara formulär bygger på två typer av språkordli
 
 När ett anpassat formulär återges identifierar det det begärda språkområdet genom att titta på följande parametrar i den angivna ordningen:
 
-* Begäranparameter `afAcceptLang`Om du vill åsidosätta webbläsarens språkområde för användare kan du skicka parametern request så att språkområdet tvingas att `afAcceptLang` . Följande URL kommer till exempel att tvinga formuläret att återges på japanska språk:
+* Begäranparameter `afAcceptLang`Om du vill åsidosätta webbläsarens språkområde för användare kan du skicka 
+`afAcceptLang` begär parameter för att tvinga språkområdet. Följande URL kommer till exempel att tvinga formuläret att återges på japanska språk:
    `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 
 * Webbläsarens språkområdesuppsättning för användaren, som anges i begäran med hjälp av `Accept-Language` rubriken.
@@ -42,7 +46,7 @@ Om det inte finns något klientbibliotek för det begärda språket söker progr
 
 ## Lägg till lokaliseringsstöd för språk som inte stöds {#add-localization-support-for-non-supported-locales}
 
-AEM Forms har för närvarande stöd för lokalisering av innehåll i adaptiva formulär på engelska (en), spanska (es), franska (fr), italienska (it), tyska (de), japanska (ja), portugisiska (Brasilien), kinesiska (zh-CN), kinesiska (zh-TW) och koreanska (ko-KR).
+AEM Forms har för närvarande stöd för lokalisering av anpassningsbara formulärinnehåll på engelska (en), spanska (es), franska (fr), italienska (it), tyska (de), japanska (ja), portugisiska-brasilianska (pt-BR), kinesiska (zh-CN), kinesiska-taiwanesiska (zh-TW) och koreanska (ko-KR).
 
 Så här lägger du till stöd för en ny språkinställning vid körning av adaptiva formulär:
 
@@ -70,7 +74,7 @@ Skapa en nod av typen `cq:ClientLibraryFolder` under `etc/<folderHierarchy>`, me
 
 * **js.txt** som innehåller följande:
 
-```
+```text
 /libs/fd/xfaforms/clientlibs/I18N/Namespace.js
 I18N.js
 /etc/clientlibs/fd/xfaforms/I18N/LogMessages.js
@@ -86,7 +90,7 @@ Lägg till följande filer i klientbiblioteket:
 * **LogMessages.js** definierar `guidelib.i18n.strings` och `guidelib.i18n.LogMessages` för `<locale>` enligt `/etc/clientlibs/fd/af/I18N/fr/javascript/LogMessages.js`.
 * **js.txt** som innehåller följande:
 
-```
+```text
 i18n.js
 LogMessages.js
 ```
