@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6128c91a-4173-42b4-926f-bbbb2b54ba5b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: fa99c3bc2110aadb403920aa3e0fcf0919f26735
+source-git-commit: d488b1acc789c0fb1a631e58844d9fe9a70c2662
 workflow-type: tm+mt
-source-wordcount: '2611'
+source-wordcount: '2610'
 ht-degree: 0%
 
 ---
@@ -95,7 +95,7 @@ De huvudsakliga MSM API-objekten interagerar på följande sätt (se även [Anv�
 
    * När du konfigurerar en live-kopia för första gången används också en RolloutConfig (som utlöser LiveActions).
 
-### Skapa en ny synkroniseringsåtgärd {#creating-a-new-synchronization-action}
+## Skapa en ny synkroniseringsåtgärd {#creating-a-new-synchronization-action}
 
 Skapa anpassade synkroniseringsåtgärder som du kan använda med dina utrullningskonfigurationer. Skapa en synkroniseringsåtgärd när de [installerade åtgärderna](/help/sites-administering/msm-sync.md#installed-synchronization-actions) inte uppfyller dina specifika programkrav. Skapa då två klasser:
 
@@ -162,7 +162,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 >
 >Argumenten kan vara `Resource` eller `null` objekt som inte anpassar sig till `Resources` objekt, t.ex. `Node`[ `NonExistingResource`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/NonExistingResource.html) objekt.
 
-### Skapa en ny utrullningskonfiguration {#creating-a-new-rollout-configuration}
+## Skapa en ny utrullningskonfiguration {#creating-a-new-rollout-configuration}
 
 Skapa en utrullningskonfiguration när de installerade utrullningskonfigurationerna inte uppfyller dina programkrav:
 
@@ -175,7 +175,7 @@ Den nya utrullningskonfigurationen är sedan tillgänglig för dig när du stäl
 >
 >Se även de [bästa sätten att anpassa rollouts](/help/sites-administering/msm-best-practices.md#customizing-rollouts).
 
-#### Skapa utrullningskonfiguration {#create-the-rollout-configuration}
+### Skapa utrullningskonfiguration {#create-the-rollout-configuration}
 
 Så här skapar du en ny utrullningskonfiguration:
 
@@ -224,7 +224,7 @@ Så här skapar du en ny utrullningskonfiguration:
 
 1. Klicka på **Spara alla**.
 
-#### Lägg till synkroniseringsåtgärder i utrullningskonfigurationen {#add-synchronization-actions-to-the-rollout-configuration}
+### Lägg till synkroniseringsåtgärder i utrullningskonfigurationen {#add-synchronization-actions-to-the-rollout-configuration}
 
 Utrullningskonfigurationer lagras under den [rollout-konfigurationsnod](#create-the-rollout-configuration) som du har skapat under `/apps/msm/<your-project>/rolloutconfigs` noden.
 
@@ -243,7 +243,7 @@ Namnet måste vara detsamma som **åtgärdsnamnet** i tabellen under [Synkronise
 
 1. Lägg till och konfigurera så många noder för synkroniseringsåtgärder som du behöver. Ordna om åtgärdsnoderna så att ordningen matchar den ordning i vilken du vill att de ska visas. Den översta åtgärdsnoden inträffar först.
 
-### Skapa och använda en enkel LiveActionFactory-klass {#creating-and-using-a-simple-liveactionfactory-class}
+## Skapa och använda en enkel LiveActionFactory-klass {#creating-and-using-a-simple-liveactionfactory-class}
 
 Följ anvisningarna i det här avsnittet för att utveckla ett `LiveActionFactory` program och använda det i en utrullningskonfiguration. Processerna använder Maven och Eclipse för att utveckla och driftsätta `LiveActionFactory`:
 
@@ -262,7 +262,7 @@ Koden för den här sidan finns på GitHub
 * [Open ExperienceManager-java-msmrollout-projekt på GitHub](https://github.com/Adobe-Marketing-Cloud/experiencemanager-java-msmrollout)
 * Hämta projektet som [en ZIP-fil](https://github.com/Adobe-Marketing-Cloud/experiencemanager-java-msmrollout/archive/master.zip)
 
-#### Skapa projektet Maven {#create-the-maven-project}
+### Skapa projektet Maven {#create-the-maven-project}
 
 Följande procedur kräver att du har lagt till adobe-public-profilen i Maven-inställningsfilen.
 
@@ -288,7 +288,7 @@ Följande procedur kräver att du har lagt till adobe-public-profilen i Maven-in
 
 1. Starta Eclipse och [importera projektet](/help/sites-developing/howto-projects-eclipse.md#import-the-maven-project-into-eclipse)Maven.
 
-#### Lägg till beroenden till POM-filen {#add-dependencies-to-the-pom-file}
+### Lägg till beroenden till POM-filen {#add-dependencies-to-the-pom-file}
 
 Lägg till beroenden så att Eclipse-kompilatorn kan referera till de klasser som används i `LiveActionFactory` koden.
 
@@ -378,7 +378,7 @@ Lägg till beroenden så att Eclipse-kompilatorn kan referera till de klasser so
     </dependency>
    ```
 
-#### Implementera LiveActionFactory {#implement-liveactionfactory}
+### Implementera LiveActionFactory {#implement-liveactionfactory}
 
 Följande `LiveActionFactory` klass implementerar en `LiveAction` som loggar meddelanden om käll- och målsidorna och kopierar `cq:lastModifiedBy` egenskapen från källnoden till målnoden. Den aktiva åtgärdens namn är `exampleLiveAction`.
 
@@ -544,7 +544,7 @@ Följande `LiveActionFactory` klass implementerar en `LiveAction` som loggar med
    13.08.2013 14:34:55.454 *INFO* [OsgiInstallerImpl] org.apache.sling.audit.osgi.installer Started bundle com.adobe.example.msm.MyLiveActionFactory-bundle [316]
    ```
 
-#### Skapa exempelkonfigurationen {#create-the-example-rollout-configuration}
+### Skapa exempelkonfigurationen {#create-the-example-rollout-configuration}
 
 Skapa den MSM-introduktionskonfiguration som använder `LiveActionFactory` den som du skapade:
 
@@ -554,7 +554,7 @@ Skapa den MSM-introduktionskonfiguration som använder `LiveActionFactory` den s
    * **Namn**: examplerolloutconfig
    * **cq:trigger**: `publish`
 
-#### Lägg till Live-åtgärden i exempelkonfigurationen för utrullning {#add-the-live-action-to-the-example-rollout-configuration}
+### Lägg till Live-åtgärden i exempelkonfigurationen för utrullning {#add-the-live-action-to-the-example-rollout-configuration}
 
 Konfigurera den utrullningskonfiguration som du skapade i föregående procedur så att den använder `ExampleLiveActionFactory` klassen.
 
@@ -575,7 +575,7 @@ Konfigurera den utrullningskonfiguration som du skapade i föregående procedur 
 
 1. Klicka på **Spara alla**.
 
-#### Skapa Live Copy {#create-the-live-copy}
+### Skapa Live Copy {#create-the-live-copy}
 
 [Skapa en live-kopia](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-page) av engelska/produkter-grenen av referenswebbplatsen för Vi.Retail med din rollout-konfiguration:
 
@@ -591,7 +591,7 @@ Aktivera sidan **Produkter** (engelska) i källgrenen och observera de loggmedde
 ```
 
 <!--
-### Removing the Chapters Step in the Create Site Wizard {#removing-the-chapters-step-in-the-create-site-wizard}
+## Removing the Chapters Step in the Create Site Wizard {#removing-the-chapters-step-in-the-create-site-wizard}
 
 In some cases, the **Chapters** selection is not required in the create site wizard (only the **Languages** selection is required). To remove this step in the default We.Retail English blueprint:
 
@@ -611,7 +611,7 @@ In some cases, the **Chapters** selection is not required in the create site wiz
     1. **Name** = `xtype`; **Type** = `String`; **Value** = `hidden`
 -->
 
-### Ändra språknamn och standardländer {#changing-language-names-and-default-countries}
+## Ändra språknamn och standardländer {#changing-language-names-and-default-countries}
 
 AEM använder en standarduppsättning med språk- och landskoder.
 
@@ -641,9 +641,7 @@ Så här ändrar du språk:
 
    Ge den nya mappen ett namn `wcm`.
 
-1. Upprepa föregående steg för att skapa `/apps/wcm/core` mappträdet. Skapa en nod av typen `sling:Folder` i `core` anropad `resources`.
-
-   ![chlimage_1-77](assets/chlimage_1-77.png)
+1. Upprepa föregående steg för att skapa `/apps/wcm/core` mappträdet. Skapa en nod av typen `sling:Folder` i `core` anropad `resources`. <!-- ![chlimage_1-77](assets/chlimage_1-77.png) -->
 
 1. Högerklicka på `/libs/wcm/core/resources/languages` noden och klicka på **Kopiera**.
 1. Högerklicka på `/apps/wcm/core/resources` mappen och klicka på **Klistra in**. Ändra de underordnade noderna efter behov.
@@ -653,7 +651,7 @@ Så här ändrar du språk:
 
    ![chlimage_1-78](assets/chlimage_1-78.png)
 
-### Konfigurera MSM-lås på sidegenskaper (pekaktiverat gränssnitt) {#configuring-msm-locks-on-page-properties-touch-enabled-ui}
+## Konfigurera MSM-lås på sidegenskaper (pekaktiverat gränssnitt) {#configuring-msm-locks-on-page-properties-touch-enabled-ui}
 
 När du skapar en anpassad sidegenskap kan du behöva fundera på om den nya egenskapen ska kunna rullas ut till alla live-kopior.
 
