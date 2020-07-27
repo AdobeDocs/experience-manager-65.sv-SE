@@ -1,22 +1,25 @@
 ---
 title: API:er för att arbeta med inskickade formulär på formulärportalen
 seo-title: API:er för att arbeta med inskickade formulär på formulärportalen
-description: AEM Forms innehåller API:er som du kan använda för att fråga efter och vidta åtgärder för skickade formulärdata i formulärportalen.
-seo-description: AEM Forms innehåller API:er som du kan använda för att fråga efter och vidta åtgärder för skickade formulärdata i formulärportalen.
+description: AEM Forms tillhandahåller API:er som du kan använda för att fråga efter och vidta åtgärder för skickade formulärdata i formulärportalen.
+seo-description: AEM Forms tillhandahåller API:er som du kan använda för att fråga efter och vidta åtgärder för skickade formulärdata i formulärportalen.
 uuid: c47c8392-e5a9-4c40-b65e-4a7f379a6b45
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: developer-reference
 discoiquuid: 9457effd-3595-452f-a976-ad9eda6dc909
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '570'
+ht-degree: 5%
 
 ---
 
 
 # API:er för att arbeta med inskickade formulär på formulärportalen {#apis-to-work-with-submitted-forms-on-forms-portal}
 
-AEM Forms innehåller API:er som du kan använda för att fråga formulärdata som skickas via formulärportalen. Dessutom kan du publicera kommentarer eller uppdatera egenskaper för skickade formulär med de API:er som beskrivs i det här dokumentet.
+AEM Forms tillhandahåller API:er som du kan använda för att fråga efter formulärdata som skickas via formulärportalen. Dessutom kan du publicera kommentarer eller uppdatera egenskaper för skickade formulär med de API:er som beskrivs i det här dokumentet.
 
 >[!NOTE]
 >
@@ -34,7 +37,7 @@ Detta API kräver inga ytterligare parametrar.
 
 Svarsobjektet innehåller en JSON-array som innehåller formulärnamn och databassökväg. Responsens struktur är följande:
 
-```
+```json
 [
  {formName: "<form name>",
  formPath: "<path to the form>" },
@@ -46,13 +49,13 @@ Svarsobjektet innehåller en JSON-array som innehåller formulärnamn och databa
 
 **Begär URL**
 
-```
+```http
 https://[host]:[port]/content/forms/portal/submission.review.json?func=getFormsForSubmissionReview
 ```
 
 **Svar**
 
-```java
+```json
 [{"formPath":"/content/dam/formsanddocuments/forms-review/form2","formName":"form2"},{"formPath":"/content/dam/formsanddocuments/forms-review/form1","formName":"form1"}]
 ```
 
@@ -105,7 +108,7 @@ Ange följande parametrar i begärande-URL:
 
 Svarsobjektet innehåller en JSON-array som innehåller information om de angivna formulären. Responsens struktur är följande:
 
-```
+```json
 {
  total: "<total number of submissions>",
  items: [{ formName: "<name of the form>", formPath: "<path to the form>", owner: "<owner of the form>"},
@@ -116,13 +119,13 @@ Svarsobjektet innehåller en JSON-array som innehåller information om de angivn
 
 **Begär URL**
 
-```
+```http
 https://[host]:[port]/content/forms/portal/submission.review.json?func=getAllSubmissions&formPath=/content/dam/formsanddocuments/forms-review/form2
 ```
 
 **Svar**
 
-```java
+```json
 {"total":1,"items":[{"formName":"form2","formPath":"/content/dam/formsanddocuments/forms-review/form2","submitID":"1403037413508500","formType":"af","jcr:lastModified":"2015-11-05T17:52:32.243+05:30","owner":"admin"}]}
 ```
 
@@ -147,7 +150,7 @@ Returnerar ett kommentar-ID när en kommentar har publicerats.
 
 **Begär URL**
 
-```
+```http
 https://[host:'port'/content/forms/portal/submission.review.json?func=addComment&submitID=1403037413508500&comment=API+test+comment
 ```
 
@@ -157,7 +160,7 @@ https://[host:'port'/content/forms/portal/submission.review.json?func=addComment
 1403873422601300
 ```
 
-## GET /content/forms/portal/submission.review.json?func=getComments {#get-content-forms-portal-submission-review-json-func-getcomments-nbsp}
+## GET /content/forms/portal/submission.review.json?func=getComments   {#get-content-forms-portal-submission-review-json-func-getcomments-nbsp}
 
 Returnerar alla kommentarer som har publicerats på den angivna inskickningsinstansen.
 
@@ -173,7 +176,7 @@ Ange följande parameter i begärande-URL:
 
 Svarsobjektet innehåller en JSON-array som innehåller alla kommentarer som är associerade med det angivna överförings-ID:t. Responsens struktur är följande:
 
-```
+```json
 [{
  owner: "<name of the commenter>",
  comment: "<comment text>",
@@ -185,7 +188,7 @@ Svarsobjektet innehåller en JSON-array som innehåller alla kommentarer som är
 
 **Begär URL**
 
-```
+```http
 https://[host]:'port'/content/forms/portal/submission.review.json?func=getComments&submitID=1403037413508500
 ```
 
@@ -217,13 +220,13 @@ Returnerar ett JSON-objekt med information om den publicerade uppdateringen.
 
 **Begär URL**
 
-```
+```http
 https://[host]:'port'/content/forms/portal/submission.review.json?func=updateSubmission&submitID=1403037413508500&value=sample_value&property=some_new_prop
 ```
 
 **Svar**
 
-```java
+```json
 {"formName":"form2","owner":"admin","jcr:lastModified":1446727516593,"path":"/content/forms/fp/admin/submit/metadata/1403037413508500.html","submitID":"1403037413508500","status":"submitted"}
 ```
 
