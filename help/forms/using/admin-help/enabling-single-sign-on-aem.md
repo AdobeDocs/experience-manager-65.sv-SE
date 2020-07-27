@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: ee54d9d4-190d-4665-925a-9740ac65fbd5
 translation-type: tm+mt
-source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1538'
+ht-degree: 0%
 
 ---
 
@@ -19,13 +22,13 @@ source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
 
 AEM-formulär erbjuder två sätt att aktivera enkel inloggning (SSO) - HTTP-huvuden och SPNEGO.
 
-När enkel inloggning är implementerad krävs inte AEM-formulärets användarinloggningssidor och visas inte om användaren redan är autentiserad via sin företagsportal.
+När enkel inloggning är implementerad krävs inte AEM-formulärens användarinloggningssidor och visas inte om användaren redan är autentiserad via sin företagsportal.
 
 Om AEM-formulär inte kan autentisera en användare på något av dessa sätt dirigeras användaren om till en inloggningssida.
 
 ## Aktivera enkel inloggning med HTTP-huvuden {#enable-sso-using-http-headers}
 
-Du kan använda sidan Portal Configuration för att aktivera enkel inloggning (SSO) mellan program och alla program som stöder överföring av identiteten via HTTP-huvudet. När enkel inloggning är implementerad krävs inte AEM-formulärets användarinloggningssidor och visas inte om användaren redan är autentiserad via sin företagsportal.
+Du kan använda sidan Portal Configuration för att aktivera enkel inloggning (SSO) mellan program och alla program som stöder överföring av identiteten via HTTP-huvudet. När enkel inloggning är implementerad krävs inte AEM-formulärens användarinloggningssidor och visas inte om användaren redan är autentiserad via sin företagsportal.
 
 Du kan även aktivera enkel inloggning med SPNEGO. (Se [Aktivera enkel inloggning med SPNEGO](enabling-single-sign-on-aem.md#enable-sso-using-spnego).)
 
@@ -33,11 +36,11 @@ Du kan även aktivera enkel inloggning med SPNEGO. (Se [Aktivera enkel inloggnin
 1. Välj Ja om du vill aktivera enkel inloggning. Om du väljer Nej är de återstående inställningarna på sidan inte tillgängliga.
 1. Ange de återstående alternativen på sidan efter behov och klicka på OK:
 
-   * **** SSO-typ: (Obligatoriskt) Välj HTTP Header om du vill aktivera enkel inloggning med HTTP-huvuden.
-   * **** HTTP-huvud för användarens identifierare: (Obligatoriskt) Namnet på det huvud vars värde innehåller den inloggade användarens unika identifierare. Användarhantering använder det här värdet för att hitta användaren i databasen för användarhantering. Värdet som hämtas från den här rubriken ska matcha den unika identifieraren för den användare som synkroniseras från LDAP-katalogen. (Se [Användarinställningar](/help/forms/using/admin-help/adding-configuring-users.md#user-settings).)
-   * **** Identifierarvärdet mappas till användarens användar-ID i stället för användarens unika identifierare: Mappar användarens unika identifierarvärde till användar-ID:t. Välj det här alternativet om användarens unika identifierare är ett binärt värde som inte enkelt kan spridas via HTTP-huvuden (till exempel objectGUID om du synkroniserar användare från Active Directory).
-   * **** HTTP-huvud för domän: (Inte obligatoriskt) Namnet på det huvud vars värde innehåller domännamnet. Använd bara den här inställningen om ingen enskild HTTP-rubrik unikt identifierar användaren. Använd den här inställningen för fall där det finns flera domäner och den unika identifieraren bara är unik inom en domän. I det här fallet anger du rubriknamnet i den här textrutan och anger domänmappning för flera domäner i rutan Domänmappning. (Se [Redigera och konvertera befintliga domäner](/help/forms/using/admin-help/editing-converting-existing-domains.md#editing-and-converting-existing-domains).)
-   * **** Domänmappning: (Obligatoriskt) Anger mappning för flera domäner i formatet *header value=domain name*.
+   * **SSO-typ:** (Obligatoriskt) Välj HTTP Header om du vill aktivera enkel inloggning med HTTP-huvuden.
+   * **HTTP-huvud för användarens identifierare:** (Obligatoriskt) Namnet på det huvud vars värde innehåller den inloggade användarens unika identifierare. Användarhantering använder det här värdet för att hitta användaren i databasen för användarhantering. Värdet som hämtas från den här rubriken ska matcha den unika identifieraren för den användare som synkroniseras från LDAP-katalogen. (Se [Användarinställningar](/help/forms/using/admin-help/adding-configuring-users.md#user-settings).)
+   * **Identifierarvärdet mappas till användarens användar-ID i stället för användarens unika identifierare:** Mappar användarens unika identifierarvärde till användar-ID:t. Välj det här alternativet om användarens unika identifierare är ett binärt värde som inte enkelt kan spridas via HTTP-huvuden (till exempel objectGUID om du synkroniserar användare från Active Directory).
+   * **HTTP-huvud för domän:** (Inte obligatoriskt) Namnet på det huvud vars värde innehåller domännamnet. Använd bara den här inställningen om ingen enskild HTTP-rubrik unikt identifierar användaren. Använd den här inställningen för fall där det finns flera domäner och den unika identifieraren bara är unik inom en domän. I det här fallet anger du rubriknamnet i den här textrutan och anger domänmappning för flera domäner i rutan Domänmappning. (Se [Redigera och konvertera befintliga domäner](/help/forms/using/admin-help/editing-converting-existing-domains.md#editing-and-converting-existing-domains).)
+   * **Domänmappning:** (Obligatoriskt) Anger mappning för flera domäner i formatet *header value=domain name*.
 
       Tänk dig till exempel en situation där HTTP-huvudet för en domän är domainName och kan ha värdena domain1, domain2 och domain3. I det här fallet använder du domänmappning för att mappa domainName-värden till domännamn för användarhantering. Alla mappningar måste finnas på olika rader:
 
@@ -71,13 +74,13 @@ Du kan även aktivera enkel inloggning med HTTP-huvuden. (Se [Aktivera enkel inl
    * Lägg till LDAP som autentiseringsprovider.
    * Lägg till Kerberos som autentiseringsprovider. Ange följande information på sidan Ny eller Redigera autentisering för Kerberos:
 
-      * **** Autentiseringsprovider: Kerberos
-      * **** DNS IP: DNS IP-adressen för servern där AEM-formulär körs. Du kan fastställa den här IP-adressen genom att köra `ipconfig/all` på kommandoraden.
-      * **** KDC-värd: Fullständigt kvalificerat värdnamn eller IP-adress för Active Directory-servern som används för autentisering
-      * **** Tjänstanvändare: Tjänstens huvudnamn (SPN) som skickas till KtPass-verktyget. I det exempel som användes tidigare är tjänstanvändaren `HTTP/lcserver.um.lc.com`.
-      * **** Tjänstsfär: Domännamn för Active Directory. I exemplet som användes tidigare är domännamnet `UM.LC.COM.`
-      * **** Lösenord: Tjänstanvändarens lösenord. I det exempel som användes tidigare är tjänstlösenordet `password`.
-      * **** Aktivera SPNEGO: Aktiverar användning av SPNEGO för enkel inloggning (SSO). Välj det här alternativet.
+      * **Autentiseringsprovider:** Kerberos
+      * **DNS IP:** DNS IP-adressen för servern där AEM-formulär körs. Du kan fastställa den här IP-adressen genom att köra `ipconfig/all` på kommandoraden.
+      * **KDC-värd:** Fullständigt kvalificerat värdnamn eller IP-adress för Active Directory-servern som används för autentisering
+      * **Tjänstanvändare:** Tjänstens huvudnamn (SPN) som skickas till KtPass-verktyget. I det exempel som användes tidigare är tjänstanvändaren `HTTP/lcserver.um.lc.com`.
+      * **Tjänstsfär:** Domännamn för Active Directory. I exemplet som användes tidigare är domännamnet `UM.LC.COM.`
+      * **Lösenord:** Tjänstanvändarens lösenord. I det exempel som användes tidigare är tjänstlösenordet `password`.
+      * **Aktivera SPNEGO:** Aktiverar användning av SPNEGO för enkel inloggning (SSO). Välj det här alternativet.
 
 1. Konfigurera inställningar för SPNEGO-klientwebbläsare. (Se [Konfigurera inställningar](enabling-single-sign-on-aem.md#configuring-spnego-client-browser-settings)för SPNEGO-klientwebbläsare.)
 
@@ -107,24 +110,25 @@ Du kan även aktivera enkel inloggning med HTTP-huvuden. (Se [Aktivera enkel inl
 
    Värdena som du måste ange beskrivs enligt följande:
 
-   **** värd: Fullständigt kvalificerat namn på formulärservern eller en unik URL. I det här exemplet är det inställt på lcserver.um.lc.com.
+   **värd:** Fullständigt kvalificerat namn på formulärservern eller en unik URL. I det här exemplet är det inställt på lcserver.um.lc.com.
 
-   **** REALM: Active Directory-sfären för domänkontrollanten. I det här exemplet är det inställt på UM.LC.COM. Se till att du anger sfären med versaler. Utför följande steg för att fastställa sfären för Windows 2003:
+   **REALM:** Active Directory-sfären för domänkontrollanten. I det här exemplet är det inställt på UM.LC.COM. Se till att du anger sfären med versaler. Utför följande steg för att fastställa sfären för Windows 2003:
 
    * Högerklicka på Den här datorn och välj Egenskaper
    * Klicka på fliken Datornamn. Domännamnsvärdet är sfärnamnet.
-   **** användare: Inloggningsnamnet för användarkontot som du skapade i föregående uppgift. I det här exemplet är det inställt på spnegodemo.
+
+   **användare:** Inloggningsnamnet för användarkontot som du skapade i föregående uppgift. I det här exemplet är det inställt på spnegodemo.
 
 Om det här felet inträffar:
 
-```as3
+```java
 DsCrackNames returned 0x2 in the name entry for spnegodemo.
 ktpass:failed getting target domain for specified user.
 ```
 
 prova att ange användaren som spnegodemo@um.lc.com:
 
-```as3
+```java
 ktpass -princ HTTP/lcserver.um.lc.com@UM.LC.COM -mapuser spnegodemo
 ```
 
