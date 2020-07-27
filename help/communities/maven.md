@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a726c904-aadd-4678-be84-9e05808ab8be
 translation-type: tm+mt
-source-git-commit: f7e5afe46100db7837647ac89aaf58cf101143b0
+source-git-commit: f05d7c19e3284c0627e29b9590db4749be100229
+workflow-type: tm+mt
+source-wordcount: '183'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: f7e5afe46100db7837647ac89aaf58cf101143b0
 
 ## Översikt {#overview}
 
-Det här avsnittet av dokumentationen för AEM Communities innehåller följande:
+Detta avsnitt i AEM Communities dokumentation gäller utöver följande:
 
 * [Skapa AEM-projekt med Apache Maven](../../help/sites-developing/ht-projects-maven.md).
 
@@ -30,7 +33,7 @@ Det finns nu två&quot;uber&quot;-artefakter som ersätter enskilda artefakter:
 
 ## Jar-artefakt för Communities-API {#communities-api-jar-artifact}
 
-Här följer ett exempel på en GAV för API-behållaren för AEM Communities:
+Här följer ett exempel på en GAV för AEM Communities API jar:
 
 ```xml
 <dependency>
@@ -46,7 +49,7 @@ Kontrollera att den angivna versionen motsvarar den version av webbcommunityn so
 1. Logga in med administratörsbehörighet.
 1. Bläddra till [Pakethanteraren](../../help/sites-administering/package-manager.md). Till exempel [http://localhost:4502/crx/packmgr/](http://localhost:4502/crx/packmgr/)
 
-1. Leta reda på paketet *cq-socialcommunities-pkg-1.x.xxx*
+1. Leta reda på paketet: `cq-socialcommunities-pkg-1.x.xxx`
 1. Extrahera versionen från paketnamnet:
    * Den första versionen för AEM 6.3 är version 1.11.170.
    * Funktionspaket blir version 1.12.xxx.
