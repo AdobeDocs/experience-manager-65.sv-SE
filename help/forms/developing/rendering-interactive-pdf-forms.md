@@ -1,6 +1,6 @@
 ---
-title: Återgivning av interaktiva PDF-formulär
-seo-title: Återgivning av interaktiva PDF-formulär
+title: Återger interaktiv PDF forms
+seo-title: Återger interaktiv PDF forms
 description: 'null'
 seo-description: 'null'
 uuid: df2a4dc8-f19e-49de-850f-85a204102631
@@ -11,14 +11,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 3cb307ec-9b7b-4f03-b860-48553ccee746
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '2442'
+ht-degree: 0%
 
 ---
 
 
-# Återgivning av interaktiva PDF-formulär {#rendering-interactive-pdf-forms}
+# Återger interaktiv PDF forms {#rendering-interactive-pdf-forms}
 
-Forms-tjänsten återger interaktiva PDF-formulär till klientenheter, vanligtvis webbläsare, för att samla in information från användarna. När ett interaktivt formulär har återgetts kan användaren ange data i formulärfält och klicka på en Skicka-knapp som finns i formuläret för att skicka tillbaka information till Forms-tjänsten. Adobe Reader eller Acrobat måste vara installerat på den dator där webbläsaren körs för att ett interaktivt PDF-formulär ska kunna visas.
+Forms-tjänsten återger interaktiv PDF forms till klientenheter, vanligtvis webbläsare, för att samla in information från användare. När ett interaktivt formulär har återgetts kan användaren ange data i formulärfält och klicka på en Skicka-knapp som finns i formuläret för att skicka tillbaka information till Forms-tjänsten. Adobe Reader eller Acrobat måste vara installerat på den dator där webbläsaren körs för att ett interaktivt PDF-formulär ska kunna visas.
 
 >[!NOTE]
 >
@@ -83,7 +86,7 @@ Exempellåneansökan är ett exempel på ett Forms-tjänstprogram som finns som 
 
 I följande kod visas syntaxen för en Java-server med namnet GetLoanForm:
 
-```as3
+```java
      public class GetLoanForm extends HttpServlet implements Servlet {
          public void doGet(HttpServletRequest req, HttpServletResponse resp
          throws ServletException, IOException {
@@ -202,6 +205,7 @@ Metoden accepterar `renderPDFForm2` en `com.adobe.idp.Document` instans som inne
 
       * Ett strängvärde som anger namnet på den bifogade filen, inklusive filnamnstillägget.
    * Ett `com.adobe.idp.Document` objekt som innehåller den bifogade filen.
+
    >[!NOTE]
    >
    >Upprepa det här steget för varje fil som ska bifogas formuläret. Det här steget är valfritt och du kan skicka det `null` om du inte vill skicka bifogade filer.
@@ -215,6 +219,7 @@ Metoden accepterar `renderPDFForm2` en `com.adobe.idp.Document` instans som inne
    * Ett `PDFFormRenderSpec` objekt som lagrar körningsalternativ. Det här är en valfri parameter och du kan ange `null` om du inte vill ange körningsalternativ.
    * Ett `URLSpec` objekt som innehåller URI-värden som krävs av Forms-tjänsten.
    * Ett `java.util.HashMap` objekt som lagrar bifogade filer. Det här är en valfri parameter och du kan ange `null` om du inte vill bifoga filer till formuläret.
+
    Metoden returnerar `renderPDFForm` ett `FormsResult` objekt som innehåller en formulärdataström som måste skrivas till klientens webbläsare.
 
 1. Skriv formulärdataströmmen till klientens webbläsare
@@ -254,6 +259,7 @@ Metoden accepterar `renderPDFForm2` en `com.adobe.idp.Document` instans som inne
 
       * Ett strängvärde som anger namnet på den bifogade filen, inklusive filnamnstillägget
    * Ett `BLOB` objekt som innehåller den bifogade filen
+
    >[!NOTE]
    >
    >Upprepa det här steget för varje fil som ska bifogas formuläret.
@@ -271,6 +277,7 @@ Metoden accepterar `renderPDFForm2` en `com.adobe.idp.Document` instans som inne
    * Ett tomt `javax.xml.rpc.holders.LongHolder` objekt som fylls i av metoden. (Det här argumentet lagrar antalet sidor i formuläret.)
    * Ett tomt `javax.xml.rpc.holders.StringHolder` objekt som fylls i av metoden. (Det här argumentet lagrar språkets värde.)
    * Ett tomt `com.adobe.idp.services.holders.FormsResultHolder` objekt som innehåller resultatet av den här åtgärden.
+
    Metoden `renderPDFForm` fyller i det `com.adobe.idp.services.holders.FormsResultHolder` objekt som skickas som det sista argumentvärdet med en formulärdataström som måste skrivas till klientens webbläsare.
 
 1. Skriv formulärdataströmmen till klientens webbläsare
