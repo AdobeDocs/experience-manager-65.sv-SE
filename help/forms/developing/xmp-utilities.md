@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 01d5677f-5c87-4a6e-987b-8eda9acc0b27
 translation-type: tm+mt
-source-git-commit: 06335b9a85414b6b1141dd19c863dfaad0812503
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1369'
+ht-degree: 0%
 
 ---
 
@@ -38,7 +41,7 @@ Du kan använda XMP Utilities Java och webbtjänstens API:er för att programmä
 
 ![ww_ww_metadata, dialogruta](assets/ww_ww_metadatadialog.png)
 
-Om du vill importera metadata programmatiskt till ett PDF-dokument kan du använda ett befintligt XML-dokument som anger metadatavärdena eller använda ett objekt av typen `XMPUtilityMetadata`. (Se API-referens för [AEM-formulär](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).)
+Om du vill importera metadata programmatiskt till ett PDF-dokument kan du använda ett befintligt XML-dokument som anger metadatavärdena eller använda ett objekt av typen `XMPUtilityMetadata`. (Se API-referens för [AEM Forms](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).)
 
 >[!NOTE]
 >
@@ -46,7 +49,7 @@ Om du vill importera metadata programmatiskt till ett PDF-dokument kan du använ
 
 Följande XML-kod innehåller metadatavärden som motsvarar föregående bild. Observera till exempel feta objekt, som anger nyckelord.
 
-```as3
+```xml
  <?xpacket begin="?" id="W5M0MpCehiHzreSzNTczkc9d"?>
  <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 4.2-jc015 52.349034, 2008 Jun 20 00:30:39-PDT (debug)">
        <rdf:RDF xmlns:rdf="https://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -167,10 +170,12 @@ Importera XMP-metadata med hjälp av XMP Utilities API (Java):
 
    * Ett `com.adobe.idp.Document` objekt som representerar PDF-filen.
    * Ett `XMPUtilityMetadata` objekt som innehåller de metadata som ska importeras.
+
    Om du använder `importXMP` metoden skickar du följande värden:
 
    * Ett `com.adobe.idp.Document` objekt som representerar PDF-filen.
    * Ett `com.adobe.idp.Document` objekt som representerar en XML-fil som innehåller de metadata som ska importeras.
+
    I båda fallen är det returnerade värdet ett `com.adobe.idp.Document` objekt som representerar PDF-filen med de importerade metadata. Du kan sedan spara objektet på hårddisken.
 
 **Se även**
@@ -183,11 +188,11 @@ Importera XMP-metadata med hjälp av XMP Utilities API (Java):
 
 ### Importera XMP-metadata med webbtjänstens API {#importing-xmp-metadata-using-the-web-service-api}
 
-Så här importerar du programmatiskt XMP-metadata med hjälp av XMP Utilities-webbtjänstens API:
+Så här importerar du XMP-metadata via webbtjänstens API för XMP-verktyg via programmet:
 
 1. Inkludera projektfiler
 
-   * Skapa en Microsoft .NET-klientsammansättning som använder WSDL-filen för XMP-verktygstjänsten. (Se [Anropa AEM-formulär med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).)
+   * Skapa en Microsoft .NET-klientsammansättning som använder WSDL-filen för XMP-verktygstjänsten. (Se [Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).)
    * Referera till Microsoft .NET-klientsammansättningen. (Se [Skapa en .NET-klientsammansättning som använder Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding).)
 
 1. Skapa en XMPUtilityService-klient
@@ -202,10 +207,12 @@ Så här importerar du programmatiskt XMP-metadata med hjälp av XMP Utilities-w
 
    * Ett `BLOB` objekt som representerar PDF-filen.
    * Ett `XMPUtilityMetadata` objekt som innehåller de metadata som ska importeras.
+
    Om du använder `importXMP` metoden skickar du följande värden:
 
    * Ett `BLOB` objekt som representerar PDF-filen.
    * Ett `BLOB` objekt som representerar en XML-fil som innehåller de metadata som ska importeras.
+
    I båda fallen är det returnerade värdet ett `BLOB` objekt som representerar PDF-filen med de importerade metadata. Du kan sedan spara objektet på hårddisken.
 
 **Se även**
@@ -214,7 +221,7 @@ Så här importerar du programmatiskt XMP-metadata med hjälp av XMP Utilities-w
 
 <!--REVIEW: [Quick Start (Base64): Importing XMP metadata using the web service API](unresolvedlink-lc-qs-xmp-utilities-xu.xml#ws624e3cba99b79e12e69a9941333732bac8-7be8.2)-->
 
-[Anropa AEM-formulär med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[Anropar AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
 
 [Skapa en .NET-klientsammansättning som använder Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding)
 
@@ -309,6 +316,6 @@ Exportera XMP-metadata med hjälp av XMP Utilities API (webbtjänst):
 
 [Exportera metadata från PDF-dokument](xmp-utilities.md#exporting-metadata-from-pdf-documents)
 
-[Anropa AEM-formulär med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[Anropar AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
 
 [Skapa en .NET-klientsammansättning som använder Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding)
