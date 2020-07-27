@@ -11,7 +11,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 9f4711a8-033c-4051-ab41-65a26838899b
 translation-type: tm+mt
-source-git-commit: e3f700b52446505224fa4b4688d439750a66f471
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '2526'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +30,7 @@ Bokmärken innehåller följande egenskaper:
 
 Anta att följande DDX-dokument används för den här diskussionen.
 
-```as3
+```xml
  <?xml version="1.0" encoding="UTF-8"?>
  <DDX xmlns="https://ns.adobe.com/DDX/1.0/">
        <PDF result="FinalDoc.pdf">
@@ -44,7 +47,7 @@ I det här exemplet på DDX-dokument anger `Bookmarks` elementet `doc2` som vär
 
 I det här avsnittet används följande språk för XML-bokmärken för att sätta ihop ett PDF-dokument som innehåller bokmärken.
 
-```as3
+```xml
  <?xml version="1.0" encoding="UTF-8"?>
  <Bookmarks xmlns="https://ns.adobe.com/pdf/bookmarks" version="1.0">
        <Bookmark>
@@ -84,7 +87,7 @@ När en användare klickar på *Öppna bokmärket Lånedetaljer* öppnas filen L
 
 >[!NOTE]
 >
->Mer information om tjänsten Assembler finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Assembler finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 >[!NOTE]
 >
@@ -116,7 +119,7 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 * adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss)
 * jbossall-client.jar (krävs om AEM Forms distribueras på JBoss)
 
-Om AEM Forms används på en annan J2EE-programserver än JBoss måste du ersätta filerna adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern som AEM Forms distribueras på. Information om platsen för alla AEM Forms JAR-filer finns i [Inkludera Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)för AEM Forms.
+Om AEM Forms distribueras på en annan J2EE-programserver än JBoss måste du ersätta filerna adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern som AEM Forms distribueras på. Mer information om platsen för alla JAR-filer i AEM Forms finns i [Inkludera Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)i AEM Forms.
 
 **Skapa en PDF Assembler-klient**
 
@@ -130,7 +133,7 @@ Det måste finnas referenser till ett DDX-dokument för att du ska kunna sammans
 
 Referera till ett PDF-dokument som bokmärken läggs till i. Det spelar ingen roll om det refererade PDF-dokumentet redan innehåller bokmärken. Om `Bookmarks` elementet är underordnat PDF-källelementet ersätter bokmärkena dem som redan finns i PDF-källan. Om du vill behålla de befintliga bokmärkena måste du se till att `Bookmarks` det är en jämställd version av PDF-källelementet. Ta till exempel följande exempel:
 
-```as3
+```xml
  <PDF result="foo">
       <PDF source="inDoc"/>
       <Bookmarks source="doc2"/>
@@ -151,7 +154,7 @@ Du måste lägga till både det PDF-dokument som bokmärken läggs till i och de
 
 **Ange körningsalternativ**
 
-Du kan ställa in körningsalternativ som styr beteendet för Assembler-tjänsten när den utför ett jobb. Du kan till exempel ange ett alternativ som instruerar Assembler-tjänsten att fortsätta bearbeta ett jobb om ett fel uppstår. Mer information om de körningsalternativ du kan ange finns i klassreferensen `AssemblerOptionSpec` i API-referens [för](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)AEM Forms.
+Du kan ställa in körningsalternativ som styr beteendet för Assembler-tjänsten när den utför ett jobb. Du kan till exempel ange ett alternativ som instruerar Assembler-tjänsten att fortsätta bearbeta ett jobb om ett fel uppstår. Mer information om de körningsalternativ du kan ange finns i klassreferensen `AssemblerOptionSpec` i [AEM Forms API-referens](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
 **Sammanställ PDF-dokumentet**
 
@@ -222,6 +225,7 @@ Sammanställa ett PDF-dokument med bokmärken med hjälp av Assembler Service AP
    * Ett `com.adobe.idp.Document` objekt som representerar det DDX-dokument som ska användas
    * Ett `java.util.Map` objekt som innehåller både PDF-indatadokumentet och XML-dokumentet för bokmärket.
    * Ett `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` objekt som anger körningsalternativen, inklusive standardteckensnitt och jobbloggsnivå
+
    Metoden returnerar `invokeDDX` ett `com.adobe.livecycle.assembler.client.AssemblerResult` objekt som innehåller resultatet av jobbet och eventuella undantag som inträffade.
 
 1. Spara PDF-dokumentet som innehåller bokmärken.
@@ -309,6 +313,7 @@ Sammanställa ett PDF-dokument med bokmärken med Assembler Service API (webbtj�
    * Ett `BLOB` objekt som representerar DDX-dokumentet
    * Arrayen `MyMapOf_xsd_string_To_xsd_anyType` som innehåller indatadokumenten
    * Ett `AssemblerOptionSpec` objekt som anger körningsalternativ
+
    Metoden returnerar ett `invokeDDX` `AssemblerResult` objekt som innehåller resultatet av jobbet och eventuella undantag som kan ha inträffat.
 
 1. Spara PDF-dokumentet som innehåller bokmärken.
@@ -321,4 +326,4 @@ Sammanställa ett PDF-dokument med bokmärken med Assembler Service API (webbtj�
 
 **Se även**
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
