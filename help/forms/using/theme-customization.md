@@ -1,8 +1,8 @@
 ---
 title: Temaanpassning
 seo-title: Temaanpassning
-description: Så här anpassar du temat i din AEM Forms-app.
-seo-description: Så här anpassar du temat i din AEM Forms-app.
+description: Så här anpassar du temat för din AEM Forms-app.
+seo-description: Så här anpassar du temat för din AEM Forms-app.
 uuid: 36632e67-1cc6-416d-ae80-d84bbabab4bd
 contentOwner: robhagat
 content-type: reference
@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: c72f608e-052a-4bf9-b7bc-ddf57483af35
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '235'
+ht-degree: 0%
 
 ---
 
@@ -40,7 +43,7 @@ Du kan anpassa HTML-koden och CSS-filen för att ge AEM Forms-appen ett distinkt
 1. Öppna `template.html` filen för redigering.
 1. Leta reda på följande sträng:
 
-   ```
+   ```jsp
    <%if ( (task.description !== "") && (task.description !== null) && (typeof task.description !== null) && (typeof task.description !== 'undefined') ) {%>
                   <div class="description_details">
                     <%= task.description %>
@@ -52,7 +55,7 @@ Du kan anpassa HTML-koden och CSS-filen för att ge AEM Forms-appen ett distinkt
 
 1. Leta reda på följande kod i `template.html` filen:
 
-   ```
+   ```jsp
    <ul id="task_menu_list">
                                    <li class="approve" title="<%= task.availableCommands.directCommands[0]%>" data-routename="<%= task.availableCommands.directCommands[0]%>">
                                        <%= task.availableCommands.directCommands[0]%>
@@ -64,7 +67,7 @@ Du kan anpassa HTML-koden och CSS-filen för att ge AEM Forms-appen ett distinkt
 
 1. Kommentera följande rad och spara filen.
 
-   ```
+   ```jsp
    task.availableCommands.directCommands[1]%>">
    <%= task.availableCommands.directCommands[1]%>
    </li>
@@ -81,4 +84,4 @@ Du kan anpassa HTML-koden och CSS-filen för att ge AEM Forms-appen ett distinkt
 1. Spara ändringarna och stäng `_style.css` filen.
 1. Öppna appen AEM Forms.
 
-   AEM Forms-appen visar nu instruktioner i stället för beskrivning.
+   Nu visas instruktioner i appen AEM Forms i stället för en beskrivning.
