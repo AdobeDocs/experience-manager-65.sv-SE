@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 879ff6ca-e5f3-451d-acc2-f75142101ddd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e545fc5e2ea139bd8ebb7f84138ba68e03d71d19
+source-git-commit: bd70508b361ac8b62ebc0344538a18369a075f3e
+workflow-type: tm+mt
+source-wordcount: '1801'
+ht-degree: 0%
 
 ---
 
@@ -70,6 +73,7 @@ Så här skapar du en XDP-mall för utskriftskanalen:
    1. Ange **fakturainformation** i **fältet Namn** .
 
    1. Välj **Ingen databindning** i listrutan **Databindning** .
+
    ![Delformulär för Designer](assets/forms_designer_subform_new.png)
 
 1. Markera på samma sätt rotdelformuläret, markera fliken **Delformulär** och välj **Flödat** i listrutan **Innehåll** . På fliken **Bindningar** :
@@ -77,6 +81,7 @@ Så här skapar du en XDP-mall för utskriftskanalen:
    1. Ange **TelecaBill** i fältet **Name** (Namn).
 
    1. Välj **Ingen databindning** i listrutan **Databindning** .
+
    ![Delformulär för utskriftsmall](assets/root_subform_print_template_new.png)
 
 1. Upprepa steg 2-5 för att skapa följande delformulär:
@@ -91,6 +96,7 @@ Så här skapar du en XDP-mall för utskriftskanalen:
    * SpecificeradeAnrop
    * PayNow
    * ValueAddedServices
+
    För att spara tid kan du även kopiera och klistra in befintliga delformulär för att skapa nya delformulär.
 
    Om du vill flytta delformuläret **Diagram** till höger om delformuläret Diagram markerar du delformuläret **Diagram** i den vänstra rutan, väljer fliken **Layout** och anger ett värde för fältet **FästpunktX** . Värdet måste vara större än värdet för fältet **Bredd** för delformuläret **Avgifter** . Markera delformuläret **Avgifter** och välj fliken **Layout** för att visa värdet för fältet **Bredd** .
@@ -111,10 +117,10 @@ Så här skapar du en XDP-mall för utskriftskanalen:
 
 När du har skapat en XDP-mall med Forms Designer måste du överföra den till AEM Forms-servern så att mallen kan användas när du skapar den interaktiva kommunikationen.
 
-1. Välj **[!UICONTROL Formulär]** > **[!UICONTROL Formulär och dokument]**.
+1. Välj **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
 1. Tryck på **Skapa** > **Filöverföring**.
 
-   Navigera till och välj mallen **create_first_ic_print_template** (XDP) och tryck på **Öppna** för att importera XDP-mallen till AEM Forms-servern.
+   Navigera till och markera mallen **create_first_ic_print_template** (XDP) och tryck på **Öppna** för att importera XDP-mallen till AEM Forms-servern.
 
 ### Skapa XDP-mall för layoutfragment {#create-xdp-template-for-layout-fragments}
 
@@ -173,7 +179,7 @@ Om du vill skapa en webbkanalmall definierar du en mapp där du kan spara de ska
 
 Så här skapar du en mapp för de redigerbara mallarna:
 
-1. Tryck på **Verktyg** ![](assets/hammer-icon.svg) > **Konfigurationsläsaren**.
+1. Tryck på **Tools** ![hammer-icon](assets/hammer-icon.svg) > **Configuration Browser**.
 1. Tryck på **Skapa** på sidan Configuration Browser.
 1. I dialogrutan **Skapa konfiguration** anger du **Create_First_IC_templates** som mappens titel, markerar **Redigerbara mallar** och trycker sedan på **Skapa**.
 
@@ -217,7 +223,7 @@ Så här skapar du en mall för webbkanalen i mappen **Create_First_IC_templates
 
    ![Innehållsträd](assets/content_tree_root_panel_new.png)
 
-1. Markera panelen och tryck på ![](assets/configure_icon.png) (Konfigurera).
+1. Markera panelen och tryck på ![configure_icon](assets/configure_icon.png) (Configure).
 1. I rutan Egenskaper:
 
    1. Ange **fakturainformation** i fältet Namn.
@@ -225,6 +231,7 @@ Så här skapar du en mall för webbkanalen i mappen **Create_First_IC_templates
    1. Välj **1** i listrutan **Antal kolumner** .
 
    1. Tryck ![](/help/forms/using/assets/done_icon.png) för att spara egenskaperna.
+
    Panelens namn uppdateras till **Fakturainformation** i innehållsträdet.
 
 1. Upprepa steg 7-11 om du vill lägga till paneler med följande egenskaper i mallen:
@@ -248,7 +255,7 @@ När du har skapat webbmallen måste du aktivera den för användning när du sk
 
 Aktivera webbmallen genom att utföra följande steg:
 
-1. Tryck på **Verktyg** ![](assets/hammer-icon.svg) > **Mallar**.
+1. Tryck på **Tools** ![hammer-icon](assets/hammer-icon.svg) > **Templates**.
 1. Navigera till mallen **Create_First_IC_Web_Template** , markera den och tryck sedan på **Aktivera**.
 1. Bekräfta genom att klicka på **Aktivera** igen.
 
@@ -267,4 +274,4 @@ Beroende på hur de används måste du inkludera knapparna **Betala nu** och **P
 
    ![Tillåtna komponenter](assets/allowed_components_af_new.png)
 
-1. Tryck ![](assets/done_icon.png) för att spara egenskaperna.
+1. Tryck på ![made_icon](assets/done_icon.png) för att spara egenskaperna.
