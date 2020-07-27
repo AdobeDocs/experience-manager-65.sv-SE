@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: e0c20fd2-b084-4f61-936c-5282826a8d3d
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '475'
 ht-degree: 0%
@@ -46,7 +46,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms-API:t med stark typning och ansl
 
 I följande kodexempel läggs en användare med namnet Wendy Blue till i AEM Forms. (Se [Lägga till användare](/help/forms/developing/users.md#adding-users).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -164,7 +164,7 @@ I följande kodexempel läggs en användare med namnet Wendy Blue till i AEM For
 
 I följande kodexempel tas en användare med namnet Wendy Blue bort från AEM Forms. (Se [Ta bort användare](/help/forms/developing/users.md#deleting-users).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -260,7 +260,7 @@ I följande kodexempel tas en användare med namnet Wendy Blue bort från AEM Fo
 
 I följande kodexempel hittas en lokal användare och den lokala grupp som användaren tillhör. (Se [Hantera användare och grupper](/help/forms/developing/users.md#managing-users-and-groups).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -384,7 +384,7 @@ I följande kodexempel hittas en lokal användare och den lokala grupp som anvä
 
 I följande kodexempel tilldelas användarrollen Tjänster till ett huvudkonto, de roller huvudmannen har skrivs ut och rollen tas sedan bort från huvudkontot. Två tjänster anropas för den här snabbstarten: DirectoryManager-tjänsten och AuthorizationManager-tjänsten.(Se [Hantera roller och behörigheter](/help/forms/developing/users.md#managing-roles-and-permissions).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -527,7 +527,7 @@ I följande kodexempel tilldelas användarrollen Tjänster till ett huvudkonto, 
 
 I följande Java-kodexempel synkroniseras användare med hjälp av API:er för användarhantering. (Se [Programmatisk synkronisering av användare](/help/forms/developing/users.md#programmatically-synchronizing-users).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -636,7 +636,7 @@ I följande Java-kodexempel synkroniseras användare med hjälp av API:er för a
 
 I följande kodexempel läggs en användare med namnet Wendy Blue till i AEM Forms. (Se [Lägga till användare](/help/forms/developing/users.md#adding-users).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -754,7 +754,7 @@ I följande kodexempel läggs en användare med namnet Wendy Blue till i AEM For
 
 I följande kodexempel skapas en grupp med namnet AdobeGroup till AEM Forms. (Se [Skapa grupper](/help/forms/developing/users.md#creating-groups).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -906,7 +906,7 @@ I följande kodexempel skapas en grupp med namnet AdobeGroup till AEM Forms. (Se
 
 Följande Java-kodmodeller hanterar Preferences Nodes med API:erna för användarhantering. (Se [Programmatisk hantering av inställningsnoder](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes))
 
-```as3
+```java
 /*
  * This Java Quick Start uses the SOAP mode and contains the following JAR files
  * in the class path:
@@ -1009,7 +1009,7 @@ public class ManagePreferences {
 
 Följande Java-kodmodeller hanterar inställningsnoder med API:er för användarhantering (se [Programmatisk hantering av inställningsnoder](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes)):
 
-```as3
+```java
 /*
  * This Java Quick Start uses the SOAP mode and contains the following JAR files
  * in the class path:
