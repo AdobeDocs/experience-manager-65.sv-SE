@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 2e783745-c986-45ba-8e65-7437d114ca38
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '2742'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## Om tjänsten för integrering av formulärdata {#about-the-form-data-integration-service}
 
-Tjänsten för integrering av formulärdata kan importera data till ett PDF-formulär och exportera data från ett PDF-formulär. Import- och exportåtgärderna stöder två typer av PDF-formulär:
+Tjänsten för integrering av formulärdata kan importera data till ett PDF-formulär och exportera data från ett PDF-formulär. Import- och exportåtgärderna har stöd för två typer av PDF forms:
 
 * Ett Acrobat-formulär (skapat i Acrobat) är ett PDF-dokument som innehåller formulärfält.
 * Ett Adobe XML-formulär (skapat i Designer) är ett PDF-dokument som följer XML-arkitekturen i Adobe XML Forms Architecture (XFA).
@@ -31,16 +34,16 @@ Formulärdata kan finnas i något av följande format beroende på typen av PDF-
 
 Du kan utföra dessa uppgifter med hjälp av tjänsten för integrering av formulärdata:
 
-* Importera data till PDF-formulär. Mer information finns i [Importera formulärdata](importing-exporting-data.md#importing-form-data).
-* Exportera data från PDF-formulär. Mer information finns i [Exportera formulärdata](importing-exporting-data.md#exporting-form-data).
+* Importera data till PDF forms. Mer information finns i [Importera formulärdata](importing-exporting-data.md#importing-form-data).
+* Exportera data från PDF forms. Mer information finns i [Exportera formulärdata](importing-exporting-data.md#exporting-form-data).
 
 >[!NOTE]
 >
->Mer information om tjänsten för integrering av formulärdata finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten för integrering av formulärdata finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ## Importera formulärdata {#importing-form-data}
 
-Du kan importera formulärdata till interaktiva PDF-formulär med hjälp av tjänsten för integrering av formulärdata. Ett interaktivt PDF-formulär är ett PDF-dokument som innehåller ett eller flera fält för att samla in information från en användare eller för att visa anpassad information. Tjänsten Form Data Integration stöder inte formulärberäkningar, validering eller skript.
+Du kan importera formulärdata till interaktiva PDF forms med hjälp av tjänsten för integrering av formulärdata. Ett interaktivt PDF-formulär är ett PDF-dokument som innehåller ett eller flera fält för att samla in information från en användare eller för att visa anpassad information. Tjänsten Form Data Integration stöder inte formulärberäkningar, validering eller skript.
 
 Om du vill importera data till ett formulär som skapats i Designer måste du referera till en giltig XDP XML-datakälla. Titta på följande exempelformulär.
 
@@ -48,7 +51,7 @@ Om du vill importera data till ett formulär som skapats i Designer måste du re
 
 Om du vill importera datavärden till det här formuläret måste du ha en giltig XDP XML-datakälla som motsvarar formuläret. Du kan inte använda en godtycklig XML-datakälla för att importera data till ett formulär med hjälp av tjänsten för integrering av formulärdata. Skillnaden mellan en godtycklig XML-datakälla och en XDP XML-datakälla är att en XDP-datakälla överensstämmer med XML Forms Architecture (XFA). Följande XML representerar en XDP XML-datakälla som motsvarar exempelformuläret för låneansökan.
 
-```as3
+```xml
  <?xml version="1.0" encoding="UTF-8" ?>
  - <xfa:datasets xmlns:xfa="https://www.xfa.org/schema/xfa-data/1.0/">
  - <xfa:data>
@@ -81,7 +84,7 @@ Om du vill importera datavärden till det här formuläret måste du ha en gilti
 
 >[!NOTE]
 >
->Mer information om tjänsten för integrering av formulärdata finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten för integrering av formulärdata finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary-of-steps}
 
@@ -171,6 +174,7 @@ Importera formulärdata med hjälp av API:t för integrering av formulärdata (J
 
    * Det `com.adobe.idp.Document` objekt som lagrar PDF-formuläret.
    * Objektet `com.adobe.idp.Document` som lagrar formulärdata.
+
    Metoden returnerar `importData` ett `com.adobe.idp.Document` objekt som lagrar ett PDF-formulär som innehåller data som finns i XML-datakällan.
 
 1. Spara PDF-formuläret som en PDF-fil.
@@ -235,6 +239,7 @@ Importera formulärdata med hjälp av API:t för integrering av formulärdata (w
 
    * Det `BLOB` objekt som lagrar PDF-formuläret.
    * Objektet `BLOB` som lagrar formulärdata.
+
    Metoden returnerar `importData` ett `BLOB` objekt som lagrar ett PDF-formulär som innehåller data som finns i XML-datakällan.
 
 1. Spara PDF-formuläret som en PDF-fil.
@@ -248,7 +253,7 @@ Importera formulärdata med hjälp av API:t för integrering av formulärdata (w
 
 [Sammanfattning av steg](importing-exporting-data.md#summary-of-steps)
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
 ## Exporterar formulärdata {#exporting-form-data}
 
@@ -256,7 +261,7 @@ Du kan exportera formulärdata från ett interaktivt PDF-formulär med hjälp av
 
 >[!NOTE]
 >
->Mer information om tjänsten för integrering av formulärdata finns i [Tjänstreferens för AEM-formulär](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten för integrering av formulärdata finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-1}
 
@@ -393,6 +398,6 @@ Exportera formulärdata med API:t för integrering av formulärdata (webbtjänst
 
 [Sammanfattning av steg](importing-exporting-data.md#summary-of-steps)
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
