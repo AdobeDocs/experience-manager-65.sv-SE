@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f9a3f897-90c6-4942-8a86-aae510298f2a
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '197'
+ht-degree: 0%
 
 ---
 
@@ -19,11 +22,11 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 Användare kan få en långsammare svarstid om de tillhör många grupper (till exempel 500 eller fler) eller om grupperna är djupt inkapslade (till exempel 30 nivåer). Om du får det här problemet kan du konfigurera AEM-formulär så att information från vissa domäner hämtas i förväg.
 
-1. I administrationskonsolen klickar du på **[!UICONTROL Inställningar > Användarhantering > Konfiguration > Importera och exportera konfigurationsfiler]**.
-1. Om du vill exportera den aktuella konfigurationsinställningen till en fil klickar du på **[!UICONTROL Exportera]** och sparar konfigurationsfilen på en annan plats.
+1. Klicka på i administrationskonsolen **[!UICONTROL Settings > User Management > Configuration > Import And Export Configuration Files]**.
+1. Om du vill exportera den aktuella konfigurationsinställningen till en fil klickar du på **[!UICONTROL Export]** och sparar konfigurationsfilen på en annan plats.
 1. Lägg till följande nod (markerad med fet stil):
 
-   ```as3
+   ```xml
     <node name="UM">
     <map/>
     <node name="PrincipalCache">
@@ -40,6 +43,6 @@ Användare kan få en långsammare svarstid om de tillhör många grupper (till 
 
    I det här exemplet har flera domäner konfigurerats för förhämtning. Domännamnen avgränsas med &quot;/&quot;. Detta visas i exemplet ovan med *Domain_Name1*, *Domain_Name2* och *Domain_Name3*.
 
-1. Om du vill importera den uppdaterade filen går du till Användarhantering och klickar på **[!UICONTROL Konfiguration > Importera och exportera konfigurationsfiler]**.
-1. Klicka på **[!UICONTROL Bläddra]** för att hitta filen, klicka på Importera och sedan på **[!UICONTROL OK]**.
+1. Om du vill importera den uppdaterade filen klickar du i Användarhantering **[!UICONTROL Configuration > Import And Export Configuration Files]**.
+1. Klicka **[!UICONTROL Browse]** för att hitta filen, klicka på Importera och sedan på **[!UICONTROL OK]**.
 
