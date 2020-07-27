@@ -1,6 +1,6 @@
 ---
-title: Variabler i arbetsflöden för AEM-formulär
-seo-title: Variabler i arbetsflöden för AEM-formulär
+title: Variabler i arbetsflöden för AEM Forms
+seo-title: Variabler i arbetsflöden för AEM Forms
 description: Skapa en variabel, ange ett värde för variabeln och använd den i arbetsflödesstegen för AEM Forms.
 seo-description: Skapa en variabel, ange ett värde för variabeln och använd den i arbetsflödesstegen för AEM Forms.
 uuid: 634a75c4-4899-478f-9e5d-a870f5efa583
@@ -10,12 +10,15 @@ topic-tags: publish
 discoiquuid: cbf4e35a-7905-44ab-ab68-fb443443f02d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56f7db792b340ed6774c54170e9b5d2a52153cd5
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '2090'
+ht-degree: 0%
 
 ---
 
 
-# Variabler i arbetsflöden för AEM-formulär{#variables-in-aem-forms-workflows}
+# Variabler i arbetsflöden för AEM Forms{#variables-in-aem-forms-workflows}
 
 En variabel i en arbetsflödesmodell är ett sätt att lagra ett värde baserat på dess datatyp. Du kan sedan använda namnet på variabeln i vilket arbetsflödessteg som helst för att hämta värdet som lagras i variabeln. Du kan också använda variabelnamn för att definiera uttryck för att fatta beslut om routning.
 
@@ -23,7 +26,7 @@ I AEM-arbetsflödesmodeller kan du:
 
 * [Skapa en variabel](../../forms/using/variable-in-aem-workflows.md#create-a-variable) av en datatyp baserat på den informationstyp som du vill lagra i den.
 * [Ange ett värde för variabeln](../../forms/using/variable-in-aem-workflows.md#set-a-variable) med hjälp av arbetsflödessteget Ange variabel.
-* [Använd variabeln](../../forms/using/variable-in-aem-workflows.md#use-a-variable) i alla arbetsflödessteg i AEM Forms för att hämta det lagrade värdet och i stegen ELLER Dela och Gå till för att definiera ett routningsuttryck.
+* [Använd variabeln](../../forms/using/variable-in-aem-workflows.md#use-a-variable) i alla steg i AEM Forms arbetsflöde för att hämta det lagrade värdet och i stegen ELLER Dela och Gå till för att definiera ett routningsuttryck.
 
 I följande video visas hur du kan skapa, ställa in och använda variabler i AEM-arbetsflödesmodeller:
 
@@ -36,7 +39,7 @@ Variabler är ett tillägg till det befintliga [MetaDataMap](https://helpx.adobe
 Du skapar variabler med hjälp av avsnittet Variabler som är tillgängliga i arbetsflödesmodellens sidospak. AEM-arbetsflödesvariabler har stöd för följande datatyper:
 
 * **Primitiva datatyper**: Long, Double, Boolean, Date och String
-* **Komplexa datatyper**: Instansen [Document](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/aemfd/docmanager/Document.html), [XML](https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Document.html), [JSON](https://static.javadoc.io/com.google.code.gson/gson/2.3/com/google/gson/JsonObject.html)och Form Data Model.
+* **Komplexa datatyper**: [Instansen Dokument](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/aemfd/docmanager/Document.html), [XML](https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Document.html), [JSON](https://static.javadoc.io/com.google.code.gson/gson/2.3/com/google/gson/JsonObject.html)och Form Data Model.
 
 >[!NOTE]
 >
@@ -44,16 +47,16 @@ Du skapar variabler med hjälp av avsnittet Variabler som är tillgängliga i ar
 
 Du behöver [AEM Forms-tilläggspaket](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) för datatyperna Dokument och Formulärdatamodell.  Använd datatypen ArrayList för att skapa variabelsamlingar. Du kan skapa en ArrayList-variabel för alla primitiva och komplexa datatyper. Skapa till exempel en ArrayList-variabel och välj String som undertyp för att lagra flera strängvärden med variabeln.
 
-Så här skapar du en variabel:
+Skapa en variabel genom att utföra följande steg:
 
 1. I en AEM-instans går du till Verktyg ![](/help/forms/using/assets/hammer.png) > Arbetsflöde > Modeller.
-1. Tryck på **[!UICONTROL Skapa]** och ange titeln och ett valfritt namn för arbetsflödesmodellen. Markera modellen och tryck på **[!UICONTROL Redigera]**.
-1. Tryck på variabelikonen som är tillgänglig i sidoknappen i arbetsflödesmodellen och tryck på **[!UICONTROL Lägg till variabel]**.
+1. Tryck **[!UICONTROL Create]** och ange arbetsflödesmodellens namn och valfritt namn. Markera modellen och tryck på **[!UICONTROL Edit]**.
+1. Tryck på variabelikonen som är tillgänglig i arbetsflödesmodellens sidokikon och tryck sedan på **[!UICONTROL Add Variable]**.
 
    ![Lägg till variabel](assets/variables_add_variable_new.png)
 
 1. I dialogrutan Lägg till variabel anger du namnet och väljer variabeltyp.
-1. Välj datatyp i listrutan **[!UICONTROL Typ]** och ange följande värden:
+1. Välj datatyp i **[!UICONTROL Type]** listrutan och ange följande värden:
 
    * Primitiv datatyp - Ange ett valfritt standardvärde för variabeln.
    * JSON eller XML - Ange en JSON- eller XML-schemasökväg (tillval). Systemet validerar schemasökvägen när egenskaper som är tillgängliga i schemat mappas och lagras till en annan variabel.
@@ -76,16 +79,16 @@ Du kan använda steget Ange variabel för att ange värdet för en variabel och 
 
 Beroende på variabelns datatyp kan du använda följande alternativ för att ange värdet för en variabel:
 
-* **** Literal: Använd alternativet när du vet exakt vilket värde du ska ange.
+* **Literal:** Använd alternativet när du vet exakt vilket värde du ska ange.
 
-* **** Uttryck: Använd alternativet när värdet som ska användas beräknas baserat på ett uttryck. Uttrycket skapas i den angivna uttrycksredigeraren.
+* **Uttryck:** Använd alternativet när värdet som ska användas beräknas baserat på ett uttryck. Uttrycket skapas i den angivna uttrycksredigeraren.
 
-* **** JSON-punktnotation: Använd alternativet för att hämta ett värde från en JSON- eller FDM-typvariabel.
-* **** XPATH: Använd alternativet för att hämta ett värde från en XML-typvariabel.
+* **JSON-punktnotation:** Använd alternativet för att hämta ett värde från en JSON- eller FDM-typvariabel.
+* **XPATH:** Använd alternativet för att hämta ett värde från en XML-typvariabel.
 
-* **** I förhållande till nyttolast: Använd alternativet när värdet som ska sparas till variabeln är tillgängligt på en sökväg som är relativ till nyttolasten.
+* **I förhållande till nyttolast:** Använd alternativet när värdet som ska sparas till variabeln är tillgängligt på en sökväg som är relativ till nyttolasten.
 
-* **** Absolut sökväg: Använd alternativet när värdet som ska sparas i variabeln är tillgängligt på en absolut sökväg.
+* **Absolut sökväg:** Använd alternativet när värdet som ska sparas i variabeln är tillgängligt på en absolut sökväg.
 
 Du kan också uppdatera specifika element i en JSON- eller XML-typvariabel med JSON DOT Notation eller XPATH.
 
@@ -95,9 +98,9 @@ Utför följande steg för att lägga till mappning mellan variabler:
 
 1. Tryck på ikonen Steg i arbetsflödesmodellens sidokicka på arbetsflödets redigeringssida.
 1. Dra och släpp steget **Ange variabel** till arbetsflödesredigeraren, tryck på steget och välj ![](assets/configure_icon.png) (Konfigurera).
-1. I dialogrutan Ange variabel väljer du **[!UICONTROL Mappning]** > **[!UICONTROL Lägg till mappning]**.
+1. I dialogrutan Ange variabel väljer du **[!UICONTROL Mapping]** > **[!UICONTROL Add Mapping]**.
 1. I avsnittet **Mappningsvariabel** väljer du variabeln där data ska lagras, väljer mappningsläget och anger ett värde som ska lagras i variabeln. Mappningslägena varierar beroende på variabeltypen.
-1. Mappa fler variabler för att skapa ett meningsfullt uttryck. Tryck ![](assets/done_icon.png) för att spara ändringarna.
+1. Mappa fler variabler för att skapa ett meningsfullt uttryck. Tap ![](assets/done_icon.png) to save the changes.
 
 ### Exempel 1: Fråga en XML-variabel för att ange ett värde för en strängvariabel {#example-query-an-xml-variable-to-set-value-for-a-string-variable}
 
@@ -148,7 +151,7 @@ Du kan använda variabler för att hämta indata och utdata eller spara resultat
 
 ### Arbetsflödessteg med stöd för variabler {#workflow-steps-with-support-for-variables}
 
-Steget Gå till, eller Dela, och alla arbetsflödessteg i AEM Forms stöder variabler.
+Steget Gå till, eller Dela, och alla arbetsflödessteg för AEM Forms har stöd för variabler.
 
 #### ELLER Dela upp steg {#or-split-step}
 
@@ -162,7 +165,7 @@ I det här exemplet använder du [exempel 2](../../forms/using/variable-in-aem-w
 
 >[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_orsplit_example.mp4)
 
-Välj på liknande sätt en extern skriptsökväg eller ange ECMA-skriptet för routningsuttryck för att utvärdera den aktiva grenen. Tryck på **[!UICONTROL Byt namn på gren]** för att ange ett alternativt namn för grenen.
+Välj på liknande sätt en extern skriptsökväg eller ange ECMA-skriptet för routningsuttryck för att utvärdera den aktiva grenen. Tryck för **[!UICONTROL Rename Branch]** att ange ett alternativt namn för grenen.
 
 Mer exempel finns i [Skapa en arbetsflödesmodell](../../forms/using/aem-forms-workflow.md#create-a-workflow-model).
 
@@ -200,13 +203,13 @@ Använd följande API:er i ECMA-skriptet för att hämta värden för befintliga
 | Formulärdatamodell | Packages.com.adobe.aem.dermis.api.FormDataModelInstance fdmObject = workItem.getWorkflowData().getMetaDataMap().get(variableName, Packages.com.adobe.aem.dermis.api.FormDataModelInstance.class); |
 | JSON | Packages.com.google.gson.JsonObject jsonObject = workItem.getWorkflowData().getMetaDataMap().get(variableName, Packages.com.google.gson.JsonObject.class); |
 
-Du behöver [AEM Forms-tilläggspaket](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) för variabeldatatyperna Dokument och Formulärdatamodell.
+Du behöver [AEM Forms-tilläggspaket](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) för dokumentdatatyperna och formulärdatamodellens datatyper.
 
 **Exempel**
 
 Hämta värdet för strängdatatypen med följande API:
 
-```
+```javascript
 workItem.getWorkflowData().getMetaDataMap().get(accname, Packages.java.lang.String)
 ```
 
@@ -214,13 +217,13 @@ workItem.getWorkflowData().getMetaDataMap().get(accname, Packages.java.lang.Stri
 
 Använd följande API i ECMA-skriptet för att uppdatera värdet för en variabel:
 
-```
+```javascript
 workItem.getWorkflowData().getMetaDataMap().put(variableName, value)
 ```
 
 **Exempel**
 
-```
+```javascript
 workItem.getWorkflowData().getMetaDataMap().put(salary, 50000)
 ```
 
@@ -234,7 +237,7 @@ Du kan använda ett API för att ange variabler och skicka dem för att anropa a
 
 I det här API:t anges variabeln **variableName** till **värde** med metaData.put(variableName, value);
 
-```java
+```javascript
 import com.adobe.granite.workflow.model.WorkflowModel;
 import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.adobe.aemfd.docmanager.Document;
@@ -251,7 +254,7 @@ workflowSession.startWorkflow(model, wfData, metaData);
 
 Initiera **docVar** -dokumentobjektet till en sökväg (&quot;a/b/c&quot;) och ange värdet för **docVar** -variabeln till sökvägen som lagras i dokumentobjektet.
 
-```java
+```javascript
 import com.adobe.granite.workflow.WorkflowSession;
 import com.adobe.granite.workflow.exec.WorkflowData;
 import com.adobe.granite.workflow.model.WorkflowModel;
@@ -271,7 +274,7 @@ workflowSession.startWorkflow(model, wfData, metaData);
 
 1. Tryck på ikonen Variabler i sidledaren i arbetsflödesmodellen på sidan Redigera arbetsflöde. I avsnittet Variabler i den vänstra rutan visas alla befintliga variabler.
 1. Tryck på ikonen ![](assets/edit.png) (Redigera) bredvid variabelnamnet som du vill redigera.
-1. Redigera variabelinformationen och tryck på ![](assets/done_icon.png) för att spara ändringarna. Du kan inte redigera fälten **[!UICONTROL Namn]** och **[!UICONTROL Typ]** för en variabel.
+1. Redigera variabelinformationen och tryck på ![](assets/done_icon.png) för att spara ändringarna. Du kan inte redigera **[!UICONTROL Name]** - och **[!UICONTROL Type]** -fälten för en variabel.
 
 ## Ta bort en variabel {#delete-a-variable}
 
@@ -285,4 +288,4 @@ Så här tar du bort en variabel:
 
 ## Referenser {#references}
 
-Fler exempel på hur du använder variabler i arbetsflödesstegen för AEM Forms finns i [Variabler i AEM-arbetsflöden](https://helpx.adobe.com/experience-manager/kt/forms/using/authoring_variables_in_aem_forms-workflow1.html).
+Mer exempel på hur du använder variabler i arbetsflödessteg för AEM Forms finns i [Variabler i AEM-arbetsflöden](https://helpx.adobe.com/experience-manager/kt/forms/using/authoring_variables_in_aem_forms-workflow1.html).
