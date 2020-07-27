@@ -1,7 +1,7 @@
 ---
-title: Form Bridge APIs for HTML5 forms
+title: API:er för Form Bridge för HTML5-formulär
 seo-title: API:er för Form Bridge för HTML5-formulär
-description: Externa program använder FormBridge API för att ansluta till XFA-mobilformuläret. The API dispatches a FormBridgeInitialized event on the parent window.
+description: Externa program använder FormBridge API för att ansluta till XFA-mobilformuläret. API:t skickar en FormBridgeInitialized-händelse i det överordnade fönstret.
 seo-description: Externa program använder FormBridge API för att ansluta till XFA-mobilformuläret. API:t skickar en FormBridgeInitialized-händelse i det överordnade fönstret.
 uuid: 0db22649-522b-4857-9ffd-826c52381d15
 content-type: reference
@@ -9,12 +9,15 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: developer-reference
 discoiquuid: c05c9911-7c49-4342-89de-61b8b9953c83
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '969'
+ht-degree: 0%
 
 ---
 
 
-# Form Bridge APIs for HTML5 forms {#form-bridge-apis-for-html-forms}
+# API:er för Form Bridge för HTML5-formulär {#form-bridge-apis-for-html-forms}
 
 Du kan använda API:erna för Form Bridge för att öppna en kommunikationskanal mellan ett XFA-baserat HTML5-formulär och dina program. API:erna för Form Bridge innehåller ett **anslutnings** -API för att skapa anslutningen.
 
@@ -22,7 +25,7 @@ API:t för **anslutning** accepterar en hanterare som ett argument. När en lyck
 
 Du kan använda följande exempelkod för att skapa anslutningen.
 
-```
+```javascript
 // Example showing how to connect to FormBridge
 window.addEventListener("FormBridgeInitialized",
                                 function(event) {
@@ -37,7 +40,7 @@ window.addEventListener("FormBridgeInitialized",
 >
 >Se till att du skapar en anslutning innan du inkluderar filen formRuntime.jsp.
 
-## Tillgängligt API för Form Bridge {#available-form-bridge-api-nbsp}
+## Tillgängligt API för Form Bridge  {#available-form-bridge-api-nbsp}
 
 **getBridgeVersion()**
 
@@ -50,7 +53,7 @@ Returnerar versionsnumret för skriptbiblioteket
 **isConnected()** Kontrollerar om formulärtillståndet har initierats
 
 * **Indata**: Ingen
-* **Utdata**: **True** om XFA-formulärstatusen har initierats
+* **Utdata**: **True** if the XFA Form State has initialized
 
 * **Fel**: Ingen
 
@@ -91,11 +94,11 @@ Returnerar versionsnumret för skriptbiblioteket
 
       * **pagingConfig:** Låter användaren åsidosätta standardbeteendet för återgivning av endast den första sidan. Konfigurationen åsidosätts enligt följande:
 
-         *window.formBridge.registerConfig(&quot;pagingConfig&quot;:{pagingDisabled: &lt;true| false>, crinkPageDisabled: &lt;true| false> }).*
+         *window.formBridge.registerConfig(&quot;pagingConfig&quot;:{pagingDisabled: &lt;true | false>, crinkPageDisabled: &lt;true | false> }).*
 
       * **LoggingConfig:** Låter användaren åsidosätta loggningsnivån, inaktivera loggning för en kategori eller visa loggkonsolen eller skicka till servern. Konfigurationen kan åsidosättas på följande sätt:
 
-      ```JavaScript
+      ```javascript
       formBridge.registerConfig{
         "LoggerConfig" : {
       {
@@ -109,7 +112,7 @@ Returnerar versionsnumret för skriptbiblioteket
 
       * **SubmitServiceProxyConfig:** Tillåt användarna att registrera tjänster för överföring och inloggning.
 
-         ```JavaScript
+         ```javascript
          window.formBridge.registerConfig("submitServiceProxyConfig",
          {
          "submitServiceProxy" : "`<submitServiceProxy>`",
