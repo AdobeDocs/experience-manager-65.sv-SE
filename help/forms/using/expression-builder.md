@@ -10,7 +10,10 @@ topic-tags: correspondence-management
 discoiquuid: 68e3071e-7ce6-4bdc-8561-14bcaeae2b6c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5a586758da84f467e075adcc33cdcede2fbf09c7
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '800'
+ht-degree: 1%
 
 ---
 
@@ -93,7 +96,7 @@ Du kan skapa ett anpassat paket för att exportera dina egna fjärrfunktioner f�
    }
    ```
 
-   Parametrarna för metoderna kan också kommenteras med @ServiceMethodParameter-anteckningen (com.adobe.exm.expeval.ServiceMethodParameter). Den här anteckningen används bara för att ange namn som kan läsas av människor och beskrivningar av metodparametrar som ska användas i utvecklingsgränssnittet. Kontrollera att gränssnittsmetodernas parametrar och returvärden tillhör någon av följande typer:
+   Parametrarna för metoderna kan också kommenteras med @ServiceMethodParameter-anteckningen (com.adobe.exm.expeval.ServiceMethodParameter). Den här anteckningen används bara för att ange namn som kan läsas av människor och beskrivningar av metodparametrar som ska användas i redigeringsgränssnittet. Kontrollera att gränssnittsmetodernas parametrar och returvärden tillhör någon av följande typer:
 
    * java.lang.String
    * java.lang.Character
@@ -119,7 +122,7 @@ Du kan skapa ett anpassat paket för att exportera dina egna fjärrfunktioner f�
 
 1. Definiera implementeringen av gränssnittet, konfigurera det som en OSGI-tjänst och definiera följande egenskaper:
 
-```
+```jsp
 @org.apache.felix.scr.annotations.Properties({
   @org.apache.felix.scr.annotations.Property(name = "connectors.jsoninvoker", boolValue = true),
   @org.apache.felix.scr.annotations.Property(name = "connectors.jsoninvoker.alias", value = "<service_id>"),
@@ -128,7 +131,7 @@ Du kan skapa ett anpassat paket för att exportera dina egna fjärrfunktioner f�
 
 Posten exm.service=true instruerar Expression Manager att tjänsten innehåller fjärrfunktioner som är lämpliga att använda i uttryck. Värdet för &lt;service_id> måste vara en giltig Java-identifierare (alfanumerisk,$, _ utan andra specialtecken). Det här värdet, som har nyckelordet REMOTE_ som prefix, utgör prefixet som används i uttryck. Ett gränssnitt med en kommenterad metod bar() och tjänst-ID:t foo i tjänsteegenskaperna kan till exempel refereras inuti uttryck med REMOTE_foo:bar().
 
-```
+```java
 package mergeandfuse.com;
 
 import org.apache.felix.scr.annotations.Component;
