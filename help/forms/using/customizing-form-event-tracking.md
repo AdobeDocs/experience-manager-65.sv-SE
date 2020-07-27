@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 discoiquuid: 60d67c6b-5994-42ef-b159-ed6edf5cf9d4
 translation-type: tm+mt
-source-git-commit: dfa983db4446cbb0cbdeb42297248aba55b3dffd
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '476'
+ht-degree: 1%
 
 ---
 
@@ -61,7 +64,7 @@ Följande händelser spåras automatiskt i en analysaktiverad Adaptiv form:
 
 ## Anpassa tidsgränsen för fältbesökshändelser {#customizing-the-field-visit-event-timeout}
 
-Om en användare tillbringar mer än 60 sekunder på ett fält i standardkonfigurationen för AEM-formulär utlöses en `fieldvisit` händelse och informationen i fältet skickas till Adobe Analytics. Du kan anpassa baslinjen för spårning av fälttid under Konfiguration av AEM Forms Analytics på AEM Configuration-konsolen (/system/console/configMgr) för att öka eller minska tidsgränsen.
+Om en användare tillbringar mer än 60 sekunder på ett fält i standardinställningarna för AEM-formulär utlöses en `fieldvisit` händelse och informationen i fältet skickas till Adobe Analytics. Du kan anpassa baslinjen för spårning av fälttid under AEM Forms Analytics Configuration på AEM Configuration-konsolen (/system/console/configMgr) för att öka eller minska tidsgränsen.
 
 ## Anpassa spårningshändelser {#customizing-the-tracking-events}
 
@@ -79,7 +82,7 @@ Du kan utvärdera värdet för *eventName* - och *variableValueMap* -argument om
 
 I följande exempel behålls tillståndet för *error* -händelsen för varje *fieldName* -attribut. Händelsen skickas bara till analysservern om ett fel inträffar igen.
 
-```
+```javascript
 case 'error':
         if(errorOccurred[variableValueMap.fieldName] == true) {
             pushEvent(eventName, variableValueMap)
@@ -90,10 +93,10 @@ case 'error':
 
 ## Anpassa panelbesökshändelsen {#customizing-the-panelvisit-event}
 
-I standardinställningen för AEM Forms kontrolleras det efter var 60:e sekund om fönstret som innehåller det adaptiva formuläret är aktivt. Om fönstret är aktivt utlöses en `panelVisit`händelse för Adobe Analytics. Det hjälper till att kontrollera att dokumentet eller formuläret är aktivt och beräknar hur lång tid som har ägnats åt motsvarande formulär eller dokument.
+I standardinställningen för AEM Forms kontrolleras det efter var 60:e sekund om fönstret som innehåller det adaptiva formuläret är aktivt. Om fönstret är aktivt utlöses en `panelVisit`händelse till Adobe Analytics. Det hjälper till att kontrollera att dokumentet eller formuläret är aktivt och beräknar hur lång tid som har ägnats åt motsvarande formulär eller dokument.
 
 >[!NOTE]
 >
 >Händelsenamnet som används för att bevara aktivitet och beräkna hur lång tid som har ägnats åt är &quot;panelVisit&quot;. Den här händelsen skiljer sig från panelbesökshändelsen som listas i tabellen ovan.
 
-Du kan ändra funktionen scheduleHeartBeatCheck som finns i filen om du vill ändra eller stoppa den här händelsen som skickas till Adobe Analytics med ett regelbundet intervall. `/libs/afanalytics/js/custom.js`
+Du kan ändra funktionen scheduleHeartBeatCheck som finns i filen om du vill ändra eller stoppa den här händelsen som skickas till Adobe Analytics regelbundet. `/libs/afanalytics/js/custom.js`
