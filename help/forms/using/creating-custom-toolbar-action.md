@@ -1,8 +1,8 @@
 ---
 title: Skapa en anpassad verktygsfältsåtgärd
 seo-title: Skapa en anpassad verktygsfältsåtgärd
-description: Formulärutvecklare kan skapa anpassade verktygsfältsåtgärder för adaptiva formulär i AEM Forms. Med anpassade åtgärder kan formulärförfattare tillhandahålla fler arbetsflöden och alternativ till sina slutanvändare.
-seo-description: Formulärutvecklare kan skapa anpassade verktygsfältsåtgärder för adaptiva formulär i AEM Forms. Med anpassade åtgärder kan formulärförfattare tillhandahålla fler arbetsflöden och alternativ till sina slutanvändare.
+description: Formulärutvecklare kan skapa anpassade verktygsfältsåtgärder för anpassningsbara formulär i AEM Forms. Med anpassade åtgärder kan formulärförfattare tillhandahålla fler arbetsflöden och alternativ till sina slutanvändare.
+seo-description: Formulärutvecklare kan skapa anpassade verktygsfältsåtgärder för anpassningsbara formulär i AEM Forms. Med anpassade åtgärder kan formulärförfattare tillhandahålla fler arbetsflöden och alternativ till sina slutanvändare.
 uuid: cd785cfb-e1bb-4158-be9b-d99e04eccc02
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,7 +10,10 @@ topic-tags: customization
 discoiquuid: 4beca23f-dbb0-4e56-8047-93e4f1775418
 docset: aem65
 translation-type: tm+mt
-source-git-commit: befbdfd574949a7f7449b70a15480e7c105418fe
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '529'
+ht-degree: 0%
 
 ---
 
@@ -41,7 +44,7 @@ Följande steg visar hur du skapar en anpassad verktygsfältåtgärd och hur du 
 
    ![Hierarki med noder för anpassning av verktygsfältet](assets/action3.png)
 
-1. Markera `cq:template` noden i `reviewbeforesubmit` noden. Kontrollera att värdet för `guideNodeClass` egenskapen är `guideButton` och ändra `jcr:title` egenskapen därefter.
+1. Markera `cq:template` noden i `reviewbeforesubmit` noden. Se till att värdet för `guideNodeClass` egenskapen är `guideButton` och ändra `jcr:title` egenskapen därefter.
 1. Ändra type-egenskapen i `cq:Template` noden. I det aktuella exemplet ändrar du type-egenskapen till button.
 
    Typvärdet läggs till som en CSS-klass i den genererade HTML-koden för komponenten. Användare kan använda den CSS-klassen för att formatera sina åtgärder. Standardformatet för både mobila och stationära enheter finns för knappar, skicka, återställa och spara typvärden.
@@ -54,7 +57,7 @@ Följande steg visar hur du skapar en anpassad verktygsfältåtgärd och hur du 
 
    Lägg till följande kod i `init.jsp`.
 
-   ```
+   ```jsp
    <%@include file="/libs/fd/af/components/guidesglobal.jsp" %>
    <guide:initializeBean name="guideField" className="com.adobe.aemds.guide.common.GuideButton"/>
    
@@ -112,7 +115,7 @@ Följande steg visar hur du skapar en anpassad verktygsfältåtgärd och hur du 
 
    Lägg till följande kod i `ReviewBeforeSubmit.js` filen.
 
-   ```
+   ```javascript
    /*anonymous function to handle show of review before submit view */
    $(function () {
        if($("div.reviewbeforesubmit button[id*=reviewbeforesubmit]").length > 0) {
