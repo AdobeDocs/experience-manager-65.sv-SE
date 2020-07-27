@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 1b229ddf-9350-40b6-8056-dcbe0c5afd5b
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '231'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ Följande snabbstarter är tillgängliga för tjänsten XMP Utilities.
 
 [Snabbstart (SOAP-läge): Importera XMP-metadata med Java API](xmp-utilities-service-java-api.md#quick-start-soap-mode-importing-xmp-metadata-using-the-java-api)
 
-AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda typer och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms-API:t med stark typning och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
@@ -33,7 +36,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda ty
 
 Följande kodexempel hämtar, inspekterar och sparar XMP-metadata. (Se [Exportera metadata från PDF-dokument](/help/forms/developing/xmp-utilities.md#exporting-metadata-from-pdf-documents).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-pdfutility-client.jar
@@ -138,7 +141,7 @@ Följande kodexempel hämtar, inspekterar och sparar XMP-metadata. (Se [Exporter
 
 I följande kodexempel importeras XMP-metadata och den nya PDF-filen sparas på disken. PDF-dokumentet är baserat på en PDF-fil med namnet Loan.pdf. XML-dokumentet som innehåller de metadata som ska importeras till PDF-dokumentet baseras på en XML-fil med namnet *LoanMetaData.xml*. Mer information om XML-filen finns i [Importera metadata till PDF-dokument](/help/forms/developing/xmp-utilities.md#importing-metadata-into-pdf-documents).
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-pdfutility-client.jar
