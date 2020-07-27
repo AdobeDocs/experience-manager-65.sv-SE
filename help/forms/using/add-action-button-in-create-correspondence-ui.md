@@ -10,7 +10,7 @@ topic-tags: correspondence-management
 discoiquuid: 046e3314-b436-47ed-98be-43d85f576789
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '1910'
 ht-degree: 0%
@@ -226,7 +226,7 @@ Hanteringen av åtgärd/knapp vid klickning innehåller logik för:
    1. Dubbelklicka på filen crcustomization.js för att öppna den i CRX.
    1. Klistra in följande kod i filen och klicka på **Spara alla**:
 
-      ```
+      ```javascript
       /* for adding and handling custom actions in Extensible Toolbar.
         * One instance of handler will be created for each action.
         * CM.domain.CCRCustomActionHandler is actionHandler class.
@@ -349,6 +349,7 @@ LCA-processen körs på LiveCycle-servern och kräver serveradressen och inloggn
    * **Server-URL**: URL för den LC-server vars Send for Review-tjänst åtgärdshanterarkoden använder.
    * **Användarnamn**: Administratörsanvändarnamn för LC-servern
    * **Lösenord**: Lösenord för administratörens användarnamn
+
    ![Konfiguration av Adobe LiveCycle Client SDK](assets/3_clientsdkconfiguration.png)
 
 #### Installera LiveCycle Archive (LCA) {#install-livecycle-archive-lca}
@@ -379,7 +380,7 @@ Den LiveCycle-process som krävs för e-posttjänstprocessen.
 
 1. Klicka på **Importera**.
 
-#### Lägger till ServiceName i listan över tillåtna listtjänster {#adding-servicename-to-the-allowlist-service-list}
+#### Lägger till ServiceName i listan över tjänster i Tillåtelselista {#adding-servicename-to-the-allowlist-service-list}
 
 I AEM-servern anger du vilka LiveCycle-tjänster du vill ha tillgång till AEM-servern.
 
@@ -420,6 +421,7 @@ Mer information finns i [Koppla AEM Forms till Adobe LiveCycle](/help/forms/usin
    * **crx.username**= AEM-användarnamn
    * **crx.password**= AEM-lösenord
    * **crx.appRoot**=/content/apps/cm
+
    >[!NOTE]
    >
    >Varje gång du gör några ändringar på serversidan startar du om LiveCycle Server. Mer information om hur du skapar en egen LiveCycle-komponent finns i [Utöka LiveCycle ES via anpassad DSC-utveckling](https://www.adobe.com/devnet/livecycle/articles/dsc_development.html).
