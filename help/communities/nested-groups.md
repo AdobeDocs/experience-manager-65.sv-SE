@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 752235d2-21ac-46d2-82ed-5fec09c645e9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 22e853ecaf2696c7329a81bb9d375b1dbc74452c
+source-git-commit: c9fa5624a59f4b9a6f970628b03bbd8b7a277a73
+workflow-type: tm+mt
+source-wordcount: '539'
+ht-degree: 4%
 
 ---
 
@@ -20,13 +23,13 @@ source-git-commit: 22e853ecaf2696c7329a81bb9d375b1dbc74452c
 
 ## Skapar grupper på författare {#creating-groups-on-author}
 
-Från global navigering i AEM Author-instansen:
+Från global navigering i AEM Author:
 
 * Välj **[!UICONTROL Communities] > **[!UICONTROL Sites]**.
-* Välj **[!UICONTROL en mapp]** som ska öppnas.
-* Välj kort för den engelska webbplatsen **[!UICONTROL Komma igång-självstudiekursen]** .
+* Välj **[!UICONTROL engage folder]** att öppna den.
+* Välj kortet för den **[!UICONTROL Getting Started Tutorial]** engelska webbplatsen.
 
-   * Select the card image.
+   * Välj kortbilden.
    * Markera *inte* en ikon.
 
 Resultatet blir att [gruppkonsolen](/help/communities/groups.md)nås:
@@ -43,17 +46,17 @@ Den här gruppen kan skapas eftersom webbplatsstrukturen för interaktion inneh�
 
 De här konsolerna liknar konsolen Communities Sites.
 
-* Välj **[!UICONTROL Skapa grupp]**.
+* Välj **[!UICONTROL Create Group]**.
 
 * **Community-gruppmall**:
 
-   * **[!UICONTROL Gruppnamn]**: Konst.
-   * **[!UICONTROL Gruppbeskrivning]**: En överordnad grupp för olika konstnärliga grupper.
-   * **[!UICONTROL Grupprot]** för användargrupper: Lämna *som standard*.
-   * **[!UICONTROL Ytterligare tillgängligt språk för communitygrupper]**: Använd listrutan för att välja tillgängliga språk för communitygrupper. Menyn innehåller alla språk som den överordnade communitywebbplatsen skapas i. Användarna kan välja mellan dessa språk för att skapa grupper i flera språkområden i det här steget. Samma grupp skapas på flera angivna språk i gruppkonsolen för respektive communityplats.
-   * **[!UICONTROL Gruppnamn]**: konst.
-   * **[!UICONTROL Mall]**: listruta för att välja `Reference Group.`
-   * Välj **[!UICONTROL Nästa]**.
+   * **[!UICONTROL Community Group Title]**: Konst.
+   * **[!UICONTROL Community Group Description]**: En överordnad grupp för olika konstnärliga grupper.
+   * **[!UICONTROL Community Group Root]**: *lämna som standard*.
+   * **[!UICONTROL Additional Available Community Group Language(s)]**: Använd listrutan för att välja tillgängliga språk för communitygrupper. Menyn innehåller alla språk som den överordnade communitywebbplatsen skapas i. Användarna kan välja mellan dessa språk för att skapa grupper i flera språkområden i det här steget. Samma grupp skapas på flera angivna språk i gruppkonsolen för respektive communityplats.
+   * **[!UICONTROL Community Group Name]**: konst.
+   * **[!UICONTROL Template]**: listruta för att välja `Reference Group.`
+   * Välj **[!UICONTROL Next]**.
 
 ![Kapslade communitygrupper](assets/parent-to-nestedgroup.png)
 
@@ -62,24 +65,24 @@ Fortsätt genom de andra panelerna med följande inställningar:
 * **[!UICONTROL Design]**
 
    * Ändra designen eller tillåt den överordnade standardwebbplatsens design.
-   * Välj **[!UICONTROL Nästa]**.
+   * Välj **[!UICONTROL Next]**.
 
-* **[!UICONTROL Inställningar]**
+* **[!UICONTROL Settings]**
 
-   * **[!UICONTROL Moderering]**
+   * **[!UICONTROL Moderation]**
 
       * Lämna tomt (ärv från överordnad plats).
-   * **[!UICONTROL medlemskap]**
+   * **[!UICONTROL Membership]**
 
       * Använd standard `Optional Membership.`
 
-      * **[!UICONTROL Miniatyrbild]**
+      * **[!UICONTROL Thumbnail]**
          * `optional.*`
-      * **[!UICONTROL Välj Nästa]**.
+      * **[!UICONTROL Select Next]**.
 
 
 
-* Välj **[!UICONTROL Skapa]**.
+* Välj **[!UICONTROL Create]**.
 
 ### Kapslade grupper inom konst {#nesting-groups-within-arts-group}
 
@@ -91,7 +94,7 @@ Mappen `groups` innehåller nu två grupper (uppdatera sidan).
 
 Innan du skapar grupper som är kapslade i `arts` gruppen håller du pekaren över `arts` kortet och väljer publiceringsikonen för att publicera det.
 
-![chlimage_1-93](assets/chlimage_1-93.png)
+![liking-component](assets/liking-component.png)
 
 Vänta på bekräftelse på att gruppen publicerades.
 
@@ -99,21 +102,21 @@ Vänta på bekräftelse på att gruppen publicerades.
 
 Gruppen bör också innehålla en `arts` `groups` mapp, men en som är tom och där nya grupper kan skapas. Navigera till gruppmappen för konst och skapa 3 kapslade grupper, där var och en har olika medlemsinställningar:
 
-1. **[!UICONTROL Visuell]**
+1. **[!UICONTROL Visual]**
 
    * Titel: `Visual Arts`
    * Namn: `visual`
    * Mall: `Reference Group`
    * Medlemskap: välj `Optional Membership`, en offentlig grupp, öppen för alla medlemmar.
 
-1. **[!UICONTROL Revisoriska]**
+1. **[!UICONTROL Auditory]**
 
    * Titel: `Auditory Arts`
    * Namn: `auditory`
    * Mall: `Reference Group`
    * Medlemskap: välj `Required Membership`, en öppen grupp, som är tillgänglig för medlemmar att gå med i.
 
-1. **[!UICONTROL Historik]**
+1. **[!UICONTROL History]**
 
    * Titel: `Art History`
    * Namn: `history`
@@ -124,13 +127,13 @@ Uppdatera sidan om du vill se alla tre kapslade grupper (undergrupper).
 
 Så här navigerar du till de kapslade grupperna från konsolen Webbplatser för communities:
 
-* Välj **[!UICONTROL mapp]**
-* Välj **[!UICONTROL Komma igång-självstudiekurskort]**
-* Välj **[!UICONTROL gruppmappen]**
-* Välj **[!UICONTROL grafikkort]**
-* Välj **[!UICONTROL gruppmappen]**
+* Välj **[!UICONTROL engage folder]**
+* Välj **[!UICONTROL Getting Started Tutorial card]**
+* Välj **[!UICONTROL Groups]** mapp
+* Välj **[!UICONTROL arts card]**
+* Välj **[!UICONTROL Groups]** mapp
 
-![chlimage_1-95](assets/chlimage_1-95.png)
+![configure-läning](assets/configure-liking.png)
 
 ## Förlagskoncern {#publishing-groups}
 
