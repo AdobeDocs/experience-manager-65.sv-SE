@@ -9,14 +9,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: ca3f6025-7e17-4173-8267-e24a338ea4a1
 translation-type: tm+mt
-source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '311'
+ht-degree: 0%
 
 ---
 
 
 # Anpassa uppgiftsåtgärder {#customizing-task-actions}
 
-Med arbetsytan i AEM Forms kan användarna anpassa uppgiftsåtgärderna. Innan du anpassar uppgiftsåtgärderna måste du följa de steg som beskrivs i [Allmänna steg för anpassning](/help/forms/using/generic-steps-html-workspace-customization.md)av arbetsytan i AEM Forms.
+Med arbetsytan i AEM Forms kan användare anpassa uppgiftsåtgärderna. Innan du anpassar uppgiftsåtgärderna måste du följa de steg som beskrivs i [Allmänna steg för anpassning](/help/forms/using/generic-steps-html-workspace-customization.md)av arbetsytan i AEM Forms.
 
 ## Anpassa textstil {#customizing-text-style}
 
@@ -135,11 +138,11 @@ Om du bara vill visa bilder för åtgärder anpassar du bilderna som används i 
 
 ### Åtgärdssnabbmeny för uppgiftslistans åtgärd {#task-list-task-action-nbsp-pop-up-menu}
 
-1. Du behöver ett utvecklingspaket för att kunna anpassa objekt på aktivitetsmenyn på arbetsytan i AEM Forms. Mer information om hur du skapar utvecklingspaket finns i [Skapa kod för arbetsytan i AEM Forms.](/help/forms/using/introduction-customizing-html-workspace.md#building-html-workspace-code)
+1. Du behöver ett utvecklingspaket för att kunna anpassa alternativ på aktivitetsmenyn i arbetsytan AEM Forms. Mer information om hur du skapar utvecklingspaket finns i [Skapa AEM Forms-arbetsytekod.](/help/forms/using/introduction-customizing-html-workspace.md#building-html-workspace-code)
 
 1. Kopiera /libs/ws/js/runtime/templates/task.html för att `/apps/ws/js/runtime/templates/task.html`ersätta följande kodfragment:
 
-   ```
+   ```html
    // Orignal code
    <div class="taskActionsPopUp">
            <!--START_TASKACTIONS-->
@@ -174,7 +177,7 @@ Om du bara vill visa bilder för åtgärder anpassar du bilderna som används i 
        </div>
    ```
 
-   ```
+   ```html
    //New code
    
    <div class="taskActionsPopUp">
@@ -267,7 +270,7 @@ Utför följande steg för att anpassa snabbmenyn Detaljåtgärdsåtgärder:
 * Kopiera /libs/ws/js/runtime/templates/taskdetails.html till `/apps/ws/js/runtime/templates/` mappen:
 * Kapsla in ikontaggen inuti ankartaggen i stället för text. Den *nya koden* nedan kapslar till exempel in ikontaggen inuti ankartaggen:
 
-```
+```html
 // Original code
 <div class="taskActionsPopUp">
         <!--START_ACTIONBUTTONGROUP-->
@@ -310,7 +313,7 @@ Utför följande steg för att anpassa snabbmenyn Detaljåtgärdsåtgärder:
     </div>
 ```
 
-```
+```html
 //New code
 
 <div class="taskActionsPopUp">
