@@ -10,7 +10,10 @@ content-strategy: max-2018
 discoiquuid: 770e9174-b648-462a-abe9-05fefa967d86
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: bd70508b361ac8b62ebc0344538a18369a075f3e
+workflow-type: tm+mt
+source-wordcount: '6067'
+ht-degree: 0%
 
 ---
 
@@ -63,7 +66,7 @@ Du kan exportera teman som en zip-fil och använda dem i andra projekt eller AEM
 
 >[!NOTE]
 >
->Om du hämtar ett tema som har ett associerat adaptivt formulär och det tillhörande adaptiva formuläret är baserat på en anpassad mall, hämtar du även den anpassade mallen. När du överför det hämtade temat och anpassningsbara formulär till en AEM Forms-server överför du även den relaterade anpassade mallen.
+>Om du hämtar ett tema som har ett associerat adaptivt formulär och det tillhörande adaptiva formuläret är baserat på en anpassad mall, hämtar du även den anpassade mallen. När du överför det hämtade temat och anpassningsbara formuläret till en AEM Forms-server överför du även den relaterade anpassade mallen.
 
 ### Överföra ett tema {#uploading-a-theme}
 
@@ -223,7 +226,7 @@ En specifik komponent påverkar objekt i den specifika kategorin. När du format
    * **Visa CSS**: Gör att du kan visa CSS för den markerade komponenten
    I sidofältet finns dessutom en pil längst ned. När du klickar på pilen får du ytterligare två alternativ: **Simulera lyckade** och **simulera fel.** Dessa alternativ, tillsammans med de alternativ som beskrivs ovan, beskrivs i detalj [nedan](../../forms/using/themes.md#using-rail).
 
-[ Redigera ![tema med Rail och Canvas markerat.](assets/themes.png)](assets/themes-1.png) **A.** Sidofält **B.** Arbetsyta
+[ ![Theme editor med Rail och Canvas markerade.](assets/themes.png)](assets/themes-1.png) **S.** Sidofält **B.** Arbetsyta
 
 ### Formatkomponenter {#styling-components}
 
@@ -241,7 +244,7 @@ Klicka på **UTÖKA ALLA** i sidofältet om du vill visa, markera och formatera 
 
 ### Layout på formatpanelen {#styling-panel-layouts-br}
 
-Temana i AEM Forms stöder formatering av element i panelernas layout i formulär och interaktiv kommunikation. Formatering av element i färdiga layouter och anpassade layouter stöds.
+Temana i AEM Forms har stöd för att formatera element i panelernas layout i formulär och interaktiv kommunikation. Formatering av element i färdiga layouter och anpassade layouter stöds.
 
 De färdiga panelerna är:
 
@@ -296,7 +299,7 @@ Med plusknappen mot resursbiblioteket kan du spara formatet med ett namn som du 
 
 När du anger ett anpassat namn för ett format kopplas formatet till ett tema och är inte längre tillgängligt för andra teman. Så här tar du bort ett sparat format:
 
-1. Klicka på **Temaalternativ** ![](assets/theme-options.png) > **Hantera format** i verktygsfältet CANVAS.
+1. I verktygsfältet CANVAS klickar du på **Temaalternativ** för ![temaalternativ](assets/theme-options.png) > **Hantera format**.
 1. Välj ett sparat format i dialogrutan Hantera format och klicka på **Ta bort**.
 
    ![Ta bort det sparade formatet](assets/manage-styles.png)
@@ -491,7 +494,7 @@ Du kan nu använda teckensnitt som finns i en webbtjänst i ett adaptivt formul�
 Utför följande steg för att konfigurera Typekit i AEM:
 
 1. I författarinstansen klickar du på ![](assets/adobeexperiencemanager.png)adobeexperienceManagerAdobe Experience Manager > Tools ![hammer](assets/hammer.png) > Deployment > Cloud Services.
-1. På sidan **Cloud Services** går du till **Tredjepartstjänster** > **Typekit** och klickar på **Konfigurera nu** under Typekit. Om det redan finns en konfiguration klickar du på **+** -knappen för att skapa en ny instans.
+1. På sidan **Cloud Service** går du till **Tredjepartstjänster** > **Typekit** och klickar på **Konfigurera nu** under Typekit. Om det redan finns en konfiguration klickar du på **+** -knappen för att skapa en ny instans.
 1. I dialogrutan **Skapa konfiguration** anger du en rubrik för konfigurationen och klickar på **Skapa**.
 
    Du omdirigeras till konfigurationssidan.
@@ -641,6 +644,7 @@ Du kan se den genererade CSS-koden med följande alternativ:
       1. Klicka på **Avancerat** på egenskapssidan som öppnas.
       1. Gå till fliken Avancerat, i fältet Klientbiblioteksplats, bläddra och välj det klientbibliotek som du vill använda.
       1. Click **Save**.
+
       Det format du anger i klientbiblioteket importeras i det tema som använder det. Du kan till exempel ange format för textruta, numerisk ruta och växla i klientbiblioteket. När du importerar ditt klientbibliotek till temat importeras format för textruta, numerisk ruta och växel. Du kan sedan formatera andra komponenter med hjälp av temaredigeraren.
 Du kan också skapa ett tema, skapa kopior av det och sedan ändra formatet som finns i de kopierade temana för liknande användningsfall.
 Se [Hämta specifikt utseende med teman](#specific-af-appearance)
