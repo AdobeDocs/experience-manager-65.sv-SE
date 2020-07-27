@@ -1,6 +1,6 @@
 ---
-title: Två AEM Forms-instanser finns på en server
-seo-title: Två AEM Forms-instanser finns på en server
+title: Två AEM Forms-arbetsyteinstanser finns på en server
+seo-title: Två AEM Forms-arbetsyteinstanser finns på en server
 description: Så här kan LC-administratörer anpassa HTML WS för att ha två instanser på en enda server som kan nås via olika URL:er.
 seo-description: Så här kan LC-administratörer anpassa HTML WS för att ha två instanser på en enda server som kan nås via olika URL:er.
 uuid: 0584f512-6b92-4418-b71c-93605cfa1927
@@ -9,27 +9,30 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 1254a7c2-2c67-4661-803e-afd53e817916
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '321'
+ht-degree: 0%
 
 ---
 
 
-# Två AEM Forms-instanser finns på en server {#hosting-two-aem-forms-workspace-instances-on-one-server}
+# Två AEM Forms-arbetsyteinstanser finns på en server {#hosting-two-aem-forms-workspace-instances-on-one-server}
 
-Standardinstallationen och inställningarna för AEM Forms tillåter endast att en AEM Forms-arbetsyta är tillgänglig på servern. Du kan dock behöva placera två olika instanser av arbetsytan i AEM Forms på en enda AEM Forms-server. De två instanserna är tillgängliga via olika URL:er.
+Standardinstallationen och inställningarna för AEM Forms tillåter endast att en AEM Forms-arbetsyta är tillgänglig på servern. Du kan dock behöva ha två olika instanser av AEM Forms-arbetsytan på en enda AEM Forms-server. De två instanserna är tillgängliga via olika URL:er.
 
 AEM Forms-administratörer anpassar arbetsytan för att skapa två olika URL:er och gör två arbetsytor tillgängliga på samma server. I den här artikeln antar vi att de två arbetsytorna är tillgängliga både `https://'[server]:[port]'/lc/ws` och `https://'[server]:[port]':/lc/ws2`.
 
 Följ de här stegen för att konfigurera arbetsytan i AEM Forms.
 
-1. Installera utvecklarpaketet för AEM Forms-arbetsytan på servern. Se [dev-paketet](/help/forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)för instruktioner om hur du skapar det.
+1. Installera utvecklingspaketet för arbetsytan i AEM Forms på servern. Se [dev-paketet](/help/forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)för instruktioner om hur du skapar det.
 1. Logga in på CRXDE Lite som administratör via `https://'[server]:[port]'/lc/crx/de/index.jsp`.
-1. Kopiera nod på /content och klistra in på /content. Byt namn på noden till ws2. Klicka på **[!UICONTROL Spara alla]**. Ändra värdet på `sling:resourceType` till ws2 i den här nodens egenskaper. Klicka på **[!UICONTROL Spara alla]**.
+1. Kopiera nod på /content och klistra in på /content. Byt namn på noden till ws2. Klicka på **[!UICONTROL Save all]**. Ändra värdet på `sling:resourceType` till ws2 i den här nodens egenskaper. Klicka på **[!UICONTROL Save all]**.
 
-1. Kopiera mapp från /libs och klistra in på /apps. Byt namn på mappen till ws2. Klicka på **[!UICONTROL Spara alla]**.
+1. Kopiera mapp från /libs och klistra in på /apps. Byt namn på mappen till ws2. Klicka på **[!UICONTROL Save all]**.
 1. Gör följande kodändringar i `GET.jsp``/apps/ws2`på. Ersätt följande
 
-   ```
+   ```html
    <html lang="en">
    <head>
        <meta charset="utf-8">
@@ -43,7 +46,7 @@ Följ de här stegen för att konfigurera arbetsytan i AEM Forms.
 
    med följande kod
 
-   ```
+   ```html
    <html lang="en">
    <head>
        <meta charset="utf-8">
