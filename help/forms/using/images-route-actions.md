@@ -1,15 +1,18 @@
 ---
 title: Anpassa bilder som används i flödesåtgärder
 seo-title: Anpassa bilder som används i flödesåtgärder
-description: Hur man anpassar bilderna som används i vägåtgärder på arbetsytan i LiveCycle AEM Forms.
-seo-description: Hur man anpassar bilderna som används i vägåtgärder på arbetsytan i LiveCycle AEM Forms.
+description: Hur man anpassar bilderna som används i vägåtgärder i LiveCycle AEM Forms.
+seo-description: Hur man anpassar bilderna som används i vägåtgärder i LiveCycle AEM Forms.
 uuid: 42608376-587e-4b57-a9d5-8f9ebd981426
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 10158c13-47b4-43e3-ac47-690f3cbab158
 translation-type: tm+mt
-source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '327'
+ht-degree: 0%
 
 ---
 
@@ -44,13 +47,13 @@ Om du vill anpassa bilderna som används i vägåtgärder utför du stegen som b
 
 ## Åtgärdspopup för uppgiftslisteåtgärd {#task-list-task-action-popup}
 
-1. Skapa ett åtgärdsfönster för uppgiftslistan, se [Skapa kod](introduction-customizing-html-workspace.md#building-html-workspace-code)för arbetsytan i AEM Forms. Dev-paketet måste användas.
+1. Skapa en åtgärdspopup för uppgiftslista, se [Skapa AEM Forms-arbetsytekod](introduction-customizing-html-workspace.md#building-html-workspace-code). Dev-paketet måste användas.
 
 1. Kopiera `/libs/ws/js/runtime/templates/task.html` till `/apps/ws/js/runtime/templates/task.html`.
 
 1. Om namnet på CSS-formatet är detsamma som namnet på vägåtgärden som kommer från servern ändrar du följande kod i `/apps/ws/js/runtime/templates/task.html`:
 
-   ```
+   ```jsp
    <%if(routeList == null){%>
                <li>
                    <a href="javascript:void(0);" title="<%= $.t('taskaction.directcommand.'+availableCommands.directCommands[0])%>" value="<%= availableCommands.directCommands[0]%>" data-action="route"><%= $.t('taskaction.directcommand.'+availableCommands.directCommands[0])%></a>
@@ -80,7 +83,7 @@ Om du vill anpassa bilderna som används i vägåtgärder utför du stegen som b
 
 1. Om namnet på CSS-formatet skiljer sig från namnet på vägåtgärden som kommer från servern ändrar du följande kod i `/apps/ws/js/runtime/templates/task.html`. Den lägger till en hög med serverletsvillkoren för att mappa formatet med flödesåtgärdens namn. `if-else`
 
-```
+```jsp
 <%if(routeList == null){%>
             <li>
                 <a href="javascript:void(0);" title="<%= $.t('taskaction.directcommand.'+availableCommands.directCommands[0])%>" value="<%= availableCommands.directCommands[0]%>" data-action="route"><%= $.t('taskaction.directcommand.'+availableCommands.directCommands[0])%></a>
@@ -120,7 +123,7 @@ To
 
 1. Om namnet på CSS-formatet är detsamma som namnet på vägåtgärden som kommer från servern ändrar du följande kod i `/apps/ws/js/runtime/templates/taskdetails.html`:
 
-   ```
+   ```jsp
    <%for (var i = 0; i < availableCommands.directCommands.length; i++) {%>
                            <li class="routeAction">
                                <a href="javascript:void(0);" title="<%= availableCommands.directCommands[i]%>" value="<%= availableCommands.directCommands[i]%>" data-action="route"><%= availableCommands.directCommands[i]%></a>
@@ -140,7 +143,7 @@ To
 
 1. Om namnet på CSS-formatet skiljer sig från namnet på vägåtgärden som kommer från servern ändrar du följande kod i `/apps/ws/js/runtime/templates/taskdetails.html`. Den lägger till en hög med `if-else` serverletvillkor för att mappa formatet med vägåtgärdens namn.
 
-   ```
+   ```jsp
    <%for (var i = 0; i < availableCommands.directCommands.length; i++) {%>
                            <li class="routeAction">
                                <a href="javascript:void(0);" title="<%= availableCommands.directCommands[i]%>" value="<%= availableCommands.directCommands[i]%>" data-action="route"><%= availableCommands.directCommands[i]%></a>
