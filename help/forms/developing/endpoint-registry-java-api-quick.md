@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: e5989859-e58d-4049-9e0d-c4c848d597af
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '545'
+ht-degree: 0%
 
 ---
 
@@ -37,7 +40,7 @@ Java API Quick Start (SOAP) är tillgängligt för slutpunktsregistret.
 
 [QuickStart: Hämta slutpunktsanslutningsinformation med Java API](endpoint-registry-java-api-quick.md#quickstart-retrieving-endpoint-connector-information-using-the-java-api)
 
-AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda typer och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms-API:t med stark typning och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
@@ -51,7 +54,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms-API:t med starkt typbestämda ty
 
 I följande Java-kodexempel läggs en EJB-slutpunkt till i en tjänst med namnet *MyApplication/EncryptDocument*. (Se [Lägga till EJB-slutpunkter](/help/forms/developing/programmatically-endpoints.md#adding-ejb-endpoints).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-livecycle-client.jar
@@ -150,7 +153,7 @@ I följande Java-kodexempel läggs en EJB-slutpunkt till i en tjänst med namnet
 
 I följande Java-kodexempel läggs en SOAP-slutpunkt till i en tjänst med namnet *MyApplication/EncryptDocument*. (Se [Lägga till SOAP-slutpunkter](/help/forms/developing/programmatically-endpoints.md#adding-soap-endpoints).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-livecycle-client.jar
@@ -254,7 +257,7 @@ I följande Java-kodexempel läggs en bevakad mappslutpunkt till i en tjänst me
 >
 >Du måste inkludera filen WatchedFolderEndpointConfigConstants.java i ditt projekt för att kompilera och köra följande snabbstart. (Se Konstanta filer för [Bevakade mappkonfigurationsvärden](/help/forms/developing/programmatically-endpoints.md#watched-folder-configuration-values-constant-file).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-livecycle-client.jar
@@ -389,7 +392,7 @@ I följande Java-kodexempel läggs en e-postslutpunkt till i en tjänst med namn
 >
 >Du måste inkludera filen EmailEndpointConfigConstants.java i ditt projekt för att kompilera och köra följande snabbstart. (Se Konstanta filer för [e-postkonfigurationsvärden](/help/forms/developing/programmatically-endpoints.md#email-configuration-values-constant-file).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-livecycle-client.jar
@@ -528,7 +531,7 @@ I följande Java-kodexempel läggs en e-postslutpunkt till i en tjänst med namn
 
 I följande Java-kodexempel läggs en fjärrslutpunkt till i en tjänst med namnet *MyApplication/EncryptDocument*. (Se [Lägga till fjärrslutpunkter](/help/forms/developing/programmatically-endpoints.md#adding-remoting-endpoints).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-livecycle-client.jar
@@ -633,7 +636,7 @@ I följande Java-kodexempel läggs en fjärrslutpunkt till i en tjänst med namn
 
 I följande Java-kodexempel läggs en TaskManager-slutpunkt till i en tjänst med namnet *MyApplication/EncryptDocument*. Observera att namnet på kategorin är *EncryptProcess*. (Se [Lägga till slutpunkter](/help/forms/developing/programmatically-endpoints.md#adding-taskmanager-endpoints)för TaskManager.)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-livecycle-client.jar
@@ -742,7 +745,7 @@ I följande Java-kodexempel läggs en TaskManager-slutpunkt till i en tjänst me
 
 I följande Java-kodexempel ändras en bevakad mappslutpunkt. Slutpunkten är för *MyApplication/EncryptDocument* -processen. Den bevakade mappen ändras till `C:\NewWatchedFolder`. (Se [Ändra slutpunkter](/help/forms/developing/programmatically-endpoints.md#modifying-endpoints).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-livecycle-client.jar
@@ -892,7 +895,7 @@ I följande Java-kodexempel ändras en bevakad mappslutpunkt. Slutpunkten är f�
 
 Följande Java-kod tar bort en EJB-slutpunkt från en tjänst med namnet *MyApplication/EncryptDocument*. (Se [Ta bort slutpunkter](/help/forms/developing/programmatically-endpoints.md#removing-endpoints).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-livecycle-client.jar
@@ -1011,7 +1014,7 @@ Följande Java-kod tar bort en EJB-slutpunkt från en tjänst med namnet *MyAppl
 
 Följande Java-kod hämtar information om en bevakad mappslutpunkt. Information om varje konfigurationsvärde hämtas och visas. Den här kodlistan anger om varje konfigurationsvärde är obligatoriskt eller valfritt. Dessutom visas namn och värde för varje konfigurationsvärde. (Se [Hämta information](/help/forms/developing/programmatically-endpoints.md#retrieving-endpoint-connector-information)om slutpunktsanslutning.)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-livecycle-client.jar
