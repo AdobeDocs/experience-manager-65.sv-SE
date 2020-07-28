@@ -3,9 +3,9 @@ title: 'Metadata-scheman för att definiera layouten för metadataegenskapssida 
 description: Metadata-schemat definierar layouten för egenskapssidan och de metadataegenskaper som visas för resurser. Lär dig hur du skapar anpassade metadatamatcheman, redigerar metadatamatchema och hur du använder metadatamatchema på resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
+source-git-commit: 8c481c9a5052ff057ae0857c2ac825cec2b26269
 workflow-type: tm+mt
-source-wordcount: '2524'
+source-wordcount: '2523'
 ht-degree: 4%
 
 ---
@@ -27,9 +27,9 @@ Så här visar och redigerar du egenskapssidan för en resurs:
 
 *Bild: Fliken Grundläggande för resurs[!UICONTROL Properties].*
 
-Om du vill ändra MIME-typen för en resurs använder du ett anpassat metadatamatchschema eller ändrar ett befintligt formulär. Mer information finns i [Redigera metadata-schemaformulär](/help/assets/metadata-schemas.md#edit-metadata-schema-forms) . Om du ändrar metadatamatchemat för en MIME-typ ändras egenskapens sidlayout för resurserna och alla undertyper. Om du till exempel ändrar ett jpeg-schema under `default/image` endast ändras metadatalayouten (resursegenskaper) för resurser med MIME-typ `image/jpeg`. Om du redigerar standardschemat ändrar du metadatalayouten för alla typer av resurser.
+Om du vill ändra MIME-typen för en resurs använder du ett anpassat metadatamatchschema eller ändrar ett befintligt formulär. Mer information finns i [Redigera metadataschema-Forms](/help/assets/metadata-schemas.md#edit-metadata-schema-forms) . Om du ändrar metadatamatchemat för en MIME-typ ändras egenskapens sidlayout för resurserna och alla undertyper. Om du till exempel ändrar ett jpeg-schema under `default/image` endast ändras metadatalayouten (resursegenskaper) för resurser med MIME-typ `image/jpeg`. Om du redigerar standardschemat ändrar du metadatalayouten för alla typer av resurser.
 
-## Metadata Schema Forms {#default-metadata-schema-forms}
+## Forms för metadatamatchning {#default-metadata-schema-forms}
 
 Om du vill visa en lista med formulär eller mallar går du till [!DNL Experience Manager] > **[!UICONTROL Tools]** > **[!UICONTROL Assets]** i **[!UICONTROL Metadata Schemas]** gränssnittet.
 
@@ -111,7 +111,7 @@ Följande är giltiga värden för den här egenskapen:
 
 * `./jcr:content/metadata/dc:title`: Lagrar värdet vid resursens metadatanod som egenskapen `dc:title`.
 
-* `./jcr:created`: Lagrar datum och tid för när en resurs skapades. Det är en skyddad egenskap. Om du konfigurerar de här egenskaperna bör du markera dem som Inaktivera redigering.
+* `./jcr:created`: Lagrar datum och tid för när en resurs skapades. Det är en skyddad egenskap. Om du konfigurerar dessa egenskaper bör du markera dem som Inaktivera redigering i Adobe.
 
 För att komponenten ska visas korrekt i metadataschemaformuläret bör egenskapssökvägen inte innehålla några blanksteg.
 
@@ -131,15 +131,15 @@ För att komponenten ska visas korrekt i metadataschemaformuläret bör egenskap
 
 Om du väljer alternativet **[!UICONTROL Required]** kan du söka efter resurser som saknar obligatoriska metadata. På panelen **[!UICONTROL Filters]** expanderar du predikatet **[!UICONTROL Metadata Validation]** och väljer alternativet **[!UICONTROL Invalid]**. Sökresultatet visar resurser som saknar obligatoriska metadata som du har konfigurerat via schemaformuläret.
 
-![Ett ogiltigt alternativ har valts i metadataverifieringspredikatet på panelen Filter ](assets/chlimage_1-178.png)
+![Alternativ valt i metadataverifieringspredikatet på panelen Filter](assets/invalid-metadata-predicate.png)
 
 Om du lägger till komponenten Sammanhangsbaserade metadata på en flik i ett schemaformulär, visas komponenten som en lista på egenskapssidan med resurser som det aktuella schemat används på. Listan innehåller alla andra flikar förutom den flik som du tillämpade på komponenten Sammanhangsberoende metadata på. För närvarande innehåller den här funktionen grundläggande funktioner för att styra visningen av metadata baserat på sammanhanget.
 
-![Sammanhangsberoende metadatakomponentflikar för resursegenskaper](assets/chlimage_1-179.png)
+![Sammanhangsberoende metadatakomponentflikar för resursegenskaper](assets/metadata-contextual-component-list.png)
 
 Om du vill visa en flik på egenskapssidan förutom fliken där komponenten Sammanhangsberoende metadata används, väljer du fliken i listan. Fliken läggs till på egenskapssidan.
 
-![Fliken som valts i listan Sammanhangsberoende metadata visas på sidan med resursegenskaper](assets/contextual-metadata-asset-properties.png)
+![Fliken som valts i listan över sammanhangsbaserade metadata visas på sidan med resursegenskaper](assets/contextual-metadata-asset-properties.png)
 
 *Bild: Sammanhangsbaserade metadata på egenskapssidan för resurser.*
 
@@ -151,13 +151,11 @@ I stället för att ange egenskaper för alternativen på fliken **[!UICONTROL S
 
 Med schemaredigeraren kan du lägga till eller ta bort en flik. The default schema form includes the **[!UICONTROL Basic]**, **[!UICONTROL Advanced]** , **[!UICONTROL IPTC]**, and **[!UICONTROL IPTC Extension]** tabs.
 
-![Standardflikar i formuläret för metadataschema](assets/chlimage_1-181.png)
+![Standardflikar i formuläret för metadataschema](assets/metadata-schema-form-tabs.png)
 
-Klicka `+` för att lägga till en flik i ett schemaformulär. Som standard har den nya fliken namnet `Unnamed-1`. Du kan ändra namnet på **[!UICONTROL Settings]** fliken.
+Klicka `+` för att lägga till en flik i ett schemaformulär. Som standard har den nya fliken namnet `Unnamed-1`. Du kan ändra namnet på **[!UICONTROL Settings]** fliken. Klicka `X` för att ta bort en flik.
 
-Klicka `X` för att ta bort en flik.
-
-![Lägga till eller ta bort en flik med metadatamodigeraren](assets/chlimage_1-182.png)
+![Lägga till eller ta bort en flik med metadatamodigeraren](assets/metadata-schema-form-new-tab.png)
 
 ## Ta bort metadata-schemaformulär {#delete-metadata-schema-forms}
 
@@ -238,7 +236,7 @@ Du kan använda ett annat schema på undermappen. Resurserna i en undermapp ärv
 
 1. Markera mappen som det ändrade schemat ska tillämpas på och klicka sedan på **[!UICONTROL Apply]**.
 
-   ![Välj en mapp för metadataschemat](assets/chlimage_1-188.png)
+   ![Välj en mapp för metadataschemat](assets/metadata-schema-select-folder.png)
 
 1. Om det andra metadataschemat används i mappen visas ett varningsmeddelande om att du håller på att skriva över det befintliga metadataschemat. Klicka på **Skriv över**.
 1. Klicka på **OK** för att stänga meddelandet.
@@ -265,7 +263,7 @@ Du kan definiera obligatoriska fält på mappnivå, vilket tillämpas på resurs
 
 1. Navigera till mappen och överför vissa resurser med saknade metadata för det obligatoriska fältet som du lade till i det anpassade formuläret. Ett meddelande om saknade metadata för det obligatoriska fältet visas i resursens kortvy.
 
-   ![Meddelande om att obligatoriska metadata saknas i resurskortsvyn vid överföring av resurser i mapp](assets/chlimage_1-192.png)
+   ![Meddelande om att obligatoriska metadata saknas i resurskortsvyn vid överföring av resurser i mapp](assets/metadata-missing-info-card-view.png)
 
 1. (Valfritt) Åtkomst `https://[aem_server]:[port]/system/console/components/`. Konfigurera och aktivera `com.day.cq.dam.core.impl.MissingMetadataNotificationJob` komponenter som är inaktiverade som standard. Ange en frekvens som ska användas för att [!DNL Experience Manager] kontrollera om metadata för resurserna är giltiga. Den här konfigurationen lägger till en egenskap `hasValidMetadata` till `jcr:content` resurser. [!DNL Experience Manager] använder den här egenskapen för att filtrera ogiltiga resurser i ett sökresultat. Om du lägger till en resurs efter en kontroll flaggas resursen inte med `hasValidMetadata` förrän vid nästa schemalagda kontroll. Resurserna visas därför inte i sökfiltren för ogiltiga metadata förrän efter nästa schemalagda kontroll.
 
