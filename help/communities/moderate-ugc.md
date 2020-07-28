@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 6866d209-5789-4ef9-bc3c-d644d4fb4b1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f7e5afe46100db7837647ac89aaf58cf101143b0
+source-git-commit: 391893f7cf83c018d29af14200c6f160b6d83bdd
+workflow-type: tm+mt
+source-wordcount: '1517'
+ht-degree: 2%
 
 ---
 
@@ -35,7 +38,7 @@ Moderering av användargenererat innehåll är användbart för att redovisa pos
 
 * [Community-innehåll lagras](working-with-srp.md)
 
-* [masmodereringskonsol](moderation.md)
+* [Konsol för massmoderering](moderation.md)
 
    Moderationskonsolen är tillgänglig för administratörer och [community-moderatorer](/help/communities/users.md) i den offentliga miljön samt för administratörer i författarmiljön. Detta är möjligt när communityinnehåll lagras i en [gemensam butik](/help/communities/working-with-srp.md).
 
@@ -154,11 +157,15 @@ Administratörer och community-moderatorer kan flytta ett eller flera forumämne
 
 Genom att välja åtgärden Klipp ut kopieras innehållet till ett urklipp. Flera inlägg kan kopieras och flyttas som en grupp till den nya platsen.
 
-![cutugc](assets/cutugc.png) ![putbackugc](assets/putbackugc.png)
+![cutugc](assets/cutugc.png)
+
+![putbackugc](assets/putbackugc.png)
 
 På den andra platsen, när innehållet finns i Urklipp, visas knappen Klistra in bredvid Nytt inlägg med ett nummer som anger antalet inlägg som ska klistras in. Knappen Klistra in innehåller ett alternativ för att rensa Urklipp i stället för att klistra in.
 
-![chlimage_1-28](assets/chlimage_1-28.png) ![chlimage_1-29](assets/chlimage_1-29.png)
+![pasteugc](assets/pasteugc.png)
+
+![pasteugc1](assets/pasteugc1.png)
 
 ### Neka {#deny}
 
@@ -192,9 +199,9 @@ Systemet håller reda på alla flaggor, vem som har flaggats, och flaggorsaken o
 
 När UGC är förmodererat visas inte inlägget på den publicerade webbplatsen förrän det har godkänts av en modereringsåtgärd. När du skapar en [communitywebbplats](/help/communities/sites-console.md)och markerar kryssrutan [Innehåll är förmodererat](sites-console.md#moderation) aktiveras förmoderering för hela webbplatsen. När komponenter har placerats på en sida kan komponenter som stöder moderering konfigureras för förmoderering med en inställning i redigeringsdialogrutan:
 
-* [Kommentarer](comments.md) och [granskningar](reviews.md)i **[!UICONTROL Användarmoderering]** > **[!UICONTROL Förmoderering]**.
+* [Kommentarer](comments.md) och [granskningar](reviews.md)i **[!UICONTROL User Moderation]** > **[!UICONTROL Pre-Moderation]**.
 
-* [Forum](/help/communities/forum.md), [ideation](/help/communities/ideation-feature.md), [QnA](/help/communities/working-with-qna.md)och [kalender](/help/communities/calendar.md)i **[!UICONTROL Inställningar]** > **** Moderated¥.
+* [Forum](/help/communities/forum.md), [idéer](/help/communities/ideation-feature.md), [QnA](/help/communities/working-with-qna.md)och [kalender](/help/communities/calendar.md)i **[!UICONTROL Settings]** > **[!UICONTROL Moderated]**.
 
 ### Skräppostidentifiering {#spam-detection}
 
@@ -214,8 +221,8 @@ Så här aktiverar du skräppostavkänningsmotorn:
 
 1. Öppna [webbkonsolen](https://localhost:4502/system/console/configMgr)genom att gå till `/system/console/configMgr`.
 
-1. Leta reda på konfigurationen av automatisk moderering **av** AEM Communities och redigera den.
-1. Lägg till **[!UICONTROL SpamProcess]** -posten.
+1. Leta reda på konfigurationen för automatisk moderering **av** AEM Communities och redigera den.
+1. Lägg till **[!UICONTROL SpamProcess]** posten.
 
 ![skräp](assets/spamprocess.png)
 
@@ -247,7 +254,7 @@ Från [masmodereringskonsolen](/help/communities/moderation.md)går det att filt
 
 #### Bevakningsord {#watchwords}
 
-AEM Communities tillhandahåller en *bevakningsfunktion* som ett steg i processen för att utvärdera [känslan](#sentiment). Bidraget till det känslomässiga värde som tillhandahålls av bevakningsord beror på en jämförelse av negativa och positiva bevakningsord som används i det publicerade innehållet samt förbjudna ord.
+AEM communities tillhandahåller en *bevakningsfunktion* som ett steg i processen för att utvärdera [känslan](#sentiment). Bidraget till det känslomässiga värde som tillhandahålls av bevakningsord beror på en jämförelse av negativa och positiva bevakningsord som används i det publicerade innehållet samt förbjudna ord.
 
 #### Konfigurera känslolägesikoner och bevakningsord {#configure-sentiment-and-watchwords}
 
@@ -259,7 +266,7 @@ Sentimentprocess.name **** kan också ändras så att den refererar till platsen
 
 Så här konfigurerar du uttryck och bevakningsord:
 
-* Logga in på din författarinstans som administratör.
+* Logga in på författarinstansen som administratör.
 * Öppna [webbkonsolen](https://localhost:4502/system/console/configMgr).
 * Hitta `sentimentprocess.name`.
 * Välj den konfiguration som ska öppnas i redigeringsläge.
