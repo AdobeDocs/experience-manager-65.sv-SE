@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 404582ab-bb4c-4775-9ae3-17356d376dca
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4e823136604d291c5b867634268f67e003185a15
+source-git-commit: 391893f7cf83c018d29af14200c6f160b6d83bdd
 workflow-type: tm+mt
 source-wordcount: '2108'
 ht-degree: 1%
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 I AEM Communities är det möjligt att [moderera communityinnehåll](/help/communities/moderate-ugc.md) både från författaren och publiceringsmiljöer av administratörer och community-moderatorer (betrodda communitymedlemmar som utsetts som moderatorer).
 
-Administratörer och moderatorer för communityn kan också utföra moderering [i sitt sammanhang](/help/communities/in-context.md) i publiceringsmiljön.
+Administratörer och moderatorer för communityn kan även utföra moderering [i sitt sammanhang](/help/communities/in-context.md) i publiceringsmiljön.
 
 En funktion på alla [communitysajter](/help/communities/sites-console.md) är ett `Administration` menyalternativ som är tillgängligt för användare som loggar in med administratörsbehörighet. Länken ger `Administration` åtkomst till modereringskonsolen.
 
@@ -112,7 +112,7 @@ Innehållsområdet innehåller information för publicerad UGC:
 
 ### Filterspår {#ootbfilters}
 
-![chlimage_1-212](assets/chlimage_1-212.png)
+![open-filterrail](assets/open-filterrail.png)
 
 Ikonen för sidopanelen öppnar filterlisten. Filtercirkeln, som visas till vänster om innehållsområdet, innehåller olika filter, som båda har en omedelbar effekt på den refererade UGC:n som visas i innehållsområdet.
 
@@ -141,17 +141,17 @@ Innehållssökväg begränsar den UGC-referens som visas för inlägg i den angi
 
 Textsökning begränsar den refererade UGC som visas till inlägg som innehåller den angivna texten.
 
-![chlimage_1-213](assets/chlimage_1-213.png)
+![textsökning](assets/text-search.png)
 
 #### Plats {#site}
 
 Webbplatsen begränsar den refererade UGC som visas till inlägg på valda communitywebbplatser. Om inga platser är markerade visas alla referenser till UGC.
 
-![chlimage_1-214](assets/chlimage_1-214.png)
+![platspanel](assets/site-panel.png)
 
 >[!NOTE]
 >
->När en administratör öppnar konsolen för gruppmoderering visas alla referenser till UGC, även webbplatser som inte skapats med guiden [Skapa](/help/communities/sites-console.md)plats, till exempel Geometrixxxexemplen.
+>När en administratör öppnar konsolen för gruppmoderering visas alla referenser till UGC, även webbplatser som inte skapats med guiden [Skapa](/help/communities/sites-console.md)plats, till exempel Geometrixx.
 >
 >När gruppmodereringskonsolen öppnas vid publicering av en betrodd community-medlem visas endast referenser till UGC som skapats för communitywebbplatser som medlemmen har behörighet att moderera och kan filtreras med platsfiltret.
 
@@ -189,8 +189,7 @@ Så här lägger du till ytterligare resurser att filtrera:
    * Om du till exempel vill filtrera på de medföljande röstkomponenterna anger du:
 
       `Voting=social/tally/components/hbs/voting`
-
-![chlimage_1-215](assets/chlimage_1-215.png)
+   ![additional-contenttype](assets/additional-contenttype.png)
 
 * Välj Spara.
 * Uppdatera webbcommunityn - modereringskonsolen.
@@ -216,25 +215,25 @@ Flaggning begränsar det refererade användargenererat innehåll som visas till 
 
 När ett innehåll har flaggats förblir det flaggat tills du bryter flaggan för det enskilda innehållet genom att markera knappen **Flagga** en gång till. Observera att det inte finns några flaggningsnivåer, som important eller följup.
 
-![chlimage_1-216](assets/chlimage_1-216.png)
+![flaggning](assets/flagging.png)
 
 #### Medlemmar {#members}
 
 Medlemmar begränsar den refererade UGC som visas för UGC som har bokförts av det angivna medlemsnamnet.
 
-![chlimage_1-217](assets/chlimage_1-217.png)
+![medlemmar](assets/members.png)
 
 #### Anslaget senast {#posted-in-the-last}
 
 Bokförd i sista begränsa hur den refererade UGC:n visas för inlägg gjorda i sista timmen, dagen, veckan, månaden eller året.
 
-![chlimage_1-218](assets/chlimage_1-218.png)
+![postad-sista](assets/posted-last.png)
 
 #### Sentiment {#sentiment}
 
 [Sentiment](/help/communities/moderate-ugc.md#sentiment) begränsar den refererade UGC som visas till inlägg med ett känslomässigt värde som är antingen positivt, negativt eller neutralt.
 
-![chlimage_1-219](assets/chlimage_1-219.png)
+![känslouttryck](assets/sentiment.png)
 
 ## Egna filter {#custom-filters}
 
@@ -271,7 +270,7 @@ Så här visar du anpassade filter på befintliga communityplatser:
 
 [Modereringsåtgärder](/help/communities/moderate-ugc.md#moderation-actions) kan utföras på en eller flera markeringar som gjorts i innehållsområdet eller när du visar innehållsdetaljer.
 
-Om du vill moderera inläggen i stor skala klickar du på ikonen Markera ( ![markering](assets/selecticon.png)) i innehållsområdet på ett inlägg, som visas när du håller muspekaren över det (skrivbordet) eller trycker och håller ett finger på posten (mobilen). Genom att göra detta aktiverar du flervalsläget och kan nu välja de efterföljande inlägg som ska gruppmodereras genom att klicka på dem. Använd de knappar som visas i verktygsfältet för att utföra modereringsåtgärder för de valda inläggen. Alla åtgärder uppmanas att bekräfta.
+Om du vill moderera inläggen i stor skala klickar du i innehållsområdet på ikonen Markera (![markering](assets/selecticon.png)) på ett inlägg, som visas när du håller muspekaren över det med musen (skrivbordet) eller trycker och håller ett finger på posten (mobilen). Genom att göra detta aktiverar du flervalsläget och kan nu välja de efterföljande inlägg som ska gruppmodereras genom att klicka på dem. Använd de knappar som visas i verktygsfältet för att utföra modereringsåtgärder för de valda inläggen. Alla åtgärder uppmanas att bekräfta.
 
 Om du vill ändra ett inlägg i innehållsområdet till en viss nivå håller du pekaren över det med musen (skrivbordet) eller trycker och håller ned ett finger på posten (mobilen) så att knapparna visas på posten. När du arbetar med en enskild innehållsdetalj uppmanas du bara att bekräfta borttagningsåtgärden.
 
@@ -318,19 +317,19 @@ I kortvyn ovanför ikonerna för modereringsåtgärder finns texten i posten och
 
 #### Svara {#reply}
 
-![chlimage_1-220](assets/chlimage_1-220.png)
+![svara](assets/reply.png)
 
 När du arbetar med ett enstaka inlägg visas en svarsikon om UGC-typen stöder svar och är konfigurerad för att tillåta svar.
 
 #### Tillåt {#allow}
 
-![chlimage_1-221](assets/chlimage_1-221.png)
+![tillåt](assets/allow.png)
 
 När du arbetar med ett enstaka inlägg visas ikonen Tillåt när inlägget antingen har flaggats eller nekats. Om du väljer Tillåt kommer alla flaggor att tas bort.
 
 #### Neka {#deny}
 
-![chlimage_1-222](assets/chlimage_1-222.png)
+![neka](assets/deny.png)
 
 Modereringsåtgärden **Neka** är bara tillgänglig för innehåll som är modererat och inte visas på omodererat innehåll förutom i flervalsläge.
 
@@ -342,31 +341,31 @@ Innehåll som lämnar det väntande läget kan aldrig återgå till ett väntand
 
 #### Ta bort {#delete}
 
-![chlimage_1-223](assets/chlimage_1-223.png)
+![delete](assets/delete.png)
 
 I envalsläge eller gruppläge kan du markera objekt och ta bort dem. Borttagningsåtgärden resulterar i en bekräftelsedialogruta. När de har tagits bort försvinner dessa objekt omedelbart från innehållsområdet. **När UGC har tagits bort tas den bort permanent från databasen och kan inte hämtas** senare.
 
 #### Stäng {#close}
 
-![chlimage_1-224](assets/chlimage_1-224.png)
+![close](assets/close.png)
 
 När du arbetar med ett enstaka inlägg visas en stängningsikon om UGC-typen stöder möjligheten att förhindra fler inlägg för den resursen.
 
 #### Modereringshistorik {#moderation-history}
 
-![chlimage_1-225](assets/chlimage_1-225.png)
+![moderering](assets/moderation.png)
 
 När du arbetar med ett enstaka inlägg visas en ikon för historik för moderering när du hovrar över det. Om du väljer ikonen visas en ruta med en historik över åtgärder som har vidtagits för UGC-inlägget.
 
 Om du vill återgå till visning av flera UGC-inlägg i innehållsområdet markerar du X:et i det övre högra hörnet av rutan med vydetaljer.
 
-Till exempel :
+Till exempel:
 
-![chlimage_1-226](assets/chlimage_1-226.png)
+![moderation-history](assets/moderation-history.png)
 
 #### Visa detaljer {#view-detail}
 
-![chlimage_1-227](assets/chlimage_1-227.png)
+![visa](assets/view.png)
 
 När du arbetar med ett enstaka inlägg kan du visa mer information genom att öppna UGC i detaljerat läge.
 
@@ -374,7 +373,7 @@ Om du vill göra det håller du pekaren över inlägget för att visa `View Deta
 
 Om du vill återgå till visning av flera UGC-inlägg i innehållsområdet markerar du X:et i det övre högra hörnet av rutan med vydetaljer.
 
-Till exempel :
+Till exempel:
 
-![chlimage_1-228](assets/chlimage_1-228.png)
+![view1](assets/view1.png)
 
