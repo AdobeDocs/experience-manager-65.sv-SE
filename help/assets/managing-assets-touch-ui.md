@@ -4,9 +4,9 @@ description: Lär dig resurshanteringsåtgärder som överföring, hämtning, re
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
+source-git-commit: 8c481c9a5052ff057ae0857c2ac825cec2b26269
 workflow-type: tm+mt
-source-wordcount: '9005'
+source-wordcount: '8987'
 ht-degree: 3%
 
 ---
@@ -50,7 +50,7 @@ Du kan överföra olika typer av resurser (inklusive bilder, PDF-filer, RAW-file
 
 >[!NOTE]
 >
->I Dynamic Media - Scene7-läge kan du bara överföra resurser vars filstorlek är 2 GB eller mindre.
+>I Dynamic Media - Scene7 kan du bara överföra resurser vars filstorlek är 2 GB eller mindre.
 
 Du kan välja att överföra resurser till mappar med eller utan en bearbetningsprofil tilldelad dem.
 
@@ -70,7 +70,7 @@ Innan du överför en resurs måste du se till att den har ett [format](/help/as
 
    Du kan pausa överföringen av stora resurser (större än 500 MB) och återuppta den senare från samma sida. Klicka **[!UICONTROL Pause]** bredvid förloppsindikatorn som visas när en överföring startar.
 
-   ![Förloppsindikator för överföring av resurser](assets/chlimage_1-5.png)
+   ![Förloppsindikator för överföring av resurser](assets/upload-progress-bar.png)
 
    Den storlek över vilken en tillgång betraktas som en stor tillgång kan konfigureras. Du kan till exempel konfigurera systemet så att resurser över 1 000 MB (i stället för 500 MB) betraktas som stora resurser. I det här fallet **[!UICONTROL Pause]** visas det i förloppsindikatorn när resurser som är större än 1 000 MB överförs.
 
@@ -80,7 +80,7 @@ Innan du överför en resurs måste du se till att den har ett [format](/help/as
 
    När du klickar **[!UICONTROL Pause]** växlar den till **[!UICONTROL Play]** alternativet. Om du vill återuppta överföringen klickar du på **[!UICONTROL Play]**.
 
-   ![Återuppta den pausade resursuppladdningen](assets/chlimage_1-6.png)
+   ![Återuppta den pausade resursuppladdningen](assets/resume-paused-upload.png)
 
    Om du vill avbryta en pågående överföring klickar du på Stäng (`X`) bredvid förloppsindikatorn. När du avbryter överföringen tas den delvis överförda delen av resursen bort [!DNL Assets] .
 
@@ -94,7 +94,7 @@ Innan du överför en resurs måste du se till att den har ett [format](/help/as
 
    Du kan välja att ersätta en befintlig resurs, skapa en annan version eller behålla båda genom att byta namn på den nya resursen som överförs. Om du ersätter en befintlig resurs tas metadata för resursen och eventuella tidigare ändringar (till exempel anteckningar eller beskärningar) som du har gjort i den befintliga resursen bort. Om du väljer att behålla båda resurserna får den nya resursen ett nytt namn med ett nummer `1` efter resursens namn.
 
-   ![Dialogrutan Namnkonflikt för att lösa konflikter för resursnamn](assets/chlimage_1-7.png)
+   ![Dialogrutan Namnkonflikt för att lösa konflikter för resursnamn](assets/resolve-naming-conflict.png)
 
    >[!NOTE]
    >
@@ -108,7 +108,7 @@ Innan du överför en resurs måste du se till att den har ett [format](/help/as
    >
    >Dialogrutan visas bara när funktionen för dubblettidentifiering är aktiverad. [!UICONTROL Duplicates Detected] Information om hur du aktiverar funktionen för dubblettidentifiering finns i [Aktivera dubblettidentifiering](/help/assets/duplicate-detection.md).
 
-   ![Dialogrutan Duplicera resurs identifierad](assets/chlimage_1-8.png)
+   ![Dialogrutan Duplicera resurs identifierad](assets/duplicate-asset-detected.png)
 
    Om du vill behålla den duplicerade resursen i [!DNL Assets]klickar du på **[!UICONTROL Keep]**. Klicka på **[!UICONTROL Delete]** om du vill ta bort den duplicerade resursen som du överförde.
 
@@ -123,7 +123,7 @@ Innan du överför en resurs måste du se till att den har ett [format](/help/as
 
    Inkludera inte specialtecken i filnamnstilläggen för resurser.
 
-   ![I dialogrutan för överföring av förlopp visas status för överförda filer och filer som inte kan överföras](assets/chlimage_1-10.png)
+   ![I dialogrutan för överföring av förlopp visas status för överförda filer och filer som inte kan överföras](assets/bulk-upload-progress.png)
 
    Dessutom visas den senaste resursen som du överför eller den mapp som du skapade först i användargränssnittet. [!DNL Assets]
 
@@ -133,7 +133,7 @@ Innan du överför en resurs måste du se till att den har ett [format](/help/as
 
 ### Serieuppladdningar {#serialuploads}
 
-Att överföra många resurser i grupp förbrukar betydande I/O-resurser, vilket kan påverka [!DNL Assets] driftsättningens prestanda negativt. Om du har en långsam internetanslutning ökar tiden det tar att överföra drastiskt på grund av att disk-I/O-inläsningen har ökat. Dessutom kan din webbläsare införa ytterligare begränsningar för antalet POST-begäranden som [!DNL Assets] kan hantera samtidiga överföringar av resurser. Därför misslyckas överföringen eller avslutas i förtid. Det innebär att vissa filer kanske [!DNL Experience Manager Assets] saknas när en grupp filer importeras eller att någon fil inte kan importeras alls.
+Att överföra många resurser i grupp förbrukar betydande I/O-resurser, vilket kan påverka [!DNL Assets] driftsättningens prestanda negativt. Om du har en långsam internetanslutning ökar tiden det tar att överföra drastiskt på grund av att disk-I/O-inläsningen har ökat. Din webbläsare kan dessutom införa ytterligare begränsningar för hur många POSTER som ska begäras [!DNL Assets] för samtidiga överföringar av resurser. Därför misslyckas överföringen eller avslutas i förtid. Det innebär att vissa filer kanske [!DNL Experience Manager Assets] saknas när en grupp filer importeras eller att någon fil inte kan importeras alls.
 
 För att lösa den här situationen [!DNL Assets] infogar en resurs i taget (seriell överföring) under en gruppöverföring, i stället för att alla resurser hämtas samtidigt.
 
@@ -145,11 +145,11 @@ Dynamic Media möjliggör batchöverföring av resurser via FTP-server. Om du t�
 
 >[!NOTE]
 >
->I Dynamic Media - Scene7-läge kan du bara överföra resurser vars filstorlek är 2 GB eller mindre.
+>I Dynamic Media - Scene7 kan du bara överföra resurser vars filstorlek är 2 GB eller mindre.
 
 >[!NOTE]
 >
->Om du vill överföra resurser via FTP i Dynamic Media - Scene7-läge installerar du Feature Pack 18912 på [!DNL Experience Manager] författarinstanserna. Kontakta [Adobes kundtjänst](https://helpx.adobe.com/se/contact/enterprise-support.ec.html) för att få tillgång till FP-18912 och slutföra konfigurationen av ditt FTP-konto. Mer information finns i [Installera funktionspaket 18912 för migrering](/help/assets/bulk-ingest-migrate.md)av gruppresurser.
+>Om du vill överföra resurser via FTP i Dynamic Media - Scene7-läge installerar du Feature Pack 18912 på [!DNL Experience Manager] författarinstanserna. Kontakta [Adobe kundtjänst](https://helpx.adobe.com/se/contact/enterprise-support.ec.html) för att få tillgång till FP-18912 och slutföra konfigurationen av ditt FTP-konto. Mer information finns i [Installera funktionspaket 18912 för migrering](/help/assets/bulk-ingest-migrate.md)av gruppresurser.
 >
 >Om du använder FTP för att överföra resurser, ignoreras de överföringsinställningar som anges i [!DNL Experience Manager] . I stället används filbearbetningsregler, enligt definitionen i Dynamic Media Classic.
 
@@ -158,7 +158,7 @@ Dynamic Media möjliggör batchöverföring av resurser via FTP-server. Om du t�
 1. Logga in på FTP-servern med det FTP-användarnamn och lösenord som du fick från e-postmeddelandet om etablering. Överför filer eller mappar till FTP-servern i FTP-klienten.
 1. [Logga in på Dynamic Media Classic](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) med hjälp av autentiseringsuppgifter som du fått från e-postmeddelandet om etablering. Klicka på i det globala navigeringsfältet **[!UICONTROL Upload]**.
 
-1. Klicka på **[!UICONTROL Via FTP]** fliken på sidan Överför, i det övre vänstra hörnet.
+1. På sidan Överför klickar du på **[!UICONTROL Via FTP]** fliken uppe till vänster.
 1. Välj en FTP-mapp att överföra filer från till vänster på sidan. till höger på sidan väljer du en målmapp.
 1. Klicka i det nedre högra hörnet av sidan **[!UICONTROL Job Options]** och ange önskade alternativ baserat på resurserna i den mapp du valde.
 
@@ -188,7 +188,7 @@ Om du vill avbryta ett pågående överföringsjobb klickar du på **[!UICONTROL
 |  | Beskärningsalternativ | Om du vill beskära manuellt från sidorna av en bild väljer du Beskär-menyn och sedan Manuell. Ange sedan antalet pixlar att beskära från en sida eller från varje sida av bilden. Hur mycket av bilden som beskärs beror på bildfilens ppi-inställning (pixlar per tum). Om bilden till exempel visar 150 ppi och du anger 75 i textrutorna Överkant, Höger, Underkant och Vänster beskärs en halv tum från varje sida.<br> Om du vill beskära pixlar med tomt utrymme automatiskt från en bild öppnar du menyn Beskär, väljer Manuell och anger pixelmått i fälten Överkant, Höger, Underkant och Vänster för att beskära från sidorna. Du kan också välja Trimma på menyn Beskär och välja följande alternativ:<br> **Trimma bort baserat på** <ul><li>**Färg** - Välj alternativet Färg. Välj sedan menyn Hörn och välj hörnet på bilden med den färg som bäst motsvarar den tomrumsfärg som du vill beskära.</li><li>**Genomskinlighet** - Välj alternativet Genomskinlighet.<br> **Tolerans** - Dra i skjutreglaget för att ange en tolerans mellan 0 och 1. Om du vill trimma baserat på färg anger du 0 för att beskära pixlar endast om de exakt matchar den färg du valde i hörnet av bilden. Nummer som ligger närmare 1 ger större färgskillnader.<br>Om du vill trimma baserat på genomskinlighet anger du 0 så att pixlarna bara beskärs om de är genomskinliga. Siffror närmare 1 ger större genomskinlighet.</li></ul><br>Observera att dessa beskärningsalternativ är icke-förstörande. |
 |  | Alternativ för färgprofil | Välj en färgkonvertering när du skapar optimerade filer som används för leverans:<ul><li>Standardfärgbevaring: Behåller källbildens färger när bilderna innehåller färgrymdsinformation. det inte finns någon färgkonvertering. Nästan alla bilder idag har rätt färgprofil inbäddad. Om en CMYK-källbild inte innehåller någon inbäddad färgprofil konverteras färgerna till sRGB-färgrymden (standard röd grön). sRGB är den rekommenderade färgrymden för visning av bilder på webbsidor.</li><li>Behåll ursprunglig färgrymd: Bevarar de ursprungliga färgerna utan någon färgkonvertering vid punkten. För bilder utan inbäddad färgprofil görs färgkonverteringen med de standardfärgprofiler som konfigurerats i publiceringsinställningarna. Färgprofilerna kanske inte justeras mot färgen i de filer som skapas med det här alternativet. Därför bör du använda alternativet Standardfärgbevaring.</li><li>Anpassad från > Till<br> öppnar menyer så att du kan välja färgmodellen Konvertera från och Konvertera till. Det här avancerade alternativet åsidosätter eventuell färginformation som är inbäddad i källfilen. Välj det här alternativet när alla bilder som du skickar in innehåller felaktiga eller saknade färgprofildata.</li></ul> |
 |  | Bildredigeringsalternativ | Du kan bevara urklippsmaskerna i bilder och välja en färgprofil.<br> Se [Ange bildredigeringsalternativ vid överföring](#setting-image-editing-options-at-upload). |
-|  | PostScript-alternativ | Du kan rastrera PostScript®-filer, beskära filer, behålla genomskinliga bakgrunder, välja en upplösning och välja en färgrymd.<br> Se [Ange överföringsalternativ](#setting-postscript-and-illustrator-upload-options)för PostScript och Illustrator. |
+|  | PostScript-alternativ | Du kan rastrera PostScript®, beskära filer, behålla genomskinliga bakgrunder, välja en upplösning och välja en färgrymd.<br> Se [Ange överföringsalternativ](#setting-postscript-and-illustrator-upload-options)för PostScript och Illustrator. |
 |  | Photoshop-alternativ | Du kan skapa mallar från Adobe® Photoshop®-filer, behålla lager, ange hur lager ska namnges, extrahera text och ange hur bilder ska förankras i mallar.<br> Observera att mallar inte stöds i [!DNL Experience Manager].<br> Se [Ange överföringsalternativ](#setting-photoshop-upload-options)för Photoshop. |
 |  | PDF-alternativ | Du kan rastrera filerna, extrahera sökord och länkar, automatiskt generera en e-katalog, ange upplösningen och välja en färgrymd.<br> Observera att e-kataloger inte stöds i [!DNL Experience Manager]. <br> Se [Ange överföringsalternativ](#setting-pdf-upload-options)för PDF. |
 |  | Illustrator-alternativ | Du kan rastrera Adobe Illustrator®-filer, behålla genomskinliga bakgrunder, välja en upplösning och välja en färgrymd.<br> Se [Ange överföringsalternativ](#setting-postscript-and-illustrator-upload-options)för PostScript och Illustrator. |
@@ -223,7 +223,7 @@ När du överför bildfiler, inklusive AI-, EPS- och PSD-filer, kan du utföra f
 
 #### Ange överföringsalternativ för PostScript och Illustrator {#setting-postscript-and-illustrator-upload-options}
 
-När du överför PostScript- (EPS) eller Illustrator-bildfiler (AI) kan du formatera dem på olika sätt. Du kan rastrera filerna, behålla den genomskinliga bakgrunden, välja en upplösning och välja en färgrymd. Det finns alternativ för att formatera PostScript- och Illustrator-filer i [!UICONTROL Upload Job Options] dialogrutan under [!UICONTROL PostScript Options] och [!UICONTROL Illustrator Options].
+När du överför bildfiler i PostScript (EPS) eller Illustrator (AI) kan du formatera dem på olika sätt. Du kan rastrera filerna, behålla den genomskinliga bakgrunden, välja en upplösning och välja en färgrymd. Formateringsalternativ för PostScript- och Illustrator-filer finns i [!UICONTROL Upload Job Options] dialogrutan under [!UICONTROL PostScript Options] och [!UICONTROL Illustrator Options].
 
 | Alternativ | Delalternativ | Beskrivning |
 |---|---|---|
@@ -238,11 +238,11 @@ När du överför PostScript- (EPS) eller Illustrator-bildfiler (AI) kan du form
 
 #### Ange överföringsalternativ för Photoshop {#setting-photoshop-upload-options}
 
-Photoshop-dokumentfiler (PSD) används oftast för att skapa bildmallar. När du överför en PSD-fil kan du skapa en bildmall automatiskt från filen (välj alternativet på skärmen Överför). [!UICONTROL Create Template]
+PSD-filer (Photoshop Document) används oftast för att skapa bildmallar. När du överför en PSD-fil kan du skapa en bildmall automatiskt från filen (välj alternativet på skärmen Överför). [!UICONTROL Create Template]
 
 I Dynamic Media skapas flera bilder från en PSD-fil med lager om du använder filen för att skapa en mall. skapas en bild för varje lager.
 
-Använd [!UICONTROL Crop Options] och [!UICONTROL Color Profile Options], som beskrivs ovan, med uppladdningsalternativ för Photoshop.
+Använd [!UICONTROL Crop Options] och [!UICONTROL Color Profile Options], som beskrivs ovan, med Photoshop överföringsalternativ.
 
 >[!NOTE]
 >
@@ -255,9 +255,9 @@ Använd [!UICONTROL Crop Options] och [!UICONTROL Color Profile Options], som be
 | Extrahera text |  | Extraherar texten så att användare kan söka efter text i ett visningsprogram. |
 | Utöka lager till bakgrundsstorlek |  | Utökar storleken på överlappade bildlager till storleken på bakgrundslagret. |
 | Namnge lager |  | Lager i PSD-filen överförs som separata bilder. |
-|  | Lagernamn | Namnger bilderna efter deras lagernamn i PSD-filen. Ett lager med namnet Price Tag i den ursprungliga PSD-filen blir till exempel en bild med namnet Price Tag. Om lagernamnen i PSD-filen är standardlagernamn för Photoshop (Bakgrund, Lager 1, Lager 2 och så vidare) får bilderna namn efter sina lagernummer i PSD-filen, inte efter deras standardlagernamn. |
-|  | Photoshop och lagernummer | Namnger bilderna efter deras lagernummer i PSD-filen och ignorerar de ursprungliga lagernamnen. Bilder namnges med Photoshops filnamn och ett nummer på lagret som läggs till. Det andra lagret i en fil som heter Spring Ad.psd får till exempel namnet Spring Ad_2 även om det har ett icke-standardnamn i Photoshop. |
-|  | Photoshop och lagernamn | Namnger bilderna efter PSD-filen följt av lagernamnet eller lagernumret. Lagernumret används om lagernamnen i PSD-filen är standardlagernamn i Photoshop. Ett lager med namnet Price Tag i en PSD-fil med namnet SpringAd får till exempel namnet Spring Ad_Price Tag. Ett lager med standardnamnet Lager2 kallas Spring Ad_2. |
+|  | Lagernamn | Namnger bilderna efter deras lagernamn i PSD-filen. Ett lager med namnet Price Tag i den ursprungliga PSD-filen blir till exempel en bild med namnet Price Tag. Om lagernamnen i PSD-filen däremot är Photoshop standardlagernamn (Bakgrund, Lager 1, Lager 2 och så vidare) får bilderna namn efter sina lagernummer i PSD-filen, inte efter deras standardlagernamn. |
+|  | Photoshop och lagernummer | Namnger bilderna efter deras lagernummer i PSD-filen och ignorerar de ursprungliga lagernamnen. Bilderna får samma namn som Photoshop-filnamnet och ett nummer i det tillagda lagret. Det andra lagret i en fil som heter Spring Ad.psd får till exempel namnet Spring Ad_2 även om det har ett icke-standardnamn i Photoshop. |
+|  | Photoshop- och lagernamn | Namnger bilderna efter PSD-filen följt av lagernamnet eller lagernumret. Lagernumret används om lagernamnen i PSD-filen är Photoshop standardlagernamn. Ett lager med namnet Price Tag i en PSD-fil med namnet SpringAd får till exempel namnet Spring Ad_Price Tag. Ett lager med standardnamnet Lager2 kallas Spring Ad_2. |
 | Fästpunkt |  | Ange hur bilder ska förankras i mallar som genereras från lagerkompositionen som skapas från PSD-filen. Som standard är ankarpunkten i mitten. Med en central ankarpunkt kan ersättningsbilder bäst fylla samma område, oavsett ersättningsbildens proportioner. Bilder med en annan aspekt som ersätter den här bilden upptar i själva verket samma utrymme när de refererar till mallen och använder parameterersättning. Ändra till en annan inställning om ditt program kräver att ersättningsbilderna fyller ut det tilldelade utrymmet i mallen. |
 
 #### Ange överföringsalternativ för PDF {#setting-pdf-upload-options}
@@ -479,10 +479,7 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
 
 1. Du kan lägga till eller ta bort återgivningar för en resurs, förutom originalet. Navigera till platsen för resursen som du vill lägga till eller ta bort återgivningar för.
 
-1. Klicka på resursen för att öppna resurssidan.
-
-   ![Sidan Resursdetaljer för att hantera återgivningar](assets/chlimage_1-15.png)
-
+1. Klicka på resursen för att öppna sidan.
 1. I Experience Manager väljer du **[!UICONTROL Renditions]** i listan.
 
    ![Vänster räl för att öppna menyn och välj alternativet Återgivning](assets/renditions_menu.png)
@@ -515,7 +512,7 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
 
    På samma sätt kan du anpassa anteckningssidans bild genom att lägga över `libs/dam/gui/content/assets/annotate/jcr:content/body/content/content/items/content/renditionpicker`.
 
-   ![Noden Overlay renderingsväljare i CRXDE för att anpassa bilden för anteckningssidan](assets/chlimage_1-17.png)
+   ![Noden Overlay renderingsväljare i CRXDE för att anpassa bilden för anteckningssidan](assets/renditionpicker-node-crxde.png)
 
    Om du vill konfigurera återgivningsdimensioner för en videoresurs navigerar du till `videopicker` noden i CRX-databasen på platsen `/libs/dam/gui/content/assets/assetpage/jcr:content/body/content/content/items/assetdetail/items/col1/items/assetview/videopicker`, täcker över noden och redigerar sedan lämplig egenskap.
 
@@ -671,21 +668,16 @@ Med redigeringsverktygen i [!DNL Assets] gränssnittet kan du utföra små redig
 
 1. Välj önskat alternativ i listan. Beskärningsområdet visas på bilden baserat på det alternativ du väljer. Med alternativet **Frihand** kan du beskära bilden utan proportionsbegränsningar.
 
-   ![Beskärningsalternativ](assets/chlimage_1-23.png)
+   ![Beskärningsalternativ](assets/crop-options.png)
 
 1. Markera området som ska beskäras och ändra storlek på det eller flytta det på bilden.
 
-1. Använd alternativen **[!UICONTROL Undo]** och **[!UICONTROL Redo]** för att återgå till den obeskurna bilden eller behålla den beskurna bilden.
-
-   ![Ångra och gör om](assets/chlimage_1-25.png)
-
+1. Använd alternativet **[!UICONTROL Undo]** för ![att ångra och](assets/do-not-localize/undo.png) alternativet **[!UICONTROL Redo]** för att ![](assets/do-not-localize/redo.png) göra om verktygsfältet för att återgå till den obeskurna bilden eller behålla den beskurna bilden.
 1. Klicka på lämpligt **[!UICONTROL Rotate]** alternativ för att rotera bilden medsols eller motsols.
 
-   ![Roteringsalternativ medsols och motsols](assets/chlimage_1-26.png)
+   ![Roteringsalternativ medsols och motsols](assets/do-not-localize/rotate-options.png)
 
-1. Klicka på lämpligt **[!UICONTROL Flip]** alternativ för att vända bilden vågrätt eller lodrätt.
-
-   ![alternativ för att vända en bild vågrätt eller lodrätt](assets/chlimage_1-27.png)
+1. Klicka på lämpliga **[!UICONTROL Flip]** alternativ för att vända bilden vågrätt ![och spegla vågrätt alternativ](assets/do-not-localize/flip-horizontal.png) eller lodrätt ![spegla lodrätt alternativ](assets/do-not-localize/flip-vertical.png).
 
 1. Slutför bildredigeringen genom att klicka på alternativet **[!UICONTROL Finish]** ![](assets/do-not-localize/check-ok-done-icon.png)Slutför. När du klickar på **Slutför** startas även omgenereringen av återgivningar.
 
@@ -731,23 +723,23 @@ Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Vi
    * [Snabbåtgärder](/help/assets/managing-assets-touch-ui.md#quick-actions)
    * Från verktygsfältet när du har valt resursen eller navigerat till resurssidan
 
-   ![Alternativet Anteckningar](assets/chlimage_1-29.png)
+   ![Alternativet Anteckningar](assets/annotate-option.png)
 
 1. Lägg till en kommentar i rutan **[!UICONTROL Comment]** längst ned på tidslinjen. Du kan också markera ett område i bilden och lägga till en anteckning i dialogrutan **[!UICONTROL Add Annotation]**.
 
-   ![Rutan Kommentar i dialogrutan Lägg till anteckning](assets/chlimage_1-30.png)
+   ![Rutan Kommentar i dialogrutan Lägg till anteckning](assets/annotation-comment-box.png)
 
 1. Om du vill meddela en användare om en anteckning anger du användarens e-postadress och lägger till kommentaren. Om du till exempel vill meddela Aaron MacDonald om en anteckning anger du @aa. Tips för alla matchande användare visas i en lista. Välj Aaron e-postadress i listan för att tagga henne med kommentaren. På samma sätt kan du tagga fler användare var som helst i anteckningen eller före eller efter den.
 
+   ![Ange användarens e-postadress och lägg till kommentar för att meddela användaren](assets/annotation-add-user-email.png)
+
    >[!NOTE]
    >
-   >För användare som inte är administratörer visas endast förslag om användaren har läsbehörighet på */hemma* i Crx-de.
-
-   ![Ange användarens e-postadress och lägg till kommentar för att meddela användaren](assets/chlimage_1-31.png)
+   >För användare som inte är administratörer visas förslagen bara om användaren har läsbehörighet på `/home` sökvägen CRXDE.
 
 1. När du har lagt till anteckningen klickar du **[!UICONTROL Add]** för att spara den. Ett meddelande om anteckningen skickas till Aaron.
 
-   ![Lägg till knapp för att spara en anteckning](assets/chlimage_1-32.png)
+   ![Lägg till knapp för att spara en anteckning](assets/annotation-add.png)
 
    >[!NOTE]
    >
@@ -778,15 +770,15 @@ Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Vi
 
 1. In the Experience Manager interface, choose **[!UICONTROL Timeline]**.
 
-   ![Alternativ i Experience Manager](assets/chlimage_1-35.png)
+   ![Alternativet Tidslinje finns i Experience Manager](assets/view-timeline.png)
 
 1. I listan **[!UICONTROL Show All]** på tidslinjen väljer du **[!UICONTROL Comments]** för att filtrera resultatet baserat på kommentarer.
 
-   ![Visa listan Alla i tidslinjen](assets/chlimage_1-36.png)
+   ![Visa listan Alla i tidslinjen](assets/timeline-show-all-option.png)
 
    Klicka på en kommentar på **[!UICONTROL Timeline]** panelen för att visa motsvarande anteckning i bilden.
 
-   ![Panelen Tidslinje för att visa anteckningar i bilden](assets/chlimage_1-37.png)
+   ![Panelen Tidslinje för att visa anteckningar i bilden](assets/timeline-view-annotations.png)
 
    Klicka **[!UICONTROL Delete]** om du vill ta bort en viss kommentar.
 
@@ -806,11 +798,9 @@ Om du vill skriva ut anteckningarna och granskningsstatusen klickar du på **[!U
 
 1. Om du vill skriva ut särskilda anteckningar väljer du anteckningarna på tidslinjen.
 
-   ![Markera en anteckning från tidslinjen för att skriva ut den](assets/chlimage_1-38.png)
+   ![Markera en anteckning från tidslinjen för att skriva ut den](assets/timeline-select-annotations.png)
 
    Om du bara vill skriva ut granskningsstatusen markerar du den på tidslinjen.
-
-   ![Om du bara vill skriva ut granskningsstatusen för anteckningen markerar du den på tidslinjen](assets/chlimage_1-39.png)
 
 1. Klicka på **[!UICONTROL Print]** i verktygsfältet.
 
@@ -824,11 +814,11 @@ Om du vill skriva ut anteckningarna och granskningsstatusen klickar du på **[!U
 
    >[!NOTE]
    >
-   >Långa anteckningar kanske inte återges korrekt i PDF-filen. För optimal återgivning rekommenderar Adobe att du begränsar anteckningarna till 50 ord.
+   >Långa anteckningar kanske inte återges korrekt i PDF-filen. För optimal återgivning rekommenderar Adobe att du begränsar kommentarerna till 50 ord.
 
 1. Klicka på **[!UICONTROL Print]**. Beroende på vilket alternativ du väljer i steg 2 visar den genererade PDF-filen anteckningarna/statusen vid den angivna positionen. Om du till exempel väljer att skriva ut både anteckningar och granskningsstatus med inställningen **Överst till vänster** liknar genererade utdata den PDF-fil som återges här.
 
-   ![Antecknings- och granskningsstatus för genererad PDF](assets/chlimage_1-42.png)
+   ![Antecknings- och granskningsstatus för genererad PDF](assets/annotation-status-pdf.png)
 
 1. Ladda ned ![nedladdningsalternativ för PDF](assets/do-not-localize/download.png) eller ![utskriftsalternativ för PDF](assets/do-not-localize/print.png) -filen med alternativen överst till höger.
 
@@ -838,7 +828,7 @@ Om du vill skriva ut anteckningarna och granskningsstatusen klickar du på **[!U
 
    Om du vill ändra utseendet på den återgivna PDF-filen, t.ex. teckensnittsfärg, storlek och format, bakgrundsfärg för kommentarer och statusvärden, öppnar du filen **[!UICONTROL Annotation PDF configuration]** i Configuration Manager och ändrar önskade alternativ. Om du till exempel vill ändra visningsfärgen för den godkända statusen ändrar du färgkoden i motsvarande fält. Mer information om hur du ändrar teckenfärg i anteckningar finns i [Anteckningar](/help/assets/managing-assets-touch-ui.md#annotating).
 
-   ![Konfiguration för att skriva ut resursanteckningar i PDF-dokument](assets/chlimage_1-44.png)
+   ![Konfiguration för att skriva ut resursanteckning i PDF-dokument](assets/annotation-print-pdf-config.png)
 
    Återgå till den återgivna PDF-filen och uppdatera den. Den uppdaterade PDF-filen återspeglar de ändringar du har gjort.
 
