@@ -3,9 +3,9 @@ title: Hantera videomaterial i [!DNL Adobe Experience Manager].
 description: Överför, förhandsgranska, kommentera och publicera videomaterial i [!DNL Adobe Experience Manager].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 8c481c9a5052ff057ae0857c2ac825cec2b26269
 workflow-type: tm+mt
-source-wordcount: '739'
+source-wordcount: '734'
 ht-degree: 8%
 
 ---
@@ -23,17 +23,11 @@ Lär dig hur du hanterar och redigerar videoresurserna i [!DNL Adobe Experience 
 
 1. Navigera till den plats där du vill lägga till digitala resurser i mappen eller undermapparna Digital Assets.
 1. Om du vill överföra resursen klickar du **[!UICONTROL Create]** i verktygsfältet och väljer sedan **[!UICONTROL Files]**. Du kan också släppa det direkt i resursområdet. Mer information om överföring finns i [Överför resurser](managing-assets-touch-ui.md#uploading-assets) .
-1. Om du vill förhandsgranska en video i kortvyn klickar du på **[!UICONTROL Play]** knappen på videoresursen.
+1. Om du vill förhandsgranska en video i kortvyn klickar du på alternativet **[!UICONTROL Play]** för ![](assets/do-not-localize/play.png) uppspelning i videoresursen. Du kan bara pausa eller spela upp video i kortvyn. Alternativen [!UICONTROL Play] och [!UICONTROL Pause] är inte tillgängliga i listvyn.
 
-   ![chlimage_1-65](assets/chlimage_1-201.png)
+1. Om du vill förhandsgranska videon på sidan med resursinformation klickar du **[!UICONTROL Edit]** på kortet. Videon spelas upp i webbläsarens inbyggda videospelare. Du kan spela upp, pausa, styra volymen och zooma videon till helskärm.
 
-   Du kan bara pausa eller spela upp video i kortvyn. Knapparna [!UICONTROL Play] och [!UICONTROL Pause] är inte tillgängliga i listvyn.
-
-1. Om du vill förhandsgranska videon på sidan med resursinformation klickar du **[!UICONTROL Edit]** på kortet.
-
-   Videon spelas upp i webbläsarens inbyggda videospelare. Du kan spela upp, pausa, styra volymen och zooma videon till helskärm.
-
-   ![chlimage_1-66](assets/chlimage_1-202.png)
+   ![Videouppspelningskontroller](assets/video-playback-controls.png)
 
 ## Konfiguration för att överföra resurser som är större än 2 GB {#configuration-to-upload-assets-that-are-larger-than-gb}
 
@@ -51,7 +45,7 @@ Förutom [!DNL Assets] konfiguration kan du ändra följande konfigurationer fö
 Utför följande steg i `/apps` katalogen för att konfigurera en större filstorleksgräns.
 
 1. Klicka [!DNL Experience Manager]på **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**.
-1. Navigera till CRXDE Lite `/libs/dam/gui/content/assets/jcr:content/actions/secondary/create/items/fileupload`. Om du vill visa katalogfönstret klickar du på `>>`.
+1. Gå till CRXDE Lite `/libs/dam/gui/content/assets/jcr:content/actions/secondary/create/items/fileupload`. Om du vill visa katalogfönstret klickar du på `>>`.
 1. From the toolbar, click the **[!UICONTROL Overlay Node]**. Du kan också välja **[!UICONTROL Overlay Node]** på snabbmenyn.
 1. I dialogrutan **[!UICONTROL Overlay Node]** klickar du på **[!UICONTROL OK]**.
 
