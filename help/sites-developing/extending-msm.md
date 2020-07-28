@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6128c91a-4173-42b4-926f-bbbb2b54ba5b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d488b1acc789c0fb1a631e58844d9fe9a70c2662
+source-git-commit: 3a1d02fc1bc561b54e57cf91abc8f4406ba8c365
 workflow-type: tm+mt
-source-wordcount: '2610'
+source-wordcount: '2601'
 ht-degree: 0%
 
 ---
@@ -25,8 +25,9 @@ På den här sidan kan du utöka funktionerna i Multi Site Manager:
 
 * Läs mer om huvudmedlemmarna i MSM Java API.
 * Skapa en ny synkroniseringsåtgärd som kan användas i en utrullningskonfiguration.
-* Ta bort steget &quot;Kapitel&quot; i guiden Skapa plats.
 * Ändra standardspråk och landskoder.
+
+<!-- * Remove the "Chapters" step in the Create Site wizard. -->
 
 >[!NOTE]
 >
