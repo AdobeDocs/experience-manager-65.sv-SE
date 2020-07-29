@@ -11,7 +11,10 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f3a5b5ce-2262-4d5d-a8ae-d59a3a4229e7
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
+source-git-commit: 080885a4fddbbce52968d3c324d6499ff1036de2
+workflow-type: tm+mt
+source-wordcount: '213'
+ht-degree: 37%
 
 ---
 
@@ -24,7 +27,7 @@ Installationsprogrammet för AEM Forms Designer kräver 32-bitarsversionen av [V
 
 ## Installera Designer {#install-designer}
 
-Designer är tillgängligt som ett fristående installationsprogram och ingår även i WorkBench. Om du använder ett fristående installationsprogram för Designer gör du så här:
+Designer är tillgängligt som ett fristående installationsprogram och ingår även i WorkBench. Om du använder ett fristående installationsprogram för Designer utför du följande steg:
 
 1. Kontakta Adobe Support för att ladda ned Designer-installationsprogrammet.
 
@@ -38,4 +41,3 @@ Designer är tillgängligt som ett fristående installationsprogram och ingår �
 1. Om du vill välja vilken plats Designer ska installeras på ändrar du standardsökväg för installation (valfritt). Klicka på Nästa.
 1. Klicka på Tillbaka för att ändra inställningar. Installera Designer genom att klicka på Installera.
 1. Klicka på Slutför när installationen är genomförd.
-
