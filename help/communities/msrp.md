@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 048f7b30-20c3-4567-bd32-38cf2643cf39
 translation-type: tm+mt
-source-git-commit: df59879cfa6b0bc7eba13f679e833fabbcbe92f2
+source-git-commit: 6a9f273c6e9eb822e2d4765700361a205019b84c
 workflow-type: tm+mt
 source-wordcount: '1175'
 ht-degree: 0%
@@ -43,7 +43,7 @@ Se även [egenskaper för SRP-alternativ](working-with-srp.md#characteristics-of
    * Val av körningslägen:
       * Fristående läge
       * [SolrCloud-läge](solr.md#solrcloud-mode) (rekommenderas för produktionsmiljöer)
-   * Val av flerspråkig sökning (MLS)
+   * Val av flerspråkig sökning (MLS):
       * [Installerar standard-MLS](solr.md#installing-standard-mls)
       * [Avancerad MLS installeras](solr.md#installing-advanced-mls)
 
@@ -92,17 +92,19 @@ På författaren, för att komma åt lagringskonsolen:
       * **[!UICONTROL Solr URL]**
 Den URL som används för att kommunicera med Solr i fristående läge.
 Lämna tomt om du kör i SolrCloud-läge.
+
          *Standard*: https://127.0.0.1:8983/solr/
 
       * **[!UICONTROL Solr Collection]**
 Solr-samlingens namn.
+
          *Standard*: collection1
 
 * Välj **[!UICONTROL Submit]**
 
 >[!NOTE]
 >
->MongoDB-databasen, som har standardvärdet name `communities`, ska inte anges till namnet på en databas som används för [nodarkiv eller datalager](../../help/sites-deploying/data-store-config.md)(binära). Se även [Lagringselement i AEM 6.5](../../help/sites-deploying/storage-elements-in-aem-6.md).
+>MongoDB-databasen, som har standardvärdet name `communities`, ska inte anges till namnet på en databas som används för [nodarkiv eller datalager](../../help/sites-deploying/data-store-config.md)(binära). Se även [lagringselement i AEM 6.5](../../help/sites-deploying/storage-elements-in-aem-6.md).
 
 
 ### MongoDB-replikuppsättning {#mongodb-replica-set}
@@ -224,7 +226,7 @@ Information om hur du konfigurerar MSRP för en demonstration- eller utvecklings
 
 Kontrollera att MSRP har konfigurerats som standardprovider genom att kontrollera konfigurationen av lagringsalternativet. Som standard är lagringsresursprovidern JSRP.
 
-Gå till konsolen [för](srp-config.md) lagringskonfiguration eller kontrollera AEM-databasen på alla författare och publicerar AEM-instanser:
+Gå till konsolen [för](srp-config.md) lagringskonfiguration eller kontrollera den AEM databasen för alla författare och AEM:
 
 * I JCR, if [/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/)
 
@@ -239,7 +241,7 @@ Det finns ett verktyg med öppen källkod tillgängligt på GitHub för detta ä
 
 * [AEM Communities UGC-migreringsverktyg](https://github.com/Adobe-Marketing-Cloud/communities-ugc-migration)
 
-Migreringsverktyget kan anpassas för att exportera UGC från tidigare versioner av AEM-sociala communities för import till AEM Communities 6.1 eller senare.
+Migreringsverktyget kan anpassas för att exportera UGC från tidigare versioner av AEM sociala communities för import till AEM Communities 6.1 eller senare.
 
 ### Fel - odefinierad fältprovider_id {#error-undefined-field-provider-id}
 
@@ -265,8 +267,8 @@ För att åtgärda felet ska du kontrollera följande när du följer instruktio
 Om ett försök att skapa en säker anslutning till MongoDB-servern misslyckas på grund av att en klassdefinition saknas, är det nödvändigt att uppdatera MongoDB-drivrutinspaketet, `mongo-java-driver`som är tillgängligt från den offentliga maven-databasen.
 
 1. Hämta drivrutinen från [https://search.maven.org/#artifactdetails%7Corg.mongodb%7Cmongo-java-driver%7C2.13.2%7Cjar](https://search.maven.org/#artifactdetails%7Corg.mongodb%7Cmongo-java-driver%7C2.13.2%7Cjar) (version 2.13.2 eller senare).
-1. Kopiera paketet till mappen&quot;crx-quickstart/install&quot; för en AEM-instans.
-1. Starta om AEM-instansen.
+1. Kopiera paketet till mappen&quot;crx-quickstart/install&quot; för en AEM instans.
+1. Starta om AEM.
 
 ## Resurser {#resources}
 
