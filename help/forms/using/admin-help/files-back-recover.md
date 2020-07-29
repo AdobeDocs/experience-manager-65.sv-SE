@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 6f9a294d-24bd-4e4b-b929-2809f5e6cef9
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: ac3d18bf0b39efbe927c10aef557296140628e19
 workflow-type: tm+mt
-source-wordcount: '2190'
+source-wordcount: '2187'
 ht-degree: 0%
 
 ---
@@ -24,17 +24,17 @@ De program- och datafiler som måste säkerhetskopieras beskrivs mer ingående i
 
 Tänk på följande när det gäller säkerhetskopiering och återställning:
 
-* Databasen bör säkerhetskopieras före GDS- och AEM-databasen.
+* Databasen bör säkerhetskopieras före GDS och AEM.
 * Om du behöver ta ned noderna i en klustrad klustermiljö för säkerhetskopiering måste du se till att de sekundära noderna stängs av före den primära noden. Annars kan det leda till inkonsekvens i klustret eller servern. Dessutom bör den primära noden göras live före en sekundär nod.
 * För återställningsåtgärden i ett kluster bör programservern stoppas för varje nod i klustret.
 
 ## Katalog för global dokumentlagring {#global-document-storage-directory}
 
-GDS är en katalog som används för att lagra långlivade filer som används i en process. Långvariga filer är avsedda att omfatta en eller flera lanseringar av ett AEM-formulärsystem och kan sträcka sig över flera dagar och till och med år. Dessa långa filer kan innehålla PDF-filer, profiler och formulärmallar. Långvariga filer är en viktig del av det övergripande tillståndet för många AEM-formulärdistributioner. Om vissa eller alla långlivade dokument förloras eller skadas kan formulärservern bli instabil.
+GDS är en katalog som används för att lagra långlivade filer som används i en process. Långvariga filer är avsedda att spänna över en eller flera starter av ett AEM och kan sträcka sig över flera dagar och till och med år. Dessa långa filer kan innehålla PDF-filer, profiler och formulärmallar. Långvariga filer är en viktig del av det övergripande tillståndet för många AEM. Om vissa eller alla långlivade dokument förloras eller skadas kan formulärservern bli instabil.
 
 Indatadokument för asynkrona jobbanrop lagras också i GDS och måste vara tillgängliga för bearbetning av begäranden. Därför är det viktigt att du ser tillförlitligheten i det filsystem som är värd för GDS och använder en redundant uppsättning av oberoende diskar (RAID) eller annan teknik som passar för dina krav på kvalitet och servicenivå.
 
-Platsen för GDS bestäms under installationen av AEM-formulär eller senare med hjälp av administrationskonsolen. Förutom att ha en plats med hög tillgänglighet för GDS kan du även aktivera databaslagring för dokument. Se Alternativ för [säkerhetskopiering när databasen används för dokumentlagring](files-back-recover.md#backup-options-when-database-is-used-for-document-storage).
+Platsen för GDS bestäms under installationen av AEM formulär eller senare med hjälp av administrationskonsolen. Förutom att ha en plats med hög tillgänglighet för GDS kan du även aktivera databaslagring för dokument. Se Alternativ för [säkerhetskopiering när databasen används för dokumentlagring](files-back-recover.md#backup-options-when-database-is-used-for-document-storage).
 
 ### GDS-plats {#gds-location}
 
@@ -55,13 +55,13 @@ GDS-platserna kan ändras under en återställning om den ursprungliga platsen i
 
 ### Alternativ för säkerhetskopiering när databasen används för dokumentlagring {#backup-options-when-database-is-used-for-document-storage}
 
-Du kan aktivera dokumentlagring för AEM-formulär i AEM-formulärdatabasen med administrationskonsolen. Även om det här alternativet behåller alla beständiga dokument i databasen, kräver AEM-formulär fortfarande den filsystembaserade GDS-katalogen eftersom den används för att lagra permanenta och tillfälliga filer och resurser relaterade till sessioner och anrop av AEM-formulär.
+Du kan aktivera AEM dokumentlagring för formulär i AEM formulärdatabas med administrationskonsolen. Även om det här alternativet behåller alla beständiga dokument i databasen, kräver AEM fortfarande den filsystembaserade GDS-katalogen eftersom den används för att lagra permanenta och tillfälliga filer och resurser som är relaterade till sessioner och anrop av AEM formulär.
 
-När du väljer alternativet &quot;Aktivera dokumentlagring i databasen&quot; i Core System Settings i administrationskonsolen eller med Configuration Manager, tillåter inte AEM-formulär att ögonblicksbilder säkerhetskopieras och rullande säkerhetskopieringsläge. Därför behöver du inte hantera säkerhetskopieringslägen med AEM-formulär. Om du använder det här alternativet bör du endast säkerhetskopiera GDS en gång efter att du har aktiverat alternativet. När du återställer AEM-formulär från en säkerhetskopia behöver du inte byta namn på säkerhetskopieringskatalogen för GDS eller återställa GDS.
+När du väljer alternativet &quot;Aktivera dokumentlagring i databasen&quot; i Core System Settings i administrationskonsolen eller med Configuration Manager, tillåter AEM inte läge för säkerhetskopiering av ögonblicksbilder och rullande säkerhetskopiering. Därför behöver du inte hantera säkerhetskopieringslägen med AEM formulär. Om du använder det här alternativet bör du endast säkerhetskopiera GDS en gång efter att du har aktiverat alternativet. När du återställer AEM från en säkerhetskopia behöver du inte byta namn på säkerhetskopieringskatalogen för GDS eller återställa GDS.
 
-## AEM-databas {#aem-repository}
+## AEM {#aem-repository}
 
-AEM-databasen (crx-database) skapas om crx-databasen konfigureras när AEM-formulär installeras. Platsen för katalogen för crx-databasen bestäms under installationen av AEM-formulär. Säkerhetskopiering och återställning av AEM-databas krävs tillsammans med databas och GDS för enhetliga AEM-formulärdata i AEM-formulär. AEM-databasen innehåller data för Correspondence Management Solution, Forms Manager och AEM Forms Workspace.
+AEM (crx-database) skapas om crx-databasen konfigureras när AEM installeras. Platsen för crx-database bestäms under installationen av AEM formulär. AEM säkerhetskopiering och återställning av databasen krävs tillsammans med databas och GDS för enhetliga AEM i AEM formulär. AEM innehåller data för Correspondence Management Solution, Forms Manager och AEM Forms Workspace.
 
 ### Correspondence Management Solution {#correspondence-management-solution}
 
@@ -75,25 +75,25 @@ blanketthanteraren effektiviserar processen att uppdatera, hantera och ta tillba
 
 ### arbetsytan AEM Forms {#html-workspace}
 
-AEM Forms Workspace matchar funktionerna i (Borttaget för AEM-formulär i JEE) Flex Workspace och lägger till nya funktioner för att utöka och integrera Workspace och göra det mer användarvänligt.
+AEM Forms Workspace matchar funktionerna i (Borttaget för AEM på JEE) Flex Workspace och lägger till nya funktioner för att utöka och integrera Workspace och göra den mer användarvänlig.
 
 >[!NOTE]
 >
->Flex Workspace används inte i AEM-formulärsversioner.
+>Flex Workspace är föråldrat för AEM formulärreleaser.
 
-Den möjliggör uppgiftshantering för klienter utan Flash Player och Adobe Reader. Det underlättar återgivning av HTML-formulär, förutom PDF forms och Flex-formulär.
+Det möjliggör uppgiftshantering på klienter utan Flash Player och Adobe Reader. Det underlättar återgivning av HTML Forms, förutom PDF forms- och Flex-formulär.
 
-## AEM-formulärdatabas {#aem-forms-database}
+## AEM {#aem-forms-database}
 
-AEM-formulärdatabasen lagrar innehåll som formulärartefakter, tjänstkonfigurationer, processtillstånd och databasreferenser till filer i GDS och rotkatalogen för innehållslagring (för Content Services). Säkerhetskopiering av databaser kan utföras i realtid utan avbrott i tjänsten, och återställning kan ske till en viss tidpunkt eller till en viss ändring. I det här avsnittet beskrivs hur du konfigurerar databasen så att den kan säkerhetskopieras i realtid.
+AEM formulärdatabas lagrar innehåll som formulärartefakter, tjänstkonfigurationer, processtillstånd och databasreferenser till filer i GDS och Content Storage Root-katalogen (för Content Services). Säkerhetskopiering av databaser kan utföras i realtid utan avbrott i tjänsten, och återställningen kan ske till en viss tidpunkt eller till en viss ändring. I det här avsnittet beskrivs hur du konfigurerar databasen så att den kan säkerhetskopieras i realtid.
 
-I ett korrekt konfigurerat AEM-formulärsystem kan systemadministratören och databasadministratören enkelt samarbeta för att återställa systemet till ett konsekvent och känt tillstånd.
+På ett korrekt konfigurerat AEM kan systemadministratören och databasadministratören enkelt samarbeta för att återskapa systemet till ett konsekvent och känt tillstånd.
 
 Om du vill säkerhetskopiera databasen i realtid måste du antingen använda läget för ögonblicksbild eller konfigurera databasen så att den körs i det angivna loggläget. Detta gör att dina databasfiler kan säkerhetskopieras medan databasen är öppen och tillgänglig för användning. Databasen bevarar dessutom sina återställnings- och transaktionsloggar när den körs i dessa lägen.
 
 >[!NOTE]
 >
->Adobe® LiveCycle® Content Services ES (utgått) är ett innehållshanteringssystem som installeras med LiveCycle. Det gör det möjligt för användarna att utforma, hantera, övervaka och optimera humancentrerade processer. Supporten för innehållstjänster (borttaget) upphör 2014-12-31. Se [Adobes livscykeldokument](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html). Mer information om hur du konfigurerar innehållstjänster (borttaget) finns i [Administrera innehållstjänster](https://help.adobe.com/en_US/livecycle/9.0/admin_contentservices.pdf).
+>Adobe® LiveCycle® Content Services ES (utgått) är ett innehållshanteringssystem som installeras med LiveCycle. Det gör det möjligt för användarna att utforma, hantera, övervaka och optimera humancentrerade processer. Supporten för innehållstjänster (borttaget) upphör 2014-12-31. Se [Adobe produktlivscykeldokument](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html). Mer information om hur du konfigurerar innehållstjänster (borttaget) finns i [Administrera innehållstjänster](https://help.adobe.com/en_US/livecycle/9.0/admin_contentservices.pdf).
 
 ### DB2 {#db2}
 
@@ -101,7 +101,7 @@ Konfigurera din DB2-databas så att den körs i arkivloggningsläge.
 
 >[!NOTE]
 >
->Om din AEM-formulärmiljö uppgraderades från en tidigare version av AEM-formulär och använder DB2 stöds inte säkerhetskopiering online. I så fall måste du stänga av AEM-formulär och göra en offlinesäkerhetskopiering. Framtida versioner av AEM-formulär har stöd för onlinesäkerhetskopiering för uppgraderingskunder.
+>Om din AEM formulärmiljö har uppgraderats från en tidigare version av AEM formulär och använder DB2 stöds inte säkerhetskopiering online. I så fall måste du stänga AEM formulär och göra en offlinesäkerhetskopiering. Framtida versioner av AEM kommer att ha stöd för onlinesäkerhetskopiering för uppgraderingskunder.
 
 IBM har en uppsättning verktyg och hjälpsystem som hjälper databasadministratörer att hantera säkerhetskopierings- och återställningsuppgifter:
 
@@ -131,7 +131,7 @@ SQL Server har även två verktyg för säkerhetskopiering och återställning:
 * SQL Server Management Studio (GUI)
 * T-SQL (kommandorad)
 
-Se [Strategier](https://articles.techrepublic.com.com/5100-1035_61-1043671.md)för säkerhetskopiering och [Säkerhetskopiering och återställning](https://msdn.microsoft.com/en-us/library/ms187048(v=SQL.90).aspx).
+Mer information finns i [Säkerhetskopiera och återställa](https://msdn.microsoft.com/en-us/library/ms187048(v=SQL.90).aspx).
 
 ### MySQL {#mysql}
 
@@ -157,7 +157,7 @@ Katalogen Content Storage Root innehåller databasen Content Services (Borttagen
 
 ### Rotplats för innehållslagring (fristående miljö) {#content-storage-root-location-stand-alone-environment}
 
-Rotkatalogen för innehållslagring skapas när Content Services (Borttagen) installeras. Platsen för rotkatalogen för innehållslagring bestäms under installationen av AEM-formulär.
+Rotkatalogen för innehållslagring skapas när Content Services (Borttagen) installeras. Platsen för rotkatalogen för innehållslagring bestäms under installationen av AEM formulär.
 
 Standardplatsen för rotkatalogen för innehållslagring är `[aem-forms root]/lccs_data`.
 
@@ -197,10 +197,10 @@ Standardplatsen för indexrotkatalogen finns `[aem-forms root]/lucene-indexes` p
 
 ## Kundinstallerade teckensnitt {#customer-installed-fonts}
 
-Om du har installerat ytterligare teckensnitt i AEM-formulärmiljön måste du säkerhetskopiera dem separat. Säkerhetskopiera alla teckensnittskataloger från Adobe och kunder som anges i administrationskonsolen under Inställningar > Kärnsystem > Konfigurationer. Se till att du säkerhetskopierar hela teckensnittskatalogen.
+Om du har installerat ytterligare teckensnitt i din AEM formulärmiljö måste du säkerhetskopiera dem separat. Säkerhetskopiera alla Adobe och kundens teckensnittskataloger som anges i administrationskonsolen under Inställningar > Kärnsystem > Konfigurationer. Se till att du säkerhetskopierar hela teckensnittskatalogen.
 
 >[!NOTE]
 >
->Som standard finns de Adobe-teckensnitt som installeras med AEM-formulär i `[aem-forms root]/fonts` katalogen.
+>Som standard finns de Adobe-teckensnitt som installeras med AEM i `[aem-forms root]/fonts` katalogen.
 
 Om du initierar om operativsystemet på värddatorn och vill använda teckensnitt från det tidigare operativsystemet, bör innehållet i systemteckensnittskatalogen också säkerhetskopieras. (Mer information finns i dokumentationen för ditt operativsystem).
