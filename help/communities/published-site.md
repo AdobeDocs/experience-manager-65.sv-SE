@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: dd0cbc05-a361-46bc-b9f1-d045f8f23890
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 65e2b98cfd980f17302b4751127e25827decec22
+source-git-commit: bd9abe033216a00b93b2098e12b100ad478a8d08
 workflow-type: tm+mt
 source-wordcount: '1202'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ## Bläddra till Ny webbplats vid publicering {#browse-to-new-site-on-publish}
 
-Nu när den nyligen skapade communitywebbplatsen har publicerats bläddrar du till den URL som visas när du skapar webbplatsen, men på publiceringsservern, t.ex.
+Nu när den nyligen skapade communitywebbplatsen har publicerats bläddrar du till den URL som visas när du skapar webbplatsen, men på publiceringsservern, till exempel:
 
 * Författar-URL = https://localhost:4502/content/sites/engage/en.html
 * Publicera URL = https://localhost:4503/content/sites/engage/en.html
@@ -65,13 +65,14 @@ Följ de här stegen för att skydda communityplatsens innehåll från anonyma a
 
 1. Gå till **Sidegenskaper**.
 
-   ![webbplatsautentisering](assets/site-authentication.png)
+   ![page-properties](assets/page-properties.png)
 
 1. Gå till fliken **Avancerat** .
 
-   ![page-properties](assets/page-properties.png)
-
 1. Aktivera **autentiseringskrav**.
+
+   ![webbplatsautentisering](assets/site-authentication.png)
+
 1. Lägg till inloggningssidans sökväg. Till exempel, **/innehåll/....../GetStarted**.
 1. Publicera sidan.
 
@@ -198,7 +199,7 @@ Logga in som Weston McCall (weston.mccall@dodgit.com / lösenord) och navigera t
 
 ### Länk till webbsida {#web-page-link}
 
-Visa den grundläggande webbsidan som finns på webbplatsen genom att välja länken Webbsida. Standardverktygen för AEM-redigering kan användas för att lägga till innehåll på den här sidan i författarmiljön.
+Visa den grundläggande webbsidan som finns på webbplatsen genom att välja länken Webbsida. Standardverktygen AEM kan användas för att lägga till innehåll på den här sidan i författarmiljön.
 
 Gå till exempel till **författarinstansen** , öppna `engage` mappen i [webbgruppskonsolen](/help/communities/sites-console.md)och välj ikonen **Öppna webbplats** för att öppna redigeringsläget. Välj sedan förhandsvisningsläget för att markera `Web Page` länken och välj sedan redigeringsläget för att lägga till titel- och textkomponenter. Publicera sedan om antingen bara sidan eller hela webbplatsen.
 
