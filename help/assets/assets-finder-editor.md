@@ -3,7 +3,7 @@ title: Skapa och konfigurera sidor för Resursredigeraren
 description: Lär dig hur du skapar anpassade sidor i Resursredigeraren och redigerar flera resurser samtidigt.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
+source-git-commit: c679cc5ad8f0ecf3495b020ef593de2e73c05ae0
 workflow-type: tm+mt
 source-wordcount: '2111'
 ht-degree: 0%
@@ -171,7 +171,7 @@ To add predicates:
 
 1. Drag the appropriate predicates to the Asset Share page underneath the query builder. Doing so creates the appropriate fields.
 
-![assetshare4](assets/assetshare4.bmp)
+![assetshare4](assets/assetshare4.png)
 
 The following predicates are available:
 
@@ -204,17 +204,17 @@ När du skapar sidan Resursredigerare kan det vara bra att skapa sidan direkt un
 Så här skapar du en resursredigeringssida:
 
 1. Gå till den plats där du vill skapa en resursredigeringssida på **[!UICONTROL Websites]** fliken och klicka på **Ny**.
-1. Välj **Geometrixx Resursredigerare** och klicka på **Skapa**. Den nya sidan skapas och sidan visas på fliken **Webbplatser** .
+1. Markera **Geometrixx Resursredigerare** och klicka på **Skapa**. Den nya sidan skapas och sidan visas på fliken **Webbplatser** .
 
 ![screen_shot_2012-04-23at15858pm](assets/screen_shot_2012-04-23at15858pm.png)
 
-Grundsidan som skapas med hjälp av mallen Geometrixx Asset Editor ser ut så här:
+Grundsidan som skapas med Geometrixx Resursredigeraren ser ut så här:
 
-![assetshare5](assets/assetshare5.bmp)
+![assetshare5](assets/assetshare5.png)
 
 Om du vill anpassa resursredigeringssidan använder du element från sidosparken. Sidan Resursredigeraren som öppnas från **Geometrixx Press Center** är en anpassad version av en sida som är baserad på den här mallen:
 
-![assetshare6](assets/assetshare6.bmp)
+![assetshare6](assets/assetshare6.png)
 
 #### Ange att en resursredigerare ska öppnas från en resursdelningssida {#setting-which-asset-editor-opens-from-an-asset-share-page}
 
@@ -262,7 +262,7 @@ Så här lägger du till komponenterna för redigering av resurser:
 
 #### Metadataformulär och textfält - Konfigurera komponenten Visa metadata {#metadata-form-and-text-field-configuring-the-view-metadata-component}
 
-Metadataformuläret är ett formulär som innehåller en start- och slutåtgärd. däremellan anger du **textfält** . Mer information om hur du arbetar med formulär finns i [Formulär](/help/sites-authoring/default-components-foundation.md#form-component) .
+Metadataformuläret är ett formulär som innehåller en start- och slutåtgärd. däremellan anger du **textfält** . Mer information om hur du arbetar med formulär finns i [Forms](/help/sites-authoring/default-components-foundation.md#form-component) .
 
 1. Skapa en startåtgärd genom att klicka på **Redigera** i formulärets startdel. Om du vill kan du ange en Box-titel. Som standard är rutans rubrik **Metadata**. Markera kryssrutan Klientvalidering om du vill att Java-script-klientkoden ska genereras för validering.
 
@@ -405,7 +405,7 @@ Så här gör du om du vill redigera flera resurser på sidan Resursredigeraren:
    Så här väljer du en rad resurser: klicka på den första resursen och sedan på `Shift + click` den sista resursen.
 
 1. Klicka på **Redigera metadata** i fältet **Åtgärder** (vänster del av sidan).
-1. Sidan Geometrixx **Press Center Asset Editor** öppnas på en ny flik. Resursernas metadata visas enligt följande:
+1. Geometrixx **Press Center Asset Editor** öppnas på en ny flik. Resursernas metadata visas enligt följande:
 
    * En tagg som inte gäller för alla resurser utan bara för ett fåtal, visas i kursiv stil.
    * En tagg som gäller för alla resurser visas med ett vanligt teckensnitt.
