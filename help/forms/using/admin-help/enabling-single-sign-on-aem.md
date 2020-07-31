@@ -1,6 +1,6 @@
 ---
-title: Aktivera enkel inloggning i AEM-formulär
-seo-title: Aktivera enkel inloggning i AEM-formulär
+title: Aktivera enkel inloggning i AEM
+seo-title: Aktivera enkel inloggning i AEM
 description: Lär dig hur du aktiverar enkel inloggning (SSO) med HTTP-huvuden och SPNEGO.
 seo-description: Lär dig hur du aktiverar enkel inloggning (SSO) med HTTP-huvuden och SPNEGO.
 uuid: 2bc08b4f-dcbe-4a16-9025-32fc14605e13
@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: ee54d9d4-190d-4665-925a-9740ac65fbd5
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
 workflow-type: tm+mt
 source-wordcount: '1538'
 ht-degree: 0%
@@ -18,17 +18,17 @@ ht-degree: 0%
 ---
 
 
-# Aktivera enkel inloggning i AEM-formulär{#enabling-single-sign-on-in-aem-forms}
+# Aktivera enkel inloggning i AEM{#enabling-single-sign-on-in-aem-forms}
 
-AEM-formulär erbjuder två sätt att aktivera enkel inloggning (SSO) - HTTP-huvuden och SPNEGO.
+AEM erbjuder två sätt att aktivera enkel inloggning (SSO) - HTTP-huvuden och SPNEGO.
 
-När enkel inloggning är implementerad krävs inte AEM-formulärens användarinloggningssidor och visas inte om användaren redan är autentiserad via sin företagsportal.
+När enkel inloggning är implementerad är AEM inloggningssidor inte obligatoriska och visas inte om användaren redan är autentiserad via sin företagsportal.
 
-Om AEM-formulär inte kan autentisera en användare på något av dessa sätt dirigeras användaren om till en inloggningssida.
+Om AEM inte kan autentisera en användare på något av dessa sätt dirigeras användaren om till en inloggningssida.
 
 ## Aktivera enkel inloggning med HTTP-huvuden {#enable-sso-using-http-headers}
 
-Du kan använda sidan Portal Configuration för att aktivera enkel inloggning (SSO) mellan program och alla program som stöder överföring av identiteten via HTTP-huvudet. När enkel inloggning är implementerad krävs inte AEM-formulärens användarinloggningssidor och visas inte om användaren redan är autentiserad via sin företagsportal.
+Du kan använda sidan Portal Configuration för att aktivera enkel inloggning (SSO) mellan program och alla program som stöder överföring av identiteten via HTTP-huvudet. När enkel inloggning är implementerad är AEM inloggningssidor inte obligatoriska och visas inte om användaren redan är autentiserad via sin företagsportal.
 
 Du kan även aktivera enkel inloggning med SPNEGO. (Se [Aktivera enkel inloggning med SPNEGO](enabling-single-sign-on-aem.md#enable-sso-using-spnego).)
 
@@ -56,7 +56,7 @@ Anvisningar om hur du konfigurerar tillåtna referenter finns i [Konfigurera til
 
 ## Aktivera enkel inloggning med SPNEGO {#enable-sso-using-spnego}
 
-Du kan använda enkel och skyddad GSSAPI-förhandlingsmekanism (SPNEGO) för att aktivera enkel inloggning (SSO) när du använder Active Directory som LDAP-server i en Windows-miljö. När enkel inloggning är aktiverad krävs inte AEM-formulärens inloggningssidor och de visas inte.
+Du kan använda enkel och skyddad GSSAPI-förhandlingsmekanism (SPNEGO) för att aktivera enkel inloggning (SSO) när du använder Active Directory som LDAP-server i en Windows-miljö. När enkel inloggning är aktiverad är AEM inloggningssidor inte obligatoriska och visas inte.
 
 Du kan även aktivera enkel inloggning med HTTP-huvuden. (Se [Aktivera enkel inloggning med HTTP-huvuden](enabling-single-sign-on-aem.md#enable-sso-using-http-headers).)
 
@@ -64,8 +64,8 @@ Du kan även aktivera enkel inloggning med HTTP-huvuden. (Se [Aktivera enkel inl
 >
 >AEM Forms på JEE stöder inte konfigurering av enkel inloggning med Kerberos/SPNEGO i flera underordnade domänmiljöer.
 
-1. Bestäm vilken domän som ska användas för att aktivera enkel inloggning. AEM-formulärservern och användarna måste tillhöra samma Windows-domän eller betrodda domän.
-1. Skapa en användare som representerar AEM-formulärservern i Active Directory. (Se [Skapa ett användarkonto](enabling-single-sign-on-aem.md#create-a-user-account).) Om du konfigurerar mer än en domän att använda SPNEGO måste du se till att lösenorden för var och en av dessa användare är olika. Om lösenorden inte är olika fungerar inte SPNEGO SSO.
+1. Bestäm vilken domän som ska användas för att aktivera enkel inloggning. Den AEM formulärservern och användarna måste tillhöra samma Windows-domän eller betrodda domän.
+1. Skapa en användare som representerar AEM formulärserver i Active Directory. (Se [Skapa ett användarkonto](enabling-single-sign-on-aem.md#create-a-user-account).) Om du konfigurerar mer än en domän att använda SPNEGO måste du se till att lösenorden för var och en av dessa användare är olika. Om lösenorden inte är olika fungerar inte SPNEGO SSO.
 1. Mappa tjänstens huvudnamn. (Se [Mappa ett SPN (Service Principal Name)](enabling-single-sign-on-aem.md#map-a-service-principal-name-spn).)
 1. Konfigurera domänkontrollanten. (Se [Förhindra Kerberos-integritetskontrollfel](enabling-single-sign-on-aem.md#prevent-kerberos-integrity-check-failures).)
 1. Lägg till eller redigera en företagsdomän enligt beskrivningen i [Lägga till domäner](/help/forms/using/admin-help/adding-domains.md#adding-domains) eller [Redigera och konvertera befintliga domäner](/help/forms/using/admin-help/editing-converting-existing-domains.md#editing-and-converting-existing-domains). Utför följande uppgifter när du skapar eller redigerar företagsdomänen:
@@ -75,7 +75,7 @@ Du kan även aktivera enkel inloggning med HTTP-huvuden. (Se [Aktivera enkel inl
    * Lägg till Kerberos som autentiseringsprovider. Ange följande information på sidan Ny eller Redigera autentisering för Kerberos:
 
       * **Autentiseringsprovider:** Kerberos
-      * **DNS IP:** DNS IP-adressen för servern där AEM-formulär körs. Du kan fastställa den här IP-adressen genom att köra `ipconfig/all` på kommandoraden.
+      * **DNS IP:** DNS IP-adressen för servern där AEM körs. Du kan fastställa den här IP-adressen genom att köra `ipconfig/all` på kommandoraden.
       * **KDC-värd:** Fullständigt kvalificerat värdnamn eller IP-adress för Active Directory-servern som används för autentisering
       * **Tjänstanvändare:** Tjänstens huvudnamn (SPN) som skickas till KtPass-verktyget. I det exempel som användes tidigare är tjänstanvändaren `HTTP/lcserver.um.lc.com`.
       * **Tjänstsfär:** Domännamn för Active Directory. I exemplet som användes tidigare är domännamnet `UM.LC.COM.`
@@ -86,7 +86,7 @@ Du kan även aktivera enkel inloggning med HTTP-huvuden. (Se [Aktivera enkel inl
 
 ### Skapa ett användarkonto {#create-a-user-account}
 
-1. I SPNEGO registrerar du en tjänst som användare i Active Directory på domänkontrollanten som representerar AEM-formulär. På domänkontrollanten går du till Start-menyn > Administrationsverktyg > Active Directory - användare och datorer. Om Administrationsverktyg inte finns på Start-menyn använder du Kontrollpanelen.
+1. I SPNEGO registrerar du en tjänst som användare i Active Directory på domänkontrollanten som representerar AEM formulär. På domänkontrollanten går du till Start-menyn > Administrationsverktyg > Active Directory - användare och datorer. Om Administrationsverktyg inte finns på Start-menyn använder du Kontrollpanelen.
 1. Klicka på mappen Användare för att visa en lista över användare.
 1. Högerklicka på användarmappen och välj Nytt > Användare.
 1. Skriv förnamn/efternamn och användarnamn och klicka sedan på Nästa. Ange till exempel följande värden:
@@ -121,14 +121,14 @@ Du kan även aktivera enkel inloggning med HTTP-huvuden. (Se [Aktivera enkel inl
 
 Om det här felet inträffar:
 
-```java
+```shell
 DsCrackNames returned 0x2 in the name entry for spnegodemo.
 ktpass:failed getting target domain for specified user.
 ```
 
 prova att ange användaren som spnegodemo@um.lc.com:
 
-```java
+```shell
 ktpass -princ HTTP/lcserver.um.lc.com@UM.LC.COM -mapuser spnegodemo
 ```
 
@@ -153,7 +153,7 @@ Om servern används med datornamnet, till exempel https://lcserver:8080, krävs 
 1. Klicka på ikonen Lokalt intranät och sedan på Webbplatser.
 1. Klicka på Avancerat och skriv webbadressen till formulärservern i rutan Lägg till den här webbplatsen i zonen. For example, type `https://lcserver.um.lc.com`
 1. Klicka på OK tills alla dialogrutor är stängda.
-1. Testa konfigurationen genom att gå till webbadressen till AEM-formulärservern. Skriv t.ex. `https://lcserver.um.lc.com:8080/um/login?um_no_redirect=true`
+1. Testa konfigurationen genom att gå till URL:en för AEM formulärserver. Skriv t.ex. `https://lcserver.um.lc.com:8080/um/login?um_no_redirect=true`
 
 **Konfigurera Mozilla Firefox**
 
