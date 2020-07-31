@@ -8,7 +8,7 @@ contentOwner: khsingh
 discoiquuid: ecddb22e-c148-441f-9088-2e5b35c7021b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 252dac988c8256cf99ee8487feb937d5345ed797
+source-git-commit: a842aa85652e5c04d5825a3e88aa6b64ef8a0088
 workflow-type: tm+mt
 source-wordcount: '936'
 ht-degree: 1%
@@ -34,7 +34,7 @@ AEM Forms tillhandahåller ett testramverk, Calvin, för att automatisera testni
 
 Testsviter har en samling testfall. Du kan ha flera testsviter. Vi rekommenderar att du har en separat testsvit för varje formulär. Så här skapar du en testsvit:
 
-1. Logga in som administratör på författarinstansen av AEM Forms. Öppna CRXDE Lite. Du kan trycka på AEM-logotyp > **Verktyg** > **Allmänt** > **CRXDE Lite** eller öppna [https://localhost:4502/crx/de/index.jsp](https://localhost:4502/crx/de/index.jsp) i en webbläsare för att öppna CRXDE Lite.
+1. Logga in som administratör på författarinstansen av AEM Forms. Öppna CRXDE Lite. Du kan trycka AEM logotyp > **Verktyg** > **Allmänt** > **CRXDE Lite** eller öppna [https://localhost:4502/crx/de/index.jsp](https://localhost:4502/crx/de/index.jsp) i en webbläsare för att öppna CRXDE Lite.
 
 1. Navigera till /etc/clientlibs i CRXDE Lite. Högerklicka på undermappen /etc/clientlibs och klicka på **Skapa** > **Skapa nod.** I fältet Namn skriver du **WeRetailFormTestCase**. Markera typen som **cq:ClientLibraryFolder** och klicka på **OK**. Det skapar en nod. Du kan använda vilket namn som helst istället för WeRetailFormTestCase.
 1. Lägg till följande egenskaper i noden WeRetailFormTestCase och tryck på **Save ALL**.
@@ -101,7 +101,7 @@ Se till att varje egenskap läggs till i en separat ruta enligt nedan:
 
    Ovanstående kod skapar en testsvit med namnet **We retail - Tests**.
 
-1. Öppna AEM-testningsgränssnittet (AEM > Verktyg > Åtgärder > Testning). Testsviten - **We retail - Tests** - listas i användargränssnittet.
+1. Öppna AEM testgränssnitt (AEM > Verktyg > Åtgärder > Testning). Testsviten - **We retail - Tests** - listas i användargränssnittet.
 
    ![we-retail-test-suite](assets/we-retail-test-suite.png)
 
@@ -177,7 +177,7 @@ En åtgärd är en specifik aktivitet i ett adaptivt formulär som att klicka p�
 
 1. Skapa en fil `prefillTest.js`i **[!UICONTROL WeRetailFormTests]** noden. Lägg till nedanstående kod i filen. Koden skapar ett testfall. Testfallet fyller i alla fält i ett formulär i förväg och validerar vissa fält för att säkerställa att korrekta värden anges.
 
-   ```
+   ```javascript
    (function (window, hobs) {
        'use strict';
    
@@ -216,7 +216,7 @@ En testsvit kan ha flera testfall. Du kan köra alla testfall i en testsvit samt
 * En bockmarkeringsikon anger att testet har slutförts: ![save_icon](assets/save_icon.svg)
 * En X-ikon anger att testet misslyckades: ![närikon](assets/close-icon.svg)
 
-1. Navigera till AEM-ikonen > **[!UICONTROL Tools]**> **[!UICONTROL Operations]**> **[!UICONTROL Testing]**
+1. Navigera till AEM > **[!UICONTROL Tools]**> **[!UICONTROL Operations]**> **[!UICONTROL Testing]**
 1. Så här kör du alla tester i Test Suite:
 
    1. Tryck på **[!UICONTROL We retail - Tests (1)]** testpanelen. Det sviten utökas till att visa en lista med test.
