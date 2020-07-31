@@ -1,6 +1,6 @@
 ---
-title: Formuläret har angetts i AEM-formulär
-seo-title: Formuläret har angetts i AEM-formulär
+title: Formuläruppsättning i AEM Forms
+seo-title: Formuläruppsättning i AEM Forms
 description: I den här artikeln introduceras formuläruppsättningar och beskrivs hur du skapar formuläruppsättningar genom att sammanfoga HTML5-formulär. I den här artikeln beskrivs också hur du kan förifylla xml-data i en formuläruppsättning och hur du kan använda formuläruppsättningar i processhanteringen.
 seo-description: I den här artikeln introduceras formuläruppsättningar och beskrivs hur du skapar formuläruppsättningar genom att sammanfoga HTML5-formulär. I den här artikeln beskrivs också hur du kan förifylla xml-data i en formuläruppsättning och hur du kan använda formuläruppsättningar i processhanteringen.
 uuid: a1a2f267-26a9-4f45-bcfc-dbdedad95973
@@ -10,36 +10,39 @@ topic-tags: hTML5_forms
 discoiquuid: 80e3eec4-95e0-4731-a0e5-a617e9bcb069
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
+source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
+workflow-type: tm+mt
+source-wordcount: '2860'
+ht-degree: 0%
 
 ---
 
 
-# Formuläret har angetts i AEM-formulär{#form-set-in-aem-forms}
+# Formuläruppsättning i AEM Forms{#form-set-in-aem-forms}
 
 ## Översikt {#overview}
 
-Kunderna måste ofta skicka in flera formulär för att ansöka om en tjänst eller förmån. Det handlar om att hitta alla relevanta former. och fylla i, skicka och spåra dem separat. De måste också fylla i gemensamma uppgifter flera gånger i formulär. Hela processen blir krånglig och felbenägen om den innehåller ett stort antal formulär. Funktionen för formuläruppsättning i AEM Forms kan förenkla användarupplevelsen i sådana situationer.
+Kunderna måste ofta skicka in flera formulär för att ansöka om en tjänst eller förmån. Det handlar om att hitta alla relevanta former. och fylla i, skicka och spåra dem separat. De måste också fylla i gemensamma uppgifter flera gånger i formulär. Hela processen blir krånglig och felbenägen om den innehåller ett stort antal formulär. Formuläruppsättningsfunktionen i AEM Forms kan förenkla användarupplevelsen i sådana scenarier.
 
- En formuläruppsättning är en samling HTML5-formulär som grupperats tillsammans och presenteras som en enda formuläruppsättning för slutanvändarna. När användarna börjar fylla i en formuläruppsättning, överförs de smidigt från ett formulär till ett annat. Till sist kan de skicka in alla blanketter med bara ett klick.
+En formuläruppsättning är en samling HTML5-formulär som grupperats tillsammans och presenteras som en enda formuläruppsättning för slutanvändarna. När användarna börjar fylla i en formuläruppsättning, överförs de smidigt från ett formulär till ett annat. Till sist kan de skicka in alla blanketter med bara ett klick.
 
-AEM Forms ger formulärförfattare ett intuitivt användargränssnitt för att skapa, konfigurera och hantera formuläruppsättningar. Som författare kan du beställa formulär i en viss sekvens som du vill att slutanvändarna ska följa. Du kan också använda villkor eller uttryck för behörighet i enskilda formulär för att kontrollera synligheten baserat på användarens indata. Du kan t.ex. konfigurera att informationsformuläret för make/maka endast ska visas när civilstånd anges som gifta.
+AEM Forms tillhandahåller ett intuitivt användargränssnitt för att skapa, konfigurera och hantera formuläruppsättningar. Som författare kan du beställa formulär i en viss sekvens som du vill att slutanvändarna ska följa. Du kan också använda villkor eller uttryck för behörighet i enskilda formulär för att kontrollera synligheten baserat på användarens indata. Du kan t.ex. konfigurera att informationsformuläret för make/maka endast ska visas när civilstånd anges som gifta.
 
 Dessutom kan du konfigurera gemensamma fält i olika formulär för att dela gemensamma databindningar. Med rätt databindningar på plats behöver slutanvändarna bara fylla i vanlig information när de har fyllts i automatiskt i efterföljande formulär.
 
-Formuläruppsättningar stöds också i appen AEM Forms, vilket gör att fältpersonalen kan göra en formuläruppsättning offline, besöka kunder, indata och synkronisera senare med AEM Forms-servern för att skicka formulärdata till affärsprocesser.
+Formuläruppsättningar stöds också i appen AEM Forms, vilket gör att fältarbetarna kan göra en formuläruppsättning offline, besöka kunder, indata och synkronisera senare med AEM Forms-servern för att skicka formulärdata till affärsprocesser.
 
 ## Skapa och hantera formuläruppsättning {#creating-and-managing-form-set}
 
 Du kan koppla flera XDP-filer eller formulärmallar, som skapats med Designer, till en formuläruppsättning. Formuläruppsättningar kan sedan användas för att selektivt återge XDP:er baserat på värden som användarna angett i de ursprungliga formulären och deras profiler.
 
-Använd [användargränssnittet](../../forms/using/introduction-managing-forms.md) för AEM Forms för att hantera alla formulär, formuläruppsättningar och relaterade resurser.
+Använd användargränssnittet [i](../../forms/using/introduction-managing-forms.md) AEM Forms för att hantera alla formulär, formuläruppsättningar och relaterade resurser.
 
 ### Skapa en formuläruppsättning {#create-a-form-set}
 
 Så här skapar du en formuläruppsättning:
 
-1. Välj Formulär > Formulär och dokument.
+1. Välj Forms > Forms och Dokument.
 1. Välj Skapa > Formuläruppsättning.
 
 1. Lägg till följande information på sidan Lägg till egenskaper och klicka på Nästa.
@@ -47,10 +50,11 @@ Så här skapar du en formuläruppsättning:
    * Titel: Anger dokumentets titel. Titeln hjälper dig att identifiera formuläruppsättningen i användargränssnittet för AEM Forms.
    * Beskrivning: Anger detaljerad information om dokumentet.
    * Taggar: Anger taggar som unikt identifierar formuläruppsättningen. Taggar hjälper dig att söka i formuläruppsättningen. Om du vill skapa taggar skriver du nya taggnamn i rutan Taggar.
-   * Skicka URL: Anger den URL där skickade data publiceras för en fristående återgivning av formuläruppsättningen (icke-AEM Forms-appanvändning). Data skickas till den här slutpunkten som multipart/formdata med följande request-parameter:
+   * Skicka URL: Anger den URL där skickade data publiceras för en fristående återgivning av formuläruppsättningen (Non-AEM Forms app use case). Data skickas till den här slutpunkten som multipart/formdata med följande request-parameter:
    * dataXML: Den här parametern innehåller en XML-representation av skickade formuläruppsättningsdata. Om alla formulär i formuläruppsättningen använder ett gemensamt schema, genereras XML enligt det schemat. Annars innehåller XML-rottaggen en underordnad tagg för varje ifyllt formulär i formuläruppsättningen som innehåller data för de bifogade formulärfilerna.
    * formsetPath: Sökvägen till den formuläruppsättning i CRXDE som har skickats in.
    * HTML-återgivningsprofil: Du kan konfigurera vissa alternativ som flytande fält, bilagor och utkaststöd (för fristående formuläruppsättningsåtergivning) för att anpassa formuläruppsättningens utseende, beteende och interaktioner. Du kan anpassa eller utöka den befintliga profilen om du vill ändra några inställningar för HTML-formulärprofilen.
+
    ![Formuläruppsättning: lägg till egenskaper](assets/createformset1.png)
 
 1. Skärmen Välj formulär visar tillgängliga XDP-formulär eller XDP-filer. Sök efter och markera formulären som ska ingå i formuläruppsättningen och klicka sedan på Lägg till i formuläruppsättningen. Om det behövs söker du efter formulär att lägga till igen. När du har lagt till alla formulär i formuläruppsättningen klickar du på Nästa.
@@ -61,10 +65,11 @@ Så här skapar du en formuläruppsättning:
 
 1. På sidan Konfigurera formulär kan du göra följande:
 
-   * Formulärordning: Dra och släpp formulären för att ordna om dem. Formulärordningen definierar i vilken ordning formulären visas för slutanvändaren i appen AEM Forms och den fristående återgivningen.
+   * Formulärordning: Dra och släpp formulären för att ordna om dem. Formulärordningen definierar den ordning i vilken formulären visas för slutanvändaren i appen AEM Forms och den fristående återgivningen.
    * Formuläridentifierare: Anger en unik identitet för de formulär som ska användas i berättigandeuttryck.
    * Datarot: För varje formulär i formuläruppsättningen kan författaren konfigurera XPATH där data i det aktuella formuläret placeras i skickad XML. Standardvärdet är /. Om alla formulär i formuläruppsättningen är schemabundna och har samma XML-schema kan du ändra det här värdet. Vi rekommenderar att alla fält i formuläret har rätt databindning angiven i XDP. Om två fält i två olika formulär har samma gemensamma databindning, visar fältet i det andra formuläret förfyllda värden från det första formuläret. Bind inte två delformulär med samma interna innehåll till samma XML-nod. Mer information om XML-strukturen för formuläruppsättningar finns i [Förifyll XML för formuläruppsättningar](../../forms/using/formset-in-aem-forms.md#p-prefill-xml-for-form-set-p).
    * Kvalifikationsuttryck: Anger ett JavaScript-uttryck som utvärderar ett booleskt värde och anger om ett formulär i formuläruppsättningen kan fyllas i. Om värdet är false tillfrågas inte användaren och visas inte heller formuläret för att fyllas i. Uttrycket baseras vanligtvis på värdena i de fält som har hämtats före det här formuläret. Uttrycken innehåller även anrop till formuläruppsättningens API fs.valueOf för att extrahera de värden som användaren fyller i i ett fält i ett formulär i formuläruppsättningen:
+
    *fs.valueOf(&lt;Form Identifier>, &lt;fieldAs expression>) > &lt;value>*
 
    Om du till exempel har två formulär i formuläruppsättningen: rörelsekostnader och resekostnader kan du lägga till ett JavaScript-utdrag i fältet Kvalifikationsuttryck för båda dessa formulär för att kontrollera användarens indata för typen av utgift i ett formulär. Om användaren väljer Affärskostnad återges formuläret Affärskostnad för slutanvändaren. Eller om användaren väljer en resekostnad, återges ett annat formulär för slutanvändaren. Mer information finns i Kvalificeringsuttryck.
@@ -75,7 +80,7 @@ Så här skapar du en formuläruppsättning:
 
    >[!NOTE]
    >
-   >Alla formulär som används i formuläruppsättningen hanteras av användargränssnittet i AEM Forms.
+   >Alla formulär som används i formuläruppsättningen hanteras av AEM Forms användargränssnittet.
 
 ### Hantera en formuläruppsättning {#managing-a-form-set}
 
@@ -97,7 +102,7 @@ När en formuläruppsättning har skapats kan du utföra följande åtgärder f�
 
 Så här redigerar du en formuläruppsättning:
 
-1. Välj Formulär > Formulär och dokument.
+1. Välj Forms > Forms och Dokument.
 1. Leta reda på den formuläruppsättning som du vill redigera. Håll pekaren över den och välj Redigera ( ![redigering](assets/editicon.png)).
 1. På sidan Konfigurera formulär kan du redigera följande:
 
@@ -105,11 +110,12 @@ Så här redigerar du en formuläruppsättning:
    * Formuläridentifierare
    * Datarot
    * Kvalifikationsuttryck
+
    Du kan också klicka på motsvarande Ta bort-ikon för att ta bort formuläret från formuläruppsättningen.
 
 ## Formuläret har angetts i processhantering {#form-set-in-process-management}
 
-När du har skapat en formuläruppsättning med användargränssnittet för AEM Forms Management kan du använda formuläruppsättningen i en startpunkt- eller tilldelningsaktivitet med Workbench.
+När du har skapat en formuläruppsättning med användargränssnittet i AEM Forms Management kan du använda formuläruppsättningen i en startpunkt- eller tilldelningsaktivitet med Workbench.
 
 ### Använda formuläruppsättning i Aktivitet eller Startpunkt {#using-form-set-in-task-or-start-point}
 
@@ -117,7 +123,7 @@ När du har skapat en formuläruppsättning med användargränssnittet för AEM 
 
    ![Utforma en process: använda en CRX-resurs](assets/formsetinprocessmgmt1.png)
 
-1. Välj formuläruppsättning för att filtrera formuläruppsättningen i AEM-databasen (CRX).
+1. Välj formuläruppsättning för att filtrera formuläruppsättningen i AEM (CRX).
 
    ![Utforma en process: Välj formulärresurs, dialogruta](assets/formsetinprocessmgmt2.png)
 
@@ -133,7 +139,7 @@ Ett kvalificeringsuttryck kan vara vilken giltig JavaScript-programsats som hels
 >
 >Kvalifikationsuttrycket för det första formuläret i formuläruppsättningen körs inte. Det första formuläret visas alltid, oavsett vilket uttryck det gäller.
 
-Utöver JavaScript-standardfunktionerna visar formuläruppsättningen även API:t fs.valueOf som ger åtkomst till värdet för ett fält i ett formulär i en formuläruppsättning. Använd detta API för att komma åt värdet i ett formulärfält i en formuläruppsättning. API-syntaxen är fs.valueOf (formUid, fieldSOM), där:
+Förutom JavaScript-standardfunktionerna visar formuläruppsättningen även API:t fs.valueOf som ger åtkomst till värdet för ett fält i ett formulär i en formuläruppsättning. Använd detta API för att komma åt värdet i ett formulärfält i en formuläruppsättning. API-syntaxen är fs.valueOf (formUid, fieldSOM), där:
 
 * formUid (sträng): Ett unikt ID för ett formulär i formuläruppsättningen. Du kan ange det när du skapar formuläruppsättningen i användargränssnittet för formulärhanteraren. Som standard är det formulärets namn.
 * fieldSOM (string): A SOM expression of the field in the form specified by the formUid. SOM-uttryck eller skriptobjektmodelluttryck används för att referera till värden, egenskaper och metoder i en viss dokumentobjektmodell (DOM). Du kan visa den i Form Designer under fliken Skript när fältet är markerat.
@@ -150,7 +156,7 @@ Giltig användning av API:
 
 Ogiltig användning av API:
 
-```
+```javascript
 var formUid = "form1";
  var fieldSOM = “xfa.form.form1.subform1.field1"; fs.valueOf(formUid, fieldSOM);
 ```
@@ -274,9 +280,9 @@ Rotelementet i XML för formuläruppsättningen. Du bör inte använda det här 
 
 kardinalitet: [1]
 
-submitXML:P
+submitXML: P
 
-prefillXML:O
+prefillXML: O
 
 `children: xdp:xdp/rootElement`
 
@@ -366,7 +372,7 @@ Följande datamönster stöds inte fullt ut i formuläruppsättningen:
   </tr>
   <tr>
    <td>Flera datamönster</td>
-   <td>num{zz,zzz}| num{z,zzz,zzz}</td>
+   <td>num{zz,zzz} | num{z,zzz,zzz}</td>
   </tr>
   <tr>
    <td>Shorthand-mönster </td>
