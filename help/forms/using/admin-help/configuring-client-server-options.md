@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0f069fbc-10c2-403e-9419-5e9920035d75
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
 workflow-type: tm+mt
 source-wordcount: '10273'
 ht-degree: 0%
@@ -43,7 +43,7 @@ En diskussion om hur offlinelån och synkronisering fungerar finns i [Primer om 
 
 **Tillåt åtkomst för anonyma användare:** Välj det här alternativet om du vill aktivera möjligheten att skapa delade och personliga policyer som tillåter anonyma användare att öppna policyskyddade dokument. (Användare som inte har konton kan komma åt dokumentet, men de kan inte logga in på dokumentsäkerhet eller använda andra profilskyddade dokument.)
 
-**Inaktivera åtkomst till Version 7-klienter:** Anger om användare kan använda Acrobat eller Reader 7.0 för att ansluta till servern. När det här alternativet är markerat måste användarna använda Acrobat eller Reader 8.0 eller senare för att slutföra dokumentskyddsåtgärder för PDF-dokument. Om en profil kräver att Acrobat eller Reader 8.0 eller senare måste köras i certifierat läge när principskyddade dokument öppnas bör du inaktivera åtkomsten till Acrobat eller Reader 7. (Se Ange dokumentbehörigheter för användare och grupper.)
+**Inaktivera åtkomst till Version 7-klienter:** Anger om användare kan använda Acrobat eller Reader 7.0 för att ansluta till servern. När det här alternativet är markerat måste användare använda Acrobat eller Reader 8.0 eller senare för att slutföra dokumentskyddsåtgärder för PDF-dokument. Om en policy kräver att Acrobat eller Reader 8.0 eller senare måste köras i certifierat läge när principskyddade dokument öppnas bör du inaktivera åtkomsten till Acrobat eller Reader 7. (Se Ange dokumentbehörigheter för användare och grupper.)
 
 **Tillåt offlineåtkomst per dokument** Välj det här alternativet om du vill ange offlineåtkomst per dokument. Om den här inställningen är aktiverad har användaren bara offline-åtkomst till de dokument som användaren har öppnat online minst en gång.
 
@@ -55,7 +55,7 @@ En diskussion om hur offlinelån och synkronisering fungerar finns i [Primer om 
 
 **Tillåt utökad autentisering** Välj om du vill aktivera utökad autentisering och ange sedan den utökade URL:en för autentiseringslandning.
 
-Om du väljer det här alternativet kan klientprogram använda utökad autentisering. Utökad autentisering möjliggör anpassade autentiseringsprocesser och olika autentiseringsalternativ som konfigurerats på AEM-formulärservern. Användare kan nu till exempel använda SAML-baserad autentisering i stället för användarnamn/lösenord för AEM-formulär från Acrobat och Reader Client. Som standard innehåller landnings-URL:en *localhost* som servernamn. Ersätt servernamnet med ett fullständigt kvalificerat värdnamn. Värdnamnet i landnings-URL fylls automatiskt i från bas-URL:en om utökad autentisering inte har aktiverats ännu. Se [Lägg till den utökade autentiseringsprovidern](configuring-client-server-options.md#add-the-extended-authentication-provider).
+Om du väljer det här alternativet kan klientprogram använda utökad autentisering. Utökad autentisering möjliggör anpassade autentiseringsprocesser och olika autentiseringsalternativ som konfigurerats på AEM formulärserver. Användare kan nu till exempel använda SAML-baserad autentisering i stället för AEM användarnamn/lösenord från Acrobat och Reader Client. Som standard innehåller landnings-URL:en *localhost* som servernamn. Ersätt servernamnet med ett fullständigt kvalificerat värdnamn. Värdnamnet i landnings-URL fylls automatiskt i från bas-URL:en om utökad autentisering inte har aktiverats ännu. Se [Lägg till den utökade autentiseringsprovidern](configuring-client-server-options.md#add-the-extended-authentication-provider).
 
 ***Obs **! Utökad autentisering stöds i Apple Mac OS X med Adobe Acrobat version 11.0.6 och senare.*
 
@@ -73,7 +73,7 @@ Höjd: Minimum = 450; maximum = 800
 
 ### Tilldela dokumentsäkerhetsroller till administratörer {#assigning-document-security-roles-to-administrators}
 
-Din AEM-formulärmiljö innehåller en eller flera administratörsanvändare som har behörighet att skapa användare och grupper. Om din organisation använder dokumentskydd måste minst en administratör också tilldelas behörighet att hantera inbjudna och lokala användare.
+Din AEM innehåller en eller flera administratörsanvändare som har behörighet att skapa användare och grupper. Om din organisation använder dokumentskydd måste minst en administratör också tilldelas behörighet att hantera inbjudna och lokala användare.
 
 Administratörerna måste också ha administratörskonsolens användarroll för att komma åt administrationskonsolen. (Se [Skapa och konfigurera roller](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles).)
 
@@ -83,7 +83,7 @@ Om du vill visa användare och grupper i valda domäner under principanvändars�
 
 Listan med synliga användare och grupper är synlig för principuppsättningens koordinator och används för att begränsa vilka domäner slutanvändaren kan bläddra i när han eller hon väljer användare eller grupper att lägga till i profiler. Om den här åtgärden inte utförs kommer principuppsättningskoordinatorn inte att hitta några användare eller grupper att lägga till i principen. Det kan finnas fler än en principuppsättningskoordinator för en given principuppsättning.
 
-1. När du har installerat och konfigurerat din AEM-formulärmiljö med dokumentsäkerhet konfigurerar du alla lämpliga domäner i Användarhantering. <!-- Fix broken link (See Setting up and managing domains) -->
+1. När du har installerat och konfigurerat din AEM formulärmiljö med dokumentsäkerhet konfigurerar du alla lämpliga domäner i Användarhantering. <!-- Fix broken link (See Setting up and managing domains) -->
 
    ***Obs **! Du måste skapa domäner innan du kan skapa profiler.*
 
@@ -95,7 +95,7 @@ Listan med synliga användare och grupper är synlig för principuppsättningens
 
 ## Lägg till den utökade autentiseringsprovidern {#add-the-extended-authentication-provider}
 
-AEM-formulär har en exempelkonfiguration som du kan anpassa för din miljö. Utför följande steg:
+AEM innehåller en exempelkonfiguration som du kan anpassa för din miljö. Utför följande steg:
 
 >[!NOTE]
 >
@@ -131,7 +131,7 @@ Med utökad autentisering aktiverat får användare som öppnar ett policyskydda
 
 dokumentsäkerhet gör det möjligt att använda principskyddade dokument offline utan Internet- eller nätverksanslutning. Den här funktionen kräver att principen tillåter offlineåtkomst, vilket beskrivs i [Ange dokumentbehörigheter för användare och grupper](/help/forms/using/admin-help/creating-policies.md#specify-the-document-permissions-for-users-and-groups). Innan ett dokument med en sådan profil kan användas offline måste mottagaren öppna dokumentet online och aktivera åtkomst offline genom att klicka på Ja när du uppmanas till det. Mottagaren kan också bli ombedd att autentisera sin identitet. Mottagaren kan sedan använda dokument offline under den offlinelåneperiod som anges i policyn.
 
-När låneperioden är slut måste mottagaren synkronisera igen med dokumentsäkerheten antingen genom att öppna ett dokument online eller genom att använda ett menykommando för Acrobat eller Acrobat Reader DC för att synkronisera. (Se *Acrobat-hjälpen* eller rätt *Acrobat Reader DC-tillägg*.)
+När offlineleasingperioden är slut måste mottagaren synkronisera igen med dokumentsäkerheten antingen genom att öppna ett dokument online eller genom att använda ett menykommando för Acrobat eller Acrobat Reader DC tillägg för att synkronisera. (Se *Acrobat Help* eller motsvarande *Acrobat Reader DC Extensions Help*.)
 
 Eftersom dokument som tillåter offlineåtkomst kräver cachelagring av viktigt material på den dator där filerna lagras offline, kan filen eventuellt komprometteras om en obehörig användare kan få tillgång till nyckelmaterialet. För att kompensera för den här möjligheten finns schemalagda och manuella nyckelrollover-alternativ som du kan konfigurera för att förhindra att obehöriga använder nyckeln för att få åtkomst till dokumentet.
 
@@ -196,7 +196,7 @@ Du kan välja den här typen av händelser för granskning:
 * Policyskyddade dokumenthändelser, t.ex. försök av behöriga eller obehöriga användare att öppna dokument
 * Politiska händelser, som att skapa, ändra, ta bort, aktivera och inaktivera principer
 * Användarhändelser, som externa användarinbjudningar och registreringar, aktiverade och inaktiverade användarkonton, ändringar av användarlösenord och profiluppdateringar
-* AEM-formulärhändelser, t.ex. versionskonflikter, otillgänglig katalogserver och auktoriseringsleverantörer samt ändringar i serverkonfigurationen
+* AEM formulärhändelser, t.ex. versionskonflikter, otillgänglig katalogserver och auktoriseringsleverantörer samt ändringar i serverkonfigurationen
 
 ### Aktivera eller inaktivera händelsegranskning {#enable-or-disable-event-auditing}
 
@@ -309,9 +309,9 @@ Du kan aktivera och inaktivera händelsegranskning och ange vilka typer av händ
 
 **Byt profil på dokument:** En användare eller administratör växlar den princip som är kopplad till ett dokument.
 
-**Publicera dokument som:** Ett nytt dokument vars documentName och license är identiska med ett befintligt dokument registreras på servern och dokumenten har ingen överordnad-underordnad relation. Den här händelsen kan utlösas med AEM Forms SDK.
+**Publicera dokument som:** Ett nytt dokument vars documentName och license är identiska med ett befintligt dokument registreras på servern och dokumenten har ingen överordnad-underordnad relation. Den här händelsen kan utlösas med AEM formulär SDK.
 
-**Upprepa dokument:** Ett nytt dokument vars documentName och license är identiska med ett befintligt dokument registreras på servern och dokumenten har en överordnad-underordnad relation. Den här händelsen kan utlösas med AEM Forms SDK.
+**Upprepa dokument:** Ett nytt dokument vars documentName och license är identiska med ett befintligt dokument registreras på servern och dokumenten har en överordnad-underordnad relation. Den här händelsen kan utlösas med AEM formulär SDK.
 
 **Politiska händelser**
 
@@ -365,7 +365,7 @@ Du kan aktivera och inaktivera händelsegranskning och ange vilka typer av händ
 
 **Synkroniserat klientprogram** måste synkronisera information med servern för att tillåta åtkomst offline.
 
-**Versionsfel:** En version av AEM Forms SDK som inte är kompatibel med servern försökte ansluta till servern.
+**Versionsfel:** En version av AEM formulär-SDK som inte är kompatibel med servern försökte ansluta till servern.
 
 **Katalogsynkroniseringsinformation:** Den här informationen är inte tillgänglig från sidan Händelser. Den aktuella katalogsynkroniseringsinformationen, inklusive det aktuella synkroniseringstillståndet och tidpunkten för den senaste synkroniseringen, visas på sidan Domänhantering. Om du vill få åtkomst till sidan Domänhantering i administrationskonsolen klickar du på Inställningar > Användarhantering > Domänhantering.
 
@@ -420,7 +420,7 @@ De här inställningarna styr texten som visas i dialogrutan för certifikataute
 
 **Anpassning för visning av klientcertifikat**
 
-**Visa endast pålitliga autentiseringsutfärdare:** När det här alternativet är markerat ger klientprogrammet bara användaren certifikat från certifikatutfärdare som AEM-formulär har konfigurerats att lita på (se Hantera certifikat och autentiseringsuppgifter). När det här alternativet inte är markerat visas en lista med alla certifikat i användarens system.
+**Visa endast pålitliga autentiseringsutfärdare:** När det här alternativet är markerat ger klientprogrammet bara användaren certifikat från certifikatutfärdare som AEM formulär är konfigurerade att lita på (se Hantera certifikat och autentiseringsuppgifter). När det här alternativet inte är markerat visas en lista med alla certifikat i användarens system.
 
 ## Konfigurera dynamiska vattenstämplar {#configure-dynamic-watermarks}
 
@@ -432,7 +432,7 @@ Vattenstämplar kan inte redigeras och är därför ett säkrare sätt att säke
 
 Den vattenstämpel som en profil anger visas i det profilskyddade dokumentet när en mottagare visar eller skriver ut dokumentet. Till skillnad från permanenta vattenstämplar sparas aldrig en dynamisk vattenstämpel i dokumentet, vilket ger den flexibilitet som krävs när du distribuerar ett dokument i en intranätmiljö för att se till att visningsprogrammet visar identiteten för den specifika användaren. Om ett dokument har flera användare innebär användningen av den dynamiska vattenstämpeln att du kan använda ett dokument i stället för flera versioner, där var och en har olika vattenstämpel. Vattenstämpeln som visas återspeglar den aktuella användarens identitet.
 
-Observera att dynamiska vattenstämplar skiljer sig från vattenstämplar som användare kan lägga till direkt i dokumentet i Acrobat. Resultatet blir att du kan ha två vattenstämplar i ett policyskyddat dokument.
+Observera att dynamiska vattenstämplar skiljer sig från de vattenstämplar som användare kan lägga till direkt i dokumentet i Acrobat. Resultatet blir att du kan ha två vattenstämplar i ett policyskyddat dokument.
 
 ### Att tänka på när du skapar vattenstämplar {#considerations-when-creating-watermarks}
 
@@ -452,24 +452,24 @@ Tänk på följande när du konfigurerar vattenstämplar:
 * Du kan ändra den maximala PDF-filstorlek som du vill använda som vattenstämpelelement. Stora PDF-dokument som används som vattenstämplar försämrar prestanda vid offlinesynkronisering av dokument som används med sådana vattenstämplar. Se [Ändra konfigurationsparametrar](configuring-client-server-options.md#change-the-watermark-configuration-parameters)för vattenstämpel.
 * Endast den första sidan i den markerade PDF-filen används som vattenstämpel. Kontrollera att den information som du vill ska visas som vattenstämpel är tillgänglig på själva sidan.
 * Även om du kan ange skalningen för PDF-dokumentet bör du överväga PDF-dokumentets sidstorlek och layout om du tänker använda den som en vattenstämpel i sidhuvudet, sidfoten eller marginalerna.
-* Ange rätt namn när du anger teckensnittsnamnet. AEM-formulär ersätter det teckensnitt som du har angett om det inte finns i klientdatorn där dokumentet öppnas.
+* Ange rätt namn när du anger teckensnittsnamnet. AEM ersätter det teckensnitt som du har angett om det inte finns i klientdatorn där dokumentet öppnas.
 * Om du har markerat text som vattenstämpelinnehåll fungerar inte alternativet Anpassa till sida för sidor som har olika bredd.
 * När du anger placeringen av vattenstämpelelementen måste du se till att inte mer än ett element har samma placering. Om två vattenstämpelelement har samma placering, t.ex. mittpunkt, visas de överlappade i dokumentet och i den ordning som de lades till i vattenstämpeln.
 * När du anger teckensnittsstorlek och -typ måste du se till att textlängden är helt synlig på sidan. Textinnehållet förs över till nya rader, så att vattenstämpelinnehållet som du vill ska finnas i marginalerna kan överlappa innehållsområdet på sidorna. Om dokumentet öppnas i Acrobat 9 kortas texten utanför den enskilda raden av.
 
 ### Begränsningar för dynamiska vattenstämplar {#limitations-of-dynamic-watermarks}
 
-Vissa klientprogram kanske inte stöder dynamiska vattenstämplar. Se lämplig hjälp för Acrobat Reader DC-tillägg. Tänk dessutom på följande när det gäller de versioner av Acrobat som stöder dynamiska vattenstämplar:
+Vissa klientprogram kanske inte stöder dynamiska vattenstämplar. Se lämplig hjälp om Acrobat Reader DC-tillägg. Tänk dessutom på följande när det gäller de versioner av Acrobat som stöder dynamiska vattenstämplar:
 
 * Du kan inte använda ett lösenordsskyddat PDF-dokument som vattenstämpelelement.
-* Acrobat- och Adobe Reader-versioner tidigare än 10 stöder inte följande vattenstämpelfunktioner:
+* Tidigare versioner av Acrobat och Adobe Reader än 10 stöder inte följande vattenstämpelfunktioner:
 
    * PDF-vattenstämplar
    * Flera element i vattenstämpeln (Text/PDF)
    * Avancerade alternativ som sidintervall eller visningsalternativ
    * Textformateringsalternativ som angivet teckensnitt, teckensnittsnamn och färg. I tidigare versioner av Acrobat och Reader visas emellertid textinnehållet med standardteckensnitt och -färg.
 
-* Acrobat 9.0 och tidigare: Acrobat 9.0 och tidigare stöder inte principnamn i dynamiska vattenstämplar. Om Acrobat 9.0 öppnar ett policyskyddat dokument med en dynamisk vattenstämpel som innehåller ett principnamn och andra dynamiska data, visas vattenstämpeln utan principnamnet. Om den dynamiska vattenstämpeln bara innehåller principnamnet visas ett felmeddelande i Acrobat
+* Acrobat 9.0 och tidigare versioner: Acrobat 9.0 och tidigare stöder inte principnamn i dynamiska vattenstämplar. Om Acrobat 9.0 öppnar ett policyskyddat dokument med en dynamisk vattenstämpel som innehåller ett principnamn och andra dynamiska data, visas vattenstämpeln utan principnamnet. Om den dynamiska vattenstämpeln bara innehåller principnamnet visas ett felmeddelande i Acrobat
 
 ### Lägga till en dynamisk vattenstämpelmall {#add-a-dynamic-watermark-template}
 
@@ -553,7 +553,7 @@ Dokumentsäkerhet genererar automatiskt en registreringsinbjudan via e-post när
 
 E-postmeddelandet innehåller en länk till en registreringssida och information om hur du registrerar dig. När den inbjudna användaren har registrerat sig utfärdar dokumentsäkerheten ett aktiveringsmejl med en länk till en aktiveringssida. När det är aktiverat fortsätter kontot att gälla tills du inaktiverar eller tar bort det.
 
-Om du aktiverar inbyggd registrering anger du SMTP-servern, e-postinformation för registrering, åtkomstfunktioner och återställer e-postinformation för lösenord endast en gång. Innan du aktiverar den inbyggda registreringen bör du kontrollera att du har skapat en lokal domän i Användarhantering som har tilldelat rollen&quot;Bjud in användare för dokumentsäkerhet&quot; till lämpliga användare och grupper i organisationen. (Se [Lägga till en lokal domän](/help/forms/using/admin-help/adding-domains.md#add-a-local-domain) och [Skapa och konfigurera roller](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles).) Om du inte använder den inbyggda registreringen måste du ha ett eget användarregistreringssystem som skapats med AEM Forms SDK. Se hjälpen om&quot;Developing SPIs for AEM forms&quot; i [Programmering med AEM-formulär](https://www.adobe.com/go/learn-aemforms-programming-63). Om du inte använder alternativet Inbyggd registrering rekommenderar vi att du konfigurerar ett meddelande i aktiveringsmeddelandet och på klientinloggningsskärmen för att meddela användarna hur de kan kontakta administratören för ett nytt lösenord eller för att få annan information.
+Om du aktiverar inbyggd registrering anger du SMTP-servern, e-postinformation för registrering, åtkomstfunktioner och återställer e-postinformation för lösenord endast en gång. Innan du aktiverar den inbyggda registreringen bör du kontrollera att du har skapat en lokal domän i Användarhantering som har tilldelat rollen&quot;Bjud in användare för dokumentsäkerhet&quot; till lämpliga användare och grupper i organisationen. (Se [Lägga till en lokal domän](/help/forms/using/admin-help/adding-domains.md#add-a-local-domain) och [Skapa och konfigurera roller](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles).) Om du inte använder inbyggd registrering måste du ha ett eget användarregistreringssystem som skapats med AEM SDK. Mer information finns i&quot;Developing SPIs for AEM forms&quot; i [Programmering med AEM](https://www.adobe.com/go/learn-aemforms-programming-63). Om du inte använder alternativet Inbyggd registrering rekommenderar vi att du konfigurerar ett meddelande i aktiveringsmeddelandet och på klientinloggningsskärmen för att meddela användarna hur de kan kontakta administratören för ett nytt lösenord eller för att få annan information.
 
 **Aktivera och konfigurera registrering av inbjudna användare**
 
@@ -777,7 +777,7 @@ När klientprogram försöker skapa en länk med dokumentsäkerhet, tillhandahå
 
 Inställningarna för Neka kan innehålla flera uppsättningar villkor för Neka. Om alla attribut i en uppsättning matchar, nekas det begärande programmet åtkomst till dokumentets säkerhetstjänster.
 
-Funktionen för denial of service kräver att klientprogram använder dokumentsäkerheten C++ Client SDK version 8.2 eller senare. Följande Adobe-produkter ger produktinformation vid begäran om dokumentsäkerhetstjänster:
+Funktionen för denial of service kräver att klientprogram använder dokumentsäkerheten C++ Client SDK version 8.2 eller senare. Följande Adobe-produkter tillhandahåller produktinformation vid begäran om dokumentsäkerhetstjänster:
 
 * Adobe Acrobat 9.0 Professional/Acrobat 9.0 Standard och senare
 * Adobe Reader 9.0 och senare
@@ -795,11 +795,11 @@ Klientprogram eller plugin-program tillhandahåller produktinformation när de i
 
 Om någon information inte är tillämplig lämnar klientprogrammet motsvarande fält tomt.
 
-Flera Adobe-program inkluderar produktinformation när de begär dokumentsäkerhetstjänster, bland annat Acrobat, Adobe Reader och Acrobat Reader DC-tillägg för Microsoft Office.
+Flera Adobe-program innehåller produktinformation när de begär dokumentsäkerhetstjänster, inklusive Acrobat-, Adobe Reader- och Acrobat Reader DC-tillägg för Microsoft Office.
 
 **Acrobat och Adobe Reader**
 
-När Acrobat eller Adobe Reader begär en tjänst från dokumentskydd, anger den följande produktinformation:
+När Acrobat eller Adobe Reader begär en tjänst från dokumentsäkerhet tillhandahålls följande produktinformation:
 
 * **Integrator:** Adobe Systems, Inc.
 * **Integratorversion:** 1.0
@@ -822,7 +822,7 @@ Acrobat Reader DC-tillägg för Microsoft Office är ett plugin-program som anv�
 1. Exportera konfigurationsfilen för dokumentsäkerhet. (Se [Redigera dokumentets säkerhetskonfigurationsfil](configuring-client-server-options.md#manually-editing-the-document-security-configuration-file)manuellt.)
 1. Öppna konfigurationsfilen i en redigerare och leta upp `PolicyServer` noden. Lägg till en `ClientVersionRules` nod som direkt underordnad till `PolicyServer` noden, om en sådan inte finns:
 
-   ```java
+   ```xml
     <node name="ClientVersionRules">
         <map>
             <entry key="infoURL" value="URL"/>
@@ -879,7 +879,7 @@ Acrobat Reader DC-tillägg för Microsoft Office är ett plugin-program som anv�
 
 I det här exemplet nekas alla Windows-klienter åtkomst.
 
-```java
+```xml
  <node name="ClientVersionRules">
      <map>
          <entry key="infoURL" value="https://www.dont.use/windows.html"/>
@@ -897,7 +897,7 @@ I det här exemplet nekas alla Windows-klienter åtkomst.
 
 I det här exemplet nekas åtkomst till My Application version 3.0 och My Other Application version 2.0. Samma URL för information om avslag används oavsett orsak till nekande.
 
-```java
+```xml
  <node name="ClientVersionRules">
      <map>
          <entry key="infoURL" value=”https://get.a.new/version.html”/>
@@ -922,7 +922,7 @@ I det här exemplet nekas åtkomst till My Application version 3.0 och My Other 
 
 I det här exemplet nekas alla begäranden från en Microsoft PowerPoint 2007- eller Microsoft PowerPoint 2010-installation av Acrobat Reader DC-tillägg för Microsoft Office.
 
-```java
+```xml
  <node name="ClientVersionRules">
      <map>
          <entry key="infoURL" value=”https://get.a.new/version.html”/>
@@ -955,7 +955,7 @@ Som standard kan du ange högst fem element i en vattenstämpel. Den maximala fi
 
    Den andra posten, *max elements* , är det maximala antalet element som tillåts i en vattenstämpel. Standardvärdet är 5.
 
-   ```java
+   ```xml
    <entry key="maximumSizeOfWatermarkElement" value="max filesize in KB"/>
    <entry key="maximumWatermarkElementsPerWatermark" value="max elements"/>
    ```
@@ -975,7 +975,7 @@ Följande ändringar av config.xml inaktiverar alla externa länkar från använ
 1. Öppna konfigurationsfilen i en redigerare och leta upp `DisplaySettings` noden.
 1. Om du vill inaktivera alla externa länkar lägger du till följande post i noden och sparar sedan filen: `DisplaySettings` `<entry key="ExternalLinksAllowed" value="false"/>`
 
-   ```java
+   ```xml
    <entry key="ExternalLinksAllowed" value="false"/>
    ```
 
@@ -989,7 +989,7 @@ Följande ändringar av config.xml aktiverar TLS-stöd för funktionen Inbjuden 
 1. Öppna konfigurationsfilen i en redigerare och leta upp `DisplaySettings` noden.
 1. Leta reda på följande nod: `<node name="ExternalUser">`
 
-   ```java
+   ```xml
    <node name="ExternalUser">
    ```
 
@@ -1005,7 +1005,7 @@ Följande ändringar av config.xml för att inaktivera SOAP-slutpunkter för dok
 1. Exportera konfigurationsfilen för dokumentsäkerhet. (Se [Redigera dokumentets säkerhetskonfigurationsfil](configuring-client-server-options.md#manually-editing-the-document-security-configuration-file)manuellt.)
 1. Öppna konfigurationsfilen i en redigerare och leta upp följande nod: `<node name="DRM">`
 
-   ```java
+   ```xml
    <node name="DRM">
    ```
 
@@ -1015,7 +1015,7 @@ Följande ändringar av config.xml för att inaktivera SOAP-slutpunkter för dok
 
 1. Om du vill inaktivera SOAP-slutpunkter för dokumentsäkerhetsdokument anger du värdeattributet till **false**.
 
-   ```java
+   ```xml
    <node name="DRM">
        <map>
            <entry key="AllowUnencryptedVoucher" value="false"/>
