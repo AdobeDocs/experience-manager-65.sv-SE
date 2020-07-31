@@ -11,7 +11,7 @@ topic-tags: forms-workspace
 discoiquuid: dd3218c4-2bb2-40fc-9141-5823b0ea4224
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 3%
@@ -37,7 +37,7 @@ De allmänna stegen för att utföra anpassningar är:
 1. Kopiera `/libs/ws/locales` mappen i `/apps/ws` mappen. Klicka på **[!UICONTROL Save All]**.
 1. Uppdatera referenserna och de relativa sökvägarna i `GET.jsp` filen, så som visas nedan, och klicka på **[!UICONTROL Save all]**.
 
-   ```jsp
+   ```javascript
    <meta http-equiv="refresh" content="0;URL='/lc/apps/ws/index.html'" />
    ```
 
@@ -49,14 +49,14 @@ De allmänna stegen för att utföra anpassningar är:
 
    1. Öppna `/apps/ws/html`.jsp och ändra från
 
-   ```css
+   ```javascript
    <link lang="en" rel="stylesheet" type="text/css" href="css/style.css" />
    <link lang="en" rel="stylesheet" type="text/css" href="css/jquery-ui.css"/>
    ```
 
    till
 
-   ```css
+   ```javascript
    <link lang="en" rel="stylesheet" type="text/css" href="../../libs/ws/css/style.css" />
    <link lang="en" rel="stylesheet" type="text/css" href="css/newStyle.css" />
    <link lang="en" rel="stylesheet" type="text/css" href="../../libs/ws/css/jquery-ui.css"/>
@@ -68,13 +68,13 @@ De allmänna stegen för att utföra anpassningar är:
 
 1. I /apps/ws/html.jsp
 
-   ```css
+   ```jsp
    <script data-main="js/main" src="js/libs/require/require.js"></script>
    ```
 
    till
 
-   ```css
+   ```jsp
    <script data-main="js/main" src="../../libs/ws/js/libs/require/require.js"></script>
    ```
 
