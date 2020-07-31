@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 7c0efcb3-5b07-4090-9119-b7318c8b7980
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
 workflow-type: tm+mt
 source-wordcount: '1240'
 ht-degree: 0%
@@ -26,7 +26,7 @@ I det här avsnittet beskrivs följande steg för att konfigurera SSL med IBM We
 
 För att aktivera SSL behöver WebSphere åtkomst till ett användarkonto i det lokala operativsystemets användarregister som har behörighet att administrera systemet:
 
-* (Windows) Skapa en ny Windows-användare som ingår i gruppen Administratörer och har behörighet att fungera som en del av operativsystemet. (Se [Skapa en Windows-användare för WebSphere](configuring-ssl-websphere-application-server.md#create-a-windows-user-for-websphere).)
+* (Windows) Skapa en ny Windows-användare som är en del av gruppen Administratörer och har behörighet att fungera som en del av operativsystemet. (Se [Skapa en Windows-användare för WebSphere](configuring-ssl-websphere-application-server.md#create-a-windows-user-for-websphere).)
 * (Linux, UNIX) Användaren kan vara en rotanvändare eller en annan användare som har rotbehörighet. När du aktiverar SSL på WebSphere använder du den här användarens server-ID och lösenord.
 
 ### Skapa en Linux- eller UNIX-användare för WebSphere {#create-a-linux-or-unix-user-for-websphere}
@@ -127,7 +127,7 @@ Du kan skapa förtroendelager och nyckelbehållare med hjälp av nyckelverktyget
 
    Din profil kan nu köras med anpassade SSL-inställningar och ditt certifikat.
 
-## Stöd för AEM-blankettens inbyggda {#enabling-support-for-aem-forms-natives}
+## Aktivera stöd för AEM {#enabling-support-for-aem-forms-natives}
 
 1. I administrationskonsolen för WebSphere väljer du **Säkerhet > Global säkerhet**.
 1. Expandera **RMI/IIOP-säkerhet** i avsnittet Autentisering och klicka på **CSIv2-inkommande kommunikation**.
@@ -178,7 +178,7 @@ Utför följande steg för att ange att porten ska vara dynamisk och för att l�
 1. Öppna `[aem-forms_root]`\crx-repository\launchpad\sling.properties för redigering.
 1. Leta reda på `sling.bootdelegation.ibm` egenskapen och lägg `com.ibm.websphere.ssl.*`till den i värdefältet. Det uppdaterade fältet ser ut så här:
 
-   ```java
+   ```shell
    sling.bootdelegation.ibm=com.ibm.xml.*, com.ibm.websphere.ssl.*
    ```
 
