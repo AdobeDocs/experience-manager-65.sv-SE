@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 1b905e66-dc05-4f14-8025-62a78feef12a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
 workflow-type: tm+mt
 source-wordcount: '6774'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## Översikt {#overview}
 
-Regelredigerarfunktionen i Adobe Experience Manager Forms gör det möjligt för användare och utvecklare av formulär att skriva regler för anpassningsbara formulärobjekt. Dessa regler definierar åtgärder som ska utlösas av formulärobjekt baserat på förinställda villkor, användarindata och användaråtgärder i formuläret. Det effektiviserar formulärifyllningen ytterligare och ger större precision och hastighet.
+Regelredigeringsfunktionen i Adobe Experience Manager Forms gör det möjligt för användare och utvecklare av formulär att skriva regler för anpassningsbara formulärobjekt. Dessa regler definierar åtgärder som ska utlösas av formulärobjekt baserat på förinställda villkor, användarindata och användaråtgärder i formuläret. Det effektiviserar formulärifyllningen ytterligare och ger större precision och hastighet.
 
 Regelredigeraren har ett intuitivt och förenklat användargränssnitt för att skriva regler. Regelredigeraren erbjuder en visuell redigerare för alla användare. Regelredigeraren är dessutom bara avsedd för användare som har behörighet att använda formulär och har en kodredigerare som kan skriva regler och skript. Några av de viktigaste åtgärderna som du kan utföra på anpassningsbara formulärobjekt med hjälp av regler är:
 
@@ -33,7 +33,7 @@ Regelredigeraren har ett intuitivt och förenklat användargränssnitt för att 
 * Anropa en formulärdatamodelltjänst och utföra en åtgärd
 * Ange ett objekts egenskap
 
-Regelredigeraren ersätter skriptfunktionerna i AEM 6.1-formulär och tidigare versioner. Befintliga skript bevaras dock i den nya regelredigeraren. Mer information om hur du arbetar med befintliga skript i regelredigeraren finns i [Effekten av regelredigeraren på befintliga skript](../../forms/using/rule-editor.md#p-impact-of-rule-editor-on-existing-scripts-p).
+Regelredigeraren ersätter skriptfunktionerna i AEM 6.1 Forms och tidigare versioner. Befintliga skript bevaras dock i den nya regelredigeraren. Mer information om hur du arbetar med befintliga skript i regelredigeraren finns i [Effekten av regelredigeraren på befintliga skript](../../forms/using/rule-editor.md#p-impact-of-rule-editor-on-existing-scripts-p).
 
 Användare som läggs till i användargruppen för formulär kan skapa nya skript och redigera befintliga. Användare i gruppen för formuläranvändare kan använda skript men inte skapa eller redigera skript.
 
@@ -133,13 +133,13 @@ När du skriver en When-regel kan du utlösa åtgärden Clear Value Of. Med åtg
 
 **Inaktivera** Inaktiverar det angivna objektet.
 
-**Anropa tjänst** Anropar en tjänst som konfigurerats i en formulärdatamodell. När du väljer åtgärden Anropa tjänst visas ett fält. När användaren knackar på fältet visas alla tjänster som konfigurerats i alla formulärdatamodeller på AEM-instansen. När du väljer en datamodelltjänst för ett formulär visas ytterligare fält där du kan mappa formulärobjekt med in- och utdataparametrar för den angivna tjänsten. Se exempelregel för att anropa datamodelltjänster för formulär.
+**Anropa tjänst** Anropar en tjänst som konfigurerats i en formulärdatamodell. När du väljer åtgärden Anropa tjänst visas ett fält. När användaren knackar på fältet visas alla tjänster som konfigurerats i alla formulärdatamodeller i AEM. När du väljer en datamodelltjänst för ett formulär visas ytterligare fält där du kan mappa formulärobjekt med in- och utdataparametrar för den angivna tjänsten. Se exempelregel för att anropa datamodelltjänster för formulär.
 
 Utöver formulärdatamodelltjänsten kan du ange en direkt WSDL-URL för att anropa en webbtjänst. En datamodelltjänst för formulär har dock många fördelar och det rekommenderade sättet att anropa en tjänst.
 
 Mer information om hur du konfigurerar tjänster i formulärdatamodellen finns i [AEM Forms Data Integration](/help/forms/using/data-integration.md).
 
-**Ange värdet för** Computes och ställer in värdet för det angivna objektet. Du kan ställa in objektvärdet på en sträng, värdet för ett annat objekt, det beräknade värdet med hjälp av matematiska uttryck eller funktioner, värdet för ett objekts egenskap eller utdatavärdet från en konfigurerad datamodelltjänst för formulär. När du väljer webbtjänstalternativet visas alla tjänster som konfigurerats i alla formulärdatamodeller på din AEM-instans. När du väljer en datamodelltjänst för ett formulär visas ytterligare fält där du kan mappa formulärobjekt med in- och utdataparametrar för den angivna tjänsten.
+**Ange värdet för** Computes och ställer in värdet för det angivna objektet. Du kan ställa in objektvärdet på en sträng, värdet för ett annat objekt, det beräknade värdet med hjälp av matematiska uttryck eller funktioner, värdet för ett objekts egenskap eller utdatavärdet från en konfigurerad datamodelltjänst för formulär. När du väljer webbtjänstalternativet visas alla tjänster som är konfigurerade i alla formulärdatamodeller på din AEM. När du väljer en datamodelltjänst för ett formulär visas ytterligare fält där du kan mappa formulärobjekt med in- och utdataparametrar för den angivna tjänsten.
 
 Mer information om hur du konfigurerar tjänster i formulärdatamodellen finns i [AEM Forms Data Integration](/help/forms/using/data-integration.md).
 
@@ -165,7 +165,7 @@ I följande bild visas ett exempel på hur du dynamiskt lägger till kryssrutor 
 
 **Spara formulär** Sparar formuläret.
 
-**Skicka formulär** skickar formuläret.
+**Skicka in Forms** Skicka in formuläret.
 
 **Återställ formulär** Återställer formuläret.
 
@@ -358,7 +358,7 @@ Fliken Funktioner innehåller en uppsättning inbyggda funktioner, till exempel 
 
 >[!NOTE]
 >
->Du kan utföra textsökning på objekt och funktionsnamn och titlar på flikarna Formulärobjekt och Funktioner.
+>Du kan utföra textsökning på objekt och funktionsnamn och titlar på flikarna Forms Objekt och Funktioner.
 
 I det vänstra trädet för formulärobjekten kan du trycka på formulärobjekten för att visa reglerna som tillämpas på vart och ett av objekten. Du kan inte bara navigera bland reglerna för de olika formulärobjekten, du kan även kopiera och klistra in regler mellan formulärobjekten. Mer information finns i [Kopiera och klistra in regler](../../forms/using/rule-editor.md#p-copy-paste-rules-p).
 
@@ -378,7 +378,7 @@ Användare i gruppen för formuläranvändare har åtkomst till kodredigeraren. 
 
 AEM Forms spårar det regelredigeringsläge som du använde senast för att skriva en regel. När du startar regelredigeraren nästa gång öppnas den i det läget. Du kan dock konfigurera ett standardläge så att regelredigeraren öppnas i det angivna läget. Så här gör du:
 
-1. Gå till AEM-webbkonsolen på `https://[host]:[port]/system/console/configMgr`.
+1. Gå till AEM webbkonsol på `https://[host]:[port]/system/console/configMgr`.
 1. Klicka för att redigera **[!UICONTROL Adaptive Form Configuration Service]**.
 1. välj **[!UICONTROL Visual Editor]** eller **[!UICONTROL Code Editor]** från **[!UICONTROL Default Mode for Rule Editor]** listrutan
 
@@ -471,11 +471,11 @@ Utför följande steg för att skriva regler:
 
 1. I uttrycksfältet:
 
-   * Markera eller dra och släpp från fliken Formulärobjekt i fältet **Lön** i det första **Släpp-objektet eller välj här** .
+   * Markera eller dra-och-släpp från fliken Forms-objekt i fältet **Lön** i det första **Släpp-objektet eller välj här** .
 
    * Välj **Plus** i fältet **Välj operator** .
 
-   * Markera eller dra och släpp från fliken Formulärobjekt i fältet **Makuslön** i det andra **Släpp-objektet eller välj här** .
+   * Markera eller dra och släpp från fliken Forms-objekt i fältet **Makuslön** i det andra **Drop-objektet eller markera här** .
 
    ![write-rules-visual-editor-12](assets/write-rules-visual-editor-12.png)
 
@@ -499,7 +499,7 @@ Utför följande steg för att skriva regler:
 
    I programsatsen When:
 
-   * Markera eller dra och släpp från fliken Formulärobjekt i fältet **Marital status** i det första **Släpp-objektet eller välj här** .
+   * Markera eller dra-och-släpp på fliken Forms-objekt i fältet **Marital status** i det första **Drop-objektet eller välj här** .
 
    * Välj **är lika med** i fältet **Välj operator** .
 
@@ -642,7 +642,7 @@ area = function(len) {
 
 **Funktionsuttryck och -programsats**
 
-```
+```javascript
 var b={};
 /** */
 b.area = function(len) {
@@ -652,7 +652,7 @@ b.area = function(len) {
 
 **Funktionsdeklaration som variabel**
 
-```
+```javascript
 /** */
 var x1,
     area = function(len) {
@@ -665,7 +665,7 @@ Begränsning: den anpassade funktionen väljer bara den första funktionsdeklara
 
 **Funktionsdeklaration som objekt**
 
-```
+```javascript
 var c = {
     b : {
         /** */
@@ -765,7 +765,7 @@ När användaren uppger att han/hon har bott på sin nuvarande adress i mindre �
 
 ## Regelredigerarens effekt på befintliga skript {#impact-of-rule-editor-on-existing-scripts}
 
-I AEM Forms-versioner före AEM 6.1 Forms-funktionspaket 1 använde formulärförfattare och utvecklare för att skriva uttryck på fliken Skript i dialogrutan Redigera komponent för att lägga till dynamiskt beteende i anpassningsbara formulär. Fliken Skript har ersatts av regelredigeraren.
+I AEM Forms-versioner före AEM 6.1 av Forms funktionspaket 1 använde formulärförfattare och utvecklare för att skriva uttryck på fliken Skript i dialogrutan Redigera komponent för att lägga till dynamiskt beteende i adaptiva formulär. Fliken Skript har ersatts av regelredigeraren.
 
 Alla skript och uttryck som du måste ha skrivit på fliken Skript är tillgängliga i regelredigeraren. Du kan inte visa eller redigera dem i den visuella redigeraren, men om du är en del av gruppen för användare med funktionshinder kan du redigera skript i kodredigeraren.
 
@@ -785,9 +785,9 @@ Anropa formulärdatamodelltjänst med hjälp av regel för anpassningsbara formu
 
 I en låneansökan vill du ta reda på om lånesökanden är en befintlig kund eller inte. Baserat på den information som användaren anger, bör fältet för kund-ID visas eller döljas. Du vill också fokusera på fältet för kund-ID om användaren är en befintlig kund. Formuläret för låneansökan innehåller följande komponenter:
 
-* En alternativknapp, **Är du en befintlig Geometrixx-kund?**, som innehåller alternativen Ja och Nej. Värdet för Ja är **0** och Nej är **1**.
+* En alternativknapp, **Är du en befintlig Geometrixx?**, som innehåller alternativen Ja och Nej. Värdet för Ja är **0** och Nej är **1**.
 
-* Ett textfält, **Geometrixx, med kundens ID**, som anger kundens ID.
+* Ett textfält, **Geometrixx kund-ID**, som anger kundens ID.
 
 När du skriver en When-regel på alternativknappen för att implementera det här beteendet, visas regeln på följande sätt i den visuella regelredigeraren.  ![when-rule-example](assets/when-rule-example.png)
 
