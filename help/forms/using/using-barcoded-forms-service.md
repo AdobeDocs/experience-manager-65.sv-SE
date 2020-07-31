@@ -10,7 +10,7 @@ topic-tags: document_services
 discoiquuid: d431c4cb-e4be-41a5-8085-42393d4d468c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
 workflow-type: tm+mt
 source-wordcount: '1042'
 ht-degree: 1%
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 Tjänsten Barcoded Forms extraherar data från elektroniska bilder av streckkoder. Tjänsten accepterar TIFF- och PDF-filer som innehåller en eller flera streckkoder som indata och extraherar streckkodsdata. Streckkodsdata kan formateras på olika sätt, t.ex. XML, avgränsade strängar eller andra anpassade format som skapats med JavaScript.
 
-Tjänsten Barcoded Forms stöder följande **tvådimensionella (2D)** symboler som tillhandahålls som skannade TIFF- eller PDF-dokument:
+Tjänsten Barcoded Forms har stöd för följande **tvådimensionella (2D)** symboler som tillhandahålls som skannade TIFF- eller PDF-dokument:
 
 * PDF417
 * Datamatris
@@ -38,7 +38,7 @@ Tjänsten stöder även följande **endimensionella** symboler som tillhandahål
 * EAN13
 * EAN8
 
-Du kan använda tjänsten Barcoded Forms för att utföra följande åtgärder:
+Du kan använda tjänsten Barcoded Forms för att utföra följande uppgifter:
 
 * Extrahera streckkodsdata från streckkodsbilder (TIFF eller PDF). Data lagras som avgränsad text.
 * Konvertera avgränsade textdata till XML (XDP eller XFDF). XML-data är enklare att tolka än avgränsad text. Data i XDP- eller XFDF-format kan också användas som indata för andra tjänster i AEM Forms.
@@ -126,18 +126,18 @@ När du använder BCF API:er bör du tänka på följande begränsningar:
 
 Tänk också på följande begränsningar när du använder tjänsten Barcoded Forms:
 
-* Tjänsten stöder AcroForms fullt ut och statiska formulär som innehåller 2D-streckkoder som har sparats med Adobe Reader eller Acrobat. Men för 1D-streckkoder kan du antingen förenkla formuläret eller skicka det som skannad PDF eller TIFF-dokument.
+* Tjänsten stöder AcroForms fullt ut och statiska formulär som innehåller 2D-streckkoder som sparas med Adobe Reader eller Acrobat. Men för 1D-streckkoder kan du antingen förenkla formuläret eller skicka det som skannad PDF eller TIFF-dokument.
 * Dynamiska XFA-formulär stöds inte helt. Om du vill avkoda 1D- och 2D-streckkoder på rätt sätt i ett dynamiskt formulär kan du antingen förenkla formuläret eller skicka det som skannad PDF eller TIFF-dokument.
 
 Tjänsten kan dessutom avkoda alla streckkoder som har en symbolik som stöds om ovanstående begränsningar iakttas. Mer information om hur du skapar interaktiva streckkodade formulär finns i [Designer-hjälpen](https://www.adobe.com/go/learn_aemforms_designer_63).
 
 ## Konfigurera egenskaper för tjänsten   {#configureproperties}
 
-Du kan använda **AEMFD Barcoded Forms Service** i AEM Console för att konfigurera egenskaper för den här tjänsten. Standardwebbadressen för AEM-konsolen är `https://[host]:'port'/system/console/configMgr`.
+Du kan använda **AEMFD Barcoded Forms Service** i AEM Console för att konfigurera egenskaper för den här tjänsten. Standardwebbadressen för AEM är `https://[host]:'port'/system/console/configMgr`.
 
 ## Använda tjänsten {#using}
 
-Barcoded Forms Service tillhandahåller följande två API:er:
+Barcoded Forms Service innehåller följande två API:er:
 
 * **[avkodning](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode)**: Avkodar alla streckkoder som är tillgängliga i ett PDF-inmatningsdokument eller en TIFF-bild. Det returnerar ett annat XML-dokument som innehåller data som hämtats från alla streckkoder som finns i indatadokumentet eller bilden.
 
@@ -232,15 +232,15 @@ Följande exempelkod avkodar en streckkod i ett dokument och sparar XML-utdata p
 %>
 ```
 
-### Använda BCF-tjänsten med AEM-arbetsflöden {#using-the-bcf-service-with-aem-workflows}
+### Använda BCF-tjänsten med AEM arbetsflöden {#using-the-bcf-service-with-aem-workflows}
 
-Att köra tjänsten Barcoded Forms från ett arbetsflöde påminner om att köra tjänsten från JSP/Servlet. Den enda skillnaden är när tjänsten körs från JSP/Servlet som dokumentobjektet automatiskt hämtar en instans av ResourceResolver-objektet från objektet ResourceResolverHelper. Den här automatiska mekanismen fungerar inte när koden anropas från ett arbetsflöde.
+Att köra Barcoded Forms-tjänsten från ett arbetsflöde påminner om att köra tjänsten från JSP/Servlet. Den enda skillnaden är när tjänsten körs från JSP/Servlet som dokumentobjektet automatiskt hämtar en instans av ResourceResolver-objektet från objektet ResourceResolverHelper. Den här automatiska mekanismen fungerar inte när koden anropas från ett arbetsflöde.
 
 För ett arbetsflöde skickar du en instans av ResourceResolver-objektet explicit till Document-klasskonstruktorn. Dokumentobjektet använder sedan det angivna ResourceResolver-objektet för att läsa innehåll från databasen.
 
 Följande exempelarbetsflödesprocess avkodar en streckkod i ett dokument och sparar resultatet på disken. Koden skrivs i ECMAScript och dokumentet skickas som arbetsflödets nyttolast:
 
-```
+```javascript
 /*
  * Imports 
  */
