@@ -10,7 +10,7 @@ topic-tags: customization
 discoiquuid: 7566203f-2f80-4ce7-bff9-073d67119f64
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
 workflow-type: tm+mt
 source-wordcount: '1239'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Med användargränssnittet i AEM Forms kan du lägga till metadata i alla formul
 
 Med Forms Portal kan du använda anpassade metadata i formulärlistor. När du skapar anpassade mallar för resurser kan du ändra deras layout och använda anpassade metadata med din CSS-formatuppsättning.
 
-Utför följande steg för att skapa en anpassad mall för olika komponenter i Forms Portal.
+Följ de här stegen för att skapa en anpassad mall för olika Forms Portal-komponenter.
 
 ## Creating a custom template {#creating-a-nbsp-custom-template}
 
@@ -61,9 +61,9 @@ Utför följande steg för att skapa en anpassad mall för olika komponenter i F
 
 ## Exempel {#working-example}
 
-Nedan följer ett exempel på implementering av en anpassad mall där Forms Portal förvärvar en anpassad Geometrixx Gov-kortlayout för komponenten Sök och Lister.
+Nedan följer ett exempel på implementering av en anpassad mall där Forms Portal förvärvar en anpassad Geometrixx-Gov-kortlayout för komponenten Sök och visa.
 
-```xml
+```html
 <div class="__FP_boxes-container __FP_single-color">
     <div class="boxes __FP_boxes __FP_single-color" data-repeatable="true">
  <div class="__FP_boxes-thumbnail">
@@ -83,7 +83,7 @@ Nedan följer ett exempel på implementering av en anpassad mall där Forms Port
 
 ## Tekniska specifikationer för anpassade mallar {#technical-specifications-for-custom-templates}
 
-En anpassad mall för alla Forms Portal-komponenter innehåller repeterbara och icke-repeterbara poster. Repeterbara poster är grundläggande enheter som ska tas upp i förteckningen. Exempel på upprepningsbara poster är komponenterna Sök och Lister, Utkast och överföringar samt Länka.
+En anpassad mall för valfri Forms Portal-komponent innehåller repeterbara och icke-repeterbara poster. Repeterbara poster är grundläggande enheter som ska tas upp i förteckningen. Exempel på upprepningsbara poster är komponenterna Sök och Lister, Utkast och överföringar samt Länka.
 
 Forms Portal innehåller en syntax där platshållare kan visa anpassade metadata/OTB-metadata. Platshållarna fylls i när resultatet av formulär, utkast eller inskickade formulär visas.
 
@@ -97,7 +97,7 @@ Varje platshållare har en exklusiv OTB-metadatauppsättning. Om du vill visa an
 
 ## Inga metadata {#out-of-the-box-metadata}
 
-Olika komponenter i Forms Portal innehåller exklusiva uppsättningar OTB-metadata som du kan använda för att visa en lista.
+Olika Forms Portal-komponenter innehåller exklusiva uppsättningar OTB-metadata som du kan använda för att visa en lista.
 
 ### Komponenten Search &amp; Lister {#search-amp-lister-component}
 
@@ -136,7 +136,7 @@ För rubrikrubriken i stödrastervyn är värdet för rubriken&quot;data-sortKey
 ### Komponenten Utkast och inskickat material {#drafts-amp-submissions-component}
 
 * **Sökväg**: Sökväg till metadatanoden för utkast/överföringar. Använd det med tillägget .HTML som en URL för att öppna ett utkast eller en sändning.
-* **contextPath**: Kontextsökväg för AEM-instansen
+* **contextPath**: AEM kontextsökväg
 * **firstLetter**: Första bokstaven (versaler) i titeln på det adaptiva formuläret, som sparats som utkast eller skickad.
 * **formName**: Titeln på det adaptiva formuläret, som har sparats som utkast eller skickats.
 * **draftID**: ID för det utkast som visas (Använd bara i mallen för avsnittet Utkast).
@@ -144,7 +144,7 @@ För rubrikrubriken i stödrastervyn är värdet för rubriken&quot;data-sortKey
 * **status**: Status för det skickade formuläret. (Använd endast i mallen för avsnittet Skicka).
 * **beskrivning**: Beskrivning av det adaptiva formulär som är kopplat till utkastet eller inlämningen.
 * **diffTime**: Skillnaden mellan aktuell tid och den senaste sparåtgärden för utkastet. Alternativt kan det vara en skillnad mellan aktuell tid och den senaste sändningsåtgärden för överföringen.
-* **iconClass**: CSS-klass som används för att visa den första bokstaven i utkastet/sändningen. Forms Portal innehåller följande klasser som innehåller olika färgade bakgrunder.
+* **iconClass**: CSS-klass som används för att visa den första bokstaven i utkastet/sändningen. Forms Portal innehåller följande klasser med olika färgade bakgrunder.
 * **ägare**: Användare som skapade utkastet/överföringen.
 * **Idag**: Datum då utkastet eller inlämningen skapades i formatet DD:MM:YYY.
 * **TimeNow**: Tid då utkastet eller inlämningen skapades i HH:MM:SS 24-timmarsformat
@@ -172,9 +172,9 @@ För rubrikrubriken i stödrastervyn är värdet för rubriken&quot;data-sortKey
 ## Tips, tricks och kända fel {#tips-tricks-and-known-issues}
 
 1. Använd inte enkla citattecken (&#39;) i någon anpassad mall.
-1. Om du vill ha anpassade metadata sparar du den här egenskapen endast på **jcr:content/metadata** -noden. Om du lagrar den på något annat ställe kan inte Forms Portal visa metadata.
+1. Om du vill ha anpassade metadata sparar du den här egenskapen endast på **jcr:content/metadata** -noden. Om du lagrar det på något annat ställe kan inte Forms Portal visa metadata.
 1. Kontrollera att namnet på anpassade metadata eller befintliga metadata inte innehåller ett kolon (: ). Om det gör det kan du inte visa det i användargränssnittet.
-1. **data-repetable** har ingen betydelse för en **Link** -komponent. Adobe rekommenderar att du undviker att använda den här egenskapen i mallen för en Link-komponent.
+1. **data-repetable** har ingen betydelse för en **Link** -komponent. Adobe rekommenderar att du undviker att använda den här egenskapen i mallen för en länkkomponent.
 
 ## Relaterade artiklar
 
