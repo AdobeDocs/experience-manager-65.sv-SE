@@ -1,6 +1,6 @@
 ---
-title: Acrobat Reader DC-tillägg ServiceJava API Quick Start (SOAP)
-seo-title: Acrobat Reader DC-tillägg ServiceJava API Quick Start (SOAP)
+title: Acrobat Reader DC-tillägg ServiceJava API - snabbstart (SOAP)
+seo-title: Acrobat Reader DC-tillägg ServiceJava API - snabbstart (SOAP)
 description: 'null'
 seo-description: 'null'
 uuid: 8e72ca94-a8c1-43aa-9845-a0da597051c5
@@ -9,7 +9,7 @@ content-type: reference
 topic-tags: develop
 discoiquuid: 31a9bfc6-462d-4535-888f-31026b8fa674
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# Acrobat Reader DC-tillägg ServiceJava API Quick Start (SOAP) {#acrobat-reader-dc-extensions-servicejava-api-quick-start-soap}
+# Acrobat Reader DC-tillägg ServiceJava API - snabbstart (SOAP) {#acrobat-reader-dc-extensions-servicejava-api-quick-start-soap}
 
 Följande snabbstarter är tillgängliga för tjänsten Acrobat Reader DC Extensions.
 
@@ -31,7 +31,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms-API:t med stark typning och ansl
 
 >[!NOTE]
 >
->Snabbstarter i Programmering med AEM Forms baseras på operativsystemet på Forms-servern. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>Snabbstarter i Programmering med AEM Forms baseras på Forms serveroperativsystem. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## Snabbstart (SOAP-läge):Tillämpa användningsrättigheter med Java API {#quick-start-soap-mode-applying-usage-rights-using-the-java-api}
 
@@ -143,7 +143,6 @@ I följande Java-kodexempel tillämpas användarrättigheter på ett PDF-dokumen
  } 
   
   
- 
 ```
 
 ## Snabbstart (SOAP-läge): Ta bort användningsrättigheter från ett PDF-dokument med Java API {#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api}
