@@ -1,11 +1,11 @@
 ---
-title: Hantera metadata för dina digitala resurser i [!DNL Adobe Experience Manager].
-description: Lär dig mer om metadatatyperna och hur [!DNL Adobe Experience Manager Assets] hjälper dig att hantera metadata för resurser så att det blir enklare att kategorisera och ordna resurser. Med [!DNL Experience Manager] kan du automatiskt ordna och bearbeta resurser baserat på deras metadata.
+title: Hantera metadata för era digitala resurser i [!DNL Adobe Experience Manager].
+description: Lär dig mer om metadatatyperna och [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager] hur du automatiskt kan ordna och bearbeta resurser baserat på deras metadata.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '1437'
+source-wordcount: '1412'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Typically, the applications that create digital assets add some metadata to the 
 
 ## Modify metadata in bulk {#modify-metadata-in-bulk}
 
-Adobe Enterprise Manager Assets lets you edit the metadata of multiple assets simultaneously so you can quickly propagate common metadata changes to assets in bulk. You can also edit the metadata for multiple collections in bulk.
+[!DNL Adobe Enterprise Manager Assets] lets you edit the metadata of multiple assets simultaneously so you can quickly propagate common metadata changes to assets in bulk. You can also edit the metadata for multiple collections in bulk.
 
 Use the properties page to perform metadata changes on multiple assets or collections:
 
@@ -48,7 +48,7 @@ To customize the metadata properties page, including adding, modifying, deleting
 >
 >The bulk editing methods work for assets available in a folder or a collection. For the assets that are available across folders or match a common criteria, it is possible to [bulk update the metadata after searching](search-assets.md#metadataupdates).
 
-1. In the Assets user interface, navigate to the location of the assets you want to edit.
+1. In the [!DNL Assets] user interface, navigate to the location of the assets you want to edit.
 1. Select the assets for which you want to edit common properties.
 1. From the toolbar, click **[!UICONTROL Properties]** to open the properties page for the selected assets.
 
@@ -121,7 +121,7 @@ De två grundläggande metadatatyperna är tekniska metadata och beskrivande met
 Tekniska metadata är användbara för program som hanterar digitala resurser och bör inte underhållas manuellt. [!DNL Experience Manager Assets] och andra program bestämmer automatiskt tekniska metadata och metadata kan ändras när resursen ändras. Vilka tekniska metadata som är tillgängliga för en mediefil beror till stor del på filtypen för resursen. Några exempel på tekniska metadata är:
 
 * Storlek på en fil.
-* Bildens mått (höjd och bredd).
+* Dimensioner (höjd och bredd) för en bild.
 * Bithastighet för en ljud- eller videofil.
 * Upplösning (detaljnivå) för en bild.
 
@@ -140,7 +140,7 @@ Det finns olika sätt att bädda in metadata i filer. Ett urval kodningsstandard
 
 ### XMP {#xmp}
 
-[!DNL Extensible Metadata Platform] (XMP) är en öppen standard som används av [!DNL Experience Manager Assets] för all metadatahantering. Standarden erbjuder universell metadatakodning som kan bäddas in i alla filformat. Adobe och andra företag stöder XMP-standarden eftersom den erbjuder en innehållsmodell med mycket innehåll. Användare av XMP-standard och av [!DNL Experience Manager Assets] har en kraftfull plattform att bygga vidare på. For more information, see [XMP](https://www.adobe.com/products/xmp.html).
+[!DNL Extensible Metadata Platform] (XMP) är en öppen standard som används av [!DNL Experience Manager Assets] för all metadatahantering. Standarden erbjuder universell metadatakodning som kan bäddas in i alla filformat. Adobe och andra företag stöder XMP standard eftersom de erbjuder en innehållsmodell med mycket innehåll. Användare av XMP som är standard och av [!DNL Experience Manager Assets] har en kraftfull plattform att bygga vidare på. For more information, see [XMP](https://www.adobe.com/products/xmp.html).
 
 ### ID3 {#id}
 
@@ -160,7 +160,7 @@ Exchangeable image file format (Exif) är det vanligaste metadataformatet som an
 
 En stor begränsning för Exif är att ett fåtal populära bildfilsformat som BMP, GIF och PNG inte har stöd för det.
 
-Metadatafält som definieras av Exif är vanligtvis av teknisk natur och har begränsad användning för beskrivande metadatahantering. Därför erbjuder [!DNL Experience Manager Assets] mappning av Exif-egenskaper till [vanliga metadatamatchningar](metadata-schemas.md) och till [XMP](xmp-writeback.md).
+Metadatafält som definieras av Exif är vanligtvis av teknisk natur och har begränsad användning för beskrivande metadatahantering. Av den anledningen erbjuder [!DNL Experience Manager Assets] mappning av Exif-egenskaper till [vanliga metadatamatchningar](metadata-schemas.md) och till [XMP](xmp-writeback.md).
 
 ### Andra metadata {#other-metadata}
 
@@ -199,7 +199,7 @@ Programspecifika metadata innehåller tekniska och beskrivande metadata. Om du a
 * PDF och PDF/X.
 * Photoshop och psAux - [!DNL Adobe Photoshop].
 
-### Metadata för hantering av digitala rättigheter {#digital-rights-management-metadata}
+### Digital Rights Management metadata {#digital-rights-management-metadata}
 
 * CC - [!DNL Creative Commons].
 * [!DNL XMPRights].
@@ -221,7 +221,7 @@ Programspecifika metadata innehåller tekniska och beskrivande metadata. Om du a
 * PDF och PDF/X - Adobe PDF och tredjepartsprogram.
 * PRISM - [publiceringskrav för branschstandardmetadata](https://www.prismstandard.org).
 * XMP - [!DNL Extensible Metadata Platform].
-* `xmpPG` - XMP-metadata för växlad text.
+* `xmpPG` - XMP metadata för sidindelad text.
 
 ### Multimediaspecifika metadata {#multimedia-specific-metadata}
 
