@@ -3,9 +3,9 @@ title: Referens för metadatamappningar
 description: 'Lär dig mer om standardkonventioner för att beskriva metadata för resurser, inklusive Dublin Core, IPTC och andra metadatamatchningar. '
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '390'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ Följande referens innehåller information om en viss metadataram (i alfabetisk 
 
 ## Dublin Core {#dublin-core}
 
-Dublin Core-metadata innehåller en standardiserad uppsättning konventioner för att beskriva resurser så att de blir lättare att hitta. I Assets beskriver Dublin Core digitala resurser som video, ljud, bilder och dokument.
+Dublin Core-metadata innehåller en standardiserad uppsättning konventioner för att beskriva resurser så att de blir lättare att hitta. Dublin Core [!DNL Assets]beskriver digitala resurser som video, ljud, bilder och dokument.
 
 Den enkla DCMES-uppsättningen (Dublin Core Metadata Element Set) innehåller 15 metadataelement som listas i följande tabell. Varje Dublin Core-element är valfritt och kan upprepas. Du kan lägga till eller ta bort metadata för Dublin Core på samma sätt som du gör för medietypsspecifika metadata.
 
@@ -30,7 +30,7 @@ Förutom DCMES finns det andra metadataelement som skapats av Dublin Core Initia
 | skapare | Den person eller det företag som ansvarar för att skapa innehållet. |
 | date | Datum eller tidsperiod som är associerad med tillgången. |
 | description | Mer information om resursen. |
-| format | Filformat, fysiskt medium eller dimensioner för resursen. Experience Manager använder `dc:format` för att beteckna resursens MIME-typ. |
+| format | Filformat, fysiskt medium eller dimensioner för resursen. [!DNL Experience Manager] används `dc:format` för att beteckna tillgångens MIME-typ. |
 | identifierare | En unik referens till tillgången. |
 | language | Språket för resursen (t.ex. en för engelska). |
 | utgivare | Den person eller det företag som ansvarar för att göra tillgången tillgänglig. |
@@ -45,4 +45,4 @@ Förutom DCMES finns det andra metadataelement som skapats av Dublin Core Initia
 
 IPTC (International Press Telecommunications Council) är ett konsortium av nyhetsbyråer över hela världen - ett av målen är att utveckla och underhålla tekniska standarder. IPTC definierade en uppsättning metadatastandarder för foton som är nästan allmänt accepterade bland fotografer. Dessa metadatastandarder ingick i den bredare standarden IPTC Information Interchange Model (IIM) som skapades på 1990-talet.
 
-Även om IPTC-huvudinformationen till största delen har ersatts av XMP finns det ett IPTC-kärnschema och ett tilläggsschema för XMP. I bildprogram synkroniseras både XMP- och IPTC-egenskaper.
+Även om IPTC-huvudinformationen till största delen har ersatts av XMP finns det ett IPTC-kärnschema och ett tilläggsschema för XMP. I bildprogram synkroniseras både XMP och IPTC-egenskaper.
