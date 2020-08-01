@@ -1,11 +1,11 @@
 ---
-title: Ljuslåda som ditt personliga bildgalleri i Adobe Experience Manager Assets.
-description: Lär dig mer om ljuslådan som ditt personliga bildgalleri i Adobe Experience Manager Assets.
+title: Ljuslåda som ditt personliga bildgalleri i [!DNL Adobe Experience Manager Assets].
+description: Läs om ljuslådan som ditt eget bildgalleri i Adobe Experience Manager Assets].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '240'
 ht-degree: 1%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 1%
 
 Ljuslådan är en särskild typ av samling som ger enkel åtkomst till resurser. Du kan snabbt komma åt Ljuslådan för att lägga till eller ta bort resurser. Det fungerar som ditt personliga bildgalleri.
 
-Om du använder Adobe Experience Manager Assets skapas ljuslådan automatiskt när du loggar in i programmet första gången. Den är exklusiv för din inloggning. Andra användare kan inte komma åt din ljuslåda.
+Om du är [!DNL Adobe Experience Manager Assets] användare skapas ljuslådan automatiskt när du loggar in i programmet första gången. Den är exklusiv för din inloggning. Andra användare kan inte komma åt din ljuslåda.
 
 ## Lägga till resurser i ljuslådan {#adding-assets-to-lightbox}
 
-1. I Assets-användargränssnittet väljer du de resurser som du vill lägga till i ljuslådan.
+1. I [!DNL Assets] användargränssnittet väljer du de resurser som du vill lägga till i ljuslådan.
 1. Dra resurserna till **[!UICONTROL Drop in Lightbox]** zonen. Släpp när släppzonen blir aktiv och etiketten ändras till **[!UICONTROL Drop to Add]**.
 
    ![add_to_lightbox](assets/add_to_lightbox.png)
