@@ -1,11 +1,11 @@
 ---
 title: Hantera sammansatta resurser med referenser och flersidiga resurser i [!DNL Adobe Experience Manager].
-description: Lär dig hur du skapar referenser till digitala resurser från [!DNL Adobe InDesign], [!DNL Adobe Illustrator] och [!DNL Adobe Photoshop]. Använd funktionen för sidvisningsprogram för att visa enskilda underresurssidor för flersidiga filer som PDF-, INDD-, PPT-, PPTX- och AI-filer.
+description: Lär dig hur du skapar referenser till digitala resurser inifrån [!DNL Adobe InDesign], [!DNL Adobe Illustrator], and [!DNL Adobe Photoshop]. Använd funktionen för sidvisningsprogram för att visa enskilda underresurssidor för flersidiga filer som PDF-, INDD-, PPT-, PPTX- och AI-filer.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '1315'
+source-wordcount: '1299'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ Refererade resurser finns redan i [!DNL Experience Manager Assets]. Du kan extra
 
 >[!NOTE]
 >
->Om bilden [!DNL InDesign Server] [!DNL InDesign] är en proxy bäddas förhandsvisningen in i filernas XMP-metadata. I det här fallet krävs inte extrahering av miniatyrer uttryckligen. Om [!DNL InDesign Server] filen inte är proxiderad måste miniatyrbilder extraheras explicit för [!DNL InDesign] filer.
+>Om bilden [!DNL InDesign Server] [!DNL InDesign] är i utkastläge bäddas förhandsvisningen av filerna in i XMP metadata. I det här fallet krävs inte extrahering av miniatyrer uttryckligen. Om [!DNL InDesign Server] filen inte är proxiderad måste miniatyrbilder extraheras explicit för [!DNL InDesign] filer.
 
 ### Skapa referenser genom att dra resurser {#create-references-by-dragging-aem-assets}
 
@@ -131,12 +131,12 @@ Följande alternativ är tillgängliga i verktygsfältet, i den vänstra listen 
 
 ## God praxis och begränsning {#best-practice-limitation-tips}
 
-* Generering av delresurser kan vara mycket resurskrävande för alla Experience Manager-distributioner. Om du genererar delresurser när komplexa resurser överförs lägger du till steget i arbetsflödet DAM-uppdatering av resurser. Om du genererar delresurser on demand skapar du ett separat arbetsflöde för att generera delresurser. Med ett dedikerat arbetsflöde kan du hoppa över de andra stegen i arbetsflödet för DAM-uppdatering av resurser och spara beräkningsresurser.
+* Generering av delresurser kan vara mycket resurskrävande för alla [!DNL Experience Manager] distributioner. Om du genererar delresurser när komplexa resurser överförs lägger du till steget i arbetsflödet DAM-uppdatering av resurser. Om du genererar delresurser on demand skapar du ett separat arbetsflöde för att generera delresurser. Med ett dedikerat arbetsflöde kan du hoppa över de andra stegen i arbetsflödet för DAM-uppdatering av resurser och spara beräkningsresurser.
 
 >[!MORELIKETHIS]
 >
 >* [Använd datorprogrammet Adobe Experience Manager](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html)
 >* [Konfigurera skrivbordsåtgärder i Adobe Experience Manager](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#desktopactions-v2)
 >* [Skapa länkade smarta objekt i Adobe Photoshop](https://helpx.adobe.com/photoshop/using/create-smart-objects.html#create-linked-smart-objects)
->* [Montera bilder i Adobe InDesign](https://helpx.adobe.com/indesign/using/placing-graphics.html)
+>* [Montera grafik i Adobe InDesign](https://helpx.adobe.com/indesign/using/placing-graphics.html)
 
