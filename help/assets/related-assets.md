@@ -3,9 +3,9 @@ title: Relaterade tillgångar
 description: Lär dig hur du relaterar digitala resurser som delar vissa gemensamma attribut. Skapa också källbaserade relationer mellan digitala resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '611'
 ht-degree: 3%
 
 ---
@@ -23,7 +23,7 @@ Med den här funktionen kan du dela en lågupplöst PDF- eller JPG-fil med lever
 
 ## Relatera resurser {#relating-assets}
 
-1. I gränssnittet Experience Manager öppnar du **[!UICONTROL Properties]** sidan för en resurs som du vill relatera.
+1. I [!DNL Experience Manager] gränssnittet öppnar du **[!UICONTROL Properties]** sidan för en resurs som du vill relatera.
 
    ![öppna en tillgångs egenskapssida för att relatera resursen](assets/asset-properties-relate-assets.png)
 
@@ -65,9 +65,9 @@ Med den här funktionen kan du dela en lågupplöst PDF- eller JPG-fil med lever
 
 1. Klicka **[!UICONTROL OK]** för att stänga dialogrutan. Resurserna som du har tagit bort relationer för tas bort från listan över relaterade resurser under **[!UICONTROL Related]** avsnittet.
 
-## Översätter relaterade resurser {#translating-related-assets}
+## Översätta relaterade resurser {#translating-related-assets}
 
-Det är också praktiskt att skapa käll-/härledda relationer mellan resurser med hjälp av funktionen Relaterade resurser i översättningsarbetsflöden. När du kör ett översättningsarbetsflöde på en härledd resurs hämtar automatiskt alla resurser som källfilen refererar till och inkluderar dem för översättning. [!DNL Experience Manager Assets] På så sätt översätts den resurs som källresursen refererar till tillsammans med källresursen och de härledda resurserna. Tänk dig till exempel ett scenario där den engelska språkkopian innehåller en härledd resurs och dess källfil som visas.
+Det är också praktiskt att skapa käll-/härledda relationer mellan resurser med hjälp av funktionen för relaterade resurser i översättningsarbetsflöden. När du kör ett översättningsarbetsflöde på en härledd resurs hämtar automatiskt alla resurser som källfilen refererar till och inkluderar dem för översättning. [!DNL Experience Manager Assets] På så sätt översätts den resurs som källresursen refererar till tillsammans med källresursen och de härledda resurserna. Tänk dig till exempel ett scenario där den engelska språkkopian innehåller en härledd resurs och dess källfil som visas.
 
 ![chlimage_1-281](assets/chlimage_1-281.png)
 
