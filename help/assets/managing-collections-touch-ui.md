@@ -4,17 +4,17 @@ description: Lär dig mer om hur du hanterar samlingar med resurser, som att ska
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '2047'
-ht-degree: 11%
+source-wordcount: '2022'
+ht-degree: 10%
 
 ---
 
 
 # Hantera samlingar {#managing-collections}
 
-En samling är en uppsättning resurser i Adobe Experience Manager Assets. Använd samlingar för att dela resurser mellan användare. Uppsättningen kan vara en statisk samling eller en dynamisk samling som baseras på sökresultat.
+En samling är en uppsättning resurser i [!DNL Adobe Experience Manager Assets]. Använd samlingar för att dela resurser mellan användare. Uppsättningen kan vara en statisk samling eller en dynamisk samling som baseras på sökresultat.
 
 Till skillnad från mappar kan en samling innehålla resurser från olika platser. Du kan dela samlingar med olika användare som har olika behörighetsnivåer, t.ex. visning, redigering och så vidare.
 
@@ -28,7 +28,7 @@ Samlingar är av följande typer, baserat på det sätt som de samlar resurser p
 
 ## Åtkomst till samlingskonsolen {#navigating-the-collections-console}
 
-Du öppnar **[!UICONTROL Collections]** genom att gå till **[!UICONTROL Assets]** > **[!UICONTROL Collections]** i Experience Manager-gränssnittet.
+Öppna **[!UICONTROL Collections]** gränssnittet i [!DNL Experience Manager] gränssnittet genom att gå till **[!UICONTROL Assets]** > **[!UICONTROL Collections]**.
 
 ## Skapa en samling {#creating-a-collection}
 
@@ -52,15 +52,15 @@ Du kan skapa en samling med statiska referenser, t.ex. en samling med referenser
 
    >[!NOTE]
    >
-   >Med Experience Manager Assets kan du skapa granskningsåtgärder för en samling på samma sätt som du skapar granskningsåtgärder för en resursmapp.
+   >[!DNL Experience Manager Assets] I kan du skapa granskningsåtgärder för en samling på samma sätt som du skapar granskningsåtgärder för en resursmapp.
 
-   Om du vill lägga till resurser i samlingen går du till användargränssnittet Resurser. Mer information finns i [Lägga till resurser i en samling](#adding-assets-to-a-collection).
+   Om du vill lägga till resurser i samlingen går du till [!DNL Assets] användargränssnittet. Mer information finns i [Lägga till resurser i en samling](#adding-assets-to-a-collection).
 
 ### Skapa samlingar med dropzone {#create-collections-using-dropzone}
 
-Du kan dra resurser från resursgränssnittet till en samling. Du kan också skapa en kopia av en samling och dra resurserna dit.
+Du kan dra resurser från [!DNL Assets] användargränssnittet till en samling. Du kan också skapa en kopia av en samling och dra resurserna dit.
 
-1. I resursanvändargränssnittet väljer du de resurser som du vill lägga till i en samling.
+1. I [!DNL Assets] användargränssnittet väljer du de resurser som du vill lägga till i en samling.
 1. Dra resurserna till **[!UICONTROL Drop in Collection]** zonen. Alternatively, click **[!UICONTROL To Collection]** from the toolbar.
 
    ![drop_in_collection](assets/drop_in_collection.png)
@@ -78,7 +78,7 @@ En smart samling använder ett sökvillkor för att dynamiskt fylla i resurser. 
 
 Så här skapar du en smart samling:
 
-1. Navigera till användargränssnittet Resurser och klicka på Sök.
+1. Navigera till [!DNL Assets] användargränssnittet och klicka på Sök.
 
 1. Skriv sökordet i rutan Sök och tryck på `Enter`. Öppna filterpanelen och använd ett sökfilter.
 
@@ -108,7 +108,7 @@ Så här skapar du en smart samling:
 
 Du kan lägga till resurser i en samling som innehåller en lista med refererade resurser eller mappar. Smarta samlingar använder en sökfråga för att fylla i resurser. Statiska referenser till resurser och mappar kan därför inte användas för dem.
 
-1. I resursanvändargränssnittet markerar du resursen och klickar på **[!UICONTROL To Collection]** Lägg ![till i samling](assets/do-not-localize/add-to-collection.png) i verktygsfältet.
+1. I [!DNL A]resursanvändargränssnittet markerar du resursen och klickar på **[!UICONTROL To Collection]** Lägg ![till i samling](assets/do-not-localize/add-to-collection.png) i verktygsfältet.
 Du kan också dra resursen till **[!UICONTROL Drop in Collection]** området i gränssnittet. Lägg till resurserna när regionens etikett ändras till **[!UICONTROL Drop to Add]**.
 
 1. På **[!UICONTROL Add To Collection]** sidan väljer du den samling som du vill lägga till resursen i.
@@ -119,9 +119,9 @@ Du kan också dra resursen till **[!UICONTROL Drop in Collection]** området i g
 
 Smarta samlingar skapas genom att en sökning sparas så att du kan ändra deras innehåll genom att ändra sökparametrarna för den [sparade sökningen](#saved-searches).
 
-1. Klicka på sökalternativet ![sökalternativ](assets/do-not-localize/search_icon.png) i verktygsfältet i användargränssnittet Resurser.
+1. I [!DNL Assets] användargränssnittet klickar du på ![sökalternativet](assets/do-not-localize/search_icon.png) i verktygsfältet.
 1. Tryck på returtangenten när markören är i Omnissearch-rutan.
-1. Öppna panelen Filter i gränssnittet Experience Manager.
+1. Öppna panelen Filter i [!DNL Experience Manager] gränssnittet.
 1. Välj den smarta samling du vill ändra i listan **[!UICONTROL Saved Searches]**. På sökpanelen visas de filter som har konfigurerats för den sparade sökningen.
 
    ![select_smart_collection](assets/select_smart_collection.png)
@@ -156,7 +156,7 @@ Du kan redigera metadata för flera samlingar samtidigt. Med den här funktionen
 
    >[!NOTE]
    >
-   >* På [!UICONTROL Properties] sidan kan du ta bort samlingar från listan med samlingar genom att avmarkera dem. I samlingslistan är alla samlingar markerade som standard. Experience Manager uppdaterar inte metadata för de samlingar som du tar bort.
+   >* På [!UICONTROL Properties] sidan kan du ta bort samlingar från listan med samlingar genom att avmarkera dem. I samlingslistan är alla samlingar markerade som standard. [!DNL Experience Manager] uppdaterar inte metadata för de samlingar som du tar bort.
    >* Överst i listan markerar du kryssrutan nära **[!UICONTROL Title]** för att växla mellan att markera samlingarna och rensa listan.
 
 
@@ -175,15 +175,15 @@ Om du vill anpassa [!UICONTROL Properties] metadatasidan, inklusive lägga till,
 
 ## Sök i samlingar {#searching-collections}
 
-Du kan söka efter samlingar från samlingskonsolen. När du söker med nyckelord i sökrutan söker Resurser efter samlingsnamn, metadata och de taggar som har lagts till i samlingarna.
+Du kan söka efter samlingar från samlingskonsolen. När du söker med nyckelord i sökrutan söker [!DNL Assets] efter samlingsnamn, metadata och de taggar som har lagts till i samlingarna.
 
-Om du söker efter samlingar från den översta nivån returneras bara enskilda samlingar i sökresultaten. Resurser eller mappar i samlingarna exkluderas. I alla andra fall (till exempel i en enskild samling eller i en mapphierarki) returneras alla relevanta resurser, mappar och samlingar.
+Om du söker efter samlingar från den översta nivån returneras bara enskilda samlingar i sökresultaten. [!DNL Assets] eller mappar i samlingarna exkluderas. I alla andra fall (till exempel i en enskild samling eller i en mapphierarki) returneras alla relevanta resurser, mappar och samlingar.
 
 ## Sök i samlingar {#searching-within-collections}
 
 Öppna en samling genom att klicka på den i konsolen Samlingar.
 
-I en samling är sökningen i Experience Manager begränsad till resurser (och deras taggar och metadata) i den samling som du visar. När du söker i en mapp returneras alla matchande resurser och underordnade mappar i den aktuella mappen. När du söker i en samling returneras endast matchande resurser, mappar och andra samlingar som är direktmedlemmar i samlingen.
+I en samling är [!DNL Experience Manager] sökningen begränsad till resurser (och deras taggar och metadata) i den samling som du visar. När du söker i en mapp returneras alla matchande resurser och underordnade mappar i den aktuella mappen. När du söker i en samling returneras endast matchande resurser, mappar och andra samlingar som är direktmedlemmar i samlingen.
 
 ## Redigera samlingsinställningar {#editing-collection-settings}
 
@@ -234,7 +234,7 @@ Du kan lägga till en samling i en annan samling och på så sätt skapa en kaps
 
 ## Sparade sökningar {#saved-searches}
 
-I Assets-gränssnittet kan du söka efter eller filtrera resurser baserat på vissa regler, sökvillkor eller anpassade sökfasetter. Om du sparar dem som **[!UICONTROL Saved Searches]** kan du komma åt dem senare från listan **[!UICONTROL Saved Searches]** på panelen Filter. När du skapar en sparad sökning skapas även en smart samling.
+In the [!DNL Assets] user interface, you can search or filter assets based on certain rules, search criteria, or custom search facets. Om du sparar dem som **[!UICONTROL Saved Searches]** kan du komma åt dem senare från listan **[!UICONTROL Saved Searches]** på panelen Filter. När du skapar en sparad sökning skapas även en smart samling.
 
 ![saved_searches_list](assets/saved_searches_list.png)
 
@@ -248,9 +248,9 @@ Att redigera sparade sökningar är detsamma som att redigera smarta samlingar. 
 
 Så här tar du bort sparade sökningar:
 
-1. Klicka på ![sökalternativet](assets/do-not-localize/search_icon.png)i användargränssnittet Resurser.
+1. Klicka på [!DNL Assets] sökalternativet ![i](assets/do-not-localize/search_icon.png)användargränssnittet.
 1. Tryck på returtangenten när markören är i omsökningsfältet.
-1. Öppna panelen Filter i gränssnittet Experience Manager.
+1. Öppna panelen Filter i [!DNL Experience Manager] gränssnittet.
 1. From the **[!UICONTROL Saved Searches]** list, click **[!UICONTROL Delete]** next to the smart collection that you want to delete.
 
    ![select_smart_collection](assets/select_smart_collection.png)
