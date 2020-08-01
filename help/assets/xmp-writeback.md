@@ -1,19 +1,19 @@
 ---
-title: XMP-tillbakaskrivning till återgivningar
-description: Lär dig hur XMP-återskrivningsfunktionen sprider metadataändringar för en resurs till alla eller vissa återgivningar av resursen.
+title: XMP till återgivning
+description: Lär dig hur XMP återskrivningsfunktionen sprider metadataändringar för en resurs till alla eller vissa återgivningar av resursen.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '723'
+source-wordcount: '722'
 ht-degree: 4%
 
 ---
 
 
-# XMP-tillbakaskrivning till återgivningar {#xmp-writeback-to-renditions}
+# XMP till återgivning {#xmp-writeback-to-renditions}
 
-Funktionen för XMP-tillbakaskrivning i [!DNL Adobe Experience Manager Assets] replikerar ändringar i resursens metadata. När du ändrar metadata för en resurs inifrån [!DNL Experience Manager Assets] eller när du överför resursen, lagras ändringarna först i resursnoden i CRXDe. Funktionen för XMP-tillbakaskrivning sprider metadataändringarna till alla eller specifika återgivningar av resursen.
+Funktionen XMP tillbakaskrivning i [!DNL Adobe Experience Manager Assets] replikerar ändringar i metadata för resursen. När du ändrar metadata för en resurs inifrån [!DNL Experience Manager Assets] eller när du överför resursen, lagras ändringarna först i resursnoden i CRXDe. XMP återskrivningsfunktion sprider metadataändringarna till alla eller specifika återgivningar av resursen.
 
 Tänk dig ett scenario där du ändrar egenskapen [!UICONTROL Title] för resursen som har namnet `Classic Leather` på `Nylon`.
 
@@ -25,9 +25,9 @@ I det här fallet [!DNL Experience Manager Assets] sparas ändringarna av **[!UI
 
 Inga metadataändringar sprids dock automatiskt till återgivningarna av en resurs. [!DNL Experience Manager Assets]
 
-Med funktionen XMP-återställning kan du sprida metadataändringarna till alla eller specifika återgivningar av resursen. Ändringarna lagras dock inte under metadatanoden i resurshierarkin. I stället bäddar den här funktionen in ändringarna i de binära filerna för återgivningarna.
+Med funktionen XMP kan du sprida metadataändringarna till alla eller vissa återgivningar av resursen. Ändringarna lagras dock inte under metadatanoden i resurshierarkin. I stället bäddar den här funktionen in ändringarna i de binära filerna för återgivningarna.
 
-## Aktivera XMP-tillbakaskrivning {#enabling-xmp-writeback}
+## Aktivera XMP {#enabling-xmp-writeback}
 
 Om du vill att metadataändringarna ska kunna spridas till återgivningarna av resursen när du överför den ändrar du **[!UICONTROL Adobe CQ DAM Rendition Maker]** konfigurationen i Configuration Manager.
 
@@ -37,11 +37,11 @@ Om du vill att metadataändringarna ska kunna spridas till återgivningarna av r
 
    ![chlimage_1-135](assets/chlimage_1-346.png)
 
-## Aktivera XMP-tillbakaskrivning för specifika återgivningar {#enabling-xmp-writeback-for-specific-renditions}
+## Aktivera XMP återskrivning för specifika återgivningar {#enabling-xmp-writeback-for-specific-renditions}
 
-Om du vill att XMP-återskrivningsfunktionen ska kunna sprida metadataändringar för att välja återgivningar, anger du dessa återgivningar i arbetsflödessteget för XMP-återskrivningsprocessen i [!UICONTROL DAM Metadata WriteBack] arbetsflödet. Som standard konfigureras det här steget med den ursprungliga återgivningen.
+Om du vill att XMP återskrivningsfunktion ska kunna sprida metadataändringar för att välja återgivningar, anger du dessa återgivningar i arbetsflödets steg för XMP återskrivningsprocess i [!UICONTROL DAM Metadata WriteBack] arbetsflödet. Som standard konfigureras det här steget med den ursprungliga återgivningen.
 
-Utför dessa steg för XMP-återskrivningsfunktionen som sprider metadata till återgivningsminiatyrerna 140.100.png och 319.319.png.
+Utför följande steg för XMP återskrivningsfunktion som sprider metadata till återgivningsminiatyrerna 140.100.png och 319.319.png.
 
 1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > i gränssnittet Experience Manager **[!UICONTROL Models]**.
 1. Öppna arbetsflödesmodellen på sidan **[!UICONTROL DAM Metadata Writeback]** Modeller.
@@ -62,21 +62,21 @@ Metadataändringarna sprids till miniatyrbilden för återgivningarna.140.100.pn
 
 >[!NOTE]
 >
->Information om XMP-återskrivningsproblem i 64-bitars Linux finns i [Så här aktiverar du XMP-återskrivningsproblem i 64-bitars RedHat Linux](https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html).
+>För problem med XMP av återskrivningen i 64-bitars Linux, se [Så här aktiverar du XMP återskrivning i 64-bitars RedHat Linux](https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html).
 >
->Information om vilka plattformar som stöds finns i Krav för [återskrivning av XMP-metadata](/help/sites-deploying/technical-requirements.md#requirements-for-aem-assets-xmp-metadata-write-back).
+>Information om vilka plattformar som stöds finns i Krav för [XMP](/help/sites-deploying/technical-requirements.md#requirements-for-aem-assets-xmp-metadata-write-back).
 
-## Filtrera XMP-metadata {#filtering-xmp-metadata}
+## Filtrera XMP metadata {#filtering-xmp-metadata}
 
-[!DNL Experience Manager Assets] har stöd för både blockeringslista och tillåtelselista-filtrering av egenskaper/noder för XMP-metadata som läses från objektbinärfiler och lagras i JCR när resurser hämtas.
+[!DNL Experience Manager Assets] har stöd för både blockeringslista och tillåtelselista-filtrering av egenskaper/noder för XMP metadata som läses från objektbinärfiler och lagras i JCR när resurser hämtas.
 
-Om du filtrerar med blockeringslista kan du importera alla XMP-metadataegenskaper utom de egenskaper som anges för undantag. För resurstyper som INDD-filer som har stora mängder XMP-metadata (till exempel 1 000 noder med 10 000 egenskaper) är namnen på de noder som ska filtreras inte alltid kända i förväg. Om filtrering med hjälp av blockeringslista tillåter ett stort antal resurser med flera XMP-metadata att importeras, kan AEM-distributionen stöta på stabilitetsproblem, till exempel övervakningsköer som stoppats.
+Om du filtrerar med hjälp av blockeringslista kan du importera alla XMP metadataegenskaper utom de egenskaper som anges för undantag. För resurstyper som INDD-filer som har stora mängder XMP metadata (till exempel 1 000 noder med 10 000 egenskaper) är namnen på de noder som ska filtreras inte alltid kända i förväg. Om filtrering med hjälp av blockeringslista tillåter att ett stort antal resurser med flera XMP metadata importeras, kan det uppstå stabilitetsproblem i distributionen, till exempel övervakningsköer som [!DNL Experience Manager] har stängts.
 
-Filtrering av XMP-metadata via tillåtelselista löser problemet genom att du kan definiera XMP-egenskaperna som ska importeras. På så sätt ignoreras alla andra eller okända XMP-egenskaper. För bakåtkompatibilitet kan du lägga till några av dessa egenskaper i filtret som använder blockeringslista.
+Filtrering av XMP metadata via tillåtelselista löser problemet genom att du kan definiera de XMP egenskaper som ska importeras. På så sätt ignoreras alla andra eller okända XMP. För bakåtkompatibilitet kan du lägga till några av dessa egenskaper i filtret som använder blockeringslista.
 
 >[!NOTE]
 >
->Filtrering fungerar bara för egenskaper som härletts från XMP-källor i objektbinärfiler. För egenskaper som härleds från andra källor än XMP, t.ex. EXIF- och IPTC-format, fungerar inte filtreringen. Datumet då resursen skapades sparas till exempel i egenskapen EXIF TIFF `CreateDate` . Experience Manager lagrar det här värdet i ett metadatafält med namnet `exif:DateTimeOriginal`. Eftersom källan inte är en XMP-källa fungerar inte filtrering på den här egenskapen.
+>Filtrering fungerar bara för egenskaper som härletts från XMP källor i objektbinärfiler. För egenskaper som härleds från andra källor än XMP, som EXIF- och IPTC-format, fungerar inte filtreringen. Datumet då resursen skapades sparas till exempel i egenskapen EXIF TIFF `CreateDate` . Experience Manager lagrar det här värdet i ett metadatafält med namnet `exif:DateTimeOriginal`. Eftersom källan inte är en XMP källa fungerar inte filtrering på den här egenskapen.
 
 1. Öppna Configuration Manager genom att gå till `https://[aem_server]:[port]/system/console/configMgr`.
 1. Öppna **[!UICONTROL Adobe CQ DAM XmpFilter]** konfigurationen.
@@ -84,7 +84,7 @@ Filtrering av XMP-metadata via tillåtelselista löser problemet genom att du ka
 
    ![chlimage_1-136](assets/chlimage_1-347.png)
 
-1. Om du vill filtrera bort blockerade XMP-egenskaper efter att du har använt filtrering via tillåtelselista anger du egenskaperna i **[!UICONTROL Blocked XML Names for XMP filtering]** rutan.
+1. Om du vill filtrera bort blockerade XMP efter att ha använt filtrering via tillåtelselista anger du egenskaperna i **[!UICONTROL Blocked XML Names for XMP filtering]** rutan.
 
    >[!NOTE]
    >
