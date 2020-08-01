@@ -1,12 +1,12 @@
 ---
 title: Utbildningsriktlinjer för smarta innehållstjänster
-description: Utbilda Adobe Senseis AI-tjänst för att använda smarta taggar på resurser
+description: Utbilda Adobe Sensei AI-tjänst för att använda smarta taggar på resurser
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '462'
 ht-degree: 7%
 
 ---
@@ -50,9 +50,9 @@ Förbättrade smarta taggar bygger på inlärningsmodeller för bilder och tagga
 
 * Oförmåga att identifiera små skillnader i bilder. Till exempel tunna eller jämna skjortor.
 * Oförmåga att identifiera taggar baserat på små mönster/delar av en bild. Till exempel logotyper på T-shirts.
-* Taggning stöds i de språkområden som Experience Manager stöds i. En lista med språk finns i Versionsinformation för [Smart Content Services](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/smart-content-service-release-notes.html).
+* Taggning stöds i de språkområden som [!DNL Experience Manager] stöds i. En lista med språk finns i Versionsinformation för [Smart Content Services](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/smart-content-service-release-notes.html).
 
-Om du vill söka efter resurser med smarta taggar (vanliga eller förbättrade) använder du Resursmomenten (fulltextsökning). Det finns inget separat sökpredikat för smarta taggar.
+Om du vill söka efter resurser med smarta taggar (vanliga eller förbättrade) använder du [!DNL Assets] Omnissearch (fulltextsökning). Det finns inget separat sökpredikat för smarta taggar.
 
 >[!NOTE]
 >
