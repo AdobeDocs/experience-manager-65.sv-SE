@@ -1,77 +1,77 @@
 ---
-title: Jämför Adobe Experience Manager Assets och Media Library.
-description: Jämför Experience Manager Assets och Media Library och se skillnaderna.
+title: Erbjudande om [!DNL Adobe Experience Manager Assets] Jämförelse och mediebibliotek.
+description: Jämför [!DNL Experience Manager Assets] och visa skillnaderna i mediebibliotek.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '594'
 ht-degree: 1%
 
 ---
 
 
-# Experience Manager Assets jämfört med Experience Manager Media Library {#aem-assets-vs-aem-medialibrary}
+# [!DNL Experience Manager Assets] kontra [!DNL Experience Manager] mediebibliotek {#aem-assets-vs-aem-medialibrary}
 
-Adobe Experience Manager Assets är en viktig del av Experience Manager-plattformen. Denna smidiga integrering ses som en stor fördel med Experience Manager och säkerställer enhetlighet i innehållshanteringen och hög produktivitet för innehållsförfattare.
+[!DNL Adobe Experience Manager Assets] är en viktig del av [!DNL Experience Manager] plattformen. Denna smidiga integrering ses som en stor fördel i [!DNL Experience Manager] och säkerställer enhetlighet i innehållshanteringen och hög produktivitet för skribenter.
 
 ## Vanliga frågor {#frequently-asked-questions}
 
-### Vad är Assets? {#what-is-aem-assets}
+### Vad är [!DNL Assets]? {#what-is-aem-assets}
 
-Assets är en funktion i Experience Manager som gör att användare kan hantera sina digitala resurser (bilder, videor, dokument och ljudklipp) i en webbaserad databas. Materialet innehåller metadata-support, renderingar, sökaren och administrationsgränssnittet.
+[!DNL Assets] är en funktion i som gör [!DNL Experience Manager] att användare kan hantera sina digitala resurser (bilder, videoklipp, dokument och ljudklipp) i en webbaserad databas. [!DNL Assets] innehåller metadata-support, renderingar, sökaren och administrationsgränssnittet.
 
-### Vad är Experience Manager Media Library? {#what-is-the-aem-media-library}
+### Vad är [!DNL Experience Manager] mediebiblioteket? {#what-is-the-aem-media-library}
 
-Experience Manager Media Library är en utsedd del av Experience Manager WCM-innehållslagringsplatsen där bilder och andra delade resurser lagras. Mediebiblioteket innehåller grundläggande funktioner för hantering av digitala resurser för WCM.
+Mediebiblioteket [!DNL Experience Manager] är en del av [!DNL Experience Manager] WCM-innehållslagringsplatsen där bilder och andra delade resurser lagras. Mediebiblioteket innehåller grundläggande funktioner för hantering av digitala resurser för WCM.
 
-### Vad får jag från Assets som inte ingår i WCM? {#what-do-i-get-from-aem-assets-that-is-not-part-of-aem-wcm}
+### Vad får jag av [!DNL Assets] det som inte ingår i WCM? {#what-do-i-get-from-aem-assets-that-is-not-part-of-aem-wcm}
 
-Unika funktioner som bara är tillgängliga för kunder av Assets är:
+Unika funktioner som bara är tillgängliga för kunder av [!DNL Assets] är:
 
 * möjlighet att extrahera och redigera andra metadata än titel, taggar och beskrivning.
-* Resursadministratören som är tillgänglig från välkomstskärmen.
+* administratörer som finns på välkomstskärmen [!DNL Assets] .
 * alla arbetsflödessteg som rör hantering av digitala resurser, t.ex. hämtning, borttagning av resurser, hantering av underresurser, extrahering av metadata.
 * bibliotek inklusive `dam` i paketutrymmet.
 
-Dessa funktioner kräver en giltig licens för Assets.
+Funktionerna kräver en giltig licens för [!DNL Assets].
 
-### Är resurser tillgängliga som ett separat paket? {#is-aem-assets-available-as-a-separate-package}
+### Finns [!DNL Assets] det som separat paket? {#is-aem-assets-available-as-a-separate-package}
 
-Nej. För att underlätta installation och driftsättning levereras alla Experience Manager-program och tillägg i ett enda paket med alla funktioner inkluderade. Detta innebär inte att du har behörighet att använda alla funktioner i paketet.
+Nej. För att underlätta installation och driftsättning levereras alla [!DNL Experience Manager] program och tillägg i ett och samma paket med alla funktioner inkluderade. Detta innebär inte att du har behörighet att använda alla funktioner i paketet.
 
-### Jag vill redigera metadata för digitala resurser. Behöver jag Assets? {#i-want-to-edit-metadata-of-digital-assets-do-i-need-aem-assets}
+### Jag vill redigera metadata för digitala resurser. Behöver jag [!DNL Assets]? {#i-want-to-edit-metadata-of-digital-assets-do-i-need-aem-assets}
 
-Om du planerar att redigera andra metadata än titel, beskrivning och taggar måste du licensiera Assets.
+Om du planerar att redigera andra metadata än titel, beskrivning och taggar måste du licensiera [!DNL Assets].
 
-### Jag vill använda kategoripredikatet på min webbplats. Behöver jag Assets? {#i-want-to-use-the-category-predicate-on-my-website-do-i-need-aem-assets}
+### Jag vill använda kategoripredikatet på min webbplats. Behöver jag [!DNL Assets]? {#i-want-to-use-the-category-predicate-on-my-website-do-i-need-aem-assets}
 
-Ja, kategoripredikatet är en del av Assets och kräver en Assets-licens.
+Ja, kategoripredikatet är en del av [!DNL Assets] och kräver en [!DNL Assets] licens.
 
-### Jag vill automatiskt ändra storlek på bilder vid import. Behöver jag Assets? {#i-want-to-automatically-resize-images-upon-import-do-i-need-aem-assets}
+### Jag vill automatiskt ändra storlek på bilder vid import. Behöver jag [!DNL Assets]? {#i-want-to-automatically-resize-images-upon-import-do-i-need-aem-assets}
 
-Nej. Storleksändring och automatisk arbetsflödesdriven omvandling av statiska bilder samt möjligheten att hantera återgivningar ingår i Experience Manager Media Library. Dessa funktioner kräver ingen Assets-licens.
+Nej. Storleksändring och automatisk arbetsflödesdriven omvandling av statiska bilder samt möjligheten att hantera återgivningar ingår i [!DNL Experience Manager] mediebiblioteket. Dessa funktioner kräver ingen [!DNL Assets] licens.
 
-### Jag vill ändra storlek på bilder med en anpassad bildkomponent. Behöver jag Assets? {#i-want-to-resize-images-using-a-customized-image-component-do-i-need-aem-assets}
+### Jag vill ändra storlek på bilder med en anpassad bildkomponent. Behöver jag [!DNL Assets]? {#i-want-to-resize-images-using-a-customized-image-component-do-i-need-aem-assets}
 
-Bildkomponenten är en del av WCM. Det grafikbibliotek som används av bildkomponenten (men även av Assets) är en del av Experience Manager-plattformen och kräver ingen Assets-licens.
+Bildkomponenten är en del av WCM. Grafikbiblioteket som används av bildkomponenten (men även av [!DNL Assets]) är en del av [!DNL Experience Manager] plattformen och kräver ingen [!DNL Assets] licens.
 
-### Hur kan jag hindra mina användare från att använda Assets om jag inte har licensierat Assets? {#how-can-i-prevent-my-users-from-using-aem-assets-if-i-did-not-license-aem-assets}
+### Hur förhindrar jag mina användare från att använda [!DNL Assets] om jag inte har licens [!DNL Assets]? {#how-can-i-prevent-my-users-from-using-aem-assets-if-i-did-not-license-aem-assets}
 
-Du kan ta bort alla resursspecifika arbetsflöden, komponenter, taxonomier, alternativ och Assets-administratören från Experience Manager. På så sätt förhindras användarna från att oavsiktligt använda Assets-funktioner som du inte har licensierat.
+Du kan ta bort alla [!DNL Assets]specifika arbetsflöden, komponenter, taxonomier, alternativ och [!DNL Assets] administratören från [!DNL Experience Manager]. På så sätt förhindrar du att användarna oavsiktligt använder [!DNL Assets] funktioner som du inte har licensierat.
 
 ### Jag vill lägga till bilder på en sida och vill beskära och ändra storlek på dessa bilder. Behöver jag Assets? {#i-want-to-add-images-to-a-page-and-want-to-crop-and-resize-these-images-do-i-need-aem-assets}
 
-I det här fallet behöver du inte köpa Assets, inte ens mediebiblioteket behöver använda bilder på en webbplats eftersom den smarta bildkomponenten tillåter att bilder överförs direkt till sidan.
+I det här fallet behöver du inte köpa [!DNL Assets]även om mediebiblioteket inte behöver använda bilder på en webbplats eftersom den smarta bildkomponenten tillåter att bilder överförs direkt till sidan.
 
-### En detaljerad lista över funktioner som är tillgängliga i Assets vs Media Library {#listoffeatures}
+### En detaljerad lista över funktioner i [!DNL Assets] och mediebibliotek {#listoffeatures}
 
 **Experience Manager Assets**
 
 * Samlingar och ljusbord
 * Avancerade metadataegenskaper och hantering
 * Adobe Asset Link (anslut till Creative Cloud for enterprise)
-* Experience Manager-datorprogram
+* [!DNL Experience Manager] datorprogram
 * Bearbeta profiler
 * [!DNL Adobe InDesign Server] integration
 * Resursmallar och katalogproduktionsramverk
@@ -79,7 +79,7 @@ I det här fallet behöver du inte köpa Assets, inte ens mediebiblioteket behö
 * Hantering av flerspråkiga resurser
 * PIM-integrering
 * Rättighetshantering
-* Stöd för Camera RAW
+* Camera Raw stöd
 * Hantering och konfiguration av sökansikten
 * Färdiga DAM-arbetsflöden (till exempel fotografering)
 * Resursrapportering och -analys som kallas insikter
