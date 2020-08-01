@@ -3,9 +3,9 @@ title: Lägg till vattenstämpel i era digitala resurser.
 description: Lär dig hur du använder funktionen Vattenstämpel för att lägga till en digital vattenstämpel till resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5035d3457187f4d5fe5c2af255a1a886df7291b4
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '226'
 ht-degree: 0%
 
 ---
@@ -39,4 +39,4 @@ Om du vill kunna använda vattenstämpel på resurser lägger du till vattenstä
 1. Save the **[!UICONTROL DAM Update Asset]** workflow with the watermark step.
 1. Ladda upp en exempelresurs från [!DNL Assets] användargränssnittet. Vattenstämpeln visas med teckensnittsstorlek, färg o.s.v. på den plats som du konfigurerade i ovanstående steg.
 
-Om du vill skapa vattenstämplar i PDF-dokument med programkod eller med dynamisk information bör du överväga att använda [AEM Document Services](/help/forms/using/overview-aem-document-services.md) .
+Om du vill skapa vattenstämplar i PDF-dokument med programkod eller med dynamisk information bör du överväga att använda [Experience Manager Document Services](/help/forms/using/overview-aem-document-services.md) .
