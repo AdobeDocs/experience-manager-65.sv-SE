@@ -3,9 +3,9 @@ title: Konfigurera resurstaggning med Smart Content Service.
 description: Lär dig hur du konfigurerar smart taggning och förbättrad smart taggning [!DNL Adobe Experience Manager]med hjälp av Smart Content Service.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '931'
+source-wordcount: '932'
 ht-degree: 54%
 
 ---
@@ -33,7 +33,7 @@ Innan du kan använda tjänsten Smart Content måste du göra följande för att
 <!-- TBD: This link will update soon after the new articles goes live on docs.adobe.com. Change it when new URL is available.
 -->
 
-Om du vill aktivera förbättrade smarta taggar installerar du förutom ovanstående även det senaste [AEM-Service Pack](https://helpx.adobe.com/experience-manager/aem-releases-updates.html).
+Om du vill aktivera förbättrade smarta taggar installerar du förutom ovanstående även det senaste [Experience Manager-Service Pack](https://helpx.adobe.com/experience-manager/aem-releases-updates.html).
 
 ## Hämta ett offentligt certifikat {#obtain-public-certificate}
 
@@ -94,7 +94,7 @@ Om du vill använda API:er för smarta innehållstjänster skapar du en integrer
 
 ## Konfigurera Smart Content Service {#configure-smart-content-service}
 
-Om du vill konfigurera integreringen använder du nyckelfälten Teknisk konto-ID, Organisations-ID, Klienthemlighet, Auktoriseringsserver och API från Adobe Developer Console-integreringen. Creating a Smart Tags cloud configuration allows authentication of API requests from the [!DNL Experience Manager] deployment.
+Om du vill konfigurera integreringen använder du nyckelfälten Teknisk konto-ID, Organisations-ID, Klienthemlighet, Auktoriseringsserver och API från integreringen i Adobe Developer Console. Creating a Smart Tags cloud configuration allows authentication of API requests from the [!DNL Experience Manager] deployment.
 
 1. In [!DNL Experience Manager], navigate to **[!UICONTROL Tools]** > **[!UICONTROL Cloud Service]** > **[!UICONTROL Legacy Cloud Services]** to open the [!UICONTROL Cloud Services] console.
 1. Öppna konfigurationen som skapats ovan under **[!UICONTROL Assets Smart Tags]**. Klicka på **[!UICONTROL Edit]** på tjänstinställningssidan.
