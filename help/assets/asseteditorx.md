@@ -3,9 +3,9 @@ title: Utöka resursredigeraren
 description: Lär dig hur du utökar funktionerna i Resursredigeraren med hjälp av anpassade komponenter.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '695'
+source-wordcount: '688'
 ht-degree: 13%
 
 ---
@@ -17,7 +17,7 @@ Resursredigeraren är den sida som öppnas när användaren klickar på en resur
 
 Konfiguration av redigeraren med de fördefinierade redigeringskomponenterna beskrivs i [Skapa och konfigurera en resursredigeringssida](assets-finder-editor.md#creating-and-configuring-an-asset-editor-page).
 
-Förutom att använda befintliga redigeringskomponenter kan Adobe Experience Manager-utvecklare även skapa egna komponenter.
+Förutom att använda befintliga redigeringskomponenter kan utvecklare också [!DNL Adobe Experience Manager] skapa egna komponenter.
 
 ## Skapa en resursredigeringsmall {#creating-an-asset-editor-template}
 
@@ -29,9 +29,9 @@ Följande exempelsidor finns i Geometrixx:
 
 ### Konfigurera Clientlib {#configuring-clientlib}
 
-Resurskomponenter använder ett tillägg till klientlib för WCM-redigering. Klientlibs läses vanligtvis in i `init.jsp`.
+[!DNL Assets] -komponenter använder ett tillägg till WCM-klienten för redigering. Klientlibs läses vanligtvis in i `init.jsp`.
 
-Jämfört med standardinläsningen av klientlib (i kärnan `init.jsp`) måste en resursmall ha följande:
+Jämfört med standardinläsningen av klientlib (i kärnan `init.jsp`) måste en [!DNL Assets] mall ha följande:
 
 * Mallen måste innehålla `cq.dam.edit` clientlib (i stället för `cq.wcm.edit`).
 
@@ -41,23 +41,23 @@ I de flesta fall bör kopieringen av det befintliga exemplet `init.jsp` (`/apps/
 
 ### Konfigurera JS-åtgärder {#configuring-js-actions}
 
-Vissa Assets-komponenter kräver JS-funktioner som definieras i `component.js`. Kopiera den här filen till komponentkatalogen och länka den.
+Vissa av [!DNL Assets] komponenterna kräver JS-funktioner som definieras i `component.js`. Kopiera den här filen till komponentkatalogen och länka den.
 
 ```javascript
 <script type="text/javascript" src="<%= component.getPath() %>/component.js"></script>
 ```
 
-Exemplet läser in den här javascript-källan i `head.jsp`(`/apps/geometrixx/components/asseteditor/head.jsp`).
+Exemplet läser in den här JavaScript-källan i `head.jsp`(`/apps/geometrixx/components/asseteditor/head.jsp`).
 
 ### Ytterligare formatmallar {#additional-style-sheets}
 
-Vissa Assets-komponenter använder widgetbiblioteket. För att kunna återges korrekt i innehållskontexten måste ytterligare en formatmall läsas in. Kodåtgärdskomponenten kräver en till.
+Vissa komponenter använder widgetbiblioteket [!DNL Assets] . För att kunna återges korrekt i innehållskontexten måste ytterligare en formatmall läsas in. Kodåtgärdskomponenten kräver en till.
 
 ```css
 <link href="/etc/designs/geometrixx/ui.widgets.css" rel="stylesheet" type="text/css">
 ```
 
-### Geometrixx-formatmall {#geometrixx-style-sheet}
+### Geometrixx formatmall {#geometrixx-style-sheet}
 
 Komponenterna för exempelsidan kräver att alla väljare börjar med `.asseteditor` av `static.css` (`/etc/designs/geometrixx/static.css`). Bästa praxis: Kopiera alla `.asseteditor` väljare till formatmallen och justera reglerna efter behov.
 
