@@ -5,9 +5,9 @@ audience: end-user
 user-guide-title: Användarhandbok för Experience Manager 6.5 Assets
 user-guide-description: Create, manage, deliver, and optimize digital assets.
 translation-type: tm+mt
-source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '630'
 ht-degree: 39%
 
 ---
@@ -15,22 +15,22 @@ ht-degree: 39%
 
 # Användarhandbok för Experience Manager 6.5 Assets {#assets}
 
-+ [[!DNL Assets] user guide](home.md)
-+ [Versionsinformation om AEM 6.5 Assets](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/assets.html)
++ [[!DNL Assets] användarhandbok](home.md)
++ [Versionsinformation om Experience Manager 6.5 Assets](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/assets.html)
 + [Om DAM](assets.md)
 + [Metodtips för resurser](best-practices-for-assets.md)
-+ Använd AEM Assets {#using}
-   + [AEM Assets hemsida](assets-home-page.md)
-   + [Söka efter resurser i AEM](search-assets.md)
++ Använd Experience Manager Assets {#using}
+   + [Assets home page experience](assets-home-page.md)
+   + [Söka efter digitala resurser](search-assets.md)
    + [Flerspråkiga resurser](multilingual-assets.md)
-   + [Använda [!DNL Adobe Stock] resurser i AEM Assets](aem-assets-adobe-stock.md)
+   + [Använda [!DNL Adobe Stock] resurser i resurser](aem-assets-adobe-stock.md)
    + [Förhandsgranska 3D-resurser](previewing-3d-assets.md)
    + [Granska resurser i mappar och samlingar](bulk-approval.md)
    + [Aktivitetsström på tidslinjen](activity-stream.md)
    + [Bearbeta resurser](assets-workflow.md)
    + [Lägg till bildscheman](image-maps.md)
    + [Återanvända resurser med MSM](reuse-assets-using-msm.md)
-   + [Kopplade resurser med AEM Sites](use-assets-across-connected-assets-instances.md)
+   + [Anslutna resurser med platser](use-assets-across-connected-assets-instances.md)
 + Dynamic Media{#dynamic}
    + [Dynamic Media-nyhetsbrev från Experience League](dynamic-media-newsletter.md)
    + [Installera Dynamic Media](administering-dynamic-media.md)
@@ -76,20 +76,20 @@ ht-degree: 39%
    + [Installerar funktionspaket 18912 för migrering av gruppresurser](bulk-ingest-migrate.md)
    + [Arbeta med väljare](working-with-selectors.md)
 + Utöka resurser {#extending}
-   + [Anpassa och utöka AEM Assets](extending-assets.md)
+   + [Anpassa och utöka resurser](extending-assets.md)
    + [Bearbeta resurser med mediehanterare och arbetsflöden](media-handlers.md)
    + [Utöka sökfunktionen](searchx.md)
-   + [Installera och [!DNL ImageMagick] konfigurera för AEM Assets](best-practices-for-imagemagick.md)
+   + [Installera och [!DNL ImageMagick] konfigurera för att arbeta med resurser](best-practices-for-imagemagick.md)
    + [Integrera resurser med aktivitetsströmmen](extending-activity-stream.md)
    + [Utöka resursredigeraren](asseteditorx.md)
    + [HTTP API för Assets](mac-api-assets.md)
-   + [Stöd för innehållsfragment i AEM Assets HTTP API](assets-api-content-fragments.md)
+   + [Content Fragments support in Assets HTTP API](assets-api-content-fragments.md)
    + [Proxyutveckling för resurser](proxy.md)
 + Administrera resurser {#administer}
    + [Filformat som stöds](assets-formats.md)
    + [Söka efter fasetter](search-facets.md)
    + [Hantera metadata för resurser](metadata.md)
-   + [XMP-tillbakaskrivning till återgivningar](xmp-writeback.md)
+   + [XMP till återgivning](xmp-writeback.md)
    + [Resurslänkdelning](link-sharing.md)
    + [Materialrapporter](asset-reports.md)
    + [Förbättrade smarta taggar](enhanced-smart-tags.md)
@@ -104,17 +104,17 @@ ht-degree: 39%
    + [Guide för resursmigrering](assets-migration-guide.md)
    + [XMP-metadata](xmp.md)
    + [Resurser för nätverksaspekter](assets-network-considerations.md)
-   + [AEM Assets och AEM MediaLibrary](medialibrary.md)
+   + [Resurser och MediaLibrary](medialibrary.md)
    + [Använd PDF-rastrering](aem-pdf-rasterizer.md)
    + [Konfigurera överföringsbegränsningar](configuring-asset-upload-restrictions.md)
-   + [Bästa praxis för integrering av AEM och Creative Cloud](aem-cc-integration-best-practices.md)
+   + [Integration mellan Experience Manager och Creative Cloud](aem-cc-integration-best-practices.md)
    + [Integrera med InDesign Server](indesign.md)
    + [Metadataprofiler](metadata-profiles.md)
-   + [Hantering av digitala rättigheter i resurser](drm.md)
+   + [Digital Rights Management i tillgångar](drm.md)
    + [Använd demopaket för resursinsikter](touch-ui-using-demo-package-for-asset-insights.md)
    + [Bästa metoder för att använda filformat](assets-file-format-best-practices.md)
    + [Metodtips för att övervaka resurser](assets-monitoring-best-practices.md)
-   + [Stöd för Camera Raw](camera-raw.md)
+   + [Camera Raw stöd](camera-raw.md)
    + [Identifiera MIME-typ av resurser med Apache Tika](detect-asset-mime-type-with-tika.md)
    + [Konverteringsbibliotek för bildbehandling](imaging-transcoding-library.md)
    + [Stöd för IPTC-metadata](iptc-support.md)
@@ -127,7 +127,7 @@ ht-degree: 39%
    + [Metadataschema för mapp](folder-metadata-schema.md)
    + [Hantera smarta taggar](managing-smart-tags.md)
 + Varumärkesportal {#brandportal}
-   + [Konfigurera AEM Assets med varumärkesportalen](configure-aem-assets-with-brand-portal.md)
+   + [Konfigurera Assets med varumärkesportalen](configure-aem-assets-with-brand-portal.md)
    + [Publicera resurser på varumärkesportalen](brand-portal-publish-assets.md)
    + [Publicera mappar på varumärkesportalen](brand-portal-publish-folder.md)
    + [Publicera samlingar på varumärkesportalen](brand-portal-publish-collection.md)
@@ -151,7 +151,7 @@ ht-degree: 39%
    + [Hantera videoresurser](managing-video-assets.md)
    + [Skapa översättningsprojekt](translation-projects.md)
    + [Förbered resurser för översättning](preparing-assets-for-translation.md)
-   + [Hämta resurser från AEM](download-assets-from-aem.md)
+   + [Hämta resurser från Experience Manager](download-assets-from-aem.md)
    + [Asynkrona jobb](asynchronous-jobs.md)
    + [Ljuslåda](touch-ui-light-box.md)
    + [Resursinsikter](touch-ui-asset-insights.md)
