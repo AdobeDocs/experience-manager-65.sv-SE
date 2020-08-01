@@ -1,11 +1,11 @@
 ---
-title: Hantera metadata för många resurser och samlingar i Adobe Enterprise Manager.
+title: Hantera metadata för många resurser och samlingar i [!DNL Adobe Enterprise Manager].
 description: Redigera metadata för många resurser och samlingar samtidigt för att snabbt sprida vanliga metadataändringar.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '475'
+source-wordcount: '467'
 ht-degree: 12%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 12%
 
 # Hantera resurser och samlingar {#managing-multiple-assets-and-collections}
 
-Med Adobe Enterprise Manager Assets kan du redigera metadata för flera resurser samtidigt så att du snabbt kan sprida vanliga metadataändringar till flera resurser samtidigt. Du kan också redigera metadata för flera samlingar samtidigt.
+[!DNL Adobe Enterprise Manager Assets] Med kan du redigera metadata för flera resurser samtidigt så att du snabbt kan sprida vanliga metadataändringar till resurser i grupp. Du kan också redigera metadata för flera samlingar samtidigt.
 
 Använd egenskapssidan för att utföra metadataändringar på flera resurser eller samlingar:
 
@@ -28,7 +28,7 @@ Om du vill anpassa sidan med metadataegenskaper, inklusive lägga till, ändra e
 
 ## Redigera metadataegenskaper för flera resurser {#editing-metadata-properties-of-multiple-assets}
 
-1. Navigera till platsen för de resurser som du vill redigera i användargränssnittet Resurser.
+1. Navigera till platsen för de resurser som du vill redigera i [!DNL Assets] användargränssnittet.
 1. Markera de resurser som du vill redigera gemensamma egenskaper för.
 1. Klicka i verktygsfältet **[!UICONTROL Properties]** för att öppna egenskapssidan för de valda resurserna.
 
