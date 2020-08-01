@@ -1,21 +1,21 @@
 ---
-title: Anpassa och utöka Adobe Experience Manager Assets
+title: Anpassa och utöka [!DNL Adobe Experience Manager Assets].
 description: Lär dig hur du kan anpassa och utöka Resursresurs- och Resursredigeraren, som ger användarna ett särskilt skräddarsytt gränssnitt och en uppsättning funktioner.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: '253'
 ht-degree: 0%
 
 ---
 
 
-# Anpassa och utöka resurser {#customizing-and-extending-assets}
+# Anpassa och utöka [!DNL Assets] {#customizing-and-extending-assets}
 
-Resursredigeraren är den primära åtkomstpunkten som användare av en Adobe Enterprise Manager-webbplats kommer att använda för att hitta, visa och ändra digitala resurser i din databas.
+Resursredigeraren är den primära åtkomstpunkten som användare på en Adobe Enterprise Manager-webbplats kommer att använda för att hitta, visa och ändra digitala resurser i din databas.
 
-Som Experience Manager-utvecklare kan ni anpassa och utöka resursredigeraren på flera olika sätt och presentera användarna med ett särskilt skräddarsytt gränssnitt och en uppsättning funktioner.
+Som [!DNL Experience Manager] utvecklare kan du anpassa och utöka resursredigeraren på flera olika sätt och ge användarna ett särskilt skräddarsytt gränssnitt och en uppsättning funktioner.
 
 Följande funktionalitetsaspekter kan anpassas eller förbättras:
 
@@ -36,6 +36,6 @@ Följande aspekter av utseendet och känslan i resursredigeraren kan anpassas:
 
 ## Anpassa återgivningar {#customizing-renditions}
 
-I Experience Manager Assets-terminologi är en återgivning den form i vilken en resurs presenteras. I allmänhet kan en viss resurs ha flera renderingar. Fullfärgsbilder kan till exempel ha en återgivning i sin ursprungliga storlek, en annan i en nedskalad storlek och en annan som både är nedskalad och konverterad till gråskala.
+I [!DNL Experience Manager Assets] terminologi är en återgivning den form i vilken en resurs presenteras. I allmänhet kan en viss resurs ha flera renderingar. Fullfärgsbilder kan till exempel ha en återgivning i sin ursprungliga storlek, en annan i en nedskalad storlek och en annan som både är nedskalad och konverterad till gråskala.
 
 De återgivningar som en viss resurs är tillgänglig i kan anpassas och nya återgivningar skapas.
