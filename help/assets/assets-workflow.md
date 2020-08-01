@@ -3,9 +3,9 @@ title: Bearbeta material för att genomföra affärsprocesser, utföra revisione
 description: Resursbearbetning för att konvertera format, skapa renderingar, hantera resurser, validera resurser och köra arbetsflöden.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '949'
+source-wordcount: '948'
 ht-degree: 3%
 
 ---
@@ -66,7 +66,7 @@ Så här använder du ett arbetsflöde för en resurs:
 
 ## Tillämpa ett arbetsflöde på flera resurser {#applying-a-workflow-to-multiple-assets}
 
-1. I resurskonsolen navigerar du till platsen för de resurser som du vill starta ett arbetsflöde för och väljer resurser. Välj **[!UICONTROL Timeline]** på menyn för att visa tidslinjen.
+1. Navigera från [!DNL Assets] konsolen till platsen för de resurser som du vill starta ett arbetsflöde för och markera resurserna. Välj **[!UICONTROL Timeline]** på menyn för att visa tidslinjen.
 
    ![screen_shot_2019-03-06at123325pm](assets/chlimage_1-136.png)
 
