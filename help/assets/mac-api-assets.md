@@ -1,26 +1,26 @@
 ---
-title: Resurser för HTTP API i [!DNL Adobe Experience Manager].
+title: '[!DNL Assets] HTTP API in [!DNL Adobe Experience Manager].'
 description: Skapa, läsa, uppdatera, ta bort, hantera digitala resurser med HTTP API i [!DNL Adobe Experience Manager Assets].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f29eeb54c115514947a11bbc8a9e9e7df7cd082b
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '1571'
+source-wordcount: '1567'
 ht-degree: 0%
 
 ---
 
 
-# HTTP API för Assets {#assets-http-api}
+# [!DNL Assets] HTTP-API {#assets-http-api}
 
 ## Översikt {#overview}
 
-Med Assets HTTP API kan du skapa/läsa/uppdatera/ta bort (CRUD)-åtgärder för digitala resurser, inklusive metadata, återgivningar och kommentarer, samt strukturerat innehåll med hjälp av [!DNL Experience Manager] innehållsfragment. Den exponeras vid `/api/assets` och implementeras som REST API. Det innehåller [stöd för innehållsfragment](/help/assets/assets-api-content-fragments.md).
+Med [!DNL Assets] HTTP API kan du skapa/läsa/uppdatera/ta bort (CRUD)-åtgärder för digitala resurser, inklusive metadata, återgivningar och kommentarer, samt strukturerat innehåll med hjälp av [!DNL Experience Manager] innehållsfragment. Den exponeras vid `/api/assets` och implementeras som REST API. Det innehåller [stöd för innehållsfragment](/help/assets/assets-api-content-fragments.md).
 
 Så här kommer du åt API:
 
 1. Öppna API-tjänstdokumentet på `https://[hostname]:[port]/api.json`.
-1. Följ länkarna Resurstjänster till `https://[hostname]:[server]/api/assets.json`.
+1. Följ radavståndet för [!DNL Assets] tjänsten `https://[hostname]:[server]/api/assets.json`.
 
 API-svaret är en JSON-fil för vissa MIME-typer och en svarskod för alla MIME-typer. JSON-svaret är valfritt och kanske inte är tillgängligt, till exempel för PDF-filer. Använd svarskoden för ytterligare analyser eller åtgärder.
 
@@ -34,7 +34,7 @@ Mer information finns i Stöd för [innehållsfragment i Experience Manager Asse
 
 ## Datamodell {#data-model}
 
-Resursens HTTP-API visar två huvudelement, mappar och resurser (för standardresurser).
+HTTP-API:t [!DNL Assets] visar två huvudelement, mappar och resurser (för standardresurser).
 
 Dessutom visas mer detaljerade element för anpassade datamodeller som beskriver strukturerat innehåll i innehållsfragment. Mer information finns i [Datamodeller](/help/assets/assets-api-content-fragments.md#content-fragments) för innehållsfragment.
 
@@ -75,7 +75,7 @@ I [!DNL Experience Manager] en mapp finns följande komponenter:
 * Egenskaper.
 * Länkar.
 
-Resursens HTTP-API innehåller följande funktioner:
+HTTP-API:t [!DNL Assets] innehåller följande funktioner:
 
 * [Hämta en mapplista](#retrieve-a-folder-listing).
 * [Skapa en mapp](#create-a-folder).
