@@ -1,11 +1,11 @@
 ---
-title: Skapa och dela en privat mapp i Adobe Experience Manager.
-description: Lär dig hur du skapar en privat mapp i Adobe Experience Manager Assets och delar den med andra användare och tilldelar olika behörigheter till dem.
+title: Skapa och dela en privat mapp i [!DNL Adobe Experience Manager].
+description: Lär dig hur du skapar en privat mapp [!DNL Adobe Experience Manager Assets] och delar den med andra användare samt tilldelar olika behörigheter till dem.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '466'
 ht-degree: 1%
 
 ---
@@ -13,13 +13,13 @@ ht-degree: 1%
 
 # Delning av privata mappar {#private-folder-sharing}
 
-Du kan skapa en privat mapp i användargränssnittet för Adobe Experience Manager Assets som är exklusivt tillgänglig för dig. Du kan dela den här privata mappen med andra användare och tilldela andra användare olika behörigheter. Beroende på vilken behörighetsnivå du tilldelar kan användare utföra olika åtgärder i mappen, till exempel visa resurser i mappen eller redigera resurserna.
+Du kan skapa en privat mapp i [!DNL Adobe Experience Manager Assets] användargränssnittet som är exklusivt tillgänglig för dig. Du kan dela den här privata mappen med andra användare och tilldela andra användare olika behörigheter. Beroende på vilken behörighetsnivå du tilldelar kan användare utföra olika åtgärder i mappen, till exempel visa resurser i mappen eller redigera resurserna.
 
 >[!NOTE]
 >
 >Den privata mappen har minst en medlem med ägarrollen.
 
-1. Klicka på **[!UICONTROL Create]** verktygsfältet i resurskonsolen och välj sedan **[!UICONTROL Folder]** från menyn.
+1. Klicka på [!DNL Assets] verktygsfältet i **[!UICONTROL Create]** konsolen och välj sedan **[!UICONTROL Folder]** från menyn.
 
    ![Skapa resursmapp](assets/Create-folder.png)
 
@@ -49,9 +49,9 @@ Du kan skapa en privat mapp i användargränssnittet för Adobe Experience Manag
    >
    >Den privata mappen har minst en medlem med ägarrollen. Administratören kan därför inte ta bort alla ägarmedlemmar från en privat mapp. Om du vill ta bort befintliga ägare (och själva administratören) från den privata mappen måste administratören lägga till en annan användare som ägare.
 
-1. Klicka på **[!UICONTROL Save]**. Beroende på vilken roll du tilldelar tilldelas användaren en uppsättning behörigheter i din privata mapp när användaren loggar in på Resurser.
+1. Klicka på **[!UICONTROL Save]**. Beroende på vilken roll du tilldelar tilldelas användaren en uppsättning behörigheter i din privata mapp när användaren loggar in på [!DNL Assets].
 1. Klicka **[!UICONTROL Ok]** för att stänga bekräftelsemeddelandet.
-1. Användaren som du delar mappen med får ett delningsmeddelande. Logga in på Assets med användarens autentiseringsuppgifter för att visa meddelandet.
+1. Användaren som du delar mappen med får ett delningsmeddelande. Logga in [!DNL Assets] med användarens autentiseringsuppgifter för att visa meddelandet.
 
    ![chlimage_1-416](assets/chlimage_1-416.png)
 
