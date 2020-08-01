@@ -3,9 +3,9 @@ title: Förbered resurser för översättning
 description: Skapa rotmappar för språk för att förbereda resurser för översättning för stöd av flerspråkiga resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '429'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Flerspråkiga resurser innebär resurser med binärfiler, metadata och taggar på flera språk. I allmänhet finns binära filer, metadata och taggar för resurser på ett språk, som sedan översätts till andra språk för användning i flerspråkiga projekt.
 
-I Adobe Experience Manager Assets inkluderas flerspråkiga resurser i mappar, där varje mapp innehåller resurserna på ett annat språk.
+I [!DNL Adobe Experience Manager Assets]inkluderas flerspråkiga resurser i mappar, där varje mapp innehåller resurserna på ett annat språk.
 
 Varje språkmapp kallas för en språkkopia. Rotmappen för en språkkopia, som kallas språkrot, identifierar språket för innehållet i språkkopian. Till exempel är */content/dam/it* den italienska språkroten för den italienska språkkopian. För språkkopior måste en [korrekt konfigurerad språkrot](preparing-assets-for-translation.md#creating-a-language-root) användas, så att rätt språk används när översättningar av källresurser utförs.
 
@@ -46,7 +46,7 @@ Om du vill skapa språkroten skapar du en mapp och använder en ISO-språkkod so
 
 Rotsidan för den italienska språkkopian av exempelhierarkin har till exempel `it` egenskapen Namn. Egenskapen Namn används som namn på objektnoden i databasen och avgör därför sökvägen till resurserna. (`https://[aem_server]:[port]/assets.html/content/dam/it/`).
 
-1. From the Assets console, click **[!UICONTROL Create]** and choose **[!UICONTROL Folder]** from the menu.
+1. From the [!DNL Assets] console, click **[!UICONTROL Create]** and choose **[!UICONTROL Folder]** from the menu.
 
    ![Skapa mapp](assets/Create-folder.png)
 
@@ -54,13 +54,13 @@ Rotsidan för den italienska språkkopian av exempelhierarkin har till exempel `
 
    ![Lägg till språkkod i mappen](assets/Add-language-code-in-folder.png)
 
-1. Klicka på **[!UICONTROL Create]**. Språkroten skapas i resurskonsolen.
+1. Klicka på **[!UICONTROL Create]**. Språkroten skapas i [!DNL Assets] konsolen.
 
 ## Visa språkrötter {#viewing-language-roots}
 
-I gränssnittet Experience Manager finns en **[!UICONTROL References]** panel som visar en lista med språkrötter som har skapats i Assets.
+[!DNL Experience Manager] -gränssnittet innehåller en **[!UICONTROL References]** panel som visar en lista med språkrötter som har skapats i [!DNL Assets].
 
-1. I resurskonsolen väljer du det språk som är primärt för vilket du vill skapa språkkopior.
+1. I [!DNL Assets] konsolen väljer du det språk som är primärt för vilket du vill skapa språkkopior.
 1. Välj alternativet att öppna **[!UICONTROL References]** rutan från den vänstra listen [!UICONTROL Reference] .
 
    ![chlimage_1-122](assets/chlimage_1-122.png)
