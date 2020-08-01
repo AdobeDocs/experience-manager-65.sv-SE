@@ -3,9 +3,9 @@ title: Hantera videomaterial i [!DNL Adobe Experience Manager].
 description: Överför, förhandsgranska, kommentera och publicera videomaterial i [!DNL Adobe Experience Manager].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 8c481c9a5052ff057ae0857c2ac825cec2b26269
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '734'
+source-wordcount: '732'
 ht-degree: 8%
 
 ---
@@ -19,9 +19,9 @@ Lär dig hur du hanterar och redigerar videoresurserna i [!DNL Adobe Experience 
 
 ## Överföra och förhandsgranska videomaterial {#upload-and-preview-video-assets}
 
-[!DNL Adobe Experience Manager Assets] skapar förhandsvisningar för videoresurser med filnamnstillägget MP4. Om resursens format inte är MP4 installerar du FFmpeg-paketet för att generera en förhandsvisning. FFmpeg skapar videoåtergivningar av typen OGG och MP4. Du kan förhandsgranska återgivningarna i användargränssnittet Resurser.
+[!DNL Adobe Experience Manager Assets] skapar förhandsvisningar för videoresurser med filnamnstillägget MP4. Om resursens format inte är MP4 installerar du FFmpeg-paketet för att generera en förhandsvisning. FFmpeg skapar videoåtergivningar av typen OGG och MP4. Du kan förhandsgranska återgivningarna i [!DNL Assets] användargränssnittet.
 
-1. Navigera till den plats där du vill lägga till digitala resurser i mappen eller undermapparna Digital Assets.
+1. Navigera till den plats där du vill lägga till digitala resurser i mappen eller undermapparna för digitala resurser.
 1. Om du vill överföra resursen klickar du **[!UICONTROL Create]** i verktygsfältet och väljer sedan **[!UICONTROL Files]**. Du kan också släppa det direkt i resursområdet. Mer information om överföring finns i [Överför resurser](managing-assets-touch-ui.md#uploading-assets) .
 1. Om du vill förhandsgranska en video i kortvyn klickar du på alternativet **[!UICONTROL Play]** för ![](assets/do-not-localize/play.png) uppspelning i videoresursen. Du kan bara pausa eller spela upp video i kortvyn. Alternativen [!UICONTROL Play] och [!UICONTROL Pause] är inte tillgängliga i listvyn.
 
@@ -71,7 +71,7 @@ Efter publiceringen kan du inkludera videomaterialet på en webbsida som en URL 
 
 ## Kommentera videomaterial {#annotate-video-assets}
 
-1. I resurskonsolen klickar du [!UICONTROL Edit] på resurskortet för att visa sidan med resursinformation.
+1. I [!DNL Assets] konsolen klickar du [!UICONTROL Edit] på resurskortet för att visa sidan med resursinformation.
 1. Om du vill spela upp videon klickar du på [!UICONTROL Preview].
 1. Klicka på **[!UICONTROL Annotate]** knappen om du vill kommentera videon. En anteckning läggs till vid en viss tidpunkt (bildruta) i videon. När du gör anteckningar kan du rita på arbetsytan och ta med en kommentar med ritningen. Kommentarerna sparas automatiskt.
 
