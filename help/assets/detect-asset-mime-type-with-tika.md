@@ -1,27 +1,27 @@
 ---
 title: Identifiera MIME-typ av resurser med Apache Tika
-description: Aktivera Apache Tika för att hjälpa Experience Manager Assets att identifiera MIME-typen för resurser från innehållsströmmen under överföringen i stället för filtillägget.
+description: Aktivera Apache Tika för att [!DNL Experience Manager Assets] hjälpa till att identifiera MIME-typen för resurser från innehållsströmmen under överföringen i stället för filtillägget.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '160'
+source-wordcount: '146'
 ht-degree: 0%
 
 ---
 
 
-# Identifiera MIME-typ av resurser med Apache Tika {#detecting-mime-type-of-assets-using-apache-tika}
+# Identifiera MIME-typ av resurser med [!DNL Apache Tika] {#detecting-mime-type-of-assets-using-apache-tika}
 
-Vanligtvis identifierar Adobe Experience Manager Assets MIME-typen för resurser som du överför från filtillägget.
+Identifierar vanligtvis [!DNL Adobe Experience Manager Assets] MIME-typen för resurser som du överför från filtillägget.
 
-Om du använder Apache Tika för att överföra resurser, identifierar Assets deras MIME-typ från innehållsströmmen under överföringen i stället för filtillägget.
+Om du använder [!DNL Apache Tika] för att överföra resurser, identifierar [!DNL Assets] deras MIME-typ från innehållsströmmen under överföringen i stället för filtillägget.
 
 Den här funktionen är inaktiverad som standard. Om du vill aktivera funktionen konfigurerar du **[!UICONTROL Day CQ DAM Mime Type]** tjänsten från [!UICONTROL Configuration Manager].
 
 >[!NOTE]
 >
->MIME-typidentifiering med Apache Tika-biblioteket är en resurskrävande åtgärd.
+>MIME-typidentifiering med hjälp av [!DNL Apache Tika] biblioteket är en resurskrävande åtgärd.
 
 1. Om du vill öppna webbkonsolen för Configuration Manager går du till `https://[aem_server]:[port]/system/console/configMgr`.
 
