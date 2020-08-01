@@ -3,9 +3,9 @@ title: Metadataschema för mapp
 description: Lär dig hur du skapar metadatamatchning för resursmappar i Adobe Experience Manager Assets
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '947'
+source-wordcount: '939'
 ht-degree: 4%
 
 ---
@@ -13,13 +13,13 @@ ht-degree: 4%
 
 # Metadataschema för mapp {#folder-metadata-schema}
 
-Med Adobe Experience Manager Assets kan du skapa metadatamappar för resursmappar, som definierar layouten och metadata som visas på mappegenskapssidor.
+[!DNL Adobe Experience Manager Assets] Med kan du skapa metadatascheman för resursmappar, som definierar layouten och metadata som visas på mappegenskapssidor.
 
 ## Lägga till ett schemaformulär för mappmetadata {#add-a-folder-metadata-schema-form}
 
-Använd redigeraren för schemaformulär för mappmetadata när du vill skapa och redigera metadatascheman för mappar.
+Använd schemaredigeraren för mappmetadata i Forms för att skapa och redigera metadatascheman för mappar.
 
-1. I gränssnittet Experience Manager går du till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Folder Metadata Schemas]**.
+1. In [!DNL Experience Manager] interface, go to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Folder Metadata Schemas]**.
 1. På sidan [!UICONTROL Folder Metadata Schema Forms] klickar du på **[!UICONTROL Create]**.
 1. Ange ett namn för formuläret och klicka på **[!UICONTROL Create]**. Det nya schemaformuläret visas på [!UICONTROL Schema Forms] sidan.
 
@@ -32,7 +32,7 @@ Du kan redigera ett nyligen tillagt eller befintligt metadatchemaformulär, som 
 
 Du kan mappa/konfigurera dessa formulärobjekt till ett fält i en metadatanod i CRX-databasen. Du kan lägga till nya flikar eller formulärobjekt i metadatchemaformuläret.
 
-1. På sidan Schemaformulär markerar du det formulär du skapade och väljer sedan **[!UICONTROL Edit]** alternativet i verktygsfältet.
+1. På Forms-sidan Schema väljer du det formulär som du skapade och väljer sedan **[!UICONTROL Edit]** alternativet i verktygsfältet.
 1. Klicka på fliken för att lägga `+` till formuläret på sidan Schemaredigerare för mappmetadata. Om du vill byta namn på fliken klickar du på standardnamnet och anger det nya namnet under **[!UICONTROL Settings]**.
 
    ![custom_tab](assets/custom_tab.png)
@@ -80,7 +80,7 @@ Följande är giltiga värden för den här egenskapen:
 
 * `./jcr:content/metadata/dc:title`: Lagrar värdet i mappens metadatanod som egenskap `dc:title`.
 
-* `./jcr:created`: Visar JCR-egenskapen vid mappens nod. Om du konfigurerar dessa egenskaper i CRXDE bör du markera dem som Inaktivera redigering eftersom de är skyddade. Annars inträffar felet `Asset(s) failed to modify`&quot; när du sparar resursens egenskaper.
+* `./jcr:created`: Visar JCR-egenskapen vid mappens nod. Om du konfigurerar de här egenskaperna i CRXDE rekommenderar Adobe att du markerar dem som Inaktivera redigering eftersom de är skyddade. Annars inträffar felet `Asset(s) failed to modify`&quot; när du sparar resursens egenskaper.
 
 För att komponenten ska visas på rätt sätt i schemaformuläret för metadata ska du inte ta med något utrymme i egenskapssökvägen.
 
@@ -96,20 +96,20 @@ För att komponenten ska visas på rätt sätt i schemaformuläret för metadata
 
 ## Ta bort schemaformulär för mappmetadata {#delete-folder-metadata-schema-forms}
 
-Du kan ta bort schemaformulär för mappmetadata från sidan för schemaformulär för mappmetadata. Om du vill ta bort ett formulär markerar du det och klickar på borttagningsalternativet i verktygsfältet.
+Du kan ta bort schemaformulär för mappmetadata från Forms-sidan för mappmetadataschema. Om du vill ta bort ett formulär markerar du det och klickar på borttagningsalternativet i verktygsfältet.
 
 ![delete_form](assets/delete_form.png)
 
 ## Tilldela ett mappmetadatchema {#assign-a-folder-metadata-schema}
 
-Du kan tilldela ett mappmetadatamatchema till en mapp antingen från sidan för schemaformulär för mappmetadata eller när du skapar en mapp.
+Du kan tilldela ett mappmetadatchema till en mapp från Forms-sidan för mappmetadataschema eller när du skapar en mapp.
 
 Om du konfigurerar ett metadataschema för en mapp lagras sökvägen till schemaformuläret i mappnodens egenskap under `folderMetadataSchema` .*/jcr:content*.
 
 ### Tilldela till ett schema från sidan Mappmetadatamatchema {#assign-to-a-schema-from-the-folder-metadata-schema-page}
 
-1. I gränssnittet Experience Manager går du till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Folder Metadata Schemas]**.
-1. På sidan Schemaformulär för mappmetadata väljer du det schemaformulär som du vill tillämpa på en mapp.
+1. In [!DNL Experience Manager] interface, go to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Folder Metadata Schemas]**.
+1. På Forms-sidan för mappmetadataschema väljer du det schemaformulär som du vill tillämpa på en mapp.
 1. Klicka på **[!UICONTROL Apply to Folder(s)]** i verktygsfältet.
 
 1. Markera mappen som schemat ska tillämpas på och klicka sedan på **[!UICONTROL Apply]**. Om ett metadatamatchema redan används för mappen visas ett varningsmeddelande om att du håller på att skriva över det befintliga metadatamodemet. Klicka på **[!UICONTROL Overwrite]**.
