@@ -1,34 +1,34 @@
 ---
-title: Flerspråkiga resurser
+title: Flerspråkiga resurser och översättning av resurser.
 description: Lär dig hur du automatiserar arbetsflöden för att översätta resurser, inklusive binära filer, metadata och taggar till flera språk.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '180'
-ht-degree: 0%
+source-wordcount: '167'
+ht-degree: 2%
 
 ---
 
 
 # Flerspråkiga resurser {#multilingual-assets}
 
-Med Adobe Experience Manager Assets kan ni automatisera översättningsarbetsflöden för resurser (inklusive binärfiler, metadata och taggar) och generera resurser på andra språk för användning i flerspråkiga projekt.
+[!DNL Adobe Experience Manager Assets] Med kan du automatisera arbetsflöden för översättning av resurser (inklusive binärfiler, metadata och taggar) för att generera resurser på andra språk för användning i flerspråkiga projekt.
 
-Om du vill automatisera översättningsarbetsflöden integrerar du översättningstjänster med Experience Manager och skapar projekt för översättning av resurser till flera språk. Experience Manager har stöd för arbetsflöden för översättning mellan människor och datorer.
+Om du vill automatisera översättningsarbetsflöden integrerar du översättningstjänster med [!DNL Experience Manager] och skapar projekt för översättning av resurser till flera språk. [!DNL Experience Manager] har stöd för arbetsflöden för översättning mellan människor och datorer.
 
-Översättning: De översatta resurserna returneras och importeras till Experience Manager. När din översättningsleverantör är integrerad med Experience Manager skickas resurser automatiskt mellan Experience Manager och översättningsleverantören.
+Översättning: De översatta resurserna returneras och importeras till [!DNL Experience Manager]. När översättningsleverantören är integrerad med [!DNL Experience Manager]skickas resurser automatiskt mellan [!DNL Experience Manager] och översättningsleverantören.
 
 Maskinöversättning: Maskinöversättningstjänsten översätter omedelbart metadata och taggar för resurser.
 
 Översättningsresurser innehåller följande:
 
-1. [Anslut Experience Manager till översättningstjänstleverantören](/help/sites-administering/tc-tic.md#connecting-to-a-translation-service-provider)
+1. [Anslut Experience Manager till översättningstjänsten](/help/sites-administering/tc-tic.md#connecting-to-a-translation-service-provider)
 1. [Skapa konfigurationer för översättningsintegreringsramverk](/help/sites-administering/tc-tic.md)
 1. [Förbered resurser för översättning](preparing-assets-for-translation.md)
 1. [Använd översättningsmolntjänster på mappar](transition-cloud-services.md)
 1. [Skapa översättningsprojekt](translation-projects.md)
 
-Om din översättningstjänstleverantör inte tillhandahåller någon koppling för integrering med Experience Manager använder du en [alternativ process](/help/sites-administering/tc-manage.md#exporting-a-translation-job).
+Om din översättningstjänstleverantör inte tillhandahåller någon koppling att integrera med [!DNL Experience Manager]använder du en [alternativ process](/help/sites-administering/tc-manage.md#exporting-a-translation-job).
 
 Se även [Skapa översättningsprojekt för innehållsfragment](creating-translation-projects-for-content-fragments.md).
