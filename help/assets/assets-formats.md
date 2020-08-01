@@ -1,11 +1,11 @@
 ---
 title: Filformat som stöds för bearbetning i [!DNL Adobe Experience Manager Assets].
-description: Filformat och MIME-typer som stöds av [!DNL Assets] och [!DNL Dynamic Media] samt de funktioner som stöds för varje format.
+description: Filformat och MIME-typer stöds [!DNL Assets] and [!DNL Dynamic Media] av och funktioner som stöds för varje format.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 62085bdd8fa576e0d4eaeae19076d6edbf8c484a
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '1648'
+source-wordcount: '1626'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 # Format som stöds i [!DNL Adobe Experience Manager Assets] {#assets-supported-formats}
 
-[!DNL Experience Manager Assets] har stöd för ett stort antal filformat och alla funktioner har olika stöd för olika MIME-typer. Om du vill integrera [!DNL Assets] med andra standardbaserade DAM-lösningar (Digital Asset Management) och datorprogram använder du Adobes [!DNL Extensible Metadata Platform] (XMP).
+[!DNL Experience Manager Assets] har stöd för ett stort antal filformat och alla funktioner har olika stöd för olika MIME-typer. Om du vill integrera [!DNL Assets] med andra standardbaserade DAM-lösningar (Digital Asset Management) och datorprogram använder du Adobe [!DNL Extensible Metadata Platform] (XMP).
 
 Använd teckenförklaringen för att förstå supportnivån.
 
@@ -128,7 +128,7 @@ Se [Använda PDF-rastrering](aem-pdf-rasterizer.md).
 
 ## Bildkodningsbibliotek som stöds {#supported-image-transcoding-library}
 
-Adobe Imaging Transcoding Library är en bildbehandlingslösning som utför viktiga bildhanteringsfunktioner som kodning, omkodning, omsampling och storleksändring.
+Biblioteket Adobe Imaging Transcoding är en bildbehandlingslösning som utför viktiga bildhanteringsfunktioner som kodning, omkodning, omsampling och storleksändring.
 
 Bildkonverteringsbiblioteket stöder JPG/JPEG, PNG (8-bitars och 16-bitars), GIF, BMP, TIFF/komprimerad TIFF (förutom 32-bitars TIFF-filer och PTIFF-filer), ICO- och ICN MIME-typer.
 
@@ -136,9 +136,9 @@ Se [Bildkonverteringsbibliotek](imaging-transcoding-library.md).
 
 ## Camera Raw som stöds {#supported-camera-raw}
 
-Med Adobe Camera Raw-biblioteket kan Assets importera råbilder. Se [Stöd](camera-raw.md)för Camera Raw.
+Med [!DNL Adobe Camera Raw] biblioteket kan du [!DNL Assets] importera råbilder. Se [Camera Raw support](camera-raw.md).
 
-## Dokumentformat för Assets som stöds {#supported-document-formats}
+## Dokumentformat [!DNL Assets] som stöds {#supported-document-formats}
 
 Dokumentformat som stöds för filhanteringsfunktioner är följande:
 
@@ -173,11 +173,11 @@ Dokumentformat som stöds för filhanteringsfunktioner är följande:
 
 Utöver ovanstående funktioner bör du tänka på följande:
 
-* Information om hur du använder Dynamic Media för att generera dynamiska återgivningar för PDF-filer finns i [Adobe Illustrator (AI), PostScript (EPS) och PDF-filformat.](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
+* Information om hur du använder Dynamic Media för att generera dynamiska återgivningar för PDF-filer finns i [Adobe Illustrator (AI), Postscript (EPS) och PDF-filformat.](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
-* Information om hur du använder Dynamic Media för att förhandsgranska och generera dynamiska renderingar för AI-filer finns i [Adobe Illustrator (AI), PostScript (EPS) och PDF-filformat.](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
+* Information om hur du använder Dynamic Media för att förhandsgranska och generera dynamiska återgivningar för AI-filer finns i [Adobe Illustrator (AI), Postscript (EPS) och PDF-filformat.](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
-* Information om hur du använder Dynamic Media för att generera dynamiska återgivningar för INDD-filer finns i [InDesign-filformat](../assets/managing-image-presets.md#indesign-indd-file-format)(INDD).
+* Information om hur du använder Dynamic Media för att generera dynamiska återgivningar för INDD-filer finns i [filformatet](../assets/managing-image-presets.md#indesign-indd-file-format)InDesign (INDD).
 
 ## Multimediaformat som stöds {#supported-multimedia-formats}
 
@@ -249,9 +249,9 @@ Hur vanliga DAM-arbetsflöden kan användas för ett par andra filformat beskriv
 
 ## MIME-typer som stöds {#supported-mime-types}
 
-Som standard identifierar Experience Manager filtypen med hjälp av filtillägget. Experience Manager kan identifiera det från filernas innehåll. För den senare väljer du [!UICONTROL Detect MIME from content] ett alternativ [!UICONTROL Day CQ DAM Mime Type Service] i webbkonsolen Experience Manager.
+Som standard identifierar [!DNL Experience Manager] filtypen med hjälp av filtillägget. [!DNL Experience Manager] kan identifiera det från innehållet i filerna. För det senare väljer du [!UICONTROL Detect MIME from content] ett alternativ [!UICONTROL Day CQ DAM Mime Type Service] i [!DNL Experience Manager] webbkonsolen.
 
-En lista över MIME-typer som stöds finns i CRXDE Lite på `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`.
+En lista över MIME-typer som stöds finns i CRXDE Lite `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`.
 
 | Filtillägg | MIME-typ/ Internetmedietyp | Standardvärde för jobParam | Tillåtet jobParam-värde |
 |---|---|---|---|
@@ -313,6 +313,6 @@ En lista över MIME-typer som stöds finns i CRXDE Lite på `/conf/global/settin
 
 >[!MORELIKETHIS]
 >
->* [Aktivera stöd](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support)för MIME-typbaserade resurser/Scene7-överföringsjobbparametrar.
+>* [Aktivera stöd](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support)för MIME-typbaserade resurser/Scene7 överföringsjobbparametrar.
 >* [Konfigurera MIME-typbaserad för stöd](config-dynamic.md)för överföringsjobbparametrar.
 
