@@ -1,11 +1,11 @@
 ---
 title: Generera en URL till delade resurser
-description: I den här artikeln beskrivs hur du delar resurser, mappar och samlingar i Experience Manager Assets som en URL till externa parter.
+description: I den här artikeln beskrivs hur du delar resurser, mappar och samlingar [!DNL Experience Manager Assets] i en URL till externa parter.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '1137'
+source-wordcount: '1104'
 ht-degree: 4%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 # Dela resurs via en länk {#asset-link-sharing}
 
-Med Adobe Experience Manager Assets kan du dela resurser, mappar och samlingar som en URL till medlemmar i din organisation och externa enheter, inklusive partners och leverantörer. Att dela resurser via en länk är ett bekvämt sätt att göra resurser tillgängliga för externa parter utan att de först behöver logga in på Assets.
+[!DNL Adobe Experience Manager Assets] Med kan du dela resurser, mappar och samlingar som en URL-adress med medlemmar i organisationen och externa enheter, inklusive partners och leverantörer. Att dela resurser via en länk är ett bekvämt sätt att göra resurser tillgängliga för externa parter utan att de först behöver logga in på [!DNL Assets].
 
 >[!NOTE]
 >
@@ -27,7 +27,7 @@ Använd dialogrutan Länkdelning för att generera URL:en för resurser som du v
 >
 >Innan du delar en länk med användarna måste du kontrollera att Dag CQ Mail Service har konfigurerats. Ett fel uppstår om du försöker dela en länk utan att först [konfigurera Day CQ Mail Service](/help/assets/link-sharing.md#configmailservice).
 
-1. I Assets-användargränssnittet väljer du den resurs som ska delas som en länk.
+1. I [!DNL Assets] användargränssnittet väljer du den resurs som ska delas som en länk.
 1. Klicka på ikonen **[!UICONTROL Share Link]** för att ![](assets/do-not-localize/assets_share.png)dela resurser i verktygsfältet.
 
    En resurslänk skapas automatiskt i **[!UICONTROL Share Link]** fältet. Kopiera den här länken och dela den med användarna. Länkens standardförfallotid är en dag.
@@ -40,7 +40,7 @@ Använd dialogrutan Länkdelning för att generera URL:en för resurser som du v
 
    >[!NOTE]
    >
-   >Om du vill dela länkar från din Experience Manager Author-distribution till externa entiteter, ska du se till att du bara visar följande URL:er (som används för länkdelning) för `GET` begäranden. Blockera andra URL:er för att säkerställa säkerheten för författaren av Experience Manager.
+   >Om du vill dela länkar från din [!DNL Experience Manager] författardistribution till externa enheter måste du se till att du bara visar följande URL:er (som används för länkdelning) för `GET` begäranden. Blockera andra URL:er för att säkerställa säkerheten för [!DNL Experience Manager] författaren.
    >
    >* http://[aem_server]:[port]/linkshare.html
    >* http://[aem_server]:[port]/linksharepreview.html
@@ -51,9 +51,9 @@ Använd dialogrutan Länkdelning för att generera URL:en för resurser som du v
    >
    >Om en delad resurs flyttas till en annan plats slutar länken att fungera. Återskapa länken och dela den på nytt med användarna.
 
-1. Gå till **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]** i gränssnittet Experience Manager.
+1. I [!DNL Experience Manager] gränssnittet går du till **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
 
-1. Öppna **[!UICONTROL Day CQ Link Externalizer]** konfigurationen och ändra följande egenskaper i **[!UICONTROL Domains]** fältet med de värden som anges mot `local`, `author`och `publish`. För egenskaperna `local` och `author` anger du URL:en för den lokala instansen respektive författarinstansen. Både `local` och `author` egenskaper har samma värde om du kör en enda Experience Manager Author-instans. Ange till `publish`exempel URL:en för publiceringsinstansen Experience Manager.
+1. Öppna **[!UICONTROL Day CQ Link Externalizer]** konfigurationen och ändra följande egenskaper i **[!UICONTROL Domains]** fältet med de värden som anges mot `local`, `author`och `publish`. För egenskaperna `local` och `author` anger du URL:en för den lokala instansen respektive författarinstansen. Både `local` och `author` egenskaper har samma värde om du kör en enda [!DNL Experience Manager] Author-instans. Ange till `publish`exempel URL:en för [!DNL Experience Manager] publiceringsinstansen.
 
 1. Skriv e-post-ID:t för den användare som du vill dela länken med i rutan för e-postadress i dialogrutan **[!UICONTROL Link Sharing]**. Du kan också dela länken med flera användare.
 
@@ -96,19 +96,19 @@ Använd dialogrutan Länkdelning för att generera URL:en för resurser som du v
 
    >[!NOTE]
    >
-   >Experience Manager har stöd för att generera förhandsgranskning av resurser av dessa MIME-typer: JPG, PNG, GIF, BMP, INDD, PDF och PPT. Du kan bara hämta resurser från andra MIME-typer.
+   >[!DNL Experience Manager] har stöd för att generera en förhandsgranskning av resurser av dessa MIME-typer: JPG, PNG, GIF, BMP, INDD, PDF och PPT. Du kan bara hämta resurser från andra MIME-typer.
 
 1. Om du vill hämta den delade resursen klickar du **[!UICONTROL Select]** i verktygsfältet, på resursen och sedan på **[!UICONTROL Download]** verktygsfältet.
 
    ![chlimage_1-262](assets/chlimage_1-547.png)
 
-1. Om du vill visa de resurser du har delat som länkar går du till resursgränssnittet och klickar på Experience Manager-logotypen. Välj **[!UICONTROL Navigation]** i listan för att visa navigeringsrutan.
+1. Om du vill visa de resurser du har delat som länkar går du till [!DNL Assets] användargränssnittet och klickar på [!DNL Experience Manager] logotypen. Välj **[!UICONTROL Navigation]** i listan för att visa navigeringsrutan.
 1. I navigeringsrutan väljer du **[!UICONTROL Shared Links]** för att visa en lista med delade resurser.
 1. Om du vill ta bort delningen av en resurs markerar du den och klickar på **[!UICONTROL Unshare]** i verktygsfältet. Ett bekräftelsemeddelande följer. Posten för resursen tas bort från listan.
 
 ## Konfigurera daglig CQ Mail-tjänst {#configmailservice}
 
-1. På startsidan för Experience Manager går du till **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
+1. Navigera till [!DNL Experience Manager] > **[!UICONTROL Tools]** > **[!UICONTROL Operations]** på startsidan **[!UICONTROL Web Console]**.
 1. I listan med tjänster går du till **[!UICONTROL Day CQ Mail Service]**.
 1. Click **[!UICONTROL Edit]** beside the service, and configure the following parameters for **[!UICONTROL Day CQ Mail Service]** with the details mentioned against their names:
 
@@ -123,9 +123,9 @@ Använd dialogrutan Länkdelning för att generera URL:en för resurser som du v
 
 ## Konfigurera maximal datastorlek {#maxdatasize}
 
-När du hämtar resurser från den länk som delas med funktionen Länkdelning komprimerar Experience Manager resurshierarkin från databasen och returnerar sedan resursen i en ZIP-fil. I avsaknad av begränsningar för den mängd data som kan komprimeras i en ZIP-fil utsätts stora mängder data för komprimering, vilket leder till minnesfel i JVM. För att skydda systemet från en potentiell denial of service-attack på grund av den här situationen måste du konfigurera maxstorleken med hjälp av parametern **[!UICONTROL Max Content Size (uncompressed)]** för [!UICONTROL Day CQ DAM Adhoc Asset Share Proxy Servlet] i Configuration Manager. Om resursens okomprimerade storlek överskrider det konfigurerade värdet, avvisas begäranden om hämtning av resurser. Standardvärdet är 100 MB.
+När du hämtar resurser från den länk som delas med funktionen Länkdelning komprimerar resurshierarkin från databasen och returnerar sedan resursen i en ZIP-fil. [!DNL Experience Manager] I avsaknad av begränsningar för den mängd data som kan komprimeras i en ZIP-fil utsätts stora mängder data för komprimering, vilket leder till minnesfel i JVM. För att skydda systemet från en potentiell denial of service-attack på grund av den här situationen måste du konfigurera maxstorleken med hjälp av parametern **[!UICONTROL Max Content Size (uncompressed)]** för [!UICONTROL Day CQ DAM Adhoc Asset Share Proxy Servlet] i Configuration Manager. Om resursens okomprimerade storlek överskrider det konfigurerade värdet, avvisas begäranden om hämtning av resurser. Standardvärdet är 100 MB.
 
-1. Click the Experience Manager logo and then go to **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
+1. Click the [!DNL Experience Manager] logo and then go to **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
 1. Leta reda på konfigurationen i webbkonsolen **[!UICONTROL Day CQ DAM Adhoc Asset Share Proxy Servlet]** .
 1. Öppna **[!UICONTROL Day CQ DAM Adhoc Asset Share Proxy Servlet]** konfigurationen i redigeringsläge och ändra värdet på **[!UICONTROL Max Content Size (uncompressed)]** parametern.
 
@@ -136,6 +136,6 @@ När du hämtar resurser från den länk som delas med funktionen Länkdelning k
 ## Bästa praxis och felsökning {#bestpractices}
 
 * Resursmappar eller samlingar som innehåller ett tomt utrymme i namnet kanske inte delas.
-* Om användare inte kan hämta de delade resurserna, bör du fråga Experience Manager-administratören om vilka [hämtningsgränser](#maxdatasize) som finns.
-* Om du inte kan skicka e-post med länkar till delade resurser eller om de andra användarna inte kan ta emot din e-post, bör du kontakta Experience Manager-administratören om [e-posttjänsten](#configmailservice) är konfigurerad eller inte.
+* Om användarna inte kan hämta de delade resurserna bör du fråga din [!DNL Experience Manager] administratör om vilka [hämtningsgränser](#maxdatasize) som finns.
+* Om du inte kan skicka e-post med länkar till delade resurser eller om de andra användarna inte kan ta emot din e-post, bör du kontakta din [!DNL Experience Manager] administratör om [e-posttjänsten](#configmailservice) är konfigurerad eller inte.
 * Om du inte kan dela resurser med hjälp av länkdelningsfunktionen måste du se till att du har rätt behörighet. Se [Dela resurser](#sharelink).
