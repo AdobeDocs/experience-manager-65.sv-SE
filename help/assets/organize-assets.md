@@ -1,11 +1,11 @@
 ---
 title: Ordna dina digitala resurser
-description: Ordna digitala resurser, bilder, filer, mappar och så vidare med Experience Manager.
+description: Organisera dina digitala resurser, bilder, filer, mappar och så vidare med Experience Manager.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '811'
+source-wordcount: '780'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Alla digitala resurser, metadata och innehåll i Microsoft Office- och PDF-dokument extraheras och görs sökbara. Sökning möjliggör avancerad filtrering av resurser och respekterar fullt ut rätt behörigheter. Metadata beskrivs i detalj i metadata i Digital Asset Management.
 
-Experience Manager Assets har stöd för flera sätt att ordna innehåll. Du kan ordna dem hierarkiskt med hjälp av mappar eller så kan du ordna dem på ett osorterat sätt, t.ex. med hjälp av taggar. Användare kan redigera taggar i DAM-redigeraren för mediefiler där underresurser, återgivningar och metadata visas.
+[!DNL Experience Manager Assets] har stöd för flera sätt att ordna innehåll. Du kan ordna dem hierarkiskt med hjälp av mappar eller så kan du ordna dem på ett osorterat sätt, t.ex. med hjälp av taggar. Användare kan redigera taggar i DAM-redigeraren för mediefiler där underresurser, återgivningar och metadata visas.
 
 ## Ordna resurser i mappar {#organize-using-folders}
 
@@ -35,13 +35,13 @@ Det mest grundläggande sättet att ordna resurser är att spara dessa i mappar.
    * **Datumbaserade mappar**: innehåller digitala resurser baserat på skapandedatum eller senaste ändringsdatum.
 
 * Skapa en katalog med mappar som troligtvis inte ändras så att anpassningar och automatisering fortsätter att fungera. De tilldelade bearbetningsprofilerna fortsätter till exempel att fungera.
-* Om en resurs redan är publicerad använder du Experience Manager för att flytta resursen till en annan mapp och publicera den på nytt från den nya platsen, är den ursprungliga publicerade resursplatsen fortfarande tillgänglig tillsammans med den nyligen publicerade resursen. Den ursprungliga publicerade resursen *förloras* dock i Experience Manager och kan inte avpubliceras. Därför bör du först avpublicera en resurs och sedan flytta den till en annan mapp.
+* Om en resurs redan är publicerad, använder du [!DNL Experience Manager] för att flytta resursen till en annan mapp och publicera den på nytt från den nya platsen, är den ursprungliga publicerade resursplatsen fortfarande tillgänglig tillsammans med den nyligen publicerade resursen. Den ursprungliga publicerade resursen *förloras* [!DNL Experience Manager] men kan inte avpubliceras. Därför bör du först avpublicera en resurs och sedan flytta den till en annan mapp.
 
 ## Ordna resurser med taggar {#use-tags-to-organize-assets}
 
-Med taggar, som metadata, kan du enkelt söka efter resurser, skapa samlingar med sökresultaten, öka rankningen för vissa resurser och använda AI-algoritmer i Adobe Sensei för att identifiera resurser.
+Med taggar, som metadata, kan du enkelt söka efter resurser, skapa samlingar med hjälp av sökresultaten, öka rankningen för vissa resurser och använda AI-algoritmer i Adobe Sensei för att identifiera resurser.
 
-Adobe Experience Manager Assets använder en självlärande algoritm för att skapa mycket beskrivande taggar som gör att du kan hitta rätt resurs med bara några klick. Smart taggning använder Adobe Sensei, vårt ramverk för artificiell intelligens och maskininlärning, som kan utbildas för att känna igen och använda både standard- och företagsspecifika taggar på bilder. Smarta taggar kan även identifiera innehåll, enskilda ord eller fraser och automatiskt använda beskrivande taggar på resurser
+[!DNL Adobe Experience Manager Assets] använder en självlärande algoritm för att skapa mycket beskrivande taggar som gör att du kan hitta rätt resurs med bara några klick. Smart taggning använder Adobe Sensei, vårt ramverk för artificiell intelligens och maskininlärning, som kan utbildas för att känna igen och använda både standard- och företagsspecifika taggar på bilder. Smarta taggar kan även identifiera innehåll, enskilda ord eller fraser och automatiskt använda beskrivande taggar på resurser
 
 Mer information finns i följande artiklar:
 
@@ -51,7 +51,7 @@ Mer information finns i följande artiklar:
 
 ## Ordna som samlingar {#organize-as-collections}
 
-Med resurssamlingar i Experience Manager Assets kan ni effektivisera möjligheterna att skapa, redigera och dela resurser mellan användare. Skapa flera typer av samlingar baserat på hur du använder dem, inklusive samlingar som innehåller en statisk referenslista över resurser, mappar och samlingar, samt samlingar som hämtar resurser baserat på sökvillkor.  Du kan också skapa samlingar med resurser från olika platser och dela dem med flera användare med olika åtkomstnivåer, behörighet att visa och redigera.
+Med resurssamlingar i [!DNL Experience Manager Assets]kan du effektivisera möjligheten att skapa, redigera och dela resurser mellan användare. Skapa flera typer av samlingar baserat på hur du använder dem, inklusive samlingar som innehåller en statisk referenslista över resurser, mappar och samlingar, samt samlingar som hämtar resurser baserat på sökvillkor.  Du kan också skapa samlingar med resurser från olika platser och dela dem med flera användare med olika åtkomstnivåer, behörighet att visa och redigera.
 
 Mer information finns i [Hantera samlingar](managing-collections-touch-ui.md)
 
@@ -62,13 +62,14 @@ Add back links to blog posts by marketing?
 
 ## Ordna dina resurser så att de använder profiler {#organize-to-use-profiles}
 
-En bearbetningsprofil innehåller resurshanteringskommandon som gäller för resurser som överförs till fördefinierade mappar. Profiler används för att automatisera bearbetningen av innehållet i en mapp eller nyligen överförda resurser. Du kan använda profiler för att ordna dina resurser bättre.
+En bearbetningsprofil innehåller [!DNL Assets] bearbetningskommandon som gäller för resurser som överförs till fördefinierade mappar. Profiler används för att automatisera bearbetningen av innehållet i en mapp eller nyligen överförda resurser. Du kan använda profiler för att ordna dina resurser bättre.
 
 Genom att standardisera metadataanvändning, filnamngivning och mappstruktur säkerställer du att du kan tillämpa bearbetningsprofiler på mappar med större precision och enhetlighet när din pool med digitala resurser växer.
 
-Mer information om olika profiler som du kan skapa och hantera för att bearbeta resurser finns i
+>[!MORELIKETHIS]
+>
+>* [Profiler för att bearbeta metadata, bilder och videoklipp](processing-profiles.md).
+>* [Metadataprofiler](metadata-profiles.md).
+>* [Videoprofiler](video-profiles.md).
+>* [Dynamic Media bildprofiler](image-profiles.md).
 
-* [Profiler för att bearbeta metadata, bilder och videoklipp](processing-profiles.md)
-* [Metadataprofiler](metadata-profiles.md)
-* [Videoprofiler](video-profiles.md)
-* [Dynamiska mediebildprofiler](image-profiles.md)
