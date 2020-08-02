@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: platform
 discoiquuid: 96dc0c1a-b21d-480a-addf-c3d0348bd3ad
 translation-type: tm+mt
-source-git-commit: 316e53720071da41cc4ac5ae62c280ad3804a8f4
+source-git-commit: 2dad235c94c73c1c624fa05ff86a7260d4d4a01b
 workflow-type: tm+mt
-source-wordcount: '2331'
+source-wordcount: '2329'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,7 @@ ht-degree: 0%
 Integreringsramverket innehåller ett integreringslager med ett API. På så sätt kan du:
 
 * koppla in ett e-handelssystem och hämta in produktdata i AEM
+
 * bygga AEM för handelsfunktioner oberoende av e-handelsmotorn
 
 ![chlimage_1-11](assets/chlimage_1-11a.png)
@@ -56,6 +57,7 @@ eCommerce-ramverket kan användas tillsammans med alla e-handelslösningar, och 
    * Implementeringen `adaptTo` söker efter en `cq:commerceProvider` egenskap i resursens hierarki:
 
       * Om det hittas används värdet för att filtrera e-handelstjänstens sökning.
+
       * Om den inte hittas används den mest rankade e-handelstjänsten.
    * En `cq:Commerce` mixin används så att `cq:commerceProvider` det kan läggas till i starkt typbestämda resurser.
 
@@ -68,8 +70,8 @@ eCommerce-ramverket kan användas tillsammans med alla e-handelslösningar, och 
 
 Se följande exempel nedan:
 
-| `cq:commerceProvider = geometrixx` | Vid en AEM standardinstallation krävs en specifik implementering. Exempel på geometrixx, som innehåller minimala tillägg till det generiska API:t |
-|---|---|
+| `cq:commerceProvider = geometrixx` | Vid en AEM standardinstallation krävs en specifik implementering. till exempel exemplet geometrixx, som innehåller minimala tillägg till det generiska API:t |
+|--- |--- |
 | `cq:commerceProvider = hybris` | hybriimplementering |
 
 ### Exempel {#example}
@@ -117,6 +119,7 @@ För att utveckla för Hybris 4 krävs följande:
 * I OSGi-konfigurationshanteraren:
 
    * Inaktivera stöd för Hybris 5 för tjänsten Default Response Parser.
+
    * Se till att tjänsten Hybris Basic Authentication Handler har en lägre prioritetsordning än tjänsten Hybris OAuth Handler.
 
 ### Sessionshantering {#session-handling}
@@ -124,7 +127,9 @@ För att utveckla för Hybris 4 krävs följande:
 hybris använder en användarsession för att lagra information som kundens kundvagn. Sessions-ID returneras från hybris i en `JSESSIONID` cookie som måste skickas på efterföljande begäran till hybris. För att undvika att lagra sessions-ID i databasen kodas det i en annan cookie som lagras i kundens webbläsare. Följande steg utförs:
 
 * På den första begäran anges ingen cookie på köparens begäran. så att en begäran skickas till hybris-instansen för att skapa en session.
+
 * Sessionskakorna extraheras från svaret, kodas i en ny cookie (till exempel `hybris-session-rest`) och anges i svaret till kunden. Kodningen i en ny cookie krävs eftersom den ursprungliga cookien bara är giltig för en viss sökväg och annars inte skulle skickas tillbaka från webbläsaren i efterföljande begäranden. Sökvägsinformationen måste också läggas till i cookie-filens värde.
+
 * På efterföljande begäranden avkodas cookies från `hybris-session-<*xxx*>` cookies och anges på HTTP-klienten som används för att begära data från hybris.
 
 >[!NOTE]
@@ -136,6 +141,7 @@ hybris använder en användarsession för att lagra information som kundens kund
 * Den här sessionen&quot;äger&quot; **kundvagnen**
 
    * utför Lägg till/ta bort/etc
+
    * utför de olika beräkningarna av varukorgen,
 
       `commerceSession.getProductPrice(Product product)`
@@ -145,6 +151,7 @@ hybris använder en användarsession för att lagra information som kundens kund
    `CommerceSession.getUserContext()`
 
 * Äger även **betalningshanteringsanslutningen**
+
 * Äger även **leveransanslutningen**
 
 ### Produktsynkronisering och -publicering {#product-synchronization-and-publishing}
@@ -163,33 +170,34 @@ Produktdata som bevaras i hybris måste finnas tillgängliga i AEM. Följande me
 * Katalogförändringar i hybris anges som AEM via en feed och sedan sprida dessa till AEM b.
 
    * Produkt som lagts till/tagits bort/ändrats i förhållande till katalogversionen.
+
    * Produkten är godkänd.
 
 * Tillägget hybris erbjuder en pollingimportör (&quot;hybris&quot;-schema&quot;) som kan konfigureras för att importera ändringar till AEM med ett angivet intervall (t.ex. var 24:e timme där intervallet anges i sekunder):
 
-   * 
-
-      ```js
-      http://localhost:4502/content/geometrixx-outdoors/en_US/jcr:content.json
-       {
-       * "jcr:mixinTypes": ["cq:PollConfig"],
-       * "enabled": true,
-       * "source": "hybris:outdoors",
-       * "jcr:primaryType": "cq:PageContent",
-       * "interval": 86400
-       }
-      ```
+   ```JavaScript
+       http://localhost:4502/content/geometrixx-outdoors/en_US/jcr:content.json
+        {
+        * "jcr:mixinTypes": ["cq:PollConfig"],
+        * "enabled": true,
+        * "source": "hybris:outdoors",
+        * "jcr:primaryType": "cq:PageContent",
+        * "interval": 86400
+        }
+   ```
 
 * Katalogkonfigurationen i AEM känner igen katalogversionerna **Staged** och **Online** .
 
 * För att kunna synkronisera produkter mellan katalogversioner måste man (ta bort) aktivera motsvarande AEM (a, c)
 
    * Om du vill lägga till en produkt i en **katalogversion online** måste du aktivera produktens sida.
+
    * Borttagning av en produkt kräver inaktivering.
 
 * Aktivering av en sida i AEM c kräver en kontroll b och är endast möjlig om
 
    * Produkten finns i en **katalogversion online** för produktsidor.
+
    * De produkter som det hänvisas till finns i en **katalogversion online** för andra sidor (t.ex. kampanjsidor).
 
 * Aktiverade produktsidor måste ha tillgång till produktdatans **onlineversion** (d).
@@ -213,7 +221,6 @@ Alla produktresurser kan representeras av en `Product API`. De flesta anrop i pr
 >[!NOTE]
 >
 >I själva verket bestäms en variantaxel av vad som än `Product.getVariantAxes()` returnerar:
->
 >* hybris definierar den för hybris-implementeringen
 >
 >
@@ -224,7 +231,7 @@ Produkter (i allmänhet) kan ha många olika axlar, men produktkomponenten som f
    >
 1. plus ytterligare
 >
->   
+>
 Den här ytterligare varianten väljs via egenskapen `variationAxis` för produktreferensen (vanligtvis `color` för Geometrixx Outdoors).
 
 #### Produktreferenser och produktdata {#product-references-and-product-data}
@@ -237,7 +244,7 @@ I allmänhet:
 
 Det måste finnas en 1:1-karta mellan produktvariationer och produktdatanoder.
 
-Produktreferenser måste också ha en nod för varje variant som presenteras - men det finns inget krav på att presentera alla variationer. Om en produkt till exempel har S-, M- eller L-variationer kan produktdata vara det.
+Produktreferenser måste också ha en nod för varje variant som presenteras - men det finns inget krav på att presentera alla variationer. Om en produkt till exempel har variationer i S, M och L kan produktinformationen vara:
 
 ```shell
 etc
@@ -249,7 +256,7 @@ etc
 |       |──shirt-l
 ```
 
-En stor och hög katalog kanske bara har det.
+En stor och hög katalog kanske bara innehåller:
 
 ```shell
 content
@@ -335,24 +342,30 @@ public class AxisFilter implements VariantFilter {
 
 * **Allmän lagringsmekanism**
 
-   * Produktnoder är inte:ostrukturerade.
+   * Produktnoderna är `nt:unstructured`.
+
    * En produktnod kan vara antingen:
 
       * En referens med produktdata lagrade någon annanstans:
 
          * Produktreferenser innehåller en `productData` egenskap som pekar på produktdata (vanligtvis under `/etc/commerce/products`).
+
          * Produktinformationen är hierarkisk. produktattribut ärvs från en produktdatanodens överordnade.
+
          * Produktreferenser kan också innehålla lokala egenskaper som åsidosätter de som anges i deras produktdata.
       * En produkt i sig:
 
          * Utan en `productData` egenskap.
+
          * En produktnod som innehåller alla egenskaper lokalt (och inte innehåller någon productData-egenskap) ärver produktattribut direkt från sina egna överordnade.
 
 
 * **AEM produktstruktur**
 
    * Varje variant måste ha en egen lövnod.
+
    * Produktgränssnittet representerar både produkter och varianter, men den relaterade databasnoden är specifik för vilken den är.
+
    * Produktnoden beskriver produktattribut och variantaxlar.
 
 #### Exempel {#example-1}
@@ -507,6 +520,7 @@ De tre elementen `CommerceSession` äger:
 **Betalningshantering**
 
 * Betalningsanslutningen äger också `CommerceSession` anslutningen för betalningshantering.
+
 * Implementerare måste lägga till specifika anrop (till den valda betalningshanteringstjänsten) till `CommerceSession` implementeringen.
 
 **Orderuppfyllelse**
