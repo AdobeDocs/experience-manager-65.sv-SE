@@ -1,44 +1,38 @@
 ---
 title: Funktionsstatus för Touch UI
-description: Versionsinformation som är specifik för Adobe Experience Manager Touch-aktiverat användargränssnitt.
-uuid: ceb081cc-7c33-4408-8032-3ac83d461268
-contentOwner: msm-service
-products: SG_EXPERIENCEMANAGER/6.5
-discoiquuid: f736581d-e6ea-4ec8-bfc7-16b9aa592097
-docset: aem65
+description: Versionsinformation som är specifik [!DNL Adobe Experience Manager] för användargränssnittet som har pekfunktioner.
 translation-type: tm+mt
-source-git-commit: 57bad4e74b2dfd9e389643bfe58ef25564c5c545
+source-git-commit: d938f52766154b68df2f6db2c8c49a0ad97e7e6d
+workflow-type: tm+mt
+source-wordcount: '1063'
+ht-degree: 1%
 
 ---
 
 
-# Funktionsstatus för Touch UI{#touch-ui-feature-status}
+# Funktionsstatus för Touch UI {#touch-ui-feature-status}
 
->[!CAUTION]
->
->[Klassiskt användargränssnitt har tagits bort](../release-notes/deprecated-removed-features.md) sedan AEM 6.4. Adobe planerar inte att göra fler förbättringar av det klassiska användargränssnittet och användarna uppmuntras att utnyttja de nya kraftfulla funktionerna som finns i det pekaktiverade användargränssnittet.
+AEM 6.4 och senare är [Classic UI föråldrat](../release-notes/deprecated-removed-features.md). Adobe kommer inte att göra några ytterligare förbättringar av det klassiska användargränssnittet, och användare uppmanas att utnyttja de nya kraftfulla funktionerna i det beröringskänsliga användargränssnittet.
 
-Från och med version 6.0 har AEM introducerat ett nytt användargränssnitt som kallas &quot;pekaktiverat användargränssnitt&quot; (kallas även&quot;pekgränssnitt&quot;) som är anpassat till Adobe Marketing Cloud och till de allmänna riktlinjerna för Adobes användargränssnitt. Med nästan samma funktionsparitet har detta blivit standardgränssnittet i AEM med det äldre skrivbordsorienterade gränssnittet som kallas&quot;klassiskt användargränssnitt&quot;.
+Från och med version 6.0 har AEM introducerat ett nytt användargränssnitt som kallas &quot;pekaktiverat användargränssnitt&quot; (kallas helt enkelt &quot;Touch-användargränssnitt&quot;) som är anpassat till de allmänna riktlinjerna för användargränssnittet i [!DNL Adobe Experience Cloud] och Adobe. Med nästan samma funktionsparitet har detta blivit standardgränssnittet i AEM med det äldre skrivbordsorienterade gränssnittet som kallas &quot;klassiskt gränssnitt&quot;.
 
 De flesta funktioner finns i det beröringskänsliga användargränssnittet, men det finns funktioner som ännu inte är fullständiga och som kommer att läggas till i framtida versioner.
 
 Följande lista visar aktuell status för funktionerna som implementerats i AEM 6.5.
 
-Rekommendationer för kunder som uppgraderar till AEM 6.5 finns i [Användargränssnittsrekommendationer för kunder](/help/sites-deploying/ui-recommendations.md) .
+Rekommendationer för kunder som uppgraderar till AEM 6.5 finns i [Användargränssnittets rekommendationer för kunder](/help/sites-deploying/ui-recommendations.md).
 
 >[!NOTE]
 >
->Observera att den här sidan endast omfattar funktionsparitet med klassiskt användargränssnitt.
->
->Funktioner som lagts till och är unika för det beröringsaktiverade användargränssnittet och som inte finns i det klassiska användargränssnittet visas inte.
+>Den här sidan täcker endast funktionsparitet med klassiskt användargränssnitt. Funktioner som lagts till i och är unika för det Touch-aktiverade användargränssnittet som inte finns i det klassiska användargränssnittet visas inte.
 
 >[!NOTE]
 >
->Denna förteckning skall vara fullständig, men skall inte anses uttömmande.
+>Denna lista strävar efter att vara fullständig, men är inte uttömmande.
 
 ## Förklaring {#legend}
 
-* **Fullständigt**: Funktionen är helt tillgänglig i det beröringskänsliga användargränssnittet
+* **Fullständigt**: Funktionen är helt tillgänglig i det beröringskänsliga användargränssnittet.
 * **Mest**: Funktionen är oftast tillgänglig i det beröringskänsliga användargränssnittet.
 * **Saknas**: Funktionen finns inte i det beröringsaktiverade användargränssnittet, det klassiska användargränssnittet måste användas för att utföra den här åtgärden.
 * **Ersatt**: Funktionen har ersatts med en ny implementering som fungerar annorlunda.
@@ -46,617 +40,140 @@ Rekommendationer för kunder som uppgraderar till AEM 6.5 finns i [Användargrä
 
 ## Funktionsstatus: Webbplatsadministratör {#feature-status-sites-admin}
 
-Det här är en lista över funktioner som den klassiska användargränssnittsadministratören ( `/siteadmin`) har och status i det beröringskänsliga användargränssnittet ( `/sites.html`).
+Det här är en lista över funktioner som den klassiska administratören för användargränssnitt (`/siteadmin`) har och status i det beröringskänsliga användargränssnittet (`/sites.html`).
 
-<table>
- <tbody>
-  <tr>
-   <td><strong>Funktion<br /> </strong></td>
-   <td><strong>Status<br /> </strong></td>
-   <td><strong>Kommentar</strong></td>
-  </tr>
-  <tr>
-   <td>Navigera i webbplatshierarkin</td>
-   <td>Slutförd<br /> </td>
-   <td>I AEM 6.4 introducerades en <a href="/help/sites-authoring/basic-handling.md#content-tree">innehållsträdsvy</a>.</td>
-  </tr>
-  <tr>
-   <td>Starta arbetsflöde</td>
-   <td>Slutförd<br /> </td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Skapa ny sida</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Skapa ny plats</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Skapa ny start</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Skapa ny livecopy <br /> </td>
-   <td>Slutförd<br /> </td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Skapa mapp</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Visa publiceringsstatus</td>
-   <td>Slutförd</td>
-   <td>Från och med AEM 6.5 visas arbetsflödets status i listvyn</td>
-  </tr>
-  <tr>
-   <td>Sök</td>
-   <td>Slutförd<br /> </td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Kopiera/klistra in sida (duplicera)</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Flytta sida/sidor</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Publicera sidor</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Publicera sidor utan replikeringsrättigheter</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Publicera senare</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Publiceringsträd</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Avpublicera sidor</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Avpublicera sidor utan replikeringsrättigheter</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Avpublicera senare</td>
-   <td>Slutförd<br /> </td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Ta bort</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Lås/lås upp</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Visa/redigera egenskaper</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Ange behörigheter på sidor</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Versionshistorik</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Återställ version</td>
-   <td>Slutförd<br /> </td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Återställ träd och återställa borttagna sidor</td>
-   <td>Saknas</td>
-   <td>Använd klassiskt gränssnitt.</td>
-  </tr>
-  <tr>
-   <td>Visa skillnad mellan gammal och aktuell version<br /> </td>
-   <td>Slutförd<br /> </td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Livecopy-åtgärder (utrullning)</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Se språkkopior</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Sök och ersätt</td>
-   <td>Saknas<br /> </td>
-   <td>Använd klassiskt gränssnitt.</td>
-  </tr>
-  <tr>
-   <td>Inkorgen för meddelanden (JCR-händelser)</td>
-   <td>Saknas</td>
-   <td>Använd klassiskt gränssnitt. Ersätts med annan implementering.</td>
-  </tr>
-  <tr>
-   <td>Referenser</td>
-   <td>Slutförd</td>
-   <td>Visa inkommande sidlänkar som lagts till i AEM 6.5.<br /> </td>
-  </tr>
- </tbody>
-</table>
+| Funktion | Status | Kommentar |
+|--- |--- |--- |
+| Navigera i webbplatshierarkin | Slutförd | I AEM 6.4 introducerades en [innehållsträdsvy](/help/sites-authoring/basic-handling.md#content-tree). |
+| Starta arbetsflöde | Slutförd |  |
+| Skapa ny sida | Slutförd |  |
+| Skapa ny plats | Slutförd |  |
+| Skapa ny start | Slutförd |  |
+| Skapa ny livecopy | Slutförd |  |
+| Skapa mapp | Slutförd |  |
+| Visa publiceringsstatus | Slutförd | Från och med AEM 6.5 visas arbetsflödets status i listvyn. |
+| Sökning | Slutförd |  |
+| Kopiera och klistra in sida (duplicera) | Slutförd |  |
+| Flytta sida/sidor | Slutförd |  |
+| Publicera sidor | Slutförd |  |
+| Publicera sidor utan replikeringsrättigheter | Slutförd |  |
+| Publicera senare | Slutförd |  |
+| Publiceringsträd | Slutförd |  |
+| Avpublicera sidor | Slutförd |  |
+| Avpublicera sidor utan replikeringsrättigheter | Slutförd |  |
+| Avpublicera senare | Slutförd |  |
+| Ta bort | Slutförd |  |
+| Lås/lås upp | Slutförd |  |
+| Visa/redigera egenskaper | Slutförd |  |
+| Ange behörigheter på sidor | Slutförd |  |
+| Versionshistorik | Slutförd |  |
+| Återställ version | Slutförd |  |
+| Återställ träd och återställa borttagna sidor | Saknas | Använd klassiskt gränssnitt. |
+| Visa skillnad mellan gammal och aktuell version | Slutförd |  |
+| Livecopy-åtgärder (utrullning) | Slutförd |  |
+| Se språkkopior | Slutförd |  |
+| Sök och ersätt | Saknas | Använd klassiskt gränssnitt. |
+| Inkorgen för meddelanden (JCR-händelser) | Saknas | Använd klassiskt gränssnitt. Ersätts med annan implementering. |
+| Referenser | Slutförd | Visa inkommande sidlänkar som lagts till i AEM 6.5. |
 
 ## Funktionsstatus: Page Editor {#feature-status-page-editor}
 
-Det här är en lista över funktioner som den klassiska sidredigeraren i användargränssnittet ( `/cf#`) har och status för den beröringsaktiverade ( `/editor.html`).
+Det här är en lista över funktioner som den klassiska sidredigeraren (`/cf#`) har och status i den beröringsaktiverade (`/editor.html`).
 
-<table>
- <tbody>
-  <tr>
-   <td><strong>Funktion</strong></td>
-   <td><strong>Status</strong></td>
-   <td><strong>Kommentar</strong></td>
-  </tr>
-  <tr>
-   <td>Redigera webbsidor</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Redigera mobilwebbsidor<br /> </td>
-   <td>Slutförd<br /> </td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Redigera innehåll som importerats via Design Importer<br /> </td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Redigera e-post</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Redigera hybrida mobilappar</td>
-   <td>Slutförd<br /> </td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Redigera formulär</td>
-   <td>Slutförd<br /> </td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Redigera erbjudanden</td>
-   <td>Slutförd<br /> </td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Redigera arbetsflödesmodeller<br /> </td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>kod: Redigera och förhandsgranska</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Responsiv förhandsgranskning<br /> </td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Läge: Redigera design</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Läge: Ställning</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Läge: Live Copy-status<br /> </td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Lägg till anteckningar</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Redigera egenskaper<br /> </td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Rullande sida</td>
-   <td>Slutförd<br /> </td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Starta och visa arbetsflöde</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Hantering av arbetsflödespaket</td>
-   <td>Mest</td>
-   <td>Helt åtkomligt i användargränssnittet med pekfunktion. Flera arbetsflödesnyttolaster visas fortfarande i det klassiska användargränssnittet.<br /> </td>
-  </tr>
-  <tr>
-   <td>Lås/lås upp sida</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Publicera sida <br /> </td>
-   <td>Slutförd<br /> </td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Avpublicera sida</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Kopiera sida</td>
-   <td>Borttagen<br /> </td>
-   <td>Använd Webbplatsadministratör för att <a href="/help/sites-authoring/managing-pages.md#copying-and-pasting-a-page">kopiera sidor</a>.<br /> </td>
-  </tr>
-  <tr>
-   <td>Flytta sida</td>
-   <td>Borttagen</td>
-   <td>Använd Webbplatsadministratör för att <a href="/help/sites-authoring/managing-pages.md#moving-or-renaming-a-page">flytta sidor</a>.<br /> </td>
-  </tr>
-  <tr>
-   <td>Ta bort sida</td>
-   <td>Borttagen</td>
-   <td>Använd Webbplatsadministratör för att <a href="/help/sites-authoring/managing-pages.md#deleting-a-page">ta bort sidor</a>.<br /> </td>
-  </tr>
-  <tr>
-   <td>Visa referenser</td>
-   <td>Borttagen</td>
-   <td>Använd Webbplatsadministratör för att <a href="/help/sites-authoring/author-environment-tools.md#references">se den detaljerade referenslistan</a>.<br /> </td>
-  </tr>
-  <tr>
-   <td>Granskningslogg</td>
-   <td>Borttagen</td>
-   <td>Använd Webbplatsadministratör och <a href="/help/sites-authoring/author-environment-tools.md#events-timeline">öppen aktivitetsfältet</a>.<br /> </td>
-  </tr>
-  <tr>
-   <td>Skapa version</td>
-   <td>Borttagen</td>
-   <td>Använd Webbplatsadministratör för att <a href="/help/sites-authoring/working-with-page-versions.md#creating-a-new-version">skapa nya versioner</a>.<br /> </td>
-  </tr>
-  <tr>
-   <td>Återställ version</td>
-   <td>Borttagen</td>
-   <td>Använd Webbplatsadministratör för att <a href="/help/sites-authoring/working-with-page-versions.md#reverting-to-a-page-version">återställa versioner</a>.</td>
-  </tr>
-  <tr>
-   <td>Växla startprogram</td>
-   <td>Borttagen</td>
-   <td>Använd Webbplatsadministratör för att <a href="/help/sites-authoring/launches-promoting.md">växla mellan starter</a>.<br /> </td>
-  </tr>
-  <tr>
-   <td>Översätt sida</td>
-   <td>Borttagen</td>
-   <td>Använd Webbplatsadministratör för att <a href="/help/sites-administering/tc-manage.md">lägga till sidor i översättningsprojekt</a>.<br /> </td>
-  </tr>
-  <tr>
-   <td>Timewarp (välj datum/tid och bläddra på webbplatsen efter utseendet)<br /> </td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Ange behörigheter</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Användargränssnitt för klientkontext<br /> </td>
-   <td>Ersatt</td>
-   <td>Använd <a href="/help/sites-authoring/ch-previewing.md">ContextHub</a> -gränssnittet framåt.</td>
-  </tr>
-  <tr>
-   <td>Content Finder för de olika medietyperna<br /> </td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Komponentlista</td>
-   <td>Slutförd<br /> </td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Kopiera och klistra in komponenter<br /> </td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Lista över komponenter i Urklipp</td>
-   <td>Saknas</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Ångra/Gör om</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Dra och släpp innehåll i komponentplatshållaren</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Dra-och-släpp material direkt i en platshållare med automatisk komponentframtagning<br /> </td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Funktion | Status | Kommentar |
+|--- |--- |--- |
+| Redigera webbsidor | Slutförd |  |
+| Redigera mobilwebbsidor | Slutförd |  |
+| Redigera innehåll som importerats via Design Importer | Slutförd |  |
+| Redigera e-post | Slutförd |  |
+| Redigera hybrida mobilappar | Slutförd |  |
+| Redigera Forms | Slutförd |  |
+| Redigera erbjudanden | Slutförd |  |
+| Redigera arbetsflödesmodeller | Slutförd |  |
+| Läge: Redigera och förhandsgranska | Slutförd |  |
+| Responsiv förhandsgranskning | Slutförd |  |
+| Läge: Redigera design | Slutförd |  |
+| Läge: Ställning | Slutförd |  |
+| Läge: Live Copy-status | Slutförd |  |
+| Lägg till anteckningar | Slutförd |  |
+| Redigera egenskaper | Slutförd |  |
+| Rullande sida | Slutförd |  |
+| Starta och visa arbetsflöde | Slutförd |  |
+| Hantering av arbetsflödespaket | Mest | Helt åtkomligt i användargränssnittet med pekfunktion. Flera arbetsflödesnyttolaster visas fortfarande i det klassiska användargränssnittet. |
+| Lås/lås upp sida | Slutförd |  |
+| Publicera sida | Slutförd |  |
+| Avpublicera sida | Slutförd |  |
+| Kopiera sida | Borttagen | Använd Webbplatsadministratör för att [kopiera sidor](/help/sites-authoring/managing-pages.md#copying-and-pasting-a-page). |
+| Flytta sida | Borttagen | Använd Webbplatsadministratör för att [flytta sidor](/help/sites-authoring/managing-pages.md#moving-or-renaming-a-page). |
+| Ta bort sida | Borttagen | Använd Webbplatsadministratör för att [ta bort sidor](/help/sites-authoring/managing-pages.md#deleting-a-page). |
+| Visa referenser | Borttagen | Använd Webbplatsadministratör för att se den [detaljerade referenslistan](/help/sites-authoring/author-environment-tools.md#references). |
+| Granskningslogg | Borttagen | Använd Webbplatsadministratör och [öppen aktivitetsfältet](/help/sites-authoring/author-environment-tools.md#events-timeline). |
+| Skapa version | Borttagen | Använd Webbplatsadministratör för att [skapa nya versioner](/help/sites-authoring/working-with-page-versions.md#creating-a-new-version). |
+| Återställ version | Borttagen | Använd Webbplatsadministratör för att [återställa versioner](/help/sites-authoring/working-with-page-versions.md#reverting-to-a-page-version). |
+| Växla startprogram | Borttagen | Använd Webbplatsadministratör för att [växla mellan starter](/help/sites-authoring/launches-promoting.md). |
+| Översätt sida | Borttagen | Använd Webbplatsadministratör för att [lägga till sidor i översättningsprojekt](/help/sites-administering/tc-manage.md). |
+| Timewarp (välj datum/tid och bläddra på webbplatsen efter utseendet) | Slutförd |  |
+| Ange behörigheter | Slutförd |  |
+| Användargränssnitt för klientkontext | Ersatt | Använd [ContextHub](/help/sites-authoring/ch-previewing.md) -gränssnittet framåt. |
+| Content Finder för de olika medietyperna | Slutförd |  |
+| Komponentlista | Slutförd |  |
+| Kopiera och klistra in komponenter | Slutförd |  |
+| Lista över komponenter i Urklipp | Saknas |  |
+| Ångra/Gör om | Slutförd |  |
+| Dra innehåll till komponentplatshållaren | Slutförd |  |
+| Dra innehåll direkt till en platshållare för parsys med automatisk komponentgenerering | Slutförd |  |
 
 ## Funktionsstatus: Text-, tabell- och bildredigerare {#feature-status-text-table-and-image-editors}
 
 Det här är en lista över funktioner som det klassiska användargränssnittet för text, tabell och bildredigering har och status i det beröringskänsliga användargränssnittet.
 
-<table>
- <tbody>
-  <tr>
-   <td><strong>Funktion</strong></td>
-   <td><strong>Status </strong></td>
-   <td><strong>Kommentar<br /> </strong></td>
-  </tr>
-  <tr>
-   <td>RTF-redigerare</td>
-   <td>Slutförd</td>
-   <td>Kan användas på plats, i dialogrutor och i helskärmsläge.</td>
-  </tr>
-  <tr>
-   <td>Aktivera/inaktivera RTE-plugin-program</td>
-   <td>Slutförd<br /> </td>
-   <td>Kan göras med <a href="/help/sites-authoring/templates.md">mallredigeraren</a>.</td>
-  </tr>
-  <tr>
-   <td>Använd RTE för oformaterad text</td>
-   <td>Slutförd<br /> </td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>RTE-plugin: Länkar och ankarpunkt</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>RTE-plugin: Teckenuppsättning</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>RTE-plugin: Kopiera/klistra in</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>RTE-plugin: Klistra in från Microsoft Word<br /> </td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>RTE-plugin:Sök och ersätt</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>RTE-plugin: Textformat (fet, ...)</td>
-   <td>Slutförd<br /> </td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>RTE-plugin: Under och upphöjd text</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>RTE-plugin: Justera</td>
-   <td>Slutförd<br /> </td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>RTE-plugin: Listor (punkt / nummer)</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>RTE-plugin: Styckeformat</td>
-   <td>Slutförd<br /> </td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>RTE-plugin: Textformat</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>RTE-plugin: Källredigeraren (Redigera HTML)<br /> </td>
-   <td>Slutförd<br /> </td>
-   <td>Endast tillgängligt i dialogruta och i helskärmsläge.<br /> </td>
-  </tr>
-  <tr>
-   <td>RTE-plugin:Stavningskontroll</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>RTE-plugin: Tabell (inbäddad tabellredigerare)</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>RTE-plugin: Ångra/Gör om<br /> </td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>RTE-plugin: Tillåt textbundna bilder</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Tabellredigerare</td>
-   <td>Slutförd</td>
-   <td>Kan användas på plats, i dialogrutor och i helskärmsläge.<br /> </td>
-  </tr>
-  <tr>
-   <td>Dra och släpp bild i tabellcell<br /> </td>
-   <td>Slutförd</td>
-   <td>Användbart online</td>
-  </tr>
-  <tr>
-   <td>Bildredigeraren<br /> </td>
-   <td>Slutförd</td>
-   <td>Kan användas på plats, i dialogrutor och i helskärmsläge.<br /> </td>
-  </tr>
-  <tr>
-   <td>Aktivera/inaktivera IPE-plugin-program</td>
-   <td>Slutförd</td>
-   <td>I AEM 6.3 introducerades ett gränssnitt i <a href="/help/sites-authoring/templates.md">mallredigeraren</a>.</td>
-  </tr>
-  <tr>
-   <td>IPE-plugin: Beskär</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>IPE-plugin: Vänd</td>
-   <td>Slutförd<br /> </td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>IPE-plugin: Ångra/Gör om</td>
-   <td>Slutförd<br /> </td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>IPE-plugin: Bildschema</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>IPE-plugin: Rotera</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>IPE-plugin: Zooma</td>
-   <td>Slutförd<br /> </td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Funktion | Status | Kommentar |
+|--- |--- |--- |
+| RTF-redigerare | Slutförd | Kan användas på plats, i dialogrutor och i helskärmsläge. |
+| Aktivera/inaktivera RTE-plugin-program | Slutförd | Kan göras med [mallredigeraren](/help/sites-authoring/templates.md). |
+| Använd RTE för oformaterad text | Slutförd |  |
+| RTE-plugin: Länkar och ankare | Slutförd |  |
+| RTE-plugin: Teckenuppsättning | Slutförd |  |
+| RTE-plugin: Kopiera/klistra in | Slutförd |  |
+| RTE-plugin: Klistra in från Microsoft Word | Slutförd |  |
+| RTE-plugin: Sök och ersätt | Slutförd |  |
+| RTE-plugin: Textformat (fet, ...) | Slutförd |  |
+| RTE-plugin: Under- och upphöjd text | Slutförd |  |
+| RTE-plugin: Justera | Slutförd |  |
+| RTE-plugin: Listor (punkt / nummer) | Slutförd |  |
+| RTE-plugin: Styckeformat | Slutförd |  |
+| RTE-plugin: Textformat | Slutförd |  |
+| RTE-plugin: Källredigeraren (Redigera HTML) | Slutförd | Endast tillgängligt i dialogruta och i helskärmsläge. |
+| RTE-plugin: Stavningskontroll | Slutförd |  |
+| RTE-plugin: Tabell (inbäddad tabellredigerare) | Slutförd |  |
+| RTE-plugin: Ångra/Gör om | Slutförd |  |
+| RTE-plugin: Tillåt textbundna bilder | Slutförd |  |
+| Tabellredigerare | Slutförd | Kan användas på plats, i dialogrutor och i helskärmsläge. |
+| Dra bild till tabellcell | Slutförd | Användbart online |
+| Bildredigeraren | Slutförd | Kan användas på plats, i dialogrutor och i helskärmsläge. |
+| Aktivera/inaktivera IPE-plugin-program | Slutförd | AEM 6.3 introducerade ett användargränssnitt i [mallredigeraren](/help/sites-authoring/templates.md). |
+| IPE-plugin: Beskär | Slutförd |  |
+| IPE-plugin: Vänd | Slutförd |  |
+| IPE-plugin: Ångra/Gör om | Slutförd |  |
+| IPE-plugin: Bildschema | Slutförd |  |
+| IPE-plugin: Rotera | Slutförd |  |
+| IPE-plugin: Zooma | Slutförd |  |
 
 ## Funktionsstatus: verktyg {#feature-status-tools}
 
 Det här är en lista över olika verktyg som det klassiska användargränssnittet har och status i det beröringsaktiverade användargränssnittet.
 
-<table>
- <tbody>
-  <tr>
-   <td><strong>Funktion<br /> </strong></td>
-   <td><strong>Status<br /> </strong></td>
-   <td><strong>Kommentar</strong></td>
-  </tr>
-  <tr>
-   <td>Aktivitetshantering</td>
-   <td>Ersatt</td>
-   <td>6.0 introducerade <a href="/help/sites-authoring/projects.md">projekt och uppgifter</a>.<br /> </td>
-  </tr>
-  <tr>
-   <td>Inkorgen för arbetsflöde<br /> </td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Konfiguration av arbetsflöde till sidmall (<code>/etc/workflow/wcm/templates.html</code>)</td>
-   <td>Saknas<br /> </td>
-   <td>Använd klassiskt gränssnitt.</td>
-  </tr>
-  <tr>
-   <td>Taggning av administratörsgränssnitt<br /> </td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>MSM/Blueprint Control Center</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Gränssnitt för BluPrint Manager</td>
-   <td>Slutförd</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Gränssnitt för konfiguration av utrullning</td>
-   <td>Saknas</td>
-   <td>Använd klassiskt gränssnitt.</td>
-  </tr>
-  <tr>
-   <td>Användargränssnitt för användare, grupper och behörigheter<br /> </td>
-   <td>Mest komplett<br /> </td>
-   <td>Använd Classic UI om du vill ha mer behörighet.<br /> </td>
-  </tr>
-  <tr>
-   <td>Rensa versioner (<code>/etc/versioning/purge.html</code>)</td>
-   <td>Saknas</td>
-   <td>Använd klassiskt gränssnitt.</td>
-  </tr>
-  <tr>
-   <td>Extern länkkontroll (<code>/etc/linkchecker.html</code>)</td>
-   <td>Saknas</td>
-   <td>Använd klassiskt gränssnitt.<br /> </td>
-  </tr>
-  <tr>
-   <td>Massredigerare (<code>/etc/importers/bulkeditor.html</code>)</td>
-   <td>Saknas<br /> </td>
-   <td>Använd klassiskt gränssnitt.</td>
-  </tr>
-  <tr>
-   <td>Överför miniatyrbilder för att lägga till eller skriva över dem<br /> </td>
-   <td>Saknas</td>
-   <td>Använd klassiskt gränssnitt.</td>
-  </tr>
- </tbody>
-</table>
-
+| Funktion | Status | Kommentar |
+|--- |--- |--- |
+| Aktivitetshantering | Ersatt | 6.0 innehåller projekt och uppgifter. |
+| Inkorgen för arbetsflöde | Slutförd |  |
+| Konfiguration av arbetsflöde till sidmall (`/etc/workflow/wcm/templates.html`) | Saknas | Använd klassiskt gränssnitt. |
+| Taggning av administratörsgränssnitt | Slutförd |  |
+| MSM/Blueprint Control Center | Slutförd |  |
+| Gränssnitt för BluPrint Manager | Slutförd |  |
+| Gränssnitt för konfiguration av utrullning | Saknas | Använd klassiskt gränssnitt. |
+| Användargränssnitt, grupper och behörigheter | Mest komplett | Använd Classic UI om du vill ha mer behörighet. |
+| Rensa versioner (`/etc/versioning/purge.html`) | Saknas | Använd klassiskt gränssnitt. |
+| Extern länkkontroll (`/etc/linkchecker.html`) | Saknas | Använd klassiskt gränssnitt. |
+| Massredigerare (`/etc/importers/bulkeditor.html`) | Saknas | Använd klassiskt gränssnitt. |
+| Överför miniatyrbilder för att lägga till eller skriva över dem | Saknas | Använd klassiskt gränssnitt. |
