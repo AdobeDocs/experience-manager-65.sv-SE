@@ -1,18 +1,18 @@
 ---
-title: Versionsinformation om Adobe Experience Manager Assets
-description: De nya funktionerna och förbättringarna i Adobe Experience Manager 6.5 Assets.
+title: Versionsinformation om [!DNL Adobe Experience Manager Assets] 6.5.
+description: De nya funktionerna och förbättringarna i [!DNL Adobe Experience Manager] 6.5 [!DNL Assets].
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '901'
 ht-degree: 2%
 
 ---
 
 
-# Versionsinformation om Adobe Experience Manager Assets {#aem-assets-release-notes}
+# [!DNL Adobe Experience Manager Assets] versionsinformation {#aem-assets-release-notes}
 
-Här är de viktigaste funktionerna och nyheterna i Adobe Experience Manager 6.5 Assets-versionen.
+Här är de viktigaste funktionerna och högdagrarna i [!DNL Adobe Experience Manager] version 6.5 [!DNL Assets] .
 
 ## Integration med [!DNL Adobe Creative Cloud] kreativa arbetsflöden {#integration-with-adobe-creative-cloud-and-creative-workflows}
 
@@ -24,7 +24,7 @@ Läs vidare för att lära dig mer om de specifika funktioner och integreringar 
 
 [!DNL Adobe Asset Link] stärker samarbetet mellan kreatörer och marknadsförare när det gäller att skapa innehåll. Kreatörerna kan komma åt innehåll som lagras i [!DNL Experience Manager Assets]utan att lämna de program de är mest bekanta med. Med hjälp av panelen i appen i [!DNL Adobe Photoshop], [!DNL Adobe Illustrator]och i [!DNL Adobe InDesign] appar kan du smidigt bläddra bland, söka efter, checka ut och checka in resurser.
 
-[!DNL Adobe Asset Link] ingår i [Creative Cloud for enterprise](https://www.adobe.com/creativecloud/business/enterprise.html) -erbjudandet. Mer information om det, inklusive nödvändig konfiguration av din [!DNL Experience Manager] distribution, finns i [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html).
+[!DNL Adobe Asset Link] ingår i [Creative Cloud for enterprise](https://www.adobe.com/creativecloud/business/enterprise.html) -erbjudandet. Mer information om den, inklusive nödvändig konfiguration av din [!DNL Experience Manager] distribution, finns i [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html).
 
 ![Söka efter resurser i Adobe Photoshop](assets/asset_search_photoshop.png)
 
@@ -34,9 +34,9 @@ Organisationen kan använda sin [!DNL Adobe Stock] Enterprise-plan i för [!DNL 
 
 [!DNL Adobe Stock] ger designers och företag tillgång till miljontals utvalda och royaltyfria foton, vektorer, illustrationer, videor, mallar och 3D-resurser av hög kvalitet för alla kreativa projekt.
 
-Mer information finns i [Använda Adobe Stock-resurser i Experience Manager-resurser](/help/assets/aem-assets-adobe-stock.md).
+Mer information finns i [Använda Adobe Stock-resurser i Experience Manager Assets](/help/assets/aem-assets-adobe-stock.md).
 
-![Förhandsgranska Adobe Stock-bild och licensiera inifrån Experience Manager Assets](assets/stock_image_preview_license_options.png)
+![Förhandsgranska Adobe Stock-bilder och licenser inifrån Experience Manager Assets](assets/stock_image_preview_license_options.png)
 
 *Bild: Förhandsgranska[!DNL Adobe Stock]bild och licensiera inifrån[!DNL Experience Manager Assets].*
 
@@ -78,11 +78,11 @@ Hantera dina 360-videofiler direkt i [!DNL Experience Manager] de allra senaste 
 
 Nu kan du anpassa miniatyrbilderna för videomaterialet med hjälp av bildrutor från själva videon eller annat innehåll som lagras i DAM. Mer information finns i [Om videominiatyrer](/help/assets/video.md#about-video-thumbnails-in-dynamic-media-scene-mode).
 
-### Förbättringar av hjälpmedel {#accessibility-enhancements}
+### Förbättrad tillgänglighet {#accessibility-enhancements}
 
 [!DNL Dynamic Media] visningsprogrammen har nu stöd för förbättrade hjälpmedelsfunktioner som Aria-support, skärmläsare och Alt-text. Mer information finns i Versionsinformation om [Dynamic Media-visningsprogram](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html).
 
-## Förbättrad sökupplevelse {#search-experience-enhancement}
+## Förbättrad sökupplevelse {#experience-enhancement-for-searching}
 
 [!DNL Experience Manager] 6.5 Från och med sökresultatsidan kan marknadsförarna hitta de önskade resurserna snabbare. Sökmetoderna uppdateras med antalet resurser även innan sökfiltret används. Genom att se det förväntade antalet mot filtret kan användarna navigera effektivt genom sökresultaten. Mer information finns i [Söka efter resurser i Experience Manager](../assets/search-assets.md).
 
