@@ -3,10 +3,10 @@ title: Söka efter fasetter.
 description: Skapa, ändra och använda sökfunktioner i [!DNL Adobe Experience Manager].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: c7f06670ca8b488a661fde7a133bce6886ee7f5d
 workflow-type: tm+mt
-source-wordcount: '2343'
-ht-degree: 14%
+source-wordcount: '2340'
+ht-degree: 15%
 
 ---
 
@@ -134,7 +134,7 @@ Om du vill använda en befintlig nod anger du den i valdialogrutan.
 
 Med Multi Value Property-predikatet kan du söka efter resurser efter flera värden. Tänk dig ett scenario där du har bilder av flera produkter i [!DNL Assets] och där metadata för varje bild innehåller ett SKU-nummer som är kopplat till produkten. Du kan använda det här predikatet för att söka efter produktbilder baserat på flera SKU-nummer.
 
-1. Klicka på logotypen [!DNL Experience Manager och gå sedan till **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
+1. Click the [!DNL Experience Manager] logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
 1. På sidan Sök i Forms väljer du **[!UICONTROL Assets Admin Search Rail]** ikonen **[!UICONTROL Edit]** Redigera ![](assets/do-not-localize/aemassets_edit.png).
 1. På sidan Redigera sökformulär drar du **[!UICONTROL Multi Value Property Predicate]** från fliken **[!UICONTROL Select Predicate]** till huvudrutan.
 1. In the **[!UICONTROL Settings]** tab, enter a label and placeholder text for the predicate. Specify the property name based on which the search is to be performed in the property field, for example `jcr:content/metadata/dc:value`. Du kan också använda valdialogrutan för att välja en nod.
