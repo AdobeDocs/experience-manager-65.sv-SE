@@ -4,9 +4,9 @@ description: Lär dig resurshanteringsåtgärder som överföring, hämtning, re
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 8c481c9a5052ff057ae0857c2ac825cec2b26269
+source-git-commit: ee94193ff31c60e954be0070ecf84e447effc4f6
 workflow-type: tm+mt
-source-wordcount: '8987'
+source-wordcount: '9011'
 ht-degree: 3%
 
 ---
@@ -524,9 +524,9 @@ Mer information om att generera och visa delresurser finns i [Hantera delresurse
 
 ## Ta bort resurser {#deleting-assets}
 
-Om du vill lösa eller ta bort inkommande referenser från andra sidor uppdaterar du de relevanta referenserna innan du tar bort en resurs.
+Användaren måste ha borttagningsbehörighet för att kunna ta bort resurser `dam/asset`. Om du bara har ändringsbehörighet kan du bara redigera metadata för resursen och lägga till anteckningar till resursen. Du kan dock inte ta bort resursen eller dess metadata.
 
-Du kan även inaktivera Tvinga borttagningsknappen med hjälp av en övertäckning, så att användare inte kan ta bort refererade resurser och lämna brutna länkar.
+Om du vill lösa eller ta bort inkommande referenser från andra sidor uppdaterar du de relevanta referenserna innan du tar bort en resurs. Om du inte vill att användare ska kunna ta bort refererade resurser och lämna brutna länkar inaktiverar du alternativet för att ta bort force med en övertäckning.
 
 1. Navigera till platsen för de resurser som du vill ta bort.
 
@@ -542,11 +542,9 @@ Du kan även inaktivera Tvinga borttagningsknappen med hjälp av en övertäckni
 
    >[!NOTE]
    >
-   >Användaren måste ha borttagningsbehörighet för att kunna ta bort resurser `dam/asset`. Om du bara har ändringsbehörighet kan du bara redigera metadata för resursen och lägga till anteckningar till resursen. Du kan dock inte ta bort resursen eller dess metadata.
+   >* Om du vill lösa eller ta bort inkommande referenser från andra sidor uppdaterar du de relevanta referenserna innan du tar bort en resurs. Du kan även inaktivera Tvinga borttagningsknappen med hjälp av en övertäckning, så att användare inte kan ta bort refererade resurser och lämna brutna länkar.
+   >* Det går att ta bort en *mapp* som innehåller utcheckade resursfiler. Innan du tar bort en mapp kontrollerar du att inga digitala resurser är utcheckade av användarna.
 
-   >[!NOTE]
-   >
-   >Om du vill lösa eller ta bort inkommande referenser från andra sidor uppdaterar du de relevanta referenserna innan du tar bort en resurs. Du kan även inaktivera Tvinga borttagningsknappen med hjälp av en övertäckning, så att användare inte kan ta bort refererade resurser och lämna brutna länkar.
 
 ## Hämta resurser {#downloading-assets}
 
