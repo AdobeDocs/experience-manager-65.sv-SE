@@ -4,7 +4,7 @@ description: Versionsinformation för Adobe Experience Manager 6.5 Service Pack 
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: a599a1c75a1933d6b21e60e96485f43a0aedd679
+source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
 workflow-type: tm+mt
 source-wordcount: '4380'
 ht-degree: 0%
@@ -191,7 +191,7 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 
 * [!UICONTROL Connected Assets Configuration] guide fungerar inte med 404-fel vid installation av 6.5.3 i 6.5.1 (NPR-32730).
 
-* Under XMP-tillbakaskrivningen ändras namnutrymmesmetadataegenskaperna för alla anpassade namnutrymmesmetadataegenskaper till ns2 i motsats till det namnområdesprefix som har konfigurerats (NPR-32748).
+* Under XMP tillbakaskrivning ändrar alla anpassade namnutrymmesmetadataegenskaper det anpassade namnområdesprefixet till ns2 i motsats till det namnområdesprefix som har konfigurerats (NPR-32748).
 
 * Lazy-inläsning aktiveras inte och endast 100 resurser visas när du väljer att granska uppgifter från meddelandeinkorgen (NPR-32750).
 
@@ -213,7 +213,7 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 
 * Undantag observeras i loggar vid öppning av renderingsspår för en PDF-fil i en mapp med en smart beskärningsprofil (CQ-4294201).
 
-* Bildförinställningar publiceras inte om [!UICONTROL Dynamic Media sync mode] är inaktiverat som standard i Experience Manager med Dynamic Media Scene7 runmode (CQ-4294200).
+* Bildförinställningar publiceras inte om [!UICONTROL Dynamic Media sync mode] är inaktiverat som standard på Experience Manager med Dynamic Media Scene7 runmode (CQ-4294200).
 
 * Resursbearbetning när massöverföring fastnar och arbetsflödesinstansen visar fasta instanser av DAM-uppdateringsresurs (CQ-4293916).
 
@@ -260,7 +260,7 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 * Intern cache rensas när en sida med en Adobe Target-komponent publiceras (NPR-33162).
 * Integrering med Adobe Target fungerar inte på [!DNL Windows Internet Explorer] 11 (NPR-33111).
 * När du konfigurerar Adobe Target visas inte fälten [!UICONTROL Company] och [!UICONTROL Report Suite] när du väljer en rapportkälla (NPR-32502).
-* Vid export [!DNL Experience Fragments] med Adobe I/O exporteras inte metadata som Source Product till Adobe Target (NPR-32159).
+* Vid export [!DNL Experience Fragments] med Adobe I/O exporteras inte metadata som källprodukt till Adobe Target (NPR-32159).
 * Auktoriserade IMS-användare i den lokala Experience Manager-administratörsgruppen kan inte skapa eller ändra IMS-konfigurationer (NPR-33045).
 * Konfigurationssidan för Adobe Launch visar inte alla poster (NPR-33011).
 * Användare i gruppen content-authors kan inte redigera egenskaper för en Adobe Target-komponent på grund av JavaScript-fel (NPR-32996).
@@ -308,13 +308,13 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 >Experience Manager Service Pack innehåller inga korrigeringar för [!DNL Forms]. De levereras med ett separat Forms-tilläggspaket. Dessutom släpps ett kumulativt installationsprogram med korrigeringar för AEM Forms på JEE. Mer information finns i [Installera tillägget](#install-aem-forms-add-on-package) AEM Forms och [Installera AEM Forms på JEE](#install-aem-forms-jee-installer).
 
 * Korrespondenshantering: Ordningen på tillgångarna i ett målområde blandas efter att en skrivelse har lämnats in (NPR-33359, NPR-33153).
-* Adaptiva former: När en användare redigerar ett anpassat formulär fungerar inte det [!UICONTROL Start Workflow] alternativ som finns på [!UICONTROL Page Information] menyn (NPR-33004).
-* Adaptiva former: Användaren kan inte spara ett anpassat formulär med mer än en bifogad fil (NPR-32997).
-* Adaptiva former: Om du ändrar panellayouten i ett adaptivt formulär uppstår ett fel (CQ-4293880).
-* Adaptiva former: En ny rad i en sträng i en ordlista med adaptiva formulär lägger till `&#xa;` tecken i ordlistan (NPR-33266).
-* Tillgänglighet för adaptiva formulär: När en användare förhandsgranskar ett anpassat formulär som ett HTML-formulär kan [!UICONTROL Scribble Signature] fältet inte behålla tabbfokus (NPR-33159).
-* Tillgänglighet för adaptiva formulär: Felmeddelandena som visas när ett anpassat formulär skickas länkar inte till ett `aria-describedBy` -attribut (NPR-33071).
-* Tillgänglighet för adaptiva formulär: Fält som markerats som obligatoriska i en adaptiv form har inte det obligatoriska attributet inställt på True i ARIA-hjälpmedelsschemat (NPR-33070).
+* Adaptiv Forms: När en användare redigerar ett anpassat formulär fungerar inte det [!UICONTROL Start Workflow] alternativ som finns på [!UICONTROL Page Information] menyn (NPR-33004).
+* Adaptiv Forms: Användaren kan inte spara ett anpassat formulär med mer än en bifogad fil (NPR-32997).
+* Adaptiv Forms: Om du ändrar panellayouten i ett adaptivt formulär uppstår ett fel (CQ-4293880).
+* Adaptiv Forms: En ny rad i en sträng i en ordlista med adaptiva formulär lägger till `&#xa;` tecken i ordlistan (NPR-33266).
+* Adaptiv tillgänglighet för Forms: När en användare förhandsgranskar ett anpassat formulär som ett HTML-formulär kan [!UICONTROL Scribble Signature] fältet inte behålla tabbfokus (NPR-33159).
+* Adaptiv tillgänglighet för Forms: Felmeddelandena som visas när ett anpassat formulär skickas länkar inte till ett `aria-describedBy` -attribut (NPR-33071).
+* Adaptiv tillgänglighet för Forms: Fält som markerats som obligatoriska i en adaptiv form har inte det obligatoriska attributet inställt på True i ARIA-hjälpmedelsschemat (NPR-33070).
 * PDFG-tjänst: När en användare konverterar en textfil till en PDF-fil återges inte japanska tecken korrekt (NPR-33238).
 * PDFG-tjänst: `CreatePDF` kan inte konvertera en PDF-fil till PDF OCR-format (NPR-32994).
 * PDFG-tjänst: PDF-konverteringen misslyckas för den 200:e instansen av ett [!DNL OpenOffice] dokument (NPR-32766).
@@ -328,8 +328,8 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 
 * AEM 6.5.5.0 kräver AEM 6.5. Mer information finns i [uppgraderingsdokumentationen](/help/sites-deploying/upgrade.md) .
 * Nedladdningen av Service Pack finns på Adobe [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html).
-* På en distribution med MongoDB och flera instanser installerar du AEM 6.5.5.0 på en av Author-instanserna med hjälp av Package Manager.
-* Ta en ögonblicksbild eller en ny säkerhetskopia av AEM-instansen innan du installerar.
+* Installera AEM 6.5.5.0 på en av Author-instanserna med Package Manager på en distribution med MongoDB och flera instanser.
+* Ta en ögonblicksbild eller en ny säkerhetskopia av AEM innan du installerar.
 * Starta om instansen innan du installerar den. Detta behövs bara när instansen fortfarande är i uppdateringsläge (och detta är fallet när instansen uppdaterades från en tidigare version), men vi rekommenderar att instansen körs under en längre period.
 
 >[!NOTE]
@@ -372,23 +372,23 @@ B. Använd [HTTP API från Package Manager](https://docs.adobe.com/content/docs/
 
 Om du vill veta vilka plattformar som är certifierade för att fungera med den här versionen läser du de [tekniska kraven](/help/sites-deploying/technical-requirements.md).
 
-### Installera tilläggspaket för Adobe Experience Manager Forms {#install-aem-forms-add-on-package}
+### Installera Adobe Experience Manager Forms tilläggspaket {#install-aem-forms-add-on-package}
 
 >[!NOTE]
 >
 >Hoppa över om du inte använder AEM Forms. Korrigeringar i Adobe Experience Manager Forms levereras via ett separat tilläggspaket.
 
 1. Kontrollera att du har installerat Adobe Experience Manager Service Pack.
-1. Hämta motsvarande tilläggspaket för Forms som finns i [AEM Forms-versioner](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) för ditt operativsystem.
+1. Ladda ned motsvarande Forms-tilläggspaket som finns i [AEM Forms-versionerna](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) för ditt operativsystem.
 1. Installera Forms-tilläggspaketet enligt beskrivningen i [Installera AEM Forms-tilläggspaket](../forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package).
 
-### Installera Adobe Experience Manager Forms på JEE {#install-aem-forms-jee-installer}
+### Installera Adobe Experience Manager Forms i JEE {#install-aem-forms-jee-installer}
 
 >[!NOTE]
 >
 >Hoppa över om du inte använder AEM Forms på JEE. Korrigeringar i Adobe Experience Manager Forms på JEE levereras via ett separat installationsprogram.
 
-Information om hur du installerar det kumulativa installationsprogrammet för Experience Manager Forms på JEE och konfigurationen efter distributionen finns i [versionsinformationen för patch 0014](https://helpx.adobe.com/aem-forms/quick-fixes/6-5/jee-patch-0014.html).
+Information om hur du installerar det kumulativa installationsprogrammet för Experience Manager Forms på JEE och konfigurationen efter distributionen finns i [versionsinformationen för korrigering 0014](https://helpx.adobe.com/aem-forms/quick-fixes/6-5/jee-patch-0014.html).
 
 ### UberJar {#uber-jar}
 
@@ -408,14 +408,14 @@ Om du vill använda UberJar i ett Maven-projekt ska du läsa [hur du använder U
 
 ## Deprecated features {#removed-deprecated-features}
 
-I det här avsnittet listas funktioner som har markerats som borttagna i AEM 6.5.5.0. Funktioner som ska tas bort i en framtida version är först inaktuella, med ett alternativt alternativ att använda.
+I det här avsnittet visas funktioner som har markerats som borttagna i AEM 6.5.5.0. Funktioner som ska tas bort i en framtida version är först inaktuella, med ett alternativt alternativ att använda.
 
 Kunderna rekommenderas att granska om de använder funktionen eller funktionen i den aktuella distributionen och planera för att ändra implementeringen så att den använder det alternativa alternativet.
 
 | Yta | Funktion | Ersättning |
 |---|---|---|
-| Integreringar | Skärmen är föråldrad **[!UICONTROL AEM Cloud Services Opt-In]** . Med integreringen av AEM och Target uppdaterad i AEM 6.5 som stöd för Target Standard-API, som använder autentisering via Adobe IMS och I/O, och den växande rollen hos Adobe Launch för att instrumentera AEM- för analys och personalisering, har Opt-In Wizard blivit funktionellt irrelevant. | Konfigurera systemanslutningar, Adobe IMS-autentisering och Adobe I/O-integreringar via respektive AEM cloud services. |
-| Anslutningar | Adobe JCR Connector för Microsoft SharePoint 2010 och Microsoft SharePoint 2013 har tagits bort för AEM 6.5. | Ej tillämpligt |
+| Integreringar | Skärmen är föråldrad **[!UICONTROL AEM Cloud Services Opt-In]** . Med integreringen av AEM och Target uppdaterades i AEM 6.5 för att ge stöd åt Target Standard-API:t, som använder autentisering via Adobe IMS och I/O, och den växande rollen hos Adobe Launch för att instrumentera AEM sidor för analys och personalisering, har guiden för anmälan blivit funktionellt irrelevant. | Konfigurera systemanslutningar, Adobe IMS-autentisering och Adobe I/O-integreringar via respektive AEM cloud services. |
+| Anslutningar | Adobe JCR Connector för Microsoft SharePoint 2010 och Microsoft SharePoint 2013 är borttagen för AEM 6.5. | Ej tillämpligt |
 
 ## Known issues {#known-issues}
 
@@ -423,16 +423,16 @@ Kunderna rekommenderas att granska om de använder funktionen eller funktionen i
 
 * Om en mapp i hierarkin byter namn i [!DNL Experience Manager Assets] och den kapslade mappen som innehåller en resurs publiceras [!DNL Brand Portal]i, uppdateras inte mappens rubrik [!DNL Brand Portal] förrän rotmappen publiceras igen.
 
-* Vid installation av AEM 6.5.5.0 orsakar uppdateringen av [!DNL Chrome] version 83 ett problem när paket byggs. Lös problemet genom att använda andra tillgängliga webbläsare, som [!DNL Internet Explorer] och [!DNL Firefox]eller andra installationsalternativ för AEM-standardpaket. Problemet åtgärdas efter installation av AEM 6.5.5.0.
+* När AEM 6.5.5.0 installeras orsakar en uppdatering av [!DNL Chrome] version 83 ett problem när paket byggs. Lös problemet genom att använda andra tillgängliga webbläsare, till exempel [!DNL Internet Explorer] och [!DNL Firefox]eller andra AEM standardalternativ för paketinstallation. Problemet åtgärdas efter installation av AEM 6.5.5.0.
 
-* Det går inte att skicka ett e-postmeddelande till SMTP-fjärrservern med hjälp av AEM-standardavsändaren eftersom den bara tillåter kommunikation med TLS v1.2. Ta bort paketet `javax.mail:mail:1.5.0-b01` från `system/console` och uppdatera paketen för att lösa problemet.
+* Det går inte att skicka ett e-postmeddelande till SMTP-fjärrservern med AEM standardavsändare, eftersom det bara tillåter kommunikation med TLS v1.2. Ta bort paketet `javax.mail:mail:1.5.0-b01` från `system/console` och uppdatera paketen för att lösa problemet.
 
 * När en användare väljer att konfigurera ett fält för första gången i ett adaptivt formulär visas inte alternativet att spara en konfiguration i egenskapsläsaren. Om du väljer att konfigurera ett annat fält i det adaptiva formuläret i samma redigerare åtgärdas problemet.
 
 * Om [!UICONTROL Connected assets configuration] guiden returnerar ett 404-felmeddelande efter installationen måste du installera om `cq-remotedam-client-ui-content` - och `cq-remotedam-client-ui-components` -paketen manuellt med hjälp av pakethanteraren.
 
 * Följande fel och varningsmeddelanden kan visas under installationen av AEM 6.5.x.x:
-   * &quot;När Target-integreringen konfigureras i AEM med Target Standard-API (IMS-autentisering) skapas felaktiga erbjudandetyper när Experience Fragments exporteras till Target. I stället för att skriva &quot;Experience Fragment&quot;/källa &quot;Adobe Experience Manager&quot; skapar Target flera erbjudanden med typen &quot;HTML&quot;/källa &quot;Adobe Target Classic&quot;.
+   * &quot;När Target-integreringen har konfigurerats i AEM med Target Standard-API (IMS-autentisering) skapas felaktiga erbjudandetyper när Experience Fragments exporteras till Target. I stället för att skriva &quot;Experience Fragment&quot;/källa &quot;Adobe Experience Manager&quot; skapar Target flera erbjudanden med typen &quot;HTML&quot;/källa &quot;Adobe Target Classic&quot;.
    * `com.adobe.granite.maintenance.impl.TaskScheduler`: Inga underhållsfönster hittades vid granit/drift/underhåll.
    * Validering på serversidan av adaptiva formulär misslyckas när sammanställningsfunktioner som SUM, MAX och MIN används. CQ-4274424
    * `com.adobe.granite.maintenance.impl.TaskScheduler` - Inga underhållsfönster hittades vid granit/drift/underhåll.
@@ -440,11 +440,11 @@ Kunderna rekommenderas att granska om de använder funktionen eller funktionen i
 
 ## OSGi-paket och innehållspaket som ingår {#osgi-bundles-and-content-packages-included}
 
-Följande textdokument listar de OSGi-paket och innehållspaket som ingår i AEM 6.5.5.0:
+Följande textdokument innehåller en lista över de OSGi-paket och innehållspaket som ingår i AEM 6.5.5.0:
 
-* [Lista över OSGi-paket som ingår i AEM 6.5.5.0](assets/6550_bundles.txt)
+* [Förteckning över OSGi-paket som ingår i AEM 6.5.5.0](assets/6550_bundles.txt)
 
-* [Lista över innehållspaket som ingår i AEM 6.5.5.0](assets/6550_packages.txt)
+* [Förteckning över innehållspaket som ingår i AEM 6.5.5.0](assets/6550_packages.txt)
 
 ## Begränsade platser {#restricted-sites}
 
@@ -455,8 +455,8 @@ Dessa webbplatser är bara tillgängliga för kunder. Om du är kund och behöve
 
 >[!MORELIKETHIS]
 >
->* [Versionsinformation om AEM 6.5](/help/release-notes/release-notes.md)
->* [AEM - produktsida](https://www.adobe.com/solutions/web-experience-management.html)
->* [AEM 6.5 - dokumentation](https://helpx.adobe.com/support/experience-manager/6-5.html)
->* Prenumerera på [Adobe Priority-produktuppdateringar](https://www.adobe.com/subscription/priority-product-update.html)
+>* [Versionsinformation för AEM 6.5](/help/release-notes/release-notes.md)
+>* [AEM produktsida](https://www.adobe.com/marketing/experience-manager.html)
+>* [AEM 6.5-dokumentation](https://helpx.adobe.com/support/experience-manager/6-5.html)
+>* Prenumerera på produktuppdateringar med [Adobe prioritet](https://www.adobe.com/subscription/priority-product-update.html)
 
