@@ -1,8 +1,8 @@
 ---
 title: Utveckla med SAP Commerce Cloud
 seo-title: Utveckla med SAP Commerce Cloud
-description: Integreringsramverket i SAP Commerce Cloud innehåller ett integreringslager med ett API
-seo-description: Integreringsramverket i SAP Commerce Cloud innehåller ett integreringslager med ett API
+description: Integreringsramverket för SAP Commerce Cloud innehåller ett integreringslager med ett API
+seo-description: Integreringsramverket för SAP Commerce Cloud innehåller ett integreringslager med ett API
 uuid: a780dd17-027a-4a61-af8f-3e2f600524c7
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: platform
 discoiquuid: 96dc0c1a-b21d-480a-addf-c3d0348bd3ad
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 316e53720071da41cc4ac5ae62c280ad3804a8f4
 workflow-type: tm+mt
 source-wordcount: '2331'
 ht-degree: 0%
@@ -26,8 +26,8 @@ ht-degree: 0%
 
 Integreringsramverket innehåller ett integreringslager med ett API. På så sätt kan du:
 
-* koppla in ett e-handelssystem och hämta produktdata till AEM
-* bygga AEM-komponenter för handelsfunktioner oberoende av e-handelsmotorn
+* koppla in ett e-handelssystem och hämta in produktdata i AEM
+* bygga AEM för handelsfunktioner oberoende av e-handelsmotorn
 
 ![chlimage_1-11](assets/chlimage_1-11a.png)
 
@@ -35,17 +35,17 @@ Integreringsramverket innehåller ett integreringslager med ett API. På så sä
 >
 >[API-dokumentation](/help/sites-developing/ecommerce.md#api-documentation) finns också tillgänglig.
 
-Ett antal färdiga AEM-komponenter finns för att använda integreringslagret. För närvarande är följande:
+Det finns ett antal färdiga AEM för att använda integreringslagret. För närvarande är följande:
 
 * en produktvisningskomponent
 * en kundvagn
 * utcheckning
 
-För sökning tillhandahålls en integreringsfunktion som gör att du kan använda AEM-sökningen, sökningen i e-handelssystemet, en sökning från tredje part (som Search&amp;Promote) eller en kombination av dessa.
+För sökningar finns en integreringsfunktion som gör att du kan använda AEM sökning, sökning i e-handelssystemet, en sökning från tredje part (som Search&amp;Promote) eller en kombination av dessa.
 
 ## Val av e-handelsmotor {#ecommerce-engine-selection}
 
-eCommerce-ramverket kan användas med alla e-handelslösningar, och den motor som används måste kunna identifieras av AEM:
+eCommerce-ramverket kan användas tillsammans med alla e-handelslösningar, och den motor som används måste kunna identifieras av AEM:
 
 * eCommerce Engines är OSGi-tjänster som stöder `CommerceService` gränssnittet
 
@@ -68,7 +68,7 @@ eCommerce-ramverket kan användas med alla e-handelslösningar, och den motor so
 
 Se följande exempel nedan:
 
-| `cq:commerceProvider = geometrixx` | I en AEM-standardinstallation krävs en specifik implementering. till exempel exemplet geometrixx, som innehåller minimala tillägg till det generiska API:t |
+| `cq:commerceProvider = geometrixx` | Vid en AEM standardinstallation krävs en specifik implementering. Exempel på geometrixx, som innehåller minimala tillägg till det generiska API:t |
 |---|---|
 | `cq:commerceProvider = hybris` | hybriimplementering |
 
@@ -112,11 +112,7 @@ För att utveckla för Hybris 4 krävs följande:
 
    `-P hybris4`
 
-   Den hämtar den förkonfigurerade distributionen av Hybris 4 och bäddar in den i paketet:
-
-   ```
-   cq-commerce-hybris-server
-   ```
+   Den laddar ned den förkonfigurerade hybris 4-distributionen och bäddar in den i paketet `cq-commerce-hybris-server`.
 
 * I OSGi-konfigurationshanteraren:
 
@@ -153,26 +149,27 @@ hybris använder en användarsession för att lagra information som kundens kund
 
 ### Produktsynkronisering och -publicering {#product-synchronization-and-publishing}
 
-Produktdata som underhålls i hybris måste finnas tillgängliga i AEM. Följande mekanism har implementerats:
+Produktdata som bevaras i hybris måste finnas tillgängliga i AEM. Följande mekanism har implementerats:
 
 * En initial belastning av ID:n tillhandahålls av hybris som foder. Denna feed kan uppdateras.
-* hybris kommer att tillhandahålla uppdateringsinformation via en feed (som AEM polls).
-* När AEM använder produktdata skickar det tillbaka begäranden till hybris om aktuella data (villkorlig begäran om hämtning med det senaste ändringsdatumet).
+* hybris kommer att tillhandahålla uppdateringsinformation via ett foder (som AEM undersökningar).
+* När AEM använder produktdata skickar den begäranden tillbaka till hybris om aktuella data (villkorlig begäran om hämtning med det senaste ändringsdatumet).
 * På hybris är det möjligt att ange foderinnehållet på ett deklarativt sätt.
-* Mappning av matningsstrukturen till AEM-innehållsmodellen sker i matningsadaptern på AEM-sidan.
+* Matningsstrukturen mappas till AEM innehållsmodell i matningsadaptern på AEM.
 
 ![chlimage_1-12](assets/chlimage_1-12a.png)
 
 * Importören (b) används för den första konfigurationen av sidträdstrukturen i AEM för kataloger.
-* Katalogförändringar i hybris anges till AEM via en feed, som sedan sprids till AEM (b)
+* Katalogförändringar i hybris anges som AEM via en feed och sedan sprida dessa till AEM b.
 
    * Produkt som lagts till/tagits bort/ändrats i förhållande till katalogversionen.
    * Produkten är godkänd.
 
-* Tillägget hybris erbjuder en polling-importör (&quot;hybris&quot;-schema&quot;) som kan konfigureras att importera ändringar till AEM med ett angivet intervall (t.ex. var 24:e timme där intervallet anges i sekunder):
+* Tillägget hybris erbjuder en pollingimportör (&quot;hybris&quot;-schema&quot;) som kan konfigureras för att importera ändringar till AEM med ett angivet intervall (t.ex. var 24:e timme där intervallet anges i sekunder):
 
    * 
-      ```
+
+      ```js
       http://localhost:4502/content/geometrixx-outdoors/en_US/jcr:content.json
        {
        * "jcr:mixinTypes": ["cq:PollConfig"],
@@ -185,19 +182,19 @@ Produktdata som underhålls i hybris måste finnas tillgängliga i AEM. Följand
 
 * Katalogkonfigurationen i AEM känner igen katalogversionerna **Staged** och **Online** .
 
-* För att kunna synkronisera produkter mellan katalogversioner måste man (ta bort) aktivera motsvarande AEM-sida (a, c)
+* För att kunna synkronisera produkter mellan katalogversioner måste man (ta bort) aktivera motsvarande AEM (a, c)
 
    * Om du vill lägga till en produkt i en **katalogversion online** måste du aktivera produktens sida.
    * Borttagning av en produkt kräver inaktivering.
 
-* Aktivera en sida i AEM (c) kräver en kontroll (b) och är bara möjligt om
+* Aktivering av en sida i AEM c kräver en kontroll b och är endast möjlig om
 
    * Produkten finns i en **katalogversion online** för produktsidor.
    * De produkter som det hänvisas till finns i en **katalogversion online** för andra sidor (t.ex. kampanjsidor).
 
 * Aktiverade produktsidor måste ha tillgång till produktdatans **onlineversion** (d).
 
-* AEM-publiceringsinstansen kräver tillgång till hybris för hämtning av produktdata och personaliserade data (d).
+* Den AEM publiceringsinstansen kräver tillgång till hybris för hämtning av produktdata och personaliserade data (d).
 
 ### Arkitektur {#architecture}
 
@@ -209,7 +206,7 @@ Alla egenskaper är dock inte olika axlar. Variationer kan också påverka andra
 
 Varje produkt och/eller variant representeras av en resurs och mappar därför 1:1 till en databasnod. Det är en extra konsekvens att en specifik produkt och/eller variant kan identifieras unikt genom sin sökväg.
 
-Produkt-/variantresursen innehåller inte alltid den faktiska produktinformationen. Det kan vara en representation av data som faktiskt finns i ett annat system (t.ex. hybris). Produktbeskrivningar, priser osv. lagras inte i AEM, utan hämtas i realtid från eCommerce-motorn.
+Produkt-/variantresursen innehåller inte alltid den faktiska produktinformationen. Det kan vara en representation av data som faktiskt finns i ett annat system (t.ex. hybris). Produktbeskrivningar, priser osv. lagras inte i AEM utan hämtas i realtid från eCommerce-motorn.
 
 Alla produktresurser kan representeras av en `Product API`. De flesta anrop i produkt-API:t är variationsspecifika (även om variationer kan ärva delade värden från ett överordnat element), men det finns också anrop som listar variantuppsättningen ( `getVariantAxes()`, `getVariants()`osv.).
 
@@ -228,7 +225,7 @@ Produkter (i allmänhet) kan ha många olika axlar, men produktkomponenten som f
 1. plus ytterligare
 >
 >   
-Den här ytterligare varianten väljs via egenskapen `variationAxis` för produktreferensen (vanligtvis `color` för Geometrixx Outdoor).
+Den här ytterligare varianten väljs via egenskapen `variationAxis` för produktreferensen (vanligtvis `color` för Geometrixx Outdoors).
 
 #### Produktreferenser och produktdata {#product-references-and-product-data}
 
@@ -240,25 +237,25 @@ I allmänhet:
 
 Det måste finnas en 1:1-karta mellan produktvariationer och produktdatanoder.
 
-Produktreferenser måste också ha en nod för varje variant som presenteras - men det finns inget krav på att presentera alla variationer. Om en produkt till exempel har variationer i S, M och L kan produktinformationen vara:
+Produktreferenser måste också ha en nod för varje variant som presenteras - men det finns inget krav på att presentera alla variationer. Om en produkt till exempel har S-, M- eller L-variationer kan produktdata vara det.
 
 ```shell
 etc
-  commerce
-    products
-      shirt
-        shirt-s
-        shirt-m
-        shirt-l
+|──commerce
+|  |──products
+|     |──shirt
+|       |──shirt-s
+|       |──shirt-m
+|       |──shirt-l
 ```
 
-En stor och hög katalog kanske bara innehåller:
+En stor och hög katalog kanske bara har det.
 
 ```shell
 content
-  big-and-tall
-    shirt
-      shirt-l
+|──big-and-tall
+|  |──shirt
+|     |──shirt-l
 ```
 
 Slutligen finns det inget krav på att använda produktdata. Du kan placera alla produktdata under referenserna i katalogen; men du kan inte ha flera kataloger utan att duplicera alla produktdata.
@@ -352,7 +349,7 @@ public class AxisFilter implements VariantFilter {
          * En produktnod som innehåller alla egenskaper lokalt (och inte innehåller någon productData-egenskap) ärver produktattribut direkt från sina egna överordnade.
 
 
-* **AEM-generisk produktstruktur**
+* **AEM produktstruktur**
 
    * Varje variant måste ha en egen lövnod.
    * Produktgränssnittet representerar både produkter och varianter, men den relaterade databasnoden är specifik för vilken den är.
@@ -428,16 +425,16 @@ public class AxisFilter implements VariantFilter {
 * Lagring
 
    * I hybris-fallet äger hybris-servern kundvagnen.
-   * I det generiska AEM-fallet lagras kundvagnar i [ClientContext](/help/sites-administering/client-context.md).
+   * I de AEM generiska fallen lagras varukorgar i [ClientContext](/help/sites-administering/client-context.md).
 
 **Personanpassning**
 
-* Personalisering bör alltid drivas via [ClientContext](/help/sites-administering/client-context.md).
+* Personalisering bör alltid ske via [ClientContext](/help/sites-administering/client-context.md).
 * En ClientContext `/version/` i kundvagnen skapas i samtliga fall:
 
    * Produkterna ska läggas till med hjälp av `CommerceSession.addCartEntry()` metoden.
 
-* Följande illustrerar ett exempel på kundvagnsinformation i ClientContext cart:
+* Följande illustrerar ett exempel på kundvagnsinformation i kundvagnen i ClientContext:
 
 ![chlimage_1-13](assets/chlimage_1-13a.png)
 
@@ -456,9 +453,9 @@ De tre elementen `CommerceSession` äger:
    Schemat för kundvagnens innehåll har korrigerats av API:
 
    ```java
-       public void addCartEntry(Product product, int quantity);
-       public void modifyCartEntry(int entryNumber, int quantity);
-       public void deleteCartEntry(int entryNumber);
+   public void addCartEntry(Product product, int quantity);
+   public void modifyCartEntry(int entryNumber, int quantity);
+   public void deleteCartEntry(int entryNumber);
    ```
 
 1. **Priser**
@@ -466,12 +463,12 @@ De tre elementen `CommerceSession` äger:
    Prisschemat är också fast av API:
 
    ```java
-       public String getCartPreTaxPrice();
-       public String getCartTax();
-       public String getCartTotalPrice();
-       public String getOrderShipping();
-       public String getOrderTotalTax();
-       public String getOrderTotalPrice();
+   public String getCartPreTaxPrice();
+   public String getCartTax();
+   public String getCartTotalPrice();
+   public String getOrderShipping();
+   public String getOrderTotalTax();
+   public String getOrderTotalPrice();
    ```
 
 1. **Beställningsinformation**
@@ -479,9 +476,9 @@ De tre elementen `CommerceSession` äger:
    Beställningsinformationen har dock *inte* åtgärdats av API:t:
 
    ```java
-       public void updateOrderDetails(Map<String, String> orderDetails);
-       public Map<String, String> getOrderDetails();
-       public void submitOrder();
+   public void updateOrderDetails(Map<String, String> orderDetails);
+   public Map<String, String> getOrderDetails();
+   public void submitOrder();
    ```
 
 **Leveransberäkningar**
@@ -504,7 +501,7 @@ De tre elementen `CommerceSession` äger:
    >
 * Kontrollera om metoden är tillgänglig
 >* Lägga till prisinformation
->* Att göra det möjligt för kunderna att uppdatera ordersidan i AEM (inklusive överflödet av leveransmetoder och texten som beskriver dem), samtidigt som de fortfarande har möjlighet att visa relevant `CommerceSession` information.
+>* För att kunderna ska kunna uppdatera beställningssidan i AEM (inklusive överflödet av leveransmetoder och texten som beskriver dem), samtidigt som de fortfarande har möjlighet att visa relevant `CommerceSession` information.
 
 
 **Betalningshantering**
@@ -551,7 +548,7 @@ Startpunkten för söknings-API är den `CommerceService#search` metod som retur
 
 ### Användarintegrering {#user-integration}
 
-Integrering sker mellan AEM och olika e-handelssystem. Detta kräver en strategi för att synkronisera kunder mellan de olika systemen så att AEM-specifik kod bara behöver känna till om AEM och vice versa:
+Integrering sker mellan AEM och olika e-handelssystem. Detta kräver en strategi för att synkronisera kunder mellan de olika systemen så att AEM specifik kod bara behöver känna till AEM och vice versa:
 
 * Autentisering
 
@@ -559,18 +556,18 @@ Integrering sker mellan AEM och olika e-handelssystem. Detta kräver en strategi
 
 * Konton i Hybris
 
-   AEM skapar ett motsvarande (underordnat) konto i hybris för varje kund. Användarnamnet för det här kontot är detsamma som AEM-användarnamnet. Ett kryptografiskt slumpmässigt lösenord genereras automatiskt och lagras (krypteras) i AEM.
+   AEM skapar ett motsvarande (underordnat) konto i hybris för varje kund. Användarnamnet för det här kontot är samma som AEM användarnamn. Ett kryptografiskt slumpmässigt lösenord genereras automatiskt och lagras (krypteras) i AEM.
 
 #### Befintliga användare {#pre-existing-users}
 
-En AEM-front kan placeras framför en befintlig hybris-implementering. En hybris-motor kan också läggas till i en befintlig AEM-installation. För att göra detta måste systemen kunna hantera befintliga användare på ett effektivt sätt i båda systemen:
+En AEM kan placeras framför en befintlig hybris-implementering. En hybris-motor kan också läggas till i en befintlig AEM. För att göra detta måste systemen kunna hantera befintliga användare på ett effektivt sätt i båda systemen:
 
 * AEM -> hybris
 
-   * När du loggar in på hybris, om AEM-användaren inte redan finns:
+   * När du loggar in på hybris, om den AEM användaren inte redan finns:
 
       * skapa en ny hybris-användare med ett kryptografiskt slumpmässigt lösenord
-      * lagra hybris-användarnamnet i AEM-användarens användarkatalog
+      * lagra hybris-användarnamnet i AEM användarkatalog
    * Se: `com.adobe.cq.commerce.hybris.impl.HybrisSessionImpl#login()`
 
 
@@ -591,7 +588,7 @@ Så här bygger du på befintliga funktioner i din anpassade importhanterare:
 
 * måste implementera `ImportHandler` gränssnittet
 
-* kan utöka `DefaultImportHandler`
+* kan utöka `DefaultImportHandler`.
 
 ```java
 /**
@@ -601,66 +598,66 @@ Så här bygger du på befintliga funktioner i din anpassade importhanterare:
  */
 public interface ImportHandler {
 
-    /**
-     * Not used.
-     */
-    public void createTaxonomie(ImporterContext ctx);
+  /**
+  * Not used.
+  */
+  public void createTaxonomie(ImporterContext ctx);
 
-    /**
-     * Creates a catalog with the given name.
-     * @param ctx   The importer context
-     * @param name  The catalog's name
-     * @return Path of created catalog
-     */
-    public String createCatalog(ImporterContext ctx, String name) throws Exception;
+  /**
+  * Creates a catalog with the given name.
+  * @param ctx   The importer context
+  * @param name  The catalog's name
+  * @return Path of created catalog
+  */
+  public String createCatalog(ImporterContext ctx, String name) throws Exception;
 
-    /**
-     * Creates a product from the given values.
-     * @param ctx                The importer context
-     * @param values             The product's properties
-     * @param parentCategoryPath The containing category's path
-     * @return Path of created product
-     */
-    public String createProduct(ImporterContext ctx, ValueMap values, String parentCategoryPath) throws Exception;
+  /**
+  * Creates a product from the given values.
+  * @param ctx                The importer context
+  * @param values             The product's properties
+  * @param parentCategoryPath The containing category's path
+  * @return Path of created product
+  */
+  public String createProduct(ImporterContext ctx, ValueMap values, String parentCategoryPath) throws Exception;
 
-    /**
-     * Creates a variant product from the given values.
-     * @param ctx             The importer context
-     * @param values          The product's properties
-     * @param baseProductPath The base product's path
-     * @return Path of created product
-     */
-    public String createVariantProduct(ImporterContext ctx, ValueMap values, String baseProductPath) throws Exception;
+  /**
+  * Creates a variant product from the given values.
+  * @param ctx             The importer context
+  * @param values          The product's properties
+  * @param baseProductPath The base product's path
+  * @return Path of created product
+  */
+  public String createVariantProduct(ImporterContext ctx, ValueMap values, String baseProductPath) throws Exception;
 
-    /**
-     * Creates an asset for a product. This is usually a product
-     * image.
-     * @param ctx             The importer context
-     * @param values          The product's properties
-     * @param baseProductPath The product's path
-     * @return Path of created asset
-     */
-    public String createAsset(ImporterContext ctx, ValueMap values, String productPath) throws Exception;
+  /**
+  * Creates an asset for a product. This is usually a product
+  * image.
+  * @param ctx             The importer context
+  * @param values          The product's properties
+  * @param baseProductPath The product's path
+  * @return Path of created asset
+  */
+  public String createAsset(ImporterContext ctx, ValueMap values, String productPath) throws Exception;
 
-    /**
-     * Creates a category from the given values.
-     * @param ctx           The importer context
-     * @param values        The category's properties
-     * @param parentPath    Path of parent category or base path of import in case of root category
-     * @return Path of created category
-     */
-    public String createCategory(ImporterContext ctx, ValueMap values, String parentCategoryPath) throws Exception;
+  /**
+  * Creates a category from the given values.
+  * @param ctx           The importer context
+  * @param values        The category's properties
+  * @param parentPath    Path of parent category or base path of import in case of root category
+  * @return Path of created category
+  */
+  public String createCategory(ImporterContext ctx, ValueMap values, String parentCategoryPath) throws Exception;
 }
 ```
 
-För att din anpassade hanterare ska identifieras av importören måste den ange `service.ranking`egenskapen med ett värde över 0. till exempel:
+För att din anpassade hanterare ska identifieras av importören måste den ange `service.ranking`egenskapen med ett värde över 0. till exempel.
 
 ```java
 @Component
 @Service
 @Property(name = "service.ranking", value = 100)
-public class MyImportHandler extends DefaultImportHandler {
-    ...
+public class MyImportHandler extends DefaultImportHandler
+{
+...
 }
 ```
-
