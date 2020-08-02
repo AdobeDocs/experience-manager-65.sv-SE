@@ -10,7 +10,10 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 6fdce35d-2709-41cc-87fb-27a4b867e960
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 316e53720071da41cc4ac5ae62c280ad3804a8f4
+workflow-type: tm+mt
+source-wordcount: '1175'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->`JAR` och `WAR` är filtyperna som AEM släpps i. Dessa format genomgår kvalitetssäkring som motsvarar de supportnivåer som Adobe har åtagit sig.
+>`JAR` och `WAR` är de filtyper som AEM släpps i. Dessa format genomgår kvalitetssäkring som motsvarar de supportnivåer som Adobe har åtagit sig att använda.
 
 
 I det här avsnittet beskrivs hur du installerar Adobe Experience Manager (AEM) med en programserver. Gå till avsnittet [Plattformar](/help/sites-deploying/technical-requirements.md#servlet-engines-application-servers) som stöds för att se de specifika supportnivåerna för de enskilda programservrarna.
@@ -35,13 +38,13 @@ Mer information om hur du installerar webbprogram, serverkonfigurationer och hur
 
 >[!NOTE]
 >
->Om du använder Dynamic Media i en WAR-distribution kan du läsa dokumentationen [för](/help/assets/config-dynamic.md#enabling-dynamic-media)dynamiska media.
+>Om du använder Dynamic Media i en WAR-distribution kan du läsa dokumentationen [för](/help/assets/config-dynamic.md#enabling-dynamic-media)dynamiska medier.
 
 ## Allmän beskrivning {#general-description}
 
 ### Standardbeteende vid installation av AEM i en programserver {#default-behaviour-when-installing-aem-in-an-application-server}
 
-AEM levereras som en enda krigsfil att distribuera.
+AEM kommer som en enda krigsfil att distribuera.
 
 Om distribueras kommer följande att ske som standard:
 
@@ -54,20 +57,20 @@ Om distribueras kommer följande att ske som standard:
 
 Du kan ändra standardbeteendet på följande sätt:
 
-* körningsläge: konfigurera `sling.run.modes` parametern i AEM- `WEB-INF/web.xml` krigsfilen före distributionen
+* körningsläge: konfigurera `sling.run.modes` parametern i `WEB-INF/web.xml` filen för AEM före distributionen
 
-* sling.home: konfigurera `sling.home` parametern i AEM- `WEB-INF/web.xml`krigsfilen före distributionen
+* sling.home: konfigurera `sling.home` parametern i `WEB-INF/web.xml`filen med AEM krigsfil före distributionen
 
-* kontextrot: byta namn på AEM-krigsfilen
+* kontextrot: byta namn på AEM krigsfil
 
 #### Publicera installation {#publish-installation}
 
 För att få en publiceringsinstans distribuerad måste du ange att körningsläget ska publiceras:
 
-* Packa upp WEB-INF/web.xml från AEM-krigsfilen
+* Packa upp WEB-INF/web.xml från AEM krigsfil
 * Ändra parametern sling.run.modes till publicering
-* Repetera web.xml-filen i AEM war-filen
-* Distribuera AEM-krigsfil
+* Repetera web.xml-filen i AEM
+* Distribuera AEM
 
 #### Installationskontroll {#installation-check}
 
@@ -81,12 +84,12 @@ Om du vill kontrollera om alla är installerade kan du:
 I demonstrationssyfte kan det vara lämpligt att installera författaren och publicera instansen i en programserver. Gör så här:
 
 1. Ändra variablerna sling.home och sling.run.modes i publiceringsinstansen.
-1. Packa upp WEB-INF/web.xml från AEM war-filen.
+1. Packa upp WEB-INF/web.xml från AEM krigsfil.
 1. Ändra parametern sling.home till en annan sökväg (absoluta och relativa sökvägar är möjliga).
 1. Ändra sling.run.modes till publicering för publiceringsinstansen.
 1. Upprepa filen web.xml.
 1. Byt namn på krigsfilerna så att de har olika namn: t.ex. en byter namn till aemauthor.war och den andra till aempublish.war.
-1. Använd högre minnesinställningar, t.ex. för standardinstanser av AEM använder du t.ex.: -Xmx3072m
+1. Använd högre minnesinställningar, t.ex. för standardinstanser AEM t.ex.: -Xmx3072m
 1. Distribuera de två webbprogrammen.
 1. Stoppa de två webbprogrammen efter distributionen.
 1. I både författare- och publiceringsinstanser ser du till att egenskapen felix.service.urlhandlers=false anges i filen sling.properties (standard är att den är true).
@@ -102,14 +105,14 @@ Läs [Allmän beskrivning](#general-description) ovan före en distribution.
 
 * Låt Basic Auth Headers gå igenom:
 
-   * Ett sätt att låta AEM autentisera en användare är att inaktivera WebSphere-serverns globala administrativa säkerhet: Gå till Säkerhet -> Global säkerhet och avmarkera kryssrutan Aktivera administrativ säkerhet, spara och starta om servern.
+   * Ett sätt för AEM att autentisera en användare är att inaktivera WebSphere-serverns globala administrativa säkerhet: Gå till Säkerhet -> Global säkerhet och avmarkera kryssrutan Aktivera administrativ säkerhet, spara och starta om servern.
 
 * uppsättning `"JAVA_OPTS= -Xmx2048m"`
 * Om du vill installera AEM med kontextroten = / måste du först ändra kontextroten för det befintliga standardwebbprogrammet
 
-**Distribuera AEM-webbprogram**
+**Distribuera AEM webbprogram**
 
-* Ladda ned AEM war-fil
+* Hämta AEM
 * Gör dina konfigurationer i web.xml vid behov (se ovan i den allmänna beskrivningen)
 
    * Packa upp WEB-INF/web.xml
@@ -117,11 +120,11 @@ Läs [Allmän beskrivning](#general-description) ovan före en distribution.
    * avkommentera slinga.initial startparameter och ange den här sökvägen efter behov
    * Replikera filen web.xml
 
-* Distribuera AEM-krigsfil
+* Distribuera AEM
 
    * Välj en kontextrot (om du vill ange de körningslägen för sling som du behöver för att välja detaljerade steg i distributionsguiden, anger du dem sedan i steg 6 i guiden)
 
-* Starta AEM-webbprogram
+* Starta AEM webbprogram
 
 #### JBoss EAP 6.3.0/6.4.0 {#jboss-eap}
 
@@ -133,7 +136,7 @@ Ange minnesargument i din conf-fil (t.ex. `standalone.conf`)
 
 * JAVA_OPTS=&quot;-Xms64m -Xmx2048m&quot;
 
-Om du använder distributionsskannern för att installera AEM-webbprogrammet kan det vara bra att öka värdet `deployment-timeout,` för det angivna `deployment-tiimeout` attributet i xml-filen för instansen (t.ex. `configuration/standalone.xml)`:
+Om du använder distributionsskannern för att installera AEM webbprogram kan det vara bra att öka värdet `deployment-timeout,` för det set- `deployment-tiimeout` attributet i xml-filen för instansen (t.ex. `configuration/standalone.xml)`:
 
 ```xml
 <subsystem xmlns="urn:jboss:domain:deployment-scanner:1.1">
@@ -141,11 +144,11 @@ Om du använder distributionsskannern för att installera AEM-webbprogrammet kan
 </subsystem>
 ```
 
-**Distribuera AEM-webbprogram**
+**Distribuera AEM webbprogram**
 
-* Överför AEM-webbprogrammet till JBoss-administrationskonsolen.
+* Ladda upp det AEM webbprogrammet i JBoss-administrationskonsolen.
 
-* Aktivera AEM-webbprogrammet.
+* Aktivera det AEM webbprogrammet.
 
 #### Oracle WebLogic 12.1.3/12.2 {#oracle-weblogic}
 
@@ -166,18 +169,18 @@ Detta använder en enkel serverlayout med endast en Admin Server.
 
 * Skapa i `${myDomain}` en paketmapp och i en cq-mapp och i den en Plan-mapp
 
-**Distribuera AEM-webbprogram**
+**Distribuera AEM webbprogram**
 
-* Ladda ned AEM war-fil
-* Placera AEM war-filen i mappen ${myDomain}/packages/cq
-* Gör dina konfigurationer tillgängliga i vid `WEB-INF/web.xml` behov (se ovan i den allmänna beskrivningen)
+* Hämta AEM
+* Lägg AEM i mappen ${myDomain}/packages/cq
+* Gör dina konfigurationer tillgängliga i `WEB-INF/web.xml` vid behov (se ovan i den allmänna beskrivningen)
 
    * Packa upp `WEB-INF/web.xml`fil
    * ändra sling.run.modes-parameter för publicering
    * avkommentera sling.home initial parameter och ange den här sökvägen efter behov (se General Description)
    * Replikera filen web.xml
 
-* Distribuera AEM war-filen som ett program (för de andra inställningarna använder du standardinställningarna)
+* Distribuera AEM krigsfil som ett program (för de andra inställningarna används standardinställningarna)
 * Installationen kan ta tid..
 * Kontrollera att installationen har slutförts enligt beskrivningen ovan i den allmänna beskrivningen (t.ex. finjustera error.log)
 * Du kan ändra kontextroten på fliken Konfiguration i webbprogrammet i WebLogic `/console`
@@ -195,56 +198,56 @@ Läs [Allmän beskrivning](#general-description) ovan före en distribution.
    * Tomcat ger varken administratörs- eller hanteraråtkomst vid installationen. Därför måste du redigera manuellt `tomcat-users.xml` för att tillåta åtkomst för dessa konton:
 
       * Redigera `tomcat-users.xml` för att inkludera åtkomst för admin och chef. Konfigurationen bör se ut ungefär som i följande exempel:
-      * 
-         ```
+
+         ```xml
          <?xml version='1.0' encoding='utf-8'?>
-          <tomcat-users>
-          <role rolename="manager"/>
-          <role rolename="tomcat"/>
-          <role rolename="admin"/>
-          <role rolename="role1"/>
-          <role rolename="manager-gui"/>
-          <user username="both" password="tomcat" roles="tomcat,role1"/>
-          <user username="tomcat" password="tomcat" roles="tomcat"/>
-          <user username="admin" password="admin" roles="admin,manager-gui"/>
-          <user username="role1" password="tomcat" roles="role1"/>
-          </tomcat-users>
+         <tomcat-users>
+         role rolename="manager"/>
+         role rolename="tomcat"/>
+         <role rolename="admin"/>
+         <role rolename="role1"/>
+         <role rolename="manager-gui"/>
+         <user username="both" password="tomcat" roles="tomcat,role1"/>
+         <user username="tomcat" password="tomcat" roles="tomcat"/>
+         <user username="admin" password="admin" roles="admin,manager-gui"/>
+         <user username="role1" password="tomcat" roles="role1"/>
+         </tomcat-users>
          ```
    * Om du vill distribuera AEM med kontextroten &quot;/&quot; måste du ändra kontextroten för den befintliga ROOT-webbappen:
 
       * Stoppa och avdistribuera ROOT-webbprogram
       * Byt namn på mappen ROOT.war i Tomcat-webbappen
       * Starta webbprogrammet igen
-   * Om du installerar AEM-webbprogrammet med hanteraren-gui måste du öka den maximala storleken för en överförd fil, eftersom standardinställningen endast tillåter 50 MB uppladdningsstorlek. Då öppnas web.xml för hanterarens webbprogram,
+   * Om du installerar AEM webbprogram med hanteraren-gui måste du öka den maximala storleken för en överförd fil, eftersom standardvärdet endast tillåter 50 MB uppladdningsstorlek. Då öppnas web.xml för hanterarens webbprogram,
 
       `webapps/manager/WEB-INF/web.xml`
 
-      och öka maxfilstorleken och max-request-size till minst 500 MB, se följande `multipart-config` exempel på en sådan `web.xml` fil:
+      och öka storleken för max-file och max-request-size till minst 500 MB, se följande `multipart-config` exempel på en sådan `web.xml` fil.
 
+      ```xml
+      <multipart-config>
+      <!-- 500MB max -->
+      <max-file-size>524288000</max-file-size>
+      <max-request-size>524288000</max-request-size>
+      <file-size-threshold>0</file-size-threshold>
+      </multipart-config>
       ```
-        <multipart-config>
-         <!-- 500MB max -->
-         <max-file-size>524288000</max-file-size>
-         <max-request-size>524288000</max-request-size>
-         <file-size-threshold>0</file-size-threshold>
-         </multipart-config>
-      ```
 
 
 
 
-* **Distribuera AEM-webbprogram**
+* **Distribuera AEM webbprogram**
 
-   * Ladda ned AEM war-fil
+   * Hämta AEM
    * Gör dina konfigurationer i web.xml vid behov (se ovan i den allmänna beskrivningen)
 
       * Packa upp WEB-INF/web.xml
       * ändra sling.run.modes-parameter för publicering
       * avkommentera slinga.initial startparameter och ange den här sökvägen efter behov
       * Replikera filen web.xml
-   * Byt namn på AEM war-filen till ROOT.war om du vill distribuera den som en rotwebbapp, byt namn på den till t.ex. aemauthor.war om du vill ha en författare som kontextrot
+   * Byt namn AEM krigsfil till ROOT.war om du vill distribuera den som en rotwebbapp, byt namn på den till t.ex. aemauthor.war om du vill ha en aemauthor som kontextrot
    * kopiera det till Tomcat-webbappen
-   * vänta tills AEM är installerat
+   * vänta tills AEM har installerats
 
 
 ## Felsökning {#troubleshooting}
@@ -252,4 +255,3 @@ Läs [Allmän beskrivning](#general-description) ovan före en distribution.
 Information om hur du hanterar problem som kan uppstå under installationen finns i:
 
 * [Felsökning](/help/sites-deploying/troubleshooting.md)
-
