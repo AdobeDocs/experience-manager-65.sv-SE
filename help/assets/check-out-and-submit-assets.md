@@ -3,9 +3,9 @@ title: Checka in och checka ut dina digitala resurser för redigering.
 description: Lär dig hur du checkar ut resurser för redigering och checkar in dem igen när ändringarna är klara.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: ee94193ff31c60e954be0070ecf84e447effc4f6
 workflow-type: tm+mt
-source-wordcount: '399'
+source-wordcount: '428'
 ht-degree: 3%
 
 ---
@@ -56,6 +56,10 @@ Administratörer kan checka in resurser som är utcheckade av andra användare.
    ![chlimage_1-476](assets/chlimage_1-476.png)
 
 1. Klicka på **[!UICONTROL Release Lock]** i verktygsfältet. Resursen checkas in igen och är tillgänglig för redigering för andra användare.
+
+## God praxis och begränsningar {#tips-limitations}
+
+* Det går att ta bort en *mapp* som innehåller utcheckade resursfiler. Innan du tar bort en mapp kontrollerar du att inga digitala resurser är utcheckade av användarna.
 
 >[!MORELIKETHIS]
 >
