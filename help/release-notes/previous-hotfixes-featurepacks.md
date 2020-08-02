@@ -3,7 +3,7 @@ title: Adobe Experience Manager 6.5 Previous Service Pack Release Notes
 description: Versionsinformation för Adobe Experience Manager 6.5 Service Pack 3 och tidigare.
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: 60a5bb489c1f473f3f848909b8c2eb3192c49e88
+source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
 workflow-type: tm+mt
 source-wordcount: '8098'
 ht-degree: 0%
@@ -19,9 +19,9 @@ Adobe Experience Manager 6.5.4.0 är en viktig uppdatering som innehåller nya f
 
 Några viktiga funktioner och förbättringar som introducerades i Adobe Experience Manager 6.5.4.0 är:
 
-* Adobe Experience Manager Assets har nu konfigurerats med Brand Portal via Adobe I/O Console.
+* Adobe Experience Manager Assets har nu konfigurerats med Brand Portal via Adobe I/O-konsolen.
 
-* Nu finns ett nytt [Generate Output](../forms/using/aem-forms-workflow-step-reference.md) -steg för arbetsflöden i Adobe Experience Manager Forms.
+* Nu finns ett nytt [Generate Output](../forms/using/aem-forms-workflow-step-reference.md) -steg för Adobe Experience Manager Forms-arbetsflöden.
 
 * [Flerkolumnsstöd](../forms/using/resize-using-layout-mode.md) för layoutläge för adaptiva formulär och interaktiv kommunikation.
 
@@ -31,7 +31,7 @@ Några viktiga funktioner och förbättringar som introducerades i Adobe Experie
 
 * Den inbyggda databasen (Apache Jackrabbit Oak) uppdateras till version 1.10.8.
 
-* Nu kan du synkronisera underordnade *Dynamic Media för selektivt innehåll till läget* Scene7 i stället för att alla tillgängliga på `content/dam`.
+* Nu kan du synkronisera delträd med selektivt innehåll till *Dynamic Media - Scene7-läge* i stället för alla tillgängliga på `content/dam`.
 
 * Integrering av formulärdatamodell med SOAP-webbtjänst har nu stöd för urvalsgrupper eller attribut för element.
 
@@ -63,7 +63,7 @@ En fullständig lista över funktioner och viktiga högdagrar som introducerats 
 
 * När Experience Fragments dras, observeras en hög responstid (NPR-31878).
 
-* När du markerar alternativet Drag-komponenten här i platshållaren för ett responsivt rutnät, skickas en GET-begäran och begäran resulterar i HTTP 403-fel (NPR-31845).
+* När du markerar Drag-komponenten här i platshållaren för ett responsivt rutnät skickas en GET-begäran och begäran resulterar i HTTP 403-fel (NPR-31845).
 
 * När du flyttar innehållet i samma mapp är alternativet för sidflyttning inaktiverat (NPR-31840).
 
@@ -119,7 +119,7 @@ En fullständig lista över funktioner och viktiga högdagrar som introducerats 
 
 * Touch UI-sökning (utförd via Omnissearch)-resultatsidan rullar automatiskt upp och förlorar användarens rullningsposition (NPR-31307).
 
-* Assets detail page of PDF assets does not show action buttons except To Collection and Add Rendition buttons in Experience Manager running mode on Dynamic Media Scene7 run mode (CQ-4286705).
+* Assets detail page of PDF assets does not show action buttons except To Collection and Add Rendition buttons in Experience Manager running mode (CQ-4286705).
 
 * Resurserna tar för lång tid att bearbeta genom batchöverföringen i Scene7 (CQ-4286445).
 
@@ -209,7 +209,7 @@ En fullständig lista över funktioner och viktiga högdagrar som introducerats 
 
 * MS Word- och MS Excel-dokument som innehåller JPEG-bilder kan inte tolkas när de tolkas med Tika-tolken, och fel som inte hittas av klassen observeras (NPR-31952).
 
-### Formulär {#forms-6540}
+### Forms {#forms-6540}
 
 >[!NOTE]
 >
@@ -221,17 +221,17 @@ En fullständig lista över funktioner och viktiga högdagrar som introducerats 
 
 * Korrespondenshantering: Standardvärdena som definieras i brevmallen visas inte i förhandsvisningsläget (NPR-32511).
 
-* Mobilformulär: Skicka-knappen visas som utökad när ett XDP-formulär återges i en HTML-version (NPR-32514).
+* Mobile Forms: Skicka-knappen visas som utökad när ett XDP-formulär återges i en HTML-version (NPR-32514).
 
 * Dokumenttjänster: Problem med URL-åtkomst för brev och vissa andra sidor efter att Service Pack 2 har tillämpats (NPR-32508, NPR-32509).
 
 * Dokumenttjänster: Om antalet transaktioner på en server överstiger en viss gräns misslyckas konverteringen från HTML till PDF och filtypsinställningarna tas bort från [!DNL Forms] servern (NPR-32204).
 
-* Adaptiva former: Verktyget Webbläsartillgänglighet rapporterar fel i adaptiva formulär enligt riktlinjerna för WCAG2 Level AA (NPR-32312, NPR-32309, CQ-4285439).
+* Adaptiv Forms: Verktyget Webbläsartillgänglighet rapporterar fel i adaptiva formulär enligt riktlinjerna för WCAG2 Level AA (NPR-32312, NPR-32309, CQ-4285439).
 
-* Adaptiva former: Webbläsarhjälpmedelsverktyget i Chrome rapporterar ett fel med bästa praxis (NPR-32310).
+* Adaptiv Forms: Webbläsarhjälpmedelsverktyget i Chrome rapporterar ett fel med bästa praxis (NPR-32310).
 
-* Adaptiva former: Översättningsproblem vid konfiguration av ett adaptivt formulär inbäddat på en Experience Manager Sites-sida (NPR-32168).
+* Adaptiv Forms: Översättningsproblem vid konfiguration av ett adaptivt formulär inbäddat på en Experience Manager Sites-sida (NPR-32168).
 
 * Workbench: Ett felmeddelande visas när åtgärden Hämta PDF-egenskaper används för tjänsten PDF Utilities (NPR-32150).
 
@@ -241,7 +241,7 @@ En fullständig lista över funktioner och viktiga högdagrar som introducerats 
 
 * Designer: Om det finns sammanfogade celler i en tabell misslyckas hjälpmedelstestet för PDF-utdatafilen som konverterats från ett XDP-formulär med hjälp av utdatatjänsten (CQ-4285372).
 
-* Foundation JEE: Om en Experience Manager Forms-server är frånkopplad från ett kluster förhindrar cachelagring att den återansluter till servern (NPR-32412).
+* Foundation JEE: Om en Experience Manager Forms-server är frånkopplad från ett kluster kan cachelagring förhindra att den återansluter till servern (NPR-32412).
 
 ## Adobe Experience Manager 6.5.3.0 {#experience-manager-6530}
 
@@ -323,21 +323,21 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 * Resursnamn ändras till gemener när du flyttar resurser från en mapp till en annan i [!DNL Experience Manager] läget [!DNL Dynamic Media]-Scene7 (NPR-31630).
 
-* Ett fel uppstod när en fjärrbilduppsättning redigerades för bilden som finns i mappen som heter same som namnet på Scene7-företaget (NPR-31340).
+* Ett fel uppstod när en fjärrbilduppsättning redigerades för bilden i mappen som heter samma som Scene7 företagsnamn (NPR-31340).
 
 * [!DNL Dynamic Media] resurser som innehåller referenser publiceras inte (NPR-31180).
 
-* Överföringar från [!DNL Dynamic Media]7-Scene7-läge till [!DNL Dynamic Media Classic] tar för lång tid att slutföra (NPR-31048).
+* Överföringar från [!DNL Dynamic Media]7-Scene7 till [!DNL Dynamic Media Classic] tar för lång tid att slutföra (NPR-31048).
 
 * Aktiveringspunkten som läggs till i en bildresurs är inte synlig via Interactive Image Viewer på sidan med resursinformation (NPR-30979).
 
 * Enorma snedningsjobb skapas och Bearbetningsbanderollen visas igen när åtgärder som utförs på resurser i [!DNL Experience manager Assets] skickas till Scene7 (NPR-30947).
 
-* En konflikt uppstår när du skapar en språkkopia av resurser och resurser inte överförs till Scene7 (NPR-30932).
+* En konflikt uppstår när språkkopia av resurser skapas och resurser inte överförs till Scene7 (NPR-30932).
 
 * Dynamiska återgivningar som hämtats från [!DNL Experience Manager] att ha [!DNL Dynamic Media]Hybrid-läge är brutna (de är av texttyp med innehållet&quot;det går inte att hitta bilden&quot; i stället för bildinnehållstypen) (NPR-30876).
 
-* [!DNL Dynamic Media] Arbetsflödet för kodning av video kan inte generera en miniatyrbild för videon som migreras från [!DNL Dynamic Media Classic] till [!DNL Dynamic Media]-Scene7 i Adobe Experience Manager (CQ-4282011).
+* [!DNL Dynamic Media] Arbetsflödet för kodning av video kan inte generera miniatyrbilder för videon som migreras från [!DNL Dynamic Media Classic] till [!DNL Dynamic Media]Scene7 på Adobe Experience Manager (CQ-4282011).
 
 * IpsApiException observerades när resurser migrerades från en instans till en annan med olika Scene7-företags-ID:n (CQ-4280548).
 
@@ -349,15 +349,15 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 * Videor kan inte spelas upp med SmartCropVideoViewer i Internet Explorer 11 och Safari (CQ-4281422).
 
-* Användning av flyttningsknappen för att flytta flera resurser, från en mapp till en annan, misslyckas i [!DNL Experience Manager] körningsläget [!DNL Dynamic Media]-Scene7 (CQ-4280384).
+* Om du använder flyttningsknappen för att flytta flera resurser, från en mapp till en annan, går det inte att [!DNL Experience Manager] köra i [!DNL Dynamic Media]-Scene7 (CQ-4280384).
 
 * Förvrängd video visas i resursinformation när MIME-typen är en annan än MP4 (CQ-4279704).
 
 * Videoklipp som nyligen har infogats i mappar med en videoprofil är fortfarande i bearbetningstillstånd även när kodens procenttal har slutförts till 100 % (CQ-4279389).
 
-* När du flyttar resurser från en mapp skapas ett stort antal snedstreck (API-anrop för Scene7) än vad som helst krävs (CQ-4278664).
+* När du flyttar resurser från en mapp skapas ett stort antal snedstreck (Scene7 API-anrop) än vad som helst krävs (CQ-4278664).
 
-* Namn på bilduppsättningen ändras till gemener i Scene7 när bilduppsättning (eller mediaset) skapas och namnges med lämplig namnkonvention i DAM (CQ-428112).
+* Namn på bilduppsättningen ändras till gemener i Scene7 när bilduppsättning (eller mediaset) skapas och namnges med lämplig namnkonvention i DAM (CQ-4281112).
 
 * Scene7 Migrator anger felaktigt publiceringstillstånd (CQ-4263492).
 
@@ -399,7 +399,7 @@ Remove one mention of this fix.
 * När en sida som innehåller vissa Experience Fragments öppnas i icke-redigerarläge (antingen i Författare utan prefixet och `editor.html` , eller i Utgivare), avslutas begäran med HTTP-statusfelkoden `wcmmode=disabled``500` (NPR-30743).
 * Användare kan inte ändra sitt lösenord och komma åt sin profilsida (NPR-31161).
 
-### Sök- och användargränssnitt {#search-ui-interface}
+### Sök- och användargränssnitt {#ui-interface-and-search}
 
 * När du växlar från kortvyn till listvyn på en sökresultatsida uppstår en fördröjning innan sidan kan rullas (NPR-31286).
 
@@ -468,15 +468,15 @@ Remove one mention of this fix.
 
 * Uppdateringar av Lucene-index gör att författarservern sinkas (NPR-31548).
 
-### Formulär {#forms-6530}
+### Forms {#forms-6530}
 
 >[!NOTE]
 >
 >[!DNL Experience Manager] Service Pack innehåller inga korrigeringar för [!DNL Experience Manager Forms]. De levereras med ett separat Forms-tilläggspaket. Dessutom släpps ett kumulativt installationsprogram som innehåller korrigeringar för [!DNL Experience Manager Forms] JEE. Mer information finns i [Installera tillägget](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package) Experience Manager Forms och [Installera Experience Manager Forms på JEE](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer).
 
-#### Formulärtilläggspaket {#forms-add-on-package-6530}
+#### Forms tilläggspaket {#forms-add-on-package-6530}
 
-**Adaptiva former**
+**Adaptiv Forms**
 
 * Strängar innehåller ordlistenyckeln när adaptiva former lokaliseras (NPR-31110).
 
@@ -496,13 +496,13 @@ Remove one mention of this fix.
 
 * OSGi-arbetsflödet misslyckas på grund av 100 % processoranvändning (NPR-31233).
 
-**HTML5-formulär**
+**HTML5 Forms**
 
 * När du genererar HTML5-förhandsgranskning av ett XDP-formulär visas ett flimmer när instanser av ett delformulär läggs till (NPR-30909).
 
-#### Formulär i JEE-installationsprogram {#forms-jee-installer-6530}
+#### Forms på JEE-installationsprogram {#forms-jee-installer-6530}
 
-**Formulär - dokumenttjänster**
+**Forms - dokumenttjänster**
 
 * SOAP-webbtjänst som använder MTOM i ett .NET-projekt visar undantag för AssemblerServiceClient-anrop och HTMLToPDF2-metoder (NPR-4281771).
 
@@ -510,7 +510,7 @@ Remove one mention of this fix.
 
 **Foundation JEE**
 
-* Åtgärdskonfigurationen läser inte in processnamnen för åtgärden Anropa ett formulärarbetsflöde för att skicka (NPR-31478).
+* Åtgärdskonfigurationen läser inte in processnamnen för åtgärden Anropa en Forms Workflow skicka (NPR-31478).
 
 ### Funktionspaket ingår {#feature-packs-included-6530}
 
@@ -518,9 +518,9 @@ Remove one mention of this fix.
 >
 >För [!DNL Experience Manager Forms] kunderna är det viktigt att installera [!DNL Experience Manager Forms] tilläggspaket efter installation av [!DNL Experience Manager] Service Pack, Cumulative Fix Pack eller Feature Pack.
 
-#### Formulär - Foundation JEE {#forms-foundation-jee-feature}
+#### Forms - Foundation JEE {#forms-foundation-jee-feature}
 
-* [!DNL Experience Manager] Formulärstöd för Oracle 18c (NPR-29155).
+* [!DNL Experience Manager] Forms-stöd för Oracle 18c (NPR-29155).
 
 ## Adobe Experience Manager 6.5.2.0 {#experience-manager-6520}
 
@@ -564,7 +564,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 * Dialogrutan Resursväljare tillåter inte val av resurs och kan därför inte uppdatera källan med hjälp av funktionen för relaterat källbyte. NPR-30502: Programfix för CQ-4275029
 * [!UICONTROL DAM Update Asset] arbetsflöde - I inaktuellt läge vid överföring av stora MP4-filer. NPR-30480: Programfix för CQ-4271352
 * Funktionen Skapa granskningsuppgift fungerar inte eftersom null-nyttolast gör att alla efterföljande granskningsuppgiftrelaterade åtgärder misslyckas. NPR-30468: Programfix för CQ-4274263
-* Adobe Smart Tag-anslutningsproblem via DataPower. NPR-30026: Programfix för CQ-4269457
+* Anslutningsproblem med Adobe Smart Tag via DataPower. NPR-30026: Programfix för CQ-4269457
 * Resursens användargränssnittskolumnvy genererar ett fel vid försök att öppna filtren från listen. NPR-30501: Programfix för CQ-4273862
 * När du lägger till grupper som synkroniserats från LDAP i CUG-egenskaperna (Closed User Group) för en resursmapp, sparas och hämtas inte gruppen. NPR-30615: Programfix för CQ-4274689
 * Filtersökningsformat och orienteringsfält använder inte det automatiskt ifyllda värdet på sökfrågan. NPR-30620: Programfix för CQ-4275724
@@ -572,7 +572,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 * Schemaformuläret för mappmetadata identifierar inte automatiskt datatyp och skapar därför inte den relaterade TypeHint-typen när formuläret skickas. NPR-30599: Programfix för CQ-4275227
 * Alternativen för att beskära och rotera resurser är inaktiverade i DMS7-redigeringsgränssnittet. NPR-30118: Programfix för CQ-4273221
 * Funktionen Dela länk fungerar inte på [!DNL Experience Manager] instanser med DMS7-konfiguration. NPR-30080, NPR-30492: Programfix för CQ-4273651
-* Om du lägger till [!DNL Dynamic Media]-Scene7-komponenten på sidan och sedan publicerar sidan, aktiveras inte DMscene7-konfigurationen varje gång. NPR-30641: Programfix för CQ-4275962
+* Om du lägger till [!DNL Dynamic Media]-Scene7-komponenten på sidan och sedan publicerar sidan aktiveras inte dmscene7-konfigurationen varje gång. NPR-30641: Programfix för CQ-4275962
 * Lade till en IPSJobJournal i [!DNL Experience Manager] för att skapa endast ett IPS-jobb (Intrusion Prevention Systems) per bearbetningsprofil. NPR-30490: Programfix för CQ-4273614
 * [!DNL Dynamic Media]: Lagt till standardfilter för att utesluta resurser från replikering till [!DNL Experience Manager] publiceringsnoden. NPR-30538: Programfix för CQ-4274678
 * Ett externt arbetsflöde för ombearbetning har introducerats för stöd för flera resurser så att mappen kan användas som nyttolast. Arbetsflödet består av två steg: ombearbetar resurser utan handtag via metadatamappning till nästa steg och överför alla resurser utan resurshandtag till S7 i ett enda IPS-jobb. Mer information finns i Konfigurera [!DNL Dynamic Media] Cloud Service. NPR-30489: Programfix för CQ-4272903
@@ -588,7 +588,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 * Om användaren har ett e-post-ID med versaler kan användarna inte checka in de resurser som tidigare har checkats ut. Programfix för CQ-4276575
 * Åtgärden Ta bort gäller bara för de förinställningar som är markerade, och om skärmen automatiskt uppdaterar listan efter åtgärden visas andra förinställningar som redan har uppdaterats. Programfix för CQ-4261461
 * Om du konfigurerar [!DNL Dynamic Media] Cloud Service i [!DNL Dynamic Media]hybrid-läge skapas flera tomma rapportsviter i [!DNL Analytics]och inget rapportsuite-id sparas i [!DNL Experience Manager], vilket resulterar i duplicering av rapportsviten. Programfix för CQ-4249780
-* Det går inte att synkronisera om namnbytet i [!DNL Experience Manager] resursen till duplicerat namn till Scene7. Programfix för CQ-4276763
+* Det går inte att synkronisera namnbytet i [!DNL Experience Manager] resursen till det duplicerade namnet till Scene7. Programfix för CQ-4276763
 * Användargenererat innehåll visas felaktigt på sökfilterpanelen. Programfix för CQ-4273875
 * Alternativet Sök efter liknande är inte tillgängligt för TIFF-bilder. Programfix för CQ-4278238
 * Implementerat alternativ för att stänga av video vid inläsning i VideoPlayer. Programfix för CQ-4266465
@@ -652,19 +652,19 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 ### Integrering {#integration}
 
 * Det anpassade innehållet visas inte korrekt på publiceringsinstansen förrän instansen startas om. NPR-30377: Programfix för CQ-4273706
-* När du konfigurerar Launch på en webbplats har biblioteksadressen ett snedstreck (/) som är förinställt, vilket ger manuella åtgärder varje gång. NPR-30694: Programfix för CQ-4275501
+* När du konfigurerar Launch på en webbplats har biblioteksadressen ett snedstreck (/) som är förinställt, vilket kan orsaka manuella åtgärder varje gång. NPR-30694: Programfix för CQ-4275501
 
-### Formulär {#forms-6520}
+### Forms {#forms-6520}
 
 >[!NOTE]
 >
->[!DNL Experience Manager] Service Pack innehåller inga korrigeringar för [!DNL Experience Manager Forms]. De levereras med ett separat [!DNL Forms] tilläggspaket. Dessutom släpps ett kumulativt installationsprogram som innehåller korrigeringar för [!DNL Experience Manager Forms] JEE. Mer information finns i [Installera tillägget](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package) Experience Manager Forms och [Installera JEE-installationsprogrammet](#forms-jee-installer)för Experience Manager Forms.
+>[!DNL Experience Manager] Service Pack innehåller inga korrigeringar för [!DNL Experience Manager Forms]. De levereras med ett separat [!DNL Forms] tilläggspaket. Dessutom släpps ett kumulativt installationsprogram som innehåller korrigeringar för [!DNL Experience Manager Forms] JEE. Mer information finns i [Installera tillägget](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package) Experience Manager Forms och [Installera installationsprogrammet](#forms-jee-installer)för Experience Manager Forms JEE.
 
 Viktiga högdagrar för [!DNL Experience Manager] 6.5.2.0-formulär är:
 
-* Inställningen Auto har lagts till `RenderAtClient` i `PDFFormRenderOptions` API för [!DNL Experience Manager] Forms OSGi.
+* Inställningen Auto har lagts till `RenderAtClient` i `PDFFormRenderOptions` API:t för [!DNL Experience Manager] Forms OSGi.
 
-#### Formulärtilläggspaket {#forms-add-on-package}
+#### Forms tilläggspaket {#forms-add-on-package}
 
 **Integrering med back end**
 
@@ -680,11 +680,11 @@ Viktiga högdagrar för [!DNL Experience Manager] 6.5.2.0-formulär är:
 
 * Ett fält som är markerat som obligatoriskt i formulärdatamodellen visas enligt kraven i användargränssnittet för Skapa korrespondens (CCR UI). NPR-30623: Programfix för CQ-4274902
 
-**Formulär - arbetsflöde**
+**Forms - arbetsflöde**
 
 * Omappade utdatavariabler i Bevakade mappar gör att anropet misslyckas. Programfix för CQ-4264451
 
-**HTML5-formulär**
+**HTML5 Forms**
 
 * När den anpassade koden eller projektet distribueras för andra gången återges inte sidan och följande fel inträffar:
 
@@ -694,17 +694,17 @@ Viktiga högdagrar för [!DNL Experience Manager] 6.5.2.0-formulär är:
 
 * När du använder NonVisual Desktop Access i bläddringsläge för att läsa ett HTML5-formulär, läser webbläsaren Chrome &quot;graphic&quot; före varje Scalable Vector Graphic (SVG) i formulärdesignen. NPR-30449: Programfix för CQ-4274732
 
-#### Formulär-JEE-installationsprogram {#forms-jee-installer}
+#### Forms JEE-installationsprogram {#forms-jee-installer}
 
-**Formulär - dokumentsäkerhet**
+**Forms - dokumentsäkerhet**
 
 * Det går inte att använda en signatur med tidsstämpel. Fel: ALC-DSC-003-000: com.adobe.idp.dsc.DSCInvocationException: Anropsfel. NPR-30820: Programfix för CQ-4275852
 
-**Formulär - dokumenttjänster**
+**Forms - dokumenttjänster**
 
-* Om &quot;SubmitURL&quot; innehåller ett et-tecken (&amp;), visas tolkningsfel i loggen när POST-begäran görs till renderpdf-servern. NPR-30865: Programfix för CQ-4278232
+* Om &quot;SubmitURL&quot; innehåller ett et-tecken (&amp;), visas tolkningsfel i loggen när en begäran om POST görs till renderpdf-servern. NPR-30865: Programfix för CQ-4278232
 
-**Formulär - Foundation JEE**
+**Forms - Foundation JEE**
 
 * HTMLtoPDF-tjänsten visar inte maxReuseCount i JMX-konsolen. NPR-30134, NPR-30304: Programfix för CQ-4273763
 * Om du lägger till eller redigerar en webbtjänstanslutning genom att anropa webbtjänster från [!DNL Experience Manager Forms] Workbench uppstår ett fel: ClassNotFoundException org.apache.axis.message.SOAPBodyElement. NPR-30105: Programfix för CQ-4273217
@@ -719,7 +719,7 @@ Viktiga högdagrar för [!DNL Experience Manager] 6.5.2.0-formulär är:
 
 * En konfigurationsegenskap har lagts till som tillåter export av Experience Fragments direkt till användardefinierade arbetsytor för [!DNL Adobe Target]. NPR-29189: Programfix för CQ-4249782
 
-#### Formulär - dokumenttjänster {#forms-document-services-1}
+#### Forms - dokumenttjänster {#forms-document-services-1}
 
 * Inställningen Auto har lagts till `RenderAtClient` i `PDFFormRenderOptions` API för [!DNL Experience Manager Forms] OSGi. NPR-30759: Programfix för CQ-4278193
 
@@ -730,7 +730,7 @@ Viktiga högdagrar för [!DNL Experience Manager] 6.5.2.0-formulär är:
 Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 * Aktiverade inkludering av dynamiskt gränssnittsläge i spårningshändelser som anpassade attribut.
-* Inkluderat stöd för leverans av 360-graders videomaterial i [!DNL Dynamic Media]-Scene7-läge.
+* Stöd för 360-graders videomaterial i [!DNL Dynamic Media]Scene7-läge ingår.
 * Aktiverade *japansk radbrytning* via stilpluginen i RTF-redigeraren. Mer information finns i [Konfigurera japansk radbrytning](/help/sites-administering/configure-rich-text-editor-plug-ins.md#jpwordwrap)
 
 ### Assets
@@ -745,7 +745,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 * Stöd för Multi-Site Manager har aktiverats för [!DNL Experience Manager Assets]. Programfix för CQ-4271453, CQ-4268621, CQ-4257491
 * [!DNL Experience Manager] -gränssnittet bör visa ytterligare en post för den aktuella versionen av resursen i tidslinjehistoriken och visa den senaste incheckningskommentaren från [!DNL Adobe Asset Link]. Programfix för CQ-4262864
 * Tidslinjen för innehållsfragment visar ett felmeddelande när egenskaper saknas. Programfix för CQ-4272560
-* Ett problem med Scene7-videospelaren när den expanderar till helskärm. Programfix för CQ-4266700
+* Ett problem med Scene7 videospelare när den expanderar till helskärm. Programfix för CQ-4266700
 * ZoomVerticalViewer: Panoreringsknappar ska inte visas om en enda bildresurs används. Programfix för CQ-4264795
 * Om du tar bort en underordnad nod i live-kopian bör liveRelationship frigöras. Programfix för CQ-4270395
 * Metadataschemat innehåller bara objekt från den globala konfigurationen och saknar dem från den aktiva klientorganisationen. URL-värdet för formPath återställs till standard även om det ändras. NPR-29945: Programfix för CQ-4262898
@@ -834,17 +834,17 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 * Information om minnesanvändning visas inte i systemkonsolen när Java11 används. NPR-29669
 
-### Formulär
+### Forms
 
 De viktigaste högdagrarna för [!DNL Experience Manager Forms] 6.5.1.0 är:
 
-* Endast OSGi: Ett nytt attribut har lagts till `PAGECOUNT` i Output and Forms Service.
+* Endast OSGi: Ett nytt attribut har lagts till `PAGECOUNT` i Output och Forms Service.
 
 * Endast OSGI: Stöd för att skapa statiska PDF-filer med Forms Service har aktiverats.
 * Behörigheter för XMLForm.exe har aktiverats för administratör och rotanvändare.
 * Aktiverat stöd för ADFS v3.0 för Dynamics lokal integrering.
 
-#### Formulärtilläggspaket
+#### Forms tilläggspaket
 
 **Integrering med backend**
 
@@ -858,21 +858,21 @@ De viktigaste högdagrarna för [!DNL Experience Manager Forms] 6.5.1.0 är:
 
 * Även om inget innehåll förväntas från REST API-utdata genereras ett fel av formulärdatamodellens invoke-åtgärd. Programfix för CQ-4268828
 
-**Adaptiva former**
+**Adaptiv Forms**
 
 * Det gick inte att lägga till en ny instans i adaptivt formulärfragment under en lat inläsning. NPR-29818: Programfix för CQ-4269875
 * Verifiera att komponenten inte loggar eller visar något fel för dokumentmallar. Programfix för CQ-4272999
-* Stöd har lagts till för att inaktivera layoutredigeraren för adaptiva formulär. Programfix för CQ-4270810
-* Verifieringssteget för adaptiva formulär i [!DNL Experience Manager] 6.5 har återställts. Programfix för CQ-4269583
+* Stöd har lagts till för att inaktivera layoutredigeraren för Adaptive Forms. Programfix för CQ-4270810
+* Verifieringssteget för Adaptive Forms återställdes i [!DNL Experience Manager] 6.5. Programfix för CQ-4269583
 
 * Fel vid validering av adaptiva formulärfält [!DNL Adobe Sign]. Programfix för CQ-4269463
 * När en [!DNL Experience Manager Forms] instans har fler än 20 adaptiva formulärfragment och namnet på alla formulärfragment börjar med samma sträng, returnerar sökningen inga eller bara de 20 senast skapade fragmenten. Programfix för CQ-4264414, CQ-4264914
 
-* Prestandaproblem när appen Adaptive Forms används med stor datamängd. . Programfix för CQ-4235310
+* Prestandaproblem när Adaptiv Forms-app används med stor datauppsättning. . Programfix för CQ-4235310
 
 * Om det öppnas via ett anonymt konto på en publiceringsinstans går det inte att läsa in GuideRuntime-skriptet. Programfix för CQ-4268679
 
-**Formulär - Interaktiv kommunikation**
+**Forms - Interaktiv kommunikation**
 
 * Mallen för interaktiv kommunikation listar inte sidhuvuds- och sidfotskomponenter i listan över tillåtna komponenter. Programfix för CQ-4237895
 * När du skapar en interaktiv utskriftsmall för kommunikation som innehåller ett bildfält, ställs diagrammets rubrik in på tom. Programfix för CQ-4264772
@@ -883,11 +883,11 @@ De viktigaste högdagrarna för [!DNL Experience Manager Forms] 6.5.1.0 är:
 * Agentinställningarna visas inte eftersom kryssrutan Redigerbar av agent avmarkeras när bindningstypen ändras från textfragment till Inget/Datamodellobjekt för strängfält/variabel. Programfix för CQ-4261953
 * När agentanvändargränssnittet skickas lagrar den resulterande webbdatajson-filen information för arvsannullerade obundna fält. Programfix för CQ-4265621
 
-**Formulär - arbetsflöde**
+**Forms - arbetsflöde**
 
 * När ett formulär skickas på nytt från utkorgen för adaptiva formulärprogram, förlorar det data. NPR-28345: Programfix för CQ-4260929
 * Dokumenten stängs inte när de sparas för ärenden som inte är variabla. Programfix för CQ-4269784
-* Appen Adaptive Forms har upphört med stöd för Microsoft Windows 8.1. Programfix för CQ-4265274
+* Adaptiv Forms-app har upphört med stöd för Microsoft Windows 8.1. Programfix för CQ-4265274
 * När en bild på mer än 2 MB bifogas som en bifogad fil på fältnivå till ett formulär i Android-versionen av [!DNL Experience Manager Forms] programmet kraschar programmet. Programfix för CQ-4265578
 
 * Aktiverade förifyllningsalternativ för Interactive Communication Print Channel i Tilldela-aktiviteten. Programfix för CQ-4265577
@@ -898,18 +898,18 @@ De viktigaste högdagrarna för [!DNL Experience Manager Forms] 6.5.1.0 är:
 * Det går inte att skicka från arbetsytan med ett omljud. Programfix för CQ-4263172
 * Om arbetsflödet öppnas för redigering i en uppgraderad konfiguration visas ett fel i stället för arbetsflödets namn i det bevakade mappgränssnittet. Programfix för CQ-4238579
 
-**Formulär - hantering**
+**Forms - hantering**
 
 * När ett tillägg som inte är xsd eller schema.json överförs, sker ingen överföring och inget felmeddelande genereras. Programfix för CQ-4266716
 
-**Formulär - korrespondenshantering**
+**Forms - korrespondenshantering**
 
 * [!DNL Experience Manager Forms] 6.5 Gränssnittet Create Correspondence UI (CCR UI) kan inte öppna korrespondens som skapats med [!DNL Experience Manager Forms] 6.3. Programfix för CQ-4266392
 * Summeringsfunktionen i XDP fungerar inte om DDE-datatypen är av typen number. Programfix för CQ-4227403
 * Inaktiveringslogik för bokstavscache i minnet uppdateras eftersom den senaste ändringstiden inte uppdateras när en resurs publiceras. Programfix för CQ-4250465
 * Det går inte att publicera dokumentfragment, DD och Letters. Programfix för CQ-4272893
 
-#### Formulär-JEE-installationsprogram
+#### Forms JEE-installationsprogram
 
 **PDF Generator**
 
@@ -917,27 +917,27 @@ De viktigaste högdagrarna för [!DNL Experience Manager Forms] 6.5.1.0 är:
 * Ersatte namnet på PhantomJS till WebToPDF för HTML-till-PDF-konvertering. NPR-29933: Programfix för CQ-4234545
 * Ett fel genereras när zip-filen konverteras till PDF. Programfix för CQ-4268628
 
-**Formulär - Designer**
+**Forms - Designer**
 
 * När en fullständig tillgänglighetskontroll utförs för den statiska PDF-filen som skapats med [!DNL Experience Manager Forms Designer]misslyckas kontrollen Primärt språk på grund av att språkattribut saknas. Programfix för CQ-4272923, CQ-4271002
 
-**Formulär - dokumentsäkerhet**
+**Forms - dokumentsäkerhet**
 
 * Digital signatur med HSM (Hardware Security Module) fungerar inte med OSGi Linux på Java 11 och Java 8\. NPR-29838: Programfix för CQ-4270441
 * Digital signatur med HSM (Hardware Security Module) fungerar inte med JEE Linux och alla appservrar som stöds, dvs. JBoss och Websphere. NPR-29839: Programfix för CQ-4266721
 * Verifiering av signaturer i en PDF med hjälp av PDF Advanced Electronic Signatures (PAdES) genererar InvalidOperationException. NPR-29842: Programfix för CQ-4244837
 * Utökat stöd för Document Security Extension för Office 2019\. Programfix för CQ-4254369, CQ-4259764
 
-**Formulär - dokumenttjänster**
+**Forms - dokumenttjänster**
 
 * PDF-filen kan inte konverteras till PDF/A-1b med formulärfältet har ingen utseendeordlista. NPR-29940: Programfix för CQ-4269618
 
 * OSGi: Det går inte att avgöra antalet sidor som genereras under återgivningen. NPR-28922: Programfix för CQ-4270870
-* Aktiverat stöd för statiska PDF-filer med Forms Service i [!DNL Experience Manager Forms OSGi]. NPR-28572: Programfix för CQ-4270869
+* Stöd för statiska PDF-filer med Forms Service i [!DNL Experience Manager Forms OSGi]. NPR-28572: Programfix för CQ-4270869
 * Det går inte att ändra behörigheten för XMLForm.exe. NPR-29828, NPR-29237: Programfix för Q-4267080
 * Den statiska PDF-fil som skapas av [!DNL Experience Manager Forms] serverns utdatamoddul fyller inte i språkattributet/taggen med språket för det dokument som skapas. NPR-27332: Programfix för CQ-4271002
 
-**Formulär - Foundation JEE**
+**Forms - Foundation JEE**
 
 * Om pdfg_srt inte är tillgänglig i de sista artefakterna misslyckas installationsprogrammet. NPR-29854: Programfix för CQ-4270137
 * LCBackupMode.sh fungerar inte. NPR-29840: Programfix för CQ-4269424
@@ -953,9 +953,9 @@ De viktigaste högdagrarna för [!DNL Experience Manager Forms] 6.5.1.0 är:
 
 * Exportera [!DNL Experience Manager] Experience Fragments till [!DNL Adobe Target]. Mer information finns [i Experience Fragment Link Rewriter Provider - HTML](https://helpx.adobe.com/experience-manager/6-5/help/sites-developing/experience-fragments.html#TheExperienceFragmentLinkRewriterProviderHTML). Programfix för CQ-4265469
 
-#### Formulär - dokumenttjänster - ingår
+#### Forms - dokumenttjänster - ingår
 
-* Endast OSGi: Ett nytt attribut har lagts till i PAGECOUNT i Output and Forms Service. NPR-28922: Programfix för CQ-4270870
+* Endast OSGi: Ett nytt attribut, PAGECOUNT, har lagts till i Output och Forms Service. NPR-28922: Programfix för CQ-4270870
 * Endast OSGi: Stöd för att skapa statiska PDF-filer med Forms Service har aktiverats. NPR-28572: Programfix för CQ-4270869
 * Behörigheter för XMLForm.exe har aktiverats för administratör och rotanvändare. NPR-29237: Programfix för CQ-4267080
 
