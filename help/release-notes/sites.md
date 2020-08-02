@@ -1,13 +1,8 @@
 ---
 title: Versionsinformation om AEM Sites
 description: Versionsinformation för webbplatser som tillhör Adobe Experience Manager 6.5.
-uuid: 676ead61-3d97-4f23-b616-c647d590bc8f
-contentOwner: msm-service
-products: SG_EXPERIENCEMANAGER/6.4
-discoiquuid: f82e9bd4-f7b6-492d-8e02-593e74fa1058
-docset: aem65
 translation-type: tm+mt
-source-git-commit: a430c4de89bde3b907d342106465d3b5a7c75cc8
+source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
 workflow-type: tm+mt
 source-wordcount: '856'
 ht-degree: 0%
@@ -15,7 +10,7 @@ ht-degree: 0%
 ---
 
 
-# Versionsinformation om AEM Sites{#aem-sites-release-notes}
+# Versionsinformation om AEM Sites {#aem-sites-release-notes}
 
 Se följande för AEM Sites 6.5-förbättringar i detalj:
 
@@ -27,10 +22,10 @@ Se följande för AEM Sites 6.5-förbättringar i detalj:
 
    * operatorn &quot;in&quot; för strängar, arrayer och objekt:
 
-      ```
+      ```html
       ${'a' in 'abc’}
-       ${100 in myArray}
-       ${'a' in myObject}
+      ${100 in myArray}
+      ${'a' in myObject}
       ```
 
    * Variabeldeklarationer med datavänligt angivna:
@@ -41,10 +36,10 @@ Se följande för AEM Sites 6.5-förbättringar i detalj:
 
    * Identifierare för automatisk uppbrytning av data:
 
-      ```
+      ```html
       <div data-sly-unwrap.isUnwrapped="${myCondition || myOtherCondition}">
-       text <span data-sly-test="${isUnwrapped}>is unwrapped</code>
-       </div>
+      text <span data-sly-test="${isUnwrapped}>is unwrapped</code>
+      </div>
       ```
 
    * Stöd för negativa tal
@@ -61,7 +56,7 @@ Se följande för AEM Sites 6.5-förbättringar i detalj:
 
 >[!CAUTION]
 >
->AEM inkluderar version 1.12.4 av jQuery-biblioteket för att ge maximal kompatibilitet med befintlig anpassad kod. Adobe har gjort ändringar för att åtgärda kända säkerhetsproblem.
+>AEM innehåller version 1.12.4 av jQuery-biblioteket för att ge maximal kompatibilitet med befintlig anpassad kod. Adobe har gjort ändringar för att åtgärda kända säkerhetsproblem.
 
 ## Webbplatsadministration {#site-administration}
 
@@ -115,10 +110,10 @@ Se följande för AEM Sites 6.5-förbättringar i detalj:
 
 >[!CAUTION]
 >
->at.js 2.x stöds inte med AEM i den version av AEM 6.5 som finns. Använd den senaste versionen av at.js 1.x
+>at.js 2.x stöds inte med AEM vid tidpunkten för AEM 6.5-versionen. Använd den senaste versionen av at.js 1.x
 
 * Integreringen av Adobe Target kan nu använda Target Standard-API:t. I tidigare versioner av AEM används Target Classic HTTP API, som nu är föråldrat.
-* Adobe Target `mbox.js` version 63 ingår. Adobe rekommenderar att du byter implementering till `at.js` v1.x.
+* Adobe Target `mbox.js` version 63 ingår. Adobe rekommenderar starkt att implementeringen ändras till `at.js` v1.x.
 * `at.js` version 1.5.0 ingår nu. Adobe rekommenderar att du använder [Adobe Experience Platform Launch](https://www.adobe.com/experience-platform/launch.html) för att distribuera `at.js` v1.x till webbplatsen.
 
 ## AEM och Adobe Analytics {#aem-amp-adobe-analytics}
@@ -126,7 +121,7 @@ Se följande för AEM Sites 6.5-förbättringar i detalj:
 * `s_code.js` H.27.5 ingår. Adobe rekommenderar att du byter implementering till `AppMeasurement.js`
 * `AppMeasurement.js` v1.8.0 ingår. Adobe rekommenderar att du använder [Adobe Experience Platform Launch](https://www.adobe.com/experience-platform/launch.html) för att etablera AppMeasurement.js på webbplatsen.
 
-## AEM och Commerce {#aem-commerce}
+## AEM och handel {#aem-commerce}
 
 Förbättringar av Commerce Integration Framework pågår snabbare sedan AEM 6.4. [Läs mer här](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/docs.html).
 
