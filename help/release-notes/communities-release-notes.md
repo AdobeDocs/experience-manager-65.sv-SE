@@ -1,20 +1,18 @@
 ---
 title: Versionsinformation om AEM Communities
-description: Versionsinformation om Adobe Experience Manager 6.5 Communities.
-uuid: 1b436959-581c-4b34-b2df-cccc5727da59
-contentOwner: msm-service
-products: SG_EXPERIENCEMANAGER/6.5
-discoiquuid: c3505807-1550-491a-8619-e87839afca4f
-docset: aem65
+description: Versionsinformation för Adobe Experience Manager 6.5 Communities.
 translation-type: tm+mt
-source-git-commit: 57bad4e74b2dfd9e389643bfe58ef25564c5c545
+source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
+workflow-type: tm+mt
+source-wordcount: '493'
+ht-degree: 0%
 
 ---
 
 
-# Versionsinformation om AEM Communities{#aem-communities-release-notes}
+# Versionsinformation för AEM Communities {#aem-communities-release-notes}
 
-Läs vidare om du vill se förbättringarna av AEM Communities sedan version 6.4. Mer information om de nya funktionerna finns i Användarhandbok [för](https://helpx.adobe.com/experience-manager/6-4/communities/user-guide.html)AEM 6.5 Communities.
+Läs vidare om du vill se förbättringarna för AEM Communities sedan version 6.4. Mer information om de nya funktionerna finns i [AEM 6.5 Användarhandbok](https://helpx.adobe.com/experience-manager/6-4/communities/user-guide.html)för användargrupper.
 
 Den senaste versionen finns i avsnittet [Distribuera communityer](https://helpx.adobe.com/in/experience-manager/6-4/help/communities/deploy-communities.html#LatestReleases) i dokumentationen.
 
@@ -22,13 +20,13 @@ Den senaste versionen finns i avsnittet [Distribuera communityer](https://helpx.
 
 ### Förbättringar av communityns engagemang {#enhancements-to-community-engagement}
 
-**@Mentions stöder** AEM Communities tillåter nu registrerade användare att tagga (nämna) andra registrerade medlemmar för att få sin uppmärksamhet i användargenererat innehåll. Taggade (nämnda) medlemmar meddelas sedan, med en djup länk till motsvarande användargenererat innehåll. Användarna kan dock välja att inaktivera/aktivera webb- och e-postmeddelanden.
+**@Mentions support** AEM Communities tillåter nu registrerade användare att tagga (nämna) andra registrerade medlemmar för att få sin uppmärksamhet i användargenererat innehåll. Taggade (nämnda) medlemmar meddelas sedan, med en djup länk till motsvarande användargenererat innehåll. Användarna kan dock välja att inaktivera/aktivera webb- och e-postmeddelanden.
 
 ![Stöd för omnämnanden](assets/at-mentions.png)
 
 Community-användare behöver inte söka efter sina förnamn, efternamn eller användarnamn för att se om någon har kommit fram till dem eller behöver deras uppmärksamhet. Dessutom kan UGC-författare söka svar från specifika registrerade användare som bäst kan åtgärda problemet och lägga till indata.
 
-Community-administratörerna måste **Enable Mention **on community components för att tillåta registrerade användare att använda funktionerna i dessa komponenter.
+Community-administratörerna måste **aktivera omnämnande** av communitykomponenter för att registrerade användare ska kunna använda funktionerna i dessa komponenter.
 
 **Gruppmeddelanden**
 
@@ -56,7 +54,7 @@ Ny listvy med förbättrat användargränssnitt har tillhandahållits i bulkmode
 
 **Författare av webbplats- och gruppadministratörer**
 
-Communities, AEM 6.5 och senare, möjliggör decentraliserad administration (och förvaltning) av olika communitysajter och grupper/ kapslade grupper. Organisationer som har flera communitysajter och kapslade grupper kan nu välja medlemmar för administratörsroller på författarsidan när webbplatsen (och gruppen) skapas.
+Communities, AEM 6.5 och framåt, medger decentraliserad administration (och förvaltning) av olika communityplatser och grupper/ kapslade grupper. Organisationer som har flera communitysajter och kapslade grupper kan nu välja medlemmar för administratörsroller på författarsidan när webbplatsen (och gruppen) skapas.
 
 ![Webbplatsadministratör](assets/site-admin.png)
 
@@ -66,10 +64,12 @@ Webbplatsadministratörer kan skapa en grupp på vilken hierarkinivå som helst 
 
 **Stöd för SCORM 2017.1**
 
-Aktiveringsfunktionen i AEM 6.5 Communities stöder motorn SCORM [(Shareable Content Object Reference Model) 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/) .
+Aktiveringsfunktionen i AEM 6.5 Communities har stöd för motorn SCORM [(Shareable Content Object Reference Model) 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/) .
 
-**Tangentbordsnavigering i aktiveringskomponenter**Aktivera komponenter (t.ex. Katalog- och kursuppspelning, Uppdrag, Filbibliotek) i AEM Communities stöder tangentbordsnavigering för förbättrad tillgänglighet.
+* Stöd för tangentbordsnavigering i aktiveringskomponenter
+* Aktiveringskomponenter (t.ex. Katalog- och kursuppspelning, Uppdrag, Filbibliotek) i AEM Communities har stöd för tangentbordsnavigering för förbättrad tillgänglighet.
 
 ### Andra förbättringar {#other-enhancements}
 
-* **Stöd för Solr 7**AEM 6.5 Communities stöder Apache Solr 7.0-versionen av sökplattformen när MSRP och DSRP konfigureras.
+* Stöd för Solr 7
+* AEM 6.5 Communities stöder Apache Solr 7.0-versionen av sökplattformen när MSRP och DSRP konfigureras.
