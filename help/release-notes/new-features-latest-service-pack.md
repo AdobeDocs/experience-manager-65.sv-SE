@@ -4,7 +4,7 @@ description: Nyheter i Adobe Experience Manager 6.5 Service Pack 5
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 71c0d0263e1d0da7e33762a3b22773f38db3ba52
+source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
 workflow-type: tm+mt
 source-wordcount: '1863'
 ht-degree: 0%
@@ -90,7 +90,7 @@ Du kan använda agentgränssnittet för att spara ett eller flera utkast för va
 
 ### [!DNL Oracle WebLogic] programserverstöd {#weblogic-support}
 
-Adobe Experience Manager Forms har lagt till stöd för Adobe Experience Manager Forms [!DNL Oracle WebLogic 12] på JEE. Du kan uppgradera från en tidigare version eller konfigurera nya Experience Manager 6.5-formulär på JEE-servern på [!DNL Oracle WebLogic] 12.2.1.4 och senare. Senare motsvarar de mindre versionsändringarna, där x i 12.2.1.x ersätts med ett versionsnummer.
+Adobe Experience Manager Forms har lagt till stöd [!DNL Oracle WebLogic 12] för Adobe Experience Manager Forms på JEE. Du kan uppgradera från en tidigare version eller konfigurera en ny Experience Manager 6.5 Forms på JEE-servern på [!DNL Oracle WebLogic] 12.2.1.4 och senare. Senare motsvarar de mindre versionsändringarna, där x i 12.2.1.x ersätts med ett versionsnummer.
 
 ### Förbättringar av hjälpmedel {#accessibility-improvements}
 
@@ -134,7 +134,7 @@ Nu kan du välja format i komponentdialogrutan med det förbättrade formatsyste
 
 #### Konfigurera [!DNL Experience Manager Assets] med [!DNL Brand Portal] (6.5.4.0) {#configure-assets-bp}
 
-Auktoriseringskanalen mellan [!DNL Experience Manager Assets] och [!DNL Brand Portal] ändras. Tidigare [!DNL Brand Portal] konfigurerades i Classic UI via äldre OAuth-gateway, som använder JWT-tokenutbyte för att erhålla en IMS-åtkomsttoken för auktorisering. [!DNL Experience Manager Assets] har nu konfigurerats med [!DNL Brand Portal] hjälp av Adobe I/O, som anskaffar en IMS-token för godkännande av din [!DNL Brand Portal] klientorganisation.
+Auktoriseringskanalen mellan [!DNL Experience Manager Assets] och [!DNL Brand Portal] ändras. Tidigare [!DNL Brand Portal] konfigurerades i Classic UI via äldre OAuth-gateway, som använder JWT-tokenutbyte för att erhålla en IMS-åtkomsttoken för auktorisering. [!DNL Experience Manager Assets] har nu konfigurerats med [!DNL Brand Portal] via Adobe I/O, som anskaffar en IMS-token för auktorisering av din [!DNL Brand Portal] klientorganisation.
 
 Vilka steg som ska konfigureras [!DNL Experience Manager Assets] med [!DNL Brand Portal] varierar beroende på [!DNL Experience Manager] version, om du konfigurerar för första gången eller om du uppgraderar befintliga konfigurationer. Mer information finns i [Konfigurera Experience Manager Assets with Brand Portal](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html) .
 
@@ -163,13 +163,13 @@ Smart bildbehandling använder varje användares unika visningsegenskaper för a
 
 #### Smart beskärning i videoprofiler för Dynamic Media (6.5.3.0) {#smart-crop-video}
 
-Smart beskärning för video - en valfri funktion i videoprofiler - är ett verktyg som använder kraften i artificiell intelligens i Adobe Sensei för att automatiskt upptäcka och beskära fokalpunkten i alla adaptiva videoklipp och progressiva videoklipp som du har överfört, oavsett storlek. Se [Använda smart beskärning i videoprofiler](../assets/video-profiles.md).
+Smart beskärning för video - en valfri funktion i videoprofiler - är ett verktyg som använder kraften i artificiell intelligens i Adobe Sensei för att automatiskt upptäcka och beskära fokalpunkten i adaptiv video eller progressiv video som du har överfört, oavsett storlek. Se [Använda smart beskärning i videoprofiler](../assets/video-profiles.md).
 
 ### Experience Manager Forms {#aem-forms-previous-service-packs}
 
-#### Generera utskrift i arbetsflöden för Experience Manager Forms (6.5.4.0) {#generate-printable-output}
+#### Generera utskrifter i Experience Manager Forms-arbetsflöden (6.5.4.0) {#generate-printable-output}
 
-Med arbetsflödessteget Generera utskrift kan du integrera en källmallsfil med en datafil. Tack vare den här integreringen kan du skriva ut eller spara olika kopior av mallfilen. Steget genererar PCL-, PostScript-, ZPL-, IPL-, TPCL- eller DPL-utdata. Mer information om den här funktionen finns i [Formulärcentrerat arbetsflöde i OSGi - stegreferens](../forms/using/aem-forms-workflow-step-reference.md).
+Med arbetsflödessteget Generera utskrift kan du integrera en källmallsfil med en datafil. Tack vare den här integreringen kan du skriva ut eller spara olika kopior av mallfilen. Steget genererar PCL-, PostScript-, ZPL-, IPL-, TPCL- eller DPL-utdata. Mer information om den här funktionen finns i [Forms-centrerat arbetsflöde i OSGi - Step Reference](../forms/using/aem-forms-workflow-step-reference.md).
 
 ![Generera utdata för utskrift](assets/generate-print-output-step.gif)
 
@@ -201,7 +201,7 @@ Experience Manager Forms innehåller följande tillgänglighetsförbättringar:
 
 * Varje sida i ett adaptivt formulär innehåller nu en rubrik och en huvudlandmärkesetikett.
 
-#### Dela och begära åtkomst till inkorgsobjekt som tillhör en Experience Manager-formuläranvändare (6.5.3.0) {#share-request-access}
+#### Dela och begär åtkomst till inkorgsobjekt från användare av Experience Manager Forms (6.5.3.0) {#share-request-access}
 
 Du kan dela dina inkorgsobjekt med en annan användare. När en annan användare får tillgång till dina inkorgsobjekt kan användaren göra anspråk på och vidta lämpliga åtgärder för delade objekt. På samma sätt kan du begära åtkomst till inkorgsobjekt från andra användare. Se [Dela och begära åtkomst till inkorgsobjekt för en användare](../forms/using/configure-shared-queues-osgi.md).
 
@@ -216,7 +216,7 @@ Du kan använda batch-API:t för att skapa flera interaktiva dokument från en m
 
 ## Viktiga releaser sedan Adobe Experience Manager 6.5 SP4 {#key-releases-since-last-sp}
 
-Mellan 5 mars 2020 och 4 juni 2020 släppte Adobe följande, förutom servicepaket och kumulativa korrigeringspaket:
+Mellan den 5 mars 2020 och den 4 juni 2020 släppte Adobe följande, förutom servicepaket och kumulativa korrigeringspaket:
 
 * [Programdistributionsportalen](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) är tillgänglig för nedladdning av Experience Manager Service Pack, kumulativa korrigeringspaket, snabbkorrigeringar och funktionspaket.
 
@@ -224,7 +224,7 @@ Mellan 5 mars 2020 och 4 juni 2020 släppte Adobe följande, förutom servicepak
 
 * [Experience Manager desktop app 2.0.2.0](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html).
 
-* [Experience Manager skärmar: Feature Pack 20204](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/release-notes/release-notes-fp-202004.html).
+* [Experience Manager Screens: Feature Pack 20204](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/release-notes/release-notes-fp-202004.html).
 
 >[!MORELIKETHIS]
 >
