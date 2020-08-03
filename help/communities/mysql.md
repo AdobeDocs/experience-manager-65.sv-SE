@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 9222bc93-c231-4ac8-aa28-30d784a4ca3b
 translation-type: tm+mt
-source-git-commit: f7e5afe46100db7837647ac89aaf58cf101143b0
+source-git-commit: 5d196d1f6d5f94f2d3ef0d4461cfe38562f8ba8c
+workflow-type: tm+mt
+source-wordcount: '1075'
+ht-degree: 1%
 
 ---
 
@@ -27,10 +30,10 @@ Innan du konfigurerar aktiveringsfunktionen i MySQL för Communities måste du s
 
 * Installera [MySQL server](https://dev.mysql.com/downloads/mysql/) Community Server version 5.6:
    * Version 5.7 stöds inte för SCORM.
-   * Kan vara samma server som författarens AEM-instans.
-* Installera den officiella [JDBC-drivrutinen för MySQL](deploy-communities.md#jdbc-driver-for-mysql)på alla AEM-instanser.
+   * Kan vara samma server som AEM.
+* Installera den officiella [JDBC-drivrutinen för MySQL](deploy-communities.md#jdbc-driver-for-mysql)på alla AEM instanser.
 * Installera [MySQL Workbench](https://dev.mysql.com/downloads/tools/workbench/).
-* Installera [SCORM-paketet](enablement.md#scorm)på alla AEM-instanser.
+* Installera [SCORM-paketet](enablement.md#scorm)på alla AEM instanser.
 
 ## Installerar MySQL {#installing-mysql}
 
@@ -67,12 +70,12 @@ MySQL Workbench ska laddas ned och installeras enligt instruktionerna för målo
 
 När MySQL Workbench startas första gången visas inga anslutningar, såvida den inte redan används för andra syften:
 
-![chlimage_1-327](assets/chlimage_1-327.png)
+![mysqlconnection](assets/mysqlconnection.png)
 
 ### Nya anslutningsinställningar {#new-connection-settings}
 
 1. Markera +-ikonen till höger om `MySQL Connections`.
-1. I dialogrutan `Setup New Connection`anger du värden som är lämpliga för din plattform i demonstrationssyfte, med författarens AEM-instans och MySQL på samma server:
+1. I dialogrutan `Setup New Connection`anger du värden som är lämpliga för din plattform i demonstrationssyfte, med författarinstansen AEM och MySQL på samma server:
    * Anslutningsnamn: `Enablement`
    * Anslutningsmetod: `Standard (TCP/IP)`
    * Värdnamn: `127.0.0.1`
@@ -87,17 +90,17 @@ När MySQL Workbench startas första gången visas inga anslutningar, såvida de
 
 #### Anslutningen lyckades {#successful-connection}
 
-![chlimage_1-328](assets/chlimage_1-328.png)
+![mysqlconnection1](assets/mysqlconnection1.png)
 
 #### Ny aktiveringsanslutning {#new-enablement-connection}
 
-![chlimage_1-329](assets/chlimage_1-329.png)
+![mysqlconnection2](assets/mysqlconnection2.png)
 
 ## Databasinställningar {#database-setup}
 
 Observera att det finns ett testschema och standardanvändarkonton när du öppnar den nya aktiveringsanslutningen.
 
-![chlimage_1-330](assets/chlimage_1-330.png)
+![database-setup](assets/database-setup.png)
 
 ### Hämta SQL-skript {#obtain-sql-scripts}
 
@@ -109,12 +112,12 @@ SQL-skripten hämtas med CRXDE Lite på författarinstansen. SCORM- [paketet](de
 1. Hämta `database_scormengine.sql`
 1. Hämta `database_scorm_integration.sql`
 
-![chlimage_1-331](assets/chlimage_1-331.png)
+![sqlscripts](assets/sqlscripts.png)
 
-En metod för att hämta schemat är att
+En metod för att hämta schemat är:
 
-* Markera `jcr:content`noden för sql-filen.
-* Observera att värdet för `jcr:data`egenskapen är en visningslänk.
+* Markera `jcr:content` noden för sql-filen.
+* Observera att värdet för `jcr:data` egenskapen är en visningslänk.
 * Klicka på vylänken om du vill spara data i en lokal fil.
 
 ### Skapa SCORM-databas {#create-scorm-database}
@@ -124,7 +127,9 @@ Den Aktivera SCORM-databas som ska skapas är:
 * name: `ScormEngineDB`
 * som skapats från skript:
    * schema: `database_scormengine.sql`
-   * data: `database_scorm_integration.sql`Följ stegen nedan ([öppna](#step-open-sql-file), [kör](#step-execute-sql-script)) för att installera varje [SQL-skript](#obtain-sql-scripts) . [Uppdatera](#refresh) vid behov för att se resultatet av skriptkörningen.
+   * data: `database_scorm_integration.sql`
+Follow the steps below (
+[öppna](#step-open-sql-file), [kör](#step-execute-sql-script)) för att installera varje [SQL-skript](#obtain-sql-scripts) . [Uppdatera](#refresh) vid behov för att se resultatet av skriptkörningen.
 
 Installera schemat innan du installerar data.
 
@@ -134,6 +139,7 @@ Installera schemat innan du installerar data.
 >
 >* [JDBC-konfiguration](#configure-jdbc-connections)
 >* [SCORM-konfiguration](#configure-scorm)
+
 >
 
 
@@ -148,7 +154,7 @@ I MySQL Workbench
    1. `database_scormengine.sql`
    1. `database_scorm_integration.sql`
 
-![chlimage_1-332](assets/chlimage_1-332.png)
+![scrom-database](assets/scrom-database.png)
 
 #### Steg 2: köra SQL-skript {#step-execute-sql-script}
 
@@ -156,87 +162,89 @@ I Workbench-fönstret för den fil som öppnas i steg 1 väljer du det `lighteni
 
 Observera att körningen av skriptet för att skapa SCORM-databasen kan ta en minut att slutföra. `database_scormengine.sql`
 
-![chlimage_1-333](assets/chlimage_1-333.png)
+![scrom-database1](assets/scrom-database1.png)
 
 #### Uppdatera {#refresh}
 
 När skripten har körts måste du uppdatera `SCHEMAS` avsnittet i `Navigator` för att kunna se den nya databasen. Använd uppdateringsikonen till höger om SCHEMAS:
 
-![chlimage_1-334](assets/chlimage_1-334.png)
+![scrom-database2](assets/scrom-database2.png)
 
 #### Resultat: scormenginedb {#result-scormenginedb}
 
 När du har installerat och uppdaterat SCHEMAS `scormenginedb` visas den.
 
-![chlimage_1-335](assets/chlimage_1-335.png)
+![scrom-database3](assets/scrom-database3.png)
 
 ## Konfigurera JDBC-anslutningar {#configure-jdbc-connections}
 
 OSGi-konfigurationen för **Day Commons JDBC Connections Pool** konfigurerar MySQL JDBC-drivrutinen.
 
-Alla AEM-instanser för publicering och författare ska peka på samma MySQL-server.
+Alla publicerings- och författarinstanser AEM peka på samma MySQL-server.
 
-När MySQL körs på en annan server än AEM måste serverns värdnamn anges i stället för localhost i JDBC-kopplingen (som fyller i [ScormEngine](#configurescormengineservice) -konfigurationen).
+När MySQL körs på en annan server än AEM måste servervärdnamnet anges i stället för localhost i JDBC-kopplingen (som fyller i [ScormEngine](#configurescormengineservice) -konfigurationen).
 
-* På varje författare och publicera AEM-instansen
+* På varje författare och publicera AEM
 * Inloggad med administratörsbehörighet
 * Åtkomst till [webbkonsolen](../../help/sites-deploying/configuring-osgi.md)
    * Till exempel [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)
 * Leta reda på `Day Commons JDBC Connections Pool`
 * Skapa en ny konfiguration genom att klicka på `+` ikonen
 
-![chlimage_1-336](assets/chlimage_1-336.png)
+   ![jdbcconnection1](assets/jdbcconnection1.png)
 
 * Ange följande värden:
-   * **[!UICONTROL JDBC-drivrutinsklass]**: `com.mysql.jdbc.Driver`
-   * **URIJ **för DBC-anslutning:`jdbc:mysql://localhost:3306/aem63reporting`Ange server i stället för localhost om MySQL-servern inte är densamma som &#39;this&#39; AEM-servern.
-   * **[!UICONTROL Användarnamn]**: Rotera eller ange det konfigurerade användarnamnet för MySQL-servern, om inte &#39;root&#39;.
-   * **[!UICONTROL Lösenord]**: Avmarkera det här fältet om inget lösenord har angetts för MySQL, annars anger du det konfigurerade lösenordet för MySQL-användarnamnet.
-   * **[!UICONTROL Datakällans namn]**: Namn som angetts för [MySQL-anslutningen](#new-connection-settings), till exempel &#39;enablement&#39;.
-* Välj **[!UICONTROL Spara]**.
+   * **[!UICONTROL JDBC driver class]**: `com.mysql.jdbc.Driver`
+   * **URIJ **för DBC-anslutning:`jdbc:mysql://localhost:3306/aem63reporting`Ange server i stället för localhost om MySQL-servern inte är samma som &#39;this&#39; AEM server.
+   * **[!UICONTROL Username]**: Rotera eller ange det konfigurerade användarnamnet för MySQL-servern, om inte &#39;root&#39;.
+   * **[!UICONTROL Password]**: Avmarkera det här fältet om inget lösenord har angetts för MySQL, annars anger du det konfigurerade lösenordet för MySQL-användarnamnet.
+   * **[!UICONTROL Datasource name]**: Namn som angetts för [MySQL-anslutningen](#new-connection-settings), till exempel &#39;enablement&#39;.
+* Välj **[!UICONTROL Save]**.
 
 ## Konfigurera korm {#configure-scorm}
 
 ### Tjänsten AEM Communities ScormEngine {#aem-communities-scormengine-service}
 
-OSGi-konfigurationen för **AEM Communities ScormEngine-tjänsten** konfigurerar SCORM för en aktiveringscommunitys användning av MySQL-servern.
+OSGi-konfigurationen för tjänsten **ScormEngine för** AEM Communities konfigurerar SCORM för en aktiveringscommunitys användning av MySQL-servern.
 
 Den här konfigurationen finns när [SCORM-paketet](deploy-communities.md#scorm-package) installeras.
 
 Alla publicerings- och författarinstanser pekar på samma MySQL-server.
 
-När MySQL körs på en annan server än AEM, måste serverns värdnamn anges i stället för localhost i ScormEngine-tjänsten, som vanligtvis fylls i från konfigurationen för [JDBC-anslutningen](#configure-jdbc-connections) .
+När MySQL körs på en annan server än AEM måste servervärdnamnet anges i stället för localhost i ScormEngine-tjänsten, som vanligtvis fylls i från konfigurationen för [JDBC-anslutningen](#configure-jdbc-connections) .
 
-* På varje författare och publicera AEM-instansen
+* På varje författare och publicera AEM
 * Inloggad med administratörsbehörighet
 * Åtkomst till [webbkonsolen](../../help/sites-deploying/configuring-osgi.md)
    * Till exempel [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)
 * Leta reda på `AEM Communities ScormEngine Service`
 * Markera redigeringsikonen
-   ![chlimage_1-337](assets/chlimage_1-337.png)
-* Kontrollera att följande parametervärden är konsekventa med [JDBC Connection](#configurejdbcconnectionspool) -konfigurationen:
-   * **[!UICONTROL JDBC-anslutnings-URI]**: `jdbc:mysql://localhost:3306/ScormEngineDB` ScormEngineDB ** är standarddatabasnamnet i SQL-skripten
-   * **[!UICONTROL Användarnamn]**: Rot eller ange det konfigurerade användarnamnet för MySQL-servern, om inte &#39;root&#39;
-   * **[!UICONTROL Lösenord]**: Rensa det här fältet om inget lösenord har angetts för MySQL, annars anger du det konfigurerade lösenordet för MySQL-användarnamnet
-* Angående följande parameter:
-   * **[!UICONTROL Lösenord]**: REDIGERA INTE
 
-      Endast för intern användning: Den är avsedd för en särskild serviceanvändare som används av AEM Communities för att kommunicera med scorm-motorn.
-* Välj **[!UICONTROL Spara]**
+   ![chlimage_1-337](assets/chlimage_1-337.png)
+
+* Kontrollera att följande parametervärden är konsekventa med [JDBC Connection](#configurejdbcconnectionspool) -konfigurationen:
+   * **[!UICONTROL JDBC connection URI]**: `jdbc:mysql://localhost:3306/ScormEngineDB` *ScormEngineDB* är standarddatabasnamnet i SQL-skript
+   * **[!UICONTROL Username]**: Rot eller ange det konfigurerade användarnamnet för MySQL-servern, om inte &#39;root&#39;
+   * **[!UICONTROL Password]**: Rensa det här fältet om inget lösenord har angetts för MySQL, annars anger du det konfigurerade lösenordet för MySQL-användarnamnet
+* Angående följande parameter:
+   * **[!UICONTROL Scorm User Password]**: REDIGERA INTE
+
+      Endast för intern användning: Den riktar sig till en särskild serviceanvändare som AEM Communities använder för att kommunicera med skormmotorn.
+* Välj **[!UICONTROL Save]**
 
 ### Adobe Granite CSRF-filter {#adobe-granite-csrf-filter}
 
 För att se till att aktiveringskurser fungerar korrekt i alla webbläsare måste Mozilla läggas till som en användaragent som inte är markerad av CSRF-filtret.
 
-* Logga in på AEM-publiceringsinstansen med administratörsbehörighet.
+* Logga in på AEM publiceringsinstans med administratörsbehörighet.
 * Åtkomst till [webbkonsolen](../../help/sites-deploying/configuring-osgi.md)
    * Till exempel [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 * Hitta `Adobe Granite CSRF Filter`.
 * Välj redigeringsikonen.
 
-   ![chlimage_1-338](assets/chlimage_1-338.png)
+   ![jdbcconnection2](assets/jdbcconnection2.png)
 
 * Välj `[+]` ikonen om du vill lägga till en säker användaragent.
 * Enter `Mozilla/*`.
-* Välj **[!UICONTROL Spara]**.
+* Välj **[!UICONTROL Save]**.
 
