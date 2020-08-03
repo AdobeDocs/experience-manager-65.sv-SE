@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: ab9088b7-a691-4153-ac82-1e8c0a19ed5d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 22e853ecaf2696c7329a81bb9d375b1dbc74452c
+source-git-commit: 5d196d1f6d5f94f2d3ef0d4461cfe38562f8ba8c
+workflow-type: tm+mt
+source-wordcount: '621'
+ht-degree: 0%
 
 ---
 
@@ -68,13 +71,13 @@ Komponenter måste konfigureras för att aktivera följande. Funktioner som till
 
 ## Meddelanden från följande {#notifications-from-following}
 
-![chlimage_1-243](assets/chlimage_1-243.png)
+![meddelanden](assets/notifications.png)
 
-Med knappen **[!UICONTROL Följ]** kan du följa inmatningar som aktiviteter, prenumerationer och/eller meddelanden. Varje gång knappen **[!UICONTROL Följ]** är markerad går det att aktivera eller inaktivera en markering. Markeringen visas bara när den är konfigurerad. `Email Subscriptions`
+Med knappen **[!UICONTROL Follow]** kan du följa upp tävlingsbidrag som aktiviteter, prenumerationer och/eller meddelanden. Varje gång knappen är markerad går det att aktivera eller inaktivera en markering. **[!UICONTROL Follow]** Markeringen visas bara när den är konfigurerad. `Email Subscriptions`
 
-Om någon av följande metoder är markerad ändras texten för knappen till **[!UICONTROL Följ]**. Du kan välja `Unfollow All` att inaktivera alla metoder.
+Om någon av följande metoder är markerad ändras knappens text till **[!UICONTROL Following]**. Du kan välja `Unfollow All` att inaktivera alla metoder.
 
-Knappen **[!UICONTROL Följ]** visas:
+Knappen **[!UICONTROL Follow]** visas:
 
 * När en annan medlems profil visas.
 * På en huvudfunktionssida, till exempel forum, QnA och bloggar:
@@ -91,17 +94,17 @@ Genom att välja länken Meddelandeinställningar på meddelandesidan kan varje 
 
 Webbkanalen är alltid aktiverad.
 
-![chlimage_1-244](assets/chlimage_1-244.png)
+![notifications14](assets/notifications1.png)
 
 E-postkanalen, som bygger på rätt [konfiguration av e-post](/help/communities/email.md), ger samma inställningar som för webbkanalen.
 
 E-postkanalen är inaktiverad som standard.
 
-![chlimage_1-245](assets/chlimage_1-245.png)
+![notifications2](assets/notifications2.png)
 
 Den kan vara aktiverad av en medlem, men är ändå beroende av att e-post konfigureras.
 
-![chlimage_1-246](assets/chlimage_1-246.png)
+![notifications3](assets/notifications3.png)
 
 ## Visa meddelanden {#viewing-notifications}
 
@@ -111,13 +114,13 @@ En [guide skapade en communitywebbplats](/help/communities/sites-console.md) inn
 
 När du besöker den publicerade webbplatsen visas alla meddelanden för medlemmen om du väljer `Notifications` länken.
 
-![chlimage_1-247](assets/chlimage_1-247.png)
+![notifications4](assets/notifications4.png)
 
 ### E-postmeddelanden {#email-notifications}
 
 När e-postkanalen är aktiverad får medlemmen ett e-postmeddelande som innehåller en länk till innehållet på webben.
 
-![chlimage_1-248](assets/chlimage_1-248.png)
+![notifications5](assets/notifications5.png)
 
 ## Anpassa e-postmeddelanden {#customize-email-notifications}
 
