@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: dd0cbc05-a361-46bc-b9f1-d045f8f23890
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bd9abe033216a00b93b2098e12b100ad478a8d08
+source-git-commit: 046da7a00be6073cb885b4e9774c48ab474e7e6d
 workflow-type: tm+mt
 source-wordcount: '1202'
 ht-degree: 0%
@@ -34,7 +34,7 @@ Vid första ankomsten till den publicerade webbplatsen är besökaren vanligtvis
 
 `https://localhost:4503/content/sites/engage/en.html {#http-localhost-content-sites-engage-en-html}`
 
-![chlimage_1-31](assets/chlimage_1-31.png)
+![författarpublicerad](assets/authorpublished.png)
 
 ## Anonym webbplatsbesökare {#anonymous-site-visitor}
 
@@ -82,7 +82,7 @@ Den här upplevelsen förutsätter att [Aaron McDonald](/help/communities/tutori
 
 I det övre högra hörnet markerar du `Log in`och signerar med användarnamn (aaron.mcdonald@mailinator.com) och lösenord (lösenord). Lägg märke till möjligheten att logga in med Twitter- eller Facebook-inloggningsuppgifter.
 
-![chlimage_1-32](assets/chlimage_1-32.png)
+![inloggning](assets/login.png)
 
 När du har loggat in som registrerad community-medlem kan du lägga märke till följande menyalternativ för att klicka och utforska din community-webbplats:
 
@@ -95,11 +95,11 @@ När du har loggat in som registrerad community-medlem kan du lägga märke till
 * [Alternativet Meddelanden](/help/communities/notifications.md) dirigerar dig till meddelandeavsnittet, där du kan visa dina intressanta händelser och redigera meddelandeinställningar.
 * [Administrationen](/help/communities/published-site.md#moderationlink) dirigerar dig till sidan för moderering av AEM Communities, om du har modereringsbehörighet.
 
-![chlimage_1-33](assets/chlimage_1-33.png)
+![adminscreen](assets/adminscreen.png)
 
 Observera att kalendersidan är hemsidan eftersom den valda referensplatsmallen inkluderade kalenderfunktionen först, följt av aktivitetsströmfunktion, forumfunktion osv. Den här strukturen visas från konsolen [Platsmall](/help/communities/sites.md#edit-site-template) eller när du ändrar platsegenskaper i författarmiljön:
 
-![chlimage_1-34](assets/chlimage_1-34.png)
+![platsmall](assets/sitetemplate.png)
 
 >[!NOTE]
 >
@@ -120,7 +120,7 @@ Medlemmarna kan publicera ett nytt ämne eller följa ett ämne.
 
 Besökarna kan visa inlägg och sortera dem på olika sätt.
 
-![chlimage_1-35](assets/chlimage_1-35.png)
+![forumlink](assets/forumlink.png)
 
 ### Länken Grupper {#groups-link}
 
@@ -130,7 +130,7 @@ Detta är ett exempel där en grupp skapas i publiceringsmiljön.
 
 Grupper kan också skapas i författarmiljön och hanteras i communitywebbplatsen i författarmiljön ([Community Groups console](/help/communities/groups.md)). Upplevelsen av [att skapa grupper på författare](/help/communities/nested-groups.md) är nästa i den här självstudiekursen.
 
-![classic-ui](assets/classic-ui.png)
+![grouplink](assets/grouplink.png)
 
 Skapa en referensgrupp:
 
@@ -148,11 +148,11 @@ Skapa en referensgrupp:
 
 1. Välj **Skapa grupp**
 
-![classic-ui-website](assets/classic-ui-website.png)
+   ![creategroup](assets/creategroup.png)
 
 När en ny grupp har skapats **väljer du den nya sportgruppen** för att skapa två grupper (kapslade) i den. Eftersom en platsstruktur inte kan börja med gruppfunktionen måste du välja länken Grupper när du har öppnat gruppen Sport:
 
-![classic-ui-create-page](assets/classic-ui-create-page.png)
+![grouplink1](assets/grouplink1.png)
 
 Den andra uppsättningen länkar, med början `Blog`, tillhör den markerade gruppen, `Sports` gruppen. Genom att välja `Groups` länken Sport är det möjligt att kapsla två grupper i gruppen Sport.
 
@@ -180,7 +180,7 @@ När båda grupperna har skapats väljer du Baseball-gruppen, en öppen grupp, o
 
 Gruppens länkar visas under huvudplatsens länkar och ger följande resultat:
 
-![classic-ui-website-page](assets/classic-ui-website-page.png)
+![grouplink2](assets/grouplink2.png)
 
 Vid författare - med administratörsbehörighet går du till konsolen [](/help/communities/members.md) Communities Groups (Communities Groups) och lägger till Weston McCall i `Community Engage Gymnastics <uid> Members` gruppen.
 
@@ -195,7 +195,7 @@ Bara Baseball-gruppen syns.
 
 Logga in som Weston McCall (weston.mccall@dodgit.com / lösenord) och navigera till samma plats. Observera att Weston kan `Join` den öppna `Baseball` gruppen och antingen `enter or Leave` den privata `Gymnastics` gruppen.
 
-![classic-ui-database-view](assets/classic-ui-repository-view.png)
+![grouplink3](assets/grouplink3.png)
 
 ### Länk till webbsida {#web-page-link}
 
@@ -203,7 +203,7 @@ Visa den grundläggande webbsidan som finns på webbplatsen genom att välja lä
 
 Gå till exempel till **författarinstansen** , öppna `engage` mappen i [webbgruppskonsolen](/help/communities/sites-console.md)och välj ikonen **Öppna webbplats** för att öppna redigeringsläget. Välj sedan förhandsvisningsläget för att markera `Web Page` länken och välj sedan redigeringsläget för att lägga till titel- och textkomponenter. Publicera sedan om antingen bara sidan eller hela webbplatsen.
 
-![classic-ui-database-path](assets/classic-ui-repository-path.png)
+![webpagelink](assets/webpagelink.png)
 
 ### Modereringslänk {#moderationlink}
 
@@ -211,7 +211,7 @@ När communitymedlemmen har modereringsbehörighet visas länken Moderering och 
 
 Använd webbläsarens bakåtknapp för att gå tillbaka till den publicerade webbplatsen. De flesta konsoler är inte tillgängliga via global navigering i publiceringsmiljön. [](/help/communities/moderate-ugc.md)
 
-![chlimage_1-42](assets/chlimage_1-42.png)
+![moderationlink](assets/moderationlink.png)
 
 ## Självregistrering {#self-registration}
 
@@ -220,7 +220,9 @@ När du har loggat ut kan du skapa en ny användarregistrering.
 * Välj `Log In`
 * Välj `Sign up for a new account`
 
-![chlimage_1-43](assets/chlimage_1-43.png) ![chlimage_1-44](assets/chlimage_1-44.png)
+![registrering](assets/registration.png)
+
+![registrering](assets/signup.png)
 
 Som standard är e-postadressen inloggnings-ID. Om alternativet inte är markerat kan besökaren ange ett eget inloggnings-ID (användarnamn). Användarnamnet måste vara unikt i publiceringsmiljön.
 
@@ -228,9 +230,9 @@ När du har angett användarens namn, e-postadress och lösenord `Sign Up` skapa
 
 När du har loggat in är den första sidan deras `Profile` sida, som de kan anpassa.
 
-![chlimage_1-45](assets/chlimage_1-45.png)
+![profil](assets/profile.png)
 
 Om medlemmen glömmer sitt inloggnings-ID är det möjligt att återställa med sin e-postadress.
 
-![chlimage_1-46](assets/chlimage_1-46.png)
+![forgotusername](assets/forgotusername.png)
 
