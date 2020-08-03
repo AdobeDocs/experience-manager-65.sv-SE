@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 048f7b30-20c3-4567-bd32-38cf2643cf39
 translation-type: tm+mt
-source-git-commit: 6a9f273c6e9eb822e2d4765700361a205019b84c
+source-git-commit: 412200c1bb0c7050c981fc5dc2a5430f37b3beb3
 workflow-type: tm+mt
 source-wordcount: '1175'
 ht-degree: 0%
@@ -57,7 +57,7 @@ På författaren, för att komma åt lagringskonsolen:
 
 * Välj **[!UICONTROL Tools]** > **[!UICONTROL Communities]** > **[!UICONTROL Storage Configuration]**.
 
-![chlimage_1-28](assets/chlimage_1-28.png)
+![msrp](assets/msrp.png)
 
 * Välj **[!UICONTROL MongoDB Storage Resource Provider (MSRP)]**
 * **[!UICONTROL mongoDB Configuration]**
