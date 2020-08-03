@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 752235d2-21ac-46d2-82ed-5fec09c645e9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: c9fa5624a59f4b9a6f970628b03bbd8b7a277a73
+source-git-commit: 5d196d1f6d5f94f2d3ef0d4461cfe38562f8ba8c
 workflow-type: tm+mt
 source-wordcount: '539'
-ht-degree: 4%
+ht-degree: 3%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 4%
 
 Från global navigering i AEM Author:
 
-* Välj **[!UICONTROL Communities] > **[!UICONTROL Sites]**.
+* Välj **[!UICONTROL Communities]** > **[!UICONTROL Sites]**.
 * Välj **[!UICONTROL engage folder]** att öppna den.
 * Välj kortet för den **[!UICONTROL Getting Started Tutorial]** engelska webbplatsen.
 
@@ -34,11 +34,11 @@ Från global navigering i AEM Author:
 
 Resultatet blir att [gruppkonsolen](/help/communities/groups.md)nås:
 
-![chlimage_1-91](assets/chlimage_1-91.png)
+![create-group](assets/create-group.png)
 
 Gruppfunktionen visas som en mapp där instanser av grupper skapas. Markera mappen Grupper för att öppna den. Gruppen som skapades vid publicering visas.
 
-![chlimage_1-92](assets/chlimage_1-92.png)
+![create-new-group](assets/create-new-group.png)
 
 ## Skapa huvudkonst {#create-main-arts-group}
 
@@ -94,11 +94,11 @@ Mappen `groups` innehåller nu två grupper (uppdatera sidan).
 
 Innan du skapar grupper som är kapslade i `arts` gruppen håller du pekaren över `arts` kortet och väljer publiceringsikonen för att publicera det.
 
-![liking-component](assets/liking-component.png)
+![publicera-webbplats](assets/publish-site.png)
 
 Vänta på bekräftelse på att gruppen publicerades.
 
-![chlimage_1-94](assets/chlimage_1-94.png)
+![grupppublicerad](assets/group-published.png)
 
 Gruppen bör också innehålla en `arts` `groups` mapp, men en som är tom och där nya grupper kan skapas. Navigera till gruppmappen för konst och skapa 3 kapslade grupper, där var och en har olika medlemsinställningar:
 
@@ -133,11 +133,11 @@ Så här navigerar du till de kapslade grupperna från konsolen Webbplatser för
 * Välj **[!UICONTROL arts card]**
 * Välj **[!UICONTROL Groups]** mapp
 
-![configure-läning](assets/configure-liking.png)
+![create-new-group2](assets/create-new-group2.png)
 
 ## Förlagskoncern {#publishing-groups}
 
-![chlimage_1-96](assets/chlimage_1-96.png)
+![publicera-webbplats](assets/publish-site.png)
 
 Efter publicering av den huvudsakliga communitywebbplatsen:
 
@@ -149,7 +149,7 @@ Efter publicering av den huvudsakliga communitywebbplatsen:
 
    * Alla grupper måste publiceras uppifrån och ned.
 
-![chlimage_1-97](assets/chlimage_1-97.png)
+![grupppublicerad](assets/group-published.png)
 
 ## Experience on Publish {#experience-on-publish}
 
