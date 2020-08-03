@@ -1,8 +1,8 @@
 ---
 title: Översikt över AEM Communities
 seo-title: Översikt över AEM Communities
-description: En översikt över funktionerna och konfigurationen i AEM Communities
-seo-description: En översikt över funktionerna och konfigurationen i AEM Communities
+description: En översikt över AEM Communities funktioner och inställningar
+seo-description: En översikt över AEM Communities funktioner och inställningar
 uuid: 14405847-36ae-4958-bdc6-d799ecd05f06
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -11,20 +11,23 @@ content-type: reference
 discoiquuid: 44374006-f711-4af8-a1fe-f89164f79581
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 48afa2146d0dcbab4beaa1044645c269b49fd7ff
+source-git-commit: 9d6ec05fdc98e33a11303d189414c2c45c5e8b3c
+workflow-type: tm+mt
+source-wordcount: '1468'
+ht-degree: 0%
 
 ---
 
 
 # Översikt över AEM Communities {#aem-communities-overview}
 
-Med Adobe Experience Manager Communities (AEM) kan ni snabbt skapa en lokal communitywebbplats som har bättre prestanda, förbättrad webbplatshantering och uppmuntrar till konvertering av besökare till värdefulla communitymedlemmar.
+Adobe Experience Manager (AEM) Communities ger möjlighet att snabbt skapa en lokal communitysajt som har bättre prestanda, förbättrad webbplatshantering och uppmuntrar till konvertering av besökare till värdefulla communitymedlemmar.
 
 Kontakta din kontorepresentant för att få information om licensiering av AEM Communities samt ytterligare licensiering för aktiveringsfunktioner och Adobe Analytics.
 
 ## Funktioner i Communities {#communities-features}
 
-Med AEM Communities kan man utveckla en relation med webbplatsbesökare som
+AEM Communities möjliggör utvecklingen av en relation med webbplatsbesökare som
 
 * **Information** via bloggar, frågor och svar och händelsekalendrar,
 * Samtidigt som ni **får insikter** via forum, kommentarer och annat communityinnehåll, som ofta kallas användargenererat innehåll (UGC).
@@ -38,11 +41,11 @@ Med AEM Communities kan man utveckla en relation med webbplatsbesökare som
 * Gör att andra registrerade medlemmar i användargenererat innehåll kan uppmärksammas genom att **tagga** (@mention).
 * Stöder **tangentbordsnavigering** i aktiveringskomponenter (t.ex. Katalog- och kursuppspelning, Uppdrag, Filbibliotek).
 
-Communities-funktioner kan demonstreras med [AEM Demo Machine](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki) som är allmänt tillgänglig på GitHub.com eller med den nya referensimplementeringen We.Retail.
+Communities-funktioner kan demonstreras med den [AEM Demo Machine](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki) som är allmänt tillgänglig på GitHub.com eller med den nya referensimplementeringen We.Retail.
 
 ## Community Sites {#community-sites}
 
-En community-webbplats är en AEM-webbplats som skapas med en enkel guide som ger en webbplats med många vanliga funktioner som är förkopplade till webbplatsen.
+En communitywebbplats är en AEM webbplats som skapats med en enkel guide som ger en webbplats med många vanliga funktioner som är förkopplade till webbplatsen.
 
 Guiden [Skapa](/help/communities/sites-console.md)plats:
 
@@ -59,7 +62,7 @@ Guiden [Skapa](/help/communities/sites-console.md)plats:
 
 * Innehåller viktiga funktioner:
 
-   * Responsiv design: använder [Twitter-startteman](https://getbootstrap.com)
+   * Responsiv design: använder teman från [Twitter Bootstrap](https://getbootstrap.com)
 
    * Inloggning: självregistrering, [social inloggning](/help/communities/social-login.md), användarprofiler
 
@@ -75,13 +78,13 @@ Medlemmar ser händelser som är relevanta för dem och användargenererat inneh
 * Eliminerar många steg i utvecklingen på sidnivå:
 
    * Varumärke: valfri överföring av en banderollbild för visning på alla sidor i communitywebbplatsen
-      * Navigeringsmeny: navigeringslänkar finns för de funktioner som ingår i communitywebbplatsmallen.
+   * Navigeringsmeny: navigeringslänkar finns för de funktioner som ingår i communitywebbplatsmallen.
 
-Om du snabbt vill skapa en ny communitysajt går du till [Komma igång med AEM Communities](/help/communities/getting-started.md).
+Om du snabbt vill skapa en ny community-sajt kan du besöka [Getting Started with AEM Communities](/help/communities/getting-started.md).
 
 ## Community Content Persistence {#community-content-persistence}
 
-För att förbättra prestanda och synkronisering av communityinnehåll behöver AEM Communities en gemensam butik specifikt för användargenererat innehåll (UGC) som delas mellan alla AEM-instanser (författare och publicering).
+För att förbättra prestanda och synkronisering av communityinnehåll behöver AEM Communities en gemensam lagringsplats specifikt för användargenererat innehåll (UGC) som delas mellan alla AEM (författare och publicering) instanser.
 
 Community-innehåll är enkelt att komma åt via lagringsresursens leverantör (SRP), som tillhandahåller ett lager som åtskiljer åtkomsten från den underliggande topologin och stöder en gemensam lagringsplats för UGC.
 
@@ -89,7 +92,7 @@ Mer information om publicering av communityinnehåll och rekommenderade distribu
 
 * [Community Content Storage](/help/communities/working-with-srp.md), som diskuterar de tillgängliga SRP-lagringsalternativen för UGC.
 * [Rekommenderade topologier](/help/communities/topologies.md), som diskuterar topologier baserat på användningsfall och SRP-val.
-* [Uppgradera till AEM 6.5 Communities](/help/communities/upgrade.md), som ger användbar information om UGC när man går över till AEM 6.5.
+* [Uppgradera till AEM 6.5 Communities](/help/communities/upgrade.md), som ger användbar information om UGC vid övergång till AEM 6.5.
 
 ## Communities-konsoler {#communities-consoles}
 
@@ -154,9 +157,9 @@ Se konsolen [](/help/communities/sites.md)Platsmallar.
 
 ## Community-funktioner {#community-functions}
 
-De funktioner som förväntas av en community-upplevelse är välkända. Med AEM Communities finns dessa funktioner som byggstenar, så kallade communityfunktioner.
+De funktioner som förväntas av en community-upplevelse är välkända. Med AEM Communities är dessa funktioner tillgängliga som byggstenar, så kallade communityfunktioner.
 
-Community-funktioner är vanliga AEM-sidor som innehåller komponenter som är kopplade till en funktion som enkelt kan införlivas i en community-mall.
+Community-funktioner är vanliga AEM sidor innehåller komponenter som är sammankopplade i en funktion som enkelt kan integreras i en community-mall.
 
 Se [användarfunktionskonsolen](/help/communities/functions.md).
 
@@ -172,11 +175,11 @@ Se även:
 
 * [Webbplatsgruppskonsol](/help/communities/groups.md) för att skapa undergrupper i författarmiljön.
 * [Konsolen](/help/communities/tools-groups.md) Gruppmallar för att skapa platsstruktur för grupper.
-* [Komma igång med AEM Communities](/help/communities/getting-started.md) för självstudiekurs för att snabbt skapa en communitysajt med kapslade grupper.
+* [Komma igång med AEM Communities](/help/communities/getting-started.md) för självstudiekurs om hur du snabbt skapar en community-webbplats med kapslade grupper.
 
 ## Community-komponenter {#community-components}
 
-De [communitykomponenter](/help/communities/author-communities.md) som en communitywebbplats byggs från kan användas för att lägga till communityfunktioner på en AEM-webbplats.
+De [communitykomponenter](/help/communities/author-communities.md) som en communitywebbplats byggs från kan användas för att lägga till communityfunktioner till valfri AEM.
 
 Komponentguiden [för](/help/communities/components-guide.md) communityn finns tillgänglig för interaktiv utforskning av komponenterna.
 
@@ -202,7 +205,7 @@ En engagemangscommunity kan innehålla:
 * Moderering
 * Meddelanden
 * Betyg och emblem
-* Analysrapporter
+* Analytics
 
 Om du snabbt vill skapa en ny engagemangscommunity kan du besöka [Getting Started with AEM Communities](/help/communities/getting-started.md).
 
@@ -225,9 +228,9 @@ Om du enkelt vill skapa en ny aktiveringscommunity går du till [Komma igång me
 
 ## AEM Demo Machine {#aem-demo-machine}
 
-AEM [Demo Machine](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine) hanterar och kör demonstrationer för AEM [Sites](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Sites), [Assets](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Assets), [Communities](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Communities), [Apps](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Apps) [](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Forms)ochForms¥, som ofta kräver mer konfiguration än att bara starta en QuickStart-instans. AEM Demo Machine kommer att konfigurera ytterligare [infrastrukturer](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Infrastructure) som MongoDB-, Solr-, MySQL-, FFmpeg- och e-postservrar.
+Den [AEM Demo Machine](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine) hanterar och kör demonstrationer för AEM [Sites](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Sites), [Assets](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Assets), [Communities](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Communities), [Apps](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Apps) [](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Forms)ochForms¥, som ofta kräver mer konfiguration än att bara starta en QuickStart-instans. AEM Demo Machine kommer att konfigurera ytterligare [infrastrukturer](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Infrastructure) som MongoDB-, Solr-, MySQL-, FFmpeg- och e-postservrar.
 
-AEM Demo Machine innehåller:
+Den AEM demomaskinen innehåller:
 
 * Ett [grafiskt användargränssnitt](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/User%20Interface).
 * Apache ANT-skript med konfigurerbara [egenskaper](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Properties) och [mål](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Command%20Line).
@@ -236,14 +239,14 @@ AEM Demo Machine innehåller:
 
 AEM Demo Machine har testats med CQ 5.5, CQ 5.6.1, AEM 6.0, AEM 6.1, AEM 6.2, AEM 6.3 och AEM 6.4 i Windows, MacOS och Linux.
 
-AEM Demo Machine kräver en giltig AEM-licens.
+AEM Demo Machine kräver en giltig AEM.
 
 >[!NOTE]
 >
->Se en [videointroduktion](https://www.youtube.com/watch?v=zEE_zkR9fVQ&amp;feature=youtu.be) till AEM Demo Machine (13:26).
+>Visa en [videointroduktion](https://www.youtube.com/watch?v=zEE_zkR9fVQ&amp;feature=youtu.be) till AEM Demo Machine (13:26).
 
 
-## AEM Communities-dokumentation {#aem-communities-documentation}
+## AEM Communities dokumentation {#aem-communities-documentation}
 
 * Besök [Distribuera communityn](deploy-communities.md) om du vill veta mer om rekommenderade distributioner.
 * Besök [Administrera communitysajter](administer-landing.md) om du vill veta mer om hur du skapar en community-webbplats, lägger till communitygrupper, konfigurerar mallar för communitysajter, modererar communityinnehåll, hanterar medlemmar, taggar, meddelanden, poängsättning och märken.
