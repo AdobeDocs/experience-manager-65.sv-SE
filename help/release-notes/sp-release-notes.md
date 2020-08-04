@@ -4,9 +4,9 @@ description: Versionsinformation för Adobe Experience Manager 6.5 Service Pack 
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
+source-git-commit: 2f5072a73b11853bbfd63c4b4ce9ffcf186adad1
 workflow-type: tm+mt
-source-wordcount: '4380'
+source-wordcount: '4406'
 ht-degree: 0%
 
 ---
@@ -78,6 +78,7 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 * När du uppgraderar från Experience Manager 6.2 till Experience Manager 6.5 visas inte Parsys-komponenten för statiska mallar korrekt. Parsys-komponentens höjd anges till 0 och komponenterna i den är inte synliga (NPR-33663).
 * När en användare kopierar och klistrar in en layoutbehållare på samma sida visas inte komponenterna i en layoutbehållare (NPR-33648).
 * I Dispatcher hälsokontroll visas `Invalid cookie header` ett varningsmeddelande i loggfilerna (NPR-33629).
+* Speglad XSS i PreferencesServlet (NPR-33438).
 
 ### [!DNL Assets] {#assets-6550}
 
@@ -239,6 +240,8 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 
 * Ett felmeddelande visas när Experience Manager SDL-paketet (NPR-33175) installeras.
 
+* SSRF-sårbarhet i Experience Manager (NPR-33435).
+
 ### Platform {#platform-6550}
 
 * Filtret anropas inte om [!DNL Sling] mappningsposten skapas under `sling:match` `/etc/maps` (NPR-33362).
@@ -264,6 +267,7 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 * Auktoriserade IMS-användare i den lokala Experience Manager-administratörsgruppen kan inte skapa eller ändra IMS-konfigurationer (NPR-33045).
 * Konfigurationssidan för Adobe Launch visar inte alla poster (NPR-33011).
 * Användare i gruppen content-authors kan inte redigera egenskaper för en Adobe Target-komponent på grund av JavaScript-fel (NPR-32996).
+* Serveröverskridande skriptning för JSON (NPR-32744).
 
 ### Översättningsprojekt {#translation-6550}
 
@@ -295,6 +299,7 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 * En användare kan inte skicka ett e-postmeddelande till en annan användare i en community (NPR-32598).
 * En skickad blogg visas inte förrän användaren uppdaterar sidan (NPR-32391).
 * När du skapar en version av meddelanden och prenumerationer på användargenererat innehåll (UGC) lagras ett felaktigt ID för källsidan (CQ-4279355, CQ-4289703).
+* Serveröverskridande skriptproblem (NPR-33203).
 
 ### Arbetsflöde {#workflow-6550}
 
@@ -321,6 +326,7 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 * BackendIntegration: Begäranden från formulärdatamodellen misslyckas eftersom uppdateringstoken förfaller på grund av ett inaktivt tillstånd (NPR-33169).
 * Designer: Skärmläsare kör tabbordningen baserat på den geografiska standardordningen i stället för den anpassade tabbordningen som definieras i XDP-filen (NPR-32160).
 * Designer: Om taggningsalternativet är aktiverat försvinner delformulärsramen i den genererade PDF-utdatafilen (NPR-32778).
+* Lagrade XSS med GuideSOMProviderServlet (NPR-32700).
 
 ## Installera 6.5.5.0 {#install}
 
