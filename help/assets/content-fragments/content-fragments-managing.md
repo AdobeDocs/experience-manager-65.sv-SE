@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 21a18d60-f3fe-4048-9949-8416b5cb4596
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
+source-git-commit: c71c24a291b728ab429b18a405123c96123cf617
 workflow-type: tm+mt
 source-wordcount: '1486'
 ht-degree: 10%
@@ -120,7 +120,7 @@ Markera fragmentet för att visa verktygsfältet med tillämpliga åtgärder:
 
 >[!NOTE]
 >
->Många av dessa åtgärder är [standardåtgärder för Assets](/help/assets/managing-assets-touch-ui.md) och/eller [AEM-datorprogrammet](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html).
+>Många av dessa åtgärder är [standardåtgärder för Assets](/help/assets/managing-assets-touch-ui.md) och/eller [AEM](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html).
 
 ## Öppna fragmentredigeraren {#opening-the-fragment-editor}
 
@@ -143,11 +143,7 @@ Så här öppnar du fragmentet för redigering:
    >[!NOTE]
    >
    >1. Ett meddelande visas när fragmentet redan refereras på en innehållssida.
-      >
-      >
-      >
-
-   2. Sidpanelen kan döljas/visas med hjälp av **ikonen Växla sida** .
+   >2. Sidpanelen kan döljas/visas med hjälp av **ikonen Växla sida** .
 
 
 1. Navigera genom de tre lägena med ikonerna på sidopanelen:
@@ -197,9 +193,9 @@ Redigeraren har två alternativ:
 
    Redigeraren avslutas utan att de senaste ändringarna sparas.
 
-När du redigerar ditt innehållsfragment skapar AEM automatiskt versioner för att säkerställa att tidigare innehåll kan återställas om du **avbryter** dina ändringar:
+När du redigerar ditt innehållsfragment skapas AEM automatiskt versioner för att säkerställa att tidigare innehåll kan återställas om du **avbryter** dina ändringar:
 
-1. När ett innehållsfragment öppnas för redigering söker AEM efter den cookie-baserade token som anger om det finns en *redigeringssession* :
+1. När ett innehållsfragment öppnas för redigering AEM söker efter den cookie-baserade token som anger om det finns en *redigeringssession* :
 
    1. Om token hittas betraktas fragmentet som en del av den befintliga redigeringssessionen.
    2. Om token *inte* är tillgänglig och användaren börjar redigera innehåll, skapas en version och en token för den nya redigeringssessionen skickas till klienten, där den sparas i en cookie.
