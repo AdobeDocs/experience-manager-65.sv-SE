@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 13085dd3-d283-4354-874b-cd837a9db9f9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a268b7046430cc17c8b59b9306cf3533d73bb4a2
+source-git-commit: c2937a1989c6cfe33cc3f56f89c307cb5fb8d272
+workflow-type: tm+mt
+source-wordcount: '504'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: a268b7046430cc17c8b59b9306cf3533d73bb4a2
 <table>
  <tbody>
   <tr>
-   <td><strong>Äldre AEM-versioner</strong></td>
+   <td><strong>Äldre AEM versioner</strong></td>
    <td><strong>AEM 6.5</strong></td>
    <td><strong>Kommentarer</strong></td>
   </tr>
@@ -52,7 +55,7 @@ source-git-commit: a268b7046430cc17c8b59b9306cf3533d73bb4a2
 
 ## Jämförelse av OSGi-tjänster {#comparison-of-osgi-services}
 
-**Äldre AEM-versioner**
+**Äldre AEM versioner**
 
 Etikett: Stöd för CUG (Adobe Granite Closed User Group)
 
@@ -60,22 +63,22 @@ Namn: com.day.cq.auth.impl.CugSupportImpl
 
 **AEM 6.5**
 
-* Etikett:Konfiguration av Apache Jackrabbit Oak CUG
+* Etikett: Konfiguration av Apache Jackrabbit Oak CUG
 
-   Namn:org.apache.jackrabbit.oak.spi.security.permission.cug.impl.CugConfiguration
-
-   ConfigurationPolicy = REQUIRED
-
-* Etikett:Apache Jackrabbit Oak CUG Exclude List
-
-   Namn:org.apache.jackrabbit.oak.spi.security.permission.cug.impl.CugExcludeImpl
+   Namn: org.apache.jackrabbit.oak.spi.security.permission.cug.impl.CugConfiguration
 
    ConfigurationPolicy = REQUIRED
 
-* Namn:com.adobe.granite.auth.requirements.impl.RequirementService
-* Etikett:Autentiseringskrav och hanterare för inloggningssökväg för Adobe Granite
+* Etikett: Apache Jackrabbit Oak CUG Exclude List
 
-   Namn:com.adobe.granite.auth.requirements.impl.DefaultRequirementHandler
+   Namn: org.apache.jackrabbit.oak.spi.security.permission.cug.impl.CugExcludeImpl
+
+   ConfigurationPolicy = REQUIRED
+
+* Namn: com.adobe.granite.auth.requirements.impl.RequirementService
+* Etikett: Autentiseringskrav och hanterare för inloggningssökväg för Adobe Granite
+
+   Namn: com.adobe.granite.auth.requirements.impl.DefaultRequirementHandler
 
    ConfigurationPolicy = REQUIRED
 
@@ -84,7 +87,9 @@ Namn: com.day.cq.auth.impl.CugSupportImpl
 * Konfiguration av CUG-auktoriseringen och aktivera/inaktivera utvärderingen.
 Tjänst för att konfigurera exkluderingslista för huvudobjekt som inte ska påverkas av CUG-auktoriseringen.
 
-   >[!NOTE] Om CugExcludeImpl inte är konfigurerad återgår CugConfiguration till standardvärdet.
+   >[!NOTE]
+   > 
+   >Om inställningen inte `CugExcludeImpl` är konfigurerad `CugConfiguration` återgår den till standardinställningen.
 
    Det går att koppla en anpassad CugExclude-implementering om det finns särskilda behov.
 
