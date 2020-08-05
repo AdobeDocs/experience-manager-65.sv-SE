@@ -11,7 +11,10 @@ topic-tags: upgrading
 discoiquuid: fcb17227-ff1f-4b47-ae94-6b7f60923876
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a8deb66b23e6ddde9c5f6379ef4f766668336369
+source-git-commit: d3a69bbbc9c3707538be74fd05f94f20a688d860
+workflow-type: tm+mt
+source-wordcount: '1275'
+ht-degree: 0%
 
 ---
 
@@ -26,17 +29,19 @@ source-git-commit: a8deb66b23e6ddde9c5f6379ef4f766668336369
 
 Innan du utför uppgraderingen måste du utföra flera steg. Mer information finns i [Uppgradera kod och anpassningar](/help/sites-deploying/upgrading-code-and-customizations.md) samt [Underhållsåtgärder](/help/sites-deploying/pre-upgrade-maintenance-tasks.md) före uppgradering. Kontrollera dessutom att datorn uppfyller kraven för den nya versionen av AEM. Se hur Mönsteravkännare kan hjälpa dig att beräkna uppgraderingens komplexitet och se även avsnittet Upgrade Scope och Requirements i [Planera uppgraderingen](/help/sites-deploying/upgrade-planning.md) för mer information.
 
+Observera slutligen att driftstoppen under uppgraderingen kan minskas avsevärt genom att databasen indexeras **innan** uppgraderingen utförs. Mer information finns i [Använda omindexering offline för att minska driftstoppen under en uppgradering](/help/sites-deploying/upgrade-offline-reindexing.md)
+
 ## Krav för migrering {#migration-prerequisites}
 
-* **** Lägsta Java-version som krävs: Migreringsverktyget fungerar bara med Java version 7 och senare. Observera att för AEM 6.3 och senare är Oracles JRE 8 och IBM:s JRE 7 och 8 de enda versionerna som stöds.
+* **Lägsta Java-version som krävs:** Migreringsverktyget fungerar bara med Java version 7 och senare. Observera att för AEM 6.3 och senare är Oracles JRE 8 och IBM:s JRE 7 och 8 de enda versionerna som stöds.
 
-* **** Uppgraderad instans: Om du uppgraderar från en version som är **äldre än 5.6** bör du kontrollera att du har utfört en uppgradering på plats till AEM 6.0 enligt den procedur som beskrivs i version 6.0 av uppgraderingsdokumentationen.
+* **Uppgraderad instans:** Om du uppgraderar från en version som är **äldre än 5.6** bör du kontrollera att du har utfört en uppgradering på plats till AEM 6.0 genom att följa proceduren som beskrivs i version 6.0 av uppgraderingsdokumentationen.
 
-## Förberedelse av AEM Quickstart jar-filen {#prep-quickstart-file}
+## Förberedelse av AEM Quickstart jar-fil {#prep-quickstart-file}
 
 1. Stoppa instansen om den körs.
 
-1. Ladda ned den nya AEM jar-filen och använd den för att ersätta den gamla filen utanför `crx-quickstart` mappen.
+1. Ladda ned den nya AEM jar-filen och använd den för att ersätta den gamla utanför `crx-quickstart` mappen.
 
 1. Packa upp den nya snabbstartsburken genom att köra:
 
@@ -46,15 +51,16 @@ Innan du utför uppgraderingen måste du utföra flera steg. Mer information fin
 
 ## Migrering av innehållsdatabas {#content-repository-migration}
 
-Migreringen krävs inte om du uppgraderar från AEM 6.3. För versioner som är äldre än 6.3 tillhandahåller Adobe ett verktyg som kan användas för att migrera databasen till den nya versionen av Oak Segment-tjära i AEM 6.3. Det ingår som en del av snabbstartspaketet och är obligatoriskt för alla uppgraderingar som ska använda tarMK. Uppgraderingar för miljöer där MongoMK används kräver inte databasmigrering. Mer information om fördelarna med det nya segmenttjärformatet finns i Vanliga frågor och svar om [migrering till Oak Segment-tjära](/help/sites-deploying/revision-cleanup.md#online-revision-cleanup-frequently-asked-questions).
+Migreringen krävs inte om du uppgraderar från AEM 6.3. För versioner som är äldre än 6.3 tillhandahåller Adobe ett verktyg som kan användas för att migrera databasen till den nya versionen av den eksegmentstjärna som finns i AEM 6.3. Det ingår som en del av snabbstartspaketet och är obligatoriskt för alla uppgraderingar som ska använda tarMK. Uppgraderingar för miljöer där MongoMK används kräver inte databasmigrering. Mer information om fördelarna med det nya segmenttjärformatet finns i Vanliga frågor och svar om [migrering till Oak Segment-tjära](/help/sites-deploying/revision-cleanup.md#online-revision-cleanup-frequently-asked-questions).
 
-Den faktiska migreringen görs med den vanliga AEM quickstart jar-filen, som körs med ett nytt `-x crx2oak` alternativ som kör crx2oak-verktyget för att förenkla uppgraderingen och göra den mer robust.
+Den faktiska migreringen görs med AEM snabburkfil, som körs med ett nytt `-x crx2oak` alternativ som kör crx2oak-verktyget för att förenkla uppgraderingen och göra den mer robust.
 
 >[!NOTE]
 >
 >Om du utför Innehållsmigrering för en TARMK-databas med tillägget CRX2Oak Quickstart kan du ta bort körningsläget för **exempelinnehåll** genom att lägga till följande på migreringskommandoraden:
 >
 >* `--promote-runmode nosamplecontent`
+
 >
 
 
@@ -122,15 +128,15 @@ Var `<<YOUR_PROFILE>>` och `<<ADDITIONAL_FLAGS>>` ersätts med profilen och flag
 
 * Om du använder Java 7 lägger du till `-XX:MaxPermSize=2048m` parametern precis efter `-Xmx` parametern.
 
-Mer information om hur du använder crx2oak-verktyget finns i Använda [CRX2Oak Migration Tool](/help/sites-deploying/using-crx2oak.md). JAR-hjälpfilen för crx2oak kan vid behov uppgraderas manuellt genom att manuellt ersätta den med senare versioner efter att snabbstarten har packats upp. Sökvägen till AEM-installationsmappen är: `<aem-install>/crx-quickstart/opt/extensions/crx2oak.jar`. Den senaste versionen av CRX2Oak-migreringsverktyget kan laddas ned från Adobe Repository på: [https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/crx2oak/](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/crx2oak/)
+Mer information om hur du använder crx2oak-verktyget finns i Använda [CRX2Oak Migration Tool](/help/sites-deploying/using-crx2oak.md). JAR-hjälpfilen för crx2oak kan vid behov uppgraderas manuellt genom att manuellt ersätta den med senare versioner efter att snabbstarten har packats upp. Sökvägen i AEM installationsmapp är: `<aem-install>/crx-quickstart/opt/extensions/crx2oak.jar`. Den senaste versionen av CRX2Oak-migreringsverktyget kan hämtas från Adobe-databasen på: [https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/crx2oak/](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/crx2oak/)
 
-Om migreringen har slutförts avslutas verktyget med en avslutningskod på noll. Kontrollera också om det finns WARN- och ERROR-meddelanden i `upgrade.log` filen som finns under `crx-quickstart/logs` AEM-installationskatalogen, eftersom dessa kan tyda på icke-allvarliga fel som uppstod under migreringen.
+Om migreringen har slutförts avslutas verktyget med en avslutningskod på noll. Kontrollera dessutom om det finns WARN- och ERROR-meddelanden i `upgrade.log` filen som finns under `crx-quickstart/logs` i AEM installationskatalog, eftersom dessa kan tyda på icke-allvarliga fel som uppstod under migreringen.
 
 Kontrollera konfigurationsfilerna under `crx-quickstart/install` mappen. Om en migrering var nödvändig kommer dessa att uppdateras för att återspegla måldatabasen.
 
 **En anteckning om datalager:**
 
-Även om `FileDataStore` det är det nya standardvärdet för AEM 6.3-installationer krävs inte att ett externt datalager används. Även om du bör använda ett externt datalager som bästa praxis för produktionsdistributioner är det inte en förutsättning för uppgradering. På grund av den komplexitet som redan finns vid uppgradering av AEM rekommenderar vi att du utför uppgraderingen utan att behöva göra en datastrimportmigrering. Om du vill kan du utföra en datalagermigrering efteråt som en separat åtgärd.
+Även om `FileDataStore` det är det nya standardvärdet för AEM 6.3-installationer krävs inte att ett externt datalager används. Även om du bör använda ett externt datalager som bästa praxis för produktionsdistributioner är det inte en förutsättning för uppgradering. På grund av den komplexitet som redan finns vid uppgradering av AEM rekommenderar vi att du utför uppgraderingen utan att behöva göra en datastrimmigrering. Om du vill kan du utföra en datalagermigrering efteråt som en separat åtgärd.
 
 ## Felsöka migreringsproblem {#troubleshooting-migration-issues}
 
@@ -168,17 +174,17 @@ Var `/path/to/datastore` representerar sökvägen till File DataStore.
 
 ### Kontrollera rätt startkommando för uppgradering {#determining-the-correct-upgrade-start-command}
 
-För att kunna genomföra uppgraderingen är det viktigt att du börjar använda AEM-filen för att öppna instansen. Om du uppgraderar till 6.5 kan du även läsa andra alternativ för innehållsomstrukturering och migrering i [Lazy Content Migration](/help/sites-deploying/lazy-content-migration.md) som du kan välja med uppgraderingskommandot.
+För att kunna genomföra uppgraderingen är det viktigt att du börjar AEM använda filen jar för att ta fram instansen. Om du uppgraderar till 6.5 kan du även läsa andra alternativ för innehållsomstrukturering och migrering i [Lazy Content Migration](/help/sites-deploying/lazy-content-migration.md) som du kan välja med uppgraderingskommandot.
 
-Observera att uppgraderingen inte startar när AEM startas från startskriptet. De flesta kunder börjar med AEM med startskriptet och har anpassat det här startskriptet så att det innehåller växlar för miljökonfigurationer som minnesinställningar, säkerhetscertifikat osv. Därför rekommenderar vi att du följer den här proceduren för att fastställa rätt uppgraderingskommando:
+Observera att AEM från startskriptet inte startar uppgraderingen. De flesta kunder börjar AEM med startskriptet och har anpassat det här startskriptet för att inkludera växlar för miljökonfigurationer som minnesinställningar, säkerhetscertifikat osv. Därför rekommenderar vi att du följer den här proceduren för att fastställa rätt uppgraderingskommando:
 
-1. Kör följande från kommandoraden på en AEM-instans som körs:
+1. Kör följande från kommandoraden på en AEM som körs:
 
    ```shell
    ps -ef | grep java
    ```
 
-1. Leta efter AEM-processen. Det ser ut ungefär så här:
+1. Leta efter AEM. Det ser ut ungefär så här:
 
    ```shell
    /usr/bin/java -server -Xmx1024m -XX:MaxPermSize=256M -Djava.awt.headless=true -Dsling.run.modes=author,crx3,crx3tar -jar crx-quickstart/app/cq-quickstart-6.2.0-standalone-quickstart.jar start -c crx-quickstart -i launchpad -p 4502 -Dsling.properties=conf/sling.properties
