@@ -12,7 +12,10 @@ discoiquuid: 5c035d4c-6e03-48b6-8404-800b52d659b8
 docset: aem65
 targetaudience: target-audience upgrader
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: d3a69bbbc9c3707538be74fd05f94f20a688d860
+workflow-type: tm+mt
+source-wordcount: '865'
+ht-degree: 0%
 
 ---
 
@@ -21,9 +24,13 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 >[!NOTE]
 >
->Uppgraderingen kräver driftstopp för Author-nivån eftersom de flesta AEM-uppgraderingar utförs på plats. Genom att följa dessa metodtips kan driftstopp i publiceringsskiktet minimeras eller elimineras.
+>Uppgraderingen kräver driftstopp för Author-nivån eftersom de flesta AEM uppgraderingar utförs på plats. Genom att följa dessa rutiner kan driftstopp i publiceringsskiktet minimeras eller elimineras.
 
-När du uppgraderar dina AEM-miljöer måste du ta hänsyn till skillnaderna i tillvägagångssätt mellan att uppgradera författarmiljöer eller publiceringsmiljöer för att minimera driftstoppen för både författare och slutanvändare. På den här sidan beskrivs hur du uppgraderar en AEM-topologi som för närvarande körs på en version av AEM 6.x. Eftersom processen skiljer sig mellan redigerings- och publiceringsnivåer samt Mongo- och TarmMK-baserade distributioner, har varje nivå och mikrokärna listats i ett separat avsnitt. När du utför din distribution rekommenderar vi att du först uppgraderar din utvecklingsmiljö, avgör om du lyckas och sedan fortsätter till publiceringsmiljöerna.
+När du uppgraderar dina AEM-miljöer måste du ta hänsyn till skillnaderna i tillvägagångssätt mellan att uppgradera författarmiljöer eller publiceringsmiljöer för att minimera driftstoppen för både författare och slutanvändare. På den här sidan beskrivs den höga nivån för uppgradering av en AEM topologi som för närvarande körs på en version av AEM 6.x. Eftersom processen skiljer sig mellan redigerings- och publiceringsnivåer samt Mongo- och TarmMK-baserade distributioner, har varje nivå och mikrokärna listats i ett separat avsnitt. När du utför din distribution rekommenderar vi att du först uppgraderar din utvecklingsmiljö, avgör om du lyckas och sedan fortsätter till publiceringsmiljöerna.
+
+>[!IMPORTANT]
+>
+>Du kan minska driftstoppen under uppgraderingen avsevärt genom att indexera databasen innan du utför uppgraderingen. Mer information finns i [Använda omindexering offline för att minska driftstoppen under en uppgradering](/help/sites-deploying/upgrade-offline-reindexing.md)
 
 ## Stjärtmaskförfattarnivå {#tarmk-author-tier}
 
@@ -118,7 +125,7 @@ Den topologi som antas för det här avsnittet består av ett MongoMK Author-klu
 
 1. Ta bort det klonade datalagret.
 
-### Om misslyckades (återställning) {#if-unsuccessful-rollback-2}
+### Om misslyckades (återställning)  {#if-unsuccessful-rollback-2}
 
 ![mongo-rollback](assets/mongo-rollback.jpg)
 
