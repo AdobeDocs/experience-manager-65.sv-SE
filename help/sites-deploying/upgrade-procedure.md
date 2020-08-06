@@ -12,7 +12,7 @@ discoiquuid: 5c035d4c-6e03-48b6-8404-800b52d659b8
 docset: aem65
 targetaudience: target-audience upgrader
 translation-type: tm+mt
-source-git-commit: d3a69bbbc9c3707538be74fd05f94f20a688d860
+source-git-commit: cbd48b28798c1bb7c00175fc1faecfea5484b07b
 workflow-type: tm+mt
 source-wordcount: '865'
 ht-degree: 0%
@@ -28,10 +28,9 @@ ht-degree: 0%
 
 När du uppgraderar dina AEM-miljöer måste du ta hänsyn till skillnaderna i tillvägagångssätt mellan att uppgradera författarmiljöer eller publiceringsmiljöer för att minimera driftstoppen för både författare och slutanvändare. På den här sidan beskrivs den höga nivån för uppgradering av en AEM topologi som för närvarande körs på en version av AEM 6.x. Eftersom processen skiljer sig mellan redigerings- och publiceringsnivåer samt Mongo- och TarmMK-baserade distributioner, har varje nivå och mikrokärna listats i ett separat avsnitt. När du utför din distribution rekommenderar vi att du först uppgraderar din utvecklingsmiljö, avgör om du lyckas och sedan fortsätter till publiceringsmiljöerna.
 
->[!IMPORTANT]
+<!-->>[!IMPORTANT]
+>Du kan minska driftstoppen under uppgraderingen avsevärt genom att indexera databasen innan du utför uppgraderingen. Mer information finns i [Använda omindexering offline för att minska driftstoppen under en uppgradering](/help/sites-deploying/upgrade-offline-reindexing.md)—>
 >
->Du kan minska driftstoppen under uppgraderingen avsevärt genom att indexera databasen innan du utför uppgraderingen. Mer information finns i [Använda omindexering offline för att minska driftstoppen under en uppgradering](/help/sites-deploying/upgrade-offline-reindexing.md)
-
 ## Stjärtmaskförfattarnivå {#tarmk-author-tier}
 
 ### Startopologi {#starting-topology}
