@@ -8,7 +8,10 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 262eb911-3dcb-475d-b410-8bcac1347905
 translation-type: tm+mt
-source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
+source-git-commit: 1207cd54d9d605b7fbf606393cd33b5c19b603f4
+workflow-type: tm+mt
+source-wordcount: '691'
+ht-degree: 19%
 
 ---
 
@@ -25,35 +28,35 @@ I den här Carousel-banderollen använder du produktväljaren om du länkar en h
 
 ![chlimage_1-520](assets/chlimage_1-520.png)
 
-När du väljer (i stället för att ange manuellt) vart hotspot-områden eller bildscheman ska gå, använder du väljaren. Platsväljaren fungerar bara om du är en AEM Sites-kund. Produktväljaren kräver också AEM Commerce.
+När du väljer (i stället för att ange manuellt) vart hotspot-områden eller bildscheman ska gå, använder du väljaren. Webbplatsväljaren fungerar bara om du är AEM Sites-kund. Produktväljaren kräver också AEM.
 
 ## Välja produkter {#selecting-products}
 
 Använd produktväljaren för att välja en produkt när du vill ha en aktiveringspunkt eller bildschema för att ge en snabbvy till en viss produkt i produktkatalogen.
 
-1. Navigera till Carousel Set, Interactive Image eller Interactive Video och tryck på fliken **[!UICONTROL Actions]** (endast tillgängligt om du har definierat en hotspot eller ett bildschema).
+1. Navigera till karuselluppsättningen, den interaktiva bilden eller den interaktiva videon och tryck på fliken **[!UICONTROL Actions]** (endast tillgänglig om du har definierat ett hotspot-område eller bildschema).
 
    Produktväljaren finns i området **[!UICONTROL-åtgärdstyp** .
 
    ![chlimage_1-521](assets/chlimage_1-521.png)
 
-1. Tryck på ikonen **[!UICONTROL Produktväljare]** (förstoringsglas) och navigera till en produkt i katalogen.
+1. Tryck på **[!UICONTROL Product Selector]** ikonen (förstoringsglas) och navigera till en produkt i katalogen.
 
    ![chlimage_1-522](assets/chlimage_1-522.png)
 
-   Du kan också filtrera efter nyckelord eller tagg genom att trycka på **[!UICONTROL Filter]** och ange nyckelord, markera taggar eller båda.
+   Du kan också filtrera efter nyckelord eller taggar genom att trycka på **[!UICONTROL Filter]** och ange nyckelord, markera taggar eller båda.
 
    ![chlimage_1-523](assets/chlimage_1-523.png)
 
-   Du kan ändra var AEM bläddrar efter produktdata genom att trycka på **[!UICONTROL Bläddra]** och navigera till en annan mapp.
+   Du kan ändra var AEM bläddrar efter produktdata genom att trycka **[!UICONTROL Browse]** och navigera till en annan mapp.
 
    ![chlimage_1-524](assets/chlimage_1-524.png)
 
-   Tryck på **[!UICONTROL Sortera]** efter för att ändra om AEM sorterar efter nyaste till äldsta eller äldsta till nyaste.
+   Tryck **[!UICONTROL Sort]** på för att ändra om AEM sorterar efter senaste till äldsta eller äldsta till nyaste.
 
    ![chlimage_1-525](assets/chlimage_1-525.png)
 
-   Tryck på **[!UICONTROL Visa som]** om du vill ändra hur du visar produkter - antingen **[!UICONTROL listvy]** eller **[!UICONTROL kortvy]**.
+   Tryck på **[!UICONTROL View as]** för att ändra hur produkter visas, antingen i **[!UICONTROL List View]** eller **[!UICONTROL Card View]**.
 
    ![chlimage_1-526](assets/chlimage_1-526.png)
 
@@ -61,21 +64,21 @@ Använd produktväljaren för att välja en produkt när du vill ha en aktiverin
 
    ![chlimage_1-527](assets/chlimage_1-527.png)
 
-1. I **[!UICONTROL förhandsgranskningsläget]** kan du trycka på aktiveringspunkten eller bildschemat och se hur snabbvyn ser ut.
+1. I **[!UICONTROL Preview]** läget kan du trycka på aktiveringspunkten eller bildschemat och se hur snabbvyn ser ut.
 
    ![chlimage_1-528](assets/chlimage_1-528.png)
 
 ## Välja platser {#selecting-sites}
 
-Använd webbplatsväljaren för att välja en webbsida när du vill att ett hotspot- eller bildschema ska länka till en webbsida som hanteras inom AEM-webbplatser.
+Använd webbplatsväljaren för att välja en webbsida när du vill att ett hotspot- eller bildschema ska länka till en webbsida som hanteras AEM webbplatser.
 
-1. Navigera till Carousel Set, Interactive Image eller Interactive Video och tryck på fliken **[!UICONTROL Actions]** (endast tillgängligt om du har definierat en hotspot eller ett bildschema).
+1. Navigera till karuselluppsättningen, den interaktiva bilden eller den interaktiva videon och tryck på fliken **[!UICONTROL Actions]** (endast tillgänglig om du har definierat ett hotspot-område eller bildschema).
 
-   Platsväljaren finns i området **[!UICONTROL Åtgärdstyp]** .
+   Platsväljaren finns i avsnittet **[!UICONTROL Action Type]**.
 
    ![chlimage_1-529](assets/chlimage_1-529.png)
 
-1. Tryck på ikonen **[!UICONTROL Platsväljare]** (mapp med förstoringsglas) och navigera till en sida på dina AEM-webbplatser som du vill länka hotspot- eller bildschema till.
+1. Tryck på ikonen **[!UICONTROL Site Selector]** (mapp med förstoringsglas) och navigera till en sida på era AEM-webbplatser som du vill länka hotspot-området eller bildschemat till.
 
    ![chlimage_1-530](assets/chlimage_1-530.png)
 
@@ -83,16 +86,16 @@ Använd webbplatsväljaren för att välja en webbsida när du vill att ett hots
 
    ![chlimage_1-531](assets/chlimage_1-531.png)
 
-1. Om du trycker på hotspot eller bildschema i **[!UICONTROL förhandsgranskningsläget]** navigerar du till den angivna AEM-webbplatssidan.
+1. Om du trycker på hotspot eller bildschema i **[!UICONTROL Preview]** läget navigerar du till den AEM webbplatssida du angav.
 
 ## Välja resurser {#selecting-assets}
 
-Använd den här väljaren för att välja bilder som ska användas i en Carousel Banner, en interaktiv video, bilduppsättningar, blandade medieuppsättningar och snurruppsättningar. I interaktiv video är resursväljaren tillgänglig när du trycker på **[!UICONTROL Välj resurser]** på fliken **[!UICONTROL Innehåll]** . I Carousel Sets är resursväljaren tillgänglig när du skapar en ny bildruta. I Bilduppsättningar, Blandade medieuppsättningar och Snurra uppsättningar är resursväljaren tillgänglig när du skapar en ny bilduppsättning, blandad medieuppsättning eller snurra uppsättning.
+Använd den här väljaren för att välja bilder som ska användas i en Carousel Banner, en interaktiv video, bilduppsättningar, blandade medieuppsättningar och snurruppsättningar. I interaktiv video är resursväljaren tillgänglig när du trycker **[!UICONTROL Select Assets]** på **[!UICONTROL Content]** fliken. I Carousel Sets är resursväljaren tillgänglig när du skapar en ny bildruta. I Bilduppsättningar, Blandade medieuppsättningar och Snurra uppsättningar är resursväljaren tillgänglig när du skapar en ny bilduppsättning, blandad medieuppsättning eller snurra uppsättning.
 
-Mer information finns även i [Resursväljaren](search-assets.md#assetselector) .
+Mer information finns även i [Resursväljaren](search-assets.md#assetpicker) .
 
-1. Navigera till Carousel Set och skapa en ny bild. Du kan också navigera till Interaktiv video, gå till fliken **[!UICONTROL Innehåll]** och välja resurser. Du kan också skapa en uppsättning med blandade media, bilduppsättning eller snurra.
-1. Tryck på ikonen **[!UICONTROL Resursväljare]** (mapp med förstoringsglas) och navigera till en resurs.
+1. Navigera till Carousel Set och skapa en ny bild. Du kan också navigera till den interaktiva videon, gå till **[!UICONTROL Content]** fliken och välja resurser. Du kan också skapa en uppsättning med blandade media, bilduppsättning eller snurra.
+1. Tryck på ikonen **[!UICONTROL Asset Selector]** (mapp med förstoringsglas) och navigera till en resurs.
 
    ![chlimage_1-532](assets/chlimage_1-532.png)
 
@@ -100,13 +103,13 @@ Mer information finns även i [Resursväljaren](search-assets.md#assetselector) 
 
    ![chlimage_1-533](assets/chlimage_1-533.png)
 
-   Du kan ändra var AEM söker efter resurser genom att navigera till en annan mapp i fältet **[!UICONTROL Sökväg]** .
+   Du kan ändra var AEM bläddrar efter resurser genom att navigera till en annan mapp i **[!UICONTROL Path]** fältet.
 
-   Tryck på **[!UICONTROL Samling]** om du bara vill söka efter resurser i samlingar.
+   Tryck **[!UICONTROL Collection]** om du bara vill söka efter resurser i samlingar.
 
    ![chlimage_1-534](assets/chlimage_1-534.png)
 
-   Tryck på **[!UICONTROL Visa som]** om du vill ändra hur du visar produkter - antingen **[!UICONTROL listvy]**, **[!UICONTROL kolumnvy]** eller **[!UICONTROL kortvy]**.
+   Tryck på **[!UICONTROL View as]** för att ändra hur produkter visas, antingen i **[!UICONTROL List View]**, **[!UICONTROL Column View]** eller **[!UICONTROL Card View]**.
 
    ![chlimage_1-535](assets/chlimage_1-535.png)
 
