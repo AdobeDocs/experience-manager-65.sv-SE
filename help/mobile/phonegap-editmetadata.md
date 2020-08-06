@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
 discoiquuid: 07b38da6-2efa-4a43-9afa-7151a241a5ad
 translation-type: tm+mt
-source-git-commit: 79914fa8fa28d5cf3fe7828d71a34ff920bc3e60
+source-git-commit: 1207cd54d9d605b7fbf606393cd33b5c19b603f4
+workflow-type: tm+mt
+source-wordcount: '394'
+ht-degree: 1%
 
 ---
 
@@ -48,7 +51,7 @@ Du kan redigera de vanliga och iOS-metadata:
 
 ## Lägg till och ta bort skärmbilder {#add-and-remove-screenshots}
 
-Du kan inkludera skärmbilder av appar för att lägga in metadata. Vissa leverantörer kräver korrekta skärmbilder när de skickar in appar till sin appbutik. Dessa bilder måste redan finnas i Assets. Se [Resursväljaren](../assets/search-assets.md#assetselector) för att överföra skärmbilderna.
+Du kan inkludera skärmbilder av appar för att lägga in metadata. Vissa leverantörer kräver korrekta skärmbilder när de skickar in appar till sin appbutik. Dessa bilder måste redan finnas i Assets. Se [Resursväljaren](../assets/search-assets.md#assetpicker) för att överföra skärmbilderna.
 
 ![chlimage_1-33](assets/chlimage_1-33.png)
 
@@ -85,7 +88,7 @@ Läs mer om andra författarroller i följande resurser:
 * [Importera en befintlig hybridapp](/help/mobile/phonegap-adding-content-to-imported-app.md)
 * [Innehållstjänster](/help/mobile/develop-content-as-a-service.md)
 
-### Additional Resources {#additional-resources}
+### Ytterligare resurser {#additional-resources}
 
 Mer information om roller och ansvar för en administratör och utvecklare finns i resurserna nedan:
 
