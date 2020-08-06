@@ -3,7 +3,7 @@ title: Aktivera tillgångsinsikter via DTM
 description: Lär dig hur du använder Adobe Dynamic Tag Management (DTM) för att aktivera tillgångsinsikter.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
+source-git-commit: 892237699a4027e7dab406fd620cac220aa8b88b
 workflow-type: tm+mt
 source-wordcount: '576'
 ht-degree: 1%
@@ -13,9 +13,9 @@ ht-degree: 1%
 
 # Aktivera tillgångsinsikter via DTM {#enable-asset-insights-through-dtm}
 
-Adobe Dynamic Tag Management är ett verktyg som aktiverar era digitala marknadsföringsverktyg. Det ingår kostnadsfritt för kunder som har Adobe Analytics.
+Adobe Dynamic Tag Management är ett verktyg som aktiverar era digitala marknadsföringsverktyg. Det tillhandahålls kostnadsfritt till Adobe Analytics-kunder.
 
-Även om du kan anpassa din spårningskod så att CMS-lösningar från tredje part kan använda resursinsikter, rekommenderar Adobe att du använder DTM för att infoga resursinsikter-taggar.
+Även om du kan anpassa din spårningskod för att aktivera CMS-lösningar från tredje part för att använda resursinsikter, rekommenderar Adobe att du använder DTM för att infoga resursinsikter-taggar.
 
 >[!NOTE]
 >
@@ -96,7 +96,7 @@ Utför dessa steg för att aktivera tillgångsinsikter via DTM.
              "",  /** eVar to put Asset ID for Asset Click Events in, e.g. 'eVar3' */
              "",  /** event to include in tracking-calls for Asset Impression Events, e.g. 'event8' */
              "",  /** event to include in tracking-calls for Asset Click Events, e.g. 'event7' */
-             sObj  /** [OPTIONAL] if the webpage already has an AppMeasurement object, please include the object here. If unspecified, Pagetracker Core shall create its own AppMeasurement object */
+             sObj  /** [OPTIONAL] if the webpage already has an AppMeasurement object, include the object here. If unspecified, Pagetracker Core shall create its own AppMeasurement object */
              );
        sObj.usePlugins = true;
        sObj.doPlugins = assetAnalytics.core.updateContextData;
@@ -112,7 +112,7 @@ Utför dessa steg för att aktivera tillgångsinsikter via DTM.
    * Kodanropet `assetAnalytics.dispatcher.init()` efter att du har kontrollerat att `_satellite.getToolsByType('sc')[0].getS()` är initierad och `assetAnalytics,dispatcher.init` tillgänglig. Du kan därför hoppa över att lägga till den i steg 11.
    * Om sidspåraren inte skapar ett **[!UICONTROL Tools > Assets > Insights Page Tracker]** objekt är de första tre argumenten (RSID, Tracking Server och Visitor Namespace) irrelevanta, vilket anges i kommentarerna i koden för sidspåraren ( `AppMeasurement` ). Tomma strängar skickas i stället för att markera detta.\
       De återstående argumenten motsvarar konfigurationen på sidan Insights Configuration (**[!UICONTROL Tools > Assets > Insights Configuration]**).
-   * AppMeasurement-objektet hämtas genom att en fråga skickas `satelliteLib` till alla tillgängliga SiteCatalyst-motorer. Om flera taggar har konfigurerats ändrar du indexvärdet för arrayväljaren på rätt sätt. Posterna i arrayen ordnas enligt de SiteCatalyst-verktyg som finns i DTM-gränssnittet.
+   * AppMeasurement-objektet hämtas genom att en fråga skickas `satelliteLib` för alla tillgängliga SiteCatalyst-motorer. Om flera taggar har konfigurerats ändrar du indexvärdet för arrayväljaren på rätt sätt. Posterna i arrayen ordnas enligt de SiteCatalyst-verktyg som finns i DTM-gränssnittet.
 
 1. Spara och stäng fönstret Kodredigeraren och spara sedan ändringarna i verktygskonfigurationen.
 1. Godkänn båda väntande godkännanden på **[!UICONTROL Approvals]** fliken. DTM-taggen kan infogas på webbsidan. Mer information om hur du infogar DTM-taggar på webbsidor finns i [Integrera DTM i anpassade sidmallar](https://blogs.adobe.com/experiencedelivers/experience-management/integrating-dtm-custom-aem6-page-template/).
