@@ -1,11 +1,11 @@
 ---
 title: Konfigurera plugin-programmen för RTF-redigeraren
-description: Lär dig att konfigurera plugin-program för textredigering i Adobe Experience Manager för att aktivera enskilda funktioner.
+description: Lär dig konfigurera plugin-programmen för Adobe Experience Manager Rich Text Editor så att enskilda funktioner aktiveras.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: df992fc0204519509c4662a7d4315939af2fc92c
+source-git-commit: d6f48896a56950d44dfe0d1f9b712157951af83c
 workflow-type: tm+mt
-source-wordcount: '4385'
+source-wordcount: '4382'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Mer information om de andra RTE-konfigurationerna finns i [Konfigurera RTF-redig
 
 >[!NOTE]
 >
->När du arbetar med CRXDE Lite bör du spara ändringarna regelbundet med [!UICONTROL Save All] alternativet.
+>När du arbetar med CRXDE Lite bör du spara ändringarna regelbundet med [!UICONTROL Save All] hjälp av ett alternativ.
 
 ## Aktivera ett plugin-program och konfigurera egenskapen features {#activateplugin}
 
@@ -31,7 +31,7 @@ Som standard aktiveras `format`plugin-program, `link`, `list`, `justify`och `con
 >
 >Motsvarande `rtePlugins` nod kallas `<rtePlugins-node>` för att undvika dubbletter i den här artikeln.
 
-1. Använd CRXDE Lite för att leta upp textkomponenten för ditt projekt.
+1. Leta reda på textkomponenten för ditt projekt med CRXDE Lite.
 1. Skapa den överordnade noden för `<rtePlugins-node>` om den inte finns innan du konfigurerar några RTE-plugin-program:
 
    * Beroende på vilken komponent du har är de överordnade noderna:
@@ -62,7 +62,7 @@ När du har aktiverat ett plugin-program följer du de här riktlinjerna för at
 |  | Aktivera alla funktioner | Aktivera några specifika funktioner | Inaktivera alla funktioner |
 |---|---|---|---|
 | Namn | funktioner | funktioner | funktioner |
-| Typ | Sträng | Sträng[] (multi-string; ange Type till String och klicka på Multi in CRXDE Lite) | Sträng |
+| Typ | Sträng | Sträng[] (multi-string; ange Type till String och klicka på Multi i CRXDE Lite) | Sträng |
 | Värde | `*` (en asterisk) | ange ett eller flera funktionsvärden | - |
 
 ## Förstå plugin-programmet findreplace {#findreplace}
@@ -79,7 +79,7 @@ När du använder RTE kan författare klistra in innehåll i något av följande
 
 * **Webbläsarläge**: Klistra in text med webbläsarens standardimplementering för inklistring. Det är inte en rekommenderad metod eftersom den kan medföra oönskad markering.
 
-* **Läge** för oformaterad text: Klistra in urklippsinnehållet som oformaterad text. Den raderar alla formatelement från det kopierade innehållet innan den infogas i AEM-komponenten.
+* **Läge** för oformaterad text: Klistra in urklippsinnehållet som oformaterad text. Alla formatelement från det kopierade innehållet tas bort innan de infogas i AEM.
 
 * **MS Word-läge**: Klistra in texten, inklusive tabeller, med formatering när du kopierar från MS Word. Det går inte att kopiera och klistra in text från en annan källa, t.ex. en webbsida eller MS Excel, utan endast partiell formatering.
 
@@ -107,7 +107,7 @@ Konfigurationen tillåter följande tre typer av användningsfall:
 
 * Klistra in text med webbläsarens standardimplementering för inklistring. Det är inte en rekommenderad metod eftersom den kan medföra oönskad markering. Konfigurerad med `browser` nedan.
 
-* Klistra in urklippsinnehållet som oformaterad text. Den raderar alla formatelement från det kopierade innehållet innan den infogas i AEM-komponenten. Konfigurerad med `plaintext` nedan.
+* Klistra in urklippsinnehållet som oformaterad text. Alla formatelement från det kopierade innehållet tas bort innan de infogas i AEM. Konfigurerad med `plaintext` nedan.
 
 * Klistra in texten, inklusive tabeller, med formatering när du kopierar från MS Word. Det går inte att kopiera och klistra in text från en annan källa, t.ex. en webbsida eller MS Excel, utan endast partiell formatering. Konfigurerad med `wordhtml` nedan.
 
@@ -122,7 +122,7 @@ Konfigurationen tillåter följande tre typer av användningsfall:
 
 Läget Klistra in som Microsoft-Word (`paste-wordhtml`) kan konfigureras ytterligare så att du uttryckligen kan definiera vilka format som tillåts när du klistrar in i AEM från ett annat program, t.ex. Microsoft Word.
 
-Om till exempel endast fet stil och listor ska tillåtas när du klistrar in i AEM kan du filtrera bort de andra formaten. Detta kallas konfigurerbar inklistringsfiltrering, vilket kan göras för båda:
+Om t.ex. endast fet stil och listor ska tillåtas när du klistrar in i AEM kan du filtrera bort de andra formaten. Detta kallas konfigurerbar inklistringsfiltrering, vilket kan göras för båda:
 
 * [Text](#pastemodes)
 * [Länkar](#linkstyles)
@@ -329,7 +329,7 @@ Ange sedan platsen/platserna för de formatmallar som du vill referera till:
 
 ### Konfigurera RTE för optimala ordbrytningar på japanska {#jpwordwrap}
 
-Författare som använder AEM för att skapa japanskt språkinnehåll kan använda ett format på tecken för att undvika radbrytning där ingen radbrytning behövs. Detta gör att författare kan låta meningarna brytas vid önskad position. Formatet för den här funktionen baseras på CSS-klassen som är fördefinierad i CSS-formatmallen.
+Författare som använder AEM för att skapa japanskt innehåll kan använda ett format på tecken för att undvika radbrytning där ingen radbrytning behövs. Detta gör att författare kan låta meningarna brytas vid önskad position. Formatet för den här funktionen baseras på CSS-klassen som är fördefinierad i CSS-formatmallen.
 
 >[!NOTE]
 >
@@ -445,7 +445,7 @@ Om du definierar anpassade format tas standardformaten (`<p>`, `<h1>`, `<h2>`och
 
 ## Konfigurera specialtecken {#spchar}
 
-I en standard-AEM-installation, när `misctools` plugin-programmet är aktiverat för specialtecken (`specialchars`) är ett standardval omedelbart tillgängligt för användning. till exempel copyright- och varumärkessymboler.
+I en AEM standardinstallation, när `misctools` plugin-programmet är aktiverat för specialtecken (`specialchars`) är ett standardval omedelbart tillgängligt för användning. till exempel copyright- och varumärkessymboler.
 
 Du kan konfigurera textredigeraren så att ditt eget val av tecken blir tillgängligt; antingen genom att definiera distinkta tecken eller en hel sekvens.
 
@@ -589,7 +589,7 @@ Ibland kan du skapa datatabeller utan visuell text i en kolumnrubrik om rubriken
 RTE har stöd för dolda rubrikceller för att förbättra tillgängligheten i sådana scenarier. Dessutom innehåller den konfigurationsinställningar för dolda rubriker i tabeller. Med de här inställningarna kan du använda CSS-format på dolda rubriker i redigerings- och förhandsgranskningslägena. Om du vill hjälpa författare att identifiera dolda rubriker i redigeringsläget kan du inkludera följande parametrar i koden:
 
 * `hiddenHeaderEditingCSS`: Anger namnet på CSS-klassen som används i den dolda rubrikcellen när RTE redigeras.
-* `hiddenHeaderEditingStyle`: Anger en formatsträng som används på cellen med dolda rubriker när textredigeringsredigering används.
+* `hiddenHeaderEditingStyle`: Anger en formatsträng som används i cellen med dolda rubriker när textredigeringsredigering används.
 
 Om du anger både CSS och formatsträngen i koden har CSS-klassen företräde framför formatsträngen och kan skriva över alla konfigurationsändringar som formatsträngen gör.
 
@@ -607,7 +607,7 @@ När plugin-programmet för stavningskontroll är aktiverat används lexikon fö
 >[!NOTE]
 Meddelandet `Spell checking failed` visas om en kontroll görs för ett språk som inte är installerat. Standardordlistorna finns i `/libs/cq/spellchecker/dictionaries`, tillsammans med lämpliga Viktigt-filer. Ändra inte filerna.
 
-En AEM-standardinstallation innehåller ordlistorna för amerikansk engelska (`en_us`) och brittisk engelska (`en_gb`). Följ de här stegen om du vill lägga till fler ordlistor.
+En standardinstallation AEM innehåller ordlistorna för amerikansk engelska (`en_us`) och brittisk engelska (`en_gb`). Följ de här stegen om du vill lägga till fler ordlistor.
 
 1. Navigera till sidan [https://extensions.openoffice.org/](https://extensions.openoffice.org/).
 
@@ -697,7 +697,7 @@ När du lägger till länkar i AEM kan du definiera:
 
 Om du vill konfigurera hur länkar läggs till i AEM från ett annat program definierar du HTML-reglerna.
 
-1. Använd CRXDE Lite för att leta upp textkomponenten för ditt projekt.
+1. Leta reda på textkomponenten för ditt projekt med CRXDE Lite.
 1. Skapa en ny nod på samma nivå som `<rtePlugins-node>`, d.v.s. skapa noden under den överordnade noden för `<rtePlugins-node>`:
 
    * **Namn** `htmlRules`
@@ -731,7 +731,7 @@ Om du vill konfigurera hur länkar läggs till i AEM från ett annat program def
       * **Namn** `cssExternal`
       * **Typ** `String`
       * **Ange ett värde** för CSS-klassens namn (utan föregående &#39;.&#39;); for example, `cssClass` instead of `.cssClass`)
-   * Array med giltiga **protokoll** (inklusive https://, https:// file://, mailto:, bland annat)
+   * Array med giltiga **protokoll** (inklusive `https://`, `https://`, `file://`och `mailto:` bland andra)
 
       * **Namn** `protocols`
       * **Typ** `String[]`
@@ -764,7 +764,7 @@ Om du vill konfigurera hur länkar läggs till i AEM från ett annat program def
 
          * **Namn** `targetInternal`
          * **Typ** `String`
-         * **Ange ett värde** för målet för interna länkar (används endast när läget är `auto`)
+         * **Värde** målet för interna länkar (används endast när läget är `auto`)
       * Målet för externa länkar:
 
          * **Namn** `targetExternal`
