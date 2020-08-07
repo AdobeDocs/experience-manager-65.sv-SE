@@ -1,9 +1,9 @@
 ---
-title: Adobe Experience Manager 6.5 Previous Service Pack Release Notes
-description: Versionsinformation för Adobe Experience Manager 6.5 Service Pack 3 och tidigare.
+title: Versionsinformation om Adobe Experience Manager 6.5 Previous Service Pack
+description: Versionsinformation om Adobe Experience Manager 6.5 Service Pack 3 och tidigare.
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
+source-git-commit: d6f48896a56950d44dfe0d1f9b712157951af83c
 workflow-type: tm+mt
 source-wordcount: '8098'
 ht-degree: 0%
@@ -17,9 +17,9 @@ ht-degree: 0%
 
 Adobe Experience Manager 6.5.4.0 är en viktig uppdatering som innehåller nya funktioner, viktiga förbättringar som kunderna efterfrågat och prestanda, stabilitet, säkerhetsförbättringar som släppts sedan den allmänna tillgängligheten av version 6.5 i **april 2019**. Den kan installeras ovanpå Adobe Experience Manager 6.5.
 
-Några viktiga funktioner och förbättringar som introducerades i Adobe Experience Manager 6.5.4.0 är:
+Några viktiga funktioner och förbättringar i Adobe Experience Manager 6.5.4.0:
 
-* Adobe Experience Manager Assets har nu konfigurerats med Brand Portal via Adobe I/O-konsolen.
+* Adobe Experience Manager Assets har nu konfigurerats med Brand Portal via Adobe I/O Console.
 
 * Nu finns ett nytt [Generate Output](../forms/using/aem-forms-workflow-step-reference.md) -steg för Adobe Experience Manager Forms-arbetsflöden.
 
@@ -31,13 +31,13 @@ Några viktiga funktioner och förbättringar som introducerades i Adobe Experie
 
 * Den inbyggda databasen (Apache Jackrabbit Oak) uppdateras till version 1.10.8.
 
-* Nu kan du synkronisera delträd med selektivt innehåll till *Dynamic Media - Scene7-läge* i stället för alla tillgängliga på `content/dam`.
+* Nu kan du synkronisera selektiva underträd till *Dynamic Media - Scene7-läge* i stället för alla tillgängliga på `content/dam`.
 
 * Integrering av formulärdatamodell med SOAP-webbtjänst har nu stöd för urvalsgrupper eller attribut för element.
 
 * SOAP-indata eller -utdata och komplexa datastrukturer har nu stöd för dynamisk gruppersättning.
 
-En fullständig lista över funktioner och viktiga högdagrar som introducerats i de senaste servicepaketen finns i [Nyheter i Service Pack](new-features-latest-service-pack.md)för Adobe Experience Manager 6.5.
+En fullständig lista över funktioner och viktiga högdagrar som introducerats i de senaste servicepaketen finns i [Nyheter i Adobe Experience Manager 6.5 Service Pack](new-features-latest-service-pack.md).
 
 ### Sites {#sites-fixes}
 
@@ -119,11 +119,11 @@ En fullständig lista över funktioner och viktiga högdagrar som introducerats 
 
 * Touch UI-sökning (utförd via Omnissearch)-resultatsidan rullar automatiskt upp och förlorar användarens rullningsposition (NPR-31307).
 
-* Assets detail page of PDF assets does not show action buttons except To Collection and Add Rendition buttons in Experience Manager running mode (CQ-4286705).
+* Assets detail page of PDF assets does not show action buttons except To Collection and Add Rendition buttons in Experience Manager running on Dynamic Media Scene7 run mode (CQ-4286705).
 
 * Resurserna tar för lång tid att bearbeta genom batchöverföringen i Scene7 (CQ-4286445).
 
-* Knappen Spara importerar inte fjärruppsättningen när användaren inte har gjort några ändringar i uppsättningsredigeraren i Dynamic Media Client (CQ-4285690).
+* Knappen Spara importerar inte fjärruppsättningen när användaren inte har gjort några ändringar i Set Editor i Dynamic Media Client (CQ-4285690).
 
 * Miniatyrbilden av 3D-resursen är inte informativ när en 3D-modell som stöds har importerats till Experience Manager (CQ-4283701).
 
@@ -131,7 +131,7 @@ En fullständig lista över funktioner och viktiga högdagrar som introducerats 
 
 * Felaktig behållarhöjd för en överförd 3D-modell som förhandsvisats i 3D-visningsprogrammet visas på objektets informationssida (CQ-4283309).
 
-* Carousel Editor öppnas inte i IE 11 i Hybrid-läget Experience Manager Dynamic Media (CQ-425590).
+* Carousel Editor öppnas inte i IE 11 i läget Experience Manager Dynamic Media Hybrid (CQ-425590).
 
 * Tangentbordsfokus fastnar i den nedrullningsbara menyn E-post i hämtningsdialogrutan i webbläsarna Chrome och Safari (NPR-32067).
 
@@ -141,9 +141,9 @@ En fullständig lista över funktioner och viktiga högdagrar som introducerats 
 
 * Muskontrollen flyttas till föregående filterfält i stället för att finnas kvar i det befintliga filterfältet när resurser söks med hjälp av filterpanelen (NPR-32538).
 
-* Platform Tagging: Om du söker efter taggar genom att skriva i taggfälten visas taggar utanför rotgränserna och egenskapen för taggfält respekteras inte (NPR-31895). `rootPath`
+* Plattformstaggning: Om du söker efter taggar genom att skriva i taggfälten visas taggar utanför rotgränserna och egenskapen för taggfält respekteras inte (NPR-31895). `rootPath`
 
-* Platform-gränssnitt: Webbläsaren för sökvägen bryts om en ogiltig sökväg läggs till i textfältet (NPR-31884).
+* Plattformsgränssnitt: Webbläsaren för sökvägen bryts om en ogiltig sökväg läggs till i textfältet (NPR-31884).
 
 * Meddelande döljs bakom en klistermeny vid sidval (NPR-31628).
 
@@ -179,7 +179,7 @@ En fullständig lista över funktioner och viktiga högdagrar som introducerats 
 
 ### Kampanjanpassning {#campaign-targeting-6540}
 
-* Target molnkonfiguration misslyckas med felhämtningen av mboxes-begäran misslyckades (CQ-4279880).
+* Målmolnkonfigurationen misslyckades med felet när mbox-begäran skulle hämtas (CQ-4279880).
 
 ### Varumärkesportal {#assets-brand-portal-6540}
 
@@ -337,7 +337,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 * Dynamiska återgivningar som hämtats från [!DNL Experience Manager] att ha [!DNL Dynamic Media]Hybrid-läge är brutna (de är av texttyp med innehållet&quot;det går inte att hitta bilden&quot; i stället för bildinnehållstypen) (NPR-30876).
 
-* [!DNL Dynamic Media] Arbetsflödet för kodning av video kan inte generera miniatyrbilder för videon som migreras från [!DNL Dynamic Media Classic] till [!DNL Dynamic Media]Scene7 på Adobe Experience Manager (CQ-4282011).
+* [!DNL Dynamic Media] Arbetsflödet för kodning av video kan inte generera miniatyrbilder för den video som migreras från [!DNL Dynamic Media Classic] till [!DNL Dynamic Media]Scene7-läge i Adobe Experience Manager (CQ-4282011).
 
 * IpsApiException observerades när resurser migrerades från en instans till en annan med olika Scene7-företags-ID:n (CQ-4280548).
 
@@ -421,7 +421,7 @@ Remove one mention of this fix.
 
 * Uppdateringar i buffertstorlekskonfigurationen för Jetty-baserad HTTP-tjänst sparas inte (NPR-30925).
 
-* QueryBuilder har nu stöd för orderby ``fn:name()`` i XPath-frågor (NPR-31322).
+* QueryBuilder har nu stöd för orderby `fn:name()` i XPath-frågor (NPR-31322).
 
 * Dubblettaktiveringsträdet skapas vid uppgradering från [!DNL Experience Manager] 6.3 (NPR-31513).
 
@@ -431,7 +431,7 @@ Remove one mention of this fix.
 
 * Ett fel visas när en ZIP-fil bifogas till ett [!DNL Experience Manager Communities] inlägg på grund av olika versioner av Apache POI- och Apache Tika-paketet (NPR-31018).
 
-* Paketet är dolt i konfigurationshanteraren och är därför inte tillgängligt för anpassade paket (NPR-31720). ``org.apache.sling.distribution.api``
+* Paketet är dolt i konfigurationshanteraren och är därför inte tillgängligt för anpassade paket (NPR-31720). `org.apache.sling.distribution.api`
 
 ### Projekt {#projects}
 
@@ -462,7 +462,7 @@ Remove one mention of this fix.
 * Jackson Database-bibliotek uppdaterade till version 2.9.9.3 för att åtgärda nya säkerhetsluckor (NPR-30967).
 * Aktiviteter och meddelandetitlar är inkonsekventa (NPR-30941).
 * Sidindelningen fungerar inte korrekt i [!DNL Communities] bloggar (NPR-30914).
-* Analytics-rapporter är inte ifyllda i [!DNL Experience Manager] författarmiljön, en tom sida visas (NPR-30913).
+* Analysrapporter fylls inte i i [!DNL Experience Manager] författarmiljön. En tom sida visas (NPR-30913).
 
 ### Oak {#oak}
 
@@ -575,7 +575,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 * Om du lägger till [!DNL Dynamic Media]-Scene7-komponenten på sidan och sedan publicerar sidan aktiveras inte dmscene7-konfigurationen varje gång. NPR-30641: Programfix för CQ-4275962
 * Lade till en IPSJobJournal i [!DNL Experience Manager] för att skapa endast ett IPS-jobb (Intrusion Prevention Systems) per bearbetningsprofil. NPR-30490: Programfix för CQ-4273614
 * [!DNL Dynamic Media]: Lagt till standardfilter för att utesluta resurser från replikering till [!DNL Experience Manager] publiceringsnoden. NPR-30538: Programfix för CQ-4274678
-* Ett externt arbetsflöde för ombearbetning har introducerats för stöd för flera resurser så att mappen kan användas som nyttolast. Arbetsflödet består av två steg: ombearbetar resurser utan handtag via metadatamappning till nästa steg och överför alla resurser utan resurshandtag till S7 i ett enda IPS-jobb. Mer information finns i Konfigurera [!DNL Dynamic Media] Cloud Service. NPR-30489: Programfix för CQ-4272903
+* Ett externt arbetsflöde för ombearbetning har introducerats för stöd för flera resurser så att mappen kan användas som nyttolast. Arbetsflödet består av två steg: ombearbetar resurser utan handtag via metadatamappning till nästa steg och överför alla resurser utan resurshandtag till S7 i ett enda IPS-jobb. Mer information finns i Konfigurera [!DNL Dynamic Media] Cloud Services. NPR-30489: Programfix för CQ-4272903
 * När du laddar upp en felaktig CSV-fil efter att du korrigerat CSV-filen raderas den korrekta CSV-filen. Programfix för CQ-4277694, CQ-4277814
 * Den felaktiga ikonen som är specifik för de bidragsmappar som ska tas bort. Programfix för CQ-4277580
 * När du väljer en användare i användarväljaren på fliken Resursbidrag visas inte användarens namn i tabellen och dialogrutan Ta bort användare på egenskapssidan visar fel text. Programfix för CQ-4277875
@@ -587,7 +587,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 * Om du sorterar sökfrågan efter relevans returneras [!DNL InDesign] dokument tillsammans med [!DNL InDesign] mallar. Programfix för CQ-4273864
 * Om användaren har ett e-post-ID med versaler kan användarna inte checka in de resurser som tidigare har checkats ut. Programfix för CQ-4276575
 * Åtgärden Ta bort gäller bara för de förinställningar som är markerade, och om skärmen automatiskt uppdaterar listan efter åtgärden visas andra förinställningar som redan har uppdaterats. Programfix för CQ-4261461
-* Om du konfigurerar [!DNL Dynamic Media] Cloud Service i [!DNL Dynamic Media]hybrid-läge skapas flera tomma rapportsviter i [!DNL Analytics]och inget rapportsuite-id sparas i [!DNL Experience Manager], vilket resulterar i duplicering av rapportsviten. Programfix för CQ-4249780
+* Om du konfigurerar [!DNL Dynamic Media] Cloud Services i [!DNL Dynamic Media]hybrid-läge skapas flera tomma rapportsviter i [!DNL Analytics]och inget rapportsuite-id sparas i [!DNL Experience Manager], vilket resulterar i duplicering av rapportsviten. Programfix för CQ-4249780
 * Det går inte att synkronisera namnbytet i [!DNL Experience Manager] resursen till det duplicerade namnet till Scene7. Programfix för CQ-4276763
 * Användargenererat innehåll visas felaktigt på sökfilterpanelen. Programfix för CQ-4273875
 * Alternativet Sök efter liknande är inte tillgängligt för TIFF-bilder. Programfix för CQ-4278238
@@ -826,7 +826,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 * Publicera [!DNL Experience Manager Assets] från [!DNL Experience Manager] författarmappen /content/dam/mac till [!DNL Brand Portal] fungerar inte. NPR-29819: Programfix för CQ-4271118
 
-### Platform
+### Plattform
 
 * HtmlLibraryManager tar bort allt innehåll i crx-quickstart vid cacheogiltigförklaring. NPR-29863: Programfix för GRANITE-26197
 
