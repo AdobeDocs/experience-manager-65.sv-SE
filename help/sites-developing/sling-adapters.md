@@ -1,6 +1,6 @@
 ---
-title: Använda delningsadaptrar
-seo-title: Använda delningsadaptrar
+title: Använda Sling-adaptrar
+seo-title: Använda Sling-adaptrar
 description: Sling erbjuder ett adaptermönster för att enkelt översätta objekt som implementerar gränssnittet Adaptable
 seo-description: Sling erbjuder ett adaptermönster för att enkelt översätta objekt som implementerar gränssnittet Adaptable
 uuid: 07f66a33-072d-49e1-8e67-8b80a6a9072a
@@ -10,15 +10,15 @@ topic-tags: platform
 content-type: reference
 discoiquuid: c081b242-67e4-4820-9bd3-7e4495df459e
 translation-type: tm+mt
-source-git-commit: bac56cb8e172d826114e1e607dc24b0a17821f8c
+source-git-commit: 36cc5ca0de9ae2933a0d7585a00f26cc984d24db
 workflow-type: tm+mt
-source-wordcount: '2100'
+source-wordcount: '2350'
 ht-degree: 0%
 
 ---
 
 
-# Använda delningsadaptrar{#using-sling-adapters}
+# Använda Sling-adaptrar{#using-sling-adapters}
 
 [Sling](https://sling.apache.org) erbjuder ett [adaptermönster](https://sling.apache.org/site/adapters.html) för att enkelt översätta objekt som implementerar det [adapterbara](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/adapter/Adaptable.html#adaptTo%28java.lang.Class%29) gränssnittet. Det här gränssnittet innehåller en generisk [customiTo()](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/adapter/Adaptable.html#adaptTo%28java.lang.Class%29) -metod som översätter objektet till den klasstyp som skickas som argument.
 
@@ -145,12 +145,36 @@ I det första fallet kan javadocs visa vad som `adaptTo-targets` är möjligt. D
    <td>Om detta är en JCR-nodbaserad resurs.</td>
   </tr>
   <tr>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page.html">Sidan</a></td>
+   <td>Om detta är en JCR-nodbaserad resurs och noden är en <code>cq:Page</code> (eller <code>cq:PseudoPage</code>).</td>
+  </tr>
+  <tr>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/components/Component.html">Komponent</a></td>
+   <td>Om detta är en <code>cq:Component</code> nodresurs.</td>
+  </tr>  
+  <tr>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/designer/Design.html">Design</a></td>
+   <td>Om detta är en designnod (<code>cq:Page</code>).</td>
+  </tr>
+  <tr>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Template.html">Mall</a></td>
+   <td>Om detta är en <code>cq:Template</code> nodresurs.</td>
+  </tr>  
+  <tr>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/msm/api/Blueprint.html">Blueprint</a></td>
+   <td>Om detta är en <code>cq:Template</code> nodresurs.</td>
+  </tr>
+  <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/dam/api/Asset.html">Tillgång</a></td>
    <td>Om detta är en resurs för dam:Asset-noden.</td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/dam/api/Rendition.html">Återgivning</a></td>
    <td>Om det här är en dam:Asset-rendering (not:file under renderingsmappen för en dam:Assert)</td>
+  </tr>
+  <tr>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/tagging/Tag.html">Tagg</a></td>
+   <td>Om detta är en <code>cq:Tag</code> nodresurs.</td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/security/UserManager.html">UserManager</a></td>
@@ -200,7 +224,23 @@ I det första fallet kan javadocs visa vad som `adaptTo-targets` är möjligt. D
    <td>JCR-sessionen för begäran, om det här är en JCR-baserad resurslösare (standard).</td>
   </tr>
   <tr>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageManager.html">PageManager</a></td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/components/ComponentManager.html">ComponentManager</a></td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/designer/Designer.html">Designer</a></td>
+   <td> </td>
+  </tr>
+  <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/dam/api/AssetManager.html">AssetManager</a></td>
+   <td>Baserat på JCR-sessionen, om detta är en JCR-baserad resurslösare.</td>
+  </tr>
+  <tr>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/tagging/TagManager.html">TagManager</a></td>
    <td>Baserat på JCR-sessionen, om detta är en JCR-baserad resurslösare.</td>
   </tr>
   <tr>
@@ -244,7 +284,7 @@ Inga mål ännu, men implementerar Adaptable och kan användas som källa i en a
 
 #### WCM {#wcm}
 
-**Sidan** anpassas till:
+**[Sidan](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page.html)**anpassas till:
 
 <table>
  <tbody>
@@ -267,7 +307,7 @@ Inga mål ännu, men implementerar Adaptable och kan användas som källa i en a
  </tbody>
 </table>
 
-**Komponenten** anpassas till:
+**[Komponenten](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/components/Component.html)**anpassas till:
 
 | [Resurs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html) | Komponentens resurs. |
 |---|---|
@@ -275,7 +315,7 @@ Inga mål ännu, men implementerar Adaptable och kan användas som källa i en a
 | [Nod](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html) | Komponentens nod. |
 | ... | Allt som komponentens resurs kan anpassas till. |
 
-**Mallen** anpassas till:
+**[Mallen](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Template.html)**anpassas till:
 
 <table>
  <tbody>
