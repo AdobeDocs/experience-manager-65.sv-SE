@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # Konfigurationsinställningar för OSGi{#osgi-configuration-settings}
 
-[OSGi](https://www.osgi.org/) är en grundläggande del i AEM-teknikens stack. Det används för att styra de sammansatta paketen av AEM och deras konfiguration.
+[OSGi](https://www.osgi.org/) är en grundläggande del i AEM. Det används för att styra de sammansatta AEM och deras konfiguration.
 
 OSGi&quot;*innehåller standardmallar som gör att applikationer kan byggas av små, återanvändbara och samverkande komponenter. Dessa komponenter kan sammanställas i ett program och distribueras*&quot;.
 
@@ -39,7 +39,7 @@ Följande OSGi-konfigurationsinställningar (listade efter paket) är relevanta 
 
 >[!NOTE]
 >
->Diff-verktyget för OSGi-konfiguration, som ingår i [AEM-verktygen](https://helpx.adobe.com/experience-manager/kb/tools/aem-tools.html), kan användas för att lista OSGi-standardkonfigurationer.
+>OSGi Configuration Diff-verktyget, som ingår i [AEM Tools](https://helpx.adobe.com/experience-manager/kb/tools/aem-tools.html), kan användas för att lista OSGi-standardkonfigurationer.
 
 >[!NOTE]
 >
@@ -82,7 +82,7 @@ Följande OSGi-konfigurationsinställningar (listade efter paket) är relevanta 
 * **Loggningsnamn** och **loggformat** för att konfigurera plats och format för begäran och åtkomstloggning (standard: `request.log`). Den här loggfilen är viktig när du analyserar prestanda eller felsökningsfunktioner som är relaterade till webbkedjan.
 Detta är tillsammans med [Apache Sling Request Logger](#apacheslingrequestlogger).
 
-Mer information finns i [AEM Logging](/help/sites-deploying/configure-logging.md) and [Sling Logging](https://sling.apache.org/site/logging.html).
+Mer information finns i [AEM Loggning](/help/sites-deploying/configure-logging.md) och [Sling Logging](https://sling.apache.org/site/logging.html).
 
 **Konfiguration av händelsetrådspool** för Apache Sling:
 
@@ -91,11 +91,11 @@ Mer information finns i [AEM Logging](/help/sites-deploying/configure-logging.md
 * **Köstorlek**är den maximala storleken på trådkön om poolen är slut.
 Det rekommenderade värdet är `-1` eftersom kön ställs in på obegränsad tid. om en gräns anges kan förluster uppstå när den överskrids.
 
-* Om du ändrar de här inställningarna kan du förbättra prestandan i scenarier med ett stort antal händelser. till exempel stor användning av AEM DAM eller arbetsflöde.
+* Om du ändrar de här inställningarna kan du förbättra prestandan i scenarier med ett stort antal händelser. till exempel AEM DAM eller arbetsflöde.
 * Värden som är specifika för ditt scenario bör fastställas med hjälp av tester.
 * De här inställningarna kan påverka instansens prestanda, så ändra dem inte utan orsak och vederbörlig hänsyn.
 
-**Apache Sling GET Servlet** Konfigurera några aspekter av återgivning:
+**Apache Sling GET Servlet** Konfigurera vissa återgivningsaspekter:
 
 * **Automatiskt index** om du vill aktivera/inaktivera katalogåtergivning för bläddring.
 * **Aktivera** (eller inaktivera) standardåtergivningar, till exempel **HTML**, **oformaterad text**, **JSON** eller **XML**.
@@ -109,7 +109,7 @@ Du bör inte inaktivera JSON.
 
 Vissa inställningar kan påverka prestandan. De bör inaktiveras där det är möjligt, särskilt för en produktionsinstans.
 
-* Den virtuella **källdatorn** och **Target VM** definierar JDK-versionen som den som används som JVM vid körning
+* VM **** från källa och VM **med** mål definierar JDK-versionen som den som används som JVM vid körning
 
 * för produktionsinstanser:
 
@@ -150,7 +150,7 @@ Särskilt för produktionsinstanser:
 
 * **Meddelandemönster** definierar loggmeddelandenas format.
 
-Mer information finns i [AEM Logging](/help/sites-deploying/configure-logging.md#global-logging) and [Sling Logging](https://sling.apache.org/site/logging.html).
+Mer information finns i [AEM Loggning](/help/sites-deploying/configure-logging.md#global-logging) och [Sling Logging](https://sling.apache.org/site/logging.html).
 
 **Konfiguration av loggningslogg för Apache Sling (Factory Configuration)** Konfigurera:
 
@@ -159,10 +159,10 @@ Mer information finns i [AEM Logging](/help/sites-deploying/configure-logging.md
 * **Loggare** för att definiera kategorin. till exempel bara log för com.day.cq.
 
 * Genom att använda **fabrikskonfigurationer** kan valfritt antal ytterligare konfigurationer läggas till för att passa de olika loggnivåer och kategorier som behövs.
-* Sådana konfigurationer är till hjälp vid utvecklingen. till exempel för att logga TRACE-meddelanden för en viss tjänst i en specifik loggfil.
+* Sådana konfigurationer är till hjälp vid utvecklingen. om du till exempel vill logga TRACE-meddelanden för en viss tjänst i en viss loggfil.
 * Sådana konfigurationer är användbara i en produktionsmiljö. om du till exempel vill att meddelanden om en viss tjänst ska loggas i en enskild loggfil för enklare övervakning.
 
-Mer information finns i [AEM Logging](/help/sites-deploying/configure-logging.md) and [Sling Logging](https://sling.apache.org/site/logging.html).
+Mer information finns i [AEM Loggning](/help/sites-deploying/configure-logging.md) och [Sling Logging](https://sling.apache.org/site/logging.html).
 
 **Konfiguration av skrivprogram för Apache Sling Logging (fabrikskonfiguration)** Konfigurera:
 
@@ -171,10 +171,10 @@ Mer information finns i [AEM Logging](/help/sites-deploying/configure-logging.md
 
 * Skrivaren kan användas av en konfiguration **för loggningsloggning för** Apache Sling.
 
-* Sådana konfigurationer är till hjälp vid utvecklingen. till exempel för att logga TRACE-meddelanden för en viss tjänst i en specifik loggfil.
+* Sådana konfigurationer är till hjälp vid utvecklingen. om du till exempel vill logga TRACE-meddelanden för en viss tjänst i en viss loggfil.
 * Sådana konfigurationer är användbara i en produktionsmiljö. om du till exempel vill att meddelanden om en viss tjänst ska loggas i en enskild loggfil för enklare övervakning.
 
-Mer information finns i [AEM Logging](/help/sites-deploying/configure-logging.md) and [Sling Logging](https://sling.apache.org/site/logging.html).
+Mer information finns i [AEM Loggning](/help/sites-deploying/configure-logging.md) och [Sling Logging](https://sling.apache.org/site/logging.html).
 
 **Huvudserverkonfiguration för Apache Sling** :
 
@@ -207,7 +207,7 @@ Mer information finns i [checklistan - Problem med smidning av begäran mellan w
 
 Detta är tillsammans med [Apache Sling Customizable Request Data Logger](#apacheslingcustomizablerequestdatalogger).
 
-Mer information finns i [AEM Logging](/help/sites-deploying/configure-logging.md) and [Sling Logging](https://sling.apache.org/site/logging.html).
+Mer information finns i [AEM Loggning](/help/sites-deploying/configure-logging.md) och [Sling Logging](https://sling.apache.org/site/logging.html).
 
 **Apache Sling Resource Resolver Factory** Konfigurera centrala aspekter av Sling-resursupplösning:
 
@@ -227,7 +227,7 @@ Mer information finns i: [https://cwiki.apache.org/confluence/display/SLING/Flex
 >
 >Dessa alternativ måste särskilt konfigureras i databasen.
 >
->Annars kan ändringar som görs i **URL-mappningar** med Felix-konsolen skrivas över av AEM nästa gång den startas.
+>I annat fall kan ändringar som görs i **URL-mappningar** med Felix-konsolen skrivas över av AEM vid nästa start.
 
 **Apache Sling Server/Script Resolver och Error Handler** Sling Server och Script Resolver har flera uppgifter:
 
@@ -265,7 +265,7 @@ När du skapar en ny konfiguration ska du inte ändra fabrikskonfigurationen uta
 * **API-nyckel**
 * **Registrerad URL**
 
-**Adobe Granite HTML Library Manager** Konfigurera detta för att styra hanteringen av klientbibliotek (css eller js); inklusive, till exempel, hur den underliggande strukturen ses.
+**Adobe Granite HTML Library Manager** Konfigurera detta för att styra hanteringen av klientbibliotek (css eller js). inklusive, till exempel, hur den underliggande strukturen ses.
 
 * För produktionsinstanser:
 
@@ -315,22 +315,22 @@ När du använder [stängda användargrupper](/help/sites-administering/cug.md) 
 
 **Konfigurera CQ-rotmappning** för dag:
 
-* **Target Path** för att definiera var en begäran till &quot; `/`&quot; ska omdirigeras.
+* **Målsökväg** som definierar var en begäran till &quot; `/`&quot; kommer att omdirigeras till.
 
 Det finns två gränssnitt i AEM:
 
 * det pekaktiverade användargränssnittet är standardgränssnittet
 * och det inaktuella klassiska användargränssnittet fungerar fortfarande
 
-Med hjälp av AEM Root Mapping kan du konfigurera det användargränssnitt som du vill använda som standard för din instans:
+Med hjälp AEM rotmappning kan du konfigurera det användargränssnitt som du vill använda som standard för din instans:
 
-* Om du vill att det pekaktiverade användargränssnittet ska vara standardgränssnittet pekar **Target Path** på:
+* Om du vill att det pekaktiverade användargränssnittet ska vara standardgränssnittet **pekar målsökvägen** på:
 
    ```
       /projects.html
    ```
 
-* Om du vill använda det klassiska användargränssnittet som standardgränssnitt ska **Target Path** peka på:
+* Om du vill att det klassiska användargränssnittet ska vara standardgränssnittet **pekar målsökvägen** på:
 
    ```
       /welcome.html
@@ -346,7 +346,8 @@ Det finns olika konfigurationsegenskaper:
 
 * **Sökväg** som den här autentiseringshanteraren är aktiv för. Om den här parametern lämnas tom inaktiveras autentiseringshanteraren. Sökvägen / gör att autentiseringshanteraren används för hela databasen.
 
-* **Tjänstrankningsvärdet** OSGi Framework Service Ranking används för att ange den order som används för att anropa den här tjänsten. Det här är ett `int` värde där högre värden anger högre prioritet.
+* **Tjänstrankningsvärdet** OSGi Framework Service Ranking används för att ange den order som används för att anropa den här tjänsten. Det här är en 
+`int` där högre värden anger högre prioritet.
 Standardvärdet är `0`.
 
 * **Rubriknamn** Namnet/namnen på rubriker som kan innehålla ett användar-ID.
@@ -355,7 +356,8 @@ Standardvärdet är `0`.
 
 * **Parameternamn** Namnet/namnen på de frågeparametrar som kan ge användar-ID.
 
-* **Användarmappning** För valda användare kan användarnamnet som extraheras från HTTP-begäran ersättas med ett annat i autentiseringsobjektet. Mappningen definieras här. Om användarnamnet `admin` visas på båda sidor om kartan kommer mappningen att ignoreras. Observera att tecknet &quot;=&quot; måste föregås av ett &quot;\&quot;-tecken.
+* **Användarmappning** För valda användare kan användarnamnet som extraheras från HTTP-begäran ersättas med ett annat i autentiseringsobjektet. Mappningen definieras här. Om användarnamnet 
+`admin` visas på båda sidor om kartan, kommer mappningen att ignoreras. Observera att tecknet &quot;=&quot; måste föregås av ett &quot;\&quot;-tecken.
 
 * **Format** Anger i vilket format användar-ID:t anges. Användning:
 
@@ -386,7 +388,7 @@ De andra lägena kan nås från sidosparken eller så `?wcmmode=disabled` kan su
 
 * **Banor**&#x200B;är en lista över platser där systemet lyssnar efter sidändringar innan en utlösare aktiveras `jcr:Event`.
 
-**Adobe Page Impressions Tracker** For an author instance configure:
+**Spårare** för Adobe-sidepåtryck för en författarinstans:
 
 * **sling.auth.requirements**: ange värdet för den här egenskapen till `-/libs/wcm/stats/tracker`
 
@@ -458,16 +460,16 @@ Styr HTML-tolken för CQ-omskrivaren.
 
 Detta är en fabrikskonfiguration, så det går att konfigurera flera instanser.
 
-**Adobe CQ Media DPS Sessions Service** Hantera DPS-sessioner som kan användas med publikationer.
+**Tjänsten** Adobe CQ Media DPS Sessions Hantera DPS-sessioner som kan användas med publikationer.
 
 Du kan särskilt definiera `dps.session.service.url.name`: default is set to [https://dpsapi2.digitalpublishing.acrobat.com/webservices/sessions](https://dpsapi2.digitalpublishing.acrobat.com/webservices/sessions)
 
-**CDN Rewriter** -kommunikation mellan AEM och ett CDN måste säkerställas så att resurser och binära filer levereras till slutanvändaren på ett säkert sätt. Detta innebär två uppgifter:
+**Kommunikation mellan AEM och CDN** måste säkerställas så att resurser och binära filer levereras till slutanvändaren på ett säkert sätt. Detta innebär två uppgifter:
 
 * Åtkomst till resursen från AEM via CDN första gången (eller efter att den har gått ut i cache).
 * Åtkomst till resursen som cachelagrats i CDN på ett säkert sätt eftersom resursen cachelagras i CDN, begäran inte går till AEM och alla användare som har åtkomst till resursen på ska hanteras från CDN.
 
-AEM tillhandahåller en omskrivare för att skriva om interna resurser-URL:er till externa CDN-URL:er. Den skriver om länkar som ska skickas vidare till CDN, inklusive en JWS-signatur, och anger att resursen ska kunna nås på ett säkert sätt. Den här funktionen ska användas på författarinstanser.
+AEM innehåller en omskrivare för att skriva om interna URL:er för resurser till externa CDN-URL:er. Den skriver om länkar som ska skickas vidare till CDN, inklusive en JWS-signatur, och anger att resursen ska kunna nås på ett säkert sätt. Den här funktionen ska användas på författarinstanser.
 
 Det övergripande flödet är följande:
 
@@ -480,13 +482,13 @@ Det övergripande flödet är följande:
 1. CDN bör konfigureras för att vidarebefordra begäran till AEM tillsammans med `cdn_sign` parametern.
 1. En autentiseringshanterare validerar `cdn_sign` parametern och returnerar resursen till CDN som sedan levereras till användaren
 
-Flödet mellan användarens webbläsare, CDN och AEM kan visualiseras enligt följande.
+Flödet mellan användarens webbläsare, CDN och AEM kan visas på följande sätt.
 
 ![chlimage_1-8](assets/chlimage_1-8.png)
 
 >[!NOTE]
 >
->Den här funktionen är för närvarande endast aktiverad för AEM-författarinstanser.
+>Den här funktionen är för närvarande bara aktiverad för AEM författarinstanser.
 
 **CDNConfigServiceImpl** Tillhandahåller CDN-konfigurationer
 
