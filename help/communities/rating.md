@@ -10,7 +10,10 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: a0e5491e-66bc-47b0-94a5-45a02bc558da
 translation-type: tm+mt
-source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
+source-git-commit: 0051791da06d15a48b82cf93164a89b4ea42ce98
+workflow-type: tm+mt
+source-wordcount: '211'
+ht-degree: 0%
 
 ---
 
@@ -27,19 +30,20 @@ Mer information finns i Grunderna för [communitykomponenter](basics.md).
 
 När de [nödvändiga klientbiblioteken](rating-basics.md#essentials-for-client-side) inkluderas visas `Rating` komponenten på det här sättet.
 
-![chlimage_1-493](assets/chlimage_1-493.png)
+![värdering](assets/rating.png)
 
 ## Konfigurerar klassificering {#configuring-rating}
 
 Markera den monterade `Rating` komponent som du vill öppna och välj den `Configure` ikon som öppnar redigeringsdialogrutan.
 
-![chlimage_1-494](assets/chlimage_1-494.png)
+![configure-new](assets/configure-new.png)
 
-Under fliken **[!UICONTROL Texter och etiketter]** anger du den interna identifieraren för klassificeringen.
+Under fliken **[!UICONTROL Texts & Labels]** anger du den interna identifieraren för klassificeringen.
 
-![chlimage_1-495](assets/chlimage_1-495.png)
+![tallyname](assets/tallyname.png)
 
-**[!UICONTROL Tally Name]**(*Required*) Ett enkelt namn på den instans `Rating`som unikt identifierar den här instansen. Måste vara ett giltigt nodnamn för databasen.
+**[!UICONTROL Tally Name]**
+(*Obligatoriskt*) Ett enkelt namn för den instans `Rating` som unikt identifierar den här instansen. Måste vara ett giltigt nodnamn för databasen.
 
 ## Site Visitor Experience {#site-visitor-experience}
 
