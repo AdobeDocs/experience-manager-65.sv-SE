@@ -10,9 +10,9 @@ topic-tags: develop
 discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70052a5a8cba16dd2d73179e6e1d617347d716bc
+source-git-commit: e562ffe229543a1ee93467bcbc1a7be6c12927c6
 workflow-type: tm+mt
-source-wordcount: '3610'
+source-wordcount: '3574'
 ht-degree: 0%
 
 ---
@@ -29,20 +29,20 @@ I ett typiskt Adobe Sign-scenario och ett scenario med adaptiva formulär fyller
 * Minska kontraktscyklerna och anlita era leverantörer snabbare.
 * Skapa digitala arbetsflöden som automatiserar vanliga processer.
 
-Adobe Sign-integrering med AEM Forms stöder:
+Adobe Sign-integrering med AEM Forms har stöd för:
 
 * Arbetsflöden för signering för en och flera användare
 * Sekventiella och samtidiga signeringsarbetsflöden
 * Underteckna i form och i form
 * Signera formulär som anonym eller inloggad användare
-* Dynamiska signeringsprocesser (integrering med AEM Forms-arbetsflöde)
+* Dynamiska signeringsprocesser (integration med AEM Forms-arbetsflöde)
 * Autentisering via kunskapsbas, telefon och sociala profiler
 
 ## Förutsättningar {#prerequisites}
 
 Innan du använder Adobe Sign i en adaptiv form:
 
-* Kontrollera att molntjänsten i AEM Forms är konfigurerad att använda Adobe Sign. Mer information finns i [Integrera Adobe Sign med AEM Forms](../../forms/using/adobe-sign-integration-adaptive-forms.md).
+* Kontrollera att AEM Forms molntjänst är konfigurerad att använda Adobe Sign. Mer information finns i [Integrera Adobe Sign med AEM Forms](../../forms/using/adobe-sign-integration-adaptive-forms.md).
 * Håll listan med signerare klar. Du måste ange minst en e-postadress för varje signerare.
 
 ## Konfigurera Adobe Sign för ett adaptivt formulär {#configure-adobe-sign-for-an-adaptive-form}
@@ -75,7 +75,7 @@ Så här skapar du ett signeringsaktiverat anpassat formulär:
 
    1. Ange **namn** och **titel** för det anpassade formuläret.
 
-   1. Markera den [konfigurationsbehållare](../../forms/using/adobe-sign-integration-adaptive-forms.md#configure-adobe-sign-with-aem-forms) som skapades när Adobe Sign konfigurerades med AEM Forms.
+   1. Välj den [konfigurationsbehållare](../../forms/using/adobe-sign-integration-adaptive-forms.md#configure-adobe-sign-with-aem-forms) som skapades när Adobe Sign konfigurerades med AEM Forms.
 
 1. In the **[!UICONTROL Form Model]** tab, select one of the following options:
 
@@ -126,7 +126,7 @@ Utför följande steg för att lägga till fält i ett adaptivt formulär och an
 
 1. Tryck på ikonen **Adobe Sign Field** ![aem_6_3_adobesign](assets/aem_6_3_adobesign.png) . Här visas alternativ för att markera och lägga till Adobe Sign-fält.
 
-   Expandera listrutan **Typ** för att markera ett Adobe Sign-fält och tryck på ikonen Klar ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) för att lägga till det markerade fältet i Adobe Sign-blocket. Listrutan **Typ** innehåller fälttyperna Signatur, Signerarinformation och Data. Adobe Sign-integrering med supportfälten för AEM Forms i listrutan Typ. Mer information om Adobe Sign-fält finns i [Adobe Sign-dokumentationen](https://helpx.adobe.com/sign/help/field-types.html).
+   Expandera listrutan **Typ** för att markera ett Adobe Sign-fält och tryck på ikonen Klar ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) för att lägga till det markerade fältet i Adobe Sign-blocket. Listrutan **Typ** innehåller fälttyperna Signatur, Signerarinformation och Data. Adobe Sign-integrering med AEM Forms supportfält listas endast i listrutan Typ. Mer information om Adobe Sign-fält finns i [Adobe Sign-dokumentationen](https://helpx.adobe.com/sign/help/field-types.html).
 
    ![adobe-sign-block-fields-options](assets/adobe-sign-block-fields-options.png)
 
@@ -156,7 +156,7 @@ Gör så här för att välja en molntjänst och signeringsordning:
 
 1. Tryck på **Formulärbehållare** i innehållsläsaren och tryck på ikonen **Konfigurera** ![konfigurera](assets/configure.png) . Egenskaper öppnas i webbläsaren och egenskaper för behållare för adaptiva formulär visas.
 1. Utöka dragspelsfliken **Elektronisk signatur** i egenskapswebbläsaren och välj alternativet **Aktivera Adobe Sign** . Det gör att Adobe Sign kan skapa en anpassningsbar blankett.
-1. Välj en molntjänst i den redan konfigurerade listan över Adobe Sign-Cloud Service.
+1. Välj en molntjänst i den redan konfigurerade listan över Adobe Sign-Cloud Services.
 
    Om listan med **Adobe Sign-Cloud Service** är tom följer du artikeln [Konfigurera Adobe Sign med AEM Forms](../../forms/using/adobe-sign-integration-adaptive-forms.md) för att konfigurera tjänsten.
 
@@ -184,7 +184,7 @@ Du kan bara ha en eller flera signerare för ett anpassat formulär. När du lä
 
    * **Är signeraren och den person som fyller i formuläret densamma?:** Välj **Ja** om formuläranvändaren och den första signeraren är samma person. Om alternativet är inställt på **Nej,** ska du inte använda signaturstegskomponenten i det adaptiva formuläret. Om formuläret innehåller en komponent för signatursteg ställs fältet automatiskt in på Ja.
 
-   * **Undertecknarens e-postadress:** Ange signerarens e-postadress. Signeraren får signerade dokument/formulär på den angivna e-postadressen. Du kan välja att använda en e-postadress som finns i ett formulärfält, i AEM användarprofil för den inloggade användaren eller manuellt ange en e-postadress. Det är ett obligatoriskt steg. Kontrollera att e-postadressen för den första signeraren eller den enda signeraren (om det är en signerare) inte är identisk med det Adobe Sign-konto som används för att konfigurera AEM cloud services.
+   * **Undertecknarens e-postadress:** Ange signerarens e-postadress. Signeraren får signerade dokument/formulär på den angivna e-postadressen. Du kan välja att använda en e-postadress som finns i ett formulärfält, i AEM användarprofil för den inloggade användaren eller manuellt ange en e-postadress. Det är ett obligatoriskt steg. Kontrollera att e-postadressen till den första signeraren eller den enda signeraren (för en signerare) inte är identisk med det Adobe Sign-konto som används för att konfigurera AEM-molntjänster.
 
    * **Autentiseringsmetod för signerare:** Ange metoden för att autentisera en användare innan ett formulär öppnas för signering. Du kan välja mellan telefon, kunskapsbas och social ID-baserad autentisering.
    >[!NOTE]
@@ -206,9 +206,10 @@ När du har lagt till Adobe Sign-fält i ett anpassat formulär, aktiverat Adobe
 
 Dessutom skickas ett adaptivt formulär som aktiveras av Adobe Sign först när alla signerare har signerat formuläret. Du kan hitta delvis signerade formulär i avsnittet Väntande signering på formulärportalen. Adobe Sign konfigurationstjänst avsöker Adobe Sign-servern med [regelbundna intervall](../../forms/using/adobe-sign-integration-adaptive-forms.md) för att verifiera signaturens status. Om alla signerare signerar formuläret, startas tjänsten för att skicka och formuläret skickas. Om du använder en anpassad sändningsåtgärd och formuläret använder Adobe Sign, ska du uppdatera din anpassade sändningsåtgärd så att du kan använda åtgärdstjänsten Skicka.
 
+<!-- Remove when forms portal goes live
 >[!NOTE]
 >
->Data i det adaptiva formuläret lagras tillfälligt på Forms Portal. Vi rekommenderar att du använder [anpassad lagring för Forms Portal](/help/forms/using/configuring-draft-submission-storage.md). Den ser till att PII-data (personligt identifierbar information) inte lagras på AEM servrar.
+>Data of the adaptive form is stored temporarily on Forms Portal. It is recommended to use [custom storage for Forms Portal](/help/forms/using/configuring-draft-submission-storage.md). It ensures that the PII (personally identifiable information) data is not stored on AEM servers. -->
 
 Din formulärsigneringsupplevelse är klar. Du kan förhandsgranska formuläret för att verifiera signeringsprocessen. På det publicerade formuläret visas Adobe Sign-blockfält när en signerare tar emot formuläret för signering via ett e-postmeddelande. Den här upplevelsen kallas även signeringsupplevelse som inte är i form. Du kan också konfigurera en signeringsupplevelse i formulär för den första signeraren, se [Skapa signeringsupplevelse](../../forms/using/working-with-adobe-sign.md#create-in-form-signing-experience)i formulär.
 
@@ -273,7 +274,7 @@ Utför följande steg för att konfigurera signaturstegskomponenten:
    * **Mallmeddelande:** Ange det meddelande som ska visas när signatur-PDF-filen läses in. Adobe Sign tjänster tar tid att förbereda och läsa in PDF-signaturer.
    * **Underteckningstjänst:** Välj alternativet **Adobe Sign** .
 
-   * **Använd äldre e-signeringskomponent**: Om du använder respektive adaptiva formulär i [AEM Forms Workspace](../../forms/using/introduction-html-workspace.md), AEM Forms eller det underliggande adaptiva formuläret har en äldre e-signeringskomponent, markerar du alternativet **Använd äldre e-signeringskomponent** .
+   * **Använd äldre e-signeringskomponent**: Om du använder respektive adaptiva formulär i [AEM Forms Workspace](../../forms/using/introduction-html-workspace.md), AEM Forms-appen eller det underliggande adaptiva formuläret har en äldre e-signeringskomponent väljer du alternativet **Använd äldre e-signeringskomponent** .
 
    * **Konfiguration**: Välj en konfiguration (Adobe Sign Cloud Service). Listrutan är bara tillgänglig om alternativet **Använd äldre e-signeringskomponent** är aktiverat.
 
@@ -307,7 +308,7 @@ Nu är signeringsupplevelsen i form av formulär klar. Du kan förhandsgranska f
 
 **Ans:** Anpassningsbart formulär som skapats med den avancerade mallen är konfigurerat att använda Adobe Sign. Lös felet genom att skapa och välja en molnkonfiguration för Adobe Sign och konfigurera en Adobe Sign-signerare för det adaptiva formuläret.
 
-**Ans:** Ja, du kan använda texttaggar i en textkomponent för att lägga till Adobe Sign-fält i ett anpassat formulär som är aktiverat för ett [postdokument](../../forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md) (endast det automatiskt genererade postdokumentet). Mer information om proceduren och reglerna för att skapa en texttagg finns i [Adobe Sign Documentation](https://helpx.adobe.com/sign/help/text-tags.html). Dessutom har adaptiva formulär begränsat stöd för texttaggar. Du kan använda texttaggarna för att skapa endast de fält som [Adobe Sign Block](../../forms/using/working-with-adobe-sign.md#configure-cloud-signatures-for-an-adaptive-form) har stöd för.
+**Ans:** Ja, du kan använda texttaggar i en textkomponent för att lägga till Adobe Sign-fält i ett anpassat formulär som är aktiverat för ett [postdokument](../../forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md) (endast det automatiskt genererade postdokumentet). Mer information om proceduren och reglerna för att skapa en texttagg finns i [Adobe Sign Documentation](https://helpx.adobe.com/sign/using/text-tag.html). Dessutom har adaptiva formulär begränsat stöd för texttaggar. Du kan använda texttaggarna för att skapa endast de fält som [Adobe Sign Block](../../forms/using/working-with-adobe-sign.md#configure-cloud-signatures-for-an-adaptive-form) har stöd för.
 
 **Ans:** Du kan använda båda komponenterna samtidigt i ett formulär. Här följer några rekommendationer för hur du använder dessa komponenter:
 
@@ -327,7 +328,7 @@ Nu är signeringsupplevelsen i form av formulär klar. Du kan förhandsgranska f
 * Kontrollera att API-programmet på Adobe Sign-servern som används för att konfigurera Adobe Sign Cloud-tjänsten har nödvändiga behörigheter.
 * Om du använder flera Adobe Sign Cloud-tjänster pekar du **[!UICONTROL oAuth URL]** på samma tjänster **[!UICONTROL Adobe Sign Shard]**.
 
-* Använd separata e-postadresser för att konfigurera Adobe Sign-kontot och för den första signeraren och den första signeraren. E-postadressen till den första signeraren eller den enda signeraren (om det är en signerare) kan inte vara identisk med det Adobe Sign-konto som används för att konfigurera AEM cloud services.
+* Använd separata e-postadresser för att konfigurera Adobe Sign-kontot och för den första signeraren och den första signeraren. E-postadressen till den första signeraren eller den enda signeraren (om det är en signerare) kan inte vara identisk med det Adobe Sign-konto som används för att konfigurera AEM-molntjänster.
 
 ## Relaterade artiklar {#related-articles}
 
