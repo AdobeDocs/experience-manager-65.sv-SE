@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 202d7dba-2b34-431d-b10f-87775632807f
 translation-type: tm+mt
-source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
+source-git-commit: 6ab91667ad668abf80ccf1710966169b3a187928
+workflow-type: tm+mt
+source-wordcount: '449'
+ht-degree: 0%
 
 ---
 
@@ -28,11 +31,11 @@ Konsolen Platsmallar liknar konsolen [Gruppmallar](tools-groups.md) , som är in
 
 I författarmiljön kan du nå webbcommunitywebbplatskonsolen:
 
-* Från global navigering: **[!UICONTROL Verktyg > Communities > Site Templates]**
+* Från global navigering: **[!UICONTROL Tools > Communities > Site Templates]**
 
 Den här konsolen visar mallarna som en [community](sites-console.md) kan skapas från och som gör att nya webbplatsmallar kan skapas.
 
-![chlimage_1-18](assets/chlimage_1-18.png)
+![site-template](assets/site-template.png)
 
 ## Skapa platsmall {#create-site-template}
 
@@ -42,31 +45,31 @@ Då öppnas panelen Platsredigeraren som innehåller tre underpaneler:
 
 ### Grundläggande information {#basic-info}
 
-![chlimage_1-19](assets/chlimage_1-19.png)
+![site-template-basicinfo](assets/site-template-basicinfo.png)
 
 På panelen Grundläggande information konfigureras ett namn, en beskrivning och huruvida mallen är aktiverad eller inaktiverad:
 
-* **[!UICONTROL Mallnamn för communitywebbplats]**
+* **[!UICONTROL Community Site Template Name]**
 
    Mallens namn-ID.
 
-* **[!UICONTROL Beskrivning av mall för communitywebbplats]**
+* **[!UICONTROL Community Site Template Description]**
 
    Mallbeskrivningen.
 
-* **[!UICONTROL Handikappade/aktiverade]**
+* **[!UICONTROL Disabled/Enabled]**
 
    En växlingsväxling som styr om mallen kan refereras.
 
 ### Miniatyrbild {#thumbnail}
 
-![chlimage_1-20](assets/chlimage_1-20.png)
+![webbplatsminiatyr](assets/site-thumbnail.png)
 
 (Valfritt) Välj ikonen Överför bild om du vill visa en miniatyrbild tillsammans med namnet och beskrivningen för de som skapar communitysajterna.
 
 ### Struktur {#structure}
 
-![chlimage_1-21](assets/chlimage_1-21.png)
+![platsstruktur](assets/site-structure.png)
 
 Om du vill lägga till communityfunktioner drar du från höger sida till vänster i den ordning som länkarna på webbplatsmenyn ska visas. Format används på mallen när webbplatsen skapas.
 
@@ -83,7 +86,7 @@ Sidfunktionen ger en tom sida. Med gruppfunktionen kan du skapa en gruppwebbplat
 >Alla andra funktioner, till exempel [sidfunktionen](functions.md#page-function), måste inkluderas och listas först.
 
 
-![chlimage_1-22](assets/chlimage_1-22.png)
+![webbplatsredigerare](assets/site-editor.png)
 
 ### Gruppmallar för gruppfunktion {#group-templates-for-groups-function}
 
@@ -94,11 +97,11 @@ När du inkluderar en gruppfunktion i platsmallen, kräver konfigurationen att d
 >Funktionen Grupper får *inte* vara den *första eller enda* funktionen i platsstrukturen.
 
 
-![chlimage_1-23](assets/chlimage_1-23.png)
+![platsfunktioner](assets/site-functions.png)
 
 Genom att välja två eller flera mallar för communitygrupper får gruppadministratören välja när en ny grupp faktiskt skapas i communityn.
 
-![chlimage_1-24](assets/chlimage_1-24.png)
+![site-function](assets/site-functions1.png)
 
 ## Redigera webbplatsmall {#edit-site-template}
 
