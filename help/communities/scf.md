@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: d7b5b5e3-2d84-4a6b-bcc2-d490882ff3ed
 translation-type: tm+mt
-source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
+source-git-commit: 6ab91667ad668abf80ccf1710966169b3a187928
+workflow-type: tm+mt
+source-wordcount: '1505'
+ht-degree: 0%
 
 ---
 
@@ -42,7 +45,7 @@ SocialComponent-API:t kan utökas för att tillhandahålla data som krävs av en
 
 ### Hur sidor återges för klienten {#how-pages-are-rendered-for-client}
 
-![chlimage_1-25](assets/chlimage_1-25.png)
+![scf-page-rendering](assets/scf-overview.png)
 
 ### Komponentanpassning och tillägg {#component-customization-and-extension}
 
@@ -54,7 +57,7 @@ Om du vill anpassa eller utöka komponenterna skriver du bara övertäckningar o
    * Ändra JS-mallen och CSS.
 * För Look, Feel och UX:
    * Ändra JS-mallen, CSS och [utöka/åsidosätt JavaScript](client-customize.md#extending-javascript).
-* Så här ändrar du informationen som är tillgänglig för JS-mallen eller för GET-slutpunkten:
+* Så här ändrar du informationen som är tillgänglig för JS-mallen eller för GETENS slutpunkt:
    * Utöka [SocialComponent](server-customize.md#socialcomponent-interface).
 * Så här lägger du till anpassad bearbetning under åtgärder:
    * Skriv ett [OperationExtension](server-customize.md#operationextension-class).
@@ -93,21 +96,21 @@ För varje SocialComponent tillhandahåller ramverket en HTTP-baserad API-slutpu
 
 **`GET Request`**
 
-En GET-standardserver lyssnar på .social.json-begäranden som SocialComponent svarar på med anpassningsbar JSON.
+En standardserver för GET lyssnar på .social.json-begäranden som SocialComponent svarar på med anpassningsbar JSON.
 
-![chlimage_1-26](assets/chlimage_1-26.png)
+![scf-framework](assets/scf-framework.png)
 
-### HTTP API - POST-begäranden {#http-api-post-requests}
+### HTTP API - POSTER {#http-api-post-requests}
 
-Förutom GET-åtgärder (läsåtgärder) definierar ramverket ett slutpunktsmönster som möjliggör andra åtgärder för en komponent, inklusive Skapa, Uppdatera och Ta bort. Dessa slutpunkter är HTTP-API:er som accepterar indata och svarar med antingen en HTTP-statuskod eller med ett JSON-svarsobjekt.
+Förutom åtgärderna GET (Läs) definierar ramverket ett slutpunktsmönster som möjliggör andra åtgärder för en komponent, inklusive Skapa, Uppdatera och Ta bort. Dessa slutpunkter är HTTP-API:er som accepterar indata och svarar med antingen en HTTP-statuskod eller med ett JSON-svarsobjekt.
 
 Det här ramverkets slutpunktsmönster gör CUD-åtgärder utökningsbara, återanvändbara och testbara.
 
 **`POST Request`**
 
-Det finns en Sling POST:operation för varje SocialComponent-åtgärd. Affärslogik och underhållskod för varje åtgärd omsluts av en OperationService som är tillgänglig via HTTP-API:t eller någon annanstans som en OSGi-tjänst. Det finns kopplingar med stöd för utökningar av anslutningsbara åtgärder för åtgärder före/efter.
+Det finns en Sling-POST:åtgärd för alla SocialComponent-åtgärder. Affärslogik och underhållskod för varje åtgärd omsluts av en OperationService som är tillgänglig via HTTP-API:t eller någon annanstans som en OSGi-tjänst. Det finns kopplingar med stöd för utökningar av anslutningsbara åtgärder för åtgärder före/efter.
 
-![chlimage_1-27](assets/chlimage_1-27.png)
+![scf-post-request](assets/scf-post-request.png)
 
 ### Lagringsresursleverantör (SRP) {#storage-resource-provider-srp}
 
@@ -129,7 +132,7 @@ HBS-skript är enkla, logikfria, kompilerade på både server och klient, är en
 
 Ramverket innehåller flera [handtag](handlebars-helpers.md) som är användbara när du utvecklar sociala komponenter.
 
-När Sling löser en GET-begäran på servern identifieras skriptet som ska användas för att svara på begäran. Om skriptet är en HBS-mall (.hbs) delegerar Sling begäran till Handlebars Engine. Handlebars Engine hämtar sedan SocialComponent från lämplig SocialComponentFactory, skapar en kontext och återger HTML.
+När Sling löser en GET-begäran på servern identifieras det skript som ska användas för att svara på begäran. Om skriptet är en HBS-mall (.hbs) delegerar Sling begäran till Handlebars Engine. Handlebars Engine hämtar sedan SocialComponent från lämplig SocialComponentFactory, skapar en kontext och återger HTML.
 
 ### Ingen åtkomstbegränsning {#no-access-restriction}
 
@@ -155,9 +158,9 @@ Resultatet är en underordnad JCR-nod under en par-nod, som är Sling-adresserba
 
 Att inkludera en komponent avser processen att lägga till en referens till en [&quot;icke-befintlig&quot; resurs](srp.md#for-non-existing-resources-ners) (ingen JCR-nod) i mallen, till exempel med hjälp av ett skriptspråk.
 
-Från och med AEM 6.1 går det att redigera komponentens egenskaper i *design *läge när en komponent inkluderas dynamiskt i stället för att läggas till.
+Från och med AEM 6.1 går det att redigera komponentens egenskaper i *design-läget när en komponent inkluderas dynamiskt i stället för att läggas till.
 
-Endast ett urval av AEM Communities-komponenterna kan inkluderas dynamiskt. De är:
+Endast ett fåtal av AEM Communities-komponenterna kan inkluderas dynamiskt. De är:
 
 * [Kommentarer](essentials-comments.md)
 * [Klassificering](rating-basics.md)
