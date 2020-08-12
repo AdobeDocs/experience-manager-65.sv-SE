@@ -5,10 +5,10 @@ audience: end-user
 user-guide-title: Användarhandbok för Experience Manager 6.5 Assets
 user-guide-description: Create, manage, deliver, and optimize digital assets.
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 9e67e252348f471c052f6c3e88aea61d7a309241
 workflow-type: tm+mt
-source-wordcount: '630'
-ht-degree: 39%
+source-wordcount: '635'
+ht-degree: 38%
 
 ---
 
@@ -36,8 +36,8 @@ ht-degree: 39%
    + [Installera Dynamic Media](administering-dynamic-media.md)
    + [Arbeta med Dynamic Media](dynamic-media.md)
    + [Konfigurera Dynamic Media - Scene7-läge](config-dms7.md)
-   + [Konfigurera Dynamic Media - hybridläge](config-dynamic.md)
-   + [Felsöka Dynamic Media - Scene7-läge](troubleshoot-dms7.md)
+   + [Konfigurera dynamiska media - hybridläge](config-dynamic.md)
+   + [Felsökning av dynamiska media - Scene7-läge](troubleshoot-dms7.md)
    + [Migrera från Dynamic Media - hybrid-läge till Dynamic Media - S7-läge](migrate-from-hybrid-to-dms7.md)
    + [Hantera Dynamic Media-resurser](managing-assets.md)
    + [Bästa tillvägagångssätt för att optimera bildkvalitet](best-practices-for-optimizing-the-quality-of-your-images.md)
@@ -72,7 +72,7 @@ ht-degree: 39%
    + [Länka URL till ett webbprogram](linking-urls-to-yourwebapplication.md)
    + [Omforma URL:er med regeluppsättningar](using-rulesets-to-transform-urls.md)
    + [Publicera Dynamic Media-resurser](publishing-dynamicmedia-assets.md)
-   + [Upphäva CDN-cachelagrat innehåll](invalidate-cdn-cached-content.md)
+   + [Invalidera CDN-cachen med hjälp av Dynamic Media Classic](invalidate-cdn-cache-dm-classic.md)
    + [Installerar funktionspaket 18912 för migrering av gruppresurser](bulk-ingest-migrate.md)
    + [Arbeta med väljare](working-with-selectors.md)
 + Utöka resurser {#extending}
