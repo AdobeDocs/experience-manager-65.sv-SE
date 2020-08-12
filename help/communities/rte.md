@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 0225a543-0fad-488b-8b0b-8b3512d44fbe
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 4b6311cbfe11a61b74f68bf5a25ad1f5faef5358
+workflow-type: tm+mt
+source-wordcount: '237'
+ht-degree: 1%
 
 ---
 
@@ -23,7 +26,7 @@ Med en textredigerare kan du skriva text med markeringar.
 
 För webbgruppskomponenter, som liknar redigeraren för [formaterad text i författarmiljön](../../help/sites-authoring/rich-text-editor.md), påverkar det text som anges i publiceringsmiljön.
 
-![chlimage_1-410](assets/chlimage_1-410.png)
+![textredigerare](assets/rich-text-editor.png)
 
 ## Aktivera RTF-redigerare {#enabling-rich-text-editor}
 
@@ -60,7 +63,7 @@ Så här lägger du till hyperlänksalternativen i verktygsfältet:
 
 * Lägg till ett verktygsfält med namnet &quot; `links`&quot;
    * `{ name: 'links', items: [ 'Link','Unlink','Anchor' ] }`
-* Välj **[!UICONTROL Spara alla]**
+* Välj **[!UICONTROL Save All]**
 
 #### /libs/clientlibs/social/commons/scf/ckrte.js {#libs-clientlibs-social-commons-scf-ckrte-js}
 
