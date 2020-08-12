@@ -10,7 +10,10 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 3acac082-efbe-4995-b374-851cb9aaf62d
 translation-type: tm+mt
-source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
+source-git-commit: 6ab91667ad668abf80ccf1710966169b3a187928
+workflow-type: tm+mt
+source-wordcount: '451'
+ht-degree: 0%
 
 ---
 
@@ -37,23 +40,26 @@ Mer information finns i Grunderna för [communitykomponenter](basics.md).
 
 När det nödvändiga klientbiblioteket, `cq.social.hbs.search`, inkluderas, visas `Search` komponenten så här.
 
-![chlimage_1-373](assets/chlimage_1-373.png)
+![add-search](assets/add-search.png)
 
 ### Konfigurera den tillagda sökningen {#configure-the-added-search}
 
 Markera den monterade `Search` komponent som du vill öppna och välj den `Configure` ikon som öppnar redigeringsdialogrutan.
 
-![chlimage_1-374](assets/chlimage_1-374.png)
+![giva](assets/configure-new.png)
 
-Under fliken **[!UICONTROL Sökinställningar]** anger du hur sökvägarna ska sökas igenom när en fråga anges av en besökare.
+Ange hur sökvägar ska sökas igenom när en fråga anges av en besökare på fliken **[!UICONTROL Search Settings]** .
 
-![chlimage_1-375](assets/chlimage_1-375.png)
+![sökinställningar](assets/search-settings.png)
 
-* **[!UICONTROL Sökvägar]** Genom att lägga till sökvägar med knappen Lägg till objekt begränsas innehållssökningen. Om du till exempel vill begränsa sökningen till ett specifikt forum väljer du en forumkomponent som placeras på en sida:
+* **[!UICONTROL Search Paths]**
+Genom att lägga till sökvägar med knappen Lägg till objekt begränsas innehållssökningen. Om du till exempel vill begränsa sökningen till ett specifikt forum väljer du en forumkomponent som placeras på en sida:
 
    * `/content/community-components/en/forum/jcr:content/content/forum`
 
-* **[!UICONTROL Resultatsida]** Resultatet visas på en separat sida som du anger genom att använda webbläsaren för att välja en sida som innehåller `Search Results` komponenten.
+* **[!UICONTROL Result Page]**
+Resultatet visas på en separat sida som du anger med webbläsaren för att välja en sida som innehåller 
+`Search Results` -komponenten.
 
 ## Sökresultat {#search-results}
 
@@ -71,23 +77,23 @@ Mer information finns i Grunderna för [communitykomponenter](basics.md).
 
 När det nödvändiga klientbiblioteket, `cq.social.hbs.search`, inkluderas, visas `Search Result` komponenten så här:
 
-![chlimage_1-376](assets/chlimage_1-376.png)
+![sökresultat](assets/search-result1.png)
 
 ### Konfigurera det tillagda sökresultatet {#configure-the-added-search-result}
 
 Markera den monterade `Search Results` komponent som du vill öppna och välj den `Configure` ikon som öppnar redigeringsdialogrutan.
 
-![chlimage_1-377](assets/chlimage_1-377.png)
+![konfigurera](assets/configure-new.png)
 
-På fliken **[!UICONTROL Sökresultatinställningar]** kan du ange vilka sökvägar som ska ingå i sökningen när en fråga anges av en besökare.
+På fliken **[!UICONTROL Search Result Settings]** kan du ange vilka sökvägar som ska ingå i sökningen när en fråga anges av en besökare.
 
-![chlimage_1-378](assets/chlimage_1-378.png)
+![search-result-settings](assets/search-result-settings.png)
 
-* **[!UICONTROL Sökresultat per sida]**
+* **[!UICONTROL Search Results Per Page]**
 
    Definiera antalet ämnen/inlägg som visas per sida. Standardvärdet är 10.
 
-* **[!UICONTROL Sökvägar]**
+* **[!UICONTROL Search Paths]**
 
    Genom att lägga till sökvägar med knappen Lägg till objekt begränsas innehållssökningen.
 
