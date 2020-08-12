@@ -3,7 +3,7 @@ title: Hantera videomaterial i [!DNL Adobe Experience Manager].
 description: Överför, förhandsgranska, kommentera och publicera videomaterial i [!DNL Adobe Experience Manager].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 9e67e252348f471c052f6c3e88aea61d7a309241
 workflow-type: tm+mt
 source-wordcount: '732'
 ht-degree: 8%
@@ -15,7 +15,7 @@ ht-degree: 8%
 
 Videoformatet är en viktig del av ett företags digitala resurser. [!DNL Adobe Experience Manager] erbjuder mogna erbjudanden och funktioner för att hantera hela livscykeln för videomaterialet när de har skapats.
 
-Lär dig hur du hanterar och redigerar videoresurserna i [!DNL Adobe Experience Manager Assets]. Om du har licens att använda [!DNL Dynamic Media]läser du videodokumentationen [för](/help/assets/video.md)Dynamic Media.
+Lär dig hur du hanterar och redigerar videoresurserna i [!DNL Adobe Experience Manager Assets]. Om du har licens att använda [!DNL Dynamic Media]läser du dokumentationen [till videon](/help/assets/video.md)Dynamic Media.
 
 ## Överföra och förhandsgranska videomaterial {#upload-and-preview-video-assets}
 
@@ -79,7 +79,7 @@ Efter publiceringen kan du inkludera videomaterialet på en webbsida som en URL 
 
    Om du vill avsluta anteckningsguiden klickar du på **[!UICONTROL Close]**.
 
-1. Gå till en viss punkt i videon, ange tiden i sekunder i **textfältet** och klicka på **Hoppa**. Om du till exempel vill hoppa över de första 10 sekunderna av videon anger du 20 i textfältet.
+1. Gå till en viss punkt i videon, ange tiden i sekunder i **textfältet** och klicka på **Hoppa**. Om du till exempel vill hoppa över de första 20 sekunderna av videon anger du 20 i textfältet.
 
    ![Söka efter en tid i en video att hoppa över med angivna sekunder](assets/seek-in-video.png)
 
