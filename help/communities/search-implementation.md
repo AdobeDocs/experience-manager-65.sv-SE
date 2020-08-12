@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 300aa9f3-596f-42bc-8d46-e535f2bc4379
 translation-type: tm+mt
-source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
+source-git-commit: 6ab91667ad668abf80ccf1710966169b3a187928
+workflow-type: tm+mt
+source-wordcount: '1189'
+ht-degree: 3%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
 
 ## Översikt {#overview}
 
-Sökfunktionen är en viktig funktion i AEM Communities. Förutom sökfunktionerna för [AEM-plattformen](../../help/sites-deploying/queries-and-indexing.md) erbjuder AEM Communities [UGC-söknings-API](#ugc-search-api) för sökning efter användargenererat innehåll (UGC). UGC har unika egenskaper eftersom de anges och lagras separat från annat AEM-innehåll och andra användardata.
+Sökfunktionen är en viktig funktion i AEM Communities. Förutom sökfunktionerna i [AEM](../../help/sites-deploying/queries-and-indexing.md) erbjuder AEM Communities [UGC-söknings-API](#ugc-search-api) för sökning efter användargenererat innehåll (UGC). UGC har unika egenskaper eftersom de anges och lagras separat från andra AEM och användardata.
 
 För Communities är de två saker som generellt söks igenom:
 
@@ -29,7 +32,7 @@ För Communities är de två saker som generellt söks igenom:
 
 * Användare och användargrupper (användardata)
 
-   * Använder sökfunktionerna i AEM-plattformen.
+   * Använder AEM sökfunktioner.
 
 Det här avsnittet av dokumentationen är av intresse för utvecklare som skapar anpassade komponenter som skapar eller hanterar UGC.
 
@@ -47,7 +50,7 @@ Den gemensamma lagringsplatsen [för](working-with-srp.md) UGC tillhandahålls a
 
 ### ASRP-sökningar {#asrp-searches}
 
-För [ASRP](asrp.md)lagras UGC i Adobe-molnet. UGC är inte synligt i CRX, men [moderering](moderate-ugc.md) är tillgängligt både från författaren och publiceringsmiljön. Användning av [UGC-söknings-API](#ugc-search-api) fungerar på samma sätt för ASRP som för andra SRP.
+För [ASRP](asrp.md)lagras UGC i molnet Adobe. UGC är inte synligt i CRX, men [moderering](moderate-ugc.md) är tillgängligt både från författaren och publiceringsmiljön. Användning av [UGC-söknings-API](#ugc-search-api) fungerar på samma sätt för ASRP som för andra SRP.
 
 Det finns för närvarande inga verktyg för att hantera ASRP-sökningar.
 
@@ -59,10 +62,10 @@ För [MSRP](msrp.md)lagras UGC i MongoDB som konfigurerats att använda Solr fö
 
 Om MSRP och Solr:
 
-* Inbäddad Solr för AEM-plattformen används inte för MSRP.
-* Om du använder en fjärransluten Solr för AEM-plattformen kan den delas med MSRP, men de bör använda olika samlingar.
+* Den inbäddade Solr-funktionen för den AEM plattformen används inte för MSRP.
+* Om du använder en fjärransluten Solr för den AEM plattformen kan den delas med MSRP, men de bör använda olika samlingar.
 * Solr kan konfigureras för standardsökning eller för flerspråkig sökning (MLS).
-* Mer konfigurationsinformation finns i [Solr Configuration](msrp.md#solr-configuration) for MSRP.
+* Konfigurationsinformation finns i [Solr Configuration](msrp.md#solr-configuration) for MSRP.
 
 Anpassade sökfunktioner bör använda [UGC-söknings-API](#ugc-search-api).
 
@@ -70,7 +73,7 @@ När du skapar anpassade egenskaper som är sökbara måste du följa [namngivni
 
 ### JSRP-sökningar {#jsrp-searches}
 
-För [JSRP](jsrp.md)lagras UGC i [Oak](../../help/sites-deploying/platform.md) och visas bara i databasen för den AEM-författare eller publiceringsinstans som den angavs för.
+För [JSRP](jsrp.md)lagras UGC i [Oak](../../help/sites-deploying/platform.md) och visas bara i databasen för AEM författare eller publiceringsinstans som den angavs för.
 
 Eftersom UGC vanligtvis används i publiceringsmiljön måste du konfigurera ett [publiceringskluster](topologies.md), inte en publiceringsgrupp, för produktionssystem med flera utgivare, så att det angivna innehållet visas för alla utgivare.
 
@@ -80,13 +83,13 @@ Anpassade sökfunktioner bör använda [UGC-söknings-API](#ugc-search-api).
 
 #### Oak-indexering {#oak-indexing}
 
-Oak-index skapas inte automatiskt för AEM-plattformssökning, men från och med AEM 6.2 har de lagts till för AEM Communities för att förbättra prestanda och ge stöd för paginering när UGC-sökresultat presenteras.
+Även om det inte skapas automatiskt för AEM plattformssökning har de från och med AEM 6.2 lagts till för AEM Communities för att förbättra prestanda och ge stöd för sidnumrering när UGC-sökresultat presenteras.
 
 Om anpassade egenskaper används och sökningarna är långsamma, måste ytterligare index skapas för de anpassade egenskaperna för att de ska bli bättre. Om du vill behålla bärbarheten följer du [namngivningskraven](#naming-of-custom-properties) när du skapar anpassade egenskaper som är sökbara.
 
 Mer information om hur du ändrar befintliga index eller skapar anpassade index finns i [Oak Queries och Indexing](../../help/sites-deploying/queries-and-indexing.md).
 
-Oak Index Manager [är](https://adobe-consulting-services.github.io/acs-aem-commons/features/oak-index-manager.html) tillgängligt från ACS AEM Commons. Den innehåller följande:
+Indexhanteraren för [ekning](https://adobe-consulting-services.github.io/acs-aem-commons/features/oak-index-manager.html) är tillgänglig från ACS AEM Commons. Den innehåller följande:
 
 * En vy över befintliga index.
 * Möjlighet att initiera omindexering.
@@ -95,7 +98,7 @@ Om du vill visa de befintliga ekindexen i [CRXDE Lite](../../help/sites-developi
 
 * `/oak:index/socialLucene`
 
-![chlimage_1-235](assets/chlimage_1-235.png)
+![social-lucene](assets/social-lucene.png)
 
 ## Egenskaper för indexerad sökning {#indexed-search-properties}
 
