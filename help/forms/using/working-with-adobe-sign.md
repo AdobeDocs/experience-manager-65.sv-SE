@@ -10,9 +10,9 @@ topic-tags: develop
 discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e562ffe229543a1ee93467bcbc1a7be6c12927c6
+source-git-commit: d1361296ee0161c36061543459056c25ebef0e97
 workflow-type: tm+mt
-source-wordcount: '3574'
+source-wordcount: '3770'
 ht-degree: 0%
 
 ---
@@ -304,12 +304,16 @@ Nu är signeringsupplevelsen i form av formulär klar. Du kan förhandsgranska f
 
 ## Vanliga frågor {#frequently-asked-questions}
 
+**F:** Du kan bädda in ett anpassat formulär i ett annat anpassat formulär. Kan det inbäddade adaptiva formuläret vara Adobe Sign-aktiverat?
 **Ans:** Nej, AEM Forms har inte stöd för att använda ett adaptivt formulär som bäddar in ett adaptivt formulär från Adobe Sign för signering
 
+**F:** När jag skapar ett adaptivt formulär med den avancerade mallen och öppnar det för redigering visas ett felmeddelande om att elektroniska signaturer eller signerare inte är korrekt konfigurerade. visas. Hur löser jag felmeddelandet?
 **Ans:** Anpassningsbart formulär som skapats med den avancerade mallen är konfigurerat att använda Adobe Sign. Lös felet genom att skapa och välja en molnkonfiguration för Adobe Sign och konfigurera en Adobe Sign-signerare för det adaptiva formuläret.
 
+**F:** Kan jag använda Adobe Sign texttaggar i en statisk textkomponent i ett anpassat formulär?
 **Ans:** Ja, du kan använda texttaggar i en textkomponent för att lägga till Adobe Sign-fält i ett anpassat formulär som är aktiverat för ett [postdokument](../../forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md) (endast det automatiskt genererade postdokumentet). Mer information om proceduren och reglerna för att skapa en texttagg finns i [Adobe Sign Documentation](https://helpx.adobe.com/sign/using/text-tag.html). Dessutom har adaptiva formulär begränsat stöd för texttaggar. Du kan använda texttaggarna för att skapa endast de fält som [Adobe Sign Block](../../forms/using/working-with-adobe-sign.md#configure-cloud-signatures-for-an-adaptive-form) har stöd för.
 
+**F:** AEM Forms tillhandahåller både Adobe Sign-komponenter för block och signering. Kan dessa användas samtidigt i anpassningsbar form?
 **Ans:** Du kan använda båda komponenterna samtidigt i ett formulär. Här följer några rekommendationer för hur du använder dessa komponenter:
 
 **Adobe Sign Block:** Du kan använda Adobe Sign Block för att lägga till Adobe Sign-fält var som helst i det adaptiva formuläret. Det hjälper även till att tilldela specifika fält till signerare. När ett anpassat formulär förhandsgranskas eller publiceras visas inte Adobe Sign Block som standard. De här blocken aktiveras bara i signeringsdokumentet. I signeringsdokumentet aktiveras bara de fält som tilldelats en signerare. Adobe Sign-block kan användas med första och efterföljande signerare.
@@ -329,6 +333,14 @@ Nu är signeringsupplevelsen i form av formulär klar. Du kan förhandsgranska f
 * Om du använder flera Adobe Sign Cloud-tjänster pekar du **[!UICONTROL oAuth URL]** på samma tjänster **[!UICONTROL Adobe Sign Shard]**.
 
 * Använd separata e-postadresser för att konfigurera Adobe Sign-kontot och för den första signeraren och den första signeraren. E-postadressen till den första signeraren eller den enda signeraren (om det är en signerare) kan inte vara identisk med det Adobe Sign-konto som används för att konfigurera AEM-molntjänster.
+
+
+**Problem** när Adobe Sign har konfigurerats för ett adaptivt formulär startar inte arbetsflödet som har konfigurerats med alternativet Anropa Forms Workflow.
+
+**Upplösning**
+
+* När du använder Adobe Sign utan signatursteget eller formuläret kräver signaturer från flera personer, väntar AEM Forms-servern på att schemaläggaren ska bekräfta att alla personer har signerat formuläret. Schemaläggaren skickar det adaptiva formuläret först när alla personer har slutfört signeringen och arbetsflödet startar först när det adaptiva formuläret har skickats. Du kan korta ned intervallet för [schemaläggaren](adobe-sign-integration-adaptive-forms.md) för att kontrollera status för formulärsignering med snabba intervall och snabb formuläröverföring.
+
 
 ## Relaterade artiklar {#related-articles}
 
