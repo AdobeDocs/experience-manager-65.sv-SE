@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 4130f952-5bb5-4e32-91d6-47b2885b30a4
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
+source-git-commit: e49acbc042d84ae970058b4e99ab6f980866db5a
+workflow-type: tm+mt
+source-wordcount: '3290'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +28,7 @@ Konsolen Communities Sites ger åtkomst till:
 * Platshantering
 * [Skapa och redigera kapslade grupper](/help/communities/groups.md) (undergrupper)
 
-Se [Komma igång med AEM Communities](/help/communities/getting-started.md) om du vill veta hur snabbt en communitywebbplats kan skapas i författarmiljön, samt hur du skapar communitygrupper från författaren och publiceringsmiljöer.
+Se [Komma igång med AEM Communities](/help/communities/getting-started.md) om du vill veta hur snabbt en communitywebbplats kan skapas i författarmiljön, samt hur du skapar communitygrupper utifrån författarmiljön och publiceringsmiljön.
 
 >[!NOTE]
 >
@@ -63,7 +66,7 @@ Om du vill komma åt en befintlig communitywebbplats och redigera, publicera, ex
 
 Följande bild visar till exempel huvudkonsolen Webbplatser i Communities som visar mapparna för två communityplatser: [aktivera](/help/communities/getting-started-enablement.md) och [engagera](/help/communities/getting-started.md):
 
-![chlimage_1-154](assets/chlimage_1-154.png)
+![site-console](assets/site-console.png)
 
 ## Skapa webbplats {#site-creation}
 
@@ -136,7 +139,7 @@ När communitywebbplatsen har publicerats går det att [redigera egenskaperna](#
 
 #### GEMENSKAPENS WEBBPLATSHANTERING {#community-site-branding}
 
-![chlimage_1-155](assets/chlimage_1-155.png)
+![webbplatsmärkning](assets/site-branding.png)
 
 Webbplatsmärkning är en bild som visas som en rubrik högst upp på varje sida.
 
@@ -228,7 +231,7 @@ Låt vara omarkerat för en *privat* communitywebbplats. Standard är avmarkerat
 
 #### TAGGING {#tagging}
 
-![chlimage_1-156](assets/chlimage_1-156.png)
+![webbplatstaggning](assets/site-tagging.png)
 
 De taggar som kan användas för communityinnehåll kontrolleras genom att du väljer Taggnamnutrymmen som tidigare definierats via [Taggningskonsolen](/help/sites-administering/tags.md#tagging-console).
 
@@ -262,7 +265,7 @@ Det är enkelt att hitta communitymedlemmar med hjälp av typsnittssökning.
 
 #### MODERATION {#moderation}
 
-![chlimage_1-157](assets/chlimage_1-157.png)
+![webbplatsmoderering](assets/site-moderation.png)
 
 Den globala inställningen för moderering av användargenererat innehåll (UGC) styrs av dessa inställningar. Enskilda komponenter har ytterligare inställningar för att styra modereringen.
 
@@ -276,14 +279,14 @@ Den globala inställningen för moderering av användargenererat innehåll (UGC)
 
 #### ANALYS {#analytics}
 
-![chlimage_1-158](assets/chlimage_1-158.png)
+![webbplatsanalys](assets/site-analytics.png)
 
 * **Aktivera analys**
 
    Endast tillgängligt när Adobe Analytics har [konfigurerats](/help/communities/analytics.md) för communityfunktioner.
 Standard är avmarkerat. När det här alternativet är markerat visas ytterligare en markeringsmeny:
 
-![chlimage_1-159](assets/chlimage_1-159.png)
+![webbplatsanalys-aktivera](assets/site-analytics-enable.png)
 
 * **Referens för Cloud Config Framework**
 
@@ -292,13 +295,13 @@ Standard är avmarkerat. När det här alternativet är markerat visas ytterliga
 
 #### ÖVERSÄTTNING {#translation}
 
-![chlimage_1-160](assets/chlimage_1-160.png)
+![webbplatsöversättning](assets/site-translation.png)
 
 * **Tillåt maskinöversättning**
 
    När det här alternativet är markerat (standardinställningen är avmarkerad) aktiveras maskinöversättning för UGC på platsen. Detta påverkar inte annat innehåll, t.ex. sidinnehåll, även om webbplatsen är konfigurerad som en flerspråkig webbplats. Mer information om hur du konfigurerar en licensierad översättningstjänst för AEM Communities finns i [Översätta användargenererat innehåll](/help/communities/translate-ugc.md) . En fullständig översikt finns i [Översätta innehåll för flerspråkiga webbplatser](/help/sites-administering/translation.md) .
 
-![chlimage_1-161](assets/chlimage_1-161.png)
+![allow-machine-translation](assets/allow-machine-translation.png)
 
 * **Aktivera maskinöversättning för valda språk**
 
@@ -353,13 +356,13 @@ Standard är *valt*.
 
 #### AKTIVERING {#enablement}
 
-![chlimage_1-162](assets/chlimage_1-162.png)
+![webbplatsaktivering](assets/site-enablement.png)
 
 Inställningarna `ENABLEMENT`gäller när den valda communityplatsmallen innehåller [tilldelningsfunktionen](/help/communities/functions.md#assignments-function), som är tillgänglig när aktiveringsfunktionerna är licensierade och [konfigurerade](/help/communities/enablement.md). Referensplatsmallen som innehåller tilldelningsfunktionen är `Reference Structured Learning Site Template.`
 
 * **Aktiveringshanterare**(obligatoriskt) Endast medlemmar i `Community Enablementmanagers` gruppen är tillgängliga för att hantera den här aktiveringscommunityn. Aktivitetshanterare ansvarar för att tilldela medlemmar till resurser. Se även [Hantera användare och användargrupper](/help/communities/users.md).
 
-* **Organisations-ID för Marketing Cloud**
+* **Marketing Cloud organisation-ID**
 
    (valfritt) ID:t för en [Video Heartbeat Analytics](/help/communities/analytics.md#video-heartbeat-analytics) -licens.
 
@@ -378,40 +381,38 @@ När webbplatsen har skapats:
 * Om du inaktiverar communityplatsmallen påverkas inte den skapade communitywebbplatsen.
 * Du kan redigera [STRUKTUREN](#modify-structure) för en community-webbplats genom att ändra dess egenskaper.
 
-![chlimage_1-163](assets/chlimage_1-163.png)
+![create-site](assets/create-site1.png)
 
 När processen är klar visas mappen för den nya platsen i konsolen Webbplatser, där författare kan lägga till sidinnehåll eller administratören kan ändra platsens egenskaper.
 
-![chlimage_1-164](assets/chlimage_1-164.png)
+![modify-site-property](assets/modify-site-property.png)
 
 Om du vill ändra en community-plats väljer du projektmappen för den:
 
-![siteactions-1](assets/siteactions-1.png)
+![site-project](assets/site-project.png)
 
 När du hovrar över en webbplats med en mus eller vidrör ett platskort visas ikoner som gör att du kan [redigera webbplatsen i redigeringsläge](#authoring-site-content), [öppna webbplatsegenskaperna för ändring](#modifying-site-properties), [publicera webbplatsen](#publishing-the-site), [exportera webbplatsen](#exporting-the-site)och [ta bort webbplatsen](#deleting-the-site).
 
 ## Skapa webbplatsinnehåll {#authoring-site-content}
 
-![chlimage_1-165](assets/chlimage_1-165.png)
+Innehållet i en webbplats kan redigeras med samma verktyg som andra AEM. Om du vill öppna webbplatsen för redigering väljer du den `Open Site` ikon som visas när du hovrar webbplatsen med musen. Webbplatsen öppnas på en ny flik så att konsolen Webbplatser fortfarande är tillgänglig.
 
-Innehållet på en webbplats kan redigeras med samma verktyg som andra AEM-webbplatser. Om du vill öppna webbplatsen för redigering väljer du den `Open Site` ikon som visas när du hovrar webbplatsen med musen. Webbplatsen öppnas på en ny flik så att konsolen Webbplatser fortfarande är tillgänglig.
-
-![chlimage_1-166](assets/chlimage_1-166.png)
+![webbplatsinnehåll](assets/site-content.png)
 
 >[!NOTE]
 >
->Om du inte känner till AEM läser du dokumentationen om [grundläggande hantering](/help/sites-authoring/basic-handling.md) och en [snabbguide till redigeringssidorna](/help/sites-authoring/qg-page-authoring.md).
+>Om du inte känner till AEM kan du läsa dokumentationen om [grundläggande hantering](/help/sites-authoring/basic-handling.md) och en [snabbguide till hur du skapar sidor](/help/sites-authoring/qg-page-authoring.md).
 
 
 ## Ändra webbplatsegenskaper {#modifying-site-properties}
 
-![chlimage_1-167](assets/chlimage_1-167.png)
+![edit-site](assets/edit-site.png)
 
 Egenskaperna för en befintlig plats, som anges när webbplatsen skapas, kan ändras genom att du markerar `Edit Site`ikonen som visas när du håller muspekaren.
 
-`Details of the following properties match the descriptions provided in the` Avsnittet Skapa [webbplats](#site-creation) .
+`Details of the following properties match the descriptions provided in the` [Avsnittet Skapa](#site-creation) webbplats.
 
-![chlimage_1-168](assets/chlimage_1-168.png)
+![modify-site-basicinfo](assets/modify-site-basicinfo.png)
 
 ### Ändra grundläggande {#modify-basic}
 
@@ -467,7 +468,7 @@ Om du t.ex. byter namn på URL:en flyttas inte den befintliga UGC:n, vilket resu
 
 #### Exempel: Lägga till en katalogfunktion i en community-platsstruktur {#example-adding-a-catalog-function-to-a-community-site-structure}
 
-![chlimage_1-169](assets/chlimage_1-169.png)
+![add-catalog-site](assets/add-catalog-site.png)
 
 ### Ändra design {#modify-design}
 
@@ -503,11 +504,11 @@ Se [ENABLEMENT](#enablement) description.
 
 När en communitywebbplats har skapats eller ändrats kan du publicera (aktivera) webbplatsen genom att markera `Publish Site` ikonen som visas när du hovrar musen över webbplatsen.
 
-![chlimage_1-170](assets/chlimage_1-170.png)
+![publicera-webbplats](assets/publish-site.png)
 
 En indikation visas när webbplatsen har publicerats.
 
-![chlimage_1-171](assets/chlimage_1-171.png)
+![webbpublicerad](assets/site-published.png)
 
 ### Publicera med kapslade grupper {#publishing-with-nested-groups}
 
@@ -515,7 +516,7 @@ Efter publicering av en communitywebbplats är det nödvändigt att publicera va
 
 ## Exportera platsen {#exporting-the-site}
 
-![chlimage_1-172](assets/chlimage_1-172.png)
+![export-site](assets/export-site.png)
 
 Välj exportikonen när du hovrar musen över webbplatsen för att skapa ett paket av communitywebbplatsen som både lagras i [pakethanteraren](/help/sites-administering/package-manager.md) och hämtas.
 
@@ -558,7 +559,7 @@ Som standard dirigeras en communitywebbplats om till en exempelinloggningssida n
 
 Om du vill omdirigera korrekt, när en webbplats har konfigurerats och publicerats, slutför du de här stegen för att få autentiseringsfel att omdirigera till communitywebbplatsen:
 
-* På varje AEM-publiceringsinstans.
+* På varje AEM publiceringsinstans.
 * Logga in med administratörsbehörighet.
 * Gå till [webbkonsolen](/help/sites-deploying/configuring-osgi.md).
 
@@ -575,11 +576,11 @@ Om du vill omdirigera korrekt, när en webbplats har konfigurerats och publicera
 
 * Välj **Spara**.
 
-![chlimage_1-173](assets/chlimage_1-173.png)
+![auth-error](assets/auth-error.png)
 
 ### Testa autentiseringsomdirigering {#test-authentication-redirection}
 
-På samma AEM-publiceringsinstans som konfigurerats med en inloggningssidmappning för communitywebbplatsen:
+På samma AEM har publiceringsinstansen konfigurerats med en inloggningssidmappning för communitywebbplatsen:
 
 * Bläddra till startsidan för communitywebbplatsen.
 
@@ -590,7 +591,7 @@ På samma AEM-publiceringsinstans som konfigurerats med en inloggningssidmappnin
 * Ange uppenbart felaktiga inloggningsuppgifter, till exempel användarnamnet &quot;x&quot; och lösenordet &quot;x&quot;.
 * Inloggningssidan ska visas med felmeddelandet&quot;ogiltig inloggning&quot;.
 
-![chlimage_1-174](assets/chlimage_1-174.png)
+![test-authentication](assets/test-authentication.png)
 
 ## Åtkomst till communityplatser från huvudplatskonsolen {#accessing-community-sites-from-main-sites-console}
 
@@ -598,5 +599,7 @@ På den globala navigeringskonsolen finns communityplatser i `Community Sites` m
 
 Det går att komma åt en community-webbplats på det här sättet, men för administrativa uppgifter bör communitywebbplatsen nås från konsolen Webbplatser för communities.
 
-![chlimage_1-175](assets/chlimage_1-175.png)
+![webbplats](assets/access-site.png)
+
+
 
