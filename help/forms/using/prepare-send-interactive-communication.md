@@ -8,9 +8,9 @@ topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 110c86ea-9bd8-4018-bfcc-ca33e6b3f3ba
 translation-type: tm+mt
-source-git-commit: 4c4a5a15e9cbb5cc22bc5999fb40f1d6db3bb091
+source-git-commit: 5bbafd9006b04d761ffab218e8480c1e94903bb6
 workflow-type: tm+mt
-source-wordcount: '1614'
+source-wordcount: '2031'
 ht-degree: 0%
 
 ---
@@ -77,6 +77,7 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
       * [Markera delar av text](#highlightemphasize)
    * [Specialtecken](#specialcharacters)
    * [Kortkommandon](/help/forms/using/keyboard-shortcuts.md)
+
    Mer information om tillgängliga åtgärder för olika dokumentfragment i användargränssnittet för agenten finns i [Åtgärder och information i användargränssnittet](#actionsagentui)för agenten.
 
 1. Om du vill lägga till en sidbrytning i utskriften av den interaktiva kommunikationen placerar du markören där du vill infoga en sidbrytning och väljer Sidbrytning före eller Sidbrytning efter ( ![sidbrytning före](assets/pagebreakbeforeafter.png)).
@@ -104,7 +105,7 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
 1. Om ordningen på de bifogade filerna inte var låst när du skapade den interaktiva kommunikationen kan du ändra ordningen på de bifogade filerna genom att markera en bifogad fil och trycka på nedåtpilen och uppåtpilen.
 1. Använd Förhandsgranska via webben och Förhandsgranska för att se om de två utdatafilerna är som du vill ha dem.
 
-   Om du tycker att förhandsvisningarna är tillräckliga trycker du för **[!UICONTROL Submit]** att skicka/skicka interaktiv kommunikation till en postprocess. Om du vill göra ändringar avslutar du förhandsgranskningen och går tillbaka till ändringarna.
+   Om du tycker att förhandsvisningarna är tillfredsställande kan du trycka på **[!UICONTROL Submit]** för att skicka/skicka interaktiv kommunikation till en postprocess. Om du vill göra ändringar avslutar du förhandsgranskningen och går tillbaka till ändringarna.
 
 ## Formatera text {#formattingtext}
 
@@ -180,7 +181,12 @@ Adobe rekommenderar att du kör dessa instruktioner i följd för att spara ett 
 
 Funktionen Spara som utkast är inte aktiverad som standard. Gör så här för att aktivera funktionen:
 
-1. Implementera SPI ( [ccrDocumentInstance](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html) Service Provider Interface). Med SPI kan du spara utkastet till version av den interaktiva kommunikationen i databasen med ett utkast-ID som unik identifierare.
+1. Implementera SPI ( [ccrDocumentInstance](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/ccm/ccr/ccrDocumentInstance/api/services/CCRDocumentInstanceService.html) Service Provider Interface).
+
+   Med SPI kan du spara utkastet till version av den interaktiva kommunikationen i databasen med ett utkast-ID som unik identifierare. Dessa instruktioner förutsätter att du har kunskap om hur du bygger ett OSGi-paket med ett Maven-projekt.
+
+   Exempel på SPI-implementering finns i [Exempel på SPI-implementering](#sample-ccrDocumentInstance-spi)för ccrDocumentInstance.
+1. Öppna `http://<hostname>:<port>/ system/console/bundles` och tryck **[!UICONTROL Install/Update]** för att ladda upp OSGi-paketet. Kontrollera att det överförda paketets status visas som **Aktiv**. Starta om servern om paketets status inte visas som **Aktiv**.
 1. Gå till `https://'[server]:[port]'/system/console/configMgr`.
 1. Tryck på **[!UICONTROL Create Correspondence Configuration]**.
 1. Markera **[!UICONTROL Enable Save Using CCRDocumentInstanceService]** och tryck **[!UICONTROL Save]**.
@@ -208,3 +214,233 @@ När du har sparat ett utkast för interaktiv kommunikation kan du hämta det oc
 >[!NOTE]
 >
 >Om du gör några ändringar i det interaktiva meddelandet när du har sparat det som ett utkast, kommer utkastet inte att öppnas.
+
+### Exempel på SPI-implementering av ccrDocumentInstance {#sample-ccrDocumentInstance-spi}
+
+Implementera `ccrDocumentInstance` SPI för att spara ett interaktivt meddelande som ett utkast. Här följer ett exempel på implementering av `ccrDocumentInstance` SPI.
+
+```javascript
+package Implementation;
+
+import com.adobe.fd.ccm.ccr.ccrDocumentInstance.api.exception.CCRDocumentException;
+import com.adobe.fd.ccm.ccr.ccrDocumentInstance.api.model.CCRDocumentInstance;
+import com.adobe.fd.ccm.ccr.ccrDocumentInstance.api.services.CCRDocumentInstanceService;
+import org.apache.commons.lang3.StringUtils;
+import org.osgi.service.component.annotations.Component;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.*;
+
+
+@Component(service = CCRDocumentInstanceService.class, immediate = true)
+public class CCRDraftService implements CCRDocumentInstanceService {
+
+ private static final Logger logger = LoggerFactory.getLogger(CCRDraftService.class);
+
+ private HashMap<String, Object> draftDataMap = new HashMap<>();
+
+ @Override
+ public String save(CCRDocumentInstance ccrDocumentInstance) throws CCRDocumentException {
+     String documentInstanceName = ccrDocumentInstance.getName();
+     if (StringUtils.isNotEmpty(documentInstanceName)) {
+         logger.info("Saving ccrData with name : {}", ccrDocumentInstance.getName());
+         if (!CCRDocumentInstance.Status.SUBMIT.equals(ccrDocumentInstance.getStatus())) {
+             ccrDocumentInstance = mySQLDataBaseServiceCRUD(ccrDocumentInstance,null, "SAVE");
+         }
+     } else {
+         logger.error("Could not save data as draft name is empty");
+     }
+     return ccrDocumentInstance.getId();
+ }
+
+ @Override
+ public void update(CCRDocumentInstance ccrDocumentInstance) throws CCRDocumentException {
+     String documentInstanceName = ccrDocumentInstance.getName();
+     if (StringUtils.isNotEmpty(documentInstanceName)) {
+         logger.info("Saving ccrData with name : {}", documentInstanceName);
+         mySQLDataBaseServiceCRUD(ccrDocumentInstance, ccrDocumentInstance.getId(), "UPDATE");
+     } else {
+         logger.error("Could not save data as draft Name is empty");
+     }
+ }
+
+ @Override
+ public CCRDocumentInstance get(String id) throws CCRDocumentException {
+     CCRDocumentInstance cCRDocumentInstance;
+     if (StringUtils.isEmpty(id)) {
+         logger.error("Could not retrieve data as draftId is empty");
+         cCRDocumentInstance = null;
+     } else {
+         cCRDocumentInstance = mySQLDataBaseServiceCRUD(null, id,"GET");
+     }
+     return cCRDocumentInstance;
+ }
+
+ @Override
+ public List<CCRDocumentInstance> getAll(String userId, Date creationTime, Date updateTime,
+                                         Map<String, Object> optionsParams) throws CCRDocumentException {
+     List<CCRDocumentInstance> ccrDocumentInstancesList = new ArrayList<>();
+
+     HashMap<String, Object> allSavedDraft = mySQLGetALLData();
+     for (String key : allSavedDraft.keySet()) {
+         ccrDocumentInstancesList.add((CCRDocumentInstance) allSavedDraft.get(key));
+     }
+     return ccrDocumentInstancesList;
+ }
+
+ //The APIs call the service in the database using the following section.
+ private CCRDocumentInstance mySQLDataBaseServiceCRUD(CCRDocumentInstance ccrDocumentInstance,String draftId, String method){
+     if(method.equals("SAVE")){
+
+         String autoGenerateId = draftDataMap.size() + 1 +"";
+         ccrDocumentInstance.setId(autoGenerateId);
+         draftDataMap.put(autoGenerateId, ccrDocumentInstance);
+         return ccrDocumentInstance;
+
+     }else if (method.equals("UPDATE")){
+
+         draftDataMap.put(ccrDocumentInstance.getId(), ccrDocumentInstance);
+         return ccrDocumentInstance;
+
+     }else if(method.equals("GET")){
+
+         return (CCRDocumentInstance) draftDataMap.get(draftId);
+
+     }
+     return null;
+ }
+
+ private HashMap<String, Object> mySQLGetALLData(){
+     return draftDataMap;
+ }
+}
+```
+
+Operationerna `save`, `update`, `get`och `getAll` anropar databastjänsten för att spara en interaktiv kommunikation som ett utkast, uppdatera en interaktiv kommunikation, hämta data från databasen och hämta data för all interaktiv kommunikation som är tillgänglig i databasen. Det här exemplet använder `mySQLDataBaseServiceCRUD` som namn på databastjänsten.
+
+I följande tabell förklaras exemplet på `ccrDocumentInstance` SPI-implementering. Det visar hur åtgärderna `save`, `update`, `get`och `getAll` anropar databastjänsten i exempelimplementeringen.
+
+<table> 
+ <tbody>
+ <tr>
+  <td><p><strong>Åtgärd</strong></p></td>
+  <td><p><strong>Exempel på databastjänst</strong></p></td> 
+   </tr>
+  <tr>
+   <td><p>Du kan antingen skapa ett utkast för en interaktiv kommunikation eller skicka det direkt. API:t för åtgärden Spara kontrollerar om den interaktiva kommunikationen skickas som ett utkast och innehåller ett utkastnamn. API:t anropar sedan tjänsten mySQLDataBaseServiceCRUD med Spara som indatametod.</p></br><img src="assets/save-as-draft-save-operation.png"/></br>[#$sd1_sf1_dp9]</td>
+   <td><p>Tjänsten mySQLDataBaseServiceCRUD verifierar Spara som indatametod och genererar ett autogenererat utkast-ID och returnerar det till AEM. Logiken som används för att generera ett utkast-ID kan variera beroende på databasen.</p></br><img src="assets/save-operation-service.png"/></br>[#$sd1_sf1_dp13]</td>
+   </tr>
+  <tr>
+   <td><p>API:t för uppdateringsåtgärden hämtar status för Interactive Communication-utkastet och kontrollerar om Interactive Communication innehåller ett utkastsnamn. API:t anropar tjänsten mySQLDataBaseServiceCRUD för att uppdatera statusen i Database.</p></br><img src="assets/save-as-draft-update-operation.png"/></br>[#$sd1_sf1_dp17]</td>
+   <td><p>Tjänsten mySQLDataBaseServiceCRUD verifierar Update som indatametod och sparar statusen för Interactive Communication-utkastet i databasen.</br></p><img src="assets/update-operation-service.png"/></td>
+   </tr>
+   <tr>
+   <td><p>API:t för get-åtgärden kontrollerar om den interaktiva kommunikationen innehåller ett utkast-ID. API:t anropar sedan tjänsten mySQLDataBaseServiceCRUD med Get som indatametod för att hämta data för den interaktiva kommunikationen.</br></p><img src="assets/save-as-draft-get-operation.png"/></td>
+   <td><p>Tjänsten mySQLDataBaseServiceCRUD verifierar Get som indatametod och hämtar data för den interaktiva kommunikationen baserat på utkast-ID.</p></br><img src="assets/get-operation-service.png"/></br>[#$sd1_sf1_dp29]</td>
+   </tr>
+   <tr>
+   <td><p>API:t för åtgärden getAll anropar tjänsten mySQLGetALLData för att hämta data för all interaktiv kommunikation som har sparats i databasen.</br></p><img src="assets/save-as-draft-getall-operation.png"/></td>
+   <td><p>Tjänsten mySQLGetALLData hämtar data för alla interaktiva kommunikationer som har sparats i databasen.</p></br><img src="assets/getall-operation-service.png"/></br>[#$sd1_sf1_dp37]</td>
+   </tr>
+  </tbody>
+</table>
+
+Följande är ett exempel på den `pom.xml` fil som är en del av implementeringen:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.adobe.livecycle</groupId>
+    <artifactId>draft-sample</artifactId>
+    <version>2.0.0-SNAPSHOT</version>
+
+    <name>Interact</name>
+    <packaging>bundle</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.adobe.aemfd</groupId>
+            <artifactId>aemfd-client-sdk</artifactId>
+            <version>6.0.122</version>
+        </dependency>
+    </dependencies>
+
+
+    <!-- ====================================================================== -->
+    <!-- B U I L D D E F I N I T I O N -->
+    <!-- ====================================================================== -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <version>3.3.0</version>
+                <extensions>true</extensions>
+                <executions>
+                    <!--Configure extra execution of 'manifest' in process-classes phase to make sure SCR metadata is generated before unit test runs-->
+                    <execution>
+                        <id>scr-metadata</id>
+                        <goals>
+                            <goal>manifest</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <exportScr>true</exportScr>
+                    <instructions>
+                        <!-- Enable processing of OSGI DS component annotations -->
+                        <_dsannotations>*</_dsannotations>
+                        <!-- Enable processing of OSGI metatype annotations -->
+                        <_metatypeannotations>*</_metatypeannotations>
+                        <Bundle-SymbolicName>${project.groupId}-${project.artifactId}</Bundle-SymbolicName>
+                    </instructions>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <profiles>
+        <profile>
+            <id>autoInstall</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.sling</groupId>
+                        <artifactId>maven-sling-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>install-bundle</id>
+                                <phase>install</phase>
+                                <goals>
+                                    <goal>install</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+</project>
+```
+
+>[!NOTE]
+>
+>Se till att du uppdaterar beroendet till 6.0.122 i `aemfd-client-sdk` `pom.xml` filen.
