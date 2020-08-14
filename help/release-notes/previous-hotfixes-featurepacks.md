@@ -3,9 +3,9 @@ title: Versionsinformation om Adobe Experience Manager 6.5 Previous Service Pack
 description: Versionsinformation om Adobe Experience Manager 6.5 Service Pack 3 och tidigare.
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: d6f48896a56950d44dfe0d1f9b712157951af83c
+source-git-commit: 2639a57682c7f0696dd2515e0fe8f6d520d10c21
 workflow-type: tm+mt
-source-wordcount: '8098'
+source-wordcount: '8103'
 ht-degree: 0%
 
 ---
@@ -506,7 +506,7 @@ Remove one mention of this fix.
 
 * SOAP-webbtjänst som använder MTOM i ett .NET-projekt visar undantag för AssemblerServiceClient-anrop och HTMLToPDF2-metoder (NPR-4281771).
 
-* [Axis jar version 1.4 och 1.4.1](https://helpx.adobe.com/aem-forms/quick-fixes/6-5/jee-patch-0014.html) innehåller en säkerhetslucka (NPR-31015).
+* Säkerhetsluckan 2012-5784 och 2014-3596 har hittats med AXIS 1.4 jar och korrigeringen finns i [AXIS1.4.1 jar](https://helpx.adobe.com/aem-forms/quick-fixes/6-5/jee-patch-0014.html) (NPR-31015).
 
 **Foundation JEE**
 
@@ -652,7 +652,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 ### Integrering {#integration}
 
 * Det anpassade innehållet visas inte korrekt på publiceringsinstansen förrän instansen startas om. NPR-30377: Programfix för CQ-4273706
-* När du konfigurerar Launch på en webbplats har biblioteksadressen ett snedstreck (/) som är förinställt, vilket kan orsaka manuella åtgärder varje gång. NPR-30694: Programfix för CQ-4275501
+* När du konfigurerar Launch på en webbplats har biblioteksadressen ett snedstreck (/) som är förinställt, vilket ger manuella åtgärder varje gång. NPR-30694: Programfix för CQ-4275501
 
 ### Forms {#forms-6520}
 
