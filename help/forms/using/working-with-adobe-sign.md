@@ -10,9 +10,9 @@ topic-tags: develop
 discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d1361296ee0161c36061543459056c25ebef0e97
+source-git-commit: f34742a9d11909dcf8403e1b002b65a01e882a74
 workflow-type: tm+mt
-source-wordcount: '3770'
+source-wordcount: '3784'
 ht-degree: 0%
 
 ---
@@ -334,6 +334,7 @@ Nu är signeringsupplevelsen i form av formulär klar. Du kan förhandsgranska f
 
 * Använd separata e-postadresser för att konfigurera Adobe Sign-kontot och för den första signeraren och den första signeraren. E-postadressen till den första signeraren eller den enda signeraren (om det är en signerare) kan inte vara identisk med det Adobe Sign-konto som används för att konfigurera AEM-molntjänster.
 
+### AEM Forms-arbetsflöde som är konfigurerat för ett anpassat Adobe Sign-formulär startar inte {#adobe-sign-aem-form-workflow-failures}
 
 **Problem** när Adobe Sign har konfigurerats för ett adaptivt formulär startar inte arbetsflödet som har konfigurerats med alternativet Anropa Forms Workflow.
 
