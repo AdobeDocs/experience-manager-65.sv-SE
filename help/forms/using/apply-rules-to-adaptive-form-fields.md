@@ -8,9 +8,9 @@ uuid: 60f142aa-81ca-4333-8614-85a01e23e917
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 discoiquuid: 982eddba-2350-40e7-8a42-db02d28cf133
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: e3ecf724cdfcd20ef4c089605e644ad10ef1221b
 workflow-type: tm+mt
-source-wordcount: '1042'
+source-wordcount: '1030'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Den här självstudiekursen är ett steg i serien [Create Your First Adaptive Fo
 
 Du kan använda regler för att lägga till interaktivitet, affärslogik och smarta valideringar i ett anpassat formulär. Anpassningsbara formulär har en inbyggd regelredigerare. Regelredigeraren har en dra och släpp-funktion som liknar guidade rundturer. Metoden dra och släpp är den snabbaste och enklaste metoden att skapa regler. Regelredigeraren innehåller också ett kodfönster för användare som vill testa sina kodningskunskaper eller ta reglerna till nästa nivå.
 
-Du kan läsa mer om regelredigeraren i [regelredigeraren](/help/forms/using/rule-editor.md)Adaptive Forms.
+Du kan lära dig mer om regelredigeraren på [Adaptive Forms regelredigerare](/help/forms/using/rule-editor.md).
 
 I slutet av självstudiekursen kommer du att lära dig att skapa regler för att:
 
@@ -38,7 +38,7 @@ Med interaktiva GIF-bilder i slutet av varje avsnitt i självstudiekursen lär d
 
 ## Steg 1: Hämta en kundpost från databasen {#retrieve-customer-record}
 
-Du skapade en formulärdatamodell genom att följa artikeln [Skapa formulärdatamodell](/help/forms/using/create-form-data-model.md) . Nu kan du använda regelredigeraren för att anropa Forms Data Model-tjänster för att hämta och lägga till information i databasen.
+Du skapade en formulärdatamodell genom att följa artikeln [Skapa formulärdatamodell](/help/forms/using/create-form-data-model.md) . Nu kan du använda regelredigeraren för att anropa Forms datamodelltjänster för att hämta och lägga till information i databasen.
 
 Varje kund tilldelas ett unikt Kund-ID-nummer som hjälper till att identifiera relevanta kunddata i en databas. I proceduren nedan används Kund-ID för att hämta information från databasen:
 
@@ -89,15 +89,15 @@ När kundinformationen har hämtats från databasen kan du uppdatera leveransadr
 
    ![update-shipping-address](assets/update-shipping-address.png)
 
-1. ![dropobjectToInputField-updatedata](assets/dropobjectstoinputfield-updatedata.png)
+   ![dropobjectToInputField-updatedata](assets/dropobjectstoinputfield-updatedata.png)
 
-   Dra och släpp **[!UICONTROL Shipping Address, State, and Zip Code]** fältet från fliken Formulärobjekt till motsvarande tabellnamn (.property, t.ex. kundinformation .shippingAddress) för **[!UICONTROL Drop object or select here]** fältet i **[!UICONTROL INPUT]** rutan. Alla fält med tabellnamn som prefix (t.ex. kundinformation i det här fallet) fungerar som indata för uppdateringstjänsten. Allt innehåll i dessa fält uppdateras i datakällan.
+1. Dra och släpp **[!UICONTROL Shipping Address, State, and Zip Code]** fältet från [!UICONTROL Form Objects] fliken till motsvarande .property-egenskap för tabellnamnet (till exempel kundinformation .shippingAddress) för **[!UICONTROL Drop object or select here]** fältet i **[!UICONTROL INPUT]** rutan. Alla fält med tabellnamn som prefix (t.ex. kundinformation i det här fallet) fungerar som indata för uppdateringstjänsten. Allt innehåll i dessa fält uppdateras i datakällan.
 
    >[!NOTE]
    >
    >Dra och släpp inte fälten **[!UICONTROL Name]** och **[!UICONTROL Customer ID]** till motsvarande tabellename.property (till exempel customerdetails.name). Det hjälper till att undvika att uppdatera kundens namn och ID av misstag.
 
-1. Dra och släpp **[!UICONTROL Customer ID]** fältet från fliken Formulärobjekt till id-fältet i **[!UICONTROL INPUT]** rutan. Fält utan ett prefix-tabellnamn (t.ex. kundinformation i det här fallet) fungerar som sökparametrar för uppdateringstjänsten. Fältet i det här **[!UICONTROL id]** användningsfallet identifierar en post unikt i kundinformationstabellen.
+1. Dra och släpp **[!UICONTROL Customer ID]** fältet från [!UICONTROL Form Objects] fliken till ID-fältet i **[!UICONTROL INPUT]** rutan. Fält utan ett prefix-tabellnamn (t.ex. kundinformation i det här fallet) fungerar som sökparametrar för uppdateringstjänsten. Fältet **[!UICONTROL id]** i det här användningsfallet identifierar en post i **kundinformationsregistret** .
 1. Tryck **[!UICONTROL Done]** för att spara regeln. Tryck på **[!UICONTROL Close]** i regelredigeringsfönstret.
 1. Förhandsgranska det adaptiva formuläret. Hämta information om en kund, uppdatera leveransadressen och skicka in formuläret. När du hämtar information om samma kund igen visas den uppdaterade leveransadressen.
 
@@ -107,9 +107,9 @@ Du bör köra valideringen i formuläret för att säkerställa att de data som 
 
 Adaptiva formulär innehåller flera komponenter med inbyggda valideringar, till exempel e-post och numeriska fält som du kan använda för vanliga användningsområden. Använd regelredigeraren för avancerad användning, till exempel för att visa ett felmeddelande när databasen returnerar noll (0) poster (inga poster).
 
-Följande procedur visar hur du skapar en regel som visar ett felmeddelande om det kund-ID som anges i formuläret inte finns i databasen. Regeln ger också fokus till och återställer fältet Kund-ID. Regeln använder API:t dataIntegrationUtils [för formulärdatamodelltjänsten](/help/forms/using/invoke-form-data-model-services.md) för att kontrollera om det finns ett kund-ID i databasen.
+Följande procedur visar hur du skapar en regel som visar ett felmeddelande om det kund-ID som anges i formuläret inte finns i databasen. Regeln ger även fokus och återställer **[!UICONTROL Customer ID]** fältet. Regeln använder API:t dataIntegrationUtils [för formulärdatamodelltjänsten](/help/forms/using/invoke-form-data-model-services.md) för att kontrollera om det finns ett kund-ID i databasen.
 
-1. Tryck på **[!UICONTROL Customer ID]** fältet och tryck på `Edit Rules` ikonen. Regelredigeraren öppnas.
+1. Tryck på **[!UICONTROL Customer ID]** fältet och tryck på `Edit Rules` ikonen. Fönstret [!UICONTROL Rule Editor] öppnas.
 1. Tryck på **[!UICONTROL + Create]** ikonen för att lägga till en regel. Den öppnar Visual Editor.
 
    Programsatsen är markerad som standard i den visuella redigeraren **[!UICONTROL WHEN]** . Formulärobjektet (i det här fallet **[!UICONTROL Customer ID]**) från vilket du startade regelredigeraren anges också i **[!UICONTROL WHEN]** programsatsen.
@@ -132,7 +132,7 @@ Följande procedur visar hur du skapar en regel som visar ett felmeddelande om d
    };
    ```
 
-1. Ersätt sektionen guide.dataIntegrationUtils.executeOperation (operationInfo, input, outputs) med följande kod:
+1. Ersätt `guidelib.dataIntegrationUtils.executeOperation (operationInfo, inputs, outputs)` avsnittet med följande kod:
 
    ```javascript
    guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs, function (result) {
