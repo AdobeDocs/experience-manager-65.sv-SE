@@ -8,15 +8,15 @@ contentOwner: khsingh
 discoiquuid: ecddb22e-c148-441f-9088-2e5b35c7021b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a842aa85652e5c04d5825a3e88aa6b64ef8a0088
+source-git-commit: 1a816672b3e97346f5a7a984fcb4dc0df1a5b0da
 workflow-type: tm+mt
-source-wordcount: '936'
+source-wordcount: '904'
 ht-degree: 1%
 
 ---
 
 
-# Självstudiekurs: Testa ditt adaptiva formulär{#tutorial-testing-your-adaptive-form}
+# Självstudiekurs: Testa ditt adaptiva formulär {#tutorial-testing-your-adaptive-form}
 
 ![](do-not-localize/10-test-your-adaptive-form.png)
 
@@ -24,7 +24,7 @@ Den här självstudiekursen är ett steg i serien [Create Your First Adaptive Fo
 
 När det adaptiva formuläret är klart är det viktigt att du testar adaptivet innan du distribuerar det till slutanvändarna. Du kan manuellt testa (funktionstesta) alla fält eller automatisera testningen av ditt adaptiva formulär. När du har flera adaptiva formulär blir det en svår uppgift att manuellt testa alla fält i alla adaptiva formulär.
 
-AEM Forms tillhandahåller ett testramverk, Calvin, för att automatisera testningen av dina anpassade formulär. Med hjälp av ramverket kan du skriva och köra gränssnittstester direkt i en webbläsare. Ramverket innehåller JavaScript-API:er för att skapa tester. Med automatiserad testning kan du testa hur ett anpassat formulär fungerar i förväg, skicka in upplevelser av ett anpassat formulär, uttrycksregler, från validering, lazy loading och gränssnittsinteraktioner. I den här självstudiekursen får du hjälp med att skapa och köra automatiska tester på ett adaptivt formulär. I slutet av den här självstudiekursen kan du:
+AEM [!DNL Forms] tillhandahåller ett testramverk, Calvin, för att automatisera testningen av dina anpassade formulär. Med hjälp av ramverket kan du skriva och köra gränssnittstester direkt i en webbläsare. Ramverket innehåller JavaScript-API:er för att skapa tester. Med automatiserad testning kan du testa hur ett anpassat formulär fungerar i förväg, skicka in upplevelser av ett anpassat formulär, uttrycksregler, från validering, lazy loading och gränssnittsinteraktioner. I den här självstudiekursen får du hjälp med att skapa och köra automatiska tester på ett adaptivt formulär. I slutet av den här självstudiekursen kan du:
 
 * [Skapa en testsvit för ditt adaptiva formulär](../../forms/using/testing-your-adaptive-form.md#step-create-a-test-suite)
 * [Skapa tester för ditt adaptiva formulär](../../forms/using/testing-your-adaptive-form.md#step-create-a-test-case-to-prefill-values-in-an-adaptive-form)
@@ -34,48 +34,48 @@ AEM Forms tillhandahåller ett testramverk, Calvin, för att automatisera testni
 
 Testsviter har en samling testfall. Du kan ha flera testsviter. Vi rekommenderar att du har en separat testsvit för varje formulär. Så här skapar du en testsvit:
 
-1. Logga in som administratör på författarinstansen av AEM Forms. Öppna CRXDE Lite. Du kan trycka AEM logotyp > **Verktyg** > **Allmänt** > **CRXDE Lite** eller öppna [https://localhost:4502/crx/de/index.jsp](https://localhost:4502/crx/de/index.jsp) i en webbläsare för att öppna CRXDE Lite.
+1. Logga AEM författarinstansen i som administratör. [!DNL Forms] Öppna [!UICONTROL CRXDE Lite]. Du kan trycka AEM logotyp > **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]** eller öppna [https://localhost:4502/crx/de/index.jsp](https://localhost:4502/crx/de/index.jsp) i en webbläsare för att öppna CRXDE Lite.
 
-1. Navigera till /etc/clientlibs i CRXDE Lite. Högerklicka på undermappen /etc/clientlibs och klicka på **Skapa** > **Skapa nod.** I fältet Namn skriver du **WeRetailFormTestCase**. Markera typen som **cq:ClientLibraryFolder** och klicka på **OK**. Det skapar en nod. Du kan använda vilket namn som helst istället för WeRetailFormTestCase.
-1. Lägg till följande egenskaper i noden WeRetailFormTestCase och tryck på **Save ALL**.
+1. Navigera till /etc/clientlibs in [!UICONTROL CRXDE Lite]. Högerklicka på undermappen /etc/clientlibs och klicka på **[!UICONTROL Create]** > **[!UICONTROL Create Node]**. I **[!UICONTROL Name]** fälttypen **WeRetailFormTestCase**. Välj typen som **cq:ClientLibraryFolder** och klicka på **[!UICONTROL OK]**. Det skapar en nod. Du kan använda vilket namn som helst istället för `WeRetailFormTestCases`.
+1. Lägg till följande egenskaper i `WeRetailFormTestCases` noden och tryck på **[!UICONTROL Save ALL]**.
 
-<table>
- <tbody>
-  <tr>
-   <td><strong>Egenskap</strong></td>
-   <td><strong>Typ</strong></td>
-   <td><strong>Flera</strong></td>
-   <td><strong>Värde</strong></td>
-  </tr>
-  <tr>
-   <td>kategorier</td>
-   <td>Sträng</td>
-   <td>Aktiverad</td>
-   <td>
-    <ul>
-     <li>granite.testing.hobbes.tests<br /> </li>
-     <li>granite.testing.calvin.tests</li>
-    </ul> </td>
-  </tr>
-  <tr>
-   <td>beroenden</td>
-   <td>Sträng</td>
-   <td>Aktiverad</td>
-   <td>
-    <ul>
-     <li>granite.testing.hobbes.teberg <br /> </li>
-     <li>granite.testing.calvin <br /> </li>
-     <li>apps.testframework.all</li>
-    </ul> </td>
-  </tr>
- </tbody>
-</table>
+   <table>
+    <tbody>
+     <tr>
+      <td><strong>Egenskap</strong></td>
+      <td><strong>Typ</strong></td>
+      <td><strong>Flera</strong></td>
+      <td><strong>Värde</strong></td>
+     </tr>
+     <tr>
+      <td>kategorier</td>
+      <td>Sträng</td>
+      <td>Aktiverad</td>
+      <td>
+       <ul>
+        <li>granite.testing.hobbes.tests<br /> </li>
+        <li>granite.testing.calvin.tests</li>
+       </ul> </td>
+     </tr>
+     <tr>
+      <td>beroenden</td>
+      <td>Sträng</td>
+      <td>Aktiverad</td>
+      <td>
+       <ul>
+        <li>granite.testing.hobbes.teberg <br /> </li>
+        <li>granite.testing.calvin <br /> </li>
+        <li>apps.testframework.all</li>
+       </ul> </td>
+     </tr>
+    </tbody>
+   </table>
 
-Se till att varje egenskap läggs till i en separat ruta enligt nedan:
+   Se till att varje egenskap läggs till i en separat ruta enligt nedan:
 
-![beroenden](assets/dependencies.png)
+   ![beroenden](assets/dependencies.png)
 
-1. Högerklicka på **[!UICONTROL WeRetailFormTestCases]** noden och klicka på **Skapa** > **Skapa fil**. Skriv `js.txt` och klicka på **OK** i fältet Namn.
+1. Högerklicka på **[!UICONTROL WeRetailFormTestCases]** noden och klicka **[!UICONTROL Create]** > **[!UICONTROL Create File]**. Skriv **[!UICONTROL Name]** och klicka i `js.txt` fältet **[!UICONTROL OK]**.
 1. Öppna js.txt-filen för redigering, lägg till följande kod och spara filen:
 
    ```text
@@ -101,7 +101,7 @@ Se till att varje egenskap läggs till i en separat ruta enligt nedan:
 
    Ovanstående kod skapar en testsvit med namnet **We retail - Tests**.
 
-1. Öppna AEM testgränssnitt (AEM > Verktyg > Åtgärder > Testning). Testsviten - **We retail - Tests** - listas i användargränssnittet.
+1. Öppna AEM testgränssnitt (AEM > **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Testing]**). Testsviten - **We retail - Tests** - listas i användargränssnittet.
 
    ![we-retail-test-suite](assets/we-retail-test-suite.png)
 
@@ -111,7 +111,7 @@ Ett testfall är en uppsättning åtgärder för att testa en viss funktion. Du 
 
 En åtgärd är en specifik aktivitet i ett adaptivt formulär som att klicka på en knapp. Så här skapar du ett testfall och åtgärder för att validera användarindata för varje adaptivt formulärfält:
 
-1. Navigera till `/content/forms/af/create-first-adaptive-form` mappen i CRXDE-listan. Högerklicka på **[!UICONTROL create-first-adaptive-form]** mappnoden och klicka på **[!UICONTROL Create]**> **[!UICONTROL Create File]**. Skriv `prefill.xml` och klicka i fältet Namn **[!UICONTROL OK]**. Lägg till följande kod i filen:
+1. Navigera [!UICONTROL CRXDE lite]till `/content/forms/af/create-first-adaptive-form` mappen i. Högerklicka på **[!UICONTROL create-first-adaptive-form]** mappnoden och klicka på **[!UICONTROL Create]**> **[!UICONTROL Create File]**. Skriv **[!UICONTROL Name]** och klicka i `prefill.xml` fältet **[!UICONTROL OK]**. Lägg till följande kod i filen:
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?><afData>
@@ -136,35 +136,35 @@ En åtgärd är en specifik aktivitet i ett adaptivt formulär som att klicka p�
 
 1. Lägg till följande egenskaper i **[!UICONTROL WeRetailFormTests]** noden.
 
-<table>
- <tbody>
-  <tr>
-   <td><strong>Egenskap</strong></td>
-   <td><strong>Typ</strong></td>
-   <td><strong>Flera</strong></td>
-   <td><strong>Värde</strong></td>
-  </tr>
-  <tr>
-   <td>kategorier</td>
-   <td>Sträng</td>
-   <td>Aktiverad</td>
-   <td>
-    <ul>
-     <li>granite.testing.hobbes.tests<br /> </li>
-     <li>granite.testing.hobbes.tests.testForm</li>
-    </ul> </td>
-  </tr>
-  <tr>
-   <td>beroenden</td>
-   <td>Sträng</td>
-   <td>Aktiverad</td>
-   <td>
-    <ul>
-     <li>granite.testing.calvin.tests</li>
-    </ul> </td>
-  </tr>
- </tbody>
-</table>
+   <table>
+    <tbody>
+     <tr>
+      <td><strong>Egenskap</strong></td>
+      <td><strong>Typ</strong></td>
+      <td><strong>Flera</strong></td>
+      <td><strong>Värde</strong></td>
+     </tr>
+     <tr>
+      <td>kategorier</td>
+      <td>Sträng</td>
+      <td>Aktiverad</td>
+      <td>
+       <ul>
+        <li>granite.testing.hobbes.tests<br /> </li>
+        <li>granite.testing.hobbes.tests.testForm</li>
+       </ul> </td>
+     </tr>
+     <tr>
+      <td>beroenden</td>
+      <td>Sträng</td>
+      <td>Aktiverad</td>
+      <td>
+       <ul>
+        <li>granite.testing.calvin.tests</li>
+       </ul> </td>
+     </tr>
+     </tbody>
+   </table>
 
 1. Skapa en fil, js.txt, i **[!UICONTROL WeRetailFormTests]** noden. Lägg till följande i filen:
 
@@ -219,17 +219,17 @@ En testsvit kan ha flera testfall. Du kan köra alla testfall i en testsvit samt
 1. Navigera till AEM > **[!UICONTROL Tools]**> **[!UICONTROL Operations]**> **[!UICONTROL Testing]**
 1. Så här kör du alla tester i Test Suite:
 
-   1. Tryck på **[!UICONTROL We retail - Tests (1)]** testpanelen. Det sviten utökas till att visa en lista med test.
+   1. In the [!UICONTROL Tests] panel, tap **[!UICONTROL We retail - Tests (1)]**. Det sviten utökas till att visa en lista med test.
    1. Tryck på **[!UICONTROL Run tests]** knappen. Det tomma området till höger på skärmen ersätts med adaptiv form när testet utförs.
 
-   ![run-all-test](assets/run-all-test.png)
+      ![run-all-test](assets/run-all-test.png)
 
 1. Så här kör du ett test från Test Suite:
 
    1. Tryck på **[!UICONTROL We retail - Tests (1)]** testpanelen. Det sviten utökas till att visa en lista med test.
    1. Tryck på **[!UICONTROL Prefill Test]** och tryck på **[!UICONTROL Run tests]** knappen. Det tomma området till höger på skärmen ersätts med adaptiv form när testet utförs.
 
-1. Tryck på testnamnet, Prefill test, för att granska resultatet av Test Case. Resultatpanelen öppnas. Tryck på namnet på testfallet i panelen Resultat för att visa all information om testet.
+1. Tryck på testnamnet, Prefill test, för att granska resultatet av Test Case. Den öppnar [!UICONTROL Result] panelen. Tryck på namnet på testfallet på [!UICONTROL Result] panelen för att visa all information om testet.
 
    ![review-results](assets/review-results.png)
 
