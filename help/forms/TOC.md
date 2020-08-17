@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: AEM 6.5 Forms Användarhandbok
 user-guide-description: Create, manage, publish, and update digital forms.
 translation-type: tm+mt
-source-git-commit: 636224c2ea165e43f8979797926fd05197a15905
+source-git-commit: a1ada0e747f46923dc834c872e522e648adae073
 workflow-type: tm+mt
-source-wordcount: '3708'
+source-wordcount: '3719'
 ht-degree: 0%
 
 ---
@@ -176,7 +176,7 @@ ht-degree: 0%
    + [XFA-stöd i XDP-baserade adaptiva formulär](using/xfa-api-supported-in-adaptive-form.md)
    + [Ändra sidans nollinnehåll i Designer](using/changing-page-zero-content-designer.md)
    + [Bevilja regelredigeraråtkomst för valda användargrupper](using/rule-editor-access-user-groups.md)
-   + [Använda arbetsflöde AEM översättning för att lokalisera anpassningsbara formulär och urkunder](using/using-aem-translation-workflow-to-localize-adaptive-forms.md)
+   + [Använda arbetsflöde för AEM översättning för att lokalisera anpassningsbara formulär och urkunder](using/using-aem-translation-workflow-to-localize-adaptive-forms.md)
    + [Automatisera testning av anpassningsbara formulär](using/calvin.md)
    + [Formateringskonstruktioner för adaptiva formulär](using/styling-constructs-adaptive-forms.md)
    + [Synkronisera adaptiv Forms med XFA-formulärmallar](using/synchronizing-adaptive-forms-xfa.md)
@@ -592,6 +592,8 @@ ht-degree: 0%
          + [Anropa AEM Forms med API:er](developing/invoking-aem-forms-using-apis.md)
          + [Förstå AEM Forms-processer](developing/aem-forms-processes.md)
          + [Tjänstbehållare](developing/service-container.md)
+      + Developing SPIs for AEM Forms {#developing-spis-aem-forms}
+         + [Skapa en hanterare för att bjuda in externa användare](developing/creating-invite-external-users-handler.md)
       + Snabbstart för Java API - kodexempel {#java-api-quick-start-code-examples}
          + [JavaAPI-snabbstart för Application Manager-klient (SOAP)](developing/application-manager-client-java-api.md)
          + [JavaAPI-snabbstart (SOAP) för Application Manager-tjänsten](developing/application-manager-service-java-api.md)
