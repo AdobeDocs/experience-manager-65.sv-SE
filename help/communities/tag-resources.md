@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: c012d639-c6e6-4f73-bbd8-78a4baa38c17
 translation-type: tm+mt
-source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
+source-git-commit: 2fcd87cd1def7fc265ba40c83b50db86618f3b70
+workflow-type: tm+mt
+source-wordcount: '637'
+ht-degree: 0%
 
 ---
 
@@ -59,7 +62,7 @@ För en communitywebbplats måste du aktivera läsåtkomst för medlemmar i comm
 
 Så här visas det i CRXDE när en administratör tillämpar läsbehörigheter på `/etc/tags/ski-catalog` gruppen `Community Enable Members`.
 
-![chlimage_1-420](assets/chlimage_1-420.png)
+![platstaggar](assets/site-tags.png)
 
 ## Namnutrymmen för katalogtaggar {#catalog-tag-namespaces}
 
@@ -67,7 +70,7 @@ Katalogfunktionen använder taggar för att definiera sig själv. När du konfig
 
 Katalogfunktionen innehåller en tagginställning som definierar taggarna som finns i katalogens filtergränssnitt. Inställningen Alla namnutrymmen hänvisar till omfånget för de taggnamnutrymmen som har valts för communitywebbplatsen.
 
-![chlimage_1-421](assets/chlimage_1-421.png)
+![catalog-namespace](assets/catalog-namespace.png)
 
 ## Tillämpa taggar på aktiveringsresurser {#applying-tags-to-enablement-resources}
 
@@ -88,7 +91,7 @@ Alla aktiveringsresurser som är taggade med något av följande:
 
 visas i `Ski Catalog` efter att aktiveringsresursen har publicerats.
 
-![chlimage_1-422](assets/chlimage_1-422.png)
+![basic-info](assets/applytags-basicinfo.png)
 
 ## Visa katalog vid publicering {#viewing-catalog-on-publish}
 
@@ -100,5 +103,5 @@ Om taggnamnutrymmen har lagts till och saknas kontrollerar du att taggarna och w
 
 Om inga aktiveringsresurser visas efter att du har valt en tagg när du visar katalogen kontrollerar du att en tagg från katalogens namnutrymmen används för aktiveringsresursen.
 
-![chlimage_1-423](assets/chlimage_1-423.png)
+![view-catalog](assets/viewcatalog.png)
 
