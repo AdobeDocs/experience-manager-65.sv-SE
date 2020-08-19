@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 33c85af4-4c56-487a-ba60-55211cb9f72c
 translation-type: tm+mt
-source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
+source-git-commit: 2fcd87cd1def7fc265ba40c83b50db86618f3b70
+workflow-type: tm+mt
+source-wordcount: '361'
+ht-degree: 0%
 
 ---
 
@@ -43,7 +46,7 @@ Komponenter måste konfigureras för att aktivera prenumerationer *och* följand
 
 ## Prenumerationer från följande {#subscriptions-from-following}
 
-![chlimage_1-5](assets/chlimage_1-5.png)
+![prenumerationsföljande](assets/subscription-following.png)
 
 Med knappen **Följ** kan du följa inmatningar som aktiviteter, prenumerationer och/eller meddelanden. Varje gång knappen **Följ** är markerad går det att aktivera eller inaktivera en markering.
 
@@ -61,9 +64,9 @@ När e-post är [konfigurerad för att svara via e-post](email.md#configure-poll
 
 Om de svarar på e-postmeddelandet visas det innehåll de anger i svaret som innehåll online.
 
-![chlimage_1-6](assets/chlimage_1-6.png)
+![e-postsvar](assets/email-reply.png)
 
 Hur lång tid det tar för ett svar att bokföras styrs av [avsökningimporterarens uppdateringsintervall](email.md#configure-polling-importer).
 
-![chlimage_1-7](assets/chlimage_1-7.png)
+![QA](assets/qa.png)
 
