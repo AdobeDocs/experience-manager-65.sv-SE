@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 404582ab-bb4c-4775-9ae3-17356d376dca
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 391893f7cf83c018d29af14200c6f160b6d83bdd
+source-git-commit: 18f401babef4cb2aad47e6e4cbb0500b0f8365e2
 workflow-type: tm+mt
 source-wordcount: '2108'
 ht-degree: 1%
@@ -21,9 +21,9 @@ ht-degree: 1%
 
 # Modereringskonsol {#moderation-console}
 
-I AEM Communities är det möjligt att [moderera communityinnehåll](/help/communities/moderate-ugc.md) både från författaren och publiceringsmiljöer av administratörer och community-moderatorer (betrodda communitymedlemmar som utsetts som moderatorer).
+I AEM Communities går det att [moderera communityinnehåll](/help/communities/moderate-ugc.md) gruppvis både från författaren och publiceringsmiljöer av administratörer och community-moderatorer (betrodda communitymedlemmar som utsetts som moderatorer).
 
-Administratörer och moderatorer för communityn kan även utföra moderering [i sitt sammanhang](/help/communities/in-context.md) i publiceringsmiljön.
+Administratörer och moderatorer för communityn kan också utföra moderering [i sitt sammanhang](/help/communities/in-context.md) i publiceringsmiljön.
 
 En funktion på alla [communitysajter](/help/communities/sites-console.md) är ett `Administration` menyalternativ som är tillgängligt för användare som loggar in med administratörsbehörighet. Länken ger `Administration` åtkomst till modereringskonsolen.
 
@@ -241,13 +241,13 @@ Förutom filtren i rutan [Filterspår](/help/communities/moderation.md#ootbfilte
 
 ![custom-tag-filter](assets/custom-tag-filter.png)
 
-Exempelprojektet [på Github implementerar](https://github.com/Adobe-Marketing-Cloud/aem-communities-extensions/tree/master/aem-communities-moderation-filter) taggfiltret för att filtrera UGC-listan baserat på om de specifika taggarna används på användargenererat innehåll. Du kan följa exempelkoden och skapa analoga filter för andra liknande UGC-metadatafält.
+Exempelprojektet [på Github implementerar](https://github.com/Adobe-Marketing-Cloud/aem-communities-extensions/tree/main/aem-communities-moderation-filter) taggfiltret för att filtrera UGC-listan baserat på om de specifika taggarna används på användargenererat innehåll. Du kan följa exempelkoden och skapa analoga filter för andra liknande UGC-metadatafält.
 
 Så här installerar du exemplet för taggfiltret:
 
 1. Öppna pakethanteraren på instansen AEM Author ([https://[aem-author]:4502/crx/packmgr/index.jsp](https://aem65-communities-demo.corp.adobe.com:4502/crx/packmgr/index.jsp)) och instansen AEM Publish ([https://[aem-publish]:4503/crx/packmgr/index.jsp](https://aem65-communities-demo.corp.adobe.com:4502/crx/packmgr/index.jsp)).
 1. Bygg paketet `com.adobe.social.sample.moderation.filter.ui.apps-1.0-SNAPSHOT.zip` från Github-koden och installera och aktivera det.
-1. Öppna paketkonsolen på instansen AEM Author ( `https://[aem-author]:4502/system/console/bundles`) och instansen AEM Publish ( `https://[aem-publish]:4503/system/console/bundles`).
+1. Öppna paketkonsolen på AEM Author-instansen ( `https://[aem-author]:4502/system/console/bundles`) och AEM Publish-instansen ( `https://[aem-publish]:4503/system/console/bundles`).
 1. Bygg paketet ` [com](https://sample-moderation-filter.com/).adobe.social.sample.moderation.filter.core-1.0-SNAPSHOT.jar` från Github och installera och aktivera det.
 1. Gå till **/apps/social/moderation/facets** -noden på AEM Author ([https://[aem-author]:4502/crx/de/index.jsp#/apps/social/moderation/facets](https://aem65-communities-demo.corp.adobe.com:4502/crx/de/index.jsp#/apps/social/moderation/facets)) och AEM Publish ([https://[aem-publish]:4502/crx/de/index.jsp#/apps/social/moderation/facets](https://aem65-communities-demo.corp.adobe.com:4502/crx/de/index.jsp#/apps/social/moderation/facets)).
 1. Lägg till en teknisk **användarcommunity-utility-reader** med `jcr:read` behörigheter.
