@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 63abeda4-6ea1-4b45-b188-f9c6b44ca0cd
 translation-type: tm+mt
-source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
+source-git-commit: 7acd89d830b9e758eec1b5a4beb18c22e4d12dcf
+workflow-type: tm+mt
+source-wordcount: '1141'
+ht-degree: 0%
 
 ---
 
@@ -19,17 +22,18 @@ source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
 
 ## Introduktion {#introduction}
 
-Från och med AEM Communities 6.1 lagras communityinnehåll, som ofta kallas användargenererat innehåll (UGC), i en enda gemensam butik som tillhandahålls av en [lagringsleverantör](working-with-srp.md) (SRP).
+Från och med AEM Communities 6.1 lagras communityinnehåll, som ofta kallas användargenererat innehåll (UGC), i en enda gemensam butik som tillhandahålls av en [lagringsresursleverantör](working-with-srp.md) (SRP).
 
 Det finns flera SRP-alternativ, som alla har tillgång till UGC via ett nytt AEM Communities-gränssnitt, [SRP API](srp-and-ugc.md) (SocialResourceProvider API), som omfattar alla CRUD-åtgärder (create, read, update).
 
 Alla SCF-komponenter implementeras med SRP API, vilket gör att kod kan utvecklas utan kunskap om den [underliggande topologin](topologies.md) eller platsen för UGC.
 
-***API:t för SocialResourceProvider är bara tillgängligt för licensierade kunder i AEM Communities.***
+***API:t SocialResourceProvider är bara tillgängligt för licensierade kunder till AEM Communities.***
 
 >[!NOTE]
 >
->**Egna komponenter**: För licensierade kunder i AEM Communities är SRP API tillgängligt för utvecklare av anpassade komponenter i syfte att komma åt UGC utan hänsyn till den underliggande topologin. Se [SRP och UGC Essentials](srp-and-ugc.md).
+>**Egna komponenter**: För licensierade AEM Communities-kunder är SRP API tillgängligt för utvecklare av anpassade komponenter för att få åtkomst till UGC utan hänsyn till den underliggande topologin. Se [SRP och UGC Essentials](srp-and-ugc.md).
+
 
 Se även:
 
@@ -39,15 +43,15 @@ Se även:
 
 ## Om databasen {#about-the-repository}
 
-För att förstå SRP är det praktiskt att förstå vilken roll AEM-databasen (OAK) har på en AEM-communitywebbplats.
+För att förstå SRP är det bra att förstå vilken roll AEM (OAK) har på en AEM communitywebbplats.
 
 **Java Content Repository (JCR)** Den här standarden definierar en datamodell och ett[JCR-API](https://jackrabbit.apache.org/jcr/jcr-api.html)(Application Programming Interface) för innehållsdatabaser. Det kombinerar egenskaper i vanliga filsystem med egenskaper i relationsdatabaser och lägger till ett antal extrafunktioner som innehållsprogram ofta behöver.
 
-En implementering av JCR är AEM-databasen, OAK.
+En implementering av JCR är AEM, OAK.
 
 **Apache Jackrabbit Oak (OAK)**[OAK](../../help/sites-deploying/platform.md) är en implementering av JCR 2.0 som är ett datalagringssystem som är särskilt utformat för innehållscentrerade program. Det är en typ av hierarkisk databas som är utformad för ostrukturerade eller halvstrukturerade data. I databasen lagras inte bara användarriktat innehåll utan även all kod, mallar och interna data som används av programmet. Gränssnittet för åtkomst av innehåll är [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md).
 
-Både JCR och OAK används vanligtvis för att hänvisa till AEM-databasen.
+Både JCR och OAK används vanligtvis för att referera till AEM.
 
 När webbplatsinnehållet har utvecklats i den privata författarmiljön måste det kopieras till den offentliga publiceringsmiljön. Detta sker ofta genom en åtgärd som kallas *[replikering](deploy-communities.md#replication-agents-on-author)*. Detta sker under kontroll av författaren/utvecklaren/administratören.
 
@@ -68,9 +72,9 @@ När UGC sparas i delad lagring finns det en enda instans av medlemsinnehåll so
 
 ### ASRP {#asrp}
 
-För ASRP lagras UGC inte i JCR, utan lagras i en molntjänst som hanteras av Adobe. UGC som lagras i ASRP kan varken visas med CRXDE Lite eller kommas åt med JCR-API:t.
+När det gäller ASRP lagras UGC inte i JCR, utan lagras i en molntjänst som hanteras av Adobe. UGC som lagras i ASRP kan varken visas med CRXDE Lite eller nås med JCR-API:t.
 
-Se [ASRP - Adobe Storage Resource Provider](asrp.md).
+Se [ASRP - Adobe-lagringsresursprovider](asrp.md).
 
 Det är inte möjligt för utvecklare att komma åt användargenererat innehåll direkt.
 
@@ -78,23 +82,23 @@ ASRP använder Adobe cloud för frågor.
 
 ### MSRP {#msrp}
 
-För MSRP lagras UGC inte i JCR, utan i MongoDB. UGC som lagras i MSRP kan varken visas med CRXDE Lite eller kommas åt med JCR-API:t.
+För MSRP lagras UGC inte i JCR, utan i MongoDB. UGC som lagras i MSRP kan varken visas med CRXDE Lite eller nås med JCR-API:t.
 
 Se [MSRP - MongoDB-lagringsresursprovider](msrp.md).
 
-Även om MSRP är jämförbart med ASRP är det möjligt att använda vanliga verktyg för direktåtkomst till UGC som lagras i MongoDB eftersom alla AEM-serverinstanser använder samma UGC.
+Även om MSRP är jämförbart med ASRP är det möjligt att använda vanliga verktyg för direktåtkomst till UGC som lagras i MongoDB eftersom alla AEM serverinstanser använder samma UGC.
 
 MSRP använder Solr för frågor.
 
 ### JSRP {#jsrp}
 
-JSRP är standardprovider för åtkomst till all UGC i en enda AEM-instans. Det gör att du snabbt kan uppleva AEM Communities 6.1 utan att behöva konfigurera MSRP eller ASRP.
+JSRP är standardprovider för åtkomst till all UGC i en enda AEM. Det gör att du snabbt kan uppleva AEM Communities 6.1 utan att behöva konfigurera MSRP eller ASRP.
 
 Se [JSRP - JCR-lagringsresursprovider](jsrp.md).
 
-När det gäller JSRP rekommenderar vi starkt att JCR-API:t aldrig används, medan UGC lagras i JCR och är åtkomligt via både CRXDE Lite och JCR, annars kan framtida ändringar påverka den anpassade koden.
+När det gäller JSRP rekommenderar vi starkt att JCR-API:t aldrig används, trots att UGC lagras i JCR och är tillgängligt via både CRXDE Lite och JCR, eftersom framtida ändringar kan påverka den anpassade koden.
 
-Dessutom delas inte databasen för författar- och publiceringsmiljöer. Även om ett kluster med publiceringsinstanser resulterar i en delad publiceringsdatabas, kommer den UGC som anges vid publicering inte att vara synlig för författaren, vilket innebär att det inte går att hantera UGC från författaren. UGC sparas bara i AEM-databasen (JCR) för den instans där den angavs.
+Dessutom delas inte databasen för författar- och publiceringsmiljöer. Även om ett kluster med publiceringsinstanser resulterar i en delad publiceringsdatabas, kommer den UGC som anges vid publicering inte att vara synlig för författaren, vilket innebär att det inte går att hantera UGC från författaren. UGC sparas bara i den AEM databasen (JCR) för instansen som den angavs för.
 
 JSRP använder Oak-index för frågor.
 
