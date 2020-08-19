@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: e228f1db-91ea-4ec3-86da-06d89d74bc72
 translation-type: tm+mt
-source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
+source-git-commit: 7acd89d830b9e758eec1b5a4beb18c22e4d12dcf
+workflow-type: tm+mt
+source-wordcount: '1491'
+ht-degree: 2%
 
 ---
 
@@ -80,7 +83,8 @@ sh ./scripts/cloud-scripts/zkcli.sh \
 #### 2. Skapa en samling {#create-a-collection}
 
 Referens:
-[https://cwiki.apache.org/confluence/display/solr/Solr+Start+Script+Reference#SolrStartScriptReference-Create](https://cwiki.apache.org/confluence/display/solr/Solr+Start+Script+Reference#SolrStartScriptReference-Create)
+[https://cwiki.apache.org/confluence/display/solr/Solr+Start+Script+Reference#SolrStartScriptReference-Create
+](https://cwiki.apache.org/confluence/display/solr/Solr+Start+Script+Reference#SolrStartScriptReference-Create)
 
 Användning:
 ./bin/solr create \
@@ -107,9 +111,9 @@ sh ./scripts/cloud-scripts/zkcli.sh \
 
 ### Jämförelse av standard och avancerad MLS {#comparison-of-standard-and-advanced-mls}
 
-Flerspråkig sökning (MLS) för AEM Communities är byggt för Solr-plattformen för att ge förbättrad sökning på alla språk som stöds, inklusive engelska.
+Flerspråkig sökning (MLS) för AEM Communities är byggd för Solr-plattformen för att ge bättre sökning på alla språk som stöds, inklusive engelska.
 
-MLS för AEM-communities är tillgängligt som standard-MLS eller avancerad MLS. Standard-MLS innehåller endast Solr-konfigurationsinställningar och utesluter alla plugin-program eller resursfiler. Advanced MLS är den mer omfattande lösningen och innehåller Solr-konfigurationsinställningar samt plugin-program och relaterade resurser
+MLS för AEM communities är tillgängligt som standard-MLS eller avancerad MLS. Standard-MLS innehåller endast Solr-konfigurationsinställningar och utesluter alla plugin-program eller resursfiler. Advanced MLS är den mer omfattande lösningen och innehåller Solr-konfigurationsinställningar samt plugin-program och relaterade resurser
 
 Standard-MLS innehåller förbättringar för innehållssökning för följande språk:
 
@@ -143,7 +147,7 @@ Följande 33 språk stöds i avancerad MLS.
 
 **Obs**: AEM 6.1 avser AEM 6.1 Communities FP3 och tidigare.
 
-![chlimage_1-283](assets/chlimage_1-283.png)
+![compare-solr-mls](assets/compare-solr-mls.png)
 
 ### Installerar standard-MLS {#installing-standard-mls}
 
@@ -156,7 +160,7 @@ Standard-MLS-filer (schema.xml, solrconfig.xml) för Solr 4.10.
 
 Standard-MLS-filer (schema.xml, solrconfig.xml) för Solr 5.x.
 
-Standardfilerna för MLS lagras i AEM-databasen.
+Standard-MLS-filerna lagras i AEM.
 
 **Obs**: Solr-filerna lagras i mappen msrp/, men de gäller även för DSRP (inga ändringar krävs).
 
@@ -217,7 +221,7 @@ Standardfilerna för MLS lagras i AEM-databasen.
 
 För att SRP-samlingen (MSRP eller DSRP) ska ha stöd för avancerad MLS krävs nya Solr-plugin-program förutom ett anpassat schema och en Solr-konfiguration. Alla nödvändiga objekt paketeras i en nedladdningsbar zip-fil. Dessutom ingår ett installationsskript som ska användas när Solr distribueras i fristående läge.
 
-Information om hur du får tillgång till det avancerade MLS-paketet finns i [AEM Advanced MLS](deploy-communities.md#aem-advanced-mls) i avsnittet om distribution i dokumentationen.
+Information om hur du får tillgång till det avancerade MLS-paketet finns i [AEM avancerad MLS](deploy-communities.md#aem-advanced-mls) i avsnittet om distribution i dokumentationen.
 
 Så här kommer du igång med installationen av antingen SolrCloud eller fristående läge:
 
