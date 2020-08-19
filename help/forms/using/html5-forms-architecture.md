@@ -1,8 +1,8 @@
 ---
 title: Arkitektur för HTML5-formulär
 seo-title: Arkitektur för HTML5-formulär
-description: HTML5-formulär distribueras som ett paket i den inbäddade AEM-instansen och visar funktionaliteten som REST-slutpunkt över HTTP/S med hjälp av RESTful Apache Sling-arkitekturen.
-seo-description: HTML5-formulär distribueras som ett paket i den inbäddade AEM-instansen och visar funktionaliteten som REST-slutpunkt över HTTP/S med hjälp av RESTful Apache Sling-arkitekturen.
+description: HTML5-formulär distribueras som ett paket i den inbäddade AEM och visar funktionaliteten som REST-slutpunkt över HTTP/S med hjälp av RESTful Apache Sling-arkitekturen.
+seo-description: HTML5-formulär distribueras som ett paket i den inbäddade AEM och visar funktionaliteten som REST-slutpunkt över HTTP/S med hjälp av RESTful Apache Sling-arkitekturen.
 uuid: 7f515cea-1447-4fc7-82ba-17f2e3f9f80c
 contentOwner: robhagat
 content-type: reference
@@ -11,7 +11,10 @@ topic-tags: hTML5_forms
 discoiquuid: a644978e-5736-4771-918a-dfefe350a4a1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 84dd0d551431169239f63cff62a015e15f998e7d
+workflow-type: tm+mt
+source-wordcount: '2043'
+ht-degree: 0%
 
 ---
 
@@ -20,11 +23,9 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ## Arkitektur {#architecture}
 
-HTML5-formulärfunktioner distribueras som ett paket i den inbäddade AEM-instansen och visas som en REST-slutpunkt över HTTP/S med RESTful [Apache Sling Architecture](https://sling.apache.org/).
+HTML5-formulärfunktioner distribueras som ett paket i den inbäddade AEM och visas som REST-slutpunkt över HTTP/S med RESTful [Apache Sling Architecture](https://sling.apache.org/).
 
-`<style> .background{ display: none; position: absolute; top: 0%; left: 0%; width: 100%; height: 100%; background-color: black; z-index:1001; -moz-opacity: 0.8; opacity:.80; filter: alpha(opacity=80); } .content { display: none; position: fixed; top: 50%; left: 50%; width: 1200px; height: 756px; margin-left: -600px; margin-top: -378px; border:10px solid orange; background-color: white; z-index:1002; overflow: visible; } </style>` [ 01-aem-forms-architecture ![](assets/01-aem-forms-architecture.jpg)*View Full Size *](javascript:void(0).md)
-
-[ ![02-aem-forms-architecture_large](assets/02-aem-forms-architecture_large.jpg)](javascript:void(0).md)
+![02-aem-forms-architecture_large](assets/02-aem-forms-architecture_large.jpg)
 
 ### Använda Sling Framework {#using-sling-framework}
 
@@ -50,8 +51,8 @@ HTML5-formulär cache-lagrar inte mallar som saknar referenser till fragment och
 
 Forms OSGi-tjänsten bearbetar en begäran i två steg:
 
-* **Skapa** layout och ursprungligt formulärläge: Forms OSGi-renderingstjänsten anropar Forms Cache-komponenten för att avgöra om formuläret redan har cache-lagrats och inte har ogiltigförklarats. Om formuläret är cache-lagrat och giltigt, används den genererade HTML-koden från cachen. Om formuläret blir ogiltigt genererar återgivningstjänsten Forms OSGi den inledande formulärlayouten och formulärläget i XML-format. Denna XML konverteras till HTML-layout och inledande JSON-formulärtillstånd av Forms OSGi-tjänsten och cachelagras sedan för efterföljande förfrågningar.
-* **Förifyllda formulär**: Vid återgivning anropas Forms OSGi-renderingstjänsten om en användare begär formulär med förifyllda data och genererar ett nytt formulärtillstånd med sammanfogade data. Eftersom layouten redan genereras i ovanstående steg är anropet snabbare än det första anropet. Detta anrop utför bara datasammanfogningen och kör skripten på data.
+* **Skapa** layout och ursprungligt formulärläge: Forms OSGi-renderingstjänsten anropar Forms Cache-komponenten för att avgöra om formuläret redan har cache-lagrats och inte har ogiltigförklarats. Om formuläret är cache-lagrat och giltigt, används den genererade HTML-koden från cachen. Om formuläret blir ogiltigt genererar Forms OSGi-renderingstjänsten den första formulärlayouten och formulärläget i XML-format. Denna XML konverteras till HTML-layout och inledande JSON-formulärstatus av tjänsten Forms OSGi och cachelagras sedan för efterföljande begäranden.
+* **Förifylld Forms**: Under återgivningen, om en användare begär formulär med förifyllda data, anropar Forms OSGi-renderingstjänsten Forms tjänstbehållare och genererar ett nytt formulärtillstånd med sammanfogade data. Eftersom layouten redan genereras i ovanstående steg är anropet snabbare än det första anropet. Detta anrop utför bara datasammanfogningen och kör skripten på data.
 
 Om det finns någon uppdatering i formuläret eller något av resurserna som används i formuläret, upptäcks den av formulärets cachekomponent och cachen för det aktuella formuläret ogiltigförklaras. När Forms OSGi-tjänsten har slutfört bearbetningen lägger Profile Renderer jsp till JavaScript-biblioteksreferenser och format i det här formuläret och returnerar svaret till klienten. En vanlig webbserver som [Apache](https://httpd.apache.org/) kan användas här med HTML-komprimering aktiverat. En webbserver skulle minska svarsstorleken, nätverkstrafiken och den tid som krävs för att strömma data mellan servern och klientdatorn avsevärt.
 
@@ -59,7 +60,7 @@ När en användare skickar formuläret skickar webbläsaren formulärets status 
 
 ## Komponenter {#components}
 
-Du behöver tilläggspaketet AEM Forms för att kunna aktivera HTML5-formulär. Information om hur du installerar AEM Forms-tilläggspaket finns i [Installera och konfigurera AEM Forms](../../forms/using/installing-configuring-aem-forms-osgi.md).
+Du behöver AEM Forms tilläggspaket för att kunna aktivera HTML5-formulär. Information om hur du installerar AEM Forms tilläggspaket finns i [Installera och konfigurera AEM Forms](../../forms/using/installing-configuring-aem-forms-osgi.md).
 
 ### OSGi Components (adobe-lc-forms-core.jar) {#osgi-components-adobe-lc-forms-core-jar}
 
@@ -69,9 +70,9 @@ Den här komponenten innehåller OSGi-komponenter för rendering, cachehantering
 
 #### Forms OSGi Service {#forms-osgi-service}
 
-Denna OSGi-tjänst innehåller logik för att återge en XDP som HTML och hanterar överföringen av ett formulär för att generera data-XML. Den här tjänsten använder Forms-tjänstbehållaren. Forms-tjänstbehållaren anropar intern komponent `XMLFormService.exe` som utför bearbetningen.
+Denna OSGi-tjänst innehåller logik för att återge en XDP som HTML och hanterar överföringen av ett formulär för att generera data-XML. Den här tjänsten använder Forms tjänstbehållare. Forms servicebehållare anropar intern komponent `XMLFormService.exe` som utför bearbetningen.
 
-Om en återgivningsbegäran tas emot anropar den här komponenten Forms-tjänstbehållaren för att generera layout- och tillståndsinformation som bearbetas ytterligare för att generera HTML- och JSON-formulärlägen i DOM.
+Om en återgivningsbegäran tas emot anropar den här komponenten Forms tjänstbehållare för att generera layout- och lägesinformation som bearbetas ytterligare för att generera HTML- och JSON-formulärlägen i DOM-format.
 
 Den här komponenten ansvarar också för att generera data-XML från det inskickade formulärtillståndet JSON.
 
@@ -110,7 +111,7 @@ HTML5-formulär utför cachelagring i minnet med LRU-strategi. Om cachestrategin
 
 Med konfigurationstjänsten kan du justera konfigurationsparametrar och cacheinställningar för HTML5-formulär.
 
-Om du vill uppdatera de här inställningarna går du till CQ Felix Admin Console (finns på https://&lt;&#39;[server]:[port]&#39;/system/console/configMgr), söker efter och väljer Konfigurera mobilformulär.
+Om du vill uppdatera de här inställningarna går du till CQ Felix Admin Console (finns på https://&lt;&#39;[server]:[port]&#39;/system/console/configMgr), söker efter och väljer Mobile Forms Configuration.
 
 Du kan konfigurera cachestorleken eller inaktivera cacheminnet med hjälp av konfigurationstjänsten. Du kan även aktivera felsökning med parametern Felsökningsalternativ. Mer information om felsökning av formulär finns i [Felsöka HTML5-formulär](/help/forms/using/debug.md).
 
@@ -124,7 +125,7 @@ Körningspaketet innehåller de klientbibliotek som används för att återge HT
 
 Adobe XFA-implementeringen stöder två typer av skriptspråk för att möjliggöra användardefinierad logikkörning i formulär: JavaScript och FormCalc.
 
-Skriptmotorn i HTML-formulär är skriven i JavaScript som har stöd för XFA skriptnings-API:t på båda dessa språk.
+Skriptmotorn i HTML Forms är skriven i JavaScript som stöder XFA-skriptprogrammeringsgränssnittet på båda dessa språk.
 
 Vid återgivning översätts (och cachelagras) FormCalc-skriptet till JavaScript på servern som är genomskinligt för användaren eller designern.
 
@@ -169,7 +170,7 @@ Sling-paketet innehåller innehåll som är relaterat till profiler och profilå
 
 #### Profiler {#profiles}
 
-Profiler är de resursnoder som representerar ett formulär eller en formulärfamilj. På CQ-nivå är dessa profiler JCR-noder. Noderna finns i mappen **/content** i JCR-databasen och kan finnas i alla undermappar i mappen **/content** .
+Profiler är resursnoder som representerar ett formulär eller Forms-familjen. På CQ-nivå är dessa profiler JCR-noder. Noderna finns i mappen **/content** i JCR-databasen och kan finnas i alla undermappar i mappen **/content** .
 
 #### Profilåtergivare {#profile-renderers}
 
