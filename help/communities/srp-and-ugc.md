@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 0763f236-5648-49e9-8a24-dbc8f4c77ee3
 translation-type: tm+mt
-source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
+source-git-commit: 7acd89d830b9e758eec1b5a4beb18c22e4d12dcf
+workflow-type: tm+mt
+source-wordcount: '697'
+ht-degree: 0%
 
 ---
 
@@ -104,15 +107,15 @@ protected void doGet(final SlingHttpServletRequest request, final SlingHttpServl
 
 Följande beskrivningar av lagringsplats kan vara till hjälp när du utvecklar med JSRP eller kanske MSRP. Det finns för närvarande inget användargränssnitt som kan komma åt UGC som lagras i ASRP, vilket finns för verktygen JSRP ([CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)) och MSRP (MongoDB).
 
-**komponentplacering**
+**Komponentplats**
 
-När en medlem går in i UGC i publiceringsmiljön interagerar de med en komponent som en del av en AEM-webbplats.
+När en medlem går in i UGC i publiceringsmiljön interagerar de med en komponent som en del av en AEM.
 
 Ett exempel på en sådan komponent är [kommentarkomponenten](http://localhost:4502/content/community-components/en/comments.html) som finns på webbplatsen för [Community Components Guide](components-guide.md) . Sökvägen till kommentarnoden i den lokala databasen är:
 
 * Komponentsökväg = `/content/community-components/en/comments/jcr:content/content/includable/comments`
 
-**skuggnodplats**
+**Skuggnodplats**
 
 När du skapar UGC skapas även en [skuggnod](srp.md#about-shadow-nodes-in-jcr) som de nödvändiga åtkomstkontrollistorna tillämpas på. Sökvägen till motsvarande skuggnod i den lokala databasen är resultatet av att skuggnodens rotsökväg har försatts i komponentsökvägen:
 
@@ -126,7 +129,7 @@ UGC skapas på båda dessa platser och ska bara nås med en [verktygsmetod](#uti
 * Rotsökväg = `/content/usergenerated/asi/srp-choice`
 * UGC-nod för JSRP = `/content/usergenerated/asi/jcr/content/community-components/en/comments/jcr:content/content/includable/comments/srzd-let_it_be_`
 
-*Observera* att UGC-noden för JSRP *endast* finns i AEM-instansen (antingen författaren eller publiceringen) som den angavs för. Om det anges i en publiceringsinstans går det inte att moderera från modereringskonsolen på författaren.
+*För JSRP är du medveten* om att UGC-noden *bara* finns på den AEM instansen (antingen författaren eller publiceringen) som den angavs för. Om det anges i en publiceringsinstans går det inte att moderera från modereringskonsolen på författaren.
 
 ## Relaterad information {#related-information}
 
