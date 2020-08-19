@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 71fac7e9-814a-48b5-b816-9bdcb2a05190
 translation-type: tm+mt
-source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
+source-git-commit: 7acd89d830b9e758eec1b5a4beb18c22e4d12dcf
+workflow-type: tm+mt
+source-wordcount: '203'
+ht-degree: 0%
 
 ---
 
@@ -28,11 +31,11 @@ En diskussion om lagringsalternativ och driftsättningstopologier finns på:
 
 ## Konsol för lagringskonfiguration {#storage-configuration-console}
 
-![chlimage_1-188](assets/chlimage_1-188.png)
+![jsrp-configuration](assets/jsrp-configuration.png)
 
 För att nå lagringskonsolen i redigeringsmiljön.
 
-* Från global navigering väljer du **[!UICONTROL Verktyg]** > **[!UICONTROL Communities]** > **[!UICONTROL Storage Configuration]**
+* Från global navigering väljer du **[!UICONTROL Tools]** > **[!UICONTROL Communities]** > **[!UICONTROL Storage Configuration]**
 
 Så här väljer du ett annat lagringsalternativ än standard-JCR:
 
@@ -43,11 +46,11 @@ Så här väljer du ett annat lagringsalternativ än standard-JCR:
    * Se information för [val av DSRP](dsrp.md#select-dsrp)
    * Se information om hur du [väljer ASRP](asrp.md#select-asrp)
 
-* Välj **[!UICONTROL Skicka]**.
+* Välj **[!UICONTROL Submit]**.
 
 ### Om JCR-lagring {#about-jcr-storage}
 
-Observera att om inget val görs är standardinställningen AEM-databasen JCR.
+Observera att om inget val görs är standarddatabasen AEM JCR.
 
 JCR är *inte* en vanlig butik som delas av författaren och publiceringsmiljöerna. Community-innehåll visas bara i den författar- eller publiceringsmiljö där det skapades.
 
