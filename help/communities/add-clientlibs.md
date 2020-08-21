@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 46f81c3f-6512-43f1-8ec1-cc717ab6f6ff
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2b1cc29fbfdb80aff6b6fc5c6c4fc9093d12e418
+source-git-commit: fcdae5363e7a0070b5d6b76227e5c65efb71bc03
 workflow-type: tm+mt
 source-wordcount: '687'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
@@ -23,9 +23,9 @@ ht-degree: 2%
 
 ## Lägg till en ClientLibraryFolder (clientlibs) {#add-a-clientlibraryfolder-clientlibs}
 
-Skapa en ClientLibraryFolder med namnet `clientlibs`som innehåller den JS och CSS som används för att återge platsens sidor.
+Skapa en ClientLibraryFolder med namnet `clientlibs` som innehåller den JS och CSS som används för att återge platsens sidor.
 
-Det `categories`egenskapsvärde som anges för det här klientbiblioteket är den identifierare som används för att ta med klientlibben direkt från en innehållssida eller för att bädda in den i andra klientlibs.
+Det egenskapsvärde som anges för det här klientbiblioteket är den identifierare som används för att ta med klientlibben direkt från en innehållssida eller för att bädda in den i andra klientlibs. `categories`
 
 1. Expandera med **CRXDE Lite**`/etc/designs`
 
@@ -36,7 +36,7 @@ Det `categories`egenskapsvärde som anges för det här klientbiblioteket är de
 
 1. Click **OK**
 
-![chlimage_1-220](assets/chlimage_1-220.png)
+![add-client-library](assets/add-client-library.png)
 
 På fliken **Egenskaper** för den nya `clientlibs` noden anger du egenskapen **categories** :
 
@@ -55,7 +55,7 @@ Obs! för att visa kategorivärdet med appar. är en konvention som identifierar
 1. Ange **namn:** `js.txt`
 1. Klicka på **Spara alla**
 
-![chlimage_1-221](assets/chlimage_1-221.png)
+![clientlibs-css](assets/clientlibs-css.png)
 
 Den första raden i css.txt och js.txt identifierar den basplats från vilken följande fillistor ska hittas.
 
@@ -103,11 +103,11 @@ I det här fallet är det bäst att inkludera alla och så att de mer grundlägg
 
 * Klicka på **Spara alla**
 
-![chlimage_1-222](assets/chlimage_1-222.png)
+![scf-clientlibs](assets/scf-clientlibs.png)
 
 Så här `/etc/designs/an-scf-sandbox/clientlibs` ska nu visas i databasen:
 
-![chlimage_1-223](assets/chlimage_1-223.png)
+![scf-clientlibs-view](assets/scf-clientlibs1.png)
 
 ### Inkludera klienter i PlayPage-mallen {#include-clientlibs-in-playpage-template}
 
@@ -115,17 +115,17 @@ Utan att ta med kategorin `apps.an-scf-sandbox` ClientLibraryFolder på sidan ko
 
 Utan att ta med clientlibs visas SCF-kommentarkomponenten som stylfri:
 
-![chlimage_1-224](assets/chlimage_1-224.png)
+![clientlibs-comment](assets/clientlibs-comment.png)
 
 När clientlibs för apps.an-scf-sandbox ingår formateras SCF-kommentarskomponenten:
 
-![chlimage_1-225](assets/chlimage_1-225.png)
+![clientlibs-comment-styled](assets/clientlibs-comment1.png)
 
 Programsatsen include tillhör i `head` avsnittet i `html` skriptet. Standardvärdet **`foundation head.jsp`** innehåller ett skript som kan överlappas: **`headlibs.jsp`**.
 
 **Copy headlibs.jsp and include clientlibs:**
 
-1. Med **CRXDE Lite** väljer du **`/libs/foundation/components/page/headlibs.jsp`**
+1. Markera med **CRXDE Lite****`/libs/foundation/components/page/headlibs.jsp`**
 
 1. Högerklicka och välj **Kopiera** (eller välj Kopiera i verktygsfältet)
 1. Välj **`/apps/an-scf-sandbox/components/playpage`**
@@ -150,7 +150,7 @@ Läs in webbplatsen i webbläsaren och se om bakgrunden inte är en blå nyans.
 
 [https://localhost:4502/content/an-scf-sandbox/en/play.html](https://localhost:4502/content/an-scf-sandbox/en/play.html)
 
-![chlimage_1-226](assets/chlimage_1-226.png)
+![community-play](assets/community-play.png)
 
 ### Spara ditt arbete hittills {#saving-your-work-so-far}
 
@@ -160,7 +160,7 @@ Paketet finns i självstudiekursen [Skapa en exempelsida](/help/communities/crea
 
 Så här skapar du ett paket:
 
-* Från CRXDE Lite klickar du på [paketikonen](https://localhost:4502/crx/packmgr/)
+* Klicka på [paketikonen från CRXDE Lite](https://localhost:4502/crx/packmgr/)
 * Klicka på **Skapa paket**
 
    * Paketnamn: an-scf-sandbox-minimum-pkg
