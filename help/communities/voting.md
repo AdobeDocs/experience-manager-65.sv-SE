@@ -10,7 +10,10 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 071cac6d-05c5-47ab-85bc-ead6693ca1f4
 translation-type: tm+mt
-source-git-commit: 2bcd098ae901070d5e50cd89d06c854884b4e461
+source-git-commit: c190d5f223c85f6c49fea1391d8a3d2baff20192
+workflow-type: tm+mt
+source-wordcount: '234'
+ht-degree: 0%
 
 ---
 
@@ -27,27 +30,27 @@ Mer information finns i Grunderna för [communitykomponenter](basics.md).
 
 När de [nödvändiga klientbiblioteken](essentials-voting.md#essentials-for-client-side) inkluderas visas `Voting` komponenten på det här sättet.
 
-![chlimage_1-307](assets/chlimage_1-307.png)
+![röstningskomponent](assets/voting-component.png)
 
 ## Konfigurerar röstning {#configuring-voting}
 
 Markera den monterade `Voting` komponent som du vill öppna och välj den `Configure` ikon som öppnar redigeringsdialogrutan.
 
-![chlimage_1-308](assets/chlimage_1-308.png)
+![konfigurera](assets/configure-new.png)
 
-Under fliken **[!UICONTROL Texter och etiketter]** anger du vilka egenskaper som ska användas för röstinspelning.
+Ange de egenskaper som ska användas för att spela in röster på fliken **[!UICONTROL Texts & Labels]** .
 
-![chlimage_1-309](assets/chlimage_1-309.png)
+![röstsetikett](assets/voting-label.png)
 
-* **[!UICONTROL Etikett för positivt svar]**
+* **[!UICONTROL Positive Response Label]**
 
    (*Obligatoriskt*) Egenskapsnamnet internal för ett positivt svar.
 
-* **[!UICONTROL Etikett för negativt svar]**
+* **[!UICONTROL Negative Response Label]**
 
    (*Obligatoriskt*) Det interna egenskapsnamnet för ett negativt svar.
 
-* **[!UICONTROL Namn]**
+* **[!UICONTROL Tally Name]**
 
    (*Obligatoriskt*) Det interna, identifierbara egenskapsnamnet för den här instansen av en röstkomponent.
 
