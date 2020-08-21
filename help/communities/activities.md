@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 89f3630f-c01a-4dc0-9ff5-169785f22c01
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 10c17fc199c476ec66059cc6bf4cbb4a0ff1af40
+source-git-commit: fcdae5363e7a0070b5d6b76227e5c65efb71bc03
 workflow-type: tm+mt
 source-wordcount: '464'
 ht-degree: 0%
@@ -29,7 +29,7 @@ Möjligheten att följa ger en annan bild av aktiviteter när communitymedlemmar
 
 Dokumentet beskriver:
 
-* Lägga till komponenten Activity Streams på en AEM-webbplats
+* Lägga till komponenten Activity Streams på en AEM
 * Konfigurationsinställningar för komponenten för aktivitetsströmmar
 
 ### Lägga till aktivitetsströmmar till en sida {#adding-activity-streams-to-a-page}
@@ -44,13 +44,13 @@ Mer information finns i Grunderna för [communitykomponenter](/help/communities/
 
 När de [nödvändiga klientbiblioteken](/help/communities/essentials-activities.md#essentials-for-client-side) inkluderas visas `Activity Streams` komponenten så här:
 
-![chlimage_1-195](assets/chlimage_1-195.png)
+![activity-streams](assets/activity-component.png)
 
 ### Konfigurera aktivitetsströmmar {#configuring-activity-streams}
 
 Markera den monterade `Activity Streams` komponent som du vill öppna och välj den `Configure` ikon som öppnar redigeringsdialogrutan.
 
-![chlimage_1-494](assets/chlimage_1-494.png)
+![konfigurera](assets/configure-new.png)
 
 Ange vilka aktiviteter som ska visas på fliken **Användaraktiviteter** :
 
@@ -80,7 +80,7 @@ Ange vilka aktiviteter som ska visas på fliken **Användaraktiviteter** :
 
 Komponenter måste konfigureras för att aktivera följande. Funktioner som tillåter följande är [blogg](/help/communities/blog-feature.md), [forum](/help/communities/forum.md), [QnA](/help/communities/working-with-qna.md), [kalender](/help/communities/calendar.md), [filbibliotek](/help/communities/file-library.md)[](/help/communities/comments.md)och¥comments.
 
-![chlimage_1-5](assets/chlimage_1-5.png)
+![följande vy](assets/following-activities.png)
 
 Med knappen **Följ** kan du följa inmatningar som aktiviteter, [meddelanden](/help/communities/notifications.md)eller [prenumerationer](/help/communities/subscriptions.md). Varje gång knappen **Följ** är markerad går det att aktivera eller inaktivera en markering. Markeringen visas bara när den är konfigurerad. `Email Subscriptions`
 
