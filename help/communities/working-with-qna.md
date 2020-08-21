@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 6e6ffe09-c50b-4238-8b8c-597c133d0a9e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2bcd098ae901070d5e50cd89d06c854884b4e461
+source-git-commit: c190d5f223c85f6c49fea1391d8a3d2baff20192
+workflow-type: tm+mt
+source-wordcount: '1380'
+ht-degree: 0%
 
 ---
 
@@ -32,24 +35,26 @@ Forumfunktionen QnA (frågor och svar) ger ett område där communitymedlemmar k
 
 Dokumentationen beskriver:
 
-* Lägga till QnA-forumfunktionen på en AEM-webbplats.
+* Lägga till QnA-forumfunktionen till en AEM webbplats.
 * Konfigurationsinställningar för `QnA`komponenten.
 
 ## Lägga till ett forum med frågor och svar på en sida {#adding-a-q-a-forum-to-a-page}
 
-Om du vill lägga till en `QnA` komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att leta reda på `Communities / QnA`och dra komponenten till en sida där QnA-forumet ska visas.
+Om du vill lägga till en `QnA` komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att leta reda på `Communities / QnA` och dra komponenten till en sida där QnA-forumet ska visas.
 
 Mer information finns i Grunderna för [communitykomponenter](/help/communities/basics.md).
 
-När de [nödvändiga klientbiblioteken](/help/communities/qna-essentials.md#essentials-for-client-side) inkluderas visas `QnA`komponenten så här:
+När de [nödvändiga klientbiblioteken](/help/communities/qna-essentials.md#essentials-for-client-side) inkluderas visas `QnA` komponenten så här:
 
-![chlimage_1](assets/chlimage_1.png)
+![qna-component](assets/qna-component.png)
 
 ### Konfigurera QnA {#configuring-qna}
 
 Markera den monterade `QnA` komponent som du vill öppna och välj den `Configure` ikon som öppnar redigeringsdialogrutan.
 
-![chlimage_1-1](assets/chlimage_1-1.png) ![qna-config](assets/qna-config.png)
+![konfigurera](assets/configure-new.png)
+
+![qna-config](assets/qna-config.png)
 
 #### Fliken Inställningar {#settings-tab}
 
