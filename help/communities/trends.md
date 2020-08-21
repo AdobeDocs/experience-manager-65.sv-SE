@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 4a0debdd-acb9-4646-80bb-fec66fae4088
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 17088abc71bb820693259088c8a9b938a43cd9d3
+source-git-commit: c190d5f223c85f6c49fea1391d8a3d2baff20192
 workflow-type: tm+mt
 source-wordcount: '357'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
@@ -33,9 +33,9 @@ Dokumentet beskriver:
 
 ### Krav {#requirement}
 
-Data för `Community Activity List` programmet är bara tillgängliga när Adobe Analytics har licens och konfigurerats för communitywebbplatsen.
+Data för `Community Activity List` webbplatsen är bara tillgängliga när Adobe Analytics har licens och konfigurerats för communitywebbplatsen.
 
-Se [Analytics Configuration for Communities Features](/help/communities/analytics.md).
+Se [Analyskonfiguration för communityfunktioner](/help/communities/analytics.md).
 
 ### Lägga till en lista med communityaktiviteter på en sida {#adding-a-community-activity-list-to-a-page}
 
@@ -55,11 +55,11 @@ När komponenten placeras på en sida i en community-webbplats är det så här 
 
 Markera den monterade `Community Activity List` komponent som du vill öppna och välj den `Configure` ikon som öppnar redigeringsdialogrutan.
 
-![chlimage_1-55](assets/chlimage_1-55.png)
+![konfigurera](assets/configure-new.png)
 
 Under fliken **Kommentarer** anger du om och hur kommentarer för överförda filer ska visas:
 
-![chlimage_1-56](assets/chlimage_1-56.png)
+![egenskaper](assets/activity-list-properties.png)
 
 * **Typ**
 
@@ -126,5 +126,5 @@ Standard är markerat.
 
 **Trending Content** config: Typ = innehåll, aktivitetstyp = inlägg
 
-![chlimage_1-57](assets/chlimage_1-57.png)
+![komponenter](assets/activity-list-components.png)
 
