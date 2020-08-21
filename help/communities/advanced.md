@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: eb3d5c37-8097-46de-8c4f-804ea723f1c5
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9ea2efb7409ae38c8771815336ae0d9388d923fa
+source-git-commit: fcdae5363e7a0070b5d6b76227e5c65efb71bc03
 workflow-type: tm+mt
 source-wordcount: '1060'
 ht-degree: 1%
@@ -62,7 +62,7 @@ Skillnaderna i hur du ställer in poängsättnings- och badging-regler är:
 
 Den avancerade bedömningsmotorn tillhandahåller en OSGi-konfiguration med parametrar som påverkar den avancerade bedömningsalgoritmen.
 
-![chlimage_1-260](assets/chlimage_1-260.png)
+![avancerad poängsättningsmotor](assets/advanced-scoring-engine.png)
 
 * **Poängvikter**
 
@@ -103,7 +103,7 @@ Om du vill anropa den avancerade bedömningsmotorn `scoringType`bör du ange den
 
 Se [Underregler](/help/communities/implementing-scoring.md#scoring-sub-rules)för poängsättning.
 
-![chlimage_1-261](assets/chlimage_1-261.png)
+![avancerad poängsättning](assets/advanced-scoring-type.png)
 
 ### Stoppord {#stopwords}
 
@@ -123,7 +123,7 @@ De avancerade egenskaperna för märkningsregeln skiljer sig från de [grundläg
 
 I stället för att associera punkter med en badge-bild är det bara nödvändigt att identifiera det antal experter som tillåts och den badge-bild som ska tilldelas.
 
-![chlimage_1-262](assets/chlimage_1-262.png)
+![regler för avancerad embging](assets/advanced-badging-rules.png)
 
 <table>
  <tbody>
@@ -165,7 +165,7 @@ I den här betaversionen ingår ett belöningsbaserat expertmärke:
 
    `/libs/settings/community/badging/images/expert-badge/jcr:content/expert.png`
 
-![chlimage_1-263](assets/chlimage_1-263.png)
+![expertmärke](assets/included-badge.png)
 
 För att expertmärket ska visas som en belöning för aktiviteten måste du se till att:
 
