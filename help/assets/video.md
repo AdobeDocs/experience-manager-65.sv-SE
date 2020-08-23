@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ba6f94435a4d4945d54614db19f7ff612a317692
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '11362'
+source-wordcount: '11356'
 ht-degree: 6%
 
 ---
@@ -341,7 +341,7 @@ VBR tar längre tid att koda men ger det mest fördelaktiga resultatet. mediefil
 När ska du använda VBR jämfört med CRB?
 När det gäller att välja VBR eller CBR rekommenderar vi nästan alltid att du använder VBR för dina mediefiler. VBR ger filer av högre kvalitet med konkurrenskraftiga bithastigheter. När du använder VBR måste du vara säker på att du använder kodning i två omgångar och ställa in den maximala bithastigheten till 1,5 gånger målvideobithastigheten.
 
-När du väljer en förinställning för videokodning ska du ta hänsyn till slutanvändarens anslutningshastighet. Välj en förinställning med en datahastighet som är 80 % av den hastigheten. Om målanvändarens anslutningshastighet till exempel är 1 000 kbit/s är den bästa förinställningen en med en videodatahastighet på 800 kbit/s.
+När du väljer en förinställning för videokodning ska du ta hänsyn till slutanvändarens anslutningshastighet. Välj en förinställning med en datahastighet som är 80 % av den hastigheten. Om målanvändarens anslutningshastighet till exempel är 1000 kbit/s är den bästa förinställningen en med en videodatahastighet på 800 kbit/s.
 
 I den här tabellen beskrivs datahastigheten för typiska anslutningshastigheter.
 
@@ -688,8 +688,8 @@ Så här automatiserar du inställningen av YouTube-standardegenskaper för dina
 
 1. I det övre vänstra hörnet av AEM klickar du på AEM-logotypen och sedan i den vänstra rutan klickar du på **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Schemas.]**
 1. Klicka på **[!UICONTROL default.]** (Lägg inte till en bockmarkering i markeringsrutan till vänster om &quot;standard&quot;.)
-1. På sidan **[!UICONTROL default]** markerar du rutan till vänster om **[!UICONTROL video]** och klickar sedan på **[Redigera.]**
-1. Klicka på **[!UICONTROL Advanced]** fliken på sidan Redigerare för metadataschema.
+1. On the **[!UICONTROL default]** page, check the box to the left of **[!UICONTROL video]**, then click **[!UICONTROL Edit.]**
+1. Klicka på **[!UICONTROL Advanced]** fliken på sidan Redigerare för metadatamatchning.
 1. Under rubriken YouTube-publicering klickar du på **[!UICONTROL YouTube Category.]**
 1. Gör följande till höger på sidan, under **[!UICONTROL Settings]** fliken:
 
@@ -722,7 +722,7 @@ Klistra in det kopierade värdet i den öppna textredigeraren. Du kommer att beh
    * (Valfritt) Till höger på sidan anger du `YouTube Publishing`under fliken Inställningar i textfältet Fältetikett.
    * Klicka på **[!UICONTROL Build Form]** fliken och dra sedan komponenten med etiketten **[!UICONTROL Multi Value Text]** och släpp den under den **[!UICONTROL YouTube Publishing]** rubrik du just skapade.
 
-   * Click **[!UICONTROL Field Label** to select the component.
+   * Klicka **[!UICONTROL Field Label]** för att markera komponenten.
    * Till höger på sidan, under fliken Inställningar, klistrar du in de YouTube-publiceringsvärden (värdet Fältetikett och värdet för Mappa till egenskap) som du kopierade tidigare, i respektive fält i formuläret. Klistra in alternativvärdet i fältet Standardvärde.
 
 1. Lägg till de kopierade sekretessvärdena för YouTube till profilen genom att göra följande:
@@ -1227,7 +1227,7 @@ Om du **vill lägga till en anpassad videominiatyr**,
 
 1. Navigera till en överförd videoresurs vars miniatyrbild du vill ändra.
 1. I resursurvalsläget, antingen från **[!UICONTROL List View]** eller **[!UICONTROL Card View]**, trycker du på videoresursen.
-1. Tryck på ikonen **[!UICONTROL Properties** (en cirkel med &quot;i&quot;) i verktygsfältet.
+1. I verktygsfältet trycker du på **[!UICONTROL Properties]** ikonen (en cirkel med&quot;i&quot;).
 1. Tryck på på egenskapssidan för videon **[!UICONTROL Change Thumbnail.]**
 1. Gör något av följande på sidan Ändra miniatyrbild:
 
