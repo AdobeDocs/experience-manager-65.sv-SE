@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: ccc4eb23-934c-4e67-860b-a6faa2bcaafc
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '2016'
-ht-degree: 15%
+source-wordcount: '2009'
+ht-degree: 14%
 
 ---
 
@@ -54,7 +54,7 @@ Så här kommer du igång snabbt:
    You can also create image sets automatically through [batch set presets](/help/assets/config-dms7.md).
    >[!IMPORTANT]
    >
-   >Batchuppsättningar skapas av IPS (Image Production System) som en del av tillgångsintag och är endast tillgängliga i Dynamic Media - Scene7-läge.
+   >Batchuppsättningar skapas av IPS (Image Production System) som en del av tillgångsinmatningen och är endast tillgängliga i läget Dynamic Media - Scene7.
 
    Se [Förbereda bilduppsättningsresurser för överföring och överföring av filer](#uploading-assets-in-image-sets).
 
@@ -85,7 +85,7 @@ Så här kommer du igång snabbt:
 
 Mer information om hur du redigerar bilduppsättningar finns i [Redigera bilduppsättningar.](#editing-image-sets) Dessutom kan du visa och redigera [bilduppsättningsegenskaper](/help/assets/managing-assets-touch-ui.md#editing-properties).
 
-Om du har problem med att skapa uppsättningar kan du läsa Bilder och uppsättningar i [Felsökning av Dynamic Media - Scen7-läge](/help/assets/troubleshoot-dms7.md#images-and-sets).
+Om du har problem med att skapa uppsättningar kan du läsa Bilder och uppsättningar i [Felsökning av dynamiska media - Scene7-läge](/help/assets/troubleshoot-dms7.md#images-and-sets).
 
 ## Överför resurser i bilduppsättningar {#uploading-assets-in-image-sets}
 
@@ -118,7 +118,7 @@ Du kan skapa bilduppsättningar via användargränssnittet eller API:t. I det h�
 >[!NOTE]
 >
 >You can also create image sets automatically through [batch set presets](/help/assets/config-dms7.md#creating%20batch%20set%20presets%20to%20auto-generate%20image%20sets%20and%20spin%20sets).
->**Viktigt:**Batchuppsättningar skapas av IPS (Image Production System) som en del av tillgångsintag och är endast tillgängliga i Dynamic Media - Scene7-läge.
+>**Viktigt:** Batchuppsättningar skapas av IPS (Image Production System) som en del av tillgångsinmatningen och är endast tillgängliga i läget Dynamic Media - Scene7.
 
 När du lägger till resurser i uppsättningen läggs de automatiskt till i alfanumerisk ordning. Du kan ändra ordning på eller sortera resurser manuellt när de har lagts till.
 
@@ -128,7 +128,7 @@ När du lägger till resurser i uppsättningen läggs de automatiskt till i alfa
 
 **Skapa en bilduppsättning**
 
-1. I AEM trycker du på AEM-logotypen för att komma åt den globala navigeringskonsolen, sedan trycker du på **[!UICONTROL Navigation > Assets.]** Navigera till den plats där du vill skapa en bilduppsättning och sedan på **[!UICONTROL Create > Image Set]** för att öppna sidan för bilduppsättningsredigeraren.
+1. I AEM trycker du på den AEM logotypen för att komma åt den globala navigeringskonsolen, sedan trycker du på **[!UICONTROL Navigation > Assets.]** Navigera till den plats där du vill skapa en bilduppsättning och sedan på **[!UICONTROL Create > Image Set]** för att öppna sidan för bilduppsättningsredigeraren.
 
    Du kan också skapa uppsättningen inifrån en mapp som innehåller resurserna.
 
@@ -176,7 +176,7 @@ Du kan skapa bilduppsättningar antingen i användargränssnittet eller automati
 
 >[!IMPORTANT]
 >
->Batchuppsättningar skapas av IPS [Image Production System] som en del av tillgångsintag och är endast tillgängliga i Dynamic Media - Scene7-läge.)
+>Batchuppsättningar skapas av IPS [Image Production System] som en del av tillgångsintag och är endast tillgängliga i läget Dynamic Media - Scene7.)
 
 Uppsättningar som skapats med gruppuppsättningsförinställningar visas *inte* i användargränssnittet. Du kan visa uppsättningarna på tre olika sätt. (Dessa metoder är tillgängliga även om du har skapat bilduppsättningarna i användargränssnittet).
 
@@ -184,13 +184,13 @@ Uppsättningar som skapats med gruppuppsättningsförinställningar visas *inte*
 
    ![6_5_imageset-assetproperties](assets/6_5_imageset-assetproperties2.png)
 
-* Från en medlemsbild i en uppsättning. Välj menyn **[!UICONTROL Uppsättningar]** för att visa de uppsättningar som resursen är medlem i.
+* Från en medlemsbild i en uppsättning. Select the **[!UICONTROL Sets]** menu to display the sets that the asset is a member of.
 
    ![6_5_imageset-setspulldownmenu](assets/6_5_imageset-setspulldownmenu.png)
 
-* Från sökningen kan du välja **[!UICONTROL Filter]**, expandera **[!UICONTROL Dynamic Media]** och markera **[!UICONTROL Sets.]**
+* From search, you can select **[!UICONTROL Filter]**, then expand **[!UICONTROL Dynamic Media]** and select **[!UICONTROL Sets.]**
 
-   Sökningen returnerar matchande uppsättningar som skapats manuellt i användargränssnittet eller automatiskt skapats med gruppuppsättningsförinställningar. För automatiserade uppsättningar utförs sökfrågan med sökvillkoren &quot;Börjar med&quot;, som skiljer sig från AEM-sökning, som baseras på sökvillkoren &quot;Innehåller&quot;. Om du anger att filtret ska vara **[!UICONTROL Sets]** det enda sättet att söka efter automatiska uppsättningar.
+   Sökningen returnerar matchande uppsättningar som skapats manuellt i användargränssnittet eller automatiskt skapats med gruppuppsättningsförinställningar. För automatiserade uppsättningar utförs sökfrågan med sökvillkoren &quot;Börjar med&quot;, som skiljer sig från AEM sökning som baseras på sökvillkoren &quot;Innehåller&quot;. Om du anger att filtret ska vara **[!UICONTROL Sets]** det enda sättet att söka efter automatiska uppsättningar.
 
    ![chlimage_1-134](assets/chlimage_1-134.png)
 
@@ -221,6 +221,7 @@ Du kan utföra en mängd redigeringsåtgärder på bilduppsättningar, till exem
    * Om du vill ändra ordning på resurser drar du en bild till en ny plats (markera sorteringsikonen för att flytta objekt).
    * Om du vill sortera objekt i stigande eller fallande ordning klickar du på kolumnrubriken.
    * Om du vill lägga till en resurs eller uppdatera en befintlig resurs klickar du på **[!UICONTROL Add Asset.]** Navigera till en resurs, markerar den och trycker sedan **[!UICONTROL Select]** i det övre högra hörnet på sidan.
+
       >[!NOTE]
       >
       >Om du tar bort den bild som AEM använder som miniatyrbild genom att ersätta den med en annan bild, visas fortfarande originalresursen.
@@ -228,6 +229,7 @@ Du kan utföra en mängd redigeringsåtgärder på bilduppsättningar, till exem
    * To apply a preset, near the upper-right corner of the page, tap **[!UICONTROL Preset]**, then select a viewer preset.
    * Om du vill lägga till eller ändra en miniatyrbild markerar du miniatyrbildikonen bredvid resursens högra sida. Navigera till den nya miniatyrbilden eller färgruteresursen, markera den och tryck sedan på **[!UICONTROL Select.]**
    * Om du vill ta bort en hel bilduppsättning går du till bilduppsättningen, markerar den och trycker på **[!UICONTROL Delete.]**
+
    >[!NOTE]
    >
    >Du kan redigera bilderna i en bilduppsättning genom att gå till uppsättningen, trycka på **[!UICONTROL Set Members]** i den vänstra rutan och sedan trycka på pennikonen på en enskild resurs för att öppna redigeringsfönstret.
