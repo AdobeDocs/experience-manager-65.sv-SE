@@ -3,9 +3,9 @@ title: XMP till återgivning
 description: Lär dig hur XMP återskrivningsfunktionen sprider metadataändringar för en resurs till alla eller vissa återgivningar av resursen.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '722'
+source-wordcount: '718'
 ht-degree: 4%
 
 ---
@@ -33,7 +33,7 @@ Om du vill att metadataändringarna ska kunna spridas till återgivningarna av r
 
 1. Öppna Configuration Manager genom att gå till `https://[aem_server]:[port]/system/console/configMgr`.
 1. Öppna **[!UICONTROL Adobe CQ DAM Rendition Maker]** konfigurationen.
-1. Välj alternativet **[!UICONTROL Sprid XMP[!UICONTROL ** och spara sedan ändringarna.
+1. Markera **[!UICONTROL Propagate XMP]** alternativet och spara sedan ändringarna.
 
    ![chlimage_1-135](assets/chlimage_1-346.png)
 
