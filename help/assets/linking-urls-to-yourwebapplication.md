@@ -8,9 +8,9 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: d12e6ea3-aaf4-4672-9679-3c16c76d7d5b
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '1213'
+source-wordcount: '1210'
 ht-degree: 10%
 
 ---
@@ -18,11 +18,11 @@ ht-degree: 10%
 
 # Länka URL till ett webbprogram {#linking-urls-to-your-web-application}
 
-Dina webbplatser och program får åtkomst till Dynamic Media-tjänster via URL-samtal. När du har publicerat en resurs aktiverar Dynamic Media en URL-sträng som refererar till resursen. Du kan klistra in dessa URL:er i en webbläsare för testning.
+Dina webbplatser och tillämpningar har åtkomst till Dynamic Media-tjänster via URL-samtal. När du har publicerat en resurs aktiverar Dynamic Media en URL-sträng som refererar till resursen. Du kan klistra in dessa URL:er i en webbläsare för testning.
 
-Du länkar bara till URL:er om du *inte* använder AEM som WCM. Länkning/inbäddning används när du vill leverera en videospelare som ett popup-fönster eller modalt fönster. Om du använder AEM som WCM-fil lägger [du till resurserna direkt på sidan.](adding-dynamic-media-assets-to-pages.md)
+Du länkar bara till URL:er om du *inte* använder AEM som WCM-fil. Länkning/inbäddning används när du vill leverera en videospelare som ett popup-fönster eller modalt fönster. Om du använder AEM som WCM-fil lägger [du till resurserna direkt på sidan.](adding-dynamic-media-assets-to-pages.md)
 
-Om du vill placera dessa URL-strängar på webbsidor och i program kopierar du dem från Dynamic Media.
+Om du vill placera dessa URL-strängar på dina webbsidor och i dina program kopierar du dem från Dynamic Media.
 
 >[!NOTE]
 >
@@ -138,7 +138,7 @@ Dynamic Media har stöd för leverans av statiska resurser, som är ytterligare 
 
    Om registrerings-ID:t till exempel är `87654321|MyCompany`det blir kundens namn `MyCompany`.
 
-1. I närheten av sidans övre vänstra hörn: tryck på **[!UICONTROL-Cloud Service**, tryck sedan på Experience Manager-logotypen och navigera till **[!UICONTROL General > CRXDE Lite.]**
+1. I närheten av sidans övre vänstra hörn: tryck **[!UICONTROL Cloud Services]** och sedan på logotypen Experience Manager och navigera till **[!UICONTROL General > CRXDE Lite.]**
 1. Kopiera ned hela videouppdateringssökvägen från JCR-filen (Java Content Repository).
 
    Videons återgivningssökväg kan till exempel se ut ungefär så här:
@@ -165,6 +165,7 @@ Dynamic Media har stöd för leverans av statiska resurser, som är ytterligare 
 1. Gör följande på **[!UICONTROL Dynamic Media Cloud Services Settings]** sidan:
 
    * Under **[!UICONTROL Video Service URL]** kopierar du hela URL-sökvägen. Du behöver den kopierade URL-sökvägen senare i dessa steg. URL-sökvägen kan till exempel se ut ungefär så här:
+
    `https://gateway-na.assetsadobe.com/DMGateway/`
 
    (Banan ovan är endast avsedd som illustration. det är inte den faktiska sökvägen som du kopierar.)
@@ -199,8 +200,8 @@ Dynamic Media har stöd för leverans av statiska resurser, som är ytterligare 
 
    `https://gateway-na.assetsadobe.com/DMGateway/public-ssl/demoCo/content/dam/marketing/MyVideo.mp4.m3u8`
 
-## Använd HTTP/2 för att leverera dina Dynamic Media-resurser {#using-http-to-deliver-your-dynamic-media-assets}
+## Använda HTTP/2 för att leverera dina dynamiska medieresurser {#using-http-to-deliver-your-dynamic-media-assets}
 
-HTTP/2 är det nya, uppdaterade webbprotokollet som förbättrar kommunikationen mellan webbläsare och servrar. Det ger snabbare överföring av information och minskar mängden processorkraft som behövs. Leveransen av Dynamic Media-resurser kan nu göras via HTTP/2, vilket ger bättre svar och laddningstider.
+HTTP/2 är det nya, uppdaterade webbprotokollet som förbättrar kommunikationen mellan webbläsare och servrar. Det ger snabbare överföring av information och minskar mängden processorkraft som behövs. Dynamic Media-material kan nu levereras via HTTP/2 vilket ger bättre respons och laddningstider.
 
 Se [HTTP2 Delivery of Content](http2.md) för fullständig information om hur du kommer igång med HTTP/2 med ditt Dynamic Media-konto.
