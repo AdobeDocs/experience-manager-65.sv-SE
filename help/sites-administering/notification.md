@@ -10,7 +10,10 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 6466d7b8-e308-43c5-acdc-dec15f796f64
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+workflow-type: tm+mt
+source-wordcount: '1145'
+ht-degree: 1%
 
 ---
 
@@ -37,7 +40,7 @@ När en användare meddelas får han eller hon ett e-postmeddelande på det spr�
 
 ## Konfigurera e-posttjänsten {#configuring-the-mail-service}
 
-För att AEM ska kunna skicka e-postmeddelanden måste **Day CQ Mail Service** konfigureras korrekt. Du kan visa konfigurationen i webbkonsolen. När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Mer information och rekommendationer finns i [Konfigurera OSGi](/help/sites-deploying/configuring-osgi.md) .
+För att AEM ska kunna skicka e-post måste **Day CQ Mail Service** vara korrekt konfigurerad. Du kan visa konfigurationen i webbkonsolen. När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Mer information och rekommendationer finns i [Konfigurera OSGi](/help/sites-deploying/configuring-osgi.md) .
 
 Följande begränsningar gäller:
 
@@ -60,12 +63,12 @@ När du prenumererar på en sida eller ett forum-händelsemeddelanden anges e-po
 
 Om du vill konfigurera från-e-postadressen lägger du till en `sling:OsgiConfig` nod i databasen. Använd följande procedur för att lägga till noden direkt med CRXDE Lite:
 
-1. I CRXDE Lite lägger du till en mapp med namnet `config` under programmappen.
+1. I CRXDE Lite lägger du till en mapp med namnet `config` under din programmapp.
 1. Lägg till en nod med namnet:
 
    `com.day.cq.wcm.notification.email.impl.EmailChannel` av typen `sling:OsgiConfig`
 
-1. Lägg till en `String` egenskap i noden] med namnet `email.from`. Ange den e-postadress som du vill använda som värde.
+1. Lägg till en `String` egenskap i noden `email.from`. Ange den e-postadress som du vill använda som värde.
 
 1. Klicka på **Spara alla**.
 
@@ -144,7 +147,7 @@ Där &lt;text_x> kan vara en blandning av statisk text och dynamiska strängvari
 
    &lt;page event type> => &lt;page path>
 
-   Exempel:
+   Till exempel:
 
    PageModified => /content/geometrixx/en/products
 
@@ -301,11 +304,11 @@ Så här lägger du till en mall för ett nytt språk:
 >
 >Det `<language-code>` som används som filnamn för e-postmallen måste vara en språkkod med två bokstäver och gemener som känns igen av AEM. För språkkoder använder AEM ISO-639-1.
 
-## Konfigurera e-postmeddelanden för AEM Resurser {#assetsconfig}
+## Konfigurera e-postmeddelanden från AEM Assets {#assetsconfig}
 
-När samlingar i AEM Resurser delas eller inte delas kan användarna få e-postmeddelanden från AEM. Följ de här stegen för att konfigurera e-postmeddelanden.
+När samlingar i AEM Assets delas eller inte delas kan användare få e-postmeddelanden från AEM. Följ de här stegen för att konfigurera e-postmeddelanden.
 
 1. Konfigurera e-posttjänsten enligt beskrivningen ovan i [Konfigurera e-posttjänsten](/help/sites-administering/notification.md#configuring-the-mail-service).
-1. Logga in på AEM som administratör. Klicka på **Verktyg** > **Åtgärder** > **Webbkonsol** för att öppna Konfiguration för webbkonsol.
+1. Logga in AEM som administratör. Klicka på **Verktyg** > **Åtgärder** > **Webbkonsol** för att öppna Konfiguration för webbkonsol.
 1. Redigera **dagars CQ DAM Resource Collection-server**. Välj **Skicka e-post**. Click **Save**.
 
