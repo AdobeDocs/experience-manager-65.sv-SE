@@ -1,6 +1,6 @@
 ---
-title: AEM-komponenter - Grunderna
-seo-title: AEM-komponenter - Grunderna
+title: AEM - Grunderna
+seo-title: AEM - Grunderna
 description: När du börjar utveckla nya komponenter måste du förstå grunderna i deras struktur och konfiguration
 seo-description: När du börjar utveckla nya komponenter måste du förstå grunderna i deras struktur och konfiguration
 uuid: 0225b34d-5ac4-40c3-b226-0c9b24bdf782
@@ -11,19 +11,19 @@ content-type: reference
 discoiquuid: 1f9867f1-5089-46d0-8e21-30d62dbf4f45
 legacypath: /content/docs/en/aem/6-0/develop/components/components-develop
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '4719'
+source-wordcount: '4718'
 ht-degree: 0%
 
 ---
 
 
-# AEM-komponenter - Grunderna{#aem-components-the-basics}
+# AEM - Grunderna{#aem-components-the-basics}
 
 När du börjar utveckla nya komponenter måste du förstå grunderna i deras struktur och konfiguration.
 
-Den här processen innebär att läsa teorin och titta på ett stort antal komponentimplementeringar i en standard-AEM-instans. Det senare tillvägagångssättet är något komplicerat av det faktum att även om AEM har övergått till ett nytt standardgränssnitt, modernt användargränssnitt med pekfunktion, har det fortfarande stöd för det klassiska användargränssnittet.
+Den här processen innebär att man läser teorin och tittar på ett brett urval av komponentimplementeringar i en AEM. Det senare tillvägagångssättet är något komplicerat av det faktum att även om AEM har övergått till en ny standard, modern, pekaktiverad användarupplevelse, har det fortfarande stöd för det klassiska användargränssnittet.
 
 ## Översikt {#overview}
 
@@ -37,7 +37,7 @@ Innan du börjar konfigurera eller koda komponenten bör du fråga:
    * En tydlig specifikation hjälper till i alla faser av utveckling, testning och överlämning. Detaljerna kan förändras över tid, men specifikationen kan uppdateras (men ändringarna bör också dokumenteras).
 * Behöver du skapa komponenten från grunden, eller kan du ärva grunderna från en befintlig komponent?
    * Man behöver inte förnya hjulet.
-   * Det finns flera mekanismer från AEM som gör att du kan ärva och utöka detaljer från en annan komponentdefinition, inklusive åsidosättning, övertäckning och [Sling Resource Merger](/help/sites-developing/sling-resource-merger.md).
+   * Det finns flera sätt i AEM som gör att du kan ärva och utöka detaljer från en annan komponentdefinition, inklusive åsidosättning, övertäckning och [Sling Resource Merger](/help/sites-developing/sling-resource-merger.md).
 * Kommer din komponent att behöva logik för att markera/ändra innehållet?
    * Logiken ska hållas åtskild från användargränssnittets lager. HTML är utformat för att säkerställa att detta sker.
 * Behöver komponenten CSS-formatering?
@@ -45,15 +45,15 @@ Innan du börjar konfigurera eller koda komponenten bör du fråga:
 * Vilka säkerhetsaspekter bör jag ta hänsyn till?
    * Mer information finns i [Säkerhetschecklista - Bästa metoder](/help/sites-administering/security-checklist.md#development-best-practices) för utveckling.
 
-### Pekaktiverat jämfört med klassiskt användargränssnitt {#touch-enabled-vs-classic-ui}
+### Pekaktiverat eller klassiskt gränssnitt {#touch-enabled-vs-classic-ui}
 
 Innan du börjar diskutera hur du utvecklar komponenter måste du veta vilket gränssnitt författarna kommer att använda:
 
 * **Pekaktiverat användargränssnitt**
-   [Standardanvändargränssnittet](/help/sites-developing/touch-ui-concepts.md) baseras på den enhetliga användarupplevelsen för Adobe Marketing Cloud och använder de underliggande teknikerna i [Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui) och [Granite UI](/help/sites-developing/touch-ui-concepts.md#granite-ui).
-* **Klassiskt användargränssnitt** som bygger på ExtJS-teknik och som har tagits bort med AEM 6.4.
+   [Standardanvändargränssnittet](/help/sites-developing/touch-ui-concepts.md) bygger på den enhetliga användarupplevelsen för Adobe Marketing Cloud med hjälp av de underliggande teknikerna i [Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui) och [Granite UI](/help/sites-developing/touch-ui-concepts.md#granite-ui).
+* **Klassiskt användargränssnitt** baserat på ExtJS-teknik som ersatts med AEM 6.4.
 
-Mer information finns i [Gränssnittsrekommendationer för kunder](/help/sites-deploying/ui-recommendations.md) .
+Mer information finns i [Gränssnittet Recommendations for Customers](/help/sites-deploying/ui-recommendations.md) .
 
 Komponenter kan implementeras för att stödja det beröringsaktiverade användargränssnittet, det klassiska användargränssnittet eller båda. När du tittar på en standardinstans ser du även färdiga komponenter som ursprungligen designats för det klassiska användargränssnittet, det pekaktiverade användargränssnittet eller båda.
 
@@ -61,7 +61,7 @@ Därför ska vi ta upp grunderna för båda och hur de ska kännas igen på den 
 
 >[!NOTE]
 >
->Adobe rekommenderar att du utnyttjar det pekaktiverade användargränssnittet för att dra nytta av den senaste tekniken. [AEM Modernination Tools&amp;(modernization-tools.md) kan göra migreringen enklare.
+>Adobe rekommenderar att du utnyttjar det pekaktiverade användargränssnittet för att dra nytta av den senaste tekniken. [AEM modernischverktyg](modernization-tools.md) kan göra migreringen enklare.
 
 ### Innehållslogik och återgivningsmarkeringar  {#content-logic-and-rendering-markup}
 
@@ -85,8 +85,8 @@ Både HTML och JSP kan användas för att utveckla komponenter för både det kl
 
 Om du vill skapa egna komponenter för rätt användargränssnitt kan du läsa (efter att du har läst den här sidan):
 
-* [AEM-komponenter för det touchaktiverade gränssnittet](/help/sites-developing/developing-components.md)
-* [AEM-komponenter för det klassiska användargränssnittet](/help/sites-developing/developing-components-classic.md)
+* [AEM komponenter för det touchaktiverade gränssnittet](/help/sites-developing/developing-components.md)
+* [AEM för det klassiska användargränssnittet](/help/sites-developing/developing-components-classic.md)
 
 Ett snabbt sätt att komma igång är att kopiera en befintlig komponent och sedan göra de ändringar du vill. Mer information om hur du skapar egna komponenter och lägger till dem i styckesystemet finns i:
 
@@ -94,11 +94,11 @@ Ett snabbt sätt att komma igång är att kopiera en befintlig komponent och sed
 
 ### Flytta komponenter till publiceringsinstansen {#moving-components-to-the-publish-instance}
 
-Komponenterna som återger innehåll måste distribueras på samma AEM-instans som innehållet. Därför måste alla komponenter som används för att skapa och återge sidor på författarinstansen distribueras på publiceringsinstansen. När de distribueras är komponenterna tillgängliga för återgivning av aktiverade sidor.
+Komponenterna som återger innehåll måste distribueras på samma AEM som innehållet. Därför måste alla komponenter som används för att skapa och återge sidor på författarinstansen distribueras på publiceringsinstansen. När de distribueras är komponenterna tillgängliga för återgivning av aktiverade sidor.
 
 Använd följande verktyg för att flytta dina komponenter till publiceringsinstansen:
 
-* [Använd Package Manager](/help/sites-administering/package-manager.md) för att lägga till dina komponenter i ett paket och flytta dem till en annan AEM-instans.
+* [Använd Package Manager](/help/sites-administering/package-manager.md) för att lägga till dina komponenter i ett paket och flytta dem till en annan AEM.
 * [Använd verktyget](/help/sites-authoring/publishing-pages.md#manage-publication) Aktivera trädreplikering för att replikera komponenterna.
 
 >[!NOTE]
@@ -122,7 +122,7 @@ Använd följande verktyg för att flytta dina komponenter till publiceringsinst
 
 ## Struktur {#structure}
 
-Strukturen i en AEM-komponent är kraftfull och flexibel, de viktigaste aspekterna är:
+Strukturen i en AEM är kraftfull och flexibel, de viktigaste aspekterna är:
 
 * Resurstyp
 * Komponentdefinition
@@ -147,8 +147,8 @@ Detta är en abstraktion som säkerställer att även när utseendet och känsla
 
 Definitionen av en komponent kan delas upp enligt följande:
 
-* AEM-komponenterna baseras på [Sling](https://sling.apache.org/documentation.html).
-* AEM-komponenterna finns (vanligtvis) under:
+* AEM baseras på [Sling](https://sling.apache.org/documentation.html).
+* AEM finns (vanligtvis) under:
 
    * HTML: `/libs/wcm/foundation/components`
    * JSP: `/libs/foundation/components`
@@ -157,7 +157,7 @@ Definitionen av en komponent kan delas upp enligt följande:
 
    * `/apps/<myApp>/components`
 
-* AEM-standardkomponenter definieras som `cq:Component` och har de viktigaste elementen:
+* AEM standardkomponenter definieras som `cq:Component` och har nyckelelementen:
 
    * jcr-egenskaper:
 
@@ -168,6 +168,7 @@ Definitionen av en komponent kan delas upp enligt följande:
       Dessa definierar statiska element som används av komponenten.
 
    * Skript:
+
    Används för att implementera beteendet för den resulterande instansen av komponenten.
 
 * **Rotnod**:
@@ -430,6 +431,7 @@ Dialogrutedefinitioner är specifika för användargränssnittet:
 >
 >* Av kompatibilitetsskäl kan det beröringsaktiverade användargränssnittet använda definitionen för en klassisk användargränssnittsdialogruta när ingen dialogruta har definierats för det beröringsaktiverade användargränssnittet.
 >* Verktyget [för](/help/sites-developing/dialog-conversion.md) dialogkonvertering finns också för att du ska kunna utöka/konvertera komponenter som bara har dialogrutor definierade för det klassiska användargränssnittet.
+
 >
 
 
@@ -443,6 +445,7 @@ Dialogrutedefinitioner är specifika för användargränssnittet:
       * kan ha en egenskap `helpPath` som definierar den sammanhangsberoende hjälpresursen (absolut eller relativ sökväg) som nås när hjälpikonen ( ? ) är markerat.
          * För körklara komponenter refererar detta ofta till en sida i dokumentationen.
          * Om inget `helpPath` anges visas standardwebbadressen (dokumentationsöversiktssidan).
+
    ![chlimage_1-242](assets/chlimage_1-242.png)
 
    I dialogrutan definieras enskilda fält:
@@ -458,6 +461,7 @@ Dialogrutedefinitioner är specifika för användargränssnittet:
       * kan ha en egenskap `helpPath` som definierar den sammanhangsberoende hjälpresursen (absolut eller relativ sökväg) som nås när **hjälpknappen** är markerad.
          * För körklara komponenter refererar detta ofta till en sida i dokumentationen.
          * Om inget `helpPath` anges visas standardwebbadressen (dokumentationsöversiktssidan).
+
    ![chlimage_1-243](assets/chlimage_1-243.png)
 
    I dialogrutan definieras enskilda fält:
@@ -522,7 +526,7 @@ De definierade egenskaperna är beroende av de enskilda definitionerna. Även om
 
 ## Komponenthierarki och arv {#component-hierarchy-and-inheritance}
 
-Komponenterna i AEM omfattas av tre olika hierarkier:
+Komponenterna i AEM har tre olika hierarkier:
 
 * **Hierarki för resurstyp**
 
@@ -600,7 +604,7 @@ Det finns många befintliga konfigurationer i databasen. Du kan enkelt söka eft
 
    `//element(cq:editConfig, cq:EditConfig)[@cq:actions]`
 
-* Om du vill söka efter en underordnad nod till `cq:editConfig`, t.ex. kan du söka efter `cq:dropTargets`som är av typen `cq:DropTargetConfig`; kan du använda frågeverktyget i** CRXDE Lite** och söka med följande XPath-frågesträng:
+* Om du vill söka efter en underordnad nod till `cq:editConfig`, t.ex. kan du söka efter `cq:dropTargets`som är av typen `cq:DropTargetConfig`; Du kan använda frågeverktyget i** CRXDE Lite** och söka med följande XPath-frågesträng:
 
    `//element(cq:dropTargets, cq:DropTargetConfig)`
 
@@ -798,7 +802,7 @@ Noden av typen `cq:DropTargetConfig` måste ha följande egenskaper:
   </tr>
   <tr>
    <td><code>accept</code></td>
-   <td>Regex används på resursens MIME-typ för att validera om släppning är tillåten.</td>
+   <td>Regex används på resursens Mime-typ för att validera om släppning är tillåten.</td>
   </tr>
   <tr>
    <td><code>groups</code></td>
@@ -811,7 +815,7 @@ Noden av typen `cq:DropTargetConfig` måste ha följande egenskaper:
  </tbody>
 </table>
 
-Följande konfiguration hämtas från komponenten Download. Det gör att alla resurser (mime-typen kan vara vilken sträng som helst) från gruppen kan tas bort från innehållssökaren till komponenten. `media` Efter släppningen `fileReference` uppdateras komponentegenskapen:
+Följande konfiguration hämtas från komponenten Download. Det gör att alla resurser (mime-typen kan vara vilken sträng som helst) från gruppen kan tas bort från innehållssökaren till komponenten. `media` Efter släppningen `fileReference` uppdateras egenskapen component:
 
 ```
     <cq:dropTargets jcr:primaryType="nt:unstructured">
@@ -825,7 +829,7 @@ Följande konfiguration hämtas från komponenten Download. Det gör att alla re
 
 ### cq:actionConfigs (endast Classic UI) {#cq-actionconfigs-classic-ui-only}
 
-Noden ( `cq:actionConfigs` nodtyp `nt:unstructured`) definierar en lista med nya åtgärder som läggs till i listan som definieras av `cq:actions` egenskapen. Varje underordnad nod till `cq:actionConfigs` definierar en ny åtgärd genom att definiera en widget.
+Noden ( `cq:actionConfigs` nodtyp `nt:unstructured`) definierar en lista med nya åtgärder som läggs till i listan som definieras av `cq:actions` egenskapen. Varje underordnad nod i `cq:actionConfigs` definierar en ny åtgärd genom att definiera en widget.
 
 I följande exempelkonfiguration definieras en ny knapp (med en avgränsare för det klassiska användargränssnittet):
 
@@ -891,7 +895,7 @@ Noden ( `cq:inplaceEditing` nodtyp `cq:InplaceEditingConfig`) definierar en redi
    <td><p>(<code>String</code>) Typ av redigerare. De tillgängliga typerna är:</p>
     <ul>
      <li>plaintext: som ska användas för icke-HTML-innehåll.<br /> </li>
-     <li>titel: är en förbättrad textredigerare som konverterar grafiska titlar till klartext innan redigeringen börjar. Används av rubrikkomponenten Geometrixx.<br /> </li>
+     <li>titel: är en förbättrad textredigerare som konverterar grafiska titlar till klartext innan redigeringen börjar. Används av Geometrixx titelkomponent.<br /> </li>
      <li>text: som ska användas för HTML-innehåll (använder RTF-redigeraren).<br /> </li>
     </ul> </td>
   </tr>
