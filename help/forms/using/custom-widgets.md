@@ -1,8 +1,8 @@
 ---
 title: Skapa anpassade utseenden i HTML5-formulär
 seo-title: Skapa anpassade utseenden i HTML5-formulär
-description: Du kan koppla in anpassade widgetar i mobilformulär. Du kan utöka befintliga jQuery-widgetar eller utveckla egna widgetar.
-seo-description: Du kan koppla in anpassade widgetar i mobilformulär. Du kan utöka befintliga jQuery-widgetar eller utveckla egna widgetar.
+description: Du kan koppla anpassade widgetar till en Mobile Forms. Du kan utöka befintliga jQuery-widgetar eller utveckla egna widgetar.
+seo-description: Du kan koppla anpassade widgetar till en Mobile Forms. Du kan utöka befintliga jQuery-widgetar eller utveckla egna widgetar.
 uuid: a9013c3d-20c7-45c9-be24-8e9d4525eff8
 contentOwner: robhagat
 content-type: reference
@@ -11,9 +11,9 @@ topic-tags: hTML5_forms
 discoiquuid: 17a86543-30d3-4e16-a373-67b46d551da9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '667'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # Skapa anpassade utseenden i HTML5-formulär{#create-custom-appearances-in-html-forms}
 
-Du kan koppla in anpassade widgetar i mobilformulär. Du kan utöka befintliga jQuery-widgetar eller utveckla egna widgetar med hjälp av utseenderamverket. XFA-motorn använder olika widgetar. Mer information finns i Utseenderamverket för adaptiva formulär och HTML5-formulär [](/help/forms/using/introduction-widgets.md) .
+Du kan koppla anpassade widgetar till en Mobile Forms. Du kan utöka befintliga jQuery-widgetar eller utveckla egna widgetar med hjälp av utseenderamverket. XFA-motorn använder olika widgetar. Mer information finns i Utseenderamverket för adaptiva formulär och HTML5-formulär [](/help/forms/using/introduction-widgets.md) .
 
 ![Ett exempel på standardwidget och anpassad widget](assets/custom-widgets.jpg)
 
@@ -92,10 +92,14 @@ window.formBridge.registerConfig("widgetConfig",
 
 Widgetkonfigurationen tillhandahålls som ett JSON-objekt (en samling nyckelvärdepar) där nyckeln identifierar fälten och värdet representerar widgeten som ska användas med dessa fält. En exempelkonfiguration ser ut så här:
 
+```
 *{*
 
-*&quot;identifier1&quot; : &quot;custom widgetname&quot;,&quot;identifier2&quot; : &quot;customwidgetname2&quot;,..
+*“identifier1” : “customwidgetname”,
+“identifier2” : “customwidgetname2”,
+..
 }*
+```
 
 där &quot;identifier&quot; är en jQuery CSS-väljare som representerar ett visst fält, en uppsättning fält av en viss typ eller alla fält. I följande lista visas identifierarens värde i olika fall:
 
