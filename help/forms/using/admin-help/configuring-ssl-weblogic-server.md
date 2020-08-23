@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 968c2574-ec9a-45ca-9c64-66f4caeec285
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
 source-wordcount: '1074'
 ht-degree: 0%
@@ -59,8 +59,8 @@ Nyckelverktygskommandot finns vanligtvis i Java-katalogen jre/bin och måste inn
    <td><p>Sökvägsfilens plats och namn.</p><p>Platsen kan innehålla den absoluta sökvägen för filen. Den kan också vara relativ till den aktuella katalogen i kommandotolken där kommandot för nyckelverktyget anges.</p></td>
    <td>
     <ul>
-     <li><p>Nyckelbehållare för anpassad identitet: <code>[</code><i>appserverdomain]</i><code>/adobe/</code><i>[servernamn]</i><code>/ads-ssl.jks</code></p></li>
-     <li><p>Nyckelbehållare för anpassat förtroende: <code>[</code><i>appserverdomain]</i><code>/adobe/</code><i>[servernamn]</i><code>/ads-ca.jks</code></p></li>
+     <li><p>Nyckelbehållare för anpassad identitet: <code>[</code><i>appserverdomain<code>]</code></i><code>/adobe/</code><i>[servernamn]</i><code>/ads-ssl.jks</code></p></li>
+     <li><p>Nyckelbehållare för anpassat förtroende: <code>[</code><i>appserverdomain<code>]</code></i><code>/adobe/</code><i>[servernamn]</i><code>/ads-ca.jks</code></p></li>
     </ul></td>
   </tr>
   <tr>
@@ -134,7 +134,7 @@ Mer information om hur du använder kommandot keytool finns i filen keytool.html
 
    >[!NOTE]
    >
-   >Ersätt `[JAVA_HOME]` med katalogen där JDK är installerat och ersätt `store`*_*`password`* med lösenordet för nyckelbehållaren för anpassad identitet.*
+   >Ersätt `[JAVA_HOME]` med katalogen där JDK är installerat och ersätt `store`*_* `password`* med lösenordet för nyckelbehållaren för anpassad identitet.*
 
    Till exempel:
 
@@ -151,7 +151,7 @@ Mer information om hur du använder kommandot keytool finns i filen keytool.html
 
    >[!NOTE]
    >
-   >Ersätt `[JAVA_HOME]` med katalogen där JDK är installerat och ersätt `store`*_*`password`och`key`*_* `password` *med dina egna lösenord.*
+   >Ersätt `[JAVA_HOME]` med katalogen där JDK är installerat och ersätt `store`*_* `password` och `key`*_* `password` *med dina egna lösenord.*
 
    Till exempel:
 
