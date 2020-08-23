@@ -1,8 +1,8 @@
 ---
 title: Introduktion och genomgång av SPA
 seo-title: Introduktion och genomgång av SPA
-description: I den här artikeln beskrivs begreppen för ett SPA-program och du kan gå igenom hur det används i ett grundläggande SPA-program för att skapa, vilket visar hur det relaterar till den underliggande AEM SPA-redigeraren.
-seo-description: I den här artikeln beskrivs begreppen för ett SPA-program och du kan gå igenom hur det används i ett grundläggande SPA-program för att skapa, vilket visar hur det relaterar till den underliggande AEM SPA-redigeraren.
+description: I den här artikeln beskrivs begreppen för ett SPA-program och du kan gå igenom hur ett grundläggande SPA-program används för att skapa, vilket visar hur det relaterar till den underliggande AEM SPA-redigeraren.
+seo-description: I den här artikeln beskrivs begreppen för ett SPA-program och du kan gå igenom hur ett grundläggande SPA-program används för att skapa, vilket visar hur det relaterar till den underliggande AEM SPA-redigeraren.
 uuid: 4b0a9e53-3892-4d60-8bd3-7ff740d2f137
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 0478afcb-b029-4ce6-b3e6-cee4bb5408ce
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 307a1db2e5bbb72d730c89ba14f5ce02b96c108d
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
 source-wordcount: '2000'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # Introduktion och genomgång av SPA{#spa-introduction-and-walkthrough}
 
-Single page applications (SPAs) can offer compelling experiences for website users. Utvecklare vill kunna bygga webbplatser med SPA-ramverk och författare vill smidigt redigera innehåll i AEM för en webbplats som skapats med sådana ramverk.
+Single page applications (SPAs) can offer compelling experiences for website users. Utvecklare vill kunna skapa webbplatser med SPA-ramverk och författare vill smidigt redigera innehåll i AEM för en webbplats som skapats med sådana ramverk.
 
 SPA-redigeraren är en omfattande lösning för stöd av SPA-program i AEM. I den här artikeln går vi igenom hur du använder ett grundläggande SPA-program för att skapa och visar hur det är relaterat till den underliggande AEM SPA-redigeraren.
 
@@ -35,19 +35,18 @@ SPA-redigeraren är en omfattande lösning för stöd av SPA-program i AEM. I de
 
 I den här artikeln beskrivs de grundläggande begreppen för SPA-program innan du leder läsaren genom en genomgång av SPA-redigeraren genom att använda ett enkelt SPA-program för att demonstrera grundläggande innehållsredigering. Sedan går det ned på hur sidan byggs och hur SPA-programmet relaterar till och interagerar med AEM SPA-redigeraren.
 
-Målet med den här introduktionen och genomgången är att visa för en AEM-utvecklare varför SPA är relevanta, hur de i allmänhet fungerar, hur en SPA hanteras av AEM SPA Editor och hur det skiljer sig från en vanlig AEM-applikation.
+Målet med denna introduktion och genomgång är att visa för en AEM att SPA är relevanta, hur de i allmänhet fungerar, hur en SPA hanteras av AEM SPA-redigerare och hur det skiljer sig från en vanlig AEM.
 
-Genomgången baseras på standardfunktioner för AEM och exempelappen We.Retail Journal. Följande krav måste vara uppfyllda:
+Genomgången baseras på AEM och exempelappen We.Retail Journal. Följande krav måste vara uppfyllda:
 
-* [AEM version 6.4 med Service Pack 2 eller senare
-   ](/help/release-notes/sp-release-notes.md)
+* [AEM version 6.4 med Service Pack 2 eller senare](/help/release-notes/sp-release-notes.md)
 * [Installera exempelappen We.Retail Journal som finns på GitHub här.](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)
 
 >[!CAUTION]
 >
 >Det här dokumentet använder appen [](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal) We.Retail Journal endast i demonstrationssyfte. Det ska inte användas för något projektarbete.
 >
->Alla AEM-projekt bör utnyttja [AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html), som stöder SPA-projekt med React eller Angular och utnyttjar SPA SDK.
+>Alla AEM ska utnyttja den [AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html)som stöder SPA-projekt med React eller Angular och som utnyttjar SPA SDK.
 
 ### Vad är en SPA? {#what-is-a-spa}
 
@@ -55,7 +54,7 @@ Ett enkelsidigt program (SPA) skiljer sig från en konventionell sida genom att 
 
 Detta minskar behovet av siduppdatering och ger användaren en upplevelse som är smidig, snabb och som känns mer som en appupplevelse.
 
-Med AEM SPA Editor kan gränssnittsutvecklare skapa SPA som kan integreras i en AEM-webbplats, vilket gör att innehållsförfattarna kan redigera SPA-innehållet lika enkelt som annat AEM-innehåll.
+Med AEM SPA Editor kan gränssnittsutvecklare skapa SPA som kan integreras i en AEM webbplats, vilket gör att innehållsförfattarna kan redigera SPA-innehållet lika enkelt som annat AEM.
 
 ### Varför en SPA? {#why-a-spa}
 
@@ -82,7 +81,7 @@ Genom att vara snabbare, smidigare och mer som ett systemspecifikt program blir 
 
 Den främsta idén bakom ett SPA är att anrop och beroende av en server minskas för att minimera fördröjningar som orsakas av serveranrop så att SPA närmar sig svarstiden för ett systemspecifikt program.
 
-På en traditionell, sekventiell webbsida läses bara de data som behövs för den omedelbara sidan in. Det innebär att när besökaren flyttar till en annan sida anropas servern för de extra resurserna. Ytterligare anrop kan behövas eftersom besökaren interagerar med element på sidan. Dessa anrop kan ge en känsla av fördröjning eller fördröjning eftersom sidan måste hinna med besökarens önskemål.
+På en traditionell, sekventiell webbsida läses bara de data som behövs för den omedelbara sidan in. Det innebär att när besökaren flyttar till en annan sida anropas servern för de extra resurserna. Ytterligare anrop kan behövas eftersom besökaren interagerar med element på sidan. Dessa anrop kan ge en känsla av fördröjning eller fördröjning eftersom sidan måste hinna ifatt besökarens önskemål.
 
 ![screen_shot_2018-08-20at140449](assets/screen_shot_2018-08-20at140449.png)
 
@@ -92,20 +91,21 @@ Genom att återge på klientsidan reagerar sidelementet snabbare och besökarens
 
 >[!NOTE]
 >
->Teknisk information om hur SPA fungerar i AEM finns i artikeln [Komma igång med SPA i AEM](/help/sites-developing/spa-getting-started-react.md).
+>Mer teknisk information om hur SPA fungerar i AEM finns i artikeln [Komma igång med SPA i AEM](/help/sites-developing/spa-getting-started-react.md).
 >
 >Mer information om design, arkitektur och tekniska arbetsflöden i SPA-redigeraren finns i artikeln [SPA-redigeraren - översikt](/help/sites-developing/spa-overview.md).
 
 ## Innehållsredigering med SPA {#content-editing-experience-with-spa}
 
-När en SPA byggs för att utnyttja AEM SPA-redigeraren märker innehållsförfattaren ingen skillnad när innehållet redigeras och skapas. Vanliga AEM-funktioner är tillgängliga och inga ändringar i författarens arbetsflöde krävs.
+När en SPA har byggts för att dra nytta av AEM SPA-redigeraren märker innehållsförfattaren ingen skillnad när innehåll redigeras och skapas. Vanliga AEM är tillgängliga och inga ändringar i författarens arbetsflöde krävs.
 
 >[!NOTE]
 >
->Genomgången baseras på standardfunktioner för AEM och exempelappen We.Retail Journal. Följande krav måste vara uppfyllda:
+>Genomgången baseras på AEM och exempelappen We.Retail Journal. Följande krav måste vara uppfyllda:
 >
 >* [AEM version 6.4 med Service Pack 2](/help/release-notes/sp-release-notes.md)
 >* [Installera exempelappen We.Retail Journal som finns på GitHub här.](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)
+
 >
 
 
@@ -141,11 +141,11 @@ Ytterligare redigeringsverktyg som att dra och släppa ytterligare komponenter p
 >
 >SPA-redigeraren ändrar inte programmets DOM. Själva SPA är ansvarig för DOM.
 >
->Om du vill se hur det fungerar går du vidare till nästa avsnitt i den här artikeln [SPA-appar och AEM SPA-redigeraren](/help/sites-developing/spa-walkthrough.md#spa-apps-and-the-aem-spa-editor).
+>Om du vill se hur det fungerar fortsätter du till nästa avsnitt i den här artikeln [SPA-appar och AEM SPA-redigeraren](/help/sites-developing/spa-walkthrough.md#spa-apps-and-the-aem-spa-editor).
 
 ## SPA-appar och AEM SPA-redigeraren {#spa-apps-and-the-aem-spa-editor}
 
-Att se hur en SPA fungerar för slutanvändaren och sedan inspektera SPA-sidan hjälper till att bättre förstå hur en SAP-app fungerar med SPA-redigeraren i AEM.
+Genom att uppleva hur en SPA fungerar för slutanvändaren och sedan inspektera SPA-sidan blir det lättare att förstå hur en SAP-app fungerar med SPA-redigeraren i AEM.
 
 ### Använda ett SPA-program {#using-an-spa-application}
 
@@ -254,7 +254,7 @@ Med exempelprogrammet We.Retail Journal är det tydligt hur appen beter sig och 
 
 Dessutom är det smidigt för innehållsförfattaren att skapa innehåll med en SPA-redigerare i AEM.
 
-I följande avsnitt utforskar vi det avtal som gör det möjligt för SPA-redigeraren att koppla komponenter inom SPA till AEM-komponenter för att uppnå denna smidiga redigeringsupplevelse.
+I följande avsnitt ska vi titta närmare på det avtal som gör det möjligt för SPA-redigeraren att relatera komponenter i SPA till AEM komponenter och uppnå denna smidiga redigeringsupplevelse.
 
 1. Läs in programmet We.Retail Journal i redigeraren och växla till **förhandsgranskningsläget** .
 
@@ -285,8 +285,8 @@ I följande avsnitt utforskar vi det avtal som gör det möjligt för SPA-redige
 
 ## Nästa steg {#next-steps}
 
-Nu när du förstår SPA-redigeringsupplevelsen i AEM och hur en SPA hör ihop med SPA-redigeraren kan du fördjupa dig i hur en SPA byggs.
+Nu när du förstår hur SPA-redigering fungerar i AEM och hur en SPA hör ihop med SPA-redigeraren kan du fördjupa dig i hur en SPA byggs.
 
-* [Komma igång med SPA i AEM](/help/sites-developing/spa-getting-started-react.md) visar hur en grundläggande SPA har skapats för att fungera med SPA-redigeraren i AEM
+* [Komma igång med SPA i AEM](/help/sites-developing/spa-getting-started-react.md) visar hur en grundläggande SPA fungerar med SPA-redigeraren i AEM
 * [Översikt över](/help/sites-developing/spa-overview.md) SPA-redigeraren går in mer i kommunikationsmodellen mellan AEM och SPA.
-* [Utveckla SPA för AEM](/help/sites-developing/spa-architecture.md) beskriver hur man engagerar gränssnittsutvecklare för att utveckla en SPA för AEM samt hur SPA interagerar med AEM:s arkitektur.
+* [Utveckla SPA för AEM](/help/sites-developing/spa-architecture.md) beskriver hur gränssnittsutvecklare kan engagera sig i utvecklingen av en SPA för AEM och hur SPA interagerar med AEM.
