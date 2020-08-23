@@ -10,7 +10,10 @@ topic-tags: develop
 discoiquuid: b21a48ba-eccd-4bb5-9b92-3039026ddf2a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+workflow-type: tm+mt
+source-wordcount: '1984'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +30,7 @@ Du vill till exempel att alla formulärförfattare ska ha vissa textrutor, navig
 
 ## Arbeta med mallar {#working-with-templates}
 
-Du kommer åt mallredigeraren på Verktyg-menyn genom att gå till **Adobe Experience Manager > Verktyg > Mallar**. Här är mallarna ordnade i mappar som är aktiverade för redigerbara mallar. AEM tillhandahåller en global mapp för att ordna mallar. Den är dock inte aktiverad som standard. Du kan begära att administratören aktiverar den globala mappen eller skapar en ny mapp för mallar. Mer information om hur du skapar mappar finns i [Mallmappar](/help/sites-developing/page-templates-editable.md).
+Du kommer åt mallredigeraren på Verktyg-menyn genom att gå till **Adobe Experience Manager > Verktyg > Mallar**. Här är mallarna ordnade i mappar som är aktiverade för redigerbara mallar. AEM innehåller en global mapp för att ordna mallar. Den är dock inte aktiverad som standard. Du kan begära att administratören aktiverar den globala mappen eller skapar en ny mapp för mallar. Mer information om hur du skapar mappar finns i [Mallmappar](/help/sites-developing/page-templates-editable.md).
 
 När du trycker för att öppna en mapp finns knappen Skapa som gör att du kan skapa en ny mall för adaptiva formulär.
 
@@ -80,7 +83,7 @@ När du markerar strukturlagret i mallredigeraren kan du se layoutbehållarna ov
 
 Layoutbehållare i strukturlagret
 
-**S.** Layoutbehållare för huvudkomponent **B.** Layoutbehållare för sidfotskomponent
+**S.** Layoutbehållare för rubrikkomponent **B.** Layoutbehållare för sidfotskomponent
 
 Dra och släpp komponenten Adaptiv formulärrubrik i layoutbehållaren ovanför behållaren för adaptiv form. När du har lagt till komponenten kan du ange dess egenskaper så att du kan lägga till en logotyp och ange dess titel.
 
@@ -119,7 +122,7 @@ Se [Sidpanelen](../../forms/using/introduction-forms-authoring.md#sidebar).
 >
 >När du väljer Lagra innehåll eller Lagra PDF som överföringsåtgärd får du ett alternativ för att ange lagringssökvägen. Om du anger en sökväg i en mall får alla formulär som skapas från den samma sökväg. Du kan ange rätt lagringssökväg eller se till att formulärförfattare uppdaterar den för att förhindra att data från alla formulär lagras på samma plats.
 
-#### Skapa en adaptiv formulärmall med flikar och paneler {#creating-an-adaptive-form-template-with-tabs-and-panels-nbsp}
+#### Skapa en adaptiv formulärmall med flikar och paneler  {#creating-an-adaptive-form-template-with-tabs-and-panels-nbsp}
 
 Du kan till exempel skapa en mall med följande flikar:
 
@@ -139,11 +142,9 @@ Om du vill skapa flikarna Allmän information och Professionell information läg
 
 #### Lägga till innehåll på flikar {#adding-content-in-tabs}
 
-[ ![Lägga till fält i den adaptiva formulärmallen](assets/template-edit-initial-content.png)
+![Lägga till fält i den adaptiva formulärmallen](assets/template-edit-initial-content.png)
 
-Lägga till fält i mallen
-
-](assets/template-edit-initial-content-1.png) När du har lagt till paneler och strukturerat dem som flikar kan du lägga till fält inuti flikarna. När du markerar en flik i redigeraren visas alternativet **Dra komponenter här** . Du kan dra och släppa komponenter som textrutor, listobjekt och knappar. Du kan dra och släppa komponenter från komponentwebbläsaren i sidofältet.
+När du har lagt till paneler och strukturerat dem som flikar kan du lägga till fält inuti flikarna. När du markerar en flik i redigeraren visas alternativet **Dra komponenter här** . Du kan dra och släppa komponenter som textrutor, listobjekt och knappar. Du kan dra och släppa komponenter från komponentwebbläsaren i sidofältet.
 
 Varje komponent har egenskaper som förbättrar datainhämtning och -hantering. Du kan till exempel aktivera egenskapen **Obligatoriskt fält** för en komponent. Författarna kan ange ett meddelande som kunderna ser när de inte fyller i ett obligatoriskt fält. Ange meddelandet i **egenskapen Meddelande** för obligatoriskt fält.
 
@@ -163,15 +164,15 @@ När du skapar ett anpassat formulär kan du se mallen som visas när du ombeds 
 
 ## Importera eller exportera en mall {#importing-or-exporting-a-template}
 
-Ett formulär fungerar med sin mall. När du hämtar ett adaptivt formulär som skapats med en anpassad mall hämtas inte mallen. När du importerar formuläret till en annan AEM Forms-instans importeras det utan någon mall. Om ett formulär importeras men mallen inte är tillgänglig, återges inte formuläret. Du kan paketera den anpassade mallen från `/conf` noden i `https://<server>:<port>/crx/packmgr`och portera den i AEM Forms-instansen där du vill överföra formuläret.
+Ett formulär fungerar med sin mall. När du hämtar ett adaptivt formulär som skapats med en anpassad mall hämtas inte mallen. När du importerar formuläret till en annan AEM Forms-instans importeras det utan någon mall. Om ett formulär importeras men mallen inte är tillgänglig, återges inte formuläret. Du kan paketera den anpassade mallen från `/conf` noden i `https://<server>:<port>/crx/packmgr`och portera den i den AEM Forms-instans där du vill överföra formuläret.
 
 ## Skapa ett anpassat formulär med hjälp av mallen {#creating-an-adaptive-form-using-the-template}
 
 När du har skapat och aktiverat en mall är den tillgänglig i formulärhanteraren när du skapar ett anpassat formulär. Mer information om hur du använder en mall och skapar ett anpassat formulär finns i [Skapa ett anpassat formulär](../../forms/using/creating-adaptive-form.md).
 
-## Ändra visningsalternativ för mallar som inte är i kartong {#change-display-option-of-out-of-the-box-templates}
+## Ändra visningsalternativ för mallar som inte är i kartong  {#change-display-option-of-out-of-the-box-templates}
 
-Du kan skapa anpassade mallar för adaptiva formulär för att definiera grundläggande struktur och ursprungligt innehåll. AEM Forms innehåller även en uppsättning färdiga mallar för adaptiva formulär. Du kan välja att visa eller dölja mallarna.
+Du kan skapa anpassade mallar för adaptiva formulär för att definiera grundläggande struktur och ursprungligt innehåll. AEM Forms har också en uppsättning färdiga mallar för anpassningsbara formulär. Du kan välja att visa eller dölja mallarna.
 
 Så här visar och döljer du mallar:
 
@@ -179,16 +180,16 @@ Så här visar och döljer du mallar:
 
    >[!NOTE]
    >
-   >URL:en för AEM-webbkonsolen är https://&#39;[server]:[port]&#39;/system/console/configMgr
+   >URL:en för AEM webbkonsol är https://&#39;[server]:[port]&#39;/system/console/configMgr
 
 1. Leta reda på och öppna konfigurationsinställningarna för **FormsManager** :
 
    * Markera eller avmarkera alternativet **Inkludera från i rutan AF- och AD-mallar** om du vill visa eller dölja formulärmallar.
-   * Om du vill visa eller dölja formulärmallar som lagts till i AEM 6.0-formulär eller AEM 6.1-formulär men nu är inaktuella markerar eller avmarkerar du alternativet **Inkludera AEM 6.0-mallar** . Om det här alternativet är markerat måste konfigurationen **Inkludera i rutorna AF och AD-mallar** vara aktiverad för att det ska börja gälla.
+   * Markera eller avmarkera alternativet **Inkludera AEM 6.0 AF-mallar** om du vill visa eller dölja anpassade formulärmallar som lagts till i Forms version AEM 6.0 eller AEM 6.1 men som nu är borttagna. Om det här alternativet är markerat måste konfigurationen **Inkludera i rutorna AF och AD-mallar** vara aktiverad för att det ska börja gälla.
 
 1. Click **Save**. Visningsalternativen för mallar som inte finns i kartongen ändras.
 
-## Rekommendationer {#recommendations}
+## Recommendations {#recommendations}
 
 * När du ändrar egenskaper för formuläret i mallredigeraren ska du inte använda egenskapen BindReference.
 * Om du vill lägga till en brytpunkt skapar du den när du skapar en adaptiv formulärmall.
