@@ -1,6 +1,6 @@
 ---
-title: Hantera bildförinställningar för Dynamic Media
-description: Förstå Dynamic Medias bildförinställningar och lär dig hur du skapar, ändrar och hanterar bildförinställningar
+title: Hantera förinställningar för dynamiska media-bilder
+description: Förstå förinställningar för Dynamic Media-bilder och lär dig hur du skapar, ändrar och hanterar bildförinställningar
 uuid: 3e9a7af6-bf49-4cff-b516-0a3ee9765391
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -10,9 +10,9 @@ discoiquuid: cc1111c4-6e24-4570-9ac7-97c25cf24ede
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-presets
 translation-type: tm+mt
-source-git-commit: a1e4d64a9ac7dc02c5cf2ac6b01994736c45b449
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '3699'
+source-wordcount: '3697'
 ht-degree: 8%
 
 ---
@@ -36,7 +36,7 @@ I det här avsnittet beskrivs hur du skapar, ändrar och i allmänhet hanterar b
 
 Precis som ett makro är en bildförinställning en fördefinierad samling kommandon för storleksändring och formatering som sparats under ett namn. Om du vill förstå hur bildförinställningar fungerar antar du att webbplatsen kräver att varje produktbild visas i olika storlekar, olika format och komprimeringsgrader för datorer och mobila enheter.
 
-Du kan skapa två bildförinställningar: en med 500 x 500 pixlar för skrivbordsversionen och 150 x 150 pixlar för den mobila versionen. Du skapar två bildförinställningar, en som kallas `Enlarge` för att visa bilder med 500 x 500 pixlar och en som kallas `Thumbnail` för att visa bilder med 150 x 150 pixlar. För att kunna leverera bilder i rätt `Enlarge` storlek och `Thumbnail` storlek, söker AEM upp definitionen av förinställningen Förstora bild och förinställningen för miniatyrbild. Sedan genererar AEM dynamiskt en bild med samma storlek och formateringsspecifikationer som varje bildförinställning.
+Du kan skapa två bildförinställningar: en med 500 x 500 pixlar för skrivbordsversionen och 150 x 150 pixlar för den mobila versionen. Du skapar två bildförinställningar, en som kallas `Enlarge` för att visa bilder med 500 x 500 pixlar och en som kallas `Thumbnail` för att visa bilder med 150 x 150 pixlar. Om du vill leverera bilder i rätt `Enlarge` storlek och `Thumbnail` storlek läser AEM upp definitionen av förinställningen Förstora bild och miniatyrbildsförinställningen. AEM sedan dynamiskt en bild med samma storlek och formateringsspecifikationer som varje bildförinställning.
 
 Bilder som minskar i storlek när de levereras dynamiskt kan förlora i skärpa och detaljer. Därför innehåller varje bildförinställning formateringskontroller för optimering av en bild när den levereras i en viss storlek. Med dessa kontroller kan du vara säker på att dina bilder är skarpa och tydliga när de levereras till din webbplats eller ditt program.
 
@@ -44,7 +44,7 @@ Administratörer kan skapa bildförinställningar. Om du vill skapa en bildföri
 
 ## Managing Dynamic Media image presets {#managing-image-presets-1}
 
-Du hanterar dina bildförinställningar i AEM genom att trycka på eller klicka på AEM-logotypen för att komma åt den globala navigeringskonsolen och sedan trycka eller klicka på verktygsikonen och navigera till **[!UICONTROL Assets > Image Presets.]**
+Du hanterar dina bildförinställningar i AEM genom att trycka på eller klicka på AEM logotyp för att komma åt den globala navigeringskonsolen och sedan trycka eller klicka på verktygsikonen och navigera till **[!UICONTROL Assets > Image Presets.]**
 
 ![6_5_tools-assets-imageppresets](assets/6_5_tools-assets-imagepresets.png)
 
@@ -54,7 +54,7 @@ Du hanterar dina bildförinställningar i AEM genom att trycka på eller klicka 
 >
 >I *Dynamic Media - Scene7-läge* behöver du *inte* publicera bildförinställningar när bildförinställningar publiceras automatiskt.
 >
->I *Dynamic Media - hybridläge* måste du publicera bildförinställningar manuellt.
+>I *Dynamic Media - hybrid-läge* måste du publicera bildförinställningar manuellt.
 >
 >Se [Publicera bildförinställningar.](#publishing-image-presets)
 
@@ -62,13 +62,13 @@ Du hanterar dina bildförinställningar i AEM genom att trycka på eller klicka 
 >
 >Systemet visar en mängd olika återgivningar när du väljer **[!UICONTROL Renditions]** i en tillgångs detaljvy. Du kan öka eller minska antalet bildförinställningar som visas. See [Increasing the number of image presets that display](#increasingthenumberofimagepresetsthatdisplay).
 
-### Filformaten Adobe Illustrator (AI), Postscript (EPS) och PDF {#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats}
+### Adobe Illustrator (AI), PostScript (EPS) och PDF {#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats}
 
 Om du tänker ge stöd för att lägga in AI-, EPS- och PDF-filer så att du kan generera dynamiska återgivningar av dessa filformat, bör du granska följande information innan du skapar bildförinställningar.
 
-Filformatet i Adobe Illustrator är en variant av PDF. De största skillnaderna när det gäller AEM Assets är följande:
+Adobe Illustrator filformat är en variant av PDF. De största skillnaderna när det gäller AEM Assets är följande:
 
-* Adobe Illustrator-dokument består av en sida med flera lager. Varje lager extraheras som en PNG-underresurs under Illustrator-huvudresursen.
+* Adobe Illustrator-dokument består av en sida med flera lager. Varje lager extraheras som en PNG-underresurs under Illustrator huvudresurs.
 * PDF-dokument består av en eller flera sidor. Varje sida extraheras som en enda PDF-delresurs under det huvudsakliga flersidiga PDF-dokumentet.
 
 Delresurserna skapas av `Create Sub Asset process` komponenten i det övergripande `DAM Update Asset` arbetsflödet. Om du vill visa den här processkomponenten i arbetsflödet trycker du på **[!UICONTROL Tools > Workflow > Models > DAM Update Asset > Edit.]**
@@ -77,7 +77,7 @@ Se även [Visa sidor i en flersidig fil](/help/assets/managing-linked-subassets.
 
 Du kan visa delresurserna eller sidorna när du öppnar resursen, trycka på menyn Innehåll och välja **[!UICONTROL Subassets]** eller **[!UICONTROL Pages.]** Underresurserna är verkliga resurser. Det vill säga, PDF-sidor extraheras av `Create Sub Asset` arbetsflödeskomponenten. De lagras sedan som `page1.pdf`, `page2.pdf`och så vidare nedanför huvudresursen. När de har lagrats bearbetas de av arbetsflödet `DAM Update Asset` .
 
-Om du vill använda Dynamic Media för att förhandsgranska och generera dynamiska återgivningar för AI-, EPS- eller PDF-filer måste du utföra följande åtgärder:
+Om du vill använda Dynamic Media för att förhandsgranska och generera dynamiska renderingar för AI-, EPS- eller PDF-filer måste du utföra följande steg:
 
 1. I `DAM Update Asset` arbetsflödet rastrerar `Rasterize PDF/AI Image Preview Rendition` processkomponenten den första sidan i den ursprungliga resursen - med den konfigurerade upplösningen - till en `cqdam.preview.png` rendering.
 
@@ -114,7 +114,7 @@ Argument för att rastrera PDF- eller AI-arbetsflödet
   <tr>
    <td>Mime-typer</td>
    <td><p>application/pdf</p> <p>application/postscript</p> <p>program/illustrator<br /> </p> </td>
-   <td>Lista över dokumentMIME-typer som betraktas som PDF- eller Illustrator-dokument.<br /> </td>
+   <td>Lista över dokumentMIME-typer som anses vara PDF- eller Illustrator-dokument.<br /> </td>
   </tr>
   <tr>
    <td>Maxbredd</td>
@@ -140,21 +140,21 @@ Maximal bredd och Maximal höjd begränsar upplösningen som rastreras. Om maxv�
 
 Processkomponenten har en definierad maxgräns för att säkerställa att den inte skapar för stora bilder i minnet. `Rasterize PDF/AI Image Preview Rendition` Sådana stora bilder kan flöda över det minne som JVM (Java Virtual Machine) har fått. Man måste se till att JVM får tillräckligt med minne för att hantera det konfigurerade antalet parallella arbetsflöden, där var och en har möjlighet att skapa en bild med den högsta konfigurerade storleken.
 
-### InDesign-filformat (INDD) {#indesign-indd-file-format}
+### InDesign (INDD), filformat {#indesign-indd-file-format}
 
 Om du tänker ge stöd för inmatning av INDD-filer så att du kan generera en dynamisk återgivning av det här filformatet, kanske du vill granska följande information innan du skapar bildförinställningar.
 
-För InDesign-filer extraheras underresurser endast om Adobe InDesign-servern är integrerad med AEM. Refererade resurser länkas baserat på deras metadata. InDesign Server krävs inte för länkning. De refererade resurserna måste dock finnas i AEM innan InDesign-filerna bearbetas för länkarna som ska skapas mellan InDesign-filerna och de refererade resurserna.
+För InDesign-filer extraheras underresurser endast om Adobe InDesign-servern är integrerad med AEM. Refererade resurser länkas baserat på deras metadata. InDesign Server krävs inte för länkning. De refererade resurserna måste dock finnas i AEM innan InDesign-filerna bearbetas för de länkar som ska skapas mellan InDesign-filerna och de refererade resurserna.
 
 Se [Integrera AEM Assets med InDesign Server](/help/assets/indesign.md).
 
-Processkomponenten Medieextrahering i arbetsflödet kör flera förkonfigurerade Extend Scripts för att bearbeta InDesign-filer. `DAM Update Asset`
+Processkomponenten för medieextrahering i arbetsflödet kör flera förkonfigurerade Extend Scripts för att bearbeta InDesign-filer. `DAM Update Asset`
 
-![ExtendScript-sökvägarna i argumenten för medieextraheringsprocessen](assets/6_5_mediaextractionprocess.png)
+![ExtendScript-sökvägarna i argumenten i medieextraheringsprocessen](assets/6_5_mediaextractionprocess.png)
 
 ExtendScript-sökvägarna i argumenten för processkomponenten för medieextrahering i [!UICONTROL DAM Update Asset] arbetsflödet.
 
-Följande skript används av Dynamic Media-integrering:
+Följande skript används av integreringen med Dynamic Media:
 
 <table>
  <tbody>
@@ -166,12 +166,12 @@ Följande skript används av Dynamic Media-integrering:
   <tr>
    <td>ThumbnailExport.jsx</td>
    <td>Ja</td>
-   <td>Genererar en 300 ppi- <code>thumbnail.jpg</code> rendering som är optimerad och omvandlad till en PTIFF-rendering efter <code>Dynamic Media Process Image Assets</code> processens komponent.<br /> </td>
+   <td>Genererar en 300 ppi- <code>thumbnail.jpg</code> rendering som är optimerad och omvandlad till en PTIFF-rendering efter <code>Dynamic Media Process Image Assets</code> processreferens.<br /> </td>
   </tr>
   <tr>
    <td>JPEGPagesExport.jsx</td>
    <td>Ja</td>
-   <td>Skapar en JPEG-underresurs på 300 ppi för varje sida. JPEG-underresursen är en verklig resurs som lagras under InDesign-resursen. Den är också optimerad och omvandlad till en PTIFF-fil i <code>DAM Update Asset</code> arbetsflödet.<br /> </td>
+   <td>Skapar en JPEG-underresurs på 300 ppi för varje sida. JPEG-underresursen är en verklig tillgång som lagras under InDesign-resursen. Den är också optimerad och omvandlad till en PTIFF-fil i <code>DAM Update Asset</code> arbetsflödet.<br /> </td>
   </tr>
   <tr>
    <td>PDFPagesExport.jsx</td>
@@ -215,11 +215,11 @@ Storleksändring för miniatyrbilder definieras i följande format: **[!UICONTRO
 
 1. Tryck **[!UICONTROL Save]** för att spara ändringarna i arbetsflödet.
 
-### Öka eller minska antalet förinställningar för Dynamic Media som visas {#increasing-or-decreasing-the-number-of-image-presets-that-display}
+### Öka eller minska antalet dynamiska mediebildförinställningar som visas {#increasing-or-decreasing-the-number-of-image-presets-that-display}
 
-De bildförinställningar du skapar är tillgängliga som dynamiska återgivningar när du förhandsgranskar resurser. AEM visar en mängd olika dynamiska återgivningar när du visar resurser från **[!UICONTROL Detail View > Renditions.]** Du kan öka eller minska gränsen för de återgivningar som visas.
+De bildförinställningar du skapar är tillgängliga som dynamiska återgivningar när du förhandsgranskar resurser. AEM visar en mängd olika dynamiska återgivningar när du visar resurser från **[!UICONTROL Detail View > Renditions.]** Du kan öka eller minska antalet återgivningar som visas.
 
-**Så här ökar eller minskar du antalet bildförinställningar som visas** i Dynamic Media:
+**Så här ökar eller minskar du antalet förinställningar för dynamiska media som visas**:
 
 1. Navigera till CRXDE Lite ([https://localhost:4502/crx/de](https://localhost:4502/crx/de)).
 1. Navigera till noden med bildförinställningar på `/libs/dam/gui/coral/content/commons/sidepanels/imagepresetsdetail/imgagepresetslist`
@@ -234,9 +234,9 @@ De bildförinställningar du skapar är tillgängliga som dynamiska återgivning
 1. I egenskapen limit ändrar du talet till önskat tal, till exempel `{empty requestPathInfo.selectors[1] ? "20" : requestPathInfo.selectors[1]}`
 1. Tryck på **[!UICONTROL Save All.]**
 
-## Skapa en bildförinställning för Dynamic Media {#creating-image-presets}
+## Skapa en förinställning för Dynamic Media-bilder {#creating-image-presets}
 
-Om du skapar en bildförinställning för Dynamic Media kan du använda dessa inställningar på alla bilder när du förhandsgranskar eller publicerar.
+När du skapar en förinställning för en bild i Dynamic Media kan du använda dessa inställningar på alla bilder när du förhandsgranskar eller publicerar.
 
 >[!NOTE]
 >
@@ -246,13 +246,13 @@ Om du tänker ge stöd för att lägga in AI-, PDF- och EPS-filer så att du kan
 Se [Adobe Illustrator (AI), Postscript (EPS) och PDF-filformat](#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats).
 
 Om du tänker ge stöd för inmatning av INDD-filer så att du kan generera en dynamisk återgivning av det här filformatet, kanske du vill granska följande information innan du skapar bildförinställningar.
-Se [Filformat](#indesign-indd-file-format)för InDesign (INDD).
+Se [Filformatet](#indesign-indd-file-format)InDesign (INDD).
 
 >[!NOTE]
 >
->Om du vill skapa förinställningar för Dynamic Media-bilder måste du ha administratörsbehörighet som AEM-administratör eller Admin Console-administratör.
+>Om du vill skapa förinställningar för Dynamic Media-bilder måste du ha administratörsbehörighet som AEM eller Admin Console-administratör.
 
-**Så här skapar du en bildförinställning** för Dynamic Media:
+**Så här skapar du en förinställning** för Dynamic Media-bilder:
 
 1. I AEM trycker du på AEM-logotypen för att komma åt den globala navigeringskonsolen och sedan trycker du på **[!UICONTROL Tools > Assets > Image Presets.]**
 1. Klicka på **[!UICONTROL Create.]** Fönstret **[!UICONTROL Edit Image Preset]** öppnas.
@@ -267,13 +267,13 @@ Se [Filformat](#indesign-indd-file-format)för InDesign (INDD).
 
    ![6_5_imagepreset-edit](assets/6_5_imagepreset-edit.png)
 
-1. Klicka på **[!UICONTROL Save**.
+1. Klicka på **[!UICONTROL Save]**.
 
 ## Creating a responsive image preset {#creating-a-responsive-image-preset}
 
 Om du vill skapa en responsiv bildförinställning utför du stegen i [Skapa bildförinställningar](#creating-image-presets). När du anger höjd och bredd i **[!UICONTROL Edit Image Preset]** fönstret raderar du värdena och låter dem vara tomma.
 
-Om du lämnar dem tomma visas information om att den här bildförinställningen är responsiv. Du kan justera de andra värdena efter behov.
+Om du lämnar dem tomma visas AEM att den här bildförinställningen är responsiv. Du kan justera de andra värdena efter behov.
 
 
 
@@ -283,13 +283,13 @@ Om du lämnar dem tomma visas information om att den här bildförinställningen
 >
 >![chlimage_1-79](assets/chlimage_1-498.png)
 >
->I Dynamic Media - Scene7-läget publiceras bildförinställningar och bildresurser automatiskt.
+>I Dynamic Media - Scene7-läge publiceras bildförinställningar och bildresurser automatiskt.
 >
 >I Dynamic Media - hybrid-läge måste du manuellt publicera bildförinställningar och bildresurser.
 
 ### Alternativ för bildförinställning {#image-preset-options}
 
-När du skapar eller redigerar bildförinställningar finns alternativen som beskrivs i det här avsnittet. Dessutom rekommenderar Adobe att du börjar med följande alternativ:
+När du skapar eller redigerar bildförinställningar finns alternativen som beskrivs i det här avsnittet. Adobe rekommenderar dessutom att du börjar med följande alternativ:
 
 * **[!UICONTROL Format]** (**[!UICONTROL Basic]** flik) - Välj **[!UICONTROL JPEG]** eller något annat format som uppfyller dina krav. Alla webbläsare har stöd för JPEG-bildformatet. Det ger en bra balans mellan små filstorlekar och bildkvalitet. I bilder med JPEG-format används dock förstörande komprimering, som kan ge upphov till oönskade bildartefakter om komprimeringsinställningen är för låg. Därför rekommenderar Adobe att du ställer in komprimeringskvaliteten på 75. Den här inställningen ger en bra balans mellan bildkvalitet och liten filstorlek.
 
@@ -361,7 +361,7 @@ När du skapar eller redigerar bildförinställningar finns alternativen som bes
   </tr>
   <tr>
    <td><strong>Återgivningsmetod</strong></td>
-   <td>Du kan åsidosätta standardåtergivningsmetoden. Återgivningsmetoden avgör vad som händer med färger som inte kan återges i målfärgprofilen (ej tryckbart). Återgivningsmetoden ignoreras om den inte är kompatibel med ICC-profilen.
+   <td>Du kan åsidosätta standardåtergivningsmetoden. Återgivningsmetoden bestämmer vad som händer med färger som inte kan återges i målfärgprofilen (ej tryckbart). Återgivningsmetoden ignoreras om den inte är kompatibel med ICC-profilen.
     <ul>
      <li>Välj <strong>Perceptuell</strong> om du vill komprimera det totala färgomfånget från en färgrymd till en annan om en eller flera färger i den ursprungliga bilden ligger utanför färgomfånget för målfärgrymden.</li>
      <li>Välj <strong>Relativa färgvärden</strong> när en färg i den aktuella färgrymden ligger utanför färgomfånget i målfärgrymden och du vill mappa den till den närmaste möjliga färgen inom färgomfånget för målfärgrymden utan att påverka några andra färger. </li>
@@ -402,7 +402,7 @@ När du skapar eller redigerar bildförinställningar finns alternativen som bes
      <li><strong>Dubbellinjär</strong> - den snabbaste omsamplingsmetoden. Vissa aliaseringsartefakter är märkbara.</li>
      <li><strong>Bi-Cubic</strong> - Ökar processoranvändningen men ger skarpare bilder med mindre framträdande aliasing-artefakter.</li>
      <li><strong>Sharp2</strong> - Kan ge något skarpare resultat än bikubik, men till en ännu högre CPU-kostnad.</li>
-     <li><strong>Bi-Sharp</strong> - Väljer Photoshops standardomsampling för att minska bildstorleken, som kallas <strong>bikubisk skarpare</strong> i Adobe Photoshop.</li>
+     <li><strong>Bi-Sharp</strong> - Väljer Photoshop standardomsampling för att minska bildstorleken, som kallas <strong>bikubisk skarpare</strong> i Adobe Photoshop.</li>
      <li><strong>Varje färg</strong> och <strong>intensitet</strong> - varje metod kan baseras på färg eller intensitet. Som standard är <strong>Varje färg</strong> markerad.</li>
     </ul> </td>
   </tr>
@@ -412,7 +412,7 @@ När du skapar eller redigerar bildförinställningar finns alternativen som bes
   </tr>
   <tr>
    <td><strong>Bildmodifierare</strong></td>
-   <td><p>Förutom de vanliga bildinställningarna i användargränssnittet har Dynamic Media stöd för många avancerade bildändringar som du kan ange i fältet <strong>Bildmodifierare</strong> . Dessa parametrar definieras i kommandoreferensen <a href="https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html">för</a>Image Server Protocol.</p> <p>Viktigt: Följande funktioner i API:t stöds inte:</p>
+   <td><p>Förutom de vanliga bildinställningarna i användargränssnittet har Dynamic Media stöd för många avancerade bildändringar som du kan ange i fältet <strong>Bildmodifierare</strong> . De här parametrarna definieras i <a href="https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html">Image Server Protocol-kommandoreferensen</a>.</p> <p>Viktigt: Följande funktioner i API:t stöds inte:</p>
     <ul>
      <li>Grundläggande kommandon för mallar och textåtergivning: <code>text= textAngle= textAttr= textFlowPath= textFlowXPath= textPath=</code> och <code>textPs=</code></li>
      <li>Lokaliseringskommandon: <code>locale=</code> och <code>req=xlate</code></li>
@@ -421,7 +421,7 @@ När du skapar eller redigerar bildförinställningar finns alternativen som bes
      <li><code>req=saveToFile</code></li>
      <li><code>req=targets</code></li>
      <li><code>template=</code></li>
-     <li>Icke-centrala Dynamic Media: SVG, bildåtergivning och webb-till-tryck</li>
+     <li>Dynamiska medietjänster utan kärna: SVG, bildåtergivning och webb-till-tryck</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -429,7 +429,7 @@ När du skapar eller redigerar bildförinställningar finns alternativen som bes
 
 ## Definiera förinställningsalternativ för bilder med bildmodifierare {#defining-image-preset-options-with-image-modifiers}
 
-Förutom alternativen på flikarna Grundläggande och Avancerat kan du definiera bildmodifierare som ger dig fler alternativ när du definierar bildförinställningar. Bildåtergivning bygger på Scene7-bildåtergivnings-API:t och definieras i detalj i [HTTP-protokollreferensen](https://microsite.omniture.com/t2/help/en_US/s7/is_ir_api/is_api/http_ref/c_http_protocol_reference.html).
+Förutom alternativen på flikarna Grundläggande och Avancerat kan du definiera bildmodifierare som ger dig fler alternativ när du definierar bildförinställningar. Bildåtergivning är beroende av Scene7 API för bildåtergivning och definieras i detalj i [HTTP-protokollreferensen](https://microsite.omniture.com/t2/help/en_US/s7/is_ir_api/is_api/http_ref/c_http_protocol_reference.html).
 
 Nedan följer några grundläggande exempel på vad du kan göra med bildmodifierare.
 
@@ -488,13 +488,13 @@ Nedan följer några grundläggande exempel på vad du kan göra med bildmodifie
 
 ## Publishing Dynamic Media image presets {#publishing-image-presets}
 
-Om du kör Dynamic Media - hybrid-läge måste du publicera bildförinställningar manuellt.
+Om du använder läget Dynamic Media - Hybrid måste du publicera bildförinställningar manuellt.
 
-(Om du kör Dynamic Media - Scene7-läge publiceras bildförinställningar automatiskt åt dig. behöver du inte utföra dessa steg.)
+(Om du kör Dynamic Media - Scene7-läge publiceras bildförinställningar automatiskt åt dig; behöver du inte utföra dessa steg.)
 
-**Så här publicerar du bildförinställningar i Dynamic Media - hybridläge**:
+**Så här publicerar du bildförinställningar i läget** Dynamic Media - Hybrid:
 
-1. I AEM: tryck eller klicka på AEM-logotypen för att komma åt den globala navigeringskonsolen och tryck eller klicka på verktygsikonen och navigera till **[!UICONTROL Assets > Image Presets.]**
+1. I AEM: tryck eller klicka på AEM logotyp för att komma åt den globala navigeringskonsolen och tryck eller klicka på verktygsikonen och navigera till **[!UICONTROL Assets > Image Presets.]**
 1. Välj bildförinställningen eller flera bildförinställningar i listan med bildförinställningar och klicka eller tryck på **[!UICONTROL Publish.]**
 1. När bildförinställningen har publicerats ändras statusen från opublicerad till publicerad.
 
@@ -502,7 +502,7 @@ Om du kör Dynamic Media - hybrid-läge måste du publicera bildförinställning
 
 ## Deleting Dynamic Media image presets {#deleting-image-presets}
 
-1. I AEM trycker eller klickar du på AEM-logotypen för att komma åt den globala navigeringskonsolen.
+1. I AEM trycker eller klickar du på den AEM logotypen för att komma åt den globala navigeringskonsolen.
 1. Tryck på **[!UICONTROL Tools]** ikonen och navigera sedan till **[!UICONTROL Assets > Image Presets.]**
-1. Markera en förinställning och klicka sedan på **[!UICONTROL Delete]**. Dynamic Media bekräftar att du vill ta bort den. Tryck för **[!UICONTROL Delete]** att ta bort eller tryck för **[!UICONTROL Cancel]** att avbryta.
+1. Markera en förinställning och klicka sedan på **[!UICONTROL Delete]**. Dynamic Media bekräftar att du vill ta bort det. Tryck för **[!UICONTROL Delete]** att ta bort eller tryck för **[!UICONTROL Cancel]** att avbryta.
 
