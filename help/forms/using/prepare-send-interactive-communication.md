@@ -1,14 +1,14 @@
 ---
 title: Förbereda och skicka interaktiv kommunikation med agentens användargränssnitt
 seo-title: Förbereda och skicka interaktiv kommunikation med agentens användargränssnitt
-description: Agentgränssnittet gör att agenterna kan förbereda och skicka interaktiv kommunikation till postprocessen. Agenten gör de ändringar som behövs och skickar den interaktiva kommunikationen till en postprocess, som e-post eller utskrift.
+description: Agentgränssnittet gör att agenterna kan förbereda och skicka interaktiv kommunikation till postprocessen. Agenten gör de ändringar som krävs och skickar den interaktiva kommunikationen till en postprocess, som e-post eller utskrift.
 seo-description: Förbereda och skicka interaktiv kommunikation med agentens användargränssnitt
 uuid: d1a19b83-f630-4648-9ad2-a22374e31aa9
 topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 110c86ea-9bd8-4018-bfcc-ca33e6b3f3ba
 translation-type: tm+mt
-source-git-commit: 5bbafd9006b04d761ffab218e8480c1e94903bb6
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
 source-wordcount: '2031'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Förbereda och skicka interaktiv kommunikation med agentens användargränssnitt {#prepare-and-send-interactive-communication-using-the-agent-ui}
 
-Agentgränssnittet gör att agenterna kan förbereda och skicka interaktiv kommunikation till postprocessen. Agenten gör de ändringar som behövs och skickar den interaktiva kommunikationen till en postprocess, som e-post eller utskrift.
+Agentgränssnittet gör att agenterna kan förbereda och skicka interaktiv kommunikation till postprocessen. Agenten gör de ändringar som krävs och skickar den interaktiva kommunikationen till en postprocess, som e-post eller utskrift.
 
 ## Översikt {#overview}
 
@@ -105,7 +105,7 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
 1. Om ordningen på de bifogade filerna inte var låst när du skapade den interaktiva kommunikationen kan du ändra ordningen på de bifogade filerna genom att markera en bifogad fil och trycka på nedåtpilen och uppåtpilen.
 1. Använd Förhandsgranska via webben och Förhandsgranska för att se om de två utdatafilerna är som du vill ha dem.
 
-   Om du tycker att förhandsvisningarna är tillfredsställande kan du trycka på **[!UICONTROL Submit]** för att skicka/skicka interaktiv kommunikation till en postprocess. Om du vill göra ändringar avslutar du förhandsgranskningen och går tillbaka till ändringarna.
+   Om du tycker att förhandsvisningarna är tillräckliga trycker du för **[!UICONTROL Submit]** att skicka/skicka interaktiv kommunikation till en postprocess. Om du vill göra ändringar avslutar du förhandsgranskningen och går tillbaka till ändringarna.
 
 ## Formatera text {#formattingtext}
 
@@ -139,7 +139,7 @@ Agentgränssnittet har inbyggt stöd för 210 specialtecken. Administratören ka
 
 #### Leverans av bifogade filer {#attachmentdelivery}
 
-* När den interaktiva kommunikationen återges med hjälp av API:er på serversidan som en interaktiv eller icke-interaktiv PDF, innehåller den återgivna PDF-filen bilagor som PDF-bilagor.
+* När den interaktiva kommunikationen återges med serversidans API:er som en interaktiv eller icke-interaktiv PDF innehåller den återgivna PDF-filen bilagor som PDF-bilagor.
 * När en inläggsprocess som är kopplad till en interaktiv kommunikation läses in som en del av Skicka med agentgränssnittet, skickas bilagor som List&lt;com.adobe.idp.Document> inAttachmentDocs-parametern.
 * Arbetsflöden för leveransfunktion, som e-post och utskrift, ger även bilagor tillsammans med PDF-versionen av Interactive Communication.
 
@@ -236,84 +236,84 @@ import java.util.*;
 @Component(service = CCRDocumentInstanceService.class, immediate = true)
 public class CCRDraftService implements CCRDocumentInstanceService {
 
- private static final Logger logger = LoggerFactory.getLogger(CCRDraftService.class);
+    private static final Logger logger = LoggerFactory.getLogger(CCRDraftService.class);
 
- private HashMap<String, Object> draftDataMap = new HashMap<>();
+    private HashMap<String, Object> draftDataMap = new HashMap<>();
 
- @Override
- public String save(CCRDocumentInstance ccrDocumentInstance) throws CCRDocumentException {
-     String documentInstanceName = ccrDocumentInstance.getName();
-     if (StringUtils.isNotEmpty(documentInstanceName)) {
-         logger.info("Saving ccrData with name : {}", ccrDocumentInstance.getName());
-         if (!CCRDocumentInstance.Status.SUBMIT.equals(ccrDocumentInstance.getStatus())) {
-             ccrDocumentInstance = mySQLDataBaseServiceCRUD(ccrDocumentInstance,null, "SAVE");
-         }
-     } else {
-         logger.error("Could not save data as draft name is empty");
-     }
-     return ccrDocumentInstance.getId();
- }
+    @Override
+    public String save(CCRDocumentInstance ccrDocumentInstance) throws CCRDocumentException {
+        String documentInstanceName = ccrDocumentInstance.getName();
+        if (StringUtils.isNotEmpty(documentInstanceName)) {
+            logger.info("Saving ccrData with name : {}", ccrDocumentInstance.getName());
+            if (!CCRDocumentInstance.Status.SUBMIT.equals(ccrDocumentInstance.getStatus())) {
+                ccrDocumentInstance = mySQLDataBaseServiceCRUD(ccrDocumentInstance,null, "SAVE");
+            }
+        } else {
+            logger.error("Could not save data as draft name is empty");
+        }
+        return ccrDocumentInstance.getId();
+    }
 
- @Override
- public void update(CCRDocumentInstance ccrDocumentInstance) throws CCRDocumentException {
-     String documentInstanceName = ccrDocumentInstance.getName();
-     if (StringUtils.isNotEmpty(documentInstanceName)) {
-         logger.info("Saving ccrData with name : {}", documentInstanceName);
-         mySQLDataBaseServiceCRUD(ccrDocumentInstance, ccrDocumentInstance.getId(), "UPDATE");
-     } else {
-         logger.error("Could not save data as draft Name is empty");
-     }
- }
+    @Override
+    public void update(CCRDocumentInstance ccrDocumentInstance) throws CCRDocumentException {
+        String documentInstanceName = ccrDocumentInstance.getName();
+        if (StringUtils.isNotEmpty(documentInstanceName)) {
+            logger.info("Saving ccrData with name : {}", documentInstanceName);
+            mySQLDataBaseServiceCRUD(ccrDocumentInstance, ccrDocumentInstance.getId(), "UPDATE");
+        } else {
+            logger.error("Could not save data as draft Name is empty");
+        }
+    }
 
- @Override
- public CCRDocumentInstance get(String id) throws CCRDocumentException {
-     CCRDocumentInstance cCRDocumentInstance;
-     if (StringUtils.isEmpty(id)) {
-         logger.error("Could not retrieve data as draftId is empty");
-         cCRDocumentInstance = null;
-     } else {
-         cCRDocumentInstance = mySQLDataBaseServiceCRUD(null, id,"GET");
-     }
-     return cCRDocumentInstance;
- }
+    @Override
+    public CCRDocumentInstance get(String id) throws CCRDocumentException {
+        CCRDocumentInstance cCRDocumentInstance;
+        if (StringUtils.isEmpty(id)) {
+            logger.error("Could not retrieve data as draftId is empty");
+            cCRDocumentInstance = null;
+        } else {
+            cCRDocumentInstance = mySQLDataBaseServiceCRUD(null, id,"GET");
+        }
+        return cCRDocumentInstance;
+    }
 
- @Override
- public List<CCRDocumentInstance> getAll(String userId, Date creationTime, Date updateTime,
-                                         Map<String, Object> optionsParams) throws CCRDocumentException {
-     List<CCRDocumentInstance> ccrDocumentInstancesList = new ArrayList<>();
+    @Override
+    public List<CCRDocumentInstance> getAll(String userId, Date creationTime, Date updateTime,
+                                            Map<String, Object> optionsParams) throws CCRDocumentException {
+        List<CCRDocumentInstance> ccrDocumentInstancesList = new ArrayList<>();
 
-     HashMap<String, Object> allSavedDraft = mySQLGetALLData();
-     for (String key : allSavedDraft.keySet()) {
-         ccrDocumentInstancesList.add((CCRDocumentInstance) allSavedDraft.get(key));
-     }
-     return ccrDocumentInstancesList;
- }
+        HashMap<String, Object> allSavedDraft = mySQLGetALLData();
+        for (String key : allSavedDraft.keySet()) {
+            ccrDocumentInstancesList.add((CCRDocumentInstance) allSavedDraft.get(key));
+        }
+        return ccrDocumentInstancesList;
+    }
 
- //The APIs call the service in the database using the following section.
- private CCRDocumentInstance mySQLDataBaseServiceCRUD(CCRDocumentInstance ccrDocumentInstance,String draftId, String method){
-     if(method.equals("SAVE")){
+    //The APIs call the service in the database using the following section.
+    private CCRDocumentInstance mySQLDataBaseServiceCRUD(CCRDocumentInstance ccrDocumentInstance,String draftId, String method){
+        if(method.equals("SAVE")){
 
-         String autoGenerateId = draftDataMap.size() + 1 +"";
-         ccrDocumentInstance.setId(autoGenerateId);
-         draftDataMap.put(autoGenerateId, ccrDocumentInstance);
-         return ccrDocumentInstance;
+            String autoGenerateId = draftDataMap.size() + 1 +"";
+            ccrDocumentInstance.setId(autoGenerateId);
+            draftDataMap.put(autoGenerateId, ccrDocumentInstance);
+            return ccrDocumentInstance;
 
-     }else if (method.equals("UPDATE")){
+        }else if (method.equals("UPDATE")){
 
-         draftDataMap.put(ccrDocumentInstance.getId(), ccrDocumentInstance);
-         return ccrDocumentInstance;
+            draftDataMap.put(ccrDocumentInstance.getId(), ccrDocumentInstance);
+            return ccrDocumentInstance;
 
-     }else if(method.equals("GET")){
+        }else if(method.equals("GET")){
 
-         return (CCRDocumentInstance) draftDataMap.get(draftId);
+            return (CCRDocumentInstance) draftDataMap.get(draftId);
 
-     }
-     return null;
- }
+        }
+        return null;
+    }
 
- private HashMap<String, Object> mySQLGetALLData(){
-     return draftDataMap;
- }
+    private HashMap<String, Object> mySQLGetALLData(){
+        return draftDataMap;
+    }
 }
 ```
 
