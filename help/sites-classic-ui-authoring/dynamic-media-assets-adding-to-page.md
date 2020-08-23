@@ -1,8 +1,8 @@
 ---
 title: Lägga till Dynamic Media-resurser på sidor
 seo-title: Lägga till Dynamic Media-resurser på sidor
-description: Om du vill lägga till funktionen för dynamiska medier i resurser som du använder på dina webbplatser kan du lägga till Dynamic Media eller komponenten för interaktiva media direkt på sidan.
-seo-description: Om du vill lägga till funktionen för dynamiska medier i resurser som du använder på dina webbplatser kan du lägga till Dynamic Media eller komponenten för interaktiva media direkt på sidan.
+description: Om du vill lägga till funktionen för dynamiska medier i resurser som du använder på dina webbplatser kan du lägga till komponenten Dynamiska media eller Interaktiva media direkt på sidan.
+seo-description: Om du vill lägga till funktionen för dynamiska medier i resurser som du använder på dina webbplatser kan du lägga till komponenten Dynamiska media eller Interaktiva media direkt på sidan.
 uuid: 650d0867-a079-4936-a466-55b7a30803a2
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -10,9 +10,9 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 331f4980-5193-4546-a22e-f27e38bb8250
 translation-type: tm+mt
-source-git-commit: 23dfcc944a83dd683078cfe00f85c4cc734e7752
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '1610'
+source-wordcount: '1606'
 ht-degree: 2%
 
 ---
@@ -20,9 +20,9 @@ ht-degree: 2%
 
 # Lägga till Dynamic Media-resurser på sidor{#adding-dynamic-media-assets-to-pages}
 
-Om du vill lägga till funktionaliteten för Dynamic Media i resurser som du använder på dina webbplatser kan du lägga till **[!UICONTROL Dynamic Media]** eller **[!UICONTROL Interactive Media]** komponenten direkt på sidan. You do this by entering [!UICONTROL Design] mode and enabling the dynamic media components. Sedan kan du lägga till komponenterna på sidan och lägga till resurser i komponenterna. Komponenterna för dynamiska media och interaktiva media är smarta - de vet om du lägger till en bild eller en video och de tillgängliga alternativen ändras i enlighet med detta.
+Om du vill lägga till funktionen för dynamiska media i resurser som du använder på dina webbplatser kan du lägga till **[!UICONTROL Dynamic Media]** eller **[!UICONTROL Interactive Media]** komponenten direkt på sidan. You do this by entering [!UICONTROL Design] mode and enabling the dynamic media components. Sedan kan du lägga till komponenterna på sidan och lägga till resurser i komponenterna. Komponenterna för dynamiska media och interaktiva media är smarta - de vet om du lägger till en bild eller en video och de tillgängliga alternativen ändras i enlighet med detta.
 
-Du lägger till dynamiska medieresurser direkt på sidan om du använder AEM som WCM.
+Du lägger till dynamiska medieresurser direkt på sidan om du använder AEM som WCM-fil.
 
 >[!NOTE]
 >
@@ -32,10 +32,10 @@ Du lägger till dynamiska medieresurser direkt på sidan om du använder AEM som
 
 Att lägga till [!UICONTROL Dynamic Media] eller [!UICONTROL Interactive Media] komponenten på en sida är detsamma som att lägga till en komponent på en sida. Komponenterna [!UICONTROL Dynamic Media] och [!UICONTROL Interactive Media] beskrivs i detalj i följande avsnitt.
 
-Så här lägger du till en Dynamic Media-komponent/ett visningsprogram på en sida:
+Så här lägger du till en komponent/ett visningsprogram för dynamiska media på en sida:
 
-1. I AEM öppnar du den sida där du vill lägga till Dynamic Media-komponenten.
-1. Om det inte finns någon tillgänglig Dynamic Media-komponent klickar du på linjalen i [!UICONTROL Sidekick] för att gå till **[!UICONTROL Design]** läget, klickar på **[!UICONTROL Edit]** parsys och väljer **[!UICONTROL Dynamic Media]** för att göra Dynamic Media-komponenterna tillgängliga.
+1. Öppna AEM sidan där du vill lägga till komponenten Dynamic Media.
+1. Om ingen Dynamic Media-komponent är tillgänglig klickar du på linjalen i [!UICONTROL Sidekick] för att gå till **[!UICONTROL Design]** läget, klickar på **[!UICONTROL Edit]** parsys och väljer **[!UICONTROL Dynamic Media]** för att göra Dynamic Media-komponenterna tillgängliga.
 
    >[!NOTE]
    >
@@ -46,7 +46,7 @@ Så här lägger du till en Dynamic Media-komponent/ett visningsprogram på en s
 1. Klicka **[!UICONTROL Edit]** för att öppna komponenten.
 1. [Redigera komponenten](#dynamic-media-component) efter behov och klicka på **[!UICONTROL OK]** för att spara ändringarna.
 
-## Dynamic Media-komponenter {#dynamic-media-components}
+## Dynamiska mediakomponenter {#dynamic-media-components}
 
 [!UICONTROL Dynamic Media] och [!UICONTROL Interactive Media] är tillgängliga i [!UICONTROL Sidekick] under **[!UICONTROL Dynamic Media.]** Du använder **[!UICONTROL Interactive Media]** -komponenten för alla interaktiva resurser som interaktiv video, interaktiva bilder eller karuselluppsättningar. Använd **[!UICONTROL Dynamic Media]** komponenten för alla andra dynamiska mediekomponenter.
 
@@ -54,17 +54,17 @@ Så här lägger du till en Dynamic Media-komponent/ett visningsprogram på en s
 
 >[!NOTE]
 >
->De här komponenterna är inte tillgängliga som standard och måste markeras i designläge innan du använder. [När de är tillgängliga i designläge](/help/sites-authoring/default-components-designmode.md)kan du lägga till komponenterna på sidan på samma sätt som andra AEM-komponenter.
+>De här komponenterna är inte tillgängliga som standard och måste markeras i designläge innan du använder. [När de har gjorts tillgängliga i designläge](/help/sites-authoring/default-components-designmode.md)kan du lägga till komponenterna på sidan på samma sätt som andra AEM.
 
 ### Dynamic Media-komponent {#dynamic-media-component}
 
-Dynamic Media-komponenten är smart. Beroende på om du lägger till en bild eller en video finns det olika alternativ. Komponenten har stöd för bildförinställningar, bildbaserade visningsprogram som bilduppsättningar, snurra, blandade medieuppsättningar och video. Dessutom är visningsprogrammet responsivt. Skärmstorleken ändras alltså automatiskt baserat på skärmstorleken. Alla visningsprogram är HTML5-baserade.
+Komponenten Dynamic Media är smart - beroende på om du lägger till en bild eller en video finns det olika alternativ. Komponenten har stöd för bildförinställningar, bildbaserade visningsprogram som bilduppsättningar, snurra, blandade medieuppsättningar och video. Dessutom är visningsprogrammet responsivt. Skärmstorleken ändras alltså automatiskt baserat på skärmstorleken. Alla visningsprogram är HTML5-baserade.
 
 >[!NOTE]
 >
 >När du lägger till [!UICONTROL Dynamic Media] komponenten och **[!UICONTROL Dynamic Media Settings]** är tom eller du inte kan lägga till en resurs på rätt sätt ska du kontrollera följande:
 >
->* Du har [aktiverat Dynamic Media](/help/assets/config-dynamic.md). Dynamic Media är inaktiverade som standard.
+>* Du har [aktiverat Dynamic Media](/help/assets/config-dynamic.md). Dynamiska media är inaktiverat som standard.
 >* Bilden har en pyramidformad fil. Bilder som importerats innan dynamiska medier har aktiverats har ingen pyramiddiff-fil.
 
 >
@@ -79,7 +79,7 @@ Du kan också konfigurera visningsförinställningen, bildförinställningen ell
 
 ![chlimage_1-72](assets/chlimage_1-72a.png)
 
-Du kan redigera följande Dynamic Media genom att klicka **[!UICONTROL Edit]** i komponenten och sedan på **[!UICONTROL Dynamic Media Settings]** fliken.
+Du kan redigera följande inställningar för dynamiska media genom att klicka **[!UICONTROL Edit]** i komponenten och sedan på **[!UICONTROL Dynamic Media Settings]** fliken.
 
 ![chlimage_1-73](assets/chlimage_1-73a.png)
 
@@ -87,7 +87,7 @@ Du kan redigera följande Dynamic Media genom att klicka **[!UICONTROL Edit]** i
 >
 >Som standard är Dynamic Media-bildkomponenten adaptiv. If you want to make it a fixed size, set it in the component in the **[!UICONTROL Advanced]** tab with the **[!UICONTROL Width]** and **[!UICONTROL Height]** properties.
 
-**[!UICONTROL Viewer preset]** - Välj en befintlig visningsförinställning i listrutan. Om den visningsförinställning som du söker efter inte visas kan du behöva göra den synlig. Se [Hantera visningsförinställningar](/help/assets/managing-viewer-presets.md). Du kan inte välja en visningsförinställning om du använder en bildförinställning och vice versa.
+**[!UICONTROL Viewer preset]** - Välj en befintlig visningsförinställning i listrutan. Om den visningsförinställning som du söker efter inte visas kanske du måste göra den synlig. Se [Hantera visningsförinställningar](/help/assets/managing-viewer-presets.md). Du kan inte välja en visningsförinställning om du använder en bildförinställning och vice versa.
 
 Det här är det enda tillgängliga alternativet om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar. De visningsförinställningar som visas är också smarta - endast relevanta visningsprogramförinställningar visas.
 
@@ -127,9 +127,9 @@ Du kan redigera följande [!UICONTROL Dynamic Media Settings] genom att klicka *
 
 >[!NOTE]
 >
->Som standard är Dynamic Media-videokomponenten adaptiv. If you want to make it a fixed size, set it in the component with the **[!UICONTROL Width]** and **[!UICONTROL Height]** in the **[!UICONTROL Advanced]** tab.
+>Som standard är videokomponenten för dynamiska media adaptiv. If you want to make it a fixed size, set it in the component with the **[!UICONTROL Width]** and **[!UICONTROL Height]** in the **[!UICONTROL Advanced]** tab.
 
-**[!UICONTROL Viewer preset]** - Välj en befintlig förinställning för visningsprogrammet för video i listrutan. Om den visningsförinställning som du söker efter inte visas kan du behöva göra den synlig. Se [Hantera visningsförinställningar](/help/assets/managing-viewer-presets.md).
+**[!UICONTROL Viewer preset]** - Välj en befintlig förinställning för visningsprogrammet för video i listrutan. Om den visningsförinställning som du söker efter inte visas kanske du måste göra den synlig. Se [Hantera visningsförinställningar](/help/assets/managing-viewer-presets.md).
 
 You can edit the following [!UICONTROL Advanced] settings by clicking **[!UICONTROL Edit]** in the component.
 
@@ -139,7 +139,7 @@ You can edit the following [!UICONTROL Advanced] settings by clicking **[!UICONT
 
 #### Leverera säker video {#how-to-delivery-secure-video}
 
-När du installerar [FP-13480](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq620/featurepack/cq-6.2.0-featurepack-13480)i AEM 6.2 kan du styra om en video levereras via en säker SSL-anslutning (HTTPS) eller en osäker anslutning (HTTP). Som standard ärvs videoleveransprotokollet automatiskt från inbäddningswebbsidans protokoll. Om webbsidan läses in via HTTPS levereras videon också via HTTPS. Och tvärtom, om webbsidan finns på HTTP, levereras videon via HTTP. I de flesta fall är standardbeteendet bra och du behöver inte göra några konfigurationsändringar. Du kan dock åsidosätta det här standardbeteendet genom att lägga `VideoPlayer.ssl=on` till i slutet av en URL-sökväg eller i listan med andra konfigurationsparametrar för visningsprogrammet i ett inbäddat kodfragment för att framtvinga säker videoleverans.
+I AEM 6.2 kan du styra om en video levereras via en säker SSL-anslutning (HTTPS) eller en osäker anslutning (HTTP) när du installerar [FP-13480](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq620/featurepack/cq-6.2.0-featurepack-13480). Som standard ärvs videoleveransprotokollet automatiskt från inbäddningswebbsidans protokoll. Om webbsidan läses in via HTTPS levereras videon också via HTTPS. Och tvärtom, om webbsidan finns på HTTP, levereras videon via HTTP. I de flesta fall är standardbeteendet bra och du behöver inte göra några konfigurationsändringar. Du kan dock åsidosätta det här standardbeteendet genom att lägga `VideoPlayer.ssl=on` till i slutet av en URL-sökväg eller i listan med andra konfigurationsparametrar för visningsprogrammet i ett inbäddat kodfragment för att framtvinga säker videoleverans.
 
 Mer information om säker videoleverans och användning av konfigurationsattributet i URL-sökvägen finns i `VideoPlayer.ssl` Säker videoleverans [](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-viewer-20-securevideodelivery.html) i referenshandboken för visningsprogram. Förutom Video Viewer finns säker videoutgång för visningsprogram för Mixed Media och Interactive Video.
 
@@ -153,13 +153,13 @@ Komponenten [!UICONTROL Interactive Media] är smart - beroende på om du lägge
 
 You can edit the following **[!UICONTROL General]** settings by clicking **[!UICONTROL Edit]** in the component.
 
-**[!UICONTROL Viewer preset]** - Välj en befintlig visningsförinställning i listrutan. Om den visningsförinställning som du söker efter inte visas kan du behöva göra den synlig. Förinställningar för visningsprogram måste publiceras innan de kan användas. Se Hantera förinställningar för visningsprogram.
+**[!UICONTROL Viewer preset]** - Välj en befintlig visningsförinställning i listrutan. Om den visningsförinställning som du söker efter inte visas kanske du måste göra den synlig. Förinställningar för visningsprogram måste publiceras innan de kan användas. Se Hantera förinställningar för visningsprogram.
 
 **[!UICONTROL Title]** - Ändra videons titel.
 
 **[!UICONTROL Width and Height]** - Ange värdet i pixlar om du vill att videon ska ha en fast storlek. Om du lämnar dessa värden tomma blir de anpassningsbara.
 
-You can edit the following **[!UICONTROL Add To Cart** settings by clicking **[!UICONTROL Edit]** in the component.
+You can edit the following **[!UICONTROL Add To Cart]** settings by clicking **[!UICONTROL Edit]** in the component.
 
 **[!UICONTROL Show Product Asset]** - Som standard är det här värdet valt. Produktresursen visar en bild av produkten enligt definitionen i modulen Handel. Avmarkera kryssrutan om du inte vill visa produktresursen.
 
