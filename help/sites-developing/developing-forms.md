@@ -1,6 +1,6 @@
 ---
-title: Utveckla formulär (klassiskt användargränssnitt)
-seo-title: Utveckla formulär (klassiskt användargränssnitt)
+title: Utveckla Forms (Classic UI)
+seo-title: Utveckla Forms (Classic UI)
 description: Lär dig utveckla formulär
 seo-description: Lär dig utveckla formulär
 uuid: 33859f29-edc5-4bd5-a634-35549f3b5ccf
@@ -11,12 +11,15 @@ content-type: reference
 discoiquuid: 6ee3bd3b-51d1-462f-b12e-3cbe24898b85
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+workflow-type: tm+mt
+source-wordcount: '1952'
+ht-degree: 0%
 
 ---
 
 
-# Utveckla formulär (klassiskt användargränssnitt){#developing-forms-classic-ui}
+# Utveckla Forms (Classic UI){#developing-forms-classic-ui}
 
 En formulärs grundläggande struktur är:
 
@@ -24,13 +27,12 @@ En formulärs grundläggande struktur är:
 * Formulärelement
 * Formulärslut
 
-Allt detta görs med en serie standardkomponenter [för](/help/sites-authoring/default-components.md#form)formulär som finns i en AEM-standardinstallation.
+Allt detta görs med en serie standardkomponenter [för](/help/sites-authoring/default-components.md#form)formulär som finns i en AEM standardinstallation.
 
 Förutom att [utveckla nya komponenter](/help/sites-developing/developing-components-samples.md) för dina formulär kan du också:
 
 * [Läs in formuläret i förväg med värden](#preloading-form-values)
-* [Förhandsladda (vissa fält) fält med flera värden
-   ](#preloading-form-fields-with-multiple-values)
+* [Förhandsladda (vissa fält) fält med flera värden](#preloading-form-fields-with-multiple-values)
 * [Utveckla nya åtgärder](#developing-your-own-form-actions)
 * [Utveckla nya begränsningar](#developing-your-own-form-constraints)
 * [Visa eller dölja specifika formulärfält](#showing-and-hiding-form-components)
@@ -80,7 +82,7 @@ Observera att om värdena i `String[]` är i följande format:
 * `AK=Alaska`
 * *osv.*
 
-genererar AEM listan som:
+kommer AEM att generera listan som:
 
 * `<option value="AL">Alabama</option>`
 * `<option value="AK">Alaska</option>`
@@ -91,7 +93,7 @@ Den här funktionen kan till exempel användas på ett bra sätt i en flerspråk
 
 Ett formulär behöver en åtgärd. En åtgärd definierar den åtgärd som utförs när formuläret skickas med användardata.
 
-En rad åtgärder ingår i en AEM-standardinstallation, som beskrivs nedan:
+En rad åtgärder ingår i en standardinstallation av AEM, som beskrivs nedan:
 
 `/libs/foundation/components/form/actions`
 
@@ -105,7 +107,7 @@ Du kan lägga till en egen åtgärd under `/apps` följande:
 
 1. Skapa en nod av typen `sling:Folder`. Ange ett namn som återspeglar den åtgärd som ska implementeras.
 
-   Exempel:
+   Till exempel:
 
    `/apps/myProject/components/customFormAction`
 
@@ -128,18 +130,20 @@ Du kan lägga till en egen åtgärd under `/apps` följande:
 1. I mappen skapar du antingen:
 
    1. Ett postskript.
-Skriptets namn är `post.POST.<extension>`t.ex. `post.POST.jsp`Post-skriptet anropas när ett formulär skickas för att bearbeta formuläret, det innehåller koden som hanterar data som kommer från formuläret `POST`.
+Skriptets namn är `post.POST.<extension>`t.ex. `post.POST.jsp`Post-skriptet anropas när ett formulär skickas för att bearbeta formuläret, det innehåller koden som hanterar data som kommer från formuläret 
+`POST`.
 
    1. Lägg till ett framåt-skript som anropas när formuläret skickas.
 Skriptets namn är `forward.<extension`>, t.ex. `forward.jsp`Skriptet kan definiera en sökväg. Den aktuella begäran vidarebefordras sedan till den angivna sökvägen.
-   Det nödvändiga anropet är `FormsHelper#setForwardPath` (2 varianter). Ett typiskt fall är att utföra viss validering, eller logik, för att hitta målsökvägen och sedan gå vidare till den sökvägen, och låta standardservern Sling POST göra den faktiska lagringen i JCR.
+   Det nödvändiga anropet är `FormsHelper#setForwardPath` (2 varianter). Ett typiskt fall är att utföra viss validering, eller logik, för att hitta målsökvägen och sedan gå vidare till den sökvägen, så att standardserverservern för Sling-POST kan utföra den faktiska lagringen i JCR.
 
    Det kan också finnas en annan server som utför själva bearbetningen, i så fall är det formuläråtgärden och den `forward.jsp` fungerar bara som&quot;limkod&quot;. Ett exempel på detta är poståtgärden på `/libs/foundation/components/form/actions/mail`som vidarebefordrar information till `<currentpath>.mail.html`platsen där en e-postserver finns.
 
    Så:
 
-   * a `post.POST.jsp` är användbart för små åtgärder som utförs helt av själva åtgärden
+   * a `post.POST.jsp` är användbart för små åtgärder som utförs helt och hållet av själva åtgärden
    * medan funktionen `forward.jsp` är användbar när endast delegering krävs.
+
    Körningsordningen för skripten är:
 
    * När formuläret återges ( `GET`):
@@ -195,7 +199,7 @@ Du kan lägga till egna begränsningar för ett enskilt fält (under `/apps`) en
 
 1. Skapa en nod av typen `sling:Folder`. Ange ett namn som återspeglar den begränsning som ska implementeras.
 
-   Exempel:
+   Till exempel:
 
    `/apps/myProject/components/customFormConstraint`
 
@@ -213,7 +217,7 @@ Du kan lägga till egna begränsningar för ett enskilt fält (under `/apps`) en
 1. I den här mappen kan du behöva följande skript:
 
    * Ett klientvalideringsskript:
-Skriptets namn är `clientvalidation.<extension>`t.ex. `clientvalidation.jsp`anropas när formulärfältet återges. Den kan användas för att skapa klient-javascript för att validera fältet på klienten.
+Skriptets namn är `clientvalidation.<extension>`t.ex. `clientvalidation.jsp`anropas när formulärfältet återges. Den kan användas för att skapa javascript för klienten för att validera fältet på klienten.
 
    * Ett servervalideringsskript:
 Skriptnamnet är `servervalidation.<extension>`t.ex. `servervalidation.jsp`det anropas när formuläret skickas. Den kan användas för att validera fältet på servern efter att det har skickats.
@@ -226,7 +230,7 @@ Skriptnamnet är `servervalidation.<extension>`t.ex. `servervalidation.jsp`det a
 
 #### Formulärglobala begränsningar {#form-global-constraints}
 
-Den globala valideringen av formulär anges genom att en resurstyp konfigureras i startformulärkomponenten ( `validationRT`). Exempel:
+Den globala valideringen av formulär anges genom att en resurstyp konfigureras i startformulärkomponenten ( `validationRT`). Till exempel:
 
 `apps/myProject/components/form/validation`
 
@@ -278,7 +282,8 @@ I Javascript används värdet för elementnamnsegenskapen för att referera till
       * **any** - om bara ett eller flera villkor måste vara true för att komponenten ska kunna visas eller döljas
    * Markera en komponent, operator och ange sedan ett värde på villkorslinjen (en visas som standard).
    * Lägg till fler villkor om det behövs genom att klicka på **Lägg till villkor**.
-   Exempel:
+
+   Till exempel:
 
    ![chlimage_1-9](assets/chlimage_1-9.png)
 
@@ -308,7 +313,7 @@ Visa/dölj-villkor använder värdet för elementnamnsegenskapen för att refere
 
 När konfigurationen Visa/Dölj är ogiltig anges konfigurationen bara som JavaScript-kod. Redigera koden för att korrigera problemen.Koden använder elementnamnsegenskapen som ursprungligen användes för att referera till komponenterna.
 
-### Utveckla skript för användning med formulär {#developing-scripts-for-use-with-forms}
+### Utveckla skript för användning med Forms {#developing-scripts-for-use-with-forms}
 
 Mer information om API-elementen som kan användas när skript skrivs finns i [javadokartorna för formulär](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/foundation/forms/package-summary.html).
 
