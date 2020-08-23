@@ -1,15 +1,15 @@
 ---
 title: Dokumentinformation för återgivning
 seo-title: Dokumentinformation för återgivning
-description: Konceptuell information om hur renderingar fungerar på arbetsytan i AEM Forms för att återge de olika formulär och filtyper som stöds.
-seo-description: Konceptuell information om hur renderingar fungerar på arbetsytan i AEM Forms för att återge de olika formulär och filtyper som stöds.
+description: Konceptuell information om hur renderingar fungerar i AEM Forms arbetsyta för att återge de olika formulär och filtyper som stöds.
+seo-description: Konceptuell information om hur renderingar fungerar i AEM Forms arbetsyta för att återge de olika formulär och filtyper som stöds.
 uuid: ae3f0585-9105-4ca7-a490-ffdefd3ac8cd
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: b6e88080-6ffc-4796-98c7-d7462bca454e
 translation-type: tm+mt
-source-git-commit: c74d9e86727f2deda62b8d1eb105b28ef4b6d184
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
 source-wordcount: '676'
 ht-degree: 0%
@@ -21,14 +21,14 @@ ht-degree: 0%
 
 ## Introduktion {#introduction}
 
-På arbetsytan i AEM Forms stöds flera formulärtyper sömlöst. Bland dessa finns:
+I AEM Forms-arbetsytan stöds flera formulärtyper sömlöst. Bland dessa finns:
 
 * PDF forms (XDP/Acroform/platta PDF-filer)
 * Nya HTML-formulär
 * Bilder
 * Tredjepartsprogram (till exempel Korrespondenshantering)
 
-I det här dokumentet förklaras hur dessa renderare fungerar när det gäller semantisk anpassning/återanvändning av komponenter, så att kundens krav uppfylls utan att renderingen bryts. Även om arbetsytan i AEM Forms tillåter användargränssnitt/semantiska ändringar rekommenderar vi att återgivningslogiken för olika formulärtyper inte ändras, annars kan resultatet bli oförutsägbart. Det här dokumentet är avsett som vägledning/kunskap för att ge stöd för återgivning av samma formulär, med samma arbetsytekomponenter i olika portaler, och inte för att ändra själva återgivningslogiken.
+I det här dokumentet förklaras hur dessa renderare fungerar när det gäller semantisk anpassning/återanvändning av komponenter, så att kundens krav uppfylls utan att renderingen bryts. Även om AEM Forms arbetsyta tillåter användargränssnitt/semantiska ändringar rekommenderar vi att återgivningslogiken för olika formulärtyper inte ändras, annars kan resultatet bli oförutsägbart. Det här dokumentet är avsett som vägledning/kunskap för att ge stöd för återgivning av samma formulär, med samma arbetsytekomponenter i olika portaler, och inte för att ändra själva återgivningslogiken.
 
 ## PDF forms {#pdf-forms}
 
@@ -36,7 +36,7 @@ PDF forms återges av `PdfTaskForm View`.
 
 När ett XDP-formulär återges som PDF läggs ett `FormBridge` JavaScript™ till av tjänsten FormsAugmenter. Denna JavaScript™ (i PDF-formuläret) hjälper dig att utföra åtgärder som att skicka formulär, spara formulär eller ta formulär offline.
 
-I arbetsytan AEM Forms kommunicerar PDFTaskForm-vyn med `FormBridge`javascript, via en mellanliggande HTML-kod som finns på `/lc/libs/ws/libs/ws/pdf.html`. Flödet är:
+I AEM Forms-arbetsytan kommunicerar PDFTaskForm-vyn med `FormBridge`javascript, via en mellanliggande HTML som finns på `/lc/libs/ws/libs/ws/pdf.html`. Flödet är:
 
 **PDFTaskForm view - pdf.html**
 
@@ -54,7 +54,7 @@ Den här metoden är standardmetoden för kommunikation med ett PDFJavaScript fr
 >
 >Du bör inte ändra pdf.html / innehållet i PDF-vyn TaskForm.
 
-## Nya HTML-formulär {#new-html-forms}
+## Ny HTML Forms {#new-html-forms}
 
 Nya HTML-formulär återges i vyn NewHTMLTaskForm.
 
@@ -66,11 +66,11 @@ Detta JavaScript skiljer sig från det som anges i PDF forms ovan, men har ett l
 >
 >Du bör inte ändra innehållet i vyn NewHTMLTaskForm.
 
-## Flex-formulär och -guider {#flex-forms-and-guides}
+## Flex Forms och stödlinjer {#flex-forms-and-guides}
 
-Flex-formulär återges av SWfTaskForm och stödlinjer återges av HTMLTaskForm-vyer.
+Flex Forms återges av SWFTaskForm och stödlinjer återges av HTMLTaskForm-vyer.
 
-På arbetsytan i AEM Forms kommunicerar dessa vyer med den faktiska SWF-filen som utgör Flex-formuläret/stödlinjen med hjälp av en mellanliggande SWF-fil som finns på `/lc/libs/ws/libs/ws/WSNextAdapter.swf`
+I AEM Forms-arbetsytan kommunicerar dessa vyer med den faktiska SWF-filen som utgör Flex-formuläret/stödlinjen med hjälp av en mellanliggande SWF-fil som finns i `/lc/libs/ws/libs/ws/WSNextAdapter.swf`
 
 Kommunikationen sker med `swfObject.postMessage` / `window.flexMessageHandler`.
 
@@ -86,14 +86,14 @@ Tredjepartsprogram återges med vyn ExtAppTaskForm.
 
 **Tredjepartsprogram för AEM Forms arbetsytekommunikation**
 
-Arbetsytan i AEM Forms lyssnar på `window.global.postMessage([Message],[Payload])`
+AEM Forms arbetsyta lyssnar på `window.global.postMessage([Message],[Payload])`
 
-[Meddelande] kan vara en sträng som anges som `SubmitMessage`| `CancelMessage`| `ErrorMessage`| `actionEnabledMessage`i `runtimeMap`. Tredjepartsprogram måste använda det här gränssnittet för att meddela AEM Forms arbetsytan efter behov. Det är obligatoriskt att använda det här gränssnittet eftersom arbetsytan i AEM Forms måste veta att när uppgiften skickas så att den kan rensa upp aktivitetsfönstret.
+[Meddelande] kan vara en sträng som anges som `SubmitMessage`| `CancelMessage`| `ErrorMessage`| `actionEnabledMessage`i `runtimeMap`. Tredjepartsprogram måste använda det här gränssnittet för att meddela AEM Forms-arbetsytan efter behov. Det är obligatoriskt att använda det här gränssnittet eftersom AEM Forms-arbetsytan måste känna till att när uppgiften skickas så att den kan rensa upp aktivitetsfönstret.
 
 **AEM Forms arbetsyta till kommunikation med program från tredje part**
 
-Om direktåtgärdsknapparna för arbetsytan i AEM Forms är synliga anropas `window.[External-App-Name].getMessage([Action])`där [ `Action]` läses från `routeActionMap`. Tredjepartsprogrammet måste lyssna på det här gränssnittet och sedan meddela AEM Forms via `postMessage ()` API.
+Om direktåtgärdsknapparna för AEM Forms-arbetsytan visas, anropas `window.[External-App-Name].getMessage([Action])`där `[Action]` läses från `routeActionMap`. Tredjepartsprogrammet måste lyssna på det här gränssnittet och sedan meddela AEM Forms arbetsyta via `postMessage ()` API:t.
 
-En Flex-applikation kan till exempel definiera `ExternalInterface.addCallback('getMessage', listener)` som stöd för den här kommunikationen. Om tredjepartsprogrammet vill hantera formulärskickning med sina egna knappar, bör du ange `hideDirectActions = true() in the runtimeMap` och du kan hoppa över den här avlyssnaren. Denna konstruktion är alltså valfri.
+Ett Flex-program kan till exempel definiera `ExternalInterface.addCallback('getMessage', listener)` som stöd för den här kommunikationen. Om tredjepartsprogrammet vill hantera formulärskickning med sina egna knappar, bör du ange `hideDirectActions = true() in the runtimeMap` och du kan hoppa över den här avlyssnaren. Denna konstruktion är alltså valfri.
 
-Du kan läsa mer om integrering av tredjepartsprogram med avseende på Correspondence Management på arbetsytan [Integrating Correspondence Management i AEM Forms](/help/forms/using/integrating-correspondence-management-html-workspace.md).
+Du kan läsa mer om integrering av tredjepartsprogram med avseende på Correspondence Management på [Integrating Correspondence Management i AEM Forms-arbetsytan](/help/forms/using/integrating-correspondence-management-html-workspace.md).
