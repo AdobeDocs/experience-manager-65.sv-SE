@@ -1,11 +1,11 @@
 ---
-title: Bästa tillvägagångssätt för att övervaka [!DNL Adobe Experience Manager Assets]-distributionen.
-description: Bästa tillvägagångssätt för att övervaka miljön och prestandan för din [!DNL Adobe Experience Manager]-distribution efter distributionen.
+title: De bästa sätten att [!DNL Adobe Experience Manager Assets] övervaka driftsättningen.
+description: Bästa tillvägagångssätt för att övervaka miljön och prestanda för [!DNL Adobe Experience Manager] din distribution efter att den har distribuerats.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 99ce6e0572797b7bccf755aede93623be6bd5698
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '1682'
+source-wordcount: '1671'
 ht-degree: 0%
 
 ---
@@ -95,7 +95,7 @@ Minne
 * Larm threshold: När minnesanvändningen för heap eller icke-heap överstiger 75 % av motsvarande maximala minne.
 * Larm-definition: Antingen är systemminnet otillräckligt eller så finns det en minnesläcka i koden. Analysera en tråddump för att komma fram till en definition.
 
->[!Note]
+>[!NOTE]
 >
 >Uppgifterna från denna böna uttrycks i byte.
 
@@ -122,7 +122,7 @@ Replikeringsagenter
 
 * Larm-definition: Det finns en blockerad kö i systemet som anger att replikeringsmålet är nere eller inte kan nås. Nätverks- eller infrastrukturproblem leder ofta till att för många poster köas, vilket kan påverka systemets prestanda negativt.
 
->[!Note]
+>[!NOTE]
 >
 >För parametrarna MBean och URL ersätter du `<AGENT_NAME>` med namnet på den replikeringsagent som du vill övervaka.
 
@@ -198,5 +198,5 @@ Om du råkar ut för problem i samband med övervakningen finns det några fels�
 * Använd arbetsflödeskonsolen för att verifiera att arbetsflödena fungerar som förväntat. Om det är möjligt kan du komprimera flera arbetsflöden till ett enda arbetsflöde.
 * Läs om live-övervakning och leta efter fler flaskhalsar eller konsumenter av specifika resurser.
 * Undersök ingångspunkterna från klientnätverket och ingångspunkterna till [!DNL Experience Manager] distributionsnätverket, inklusive dispatchern. Det är ofta flaskhalsar. Mer information finns i [Resursnätverkshänsyn](/help/assets/assets-network-considerations.md).
-* Storleksanpassa [!DNL Experience Manager] servern. Din [!DNL Experience Manager] driftsättning kan vara otillräckligt stor. Med Adobes kundtjänst kan du se om din server är för liten eller inte.
+* Storleksanpassa [!DNL Experience Manager] servern. Din [!DNL Experience Manager] driftsättning kan vara otillräckligt stor. Adobe kundtjänst kan hjälpa dig att identifiera om din server är för liten.
 * Undersök `access.log` och `error.log` filer för att se om det finns poster runt tiden när något gick fel. Leta efter mönster som kan indikera anpassade kodavvikelser. Lägg till dem i listan med händelser som du övervakar.
