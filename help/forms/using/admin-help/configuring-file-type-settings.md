@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 content-type: reference
 discoiquuid: ab19b248-8931-4cf6-b6a5-fb7b067c4a49
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+workflow-type: tm+mt
+source-wordcount: '5857'
+ht-degree: 1%
 
 ---
 
@@ -34,7 +37,7 @@ På sidan Filtypsinställningar kan du utföra följande uppgifter:
 
 Skapa eller redigera en filtypsinställning för att ange hur konverteringen av filtyper som stöds ska hanteras i programmet. I Windows kan du ange programinställningar för varje filtyp som stöds. På UNIX och Linux kan du ange programinställningar för HTML-till-PDF och OpenOffice.
 
-1. I administrationskonsolen klickar du på **[!UICONTROL Tjänster]** > **[!UICONTROL PDF Generator]** > **[!UICONTROL Filtypsinställningar]**.
+1. I administrationskonsolen klickar du på **[!UICONTROL Services]** > **[!UICONTROL PDF Generator]** > **[!UICONTROL File Type Settings]**.
 1. Klicka på Ny eller klicka på namnet på en inställning.
 1. I rutan Filnamnstillägg skriver du filnamnstilläggen, avgränsade med kommatecken, för filtyper som stöds för det här programmet. Ta inte med punkten före eller ett mellanrum mellan tilläggen. The default is `bmp,gif,jpeg,jpg,tif,tiff,png`.
 1. (Valfritt) Om du vill använda optisk kodigenkänning (OCR) av text i bilder eller bilder markerar du Använd OCR och anger följande alternativ:
@@ -53,7 +56,7 @@ Skapa eller redigera en filtypsinställning för att ange hur konverteringen av 
 
    [Inställningar för HTML-till-PDF](#html-to-pdf-settings)
 
-   [Inställningar för Flash-videor till PDF](#flash-videos-to-pdf-settings)
+   [Flash-videofilmer till PDF-inställningar](#flash-videos-to-pdf-settings)
 
    [Inställningar för XPS till PDF](#xps-to-pdf-settings)
 
@@ -77,35 +80,35 @@ Skapa eller redigera en filtypsinställning för att ange hur konverteringen av 
 
    [Inställningar för andra program (endast Windows)](/help/forms/using/admin-help/configuring-file-type-settings.md#other-applications-settings-windows-only)
 
-   Om du vill gå till ett annat avsnitt klickar du på länken på webbsidan eller använder knapparna **[!UICONTROL Nästa]** eller **[!UICONTROL Föregående]** .
+   Om du vill gå till ett annat avsnitt klickar du på länken på webbsidan eller använder **[!UICONTROL Next]** - eller **[!UICONTROL Previous]** -knapparna.
 
-1. När du är klar med alla avsnitt klickar du på **[!UICONTROL Spara]** eller **[!UICONTROL Spara som]** och anger ett namn för inställningen.
+1. När du är klar med alla avsnitt klickar du på **[!UICONTROL Save]** eller **[!UICONTROL Save As]** anger ett namn för inställningen.
 
-Stöd för olika filtyper kan anpassas. (Se&quot; [Lägga till stöd för fler inbyggda filformat](https://help.adobe.com/en_US/AEMForms/6.1/ProgramLC/WS624e3cba99b79e12e69a9941333732bac8-7756.2.html)&quot; i [Programmering med AEM-formulär](https://www.adobe.com/go/learn_lc_programming_11).)
+Stöd för olika filtyper kan anpassas. (Se&quot; [Lägga till stöd för fler inbyggda filformat](https://help.adobe.com/en_US/AEMForms/6.1/ProgramLC/WS624e3cba99b79e12e69a9941333732bac8-7756.2.html)&quot; i [Programmering med AEM formulär](https://www.adobe.com/go/learn_lc_programming_11).)
 
 ## Ändra standardinställningarna {#change-the-default-settings}
 
-Du kan ändra standardvärdet för de Adobe PDF-inställningar, skyddsinställningar och filtypsinställningar som gäller för nya källor. Om du ändrar standardinställningarna påverkas inte inställningarna för befintliga källor.
+Du kan ändra standardvärdet för de Adobe PDF-inställningar, säkerhetsinställningar och filtypsinställningar som gäller för nya källor. Om du ändrar standardinställningarna påverkas inte inställningarna för befintliga källor.
 
-1. I administrationskonsolen klickar du på **[!UICONTROL Tjänster > PDF Generator]**.
-1. På sidan **[!UICONTROL Adobe PDF-inställningar]**, **[!UICONTROL Filtypsinställningar]** eller **[!UICONTROL Dokumentskyddsinställningar]** klickar du på **[!UICONTROL Ange standardinställningar]**.
+1. Klicka på i administrationskonsolen **[!UICONTROL Services > PDF Generator]**.
+1. On the **[!UICONTROL Adobe PDF Settings]**, **[!UICONTROL File Type Settings]**, or **[!UICONTROL Security Settings]** page, click **[!UICONTROL Set Default Settings]**.
 1. Välj standardinställningar. En eller flera av följande inställningar är tillgängliga på sidan Ange standardinställningar:
 
-   **[!UICONTROL Adobe PDF-inställning]**: Det ursprungliga standardvärdet är Standard (Acrobat 6).
+   **[!UICONTROL Adobe PDF Setting]**: Det ursprungliga standardvärdet är Standard (Acrobat 6).
 
-   **[!UICONTROL Säkerhetsinställningar]**: Det ursprungliga standardvärdet är Ingen säkerhet (Acrobat 5).
+   **[!UICONTROL Security Settings]**: Det ursprungliga standardvärdet är Ingen säkerhet (Acrobat 5).
 
-   **[!UICONTROL Filtypsinställningar]**: Det ursprungliga standardvärdet är Standard.
+   **[!UICONTROL File Type Settings]**: Det ursprungliga standardvärdet är Standard.
 
-1. Click **[!UICONTROL Save]**.
+1. Klicka på **[!UICONTROL Save]**.
 
 ## Ta bort en filtypsinställning {#delete-a-file-type-setting}
 
 Du kan ta bort en filtypsinställning som inte längre används.
 
-1. I administrationskonsolen klickar du på **[!UICONTROL Tjänster > PDF Generator > Filtypsinställningar]**.
+1. Klicka på i administrationskonsolen **[!UICONTROL Services > PDF Generator> File Type Settings]**.
 1. Markera kryssrutan bredvid inställningen som ska tas bort. Du kan välja flera källor. Inställningar som inte har någon kryssruta bredvid sig inkluderas alltid i PDF Generator och kan inte tas bort.
-1. Klicka på **[!UICONTROL Ta bort]** och klicka på **[!UICONTROL Ta bort]** på bekräftelsesidan.
+1. Klicka på **[!UICONTROL Delete]** och klicka på Ta bort bekräftelse på sidan **[!UICONTROL Delete]**.
 
 ## Inställningar för bild till PDF {#image-to-pdf-settings}
 
@@ -137,7 +140,7 @@ Följande alternativ bestämmer hur bildfiler konverteras till PDF. Instruktione
 
 ## Exportinställningar för Adobe PDF (endast Windows) {#adobe-pdf-export-settings-windows-only}
 
-Inställningen Exportera filtyp i avsnittet Adobe PDF-exportinställningar används för att konvertera en PDF-fil till ett annat format. Standardvärdet är HTML 4.01 med CSS 1.0 (*.htm, *.html).
+Inställningen Exportera filtyp i avsnittet Adobe PDF exportinställningar används för att konvertera en PDF-fil till ett annat format. Standardvärdet är HTML 4.01 med CSS 1.0 (*.htm, *.html).
 
 Instruktioner om hur du använder den här inställningen finns i [Skapa eller redigera filtypsinställningar](configuring-file-type-settings.md#create-or-edit-file-type-settings).
 
@@ -183,11 +186,11 @@ Aktivera dessa alternativ för att ange hur HTML-sidorna ska konverteras. Basera
 
 Aktivera de här alternativen för att ange hur innehåll ska visas, hur sidor ska visas i PDF-dokumentet och hur förstoringsnivån ska anges:
 
-**Visa:** Markera de rutor som ska öppnas i Acrobat när PDF-dokumentet öppnas.
+**Visa:** Markera rutorna som ska öppnas i Acrobat när PDF-dokumentet öppnas.
 
 **Sidlayout:** Välj typ av sidlayout för PDF-dokumentet.
 
-**Förstoring:** Välj förinställd förstoring för den inledande vyn av PDF-dokumentet eller välj ett anpassat värde. Om du väljer en standardinställning används standardförstoringen i Acrobat.
+**Förstoring:** Välj förinställd förstoring för den inledande vyn av PDF-dokumentet eller välj ett anpassat värde. Om du väljer en standardinställning används standardförstoringen för Acrobat.
 
 **Öppna på sidnummer:** Ange det sidnummer som PDF-filen öppnas på.
 
@@ -195,7 +198,7 @@ Aktivera de här alternativen för att ange hur innehåll ska visas, hur sidor s
 
 Aktivera de här alternativen för att ange hur fönstret ska storleksändras och visas.
 
-**Ändra fönstrets storlek till startsidan:** Ändrar storleken på Acrobat-fönstret till den inledande sidans storlek.
+**Ändra fönstrets storlek till startsidan:** Ändrar storlek på Acrobat-fönstret till den inledande sidans storlek.
 
 **Centrera fönstret på skärmen:** Öppnar fönstret mitt på skärmen.
 
@@ -213,15 +216,15 @@ Aktivera dessa alternativ för att ange fönstrets utseende:
 
 **Dölj fönsterkontroller:** Döljer fönsterkontrollerna i PDF-dokumentet.
 
-## Inställningar för Flash-videor till PDF {#flash-videos-to-pdf-settings}
+## Flash-videofilmer till PDF-inställningar {#flash-videos-to-pdf-settings}
 
-PDF Generator stöder möjligheten att skicka en video för Adobe Flash (SWF- eller FLV-fil) och skapa en PDF-fil med en inbäddad video för Adobe Flash. Den här konverteringen kräver inte att Adobe Flash Player är installerat på formulärservern. Instruktioner om hur du använder det här alternativet finns i [Skapa eller redigera filtypsinställningar](configuring-file-type-settings.md#create-or-edit-file-type-settings).
+PDF Generator stöder möjligheten att skicka en video för Adobe Flash (SWF- eller FLV-fil) och skapa en PDF-fil med en inbäddad video för Adobe Flash. Denna konvertering kräver inte att Adobe Flash Player är installerat på formulärservern. Instruktioner om hur du använder det här alternativet finns i [Skapa eller redigera filtypsinställningar](configuring-file-type-settings.md#create-or-edit-file-type-settings).
 
 **Filnamnstillägg:** Kommaavgränsad lista med filnamnstillägg som kan konverteras.
 
 ## Inställningar för XPS till PDF {#xps-to-pdf-settings}
 
-XML Paper Specification (XPS) används i en Windows-utskriftsmaskin. Det här är ett Microsoft-format och kan skapas från alla Microsoft Office-program. Med AEM-formulär kan du konvertera XPS-filer till PDF.
+XML Paper Specification (XPS) används i en Windows-utskriftsmaskin. Det här är ett Microsoft-format och kan skapas från alla Microsoft Office-program. AEM kan konvertera XPS-filer till PDF.
 
 **Filnamnstillägg:** En kommaavgränsad lista över alla XPS-filnamnstillägg som kan konverteras. Det finns för närvarande ett format: .xps.
 
@@ -251,6 +254,7 @@ Instruktioner om hur du använder den här inställningen finns i [Skapa eller r
    * Om det behövs väljer du en annan teckensnittskatalog i listrutan **Teckensnittskälla** . I den här listrutan visas teckensnittskataloger som anges i **Hem > Inställningar > Kärnsystem > Huvudkonfigurationer**.
    * Markera ett eller flera teckensnitt i listan **Tillgängliga teckensnitt** och klicka på **Lägg till**. De här teckensnitten läggs till i listan **Teckensnitt som inte ska bäddas in** .
    * Om du vill ta bort inbäddningen för vissa teckensnitt som inte finns på formulärservern anger du namnen på teckensnitten i rutan **Lägg till teckensnitt för att ta bort inbäddning** . Click **Add**.
+
    >[!NOTE]
    >
    >*Om du vill ta bort inbäddningen för vissa teckensnitt vars deluppsättningar är inbäddade i dokumentet, ska du lägga till +-tecknet som prefix för teckensnittsnamnet. Till exempel &quot;+Helvetica&quot;.*
@@ -271,7 +275,7 @@ Om PDF-dokumentet innehåller bilder som innehåller genomskinlighet kan du anv�
 
 >[!NOTE]
 >
->Om Acrobat 4.0 och senare väljs som PDF-målversion förenklas alla genomskinliga objekt. För andra Target PDF-versioner stöds genomskinlighet och du kan konfigurera genomskinlighetsinställningarna.
+>Om Acrobat 4.0 och senare väljs som målversion av PDF förenklas alla genomskinliga objekt. För andra Target PDF-versioner stöds genomskinlighet och du kan konfigurera genomskinlighetsinställningarna.
 
 Välj **Genomskinlighet** om du vill konfigurera genomskinlighetsinställningarna när du optimerar PDF-dokument.
 
@@ -297,7 +301,11 @@ Välj **Genomskinlighet** om du vill konfigurera genomskinlighetsinställningarn
 
 **Konvertera alla linjer till konturer** Konverterar alla linjer till enkla fyllda banor på sidor som innehåller genomskinlighet. Med det här alternativet ser du till att linjebredden förblir konsekvent vid förenkling. Observera att om du aktiverar det här alternativet ser tunna linjer lite tjockare ut och förenklingsprestanda kan försämras.
 
-**Beskär komplexa områden** Ser till att gränserna mellan vektorbilder och rastrerade bilder hamnar längs objektbanor. Med det här alternativet minskas sammanfogningsartefakter som uppstår när en del av en logg] &quot;>
+**Beskär komplexa områden** Ser till att gränserna mellan vektorbilder och rastrerade bilder hamnar längs objektbanor. Med det här alternativet minskas sammanfogningsartefakter som uppstår när en del av en logg
+
+<!--
+NOTE to WRITER: Unfinished sentence above.
+-->
 
 >[!NOTE]
 >
@@ -307,7 +315,7 @@ Bevara övertryck: Blandar färgen i genomskinliga teckningar med bakgrundsfärg
 
 I följande tabell visas vanliga typer av skrivare och deras upplösning mätt i dpi, deras standardrastertäthet mätt i linjer per tum (lpi) och en omsamplingsupplösning för bilder mätt i pixlar per tum (ppi). Om du till exempel skriver ut på en laserskrivare med 600 dpi anger du 170 som upplösning för omsampling av bilder.
 
-**Bilder** Välj Bilder om du vill ange komprimerings- och omsamplingsalternativ för färgbilder, gråskalebilder och monokroma bilder. Du kan experimentera med dessa alternativ för att hitta en lämplig balans mellan filstorlek och bildkvalitet. Upplösningen för färg- och gråskalebilder bör vara 1,5 till 2 gånger rastertätheten som filen skrivs ut med. Upplösningen för monokroma bilder bör vara densamma som för utdataenheten, men tänk på att om du sparar en monokrom bild med en upplösning på över 1 500 dpi ökar filstorleken utan att bildkvaliteten förbättras nämnvärt. Bilder som ska förstoras, t.ex. kartor, kan kräva högre upplösningar.
+**Bilder** Välj Bilder om du vill ange komprimerings- och omsamplingsalternativ för färgbilder, gråskalebilder och monokroma bilder. Du kan experimentera med dessa alternativ för att hitta en lämplig balans mellan filstorlek och bildkvalitet. Upplösningen för färg- och gråskalebilder bör vara 1,5 till 2 gånger rastertätheten som filen skrivs ut med. Upplösningen för monokroma bilder bör vara densamma som för utdataenheten, men tänk på att om du sparar en monokrom bild med en upplösning på över 1 500 dpi ökar filstorleken utan att bildkvaliteten förbättras märkbart. Bilder som ska förstoras, t.ex. kartor, kan kräva högre upplösningar.
 
 >[!NOTE]
 >
@@ -362,7 +370,7 @@ I följande tabell visas vanliga typer av skrivare och deras upplösning mätt i
 
 Markera **Ignorera användardata** om du vill ta bort all personlig information som du inte vill distribuera eller dela med andra användare.
 
-* **Ignorera alla kommentarer, formulär och multimedia**: Tar bort alla kommentarer, formulär, formulärfält och multimedia från PDF-filen.
+* **Ignorera alla kommentarer, Forms och multimedia**: Tar bort alla kommentarer, formulär, formulärfält och multimedia från PDF-filen.
 * **Ignorera alla objektdata**: Tar bort alla objekt från PDF-filen.
 * **Ignorera externa korsreferenser**: Tar bort länkar till andra dokument. Länkar som hoppar till andra platser i PDF-filen tas inte bort.
 * **Ignorera dolt lagerinnehåll och förenkla synliga lager**: Minskar filstorleken. Det optimerade dokumentet ser ut som den ursprungliga PDF-filen, men innehåller ingen lagerinformation.
@@ -404,11 +412,11 @@ De här alternativen avgör hur Microsoft Excel-filer konverteras. Instruktioner
 
 **Prova OpenOffice som återställningskonverterare**: När det här alternativet är markerat och konverteringen med Microsoft Excel misslyckas eller når den angivna tidsgränsen, försöker PDF Generator konvertera med OpenOffice. Om konverteringen med OpenOffice misslyckas eller når den angivna tidsgränsen, skrivs ett undantag till loggfilen.
 
-**Filnamnstillägg**: Anger filnamnstilläggen för filtyper, avgränsade med kommatecken, som accepteras för det här programmet. The default is `xls,xlsx`. Ta inte med en punkt före eller ett mellanrum mellan tilläggen.
+**Filnamnstillägg**: Anger filnamnstilläggen för filtyper, avgränsade med kommatecken, som accepteras för det här programmet. The default is `xls,xlsx`. Ta inte med en punkt före eller ett blanksteg mellan tilläggen.
 
 **Skapa en PDF/A-1a-kompatibel fil**: Tvingar fram användningen av Adobe PDF-inställningen PDF/A-1b:2005 RGB.
 
-**Lägg in bokmärken i Adobe PDF**: Konverterar Excel-kalkylbladsnamn till bokmärken. Det här alternativet är markerat som standard.
+**Lägg till bokmärken i Adobe PDF**: Konverterar Excel-kalkylbladsnamn till bokmärken. Det här alternativet är markerat som standard.
 
 **Anpassa kalkylblad till en sida**: Minskar textstorleken så att den passar kalkylbladet på en sida.
 
@@ -422,7 +430,7 @@ De här alternativen avgör hur Microsoft Excel-filer konverteras. Instruktioner
 
 **Bifoga källfil till Adobe PDF**: När det här alternativet är markerat infogas det ursprungliga Excel-kalkylbladet som en bifogad fil i det genererade PDF-dokumentet.
 
-**Aktivera tillgänglighet och flödesomformning med taggad Adobe PDF**: Bäddar in taggar i PDF-dokumentet för att aktivera tillgänglighet och flödesomformning.
+**Aktivera tillgänglighet och Reflow med taggad Adobe PDF**: Bäddar in taggar i PDF-dokumentet för att aktivera tillgänglighet och flödesomformning.
 
 **Lista över Excel-tillägg som ska läsas in**: Som standard (av säkerhetsskäl) körs inga Excel-tillägg när en Excel-fil konverteras till PDF. Om du vill tillåta vissa Excel-tillägg att köras under konverteringen anger du en kommaavgränsad lista med tilläggens namn.
 
@@ -432,82 +440,82 @@ De här alternativen avgör hur Microsoft Excel-filer konverteras. Instruktioner
 
 De här alternativen avgör hur Microsoft PowerPoint-filer konverteras. Instruktioner om hur du använder dessa alternativ finns i [Skapa eller redigera filtypsinställningar](/help/forms/using/admin-help/configuring-file-type-settings.md#create-or-edit-file-type-settings).
 
-**[!UICONTROL Prova OpenOffice som återställningskonverterare]**: När det här alternativet är markerat och konverteringen med Microsoft PowerPoint misslyckas eller når den angivna tidsgränsen, försöker PDF Generator konvertera med OpenOffice. Om konverteringen med OpenOffice misslyckas eller når den angivna tidsgränsen, skrivs ett undantag till loggfilen.
+**[!UICONTROL Try OpenOffice As Fallback Converter]**: När det här alternativet är markerat och konverteringen med Microsoft PowerPoint misslyckas eller når den angivna tidsgränsen, försöker PDF Generator konvertera med OpenOffice. Om konverteringen med OpenOffice misslyckas eller når den angivna tidsgränsen, skrivs ett undantag till loggfilen.
 
-**[!UICONTROL Filnamnstillägg]**: Anger filnamnstilläggen för filtyper, avgränsade med kommatecken, som accepteras för det här programmet. Standardvärdet är ppt,pptx. Ta inte med en punkt före eller ett mellanrum mellan tilläggen.
+**[!UICONTROL Filename Extensions]**: Anger filnamnstilläggen för filtyper, avgränsade med kommatecken, som accepteras för det här programmet. Standardvärdet är ppt,pptx. Ta inte med en punkt före eller ett blanksteg mellan tilläggen.
 
-**[!UICONTROL Konvertera dokumentinformation]**: Lägger till dokumentinformation från egenskapsdialogrutan för källfilen, inklusive titel, ämne, författare, nyckelord, hanterare, företag, kategori och kommentarer. Det här alternativet är markerat som standard.
+**[!UICONTROL Convert Document Information]**: Lägger till dokumentinformation från egenskapsdialogrutan för källfilen, inklusive titel, ämne, författare, nyckelord, hanterare, företag, kategori och kommentarer. Det här alternativet är markerat som standard.
 
-**[!UICONTROL Lägg in bokmärken i Adobe PDF]**: Konverterar PowerPoint-titlar till bokmärken. Det här alternativet är markerat som standard.
+**[!UICONTROL Add Bookmarks To Adobe PDF]**: Konverterar PowerPoint-titlar till bokmärken. Det här alternativet är markerat som standard.
 
-**[!UICONTROL Bifoga källfil till Adobe PDF]**: Lägger till källfilen i PDF-filen som en bifogad fil. Det här alternativet är avmarkerat som standard.
+**[!UICONTROL Attach Source File To Adobe PDF]**: Lägger till källfilen i PDF-filen som en bifogad fil. Det här alternativet är avmarkerat som standard.
 
-**[!UICONTROL Aktivera tillgänglighet och flödesomformning med taggad Adobe PDF]**: Bäddar in taggar i PDF-filen. Det här alternativet är avmarkerat som standard.
+**[!UICONTROL Enable Accessibility And Reflow With Tagged Adobe PDF]**: Bäddar in taggar i PDF-filen. Det här alternativet är avmarkerat som standard.
 
-**[!UICONTROL Konvertera multimedia till PDF-multimedia]**: Konverterar multimedia till PDF-multimedia, där det är möjligt. Det här alternativet är markerat som standard.
+**[!UICONTROL Convert Multimedia To PDF Multimedia]**: Konverterar multimedia till PDF-multimedia, där det är möjligt. Det här alternativet är markerat som standard.
 
-**[!UICONTROL Konvertera stödanteckningar]**: Konverterar stödanteckningar till PDF.
+**[!UICONTROL Convert Speaker Notes]**: Konverterar stödanteckningar till PDF.
 
-**[!UICONTROL Kör makron automatiskt]**: Kör eventuella makron i PowerPoint-dokumentet (t.ex. ett makro som infogar den aktuella tiden) innan dokumentet konverteras.
+**[!UICONTROL Run Macros Automatically]**: Kör eventuella makron i PowerPoint-dokumentet (t.ex. ett makro som infogar den aktuella tiden) innan dokumentet konverteras.
 
-**[!UICONTROL PDF-layout baserad på skrivarinställningar]** i PowerPoint: Använder PowerPoint-skrivarinställningar för att utforma PDF-dokumentet.
+**[!UICONTROL PDF Layout Based On PowerPoint Printer Settings]**: Använder PowerPoint-skrivarinställningar för att utforma PDF-dokumentet.
 
-**[!UICONTROL Lägg till länkar i Adobe PDF]**: Bevarar befintliga länkar när filen konverteras. Länkarnas utseende ändras i allmänhet inte. Länkar kan bara skapas om alternativet Aktivera hjälpmedel också är markerat. Det här alternativet är avmarkerat som standard.
+**[!UICONTROL Add Links To Adobe PDF]**: Bevarar befintliga länkar när filen konverteras. Länkarnas utseende ändras i allmänhet inte. Länkar kan bara skapas om alternativet Aktivera hjälpmedel också är markerat. Det här alternativet är avmarkerat som standard.
 
-**[!UICONTROL Spara bildövergångar i Adobe PDF]**: Konverterar bildövergångar. Det här alternativet är markerat som standard.
+**[!UICONTROL Save Slide Transitions In Adobe PDF]**: Konverterar bildövergångar. Det här alternativet är markerat som standard.
 
-**[!UICONTROL Spara animeringar i Adobe PDF]**: Sparar konverterade animeringar i PDF-filen.
+**[!UICONTROL Save Animations In Adobe PDF]**: Sparar konverterade animeringar i PDF-filen.
 
-**[!UICONTROL Konvertera dolda bilder till PDF-sidor]**: Konverterar dolda bilder.
+**[!UICONTROL Convert Hidden Slides To PDF Pages]**: Konverterar dolda bilder.
 
-**[!UICONTROL Skapa en PDF/A-1a-kompatibel fil]**: Tvingar fram användningen av Adobe PDF-inställningen PDF/A-1b:2005 RGB. Vissa PowerPoint-funktioner konverteras inte när du skapar en PDF-fil. Om en PowerPoint-övergång inte har en motsvarande övergång i Acrobat ersätts en liknande övergång. Om det finns flera animeringseffekter i samma bildruta används en effekt. Sidövergångar och insticksprogram för punkter konverteras.
+**[!UICONTROL Create PDF/A-1a Compliant File]**: Tvingar fram användningen av Adobe PDF-inställningen PDF/A-1b:2005 RGB. Vissa PowerPoint-funktioner konverteras inte när du skapar en PDF-fil. Om en PowerPoint-övergång inte har en motsvarande övergång i Acrobat ersätts en liknande övergång. Om det finns flera animeringseffekter i samma bildruta används en effekt. Sidövergångar och insticksprogram för punkter konverteras.
 
 ## Inställningar för Microsoft Project (endast Windows) {#microsoft-project-settings-windows-only}
 
 De här alternativen avgör hur Microsoft Project-filer konverteras. Instruktioner om hur du använder dessa alternativ finns i [Skapa eller redigera filtypsinställningar](#create-or-edit-file-type-settings).
 
-1. **[!UICONTROL Filnamnstillägg:]** Anger filnamnstilläggen för filtyper, avgränsade med kommatecken, som accepteras för det här programmet. The default is `mpp`. Ta inte med en punkt före eller ett mellanrum mellan tilläggen.
+1. **[!UICONTROL Filename Extensions:]** Anger filnamnstilläggen för filtyper, avgränsade med kommatecken, som accepteras för det här programmet. The default is `mpp`. Ta inte med en punkt före eller ett blanksteg mellan tilläggen.
 
-1. **[!UICONTROL Konvertera dokumentinformation]**: Lägger till dokumentinformation från egenskapsdialogrutan för källfilen, inklusive titel, ämne, författare, nyckelord, hanterare, företag, kategori och kommentarer. Det här alternativet är markerat som standard.
-1. **[!UICONTROL Bifoga källfil till Adobe PDF]**: Lägger till källfilen i PDF-filen som en bifogad fil.
-1. **[!UICONTROL Skapa en PDF/A-1a-kompatibel fil]**: Tvingar fram användningen av Adobe PDF-inställningen PDF/A-1b:2005 RGB.
-1. **[!UICONTROL Kör makron automatiskt]**: Kör eventuella makron i Microsoft Project-dokumentet (t.ex. ett makro som infogar den aktuella tiden) innan du konverterar dokumentet.
+1. **[!UICONTROL Convert Document Information]**: Lägger till dokumentinformation från egenskapsdialogrutan för källfilen, inklusive titel, ämne, författare, nyckelord, hanterare, företag, kategori och kommentarer. Det här alternativet är markerat som standard.
+1. **[!UICONTROL Attach Source File To Adobe PDF]**: Lägger till källfilen i PDF-filen som en bifogad fil.
+1. **[!UICONTROL Create PDF/A-1a Compliant File]**: Tvingar fram användningen av Adobe PDF-inställningen PDF/A-1b:2005 RGB.
+1. **[!UICONTROL Run Macros Automatically]**: Kör eventuella makron i Microsoft Project-dokumentet (t.ex. ett makro som infogar den aktuella tiden) innan du konverterar dokumentet.
 
 ## Inställningar för Microsoft Word (endast Windows) {#microsoft-word-settings-windows-only}
 
 De här alternativen avgör hur Microsoft Word-filer konverteras. Instruktioner om hur du använder dessa alternativ finns i [Skapa eller redigera filtypsinställningar](#create-or-edit-file-type-settings).
 
-**[!UICONTROL Prova OpenOffice som återställningskonverterare]**: När det här alternativet är markerat och konverteringen med Microsoft Word misslyckas eller når den angivna tidsgränsen, försöker PDF Generator konvertera med OpenOffice. Om konverteringen med OpenOffice misslyckas eller når den angivna tidsgränsen, skrivs ett undantag till loggfilen.
+**[!UICONTROL Try OpenOffice As Fallback Converter]**: När det här alternativet är markerat och konverteringen med Microsoft Word misslyckas eller når den angivna tidsgränsen, försöker PDF Generator konvertera med OpenOffice. Om konverteringen med OpenOffice misslyckas eller når den angivna tidsgränsen, skrivs ett undantag till loggfilen.
 
-**[!UICONTROL Filnamnstillägg]**: Anger filnamnstilläggen för filtyper, avgränsade med kommatecken, som accepteras för det här programmet. The default is `doc,docx,rtf,txt`. Ta inte med en punkt före eller ett mellanrum mellan tilläggen.
+**[!UICONTROL Filename Extensions]**: Anger filnamnstilläggen för filtyper, avgränsade med kommatecken, som accepteras för det här programmet. The default is `doc,docx,rtf,txt`. Ta inte med en punkt före eller ett blanksteg mellan tilläggen.
 
-**[!UICONTROL Konvertera dokumentinformation]**: Lägger till dokumentinformation från egenskapsdialogrutan för källfilen, inklusive titel, ämne, författare, nyckelord, hanterare, företag, kategori och kommentarer. Det här alternativet är markerat som standard.
+**[!UICONTROL Convert Document Information]**: Lägger till dokumentinformation från egenskapsdialogrutan för källfilen, inklusive titel, ämne, författare, nyckelord, hanterare, företag, kategori och kommentarer. Det här alternativet är markerat som standard.
 
-**[!UICONTROL Lägg in bokmärken i Adobe PDF]**: Konverterar rubriker till bokmärken. Det här alternativet är markerat som standard.
+**[!UICONTROL Add Bookmarks To Adobe PDF]**: Konverterar rubriker till bokmärken. Det här alternativet är markerat som standard.
 
-**[!UICONTROL Bifoga källfil till Adobe PDF]**: Lägger till källfilen i PDF-filen som en bifogad fil.
+**[!UICONTROL Attach Source File To Adobe PDF]**: Lägger till källfilen i PDF-filen som en bifogad fil.
 
-**[!UICONTROL Konvertera korsreferenser och innehållsförteckning till länkar]**: Konverterar alla korsreferenser och innehållsförteckningsposter till länkar. Det här alternativet är markerat som standard.
+**[!UICONTROL Convert Cross-References And Table Of Contents To Links]**: Konverterar alla korsreferenser och innehållsförteckningsposter till länkar. Det här alternativet är markerat som standard.
 
-**[!UICONTROL Aktivera tillgänglighet och flödesomformning med taggad Adobe PDF]**: Bäddar in taggar i PDF-filen. Det här alternativet är markerat som standard.
+**[!UICONTROL Enable Accessibility And Reflow With Tagged Adobe PDF]**: Bäddar in taggar i PDF-filen. Det här alternativet är markerat som standard.
 
-**[!UICONTROL Skapa en PDF/A-1a-kompatibel fil]**: Om det här alternativet är markerat används Adobe PDF-inställningen PDF/A-1b:2005 RGB.
+**[!UICONTROL Create PDF/A-1a Compliant File]**: Om du väljer det här alternativet används Adobe PDF-inställningen PDF/A-1b:2005 RGB.
 
-**[!UICONTROL Kör makron automatiskt]**: Kör eventuella makron i Word-dokumentet (t.ex. ett makro som infogar den aktuella tiden) innan du konverterar dokumentet.
+**[!UICONTROL Run Macros Automatically]**: Kör eventuella makron i Word-dokumentet (t.ex. ett makro som infogar den aktuella tiden) innan du konverterar dokumentet.
 
-**[!UICONTROL Bevara dokumentmarkeringar i Adobe PDF]**: Konverterar markeringar i Word-dokumentet till anteckningar i PDF-filen.
+**[!UICONTROL Preserve Document Markup In Adobe PDF]**: Konverterar markeringar i Word-dokumentet till anteckningar i PDF-filen.
 
-**[!UICONTROL Lägg till länkar i Adobe PDF]**: Konverterar hyperlänkar i källfilen till hyperlänkar i PDF-dokumentet.
+**[!UICONTROL Add Links To Adobe PDF]**: Konverterar hyperlänkar i källfilen till hyperlänkar i PDF-dokumentet.
 
-**[!UICONTROL Konvertera fotnots- och slutkommentarslänkar]**: Skapar länkar från fotnots- och slutkommentarscitat till anteckningar i PDF-dokumentet.
+**[!UICONTROL Convert Footnote And Endnote Links]**: Skapar länkar från fotnots- och slutkommentarscitat till anteckningar i PDF-dokumentet.
 
-**[!UICONTROL Konvertera visade kommentarer till anteckningar i Adobe PDF]**: Konverterar kommentarer i Word-dokumentet till textanteckningar i PDF-dokumentet.
+**[!UICONTROL Convert Displayed Comments To Notes in Adobe PDF]**: Konverterar kommentarer i Word-dokumentet till textanteckningar i PDF-dokumentet.
 
-**[!UICONTROL Aktivera avancerad taggning]**: Lägger till avancerade taggar för förbättrad tillgänglighet.
+**[!UICONTROL Enable Advanced Tagging]**: Lägger till avancerade taggar för förbättrad tillgänglighet.
 
-**[!UICONTROL Konvertera alla format till bokmärken]**: Konverterar alla format i Word-dokumentet till bokmärken i PDF-dokumentet.
+**[!UICONTROL Convert All Styles To Bookmarks]**: Konverterar alla format i Word-dokumentet till bokmärken i PDF-dokumentet.
 
-**[!UICONTROL Format med nivåer]**: Anger vilka format i Word-dokumentet som ska konverteras till bokmärken i PDF-dokumentet. Anger också nivån på bokmärkena. Om du vill använda den här funktionen avmarkerar du alternativet **[!UICONTROL Konvertera alla format till bokmärken]** och anger formatnamnen i följande format:
+**[!UICONTROL Styles With Levels]**: Anger vilka format i Word-dokumentet som ska konverteras till bokmärken i PDF-dokumentet. Anger också nivån på bokmärkena. Om du vill använda den här funktionen avmarkerar du **[!UICONTROL Convert All Styles To Bookmarks]** alternativet och anger formatnamnen i följande format:
 
 **styleName1=level1[,styleName2=level2...]**
 
@@ -521,7 +529,7 @@ Om ett Microsoft Word-formatnamn innehåller ett komma (,) eller likhetstecken (
 
 **Lägg till länkar i Adobe PDF**: Bevarar alla länkar. Det här alternativet är markerat som standard.
 
-**Lägg in bokmärken i Adobe PDF**: Konverterar rubriker till bokmärken. Det här alternativet är markerat som standard.
+**Lägg till bokmärken i Adobe PDF**: Konverterar rubriker till bokmärken. Det här alternativet är markerat som standard.
 
 **Bifoga källfil till Adobe PDF**: Lägger till källfilen i PDF-filen som en bifogad fil.
 
@@ -529,7 +537,7 @@ Om ett Microsoft Word-formatnamn innehåller ett komma (,) eller likhetstecken (
 
 **Konvertera alla sidor**: Konverterar alla sidor i Visio-filen.
 
-**Öppna panelen Lager när den visas i Adobe Acrobat**: Om Visio-lagren inte förenklas öppnas ett fönster där du kan ange vilka lager som ska bevaras i PDF-filen när den öppnas med Acrobat. Det här alternativet är markerat som standard.
+**Öppna lagerpanelen när den visas i Adobe Acrobat**: Om Visio-lagren inte förenklas öppnas ett fönster där du kan ange vilka lager som ska bevaras i PDF-filen när den öppnas i Acrobat. Det här alternativet är markerat som standard.
 
 **Skapa en PDF/A-1b-kompatibel fil**: Tvingar fram användningen av Adobe PDF-inställningen PDF/A-1b:2005 (RGB).
 
@@ -539,39 +547,39 @@ Om ett Microsoft Word-formatnamn innehåller ett komma (,) eller likhetstecken (
 
 De här alternativen avgör hur Microsoft Publisher-filer konverteras. Instruktioner om hur du använder dessa alternativ finns i [Skapa eller redigera filtypsinställningar](#create-or-edit-file-type-settings).
 
-**[!UICONTROL Filnamnstillägg]**: Anger filnamnstilläggen för filtyper, avgränsade med kommatecken, som accepteras för det här programmet. The default is `pub`. Ta inte med en punkt före eller ett mellanrum mellan tilläggen.
+**[!UICONTROL Filename Extensions]**: Anger filnamnstilläggen för filtyper, avgränsade med kommatecken, som accepteras för det här programmet. The default is `pub`. Ta inte med en punkt före eller ett blanksteg mellan tilläggen.
 
 ## AutoCAD-inställningar (endast Windows) {#autocad-settings-windows-only}
 
 Dessa alternativ avgör hur AutoCAD-filer konverteras. Instruktioner om hur du använder dessa alternativ finns i [Skapa eller redigera filtypsinställningar](/help/forms/using/admin-help/configuring-file-type-settings.md#create-or-edit-file-type-settings).
 
-**[!UICONTROL Filnamnstillägg]**: Anger filnamnstilläggen för filtyper, avgränsade med kommatecken, som accepteras för det här programmet. The default is `dwg`. Ta inte med en punkt före eller ett mellanrum mellan tilläggen.
+**[!UICONTROL Filename Extensions]**: Anger filnamnstilläggen för filtyper, avgränsade med kommatecken, som accepteras för det här programmet. The default is `dwg`. Ta inte med en punkt före eller ett blanksteg mellan tilläggen.
 
-**[!UICONTROL Konvertera dokumentinformation]**: Lägger till dokumentinformation från egenskapsdialogrutan för källfilen, inklusive titel, ämne, författare, nyckelord, hanterare, företag, kategori och kommentarer. Det här alternativet är markerat som standard.
+**[!UICONTROL Convert Document Information]**: Lägger till dokumentinformation från egenskapsdialogrutan för källfilen, inklusive titel, ämne, författare, nyckelord, hanterare, företag, kategori och kommentarer. Det här alternativet är markerat som standard.
 
-**[!UICONTROL Lägg in bokmärken i Adobe PDF]**: Konverterar rubriker till bokmärken.
+**[!UICONTROL Add Bookmarks To Adobe PDF]**: Konverterar rubriker till bokmärken.
 
-**[!UICONTROL Lägg alltid samman lager i Adobe PDF]**: Förenklar alla AutoCAD-lager.
+**[!UICONTROL Always Flatten Layers In Adobe PDF]**: Förenklar alla AutoCAD-lager.
 
-**[!UICONTROL Öppna lagerrutan vid visning i Adobe Acrobat]**: Visar lagerstrukturen när PDF-filen öppnas i Acrobat.
+**[!UICONTROL Open Layers Pane When Viewed In Adobe Acrobat]**: Visar lagerstrukturen när PDF-filen öppnas i Acrobat.
 
-**[!UICONTROL Konvertera alla layouter]**: Inkluderar alla layouter i PDF-filen.
+**[!UICONTROL Convert All Layouts]**: Inkluderar alla layouter i PDF-filen.
 
-**[!UICONTROL Konvertera modellområde till 3D]**: När du väljer det här alternativet konverteras modellområdeslayouten till en 3D-anteckning i PDF-filen.
+**[!UICONTROL Convert Model Space to 3D]**: När du väljer det här alternativet konverteras modellområdeslayouten till en 3D-anteckning i PDF-filen.
 
-**[!UICONTROL Lägg till länkar i Adobe PDF]**: Om det här alternativet är markerat bevaras alla länkar.
+**[!UICONTROL Add Links To Adobe PDF]**: Om det här alternativet är markerat bevaras alla länkar.
 
-**[!UICONTROL Bifoga källfil till Adobe PDF]**: Lägger till källfilen i PDF-filen som en bifogad fil.
+**[!UICONTROL Attach Source File To Adobe PDF]**: Lägger till källfilen i PDF-filen som en bifogad fil.
 
-**[!UICONTROL Skapa en PDF/A-1b-kompatibel fil]**: Tvingar fram användningen av Adobe PDF-inställningen PDF/A-1b.
+**[!UICONTROL Create PDF/A-1b Compliant File]**: Tvingar fram användningen av Adobe PDF-inställningen PDF/A-1b.
 
-**[!UICONTROL Konvertera alla lager]**: Som standard konverterar PDF Generator bara standardlagret för AutoCAD-filer till PDF i stället för alla lager i filen. Välj det här alternativet om du vill konvertera alla lager i filen.
+**[!UICONTROL Convert All Layers]**: Som standard konverterar PDF Generator bara standardlagret för AutoCAD-filer till PDF i stället för alla lager i filen. Välj det här alternativet om du vill konvertera alla lager i filen.
 
-**[!UICONTROL Bädda in skalinformation]**: Bevarar information om ritskalan.
+**[!UICONTROL Embed Scale Information]**: Bevarar information om ritskalan.
 
-**[!UICONTROL Konvertera aktuell layout]**: Inkluderar endast den aktuella layouten i PDF-filen.
+**[!UICONTROL Convert Current Layout]**: Inkluderar endast den aktuella layouten i PDF-filen.
 
-**[!UICONTROL Lista över AutoCAD-layouter som ska konverteras]**: En AutoCAD-ritning kan ha flera layouter. När den här rutan är tom inkluderas alla layouter i AutoCAD-ritningen i det genererade PDF-dokumentet. Om du vill konvertera en delmängd av layouterna selektivt anger du en kommaavgränsad lista med layoutnamn.
+**[!UICONTROL List Of AutoCAD Layouts To Convert]**: En AutoCAD-ritning kan ha flera layouter. När den här rutan är tom inkluderas alla layouter i AutoCAD-ritningen i det genererade PDF-dokumentet. Om du vill konvertera en delmängd av layouterna selektivt anger du en kommaavgränsad lista med layoutnamn.
 
 ## OpenOffice-inställningar {#openoffice-settings}
 
@@ -579,7 +587,7 @@ De här alternativen avgör hur OpenOffice-filer konverteras. Instruktioner om h
 
 **Prova PDFMaker som återställningskonverterare**: När det här alternativet är valt och en konvertering med OpenOffice misslyckas eller når den angivna tidsgränsen, försöker PDF Generator konvertera med PDFMaker. Om konverteringen med PDFMaker misslyckas eller når den angivna tidsgränsen, skrivs ett undantag till loggfilen.
 
-**Filnamnstillägg**: Ange filnamnstilläggen för filtyper, avgränsade med kommatecken, som kan användas i det här programmet. The default is `odt,odp,ods,odg,odf,sxw,sxi,sxd`. Ta inte med en punkt före eller ett mellanrum mellan tilläggen.
+**Filnamnstillägg**: Ange filnamnstilläggen för filtyper, avgränsade med kommatecken, som kan användas i det här programmet. The default is `odt,odp,ods,odg,odf,sxw,sxi,sxd`. Ta inte med en punkt före eller ett blanksteg mellan tilläggen.
 
 **Intervall**: Konvertera alla sidor eller ange vissa sidor eller ett sidintervall. Om inget sidintervall är definierat konverteras alla sidor. Om du vill exportera ett sidintervall använder du formatet 3-6. Om du vill exportera enstaka sidor använder du formatet 7;9;11. Du kan exportera en kombination av sidintervall och enstaka sidor med ett format som 3-6;8;10;12.
 
@@ -587,7 +595,7 @@ De här alternativen avgör hur OpenOffice-filer konverteras. Instruktioner om h
 
 **Bilder**: Konfigurera hur bilder konverteras. EPS-bilder med inbäddade förhandsvisningar exporteras endast som förhandsvisningar. EPS-bilder utan inbäddade förhandsvisningar exporteras som tomma platshållare. Med förlustfri komprimering av bilder bevaras alla pixlar. Med JPEG-komprimering av bilder och en hög kvalitetsnivå bevaras nästan alla pixlar. Med en låg kvalitetsnivå försvinner vissa pixlar och artefakter uppstår, men filstorleken minskar.
 
-**Allmänt**: Aktivera alternativen för att konvertera en taggad PDF-fil eller för att exportera anteckningar från Writer- och FormCalc-dokument, Impress-bildövergångseffekter eller tomma sidor till PDF-filen. När du exporterar märkord kan filstorleken öka med mycket. Vissa märkord som exporteras är innehållsförteckningar, hyperlänkar och kontroller.
+**Allmänt**: Aktivera alternativen för att konvertera en taggad PDF-fil eller för att exportera anteckningar i Writer- och FormCalc-dokument, Impress-bildövergångseffekter eller tomma sidor till PDF-filen. När du exporterar märkord kan filstorleken öka med mycket. Vissa märkord som exporteras är innehållsförteckningar, hyperlänkar och kontroller.
 
 Du kan också ange hur formulär ska skickas. Alternativen är XML, FDF, PDF eller HTML. Den här inställningen åsidosätter kontrollens URL-egenskap som du anger i dokumentet. Endast en gemensam inställning kan väljas för PDF-dokumentet:
 
@@ -602,7 +610,7 @@ Du kan också ange hur formulär ska skickas. Alternativen är XML, FDF, PDF ell
 
 **Använd övergångseffekter**: Konverterar bildruteövergångseffekterna i OpenOffice-presentationer till motsvarande PDF-övergångseffekter.
 
-**Skicka formulär i format**: Skapar ett PDF-formulär som kan fyllas i och skrivas ut av användaren av PDF-dokumentet.
+**Skicka in Forms i format**: Skapar ett PDF-formulär som kan fyllas i och skrivas ut av användaren av PDF-dokumentet.
 
 **Exportera automatiskt infogade tomma sidor**: När det här alternativet är markerat inkluderas automatiskt tomma sidor i det genererade PDF-dokumentet. Detta är praktiskt om du skriver ut ett PDF-dokument dubbelsidigt. En bok kan till exempel konfigureras så att den första sidan i kapitlet alltid börjar på en sida med udda nummer. Om det föregående kapitlet slutar på en sida med ojämnt nummer infogar OpenOffice en tom sida med jämnt nummer. Det här alternativet styr om den jämna sidan ska inkluderas i den genererade PDF-filen.
 
@@ -615,6 +623,6 @@ Du kan inte ändra inställningarna för andra program via administrationskonsol
 * Adobe FrameMaker: `fm`
 * Adobe Photoshop: `psd`
 
-Stöd för dessa filtyper kan behöva anpassas. Mer information finns i&quot;Adding Support for Additional Native File Formats&quot; (Lägga till stöd för fler inbyggda filformat) i [Programmering med AEM-formulär](https://www.adobe.com/go/learn_aemforms_programming_62).
+Stöd för dessa filtyper kan behöva anpassas. Mer information finns i&quot;Adding Support for Additional Native File Formats&quot; (Lägga till stöd för fler inbyggda filformat) i [Programmering med AEM formulär](https://www.adobe.com/go/learn_aemforms_programming_62).
 
 Hjälp om hur du konfigurerar en PDFG-nätverksskrivare finns i [Konfigurera en PDFG-nätverksskrivare (endast Windows)](/help/forms/using/admin-help/setting-pdfg-network-printer-windows.md).
