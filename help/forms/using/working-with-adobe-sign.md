@@ -10,7 +10,7 @@ topic-tags: develop
 discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f34742a9d11909dcf8403e1b002b65a01e882a74
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
 source-wordcount: '3784'
 ht-degree: 0%
@@ -63,7 +63,7 @@ Så här konfigurerar du Adobe Sign för ett anpassat formulär:
 
 Konfigurera anpassningsbara formuläregenskaper för Adobe Sign för ett befintligt eller nytt anpassbart formulär.
 
-[Skapa ett adaptivt formulär för Adobe Sign](../../forms/using/working-with-adobe-sign.md#create-an-adaptive-form-for-adobe-sign) som beskriver stegen för att skapa ett enkelt adaptivt formulär. Se [Skapa ett adaptivt formulär](../../forms/using/creating-adaptive-form.md) för andra alternativ som är tillgängliga när du skapar ett adaptivt formulär.
+[Skapa ett adaptivt formulär för Adobe Sign](../../forms/using/working-with-adobe-sign.md#create-an-adaptive-form-for-adobe-sign) beskriver stegen för att skapa ett enkelt adaptivt formulär. Se [Skapa ett adaptivt formulär](../../forms/using/creating-adaptive-form.md) för andra alternativ som är tillgängliga när du skapar ett adaptivt formulär.
 
 #### Skapa ett anpassningsbart formulär för Adobe Sign {#create-an-adaptive-form-for-adobe-sign}
 
@@ -252,7 +252,7 @@ När du har [redigerat anpassningsbara formuläregenskaper för Adobe-signering]
 
 ## Skapa signeringsupplevelser i form av formulär {#create-in-form-signing-experience}
 
-Användaren kan också signera ett anpassat formulär medan han/hon fyller i formuläret. Den här upplevelsen kallas även signering i form av formulär. Signeringsfunktionen i form är bara tillgänglig för den första signeraren i en miljö med flera signerare. Utför följande steg för att skapa en signeringsupplevelse i ett anpassat formulär:
+Användaren kan också signera ett anpassat formulär medan han/hon fyller i formuläret. Den här upplevelsen kallas även signering i formulär. Signeringsfunktionen i form är bara tillgänglig för den första signeraren i en miljö med flera signerare. Utför följande steg för att skapa en signeringsupplevelse i ett anpassat formulär:
 
 1. [Lägg till och konfigurera signaturstegskomponenten](../../forms/using/working-with-adobe-sign.md#add-and-configure-the-signature-step-component).
 1. [Lägg till komponenten](../../forms/using/working-with-adobe-sign.md#configure-the-thank-you-page-or-summary-step-component)Sammanfattningssteg.
@@ -347,6 +347,4 @@ Nu är signeringsupplevelsen i form av formulär klar. Du kan förhandsgranska f
 
 * [Integrera Adobe Sign med AEM Forms](../../forms/using/adobe-sign-integration-adaptive-forms.md)
 * [Använda Adobe Sign i en adaptiv form](../../forms/using/working-with-adobe-sign.md)
-
-* [Använda Adobe Sign med AEM Forms (video)
-   ](https://helpx.adobe.com/experience-manager/kt/forms/using/adobe-sign-integration-feature-video.html)
+* [Använda Adobe Sign med AEM Forms (video)](https://helpx.adobe.com/experience-manager/kt/forms/using/adobe-sign-integration-feature-video.html)
