@@ -10,10 +10,10 @@ discoiquuid: cf7823f4-82c2-4e36-9b65-3c58359b8104
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer-presets
 translation-type: tm+mt
-source-git-commit: a1e4d64a9ac7dc02c5cf2ac6b01994736c45b449
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '4260'
-ht-degree: 14%
+source-wordcount: '4244'
+ht-degree: 15%
 
 ---
 
@@ -27,7 +27,7 @@ Instruktioner om hur du skapar och anpassar egna HTML5-visningsförinställninga
 Path: `<scene7_domain>/s7sdk/<library_version>/docs/jsdocs/index.html`.
 Exempel: 3.5 SDK: [https://s7d1.scene7.com/s7sdk/3.5/docs/jsdoc/index.html](https://s7d1.scene7.com/s7sdk/3.5/docs/jsdoc/index.html)
 
-Se även [Adobe Viewer Reference Guide](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html).
+Se även referenshandboken för [Adobe-visningsprogram](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html).
 
 I det här avsnittet beskrivs hur du skapar, redigerar och hanterar visningsprogramförinställningar. Du kan använda en visningsförinställning för en resurs när du vill förhandsgranska den. Se [Använda visningsförinställningar](#applying-a-viewer-preset-to-an-asset).
 
@@ -43,7 +43,7 @@ Se även [Tangentbordstillgänglighet och -navigering](https://docs.adobe.com/co
 
 ## Managing Viewer Presets {#managing-viewer-presets-1}
 
-Du kan lägga till, redigera, ta bort, publicera, avpublicera och förhandsgranska visningsförinställningar i AEM genom att trycka på **[!UICONTROL Verktyg]** (hammarikon) **[!UICONTROL > Assets > Viewer Presets.]**
+You can add, edit, delete, publish, unpublish, and preview viewer presets in AEM by tapping **[!UICONTROL Tools]** (hammer icon) > **[!UICONTROL Assets > Viewer Presets.]**
 
 ![6_5_tools-assets-viewerpresets](assets/6_5_tools-assets-viewerpresets.png)
 
@@ -55,7 +55,7 @@ Du kan lägga till, redigera, ta bort, publicera, avpublicera och förhandsgrans
 
 Olika webbsidor har olika behov. Ibland kanske du vill ha en webbsida som innehåller en länk som öppnar HTML5 Viewer i ett separat webbläsarfönster. I andra fall kan det vara nödvändigt att bädda in HTML5 Viewer direkt på värdsidan. I det senare fallet kan webbsidan ha en statisk layout. Det kan också vara&quot;responsivt&quot; och visas på olika enheter eller för olika webbläsarfönsterstorlekar. För att tillgodose dessa behov har alla fördefinierade färdiga HTML5-visningsprogram som medföljer Dynamic Media stöd för både statiska webbsidor och responsiva webbsidor.
 
-Mer information om hur du bäddar in responsiva visningsprogram på dina webbsidor finns i [Responsive Image Library](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/responsive-static-image-library/c-about-responsive-static-image-library.html) i API-hjälpen *för* Scene7 Image Serving.
+Mer information om hur du bäddar in responsiva visningsprogram på dina webbsidor finns i [Biblioteket](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/responsive-static-image-library/c-about-responsive-static-image-library.html) för responsiva bilder i API-hjälpen *för* Scene7 Image Serving.
 
 >[!NOTE]
 >
@@ -64,7 +64,7 @@ Mer information om hur du bäddar in responsiva visningsprogram på dina webbsid
 
 ### Systemkompatibilitet för visningsförinställningar  {#viewer-preset-system-compatibility}
 
-Alla färdiga visningsförinställningar för Dynamic Media är helt kompatibla med följande system:
+Alla färdiga visningsförinställningar som medföljer Dynamic Media är helt kompatibla med följande system:
 
 * Stationära datorer
 * Apple iPhone
@@ -117,7 +117,7 @@ Administratörer kan lägga till och anpassa följande typer av multimedia när 
     <ul>
      <li>Proportionerna 2:1.</li>
      <li>Tagged with the keywords <code>equirectangular</code>, or <code>spherical</code> and <code>panorama</code>, or <code>spherical </code>and <code>panoramic</code>. Se <a href="/help/sites-authoring/tags.md">Använda taggar</a>.</li>
-    </ul> <p>Både proportioner och nyckelordskriterier gäller för panoramaresurser för sidan med resursinformation och WCM-komponenten "Panoramic Media".</p> <p><strong>Viktigt</strong>: Det här visningsprogrammet är bara tillgängligt i Dynamic Media - Scene7-läge.</p> </td>
+    </ul> <p>Både proportioner och nyckelordskriterier gäller för panoramaresurser för sidan med resursinformation och WCM-komponenten "Panoramic Media".</p> <p><strong>Viktigt</strong>: Det här visningsprogrammet är endast tillgängligt i läget Dynamic Media - Scene7.</p> </td>
   </tr>
   <tr>
    <td><strong>Video för smart beskärning</strong><br /> </td>
@@ -129,7 +129,7 @@ Administratörer kan lägga till och anpassa följande typer av multimedia när 
   </tr>
   <tr>
    <td><strong>360-video</strong></td>
-   <td><p>Använd 360/VR Video Viewer för att återge ekvirektangulär video för en engagerande tittarupplevelse av ett rum, en egenskap, plats, landskap eller medicinskt förfarande.</p> <p>Vid uppspelning på en platt skärm har användaren kontroll över betraktningsvinkeln. uppspelning på mobila enheter utnyttjar vanligtvis de inbyggda gyroskopiska kontrollerna.</p> <p>Visningsprogrammet har inbyggt stöd för leverans av 360 videomaterial. Som standard krävs ingen ytterligare konfiguration för visning eller uppspelning. Du levererar 360-video med standardvideotillägg som .mp4, .mkv och .mov. Den vanligaste kodeken är H.264.</p> <p><strong>Viktigt</strong>: Det här visningsprogrammet är bara tillgängligt i Dynamic Media - Scene7-läge.</p> </td>
+   <td><p>Använd 360/VR Video Viewer för att återge ekvirektangulär video för en engagerande tittarupplevelse av ett rum, en egenskap, plats, landskap eller medicinskt förfarande.</p> <p>Vid uppspelning på en platt skärm har användaren kontroll över betraktningsvinkeln. uppspelning på mobila enheter utnyttjar vanligtvis de inbyggda gyroskopiska kontrollerna.</p> <p>Visningsprogrammet har inbyggt stöd för leverans av 360 videomaterial. Som standard krävs ingen ytterligare konfiguration för visning eller uppspelning. Du levererar 360-video med standardvideotillägg som .mp4, .mkv och .mov. Den vanligaste kodeken är H.264.</p> <p><strong>Viktigt</strong>: Det här visningsprogrammet är endast tillgängligt i läget Dynamic Media - Scene7.</p> </td>
   </tr>
   <tr>
    <td><strong>Video</strong></td>
@@ -387,7 +387,7 @@ Följande tabell visar vilka mobilvisningsgester som stöds på iOS-, Android 2.
 
 ## Increasing the number of Viewer Presets that display {#increasing-the-number-of-viewer-presets-that-display}
 
-AEM visar en mängd olika förinställningar för visningsprogram när du visar resurser från **[!UICONTROL Detail View > Viewers.]** Du kan öka eller minska antalet visningsprogram som visas.
+AEM visar en mängd olika förinställningar för visningsprogram när du visar ett material från **[!UICONTROL Detail View > Viewers.]** Du kan öka eller minska antalet visningsprogram som visas.
 
 **Öka antalet visningsförinställningar som visas**
 
@@ -406,9 +406,9 @@ AEM visar en mängd olika förinställningar för visningsprogram när du visar 
 
 ## Skapa en visningsförinställning {#creating-a-new-viewer-preset}
 
-Genom att skapa visningsförinställningar kan du använda olika inställningar för att visa och interagera med resurser. Du behöver dock inte skapa nya förinställningar för visningsprogrammet. Om du vill kan du använda standardförinställningarna för visningsprogram som redan finns i AEM Assets.
+Genom att skapa visningsförinställningar kan du använda olika inställningar för att visa och interagera med resurser. Du behöver dock inte skapa nya förinställningar för visningsprogrammet. Om du vill kan du använda de förinställda visningsprogrammen som redan finns i AEM Assets.
 
-Om du väljer att skapa en ny visningsförinställning aktiveras visningsprogrammets läge automatiskt (anges till **[!UICONTROL On]**) på sidan Förinställningar för visningsprogram när du har sparat den. Det här läget innebär att det är synligt i Dynamic Media-komponenten och i Interactive Media-komponenten och när du förhandsgranskar en bild eller en video.
+Om du väljer att skapa en ny visningsförinställning aktiveras visningsprogrammets läge automatiskt (anges till **[!UICONTROL On]**) på sidan Förinställningar för visningsprogram när du har sparat den. Det här läget innebär att det är synligt i komponenten Dynamic Media och komponenten Interactive Media och när du förhandsgranskar en bild eller video.
 
 Vissa visningsprogramförinställningar har exklusiva inställningar som kan påverka visningsprogrammets användning och allmänna beteende. Beroende på vilken visningsförinställning du skapar kan det vara bra att tänka på dessa speciella saker.
 
@@ -418,7 +418,7 @@ Se [Specialöverväganden när du skapar en förinställning](#special-considera
 
 **Skapa en visningsförinställning**
 
-1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools** (hammer icon) **[!UICONTROL > Assets > Viewer Presets**.
+1. I det övre vänstra hörnet av AEM trycker du på AEM-logotypen och sedan i den vänstra rutan på **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Assets]>[!UICONTROL Viewer Presets]**.
 
    ![6_5_viewerpresets](assets/6_5_viewerpresets.png)
 
@@ -522,7 +522,7 @@ Följande logik används för hur många miniatyrbilder som visas på panelen ba
 * Antal undersegment = rund upp till nästa undersegment (antal miniatyrbilder/antal synliga platser på miniatyrbildspanelen, baserat på webbläsarfönstrets storlek).
 I exemplet i tabellen ovan används 9 miniatyrbilder/4 kortplatser = 2,25; visningsprogrammets logik omger den med upp till tre undersegment.
 
-* Antal miniatyrbilder = avrunda till nästa miniatyrbild (antal miniatyrbilder/antal undersegment till video).
+* Antal miniatyrbilder = avrunda upp till nästa miniatyrbild (antal miniatyrbilder/antal undersegment till video).
 Med hjälp av exemplet i tabellen ovan är det 9 miniatyrbilder/3 undersegment för video = 3 miniatyrbilder.
 
 * Undersegmentets längd = den totala videons längd/antal undersegment.
@@ -534,7 +534,7 @@ När du skapar visningsförinställningar för Carousel Banner kan du ändra for
 
 |  | **Beskrivning** | **Åtgärder** |
 |---|---|---|
-| **[!UICONTROL Hotspot Icon]** | Ändra ikonen som används för hotspot | Om du vill ändra hotspot-ikonbilden trycker du på **[!UICONTROL Appearance]** Under **[!UICONTROL Selected Component]** på **[!UICONTROL ImageMapEffect.]** fliken och går till den bakgrundsbild du vill ha i **[!UICONTROL Icon]****[!UICONTROL Background]** **[!UICONTROL Image]** fältet. |
+| **[!UICONTROL Hotspot Icon]** | Ändra ikonen som används för hotspot-områden | Om du vill ändra hotspot-ikonbilden trycker du på **[!UICONTROL Appearance]** Under **[!UICONTROL Selected Component]** på **[!UICONTROL ImageMapEffect.]** fliken och går till den bakgrundsbild du vill ha i **[!UICONTROL Icon]****[!UICONTROL Background]** **[!UICONTROL Image]** fältet. |
 
 ## Aktivera eller inaktivera visningsförinställningar {#activating-or-deactivating-viewer-presets}
 
@@ -542,14 +542,14 @@ Vilka visningsprogramförinställningar som är tillgängliga i användargränss
 
 **Aktivera eller inaktivera visningsförinställningar**
 
-1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools** (hammer icon) **[!UICONTROL > Assets > Viewer Presets.]**
+1. I det övre vänstra hörnet av AEM trycker du på AEM-logotypen och sedan i den vänstra rutan på **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Assets]>[!UICONTROL Viewer Presets.]**
 1. På sidan Viewer Preset (Visningsförinställning) under kolumnrubriken trycker du på växlingsknappen för att aktivera eller inaktivera en visningsförinställning. **[!UICONTROL State]**
 
    De visningsprogramförinställningar som är aktiverade visas till höger, i en blå ruta. förinställningar för inaktiverat visningsprogram har växlingsknappen till vänster, i en ljusgrå ruta.
 
 ## Förinställningar för publiceringsvisningsprogram {#publishing-viewer-presets}
 
-Om du aktiverar (eller aktiverar&quot;På&quot;) ett visningsförinställningsläge innebär det att det visas i komponenten Dynamic Media, i komponenten Interactive Media och när du visar en resurs.
+När du aktiverar (eller aktiverar&quot;På&quot;) ett förinställt visningsläge visas det i komponenten Dynamic Media, i komponenten Interactive Media och när du visar en resurs.
 
 För att kunna leverera* *en resurs med en visningsförinställning måste visningsförinställningen också publiceras. Alla visningsförinställningar måste aktiveras *och *publiceras för att URL- eller inbäddningskod ska kunna hämtas för en resurs. Du måste aktivera och publicera alla färdiga visningsförinställningar som medföljer Dynamic Media. Anpassade visningsförinställningar som du skapar och lägger till aktiveras automatiskt, men de måste också publiceras.
 
@@ -559,13 +559,13 @@ Se även [Förhandsgranska resurser](/help/assets/previewing-assets.md).
 
 **Så här publicerar du förinställningar för visningsprogram**
 
-1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools** (hammer icon) **[!UICONTROL > Assets > Viewer Presets.]**
+1. I det övre vänstra hörnet av AEM trycker du på AEM-logotypen och sedan i den vänstra rutan på **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Assets]>[!UICONTROL Viewer Presets.]**
 1. Välj en eller flera visningsförinställningar som du vill publicera.
 1. Tryck på **[!UICONTROL Publish]** ikonen i verktygsfältet.
 
 ## Sortera visningsförinställningar {#sorting-viewer-presets}
 
-1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools** (hammer icon) **[!UICONTROL > Assets > Viewer Presets.]**
+1. I det övre vänstra hörnet av AEM trycker du på AEM-logotypen och sedan i den vänstra rutan på **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Assets]>[!UICONTROL Viewer Presets.]**
 1. Klicka på **[!UICONTROL Preset Title]**, **[!UICONTROL Type]**, **[!UICONTROL Published]** eller **[!UICONTROL State]** för att sortera efter den kolumnrubriken. Du kan till exempel klicka på **[!UICONTROL Type]** för att sortera de olika typerna av visningsförinställningar i alfabetisk eller omvänd alfabetisk ordning.
 
 ## Redigera visningsförinställningar {#editing-viewer-presets}
@@ -574,7 +574,7 @@ Tänk på att redigering av *fördefinierade förinställningar* för visningspr
 
 **Redigera visningsprogramförinställningar**
 
-1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools** (hammer icon) **[!UICONTROL > Asset > Viewer Presets.]**
+1. I det övre vänstra hörnet av AEM trycker du på AEM-logotypen och sedan i den vänstra rutan på **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Asset]>[!UICONTROL Viewer Presets.]**
 1. Markera en förinställning genom att markera rutan till vänster om visningsförinställningens titel.
 1. Tryck på i verktygsfältet **[!UICONTROL Edit.]**
 1. På sidan **[!UICONTROL Viewer Preset Editor]** gör du önskade ändringar i visningsförinställningen med hjälp av alternativen på flikarna **[!UICONTROL Appearance]** och **[!UICONTROL Behavior]**.
@@ -588,7 +588,7 @@ Tänk på att redigering av *fördefinierade förinställningar* för visningspr
 
 ## Ta bort anpassade visningsprogramförinställningar {#deleting-custom-viewer-presets}
 
-Du kan ta bort visningsförinställningar som du har skapat och lagt till i Dynamic Media.
+Du kan ta bort visningsförinställningar som du har skapat och lagt till i dynamiska media.
 
 **Ta bort anpassade visningsprogramförinställningar**
 
@@ -616,4 +616,4 @@ Om du redan har publicerat både resursen och det valda visningsprogrammet visas
 
 Mer information om hur du hämtar URL:er för visningsförinställningar finns i [Länka URL:er till webbprogrammet](/help/assets/linking-urls-to-yourwebapplication.md). Se även [Bädda in Video Viewer på en webbsida](/help/assets/embed-code.md).
 
-Om du använder AEM som WCM kan du lägga till resurser med visningsförinställningarna direkt på sidan. See [Adding Dynamic Media Assets to Pages](/help/assets/adding-dynamic-media-assets-to-pages.md).
+Om du använder AEM som WCM-fil kan du lägga till resurser med visningsförinställningarna direkt på sidan. See [Adding Dynamic Media Assets to Pages](/help/assets/adding-dynamic-media-assets-to-pages.md).
