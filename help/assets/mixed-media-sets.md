@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: ed84157a-e6b4-4dde-af2e-a1e0b6259628
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '1397'
+source-wordcount: '1395'
 ht-degree: 19%
 
 ---
@@ -71,7 +71,7 @@ Om du behöver kan du redigera [blandade medieuppsättningar](#editing-mixed-med
 
 >[!NOTE]
 >
->Om du har problem med att skapa uppsättningar kan du läsa [Felsöka Dynamic Media - Scene7-läge](/help/assets/troubleshoot-dms7.md).
+>Om du har problem med att skapa uppsättningar kan du läsa [Felsöka läget](/help/assets/troubleshoot-dms7.md)Dynamic Media - Scene7.
 
 ## Överför resurser {#uploading-assets}
 
@@ -97,7 +97,7 @@ När du lägger till resurser i uppsättningen läggs de automatiskt till i alfa
 
    >[!NOTE]
    >
-   >När du skapar den blandade medieuppsättningen kan du ändra miniatyrbilden för den blandade medieuppsättningen eller tillåta att AEM väljer miniatyrbilden automatiskt baserat på resurserna i den blandade medieuppsättningen. Om du vill välja en miniatyrbild klickar du på **[!UICONTROL Change thumbnail]** och väljer en bild (du kan navigera till andra mappar för att hitta bilder också). If you have selected a thumbnail and then decide that you want AEM to generate one from the mixed media set, select **[!UICONTROL Switch to Automatic thumbnail.]**
+   >När du skapar den blandade medieuppsättningen kan du ändra miniatyrbilden för den blandade medieuppsättningen eller låta AEM välja miniatyrbilden automatiskt baserat på resurserna i den blandade medieuppsättningen. Om du vill välja en miniatyrbild klickar du på **[!UICONTROL Change thumbnail]** och väljer en bild (du kan navigera till andra mappar för att hitta bilder också). If you have selected a thumbnail and then decide that you want AEM to generate one from the mixed media set, select **[!UICONTROL Switch to Automatic thumbnail.]**
 
 1. Tryck på resursväljaren för att välja resurser som du vill inkludera i den blandade medieuppsättningen. Select them and click **[!UICONTROL Select.]**
 
@@ -151,10 +151,10 @@ Du kan utföra en mängd redigeringsåtgärder för resurser i blandade medieupp
 
       >[!NOTE]
       >
-      >    * To delete an entire Mixed Media Set, from any viewing mode (such as **[!UICONTROL Card View]** or **[!UICONTROL Column View]**) navigate to the Mixed Media Set. Håll pekaren över resursen och tryck på bocken för att markera den. Tryck **[!UICONTROL Backspace]** på tangentbordet eller klicka på **[!UICONTROL More]** (tre punkter) i verktygsfältet och tryck sedan på **[!UICONTROL Delete.]**
+      >* To delete an entire Mixed Media Set, from any viewing mode (such as **[!UICONTROL Card View]** or **[!UICONTROL Column View]**) navigate to the Mixed Media Set. Håll pekaren över resursen och tryck på bocken för att markera den. Tryck **[!UICONTROL Backspace]** på tangentbordet eller klicka på **[!UICONTROL More]** (tre punkter) i verktygsfältet och tryck sedan på **[!UICONTROL Delete.]**
          >
-         >    
-      * You can edit the assets in a Mixed Media Set by navigating to the set, clicking **Set Members]** in the left rail, and then tapping the **[!UICONTROL Pencil]** icon on an individual asset to open the editing window.
+         >
+      * You can edit the assets in a Mixed Media Set by navigating to the set, clicking **[!UICONTROL Set Members]** in the left rail, and then tapping the **[!UICONTROL Pencil]** icon on an individual asset to open the editing window.
 
 
 1. Tryck **[!UICONTROL Save]** när du är klar med redigeringen.
@@ -164,7 +164,7 @@ Du kan utföra en mängd redigeringsåtgärder för resurser i blandade medieupp
    >* Om du vill redigera resurserna i en uppsättning med blandade medier navigerar du till den blandade medieuppsättningen. Tryck på (markera inte) uppsättningen för att öppna den på AEM-sidan för förhandsgranskning. I den vänstra listen klickar du på nedåtpilen för att öppna listrutan och trycker sedan på **[!UICONTROL Set Members.]** På sidan Ange medlemmar, håller pekaren över en resurs och trycker sedan på **[!UICONTROL Edit]** (pennikonen) för att öppna redigeringssidan.
       >
       >
-   * Om du vill ta bort en hel uppsättning med blandade medier – I valfritt visningsläge (som kortvyn eller kolumnvyn) går du till uppsättningen med blandade medier. Hover on the set, then tap **Select]** (checkmark icon). Tryck **[!UICONTROL Backspace]** på tangentbordet eller tryck **[!UICONTROL More]** (rad om tre punkter) och tryck sedan på **[!UICONTROL Delete.]**
+   * Om du vill ta bort en hel uppsättning med blandade medier – I valfritt visningsläge (som kortvyn eller kolumnvyn) går du till uppsättningen med blandade medier. Hover on the set, then tap **Select** (checkmark icon). Tryck **[!UICONTROL Backspace]** på tangentbordet eller tryck **[!UICONTROL More]** (rad om tre punkter) och tryck sedan på **[!UICONTROL Delete.]**
 
 
 ## Förhandsgranska blandade medieuppsättningar {#previewing-mixed-media-sets}
