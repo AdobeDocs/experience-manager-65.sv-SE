@@ -11,14 +11,17 @@ content-type: reference
 discoiquuid: dee7ac7c-ca86-48e9-8d95-7826fa926c68
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+workflow-type: tm+mt
+source-wordcount: '1395'
+ht-degree: 10%
 
 ---
 
 
 # Projekt{#projects}
 
-Med projekt kan du gruppera resurser i en enhet. En gemensam, delad miljö gör det enkelt att hantera projekt. De typer av resurser som du kan associera med ett projekt kallas i AEM för plattor. Rutorna kan innehålla projekt- och teaminformation, resurser, arbetsflöden och andra typer av information, vilket beskrivs i detalj i [Projektrutor.](#project-tiles)
+Med projekt kan du gruppera resurser i en enhet. En gemensam, delad miljö gör det enkelt att hantera projekt. De typer av resurser som du kan associera med ett projekt kallas för Plattor i AEM. Rutorna kan innehålla projekt- och teaminformation, resurser, arbetsflöden och andra typer av information, vilket beskrivs i detalj i [Projektrutor.](#project-tiles)
 
 >[!CAUTION]
 >
@@ -33,15 +36,14 @@ Som användare kan du göra följande:
 
 Se följande ytterligare ämnen:
 
-* [Hantera projekt
-   ](/help/sites-authoring/touch-ui-managing-projects.md)
+* [Hantera projekt](/help/sites-authoring/touch-ui-managing-projects.md)
 * [Arbeta med uppgifter](/help/sites-authoring/task-content.md)
 * [Arbeta med projektarbetsflöden](/help/sites-authoring/projects-with-workflows.md)
 * [Kreativt projekt- och PIM-integrering](/help/sites-authoring/managing-product-information.md)
 
 ## Projektkonsol {#projects-console}
 
-Projektkonsolen är där du får åtkomst till och hanterar dina projekt i AEM.
+Projektkonsolen är den plats där du får åtkomst till och hanterar dina projekt i AEM.
 
 ![screen-shot_2019-03-05at125110](assets/screen-shot_2019-03-05at125110.png)
 
@@ -65,10 +67,10 @@ Du kan associera följande rutor med ditt projekt. Var och en av dem beskrivs i 
 * Landningssidor
 * E-post
 * Arbetsflöden
-* Startar
+* Launches
 * Uppgifter
 
-### Resurser {#assets}
+### Assets {#assets}
 
 I **resurspanelen** kan du samla alla resurser som du använder för ett visst projekt.
 
@@ -92,7 +94,7 @@ I **panelen Erfarenheter** kan du lägga till en mobilapp, en webbplats eller en
 
 ![chlimage_1-73](assets/chlimage_1-73.png)
 
-Ikonerna anger vilken typ av upplevelse som visas: webbplats, mobilapplikation eller publikation. Lägg till upplevelser genom att klicka på plustecknet eller klicka på **Lägg till upplevelse** och välja typ av upplevelse.
+Ikonerna anger vilken typ av upplevelse som visas: webbplats, mobilapp eller publikation. Lägg till upplevelser genom att klicka på plustecknet (+) eller på **Lägg till upplevelse** och välja typ av upplevelse.
 
 ![chlimage_1-74](assets/chlimage_1-74.png)
 
@@ -164,7 +166,7 @@ Du kan tilldela ditt projekt för att följa vissa arbetsflöden. Beroende på v
 
 Dessa beskrivs i [Arbeta med projektarbetsflöden.](/help/sites-authoring/projects-with-workflows.md)
 
-### Startar {#launches}
+### Launches {#launches}
 
 I rutan Launches (Starta) visas alla starter som har begärts i ett arbetsflöde för att starta en [begäran.](/help/sites-authoring/projects-with-workflows.md)
 
@@ -242,4 +244,4 @@ För kreativa projekt finns även andra roller - till exempel fotografer -. Du k
 
 >[!NOTE]
 >
->När du skapar projektet och lägger till användare till de olika rollerna skapas grupper som är kopplade till projektet automatiskt för att hantera associerade behörigheter. Ett projekt med namnet Myproject skulle till exempel ha tre grupper, **Myproject Owners**, **Myproject Editors**, **Myproject Observers**. Om projektet däremot tas bort tas de grupperna inte bort automatiskt. En administratör måste ta bort grupperna manuellt i **Verktyg** > **Dokumentskydd** > **Grupper**.
+>När du skapar projektet och lägger till användare för de olika rollerna skapas grupper som är kopplade till projektet automatiskt för att hantera associerade behörigheter. Ett projekt med namnet Myproject skulle till exempel ha tre grupper, **Myproject Owners**, **Myproject Editors** och **Myproject Observers**. Om projektet tas bort tas de grupperna dock inte bort automatiskt. En administratör måste ta bort grupperna manuellt i **Verktyg** > **Säkerhet** > **Grupper**.
