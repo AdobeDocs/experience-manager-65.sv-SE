@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: d4152b4d-531b-4b62-8807-a5bc5afe94c6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e6d02717811ac78b77dc459814941d654e94733f
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
 source-wordcount: '1179'
 ht-degree: 0%
@@ -70,7 +70,7 @@ AEM Experience Fragments kan exporteras till standardarbetsytan i Adobe Target e
 
 >[!NOTE]
 >
->Mer information finns också i:
+>Mer information finns även i:
 >
 >* [Utveckling av Adobe Target](https://www.adobe.io/apis/experiencecloud/target.html)
 >* [Kärnkomponenter - Upplevelsefragment](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/experience-fragment.html)
@@ -119,10 +119,9 @@ De obligatoriska alternativen kan väljas i **Sidegenskaper** för den mapp och/
 
 1. Under **Konfigurera** Cloud Service väljer du **Adobe Target** i listrutan.
 
-1. 
    >[!NOTE]
    >
-   >JSON-formatet i ett Experience Fragment-erbjudande kan anpassas. Om du vill göra det definierar du en Customer Experience Fragment-komponent och kommenterar sedan hur dess egenskaper ska exporteras i komponentens Sling Model.
+   >JSON-formatet i ett Experience Fragment-erbjudande kan anpassas. Om du vill göra det definierar du en Customer Experience Fragment-komponent och kommenterar sedan hur egenskaperna ska exporteras i komponentens Sling Model.
    >
    >Se kärnkomponenten:
    >
