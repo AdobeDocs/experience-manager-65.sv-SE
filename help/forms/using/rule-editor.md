@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 1b905e66-dc05-4f14-8025-62a78feef12a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '6774'
+source-wordcount: '6766'
 ht-degree: 0%
 
 ---
@@ -73,7 +73,7 @@ Mer information om vilka regeltyper som finns i regelredigeraren finns i [Tillg�
 
 * Om du vill aktivera en åtgärd baserat på flera villkor bör du använda konstruktorn action-condition. Om du till exempel vill visa och dölja fält A genom att utvärdera villkor i fält B, C och D, använder du Visa eller Dölj regeltyp i fält A.
 * Använd villkorskonstruktion för villkorsåtgärd eller åtgärd om regeln innehåller en åtgärd för ett villkor.
-* Om en regel söker efter ett villkor och utför en åtgärd omedelbart när ett värde anges i ett fält eller när ett fält avslutas, rekommenderar vi att du skriver en regel med en villkorsstyrd åtgärd eller med regeltypen När i fältet som villkoret utvärderas i.
+* Om en regel söker efter ett villkor och utför en åtgärd omedelbart när ett värde anges i ett fält eller när ett fält avslutas, rekommenderar vi att du skriver en regel med villkorsstyrd åtgärd eller med regeltypen När i fältet som villkoret utvärderas i.
 * Villkoret i regeln När utvärderas när en användare ändrar värdet på objektet som regeln När används på. Om du vill att åtgärden ska utlösas när värdet ändras på serversidan, som vid förifyllning av värdet, rekommenderar vi att du skriver en When-regel som utlöser åtgärden när fältet initieras.
 * När du skriver regler för nedrullningsbara listor, alternativknappar eller kryssruteobjekt fylls alternativen eller värdena för dessa formulärobjekt i förväg i regelredigeraren.
 
@@ -137,11 +137,11 @@ När du skriver en When-regel kan du utlösa åtgärden Clear Value Of. Med åtg
 
 Utöver formulärdatamodelltjänsten kan du ange en direkt WSDL-URL för att anropa en webbtjänst. En datamodelltjänst för formulär har dock många fördelar och det rekommenderade sättet att anropa en tjänst.
 
-Mer information om hur du konfigurerar tjänster i formulärdatamodellen finns i [AEM Forms Data Integration](/help/forms/using/data-integration.md).
+Mer information om hur du konfigurerar tjänster i formulärdatamodellen finns i [AEM Forms-dataintegrering](/help/forms/using/data-integration.md).
 
 **Ange värdet för** Computes och ställer in värdet för det angivna objektet. Du kan ställa in objektvärdet på en sträng, värdet för ett annat objekt, det beräknade värdet med hjälp av matematiska uttryck eller funktioner, värdet för ett objekts egenskap eller utdatavärdet från en konfigurerad datamodelltjänst för formulär. När du väljer webbtjänstalternativet visas alla tjänster som är konfigurerade i alla formulärdatamodeller på din AEM. När du väljer en datamodelltjänst för ett formulär visas ytterligare fält där du kan mappa formulärobjekt med in- och utdataparametrar för den angivna tjänsten.
 
-Mer information om hur du konfigurerar tjänster i formulärdatamodellen finns i [AEM Forms Data Integration](/help/forms/using/data-integration.md).
+Mer information om hur du konfigurerar tjänster i formulärdatamodellen finns i [AEM Forms-dataintegrering](/help/forms/using/data-integration.md).
 
 Med regeltypen **Ange egenskap** kan du ange värdet för en egenskap för det angivna objektet baserat på en villkorsåtgärd.
 
@@ -269,7 +269,7 @@ En vanlig Aktivera-regel är strukturerad på följande sätt:
 
 Ungefär som med regeltypen Aktivera kan du med **regeltypen Inaktivera** aktivera eller inaktivera ett formulärobjekt baserat på om ett villkor är uppfyllt eller inte. Regeltypen Inaktivera utlöser också åtgärden Aktivera om villkoret inte uppfylls eller returneras `False`.
 
-En vanlig inaktiveringsregel är strukturerad enligt följande:
+En vanlig inaktiveringsregel är strukturerad på följande sätt:
 
 
 
@@ -334,11 +334,10 @@ Så här startar du användargränssnittet för regelredigeraren:
    Alla befintliga regler för de markerade formulärobjekten visas i den här vyn. Mer information om hur du hanterar befintliga regler finns i [Hantera regler](../../forms/using/rule-editor.md#p-manage-rules-p).
 
 1. Tryck för **[!UICONTROL Create]** att skriva en ny regel. Den visuella redigeraren för regelredigerarens användargränssnitt öppnas som standard när du startar regelredigeraren första gången.
-[ ![Regelredigerarens användargränssnitt](assets/rule-editor-ui.png)
 
-   Klicka för att visa förstorad bild
+   ![Regelredigeringsgränssnitt](assets/rule-editor-ui.png)
 
-   ](assets/rule-editor-ui-1.png)Vi tittar närmare på varje komponent i regelredigeringsgränssnittet.
+Vi tittar närmare på varje komponent i regelredigeringsgränssnittet.
 
 ### S. Visning av komponentregel {#a-component-rule-display}
 
@@ -376,7 +375,7 @@ Mer information om hur du använder den visuella regelredigeraren finns i [Skriv
 
 Användare i gruppen för formuläranvändare har åtkomst till kodredigeraren. Kodredigeraren är inte tillgänglig för andra användare. Om du har behörighet kan du växla från visuellt redigeringsläge till kodredigeringsläge för regelredigeraren, och vice versa, med väljaren precis ovanför regelredigeraren. När du startar regelredigeraren första gången öppnas den i det visuella redigeringsläget. Du kan skriva regler i det visuella redigeringsläget eller växla till kodredigeringsläget för att skriva ett regelskript. Observera dock att om du ändrar en regel eller skriver en regel i kodredigeraren kan du inte växla tillbaka till den visuella redigeraren för den regeln om du inte rensar kodredigeraren.
 
-AEM Forms spårar det regelredigeringsläge som du använde senast för att skriva en regel. När du startar regelredigeraren nästa gång öppnas den i det läget. Du kan dock konfigurera ett standardläge så att regelredigeraren öppnas i det angivna läget. Så här gör du:
+AEM Forms spårar det regelredigeringsläge som du använde när du skrev en regel sist. När du startar regelredigeraren nästa gång öppnas den i det läget. Du kan dock konfigurera ett standardläge så att regelredigeraren öppnas i det angivna läget. Så här gör du:
 
 1. Gå till AEM webbkonsol på `https://[host]:[port]/system/console/configMgr`.
 1. Klicka för att redigera **[!UICONTROL Adaptive Form Configuration Service]**.
@@ -529,7 +528,7 @@ Kodredigeraren JavaScript är uttrycksspråket i adaptiva formulär. Alla uttryc
 
 Mer information om riktlinjer för att skriva regler i kodredigeraren finns i [Adaptiva formuläruttryck](/help/forms/using/adaptive-form-expressions.md).
 
-När du skriver JavaScript-kod i regelredigeraren kan du använda följande visuella tips för att få hjälp med strukturen och syntaxen:
+När du skriver JavaScript-kod i regelredigeraren kan du använda följande visuella tecken för att utforma strukturen och syntaxen:
 
 * Syntaxhögdagrar
 * Automatiskt indrag
