@@ -3,9 +3,9 @@ title: Redigera eller lägga till metadata
 description: Lär dig mer om metadata för resurser [!DNL Adobe Experience Manager Assets] på olika sätt där du kan redigera metadata för resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 4748eed3ce484e8446b641ccbc7b5d76cb66f428
+source-git-commit: fc14ccc834c9a41b67eb8cf17dd8b34f5dff2406
 workflow-type: tm+mt
-source-wordcount: '424'
+source-wordcount: '461'
 ht-degree: 1%
 
 ---
@@ -39,9 +39,9 @@ Så här redigerar du metadata:
    >
    >Om ett textfält är tomt finns det ingen befintlig metadatauppsättning. Du kan ange ett värde i fältet och spara det för att lägga till metadataegenskapen.
 
-Alla ändringar av metadata för en resurs skrivs tillbaka till den ursprungliga binärfilen som en del av dess XMP-data. Metadataåterskrivningsarbetsflödet lägger till metadata i den ursprungliga binärfilen. Ändringar som görs i befintliga egenskaper (till exempel `dc:title`) skrivs över och nya egenskaper (inklusive anpassade egenskaper som `cq:tags`) läggs till i schemat.
+Alla ändringar av metadata för en resurs skrivs tillbaka till den ursprungliga binärfilen som en del av dess XMP data. Metadataåterskrivningsarbetsflödet lägger till metadata i den ursprungliga binärfilen. Ändringar som görs i befintliga egenskaper (till exempel `dc:title`) skrivs över och nya egenskaper (inklusive anpassade egenskaper som `cq:tags`) läggs till i schemat.
 
-XMP-återskrivning stöds och är aktiverat för de plattformar och filformat som beskrivs i de [tekniska kraven.](/help/sites-deploying/technical-requirements.md)
+XMP stöds och är aktiverat för de plattformar och filformat som beskrivs i de [tekniska kraven.](/help/sites-deploying/technical-requirements.md)
 
 ## Redigera metadatamatchema {#editing-metadata-schema}
 
@@ -55,6 +55,10 @@ Du kan lägga till egna namnutrymmen i [!DNL Experience Manager]. Precis som det
 1. Du öppnar sidan för namnutrymmesadministration genom att klicka på **[!UICONTROL Namespaces]** överst på sidan.
 1. Om du vill lägga till ett namnutrymme klickar du **[!UICONTROL New]** längst ned på sidan.
 1. Ange ett anpassat namnutrymme i XML-namnutrymmeskonventionen. Ange ID:t i form av en URI och ett associerat prefix för ID:t. Klicka på **[!UICONTROL Save]**.
+
+## Tips och begränsningar {#best-practices-limitations}
+
+* Metadatauppdateringarna via Touch-UI ändrar metadataegenskaperna i `dc` namnutrymmet. Alla uppdateringar som görs via HTTP API ändrar metadataegenskaperna i `jcr` namnutrymmet. Se [hur du uppdaterar metadata med HTTP API](/help/assets/mac-api-assets.md#update-asset-metadata).
 
 >[!MORELIKETHIS]
 >
