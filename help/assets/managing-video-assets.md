@@ -3,7 +3,7 @@ title: Hantera videomaterial i [!DNL Adobe Experience Manager].
 description: Överför, förhandsgranska, kommentera och publicera videomaterial i [!DNL Adobe Experience Manager].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9e67e252348f471c052f6c3e88aea61d7a309241
+source-git-commit: 268689d534f8bf649335269f9169455c381f9554
 workflow-type: tm+mt
 source-wordcount: '732'
 ht-degree: 8%
@@ -51,8 +51,8 @@ Utför följande steg i `/apps` katalogen för att konfigurera en större filsto
 
    ![Överläggsnod](assets/overlay-node-path.png)
 
-1. Uppdatera webbläsaren. Överläggsnoden `/jcr_root/apps/dam/gui/content/assets/jcr:content/actions/secondary/create/items/fileupload` är markerad.
-1. Ange ett värde i byte på fliken **[!UICONTROL Properties]** för att öka storleksgränsen till önskad storlek. Om du till exempel vill öka storleksgränsen till 30 GB anger du `{sizeLimit : "32212254720"}` ett värde.
+1. Uppdatera webbläsaren. Överläggsnoden `/apps/dam/gui/content/assets/jcr:content/actions/secondary/create/items/fileupload` är markerad.
+1. Ange ett värde i byte på fliken **[!UICONTROL Properties]** för att öka storleksgränsen till önskad storlek. Om du till exempel vill öka storleksgränsen till 30 GB anger du `32212254720` ett värde.
 
 1. Klicka på **[!UICONTROL Save All]** i verktygsfältet.
 1. Klicka [!DNL Experience Manager]på **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
