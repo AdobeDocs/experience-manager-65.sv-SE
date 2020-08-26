@@ -3,9 +3,9 @@ title: Hantera videomaterial i [!DNL Adobe Experience Manager].
 description: Överför, förhandsgranska, kommentera och publicera videomaterial i [!DNL Adobe Experience Manager].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 268689d534f8bf649335269f9169455c381f9554
+source-git-commit: 93b8fccc2a0c4663104150fdba3651ff5e4f6bbc
 workflow-type: tm+mt
-source-wordcount: '732'
+source-wordcount: '728'
 ht-degree: 8%
 
 ---
@@ -15,14 +15,14 @@ ht-degree: 8%
 
 Videoformatet är en viktig del av ett företags digitala resurser. [!DNL Adobe Experience Manager] erbjuder mogna erbjudanden och funktioner för att hantera hela livscykeln för videomaterialet när de har skapats.
 
-Lär dig hur du hanterar och redigerar videoresurserna i [!DNL Adobe Experience Manager Assets]. Om du har licens att använda [!DNL Dynamic Media]läser du dokumentationen [till videon](/help/assets/video.md)Dynamic Media.
+Lär dig hur du hanterar och redigerar videoresurserna i [!DNL Adobe Experience Manager Assets]. Videokodning och transkodning, till exempel FFmpeg-transkodning, är möjlig genom [!DNL Dynamic Media] integrering.
 
 ## Överföra och förhandsgranska videomaterial {#upload-and-preview-video-assets}
 
 [!DNL Adobe Experience Manager Assets] skapar förhandsvisningar för videoresurser med filnamnstillägget MP4. Om resursens format inte är MP4 installerar du FFmpeg-paketet för att generera en förhandsvisning. FFmpeg skapar videoåtergivningar av typen OGG och MP4. Du kan förhandsgranska återgivningarna i [!DNL Assets] användargränssnittet.
 
 1. Navigera till den plats där du vill lägga till digitala resurser i mappen eller undermapparna för digitala resurser.
-1. Om du vill överföra resursen klickar du **[!UICONTROL Create]** i verktygsfältet och väljer sedan **[!UICONTROL Files]**. Du kan också släppa det direkt i resursområdet. Mer information om överföring finns i [Överför resurser](managing-assets-touch-ui.md#uploading-assets) .
+1. Om du vill överföra resursen klickar du **[!UICONTROL Create]** i verktygsfältet och väljer **[!UICONTROL Files]**. Du kan också dra en fil till användargränssnittet. Mer information finns i [Överför resurser](managing-assets-touch-ui.md#uploading-assets) .
 1. Om du vill förhandsgranska en video i kortvyn klickar du på alternativet **[!UICONTROL Play]** för ![](assets/do-not-localize/play.png) uppspelning i videoresursen. Du kan bara pausa eller spela upp video i kortvyn. Alternativen [!UICONTROL Play] och [!UICONTROL Pause] är inte tillgängliga i listvyn.
 
 1. Om du vill förhandsgranska videon på sidan med resursinformation klickar du **[!UICONTROL Edit]** på kortet. Videon spelas upp i webbläsarens inbyggda videospelare. Du kan spela upp, pausa, styra volymen och zooma videon till helskärm.
@@ -71,13 +71,11 @@ Efter publiceringen kan du inkludera videomaterialet på en webbsida som en URL 
 
 ## Kommentera videomaterial {#annotate-video-assets}
 
-1. I [!DNL Assets] konsolen klickar du [!UICONTROL Edit] på resurskortet för att visa sidan med resursinformation.
-1. Om du vill spela upp videon klickar du på [!UICONTROL Preview].
-1. Klicka på **[!UICONTROL Annotate]** knappen om du vill kommentera videon. En anteckning läggs till vid en viss tidpunkt (bildruta) i videon. När du gör anteckningar kan du rita på arbetsytan och ta med en kommentar med ritningen. Kommentarerna sparas automatiskt.
+1. I [!DNL Assets] konsolen väljer du **[!UICONTROL Edit]** på resurskortet för att visa sidan med resursinformation.
+1. Om du vill spela upp videon klickar du på **[!UICONTROL Preview]**.
+1. Om du vill kommentera videon klickar du på **[!UICONTROL Annotate]**. En anteckning läggs till vid en viss tidpunkt (bildruta) i videon. När du gör anteckningar kan du rita på arbetsytan och ta med en kommentar med ritningen. Kommentarerna sparas automatiskt. Om du vill avsluta anteckningsguiden klickar du på **[!UICONTROL Close]**.
 
    ![Rita och kommentera i en videobildruta](assets/annotate-video.png)
-
-   Om du vill avsluta anteckningsguiden klickar du på **[!UICONTROL Close]**.
 
 1. Gå till en viss punkt i videon, ange tiden i sekunder i **textfältet** och klicka på **Hoppa**. Om du till exempel vill hoppa över de första 20 sekunderna av videon anger du 20 i textfältet.
 
@@ -91,4 +89,5 @@ Efter publiceringen kan du inkludera videomaterialet på en webbsida som en URL 
 >
 >* [Hantera digitala resurser i Experience Manager Assets](/help/assets/managing-assets-touch-ui.md)
 >* [Hantera samlingar i Experience Manager Assets](/help/assets/managing-collections-touch-ui.md)
+>* [Videodokumentation](/help/assets/video.md)för Dynamic Media.
 
