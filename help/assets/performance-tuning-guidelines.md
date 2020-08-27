@@ -4,9 +4,9 @@ description: Förslag och vägledning [!DNL Experience Manager] om konfiguration
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 2c8220aab9215efba2e4568961a2a6a544803920
+source-git-commit: 5a421c66930d8c7a9eb633c707b4b51d4549b303
 workflow-type: tm+mt
-source-wordcount: '2682'
+source-wordcount: '2680'
 ht-degree: 0%
 
 ---
@@ -152,7 +152,7 @@ Om du till exempel har kört flera icke-tillfälliga arbetsflöden (som skapar a
 
 ### Maximalt antal parallella jobb {#maximum-parallel-jobs}
 
-Som standard [!DNL Experience Manager] körs ett maximalt antal parallella jobb som är lika med antalet processorer på servern. Problemet med den här inställningen är att under perioder med hög belastning så upptar alla processorer [!UICONTROL DAM Update Asset] arbetsflöden, vilket gör att användargränssnittet tar längre tid och förhindrar att [!DNLEExperience Manager] kör andra processer som skyddar serverns prestanda och stabilitet. Det är en god vana att ange det här värdet till hälften av de processorer som är tillgängliga på servern genom att utföra följande steg:
+Som standard [!DNL Experience Manager] körs ett maximalt antal parallella jobb som är lika med antalet processorer på servern. Problemet med den här inställningen är att under perioder med hög belastning så hanteras alla processorer av [!UICONTROL DAM Update Asset] arbetsflöden, vilket gör att användargränssnittet tar längre tid och förhindrar [!DNL Experience Manager] att andra processer som skyddar serverns prestanda och stabilitet körs. Det är en god vana att ange det här värdet till hälften av de processorer som är tillgängliga på servern genom att utföra följande steg:
 
 1. Gå till [!DNL Experience Manager] Author `https://[aem_server]:[port]/system/console/slingevent`.
 
