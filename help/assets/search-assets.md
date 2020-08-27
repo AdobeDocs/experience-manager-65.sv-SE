@@ -4,7 +4,7 @@ description: Lär dig hur du söker efter nödvändiga resurser [!DNL Adobe Expe
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 4efe5247d91fa846c4a444c81245b0fa1515a7b4
+source-git-commit: 5bbdc80f199a2af38631a5443c46daae827abb52
 workflow-type: tm+mt
 source-wordcount: '5807'
 ht-degree: 4%
@@ -403,7 +403,7 @@ Du kan göra följande med de resurser du har sökt i Experience Manager:
 
 ### Sortera sökresultat {#sort}
 
-Sortera sökresultaten för att hitta de resurser som behövs snabbare. Du kan sortera sökresultaten i listvyn och endast när du väljer **[!UICONTROL [Files]](#searchui)** från **[!UICONTROL Filters]** panelen. [!DNL Experience Manager Assets]I används serversortering för att snabbt sortera alla resurser (oavsett hur många) i en mapp eller i resultatet av en sökfråga. Sortering på serversidan ger snabbare och exaktare resultat än sortering på klientsidan.
+Sortera sökresultaten för att hitta de resurser som behövs snabbare. Du kan sortera sökresultaten i listvyn och endast när du väljer **[[!UICONTROL Files]](#searchui)** från **[!UICONTROL Filters]** panelen. [!DNL Experience Manager Assets]I används serversortering för att snabbt sortera alla resurser (oavsett hur många) i en mapp eller i resultatet av en sökfråga. Sortering på serversidan ger snabbare och exaktare resultat än sortering på klientsidan.
 
 I listvyn kan du sortera sökresultaten på samma sätt som du kan sortera resurser i valfri mapp. Sortering fungerar för de här kolumnerna - Namn, Titel, Status, Dimensioner, Storlek, Klassificering, Användning, Skapat (Datum), Ändrat (Datum), Publicerat (Datum), Arbetsflöde och Utcheckat.
 
