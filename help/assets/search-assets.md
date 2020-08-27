@@ -4,9 +4,9 @@ description: Lär dig hur du söker efter nödvändiga resurser [!DNL Adobe Expe
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 8bdb019855edd08ef3d8ef58e627c91a092bc29f
+source-git-commit: 4efe5247d91fa846c4a444c81245b0fa1515a7b4
 workflow-type: tm+mt
-source-wordcount: '5809'
+source-wordcount: '5807'
 ht-degree: 4%
 
 ---
@@ -75,7 +75,7 @@ Ibland kan du se oväntade resurser i sökresultaten. Mer information finns i [o
 
 ### Resultat med och utan förbättrade smarta taggar {#withsmarttags}
 
-Som standard kombineras söktermerna med en AND-sats i sökningen [!DNL Experience Manager] . Du kan till exempel söka efter nyckelordskvinna som springer. Som standard visas endast resurser med både kvinna och nyckelord som körs i metadata i sökresultatet. Samma beteende bevaras när specialtecken (punkter, understreck eller streck) används med nyckelorden. Följande sökfrågor returnerar samma resultat:
+Som standard kombineras söktermerna med en AND-sats i sökningen [!DNL Experience Manager] . Du kan till exempel söka efter nyckelordskvinna som springer. Som standard visas endast resurser med både kvinna och nyckelord som körs i metadata i sökresultatet. Samma beteende behålls när specialtecken (punkter, understreck eller streck) används med nyckelorden. Följande sökfrågor returnerar samma resultat:
 
 * `woman running`
 * `woman.running`
@@ -403,7 +403,7 @@ Du kan göra följande med de resurser du har sökt i Experience Manager:
 
 ### Sortera sökresultat {#sort}
 
-Sortera sökresultaten för att hitta de resurser som behövs snabbare. You can sort the search results in list view and only when you select **[!UICONTROL[Files](#searchui)]** from the **[!UICONTROL Filters]** panel. [!DNL Experience Manager Assets]I används serversortering för att snabbt sortera alla resurser (oavsett hur många) i en mapp eller i resultatet av en sökfråga. Sortering på serversidan ger snabbare och exaktare resultat än sortering på klientsidan.
+Sortera sökresultaten för att hitta de resurser som behövs snabbare. Du kan sortera sökresultaten i listvyn och endast när du väljer **[!UICONTROL [Files]](#searchui)** från **[!UICONTROL Filters]** panelen. [!DNL Experience Manager Assets]I används serversortering för att snabbt sortera alla resurser (oavsett hur många) i en mapp eller i resultatet av en sökfråga. Sortering på serversidan ger snabbare och exaktare resultat än sortering på klientsidan.
 
 I listvyn kan du sortera sökresultaten på samma sätt som du kan sortera resurser i valfri mapp. Sortering fungerar för de här kolumnerna - Namn, Titel, Status, Dimensioner, Storlek, Klassificering, Användning, Skapat (Datum), Ändrat (Datum), Publicerat (Datum), Arbetsflöde och Utcheckat.
 
