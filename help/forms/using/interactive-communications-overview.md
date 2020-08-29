@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: introduction
 discoiquuid: 67b03098-c58d-4a57-90e0-e4ddd78e5d99
 translation-type: tm+mt
-source-git-commit: dc7804c9985bf9a14bfad40f546e393b39615dab
+source-git-commit: af326f2d2b278fe36df05afc8c172f74c99a064c
+workflow-type: tm+mt
+source-wordcount: '505'
+ht-degree: 2%
 
 ---
 
@@ -33,11 +36,7 @@ Här följer några av de viktigaste funktionerna i Interactive Communications:
 * Agentanvändargränssnittet visar förhandsgranskning av interaktiv kommunikation i tryck och på webben
 * Dra och släpp komponenter för att snabbt skapa utskrifts- och webbkanaler
 
-## Exempel på användningsfall {#sample-use-case}
-
-I [välkomstpaketet för ett](/help/forms/using/finance-reference-site-walkthrough.md#credit-card-application-walkthrough) exempel på hur en kreditkortskund kan användas visas hur en interaktiv kommunikation fungerar.
-
-## Skapa interaktiv kommunikation {#interactive-communication-creation}
+## Skapa interaktiv kommunikation  {#interactive-communication-creation}
 
 ![interactive_communication-01](assets/interactive_communication-01.jpg)
 
@@ -72,7 +71,7 @@ Följande byggstenar krävs för att skapa en interaktiv kommunikation:
 
 ## Interaktiv kommunikation jämfört med korrespondenshantering {#interactive-communications-vs-correspondence-management}
 
-Interaktiv kommunikation är standardmetoden och rekommenderas för att skapa kundkommunikation. Om du vill fortsätta använda bokstäverna som skapats i AEM 6.3-formulär och AEM 6.2-formulär måste du [installera ett kompatibilitetspaket](/help/forms/using/compatibility-package.md). Här följer en jämförelse mellan funktionerna i Interactive Communication och letter.
+Interaktiv kommunikation är standardmetoden och rekommenderas för att skapa kundkommunikation. Om du vill fortsätta använda bokstäverna som skapas i AEM 6.3 Forms och AEM 6.2 Forms måste du [installera ett kompatibilitetspaket](/help/forms/using/compatibility-package.md). Här följer en jämförelse mellan funktionerna i Interactive Communication och letter.
 
 <table>
  <tbody>
@@ -108,12 +107,12 @@ Interaktiv kommunikation är standardmetoden och rekommenderas för att skapa ku
   <tr>
    <td>Redigering</td>
    <td>Dra-och-släpp-gränssnitt för att skapa utskrift och webbkanal</td>
-   <td>Ingen dra och släpp-mekanism </td>
+   <td>Ingen dra och släpp-funktion </td>
   </tr>
   <tr>
    <td>Diagram</td>
    <td>Diagram som kan användas både i tryck och i webbkanaler</td>
-   <td> Stöds inte</td>
+   <td>Stöds inte</td>
   </tr>
   <tr>
    <td>Teman</td>
@@ -122,12 +121,12 @@ Interaktiv kommunikation är standardmetoden och rekommenderas för att skapa ku
   </tr>
   <tr>
    <td>Granskning och versionshantering</td>
-   <td> Stöds inte</td>
+   <td>Stöds inte</td>
    <td>Stöds</td>
   </tr>
   <tr>
    <td>Utkast och hantering av instans</td>
-   <td> Stöds inte</td>
+   <td>Stöds inte</td>
    <td>Stöds</td>
   </tr>
   <tr>
@@ -137,12 +136,12 @@ Interaktiv kommunikation är standardmetoden och rekommenderas för att skapa ku
   </tr>
   <tr>
    <td>Agentsignatur</td>
-   <td> Stöds inte</td>
+   <td>Stöds inte</td>
    <td>Stöds</td>
   </tr>
   <tr>
    <td>Fjärrfunktioner</td>
-   <td> Stöds inte</td>
+   <td>Stöds inte</td>
    <td>Stöds</td>
   </tr>
  </tbody>
