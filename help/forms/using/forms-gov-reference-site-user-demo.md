@@ -1,26 +1,26 @@
 ---
-title: Genomgång av vår Gov-referenswebbplats
-seo-title: Genomgång av vår Gov-referenswebbplats
-description: Använd fiktiva användare och grupper för att utföra AEM Forms-uppgifter med hjälp av demopaketet We.Gov.
-seo-description: Använd fiktiva användare och grupper för att utföra AEM Forms-uppgifter med hjälp av demopaketet We.Gov.
+title: Genomgång av referenswebbplatser för Web.Gov och We.Finance
+seo-title: Genomgång av referenswebbplatser för Web.Gov och We.Finance
+description: Använd fiktiva användare och grupper för att utföra AEM Forms-uppgifter med demopaketet We.Gov och We.Finance.
+seo-description: Använd fiktiva användare och grupper för att utföra AEM Forms-uppgifter med demopaketet We.Gov och We.Finance.
 uuid: 797e301a-36ed-4bae-9ea8-ee77285c786d
 contentOwner: anujkapo
 discoiquuid: ddb3778b-be06-4cde-bc6e-0994efa42b18
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d1da42d7274e9a4257b9e8effae2b754e0104aa4
+source-git-commit: c6b8e184042394d99ceb099c918b81e2cce49497
 workflow-type: tm+mt
-source-wordcount: '2536'
+source-wordcount: '2548'
 ht-degree: 0%
 
 ---
 
 
-# Genomgång av vår Gov-referenswebbplats {#we-gov-reference-site-walkthrough}
+# Genomgång av referenswebbplatser för Web.Gov och We.Finance {#we-gov-reference-site-walkthrough}
 
 ## Krav {#pre-requisites}
 
-Konfigurera referenswebbplatsen enligt beskrivningen i [Konfigurera och konfigurera referenswebbplatsen](../../forms/using/forms-install-configure-gov-reference-site.md)Web.Gov.
+Konfigurera referenswebbplatsen enligt beskrivningen i [Konfigurera och konfigurera referenswebbplatsen](../../forms/using/forms-install-configure-gov-reference-site.md)Web.Gov och We.Finance.
 
 ## Användarberättelse {#user-story}
 
@@ -181,7 +181,7 @@ Camila kontrollerar också att det skapade innehållet är korrekt och fullt til
    1. **Användare**: aya.tan
    1. **Lösenord**: lösenord
 
-1. Ändra storlek på webbläsarfönstret eller använd webbläsarens emulator för att replikera en mobilenhetsstorlek.
+1. Ändra storlek på webbläsarfönstret eller använd webbläsarens emulator för att replikera en mobilstorlek.
 
 ### Webbplats för Web.Gov (Aya) {#aya-user-story-we-gov-website}
 
@@ -206,7 +206,7 @@ Svar på några frågor som bekräftar hennes behörighet genom att fylla i ett 
 
    ![Länken Använd nu](/help/forms/using/assets/apply_now_link.png)
 
-### Adaptiv form (AYA) {#aya-user-story-we-gov-adaptive-form}
+### Adaptiv form för Web.GOV (AYA) {#aya-user-story-we-gov-adaptive-form}
 
 Aya får reda på att hon är berättigad och börjar fylla i sin ansökan för att få service på sin mobila enhet.
 
@@ -366,7 +366,7 @@ George godkänner Ayas ansökan, och tack vare ett befintligt automatiserat arbe
       1. **Lösenord**: lösenord
    1. Eller personifiera:
 
-      1. Skriv&quot;**Camila**&quot; i fältet&quot;**Impersonate as**&quot;.
+      1. Skriv &quot;**Camila**&quot; i fältet &quot;**Impersonate as**&quot;.
 
       1. Klicka OK för att personifiera.
 
