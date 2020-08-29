@@ -1,5 +1,5 @@
 ---
-title: Konfigurera referenswebbplatsen för Web.Gov
+title: Konfigurera referenswebbplatsen för Web.Gov och We.Finance
 seo-title: Konfigurera referenswebbplatsen för Web.Gov
 description: Installera, konfigurera och anpassa ett AEM Forms-demopaket.
 seo-description: Installera, konfigurera och anpassa ett AEM Forms-demopaket.
@@ -8,15 +8,15 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4c42e5e5274c41469824f12b228698a77bf5d4a6
+source-git-commit: c6b8e184042394d99ceb099c918b81e2cce49497
 workflow-type: tm+mt
-source-wordcount: '4723'
+source-wordcount: '4727'
 ht-degree: 1%
 
 ---
 
 
-# Konfigurera referenswebbplatsen för Web.Gov {#set-up-and-configure-we-gov-reference-site}
+# Konfigurera referenswebbplatsen för Web.Gov och We.Finance {#set-up-and-configure-we-gov-reference-site}
 
 ## Information om demopaket {#demo-package-details}
 
@@ -34,7 +34,7 @@ Paketet innehåller en molnkonfiguration som stöder följande plattformsversion
 
 | MOLNLEVERANTÖR | SERVICEVERSION | STATUS |
 |---|---|---|
-| Adobe Sign | v5 API | **Stöds** |
+| o | v5 API | **Stöds** |
 | Microsoft Dynamics 365 | 1710 (9.1.0.3020) | **Stöds** |
 | Adobe Analytics | v1.4 Rest API | **Stöds** |
 **Paketinstallationshänsyn:**
@@ -92,7 +92,7 @@ Det här avsnittet innehåller information om hur du installerar demopaketet.
 1. Öppna [Pakethanteraren](https://docs.adobe.com/content/help/en/experience-manager-65/administering/contentmanagement/package-manager.html) och klicka **[!UICONTROL Upload Package]** för att överföra paketet.
 1. Markera paketet och klicka på **[!UICONTROL Install]**.
 
-   ![web gov-formulärpaket](assets/wegov_forms_package.jpg)
+   ![webbforum](assets/wegov_forms_package.jpg)
 
 1. Tillåt att installationsprocessen slutförs.
 1. Gå till *https://&lt;aemserver>:&lt;port>/content/we-gov/home.html?wcmmode=disabled* för att kontrollera att installationen lyckades.
@@ -776,7 +776,7 @@ Med Package Manager kan man komma åt Ultramarine-temat i AEM Forms genom att g�
 Användare kan konfigurera olika alternativ för arbetsflödestjänster, som omfattar följande:
 
 1. Microsoft Dynamics-post
-1. Adobe Sign
+1. o
 1. AEM anpassad kommunikationshantering
 1. Adobe Analytics
 
@@ -791,7 +791,7 @@ För att kunna konfigurera dem så att de aktiveras i arbetsflödet måste anvä
 >[!NOTE]
 Bara för att en användare aktiverar tjänsten på Configuration Manager-sidan måste användaren ändå konfigurera en tjänstkonfiguration för att kunna kommunicera med de externa tjänster som efterfrågas.
 
-![web gov-formulärpaket](assets/aftia-configuration-options.jpg)
+![webbforum](assets/aftia-configuration-options.jpg)
 
 1. Klicka på knappen Spara när du är klar för att spara inställningarna.
 
