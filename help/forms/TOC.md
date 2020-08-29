@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: AEM 6.5 Forms Användarhandbok
 user-guide-description: Create, manage, publish, and update digital forms.
 translation-type: tm+mt
-source-git-commit: a1ada0e747f46923dc834c872e522e648adae073
+source-git-commit: c6b8e184042394d99ceb099c918b81e2cce49497
 workflow-type: tm+mt
-source-wordcount: '3719'
+source-wordcount: '3704'
 ht-degree: 0%
 
 ---
@@ -42,11 +42,8 @@ ht-degree: 0%
       + [Självstudiekurs: Skapa mallar](using/create-templates-print-web.md)
       + [Självstudiekurs: Skapa interaktiv kommunikation](using/create-interactive-communication0.md)
    + AEM Forms Reference Collaterals {#aem-forms-reference-collaterals}
-      + [Konfigurera referensplatser för Web.Finance och Employee Self Service](using/setup-reference-sites.md)
-      + [Konfigurera referenswebbplatsen för Web.Gov](/help/forms/using/forms-install-configure-gov-reference-site.md)
-      + [Genomgång av referenswebbplatser för ekonomi](using/finance-reference-site-walkthrough.md)
-      + [Genomgång av vår Gov-referenswebbplats](/help/forms/using/forms-gov-reference-site-user-demo.md)
-      + [Genomgång av referenswebbplatser för självbetjäning för medarbetare](/help/forms/using/employee-self-service-reference-site.md)
+      + [Konfigurera referenswebbplatsen för Web.Gov och We.Finance](/help/forms/using/forms-install-configure-gov-reference-site.md)
+      + [Genomgång av referenswebbplatser för Web.Gov och We.Finance](/help/forms/using/forms-gov-reference-site-user-demo.md)
       + [Genomgång av referenswebbplats för rekrytering av medarbetare](/help/forms/using/employee-recruitment-reference-site.md)
       + [Referensplats för förnyelse av automatisk försäkring](/help/forms/using/finance-auto-insurance-renewal-reference-site-walkthrough.md)
       + [Vi.Gov:s referenswebbplats FOIA genomgång](/help/forms/using/gov-reference-site-foia-walkthrough.md)
@@ -213,7 +210,7 @@ ht-degree: 0%
    + [Interaktion med ryggraden](using/backbone-interaction.md)
    + [Beskrivning av återanvändbara komponenter](using/description-reusable-components.md)
    + [Dokumentinformation för återgivning](using/document-details-renderer.md)
-   + [Integrera AEM Forms arbetsytekomponenter i webbprogram](using/integrating-html-ws-components-web.md)
+   + [Integrera AEM Forms-arbetsytekomponenter i webbprogram](using/integrating-html-ws-components-web.md)
    + [Ny renderings- och skicka-tjänst](using/new-render-submit-service.md)
    + [Mappstrukturen](using/folder-structure.md)
    + [Integrera tredjepartsprogram i AEM Forms arbetsyta](using/integrating-correspondence-management-html-workspace.md)
