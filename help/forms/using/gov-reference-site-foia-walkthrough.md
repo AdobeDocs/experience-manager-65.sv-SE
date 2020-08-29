@@ -1,23 +1,22 @@
 ---
 title: Vi.Gov:s referenswebbplats FOIA genomgång
 seo-title: Vi.Gov:s referenswebbplats FOIA genomgång
-description: Se genomgången av webbsidor för webbpublicering för webben för webben för webben för att förstå hur AEM Forms hjälper myndigheter att ta emot och skicka ut information som efterfrågats av privatpersoner enligt lagen om informationsfrihet.
-seo-description: Se genomgången av webbsidor för webbpublicering för webben för webben för webben för att förstå hur AEM Forms hjälper myndigheter att ta emot och skicka ut information som efterfrågats av privatpersoner enligt lagen om informationsfrihet.
+description: Se genomgången av webbsajten We.GOV för att förstå hur AEM Forms hjälper myndigheter att ta emot och skicka ut information som efterfrågats av enskilda personer enligt lagen om informationsfrihet.
+seo-description: Se genomgången av webbsajten We.GOV för att förstå hur AEM Forms hjälper myndigheter att ta emot och skicka ut information som efterfrågats av enskilda personer enligt lagen om informationsfrihet.
 uuid: 65d4233c-8dad-4e5e-8e39-22eb4f145adc
 topic-tags: introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: cef8f597-7935-4d98-aacf-9981470ab620
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: af326f2d2b278fe36df05afc8c172f74c99a064c
+workflow-type: tm+mt
+source-wordcount: '865'
+ht-degree: 0%
 
 ---
 
 
 # Vi.Gov:s referenswebbplats FOIA genomgång {#we-gov-reference-site-foia-walkthrough}
-
-## Krav {#pre-requisite}
-
-Konfigurera din webbsida.Gov-referensplats enligt beskrivningen i [Konfigurera och konfigurera referenswebbplatserna](/help/forms/using/setup-reference-sites.md)för AEM-formulär.
 
 ## Scenario för lagen om informationsfrihet för webbplatser {#reference-site-freedom-of-information-act-scenario}
 
@@ -51,7 +50,7 @@ Enligt lagen om informationsfrihet begär Sarah en kopia av ärendeloggen från 
 
 Sarah klickar på **Apply** och på sidan&quot;Freedom of Information Act Request Form&quot; anger Sarah bland annat följande information:
 
-* **** Kontor: Sarah anger vilken myndighet som begäran riktar sig till som justitiedepartementet - informationskontoret.
+* **Kontor:** Sarah anger vilken myndighet som begäran riktar sig till som justitiedepartementet - informationskontoret.
 
 * **Betala**: Sarah anger att hon är villig att betala upp till 100 USD för utskrifts- och portokostnader.
 * **Beskriv begäran i detalj**: Sarah anger&quot;Requesting copy of the Administration for Children and Families case logs for Fiscal year 2013 through 2016&quot;.
@@ -76,7 +75,7 @@ När Sarah fyller i och skickar in FOIA-programmet skickas en anmälan till John
 
 ### Se det själv {#see-it-yourself-1}
 
-Du kan få åtkomst till AEM-inkorgen på https://&lt;***värdnamn***>:&lt;***PublishPort***>/content/we-finance/global/en/login.html?resource=/aem/inbox.html. Logga in på AEM-inkorgen med jjacobs/password som användarnamn/lösenord för John Jacobs och se FOIA-programmet. Information om hur du använder AEM Inbox för formulärbaserade arbetsflödesuppgifter finns i [Hantera formulärprogram och uppgifter i AEM Inbox](/help/forms/using/manage-applications-inbox.md).
+Du kommer åt AEM på https://&lt;***värdnamn***>:&lt;***PublishPort***>/content/we-finance/global/en/login.html?resource=/aem/inbox.html. Logga in på AEM inkorg med jjacobs/password som användarnamn/lösenord för John Jacobs och se FOIA-programmet. Information om hur du använder AEM Inkorg för formulärbaserade arbetsflödesuppgifter finns i [Hantera Forms-program och -uppgifter i AEM Inkorg](/help/forms/using/manage-applications-inbox.md).
 
 ![johnjacobs](assets/johnjacobs.png)
 
@@ -84,7 +83,7 @@ John Jacobs kan se, godkänna eller avvisa programmet från programkontrollpanel
 
 ![johnjacsticker-detail-1](assets/johnjacobstaskdetail-1.png)
 
-### <strong>Sarah får ett bekräftelsemeddelande via e-post</strong>{#strong-sarah-receives-an-acknowledgement-email-strong}
+### <strong>Sarah får ett bekräftelsemeddelande via e-post</strong> {#strong-sarah-receives-an-acknowledgement-email-strong}
 
 När John Jacobs har godkänt ansökan får Sarah ett e-postmeddelande med en bekräftelse från webbsidan We.Gov. Sarah informeras om de avgifter och den tid som krävs för att behandla hennes ansökan. E-postmeddelandet innehåller även e-post- och telefoninformation som kan kontaktas för uppdateringar av programmet.
 
@@ -102,7 +101,7 @@ När John Jacobs godkänner FOIA-begäran skapas en PDF-fil eller ett dokument m
 
 ### Se själv {#see-for-yourself}
 
-Du kan få åtkomst till AEM-inkorgen på https://&lt;***värdnamn***>:&lt;***PublishPort***>/content/we-finance/global/en/login.html?resource=/aem/inbox.html. Logga in på AEM-inkorgen med hjälp av grios/password som användarnamn/lösenord för Gloria Rios och se FOIS-begäran.
+Du kommer åt AEM på https://&lt;***värdnamn***>:&lt;***PublishPort***>/content/we-finance/global/en/login.html?resource=/aem/inbox.html. Logga in i AEM inkorg med hjälp av grios/password som användarnamn/lösenord för Gloria Rios och se FOIS-begäran.
 
 Gloria öppnar förfrågan och undersöker informationen i FOIA-begäran. Efter att ha granskat detaljerna i begäran och kontrollerat om det går att skicka in de begärda dokumenten, godkänner Gloria begäran.
 
