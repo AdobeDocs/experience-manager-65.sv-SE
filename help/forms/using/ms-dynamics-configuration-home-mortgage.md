@@ -8,7 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: Configuration
 discoiquuid: 6b31397a-fb06-4043-9368-59fb4fce8afa
 translation-type: tm+mt
-source-git-commit: f323b490c37effc3cbb36c793b62fa788eca9545
+source-git-commit: af326f2d2b278fe36df05afc8c172f74c99a064c
+workflow-type: tm+mt
+source-wordcount: '432'
+ht-degree: 0%
 
 ---
 
@@ -21,13 +24,11 @@ Lär dig hur du kan utnyttja Microsoft® Dynamics 365-tjänsterna med hjälp av 
 
 Microsoft® Dynamics 365 är en CRM- och ERP-programvara (Customer Relationship Management) som innehåller företagslösningar för att skapa och hantera kundkonton, kontakter, leads, möjligheter och ärenden.
 
-AEM Forms tillhandahåller en molntjänst för integrering av Dynamics 365 med [Forms Data Integration](/help/forms/using/data-integration.md) -modulen. Scenariot [Home Mortgage som genomsöks med Microsoft® Dynamics](/help/forms/using/finance-reference-site-walkthrough.md#home-mortgage-application-walkthrough-with-microsoft-dynamics) visar hur en kund använder referenswebbplatsen We.Finance för att ansöka om ett lån när webbplatsen använder Microsoft® Dynamics for Forms Data Integration. Innan du kan använda genomgången av Home Mortgage-programmet med Microsoft® Dynamics-scenariot måste du konfigurera Microsoft® Dynamics 365 så att det används med referenswebbplatsen We.Finance.
+AEM Forms tillhandahåller en molntjänst för integrering av Dynamics 365 med [Forms-modulen för dataintegrering](/help/forms/using/data-integration.md) . Innan du kan använda genomgången av Home Mortgage-programmet med Microsoft® Dynamics-scenariot måste du konfigurera Microsoft® Dynamics 365 så att det används med referenswebbplatsen We.Finance.
 
 ## Förutsättningar {#prerequisites}
 
 Innan du börjar konfigurera och konfigurera Dynamics 365 måste du se till att du har:
-
-* [Ställ in och konfigurera AEM Forms-referenswebbplatser](/help/forms/using/setup-reference-sites.md).
 
 * AEM 6.3 Forms Service Pack 1 och senare
 * Microsoft® Dynamics 365-konto
@@ -41,11 +42,11 @@ Innan du börjar konfigurera och konfigurera Dynamics 365 måste du se till att 
    `https://[server]:[port]/editor.html/content/we-finance/global/en/loan-landing-page.html`
 
 1. Bläddra nedåt till Hemmedarbetarkalkylatorn.
-1. Markera den högra kolumnens panel (räknare) och tryck för att visa snabbmenyn. Tryck på Konfigurera på snabbmenyn. Dialogrutan Redigera AEM Forms Container visas.
+1. Markera den högra kolumnens panel (räknare) och tryck för att visa snabbmenyn. Tryck på Konfigurera på snabbmenyn. Dialogrutan Redigera AEM Forms-behållare visas.
 
    ![kalkylatorconfigurepanel](assets/calculatorconfigurepanel.png)
 
-1. I dialogrutan Redigera AEM Forms Container bläddrar du till resursen och väljer home-hypotekskalkylator på följande väg och trycker sedan på **Bekräfta**:
+1. I dialogrutan Redigera AEM Forms-behållare bläddrar du till resurssökvägen och väljer home-hypotekskalkylator på följande sökväg och trycker sedan på **Bekräfta**:
 
    formsanddocuments/We.Finance/MS Dynamics/
 
