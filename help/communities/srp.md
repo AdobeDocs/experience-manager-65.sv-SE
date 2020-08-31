@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 63abeda4-6ea1-4b45-b188-f9c6b44ca0cd
 translation-type: tm+mt
-source-git-commit: 7acd89d830b9e758eec1b5a4beb18c22e4d12dcf
+source-git-commit: 9a4ae73c08657195da2741cccdb196bd7f7142c9
 workflow-type: tm+mt
 source-wordcount: '1141'
 ht-degree: 0%
@@ -45,7 +45,7 @@ Se även:
 
 För att förstå SRP är det bra att förstå vilken roll AEM (OAK) har på en AEM communitywebbplats.
 
-**Java Content Repository (JCR)** Den här standarden definierar en datamodell och ett[JCR-API](https://jackrabbit.apache.org/jcr/jcr-api.html)(Application Programming Interface) för innehållsdatabaser. Det kombinerar egenskaper i vanliga filsystem med egenskaper i relationsdatabaser och lägger till ett antal extrafunktioner som innehållsprogram ofta behöver.
+**Java Content Repository (JCR)** Den här standarden definierar en datamodell och ett[JCR-API](https://jackrabbit.apache.org/jcr/jcr-api.html)(Application Programming Interface) för innehållsdatabaser. Det kombinerar egenskaper i konventionella filsystem med egenskaper i relationsdatabaser och lägger till ett antal extrafunktioner som innehållsprogram ofta behöver.
 
 En implementering av JCR är AEM, OAK.
 
@@ -67,7 +67,7 @@ När UGC sparas i delad lagring finns det en enda instans av medlemsinnehåll so
 >
 >Se [SRP och UGC Essentials](srp-and-ugc.md) för exempelkod och ytterligare information.
 >
->Mer information om de effektivaste strategierna vid kodning finns i [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) .
+>Mer information om de effektivaste strategierna vid kodning finns i [Åtkomst av UGC med SRP](accessing-ugc-with-srp.md) .
 
 
 ### ASRP {#asrp}
