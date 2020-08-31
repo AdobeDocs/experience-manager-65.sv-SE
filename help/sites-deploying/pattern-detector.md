@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: b5607343-a13b-4520-a771-f1a555bfcc7b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 9a4ae73c08657195da2741cccdb196bd7f7142c9
+workflow-type: tm+mt
+source-wordcount: '537'
+ht-degree: 1%
 
 ---
 
@@ -20,18 +23,18 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 ## Översikt {#overview}
 
-Med den här funktionen kan du kontrollera om befintliga AEM-instanser är uppgraderingsbara genom att identifiera mönster som används:
+Med den här funktionen kan du kontrollera om befintliga AEM kan uppgraderas genom att identifiera mönster som används:
 
 1. Brott mot vissa regler och görs i områden som kommer att påverkas eller skrivas över av uppgraderingen
-1. Använd en AEM 6.x-funktion eller ett API som inte är bakåtkompatibelt med AEM 6.5 och som kan brytas efter uppgradering.
+1. Använd en AEM 6.x-funktion eller ett API som inte är bakåtkompatibelt med AEM 6.5 och som kan brytas efter uppgraderingen.
 
-Detta kan tjäna som en bedömning av den utvecklingsinsats som ingår i uppgraderingen till AEM 6.5.
+Detta kan fungera som en bedömning av den utvecklingsinsats som är nödvändig för att uppgradera till AEM 6.5.
 
 ## Konfigurera {#how-to-set-up}
 
-Mönsteravkännaren släpps separat som ett [paket](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/compatpack/pd-all-aem65) som fungerar på alla AEM-källversioner från 6.1 till 6.5 med AEM 6.5 som mål. Den kan installeras med [pakethanteraren](/help/sites-administering/package-manager.md).
+Mönsteravkännaren släpps separat som ett [paket](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/compatpack/pd-all-aem65) som fungerar med alla AEM från 6.1 till 6.5 AEM 6.5. Den kan installeras med [pakethanteraren](/help/sites-administering/package-manager.md).
 
-## Så här använder du {#how-to-use}
+## Användning {#how-to-use}
 
 >[!NOTE]
 >
@@ -43,11 +46,11 @@ Mönsteravkännaren släpps separat som ett [paket](https://www.adobeaemcloud.co
 
 >båda samtidigt rekommenderas att köra programmet **i miljöer** som är så nära produktionsmiljöer som möjligt inom områden som användarprogram, innehåll och konfigurationer.
 >
-Du kan använda flera metoder för att kontrollera utdata för Mönsteravkännare:
+Du kan använda flera metoder för att kontrollera mönsteravkännarens utdata:
 
 * **Via Felix Inventory Console:**
 
-1. Gå till AEM Web Console genom att gå till *https://serveraddress:serverport/system/console/configMgr*
+1. Gå till AEM webbkonsol via *https://serveraddress:serverport/system/console/configMgr*
 1. Välj **Status - Mönsteravkännare** enligt bilden nedan:
 
    ![screenshot-2018-2-5pattern-Dettor](assets/screenshot-2018-2-5pattern-detector.png)
@@ -216,7 +219,7 @@ Mönsteravkännaren kan för närvarande kontrollera:
 
 * OSGi-paket matchar inte export och import
 * Dela resurstyper och supertyper (med innehållsövertäckningar för sökvägar) - överanvändning
-* definitioner av ekindex (kompatibilitet)
+* definitioner av ekindexvärden (kompatibilitet)
 * VLT-paket (överanvändning)
 * rep:kompatibilitet med användarnoder (i samband med OAuth-konfiguration)
 
