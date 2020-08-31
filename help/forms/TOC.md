@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: AEM 6.5 Forms Användarhandbok
 user-guide-description: Create, manage, publish, and update digital forms.
 translation-type: tm+mt
-source-git-commit: c6b8e184042394d99ceb099c918b81e2cce49497
+source-git-commit: 0b702f58ef7dc85df43bc6d34866dbf3d1100b5e
 workflow-type: tm+mt
-source-wordcount: '3704'
+source-wordcount: '3700'
 ht-degree: 0%
 
 ---
@@ -501,7 +501,6 @@ ht-degree: 0%
       + [Konfigurera valideringsmeddelanden](/help/forms/using/admin-help/configuring-validation-messages.md)
    + Konfigurerar utdata {#configure-output}
       + [Översikt över utdatatjänsten](/help/forms/using/admin-help/overview-8.md)
-      + [Ändra teckenuppsättningen](/help/forms/using/admin-help/change-character-set.md)
       + [Ange XCI-konfigurationsalternativ](/help/forms/using/admin-help/specify-xci-configuration-options.md)
       + [Konfigurera cachning för utdata](/help/forms/using/admin-help/configuring-caching-output.md)
       + [Ange filplatser för utdata](/help/forms/using/admin-help/specify-file-locations-output.md)
