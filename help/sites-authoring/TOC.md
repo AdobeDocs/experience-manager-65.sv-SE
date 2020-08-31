@@ -2,21 +2,21 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: Användarhandbok för AEM 6.5-redigering
+user-guide-title: Användarhandbok för redigering av AEM 6.5
 user-guide-description: Learn key concepts for creating content and authoring in AEM.
 translation-type: tm+mt
-source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
+source-git-commit: 0b702f58ef7dc85df43bc6d34866dbf3d1100b5e
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '272'
 ht-degree: 41%
 
 ---
 
 
-# Användarhandbok för AEM 6.5-redigering {#authoring}
+# Användarhandbok för redigering av AEM 6.5 {#authoring}
 
 + [Översikt över användarhandboken för redigering](home.md)
-+ Viktiga uppgifter, verktyg och koncept för AEM Authoring {#essentials}
++ Viktiga uppgifter, verktyg och begrepp för AEM {#essentials}
    + [Steg 1 för författare](first-steps.md)
    + [Sidredigering](page-authoring.md)
    + [Snabbguide till framtagning av sidor](qg-page-authoring.md)
@@ -53,11 +53,10 @@ ht-degree: 41%
    + [Responsiv layout](responsive-layout.md)
    + [Content Insight](content-insights.md)
    + [Skapa tillgängligt innehåll (WCAG 2.1-överensstämmelse)](creating-accessible-content.md)
-   + [Ställning](scaffolding.md)
    + [Konfigurera komponenter i designläge](default-components-designmode.md)
    + [Foundation Components](default-components-foundation.md)
    + [Ställning](scaffolding.md)
-   + [Visa Analytics-data för sidan](page-analytics-using.md)
+   + [Visa sidanalysdata](page-analytics-using.md)
 + Projekt {#projects}
    + [Projekt](projects.md)
    + [Hantera projekt](touch-ui-managing-projects.md)
@@ -77,8 +76,8 @@ ht-degree: 41%
 + Sidprestanda {#page-performance}
    + [Content Insight](content-insights.md)
    + [Analyserar sidprestanda](ci-analyze.md)
-   + [Visa Analytics-data för sidan](pa-using.md)
-   + [Lägga till Search&amp;Promote på sidan](search-and-promote.md)
+   + [Visa sidanalysdata](pa-using.md)
+   + [Lägga till Search &amp; Promote på sidan](search-and-promote.md)
 + Personanpassning {#personalization}
    + [Personanpassning](personalization.md)
    + [Förhandsgranska sidor med ContextHub-data](ch-previewing.md)
@@ -92,6 +91,6 @@ ht-degree: 41%
 + AEM och Adobe Campaign {#aem-adobe-campaign}
    + [Arbeta med Adobe Campaign](adobe-campaign.md)
    + [Arbeta med Adobe Campaign Classic och Adobe Campaign Standard](campaign.md)
-   + [Inrikta er mot Adobe Campaign](target-adobe-campaign.md)
-   + [Skapa Adobe Campaign-formulär i AEM](adobe-campaign-forms.md)
-   + [Adobe Campaign-komponenter](adobe-campaign-components.md)
+   + [Inrikta er på Adobe Campaign](target-adobe-campaign.md)
+   + [Skapa Adobe Campaign Forms i AEM](adobe-campaign-forms.md)
+   + [Adobe Campaign Components](adobe-campaign-components.md)
