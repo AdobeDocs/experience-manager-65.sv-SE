@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: upgrading
 content-type: reference
 translation-type: tm+mt
-source-git-commit: d3a69bbbc9c3707538be74fd05f94f20a688d860
+source-git-commit: f465b6ffd1a93ddad3db0caf00d4ff797e1b189f
 workflow-type: tm+mt
 source-wordcount: '1343'
 ht-degree: 0%
@@ -18,13 +18,13 @@ ht-degree: 0%
 
 ## Introduktion {#introduction}
 
-En av de största utmaningarna när det gäller att uppgradera Adobe Experience Manager är att det inte tar längre tid att uppgradera när en uppgradering på plats utförs. Innehållsförfattare kan inte komma åt miljön under en uppgradering. Därför är det önskvärt att minimera tiden det tar att genomföra uppgraderingen. För stora databaser, särskilt AEM Assets-projekt, som vanligtvis har stora datalager och stora uppladdningar av resurser per timme, tar omindexering av ekindexeringar en betydande del av uppgraderingstiden.
+En av de största utmaningarna när det gäller att uppgradera Adobe Experience Manager är att det inte tar längre tid att uppgradera när en uppgradering på plats utförs. Innehållsförfattare kan inte komma åt miljön under en uppgradering. Därför är det önskvärt att minimera tiden det tar att genomföra uppgraderingen. För stora databaser, särskilt AEM Assets-projekt, som vanligtvis har stora datalager och stora uppladdningar av resurser per timme, tar omindexering av Oak-index en avsevärd del av uppgraderingstiden.
 
 I det här avsnittet beskrivs hur du använder Oak-run-verktyget för att indexera om databasen **innan** du utför uppgraderingen, vilket minskar tiden för driftavbrott under den faktiska uppgraderingen. Stegen som presenteras kan tillämpas på [Lucene](https://jackrabbit.apache.org/oak/docs/query/lucene.html) -index för version AEM 6.4 och senare.
 
 ## Översikt {#overview}
 
-I nya versioner av AEM införs ändringar i Oak-indexdefinitioner när funktionsuppsättningen utökas. Ändringar av ekningsindex tvingar omindexering när AEM uppgraderas. Omindexering är dyrt för resursinstallationer eftersom text i resurser (till exempel text i pdf-fil) extraheras och indexeras. Med MongoMK-databaser lagras data över nätverket vilket ökar omindexeringstiden ytterligare.
+I nya versioner av AEM införs ändringar i Oak-indexdefinitioner när funktionsuppsättningen utökas. Ändringar av Oak-index tvingar omindexering när AEM uppgraderas. Omindexering är dyrt för resursinstallationer eftersom text i resurser (till exempel text i pdf-fil) extraheras och indexeras. Med MongoMK-databaser bevaras data över nätverket vilket ytterligare ökar tiden för omindexering.
 
 Det problem som de flesta kunder står inför under en uppgradering är att tiden för driftstopp minskar. Lösningen är att **hoppa över** omindexeringsaktiviteter under uppgraderingen. Detta kan du göra genom att skapa de nya versionerna **innan** du utför uppgraderingen och sedan importera dem under uppgraderingen.
 
