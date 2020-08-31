@@ -10,7 +10,10 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 90605f41-1861-4891-a7c8-b8b5918cd5c6
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 9a4ae73c08657195da2741cccdb196bd7f7142c9
+workflow-type: tm+mt
+source-wordcount: '5029'
+ht-degree: 2%
 
 ---
 
@@ -99,7 +102,7 @@ Hämtar en butik som ett JavaScript-objekt.
 
 **Parametrar**
 
-* **** namn: Namnet som butiken registrerades med.
+* **namn:** Namnet som butiken registrerades med.
 
 **Returnerar**
 
@@ -165,15 +168,15 @@ Ett ContextHub.Utils.Persistence-objekt. Mer information om standardvärde och i
 
 Sammanfogar ett dataobjekt eller en array med lagringsdata. Varje nyckel/värde-par i objektet eller arrayen läggs till i arkivet (via `setItem` funktionen):
 
-* **** Objekt: Tangenter är egenskapsnamnen.
-* **** Array: Tangenter är matrisindex.
+* **Objekt:** Tangenter är egenskapsnamnen.
+* **Array:** Tangenter är matrisindex.
 
 Observera att värden kan vara objekt.
 
 **Parametrar**
 
-* **** träd: (Objekt eller array) De data som ska läggas till i arkivet.
-* **** alternativ: (Object) Ett valfritt objekt med alternativ som skickas till funktionen setItem. Mer information finns i `options` parametern för [setItem(key,value,options)](/help/sites-developing/contexthub-api.md#setitem-key-value-options).
+* **träd:** (Objekt eller array) De data som ska läggas till i arkivet.
+* **alternativ:** (Object) Ett valfritt objekt med alternativ som skickas till funktionen setItem. Mer information finns i `options` parametern för [setItem(key,value,options)](/help/sites-developing/contexthub-api.md#setitem-key-value-options).
 
 **Returnerar**
 
@@ -188,9 +191,9 @@ Skapar en referens från en tangent till en annan. En nyckel kan inte referera t
 
 **Parametrar**
 
-* **** nyckel: Nyckeln som refererar `anotherKey`.
+* **nyckel:** Nyckeln som refererar `anotherKey`.
 
-* **** annan nyckel: Nyckeln som refereras av `key`.
+* **annan nyckel:** Nyckeln som refereras av `key`.
 
 **Returnerar**
 
@@ -213,7 +216,7 @@ Returnerar värdet som är associerat med en nyckel.
 
 **Parametrar**
 
-* **** nyckel: (String) Nyckeln som värdet ska returneras för.
+* **nyckel:** (String) Nyckeln som värdet ska returneras för.
 
 **Returnerar**
 
@@ -225,7 +228,7 @@ Hämtar nycklarna från butiken. Du kan också hämta nycklar som används inter
 
 **Parametrar**
 
-* **** includeInternals: Värdet `true` inkluderar internt använda nycklar i resultatet. Dessa tangenter börjar med understrecket (&quot;_&quot;). Standardvärdet är `false`.
+* **includeInternals:** Värdet `true` inkluderar internt använda nycklar i resultatet. Dessa tangenter börjar med understrecket (&quot;_&quot;). Standardvärdet är `false`.
 
 **Returnerar**
 
@@ -267,8 +270,8 @@ Initierar butiken.
 
 **Parametrar**
 
-* **** namn:Butikens namn.
-* **** config: Ett objekt som innehåller konfigurationsegenskaper:
+* **namn:** Butikens namn.
+* **config:** Ett objekt som innehåller konfigurationsegenskaper:
 
    * eventDeferring: Standardvärdet är 32.
    * händelser: Objektet [ContextHub.Utils.Eventing](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing) för det här arkivet. Standardvärdet är det ContextHub.eventing-objekt som används.
@@ -293,14 +296,14 @@ Pausar händelser för arkivet så att inga händelser utlöses. Den här funkti
 
 Tar bort ett nyckel/värde-par från arkivet.
 
-När en tangent tas bort utlöser funktionen `data` händelsen. Händelsedata innehåller butiksnamnet, namnet på den nyckel som togs bort, det värde som togs bort, det nya värdet för nyckeln (null) och åtgärdstypen &quot;remove&quot;.
+När en tangent tas bort utlöser funktionen `data` händelsen. Händelsedata innehåller arkivnamnet, namnet på den nyckel som togs bort, det värde som togs bort, det nya värdet för nyckeln (null) och åtgärdstypen &quot;remove&quot;.
 
 Du kan även förhindra att `data` händelsen utlöses.
 
 **Parametrar**
 
-* **** nyckel: (String) Namnet på nyckeln som ska tas bort.
-* **** alternativ: (Objekt) Ett objekt med alternativ. Följande objektegenskaper är giltiga:
+* **nyckel:** (String) Namnet på nyckeln som ska tas bort.
+* **alternativ:** (Objekt) Ett objekt med alternativ. Följande objektegenskaper är giltiga:
 
    * tyst: Värdet `true` förhindrar att `data` händelsen utlöses. Standardvärdet är `false`.
 
@@ -317,7 +320,7 @@ Tar bort en referens från arkivet.
 
 **Parametrar**
 
-* **** nyckel: Nyckelreferensen som ska tas bort. Den här parametern motsvarar parametern `key` för `addReference` funktionen.
+* **nyckel:** Nyckelreferensen som ska tas bort. Den här parametern motsvarar parametern `key` för `addReference` funktionen.
 
 **Returnerar**
 
@@ -334,7 +337,7 @@ Initialvärden anges i egenskapen initialValues för det config-objekt som anvä
 
 **Parametrar**
 
-* **** keepRemainingData: (Boolean) Värdet true gör att icke-initiala data bevaras. Värdet false medför att alla data tas bort utom de ursprungliga värdena.
+* **keepRemainingData:** (Boolean) Värdet true gör att icke-initiala data bevaras. Värdet false medför att alla data tas bort utom de ursprungliga värdena.
 
 Återställer de ursprungliga värdena för butikens beständiga data. Du kan också ta bort alla andra data från arkivet. Händelser pausas för det här arkivet när arkivet återställs. Den här funktionen returnerar inget värde.
 
@@ -350,9 +353,9 @@ Hämtar en refererad nyckel. Du kan också ange antalet iterationer som ska anv�
 
 **Parametrar**
 
-* **** nyckel: (String) Nyckeln som referensen ska matchas för. Den här `key` parametern motsvarar `key` funktionens `addReference` parameter.
+* **nyckel:** (String) Nyckeln som referensen ska matchas för. Den här `key` parametern motsvarar `key` funktionens `addReference` parameter.
 
-* **** försök igen: (Number) Antalet iterationer som ska användas.
+* **försök igen:** (Number) Antalet iterationer som ska användas.
 
 **Returnerar**
 
@@ -372,12 +375,12 @@ Händelsedata innehåller butiksnamnet, nyckeln, det föregående värdet, det n
 
 **Parametrar**
 
-* **** nyckel: (String) Namnet på nyckeln.
-* **** alternativ: (Objekt) Ett objekt med alternativ. Följande objektegenskaper är giltiga:
+* **nyckel:** (String) Namnet på nyckeln.
+* **alternativ:** (Objekt) Ett objekt med alternativ. Följande objektegenskaper är giltiga:
 
    * tyst: Värdet `true` förhindrar att `data` händelsen utlöses. Standardvärdet är `false`.
 
-* **** värde: (Objekt) Värdet som ska associeras med nyckeln.
+* **värde:** (Objekt) Värdet som ska associeras med nyckeln.
 
 **Returnerar**
 
@@ -402,10 +405,10 @@ Konfigurerar informationen för anslutning till den JSONP-tjänst som det här o
 
 **Parametrar**
 
-* **** serviceConfig: Ett objekt som innehåller följande egenskaper:
+* **serviceConfig:** Ett objekt som innehåller följande egenskaper:
 
    * värd: (String) Servernamnet eller IP-adressen.
-   * jsonp: (Boolean) Värdet true anger att tjänsten är en JSONP-tjänst, i annat fall false. När värdet är true används {callback: &quot;ContextHub.Callbacks.*Object.name*}-objektet läggs till i service.params-objektet.
+   * jsonp: (Boolean) Värdet true anger att tjänsten är en JSONP-tjänst, i annat fall false. När true är {callback: &quot;ContextHub.Callbacks.*Object.name*}-objektet läggs till i service.params-objektet.
    * parametrar: (Objekt) URL-parametrar representeras som objektegenskaper. Parameternamn är egenskapsnamn och parametervärden är egenskapsvärden.
    * sökväg: (String) Sökvägen till tjänsten.
    * port: (Nummer) Tjänstens portnummer.
@@ -415,7 +418,7 @@ Konfigurerar informationen för anslutning till den JSONP-tjänst som det här o
       * true: https://
       * false: https://
 
-* **** åsidosätt: (Boolean). Värdet på `true` gör att den befintliga tjänstkonfigurationen ersätts av egenskaperna för `serviceConfig`. Värdet på `false` sammanfogar de befintliga tjänstkonfigurationsegenskaperna med egenskaperna för `serviceConfig`.
+* **åsidosätt:** (Boolean). Värdet på `true` gör att den befintliga tjänstkonfigurationen ersätts av egenskaperna för `serviceConfig`. Värdet på `false` sammanfogar de befintliga tjänstkonfigurationsegenskaperna med egenskaperna för `serviceConfig`.
 
 #### getRawResponse() {#getrawresponse}
 
@@ -433,13 +436,13 @@ Hämtar tjänstobjektet för det här ContextHub.Store.JSONPStore-objektet. Tjä
 
 Ett objekt med följande egenskaper:
 
-* **** värd: (String) Servernamnet eller IP-adressen.
-* **** jsonp: (Boolean) Värdet true anger att tjänsten är en JSONP-tjänst, i annat fall false. När värdet är true används {callback: &quot;ContextHub.Callbacks.*Object.name*}-objektet läggs till i service.params-objektet.
+* **värd:** (String) Servernamnet eller IP-adressen.
+* **jsonp:** (Boolean) Värdet true anger att tjänsten är en JSONP-tjänst, i annat fall false. När true är {callback: &quot;ContextHub.Callbacks.*Object.name*}-objektet läggs till i service.params-objektet.
 
-* **** parametrar: (Objekt) URL-parametrar representeras som objektegenskaper. Parameternamn är egenskapsnamn och parametervärden är egenskapsvärden.
-* **** sökväg: (String) Sökvägen till tjänsten.
-* **** port: (Nummer) Tjänstens portnummer.
-* **** säker: (Sträng eller Boolean) Anger vilket protokoll som ska användas för tjänstens URL:
+* **parametrar:** (Objekt) URL-parametrar representeras som objektegenskaper. Parameternamn är egenskapsnamn och parametervärden är egenskapsvärden.
+* **sökväg:** (String) Sökvägen till tjänsten.
+* **port:** (Nummer) Tjänstens portnummer.
+* **säker:** (Sträng eller Boolean) Anger vilket protokoll som ska användas för tjänstens URL:
 
    * auto: //
    * true: https://
@@ -451,7 +454,7 @@ Hämtar URL:en för JSONP-tjänsten.
 
 **Parametrar**
 
-* **** lös: (Boolean) Avgör om lösta parametrar ska tas med i URL:en. Värdet `true` löser parametrarna och `false` gör det inte.
+* **lös:** (Boolean) Avgör om lösta parametrar ska tas med i URL:en. Värdet `true` löser parametrarna och `false` gör det inte.
 
 **Returnerar**
 
@@ -463,8 +466,8 @@ initierar ContextHub.Store.JSONPStore-objektet.
 
 **Parametrar**
 
-* **** namn: (String) Butikens namn.
-* **** config: (Objekt) Ett objekt som innehåller egenskapen service. Objektet JSONPStore använder egenskaperna för `service` objektet för att skapa URL:en för JSONP-tjänsten:
+* **namn:** (String) Butikens namn.
+* **config:** (Objekt) Ett objekt som innehåller egenskapen service. Objektet JSONPStore använder egenskaperna för `service` objektet för att skapa URL:en för JSONP-tjänsten:
 
    * eventDeferring: 32.
    * händelser: Objektet ContextHub.Utils.Eventing för det här arkivet. Standardvärdet är `ContextHub.eventing` objektet.
@@ -493,7 +496,7 @@ Startar ready-händelsen när frågan är klar. Om JSONP-tjänstens URL inte är
 
 **Parametrar**
 
-* **** ladda om: (Boolean) Värdet true tar bort det cachelagrade svaret och tvingar JSONP-tjänsten att anropas.
+* **ladda om:** (Boolean) Värdet true tar bort det cachelagrade svaret och tvingar JSONP-tjänsten att anropas.
 
 #### reset {#reset}
 
@@ -503,7 +506,7 @@ Initialvärden anges i egenskapen initialValues för det config-objekt som anvä
 
 **Parametrar**
 
-* **** keepRemainingData: (Boolean) Värdet true gör att icke-initiala data bevaras. Värdet false medför att alla data tas bort utom de ursprungliga värdena.
+* **keepRemainingData:** (Boolean) Värdet true gör att icke-initiala data bevaras. Värdet false medför att alla data tas bort utom de ursprungliga värdena.
 
 #### resolveParameter(f) {#resolveparameter-f}
 
@@ -533,9 +536,9 @@ Registrerar en gränssnittsmodulrenderare med ContextHub. När återgivaren har 
 
 **Parametrar**
 
-* **** moduleType: (String) Identifieraren för gränssnittsmodulens renderare. Om en renderare redan är registrerad med det angivna värdet avregistreras den befintliga renderaren innan den registreras.
-* **** renderare: (String) Namnet på den klass som återger gränssnittsmodulen.
-* **** dontRender: (Boolean) Ange detta för `true` att förhindra att ContextHub-gränssnittet återges efter att återgivaren har registrerats. Standardvärdet är `false`.
+* **moduleType:** (String) Identifieraren för gränssnittsmodulens renderare. Om en renderare redan är registrerad med det angivna värdet avregistreras den befintliga renderaren innan den registreras.
+* **renderare:** (String) Namnet på den klass som återger gränssnittsmodulen.
+* **dontRender:** (Boolean) Ange detta för `true` att förhindra att ContextHub-gränssnittet återges efter att återgivaren har registrerats. Standardvärdet är `false`.
 
 **Exempel**
 
@@ -557,7 +560,7 @@ Avgör om det finns en cookie.
 
 **Parametrar**
 
-* **** nyckel: A `String` som innehåller nyckeln till den cookie som du testar för.
+* **nyckel:** A `String` som innehåller nyckeln till den cookie som du testar för.
 
 **Returnerar**
 
@@ -577,7 +580,7 @@ Returnerar alla cookies som har nycklar som matchar ett filter.
 
 **Parametrar**
 
-* **(Valfritt)** filter: Kriterier för matchning av cookie-nycklar. Om du vill returnera alla cookies anger du inget värde. Följande typer stöds:
+* (Valfritt) **filter:** Kriterier för matchning av cookie-nycklar. Om du vill returnera alla cookies anger du inget värde. Följande typer stöds:
 
    * Sträng: Strängen jämförs med cookie-nyckeln.
    * Array: Varje objekt i arrayen är ett filter.
@@ -600,7 +603,7 @@ Returnerar ett cookie-värde.
 
 **Parametrar**
 
-* **** nyckel: Nyckeln till den cookie som du vill ha värdet för.
+* **nyckel:** Nyckeln till den cookie som du vill ha värdet för.
 
 **Returnerar**
 
@@ -618,7 +621,7 @@ Returnerar en array med nycklarna för befintliga cookies som matchar ett filter
 
 **Parametrar**
 
-* **** filter: Kriterier för matchning av cookie-nycklar. Följande typer stöds:
+* **filter:** Kriterier för matchning av cookie-nycklar. Följande typer stöds:
 
    * Sträng: Strängen jämförs med cookie-nyckeln.
    * Array: Varje objekt i arrayen är ett filter.
@@ -641,9 +644,9 @@ Tar bort en cookie. Om du vill ta bort cookien anges värdet till en tom sträng
 
 **Parametrar**
 
-* **** nyckel: Ett `String` värde som representerar nyckeln till den cookie som ska tas bort.
+* **nyckel:** Ett `String` värde som representerar nyckeln till den cookie som ska tas bort.
 
-* **** alternativ: Ett objekt som innehåller egenskapsvärden för konfiguration av cookie-attributen. Mer information finns i ` [setItem](/help/sites-developing/contexthub-api.md#setitem-key-value-options)` funktionen. Egenskapen har ingen effekt `expires` .
+* **alternativ:** Ett objekt som innehåller egenskapsvärden för konfiguration av cookie-attributen. Mer information finns i ` [setItem](/help/sites-developing/contexthub-api.md#setitem-key-value-options)` funktionen. Egenskapen har ingen effekt `expires` .
 
 **Returnerar**
 
@@ -661,9 +664,9 @@ Skapar en cookie med den angivna nyckeln och det angivna värdet och lägger til
 
 **Parametrar**
 
-* **** nyckel: En sträng som innehåller nyckeln till cookien.
-* **** värde: En sträng som innehåller cookie-värdet.
-* **** alternativ: (Valfritt) Ett objekt som innehåller någon av följande egenskaper som konfigurerar cookie-attributen:
+* **nyckel:** En sträng som innehåller nyckeln till cookien.
+* **värde:** En sträng som innehåller cookie-värdet.
+* **alternativ:** (Valfritt) Ett objekt som innehåller någon av följande egenskaper som konfigurerar cookie-attributen:
 
    * upphör: Ett `date` - eller `number` -värde som anger när cookien upphör att gälla. Ett datumvärde anger den absoluta förfallotiden. Ett tal (i dagar) anger förfallotiden till den aktuella tiden plus talet. Standardvärdet är `undefined`.
    * säker: Ett `boolean` värde som anger `Secure` cookie-attributet. Standardvärdet är `false`.
@@ -690,9 +693,9 @@ Tar bort alla cookies som matchar ett visst filter. Cookies matchas med funktion
 
 **Parametrar**
 
-* **** filter: Argumentet `filter` som ska användas i anropet till `[getKeys](/help/sites-developing/contexthub-api.md#getkeys-filter)` funktionen.
+* **filter:** Argumentet `filter` som ska användas i anropet till `[getKeys](/help/sites-developing/contexthub-api.md#getkeys-filter)` funktionen.
 
-* **** alternativ: Argumentet `options` som ska användas i anropet till `[removeItem](/help/sites-developing/contexthub-api.md#removeitem-key-options)` funktionen.
+* **alternativ:** Argumentet `options` som ska användas i anropet till `[removeItem](/help/sites-developing/contexthub-api.md#removeitem-key-options)` funktionen.
 
 **Returnerar**
 
@@ -710,9 +713,9 @@ Avbinder en funktion från en händelse.
 
 **Parametrar**
 
-* **** namn: Namnet [på händelsen](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing) som du tar bort bindningen till funktionen för.
+* **namn:** Namnet [på händelsen](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing) som du tar bort bindningen till funktionen för.
 
-* **** väljare: Väljaren som identifierar bindningen. (Se parametern `selector` för [funktionerna on](/help/sites-developing/contexthub-api.md#on-name-handler-selector-triggerforpastevents) och [once](/help/sites-developing/contexthub-api.md#once-name-handler-selector-triggerforpastevents) .)
+* **väljare:** Väljaren som identifierar bindningen. (Se parametern `selector` för [funktionerna on](/help/sites-developing/contexthub-api.md#on-name-handler-selector-triggerforpastevents) och [once](/help/sites-developing/contexthub-api.md#once-name-handler-selector-triggerforpastevents) .)
 
 **Returnerar**
 
@@ -724,12 +727,12 @@ Bindar en funktion till en händelse. Funktionen anropas varje gång händelsen 
 
 **Parametrar**
 
-* **** namn: (String) Namnet [på händelsen](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing) som du binder funktionen till.
+* **namn:** (String) Namnet [på händelsen](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing) som du binder funktionen till.
 
-* **** hanterare: (Funktion) Funktionen som ska bindas till händelsen.
-* **** väljare: (String) En unik identifierare för bindningen. Du behöver väljaren för att identifiera bindningen om du vill använda funktionen för att ta bort bindningen `off` .
+* **hanterare:** (Funktion) Funktionen som ska bindas till händelsen.
+* **väljare:** (String) En unik identifierare för bindningen. Du behöver väljaren för att identifiera bindningen om du vill använda funktionen för att ta bort bindningen `off` .
 
-* **** triggerForPastEvents: (Boolean) Anger om hanteraren ska köras för händelser som har inträffat tidigare. Ett värde på `true` anropar hanteraren för tidigare händelser. Värdet för `false` anropar hanteraren för framtida händelser. Standardvärdet är `true`.
+* **triggerForPastEvents:** (Boolean) Anger om hanteraren ska köras för händelser som har inträffat tidigare. Ett värde på `true` anropar hanteraren för tidigare händelser. Värdet för `false` anropar hanteraren för framtida händelser. Standardvärdet är `true`.
 
 **Returnerar**
 
@@ -766,12 +769,12 @@ Bindar en funktion till en händelse. Funktionen anropas bara en gång för den 
 
 **Parametrar**
 
-* **** namn: (String) Namnet [på händelsen](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing) som du binder funktionen till.
+* **namn:** (String) Namnet [på händelsen](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing) som du binder funktionen till.
 
-* **** hanterare: (Funktion) Funktionen som ska bindas till händelsen.
-* **** väljare: (String) En unik identifierare för bindningen. Du behöver väljaren för att identifiera bindningen om du vill använda funktionen för att ta bort bindningen `off` .
+* **hanterare:** (Funktion) Funktionen som ska bindas till händelsen.
+* **väljare:** (String) En unik identifierare för bindningen. Du behöver väljaren för att identifiera bindningen om du vill använda funktionen för att ta bort bindningen `off` .
 
-* **** triggerForPastEvents: (Boolean) Anger om hanteraren ska köras för händelser som har inträffat tidigare. Ett värde på `true` anropar hanteraren för tidigare händelser. Värdet för `false` anropar hanteraren för framtida händelser. Standardvärdet är `true`.
+* **triggerForPastEvents:** (Boolean) Anger om hanteraren ska köras för händelser som har inträffat tidigare. Ett värde på `true` anropar hanteraren för tidigare händelser. Värdet för `false` anropar hanteraren för framtida händelser. Standardvärdet är `true`.
 
 **Returnerar**
 
@@ -794,8 +797,8 @@ Gör att ett objekt ärver egenskaper och metoder för ett annat objekt.
 
 **Parametrar**
 
-* **** underordnad: (Objekt) Det objekt som ärver.
-* **** överordnad: (Object) Det objekt som definierar de egenskaper och metoder som ärvs.
+* **underordnad:** (Objekt) Det objekt som ärver.
+* **överordnad:** (Object) Det objekt som definierar de egenskaper och metoder som ärvs.
 
 ## ContextHub.Utils.JSON {#contexthub-utils-json}
 
@@ -809,7 +812,7 @@ Tolkar ett strängvärde som JSON och konverterar det till ett javascript-objekt
 
 **Parametrar**
 
-* **** data: Ett strängvärde i JSON-format.
+* **data:** Ett strängvärde i JSON-format.
 
 **Returnerar**
 
@@ -833,7 +836,7 @@ Serialiserar JavaScript-värden och -objekt till strängvärden i JSON-format.
 
 **Parametrar**
 
-* **** data: Värdet eller objektet som ska serialiseras. Den här funktionen stöder värden för booleskt värde, matris, tal, sträng och datum.
+* **data:** Värdet eller objektet som ska serialiseras. Den här funktionen stöder värden för booleskt värde, matris, tal, sträng och datum.
 
 **Returnerar**
 
@@ -863,8 +866,8 @@ Skapar en kopia av ett dataobjekt och lägger till dataträdet från ett andra o
 
 **Parametrar**
 
-* **** träd: Det objekt som kopieras.
-* **** secondTree: Det objekt som sammanfogas med kopian av `tree` objektet.
+* **träd:** Det objekt som kopieras.
+* **secondTree:** Det objekt som sammanfogas med kopian av `tree` objektet.
 
 **Returnerar**
 
@@ -876,7 +879,7 @@ Skapar en kopia av ett objekt, söker efter och tar bort objekt i dataträdet so
 
 **Parametrar**
 
-* **** träd: Det objekt som ska rensas.
+* **träd:** Det objekt som ska rensas.
 
 **Returnerar**
 
@@ -888,8 +891,8 @@ Hämtar värdet från ett objekt för nyckeln.
 
 **Parametrar**
 
-* **** träd: Dataobjektet.
-* **** nyckel: Nyckeln för värdet som du vill hämta.
+* **träd:** Dataobjektet.
+* **nyckel:** Nyckeln för värdet som du vill hämta.
 
 **Returnerar**
 
@@ -945,9 +948,9 @@ Hämtar alla nycklar från ett objekts dataträd. Om du vill kan du bara hämta 
 
 **Parametrar**
 
-* **** träd: Det objekt som nycklarna för dataträdet ska hämtas från.
-* **** överordnad: (Valfritt) Nyckeln till ett objekt i dataträdet som du vill hämta nycklarna för de underordnade objekten för.
-* **** beställning: (Valfritt) En funktion som bestämmer sorteringsordningen för de returnerade tangenterna. (Se [Array.prototype.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) i Mozilla Developer Network.)
+* **träd:** Det objekt som nycklarna för dataträdet ska hämtas från.
+* **överordnad:** (Valfritt) Nyckeln till ett objekt i dataträdet som du vill hämta nycklarna för de underordnade objekten för.
+* **beställning:** (Valfritt) En funktion som bestämmer sorteringsordningen för de returnerade tangenterna. (Se [Array.prototype.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) i Mozilla Developer Network.)
 
 **Returnerar**
 
@@ -1039,7 +1042,7 @@ myObject {
 
 Använd den resulterande arrayen för att skapa en användbar nyckel.  **Parametrar**
 
-* **** nyckel: De `string` som ska saneras.
+* **nyckel:** De `string` som ska saneras.
 
 **Returnerar**
 
@@ -1106,7 +1109,7 @@ Returnerar de butikstyper som är registrerade som butikskandidater. Hämta anti
 
 **Parametrar**
 
-* **** storeType: (String) Namnet på lagringstypen. Se `storeType` funktionens parameter [`ContextHub.Utils.storeCandidates.registerStoreCandidate`](/help/sites-developing/contexthub-api.md#contexthub-utils-storecandidates) .
+* **storeType:** (String) Namnet på lagringstypen. Se `storeType` funktionens parameter [`ContextHub.Utils.storeCandidates.registerStoreCandidate`](/help/sites-developing/contexthub-api.md#contexthub-utils-storecandidates) .
 
 **Returnerar**
 
@@ -1140,10 +1143,10 @@ Prioriteten är ett tal som anger vikten av butiker med samma namn. När en buti
 
 **Parametrar**
 
-* **** butik: (Objekt) Det lagringsobjekt som ska registreras som lagringskandidater.
-* **** storeType: (String) Namnet på lagringskandidaten. Det här värdet krävs när du skapar en instans av lagringskandidaten.
-* **** prioritet: (Number) Prioriteten för butikskandidaten.
-* **** gäller: (Funktion) Funktionen som ska anropas som utvärderar butikens tillämplighet i den aktuella miljön. Funktionen måste returneras `true` om butiken är tillämplig, `false` annars. Standardvärdet är en funktion som returnerar true: `function() {return true;}`
+* **butik:** (Objekt) Det lagringsobjekt som ska registreras som lagringskandidater.
+* **storeType:** (String) Namnet på lagringskandidaten. Det här värdet krävs när du skapar en instans av lagringskandidaten.
+* **prioritet:** (Number) Prioriteten för butikskandidaten.
+* **gäller:** (Funktion) Funktionen som ska anropas som utvärderar butikens tillämplighet i den aktuella miljön. Funktionen måste returneras `true` om butiken är tillämplig, `false` annars. Standardvärdet är en funktion som returnerar true: `function() {return true;}`
 
 **Exempel**
 
