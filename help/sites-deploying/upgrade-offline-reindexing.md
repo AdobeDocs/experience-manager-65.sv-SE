@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: upgrading
 content-type: reference
 translation-type: tm+mt
-source-git-commit: f465b6ffd1a93ddad3db0caf00d4ff797e1b189f
+source-git-commit: 9a4ae73c08657195da2741cccdb196bd7f7142c9
 workflow-type: tm+mt
 source-wordcount: '1343'
 ht-degree: 0%
@@ -147,7 +147,7 @@ Mer information finns i [avsnittet om att skapa](https://jackrabbit.apache.org/o
 
 **Utför offlineindexering för de genererade indexdefinitionerna**
 
-Omindexering av Lucene kan göras offline med ekkörning. Den här processen skapar indexdata på disken under `indexing-result/indices`. Den skriver **inte** till databasen och behöver därför inte stoppa den AEM som körs. Det skapade textarkivet matas in i den här processen:
+Omindexering av Lucene kan göras offline med ekkörning. Den här processen skapar indexdata på disken under `indexing-result/indexes`. Den skriver **inte** till databasen och behöver därför inte stoppa den AEM som körs. Det skapade textarkivet matas in i den här processen:
 
 ```
 java -Doak.indexer.memLimitInMB=500 -jar oak-run.jar index <nodestore path> --reindex --doc-traversal-mode --checkpoint <checkpoint> --fds-path <datastore path> --index-definitions-file merge-index-definitions_target.json --pre-extracted-text-dir text-extraction/store
@@ -155,7 +155,7 @@ java -Doak.indexer.memLimitInMB=500 -jar oak-run.jar index <nodestore path> --re
 Sample <checkpoint> looks like r16c85700008-0-8
 —fds-path: path to data store.
 --pre-extracted-text-dir: Directory of pre-extracted text.
-merge-index-definitions_target: JSON file having merged definitions for the target AEM instance. indices in this file will be re-indexed.
+merge-index-definitions_target: JSON file having merged definitions for the target AEM instance. indexes in this file will be re-indexed.
 ```
 
 Parametern kan användas med MongoMK-installationer eftersom den avsevärt förbättrar omindexeringstiden genom att lagra databasinnehåll i en lokal, platt fil. `--doc-traversal-mode` Det kräver dock ytterligare diskutrymme som är dubbelt så stort som databasens storlek.
@@ -164,9 +164,9 @@ När det gäller MongoMK kan den här processen accelereras om det här steget k
 
 Ytterligare teknisk information finns i [dokumentationen för ekakörning för indexering](https://jackrabbit.apache.org/oak/docs/query/oak-run-indexing.html).
 
-### Importerar index {#importing-indices}
+### Importera index {#importing-indexes}
 
-Med AEM 6.4 och senare versioner har AEM den inbyggda möjligheten att importera index från disk i startsekvens. Mappen `<repository>/indexing-result/indices` bevakas med avseende på om det finns indexdata vid start. Du kan kopiera det förskapade indexet till ovanstående plats under [uppgraderingsprocessen](in-place-upgrade.md#performing-the-upgrade) innan du börjar med den nya versionen av **mål** -AEM. AEM importerar den till databasen och tar bort motsvarande kontrollpunkt från systemet. Därför undviks helt omindexering.
+Med AEM 6.4 och senare versioner har AEM den inbyggda möjligheten att importera index från disk i startsekvenser. Mappen `<repository>/indexing-result/indexes` bevakas med avseende på om det finns indexdata vid start. Du kan kopiera det förskapade indexet till ovanstående plats under [uppgraderingsprocessen](in-place-upgrade.md#performing-the-upgrade) innan du börjar med den nya versionen av **mål** -AEM. AEM importerar den till databasen och tar bort motsvarande kontrollpunkt från systemet. Därför undviks helt omindexering.
 
 ## Fler tips och felsökning {#troubleshooting}
 
