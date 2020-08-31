@@ -2,22 +2,22 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: AEM 6.5 - driftsättningshandbok
+user-guide-title: AEM 6.5 Deployment Guide
 user-guide-description: Learn more about installing, deploying, and the architecture of Adobe Experience Manager 6.5, including our Adobe Managed Services cloud deployment.
 translation-type: tm+mt
-source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
+source-git-commit: 9a4ae73c08657195da2741cccdb196bd7f7142c9
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '328'
 ht-degree: 1%
 
 ---
 
 
-# Användarhandbok för AEM 6.5-distribution {#deploying}
+# Användarhandbok för distribution av AEM 6.5 {#deploying}
 
 + [Distribuera användarhandbok](home.md)
-+ Introduktion till AEM Platform {#introduction}
-   + [Introduktion till AEM Platform](platform.md)
++ Introduktion till AEM {#introduction}
+   + [Introduktion till AEM](platform.md)
    + [Tekniska krav](technical-requirements.md)
    + [Lagringselement i AEM 6.5](storage-elements-in-aem-6.md)
    + [AEM med MongoDB](aem-with-mongodb.md)
@@ -30,7 +30,7 @@ ht-degree: 1%
    + [Konfigurera nodarkiv och datalager i AEM 6](data-store-config.md)
    + [Revision Cleanup](revision-cleanup.md)
    + [Fråga och indexering](queries-and-indexing.md)
-   + [Så här kör du AEM med StjärmMK Cold Standby](tarmk-cold-standby.md)
+   + [Så här kör du AEM med TARMK Cold Standby](tarmk-cold-standby.md)
    + [Stöd för RDBMS i AEM 6.5](rdbms-support-in-aem.md)
    + [Indexering via Oak-run Jar](indexing-via-the-oak-run-jar.md)
    + [Exempel på indexeringsanvändning för Oak-run.jar](oak-run-indexing-usecases.md)
@@ -38,7 +38,7 @@ ht-degree: 1%
    + [Insamling av aggregerad användningsstatistik](opt-in-aggregated-usage-statistics.md)
    + [Uppdatera definitioner för frisläppningsfordon](update-release-vehicle-definitions.md)
    + [Felsökning](troubleshooting.md)
-+ Konfigurerar AEM {#configuring}
++ Konfigurera AEM {#configuring}
    + [Grundläggande konfigurationskoncept](configuring.md)
    + [Loggning](configure-logging.md)
    + [Konfigurerar OSGi](configuring-osgi.md)
@@ -50,7 +50,7 @@ ht-degree: 1%
    + [Felsökning av replikering](troubleshoot-rep.md)
    + [Förfallotid för statiska objekt](expiration-static-objects.md)
    + [Rensning av version](version-purging.md)
-   + [Övervaka och underhålla din AEM-instans](monitoring-and-maintaining.md)
+   + [Övervaka och underhålla AEM](monitoring-and-maintaining.md)
    + [Avlastar jobb](offloading.md)
    + [Enkel inloggning](single-sign-on.md)
    + [Resursmappning](resource-mapping.md)
@@ -68,24 +68,25 @@ ht-degree: 1%
    + [Bakåtkompatibilitet i AEM 6.5](backward-compatibility.md)
    + [Uppgraderingsprocedur](upgrade-procedure.md)
    + [Utföra en uppgradering på plats](in-place-upgrade.md)
+   + [Använda omindexering offline för att minska driftstoppen under en uppgradering](upgrade-offline-reindexing.md)
    + [Lazy Content Migration](lazy-content-migration.md)
    + [Använda CRX2Oak Migration Tool](using-crx2oak.md)
    + [Underhållsaktiviteter före uppgraderingen](pre-upgrade-maintenance-tasks.md)
    + [Kontrollera och felsök efter uppgradering](post-upgrade-checks-and-troubleshooting.md)
-   + [Uppgraderar anpassade sökformulär](upgrading-custom-search-forms.md)
+   + [Uppgraderar Forms för anpassad sökning](upgrading-custom-search-forms.md)
    + [Hållbara uppgraderingar](sustainable-upgrades.md)
    + [Uppgradera kod och anpassningar](upgrading-code-and-customizations.md)
    + [Uppgradera steg för programserverinstallationer](app-server-upgrade.md)
    + [Lista över föråldrade paket som avinstallerats efter uppgraderingen](obsolete-bundles.md)
 + Omstrukturering av lager {#restructuring}
    + [Omstrukturering av lager i AEM 6.5](repository-restructuring.md)
-   + [Omstrukturering av gemensamma lager i AEM 6.5](all-repository-restructuring-in-aem-6-5.md)
-   + [Omstrukturering av anläggningstillgångar i AEM 6.5](sites-repository-restructuring-in-aem-6-5.md)
-   + [Omstrukturering av tillgångar i AEM 6.5](assets-repository-restructuring-in-aem-6-5.md)
-   + [Omstrukturering av Dynamic Media-databasen i AEM 6.5](dynamicmedia-repository-restructuring-in-aem-6-5.md)
-   + [Omstrukturering av formulärarkiv i AEM 6.5](forms-repository-restructuring-in-aem-6-5.md)
+   + [Omstrukturering av de gemensamma tillgångarna i AEM 6.5](all-repository-restructuring-in-aem-6-5.md)
+   + [Omstrukturering av anläggningar Repository i AEM 6.5](sites-repository-restructuring-in-aem-6-5.md)
+   + [Omstrukturering av tillgångar Repository i AEM 6.5](assets-repository-restructuring-in-aem-6-5.md)
+   + [Omstrukturering av Dynamic Media Repository i AEM 6.5](dynamicmedia-repository-restructuring-in-aem-6-5.md)
+   + [Omstrukturering av Forms-lager i AEM 6.5](forms-repository-restructuring-in-aem-6-5.md)
    + [Omstrukturering av e-handelslager i AEM 6.5](ecommerce-repository-restructuring-in-aem-6-5.md)
-   + [Omstrukturering av lager för AEM Communities i 6.5](communities-repository-restructuring-in-aem-6-5.md)
+   + [Repositionsomstrukturering för AEM Communities i 6.5](communities-repository-restructuring-in-aem-6-5.md)
 + eCommerce {#ecommerce}
    + [e-handel - översikt](ecommerce.md)
    + [SAP Commerce Cloud](sap-commerce-cloud.md)
@@ -96,5 +97,5 @@ ht-degree: 1%
    + [Prestandaträd](performance-tree.md)
    + [Bästa metoder för prestandatestning](best-practices-for-performance-testing.md)
    + [Metodtips för frågor och indexering](best-practices-for-queries-and-indexing.md)
-   + [Rekommendationer för användargränssnitt för kunder](ui-recommendations.md)
+   + [Användargränssnitt Recommendations för kunder](ui-recommendations.md)
    + [Prestanda och skalbarhet](performance.md)
