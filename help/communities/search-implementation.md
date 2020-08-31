@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 300aa9f3-596f-42bc-8d46-e535f2bc4379
 translation-type: tm+mt
-source-git-commit: 6ab91667ad668abf80ccf1710966169b3a187928
+source-git-commit: 9a4ae73c08657195da2741cccdb196bd7f7142c9
 workflow-type: tm+mt
 source-wordcount: '1189'
 ht-degree: 3%
@@ -83,18 +83,18 @@ Anpassade sökfunktioner bör använda [UGC-söknings-API](#ugc-search-api).
 
 #### Oak-indexering {#oak-indexing}
 
-Även om det inte skapas automatiskt för AEM plattformssökning har de från och med AEM 6.2 lagts till för AEM Communities för att förbättra prestanda och ge stöd för sidnumrering när UGC-sökresultat presenteras.
+Oak-index skapas inte automatiskt för AEM plattformssökning, men från och med AEM 6.2 har de lagts till för AEM Communities för att förbättra prestanda och ge stöd för paginering när UGC-sökresultat presenteras.
 
 Om anpassade egenskaper används och sökningarna är långsamma, måste ytterligare index skapas för de anpassade egenskaperna för att de ska bli bättre. Om du vill behålla bärbarheten följer du [namngivningskraven](#naming-of-custom-properties) när du skapar anpassade egenskaper som är sökbara.
 
-Mer information om hur du ändrar befintliga index eller skapar anpassade index finns i [Oak Queries och Indexing](../../help/sites-deploying/queries-and-indexing.md).
+Om du vill ändra befintliga index eller skapa egna index läser du i [Oak Queries och Indexing](../../help/sites-deploying/queries-and-indexing.md).
 
 Indexhanteraren för [ekning](https://adobe-consulting-services.github.io/acs-aem-commons/features/oak-index-manager.html) är tillgänglig från ACS AEM Commons. Den innehåller följande:
 
 * En vy över befintliga index.
 * Möjlighet att initiera omindexering.
 
-Om du vill visa de befintliga ekindexen i [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)är platsen:
+Om du vill visa de befintliga Oak-indexen i [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)är platsen:
 
 * `/oak:index/socialLucene`
 
