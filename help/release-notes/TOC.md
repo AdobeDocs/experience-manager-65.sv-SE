@@ -2,29 +2,30 @@
 cloud: experience-cloud
 product: experience manager
 audience: end-user
-user-guide-title: Versionsinformation om AEM 6.5
+user-guide-title: Versionsinformation för AEM 6.5
 user-guide-description: Learn about the latest new features in AEM 6.5 in the release notes.
 translation-type: tm+mt
-source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
+source-git-commit: c1af919d4c0fd984249e1a7009274c63b8ce9adb
 workflow-type: tm+mt
-source-wordcount: '52'
+source-wordcount: '57'
 ht-degree: 3%
 
 ---
 
 
-# Versionsinformation om AEM 6.5 {#release-notes}
+# Versionsinformation för AEM 6.5 {#release-notes}
 
 + [AEM 6.5 - översikt](home.md)
 + [Allmän versionsinformation](release-notes.md)
 + Versionsinformation för Service Pack {#service-pack}
-   + [What&#39;s New](new-features-latest-service-pack.md)
+   + [Nyheter](new-features-latest-service-pack.md)
    + [Versionsinformation för Service Pack 5](sp-release-notes.md)
    + [Versionsinformation för föregående Service Pack](previous-hotfixes-featurepacks.md)
-+ [Versionsinformation om AEM Sites](sites.md)
-+ [Versionsinformation om AEM Assets](assets.md)
-+ [Versionsinformation om AEM Communities](communities-release-notes.md)
++ [Versionsinformation för AEM Sites](sites.md)
++ [Versionsinformation för AEM Assets](assets.md)
++ [AEM Forms JEE Patch Installer](jee-patch-installer-65.md)
++ [Versionsinformation för AEM Communities](communities-release-notes.md)
 + [Föråldrade och borttagna funktioner](deprecated-removed-features.md)
 + [Kända fel](known-issues.md)
-+ [AEM Foundation och Repository](wcm-platform.md)
++ [AEM Foundation and Repository](wcm-platform.md)
 + [Funktionsstatus för Touch UI](touch-ui-features-status.md)
