@@ -5,7 +5,7 @@ audience: end-user
 user-guide-title: Versionsinformation för AEM 6.5
 user-guide-description: Learn about the latest new features in AEM 6.5 in the release notes.
 translation-type: tm+mt
-source-git-commit: c1af919d4c0fd984249e1a7009274c63b8ce9adb
+source-git-commit: 5b4c684e3ebf2f4c37cfe3244c0118cd994093fb
 workflow-type: tm+mt
 source-wordcount: '57'
 ht-degree: 3%
@@ -19,7 +19,7 @@ ht-degree: 3%
 + [Allmän versionsinformation](release-notes.md)
 + Versionsinformation för Service Pack {#service-pack}
    + [Nyheter](new-features-latest-service-pack.md)
-   + [Versionsinformation för Service Pack 5](sp-release-notes.md)
+   + [Versionsinformation för Service Pack 6](sp-release-notes.md)
    + [Versionsinformation för föregående Service Pack](previous-hotfixes-featurepacks.md)
 + [Versionsinformation för AEM Sites](sites.md)
 + [Versionsinformation för AEM Assets](assets.md)
