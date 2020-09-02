@@ -4,9 +4,9 @@ description: Versionsinformation för [!DNL Adobe Experience Manager] 6.5 Servic
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 6da27dfda2bb504fc7a1de24260e94141f1a22ab
+source-git-commit: f072522706074d5b3f4e4749caf4379ff8fdfcc3
 workflow-type: tm+mt
-source-wordcount: '4221'
+source-wordcount: '4219'
 ht-degree: 0%
 
 ---
@@ -154,7 +154,7 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 
    *Bild:[!UICONTROL Search for Help]på[!UICONTROL Help]menyn*
 
-   * felmeddelandet om ett felaktigt värde anges i [!ICONTROL personifiera som] fält under [!UICONTROL User] alternativ och fokus flyttas korrekt till textfältet (NPR-33804).
+   * felmeddelandet om ett felaktigt värde anges i [!UICONTROL Impersonate as] fältet under [!UICONTROL User] alternativet och fokus flyttas korrekt till textfältet (NPR-33804).
 
    ![Användarmeny i sidhuvud](assets/User_aem_header.png)
 
