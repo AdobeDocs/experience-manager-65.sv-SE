@@ -5,10 +5,10 @@ audience: end-user
 user-guide-title: Användarhandbok för Experience Manager 6.5 Assets
 user-guide-description: Create, manage, deliver, and optimize digital assets.
 translation-type: tm+mt
-source-git-commit: 9e67e252348f471c052f6c3e88aea61d7a309241
+source-git-commit: 32f8e42325314d5afbec3b3e1611fd696e1a4603
 workflow-type: tm+mt
-source-wordcount: '635'
-ht-degree: 38%
+source-wordcount: '642'
+ht-degree: 37%
 
 ---
 
@@ -72,6 +72,7 @@ ht-degree: 38%
    + [Länka URL till ett webbprogram](linking-urls-to-yourwebapplication.md)
    + [Omforma URL:er med regeluppsättningar](using-rulesets-to-transform-urls.md)
    + [Publicera Dynamic Media-resurser](publishing-dynamicmedia-assets.md)
+   + [Arbeta med selektiv publicering i Dynamic Media](selective-publishing.md)
    + [Invalidera CDN-cachen med hjälp av Dynamic Media Classic](invalidate-cdn-cache-dm-classic.md)
    + [Installerar funktionspaket 18912 för migrering av gruppresurser](bulk-ingest-migrate.md)
    + [Arbeta med väljare](working-with-selectors.md)
