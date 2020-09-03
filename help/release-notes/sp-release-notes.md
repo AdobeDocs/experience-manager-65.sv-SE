@@ -4,9 +4,9 @@ description: Versionsinformation för [!DNL Adobe Experience Manager] 6.5 Servic
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: f072522706074d5b3f4e4749caf4379ff8fdfcc3
+source-git-commit: 32addae877604a242c97eac3ed81bbc2f55ec60a
 workflow-type: tm+mt
-source-wordcount: '4219'
+source-wordcount: '4235'
 ht-degree: 0%
 
 ---
@@ -212,7 +212,7 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
    >Uppgradering till [!DNL Experience Manager] 6.5 Service Pack 6 hämtar inte körtidskopian om körningskopian tas bort när du installerar [!DNL Experience Manager] 6.5 Service Pack 5 eller tidigare versioner på 6.5 GA. Om du vill hämta körtidskopian synkroniserar du designtidskopian av arbetsflödesmodellen med körtidskopian med HTTP API:
    `<designModelPath>/jcr:content.generate.json`.
 
-**Problem som har korrigerats i Dynamic Media**
+**Problem som har åtgärdats i Dynamic Media**
 
 * Om användaren definierar kodningsinställningarna i redigeringar efter att videoprofilen har skapats, tas inställningarna för smart beskärning bort från videoprofiler (CQ-4299177).
 
@@ -361,6 +361,8 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 * När du öppnar Designer visas ett felaktigt år på välkomstskärmen (CQ-4295289).
 
 * När du installerar [!DNL Acrobat DC] på servern är **[!UICONTROL Distribute Form]** alternativet inaktivt (CQ-4296304).
+
+Mer information om säkerhetsuppdateringar finns på [Experience Manager sida](https://helpx.adobe.com/security/products/experience-manager.html)med säkerhetsbulletiner.
 
 ## Installera 6.5.6.0 {#install}
 
