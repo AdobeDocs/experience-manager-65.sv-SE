@@ -3,9 +3,9 @@ title: Hantera smarta taggar och sökningar
 description: Uppdatera eller ta bort felaktiga smarta taggar för att förbättra taggarnas relevans
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: deb8ce3c6758efa9a127bfad4163ebd1c0f6f97a
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '455'
 ht-degree: 0%
 
 ---
@@ -44,3 +44,7 @@ Sökresultaten som matchar alla söktermer i metadatafält visas först, följt 
 1. matchningar av `woman running` i de olika metadatafälten.
 1. matchar `woman running` i smarta taggar.
 1. matchar `woman` eller i `running` smarta taggar.
+
+>[!CAUTION]
+>
+>Om Lucene-indexeringen görs från [!DNL Adobe Experience Manager] fungerar inte sökningen som baseras på smarta taggar som förväntat.
