@@ -7,7 +7,7 @@ topic-tags: dynamic-media
 content-type: reference
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 6e7368663d18dd0b5b46be9e292dba17577acf70
+source-git-commit: 6890af51d240cbdf84d8d95215ac0ea80326c713
 workflow-type: tm+mt
 source-wordcount: '2538'
 ht-degree: 0%
@@ -202,6 +202,7 @@ Du kan också använda de här kryssrutorna tillsammans med **[!UICONTROL Publis
    | Publicera till Dynamic Media | Selektiv publicering | Publiceras endast till Dynamic Media. |
    | Avpublicera från Dynamic Media | Omedelbart eller vid aktivering | Inte opublicerat från AEM, Dynamic Media eller båda. |
    | Avpublicera från Dynamic Media | Selektiv publicering | Endast opublicerade från Dynamic Media. |
+
 1. Under **[!UICONTROL Schedule]**anger du tidpunkten för avaktiveringen.
 | Valt schema | Vad händer |
 | — | — |
