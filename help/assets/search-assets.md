@@ -4,9 +4,9 @@ description: Lär dig hur du söker efter nödvändiga resurser [!DNL Adobe Expe
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 5bbdc80f199a2af38631a5443c46daae827abb52
+source-git-commit: deb8ce3c6758efa9a127bfad4163ebd1c0f6f97a
 workflow-type: tm+mt
-source-wordcount: '5807'
+source-wordcount: '5827'
 ht-degree: 4%
 
 ---
@@ -354,6 +354,10 @@ Visuell sökning använder smart taggning och kräver [!DNL Experience Manager] 
 1. (Valfritt) Om du har skapat ett anpassat sökformulär kopierar du `/libs/settings/dam/search/facets/assets/jcr%3Acontent/items/similaritysearch` noden till `/conf/global/settings/dam/search/facets/assets/jcr:content/items`. Spara ändringarna.
 
 Mer information finns i [Lär dig mer om smarta taggar i Experience Manager](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/smart-tags-feature-video-use.html) och [hur du hanterar smarta taggar](/help/assets/managing-smart-tags.md).
+
+>[!CAUTION]
+>
+>Om Lucene-indexeringen görs utanför [!DNL Adobe Experience Manager]fungerar inte sökningen baserat på smarta taggar som förväntat.
 
 ### Obligatoriska metadata {#mandatorymetadata}
 
