@@ -1,12 +1,12 @@
 ---
 title: Invalidera CDN-cachen med hjälp av Dynamic Media
-description: Genom att du validerar ditt cachelagrade CDN-innehåll (Content Delivery Network) kan du snabbt uppdatera resurser som levereras av Dynamic Media, i stället för att vänta på att cachen ska upphöra att gälla.
+description: Genom att du validerar ditt cachelagrade CDN-innehåll (Content Delivery Network) kan du snabbt uppdatera resurser som levereras av Dynamic Media, i stället för att vänta på att cachen ska förfalla.
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5.6/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 6a44c4ac11f2fdf794895c28468c2a600a09b3c0
+source-git-commit: 54645149dc4968c1c4f85eedb5ce4d71f80c3b64
 workflow-type: tm+mt
 source-wordcount: '1259'
 ht-degree: 0%
@@ -20,7 +20,7 @@ Dynamiska mediefiler cachas av CDN (Content Delivery Network) för snabb leveran
 
 >[!IMPORTANT]
 >
->Följande steg gäller endast för Dynamic Media - Scene7-läge i AEM 6.5, Service Pack 6 (AEM 6.5.6) eller senare. Denna CDN-funktion kräver också att du använder det färdiga CDN som medföljer AEM Dynamic Media; inget annat anpassat CDN stöds.<br>Om du använder Dynamic Media i AEM 6.5, Service Pack 5 (AEM 6.5.5) eller tidigare, följer du stegen i [Invalidera CDN-cachen med hjälp av Dynamic Media Classic](/help/assets/invalidate-cdn-cache-dm-classic.md)
+>Följande steg gäller endast för Dynamic Media - Scene7-läge i AEM 6.5, Service Pack 6 (AEM 6.5.6) eller senare. Denna CDN-funktion kräver också att du använder det färdiga CDN som medföljer AEM Dynamic Media; inget annat anpassat CDN stöds.<br>Om du använder Dynamic Media i AEM 6.5, Service Pack 5 (AEM 6.5.5) eller tidigare, följer du stegen i [Invalidera CDN-cachen med hjälp av Dynamic Media Classic.](/help/assets/invalidate-cdn-cache-dm-classic.md)
 
 Se även Översikt över [cachelagring i Dynamic Media](https://helpx.adobe.com/experience-manager/scene7/kb/base/caching-questions/scene7-caching-overview.html).
 
