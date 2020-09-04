@@ -1,6 +1,6 @@
 ---
 title: Invalidera CDN-cachen med hjälp av Dynamic Media
-description: Genom att du validerar ditt cachelagrade CDN-innehåll (Content Delivery Network) kan du snabbt uppdatera resurser som levereras av Dynamic Media, i stället för att vänta på att cachen ska förfalla.
+description: Genom att du validerar ditt cachelagrade CDN-innehåll (Content Delivery Network) kan du snabbt uppdatera resurser som levereras av Dynamic Media, i stället för att vänta på att cachen ska upphöra att gälla.
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5.6/ASSETS
 topic-tags: dynamic-media
