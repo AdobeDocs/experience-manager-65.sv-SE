@@ -7,10 +7,10 @@ topic-tags: dynamic-media
 content-type: reference
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 6890af51d240cbdf84d8d95215ac0ea80326c713
+source-git-commit: 5e5108b943907e5286298552c724d2b33873503f
 workflow-type: tm+mt
 source-wordcount: '2538'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -49,12 +49,13 @@ När du har konfigurerat selektiv publicering i en mapp kan du göra något av f
    * Redigera egenskaperna för en befintlig mapp - I **[!UICONTROL Card View]**, **[!UICONTROL Column View]** eller **[!UICONTROL List View]** navigera till en mapp vars egenskaper du vill redigera. Markera mappen och tryck sedan på **[!UICONTROL Properties.]**
    * Redigera egenskaperna för en ny mapp - I **[!UICONTROL Card View]**, **[!UICONTROL Column View]** eller **[!UICONTROL List View]** i det övre högra hörnet av sidan trycker du på **[!UICONTROL Create > Folder.]** I **[!UICONTROL Create Folder]** dialogrutan, anger en rubrik (krävs) för mappen och trycker sedan på **[!UICONTROL Create.]** Markera mappen och trycker sedan på i verktygsfältet **[!UICONTROL Properties.]**
 
-1. Välj något av följande i **[!UICONTROL Sync mode]** listrutan:
-| Synkroniseringsläge | Beskrivning |
-| — | — |
-| **[!UICONTROL Inherited]** | Inget explicit synkroniseringsvärde för mappen; I stället ärver mappen synkroniseringsvärdet från en av dess överordnade mappar eller det standardläge som angetts i din **[!UICONTROL Dynamic Media Configuration]** mapp. Detaljerad status för **[!UICONTROL Inherited]** visning med ett verktygstips. |
-| **[!UICONTROL Sync everything in this folder sub-tree to dynamicmedia]** | För att publicering till Dynamic Media ska lyckas måste materialet synkroniseras till Dynamic Media. Om du väljer det här alternativet inkluderas alla resurser i det här underträdet för synkronisering till dynamiska media. De mappspecifika inställningarna åsidosätter standardinställningen i **[!UICONTROL Dynamic Media Configuration]**. |
-| **[!UICONTROL Exclude everything in this folder sub-tree from dynamicmedia sync]** | Uteslut alla resurser i det här underträdet från synkronisering till Dynamic Media. |
+1. In the **[!UICONTROL Sync mode]** drop-down list, select one of the following:
+
+   | Synkroniseringsläge | Beskrivning |
+   | --- | --- |
+   | **[!UICONTROL Inherited]** | Det finns inget explicit synkroniseringsvärde för mappen; I stället ärver mappen synkroniseringsvärdet från en av dess överordnade mappar eller det standardläge som angetts i din **[!UICONTROL Dynamic Media Configuration]** mapp. Detaljerad status för **[!UICONTROL Inherited]** visning med ett verktygstips. |
+   | **[!UICONTROL Sync everything in this folder sub-tree to dynamicmedia]** | För att publicering till Dynamic Media ska lyckas måste materialet synkroniseras till Dynamic Media. Om du väljer det här alternativet inkluderas alla resurser i det här underträdet för synkronisering till dynamiska media. De mappspecifika inställningarna åsidosätter standardinställningen i **[!UICONTROL Dynamic Media Configuration]**. |
+   | **[!UICONTROL Exclude everything in this folder sub-tree from dynamicmedia sync]** | Uteslut alla resurser i det här underträdet från synkronisering till Dynamic Media. |
 
    ![Selektiv publicering på mappnivå](/help/assets/assets-dm/createfolder-properties-selectivepublish.png)
 
@@ -69,6 +70,7 @@ När du har konfigurerat selektiv publicering i en mapp kan du göra något av f
    | **[!UICONTROL Immediately]** | När resurser överförs till den här mappen, importeras resurserna till AEM och URL/Embed anges omedelbart. Det här alternativet är knutet till AEM publicering och det behövs ingen användaråtgärd för att publicera resurser.<br>Det här alternativet är *inte* tillgängligt om du valde **[!UICONTROL Exclude everything in this folder sub-tree from dynamicmedia sync]** i **[!UICONTROL Sync mode]** föregående steg. |
    | **[!UICONTROL Upon Activation]** | När resurser överförs till den här mappen måste du uttryckligen publicera resursen innan en URL/Embed-länk anges. Det här alternativet är endast kopplat AEM publicering.<br>Det här alternativet är *inte* tillgängligt om du valde **[!UICONTROL Exclude everything in this folder sub-tree from dynamicmedia sync]** i **[!UICONTROL Sync mode]** föregående steg. |
    | **[!UICONTROL Selective Publish]** | Resurserna publiceras antingen AEM eller till Dynamic Media för att distribueras offentligt. Båda publiceringsmetoderna utesluter varandra.  Det innebär att du kan publicera resurser på DMS7 så att du kan använda funktioner som Smart beskärning eller dynamiska återgivningar. Eller så kan du publicera resurser exklusivt till AEM för säker förhandsgranskning. samma resurser *inte* publiceras till DMS7 för att levereras offentligt. Det här alternativet är inte tillgängligt om du valde **[!UICONTROL Exclude everything in this folder sub-tree from dynamicmedia sync]** i **[!UICONTROL Sync mode]** föregående steg. |
+
 1. I det övre högra hörnet av sidan trycker du på **[!UICONTROL Save & Close]** och sedan på **[!UICONTROL OK]** för att återgå till AEM Assets.
 
 ## Publicera valfritt material till Dynamic Media eller AEM med Manage Publication{#selective-publish-manage-publication}
@@ -97,15 +99,19 @@ Se [Skapa en dynamisk mediekonfiguration](#configuring-dynamic-media-cloud-servi
       >Om **[!UICONTROL Manage Publication]** inte visas i verktygsfältet trycker du i stället på ellipsknappen och väljer sedan **[!UICONTROL Manage Publication]** i listrutan.
 
 1. På **[!UICONTROL Manage Publication – Options]** sidan, under **[!UICONTROL Action]**, väljer du vilken typ av aktivering du vill använda.
-| Åtgärd | Beskrivning |
-| — | — |
-| **[!UICONTROL Publish]** (till AEM) | Välj det här alternativet om du vill publicera resurser till AEM för säker förhandsvisning. |
-| **[!UICONTROL Publish to Dynamic Media]** | Välj det här alternativet om du vill publicera resurser på dynamiska media för att distribueras i den offentliga domänen eller så att du kan använda funktioner som Smart beskärning eller dynamiska återgivningar.<br>Det här alternativet är bara tillgängligt om **[!UICONTROL Dynamic Media Publish mode]** är inställt **[!UICONTROL Selective Publish]** i mappens egenskaper. |
-1. Under **[!UICONTROL Schedule]**anger du tidsinställningen för publiceringen.
-| Schema | Beskrivning |
-| — | — |
-| **[!UICONTROL Now]** | Välj att publicera resurserna direkt. |
-| **[!UICONTROL Later]** | Välj det här alternativet om du vill publicera resurserna ett visst datum och en viss tid. |
+
+   | Åtgärd | Beskrivning |
+   | --- | --- |
+   | **[!UICONTROL Publish]** (till AEM) | Välj det här alternativet om du vill publicera resurser AEM för säker förhandsvisning. |
+   | **[!UICONTROL Publish to Dynamic Media]** | Välj det här alternativet om du vill publicera resurser på dynamiska medier för att distribueras i den offentliga domänen eller så att du kan använda funktioner som Smart beskärning eller dynamiska återgivningar.<br>Det här alternativet är bara tillgängligt om **[!UICONTROL Dynamic Media Publish mode]** är inställt **[!UICONTROL Selective Publish]** i mappens egenskaper. |
+
+1. Under **[!UICONTROL Schedule]** anger du tidsinställningen för publiceringen.
+
+   | Schema | Beskrivning |
+   | --- | --- |
+   | **[!UICONTROL Now]** | Välj att publicera resurserna direkt. |
+   | **[!UICONTROL Later]** | Välj det här alternativet om du vill publicera resurserna ett visst datum och en viss tid. |
+
 1. Tryck på i det övre högra hörnet på **[!UICONTROL Manage Publication]** sidan **[!UICONTROL Next]**.
 1. Gör något av följande på **[!UICONTROL Manage Publication – Scope]** sidan:
    * Om det behövs väljer du en eller flera resurser som du vill ta bort från publiceringen.
@@ -124,15 +130,19 @@ Se [Skapa en dynamisk mediekonfiguration](#configuring-dynamic-media-cloud-servi
       >Om **[!UICONTROL Manage Publication]** inte visas i verktygsfältet trycker du i stället på ellipsknappen och väljer sedan **[!UICONTROL Manage Publication]** i listrutan.
 
 1. På **[!UICONTROL Manage Publication – Options]** sidan, under **[!UICONTROL Action]**, väljer du vilken typ av avaktivering du vill ha.
-| Åtgärd | Beskrivning |
-| — | — |
-| **[!UICONTROL Unpublish]** (från AEM) | Välj det här alternativet om du vill avpublicera resurser från AEM. |
-| **[!UICONTROL Unpublish from Dynamic Media]** | Välj det här alternativet om du vill avpublicera resurser från Dynamic Media.<br>Det här alternativet är bara tillgängligt om **[!UICONTROL Dynamic Media Publish mode]** är inställt **[!UICONTROL Selective Publish]** i mappens egenskaper.  |
-1. Under **[!UICONTROL Schedule]**anger du tidpunkten för avaktiveringen.
-| Schema | Beskrivning |
-| — | — |
-| **[!UICONTROL Now]** | Välj att avpublicera resurserna direkt. |
-| **[!UICONTROL Later]** | Välj det här alternativet om du vill avpublicera resurserna ett visst datum och en viss tid. |
+
+   | Åtgärd | Beskrivning |
+   | --- | --- |
+   | **[!UICONTROL Unpublish]** (från AEM) | Välj det här alternativet om du vill avpublicera resurser från AEM. |
+   | **[!UICONTROL Unpublish from Dynamic Media]** | Välj det här alternativet om du vill avpublicera resurser från Dynamic Media.<br>Det här alternativet är bara tillgängligt om **[!UICONTROL Dynamic Media Publish mode]** är inställt **[!UICONTROL Selective Publish]** i mappens egenskaper. |
+
+1. Under **[!UICONTROL Schedule]** anger du tidpunkten för avaktiveringen.
+
+   | Schema | Beskrivning |
+   | --- | --- |
+   | **[!UICONTROL Now]** | Välj att avpublicera resurserna direkt. |
+   | **[!UICONTROL Later]** | Välj det här alternativet om du vill avpublicera resurserna ett visst datum och en viss tid. |
+
 1. Tryck på i det övre högra hörnet på **[!UICONTROL Manage Publication]** sidan **[!UICONTROL Next]**.
 1. Gör något av följande på **[!UICONTROL Manage Publication – Scope]** sidan:
    * Markera en eller flera resurser som du vill ta bort från avpubliceringen.
@@ -159,12 +169,15 @@ Du kan använda **[!UICONTROL Quick Publish]** för enkel aktivering av resurser
       >Om **[!UICONTROL Quick Publish]** inte visas i verktygsfältet trycker du i stället på ellipsknappen och väljer sedan **[!UICONTROL Quick Publish]** i listrutan.
 
       ![Snabbpublicering på mappnivå till dynamiska media](/help/assets/assets-dm/selective-publish-folder-quick-publish-to-dm.png)
+
 1. Välj något av följande alternativ i **[!UICONTROL Quick Publish]** menylistan.
-| Snabbpubliceringsalternativ | Vad det gör |
-| — | — |
-| Publicera till AEM | Publicerar de markerade resurserna direkt till AEM. |
-| Publicera till varumärkesportal | Publicerar de markerade resurserna direkt till **[!UICONTROL Brand Portal]**.<br>Det här alternativet är bara tillgängligt om din AEM Assets-instans redan har konfigurerats. **[!UICONTROL Brand Portal]** |
-| Publicera till Dynamic Media | Publicerar de valda resurserna direkt till Dynamic Media.<br>En resurs måste redan vara synkroniserad till Dynamic Media. Om det behövs kontrollerar du att **[!UICONTROL Sync mode]** egenskaperna för en mapp redan är inställda på **[!UICONTROL Sync everything in this folder sub-tree to dynamicmedia]**. |
+
+   | Snabbpublicering, alternativ | Vad det gör |
+   | --- | --- | 
+   | Publicera till AEM | Publicerar de markerade resurserna direkt till AEM. |
+   | Publicera på varumärkesportal | Publicerar de markerade resurserna direkt till **[!UICONTROL Brand Portal]**.<br>Det här alternativet är bara tillgängligt om din AEM Assets-instans redan har konfigurerats. **[!UICONTROL Brand Portal]** |
+   | Publicera till Dynamic Media | Publicerar de valda resurserna direkt till Dynamic Media.<br>En resurs måste redan vara synkroniserad till Dynamic Media. Om det behövs kontrollerar du att **[!UICONTROL Sync mode]** egenskaperna för en mapp redan är inställda på **[!UICONTROL Sync everything in this folder sub-tree to dynamicmedia]**. |
+
 1. Tryck **[!UICONTROL OK]** och sedan på **[!UICONTROL Close]**.
 
 ## Publicera eller avpublicera resurser selektivt via sökresultat {#selective-publish-unpublish-search-results}
@@ -203,11 +216,13 @@ Du kan också använda de här kryssrutorna tillsammans med **[!UICONTROL Publis
    | Avpublicera från Dynamic Media | Omedelbart eller vid aktivering | Inte opublicerat från AEM, Dynamic Media eller båda. |
    | Avpublicera från Dynamic Media | Selektiv publicering | Endast opublicerade från Dynamic Media. |
 
-1. Under **[!UICONTROL Schedule]**anger du tidpunkten för avaktiveringen.
-| Valt schema | Vad händer |
-| — | — |
-| Nu | Den valda åtgärden utförs omedelbart. |
-| Senare | Den valda åtgärden körs på det valda datumet och den valda tiden. |
+1. Under **[!UICONTROL Schedule]** anger du tidpunkten för avaktiveringen.
+
+   | Valt schema | Vad händer |
+   | --- | --- |
+   | Nu | Den valda åtgärden utförs omedelbart. |
+   | Senare | Den valda åtgärden körs på det valda datumet och den valda tiden. |
+
 1. Tryck på i det övre högra hörnet på **[!UICONTROL Manage Publication – Options]** sidan **[!UICONTROL Next]**.
 1. (Valfritt) På **[!UICONTROL Manage Publication – Scope]** sidan granskar du **[!UICONTROL Publish Target]** kolumnen i tabellen för de valda resurserna.
 
