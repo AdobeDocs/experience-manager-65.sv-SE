@@ -11,9 +11,9 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d80c6609b5a0ac299b57b1d0c0e8d6210e595b97
+source-git-commit: 7e05502b590fb2c7c36919f94611efe999262d32
 workflow-type: tm+mt
-source-wordcount: '1894'
+source-wordcount: '1890'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 * [AEM 6.5 Platform](/help/sites-deploying/deploy.md)
 
-* AEM Communities licens
+* AEM Communities-licens
 
 * Valfria licenser för:
 
@@ -35,9 +35,9 @@ ht-degree: 0%
 
 ## Checklista för installation {#installation-checklist}
 
-**För[AEM-plattformen](/help/sites-deploying/deploy.md#what-is-aem)**
+**För[AEM](/help/sites-deploying/deploy.md#what-is-aem)**
 
-* installera de senaste [AEM 6.5-uppdateringarna](#aem64updates)
+* installera de senaste [AEM 6.5 uppdateringarna](#aem64updates)
 
 * Om du inte använder standardportarna (4502, 4503) [konfigurerar du replikeringsagenter](#replication-agents-on-author)
 * [replikera krypteringsnyckeln](#replicate-the-crypto-key)
@@ -73,14 +73,14 @@ ht-degree: 0%
       * inte ett delat UGC-arkiv:
 
          * UGC replikeras aldrig
-         * UGC är bara synligt på AEM-instansen eller klustret där det angavs
+         * UGC är bara synligt på AEM instans eller kluster där det angavs
       * standard är JSRP
 
    För **[aktiveringsfunktionen](/help/communities/overview.md#enablement-community)**
 
    * [installera och konfigurera FFmpeg](/help/communities/ffmpeg.md)
    * [installera JDBC-drivrutinen för MySQL](#jdbc-driver-for-mysql)
-   * [installera AEM Communities SCORM-motorn](#scorm-package)
+   * [installera AEM Communities SCORM-Engine](#scorm-package)
    * [installera och konfigurera MySQL för aktivering](/help/communities/mysql.md)
 
 
@@ -90,7 +90,7 @@ ht-degree: 0%
 
 ## Latest Releases {#latest-releases}
 
-AEM 6.5 Communities GA levereras med Communities-paket. Om du vill veta mer om uppdateringar av AEM 6.5 [Communities](/help/release-notes/release-notes.md#experiencemanagercommunities)kan du läsa [AEM 6.5 Release Notes](/help/release-notes/release-notes.md#communities-release-notes.html).
+AEM 6.5 Communities GA levereras med Communities-paketet. Om du vill veta mer om uppdateringar av AEM 6.5 [Communities](/help/release-notes/release-notes.md#experiencemanagercommunities)kan du läsa [AEM 6.5 Release Notes](/help/release-notes/release-notes.md#communities-release-notes.html).
 
 ### AEM 6.5 - uppdateringar {#aem-updates}
 
@@ -100,7 +100,7 @@ De senaste uppdateringarna av AEM 6.5 finns i [Adobe Experience Manager 6.4 Cumu
 
 ### Versionshistorik {#version-history}
 
-Precis som i AEM 6.4 och senare är AEM Communities funktioner och snabbkorrigeringar en del av AEM Communities kumulativa korrigeringspaket och servicepaket. Det finns därför inga separata funktionspaket.
+Liksom AEM 6.4 och senare är AEM Communities funktioner och snabbkorrigeringar en del av AEM Communities kumulativa korrigeringspaket och servicepaket. Det finns därför inga separata funktionspaket.
 
 ### JDBC-drivrutin för MySQL {#jdbc-driver-for-mysql}
 
@@ -152,7 +152,7 @@ AEM Communities SCORM-motorn krävs för [aktiveringsfunktionen](/help/communiti
 
 1. Installera [cq-social-scorm-paketet, version 2.3.7](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/social/scorm/cq-social-scorm-pkg)från paketresursen
 1. Hämta `/libs/social/config/scorm/database_scormengine_data.sql` från cq-instansen och kör den på mysql-servern för att skapa ett uppgraderat scormEngineDB-schema.
-1. Lägg till `/content/communities/scorm/RecordResults` i egenskapen Uteslutna sökvägar i CSRF-filter från`https://<hostname>:<port>/system/console/configMgr&#39; på utgivare.
+1. Lägg till `/content/communities/scorm/RecordResults` i egenskapen Undantagna sökvägar i CSRF-filter från `https://<hostname>:<port>/system/console/configMgr` utgivare.
 
 #### SCORM-loggning {#scorm-logging}
 
@@ -162,35 +162,35 @@ Om du vill kan du ställa in loggnivån på WARN för `RusticiSoftware.*` pakete
 
 Mer information om hur du arbetar med loggar finns i [Arbeta med granskningsposter och loggfiler](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files).
 
-### AEM Advanced MLS {#aem-advanced-mls}
+### AEM avancerad MLS {#aem-advanced-mls}
 
 För att SRP-samlingen (MSRP eller DSRP) ska ha stöd för avancerad flerspråkig sökning (MLS) krävs nya Solr-plugin-program förutom ett anpassat schema och en Solr-konfiguration. Alla nödvändiga objekt paketeras i en nedladdningsbar zip-fil.
 
-Den avancerade nedladdningen av MLS (kallas även &quot;phasetwo&quot;) finns tillgänglig från Adobe-databasen:
+Den avancerade MLS-nedladdningen (kallas även &quot;phasetwo&quot;) är tillgänglig från Adobe-databasen:
 
 * [AEM-SOLR-MLS-phasetwo](https://repo.adobe.com/nexus/content/repositories/releases/com/adobe/tat/AEM-SOLR-MLS-phasetwo/1.2.40/)
 
    * version 1.2.40, 6 april 2016
-   * ladda ned AEM-SOLR-MLS-phasetwo-1.2.40.zip
+   * download AEM-SOLR-MLS-phasetwo-1.2.40.zip
 
 Mer information och installationsinformation finns på [Solr Configuration](/help/communities/solr.md) for SRP.
 
 ### Om länkar att paketera resurs {#about-links-to-package-share}
 
-**Synliga paket i Adobe AEM Cloud**
+**Paket synliga i Adobe AEM Cloud**
 
-Länkarna till paketen på den här sidan kräver ingen instans av AEM som körs eftersom de ska paketera delning på `adobeaemcloud.com`. Paketen kan visas, men `Install`knappen används för att installera paketen på en Adobe-värdplats. Om du tänker installera på en lokal AEM-instans `Install`uppstår ett fel om du väljer det.
+Länkarna till paketen på den här sidan kräver ingen instans av AEM som körs eftersom de ska paketera delning på `adobeaemcloud.com`. Paketen kan visas, men `Install`knappen används för att installera paketen på en värdplats i Adobe. Om du tänker installera på en lokal AEM `Install`uppstår ett fel om du väljer.
 
-**Installera på lokal AEM-instans**
+**Installera på lokal AEM**
 
-Om du vill installera de paket som visas i `adobeaemcloud.com` en lokal AEM-instans måste paketet först hämtas till en lokal disk:
+Om du vill installera de paket som visas i `adobeaemcloud.com` en lokal AEM måste paketet först hämtas till en lokal disk:
 
 * välj fliken **Resurser**
 * välj **Hämta till disk**
 
-På den lokala AEM-instansen använder du pakethanteraren (till exempel [https://localhost:4502/crx/packmgr/](https://localhost:4502/crx/packmgr/)) för att överföra till den lokala AEM-paketdatabasen.
+På den lokala AEM ska du använda pakethanteraren (till exempel [https://localhost:4502/crx/packmgr/](https://localhost:4502/crx/packmgr/)) för att överföra till den lokala AEM paketdatabasen.
 
-Om du använder paketet med hjälp av paketresursen från den lokala AEM-instansen (till exempel [https://localhost:4502/crx/packageshare/](https://localhost:4502/crx/packageshare/)) hämtas `Download`knappen till den lokala AEM-instansens paketdatabas.
+Om du använder paketresursen från den lokala AEM (till exempel [https://localhost:4502/crx/packageshare/](https://localhost:4502/crx/packageshare/)) hämtar `Download`knappen den lokala AEM-instansens paketdatabas.
 
 När du är i den lokala AEM-instansens paketdatabas använder du pakethanteraren för att installera paketet.
 
@@ -202,21 +202,21 @@ I AEM Communities används en gemensam butik för att lagra användargenererat i
 
 Den gemensamma lagringsplatsen stöder moderering av och analys av UGC i publiceringsmiljön samtidigt som behovet av [replikering](/help/communities/sync.md) av UGC elimineras.
 
-* [Community Content Store](/help/communities/working-with-srp.md) : diskuterar SRP-lagringsalternativ för AEM-communities
+* [Community Content Store](/help/communities/working-with-srp.md) : diskuterar SRP-lagringsalternativ för AEM communities
 
 * [Rekommenderade topologier](/help/communities/topologies.md) : diskuterar topologi som ska användas beroende på användningsfall och val av SRP
 
 ## Uppgraderar {#upgrading}
 
-När du uppgraderar till AEM 6.5-plattformen från tidigare versioner av AEM är det viktigt att du läser [Uppgradera till AEM 6.5](/help/sites-deploying/upgrade.md).
+När du uppgraderar till AEM 6.5 från tidigare versioner av AEM är det viktigt att du läser [Uppgradera till AEM 6.5](/help/sites-deploying/upgrade.md).
 
-Förutom att uppgradera plattformen kan du läsa [Uppgradera till AEM Communities 6.5](/help/communities/upgrade.md) om du vill veta mer om communityförändringar.
+Förutom att uppgradera plattformen kan du läsa [Uppgradera till AEM Communities 6.5](/help/communities/upgrade.md) för att få information om communityförändringar.
 
 ## Konfigurationer {#configurations}
 
 ### Primär utgivare {#primary-publisher}
 
-När den valda distributionen är en [publiceringsgrupp](/help/communities/topologies.md#tarmk-publish-farm)måste en AEM-publiceringsinstans identifieras som **`primary publisher`** för aktiviteter som inte ska förekomma i alla instanser, till exempel funktioner som kräver **notifications **eller **Adobe Analytics**.
+När den valda distributionen är en [publiceringsgrupp](/help/communities/topologies.md#tarmk-publish-farm)måste en AEM publiceringsinstans identifieras som **`primary publisher`** för aktiviteter som inte ska förekomma i alla instanser, till exempel funktioner som kräver **notifications **eller **Adobe Analytics**.
 
 Som standard är `AEM Communities Publisher Configuration` OSGi-konfigurationen konfigurerad med kryssrutan **`Primary Publisher`** markerad, så att alla publiceringsinstanser i en publiceringsgrupp identifierar sig själva som primär.
 
@@ -297,13 +297,13 @@ Så här aktiverar du tunneltjänsten:
 
 ### Replikera krypteringsnyckeln {#replicate-the-crypto-key}
 
-Det finns två funktioner i AEM Communities som kräver att alla AEM-serverinstanser använder samma krypteringsnycklar. Dessa är [Analytics](/help/communities/analytics.md) och [ASRP](/help/communities/asrp.md).
+Det finns två funktioner i AEM Communities som kräver att alla AEM serverinstanser använder samma krypteringsnycklar. Dessa är [Analytics](/help/communities/analytics.md) och [ASRP](/help/communities/asrp.md).
 
 Från och med AEM 6.3 lagras nyckelmaterialet i filsystemet och inte längre i databasen.
 
 Om du vill kopiera nyckelmaterialet från författaren till alla andra instanser måste du:
 
-* få tillgång till AEM-instansen, vanligtvis en författarinstans, som innehåller det nyckelmaterial som ska kopieras
+* få åtkomst till AEM, vanligtvis en författarinstans, som innehåller det nyckelmaterial som ska kopieras
 
    * hitta paketet i det lokala filsystemet, till exempel `com.adobe.granite.crypto.file`
 
@@ -316,13 +316,13 @@ Om du vill kopiera nyckelmaterialet från författaren till alla andra instanser
 
 
 
-* för varje AEM-målinstans
+* för varje AEM
 
    * navigera till datamappen, till exempel
 
       * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
    * klistra in de två tidigare kopierade filerna
-   * det är nödvändigt att [uppdatera Granite Crypto-paketet](#refresh-the-granite-crypto-bundle) om AEM-målinstansen körs
+   * det är nödvändigt att [uppdatera Granite Crypto-paketet](#refresh-the-granite-crypto-bundle) om mål-AEM-instansen körs
 
 
 >[!CAUTION]
@@ -331,7 +331,7 @@ Om du vill kopiera nyckelmaterialet från författaren till alla andra instanser
 
 #### Databasreplikering {#repository-replication}
 
-Att ha nyckelmaterialet lagrat i databasen, som var fallet i AEM 6.2 och tidigare, kan bevaras genom att ange följande systemegenskap vid första starten av varje AEM-instans (som skapar den ursprungliga databasen):
+Du kan behålla nyckelmaterialet som lagras i databasen, vilket var fallet i AEM 6.2 och tidigare, genom att ange följande systemegenskap vid första starten av varje AEM (som skapar den ursprungliga databasen):
 
 * `-Dcom.adobe.granite.crypto.file.disable=true`
 
@@ -391,11 +391,11 @@ Var särskilt försiktig med att använda rätt servernamn, inte `localhost`i `R
 
 ### Dispatcher {#dispatcher}
 
-Om du använder Dispatcher kan du läsa:
+Om du använder en Dispatcher läser du:
 
-* AEM&#39;s [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html) documentation
-* [Installera Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html)
-* [Konfigurera Dispatcher för webbgrupper](/help/communities/dispatcher.md)
+* AEM [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html) -dokumentation
+* [Installerar Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html)
+* [Konfigurera Dispatcher för Communities](/help/communities/dispatcher.md)
 * [Kända fel](/help/communities/troubleshooting.md#dispatcher-refetch-fails)
 
 ## Dokumentation för relaterade communities {#related-communities-documentation}
