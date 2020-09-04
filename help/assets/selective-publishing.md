@@ -7,7 +7,7 @@ topic-tags: dynamic-media
 content-type: reference
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4a144e53217c4353818d778415cc303b21412566
+source-git-commit: 68e3e80b1c1dda8352ff30989f85f83e82bde261
 workflow-type: tm+mt
 source-wordcount: '2538'
 ht-degree: 1%
@@ -98,7 +98,7 @@ Se [Skapa en dynamisk mediekonfiguration](#configuring-dynamic-media-cloud-servi
       >
       >Om **[!UICONTROL Manage Publication]** inte visas i verktygsfältet trycker du i stället på ellipsknappen och väljer sedan **[!UICONTROL Manage Publication]** i listrutan.
 
-1. På **[!UICONTROL Manage Publication – Options]** sidan, under **[!UICONTROL Action]**, väljer du vilken typ av aktivering du vill använda.
+1. På **[!UICONTROL Manage Publication - Options]** sidan, under **[!UICONTROL Action]**, väljer du vilken typ av aktivering du vill använda.
 
    | Åtgärd | Beskrivning |
    | --- | --- |
@@ -113,9 +113,9 @@ Se [Skapa en dynamisk mediekonfiguration](#configuring-dynamic-media-cloud-servi
    | **[!UICONTROL Later]** | Välj det här alternativet om du vill publicera resurserna ett visst datum och en viss tid. |
 
 1. Tryck på i det övre högra hörnet på **[!UICONTROL Manage Publication]** sidan **[!UICONTROL Next.]**
-1. Gör något av följande på **[!UICONTROL Manage Publication – Scope]** sidan:
+1. Gör något av följande på **[!UICONTROL Manage Publication - Scope]** sidan:
    * Om det behövs väljer du en eller flera resurser som du vill ta bort från publiceringen.
-   * In the upper-right corner of the **[!UICONTROL Manage Publication – Scope]** page, tap **[!UICONTROL Publish]** or **[!UICONTROL Publish to Dynamic Media.]**
+   * In the upper-right corner of the **[!UICONTROL Manage Publication - Scope]** page, tap **[!UICONTROL Publish]** or **[!UICONTROL Publish to Dynamic Media.]**
 1. Tryck på **[!UICONTROL OK.]**
 
 ### Avpublicera utvalda resurser från Dynamic Media eller AEM med Hantera publikation {#selective-unpublish-manage-publication}
@@ -129,7 +129,7 @@ Se [Skapa en dynamisk mediekonfiguration](#configuring-dynamic-media-cloud-servi
       >
       >Om **[!UICONTROL Manage Publication]** inte visas i verktygsfältet trycker du i stället på ellipsknappen och väljer sedan **[!UICONTROL Manage Publication]** i listrutan.
 
-1. På **[!UICONTROL Manage Publication – Options]** sidan, under **[!UICONTROL Action]**, väljer du vilken typ av avaktivering du vill ha.
+1. På **[!UICONTROL Manage Publication - Options]** sidan, under **[!UICONTROL Action]**, väljer du vilken typ av avaktivering du vill ha.
 
    | Åtgärd | Beskrivning |
    | --- | --- |
@@ -144,9 +144,9 @@ Se [Skapa en dynamisk mediekonfiguration](#configuring-dynamic-media-cloud-servi
    | **[!UICONTROL Later]** | Välj det här alternativet om du vill avpublicera resurserna ett visst datum och en viss tid. |
 
 1. Tryck på i det övre högra hörnet på **[!UICONTROL Manage Publication]** sidan **[!UICONTROL Next.]**
-1. Gör något av följande på **[!UICONTROL Manage Publication – Scope]** sidan:
+1. Gör något av följande på **[!UICONTROL Manage Publication - Scope]** sidan:
    * Markera en eller flera resurser som du vill ta bort från avpubliceringen.
-   * In the upper-right corner of the **[!UICONTROL Manage Publication – Scope]** page, tap **[!UICONTROL Unpublish]** or **[!UICONTROL Unpublish from Dynamic Media.]**
+   * In the upper-right corner of the **[!UICONTROL Manage Publication - Scope]** page, tap **[!UICONTROL Unpublish]** or **[!UICONTROL Unpublish from Dynamic Media.]**
 1. Tryck på **[!UICONTROL OK.]**
 
 ## Publicera material till Dynamic Media eller AEM med Snabbpublicering {#quick-publish-aem-dm}
@@ -223,8 +223,8 @@ Du kan också använda de här kryssrutorna tillsammans med **[!UICONTROL Publis
    | Nu | Den valda åtgärden utförs omedelbart. |
    | Senare | Den valda åtgärden körs på det valda datumet och den valda tiden. |
 
-1. Tryck på i det övre högra hörnet på **[!UICONTROL Manage Publication – Options]** sidan **[!UICONTROL Next.]**
-1. (Valfritt) På **[!UICONTROL Manage Publication – Scope]** sidan granskar du **[!UICONTROL Publish Target]** kolumnen i tabellen för de valda resurserna.
+1. Tryck på i det övre högra hörnet på **[!UICONTROL Manage Publication - Options]** sidan **[!UICONTROL Next.]**
+1. (Valfritt) På **[!UICONTROL Manage Publication - Scope]** sidan granskar du **[!UICONTROL Publish Target]** kolumnen i tabellen för de valda resurserna.
 
    | Inställningen Publicera resurser i Dynamic Media Configuration | Markerad åtgärd | Publiceringsmål |
    | --- | --- | --- |
@@ -237,9 +237,9 @@ Du kan också använda de här kryssrutorna tillsammans med **[!UICONTROL Publis
    | Selektiv publicering | Avpublicera | AEM |
    | Selektiv publicering | Avpublicera från Dynamic Media | Dynamic Media |
 
-1. Gör något av följande på **[!UICONTROL Manage Publication – Scope]** sidan:
+1. Gör något av följande på **[!UICONTROL Manage Publication - Scope]** sidan:
    * Markera en eller flera resurser som du vill ta bort från publicering eller avpublicering.
-   * In the upper-right corner of the **[!UICONTROL Manage Publication – Scope]** page, tap **[!UICONTROL Publish]** or **[!UICONTROL Unpublish]** to begin the action.
+   * In the upper-right corner of the **[!UICONTROL Manage Publication - Scope]** page, tap **[!UICONTROL Publish]** or **[!UICONTROL Unpublish]** to begin the action.
 1. Tryck på **[!UICONTROL OK.]**
 
 ## Kontrollera publiceringsstatus för en resurs {#check-publish-status-of-asset}
