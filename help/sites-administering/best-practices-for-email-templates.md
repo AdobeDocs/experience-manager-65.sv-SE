@@ -11,7 +11,10 @@ topic-tags: best-practices
 discoiquuid: 2418777e-4eb2-4d82-aa9e-8d1b0bf740f3
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 87a8c36130c70d1fe8839c092fffda2821333466
+source-git-commit: 7e05502b590fb2c7c36919f94611efe999262d32
+workflow-type: tm+mt
+source-wordcount: '1126'
+ht-degree: 0%
 
 ---
 
@@ -20,13 +23,13 @@ source-git-commit: 87a8c36130c70d1fe8839c092fffda2821333466
 
 >[!CAUTION]
 >
->AEM-e-postkomponenterna har tagits bort. På grund av e-postens natur, som sammanfogar innehåll och format, kommer de e-postkomponenter som tillhandahålls av AEM att ha begränsad återanvändning för kunderna eftersom de måste implementera anpassade format i de komponenter som behövs för projekten.
+>AEM e-postkomponenter har tagits bort. På grund av e-postens natur, som sammanfogar innehåll och format, blir de e-postkomponenter som AEM tillhandahåller direkt i kartong av begränsad återanvändning för kunderna på grund av behovet av att implementera anpassade format i de komponenter som behövs för projekt.
 >
->E-postkomponenter kan implementeras på projektnivå och de inaktuella AEM-e-postkomponenterna visar hur man kan uppnå detta. Dessa inaktuella komponenter bör dock inte användas i projekt.
+>E-postkomponenter kan implementeras på projektnivå och de borttagna AEM e-postkomponenterna visar hur man kan uppnå detta. Dessa inaktuella komponenter bör dock inte användas i projekt.
 
 I det här dokumentet beskrivs några av de bästa sätten att arbeta med e-postdesign, vilket resulterar i en välutvecklad mall för e-postkampanjer.
 
-Demokampanjen i AEM följer alla dessa bästa metoder. Hur de bästa metoderna implementeras i demokampanjen beskrivs för varje bästa praxis.
+Den demokampanj som finns i AEM följer alla dessa bästa metoder. Hur de bästa metoderna implementeras i demokampanjen beskrivs för varje bästa praxis.
 
 Använd dessa rutiner när du skapar ett eget nyhetsbrev.
 
@@ -44,7 +47,7 @@ Använd dessa rutiner när du skapar ett eget nyhetsbrev.
 
 >[!NOTE]
 >
->När du skapar en e-postmall för Adobe Campaign måste du inkludera egenskapen **acMapping** med värdet **mapRecipient** i **jcr:content** -noden i mallen, annars kan du inte välja Adobe Campaign-mallen i **Sidegenskaper** för AEM (fältet är inaktiverat).
+>När du skapar en e-postmall för Adobe Campaign måste du ta med egenskapen **acMapping** med värdet **mapRecipient** i **jcr:content** -noden i mallen, annars kan du inte välja Adobe Campaign-mallen i **Sidegenskaper** för AEM (fältet är inaktiverat).
 
 ## Komponenten Mall/sida {#template-page-component}
 
@@ -127,8 +130,8 @@ Använd dessa rutiner när du skapar ett eget nyhetsbrev.
 
 | **Bästa praxis** | **Implementering** |
 |---|---|
-| Använd W3C-valideraren för att korrigera HTML-koden. Se till att alla öppna taggar stängs ordentligt. | Koden har validerats. För XHTML-övergångsdokument är det bara det saknade xmlns-attributet för <html> element saknas. |
-| Stör inte JavaScript eller Flash - teknologierna stöds i stort sett inte av e-postklienter. | Varken JavaScript eller Flash används i nyhetsbrevmallen. |
+| Använd W3C-valideraren för att korrigera HTML-koden. Se till att alla öppna taggar stängs ordentligt. | Koden har validerats. För XHTML Transition Doctype saknas bara det saknade xmlns-attributet för `<html>` elementet. |
+| Stör inte JavaScript eller Flash - dessa tekniker stöds i stort sett inte av e-postklienter. | Varken JavaScript eller Flash används i nyhetsbrevmallen. |
 | Lägg till en oformaterad textversion för att skicka flera delar. | En ny widget skapades i sidegenskaperna för att enkelt extrahera en textversion från sidinnehållet. Detta kan användas som startpunkt för den slutliga versionen av plaintext. |
 
 ## Mallar och exempel för kampanjnyhetsbrev {#campaign-newsletter-templates-and-examples}
@@ -137,7 +140,7 @@ AEM innehåller flera mallar och komponenter som du kan använda för att skapa 
 
 ### Mallar {#templates}
 
-Det finns tre något olika malltyper att välja mellan för att få en heltäckande bas och för att bredda möjligheterna med innehållsflöde. Du kan enkelt använda dessa för att skapa anpassade nyhetsbrev.
+Det finns tre något olika malltyper att välja mellan för att få en heltäckande bas och för att bredda möjligheterna för innehållsflöde. Du kan enkelt använda dessa för att skapa anpassade nyhetsbrev.
 
 Alla har ett **sidhuvud**, en **sidfot** och ett **textavsnitt** . Under brödavsnittet skiljer sig varje mall i **kolumndesign** (1, 2 eller 3 kolumner).
 
@@ -145,7 +148,7 @@ Alla har ett **sidhuvud**, en **sidfot** och ett **textavsnitt** . Under brödav
 
 ### Komponenter {#components}
 
-Det finns för närvarande [sju komponenter som kan användas i kampanjmallar](/help/sites-authoring/adobe-campaign-components.md). Dessa komponenter är alla baserade på Adobes **HTML-kod**.
+Det finns för närvarande [sju komponenter som kan användas i kampanjmallar](/help/sites-authoring/adobe-campaign-components.md). Dessa komponenter är alla baserade på Adobe markup-språkets **HTML**.
 
 | **Komponentnamn** | **Komponentsökväg** |
 |---|---|
@@ -161,4 +164,4 @@ Det finns för närvarande [sju komponenter som kan användas i kampanjmallar](/
 >
 >Dessa komponenter är optimerade för e-postinnehåll; dvs. de följer de bästa praxis som beskrivs i detta dokument. Om du använder andra komponenter som inte finns installerade i systemet bryter det vanligtvis mot dessa regler.
 
-Dessa komponenter beskrivs i detalj i [Adobe Campaign-komponenterna](/help/sites-authoring/adobe-campaign-components.md).
+Dessa komponenter beskrivs ingående i [Adobe Campaign-komponenter](/help/sites-authoring/adobe-campaign-components.md).
