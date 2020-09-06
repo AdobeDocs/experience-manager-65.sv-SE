@@ -5,9 +5,9 @@ audience: end-user
 user-guide-title: Användarhandbok för Experience Manager 6.5 Assets
 user-guide-description: Create, manage, deliver, and optimize digital assets.
 translation-type: tm+mt
-source-git-commit: c57cc70fbdeabfdff1e8977d3bf8187f7c41ce77
+source-git-commit: d4cd304fccba9c06078790ea97bee74fc12d8df0
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '650'
 ht-degree: 37%
 
 ---
@@ -157,7 +157,7 @@ ht-degree: 37%
    + [Asynkrona jobb](asynchronous-jobs.md)
    + [Ljuslåda](touch-ui-light-box.md)
    + [Resursinsikter](touch-ui-asset-insights.md)
-   + [Aktivera resursinsikter via Adobe Launch](touch-ui-using-dtm-for-asset-insights.md)
+   + [Aktivera tillgångsinsikter via DTM](touch-ui-using-dtm-for-asset-insights.md)
    + [Konfigurera resursinsikter](touch-ui-configuring-asset-insights.md)
    + [Checka in och checka ut resurser](check-out-and-submit-assets.md)
    + [Använd översättningsmolntjänster på mappar](transition-cloud-services.md)
