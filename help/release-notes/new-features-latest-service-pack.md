@@ -4,9 +4,9 @@ description: Nyheter i Adobe Experience Manager 6.5 Service Pack 6
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 8980348736825f45647a91062b1fe4e4a790b8f1
+source-git-commit: f8a072e0ab24d542a1bec8faf03da57f99747102
 workflow-type: tm+mt
-source-wordcount: '2411'
+source-wordcount: '2435'
 ht-degree: 0%
 
 ---
@@ -126,6 +126,8 @@ Nu kan du bifoga flera filer till [!UICONTROL File Attachment] komponenten i ada
 * Förbättrat stöd för skärmläsare.
 
 #### Andra viktiga förbättringar (6.5.5.0) {#other-enhancements-sites}
+
+* Anonym åtkomst till CRXDE Lite är inte tillåten för att öka säkerheten. I stället dirigeras användarna till inloggningsskärmen. Se [Utveckla med CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
 
 * När du kopierar eller klistrar in ett sidträd kan du nu välja att antingen klistra in rotsidan eller klistra in rotsidan med undersidorna i trädet.
 
