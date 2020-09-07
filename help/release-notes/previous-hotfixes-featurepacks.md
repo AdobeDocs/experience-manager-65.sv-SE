@@ -1,11 +1,11 @@
 ---
-title: Versionsinformation om Adobe Experience Manager 6.5 Previous Service Pack
-description: Versionsinformation om Adobe Experience Manager 6.5 Service Pack 3 och tidigare.
+title: '[!DNL Adobe Experience Manager] 6.5 Versionsinformation om tidigare Service Pack.'
+description: Versionsinformation för [!DNL Adobe Experience Manager] 6.5 Service Packs.
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: a842da57a155f56ad3efc268610c167fe140998b
+source-git-commit: c27f44326f653bbdc61e866e89e60893e81a7a3b
 workflow-type: tm+mt
-source-wordcount: '11319'
+source-wordcount: '11326'
 ht-degree: 0%
 
 ---
@@ -13,13 +13,15 @@ ht-degree: 0%
 
 # Programfixar och funktionspaket som ingår i tidigare servicepaket {#hotfixes-and-feature-packs-included-in-previous-service-packs}
 
-## Adobe Experience Manager 6.5.5.0 {#experience-manager-6550}
+## [!DNL Adobe Experience Manager] 6.5.5.0 {#experience-manager-6550}
 
 Adobe Experience Manager 6.5.5.0 är en viktig uppdatering som innehåller nya funktioner, viktiga förbättringar som kunderna efterfrågat samt prestanda, stabilitet och säkerhetsförbättringar som släppts sedan den allmänna tillgängligheten av 6.5-utgåvan i **april 2019**. Den kan installeras ovanpå Adobe Experience Manager 6.5.
 
-Några viktiga funktioner och förbättringar i Adobe Experience Manager 6.5.5.0:
+Några viktiga funktioner och förbättringar som introducerades i [!DNL Adobe Experience Manager] 6.5.5.0 är:
 
-* Anpassa kolumnnamnen som visas i Adobe Experience Manager Inbox.
+* Anonym åtkomst till CRXDE Lite är inte tillåten. I stället dirigeras användarna till inloggningsskärmen. Se [Utveckla med CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
+
+* Anpassa kolumnnamnen som visas i [!DNL Adobe Experience Manager] Inkorgen.
 
 * Förbättrad tillgänglighet inom olika områden i Experience Manager Web Content Management (WCM), t.ex. sidredigeraren, Core Components, RTE och administratörsgränssnittet.
 
@@ -69,7 +71,7 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 * När en användare kopierar och klistrar in en layoutbehållare på samma sida visas inte komponenterna i en layoutbehållare (NPR-33648).
 * Hälsokontrollen för utskickaren visar `Invalid cookie header` varningsmeddelandet i loggfilerna (NPR-33629).
 * Speglad XSS i PreferencesServlet (NPR-33438).
-* Anonyma användare har tillgång till CRX DE Lite-funktioner (GRANITE-27790).
+* Anonyma användare har tillgång till CRXDE Lite-funktioner (GRANITE-27790).
 
 ### [!DNL Assets] {#assets-6550}
 
@@ -1054,7 +1056,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 * Ett problem med Scene7 videospelare när den expanderar till helskärm. Programfix för CQ-4266700
 * ZoomVerticalViewer: Panoreringsknappar ska inte visas om en enda bildresurs används. Programfix för CQ-4264795
 * Om du tar bort en underordnad nod i live-kopian bör liveRelationship frigöras. Programfix för CQ-4270395
-* Metadataschemat innehåller bara objekt från den globala konfigurationen och saknar dem från den aktiva klientorganisationen. URL-värdet för formPath återställs till standard även om det ändras. NPR-29945: Programfix för CQ-4262898
+* Metadataschemat innehåller bara objekt från den globala konfigurationen och saknar dem från den aktiva klientorganisationen. URL-värdet för formPath återställs till standard även om det ändras. NPR-29944: Programfix för CQ-4262898
 * Publicera bildförinställningar som [!DNL Brand Portal] misslyckas med 500-felkod. NPR-29510: Programfix för CQ-4268659
 
 ### Sites
@@ -1154,7 +1156,7 @@ De viktigaste högdagrarna för [!DNL Experience Manager Forms] 6.5.1.0 är:
 
 **Integrering med backend**
 
-* Det gick inte att hämta WSDL (Protected Web Service Definition Language). NPR-29944: Programfix för CQ-4270777
+* Det gick inte att hämta WSDL (Protected Web Service Definition Language). NPR-29945: Programfix för CQ-4270777
 * När [!DNL Experience Manager Forms] är installerat på IBM WebSphere misslyckas skapandet av en formulärdatamodell baserad på SOAP. Programfix för CQ-4251134
 * Aktiverat stöd för ADFS (Active Directory Federation Services) v3.0 för integrering på plats i Microsoft Dynamics. Programfix för CQ-4270586
 * När en datakällas titel ändras visas inte den uppdaterade titeln i formulärdatamodellen. Programfix för CQ-4265599
