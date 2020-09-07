@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: b4d38e45-eaa0-4ace-a885-a2e84fdfd5a1
 pagetitle: Configuring Email
 translation-type: tm+mt
-source-git-commit: 097109edcf66cc06460c9d962037e49613e3405b
+source-git-commit: 8496c2fa298b5490bb2560f61de77876d66fd6f6
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '750'
 ht-degree: 1%
 
 ---
@@ -56,7 +56,7 @@ Till exempel (ifylld med värden endast för illustrationsändamål):
 
 * **[!UICONTROL SMTP server port]**
 
-   *(Obligatoriskt)* SMTP-serverporten måste vara 25 eller senare.
+   *(Obligatoriskt)* SMTP-serverporten måste vara 25 eller högre.
 
 * **[!UICONTROL SMTP user]**
 
@@ -112,7 +112,7 @@ Den här konfigurationen bör inte ändras.
 
 * Kontrollera att **Skapa inlägg från svarsmeddelanden** är `unchecked`.
 
-![chlimage_1-100](assets/chlimage_1-100.png)
+![chlimage_1-100](assets/configure-email.png)
 
 ### Konfiguration för prenumerationer {#configuration-for-subscriptions}
 
@@ -122,7 +122,7 @@ För webbgruppsprenumerationer är det möjligt att aktivera eller inaktivera m�
 * Välj redigeringsikonen.
 * Kontrollera att **namnet** är `subscriptions-email`.
 
-![chlimage_1-101](assets/chlimage_1-101.png)
+   ![chlimage_1-101](assets/configure-email-subscription.png)
 
 * **[!UICONTROL Name]**
 
@@ -138,9 +138,10 @@ För webbgruppsprenumerationer är det möjligt att aktivera eller inaktivera m�
 * **[!UICONTROL Maximum length of Subject]**
 
    Om spårar-ID läggs till på ämnesraden är detta den maximala längden för motivet, exklusive spårade ID, efter vilken det trimmas. Observera att detta bör vara så litet som möjligt för att undvika att spårad ID-information går förlorad. Standardvärdet är 200.
-* **[!UICONTROL Email "From" address]**
 
-   *(Obligatoriskt)* Adress som e-postmeddelanden ska levereras från. Sannolikt samma **SMTP-användare** som angetts för [standardtjänsten](#configuredefaultmailservice)för e-post. Standardvärdet är `no-reply@example.com`.
+* **[!UICONTROL "Reply-To" email address]**
+
+   Adress som används som e-postadress för Svara till. Standardvärdet är `communities@adobe.com`.
 
 * **[!UICONTROL Reply-to-Delimiter]**
 
