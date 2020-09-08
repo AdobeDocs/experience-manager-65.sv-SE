@@ -1,8 +1,8 @@
 ---
 title: Grundläggande konfigurationskoncept
 seo-title: Grundläggande konfigurationskoncept
-description: Lär dig hur du konfigurerar AEM.
-seo-description: Lär dig hur du konfigurerar AEM.
+description: Lär dig konfigurera AEM.
+seo-description: Lär dig konfigurera AEM.
 uuid: edcdd4bd-5917-417e-8913-40d488383ea9
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,20 +10,23 @@ topic-tags: configuring
 content-type: reference
 discoiquuid: 2673ea92-1651-4b1b-9aac-f4ba8b36782e
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 8f35717324cd2c1524fb2cf931b3ce21be05729a
+workflow-type: tm+mt
+source-wordcount: '2132'
+ht-degree: 0%
 
 ---
 
 
 # Grundläggande konfigurationskoncept{#basic-configuration-concepts}
 
-Adobe Experience Manager (AEM) installeras med standardinställningar för alla parametrar, vilket gör att programmet kan köras direkt. Du kan dock konfigurera AEM efter dina egna specifika krav.
+Adobe Experience Manager (AEM) installeras med standardinställningar för alla parametrar så att det kan köras &quot;utanför lådan&quot;. Du kan dock konfigurera AEM efter dina egna specifika krav.
 
 Det finns många aspekter av AEM som kan konfigureras:
 
 * Vissa är [vanligtvis konfigurerade för varje projektinstallation](#primary-configuration-considerations) och måste granskas för att bekräfta om de är tillämpliga på ditt projekt eller inte.
 * [Ytterligare konfigurationer](#further-configuration-considerations) kan vara vanliga men inte tvingande. relaterade till funktioner, eller systemprestanda och stabilitet.
-* Andra krävs bara för vissa valfria funktioner i AEM (dessa dokumenteras tillsammans med lämplig funktion).
+* Andra är bara obligatoriska för vissa valfria funktioner i AEM (dessa dokumenteras tillsammans med lämplig funktion).
 
 Beroende på den specifika konfigurationen kan dessa ändringar göras antingen med:
 
@@ -45,7 +48,7 @@ Beroende på den specifika konfigurationen kan dessa ändringar göras antingen 
 
 * **AEM WCM**
 
-   Olika aspekter kan konfigureras i själva AEM WCM, många med [verktygskonsolen](/help/sites-administering/tools-consoles.md) . till exempel replikeringsagenter.
+   Olika aspekter kan konfigureras i AEM WCM, många med [verktygskonsolen](/help/sites-administering/tools-consoles.md) . till exempel replikeringsagenter.
 
 >[!NOTE]
 >
@@ -57,7 +60,7 @@ Beroende på den specifika konfigurationen kan dessa ändringar göras antingen 
 >
 >Det är enkelt att konfigurera AEM, men du måste vara medveten om att:
 >
->Vissa ändringar kan ha stor effekt på programmet/programmen. Se därför till att du har den erfarenhet och kunskap som krävs innan du börjar konfigurera AEM, och gör bara de ändringar som du vet behövs. Alla ändringar som görs via OSGi-konsolen tillämpas **omedelbart** på det system som körs (ingen omstart krävs).
+>Vissa ändringar kan ha stor effekt på programmet/programmen. Se därför till att du har den erfarenhet och kunskap som krävs innan du börjar konfigurera AEM, och gör bara de ändringar som du vet är nödvändiga. Alla ändringar som görs via OSGi-konsolen tillämpas **omedelbart** på det system som körs (ingen omstart krävs).
 
 ## Överväganden om primär konfiguration {#primary-configuration-considerations}
 
@@ -108,7 +111,7 @@ Det innebär att när en IP-adress måste anges kan du välja (efter behov) blan
 
 ### Rensning av version {#version-purging}
 
-I en standardinstallation skapar AEM en ny version av en sida eller nod när du aktiverar en sida (efter att innehållet har uppdaterats). Du kan även skapa ytterligare versioner på begäran med hjälp av fliken **Versionshantering** i sidosparken. Alla dessa versioner lagras i databasen och kan återställas om det behövs.
+I en standardinstallation skapar AEM en ny version av en sida eller nod när du aktiverar en sida (efter att innehållet har uppdaterats). Du kan även skapa ytterligare versioner på begäran med hjälp av fliken **Versionshantering** i sidsparken. Alla dessa versioner lagras i databasen och kan återställas om det behövs.
 
 Dessa versioner rensas aldrig, så databasstorleken kommer att öka med tiden och måste därför hanteras.
 
@@ -116,7 +119,7 @@ Mer information finns i [Rensning](/help/sites-deploying/version-purging.md) av 
 
 ### Loggning {#logging}
 
-Med AEM kan du konfigurera:
+AEM ger dig möjlighet att konfigurera:
 
 * globala parametrar för den centrala loggningstjänsten
 * begära dataloggning, en särskild loggningskonfiguration för begärandeinformation
@@ -126,7 +129,7 @@ Mer information finns i [Loggning](/help/sites-deploying/configure-logging.md) .
 
 ### Körningslägen {#run-modes}
 
-Med körningslägena kan du trimma AEM-instansen för ett specifikt ändamål; till exempel författare eller publicera, testa, utveckla eller intranät.
+Med körningslägena kan du justera AEM för ett specifikt ändamål; till exempel författare eller publicera, testa, utveckla eller intranät.
 
 Detta görs genom att definiera samlingar av konfigurationsparametrar för varje körningsläge. En grundläggande uppsättning konfigurationsparametrar används för alla körningslägen, och du kan sedan justera ytterligare uppsättningar efter syftet med den specifika miljön. Dessa används sedan efter behov.
 
@@ -136,7 +139,7 @@ Mer information finns i [Körningslägen](/help/sites-deploying/configure-runmod
 
 ### Enkel inloggning {#single-sign-on}
 
-Med enkel inloggning (SSO) kan en användare få åtkomst till flera system efter att ha angett inloggningsuppgifter (till exempel användarnamn och lösenord) en gång. Ett separat system (kallas betrodd autentiserare) utför autentiseringen och förser Experience Manager med inloggningsuppgifterna. Experience Manager kontrollerar och verkställer användarens åtkomstbehörigheter (d.v.s. avgör vilka resurser användaren har åtkomst till).
+Med enkel inloggning (SSO) kan en användare få åtkomst till flera system efter att ha angett inloggningsuppgifter (till exempel användarnamn och lösenord) en gång. Ett separat system (som kallas betrodd autentiserare) utför autentiseringen och ger Experience Manager inloggningsuppgifterna. Experience Manager kontrollerar och verkställer användarens åtkomstbehörigheter (d.v.s. avgör vilka resurser användaren har åtkomst till).
 
 Mer information finns i [Enkel inloggning](/help/sites-deploying/single-sign-on.md) .
 
@@ -153,17 +156,17 @@ Mer information finns i [Resursmappning](/help/sites-deploying/resource-mapping.
 
 ### Replikerings-, omvänd replikering- och replikeringsagenter {#replication-reverse-replication-and-replication-agents}
 
-Replikeringsagenterna är centrala för AEM eftersom den mekanism som används för att:
+Replikeringsagenter AEM som den mekanism som används för att:
 
 * [Publicera (aktivera)](/help/sites-authoring/publishing-pages.md) innehåll från en författare till en publiceringsmiljö.
 * Rensa innehåll explicit från Dispatcher-cachen.
 * Returnera användarindata (till exempel formulärindata) från publiceringsmiljön till författarmiljön (under kontroll av författarmiljön).
 
-Mer information finns i [Replikering](/help/sites-deploying/replication.md).
+For further details see [Replication](/help/sites-deploying/replication.md).
 
 ### Konfigurationsinställningar för OSGi {#osgi-configuration-settings}
 
-[OSGi](https://www.osgi.org/) är en grundläggande del i AEM-teknikens stack. Det används för att styra de sammansatta paketen av AEM och deras konfiguration.
+[OSGi](https://www.osgi.org/) är en grundläggande del i AEM. Det används för att styra de sammansatta AEM och deras konfiguration.
 
 I [OSGi-konfigurationsinställningar](/help/sites-deploying/osgi-configuration-settings.md) finns en lista med de olika paket som är relevanta för projektimplementering (listade enligt paket). Alla inställningar som visas behöver inte justeras, vissa anges för att du ska förstå hur AEM fungerar.
 
@@ -175,21 +178,21 @@ LDAP-autentisering krävs för att autentisera användare som lagras i en (centr
 
 LDAP-autentisering sker på databasnivå, så den hanteras direkt av databasen. Mer information finns i [Konfigurera LDAP med AEM](/help/sites-administering/ldap-config.md).
 
-Användarhantering i AEM (inklusive tilldelning av åtkomsträttigheter) finns i [Användaradministration och -säkerhet](/help/sites-administering/security.md).
+Användarhantering inom AEM (inklusive tilldelning av åtkomsträttigheter) finns i [Användaradministration och -säkerhet](/help/sites-administering/security.md).
 
 ### Konfigurera Dispatcher {#configuring-the-dispatcher}
 
-Dispatcher är Adobes verktyg för cachelagring och/eller belastningsutjämning. Om du använder Dispatcher kan du även skydda AEM-servern mot attacker. Därför kan du öka säkerheten för din AEM-instans genom att använda Dispatcher tillsammans med en webbserver i företagsklass.
+Dispatcher är ett Adobe Experience Manager verktyg för cachelagring och/eller belastningsutjämning som kan användas tillsammans med en webbserver i företagsklass.
 
 Mer information finns i [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html) , särskilt [Konfigurera Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html) .
 
-### Konfigurera AEM LiveCycle Connector {#configuring-aem-livecycle-connector}
+### Konfigurerar AEM LiveCycle Connector {#configuring-aem-livecycle-connector}
 
-I och med att AEM Doc Services och AEM Doc Security släpps har vi nu möjlighet att anropa LiveCycle doc-tjänsterna för att återge ett XFA-formulär, konvertera ett dokument till PDF och policyskydda ett dokument. Mer information finns i [AEM LiveCycle Connector](https://helpx.adobe.com/livecycle/help/aem/aem-livecycle-connector.html) .
+I och med releasen av AEM dokumenttjänster och AEM dokumentsäkerhet har vi nu möjlighet att anropa LiveCycle dokumenttjänster för att återge ett XFA-formulär, konvertera ett dokument till PDF och policyskydda ett dokument. Mer information finns i [AEM LiveCycle Connector](https://helpx.adobe.com/livecycle/help/aem/aem-livecycle-connector.html) .
 
 ### Jobbavlastning och topologiadministration {#job-offloading-and-topology-administration}
 
-[När du avlastar](/help/sites-deploying/offloading.md) distribueras bearbetningsuppgifter som är Experience Manager-instanser i en topologi. Med avlastning kan du använda specifika Experience Manager-instanser för att utföra specifika typer av bearbetning. Specialiserad bearbetning gör att du kan maximera användningen av tillgängliga serverresurser.
+[När du avlastar](/help/sites-deploying/offloading.md) distribueras bearbetningsuppgifter som är Experience Manager-instanser i en topologi. Med avlastning kan du använda särskilda Experience Manager-instanser för att utföra vissa typer av bearbetning. Specialiserad bearbetning gör att du kan maximera användningen av tillgängliga serverresurser.
 
 Topologier är löst kopplade Experience Manager-kluster som deltar i avlastning. Ett kluster består av en eller flera Experience Manager-serverinstanser (en enda instans betraktas som ett kluster).
 
@@ -229,9 +232,9 @@ Du kan aktivera HTTP över SSL för att använda säkrare anslutningar till dina
 
 Mer information finns i [Aktivera HTTP över SSL](/help/sites-administering/ssl-by-default.md) .
 
-### AEM Portaler och Portlets {#aem-portals-and-portlets}
+### AEM portaler och portlets {#aem-portals-and-portlets}
 
-En portal är ett webbprogram som innehåller personalisering, samlad inloggning, innehållsintegrering från olika källor och som är värd för informationssystemens presentationsskikt. Med portletkomponenten kan du även bädda in en portlet på sidan. För att få tillgång till innehåll från CQ5 WCM kan portalservern utrustas med CQ5 Portal Director Portlet. Du kan göra detta genom att installera, konfigurera och lägga till portleten på portalsidan.
+En portal är ett webbprogram som innehåller personalisering, samlad inloggning, innehållsintegrering från olika källor och som är värd för informationssystemens presentationsskikt. Med portletkomponenten kan du även bädda in en portlet på sidan. För att få tillgång till innehåll som tillhandahålls av CQ5 WCM kan portalservern utrustas med CQ5 Portal Director Portlet. Du kan göra detta genom att installera, konfigurera och lägga till portleten på portalsidan.
 
 Mer information finns i [Portal och Portlets](/help/sites-administering/aem-as-portal.md) .
 
@@ -245,11 +248,11 @@ Mer information finns i [Förfallotid för statiska objekt](/help/sites-deployin
 
 Varje java-process kan komma åt filer - detta kräver systemresurser. Av den anledningen definieras en övre gräns för hur många filer varje process har åtkomst till samtidigt. Om detta överskrids kan ett undantagsfel uppstå.
 
-Om AEM-processen överskrider det högsta tillåtna antalet visas meddelandet &quot; `too many open files`&quot; i `error.log`.
+Om AEM överskrider det högsta tillåtna antalet visas meddelandet &quot; `too many open files`&quot; i `error.log`.
 
 För att undvika sådana undantag måste du:
 
-1. Kontrollera hur många öppna filer AEM-processen använder.
+1. Kontrollera hur många öppna filer som AEM använder.
 
    Hur du gör den här kontrollen beror på vilken plattform instansen körs på. Verktyg som LSOF (Unix) eller Process Explorer (Windows) kan användas.
 
@@ -264,7 +267,7 @@ För att undvika sådana undantag måste du:
 
    Som standard `serverctl` konfigureras `CQ_MAX_OPEN_FILES` till `8192`; detta bör räcka för de flesta scenarier.
 
-### Konfigurera RTF-redigeraren {#configuring-the-rich-text-editor}
+### Configuring the Rich Text Editor {#configuring-the-rich-text-editor}
 
 Med **textredigeraren** (**RTE**) får författarna ett stort antal [funktioner](/help/sites-authoring/rich-text-editor.md) för att redigera sitt textinnehåll. som ger dem ikoner, valrutor och menyer för en WYSIWYG-upplevelse.
 
@@ -306,9 +309,9 @@ Sidavbildningar visas i kolumnen **Impressions** i den klassiska användargräns
 
 * På författarinstansen:
 
-   * [Adobe Page Impressions Track](/help/sites-deploying/osgi-configuration-settings.md)
+   * [Spårning för Adobe-sidestryck](/help/sites-deploying/osgi-configuration-settings.md)
 
 >[!CAUTION]
 >
->Konfigurationen av Adobe Page Impressions Tracker i författarmiljön tillåter anonyma begäranden till spårningstjänsten.
+>Konfigurationen av spårningsfunktionen för Adobe-siduppläsningar i författarmiljön tillåter anonyma begäranden till spårningstjänsten.
 
