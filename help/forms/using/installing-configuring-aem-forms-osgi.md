@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dfc473eb-6091-4f5d-a5a0-789972c513a9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 24d817bf8e52136980783ef14cea8531519ee622
+source-git-commit: cbc43991143397c8bc0080b7402bfdc664522ab8
 workflow-type: tm+mt
-source-wordcount: '1912'
+source-wordcount: '1895'
 ht-degree: 0%
 
 ---
@@ -180,7 +180,7 @@ Utför följande steg på alla Author- och Publish-instanser för att lägga til
 
 #### Konfigurera Dispatcher {#configure-dispatcher}
 
-Dispatcher är ett verktyg för cachelagring och lastbalansering för AEM. AEM Dispatcher skyddar också AEM från attacker. Du kan öka säkerheten för AEM genom att använda Dispatcher tillsammans med en webbserver i företagsklass. Om du använder [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html)gör du följande konfigurationer för AEM Forms:
+Dispatcher är ett Adobe Experience Manager verktyg för cachelagring och/eller belastningsutjämning som kan användas tillsammans med en webbserver i företagsklass. Om du använder [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html)gör du följande konfigurationer för AEM Forms:
 
 1. Konfigurera åtkomst för AEM Forms:
 
