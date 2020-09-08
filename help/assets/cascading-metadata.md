@@ -1,11 +1,11 @@
 ---
-title: Cascading metadata in [!DNL Adobe Experience Manager Assets].
+title: Överlappande metadata i [!DNL Adobe Experience Manager Assets].
 description: I den här artikeln beskrivs hur du definierar överlappande metadata för resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: c92215a6cb1f4c3d02e9a5f5b3fd36c65fc002ce
 workflow-type: tm+mt
-source-wordcount: '895'
+source-wordcount: '898'
 ht-degree: 5%
 
 ---
@@ -16,6 +16,10 @@ ht-degree: 5%
 När användare hämtar metadatainformation för en resurs anger de information som finns i de olika tillgängliga fälten. Du kan visa specifika metadatafält eller fältvärden som är beroende av vilka alternativ som är markerade i de andra fälten. En sådan villkorlig visning av metadata kallas överlappande metadata. Du kan med andra ord skapa ett beroende mellan ett visst metadatafält/värde och ett eller flera fält och/eller deras värden.
 
 Använd metadatamodeller för att definiera regler för visning av överlappande metadata. Om ditt metadataram t.ex. innehåller ett fält av resurstyp kan du definiera en relevant uppsättning fält som ska visas baserat på vilken typ av resurs som användaren väljer.
+
+>[!CAUTION]
+>
+>Överlappande metadata stöds inte för innehållsfragment.
 
 Här följer några exempel där du kan definiera överlappande metadata:
 
@@ -55,6 +59,7 @@ Oavsett vilken resurstyp du väljer visas copyrightinformationen som ett obligat
    * Om du vill ange värdena manuellt markerar du **[!UICONTROL Add Manually]** och klickar på **[!UICONTROL Add Choice]** alternativet och anger text och värde. Ange till exempel resurstyperna Video, PDF, Word och Bild.
 
    * Om du vill hämta värden från en JSON-fil dynamiskt markerar du **[!UICONTROL Add Through JSON Path]** och anger sökvägen till JSON-filen. [!DNL Experience Manager] hämtar nyckelvärdepar i realtid när formuläret presenteras för användaren.
+
    Båda alternativen utesluter varandra. Du kan inte importera alternativen från en JSON-fil och redigera manuellt.
 
    ![add_choice](assets/add_choice.png)
