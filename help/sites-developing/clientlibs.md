@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 3d14837d-41a8-480a-83ba-392e32f84c65
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f0dc620926a3ba2558313153f7a0fd3f8cd3c712
+source-git-commit: 5d33b48000cf607eb77c626ec539280cadab378e
 workflow-type: tm+mt
-source-wordcount: '2740'
+source-wordcount: '2889'
 ht-degree: 0%
 
 ---
@@ -233,9 +233,9 @@ Använd egenskapen categories för att identifiera klientbiblioteksmappen som sk
 * **Typ:** Sträng[]
 * **Värde:** Värdet på egenskapen categories för den `cq:ClientLibraryFolder` nod som ska bäddas in.
 
-<!-- #### Using Embedding to Minimize Requests {#using-embedding-to-minimize-requests}
+#### Använda inbäddning för att minimera begäranden {#using-embedding-to-minimize-requests}
 
-In some cases you may find that the final HTML generated for typical page by your publish instance includes a relatively large number of `<script>` elements, particularly if your site is using client context information for analaytics or targeting. For example, in a non-optimized project you might find the following series of `<script>` elements in the HTML for a page:
+I vissa fall kan du upptäcka att den slutliga HTML-koden som genereras för den typiska sidan av publiceringsinstansen innehåller ett relativt stort antal `<script>` element, särskilt om webbplatsen använder klientkontextinformation för analys eller målanpassning. I ett icke-optimerat projekt kan du till exempel hitta följande serie med `<script>` element i HTML-koden för en sida:
 
 ```xml
 <script type="text/javascript" src="/etc/clientlibs/granite/jquery.js"></script>
@@ -243,13 +243,12 @@ In some cases you may find that the final HTML generated for typical page by you
 <script type="text/javascript" src="/etc/clientlibs/granite/jquery/granite.js"></script>
 <script type="text/javascript" src="/etc/clientlibs/foundation/jquery.js"></script>
 <script type="text/javascript" src="/etc/clientlibs/foundation/shared.js"></script>
-<script type="text/javascript" src="/etc/clientlibs/granite/underscore.js"></script>
 <script type="text/javascript" src="/etc/clientlibs/foundation/personalization/kernel.js"></script>
 ```
 
-In such cases, it can be useful to combine all the required client library code in to a single file so that the number of back and forth requests on page load is reduced. To do this you can `embed` the required libraries into you app-specific client library using the embed property of the `cq:ClientLibraryFolder` node.
+I sådana fall kan det vara användbart att kombinera all nödvändig klientbibliotekskod till en enda fil så att antalet fram- och tillbaka-begäranden vid sidinläsning minskar. Det gör du genom `embed` att använda `cq:ClientLibraryFolder` nodens inbäddningsegenskap för de nödvändiga biblioteken i ditt programspecifika klientbibliotek.
 
-The following client library categories are incuded with AEM. You should embed only those that are required for he functioning of your particular site. However, **you should maintain the order listed here**:
+Följande klientbibliotekskategorier ingår i AEM. Du bör endast bädda in de som krävs för att din webbplats ska fungera. Du bör dock behålla **den ordning som anges här**:
 
 1. `browsermap.standard`
 1. `browsermap`
@@ -269,10 +268,6 @@ The following client library categories are incuded with AEM. You should embed o
 1. `cq.collab.toggle`
 1. `cq.collab.forum`
 1. `cq.cleditor`
-
-EDITOR NOTE: removed as requested on CQDOC-16765
-
--->
 
 #### Sökvägar i CSS-filer {#paths-in-css-files}
 
