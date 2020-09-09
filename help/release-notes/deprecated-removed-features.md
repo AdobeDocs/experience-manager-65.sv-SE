@@ -2,7 +2,7 @@
 title: Borttagna funktioner i Adobe Experience Manager 6.5.
 description: Versionsinformation om borttagna funktioner i Adobe Experience Manager 6.5.
 translation-type: tm+mt
-source-git-commit: f0dc620926a3ba2558313153f7a0fd3f8cd3c712
+source-git-commit: 1e6feac534fe990d614997c4bd3ab999a4a8d479
 workflow-type: tm+mt
 source-wordcount: '1722'
 ht-degree: 2%
@@ -49,7 +49,7 @@ Kunderna rekommenderas att granska om de använder funktionen/funktionen i den a
 | Utvecklare | Använda YUI för att komprimera/minimera JavaScript-klientbibliotek. Adobe planerar inte att uppdatera YUI-biblioteket ytterligare. Fram till AEM 6.4 var YUI standard att minifiera JavaScript med alternativet att byta till Google Closure Compiler (GCC). Från och med AEM 6.5 är GCC standard. | Adobe rekommenderar att man uppgraderar till AEM 6.5 för att gå över till GCC för implementering |
 | Utvecklare | Klassiskt redigeringsprogram för användargränssnittsdialogrutor i CRXDE-listan. Adobe planerar inte att ytterligare förbättra den klassiska dialogruteredigeraren för användargränssnittet som levereras som en del av distributionen (QuickStart) | Det finns ingen ersättning. |
 | Forms | AEM Forms integrering med AEM Mobile är föråldrad. | Det finns ingen ersättare. |  | Utvecklare | Klassiskt redigeringsprogram för användargränssnittsdialogrutor i CRXDE-listan. Adobe planerar inte att ytterligare förbättra den klassiska dialogruteredigeraren för användargränssnittet som levereras som en del av distributionen (QuickStart) | Det finns ingen ersättning. |
-| Forms | Klientbibliotek med Lodash/underscore. Adobe planerar inte att ytterligare underhålla och uppdatera Lodash-/understreckklientbiblioteket som levereras som en del av distributionen (QuickStart) | Adobe rekommenderar att kunder som fortfarande behöver Lodash/underscore för sin kod lägger till den i sin projektkodbas. |
+| Utvecklare | Klientbibliotek med Lodash/underscore. Adobe planerar inte att ytterligare underhålla och uppdatera Lodash-/understreckklientbiblioteket som levereras som en del av distributionen (QuickStart) | Adobe rekommenderar att kunder som fortfarande behöver Lodash/underscore för sin kod lägger till den i sin projektkodbas. |
 
 ## Borttagna funktioner {#removed-features}
 
