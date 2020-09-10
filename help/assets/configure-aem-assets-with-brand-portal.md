@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: dca5a2ac-1fc8-4251-b073-730fd6f49b1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5baef6f4d570aff738444e0620b982729b897f89
+source-git-commit: 8633216807061c73f4bc692d13f9eba37845cffc
 workflow-type: tm+mt
-source-wordcount: '1881'
+source-wordcount: '1913'
 ht-degree: 12%
 
 ---
@@ -357,6 +357,8 @@ Utför följande steg för att validera konfigurationen:
    >[!NOTE]
    >
    >Inaktivera inte någon av replikeringsagenterna. Det kan leda till att replikeringen av vissa resurser misslyckas.
+   >
+   >Se till att alla fyra replikeringsagenterna är konfigurerade för att undvika timeout-fel. Se [felsöka problem vid parallell publicering till varumärkesportalen](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/troubleshoot-parallel-publishing.html#connection-timeout).
 
 Din AEM Assets-författarinstans har konfigurerats med varumärkesportalen. Nu kan du:
 
