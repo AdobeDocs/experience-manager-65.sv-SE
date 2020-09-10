@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: b4d38e45-eaa0-4ace-a885-a2e84fdfd5a1
 pagetitle: Configuring Email
 translation-type: tm+mt
-source-git-commit: 8496c2fa298b5490bb2560f61de77876d66fd6f6
+source-git-commit: 50c1532b2bdc41555eff2be718cd478aad1f403a
 workflow-type: tm+mt
 source-wordcount: '750'
 ht-degree: 1%
@@ -112,7 +112,7 @@ Den här konfigurationen bör inte ändras.
 
 * Kontrollera att **Skapa inlägg från svarsmeddelanden** är `unchecked`.
 
-![chlimage_1-100](assets/configure-email.png)
+![configure-email-reply](assets/configure-email-reply.png)
 
 ### Konfiguration för prenumerationer {#configuration-for-subscriptions}
 
@@ -122,7 +122,7 @@ För webbgruppsprenumerationer är det möjligt att aktivera eller inaktivera m�
 * Välj redigeringsikonen.
 * Kontrollera att **namnet** är `subscriptions-email`.
 
-   ![chlimage_1-101](assets/configure-email-subscription.png)
+   ![configure-email-subscription](assets/configure-email-subscriptions.png)
 
 * **[!UICONTROL Name]**
 
@@ -141,7 +141,7 @@ För webbgruppsprenumerationer är det möjligt att aktivera eller inaktivera m�
 
 * **[!UICONTROL "Reply-To" email address]**
 
-   Adress som används som e-postadress för Svara till. Standardvärdet är `communities@adobe.com`.
+   Adress som används som e-postadress för Svara till. Standardvärdet är `no-reply@example.com`.
 
 * **[!UICONTROL Reply-to-Delimiter]**
 
