@@ -4,7 +4,7 @@ description: Versionsinformation för [!DNL Adobe Experience Manager] 6.5 Servic
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 32addae877604a242c97eac3ed81bbc2f55ec60a
+source-git-commit: 622fbe5eba3e737ebc25e6c57d7ed68d7bff9555
 workflow-type: tm+mt
 source-wordcount: '4235'
 ht-degree: 0%
@@ -212,7 +212,7 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
    >Uppgradering till [!DNL Experience Manager] 6.5 Service Pack 6 hämtar inte körtidskopian om körningskopian tas bort när du installerar [!DNL Experience Manager] 6.5 Service Pack 5 eller tidigare versioner på 6.5 GA. Om du vill hämta körtidskopian synkroniserar du designtidskopian av arbetsflödesmodellen med körtidskopian med HTTP API:
    `<designModelPath>/jcr:content.generate.json`.
 
-**Problem som har åtgärdats i Dynamic Media**
+**Problem som har korrigerats i Dynamic Media**
 
 * Om användaren definierar kodningsinställningarna i redigeringar efter att videoprofilen har skapats, tas inställningarna för smart beskärning bort från videoprofiler (CQ-4299177).
 
@@ -434,7 +434,7 @@ Information om hur du installerar det kumulativa installationsprogrammet för Ex
 
 ### UberJar {#uber-jar}
 
-UberJar för Experience Manager 6.5.6.0 finns i [Adobe Public Maven-databasen](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.6/).
+UberJar för Experience Manager 6.5.6.0 finns i [Adobe Public Maven-databasen](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.6-1.0/).
 
 Om du vill använda UberJar i ett Maven-projekt ska du läsa [hur du använder UberJar](/help/sites-developing/ht-projects-maven.md) och inkludera följande beroende i projektstrukturen:
 
@@ -442,7 +442,7 @@ Om du vill använda UberJar i ett Maven-projekt ska du läsa [hur du använder U
 <dependency>
       <groupId>com.adobe.aem</groupId>
       <artifactId>uber-jar</artifactId>
-      <version>6.5.6</version>  
+      <version>6.5.6-1.0</version>  
       <scope>provided</scope>
 </dependency>
 ```
