@@ -5,9 +5,9 @@ audience: end-user
 user-guide-title: AEM 6.5 Developing User Guide
 user-guide-description: This guide covers how to build out your AEM instance.
 translation-type: tm+mt
-source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
+source-git-commit: 4c9a0bd73e8d87d3869c6a133f5d1049f8430cd1
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '820'
 ht-degree: 6%
 
 ---
@@ -18,10 +18,10 @@ ht-degree: 6%
 + [Utveckla användarhandboken - översikt](home.md)
 + Introduktion för utvecklare{#introduction}
    + [Komma igång med utveckling i AEM Sites – WKND-självstudiekurs](getting-started.md)
-   + [AEM Core Concepts](the-basics.md)
-   + [Struktur för det AEM Touch-aktiverade gränssnittet](touch-ui-structure.md)
-   + [AEM Touch-aktiverat användargränssnitt](touch-ui-concepts.md)
-   + [AEM Development - Guidelines and Best Practices](dev-guidelines-bestpractices.md)
+   + [AEM kärnbegrepp](the-basics.md)
+   + [Struktur för det AEM användargränssnittet med pekskärm](touch-ui-structure.md)
+   + [Koncepten i det AEM användargränssnittet med pekskärm](touch-ui-concepts.md)
+   + [AEM - riktlinjer och bästa praxis](dev-guidelines-bestpractices.md)
    + [Använda bibliotek på klientsidan](clientlibs.md)
    + [Developing and Page Diff](pagediff.md)
    + [Begränsningar för redigerare](editor-limitations.md)
@@ -53,8 +53,8 @@ ht-degree: 6%
       + [Query Builder API](querybuilder-api.md)
    + Taggar{#tagging}
       + [Taggar](tags.md)
-      + [AEM Tagging Framework](framework.md)
-      + [Bygga taggar i ett AEM-program](building.md)
+      + [AEM Taggningsramverk](framework.md)
+      + [Bygga taggar i ett AEM](building.md)
    + [Anpassa sidor som visas av felhanteraren](customizing-errorhandler-pages.md)
    + [Anpassade nodtyper](custom-nodetypes.md)
    + [Lägga till teckensnitt för grafikåtergivning](adding-fonts.md)
@@ -74,9 +74,9 @@ ht-degree: 6%
    + [Kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
    + [Formatsystem](/help/sites-authoring/style-system.md)
    + [Komponenter - översikt](components.md)
-   + [AEM-komponenter - Grunderna](components-basics.md)
-   + [Utveckla AEM-komponenter](developing-components.md)
-   + [Utveckla AEM-komponenter - kodexempel](developing-components-samples.md)
+   + [AEM - Grunderna](components-basics.md)
+   + [Utveckla AEM](developing-components.md)
+   + [Utveckla AEM - kodexempel](developing-components-samples.md)
    + [JSON-exporterare för innehållstjänster](json-exporter.md)
    + [Aktivera JSON-export för en komponent](json-exporter-components.md)
    + [Bildredigeraren](image-editor.md)
@@ -93,10 +93,10 @@ ht-degree: 6%
       + [Använda översättare för att hantera ordlistor](i18n-translator.md)
       + [Extraherar strängar för översättning](i18n-extract.md)
    + Klassiska gränssnittskomponenter{#classic-ui-components}
-      + [Utveckla AEM-komponenter (Classic UI)](developing-components-classic.md)
+      + [Utveckla AEM (Classic UI)](developing-components-classic.md)
       + [Använda och utöka widgetar (Classic UI)](widgets.md)
       + [Använda xtypes (Classic UI)](xtypes.md)
-      + [Utveckla formulär (klassiskt användargränssnitt)](developing-forms.md)
+      + [Utveckla Forms (Classic UI)](developing-forms.md)
 + Headless Experience Management{#headless}
    + [Headless och Hybrid with AEM](https://www.adobe.com/content/dam/www/us/en/marketing/experience-manager-sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
    + [Aktivera JSON-export för en komponent](json-exporter-components.md)
@@ -113,9 +113,9 @@ ht-degree: 6%
       + [SPA-sidkomponent](spa-page-component.md)
       + [Dynamisk mappning av modell till komponent för SPA](spa-dynamic-model-to-component-mapping.md)
       + [SPA-modellroutning](spa-routing.md)
-      + [SPA och Adobe Experience Platform Launch Integration](spa-launch.md)
+      + [Integration med SPA och Adobe Experience Platform Launch](spa-launch.md)
       + [SPA och serversidesrendering](spa-ssr.md)
-      + [SPA Javascript API-referenser](spa-reference-materials.md)
+      + [SPA-referensmaterial](spa-reference-materials.md)
    + [HTTP-API](/help/assets/mac-api-assets.md)
    + [Innehållsfragment](/help/assets/content-fragments/content-fragments.md)
    + [Experience Fragments](/help/sites-authoring/experience-fragments.md)
@@ -127,14 +127,14 @@ ht-degree: 6%
    + [Verktyget Dialogkonvertering](dialog-conversion.md)
    + [Utveckla med CRXDE Lite](developing-with-crxde-lite.md)
    + [Hantera paket med Maven](vlt-mavenplugin.md)
-   + [Utveckla AEM-projekt med Eclipse](howto-projects-eclipse.md)
-   + [Så här skapar du AEM-projekt med Apache Maven](ht-projects-maven.md)
-   + [Utveckla AEM-projekt med IntelliJ IDEA](ht-intellij.md)
+   + [Utveckla AEM projekt med Eclipse](howto-projects-eclipse.md)
+   + [Skapa AEM projekt med Apache Maven](ht-projects-maven.md)
+   + [Utveckla AEM projekt med IntelliJ IDEA](ht-intellij.md)
    + [Så här använder du VLT-verktyget](ht-vlttool.md)
    + [Så här använder du proxyserververktyget](ht-proxy-server.md)
    + [AEM Brackets Extension](aem-brackets.md)
    + [AEM Developer Tools for Eclipse](aem-eclipse.md)
-   + [AEM Repo Tool](aem-repo-tool.md)
+   + [AEM](aem-repo-tool.md)
 + Personanpassning{#personlization}
    + [ContextHub](contexthub.md)
    + [ContextHub Javascript API-referens](contexthub-api.md)
@@ -163,20 +163,20 @@ ht-degree: 6%
       + [Referens för arbetsflödessteg](workflows-step-ref.md)
       + [Bästa praxis för arbetsflöden](workflows-best-practices.md)
       + [Referens för arbetsflödesprocess](workflows-process-ref.md)
-      + [Variabler i AEM-arbetsflöden](/help/sites-developing/using-variables-in-aem-workflows.md)
+      + [Variabler i AEM arbetsflöden](/help/sites-developing/using-variables-in-aem-workflows.md)
    + [Utöka Multi Site Manager](extending-msm.md)
-   + Spårning och Analytics{#extending-analytics}
+   + Spårning och analys{#extending-analytics}
       + [Utöka händelsespårning](extending-analytics.md)
       + [Lägga till Adobe Analytics Tracking i komponenter](extending-analytics-components.md)
       + [Anpassa Adobe Analytics Framework](extending-analytics-framework.md)
-      + [Implementera sidnamngivning på serversidan för Analytics](extending-analytics-pa-naming.md)
+      + [Implementera sidnamngivning på serversidan för analys](extending-analytics-pa-naming.md)
    + Cloud Services{#extending-cloud-services}
       + [Cloud Service Configurations](extending-cloud-config.md)
       + [Skapa en anpassad Cloud Service](extending-cloud-config-custom-cloud.md)
    + [Skapa anpassade tillägg](extending-campaign-extensions.md)
-   + Formulär{#extending-forms}
+   + Forms{#extending-forms}
       + [Skapa anpassade formulärmappningar](extending-campaign-form-mapping.md)
-      + [Skapa en anpassad AEM-sidmall med Adobe Campaign-formulärkomponenter](extending-campaign-custom-template.md)
+      + [Skapa en anpassad AEM med Adobe Campaign Form Components](extending-campaign-custom-template.md)
       + [Begär analysskript](analyze-request.md)
    + [Integrera tjänster med JMX-konsolen](jmx-integration.md)
    + [Developing the Bulk Editor](dev-bulk-editor.md)
@@ -199,7 +199,7 @@ ht-degree: 6%
    + [Testa användargränssnittet](hobbes.md)
 + Bästa praxis{#bestpractices}
    + [Översikt över bästa praxis](best-practices.md)
-   + [Riktlinjer för AEM-utveckling och bästa praxis](dev-guidelines-bestpractices.md)
+   + [AEM riktlinjer för utveckling och bästa metoder](dev-guidelines-bestpractices.md)
    + [Bästa praxis för utveckling](development-practices.md)
    + [Innehållsarkitektur](content-architecture.md)
    + [Programvaruarkitektur](software-architecture.md)
