@@ -9,7 +9,7 @@ topic-tags: develop
 discoiquuid: 13f00bb2-561f-4d64-8829-292c663abeab
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 6b4bc58efd72900c54cb245878239e345d72ae3e
+source-git-commit: e5c2385c29e2d20d453e2d1496f7d459d1c55876
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Använda SOM-uttryck i adaptiva former{#using-som-expressions-in-adaptive-forms}
 
-Anpassningsbara formulär modelleras som AEM Page, som representeras som JCR-innehållsstruktur i AEM-databasen. Nyckelelementet i innehållsstrukturen är noden guideContainer. Under guideContainer finns det rootPanel som kan innehålla kapslade paneler och fält.
+Anpassade formulär modelleras som AEM sida, som representeras som JCR-innehållsstruktur i AEM. Nyckelelementet i innehållsstrukturen är noden guideContainer. Under guideContainer finns det rootPanel som kan innehålla kapslade paneler och fält.
 
 Du kan använda en skriptobjektmodell (SOM) för att referera till värden, egenskaper och metoder i en viss dokumentobjektmodell (DOM). En DOM organiserar minnesobjekt och egenskaper i en trädhierarki. A SOM expression references Fields/Draw elements and panels.
 
@@ -48,4 +48,3 @@ I paneler kan du komma åt funktionen från panelens verktygsfält. Funktionen u
 Extrahera SOM-uttryck med panelens verktygsfält
 
 Vissa API:er i [GuideBridge](https://helpx.adobe.com/aem-forms/6/javascript-api/GuideBridge.html) använder SOM-uttrycket för ett element. Om du till exempel vill ge fokus till ett visst fält i en adaptiv form skickar du motsvarande SOM-uttryck till `getFocus`API:t i `guideBridge`.
-
