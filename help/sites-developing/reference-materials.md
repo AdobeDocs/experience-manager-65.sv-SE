@@ -1,8 +1,8 @@
 ---
 title: API-stödlinjer
 seo-title: API-stödlinjer
-description: Dokumentation för de API:er som AEM tillhandahåller för utveckling av program
-seo-description: Dokumentation för de API:er som AEM tillhandahåller för utveckling av program
+description: Dokumentation för API:er som AEM tillhandahåller för utveckling av program
+seo-description: Dokumentation för API:er som AEM tillhandahåller för utveckling av program
 uuid: d998b23c-5b0a-462f-a733-02cf979de2d0
 contentOwner: Guillaume Carlino
 topic-tags: introduction
@@ -12,12 +12,15 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: d8c9c2db-6709-409a-93d0-11b802763ada
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b1cbb6fd42c78c068846243734798e658aa28d59
+source-git-commit: 4c9a0bd73e8d87d3869c6a133f5d1049f8430cd1
+workflow-type: tm+mt
+source-wordcount: '312'
+ht-degree: 0%
 
 ---
 
 
-# API-stödlinjer{#api-guides}
+# API-stödlinjer {#api-guides}
 
 Adobe Experience Manager (AEM) innehåller flera API:er för utveckling av program och utökning av AEM. Följande lista innehåller dokumentation för API:er som stöds av AEM:
 
@@ -29,14 +32,14 @@ Adobe Experience Manager (AEM) innehåller flera API:er för utveckling av progr
 * [API-referens för JavaScript i gränssnittstestramverket](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/test-api/index.html)
 * [JavaScript API-referens för redigeraren](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html)
 
-AEM Single-Page Application (SPA) Editor SDK Framework JavaScript API-referenser:
+AEM SDK-ramverket för JavaScript API-referenser för SPA-redigerare (Single-Page Application):
 
-* [Komponentmappning](https://www.npmjs.com/package/@adobe/cq-spa-component-mapping)
-* [Sidmodellshanteraren](https://www.npmjs.com/package/@adobe/cq-spa-page-model-manager)
-* [Reagera på redigerbara komponenter](https://www.npmjs.com/package/@adobe/cq-react-editable-components)
-* [Vinkelredigerbara komponenter](https://www.npmjs.com/package/@adobe/cq-angular-editable-components)
+* [Komponentmappning](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
+* [Sidmodellshanteraren](https://www.npmjs.com/package/@adobe/aem-spa-page-model-manager)
+* [Reagera på redigerbara komponenter](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
+* [Vinkelredigerbara komponenter](https://www.npmjs.com/package/@adobe/aem-angular-editable-components)
 
-API:er för AEM Delivery och Content Management:
+AEM Delivery and Content Management APIs:
 
 * Kärnkomponenter (JSON)
 
@@ -46,7 +49,7 @@ API:er för AEM Delivery och Content Management:
 
 * **Resurser**: Med Assets HTTP API kan du skapa/läsa/uppdatera/ta bort-åtgärder (CRUD) för Assets, inklusive binära filer, metadata, återgivningar och kommentarer. Se [AEM Assets HTTP API](/help/assets/mac-api-assets.md)
 
-* **Innehållsfragment** (CF): Stöd för [CF i Assets HTTP API](/help/assets/assets-api-content-fragments.md) och API för [AEM Assets - Innehållsfragment](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/assets-api-content-fragments/index.html)
+* **Innehållsfragment** (CF): [CF-stöd i Assets HTTP API](/help/assets/assets-api-content-fragments.md) och [AEM Assets API - innehållsfragment](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/assets-api-content-fragments/index.html)
 
 Följande externa resurser är endast avsedda som referens:
 
