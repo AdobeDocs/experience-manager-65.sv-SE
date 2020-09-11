@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 910229a3-38b1-44f1-9c09-55f8fd6cbb1d
 translation-type: tm+mt
-source-git-commit: d0b333ffa6cad4841e70e652328e92554fb2a7a1
+source-git-commit: e5c2385c29e2d20d453e2d1496f7d459d1c55876
 workflow-type: tm+mt
 source-wordcount: '598'
 ht-degree: 3%
@@ -48,7 +48,7 @@ Använda CRXDE Lite:
 
 ### Head- och body-skript {#head-and-body-scripts}
 
-1. I rutan **CRXDE Lite** explorer navigerar du till `/apps/an-scf-sandbox/components/playpage` och dubbelklickar på filen `playpage.jsp` för att öppna den i redigeringsrutan.
+1. Navigera till **och dubbelklicka på filen i** CRXDE Lite `/apps/an-scf-sandbox/components/playpage` Explorer-rutan `playpage.jsp` för att öppna den i redigeringsrutan.
 
    `/apps/an-scf-sandbox/components/playpage/playpage.jsp`
 
@@ -99,6 +99,7 @@ Använda CRXDE Lite:
 
       * Namn: **body.jsp**
    1. Klicka på **[!UICONTROL Save All]**.
+
    Öppna `/apps/an-scf-sandbox/components/playpage/body.jsp` och klistra in följande text:
 
    ```xml
