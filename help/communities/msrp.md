@@ -10,9 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 048f7b30-20c3-4567-bd32-38cf2643cf39
 translation-type: tm+mt
-source-git-commit: 412200c1bb0c7050c981fc5dc2a5430f37b3beb3
+source-git-commit: 94bc3550a7e18b9203e7a0d495d195d7b798e012
 workflow-type: tm+mt
-source-wordcount: '1175'
+source-wordcount: '1174'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Se även [egenskaper för SRP-alternativ](working-with-srp.md#characteristics-of
 
 * [Apache Solr](https://lucene.apache.org/solr/):
 
-   * Version 4.10 eller version 5
+   * Solr version 7.0
    * Solr kräver Java 1.7 eller senare
    * Ingen tjänst behövs
    * Val av körningslägen:
@@ -80,7 +80,7 @@ På författaren, för att komma åt lagringskonsolen:
 
 * **[!UICONTROL SolrConfiguration]**
 
-   * **[Zookeeper](https://cwiki.apache.org/confluence/display/solr/Using+ZooKeeper+to+Manage+Configuration+Files)-värd **
+   * **[Zookeeper](https://cwiki.apache.org/confluence/display/solr/Using+ZooKeeper+to+Manage+Configuration+Files)-värd**
 
       När du kör i [SolrCloud-läge](solr.md#solrcloud-mode) med en extern ZooKeeper anger du det här värdet till `HOST:PORT` för ZooKeeper, till exempel *my.server.com:2181*
 
@@ -235,7 +235,7 @@ Gå till konsolen [för](srp-config.md) lagringskonfiguration eller kontrollera 
 
 ### UGC försvinner efter uppgradering {#ugc-disappears-after-upgrade}
 
-Om du uppgraderar från en befintlig AEM Communities 6.0-plats måste eventuell befintlig UGC konverteras så att den överensstämmer med den struktur som krävs för [SRP](srp.md) API efter uppgradering till AEM Communities 6.3.
+Om du uppgraderar från en befintlig AEM Communities 6.0-webbplats måste eventuell befintlig UGC konverteras så att den överensstämmer med den struktur som krävs för [SRP](srp.md) API efter uppgradering till AEM Communities 6.3.
 
 Det finns ett verktyg med öppen källkod tillgängligt på GitHub för detta ändamål:
 
