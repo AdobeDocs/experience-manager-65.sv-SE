@@ -4,9 +4,9 @@ description: Versionsinformation för [!DNL Adobe Experience Manager] 6.5 Servic
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 622fbe5eba3e737ebc25e6c57d7ed68d7bff9555
+source-git-commit: 74f1fc80bb908f7b7114177c5f8355ff892b95ed
 workflow-type: tm+mt
-source-wordcount: '4235'
+source-wordcount: '4234'
 ht-degree: 0%
 
 ---
@@ -112,7 +112,7 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 
 * Söksidan och sökresultatsidan har nu mer informativa titlar för att förstå skärmläsaranvändare bättre (NPR-34093).
 
-* Skärmläsare meddelar nu alternativ för att ta bort de markerade taggarna på fliken [!UICONTROL Basic] med resursknappar [!UICONTROL Properties]för att ta bort de markerade taggarna (NPR-33972).
+* Skärmläsare meddelar nu alternativ för att ta bort de markerade taggarna på fliken [!UICONTROL Basic] med [!UICONTROL Properties] resursknappar för att ta bort de markerade taggarna (NPR-33972).
 
 * Elementen i varje rad i listvyn presenteras nu korrekt som elementen i samma rad av skärmläsare (NPR-33932).
 
