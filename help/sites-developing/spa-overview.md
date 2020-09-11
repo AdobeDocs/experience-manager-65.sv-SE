@@ -1,8 +1,8 @@
 ---
 title: SPA Editor - översikt
 seo-title: SPA Editor - översikt
-description: Den här artikeln innehåller en omfattande översikt över SPA-redigeraren och hur den fungerar. Här finns detaljerade arbetsflöden för samverkan mellan SPA-redigeraren i AEM.
-seo-description: Den här artikeln innehåller en omfattande översikt över SPA-redigeraren och hur den fungerar. Här finns detaljerade arbetsflöden för samverkan mellan SPA-redigeraren i AEM.
+description: I den här artikeln finns en omfattande översikt över SPA-redigeraren och hur den fungerar. Här finns detaljerade arbetsflöden för samverkan mellan SPA-redigeraren i AEM.
+seo-description: I den här artikeln finns en omfattande översikt över SPA-redigeraren och hur den fungerar. Här finns detaljerade arbetsflöden för samverkan mellan SPA-redigeraren i AEM.
 uuid: c283abab-f5bc-414a-bc81-bf3bdce38534
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 06b8c0be-4362-4bd1-ad57-ea5503616b17
 docset: aem65
 translation-type: tm+mt
-source-git-commit: fe81a72a6269060a7ec1283f817920618ba715ef
+source-git-commit: 4c9a0bd73e8d87d3869c6a133f5d1049f8430cd1
 workflow-type: tm+mt
 source-wordcount: '1691'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # SPA Editor - översikt{#spa-editor-overview}
 
-Single page applications (SPAs) can offer compelling experiences for website users. Utvecklare vill kunna bygga webbplatser med SPA-ramverk och författare vill smidigt redigera innehåll i AEM för en webbplats som skapats med sådana ramverk.
+Single page applications (SPAs) can offer compelling experiences for website users. Utvecklare vill kunna skapa webbplatser med SPA-ramverk och författare vill smidigt redigera innehåll i AEM för en webbplats som skapats med sådana ramverk.
 
 SPA-redigeraren är en omfattande lösning för stöd av SPA-program i AEM. Den här sidan ger en översikt över hur stöd för SPA är strukturerat i AEM, hur SPA-redigeraren fungerar och hur SPA-ramverket och AEM synkroniseras.
 
@@ -31,16 +31,16 @@ SPA-redigeraren är en omfattande lösning för stöd av SPA-program i AEM. Den 
 
 ## Introduktion {#introduction}
 
-Webbplatser som byggts med vanliga SPA-ramverk som React och Angular läser in sitt innehåll via dynamisk JSON och tillhandahåller inte den HTML-struktur som krävs för att AEM Page Editor ska kunna placera redigeringskontroller.
+Webbplatser som byggts med vanliga SPA-ramverk som React och Angular läser in sitt innehåll via dynamisk JSON och tillhandahåller inte den HTML-struktur som behövs för att AEM Page Editor ska kunna placera redigeringskontroller.
 
-För att göra det möjligt att redigera SPA i AEM krävs en mappning mellan JSON-utdata för SPA och innehållsmodellen i AEM-databasen för att spara ändringar i innehållet.
+För att göra det möjligt att redigera SPA i AEM måste det finnas en mappning mellan JSON-utdata för SPA och innehållsmodellen i AEM.
 
-Stöd för SPA i AEM introducerar ett tunt JS-lager som interagerar med SPA JS-koden när den läses in i sidredigeraren, som händelser kan skickas med och platsen för redigeringskontrollerna kan aktiveras för redigering i sitt sammanhang. Den här funktionen bygger på API-slutpunktskonceptet för innehållstjänster eftersom innehållet från SPA måste läsas in via innehållstjänster.
+Stöd för SPA i AEM introducerar ett tunt JS-lager som interagerar med SPA JS-koden när den läses in i sidredigeraren. Händelser som kan skickas och platsen för redigeringskontrollerna kan aktiveras för redigering i sitt sammanhang. Den här funktionen bygger på API-slutpunktskonceptet för innehållstjänster eftersom innehållet från SPA måste läsas in via innehållstjänster.
 
 Mer information om SPA i AEM finns i följande dokument:
 
 * [SPA Blueprint](/help/sites-developing/spa-blueprint.md) för de tekniska kraven för ett SPA
-* [Getting Started with SPAs in AEM](/help/sites-developing/spa-getting-started-react.md) for a quick tour of a simple SPA
+* [Komma igång med SPA i AEM](/help/sites-developing/spa-getting-started-react.md) för en snabb genomgång av en enkel SPA
 
 ## Design {#design}
 
@@ -48,7 +48,7 @@ Sidkomponenten för en SPA tillhandahåller inte HTML-elementen för dess undero
 
 ### Sidmodellshantering {#page-model-management}
 
-Upplösningen och hanteringen av sidmodellen delegeras till ett angivet `PageModel` bibliotek. SPA måste använda sidmodellbiblioteket för att kunna initieras och redigeras av SPA-redigeraren. Sidmodellbiblioteket som indirekt tillhandahålls till AEM Page-komponenten via `cq-react-editable-components` npm. Sidmodellen är en tolk mellan AEM och SPA och måste därför alltid finnas. När sidan har skapats `cq.authoring.pagemodel.messaging` måste ytterligare ett bibliotek läggas till för att kommunikationen med sidredigeraren ska kunna aktiveras.
+Upplösningen och hanteringen av sidmodellen delegeras till ett angivet `PageModel` bibliotek. SPA måste använda sidmodellbiblioteket för att kunna initieras och redigeras av SPA-redigeraren. Sidmodellbiblioteket som indirekt tillhandahålls AEM sidkomponenten via `aem-react-editable-components` npm. Sidmodellen är en tolk mellan AEM och SPA och måste därför alltid finnas. När sidan har skapats `cq.authoring.pagemodel.messaging` måste ytterligare ett bibliotek läggas till för att kommunikationen med sidredigeraren ska kunna aktiveras.
 
 Om SPA-sidkomponenten ärver från sidhuvudkomponenten finns det två alternativ för att göra klientbibliotekskategorin tillgänglig: `cq.authoring.pagemodel.messaging`
 
@@ -64,13 +64,13 @@ För varje resurs i den exporterade modellen kommer SPA att mappa en faktisk kom
 
 ### Kommunikationsdatatyp {#communication-data-type}
 
-När `cq.authoring.pagemodel.messaging` kategorin läggs till på sidan skickas ett meddelande till sidredigeraren för att fastställa JSON-kommunikationens datatyp. När kommunikationsdatatypen är JSON, kommunicerar GET-förfrågningarna med Sling Model-slutpunkterna för en komponent. När en uppdatering har gjorts i sidredigeraren skickas JSON-representationen av den uppdaterade komponenten till sidmodellsbiblioteket. Sidmodellbiblioteket informerar sedan SPA om uppdateringar.
+När `cq.authoring.pagemodel.messaging` kategorin läggs till på sidan skickas ett meddelande till sidredigeraren för att fastställa JSON-kommunikationens datatyp. När kommunikationsdatatypen är JSON kommunicerar GET-förfrågningarna med Sling Model-slutpunkterna för en komponent. När en uppdatering har gjorts i sidredigeraren skickas JSON-representationen av den uppdaterade komponenten till sidmodellsbiblioteket. Sidmodellbiblioteket informerar sedan SPA om uppdateringar.
 
 ![screen_shot_2018-08-20at143628](assets/screen_shot_2018-08-20at143628.png)
 
 ## Arbetsflöde {#workflow}
 
-Du kan förstå hur interaktionen mellan SPA och AEM ser ut genom att tänka på SPA-redigeraren som en medlare mellan de båda.
+Du kan förstå hur interaktionen mellan SPA och AEM ser ut genom att tänka på SPA-redigeraren som en medlare mellan de två.
 
 * Kommunikationen mellan sidredigeraren och SPA görs med JSON i stället för HTML.
 * Sidredigeraren tillhandahåller den senaste versionen av sidmodellen till SPA via API:t för iframe och meddelanden.
@@ -81,7 +81,7 @@ Du kan förstå hur interaktionen mellan SPA och AEM ser ut genom att tänka på
 
 ### Grundläggande arbetsflöde för SPA-redigeraren {#basic-spa-editor-workflow}
 
-Med tanke på de viktigaste elementen i SPA-redigeraren ser det högnivåarbetsflödet för redigering av en SPA i AEM ut åt författaren enligt följande.
+Med tanke på de viktigaste elementen i SPA-redigeraren ser det högnivåarbetsflödet för redigering av en SPA i AEM ut för författaren enligt följande.
 
 ![untitled1](assets/untitled1.gif)
 
@@ -90,7 +90,7 @@ Med tanke på de viktigaste elementen i SPA-redigeraren ser det högnivåarbetsf
 1. SPA begär JSON-innehåll och återger komponenter på klientsidan.
 1. SPA Editor identifierar återgivna komponenter och skapar övertäckningar.
 1. Författaren klickar på övertäckningen och visar komponentens redigeringsverktygsfält.
-1. SPA Editor består av redigeringar med en POST-begäran till servern.
+1. SPA-redigeraren består av redigeringar med en POST som skickas till servern.
 1. SPA Editor begär uppdaterad JSON till SPA Editor, som skickas till SPA med en DOM-händelse.
 1. SPA återger den berörda komponenten och uppdaterar dess DOM.
 
@@ -101,6 +101,7 @@ Med tanke på de viktigaste elementen i SPA-redigeraren ser det högnivåarbetsf
 >* Det är alltid SPA som ansvarar för visningen.
 >* SPA-redigeraren är isolerad från själva SPA-programmet.
 >* I produktion (publicering) läses SPA-redigeraren aldrig in.
+
 >
 
 
@@ -121,10 +122,10 @@ Detta är en mer detaljerad översikt över klient-server-interaktionen när du 
    **6b** Sidredigeraren begär komponentens redigeringskonfigurationer.
 
    **6c** Sidredigeraren tar emot komponentkonfigurationerna.
-1. När författaren redigerar en komponent skickar sidredigeraren en ändringsbegäran till standardservern för POST.
+1. När författaren redigerar en komponent skickar sidredigeraren en ändringsbegäran till standardserverprogrammet för POST.
 1. Resursen uppdateras i databasen.
-1. Den uppdaterade resursen tillhandahålls POST-servern.
-1. Standardservern för POST informerar sidredigeraren om att resursen har uppdaterats.
+1. Den uppdaterade resursen tillhandahålls servertjänsten för POST.
+1. Standardserverpaketet informerar sidredigeraren om att POSTEN har uppdaterats.
 1. Sidredigeraren begär den nya sidmodellen.
 1. Resurserna som utgör sidan begärs från databasen.
 1. Resurserna som utgör sidan tillhandahålls av databasen till Sling Model Exporter.
@@ -149,7 +150,7 @@ Det här är en mer detaljerad översikt som fokuserar på redigeringsupplevelse
 1. **2a** Sidmodellen förser redigeraren med de data som krävs för att skapa.
 
    **2b** När det meddelas uppdaterar komponentens orchestrator sidans innehållsstruktur.
-1. Komponentkoordinatorn efterfrågar mappningen mellan en AEM-resurstyp och en SPA-komponent.
+1. Komponentkoordinatorn efterfrågar mappningen mellan en AEM resurstyp och en SPA-komponent.
 1. Komponentkoordinatorn instansierar dynamiskt SPA-komponenten baserat på sidmodellen och komponentmappningen.
 1. Sidredigeraren uppdaterar sidmodellen.
 1. **6a** Sidmodellen innehåller uppdaterade redigeringsdata för sidredigeraren.
@@ -161,7 +162,7 @@ Det här är en mer detaljerad översikt som fokuserar på redigeringsupplevelse
 
 ## Krav och begränsningar {#requirements-limitations}
 
-Om du vill att författaren ska kunna använda sidredigeraren för att redigera innehållet i ett SPA-avtal måste ditt SPA-program implementeras för att kunna interagera med AEM SPA Editor SDK. Se [Komma igång med SPA:er i AEM](/help/sites-developing/spa-getting-started-react.md) -dokumentet för att se om du behöver veta hur du kommer igång.
+Om du vill att författaren ska kunna använda sidredigeraren för att redigera innehållet i en SPA-fil måste SPA-programmet implementeras för att interagera med AEM SDK för SPA-redigeraren. Se [Komma igång med SPA i AEM](/help/sites-developing/spa-getting-started-react.md) dokument för att få veta så lite som möjligt för dig att komma igång.
 
 ### Ramverk som stöds {#supported-frameworks}
 
@@ -185,7 +186,7 @@ Ytterligare anpassade väljare kan definieras och användas som en del av ett SP
 Om du vill använda redigeraren i stället för en textkomponent som skapats i SPA krävs ytterligare konfiguration.
 
 1. Ange ett attribut (det kan vara valfritt) för behållarelementet som innehåller text-HTML. När det gäller exempelinnehållet i WKND Journal är det ett `<div>` element och väljaren som har använts är `data-rte-editelement`.
-1. Ange konfigurationen `editElementQuery` för motsvarande AEM-textkomponenters `cq:InplaceEditingConfig` som pekar på den väljaren, t.ex. `data-rte-editelement`. Detta gör att redigeraren vet vilket HTML-element som omsluter HTML-texten.
+1. Ange konfigurationen `editElementQuery` för motsvarande AEM som pekar på `cq:InplaceEditingConfig` den väljaren, t.ex. `data-rte-editelement`. Detta gör att redigeraren vet vilket HTML-element som omsluter HTML-texten.
 
 Ett exempel på hur detta görs finns i exempelinnehållet i [WKND Journal.](https://github.com/adobe/aem-sample-we-retail-journal/pull/16/files)
 
@@ -193,7 +194,7 @@ Mer information om `editElementQuery` egenskapen och konfigurationen för textre
 
 ### Begränsningar {#limitations}
 
-AEM SPA Editor SDK introducerades med AEM 6.4 Service Pack 2. Det stöds fullt ut av Adobe, och som en ny funktion fortsätter den att förbättras och utökas. Följande AEM-funktioner stöds ännu inte av SPA-redigeraren:
+AEM SPA Editor SDK introducerades med AEM 6.4 Service Pack 2. Det stöds fullt ut av Adobe, och som en ny funktion fortsätter den att förbättras och utökas. Följande AEM stöds ännu inte av SPA-redigeraren:
 
 * Målläge
 * ContextHub
@@ -204,4 +205,4 @@ AEM SPA Editor SDK introducerades med AEM 6.4 Service Pack 2. Det stöds fullt u
 * Sidskillnader och tidsförvrängning
 * Funktioner som utför HTML-omskrivning på serversidan, t.ex. Länkkontroll, CDN-omskrivartjänst, URL-förkortning etc.
 * Utvecklarläge
-* AEM Launches
+* AEM
