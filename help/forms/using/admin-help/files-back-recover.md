@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 6f9a294d-24bd-4e4b-b929-2809f5e6cef9
 translation-type: tm+mt
-source-git-commit: ac3d18bf0b39efbe927c10aef557296140628e19
+source-git-commit: e5c2385c29e2d20d453e2d1496f7d459d1c55876
 workflow-type: tm+mt
 source-wordcount: '2187'
 ht-degree: 0%
@@ -73,9 +73,9 @@ En enkel konfiguration av Correspondence Management Solution innehåller en för
 
 blanketthanteraren effektiviserar processen att uppdatera, hantera och ta tillbaka blanketter.
 
-### arbetsytan AEM Forms {#html-workspace}
+### AEM Forms Workspace {#html-workspace}
 
-AEM Forms Workspace matchar funktionerna i (Borttaget för AEM på JEE) Flex Workspace och lägger till nya funktioner för att utöka och integrera Workspace och göra den mer användarvänlig.
+AEM Forms Workspace matchar funktionerna i (Borttaget för AEM på JEE) Flex Workspace och har nya funktioner för att utöka och integrera Workspace och göra den mer användarvänlig.
 
 >[!NOTE]
 >
@@ -85,7 +85,7 @@ Det möjliggör uppgiftshantering på klienter utan Flash Player och Adobe Reade
 
 ## AEM {#aem-forms-database}
 
-AEM formulärdatabas lagrar innehåll som formulärartefakter, tjänstkonfigurationer, processtillstånd och databasreferenser till filer i GDS och Content Storage Root-katalogen (för Content Services). Säkerhetskopiering av databaser kan utföras i realtid utan avbrott i tjänsten, och återställningen kan ske till en viss tidpunkt eller till en viss ändring. I det här avsnittet beskrivs hur du konfigurerar databasen så att den kan säkerhetskopieras i realtid.
+AEM formulärdatabas lagrar innehåll som formulärartefakter, tjänstkonfigurationer, processtillstånd och databasreferenser till filer i GDS och Content Storage Root-katalogen (för Content Services). Säkerhetskopiering av databaser kan utföras i realtid utan avbrott i tjänsten, och återställning kan ske till en viss tidpunkt eller till en viss ändring. I det här avsnittet beskrivs hur du konfigurerar databasen så att den kan säkerhetskopieras i realtid.
 
 På ett korrekt konfigurerat AEM kan systemadministratören och databasadministratören enkelt samarbeta för att återskapa systemet till ett konsekvent och känt tillstånd.
 
