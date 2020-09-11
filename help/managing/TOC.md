@@ -2,10 +2,11 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: Användarhandbok för hantering av AEM 6.5
+user-guide-title: AEM 6.5 Handbok för användarhantering
+breadcrumb-title: Managing Guide
 user-guide-description: Learn how to manage an AEM project.
 translation-type: tm+mt
-source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
+source-git-commit: e917a36f9b8748080e9ab770a7f58f06123ea166
 workflow-type: tm+mt
 source-wordcount: '63'
 ht-degree: 20%
@@ -13,7 +14,7 @@ ht-degree: 20%
 ---
 
 
-# Användarhandbok för hantering av AEM 6.5 {#managing}
+# AEM 6.5 Handbok för användarhantering {#managing}
 
 + [Hantera användarhandbok](home.md)
 + Hantera - checklista för bästa praxis {#managing-best-practices-checklist}
