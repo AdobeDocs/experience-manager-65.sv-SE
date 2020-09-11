@@ -3,9 +3,10 @@ cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
 user-guide-title: Användarhandbok för AEM 6.5 Communities
+breadcrumb-title: Communities Guide
 user-guide-description: Create online experiences such as forums, user groups, learning resources, and other social features.
 translation-type: tm+mt
-source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
+source-git-commit: e917a36f9b8748080e9ab770a7f58f06123ea166
 workflow-type: tm+mt
 source-wordcount: '466'
 ht-degree: 0%
@@ -18,8 +19,8 @@ ht-degree: 0%
 + [Översikt över användarhandboken för Communities](home.md)
 + Introduktion till AEM Communities {#introduction}
    + [Communities Sites](administer-landing.md)
-   + [Översikt över AEM Communities](overview.md)
-   + [Versionsinformation om AEM Communities](/help/release-notes/communities-release-notes.md)
+   + [AEM Communities - översikt](overview.md)
+   + [Versionsinformation för AEM Communities](/help/release-notes/communities-release-notes.md)
    + [Komma igång med AEM Communities](getting-started.md)
    + [Komma igång med AEM Communities för aktivering](getting-started-enablement.md)
    + [Inledande konfiguration](setup.md)
@@ -34,12 +35,12 @@ ht-degree: 0%
    + [Distribuera webbgrupper](deploy-communities.md)
    + [Uppgradera till AEM 6.5 Communities](upgrade.md)
    + [Rekommenderade topologier för communities](topologies.md)
-   + [Konfigurera Dispatcher för webbgrupper](dispatcher.md)
+   + [Konfigurera Dispatcher för Communities](dispatcher.md)
 + Administratör {#administer}
    + [Tjänsten för hantering av användare och användargenererat innehåll i AEM Communities](user-ugc-management-service.md)
    + [Communities Sites](administer-landing.md)
    + [Communities-konsoler](consoles.md)
-   + [Analytics Configuration for Communities - funktioner](analytics.md)
+   + [Analyskonfiguration för communityfunktioner](analytics.md)
    + [Konfigurera aktiveringsfunktioner](enablement.md)
    + [Konfigurerar meddelanden](messaging.md)
    + [Moderating Community Content](moderate-ugc.md)
@@ -60,13 +61,13 @@ ht-degree: 0%
    + [Community-funktioner](functions.md)
    + [Lagringskonfiguration](srp-config.md)
    + [Badges Console](badges.md)
-   + [Resurskonsol för aktivering](resources.md)
+   + [Konsolen Aktivera resurser](resources.md)
    + [Rapportkonsol](reports.md)
    + [MySQL-konfiguration för aktiveringsfunktioner](mysql.md)
    + [FFmpeg for Communities](ffmpeg.md)
    + [Sammanhangsbaserad moderering](in-context.md)
    + [Advanced Scoring and Badges](advanced.md)
-   + [ASRP - Adobe Storage Resource Provider](asrp.md)
+   + [ASRP - Adobe lagringsresursleverantör](asrp.md)
    + [MSRP - lagringsresursprovider för MongoDB](msrp.md)
    + [Så här konfigurerar du MongoDB för demo](demo-mongo.md)
    + [DSRP - Resursprovider för relativ databaslagring](dsrp.md)
@@ -83,7 +84,7 @@ ht-degree: 0%
    + [Ramverk för sociala komponenter](scf.md)
    + [Community Components Guide](components-guide.md)
    + [Grundläggande om komponenter, funktioner och funktioner](essentials.md)
-   + [Självstudiekurser](tutorials.md)
+   + [Tutorials](tutorials.md)
    + [Felsökning](troubleshooting.md)
    + [Riktlinjer för kodning](code-guide.md)
    + [Anpassning på serversidan](server-customize.md)
@@ -149,7 +150,7 @@ ht-degree: 0%
    + [Katalogfunktion](catalog.md)
    + [Använda kommentarer](comments.md)
    + [Innehållsfunktion](featured.md)
-   + [Filbiblioteksfunktion](file-library.md)
+   + [Klientbiblioteksfunktion](file-library.md)
    + [Forumfunktion](forum.md)
    + [Community-grupper](creating-groups.md)
    + [Idéfunktion](ideation-feature.md)
