@@ -10,9 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 0b126218-b142-4d33-a28c-a91ab4fe99ac
 translation-type: tm+mt
-source-git-commit: c3438cff60901edad8b81fe1a1bfddbbbe39a18d
+source-git-commit: 94bc3550a7e18b9203e7a0d495d195d7b798e012
 workflow-type: tm+mt
-source-wordcount: '790'
+source-wordcount: '788'
 ht-degree: 1%
 
 ---
@@ -72,7 +72,7 @@ Detta startar en MongoDB-server med standardport 27017.
 
 >[!NOTE]
 >
->Om MongoDB startas *efter* AEM **startar du om** alla **AEM** -instanser så att de kan ansluta till MongoDB.
+>Om MongoDB startas *efter* AEM **startar du om** alla **AEM** instanser så att de kan ansluta till MongoDB.
 
 
 ### Demo Production Option: Konfigurera MongoDB-replikuppsättning {#demo-production-option-setup-mongodb-replica-set}
@@ -100,7 +100,7 @@ Följande kommandon är ett exempel på hur du konfigurerar en replikuppsättnin
 * Hämta Solr från [Apache Lucene](https://archive.apache.org/dist/lucene/solr/):
 
    * Passar alla operativsystem.
-   * Använd version 4.10 eller version 5.
+   * Solr version 7.0.
    * Solr kräver Java 1.7 eller senare.
 
 * Grundkonfiguration
@@ -143,9 +143,9 @@ Om du vill köra en mycket grundläggande (inte produktion) solrCloud-installati
 
 ## Identifiera MongoDB som Common Store {#identify-mongodb-as-common-store}
 
-Starta författaren och publicera AEM-instanser om det behövs.
+Starta författaren och publicera AEM om det behövs.
 
-Om AEM kördes innan MongoDB startades måste AEM-instanserna startas om.
+Om AEM kördes innan MongoDB startades måste AEM startas om.
 
 Följ instruktionerna på huvuddokumentationssidan: [MSRP - MongoDB Common Store](msrp.md)
 
@@ -175,6 +175,7 @@ Om du vill testa och verifiera den gemensamma lagringsplatsen för MongoDB skick
    * Användare `core selector` att välja `collection1`
    * Välj `Query`
    * Välj `Execute Query`
+
    ![chlimage_1-194](assets/chlimage_1-194.png)
 
 ## Felsökning {#troubleshooting}
@@ -185,8 +186,9 @@ Om du vill testa och verifiera den gemensamma lagringsplatsen för MongoDB skick
 
 1. Kontrollera att MSRP har konfigurerats som standardprovider:
 
-   * Gå till konsolen [Lagringskonfiguration för alla författare och publicera AEM-instanser](srp-config.md)
-   Eller kontrollera AEM-databasen:
+   * Gå till konsolen [Lagringskonfiguration för alla författare och AEM](srp-config.md)
+
+   Eller kontrollera AEM:
 
    * I JCR, if [/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/)
 
@@ -194,4 +196,4 @@ Om du vill testa och verifiera den gemensamma lagringsplatsen för MongoDB skick
    * Om srpc-noden finns och innehåller [standardkonfiguration](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)för nod, ska standardkonfigurationens egenskaper definiera MSRP som standardprovider
 
 
-1. Kontrollera att AEM startades om när MSRP har valts.
+1. Se till att AEM startades om när MSRP har valts.
