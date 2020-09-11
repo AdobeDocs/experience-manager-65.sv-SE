@@ -2,10 +2,11 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: Användarhandbok för AEM 6.5 Mobile
+user-guide-title: AEM 6.5 Mobile User Guide
+breadcrumb-title: Mobile Guide
 user-guide-description: Create and manage content for mobile apps.
 translation-type: tm+mt
-source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
+source-git-commit: e917a36f9b8748080e9ab770a7f58f06123ea166
 workflow-type: tm+mt
 source-wordcount: '315'
 ht-degree: 0%
@@ -13,7 +14,7 @@ ht-degree: 0%
 ---
 
 
-# Användarhandbok för AEM 6.5 Mobile {#mobile}
+# AEM 6.5 Mobile User Guide {#mobile}
 
 + [Mobile User Guide - översikt](home.md)
 + Introduktion till AEM Mobile {#introduction}
@@ -49,7 +50,7 @@ ht-degree: 0%
    + [Innehållsleverans](develop-content-as-a-service.md)
 + Administrera On Demand Services-app {#administering}
    + [AEM Mobile On-Demand](aem-mobile.md)
-   + [Konfigurera AEM Mobile](aem-mobile-setup.md)
+   + [AEM Mobile SetUp](aem-mobile-setup.md)
    + [Konfigurera dina användare och användargrupper](aem-mobile-configure-users.md)
    + [Förhandsgranska med Preflight](aem-mobile-manage-ondemand-services.md)
    + [Mobilappar](administer-mobile-apps.md)
@@ -64,7 +65,7 @@ ht-degree: 0%
    + [Skapa en ny AEM Mobile-app med guiden Skapa](phonegap-create-new-app.md)
    + [Skapa mobilprogram](phonegap-authoring-apps.md)
    + [Hantera apppanel](phonegap-app-details-tile.md)
-   + [AEM Mobile-innehållspersonalisering](phonegap-aem-mobile-content-personalization.md)
+   + [AEM Mobile innehållspersonalisering](phonegap-aem-mobile-content-personalization.md)
 + Utveckla Adobe PhoneGap Enterprise {#developphonegap}
    + [PhoneGap](developing-in-phonegap.md)
    + [Bygger mobilprogram](building-app-mobile-phonegap.md)
@@ -79,7 +80,7 @@ ht-degree: 0%
    + [Åtkomst till enhetsfunktioner](phonegap-access-device-features.md)
    + [Lägg till Adobe Analytics i ditt mobilprogram](phonegap-add-analytics-to-apps.md)
    + [Sidmallar för mobilappar](phonegap-apps-arch-page-templates.md)
-   + [Konfigurera Cloud Servicen Adobe Target](aem-mobile-configuring-cloud-service.md)
+   + [Konfigurera Adobe Target Cloud Service](aem-mobile-configuring-cloud-service.md)
    + [Enkelsidiga program](phonegap-single-page-applications.md)
    + [Modeller i databas](administer-mobile-apps.md)
    + [Startar AEM PhoneGap](starting-aem-phonegap-app.md)
@@ -91,5 +92,5 @@ ht-degree: 0%
    + [Administrera innehåll för Adobe PhoneGap Enterprise med AEM](administer-phonegap.md)
    + [Konfigurera din Adobe PhoneGap Build-Cloud Service](configure-phonegap-build-cloud.md)
    + [Ange att referensfiltret ska vara tomt](setting-referrer-filter-empty.md)
-   + [Konfigurera din Adobe Mobile Services-Cloud Service](configure-adobe-mobile-cloud-service.md)
+   + [Konfigurera Cloud Servicen för Adobe Mobile Services](configure-adobe-mobile-cloud-service.md)
    + [Konfigurera dina användare och användargrupper](configure-users-groups.md)
