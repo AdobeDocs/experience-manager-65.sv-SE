@@ -3,9 +3,9 @@ title: Aktivera tillgångsinsikter via DTM
 description: Lär dig hur du använder Adobe Dynamic Tag Management (DTM) för att aktivera tillgångsinsikter.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 892237699a4027e7dab406fd620cac220aa8b88b
+source-git-commit: 3fbf32ec0930b8e832f8bea5b466fcb6bd38fbd3
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '619'
 ht-degree: 1%
 
 ---
@@ -13,13 +13,11 @@ ht-degree: 1%
 
 # Aktivera tillgångsinsikter via DTM {#enable-asset-insights-through-dtm}
 
-Adobe Dynamic Tag Management är ett verktyg som aktiverar era digitala marknadsföringsverktyg. Det tillhandahålls kostnadsfritt till Adobe Analytics-kunder.
+Adobe Dynamic Tag Management är ett verktyg som aktiverar era digitala marknadsföringsverktyg. Det tillhandahålls kostnadsfritt till Adobe Analytics-kunder. Du kan antingen anpassa din spårningskod för att aktivera CMS-lösningar från tredje part för att använda resursinsikter eller så kan du använda DTM för att infoga resursinsikter-taggar. Insikter stöds endast och tillhandahålls för bilder.
 
-Även om du kan anpassa din spårningskod för att aktivera CMS-lösningar från tredje part för att använda resursinsikter, rekommenderar Adobe att du använder DTM för att infoga resursinsikter-taggar.
-
->[!NOTE]
+>[!CAUTION]
 >
->Insikter stöds endast och tillhandahålls för bilder.
+>Adobe DTM är ersatt med Adobe Experience Platform Launch och kommer snart att nå [slutet](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f). Adobe rekommenderar att du [använder Launch för att få tillgångsinsikter](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html).
 
 Utför dessa steg för att aktivera tillgångsinsikter via DTM.
 
