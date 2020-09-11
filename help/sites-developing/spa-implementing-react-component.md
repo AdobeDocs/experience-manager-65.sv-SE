@@ -1,8 +1,8 @@
 ---
 title: Implementera en React Component for SPA
 seo-title: Implementera en React Component for SPA
-description: I den här artikeln finns ett exempel på hur du anpassar en enkel, befintlig React-komponent till AEM SPA-redigeraren.
-seo-description: I den här artikeln finns ett exempel på hur du anpassar en enkel, befintlig React-komponent till AEM SPA-redigeraren.
+description: I den här artikeln visas ett exempel på hur du anpassar en enkel, befintlig React-komponent till den AEM SPA-redigeraren.
+seo-description: I den här artikeln visas ett exempel på hur du anpassar en enkel, befintlig React-komponent till den AEM SPA-redigeraren.
 uuid: ae6a0a6f-0c3c-4820-9b58-c2a85a9f5291
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,16 +11,19 @@ content-type: reference
 discoiquuid: 6ed15763-02cc-45d1-adf6-cf9e5e8ebdb0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 14cc66dfef7bc7781907bdd6093732912c064579
+source-git-commit: 4c9a0bd73e8d87d3869c6a133f5d1049f8430cd1
+workflow-type: tm+mt
+source-wordcount: '575'
+ht-degree: 0%
 
 ---
 
 
 # Implementera en React Component for SPA{#implementing-a-react-component-for-spa}
 
-Single page applications (SPAs) can offer compelling experiences for website users. Utvecklare vill kunna bygga webbplatser med SPA-ramverk och författare vill smidigt redigera innehåll i AEM för en webbplats som byggts med SPA-ramverk.
+Single page applications (SPAs) can offer compelling experiences for website users. Utvecklare vill kunna skapa webbplatser med SPA-ramverk och författare vill smidigt redigera innehåll i AEM för en webbplats som byggts med SPA-ramverk.
 
-SPA-funktionen är en omfattande lösning för att ge stöd åt SPA:er i AEM. I den här artikeln finns ett exempel på hur du anpassar en enkel, befintlig React-komponent till AEM SPA-redigeraren.
+SPA-funktionen är en omfattande lösning för SPA-program i AEM. I den här artikeln visas ett exempel på hur du anpassar en enkel, befintlig React-komponent till den AEM SPA-redigeraren.
 
 >[!NOTE]
 >
@@ -28,7 +31,7 @@ SPA-funktionen är en omfattande lösning för att ge stöd åt SPA:er i AEM. I 
 
 ## Introduktion {#introduction}
 
-Tack vare det enkla och lätta avtal som krävs av AEM och som finns mellan SPA och SPA Editor är det enkelt att ta ett befintligt Javascript-program och anpassa det för användning med ett SPA i AEM.
+Tack vare det enkla och lätta kontrakt som AEM kräver och som upprättas mellan SPA och SPA Editor är det en okomplicerad sak att ta ett befintligt Javascript-program och anpassa det för användning med ett SPA i AEM.
 
 I den här artikeln visas exemplet på väderkomponenten i exemplet SPA för Web.Retail Journal.
 
@@ -37,7 +40,7 @@ Du bör känna till [strukturen för ett SPA-program för AEM](/help/sites-devel
 >[!CAUTION]
 >Det här dokumentet använder appen [](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal) We.Retail Journal endast i demonstrationssyfte. Det ska inte användas för något projektarbete.
 >
->Alla AEM-projekt bör utnyttja [AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html), som stöder SPA-projekt med React eller Angular och utnyttjar SPA SDK.
+>Alla AEM ska utnyttja den [AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html)som stöder SPA-projekt med React eller Angular och som utnyttjar SPA SDK.
 
 ## Väderkomponenten {#the-weather-component}
 
@@ -47,11 +50,11 @@ väderkomponenten finns i det övre vänstra hörnet i appen We.Retail Journal. 
 
 ![screen_shot_2018-06-08at143224](assets/screen_shot_2018-06-08at143224.png)
 
-När du skapar innehåll i SPA i SPA-redigeraren visas väderkomponenten som vilken annan AEM-komponent som helst, komplett med ett verktygsfält, och kan redigeras.
+När du redigerar innehåll i SPA i SPA-redigeraren visas väderkomponenten som vilken annan AEM komponent som helst, komplett med ett verktygsfält, och kan redigeras.
 
 ![screen_shot_2018-06-08at143304](assets/screen_shot_2018-06-08at143304.png)
 
-Staden kan uppdateras i en dialogruta precis som andra AEM-komponenter.
+Staden kan uppdateras i en dialog precis som andra AEM.
 
 ![screen_shot_2018-06-08at143446](assets/screen_shot_2018-06-08at143446.png)
 
@@ -70,13 +73,13 @@ Nedan följer NPM-dokumentation om hur komponenten React Open Weather används.
 Granska koden för den anpassade väderkomponenten ( `Weather.js`) i programmet We.Retail Journal:
 
 * **Rad 16**: Widgeten React Open Weather (Reagera Öppna väder) läses in efter behov.
-* **Rad 46**: Funktionen relaterar den här React-komponenten till en motsvarande AEM-komponent så att den kan redigeras i SPA-redigeraren. `MapTo`
+* **Rad 46**: Funktionen relaterar den här React-komponenten till en motsvarande AEM så att den kan redigeras i SPA-redigeraren. `MapTo`
 
 * **Raderna 22-29**: Värdet `EditConfig` definieras, kontrollerar om staden har fyllts i och definierar värdet om det är tomt.
 
 * **Raderna 31-44**: Komponenten Weather utökar `Component` klassen och tillhandahåller de data som krävs enligt NPM-användningsdokumentationen för komponenten React Open Weather och återger komponenten.
 
-```
+```javascript
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  ~ Copyright 2018 Adobe Systems Incorporated
  ~
@@ -94,7 +97,7 @@ Granska koden för den anpassade väderkomponenten ( `Weather.js`) i programmet 
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 import React, {Component} from 'react';
 import ReactWeather from 'react-open-weather';
-import {MapTo} from '@adobe/cq-react-editable-components';
+import {MapTo} from '@adobe/aem-react-editable-components';
 
 require('./Weather.css');
 
