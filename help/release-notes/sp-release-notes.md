@@ -4,9 +4,9 @@ description: Versionsinformation för [!DNL Adobe Experience Manager] 6.5 Servic
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 74f1fc80bb908f7b7114177c5f8355ff892b95ed
+source-git-commit: 74606bc3e9c768c3d94b7d05c722980f29e20e0e
 workflow-type: tm+mt
-source-wordcount: '4234'
+source-wordcount: '4230'
 ht-degree: 0%
 
 ---
@@ -47,9 +47,9 @@ De viktigaste funktionerna och förbättringarna i Adobe Experience Manager 6.5.
 
 * Stöd för Adobe Sign-texttaggar i den automatiska Forms Conversion Service.
 
-* Stöd för SMB 2- och SMB 3-protokoll.
+* Stöd för konvertering av färgade formulär till anpassningsbara formulär med [!DNL Automated Forms Conversion service].
 
-* Stöd för konvertering av färglagda blanketter till adaptiva blanketter med tjänsten Automated Forms Conversion.
+* Stöd för SMB 2- och SMB 3-protokoll.
 
 * Den inbyggda databasen (Apache Jackrabbit Oak) uppdateras till version 1.22.4.
 
@@ -212,7 +212,7 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
    >Uppgradering till [!DNL Experience Manager] 6.5 Service Pack 6 hämtar inte körtidskopian om körningskopian tas bort när du installerar [!DNL Experience Manager] 6.5 Service Pack 5 eller tidigare versioner på 6.5 GA. Om du vill hämta körtidskopian synkroniserar du designtidskopian av arbetsflödesmodellen med körtidskopian med HTTP API:
    `<designModelPath>/jcr:content.generate.json`.
 
-**Problem som har korrigerats i Dynamic Media**
+**Problem som har åtgärdats i Dynamic Media**
 
 * Om användaren definierar kodningsinställningarna i redigeringar efter att videoprofilen har skapats, tas inställningarna för smart beskärning bort från videoprofiler (CQ-4299177).
 
