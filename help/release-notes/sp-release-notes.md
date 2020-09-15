@@ -4,9 +4,9 @@ description: Versionsinformation för [!DNL Adobe Experience Manager] 6.5 Servic
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 74606bc3e9c768c3d94b7d05c722980f29e20e0e
+source-git-commit: 3ed140d0649379d27019e9f5b0753c07f30f5491
 workflow-type: tm+mt
-source-wordcount: '4230'
+source-wordcount: '4270'
 ht-degree: 0%
 
 ---
@@ -212,7 +212,7 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
    >Uppgradering till [!DNL Experience Manager] 6.5 Service Pack 6 hämtar inte körtidskopian om körningskopian tas bort när du installerar [!DNL Experience Manager] 6.5 Service Pack 5 eller tidigare versioner på 6.5 GA. Om du vill hämta körtidskopian synkroniserar du designtidskopian av arbetsflödesmodellen med körtidskopian med HTTP API:
    `<designModelPath>/jcr:content.generate.json`.
 
-**Problem som har åtgärdats i Dynamic Media**
+**Problem som har korrigerats i Dynamic Media**
 
 * Om användaren definierar kodningsinställningarna i redigeringar efter att videoprofilen har skapats, tas inställningarna för smart beskärning bort från videoprofiler (CQ-4299177).
 
@@ -434,7 +434,7 @@ Information om hur du installerar det kumulativa installationsprogrammet för Ex
 
 ### UberJar {#uber-jar}
 
-UberJar för Experience Manager 6.5.6.0 finns i [Adobe Public Maven-databasen](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.6-1.0/).
+UberJar för Experience Manager 6.5.6.0 finns i [Maven Central-databasen](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.6-1.0/).
 
 Om du vill använda UberJar i ett Maven-projekt ska du läsa [hur du använder UberJar](/help/sites-developing/ht-projects-maven.md) och inkludera följande beroende i projektstrukturen:
 
@@ -446,6 +446,10 @@ Om du vill använda UberJar i ett Maven-projekt ska du läsa [hur du använder U
       <scope>provided</scope>
 </dependency>
 ```
+
+>[!NOTE]
+>
+>Från och med den här versionen finns UberJar och andra relaterade artefakter tillgängliga i Maven Central Repository i stället för i Adobe Public Maven-databasen (repo.adobe.com). Huvudfilen för UberJar har bytt namn till `uber-jar-<version>.jar`. Därför finns det inget värde `classifier`för `apis` -taggen `dependency` som värde.
 
 ## Deprecated features {#removed-deprecated-features}
 
