@@ -4,9 +4,9 @@ description: Nyheter i Adobe Experience Manager 6.5 Service Pack 6
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: f8a072e0ab24d542a1bec8faf03da57f99747102
+source-git-commit: 5cf27977d3d94d39c9dfec51eb50778048f76dfd
 workflow-type: tm+mt
-source-wordcount: '2435'
+source-wordcount: '2455'
 ht-degree: 0%
 
 ---
@@ -88,6 +88,10 @@ Nu kan du konfigurera [!DNL Experience Manager Forms] servern så att den utför
 ### Stöd för [!DNL Adobe Sign] texttaggar har lagts till i den automatiserade Forms Conversion Service {#sign-integration-acroform-afcs}
 
 Om ett AcroForm innehåller [!DNL Adobe Sign] texttaggar identifieras och representeras dessa fält som [!DNL Adobe Sign] fält i det adaptiva formuläret som konverterats med [!DNL Automated Forms Conversion service]. En signerare kan fylla i sådana fält medan han/hon signerar det anpassade formuläret.
+
+### Stöd för konvertering av färgat PDF forms till anpassningsbara formulär {#colore-PDF-forms}
+
+Du kan använda [!DNL Automated Forms Conversion service] för att konvertera färgad PDF forms till adaptiva formulär.
 
 ### Stöd för SMB 2- och SMB 3-protokoll {#smb-support}
 
