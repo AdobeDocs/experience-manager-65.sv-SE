@@ -1,11 +1,11 @@
 ---
 title: Rapporter om användning och delning av digitala resurser.
-description: Rapporterar om dina resurser i [!DNL Adobe Experience Manager Assets] som hjälper dig att förstå användningen, aktiviteten och delningen av dina digitala resurser.
+description: Rapporter om era resurser [!DNL Adobe Experience Manager Assets] som hjälper er att förstå användningen, aktiviteten och delningen av era digitala resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a8c4bc1992a48dd01a3f58498e9e924dcc9e886a
+source-git-commit: 2ac848fa360ad87ff4f87efc38ae1361ae890cb2
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '988'
 ht-degree: 9%
 
 ---
@@ -25,7 +25,7 @@ När en rapport skapas meddelas du via ett e-postmeddelande (valfritt) och ett i
 
 ## Förutsättning {#prerequisite-for-reporting}
 
-Om du vill generera rapporter måste du se till att:
+Så här skapar du rapporter:
 
 * Aktivera [!UICONTROL Day CQ DAM Event Recorder] tjänsten från **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
 * Välj de aktiviteter eller händelser som du vill rapportera om. Om du till exempel vill generera en rapport om hämtade resurser väljer du [!UICONTROL Asset downloaded (DOWNLOADED)].
@@ -50,7 +50,7 @@ Om du vill generera rapporter måste du se till att:
 
 1. I [!DNL Experience Manager] gränssnittet klickar du på **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Reports]**.
 
-![Verktygssida för att navigera bland resurser - rapport](assets/AssetsReportNavigation.png)
+   ![Verktygssida för att navigera bland resurser - rapport](assets/AssetsReportNavigation.png)
 
 1. På [!UICONTROL Asset Reports] sidan klickar du **[!UICONTROL Create]** i verktygsfältet.
 1. På **[!UICONTROL Create Report]** sidan väljer du den rapport som du vill skapa och klickar på **[!UICONTROL Next]**.
@@ -63,7 +63,8 @@ Om du vill generera rapporter måste du se till att:
 
    >[!NOTE]
    >
-   >I [!UICONTROL Download] rapporten visas endast information om de resurser som har markerats individuellt och som har hämtats eller hämtats med Snabbåtgärd. Den innehåller dock inte information om resurserna som fanns i en hämtad mapp.
+   >I [!UICONTROL Download] rapporten visas endast information om de resurser som har laddats ned efter att du har markerat dem separat eller som har laddats ned med Snabbåtgärd. Den innehåller dock inte information om resurserna som finns i en hämtad mapp.
+
 1. Konfigurera rapportinformation som titel, beskrivning, miniatyrbild och mappsökväg i CRX-databasen där rapporten lagras. Som standard är mappsökvägen `/content/dam`. Du kan ange en annan sökväg.
 
    ![Sida för att lägga till rapportinformation](assets/report_configuration.png)
@@ -84,7 +85,7 @@ Om du vill generera rapporter måste du se till att:
 
    ![Sidan Information om rapporten Diskanvändning](assets/disk_usage_configuration.png)
 
-   När du skapar **[!UICONTROL Files]** rapporten kan du inkludera/exkludera undermappar. Du kan dock inte inkludera resursåtergivningar för den här rapporten.
+   När du skapar en **[!UICONTROL Files]** rapport kan du inkludera/exkludera undermappar. Du kan dock inte inkludera resursåtergivningar för den här rapporten.
 
    ![Detaljsida för rapporten Filer](assets/files_report.png)
 
