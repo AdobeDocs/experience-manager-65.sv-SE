@@ -4,9 +4,9 @@ description: Lär dig hur du söker efter nödvändiga resurser [!DNL Adobe Expe
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: deb8ce3c6758efa9a127bfad4163ebd1c0f6f97a
+source-git-commit: cdf22fea17f6c79e3a2b565a4c6f728bf0bbd23a
 workflow-type: tm+mt
-source-wordcount: '5827'
+source-wordcount: '5837'
 ht-degree: 4%
 
 ---
@@ -65,9 +65,7 @@ Resultatet sorteras efter relevans, med början med närmast matchande. För fle
 
 För att snabbt hitta relevanta resurser innehåller det avancerade gränssnittet funktioner för filtrering, sortering och markering. Du kan filtrera resultat baserat på flera villkor och se antalet sökningar efter olika filter. Du kan också köra sökningen igen genom att ändra frågan i fältet Omnissearch. När du ändrar söktermer eller filter används de andra filtren för att bevara sökkontexten.
 
-När resultatet är många resurser visas [!DNL Experience Manager] de första 100 i kortvyn och 200 i listvyn. När användare rullar läses fler resurser in. Detta för att förbättra prestandan.
-
->[!VIDEO](https://www.youtube.com/watch?v=LcrGPDLDf4o)
+När resultatet är många resurser visas [!DNL Experience Manager] de första 100 i kortvyn och 200 i listvyn. När användare rullar läses fler resurser in. Detta för att förbättra prestandan. Titta på en videodemonstration av [antalet resurser som visas](https://www.youtube.com/watch?v=LcrGPDLDf4o).
 
 Ibland kan du se oväntade resurser i sökresultaten. Mer information finns i [oväntade resultat](#troubleshoot-unexpected-search-results-and-issues).
 
