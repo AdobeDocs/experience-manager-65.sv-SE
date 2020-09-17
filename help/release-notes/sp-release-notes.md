@@ -4,9 +4,9 @@ description: Versionsinformation för [!DNL Adobe Experience Manager] 6.5 Servic
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 3ed140d0649379d27019e9f5b0753c07f30f5491
+source-git-commit: b6db346f7ec2570972329a8edb089fe909120b75
 workflow-type: tm+mt
-source-wordcount: '4270'
+source-wordcount: '4214'
 ht-degree: 0%
 
 ---
@@ -106,37 +106,37 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 
 **Tillgänglighetsförbättringar i Experience Manager Assets**
 
-* Användare kan nu komma åt och fokusera på alternativen för det interaktiva användargränssnittet i [!UICONTROL References] listan med resurser med hjälp av tangentbordstangenter (NPR-34115).
+* Med hjälp av tangentbordstangenterna kan användare nu komma åt och fokusera på de interaktiva alternativen för användargränssnittet i [!UICONTROL References] listan med resurser (NPR-34115).
 
-* Skärmläsaren meddelar nu alternativen i sökfiltret som utökningsbara dragspelspaneler (NPR-34104).
+* Skärmläsaren presenterar nu avsedd åtgärd för predikaten på söksidan (NPR-34104).
 
 * Söksidan och sökresultatsidan har nu mer informativa titlar för att förstå skärmläsaranvändare bättre (NPR-34093).
 
-* Skärmläsare meddelar nu alternativ för att ta bort de markerade taggarna på fliken [!UICONTROL Basic] med [!UICONTROL Properties] resursknappar för att ta bort de markerade taggarna (NPR-33972).
+* Skärmläsare meddelar nu alternativ för att ta bort de markerade taggarna på [!UICONTROL Basic] fliken för [!UICONTROL Properties] tillgångssidan (NPR-33972).
 
-* Elementen i varje rad i listvyn presenteras nu korrekt som elementen i samma rad av skärmläsare (NPR-33932).
+* Elementen i varje rad i listvyn presenteras nu som element i samma rad av skärmläsare (NPR-33932).
 
-* Användarfokus vid navigering med tabbtangenten går nu korrekt till stängningsalternativet i förhandsgranskning av version (NPR-33863).
+* Användarfokus när du navigerar med `Tab` tangenten går nu till stängningsalternativet i förhandsversionen (NPR-33863).
 
-* Användarfokus flyttas nu korrekt till sökikonen när Omnisearch har stängts (NPR-33705).
+* Användarfokus flyttas nu till sökikonen när Omnisearch har stängts (NPR-33705).
 
-* Alternativen i det användbara gränssnittet har nu ett mer framträdande visuellt fokus med förbättrad kontrast när du använder tangentbordstangenter. Därför kan användare med synkade tangentbord nu differentiera de fokuserade områdena (NPR-33542).
+* Alternativen i det användbara gränssnittet har nu ett mer framträdande visuellt fokus med förbättrad kontrast när du navigerar med tangentbordstangenter. Tangentbordsanvändare kan identifiera de fokuserade områdena (NPR-33542).
 
-* Dragningsfunktionen med tangentbordet fungerar nu korrekt i [!UICONTROL Metadata Schema Editor] skärmläsarläge (CQ-4296326).
+* Dragningsfunktionen med tangentbordet fungerar nu i [!UICONTROL Metadata Schema Editor] bläddringsläge för skärmläsare (CQ-4296326).
 
-* Skärmläsarna visas i dialogrutan för länkdelning när du navigerar i bläddringsläge.
+* När du navigerar i bläddringsläge i dialogrutan för länkdelning visas en skärmläsare,
 
-   * lägg nu inte till en berättarröst i tabellinformationen så fort dialogrutan har lästs in.
+   * Berättar inte tabellinformationen så fort dialogrutan har lästs in.
 
-   * kan navigera till alla automatiska förslag som visas.
+   * Kan navigera till alla automatiska förslag som visas.
 
-   * nu lägga till en berättarröst för de automatiska förslagen för [!UICONTROL Add Email Address/Search] (CQ-4294232).
+   * Lägger till en berättarröst för de automatiska förslagen för [!UICONTROL Add Email Address/Search] (CQ-4294232).
 
-* Om du använder Esc-tangenten för att ta bort snabbredigeringsikonerna från miniatyrbildsvyn tas inte längre tangentbordsfokus bort från det senast fokuserade objektet (CQ-4293554).
+* När du använder `Esc` tangenten för att ta bort snabbikonerna från kortvyn tas inte längre tangentbordsfokus bort från det sista objekt som är i fokus (CQ-4293554).
 
-* Skärmläsaren presenterar nu textalternativ, som avbildar deras funktion, för ikoner (till exempel avfasningar) i stället för deras litteralnamn (CQ-4272943).
+* För interaktiva alternativ i användargränssnittet meddelar skärmläsaren nu vad de är avsedda för och inte vad ikonerna har för litteralnamn (CQ-4272943).
 
-* Tangentbordsfokus flyttas nu till [!UICONTROL Flyout], [!UICONTROL InlineZoom], [!UICONTROL Shoppable_Banner], [!UICONTROL Zoom_dark], [!UICONTROL Zoom_light]och [!UICONTROL ZoomVertical_dark]alternativ när du navigerar med tangentbordstabbtangenten [!UICONTROL ZoomVertical_light] [!UICONTROL Viewers] i resursinformation i Dynamic Media (CQ-4290605).
+* Tangentbordsfokus flyttas nu till [!UICONTROL Flyout], [!UICONTROL InlineZoom], [!UICONTROL Shoppable_Banner], [!UICONTROL Zoom_dark], [!UICONTROL Zoom_light]och [!UICONTROL ZoomVertical_dark]alternativ när du navigerar med tangentbordsfliktangenten [!UICONTROL ZoomVertical_light] i resursinformationen [!UICONTROL Viewers] [!DNL Dynamic Media] (CQ-4290605).
 
 * [!UICONTROL Save & Close] kan du nu komma åt alternativ på [!UICONTROL Properties] resurssidan med hjälp av tangentbordstangenter (NPR-34107).
 
@@ -144,38 +144,35 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 
 * I [!DNL Experience Manager] sidhuvudsavsnittet, vid navigering i bläddringsläge, visas nu skärmläsare,
 
-   * automatiskt redigerade förslag i [!UICONTROL Type to search] Omnissearch.
+   * Automatiskt redigerade förslag i [!UICONTROL Type to search] Omnissearch.
 
-   * läget som expanderat eller komprimerat för [!UICONTROL Solutions], [!UICONTROL Help]och [!UICONTROL Inbox] [!UICONTROL User] alternativ.
+   * Läget som expanderat eller komprimerat för [!UICONTROL Solutions], [!UICONTROL Help], [!UICONTROL Inbox]och [!UICONTROL User] alternativ.
 
-   * statusmeddelandet som visas när användaren anger en söksträng i [!UICONTROL Searching Help] fältet under [!UICONTROL Search for Help] [!UICONTROL Help] alternativ.
+   * Det [!UICONTROL Searching Help] statusmeddelande som visas när användaren anger en söksträng i [!UICONTROL Search for Help] fältet under [!UICONTROL Help] alternativet.
 
    ![Hjälpmenyn i sidhuvudet](assets/Help_aem_header.png)
 
-   *Bild:[!UICONTROL Search for Help]på[!UICONTROL Help]menyn*
+   *Bild:[!UICONTROL Search for Help]på[!UICONTROL Help]menyn.*
 
-   * felmeddelandet om ett felaktigt värde anges i [!UICONTROL Impersonate as] fältet under [!UICONTROL User] alternativet och fokus flyttas korrekt till textfältet (NPR-33804).
+   * Felmeddelandet om ett felaktigt värde anges i [!UICONTROL Impersonate as] fältet under [!UICONTROL User] alternativet och fokus flyttas korrekt till textfältet (NPR-33804).
 
    ![Användarmeny i sidhuvud](assets/User_aem_header.png)
 
-   *Bild:[!UICONTROL Impersonate as]fält i[!UICONTROL User]menyn i rubriken*
+   *Bild:[!UICONTROL Impersonate as]i[!UICONTROL User]menyn i sidhuvudet.*
 
-* Nu kan användaren flytta fokus med hjälp av tangentbordstangenter i:
+* Användaren kan nu ändra fokus med tangentbordet i:
 
    * [!UICONTROL Search/Add Email Address] i [!UICONTROL Link Sharing] dialogrutan.
 
-   * [!UICONTROL Add User or Group] under [!UICONTROL Closed User Group] på [!UICONTROL Permissions] fliken i mappen [!UICONTROL Properties] (NPR-34452).
+   * [!UICONTROL Add User or Group] under [!UICONTROL Closed User Group] fliken [!UICONTROL Permissions] i mappen [!UICONTROL Properties] (NPR-34452).
 
 **Problem som har korrigerats i Experience Manager Assets**
 
-[!DNL Adobe Experience Manager] 6.5.6.0 Resurser innehåller korrigeringar av följande:
+[!DNL Adobe Experience Manager] 6.5.6.0 [!DNL Assets] innehåller korrigeringar av följande:
 
-* Förhandsgranskning av marknadsföringsmaterial (t.ex. broschyr, flygblad och visitkort) som skapats med [!DNL Adobe InDesign] -mallen (INDD) bevarar inte radbrytningar och styckebrytningar (NPR-34268).
+* Förhandsgranskning av marknadsföringsmaterial (t.ex. broschyr, flygblad och visitkort) som skapats med [!DNL Adobe InDesign] mall visar inte radbrytningar och styckebrytningar (NPR-34268).
 
-* Textextrahering för de överförda PDF-filerna fungerar inte och fulltextsökning för vissa ord i en PDF-fil misslyckas med att hämta PDF-filen (NPR-34164).
-
-   >[!NOTE]
-   >Om du vill att den här korrigeringen ska fungera startar du om Adobe Experience Manager-instansen när du har installerat Service Pack 6.5.6.0.
+* Textextrahering och därmed fulltextsökning för de överförda PDF-filerna fungerar inte (NPR-34164). Du åtgärdar det genom att starta om [!DNL sAdobe Experience Manager] distributionen efter installation av Service Pack 6.
 
 * På tidslinjen för flersidiga resurser visas anteckningar som används för alla underresurser när du bläddrar i resursen i tidslinjevyn i stället för att anteckningarna som är specifika för de specifika underresurserna visas (NPR-34100).
 
@@ -205,11 +202,7 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 
 * När du skapar regler för listrutor i [!UICONTROL Folder Metadata Schema Form]kan användaren inte välja värden från [!UICONTROL Field Choices] kolumnen (CQ-4297530).
 
-* Körningskopian av resurser i en anpassad arbetsflödesmodell (skapad i `/var/workflow/models/dam`) tas bort när du installerar 6.5 Service Pack 5 eller tidigare versioner på 6.5 GA (NPR-34532).
-
-   >[!NOTE]
-   >
-   >Uppgradering till [!DNL Experience Manager] 6.5 Service Pack 6 hämtar inte körtidskopian om körningskopian tas bort när du installerar [!DNL Experience Manager] 6.5 Service Pack 5 eller tidigare versioner på 6.5 GA. Om du vill hämta körtidskopian synkroniserar du designtidskopian av arbetsflödesmodellen med körtidskopian med HTTP API:
+* Körningskopian av resurser i en anpassad arbetsflödesmodell (skapas i `/var/workflow/models/dam`) tas bort när du installerar [!DNL Experience Manager] 6.5 Service Pack 5 eller en tidigare version på [!DNL Experience Manager] 6.5 (NPR-34532). Om du vill hämta körtidskopian synkroniserar du designtidskopian av arbetsflödesmodellen med körtidskopian med HTTP API:
    `<designModelPath>/jcr:content.generate.json`.
 
 **Problem som har korrigerats i Dynamic Media**
@@ -410,7 +403,7 @@ B. Använd [HTTP API från Package Manager](https://docs.adobe.com/content/docs/
 
 1. Alla OSGi-paket finns antingen **[!UICONTROL ACTIVE]** eller **[!UICONTROL FRAGMENT]** i OSGi Console (Använd webbkonsol: `/system/console/bundles`).
 
-1. OSGI-paketet `org.apache.jackrabbit.oak-core` är version 1.2.2.3 eller senare (Använd webbkonsol: `/system/console/bundles`).
+1. OSGi-paketet `org.apache.jackrabbit.oak-core` är version 1.2.3 eller senare (Använd webbkonsol: `/system/console/bundles`).
 
 Om du vill veta vilka plattformar som är certifierade för att fungera med den här versionen läser du de [tekniska kraven](/help/sites-deploying/technical-requirements.md).
 
@@ -453,7 +446,7 @@ Om du vill använda UberJar i ett Maven-projekt ska du läsa [hur du använder U
 
 ## Deprecated features {#removed-deprecated-features}
 
-I det här avsnittet visas funktioner som har markerats som borttagna i AEM 6.5.6.0. Funktioner som ska tas bort i en framtida version är först inaktuella, med ett alternativt alternativ att använda.
+I det här avsnittet visas funktioner som har markerats som borttagna i Experience Manager 6.5.6.0. Funktioner som ska tas bort i en framtida version är först inaktuella, med ett alternativt alternativ att använda.
 
 Kunderna rekommenderas att granska om de använder funktionen eller funktionen i den aktuella distributionen och planera för att ändra implementeringen så att den använder det alternativa alternativet.
 
@@ -464,7 +457,7 @@ Kunderna rekommenderas att granska om de använder funktionen eller funktionen i
 
 ## Known issues {#known-issues}
 
-* Om du installerar [!DNL Experience Manager] 6.5 Service Pack 5 eller tidigare versioner på 6.5 GA tas körningskopian av din anpassade arbetsflödesmodell för resurser (skapad i `/var/workflow/models/dam`) bort.
+* Om du installerar [!DNL Experience Manager] 6.5 Service Pack 5 eller ett tidigare Service Pack på [!DNL Experience Manager] 6.5, tas körningskopian av din anpassade arbetsflödesmodell för resurser (skapad i `/var/workflow/models/dam`) bort.
 För att hämta din körningskopia föreslår Adobe att designtidskopian av den anpassade arbetsflödesmodellen ska synkroniseras med körtidskopian med HTTP API:
    `<designModelPath>/jcr:content.generate.json`.
 
