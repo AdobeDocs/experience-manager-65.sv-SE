@@ -3,9 +3,9 @@ title: Konfigurera plugin-programmen för RTF-redigeraren
 description: Lär dig konfigurera plugin-programmen för Adobe Experience Manager Rich Text Editor så att enskilda funktioner aktiveras.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: d6f48896a56950d44dfe0d1f9b712157951af83c
+source-git-commit: 6f5e650c99017c4b2f04ca8495eea8481b3236cd
 workflow-type: tm+mt
-source-wordcount: '4382'
+source-wordcount: '4383'
 ht-degree: 0%
 
 ---
@@ -652,7 +652,7 @@ Så här definierar du tabbstorleken:
 
    * **Namn** `tabSize`
    * **Typ** `String`
-   * **Värdet** är antalet blankstegstecken som ska användas för tabulatorn.
+   * **Värdet** är det antal blankstegstecken som ska användas för tabulatorn.
 
 1. Spara ändringarna.
 
@@ -731,7 +731,7 @@ Om du vill konfigurera hur länkar läggs till i AEM från ett annat program def
       * **Namn** `cssExternal`
       * **Typ** `String`
       * **Ange ett värde** för CSS-klassens namn (utan föregående &#39;.&#39;); for example, `cssClass` instead of `.cssClass`)
-   * Array med giltiga **protokoll** (inklusive `https://`, `https://`, `file://`och `mailto:` bland andra)
+   * Matris med giltiga **protokoll**. De protokoll som stöds är `http://`, `https://`, `file://`och `mailto:`.
 
       * **Namn** `protocols`
       * **Typ** `String[]`
