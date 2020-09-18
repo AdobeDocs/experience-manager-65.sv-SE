@@ -4,9 +4,9 @@ description: Versionsinformation för [!DNL Adobe Experience Manager] 6.5 Servic
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b6db346f7ec2570972329a8edb089fe909120b75
+source-git-commit: 4f6b2bbb58f7f18798eb01a6c8f2cef4b02063a3
 workflow-type: tm+mt
-source-wordcount: '4214'
+source-wordcount: '4225'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ De viktigaste funktionerna och förbättringarna i Adobe Experience Manager 6.5.
 
 * Stöd för Adobe Sign-texttaggar i den automatiska Forms Conversion Service.
 
-* Stöd för konvertering av färgade formulär till anpassningsbara formulär med [!DNL Automated Forms Conversion service].
+* Support to convert colored forms to adaptive forms using [!DNL Automated Forms Conversion service].
 
 * Stöd för SMB 2- och SMB 3-protokoll.
 
@@ -170,6 +170,8 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 
 [!DNL Adobe Experience Manager] 6.5.6.0 [!DNL Assets] innehåller korrigeringar av följande:
 
+* Anteckningar markeras inte när de väljs från resursens tidslinje (CQ-4302422).
+
 * Förhandsgranskning av marknadsföringsmaterial (t.ex. broschyr, flygblad och visitkort) som skapats med [!DNL Adobe InDesign] mall visar inte radbrytningar och styckebrytningar (NPR-34268).
 
 * Textextrahering och därmed fulltextsökning för de överförda PDF-filerna fungerar inte (NPR-34164). Du åtgärdar det genom att starta om [!DNL sAdobe Experience Manager] distributionen efter installation av Service Pack 6.
@@ -205,7 +207,7 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 * Körningskopian av resurser i en anpassad arbetsflödesmodell (skapas i `/var/workflow/models/dam`) tas bort när du installerar [!DNL Experience Manager] 6.5 Service Pack 5 eller en tidigare version på [!DNL Experience Manager] 6.5 (NPR-34532). Om du vill hämta körtidskopian synkroniserar du designtidskopian av arbetsflödesmodellen med körtidskopian med HTTP API:
    `<designModelPath>/jcr:content.generate.json`.
 
-**Problem som har korrigerats i Dynamic Media**
+**Problem som har åtgärdats i Dynamic Media**
 
 * Om användaren definierar kodningsinställningarna i redigeringar efter att videoprofilen har skapats, tas inställningarna för smart beskärning bort från videoprofiler (CQ-4299177).
 
