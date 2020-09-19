@@ -8,9 +8,9 @@ topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 110c86ea-9bd8-4018-bfcc-ca33e6b3f3ba
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 65647a5e7c30991e06dd43125159547490fdddef
 workflow-type: tm+mt
-source-wordcount: '2031'
+source-wordcount: '2035'
 ht-degree: 0%
 
 ---
@@ -366,7 +366,7 @@ Följande är ett exempel på den `pom.xml` fil som är en del av implementering
         <dependency>
             <groupId>com.adobe.aemfd</groupId>
             <artifactId>aemfd-client-sdk</artifactId>
-            <version>6.0.122</version>
+            <version>6.0.146</version>
         </dependency>
     </dependencies>
 
@@ -443,4 +443,4 @@ Följande är ett exempel på den `pom.xml` fil som är en del av implementering
 
 >[!NOTE]
 >
->Se till att du uppdaterar beroendet till 6.0.122 i `aemfd-client-sdk` `pom.xml` filen.
+>Se till att du uppdaterar beroendet till 6.0.146 eller en senare version i `aemfd-client-sdk` `pom.xml` filen.
