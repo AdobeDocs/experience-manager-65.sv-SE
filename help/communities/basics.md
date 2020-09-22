@@ -1,8 +1,8 @@
 ---
 title: Grunderna för communitykomponenter
 seo-title: Grunderna för communitykomponenter
-description: Lägg till webbgruppsfunktioner på AEM-webbplatser i redigeringsläge och konfigurera komponenter
-seo-description: Lägg till webbgruppsfunktioner på AEM-webbplatser i redigeringsläge och konfigurera komponenter
+description: Lägg till communityfunktioner AEM webbplatser i redigeringsläge och konfigurera komponenter
+seo-description: Lägg till communityfunktioner AEM webbplatser i redigeringsläge och konfigurera komponenter
 uuid: c017a7c5-40d1-4592-9317-96fd727dac86
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -10,10 +10,10 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 21714581-7645-4b47-a9b0-9f1424013240
 translation-type: tm+mt
-source-git-commit: f1870c1222004f582ccf337a59e1f30e2dc2cf32
+source-git-commit: c77a353d43a3a6f33dffecf0b4e7672ed3e2dd3f
 workflow-type: tm+mt
 source-wordcount: '380'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
@@ -22,9 +22,9 @@ ht-degree: 2%
 
 ## Översikt {#overview}
 
-I redigeringsavsnittet i dokumentationen beskrivs hur du lägger till webbgruppsfunktioner på AEM-webbplatser i redigeringsläge för författare samt hur du beskriver komponentkonfigurationer.
+I redigeringsavsnittet i dokumentationen beskrivs hur du lägger till communityfunktioner AEM webbplatser i redigeringsläge för författare samt beskriver komponentkonfigurationer.
 
-Komponenter kan utforskas med hjälp av en AEM-instans och den interaktiva [communitykomponentguiden](components-guide.md).
+Komponenter kan undersökas med hjälp av en AEM och den interaktiva [communitykomponentguiden](components-guide.md).
 
 ## Åtkomst till webbgruppskomponenter {#accessing-communities-components}
 
@@ -36,7 +36,7 @@ Tillgängliga webbgruppskomponenter listas [här](author-communities.md#availabl
 >
 >Allmän redigeringsinformation finns i [snabbguiden till redigeringssidorna](../../help/sites-authoring/qg-page-authoring.md).
 >
->Om du inte känner till AEM läser du dokumentationen om [grundläggande hantering](../../help/sites-authoring/basic-handling.md).
+>Om du inte känner till AEM kan du läsa dokumentationen om [grundläggande hantering](../../help/sites-authoring/basic-handling.md).
 
 
 ### Gå in i designläge {#entering-design-mode}
@@ -47,11 +47,11 @@ Mer information finns i [Konfigurera komponenter i designläge](../../help/sites
 
 Nedan följer bilder på hur du väljer ett fåtal Communities-komponenter och visar dem i komponentwebbläsaren:
 
-![chlimage_1-424](assets/chlimage_1-424.png)
+![komponentdesign](assets/component-design.png)
 
 De valda komponenterna är nu tillgängliga i komponentwebbläsaren:
 
-![chlimage_1-425](assets/chlimage_1-425.png)
+![component-design1](assets/component-design1.png)
 
 ## Nödvändiga klienter {#required-clientlibs}
 
@@ -61,11 +61,11 @@ När du lägger till en webbgruppskomponent på en sida, om resultatet är ett f
 
 ### Exempel: Inledningsvis placerade granskningar utan klientbibliotek... {#example-initially-placed-reviews-without-client-libraries}
 
-![chlimage_1-426](assets/chlimage_1-426.png)
+![clientlibs1](assets/clientlibs1.png)
 
 ### ... Och med klientbibliotek {#and-with-client-libraries}
 
-![chlimage_1-427](assets/chlimage_1-427.png)
+![clientlibs2](assets/clientlibs2.png)
 
 ## Taggar {#tagging}
 
@@ -90,6 +90,6 @@ För administrativ information:
 
 För utvecklarinformation:
 
-* [AEM Tagging Framework](../../help/sites-developing/framework.md)
+* [AEM Taggningsramverk](../../help/sites-developing/framework.md)
 * [Tagga viktiga](tag.md)
 
