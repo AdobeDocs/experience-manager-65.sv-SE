@@ -4,9 +4,9 @@ description: Lär dig resurshanteringsåtgärder som överföring, hämtning, re
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: d6f48896a56950d44dfe0d1f9b712157951af83c
+source-git-commit: 2de85f2fc8daaf1cc30a1e12b7c18b20a640c747
 workflow-type: tm+mt
-source-wordcount: '9011'
+source-wordcount: '9141'
 ht-degree: 3%
 
 ---
@@ -72,68 +72,80 @@ Innan du överför en resurs måste du se till att den har ett [format](/help/as
 
    ![Förloppsindikator för överföring av resurser](assets/upload-progress-bar.png)
 
-   Den storlek över vilken en tillgång betraktas som en stor tillgång kan konfigureras. Du kan till exempel konfigurera systemet så att resurser över 1 000 MB (i stället för 500 MB) betraktas som stora resurser. I det här fallet **[!UICONTROL Pause]** visas det i förloppsindikatorn när resurser som är större än 1 000 MB överförs.
+Den storlek över vilken en tillgång betraktas som en stor tillgång kan konfigureras. Du kan till exempel konfigurera systemet så att resurser över 1 000 MB (i stället för 500 MB) betraktas som stora resurser. I det här fallet **[!UICONTROL Pause]** visas det i förloppsindikatorn när resurser som är större än 1 000 MB överförs.
 
-   Pausknappen visas inte om en fil som är större än 1 000 MB överförs med en fil som är mindre än 1 000 MB. Men om du avbryter filöverföringen på mindre än 1 000 MB visas **[!UICONTROL Pause]** knappen.
+Pausknappen visas inte om en fil som är större än 1 000 MB överförs med en fil som är mindre än 1 000 MB. Men om du avbryter filöverföringen på mindre än 1 000 MB visas **[!UICONTROL Pause]** knappen.
 
-   Om du vill ändra storleksgränsen konfigurerar du `chunkUploadMinFileSize` egenskapen för `fileupload`noden i CRX-databasen.
+Om du vill ändra storleksgränsen konfigurerar du `chunkUploadMinFileSize` egenskapen för `fileupload`noden i CRX-databasen.
 
-   När du klickar **[!UICONTROL Pause]** växlar den till **[!UICONTROL Play]** alternativet. Om du vill återuppta överföringen klickar du på **[!UICONTROL Play]**.
+När du klickar **[!UICONTROL Pause]** växlar den till **[!UICONTROL Play]** alternativet. Om du vill återuppta överföringen klickar du på **[!UICONTROL Play]**.
 
-   ![Återuppta den pausade resursuppladdningen](assets/resume-paused-upload.png)
+![Återuppta den pausade resursuppladdningen](assets/resume-paused-upload.png)
 
-   Om du vill avbryta en pågående överföring klickar du på Stäng (`X`) bredvid förloppsindikatorn. När du avbryter överföringen tas den delvis överförda delen av resursen bort [!DNL Assets] .
+Om du vill avbryta en pågående överföring klickar du på Stäng (`X`) bredvid förloppsindikatorn. När du avbryter överföringen tas den delvis överförda delen av resursen bort [!DNL Assets] .
 
-   Möjligheten att återuppta överföring är särskilt användbar i scenarier med låg bandbredd och nätverksfel, där det tar lång tid att överföra stora resurser. Du kan pausa överföringen och fortsätta senare när situationen förbättras. När du återupptar startar överföringen från den punkt där du pausade den.
+Möjligheten att återuppta överföring är särskilt användbar i scenarier med låg bandbredd och nätverksfel, där det tar lång tid att överföra stora resurser. Du kan pausa överföringen och fortsätta senare när situationen förbättras. När du återupptar startar överföringen från den punkt där du pausade den.
 
-   Under överföringen [!DNL Experience Manager] sparas de delar av resursen som överförs som datablock i CRX-databasen. När överföringen är klar konsoliderar dessa segment till ett enda datablock [!DNL Experience Manager] .
+Under överföringen [!DNL Experience Manager] sparas de delar av resursen som överförs som datablock i CRX-databasen. När överföringen är klar konsoliderar dessa segment till ett enda datablock [!DNL Experience Manager] .
 
-   Om du vill konfigurera rensningsaktiviteten för de oavslutade segmentöverföringsjobben går du till `https://[aem_server]:[port]/system/console/configMgr/org.apache.sling.servlets.post.impl.helper.ChunkCleanUpTask`.
+Om du vill konfigurera rensningsaktiviteten för de oavslutade segmentöverföringsjobben går du till `https://[aem_server]:[port]/system/console/configMgr/org.apache.sling.servlets.post.impl.helper.ChunkCleanUpTask`.
 
-   Om du överför en resurs med samma namn som en resurs som redan finns på den plats där du överför resursen visas en varningsdialogruta.
-
-   Du kan välja att ersätta en befintlig resurs, skapa en annan version eller behålla båda genom att byta namn på den nya resursen som överförs. Om du ersätter en befintlig resurs tas metadata för resursen och eventuella tidigare ändringar (till exempel anteckningar eller beskärningar) som du har gjort i den befintliga resursen bort. Om du väljer att behålla båda resurserna får den nya resursen ett nytt namn med ett nummer `1` efter resursens namn.
-
-   ![Dialogrutan Namnkonflikt för att lösa konflikter för resursnamn](assets/resolve-naming-conflict.png)
-
-   >[!NOTE]
+>[!CAUTION]
+>
+>Standardvärdet när segmentöverföring utlöses är 500 MB och segmentstorleken är 50 MB. Om du ändrar [Apache Jackrabbit Oak TokenConfiguration](https://helpx.adobe.com/experience-manager/kb/How-to-set-token-session-expiration-AEM.html) för att ange `timeout configuration` till mindre än den tid det tar för en resurs att överföra, kan du hamna i en sessionstimeout medan överföringen av resursen pågår. Du måste därför ändra `chunkUploadMinFileSize` och `chunksize`så att varje segmentbegäran uppdaterar sessionen.
+>
+>Med tanke på tidsgräns, fördröjning, bandbredd och förväntade samtidiga överföringar för autentiseringsuppgifter och förfallodatum bör du välja det högsta värdet som gör att du kan säkerställa följande två:
+>
+>* För att säkerställa att segmentöverföring är aktiverad för filer med storlekar som kan orsaka att autentiseringsuppgifterna förfaller när överföringen pågår.
    >
-   >När du väljer **[!UICONTROL Replace]** i [!UICONTROL Name Conflict] dialogrutan genereras resurs-ID om för den nya resursen. Detta ID skiljer sig från ID:t för föregående resurs.
    >
-   >Om resursinsikter är aktiverat för att spåra visningar/klick med Adobe Analytics blir det återskapade resurs-ID:t ogiltigt för de data som har samlats in för resursen i Analytics.
+* För att säkerställa att varje segment avslutas innan autentiseringsuppgifterna upphör att gälla.
 
-   Om resursen som du överför finns i [!DNL Assets]visas en varning i **[!UICONTROL Duplicates Detected]** dialogrutan om att du försöker överföra en dubblettresurs. Dialogrutan visas bara om kontrollsummevärdet för den befintliga resursens binärfil matchar kontrollsummevärdet för den resurs du överför. `SHA 1` I det här fallet spelar resursernas namn ingen roll.
 
-   >[!NOTE]
-   >
-   >Dialogrutan visas bara när funktionen för dubblettidentifiering är aktiverad. [!UICONTROL Duplicates Detected] Information om hur du aktiverar funktionen för dubblettidentifiering finns i [Aktivera dubblettidentifiering](/help/assets/duplicate-detection.md).
+Om du överför en resurs med samma namn som en resurs som redan finns på den plats där du överför resursen visas en varningsdialogruta.
 
-   ![Dialogrutan Duplicera resurs identifierad](assets/duplicate-asset-detected.png)
+Du kan välja att ersätta en befintlig resurs, skapa en annan version eller behålla båda genom att byta namn på den nya resursen som överförs. Om du ersätter en befintlig resurs tas metadata för resursen och eventuella tidigare ändringar (till exempel anteckningar eller beskärningar) som du har gjort i den befintliga resursen bort. Om du väljer att behålla båda resurserna får den nya resursen ett nytt namn med ett nummer `1` efter resursens namn.
 
-   Om du vill behålla den duplicerade resursen i [!DNL Assets]klickar du på **[!UICONTROL Keep]**. Klicka på **[!UICONTROL Delete]** om du vill ta bort den duplicerade resursen som du överförde.
+![Dialogrutan Namnkonflikt för att lösa konflikter för resursnamn](assets/resolve-naming-conflict.png)
 
-   [!DNL Experience Manager Assets] förhindrar att du överför resurser med förbjudna tecken i filnamn. Om du försöker överföra en resurs med ett filnamn som innehåller ett eller flera otillåtna tecken visas ett varningsmeddelande och överföringen stoppas tills du tar bort dessa tecken eller överför med ett tillåtet namn. [!DNL Assets]
+>[!NOTE]
+>
+>När du väljer **[!UICONTROL Replace]** i [!UICONTROL Name Conflict] dialogrutan genereras resurs-ID om för den nya resursen. Detta ID skiljer sig från ID:t för föregående resurs.
+>
+>Om resursinsikter är aktiverat för att spåra visningar/klick med Adobe Analytics blir det återskapade resurs-ID:t ogiltigt för de data som har samlats in för resursen i Analytics.
 
-   I dialogrutan kan du ange långa namn för de filer som du överför, så att de passar organisationens specifika regler för filnamn. [!UICONTROL Upload Assets]
+Om resursen som du överför finns i [!DNL Assets]visas en varning i **[!UICONTROL Duplicates Detected]** dialogrutan om att du försöker överföra en dubblettresurs. Dialogrutan visas bara om kontrollsummevärdet för den befintliga resursens binärfil matchar kontrollsummevärdet för den resurs du överför. `SHA 1` I det här fallet spelar resursernas namn ingen roll.
 
-   Följande (blankstegsavgränsad lista med) tecken stöds emellertid inte:
+>[!NOTE]
+>
+>Dialogrutan visas bara när funktionen för dubblettidentifiering är aktiverad. [!UICONTROL Duplicates Detected] Information om hur du aktiverar funktionen för dubblettidentifiering finns i [Aktivera dubblettidentifiering](/help/assets/duplicate-detection.md).
 
-   * resursens filnamn får inte innehålla `* / : [ \\ ] | # % { } ? &`
-   * resursmappens namn får inte innehålla `* / : [ \\ ] | # % { } ? \" . ^ ; + & \t`
+![Dialogrutan Duplicera resurs identifierad](assets/duplicate-asset-detected.png)
 
-   Inkludera inte specialtecken i filnamnstilläggen för resurser.
+Om du vill behålla den duplicerade resursen i [!DNL Assets]klickar du på **[!UICONTROL Keep]**. Klicka på **[!UICONTROL Delete]** om du vill ta bort den duplicerade resursen som du överförde.
 
-   ![I dialogrutan för överföring av förlopp visas status för överförda filer och filer som inte kan överföras](assets/bulk-upload-progress.png)
+[!DNL Experience Manager Assets] förhindrar att du överför resurser med förbjudna tecken i filnamn. Om du försöker överföra en resurs med ett filnamn som innehåller ett eller flera otillåtna tecken visas ett varningsmeddelande och överföringen stoppas tills du tar bort dessa tecken eller överför med ett tillåtet namn. [!DNL Assets]
 
-   Dessutom visas den senaste resursen som du överför eller den mapp som du skapade först i användargränssnittet. [!DNL Assets]
+I dialogrutan kan du ange långa namn för de filer som du överför, så att de passar organisationens specifika regler för filnamn. [!UICONTROL Upload Assets]
 
-   Om du avbryter överföringen innan filerna har överförts, avbryter du överföringen av den aktuella filen och uppdaterar innehållet [!DNL Assets] . Filer som redan har överförts tas dock inte bort.
+Följande (blankstegsavgränsad lista med) tecken stöds emellertid inte:
 
-   I dialogrutan för överföringsförlopp [!DNL Assets] visas antalet överförda filer och de filer som inte kunde överföras.
+* resursens filnamn får inte innehålla `* / : [ \\ ] | # % { } ? &`
+* resursmappens namn får inte innehålla `* / : [ \\ ] | # % { } ? \" . ^ ; + & \t`
+
+Inkludera inte specialtecken i filnamnstilläggen för resurser.
+
+![I dialogrutan för överföring av förlopp visas status för överförda filer och filer som inte kan överföras](assets/bulk-upload-progress.png)
+
+Dessutom visas den senaste resursen som du överför eller den mapp som du skapade först i användargränssnittet. [!DNL Assets]
+
+Om du avbryter överföringen innan filerna har överförts, avbryter du överföringen av den aktuella filen och uppdaterar innehållet [!DNL Assets] . Filer som redan har överförts tas dock inte bort.
+
+I dialogrutan för överföringsförlopp [!DNL Assets] visas antalet överförda filer och de filer som inte kunde överföras.
 
 ### Serieuppladdningar {#serialuploads}
 
-Att överföra många resurser i grupp förbrukar betydande I/O-resurser, vilket kan påverka [!DNL Assets] driftsättningens prestanda negativt. Om du har en långsam internetanslutning ökar tiden det tar att överföra drastiskt på grund av att disk-I/O-inläsningen har ökat. Din webbläsare kan dessutom införa ytterligare begränsningar för hur många POSTER som ska begäras [!DNL Assets] för samtidiga överföringar av resurser. Därför misslyckas överföringen eller avslutas i förtid. Det innebär att vissa filer kanske [!DNL Experience Manager Assets] saknas när en grupp filer importeras eller att någon fil inte kan importeras alls.
+Att överföra många resurser i grupp förbrukar betydande I/O-resurser, vilket kan påverka [!DNL Assets] driftsättningens prestanda negativt. Om du har en långsam internetanslutning ökar tiden det tar att överföra drastiskt på grund av att disk-I/O-inläsningen har ökat. Din webbläsare kan dessutom införa ytterligare begränsningar för hur många POSTER som ska begäras [!DNL Assets] för samtidiga överföringar av resurser. Därför misslyckas överföringen eller avslutas i förtid. Det innebär att vissa filer kanske saknas när du importerar en grupp filer eller helt och hållet inte kan importera någon fil. [!DNL Experience Manager Assets]
 
 För att lösa den här situationen [!DNL Assets] infogar en resurs i taget (seriell överföring) under en gruppöverföring, i stället för att alla resurser hämtas samtidigt.
 
@@ -158,7 +170,7 @@ Med Dynamic Media kan du batchöverföra resurser via FTP-servern. Om du tänker
 1. Logga in på FTP-servern med det FTP-användarnamn och lösenord som du fick från e-postmeddelandet om etablering. Överför filer eller mappar till FTP-servern i FTP-klienten.
 1. [Logga in på Dynamic Media Classic](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) med hjälp av autentiseringsuppgifter från e-postmeddelandet om etablering. Klicka på i det globala navigeringsfältet **[!UICONTROL Upload]**.
 
-1. Klicka på **[!UICONTROL Via FTP]** fliken på sidan Överför, i det övre vänstra hörnet.
+1. På sidan Överför klickar du på **[!UICONTROL Via FTP]** fliken uppe till vänster.
 1. Välj en FTP-mapp att överföra filer från till vänster på sidan. till höger på sidan väljer du en målmapp.
 1. Klicka i det nedre högra hörnet av sidan **[!UICONTROL Job Options]** och ange önskade alternativ baserat på resurserna i den mapp du valde.
 
@@ -223,7 +235,7 @@ När du överför bildfiler, inklusive AI-, EPS- och PSD-filer, kan du utföra f
 
 #### Ange överföringsalternativ för PostScript och Illustrator {#setting-postscript-and-illustrator-upload-options}
 
-När du överför bildfiler i PostScript (EPS) eller Illustrator (AI) kan du formatera dem på olika sätt. Du kan rastrera filerna, behålla den genomskinliga bakgrunden, välja en upplösning och välja en färgrymd. Formateringsalternativ för PostScript- och Illustrator-filer finns i [!UICONTROL Upload Job Options] dialogrutan under [!UICONTROL PostScript Options] och [!UICONTROL Illustrator Options].
+När du överför bildfiler från PostScript (EPS) eller Illustrator (AI) kan du formatera dem på olika sätt. Du kan rastrera filerna, behålla den genomskinliga bakgrunden, välja en upplösning och välja en färgrymd. Formateringsalternativ för PostScript- och Illustrator-filer finns i [!UICONTROL Upload Job Options] dialogrutan under [!UICONTROL PostScript Options] och [!UICONTROL Illustrator Options].
 
 | Alternativ | Delalternativ | Beskrivning |
 |---|---|---|
@@ -752,7 +764,7 @@ Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Vi
 
 1. Om du vill välja en annan färg så att du kan skilja mellan användarna klickar du på alternativet Profil och sedan på **[!UICONTROL My Preferences]**.
 
-   ![Välj alternativet Användarprofil och sedan Mina inställningar för att öppna Användarinställningar](assets/User-profile-preferences.png)
+   ![Välj alternativet för användarprofil och sedan Mina inställningar för att öppna Användarinställningar](assets/User-profile-preferences.png)
 
    Specify the desired color in the **[!UICONTROL Annotation Color]** box and then click **[!UICONTROL Accept]**.
 
