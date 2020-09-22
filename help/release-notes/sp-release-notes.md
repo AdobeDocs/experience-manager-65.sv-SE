@@ -4,9 +4,9 @@ description: Versionsinformation för [!DNL Adobe Experience Manager] 6.5 Servic
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 4f6b2bbb58f7f18798eb01a6c8f2cef4b02063a3
+source-git-commit: 4da9481dbd74a8cecf13c51b78c94abc4d48332e
 workflow-type: tm+mt
-source-wordcount: '4225'
+source-wordcount: '4294'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,11 @@ ht-degree: 0%
 | Version | 6.5.6.0 |
 | Typ | Service Pack-version |
 | Date | 3 september 2020 |
-| Hämta URL | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.6.zip) |
+| Hämta URL | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.6-1.0.zip) |
+
+>[!NOTE]
+>
+>Det finns en uppdaterad version av AEM 6.5 Service Pack 6. Om du redan har installerat en tidigare version av Service Pack 6 uppgraderar du till den senaste tillgängliga versionen.
 
 ## Vad ingår i Adobe Experience Manager 6.5.6.0 {#what-s-included-in-aem}
 
@@ -377,7 +381,7 @@ Mer information om säkerhetsuppdateringar finns på [Experience Manager sida](h
 
 Så här installerar du Service Pack på en befintlig Adobe Experience Manager 6.5-instans:
 
-1. Hämta Service Pack från [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.6.zip).
+1. Hämta Service Pack från [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.6-1.0.zip).
 
 1. Öppna Pakethanteraren och klicka på **[!UICONTROL Upload Package]** för att överföra paketet. Mer information om hur du använder paketet finns i [Pakethanteraren](https://docs.adobe.com/content/help/en/experience-manager-65/administering/contentmanagement/package-manager.html).
 
@@ -458,6 +462,17 @@ Kunderna rekommenderas att granska om de använder funktionen eller funktionen i
 | Anslutningar | Adobe JCR Connector för Microsoft SharePoint 2010 och Microsoft SharePoint 2013 är borttagen för AEM 6.5. | Ej tillämpligt |
 
 ## Known issues {#known-issues}
+
+* Om säkerhetshälsokontrollen inte fungerar och följande felmeddelande visas:
+   `message: Could not verify users and could not test system account logins.`
+Utför följande steg för att lösa problemet:
+   1. Gå till https://&lt;*värdnamn*>:&lt;*port*>/system/console/configMgr.
+
+   1. Search for `hc.impl`.
+
+   1. I [!UICONTROL Service Mappings]klickar du på `+` och anger `com.adobe.granite.repository.hc.impl=[user-reader-service]`.
+
+   1. Klicka [!UICONTROL Save] för att spara konfigurationen.
 
 * Om du installerar [!DNL Experience Manager] 6.5 Service Pack 5 eller ett tidigare Service Pack på [!DNL Experience Manager] 6.5, tas körningskopian av din anpassade arbetsflödesmodell för resurser (skapad i `/var/workflow/models/dam`) bort.
 För att hämta din körningskopia föreslår Adobe att designtidskopian av den anpassade arbetsflödesmodellen ska synkroniseras med körtidskopian med HTTP API:
