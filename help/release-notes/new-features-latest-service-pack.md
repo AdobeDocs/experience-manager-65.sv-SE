@@ -4,9 +4,9 @@ description: Nyheter i Adobe Experience Manager 6.5 Service Pack 6
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b676f73a800c45be12de70b8ba57a332563a49a4
+source-git-commit: f52eb4ccfc1c9f0a121039432ed57401a2def573
 workflow-type: tm+mt
-source-wordcount: '2465'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -70,7 +70,7 @@ Du kan nu välja att selektivt publicera eller avpublicera resurser till antinge
 
 ### Andra förbättringar i Assets {#other-enhancements-assets-6560}
 
-* Användargrupper med privata mappar tas nu bort från databasen när privata mappar tas bort. När du tar bort en privat mapp rensas databasen med överblivna användargrupper, som skapas varje gång en privat mapp skapas. Mer information finns i Ta bort [användargrupper när mappar tas bort](#group-removal-on-folder-deletion).
+* Användargrupper som är associerade med mappar (privata och icke-privata) tas nu bort från databasen när mapparna [tas](/help/assets/private-folder.md#delete-private-folder)bort. Befintliga redundanta, överblivna, oanvända och autogenererade användargrupper kan rensas bort från databasen med JMX.
 
 ## [!DNL Adobe Experience Manager Forms] {#aem-forms}
 
