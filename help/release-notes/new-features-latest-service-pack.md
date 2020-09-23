@@ -4,9 +4,9 @@ description: Nyheter i Adobe Experience Manager 6.5 Service Pack 6
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 3ed140d0649379d27019e9f5b0753c07f30f5491
+source-git-commit: b676f73a800c45be12de70b8ba57a332563a49a4
 workflow-type: tm+mt
-source-wordcount: '2455'
+source-wordcount: '2465'
 ht-degree: 0%
 
 ---
@@ -70,7 +70,7 @@ Du kan nu välja att selektivt publicera eller avpublicera resurser till antinge
 
 ### Andra förbättringar i Assets {#other-enhancements-assets-6560}
 
-* Användargrupper med privata mappar tas nu bort från databasen när privata mappar tas bort. När du tar bort en privat mapp rensas databasen med överblivna användargrupper, som skapas varje gång en privat mapp skapas.
+* Användargrupper med privata mappar tas nu bort från databasen när privata mappar tas bort. När du tar bort en privat mapp rensas databasen med överblivna användargrupper, som skapas varje gång en privat mapp skapas. Mer information finns i Ta bort [användargrupper när mappar tas bort](#group-removal-on-folder-deletion).
 
 ## [!DNL Adobe Experience Manager Forms] {#aem-forms}
 
@@ -87,7 +87,7 @@ Nu kan du konfigurera [!DNL Experience Manager Forms] servern så att den utför
 
 Om ett AcroForm innehåller [!DNL Adobe Sign] texttaggar identifieras och representeras dessa fält som [!DNL Adobe Sign] fält i det adaptiva formuläret som konverterats med [!DNL Automated Forms Conversion service]. En signerare kan fylla i sådana fält medan han/hon signerar det anpassade formuläret.
 
-### Stöd för konvertering av färgat PDF forms till anpassningsbara formulär {#colore-PDF-forms}
+### Support to convert colored PDF forms to adaptive forms {#colore-PDF-forms}
 
 Du kan använda [!DNL Automated Forms Conversion service] för att konvertera färgad PDF forms till adaptiva formulär.
 
