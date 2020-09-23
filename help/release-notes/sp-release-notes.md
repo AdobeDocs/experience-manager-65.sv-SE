@@ -4,9 +4,9 @@ description: Versionsinformation för [!DNL Adobe Experience Manager] 6.5 Servic
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 4da9481dbd74a8cecf13c51b78c94abc4d48332e
+source-git-commit: bd67a41e493cbcf97956de09e088d16997ab0e93
 workflow-type: tm+mt
-source-wordcount: '4294'
+source-wordcount: '4304'
 ht-degree: 0%
 
 ---
@@ -22,10 +22,6 @@ ht-degree: 0%
 | Typ | Service Pack-version |
 | Date | 3 september 2020 |
 | Hämta URL | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.6-1.0.zip) |
-
->[!NOTE]
->
->Det finns en uppdaterad version av AEM 6.5 Service Pack 6. Om du redan har installerat en tidigare version av Service Pack 6 uppgraderar du till den senaste tillgängliga versionen.
 
 ## Vad ingår i Adobe Experience Manager 6.5.6.0 {#what-s-included-in-aem}
 
@@ -211,7 +207,7 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 * Körningskopian av resurser i en anpassad arbetsflödesmodell (skapas i `/var/workflow/models/dam`) tas bort när du installerar [!DNL Experience Manager] 6.5 Service Pack 5 eller en tidigare version på [!DNL Experience Manager] 6.5 (NPR-34532). Om du vill hämta körtidskopian synkroniserar du designtidskopian av arbetsflödesmodellen med körtidskopian med HTTP API:
    `<designModelPath>/jcr:content.generate.json`.
 
-**Problem som har åtgärdats i Dynamic Media**
+**Problem som har korrigerats i Dynamic Media**
 
 * Om användaren definierar kodningsinställningarna i redigeringar efter att videoprofilen har skapats, tas inställningarna för smart beskärning bort från videoprofiler (CQ-4299177).
 
@@ -319,6 +315,8 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 
 * Adaptiva formulär har vissa öppna resurslösningar. Detta leder till att det inte går att skicka in. Problemet inträffar då och då (CQ-4299407).
 
+* När du öppnar fältkonfigurationen för första gången visas inte egenskapsikonen (CQ-4296284).
+
 **Arbetsflöde**
 
 * När en arbetsflödesgodkännare överför en bifogad fil får den bifogade filen ett nytt namn till `undefined` (NPR-33699).
@@ -386,6 +384,10 @@ Så här installerar du Service Pack på en befintlig Adobe Experience Manager 6
 1. Öppna Pakethanteraren och klicka på **[!UICONTROL Upload Package]** för att överföra paketet. Mer information om hur du använder paketet finns i [Pakethanteraren](https://docs.adobe.com/content/help/en/experience-manager-65/administering/contentmanagement/package-manager.html).
 
 1. Markera paketet och klicka på **[!UICONTROL Install]**.
+
+>[!NOTE]
+>
+>På grund av ett känt fel finns ett uppdaterat Service Pack-paket tillgängligt. Vi rekommenderar att du installerar paketet.
 
 >[!NOTE]
 >
