@@ -4,9 +4,9 @@ description: Lär dig resurshanteringsåtgärder som överföring, hämtning, re
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 2de85f2fc8daaf1cc30a1e12b7c18b20a640c747
+source-git-commit: b676f73a800c45be12de70b8ba57a332563a49a4
 workflow-type: tm+mt
-source-wordcount: '9141'
+source-wordcount: '9139'
 ht-degree: 3%
 
 ---
@@ -94,7 +94,7 @@ Om du vill konfigurera rensningsaktiviteten för de oavslutade segmentöverföri
 >
 >Standardvärdet när segmentöverföring utlöses är 500 MB och segmentstorleken är 50 MB. Om du ändrar [Apache Jackrabbit Oak TokenConfiguration](https://helpx.adobe.com/experience-manager/kb/How-to-set-token-session-expiration-AEM.html) för att ange `timeout configuration` till mindre än den tid det tar för en resurs att överföra, kan du hamna i en sessionstimeout medan överföringen av resursen pågår. Du måste därför ändra `chunkUploadMinFileSize` och `chunksize`så att varje segmentbegäran uppdaterar sessionen.
 >
->Med tanke på tidsgräns, fördröjning, bandbredd och förväntade samtidiga överföringar för autentiseringsuppgifter och förfallodatum bör du välja det högsta värdet som gör att du kan säkerställa följande två:
+>Med tanke på tidsgräns, fördröjning, bandbredd och förväntade samtidiga överföringar för autentiseringsuppgifter, är det högsta värdet som gör att du kan säkerställa följande:
 >
 >* För att säkerställa att segmentöverföring är aktiverad för filer med storlekar som kan orsaka att autentiseringsuppgifterna förfaller när överföringen pågår.
    >
