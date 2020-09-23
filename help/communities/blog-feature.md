@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: cf8b3d72-30ba-40ca-ae48-b61abbb28802
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e74d39e63f8b3b5961ea2c31e0ef99c3ab8b06dd
+source-git-commit: 8361f65f52c2a67658ef1b7b7615df149208777b
 workflow-type: tm+mt
-source-wordcount: '1682'
+source-wordcount: '1676'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ## Introduktion {#introduction}
 
-Bloggfunktionen för AEM Communities har transformerats från en redigeringsaktivitet till en verklig communityaktivitet som äger rum i publiceringsmiljön.
+Bloggfunktionen för AEM Communities har transformerats från en redigeringsaktivitet till en verklig community-aktivitet som äger rum i publiceringsmiljön.
 
 Bloggfunktionen har stöd för att tillhandahålla communityinformation i journalformat. Bloggposterna görs i publiceringsmiljön av behöriga medlemmar (registrerade, inloggade användare).
 
@@ -40,7 +40,7 @@ Bloggfunktionen innehåller:
 
 I det här avsnittet av dokumentationen beskrivs:
 
-* Lägga till bloggfunktionen på en AEM-webbplats
+* Lägga till bloggfunktionen på en AEM webbplats
 * Konfigurationsinställningar för bloggkomponenter
 
 >[!NOTE]
@@ -63,17 +63,13 @@ Mer information finns i Grunderna för [communitykomponenter](/help/communities/
 
 När de [nödvändiga klientbiblioteken](/help/communities/blog-developer-basics.md#essentials-for-client-side) inkluderas visas `Blog` komponenten så här:
 
-![chlimage_1-147](assets/chlimage_1-147.png)
-
-Och hur `Blog Sidebar` visas:
-
-![chlimage_1-148](assets/chlimage_1-148.png)
+![add-blog-component](assets/add-blog-component.png)
 
 ### Konfigurerar blogg {#configuring-blog}
 
 Markera den monterade `Blog` komponent som du vill öppna och välj den `Configure` ikon som öppnar redigeringsdialogrutan.
 
-![chlimage_1-149](assets/chlimage_1-149.png)
+![konfigurera](assets/configure-new.png)
 
 ![Blogginställningar](assets/blog-configure.png)
 
@@ -262,6 +258,7 @@ Under fliken Inställningar **för** journalmarginaler anger du datumformatet f�
    * MMMM : hel månad, som juni
    * MMM: kort månad, som Jun
    * MM: månadsnummer, som 06
+
    Standardvärdet är&quot;yyyy MMMM&quot;, som skulle visas t.ex.&quot;2015 Juni&quot;
 
 * **Vytyp**
@@ -306,7 +303,7 @@ Bloggartiklarna visas under lämplig flik (Publicerad, Utkast eller Schemalagd) 
 
 När den inloggade användaren har moderator- eller administratörsbehörighet kan han/hon utföra [modereringsåtgärder](/help/communities/moderate-ugc.md) (som tillåts av komponentens konfiguration) på alla bloggartiklar och kommentarer som publiceras på en blogg.
 
-![chlimage_1-152](assets/chlimage_1-152.png)
+![moderator-hemsida](assets/moderator-homepage.png)
 
 #### Medlemmar {#members}
 
@@ -321,15 +318,15 @@ De får särskilt
 * Ta bort en egen bloggartikel eller kommentar
 * Flagga andras blogginlägg eller kommentarer
 
-![chlimage_1-153](assets/chlimage_1-153.png)
+![medlemshemsida](assets/member-homepage.png)
 
-![chlimage_1-154](assets/chlimage_1-154.png)
+![create-blog](assets/create-blog.png)
 
 #### Anonym {#anonymous}
 
 Besökare som inte är inloggade kan endast läsa inlagda bloggartiklar och kommentarer, översätta dem om de stöds, men kan inte lägga till en bloggartikel eller kommentar eller flagga andras artiklar eller kommentarer.
 
-![chlimage_1-155](assets/chlimage_1-155.png)
+![anonym användarvy](assets/anonymous-user-view.png)
 
 ## Additional Information {#additional-information}
 
