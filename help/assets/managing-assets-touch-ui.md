@@ -4,10 +4,10 @@ description: Lär dig resurshanteringsåtgärder som överföring, hämtning, re
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b676f73a800c45be12de70b8ba57a332563a49a4
+source-git-commit: f52eb4ccfc1c9f0a121039432ed57401a2def573
 workflow-type: tm+mt
-source-wordcount: '9139'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -538,25 +538,30 @@ Mer information om att generera och visa delresurser finns i [Hantera delresurse
 
 Användaren måste ha borttagningsbehörighet för att kunna ta bort resurser `dam/asset`. Om du bara har ändringsbehörighet kan du bara redigera metadata för resursen och lägga till anteckningar till resursen. Du kan dock inte ta bort resursen eller dess metadata.
 
-Om du vill lösa eller ta bort inkommande referenser från andra sidor uppdaterar du de relevanta referenserna innan du tar bort en resurs. Om du inte vill att användare ska kunna ta bort refererade resurser och lämna brutna länkar inaktiverar du alternativet för att ta bort force med en övertäckning.
+Om du vill lösa eller ta bort inkommande referenser från andra sidor uppdaterar du de relevanta referenserna innan du tar bort en resurs. Om du inte vill att användare ska kunna ta bort refererade resurser och lämna brutna länkar inaktiverar du alternativet för att framtvinga borttagning med en övertäckning.
 
-1. Navigera till platsen för de resurser som du vill ta bort.
+Så här tar du bort en resurs eller en mapp som innehåller en resurs:
 
-1. Markera resursen och klicka på alternativet **[!UICONTROL Delete]** ![](assets/do-not-localize/deleteoutline.png) Ta bort i verktygsfältet.
+1. Navigera till platsen för resursen eller mappen som du vill ta bort.
 
-1. Välj något av följande alternativ i bekräftelsedialogrutan:
+1. Markera resursen eller mappen och klicka på alternativet **[!UICONTROL Delete]** ![](assets/do-not-localize/deleteoutline.png) Ta bort i verktygsfältet.
 
-   * **[!UICONTROL Cancel]** för att stoppa åtgärden
-   * **[!UICONTROL Delete]** för att bekräfta åtgärden:
+   När du har bekräftat borttagningen:
 
-      * Om resursen inte har några referenser tas resursen bort.
-      * Om resursen har referenser visas ett felmeddelande om att det finns referenser till **en eller flera resurser.** Du kan välja **[!UICONTROL Force Delete]** eller **[!UICONTROL Cancel]**.
+   * Om resursen inte har några referenser tas resursen bort.
 
+   * Om resursen har referenser visas ett felmeddelande om att det finns referenser till **en eller flera resurser**. Du kan välja **[!UICONTROL Force Delete]** eller **[!UICONTROL Cancel]**.
    >[!NOTE]
    >
    >* Om du vill lösa eller ta bort inkommande referenser från andra sidor uppdaterar du de relevanta referenserna innan du tar bort en resurs. Du kan även inaktivera Tvinga borttagningsknappen med hjälp av en övertäckning, så att användare inte kan ta bort refererade resurser och lämna brutna länkar.
    >* Det går att ta bort en *mapp* som innehåller utcheckade resursfiler. Innan du tar bort en mapp kontrollerar du att inga digitala resurser är utcheckade av användarna.
 
+
+>[!NOTE]
+>
+>Om du tar bort en mapp med metoden ovan från användargränssnittet tas även de associerade användargrupperna bort.
+>
+>Befintliga redundanta, oanvända och autogenererade användargrupper kan rensas bort från databasen med hjälp av `clean` metoden i JMX i författarinstansen (`http://[server]:[port]/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`).
 
 ## Hämta resurser {#downloading-assets}
 
