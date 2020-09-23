@@ -3,9 +3,9 @@ title: Privat mapp i [!DNL Adobe Experience Manager Assets]
 description: Lär dig hur du skapar en privat mapp [!DNL Adobe Experience Manager Assets] och delar den med andra användare samt tilldelar olika behörigheter till dem.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b676f73a800c45be12de70b8ba57a332563a49a4
+source-git-commit: be97ef4f3bb6b904dabcfcd44025a4898bcf4dee
 workflow-type: tm+mt
-source-wordcount: '627'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -67,26 +67,30 @@ Så här skapar och delar du en privat mapp:
 
 >[!NOTE]
 >
->Om du vill skapa en privat mapp måste du ha behörigheten Läs och Redigera åtkomstkontrollista för den överordnade mappen som du vill skapa en privat mapp i. Om du inte är administratör aktiveras dessa behörigheter inte som standard för dig `/content/dam`. I så fall måste du först skaffa dessa behörigheter för ditt användar-ID/din grupp innan du försöker skapa privata mappar eller visa mappinställningar.
+>Om du vill skapa en privat mapp måste du ha [behörigheten](/help/sites-administering/security.md#permissions-in-aem) Läs och Ändra för den överordnade mappen som du vill skapa en privat mapp i. Om du inte är administratör aktiveras dessa behörigheter inte som standard för dig `/content/dam`. I så fall måste du först skaffa dessa behörigheter för ditt användar-ID/din grupp innan du försöker skapa privata mappar.
 
 ## Borttagning av privata mappar {#delete-private-folder}
 
-Du kan ta bort en privat mapp genom att markera mappen och välja [!UICONTROL Delete] alternativ på den översta menyn eller genom att använda backstegstangenten på tangentbordet.
+Du kan ta bort en mapp genom att markera mappen och välja [!UICONTROL Delete] alternativ på den översta menyn, eller genom att använda backstegstangenten på tangentbordet.
 
-### Borttagning av användargrupp vid mappborttagning {#group-removal-on-folder-deletion}
-
-Om du tar bort en privat mapp med metoden ovan från användargränssnittet tas även de associerade användargrupperna bort. Befintliga redundanta, oanvända och autogenererade användargrupper kan rensas bort från databasen med [JMX](#group-clean-up-jmx).
+![ta bort alternativ på den översta menyn](assets/delete-option.png)
 
 >[!CAUTION]
 >
 >Om du tar bort en privat mapp från CRXDE Lite lämnas överflödiga användargrupper kvar i databasen.
 
+>[!NOTE]
+>
+>Om du tar bort en mapp med metoden ovan från användargränssnittet tas även de associerade användargrupperna bort.
+Befintliga redundanta, oanvända och autogenererade användargrupper kan rensas bort från databasen med [JMX](#group-clean-up-jmx).
+
 ### Använd JMX för att rensa upp oanvända användargrupper {#group-clean-up-jmx}
 
 Så här rensar du databasen med oanvända användargrupper:
 
-1. Öppna JMX-filen för att rensa redundanta grupper för Assets från `http://[server]:[port]/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`.
+1. Öppna JMX-filen för att rensa överflödiga grupper för resurser på din [!DNL Experience Manager] författarinstans från `http://[server]:[port]/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`.
+Till exempel, `http://no1010042068039.corp.adobe.com:4502/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`.
 
 1. Anropa `clean` metoden från denna JMX.
 
-Du kan se att alla redundanta användargrupper eller de automatiskt genererade grupperna (som skapas när du skapar en privat mapp med samma namn som en tidigare borttagen grupp) tas bort från sökvägen `/home/groups/mac/default/<user_name>/<folder_name>`.
+Du kan se att alla redundanta användargrupper eller de automatiskt genererade grupperna (som skapas när du skapar en mapp med samma namn som en tidigare borttagen grupp) tas bort från sökvägen `/home/groups/mac/default/<user_name>/<folder_name>`.
