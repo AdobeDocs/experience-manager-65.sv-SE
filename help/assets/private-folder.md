@@ -1,23 +1,27 @@
 ---
-title: Skapa och dela en privat mapp i [!DNL Adobe Experience Manager].
+title: Privat mapp i [!DNL Adobe Experience Manager Assets]
 description: Lär dig hur du skapar en privat mapp [!DNL Adobe Experience Manager Assets] och delar den med andra användare samt tilldelar olika behörigheter till dem.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: b676f73a800c45be12de70b8ba57a332563a49a4
 workflow-type: tm+mt
-source-wordcount: '466'
-ht-degree: 1%
+source-wordcount: '627'
+ht-degree: 0%
 
 ---
 
 
-# Delning av privata mappar {#private-folder-sharing}
+# Privat mapp i [!DNL Adobe Experience Manager Assets] {#private-folder}
 
 Du kan skapa en privat mapp i [!DNL Adobe Experience Manager Assets] användargränssnittet som är exklusivt tillgänglig för dig. Du kan dela den här privata mappen med andra användare och tilldela andra användare olika behörigheter. Beroende på vilken behörighetsnivå du tilldelar kan användare utföra olika åtgärder i mappen, till exempel visa resurser i mappen eller redigera resurserna.
 
 >[!NOTE]
 >
 >Den privata mappen har minst en medlem med ägarrollen.
+
+## Skapa och dela privata mappar {#create-share-private-folder}
+
+Så här skapar och delar du en privat mapp:
 
 1. Klicka på [!DNL Assets] verktygsfältet i **[!UICONTROL Create]** konsolen och välj sedan **[!UICONTROL Folder]** från menyn.
 
@@ -63,4 +67,26 @@ Du kan skapa en privat mapp i [!DNL Adobe Experience Manager Assets] användargr
 
 >[!NOTE]
 >
->Om du vill kunna skapa en privat mapp måste du ha behörigheten Läs och Redigera åtkomstkontrollista för den överordnade mappen som du vill skapa en privat mapp i. Om du inte är administratör aktiveras dessa behörigheter inte som standard för dig `/content/dam`. I så fall måste du först skaffa dessa behörigheter för ditt användar-ID/din grupp innan du försöker skapa privata mappar eller visa mappinställningar.
+>Om du vill skapa en privat mapp måste du ha behörigheten Läs och Redigera åtkomstkontrollista för den överordnade mappen som du vill skapa en privat mapp i. Om du inte är administratör aktiveras dessa behörigheter inte som standard för dig `/content/dam`. I så fall måste du först skaffa dessa behörigheter för ditt användar-ID/din grupp innan du försöker skapa privata mappar eller visa mappinställningar.
+
+## Borttagning av privata mappar {#delete-private-folder}
+
+Du kan ta bort en privat mapp genom att markera mappen och välja [!UICONTROL Delete] alternativ på den översta menyn eller genom att använda backstegstangenten på tangentbordet.
+
+### Borttagning av användargrupp vid mappborttagning {#group-removal-on-folder-deletion}
+
+Om du tar bort en privat mapp med metoden ovan från användargränssnittet tas även de associerade användargrupperna bort. Befintliga redundanta, oanvända och autogenererade användargrupper kan rensas bort från databasen med [JMX](#group-clean-up-jmx).
+
+>[!CAUTION]
+>
+>Om du tar bort en privat mapp från CRXDE Lite lämnas överflödiga användargrupper kvar i databasen.
+
+### Använd JMX för att rensa upp oanvända användargrupper {#group-clean-up-jmx}
+
+Så här rensar du databasen med oanvända användargrupper:
+
+1. Öppna JMX-filen för att rensa redundanta grupper för Assets från `http://[server]:[port]/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`.
+
+1. Anropa `clean` metoden från denna JMX.
+
+Du kan se att alla redundanta användargrupper eller de automatiskt genererade grupperna (som skapas när du skapar en privat mapp med samma namn som en tidigare borttagen grupp) tas bort från sökvägen `/home/groups/mac/default/<user_name>/<folder_name>`.
