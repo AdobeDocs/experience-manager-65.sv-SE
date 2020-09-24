@@ -1,16 +1,16 @@
 ---
 title: Introduktion till utveckling av anpassningsbara formulär
 seo-title: Introduktion till utveckling av anpassningsbara formulär
-description: AEM Forms har ett lättanvänt men ändå kraftfullt gränssnitt för framtagning av adaptiva formulär. Den innehåller en mängd komponenter och verktyg som du kan använda för att skapa formulär.
-seo-description: AEM Forms har ett lättanvänt men ändå kraftfullt gränssnitt för framtagning av adaptiva formulär. Den innehåller en mängd komponenter och verktyg som du kan använda för att skapa formulär.
+description: AEM Forms har ett lättanvänt men ändå kraftfullt gränssnitt för framtagning av adaptiva blanketter. Den innehåller en mängd komponenter och verktyg som du kan använda för att skapa formulär.
+seo-description: AEM Forms har ett lättanvänt men ändå kraftfullt gränssnitt för framtagning av adaptiva blanketter. Den innehåller en mängd komponenter och verktyg som du kan använda för att skapa formulär.
 uuid: 3b150507-41b9-47c2-a94c-f85b903b2274
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-topic-tags: introduction
+topic-tags: introduction, author
 discoiquuid: ba70921e-db7e-43f6-902c-1065d3b13aef
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 68ea2335a8466c3c23b766efb1a04b6a38d7f670
+source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
 workflow-type: tm+mt
 source-wordcount: '3027'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## Översikt {#overview}
 
-Med adaptiva formulär kan du skapa formulär som är engagerande, responsiva, dynamiska och anpassningsbara. AEM Forms har ett intuitivt användargränssnitt och färdiga komponenter för att skapa och arbeta med adaptiva formulär. Du kan välja att skapa ett anpassat formulär baserat på en formulärmodell eller ett schema eller utan en formulärmodell. Det är viktigt att du noga väljer den formulärmodell som inte bara passar dina behov, utan som utökar dina befintliga infrastrukturinvesteringar och resurser. Du kan välja mellan följande alternativ för att skapa ett anpassat formulär:
+Med adaptiva formulär kan du skapa formulär som är engagerande, responsiva, dynamiska och anpassningsbara. AEM Forms har ett intuitivt användargränssnitt och färdiga komponenter för att skapa och arbeta med anpassningsbara formulär. Du kan välja att skapa ett anpassat formulär baserat på en formulärmodell eller ett schema eller utan en formulärmodell. Det är viktigt att du noga väljer den formulärmodell som inte bara passar dina behov, utan som utökar dina befintliga infrastrukturinvesteringar och resurser. Du kan välja mellan följande alternativ för att skapa ett anpassat formulär:
 
 * **Använda en formulärdatamodell**
    [Med dataintegrering](../../forms/using/data-integration.md) kan ni integrera enheter och tjänster från olika datakällor i en formulärdatamodell som ni kan använda för att skapa anpassade formulär. Välj formulärdatamodell om det adaptiva formulär du skapar inbegriper hämtning och skrivning av data från och till flera datakällor.
@@ -60,7 +60,7 @@ Med sidofältet kan du
 
 * Se formulärinnehåll som paneler, komponenter, fält och layout.
 * Redigera komponentegenskaper.
-* Sök, visa och använd resurser i din AEM Digital Asset Management-databas (DAM).
+* Sök, visa och använd resurser i din AEM DAM-databas (Digital Asset Management).
 * Lägg till komponenter i formuläret.
 
 ![Sidebar](assets/sidebar-comps.png)
@@ -101,8 +101,8 @@ Det gör att du kan dra och släppa formulärmodellelement i det anpassade formu
    <th><strong>Funktionalitet</strong></th>
   </tr>
   <tr>
-   <td>Adobe Sign-block</td>
-   <td>Lägger till ett textblock med platshållare för fält som ska fyllas i vid signering med Adobe Sign.</td>
+   <td>Adobe Sign Block</td>
+   <td>Lägger till ett textblock med platshållare för fält som ska fyllas i när du signerar med Adobe Sign.</td>
   </tr>
   <tr>
    <td>Knapp</td>
@@ -146,7 +146,7 @@ Det gör att du kan dra och släppa formulärmodellelement i det anpassade formu
   </tr>
   <tr>
    <td>Bifogad fil</td>
-   <td><p>Lägger till en knapp som gör att användare kan bläddra bland och bifoga stöddokument till ett formulär.</p> <p><strong>Obs! </strong>Komponenten Bifogad fil har stöd för en fördefinierad uppsättning filformat i adaptiva formulär som är aktiverade för Adobe Sign. Mer information finns i <a href="https://helpx.adobe.com/document-cloud/help/supported-file-formats-fill-sign.html#main-pars_text">Filformat</a>som stöds.</p> </td>
+   <td><p>Lägger till en knapp som gör att användare kan bläddra bland och bifoga stöddokument till ett formulär.</p> <p><strong>Obs! </strong>Komponenten Bifogad fil stöder en fördefinierad uppsättning filformat i adaptiva formulär som är aktiverade för Adobe Sign. Mer information finns i <a href="https://helpx.adobe.com/document-cloud/help/supported-file-formats-fill-sign.html#main-pars_text">Filformat</a>som stöds.</p> </td>
   </tr>
   <tr>
    <td>Lista över bifogade filer</td>
@@ -267,7 +267,7 @@ Det gör att du kan dra och släppa formulärmodellelement i det anpassade formu
 
 #### Bästa tillvägagångssätt vid arbete med komponenter {#best-practices}
 
-Här följer några tips och viktiga saker du bör komma ihåg när du arbetar med adaptiva formulärkomponenter:
+Här följer några tips och viktiga saker att komma ihåg när du arbetar med adaptiva formulärkomponenter:
 
 * Varje komponent har tillhörande egenskaper som styr dess utseende och funktion. Om du vill konfigurera egenskaperna för en komponent trycker du på komponenten och trycker på ![cmpr](assets/cmppr.png) för att öppna komponentegenskaperna i egenskapsläsaren.
 * En komponent identifieras med sitt elementnamn. När du trycker på ![cmpr](assets/cmppr.png)kan du ändra komponentens namn genom att ändra **[!UICONTROL Element Name]** fältvärdet i egenskapsläsaren. Endast bokstäver, siffror, bindestreck (-) och understreck (_) godkänns i fältet Elementnamn. Andra specialtecken tillåts inte och elementnamnet måste börja med en bokstav.
@@ -293,15 +293,15 @@ Här följer några tips och viktiga saker du bör komma ihåg när du arbetar m
 
    1. På din AEM Forms-server går du till **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
    1. Sök och tryck **[!UICONTROL Adaptive Forms Configuration Service]**.
-   1. Aktivera **[!UICONTROL Make File Names Unique]** i dialogrutan Adaptive Forms Configuration Service. Som standard är den inaktiverad.
+   1. Aktivera i dialogrutan Adaptiv Forms Configuration Service **[!UICONTROL Make File Names Unique]**. Som standard är den inaktiverad.
 
-* Om du vill att användare ska kunna bifoga en PDF-fil med Safari-webbläsaren kontrollerar du att **application/pdf** har lagts till i egenskapen Filtyper som stöds i komponenten för bifogade filer. Anpassningsbara formulär som skapats med tidigare AEM Forms-version kan innehålla **.pdf** i stället för **application/pdf** i egenskapen Filtyper som stöds.
+* Om du vill att användare ska kunna bifoga en PDF-fil med Safari-webbläsaren kontrollerar du att **application/pdf** har lagts till i egenskapen Filtyper som stöds i komponenten för bifogade filer. Anpassningsbara formulär som skapats med en tidigare version av AEM Forms kan innehålla **.pdf** i stället för **application/pdf** i egenskapen Filtyper som stöds.
 
 Mer information om adaptiva formulär finns i [Bästa tillvägagångssätt för att arbeta med adaptiva formulär](/help/forms/using/adaptive-forms-best-practices.md).
 
 >[!NOTE]
 >
->Adaptiva formulärkomponenter har inte stöd för RTL-språk. Till exempel hebreiska.
+>Anpassade formulärkomponenter har inte stöd för höger till vänster-språk. Till exempel hebreiska.
 
 ### Verktygsfältet Sida {#page-toolbar}
 
@@ -368,7 +368,7 @@ J. **Övrigt**: Innehåller fler alternativ för att arbeta med den markerade ko
 
 ### Adaptiv formulärsida {#af-page}
 
-Den anpassningsbara formulärsidan är det faktiska formuläret. Den är som alla andra WCM-sidor som modelleras som WCM- `cq:Page` komponent. Följande bild visar innehållsstrukturen i ett typiskt anpassat formulär.
+Den anpassningsbara formulärsidan är det faktiska formuläret. Det är som alla andra WCM-sidor som modelleras som WCM- `cq:Page` komponent. Följande bild visar innehållsstrukturen i ett typiskt anpassat formulär.
 
 ![Innehållsstruktur för en WCM-sida med anpassat formulär](assets/afstructure.png)
 
