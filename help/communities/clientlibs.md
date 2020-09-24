@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 68ce47c8-a03f-40d6-a7f3-2cc64aee0594
 docset: aem65
 translation-type: tm+mt
-source-git-commit: efa6c7be93908b2f264da4689caa9c02912c0f0a
+source-git-commit: f6aa95514a266a042c9bd1165634e30e80479ae7
 workflow-type: tm+mt
 source-wordcount: '402'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -41,24 +41,24 @@ När de nödvändiga klientlibs saknas kan det leda till javascript-fel och ett 
 
 ### Exempel: Monterade granskningar utan Clientlibs {#example-placed-reviews-without-clientlibs}
 
-![chlimage_1-426](assets/chlimage_1-426.png)
+![monterade granskningar](assets/placed-reviews.png)
 
 ### Exempel: Monterade granskningar med Clientlibs {#example-placed-reviews-with-clientlibs}
 
-![chlimage_1-427](assets/chlimage_1-427.png)
+![reviews-clientlibs](assets/reviews-clientlibs.png)
 
 ## Identifiera nödvändiga klienter {#identifying-required-clientlibs}
 
 Den viktigaste funktionsinformationen för utvecklare identifierar de nödvändiga klientlibs.
 
-Om du bläddrar till [Community Components Guide](/help/communities/components-guide.md) från en AEM-instans får du dessutom tillgång till en lista med de clientlib-kategorier som krävs för en komponent.
+Om du AEM till [Community Components Guide](/help/communities/components-guide.md) får du dessutom tillgång till en lista med de clientlib-kategorier som krävs för en komponent.
 
 Till exempel, högst upp på sidan [](https://localhost:4502/content/community-components/en/reviews.html) Recensioner, visas de klickbara listerna
 
 * cq.ckeditor
 * cq.social.hbs.reviews
 
-![chlimage_1-246](assets/chlimage_1-246.png)
+![clientlibs-reviews](assets/clientlibs-reviews.png)
 
 ## Lägga till nödvändiga klienter {#adding-required-clientlibs}
 
@@ -94,5 +94,5 @@ Så här lägger du till en klientlib för en community-webbplats med [CRXDE Lit
 
 I exemplet [Komma igång med AEM Communities](/help/communities/getting-started.md) , där `site-name` är *engagerande*, visas klienten så här om du lägger till granskningskomponenten:
 
-![chlimage_1-247](assets/chlimage_1-247.png)
+![review-component](assets/review-component.png)
 
