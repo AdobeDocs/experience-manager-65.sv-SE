@@ -1,20 +1,23 @@
 ---
-title: Kortkommandon för AEM Forms
-seo-title: Kortkommandon för AEM Forms
+title: AEM Forms-kortkommandon
+seo-title: AEM Forms-kortkommandon
 description: I den här artikeln listas de kortkommandon som kan användas med Adaptiv formulärredigerare, Theme Editor, Content Browser och Correspondence Management för Windows och Macintosh.
 seo-description: I den här artikeln listas de kortkommandon som kan användas med Adaptiv formulärredigerare, Theme Editor, Content Browser och Correspondence Management.
 uuid: 1a16c2e6-c0f1-42e0-9ab4-692f3e58eeaf
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 content-type: reference
-topic-tags: correspondence-management
+topic-tags: author, correspondence-management
 discoiquuid: 010e3639-b1a9-40fb-8615-7d18c4784b73
 translation-type: tm+mt
-source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
+source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+workflow-type: tm+mt
+source-wordcount: '1172'
+ht-degree: 10%
 
 ---
 
 
-# Kortkommandon för AEM Forms {#aem-forms-keyboard-shortcuts}
+# AEM Forms-kortkommandon {#aem-forms-keyboard-shortcuts}
 
 I den här artikeln listas de kortkommandon som kan användas med Adaptiv formulärredigerare, Theme Editor, Content Browser och Correspondence Management för Windows och Macintosh.
 
@@ -49,11 +52,12 @@ I den här artikeln listas de kortkommandon som kan användas med Adaptiv formul
 >
 >* Windows: Ctrl-klicka på nödvändiga komponenter.
 >* MAC OS: Kommando-klicka på nödvändiga komponenter.
+
 >
 
 
 
-## Theme Editor {#themeeditor}
+## Theme Editor  {#themeeditor}
 
 | **Åtgärd** | **Kortkommando i Windows** | **Kortkommando i Mac OS** |
 |---|---|---|
@@ -67,7 +71,7 @@ I den här artikeln listas de kortkommandon som kan användas med Adaptiv formul
 >
 >Kortkommandon som är markerade med &#39;&amp;ast;&#39; fungerar både med Ctrl- och Kommando-tangenterna i Mac OS.
 
-## Content Browser {#contentbrowser}
+## Content Browser  {#contentbrowser}
 
 | **Åtgärd** | **Kortkommando i Windows** | **Kortkommando i Mac OS** |
 |---|---|---|
@@ -75,8 +79,8 @@ I den här artikeln listas de kortkommandon som kan användas med Adaptiv formul
 | Komprimera alla dragspelspaneler i formulärobjektsträdet i innehållsläsaren när de är i fokus | Ctrl+A för att markera alla dragspelspaneler som följs av vänsterpilen för att komprimera | Kommando+A för att markera alla dragspelspaneler som följs av vänsterpilen för att komprimera |
 | Expandera det markerade dragspelet i trädet Formulärobjekt | Högerpil | Högerpil |
 | Komprimera markerat dragspel i trädet Formulärobjekt | Vänsterpil | Vänsterpil |
-| Markera nästa objekt i trädet Formulärobjekt | Nedåtpil | Nedåtpil |
-| Markera föregående objekt i trädet Formulärobjekt | Uppåtpil | Uppåtpil |
+| Markera nästa objekt i Forms Objects-trädet | Nedåtpil | Nedåtpil |
+| Markera föregående objekt i Forms Objects-trädet | Uppåtpil | Uppåtpil |
 
 [1] Ersätter Ctrl + högerpil för Windows och Cmd + högerpil för Mac OS.\
 [2] Ersätter Ctrl + vänsterpil för Windows och Cmd + vänsterpil för Mac OS.
