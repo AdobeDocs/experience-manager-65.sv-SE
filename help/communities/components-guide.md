@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a777a3f1-b39f-4d90-b9b6-02d3e321a86f
 translation-type: tm+mt
-source-git-commit: 56c2e6b55964ea5f3e180b17bd2a244882aa62ea
+source-git-commit: 3da113e88784def54e0a94e280bf1a965de015ed
 workflow-type: tm+mt
 source-wordcount: '1200'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Community Components Guide  {#community-components-guide}
 
-Community Components Guide är ett interaktivt utvecklingsverktyg för ramverket för [sociala komponenter (SCF)](scf.md). Den innehåller en lista med tillgängliga AEM Communities-komponenter eller mer komplexa funktioner som byggts av flera komponenter.
+Community Components Guide är ett interaktivt utvecklingsverktyg för ramverket för [sociala komponenter (SCF)](scf.md). Här finns en lista med tillgängliga AEM Communities-komponenter eller mer komplexa funktioner som byggts av flera komponenter.
 
 Tillsammans med grundläggande information för varje komponent kan guiden experimentera med hur SCF-komponenterna/-funktionerna fungerar och hur de kan konfigureras eller anpassas.
 
@@ -61,7 +61,7 @@ Om du vill växla till redigeringsläge infogar du antingen `editor.html` eller 
 >
 >Allmän redigeringsinformation finns i [snabbguiden till redigeringssidorna](../../help/sites-authoring/qg-page-authoring.md).
 >
->Om du inte känner till AEM läser du dokumentationen om [grundläggande hantering](../../help/sites-authoring/basic-handling.md).
+>Om du inte känner till AEM kan du läsa dokumentationen om [grundläggande hantering](../../help/sites-authoring/basic-handling.md).
 
 
 ### Hemsida {#home-page}
@@ -70,13 +70,13 @@ Guiden innehåller en lista med de SCF-komponenter som är tillgängliga för f�
 
 Komponentguiden visas på en författarinstans i redigeringsläge:
 
-![chlimage_1-404](assets/chlimage_1-404.png)
+![community-component1](assets/community-component1.png)
 
 ## Komponentsidor {#component-pages}
 
 Markera en komponent i listan till vänster på sidan.
 
-![chlimage_1-405](assets/chlimage_1-405.png)
+![communitykomponentsidor](assets/community-component2.png)
 
 Huvudtexten i guiden visar:
 
@@ -100,20 +100,22 @@ När du använder guiden för en författarinstans kan du uppleva hur en kompone
 
 I guiden Community Components (Community-komponenter) är vissa inställningar i komponentdialogrutorna överlagrade med [Inkluderbart](scf.md#add-or-include-a-communities-component) växlingsläge. Om du vill växla mellan att använda den befintliga resursen eller en resurs som ingår dynamiskt markerar du både komponenten och den inkluderbara texten i redigeringsläget och dubbelklickar för att öppna redigeringsdialogrutan:
 
-![chlimage_1-406](assets/chlimage_1-406.png)
+![community-component3](assets/community-component3.png)
 
 Under fliken **Mallar** :
 
-![chlimage_1-407](assets/chlimage_1-407.png)
+![community-component4](assets/community-component4.png)
 
 * **Inkludera den underordnade komponenten med sling:include**
 
    Om alternativet inte är markerat används den befintliga resursen i databasen (en jcr-nod som är underordnad en par-nod).
 
    * texten som visas är: &quot;Den här komponenten inkluderas via dess parnod.&quot;
+
    Om det här alternativet är markerat används sling för att dynamiskt inkludera en komponent i den underordnade nodens resourceType (en resurs som inte finns).
 
    * texten som visas är: &quot;Den här komponenten inkluderas dynamiskt.&quot;
+
    Standard är avmarkerat.
 
 ### Publicera interaktioner {#publish-interactions}
@@ -171,7 +173,9 @@ Använda kommentarkomponenten som exempel, på antingen författaren eller publi
 
 1. Observera att det nu finns tre flikar för Mallar, CSS och Data.
 
-![chlimage_1-408](assets/chlimage_1-408.png) ![chlimage_1-409](assets/chlimage_1-409.png)
+![community-component5](assets/community-component5.png)
+
+![community-component6](assets/community-component6.png)
 
 ### Fliken Mallar {#templates-tab}
 
