@@ -5,12 +5,15 @@ description: Bevilja begränsad åtkomst till regelredigeraren för att välja a
 seo-description: Bevilja begränsad åtkomst till regelredigeraren för att välja användargrupper.
 uuid: efa2570a-20ac-4b43-8a0e-38247f84d02f
 content-type: reference
-topic-tags: develop
+topic-tags: adaptive_forms, develop
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: ab694a93-00d2-44d7-8ded-68ab2ad50693
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
+source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+workflow-type: tm+mt
+source-wordcount: '328'
+ht-degree: 0%
 
 ---
 
@@ -19,9 +22,9 @@ source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
 
 ## Översikt {#overview}
 
-Du kan ha olika typer av användare med olika kunskaper som fungerar med adaptiva formulär. Expertanvändare kan ha rätt kunskaper för att arbeta med skript och komplexa regler, men det kan finnas grundläggande användare som bara behöver arbeta med layout och grundläggande egenskaper i anpassade formulär.
+Du kan ha olika typer av användare med olika kunskaper som fungerar med Adaptive Forms. Expertanvändare kan ha rätt kunskaper för att arbeta med skript och komplexa regler, men det kan finnas grundläggande användare som bara behöver arbeta med layout och grundläggande egenskaper i anpassade formulär.
 
-Med AEM Forms kan du begränsa regelredigeringsåtkomsten till användare baserat på deras roll eller funktion. I inställningarna för tjänsten Adaptive Forms Configuration kan du ange vilka [användargrupper](/help/sites-administering/security.md) som kan visa och få åtkomst till regelredigeraren.
+Med AEM Forms kan du begränsa regelredigeringsåtkomsten till användare baserat på deras roll eller funktion. I inställningarna för den adaptiva Forms-konfigurationstjänsten kan du ange vilka [användargrupper](/help/sites-administering/security.md) som kan visa och komma åt regelredigeraren.
 
 ## Ange användargrupper som kan komma åt regelredigeraren {#specify-user-groups-that-can-access-rule-editor}
 
@@ -53,7 +56,7 @@ Med AEM Forms kan du begränsa regelredigeringsåtkomsten till användare basera
 
    ![componentsstoolbarwithout](assets/componentstoolbarwithoutre.png)
 
-   Komponentverktygsfältet så synligt som det är för en användare utan åtkomst till regelredigeraren
+   Komponentverktygsfältet så synligt som det är för en användare utan regelredigeringsåtkomst
 
    Instruktioner om hur du lägger till användare i grupper finns i [Användaradministration och -säkerhet](/help/sites-administering/security.md).
 
