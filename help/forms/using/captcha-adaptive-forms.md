@@ -6,11 +6,11 @@ seo-description: Lär dig hur du konfigurerar AEM CAPTCHA- eller Google reCAPTCH
 uuid: 0e11e98a-12ac-484c-b77f-88ebdf0f40e5
 contentOwner: vishgupt
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-topic-tags: author
+topic-tags: adaptive_forms, author
 discoiquuid: 4c53dfc0-25ca-419d-abfe-cf31fc6ebf61
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 0%
@@ -27,7 +27,8 @@ AEM Forms stöder CAPTCHA i adaptiva former. Du kan använda tjänsten reCAPTCHA
 >[!NOTE]
 >
 >* AEM Forms har endast stöd för reCaptcha v2. Andra versioner stöds inte.
->* CAPTCHA i adaptiva formulär stöds inte i offlineläge i appen AEM Forms.
+>* CAPTCHA i adaptiva formulär stöds inte i offlineläge i AEM Forms-appen.
+
 >
 
 
@@ -57,10 +58,11 @@ Så här implementerar du tjänsten reCAPTCHA i AEM Forms:
 
 1. Konfigurera molntjänsten för reCAPTCHA.
 
-   1. Gå till ![tools-1](assets/tools-1.png) > **Cloud Service** i din AEM-författarinstans.
+   1. Gå till ![tools-1](assets/tools-1.png) > **Cloud Services** i AEM författare.
    1. Tryck på **[!UICONTROL reCAPTCHA]**. Sidan Konfigurationer öppnas. Välj den konfigurationsbehållare som skapades i föregående steg och tryck sedan på **[!UICONTROL Create]**.
    1. Ange Namn, Webbplatsnyckel och Hemlig nyckel för reCAPTCHA-tjänsten och tryck för **[!UICONTROL Create]** att skapa molntjänstkonfigurationen.
    1. I dialogrutan Redigera komponent anger du platsen och de hemliga nycklarna som fås i steg 1. Tryck på **Spara inställningar** och tryck sedan på **OK** för att slutföra konfigurationen.
+
    När reCAPTCHA-tjänsten har konfigurerats är den tillgänglig för användning i adaptiva formulär. Mer information finns i [Använda CAPTCHA i adaptiva formulär](#using-captcha).
 
 ## Använd CAPTCHA i anpassningsbara formulär {#using-captcha}
@@ -89,7 +91,7 @@ Så här använder du CAPTCHA i adaptiva former:
 
    >[!NOTE]
    >
-   >Välj inte **[!UICONTROL Default]** i listrutan Captcha-tjänst eftersom standardtjänsten AEM CAPTCHA är inaktuell.
+   >Välj inte **[!UICONTROL Default]** i listrutan Captcha-tjänst eftersom AEM CAPTCHA-standardtjänsten är föråldrad.
 
 1. Spara egenskaperna.
 
