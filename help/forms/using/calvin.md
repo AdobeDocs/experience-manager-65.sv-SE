@@ -6,11 +6,11 @@ seo-description: Med Calvin kan du skapa testfall i CRXDE och köra gränssnitts
 uuid: 7bf4fc8f-96df-4407-8d10-cf18880518bd
 contentOwner: gtalwar
 content-type: reference
-topic-tags: develop
+topic-tags: adaptive_forms, develop
 discoiquuid: 1cb54c8a-9322-4b5a-b5a7-0eef342cee54
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
 workflow-type: tm+mt
 source-wordcount: '1283'
 ht-degree: 1%
@@ -306,7 +306,7 @@ Så här kör du en testsvit:
 
    ![4_reviewresults](assets/4_reviewresults.png)
 
-Stegen för att testa dina AEM adaptiva formulär liknar stegen för att testa ditt AEM-användargränssnitt. Mer information om hur du testar adaptiva formulär finns i följande avsnitt i [Testa användargränssnittet](https://helpx.adobe.com//experience-manager/6-3/help/sites-developing/hobbes.html):
+Stegen för testning av AEM adaptiva formulär liknar stegen för testning av AEM användargränssnitt. Mer information om hur du testar adaptiva formulär finns i följande avsnitt i [Testa användargränssnittet](https://helpx.adobe.com//experience-manager/6-3/help/sites-developing/hobbes.html):
 
 * Visa testsviter
 * Köra flera tester
