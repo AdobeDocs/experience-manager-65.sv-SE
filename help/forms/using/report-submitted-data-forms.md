@@ -6,10 +6,10 @@ seo-description: AEM Forms tillhandahåller API:er som du kan använda för att 
 uuid: c47c8392-e5a9-4c40-b65e-4a7f379a6b45
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-topic-tags: developer-reference
+topic-tags: publish, developer-reference
 discoiquuid: 9457effd-3595-452f-a976-ad9eda6dc909
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
 workflow-type: tm+mt
 source-wordcount: '570'
 ht-degree: 5%
@@ -19,7 +19,7 @@ ht-degree: 5%
 
 # API:er för att arbeta med inskickade formulär på formulärportalen {#apis-to-work-with-submitted-forms-on-forms-portal}
 
-AEM Forms tillhandahåller API:er som du kan använda för att fråga efter formulärdata som skickas via formulärportalen. Dessutom kan du publicera kommentarer eller uppdatera egenskaper för skickade formulär med de API:er som beskrivs i det här dokumentet.
+AEM Forms tillhandahåller API:er som du kan använda för att fråga efter formulärdata som skickas via formulärportalen. Dessutom kan du publicera kommentarer eller uppdatera egenskaperna för skickade formulär med de API:er som beskrivs i det här dokumentet.
 
 >[!NOTE]
 >
