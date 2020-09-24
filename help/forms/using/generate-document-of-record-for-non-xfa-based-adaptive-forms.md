@@ -5,12 +5,15 @@ description: Beskriver hur du kan generera en mall för ett postdokument (DoR) f
 seo-description: Beskriver hur du kan generera en mall för ett postdokument (DoR) för adaptiva formulär.
 uuid: 2dc7e0de-fff9-43fa-9426-e9b047eb2595
 content-type: reference
-topic-tags: develop
+topic-tags: adaptive_forms, develop
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: ce65cb5f-94ec-4423-9fa9-d617e9703091
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 14975f409a0e17183b3da6bdc5a42c8073080108
+source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+workflow-type: tm+mt
+source-wordcount: '2723'
+ht-degree: 1%
 
 ---
 
@@ -203,21 +206,21 @@ De adaptiva formulärtabellkomponenterna som sidhuvud, sidfot och radmappning ti
 
 ## Basmall för ett postdokument {#base-template-of-a-document-of-record}
 
-Basmallen innehåller formaterings- och utseendeinformation för urkunder. Du kan anpassa standardutseendet för automatiskt genererade postdokument. Du vill till exempel lägga till företagets logotyp i sidhuvudet och copyrightinformation i sidfoten i postdokumentet. Mallsidan från basmallen används som mallsida för postmalldokument. Mallsidan kan innehålla information som sidhuvud, sidfot och sidnummer som du kan använda på postdokument. Du kan använda sådan information för att dokumentera med hjälp av basmallen för automatisk generering av postdokument. Med hjälp av basmallen kan du ändra standardegenskaperna för fält.
+Basmallen innehåller formaterings- och utseendeinformation för urkunder. Du kan anpassa standardutseendet för automatiskt genererade postdokument. Du vill till exempel lägga till företagets logotyp i sidhuvudet och copyrightinformation i sidfoten i postdokumentet. Den överordnad sidan från basmallen används som en överordnad sida för postmalldokument. Den överordnad sidan kan innehålla information som sidhuvud, sidfot och sidnummer som du kan använda på postdokument. Du kan använda sådan information för att dokumentera med hjälp av basmallen för automatisk generering av postdokument. Med hjälp av basmallen kan du ändra standardegenskaperna för fält.
 
 Följ [Basmallskonventionerna](#base-template-conventions) när du designar basmallen.
 
 ## Grundmallskonventioner {#base-template-conventions}
 
-En basmall används för att definiera sidhuvud, sidfot, format och utseende för ett postdokument. Sidhuvudet och sidfoten kan innehålla information som företagets logotyp och copyrighttext. Den första mallsidan i basmallen kopieras och används som mallsida för postdokumentet, som innehåller sidhuvud, sidfot, sidnummer eller annan information som ska visas på alla sidor i postdokumentet. Om du använder en basmall som inte överensstämmer med basmallskonventioner, används den första mallsidan från basmallen fortfarande i postmalldokumentet. Vi rekommenderar att du utformar din basmall enligt dess konventioner och använder den för automatisk generering av arkivdokument.
+En basmall används för att definiera sidhuvud, sidfot, format och utseende för ett postdokument. Sidhuvudet och sidfoten kan innehålla information som företagets logotyp och copyrighttext. Den första överordnad sidan i basmallen kopieras och används som en överordnad sida för postdokumentet, som innehåller sidhuvud, sidfot, sidnummer eller annan information som ska visas på alla sidor i postdokumentet. Om du använder en basmall som inte överensstämmer med basmallskonventioner, används den första överordnad sidan från basmallen fortfarande i postmalldokumentet. Vi rekommenderar att du utformar din basmall enligt dess konventioner och använder den för automatisk generering av arkivdokument.
 
-**Konventioner för mallsidor**
+**Överordnad sidkonventioner**
 
-* I basmallen ska du ge rotdelformuläret ett namn som `AF_METATEMPLATE` och mallsidan som `AF_MASTERPAGE`.
+* I basmallen ska du ge rotdelformuläret ett namn som `AF_METATEMPLATE` och den överordnad sidan som `AF_MASTERPAGE`.
 
-* Mallsidan med namnet `AF_MASTERPAGE` under `AF_METATEMPLATE` rotdelformuläret har en inställning för att extrahera sidhuvud, sidfot och formatinformation.
+* Den överordnad sidan med namnet `AF_MASTERPAGE` under `AF_METATEMPLATE` rotdelformuläret har en inställning för att extrahera sidhuvud, sidfot och formatinformation.
 
-* Om den inte `AF_MASTERPAGE` finns används den första mallsidan i basmallen.
+* Om `AF_MASTERPAGE` den inte finns används den första överordnad sidan i basmallen.
 
 **Formatkonventioner för fält**
 
@@ -230,7 +233,7 @@ Så här skapar du en basmall i AEM Designer.
 1. Klicka på **Arkiv > Nytt**.
 1. Välj alternativet **Baserat på en mall** .
 
-1. Välj kategorin **Formulär - postdokument** .
+1. Välj kategorin **Forms - dokument** .
 1. Välj **DoR-basmall**.
 1. Klicka på **Nästa** och ange nödvändig information.
 
@@ -251,18 +254,18 @@ Du kan nu använda det sparade formuläret som en basmall för postdokument.
 
 ## Konfiguration av dokumentmall {#document-of-record-template-configuration}
 
-Konfigurera dokumentets postmall för formuläret så att kunderna kan hämta en utskriftsvänlig kopia av det skickade formuläret. En XDP-fil fungerar som ett dokument i postmallen. Dokumentet med nedladdade postkunder formateras enligt layouten som anges i XDP-filen.
+Konfigurera dokumentets postmall för formuläret så att kunderna kan hämta en utskriftsvänlig kopia av det skickade formuläret. En XDP-fil fungerar som dokument i postmallen. Dokumentet med nedladdade postkunder formateras enligt layouten som anges i XDP-filen.
 
 Utför följande steg för att konfigurera ett postdokument för adaptiva formulär:
 
-1. I AEM-författarinstansen klickar du på **Formulär > Formulär och dokument.**
+1. Klicka AEM **Forms > Forms och dokument.**
 1. Markera ett formulär och klicka på **Visa egenskaper**.
 1. Tryck på **Formulärmodell**i fönstret Egenskaper.
 Du kan också välja en formulärmodell när du skapar ett formulär.
 
    >[!NOTE]
    >
-   >På fliken Formulärmodell väljer du **Schema** eller **Inget** i listrutan **Välj från** . **[!UICONTROL Postdokument stöds inte för XFA-baserade eller adaptiva formulär med formulärmall som formulärmodell.]**
+   >På fliken Formulärmodell väljer du **Schema** eller **Inget** i listrutan **Välj från** . **[!UICONTROL Document of record is not supported for XFA-based or adaptive forms with Form Template as form model.]**
 
 1. Välj något av följande alternativ i avsnittet Dokumentmall på fliken Formulärmodell.
 
@@ -274,9 +277,9 @@ Du kan också välja en formulärmodell när du skapar ett formulär.
 
    **Generera postdokument** Välj det här alternativet om du vill använda en XDP-fil som basmall för att definiera format och utseende för postdokumentet. När du väljer det här alternativet visas alla XDP-filer som är tillgängliga i AEM Forms-databasen. Välj lämplig fil.
 
-   **[!UICONTROL Välj det här alternativet om du vill använda en XDP-fil som basmall för att definiera format och utseende för postdokumentet. När du väljer det här alternativet visas alla XDP-filer som är tillgängliga i AEM Forms-databasen. Välj lämplig fil.]**
+   **[!UICONTROL Select this option to use an XDP file as a base template for defining the styling and appearance for the document of record. On selecting this option, all XDP files available in AEM Forms repository are displayed. Select the appropriate file.]**
 
-   **Välj Formulärmall som basmall om du vill generera postdokument** . Välj det här alternativet om du vill använda en XDP-fil som basmall för att definiera format och utseende för postdokumentet. När du väljer det här alternativet visas alla XDP-filer som är tillgängliga i AEM Forms-databasen. Välj lämplig fil.
+   **Välj Forms-mall som basmall om du vill generera dokument för post** . Välj det här alternativet om du vill använda en XDP-fil som basmall för att definiera format och utseende för postdokumentet. När du väljer det här alternativet visas alla XDP-filer som är tillgängliga i AEM Forms-databasen. Välj lämplig fil.
 
    >[!NOTE]
    >
@@ -302,7 +305,7 @@ Om du vill lokalisera den varumärkesinformation som du anger på fliken Dokumen
 
    ![brandingtemplate](assets/brandingtemplate.png)
 
-   Om du väljer en egen mall bläddrar du till en XDP-fil på AEM Forms-servern. Om du vill använda en mall som inte redan finns på AEM Forms-servern måste du först överföra XDP-filen till AEM Forms-servern.
+   Om du väljer en anpassad mall bläddrar du till en XDP-fil på AEM Forms-servern. Om du vill använda en mall som inte redan finns på din AEM Forms-server måste du först överföra XDP-filen till din AEM Forms-server.
 
 1. Beroende på om du väljer en standardmall eller en anpassad mall visas några eller alla följande egenskaper på fliken Dokument för post. Ange dessa korrekt:
 
@@ -319,6 +322,7 @@ Om du vill lokalisera den varumärkesinformation som du anger på fliken Dokumen
    * **Inkludera formulärobjekt som inte är bundna till datamodell**
    * **Uteslut dolda fält från postdokumentet**
    * **Dölj beskrivning av paneler**
+
    >[!NOTE]
    >
    >Om du använder en adaptiv formulärmall som har skapats med en version av Designer före 6.3, måste du se till att följande finns i din adaptiva formulärmall under rotdelformuläret för att egenskaperna för accentfärg och teckensnittsfamilj ska fungera:
@@ -361,23 +365,23 @@ Dokumentet med postinställningar för en komponent är tillgängligt under dess
 
 * **Exkludera från dokument för registrering**: Om du anger egenskapen true utesluts fältet från postdokumentet. Det här är en skriptbar egenskap med namnet `excludeFromDoR`. Dess beteende beror på **Uteslut fält från DoR om egenskapen för dold** formulärnivå är dold.
 
-* **** Visa panelen som tabell: Om du ställer in egenskapen visas panelen som en tabell i postdokumentet om panelen innehåller färre än 6 fält. Gäller endast för panelen.
-* **** Exkludera rubrik från arkivdokument: Om du anger egenskapen utesluts panelens/tabellens namn från postdokumentet. Gäller endast för panel och tabell.
-* **** Exkludera beskrivning från postdokument: Om du ställer in egenskapen utesluts beskrivningen av panelen/tabellen från postdokumentet. Gäller endast för panel och tabell.
+* **Visa panelen som tabell:** Om du ställer in egenskapen visas panelen som en tabell i postdokumentet om panelen innehåller färre än 6 fält. Gäller endast för panelen.
+* **Exkludera rubrik från arkivdokument:** Om du anger egenskapen utesluts panelens/tabellens namn från postdokumentet. Gäller endast för panel och tabell.
+* **Exkludera beskrivning från postdokument:** Om du ställer in egenskapen utesluts beskrivningen av panelen/tabellen från postdokumentet. Gäller endast för panel och tabell.
 
 **Inställningar för formulärnivå**
 
-* **** Inkludera obundna fält i DoR: När du anger egenskapen inkluderas obundna fält från schemabaserade adaptiva formulär i postdokumentet. Som standard är det sant.
-* **** Uteslut fält från DoR om de är dolda: Om du ställer in egenskapen åsidosätts beteendet för fältnivåegenskapen Exkludera från dokument för post när det inte är sant. Om fälten är dolda när formuläret skickas, kommer de att exkluderas från postdokumentet om egenskapen är true, förutsatt att egenskapen Exkludera från postdokument inte är inställd.
+* **Inkludera obundna fält i DoR:** När du anger egenskapen inkluderas obundna fält från schemabaserade adaptiva formulär i postdokumentet. Som standard är det sant.
+* **Uteslut fält från DoR om de är dolda:** Om du ställer in egenskapen åsidosätts beteendet för fältnivåegenskapen Exkludera från dokument för post när det inte är sant. Om fälten är dolda när formuläret skickas, kommer de att exkluderas från postdokumentet om egenskapen är true, förutsatt att egenskapen Exkludera från postdokument inte är inställd.
 
 ## Viktiga saker att tänka på när du arbetar med postdokument {#key-considerations-when-working-with-document-of-record}
 
-Tänk på följande när du arbetar med urkunder för anpassade formulär:
+Tänk på följande när du arbetar med urkunder för anpassade formulär.
 
 * Postmallar för dokument stöder inte RTF-text. Därför visas all formaterad text i det statiska adaptiva formuläret eller i den information som fylls i av slutanvändaren som oformaterad text i postdokumentet.
 * Dokumentfragment i ett anpassat formulär visas inte i postdokumentet. Däremot stöds adaptiva formulärfragment.
 * urkunder används endast för utskrift.
 * Det finns inte stöd för innehållsbindning i dokument med poster som genererats för XML-schemabaserade adaptiva formulär.
 * Det finns inte stöd för innehållsbindning i dokument med poster som genererats för XML-schemabaserade adaptiva formulär.
-* Lokaliserad version av postdokument skapas på begäran för en språkinställning när användaren begär återgivningen av postdokumentet. Lokalisering av postdokument sker tillsammans med lokalisering av anpassat formulär. Mer information om lokalisering av dokument med post och adaptiva formulär finns i [Använda arbetsflöde för AEM-översättning för att lokalisera adaptiva formulär och urkunder med](/help/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.md)arkivhandlingar.
+* Lokaliserad version av postdokument skapas på begäran för en språkinställning när användaren begär återgivningen av postdokumentet. Lokalisering av postdokument sker tillsammans med lokalisering av anpassat formulär. Mer information om lokalisering av dokument med post och adaptiva formulär finns i [Använda arbetsflöde för AEM för att lokalisera adaptiva formulär och urkunder](/help/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.md).
 
