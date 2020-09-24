@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 70fa0b9c-cb98-45c4-9c94-bef4a9f3741e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f62fb1eb760ddd7baee9ba5a631ff4b921e2d08b
+source-git-commit: 41de9fff615b5b2f77d835740dfb1d33aa81e59b
 workflow-type: tm+mt
 source-wordcount: '1170'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Kalenderfunktionen har stöd för att tillhandahålla information om communityev
 
 Detta avsnitt i dokumentationen beskriver
 
-* Lägga till kalenderfunktionen på en AEM-webbplats
+* Lägga till kalenderfunktionen på en AEM webbplats
 * Konfigurationsinställningar för `Calendar` komponenter
 
 ## Lägga till en kalender på en sida {#adding-a-calendar-to-a-page}
@@ -42,15 +42,15 @@ Mer information finns i Grunderna för [communitykomponenter](/help/communities/
 
 När de [nödvändiga klientbiblioteken](/help/communities/calendar-basics-for-developers.md#essentials-for-client-side) inkluderas visas `Calendar` komponenten på det här sättet.
 
-![chlimage_1-112](assets/chlimage_1-112.png)
+![kalenderkomponent](assets/calendar-component.png)
 
 ### Konfigurerar kalender {#configuring-calendar}
 
 Markera den monterade `Calendar` komponent som du vill öppna och välj den `Configure` ikon som öppnar redigeringsdialogrutan.
 
-![chlimage_1-113](assets/chlimage_1-113.png)
+![konfigurera](assets/configure-new.png)
 
-![chlimage_1-114](assets/chlimage_1-114.png)
+![configure-calendar](assets/configure-calendar1.png)
 
 #### Fliken Inställningar {#settings-tab}
 
@@ -193,7 +193,7 @@ Andra funktioner beror på om besökaren är en moderator, administratör, commu
 
 När den inloggade användaren har moderator- eller administratörsbehörighet kan han/hon utföra [modereringsåtgärder](/help/communities/moderate-ugc.md) (som tillåts av komponentens konfiguration) för alla kalenderhändelser och kommentarer som publiceras till en händelse.
 
-![chlimage_1-115](assets/chlimage_1-115.png)
+![moderators-view](assets/moderators-view.png)
 
 #### Medlemmar {#members}
 
@@ -207,15 +207,15 @@ De får särskilt
 * Ta bort en egen kalenderhändelse eller kommentar
 * Flagga andras kalenderhändelser eller kommentarer
 
-![chlimage_1-116](assets/chlimage_1-116.png)
+![create-event](assets/configure-calendar2.png)
 
-![chlimage_1-117](assets/chlimage_1-117.png)
+![event-post](assets/configure-calendar3.png)
 
 #### Anonym {#anonymous}
 
 Webbplatsbesökare som inte är inloggade kan bara läsa publicerade kalenderhändelser, översätta dem om de stöds, men kan inte lägga till en händelse eller kommentar eller flagga andras händelser eller kommentarer.
 
-![chlimage_1-118](assets/chlimage_1-118.png)
+![anonym användarvy](assets/anonymous-user-view1.png)
 
 ## Additional Information {#additional-information}
 
