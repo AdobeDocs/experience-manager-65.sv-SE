@@ -1,17 +1,20 @@
 ---
 title: Kompatibilitetspaket
 seo-title: Kompatibilitetspaket
-description: Genom att installera Kompatibilitetspaketet på AEM Forms 6.5 kan du använda Correspondence Management-resurser från AEM Forms 6.4 och tidigare versioner samt inaktuella adaptiva formulärmallar och sidor
-seo-description: Genom att installera Kompatibilitetspaketet på AEM Forms 6.4 kan du använda Correspondence Management-resurser från AEM Forms 6.4 och föråldrade adaptiva formulärmallar och sidor.
+description: Om du installerar kompatibilitetspaketet på AEM Forms 6.5 kan du använda Correspondence Management-resurser från AEM Forms 6.4 och tidigare versioner samt inaktuella mallar och sidor för adaptiva formulär
+seo-description: Genom att installera kompatibilitetspaketet på AEM Forms 6.4 kan du använda Correspondence Management-resurser från AEM Forms 6.4 och inaktuella adaptiva formulärmallar och sidor.
 uuid: b49633d6-2cb3-422c-a314-25f3b8a37b7f
 contentOwner: gtalwar
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-topic-tags: correspondence-management
+topic-tags: correspondence-management, installing
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: 73e8ccc6-f857-493e-b6e3-878f93e2a356
 docset: aem65
 translation-type: tm+mt
-source-git-commit: dca52c05c413fc96bf7fab012a3be52f6769c2e0
+source-git-commit: a929252a13f66da8ac3e52aea0655b12bdd1425f
+workflow-type: tm+mt
+source-wordcount: '343'
+ht-degree: 0%
 
 ---
 
@@ -31,15 +34,15 @@ Med AEMFD-kompatibilitetspaketet kan du även [använda följande resurser från
 
 Mer information finns i [Resurser som gjorts kompatibla med AEM Forms 6.5 genom att installera Kompatibilitetspaketet](../../forms/using/compatibility-package.md#assetsmadecompatible).
 
-## Lägg till stöd för AEM Forms 6.4, 6.3 och 6.2-material i AEM Forms 6.5 {#add-support-for-aem-forms-and-assets-in-aem-forms}
+## Lägg till stöd för AEM Forms 6.4-, 6.3- och 6.2-material i AEM Forms 6.5 {#add-support-for-aem-forms-and-assets-in-aem-forms}
 
 När du har utfört en uppgradering gör du följande för att installera AEMFD-kompatibilitetspaketet och göra dina resurser kompatibla med 6.5:
 
-Kontrollera att du har förinstallerat [AEM-kompatibilitetspaketet](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) .
+Kontrollera att du har förinstallerat [AEM Kompatibilitetspaket](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) .
 
 1. Installera det senaste 6.5- [kompatibilitetspaketet](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html).
 
-   Mer information om hur du överför och installerar paketet finns i [Så här arbetar du med paket](/help/sites-administering/package-manager.md).
+   Mer information om hur du överför och installerar paketet finns i [Arbeta med paket](/help/sites-administering/package-manager.md).
 
 1. Starta om servern när loggarna har stabiliserats.
 1. Använd flyttningsverktyget för att göra dina resurser kompatibla med 6.5.
