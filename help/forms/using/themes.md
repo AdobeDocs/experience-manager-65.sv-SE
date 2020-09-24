@@ -5,12 +5,12 @@ description: Du kan använda teman för att anpassa och ge en visuell identitet 
 seo-description: Du kan använda teman för att anpassa och ge en visuell identitet till ett adaptivt formulär eller interaktiv kommunikation. Du kan dela ett tema i ett valfritt antal adaptiva formulär eller interaktiv kommunikation.
 uuid: 88b6b6fd-181b-48c5-ac15-2b37592bd14b
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-topic-tags: interactive-communications
+topic-tags: develop, interactive-communications
 content-strategy: max-2018
 discoiquuid: 770e9174-b648-462a-abe9-05fefa967d86
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bd70508b361ac8b62ebc0344538a18369a075f3e
+source-git-commit: a929252a13f66da8ac3e52aea0655b12bdd1425f
 workflow-type: tm+mt
 source-wordcount: '6067'
 ht-degree: 0%
@@ -39,7 +39,7 @@ Med AEM Forms kan du skapa, ladda ned och ladda upp teman. Ett tema skapas som a
 
 Så här skapar du ett tema:
 
-1. Klicka på **Adobe Experience Manager**, klicka på **Formulär** och sedan på **Teman**.
+1. Klicka på **Adobe Experience Manager**, klicka på **Forms** och sedan på **Teman**.
 
 1. Klicka på **Skapa > Tema**på sidan Teman.
 En guide för att skapa ett tema startas.
@@ -56,9 +56,9 @@ En guide för att skapa ett tema startas.
 
 ### Hämta ett tema {#downloading-a-theme}
 
-Du kan exportera teman som en zip-fil och använda dem i andra projekt eller AEM-instanser. Så här hämtar du ett tema:
+Du kan exportera teman som en zip-fil och använda dem i andra projekt eller AEM. Så här hämtar du ett tema:
 
-1. Klicka på **Adobe Experience Manager**, klicka på **Formulär** och sedan på **Teman**.
+1. Klicka på **Adobe Experience Manager**, klicka på **Forms** och sedan på **Teman**.
 
 1. På sidan Teman **väljer** du ett tema och klickar på **Hämta**. En dialogruta med information om temat visas.
 
@@ -74,7 +74,7 @@ Du kan använda skapade teman med formatförinställningar i ditt projekt. Du ka
 
 Så här överför du ett tema:
 
-1. Klicka på **Adobe Experience Manager**, klicka på **Formulär** och sedan på **Teman**.
+1. Klicka på **Adobe Experience Manager**, klicka på **Forms** och sedan på **Teman**.
 
 1. Klicka på **Skapa > Filöverföring** på sidan Teman.
 1. I filöverföringsprompten bläddrar du till och väljer ett temapaket på datorn och klickar på **Överför**.
@@ -197,11 +197,11 @@ Lista med metaegenskaper för ett tema (finns på egenskapssidan för ett tema).
 
 AEM Forms levereras med Theme Editor. Det är ett användarvänligt och webbdesignervänligt gränssnitt för utvecklare som tillhandahåller funktioner som krävs för att enkelt specificera hur olika adaptiva formulär och interaktiva kommunikationselement ska formateras. När du skapar ett tema lagras det som en separat enhet, som formulär, interaktiv kommunikation, brev, dokumentfragment och dataordlistor.
 
-Med Theme Editor kan du anpassa stilar för de komponenter som är formaterade i ett tema. Du kan anpassa hur ett formulär eller en interaktiv kommunikation ser ut på en enhet.
+Med Theme Editor kan du anpassa stilar för komponenter som är formaterade i ett tema. Du kan anpassa hur ett formulär eller en interaktiv kommunikation ser ut på en enhet.
 
 Temaredigeraren är uppdelad i två paneler:
 
-* **Arbetsyta** - visas till höger. Här visas ett exempel på en adaptiv form eller interaktiv kommunikation där alla formatändringar återspeglas direkt. Du kan också markera objekt direkt på arbetsytan för att leta upp format som är kopplade till dem och redigera formaten. En enhetsupplösningslinjal längst upp styr arbetsytan. Om du väljer en brytpunkt för upplösning från linjalen visas förhandsvisningen av exempelformuläret eller den interaktiva kommunikationen för respektive upplösning. Arbetsytan beskrivs i detalj [nedan](../../forms/using/themes.md#using-canvas).
+* **Arbetsyta** - visas till höger. Här visas ett exempel på en adaptiv form eller interaktiv kommunikation där alla formatändringar återspeglas direkt. Du kan också markera objekt direkt från arbetsytan för att leta upp format som är kopplade till dem och redigera formaten. Linjalen för enhetsupplösning längst upp styr arbetsytan. Om du väljer en brytpunkt för upplösning från linjalen visas förhandsvisningen av exempelformuläret eller den interaktiva kommunikationen för respektive upplösning. Arbetsytan beskrivs i detalj [nedan](../../forms/using/themes.md#using-canvas).
 
 * **Sidofält**- visas på vänster sida. Den har följande objekt:
 
@@ -219,7 +219,7 @@ En specifik komponent påverkar objekt i den specifika kategorin. När du format
       När du anpassar alla fältkomponenter med en viss bakgrundsfärg ärver alla fält, som ålder, namn och adress, bakgrundsfärgen. När du markerar en numerisk ruta, t.ex. ålder, och minskar bredden på den, minskas bredden på alla numeriska rutor, t.ex. ålder, antalet personer i en familj. Bredden på textrutor ändras inte.
 
    * **Läge:** Gör att du kan anpassa format för ett objekt i ett visst läge. Du kan till exempel ange hur ett objekt ska se ut när det är i standardläge, fokusläge, inaktiverat läge, hovring eller felläge.
-   * **Egenskapskategorier:** Formategenskaper delas upp i olika kategorier. Till exempel Dimension &amp; Position, Text, Bakgrund, Kant och Effekter. Under varje kategori anger du formatinformation. Under Bakgrund kan du till exempel ange Bakgrundsfärg och Bild och övertoning.
+   * **Egenskapskategorier:** Formategenskaper delas upp i olika kategorier. Till exempel Dimension och placering, Text, Bakgrund, Kant och Effekter. Under varje kategori anger du formatinformation. Under Bakgrund kan du till exempel ange Bakgrundsfärg och Bild och övertoning.
 
    * **Avancerat:** Gör att du kan lägga till anpassad CSS till ett objekt, vilket åsidosätter de egenskaper som visuella kontroller definierar om det finns en överlappning.
 
@@ -238,7 +238,7 @@ Alternativ i sidofältet som gör att du kan markera och formatera olika kompone
 
 Om du klickar på redigeringsknappen mot en komponent i sidlisten markeras komponenten på arbetsytan. Du kan också formatera komponenten med alternativen i sidlisten.
 
-Vissa komponenter som textruta, numerisk ruta, alternativknapp och kryssruta är kategoriserade under generiska komponenter som Fält. Du kan till exempel anpassa stilen på alternativknappar. Välj alternativknappar för formatering genom att välja **Fält > Widget > Alternativknapp**.
+Vissa komponenter som textruta, numerisk ruta, alternativknapp och kryssruta kategoriseras under generiska komponenter som Fält. Du kan till exempel anpassa stilen på alternativknappar. Välj alternativknappar för formatering genom att välja **Fält > Widget > Alternativknapp**.
 
 Klicka på **UTÖKA ALLA** i sidofältet om du vill visa, markera och formatera komponenter som inte är synliga framför.
 
@@ -318,7 +318,7 @@ När du skapar ett tema skapas det med ett formulär som levereras med Theme Edi
 
 Så här ersätter du det aktuella formuläret eller den interaktiva kommunikationen på arbetsytan i temeredigeraren:
 
-1. Klicka på **Temaalternativ** > ![Temaalternativ](assets/theme-options.png) > **Konfigurera** på panelen TEMAREDIGERARE.
+1. Klicka på **Temaalternativ** för ![temaalternativ](assets/theme-options.png) > **Konfigurera** på panelen TEMAREDIGERARE.
 
 1. På fliken Allmänt bläddrar du och väljer ett formulär eller en interaktiv kommunikation för fältet **Adaptivt formulär/dokument** .
 
@@ -334,7 +334,7 @@ Knappar för att göra om/ångra visas när du formaterar en komponent i temered
 
 ## Använda Theme Editor {#using-the-theme-editor}
 
-Med Theme Editor kan du redigera ett tema som du har skapat eller överfört. Navigera till **Formulär och dokument > Teman**, markera ett tema och öppna det. Temat öppnas i temaredigeraren.
+Med Theme Editor kan du redigera ett tema som du har skapat eller överfört. Navigera till **Forms &amp; Documents > Teman**, markera ett tema och öppna det. Temat öppnas i temaredigeraren.
 
 Som nämnts ovan har temaredigeraren två paneler: Sidofältet och arbetsytan.
 ![temaredigerare](assets/theme-editor.png)
@@ -398,7 +398,7 @@ Alternativen för att anpassa lägesformat varierar för olika komponenter.
    <td><strong>Användning</strong></td>
   </tr>
   <tr>
-   <td><p>Mått och position</p> </td>
+   <td><p>Dimensioner och position</p> </td>
    <td><p>Gör att du kan formatera justering, storlek, placering och placering av komponenter i temat. </p> <p>Du kan välja mellan visningsinställningar, utfyllnad, marginal, bredd, höjd och Z-index.</p> <p>Du kan också använda layoutläget för att definiera komponenternas bredd med ett enkelt dra och släpp-gränssnitt. Mer information finns i <a href="../../forms/using/resize-using-layout-mode.md">Använda layoutläget för att ändra storlek på komponenter</a>.</p> </td>
   </tr>
   <tr>
@@ -489,12 +489,12 @@ Du kan formatera formulär eller interaktiva kommunikationskomponenter för fler
 
 ### Använda webbteckensnitt i ett tema {#using-web-fonts-in-a-theme}
 
-Du kan nu använda teckensnitt som finns i en webbtjänst i ett adaptivt formulär eller i en interaktiv kommunikation. Färdig, [Typekit](https://typekit.com/), Adobes webbteckensnittstjänst, är tillgänglig som en konfiguration. Om du vill använda Typekit skapar du ett kit och teckensnitt i det, och hämtar Kit-id från [Typekit-webbplatsen](https://typekit.com/).
+Du kan nu använda teckensnitt som finns i en webbtjänst i ett adaptivt formulär eller i en interaktiv kommunikation. Färdig, [Typekit](https://typekit.com/), Adobe webbteckensnittstjänst är tillgänglig som konfiguration. Om du vill använda Typekit skapar du ett kit och teckensnitt i det, och hämtar Kit-id från [Typekit-webbplatsen](https://typekit.com/).
 
-Utför följande steg för att konfigurera Typekit i AEM:
+Så här konfigurerar du Typekit i AEM:
 
 1. I författarinstansen klickar du på ![](assets/adobeexperiencemanager.png)adobeexperienceManagerAdobe Experience Manager > Tools ![hammer](assets/hammer.png) > Deployment > Cloud Services.
-1. På sidan **Cloud Service** går du till **Tredjepartstjänster** > **Typekit** och klickar på **Konfigurera nu** under Typekit. Om det redan finns en konfiguration klickar du på **+** -knappen för att skapa en ny instans.
+1. På sidan **Cloud Services** går du till **Tredjepartstjänster** > **Typekit** och klickar på **Konfigurera nu** under Typekit. Om det redan finns en konfiguration klickar du på **+** -knappen för att skapa en ny instans.
 1. I dialogrutan **Skapa konfiguration** anger du en rubrik för konfigurationen och klickar på **Skapa**.
 
    Du omdirigeras till konfigurationssidan.
@@ -587,7 +587,7 @@ Med AEM Forms, tillsammans med det färdiga standardtemat för arbetsytan, finns
 
 Så här kopierar du ett tema:
 
-1. Gå till **Adobe Experience Manager > Formulär > Teman** i redigeringsinstansen.
+1. Gå till **Adobe Experience Manager > Forms > Teman** i redigeringsinstansen.
 1. Öppna mappen Temabibliotek.
 1. I temabiblioteksmappen håller du pekaren över motsvarande färdiga tema och trycker på **Kopiera**.
 1. Klistra in det kopierade temat utanför temabiblioteksmappen.
@@ -639,7 +639,7 @@ Du kan se den genererade CSS-koden med följande alternativ:
 
       Basklientbiblioteket innehåller formatinformation. Om du vill använda formatinformation i klientbibliotek i teman.
 
-      1. Navigera till **Experience Manager > Formulär > Teman**.
+      1. Navigera till **Experience Manager > Forms > Teman**.
       1. Välj ett tema på sidan Teman och klicka på **Visa egenskaper**.
       1. Klicka på **Avancerat** på egenskapssidan som öppnas.
       1. Gå till fliken Avancerat, i fältet Klientbiblioteksplats, bläddra och välj det klientbibliotek som du vill använda.
