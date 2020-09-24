@@ -10,10 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 5fa9ee8b-5893-4ae9-a986-bfdbb00f355f
 translation-type: tm+mt
-source-git-commit: 56c2e6b55964ea5f3e180b17bd2a244882aa62ea
+source-git-commit: 6be0aa7c3f6b21ad26221289a6cca2b4615ed3f4
 workflow-type: tm+mt
-source-wordcount: '344'
-ht-degree: 1%
+source-wordcount: '343'
+ht-degree: 0%
 
 ---
 
@@ -41,8 +41,6 @@ När du har loggat in med administratörsbehörighet i redigeringsmiljön är ko
 
 ## Global navigeringspanel {#global-navigation-panel}
 
-![chlimage_1-91](assets/chlimage_1-91.png)
-
 Markera `Adobe Experience Manager` ikonen i det övre vänstra hörnet för att öppna den globala navigeringspanelen och få tillgång till två ikoner:
 
 * [Navigeringskonsol](#navigation-console)
@@ -52,7 +50,7 @@ Markera `Adobe Experience Manager` ikonen i det övre vänstra hörnet för att 
 
 Om du vill komma åt de olika webbgruppskonsolerna väljer du **navigering, Webbgrupper**.
 
-![chlimage_1-92](assets/chlimage_1-92.png)
+![communities](assets/communities.png)
 
 * [Sites](sites-console.md)
 
