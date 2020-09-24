@@ -1,21 +1,24 @@
 ---
-title: Förstå AEM-formulärprocesser
-seo-title: Förstå AEM-formulärprocesser
+title: Förstå AEM Forms-processer
+seo-title: Förstå AEM Forms-processer
 description: 'null'
 seo-description: 'null'
 uuid: 7cbebe7d-f222-42fa-8eb6-d2443458a791
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-topic-tags: development-tools
+topic-tags: development-tools, coding
 discoiquuid: ac9fe461-63e7-442b-bd1c-eb9576ef55aa
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+workflow-type: tm+mt
+source-wordcount: '791'
+ht-degree: 0%
 
 ---
 
 
-# Förstå AEM-formulärprocesser {#understanding-aem-forms-processes}
+# Förstå AEM Forms-processer {#understanding-aem-forms-processes}
 
 Ett vanligt användningsexempel är en uppsättning AEM Forms-tjänster som kan användas på ett och samma dokument. Du kan skicka en begäran till tjänstbehållaren genom att skapa en process med Workbench. En process representerar en affärsprocess som du automatiserar. Mer information om hur du skapar processer finns i [Använda Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).
 
@@ -33,7 +36,7 @@ Det finns dock situationer där en process inte kan slutföras synkront på grun
 
 >[!NOTE]
 >
->AEM Forms skapar inte en post när en kort process anropas.
+>AEM Forms skapar inte en post när en kortlivad process anropas.
 
 Med hjälp av anropsidentifierarvärdet kan du spåra den långvariga processens status. Du kan till exempel använda processens identifierarvärde för anrop för att utföra processhanteraråtgärder som att avsluta en pågående processinstans.
 
@@ -43,7 +46,7 @@ Följande bild är ett exempel på en kortlivad process som heter *MyApplication
 
 >[!NOTE]
 >
->Den här processen baseras inte på en befintlig AEM Forms-process. Om du vill följa med i kodexemplen som beskriver hur du anropar den här processen skapar du en process med namnet `MyApplication/EncryptDocument` Workbench. (Se [Använda Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).)
+>Processen bygger inte på någon befintlig AEM Forms-process. Om du vill följa med i kodexemplen som beskriver hur du anropar den här processen skapar du en process med namnet `MyApplication/EncryptDocument` Workbench. (Se [Använda Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).)
 
 När den här korta processen anropas utför den följande åtgärder:
 
@@ -57,15 +60,15 @@ När den här korta processen anropas utför den följande åtgärder:
    >
    >Vanligtvis består en kort process av mer än tre åtgärder. Du skapar en process med Workbench. (Se [Använda Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).)
 
-   *Programmering med AEM-* formulär beskriver följande sätt på vilka du programmässigt kan anropa den här korta processen:
+   *Programmering med AEM* formulär beskriver följande sätt på vilka du programmässigt kan anropa den här korta processen:
 
-   * [Anropa en kort process genom att skicka ett osäkert dokument med hjälp av AEM Forms Remoting](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting) (Använda ett Flex-program)
+   * [Anropa en kort process genom att skicka ett osäkert dokument med AEM Forms Remoting](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting) (Använda ett Flex-program)
    * [Anropa en kort process med anrops-API](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-a-short-lived-process-using-the-invocation-api) (Java Invocation API)
-   * [Anropa AEM-formulär med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding) (webbtjänstexempel)
-   * [Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom) (webbtjänstexempel)
-   * [Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref) (webbtjänstexempel)
-   * [Anropa AEM-formulär med BLOB-data via HTTP](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http) (exempel på webbtjänst)
-   * [Anropa AEM-formulär med DIME](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-dime) (webbtjänstexempel)
+   * [Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding) (webbtjänstexempel)
+   * [Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom) (webbtjänstexempel)
+   * [Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref) (webbtjänstexempel)
+   * [Anropa AEM Forms med BLOB-data via HTTP](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http) (webbtjänstexempel)
+   * [Anropa AEM Forms med DIME](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-dime) (webbtjänstexempel)
    * [Anropa processen MyApplication/EncryptDocument med REST](/help/forms/developing/invoking-aem-forms-using-rest.md)
 
 **Exempel på långvarig process**
@@ -76,4 +79,4 @@ Denna process anropas när en sökande lämnar in en låneblankett. Processen ä
 
 >[!NOTE]
 >
->Du kan skapa den här processen genom att följa den självstudiekurs som anges i [Skapa ditt första AEM-formulärprogram](https://www.adobe.com/go/learn_aemforms_firstapp_ds_63).
+>Du kan skapa den här processen genom att följa den självstudiekurs som anges i [Skapa ditt första AEM Forms-program](https://www.adobe.com/go/learn_aemforms_firstapp_ds_63).
