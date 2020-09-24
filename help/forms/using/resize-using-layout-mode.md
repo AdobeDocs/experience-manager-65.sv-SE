@@ -5,12 +5,15 @@ description: 'Definiera placeringen av komponenterna med det responsiva stödras
 seo-description: 'Definiera placeringen av komponenterna med det responsiva stödrastret som finns i layoutläget '
 uuid: 6b077ebe-caea-4ae3-b17a-be2dca94eeb3
 contentOwner: anujkapo
+topic-tags: interactive-communications, author
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-topic-tags: author
 discoiquuid: 9e9aaf36-bb86-4954-83cc-fa6b3e80ae4b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f763359fb333ef6cc8a6748ccfa39ba9aee9ca48
+source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+workflow-type: tm+mt
+source-wordcount: '1104'
+ht-degree: 0%
 
 ---
 
@@ -21,13 +24,13 @@ Med det adaptiva formuläret och redigeringsgränssnittet för webbkanalen för 
 
 Du kan använda layoutläget för att ändra storlek på komponenter för alla enhetstyper, som stationära datorer, surfplattor, telefoner och andra mindre enheter. Tabletten hämtar automatiskt layoutkonfigurationen från skrivbordsversionen och de mindre enheterna hämtar layoutkonfigurationen från telefonen. Du kan dock åsidosätta de automatiskt härledda konfigurationerna för att definiera olika konfigurationer för varje enhetstyp.
 
-Om du skapar webbkanalen med [Utskriftskanalen som master](../../forms/using/create-interactive-communication.md) för en interaktiv kommunikation, inkluderar de komponenter som är tillgängliga för storleksändring även de delformulär och fält som genereras automatiskt i webbkanalen med hjälp av Print-kanalen. Webbkanalen behåller layouten för Print channel-elementen i layoutläge.
+Om du skapar webbkanalen med [utskriftskanalen som överordnad](../../forms/using/create-interactive-communication.md) för en interaktiv kommunikation, innehåller de komponenter som är tillgängliga för storleksändring även de delformulär och fält som genereras automatiskt i webbkanalen med hjälp av utskriftskanalen. Webbkanalen behåller layouten för Print channel-elementen i layoutläge.
 
 ## Åtkomst till layoutläge {#access-layout-mode}
 
 Välj **Layout** i listrutan som visas högst upp i det adaptiva formuläret och redigeringsgränssnittet för interaktiv kommunikation bredvid alternativet **Förhandsgranska** . Formuläret visas i layoutläget.
 
-1. Logga in på AEM-författarinstansen och gå till **Adobe Experience Manager** > **Formulär** > **Formulär och dokument**.
+1. Logga in på AEM författarinstans och gå till **Adobe Experience Manager** > **Forms** > **Forms &amp; Documents**.
 1. [Skapa ett nytt](../../forms/using/create-interactive-communication.md) eller öppna ett befintligt adaptivt formulär eller en interaktiv kommunikation.
 1. Välj **Layout** i listrutan som visas högst upp bredvid alternativet **Förhandsgranska** . Formuläret visas i layoutläget.
 
@@ -44,7 +47,8 @@ Välj **Layout** i listrutan som visas högst upp i det adaptiva formuläret och
 
    * **Överordnad:** Markera den överordnade komponenten för en komponent.
    * **Flyt till ny rad:** Flytta komponenten till nästa rad om det finns flera komponenter på samma rad.
-   Du kan ångra alla storleksändringar och använda standardlayout på panelen som innehåller storleksändrade komponenter med alternativet **[!UICONTROL Återställ brytpunktslayout]** ( ![Återställ brytpunkt](assets/reverttopreviouslypublishedversion.png)). Tryck på den överordnade för den storleksändrade komponenten för att visa alternativet.
+
+   Du kan ångra alla storleksändringar och använda standardlayout på panelen som innehåller storleksändrade komponenter med alternativet **[!UICONTROL Revert breakpoint layout]** ( ![Återställ brytpunkt](assets/reverttopreviouslypublishedversion.png)). Tryck på den överordnade för den storleksändrade komponenten för att visa alternativet.
 
    >[!NOTE]
    >
@@ -81,11 +85,11 @@ Du kan upprepa steg 1 och 2 och välja ![Markera överordnad](assets/float_to_ne
 
 Utför följande steg för att definiera antalet kolumner för en panel:
 
-1. I **[!UICONTROL redigeringsläget]** trycker du på panelen, väljer ![Konfigurera](assets/configure_icon.png)och väljer **[!UICONTROL Responsiv - allt på sidan utan navigeringsalternativ]** i listrutan **[!UICONTROL Panellayout]** .
+1. I **[!UICONTROL Edit]** läget trycker du på panelen, väljer ![Konfigurera](assets/configure_icon.png)och väljer **[!UICONTROL Responsive - everything on the page without navigation]** alternativ i **[!UICONTROL Panel Layout]** listrutan.
 
 1. Tryck på ![Spara](assets/save_icon.svg) för att spara egenskaperna.
 
-1. I **[!UICONTROL layoutläget]** trycker du på någon av komponenterna på panelen, väljer ![Markera överordnad](assets/select_parent_icon.svg)och markerar panelen.
+1. I **[!UICONTROL Layout]** läget trycker du på någon av komponenterna på panelen, väljer ![Markera överordnad](assets/select_parent_icon.svg)och väljer panelen.
 
 1. Tryck på ![flera kolumner](assets/multi-column.svg) och välj antalet kolumner i listrutan. Antalet kolumner kan vara mellan 1 och 12. Panelen delas upp i en layout med flera kolumner.
 
@@ -93,7 +97,7 @@ Utför följande steg för att definiera antalet kolumner för en panel:
 
 ## Aktivera det nya responsiva rutnätet för äldre responsiva layouter {#enableresponsivegrid}
 
-Aktivera det nya responsiva stödrastret för formulär som du skapar med AEM Forms 6.4 eller senare för att ändra storlek på komponenter.
+Aktivera det nya responsiva rutnätet för formulär som du skapar med AEM Forms 6.4 eller tidigare för att ändra storlek på komponenter.
 
 >[!NOTE]
 >
@@ -120,11 +124,11 @@ Du kan inaktivera layoutläget för formulär med äldre responsiv layout genom 
 
 Utför följande steg för att inaktivera layoutläget:
 
-1. Välj **[!UICONTROL Verktyg]** > **[!UICONTROL Allmänt]** > **[!UICONTROL Mallar]** och öppna mallen som används i formuläret i läget **[!UICONTROL Redigera]** .
-1. Välj dokumentbehållaren i den vänstra rutan och tryck på **[!UICONTROL Policy.]**
+1. Välj **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Templates]** och öppna mallen som används i formuläret i **[!UICONTROL Edit]** läge.
+1. Markera dokumentbehållaren i den vänstra rutan och tryck på **[!UICONTROL Policy.]**
 
    ![Inaktivera layoutläget](assets/policy_disable_layout_mode.png)
 
-1. Tryck på fliken **[!UICONTROL Layoutinställningar]** och välj **[!UICONTROL Inaktivera layoutläge]**.
+1. Tryck på **[!UICONTROL Layout Settings]** fliken och välj **[!UICONTROL Disable Layout Mode]**.
 1. Tryck på ![Spara ändringar](assets/save_icon.png) för att spara mallegenskaperna.
 
