@@ -7,10 +7,13 @@ uuid: 89f2fd3d-63d7-4b70-b335-47314441f3ec
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-topic-tags: development-tools
+topic-tags: coding, development-tools
 discoiquuid: dd9c0ec4-a195-4b78-8992-81d0efcc0a7e
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+workflow-type: tm+mt
+source-wordcount: '909'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 AEM Forms-tjänster som finns i tjänstbehållaren (inklusive standardtjänster som krypteringstjänsten, långvariga och kortlivade processer) kan anropas med olika leverantörer, till exempel en EJB-leverantör. Med en EJB-leverantör kan AEM Forms-tjänster anropas via RMI/IIOP. En webbtjänstleverantör visar tjänster som webbtjänster (WSDL Generation) med standarder som SOAP/HTTP och SOAP/JMS.
 
-I följande tabell beskrivs de olika sätt som du programmässigt kan anropa AEM Forms-tjänster på.
+I följande tabell beskrivs de olika sätt som du kan anropa AEM Forms-tjänster på programmatiskt.
 
 <table>
  <thead>
@@ -31,35 +34,35 @@ I följande tabell beskrivs de olika sätt som du programmässigt kan anropa AEM
  <tbody>
   <tr>
    <td><p>Fjärrintegrering</p></td>
-   <td><p>Fjärrintegrering ger Flex-klienter möjlighet att anropa serviceåtgärder. (Se <a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting">Anropa AEM-formulär med (borttaget för AEM-formulär) AEM Forms Remoting</a>.)</p></td>
+   <td><p>Med fjärrintegrering kan Flex-klienter anropa tjänståtgärder. (Se <a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting">Anropa AEM Forms med (borttaget för AEM formulär) AEM Forms Remoting</a>.)</p></td>
   </tr>
   <tr>
    <td><p>Java API</p></td>
-   <td><p>Ett Java API kan anropa en AEM Forms-tjänst. Java API är indelat i klientbibliotek och Java Invocation API. (Se <a href="/help/forms/developing/invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api">Anropa AEM-formulär med Java API</a>.)</p></td>
+   <td><p>Ett Java API kan anropa en AEM Forms-tjänst. Java API är indelat i klientbibliotek och Java Invocation API. (Se <a href="/help/forms/developing/invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api">Anropa AEM Forms med Java API</a>.)</p></td>
   </tr>
   <tr>
    <td><p>Webbtjänster</p></td>
-   <td><p>AEM Forms stöder webbtjänststandarder som SOAP/HTTP. En tjänst kan visas som en webbtjänst där WSDL följer webbtjänststandarder som definieras av W3C.</p><p>En tjänst kan anropas från alla webbtjänststackar, inklusive .NET Framework och Sun™ Web Services SDK. (Se <a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services">Anropa AEM-formulär med webbtjänster</a>.)</p></td>
+   <td><p>AEM Forms stöder webbtjänststandarder som SOAP/HTTP. En tjänst kan visas som en webbtjänst där WSDL följer webbtjänststandarder som definieras av W3C.</p><p>En tjänst kan anropas från alla webbtjänststackar, inklusive .NET Framework och Sun™ Web Services SDK. (Se <a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services">Anropa AEM Forms med webbtjänster</a>.)</p></td>
   </tr>
   <tr>
    <td><p>REST-begäranden</p></td>
-   <td><p>AEM Forms stöder REST-begäranden. En tjänst kan anropas direkt från en HTML-sida. (Se <a href="/help/forms/developing/invoking-aem-forms-using-rest.md#invoking-aem-forms-using-rest-requests">Anropa AEM-formulär med REST-begäran</a>.)</p></td>
+   <td><p>AEM Forms stöder REST-begäranden. En tjänst kan anropas direkt från en HTML-sida. (Se <a href="/help/forms/developing/invoking-aem-forms-using-rest.md#invoking-aem-forms-using-rest-requests">Anropa AEM Forms med REST-begäran</a>.)</p></td>
   </tr>
  </tbody>
 </table>
 
-Följande bild visar olika sätt att programmässigt anropa AEM Forms-tjänster.
+Följande bild visar olika sätt som AEM Forms-tjänster kan anropas på med programkod.
 
 >[!NOTE]
 >
->Förutom att använda AEM Forms SDK för att skapa klientprogram som kan anropa AEM Forms-tjänster, kan du även skapa komponenter som kan distribueras till tjänstbehållaren. Du kan till exempel skapa en bankkomponent som innehåller anpassade datatyper som kan användas i processer. Det innebär att du kan skapa en datatyp som `com.adobe.idp.BankAccount`. Du kan sedan skapa `com.adobe.idp.BankAccount` instanser i dina klientprogram.
+>Förutom att använda AEM Forms SDK för att skapa klientprogram som kan anropa AEM Forms tjänster, kan du även skapa komponenter som kan distribueras till tjänstbehållaren. Du kan till exempel skapa en bankkomponent som innehåller anpassade datatyper som kan användas i processer. Det innebär att du kan skapa en datatyp som `com.adobe.idp.BankAccount`. Du kan sedan skapa `com.adobe.idp.BankAccount` instanser i dina klientprogram.
 
 Tjänstbehållaren har följande funktioner:
 
-* Tillåter att AEM Forms-tjänster anropas med olika metoder. Du kan konfigurera en tjänst genom att ange slutpunkter så att den kan anropas med alla metoder: Remoting, Java API, web services och REST. (Se [Programmatisk hantering av slutpunkter](/help/forms/developing/programmatically-endpoints.md#programmatically-managing-endpoints).)
+* Tillåter att AEM Forms tjänster anropas med olika metoder. Du kan konfigurera en tjänst genom att ange slutpunkter så att den kan anropas med alla metoder: Remoting, Java API, web services och REST. (Se [Programmatisk hantering av slutpunkter](/help/forms/developing/programmatically-endpoints.md#programmatically-managing-endpoints).)
 * Konverterar ett meddelande till ett normaliserat format som kallas för en anropsbegäran. En anropsbegäran skickas från ett klientprogram (eller en annan tjänst) till en tjänst som finns i tjänstbehållaren. En anropsbegäran innehåller information som namnet på tjänsten som ska anropas och datavärden som krävs för att utföra åtgärden. Många tjänster kräver ett dokument för att utföra en åtgärd. Därför innehåller en anropsbegäran vanligtvis ett dokument, som kan vara PDF-data, XDP-data, XML-data osv.
 * Slussar anropsbegäranden till lämpliga tjänster (namnet på tjänsten som ska anropas är en del av anropsbegäran).
-* Utför uppgifter som att avgöra om anroparen har behörighet att anropa den angivna tjänståtgärden. Anropsbegäran måste innehålla ett giltigt användarnamn och lösenord för AEM-formulär.
+* Utför uppgifter som att avgöra om anroparen har behörighet att anropa den angivna tjänståtgärden. Anropsbegäran måste innehålla ett giltigt användarnamn och lösenord för AEM.
 
    Det finns olika sätt att skicka en anropsbegäran till en tjänst. Det finns också olika sätt att skicka obligatoriska indatavärden till tjänsten. Anta till exempel att du använder Java API för att anropa en tjänst som kräver ett PDF-dokument. Motsvarande Java-metod innehåller en parameter som godkänner ett PDF-dokument. I det här fallet är parameterns datatyp `com.adobe.idp.Document`. (Se [Skicka data till AEM Forms-tjänster med Java API](/help/forms/developing/invoking-aem-forms-using-java.md#passing-data-to-aem-forms-services-using-the-java-api).)
 
@@ -81,14 +84,14 @@ Tjänstbehållaren har följande funktioner:
 
 **Se även**
 
-[Förstå AEM-formulärprocesser](/help/forms/developing/aem-forms-processes.md#understanding-aem-forms-processes)
+[Förstå AEM Forms-processer](/help/forms/developing/aem-forms-processes.md#understanding-aem-forms-processes)
 
-[Anropa AEM Forms med (borttaget för AEM-formulär) AEM Forms Remoting](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)
+[Anropa AEM Forms med (borttaget för AEM) AEM Forms Remoting](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)
 
-[Anropa AEM-formulär med Java API](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api)
+[Anropa AEM Forms med Java API](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api)
 
-[Anropa AEM-formulär med webbtjänster](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services)
+[Anropa AEM Forms med Web Services](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services)
 
 [Anropa personalcentrerade, långlivade processer](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes)
 
-[Anropa AEM-formulär med REST-begäran](/help/forms/developing/invoking-aem-forms-using-rest.md#invoking-aem-forms-using-rest-requests)
+[Anropa AEM Forms med REST-begäran](/help/forms/developing/invoking-aem-forms-using-rest.md#invoking-aem-forms-using-rest-requests)
