@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 542467ef-3793-4347-8424-c365c5a166f6
 translation-type: tm+mt
-source-git-commit: 82affd528f2526384b319fe89082e0f574ab5855
+source-git-commit: 41de9fff615b5b2f77d835740dfb1d33aa81e59b
 workflow-type: tm+mt
 source-wordcount: '357'
 ht-degree: 3%
@@ -24,7 +24,7 @@ Den här sidan innehåller viktig information om hur du arbetar med katalogfunkt
 
 När katalogfunktionen ingår i en community-webbplats kan communitymedlemmar bläddra bland och välja aktiveringsresurser som finns listade i en katalog.
 
-Komponenten [ gör att communitymedlemmar kan komma åt en katalog med `enablement catalog` aktiveringsresurser](catalog.md) [](resources.md). Användningen av AEM-taggar är en viktig del i hanteringen av utseendet på aktiveringsresurser i en katalog.
+Komponenten [ gör att communitymedlemmar kan komma åt en katalog med `enablement catalog` aktiveringsresurser](catalog.md) [](resources.md). Användningen av AEM taggar är en viktig del av att hantera utseendet på aktiveringsresurser i en katalog.
 
 Se [Tagga aktiveringsresurser](tag-resources.md).
 
@@ -104,13 +104,13 @@ Använda exemplet med [självstudiekursen](getting-started-enablement.md):
 
 * Publicera communitywebbplatsen igen
 
-![chlimage_1-189](assets/chlimage_1-189.png)
+![configure-catalog](assets/configure-catalog.png)
 
 #### Förfiltrera tagg-ID:n {#pre-filter-tagids}
 
 Förfiltreringen av [TagID:n](../../help/sites-developing/framework.md#tagid) måste exakt matcha de taggar som används i aktiveringsresurserna. Dessa är synliga som egenskapens värden i platsens `resources` mapp `se_resource-tags`.
 
-![chlimage_1-190](assets/chlimage_1-190.png)
+![configure-filters](assets/configure-catalog1.png)
 
 ### Referens-API:er {#reference-apis}
 
@@ -118,5 +118,5 @@ Förfiltreringen av [TagID:n](../../help/sites-developing/framework.md#tagid) m�
 
 * [Rapporterings-API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/enablement/client/reporting/api/package-summary.html)
 
-* [Rapportera Analytics API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/enablement/client/reporting/analytics/api/package-summary.html)
+* [API för rapporteringsanalys](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/enablement/client/reporting/analytics/api/package-summary.html)
 
