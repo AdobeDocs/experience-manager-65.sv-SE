@@ -1,16 +1,19 @@
 ---
 title: MSM Best Practices
 seo-title: MSM Best Practices
-description: Här hittar du bästa praxis som sammanställts av Adobes tekniker och konsultteam för att hjälpa till att komma igång med AEM Multi Site Manager.
-seo-description: Här hittar du bästa praxis som sammanställts av Adobes tekniker och konsultteam för att hjälpa till att komma igång med AEM Multi Site Manager.
+description: Här hittar du de bästa arbetssätten som skapats av Adobe tekniker och konsultteam så att de kan komma igång med AEM Multi Site Manager.
+seo-description: Här hittar du de bästa arbetssätten som skapats av Adobe tekniker och konsultteam så att de kan komma igång med AEM Multi Site Manager.
 uuid: cbb598bb-ec8f-4985-97af-7c87f5891c66
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
+topic-tags: site-features, best-practices
 content-type: reference
-topic-tags: best-practices
 discoiquuid: 04344537-7485-40a9-ad14-804ba448f1e2
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: a929252a13f66da8ac3e52aea0655b12bdd1425f
+workflow-type: tm+mt
+source-wordcount: '1530'
+ht-degree: 0%
 
 ---
 
@@ -34,6 +37,7 @@ MSM är ett konfigurerbart ramverk för automatisering av innehållsdistribution
 >
 >* [Vanliga frågor om MSM](https://helpx.adobe.com/experience-manager/kb/index/msm_faq.html)
 >* [Felsökning av MSM-problem](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-msm-issues.html)
+
 >
 
 
@@ -44,6 +48,7 @@ MSM är ett konfigurerbart ramverk för automatisering av innehållsdistribution
 >
 >* MSM är flexiblare och ger detaljerad kontroll över vilket innehåll som synkroniseras och när.
 >* [Kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) rekommenderas nu framför grundkomponenterna.
+
 >
 
 
@@ -114,11 +119,11 @@ MSM kan hjälpa till att skapa flerspråkiga webbplatser på två sätt:
 
          Kontakta översättningstjänsten för mer information.
 
-      * Ett annat sätt att skapa och översätta språkmallar är att använda språkkopior i kombination med AEM:s färdiga ramverk för översättningsintegrering.
+      * Ett annat sätt att skapa och översätta språkmallsidor är att använda språkkopior i kombination med AEM färdiga integrationsramverk för översättning.
 
 * När du distribuerar innehåll från språkmallsidor.
 
-   * Till exempel, från den franska huvudpersonen till landsspecifika webbplatser, som Frankrike/Frankrike, Kanada/franska, Schweiz/franska.
+   * Till exempel från franska överordnad till landsspecifika webbplatser, som Frankrike/Frankrike, Kanada/franska, Schweiz/franska.
 
 Mer information finns i [Översätta innehåll för flerspråkiga platser](/help/sites-administering/translation.md) och [Översättningsmetoder](/help/sites-administering/tc-bp.md).
 
