@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 216cfb3e-777e-4773-afba-749debdca000
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 15bebf5727e0a575d65806375840a44e423efaa0
+source-git-commit: 6be0aa7c3f6b21ad26221289a6cca2b4615ed3f4
 workflow-type: tm+mt
 source-wordcount: '994'
 ht-degree: 0%
@@ -47,7 +47,7 @@ Mer information finns i Grunderna för [communitykomponenter](/help/communities/
 
 När de [nödvändiga klientbiblioteken](/help/communities/essentials-comments.md#essentials-for-client-side) inkluderas visas `Comments` komponenten på det här sättet.
 
-![chlimage_1-428](assets/chlimage_1-428.png)
+![comments-component](assets/comments-component.png)
 
 >[!NOTE]
 >
@@ -88,7 +88,7 @@ Under fliken **Kommentarer** anger du hur besökare ska ange kommentarer.
 
 * **Tillåtna filtyper**
 
-   Endast relevant om Tillåt filöverföringar är markerat. En kommaavgränsad lista med filnamnstillägg med punktavgränsaren. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp anges tillåts inte den som inte anges. Ingen standard har angetts så att alla filtyper tillåts.
+   Endast relevant om Tillåt filöverföringar är markerat. En kommaavgränsad lista med filnamnstillägg med punktavgränsaren. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp anges tillåts inte de som inte anges. Ingen standard har angetts så att alla filtyper tillåts.
 
 * **RTF-redigerare**
 
@@ -166,7 +166,7 @@ När du känner till de anpassade resurstyperna anger du [designläge](/help/sit
 
 Under fliken **Resurstyper** anger du anpassad resourceType för nya instanser av `Comments or Voting` komponenterna:
 
-![chlimage_1-429](assets/chlimage_1-429.png)
+![resurstyp](assets/resource-type.png)
 
 * **Resurstyp för kommentar**
 
