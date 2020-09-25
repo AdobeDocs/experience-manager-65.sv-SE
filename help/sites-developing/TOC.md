@@ -6,9 +6,9 @@ user-guide-title: AEM 6.5 Developing User Guide
 breadcrumb-title: Developing Guide
 user-guide-description: This guide covers how to build out your AEM instance.
 translation-type: tm+mt
-source-git-commit: e917a36f9b8748080e9ab770a7f58f06123ea166
+source-git-commit: fe3e8c29abe832899a6466c4b018b9aa2104e908
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '823'
 ht-degree: 6%
 
 ---
@@ -138,13 +138,14 @@ ht-degree: 6%
    + [AEM](aem-repo-tool.md)
 + Personanpassning{#personlization}
    + [ContextHub](contexthub.md)
-   + [ContextHub Javascript API-referens](contexthub-api.md)
-   + [Utökar ContextHub](ch-extend.md)
+   + [Konfigurerar kontexthubb](ch-configuring.md)
    + [Lägga till ContextHub på Pages och Access Stores](ch-adding.md)
+   + [Utökar ContextHub](ch-extend.md)
    + [Exempel på ContextHub Store-kandidater](ch-samplestores.md)
    + [Exempeltyper för ContextHub-gränssnittsmodul](ch-samplemodules.md)
    + [ContextHub Diagnostics](ch-diagnostics.md)
    + [Utveckla för riktat innehåll](target.md)
+   + [ContextHub Javascript API-referens](contexthub-api.md)
    + Klientkontext{#client-context}
       + [Klientkontext i detalj](client-context.md)
       + [JavaScript-API för klientkontext](ccjsapi.md)
