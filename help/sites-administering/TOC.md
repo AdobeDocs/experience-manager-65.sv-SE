@@ -6,7 +6,7 @@ user-guide-title: Användarhandbok för AEM 6.5
 breadcrumb-title: Administering Guide
 user-guide-description: Learn about administering AEM.
 translation-type: tm+mt
-source-git-commit: e917a36f9b8748080e9ab770a7f58f06123ea166
+source-git-commit: fe3e8c29abe832899a6466c4b018b9aa2104e908
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 6%
@@ -97,7 +97,7 @@ ht-degree: 6%
    + [Mappning av anpassade användargrupper i AEM 6.5](/help/sites-administering/cug-mapping.md)
 + Personanpassning {#personalization}
    + [Personanpassning](personalization.md)
-   + [ContextHub konfigureras](contexthub-config.md)
+   + [ContextHub konfigureras](/help/sites-developing/ch-configuring.md)
    + [Klientkontext](client-context.md)
    + [Kampanjer](campaigns.md)
    + [Konfigurera segmentering med ContextHub](segmentation.md)
