@@ -12,7 +12,10 @@ discoiquuid: 59780112-6a9b-4de2-bf65-f026c8c74a31
 docset: aem65
 targetaudience: target-audience upgrader
 translation-type: tm+mt
-source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
+source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
+workflow-type: tm+mt
+source-wordcount: '2201'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ När man planerar en uppgradering måste man undersöka och åtgärda följande 
 
 * [Uppgradera kodbasen](#upgrade-code-base)
 * [Justera med 6.5-databasstruktur](#align-repository-structure)
-* [AEM-anpassningar](#aem-customizations)
+* [AEM](#aem-customizations)
 * [Testförfarande](#testing-procedure)
 
 ## Översikt {#overview}
@@ -32,27 +35,27 @@ När man planerar en uppgradering måste man undersöka och åtgärda följande 
 
 1. **Utveckla kodbas för 6.5 **- Skapa en dedikerad gren eller databas för kodbasen för Target-versionen. Använd information från Kompatibilitet före uppgradering för att planera områden med kod att uppdatera.
 1. **Kompilera med 6.5 Uber jar **- Uppdatera källkodens POM till 6.5 uber jar och kompilera koden mot detta.
-1. **Uppdatera AEM-anpassningar*** - *Alla anpassningar eller tillägg till AEM bör uppdateras/valideras för att fungera i 6.5 och läggas till i 6.5-kodbasen. Innefattar användargränssnittets sökformulär, anpassningar av resurser, allt som använder /mnt/overlay
+1. **Uppdatera AEM Anpassningar*** - *Alla anpassningar eller tillägg som ska AEM ska uppdateras/valideras för att fungera i 6.5 och läggas till i 6.5-kodbasen. Innehåller användargränssnittssökning i Forms, anpassning av resurser, allt som använder /mnt/overlay
 
-1. **Driftsätt till 6.5-miljö** - En ren instans av AEM 6.5 (författare + publicering) bör stå upp i en Dev/QA-miljö. Uppdaterad kodbas och ett representativt urval av innehåll (från aktuell produktion) bör distribueras.
+1. **Distribuera till 6.5-miljö** - En ren instans av AEM 6.5 (Författare + Publicera) bör ställas upp i en Dev/QA-miljö. Uppdaterad kodbas och ett representativt urval av innehåll (från aktuell produktion) bör distribueras.
 1. **QA-validering och felkorrigering** - QA ska validera programmet både i Author- och Publish-instanser av 6.5. Eventuella fel som hittas ska korrigeras och implementeras i 6.5-kodbasen. Upprepa Dev-Cycle tills alla fel är åtgärdade.
 
 Innan du fortsätter med en uppgradering bör du ha en stabil programkodbas som har testats noggrant mot målversionen av AEM. Baserat på observationer som gjorts i testningen kan det finnas sätt att optimera den anpassade koden. Detta kan innefatta omfaktorisering av koden för att undvika att gå igenom databasen, anpassad indexering för att optimera sökningen eller användning av osorterade noder i JCR, bland annat.
 
-Förutom möjligheten att uppgradera din kodbas och anpassa den till den nya AEM-versionen, hjälper 6.5 dig även att hantera dina anpassningar effektivare med funktionen Bakåtkompatibilitet som beskrivs på [den här sidan](/help/sites-deploying/backward-compatibility.md).
+Förutom möjligheten att uppgradera kodbasen och anpassa den så att den fungerar med den nya AEM-versionen, hjälper 6.5 dig även att hantera dina anpassningar effektivare med funktionen Bakåtkompatibilitet som beskrivs på [den här sidan](/help/sites-deploying/backward-compatibility.md).
 
-Som vi nämnt ovan och som visas i diagrammet nedan, kan du genom att köra [Mönsteravkännaren](/help/sites-deploying/pattern-detector.md) i det första steget göra det enklare att bedöma uppgraderingens totala komplexitet och om du vill köra i kompatibilitetsläge eller uppdatera dina anpassningar till alla nya AEM 6.5-funktioner. Mer information finns på sidan [Bakåtkompatibilitet i AEM 6.5](/help/sites-deploying/backward-compatibility.md) .
+Som vi nämnt ovan och som visas i diagrammet nedan, kan du genom att köra [Mönsteravkännaren](/help/sites-deploying/pattern-detector.md) i det första steget utvärdera den övergripande komplexiteten i uppgraderingen och om du vill köra i kompatibilitetsläge eller uppdatera dina anpassningar till alla nya AEM 6.5-funktioner. Mer information finns på sidan [Bakåtkompatibilitet i AEM 6.5](/help/sites-deploying/backward-compatibility.md) .
 [ ![opt_cropped](assets/opt_cropped.png)](assets/upgrade-code-base-highlevel.png)
 
 ## Uppgradera kodbasen {#upgrade-code-base}
 
 ### Skapa en dedikerad gren för 6.5-kod i versionskontrollen {#create-a-dedicated-branch-for-6.5-code-in-version-control}
 
-All kod och alla konfigurationer som krävs för din AEM-implementering bör hanteras med någon form av versionskontroll. En dedikerad gren i versionskontrollen bör skapas för att hantera ändringar som behövs för kodbasen i målversionen av AEM. Interaktiv testning av kodbasen mot målversionen av AEM och efterföljande felkorrigeringar hanteras i den här grenen.
+All kod och alla konfigurationer som krävs för AEM ska hanteras med någon form av versionskontroll. En dedikerad gren i versionskontrollen bör skapas för att hantera ändringar som behövs för kodbasen i målversionen av AEM. Interaktiv testning av kodbasen mot målversionen av AEM och efterföljande felkorrigeringar hanteras i den här grenen.
 
-### Uppdatera JAR-versionen för AEM Uber {#update-the-aem-uber-jar-version}
+### Uppdatera den AEM Uber Jar-versionen {#update-the-aem-uber-jar-version}
 
-AEM Uber jar innehåller alla AEM API:er som ett enda beroende i Maven-projektets `pom.xml`. Det är alltid en god vana att inkludera Uber Jar som ett enda beroende i stället för att inkludera enskilda AEM API-beroenden. När du uppgraderar kodbasen bör du ändra Uber Jar-versionen så att den pekar på målversionen av AEM. Om ditt projekt utvecklades på en version av AEM innan Uber Jar fanns bör alla enskilda AEM API-beroenden tas bort och ersättas med en enda inkludering av Uber Jar för målversionen av AEM. Kodbasen ska sedan kompileras om mot den nya versionen av Uber Jar. Alla inaktuella API:er eller metoder bör uppdateras så att de är kompatibla med målversionen av AEM.
+AEM Uber jar innehåller alla AEM-API:er som ett enda beroende i Maven-projektets `pom.xml`. Det är alltid en god vana att inkludera Uber Jar som ett enda beroende i stället för att inkludera enskilda AEM API-beroenden. När du uppgraderar kodbasen bör versionen av Uber Jar ändras till en målversion av AEM. Om ditt projekt utvecklades på en version av AEM innan Uber Jar fanns bör alla enskilda AEM API-beroenden tas bort och ersättas med en enda inkludering av Uber Jar för målversionen av AEM. Kodbasen ska sedan kompileras om mot den nya versionen av Uber Jar. Alla inaktuella API:er eller metoder bör uppdateras så att de är kompatibla med målversionen av AEM.
 
 ```
 <dependency>
@@ -70,11 +73,11 @@ Användning av en administrativ session via `SlingRepository.loginAdministrative
 
 ### Frågor och ekindexvärden {#queries-and-oak-indexes}
 
-All användning av frågor i kodbasen måste noggrant testas som en del av uppgraderingen av kodbasen. För kunder som uppgraderar från Jackrabbit 2 (versioner av AEM äldre än 6.0) är detta särskilt viktigt eftersom Oak inte indexerar innehåll automatiskt och anpassade index kan behöva skapas. Om du uppgraderar från en AEM 6.x-version kan det bero på att indexdefinitionerna för &quot;out of the box Oak&quot; har ändrats och kan påverka befintliga frågor.
+All användning av frågor i kodbasen måste noggrant testas som en del av uppgraderingen av kodbasen. För kunder som uppgraderar från Jackrabbit 2 (versioner av AEM äldre än 6.0) är detta särskilt viktigt eftersom Oak inte indexerar innehåll automatiskt och anpassade index kan behöva skapas. Om du uppgraderar från en AEM 6.x-version kan indexdefinitionerna för &quot;out of the box Oak&quot; ha ändrats och kan påverka befintliga frågor.
 
 Det finns flera verktyg för analys och granskning av frågeprestanda:
 
-* [AEM Index Tools](/help/sites-deploying/queries-and-indexing.md)
+* [AEM](/help/sites-deploying/queries-and-indexing.md)
 
 * [Diagnostikverktyg för åtgärder - Frågeprestanda](/help/sites-administering/operations-dashboard.md#diagnosis-tools)
 
@@ -82,37 +85,37 @@ Det finns flera verktyg för analys och granskning av frågeprestanda:
 
 ### Klassisk gränssnittsredigering {#classic-ui-authoring}
 
-Det går fortfarande att skapa klassiskt gränssnitt i AEM 6.5, men det är borttaget. Mer information finns [här](/help/release-notes/deprecated-removed-features.md#pre-announcement-for-next-release). Om ditt program körs i den klassiska användargränssnittets redigeringsmiljö rekommenderar vi att du uppgraderar till AEM 6.5 och fortsätter använda det klassiska användargränssnittet. Migrering till Touch-gränssnittet kan sedan planeras som ett separat projekt som ska slutföras under flera utvecklingscykler. För att kunna använda det klassiska användargränssnittet i AEM 6.5 måste flera OSGi-konfigurationer implementeras i kodbasen. Mer information om hur du konfigurerar detta finns [här](/help/sites-administering/enable-classic-ui.md).
+Klassisk gränssnittsredigering är fortfarande tillgängligt i AEM 6.5, men är nu föråldrat. Mer information finns [här](/help/release-notes/deprecated-removed-features.md#pre-announcement-for-next-release). Om ditt program körs i den klassiska gränssnittets redigeringsmiljö rekommenderar vi att du uppgraderar till AEM 6.5 och fortsätter använda det klassiska användargränssnittet. Migrering till Touch-gränssnittet kan sedan planeras som ett separat projekt som ska slutföras under flera utvecklingscykler. För att kunna använda det klassiska användargränssnittet i AEM 6.5 måste flera OSGi-konfigurationer implementeras i kodbasen. Mer information om hur du konfigurerar detta finns [här](/help/sites-administering/enable-classic-ui.md).
 
 ## Justera med 6.5-databasstruktur {#align-repository-structure}
 
 För att underlätta uppgraderingarna och säkerställa att konfigurationerna inte skrivs över under en uppgradering har databasen omstrukturerats i 6.4 för att skilja innehåll från konfiguration.
 
-Därför måste ett antal inställningar flyttas så att de inte längre finns under `/etc` som tidigare. För att se över alla omstruktureringsproblem i databasen som måste ses över och anpassas i uppdateringen till AEM 6.4, se [Omstrukturering av databaser i AEM 6.4](/help/sites-deploying/repository-restructuring.md).
+Därför måste ett antal inställningar flyttas så att de inte längre finns under `/etc` som tidigare. Se [Repository-omstrukturering i AEM 6.4](/help/sites-deploying/repository-restructuring.md)för att se över alla omstruktureringsproblem i databasen som måste ses över och anpassas i uppdateringen till AEM 6.4.
 
-## AEM-anpassningar {#aem-customizations}
+## AEM  {#aem-customizations}
 
-Alla anpassningar av AEM-redigeringsmiljön i källversionen av AEM måste identifieras. När du har identifierat dem rekommenderar vi att du lagrar alla anpassningar i versionskontrollen eller åtminstone säkerhetskopierar dem som en del av ett innehållspaket. Alla anpassningar bör driftsättas och valideras i en QA- eller mellanlagringsmiljö som kör målversionen av AEM före en produktionsuppgradering.
+Alla anpassningar av AEM redigeringsmiljö i källversionen av AEM måste identifieras. När du har identifierat dem rekommenderar vi att du lagrar alla anpassningar i versionskontrollen eller åtminstone säkerhetskopierar dem som en del av ett innehållspaket. Alla anpassningar bör driftsättas och valideras i en QA- eller mellanlagringsmiljö som kör målversionen av AEM innan en produktionsuppgradering.
 
 ### Övertäckningar i allmänhet {#overlays-in-general}
 
-Det är vanligt att utöka AEM-funktionaliteten genom att lägga över noder och/eller filer under /libs med ytterligare noder under /apps. Dessa övertäckningar bör spåras i versionskontroll och testas mot målversionen av AEM. Om en fil (oavsett om det är JS, JSP eller HTL) är överlagrad bör du lämna en kommentar om vilka funktioner som har förbättrats för enklare regressionstestning i målversionen av AEM. Mer information om övertäckningar finns [här](/help/sites-developing/overlays.md). Instruktioner för specifika AEM-övertäckningar finns nedan.
+Det är vanligt att utöka AEM genom att lägga över noder och/eller filer under /libs med ytterligare noder under /apps. Dessa övertäckningar bör spåras i versionskontroll och testas mot målversionen av AEM. Om en fil (oavsett om den är JS, JSP eller HTL) är överlagrad bör du lämna en kommentar om vilka funktioner som har förbättrats för enklare regressionstestning i målversionen av AEM. Mer information om övertäckningar finns [här](/help/sites-developing/overlays.md). Instruktioner för specifika AEM finns nedan.
 
-### Uppgraderar anpassade sökformulär {#upgrading-custom-search-forms}
+### Uppgraderar Forms för anpassad sökning {#upgrading-custom-search-forms}
 
-Anpassade sökfaktorer kräver vissa manuella justeringar efter uppgraderingen för att de ska fungera korrekt. Mer information finns i [Uppgradera anpassade sökformulär](/help/sites-deploying/upgrading-custom-search-forms.md).
+Anpassade sökfaktorer kräver vissa manuella justeringar efter uppgraderingen för att de ska fungera korrekt. Mer information finns i [Uppgradera Forms](/help/sites-deploying/upgrading-custom-search-forms.md)för anpassad sökning.
 
 ### Användargränssnittsanpassningar för resurser {#assets-ui-customizations}
 
 >[!NOTE]
 >
->Den här proceduren krävs endast för uppgraderingar från versioner äldre än AEM 6.2.
+>Den här proceduren krävs endast för uppgraderingar från versioner som är äldre än AEM 6.2.
 
 Instanser som har anpassade Assets-distributioner måste förberedas för uppgraderingen. Detta krävs för att säkerställa att allt anpassat innehåll är kompatibelt med den nya 6.4-nodstrukturen.
 
 Du kan förbereda anpassningar av resursgränssnittet genom att göra följande:
 
-1. Öppna CRXDE Lite på den instans som ska uppgraderas genom att gå till *https://server:port/crx/de/index.jsp*
+1. Öppna CRXDE Lite på *https://server:port/crx/de/index.jsp*
 
 1. Gå till följande nod:
 
@@ -130,7 +133,7 @@ Du kan förbereda anpassningar av resursgränssnittet genom att göra följande:
 
 ### Genererar resurs-ID:n för befintliga resurser {#generating-asset-ids-for-existing-assets}
 
-Om du vill generera resurs-ID:n för befintliga mediefiler uppgraderar du mediefilerna när du uppgraderar din AEM-instans till att köra AEM 6.5. Detta krävs för att aktivera funktionen [](/help/assets/touch-ui-asset-insights.md)Resursinsikter. Mer information finns i [Lägga till inbäddningskod](/help/assets/touch-ui-using-page-tracker.md#add-embed-code).
+Om du vill generera resurs-ID:n för befintliga resurser ska du uppgradera resurserna när du uppgraderar din AEM så att AEM 6.5 körs. Detta krävs för att aktivera funktionen [](/help/assets/touch-ui-asset-insights.md)Resursinsikter. Mer information finns i [Lägga till inbäddningskod](/help/assets/touch-ui-using-page-tracker.md#add-embed-code).
 
 Om du vill uppgradera resurser konfigurerar du paketet Associate Asset IDs i JMX-konsolen. Beroende på antalet resurser i databasen kan det `migrateAllAssets` ta lång tid. Våra interna tester beräknar cirka en timme för 125 000 tillgångar på TjärMK.
 
@@ -140,29 +143,29 @@ Om du behöver resurs-ID:n för en delmängd av hela dina resurser använder du 
 
 Använd API:t för alla andra ändamål `migrateAllAssets()` .
 
-### InDesign Script Customizations {#indesign-script-customizations}
+### Anpassa InDesign-skript {#indesign-script-customizations}
 
-Adobe rekommenderar att du placerar egna skript `/apps/settings/dam/indesign/scripts` där. Mer information om anpassning av InDesign-skript finns [här](/help/assets/indesign.md#configuring-the-aem-assets-workflow).
+Adobe rekommenderar att du placerar egna skript på `/apps/settings/dam/indesign/scripts` en plats. Mer information om anpassning av InDesign Script finns [här](/help/assets/indesign.md#configuring-the-aem-assets-workflow).
 
 ### Återställer ContextHub-konfigurationer {#recovering-contexthub-configurations}
 
-ContextHub-konfigurationer påverkas av en uppgradering. Instruktioner om hur du återställer befintliga ContextHub-konfigurationer finns [här](/help/sites-administering/contexthub-config.md#recovering-contexthub-configurations-after-upgrading).
+ContextHub-konfigurationer påverkas av en uppgradering. Instruktioner om hur du återställer befintliga ContextHub-konfigurationer finns [här](/help/sites-developing/ch-configuring.md#recovering-contexthub-configurations-after-upgrading).
 
 ### Anpassningar av arbetsflöden {#workflow-customizations}
 
-Det är vanligt att uppdatera ändringar som görs direkt i arbetsflöden för att lägga till eller ta bort funktioner som inte behövs. Ett vanligt arbetsflöde som är anpassat är arbetsflödet för [!UICONTROL DAM-uppdatering av resurser] . Alla arbetsflöden som krävs för en anpassad implementering bör säkerhetskopieras och lagras i versionskontroll eftersom de kan skrivas över under en uppgradering.
+Det är vanligt att uppdatera ändringar som görs direkt i arbetsflöden för att lägga till eller ta bort funktioner som inte behövs. Ett vanligt arbetsflöde som är anpassat är [!UICONTROL DAM Update Asset] arbetsflödet. Alla arbetsflöden som krävs för en anpassad implementering bör säkerhetskopieras och lagras i versionskontroll eftersom de kan skrivas över under en uppgradering.
 
 ### Redigerbara mallar {#editable-templates}
 
 >[!NOTE]
 >
->Den här proceduren krävs endast för webbplatsuppgraderingar som använder redigerbara mallar från AEM 6.2
+>Den här proceduren krävs endast för webbplatsuppgraderingar som använder Redigerbara mallar från AEM 6.2
 
 Strukturen för redigerbara mallar har ändrats mellan AEM 6.2 och 6.3. Om du uppgraderar från 6.2 eller tidigare och om ditt webbplatsinnehåll byggs med redigerbara mallar måste du använda [verktyget](https://github.com/Adobe-Marketing-Cloud/aem-sites-template-migration)för rensning av responsiva noder. Verktyget ska köras **efter** en uppgradering för att rensa upp innehållet. Den måste köras på både författarnivå och publiceringsnivå.
 
 ### Ändringar av CUG-implementering {#cug-implementation-changes}
 
-Implementeringen av slutna användargrupper har ändrats avsevärt för att åtgärda prestandabegränsningar och skalbarhetsbegränsningar i tidigare versioner av AEM. Den tidigare versionen av CUG har tagits bort i 6.3 och den nya implementeringen stöds bara i Touch-gränssnittet. Om du uppgraderar från 6.2 eller tidigare finns instruktioner för att migrera till den nya CUG-implementeringen [här](/help/sites-administering/closed-user-groups.md#upgradetoaem63).
+Implementeringen av stängda användargrupper har ändrats avsevärt för att åtgärda prestandabegränsningar och skalbarhetsbegränsningar i tidigare versioner av AEM. Den tidigare versionen av CUG har tagits bort i 6.3 och den nya implementeringen stöds bara i Touch-gränssnittet. Om du uppgraderar från 6.2 eller tidigare finns instruktioner för att migrera till den nya CUG-implementeringen [här](/help/sites-administering/closed-user-groups.md#upgradetoaem63).
 
 ## Testförfarande {#testing-procedure}
 
@@ -172,9 +175,9 @@ En omfattande testplan bör utarbetas för testning av uppgraderingar. Testning 
 
 Uppgraderingsproceduren som beskrivs här bör testas i Dev- och QA-miljöer enligt din anpassade körningsbok (se [Planera uppgraderingen](/help/sites-deploying/upgrade-planning.md)). Uppgraderingsproceduren bör upprepas tills alla steg har dokumenterats i uppgraderingsboken och uppgraderingsprocessen är smidig.
 
-### Implementeringstestområden {#implementation-test-areas-}
+### Implementeringstestområden  {#implementation-test-areas-}
 
-Nedan visas viktiga delar av en AEM-implementering som bör ingå i testplanen när miljön har uppgraderats och den uppgraderade kodbasen har distribuerats.
+Nedan visas viktiga delar av AEM implementering som ska ingå i testplanen när miljön har uppgraderats och den uppgraderade kodbasen har distribuerats.
 
 <table>
  <tbody>
@@ -184,14 +187,14 @@ Nedan visas viktiga delar av en AEM-implementering som bör ingå i testplanen n
   </tr>
   <tr>
    <td>Publicerade webbplatser</td>
-   <td>Testa AEM-implementeringen och associerad kod på publiceringsnivån<br /> via dispatchern. Bör innehålla kriterier för siduppdatering och<br /> cacheogiltigförklaring.</td>
+   <td>Testa AEM implementering och associerad kod på publiceringsnivån<br /> via dispatchern. Bör innehålla kriterier för siduppdatering och<br /> cacheogiltigförklaring.</td>
   </tr>
   <tr>
    <td>Redigering</td>
-   <td>Testar AEM-implementeringen och associerad kod på författarnivån. Bör innehålla sidor, komponentredigering och dialogrutor.</td>
+   <td>Testar AEM implementering och associerad kod på författarnivån. Bör innehålla sidor, komponentredigering och dialogrutor.</td>
   </tr>
   <tr>
-   <td>Integrering med Marketing Cloud-lösningar</td>
+   <td>Integrering med Marketing Cloud Solutions</td>
    <td>Validera integreringar med produkter som Analytics, DTM och Target.</td>
   </tr>
   <tr>
@@ -208,7 +211,7 @@ Nedan visas viktiga delar av en AEM-implementering som bör ingå i testplanen n
   </tr>
   <tr>
    <td>Anpassningar av användargränssnitt</td>
-   <td>Tillägg eller anpassningar av AEM-gränssnittet i författarmiljön.</td>
+   <td>Alla tillägg eller anpassningar av det AEM användargränssnittet i författarmiljön.</td>
   </tr>
   <tr>
    <td>Arbetsflöden</td>
