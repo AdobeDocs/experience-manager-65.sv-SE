@@ -10,7 +10,10 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: f281ef8c-0831-470c-acb7-189f20452a50
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
+workflow-type: tm+mt
+source-wordcount: '391'
+ht-degree: 4%
 
 ---
 
@@ -24,7 +27,7 @@ Verktygsfältet består av en serie användargränssnittslägen som innehåller 
 * Gränssnittslägen är ikoner som visas till vänster i verktygsfältet. När du klickar på eller trycker på en ikon visas de gränssnittsmoduler som finns i verktygsfältet.
 * Gränssnittsmoduler visar data från en eller flera ContextHub-butiker. Vissa gränssnittsmoduler gör det även möjligt för dig att ändra lagrade data.
 
-ContextHub installerar flera gränssnittslägen och gränssnittsmoduler. Din administratör kan ha [konfigurerat ContextHub](/help/sites-administering/contexthub-config.md) för att visa olika.
+ContextHub installerar flera gränssnittslägen och gränssnittsmoduler. Din administratör kan ha [konfigurerat ContextHub](/help/sites-developing/ch-configuring.md) för att visa olika.
 
 ![screen_shot_2018-03-23at093446](assets/screen_shot_2018-03-23at093446.png)
 
@@ -58,9 +61,9 @@ I vissa gränssnittsmoduler visas ett popup-fönster som är övertryckt när an
 
 ![screen_shot_2018-03-23at094003](assets/screen_shot_2018-03-23at094003.png)
 
-### Popup-formulär {#popup-forms}
+### Popup Forms {#popup-forms}
 
-Popup-överlägget för en modul kan innehålla formulärelement som gör att du kan ändra data i ContextHub-arkivet. Om sidinnehållet avgörs av lagringsdata kan du använda formuläret och observera ändringar i sidinnehållet.
+Popup-överlägget för en modul kan innehålla formulärelement som gör att du kan ändra data i ContextHub-arkivet. Om sidinnehållet bestäms av lagringsdata kan du använda formuläret och observera ändringar i sidinnehållet.
 
 ### Helskärmsläge {#fullscreen-mode}
 
