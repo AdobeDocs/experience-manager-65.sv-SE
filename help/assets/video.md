@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
 workflow-type: tm+mt
 source-wordcount: '11356'
 ht-degree: 6%
@@ -51,7 +51,7 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
       * Läs mer om [att ordna digitala resurser](/help/assets/organize-assets.md).
    * Överför dina primära källvideor till mapparna. Du kan överföra videofiler som är upp till 15 GB vardera. När du lägger till videofilmer i mappen kodas de enligt den videobearbetningsprofil som du tilldelade mappen.
 
-      * [Ladda upp videor](/help/assets/managing-video-assets.md#uploadingandpreviewingvideoassets).
+      * [Ladda upp videor](/help/assets/managing-video-assets.md#upload-and-preview-video-assets).
       * Läs mer om [indatafilformat](/help/assets/assets-formats.md#supported-multimedia-formats)som stöds.
    * Övervaka hur [videokodningen fortskrider](#monitoring-video-encoding-and-youtube-publishing-progress) antingen från resursen eller arbetsflödesvyn.
 
@@ -64,7 +64,7 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
 
       * [Organisera digitalt material](/help/assets/organize-assets.md)Läs mer om [Bästa metoder för att ordna digitala resurser för att använda bearbetningsprofiler](organize-assets.md)
 
-      * [Söka efter videomaterial](search-assets.md#custompredicates) eller [söka resurser](managing-assets-touch-ui.md#search-assets)
+      * [Söka efter videomaterial](search-assets.md#custompredicates) eller [söka resurser](/help/assets/search-assets.md)
    * Förhandsgranska och publicera videomaterial
 
       * Visa källvideon och de kodade återgivningarna av videon tillsammans med tillhörande miniatyrer:
@@ -1223,7 +1223,7 @@ Om du **vill lägga till en anpassad videominiatyr**,
    * Skapade en mapp för dina videoresurser.
    * [En videoprofil har använts på mappen](/help/assets/video-profiles.md#applying-a-video-profile-to-folders).
 
-   * [Dina videoklipp har överförts till mappen](/help/assets/managing-video-assets.md#uploadingandpreviewingvideoassets).
+   * [Dina videoklipp har överförts till mappen](/help/assets/managing-video-assets.md#upload-and-preview-video-assets).
 
 1. Navigera till en överförd videoresurs vars miniatyrbild du vill ändra.
 1. I resursurvalsläget, antingen från **[!UICONTROL List View]** eller **[!UICONTROL Card View]**, trycker du på videoresursen.
