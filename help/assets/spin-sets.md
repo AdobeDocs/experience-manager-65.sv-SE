@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 8e9b3815-2893-4e6b-ac41-77720b42d56b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a1e4d64a9ac7dc02c5cf2ac6b01994736c45b449
+source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
 workflow-type: tm+mt
 source-wordcount: '1765'
 ht-degree: 9%
@@ -21,7 +21,7 @@ ht-degree: 9%
 
 Med en snurra uppsättning kan du simulera hur det ser ut när du vrider ett objekt för att undersöka det. Med snurra uppsättningar kan du visa objekt från vilken vinkel som helst och få fram de viktigaste visuella detaljerna från vilken vinkel som helst.
 
-Med en snurra uppsättning simuleras en 360-graders visningsupplevelse. I Dynamic Media finns snurra uppsättningar med en axel där visningsprogrammen kan rotera ett objekt. Dessutom kan man zooma och panorera med några enkla musklick. På så sätt kan användare undersöka ett objekt närmare från en viss betraktningsvinkel.
+Med en snurra uppsättning simuleras en 360-graders visningsupplevelse. Dynamic Media har en enda axelsnurra där tittarna kan rotera ett objekt. Dessutom kan man zooma och panorera med några enkla musklick. På så sätt kan användare undersöka ett objekt närmare från en viss betraktningsvinkel.
 
 Snurra uppsättningar definieras av en banderoll med ordet **[!UICONTROL SPINSET.]** Om snurra uppsättning publiceras visas dessutom det publiceringsdatum som anges av **[!UICONTROL World]** ikonen på banderollen tillsammans med det senaste ändringsdatumet, som anges av **[!UICONTROL Pencil]** ikonen.
 
@@ -41,13 +41,13 @@ Så här kommer du igång snabbt med Spin Sets:
 
 1. [Skapa snurruppsättningar.](#creating-spin-sets)
 
-   Om du vill skapa en snurruppsättning markerar du **[!UICONTROL Create > Spin Set]** och namnger uppsättningen, väljer resurser och väljer den ordning som bilderna ska visas i.
+   Om du vill skapa en snurruppsättning markerar du **[!UICONTROL Create > Spin Set]** och namnger uppsättningen, väljer resurser och väljer den ordning bilderna ska visas.
 
    See [Working with Selectors](/help/assets/working-with-selectors.md).
 
    >[!NOTE]
    >
-   >Du kan också skapa rotationsuppsättningar automatiskt med hjälp av [förinställningar för gruppuppsättningar](/help/assets/config-dms7.md#creating%20batch%20set%20presets%20to%20auto-generate%20image%20sets%20and%20spin%20sets). **Viktigt:** Batchuppsättningar skapas av IPS (Image Production System) som en del av tillgångsintag och är endast tillgängliga i Dynamic Media - Scene7-läge.
+   >Du kan också skapa rotationsuppsättningar automatiskt med hjälp av [förinställningar för gruppuppsättningar](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets). **Viktigt:** Batchuppsättningar skapas av IPS (Image Production System) som en del av tillgångsinmatningen och är endast tillgängliga i läget Dynamic Media - Scene7.
 
 1. Ställ in [förinställningar](/help/assets/managing-viewer-presets.md)för Snurra Ställ in visningsprogram efter behov.
 
@@ -59,7 +59,7 @@ Så här kommer du igång snabbt med Spin Sets:
 
 1. [Visar snurruppsättningar](#viewing-spin-sets).
 
-   Du kan visa och komma åt uppsättningar som skapats med hjälp av gruppuppsättningsförinställningar på tre olika sätt. (Uppsättningar som skapats med gruppuppsättningsförinställningar visas *inte* i användargränssnittet.)
+   Du kan visa och komma åt uppsättningar som skapats med förinställningar för gruppuppsättningar på tre olika sätt. (Uppsättningar som skapats med gruppuppsättningsförinställningar visas *inte* i användargränssnittet.)
 
 1. [Förhandsgranska snurra uppsättningar.](/help/assets/previewing-assets.md)
 
@@ -71,7 +71,7 @@ Så här kommer du igång snabbt med Spin Sets:
 
 1. [Länka URL:er till webbprogrammet](/help/assets/linking-urls-to-yourwebapplication.md) eller [bädda in video- eller bildvisningsprogrammet](/help/assets/embed-code.md).
 
-   AEM Assets skapar URL-anrop för Spin-uppsättningar och aktiverar dem när du har publicerat snurruppsättningarna. Du kan kopiera dessa URL:er när du förhandsgranskar resurser. Du kan även bädda in dem på din webbplats.
+   AEM Assets skapar URL-anrop för Spin-uppsättningar och aktiverar dem när du har publicerat rotationsuppsättningarna. Du kan kopiera dessa URL:er när du förhandsgranskar resurser. Du kan även bädda in dem på din webbplats.
 
    Select the Spin Set, then in the left rail drop-down menu, select **[!UICONTROL Viewers.]**
 
@@ -87,7 +87,7 @@ Du kan överföra bilder för snurra uppsättningar på samma sätt som du [öve
 
 ### Riktlinjer för hämtning av bilder för din snurruppsättning {#guidelines-for-shooting-spin-set-images}
 
-Nedan följer några tips om hur du använder snurra uppsättningsbilder. Ju fler bilder du har i en snurrfunktion, desto bättre blir effekten av att snurra. Om du inkluderar många bilder i uppsättningen ökar dock tiden det tar för bilderna att läsas in. AEM rekommenderar följande riktlinjer för fotografering av bilder för användning i snurra uppsättningar:
+Nedan följer några tips om hur du använder snurra uppsättningsbilder. Ju fler bilder du har i en snurrfunktion, desto bättre blir effekten av att snurra. Om du inkluderar många bilder i uppsättningen ökar dock tiden det tar för bilderna att läsas in. AEM rekommenderar följande riktlinjer för att ta bilder för användning i snurra uppsättningar:
 
 * Använd minst 8-12 bilder i en endimensionell snurra och 16-24 bilder i en tvådimensionell snurra. Minst 8 bilder krävs för att kunna vridas 360 grader. Endimensionella snurruppsättningar är vanligare eftersom tvådimensionella snurvuppsättningar är arbetsintensiva.
 * Använd ett förlustfritt format, TIFF och PNG rekommenderas.
@@ -101,9 +101,9 @@ I det här avsnittet beskrivs hur du skapar snurruppsättningar i AEM.
 
 >[!NOTE]
 >
->Du kan också skapa rotationsuppsättningar automatiskt med hjälp av [förinställningar för gruppuppsättningar](/help/assets/config-dms7.md#creating%20batch%20set%20presets%20to%20auto-generate%20image%20sets%20and%20spin%20sets). **Viktigt:** Batchuppsättningar skapas av IPS (Image Production System) som en del av tillgångsintag och är endast tillgängliga i Dynamic Media - Scene7-läge.
+>Du kan också skapa rotationsuppsättningar automatiskt med hjälp av [förinställningar för gruppuppsättningar](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets). **Viktigt:** Batchuppsättningar skapas av IPS (Image Production System) som en del av tillgångsinmatningen och är endast tillgängliga i läget Dynamic Media - Scene7.
 >
->Se&quot;Skapa gruppuppsättningsförinställningar för automatisk generering av bilduppsättningar och snurpuppsättningar&quot; i [Konfigurera Dynamic Media - Scene7-läge](/help/assets/config-dms7.md#creating%20batch%20set%20presets%20to%20auto-generate%20image%20sets%20and%20spin%20sets).
+>Se&quot;Skapa gruppuppsättningsförinställningar för automatisk generering av bilduppsättningar och snurruppsättningar&quot; i [Konfigurera Dynamiska media - Scene7-läge](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets).
 
 
 >[!NOTE]
@@ -122,7 +122,7 @@ I det här avsnittet beskrivs hur du skapar snurruppsättningar i AEM.
 
    >[!NOTE]
    >
-   >När du skapar rotationsuppsättningen kan du ändra miniatyrbilden för rotationsuppsättningen eller tillåta att AEM väljer miniatyrbilden automatiskt baserat på resurserna i rotationsuppsättningen. Om du vill välja en miniatyrbild klickar du på **[!UICONTROL Change thumbnail]** och väljer en bild (du kan navigera till andra mappar för att hitta bilder också). If you have selected a thumbnail and then decide that you want AEM to generate one from the spin set, select **[!UICONTROL Switch to Automatic thumbnail.]**
+   >När du skapar rotationsuppsättningen kan du ändra miniatyrbilden för rotationsuppsättningen eller låta AEM välja miniatyrbilden automatiskt baserat på resurserna i rotationsuppsättningen. Om du vill välja en miniatyrbild klickar du på **[!UICONTROL Change thumbnail]** och väljer en bild (du kan navigera till andra mappar för att hitta bilder också). If you have selected a thumbnail and then decide that you want AEM to generate one from the spin set, select **[!UICONTROL Switch to Automatic thumbnail.]**
 
 1. Gör något av följande:
 
@@ -155,7 +155,7 @@ I det här avsnittet beskrivs hur du skapar snurruppsättningar i AEM.
 
 ## Visa snurruppsättningar {#viewing-spin-sets}
 
-Du kan skapa snurruppsättningar antingen i användargränssnittet eller automatiskt med hjälp av [gruppuppsättningsförinställningar](/help/assets/config-dms7.md#creating%20batch%20set%20presets%20to%20auto-generate%20image%20sets%20and%20spin%20sets). Uppsättningar som skapats med gruppuppsättningsförinställningar visas *inte* i användargränssnittet. Du kan få åtkomst till uppsättningar som skapats med gruppuppsättningsförinställningar på tre olika sätt. (Dessa metoder är tillgängliga även om du har skapat rotationsuppsättningarna i användargränssnittet).
+Du kan skapa snurruppsättningar antingen i användargränssnittet eller automatiskt med hjälp av [gruppuppsättningsförinställningar](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets). Uppsättningar som skapats med gruppuppsättningsförinställningar visas *inte* i användargränssnittet. Du kan få åtkomst till uppsättningar som skapats med gruppuppsättningsförinställningar på tre olika sätt. (Dessa metoder är tillgängliga även om du har skapat rotationsuppsättningarna i användargränssnittet).
 
 >[!NOTE]
 >
@@ -173,7 +173,7 @@ Du kan skapa snurruppsättningar antingen i användargränssnittet eller automat
 
 1. I sökningen kan du välja **[!UICONTROL Filters]** och sedan expandera **[!UICONTROL Dynamic Media]** och markera **[!UICONTROL Sets.]**
 
-   Sökningen returnerar matchande uppsättningar som skapats manuellt i användargränssnittet eller automatiskt skapats med gruppuppsättningsförinställningar. För automatiska uppsättningar utförs sökfrågan med hjälp av `Starts with` sökvillkor som skiljer sig från AEM-sökning, som baseras på användning av `Contains` sökvillkor. Det enda sättet att söka efter automatiska uppsättningar är att ställa in filtret på **[!UICONTROL Sets]** .
+   Sökningen returnerar matchande uppsättningar som skapats manuellt i användargränssnittet eller automatiskt skapats med gruppuppsättningsförinställningar. För automatiska uppsättningar utförs sökfrågan med hjälp av `Starts with` sökvillkor som skiljer sig från AEM som baseras på `Contains` sökvillkor. Det enda sättet att söka efter automatiska uppsättningar är att ställa in filtret på **[!UICONTROL Sets]** .
 
    ![chlimage_1-158](assets/chlimage_1-386.png)
 
