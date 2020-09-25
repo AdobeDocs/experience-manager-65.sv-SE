@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 4049a7a5-4b33-4462-a25f-3c0daeb6a8a9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
 workflow-type: tm+mt
 source-wordcount: '1158'
 ht-degree: 5%
@@ -25,14 +25,15 @@ Innehållsfragment i Adobe Experience Manager (AEM) [skapas och hanteras som sid
 
 Med dem kan du skapa kanalneutralt innehåll tillsammans med (eventuellt kanalspecifika) variationer. Du kan sedan använda dessa fragment och deras variationer när du redigerar innehållssidorna.
 
-Tillsammans med den uppdaterade JSON-exporteraren kan strukturerade innehållsfragment även användas för att leverera AEM-innehåll via Content Services till andra kanaler än AEM-sidor.
+Tillsammans med den uppdaterade JSON-exporteraren kan strukturerade innehållsfragment även användas för att leverera AEM innehåll via Content Services till andra kanaler än AEM.
 
 >[!NOTE]
 >
->**Innehållsfragment** och **[Experience Fragments](/help/sites-authoring/experience-fragments.md)**är olika funktioner i AEM:
+>**Content Fragments** and **[Experience Fragments](/help/sites-authoring/experience-fragments.md)** are different features within AEM:
 >
 >* **Innehållsfragment** är redaktionellt innehåll, främst text och relaterade bilder. De är rent innehåll, utan design och layout.
 >* **Experience Fragments** är helt utformat för innehåll, ett fragment av en webbsida.
+
 >
 >
 Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
@@ -53,7 +54,7 @@ Innehållsfragmenten aktiverar:
 
 * **Kopiera författare**
 
-   * Skriv i redigeraren för AEM-innehållsfragment.
+   * Skriv i AEM innehållsfragmentredigerare.
    * Kan skapa innehållsvariationer.
    * Kan associera relevant innehåll med innehållsfragmentet.
    * Kan använda versionshantering/arbetsflöde.
@@ -116,6 +117,7 @@ I rätt konfigurationsdialogruta kan du välja tillgängliga parametrar, bland a
 
    * The default **Main** will always be available.
    * En markering blir tillgänglig om fragmentet skapades med en lämplig mall.
+
    >[!NOTE]
    >
    >Vilka element som är tillgängliga beror på vilken mall som används.
@@ -146,7 +148,7 @@ Du kan öppna fragmentkällan för redigering (resursen) med ikonen **Redigera**
 
 När ett visst innehållsfragment läggs till på sidan finns det en **Drag-komponent här** som platshållare mellan varje HTML-stycke (och längst upp/längst ned) i fragmentet.
 
-På så sätt kan du lägga till extra innehåll [däremellan (dvs. mellanliggande innehåll)](/help/assets/content-fragments/content-fragments.md#inbetweencontent) i fragmentinnehållet (vid någon av de tillgängliga punkterna) utan att behöva ändra rotfragmentet.
+På så sätt kan du lägga till extra innehåll [däremellan (dvs. mellanliggande innehåll)](/help/assets/content-fragments/content-fragments.md#in-between-content-when-page-authoring-with-content-fragments) i fragmentinnehållet (vid någon av de tillgängliga punkterna) utan att behöva ändra rotfragmentet.
 
 För mellanliggande innehåll kan du:
 
@@ -168,7 +170,7 @@ För mellanliggande innehåll kan du:
 
 >[!CAUTION]
 >
->När du har lagt till mellanliggande innehåll i ett innehållsfragment på sidan kan ändringar av strukturen för det underliggande innehållsfragmentet (dvs. i innehållsfragmentets redigerare) leda till felaktiga/oväntade resultat.
+>När du har lagt till mellanliggande innehåll i ett innehållsfragment på sidan kan ändringar av strukturen för det underliggande innehållsfragmentet (dvs. i innehållsfragmentredigeraren) leda till felaktiga/oväntade resultat.
 >
 >När detta inträffar behålls det mellanliggande innehållet som det är:
 >
@@ -177,6 +179,7 @@ För mellanliggande innehåll kan du:
 >  
 Detta kan få det att se ut som om den relativa placeringen har ändrats, eftersom mellanliggande stycken inte har någon kontextuell relation till (fragmentet) stycken som de är placerade bredvid.
 >* Om inte de två styckestrukturerna står i konflikt med varandra. I så fall visas inte det mellanliggande innehållet (även om det fortfarande finns internt).
+
 >
 
 
