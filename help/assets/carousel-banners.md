@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: e26c7f7f-bdd7-421a-8614-ba48abf381d2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
 workflow-type: tm+mt
 source-wordcount: '4730'
 ht-degree: 3%
@@ -223,11 +223,10 @@ Mer information om hur du överför bildbanderoller finns i [Överföra resurser
    >    * Animering. Som standard tonas varje bildruteövergång ut. Du kan ändra det till en bildövergång.
    >    * Knapparnas format. Användarna kan rotera genom banners genom att trycka på varje punkt eller nummer. Du kan ändra var de angivna indikatorknapparna visas (och om de är numeriska eller prickade) och hur stora de är.
    >    * Ändra markeringsformatet för ett bildschema eller ikonen som används för aktiveringspunkter.
-   >    * Innan du redigerar en visningsförinställning väljer du det format du vill basera förinställningen på. Om du inte gör det kommer du att förlora alla ändringar när du börjar redigera visningsförinställningen om du väljer att ändra till en annan förinställning
+   >    * Innan du redigerar en visningsförinställning väljer du det format du vill basera förinställningen på. Om du inte gör det förlorar du alla ändringar när du börjar redigera visningsförinställningen om du väljer att ändra till en annan förinställning.
 
    >
-   >
-   >Se [Specialöverväganden för Carousel Banners](/help/assets/viewer-presets.md#specialconsiderationsforcreatingacarouselbannerviewerpreset) för detaljerade instruktioner och mer information om visningsprogrammet.
+   >Se [Specialöverväganden för Carousel Banners](/help/assets/managing-viewer-presets.md#special-considerations-for-creating-a-carousel-banner-viewer-preset) för detaljerade instruktioner och mer information om visningsprogrammet.
 
    Du kan också förhandsvisa hur karusellbanderollen kommer att se ut. Se [(valfritt) Förhandsgranska Carousel Banners](#optional-previewing-carousel-banners).
 
