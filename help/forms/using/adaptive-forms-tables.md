@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: fc418da9-496f-4a2b-bfe4-2add3ac4f468
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bd70508b361ac8b62ebc0344538a18369a075f3e
+source-git-commit: 26a65772c43a5176d178bb6625604d18ac91e894
 workflow-type: tm+mt
-source-wordcount: '2301'
+source-wordcount: '2302'
 ht-degree: 0%
 
 ---
@@ -19,9 +19,9 @@ ht-degree: 0%
 
 # Tabeller i anpassningsbara former{#tables-in-adaptive-forms}
 
-Att använda tabeller är ett effektivt, förenklat och organiserat sätt att presentera komplexa data. Det gör det enkelt för användarna att identifiera information och ge indata i en ordnad ordning av rader och kolumner. De flesta formulär från finanssektorn och myndigheter kräver stora datatabeller för att skicka siffror och utföra beräkningar.
+Att använda tabeller är ett effektivt, förenklat och organiserat sätt att presentera komplexa data. Det gör det enkelt för användarna att identifiera information och lägga in data i en ordnad ordning av rader och kolumner. De flesta formulär från finanssektorn och myndigheter kräver stora datatabeller för att skicka siffror och utföra beräkningar.
 
-AEM Forms tillhandahåller en tabellkomponent i komponentwebbläsaren i sidofältet som gör att du kan skapa tabeller i anpassningsbara formulär. Några av de viktigaste funktionerna i den är:
+AEM Forms tillhandahåller en tabellkomponent i komponentwebbläsaren i sidofältet som gör att du kan skapa tabeller i adaptiva formulär. Några av de viktigaste funktionerna i den är:
 
 * Responsiv layout på mobila enheter
 * Konfigurerbara rader och kolumner
@@ -37,7 +37,7 @@ AEM Forms tillhandahåller en tabellkomponent i komponentwebbläsaren i sidofäl
 
 Om du vill skapa en tabell drar och släpper du tabellkomponenten från komponentwebbläsaren i sidosparken på det adaptiva formuläret. Tabellen innehåller som standard två kolumner och tre rader, inklusive rubrikraden.
 
-![Tabellkomponent i AEM-sidofältet](assets/sidebar-tables.png)
+![Tabellkomponent i AEM](assets/sidebar-tables.png)
 
 ### Om rubrik- och brödceller {#about-header-and-body-cells}
 
@@ -159,7 +159,7 @@ Tabellerna och raderna har endast stöd för synlighetsuttryck som styr synlighe
 
 Synlighetsuttrycket för en tabell eller rad kan definieras på fliken Panelegenskaper i motsvarande dialogruta för redigeringskomponenter. Uttrycken för en cell kan definieras på fliken Skript i dialogrutan Redigera komponent.
 
-En fullständig lista över adaptiva formulärklasser, händelser, objekt och offentliga API:er finns i API-referens för [JavaScript-bibliotek för adaptiva formulär](https://helpx.adobe.com/aem-forms/6/javascript-api/index.html).
+En fullständig lista över adaptiva formulärklasser, händelser, objekt och offentliga API:er finns i API-referens för [JavaScript-bibliotek för adaptiva formulär](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html).
 
 ## Mobillayouter {#mobile-layouts}
 
@@ -205,7 +205,7 @@ Låt oss ta ett exempel på följande sammanfattande tabell över banktransaktio
 
 ![data-merge-table](assets/data-merge-table.png)
 
-I det här exemplet används elementnamnsegenskapen för:
+I det här exemplet är elementnamnegenskapen för:
 
 * raden är **Rad1**
 * innehållscellen under transaktionsdatumet är **tableItem1**
@@ -281,7 +281,7 @@ Om du vill sammanfoga dessa data med tabellen vid körning måste vi peka det ad
 
 ## Använd XDP-komponenter och komplexa XSD-typer {#use-xdp-components-and-xsd-complex-types}
 
-Om du har skapat ett adaptivt formulär baserat på en XFA-formulärmall är XFA-elementen tillgängliga på fliken Datamodell i AEM Content Finder. Du kan dra och släppa dessa XFA-element, inklusive tabeller, i det anpassningsbara formuläret.
+Om du har skapat ett adaptivt formulär baserat på en XFA-formulärmall är XFA-elementen tillgängliga på fliken Datamodell AEM Content Finder. Du kan dra och släppa dessa XFA-element, inklusive tabeller, i det anpassningsbara formuläret.
 
 XFA-tabellelementet mappas till tabellkomponenten och fungerar som det ska i adaptiva former. Alla egenskaper och funktioner i XDP-tabellen bevaras när den flyttas till ett anpassat formulär, och du kan utföra vilken åtgärd som helst på den på samma sätt som du gör med en intern adaptiv formulärtabell. Om en rad i en XDP-tabell till exempel är markerad som upprepningsbar, upprepas den även när den tas bort i anpassningsbara former.
 
@@ -297,12 +297,12 @@ Dessutom kan du dra och släppa en grupp XSD-element med komplex typ för att sk
 >
 >Antalet element i en XDP-tabellkomponent, ett delformulär eller en XSD-komplex typ får inte överstiga antalet celler i en rad. Du kan till exempel inte släppa fyra element på en rad som bara har tre celler. Det resulterar i ett fel.
 >
->Om antalet element är mindre än antalet celler i en rad lägger den nya raden först till celler som baseras på elementen, och därefter läggs standardcellerna till för att fylla i de återstående cellerna i raden. Om du till exempel släpper en grupp med tre element på en rad som har fyra celler, baseras de första tre cellerna på de element som du har tagit bort och de återstående en cellerna blir standardtabellcellen.
+>Om antalet element är mindre än antalet celler i en rad lägger den nya raden först till celler som är baserade på elementen, och därefter läggs standardcellerna till för att fylla i de återstående cellerna i raden. Om du till exempel släpper en grupp med tre element på en rad som har fyra celler, baseras de första tre cellerna på de element som du har tagit bort och de återstående en cellerna blir standardtabellcellen.
 
 ## Viktiga överväganden {#key-considerations}
 
 * Om du flyttar rader uppåt och nedåt när du redigerar en XSD-baserad tabell, visas en del dataförluster från tabellrader i den data-XML som genereras när formuläret skickas.
-* Varje tabellcell i standardtabellen har ett fördefinierat elementnamn kopplat till sig. Om du lägger till en annan tabell i det adaptiva formuläret får standardcellerna i den nya tabellen samma elementnamn som i den första tabellen. I sådana fall kommer de data som genereras när formuläret skickas endast att innehålla data i standardcellerna för en av tabellerna. Se därför till att du byter namn på elementnamnen för standardcellerna för brödtext så att de är unika i alla tabeller och undvika dataförlust.
+* Varje tabellcell i standardtabellen har ett fördefinierat elementnamn kopplat till sig. Om du lägger till en annan tabell i det adaptiva formuläret får standardcellerna i den nya tabellen samma elementnamn som i den första tabellen. I sådana fall kommer de data som genereras när formuläret skickas att innehålla data i standardcellerna i endast en av tabellerna. Se därför till att du byter namn på elementnamnen för standardcellerna för brödtext så att de är unika i alla tabeller och undvika dataförlust.
 
    Observera att detta endast gäller för standardcellerna. Om du lägger till fler rader eller kolumner i en tabell genereras unika elementnamn automatiskt för brödtextceller som inte är standard.
 
