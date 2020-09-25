@@ -9,9 +9,9 @@ topic-tags: develop
 discoiquuid: 2fd2276e-cfe3-47ad-94c1-9c7af56b7a17
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 26a65772c43a5176d178bb6625604d18ac91e894
 workflow-type: tm+mt
-source-wordcount: '2766'
+source-wordcount: '2767'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Anpassningsbara formulär ger optimerad och förenklad formulärifyllning för slutanvändare med dynamiska skriptfunktioner. Det gör att du kan skriva uttryck för att lägga till olika beteenden, till exempel dynamiska visa/dölj-fält och paneler. Du kan också lägga till beräknade fält, skrivskydda fält, lägga till valideringslogik och mycket annat. Det dynamiska beteendet baseras på användarens indata eller förifyllda data.
 
-JavaScript är uttrycksspråket i adaptiva formulär. Alla uttryck är giltiga JavaScript-uttryck och använder API:er för skriptmodell för adaptiva formulär. Dessa uttryck returnerar värden av vissa typer. En fullständig lista över adaptiva formulärklasser, händelser, objekt och offentliga API:er finns i API-referens för [JavaScript-bibliotek för adaptiva formulär](https://helpx.adobe.com/aem-forms/6/javascript-api/index.html).
+JavaScript är uttrycksspråket i adaptiva formulär. Alla uttryck är giltiga JavaScript-uttryck och använder API:er för skriptmodell för adaptiva formulär. Dessa uttryck returnerar värden av vissa typer. En fullständig lista över adaptiva formulärklasser, händelser, objekt och offentliga API:er finns i API-referens för [JavaScript-bibliotek för adaptiva formulär](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html).
 
 ## Bästa tillvägagångssätt för att skriva uttryck {#best-practices-for-writing-expressions}
 
@@ -51,13 +51,13 @@ I anpassningsbara formulär kan du skriva uttryck för att lägga till beteenden
 * **[Åtkomstuttryck](#access-expression-enablement-expression)**: för att aktivera/inaktivera ett fält.
 * **[Beräkna uttryck](#calculate-expression)**: till automatisk beräkning av ett fälts värde.
 * **[Klicka på uttryck](#click-expression)**: för att hantera åtgärder vid klickningshändelser för en knapp.
-* **[Initieringsskript](#initialization-script):**utföra en åtgärd vid initiering av ett fält.
+* **[Initieringsskript](#initialization-script):** utföra en åtgärd vid initiering av ett fält.
 * **[Alternativuttryck](#options-expression)**: för att dynamiskt fylla i en nedrullningsbar lista.
 * **[Sammanfattningsuttryck](#summary)**: för att dynamiskt beräkna titeln på ett dragspel.
 * **[Validera uttryck](#validate-expression)**: för att validera ett fält.
-* **[Värde för implementeringsskript](#value-commit-script):**om du vill ändra komponenterna i ett formulär efter att värdet för ett fält har ändrats.
+* **[Värde för implementeringsskript](#value-commit-script):** om du vill ändra komponenterna i ett formulär efter att värdet för ett fält har ändrats.
 * **[Synlighetsuttryck](#visibility-expression)**: för att styra visningen av ett fält och en panel.
-* **[Uttryck](#step-completion-expression)**för att slutföra steg: för att förhindra att en användare går vidare till nästa steg i en guide.
+* **[Uttryck](#step-completion-expression)** för att slutföra steg: för att förhindra att en användare går vidare till nästa steg i en guide.
 
 ### Åtkomstuttryck (aktiveringsuttryck) {#access-expression-enablement-expression}
 
@@ -164,7 +164,7 @@ Skriptet Värde implementeras aktiveras när:
 
 >[!NOTE]
 >
->Du kan inaktivera körningen av Value Commit Script när värdet för ett fält ändras programmatiskt. Det gör du genom att gå till https://&#39;[server]:[port]&#39;/system/console/configMgr och ändra **Adaptiv formulärversion för kompatibilitet** till **AEM Forms 6.1**. Därefter körs Value Commit Script bara när användaren ändrar fältets värde från användargränssnittet.
+>Du kan inaktivera körningen av Value Commit Script när värdet för ett fält ändras programmatiskt. Det gör du genom att gå till https://&#39;[server]:[port]&#39;/system/console/configMgr och ändra **Adaptiv Forms-version för kompatibilitet** till **AEM Forms 6.1**. Därefter körs Value Commit Script bara när användaren ändrar fältets värde från användargränssnittet.
 
 ### Synlighetsuttryck {#visibility-expression}
 
@@ -283,7 +283,7 @@ Utför följande steg för att skapa ett anpassat mönster för en viss fälttyp
 
 1. Värdet för den här egenskapen varierar beroende på vilket fält du vill definiera mönstren för. För numeriska fält är värdet för `guideComponentType` egenskapen *fd/af/components/formter/guideNumericBox*. Värdet för Datepicker-fältet är *fd/af/components/formter/guideDatepicker*.
 &quot;
-1. Du kan lägga till ett anpassat mönster genom att tilldela en egenskap till `textboxpatterns` noden. Lägg till en egenskap med ett namn (till exempel `pattern1`) och ställ in värdet för mönstret som du vill lägga till. Du kan till exempel lägga till en egenskap `pattern1` med värdet Fax=text {99-999-99999}. Mönstret är tillgängligt för alla textrutor som du använder i adaptiva formulär.
+1. Du kan lägga till ett anpassat mönster genom att tilldela en egenskap till `textboxpatterns` noden. Lägg till en egenskap med ett namn (till exempel `pattern1`) och ställ in värdet för mönstret som du vill lägga till. Du kan till exempel lägga till en egenskap `pattern1` med värdet Fax=text {99-999-99999}. Mönstret är tillgängligt för alla textrutor som du använder i Adaptiv Forms.
 
    ![Skapa anpassade mönster för fält i CrxDe](assets/creating-custom-patterns.png)
 
