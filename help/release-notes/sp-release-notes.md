@@ -4,9 +4,9 @@ description: Versionsinformation för [!DNL Adobe Experience Manager] 6.5 Servic
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: bd67a41e493cbcf97956de09e088d16997ab0e93
+source-git-commit: 74ab94126383d53dac5f55171266c66c28757969
 workflow-type: tm+mt
-source-wordcount: '4304'
+source-wordcount: '4327'
 ht-degree: 0%
 
 ---
@@ -207,7 +207,7 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 * Körningskopian av resurser i en anpassad arbetsflödesmodell (skapas i `/var/workflow/models/dam`) tas bort när du installerar [!DNL Experience Manager] 6.5 Service Pack 5 eller en tidigare version på [!DNL Experience Manager] 6.5 (NPR-34532). Om du vill hämta körtidskopian synkroniserar du designtidskopian av arbetsflödesmodellen med körtidskopian med HTTP API:
    `<designModelPath>/jcr:content.generate.json`.
 
-**Problem som har korrigerats i Dynamic Media**
+**Problem som har åtgärdats i Dynamic Media**
 
 * Om användaren definierar kodningsinställningarna i redigeringar efter att videoprofilen har skapats, tas inställningarna för smart beskärning bort från videoprofiler (CQ-4299177).
 
@@ -290,6 +290,16 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 >[!NOTE]
 >
 >[!DNL Experience Manager] Service Pack innehåller inga korrigeringar för [!DNL Forms]. De levereras med ett separat [!DNL Forms] tilläggspaket. Dessutom släpps ett kumulativt installationsprogram som innehåller korrigeringar för [!DNL Experience Manager Forms] JEE. Mer information finns i [Installera AEM Forms-tillägg](#install-aem-forms-add-on-package) och [Installera AEM Forms på JEE](#install-aem-forms-jee-installer).
+
+Efter installation av tilläggspaketet [!DNL Experience Manager Forms] 6.5.6.0:
+
+* Stoppa [!DNL Experience Manager Forms] instansen.
+
+* Ta bort `bcpkix-1.51`-, `bcmail-1.51`- och `bcprov-1.51` JAR-filer från `crx-repository\launchpad\ext` katalogen.
+
+* Ta bort` sling.bootdelegation.class.org.bouncycastle.jce.provider.BouncyCastleProvider` egenskapen från `sling.properties` filen.
+
+* Starta om [!DNL Experience Manager Forms] instansen.
 
 **Adaptiv Forms**
 
