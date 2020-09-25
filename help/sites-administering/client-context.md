@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 7a3322fe-554e-479e-a27c-4259cdd3ba2e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 684d2d5f73d571a15c8155e7870134c28dc892b7
+source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
+workflow-type: tm+mt
+source-wordcount: '1889'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ source-git-commit: 684d2d5f73d571a15c8155e7870134c28dc892b7
 
 >[!NOTE]
 >
->Klientkontext har ersatts av ContextHub. Mer information finns i relaterad [konfiguration](/help/sites-administering/contexthub-config.md) och [utvecklardokumentation](/help/sites-developing/contexthub.md) .
+>Klientkontext har ersatts av ContextHub. Mer information finns i relaterad []configuration-ch-configuring.md) och [utvecklardokumentation](/help/sites-developing/contexthub.md) .
 
 Klientkontexten är en mekanism som ger dig viss information om den aktuella sidan och besökaren. Den kan öppnas med **Ctrl-Alt-c** (Windows) eller **Ctrl-Option-c** (Mac):
 
@@ -58,7 +61,7 @@ Klientkontexten kan visa följande egenskaper ([beroende på vad som har valts m
 * X- **musens** position
 * musens Y- **position**
 
-**Aktivitetsström** Detta ger information om användarens sociala aktivitet på olika plattformar. till exempel AEM-forumen, bloggar, omdömen etc.
+**Aktivitetsström** Detta ger information om användarens sociala aktivitet på olika plattformar. till exempel AEM forum, bloggar, omdömen etc.
 
 **Campaign** Tillåter författare att simulera en specifik upplevelse för en kampanj. Den här komponenten åsidosätter normal kampanjupplösning och val av upplevelse för att möjliggöra testning av olika permutationer.
 
@@ -210,19 +213,19 @@ När du har öppnat designsidan **för** ClientContext kan du även **lägga til
 
 ### Ta bort en egenskapskomponent {#removing-a-property-component}
 
-När du har öppnat designsidan **för** ClientContext kan du även **ta bort** en egenskap om det inte längre behövs. Detta omfattar egendomar som levereras färdiga för leverans. Om du **återställer** återskapas dessa om de har tagits bort.
+När du har öppnat designsidan **för** ClientContext kan du även **ta bort** en egenskap om det inte längre behövs. Detta omfattar egendomar som levereras färdiga för leverans. **Återställ** återställer dessa om de har tagits bort.
 
 ## Lagra data i klientkontext via JSONP {#storing-data-in-client-context-via-jsonp}
 
 Följ det här exemplet om du vill använda kontextlagringskomponenten JSONP Store för att lägga till externa data i klientkontexten. Skapa sedan ett segment baserat på informationen från dessa data. I exemplet används den JSONP-tjänst som WIPmania.com tillhandahåller. Tjänsten returnerar geopositioneringsinformation baserat på webbklientens IP-adress.
 
-I det här exemplet används exempelwebbplatsen Geometrixx Outdoor för att få åtkomst till Client Context och för att testa det skapade segmentet. Du kan använda en annan webbplats så länge som sidan har aktiverat Klientkontext. (Se [Lägga till klientkontext på en sida](/help/sites-developing/client-context.md#adding-client-context-to-a-page).)
+I det här exemplet används Geometrixx Outdoors exempelwebbplatsen för att få åtkomst till klientkontexten och för att testa det segment som skapats. Du kan använda en annan webbplats så länge som sidan har aktiverat Klientkontext. (Se [Lägga till klientkontext på en sida](/help/sites-developing/client-context.md#adding-client-context-to-a-page).)
 
 ### Lägg till JSONP Store-komponenten {#add-the-jsonp-store-component}
 
 Lägg till JSONP Store-komponenten i klientkontexten och använd den för att hämta och lagra geolokaliseringsinformation om webbklienten.
 
-1. Öppna den engelska startsidan för webbplatsen Geometrixx Outdoor på AEM-författarinstansen. ([https://localhost:4502/content/geometrixx-outdoors/en.html](https://localhost:4502/content/geometrixx-outdoors/en.html)).
+1. Öppna den engelska startsidan för Geometrixx Outdoors-webbplatsen på AEM författarinstans. ([https://localhost:4502/content/geometrixx-outdoors/en.html](https://localhost:4502/content/geometrixx-outdoors/en.html)).
 1. Om du vill öppna klientkontexten trycker du på Ctrl-Alt-c (Windows) eller Ctrl-Option-c (Mac).
 1. Klicka på redigeringsikonen högst upp i klientkontexten för att öppna Client Context Designer.
 
@@ -242,13 +245,13 @@ Lägg till JSONP Store-komponenten i klientkontexten och använd den för att h�
    ![](assets/chlimage_1-40.png)
 
 1. Klicka på OK.
-1. Gå tillbaka till startsidan för Geometrixx Outdoor och uppdatera sidan. Klientkontexten innehåller nu information från JSONP Store-komponenten.
+1. Gå tillbaka till Geometrixx Outdoors hemsida och uppdatera sidan. Klientkontexten innehåller nu information från JSONP Store-komponenten.
 
    ![](assets/chlimage_1-41.png)
 
 ### Skapa segmentet {#create-the-segment}
 
-Använd data från det sessionsarkiv som du skapade med JSONP-lagringskomponenten. Segmentet använder latituden från sessionsarkivet och aktuellt datum för att avgöra om det är vintertid på klientens plats.
+Använd data från det sessionsarkiv som du skapade med JSONP-lagringskomponenten. Segmentet använder latituden från sessionsarkivet och det aktuella datumet för att avgöra om det är vintertid på klientens plats.
 
 1. Öppna verktygskonsolen i webbläsaren (`https://localhost:4502/miscadmin#/etc`).
 1. Klicka på mappen Verktyg/Segmentering i mappträdet och klicka sedan på Ny > Ny mapp. Ange följande egenskapsvärden och klicka sedan på Skapa:
