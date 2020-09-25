@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 discoiquuid: 536bcba4-b754-4799-b0d2-88960cc4c44a
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 35b2c9c8c79b3cc3d81e0b92ea17cd7d599fa7ee
+workflow-type: tm+mt
+source-wordcount: '1010'
+ht-degree: 0%
 
 ---
 
@@ -19,17 +22,17 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 HSM-moduler (Hardware Security Modules) och -telefoner är dedikerade, härdade och manipuleringssäkra datorenheter som är utformade för att hantera, bearbeta och lagra digitala nycklar på ett säkert sätt. Dessa enheter är direktanslutna till en dator eller en nätverksserver.
 
-Adobe Experience Manager Forms kan använda inloggningsuppgifter som lagras på en HSM eller token för att e-signera eller använda serverbaserade digitala signaturer i ett dokument. Så här använder du en HSM- eller tokenenhet med AEM Forms:
+Adobe Experience Manager Forms kan använda inloggningsuppgifter som lagrats på en HSM eller token för att e-signera eller använda serverbaserade digitala signaturer i ett dokument. Så här använder du en HSM- eller tokenenhet med AEM Forms:
 
 1. Aktivera tjänsten DocAssurance.
-1. Konfigurera certifikat för Reader-tillägg.
-1. Skapa ett alias för HSM- eller tokenenheten i AEM Web Console.
+1. Konfigurera certifikat för tillägget Reader.
+1. Skapa ett alias för HSM- eller tokenenheten i AEM webbkonsol.
 1. Använd API:erna för DocAssurance-tjänsten för att signera eller certifiera dokument med digitala nycklar lagrade på enheten.
 
 ## Innan du konfigurerar HSM- eller tokenenheter med AEM Forms {#configurehsmetoken}
 
-* Installera tilläggspaketet [för](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) AEM Forms.
-* Installera och konfigurera HSM- eller tokenklientprogramvara på samma dator som AEM-servern. Klientprogramvaran krävs för att kommunicera med HSM- och tokenenheterna.
+* Installera [AEM Forms tilläggspaket](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) .
+* Installera och konfigurera HSM- eller tokenklientprogramvara på samma dator som AEM server. Klientprogramvaran krävs för att kommunicera med HSM- och tokenenheterna.
 * (Endast Microsoft Windows) Ställ in miljövariabeln JAVA_HOME_32 så att den pekar på den katalog där 32-bitarsversionen av Java 8 Development Kit (JDK 8) är installerad. Standardsökvägen för katalogen är C:\Program Files(x86)\Java\jdk&lt;version>
 * (Endast AEM Forms på OSGi) Installera rotcertifikatet i förtroendearkivet. Du måste verifiera den signerade PDF-filen
 
@@ -41,27 +44,26 @@ Adobe Experience Manager Forms kan använda inloggningsuppgifter som lagras på 
 
 Tjänsten DocAssurance är inte aktiverad som standard. Aktivera tjänsten genom att utföra följande steg:
 
-1. Stoppa författarinstansen av AEM Forms-miljön.
+1. Stoppa författarinstansen av din AEM Forms-miljö.
 
 1. Öppna filen [AEM_root]\crx-quickstart\conf\sling.properties för redigering.
 
    >[!NOTE]
    >
-   >Om du har använt [AEM_root]\crx-quickstart\bin\start.bat för att starta AEM-instansen öppnar du [AEM_root]\crx-quickstart\sling.properties för redigering.
+   >Om du har använt filen [AEM_root]\crx-quickstart\bin\start.bat för att starta AEM ska du öppna filen [AEM_root]\crx-quickstart\sling.properties för redigering.
 
 1. Lägg till eller ersätt följande egenskaper i sling.properties-filen:
 
    ```shell
    sling.bootdelegation.sun=sun.*,com.sun.*,sun.misc.*
    sling.bootdelegation.ibm=com.ibm.xml.*,com.ibm.*
-   sling.bootdelegation.class.com.rsa.jsafe.provider.JsafeJCE=com.rsa.*
-   sling.bootdelegation.class.org.bouncycastle.jce.provider.BouncyCastleProvider=org.bouncycastle.*
+   sling.bootdelegation.class.com.rsa.jsafe.provider.JsafeJCE=com.rsa.*  
    ```
 
 1. Spara och stäng filen sling.properties.
-1. Starta om AEM-instansen.
+1. Starta om AEM.
 
-## Konfigurera certifikat för Reader-tillägg {#set-up-certificates-for-reader-extensions}
+## Konfigurera certifikat för tillägg i Reader {#set-up-certificates-for-reader-extensions}
 
 Utför följande steg för att konfigurera certifikat:
 
@@ -73,7 +75,7 @@ Utför följande steg för att konfigurera certifikat:
 
 1. På sidan **Redigera användarinställningar** klickar du på **Hantera KeyStore**.
 
-1. Expandera alternativet **Lägg till privat nyckel från nyckelarkivfilen** och ange ett alias i dialogrutan KeyStore-hantering. Aliaset används för att utföra Reader Extensions-åtgärden.
+1. Expandera alternativet **Lägg till privat nyckel från nyckelarkivfilen** och ange ett alias i dialogrutan KeyStore-hantering. Aliaset används för att utföra Reader-tilläggsåtgärden.
 1. Om du vill överföra certifikatfilen klickar du på **Välj nyckelarkivfil** och överför en `.pfx` fil.
 1. Lägg till lösenordet **för** nyckelarkivet, lösenordet **för** den privata nyckeln och det alias **för den** privata nyckeln som är kopplat till certifikatet i respektive fält. Klicka på **Skicka**.
 
@@ -87,7 +89,7 @@ Utför följande steg för att konfigurera certifikat:
 
 >[!NOTE]
 >
->För AEM Forms på OSGi, för att verifiera den signerade PDF-filen, är rotcertifikatet som är installerat i Trust Store.
+>För AEM Forms i OSGi verifierar du den signerade PDF-filen, rotcertifikatet som är installerat i Trust Store.
 
 >[!NOTE]
 >
@@ -97,22 +99,24 @@ Utför följande steg för att konfigurera certifikat:
 
 Aliaset innehåller alla parametrar som krävs för en HSM eller token. Följ instruktionerna nedan för att skapa ett alias för varje HSM- eller tokenautentiseringsuppgift som eSign eller digitala signaturer använder:
 
-1. Öppna AEM-konsolen. Standardwebbadressen för AEM-konsolen är https://&lt;host>:&lt;port>/system/console/configMgr
+1. Öppna AEM. Standardwebbadressen för AEM är https://&lt;host>:&lt;port>/system/console/configMgr
 1. Öppna konfigurationstjänsten **för** HSM-autentiseringsuppgifter och ange värden för följande fält:
 
    * **Alias** för autentiseringsuppgifter: Ange en sträng som används för att identifiera aliaset. Det här värdet används som en egenskap för vissa åtgärder för digitala signaturer, till exempel åtgärden Signera signaturfält.
    * **DLL-sökväg**: Ange den fullständiga sökvägen till HSM- eller tokenklientbiblioteket på servern. Exempel: C:\Program Files\LunaSA\cryptoki.dll. I en klustrad miljö måste sökvägen vara identisk för alla servrar i klustret.
    * **HSM-stift**: Ange lösenordet som krävs för att komma åt enhetsnyckeln.
    * **HSM-kortplats-ID**: Ange en platsidentifierare av typen heltal. Kortplats-ID anges klient för klient. Om du registrerar en andra dator till en annan partition (till exempel HSMPART2 på samma HSM-enhet), kopplas fack 1 till HSMPART2-partitionen för klienten.
+
    >[!NOTE]
    >
    >När du konfigurerar Etoken anger du ett numeriskt värde för fältet HSM-kortplats-ID. Ett numeriskt värde krävs för att signeringsåtgärderna ska fungera.
 
    * **Certifikat SHA1**: Ange SHA1-värdet (tumavtryck) för filen med den offentliga nyckeln (.cer) för de autentiseringsuppgifter som du använder. Kontrollera att inga blanksteg används i SHA1-värdet. Om du använder ett fysiskt certifikat krävs det inte.
    * **HSM-enhetstyp**: Välj tillverkaren av HSM-enheten (Luna eller annan) eller eToken-enheten.
+
    Click **Save**. Maskinvarusäkerhetsmodulen är konfigurerad för AEM Forms. Nu kan du använda maskinvarusäkerhetsmodulen med AEM Forms för att signera eller certifiera dokument.
 
-## Använd API:erna för DocAssurance-tjänsten för att signera eller certifiera ett dokument med digitala nycklar lagrade på enheten {#programatically}
+## Använd API:erna för DocAssurance-tjänsten för att signera eller certifiera ett dokument med digitala nycklar lagrade på enheten  {#programatically}
 
 I följande exempelkod används en HSM eller en token för att signera eller certifiera ett dokument.
 
