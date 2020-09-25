@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 1e9dd0d7-209a-4989-b66b-bca0d04b437a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 60d36fd98bd4329a2b707229755fd197e2236748
+source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
+workflow-type: tm+mt
+source-wordcount: '1781'
+ht-degree: 4%
 
 ---
 
@@ -43,6 +46,7 @@ Egenskaperna fördelas på flera flikar.
       * Den nya taggen visas sedan med en liten stjärna till höger som anger att det är en ny tagg.
    * Med den nedrullningsbara menyn kan du välja bland befintliga taggar.
    * Ett x-tecken visas när du för musen över en taggpost i markeringsrutan, som kan användas för att ta bort taggen för den här sidan.
+
    Mer information om taggar finns i [Använda taggar](/help/sites-authoring/tags.md).
 
 * **Dölj i navigering**
@@ -85,7 +89,7 @@ Egenskaperna fördelas på flera flikar.
 
    >[!CAUTION]
    >
-   >Vanity URL:er:
+   >Alternativa URL:er:
    >
    >* Måste vara unikt så du bör vara försiktig med att värdet inte redan används av en annan sida.
    >* Använd inte regex-mönster.
@@ -146,11 +150,11 @@ Egenskaperna fördelas på flera flikar.
 
    >[!NOTE]
    >
-   >Stängda användargrupper för sidan definieras på fliken **[Behörigheter](/help/sites-authoring/editing-page-properties.md#permissions)**.
+   >Stängda användargrupper för sidan definieras på fliken **[Behörigheter](/help/sites-authoring/editing-page-properties.md#permissions)** .
 
    >[!CAUTION]
    >
-   >På fliken **[Behörigheter](/help/sites-authoring/editing-page-properties.md#main-pars-procedure-949394300)**kan du redigera CUG-konfigurationer baserat på förekomsten av`granite:AuthenticationRequired`mixin. Om sidbehörigheter konfigureras med inaktuella CUG-konfigurationer, baserat på närvaro av`cq:cugEnabled`egenskap, visas ett varningsmeddelande under **Autentiseringskrav**och alternativet går inte att redigera och[behörigheterna](/help/sites-authoring/editing-page-properties.md#permissions)går inte heller att redigera.
+   >På fliken **[Behörigheter](/help/sites-authoring/editing-page-properties.md#main-pars-procedure-949394300)** kan du redigera CUG-konfigurationer baserat på förekomsten av `granite:AuthenticationRequired` mixin. Om sidbehörigheter konfigureras med inaktuella CUG-konfigurationer, baserat på närvaro av `cq:cugEnabled` egenskap, visas ett varningsmeddelande under **Autentiseringskrav** och alternativet går inte att redigera och [behörigheterna](/help/sites-authoring/editing-page-properties.md#permissions) går inte heller att redigera.
    >
    >
    >I så fall måste CUG-behörigheterna redigeras i det [klassiska användargränssnittet](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md).
@@ -203,11 +207,11 @@ Visar sidminiatyrbilden. Du kan:
 
 * **ContextHub-konfigurationer**
 
-   Välj [ContextHub Configuration](/help/sites-administering/contexthub-config.md) and [Segments Path](/help/sites-administering/segmentation.md).
+   Välj [ContextHub Configuration](/help/sites-developing/ch-configuring.md) and [Segments Path](/help/sites-administering/segmentation.md).
 
 * **Målkonfiguration**
 
-   Välj ett [varumärke om du vill ange ett omfång för målgruppsanpassning](/help/sites-authoring/target-adobe-campaign.md).
+   Välj ett [varumärke för att ange ett omfång för målgruppsanpassning](/help/sites-authoring/target-adobe-campaign.md).
 
    >[!NOTE]
    >Det här alternativet kräver att användarkontot finns i `Target Adminstrators`gruppen.
@@ -276,6 +280,7 @@ Klicka eller tryck på **Egenskaper** för att definiera sidegenskaperna:
 
    * [Snabbåtgärder](/help/sites-authoring/basic-handling.md#quick-actions)
    * [Markeringsläge](/help/sites-authoring/basic-handling.md#selectionmode)
+
    Sidegenskaperna visas med rätt flikar.
 
 1. Visa eller redigera egenskaperna efter behov.
@@ -347,6 +352,7 @@ När du har valt Massredigering kan du:
 
       * Endast egenskaper med ett gemensamt värde visas i visningsläget.
       * När fältet har flera värden (till exempel Taggar) visas värden bara när *alla* är gemensamma. Om bara vissa är vanliga visas de bara när du redigerar.
+
    När det inte finns några egenskaper med ett gemensamt värde visas ett meddelande.
 
 * **Redigera**
