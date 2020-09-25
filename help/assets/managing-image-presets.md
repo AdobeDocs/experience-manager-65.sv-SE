@@ -10,7 +10,7 @@ discoiquuid: cc1111c4-6e24-4570-9ac7-97c25cf24ede
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-presets
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
 workflow-type: tm+mt
 source-wordcount: '3697'
 ht-degree: 8%
@@ -60,7 +60,7 @@ Du hanterar dina bildförinställningar i AEM genom att trycka på eller klicka 
 
 >[!NOTE]
 >
->Systemet visar en mängd olika återgivningar när du väljer **[!UICONTROL Renditions]** i en tillgångs detaljvy. Du kan öka eller minska antalet bildförinställningar som visas. See [Increasing the number of image presets that display](#increasingthenumberofimagepresetsthatdisplay).
+>Systemet visar en mängd olika återgivningar när du väljer **[!UICONTROL Renditions]** i en tillgångs detaljvy. Du kan öka eller minska antalet bildförinställningar som visas. See [Increasing the number of image presets that display](#increasing-or-decreasing-the-number-of-image-presets-that-display).
 
 ### Adobe Illustrator (AI), PostScript (EPS) och PDF {#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats}
 
