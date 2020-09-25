@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: aac3c850-ae84-4bff-80de-d370e150f675
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
 workflow-type: tm+mt
 source-wordcount: '1087'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 360-gradersvyer spelar in en vy i alla riktningar samtidigt. De filmas med en omdirigerad kamera eller en samling kameror. Vid uppspelning på en platt skärm har användaren kontroll över betraktningsvinkeln. uppspelning på mobila enheter utnyttjar vanligtvis de inbyggda gyroskopiska kontrollerna.
 
-Dynamic Media - Scene7-läget innehåller inbyggt stöd för leverans av 360 videomaterial. Som standard krävs ingen ytterligare konfiguration för visning eller uppspelning. Du levererar 360-video med standardvideotillägg som .mp4, .mkv och .mov. Den vanligaste kodeken är H.264.
+Dynamic Media - Scene7-läget har inbyggt stöd för leverans av 360 videomaterial. Som standard krävs ingen ytterligare konfiguration för visning eller uppspelning. Du levererar 360-video med standardvideotillägg som .mp4, .mkv och .mov. Den vanligaste kodeken är H.264.
 
 I det här avsnittet beskrivs hur du arbetar med 360/VR Video Viewer för att återge ekvirektangulär video för en engagerande tittarupplevelse av ett rum, en egenskap, plats, landskap, medicinska procedurer och så vidare.
 
@@ -37,13 +37,13 @@ Tryck på [Space Station 360](http://mobiletest.scene7.com/s7viewers/html5/Video
 
 ## 360/VR Video och Adobe Premiere Pro {#vr-video-and-adobe-premiere-pro}
 
-Du kan använda Adobe Premier Pro för att visa och redigera 360/VR-film. Du kan till exempel placera logotyper och text på rätt sätt i en scen och använda effekter och övergångar som är särskilt utformade för ekvirektangulära medier.
+Du kan använda Adobe Premier Pro för att visa och redigera 360/VR-filmer. Du kan till exempel placera logotyper och text på rätt sätt i en scen och använda effekter och övergångar som är särskilt utformade för ekvirektangulära medier.
 
 Se [Redigera 360/VR-video](https://helpx.adobe.com/premiere-pro/how-to/edit-360-vr-video.html).
 
 ## Överföra resurser som ska användas med 360-videovisningsprogrammet {#uploading-assets-for-use-with-the-video-viewer}
 
-360 videomaterial som överförs till AEM kallas **Multimedia** på en Assets-sida, ungefär som vanliga videomaterial.
+360 videomaterial som överförs till AEM betecknas som **Multimedia** på en Assets-sida, ungefär som vanliga videomaterial.
 
 ![6_5_360video-selectopreview](assets/6_5_360video-selecttopreview.png)*En överförd 360-videoresurs som visas i kortvyn. Resursen är märkt som Multimedia.*
 
@@ -66,9 +66,10 @@ Se [Redigera 360/VR-video](https://helpx.adobe.com/premiere-pro/how-to/edit-360-
       * width=auto; height=1080; bithastighet=5000 kbit/s
       * width=auto; height=1440; bithastighet=6600 kbit/s
    * Bearbeta 360-videoinnehåll i en mapp som är exklusivt dedikerad till 360-videoresurser.
+
    Tänk på att detta tillvägagångssätt också kommer att ställa större krav på slutanvändarens nätverk och CPU.
 
-1. [Överför videon till mappen](/help/assets/managing-video-assets.md#uploadingandpreviewingvideoassets).
+1. [Överför videon till mappen](/help/assets/managing-video-assets.md#upload-and-preview-video-assets).
 
 ## Åsidosätta standardproportionerna för 360-videofilmer  {#overriding-the-default-aspect-ratio-of-videos}
 
@@ -115,6 +116,7 @@ See [Adding Dynamic Media Assets to pages.](https://helpx.adobe.com/experience-m
 
    * Dra muspekaren över videon om du vill ändra visningsvinkeln för den statiska scenen.
    * Tryck på videoknappen för att börja spela upp videon **[!UICONTROL Play]** . När videon spelas upp drar du muspekaren över videon för att ändra visningsvinkeln.
+
    ![6_5_360video-preview-video360-](assets/6_5_360video-preview-video360-social.png)*socialA 360 video, skärmdump.*
 
    * Tryck på i visningslistan **[!UICONTROL Video360VR.]**
@@ -127,9 +129,9 @@ See [Adding Dynamic Media Assets to pages.](https://helpx.adobe.com/experience-m
 
 ## Publicera 360-video {#publishing-video}
 
-Du måste publicera 360-videon för att kunna använda den. När du publicerar en 360-video aktiveras URL:en och Bädda in kod. Dessutom publiceras 360-videon i Dynamic Media Cloud, som är integrerat med ett CDN för skalbar och prestandamaterial.
+Du måste publicera 360-videon för att kunna använda den. När du publicerar en 360-video aktiveras URL:en och Bädda in kod. Dessutom publiceras 360-videon i Dynamic Media Cloud, som är integrerat med ett CDN för skalbar och prestandaoptimerad leverans.
 
-Mer information om hur du publicerar 360-Dynamic Media finns i [Publicera-resurser](/help/assets/publishing-dynamicmedia-assets.md) .
+Mer information om hur du publicerar 360-video finns i [Publicera dynamiska medieresurser](/help/assets/publishing-dynamicmedia-assets.md) .
 See also [Embedding the Video or Image Viewer on a Web Page](https://helpx.adobe.com/experience-manager/6-5/help/assets/embed-code.html).
 See also [Linking URLs to your web application](https://helpx.adobe.com/experience-manager/6-5/help/assets/linking-urls-to-yourwebapplication.html). Observera att den URL-baserade länkningsmetoden inte är möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till AEM Sites-sidor.
 See also [Adding Dynamic Media Assets to pages.](https://helpx.adobe.com/experience-manager/6-5/help/assets/adding-dynamic-media-assets-to-pages.html)
