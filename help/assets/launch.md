@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: f4051767-182e-4cfd-9dfc-8f516378e0b6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 8bdb019855edd08ef3d8ef58e627c91a092bc29f
+source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
 workflow-type: tm+mt
 source-wordcount: '6239'
 ht-degree: 15%
@@ -133,7 +133,7 @@ För närvarande är stödet för videospårning begränsat till&quot;huvuduppsp
 
 ## Använda tillägget Dynamic Media Viewer {#using-the-dynamic-media-viewers-extension}
 
-Som nämndes i [Användningsexempel för integreringen](#use%20cases%20for%20the%20integration)är det möjligt att spåra Dynamic Media-visningsprogram med den nya Adobe Launch-integrationen i AEM Sites och genom att använda inbäddningskod.
+Som nämndes i [Användningsexempel för integreringen](#use-cases-for-the-integration)är det möjligt att spåra Dynamic Media-visningsprogram med den nya Adobe Launch-integrationen i AEM Sites och genom att använda inbäddningskod.
 
 ### Spåra Dynamic Media-visningsprogram i AEM Sites {#tracking-dynamic-media-viewers-in-aem-sites}
 
@@ -149,7 +149,7 @@ See [Adding Dynamic Media Assets to Pages using Adobe Sites](https://helpx.adobe
 
 Kunder som inte använder AEM Sites, eller bäddar in Dynamic Media-visningsprogram på webbsidor utanför AEM Sites, eller båda, kan fortfarande använda Adobe Launch-integrering.
 
-Du måste slutföra konfigurationsstegen i avsnitten [Konfigurera Adobe Analytics](#configuringadobeanalytics) och [Konfigurera Adobe Launch](#configuringadobelaunch). AEM-relaterade konfigurationssteg behövs dock inte.
+Du måste slutföra konfigurationsstegen i avsnitten [Konfigurera Adobe Analytics](#configuring-adobe-analytics-for-the-integration) och [Konfigurera Adobe Launch](#configuring-adobe-launch-for-the-integration). AEM-relaterade konfigurationssteg behövs dock inte.
 
 Om konfigurationen är korrekt kan du lägga till stöd för Adobe Launch på en webbsida med ett dynamiskt mediavisningsprogram.
 
@@ -162,7 +162,7 @@ See [Embedding the Video or Image Viewer on a Web Page](https://helpx.adobe.com/
 **Så här spårar du Dynamic Media-visningsprogram med hjälp av inbäddningskod**:
 
 1. Ha en webbsida redo för inbäddning av ett dynamiskt medievisningsprogram.
-1. Hämta inbäddningskoden för Adobe Launch-biblioteket genom att först logga in på Adobe Launch (se [Konfigurera Adobe Launch](#configuringadobelaunch)).
+1. Hämta inbäddningskoden för Adobe Launch-biblioteket genom att först logga in på Adobe Launch (se [Konfigurera Adobe Launch](#configuring-adobe-launch-for-the-integration)).
 1. Click **[!UICONTROL Property]**, then click the **[!UICONTROL Environments]** tab.
 1. Plocka upp den miljönivå som är relevant för webbsidans miljö. Klicka sedan på ruteikonen i **[!UICONTROL Install]** kolumnen.
 1. **[!UICONTROL In the Web Install Instructions]** kopierar den fullständiga inbäddningskoden för Adobe-startbiblioteket tillsammans med de omgivande `<script/>` taggarna.
@@ -209,7 +209,7 @@ På samma sätt uppdateras värdena för dataelement automatiskt när visningspr
 
 Alla Dynamic Media-visningsprogram har en unik identifierare på webbsidan. Dataelementet håller reda på själva värdet och det visningsprogram som har fyllt i värdet. Det innebär att om det finns flera visningsprogram på samma sida, och det finns ett **[!UICONTROL AssetName]** dataelement som pekar på händelsen **[!UICONTROL LOAD]** och dess ”asset”-argument, så behåller dataelementet **[!UICONTROL AssetName]** en samling med resursnamn som är associerade med de visningsprogram som är inlästa på sidan.
 
-Det exakta värdet som returneras av dataelementet beror på sammanhanget. Om dataelementet begärs i en regel som utlöstes av en Dynamic Media Viewer-händelse, returneras Data Element-värdet för det visningsprogram som initierade regeln. Om dataelementet begärs i en regel som utlöstes av en händelse från något annat Adobe-startstillägg, är värdet för dataelementet värdet från det visningsprogram som var det sista som uppdaterade det här dataelementet.
+Det exakta värdet som returneras av dataelementet beror på sammanhanget. Om dataelementet begärs i en regel som utlöstes av en Dynamic Media Viewer-händelse, returneras Data Element-värdet för det visningsprogram som initierade regeln. Och om dataelementet begärs i en regel som utlöstes av en händelse från något annat Adobe Launch-tillägg, är värdet för dataelementet värdet från det visningsprogram som var det sista som uppdaterade det här dataelementet.
 
 **Se följande exempeluppsättning**:
 
@@ -238,7 +238,7 @@ Samplingsuppsättningen ovan påverkar också dataelementvärdets livslängd. V�
 
 Värdena för dataelement som drivs av dynamiska medievyer lagras inte i den lokala lagringen eller på servern. i stället finns de bara i Adobe Launch-biblioteket på klientsidan. Värdena för sådana dataelement försvinner när webbsidan läses in igen.
 
-I allmänhet har dataelementsredigeraren stöd för val av [lagringstid](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/data-elements.html#create-a-data-element). Dataelement som använder tillägget Dynamiska medievisningsprogram har dock bara stöd för alternativet för lagringstid i **[!UICONTROL None]**. Det går att ange andra värden i användargränssnittet, men i det här fallet är dataelementets beteende inte definierat. Tillägget hanterar värdet för dataelementet separat: Data-elementet som behåller värdet för visningsprogrammets händelseargument under hela visningsprogrammets livscykel.
+I allmänhet har dataelementsredigeraren stöd för val av [lagringstid](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/data-elements.html#create-a-data-element). Dataelement som använder tillägget för dynamiska medievisningsprogram har dock bara stöd för alternativet för lagringstid i **[!UICONTROL None]**. Det går att ange andra värden i användargränssnittet, men i det här fallet är dataelementets beteende inte definierat. Tillägget hanterar värdet för dataelementet separat: Data-elementet som behåller värdet för visningsprogrammets händelseargument under hela visningsprogrammets livscykel.
 
 ### Regler i tillägget Dynamiska medievyer {#about-rules-in-the-dynamic-media-viewers-extension}
 
@@ -571,7 +571,7 @@ Se [Adobe Media Analytics för ljud- och videotillägg](https://docs.adobe.com/c
 
 Välj **[!UICONTROL enable Adobe Analytics for Video]** om du vill aktivera (starta) spårning av pulsslag för video.
 
-Observera att tillägget *Dynamiska medievyer* endast är tillgängligt när du skriver det om startegenskapen för Adobe har skapats för utveckling.
+Observera att tillägget *Dynamiska medievyer* endast är tillgängligt när du skriver det om Adobe Launch-egenskapen har skapats för utveckling.
 
 Se [Skapa en egenskap i Adobe Launch](#creating-a-property-in-adobe-launch).
 
