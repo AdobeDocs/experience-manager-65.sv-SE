@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d357b5832a3bd95c372c26fd7553eba70583eb6f
+source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
 workflow-type: tm+mt
 source-wordcount: '5591'
 ht-degree: 6%
@@ -132,19 +132,19 @@ Om du vill markera en markerad mapp för synkronisering till dynamiska media mar
 
 Du är nu klar med den grundläggande konfigurationen; är du redo att använda läget Dynamic Media - Scene7.
 
-Om du vill anpassa konfigurationen ytterligare kan du utföra alla åtgärder under [(Valfritt) Konfigurera avancerade inställningar i läget](#optionalconfigurationofadvancedsettingindynamicmediascene7mode)Dynamic Media - Scene7.
+Om du vill anpassa konfigurationen ytterligare kan du utföra alla åtgärder under [(Valfritt) Konfigurera avancerade inställningar i läget](#optional-configuring-advanced-settings-in-dynamic-media-scene-mode)Dynamic Media - Scene7.
 
 ## (Valfritt) Konfigurera avancerade inställningar i Dynamic Media - Scene7-läge {#optional-configuring-advanced-settings-in-dynamic-media-scene-mode}
 
 Om du vill anpassa konfigurationen och konfigurationen av läget Dynamic Media - Scene7 ytterligare, eller optimera prestandan, kan du utföra en eller flera av följande *valfria* uppgifter:
 
-* [(Valfritt) Installation och konfiguration av Dynamic Media - Scene7-lägesinställningar](#optionalsetupandconfigurationofdynamicmediascene7modesettings)
+* [(Valfritt) Installation och konfiguration av Dynamic Media - Scene7-lägesinställningar](#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings)
 
 * [(Valfritt) Justera prestanda för Dynamic Media - Scene7-läge](#optional-tuning-the-performance-of-dynamic-media-scene-mode)
 
 * [(Valfritt) Filtrera resurser för replikering](#optional-filtering-assets-for-replication)
 
-### (Valfritt) Installation och konfiguration av Dynamic Media - Scene7-lägesinställningar</p> {#optional-setup-and-configuration-of-dynamic-media-scene-mode-settings-p}
+### (Valfritt) Installation och konfiguration av Dynamic Media - Scene7-lägesinställningar {#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings}
 
 När du är i körläge `dynamicmedia_scene7`använder du användargränssnittet för Dynamic Media Classic (Scene7) för att göra ändringar i inställningarna för Dynamic Media.
 
@@ -196,7 +196,7 @@ Bildserverskärmen anger standardinställningar för att leverera bilder. I grä
 
 >[!NOTE]
 >
->Som standard visas 15 återgivningar när du väljer **[!UICONTROL Renditions]** och 15 visningsförinställningar när du väljer **[!UICONTROL Viewers]** i resursens detaljvy. Du kan öka den här gränsen. See [Increasing the number of image presets that display](/help/assets/managing-image-presets.md#increasingthenumberofimagepresetsthatdisplay) or [Increasing the number of viewer presets that display](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
+>Som standard visas 15 återgivningar när du väljer **[!UICONTROL Renditions]** och 15 visningsförinställningar när du väljer **[!UICONTROL Viewers]** i resursens detaljvy. Du kan öka den här gränsen. See [Increasing the number of image presets that display](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display) or [Increasing the number of viewer presets that display](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
 
 
 #### Konfigurera färghantering {#configuring-color-management}
