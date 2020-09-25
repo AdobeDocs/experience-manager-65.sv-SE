@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: ccc4eb23-934c-4e67-860b-a6faa2bcaafc
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
 workflow-type: tm+mt
 source-wordcount: '2009'
 ht-degree: 14%
@@ -117,7 +117,7 @@ Du kan skapa bilduppsättningar via användargränssnittet eller API:t. I det h�
 
 >[!NOTE]
 >
->You can also create image sets automatically through [batch set presets](/help/assets/config-dms7.md#creating%20batch%20set%20presets%20to%20auto-generate%20image%20sets%20and%20spin%20sets).
+>You can also create image sets automatically through [batch set presets](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets).
 >**Viktigt:** Batchuppsättningar skapas av IPS (Image Production System) som en del av tillgångsinmatningen och är endast tillgängliga i läget Dynamic Media - Scene7.
 
 När du lägger till resurser i uppsättningen läggs de automatiskt till i alfanumerisk ordning. Du kan ändra ordning på eller sortera resurser manuellt när de har lagts till.
@@ -172,7 +172,7 @@ När du lägger till resurser i uppsättningen läggs de automatiskt till i alfa
 
 ## Visa bilduppsättningar {#viewing-image-sets}
 
-Du kan skapa bilduppsättningar antingen i användargränssnittet eller automatiskt med hjälp av [gruppuppsättningsförinställningar](/help/assets/config-dms7.md#creating%20batch%20set%20presets%20to%20auto-generate%20image%20sets%20and%20spin%20sets).
+Du kan skapa bilduppsättningar antingen i användargränssnittet eller automatiskt med hjälp av [gruppuppsättningsförinställningar](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets).
 
 >[!IMPORTANT]
 >
