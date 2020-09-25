@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 3b8791c8-2c97-42b7-b4a9-e1157ac9ea02
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
 workflow-type: tm+mt
 source-wordcount: '3529'
 ht-degree: 12%
@@ -373,7 +373,7 @@ Mappar som har tilldelats en profil visas i användargränssnittet med namnet p�
 
 Du kan tillämpa videoprofiler på specifika mappar eller globalt på alla resurser.
 
-Du kan bearbeta resurser i en mapp som redan har en befintlig videoprofil som du senare ändrade. Se [Bearbeta resurser i en mapp när du har redigerat dess bearbetningsprofil](processing-profiles.md#reprocessing-assets-in-a-folder-after-you-have-edited-its-processing-profile).
+Du kan bearbeta resurser i en mapp som redan har en befintlig videoprofil som du senare ändrade. Se [Bearbeta resurser i en mapp när du har redigerat dess bearbetningsprofil](processing-profiles.md#reprocessing-assets).
 
 ### Tillämpa en videoprofil på specifika mappar {#applying-video-profiles-to-specific-folders}
 
@@ -381,7 +381,7 @@ Du kan tillämpa en videoprofil på en mapp från **[!UICONTROL Tools]** menyn e
 
 För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
 
-Se även [Bearbeta resurser i en mapp när du har redigerat dess bearbetningsprofil](processing-profiles.md#reprocessing-assets-in-a-folder-after-you-have-edited-its-processing-profile).
+Se även [Bearbeta resurser i en mapp när du har redigerat dess bearbetningsprofil](processing-profiles.md#reprocessing-assets).
 
 #### Använda en videoprofil på mappar med hjälp av användargränssnittet Profiler {#applying-video-profiles-to-folders-by-way-of-the-profiles-user-interface}
 
@@ -401,7 +401,7 @@ Se även [Bearbeta resurser i en mapp när du har redigerat dess bearbetningspro
 
 Förutom att tillämpa en profil på en mapp kan du även tillämpa en profil globalt så att allt innehåll som överförs till AEM resurser i en mapp har den valda profilen.
 
-Se även [Bearbeta resurser i en mapp när du har redigerat dess bearbetningsprofil](processing-profiles.md#reprocessing-assets-in-a-folder-after-you-have-edited-its-processing-profile).
+Se även [Bearbeta resurser i en mapp när du har redigerat dess bearbetningsprofil](processing-profiles.md#reprocessing-assets).
 
 **Om du vill använda en videoprofil globalt**,
 
