@@ -11,7 +11,7 @@ topic-tags: extending-assets
 discoiquuid: 03502b41-b448-47ab-9729-e0a66a3389fa
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 307a1db2e5bbb72d730c89ba14f5ce02b96c108d
+source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
 workflow-type: tm+mt
 source-wordcount: '1859'
 ht-degree: 2%
@@ -29,17 +29,18 @@ ht-degree: 2%
 >
 >* Resurser REST API
 >* inklusive stöd för innehållsfragment
+
 >
 >
 Den aktuella implementeringen av AEM Assets HTTP API är REST.
 
-Med Adobe Experience Manager (AEM) [Assets REST API](/help/assets/mac-api-assets.md) kan utvecklare få åtkomst till innehåll (som lagras i AEM) direkt via HTTP-API:t via CRUD-åtgärder (Skapa, Läs, Uppdatera, Ta bort).
+Med Adobe Experience Manager (AEM) [Assets REST API](/help/assets/mac-api-assets.md) kan utvecklare få åtkomst till innehåll (som lagras i AEM) direkt via HTTP-API:t via CRUD-åtgärder (Create, Read, Update, Delete).
 
-Med API kan du använda AEM som headless CMS (Content Management System) genom att tillhandahålla Content Services till ett JavaScript-klientprogram. Eller något annat program som kan köra HTTP-begäranden och hantera JSON-svar.
+Med API:t kan du använda AEM som headless CMS (Content Management System) genom att tillhandahålla Content Services till ett JavaScript-klientprogram. Eller något annat program som kan köra HTTP-begäranden och hantera JSON-svar.
 
 Exempelvis kräver Single Page Applications (SPA), ramverksbaserade eller anpassade, innehåll som tillhandahålls via HTTP API, ofta i JSON-format.
 
-AEM Core Components är ett mycket omfattande, flexibelt och anpassningsbart API som kan användas för de nödvändiga läsåtgärderna, och vars JSON-utdata kan anpassas, men de kräver AEM WCM-kunskaper (Web Content Management) för implementering eftersom de måste finnas på API-sidor som baseras på dedikerade AEM-mallar. Alla SPA-utvecklingsorganisationer har inte tillgång till sådana resurser.
+AEM Core Components har ett mycket omfattande, flexibelt och anpassningsbart API som kan hantera de nödvändiga läsåtgärderna i detta syfte, och vars JSON-utdata kan anpassas, men kräver AEM WCM-kunskaper (Web Content Management) för implementering eftersom de måste finnas på API-sidor som baseras på dedikerade AEM. Alla SPA-utvecklingsorganisationer har inte tillgång till sådana resurser.
 
 Detta är när REST API:t för resurser kan användas. Med den kan utvecklare komma åt resurser (till exempel bilder och innehållsfragment) direkt, utan att först behöva bädda in dem på en sida, och leverera innehållet i serialiserat JSON-format. (Observera att det inte går att anpassa JSON-utdata från Resurser REST API). Med Assets REST API kan utvecklare ändra innehåll genom att skapa nya, uppdatera eller ta bort befintliga resurser, innehållsfragment och mappar.
 
@@ -51,11 +52,11 @@ Resursens REST API:
 
 ## Förutsättningar {#prerequisites}
 
-Resursens REST API är tillgängligt för varje körklar installation av en nyligen använd AEM-version.
+Resursens REST API är tillgängligt för varje körklar installation av en nyligen AEM version.
 
 ## Viktiga begrepp {#key-concepts}
 
-Resursens REST API ger åtkomst i [REST](https://en.wikipedia.org/wiki/Representational_state_transfer)-stil till resurser som lagras i en AEM-instans. Slutpunkten används och resursens sökväg måste vara `/api/assets` tillgänglig (utan radavstånd `/content/dam`).
+Resursens REST API ger åtkomst i [REST](https://en.wikipedia.org/wiki/Representational_state_transfer)-stil till resurser som lagras i en AEM. Slutpunkten används och resursens sökväg måste vara `/api/assets` tillgänglig (utan radavstånd `/content/dam`).
 
 HTTP-metoden avgör vilken åtgärd som ska utföras:
 
@@ -66,7 +67,7 @@ HTTP-metoden avgör vilken åtgärd som ska utföras:
 
 >[!NOTE]
 >
->Begärandetexten och/eller URL-parametrarna kan användas för att konfigurera vissa av dessa åtgärder. Ange till exempel att en mapp eller en resurs ska skapas av en **POST** -begäran.
+>Begärandetexten och/eller URL-parametrarna kan användas för att konfigurera vissa av dessa åtgärder. Ange till exempel att en mapp eller en resurs ska skapas av en **POST** -förfrågan.
 
 Det exakta formatet för begäranden som stöds definieras i [API-referensdokumentationen](/help/assets/assets-api-content-fragments.md#api-reference) .
 
@@ -76,7 +77,7 @@ Alla förfrågningar är atomiska.
 
 Detta innebär att efterföljande (`write`) begäranden inte kan kombineras till en enda transaktion som kan lyckas eller misslyckas som en enskild enhet.
 
-### AEM (Assets) REST API jämfört med AEM Components {#aem-assets-rest-api-versus-aem-components}
+### AEM (Resurser) REST API jämfört med AEM komponenter {#aem-assets-rest-api-versus-aem-components}
 
 <table>
  <tbody>
@@ -99,12 +100,12 @@ Detta innebär att efterföljande (`write`) begäranden inte kan kombineras till
    <td>Åtkomst</td>
    <td><p>Kan nås direkt.</p> <p>Använder <code>/api/assets </code>slutpunkten, mappad till <code>/content/dam</code> (i databasen).</p> <p>Till exempel:<code class="code">
        /content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten</code><br /> begäran:<br /> <code>/api/assets/we-retail/en/experiences/arctic-surfing-in-lofoten.model.json</code></p> </td>
-   <td><p>Måste refereras via en AEM-komponent på en AEM-sida.</p> <p>Använder väljaren <code>.model</code> för att skapa JSON-representationen.</p> <p>En exempel-URL skulle se ut så här:<br /> <code>https://localhost:4502/content/we-retail/language-masters/en/experience/arctic-surfing-in-lofoten.model.json</code></p> </td>
+   <td><p>Måste refereras via en AEM på en AEM.</p> <p>Använder väljaren <code>.model</code> för att skapa JSON-representationen.</p> <p>En exempel-URL skulle se ut så här:<br /> <code>https://localhost:4502/content/we-retail/language-masters/en/experience/arctic-surfing-in-lofoten.model.json</code></p> </td>
   </tr>
   <tr>
    <td>Dokumentskydd</td>
    <td><p>Flera alternativ är möjliga.</p> <p>OAuth föreslås. kan konfigureras separat från standardinställningarna.</p> </td>
-   <td>Använder AEM:s standardinställning.</td>
+   <td>Använder AEM standardinställningar.</td>
   </tr>
   <tr>
    <td>Arkitektur</td>
@@ -121,14 +122,15 @@ Detta innebär att efterföljande (`write`) begäranden inte kan kombineras till
 
 ### Dokumentskydd {#security}
 
-Om REST API:t för resurser används i en miljö utan särskilda autentiseringskrav måste AEM:s CORS-filter konfigureras korrekt.
+Om REST API:t för Resurser används i en miljö utan särskilda autentiseringskrav måste AEM CORS-filtret konfigureras korrekt.
 
 >[!NOTE]
 >
 >Mer information finns i:
 >
->* [CORS/AEM - förklaring](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cors-security-article-understand.html)
->* [Video - Developing for CORS with AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cors-security-technical-video-develop.html)
+>* [CORS/AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cors-security-article-understand.html)
+>* [Video - Utveckla för CORS med AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cors-security-technical-video-develop.html)
+
 >
 
 
@@ -141,12 +143,12 @@ Innehållsfragment är en specifik typ av resurs, se [Arbeta med innehållsfragm
 
 Mer information om funktioner som är tillgängliga via API finns i:
 
-* [Tillgängliga funktioner](/help/assets/mac-api-assets.md#available-features) för REST API:t för resurser
+* [Tillgängliga funktioner](/help/assets/mac-api-assets.md#assets) för REST API:t för resurser
 * [Enhetstyper](/help/assets/assets-api-content-fragments.md#entity-types)
 
 ### Sidindelning {#paging}
 
-REST API:t för Resurser stöder sidindelning (för GET-begäranden) via URL-parametrarna:
+Resursens REST API stöder sidindelning (för GET-begäranden) via URL-parametrarna:
 
 * `offset` - numret på den första (underordnade) entiteten som ska hämtas
 * `limit` - det maximala antalet returnerade enheter
@@ -179,7 +181,7 @@ Svaret kommer att innehålla sidindelningsinformation som en del av `properties`
 
 ### Mappar {#folders}
 
-Mappar fungerar som behållare för resurser och andra mappar. De återspeglar strukturen i AEM-innehållsdatabasen.
+Mappar fungerar som behållare för resurser och andra mappar. De återspeglar strukturen i AEM innehållsdatabas.
 
 Resursens REST API ger åtkomst till en mapps egenskaper. till exempel namn, titel osv. Resurser visas som underordnade enheter till mappar.
 
@@ -222,21 +224,21 @@ Associerat innehåll visas för närvarande inte.
 
 ## Använda {#using}
 
-Användningssättet kan variera beroende på om du använder en AEM-författare eller publiceringsmiljö, tillsammans med ditt specifika användningsexempel.
+Användningen kan variera beroende på om du använder en AEM författare eller publiceringsmiljö, tillsammans med ditt specifika användningsexempel.
 
 * Skapandet är strikt bundet till en författarinstans ([och det finns för närvarande inget sätt att replikera ett fragment för publicering med denna API](/help/assets/assets-api-content-fragments.md#limitations)).
 * Leverans är möjlig från båda, eftersom AEM endast skickar begärt innehåll i JSON-format.
 
-   * Lagring och leverans från en AEM-författarinstans bör räcka för program bakom brandväggen, mediabibliotek.
-   * För direktsänd webbleverans rekommenderas en AEM-publiceringsinstans.
+   * Lagring och leverans från en AEM författarinstans bör räcka för program som ligger bakom brandväggen och mediabibliotek.
+   * För direktwebbleverans rekommenderas en publiceringsinstans AEM.
 
 >[!CAUTION]
 >
->Dispatcher-konfigurationen på AEM-molninstanser kan blockera åtkomst till `/api`.
+>Dispatcher-konfigurationen på AEM molninstanser kan blockera åtkomst till `/api`.
 
 >[!NOTE]
 >
->Mer information finns i [API-referensen](/help/assets/assets-api-content-fragments.md#api-reference). I synnerhet [Adobe Experience Manager Assets API - Content Fragments](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/assets-api-content-fragments/index.html).
+>Mer information finns i [API-referensen](/help/assets/assets-api-content-fragments.md#api-reference). Särskilt [Adobe Experience Manager Assets API - innehållsfragment](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/assets-api-content-fragments/index.html).
 
 ### Läsning/leverans {#read-delivery}
 
@@ -345,6 +347,7 @@ Följande statuskoder kan ses under de relevanta omständigheterna:
 
       * `Could not update content element`
       * `Could not update fragment data of element`
+
    De detaljerade felmeddelandena returneras vanligtvis på följande sätt:
 
    ```xml
@@ -367,7 +370,7 @@ Här finns detaljerade API-referenser:
 * [Adobe Experience Manager Assets API - innehållsfragment](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/assets-api-content-fragments/index.html)
 * [HTTP API för Assets](/help/assets/mac-api-assets.md)
 
-   * [Tillgängliga funktioner](/help/assets/mac-api-assets.md#available-features)
+   * [Tillgängliga funktioner](/help/assets/mac-api-assets.md#assets)
 
 ## Ytterligare resurser {#additional-resources}
 
