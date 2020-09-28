@@ -1,11 +1,11 @@
 ---
-title: Checka in och checka ut dina digitala resurser för redigering.
+title: Checka in och checka ut material för redigering
 description: Lär dig hur du checkar ut resurser för redigering och checkar in dem igen när ändringarna är klara.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: ee94193ff31c60e954be0070ecf84e447effc4f6
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '428'
+source-wordcount: '426'
 ht-degree: 3%
 
 ---
