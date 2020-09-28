@@ -1,11 +1,11 @@
 ---
-title: Hantera [!DNL Adobe Stock] resurser i [!DNL Adobe Experience Manager Assets].
+title: Hantera [!DNL Adobe Stock] resurser
 description: Sök, hämta, licensiera och [!DNL Adobe Stock] hantera resurser inifrån [!DNL Adobe Experience Manager]. Använd de licensierade mediefilerna som andra digitala resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 2ac848fa360ad87ff4f87efc38ae1361ae890cb2
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '1048'
+source-wordcount: '1047'
 ht-degree: 4%
 
 ---
