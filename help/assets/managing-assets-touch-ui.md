@@ -1,13 +1,13 @@
 ---
-title: Hantera era digitala resurser i [!DNL Adobe Experience Manager Assets].
+title: Hantera era digitala resurser
 description: Lär dig resurshanteringsåtgärder som överföring, hämtning, redigering, sökning, borttagning, anteckning och version av digitala resurser.
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: f52eb4ccfc1c9f0a121039432ed57401a2def573
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '9182'
+ht-degree: 3%
 
 ---
 
