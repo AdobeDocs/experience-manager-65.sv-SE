@@ -1,11 +1,11 @@
 ---
-title: Resursmallar i [!DNL Adobe Experience Manager Assets].
+title: Resursmallar
 description: Lär dig mer om tillgångsmallar [!DNL Adobe Experience Manager Assets] och hur du använder tillgångsmallar för att skapa marknadsföringsmaterial.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '1515'
+source-wordcount: '1514'
 ht-degree: 1%
 
 ---
@@ -86,7 +86,7 @@ Du kan redigera en sammanställning direkt när du har skapat den. Du kan också
 
    Du kan använda textredigeraren för att ändra texten som ska visas i textfältet. Du kan ändra teckenstorlek, stil, färg och typ på taggnivå.
 
-   Med resurssökaren kan du söka efter eller söka efter bilder i [!DNL Experience Manager Assets] och ersätta de redigerbara bilderna i mallen med de bilder du väljer.
+   Med hjälp av objektsökaren kan du söka efter eller söka efter bilder i [!DNL Experience Manager Assets] och ersätta de redigerbara bilderna i mallen med de bilder du väljer.
 
    ![chlimage_1-109](assets/chlimage_1-314.png)
 
@@ -182,7 +182,7 @@ Du kan redigera en sammanställning direkt när du har skapat den. Du kan också
    ![chlimage_1-125](assets/chlimage_1-330.png)
 
 1. Klicka på **[!UICONTROL Next]** i verktygsfältet.
-1. Ordna om mallarna om det behövs på **[!UICONTROL Preview & Reorder]** skärmen och förhandsgranska valet av mallar som ska sammanfogas. Then, click **[!UICONTROL Next]** from the toolbar.
+1. Om det behövs kan du ordna om mallarna på **[!UICONTROL Preview & Reorder]** skärmen och förhandsgranska valet av mallar som ska sammanfogas. Then, click **[!UICONTROL Next]** from the toolbar.
 
    ![chlimage_1-126](assets/chlimage_1-331.png)
 
