@@ -1,12 +1,12 @@
 ---
-title: Återanvänd resurser med MSM för [!DNL Adobe Experience Manager Assets].
+title: Återanvända resurser med MSM
 description: Använd resurser på flera sidor/mappar som är härledda från och länkade till överordnade resurser. Resurserna är synkroniserade med en primär kopia och med några klick får du uppdateringar från överordnade resurser.
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '3265'
+source-wordcount: '3259'
 ht-degree: 10%
 
 ---
@@ -194,7 +194,7 @@ Du kan initiera en utrullningsåtgärd från källresursen och uppdatera alla el
 
    ![Fyll ut ändringarna av källan till några eller alla live-kopior](assets/livecopy_rollout_page.png)
 
-   *Bild: Rulla ut ändringarna av källan till några eller alla live-kopior.*
+   *Bild: Fyll ut ändringarna av källan till några eller alla live-kopior.*
 
 >[!NOTE]
 >
@@ -282,7 +282,7 @@ Om du har flera resurser i en live-kopieringsmapp kan initieringsåtgärder för
 
 ## Utöka MSM för [!DNL Assets] {#extendapi}
 
-[!DNL Experience Manager] Med kan du utöka funktionaliteten med MSM Java API:er. Utbyggnaden [!DNL Assets]fungerar alltså på samma sätt som för MSM [!DNL Sites]. Mer information finns i [Extending the MSM](/help/sites-developing/extending-msm.md) och följande för information om specifika uppgifter:
+[!DNL Experience Manager] Med kan du utöka funktionaliteten med MSM Java API:er. Utbyggnaden [!DNL Assets]fungerar alltså på samma sätt som för MSM [!DNL Sites]. Mer information finns i [Utöka MSM](/help/sites-developing/extending-msm.md) och följande för information om specifika uppgifter:
 
 * [Översikt över API:er](/help/sites-developing/extending-msm.md#overview-of-the-java-api)
 * [Skapa en ny synkroniseringsåtgärd](/help/sites-developing/extending-msm.md#creating-a-new-synchronization-action)
