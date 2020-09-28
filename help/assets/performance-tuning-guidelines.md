@@ -1,12 +1,12 @@
 ---
-title: Prestandajustering för [!DNL Adobe Experience Manager Assets].
+title: Prestandajustering [!DNL Assets].
 description: Förslag och vägledning [!DNL Experience Manager] om konfiguration, ändringar av maskinvara, programvara och nätverkskomponenter för att ta bort flaskhalsar och optimera prestanda för [!DNL Experience Manager Assets].
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 9a4ae73c08657195da2741cccdb196bd7f7142c9
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '2680'
+source-wordcount: '2679'
 ht-degree: 0%
 
 ---
