@@ -1,11 +1,11 @@
 ---
-title: Bearbeta resurser med mediehanterare och arbetsflöden i [!DNL Adobe Experience Manager].
+title: Bearbeta resurser med mediehanterare och arbetsflöden
 description: Lär dig mer om mediehanterarna och hur du använder arbetsflöden för att utföra uppgifter i dina digitala resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 39bbb1d663bb54ef425dfeb5e0fc10ea37eb5708
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '2042'
+source-wordcount: '2037'
 ht-degree: 1%
 
 ---
