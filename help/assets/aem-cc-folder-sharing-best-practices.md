@@ -1,11 +1,11 @@
 ---
-title: '[!DNL Adobe Experience Manager] [!DNL Adobe Creative Cloud] för att mappdela metodtips.'
+title: Mappdelning [!DNL Adobe Creative Cloud] enligt vedertagna rutiner
 description: Konfigurera [!DNL Adobe Experience Manager] to allow users in [!DNL Experience Manager Assets] för utbyte av mappar med Adobe Creative Cloud-användare (CC).
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '960'
+source-wordcount: '956'
 ht-degree: 0%
 
 ---
@@ -39,9 +39,9 @@ I följande diagram visas en översikt över integreringen.
 Integreringen innehåller följande element:
 
 * **[!DNL Experience Manager Assets]** distribueras i företagsnätverket (hanterade tjänster eller lokalt): Mappdelning initieras här.
-* **[!DNL Adobe Marketing Cloud Assets]bastjänst **: Fungerar som mellanhand mellan[!DNL Experience Manager]- och[!DNL Creative Cloud]lagringstjänster. En administratör för en organisation som använder integreringen måste upprätta ett förtroendeförhållande mellan organisationen Marketing Cloud och[!DNL Assets]distributionen. De[definierar också en lista över godkända medarbetare](https://docs.adobe.com/content/help/en/core-services/interface/assets/t-admin-add-cc-user.html)i Creative Cloud som[!DNL Assets]användare kan dela mappar för att öka säkerheten.
+* **[!DNL Adobe Marketing Cloud Assets]bastjänst**: Fungerar som mellanhand mellan [!DNL Experience Manager] - och [!DNL Creative Cloud] lagringstjänster. En administratör för en organisation som använder integreringen måste upprätta ett förtroendeförhållande mellan organisationen Marketing Cloud och [!DNL Assets] distributionen. De [definierar också en lista över godkända medarbetare](https://docs.adobe.com/content/help/en/core-services/interface/assets/t-admin-add-cc-user.html)i Creative Cloud som [!DNL Assets] användare kan dela mappar för att öka säkerheten.
 
-* **[!DNL Creative Cloud]Resurser för webbtjänster **(webgränssnittet för lagring och[!DNL Creative Cloud]filer): Det är här specifika användare av appen Creative Cloud, som har en[!DNL Assets]mapp delad med, kan acceptera inbjudan och se mappen i sitt Creative Cloud-konto.
+* **[!DNL Creative Cloud]Resurser för webbtjänster** (webgränssnittet för lagring och [!DNL Creative Cloud] filer): Det är här specifika användare av appen Creative Cloud, som har en [!DNL Assets] mapp delad med, kan acceptera inbjudan och se mappen i sitt Creative Cloud-konto.
 * **Creative Cloud-datorprogram**: (Valfritt) Möjliggör direkt åtkomst till delade mappar/filer från den kreativa användarens skrivbord via synkronisering med [!DNL Creative Cloud] Assets-lagring.
 
 ## Egenskaper och begränsningar {#characteristics-and-limitations}
@@ -52,7 +52,7 @@ Integreringen innehåller följande element:
    * [!DNL Experience Manager] skapar bara versioner av en resurs vid uppdateringar om filen har sitt ursprung i [!DNL Experience Manager] och uppdateras där.
    * [!DNL Creative Cloud] Resurserna har en egen [versionshanteringsfunktion](https://helpx.adobe.com/creative-cloud/help/versioning-faq.html) som är inriktad på uppdateringar för pågående arbete (lagrar i princip uppdateringar i upp till 10 dagar)
 
-* **Utrymmesbegränsningar:** Storleken på och mängden filer som utbyts begränsas av den specifika [Creative Cloud Assets-kvoten](https://helpx.adobe.com/creative-cloud/kb/file-storage-quota.html) för kreativa användare (beroende på prenumerationsnivå) och en begränsning på 5 GB som är maximal filstorlek. Utrymmet begränsas dessutom av den tillgångskvot som organisationen har i huvudtjänsten Adobe Marketing Cloud Assets.
+* **Utrymmesbegränsningar:** Storleken på och mängden filer som utväxlas begränsas av den specifika [Creative Cloud Assets-kvoten](https://helpx.adobe.com/creative-cloud/kb/file-storage-quota.html) för kreativa användare (beroende på prenumerationsnivå) och en begränsning på 5 GB. Utrymmet begränsas dessutom av den tillgångskvot som organisationen har i Adobe Marketing Cloud Assets bastjänst.
 
 * **Utrymmeskrav:** Filerna i delade mappar måste också lagras fysiskt i [!DNL Experience Manager] och sedan i [!DNL Creative Cloud] konto, med en cachelagrad kopia i [!DNL Marketing Cloud Assets] huvudtjänsten.
 * **Nätverk och bandbredd:** Filerna i delade mappar och alla uppdateringar måste transporteras över nätverket mellan systemen. Du bör se till att endast relevanta filer och uppdateringar delas.
