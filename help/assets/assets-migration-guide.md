@@ -1,11 +1,11 @@
 ---
-title: Migrera resurser [!DNL Adobe Experience Manager Assets] åt gången.
+title: Migrera resurser i grupp
 description: Beskriver hur du hämtar resurser till [!DNL Adobe Experience Manager], använder metadata, genererar återgivningar och aktiverar dem för att publicera instanser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 892237699a4027e7dab406fd620cac220aa8b88b
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '1781'
+source-wordcount: '1780'
 ht-degree: 8%
 
 ---
