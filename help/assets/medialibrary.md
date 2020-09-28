@@ -1,9 +1,9 @@
 ---
-title: Erbjudande om [!DNL Adobe Experience Manager Assets] Jämförelse och mediebibliotek.
+title: Erbjudanden [!DNL Assets] för jämförelsefiler och mediebibliotek
 description: Jämför [!DNL Experience Manager Assets] och visa skillnaderna i mediebibliotek.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
 source-wordcount: '594'
 ht-degree: 1%
@@ -38,7 +38,7 @@ Funktionerna kräver en giltig licens för [!DNL Assets].
 
 ### Finns [!DNL Assets] det som separat paket? {#is-aem-assets-available-as-a-separate-package}
 
-Nej. För att underlätta installation och driftsättning levereras alla [!DNL Experience Manager] program och tillägg i ett och samma paket med alla funktioner inkluderade. Detta innebär inte att du har behörighet att använda alla funktioner i paketet.
+Nej. För att underlätta installation och driftsättning levereras alla [!DNL Experience Manager] program och tillägg i ett och samma paket med alla funktioner inkluderade. Det innebär inte att du har behörighet att använda alla funktioner i paketet.
 
 ### Jag vill redigera metadata för digitala resurser. Behöver jag [!DNL Assets]? {#i-want-to-edit-metadata-of-digital-assets-do-i-need-aem-assets}
 
