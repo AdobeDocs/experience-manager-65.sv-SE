@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: developing
 discoiquuid: a03145f7-6697-4797-b73e-6f8d241ce469
 translation-type: tm+mt
-source-git-commit: 56c2e6b55964ea5f3e180b17bd2a244882aa62ea
+source-git-commit: 824ddd48e4680eed1d4612c6ad450a8f1bc68e7c
 workflow-type: tm+mt
 source-wordcount: '414'
-ht-degree: 3%
+ht-degree: 1%
 
 ---
 
@@ -38,7 +38,7 @@ Börja med att skapa en enkel mall [för en](sites.md)community-webbplats.
 
 Från global navigering på en författarinstans väljer du **[!UICONTROL Tools]** > **[!UICONTROL Communities]** > **[!UICONTROL Site Templates]**.
 
-![chlimage_1-82](assets/chlimage_1-82.png)
+![create-site-template](assets/create-site-template1.png)
 
 * Välj `Create button`
 * GRUNDLÄGGANDE INFORMATION
@@ -47,7 +47,7 @@ Från global navigering på en författarinstans väljer du **[!UICONTROL Tools]
    * `Description`: En mall som består av en enda sidfunktion.
    * Välj `Enabled`
 
-![chlimage_1-83](assets/chlimage_1-83.png)
+![site-template-editor](assets/site-template-editor.png)
 
 * STRUKTUR
 
@@ -57,7 +57,7 @@ Från global navigering på en författarinstans väljer du **[!UICONTROL Tools]
       * `Title`: En sida
       * `URL`: page
 
-![chlimage_1-84](assets/chlimage_1-84.png)
+![site-template-editor-structure](assets/site-template-editor1.png)
 
 * Välj **`Save`** konfiguration
 * Välj **`Save`** för platsmallen
@@ -68,7 +68,7 @@ Skapa nu en ny communitywebbplats som bygger på den enkla webbplatsmallen.
 
 När du har skapat platsmallen väljer du från global navigering **[!UICONTROL Communities > Sites]**.
 
-![chlimage_1-85](assets/chlimage_1-85.png)
+![create-community-site](assets/create-community-site1.png)
 
 * Välj **`Create`** ikon
 
@@ -83,7 +83,8 @@ När du har skapat platsmallen väljer du från global navigering **[!UICONTROL 
       * url = http://localhost:4502/content/sites/sample
 
       * `Template`: välj `Single Page Template`
-      ![chlimage_1-86](assets/chlimage_1-86.png)
+
+      ![create-community-site-template](assets/create-community-site-template.png)
 
 
 * Välj `Next`
@@ -98,23 +99,23 @@ När du har skapat platsmallen väljer du från global navigering **[!UICONTROL 
 
 * Välj `Create`
 
-   ![chlimage_1-87](assets/chlimage_1-87.png)
+   ![create-community-site](assets/create-community-site.png)
 
 ## Publicera webbplatsen {#publish-the-site}
 
-![chlimage_1-88](assets/chlimage_1-88.png)
+![publicera-webbplats](assets/publish-site.png)
 
 På [community-webbplatskonsolen](sites-console.md)väljer du publiceringsikonen för att publicera webbplatsen, som standard http://localhost:4503.
 
 ## Öppna webbplatsen på författaren i redigeringsläge {#open-the-site-on-author-in-edit-mode}
 
-![chlimage_1-89](assets/chlimage_1-89.png)
+![öppen webbplats](assets/open-site.png)
 
 Välj ikonen Öppna plats om du vill visa webbplatsen i redigeringsläge.
 
 URL:en kommer att vara [http://localhost:4502/editor.html/content/sites/sample/en.html](http://localhost:4502/editor.html/content/sites/sample/en.html)
 
-![chlimage_1-90](assets/chlimage_1-90.png)
+![författarwebbplats](assets/author-site.png)
 
 På den enkla startsidan är det möjligt att se vad som är förkopplat via communityfunktionerna och -mallarna, och att leka med att lägga till och konfigurera communitykomponenter.
 
