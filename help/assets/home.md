@@ -1,18 +1,18 @@
 ---
-title: Användarhandbok för Adobe Experience Manager 6.5 Assets
-seo-title: Användarhandbok för Adobe Experience Manager 6.5 Assets
+title: Resurshandbok
+seo-title: Adobe Experience Manager 6.5 Assets Guide
 description: Den här guiden täcker alla Experience Manager Assets-uppgifter, t.ex. hur du skapar, hanterar, levererar och optimerar digitala resurser.
 seo-description: täcker alla Experience Manager Assets-uppgifter, t.ex. hur man skapar, hanterar, levererar och optimerar digitala resurser.
 translation-type: tm+mt
-source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
+source-git-commit: 45d7f741660bd8dd31cd454c034f562fc5394621
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '371'
 ht-degree: 12%
 
 ---
 
 
-# Användarhandbok för Adobe Experience Manager 6.5 Assets
+# Adobe Experience Manager 6.5 Assets Guide
 
 Den här guiden täcker alla Experience Manager Assets-uppgifter, t.ex. hur du skapar, hanterar, levererar och optimerar digitala resurser.
 
@@ -26,12 +26,12 @@ Den här guiden täcker alla Experience Manager Assets-uppgifter, t.ex. hur du s
 * [Senaste dokumentationsuppdateringarna](https://helpx.adobe.com/experience-manager/documentation-updates.html)
 * [Säkerhetschecklista](/help/sites-administering/security-checklist.md)
 
-## Användarhandböcker för Experience Manager 6.5
+## Stödlinjer för Experience Manager 6.5
 
 | Användarhandbok | Beskrivning |
 |--- |---|
 | [Versionsinformation](/help/release-notes/home.md) | Innehåller viktig information om den senaste versionen, inklusive nyheter, plattformar som stöds, borttagna och borttagna funktioner samt kända fel |
-| [Användarhandbok för formulär](/help/forms/home.md) | Den här guiden beskriver hur du skapar, hanterar, publicerar och uppdaterar digitala formulär. |
+| [Forms Användarhandbok](/help/forms/home.md) | Den här guiden beskriver hur du skapar, hanterar, publicerar och uppdaterar digitala formulär. |
 | [Användarhandbok för Communities](/help/communities/home.md) | Skapa onlineupplevelser som forum, användargrupper, utbildningsresurser och andra sociala funktioner. |
 | [Administratörshandbok](/help/sites-administering/home.md) | Förstå hur du administrerar Experience Manager. |
 | [Redigeringshandbok](/help/sites-authoring/home.md) | I den här guiden förklaras koncepten för redigering i Experience Manager. |
@@ -45,11 +45,11 @@ Den här guiden täcker alla Experience Manager Assets-uppgifter, t.ex. hur du s
 
 ## Viktiga Experience Manager-resurser
 
-* [Videosjälvstudiekurser för Experience Manager](https://helpx.adobe.com/experience-manager/kt/index/aem-6-5-videos.html#Assets)
+* [Experience Manager Video Tutorials](https://helpx.adobe.com/experience-manager/kt/index/aem-6-5-videos.html#Assets)
 * [GDPR-efterlevnad](/help/managing/data-protection-and-privacy.md)
 * [Experience League](https://guided.adobe.com/?mv=other#recommended/solutions/experience-manager)
 * [Experience Manager Assets Community Forum](https://experienceleaguecommunities.adobe.com/t5/Adobe-Experience-Manager-Assets/ct-p/experience-manager-assets-community)
-* [Dispatcher Användarhandbok](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)
+* [Användarhandbok för Dispatcher](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)
 * [Användarhandbok för HTML](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)
 * [Användarhandbok för kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
