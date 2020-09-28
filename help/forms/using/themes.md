@@ -10,9 +10,9 @@ content-strategy: max-2018
 discoiquuid: 770e9174-b648-462a-abe9-05fefa967d86
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a929252a13f66da8ac3e52aea0655b12bdd1425f
+source-git-commit: d324586eb1d4fb809bf87641001b92a1941e6548
 workflow-type: tm+mt
-source-wordcount: '6067'
+source-wordcount: '6062'
 ht-degree: 0%
 
 ---
@@ -350,7 +350,7 @@ I verktygsfältet Arbetsyta ser du:
 * **Växla panelen** Sida vid ![sida](assets/toggle-side-panel.png): Här kan du visa eller dölja sidofältet.
 * **Temaalternativ** ![för temaalternativ](assets/theme-options.png): Tillhandahåller tre alternativ
 
-   * Konfigurera: Innehåller alternativ för att välja förhandsgranskningsformulär eller interaktiv kommunikation, grundläggande klientlib och typekit-konfiguration.
+   * Konfigurera: Innehåller alternativ för att välja förhandsgranskningsformulär eller interaktiv kommunikation, basklientlib och Adobe Fonts-konfiguration.
    * Visa tema-CSS: Genererar CSS för det valda temat.
    * Hantera format: Alternativ för att hantera text- och bildformat
    * Hjälp: Kör en guidad visning av en bild i Theme Editor.
@@ -489,23 +489,23 @@ Du kan formatera formulär eller interaktiva kommunikationskomponenter för fler
 
 ### Använda webbteckensnitt i ett tema {#using-web-fonts-in-a-theme}
 
-Du kan nu använda teckensnitt som finns i en webbtjänst i ett adaptivt formulär eller i en interaktiv kommunikation. Färdig, [Typekit](https://typekit.com/), Adobe webbteckensnittstjänst är tillgänglig som konfiguration. Om du vill använda Typekit skapar du ett kit och teckensnitt i det, och hämtar Kit-id från [Typekit-webbplatsen](https://typekit.com/).
+Du kan nu använda teckensnitt som finns i en webbtjänst i ett adaptivt formulär eller i en interaktiv kommunikation. Körklar, [Adobe Fonts](https://fonts.adobe.com/), Adobe webbteckensnittstjänst, är tillgänglig som en konfiguration. Om du vill använda Adobe Fonts skapar du ett kit, lägger till teckensnitt i det och hämtar Kit-ID:t från [Adobe Fonts](https://fonts.adobe.com/).
 
-Så här konfigurerar du Typekit i AEM:
+Så här konfigurerar du Adobe Fonts i AEM:
 
 1. I författarinstansen klickar du på ![](assets/adobeexperiencemanager.png)adobeexperienceManagerAdobe Experience Manager > Tools ![hammer](assets/hammer.png) > Deployment > Cloud Services.
-1. På sidan **Cloud Services** går du till **Tredjepartstjänster** > **Typekit** och klickar på **Konfigurera nu** under Typekit. Om det redan finns en konfiguration klickar du på **+** -knappen för att skapa en ny instans.
+1. Navigera till och öppna alternativet **Adobe Fonts** på sidan **Cloud Services** . Öppna konfigurationsmappen och klicka på **Skapa**.
 1. I dialogrutan **Skapa konfiguration** anger du en rubrik för konfigurationen och klickar på **Skapa**.
 
    Du omdirigeras till konfigurationssidan.
 
 1. Ange ditt kit-ID i dialogrutan Redigera komponent som visas och klicka på **OK**.
 
-Utför följande steg för att konfigurera ett tema så att det använder TypeKit-konfigurationen:
+Utför följande steg för att konfigurera ett tema så att det använder Adobe Fonts-konfigurationen:
 
 1. Öppna ett tema i temaredigeraren i författarinstansen.
 1. Navigera till **Temaalternativ** ![för temaalternativ](assets/theme-options.png) > **Konfigurera** i temaredigeraren.
-1. I **fältet Typekit-konfiguration** väljer du ett kit och klickar på **Spara**.
+1. I fältet **Adobe Fonts Configuration** väljer du ett kit och klickar på **Save**.
 
    Nu ser du att teckensnitten har lagts till i temats egenskap font-family.
 
