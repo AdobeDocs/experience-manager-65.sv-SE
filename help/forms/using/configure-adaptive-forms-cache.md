@@ -10,7 +10,7 @@ topic-tags: Configuration
 discoiquuid: 9fa6f761-58ca-4cd0-8992-b9337dc1a279
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1a4bfc91cf91b4b56cc4efa99f60575ac1a9a549
+source-git-commit: d5a649337acdc01c58ecc473e7c919e06cbd0188
 workflow-type: tm+mt
 source-wordcount: '997'
 ht-degree: 0%
@@ -127,7 +127,8 @@ Utför stegen nedan för att aktivera och konfigurera cachelagring av adaptiva f
       # added for AEM forms specific use cases.
       /0003 { /glob "dataRef" /type "allow" }
       }
-   
+   ```
+
 Din AEM är konfigurerad att cachelagra adaptiva formulär. Den cache-lagrar alla typer av anpassningsbara formulär. Om du har ett krav på att kontrollera användaråtkomstbehörighet för en sida innan du levererar den cachelagrade sidan, se [cachelagra skyddat innehåll](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/permissions-cache.html).
 
 ## Felsökning {#troubleshooting}
