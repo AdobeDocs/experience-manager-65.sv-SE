@@ -1,11 +1,11 @@
 ---
-title: Installera och konfigurera ImageMagick så att det fungerar med [!DNL Adobe Experience Manager Assets].
+title: Installera och konfigurera ImageMagick
 description: Läs om programmet ImageMagick, hur du installerar det, konfigurerar kommandoradsprocessen och använder det för att redigera, skapa och generera miniatyrbilder från bilder.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5d66bf75a6751e41170e6297d26116ad33c2df44
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '655'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Om du vill bearbeta stora filer med ImageMagick bör du tänka på högre minnes
 
 >[!NOTE]
 >
->Om du använder [!DNL Experience Manager] på [!DNL Adobe Managed Services] (AMS) kontaktar du Adobes kundtjänst om du tänker bearbeta många högupplösta PSD- eller PSB-filer. [!DNL Experience Manager] kan inte bearbeta PSB-filer med hög upplösning som är större än 30000 x 23000 pixlar.
+>Om du använder [!DNL Experience Manager] på [!DNL Adobe Managed Services] (AMS) kontaktar du kundtjänst på Adobe om du tänker bearbeta många högupplösta PSD- eller PSB-filer. [!DNL Experience Manager] kan inte bearbeta PSB-filer med hög upplösning som är större än 30000 x 23000 pixlar.
 
 ## Installera ImageMagick {#installing-imagemagick}
 
