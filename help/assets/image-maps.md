@@ -1,11 +1,11 @@
 ---
-title: Lägga till bildscheman med hyperlänkar till digitala bilder
+title: Lägga till bildscheman med hyperlänkar
 description: Lär dig hur du lägger till bildschema med hyperlänkar till en bild.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '247'
 ht-degree: 1%
 
 ---
