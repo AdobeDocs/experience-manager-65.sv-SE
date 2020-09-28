@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 9d952604-f9ef-498f-937b-871817c80226
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c2e6b55964ea5f3e180b17bd2a244882aa62ea
+source-git-commit: 824ddd48e4680eed1d4612c6ad450a8f1bc68e7c
 workflow-type: tm+mt
 source-wordcount: '932'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # Meddelandefunktion {#messaging-feature}
 
-Förutom de synliga interaktioner som förekommer i forum och kommentarer, gör meddelandefunktionen i AEM Communities det möjligt för communitymedlemmar att interagera med varandra mer privat.
+Förutom den synliga interaktionen som sker i forum och i kommentarer, gör meddelandefunktionen i AEM Communities det möjligt för communitymedlemmar att interagera med varandra mer privat.
 
 Den här funktionen kan inkluderas när en [communitywebbplats](/help/communities/overview.md#communitiessites) skapas.
 
@@ -41,7 +41,9 @@ Med meddelandefunktionen kan du:
 
 **G** - återställ ett borttaget meddelande
 
-![messaging-section](assets/messaging-section.png) ![restore-message](assets/restore-message.png)
+![meddelandesektion](assets/messaging-section.png)
+
+![restore-message](assets/restore-message.png)
 
 Information om hur du aktiverar och ändrar meddelandefunktionen finns i:
 
@@ -77,7 +79,7 @@ När arvet har avbrutits går det att välja konfigurationsikonen för att öppn
 
 * **Tjänstväljare**
 
-   (*Obligatoriskt*) Ange det här värdet för egenskapen **`serviceSelector.name`** från tjänsten [](/help/communities/messaging.md#messaging-operations-service)AEM Communities Messaging Operations.
+   (*Obligatoriskt*) Ange det här till värdet för egenskapen **`serviceSelector.name`** från [AEM Communities Messaging Operations Service](/help/communities/messaging.md#messaging-operations-service).
 
 * **Skapa sida**
 
@@ -113,11 +115,11 @@ När arvet har avbrutits går det att välja konfigurationsikonen för att öppn
 
 * **Ta bort-knapp**
 
-   Om det här alternativet är markerat visas en `Delete` knapp som gör att ett meddelande kan markeras som läst. Duplicerar borttagningsfunktionen om **`Message Options`** även den är markerad.
+   Om det här alternativet är markerat visas en `Delete` knapp som gör att ett meddelande kan markeras som läst. Duplicerar borttagningsfunktionen om **`Message Options`** också är markerad.
 
 * **Meddelandealternativ**
 
-   Om du markerar det här alternativet visas **`Reply`** knappar **`Reply All`****`Forward`** **`Delete`** och knappar som gör att ett meddelande kan skickas igen eller tas bort. Duplicerar borttagningsfunktionen om **`Delete Button`** även den är markerad.
+   Om du markerar det här alternativet visas **`Reply`** knappar **`Reply All`****`Forward`** **`Delete`** och knappar som gör att ett meddelande kan skickas igen eller tas bort. Duplicerar borttagningsfunktionen om **`Delete Button`** också är markerad.
 
 * **Meddelanden per sida**
 
@@ -167,7 +169,7 @@ När arvet har avbrutits går det att välja konfigurationsikonen för att öppn
 
 * **Tjänstväljare**
 
-   (*Obligatoriskt*) Ange det här värdet för egenskapen **`serviceSelector.name`** från tjänsten [](/help/communities/messaging.md#messaging-operations-service)AEM Communities Messaging Operations.
+   (*Obligatoriskt*) Ange det här till värdet för egenskapen **`serviceSelector.name`** från [AEM Communities Messaging Operations Service](/help/communities/messaging.md#messaging-operations-service).
 
 #### Fliken Visa {#display-tab-1}
 
