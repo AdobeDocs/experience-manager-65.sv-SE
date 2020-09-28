@@ -1,9 +1,9 @@
 ---
-title: Överlappande metadata i [!DNL Adobe Experience Manager Assets].
+title: Överlappande metadata i [!DNL Assets]
 description: I den här artikeln beskrivs hur du definierar överlappande metadata för resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c92215a6cb1f4c3d02e9a5f5b3fd36c65fc002ce
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
 source-wordcount: '898'
 ht-degree: 5%
