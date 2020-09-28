@@ -1,12 +1,12 @@
 ---
-title: Söka efter fasetter.
+title: Sök efter ansikten för att filtrera sökresultat
 description: Skapa, ändra och använda sökfunktioner i [!DNL Adobe Experience Manager].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7f06670ca8b488a661fde7a133bce6886ee7f5d
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '2340'
-ht-degree: 15%
+source-wordcount: '2344'
+ht-degree: 14%
 
 ---
 
@@ -145,7 +145,7 @@ Med Multi Value Property-predikatet kan du söka efter resurser efter flera vär
 
 ## Lägg till ett taggpredikat {#adding-a-tags-predicate}
 
-Med taggpredikatet kan du utföra taggbaserade sökningar efter resurser. Som standard söker efter resurser efter en eller flera taggar som matchar baserat på de taggar som du anger [!DNL Assets] . Med andra ord utför sökfrågan en ELLER-åtgärd med de angivna taggarna. Du kan dock använda alternativet Matcha alla taggar för att söka efter resurser som innehåller alla taggar som du anger.
+Med taggpredikatet kan du utföra taggbaserade sökningar efter resurser. Som standard söker efter resurser efter en eller flera taggar som matchar baserat på de taggar du anger [!DNL Assets] . Med andra ord utför sökfrågan en ELLER-åtgärd med de angivna taggarna. Du kan dock använda alternativet Matcha alla taggar för att söka efter resurser som innehåller alla taggar som du anger.
 
 1. Click the [!DNL Experience Manager] logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
 1. På sidan Sök i Forms väljer du **[!UICONTROL Assets Admin Search Rail]** och klickar sedan på **[!UICONTROL Edit]** redigeringsikonen ![](assets/do-not-localize/aemassets_edit.png).
@@ -179,7 +179,7 @@ På samma sätt som du lägger till ett egenskapsprediat eller ett alternativpre
 | [!UICONTROL Path] | Använd den för att filtrera resultaten på plats. Du kan ange olika banor som alternativ. | <ul><li>Etikett</li><li>Bana</li><li>Beskrivning</li></ul> |
 | [!UICONTROL Publish Status] | Sök efter predikat för att söka efter resurser baserat på deras publiceringsstatus | <ul><li>Etikett</li><li>Egenskapsnamn</li><li>Beskrivning</li></ul> |
 | [!UICONTROL Relative Date] | Sökpredikatet för att söka efter resurser baserat på det relativa datumet då de skapades. Du kan till exempel konfigurera alternativ som för 2 månader sedan, för 3 veckor sedan och så vidare. | <ul><li>Etikett</li><li>Egenskapsnamn</li><li>Relativt datum</li></ul> |
-| [!UICONTROL Range] | Sök predikatet för att söka efter resurser som ligger inom ett angivet intervall. På sökpanelen kan du ange lägsta och högsta värden för intervallet. | <ul><li>Etikett</li><li>Egenskapsnamn</li><li>Beskrivning</li></ul> |
+| [!UICONTROL Range] | Sök på predikatet för att söka efter resurser som ligger inom ett angivet intervall. På sökpanelen kan du ange lägsta och högsta värden för intervallet. | <ul><li>Etikett</li><li>Egenskapsnamn</li><li>Beskrivning</li></ul> |
 | [!UICONTROL Date Range] | Sökpredikatet för att söka efter resurser som skapats inom ett angivet intervall efter en datumegenskap. På sökpanelen kan du ange start- och slutdatum med datumväljare. | <ul><li>Etikett</li><li>Platshållare</li><li>Egenskapsnamn</li><li>Intervalltext (från)</li><li>Intervalltext (till)</li><li>Beskrivning</li></ul> |
 | [!UICONTROL Date] | Sökpredikatet för en skjutreglagebaserad sökning efter resurser baserat på en date-egenskap. | <ul><li>Etikett</li><li>Egenskapsnamn</li><li>Beskrivning</li></ul> |
 | [!UICONTROL File Size] | Sök efter predikatorn för att söka efter resurser baserat på deras storlek. Det är ett sifferbaserat predikat där du väljer skjutreglagealternativ från en konfigurerbar nod. Standardalternativen finns i /libs/dam/options/preates/filesize i CRXDE-databasen. Filstorleken anges i byte. | <ul><li>Etikett</li><li>Egenskapsnamn</li><li>Bana</li><li>Beskrivning</li></ul> |
