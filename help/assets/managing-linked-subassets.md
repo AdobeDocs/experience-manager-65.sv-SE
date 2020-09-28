@@ -1,11 +1,11 @@
 ---
-title: Hantera sammansatta resurser med referenser och flersidiga resurser i [!DNL Adobe Experience Manager].
+title: Hantera sammansatta resurser med referenser och flera sidor
 description: Lär dig hur du skapar referenser till digitala resurser inifrån [!DNL Adobe InDesign], [!DNL Adobe Illustrator], and [!DNL Adobe Photoshop]. Använd funktionen för sidvisningsprogram för att visa enskilda underresurssidor för flersidiga filer som PDF-, INDD-, PPT-, PPTX- och AI-filer.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '1299'
+source-wordcount: '1298'
 ht-degree: 0%
 
 ---
@@ -81,7 +81,7 @@ Den här proceduren liknar hur du [lägger till digitala resurser som referenser
 
 >[!NOTE]
 >
->Resurserna i sammansatta resurser kan också refereras baserat på deras dokument-ID och instans-ID. Den här funktionaliteten finns endast för [!DNL Adobe Illustrator] och [!DNL Adobe Photoshop] versioner. För andra görs en referens på grundval av den relativa sökvägen för länkade tillgångar i den huvudsakliga sammansatta tillgången, som i tidigare versioner av [!DNL Experience Manager].
+>Resurserna i sammansatta resurser kan också refereras baserat på deras dokument-ID och instans-ID. Den här funktionaliteten finns endast för [!DNL Adobe Illustrator] och [!DNL Adobe Photoshop] versioner. För andra görs en referens på grundval av den relativa sökvägen för länkade tillgångar i den huvudsakliga sammansatta tillgången som i tidigare versioner av [!DNL Experience Manager].
 
 ## Skapa delresurser {#generate-subassets}
 
@@ -135,7 +135,7 @@ Följande alternativ är tillgängliga i verktygsfältet, i den vänstra listen 
 
 >[!MORELIKETHIS]
 >
->* [Använd datorprogrammet Adobe Experience Manager](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html)
+>* [Använd Adobe Experience Manager datorprogram](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html)
 >* [Konfigurera skrivbordsåtgärder i Adobe Experience Manager](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#desktopactions-v2)
 >* [Skapa länkade smarta objekt i Adobe Photoshop](https://helpx.adobe.com/photoshop/using/create-smart-objects.html#create-linked-smart-objects)
 >* [Montera grafik i Adobe InDesign](https://helpx.adobe.com/indesign/using/placing-graphics.html)
