@@ -1,9 +1,9 @@
 ---
-title: Integrera [!DNL Adobe Experience Manager Assets] med [!DNL Adobe InDesign Server]
+title: Integrera [!DNL Assets] med [!DNL InDesign Server]
 description: Lär dig hur du [!DNL Adobe Experience Manager Assets] kan integrera med [!DNL Adobe InDesign Server].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 1%
@@ -23,7 +23,7 @@ Om du vill överföra filer till [!DNL Experience Manager Assets] den som du har
 
 >[!NOTE]
 >
->[!DNL Adobe InDesign] erbjuds som två separata erbjudanden. [Adobe InDesign](https://www.adobe.com/products/indesign.html) -datorprogram som används för att utforma sidlayouter för tryck och digital distribution. [Med Adobe InDesign Server](https://www.adobe.com/products/indesignserver.html) kan ni programmässigt skapa automatiserade dokument baserat på det ni skapat med [!DNL InDesign]. Den fungerar som en tjänst som erbjuder ett gränssnitt till sin [ExtendScript](https://www.adobe.com/devnet/scripting.html) -motor. Skripten är skrivna i [!DNL ExtendScript], vilket liknar [!DNL JavaScript]. Mer information om [!DNL InDesign] skript finns i [https://www.adobe.com/devnet/indesign/documentation.html#idscripting](https://www.adobe.com/devnet/indesign/documentation.html#idscripting).
+>[!DNL Adobe InDesign] erbjuds som två separata erbjudanden. [Adobe InDesign](https://www.adobe.com/products/indesign.html) -datorprogram som används för att utforma sidlayouter för tryck och digital distribution. [Med Adobe InDesign Server](https://www.adobe.com/products/indesignserver.html) kan du programmässigt skapa automatiserade dokument baserat på vad du har skapat med [!DNL InDesign]. Den fungerar som en tjänst som erbjuder ett gränssnitt till [ExtendScript](https://www.adobe.com/devnet/scripting.html) -motorn. Skripten är skrivna i [!DNL ExtendScript], vilket liknar [!DNL JavaScript]. Mer information om [!DNL InDesign] skript finns i [https://www.adobe.com/devnet/indesign/documentation.html#idscripting](https://www.adobe.com/devnet/indesign/documentation.html#idscripting).
 
 ## Hur extraheringen fungerar {#how-the-extraction-works}
 
@@ -31,7 +31,7 @@ De [!DNL Adobe InDesign Server] kan integreras med [!DNL Experience Manager Asse
 
 >[!NOTE]
 >
->Tidigare versioner av [!DNL Experience Manager] kunde extrahera XMP och miniatyrbilden, nu kan alla media extraheras.
+>I tidigare versioner av [!DNL Experience Manager] gick det att extrahera XMP och miniatyrbilden, och nu kan alla media extraheras.
 
 1. Överför INDD-filen till [!DNL Experience Manager Assets].
 1. Ett ramverk skickar kommandoskript till [!DNL InDesign Server] via SOAP (Simple Object Access Protocol).
@@ -108,7 +108,7 @@ Om du vill anpassa kan du redigera **[!UICONTROL Arguments]** fliken i **[!UICON
 
 Medieextraheringsargument och skriptsökvägar
 
-* **ExtendScript library**: Detta är ett enkelt http get/post-metodbibliotek som krävs av de andra skripten.
+* **ExtendScript-bibliotek**: Detta är ett enkelt http get/post-metodbibliotek som krävs av de andra skripten.
 
 * **Utöka skript**: Här kan du ange olika skriptkombinationer. Om du vill att dina egna skript ska köras på [!DNL InDesign Server]filen sparar du skripten på `/apps/settings/dam/indesign/scripts`.
 
