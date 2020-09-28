@@ -10,9 +10,9 @@ topic-tags: Configuration
 discoiquuid: d4e2acb0-8d53-4749-9d84-15b8136e610b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 1a4bfc91cf91b4b56cc4efa99f60575ac1a9a549
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '813'
 ht-degree: 0%
 
 ---
@@ -26,21 +26,32 @@ Lokaliseringen av anpassningsbara formulär bygger på två typer av språkordli
 
 **Formulärspecifik ordlista** innehåller strängar som används i anpassningsbara formulär. Till exempel etiketter, fältnamn, felmeddelanden, hjälpbeskrivningar och så vidare. Den hanteras som en uppsättning XLIFF-filer för varje språkområde och du kan komma åt den på `https://<host>:<port>/libs/cq/i18n/translator.html`.
 
-**Globala ordlistor** Det finns två globala ordlistor, som hanteras som JSON-objekt, i AEM-klientbiblioteket. De här ordlistorna innehåller standardfelmeddelanden, namn på månader, valutasymboler, datum- och tidsmönster osv. Dessa ordlistor finns i CRXDe Lite på /libs/fd/xfaforms/clientlibs/I18N. Dessa platser innehåller separata mappar för varje språkområde. Eftersom globala ordlistor vanligtvis inte uppdateras så ofta, kan webbläsare cachelagra olika JavaScript-filer för varje språkinställning och minska användningen av nätverksbandbredd när olika adaptiva formulär används på samma server.
+**Globala ordlistor** Det finns två globala ordlistor, som hanteras som JSON-objekt, i AEM klientbibliotek. De här ordlistorna innehåller standardfelmeddelanden, namn på månader, valutasymboler, datum- och tidsmönster osv. Dessa ordlistor finns i CRXDe Lite på /libs/fd/xfaforms/clientlibs/I18N. Dessa platser innehåller separata mappar för varje språkområde. Eftersom globala ordlistor vanligtvis inte uppdateras så ofta, kan webbläsare cachelagra olika JavaScript-filer för varje språkinställning och minska användningen av nätverksbandbredd när olika adaptiva formulär används på samma server.
 
 ### Hur lokalisering av anpassningsbara formulär fungerar {#how-localization-of-adaptive-form-works}
 
-När ett anpassat formulär återges identifierar det det begärda språkområdet genom att titta på följande parametrar i den angivna ordningen:
+Det finns två metoder för att identifiera det anpassade formulärets språkområde. När ett anpassat formulär återges identifieras det begärda språket av :
 
-* Begäranparameter `afAcceptLang`Om du vill åsidosätta webbläsarens språkområde för användare kan du skicka 
+* tittar på `[local]` väljaren i den anpassningsbara formulärets URL. The format of the URL is `http://host:port/content/forms/af/[afName].[locale].html?wcmmode=disabled`. Om du använder `[local]` väljaren kan du cachelagra ett anpassat formulär.
+
+* Titta på följande parametrar i den angivna ordningen:
+
+   * Begäranparameter `afAcceptLang`Om du vill åsidosätta webbläsarens språkområde för användare kan du skicka 
 `afAcceptLang` begär parameter för att tvinga språkområdet. Följande URL kommer till exempel att tvinga formuläret att återges på japanska språk:
-   `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
+      `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 
-* Webbläsarens språkområdesuppsättning för användaren, som anges i begäran med hjälp av `Accept-Language` rubriken.
+   * Webbläsarens språkområdesuppsättning för användaren, som anges i begäran med hjälp av `Accept-Language` rubriken.
 
-* Språkinställning för användaren som anges i AEM.
+   * Språkinställningen för den användare som anges i AEM.
 
-När språkområdet har identifierats väljs den formulärspecifika ordlistan i de adaptiva formulären. Om det inte går att hitta den formulärspecifika ordlistan för den begärda språkversionen används den engelska ordlistan (en).
+   * Webbläsarens språkområde är aktiverat som standard. Om du vill ändra språkinställningen för webbläsaren
+      * Öppna konfigurationshanteraren. URL:en är `http://[server]:[port]/system/console/configMgr`
+      * Leta reda på och öppna **[!UICONTROL Adaptive Form and Interactive Communication Web Channel]** konfigurationen.
+      * Ändra status för **[!UICONTROL Use Browser Locale]** alternativet och **[!UICONTROL Save]** konfigurationen.
+
+När språkområdet har identifierats väljs den formulärspecifika ordlistan i de adaptiva formulären. Om det inte går att hitta den formulärspecifika ordlistan för den begärda språkversionen används ordlistan för det språk som det anpassade formuläret skapades på.
+
+Om det inte finns någon språkinformation skickas ett anpassat formulär på formulärets originalspråk. Det ursprungliga språket är det språk som används vid utvecklingen av det anpassade formuläret.
 
 Om det inte finns något klientbibliotek för det begärda språket söker programmet efter språkkoden i klientbiblioteket. Om den begärda språkversionen till exempel är `en_ZA` (sydafrikansk engelska) och klientbiblioteket för `en_ZA` inte finns, kommer den adaptiva formen att använda klientbiblioteket för `en` (engelska), om det finns. Om det inte finns någon av dem används lexikonet för nationella inställningar i det adaptiva formuläret. `en`
 
@@ -110,7 +121,7 @@ Fältet `<locale>` visas på `https://'[server]:[port]'/libs/cq/i18n/translator.
 
 ### Starta om servern {#restart-the-server}
 
-Starta om AEM-servern så att de nya språkinställningarna börjar gälla.
+Starta om AEM för att den tillagda språkinställningen ska börja gälla.
 
 ## Exempelbibliotek för att lägga till stöd för spanska {#sample-libraries-for-adding-support-for-spanish}
 
