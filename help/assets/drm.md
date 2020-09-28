@@ -1,11 +1,11 @@
 ---
-title: Digital Rights Management i [!DNL Adobe Experience Manager Assets].
+title: Digital Rights Management tillgångar
 description: Lär dig hur du hanterar förfallotillstånd för mediefiler och information för licensierade mediefiler i [!DNL Experience Manager].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '1346'
+source-wordcount: '1347'
 ht-degree: 7%
 
 ---
@@ -148,7 +148,7 @@ Konsolen kan [!DNL Assets] visa olika lägen för resurser. Beroende på det akt
 
    ![chlimage_1-166](assets/chlimage_1-166.png)
 
-## Digital Rights Management i [!DNL Assets] {#digital-rights-management-in-assets-1}
+## Digital Rights Management in [!DNL Assets] {#digital-rights-management-in-assets-1}
 
 Den här funktionen tvingar till godkännande av licensavtalet innan du kan hämta en licensierad mediefil från [!DNL Adobe Experience Manager Assets].
 
