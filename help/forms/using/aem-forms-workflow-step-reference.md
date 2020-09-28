@@ -1,8 +1,8 @@
 ---
-title: Formulärcentrerat arbetsflöde i OSGi - stegreferens
-seo-title: Formulärcentrerat arbetsflöde i OSGi - stegreferens
-description: Med formulärbaserat arbetsflöde i OSGi-steg kan du snabbt skapa anpassningsbara formulärbaserade arbetsflöden.
-seo-description: Med formulärbaserat arbetsflöde i OSGi-steg kan du snabbt skapa anpassningsbara formulärbaserade arbetsflöden.
+title: Forms-centrerat arbetsflöde i OSGi - stegreferens
+seo-title: Forms-centrerat arbetsflöde i OSGi - stegreferens
+description: Med ett Forms-baserat arbetsflöde i OSGi-steg kan du snabbt skapa anpassningsbara formulärbaserade arbetsflöden.
+seo-description: Med ett Forms-baserat arbetsflöde i OSGi-steg kan du snabbt skapa anpassningsbara formulärbaserade arbetsflöden.
 uuid: 6f791c45-0e35-4c55-9106-5340caab94b7
 contentOwner: null
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,19 +10,19 @@ topic-tags: publish
 discoiquuid: f0a5588d-f210-4f04-bc35-b62834f90ab1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: aff67332de7295936ea45e3f38cd204fd448a570
 workflow-type: tm+mt
-source-wordcount: '6991'
+source-wordcount: '7013'
 ht-degree: 0%
 
 ---
 
 
-# Formulärcentrerat arbetsflöde i OSGi - stegreferens{#forms-centric-workflow-on-osgi-step-reference}
+# Forms-centrerat arbetsflöde i OSGi - stegreferens{#forms-centric-workflow-on-osgi-step-reference}
 
-## Arbetsflödessteg för formulär {#forms-workflow-steps}
+## Forms Workflow {#forms-workflow-steps}
 
-Blankettstegen utför AEM Forms-specifika åtgärder i ett AEM-arbetsflöde. Med de här stegen kan du snabbt skapa anpassningsbara formulärbaserade formulärbaserade arbetsflöden i OSGi. Dessa arbetsflöden kan användas för att utveckla enkla arbetsflöden för granskning och godkännande, interna och övergripande affärsprocesser. Du kan också använda steg i formulärarbetsflödet för att starta dokumenttjänster, integrera med signaturarbetsflödet i Adobe Sign och utföra andra AEM Forms. Du behöver [AEM Forms för att lägga till](https://www.adobe.com/go/learn_aemforms_documentation_63)  för att kunna använda dessa steg i ett arbetsflöde.
+Forms arbetsflödessteg utför AEM Forms-specifika åtgärder i ett AEM arbetsflöde. Med dessa steg kan du snabbt skapa anpassningsbara formulärbaserade Forms-baserade arbetsflöden i OSGi. Dessa arbetsflöden kan användas för att utveckla enkla arbetsflöden för granskning och godkännande, interna och övergripande affärsprocesser. Du kan också använda steg för Forms Workflow för att starta dokumenttjänster, integrera med Adobe Sign signaturarbetsflöde och utföra andra AEM Forms-åtgärder. Du behöver [AEM Forms-tillägget](https://www.adobe.com/go/learn_aemforms_documentation_63) för att kunna använda dessa steg i ett arbetsflöde.
 
 ## Tilldela aktivitetssteg {#assign-task-step}
 
@@ -30,12 +30,12 @@ Tilldela ett uppgiftssteg skapar en uppgift och tilldelar den till en användare
 
 Du kan också använda komponenten för att styra aktivitetens beteende. Du kan till exempel skapa ett automatiskt postdokument, tilldela uppgiften till en viss användare eller grupp, ange sökvägen till skickade data, ange sökvägen till data som ska fyllas i i förväg och ange standardåtgärder. Tilldela uppgift-steget har följande egenskaper:
 
-* **Titel:** Uppgiftens namn. Titeln visas i AEM Inbox.
+* **Titel:** Uppgiftens namn. Titeln visas AEM Inkorgen.
 * **Beskrivning:** Förklaring av de åtgärder som utförs i uppgiften. Den här informationen är användbar för andra processutvecklare när du arbetar i en delad utvecklingsmiljö.
 
 * **Miniatyrbildssökväg:** Sökväg till aktivitetsminiatyrbilden. Om ingen sökväg anges visas en standardminiatyrbild för ett anpassat formulär och en standardikon för Postdokument.
-* **Arbetsflödesfas:** Ett arbetsflöde kan ha flera steg. Dessa steg visas i AEM Inbox. Du kan definiera de här stegen i modellens egenskaper (Sidspark > Sida > Sidegenskaper > Steg).
-* **Prioritet:** Den valda prioriteten visas i AEM Inbox. De tillgängliga alternativen är Hög, Medel och Låg. Standardvärdet är Medel.
+* **Arbetsflödesfas:** Ett arbetsflöde kan ha flera steg. Dessa steg visas i AEM Inkorg. Du kan definiera de här stegen i modellens egenskaper (Sidspark > Sida > Sidegenskaper > Steg).
+* **Prioritet:** Den valda prioriteten visas i AEM. De tillgängliga alternativen är Hög, Medel och Låg. Standardvärdet är Medel.
 * **Förfallodatum:** Ange antalet dagar eller timmar efter vilka aktiviteten har markerats som försenad. Om du väljer **Av** markeras uppgiften aldrig som försenad. Du kan också ange en uttidshanterare för att utföra vissa åtgärder när åtgärden är försenad.
 
 * **Dagar:** Antalet dagar innan uppgiften ska slutföras. Antalet dagar räknas efter att uppgiften har tilldelats en användare. Om en uppgift inte är fullständig och korsar det antal dagar som anges i fältet Dagar, aktiveras en timeout-hanterare efter förfallodatumet, om detta väljs.
@@ -51,14 +51,14 @@ Du kan också använda komponenten för att styra aktivitetens beteende. Du kan 
 
 >[!NOTE]
 >
->Du måste ha grupptilldelningar för cm-agent-users och arbetsflödesanvändare för att få tillgång till gränssnittet för Interactive Communications Agent i AEM-inkorg.
+>Du måste ha grupptilldelningar för cm-agent-users och arbetsflödesanvändare för att få åtkomst till gränssnittet för Interactive Communications Agent i AEM.
 
 * **Adaptiv form eller interaktiv kommunikationsväg**: Ange sökvägen till det adaptiva formuläret eller interaktiv kommunikation. Du kan använda det adaptiva formuläret eller den interaktiva kommunikationen som skickas till arbetsflödet, som finns på en absolut sökväg, eller hämta det adaptiva formuläret från en sökväg som lagras i en variabel av strängdatatyp.
 * **Välj PDF-indata med:** Ange sökvägen till ett icke-interaktivt PDF-dokument. Fältet är tillgängligt när du väljer ett icke-interaktivt PDF-dokument i fältet Typ. Du kan välja PDF-indata med den sökväg som är relativ till nyttolasten, som har sparats med en absolut sökväg eller med en variabel av dokumentdatatypen. Exempel: [Payload_Directory]/Workflow/PDF/credit-card.pdf. Sökvägen finns inte i crx-databasen. En administratör skapar sökvägen innan den används. Du måste aktivera alternativet Dokument för post eller formulärmallsbaserade adaptiva formulär för att kunna använda alternativet PDF-sökväg.
 * **Rendera det anpassningsbara formuläret som**: När en uppgift har markerats som slutförd kan du återge det anpassningsbara formuläret som ett skrivskyddat anpassat formulär eller som ett PDF-dokument. Du måste ha alternativet Dokument i post aktiverat eller formulärmallsbaserade adaptiva formulär för att kunna återge det adaptiva formuläret som Dokument i post.
 * **Förifylld:** Följande fält i listan nedan fungerar som indata för uppgiften:
 
-   * **Välj indatafil med:** Sökväg till indatafil (.json,). xml, .doc eller formulärdatamodell). Du kan hämta indatafilen med en sökväg som är relativ till nyttolasten eller hämta filen som lagras i en variabel av datatypen Document, XML eller JSON. Filen innehåller till exempel de data som skickats för formuläret via ett AEM Inbox-program. En exempelsökväg är [Payload_Directory]/workflow/data.
+   * **Välj indatafil med:** Sökväg till indatafil (.json,). xml, .doc eller formulärdatamodell). Du kan hämta indatafilen med en sökväg som är relativ till nyttolasten eller hämta filen som lagras i en variabel av datatypen Document, XML eller JSON. Filen innehåller till exempel de data som har skickats för formuläret via ett AEM Inkorgsprogram. En exempelsökväg är [Payload_Directory]/workflow/data.
    * **Välj indatabilagor med:** Bifogade filer som är tillgängliga på platsen bifogas till formuläret som är kopplat till uppgiften. Sökvägen är alltid relativ till nyttolasten. En exempelsökväg är [Payload_Directory]/attachments/
    * **Välj JSON-indata:** Välj en JSON-indatafil med en sökväg som är relativ till nyttolasten eller som lagras i en variabel av datatypen Document, JSON eller Form Data Model. Det här alternativet är tillgängligt om du väljer gränssnittet Interactive Communication Agent eller Interactive Communication Web Channel Document i listrutan Typ.
    * **Välj en anpassad förifyllningstjänst:** Välj förifyllningstjänsten för att hämta data och fylla i dokumentet för webbkanalen för interaktiv kommunikation eller användargränssnittet för agenten i förväg.
@@ -75,10 +75,10 @@ Du kan också använda komponenten för att styra aktivitetens beteende. Du kan 
 
    * **Spara webbkanalsdata med:** Spara webbkanalsdatafilen med en sökväg som är relativ till nyttolasten eller lagra den i en variabel av datatypen Document, JSON eller Form Data Model. Det här alternativet är bara tillgängligt om du väljer gränssnittet för interaktiv kommunikationsagent i listrutan Typ.
    * **Spara PDF-dokument med:** Spara PDF-dokumentet med en sökväg som är relativ till nyttolasten eller lagra det i en variabel av dokumentdatatypen. Det här alternativet är bara tillgängligt om du väljer gränssnittet för interaktiv kommunikationsagent i listrutan Typ.
-   * **Spara layoutmall med:** Spara layoutmallen med en sökväg som är relativ till nyttolasten eller lagra den i en variabel av dokumentdatatypen. Layoutmallen [](../../forms/using/layout-design-details.md) refererar till en XDP-fil som du skapar med Forms Designer. Det här alternativet är bara tillgängligt om du väljer gränssnittet för interaktiv kommunikationsagent i listrutan Typ.
+   * **Spara layoutmall med:** Spara layoutmallen med en sökväg som är relativ till nyttolasten eller lagra den i en variabel av dokumentdatatypen. Layoutmallen [](../../forms/using/layout-design-details.md) avser en XDP-fil som du skapar med Forms Designer. Det här alternativet är bara tillgängligt om du väljer gränssnittet för interaktiv kommunikationsagent i listrutan Typ.
 
-* **Tilldelning > Tilldelningsalternativ:** Ange vilken metod som ska användas för att tilldela en användare uppgiften. Du kan dynamiskt tilldela uppgiften till en användare eller grupp med skriptet för deltagarväljaren eller tilldela uppgiften till en viss AEM-användare eller grupp.
-* **Väljare:** Alternativet är tillgängligt när alternativet **Dynamiskt för en användare eller grupp** är markerat i fältet Tilldela alternativ. Du kan använda ett ECMAScript eller en tjänst för att dynamiskt välja en användare eller grupp. Mer information finns i Tilldela användare [ett arbetsflöde](https://helpx.adobe.com/experience-manager/kb/HowToAssignAWorkflowDynamicallyToParticipants.html) dynamiskt och [Skapa ett anpassat steg för dynamisk deltagare i Adobe Experience Manager.](https://helpx.adobe.com/experience-manager/using/dynamic-steps.html)
+* **Tilldelning > Tilldelningsalternativ:** Ange vilken metod som ska användas för att tilldela en användare uppgiften. Du kan dynamiskt tilldela uppgiften till en användare eller en grupp med skriptet för deltagarväljaren eller tilldela uppgiften till en viss AEM användare eller grupp.
+* **Väljare:** Alternativet är tillgängligt när alternativet **Dynamiskt för en användare eller grupp** är markerat i fältet Tilldela alternativ. Du kan använda ett ECMAScript eller en tjänst för att dynamiskt välja en användare eller grupp. Mer information finns i Tilldela användare [ett arbetsflöde](https://helpx.adobe.com/experience-manager/kb/HowToAssignAWorkflowDynamicallyToParticipants.html) dynamiskt och [Skapa ett anpassat Adobe Experience Manager Dynamic Participant-steg.](https://helpx.adobe.com/experience-manager/using/dynamic-steps.html)
 
 * **Deltagare:** Fältet är tillgängligt när **[!UICONTROL com.adobe.granite.workflow.core.process.RandomParticipantChooser]** alternativet är markerat i fältet **Deltagarväljare** . I fältet kan du välja användare eller grupper för alternativet RandomParticipantChooser.
 
@@ -89,24 +89,24 @@ Du kan också använda komponenten för att styra aktivitetens beteende. Du kan 
 * **Användare eller grupp:** Uppgiften tilldelas den valda användaren eller gruppen. Alternativet är tillgängligt när alternativet **** Till en viss användare eller grupp är markerat i fältet **Tilldelningsalternativ** . I fältet visas alla användare och grupper i gruppen för arbetsflödesanvändare.\
    I listrutan **Användare eller Grupp** visas de användare och grupper som den inloggade användaren har åtkomst till. Hur användarnamn visas beror på om du har åtkomstbehörighet till **användarnoden** i crx-databasen för den aktuella användaren.
 
-* **Meddela den tilldelade via e-post:** Välj det här alternativet om du vill skicka e-postmeddelanden till den tilldelade personen. Dessa meddelanden skickas när en uppgift tilldelas en användare. Aktivera meddelanden från AEM Web Console innan du använder alternativet. Stegvisa instruktioner finns i [Konfigurera e-postmeddelanden för tilldelningssteget](../../forms/using/aem-forms-workflow.md)
+* **Meddela den tilldelade via e-post:** Välj det här alternativet om du vill skicka e-postmeddelanden till den tilldelade personen. Dessa meddelanden skickas när en uppgift tilldelas en användare. Aktivera meddelanden från AEM webbkonsol innan du använder alternativet. Stegvisa instruktioner finns i [Konfigurera e-postmeddelanden för tilldelningssteget](../../forms/using/aem-forms-workflow.md)
 
 * **HTML-e-postmall**: Välj e-postmall för e-postmeddelandet. Om du vill redigera en mall ändrar du filen på /libs/fd/dashboard/templates/email/htmlEmailTemplate.txt i crx-databasen.
-* **Tillåt delegering till:** I AEM Inbox finns ett alternativ för den inloggade användaren att delegera det tilldelade arbetsflödet till en annan användare. Du får delegera inom samma grupp eller till arbetsflödesanvändaren i en annan grupp. Om uppgiften har tilldelats en enskild användare och alternativet **Tillåt delegering till medlemmar i den tilldelade gruppen** har valts, går det inte att delegera uppgiften till en annan användare eller grupp.
-* **Delningsinställningar:** I AEM Inbox finns alternativ för att dela en enstaka eller alla uppgifter i inkorgen med andra användare:
-   * När alternativet **Tillåt att tilldelad delar explicit i inkorgen** är markerat kan användaren klicka på uppgiften och dela den med en annan AEM-användare.
+* **Tillåt delegering till:** I AEM Inkorg finns ett alternativ för den inloggade användaren att delegera det tilldelade arbetsflödet till en annan användare. Du får delegera inom samma grupp eller till arbetsflödesanvändaren i en annan grupp. Om uppgiften har tilldelats en enskild användare och alternativet **Tillåt delegering till medlemmar i den tilldelade gruppen** har valts, går det inte att delegera uppgiften till en annan användare eller grupp.
+* **Delningsinställningar:** AEM Inkorg innehåller alternativ för att dela en enskild eller alla uppgifter i inkorgen med andra användare:
+   * När alternativet **Tillåt att tilldelad delar explicit i inkorgen** är markerat kan användaren klicka på uppgiften och dela den med en annan AEM.
    * När alternativet **Tillåt att tilldelad kan dela via** delning av inkorgen är markerat och en användare delar sina inkorgsobjekt eller tillåter andra användare att komma åt sina inkorgsobjekt, delas endast uppgifter med andra användare som har det här alternativet aktiverat.
 
 * **Åtgärder > Standardåtgärder:** Det finns färdiga funktioner för att skicka, spara och återställa. Som standard är alla standardåtgärder aktiverade.
-* **Flödesvariabel:** Namn på flödesvariabeln. Vägvariabeln hämtar anpassade åtgärder som en användare väljer i AEM Inbox.
-* **Vägar:** En aktivitet kan förgrena till olika vägar. När det här alternativet har valts i AEM Inbox returnerar flödet ett värde och arbetsflödesgrenarna baserat på den valda vägen. Du kan antingen lagra flöden i en variabel av datatypen String eller välja **Literal** om du vill lägga till vägar manuellt.
+* **Flödesvariabel:** Namn på flödesvariabeln. Vägvariabeln hämtar anpassade åtgärder som en användare väljer i AEM Inkorg.
+* **Vägar:** En aktivitet kan förgrena till olika vägar. När du väljer det här alternativet i AEM Inkorg returnerar flödet ett värde och arbetsflödesgrenarna baserat på det valda flödet. Du kan antingen lagra flöden i en variabel av datatypen String eller välja **Literal** om du vill lägga till vägar manuellt.
 
-* **Titel**: Ange ruttens titel. Den visas i AEM Inbox.
-* **Korallikon**: Ange HTML-attribut för en korallikon. Adobe CorelUI-biblioteket innehåller en mängd ikoner som sätter fokus först. Du kan välja och använda en ikon för rutten. Den visas tillsammans med titeln i AEM Inbox. Om du lagrar rutterna i en variabel använder rutterna en taggikon.
-* **Tillåt att den som tilldelats kan lägga till kommentarer**: Välj det här alternativet om du vill aktivera kommentarer för uppgiften. En tilldelad kan lägga till kommentarerna inifrån AEM Inbox när uppgiften skickas.
+* **Titel**: Ange ruttens titel. Den visas i AEM Inkorg.
+* **Korallikon**: Ange HTML-attribut för en korallikon. Adobe CorelUI-biblioteket innehåller en mängd ikoner som sätter pekskärpan först. Du kan välja och använda en ikon för rutten. Den visas tillsammans med titeln i AEM Inbox. Om du lagrar rutterna i en variabel använder rutterna en taggikon.
+* **Tillåt att den som tilldelats kan lägga till kommentarer**: Välj det här alternativet om du vill aktivera kommentarer för uppgiften. En tilldelad kan lägga till kommentarer från AEM Inkorg när uppgiften skickas.
 * **Spara kommentar i variabel:** Spara kommentaren i en variabel av datatypen String. Det här alternativet visas bara om du markerar kryssrutan **Tillåt att den som tilldelas kan lägga till kommentarer** .
 
-* **Tillåt att den som tilldelas kan lägga till bilagor till uppgiften**: Välj det här alternativet om du vill aktivera bilagor för uppgiften. En tilldelad kan lägga till de bifogade filerna inifrån AEM Inbox när uppgiften skickas.
+* **Tillåt att den som tilldelas kan lägga till bilagor till uppgiften**: Välj det här alternativet om du vill aktivera bilagor för uppgiften. En tilldelad kan lägga till de bifogade filerna inifrån AEM Inkorg när uppgiften skickas.
 * **Spara bifogade utdatauppgifter med**: Ange platsen för den bifogade mappen. Du kan spara bilagor för utdatauppgifter med en sökväg som är relativ till nyttolasten eller med en variabel av dokumentdatatypen. Det här alternativet visas bara om du markerar kryssrutan **Tillåt att den som tilldelas kan lägga till bifogade filer i uppgiften** och väljer **Adaptiv form**, **Skrivskyddat anpassat formulär** eller **Icke-interaktivt PDF-dokument** i listrutan **Typ** **** på fliken¥Form/Document¥.
 
 >[!NOTE]
@@ -176,7 +176,7 @@ Om du anger sökvägen till en mapp, till exempel bilagor, bifogas alla filer so
 
 ## Anropa tjänststeg för formulärdatamodell {#invoke-form-data-model-service-step}
 
-Du kan använda [AEM Forms Data Integration](../../forms/using/data-integration.md) för att konfigurera och ansluta till olika datakällor. Dessa datakällor kan vara en databas-, webbtjänst-, REST-tjänst-, OData-tjänst- och CRM-lösning. Med dataintegrering i AEM Forms kan du skapa en formulärdatamodell som omfattar olika tjänster för att utföra datahämtnings-, additions- och uppdateringsåtgärder för den konfigurerade databasen. Du kan använda steget **** Anropa datamodelltjänst för att välja en formulärdatamodell (FDM) och använda tjänsterna i FDM för att hämta, uppdatera eller lägga till data till olika datakällor.
+Du kan använda [AEM Forms-dataintegrering](../../forms/using/data-integration.md) för att konfigurera och ansluta till olika datakällor. Dessa datakällor kan vara en databas-, webbtjänst-, REST-tjänst-, OData-tjänst- och CRM-lösning. Med AEM Forms dataintegrering kan du skapa en formulärdatamodell som omfattar olika tjänster för att utföra datahämtnings-, additions- och uppdateringsåtgärder för den konfigurerade databasen. Du kan använda steget **** Anropa datamodelltjänst för att välja en formulärdatamodell (FDM) och använda tjänsterna i FDM för att hämta, uppdatera eller lägga till data till olika datakällor.
 
 Följande databastabell och JSON-filen används som exempel för att förklara indata för stegfält:
 
@@ -251,37 +251,38 @@ I steget Anropa formulärdatamodelltjänst visas följande fält för att underl
 * **Välj Indata-JSON-dokument med**: JSON-filen innehåller värden för alla tjänstargument. JSON-filens sökväg kan vara **relativ till nyttolasten** eller en **absolut sökväg.** Du kan även hämta JSON-indata-dokumentet med hjälp av en variabel av datatypen JSON eller Form Data Model.
 
 * **JSON-punktnotation:** Lämna fältet tomt om du vill använda alla objekt i den angivna JSON-filen som indata för tjänstargument. Om du vill läsa ett specifikt JSON-objekt från den angivna JSON-filen som indata för serviceargument anger du punktnotation för JSON-objektet, till exempel, om du har en JSON som liknar den som anges i början av avsnittet, anger du försäkring.customerDetails för att ge all information om en kund som indata till tjänsten.
-* **Utdata för tjänsten > Mappa och skriv utdatavärden till variabel eller metadata:** Välj alternativet att spara utdatavärdena som egenskaper för arbetsflödesinstansens metadatanod i crx-databasen. Ange namnet på metadataegenskapen och välj det motsvarande tjänstutdataattribut som ska mappas med metadataegenskapen, till exempel mappa det telefonnummer som returneras av utdatatjänsten med egenskapen phone_number för arbetsflödets metadata. På samma sätt kan du lagra utdata i en variabel med datatypen Long.
+* **Utdata för tjänsten > Mappa och skriv utdatavärden till variabel eller metadata:** Välj alternativet att spara utdatavärdena som egenskaper för arbetsflödesinstansens metadatanod i crx-databasen. Ange namnet på metadataegenskapen och välj det motsvarande tjänstutdataattribut som ska mappas med metadataegenskapen, till exempel mappa det telefonnummer som returneras av utdatatjänsten med egenskapen phone_number för arbetsflödets metadata. På samma sätt kan du lagra utdata i en variabel med datatypen Long. När du väljer en egenskap för **[!UICONTROL Service output attribute to be mapped]** alternativet fylls endast variabler som kan lagra data för den valda egenskapen i för **[!UICONTROL Save the output to]** alternativet.
+
 * **Utdata från tjänst > Spara utdata till variabel eller en JSON-fil:** Välj alternativet att spara utdatavärdena i en JSON-fil med en absolut sökväg, med en sökväg som är relativ till nyttolasten eller i en variabel.
 * **Spara JSON-utdatadokument med alternativen nedan:** Spara JSON-utdatafilen. Sökvägen till JSON-utdatafilen kan vara relativ till nyttolasten eller en absolut sökväg. Du kan också spara JSON-utdatafilen med en variabel av datatypen JSON eller Form Data Model.
 
 ## Underteckna dokumentsteg {#sign-document-step}
 
-I steget Signera dokument kan du använda Adobe Sign för att signera dokument. Stegen Signera dokument har följande egenskaper:
+Med steget Signera dokument kan du använda Adobe Sign för att signera dokument. Stegen Signera dokument har följande egenskaper:
 
 * **Avtalsnamn:** Ange avtalets namn. Avtalsnamnet blir en del av ämnet och brödtexten i det e-postmeddelande som skickas till signerarna. Du kan antingen lagra namnet i en variabel av datatypen String eller välja **Literal** om du vill lägga till namnet manuellt.
 
 * **Språk:** Ange språk för alternativen för e-post och verifiering. Du kan antingen lagra språkinställningen i en variabel av datatypen String eller välja **Literal** för att välja språkinställningen i listan med tillgängliga alternativ. Du måste definiera språkkoden medan du lagrar värdet för språkinställningen i en variabel. Ange till exempel **en_US** för engelska och **fr_FR** för franska.
 
-* **Adobe Sign Cloud-konfiguration**: Välj en Adobe Sign Cloud-konfiguration. Om du inte har konfigurerat Adobe Sign för AEM Forms finns mer information i [Integrera Adobe Sign med AEM Forms](../../forms/using/adobe-sign-integration-adaptive-forms.md).
+* **Adobe Sign Cloud-konfiguration**: Välj en Adobe Sign Cloud-konfiguration. Om du inte har konfigurerat Adobe Sign för AEM Forms, se [Integrera Adobe Sign med AEM Forms](../../forms/using/adobe-sign-integration-adaptive-forms.md).
 
 * **Välj dokument som ska signeras med:** Du kan välja ett dokument från en plats som är relativ till nyttolasten, använda nyttolasten som dokument, ange en absolut sökväg för dokumentet eller hämta dokumentet som lagras i en variabel av dokumentdatatypen.
 * **Dagar till deadline:** Ett dokument markeras som förfallodatum (passerad deadline) efter det att ingen aktivitet har gjorts i aktiviteten för det antal dagar som anges i fältet **Dagar till deadline** . Antalet dagar räknas efter att den dokumenterade har tilldelats en användare för signering.
 * **E-postfrekvens för påminnelse:** Du kan skicka en påminnelse via e-post varje dag eller vecka. Veckan räknas från den dag som den dokumenterade tilldelas en användare för signering.
 * **Underskriftsprocess:** Du kan välja att signera ett dokument i en sekventiell eller parallell ordning. I sekventiell ordning tar en signerare emot dokumentet i taget för signering. När den första signeraren har slutfört signeringen av dokumentet skickas dokumentet till den andra signeraren och så vidare. Flera signerare kan signera ett dokument samtidigt i parallell ordning.
 * **URL för omdirigering:** Ange en URL för omdirigering. När dokumentet har signerats kan du dirigera om den som tilldelats till en URL. Oftast innehåller denna URL ett tackmeddelande eller ytterligare instruktioner.
-* **Arbetsflödesfas:** Ett arbetsflöde kan ha flera steg. Dessa steg visas i AEM Inbox. Du kan definiera de här stegen i modellens egenskaper (Sidspark > Sida > Sidegenskaper > Steg).
+* **Arbetsflödesfas:** Ett arbetsflöde kan ha flera steg. Dessa steg visas i AEM Inkorg. Du kan definiera de här stegen i modellens egenskaper (Sidspark > Sida > Sidegenskaper > Steg).
 * **Välj signerare:** Ange metoden för att välja signerare för dokumentet. Du kan dynamiskt tilldela arbetsflödet till en användare eller en grupp eller manuellt lägga till information om en signerare.
 * **Skript eller tjänst för att välja signerare:** Alternativet är bara tillgängligt om alternativet Dynamiskt är markerat i fältet Välj signerare. Du kan ange ett ECMAScript eller en tjänst för att välja signerare och verifieringsalternativ för ett dokument.
-* **Signerarinformation:** Alternativet är bara tillgängligt om alternativet Manuellt är markerat i fältet Välj signerare. Ange e-postadress och välj en valfri verifieringsmekanism. Innan du väljer en verifieringsmekanism i två steg ska du kontrollera att motsvarande verifieringsalternativ är aktiverat för det konfigurerade Adobe Sign-kontot. Du kan använda en variabel av datatypen String för att definiera värden för **[!UICONTROL Email]**, **[!UICONTROL Country Code]** och **[!UICONTROL Phone Number]** fält. Fälten **[!UICONTROL Country Code]** och **[!UICONTROL Phone Number]** visas bara om du väljer **[!UICONTROL Phone Verification]** i **[!UICONTROL 2-step verification]** listrutan.
+* **Signerarinformation:** Alternativet är bara tillgängligt om alternativet Manuellt är markerat i fältet Välj signerare. Ange e-postadress och välj en valfri verifieringsmekanism. Innan du väljer en verifieringsmekanism i två steg måste du se till att motsvarande verifieringsalternativ är aktiverat för det konfigurerade Adobe Sign-kontot. Du kan använda en variabel av datatypen String för att definiera värden för **[!UICONTROL Email]**, **[!UICONTROL Country Code]** och **[!UICONTROL Phone Number]** fält. Fälten **[!UICONTROL Country Code]** och **[!UICONTROL Phone Number]** visas bara om du väljer **[!UICONTROL Phone Verification]** i **[!UICONTROL 2-step verification]** listrutan.
 * **Statusvariabel:** Ett Adobe Sign-aktiverat dokument lagrar dokumentets signeringsstatus i en variabel av datatypen String. Ange namnet på statusvariabeln (adobeSignStatus). En statusvariabel för en instans finns i CRXDE på /etc/workflow/instances/&lt;server>/&lt;datum-tid>/&lt;instans av arbetsflödesmodell>/workItems/&lt;nod>/metaData innehåller status för en variabel.
 * **Spara signerat dokument med följande alternativ:** Ange platsen där signerade dokument ska sparas. Du kan välja att skriva över nyttolastfilen, placera det signerade dokumentet på en plats i nyttolastkatalogen eller lagra det signerade dokumentet i en variabel av Dokumenttyp.
 
 ## Steg för Document Services {#document-services-steps}
 
-AEM Document Services är en uppsättning tjänster för att skapa, sammanställa och skydda PDF-dokument. AEM Forms tillhandahåller ett separat AEM Workflow-steg för varje dokumenttjänst.
+AEM dokumenttjänster är en uppsättning tjänster för att skapa, sammanställa och skydda PDF-dokument. AEM Forms tillhandahåller ett separat AEM arbetsflöde för varje dokumenttjänst.
 
-På samma sätt som andra arbetsflödessteg för AEM Forms, som Tilldela uppgift, Skicka e-post och Signera dokument, kan du använda variabler i alla steg i AEM Document Services. Mer information om att skapa och hantera variabler finns i [Variabler i AEM-arbetsflöden](../../forms/using/variable-in-aem-workflows.md).
+På samma sätt som andra arbetsflödessteg i AEM Forms, till exempel Tilldela uppgift, Skicka e-post och Signera dokument, kan du använda variabler i alla steg i AEM dokumenttjänster. Mer information om att skapa och hantera variabler finns i [Variabler i AEM arbetsflöden](../../forms/using/variable-in-aem-workflows.md).
 
 ### Använd tidsstämpelsteg för dokument {#apply-document-time-stamp-step}
 
@@ -314,7 +315,7 @@ Skapar ett PDF-dokument av den angivna URL-, HTML- och ZIP-filen.
 
 Exporterar data från en PDF forms- eller XDP-fil. Du måste ange filsökvägen för Input Document och Export Data Format. Alternativen för Exportera dataformat är Auto, XDP och XmlData.
 
-### Exportera PDF till angivet textsteg {#export-pdf-to-specified-type-step}
+### Export PDF till angivet typsteg {#export-pdf-to-specified-type-step}
 
 Konverterar ett PDF-dokument till ett valt format.
 
@@ -338,13 +339,13 @@ Kör DDX-filen på den angivna kartan över indatadokument och returnerar de man
 >
 >Du kan använda variabler för att ange DDX-filen för indatadokument. Lagra DDX-filen i en variabel av dokumentdatatypen eller XML-datatypen.
 
-### Optimera PDF-steget {#optimize-pdf-step}
+### Optimize PDF step {#optimize-pdf-step}
 
 Optimerar PDF-filer genom att minska deras storlek. Resultatet av konverteringen är PDF-filer som kan vara mindre än originalversionerna. Den här åtgärden konverterar även PDF-dokument till den PDF-version som anges i optimeringsparametrarna.
 
 Optimeringsinställningarna anger hur filerna optimeras. Här följer några exempelinställningar:
 
-* Target PDF-version
+* Målversion för PDF
 * Ignorera objekt som JavaScript-åtgärder och inbäddade sidminiatyrer
 * Ignorera användardata som kommentarer och bifogade filer
 * Ignorerar ogiltiga eller oanvända inställningar
