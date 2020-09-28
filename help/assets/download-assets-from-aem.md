@@ -1,11 +1,11 @@
 ---
-title: Hämta digitala resurser från [!DNL Adobe Experience Manager].
+title: Hämta resurser
 description: Lär dig hur du hämtar resurser [!DNL Adobe Experience Manager] från och aktiverar eller inaktiverar hämtningsfunktionen.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '822'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Så här hämtar du resurser:
    | **[!UICONTROL Email]** | Ett e-postmeddelande skickas till användaren. Standardmallar för e-post finns på följande platser:<ul><li>`/libs/settings/dam/workflow/notification/email/downloadasset`.</li><li>`/libs/settings/dam/workflow/notification/email/transientworkflowcompleted`.</li></ul> Mallar som du anpassar under distributionen finns på följande platser: <ul><li>`/apps/settings/dam/workflow/notification/email/downloadasset`.</li><li>`/apps/settings/dam/workflow/notification/email/transientworkflowcompleted`.</li></ul>Du kan lagra klientspecifika anpassade mallar på följande platser:<ul><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/downloadasset`.</li><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/transientworkflowcompleted`.</li></ul> |
    | **[!UICONTROL Asset(s)]** | Välj det här alternativet om du vill hämta resursen i dess ursprungliga form utan några återgivningar.<br>Alternativet Delresurser är tillgängligt om den ursprungliga tillgången har delresurser. |
    | **[!UICONTROL Rendition(s)]** | En återgivning är den binära representationen av en resurs. Resurser har en primär representation - den som utgörs av den överförda filen. De kan ha valfritt antal representationer. <br> Med det här alternativet kan du välja de återgivningar du vill hämta. Vilka återgivningar som är tillgängliga beror på vilken resurs du väljer. Alternativet är tillgängligt om resursen har några återgivningar. |
-   | **[!UICONTROL Smart Crops]** | Välj det här alternativet om du vill hämta alla smarta beskärningsåtergivningar av den valda resursen från AEM. En ZIP-fil med renderingarna Smart Crop skapas och hämtas till din lokala dator. |
+   | **[!UICONTROL Smart Crops]** | Välj det här alternativet om du vill hämta alla smarta beskärningsåtergivningar för den valda resursen från AEM. En ZIP-fil med renderingarna Smart Crop skapas och hämtas till din lokala dator. |
    | **[!UICONTROL Dynamic Rendition(s)]** | Välj det här alternativet om du vill generera en serie alternativa återgivningar i realtid. När du väljer det här alternativet väljer du också de återgivningar som du vill skapa dynamiskt genom att välja i listan [Bildförinställning](image-presets.md) . <br>Du kan dessutom välja storlek och måttenhet, format, färgrymd, upplösning och alla valfria bildmodifierare, t.ex. invertering av bilden. Alternativet är bara tillgängligt om du har [!DNL Dynamic Media] aktiverat. |
 
 1. In the dialog box, tap **[!UICONTROL Download.]**.
@@ -52,7 +52,7 @@ När du väljer en mapp att hämta hämtas hela resurshierarkin under mappen. Om
 
 Med standardservleten i [!DNL Experience Manager] kan autentiserade användare godtyckligt skicka stora, samtidiga hämtningsbegäranden för att skapa ZIP-filer med resurser som är synliga för dem och som kan överbelasta servern och nätverket. För att minska de potentiella DoS-riskerna som orsakas av den här funktionen är `AssetDownloadServlet` OSGi-komponenten inaktiverad som standard för publiceringsinstanser.
 
-Om du vill tillåta hämtning av resurser från DAM, till exempel när du använder Assets Share Commons eller någon annan portalliknande implementering, aktiverar du servleten manuellt via en OSGi-konfiguration. Adobe rekommenderar att du anger en så låg hämtningsstorlek som möjligt utan att det påverkar kraven för den dagliga hämtningen. Ett högt värde kan påverka prestandan.
+Om du vill tillåta hämtning av resurser från DAM, till exempel när du använder Assets Share Commons eller någon annan portalliknande implementering, aktiverar du servleten manuellt via en OSGi-konfiguration. Adobe rekommenderar att du anger en så låg hämtningsstorlek som möjligt utan att det påverkar den dagliga hämtningen. Ett högt värde kan påverka prestandan.
 
 1. Skapa en mapp med en namnkonvention som anger publiceringsmiljön som mål (`config.publish`): `/apps/<your-app-name>/config.publish`. Mer information om hur du definierar konfigurationsegenskaper för ett körningsläge finns i [Körningslägen](/help/sites-deploying/configure-runmodes.md#defining-configuration-properties-for-a-run-mode).
 1. Skapa en fil av typen `nt:file` med namnet i konfigurationsmappen `com.day.cq.dam.core.impl.servlet.AssetDownloadServlet.config`.
