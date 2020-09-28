@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 628b6dcd-8b1c-4166-8fc2-843baa86ac1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c2e6b55964ea5f3e180b17bd2a244882aa62ea
+source-git-commit: 824ddd48e4680eed1d4612c6ad450a8f1bc68e7c
 workflow-type: tm+mt
 source-wordcount: '965'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # Grundläggande om poäng och emblem {#scoring-and-badges-essentials}
 
-Med funktionen för poängsättning och märkning av AEM Communities kan man identifiera och belöna communitymedlemmar.
+AEM Communities poäng och badges ger möjlighet att identifiera och belöna communitymedlemmar.
 
 Information om hur du konfigurerar funktionen finns i
 
@@ -35,7 +35,7 @@ Den här sidan innehåller ytterligare teknisk information:
 
 >[!CAUTION]
 >
->Implementeringsstrukturen som visas i CRXDE Lite kan komma att ändras.
+>Den implementeringsstruktur som visas i CRXDE Lite kan komma att ändras.
 
 ## Visar emblem {#displaying-badges}
 
@@ -102,7 +102,7 @@ Så här konfigurerar du snabbt en slinglog-fil:
 
 
 
-![chlimage_1-248](assets/chlimage_1-248.png)
+![debug-scoring-log](assets/debug-scoring-log.png)
 
 Så här visar du loggposter:
 
@@ -118,17 +118,17 @@ Så här visar du loggposter:
 
    * Till exempel, `.../crx-quickstart/logs/scoring-debug.log`
 
-![chlimage_1-249](assets/chlimage_1-249.png)
+![poänglogg](assets/scoring-log.png)
 
 ## UGC för poängsättning och märkning {#ugc-for-scoring-and-badging}
 
 Det går att visa användargenererat innehåll som är relaterat till poängsättning och märkning när den valda SRP är antingen JSRP eller MSRP, men inte ASRP. (Om du inte känner till dessa termer läser du Översikt över [Community Content Storage](/help/communities/working-with-srp.md) and [Storage Resource Provider](/help/communities/srp.md).)
 
-Beskrivningarna för att komma åt betygs- och badging-data använder JSRP, eftersom UGC är lätt att komma åt med [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
+Beskrivningarna för att komma åt betygs- och badging-data använder JSRP, eftersom användargenerationen är lättillgänglig via [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
 
 **JSRP on author**: när du experimenterar i redigeringsmiljön resulterar det i användargenererat innehåll som bara är synligt från författarmiljön.
 
-**JSRP vid publicering**: På samma sätt måste du vid testning i publiceringsmiljön få tillgång till CRXDE Lite med administratörsbehörighet för en publiceringsinstans. Om publiceringsinstansen körs i [produktionsläge](/help/sites-administering/production-ready.md) (noSampleContent Runmode) måste du [aktivera CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md).
+**JSRP vid publicering**: På samma sätt måste du, om du testar i publiceringsmiljön, ha administratörsbehörighet för en publiceringsinstans i CRXDE Lite. Om publiceringsinstansen körs i [produktionsläge](/help/sites-administering/production-ready.md) (noSampleContent Runmode) måste du [aktivera CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md).
 
 UGC:s basplats på JSRP är `/content/usergenerated/asi/jcr/`.
 
@@ -145,9 +145,9 @@ De senaste Javadocs-filerna för det installerade funktionspaketet är tillgäng
 
 ### Exempelinställningar {#example-setup}
 
-Skärmbilderna av databasdata kommer från att konfigurera poängsättning och märkning för ett forum på två olika AEM-webbplatser:
+Skärmbilderna av databasdata kommer från hur du ställer in poängsättning och märkning för ett forum på två olika AEM:
 
-1. En AEM-webbplats *med* ett unikt ID (communitywebbplats skapad med guide):
+1. En AEM webbplats *med* ett unikt ID (community-webbplats skapad med guide):
 
    * Använda självstudiekursen Komma igång (engagera) som skapades under självstudiekursen [Komma igång](/help/communities/getting-started.md)
    * Hitta forumsidnoden
@@ -178,7 +178,7 @@ Skärmbilderna av databasdata kommer från att konfigurera poängsättning och m
    * En användare loggar in, skapar ett forumämne och tilldelas ett bronze-märke
 
 
-1. En AEM-webbplats *utan* unikt ID:
+1. En AEM webbplats *utan* ett unikt ID:
 
    * Använda guiden [Community Components](/help/communities/components-guide.md)
    * Hitta forumsidnoden
@@ -217,7 +217,7 @@ Skärmbilderna av databasdata kommer från att konfigurera poängsättning och m
 
    När en användare har fått två bronze-märken och tilldelats ett moderatormärke, är det så här användaren visas med sitt foruminlägg.
 
-![chlimage_1-250](assets/chlimage_1-250.png)
+   ![moderator](assets/moderator.png)
 
 >[!NOTE]
 >
@@ -229,7 +229,8 @@ Skärmbilderna av databasdata kommer från att konfigurera poängsättning och m
    >  /libs/settings/community/scoring/rules/site2/forums-scoring
    >
    >
-* Skapa unika märkesbilder för olika AEM-webbplatser
+* Skapa unika märkesbilder för olika AEM
+
 >
 
 
@@ -244,7 +245,7 @@ I undersökningssyfte, till exempel med JSRP, är baskamappen som innehåller po
 
 Den underordnade noden för `scoring` är resultatregelns namn. Det bästa sättet är alltså att betygsregelnamn på en server är globalt unika.
 
-För Geometrixx Engage-webbplatsen finns användaren och poängen i en sökväg som är konstruerad med namnet på bedömningsregeln, communityplatsens webbplats-ID ( `engage-ba81p`), ett unikt ID och användarens ID:
+För webbplatsen Geometrixx Engage finns användaren och poängen i en sökväg som är konstruerad med resultatregelnamnet, communityplatsens webbplats-ID ( `engage-ba81p`), ett unikt ID och användarens ID:
 
 * `.../scoring/forums-scoring/engage-ba81p/6d179715c0e93cb2b20886aa0434ca9b5a540401/riley`
 
@@ -254,7 +255,7 @@ För stödwebbplatsen för Community Components är användaren och poängen i e
 
 Ljudspåret lagras i egenskapen `scoreValue_tl` som bara kan innehålla ett värde eller indirekt referera till en atomicCounter.
 
-![chlimage_1-251](assets/chlimage_1-251.png)
+![access-scoring-ugc](assets/access-scoring-ugc.png)
 
 ### Access Badging UGC {#access-badging-ugc}
 
@@ -270,11 +271,11 @@ Följs av sökvägen till användarens profil och avslutas i en badges-mapp, til
 
 #### Tilldelad bricka {#awarded-badge}
 
-![chlimage_1-252](assets/chlimage_1-252.png)
+![tilldelad-badging-ugc](assets/access-badging-ugc.png)
 
 #### Tilldelat märke {#assigned-badge}
 
-![chlimage_1-253](assets/chlimage_1-253.png)
+![tilldelad-badge](assets/assigned-badge.png)
 
 ## Additional Information {#additional-information}
 
