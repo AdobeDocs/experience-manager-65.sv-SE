@@ -1,11 +1,11 @@
 ---
-title: Use Connected Assets to share DAM assets in [!DNL Adobe Experience Manager Sites] authoring workflow.
+title: Använd Connected Assets när du vill dela DAM-resurser i [!DNL Sites]
 description: Använd resurser som är tillgängliga på en [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] fjärrdistribution.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 28c55333e0eebb68ada46ee89785f5f6475abf9e
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '2019'
+source-wordcount: '2017'
 ht-degree: 42%
 
 ---
@@ -32,9 +32,9 @@ Innan du använder eller konfigurerar den här funktionen bör du kontrollera f�
 
    |  | [!DNL Sites] som en Cloud Service | [!DNL Experience Manager] 6.5 [!DNL Sites] på AMS | [!DNL Experience Manager] 6.5 [!DNL Sites] på plats |
    |---|---|---|---|
-   | **[!DNL Experience Manager Assets]som en Cloud Service ** | Stöds | Stöds | Stöds |
-   | **[!DNL Experience Manager]6.5[!DNL Assets]på AMS ** | Stöds | Stöds | Stöds |
-   | **[!DNL Experience Manager]6.5[!DNL Assets]på plats ** | Stöds ej | Stöds ej | Stöds ej |
+   | **[!DNL Experience Manager Assets]som en Cloud Service** | Stöds | Stöds | Stöds |
+   | **[!DNL Experience Manager]6.5[!DNL Assets]på AMS** | Stöds | Stöds | Stöds |
+   | **[!DNL Experience Manager]6.5[!DNL Assets]på plats** | Stöds ej | Stöds ej | Stöds ej |
 
 ### Filformat som stöds {#mimetypes}
 
