@@ -1,11 +1,11 @@
 ---
-title: '[!DNL Assets] HTTP API in [!DNL Adobe Experience Manager].'
+title: '[!DNL Assets] HTTP API.'
 description: Skapa, läsa, uppdatera, ta bort, hantera digitala resurser med HTTP API i [!DNL Adobe Experience Manager Assets].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: fb3fdf25718cd099ff36a206718aa4bf8a2b5068
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '1661'
+source-wordcount: '1660'
 ht-degree: 0%
 
 ---
