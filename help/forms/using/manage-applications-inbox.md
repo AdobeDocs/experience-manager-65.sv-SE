@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dd11fd83-3df1-4727-8340-8c5426812823
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+source-git-commit: d324586eb1d4fb809bf87641001b92a1941e6548
 workflow-type: tm+mt
-source-wordcount: '934'
+source-wordcount: '1115'
 ht-degree: 0%
 
 ---
@@ -123,3 +123,37 @@ På fliken **[!UICONTROL Workflow Details]** visas varje steg i arbetsflödet. T
 
 ![complete-task-workflow](assets/completed-task-workflow.png)
 
+## Felsökning {#troubleshooting-workflows}
+
+### Det går inte att visa objekt som är relaterade till AEM arbetsflöde i AEM inkorg {#unable-to-see-aem-worklow-items}
+
+En arbetsflödesmodellägare kan inte visa objekt som är relaterade till AEM arbetsflöde i AEM inkorg. Lös problemet genom att lägga till indexen nedan i din AEM och återskapa indexet.
+
+1. Använd någon av följande metoder för att lägga till index:
+
+   * Skapa följande noder i CRX DE vid `/oak:index/workflowDataLucene/indexRules/granite:InboxItem/properties` med respektive egenskaper enligt följande tabell:
+
+      | Nod | Egenskap | Typ |
+      |---|---|---|
+      | sharedWith | sharedWith | STRÄNG |
+      | låst | låst | BOOLEAN |
+      | returnerade | returnerade | BOOLEAN |
+      | allowInboxSharing | allowInboxSharing | BOOLEAN |
+      | allowExplicitSharing | allowExplicitSharing | BOOLEAN |
+
+
+   * Distribuera indexen via ett AEM. Du kan använda ett [AEM Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype) -projekt för att skapa ett distribuerbart AEM. Använd följande exempelkod för att lägga till index i ett AEM Archetype-projekt:
+
+   ```Java
+      .property("sharedWith", "sharedWith").type(TYPENAME_STRING).propertyIndex()
+      .property("locked", "locked").type(TYPENAME_BOOLEAN).propertyIndex()
+      .property("returned", "returned").type(TYPENAME_BOOLEAN).propertyIndex()
+      .property("allowInboxSharing", "allowInboxSharing").type(TYPENAME_BOOLEAN).propertyIndex()
+      .property("allowExplicitSharing", "allowExplicitSharing").type(TYPENAME_BOOLEAN).propertyIndex()
+   ```
+
+1. [Skapa ett egenskapsindex och ange det till true](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/deploying/queries-and-indexing.html#the-property-index).
+
+1. När du har konfigurerat index i CRX DE eller distribuerat via ett paket [indexerar du om databasen](https://helpx.adobe.com/in/experience-manager/kb/HowToCheckLuceneIndex.html#Completelyrebuildtheindex).
+
+https://docs.adobe.com/content/help/en/experience-manager-65/deploying/deploying/queries-and-indexing.html
