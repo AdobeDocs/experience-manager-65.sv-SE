@@ -8,9 +8,9 @@ uuid: ffb2cc22-baaf-4525-a2e3-29f39271c670
 topic-tags: introduction
 discoiquuid: 655303a4-99bb-4ba3-9d50-a178f5edcf85
 translation-type: tm+mt
-source-git-commit: e3ecf724cdfcd20ef4c089605e644ad10ef1221b
+source-git-commit: 0b3884301e09eba6860891f00a98508033d12ec8
 workflow-type: tm+mt
-source-wordcount: '1955'
+source-wordcount: '1948'
 ht-degree: 5%
 
 ---
@@ -131,11 +131,11 @@ Sidhuvud och sidfot ger ett konsekvent och distinkt utseende i en adaptiv form. 
 
    | Egenskap | Värde |
    |---|---|
-   | Teckensnittsfamilj | Arial |
+   | Översikt | Arial |
    | Teckenfärg | FFFFFF |
    | Teckenstorlek | 54px |
 
-1. Tryck på [!UICONTROL header] widgeten och tryck på **[!UICONTROL Header]**. Alternativen för att formatera sidhuvudswidgeten visas till vänster. Expandera **[!UICONTROL Dimensions & Position]** dragspelspanelen, ange **[!UICONTROL Height]** som `120px`och tryck på ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. Tryck på [!UICONTROL header] widgeten och tryck på **[!UICONTROL Header]**. Alternativen för att formatera sidhuvudswidgeten visas till vänster. Expandera dragspelsfliken, ställ in **[!UICONTROL Dimensions & Position]** på **[!UICONTROL Height]** och tryck på `120px`aem_6_3_forms_save ![](assets/aem_6_3_forms_save.png).
 1. Expandera **[!UICONTROL Background]** dragspelswidgeten och ställ in **[!UICONTROL Background Color]** på `F6921E.`
 
    Hovra över **[!UICONTROL Image & Gradient]** > **[!UICONTROL + Add]**, tryck **[!UICONTROL Image]**. Ange följande egenskaper och tryck på ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
@@ -203,7 +203,7 @@ Du kan använda flera komponenter i ett adaptivt formulär för att hämta data.
      </tr> 
      <tr> 
       <td>Text</td> 
-      <td>Teckensnittsfamilj</td> 
+      <td>Översikt</td> 
       <td>Arial</td> 
      </tr> 
      <tr> 
@@ -442,18 +442,18 @@ Vissa format gäller bara för en viss komponent. Sådana komponenter är format
 
 Du kan använda olika teckensnitt för att utforma ett anpassat formulär. Alla enheter som det adaptiva formuläret visas på kanske inte har de teckensnitt som används för att utforma det adaptiva formuläret. Du kan använda en webbteckensnittstjänst för att leverera nödvändiga teckensnitt till målenheten.
 
-[!DNL Adobe Typekit] är en webbteckensnittstjänst. Du kan konfigurera och använda tjänsten med adaptiva formulär. Så här använder du [!DNL Adobe Typekit] i en adaptiv form:
+[!DNL Adobe Fonts] är en webbteckensnittstjänst. Du kan konfigurera och använda tjänsten med adaptiva formulär. Så här använder du [!DNL Adobe Fonts] i en adaptiv form:
 
 >[!NOTE]
 >
 >![Typekit-to-adobe-fonts](assets/typekit-to-adobe-fonts.png) [!DNL Typekit] kallas nu Adobe Fonts och ingår i Creative Cloud och andra prenumerationer. [Läs mer](https://fonts.adobe.com/).
 
-1. Skapa ett [Adobe Typekit](https://typekit.com/) -konto, skapa ett kit, lägg till teckensnittet Myriad Pro i paketet, publicera paketet och få ett paket-ID. Du måste använda [!DNL Adobe Typekit] teckensnitt (webbteckensnitt) i en anpassningsbar form.
-1. Navigera till [!DNL Forms] adobeexperienceManager ![](assets/adobeexperiencemanager.png) > **[!UICONTROL Adobe Experience Manager]****[!UICONTROL Tools]** hammer ![>](assets/hammer.png) > i den AEM **[!UICONTROL Deployment]** **[!UICONTROL Cloud Services]** servern. På sidan Cloud Services navigerar du till **[!UICONTROL Third Party Services]** > **[!UICONTROL Typekit]** och klickar på **[!UICONTROL Configure]** Nu under [!UICONTROL Typekit]. Om det redan finns en konfiguration klickar du på plusknappen (+) för att skapa en ny instans.
+1. Skapa ett [Adobe Fonts](https://typekit.com/) -konto, skapa ett kit, lägg till teckensnittet Myriad Pro i paketet, publicera paketet och få ett paket-ID. Det krävs att du använder [!DNL Adobe Fonts] (webbteckensnitt) i en anpassningsbar form.
+1. Gå till [!DNL Forms] adobeexperienceManager ![](assets/adobeexperiencemanager.png) > **[!UICONTROL Adobe Experience Manager]****[!UICONTROL Tools]** hammer ![> i AEM](assets/hammer.png) server **[!UICONTROL Adobe Fonts]**. Öppna nu en konfigurationsmapp. Om det redan finns en konfiguration klickar du på **[!UICONTROL Create]** knappen för att skapa en ny instans.
 
    I dialogrutan Skapa konfiguration anger du en **rubrik** för konfigurationen och klickar på **[!UICONTROL Create]**. Du omdirigeras till konfigurationssidan. I den [!UICONTROL Edit Component] dialogruta som visas anger du ditt **kit-ID** och klickar på **[!UICONTROL OK]**.
 
-1. Konfigurera temat så att det använder [!DNL TypeKit] konfigurationen. Öppna i temaredigeraren **[!UICONTROL Global Theme]** i författarinstansen. Gå till **[!UICONTROL Theme Options]** temaalternativ ![>](assets/theme-options.png) **[!UICONTROL Configure]** i temaredigeraren. I **[!UICONTROL Typekit Configuration]** fältet väljer du paketet och klickar på **[!UICONTROL Save]**.
+1. Konfigurera temat så att det använder [!DNL Adobe Fonts] konfigurationen. Öppna i temaredigeraren **[!UICONTROL Global Theme]** i författarinstansen. Gå till **[!UICONTROL Theme Options]** temaalternativ ![>](assets/theme-options.png) **[!UICONTROL Configure]** i temaredigeraren. I **[!UICONTROL Adobe Fonts Configuration]** fältet väljer du paketet och klickar på **[!UICONTROL Save]**.
 
-   De teckensnitt som läggs till i [!UICONTROL Typekit] är tillgängliga för markering i **[!UICONTROL Text]** dragspelsfönstret för alla komponenter.
+   De teckensnitt som läggs till i **[!UICONTROL Adobe Fonts]** är tillgängliga för markering i **[!UICONTROL Text]** dragspelsfönstret för alla komponenter.
 
