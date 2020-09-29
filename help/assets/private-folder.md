@@ -3,10 +3,10 @@ title: Privata mappar för att dela resurser
 description: Lär dig hur du skapar en privat mapp [!DNL Adobe Experience Manager Assets] och delar den med andra användare samt tilldelar olika behörigheter till dem.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 63d08f932b09e375e1b0da92cde27a60ec6e7f56
 workflow-type: tm+mt
-source-wordcount: '628'
-ht-degree: 1%
+source-wordcount: '576'
+ht-degree: 0%
 
 ---
 
@@ -82,15 +82,4 @@ Du kan ta bort en mapp genom att markera mappen och välja [!UICONTROL Delete] a
 >[!NOTE]
 >
 >Om du tar bort en mapp med metoden ovan från användargränssnittet tas även de associerade användargrupperna bort.
-Befintliga redundanta, oanvända och autogenererade användargrupper kan rensas bort från databasen med [JMX](#group-clean-up-jmx).
-
-### Använd JMX för att rensa upp oanvända användargrupper {#group-clean-up-jmx}
-
-Så här rensar du databasen med oanvända användargrupper:
-
-1. Öppna JMX-filen för att rensa överflödiga grupper för resurser på din [!DNL Experience Manager] författarinstans från `http://[server]:[port]/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`.
-Till exempel, `http://no1010042068039.corp.adobe.com:4502/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`.
-
-1. Anropa `clean` metoden från denna JMX.
-
-Du kan se att alla redundanta användargrupper eller de automatiskt genererade grupperna (som skapas när du skapar en mapp med samma namn som en tidigare borttagen grupp) tas bort från sökvägen `/home/groups/mac/default/<user_name>/<folder_name>`.
+Befintliga redundanta, oanvända och autogenererade användargrupper kan rensas bort från databasen med hjälp av `clean` metoden i JMX i författarinstansen (http://[server]:[port]/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets).
