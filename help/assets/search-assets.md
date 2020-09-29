@@ -4,7 +4,7 @@ description: Lär dig hur du söker efter nödvändiga resurser [!DNL Adobe Expe
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 7b3282f086ba1f0a2f1e5430b90a6742ddf946d6
+source-git-commit: c94220ca6e31716b6de4dac99dfb98ac1ba1faff
 workflow-type: tm+mt
 source-wordcount: '5904'
 ht-degree: 4%
@@ -27,7 +27,7 @@ ht-degree: 4%
 | [Sökrankning och förstärkning](#searchrank) | [Textextrahering](#extracttextupload) | [Smarta samlingar](#collections) |
 | [Avancerad sökning: filtrering och sökningens omfattning](#scope) | [Anpassade predikat](#custompredicates) | [Förstå oväntade resultat och felsökning](#troubleshoot-unexpected-search-results-and-issues) |
 | [Sök bland andra lösningar och appar](#beyondomnisearch):<ul><li>[Adobe Asset Link](#aal)</li><li>[Varumärkesportal](#brandportal)</li><li>[Experience Manager](#desktopapp)</li><li>[Adobe Stock-bilder](#adobestock)</li><li>[Dynamiska medieresurser](#dynamicmedia)</li></ul> |  |  |
-| [Resursväljaren](#assetpicker) |  |  |
+| [Resursväljare](#assetpicker) |  |  |
 | [Begränsningar](#limitations) och [tips](#tips) |  |  |
 | [Illustrerade exempel](#samples) |  |  |
 
