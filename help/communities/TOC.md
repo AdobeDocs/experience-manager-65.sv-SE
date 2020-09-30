@@ -6,9 +6,9 @@ user-guide-title: Användarhandbok för AEM 6.5 Communities
 breadcrumb-title: Communities Guide
 user-guide-description: Create online experiences such as forums, user groups, learning resources, and other social features.
 translation-type: tm+mt
-source-git-commit: e917a36f9b8748080e9ab770a7f58f06123ea166
+source-git-commit: 42606e76742fe7698c4c186208e515ed22adc5a4
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Användarhandbok för AEM 6.5 Communities {#communities}
 
-+ [Översikt över användarhandboken för Communities](home.md)
++ [AEM Communities - översikt](home.md)
 + Introduktion till AEM Communities {#introduction}
    + [Communities Sites](administer-landing.md)
    + [AEM Communities - översikt](overview.md)
@@ -150,7 +150,7 @@ ht-degree: 0%
    + [Katalogfunktion](catalog.md)
    + [Använda kommentarer](comments.md)
    + [Innehållsfunktion](featured.md)
-   + [Klientbiblioteksfunktion](file-library.md)
+   + [Filbiblioteksfunktion](file-library.md)
    + [Forumfunktion](forum.md)
    + [Community-grupper](creating-groups.md)
    + [Idéfunktion](ideation-feature.md)
