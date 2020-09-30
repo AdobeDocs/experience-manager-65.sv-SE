@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: b9333558-6af9-46b2-9f03-3722645c69a6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 17088abc71bb820693259088c8a9b938a43cd9d3
+source-git-commit: 99fb808013da18ed028d59c43deab5e815169e26
 workflow-type: tm+mt
-source-wordcount: '1727'
+source-wordcount: '1724'
 ht-degree: 1%
 
 ---
@@ -98,7 +98,7 @@ Kontrollera att de flesta kryssrutor är avmarkerade för [användarhantering](/
 
 #### TAGGING {#tagging}
 
-De taggar som kan användas för communityinnehåll kontrolleras genom att AEM-namnutrymmen som tidigare definierats via [taggningskonsolen](/help/sites-administering/tags.md#tagging-console) (till exempel namnutrymmet [Tutorial](/help/communities/enablement-setup.md#create-tutorial-tags)) väljs.
+De taggar som kan användas för communityinnehåll kontrolleras genom att AEM namnutrymmen som tidigare definierats via [taggningskonsolen](/help/sites-administering/tags.md#tagging-console) (till exempel namnutrymmet [Tutorial](/help/communities/enablement-setup.md#create-tutorial-tags)) väljs.
 
 Om du väljer Taggnamnutrymmen för communitywebbplatsen begränsas dessutom det urval som visas när du definierar kataloger och aktiveringsresurser. Viktig information finns i [Tagga aktiveringsresurser](/help/communities/tag-resources.md) .
 
@@ -133,9 +133,9 @@ Acceptera de globala standardinställningarna för [moderering](/help/communitie
 
 ![chlimage_1-452](assets/chlimage_1-452.png)
 
-#### ANALYTICS {#analytics}
+#### ANALYS {#analytics}
 
-I listrutan väljer du Analytics molntjänstramverk som konfigurerats för den här communitywebbplatsen.
+I listrutan väljer du Analytics-molntjänstramverket som är konfigurerat för den här communitywebbplatsen.
 
 Det som visas på skärmbilden `Communities`är ramverksexemplet från [konfigurationsdokumentationen.](/help/communities/analytics.md#aem-analytics-framework-configuration)
 
@@ -160,7 +160,7 @@ För en aktiveringscommunity måste du identifiera en eller flera aktiveringsans
    * Typ `s`
    * Välj `Sirius Nilson`
 
-* **Organisations-ID** för Marketing Cloud (valfritt) ID:t för ett Adobe Analytics-konto som är nödvändigt när [Video Heartbeat Analytics](/help/communities/analytics.md#video-heartbeat-analytics) inkluderas i aktiveringsrapporteringen.
+* **Marketing Cloud Org Id**(valfritt) ID:t för ett Adobe Analytics-konto som krävs när [Video Heartbeat Analytics](/help/communities/analytics.md#video-heartbeat-analytics) inkluderas i aktiveringsrapporten.
 
 ![chlimage_1-457](assets/chlimage_1-457.png)
 
@@ -184,7 +184,7 @@ När du har valt communityplatsens mapp för du muspekaren över platsikonen så
 
 ![siteactionicons](assets/siteactionicons.png)
 
-När du markerar ellipsikonen (ikonen Fler åtgärder) visas alternativen Exportera plats och Ta bort plats.
+När du väljer ellipsikonen (ikonen Fler åtgärder) visas alternativen Exportera plats och Ta bort plats.
 
 ![siteactionsnya](assets/siteactionsnew.png)
 
@@ -202,7 +202,7 @@ Från vänster till höger är de:
 
    Välj ikonen world om du vill publicera communitywebbplatsen (till localhost:4503 som standard).
 
-* **Exportera webbplats**
+* **Exportera plats**
 
    Välj exportikonen om du vill skapa ett paket för communitywebbplatsen som både lagras i [pakethanteraren](/help/sites-administering/package-manager.md) och hämtas.
 Observera att UGC inte ingår i platspaketet.
@@ -327,11 +327,11 @@ Om det inte går att spara ändringarna måste du se till att nodnamnet är `loc
 
 #### Felsökning: Det gick inte att omdirigera {#troubleshooting-fail-to-redirect}
 
-&#39;**$**&#39; i slutet av strängen för det reguljära uttrycket `sling:match` är avgörande, så att endast exakt `https://localhost:4503/` mappas, annars läggs omdirigeringsvärdet till alla sökvägar som kan finnas efter server:port i URL:en. När AEM försöker dirigera om till inloggningssidan misslyckas den således.
+&#39;**$**&#39; i slutet av strängen för det reguljära uttrycket `sling:match` är avgörande, så att endast exakt `https://localhost:4503/` mappas, annars läggs omdirigeringsvärdet till alla sökvägar som kan finnas efter server:port i URL:en. När AEM försöker dirigera om till inloggningssidan misslyckas den alltså.
 
 ## Ändra communityplatsen {#modifying-the-community-site}
 
-När webbplatsen har skapats kan författare använda ikonen [](/help/communities/sites-console.md#authoring-site-content) Open Site för att utföra vanliga AEM-redigeringsaktiviteter.
+När webbplatsen har skapats kan författare använda ikonen [](/help/communities/sites-console.md#authoring-site-content) Öppna plats för att utföra AEM standardåtgärder.
 
 Dessutom kan administratörer använda ikonen [](/help/communities/sites-console.md#modifying-site-properties) Redigera plats för att ändra egenskaper för platsen, till exempel titeln.
 
@@ -339,7 +339,7 @@ Kom ihåg att **spara** och **publicera** webbplatsen igen efter eventuella änd
 
 >[!NOTE]
 >
->Om du inte känner till AEM läser du dokumentationen om [grundläggande hantering](/help/sites-authoring/basic-handling.md) och en [snabbguide till redigeringssidorna](/help/sites-authoring/qg-page-authoring.md).
+>Om du inte känner till AEM kan du läsa dokumentationen om [grundläggande hantering](/help/sites-authoring/basic-handling.md) och en [snabbguide till hur du skapar sidor](/help/sites-authoring/qg-page-authoring.md).
 
 
 ### Lägg till en katalog {#add-a-catalog}
@@ -350,7 +350,7 @@ Om inte kan du enkelt lägga till katalogfunktionen. På så sätt kan andra med
 
 Om platsstrukturen redan innehåller katalogfunktionen kan dess namn ändras.
 
-Om du vill ändra platsens struktur går du till konsolen **Webbplatser** , öppnar `enable` mappen och väljer ikonen **Redigera plats** för att komma åt egenskaperna för `Enablement Tutorial`.
+Om du vill ändra platsens struktur går du till **[!UICONTROL Communities]** > **[!UICONTROL Sites]** Konsol, öppnar `enable` mappen och väljer ikonen **Redigera plats** för att komma åt egenskaperna för `Enablement Tutorial`.
 
 Välj STRUKTURpanelen om du vill lägga till en katalog eller ändra en befintlig katalog:
 
