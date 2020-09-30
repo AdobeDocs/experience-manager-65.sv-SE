@@ -1,8 +1,8 @@
 ---
-title: Så här skapar du AEM-projekt med Apache Maven
-seo-title: Så här skapar du AEM-projekt med Apache Maven
-description: I det här dokumentet beskrivs hur du konfigurerar ett AEM-projekt baserat på Apache Maven
-seo-description: I det här dokumentet beskrivs hur du konfigurerar ett AEM-projekt baserat på Apache Maven
+title: Skapa AEM projekt med Apache Maven
+seo-title: Skapa AEM projekt med Apache Maven
+description: I det här dokumentet beskrivs hur du konfigurerar ett AEM baserat på Apache Maven
+seo-description: I det här dokumentet beskrivs hur du konfigurerar ett AEM baserat på Apache Maven
 uuid: 5db68639-7393-48b7-9d81-5b19b596ff21
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,23 +11,23 @@ content-type: reference
 discoiquuid: 3ebc1d22-a7a2-4375-9aa5-a18a7ceb446a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3b64b1fe5d47f115681608f38e7e53d078c4698e
+source-git-commit: add17f46dfb292aeaf8425e5f75cfe955ed93cbc
 workflow-type: tm+mt
-source-wordcount: '2424'
+source-wordcount: '2468'
 ht-degree: 0%
 
 ---
 
 
-# Så här skapar du AEM-projekt med Apache Maven{#how-to-build-aem-projects-using-apache-maven}
+# Skapa AEM projekt med Apache Maven{#how-to-build-aem-projects-using-apache-maven}
 
 ## Översikt {#overview}
 
-I det här dokumentet beskrivs hur du konfigurerar ett AEM-projekt baserat på [Apache Maven](https://maven.apache.org/).
+I det här dokumentet beskrivs hur du konfigurerar ett AEM baserat på [Apache Maven](https://maven.apache.org/).
 
-Apache Maven är ett verktyg med öppen källkod för att hantera programvaruprojekt genom att automatisera byggen och tillhandahålla projektinformation av hög kvalitet. Det är det rekommenderade bygghanteringsverktyget för AEM-projekt.
+Apache Maven är ett verktyg med öppen källkod för att hantera programvaruprojekt genom att automatisera byggen och tillhandahålla projektinformation av hög kvalitet. Det är det rekommenderade bygghanteringsverktyget för AEM projekt.
 
-Att bygga ett AEM-projekt baserat på Maven ger dig flera fördelar:
+Att bygga AEM som bygger på Maven ger dig flera fördelar:
 
 * En IDE-agnostisk utvecklingsmiljö
 * Användning av Maven Archetypes och Artifacts från Adobe
@@ -37,20 +37,20 @@ Att bygga ett AEM-projekt baserat på Maven ger dig flera fördelar:
 
 ### Maven Project Archetypes {#maven-project-archetypes}
 
-Adobe tillhandahåller två Maven-arkitekter som kan fungera som baslinje för dina AEM-projekt. Mer information finns på länkarna nedan:
+Adobe tillhandahåller två Maven-arkitekter som kan fungera som baslinje för dina AEM projekt. Mer information finns på länkarna nedan:
 
-* [AEM-projekttyp](https://github.com/adobe/aem-project-archetype)
+* [AEM projekttyp](https://github.com/adobe/aem-project-archetype)
 * [Maven Archetype for Single Page Applications Starter Kit](https://github.com/adobe/aem-spa-project-archetype)
 
 ## Experience Manager API-beroenden {#experience-manager-api-dependencies}
 
 ### Vad är UberJar? {#what-is-the-uberjar}
 
-&quot;UberJar&quot; är det informella namn som ges till en särskild Java Archives-fil (JAR) från Adobe. Dessa JAR-filer innehåller alla publika Java-API:er som visas av Adobe Experience Manager. De innehåller även begränsade externa bibliotek, särskilt alla publika API:er i AEM som kommer från Apache Sling, Apache Jackrabbit, Apache Lucene, Google Guava och två bibliotek som används för bildbearbetning (Werner Randelshofer&#39;s CYMK JPEG ImageIO-bibliotek och TwelveMonkeys bildbibliotek). UberJars innehåller bara API-gränssnitt och klasser, vilket innebär att de bara innehåller gränssnitt och klasser som exporteras av ett OSGi-paket i AEM. De innehåller också en *MANIFEST.MF* -fil som innehåller rätt paketexportversioner för alla dessa exporterade paket, vilket säkerställer att projekt som skapats mot UberJar har rätt paketimportintervall.
+&quot;UberJar&quot; är det informella namn som ges till Java Archives-filen (JAR) från Adobe. Dessa JAR-filer innehåller alla Java-API:er som exponeras av Adobe Experience Manager. De innehåller även begränsade externa bibliotek, särskilt alla publika API:er som finns i AEM som kommer från Apache Sling, Apache Jackrabbit, Apache Lucene, Google Guava och två bibliotek som används för bildbearbetning (Werner Randelshofer&#39;s CYMK JPEG ImageIO library och TwelveMonkeys bildbibliotek). UberJars innehåller bara API-gränssnitt och klasser, vilket innebär att de bara innehåller gränssnitt och klasser som exporteras av ett OSGi-paket i AEM. De innehåller också en *MANIFEST.MF* -fil som innehåller rätt paketexportversioner för alla dessa exporterade paket, vilket säkerställer att projekt som skapats mot UberJar har rätt paketimportintervall.
 
 ### Varför skapade Adobe UberJars? {#why-did-adobe-create-the-uberjars}
 
-Tidigare var utvecklarna tvungna att hantera ett relativt stort antal enskilda beroenden till olika AEM-bibliotek, och när varje nytt API användes var det nödvändigt att lägga till ett eller flera individuella beroenden i projektet. I ett projekt ledde införandet av UberJar till att 30 olika beroenden togs bort från projektet.
+Tidigare var utvecklarna tvungna att hantera ett relativt stort antal enskilda beroenden till olika AEM bibliotek, och när varje nytt API användes var det nödvändigt att lägga till ett eller flera individuella beroenden i projektet. I ett projekt ledde införandet av UberJar till att 30 olika beroenden togs bort från projektet.
 
 Från och med AEM 6.5 tillhandahåller Adobe två UberJars: ett som innehåller borttagna gränssnitt och ett som tar bort dessa borttagna gränssnitt. Genom att referera till en explicit vid byggtillfället, är kunderna noga med att förstå om de är beroende av inaktuell kod.
 
@@ -58,10 +58,14 @@ Den andra Uber Jar rensar bort alla inaktuella klasser, metoder och egenskaper s
 
 ### Vilken UberJar ska användas? {#which-uberjar-to-use}
 
-AEM 6.5 finns i två versioner av Uber Jar:
+AEM 6.5 finns i två smaker av Uber Jar:
 
-1. Uber Jar - Inkluderar endast de publika gränssnitt som inte är markerade för borttagning. Detta är den **rekommenderade** funktionen för UberJar som hjälper till att framtidssäkra kodbasen från att förlita sig på inaktuella API:er.
+1. Uber Jar - Inkluderar endast de publika gränssnitt som inte är markerade för borttagning. Det här är den **rekommenderade** UberJar-metoden som används för att framtidssäkra kodbasen från att förlita sig på inaktuella API:er.
 1. Uber Jar med inaktuella API:er - Innehåller alla publika gränssnitt, inklusive de som markerats för borttagning i en framtida version av AEM.
+
+>[!NOTE]
+>
+>Från och med AEM 6.5.6 finns UberJar och andra tillhörande artefakter i [Maven Central-databasen](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/) i stället för i Adobe Public Maven-databasen (repo.adobe.com). Huvudfilen för UberJar har bytt namn till `uber-jar-<version>.jar`. Därför finns det inget värde `classifier`för `apis` -taggen `dependency` som värde.
 
 ### Hur använder jag UberJars? {#how-do-i-use-the-uberjars}
 
@@ -97,7 +101,7 @@ Om du använder Apache Maven som ett byggsystem (vilket är fallet för de flest
 </dependency>
 ```
 
-Om ditt företag redan använder en Maven Repository Manager, t.ex. Sonatype Nexus, Apache Archiva eller JFrog Artifactory, lägger du till rätt konfiguration i ditt projekt som referens till den här databashanteraren och lägger till Adobes Maven-databas ([https://repo.adobe.com/nexus/content/groups/public/](https://repo.adobe.com/nexus/content/groups/public/)) i din databashanterare.
+Om ditt företag redan använder en Maven Repository Manager, t.ex. Sonatype Nexus, Apache Archiva eller JFrog Artifactory, lägger du till rätt konfiguration i ditt projekt som referens till den här databashanteraren och lägger till Adobe Maven-databasen ([https://repo.maven.apache.org/maven2/](https://repo.maven.apache.org/maven2/)) i din databashanterare.
 
 Om du inte använder en databashanterare måste du lägga till ett *databaselement* i din *pom.xml* -fil:
 
@@ -106,7 +110,7 @@ Om du inte använder en databashanterare måste du lägga till ett *databaseleme
     <repository>
         <id>adobe-public-releases</id>
         <name>Adobe Public Repository</name>
-        <url>https://repo.adobe.com/nexus/content/groups/public/</url>
+        <url>https://repo.maven.apache.org/maven2/</url>
         <layout>default</layout>
     </repository>
 </repositories>
@@ -114,7 +118,7 @@ Om du inte använder en databashanterare måste du lägga till ett *databaseleme
     <pluginRepository>
         <id>adobe-public-releases</id>
         <name>Adobe Public Repository</name>
-        <url>https://repo.adobe.com/nexus/content/groups/public/</url>
+        <url>https://repo.maven.apache.org/maven2/</url>
         <layout>default</layout>
     </pluginRepository>
 </pluginRepositories>
@@ -126,7 +130,7 @@ Med UberJar kan du kompilera projektkod som är beroende av AEM API:er (och de A
 
 ### Vad kan jag inte göra med UberJar? {#what-can-t-i-do-with-the-uberjar}
 
-Eftersom UberJar **bara** innehåller API:er är den inte körbar och kan inte användas för att **köra** Adobe Experience Manager. För att köra AEM behöver du formuläret AEM QuickStart, antingen fristående eller WAR (Web Application Archive).
+Eftersom UberJar **bara** innehåller API:er är den inte körbar och kan inte användas för att **köra** Adobe Experience Manager. Om du vill köra AEM behöver du formuläret AEM QuickStart, antingen fristående eller WAR (Web Application Archive).
 
 ### Du nämnde begränsningar för enhetstester. Vänligen förklara vidare. {#you-mentioned-limitations-on-unit-tests-please-explain-further}
 
@@ -349,13 +353,13 @@ public class ClassWhichUsesAnInstanceMethodFromAPITest {
 
 #### Använd fall nr 3 - Anpassad kod som utökar en basklass från API:t {#use-case-custom-code-which-extends-a-base-class-from-the-api}
 
-Precis som för SCR Generation, **måste** du använda UberJar för att testa om koden utökar en basklass (abstrakt eller betong) från AEM API:t.
+Precis som för SCR Generation, **måste** du använda UberJar för att testa om koden utökar en basklass (abstrakt eller betong) från AEM API.
 
 ## Vanliga utvecklingsuppgifter med Maven {#common-development-tasks-with-maven}
 
 ### Så här lägger du till banor i innehållsmodulen {#how-to-add-paths-to-the-content-module}
 
-Innehållsmodulen innehåller en fil src/main/content/META-INF/vault/filter.xml som definierar filtren för AEM-paketet som skapas av Maven. Filen som skapas av Maven-arkivtypen ser ut så här:
+Innehållsmodulen innehåller en fil src/main/content/META-INF/vault/filter.xml som definierar filtren för det AEM paketet som byggs av Maven. Filen som skapas av Maven-arkivtypen ser ut så här:
 
 #### src/main/content/META-INF/vault/filter.xml {#src-main-content-meta-inf-vault-filter-xml}
 
@@ -457,9 +461,9 @@ Du måste också konfigurera om plugin-programmet maven-resources-plugin för at
 
 I Maven-konfigurationen som beskrivs hittills skapas ett innehållspaket som även kan innehålla komponenter och motsvarande JSP:er. Men Maven behandlar dem som andra filer som är en del av innehållspaketet och känner inte ens igen dem som JSP:er.
 
-De resulterande komponenterna fungerar på samma sätt i AEM, men det finns två stora fördelar med att göra Maven medveten om JSP:erna
+De resulterande komponenterna fungerar i AEM men det finns två stora fördelar med att göra Maven medveten om JSP:er
 
-* Maven kan misslyckas om JSP:er innehåller fel, så att dessa uppstår vid byggtillfället och inte när de kompileras första gången i AEM
+* Maven kan misslyckas om JSP:er innehåller fel, så att dessa visas vid byggtillfället och inte när de först kompileras i AEM
 * För IDE-miljöer som kan importera Maven-projekt möjliggör detta även kodkomplettering och stöd för taggbibliotek i JSP-programmen
 
 Det krävs två saker för att aktivera den här konfigurationen:
@@ -473,7 +477,7 @@ Nedanstående beroenden måste läggas till i modulens POM `content` .
 
 >[!NOTE]
 >
->Om du inte importerar produktberoenden enligt beskrivningen i [Importera AEM-produktberoenden](#importingaemproductdependencies) ovan, måste de också läggas till i den överordnade produktstrukturen tillsammans med den version som matchar din AEM-konfiguration enligt beskrivningen i [Lägga till beroenden](#addingdependencies) ovan. Kommentarerna i varje post nedan visar det paket som du vill söka efter i Beroendesökaren.
+>Om du inte importerar produktberoenden enligt beskrivningen i [Importera AEM produktberoenden](#importingaemproductdependencies) ovan, måste de också läggas till i den överordnade produktstrukturen tillsammans med den version som matchar din AEM konfiguration enligt beskrivningen i [Lägg till beroenden](#addingdependencies) ovan. Kommentarerna i varje post nedan visar paketet som du vill söka efter i Beroendesökaren.
 
 >[!NOTE]
 >
@@ -488,7 +492,7 @@ För att kompilera JSP:er i Maven `compile` fas använder vi Apache Slings [Mave
 * vi anger att den ska kompilera JSP:er i `${project.build.directory}/jsps-to-compile`
 * och returnerar resultatet till `${project.build.directory}/ignoredjspc` (vilket innebär `myproject/content/target/ignoredjspc`)
 
-* Vi har konfigurerat maven-resources-plugin för att kopiera JSP:er till `${project.build.directory}/jsps-to-compile` i genereringskällefasen och konfigurera den så att den inte kopierar `libs/` mappen (eftersom det är AEM-produktkod och vi varken vill använda beroenden för kompilering för projektet eller verifiera att den kompileras.
+* Vi har konfigurerat maven-resources-plugin för att kopiera JSP:er till `${project.build.directory}/jsps-to-compile` i genereringskällefasen och konfigurera den så att den inte kopierar `libs/` mappen (eftersom det är AEM produktkod och vi varken vill ha beroenden för kompilering för projektet eller behöver validera att den kompileras).
 
 Vårt främsta mål, enligt vad som anges ovan, är att validera JSP:erna och se till att byggprocessen misslyckas om de innehåller fel. Det är därför vi kompilerar dem till en separat katalog som ignoreras (och i själva verket raderas omedelbart därefter, som du kommer att se om en minut).
 
@@ -697,6 +701,6 @@ $ mvn -PautoInstallPackagePublish -PintegrationServer install
 
 ### Arbeta med AEM Communities {#how-to-work-with-aem-communities}
 
-När licens för AEM Communities krävs ytterligare en API-behållare.
+Om du har licens för AEM Communities krävs ytterligare en API-behållare.
 
 Mer information finns i [Använda Maven för grupper](/help/communities/maven.md)
