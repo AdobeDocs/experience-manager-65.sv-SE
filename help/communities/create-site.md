@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 8ae324ea-8b84-47a3-aabf-1fee2a3bd46d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d5f4b8a8c42df86831bb57b73949e443ec19d7ea
+source-git-commit: 99fb808013da18ed028d59c43deab5e815169e26
 workflow-type: tm+mt
-source-wordcount: '1642'
+source-wordcount: '1640'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 1%
 Använd författarinstansen för att skapa en community-webbplats. I AEM Author-instans:
 
 1. Logga in med administratörsbehörighet.
-1. Från global navigering går du till **Navigering, Communities, Sites.**
+1. Från global navigering, gå till **[!UICONTROL Communities]** > **[!UICONTROL Sites]**.
 
 Konsolen Communities Sites innehåller en guide som hjälper dig att skapa en communityplats. Du kan gå vidare till `Next` steget eller `Back` till föregående steg innan du implementerar platsen i det sista steget.
 
@@ -71,7 +71,7 @@ Välj det format som du vill använda på mallen. När du väljer det här alter
 
 (Valfritt) Ladda upp en banderollbild som ska visas på webbplatsens sidor. Banderollen är fäst vid webbläsarens vänstra kant, mellan communitysidhuvudet och navigeringslänkarna. Banderollhöjden beskärs till 120 pixlar. Banderollens storlek ändras inte så att den passar webbläsarens bredd och höjden 120 pixlar.
 
-![chlimage_1-284](assets/chlimage_1-284.png)
+![community-site-branding](assets/community-site-branding.png)
 
 ![upload-image-site](assets/upload-image-site.png)
 
@@ -81,7 +81,7 @@ Välj **Nästa**.
 
 Observera, innan du väljer Inställningar, att det finns sju avsnitt som ger åtkomst till konfigurationer som användarhantering, taggning, moderering, grupphantering, analys, översättning och aktivering. `Next`
 
-Gå till självstudiekursen [Komma igång med AEM Communities för att se om du kan](/help/communities/getting-started-enablement.md) använda aktiveringsfunktionerna.
+Gå till självstudiekursen [Komma igång med AEM Communities för att få](/help/communities/getting-started-enablement.md) hjälp med att aktivera funktioner.
 
 #### Användarhantering {#user-management}
 
@@ -102,14 +102,14 @@ Markera alla kryssrutor för [användarhantering](/help/communities/sites-consol
 
 #### TAGGING {#tagging}
 
-De taggar som kan användas för communityinnehåll kontrolleras genom att AEM-namnutrymmen som tidigare definierats via [taggningskonsolen](/help/sites-administering/tags.md#tagging-console) (till exempel namnutrymmet [Tutorial](/help/communities/setup.md#create-tutorial-tags)) väljs.
+De taggar som kan användas för communityinnehåll kontrolleras genom att AEM namnutrymmen som tidigare definierats via [taggningskonsolen](/help/sites-administering/tags.md#tagging-console) (till exempel namnutrymmet [Tutorial](/help/communities/setup.md#create-tutorial-tags)) väljs.
 
 Det är enkelt att hitta namnutrymmen med typsnittssökning. Till exempel,
 
 * Typ `tut`
 * Välj `Tutorial`
 
-![chlimage_1-286](assets/chlimage_1-286.png)
+![taggning](assets/tagging.png)
 
 #### ROLLER {#roles}
 
@@ -133,15 +133,15 @@ Till exempel,
 
 Acceptera de globala standardinställningarna för [moderering](/help/communities/sites-console.md#moderation) av användargenererat innehåll (UGC).
 
-![chlimage_1-287](assets/chlimage_1-287.png)
+![moderering](assets/moderation1.png)
 
-#### ANALYTICS {#analytics}
+#### ANALYS {#analytics}
 
-Om Adobe Analytics är licensierat och en molntjänst och ett ramverk från Analytics har konfigurerats går det att aktivera Analytics och välja ramverket.
+Om Adobe Analytics är licensierat och en molntjänst och ett ramverk för Analytics har konfigurerats går det att aktivera Analytics och välja ramverket.
 
-Se [Analytics Configuration for Communities Features](/help/communities/analytics.md).
+Se [Analyskonfiguration för communityfunktioner](/help/communities/analytics.md).
 
-![chlimage_1-288](assets/chlimage_1-288.png)
+![analys](assets/analytics.png)
 
 #### ÖVERSÄTTNING {#translation}
 
@@ -154,7 +154,7 @@ I [översättningsinställningarna](/help/communities/sites-console.md#translati
 * Markera **Översätt hela sidan**
 * Lämna standardalternativet för beständighet
 
-![chlimage_1-289](assets/chlimage_1-289.png)
+![translation-settings](assets/translation-settings.png)
 
 #### AKTIVERING {#enablement}
 
@@ -164,13 +164,13 @@ En liknande självstudiekurs för att snabbt skapa en [aktiveringscommunity](/he
 
 Välj **Nästa**.
 
-![chlimage_1-290](assets/chlimage_1-290.png)
+![aktivering](assets/enablement.png)
 
 ### Steg 4: Skapa webbgruppsplats {#step-create-communities-site}
 
 Välj **Skapa.**
 
-![chlimage_1-291](assets/chlimage_1-291.png)
+![create-site](assets/create-site2.png)
 
 När processen är klar visas mappen för den nya platsen i konsolen Communities - Sites.
 
@@ -202,7 +202,7 @@ Från vänster till höger är de:
 
    Välj världsikonen om du vill publicera communitywebbplatsen (till exempel om publiceringsservern körs på den lokala datorn, och sedan till localhost:4503 som standard)
 
-* **Exportera webbplats**
+* **Exportera plats**
 
    Välj exportikonen om du vill skapa ett paket för communitywebbplatsen som både lagras i [pakethanteraren](/help/sites-administering/package-manager.md) och hämtas.
 Observera att UGC inte ingår i platspaketet.
@@ -227,6 +227,7 @@ Observera att UGC inte ingår i platspaketet.
 >1. I URI ändrar du portnumret 4503 till önskat portnummer. Om du till exempel vill använda port 6103: https://localhost:6103/bin/receive?sling:authRequestLogin=1
 >1. Välj **[!UICONTROL OK]**.
 >1. (Valfritt) Välj **[!UICONTROL Clear]** eller **[!UICONTROL Force Retry]** återställ replikeringskön.
+
 >
 
 
@@ -235,11 +236,9 @@ Observera att UGC inte ingår i platspaketet.
 
 När du har kontrollerat att publiceringsservern körs väljer du världsikonen för att publicera communitywebbplatsen.
 
-![chlimage_1-292](assets/chlimage_1-292.png)
+![publicera-webbplats](assets/publish-site.png)
 
-När communitywebbplatsen har publicerats visas ett kort meddelande:
-
-![chlimage_1-293](assets/chlimage_1-293.png)
+När communitywebbplatsen har publicerats visas ett kort meddelande med texten&quot;Publicerad webbplats&quot;.
 
 ### Nya användargrupper {#new-community-user-groups}
 
@@ -260,11 +259,11 @@ Observera att [Aaron McDonald](/help/communities/tutorials.md#demo-users) är me
 * Moderatorer för communityengagemang
 * Medlemmar i communityn (indirekt som medlem i gruppen Moderatorer)
 
-![chlimage_1-294](assets/chlimage_1-294.png)
+![användargrupp](assets/user-group.png)
 
 #### https://localhost:4503/content/sites/engage/en.html {#http-localhost-content-sites-engage-en-html}
 
-![chlimage_1-311](assets/chlimage_1-311.png)
+![engagera](assets/engage.png)
 
 ## Konfigurera för autentiseringsfel {#configure-for-authentication-error}
 
@@ -320,21 +319,21 @@ Så här kommer du igång:
 >Om du vill inaktivera det anger du bara ett prefix för egenskapsvärdet med ett &quot;x&quot; - `sling:match` - och `xlocalhost.4503/$` Spara alla ****.
 
 
-![chlimage_1-297](assets/chlimage_1-297.png)
+![valfria steg](assets/optional-steps.png)
 
 #### Felsökning: Fel när kartan sparades {#troubleshooting-error-saving-map}
 
 Om det inte går att spara ändringarna måste du se till att nodnamnet är `localhost.4503`, med en punktavgränsare och inte `localhost:4503` med en kolonavgränsare, vilket inte `localhost`är ett giltigt namnområdesprefix.
 
-![chlimage_1-298](assets/chlimage_1-298.png)
+![error-message](assets/error-message.png)
 
 #### Felsökning: Det gick inte att omdirigera {#troubleshooting-fail-to-redirect}
 
-&quot;**$**&quot; i slutet av `sling:match`strängen för det reguljära uttrycket är avgörande, så att bara exakt `https://localhost:4503/` mappas, annars läggs omdirigeringsvärdet till alla sökvägar som kan finnas efter server:port i URL:en. När AEM försöker dirigera om till inloggningssidan misslyckas den således.
+&quot;**$**&quot; i slutet av `sling:match`strängen för det reguljära uttrycket är avgörande, så att bara exakt `https://localhost:4503/` mappas, annars läggs omdirigeringsvärdet till alla sökvägar som kan finnas efter server:port i URL:en. När AEM försöker dirigera om till inloggningssidan misslyckas den alltså.
 
 ### Ändra platsen {#modify-the-site}
 
-När webbplatsen har skapats kan författare använda ikonen [](/help/communities/sites-console.md#authoring-site-content) Open Site för att utföra vanliga AEM-redigeringsaktiviteter.
+När webbplatsen har skapats kan författare använda ikonen [](/help/communities/sites-console.md#authoring-site-content) Öppna plats för att utföra AEM standardåtgärder.
 
 Dessutom kan administratörer använda ikonen [](/help/communities/sites-console.md#modifying-site-properties) Redigera plats för att ändra egenskaper för platsen, till exempel titeln.
 
@@ -342,6 +341,6 @@ Kom ihåg att **spara** och **publicera** webbplatsen igen efter eventuella änd
 
 >[!NOTE]
 >
->Om du inte känner till AEM läser du dokumentationen om [grundläggande hantering](/help/sites-authoring/basic-handling.md) och en [snabbguide till redigeringssidorna](/help/sites-authoring/qg-page-authoring.md).
+>Om du inte känner till AEM kan du läsa dokumentationen om [grundläggande hantering](/help/sites-authoring/basic-handling.md) och en [snabbguide till hur du skapar sidor](/help/sites-authoring/qg-page-authoring.md).
 
 
