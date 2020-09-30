@@ -3,10 +3,10 @@ title: Använd Connected Assets när du vill dela DAM-resurser i [!DNL Sites]
 description: Använd resurser som är tillgängliga på en [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] fjärrdistribution.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 7790c9c90953e0f5c5b6be38f5d54346fb595e8f
 workflow-type: tm+mt
-source-wordcount: '2017'
-ht-degree: 42%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -157,7 +157,9 @@ Använd konfigurationen ovan när du vill prova redigeringsfunktionen och se hur
 
 De hämtade resurserna kan användas som andra lokala resurser, förutom att associerade metadata inte kan redigeras.
 
-## Begränsningar {#limitations}
+## Limitations and best practices {#tips-and-limitations}
+
+* Om du vill få insikter om resursanvändning konfigurerar du funktionen [Asset Insight](/help/assets/touch-ui-asset-insights.md) för [!DNL Sites] instansen.
 
 ### Tillstånd och resurshantering {#permissions-and-managing-assets}
 
@@ -165,7 +167,7 @@ De hämtade resurserna kan användas som andra lokala resurser, förutom att ass
 * Lokala resurser är skrivskyddade kopior. [!DNL Experience Manager] -komponenter gör icke-förstörande redigeringar av resurser. Inga andra redigeringar tillåts.
 * Lokalt hämtade resurser är endast tillgängliga för redigeringsändamål. Det går inte att använda arbetsflöden för resursuppdatering och metadata kan inte redigeras.
 * Endast bilder och dokumentformaten i listan stöds. [!DNL Dynamic Media] resurser, innehållsfragment och Experience Fragments stöds inte.
-* Metadatascheman hämtas inte.
+* [!DNL Experience Manager] hämtar inte metadatamatcheman. Det innebär att alla hämtade metadata inte visas. Om schemat uppdateras separat visas alla egenskaper.
 * Alla [!DNL Sites] författare har läsbehörighet för de hämtade kopiorna, även om författare inte har åtkomst till fjärdistributionen av DAM.
 * Det finns inte API-stöd för att anpassa integreringen.
 * Funktionen stöder smidig sökning och användning av fjärresurser. Om du vill göra många fjärresurser tillgängliga i den lokala distributionen på en gång bör du överväga att migrera resurserna. Se [Handbok för resursmigrering](assets-migration-guide.md).
@@ -184,6 +186,7 @@ De hämtade resurserna kan användas som andra lokala resurser, förutom att ass
 * Tidsgränsen för hämtning är 5 sekunder. Författare kan ha problem med att hämta resurser, till exempel om det råder nätverksproblem. Authors can reattempt by dragging the remote asset from [!UICONTROL Content Finder] to [!UICONTROL Page Editor].
 * Enkla redigeringar som är icke-destruktiva och redigering som stöds via `Image`-komponenten kan tillämpas på hämtade resurser. Resurserna är skrivskyddade.
 * Det enda sättet att hämta resursen på nytt är att dra den till en sida. Det finns inget API-stöd eller andra metoder för att hämta om en resurs för att uppdatera den.
+* Om resurser tas ur bruk från DAM används de fortfarande på [!DNL Sites] sidor.
 
 ## Felsöka problem {#troubleshoot}
 
