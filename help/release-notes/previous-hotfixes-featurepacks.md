@@ -3,9 +3,9 @@ title: '[!DNL Adobe Experience Manager] 6.5 Versionsinformation om tidigare Serv
 description: Versionsinformation för [!DNL Adobe Experience Manager] 6.5 Service Packs.
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: 5db4dd7ccc7d722f0503b22fdd5ff9e5508be4ea
+source-git-commit: 359eb60c0ba3845d7aa0ca58488aa945a9f45aea
 workflow-type: tm+mt
-source-wordcount: '11370'
+source-wordcount: '11372'
 ht-degree: 0%
 
 ---
@@ -307,7 +307,7 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 
 >[!NOTE]
 >
->Experience Manager Service Pack innehåller inga korrigeringar för [!DNL Forms]. De levereras med ett separat Forms-tilläggspaket. Dessutom släpps ett kumulativt installationsprogram med korrigeringar för AEM Forms på JEE. Mer information finns i [Installera AEM Forms-tillägg](#install-aem-forms-add-on-package) och [Installera AEM Forms på JEE](#install-aem-forms-jee-installer).
+>Experience Manager Service Pack innehåller inga korrigeringar för [!DNL Forms]. De levereras med ett separat Forms-tilläggspaket. Dessutom släpps ett kumulativt installationsprogram med korrigeringar för AEM Forms på JEE. Mer information finns i [Installera tillägget](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package) Experience Manager Forms och [Installera Experience Manager Forms på JEE](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer).
 
 * Korrespondenshantering: Ordningen på tillgångarna i ett målområde blandas efter att en skrivelse har lämnats in (NPR-33359, NPR-33153).
 * Adaptiv Forms: När en användare redigerar ett anpassat formulär fungerar inte det [!UICONTROL Start Workflow] alternativ som finns på [!UICONTROL Page Information] menyn (NPR-33004).
@@ -970,7 +970,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 >[!NOTE]
 >
->[!DNL Experience Manager] Service Pack innehåller inga korrigeringar för [!DNL Experience Manager Forms]. De levereras med ett separat [!DNL Forms] tilläggspaket. Dessutom släpps ett kumulativt installationsprogram som innehåller korrigeringar för [!DNL Experience Manager Forms] JEE. Mer information finns i [Installera tillägget](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package) Experience Manager Forms och [Installera installationsprogrammet](#forms-jee-installer)för Experience Manager Forms JEE.
+>[!DNL Experience Manager] Service Pack innehåller inga korrigeringar för [!DNL Experience Manager Forms]. De levereras med ett separat [!DNL Forms] tilläggspaket. Dessutom släpps ett kumulativt installationsprogram som innehåller korrigeringar för [!DNL Experience Manager Forms] JEE. Mer information finns i [Installera tillägget](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package) Experience Manager Forms och [Installera Experience Manager Forms på JEE](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer).
 
 Viktiga högdagrar för [!DNL Experience Manager] 6.5.2.0-formulär är:
 
@@ -1060,7 +1060,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 * Ett problem med Scene7 videospelare när den expanderar till helskärm. Programfix för CQ-4266700
 * ZoomVerticalViewer: Panoreringsknappar ska inte visas om en enda bildresurs används. Programfix för CQ-4264795
 * Om du tar bort en underordnad nod i live-kopian bör liveRelationship frigöras. Programfix för CQ-4270395
-* Metadataschemat innehåller bara objekt från den globala konfigurationen och saknar dem från den aktiva klientorganisationen. URL-värdet för formPath återställs till standard även om det ändras. NPR-29945: Programfix för CQ-4262898
+* Metadataschemat innehåller bara objekt från den globala konfigurationen och saknar dem från den aktiva klientorganisationen. URL-värdet för formPath återställs till standard även om det ändras. NPR-29944: Programfix för CQ-4262898
 * Publicera bildförinställningar som [!DNL Brand Portal] misslyckas med 500-felkod. NPR-29510: Programfix för CQ-4268659
 
 ### Sites
