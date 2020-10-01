@@ -4,9 +4,9 @@ description: Nyheter i Adobe Experience Manager 6.5 Service Pack 6
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: f52eb4ccfc1c9f0a121039432ed57401a2def573
+source-git-commit: 9d549e19a22b06f010b99e5dfff1d4cef05a5bed
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '2491'
 ht-degree: 0%
 
 ---
@@ -199,6 +199,12 @@ Vilka steg som ska konfigureras [!DNL Experience Manager Assets] med [!DNL Brand
 Till exempel, `On Time (MM-DD-YYYY HH:mm)`. Här är MM månad i tvåsiffrigt format, YYYY är år, DD är dag i tvåsiffrigt format, HH är timme i 24-timmars militärt format och mm är minut.
 
 * Skärmläsare meddelar nu att `X` symbolen tar bort de markerade taggarna tillsammans med antalet markerade taggar.
+
+#### Sorterbar kolumn för Skapat datum för resurser i listvyn (6.5.3.0) {#sortable-date-created-column}
+
+En ny sorterbar kolumn för skapat datum för resurser läggs till i DAM-listvyn och i resurssökningsresultat i listvyn.
+
+![Sorterbar kolumn för skapat datum](assets/asset-created-date.png)
 
 #### Visuell sökning efter [!DNL Adobe Experience Manager Assets] (6.5.2.0) {#visual-search}
 
