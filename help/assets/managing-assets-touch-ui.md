@@ -4,9 +4,9 @@ description: Lär dig resurshanteringsåtgärder som överföring, hämtning, re
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: cb531bfc009fc766bab20d28cf332856b1e95c7b
 workflow-type: tm+mt
-source-wordcount: '9182'
+source-wordcount: '9181'
 ht-degree: 3%
 
 ---
@@ -92,7 +92,7 @@ Om du vill konfigurera rensningsaktiviteten för de oavslutade segmentöverföri
 
 >[!CAUTION]
 >
->Standardvärdet när segmentöverföring utlöses är 500 MB och segmentstorleken är 50 MB. Om du ändrar [Apache Jackrabbit Oak TokenConfiguration](https://helpx.adobe.com/experience-manager/kb/How-to-set-token-session-expiration-AEM.html) för att ange `timeout configuration` till mindre än den tid det tar för en resurs att överföra, kan du hamna i en sessionstimeout medan överföringen av resursen pågår. Du måste därför ändra `chunkUploadMinFileSize` och `chunksize`så att varje segmentbegäran uppdaterar sessionen.
+>Standardvärdet när segmentöverföring utlöses är 500 MB och segmentstorleken är 50 MB. Om du ändrar [Apache Jackrabbit Oak TokenConfiguration](https://helpx.adobe.com/experience-manager/kb/How-to-set-token-session-expiration-AEM.html) för att ange `timeout configuration` till mindre än den tid det tar för en resurs att överföra, kan du träffa på en timeout-situation för sessionen medan överföringen av resursen pågår. Du måste därför ändra `chunkUploadMinFileSize` och `chunksize`så att varje segmentbegäran uppdaterar sessionen.
 >
 >Med tanke på tidsgräns, fördröjning, bandbredd och förväntade samtidiga överföringar för autentiseringsuppgifter, är det högsta värdet som gör att du kan säkerställa följande:
 >
