@@ -10,9 +10,9 @@ topic-tags: introduction, author
 discoiquuid: ba70921e-db7e-43f6-902c-1065d3b13aef
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d324586eb1d4fb809bf87641001b92a1941e6548
+source-git-commit: 42386f6e580d85efb972f2e63c5ab89112b3f734
 workflow-type: tm+mt
-source-wordcount: '3067'
+source-wordcount: '3097'
 ht-degree: 0%
 
 ---
@@ -146,7 +146,7 @@ Det gör att du kan dra och släppa formulärmodellelement i det anpassade formu
   </tr>
   <tr>
    <td>Bifogad fil</td>
-   <td><p>Lägger till en knapp som gör att användare kan bläddra bland och bifoga stöddokument till ett formulär. Du kan bifoga flera filer till en bifogad filkomponent.</p> <p><strong> Obs! </strong><ul> <li> Om du vill bifoga flera filer till en bifogad fil som öppnas i Apple Safari-webbläsaren, markerar och bifogar du filerna en i taget. Du kan inte markera och bifoga flera filer samtidigt.</li> <li>Komponenten Bifogad fil stöder en fördefinierad uppsättning filformat i adaptiva formulär som är aktiverade för Adobe Sign. Mer information finns i <a href="https://helpx.adobe.com/document-cloud/help/supported-file-formats-fill-sign.html#main-pars_text">Filformat</a>som stöds. </li> </ul></p> </td>
+   <td><p>Lägger till en knapp som gör att användare kan bläddra bland och bifoga stöddokument till ett formulär. Du kan bifoga flera filer till en bifogad filkomponent.</p> <p><strong> Obs! </strong><ul> <li> Komponenten stöder inte bifogade filer med filnamn som börjar med tecken (.), som innehåller tecknen \ / : * ? " &lt; &gt; | ; % $, eller innehåller speciella filnamn som är reserverade för Windows-operativsystem som null, prn, con, lpt eller com. </li> <li> Om du vill bifoga flera filer till en bifogad fil som öppnas i Apple Safari-webbläsaren, markerar och bifogar du filerna en i taget. Du kan inte markera och bifoga flera filer samtidigt.</li> <li>Komponenten Bifogad fil stöder en fördefinierad uppsättning filformat i adaptiva formulär som är aktiverade för Adobe Sign. Mer information finns i <a href="https://helpx.adobe.com/document-cloud/help/supported-file-formats-fill-sign.html#main-pars_text">Filformat</a>som stöds. </li> </ul></p> </td>
   </tr>
   <tr>
    <td>Lista över bifogade filer</td>
