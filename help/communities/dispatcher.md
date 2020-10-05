@@ -1,6 +1,6 @@
 ---
-title: Konfigurera Dispatcher för webbgrupper
-seo-title: Konfigurera Dispatcher för webbgrupper
+title: Konfigurera Dispatcher för Communities
+seo-title: Konfigurera Dispatcher för Communities
 description: Konfigurera dispatchern för AEM Communities
 seo-description: Konfigurera dispatchern för AEM Communities
 uuid: c17daca9-3244-4b10-9d4e-2e95df633dd9
@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 23745dd3-1424-4d22-8456-d2dbd42467f4
 translation-type: tm+mt
-source-git-commit: 29f150215052d61c1e20d25b0c095ea6582e26f7
+source-git-commit: bbaf9afbf009281c0009bf3895e82988540e15f0
 workflow-type: tm+mt
 source-wordcount: '637'
 ht-degree: 0%
@@ -18,23 +18,23 @@ ht-degree: 0%
 ---
 
 
-# Konfigurera Dispatcher för webbgrupper {#configuring-dispatcher-for-communities}
+# Konfigurera Dispatcher för Communities {#configuring-dispatcher-for-communities}
 
 ## AEM Communities {#aem-communities}
 
-För AEM Communities är det nödvändigt att konfigurera Dispatcher för att säkerställa att [communitysajterna](overview.md#community-sites)fungerar korrekt. Ytterligare konfigurationer krävs när funktioner som Communities-aktivering och social inloggning inkluderas.
+För AEM Communities är det nödvändigt att konfigurera Dispatcher för att säkerställa att [communityplatserna](overview.md#community-sites)fungerar korrekt. Ytterligare konfigurationer krävs när funktioner som Communities-aktivering och social inloggning inkluderas.
 
 För att ta reda på vad som är nödvändigt för just din driftsättning och webbplatsdesign
 
 * Kontakta [kundtjänst](https://helpx.adobe.com/marketing-cloud/contact-support.html)
 
-Se även huvuddokumentationen [för](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)Dispatcher.
+Se även huvuddokumentationen för [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html).
 
 ## Dispatcher Caching {#dispatcher-caching}
 
 ### Översikt {#overview}
 
-Dispatcher-cachning för AEM Communities är en funktion för att skickaren ska kunna hantera fullt cachelagrade versioner av en communitywebbplats sidor.
+Dispatcher-cachning för AEM Communities är en möjlighet för dispatchern att leverera fullt cachelagrade versioner av en communitywebbplats sidor.
 
 För närvarande stöds den bara för anonyma webbplatsbesökare, t.ex. användare som bläddrar på communitywebbplatsen, eller landar på en communitysida som ett resultat av en sökning, samt för sökmotorer som indexerar sidor. Fördelen är att anonyma användare och sökmotorer får bättre prestanda.
 
@@ -61,19 +61,21 @@ OSGi-konfigurationen **ACS AEM Commons - Dispatcher Cache Control Header - Max A
 * Sök `ACS AEM Commons - Dispatcher Cache Control Header - Max Age`
 * Välj ikonen + om du vill skapa en ny anslutningskonfiguration
 
-   ![chlimage_1-339](assets/chlimage_1-339.png)
+   ![avsändare](assets/dispatcher.png)
 
 * **Filtermönster**
+
    *(obligatoriskt)* En eller flera sökvägar till communitysidor. Till exempel, `/content/sites/engage/(.*)`.
 
 * **Maximal ålder för cachekontroll**
+
    *(obligatoriskt)* Maximal ålder (i sekunder) som ska läggas till i cachekontrollhuvudet. Värdet måste vara större än noll (0).
 
-## Dispatcher Client Headers {#dispatcher-client-headers}
+## Dispatcher-klienthuvuden {#dispatcher-client-headers}
 
 I avsnittet /clientheaders i `dispatcher.any`måste du inkludera en uppsättning rubriker `"CSRF-Token"` för att [aktiveringsfunktionen](enablement.md) ska fungera.
 
-## Dispatcher Filters {#dispatcher-filters}
+## Dispatcher-filter {#dispatcher-filters}
 
 Avsnittet /filter i `dispatcher.any` filen beskrivs i [Konfigurera åtkomst till innehåll - /filter](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#filter).
 
