@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: d94708ee-ca6b-420c-9536-6889d752f9de
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 43663703a79b95ccdb83eb9b5730143bde101305
+source-git-commit: 6337a57ea12f1e026f6c754a083307ce018a1c13
 workflow-type: tm+mt
 source-wordcount: '534'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -37,13 +37,13 @@ Exemplen som följer använder den communitywebbplats som skapats från `Referen
 
 Det här är sidan som läses in vid publicering när menyalternativet **Grupper** är markerat:
 
-![chlimage_1-236](assets/chlimage_1-236.png)
+![new-group](assets/new-group.png)
 
 När du väljer ikonen **Ny grupp** öppnas en redigeringsdialogruta.
 
 Under fliken **Inställningar** kan du ange gruppens grundläggande funktioner:
 
-![chlimage_1-237](assets/chlimage_1-237.png)
+![group-settings](assets/group-settings.png)
 
 * **Gruppnamn**
 
@@ -71,21 +71,21 @@ Under fliken **Inställningar** kan du ange gruppens grundläggande funktioner:
 
 Under fliken **Mall** kan du välja från listan med gruppmallar som angavs när gruppfunktionen inkluderades i communityplatsens struktur eller i en mall för communitywebbplatser.
 
-![chlimage_1-238](assets/chlimage_1-238.png)
+![group-template](assets/group-template.png)
 
 Under fliken **Bild** finns möjligheten att överföra en bild som ska visas för gruppen på gruppwebbplatsens gruppsida. Standardformatmallen ändrar bildens storlek till 170 x 90 pixlar.
 
-![chlimage_1-239](assets/chlimage_1-239.png)
+![group-image](assets/group-image.png)
 
 Genom att klicka på knappen **Skapa grupp** skapas sidorna för gruppen baserat på den valda mallen, och en användargrupp skapas för medlemskap och sidan Grupper uppdateras för att visa den nya undergruppen.
 
 Sidan Grupper med en ny undercommunity med namnet&quot;Focus Group&quot;, som en miniatyrbild överfördes för, ser ut så här (fortfarande inloggad som administratör för en community-grupp):
 
-![chlimage_1-240](assets/chlimage_1-240.png)
+![gruppsida](assets/group-page.png)
 
 Om du väljer `Focus Group` länken öppnas sidan Fokusgrupp i webbläsaren, som har ett ursprungligt utseende baserat på den valda mallen, och som innehåller en undermeny under den huvudsakliga communitywebbplatsens meny:
 
-![chlimage_1-241](assets/chlimage_1-241.png)
+![open-group-page](assets/open-group-page.png)
 
 ### Medlemslistkomponent för community {#community-group-member-list-component}
 
