@@ -1,22 +1,21 @@
 ---
 title: Resurshandbok
-seo-title: Adobe Experience Manager 6.5 Assets Guide
 description: Den här guiden täcker alla Experience Manager Assets-uppgifter, t.ex. hur du skapar, hanterar, levererar och optimerar digitala resurser.
-seo-description: täcker alla Experience Manager Assets-uppgifter, t.ex. hur man skapar, hanterar, levererar och optimerar digitala resurser.
+user-guide-title: Resurshandbok
 translation-type: tm+mt
-source-git-commit: 45d7f741660bd8dd31cd454c034f562fc5394621
+source-git-commit: e460a23ef4df14ff494d8d1472ab234787f220d7
 workflow-type: tm+mt
-source-wordcount: '371'
-ht-degree: 12%
+source-wordcount: '339'
+ht-degree: 13%
 
 ---
 
 
-# Adobe Experience Manager 6.5 Assets Guide
+# Resurshandbok
 
-Den här guiden täcker alla Experience Manager Assets-uppgifter, t.ex. hur du skapar, hanterar, levererar och optimerar digitala resurser.
+Den här guiden täcker alla [!DNL Experience Manager Assets] uppgifter, t.ex. hur du skapar, hanterar, levererar och optimerar digitala resurser.
 
-## Viktiga Experience Manager-artiklar
+## Viktiga [!DNL Experience Manager] artiklar
 
 <!-- TBD: Some of these links will soon be updated. Change these when new articles go live on docs.adobe.com.
 -->
@@ -26,7 +25,7 @@ Den här guiden täcker alla Experience Manager Assets-uppgifter, t.ex. hur du s
 * [Senaste dokumentationsuppdateringarna](https://helpx.adobe.com/experience-manager/documentation-updates.html)
 * [Säkerhetschecklista](/help/sites-administering/security-checklist.md)
 
-## Stödlinjer för Experience Manager 6.5
+## [!DNL Experience Manager] 6.5 stödlinjer
 
 | Användarhandbok | Beskrivning |
 |--- |---|
@@ -43,7 +42,7 @@ Den här guiden täcker alla Experience Manager Assets-uppgifter, t.ex. hur du s
 | [Användarhandbok för mobiler](/help/mobile/home.md) | I den här guiden beskrivs hur du skapar och hanterar innehåll för mobilprogram. |
 | [Experience Manager Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/home.html) | Den här guiden visar hur du delar användargenererat innehåll med [!DNL Livefyre]. |
 
-## Viktiga Experience Manager-resurser
+## Viktiga [!DNL Experience Manager] resurser
 
 * [Experience Manager Video Tutorials](https://helpx.adobe.com/experience-manager/kt/index/aem-6-5-videos.html#Assets)
 * [GDPR-efterlevnad](/help/managing/data-protection-and-privacy.md)
