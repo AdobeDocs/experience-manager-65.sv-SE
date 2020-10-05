@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: d23acb18-6761-4290-9e7a-a434582791bd
 translation-type: tm+mt
-source-git-commit: 29f150215052d61c1e20d25b0c095ea6582e26f7
+source-git-commit: bbaf9afbf009281c0009bf3895e82988540e15f0
 workflow-type: tm+mt
 source-wordcount: '622'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## Om DSRP {#about-dsrp}
 
-När AEM Communities är konfigurerat att använda en relationsdatabas som gemensam lagringsplats är användargenererat innehåll (UGC) tillgängligt från alla författare- och publiceringsinstanser utan behov av synkronisering eller replikering.
+När AEM Communities har konfigurerats att använda en relationsdatabas som gemensam lagringsplats är användargenererat innehåll (UGC) tillgängligt från alla författare- och publiceringsinstanser utan behov av synkronisering eller replikering.
 
 Se även [egenskaper för SRP-alternativ](working-with-srp.md#characteristics-of-srp-options) och [rekommenderade topologier](topologies.md).
 
@@ -71,7 +71,7 @@ På författaren, för att komma åt lagringskonsolen
       >[!NOTE]
       >
       >Standardlagringskonfigurationen lagras nu i conf-sökvägen(`/conf/global/settings/community/srpc/defaultconfiguration`) i stället för etc-sökvägen (`/etc/socialconfig/srpc/defaultconfiguration`). Du rekommenderas att följa [migreringsstegen](#zerodt-migration-steps) för att få standardinställningarna att fungera som förväntat.
-   ![chlimage_1-128](assets/chlimage_1-128.png)
+   ![dsrp-config](assets/dsrp-config.png)
 
 * Välj **[!UICONTROL Database Storage Resource Provider (DSRP)]**
 * **Databaskonfiguration**
@@ -90,7 +90,7 @@ På författaren, för att komma åt lagringskonsolen
 
 * **SolrConfiguration**
 
-   * **[Zookeeper](https://cwiki.apache.org/confluence/display/solr/Using+ZooKeeper+to+Manage+Configuration+Files)-värd **
+   * **[Zookeeper](https://cwiki.apache.org/confluence/display/solr/Using+ZooKeeper+to+Manage+Configuration+Files)-värd**
 
       Lämna det här värdet tomt om du kör Solr med den interna ZooKeeper. Om du kör i [SolrCloud-läge](solr.md#solrcloud-mode) med en extern ZooKeeper anger du det här värdet till URI:n för ZooKeeper, till exempel *my.server.com:80*
 
