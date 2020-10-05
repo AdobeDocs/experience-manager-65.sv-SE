@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c47ef627-261e-4b4b-8846-873d3d84234b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 39ae3d8348b0c149c047c9fb3ac2eb673b610645
 workflow-type: tm+mt
-source-wordcount: '3988'
+source-wordcount: '4048'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,11 @@ ht-degree: 0%
 
 # Arbeta med formulärdatamodell{#work-with-form-data-model}
 
-![](do-not-localize/data-integeration.png)
+![dataintegrering](do-not-localize/data-integeration.png)
 
 Formulärdatamodellredigeraren har ett intuitivt användargränssnitt och verktyg för att redigera och konfigurera en formulärdatamodell. Med redigeraren kan du lägga till och konfigurera datamodellsobjekt, egenskaper och tjänster från associerade datakällor i formulärdatamodellen. Dessutom kan du skapa datamodellsobjekt och -egenskaper utan datakällor och binda dem till respektive datamodellsobjekt och egenskaper senare. Du kan också generera och redigera exempeldata för datamodellsobjektsegenskaper som du kan använda för att förifylla adaptiva formulär och interaktiv kommunikation när du förhandsgranskar. Du kan testa datamodellsobjekt och tjänster som konfigurerats i en formulärdatamodell för att säkerställa att den är korrekt integrerad med datakällor.
 
-Om du inte har använt dataintegrering med Forms tidigare och inte har konfigurerat någon datakälla eller skapat en formulärdatamodell, ska du läsa följande avsnitt:
+Om du inte har använt dataintegrering med Forms tidigare och inte har konfigurerat någon datakälla eller skapat en formulärdatamodell kan du läsa följande avsnitt:
 
 * [AEM Forms dataintegrering](/help/forms/using/data-integration.md)
 * [Konfigurera datakällor](/help/forms/using/configure-data-sources.md)
@@ -33,7 +33,7 @@ Läs vidare för mer information om olika åtgärder och konfigurationer som du 
 
 >[!NOTE]
 >
->Du måste vara medlem i både **fdm-author** - och **forms-user** -grupper för att kunna skapa och arbeta med formulärdatamodellen. Kontakta din AEM-administratör om du vill bli medlem i grupperna.
+>Du måste vara medlem i både **fdm-author** - och **forms-user** -grupper för att kunna skapa och arbeta med formulärdatamodellen. Kontakta AEM om du vill bli medlem i grupperna.
 
 ## Lägga till datamodellsobjekt och -tjänster {#add-data-model-objects-and-services}
 
@@ -43,7 +43,7 @@ Du kan lägga till datamodellsobjekt och datatjänster från tillgängliga datak
 
 Så här lägger du till datamodellsobjekt och -tjänster:
 
-1. Logga in på AEM-författarinstansen, navigera till **[!UICONTROL Forms > Data Integrations]** och öppna formulärdatamodellen där du vill lägga till datamodellsobjekt.
+1. Logga in i AEM författarinstans, navigera till **[!UICONTROL Forms > Data Integrations]** och öppna formulärdatamodellen där du vill lägga till datamodellsobjekt.
 1. Expandera datakällor i rutan Datakällor för att visa tillgängliga datamodellsobjekt och tjänster.
 1. Markera datamodellsobjekt och tjänster som du vill lägga till i formulärdatamodellen och tryck på **[!UICONTROL Add Selected]**.
 
@@ -85,7 +85,7 @@ Du kan lägga till datamodellsobjekt från konfigurerade datakällor, men du kan
 
 Så här skapar du ett datamodellsobjekt utan datakällor:
 
-1. Logga in på AEM-författarinstansen, navigera till **[!UICONTROL Forms > Data Integrations]** och öppna formulärdatamodellen där du vill skapa ett datamodellsobjekt eller en datamodell.
+1. Logga in i AEM författarinstans, navigera till **[!UICONTROL Forms > Data Integrations]** och öppna formulärdatamodellen där du vill skapa ett datamodellsobjekt eller en datamodell.
 1. Tryck på **[!UICONTROL Create Entity]**.
 1. I dialogrutan Skapa datamodell anger du ett namn för datamodellobjektet och trycker på **[!UICONTROL Add]**. Ett datamodellsobjekt läggs till i formulärdatamodellen. Observera att det nya datamodellsobjektet inte är bundet till en datakälla och inte har några egenskaper som visas i följande bild.
 
@@ -108,7 +108,7 @@ Så här skapar du en underordnad egenskap:
 
 1. Tryck **[!UICONTROL Done]** för att spara egenskapen child och tryck för **[!UICONTROL Save]** att spara formulärdatamodellen. Egenskapen child läggs nu till i datamodellsobjektet.
 
-När du har skapat datamodellsobjekt och -egenskaper kan du fortsätta att skapa anpassningsbara formulär och interaktiv kommunikation baserat på formulärdatamodellen. När du har datakällor tillgängliga och konfigurerade kan du senare binda formulärdatamodellen till datakällor. Bindningen uppdateras automatiskt i tillhörande adaptiva formulär och interaktiv kommunikation. Mer information om hur du skapar adaptiva formulär och interaktiv kommunikation med hjälp av formulärdatamodell finns i [Använda formulärdatamodell](/help/forms/using/using-form-data-model.md).
+När du har skapat datamodellsobjekt och egenskaper kan du fortsätta att skapa anpassningsbara formulär och interaktiv kommunikation baserat på formulärdatamodellen. När du har datakällor tillgängliga och konfigurerade kan du senare binda formulärdatamodellen till datakällor. Bindningen uppdateras automatiskt i tillhörande adaptiva formulär och interaktiv kommunikation. Mer information om hur du skapar adaptiva formulär och interaktiv kommunikation med hjälp av formulärdatamodell finns i [Använda formulärdatamodell](/help/forms/using/using-form-data-model.md).
 
 ### Binda datamodellsobjekt och egenskaper {#bind-data-model-objects-and-properties}
 
@@ -175,11 +175,11 @@ I det här exemplet hämtas informationen som är associerad med **436765678** s
 
 #### Användarprofilattribut {#user-profile-attribute}
 
-Välj **[!UICONTROL User Profile Attribute]** i den **[!UICONTROL Binding To]** nedrullningsbara menyn och ange attributnamnet i **[!UICONTROL Binding Value]** fältet. Information om användaren som är inloggad på AEM-instansen hämtas från datakällan baserat på attributnamnet.
+Välj **[!UICONTROL User Profile Attribute]** i den **[!UICONTROL Binding To]** nedrullningsbara menyn och ange attributnamnet i **[!UICONTROL Binding Value]** fältet. Information om användaren som är inloggad på AEM hämtas från datakällan baserat på attributnamnet.
 
 Attributnamnet som anges i **[!UICONTROL Binding Value]** fältet måste innehålla den fullständiga bindningssökvägen till användarens attributnamn. Öppna följande URL för att komma åt användarinformationen på CRXDE:
 
-https://&lt;servernamn>:&lt;portnummer>/crx/de/index.jsp#/home/users/
+`https://[server-name]:[port]/crx/de/index.jsp#/home/users/`
 
 ![Användarprofil](assets/binding_crxde_user_profile_new.png)
 
@@ -195,15 +195,31 @@ Använd attributet request för att hämta associerade egenskaper från datakäl
 
 1. Välj **[!UICONTROL Request Attribute]** i den **[!UICONTROL Binding To]** nedrullningsbara menyn och ange attributnamnet i **[!UICONTROL Binding Value]** fältet.
 
-1. Öppna head.jsp för att definiera attributinformationen i CRXDE:\
-   `https://<server-name>:<port number>/crx/de/index.jsp#/libs/fd/af/components/page2/afStaticTemplatePage/head.jsp`
+1. Skapa en [övertäckning](../../../help/sites-developing/overlays.md) för head.jsp. Om du vill skapa övertäckningen öppnar du CRX DE och kopierar `https://<server-name>:<port number>/crx/de/index.jsp#/libs/fd/af/components/page2/afStaticTemplatePage/head.jsp` filen till `https://<server-name>:<port number>/crx/de/index.jsp#/apps/fd/af/components/page2/afStaticTemplatePage/head.jsp`
 
-1. Inkludera följande text i filen head.jsp:
+   >[!NOTE]
+   >
+   > * Om du använder en statisk mall ska du täcka över head.jsp på:
+/libs/fd/af/components/page2/afStaticTemplatePage/head.jsp
+   > * Om du använder en redigerbar mall ska du täcka över den eftermalledpage.jsp som:
+/libs/fd/af/components/page2/aftemplatedpage/aftemplatedpage.jsp
 
-   ```jsp
+
+1. Ange [!DNL paramMap] för attributet request. Ta till exempel med följande kod i .jsp-filen i mappen apps:
+
+   ```javascript
    <%Map paraMap = new HashMap();
     paraMap.put("<request_attribute>",request.getParameter("<request_attribute>"));
-    request.setAttribute("paramMap",paraMap);%>
+    request.setAttribute("paramMap",paraMap);
+   ```
+
+   Använd till exempel följande kod för att hämta värdet för petid från datakällan:
+
+
+   ```javascript
+   <%Map paraMap = new HashMap();
+   paraMap.put("petId",request.getParameter("petId"));
+   request.setAttribute("paramMap",paraMap);%>
    ```
 
 Informationen hämtas från datakällan baserat på attributnamnet som anges i begäran.
