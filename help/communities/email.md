@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: b4d38e45-eaa0-4ace-a885-a2e84fdfd5a1
 pagetitle: Configuring Email
 translation-type: tm+mt
-source-git-commit: 50c1532b2bdc41555eff2be718cd478aad1f403a
+source-git-commit: 570c970c328ded828680baeb1b04ab4361a36226
 workflow-type: tm+mt
 source-wordcount: '750'
 ht-degree: 1%
@@ -48,7 +48,7 @@ Detta baseras på dokumentationen för [konfigurering av e-postmeddelanden](../.
 
 Till exempel (ifylld med värden endast för illustrationsändamål):
 
-![chlimage_1-98](assets/chlimage_1-98.png)
+![email-config](assets/email-config.png)
 
 * **[!UICONTROL SMTP server host name]**
 
@@ -98,7 +98,7 @@ Så här når du instanserna för webbgruppskonfigurationen:
 
 * Hitta `AEM Communities Email Reply Configuration`.
 
-![chlimage_1-99](assets/chlimage_1-99.png)
+![email-reply-config](assets/email-reply-config.png)
 
 ### Konfiguration för meddelanden {#configuration-for-notifications}
 
@@ -177,7 +177,7 @@ För att e-postmeddelandet ska kunna hämtas till databasen måste du konfigurer
 
 * Välj **[!UICONTROL Add]**
 
-   ![chlimage_1-102](assets/chlimage_1-102.png)
+   ![avsökare](assets/polling-importer.png)
 
 * **[!UICONTROL Type]**
 
@@ -207,7 +207,7 @@ För att e-postmeddelandet ska kunna hämtas till databasen måste du konfigurer
 
 ### Justera protokoll för ny avsökningsimportör {#adjust-protocol-for-new-polling-importer}
 
-När den nya avsökningskonfigurationen har sparats är det nödvändigt att ändra egenskaperna för prenumerationens e-postimportör ytterligare för att ändra protokollet från `POP3` till `emailreply`
+När den nya avsökningskonfigurationen har sparats är det nödvändigt att ändra egenskaperna för prenumerationens e-postimporterare ytterligare för att ändra protokollet från `POP3` till `emailreply`.
 
 Använda [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md):
 
@@ -217,7 +217,7 @@ Använda [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)
    * **feedType**: Ersätt `pop3s` med **`emailreply`**
    * **källa**: Ersätt källans protokoll `pop3s://` med **`emailreply://`**
 
-![chlimage_1-103](assets/chlimage_1-103.png)
+![polling-protocol](assets/polling-protocol.png)
 
 De röda trianglarna anger de ändrade egenskaperna. Spara ändringarna:
 
