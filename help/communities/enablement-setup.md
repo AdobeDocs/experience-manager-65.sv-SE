@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: f2ac3d66-cc79-498f-83fb-dd96feb88de2
 translation-type: tm+mt
-source-git-commit: 6720d5a0fdf1facc0b10011ec306dffbb31f4ac5
+source-git-commit: 570c970c328ded828680baeb1b04ab4361a36226
 workflow-type: tm+mt
 source-wordcount: '857'
 ht-degree: 0%
@@ -24,12 +24,12 @@ ht-degree: 0%
 
 I utvecklings- och demonstrationssyfte måste du köra en författare och en publiceringsinstans.
 
-Följ de grundläggande [anvisningarna i AEM Getting Started](../../help/sites-deploying/deploy.md#getting-started) som ger
+Följ de grundläggande AEM [Komma igång](../../help/sites-deploying/deploy.md#getting-started) -instruktionerna som ger
 
 * Redigeringsmiljö på [localhost:4502](http://localhost:4502/)
 * Publiceringsmiljö på [localhost:4503](http://localhost:4503/)
 
-AEM Communities,
+För AEM Communities
 
 * Författarmiljön är till för:
 
@@ -46,7 +46,7 @@ AEM Communities,
 
 >[!NOTE]
 >
->Om du inte känner till AEM läser du dokumentationen om [grundläggande hantering](../../help/sites-authoring/basic-handling.md) och en [snabbguide till redigeringssidorna](../../help/sites-authoring/qg-page-authoring.md).
+>Om du inte känner till AEM kan du läsa dokumentationen om [grundläggande hantering](../../help/sites-authoring/basic-handling.md) och en [snabbguide till hur du skapar sidor](../../help/sites-authoring/qg-page-authoring.md).
 
 
 ## Installera senaste versionen av Communities {#install-latest-communities-release}
@@ -55,13 +55,13 @@ Den här självstudiekursen skapar en [aktiveringscommunitywebbplats](overview.m
 
 * [Senaste releaser](deploy-communities.md#latest-releases)
 
-En självstudiekurs som skapar en [engagemangscommunitysajt](overview.md#engagement-community)finns på [Komma igång med AEM Communities](getting-started.md).
+En självstudiekurs som skapar en [engagemangscommunity](overview.md#engagement-community)finns på [Getting Started with AEM Communities](getting-started.md).
 
 ## Konfigurera aktiveringsfunktioner {#configure-enablement-features}
 
 Om du vill följa den här självstudiekursen måste du installera och [konfigurera aktivering](enablement.md)korrekt, vilket kräver produkter från tredje part, som MySQL och FFmpeg.
 
-## Konfigurera Analytics {#configure-analytics}
+## Konfigurera analys {#configure-analytics}
 
 När [Adobe Analytics har konfigurerats för communitywebbplatsen](analytics.md)finns mer information i [rapporterna](reports.md) om aktiveringsresurser och utbildningsvägar som tilldelats communitymedlemmar (studerande).
 
@@ -94,14 +94,14 @@ Använd [taggningskonsolen](../../help/sites-administering/tags.md#tagging-conso
 * `Tutorial: Arts / Auditory`
 * `Tutorial: Arts / History`
 
-![chlimage_1-417](assets/chlimage_1-417.png)
+![självstudiekurstaggar](assets/tutorial-tags.png)
 
 Följ sedan instruktionerna för att:
 
 1. [Ange taggbehörigheter](../../help/sites-administering/tags.md#setting-tag-permissions)
 1. [Publicera taggarna](../../help/sites-administering/tags.md#publishing-tags)
 
-Exempelpaket med taggar som skapats för självstudiekurserna Komma igång med AEM Communities
+Exempelpaket med taggar som skapats för Tutorials AEM Communities Getting Started
 
 [Hämta fil](assets/communities_tutorialtags-10.zip)
 
@@ -126,7 +126,7 @@ En fjärde användare skapas i författarmiljön och tilldelas rollerna Webbgrup
 
 ### Riley Taylor - anmälare {#riley-taylor-enrollee}
 
-[Skapa en medlem](members.md#create-new-member) som ska läggas till i en grupp med elev - gruppen Community Ski Class.
+[Skapa en medlem](members.md#create-new-member) som ska läggas till i en grupp med elev - Community Ski Class-gruppen.
 
 * **ID**: riley
 * **E-post**: riley.taylor@mailinator.com
@@ -173,7 +173,7 @@ En fjärde användare skapas i författarmiljön och tilldelas rollerna Webbgrup
 
 ### Egenskaper för Community-skalklassen {#community-ski-class-properties}
 
-![chlimage_1-418](assets/chlimage_1-418.png)
+![ski-class-properties](assets/ski-class-properties.png)
 
 >[!NOTE]
 >
@@ -219,5 +219,5 @@ Bläddra ned till `Add User to Groups`:
 
 * Välj **[!UICONTROL Save]**
 
-![chlimage_1-419](assets/chlimage_1-419.png)
+![admin-role](assets/admin-role.png)
 
