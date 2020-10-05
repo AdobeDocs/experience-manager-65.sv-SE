@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: e0da09b3-725d-4ed1-9273-2532132f6918
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 618464d1e01986786a47a4e9c6ecce87e2a77ec3
+source-git-commit: 570c970c328ded828680baeb1b04ab4361a36226
 workflow-type: tm+mt
 source-wordcount: '270'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -74,7 +74,7 @@ Ett sätt är att
 
 [Nu kan du uppdatera sidan i publiceringsmiljön och visa ändringen för att ta bort avataren genom att fortsätta med upplevelsen](/help/communities/extend-sample-page.md#publish-sample-page) på publiceringsinstansen, som fortfarande är inloggad som samma användare:
 
-![chlimage_1-81](assets/chlimage_1-81.png)
+![view-modified-content](assets/view-modified-content.png)
 
 ### Exempel på kommentartillägg {#sample-comment-extension-package}
 
