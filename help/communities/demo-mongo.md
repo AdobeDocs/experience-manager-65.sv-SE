@@ -10,10 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 0b126218-b142-4d33-a28c-a91ab4fe99ac
 translation-type: tm+mt
-source-git-commit: 94bc3550a7e18b9203e7a0d495d195d7b798e012
+source-git-commit: a99313c35872d3f481c3dc6f42b372cc603e7549
 workflow-type: tm+mt
 source-wordcount: '788'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -157,26 +157,26 @@ Om du vill testa och verifiera den gemensamma lagringsplatsen för MongoDB skick
 1. Logga in för att publicera en kommentar:
 1. Ange text i kommentartextrutan och klicka på **[!UICONTROL Post]**
 
-   ![chlimage_1-191](assets/chlimage_1-191.png)
+   ![efter kommentar](assets/post-comment.png)
 
 1. Visa bara kommentaren i [författarinstansen](http://localhost:4502/content/community-components/en/comments.html) (troligen fortfarande inloggad som administratör/administratör).
 
-   ![chlimage_1-192](assets/chlimage_1-192.png)
+   ![view-comment](assets/view-comment.png)
 
-   Obs! Även om det finns JCR-noder under *asipath* on author är de för SCF-ramverket. Den faktiska UGC:n finns inte i JCR, utan i MongoDB.
+   Obs! Även om det finns JCR-noder under *asipath* på författare gäller dessa för SCF-ramverket. Den faktiska UGC:n finns inte i JCR, utan i MongoDB.
 
 1. Visa UGC i mongudb **[!UICONTROL Communities]** > **[!UICONTROL Collections]** > **[!UICONTROL Content]**
 
-   ![chlimage_1-193](assets/chlimage_1-193.png)
+   ![ugc-content](assets/ugc-content.png)
 
 1. Visa användargenererat innehåll i Solr:
 
-   * Bläddra till Solr-instrumentpanelen: [http://localhost:8983/solr/](http://localhost:8983/solr/)
-   * Användare `core selector` att välja `collection1`
-   * Välj `Query`
-   * Välj `Execute Query`
+   * Bläddra till Solr-instrumentpanelen: [http://localhost:8983/solr/](http://localhost:8983/solr/).
+   * Användare `core selector` att välja `collection1`.
+   * Välj `Query`.
+   * Välj `Execute Query`.
 
-   ![chlimage_1-194](assets/chlimage_1-194.png)
+   ![ugc-solr](assets/ugc-solr.png)
 
 ## Felsökning {#troubleshooting}
 
@@ -186,14 +186,9 @@ Om du vill testa och verifiera den gemensamma lagringsplatsen för MongoDB skick
 
 1. Kontrollera att MSRP har konfigurerats som standardprovider:
 
-   * Gå till konsolen [Lagringskonfiguration för alla författare och AEM](srp-config.md)
+   * Gå till konsolen [för](srp-config.md) lagringskonfiguration eller kontrollera den AEM databasen för alla författare och AEM:
 
-   Eller kontrollera AEM:
-
-   * I JCR, if [/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/)
-
-   * Innehåller ingen [srpc](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc) -nod, vilket betyder att lagringsprovidern är JSRP
-   * Om srpc-noden finns och innehåller [standardkonfiguration](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)för nod, ska standardkonfigurationens egenskaper definiera MSRP som standardprovider
-
+   * Om [/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/) inte innehåller en [srpc](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc) -nod i JCR betyder det att lagringsprovidern är JSRP.
+   * Om srpc-noden finns och innehåller [standardkonfiguration](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)för nod, ska standardkonfigurationens egenskaper definiera MSRP som standardprovider.
 
 1. Se till att AEM startades om när MSRP har valts.
