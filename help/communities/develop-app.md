@@ -10,10 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 910229a3-38b1-44f1-9c09-55f8fd6cbb1d
 translation-type: tm+mt
-source-git-commit: e5c2385c29e2d20d453e2d1496f7d459d1c55876
+source-git-commit: bbaf9afbf009281c0009bf3895e82988540e15f0
 workflow-type: tm+mt
 source-wordcount: '598'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
 
@@ -44,7 +44,7 @@ Använda CRXDE Lite:
 1. Klicka på den gröna **[!UICONTROL +Add]** knappen.
 1. Klicka på **[!UICONTROL Save All]**.
 
-   ![chlimage_1-231](assets/chlimage_1-231.png)
+   ![page-script](assets/page-script.png)
 
 ### Head- och body-skript {#head-and-body-scripts}
 
@@ -128,13 +128,13 @@ Du bör inte bara se rubriken **Community Play**, utan även gränssnittet för 
 
 Panelen Resurser/Komponenter visas när både sidopanelen är öppen och fönstret är tillräckligt brett för att både sidinnehållet och sidinnehållet ska kunna visas.
 
-![chlimage_1-232](assets/chlimage_1-232.png)
+![view-page](assets/view-page.png)
 
 * Klassiskt användargränssnitt: [http://localhost:4502/cf#/content/an-scf-sandbox/en/play.html](http://localhost:4502/cf#/content/an-scf-sandbox/en/play.html)
 
 Så här visas uppspelningssidan i det klassiska användargränssnittet, inklusive med innehållssökaren (cf):
 
-![chlimage_1-233](assets/chlimage_1-233.png)
+![play-page-view](assets/play-page-view.png)
 
 ## Communities-komponenter {#communities-components}
 
