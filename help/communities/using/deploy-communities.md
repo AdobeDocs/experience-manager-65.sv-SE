@@ -11,10 +11,10 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 94bc3550a7e18b9203e7a0d495d195d7b798e012
+source-git-commit: 7c0834e9b70266e8b678771510fb1756c8091ea8
 workflow-type: tm+mt
-source-wordcount: '1890'
-ht-degree: 0%
+source-wordcount: '1891'
+ht-degree: 1%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 * AEM Communities-licens
 
-* Valfria licenser för:
+* Ytterligare licenser för:
 
    * [Funktioner i Adobe Analytics for Communities](/help/communities/analytics.md)
    * [MongoDB för MSRP](/help/communities/msrp.md)
@@ -35,53 +35,53 @@ ht-degree: 0%
 
 ## Checklista för installation {#installation-checklist}
 
-**För[AEM](/help/sites-deploying/deploy.md#what-is-aem)**
+**För[AEM](/help/sites-deploying/deploy.md#what-is-aem)**:
 
-* installera de senaste [AEM 6.5 uppdateringarna](#aem64updates)
+* Installera de senaste [AEM 6.5 uppdateringarna](#aem64updates).
 
-* Om du inte använder standardportarna (4502, 4503) [konfigurerar du replikeringsagenter](#replication-agents-on-author)
-* [replikera krypteringsnyckeln](#replicate-the-crypto-key)
-* om det finns stöd för globalisering, [konfigurera automatisk översättning](/help/sites-administering/translation.md)(exempelinställningar tillhandahålls för utveckling)
+* Om du inte använder standardportarna (4502, 4503) [konfigurerar du replikeringsagenterna](#replication-agents-on-author).
+* [Replikera krypteringsnyckel](#replicate-the-crypto-key)
+* Om det finns stöd för globalisering kan du [konfigurera automatisk översättning](/help/sites-administering/translation.md)(exempelinställningar tillhandahålls för utveckling).
 
-**För[communityfunktionen](/help/communities/overview.md)**
+**För funktionaliteten[](/help/communities/overview.md)** Communities:
 
-* om du distribuerar en [publiceringsgrupp](/help/sites-deploying/recommended-deploys.md#tarmk-farm), [identifiera den primära utgivaren](#primary-publisher)
+* Om du distribuerar en [publiceringsgrupp](/help/sites-deploying/recommended-deploys.md#tarmk-farm)[identifierar du den primära utgivaren](#primary-publisher)
 
-* [aktivera tunneltjänsten](#tunnel-service-on-author)
-* [aktivera social inloggning](/help/communities/social-login.md#adobe-granite-oauth-authentication-handler)
-* [konfigurera Adobe Analytics](/help/communities/analytics.md)
-* konfigurera en [standardtjänst för e-post](/help/communities/email.md)
-* identifiera valet för [delad UGC-lagring](/help/communities/working-with-srp.md) (**SRP**)
+* [Aktivera tunneltjänsten](#tunnel-service-on-author)
+* [Aktivera social inloggning](/help/communities/social-login.md#adobe-granite-oauth-authentication-handler)
+* [Konfigurera Adobe Analytics](/help/communities/analytics.md)
+* Konfigurera en [standardtjänst för e-post](/help/communities/email.md)
+* Identifiera valet för [delad UGC-lagring](/help/communities/working-with-srp.md) (**SRP**)
 
-   * om MongoDB SRP [(MSRP)](/help/communities/msrp.md)
+   * Om MongoDB SRP [(MSRP)](/help/communities/msrp.md)
 
-      * [installera och konfigurera MongoDB](/help/communities/msrp.md#mongodb-configuration)
-      * [konfigurera Solr](/help/communities/solr.md)
-      * [välj MSRP](/help/communities/srp-config.md)
-   * om relationsdatabas SRP [(DSRP)](/help/communities/dsrp.md)
+      * [Installera och konfigurera MongoDB](/help/communities/msrp.md#mongodb-configuration)
+      * [Konfigurera Solr](/help/communities/solr.md)
+      * [Välj MSRP](/help/communities/srp-config.md)
+   * Om relationsdatabas SRP [(DSRP)](/help/communities/dsrp.md)
 
-      * [installera JDBC-drivrutinen för MySQL](#jdbc-driver-for-mysql)
-      * [installera och konfigurera MySQL för DSRP](/help/communities/dsrp-mysql.md)
-      * [konfigurera Solr](/help/communities/solr.md)
-      * [välj DSRP](/help/communities/srp-config.md)
-   * om Adobe SRP [(ASRP)](/help/communities/asrp.md)
+      * [Installera JDBC-drivrutinen för MySQL](#jdbc-driver-for-mysql)
+      * [Installera och konfigurera MySQL för DSRP](/help/communities/dsrp-mysql.md)
+      * [Konfigurera Solr](/help/communities/solr.md)
+      * [Välj DSRP](/help/communities/srp-config.md)
+   * Om Adobe SRP [(ASRP)](/help/communities/asrp.md)
 
-      * arbeta med din kontorepresentant för etablering
-      * [välj ASRP](/help/communities/srp-config.md)
-   * om JCR SRP [(JSRP)](/help/communities/jsrp.md)
+      * Samarbeta med din kontorepresentant för etablering.
+      * [Välj ASRP](/help/communities/srp-config.md)
+   * Om JCR SRP [(JSRP)](/help/communities/jsrp.md)
 
-      * inte ett delat UGC-arkiv:
+      * Inte ett delat UGC-arkiv:
 
-         * UGC replikeras aldrig
-         * UGC är bara synligt på AEM instans eller kluster där det angavs
-      * standard är JSRP
+         * UGC replikeras aldrig.
+         * UGC är bara synligt på AEM eller kluster där det angavs.
+      * Standard är JSRP
 
    För **[aktiveringsfunktionen](/help/communities/overview.md#enablement-community)**
 
-   * [installera och konfigurera FFmpeg](/help/communities/ffmpeg.md)
-   * [installera JDBC-drivrutinen för MySQL](#jdbc-driver-for-mysql)
-   * [installera AEM Communities SCORM-Engine](#scorm-package)
-   * [installera och konfigurera MySQL för aktivering](/help/communities/mysql.md)
+   * [Installera och konfigurera FFmpeg](/help/communities/ffmpeg.md)
+   * [Installera JDBC-drivrutinen för MySQL](#jdbc-driver-for-mysql)
+   * [Installera AEM Communities SCORM-Engine](#scorm-package)
+   * [Installera och konfigurera MySQL för aktivering](/help/communities/mysql.md)
 
 
 
@@ -104,41 +104,40 @@ Liksom AEM 6.4 och senare är AEM Communities funktioner och snabbkorrigeringar 
 
 ### JDBC-drivrutin för MySQL {#jdbc-driver-for-mysql}
 
-Två webbgruppsfunktioner använder en MySQL-databas:
+Två Communities-funktioner använder en MySQL-databas:
 
-* för [aktivering](/help/communities/enablement.md) : spela in SCORM-aktiviteter
-* för [DSRP](/help/communities/dsrp.md) : lagra användargenererat innehåll (UGC)
+* För [aktivering](/help/communities/enablement.md): spela in SCORM-aktiviteter
+* För [DSRP](/help/communities/dsrp.md): lagra användargenererat innehåll (UGC)
 
 MySQL-kopplingen måste hämtas och installeras separat.
 
-De nödvändiga stegen är:
+Nödvändiga steg är:
 
-1. hämta ZIP-arkivet från [https://dev.mysql.com/downloads/connector/j/](https://dev.mysql.com/downloads/connector/j/)
+1. Hämta ZIP-arkivet från [https://dev.mysql.com/downloads/connector/j/](https://dev.mysql.com/downloads/connector/j/)
 
-   * version måste vara >= 5.1.38
+   * Versionen måste vara >= 5.1.38
 
-1. extrahera mysql-connector-java-&lt;version>-bin.jar (bundle) från arkivet
-1. använda webbkonsolen för att installera och starta paketet:
+1. Extract `mysql-connector-java-&lt;version&gt;-bin.jar (bundle) from the archive`
+1. Använd webbkonsolen för att installera och starta paketet:
 
-   * till exempel https://localhost:4502/system/console/bundles
-   * select **`Install/Update`**
+   * Till exempel https://localhost:4502/system/console/bundles
+   * Välj **`Install/Update`**
    * Bläddra.. för att välja det paket som extraherats från det hämtade ZIP-arkivet
-   * kontrollera att* JDBC-drivrutinen för Oracle Corporation för MySQLcom.mysql.jdbc* är aktiv och starta den om inte (eller kontrollera loggarna)
+   * Kontrollera att *Oracle Corporations JDBC-drivrutin för MySQLcom.mysql.jdbc* är aktiv och starta den om inte (eller kontrollera loggarna)
 
 1. Om du installerar på en befintlig distribution efter att JDBC har konfigurerats, binder du om JDBC till den nya anslutningen genom att spara om JDBC-konfigurationen från webbkonsolen:
 
-   * till exempel https://localhost:4502/system/console/configMgr
-   * hitta `Day Commons JDBC Connections Pool` konfiguration
-   * välj att öppna
-   * select `Save`
+   * Till exempel https://localhost:4502/system/console/configMgr
+   * Leta reda på `Day Commons JDBC Connections Pool` konfigurationen och välj för att öppna konfigurationen.
+   * Välj `Save`.
 
-1. Upprepa steg 3 och 4 för alla författare- och publiceringsinstanser
+1. Upprepa steg 3 och 4 för alla författare och publiceringsinstanser.
 
 Mer information om hur du installerar paket finns på [webbkonsolsidan](/help/sites-deploying/web-console.md#bundles) .
 
 #### Exempel: Installerat MySQL Connector-paket {#example-installed-mysql-connector-bundle}
 
-![](../assets/chlimage_1-125.png)
+![](../assets/mysql-connector.png)
 
 ### SCORM-paket {#scorm-package}
 
@@ -170,8 +169,8 @@ Den avancerade MLS-nedladdningen (kallas även &quot;phasetwo&quot;) är tillgä
 
 * [AEM-SOLR-MLS-phasetwo](https://repo.adobe.com/nexus/content/repositories/releases/com/adobe/tat/AEM-SOLR-MLS-phasetwo/1.2.40/)
 
-   * version 1.2.40, 6 april 2016
-   * download AEM-SOLR-MLS-phasetwo-1.2.40.zip
+   * Version 1.2.40, 6 april 2016
+   * Ladda ned AEM-SOLR-MLS-phasetwo-1.2.40.zip
 
 Mer information och installationsinformation finns på [Solr Configuration](/help/communities/solr.md) for SRP.
 
@@ -179,18 +178,18 @@ Mer information och installationsinformation finns på [Solr Configuration](/hel
 
 **Paket synliga i Adobe AEM Cloud**
 
-Länkarna till paketen på den här sidan kräver ingen instans av AEM som körs eftersom de ska paketera delning på `adobeaemcloud.com`. Paketen kan visas, men `Install`knappen används för att installera paketen på en värdplats i Adobe. Om du tänker installera på en lokal AEM `Install`uppstår ett fel om du väljer.
+Länkarna till paketen på den här sidan kräver ingen instans av AEM som körs eftersom de ska paketera delning på `adobeaemcloud.com`. Paketen kan visas, men med `Install` knappen installerar du paketen på en värdplats i Adobe. Om du tänker installera på en lokal AEM får du ett fel om du väljer `Install` .
 
 **Installera på lokal AEM**
 
 Om du vill installera de paket som visas i `adobeaemcloud.com` en lokal AEM måste paketet först hämtas till en lokal disk:
 
-* välj fliken **Resurser**
-* välj **Hämta till disk**
+* Välj fliken **Resurser**
+* Välj **Hämta till disk**
 
 På den lokala AEM ska du använda pakethanteraren (till exempel [https://localhost:4502/crx/packmgr/](https://localhost:4502/crx/packmgr/)) för att överföra till den lokala AEM paketdatabasen.
 
-Om du använder paketresursen från den lokala AEM (till exempel [https://localhost:4502/crx/packageshare/](https://localhost:4502/crx/packageshare/)) hämtar `Download`knappen den lokala AEM-instansens paketdatabas.
+Alternativt kan du komma åt paketet med hjälp av paketresursen från den lokala AEM (till exempel [https://localhost:4502/crx/packageshare/](https://localhost:4502/crx/packageshare/)), så hämtas `Download` knappen till den lokala AEM-instansens paketdatabas.
 
 När du är i den lokala AEM-instansens paketdatabas använder du pakethanteraren för att installera paketet.
 
@@ -216,61 +215,61 @@ Förutom att uppgradera plattformen kan du läsa [Uppgradera till AEM Communitie
 
 ### Primär utgivare {#primary-publisher}
 
-När den valda distributionen är en [publiceringsgrupp](/help/communities/topologies.md#tarmk-publish-farm)måste en AEM publiceringsinstans identifieras som **`primary publisher`** för aktiviteter som inte ska förekomma i alla instanser, till exempel funktioner som kräver **notifications **eller **Adobe Analytics**.
+När den valda distributionen är en [publiceringsgrupp](/help/communities/topologies.md#tarmk-publish-farm)måste en AEM publiceringsinstans identifieras som **`primary publisher`** för aktiviteter som inte ska förekomma i alla instanser, till exempel funktioner som kräver **meddelanden** eller **Adobe Analytics**.
 
 Som standard är `AEM Communities Publisher Configuration` OSGi-konfigurationen konfigurerad med kryssrutan **`Primary Publisher`** markerad, så att alla publiceringsinstanser i en publiceringsgrupp identifierar sig själva som primär.
 
 Det är därför nödvändigt att **redigera konfigurationen för alla sekundära publiceringsinstanser** för att avmarkera **`Primary Publisher`** kryssrutan.
 
-![](../assets/chlimage_1-126.png)
+![](../assets/primary-publisher.png)
 
 För alla andra (sekundära) publiceringsinstanser i en publiceringsgrupp:
 
-* logga in med administratörsbehörighet
-* gå till [webbkonsolen](/help/sites-deploying/configuring-osgi.md)
+* Logga in med administratörsbehörighet
+* Åtkomst till [webbkonsolen](/help/sites-deploying/configuring-osgi.md)
 
-   * till exempel [https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
+   * Till exempel [https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
 
-* leta upp `AEM Communities Publisher Configuration`
-* markera redigeringsikonen
-* avmarkera rutan **Primär utgivare**
-* välj **Spara**
+* Leta reda på `AEM Communities Publisher Configuration`
+* Markera redigeringsikonen
+* Avmarkera kryssrutan **Primär utgivare**
+* Välj **Spara**
 
 ### Replikeringsagenter på författare {#replication-agents-on-author}
 
 Replikering används för webbplatsinnehåll som skapas i publiceringsmiljön, t.ex. communitygrupper, samt för att hantera medlemmar och medlemsgrupper från författarmiljön med hjälp av [tunneltjänsten](#tunnel-service-on-author).
 
-För den primära utgivaren måste du se till att [replikeringsagentkonfigurationen](/help/sites-deploying/replication.md) identifierar publiceringsservern och den behöriga användaren korrekt. Den auktoriserade standardanvändaren har `admin,` redan rätt behörigheter (är medlem i `Communities Administrators`).
+För den primära utgivaren måste du se till att [replikeringsagentkonfigurationen](/help/sites-deploying/replication.md) identifierar publiceringsservern och den behöriga användaren korrekt. Den auktoriserade standardanvändaren har `admin` redan rätt behörigheter (är medlem i `Communities Administrators`).
 
 För att en annan användare ska ha rätt behörigheter måste de läggas till som medlem i `administrators` användargruppen (även som medlem i `Communities Administrators`).
 
 Det finns två replikeringsagenter i författarmiljön som kräver att transportkonfigurationen är korrekt konfigurerad.
 
-* få åtkomst till replikeringskonsolen på författaren
+* Åtkomst till replikeringskonsolen på författaren
 
-   * från global navigering: **Verktyg, Driftsättning, replikering, agenter på författaren**
+   * Från global navigering: **Verktyg, Driftsättning, replikering, agenter på författaren**
 
-* följer samma förfarande för båda agenterna:
+* Följ samma procedur för båda agenterna:
 
    * **Standardagent (publicera)**
    * **Agenten för omvänd replikering (publicera omvänd)**
 
-      1. välj agenten
-      1. markera **redigering**
-      1. välj fliken **Transport**
-      1. om porten inte finns `4503`redigerar du **URI** för att ange rätt port
+      1. Välj agenten.
+      1. Välj **redigera**.
+      1. Välj fliken **Transport**
+      1. Om porten inte finns `4503`kan du ange rätt port genom att redigera **URI** .
 
-      1. om ingen användare `admin`finns, redigera **Användare** och **lösenord** för att ange en medlem i `administrators` användargruppen
+      1. Om ingen användare `admin`är det, ska du redigera **Användare** och **Lösenord** för att ange en medlem i `administrators` användargruppen.
 
 I följande bilder visas resultatet av en ändring av porten från 4503 till 6103 med :
 
 #### Standardagent (publicera) {#default-agent-publish}
 
-![configure-limits](../assets/configure-limits.png)
+![configure-limits](../assets/default-agent-publish.png)
 
 #### Agenten för omvänd replikering (publicera omvänd) {#reverse-replication-agent-publish-reverse}
 
-![](../assets/chlimage_1-128.png)
+![](../assets/reverse-replication-agent.png)
 
 ### Tunneltjänst på författare {#tunnel-service-on-author}
 
@@ -280,20 +279,19 @@ Tunneltjänsten ger denna åtkomst med replikeringsagenten på författaren.
 
 Så här aktiverar du tunneltjänsten:
 
-* on **author**
-* logga in med administratörsbehörighet
-* Om utgivaren inte är lokal värd:4503 eller om transportanvändaren inte är det `admin`ska du [konfigurera replikeringsagenten](#replication-agents-on-author)
+* Logga in med administratörsbehörighet när du **är författare**.
+* Om utgivaren inte är localhost:4503 eller om transportanvändaren inte är det `admin`ska du [konfigurera replikeringsagenten](#replication-agents-on-author).
 
-* åtkomst till [webbkonsolen](/help/sites-deploying/configuring-osgi.md)
+* Åtkomst till [webbkonsolen](/help/sites-deploying/configuring-osgi.md)
 
-   * till exempel [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
+   * Till exempel [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
 
-* leta upp `AEM Communities Publish Tunnel Service`
-* markera redigeringsikonen
-* markera rutan **enable **box
+* Leta reda på `AEM Communities Publish Tunnel Service`
+* Markera redigeringsikonen
+* Markera kryssrutan **aktivera**
 * välj **Spara**
 
-![](../assets/chlimage_1-129.png)
+![](../assets/tunnel-service.png)
 
 ### Replikera krypteringsnyckeln {#replicate-the-crypto-key}
 
@@ -303,31 +301,34 @@ Från och med AEM 6.3 lagras nyckelmaterialet i filsystemet och inte längre i d
 
 Om du vill kopiera nyckelmaterialet från författaren till alla andra instanser måste du:
 
-* få åtkomst till AEM, vanligtvis en författarinstans, som innehåller det nyckelmaterial som ska kopieras
+* Få åtkomst till AEM, vanligtvis en författarinstans som innehåller det nyckelmaterial som ska kopieras
 
-   * hitta paketet i det lokala filsystemet, till exempel `com.adobe.granite.crypto.file`
+   * Hitta paketet i det lokala filsystemet `com.adobe.granite.crypto.file`
+
+      Till exempel,
 
       * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21`
-      * filen `bundle.info` identifierar paketet
-   * navigera till datamappen, till exempel
+      * Filen identifierar `bundle.info` paketet
+   * Navigera till datamappen, till exempel
 
       * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
-   * kopiera hmac- och primär nodfiler
+   * Kopiera hmac- och primära nodfiler.
 
 
 
-* för varje AEM
+* För varje AEM
 
-   * navigera till datamappen, till exempel
+   * Navigera till datamappen, till exempel
 
       * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
-   * klistra in de två tidigare kopierade filerna
-   * det är nödvändigt att [uppdatera Granite Crypto-paketet](#refresh-the-granite-crypto-bundle) om mål-AEM-instansen körs
+   * Klistra in de två tidigare kopierade filerna
+   * Det är nödvändigt att [uppdatera Granite-krypteringspaketet](#refresh-the-granite-crypto-bundle) om mål-AEM körs.
 
 
 >[!CAUTION]
 >
 >Om en annan säkerhetsfunktion redan har konfigurerats som baseras på krypteringsnycklarna kan konfigurationen skadas om du replikerar krypteringsnycklarna. Om du behöver hjälp [kontaktar du kundtjänst](https://helpx.adobe.com/marketing-cloud/contact-support.html).
+
 
 #### Databasreplikering {#repository-replication}
 
@@ -339,31 +340,32 @@ Du kan behålla nyckelmaterialet som lagras i databasen, vilket var fallet i AEM
 >
 >Det är viktigt att kontrollera att [replikeringsagenten på författaren](#replication-agents-on-author) är korrekt konfigurerad.
 
+
 Med nyckelmaterialet som lagras i databasen replikeras krypteringsnyckeln från författaren till andra instanser på följande sätt:
 
 Använda [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) :
 
-* gå till [https://&lt;server>:&lt;port>/crx/de](https://localhost:4502/crx/de)
-* select `/etc/key`
-* öppna `Replication` flik
-* select `Replicate`
+* Gå till [https://&lt;server>:&lt;port>/crx/de](https://localhost:4502/crx/de)
+* Välj `/etc/key`
+* Öppna `Replication` flik
+* Välj `Replicate`
 
 * [uppdatera Granite Crypto-paketet](#refresh-the-granite-crypto-bundle)
 
-![](../assets/chlimage_1-130.png)
+![](../assets/replicare-repository.png)
 
 #### Uppdatera Granite Crypto Bundle {#refresh-the-granite-crypto-bundle}
 
 * Gå till [webbkonsolen för varje publiceringsinstans](/help/sites-deploying/configuring-osgi.md)
 
-   * till exempel [https://&lt;server>:&lt;port>/system/console/bundles](https://localhost:4503/system/console/bundles)
+   * Till exempel [https://&lt;server>:&lt;port>/system/console/bundles](https://localhost:4503/system/console/bundles)
 
-* locate `Adobe Granite Crypto Support` bundle (com.adobe.granite.crypto)
-* välj **Uppdatera**
+* Hitta `Adobe Granite Crypto Support` paketet (com.adobe.granite.crypto)
+* Välj **Uppdatera**
 
-![](../assets/chlimage_1-131.png)
+![](../assets/refresh-granite-bundle.png)
 
-* Efter ett ögonblick visas en **Success **dialog:
+* Efter en stund visas dialogrutan **Slutfört** :
    `Operation completed successfully.`
 
 ### Apache HTTP Server {#apache-http-server}
