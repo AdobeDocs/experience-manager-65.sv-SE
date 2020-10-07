@@ -4,9 +4,9 @@ description: Lär dig resurshanteringsåtgärder som överföring, hämtning, re
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b76d93ada35f5d054c1d07bf1a7dd9deaaaec1ee
+source-git-commit: 179af622d9655d52f3d3462f77baaf3dc9310fd8
 workflow-type: tm+mt
-source-wordcount: '9387'
+source-wordcount: '9382'
 ht-degree: 3%
 
 ---
@@ -452,7 +452,7 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
 
 ## Flytta och byta namn på resurser {#moving-or-renaming-assets}
 
-När du flyttar resurser (eller mappar) till en annan plats dupliceras inte resurserna (eller mapparna), till skillnad från när du kopierar resursen. Resurserna (eller mapparna) placeras på målplatsen och tas bort från källplatsen. Du kan också byta namn på resursen när du flyttar den till den nya platsen.
+När du flyttar resurser (eller mappar) till en annan plats dupliceras inte resurserna (eller mapparna) till skillnad från när du kopierar resursen. Resurserna (eller mapparna) placeras på målplatsen och tas bort från källplatsen. Du kan också byta namn på resursen när du flyttar den till den nya platsen.
 Om du flyttar en publicerad resurs till en annan plats kan du välja att publicera om resursen. Som standard avpubliceras en flyttningsåtgärd för en publicerad resurs automatiskt. En flyttad resurs publiceras på nytt om författaren väljer alternativet [!UICONTROL Republish] när resursen flyttas.
 
 ![Du kan publicera om en redan publicerad resurs när du flyttar den](assets/republish-on-move.png)
@@ -496,7 +496,7 @@ Så här flyttar du resurser eller mappar:
 
 ### Flytta resurser med dra-åtgärden {#move-using-drag}
 
-Du kan flytta resurser (eller mappar) till en mapp på samma nivå, till [!UICONTROL Lightbox] samlingen eller till en annan samling genom att dra dem till målplatsen i stället för att använda [!UICONTROL Move] alternativet i användargränssnittet. Den här åtgärden är dock bara möjlig i listvyn.
+Du kan flytta resurser (eller mappar) till en mapp på samma nivå genom att dra dem till målplatsen, i stället för att använda [!UICONTROL Move] alternativet i användargränssnittet. Den här åtgärden är dock bara möjlig i listvyn.
 
 När du flyttar resurser genom att dra dem öppnas inte [!UICONTROL Move Asset] guiden. Du kan därför inte ändra namn på resurserna när du flyttar dem. Dessutom publiceras redan publicerade resurser på nytt när de flyttas genom att användaren drar dem, utan att användaren behöver godkänna publiceringen på nytt.
 
