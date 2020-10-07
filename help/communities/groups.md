@@ -12,7 +12,7 @@ discoiquuid: d381ea40-fe49-4d32-bfad-1379c7a02aba
 docset: aem65
 pagetitle: Community Groups Console
 translation-type: tm+mt
-source-git-commit: a76707e16aa7054078bcfffe43476e4bd83d83e3
+source-git-commit: 807a81045fca19ab83b9d7872684a5f8a9ed70f1
 workflow-type: tm+mt
 source-wordcount: '1676'
 ht-degree: 0%
@@ -39,14 +39,14 @@ De olika delarna av communitygrupper är:
 <!-- This is a 404 on helpx. Please update or remove.
 >[!NOTE]
 >
->Community groups, created in the publish environment before the [existence of the Community Groups console](/help/communities/version-history.md#featurepack1fp1), will not be listed in the Community Groups console, and thus, are not modifiable using the console.-->
+>Community groups, created in the publish environment before the [existence of the Community Groups console](/help/communities/version-history.md#featurepack1fp1), will not be listed in the Community Groups console, and thus, are not modifiable using the console.
+-->
 
 >[!NOTE]
 >
 >Den här gruppkonsolen, som bara är tillgänglig från webbgruppskonsolen, ska inte blandas ihop med [gruppmedlemskonsolen](/help/communities/members.md) för hantering av medlemsgrupper.
 >
 >Medlemsgrupper är användargrupper som är registrerade i publiceringsmiljön och som nås från författarmiljön med hjälp av [tunneltjänsten](/help/communities/deploy-communities.md#tunnel-service-on-author).
-
 
 ## Skapa grupp {#group-creation}
 
@@ -204,12 +204,11 @@ När processen är klar visas kortet för den nya undercommunitywebbplatsen (gru
 >
 >Gruppen skapas på alla språk som anges i [steg 1: Community Group Template](/help/communities/groups.md#step-community-group-template) in Additional Available Community Group Languages, in the Community Groups console of the respective community sites.
 
-
 ## Författargruppinnehåll {#author-group-content}
 
 ![öppen webbplats](assets/open-site.png)
 
-Sidinnehållet i en grupp kan redigeras med samma verktyg som andra AEM-sidor. Om du vill öppna gruppen för redigering väljer du ikonen Öppna plats som visas när du håller pekaren över gruppkortet.
+Sidinnehållet i en grupp kan redigeras med samma verktyg som andra AEM. Om du vill öppna gruppen för redigering väljer du ikonen Öppna plats som visas när du håller pekaren över gruppkortet.
 
 ## Ändra gruppegenskaper {#modify-group-properties}
 
@@ -256,13 +255,11 @@ Ta bort funktioner från platsstrukturen.
 >
 >Om du t.ex. byter namn på URL:en flyttas inte den befintliga UGC:n, vilket resulterar i&quot;UGC-förlust&quot;.
 
-
 >[!CAUTION]
 >
 >Gruppfunktionen får *inte* vara den *första eller enda* funktionen i platsstrukturen.
 >
 >Alla andra funktioner, till exempel [sidfunktionen](/help/communities/functions.md#page-function), måste inkluderas och listas först.
-
 
 **Exempel: Lägga till en kalenderfunktion i en undergruppsstruktur**
 
@@ -304,7 +301,6 @@ När gruppen har publicerats visas ett meddelande:
 >Den överordnade communitywebbplatsen och överordnade grupper ska redan ha publicerats.
 >
 >Community-webbplatsen och kapslade grupper bör publiceras uppifrån och ned.
-
 
 ## Ta bort gruppen {#delete-the-group}
 
