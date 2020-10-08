@@ -3,7 +3,7 @@ title: Privata mappar för att dela resurser
 description: Lär dig hur du skapar en privat mapp [!DNL Adobe Experience Manager Assets] och delar den med andra användare samt tilldelar olika behörigheter till dem.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 2bd850ff421494dda83bafb59fa695365498bbbe
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 0%
@@ -82,4 +82,5 @@ Du kan ta bort en mapp genom att markera mappen och välja [!UICONTROL Delete] a
 >[!NOTE]
 >
 >Om du tar bort en mapp med metoden ovan från användargränssnittet tas även de associerade användargrupperna bort.
-Befintliga redundanta, oanvända och autogenererade användargrupper kan rensas bort från databasen med hjälp av `clean` metoden i JMX i författarinstansen (`http://[server]:[port]/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`).
+>
+>Befintliga redundanta, oanvända och autogenererade användargrupper kan rensas bort från databasen med hjälp av `clean` metoden i JMX i författarinstansen (`http://[server]:[port]/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`).
