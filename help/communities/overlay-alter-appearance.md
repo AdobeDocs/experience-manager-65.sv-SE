@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: c9d31ed8-c105-453b-bd3c-4660dfd81272
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9d6ec05fdc98e33a11303d189414c2c45c5e8b3c
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '211'
 ht-degree: 1%
@@ -61,7 +61,6 @@ Radera raderna eller omge dem med `<!--` och kommentera `-->` ut dem. Dessutom l
 >[!NOTE]
 >
 >En robustare form av replikering skulle vara att skapa ett paket i Package Manager och [aktivera](/help/sites-administering/package-manager.md#replicating-packages) det. Ett paket kan exporteras och arkiveras.
-
 
 I den globala navigeringen väljer du **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Replication]** och klickar på **[!UICONTROL Activate Tree]**.
 
