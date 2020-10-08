@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 048f7b30-20c3-4567-bd32-38cf2643cf39
 translation-type: tm+mt
-source-git-commit: 94bc3550a7e18b9203e7a0d495d195d7b798e012
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1174'
 ht-degree: 0%
@@ -105,7 +105,6 @@ Solr-samlingens namn.
 >[!NOTE]
 >
 >MongoDB-databasen, som har standardvärdet name `communities`, ska inte anges till namnet på en databas som används för [nodarkiv eller datalager](../../help/sites-deploying/data-store-config.md)(binära). Se även [lagringselement i AEM 6.5](../../help/sites-deploying/storage-elements-in-aem-6.md).
-
 
 ### MongoDB-replikuppsättning {#mongodb-replica-set}
 
@@ -208,7 +207,6 @@ cURL -u *signin* -d *data* *reindex-url*
 >[!NOTE]
 >
 >Om du [indexerar om DSRP Solr](dsrp.md)är URL:en **/services/social/datastore/rdb/reindex**
-
 
 ### Exempel på omindexering av MSRP {#msrp-reindex-example}
 
