@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a726c904-aadd-4678-be84-9e05808ab8be
 translation-type: tm+mt
-source-git-commit: f05d7c19e3284c0627e29b9590db4749be100229
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '183'
 ht-degree: 0%
@@ -22,9 +22,9 @@ ht-degree: 0%
 
 ## Översikt {#overview}
 
-Detta avsnitt i AEM Communities dokumentation gäller utöver följande:
+Detta avsnitt i AEM Communities-dokumentationen innehåller även:
 
-* [Skapa AEM-projekt med Apache Maven](../../help/sites-developing/ht-projects-maven.md).
+* [Skapa AEM projekt med Apache Maven](../../help/sites-developing/ht-projects-maven.md).
 
 Det finns nu två&quot;uber&quot;-artefakter som ersätter enskilda artefakter:
 
@@ -59,7 +59,6 @@ Kontrollera att den angivna versionen motsvarar den version av webbcommunityn so
 >Vi rekommenderar att du håller dig uppdaterad med den senaste versionen av Communities.
 >
 >Gå till avsnittet [Senaste versioner](deploy-communities.md#latest-releases) för att identifiera den senaste versionen.
-
 
 ## Exempel på Maven Dependency {#maven-dependency-example}
 
