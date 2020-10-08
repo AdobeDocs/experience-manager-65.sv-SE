@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 91833914-b811-4355-a97d-e1a9cb7441f1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1b200f9dd5fc99b37bcc629be7a785e02e8320c0
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '2454'
 ht-degree: 0%
@@ -23,12 +23,11 @@ ht-degree: 0%
 
 Den typ av funktioner som förväntas av en community-upplevelse är välkända. Community-funktioner är tillgängliga som communityfunktioner. De är i princip en eller flera sidor som är färdiga för implementering av en communityfunktion som kräver mer än att bara lägga till en komponent på en sida i redigeringsläge. De är byggstenarna som används för att definiera strukturen för en mall [för en](/help/communities/sites.md) community-webbplats från vilken communitysajter [skapas](/help/communities/sites-console.md).
 
-När en community-webbplats har skapats kan innehåll läggas till på de resulterande sidorna med hjälp av standardläget [för](/help/sites-authoring/editing-content.md)AEM-redigering. Olika communityfunktioner är tillgängliga enligt vad som visas i användarfunktionskonsolen.
+När en community-webbplats har skapats kan innehåll läggas till på de resulterande sidorna med hjälp av standardläget [för](/help/sites-authoring/editing-content.md)AEM. Olika communityfunktioner är tillgängliga enligt vad som visas i användarfunktionskonsolen.
 
 >[!NOTE]
 >
 >Konsolerna för att skapa [communitysajter](/help/communities/sites-console.md), [communitymallar](/help/communities/sites.md), mallar [för](/help/communities/tools-groups.md)communitygrupper och [communityfunktioner](/help/communities/functions.md) är endast avsedda att användas i författarmiljön.
-
 
 ## Community Function Console {#community-functions-console}
 
@@ -40,7 +39,7 @@ Så här når du användarfunktionskonsolen i författarmiljön:
 
 ## Fördefinierade funktioner {#pre-built-functions}
 
-Här följer en kort beskrivning av funktionerna som levereras med AEM Communities. Varje funktion innehåller en eller flera AEM-sidor med Communities-komponenter som kopplats ihop till en funktion som enkelt kan integreras i en mall [för](/help/communities/sites.md)communitysajter.
+Här följer en kort beskrivning av funktionerna i AEM Communities. Varje funktion innehåller en eller flera AEM sidor som innehåller komponenterna i användargrupperna sammankopplade till en funktion som enkelt kan införlivas i en mall [för](/help/communities/sites.md)användarcommunityn.
 
 En mall för en community-webbplats innehåller strukturen för en community-webbplats, inklusive inloggning, användarprofiler, meddelanden, meddelanden, webbplatsmeny, sökning, teman och varumärken.
 
@@ -60,7 +59,7 @@ När en communityfunktion läggs till i en mall för en community-webbplats elle
 
 * **Webbadress**
 
-   (*Obligatoriskt*) Namnet som används för att generera URI:n. Namnet måste följa de [namngivningskonventioner](/help/sites-developing/naming-conventions.md) som ålagts av AEM och JCR.
+   (*Obligatoriskt*) Namnet som används för att generera URI:n. Namnet måste följa de [namnkonventioner](/help/sites-developing/naming-conventions.md) som AEM och JCR har fastställt.
 
 Om du till exempel använder den webbplats som skapas i [självstudiekursen Komma igång](/help/communities/getting-started.md) , om
 
@@ -234,7 +233,6 @@ När du lägger till en mall öppnas följande dialogruta:
 >
 >Alla andra funktioner, till exempel [sidfunktionen](#page-function), måste inkluderas och listas först.
 
-
 Med gruppfunktionen kan communitymedlemmar skapa undergrupper på communitywebbplatsen i publiceringsmiljön.
 
 Beroende på [inställningarna](/help/communities/sites-console.md#groupmanagement) när funktionen Grupper ingår i en [community-webbplatsmall](/help/communities/sites.md)kan grupperna vara offentliga eller privata och en eller flera communitygruppsmallar kan konfigureras för att ge dig möjlighet att välja mellan mallar när communitygruppen faktiskt skapas (t.ex. från publiceringsmiljön). En mall [för en](/help/communities/tools-groups.md) community-grupp anger vilka communityfunktioner som skapas för gruppsidorna, till exempel forum och kalendrar.
@@ -317,7 +315,7 @@ Standard är avmarkerat.
 
 ### Sidfunktion {#page-function}
 
-Sidfunktionen lägger till en tom sida på communitywebbplatsen som den är kopplad till funktionerna på communitywebbplatsen: inloggning, meny, meddelanden, meddelanden, teman och branding. Innehåll läggs till på sidan med [standardläget](/help/sites-authoring/editing-content.md)för AEM-redigering.
+Sidfunktionen lägger till en tom sida på communitywebbplatsen som den är kopplad till funktionerna på communitywebbplatsen: inloggning, meny, meddelanden, meddelanden, teman och branding. Innehåll läggs till på sidan med [standardläget](/help/sites-authoring/editing-content.md)för AEM.
 
 När du lägger till en mall är den enda konfigurationen för [titel- och URL-inställningarna](#title-and-url-settings).
 
@@ -353,7 +351,7 @@ När konfigurationen läggs till i en mall tillåts begränsningar för behörig
 
 ## Skapa community-funktion {#create-community-function}
 
-Du kan skapa en communityfunktion genom att välja `Create Community Function` -ikonen längst upp i användarfunktionskonsolen. Flera funktioner som är baserade på samma AEM-skiss kan skapas och sedan anpassas unikt genom att man öppnar dem i redigeringsläget.
+Du kan skapa en communityfunktion genom att välja `Create Community Function` -ikonen längst upp i användarfunktionskonsolen. Flera funktioner som är baserade på samma AEM kan skapas och sedan anpassas unikt genom att du öppnar i redigeringsläget.
 
 ![chlimage_1-390](assets/chlimage_1-390.png)
 
@@ -401,7 +399,7 @@ Markera `Open Community Function` ikonen om du vill aktivera redigeringsläget f
 
 ### Konfigurera komponenter {#configuring-components}
 
-En communityfunktion implementeras som en Live-kopia av ett AEM-utkast, vars information finns under [Multi Site Manager](/help/sites-administering/msm.md).
+En communityfunktion implementeras som en Live-kopia av en AEM, som beskrivs under [Multi Site Manager](/help/sites-administering/msm.md).
 
 Det går inte bara att skapa sidinnehåll utan även att konfigurera komponenter.
 
