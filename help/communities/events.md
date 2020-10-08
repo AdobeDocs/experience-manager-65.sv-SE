@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 25b7ac08-6cdc-4dd5-a756-d6169b86f9ab
 translation-type: tm+mt
-source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '679'
 ht-degree: 1%
@@ -26,7 +26,7 @@ När medlemmar interagerar med communityfunktioner skickas OSGi-händelser som k
 
 En komponents [SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html) -instans registrerar händelserna som `actions` de inträffar för en `topic`. SocialEvent innehåller en metod för att returnera en `verb` associerad åtgärd. Det finns en *n-1* -relation mellan `actions` och `verbs`.
 
-För de webbdelar som levereras i releasen beskrivs i följande tabeller `verbs` definierade för varje `topic` tillgänglig för användning.
+För webbgruppskomponenterna som levereras i releasen beskriver följande tabeller de `verbs` definierade för varje `topic` tillgänglig för användning.
 
 ## Ämnen och verb {#topics-and-verbs}
 
@@ -128,7 +128,6 @@ Den anpassade händelsen åsidosätter metoden `getVerb()` så att en lämplig h
 >[!NOTE]
 >
 >Se till att ett anpassat tillägg är registrerat med en lägre rankning än någon befintlig implementering i produkten.
-
 
 ### Pseudokod för anpassad komponenthändelse {#pseudo-code-for-custom-component-event}
 
