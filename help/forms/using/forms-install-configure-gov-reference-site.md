@@ -8,7 +8,7 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 translation-type: tm+mt
-source-git-commit: c6b8e184042394d99ceb099c918b81e2cce49497
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '4727'
 ht-degree: 1%
@@ -34,7 +34,7 @@ Paketet innehåller en molnkonfiguration som stöder följande plattformsversion
 
 | MOLNLEVERANTÖR | SERVICEVERSION | STATUS |
 |---|---|---|
-| o | v5 API | **Stöds** |
+| Adobe Sign | v5 API | **Stöds** |
 | Microsoft Dynamics 365 | 1710 (9.1.0.3020) | **Stöds** |
 | Adobe Analytics | v1.4 Rest API | **Stöds** |
 **Paketinstallationshänsyn:**
@@ -737,7 +737,7 @@ Det här avsnittet innehåller information om demonstrationsfunktioner och desig
 
 ### Demoversioner {#demo-considerations}
 
-* Enligt AGRS-159 ska namnet (för-, mitten- och efternamn) på kontakten som används i det anpassade registreringsformuläret vara unikt.
+* Enligt AGRS-159 ska du se till att namnet (för-, mitten- och efternamn) på kontakten som används i det anpassade registreringsformuläret är unikt.
 * Det anpassningsbara registreringsformuläret skickar e-postmeddelandet från Adobe Sign till det e-postmeddelande som anges i formulärets e-postfält. E-postadressen får inte vara samma e-postadress som e-postadressen som används för att konfigurera Adobe Sign molnkonfiguration.
 
 ### Known issues {#known-issues}
@@ -776,7 +776,7 @@ Med Package Manager kan man komma åt Ultramarine-temat i AEM Forms genom att g�
 Användare kan konfigurera olika alternativ för arbetsflödestjänster, som omfattar följande:
 
 1. Microsoft Dynamics-post
-1. o
+1. Adobe Sign
 1. AEM anpassad kommunikationshantering
 1. Adobe Analytics
 
@@ -788,10 +788,10 @@ För att kunna konfigurera dem så att de aktiveras i arbetsflödet måste anvä
 
 1. Öppna tjänstdefinitionen och aktivera de valda tjänsterna för att anropas i arbetsflödet.
 
->[!NOTE]
-Bara för att en användare aktiverar tjänsten på Configuration Manager-sidan måste användaren ändå konfigurera en tjänstkonfiguration för att kunna kommunicera med de externa tjänster som efterfrågas.
+   >[!NOTE]
+   Bara för att en användare aktiverar tjänsten på Configuration Manager-sidan måste användaren ändå konfigurera en tjänstkonfiguration för att kunna kommunicera med de externa tjänster som efterfrågas.
 
-![webbforum](assets/aftia-configuration-options.jpg)
+   ![webbforum](assets/aftia-configuration-options.jpg)
 
 1. Klicka på knappen Spara när du är klar för att spara inställningarna.
 
