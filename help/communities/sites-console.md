@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 4130f952-5bb5-4e32-91d6-47b2885b30a4
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e49acbc042d84ae970058b4e99ab6f980866db5a
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '3290'
 ht-degree: 0%
@@ -33,7 +33,6 @@ Se [Komma igång med AEM Communities](/help/communities/getting-started.md) om d
 >[!NOTE]
 >
 >De viktigaste webbgruppsmenyerna för att skapa [communitysajter](/help/communities/sites-console.md), mallar [för](/help/communities/sites.md)communitysajter, mallar [för](/help/communities/tools-groups.md) communitygrupper [och](/help/communities/functions.md) communityfunktionerär endast avsedda att användas i författarmiljön.
-
 
 ## Förutsättningar {#prerequisites}
 
@@ -149,7 +148,7 @@ Tänk på följande när du skapar eller markerar en bild:
 
 * Bildens höjd beskärs till 120 pixlar från bildens överkant.
 * Bilden är fäst vid webbläsarfönstrets vänstra kant.
-* Det finns ingen storleksändring av bilden, så att när bildbredden är...
+* Det finns ingen storleksändring av bilden, så att när bildbredden är ...
 
    * Bilden upprepas vågrätt om den är mindre än webbläsarens bredd.
    * Bilden kommer att beskäras mer än webbläsarens bredd.
@@ -180,7 +179,6 @@ Panelen Inställningar innehåller flera underpaneler med funktioner som ska kon
 >
 >Detta uppnås genom att aktivera ` [AEM Communities Publish Tunnel Service](/help/communities/deploy-communities.md#tunnel-service-on-author)` för författarmiljön.
 
-
 #### ANVÄNDARHANTERING {#user-management}
 
 ![createplatserinställningar](assets/createsitesettings.png)
@@ -190,7 +188,6 @@ Panelen Inställningar innehåller flera underpaneler med funktioner som ska kon
 >Vi rekommenderar att [aktiveringscommunitysajter](/help/communities/overview.md#enablement-community) är privata (kontakta din kontorepresentant för mer information).
 >
 >En communitywebbplats är privat när anonyma besökare på webbplatsen nekas åtkomst, inte får registrera sig själv och inte får använda social inloggning.
-
 
 * **Tillåt användarregistrering**
 
@@ -227,7 +224,6 @@ Låt vara omarkerat för en *privat* communitywebbplats. Standard är avmarkerat
 >**Tillåta sociala inloggningar**
 >
 >Det kan finnas exempelkonfigurationer för Facebook och Twitter och de kan vara valbara, men för en [produktionsmiljö](/help/sites-administering/production-ready.md)måste du skapa anpassade Facebook- och Twitter-program. Se [Social Login med Facebook och Twitter](/help/communities/social-login.md).
-
 
 #### TAGGING {#tagging}
 
@@ -358,7 +354,7 @@ Standard är *valt*.
 
 ![webbplatsaktivering](assets/site-enablement.png)
 
-Inställningarna `ENABLEMENT`gäller när den valda communityplatsmallen innehåller [tilldelningsfunktionen](/help/communities/functions.md#assignments-function), som är tillgänglig när aktiveringsfunktionerna är licensierade och [konfigurerade](/help/communities/enablement.md). Referensplatsmallen som innehåller tilldelningsfunktionen är `Reference Structured Learning Site Template.`
+Inställningarna `ENABLEMENT`gäller när den valda communityplatsmallen innehåller [tilldelningsfunktionen](/help/communities/functions.md#assignments-function), som är tillgänglig när aktiveringsfunktionerna är licensierade och [konfigurerade](/help/communities/enablement.md). Referenswebbplatsmallen som innehåller tilldelningsfunktionen är `Reference Structured Learning Site Template.`
 
 * **Aktiveringshanterare**(obligatoriskt) Endast medlemmar i `Community Enablementmanagers` gruppen är tillgängliga för att hantera den här aktiveringscommunityn. Aktivitetshanterare ansvarar för att tilldela medlemmar till resurser. Se även [Hantera användare och användargrupper](/help/communities/users.md).
 
@@ -402,7 +398,6 @@ Innehållet i en webbplats kan redigeras med samma verktyg som andra AEM. Om du 
 >[!NOTE]
 >
 >Om du inte känner till AEM kan du läsa dokumentationen om [grundläggande hantering](/help/sites-authoring/basic-handling.md) och en [snabbguide till hur du skapar sidor](/help/sites-authoring/qg-page-authoring.md).
-
 
 ## Ändra webbplatsegenskaper {#modifying-site-properties}
 
@@ -450,7 +445,6 @@ STRUKTURpanelen gör att du kan ändra den struktur som ursprungligen skapades f
 >
 >Du kan ändra ordningen på alla funktioner i platsstrukturen förutom funktionen längst upp. Det innebär att det inte går att ändra startsidan för communitywebbplatsen.
 
-
 >[!CAUTION]
 >
 >* Visningsrubriken kan ändras utan biverkningar, men du bör inte redigera URL-namnet för en community-funktion som tillhör en community-webbplats.
@@ -458,13 +452,11 @@ STRUKTURpanelen gör att du kan ändra den struktur som ursprungligen skapades f
 >
 Om du t.ex. byter namn på URL:en flyttas inte den befintliga UGC:n, vilket resulterar i&quot;UGC-förlust&quot;.
 
-
 >[!CAUTION]
 >
 >Gruppfunktionen får *inte* vara den *första eller enda* funktionen i platsstrukturen.
 >
 >Alla andra funktioner, till exempel [sidfunktionen](/help/communities/functions.md#page-function), måste inkluderas och listas först.
-
 
 #### Exempel: Lägga till en katalogfunktion i en community-platsstruktur {#example-adding-a-catalog-function-to-a-community-site-structure}
 
@@ -551,7 +543,6 @@ Mer information finns i [Hantera användare och användargrupper](/help/communit
 >
 >
 när den används, bör den använda [Facebook-molntjänsten](/help/communities/social-login.md#createafacebookcloudservice) konfigureras för att lägga till användare i den här gruppen.
-
 
 ## Konfigurera för autentiseringsfel {#configure-for-authentication-error}
 
