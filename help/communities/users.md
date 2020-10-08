@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 774c2553-b629-456b-afa7-5713490f4a0a
 translation-type: tm+mt
-source-git-commit: c190d5f223c85f6c49fea1391d8a3d2baff20192
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '2168'
 ht-degree: 0%
@@ -111,7 +111,6 @@ I publiceringsmiljön kan en besökare bli en community-medlem, beroende på [in
 >
 >Om en besökare registrerar sig som medlem av en öppen community-webbplats blir han/hon automatiskt medlem av andra öppna communitysajter i samma publiceringsmiljö.
 
-
 ### Publicera grupproller {#publish-group-roles}
 
 | Om gruppmedlem... | Primär roll |
@@ -133,7 +132,7 @@ De valda medlemmarna tilldelas automatiskt till [rätt grupp](#publish-group-rol
 
 ### Grupp med behöriga medlemmar {#privileged-members-group}
 
-Syftet med en privilegierad medlemssäkerhetsgrupp är att begränsa skapandet av innehåll för vissa communityfunktioner till en privilegierad delmängd av medlemmarna på en community-webbplats.
+Syftet med en säkerhetsgrupp för behöriga medlemmar är att begränsa skapandet av innehåll för vissa communityfunktioner till en privilegierad delmängd av medlemmarna på en community-webbplats.
 
 Gruppen med behöriga medlemmar är en medlemsgrupp som skapas och hanteras med konsolen [](members.md)Communities-grupper.
 
@@ -151,7 +150,6 @@ När en communityfunktion inte är skyddad (ingen privilegierad medlemsgrupp har
 >[!NOTE]
 >
 >Om du lägger till en användare i en privilegierad medlemsgrupp för en communitywebbplats får användaren endast behörighet om han eller hon också är medlem på samma communitywebbplats.
-
 
 ## Skapa communitymedlemmar {#creating-community-members}
 
