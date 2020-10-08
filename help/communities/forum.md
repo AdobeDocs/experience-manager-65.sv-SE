@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: d936cef5-ad76-482d-97bf-c40137185812
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9e941ce092f7d3248c11886d6bf1e54f2e726362
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1226'
 ht-degree: 0%
@@ -34,7 +34,7 @@ Forumfunktionen tillhandahåller ett område där besökare (community-medlemmar
 
 I det här avsnittet av dokumentationen beskrivs:
 
-* Lägga till forumfunktionen på en AEM-webbplats.
+* Lägga till forumfunktionen på en AEM webbplats.
 * Konfigurationsinställningar för `Forum` komponenten.
 
 ### Lägga till ett forum på en sida {#adding-a-forum-to-a-page}
@@ -173,7 +173,6 @@ Ange inställningar för ämnen och svar på fliken **Inställningar** :
 >[!NOTE]
 >
 >Det kan vara nödvändigt att kontrollera både `AllowThreaded Replies` och `Allow users to Delete Comments and Topics` aktivera kommentarer om ett ämne.
-
 
 #### Fliken Användarmoderering {#user-moderation-tab}
 
