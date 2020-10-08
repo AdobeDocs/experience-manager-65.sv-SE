@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: b555bf0c-44cb-4fbf-abc4-15971663904d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1317'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 En profil är ett recept på vilka alternativ som ska användas för resurser som överförs till en mapp. Du kan till exempel ange vilken metadataprofil och videokodningsprofil som ska användas för videoresurser som du överför. Eller vilken bildprofil som ska användas för bildresurser så att de beskärs ordentligt.
 
-Dessa regler kan omfatta tillägg av metadata, smart beskärning av bilder eller etablering av videokodningsprofiler. I AEM kan du skapa tre typer av profiler, som beskrivs närmare på följande länkar:
+Dessa regler kan omfatta tillägg av metadata, smart beskärning av bilder eller etablering av videokodningsprofiler. I AEM kan du skapa tre typer av profiler som beskrivs närmare på följande länkar:
 
 * [Metadataprofiler](/help/assets/metadata-profiles.md)
 * [Bildprofiler](/help/assets/image-profiles.md)
@@ -44,27 +44,28 @@ Genom att använda konsekventa och lämpliga namngivningsstrategier för filer o
 
 >[!NOTE]
 >
->Gäller endast *Dynamic Media - Scene7-läge* i AEM 6.4.6.0 eller senare.
+>Gäller för *dynamiska media - Scene7-läge* endast i AEM 6.4.6.0 eller senare.
 
 Du kan bearbeta resurser i en mapp som redan har en befintlig bearbetningsprofil som du senare ändrade.
 
-Anta att du har skapat en bildprofil och tilldelat den till en mapp. Bildobjekt som du överförde till mappen fick automatiskt bildprofilen tillämpad på resurserna. Men senare bestämmer du dig för att lägga till en ny smart beskärningsproportion i profilen. I stället för att nu låta markera och ladda upp resurserna till mappen igen kör du bara *Scene7: Arbetsflöde för att bearbeta resurser* igen.
+Anta att du har skapat en bildprofil och tilldelat den till en mapp. Bildobjekt som du överförde till mappen fick automatiskt bildprofilen tillämpad på resurserna. Men senare bestämmer du dig för att lägga till en ny smart beskärningsproportion i profilen. I stället för att nu ha markerat och laddat upp resurserna till mappen igen kör du bara *Scene7: Arbetsflöde för att bearbeta resurser* igen.
 
 Du kan köra arbetsflödet för ombearbetning på en resurs som bearbetningen misslyckades för första gången. Även om du inte har redigerat en bearbetningsprofil eller använt en bearbetningsprofil kan du ändå köra arbetsflödet för ombearbetning på en mapp med resurser när som helst.
 
-Du kan också justera batchstorleken för arbetsflödet för ombearbetning från standardvärdet 50 resurser upp till 1 000 resurser. När du kör _Scene7: Arbetsflödet för att bearbeta resurser_ igen i en mapp grupperas resurserna i grupper och skickas sedan till Dynamic Media-servern för bearbetning. Efter bearbetning uppdateras metadata för varje resurs i hela gruppuppsättningen på AEM. Om batchstorleken är mycket stor kan bearbetningen fördröjas. Om gruppstorleken är för liten kan det orsaka för många rundade resor till Dynamic Media-servern.
+Du kan också justera batchstorleken för arbetsflödet för ombearbetning från standardvärdet 50 resurser upp till 1 000 resurser. När du kör _Scene7: Arbetsflödet för att bearbeta resurser_ på en mapp på nytt, resurser grupperas tillsammans i grupper och skickas sedan till Dynamic Media-servern för bearbetning. Efter bearbetning uppdateras metadata för varje resurs i hela gruppuppsättningen AEM. Om batchstorleken är mycket stor kan bearbetningen fördröjas. Om gruppstorleken är för liten kan det orsaka för många rundresor till Dynamic Media-servern.
 
 Se [Justera batchstorleken för arbetsflödet](#adjusting-load)för ombearbetning.
 
 >[!NOTE]
 >
 >Om du utför en massmigrering av resurser från Dynamic Media Classic till AEM måste du aktivera migreringsreplikeringsagenten på Dynamic Media-servern. När migreringen är klar kontrollerar du att agenten är inaktiverad.
-Migreringens publiceringsagent måste inaktiveras på Dynamic Media-servern så att arbetsflödet för ombearbetning fungerar som förväntat.
+>
+>Migreringens publiceringsagent måste inaktiveras på Dynamic Media-servern så att arbetsflödet för ombearbetning fungerar som förväntat.
 
 <!-- Batch size is the number of assets that are amalgamated into a single IPS (Dynamic Media’s Image Production System) job. When you run the Scene7: Reprocess Assets workflow, the job is triggered on IPS. The number of IPS jobs that are triggered is based on the total number of assets in the folder, divided by the batch size. For example, suppose you had a folder with 150 assets and a batch size of 50. In this case, three IPS jobs are triggered. The assets are updated when the entire batch size (50 in our example) is processed in IPS. The job then moves onto the next IPS job and so on until complete. If you increase the batch size, you may notice a longer delay with assets getting updated. -->
 
 **Så här bearbetar du resurser i en mapp**:
-1. I AEM går du från sidan Resurser till en mapp med resurser som har en bearbetningsprofil tilldelad och som du vill använda **Scen7 för: Arbetsflöde för att bearbeta resurser** igen,
+1. I AEM navigerar du från sidan Resurser till en mapp med resurser som har en bearbetningsprofil tilldelad och för vilken du vill tillämpa **Scene7: Arbetsflöde för att bearbeta resurser** igen,
 
    Mappar som redan har tilldelats en bearbetningsprofil visas genom att profilens namn visas direkt under mappnamnet i kortvyn.
 
@@ -87,22 +88,22 @@ Migreringens publiceringsagent måste inaktiveras på Dynamic Media-servern så 
 
 1. Klicka **[!UICONTROL Start]** och sedan på **[!UICONTROL Confirm.]**
 
-   Om du vill övervaka arbetsflödet eller kontrollera förloppet går du till AEM-huvudkonsolsidan och klickar på **[!UICONTROL Tools > Workflow.]** Välj ett arbetsflöde på sidan Arbetsflödesinstanser. På menyraden klickar du på **[!UICONTROL Open History.]** Du kan även avsluta, göra uppehåll i eller byta namn på ett valt arbetsflöde från samma sida för arbetsflödesinstanser.
+   Om du vill övervaka arbetsflödet eller kontrollera dess förlopp går du till AEM huvudkonsolsida och klickar på **[!UICONTROL Tools > Workflow.]** På sidan Arbetsflödesinstanser och väljer ett arbetsflöde. På menyraden klickar du på **[!UICONTROL Open History.]** Du kan även avsluta, göra uppehåll i eller byta namn på ett valt arbetsflöde från samma sida för arbetsflödesinstanser.
 
 ### Justera batchstorleken för arbetsflödet för ombearbetning {#adjusting-load}
 
-(Valfritt) Standardbatchstorleken i ombearbetningsarbetsflödet är 50 resurser per jobb. Den optimala batchstorleken styrs av den genomsnittliga tillgångsstorleken och de MIME-typer av resurser som ombearbetningen körs på. Ett högre värde innebär att du kommer att ha många filer i ett och samma ombearbetningsjobb. Bearbetningsbanderollen ligger alltså kvar på AEM-resurserna en längre tid. Om den genomsnittliga filstorleken är liten, 1 MB eller mindre, rekommenderar Adobe att du ökar värdet till flera hundra, men aldrig mer än 1 000. Om den genomsnittliga filstorleken är large-Hundratals megabyte rekommenderar Adobe att du minskar gruppstorleken upp till 10.
+(Valfritt) Standardbatchstorleken i ombearbetningsarbetsflödet är 50 resurser per jobb. Den optimala batchstorleken styrs av den genomsnittliga tillgångsstorleken och de MIME-typer av resurser som ombearbetningen körs på. Ett högre värde innebär att du kommer att ha många filer i ett och samma ombearbetningsjobb. Bearbetningsbanderollen ligger alltså kvar på AEM resurser under en längre tid. Om den genomsnittliga filstorleken är liten-1 MB eller mindre-Adobe rekommenderar du att du ökar värdet till flera hundra, men aldrig mer än 1 000. Om den genomsnittliga filstorleken är stor-hundratals megabyte-Adobe rekommenderar du att du minskar gruppstorleken upp till 10.
 
 **Om du vill justera batchstorleken för arbetsflödet för ombearbetning**
 
 1. In Experience Manager, click **[!UICONTROL Adobe Experience Manager]** to access the global navigation console, then click the **[!UICONTROL Tools]** (hammer) icon > **[!UICONTROL Workflow > Models.]**
 1. På sidan Arbetsflödesmodeller i kortvyn eller listvyn väljer du **[!UICONTROL Scene7: Reprocess Assets.]**
 
-   ![Sidan Arbetsflödesmodeller med Scene7: Arbetsflödet för att bearbeta resurser som valts i kortvyn](/help/assets/assets-dm/reprocess-assets7.png)
+   ![Workflow Models page with Scene7: Arbetsflödet för att bearbeta resurser som valts i kortvyn](/help/assets/assets-dm/reprocess-assets7.png)
 
-1. Klicka på fliken **[!UICONTROL Edit.]** En ny webbläsare i verktygsfältet för att öppna Scen7: Sidan med arbetsflödesmodellen Återbearbeta resurser.
+1. Klicka på fliken **[!UICONTROL Edit.]** En ny webbläsare i verktygsfältet för att öppna Scene7: Sidan med arbetsflödesmodellen Återbearbeta resurser.
 1. På Scene7: Arbetsflödessidan för att bearbeta resurser igen, i det övre högra hörnet, klickar på **[!UICONTROL Edit]** &quot;lås upp&quot; arbetsflödet.
-1. I arbetsflödet väljer du komponenten Scene7 Batch Upload för att öppna verktygsfältet och klickar sedan **[!UICONTROL Configure]** på verktygsfältet.
+1. Öppna verktygsfältet genom att välja Scene7 Batch Upload-komponenten i arbetsflödet och klicka sedan på **[!UICONTROL Configure]** i verktygsfältet.
 
    ![Komponenten Scene7 Batch Upload](/help/assets/assets-dm/reprocess-assets8.png)
 
@@ -113,11 +114,12 @@ Migreringens publiceringsagent måste inaktiveras på Dynamic Media-servern så 
    * I **[!UICONTROL Period]** fältet anger du ett avsökningsintervall (sekunder) som ska testas för att den externa processen ska slutföras.
    * In the **[!UICONTROL Batch field]**, enter the maximum number of assets (50-1000) to process in a Dynamic Media server batch processing upload job.
    * Välj **[!UICONTROL Advance on timeout]** om du vill fortsätta när tidsgränsen nås. Avmarkera alternativet om du vill fortsätta till inkorgen när tidsgränsen nås.
+
    ![Egenskaper, dialogruta](/help/assets/assets-dm/reprocess-assets3.png)
 
 1. Klicka på längst upp till höger i **[!UICONTROL Batch Upload to Scene7 – Step Properties]** dialogrutan **[!UICONTROL Done.]**
 
-1. I det övre högra hörnet av Scene7: Bearbeta om arbetsflödesmodellsidan för Resurser klickar du på **[!UICONTROL Sync.]** När du ser **[!UICONTROL Synced]** att arbetsflödets körningsmodell har synkroniserats och är klar att bearbeta resurser i en mapp igen.
+1. I det övre högra hörnet av Scene7: Bearbeta om sidan för arbetsflödesmodell för Resurser klickar du på **[!UICONTROL Sync.]** När du ser **[!UICONTROL Synced]** att arbetsflödets körningsmodell har synkroniserats och är klar att bearbeta resurser i en mapp igen.
 
    ![Synkronisera arbetsflödesmodellen](/help/assets/assets-dm/reprocess-assets1.png)
 
