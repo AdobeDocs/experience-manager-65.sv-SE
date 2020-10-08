@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 202d7dba-2b34-431d-b10f-87775632807f
 translation-type: tm+mt
-source-git-commit: 6ab91667ad668abf80ccf1710966169b3a187928
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '449'
 ht-degree: 0%
@@ -25,7 +25,6 @@ Konsolen Platsmallar liknar konsolen [Gruppmallar](tools-groups.md) , som är in
 >[!NOTE]
 >
 >Konsolerna för att skapa [communitysajter](sites-console.md), [communitymallar](sites.md), mallar [för](tools-groups.md) communitygrupper [och](functions.md) communityfunktionerär endast avsedda att användas i författarmiljön.
-
 
 ## Konsol för webbplatsmallar {#site-templates-console}
 
@@ -85,7 +84,6 @@ Sidfunktionen ger en tom sida. Med gruppfunktionen kan du skapa en gruppwebbplat
 >
 >Alla andra funktioner, till exempel [sidfunktionen](functions.md#page-function), måste inkluderas och listas först.
 
-
 ![webbplatsredigerare](assets/site-editor.png)
 
 ### Gruppmallar för gruppfunktion {#group-templates-for-groups-function}
@@ -95,7 +93,6 @@ När du inkluderar en gruppfunktion i platsmallen, kräver konfigurationen att d
 >[!CAUTION]
 >
 >Funktionen Grupper får *inte* vara den *första eller enda* funktionen i platsstrukturen.
-
 
 ![platsfunktioner](assets/site-functions.png)
 
