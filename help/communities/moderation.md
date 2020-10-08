@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 404582ab-bb4c-4775-9ae3-17356d376dca
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 18f401babef4cb2aad47e6e4cbb0500b0f8365e2
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '2108'
 ht-degree: 1%
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 I AEM Communities går det att [moderera communityinnehåll](/help/communities/moderate-ugc.md) gruppvis både från författaren och publiceringsmiljöer av administratörer och community-moderatorer (betrodda communitymedlemmar som utsetts som moderatorer).
 
-Administratörer och moderatorer för communityn kan också utföra moderering [i sitt sammanhang](/help/communities/in-context.md) i publiceringsmiljön.
+Administratörer och moderatorer för communityn kan även utföra moderering [i sitt sammanhang](/help/communities/in-context.md) i publiceringsmiljön.
 
 En funktion på alla [communitysajter](/help/communities/sites-console.md) är ett `Administration` menyalternativ som är tillgängligt för användare som loggar in med administratörsbehörighet. Länken ger `Administration` åtkomst till modereringskonsolen.
 
@@ -61,7 +61,6 @@ Modereringsåtgärder kan bara utföras om du är inloggad som administratör el
 >[!NOTE]
 >
 >UGC från publiceringsmiljön visas bara för författaren om den valda SRP implementerar en gemensam butik. Som standard är exempelvis lagringen JSRP, som inte är en gemensam butik för författare och publicering. Se [Community Content Storage](/help/communities/working-with-srp.md).
-
 
 ![moderationkonsoleförfattare](assets/moderationconsoleauthor.png)
 
@@ -109,7 +108,6 @@ Innehållsområdet innehåller information för publicerad UGC:
 > 
 >Innehållsområdet har en *oändlig rullning*, vilket innebär att du kan fortsätta rulla tills du har nått slutet av innehållet. Verktygsfältet ligger kvar på en fast, synlig plats ovanför innehållsområdet även när du bläddrar.
 
-
 ### Filterspår {#ootbfilters}
 
 ![open-filterrail](assets/open-filterrail.png)
@@ -125,7 +123,6 @@ Om du markerar **Fråga** och **Väntande**, visas bara innehåll som är en **f
 >[!NOTE]
 >
 >Moderatorer för communityn kan skapa bokmärken för fördefinierade filter i modereringskonsolens användargränssnitt. När dessa filter läggs till i slutet av URL:en (som frågesträngsparametrar) kan moderatorerna senare gå tillbaka till bokmärkesfiltren och även dela dessa länkar.
-
 
 ![sökningsikon](assets/searchicon.png)
 
@@ -154,7 +151,6 @@ Webbplatsen begränsar den refererade UGC som visas till inlägg på valda commu
 >När en administratör öppnar konsolen för gruppmoderering visas alla referenser till UGC, även webbplatser som inte skapats med guiden [Skapa](/help/communities/sites-console.md)plats, till exempel Geometrixx.
 >
 >När gruppmodereringskonsolen öppnas vid publicering av en betrodd community-medlem visas endast referenser till UGC som skapats för communitywebbplatser som medlemmen har behörighet att moderera och kan filtreras med platsfiltret.
-
 
 #### Innehållstyp {#content-type}
 
@@ -205,7 +201,6 @@ Status begränsar den refererade UGC:n som visas till inlägg med den valda stat
 >[!NOTE]
 >
 >Om du bara väljer statusen Inte besvarat visas allt innehåll (för alla innehållstyper) utom de besvarade frågorna. Det beror på att den egenskap som ansvarar för den besvarade frågan inte finns för frågor som inte besvarats och annat innehåll som forumämne, bloggartikel eller kommentarer.
-
 
 ![status](assets/statuses.png)
 
@@ -335,7 +330,7 @@ Modereringsåtgärden **Neka** är bara tillgänglig för innehåll som är mode
 
 Innehåll som inte är modererat godkänns alltid.
 
-Innehåll som modereras till en början försätts i ett väntande läge och kan senare ändras för att godkännas eller nekas.
+Innehåll som modereras från början försätts i ett väntande läge och kan senare ändras för att godkännas eller nekas.
 
 Innehåll som lämnar det väntande läget kan aldrig återgå till ett väntande läge. Innehåll som markerats som godkänt eller nekat kan när som helst ändras till ett annat läge.
 
