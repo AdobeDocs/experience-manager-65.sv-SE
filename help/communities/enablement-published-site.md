@@ -10,10 +10,10 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 26715b94-e2ea-4da7-a0e2-3e5a367ac1cd
 translation-type: tm+mt
-source-git-commit: 8738989c18c6f09452da95d0b9f2c05b0a2a1a81
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1210'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -50,8 +50,8 @@ Observera att den här startsidan innehåller fyra menyalternativ: `Assignments,
 >[!NOTE]
 >
 >Det går att ge anonym åtkomst till en aktiveringswebbplats utan att tillåta besökare att registrera sig själva.
+>
 >Om en aktiveringsresurs är inställd på `show in catalog` och `allow anonymous access`kan anonyma webbplatsbesökare visa resurser i katalogen.
-
 
 ### Förhindra anonym åtkomst på JCR {#prevent-anonymous-access-on-jcr}
 
@@ -59,7 +59,7 @@ En känd begränsning visar communityinnehållet för anonyma besökare via jcr-
 
 Följ de här stegen för att skydda communityplatsens innehåll från anonyma användare genom jcr-innehåll och json:
 
-1. På AEM-författarinstansen går du till https://&lt;host>:&lt;port>/editor.html/content/site/&lt;sitename>.html.
+1. På AEM författarinstans går du till https://&lt;host>:&lt;port>/editor.html/content/site/&lt;sitename>.html.
 
    >[!NOTE]
    >
@@ -140,7 +140,7 @@ Observera, förutom intern moderering, att det finns alternativ för att dela ä
 
 ![chlimage_1-439](assets/chlimage_1-439.png)
 
-### What&#39;s New {#what-s-new}
+### Nyheter {#what-s-new}
 
 Menyalternativet är den titel som anges av `What's New` aktivitetsströmsfunktionen [](functions.md#activity-stream-function) i den här communityplatsens struktur.
 
@@ -182,7 +182,7 @@ Navigera till **Communities,[Resources console](resources.md)**, där aktivering
 * Alla aktiveringsresurser och utbildningsvägar
 * En specifik aktiveringsresurs eller utbildningsväg
 
-Navigera till **Communities,[Reports console](reports.md)**och generera rapporter enligt:
+Navigera till **Communities,[Reports console](reports.md)** och generera rapporter enligt:
 
 * Tilldelningar för aktiveringsresurser och utbildningsvägar
 * Publicerar på en communitywebbplats under en viss period
@@ -209,7 +209,7 @@ Med lite aktivitet och interaktion med resurserna när de publiceras är det vä
 * Klicka på `Report` ikonen om du vill se en sammanfattning av alla resurser.
 * Välj en resurs och sedan `Report` ikonen för en rapport om den resursen.
 
-Observera att det troligtvis är för tidigt att visa data från Adobe Analytics, som kan ta mellan 1 och 12 timmar att visa. Men grundläggande SCORM-rapportering är redan tillgänglig.
+Observera att det troligen är för tidigt att visa data från Adobe Analytics, som kan ta mellan 1 och 12 timmar att visa. Men grundläggande SCORM-rapportering är redan tillgänglig.
 
 #### Resursrapport för SKI-lektioner {#ski-lessons-resource-report}
 
@@ -237,7 +237,7 @@ För rapporter om tilldelningar:
 
 * Logga in med administratörsbehörighet på författaren.
 * Navigera till **[!UICONTROL Communities]** > **[!UICONTROL Reports]** > **[!UICONTROL Assignments Report]**.
-* Välj en **[!UICONTROL Site]** i listrutan (välj `Enablement Tutorial`).
+* Välj ett **[!UICONTROL Site]** alternativ i listrutan (välj `Enablement Tutorial`).
 
 * Markera **[!UICONTROL Group]** (välj `Community Ski Class`)
 
@@ -251,7 +251,7 @@ För rapporter om vyer:
 
 * Logga in med administratörsbehörighet på författaren.
 * Navigera till **[!UICONTROL Communities]** > **[!UICONTROL Reports]** > **[!UICONTROL Views Report]**.
-* Välj en **plats **i listrutan (välj`Enablement Tutorial`).
+* Välj en **plats** i listrutan (välj `Enablement Tutorial`).
 
 * Markera **[!UICONTROL Content Type]** (markera `all`).
 
