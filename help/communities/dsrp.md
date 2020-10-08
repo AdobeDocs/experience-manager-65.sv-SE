@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: d23acb18-6761-4290-9e7a-a434582791bd
 translation-type: tm+mt
-source-git-commit: bbaf9afbf009281c0009bf3895e82988540e15f0
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '622'
 ht-degree: 0%
@@ -34,7 +34,6 @@ Se även [egenskaper för SRP-alternativ](working-with-srp.md#characteristics-of
 >[!NOTE]
 >
 >Standardlagringskonfigurationen lagras nu i conf-sökvägen(`/conf/global/settings/community/srpc/defaultconfiguration`) i stället för etc-sökvägen (`/etc/socialconfig/srpc/defaultconfiguration`). Du rekommenderas att följa [migreringsstegen](#zerodt-migration-steps) för att få standardinställningarna att fungera som förväntat.
-
 
 ## Konfiguration av relationsdatabas {#relational-database-configuration}
 
