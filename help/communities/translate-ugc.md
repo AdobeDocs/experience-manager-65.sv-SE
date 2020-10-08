@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: bfaf80c5-448b-47fb-9f22-57ee0eb169b2
 translation-type: tm+mt
-source-git-commit: c190d5f223c85f6c49fea1391d8a3d2baff20192
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1091'
 ht-degree: 0%
@@ -36,7 +36,7 @@ Anta till exempel:
 
 I det här avsnittet av dokumentationen beskrivs särskilt hur översättningstjänsten fungerar med UGC samtidigt som det förutsätts hur du ansluter AEM till en [översättningstjänstleverantör](../../help/sites-administering/translation.md#connectingtoatranslationserviceprovider) och integrerar den tjänsten på en webbplats genom att konfigurera ett [ramverk](../../help/sites-administering/tc-tic.md)för översättningsintegrering.
 
-När en översättningstjänstleverantör är associerad med webbplatsen behåller varje språkkopia av webbplatsen sina egna UGC-trådar som publicerats via SCF-komponenter, till exempel kommentarer.
+När en översättningstjänstleverantör är associerad med platsen behåller varje språkkopia av webbplatsen sina egna UGC-trådar som publicerats via SCF-komponenter, till exempel kommentarer.
 
 När ett ramverk för översättningsintegrering har konfigurerats utöver översättningstjänstleverantören, är det möjligt för varje språkkopia av webbplatsen att dela en enda tråd av UGC, vilket ger global kommunikation över språkversioner. I stället för en diskussionstråd som är uppdelad efter språk gör den konfigurerade [globala delade lagringsplatsen](#global-translation-of-ugc) att hela tråden visas oavsett vilket språk den visas på. Dessutom kan flera översättningsintegrationskonfigurationer konfigureras med olika globala delade arkiv för en logisk gruppering av globala deltagare, t.ex. efter regioner.
 
@@ -51,7 +51,6 @@ När du [skapar en communitywebbplats](sites-console.md)aktiveras standardövers
 >Standardöversättningstjänsten är endast till för demonstration.
 >
 >För ett produktionssystem krävs en licensierad översättningstjänst. Om den inte är licensierad bör standardöversättningstjänsten [inaktiveras](../../help/sites-administering/tc-msconf.md#microsoft-translator-trial-license-geometrixx-outdoors).
-
 
 ## Global översättning av användargenererat innehåll {#global-translation-of-ugc}
 
@@ -70,7 +69,6 @@ Om t.ex. ett forum har skapats på baswebbplatsen, språkkopior har skapats och 
 >UGC:n finns fortfarande i den [gemensamma lagringsplatsen](working-with-srp.md), men finns under den språkspecifika UGC-platsen, medan nytt innehåll, som lagts till efter att den globala översättningen konfigurerats, hämtas från den globala delade lagringsplatsen.
 >
 >Det finns inget migreringsverktyg för att flytta eller sammanfoga språkspecifikt innehåll i det globala delade arkivet.
-
 
 ### Konfiguration av översättningsintegrering {#translation-integration-configuration}
 
@@ -148,7 +146,6 @@ Den nya översättningsintegreringens molntjänst måste aktiveras i publicering
 >Det språk som föredras är språkinställningen som anges i en användarprofil när besökaren är inloggad och har angett en språkinställning.
 >
 >När besökaren är anonym eller inte har angett någon språkinställning i sin profil är det språk som används som standard i sidmallen.
-
 
 ### Användarinställningar {#user-preference}
 
