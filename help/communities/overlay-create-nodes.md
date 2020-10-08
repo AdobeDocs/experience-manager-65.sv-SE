@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: cd4f53ee-537b-4f10-a64f-474ba2c44576
 translation-type: tm+mt
-source-git-commit: 9d6ec05fdc98e33a11303d189414c2c45c5e8b3c
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 4%
@@ -25,7 +25,6 @@ Täck över kommentarsystemet med en anpassad version genom att kopiera så få 
 >[!CAUTION]
 >
 >Innehållet i mappen /libs redigeras aldrig eftersom ominstallation eller uppgradering kan ta bort eller ersätta mappen /libs medan innehållet i mappen /apps lämnas orört.
-
 
 Använd [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) på en författarinstans och börja med att skapa en sökväg i mappen /apps som är identisk med sökvägen till de övertäckta komponenterna i mappen /libs.
 
@@ -82,9 +81,6 @@ Vissa noder i sökvägen är mappar och andra är komponenter.
 >
 >* `social/commons/components/comments`
 >* `social/commons/components/comments/comment`
-
->
-
 
 
 Övertäckningens egen `Type`(egenskap `sling:resourceType`) måste vara en relativ självreferens så att allt innehåll som inte hittas i /apps sedan söks efter i /libs.
