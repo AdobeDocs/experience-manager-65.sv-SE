@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 0b126218-b142-4d33-a28c-a91ab4fe99ac
 translation-type: tm+mt
-source-git-commit: a99313c35872d3f481c3dc6f42b372cc603e7549
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '788'
 ht-degree: 0%
@@ -74,7 +74,6 @@ Detta startar en MongoDB-server med standardport 27017.
 >
 >Om MongoDB startas *efter* AEM **startar du om** alla **AEM** instanser så att de kan ansluta till MongoDB.
 
-
 ### Demo Production Option: Konfigurera MongoDB-replikuppsättning {#demo-production-option-setup-mongodb-replica-set}
 
 Följande kommandon är ett exempel på hur du konfigurerar en replikuppsättning med 3 noder på localhost:
@@ -133,7 +132,6 @@ Detta startar en Solr HTTP-server med standardport 8983. Du kan bläddra till So
 >
 >Om Solr Console inte är tillgänglig kontrollerar du loggarna under &lt;solrinstall>/example/logs. Kontrollera om SOLR försöker binda till ett specifikt värdnamn som inte kan matchas (t.ex. &quot;user-macbook-pro&quot;).
 Om så är fallet kan du uppdatera etc/hosts-filen med en ny post för detta värdnamn (t.ex. 127.0.0.1 user-macbook-pro) och Solr startas korrekt.
-
 
 ### SolrCloud {#solrcloud}
 
