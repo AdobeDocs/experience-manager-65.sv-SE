@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a777a3f1-b39f-4d90-b9b6-02d3e321a86f
 translation-type: tm+mt
-source-git-commit: 3da113e88784def54e0a94e280bf1a965de015ed
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1200'
 ht-degree: 0%
@@ -62,7 +62,6 @@ Om du vill växla till redigeringsläge infogar du antingen `editor.html` eller 
 >Allmän redigeringsinformation finns i [snabbguiden till redigeringssidorna](../../help/sites-authoring/qg-page-authoring.md).
 >
 >Om du inte känner till AEM kan du läsa dokumentationen om [grundläggande hantering](../../help/sites-authoring/basic-handling.md).
-
 
 ### Hemsida {#home-page}
 
@@ -154,7 +153,7 @@ Använda kommentarkomponenten som exempel, på antingen författaren eller publi
 
 1. Bläddra till [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)
 
-   Till exempel [http://localhost:4503/crx/de](http://localhost:4503/crx/de)
+   Till exempel [http://localhost:4502/crx/de](http://localhost:4503/crx/de)
 
 1. Markera komponentens `jcr:content` nod
 
