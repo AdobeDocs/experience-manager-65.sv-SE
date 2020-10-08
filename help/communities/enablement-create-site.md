@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: b9333558-6af9-46b2-9f03-3722645c69a6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 99fb808013da18ed028d59c43deab5e815169e26
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1724'
 ht-degree: 1%
@@ -123,7 +123,6 @@ Till exempel,
 >[!NOTE]
 >
 >[Tunneltjänsten](/help/communities/deploy-communities.md#tunnel-service-on-author) tillåter endast urval av medlemmar och grupper som finns i publiceringsmiljön.
-
 
 ![aktiveringsroller](assets/site-admin.png)
 
@@ -316,7 +315,6 @@ Så här kommer du igång:
 >
 >Om du vill inaktivera föränger du bara `sling:match` egenskapsvärdet med&quot;x&quot; - `xlocalhost.4503/$` - och **Spara alla**.
 
-
 ![chlimage_1-364](assets/chlimage_1-364.png)
 
 #### Felsökning: Fel när kartan sparades {#troubleshooting-error-saving-map}
@@ -340,7 +338,6 @@ Kom ihåg att **spara** och **publicera** webbplatsen igen efter eventuella änd
 >[!NOTE]
 >
 >Om du inte känner till AEM kan du läsa dokumentationen om [grundläggande hantering](/help/sites-authoring/basic-handling.md) och en [snabbguide till hur du skapar sidor](/help/sites-authoring/qg-page-authoring.md).
-
 
 ### Lägg till en katalog {#add-a-catalog}
 
