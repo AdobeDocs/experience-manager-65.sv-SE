@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 68ce47c8-a03f-40d6-a7f3-2cc64aee0594
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f6aa95514a266a042c9bd1165634e30e80479ae7
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '402'
 ht-degree: 0%
@@ -90,7 +90,6 @@ Så här lägger du till en klientlib för en community-webbplats med [CRXDE Lit
 >[!NOTE]
 >
 >Om webbplatsen inte är en communitywebbplats måste förekomsten eller platsen för klientbiblioteken som används för webbplatsen identifieras.
-
 
 I exemplet [Komma igång med AEM Communities](/help/communities/getting-started.md) , där `site-name` är *engagerande*, visas klienten så här om du lägger till granskningskomponenten:
 
