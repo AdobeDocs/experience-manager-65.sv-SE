@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: dca5a2ac-1fc8-4251-b073-730fd6f49b1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 7c03ba5e2ec7954cca8b129f453919d151956df5
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1967'
 ht-degree: 11%
@@ -32,16 +32,14 @@ AEM Assets är konfigurerat med varumärkesportalen via Adobe Developer Console,
 >
 >Konfiguration via äldre OAuth Gateway stöds inte längre från 6 april 2020 och har ändrats till Adobe Developer Console.
 
-
 >[!TIP]
 >
 >***Endast för befintliga kunder***
 >
 >Vi rekommenderar att du fortsätter använda den befintliga gamla OAuth Gateway-konfigurationen. Om du får problem med äldre OAuth Gateway-konfiguration tar du bort den befintliga konfigurationen och skapar en ny konfiguration via Adobe Developer Console.
 
-
-
 I den här hjälpen beskrivs följande två användningsområden:
+
 * [Ny konfiguration](#configure-new-integration-65): Om du är en ny Brand Portal-användare och vill konfigurera AEM Assets-författarinstansen med Brand Portal kan du skapa konfigurationen via Adobe Developer Console.
 * [Uppgraderingskonfiguration](#upgrade-integration-65): Om du är en befintlig Brand Portal-användare som har en konfiguration på en äldre OAuth Gateway tar du bort den befintliga konfigurationen och skapar en ny konfiguration via Adobe Developer Console.
 
@@ -58,7 +56,6 @@ Du behöver följande för att konfigurera AEM Assets med varumärkesportalen:
 * En pågående AEM Assets-författarinstans med senaste Service Pack
 * En klientorganisations-URL
 * En användare med systemadministratörsbehörighet på IMS-organisationen för varumärkesportalens klient
-
 
 [Hämta och installera AEM 6.5](#aemquickstart)
 
@@ -94,12 +91,9 @@ Konfigurationen av AEM Assets med Brand Portal kräver konfigurationer i både A
 1. Konfigurera molntjänsten Brand Portal i AEM Assets med hjälp av IMS-kontot och varumärkesportalens slutpunkt (organisations-URL).
 1. Testa konfigurationen genom att publicera en resurs från AEM Assets till varumärkesportalen.
 
-
 >[!NOTE]
 >
 >En instans av en AEM Assets-författare får endast konfigureras med en Brand Portal-klient.
-
-
 
 Utför följande steg i den listade sekvensen om du konfigurerar AEM Assets med varumärkesportalen för första gången:
 1. [Hämta ett offentligt certifikat](#public-certificate)
@@ -269,7 +263,6 @@ Utför följande steg för att konfigurera IMS-kontot.
 
    ![Konfiguration av ett IMS-konto](assets/create-new-integration6.png)
 
-
 1. Select the IMS account configuration and click **[!UICONTROL Check Health]**.
 
    Klicka **[!UICONTROL Check]** i dialogrutan. När konfigurationen är klar visas ett meddelande om att *token har hämtats*.
@@ -281,8 +274,6 @@ Utför följande steg för att konfigurera IMS-kontot.
 >Du får bara ha en IMS-konfiguration.
 >
 >Kontrollera att IMS-konfigurationen klarar hälsokontrollen. Om konfigurationen inte godkänns i hälsokontrollen är den ogiltig. Du måste ta bort den och skapa en ny, giltig konfiguration.
-
-
 
 ### Konfigurera molntjänsten{#configure-the-cloud-service}
 
@@ -326,11 +317,9 @@ Utför följande steg för att validera konfigurationen:
 
    ![](assets/test-integration3.png)
 
-
    >[!NOTE]
    >
    >Replikeringsagenterna arbetar parallellt och delar jobbdistributionen jämnt, vilket ökar publiceringshastigheten fyra gånger den ursprungliga hastigheten. När molntjänsten har konfigurerats krävs ingen ytterligare konfiguration för att aktivera de replikeringsagenter som aktiveras som standard för att aktivera parallell publicering av flera resurser.
-
 
 1. To verify the connection between AEM Assets and Brand Portal, click on the **[!UICONTROL Test Connection]** icon.
 
