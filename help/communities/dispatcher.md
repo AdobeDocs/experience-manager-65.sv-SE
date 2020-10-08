@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 23745dd3-1424-4d22-8456-d2dbd42467f4
 translation-type: tm+mt
-source-git-commit: bbaf9afbf009281c0009bf3895e82988540e15f0
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '637'
 ht-degree: 0%
@@ -92,8 +92,8 @@ Se även:
 >[!NOTE]
 >
 >**Exempel på egenskapsnamn**
+>
 >Alla egenskapsnamn som visas, till exempel **/0050** och **/0170**, bör justeras så att de passar i en befintlig dispatcher.alla konfigurationsfiler.
-
 
 Följande poster ska läggas till i slutet av /filter-avsnittet, särskilt efter alla neka-poster.
 
