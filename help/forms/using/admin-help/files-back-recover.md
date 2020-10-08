@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 6f9a294d-24bd-4e4b-b929-2809f5e6cef9
 translation-type: tm+mt
-source-git-commit: e5c2385c29e2d20d453e2d1496f7d459d1c55876
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '2187'
 ht-degree: 0%
@@ -139,8 +139,7 @@ Använd MySQLAdmin eller ändra INI-filerna i Windows för att konfigurera MySQL
 
 >[!NOTE]
 >
->Standardläget för binär loggning för MySQL är &quot;Statement&quot;, vilket är inkompatibelt med tabeller som används av Content Services (utgått). Om du använder binär loggning i det här standardläget misslyckas Content Services (Borttagen). Om ditt system innehåller innehållstjänster (borttaget) använder du loggningsläget Blandat. Om du vill aktivera&quot;blandad&quot; loggning lägger du till följande argument i file:*
-`binlog_format=mixed log-bin=logname`
+>Standardläget för binär loggning för MySQL är &quot;Statement&quot;, vilket är inkompatibelt med tabeller som används av Content Services (utgått). Om du använder binär loggning i det här standardläget misslyckas Content Services (Borttagen). Om ditt system innehåller innehållstjänster (borttaget) använder du loggningsläget Blandat. Om du vill aktivera&quot;blandad&quot; loggning lägger du till följande argument i filen my.ini: `binlog_format=mixed log-bin=logname`
 
 Du kan använda verktyget mysqldump för att få en fullständig säkerhetskopiering av databasen. Fullständig säkerhetskopiering krävs, men är inte alltid lämplig. De producerar stora säkerhetskopior och tar tid att generera. Om du vill göra en stegvis säkerhetskopiering måste du starta servern med alternativet - `log-bin` enligt beskrivningen i föregående avsnitt. Varje gång MySQL-servern startas om slutar den skriva till den aktuella binära loggen, skapar en ny och från och med då blir den nya den aktuella. Du kan tvinga en växel manuellt med `FLUSH LOGS SQL` kommandot. Efter den första fullständiga säkerhetskopieringen utförs efterföljande stegvisa säkerhetskopieringar med hjälp av verktyget mysqladmin med `flush-logs` kommandot, som skapar nästa loggfil.
 
