@@ -1,6 +1,6 @@
 ---
-title: Översikt över AEM Communities
-seo-title: Översikt över AEM Communities
+title: AEM Communities - översikt
+seo-title: AEM Communities - översikt
 description: En översikt över AEM Communities funktioner och inställningar
 seo-description: En översikt över AEM Communities funktioner och inställningar
 uuid: 14405847-36ae-4958-bdc6-d799ecd05f06
@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 44374006-f711-4af8-a1fe-f89164f79581
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9d6ec05fdc98e33a11303d189414c2c45c5e8b3c
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1468'
 ht-degree: 0%
@@ -19,15 +19,15 @@ ht-degree: 0%
 ---
 
 
-# Översikt över AEM Communities {#aem-communities-overview}
+# AEM Communities - översikt {#aem-communities-overview}
 
-Adobe Experience Manager (AEM) Communities ger möjlighet att snabbt skapa en lokal communitysajt som har bättre prestanda, förbättrad webbplatshantering och uppmuntrar till konvertering av besökare till värdefulla communitymedlemmar.
+Adobe Experience Manager (AEM) Communities ger möjlighet att snabbt skapa en lokal communitysajt som har förbättrade prestanda, förbättrad webbplatshantering och uppmuntrar till konvertering av besökare till värdefulla communitymedlemmar.
 
 Kontakta din kontorepresentant för att få information om licensiering av AEM Communities samt ytterligare licensiering för aktiveringsfunktioner och Adobe Analytics.
 
 ## Funktioner i Communities {#communities-features}
 
-AEM Communities möjliggör utvecklingen av en relation med webbplatsbesökare som
+Med AEM Communities kan man utveckla en relation med besökare på en webbplats som:
 
 * **Information** via bloggar, frågor och svar och händelsekalendrar,
 * Samtidigt som ni **får insikter** via forum, kommentarer och annat communityinnehåll, som ofta kallas användargenererat innehåll (UGC).
@@ -84,7 +84,7 @@ Om du snabbt vill skapa en ny community-sajt kan du besöka [Getting Started wit
 
 ## Community Content Persistence {#community-content-persistence}
 
-För att förbättra prestanda och synkronisering av communityinnehåll behöver AEM Communities en gemensam lagringsplats specifikt för användargenererat innehåll (UGC) som delas mellan alla AEM (författare och publicering) instanser.
+För att förbättra prestanda och synkronisering av communityinnehåll behöver AEM Communities en gemensam lagringsplats för användargenererat innehåll (UGC) som delas mellan alla AEM (författare och publicering) instanser.
 
 Community-innehåll är enkelt att komma åt via lagringsresursens leverantör (SRP), som tillhandahåller ett lager som åtskiljer åtkomsten från den underliggande topologin och stöder en gemensam lagringsplats för UGC.
 
@@ -157,7 +157,7 @@ Se konsolen [](/help/communities/sites.md)Platsmallar.
 
 ## Community-funktioner {#community-functions}
 
-De funktioner som förväntas av en community-upplevelse är välkända. Med AEM Communities är dessa funktioner tillgängliga som byggstenar, så kallade communityfunktioner.
+De funktioner som förväntas av en community-upplevelse är välkända. Med AEM Communities finns dessa funktioner som byggstenar, så kallade communityfunktioner.
 
 Community-funktioner är vanliga AEM sidor innehåller komponenter som är sammankopplade i en funktion som enkelt kan integreras i en community-mall.
 
@@ -205,7 +205,7 @@ En engagemangscommunity kan innehålla:
 * Moderering
 * Meddelanden
 * Betyg och emblem
-* Analytics
+* Analysrapporter
 
 Om du snabbt vill skapa en ny engagemangscommunity kan du besöka [Getting Started with AEM Communities](/help/communities/getting-started.md).
 
@@ -245,8 +245,7 @@ AEM Demo Machine kräver en giltig AEM.
 >
 >Visa en [videointroduktion](https://www.youtube.com/watch?v=zEE_zkR9fVQ&amp;feature=youtu.be) till AEM Demo Machine (13:26).
 
-
-## AEM Communities dokumentation {#aem-communities-documentation}
+## AEM Communities Documentation {#aem-communities-documentation}
 
 * Besök [Distribuera communityn](deploy-communities.md) om du vill veta mer om rekommenderade distributioner.
 * Besök [Administrera communitysajter](administer-landing.md) om du vill veta mer om hur du skapar en community-webbplats, lägger till communitygrupper, konfigurerar mallar för communitysajter, modererar communityinnehåll, hanterar medlemmar, taggar, meddelanden, poängsättning och märken.
