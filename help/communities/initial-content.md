@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: e8f28cd5-7950-4aab-bf62-3d4ed3d33cbd
 translation-type: tm+mt
-source-git-commit: 65e2b98cfd980f17302b4751127e25827decec22
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '439'
 ht-degree: 4%
@@ -109,5 +109,3 @@ Om det uppstår problem när konfigurationen sparas kan du logga in igen och kon
 >[!NOTE]
 >
 >Användningen av `cq:designPath` är valfri och har inget samband med [användningen av clientlibs](develop-app.md#includeclientlibsintemplate), som i huvudsak krävs eftersom SCF-komponenterna använder [klientlibs](client-customize.md#clientlibs-for-scf) för att hantera sin JS och CSS.
-
-
