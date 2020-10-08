@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 0763f236-5648-49e9-8a24-dbc8f4c77ee3
 translation-type: tm+mt
-source-git-commit: 7acd89d830b9e758eec1b5a4beb18c22e4d12dcf
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '697'
 ht-degree: 0%
@@ -46,7 +46,6 @@ När du uppgraderar från AEM 6.0 eller tidigare måste du migrera UGC för alla
 >
 >Information om ersättningsverktyg finns i [Omfaktorisering](socialutils.md)för SocialUtils.
 
-
 ## Verktygsmetod för åtkomst till UGC {#utility-method-to-access-ugc}
 
 Om du vill få åtkomst till UGC använder du en metod från paketet SocialResourceUtilities som returnerar en sökväg som är lämplig för åtkomst till UGC från SRP och ersätter den borttagna metoden som finns i paketet SocialUtils.
@@ -73,7 +72,6 @@ Riktlinjer för kodning finns på [Accessing UGC with SRP](accessing-ugc-with-sr
 >[!CAUTION]
 >
 >Sökvägen resourceToUGCStoragePath() returnerar *inte* lämplig för [ACL-kontroll](srp.md#for-access-control-acls).
-
 
 ## Verktygsmetod för åtkomst till åtkomstkontrollistor {#utility-method-to-access-acls}
 
@@ -102,7 +100,6 @@ protected void doGet(final SlingHttpServletRequest request, final SlingHttpServl
 >
 >Sökvägen som returneras av resourceToACLPath() är *inte* lämplig för [åtkomst till själva UGC](#utility-method-to-access-acls) .
 
-
 ## UGC-relaterade lagringsplatser {#ugc-related-storage-locations}
 
 Följande beskrivningar av lagringsplats kan vara till hjälp när du utvecklar med JSRP eller kanske MSRP. Det finns för närvarande inget användargränssnitt som kan komma åt UGC som lagras i ASRP, vilket finns för verktygen JSRP ([CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)) och MSRP (MongoDB).
@@ -120,7 +117,7 @@ Ett exempel på en sådan komponent är [kommentarkomponenten](http://localhost:
 När du skapar UGC skapas även en [skuggnod](srp.md#about-shadow-nodes-in-jcr) som de nödvändiga åtkomstkontrollistorna tillämpas på. Sökvägen till motsvarande skuggnod i den lokala databasen är resultatet av att skuggnodens rotsökväg har försatts i komponentsökvägen:
 
 * Rotsökväg = `/content/usergenerated`
-* Kommentarskuggnod = `/content/usergenerated/content/community-components/en/comments/jcr:content/content/includable/comments`
+* Kommentarens skuggnod = `/content/usergenerated/content/community-components/en/comments/jcr:content/content/includable/comments`
 
 **UGC-plats**
 
@@ -136,4 +133,3 @@ UGC skapas på båda dessa platser och ska bara nås med en [verktygsmetod](#uti
 * [Översikt över](srp.md) lagringsresursprovidern - Introduktion och översikt över databasanvändningen.
 * [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - riktlinjer för kodning.
 * [Omfaktorisering för SocialUtils](socialutils.md) - Mappar borttagna verktygsmetoder till aktuella SRP-verktygsmetoder.
-
