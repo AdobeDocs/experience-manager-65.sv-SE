@@ -12,7 +12,7 @@ discoiquuid: ea033bb9-cb92-4c93-855f-8c902999378c
 docset: aem65
 tagskeywords: scoring, badging, badges, gamification
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 2daf00f17058de8b901848fcf1128a5ee9770368
 workflow-type: tm+mt
 source-wordcount: '2884'
 ht-degree: 1%
@@ -145,7 +145,6 @@ Om noden är av typen `cq:Page` (rekommenderas) lägger du sedan till egenskaper
 >[!NOTE]
 >
 >Om en bedömningsregel inte verkar ha någon effekt på att dela ut taggar kontrollerar du att resultatregeln inte har blockerats av spårningsregelns egenskap scoringRules. Se avsnittet [Badging Rules](#badging-rules).
-
 
 ### Aktivera emblem för komponent {#enable-badges-for-component}
 
