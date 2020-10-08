@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 232a0ec1-8dfc-41ec-84cc-69f9db494ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: eb5317be52eec39b947ccb3c456d21d567ef2841
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ## Översikt {#overview}
 
-Meddelandefunktionen för AEM Communities ger möjlighet för inloggade webbplatsbesökare (medlemmar) att skicka meddelanden till varandra som är tillgängliga när de loggar in på webbplatsen.
+Meddelandefunktionen för AEM Communities gör det möjligt för besökare på den inloggade webbplatsen (medlemmar) att skicka meddelanden till varandra som är tillgängliga när de loggar in på webbplatsen.
 
 Meddelanden aktiveras för en community-webbplats genom att en kryssruta markeras när en [community-webbplats skapas](/help/communities/sites-console.md).
 
@@ -134,7 +134,6 @@ Om du vill lägga till en ny konfiguration väljer du plusikonen &quot;**+**&quo
 >Varje gång en `Messaging Operations Service` konfiguration öppnas för redigering, om den `allowedAttachmentTypes.name` tagits bort, läggs en tom post till så att egenskapen kan konfigureras. En enda tom post inaktiverar effektivt bifogade filer.
 >
 >Om du vill tillåta alla filnamnstillägg, förutom de som är blocklist, använder du ikonen **-** för att (igen) ta bort den tomma posten innan du klickar på **Spara**.
-
 
 ## Gruppmeddelanden {#group-messaging}
 
