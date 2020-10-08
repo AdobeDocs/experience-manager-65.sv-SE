@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 910229a3-38b1-44f1-9c09-55f8fd6cbb1d
 translation-type: tm+mt
-source-git-commit: bbaf9afbf009281c0009bf3895e82988540e15f0
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '598'
 ht-degree: 2%
@@ -161,8 +161,8 @@ Välj dessutom **[!UICONTROL General]** komponenter, till exempel
 >[!NOTE]
 >
 >Komponenterna som är aktiverade för sidans del lagras i databasen som värdet på egenskapen `components` för
+>
 >`/etc/designs/an-scf-sandbox/jcr:content/playpage/par` nod.
-
 
 ## Landing Page {#landing-page}
 
