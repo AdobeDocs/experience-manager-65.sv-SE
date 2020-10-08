@@ -11,7 +11,7 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 7c0834e9b70266e8b678771510fb1756c8091ea8
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1891'
 ht-degree: 1%
@@ -329,7 +329,6 @@ Om du vill kopiera nyckelmaterialet från författaren till alla andra instanser
 >
 >Om en annan säkerhetsfunktion redan har konfigurerats som baseras på krypteringsnycklarna kan konfigurationen skadas om du replikerar krypteringsnycklarna. Om du behöver hjälp [kontaktar du kundtjänst](https://helpx.adobe.com/marketing-cloud/contact-support.html).
 
-
 #### Databasreplikering {#repository-replication}
 
 Du kan behålla nyckelmaterialet som lagras i databasen, vilket var fallet i AEM 6.2 och tidigare, genom att ange följande systemegenskap vid första starten av varje AEM (som skapar den ursprungliga databasen):
@@ -339,7 +338,6 @@ Du kan behålla nyckelmaterialet som lagras i databasen, vilket var fallet i AEM
 >[!NOTE]
 >
 >Det är viktigt att kontrollera att [replikeringsagenten på författaren](#replication-agents-on-author) är korrekt konfigurerad.
-
 
 Med nyckelmaterialet som lagras i databasen replikeras krypteringsnyckeln från författaren till andra instanser på följande sätt:
 
