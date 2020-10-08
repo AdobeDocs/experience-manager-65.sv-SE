@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: cf8b3d72-30ba-40ca-ae48-b61abbb28802
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 8361f65f52c2a67658ef1b7b7615df149208777b
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1676'
 ht-degree: 0%
@@ -48,7 +48,6 @@ I det här avsnittet av dokumentationen beskrivs:
 >Komponenterna `Journal` och `Journal Sidebar` kallas `Blog` och `Blog Sidebar`.
 >
 >Bloggfunktionen i AEM 6.0 och tidigare versioner har nu tagits bort. Det baserades på en mall och tilläts endast författare att skapa innehåll i författarmiljön.
-
 
 ## Lägga till bloggkomponenter på en sida {#adding-blog-components-to-a-page}
 
@@ -112,8 +111,8 @@ Ange bloggens grundläggande funktioner på fliken **Inställningar** :
 >[!NOTE]
 >
 >Journaltiteln används för att automatiskt skapa en URL för bloggen.
+>
 >Maximalt 50 tecken (med ytterligare 5 tecken för unikt utseende) används från journaltiteln som du anger här för att skapa en URL för bloggen.
-
 
 * **Journalbeskrivning**
 
