@@ -1,8 +1,8 @@
 ---
 title: Communities-komponenter
 seo-title: Communities-komponenter
-description: Lägga till communityfunktioner på alla AEM-webbplatser
-seo-description: Lägga till communityfunktioner på alla AEM-webbplatser
+description: Lägga till communityfunktioner på alla AEM webbplatser
+seo-description: Lägga till communityfunktioner på alla AEM webbplatser
 uuid: 76824820-81e9-4192-8df3-dff55eaf144e
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: df1ac689-33db-4e30-9f75-3bda2a485652
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cf2733ecee5c74b79b85267191fbdf3cbce9c98b
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 2%
@@ -23,18 +23,17 @@ ht-degree: 2%
 
 ## Introduktion {#introduction}
 
-När AEM Communities är licensierad går det, förutom att skapa communitysajter, att lägga till Communities-funktioner på alla AEM-sajter med hjälp av standardverktygen för AEM-utveckling.
+När AEM Communities är licensierat går det, förutom att skapa communitysajter, att lägga till webbgruppsfunktioner på alla AEM sajter med hjälp av standardverktyg för AEM.
 
 Mer information om hur du skapar en community-webbplats finns på:
 
-* [Översikt över AEM Communities](/help/communities/overview.md)
+* [AEM Communities - översikt](/help/communities/overview.md)
 * [Komma igång med AEM Communities](/help/communities/getting-started.md)
 * [Komma igång med AEM Communities för aktivering](/help/communities/getting-started-enablement.md)
 
 >[!NOTE]
 >
 >Om du inte känner till redigeringsmiljön kan du läsa dokumentationen om [grundläggande hantering](/help/sites-authoring/basic-handling.md) och en [snabbguide till redigeringssidorna](/help/sites-authoring/qg-page-authoring.md).
-
 
 ## Tillgängliga webbgruppskomponenter {#available-communities-components}
 
@@ -82,7 +81,6 @@ Se även handboken [för interaktiva](/help/communities/components-guide.md)comm
 >[!NOTE]
 >
 >Avsökningskomponenten är inte längre tillgänglig och stöds i Experience Manager Communities.
-
 
 ## Dokumentation för relaterade communities {#related-communities-documentation}
 
