@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 71fac7e9-814a-48b5-b816-9bdcb2a05190
 translation-type: tm+mt
-source-git-commit: 7acd89d830b9e758eec1b5a4beb18c22e4d12dcf
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%
@@ -59,5 +59,3 @@ Mer information finns i [JCR Store](jsrp.md) .
 >[!NOTE]
 >
 >Frånvaro av noden `srpc` under `/etc/socialconfig` indikerar standardlagret för [JCR](jsrp.md).
-
-
