@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: f74d225e-0245-4d5a-bb93-0ee3f31557aa
 translation-type: tm+mt
-source-git-commit: 33c3126fbba4b324941338ee4d2a418d216408cd
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '591'
 ht-degree: 1%
@@ -22,8 +22,8 @@ ht-degree: 1%
 
 I det här avsnittet skapar du följande:
 
-* Den **[mall](#createthepagetemplate)**som ska användas för att skapa innehållssidor på exempelwebbplatsen.
-* Den **[komponent och det skript](#create-the-template-s-rendering-component)**som ska användas för att återge webbplatsens sidor.
+* Den **[mall](#createthepagetemplate)** som ska användas för att skapa innehållssidor på exempelwebbplatsen.
+* Den **[komponent och det skript](#create-the-template-s-rendering-component)** som ska användas för att återge webbplatsens sidor.
 
 ## Skapa innehållsmallen {#create-the-content-template}
 
@@ -114,6 +114,6 @@ Skapa den *komponent* som definierar innehållet och återger alla sidor som ska
 
    >[!CAUTION]
    >
-   >Överensstämmelsen mellan sökvägen till uppspelningskomponenten och egenskapen sling:resourceType för uppspelningssidmallen är avgörande för att webbplatsen ska fungera korrekt.
+   >Korrespondensen mellan sökvägen till spelsideskomponenten och egenskapen sling:resourceType för spelningssidmallen är avgörande för att webbplatsen ska fungera korrekt.
 
    ![verify-template-component](assets/verify-template-component.png)
