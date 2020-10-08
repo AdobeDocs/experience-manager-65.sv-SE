@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: df5416ec-5c63-481b-99ed-9e5a91df2432
 translation-type: tm+mt
-source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+workflow-type: tm+mt
+source-wordcount: '896'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,6 @@ source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
 >[!NOTE]
 >
 >Platsen för paket-API:er kan ändras när du uppgraderar från en större version till nästa.
-
 
 ### SocialComponent-gränssnitt {#socialcomponent-interface}
 
@@ -62,17 +64,17 @@ En SocialComponentFactoryManager är en OSGi-tjänst och har tillgång till andr
 
 En referens till OSGi-tjänsten erhålls genom att anropa `com.adobe.cq.social.scf.SocialComponentFactoryManager`
 
-### HTTP API - POST-begäranden {#http-api-post-requests}
+### HTTP API - POSTER {#http-api-post-requests}
 
 #### Klassen PostOperation {#postoperation-class}
 
-HTTP API POST-slutpunkterna är PostOperation-klasser som definieras genom implementering av `SlingPostOperation` gränssnittet (paket `org.apache.sling.servlets.post`).
+Slutpunkterna för HTTP API-POSTEN är PostOperation-klasser som definieras genom implementering av `SlingPostOperation` gränssnittet (paket `org.apache.sling.servlets.post`).
 
 Slutpunktsimplementeringen anger `PostOperation` ett värde `sling.post.operation` som åtgärden ska svara på. Alla POST-begäranden med en:operation-parameter inställd på det värdet delegeras till den här implementeringsklassen.
 
 Den `PostOperation` anropar `SocialOperation` som utför de åtgärder som krävs för åtgärden.
 
-Användaren `PostOperation` får resultatet från `SocialOperation` och returnerar det rätta svaret till klienten.
+Användaren `PostOperation` får resultatet från `SocialOperation` och returnerar det svar som krävs till klienten.
 
 #### Klassen SocialOperation {#socialoperation-class}
 
@@ -121,7 +123,7 @@ Exempelkod finns i [Adobe Marketing Cloud GitHub](https://github.com/Adobe-Marke
 
 ## Bästa praxis {#best-practices}
 
-Se avsnittet [Kodningsriktlinjer](code-guide.md) för olika riktlinjer och bästa praxis för utvecklare av AEM Communities.
+Se avsnittet [Kodningsriktlinjer](code-guide.md) för olika riktlinjer och metodtips för AEM Communities-utvecklare.
 
 Se även [Storage Resource Provider (SRP) för UGC](srp.md) om du vill veta mer om hur du får åtkomst till användargenererat innehåll.
 
