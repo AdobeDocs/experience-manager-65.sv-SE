@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: f2ac3d66-cc79-498f-83fb-dd96feb88de2
 translation-type: tm+mt
-source-git-commit: 570c970c328ded828680baeb1b04ab4361a36226
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '857'
 ht-degree: 0%
@@ -47,7 +47,6 @@ För AEM Communities
 >[!NOTE]
 >
 >Om du inte känner till AEM kan du läsa dokumentationen om [grundläggande hantering](../../help/sites-authoring/basic-handling.md) och en [snabbguide till hur du skapar sidor](../../help/sites-authoring/qg-page-authoring.md).
-
 
 ## Installera senaste versionen av Communities {#install-latest-communities-release}
 
@@ -123,7 +122,6 @@ En fjärde användare skapas i författarmiljön och tilldelas rollerna Webbgrup
 >
 >I stället [tilldelas de medlemsgruppen](enablement-create-site.md#assignuserstocommunityenablemembersgroup)senare.
 
-
 ### Riley Taylor - anmälare {#riley-taylor-enrollee}
 
 [Skapa en medlem](members.md#create-new-member) som ska läggas till i en grupp med elev - Community Ski Class-gruppen.
@@ -178,7 +176,6 @@ En fjärde användare skapas i författarmiljön och tilldelas rollerna Webbgrup
 >[!NOTE]
 >
 >När en community-webbplats skapas kan befintliga medlemmar och grupper läggas till i communityplatsens medlemsgrupp.
-
 
 ## Rollen Community Administrator {#community-administrator-role}
 
