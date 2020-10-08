@@ -10,7 +10,7 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: bf4e7809-8def-4647-aaa6-3ac36865511f
 translation-type: tm+mt
-source-git-commit: 4b6311cbfe11a61b74f68bf5a25ad1f5faef5358
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1231'
 ht-degree: 0%
@@ -27,7 +27,6 @@ Komponenten innehåller en sammanfattning av en aktiv eller stängd instans av e
 >[!NOTE]
 >
 >Anonym publicering av en granskning stöds inte. Besökarna måste registrera sig (bli medlem) och logga in för att kunna delta. Den inloggade besökaren kan uppdatera sin granskning när som helst.
-
 
 ## Lägga till en granskning på en sida {#adding-a-review-to-a-page}
 
@@ -75,7 +74,6 @@ På webbplatsen markeras nödvändiga klassificeringar med en asterisk. Om ett o
 >
 >Om ett objekt anges på **[!UICONTROL Required Ratings]** fliken som inte anges på **[!UICONTROL Allowed Ratings]** fliken, inkluderas det inte i posterna som ska värderas.
 
-
 Ange hur granskningar ska hanteras på fliken **[!UICONTROL Reviews]** .
 
 ![recensioner](assets/configure-review3.png)
@@ -92,7 +90,7 @@ Ange hur granskningar ska hanteras på fliken **[!UICONTROL Reviews]** .
 
    Om det här alternativet är markerat tillåter du att bifogade filer överförs för granskningen. Standard är avmarkerat.
 
-* **Maximal filstorlek **
+* **Maximal filstorlek**
 
    Relevant endast om **[!UICONTROL Allow File Uploads]** är markerat. Det här fältet begränsar storleken (i byte) på en överförd fil. Standardvärdet är 10 MB.
 
@@ -169,7 +167,6 @@ När de [nödvändiga klientbiblioteken](reviews-basics.md#essentials-for-client
 >[!NOTE]
 >
 >&quot;Jämka&quot; motsvarar rösterna för den första posten på flikarna Tillåtna klassificeringar i den granskning som sammanfattas.
-
 
 ### Konfigurera sammanfattning av granskningar (visning) {#configuring-reviews-summary-display}
 
