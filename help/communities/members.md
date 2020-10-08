@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: ccabf301-b417-48aa-8501-8360fd9f3e36
 translation-type: tm+mt
-source-git-commit: eb5317be52eec39b947ccb3c456d21d567ef2841
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '917'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## Översikt {#overview}
 
-AEM Communities-funktioner kräver ofta att webbplatsbesökare registreras och loggas in innan de deltar i en community i publiceringsmiljön. Användarregistreringen behöver bara finnas i publiceringsmiljön och kallas ofta *medlemmar* för att skilja dem från *användare* som är registrerade i författarmiljön.
+AEM Communities funktioner kräver ofta att besökarna är registrerade och inloggade innan de deltar i en community i publiceringsmiljön. Användarregistreringen behöver bara finnas i publiceringsmiljön och kallas ofta *medlemmar* för att skilja dem från *användare* som är registrerade i författarmiljön.
 
 ### Medlemmar (användare) vid publicering {#members-users-on-publish}
 
@@ -39,7 +39,6 @@ För att hantera användare och grupper som är registrerade i *författarmiljö
 >
 >När exempelinnehåll är distribuerat och aktiverat finns det många exempelanvändare i både författar- och publiceringsmiljöer. De här användarna kommer inte att vara närvarande när de körs med [inget innehållskörningsläge](../../help/sites-administering/production-ready.md).
 
-
 ## Medlemskonsolen {#members-console}
 
 I författarmiljön kan du nå Medlemskonsolen för att hantera medlemmar som är registrerade i publiceringsmiljön:
@@ -49,7 +48,6 @@ I författarmiljön kan du nå Medlemskonsolen för att hantera medlemmar som ä
 >[!CAUTION]
 >
 >Det går inte att använda medlemskonsolen om [tunneltjänsten](deploy-communities.md#tunnel-service-on-author) inte är aktiverad.
-
 
 ![member-console1](assets/member-console1.png)
 
@@ -66,7 +64,7 @@ Välj sökikonen till vänster om sidhuvudet för att växla mellan att `Members
 
 ### Medlemsstatistik {#member-statistics}
 
-Kolumnerna som visas `Views`, `Posts`och `Follows` uppdateras när användaren är medlem i en eller flera communitysajter där Adobe Analytics `Likes` är aktiverat [](sites-console.md#analytics).
+Kolumnerna som visas `Views`, `Posts`och `Follows` uppdateras när användaren är medlem i en eller flera communitywebbplatser med Adobe Analytics `Likes` aktiverat [](sites-console.md#analytics).
 
 ### Exportera CSV {#export-csv}
 
@@ -175,7 +173,6 @@ Så här kommer du åt gruppkonsolen:
 >
 >Det går inte att använda gruppkonsolen om [tunneltjänsten](deploy-communities.md#tunnel-service-on-author) inte är aktiverad.
 
-
 ### Skapa ny grupp {#create-new-group}
 
 Välj `Add Group` för att skapa en grupp i publiceringsmiljön.
@@ -208,7 +205,7 @@ Följande fält krävs för att skapa en ny medlemsgrupp på publiceringssidan:
 
 ## Auktoriserade administratörer {#authorized-administrators}
 
-När du arbetar med medlemmar i communitymedlemskonsolen måste du logga in som en användare med lämplig behörighet, och replikeringsagenten som används av [tunneltjänsten](deploy-communities.md#tunnel-service-on-author) måste vara korrekt konfigurerad.
+När du arbetar med medlemmar i communitymedlemskonsolen måste du logga in som en användare med lämplig behörighet och replikeringsagenten som används av [tunneltjänsten](deploy-communities.md#tunnel-service-on-author) måste vara korrekt konfigurerad.
 
 Om användaren inte är inloggad som `admin`måste användaren vara medlem i `administrators` användargruppen.
 
