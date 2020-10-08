@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 6866d209-5789-4ef9-bc3c-d644d4fb4b1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 391893f7cf83c018d29af14200c6f160b6d83bdd
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1517'
 ht-degree: 2%
@@ -229,7 +229,6 @@ Så här aktiverar du skräppostavkänningsmotorn:
 >[!NOTE]
 >
 >Spam detection is only implementation for English locale.
-
 
 ### Sentiment {#sentiment}
 
