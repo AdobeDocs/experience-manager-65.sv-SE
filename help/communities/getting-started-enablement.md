@@ -10,7 +10,10 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 31cc7819-cc4d-4804-9fab-005d8bef0714
 translation-type: tm+mt
-source-git-commit: 341fef2b8f040848a59381b0d4996c29f352b929
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+workflow-type: tm+mt
+source-wordcount: '137'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,6 @@ En självstudiekurs om hur du snabbt skapar en [engagemangscommunity](overview.m
 >[!NOTE]
 >
 >I den här självstudiekursen förutsätts att [funktionspaket 1](deploy-communities.md#latestfeaturepack) eller senare för Communities installeras.
-
 
 * [Inledande konfiguration](enablement-setup.md)
 
