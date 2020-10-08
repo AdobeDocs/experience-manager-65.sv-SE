@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 63abeda4-6ea1-4b45-b188-f9c6b44ca0cd
 translation-type: tm+mt
-source-git-commit: 9a4ae73c08657195da2741cccdb196bd7f7142c9
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1141'
 ht-degree: 0%
@@ -33,7 +33,6 @@ Alla SCF-komponenter implementeras med SRP API, vilket gör att kod kan utveckla
 >[!NOTE]
 >
 >**Egna komponenter**: För licensierade AEM Communities-kunder är SRP API tillgängligt för utvecklare av anpassade komponenter för att få åtkomst till UGC utan hänsyn till den underliggande topologin. Se [SRP och UGC Essentials](srp-and-ugc.md).
-
 
 Se även:
 
@@ -68,7 +67,6 @@ När UGC sparas i delad lagring finns det en enda instans av medlemsinnehåll so
 >Se [SRP och UGC Essentials](srp-and-ugc.md) för exempelkod och ytterligare information.
 >
 >Mer information om de effektivaste strategierna vid kodning finns i [Åtkomst av UGC med SRP](accessing-ugc-with-srp.md) .
-
 
 ### ASRP {#asrp}
 
@@ -130,7 +128,6 @@ Skuggnoder är en adresserbar plats för Sling i databasen.
 >[!CAUTION]
 >
 >Eftersom skuggnoden har flera användningar innebär en skuggnod *inte* att komponenten är en NER.
-
 
 ### Lagringsplats {#storage-location}
 
