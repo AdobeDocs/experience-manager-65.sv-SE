@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/configuring_workspace
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 72fe5749-2fa2-442f-b679-7889faeafcac
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+workflow-type: tm+mt
+source-wordcount: '1281'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ Du kan importera och exportera sökmallsdefinitioner och globala inställningar 
 
 >[!NOTE]
 >
->Flex Workspace används inte i AEM-formulärsversioner.
+>Flex Workspace är föråldrat för AEM formulärreleaser.
 
 Du kan till exempel gå från en utvecklingsmiljö till en produktionsmiljö genom att exportera sökmallsdefinitionerna och globala inställningar från en miljö och importera dem till en annan.
 
@@ -65,7 +68,7 @@ Du kan ändra den globala inställningsfilen; De enda inställningar du kan beh�
 
 >[!NOTE]
 >
->Flex Workspace används inte i AEM-formulärsversioner.
+>Flex Workspace är föråldrat för AEM formulärreleaser.
 
 Den globala inställningsfilen för arbetsytan innehåller följande inställningar:
 
@@ -73,19 +76,19 @@ Den globala inställningsfilen för arbetsytan innehåller följande inställnin
 
 Inställningarna för *specialRoutes* anger egenskaperna för de särskilda vägarna, godkänn och Neka, i Workspace. I vissa situationer visas knapparna för dessa vägar på aktivitetskortet i Workspace, och användaren kan markera dem utan att öppna formuläret. Du kan ändra inställningarna för specialRoutes i den globala inställningsfilen för att lägga till anpassade namn för godkännande och neka eller för att skapa ytterligare vägar.
 
-**client_specialRoutes_route_approved_style:** Namnet på det format som finns i arbetsytetemat, som identifierar ikonerna för att godkänna. Formatet måste innehålla värden för en aktiverad ikon och en inaktiverad ikon. Om du vill definiera ett format för en anpassad knapp måste du använda följande mall:
-` .buttonApprove {  icon: Embed('images/LC_DirectApprove_Sm_N.png');  disabledIcon: Embed('images/LC_DirectApprove_Sm_D.png');  paddingLeft: 5;  }` Arbetsytans CSS-fil är inbäddad i filen workspace-theme.swf, som finns i filen adobe-workspace-client.ear > adobe-workspace-client.war. Om du vill ändra utseendet på arbetsytan måste du kompilera om filen workspace-theme.swf.
+**client_specialRoutes_route_acceptable_style:** Namnet på det format som finns i arbetsytetemat, som identifierar ikonerna för att godkänna. Formatet måste innehålla värden för en aktiverad ikon och en inaktiverad ikon. Om du vill definiera ett format för en anpassad knapp måste du använda följande mall:
+` .buttonApprove {  icon: Embed('images/LC_DirectApprove_Sm_N.png');  disabledIcon: Embed('images/LC_DirectApprove_Sm_D.png');  paddingLeft: 5;  }` CSS-filen för arbetsytan är inbäddad i filen workspace-theme.swf, som finns i filen adobe-workspace-client.ear > adobe-workspace-client.war. Om du vill ändra utseendet på arbetsytan måste du kompilera om filen workspace-theme.swf.
 
 **client_specialRoutes_route_deny_names:** Olika strängar som en Workbench-användare kan använda för att tolkas som&quot;deny&quot;. Strängarna är skiftlägeskänsliga. Standardvärdet är t.ex. Neka. Om Workbench-användaren använder ordet Neka i en process känns ordet inte igen. Ordet Neka måste läggas till i den här inställningen för att flödesknappen ska kunna anpassas och ha formatet tillämpat på den.
 
 **client_specialRoutes_route_deny_style:** Namnet på det format som finns i temafilen för arbetsytan där knappikonerna för att neka visas. Formatet måste innehålla värden för en aktiverad ikon och en inaktiverad ikon. Om du vill definiera ett format för en anpassad knapp måste du använda följande mall:
-`  .buttonDeny {   icon: Embed('images/LC_DirectDeny_Sm_N.png');   disabledIcon: Embed('images/LC_DirectDeny_Sm_D.png');   paddingLeft: 0;   }` client_ **specialRoutes_route_approved_names:** Olika strängar som en Workbench-användare kan använda för att tolkas som&quot;Godkänn&quot;. Strängarna är skiftlägeskänsliga. Standardvärdet är t.ex. Godkänt. Om Workbench-användaren använder ordet Godkänn i en process känns ordet inte igen. För att flödesknappen ska kunna anpassas måste ordet Godkänn läggas till i den här inställningen.
+`  .buttonDeny {   icon: Embed('images/LC_DirectDeny_Sm_N.png');   disabledIcon: Embed('images/LC_DirectDeny_Sm_D.png');   paddingLeft: 0;   }` **client_specialRoutes_route_acceptable_names:** Olika strängar som en Workbench-användare kan använda för att tolkas som&quot;Godkänn&quot;. Strängarna är skiftlägeskänsliga. Standardvärdet är t.ex. Godkänt. Om Workbench-användaren använder ordet Godkänn i en process känns ordet inte igen. För att flödesknappen ska kunna anpassas måste ordet Godkänn läggas till i den här inställningen.
 
 **client_specialRoutes_names:** Nycklarna som används för att hitta det anpassade strängvärdet från resursfilerna. Varje post i den här inställningen måste innehålla värdena för namnen och formatet.
 
 ### JGroup-inställningar {#jgroup-settings}
 
-De här inställningarna visas endast om du har uppgraderat från Adobe LiveCycle ES 2.5 eller tidigare.
+De här inställningarna visas bara om du har uppgraderat från Adobe LiveCycle ES 2.5 eller tidigare.
 
 **server_remoteevents_ClientTimeoutMilliseconds:** Den längsta tid som JGroup väntar på händelsemeddelanden. Den här inställningen bör inte ändras.
 
@@ -93,7 +96,7 @@ De här inställningarna visas endast om du har uppgraderat från Adobe LiveCycl
 
 **server_remoteevents_JChannelConnectionProperties:** Anslutningsegenskaperna för JGroup som används för att kommunicera mellan servern (där en tjänsthändelse bearbetas av RemoteEvent-tjänsten) och alla instanser av Workspace.
 
-Du kan behöva ändra UDP-värdena för multicast-IP-adressen (mcast_addr), multicast-IP-porten (mcast_port) och TTL för multicast-paketen (ip_ttl). Som standard genereras IP-adressen och portvärdena för multicast slumpmässigt och vanligtvis behöver värdena inte ändras. Om ditt företag har några nätverksprinciper för specifika multicast-intervall för IP-adresser för multicast kan du behöva ändra värdena.
+Du kan behöva ändra UDP-värdena för multicast-IP-adressen (mcast_addr), multicast-IP-porten (mcast_port) och TTL för multicast-paketen (ip_ttl). Som standard genereras IP-adressen och portvärdena för multicast slumpmässigt och i allmänhet behöver värdena inte ändras. Om ditt företag har några nätverksprinciper för specifika multicast-intervall för IP-adresser för multicast kan du behöva ändra värdena.
 
 >[!NOTE]
 >
@@ -123,7 +126,7 @@ Mer information om JGroups och Workspace finns i [JGroups and AEM forms Workspac
 
 **server_debugLevel:** Ändra inte den här inställningen.
 
-**client_pollingInterval:** Anger avsökningsintervallet (i sekunder) som används på Flex-arbetsytan (borttagen för AEM-formulär i JEE) för att identifiera nya och ändrade uppgifter. Standardvärdet är 3 sekunder. Detta fungerar inte för AEM Forms Workspace.
+**client_pollingInterval:** Anger avsökningsintervallet (i sekunder) som används på Flex-arbetsytan (AEM borttaget för formulär i JEE) för att identifiera nya och ändrade uppgifter. Standardvärdet är 3 sekunder. Detta fungerar inte för AEM Forms Workspace.
 
 **client_systemContext_name:** Ange ett anpassat namn (t.ex. Medborgare) som ska visas i fältet Lägg till av (på fliken Bifogade filer) för de bifogade filerna för en uppgift i AEM Forms Workspace.
 
@@ -133,4 +136,6 @@ Så här definierar du det anpassade namnet:
 
 >[!NOTE]
 >
->I demoprogrammet är standardvisningsnamnet **Medborgare**. För ett anpassat program som du skapar är standardvisningsnamnet **Systemkontextkonto**.***client_idleTimeout:** När en användare är inaktiv under en viss tid förfaller AEM Forms Workspace-sessionen. Om du vill aktivera funktionen lägger du till en post i Globala inställningar &lt;client_idleTimeout>*IDLE_TIMEOUT_IN_SECONDS*&lt;/client_idleTimeout>. Du kan ange värdet 0 om du vill inaktivera tidsgränsen för inaktivitet. Tiden anges i sekunder.
+>I demoprogrammet är standardvisningsnamnet **Medborgare**. För ett anpassat program som du skapar är standardvisningsnamnet **Systemkontextkonto**.
+>
+>**client_idleTimeout:** När en användare är inaktiv under en viss tid förfaller AEM Forms Workspace-sessionen. Om du vill aktivera funktionen lägger du till en post i Globala inställningar &lt;client_idleTimeout>*IDLE_TIMEOUT_IN_SECONDS*&lt;/client_idleTimeout>. Du kan ange värdet 0 om du vill inaktivera tidsgränsen för inaktivitet. Tiden anges i sekunder.
