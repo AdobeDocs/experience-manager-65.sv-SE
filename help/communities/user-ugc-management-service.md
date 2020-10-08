@@ -11,7 +11,7 @@ topic-tags: administering
 discoiquuid: d305821d-1371-4e4a-8b28-8eee8fafa43b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 18f401babef4cb2aad47e6e4cbb0500b0f8365e2
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '616'
 ht-degree: 0%
@@ -25,7 +25,6 @@ ht-degree: 0%
 >
 >GDPR används som exempel i avsnitten nedan, men de ingående detaljerna är tillämpliga på alla dataskydds- och sekretessbestämmelser. såsom GDPR, CCPA osv.
 
-
 AEM Communities visar användningsklara API:er för hantering av användarprofiler och grupphantering av användargenererat innehåll (UGC). När **tjänsten UserUgcManagement** är aktiverad kan behöriga användare (community-administratörer och moderatorer) inaktivera användarprofiler och massta bort eller massexportera UGC för specifika användare. Dessa API:er gör det även möjligt för personuppgiftsansvariga och personuppgiftsbiträden att följa EU:s allmänna dataskyddsförordningar (GDPR) och andra GDPR-inspirerade sekretessbestämmelser.
 
 Mer information finns på [GDPR-sidan på Adobe Privacy Center](https://www.adobe.com/privacy/general-data-protection-regulation.html).
@@ -33,7 +32,6 @@ Mer information finns på [GDPR-sidan på Adobe Privacy Center](https://www.adob
 >[!NOTE]
 >
 >Om du har konfigurerat [Adobe Analytics på AEM Communities](/help/communities/analytics.md) -platsen skickas inhämtade användardata till Adobe Analytics-servern. Adobe Analytics tillhandahåller API:er som gör att du kan komma åt, exportera och ta bort användardata och följa GDPR. Mer information finns i [Skicka begäran](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/gdpr-submit-access-delete.html)om åtkomst och borttagning.
-
 
 Om du vill använda dessa API:er måste du aktivera slutpunkten genom att aktivera tjänsten UserUgcManagement. `/services/social/ugcmanagement` Om du vill aktivera den här tjänsten installerar du [exempelservern](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet) som finns på [GitHub.com](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet). Tryck sedan på slutpunkten på publiceringsinstansen av communitywebbplatsen med lämpliga parametrar med en http-begäran, som:
 
@@ -81,7 +79,6 @@ För Adobe Analytics-variabelmappningar som används av AEM Communities, se föl
 >
 >Om du inaktiverar en användare tas allt användargenererat innehåll som användaren har på servern bort.
 
-
 Om du till exempel vill ta bort profilen för en användare som har ett autentiserbart ID `weston.mccall@dodgit.com` via http-POST-begäran använder du följande parametrar:
 
 * user = `weston.mccall@dodgit.com`
@@ -90,5 +87,3 @@ Om du till exempel vill ta bort profilen för en användare som har ett autentis
 >[!NOTE]
 >
 >deleteUserAccount() API inaktiverar bara en användarprofil i systemet och tar bort UGC. Om du vill ta bort en användarprofil från systemet går du till **CRXDE Lite**: [https://&lt;server>/crx/de](https://localhost:4502/crx/de), leta reda på användarnoden och ta bort den.
-
-
