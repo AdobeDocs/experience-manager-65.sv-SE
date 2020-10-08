@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: fbfe8097-3c3f-4a05-97ad-1ce526362a26
 translation-type: tm+mt
-source-git-commit: 56c2e6b55964ea5f3e180b17bd2a244882aa62ea
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 1%
@@ -22,20 +22,19 @@ ht-degree: 1%
 
 ## Översikt {#overview}
 
-AEM Communities förenklar framtagning och anpassning av communityfunktioner som forum, användargrupper, bloggar, frågor och svar, kalendrar, kommentarer, granskningar, omröstningar, omdömen och uppdrag. Dessa funktioner gör att användargenererat innehåll (UGC) anges i publiceringsmiljön.
+AEM Communities gör det enklare att skapa och anpassa communityfunktioner som forum, användargrupper, bloggar, frågor och svar, kalendrar, kommentarer, recensioner, omröstningar, omdömen och uppdrag. Dessa funktioner gör att användargenererat innehåll (UGC) anges i publiceringsmiljön.
 
 Grunden för en [communitywebbplats](overview.md#communitiessites) är den [sociala komponentens ramverk](scf.md) (SCF). Skapandet av en community-webbplats börjar med att en mall [för en](sites-console.md) community väljs som består av [communityfunktioner](functions.md).
 
 En översikt och självstudiekurser för att komma igång finns på:
 
-* [Översikt över AEM Communities](overview.md)
+* [AEM Communities - översikt](overview.md)
 * [Komma igång med AEM Communities](getting-started.md)
 * [Komma igång med AEM Communities för aktivering](getting-started-enablement.md)
 
 >[!NOTE]
 > 
 >Vi rekommenderar att du håller dig uppdaterad med de [senaste versionerna](deploy-communities.md#latest-releases).
-
 
 ## Rekommenderade distributioner {#recommended-deployments}
 
@@ -69,7 +68,7 @@ AEM Communities komponenter, funktioner och funktioner utgör byggstenarna för 
 
 ## Community-grupper {#community-groups}
 
-[Community-grupper](overview.md#communitygroups) är konceptet att tillåta communitymedlemmar att bilda undergrupper på communitywebbplatsen. En community-grupp kan skapas i publicerings- eller författarmiljön.
+[Community-grupper](overview.md#communitygroups) är konceptet att tillåta communitymedlemmar att bilda undergrupper på communitywebbplatsen. Skapande av en community-grupp kan ske i publicerings- eller författarmiljön.
 
 * [Grundläggande om communitygrupper](essentials-groups.md)
 * [Funktionen Grupper](functions.md#groups-function)
@@ -82,7 +81,7 @@ AEM Communities komponenter, funktioner och funktioner utgör byggstenarna för 
 * [SRP och UGC Essentials](srp-and-ugc.md) - metoder och exempel för SRP API-verktyg
 * [Tagg Essentials](tag.md) - möjlighet för communitymedlemmar att tagga UGC- och/eller katalogaktiveringsresurser
 
-## Självstudiekurser {#tutorials}
+## Tutorials {#tutorials}
 
 * [Självstudiekurser på klientsidan](tutorials.md#client-side-customization)
 * [Självstudiekurser på serversidan](tutorials.md#server-side-customization)
