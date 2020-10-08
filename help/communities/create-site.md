@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 8ae324ea-8b84-47a3-aabf-1fee2a3bd46d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 99fb808013da18ed028d59c43deab5e815169e26
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1640'
 ht-degree: 1%
@@ -96,7 +96,6 @@ Markera alla kryssrutor för [användarhantering](/help/communities/sites-consol
 >[!NOTE]
 >
 >För en produktionsmiljö är det nödvändigt att skapa anpassade Facebook- och Twitter-program. Se [Social Login med Facebook och Twitter](/help/communities/social-login.md).
-
 
 ![communityinställningar](assets/site-settings.png)
 
@@ -228,9 +227,6 @@ Observera att UGC inte ingår i platspaketet.
 >1. Välj **[!UICONTROL OK]**.
 >1. (Valfritt) Välj **[!UICONTROL Clear]** eller **[!UICONTROL Force Retry]** återställ replikeringskön.
 
->
-
-
 
 ### Välj Publicera {#select-publish}
 
@@ -318,7 +314,6 @@ Så här kommer du igång:
 >
 >Om du vill inaktivera det anger du bara ett prefix för egenskapsvärdet med ett &quot;x&quot; - `sling:match` - och `xlocalhost.4503/$` Spara alla ****.
 
-
 ![valfria steg](assets/optional-steps.png)
 
 #### Felsökning: Fel när kartan sparades {#troubleshooting-error-saving-map}
@@ -342,5 +337,3 @@ Kom ihåg att **spara** och **publicera** webbplatsen igen efter eventuella änd
 >[!NOTE]
 >
 >Om du inte känner till AEM kan du läsa dokumentationen om [grundläggande hantering](/help/sites-authoring/basic-handling.md) och en [snabbguide till hur du skapar sidor](/help/sites-authoring/qg-page-authoring.md).
-
-
