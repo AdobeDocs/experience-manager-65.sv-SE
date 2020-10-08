@@ -10,10 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: c0a71870-8f95-40c8-9ffd-b7af49723288
 translation-type: tm+mt
-source-git-commit: 42606e76742fe7698c4c186208e515ed22adc5a4
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2634'
+ht-degree: 1%
 
 ---
 
@@ -72,7 +72,6 @@ Från och med AEM 6.4 GA och AEM 6.3 SP1 uppdaterades social inloggning för att
 >
 >För äldre AEM versioner, om du står inför ett undantag i loggar **Kan inte extrahera en token från den här**, uppgradera till den senaste bestrukna versionen för den AEM.
 
-
 Versionsinformation om Facebook Graph API finns i [Facebooks API-ändringslogg](https://developers.facebook.com/docs/apps/changelog).
 
 ### Skapa en Facebook-app {#create-a-facebook-app}
@@ -94,7 +93,6 @@ Från och med Facebook API v2.7:
 >[!NOTE]
 >
 >http://localhost:4503 fungerar för utveckling.
-
 
 När programmet har skapats letar du reda på **[!UICONTROL App ID]** - och **[!UICONTROL App Secret]** inställningarna. Den här informationen krävs för att konfigurera molntjänsten [för](#createafacebookcloudservice)Facebook.
 
@@ -131,7 +129,6 @@ Instansen [Adobe Granite OAuth Application och Provider](#adobe-granite-oauth-ap
 
    * Välj **[!UICONTROL SAVE]**.
    * **[!UICONTROL Publish]**.
-
 
 
 
@@ -395,7 +392,6 @@ Till exempel http://localhost:4503/system/console/configMgr
 >[!CAUTION]
 >
 >Förväxla inte autentiseringshanteraren med en Facebook- eller Twitter-instans av *Adobe Granite OAuth-program och -provider*.
-
 
 ![chlimage_1-490](assets/chlimage_1-490.png)
 
