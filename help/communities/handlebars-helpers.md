@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 8b6c1697-d693-41f4-8337-f41658465107
 translation-type: tm+mt
-source-git-commit: 0270cee1970b5b092361c2f1ad4a117795465311
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+workflow-type: tm+mt
+source-wordcount: '1534'
+ht-degree: 2%
 
 ---
 
@@ -25,14 +28,13 @@ Handlister Hjälpprogram är metoder som kan anropas från Handlebars-skript fö
 
 Implementeringen innehåller en definition på klientsidan och en serversida. Det är också möjligt för utvecklare att skapa anpassade hjälpprogram.
 
-De anpassade SCF-hjälprarna som levereras med AEM Communities definieras i [klientbiblioteket](../../help/sites-developing/clientlibs.md):
+De anpassade SCF-hjälpen som levereras med AEM Communities definieras i [klientbiblioteket](../../help/sites-developing/clientlibs.md):
 
 * `/etc/clientlibs/social/commons/scf/helpers.js`
 
 >[!NOTE]
 >
 >Installera det [senaste funktionspaketet](deploy-communities.md#latestfeaturepack)för communityn.
-
 
 ## Förkortning {#abbreviate}
 
@@ -237,7 +239,7 @@ En hjälp som du kan använda för att inkludera en komponent som en icke-befint
 
 Detta gör att resursen kan anpassas programmatiskt enklare än vad som är möjligt för en resurs som lagts till som en JCR-nod. Se [Lägga till eller inkludera en webbgruppskomponent](scf.md#add-or-include-a-communities-component).
 
-Endast ett urval av webbgruppskomponenter kan inkluderas. För AEM 6.1 är de som ingår [kommentarer](essentials-comments.md), [omdömen](rating-basics.md), [granskningar](reviews-basics.md)och [omröstningar](essentials-voting.md).
+Endast ett urval av webbgruppskomponenter kan inkluderas. I AEM 6.1 ingår [kommentarer](essentials-comments.md), [omdömen](rating-basics.md), [granskningar](reviews-basics.md)och [omröstningar](essentials-voting.md).
 
 Den här hjälpen, som bara är lämplig på serversidan, innehåller funktioner som liknar [cq:include](../../help/sites-developing/taglib.md) för JSP-skript.
 
@@ -277,7 +279,7 @@ Det här innehåller en ny kommentarkomponent på `this.id` + /comments.
 
 ## IncludeClientLib {#includeclientlib}
 
-En handledare som innehåller ett AEM html-klientbibliotek, som kan vara ett js, en css eller ett temabibliotek. För flera inkluderingar av olika typer, till exempel js och css, måste den här taggen användas flera gånger i Handlebars-skriptet.
+En handledare som innehåller ett AEM HTML-klientbibliotek, som kan vara ett js, en css eller ett temabibliotek. För flera inkluderingar av olika typer, till exempel js och css, måste den här taggen användas flera gånger i Handlebars-skriptet.
 
 Den här hjälpen, som bara är lämplig på serversidan, innehåller funktioner som liknar [ui:includeClientLib](../../help/sites-developing/taglib.md) för JSP-skript.
 
@@ -567,7 +569,6 @@ public class FooTextHelper implements TemplateHelper<String>{
 >En hjälp som skapats för serversidan måste också skapas för klientsidan.
 >
 >Komponenten återges på nytt på klientsidan för den inloggade användaren, och om hjälpen på klientsidan inte hittas försvinner komponenten.
-
 
 ### Anpassade hjälpmedel på klientsidan {#client-side-custom-helpers}
 
