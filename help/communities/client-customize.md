@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 24b6d1d2-c118-4a25-959f-2783961c4ae3
 translation-type: tm+mt
-source-git-commit: efa6c7be93908b2f264da4689caa9c02912c0f0a
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1239'
 ht-degree: 0%
@@ -108,7 +108,6 @@ De anpassade formaten åsidosätter nu standardramverksformaten och komponenten 
 >Alla CSS-klassnamn som har prefixet `scf-js` har en specifik användning i javascript-kod. Dessa klasser påverkar en komponents tillstånd (till exempel växla från dold till synlig) och bör varken åsidosättas eller tas bort.
 >
 >Även om `scf-js` klasserna inte påverkar format kan klassnamnen användas i formatmallar med det intrycket att det kan finnas biverkningar när de styr elementens lägen.
-
 
 ## Utöka JavaScript {#extending-javascript}
 
