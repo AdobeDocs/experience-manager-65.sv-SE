@@ -1,6 +1,6 @@
 ---
-title: Resurskonsol för aktivering
-seo-title: Resurskonsol för aktivering
+title: Konsolen Aktivera resurser
+seo-title: Konsolen Aktivera resurser
 description: Resurskonsolen är den plats där aktiveringshanterare skapar, hanterar och tilldelar resurser till medlemmar på en aktiveringscommunitywebbplats
 seo-description: Resurskonsolen är den plats där aktiveringshanterare skapar, hanterar och tilldelar resurser till medlemmar på en aktiveringscommunitywebbplats
 uuid: 52445b39-c339-4b39-8004-eb36de99bced
@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 1ef15e76-fe7c-4ced-a20d-c0a9385e3ee4
 translation-type: tm+mt
-source-git-commit: 4e2fa3b0a64ae2e959dad85e3a1bc4a1027a2eef
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '2859'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Resurskonsol för aktivering {#enablement-resources-console}
+# Konsolen Aktivera resurser {#enablement-resources-console}
 
 För AEM Communities är resurskonsolen där [aktiveringshanterare](users.md) skapar, hanterar och tilldelar resurser till medlemmar på en community-webbplats för aktivering.
 
@@ -35,12 +35,9 @@ Mer information finns i [Konfigurera aktivering](enablement.md).
 >
 >Om SCORM har installerats efter att en community-webbplats har skapats måste eventuella aktiveringsresurser som finns innan SCORM har installerats återskapas.
 
-
-
 >[!NOTE]
 >
 >I och med releasen av [AEM 6.3](deploy-communities.md#latestfeaturepack) och motsvarande funktionspaket för Communities [AEM 6.2 FP3](deploy-communities.md#latestfeaturepack) och [AEM 6.1 FP7](https://docs.adobe.com/content/docs/en/aem/6-1/deploy/communities.html#Latest) behöver inte längre aktiveringsfunktionen en [MySQL-databas](mysql.md).
-
 
 ## Terminologi {#terminology}
 
@@ -131,7 +128,7 @@ När resursen är en del av en kurs, en inlärningsväg, ska medlemmar endast ti
 
 * **[!UICONTROL Add Image]**
 
-   (*Valfritt*) En bild som ska visas på kortet för aktiveringsresursen på medlemmens tilldelningssida samt på resurskonsolen. Bilden väljs från serverns lokala filsystem. Om ingen bild anges skapas en miniatyrbild för den överförda resursen.
+   (*Valfritt*) En bild som ska visas på kortet för aktiveringsresursen på uppdragssidan samt på resurskonsolen. Bilden väljs från serverns lokala filsystem. Om ingen bild anges skapas en miniatyrbild för den överförda resursen.
 
    ***Obs***: Den rekommenderade bildstorleken är inte bara 480 x 480 pixlar. På grund av kortens responsiva design för olika webbläsardimensioner varierar visningsstorleken mellan 220 x 165 pixlar och 400 x 165 pixlar.
 
@@ -250,7 +247,6 @@ Markera `'+' icon`i det övre högra hörnet när du vill börja välja resursen
 >Lärare ska inte registreras direkt i aktiveringsresurser som ska refereras från en inlärningsväg. Eleverna behöver bara vara inskrivna i kursen.
 >
 >Om en medlem är registrerad i både en resurs och en utbildningsväg som refererar till den resursen, kommer deras tilldelningar att visa både den enskilda resursen och resursen i utbildningsvägen.
-
 
 * **[!UICONTROL Social Settings]**
 
@@ -389,7 +385,6 @@ För aktiveringsresurser som ingår i en inlärningsväg ska tilldelningarna end
 >
 >Du kan bara välja resurser på samma nivå som utbildningsvägen. För en inlärningsväg som skapats i en grupp är t.ex. endast resurserna på gruppnivå tillgängliga. för en inlärningsväg som skapats på en community-webbplats finns resurserna på den webbplatsen tillgängliga för tillägg till inlärningsvägen.
 
-
 * Välj **[!UICONTROL Next]**.
 
 ### Inställningar {#settings-1}
@@ -411,7 +406,6 @@ För aktiveringsresurser som ingår i en inlärningsväg ska tilldelningarna end
 >Aktiveringsresurser som refereras från inlärningssökvägen ska inte innehålla samma uppgifter (inlärningsresurser), om det finns några.
 >
 >Om en medlem är registrerad i både en aktiveringsresurs och en utbildningsväg som refererar till den resursen, kommer deras tilldelningar att visa både den enskilda resursen och resursen i utbildningsvägen.
-
 
 ## Hantera en resurs {#managing-a-resource}
 
