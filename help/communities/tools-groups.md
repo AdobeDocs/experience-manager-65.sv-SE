@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: e9bfbbce-93fc-455c-a2f7-4ee44e63c03f
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 17088abc71bb820693259088c8a9b938a43cd9d3
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '542'
 ht-degree: 0%
@@ -32,7 +32,6 @@ När en åtgärd vidtas för att skapa en ny community-grupp väljs gruppens mal
 >[!NOTE]
 >
 >Konsolerna för att skapa [communitysajter](/help/communities/sites-console.md), [communitymallar](/help/communities/sites.md), mallar [för](/help/communities/tools-groups.md) communitygrupper [och](/help/communities/functions.md) communityfunktionerär endast avsedda att användas i författarmiljön.
-
 
 ## Konsolen Gruppmallar {#group-templates-console}
 
@@ -78,12 +77,11 @@ På panelen Grundläggande information konfigureras ett namn, en beskrivning och
 
 >[!CAUTION]
 >
->Om du arbetar med AEM 6.1 Communities FP4 eller tidigare ska du inte lägga till någon gruppfunktion i en gruppmall.
+>Om du arbetar med AEM 6.1 Communities FP4 eller tidigare ska du inte lägga till en gruppfunktion i en gruppmall.
 >
 >Funktionen för kapslade grupper är tillgänglig från och med Communities [FP1](/help/communities/communities.md#latestfeaturepack).
 >
 >Det är fortfarande inte tillåtet att lägga till en gruppfunktion som den första eller enda funktionen i en mall.
-
 
 ![Gruppmallsredigerare](assets/template-editor.png)
 
