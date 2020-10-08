@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 216cfb3e-777e-4773-afba-749debdca000
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 6be0aa7c3f6b21ad26221289a6cca2b4615ed3f4
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '994'
 ht-degree: 0%
@@ -34,7 +34,6 @@ Dokumentet beskriver:
 >
 >Anonym publicering av en kommentar stöds inte. Besökarna måste registrera sig (bli medlem) och logga in för att kunna delta.
 
-
 ### Lägga till kommentarer på en sida {#adding-comments-to-a-page}
 
 Om du vill lägga till en `Comments` komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att leta reda på
@@ -52,7 +51,6 @@ När de [nödvändiga klientbiblioteken](/help/communities/essentials-comments.m
 >[!NOTE]
 >
 >Det får bara finnas en `Comments` komponent på en sida. Observera att flera communityfunktioner redan innehåller kommentarer, t.ex. en blogg, kalender, forum, QnA och recensioner.
-
 
 ### Konfigurera kommentarer {#configuring-comments}
 
