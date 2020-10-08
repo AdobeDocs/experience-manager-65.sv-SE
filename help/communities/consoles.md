@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 5fa9ee8b-5893-4ae9-a986-bfdbb00f355f
 translation-type: tm+mt
-source-git-commit: 6be0aa7c3f6b21ad26221289a6cca2b4615ed3f4
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '343'
 ht-degree: 0%
@@ -37,7 +37,6 @@ När du har loggat in med administratörsbehörighet i redigeringsmiljön är ko
 >[!NOTE]
 >
 >I publiceringsmiljön visar en [communitywebbplats](sites-console.md) ett `Administration` menyalternativ när den inloggade medlemmen har lämplig behörighet.
-
 
 ## Global navigeringspanel {#global-navigation-panel}
 
