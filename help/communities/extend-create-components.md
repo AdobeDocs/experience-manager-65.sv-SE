@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 83c4f18a-d7d6-4090-88c7-41a9075153b5
 translation-type: tm+mt
-source-git-commit: 230c700d87d82d248b7d0bbc45c69c5c2b0e3ff8
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '590'
 ht-degree: 5%
@@ -32,7 +32,6 @@ Båda komponenterna måste installeras, särskilt om du anpassar utseendet på e
 >Endast ett kommentarssystem per webbplatssida tillåts.
 >
 >Många webbgruppsfunktioner innehåller redan ett kommentarssystem vars resourceType kan ändras för att referera till det utökade kommentarsystemet.
-
 
 ## Skapa komponenten Kommentarer {#create-the-comments-component}
 
@@ -77,7 +76,7 @@ Borttagningen av den automatiskt skapade JSP-filen beror på att HBS-standardfil
 
 ### Skapa den underordnade kommentarskomponenten {#create-the-child-comment-component}
 
-I de här instruktionerna anges **Gruppera** som `.hidden` att bara den överordnade komponenten ska inkluderas på en sida.
+I de här instruktionerna anges **Gruppera** som `.hidden` bara den överordnade komponenten ska inkluderas på en sida.
 
 Borttagningen av den automatiskt skapade JSP-filen beror på att HBS-standardfilen används i stället.
 
