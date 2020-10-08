@@ -10,24 +10,27 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 46f135de-a0bf-451d-bdcc-fb29188250aa
 translation-type: tm+mt
-source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+workflow-type: tm+mt
+source-wordcount: '562'
+ht-degree: 0%
 
 ---
 
 
 # Rekommenderade topologier för communities {#recommended-topologies-for-communities}
 
-Från och med AEM Communities 6.1 har en unik metod använts för att hantera användargenererat innehåll (UGC) som skickats in av webbplatsbesökare (medlemmar) från publiceringsmiljön.
+Från och med AEM Communities 6.1 har ett unikt tillvägagångssätt använts för att hantera användargenererat innehåll (UGC) som skickats in av webbplatsbesökare (medlemmar) från publiceringsmiljön.
 
-Den här metoden skiljer sig i grunden från hur AEM-plattformen hanterar webbplatsinnehåll som vanligtvis hanteras från författarmiljön.
+Den här metoden skiljer sig i grunden från hur den AEM plattformen hanterar webbplatsinnehåll som vanligtvis hanteras från författarmiljön.
 
-AEM-plattformen använder en nodbutik som replikerar webbplatsinnehåll från författaren till publiceringen, medan AEM Communities använder en enda gemensam butik för UGC som aldrig replikeras.
+Den AEM plattformen använder ett nodarkiv som replikerar webbplatsinnehåll från författaren till publiceringen, medan AEM Communities använder en gemensam lagringsplats för UGC som aldrig replikeras.
 
 För det vanliga UGC-arkivet måste du välja en [lagringsresursleverantör (SRP)](working-with-srp.md). Rekommenderade alternativ är:
 
 * [DSRP - Resursprovider för relativ databaslagring](dsrp.md)
 * [MSRP - lagringsresursprovider för MongoDB](msrp.md)
-* [ASRP - Adobe Storage Resource Provider](asrp.md)
+* [ASRP - Adobe lagringsresursleverantör](asrp.md)
 
 Ett annat SRP-alternativ, [JSRP - JCR Storage Resource Provider](jsrp.md), stöder inte en gemensam UGC-butik för författaren och publiceringsmiljöer med båda åtkomsten.
 
@@ -37,13 +40,12 @@ Kräver en gemensam lagringsplats i följande rekommenderade topologier.
 >
 >För AEM Communities replikeras [aldrig](working-with-srp.md#ugc-never-replicated)UGC.
 >
->När distributionen inte innehåller någon [gemensam butik](working-with-srp.md)visas bara UGC i AEM-publicerings- eller författarinstansen som den angavs för.
+>När distributionen inte innehåller någon [gemensam butik](working-with-srp.md)visas bara UGC i den AEM publicerings- eller författarinstansen som den angavs för.
 
 
 >[!NOTE]
 >
->Mer information om AEM-plattformen finns i [Rekommenderade distributioner](../../help/sites-deploying/recommended-deploys.md) och [introduktion till AEM-plattformen](../../help/sites-deploying/data-store-config.md).
-
+>Mer information om den AEM plattformen finns i [Rekommenderade distributioner](../../help/sites-deploying/recommended-deploys.md) och [Introduktion till den AEM plattformen](../../help/sites-deploying/data-store-config.md).
 
 ## För produktion {#for-production}
 
@@ -74,7 +76,7 @@ När topologin är en publiceringsanläggning är viktiga ämnen:
 |-------------|------------------------|----------------------------------|---------------------------|---------------|
 | alla | JCR | MySQL | DSRP | Ja |
 | alla | JCR | MongoDB | MSRP | Ja |
-| alla | JCR | Adobe on Demandstorage | ASRP | Ja |
+| alla | JCR | Adobe on demand-lagring | ASRP | Ja |
 
 ### JSRP {#jsrp}
 
@@ -88,7 +90,7 @@ När topologin är en publiceringsanläggning är viktiga ämnen:
 
 I icke-produktionsmiljöer är [JSRP](jsrp.md) enkelt att konfigurera en utvecklingsmiljö med en författarinstans och en publiceringsinstans.
 
-Om du väljer [ASRP](asrp.md), [DSRP](dsrp.md) eller [MSRP](msrp.md) för produktion kan du även konfigurera en liknande utvecklingsmiljö med hjälp av Adobe On-demand-lagring eller MongoDB. Se till exempel [HowTo Setup MongoDB for Demo](demo-mongo.md).
+Om du väljer [ASRP](asrp.md), [DSRP](dsrp.md) eller [MSRP](msrp.md) för produktion kan du även konfigurera en liknande utvecklingsmiljö med hjälp av Adobe on demand-lagring eller MongoDB. Se till exempel [HowTo Setup MongoDB for Demo](demo-mongo.md).
 
 ## Referenser {#references}
 
