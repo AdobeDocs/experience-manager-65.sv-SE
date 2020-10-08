@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 9222bc93-c231-4ac8-aa28-30d784a4ca3b
 translation-type: tm+mt
-source-git-commit: 5d196d1f6d5f94f2d3ef0d4461cfe38562f8ba8c
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1075'
 ht-degree: 1%
@@ -140,9 +140,6 @@ Installera schemat innan du installerar data.
 >* [JDBC-konfiguration](#configure-jdbc-connections)
 >* [SCORM-konfiguration](#configure-scorm)
 
->
-
-
 
 #### Steg 1: öppna SQL-fil {#step-open-sql-file}
 
@@ -195,9 +192,9 @@ När MySQL körs på en annan server än AEM måste servervärdnamnet anges i st
 
 * Ange följande värden:
    * **[!UICONTROL JDBC driver class]**: `com.mysql.jdbc.Driver`
-   * **URIJ **för DBC-anslutning:`jdbc:mysql://localhost:3306/aem63reporting`Ange server i stället för localhost om MySQL-servern inte är samma som &#39;this&#39; AEM server.
+   * **URIJ** för DBC-anslutning: `jdbc:mysql://localhost:3306/aem63reporting` Ange server i stället för localhost om MySQL-servern inte är samma som &#39;this&#39; AEM server.
    * **[!UICONTROL Username]**: Rotera eller ange det konfigurerade användarnamnet för MySQL-servern, om inte &#39;root&#39;.
-   * **[!UICONTROL Password]**: Avmarkera det här fältet om inget lösenord har angetts för MySQL, annars anger du det konfigurerade lösenordet för MySQL-användarnamnet.
+   * **[!UICONTROL Password]**: Rensa det här fältet om inget lösenord har angetts för MySQL, annars anger du det konfigurerade lösenordet för MySQL-användarnamnet.
    * **[!UICONTROL Datasource name]**: Namn som angetts för [MySQL-anslutningen](#new-connection-settings), till exempel &#39;enablement&#39;.
 * Välj **[!UICONTROL Save]**.
 
@@ -205,7 +202,7 @@ När MySQL körs på en annan server än AEM måste servervärdnamnet anges i st
 
 ### Tjänsten AEM Communities ScormEngine {#aem-communities-scormengine-service}
 
-OSGi-konfigurationen för tjänsten **ScormEngine för** AEM Communities konfigurerar SCORM för en aktiveringscommunitys användning av MySQL-servern.
+OSGi-konfigurationen för **AEM Communities ScormEngine-tjänsten** konfigurerar SCORM för en aktiveringscommunitys användning av MySQL-servern.
 
 Den här konfigurationen finns när [SCORM-paketet](deploy-communities.md#scorm-package) installeras.
 
@@ -229,7 +226,7 @@ När MySQL körs på en annan server än AEM måste servervärdnamnet anges i st
 * Angående följande parameter:
    * **[!UICONTROL Scorm User Password]**: REDIGERA INTE
 
-      Endast för intern användning: Den riktar sig till en särskild serviceanvändare som AEM Communities använder för att kommunicera med skormmotorn.
+      Endast för intern användning: Den är avsedd för en särskild serviceanvändare som används av AEM Communities för att kommunicera med skorm-motorn.
 * Välj **[!UICONTROL Save]**
 
 ### Adobe Granite CSRF-filter {#adobe-granite-csrf-filter}
