@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: dd0cbc05-a361-46bc-b9f1-d045f8f23890
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 046da7a00be6073cb885b4e9774c48ab474e7e6d
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1202'
 ht-degree: 0%
@@ -57,7 +57,7 @@ En känd begränsning exponerar communityinnehållet för anonyma besökare via 
 
 Följ de här stegen för att skydda communityplatsens innehåll från anonyma användare genom jcr-innehåll och json:
 
-1. Gå till https:// värdnamn i AEM Author-instansen:port/editor.html/content/site/sitename.html.
+1. På AEM Author-instansen går du till https://: port/editor.html/content/site/sitename.html.
 
    >[!NOTE]
    >
@@ -93,7 +93,7 @@ När du har loggat in som registrerad community-medlem kan du lägga märke till
    1. Skapa nya direktmeddelanden att skicka till enskilda personer och grupper.
 
 * [Alternativet Meddelanden](/help/communities/notifications.md) dirigerar dig till meddelandeavsnittet, där du kan visa dina intressanta händelser och redigera meddelandeinställningar.
-* [Administrationen](/help/communities/published-site.md#moderationlink) dirigerar dig till sidan för moderering av AEM Communities, om du har modereringsbehörighet.
+* [Administrationen](/help/communities/published-site.md#moderationlink) dirigerar dig till AEM Communities Moderation Page om du har modereringsbehörighet.
 
 ![adminscreen](assets/adminscreen.png)
 
@@ -107,9 +107,6 @@ Observera att kalendersidan är hemsidan eftersom den valda referensplatsmallen 
 >
 >* [Communities-komponenter](/help/communities/author-communities.md) (för författare)
 >* [Komponent-, funktions- och](/help/communities/essentials.md) funktionsfunktioner (för utvecklare)
-
->
-
 
 
 ### Formlänk {#forum-link}
