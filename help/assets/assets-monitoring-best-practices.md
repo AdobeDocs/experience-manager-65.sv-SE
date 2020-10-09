@@ -3,7 +3,7 @@ title: Bästa tillvägagångssätt för [!DNL Assets] övervakning av driftsätt
 description: Bästa tillvägagångssätt för att övervaka miljön och prestanda för [!DNL Adobe Experience Manager] din distribution efter att den har distribuerats.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 117208c634613559bb13556e12f094add70006e2
 workflow-type: tm+mt
 source-wordcount: '1671'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Vanligtvis [!DNL Experience Manager Assets] kan du övervaka på två sätt: liv
 
 Du bör utföra direktövervakning under prestandatestningsfasen av din utveckling eller under situationer med hög belastning för att förstå prestandaegenskaperna i din miljö. Vanligtvis bör direktövervakning utföras med en uppsättning verktyg. Här är några rekommendationer:
 
-* [Visual VM](https://visualvm.java.net/): Med Visual VM kan du visa detaljerad Java VM-information, inklusive processoranvändning och Java-minnesanvändning. Dessutom kan du sampla och utvärdera kod som körs i en distribution.
+* [Visual VM](https://visualvm.github.io/): Med Visual VM kan du visa detaljerad Java VM-information, inklusive processoranvändning och Java-minnesanvändning. Dessutom kan du sampla och utvärdera kod som körs i en distribution.
 * [Överkant](https://man7.org/linux/man-pages/man1/top.1.html): Det övre är ett Linux-kommando som öppnar en kontrollpanel som visar användningsstatistik, inklusive processor-, minnes- och IO-användning. Den ger en översikt på hög nivå över vad som händer i en instans.
 * [Htop](https://hisham.hm/htop/): Htop är ett interaktivt processvisningsprogram. Den ger detaljerad processor- och minnesanvändning utöver vad Top kan tillhandahålla. Htop kan installeras på de flesta Linux-system med `yum install htop` eller `apt-get install htop`.
 
