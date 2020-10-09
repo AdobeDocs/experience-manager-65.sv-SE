@@ -3,7 +3,7 @@ title: Bearbeta resurser med mediehanterare och arbetsflöden
 description: Lär dig mer om mediehanterarna och hur du använder arbetsflöden för att utföra uppgifter i dina digitala resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 117208c634613559bb13556e12f094add70006e2
 workflow-type: tm+mt
 source-wordcount: '2037'
 ht-degree: 1%
@@ -446,7 +446,7 @@ Följande konverteringar kan köras och lagras automatiskt i [!DNL Assets]:
 
 * EPS- och AI-omvandling med [ImageMagick](https://www.imagemagick.org/script/index.php) och [Ghostscript](https://www.ghostscript.com/).
 * FLV-videotranskodning med [FFmpeg](https://ffmpeg.org/).
-* MP3-kodning med [LAME](http://lame.sourceforge.net/).
+* MP3-kodning med [LAME](https://lame.sourceforge.io/).
 * Ljudbearbetning med [SOX](http://sox.sourceforge.net/).
 
 >[!NOTE]
