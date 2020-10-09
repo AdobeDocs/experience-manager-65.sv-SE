@@ -4,9 +4,9 @@ description: Lär dig resurshanteringsåtgärder som överföring, hämtning, re
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 179af622d9655d52f3d3462f77baaf3dc9310fd8
+source-git-commit: f9f745369ba0fe242dea1e5a5e5af0b8263b1ec0
 workflow-type: tm+mt
-source-wordcount: '9382'
+source-wordcount: '9334'
 ht-degree: 3%
 
 ---
@@ -508,9 +508,6 @@ När du flyttar resurser genom att dra dem öppnas inte [!UICONTROL Move Asset] 
 
 1. Klicka på resursen för att öppna sidan.
 1. I Experience Manager väljer du **[!UICONTROL Renditions]** i listan.
-
-   ![Vänster räl för att öppna menyn och välj alternativet Återgivning](assets/renditions_menu.png)
-
 1. På **[!UICONTROL Renditions]** panelen visas en lista med återgivningar som genererats för resursen.
 
    ![Panelen Återgivningar på sidan Resursdetaljer](assets/renditions_panel.png)
@@ -666,10 +663,6 @@ Du kan visa, navigera genom och välja resurser med någon av de tillgängliga v
 
 I listvyn och kolumnvyn visas alternativet när du håller pekaren över miniatyrbilden för resursen. **[!UICONTROL Select]**
 
-![Markera resurser i listvyn](assets/select_quick_in_listview.png)
-
-![Markera resurser i kolumnvyn](assets/select_quick_in_columnview.png)
-
 I kortvyn visas **[!UICONTROL Select]** alternativet som en snabbåtgärd.
 
 ![Välj snabbåtgärd i kortvyn](assets/select_quick_action.png)
@@ -690,9 +683,7 @@ Med redigeringsverktygen i [!DNL Assets] gränssnittet kan du utföra små redig
 
    * Markera resursen och klicka sedan **[!UICONTROL Edit]** i verktygsfältet.
    * Klicka på **[!UICONTROL Edit]** det alternativ som visas på en resurs i kortvyn.
-   * Klicka på **[!UICONTROL Edit]** i verktygsfältet.
-
-   ![Alternativet Redigera i verktygsfältet](assets/do-not-localize/edit_icon.png)
+   * Klicka **[!UICONTROL Edit]** på ![redigeringsalternativet i verktygsfältet](assets/do-not-localize/edit_icon.png).
 
 1. Beskär bilden genom att klicka på **[!UICONTROL Crop]** Alternativ för att beskära en bild ![](assets/do-not-localize/crop.png).
 
@@ -751,9 +742,7 @@ Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Vi
 1. Klicka på ett av följande **[!UICONTROL Annotate]** alternativ:
 
    * [Snabbåtgärder](/help/assets/managing-assets-touch-ui.md#quick-actions)
-   * Från verktygsfältet när du har valt resursen eller navigerat till resurssidan
-
-   ![Alternativet Anteckningar](assets/annotate-option.png)
+   * Från verktygsfältet när du har valt resursen eller navigerat till resurssidan.
 
 1. Lägg till en kommentar i rutan **[!UICONTROL Comment]** längst ned på tidslinjen. Du kan också markera ett område i bilden och lägga till en anteckning i dialogrutan **[!UICONTROL Add Annotation]**.
 
@@ -768,8 +757,6 @@ Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Vi
    >För användare som inte är administratörer visas förslagen bara om användaren har läsbehörighet på `/home` sökvägen CRXDE.
 
 1. När du har lagt till anteckningen klickar du **[!UICONTROL Add]** för att spara den. Ett meddelande om anteckningen skickas till Aaron.
-
-   ![Lägg till knapp för att spara en anteckning](assets/annotation-add.png)
 
    >[!NOTE]
    >
@@ -799,12 +786,7 @@ Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Vi
 1. Om du vill visa sparade anteckningar för en resurs går du till resursens plats och öppnar resurssidan för resursen.
 
 1. In the Experience Manager interface, choose **[!UICONTROL Timeline]**.
-
-   ![Alternativet Tidslinje finns i Experience Manager](assets/view-timeline.png)
-
 1. I listan **[!UICONTROL Show All]** på tidslinjen väljer du **[!UICONTROL Comments]** för att filtrera resultatet baserat på kommentarer.
-
-   ![Visa listan Alla i tidslinjen](assets/timeline-show-all-option.png)
 
    Klicka på en kommentar på **[!UICONTROL Timeline]** panelen för att visa motsvarande anteckning i bilden.
 
@@ -833,8 +815,6 @@ Om du vill skriva ut anteckningarna och granskningsstatusen klickar du på **[!U
    Om du bara vill skriva ut granskningsstatusen markerar du den på tidslinjen.
 
 1. Klicka på **[!UICONTROL Print]** i verktygsfältet.
-
-   ![Utskriftsalternativ i verktygsfältet](assets/do-not-localize/print.png)
 
 1. I dialogrutan Skriv ut väljer du den position du vill att anteckningarna/granskningsstatusen ska visas i PDF-filen. Om du till exempel vill att anteckningarna/statusen ska skrivas ut längst upp till höger på sidan som innehåller den utskrivna bilden använder du inställningen **Uppifrån vänster** . Det är markerat som standard.
 
@@ -923,8 +903,6 @@ Du kan även aktivera automatisk versionshantering via ett arbetsflöde. När du
 
    * Klicka **[!UICONTROL Show All]** i [!UICONTROL Timeline].
    * Klicka på **[!UICONTROL Versions]**. Alla versioner som skapas för en resurs visas i den vänstra sidofältet.
-
-      ![ Välj alternativet Versioner på tidslinjen](assets/versions_option.png)
 
    * Välj en specifik version av resursen och klicka på **[!UICONTROL Preview Version]**.
 
