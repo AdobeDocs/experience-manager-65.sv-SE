@@ -3,10 +3,10 @@ title: Relaterade tillgångar
 description: Lär dig hur du relaterar digitala resurser som delar vissa gemensamma attribut. Skapa också källbaserade relationer mellan digitala resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: f9f745369ba0fe242dea1e5a5e5af0b8263b1ec0
 workflow-type: tm+mt
-source-wordcount: '611'
-ht-degree: 3%
+source-wordcount: '607'
+ht-degree: 2%
 
 ---
 
@@ -44,8 +44,6 @@ Med den här funktionen kan du dela en lågupplöst PDF- eller JPG-fil med lever
    * Om du vill relatera en härledd fil väljer du **[!UICONTROL Derived]** i listan.
    * Om du vill skapa en dubbelriktad relation mellan resurserna väljer du **[!UICONTROL Others]** i listan.
 
-   ![chlimage_1-276](assets/chlimage_1-276.png)
-
 1. Navigera från **[!UICONTROL Select Asset]** skärmen till platsen för resursen som du vill relatera och markera den.
 
    ![chlimage_1-277](assets/chlimage_1-277.png)
@@ -55,9 +53,7 @@ Med den här funktionen kan du dela en lågupplöst PDF- eller JPG-fil med lever
 
    ![chlimage_1-278](assets/chlimage_1-278.png)
 
-1. Om du vill ta bort kopplingen för en resurs klickar du på **[!UICONTROL Unrelate]** i verktygsfältet.
-
-   ![ej hänförliga tillgångar](assets/do-not-localize/link-unrelate-icon.png)
+1. Om du vill ta bort kopplingen för en resurs klickar du på **[!UICONTROL Unrelate]** Ta bort ![koppling för resurser](assets/do-not-localize/link-unrelate-icon.png) i verktygsfältet.
 
 1. Markera de resurser som du vill ta bort kopplingen för i **[!UICONTROL Remove Relations]** dialogrutan och klicka på **[!UICONTROL Unrelate]**.
 
@@ -81,8 +77,6 @@ Om källfilen är relaterad till en annan resurs hämtar [!DNL Experience Manage
 
 1. Öppna översättningsmappen från [!UICONTROL Projects] sidan.
 
-   ![chlimage_1-283](assets/chlimage_1-283.png)
-
 1. Klicka på projektpanelen för att öppna informationssidan.
 
    ![chlimage_1-284](assets/chlimage_1-284.png)
@@ -97,8 +91,4 @@ Om källfilen är relaterad till en annan resurs hämtar [!DNL Experience Manage
 
 1. Om du vill kontrollera om de resurser som är relaterade till källan har översatts klickar du på källresursen.
 
-   ![chlimage_1-287](assets/chlimage_1-287.png)
-
 1. Markera resursen som är relaterad till källan och klicka sedan på **[!UICONTROL Reveal in Assets]**. Den översatta relaterade resursen visas.
-
-   ![chlimage_1-288](assets/chlimage_1-288.png)
