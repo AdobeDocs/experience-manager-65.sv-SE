@@ -3,10 +3,10 @@ title: Digital Rights Management tillgångar
 description: Lär dig hur du hanterar förfallotillstånd för mediefiler och information för licensierade mediefiler i [!DNL Experience Manager].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 97d3edf155ddeabf3f39139c9079621c3627820b
 workflow-type: tm+mt
-source-wordcount: '1347'
-ht-degree: 7%
+source-wordcount: '1322'
+ht-degree: 6%
 
 ---
 
@@ -20,10 +20,6 @@ Digitala resurser är ofta kopplade till en licens som anger användningsvillkor
 Att mediefiler förfaller är ett effektivt sätt att tillämpa licenskrav för mediefiler. Det säkerställer att den publicerade resursen inte publiceras när den upphör att gälla, vilket förhindrar eventuella brott mot licensen. En användare utan administratörsbehörighet kan inte redigera, kopiera, flytta, publicera och hämta en utgången resurs.
 
 Du kan visa förfallostatusen för en resurs i [!DNL Assets] konsolen i både kort- och listvyn.
-
-![utgången_flagga_kort](assets/expired_flag_card.png)
-
-*Bild: I kortvyn anger en flagga på kortet att resursen har gått ut.*
 
 ![utgången_flagga_lista](assets/expired_flag_list.png)
 
@@ -40,17 +36,11 @@ Du kan visa förfallostatusen för en resurs i den vänstra [!UICONTROL Timeline
 Du kan även visa förfallostatusen för resurser på **[!UICONTROL References]** spåret. Den hanterar förfallostatus och relationer mellan sammansatta resurser och refererade delresurser, samlingar och projekt.
 
 1. Navigera till resursen som du vill visa referenser till webbsidor och sammansatta resurser för.
-1. Markera resursen och klicka på [!DNL Experience Manager] logotypen.
-
-1. Välj **[!UICONTROL References]** på menyn.
-
-   ![chlimage_1-146](assets/chlimage_1-146.png)
-
-   För förfallna mediefiler visas förfallostatusen **[!UICONTROL Asset is Expired]** högst upp på referenslinjen.
+1. Markera resursen och öppna **[!UICONTROL References]** i den vänstra listen. För förfallna mediefiler visas [!UICONTROL References] förfallostatusen **[!UICONTROL Asset is Expired]** högst upp.
 
    ![chlimage_1-147](assets/chlimage_1-147.png)
 
-   Om resursen har upphört att gälla visas statusen på referenslinjen **[!UICONTROL Asset has Expired Sub-Assets]**.
+   Om resursen har upphört att gälla visas status för delresurserna på [!UICONTROL References] rälen **[!UICONTROL Asset has Expired Sub-Assets]**.
 
    ![chlimage_1-148](assets/chlimage_1-148.png)
 
@@ -61,17 +51,11 @@ Du kan söka efter utgångna resurser, inklusive underresurser som gått ut, på
 1. I [!DNL Assets] konsolen klickar du på **[!UICONTROL Search]** i verktygsfältet för att visa rutan Omnissearch.
 
 1. Tryck på Retur när markören är i rutan Sök så visas sökresultatsidan.
-
-   ![chlimage_1-150](assets/chlimage_1-150.png)
-
-1. Klicka på [!DNL Experience Manager] logotypen för att visa sökpanelen.
-1. Click the **[!UICONTROL Expiry Status]** option to expand it.
+1. Öppna sökpanelen i den vänstra listen. Click the **[!UICONTROL Expiry Status]** option to expand it.
 
    ![chlimage_1-152](assets/chlimage_1-152.png)
 
-1. Choose **[!UICONTROL Expired]**. De förfallna resurserna visas i sökresultaten.
-
-   ![chlimage_1-153](assets/chlimage_1-153.png)
+1. Choose **[!UICONTROL Expired]**. Endast utgångna resurser visas efter filtrering av sökresultaten.
 
 När du väljer **[!UICONTROL Expired]** [!DNL Assets] alternativet visas bara de resurser och underresurser som har upphört att gälla och som sammansatta resurser refererar till. De sammansatta resurserna som refererar till utgångna delresurser visas inte omedelbart efter att delresurserna har upphört att gälla. I stället visas de när [!DNL Experience Manager] upptäcker att de refererar till utgångna delresurser nästa gång som schemaläggaren körs.
 
@@ -84,9 +68,7 @@ To enable the [!DNL Assets] console to display the referencing compound assets a
 1. Öppna [!DNL Experience Manager] Configuration Manager.
 1. Choose **[!UICONTROL Adobe CQ DAM Expiry Notification]**. Som standard **[!UICONTROL Time based Scheduler]** markeras, vilket innebär att ett jobb schemaläggs för att kontrollera om en resurs har upphört att gälla eller inte. När jobbet har slutförts visas resurser som har upphört att gälla och refererade resurser som utgångna i sökresultaten.
 
-   ![chlimage_1-154](assets/chlimage_1-154.png)
-
-1. Om du vill köra jobbet regelbundet avmarkerar du fältet **[!UICONTROL Time Based Scheduler Rule]** och ändrar tiden i sekunder i fältet **[!UICONTROL Periodic Scheduler]**. Exempeluttrycket ”0 0 0 &amp;ast; &amp;ast; ?” utlöser till exempel jobbet kl. 00.
+1. Om du vill köra jobbet regelbundet avmarkerar du fältet **[!UICONTROL Time Based Scheduler Rule]** och ändrar tiden i sekunder i fältet **[!UICONTROL Periodic Scheduler]**. Exempeluttrycket `0 0 0 &ast; &ast; ?` utlöser till exempel jobbet vid 00 timmar.
 1. Välj **[!UICONTROL send email]** att ta emot e-postmeddelanden när en mediefil förfaller.
 
    >[!NOTE]
@@ -102,9 +84,6 @@ To enable the [!DNL Assets] console to display the referencing compound assets a
 Konsolen kan [!DNL Assets] visa olika lägen för resurser. Beroende på det aktuella tillståndet för en viss resurs visas en etikett som beskriver dess tillstånd, till exempel Utgången, Publicerad, Godkänd, Avvisad och så vidare, i kortvyn.
 
 1. Välj en resurs i [!DNL Assets] användargränssnittet.
-
-   ![chlimage_1-155](assets/chlimage_1-155.png)
-
 1. Klicka på **[!UICONTROL Publish]** i verktygsfältet. Om du inte ser **Publicera** i verktygsfältet klickar du **[!UICONTROL More]** i verktygsfältet och letar upp **[!UICONTROL Publish]** alternativet ![för](assets/do-not-localize/publish-globe.png) publicering.
 1. Välj **[!UICONTROL Publish]** på menyn och stäng sedan bekräftelsedialogrutan.
 1. Avsluta markeringsläget. Publiceringsstatusen för resursen visas längst ned på miniatyrbilden av resursen i kortvyn. I listvyn visar kolumnen Publicerad den tidpunkt då resursen publicerades.
