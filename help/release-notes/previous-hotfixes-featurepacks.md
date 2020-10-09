@@ -3,9 +3,9 @@ title: '[!DNL Adobe Experience Manager] 6.5 Versionsinformation om tidigare Serv
 description: Versionsinformation för [!DNL Adobe Experience Manager] 6.5 Service Packs.
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: 359eb60c0ba3845d7aa0ca58488aa945a9f45aea
+source-git-commit: 117208c634613559bb13556e12f094add70006e2
 workflow-type: tm+mt
-source-wordcount: '11372'
+source-wordcount: '11375'
 ht-degree: 0%
 
 ---
@@ -1060,7 +1060,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 * Ett problem med Scene7 videospelare när den expanderar till helskärm. Programfix för CQ-4266700
 * ZoomVerticalViewer: Panoreringsknappar ska inte visas om en enda bildresurs används. Programfix för CQ-4264795
 * Om du tar bort en underordnad nod i live-kopian bör liveRelationship frigöras. Programfix för CQ-4270395
-* Metadataschemat innehåller bara objekt från den globala konfigurationen och saknar dem från den aktiva klientorganisationen. URL-värdet för formPath återställs till standard även om det ändras. NPR-29944: Programfix för CQ-4262898
+* Metadataschemat innehåller bara objekt från den globala konfigurationen och saknar dem från den aktiva klientorganisationen. URL-värdet för formPath återställs till standard även om det ändras. NPR-29945: Programfix för CQ-4262898
 * Publicera bildförinställningar som [!DNL Brand Portal] misslyckas med 500-felkod. NPR-29510: Programfix för CQ-4268659
 
 ### Sites
@@ -1259,7 +1259,7 @@ De viktigaste högdagrarna för [!DNL Experience Manager Forms] 6.5.1.0 är:
 
 #### Resurser - inkluderade
 
-* Stöd för Multi-Site Manager har aktiverats för [!DNL Experience Manager Assets]. Mer information finns i [Återanvända resurser med hjälp av MSM för Experience Manager Assets](https://helpx.adobe.com/experience-manager/6-5/help/assets/reuse-assets-using-msm.html). NPR-29199: Programfix för CQ-4259922
+* Stöd för Multi-Site Manager har aktiverats för [!DNL Experience Manager Assets]. Mer information finns i [Återanvända resurser med hjälp av MSM för Experience Manager Assets](https://docs.adobe.com/content/help/en/experience-manager-65/assets/using/reuse-assets-using-msm.html). NPR-29199: Programfix för CQ-4259922
 
 #### Webbplatser - ingår
 
