@@ -70,6 +70,7 @@ På författaren, för att komma åt lagringskonsolen
       >[!NOTE]
       >
       >Standardlagringskonfigurationen lagras nu i conf-sökvägen(`/conf/global/settings/community/srpc/defaultconfiguration`) i stället för etc-sökvägen (`/etc/socialconfig/srpc/defaultconfiguration`). Du rekommenderas att följa [migreringsstegen](#zerodt-migration-steps) för att få standardinställningarna att fungera som förväntat.
+
    ![dsrp-config](assets/dsrp-config.png)
 
 * Välj **[!UICONTROL Database Storage Resource Provider (DSRP)]**

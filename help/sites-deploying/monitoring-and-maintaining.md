@@ -62,7 +62,8 @@ Ofta utförs en fullständig säkerhetskopiering med regelbundna intervall (t.ex
 >Utan detta kan säkerhetskopieringen vara oanvändbar (värsta scenariot).
 >
 >[!NOTE]
-Mer information om säkerhetskopieringsprestanda finns i avsnittet [Säkerhetskopieringsprestanda](/help/sites-deploying/configuring-performance.md#backup-performance) .
+>
+>Mer information om säkerhetskopieringsprestanda finns i avsnittet [Säkerhetskopieringsprestanda](/help/sites-deploying/configuring-performance.md#backup-performance) .
 
 ### Säkerhetskopiera programvaruinstallationen {#backing-up-your-software-installation}
 
@@ -74,13 +75,16 @@ Om du vill göra det måste du [säkerhetskopiera hela databasen](#backing-up-yo
 1. Säkerhetskopiera hela `<cq-installation-dir>` filen från filsystemet.
 
 >[!CAUTION]
-Om du använder en programserver från en annan tillverkare kan ytterligare mappar finnas på en annan plats och behöver också säkerhetskopieras. Information om hur du installerar programservrar finns i [Installera AEM med en programserver](/help/sites-deploying/application-server-install.md) . [](/content/docs/en/aem/6-3/deploy/installing.md#installing adobe experience manager with an application server)
+>
+>Om du använder en programserver från en annan tillverkare kan ytterligare mappar finnas på en annan plats och behöver också säkerhetskopieras. Information om hur du installerar programservrar finns i [Installera AEM med en programserver](/help/sites-deploying/application-server-install.md) . [](/content/docs/en/aem/6-3/deploy/installing.md#installing adobe experience manager with an application server)
 
 >[!CAUTION]
-Inkrementell säkerhetskopiering av fillagringen stöds. När du använder stegvis säkerhetskopiering för andra komponenter (till exempel Lucene-index) måste du se till att borttagna filer också markeras som borttagna i säkerhetskopian.
+>
+>Inkrementell säkerhetskopiering av fillagringen stöds. När du använder stegvis säkerhetskopiering för andra komponenter (till exempel Lucene-index) måste du se till att borttagna filer också markeras som borttagna i säkerhetskopian.
 
 >[!NOTE]
-Diskspegling kan också användas som en säkerhetskopieringsmekanism.
+>
+>Diskspegling kan också användas som en säkerhetskopieringsmekanism.
 
 ### Säkerhetskopiera databasen {#backing-up-your-repository}
 
@@ -132,7 +136,8 @@ Så här rensar du versioner av en webbplats:
 1. Klicka på **Rensa** för att starta processen.
 
 >[!CAUTION]
-Det går inte att återställa rensade noder utan att återställa databasen. Du bör ta hand om konfigurationen, så vi rekommenderar att du alltid utför en torr körning innan du tömmer den.
+>
+>Det går inte att återställa rensade noder utan att återställa databasen. Du bör ta hand om konfigurationen, så vi rekommenderar att du alltid utför en torr körning innan du tömmer den.
 
 ### Analyserar konsolen {#analyzing-the-console}
 
@@ -180,7 +185,8 @@ Rotation av loggfiler avser den process som begränsar filens tillväxt genom at
 * Tidigare loggfiler tas inte bort, så det är ditt ansvar att regelbundet rensa gamla loggfiler för att begränsa diskanvändningen.
 
 >[!NOTE]
-Om du uppgraderar din AEM-installation bör du tänka på att alla befintliga loggfiler som inte längre används av AEM finns kvar på disken. Du kan ta bort dem utan risk. Alla nya loggposter skrivs i de nya loggfilerna.
+>
+>Om du uppgraderar din AEM-installation bör du tänka på att alla befintliga loggfiler som inte längre används av AEM finns kvar på disken. Du kan ta bort dem utan risk. Alla nya loggposter skrivs i de nya loggfilerna.
 
 ### Hitta loggfilerna {#finding-the-log-files}
 
@@ -223,7 +229,8 @@ Tillhandahåller en logg över alla uppgraderingsåtgärder som körs från
 Information om revideringsjournaler.
 
 >[!NOTE]
-ImageServer- och s7access-loggarna ingår inte i **Download Full **paketet som genereras från sidan **system/console/status-Bundlelist **. Om du har [!DNL Dynamic Media] problem med supporten kan du av supportskäl även bifoga loggarna för ImageServer och s7access när du kontaktar kundsupport.
+>
+>ImageServer- och s7access-loggarna ingår inte i **Download Full **paketet som genereras från sidan **system/console/status-Bundlelist **. Om du har [!DNL Dynamic Media] problem med supporten kan du av supportskäl även bifoga loggarna för ImageServer och s7access när du kontaktar kundsupport.
 
 ### Aktivera felsökningsloggnivån {#activating-the-debug-log-level}
 
@@ -232,7 +239,8 @@ Standardloggnivån ([konfiguration](/help/sites-deploying/osgi-configuration-set
 Om du vill aktivera felsökningsloggnivån för en loggare anger du egenskapen `org.apache.sling.commons.log.level` till felsökning i databasen. Exempel: på `/libs/sling/config/org.apache.sling.commons.log.LogManager` för att konfigurera [global Apache Sling-loggning](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingconfiguration).
 
 >[!CAUTION]
-Lämna inte loggen på felsökningsloggnivån längre än nödvändigt eftersom den genererar många loggposter och förbrukar därmed resurser.
+>
+>Lämna inte loggen på felsökningsloggnivån längre än nödvändigt eftersom den genererar många loggposter och förbrukar därmed resurser.
 
 En rad i felsökningsfilen börjar oftast med DEBUG och anger sedan loggnivån, installationsåtgärden och loggmeddelandet. Till exempel:
 
@@ -251,7 +259,8 @@ Loggnivåerna är följande:
 ### Skapa en anpassad loggfil {#create-a-custom-log-file}
 
 >[!NOTE]
-När du arbetar med Adobe Experience Manager finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Mer information och rekommendationer finns i [Konfigurera OSGi](/help/sites-deploying/configuring-osgi.md) .
+>
+>När du arbetar med Adobe Experience Manager finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Mer information och rekommendationer finns i [Konfigurera OSGi](/help/sites-deploying/configuring-osgi.md) .
 
 I vissa fall kanske du vill skapa en anpassad loggfil med en annan loggnivå. Du kan göra detta i databasen genom att:
 
@@ -266,7 +275,8 @@ I vissa fall kanske du vill skapa en anpassad loggfil med en annan loggnivå. Du
 
    * Typ: `sling:OsgiConfig`
    >[!NOTE]
-   Även om det inte är ett tekniskt krav är det tillrådligt att göra `<*identifier*>` unikt.
+   >
+   >Även om det inte är ett tekniskt krav är det tillrådligt att göra `<*identifier*>` unikt.
 
 1. Ange följande egenskaper för den här noden:
 
@@ -301,33 +311,38 @@ I vissa fall kanske du vill skapa en anpassad loggfil med en annan loggnivå. Du
 
          `{0,date,dd.MM.yyyy HH:mm:ss.SSS} *{4}* [{2}] {3} {5}`
    >[!NOTE]
-   `org.apache.sling.commons.log.pattern` stöder upp till sex argument.
+   >
+   >`org.apache.sling.commons.log.pattern` stöder upp till sex argument.
 
    >{0}{1}{2} the time stamp of type `java.util.Date`{1} the log marker{3} the name of the current thread{4} the log level{5} the log message
 
    >Om logganropet innehåller en `Throwable` stackspårning läggs den till i meddelandet.
 
    >[!CAUTION]
-   org.apache.sling.Commons.log.names måste ha ett värde.
+   >
+   >org.apache.sling.Commons.log.names måste ha ett värde.
 
    >[!NOTE]
-   Loggskrivarsökvägarna är relativa till `crx-quickstart` platsen.
-   Därför har en loggfil angetts som:
-   `logs/thelog.log`
+   >
+   >Loggskrivarsökvägarna är relativa till `crx-quickstart` platsen.
+   >Därför har en loggfil angetts som:
+   >`logs/thelog.log`
 
    >skriver till:
-   `` ` ` `<*cq-installation-dir*>/``crx-quickstart/logs/thelog.log`.
-   Och en loggfil har angetts som:
-   `../logs/thelog.log`
+   >`` ` ` `<*cq-installation-dir*>/``crx-quickstart/logs/thelog.log`.
+   >Och en loggfil har angetts som:
+   >`../logs/thelog.log`
 
    >skriver till en katalog:
-   ` <*cq-installation-dir*>/logs/`
+   >` <*cq-installation-dir*>/logs/`
+
 &quot;(dvs. bredvid ` `&lt;*cq-installation-dir*>/`crx-quickstart/`)
 
 1. Det här steget är bara nödvändigt när ett nytt skrivprogram krävs (dvs. med en konfiguration som inte är densamma som standardskrivaren).
 
    >[!CAUTION]
-   En ny loggningsskrivarkonfiguration krävs bara när den befintliga standardinställningen inte är lämplig.
+   >
+   >En ny loggningsskrivarkonfiguration krävs bara när den befintliga standardinställningen inte är lämplig.
 
    >Om inget explicit skrivprogram är konfigurerat genereras automatiskt ett implicit skrivprogram baserat på standardvärdet.
 
@@ -339,7 +354,8 @@ I vissa fall kanske du vill skapa en anpassad loggfil med en annan loggnivå. Du
 
    * Typ: `sling:OsgiConfig`
    >[!NOTE]
-   Även om det inte är ett tekniskt krav är det tillrådligt att göra `<*identifier*>` unikt.
+   >
+   >Även om det inte är ett tekniskt krav är det tillrådligt att göra `<*identifier*>` unikt.
 
    Ange följande egenskaper för den här noden:
 
@@ -365,9 +381,10 @@ I vissa fall kanske du vill skapa en anpassad loggfil med en annan loggnivå. Du
 
          Värde: Ange vad som krävs för att kontrollera filens rotation efter storlek/datum. till exempel `'.'yyyy-MM-dd`
    >[!NOTE]
-   `org.apache.sling.commons.log.file.size` styr rotationen av loggfilen genom att ange antingen:
-   * maximal filstorlek
-   * ett tids-/datumschema
+   >
+   >`org.apache.sling.commons.log.file.size` styr rotationen av loggfilen genom att ange antingen:
+   >* maximal filstorlek
+   >* ett tids-/datumschema
 
    för att ange när en ny fil ska skapas (och den befintliga filen får ett nytt namn enligt namnmönstret).
    * En storleksgräns kan anges med ett tal. Om ingen storleksindikator anges används detta som antal byte, eller så kan du lägga till en av storleksindikatorerna - `KB`, `MB`eller `GB` (versaler ignoreras).
@@ -455,10 +472,11 @@ Så här övervakar du en replikeringsagent:
    * **Tvinga Försök igen** för alla köobjekt om det behövs.
 
    >[!CAUTION]
-   Använd inte länken Testa anslutning för den omvända replikeringsutkorgen på en publiceringsinstans.
-   Om ett replikeringstest utförs för en Utkorgskö kommer alla objekt som är äldre än testreplikeringen att bearbetas på nytt med varje omvänd replikering.
-   Om sådana objekt redan finns i en kö kan de hittas med följande XPath JCR-fråga och bör tas bort.
-   `/jcr:root/var/replication/outbox//*[@cq:repActionType='TEST']`
+   >
+   >Använd inte länken Testa anslutning för den omvända replikeringsutkorgen på en publiceringsinstans.
+   >Om ett replikeringstest utförs för en Utkorgskö kommer alla objekt som är äldre än testreplikeringen att bearbetas på nytt med varje omvänd replikering.
+   >Om sådana objekt redan finns i en kö kan de hittas med följande XPath JCR-fråga och bör tas bort.
+   >`/jcr:root/var/replication/outbox//*[@cq:repActionType='TEST']`
 
 Även här kan du utveckla en lösning för att identifiera alla replikeringsagenter (som finns under `/etc/replication/author` eller `/etc/replication/publish`) och sedan kontrollera status för agenten (, `enabled`) och den underliggande kön ( `disabled`, `active`, `idle``blocked`).
 
@@ -469,7 +487,8 @@ Så här övervakar du en replikeringsagent:
 Metoder som används för att samla in information för optimering kan också användas för kontinuerlig övervakning.
 
 >[!NOTE]
-Specifika [konfigurationer som är tillgängliga för att förbättra prestanda](/help/sites-deploying/configuring-performance.md#configuring-for-performance) kan också kontrolleras.
+>
+>Specifika [konfigurationer som är tillgängliga för att förbättra prestanda](/help/sites-deploying/configuring-performance.md#configuring-for-performance) kan också kontrolleras.
 
 Nedan visas vanliga prestandaproblem som uppstår, tillsammans med förslag på hur du kan hitta och motverka dem.
 
@@ -854,7 +873,8 @@ Verktygskommandot är `jvisualvm` tillgängligt sedan JDK 1.6. När du har insta
 1. Starta din AEM-instans.
 
    >[!NOTE]
-   Om du använder Java 5 kan du lägga till argumentet på den Java-kommandorad som startar JVM:en. `-Dcom.sun.management.jmxremote` JMX är aktiverat som standard med Java 6.
+   >
+   >Om du använder Java 5 kan du lägga till argumentet på den Java-kommandorad som startar JVM:en. `-Dcom.sun.management.jmxremote` JMX är aktiverat som standard med Java 6.
 
 1. Kör antingen:
 
@@ -1018,11 +1038,12 @@ Upprepa proceduren ovan på din publiceringsinstans.
 Här följer en lista med förslag på vad du ska kontrollera om du får vissa prestandaproblem. Listan är tyvärr inte helt heltäckande.
 
 >[!NOTE]
-Se även följande artiklar för mer information:
-* [Tråddumpar](https://helpx.adobe.com/experience-manager/kb/TakeThreadDump.html)
-* [Analysera minnesproblem](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html)
-* [Analysera med inbyggd profilerare](https://helpx.adobe.com/experience-manager/kb/AnalyzeUsingBuiltInProfiler.html)
-* [Analysera långsamma och blockerade processer](https://helpx.adobe.com/experience-manager/kb/AnalyzeSlowAndBlockedProcesses.html)
+>
+>Se även följande artiklar för mer information:
+>* [Tråddumpar](https://helpx.adobe.com/experience-manager/kb/TakeThreadDump.html)
+>* [Analysera minnesproblem](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html)
+>* [Analysera med inbyggd profilerare](https://helpx.adobe.com/experience-manager/kb/AnalyzeUsingBuiltInProfiler.html)
+>* [Analysera långsamma och blockerade processer](https://helpx.adobe.com/experience-manager/kb/AnalyzeSlowAndBlockedProcesses.html)
 
 
 
@@ -1115,5 +1136,6 @@ Eller JConsole:
 Detta hjälper dig att se hur mycket minne som används, vilka GC-algoritmer som används, hur lång tid det tar att köra dem och vilken effekt detta har på programmets prestanda. Utan detta är finjustering bara &quot;slumpmässigt virvlande knoppar&quot;.
 
 >[!NOTE]
-För Oracles virtuella dator finns även information på:
-[https://docs.oracle.com/javase/7/docs/technotes/guides/vm/server-class.html](https://docs.oracle.com/javase/7/docs/technotes/guides/vm/server-class.html)
+>
+>För Oracles virtuella dator finns även information på:
+>[https://docs.oracle.com/javase/7/docs/technotes/guides/vm/server-class.html](https://docs.oracle.com/javase/7/docs/technotes/guides/vm/server-class.html)
