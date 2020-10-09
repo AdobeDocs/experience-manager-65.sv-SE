@@ -8,9 +8,9 @@ contentOwner: jsyal
 discoiquuid: a3bb5695-6593-413d-9c2f-4c164e663b15
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1207cd54d9d605b7fbf606393cd33b5c19b603f4
+source-git-commit: 117208c634613559bb13556e12f094add70006e2
 workflow-type: tm+mt
-source-wordcount: '1354'
+source-wordcount: '1356'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ När det binära läget är aktiverat innehåller de distribuerade innehållspak
 #### Hur aktiverar jag binär distribution? {#how-do-i-enable-binary-less-distribution}
 
 Om du vill aktivera binär distribution distribuerar du med ett delat blobarkiv.
-Kontrollera `useBinaryReferences` egenskapen i OSGI-konfigurationen med det fabriks-PID ( `org.apache.sling.distribution.serialization.impl.vlt.VaultDistributionPackageBuilderFactory`*)*som din agent använder.
+Kontrollera `useBinaryReferences` egenskapen i OSGI-konfigurationen med det fabriks-PID ( `org.apache.sling.distribution.serialization.impl.vlt.VaultDistributionPackageBuilderFactory`*)* som din agent använder.
 
 #### Hur kan jag anpassa felmeddelandena när jag navigerar i sidhierarkin AEM webbplatskonsolen? {#how-can-i-customize-the-error-messages-while-navigating-page-hierarchy-in-aem-sites-console}
 
@@ -118,7 +118,7 @@ Som en tillfällig lösning kan du även inaktivera komponenten manuellt antinge
 
 #### Hur konfigurerar man tillgångsinsikter med AEM 6.5-instansen? {#how-to-configure-asset-insights-with-aem-instance}
 
-Information om hur du konfigurerar och konfigurerar tillgångsinsikter för Experience Manager som distribueras via Adobe Activation (DTM) finns i [Konfigurera tillgångsinsikter med AEM Assets](https://helpx.adobe.com/experience-manager/kt/assets/using/asset-insights-tutorial-setup.html).
+Om du vill konfigurera och konfigurera tillgångsinsikter för Experience Manager som distribueras via Adobe Activation (DTM), ska du läsa om hur du [konfigurerar tillgångsinsikter med AEM Assets](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html).
 
 #### Hur anpassar man administrationskonsoler? {#how-to-customize-admin-consoles}
 
