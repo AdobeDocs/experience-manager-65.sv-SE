@@ -3,9 +3,9 @@ title: Skapa översättningsprojekt
 description: Lär dig hur du skapar översättningsprojekt i [!DNL Adobe Experience Manager].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: f9f745369ba0fe242dea1e5a5e5af0b8263b1ec0
 workflow-type: tm+mt
-source-wordcount: '1762'
+source-wordcount: '1749'
 ht-degree: 12%
 
 ---
@@ -47,8 +47,6 @@ Use the **[!UICONTROL Create structure only]** option to create a target folder 
 1. Klicka **[!UICONTROL Create & Translate]** längst ned.
 
 1. From the **[!UICONTROL Target Languages]** list, select the language for which you want to create a folder structure.
-
-   ![välj målspråk](assets/target-language.png)
 
 1. Välj **[!UICONTROL Create structure only]** i listan **[!UICONTROL Project]**.
 
@@ -132,8 +130,6 @@ Om du använder det här alternativet körs översättningsarbetsflödet för re
 
 1. I listan **[!UICONTROL Target Languages]** väljer du det/de språk du vill skapa en mappstruktur för.
 
-   ![välj målspråk](assets/target-language.png)
-
 1. I listan **[!UICONTROL Project]** väljer du **[!UICONTROL Add to existing translation project]** för att köra översättningsarbetsflödet för mappen.
 
    ![chlimage_1-77](assets/chlimage_1-77.png)
@@ -143,8 +139,6 @@ Om du använder det här alternativet körs översättningsarbetsflödet för re
    >Om du väljer **[!UICONTROL Add to existing translation project]** alternativet läggs ditt översättningsprojekt till i ett befintligt projekt endast om dina projektinställningar exakt matchar inställningarna för det befintliga projektet. Annars skapas ett nytt projekt.
 
 1. Välj ett projekt i **[!UICONTROL Existing translation project]** listan för att lägga till resursen för översättning.
-
-   ![chlimage_1-78](assets/chlimage_1-78.png)
 
 1. Klicka på **[!UICONTROL Create]**. Resurserna som ska översättas läggs till i målmappen. Den uppdaterade mappen listas i avsnittet **[!UICONTROL Language Copies]**.
 
@@ -174,8 +168,6 @@ Om du använder det här alternativet körs översättningsarbetsflödet för re
    ![chlimage_1-81](assets/chlimage_1-81.png)
 
    Ett meddelande meddelar när översättningsjobbet påbörjas.
-
-   ![chlimage_1-82](assets/chlimage_1-82.png)
 
 1. Om du vill visa översättningsjobbets status klickar du på ellipsen längst ned i **[!UICONTROL Translation Job]** rutan.
 
@@ -210,8 +202,6 @@ Om du använder det här alternativet skapas ett översättningsprojekt för den
 
 1. Ange en titel för projektet i fältet **[!UICONTROL Project Title]**.
 
-   ![chlimage_1-87](assets/chlimage_1-87.png)
-
 1. Klicka på **[!UICONTROL Start]**.
 1. Navigera till projektkonsolen. Översättningsmappen kopieras till projektkonsolen.
 
@@ -230,8 +220,6 @@ Om du använder det här alternativet skapas ett översättningsprojekt för den
    ![chlimage_1-91](assets/chlimage_1-91.png)
 
    Ett meddelande meddelar när översättningsjobbet påbörjas.
-
-   ![chlimage_1-92](assets/chlimage_1-92.png)
 
 1. Om du vill visa översättningsjobbets status klickar du på ellipsen längst ned i **[!UICONTROL Translation Job]** rutan.
 
@@ -261,8 +249,6 @@ Om du använder det här alternativet läggs resursuppsättningen till i ett bef
    ![chlimage_1-97](assets/chlimage_1-97.png)
 
 1. Välj ett projekt i **[!UICONTROL Existing translation project]** listan för att lägga till resursen för översättning.
-
-   ![välj ett projekt](assets/select-a-project.png)
 
 1. Klicka på **[!UICONTROL Start]**.
 1. Se steg 9-14 i [Lägg till i befintligt översättningsprojekt](translation-projects.md#add-to-existing-translation-project) för att slutföra resten av proceduren.
