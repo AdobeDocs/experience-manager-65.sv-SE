@@ -3,9 +3,9 @@ title: Resursmallar
 description: Lär dig mer om tillgångsmallar [!DNL Adobe Experience Manager Assets] och hur du använder tillgångsmallar för att skapa marknadsföringsmaterial.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: f9f745369ba0fe242dea1e5a5e5af0b8263b1ec0
 workflow-type: tm+mt
-source-wordcount: '1514'
+source-wordcount: '1503'
 ht-degree: 1%
 
 ---
@@ -50,17 +50,11 @@ Tänk dig ett scenario där du vill skapa digital tryckbar information som brosc
    ![chlimage_1-102](assets/chlimage_1-307.png)
 
 1. ha en eller flera INDD-mallar överförda till och tillgängliga [!DNL Experience Manager] i förväg. Välj en mall för broschyren och klicka på **[!UICONTROL Next]**.
-
-   ![chlimage_1-103](assets/chlimage_1-308.png)
-
 1. Ange ett namn och en valfri beskrivning för broschyren.
 
    ![chlimage_1-104](assets/chlimage_1-309.png)
 
 1. (Valfritt) Klicka på **[!UICONTROL Tags]** och välj en eller flera taggar för broschyren. Klicka **[!UICONTROL Confirm]** för att bekräfta valet.
-
-   ![chlimage_1-105](assets/chlimage_1-310.png)
-
 1. Klicka på **[!UICONTROL Create]**. En dialogruta bekräftar att en ny broschyr har skapats. Klicka **[!UICONTROL Open]** för att öppna broschyren i redigeringsläge.
 
    <!--![chlimage_1-106](assets/.png) -->
@@ -92,8 +86,6 @@ Du kan redigera en sammanställning direkt när du har skapat den. Du kan också
 
    De redigerbara visas till höger. För att ett fält ska kunna redigeras i [!DNL Experience Manager Assets]måste motsvarande fält i mallen taggas i [!DNL InDesign]. De ska med andra ord markeras som redigerbara i [!DNL InDesign].
 
-   ![chlimage_1-110](assets/chlimage_1-315.png)
-
    >[!NOTE]
    >
    >Se till att din [!DNL Experience Manager] distribution är integrerad med en [!DNL InDesign Server] så att du kan extrahera data från [!DNL Experience Manager Assets] [!DNL InDesign] mallen och göra den tillgänglig för redigering. Mer information finns i [Integrera Experience Manager Assets med InDesign Server](/help/assets/indesign.md).
@@ -106,11 +98,7 @@ Du kan redigera en sammanställning direkt när du har skapat den. Du kan också
 
 1. Klicka **[!UICONTROL Preview]** för att förhandsgranska textändringarna.
 
-   ![visa ändringar](assets/view-changes.png)
-
-1. Om du vill byta ut en bild klickar du på **[!UICONTROL Asset Finder]**.
-
-   ![chlimage_1-113](assets/chlimage_1-318.png)
+1. Klicka på **[!UICONTROL Asset Finder]** chlimage_1-113 ![](assets/chlimage_1-318.png)om du vill byta ut en bild.
 
 1. Markera bildfältet i listan med redigerbara fält och dra sedan en önskad bild från resursväljaren till det redigerbara fältet.
 
@@ -121,12 +109,7 @@ Du kan redigera en sammanställning direkt när du har skapat den. Du kan också
    ![chlimage_1-115](assets/chlimage_1-320.png)
 
 1. Klicka **[!UICONTROL Preview]** för att förhandsgranska bilden.
-
-   ![visa ändringar](assets/view-changes.png)
-
 1. Om du vill redigera en viss sida i en flersidig säkerhetssida använder du sidnavigeraren längst ned.
-
-   ![sidnavigeraren](assets/page-navigator.png)
 
 1. Klicka **[!UICONTROL Preview]** i verktygsfältet för att förhandsgranska alla ändringar. Klicka **[!UICONTROL Done]** för att spara redigeringsändringarna för den aktuella informationen.
 
@@ -175,11 +158,7 @@ Du kan redigera en sammanställning direkt när du har skapat den. Du kan också
 
    Du kan bläddra genom databasen eller samlingarna och navigera till platsen för de önskade mallarna och sedan välja dem att sammanfoga. [!DNL Experience Manager Assets]
 
-   ![chlimage_1-124](assets/chlimage_1-329.png)
-
    Du kan använda olika filter för att söka efter de önskade mallarna. Du kan till exempel söka efter mallar baserat på filtyp eller taggar.
-
-   ![chlimage_1-125](assets/chlimage_1-330.png)
 
 1. Klicka på **[!UICONTROL Next]** i verktygsfältet.
 1. Om det behövs kan du ordna om mallarna på **[!UICONTROL Preview & Reorder]** skärmen och förhandsgranska valet av mallar som ska sammanfogas. Then, click **[!UICONTROL Next]** from the toolbar.
