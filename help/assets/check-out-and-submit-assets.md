@@ -3,7 +3,7 @@ title: Checka in och checka ut material för redigering
 description: Lär dig hur du checkar ut resurser för redigering och checkar in dem igen när ändringarna är klara.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 117208c634613559bb13556e12f094add70006e2
 workflow-type: tm+mt
 source-wordcount: '426'
 ht-degree: 3%
@@ -64,5 +64,5 @@ Administratörer kan checka in resurser som är utcheckade av andra användare.
 >[!MORELIKETHIS]
 >
 >* [Förstå in- och utcheckning i Experience Manager](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#how-app-works2)
->* [Videosjälvstudiekurs för att förstå hur du checkar in och checkar ut i Assets](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/collaboration/checkin-checkout-technical-video-understand.html)
+>* [Videosjälvstudiekurs för att förstå hur du checkar in och checkar ut i Assets](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/collaboration/check-in-and-check-out.html)
 
