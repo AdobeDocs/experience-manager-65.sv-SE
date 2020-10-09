@@ -1,18 +1,18 @@
 ---
-title: Versionsinformation för AEM 6.5
-description: AEM versionsinformation innehåller viktig information om den senaste utgåvan av AEM, inklusive vad som är nytt, vilka plattformar som stöds, borttagna och borttagna funktioner samt kända fel.
+title: Versionsinformation om Adobe Experience Manager 6.5
+description: AEM versionsinformation innehåller viktig information om den senaste versionen av AEM, inklusive vad som är nytt, vilka plattformar som stöds, borttagna och borttagna funktioner samt kända fel.
 translation-type: tm+mt
-source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
+source-git-commit: 90ab21c4a25fa1a2dcdf04af61fd30982cae7aae
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '374'
 ht-degree: 13%
 
 ---
 
 
-# Versionsinformation för AEM 6.5
+# Versionsinformation om Adobe Experience Manager 6.5
 
-AEM versionsinformation innehåller viktig information om den senaste utgåvan av AEM, inklusive vad som är nytt, vilka plattformar som stöds, borttagna och borttagna funktioner samt kända fel.
+AEM versionsinformation innehåller viktig information om den senaste versionen av AEM, inklusive vad som är nytt, vilka plattformar som stöds, borttagna och borttagna funktioner samt kända fel.
 
 ## Viktiga AEM
 
@@ -40,7 +40,7 @@ AEM versionsinformation innehåller viktig information om den senaste utgåvan a
 ## Viktiga AEM
 
 * [AEM självstudiekurser](https://helpx.adobe.com/experience-manager/kt/index/aem-6-5-videos.html)
-* [Dispatcher Användarhandbok](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)
+* [Användarhandbok för Dispatcher](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)
 * [Användarhandbok för HTML](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)
 * [Användarhandbok för kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
