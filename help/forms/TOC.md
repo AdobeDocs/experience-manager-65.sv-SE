@@ -3,18 +3,18 @@ cloud: experience-cloud
 product: adobe experience manager
 sub-product: formulär
 audience: end-user
-user-guide-title: AEM 6.5 Forms Användarhandbok
+user-guide-title: Adobe Experience Manager 6.5 Forms Guide
 breadcrumb-title: Forms Guide
 user-guide-description: Create, manage, publish, and update digital forms.
 translation-type: tm+mt
-source-git-commit: e917a36f9b8748080e9ab770a7f58f06123ea166
+source-git-commit: 90ab21c4a25fa1a2dcdf04af61fd30982cae7aae
 workflow-type: tm+mt
-source-wordcount: '3700'
+source-wordcount: '3702'
 ht-degree: 0%
 
 ---
 
-# AEM 6.5 - Forms användarhandbok {#forms}
+# Adobe Experience Manager 6.5 Forms Guide {#forms}
 
 + [AEM 6.5 Forms Användarhandbok](home.md)
 + Versionsinformation {#release-notes-new-features}
