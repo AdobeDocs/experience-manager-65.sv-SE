@@ -3,10 +3,10 @@ title: Sök efter ansikten för att filtrera sökresultat
 description: Skapa, ändra och använda sökfunktioner i [!DNL Adobe Experience Manager].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: f9f745369ba0fe242dea1e5a5e5af0b8263b1ec0
 workflow-type: tm+mt
-source-wordcount: '2344'
-ht-degree: 14%
+source-wordcount: '2288'
+ht-degree: 15%
 
 ---
 
@@ -42,19 +42,13 @@ Lägg till predikatet i formuläret för fulltextsökningar [!UICONTROL Fulltext
    >1. Spara ändringarna.
 
 
-1. In the Edit Search Forms page, drag a predicate from the **[!UICONTROL Select Predicate]** tab to the main pane. Dra till exempel **[!UICONTROL Property Predicate]**.
+1. In the [!UICONTROL Edit Search Forms] page, drag a predicate from the **[!UICONTROL Select Predicate]** tab to the main pane. Dra till exempel **[!UICONTROL Property Predicate]**.
 
    ![Tryck och flytta ett predikat för att anpassa sökfiltren](assets/drag_predicate.png)
 
    *Bild: Tryck och flytta ett predikat för att anpassa sökfiltren.*
 
-1. Ange en fältetikett, platshållartext och beskrivning för predikatet på fliken Inställningar. Ange ett giltigt namn för metadataegenskapen som du vill associera med predikatet.
-
-   Rubriketiketten på fliken Inställningar identifierar det valda predikatets typ.
-
-   ![Använd fliken Inställningar för att ange de alternativ som krävs för ett predikat](assets/settings.png)
-
-   Använd fliken Inställningar för att ange de alternativ som krävs för ett predikat
+1. Ange en fältetikett, platshållartext och beskrivning för predikatet på [!UICONTROL Settings] fliken. Ange ett giltigt namn för metadataegenskapen som du vill associera med predikatet. Rubriketiketten på [!UICONTROL Settings] fliken identifierar det valda predikatets typ.
 
 1. I fältet **[!UICONTROL Property Name]** anger du ett giltigt namn för den metadataegenskap som du vill associera med predikatet. Det är det namn som sökningen baseras på. Skriv till exempel `jcr:content/metadata/dc:description` eller `./jcr:content/metadata/dc:description`.
 
@@ -154,17 +148,9 @@ Med taggpredikatet kan du utföra taggbaserade sökningar efter resurser. Som st
 1. Konfigurera sökvägsegenskapen för rottaggar för det här predikatet för att fylla i olika taggar i listan Taggar.
 1. Välj **[!UICONTROL Show match all tags option]** om du vill söka efter resurser som innehåller alla taggar du anger.
 
-   ![Vanliga inställningar för taggar-predikat](assets/tags_predicate.png)
-
-   Vanliga inställningar för taggar-predikat
-
 1. Ange en valfri beskrivning i **[!UICONTROL Description]** fältet och klicka sedan på **[!UICONTROL Done]**.
 1. Navigera till sökpanelen. The **[!UICONTROL Tags]** predicate is added to the Search panel.
 1. Ange taggar baserat på vilka du vill söka efter resurser eller välj från listan med förslag.
-
-   ![Experience Manager-visat förslag när taggens namn skrivs](assets/tag-suggestion.png)
-
-   *Bild: Förslag som visas av Experience Manager när du skriver namnet på taggen.*
 
 1. Select **[!UICONTROL Match all]** to search for matches that include all tags that you specify.
 
