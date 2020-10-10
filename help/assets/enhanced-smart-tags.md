@@ -3,9 +3,9 @@ title: Förbättrade smarta taggar
 description: Förbättrade smarta taggar
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 892237699a4027e7dab406fd620cac220aa8b88b
+source-git-commit: 78a101cdf0b4762ff9a3e7320db464df5b96300d
 workflow-type: tm+mt
-source-wordcount: '1468'
+source-wordcount: '1522'
 ht-degree: 11%
 
 ---
@@ -44,6 +44,7 @@ Innan du kan använda Smart Content Service måste du ha/se till/göra följande
 
 * Ett Adobe ID-konto som har administratörsbehörighet för organisationen.
 * Att Smart Content Service är aktiverad för din organisation.
+* Grundpaketet för smarta innehållstjänster kan endast läggas till i en distribution där ett [!DNL Sites] baspaket och [!DNL Assets] tillägg har licensierats.
 
 ## Introduktion till {#onboarding}
 
@@ -126,7 +127,7 @@ Om du vill kontrollera om Smart Content Service är utbildad i dina taggar i öv
 
 ## Tagga resurser automatiskt {#tagging-assets-automatically}
 
-När du har utbildat tjänsten Smart Content kan du utlösa taggningsarbetsflödet för att automatiskt tillämpa lämpliga taggar på en annan uppsättning med liknande resurser.
+När du har utbildat tjänsten för smart innehåll kan du utlösa taggningsarbetsflödet för att automatiskt tillämpa lämpliga taggar på en annan uppsättning med liknande resurser.
 
 Du kan köra taggningsarbetsflödet periodiskt eller när det behövs.
 
@@ -179,3 +180,7 @@ Du kan aktivera taggningsarbetsflödet från följande för att tagga dina resur
 >[!NOTE]
 >
 >I de efterföljande taggningscyklerna märks bara de ändrade resurserna igen med nyligen tränade taggar. Även oförändrade resurser taggas om mellanrummet mellan den sista och den aktuella taggningscykeln för taggningsarbetsflödet överstiger 24 timmar. För periodiska taggningsarbetsflöden taggas oförändrade resurser när tidsintervallet överskrider sex månader.
+
+## Tips och begränsningar {#tips-best-practices-limitations}
+
+* Användningen av smarta innehållstjänster är begränsad till upp till 2 miljoner taggade bilder per år. Alla duplicerade bilder som bearbetas och taggas räknas som taggade bilder.
