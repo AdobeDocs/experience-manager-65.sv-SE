@@ -3,23 +3,252 @@ title: Hantera metadata för era digitala resurser i [!DNL Adobe Experience Mana
 description: Lär dig mer om metadatatyperna och [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager] hur du automatiskt kan ordna och bearbeta resurser baserat på deras metadata.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 117208c634613559bb13556e12f094add70006e2
+source-git-commit: c3f85314740c4e9ca8ed0c9a724b49ff4276616a
 workflow-type: tm+mt
-source-wordcount: '1413'
-ht-degree: 0%
+source-wordcount: '2339'
+ht-degree: 10%
 
 ---
 
 
 # Hantera metadata för dina digitala resurser {#managing-metadata-for-digital-assets}
 
+<!-- Scope of metadata articles:
+* metadata.md: The scope of this article is basic metadata updates, changes, etc. operations that end-users can do.
+* metadata-concepts.md: All conceptual information. Minor instructions are OK but it is an FYI article about support and standards.
+* metadata-config.md: New article. Contains all configuration and administration how-to info related to metadata of assets.
+-->
+
 [!DNL Adobe Experience Manager Assets] sparar metadata för varje resurs. Det gör det enklare att kategorisera och ordna resurser och det hjälper personer som letar efter en viss resurs. Tack vare möjligheten att extrahera metadata från filer som överförts till [!DNL Experience Manager Assets]kan metadatahanteringen integreras med det kreativa arbetsflödet. Med möjligheten att behålla och hantera metadata med dina resurser kan du automatiskt ordna och bearbeta resurser baserat på deras metadata.
 
-* [XMP-metadata](xmp.md).
-* [Redigera eller lägga till metadata](meta-edit.md).
-* [Referens](meta-ref.md)för metadatamappningar.
+## Metadata och dess ursprung {#how-to-edit-or-add-metadata}
 
-<!--  TBD: Complete this section. Take help from Metadata IRD for DDAM. Also, look at metadata features in Forrester analysis.
+Metadata är ytterligare information om resursen som kan sökas igenom. Den läggs till i resurser och bearbetas i [!DNL Experience Manager] den när du överför en resurs. Du kan redigera befintliga metadata och lägga till nya metadataegenskaper i befintliga fält. Organisationer behöver kontrollerade och tillförlitliga metadata-språk. Det går alltså [!DNL Experience Manager Assets] inte att lägga till nya metadataegenskaper på begäran. Endast administratörer och utvecklare kan lägga till nya egenskaper eller fält som innehåller metadata. Användarna kan fylla i befintliga fält med metadata.
+
+Följande metoder kan användas för att lägga till metadata i digitala resurser:
+
+* Till att börja med lägger de program som skapar resurser till metadata i det. Exempelvis lägger [Acrobat till metadata](https://helpx.adobe.com/acrobat/using/pdf-properties-metadata.html) i PDF-filer eller så lägger en kamera till några grundläggande metadata i fotona. När du genererar resurser kan du lägga till metadata i de ursprungliga programmen. Du kan till exempel [lägga till IPTC-metadata i Adobe Lightroom](https://helpx.adobe.com/lightroom-classic/help/metadata-basics-actions.html).
+
+* Innan du överför en resurs till [!DNL Experience Manager]kan du redigera och ändra metadata med hjälp av antingen det ursprungliga programmet som användes för att skapa en resurs eller med något annat metadataredigeringsprogram. När du överför en resurs till Experience Manager bearbetas metadata. Se till exempel hur du [arbetar med metadata i [!DNL Adobe Bridge]](https://helpx.adobe.com/bridge/user-guide.html/bridge/using/metadata-adobe-bridge.ug.html) och se [taggpanelen för [!DNL Bridge CC]](https://exchange.adobe.com/creativecloud.details.20009.aem-tags-panel-for-bridge-cc.html) i [!DNL Adobe Exchange].
+
+* I [!DNL Experience Manager Assets]kan du manuellt lägga till eller redigera metadata för resurser på [!UICONTROL Properties] sidan.
+
+* Du kan använda funktionerna för [metadataprofiler](/help/assets/metadata-config.md#metadata-profiles) i [!DNL Experience Manager Assets] för att automatiskt lägga till metadata när resurser överförs till DAM.
+
+## Lägg till eller redigera metadata i [!DNL Experience Manager Assets] {#add-edit-metadata}
+
+Så här redigerar du metadata för en resurs i [!DNL Assets] användargränssnittet:
+
+1. Gör något av följande:
+
+   * I [!DNL Assets] gränssnittet markerar du resursen och klickar på **[!UICONTROL View Properties]** i verktygsfältet.
+   * Välj snabbåtgärden från miniatyrbilden av resursen **[!UICONTROL View Properties]** .
+   * På sidan Resurser klickar du på ikonen **[!UICONTROL View Properties]** ![](assets/do-not-localize/info-circle-icon.png) Resurser i verktygsfältet.
+
+   Resurssidan visar alla metadata för resursen. Metadata extraheras när resursen överförs (hämtas) till [!DNL Experience Manager].
+
+   ![Välj Egenskaper för en resurs för att visa dess metadata](assets/asset-metadata.png)
+
+   *Bild: Redigera eller lägga till metadata på[!UICONTROL Properties]resurssidan.*
+
+1. Make edits to the metadata under the various tabs, as required, and when completed, click **[!UICONTROL Save]** from the toolbar to save your changes. Click **[!UICONTROL Close]** to return to the [!DNL Assets] web interface.
+
+   >[!NOTE]
+   >
+   >Om ett textfält är tomt finns det ingen befintlig metadatauppsättning. Du kan ange ett värde i fältet och spara det för att lägga till metadataegenskapen.
+
+Alla ändringar av metadata för en resurs skrivs tillbaka till den ursprungliga binärfilen som en del av dess XMP data. Metadataåterskrivningsarbetsflödet lägger till metadata i den ursprungliga binärfilen. Ändringar som görs i befintliga egenskaper (till exempel `dc:title`) skrivs över och nya egenskaper (inklusive anpassade egenskaper som `cq:tags`) läggs till i schemat.
+
+XMP stöds och är aktiverat för de plattformar och filformat som beskrivs i de [tekniska kraven.](/help/sites-deploying/technical-requirements.md)
+
+## Redigera metadataegenskaper för flera resurser {#editing-metadata-properties-of-multiple-assets}
+
+[!DNL Adobe Enterprise Manager Assets] Med kan du redigera metadata för flera resurser samtidigt så att du snabbt kan sprida vanliga metadataändringar till resurser i grupp. Du kan också redigera metadata för flera samlingar samtidigt. Använd egenskapssidan för att utföra metadataändringar på flera resurser eller samlingar:
+
+* Ändra metadataegenskaper till ett gemensamt värde
+* Lägga till eller ändra taggar
+
+Om du vill anpassa sidan med metadataegenskaper, inklusive lägga till, ändra eller ta bort metadataegenskaper, använder du schemaredigeraren.
+
+>[!NOTE]
+>
+>Massredigeringsmetoderna fungerar för resurser som är tillgängliga i en mapp eller en samling. För resurser som är tillgängliga i olika mappar eller som matchar ett gemensamt villkor är det möjligt att [uppdatera metadata satsvis efter sökning](search-assets.md#metadataupdates).
+
+1. Navigera till platsen för de resurser som du vill redigera i [!DNL Assets] användargränssnittet.
+1. Markera de resurser som du vill redigera gemensamma egenskaper för.
+1. Klicka i verktygsfältet **[!UICONTROL Properties]** för att öppna egenskapssidan för de valda resurserna.
+
+   >[!NOTE]
+   >
+   >När du väljer flera resurser markeras det lägsta gemensamma överordnade formuläret för resurserna. Egenskapssidan visar alltså bara metadatafält som är gemensamma för egenskapssidorna för alla enskilda resurser.
+
+1. Ändra metadataegenskaperna för markerade resurser på de olika flikarna.
+1. Om du vill visa metadataredigeraren för en viss resurs avmarkerar du återstående resurser i listan. Metadataredigeringsfälten fylls i med metadata för den aktuella resursen.
+
+   >[!NOTE]
+   >
+   >* På egenskapssidan kan du ta bort resurser från resurslistan genom att avmarkera dem. Resurslistan har alla resurser markerade som standard. Metadata för resurser som du tar bort från listan uppdateras inte.
+   >* Högst upp i resurslistan markerar du kryssrutan nära **[!UICONTROL Title]** för att växla mellan att markera resurserna och rensa listan.
+
+
+1. Om du vill välja ett annat metadataram för resurserna klickar du på **[!UICONTROL Settings]** verktygsfältet och väljer önskat schema.
+1. Spara ändringarna.
+1. Om du vill lägga till nya metadata till befintliga metadata i fält som innehåller flera värden väljer du **[!UICONTROL Append mode]**. Om du inte markerar det här alternativet ersätter de nya metadata de data som finns i fälten. Klicka på **[!UICONTROL Submit]**.
+
+   >[!CAUTION]
+   >
+   >För fält med ett enda värde läggs de nya metadata inte till det befintliga värdet i fältet, även om du väljer **[!UICONTROL Append mode]**.
+
+## Importera metadata {#import-metadata}
+
+[!DNL Assets] I kan du importera resursmetadata gruppvis med hjälp av en CSV-fil. Du kan göra satsvisa uppdateringar för de nyligen överförda resurserna eller för befintliga resurser genom att importera en CSV-fil. Du kan också importera resursmetadata i grupp från tredjepartssystem i CSV-format.
+
+Import av metadata är asynkron och påverkar inte systemets prestanda. Samtidig uppdatering av metadata för flera resurser kan vara resurskrävande på grund av XMP återskrivningsaktivitet om arbetsflödesflaggan är markerad. Planera en sådan import under begränsad serveranvändning så att prestanda för andra användare inte påverkas.
+
+>[!NOTE]
+>
+>Om du vill importera metadata för anpassade namnutrymmen måste du först registrera namnutrymmena.
+
+1. Navigera till [!DNL Assets] användargränssnittet och klicka **[!UICONTROL Create]** i verktygsfältet.
+1. Välj **[!UICONTROL Metadata]** i menyn.
+1. In the **[!UICONTROL Metadata Import]** page, click **[!UICONTROL Select File]**. Markera CSV-filen med metadata.
+1. Ange följande parametrar. Se ett exempel på en CSV-fil på [metadata-import-sample-file.csv](assets/metadata-import-sample-file.csv).
+
+   | Parametrar för metadataimport | Beskrivning |
+   |:---|:---|
+   | [!UICONTROL Batch Size] | Antal resurser i en grupp som metadata ska importeras för. Standardvärdet är 50. Maxvärdet är 100. |
+   | [!UICONTROL Field Separator] | Standardvärdet är `,` (komma). Du kan ange andra tecken. |
+   | [!UICONTROL Multi Value Delimiter] | Avgränsare för metadatavärden. Standardvärdet är `|`. |
+   | [!UICONTROL Launch Workflows] | Falskt som standard. När det är inställt på `true` och standardinställningarna för startprogrammet används för [!UICONTROL DAM Metadata WriteBack] arbetsflödet (som skriver metadata till binära XMP). Om du aktiverar startarbetsflöden blir systemet långsammare. |
+   | [!UICONTROL Asset Path Column Name] | Definierar kolumnnamnet för CSV-filen med resurser. |
+
+1. Klicka på **[!UICONTROL Import]** i verktygsfältet. När metadata har importerats visas ett meddelande i [!UICONTROL Notification] inkorgen.
+
+1. Om du vill verifiera korrekt import navigerar du till en tillgångs [!UICONTROL Properties] sida och kontrollerar värdena i fälten.
+
+Om du vill lägga till datum och tidsstämpel när du importerar metadata använder du `YYYY-MM-DDThh:mm:ss.fff-00:00` format för datum och tid. Datum och tid avgränsas med `T`, `hh` är timmar i 24-timmarsformat, `fff` är nanosekunder och `-00:00` är tidszonsförskjutning. Exempel: `2020-03-26T11:26:00.000-07:00` är 26 mars 2020 kl. 11:26:00.000 PST.
+
+>[!CAUTION]
+>
+>Om datumformatet inte matchar `YYYY-MM-DDThh:mm:ss.fff-00:00`ställs datumvärdena inte in. Datumformaten för den exporterade CSV-metadatafilen har formatet `YYYY-MM-DDThh:mm:ss-00:00`. Om du vill importera den konverterar du den till ett godkänt format genom att lägga till värdet för nanosekunder som anges av `fff`.
+
+## Exportera metadata {#export-metadata}
+
+Du kan exportera metadata för flera resurser i ett CSV-format. Metadata exporteras asynkront och påverkar inte systemets prestanda. Om du vill exportera metadata går du igenom egenskaperna för objektnoden [!DNL Experience Manager] `jcr:content/metadata` och dess underordnade noder och exporterar metadataegenskaperna i en CSV-fil.
+
+Några exempel på användningsområden för att exportera flera metadata samtidigt är:
+
+* Importera metadata i ett tredjepartssystem när du migrerar resurser.
+* Dela metadata med ett större projektteam.
+* Testa eller granska metadata för att se om de är kompatibla.
+* Gör metadata externt och lokalisera dem separat.
+
+1. Välj den resursmapp som innehåller resurser som du vill exportera metadata för. Välj **[!UICONTROL Export metadata]** i verktygsfältet.
+
+1. In the [!UICONTROL Metadata Export] dialog, specify a name for the CSV file. Om du vill exportera metadata för resurser i undermappar väljer du **[!UICONTROL Include assets in subfolders]**.
+
+   ![Gränssnitt och alternativ för att exportera metadata för alla resurser i en](assets/export_metadata_page.png "mappGränssnitt och alternativ för att exportera metadata för alla resurser i en mapp")
+
+1. Välj önskade alternativ. Ange ett filnamn och vid behov ett datum.
+
+1. Ange i **[!UICONTROL Properties to be exported]** fältet om du vill exportera alla eller specifika egenskaper. Om du väljer Selektiva egenskaper som ska exporteras lägger du till de önskade egenskaperna.
+
+1. Klicka på **[!UICONTROL Export]** i verktygsfältet. Ett meddelande bekräftar att metadata exporteras. Stäng meddelandet.
+
+1. Öppna inkorgsmeddelandet för exportjobbet. Markera jobbet och klicka på **[!UICONTROL Open]** i verktygsfältet. To download the CSV file with the metadata, click **[!UICONTROL CSV Download]** from the toolbar. Klicka på **[!UICONTROL Close]**.
+
+   ![Dialogruta för att hämta CSV-filen som innehåller metadata som exporterats i grupp](assets/csv_download.png)
+
+   *Bild: Dialogruta för att hämta CSV-filen som innehåller metadata som exporterats i grupp.*
+
+## Redigera metadata för samlingar {#collections-metadata}
+
+Mer information finns i [Visa och redigera samlingsmetadata](/help/assets/managing-collections-touch-ui.md#view-edit-collection-metadata) och [redigera metadata för flera samlingar samtidigt](/help/assets/managing-collections-touch-ui.md#editing-collection-metadata-in-bulk).
+
+## Använda en metadataprofil för mappar {#applying-a-metadata-profile-to-folders}
+
+<!-- TBD: Review this overview.
+-->
+
+När du tilldelar en metadataprofil till en mapp ärver alla undermappar automatiskt profilen från den överordnade mappen. Det innebär att du bara kan tilldela en metadataprofil till en mapp. Fundera därför noga över mappstrukturen för var du överför, lagrar, använder och arkiverar resurser.
+
+Om du har tilldelat en annan metadataprofil till en mapp åsidosätter den nya profilen den tidigare profilen. De tidigare befintliga mappresurserna ändras inte. Den nya profilen används för resurser som läggs till i mappen senare.
+
+Mappar som har tilldelats en profil visas i användargränssnittet med namnet på profilen som visas i kortnamnet.
+
+![I kortvyn visas den metadataprofil som används för en mapp](assets/metadata-profile-card-view-display.png)
+
+Du kan tillämpa metadataprofiler på specifika mappar eller globalt på alla resurser.
+
+Du kan bearbeta resurser i en mapp som redan har en befintlig metadataprofil som du senare ändrade. Se [Bearbeta resurser i en mapp när du har redigerat dess bearbetningsprofil](processing-profiles.md#reprocessing-assets).
+
+Du kan använda en metadataprofil på en mapp från menyn **[!UICONTROL Tools]** eller, om du är i mappen, från **[!UICONTROL Properties]**. I det här avsnittet beskrivs hur du använder metadataprofiler på mappar på båda sätten.
+
+För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
+
+Du kan bearbeta resurser i en mapp som redan har en befintlig videoprofil som du senare ändrade. Se [Bearbeta resurser i en mapp när du har redigerat dess bearbetningsprofil](processing-profiles.md#reprocessing-assets).
+
+### Använda metadataprofiler på mappar från användargränssnittet för profiler {#applying-metadata-profiles-to-folders-from-profiles-user-interface}
+
+Så här använder du metadataprofilen:
+
+1. Click the [!DNL Experience Manager] logo and navigate to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Profiles]**.
+1. Välj den metadataprofil som du vill använda för en eller flera mappar.
+1. Click **[!UICONTROL Apply Metadata Profile to Folder(s)]** and select the folder or multiple folders you want use to receive the newly uploaded assets and click **[!UICONTROL Done]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
+
+### Använd metadataprofiler på mappar från Egenskaper {#applying-metadata-profiles-to-folders-from-properties}
+
+1. Klicka på den vänstra listen **[!UICONTROL Assets]** och navigera sedan till mappen där du vill använda en metadataprofil.
+1. Markera mappen genom att klicka på bockmarkeringen och klicka sedan på **[!UICONTROL Properties]**.
+
+1. Select the **[!UICONTROL Metadata Profiles]** tab and select the profile from the popup menu and click **[!UICONTROL Save]**.
+
+För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
+
+### Använd metadataprofil globalt {#metadata-profile-global}
+
+Mer information finns i [Konfiguration för att tillämpa metadataprofil globalt](/help/assets/metadata-config.md#apply-a-metadata-profile-globally).
+
+### Ta bort en metadataprofil från mappar {#removing-a-metadata-profile-from-folders}
+
+När du tar bort en metadataprofil från en mapp ärver alla undermappar automatiskt borttagningen av profilen från den överordnade mappen. All bearbetning av filer som har inträffat i mapparna förblir dock oförändrad.
+
+Du kan ta bort en metadataprofil från en mapp på **[!UICONTROL Tools]** menyn eller från **[!UICONTROL Properties]** mappen i mappen.
+
+#### Ta bort metadataprofiler från mappar via användargränssnittet Profiler {#removing-metadata-profiles-from-folders-via-profiles-user-interface}
+
+1. Click the [!DNL Experience Manager] logo and navigate to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Profiles]**.
+1. Markera den metadataprofil som du vill ta bort från en eller flera mappar.
+1. Click **[!UICONTROL Remove Metadata Profile from Folder(s)]** and select the folder or multiple folders you want use to remove a profile from and click **[!UICONTROL Done]**.
+
+   Du kan bekräfta att metadataprofilen inte längre används för en mapp eftersom namnet inte längre visas under mappnamnet.
+
+#### Ta bort metadataprofiler från mappar via Egenskaper {#removing-metadata-profiles-from-folders-via-properties}
+
+1. Klicka på [!DNL Experience Manager] logotypen och navigera **[!UICONTROL Assets]** sedan till mappen som du vill ta bort en metadataprofil från.
+1. Markera mappen genom att klicka på bockmarkeringen och klicka sedan på **[!UICONTROL Properties]**.
+1. Välj fliken **[!UICONTROL Metadata Profiles]**, välj **[!UICONTROL None]** i listrutan och klicka på **[!UICONTROL Save]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
+
+## Tips och begränsningar {#best-practices-limitations}
+
+* Metadatauppdateringarna via användargränssnittet ändrar metadataegenskaperna i `dc` namnutrymmet. Alla uppdateringar som görs via HTTP API ändrar metadataegenskaperna i `jcr` namnutrymmet. Se [hur du uppdaterar metadata med HTTP API](/help/assets/mac-api-assets.md#update-asset-metadata).
+
+* CSV-filen för import av metadata för resurser har ett mycket specifikt format. För att spara arbete och tid och undvika oavsiktliga fel kan du börja skapa CSV-filen med formatet för en exporterad CSV-fil.
+
+* När du importerar metadata med hjälp av en CSV-fil är datumformatet `YYYY-MM-DDThh:mm:ss.fff-00:00`obligatoriskt. Om något annat format används ställs datumvärdena inte in. Datumformaten för den exporterade CSV-metadatafilen har formatet `YYYY-MM-DDThh:mm:ss-00:00`. Om du vill importera den konverterar du den till ett godkänt format genom att lägga till värdet för nanosekunder som anges av `fff`.
+
+>[!MORELIKETHIS]
+>
+>* [Metadata-koncept och -förståelse](metadata-concepts.md).
+>* [Redigera metadataegenskaper för flera samlingar](managing-collections-touch-ui.md#editing-collection-metadata-in-bulk)
+>* [Import och export av metadata i Experience Manager Assets](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/metadata-import-feature-video-use.html)
+
+
+<!-- TBD: Try filling the available information in these topics to the extent possible. As and when complete, publish the sections live.
+
+## Where to find metadata of an asset or folder {#find-metadata}
+
+What all methods to access asset Properties. More Details option in column view. Select asset and click Properties. Keyboard shortcut `p`. What else?
 
 ## Understand metadata handling in Experience Manager {#metadata-possibilities-with-aem}
 
@@ -27,11 +256,35 @@ Describe the journey of an assets' metadata. What all happens to metadata when a
 
 ## Add metadata to your digital assets {#add-metadata}
 
-Typically, the applications that create digital assets add some metadata to the assets created. Before uploading an asset to Experience Manager, you can edit and modify metadata using either the native application used to create an asset or using some metadata editors. When you upload an asset to Experience Manager, the metadata is processed.
+* To begin with, assets come with some metadata. The applications that create digital assets add some metadata to the assets created. Before uploading an asset to Experience Manager, you can edit and modify metadata using either the native application used to create an asset or using some other metadata editing application. When you upload an asset to Experience Manager, the metadata is processed.
+
+* Link to PS, ID, AI, PDF, etc. metadata-related help articles.
+
+* Link to XMP writeback.
+
+* Manually add (or edit) metadata in AEM in Properties page.
+
+* Metadata profiles
+
+* Any workflows related to metadata?
+
+* Advanced topic: Add, edit, modify, process and writeback metadata of subassets.
 
 ## Metadata of assets, folders, and collections {#metadata-of-assets-folders-collections}
 
+Similarities and differences between metadata of asset and folder. 
+
+Link to metadata handling of collections.
+
 ## Modify metadata of an asset, folder, or collection {#modify-metadata}
+
+* While creating assets: Native application.
+
+* Before ingesting assets: Metadata editors
+
+* After ingesting assets: Properties of an asset, folder, collection, etc.
+
+* Any supported programmatic method to bulk edit metadata directly in JCR?
 
 ## Modify metadata in bulk {#modify-metadata-in-bulk}
 
@@ -40,6 +293,7 @@ Typically, the applications that create digital assets add some metadata to the 
 Use the properties page to perform metadata changes on multiple assets or collections:
 
 * Change metadata properties to a common value
+
 * Add or modify tags
 
 To customize the metadata properties page, including adding, modifying, deleting metadata properties, use the schema editor.
@@ -61,7 +315,8 @@ To customize the metadata properties page, including adding, modifying, deleting
 
    >[!NOTE]
    >
-   >* In the properties page, you can remove assets from the asset list by deselecting them. The asset list has all the assets selected by default. The metadata for assets that you remove from the list is not updated.
+   >* In the Properties page, you can remove assets from the asset list by deselecting them. The asset list has all the assets selected by default. The metadata for assets that you remove from the list is not updated.
+   >
    >* At the top of assets list, select the check box near **[!UICONTROL Title]** to toggle between selecting the assets and clearing the list.
 
 1. To select a different metadata schema for the assets, click **[!UICONTROL Settings]** from the toolbar, and select the desired schema.
@@ -72,174 +327,4 @@ To customize the metadata properties page, including adding, modifying, deleting
    >
    >For single-value fields, the new metadata is not appended to the existing value in the field even if you select **[!UICONTROL Append mode]**.
 
-## Configure limit for bulk metadata update {#limit-bulk-metadata-updates}
-
-To prevent DOS like situation, Enterprise Manager limits the number of parameters supported in a Sling request. When updating metadata of many assets in one go, you may reach the limit and the metadata does not get updated for more assets. Enterprise Manager generates the following warning in the logs:
-
-`org.apache.sling.engine.impl.parameters.Util Too many name/value pairs, stopped processing after 10000 entries`
-
-To change the limit, access **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]** and change the value of **[!UICONTROL Maximum POST Parameters]** in **[!UICONTROL Apache Sling Request Parameter Handling]** OSGi configuration.
-
 -->
-
-## Därför behöver vi metadata {#why-we-need-metadata}
-
-Metadata är data om data. I det här avseendet avser data era digitala resurser, till exempel en bild. Metadata är avgörande för effektiv resurshantering.
-
-Metadata är en samling med alla data som är tillgängliga för en resurs, men som inte nödvändigtvis finns i bilden. Några exempel på metadata är:
-
-* Namnet på resursen.
-* Tid och datum för senaste ändring.
-* Storlek på resursen när den sparades i databasen.
-* Namnet på mappen som den finns i.
-* Relaterade resurser eller tillämpade taggar.
-
-Ovanstående är de grundläggande metadataegenskaper som [!DNL Experience Manager] kan hantera resurser, vilket gör att användare kan se alla resurser. Det kan till exempel vara bra att beställa resurser efter det senaste ändringsdatumet när du försöker identifiera nyligen tillagda resurser.
-
-Du kan lägga till mer högnivådata till digitala resurser, till exempel:
-
-* Typ av resurs (är det en bild, en video, ett ljudklipp eller ett dokument?).
-* Tillgångens ägare.
-* Tillgångens namn.
-* Beskrivning av tillgången.
-* Taggar som tilldelats en resurs.
-
-Fler metadata hjälper dig att kategorisera resurser ytterligare och är till hjälp när mängden digital information växer. Det går att hantera några hundra filer baserat på bara filnamnen. Den här metoden är dock inte skalbar. Den blir kort när antalet inblandade och antalet förvaltade tillgångar ökar.
-
-Med hjälp av metadata ökar värdet på en digital resurs eftersom resursen blir
-
-* Mer åtkomligt - system och användare hittar det enkelt.
-* Enklare att hantera - du kan hitta resurser med samma uppsättning egenskaper enklare och använda ändringarna på dem.
-* Fullständigt - materialet innehåller mer information och sammanhang med fler metadata.
-
-Därför har du tillgång [!DNL Assets] till rätt sätt att skapa, hantera och utbyta metadata för dina digitala resurser.
-
-## Typer av metadata {#types-of-metadata}
-
-De två grundläggande metadatatyperna är tekniska metadata och beskrivande metadata.
-
-Tekniska metadata är användbara för program som hanterar digitala resurser och bör inte underhållas manuellt. [!DNL Experience Manager Assets] och andra program bestämmer automatiskt tekniska metadata och metadata kan ändras när resursen ändras. Vilka tekniska metadata som är tillgängliga för en mediefil beror till stor del på filtypen för resursen. Några exempel på tekniska metadata är:
-
-* Storlek på en fil.
-* Dimensioner (höjd och bredd) för en bild.
-* Bithastighet för en ljud- eller videofil.
-* Upplösning (detaljnivå) för en bild.
-
-Beskrivande metadata är metadata som rör programdomänen, till exempel det företag som en resurs kommer från. Beskrivande metadata kan inte bestämmas automatiskt. Den skapas manuellt eller halvautomatiskt. En GPS-aktiverad kamera kan till exempel automatiskt spåra latitud och longitud och lägga till geotagga bilden.
-
-Kostnaden för att manuellt skapa beskrivande metadatainformation är hög. Därför har standarder upprättats för att underlätta utbyte av metadata mellan olika programsystem och organisationer. [!DNL Experience Manager Assets] stöder alla relevanta standarder för metadatahantering.
-
-## Kodningsstandarder {#encoding-standards}
-
-Det finns olika sätt att bädda in metadata i filer. Ett urval kodningsstandarder stöds:
-
-* XMP: används av [!DNL Assets] för att lagra extraherade metadata i databasen.
-* ID3: för ljud- och videofiler.
-* Exif: för bildfiler.
-* Annat/äldre: från [!DNL Microsoft Word], [!DNL PowerPoint], [!DNL Excel]och så vidare.
-
-### XMP {#xmp}
-
-[!DNL Extensible Metadata Platform] (XMP) är en öppen standard som används av [!DNL Experience Manager Assets] för all metadatahantering. Standarden erbjuder universell metadatakodning som kan bäddas in i alla filformat. Adobe och andra företag stöder XMP standard eftersom de erbjuder en innehållsmodell med mycket innehåll. Användare av XMP som är standard och av [!DNL Experience Manager Assets] har en kraftfull plattform att bygga vidare på. For more information, see [XMP](https://www.adobe.com/products/xmp.html).
-
-### ID3 {#id}
-
-Data som lagras i dessa ID3-taggar visas när du spelar upp en digital ljudfil på datorn eller en bärbar MP3-spelare.
-
-ID3-taggar är utformade för filformatet MP3. Mer information om format:
-
-* ID3-taggar fungerar i MP3- och mp3PRO-filer.
-* WAV saknar taggar.
-* WMA har egna taggar som inte tillåter implementering med öppen källkod.
-* Ogg Vorbis använder Xiph-kommentarer som är inbäddade i Ogg-behållaren.
-* AAC använder ett märkordsformat.
-
-### Exif {#exif}
-
-Exchangeable image file format (Exif) är det vanligaste metadataformatet som används för digitalfoto. Det är ett sätt att bädda in en fast ordlista med metadataegenskaper i många filformat, till exempel JPEG, TIFF, RIFF och WAV. Exif lagrar metadata som par av ett metadatanamn och ett metadatavärde. Dessa metadata name-value-pars kallas också taggar, som inte ska blandas ihop med taggarna i [!DNL Experience Manager]. Moderna digitalkameror skapar Exif-metadata och moderna grafikprogram stöder det. Exif-formatet är den minsta gemensamma nämnaren för metadatahantering, särskilt för bilder.
-
-En stor begränsning för Exif är att ett fåtal populära bildfilsformat som BMP, GIF och PNG inte har stöd för det.
-
-Metadatafält som definieras av Exif är vanligtvis av teknisk natur och har begränsad användning för beskrivande metadatahantering. Av den anledningen erbjuder [!DNL Experience Manager Assets] mappning av Exif-egenskaper till [vanliga metadatamatchningar](metadata-schemas.md) och till [XMP](xmp-writeback.md).
-
-### Andra metadata {#other-metadata}
-
-Andra metadata som kan bäddas in från filer är bland annat [!DNL Microsoft Word], [!DNL PowerPoint], [!DNL Excel]osv.
-
-## Metadata-scheman {#metadata-schemata}
-
-Metadata-scheman är fördefinierade uppsättningar metadataegenskapsdefinitioner som kan användas i olika program. Egenskaper är alltid kopplade till en resurs, vilket innebär att egenskaperna är&quot;about&quot; för resursen.
-
-Du kan också utforma egna metadatamatchningar om det inte finns några som passar dina behov. Duplicera inte befintlig information. Inom en organisation gör separerade scheman det enklare att dela metadata. [!DNL Experience Manager] innehåller en standardlista med de vanligaste metadataschemana. Listan hjälper dig att snabbt komma igång med metadatastrategin och snabbt välja de metadataegenskaper du behöver.
-
-De metadatamappningar som stöds listas nedan.
-
-### Standardmetadata {#standard-metadata}
-
-* DC - [!DNL Dublin Core] är en viktig och allmänt använd uppsättning metadata.
-* DICOM - Digital Imaging and Communications in Medicine.
-* `Iptc4xmpCore` och `iptc4xmpExt` - International Press Communications Standard innehåller många ämnesspecifika metadata.
-* RDF - Resource Description Framework - för generiska semantiska webbmetadata.
-* XMP - [!DNL Extensible Metadata Platform].
-* `xmpBJ` - Grundläggande jobbiljetter.
-
-### Programspecifika metadata {#application-specific-metadata}
-
-Programspecifika metadata innehåller tekniska och beskrivande metadata. Om du använder sådana metadata kanske andra program inte kan använda dessa metadata. Ett annat bildåtergivningsprogram kanske inte kan komma åt [!DNL Adobe Photoshop] metadata. Du kan skapa ett arbetsflödessteg som ändrar en programspecifik egenskap till en standardegenskap.
-
-* ACDSee - metadata som hanteras av [!DNL ACDSee] programmet. Se [www.acdsee.com/](https://www.acdsee.com/).
-* Album - [!DNL Adobe Photoshop Album].
-* CQ - Används av [!DNL Experience Manager Assets].
-* DAM - Används av [!DNL Experience Manager Assets].
-* DEX - [Optima SC Description Explorer](http://www.optimasc.com/products/dex/index.html) är en samling verktyg för metadata och filhantering i Windows.
-* CRS - [Adobe Photoshop Camera Raw](https://helpx.adobe.com/camera-raw/using/introduction-camera-raw.html).
-* LR - [!DNL Adobe Lightroom].
-* MediaPro - [iView MediaPro](https://en.wikipedia.org/wiki/Phase_One_Media_Pro).
-* Microsoft Photo och MP - Microsoft Photo.
-* PDF och PDF/X.
-* Photoshop och psAux - [!DNL Adobe Photoshop].
-
-### Digital Rights Management metadata {#digital-rights-management-metadata}
-
-* CC - [!DNL Creative Commons].
-* [!DNL XMPRights].
-* PLUS - [Picture Licensing Universal System](https://www.useplus.com).
-* PRISM - [publiceringskrav för branschstandardmetadata](https://www.idealliance.org/prism-metadata).
-* PRL - PRISM Rights Language.
-* PUR - PRISM-användningsrättigheter.
-* `xmpPlus` - Integration av PLUS med XMP.
-
-### Fotografispecifika metadata {#photography-specific-metadata}
-
-* Exif - Teknisk information från kameran, inklusive GPS-position.
-* CRS - [!DNL Camera Raw] schema.
-* `iptc4xmpCore` and `iptc4xmpExt`.
-* TIFF - bildmetadata (inte bara för TIFF-bilder).
-
-### Utskriftsspecifika metadata {#print-specific-metadata}
-
-* PDF och PDF/X - Adobe PDF och tredjepartsprogram.
-* PRISM - [publiceringskrav för branschstandardmetadata](https://www.idealliance.org/prism-metadata/).
-* XMP - [!DNL Extensible Metadata Platform].
-* `xmpPG` - XMP metadata för sidindelad text.
-
-### Multimediaspecifika metadata {#multimedia-specific-metadata}
-
-* `xmpDM` - [!DNL Dynamic Media].
-* `xmpMM` - Mediehantering.
-
-## Metadatastyrda arbetsflöden {#metadata-driven-workflows}
-
-Genom att skapa metadatadrivna arbetsflöden kan du automatisera vissa processer, vilket ökar effektiviteten. I ett metadatadrivet arbetsflöde läser arbetsflödet och utför därför en fördefinierad åtgärd. Du kan till exempel använda metadatadrivna arbetsflöden på olika sätt:
-
-* Arbetsflödet kan kontrollera om en bild har en titel eller inte. Om så inte är fallet meddelas systemet om att en titel ska läggas till.
-* Arbetsflödet kan kontrollera om ett copyrightmeddelande för en mediefil tillåter distribution eller inte. Systemet skickar alltså resursen till den ena servern eller den andra.
-* Ett arbetsflöde kan söka efter resurser utan fördefinierade, obligatoriska metadata eller resurser med *ogiltiga* metadata.
-
->[!MORELIKETHIS]
->
->* [Redigera metadataegenskaper för flera samlingar](managing-collections-touch-ui.md#editing-collection-metadata-in-bulk)
->* [XMP-metadata](xmp.md).
->* [Redigera eller lägga till metadata](meta-edit.md).
->* [Referens](meta-ref.md)för metadatamappningar.
-
