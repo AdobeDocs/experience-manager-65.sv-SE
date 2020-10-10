@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: b555bf0c-44cb-4fbf-abc4-15971663904d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 37b3a553758ecd249a08e0d7d6e29becdcb018c2
 workflow-type: tm+mt
 source-wordcount: '1317'
 ht-degree: 0%
@@ -23,7 +23,7 @@ En profil är ett recept på vilka alternativ som ska användas för resurser so
 
 Dessa regler kan omfatta tillägg av metadata, smart beskärning av bilder eller etablering av videokodningsprofiler. I AEM kan du skapa tre typer av profiler som beskrivs närmare på följande länkar:
 
-* [Metadataprofiler](/help/assets/metadata-profiles.md)
+* [Metadataprofiler](/help/assets/metadata-config.md#metadata-profiles)
 * [Bildprofiler](/help/assets/image-profiles.md)
 * [Videoprofiler](/help/assets/video-profiles.md)
 
