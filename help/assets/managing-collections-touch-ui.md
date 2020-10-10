@@ -4,7 +4,7 @@ description: Lär dig mer om hur du hanterar samlingar med resurser, som att ska
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: cedefb58919d7d215040e72b4cc41159161938a8
 workflow-type: tm+mt
 source-wordcount: '2022'
 ht-degree: 10%
@@ -137,7 +137,7 @@ Smarta samlingar skapas genom att en sökning sparas så att du kan ändra deras
 1. Klicka **[!UICONTROL Overwrite]** för att ersätta den ursprungliga smarta samlingen med den redigerade samlingen. Du kan också välja **[!UICONTROL Save As]** att spara den redigerade samlingen separat.
 1. I bekräftelsedialogrutan klickar du **[!UICONTROL Save]** för att slutföra processen.
 
-## Visa och redigera samlingsmetadata {#viewing-and-editing-collection-metadata}
+## Visa och redigera samlingsmetadata {#view-edit-collection-metadata}
 
 Samlingsmetadata omfattar data om samlingen, inklusive taggar som läggs till.
 
