@@ -10,7 +10,7 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: fe61ee4b-51b6-4a6f-91d8-1c02b29cc1db
 translation-type: tm+mt
-source-git-commit: d14688b17f47a2b1c11833eac10413d58276f6be
+source-git-commit: b08149e00c418319ebacec71c56472ad4e8e1089
 workflow-type: tm+mt
 source-wordcount: '441'
 ht-degree: 2%
@@ -27,7 +27,7 @@ På grund av möjligheten att det finns olika värden är sidegenskaperna inte a
 * Vissa fält är vanligtvis unika. till exempel en sidrubrik. Du måste bestämma om det är meningsfullt att aktivera sådana fält för massredigering, när ett värde ska användas.
 * Vissa fält kan ha flera värden - detta kräver en meningsfull representation vid återgivningen.
 
-   Till exempel en kryssruta som anger&quot;Klart för publicering&quot;. Detta kan ha flera värden före gruppredigering (t.ex. ready, in-review, in-progress).
+   Till exempel en kryssruta som anger&quot;Klart för publikation&quot;. Detta kan ha flera värden före gruppredigering (t.ex. ready, in-review, in-progress).
 
 >[!CAUTION]
 >
@@ -36,13 +36,14 @@ På grund av möjligheten att det finns olika värden är sidegenskaperna inte a
 >* Inte tillgängligt i det klassiska användargränssnittet.
 >* Inte tillgängligt för sidor i en live-kopia.
 >* Endast tillgängligt för sidor med samma resurstyp.
+
 >
 
 
 
 >[!NOTE]
 >
->Massredigering är också tillgängligt för Assets. Den är mycket lik, men skiljer sig på några punkter. Mer information finns i [Redigera egenskaper för flera resurser](/help/assets/managing-multiple-assets.md) . Du kan anpassa fälten i redigeraren för massmetadata för resurser med [schemaredigeraren](/help/assets/metadata-schemas.md).
+>Massredigering är också tillgängligt för Assets. Den är mycket lik, men skiljer sig på några punkter. Mer information finns i [Redigera egenskaper för flera resurser](/help/assets/metadata.md) . Du kan anpassa fälten i redigeraren för massmetadata för resurser med [schemaredigeraren](/help/assets/metadata-schemas.md).
 
 ## Aktivera ett fält {#enabling-a-field}
 
@@ -56,13 +57,14 @@ På grund av möjligheten att det finns olika värden är sidegenskaperna inte a
 >* `/libs/granite/ui/components/foundation/form/datepicker`
 >* `/libs/granite/ui/components/foundation/form/pathbrowser`
 >* `/libs/granite/ui/components/foundation/form/checkbox`
+
 >
 
 
 
 Fält är aktiverade i sidkomponenten (*inte* i mallen):
 
-1. Om du använder CRXDE Lite (eller en motsvarande metod) öppnar du sidkomponenten.
+1. Öppna sidkomponenten med CRXDE Lite (eller en motsvarande metod).
 
    Till exempel: `/apps/core/wcm/components/page/v1/page`
 
@@ -76,6 +78,7 @@ Fält är aktiverade i sidkomponenten (*inte* i mallen):
    * **Namn**: `allowBulkEdit`
    * **Typ**: `Boolean`
    * **Värde**: `true`
+
    Exempel: för standardkomponenten [för](/help/sites-authoring/default-components-foundation.md)sidans grund:
 
    `/libs/foundation/components/page`
