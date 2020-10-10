@@ -6,10 +6,10 @@ user-guide-title: Resurshandbok
 breadcrumb-title: Assets Guide
 user-guide-description: Create, manage, deliver, and optimize digital assets.
 translation-type: tm+mt
-source-git-commit: 45d7f741660bd8dd31cd454c034f562fc5394621
+source-git-commit: 2cccbdea594bb9ba61e8c0f7884b724aab10b5da
 workflow-type: tm+mt
-source-wordcount: '644'
-ht-degree: 37%
+source-wordcount: '619'
+ht-degree: 36%
 
 ---
 
@@ -23,6 +23,7 @@ ht-degree: 37%
 + Använd Experience Manager Assets {#using}
    + [Assets home page experience](assets-home-page.md)
    + [Söka efter digitala resurser](search-assets.md)
+   + [Arbeta med metadata för resurser](metadata.md)
    + [Flerspråkiga resurser](multilingual-assets.md)
    + [Använda [!DNL Adobe Stock] resurser i resurser](aem-assets-adobe-stock.md)
    + [Förhandsgranska 3D-resurser](previewing-3d-assets.md)
@@ -91,28 +92,24 @@ ht-degree: 37%
 + Administrera resurser {#administer}
    + [Filformat som stöds](assets-formats.md)
    + [Söka efter fasetter](search-facets.md)
-   + [Hantera metadata för resurser](metadata.md)
+   + [Förstå metadatabegrepp](metadata-concepts.md)
+   + [Konfiguration av metadatafunktioner](metadata-config.md)
    + [XMP till återgivning](xmp-writeback.md)
    + [Resurslänkdelning](link-sharing.md)
    + [Materialrapporter](asset-reports.md)
    + [Förbättrade smarta taggar](enhanced-smart-tags.md)
    + [Profiler för att bearbeta metadata, bilder och videoklipp](processing-profiles.md)
-   + [Överlappande metadata](cascading-metadata.md)
    + [Skapa och konfigurera sidor för Resursredigeraren](assets-finder-editor.md)
    + [Guide för resursstorlek](assets-sizing-guide.md)
-   + [Referens för metadatamappningar](meta-ref.md)
    + [Bästa tillvägagångssätt för att översätta resurser](best-practices-for-translating-assets-efficiently.md)
    + [Prestandajusteringsguide för resurser](performance-tuning-guidelines.md)
-   + [Lägga till och redigera metadata](meta-edit.md)
    + [Guide för resursmigrering](assets-migration-guide.md)
-   + [XMP-metadata](xmp.md)
    + [Resurser för nätverksaspekter](assets-network-considerations.md)
    + [Resurser och MediaLibrary](medialibrary.md)
    + [Använd PDF-rastrering](aem-pdf-rasterizer.md)
    + [Konfigurera överföringsbegränsningar](configuring-asset-upload-restrictions.md)
    + [Integration mellan Experience Manager och Creative Cloud](aem-cc-integration-best-practices.md)
    + [Integrera med InDesign Server](indesign.md)
-   + [Metadataprofiler](metadata-profiles.md)
    + [Digital Rights Management i tillgångar](drm.md)
    + [Använd demopaket för resursinsikter](touch-ui-using-demo-package-for-asset-insights.md)
    + [Bästa metoder för att använda filformat](assets-file-format-best-practices.md)
@@ -120,14 +117,11 @@ ht-degree: 37%
    + [Camera Raw stöd](camera-raw.md)
    + [Identifiera MIME-typ av resurser med Apache Tika](detect-asset-mime-type-with-tika.md)
    + [Konverteringsbibliotek för bildbehandling](imaging-transcoding-library.md)
-   + [Stöd för IPTC-metadata](iptc-support.md)
    + [Metadata-scheman](metadata-schemas.md)
    + [Flera innehavare för samlingar, kodavsnitt och kodfragment](multi-tenancy.md)
    + [Vattenstämpla dina resurser](watermarking.md)
-   + [Importera och exportera massvis med metadata](metadata-import-export.md)
    + [Resursmallar](asset-templates.md)
    + [Bästa tillvägagångssätt för att dela mappar med Creative Cloud](aem-cc-folder-sharing-best-practices.md)
-   + [Metadataschema för mapp](folder-metadata-schema.md)
    + [Hantera smarta taggar](managing-smart-tags.md)
 + Varumärkesportal {#brandportal}
    + [Konfigurera Assets med varumärkesportalen](configure-aem-assets-with-brand-portal.md)
@@ -147,7 +141,6 @@ ht-degree: 37%
 + Hantera resurser {#managing}
    + [Hantera digitala resurser](managing-assets-touch-ui.md)
    + [Hantera samlingar](managing-collections-touch-ui.md)
-   + [Hantera flera resurser och samlingar](managing-multiple-assets.md)
    + [Konfigurera taggning med Smart Content Service](config-smart-tagging.md)
    + [Aktivera dubblettidentifiering](duplicate-detection.md)
    + [Ordna digitala resurser](organize-assets.md)
