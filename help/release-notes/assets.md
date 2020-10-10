@@ -2,7 +2,7 @@
 title: Versionsinformation om [!DNL Adobe Experience Manager Assets] 6.5.
 description: De nya funktionerna och förbättringarna i [!DNL Adobe Experience Manager] 6.5 [!DNL Assets].
 translation-type: tm+mt
-source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
+source-git-commit: 2cccbdea594bb9ba61e8c0f7884b724aab10b5da
 workflow-type: tm+mt
 source-wordcount: '901'
 ht-degree: 2%
@@ -68,7 +68,7 @@ I stora företag kan den infrastruktur som krävs för att skapa webbplatser dis
 
 [!DNL Dynamic Media] ger förbättrad multimediaproduktion och -leverans i [!DNL Experience Manager Assets] för att skapa engagerande och personaliserade upplevelser. Genom att överföra en enda högkvalitativ överordnad resurs och använda vår avancerade molnrendering och våra visningsprogram kan ni leverera vilken kombination av renderingar som helst direkt för att stödja er organisations mediestrategi.
 
-Mer information om nya [!DNL Dynamic Media] funktioner finns i [Dynamic Media Versionsinformation](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/release-notes/s7rn2017.html).
+Mer information om nya [!DNL Dynamic Media] funktioner finns i [Dynamic Media Release Notes](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/release-notes/s7rn2017.html).
 
 ### Stöd för 360-video {#video-support}
 
@@ -80,7 +80,7 @@ Nu kan du anpassa miniatyrbilderna för videomaterialet med hjälp av bildrutor 
 
 ### Förbättrad tillgänglighet {#accessibility-enhancements}
 
-[!DNL Dynamic Media] visningsprogrammen har nu stöd för förbättrade hjälpmedelsfunktioner som Aria-support, skärmläsare och Alt-text. Mer information finns i Versionsinformation om [Dynamic Media-visningsprogram](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html).
+[!DNL Dynamic Media] visningsprogrammen har nu stöd för förbättrade hjälpmedelsfunktioner som Aria-support, skärmläsare och Alt-text. Mer information finns i [Versionsinformation](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html)för Dynamic Media Viewer.
 
 ## Förbättrad sökupplevelse {#experience-enhancement-for-searching}
 
@@ -100,9 +100,9 @@ Du kan nu välja alla inlästa resurser i en mapp eller från ett sökresultat p
 
 ## Förbättringar av metadata {#metadata-enhancements}
 
-[!DNL Assets] Med kan du skapa metadatascheman för resursmappar, som definierar layouten och metadata som visas på mappegenskapssidor. Du kan nu tilldela ett mappmetadatchema till en befintlig mapp eller när du skapar en ny mapp. Mer information finns i Schema för [mappmetadata](/help/assets/folder-metadata-schema.md).
+[!DNL Assets] Med kan du skapa metadatascheman för resursmappar, som definierar layouten och metadata som visas på mappegenskapssidor. Du kan nu tilldela ett mappmetadatchema till en befintlig mapp eller när du skapar en ny mapp. Mer information finns i Schema för [mappmetadata](/help/assets/metadata-config.md#folder-metadata-schema).
 
-När du anger överlappande metadata kan alternativen läsas in från en JSON-fil vid körningen, till exempel i stället för att du skriver manuellt i formuläret. Mer information finns i [Överlappande metadata](/help/assets/cascading-metadata.md).
+När du anger överlappande metadata kan alternativen läsas in från en JSON-fil vid körningen, till exempel i stället för att du skriver manuellt i formuläret. Mer information finns i [överlappande metadata](/help/assets/metadata-schemas.md#cascading-metadata).
 
 ## Rapportförbättringar {#reporting-enhancements}
 
