@@ -3,7 +3,7 @@ title: Ordna dina digitala resurser
 description: Organisera dina digitala resurser, bilder, filer, mappar och så vidare med Experience Manager.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: bf49f515adb75bf4c0d50a53d0eaa7bb915389a9
 workflow-type: tm+mt
 source-wordcount: '780'
 ht-degree: 0%
@@ -46,7 +46,7 @@ Med taggar, som metadata, kan du enkelt söka efter resurser, skapa samlingar me
 Mer information finns i följande artiklar:
 
 * [Om taggar i Experience Manager](/help/sites-authoring/tags.md)
-* [Redigera metadata för resurser](meta-edit.md)
+* [Redigera metadata för resurser](metadata.md)
 * [Förbättrade smarta taggar i resurser](enhanced-smart-tags.md)
 
 ## Ordna som samlingar {#organize-as-collections}
@@ -69,7 +69,7 @@ Genom att standardisera metadataanvändning, filnamngivning och mappstruktur sä
 >[!MORELIKETHIS]
 >
 >* [Profiler för att bearbeta metadata, bilder och videoklipp](processing-profiles.md).
->* [Metadataprofiler](metadata-profiles.md).
+>* [Metadataprofiler](/help/assets/metadata-config.md#metadata-profiles).
 >* [Videoprofiler](video-profiles.md).
->* [Dynamic Media bildprofiler](image-profiles.md).
+>* [Dynamic Media-bildprofiler](image-profiles.md).
 
