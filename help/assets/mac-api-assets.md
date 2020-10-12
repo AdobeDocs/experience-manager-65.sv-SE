@@ -3,9 +3,9 @@ title: '[!DNL Assets] HTTP API.'
 description: Skapa, läsa, uppdatera, ta bort, hantera digitala resurser med HTTP API i [!DNL Adobe Experience Manager Assets].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: add8be813ce377384ee4d90600f54a1455a1ab0d
 workflow-type: tm+mt
-source-wordcount: '1660'
+source-wordcount: '1715'
 ht-degree: 0%
 
 ---
@@ -170,7 +170,7 @@ Uppdaterar en resurs binärfil (återgivning med namnet original). En uppdaterin
 
 ## Uppdatera metadata för resurs {#update-asset-metadata}
 
-Uppdaterar egenskaperna för resursmetadata. Om du uppdaterar någon egenskap i `dc:` namnutrymmet uppdaterar API:t samma egenskap i `jcr` namnutrymmet. API:t synkroniserar inte egenskaperna under de två namnutrymmena.
+Uppdaterar metadataegenskaperna för resursen. Om du uppdaterar någon egenskap i `dc:` namnutrymmet uppdaterar API:t samma egenskap i `jcr` namnutrymmet. API:t synkroniserar inte egenskaperna under de två namnutrymmena.
 
 **Begäran**: `PUT /api/assets/myfolder/myAsset.png -H"Content-Type: application/json" -d '{"class":"asset", "properties":{"jcr:title":"My Asset"}}'`
 
@@ -307,3 +307,9 @@ Tar bort en resurs (-tree) vid den angivna sökvägen.
 * 200 - OK - Om mappen har tagits bort.
 * 412 - PRECONDITION MISSLYCKADES - om rotsamlingen inte kan hittas eller nås.
 * 500 - INTERNT SERVERFEL - Om något annat går fel.
+
+## Tips och begränsningar {#tips-best-practices-limitations}
+
+* [HTTP API uppdaterar metadataegenskaperna](#update-asset-metadata) i `jcr` namnutrymmet. Experience Manager uppdaterar emellertid metadataegenskaperna i `dc` namnutrymmet.
+
+* Resurs-API returnerar inte alla metadata. I API är namnutrymmena hårdkodade och de returneras bara. Om du behöver hela metadata tittar du på resurssökvägen `/jcr_content/metadata.json`.
