@@ -6,10 +6,10 @@ user-guide-title: Resurshandbok
 breadcrumb-title: Assets Guide
 user-guide-description: Create, manage, deliver, and optimize digital assets.
 translation-type: tm+mt
-source-git-commit: 2cccbdea594bb9ba61e8c0f7884b724aab10b5da
+source-git-commit: caaf8c99d08cd88eca7d464816111cfb9f61590c
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 36%
+source-wordcount: '586'
+ht-degree: 34%
 
 ---
 
@@ -17,11 +17,11 @@ ht-degree: 36%
 # Resurshandbok {#assets}
 
 + [[!DNL Assets] användarhandbok](home.md)
-+ [Versionsinformation om Experience Manager 6.5 Assets](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/assets.html)
++ [[!DNL Experience Manager] 6.5 Versionsinformation om resurser](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/assets.html)
 + [Om DAM](assets.md)
 + [Metodtips för resurser](best-practices-for-assets.md)
 + Använd Experience Manager Assets {#using}
-   + [Assets home page experience](assets-home-page.md)
+   + [[!DNL Assets] upplevelse på hemsidan](assets-home-page.md)
    + [Söka efter digitala resurser](search-assets.md)
    + [Arbeta med metadata för resurser](metadata.md)
    + [Flerspråkiga resurser](multilingual-assets.md)
@@ -32,7 +32,7 @@ ht-degree: 36%
    + [Bearbeta resurser](assets-workflow.md)
    + [Lägg till bildscheman](image-maps.md)
    + [Återanvända resurser med MSM](reuse-assets-using-msm.md)
-   + [Anslutna resurser med platser](use-assets-across-connected-assets-instances.md)
+   + [Anslutna resurser med [!DNL Sites]](use-assets-across-connected-assets-instances.md)
 + Dynamic Media{#dynamic}
    + [Dynamic Media-nyhetsbrev från Experience League](dynamic-media-newsletter.md)
    + [Installera Dynamic Media](administering-dynamic-media.md)
@@ -80,15 +80,15 @@ ht-degree: 36%
    + [Installerar funktionspaket 18912 för migrering av gruppresurser](bulk-ingest-migrate.md)
    + [Arbeta med väljare](working-with-selectors.md)
 + Utöka resurser {#extending}
-   + [Anpassa och utöka resurser](extending-assets.md)
+   + [Anpassa och utöka [!DNL Assets]](extending-assets.md)
    + [Bearbeta resurser med mediehanterare och arbetsflöden](media-handlers.md)
    + [Utöka sökfunktionen](searchx.md)
-   + [Installera och [!DNL ImageMagick] konfigurera för att arbeta med resurser](best-practices-for-imagemagick.md)
+   + [Installera och [!DNL ImageMagick] konfigurera för att arbeta med [!DNL Assets]](best-practices-for-imagemagick.md)
    + [Integrera resurser med aktivitetsströmmen](extending-activity-stream.md)
    + [Utöka resursredigeraren](asseteditorx.md)
-   + [HTTP API för Assets](mac-api-assets.md)
-   + [Content Fragments support in Assets HTTP API](assets-api-content-fragments.md)
-   + [Proxyutveckling för resurser](proxy.md)
+   + [[!DNL Assets] HTTP-API](mac-api-assets.md)
+   + [Content Fragments support [!DNL Assets] inHTTP API](assets-api-content-fragments.md)
+   + [[!DNL Assets] proxyutveckling](proxy.md)
 + Administrera resurser {#administer}
    + [Filformat som stöds](assets-formats.md)
    + [Söka efter fasetter](search-facets.md)
@@ -102,14 +102,14 @@ ht-degree: 36%
    + [Skapa och konfigurera sidor för Resursredigeraren](assets-finder-editor.md)
    + [Guide för resursstorlek](assets-sizing-guide.md)
    + [Bästa tillvägagångssätt för att översätta resurser](best-practices-for-translating-assets-efficiently.md)
-   + [Prestandajusteringsguide för resurser](performance-tuning-guidelines.md)
-   + [Guide för resursmigrering](assets-migration-guide.md)
-   + [Resurser för nätverksaspekter](assets-network-considerations.md)
-   + [Resurser och MediaLibrary](medialibrary.md)
+   + [[!DNL Assets] guide för prestandajustering](performance-tuning-guidelines.md)
+   + [[!DNL Assets] migreringsguide](assets-migration-guide.md)
+   + [[!DNL Assets] nätverksaspekter](assets-network-considerations.md)
+   + [[!DNL Assets] och MediaLibrary](medialibrary.md)
    + [Använd PDF-rastrering](aem-pdf-rasterizer.md)
    + [Konfigurera överföringsbegränsningar](configuring-asset-upload-restrictions.md)
-   + [Integration mellan Experience Manager och Creative Cloud](aem-cc-integration-best-practices.md)
-   + [Integrera med InDesign Server](indesign.md)
+   + [[!DNL Experience Manager] and [!DNL Creative Cloud] integration](aem-cc-integration-best-practices.md)
+   + [Integrera med [!DNL InDesign Server]](indesign.md)
    + [Digital Rights Management i tillgångar](drm.md)
    + [Använd demopaket för resursinsikter](touch-ui-using-demo-package-for-asset-insights.md)
    + [Bästa metoder för att använda filformat](assets-file-format-best-practices.md)
@@ -121,13 +121,13 @@ ht-degree: 36%
    + [Flera innehavare för samlingar, kodavsnitt och kodfragment](multi-tenancy.md)
    + [Vattenstämpla dina resurser](watermarking.md)
    + [Resursmallar](asset-templates.md)
-   + [Bästa tillvägagångssätt för att dela mappar med Creative Cloud](aem-cc-folder-sharing-best-practices.md)
+   + [Bästa tillvägagångssätt för att dela mapp med [!DNL Creative Cloud]](aem-cc-folder-sharing-best-practices.md)
    + [Hantera smarta taggar](managing-smart-tags.md)
 + Varumärkesportal {#brandportal}
-   + [Konfigurera Assets med varumärkesportalen](configure-aem-assets-with-brand-portal.md)
-   + [Publicera resurser på varumärkesportalen](brand-portal-publish-assets.md)
-   + [Publicera mappar på varumärkesportalen](brand-portal-publish-folder.md)
-   + [Publicera samlingar på varumärkesportalen](brand-portal-publish-collection.md)
+   + [ [!DNL Assets] Konfigurera med [!DNL Brand Portal]](configure-aem-assets-with-brand-portal.md)
+   + [Publicera resurser på [!DNL Brand Portal]](brand-portal-publish-assets.md)
+   + [Publicera mappar till [!DNL Brand Portal]](brand-portal-publish-folder.md)
+   + [Publicera samlingar till [!DNL Brand Portal]](brand-portal-publish-collection.md)
 + Innehållsfragment {#fragments}
    + [Arbeta med innehållsfragment](content-fragments/content-fragments.md)
    + [Hantera innehållsfragment](content-fragments/content-fragments-managing.md)
@@ -148,7 +148,6 @@ ht-degree: 36%
    + [Skapa översättningsprojekt](translation-projects.md)
    + [Förbered resurser för översättning](preparing-assets-for-translation.md)
    + [Hämta resurser från Experience Manager](download-assets-from-aem.md)
-   + [Asynkrona jobb](asynchronous-jobs.md)
    + [Ljuslåda](touch-ui-light-box.md)
    + [Resursinsikter](touch-ui-asset-insights.md)
    + [Aktivera tillgångsinsikter via DTM](touch-ui-using-dtm-for-asset-insights.md)
