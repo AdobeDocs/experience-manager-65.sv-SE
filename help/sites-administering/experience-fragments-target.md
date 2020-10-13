@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: d4152b4d-531b-4b62-8807-a5bc5afe94c6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 410858ee7d1b8022070445937731644724a90155
 workflow-type: tm+mt
-source-wordcount: '1179'
+source-wordcount: '1233'
 ht-degree: 0%
 
 ---
@@ -28,6 +28,7 @@ ht-degree: 0%
 >6.5.3.0
 >
 >* **Externalizer-domäner** kan nu väljas.
+   >  **Obs!** Externalizer-domäner är bara relevanta för innehållet i Experience Fragment som skickas till Target, och inte för metadata som Visa erbjudandeinnehåll.
 >
 >
 6.5.2.0:
@@ -136,7 +137,11 @@ De obligatoriska alternativen kan väljas i **Sidegenskaper** för den mapp och/
 
    >[!CAUTION]
    >
-   >Externeringsdomänen är valfri. En AEM externalisering konfigureras när du vill att det exporterade innehållet ska peka på en specifik *publiceringsdomän* . Mer information finns i [Konfigurera AEM Link Externalizer](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer).
+   >Externeringsdomänen är valfri.
+   >
+   > En AEM externalisering konfigureras när du vill att det exporterade innehållet ska peka på en specifik *publiceringsdomän* . Mer information finns i [Konfigurera AEM Link Externalizer](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer).
+   >
+   > Observera också att Externalizer-domäner bara är relevanta för innehållet i Experience Fragment som skickas till Target, och inte för metadata som Visa erbjudandeinnehåll.
 
    För en mapp:
 
