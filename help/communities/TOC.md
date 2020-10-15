@@ -4,11 +4,11 @@ product: adobe experience manager
 audience: end-user
 user-guide-title: Användarhandbok för AEM 6.5 Communities
 breadcrumb-title: Communities Guide
-user-guide-description: Create online experiences such as forums, user groups, learning resources, and other social features.
+user-guide-description: Skapa onlineupplevelser som forum, användargrupper, utbildningsresurser och andra sociala funktioner.
 translation-type: tm+mt
 source-git-commit: d340f34704149c9e096aa6988bb3e3fda1caf3d7
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '481'
 ht-degree: 0%
 
 ---
