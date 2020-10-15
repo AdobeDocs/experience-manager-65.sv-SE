@@ -3,12 +3,12 @@ cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.5 Mobile User Guide
-breadcrumb-title: Mobile Guide
-user-guide-description: Create and manage content for mobile apps.
+breadcrumb-title: Mobilguide
+user-guide-description: Skapa och hantera innehåll för mobilappar.
 translation-type: tm+mt
 source-git-commit: e917a36f9b8748080e9ab770a7f58f06123ea166
 workflow-type: tm+mt
-source-wordcount: '315'
+source-wordcount: '324'
 ht-degree: 0%
 
 ---
