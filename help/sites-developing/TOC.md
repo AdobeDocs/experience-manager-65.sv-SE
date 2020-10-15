@@ -3,12 +3,12 @@ cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.5 Developing User Guide
-breadcrumb-title: Developing Guide
-user-guide-description: This guide covers how to build out your AEM instance.
+breadcrumb-title: Utvecklingshandbok
+user-guide-description: Den här guiden beskriver hur du skapar AEM.
 translation-type: tm+mt
 source-git-commit: fe3e8c29abe832899a6466c4b018b9aa2104e908
 workflow-type: tm+mt
-source-wordcount: '823'
+source-wordcount: '835'
 ht-degree: 6%
 
 ---
@@ -102,21 +102,21 @@ ht-degree: 6%
    + [Headless och Hybrid with AEM](https://www.adobe.com/content/dam/www/us/en/marketing/experience-manager-sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
    + [Aktivera JSON-export för en komponent](json-exporter-components.md)
    + Enkelsidiga program{#spas}
-      + [Introduktion och genomgång av SPA](spa-walkthrough.md)
+      + [SPA introduktion och genomgång](spa-walkthrough.md)
       + [SPA WKND - självstudiekurs](spa-wknd.md)
-      + [Komma igång med SPA i AEM - Reaktion](spa-getting-started-react.md)
-      + [Komma igång med SPA i AEM - vinkelrät](spa-getting-started-angular.md)
+      + [Getting Started with SPA in AEM - React](spa-getting-started-react.md)
+      + [Getting Started with SPA in AEM - Angular](spa-getting-started-angular.md)
       + [Implementera en React Component for SPA](spa-implementing-react-component.md)
-      + [SPA Deep Dives](spa-deep-dives.md)
-      + [SPA Editor - översikt](spa-overview.md)
+      + [SPA djupdykning](spa-deep-dives.md)
+      + [SPA](spa-overview.md)
       + [Utveckla SPA för AEM](spa-architecture.md)
       + [SPA Blueprint](spa-blueprint.md)
-      + [SPA-sidkomponent](spa-page-component.md)
+      + [SPA](spa-page-component.md)
       + [Dynamisk mappning av modell till komponent för SPA](spa-dynamic-model-to-component-mapping.md)
-      + [SPA-modellroutning](spa-routing.md)
-      + [Integration med SPA och Adobe Experience Platform Launch](spa-launch.md)
-      + [SPA och serversidesrendering](spa-ssr.md)
-      + [SPA-referensmaterial](spa-reference-materials.md)
+      + [SPA](spa-routing.md)
+      + [SPA och Adobe Experience Platform Launch Integration](spa-launch.md)
+      + [SPA- och serveråtergivning](spa-ssr.md)
+      + [SPA referensmaterial](spa-reference-materials.md)
    + [HTTP-API](/help/assets/mac-api-assets.md)
    + [Innehållsfragment](/help/assets/content-fragments/content-fragments.md)
    + [Experience Fragments](/help/sites-authoring/experience-fragments.md)
