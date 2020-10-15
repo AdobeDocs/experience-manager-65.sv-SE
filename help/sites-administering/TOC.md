@@ -3,12 +3,12 @@ cloud: experience-cloud
 product: adobe experience manager
 audience: admin-user
 user-guide-title: Användarhandbok för AEM 6.5
-breadcrumb-title: Administering Guide
-user-guide-description: Learn about administering AEM.
+breadcrumb-title: Administratörshandbok
+user-guide-description: Läs om hur du administrerar AEM.
 translation-type: tm+mt
 source-git-commit: fe3e8c29abe832899a6466c4b018b9aa2104e908
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '625'
 ht-degree: 6%
 
 ---
