@@ -3,9 +3,9 @@ title: Hantera metadata för era digitala resurser i [!DNL Adobe Experience Mana
 description: Lär dig mer om metadatatyperna och [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager] hur du automatiskt kan ordna och bearbeta resurser baserat på deras metadata.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c3f85314740c4e9ca8ed0c9a724b49ff4276616a
+source-git-commit: b14b377e52ab10c41355f069d97508b588d82216
 workflow-type: tm+mt
-source-wordcount: '2339'
+source-wordcount: '2324'
 ht-degree: 10%
 
 ---
@@ -49,7 +49,7 @@ Så här redigerar du metadata för en resurs i [!DNL Assets] användargränssni
 
    ![Välj Egenskaper för en resurs för att visa dess metadata](assets/asset-metadata.png)
 
-   *Bild: Redigera eller lägga till metadata på[!UICONTROL Properties]resurssidan.*
+   *Bild: Redigera eller lägga till metadata på [!UICONTROL Properties] resurssidan.*
 
 1. Make edits to the metadata under the various tabs, as required, and when completed, click **[!UICONTROL Save]** from the toolbar to save your changes. Click **[!UICONTROL Close]** to return to the [!DNL Assets] web interface.
 
@@ -68,7 +68,7 @@ XMP stöds och är aktiverat för de plattformar och filformat som beskrivs i de
 * Ändra metadataegenskaper till ett gemensamt värde
 * Lägga till eller ändra taggar
 
-Om du vill anpassa sidan med metadataegenskaper, inklusive lägga till, ändra eller ta bort metadataegenskaper, använder du schemaredigeraren.
+Om du vill anpassa sidan med metadataegenskaper, inklusive lägga till, ändra eller ta bort metadataegenskaper, använder du [schemaredigeraren](metadata-config.md#folder-metadata-schema).
 
 >[!NOTE]
 >
@@ -188,7 +188,7 @@ För mappar som redan har tilldelats en profil visas profilens namn direkt under
 
 Du kan bearbeta resurser i en mapp som redan har en befintlig videoprofil som du senare ändrade. Se [Bearbeta resurser i en mapp när du har redigerat dess bearbetningsprofil](processing-profiles.md#reprocessing-assets).
 
-### Använda metadataprofiler på mappar från användargränssnittet för profiler {#applying-metadata-profiles-to-folders-from-profiles-user-interface}
+### Använda metadataprofiler på mappar från [!UICONTROL Profiles] användargränssnittet {#applying-metadata-profiles-to-folders-from-profiles-user-interface}
 
 Så här använder du metadataprofilen:
 
@@ -196,7 +196,7 @@ Så här använder du metadataprofilen:
 1. Välj den metadataprofil som du vill använda för en eller flera mappar.
 1. Click **[!UICONTROL Apply Metadata Profile to Folder(s)]** and select the folder or multiple folders you want use to receive the newly uploaded assets and click **[!UICONTROL Done]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
 
-### Använd metadataprofiler på mappar från Egenskaper {#applying-metadata-profiles-to-folders-from-properties}
+### Använd metadataprofiler på mappar från [!UICONTROL Properties] {#applying-metadata-profiles-to-folders-from-properties}
 
 1. Klicka på den vänstra listen **[!UICONTROL Assets]** och navigera sedan till mappen där du vill använda en metadataprofil.
 1. Markera mappen genom att klicka på bockmarkeringen och klicka sedan på **[!UICONTROL Properties]**.
@@ -205,9 +205,11 @@ Så här använder du metadataprofilen:
 
 För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
 
-### Använd metadataprofil globalt {#metadata-profile-global}
+<!-- TBD: Commenting as the topic in metadata-config.md is incomplete.
 
-Mer information finns i [Konfiguration för att tillämpa metadataprofil globalt](/help/assets/metadata-config.md#apply-a-metadata-profile-globally).
+### Apply metadata profile globally {#metadata-profile-global}
+
+For details, see [configuration to apply metadata profile globally](/help/assets/metadata-config.md#apply-a-metadata-profile-globally). -->
 
 ### Ta bort en metadataprofil från mappar {#removing-a-metadata-profile-from-folders}
 
