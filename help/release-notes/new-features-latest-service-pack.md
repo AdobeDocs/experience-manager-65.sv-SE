@@ -4,9 +4,9 @@ description: Nyheter i Adobe Experience Manager 6.5 Service Pack 6
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 9d549e19a22b06f010b99e5dfff1d4cef05a5bed
+source-git-commit: 6e7da5aa0a8ea224de256717ca37193dcf6577be
 workflow-type: tm+mt
-source-wordcount: '2491'
+source-wordcount: '2534'
 ht-degree: 0%
 
 ---
@@ -77,7 +77,7 @@ Du kan nu välja att selektivt publicera eller avpublicera resurser till antinge
 ### Fyll i ett anpassat formulär i förväg på klienten {#prefill-merge-data-at-client}
 
 När du fyller i ett adaptivt formulär i förväg sammanfogar servern data med ett adaptivt formulär och skickar det ifyllda formuläret till dig. [!DNL Experience Manager Forms] Som standard utförs datasammanfogningsåtgärden på servern.
-Nu kan du konfigurera [!DNL Experience Manager Forms] servern så att den utför datasammanfogningsåtgärden på klienten i stället för på servern. Det minskar avsevärt den tid som krävs för att förifylla och återge anpassningsbara formulär.
+Nu kan du konfigurera [!DNL Experience Manager Forms] servern så att den [utför datasammanfogningsåtgärden på klienten](../../help/forms/using/prepopulate-adaptive-form-fields.md) i stället för på servern. Det minskar avsevärt den tid som krävs för att förifylla och återge anpassningsbara formulär.
 
 ### Integrering av formulärdatamodell med RESTful API:er på en server med tvåvägs SSL-implementering {#fdm-integration-rest-apis-two-way-ssl}
 
@@ -87,7 +87,7 @@ Nu kan du konfigurera [!DNL Experience Manager Forms] servern så att den utför
 
 Om ett AcroForm innehåller [!DNL Adobe Sign] texttaggar identifieras och representeras dessa fält som [!DNL Adobe Sign] fält i det adaptiva formuläret som konverterats med [!DNL Automated Forms Conversion service]. En signerare kan fylla i sådana fält medan han/hon signerar det anpassade formuläret.
 
-### Support to convert colored PDF forms to adaptive forms {#colore-PDF-forms}
+### Support to convert colored PDF forms to adaptive forms {#colored-PDF-forms}
 
 Du kan använda [!DNL Automated Forms Conversion service] för att konvertera färgad PDF forms till adaptiva formulär.
 
@@ -97,7 +97,7 @@ Du kan använda [!DNL Automated Forms Conversion service] för att konvertera f�
 
 ### Förbättrad cachning för översatta adaptiva formulärsidor {#enhanced-caching-translated-adaptive-forms}
 
-Du kan nu ange språkområdet som en väljare i stället för URL-argumentet. Det hjälper till att cachelagra översatta adaptiva formulär på [!DNL Experience Manager Dispatcher].
+Du kan nu ange [språkområde som en väljare i den anpassningsbara formulärets URL i stället för ett argument i en anpassad formulär-URL](../../help/forms/using/supporting-new-language-localization.md). Det hjälper till att cachelagra översatta adaptiva formulär på [!DNL Experience Manager Dispatcher]. Det gick inte att cachelagra översatt adaptiv form i tidigare versioner. Mer information om hur du konfigurerar cachning för att använda språkområdet som väljare i URL:en för anpassningsbara formulär finns i [Konfigurera cacheminne för anpassningsbara formulär vid dispatcher](../../help/forms/using/configure-adaptive-forms-cache.md).
 
 ### Spara utdata från formulärdatamodelltjänst till en variabel {#save-fdm-service-to-variable}
 
@@ -105,7 +105,9 @@ Med formulärdatamodellen kan du spara utdata från en formulärdatamodelltjäns
 
 ### Bifoga flera filer för komponenten Bifogad fil {#attach-multiple-files}
 
-Nu kan du bifoga flera filer till [!UICONTROL File Attachment] komponenten i adaptiva formulär.
+Nu kan du [bifoga flera filer](../../help/forms/using/introduction-forms-authoring.md) till [!UICONTROL File Attachment] komponenten i adaptiva formulär.
+
+
 
 ## Viktiga funktioner i tidigare Experience Manager 6.5 Service Packs {#key-features-previous-service-packs}
 
