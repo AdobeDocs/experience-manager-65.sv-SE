@@ -3,12 +3,12 @@ cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
 user-guide-title: Användarhandbok för redigering av AEM 6.5 Classic UI
-user-guide-description: This guide covers the concepts of authoring in AEM in the classic user interface.
+user-guide-description: Den här handboken beskriver koncepten för redigering i AEM i det klassiska användargränssnittet.
 translation-type: tm+mt
 source-git-commit: 0b702f58ef7dc85df43bc6d34866dbf3d1100b5e
 workflow-type: tm+mt
-source-wordcount: '257'
-ht-degree: 21%
+source-wordcount: '271'
+ht-degree: 20%
 
 ---
 
