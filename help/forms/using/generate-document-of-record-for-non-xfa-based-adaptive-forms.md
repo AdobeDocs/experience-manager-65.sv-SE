@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: ce65cb5f-94ec-4423-9fa9-d617e9703091
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+source-git-commit: fa3d5923784a8d89e2b440412d2b88790de3e39e
 workflow-type: tm+mt
-source-wordcount: '2723'
+source-wordcount: '2646'
 ht-degree: 1%
 
 ---
@@ -277,10 +277,6 @@ Du kan också välja en formulärmodell när du skapar ett formulär.
 
    **Generera postdokument** Välj det här alternativet om du vill använda en XDP-fil som basmall för att definiera format och utseende för postdokumentet. När du väljer det här alternativet visas alla XDP-filer som är tillgängliga i AEM Forms-databasen. Välj lämplig fil.
 
-   **[!UICONTROL Select this option to use an XDP file as a base template for defining the styling and appearance for the document of record. On selecting this option, all XDP files available in AEM Forms repository are displayed. Select the appropriate file.]**
-
-   **Välj Forms-mall som basmall om du vill generera dokument för post** . Välj det här alternativet om du vill använda en XDP-fil som basmall för att definiera format och utseende för postdokumentet. När du väljer det här alternativet visas alla XDP-filer som är tillgängliga i AEM Forms-databasen. Välj lämplig fil.
-
    >[!NOTE]
    >
    >Se till att schemat som används för att skapa anpassningsbara formulär och schema (databchema) för XFA-formulär är desamma om:
@@ -380,8 +376,6 @@ Tänk på följande när du arbetar med urkunder för anpassade formulär.
 
 * Postmallar för dokument stöder inte RTF-text. Därför visas all formaterad text i det statiska adaptiva formuläret eller i den information som fylls i av slutanvändaren som oformaterad text i postdokumentet.
 * Dokumentfragment i ett anpassat formulär visas inte i postdokumentet. Däremot stöds adaptiva formulärfragment.
-* urkunder används endast för utskrift.
-* Det finns inte stöd för innehållsbindning i dokument med poster som genererats för XML-schemabaserade adaptiva formulär.
 * Det finns inte stöd för innehållsbindning i dokument med poster som genererats för XML-schemabaserade adaptiva formulär.
 * Lokaliserad version av postdokument skapas på begäran för en språkinställning när användaren begär återgivningen av postdokumentet. Lokalisering av postdokument sker tillsammans med lokalisering av anpassat formulär. Mer information om lokalisering av dokument med post och adaptiva formulär finns i [Använda arbetsflöde för AEM för att lokalisera adaptiva formulär och urkunder](/help/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.md).
 
