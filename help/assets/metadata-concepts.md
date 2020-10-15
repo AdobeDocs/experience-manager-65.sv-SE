@@ -3,7 +3,7 @@ title: Förstå metadatabegrepp
 description: Lär dig mer om behovet av och typer av metadata som gör det enklare att kategorisera och ordna resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c3f85314740c4e9ca8ed0c9a724b49ff4276616a
+source-git-commit: b14b377e52ab10c41355f069d97508b588d82216
 workflow-type: tm+mt
 source-wordcount: '2720'
 ht-degree: 6%
@@ -120,7 +120,7 @@ Programspecifika metadata innehåller tekniska och beskrivande metadata. Om du a
 * Album - [!DNL Adobe Photoshop Album].
 * CQ - Används av [!DNL Experience Manager Assets].
 * DAM - Används av [!DNL Experience Manager Assets].
-* DEX - [Optima SC Description Explorer](http://www.optimasc.com/products/dex/index.html) är en samling verktyg för metadata och filhantering i Windows.
+* DEX - [Optima SC Description Explorer](https://www.optimasc.com/products/dex/index.html) är en samling verktyg för metadata och filhantering i Windows.
 * CRS - [Adobe Photoshop Camera Raw](https://helpx.adobe.com/camera-raw/using/introduction-camera-raw.html).
 * LR - [!DNL Adobe Lightroom].
 * MediaPro - [iView MediaPro](https://en.wikipedia.org/wiki/Phase_One_Media_Pro).
