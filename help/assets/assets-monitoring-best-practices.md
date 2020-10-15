@@ -3,9 +3,9 @@ title: Bästa tillvägagångssätt för [!DNL Assets] övervakning av driftsätt
 description: Bästa tillvägagångssätt för att övervaka miljön och prestanda för [!DNL Adobe Experience Manager] din distribution efter att den har distribuerats.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 117208c634613559bb13556e12f094add70006e2
+source-git-commit: b14b377e52ab10c41355f069d97508b588d82216
 workflow-type: tm+mt
-source-wordcount: '1671'
+source-wordcount: '1668'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Du bör utföra direktövervakning under prestandatestningsfasen av din utveckli
 * [Överkant](https://man7.org/linux/man-pages/man1/top.1.html): Det övre är ett Linux-kommando som öppnar en kontrollpanel som visar användningsstatistik, inklusive processor-, minnes- och IO-användning. Den ger en översikt på hög nivå över vad som händer i en instans.
 * [Htop](https://hisham.hm/htop/): Htop är ett interaktivt processvisningsprogram. Den ger detaljerad processor- och minnesanvändning utöver vad Top kan tillhandahålla. Htop kan installeras på de flesta Linux-system med `yum install htop` eller `apt-get install htop`.
 
-* [Inotop](https://guichaz.free.fr/iotop/): IOtop är en detaljerad kontrollpanel för diskanvändning. Här visas staplar och mätare som avbildar de processer som använder disk-I/O och hur mycket de använder. Jotop kan installeras på de flesta Linux-system med `yum install iotop` eller `apt-get install iotop`.
+* Jotop: IOtop är en detaljerad kontrollpanel för diskanvändning. Här visas staplar och mätare som avbildar de processer som använder disk-I/O och hur mycket de använder. Jotop kan installeras på de flesta Linux-system med `yum install iotop` eller `apt-get install iotop`.
 
 * [Iftop](https://www.ex-parrot.com/pdw/iftop/): Iftop visar detaljerad information om Ethernet-/nätverksanvändning. Om Iftop visar statistik per kommunikationskanal för de enheter som använder Ethernet och den bandbredd de använder. Iftop kan installeras på de flesta Linux-system med `yum install iftop` eller `apt-get install iftop`.
 
