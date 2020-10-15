@@ -3,9 +3,9 @@ title: Hämta resurser
 description: Lär dig hur du hämtar resurser [!DNL Adobe Experience Manager] från och aktiverar eller inaktiverar hämtningsfunktionen.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: b14b377e52ab10c41355f069d97508b588d82216
 workflow-type: tm+mt
-source-wordcount: '822'
+source-wordcount: '838'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Så här hämtar du resurser:
 
    ![Tillgängliga alternativ vid hämtning av resurser från Experience Manager Assets](/help/assets/assets/asset-download1.png)
 
-   *Bild: Alternativ i dialogrutan Hämta.*
+   *Bild: Alternativ som är tillgängliga i hämtningsdialogrutan.*
 
 1. I dialogrutan Hämta väljer du de hämtningsalternativ som du vill använda.
 
@@ -73,6 +73,7 @@ Du `Asset Download Servlet` kan inaktivera funktionen på en [!DNL Experience Ma
 
 >[!MORELIKETHIS]
 >
+>* [Hämta resurser med varumärkesportalen](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/download/brand-portal-download-assets.html)
 >* [Hämta DRM-skyddade resurser](drm.md).
 >* [Hämta resurser med datorprogrammet Experience Manager på Win- eller Mac-datorer](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#download-assets).
 >* [Hämta resurser med Adobe Assets Link inifrån de Adobe Creative Cloud-program](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html)som stöds.
