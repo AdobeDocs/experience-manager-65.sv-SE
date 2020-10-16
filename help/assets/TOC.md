@@ -6,10 +6,10 @@ user-guide-title: Resurshandbok
 breadcrumb-title: Resurshandbok
 user-guide-description: Skapa, hantera, leverera och optimera digitala resurser.
 translation-type: tm+mt
-source-git-commit: caaf8c99d08cd88eca7d464816111cfb9f61590c
+source-git-commit: 5599e0d4a3e52a4ad98b776b9178722c7ac47cbc
 workflow-type: tm+mt
-source-wordcount: '595'
-ht-degree: 33%
+source-wordcount: '585'
+ht-degree: 34%
 
 ---
 
@@ -28,6 +28,7 @@ ht-degree: 33%
    + [Använda [!DNL Adobe Stock] resurser i resurser](aem-assets-adobe-stock.md)
    + [Förhandsgranska 3D-resurser](previewing-3d-assets.md)
    + [Granska resurser i mappar och samlingar](bulk-approval.md)
+   + [Förbättrade smarta taggar](enhanced-smart-tags.md)
    + [Aktivitetsström på tidslinjen](activity-stream.md)
    + [Bearbeta resurser](assets-workflow.md)
    + [Lägg till bildscheman](image-maps.md)
@@ -93,11 +94,12 @@ ht-degree: 33%
    + [Filformat som stöds](assets-formats.md)
    + [Söka efter fasetter](search-facets.md)
    + [Förstå metadatabegrepp](metadata-concepts.md)
-   + [Konfiguration av metadatafunktioner](metadata-config.md)
+   + [Konfigurera metadatafunktioner](metadata-config.md)
+   + [Metadata-scheman](metadata-schemas.md)
    + [XMP till återgivning](xmp-writeback.md)
    + [Resurslänkdelning](link-sharing.md)
    + [Materialrapporter](asset-reports.md)
-   + [Förbättrade smarta taggar](enhanced-smart-tags.md)
+   + [Konfigurera Smart Content Service för taggning](config-smart-tagging.md)
    + [Profiler för att bearbeta metadata, bilder och videoklipp](processing-profiles.md)
    + [Skapa och konfigurera sidor för Resursredigeraren](assets-finder-editor.md)
    + [Guide för resursstorlek](assets-sizing-guide.md)
@@ -117,12 +119,10 @@ ht-degree: 33%
    + [Camera Raw stöd](camera-raw.md)
    + [Identifiera MIME-typ av resurser med Apache Tika](detect-asset-mime-type-with-tika.md)
    + [Konverteringsbibliotek för bildbehandling](imaging-transcoding-library.md)
-   + [Metadata-scheman](metadata-schemas.md)
    + [Flera innehavare för samlingar, kodavsnitt och kodfragment](multi-tenancy.md)
    + [Vattenstämpla dina resurser](watermarking.md)
    + [Resursmallar](asset-templates.md)
    + [Bästa tillvägagångssätt för att dela mapp med [!DNL Creative Cloud]](aem-cc-folder-sharing-best-practices.md)
-   + [Hantera smarta taggar](managing-smart-tags.md)
 + Varumärkesportal {#brandportal}
    + [ [!DNL Assets] Konfigurera med [!DNL Brand Portal]](configure-aem-assets-with-brand-portal.md)
    + [Publicera resurser på [!DNL Brand Portal]](brand-portal-publish-assets.md)
@@ -141,7 +141,6 @@ ht-degree: 33%
 + Hantera resurser {#managing}
    + [Hantera digitala resurser](managing-assets-touch-ui.md)
    + [Hantera samlingar](managing-collections-touch-ui.md)
-   + [Konfigurera taggning med Smart Content Service](config-smart-tagging.md)
    + [Aktivera dubblettidentifiering](duplicate-detection.md)
    + [Ordna digitala resurser](organize-assets.md)
    + [Hantera videoresurser](managing-video-assets.md)
@@ -158,5 +157,4 @@ ht-degree: 33%
    + [Hantera sammansatta resurser](managing-linked-subassets.md)
    + [Relaterade tillgångar](related-assets.md)
    + [Delning av privata mappar](private-folder.md)
-   + [Utbildningsriktlinjer för Smart Content Service](smart-tags-training-guidelines.md)
    + [Videoåtergivningar](video-renditions.md)
