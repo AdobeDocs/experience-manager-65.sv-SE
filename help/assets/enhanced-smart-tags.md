@@ -3,17 +3,15 @@ title: Förbättrade smarta taggar
 description: Förbättrade smarta taggar
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 78a101cdf0b4762ff9a3e7320db464df5b96300d
+source-git-commit: 5599e0d4a3e52a4ad98b776b9178722c7ac47cbc
 workflow-type: tm+mt
-source-wordcount: '1522'
-ht-degree: 11%
+source-wordcount: '1486'
+ht-degree: 4%
 
 ---
 
 
 # Förbättrade smarta taggar {#enhanced-smart-tags}
-
-## Översikt över förbättrade smarta taggar {#overview-of-enhanced-smart-tags}
 
 Organisationer som hanterar digitalt material använder i allt högre grad taxonomistyrd vokabulär i metadata. Det innehåller i själva verket en lista med nyckelord som anställda, partners och kunder vanligtvis använder för att referera till och söka efter digitala resurser i en viss klass. Genom att tagga resurser med taxonomistyrd vokabulär kan de enkelt identifieras och hämtas med taggbaserade sökningar.
 
@@ -60,70 +58,36 @@ Startprocessen är klar när administratören konfigurerar tjänsten och lägger
 
 ## Granska resurser och taggar {#reviewing-assets-and-tags}
 
-När du har anslutit dig är det första du vill göra att identifiera en uppsättning taggar som bäst beskriver de här bilderna i ditt företags sammanhang.
+Det första du vill göra när du är ombord är att identifiera en uppsättning taggar som bäst beskriver bilderna i ditt företags sammanhang.
 
-Granska sedan bilderna för att identifiera en uppsättning bilder som bäst motsvarar din produkt för ett visst affärsbehov. Se till att resurserna i din förvaltade uppsättning följer utbildningsriktlinjerna [för](smart-tags-training-guidelines.md)Smart Content Service.
+Granska sedan bilderna för att identifiera en uppsättning bilder som bäst motsvarar din produkt för ett visst affärsbehov. Se till att resurserna i din förvaltade uppsättning följer utbildningsriktlinjerna [för](/help/assets/config-smart-tagging.md#training-the-smart-content-service)Smart Content Service.
 
 Lägg till resurserna i en mapp och använd taggarna på varje resurs från egenskapssidan. Kör sedan utbildningsarbetsflödet i den här mappen. Den välstrukturerade uppsättningen resurser gör det möjligt för Smart Content Service att effektivt utbilda fler resurser med hjälp av dina taxonomidefinitioner.
 
 >[!NOTE]
 >
 >1. Utbildning är en oåterkallelig process. Adobe rekommenderar att du granskar taggarna i den välstrukturerade resursuppsättningen innan du utbildar Smart Content Service på taggarna.
->1. Innan du utbildar dig för en tagg ska du läsa [Riktlinjer](smart-tags-training-guidelines.md)för utbildning i smarta innehållstjänster.
+>1. Innan du utbildar dig för en tagg ska du läsa [Riktlinjer](/help/assets/config-smart-tagging.md#training-the-smart-content-service)för utbildning i smarta innehållstjänster.
 >1. När du utbildar Smart Content Service för första gången rekommenderar Adobe att du utbildar den på minst två distinkta taggar.
 
 
-## Utbilda tjänsten Smart Content {#training-the-smart-content-service}
+## Förstå [!DNL Experience Manager] sökresultat med smarta taggar {#understandsearch}
 
-För att Smart Content Service ska känna igen din företagsklonomi kan du köra den på en uppsättning resurser som redan innehåller taggar som är relevanta för ditt företag. Efter utbildning kan tjänsten tillämpa samma taxonomi på liknande resurser.
+Som standard kombineras söktermerna med en [!DNL Experience Manager] `AND` sats i sökningen. Om du använder smarta taggar ändras inte standardbeteendet. Om du använder smarta taggar läggs ytterligare en `OR` sats till för att hitta någon av söktermerna i de använda smarta taggarna. For example, consider searching for `woman running`. Resurser med bara `woman` eller bara `running` nyckelord i metadata visas inte som standard i sökresultaten. En resurs som du taggar med antingen `woman` eller `running` med smarta taggar visas i en sådan sökfråga. Sökresultaten är en kombination av
 
-Du kan utbilda tjänsten flera gånger för att förbättra dess förmåga att använda relevanta taggar. Efter varje utbildningscykel kör du ett taggningsarbetsflöde och kontrollerar om dina resurser är taggade på rätt sätt.
+* resurser med `woman` och `running` nyckelord i metadata.
 
-Du kan utbilda Smart Content Service regelbundet eller efter behov.
+* resurser som är smarta taggade med något av nyckelorden.
 
->[!NOTE]
+Sökresultaten som matchar alla söktermer i metadatafält visas först, följt av sökresultaten som matchar någon av söktermerna i de smarta taggarna. I ovanstående exempel är den ungefärliga visningsordningen för sökresultat:
+
+1. matchningar av `woman running` i de olika metadatafälten.
+1. matchar `woman running` i smarta taggar.
+1. matchar `woman` eller i `running` smarta taggar.
+
+>[!CAUTION]
 >
->Utbildningsarbetsflödet kan endast användas på mappar.
-
-### Periodisk utbildning {#periodic-training}
-
-Du kan aktivera tjänsten Smart Content Service för att med jämna mellanrum utbilda resurser och tillhörande taggar i en mapp. Öppna [!UICONTROL Properties] sidan i resursmappen, markera **[!UICONTROL Enable Smart Tags]** under **[!UICONTROL Details]** fliken och spara ändringarna.
-
-![enable_smart_tags](assets/enable_smart_tags.png)
-
-När det här alternativet har valts för en mapp [!DNL Experience Manager] körs ett utbildningsarbetsflöde automatiskt för att utbilda Smart Content Service i mappresurserna och deras taggar. Som standard körs utbildningsarbetsflödet varje vecka kl. 12.30 på lördagar.
-
-### On-demand-utbildning {#on-demand-training}
-
-Du kan utbilda tjänsten för smart innehåll när det behövs från arbetsflödeskonsolen.
-
-1. In [!DNL Experience Manager] interface, go to **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
-1. From the **[!UICONTROL Workflow Models]** page, select the **[!UICONTROL Smart Tags Training]** workflow and then click **[!UICONTROL Start Workflow]** from the toolbar.
-1. I **[!UICONTROL Run Workflow]** dialogrutan bläddrar du till den nyttolastmapp som innehåller de taggade resurserna för att utbilda tjänsten.
-1. Ange en rubrik för arbetsflödet och lägg till en kommentar. Klicka sedan på **[!UICONTROL Run]**. Resurserna och taggarna skickas in för utbildning.
-
-   ![workflow_dialog](assets/workflow_dialog.png)
-
->[!NOTE]
->
->När materialet i en mapp har behandlats för utbildning behandlas endast de ändrade resurserna i efterföljande utbildningscykler.
-
-### Visa utbildningsrapporter {#viewing-training-reports}
-
-Om du vill kontrollera om Smart Content Service är utbildad i dina taggar i övningsresurserna kan du läsa rapporten om utbildningsarbetsflödet i rapportkonsolen.
-
-1. In [!DNL Experience Manager] interface, go to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Reports]**.
-1. In the **[!UICONTROL Asset Reports]** page, click **[!UICONTROL Create]**.
-1. Select the **[!UICONTROL Smart Tags Training]** report, and then click **[!UICONTROL Next]** from the toolbar.
-1. Ange en titel och beskrivning för rapporten. Under **[!UICONTROL Schedule Report]** låter du alternativet **[!UICONTROL Now]** vara markerat. Om du vill schemalägga rapporten till ett senare tillfälle väljer du **[!UICONTROL Later]** och anger ett datum och en tid. Then, click **[!UICONTROL Create]** from the toolbar.
-1. På sidan **[!UICONTROL Asset Reports]** markerar du rapporten som du skapat. Om du vill visa rapporten klickar du **[!UICONTROL View]** i verktygsfältet.
-1. Granska informationen i rapporten.
-
-   Rapporten visar träningsstatusen för de taggar du har tränat. Den gröna färgen i kolumnen **[!UICONTROL Training Status]** anger att smarta innehållstjänster har tränats för taggen. Gul färg anger att tjänsten inte är helt tränad för en viss tagg. I det här fallet lägger du till fler bilder med just den taggen och kör träningsarbetsflödet för att träna tjänsten helt för taggen.
-
-   Om du inte ser dina taggar i den här rapporten kör du utbildningsarbetsflödet igen för dessa taggar.
-
-1. Om du vill hämta rapporten markerar du den i listan och klickar på **[!UICONTROL Download]** i verktygsfältet. Rapporten hämtas som ett Microsoft Excel-kalkylblad.
+>Om Lucene-indexeringen görs från [!DNL Adobe Experience Manager] fungerar inte sökningen som baseras på smarta taggar som förväntat.
 
 ## Tagga resurser automatiskt {#tagging-assets-automatically}
 
@@ -143,10 +107,7 @@ När det här alternativet har valts för en mapp taggar tjänsten Smart Content
 
 ### On-demand-taggning {#on-demand-tagging}
 
-Du kan aktivera taggningsarbetsflödet från följande för att tagga dina resurser direkt:
-
-* Arbetsflödeskonsol
-* Tidslinje
+Du kan utlösa taggningsarbetsflödet från arbetsflödeskonsolen eller från tidslinjen för att omedelbart tagga dina resurser.
 
 >[!NOTE]
 >
@@ -164,7 +125,7 @@ Du kan aktivera taggningsarbetsflödet från följande för att tagga dina resur
 
    ![tagging_dialog](assets/tagging_dialog.png)
 
-   Navigera till resursmappen och granska taggarna för att kontrollera om Smart Content Service taggade dina resurser på rätt sätt. Mer information finns i [Hantera smarta taggar](managing-smart-tags.md).
+   Navigera till resursmappen och granska taggarna för att kontrollera om Smart Content Service taggade dina resurser på rätt sätt.
 
 #### Tagga resurser från tidslinjen {#tagging-assets-from-the-timeline}
 
@@ -175,12 +136,29 @@ Du kan aktivera taggningsarbetsflödet från följande för att tagga dina resur
    ![start_workflow](assets/start_workflow.png)
 
 1. Markera **[!UICONTROL DAM Smart Tag Assets]** arbetsflödet och ange en rubrik för arbetsflödet.
-1. Klicka på **[!UICONTROL Start]**. Arbetsflödet använder dina taggar på resurser. Navigera till resursmappen och granska taggarna för att kontrollera om Smart Content Service taggade dina resurser på rätt sätt. Mer information finns i [Hantera smarta taggar](managing-smart-tags.md).
+1. Klicka på **[!UICONTROL Start]**. Arbetsflödet använder dina taggar på resurser. Navigera till resursmappen och granska taggarna för att kontrollera om Smart Content Service taggade dina resurser på rätt sätt.
 
 >[!NOTE]
 >
 >I de efterföljande taggningscyklerna märks bara de ändrade resurserna igen med nyligen tränade taggar. Även oförändrade resurser taggas om mellanrummet mellan den sista och den aktuella taggningscykeln för taggningsarbetsflödet överstiger 24 timmar. För periodiska taggningsarbetsflöden taggas oförändrade resurser när tidsintervallet överskrider sex månader.
 
+## Kuratera eller moderera de använda smarta taggarna {#manage-smart-tags}
+
+Du kan strukturera smarta taggar om du vill ta bort felaktiga taggar som kan ha tilldelats dina varumärkesbilder så att endast de mest relevanta taggarna visas.
+
+Genom att moderera smarta taggar kan du också förbättra taggbaserade sökningar efter bilder genom att se till att bilden visas i sökresultaten för de mest relevanta taggarna. I grund och botten eliminerar det riskerna för att bilder som inte är relaterade visas i sökresultaten.
+
+Du kan också tilldela en tagg en högre rankning för att öka dess relevans i förhållande till en bild. Om du befordrar en tagg för en bild ökar risken för att bilden visas i sökresultatet när en sökning utförs baserat på den aktuella taggen.
+
+1. Sök efter resurser baserade på en tagg i rutan Omnissearch.
+1. Inspect sökresultaten för att identifiera en bild som du inte tycker är relevant för sökningen.
+1. Select the image, and click **[!UICONTROL Manage Tags]** from the toolbar.
+1. Granska taggarna från **[!UICONTROL Manage Tags]** sidan. Om du inte vill att bilden ska genomsökas baserat på en viss tagg, markerar du taggen och klickar sedan på **[!UICONTROL Delete]** i verktygsfältet. Du kan också klicka på `x` symbolen som visas bredvid ett märkord.
+1. Om du vill tilldela en tagg en högre rankning markerar du taggen och klickar på **[!UICONTROL Promote]** i verktygsfältet. Taggen som du höjer upp flyttas till **[!UICONTROL Tags]** avsnittet.
+1. Click **[!UICONTROL Save]** and then click **[!UICONTROL OK]**
+1. Navigera till **[!UICONTROL Properties]** sidan för bilden. Observera att taggen som du befordrade är mer relevant och visas tidigare i sökresultatet.
+
 ## Tips och begränsningar {#tips-best-practices-limitations}
 
 * Användningen av smarta innehållstjänster är begränsad till upp till 2 miljoner taggade bilder per år. Alla duplicerade bilder som bearbetas och taggas räknas som taggade bilder.
+* Om du kör taggningsarbetsflödet från tidslinjen kan du använda taggar på högst 15 resurser i taget.
