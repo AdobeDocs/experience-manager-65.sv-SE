@@ -8,9 +8,9 @@ uuid: ffb2cc22-baaf-4525-a2e3-29f39271c670
 topic-tags: introduction
 discoiquuid: 655303a4-99bb-4ba3-9d50-a178f5edcf85
 translation-type: tm+mt
-source-git-commit: 0b3884301e09eba6860891f00a98508033d12ec8
+source-git-commit: 263a25b70fe4a3e7de65b47f07932d2e5f3d0197
 workflow-type: tm+mt
-source-wordcount: '1948'
+source-wordcount: '1947'
 ht-degree: 5%
 
 ---
@@ -131,7 +131,7 @@ Sidhuvud och sidfot ger ett konsekvent och distinkt utseende i en adaptiv form. 
 
    | Egenskap | Värde |
    |---|---|
-   | Översikt | Arial |
+   | Teckensnittsfamilj | Arial |
    | Teckenfärg | FFFFFF |
    | Teckenstorlek | 54px |
 
@@ -203,7 +203,7 @@ Du kan använda flera komponenter i ett adaptivt formulär för att hämta data.
      </tr> 
      <tr> 
       <td>Text</td> 
-      <td>Översikt</td> 
+      <td>Teckensnittsfamilj</td> 
       <td>Arial</td> 
      </tr> 
      <tr> 
@@ -246,7 +246,7 @@ Du kan använda ett anpassat tema för att tillämpa ett identiskt format på al
     <tbody> 
      <tr> 
       <td><b>Dragspel</b></td> 
-      <td><b>Egenskap&lt;/b</td> 
+      <td><b>Egenskap</b></td> 
       <td><b>Värde</b></td> 
      </tr> 
      <tr> 
