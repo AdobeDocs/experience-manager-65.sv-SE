@@ -4,7 +4,7 @@ description: Lär dig hur du söker efter nödvändiga resurser [!DNL Adobe Expe
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b14b377e52ab10c41355f069d97508b588d82216
+source-git-commit: 5599e0d4a3e52a4ad98b776b9178722c7ac47cbc
 workflow-type: tm+mt
 source-wordcount: '5917'
 ht-degree: 4%
@@ -358,7 +358,7 @@ Visuell sökning använder smart taggning och kräver [!DNL Experience Manager] 
 1. I CRXDE i `/oak-index/damAssetLucene` noden anger du `reindex` egenskapen till `true`. Spara ändringarna.
 1. (Valfritt) Om du har skapat ett anpassat sökformulär kopierar du `/libs/settings/dam/search/facets/assets/jcr%3Acontent/items/similaritysearch` noden till `/conf/global/settings/dam/search/facets/assets/jcr:content/items`. Spara ändringarna.
 
-Mer information finns i [Lär dig mer om smarta taggar i Experience Manager](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/smart-tags-feature-video-use.html) och [hur du hanterar smarta taggar](/help/assets/managing-smart-tags.md).
+Mer information finns i [Lär dig mer om smarta taggar i Experience Manager](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/smart-tags-feature-video-use.html) och [hur du hanterar smarta taggar](/help/assets/enhanced-smart-tags.md).
 
 >[!CAUTION]
 >
