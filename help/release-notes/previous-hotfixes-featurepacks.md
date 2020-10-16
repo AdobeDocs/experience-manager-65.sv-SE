@@ -1,11 +1,11 @@
 ---
-title: '[!DNL Adobe Experience Manager] 6.5 Versionsinformation om tidigare Service Pack.'
+title: '[!DNL Adobe Experience Manager] 6.5 Versionsinformation om föregående Service Pack.'
 description: Versionsinformation för [!DNL Adobe Experience Manager] 6.5 Service Packs.
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: 117208c634613559bb13556e12f094add70006e2
+source-git-commit: 263a25b70fe4a3e7de65b47f07932d2e5f3d0197
 workflow-type: tm+mt
-source-wordcount: '11375'
+source-wordcount: '11371'
 ht-degree: 0%
 
 ---
@@ -693,7 +693,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 * Ett undantag visas i [!DNL Experience Manager] vid avsökning efter jobbinformation för en resurs (CQ-4283569).
 
-### Sites {#sites}
+### Sites
 
 * Om LiveCopy-arvet bryts visas länkar för språkkopiering i stället för länkar för LiveCopy (NPR-30980).
 * Om antalet poster är fler än 40 visas bara de första 40 posterna för en ny utkast. I utkast visas tomma rader för resten av posterna (NPR-31182).
@@ -725,7 +725,7 @@ Remove one mention of this fix.
 
 * Två popup-fönster visas när du väljer alternativet Förfallodatum i ett översättningsjobb (NPR-31270).
 
-### Platform {#platform}
+### Plattform
 
 * Alternativet Mime-typ i webbkonsolen fungerar inte (NPR-31108).
 
@@ -745,7 +745,7 @@ Remove one mention of this fix.
 
 * Paketet är dolt i konfigurationshanteraren och är därför inte tillgängligt för anpassade paket (NPR-31720). `org.apache.sling.distribution.api`
 
-### Projekt {#projects}
+### Projekt
 
 * Det går inte att växla kalendervyer (NPR-31271).
 
@@ -854,7 +854,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 * Åtgärda problemet så att kolumnvyn i resursanvändargränssnittet bara visar innehåll som är specifikt för innehavaren.
 * Korrigera så att formatdragspelsändringar återspeglas i sökresultaten.
 
-### Assets {#assets}
+### Assets
 
 **Produktförbättringar**
 
@@ -961,7 +961,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 * Uppgraderade instanser från 6.3.3.2 till 6.5 resulterar i duplicerade OSGi-konfigurationer. NPR-30130: Programfix för CQ-4274016
 
-### Integrering {#integration}
+### Integrering
 
 * Det anpassade innehållet visas inte korrekt på publiceringsinstansen förrän instansen startas om. NPR-30377: Programfix för CQ-4273706
 * När du konfigurerar Launch på en webbplats har biblioteksadressen ett snedstreck (/) som är förinställt, vilket ger manuella åtgärder varje gång. NPR-30694: Programfix för CQ-4275501
@@ -976,7 +976,7 @@ Viktiga högdagrar för [!DNL Experience Manager] 6.5.2.0-formulär är:
 
 * Inställningen Auto har lagts till `RenderAtClient` i `PDFFormRenderOptions` API:t för [!DNL Experience Manager] Forms OSGi.
 
-#### Forms tilläggspaket {#forms-add-on-package}
+#### Forms tilläggspaket
 
 **Integrering med back end**
 
@@ -1006,7 +1006,7 @@ Viktiga högdagrar för [!DNL Experience Manager] 6.5.2.0-formulär är:
 
 * När du använder NonVisual Desktop Access i bläddringsläge för att läsa ett HTML5-formulär, läser webbläsaren Chrome &quot;graphic&quot; före varje Scalable Vector Graphic (SVG) i formulärdesignen. NPR-30449: Programfix för CQ-4274732
 
-#### Forms JEE-installationsprogram {#forms-jee-installer}
+#### Forms JEE-installationsprogram
 
 **Forms - dokumentsäkerhet**
 
@@ -1021,7 +1021,7 @@ Viktiga högdagrar för [!DNL Experience Manager] 6.5.2.0-formulär är:
 * HTMLtoPDF-tjänsten visar inte maxReuseCount i JMX-konsolen. NPR-30134, NPR-30304: Programfix för CQ-4273763
 * Om du lägger till eller redigerar en webbtjänstanslutning genom att anropa webbtjänster från [!DNL Experience Manager Forms] Workbench uppstår ett fel: ClassNotFoundException org.apache.axis.message.SOAPBodyElement. NPR-30105: Programfix för CQ-4273217
 
-### Funktionspaket ingår {#feature-packs-included}
+### Funktionspaket ingår
 
 >[!NOTE]
 >
@@ -1101,10 +1101,10 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 * Dialogdeltagarens kalenderväljarfält har brutits. NPR-29727: Programfix för CQ-4270423
 
-### WCM - SPA-redigerare
+### WCM - SPA
 
 * Aktiverat hämtning av föråtergivet innehåll från en fjärrslutpunkt. Programfix för CQ-4270238
-* Varningar i loggar när en SPA-mallsida öppnas på serversidan. Programfix för CQ-4270238
+* Varningar i loggar när en SPA mallsida öppnas på serversidan. Programfix för CQ-4270238
 
 ### WCM - MSM
 
