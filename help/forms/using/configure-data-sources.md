@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: ee2b13f2fc1f044f119ff54f332844d458663287
 workflow-type: tm+mt
-source-wordcount: '1446'
+source-wordcount: '1661'
 ht-degree: 0%
 
 ---
@@ -21,21 +21,21 @@ ht-degree: 0%
 
 ![](do-not-localize/data-integeration.png)
 
-Med dataintegrering i AEM Forms kan du konfigurera och ansluta till olika datakällor. Följande typer stöds inte. Men med liten anpassning kan ni också integrera andra datakällor.
+Med AEM Forms dataintegrering kan du konfigurera och ansluta till olika datakällor. Följande typer stöds inte. Men med liten anpassning kan ni också integrera andra datakällor.
 
 * Relationsdatabaser - MySQL, Microsoft SQL Server, IBM DB2 och Oracle RDBMS
-* AEM-användarprofil
+* AEM användarprofil
 * RESTful web services
 * SOAP-baserade webbtjänster
 * OData-tjänster
 
-Dataintegrering har stöd för autentiseringstyperna OAuth2.0, Grundläggande autentisering och API Key som är färdiga och tillåter implementering av anpassad autentisering för åtkomst till webbtjänster. Medan RESTful, SOAP-baserade tjänster och OData-tjänster konfigureras i AEM cloud services konfigureras JDBC för relationsdatabaser och koppling för AEM-användarprofiler i AEM-webbkonsolen.
+Dataintegrering har stöd för autentiseringstyperna OAuth2.0, Grundläggande autentisering och API Key som är färdiga och tillåter implementering av anpassad autentisering för åtkomst till webbtjänster. Medan RESTful-, SOAP-baserade och OData-tjänster är konfigurerade i AEM Cloud Services, konfigureras JDBC för relationsdatabaser och koppling för AEM användarprofil i AEM webbkonsol.
 
 ## Konfigurera relationsdatabas {#configure-relational-database}
 
-Du kan konfigurera relationsdatabaser med hjälp av AEM Web Console Configuration. Gör följande:
+Du kan konfigurera relationsdatabaser med hjälp AEM Konfiguration av webbkonsol. Gör följande:
 
-1. Gå till AEM-webbkonsolen på https://server:host/system/console/configMgr.
+1. Gå till AEM webbkonsol på https://server:host/system/console/configMgr.
 1. Leta efter **[!UICONTROL Apache Sling Connection Pooled DataSource]** konfiguration. Tryck för att öppna konfigurationen i redigeringsläge.
 1. I konfigurationsdialogrutan anger du information för den databas som du vill konfigurera, till exempel:
 
@@ -44,6 +44,7 @@ Du kan konfigurera relationsdatabaser med hjälp av AEM Web Console Configuratio
    * Java-klassnamn för JDBC-drivrutinen
    * URI för JDBC-anslutning
    * Användarnamn och lösenord för anslutning till JDBC-drivrutinen
+
    >[!NOTE]
    >
    >Kontrollera att du krypterar känslig information, t.ex. lösenord, innan du konfigurerar datakällan. Så här krypterar du:
@@ -51,7 +52,8 @@ Du kan konfigurera relationsdatabaser med hjälp av AEM Web Console Configuratio
    >    
    >    
    >    1. Gå till https://&#39;[server]:[port]&#39;/system/console/crypto.
-   >    1. I **[!UICONTROL Plain Text]** fältet anger du lösenordet eller en valfri sträng som ska krypteras och klickar på **[!UICONTROL Protect]**.
+   >    1. I **[!UICONTROL Plain Text]** fältet anger du lösenordet eller en sträng som ska krypteras och trycker på **[!UICONTROL Protect]**.
+
    >    
    >    
    >    
@@ -65,11 +67,11 @@ Du kan konfigurera relationsdatabaser med hjälp av AEM Web Console Configuratio
 
 1. Tryck **[!UICONTROL Save]** för att spara konfigurationen.
 
-## Konfigurera AEM-användarprofil {#configure-aem-user-profile}
+## Konfigurera AEM användarprofil {#configure-aem-user-profile}
 
-Du kan konfigurera AEM-användarprofilen med hjälp av konfigurationen för anslutning av användarprofil i AEM Web Console. Gör följande:
+Du kan konfigurera AEM användarprofil med hjälp av konfigurationen för anslutning av användarprofil i AEM webbkonsol. Gör följande:
 
-1. Gå till AEM-webbkonsolen på https://&#39;[server]:[port]&#39;system/console/configMgr.
+1. Gå till AEM webbkonsol på https://&#39;[server]:[port]&#39;system/console/configMgr.
 1. Leta efter **[!UICONTROL AEM Forms Data Integrations - User Profile Connector Configuration]** och tryck för att öppna konfigurationen i redigeringsläge.
 1. I dialogrutan Konfiguration av anslutning till användarprofil kan du lägga till, ta bort eller uppdatera egenskaper för användarprofiler. De angivna egenskaperna kommer att vara tillgängliga för användning i formulärdatamodellen. Använd följande format för att ange egenskaper för användarprofiler:
 
@@ -79,9 +81,10 @@ Du kan konfigurera AEM-användarprofilen med hjälp av konfigurationen för ansl
 
    * `name=profile/phoneNumber,type=string`
    * `name=profile/empLocation/*/city,type=string`
+
    >[!NOTE]
    >
-   >I ***** i ovanstående exempel anges alla noder under `profile/empLocation/` noden i AEM-användarprofilen i CRXDE-strukturen. Det innebär att formulärdatamodellen kan komma åt den `city` egenskap av typen som `string` finns i en nod under `profile/empLocation/` noden. Noderna som innehåller den angivna egenskapen måste dock följa en konsekvent struktur.
+   >I ***** i ovanstående exempel anges alla noder under `profile/empLocation/` noden i AEM användarprofil i CRXDE-strukturen. Det innebär att formulärdatamodellen kan komma åt den `city` egenskap av typen som `string` finns i en nod under `profile/empLocation/` noden. Noderna som innehåller den angivna egenskapen måste dock följa en konsekvent struktur.
 
 1. Tryck **[!UICONTROL Save]** för att spara konfigurationen.
 
@@ -90,7 +93,7 @@ Du kan konfigurera AEM-användarprofilen med hjälp av konfigurationen för ansl
 >[!NOTE]
 Konfiguration för molntjänstmappen krävs för konfigurering av molntjänster för RESTful-, SOAP- och OData-tjänster.
 
-Alla molntjänstkonfigurationer i AEM konsolideras i mappen `/conf` i AEM-databasen. Mappen innehåller som standard den `conf` mapp där du kan skapa molntjänstkonfigurationer `global` . Du måste dock manuellt aktivera den för molnkonfigurationer. Du kan också skapa ytterligare mappar i `conf` för att skapa och organisera molntjänstkonfigurationer.
+Alla konfigurationer av molntjänster i AEM konsolideras i mappen `/conf` i AEM. Mappen innehåller som standard den `conf` mapp där du kan skapa molntjänstkonfigurationer `global` . Du måste dock manuellt aktivera det för molnkonfigurationer. Du kan också skapa ytterligare mappar i `conf` för att skapa och organisera molntjänstkonfigurationer.
 
 Så här konfigurerar du mappen för molntjänstkonfigurationer:
 
@@ -109,7 +112,7 @@ Så här konfigurerar du mappen för molntjänstkonfigurationer:
 
 ## Konfigurera RESTful-webbtjänster {#configure-restful-web-services}
 
-RESTful-webbtjänsten kan beskrivas med [Swagger-specifikationer](https://swagger.io/specification/) i JSON- eller YAML-format i en Swagger-definitionsfil. Om du vill konfigurera RESTful-webbtjänsten i AEM cloud services måste du se till att du antingen har Swagger-filen i filsystemet eller URL:en där filen finns.
+RESTful-webbtjänsten kan beskrivas med [Swagger-specifikationer](https://swagger.io/specification/) i JSON- eller YAML-format i en Swagger-definitionsfil. Om du vill konfigurera RESTful-webbtjänsten i AEM-molntjänster måste du ha antingen Swagger-filen i filsystemet eller URL:en där filen finns.
 
 Gör följande för att konfigurera RESTful-tjänster:
 
@@ -127,14 +130,17 @@ Gör följande för att konfigurera RESTful-tjänster:
       * Värd: Domännamnet eller IP-adressen för värden som använder REST API. Det är ett obligatoriskt fält.
       * Grundsökväg: URL-prefixet för alla API-sökvägar. Det är ett valfritt fält.\
          Om det behövs kan du redigera de förifyllda värdena för dessa fält.
-   * Välj autentiseringstyp - Ingen, OAuth2.0, Grundläggande autentisering, API-nyckel eller Anpassad autentisering - för att få åtkomst till RESTful-tjänsten och ange därefter information för autentisering.
+   * Välj autentiseringstyp - Ingen, OAuth2.0, Grundläggande autentisering, API-nyckel, Anpassad autentisering eller Ömsesidig autentisering - för att få åtkomst till RESTful-tjänsten och ange information för autentisering.
+
    Om du väljer **[!UICONTROL API Key]** som autentiseringstyp anger du värdet för API-nyckeln. API-nyckeln kan skickas som en begäranderubrik eller som en frågeparameter. Välj något av dessa alternativ i den **[!UICONTROL Location]** nedrullningsbara listan och ange namnet på huvudet eller frågeparametern i **[!UICONTROL Parameter Name]** fältet.
+
+   Om du väljer **[!UICONTROL Mutual Authentication]** som autentiseringstyp läser du [Certifikatbaserad ömsesidig autentisering för RESTful- och SOAP-webbtjänster](#mutual-authentication).
 
 1. Tryck för **[!UICONTROL Create]** att skapa molnkonfigurationen för RESTful-tjänsten.
 
 ## Konfigurera SOAP-webbtjänster {#configure-soap-web-services}
 
-SOAP-baserade webbtjänster beskrivs med hjälp av WSDL-specifikationer ( [Web Services Description Language)](https://www.w3.org/TR/wsdl). Om du vill konfigurera en SOAP-baserad webbtjänst i AEM cloud services måste du se till att du har WSDL-webbadressen för webbtjänsten och göra följande:
+SOAP-baserade webbtjänster beskrivs med hjälp av WSDL-specifikationer ( [Web Services Description Language)](https://www.w3.org/TR/wsdl). Om du vill konfigurera en SOAP-baserad webbtjänst i AEM-molntjänster kontrollerar du att du har WSDL-webbadressen för webbtjänsten och gör följande:
 
 1. Gå till **[!UICONTROL Tools > Cloud Services > Data Sources]**. Tryck för att välja den mapp där du vill skapa en molnkonfiguration.
 
@@ -145,16 +151,18 @@ SOAP-baserade webbtjänster beskrivs med hjälp av WSDL-specifikationer ( [Web S
 
    * WSDL-URL för webbtjänsten.
    * Tjänstslutpunkt. Ange ett värde i det här fältet om du vill åsidosätta tjänstslutpunkten som anges i WSDL.
-   * Välj autentiseringstyp - Ingen, OAuth2.0, Grundläggande autentisering, Anpassad autentisering eller X509-token - för att få åtkomst till SOAP-tjänsten och ange därefter information för autentisering.
+   * Välj autentiseringstypen - Ingen, OAuth2.0, Grundläggande autentisering, Anpassad autentisering, X509-token eller Ömsesidig autentisering - för att få åtkomst till SOAP-tjänsten och ange därför informationen för autentisering.
 
-      Om du väljer X509-token som autentiseringstyp konfigurerar du X509-certifikatet. Mer information finns i [Konfigurera certifikat](install-configure-document-services.md#set-up-certificates-for-reader-extension-and-encryption-service).
+      Om du väljer **[!UICONTROL X509 Token]** autentiseringstyp konfigurerar du X509-certifikatet. Mer information finns i [Konfigurera certifikat](install-configure-document-services.md#set-up-certificates-for-reader-extension-and-encryption-service).
 Ange KeyStore-alias för X509-certifikatet i **[!UICONTROL Key Alias]** fältet. Ange tiden i sekunder tills autentiseringsbegäran är giltig i **[!UICONTROL Time To Live]** fältet. Du kan också välja att signera meddelandetexten eller tidsstämpelhuvudet eller båda.
+
+      Om du väljer **[!UICONTROL Mutual Authentication]** som autentiseringstyp läser du [Certifikatbaserad ömsesidig autentisering för RESTful- och SOAP-webbtjänster](#mutual-authentication).
 
 1. Tryck för **[!UICONTROL Create]** att skapa molnkonfigurationen för SOAP-webbtjänsten.
 
 ## Konfigurera OData-tjänster {#config-odata}
 
-En OData-tjänst identifieras av tjänstens rot-URL. Om du vill konfigurera en OData-tjänst i AEM cloud services måste du se till att du har tjänstens rot-URL och göra följande:
+En OData-tjänst identifieras av tjänstens rot-URL. Om du vill konfigurera en OData-tjänst i AEM-molntjänster kontrollerar du att du har tjänstens rot-URL och gör följande:
 
 >[!NOTE]
 Stegvisa anvisningar om hur du konfigurerar Microsoft Dynamics 365, online eller lokalt, finns i [Microsoft Dynamics OData-konfiguration](/help/forms/using/ms-dynamics-odata-configuration.md).
@@ -168,10 +176,24 @@ Stegvisa anvisningar om hur du konfigurerar Microsoft Dynamics 365, online eller
 
    * Tjänstens rot-URL för OData-tjänsten som ska konfigureras.
    * Välj autentiseringstyp - Ingen, OAuth2.0, Grundläggande autentisering eller Anpassad autentisering - för att få åtkomst till OData-tjänsten och ange därefter information för autentisering.
+
    >[!NOTE]
    Du måste välja autentiseringstypen OAuth 2.0 om du vill ansluta till Microsoft Dynamics-tjänster med OData-slutpunkten som tjänstrot.
 
 1. Tryck på **Skapa** för att skapa molnkonfigurationen för OData-tjänsten.
+
+## Certifikatbaserad ömsesidig autentisering för RESTful- och SOAP-webbtjänster {#mutual-authentication}
+
+När du aktiverar ömsesidig autentisering för formulärdatamodell autentiserar både datakällan och AEM Server som kör formulärdatamodellen varandras identitet innan data delas. Du kan använda ömsesidig autentisering för REST- och SOAP-baserade anslutningar (datakällor). Så här konfigurerar du ömsesidig autentisering för en formulärdatamodell i din AEM Forms-miljö:
+
+1. Överför den privata nyckeln (certifikatet) till [!DNL AEM Forms] servern. Så här överför du den privata nyckeln:
+   1. Logga in på din [!DNL AEM Forms] server som administratör.
+   1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Users]**. Markera `fd-cloudservice` användaren och tryck på **[!UICONTROL Properties]**.
+   1. Öppna **[!UICONTROL Keystore]** fliken, utöka **[!UICONTROL Add Private Key from KeyStore file]** alternativet, ladda upp KeyStore-filen, ange alias, lösenord och tryck på **[!UICONTROL Submit]**. Certifikatet överförs.  Aliaset för den privata nyckeln anges i certifikatet och anges när certifikatet skapas.
+1. Överför förtroendecertifikat till Global Trust Store. Så här överför du certifikatet:
+   1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Trust Store]**.
+   1. Expandera **[!UICONTROL Add Certificate from CER file]** alternativet, tryck **[!UICONTROL Select Certificate File]**, överför certifikatet och tryck på **[!UICONTROL Submit]**.
+1. Konfigurera [SOAP](#configure-soap-web-services) - eller [RESTful](#configure-restful-web-services) -webbtjänster som datakälla och välj **[!UICONTROL Mutual authentication]** autentiseringstyp. Om du konfigurerar flera självsignerade certifikat för `fd-cloudservice` användare anger du namnet på certifikatets nyckelalias.
 
 ## Nästa steg {#next-steps}
 
