@@ -4,9 +4,9 @@ description: Förslag och vägledning [!DNL Experience Manager] om konfiguration
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: cc61b8473fb919a963eb73c015efbc2f06197ee8
 workflow-type: tm+mt
-source-wordcount: '2679'
+source-wordcount: '2677'
 ht-degree: 0%
 
 ---
@@ -205,7 +205,7 @@ Dessutom anger du sökvägen till ImageMagick:s tillfälliga mapp i `configure.x
 
 >[!CAUTION]
 >
->En felaktig konfiguration kan göra servern instabil om ImageMagick använder allt tillgängligt diskutrymme. De principändringar som krävs för att bearbeta stora filer med ImageMagick kan påverka prestandan i [!DNLEExperience Manager] . Mer information finns i [Installera och konfigurera ImageMagick](/help/assets/best-practices-for-imagemagick.md).
+>En felaktig konfiguration kan göra servern instabil om ImageMagick använder allt tillgängligt diskutrymme. De principändringar som krävs för att bearbeta stora filer med ImageMagick kan påverka [!DNL Experience Manager] prestandan. Mer information finns i [Installera och konfigurera ImageMagick](/help/assets/best-practices-for-imagemagick.md).
 
 >[!NOTE]
 >
