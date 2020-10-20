@@ -7,16 +7,16 @@ user-guide-title: Adobe Experience Manager 6.5 Forms Guide
 breadcrumb-title: Forms Guide
 user-guide-description: Skapa, hantera, publicera och uppdatera digitala formulär.
 translation-type: tm+mt
-source-git-commit: 90ab21c4a25fa1a2dcdf04af61fd30982cae7aae
+source-git-commit: 5b5937303dd543195b6c8300e6579a58e03a97d1
 workflow-type: tm+mt
-source-wordcount: '3711'
+source-wordcount: '3710'
 ht-degree: 0%
 
 ---
 
 # Adobe Experience Manager 6.5 Forms Guide {#forms}
 
-+ [AEM 6.5 Forms Användarhandbok](home.md)
++ [AEM 6.5 Forms Guide](home.md)
 + Versionsinformation {#release-notes-new-features}
    + [Versionsinformation](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/release-notes.html#experience-manager-forms)
    + [Sammanfattning av nya funktioner](using/whats-new.md)
