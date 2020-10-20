@@ -1,12 +1,12 @@
 ---
 title: Adobe Experience Manager 6.5 Forms Guide
-seo-title: AEM 6.5 Forms Användarhandbok
+seo-title: AEM 6.5 Forms Guide
 description: Den här guiden täcker alla uppgifter som AEM Forms utför, inklusive hur man skapar, hanterar, publicerar och uppdaterar digitala formulär.
 seo-description: Omfattar alla AEM Forms-uppgifter, inklusive hur man skapar, hanterar, publicerar och uppdaterar digitala formulär.
 translation-type: tm+mt
-source-git-commit: 90ab21c4a25fa1a2dcdf04af61fd30982cae7aae
+source-git-commit: 5b5937303dd543195b6c8300e6579a58e03a97d1
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '369'
 ht-degree: 18%
 
 ---
