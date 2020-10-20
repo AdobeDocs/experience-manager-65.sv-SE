@@ -4,7 +4,7 @@ description: Nyheter i Adobe Experience Manager 6.5 Service Pack 6
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 6e7da5aa0a8ea224de256717ca37193dcf6577be
+source-git-commit: 4865d4fb666f58ea8abe9e438ea69e9272961c43
 workflow-type: tm+mt
 source-wordcount: '2534'
 ht-degree: 0%
@@ -28,7 +28,7 @@ I den här artikeln beskrivs de funktioner som ingår i det senaste 6.5 Service 
 
 ### Invalidera cachelagrat CDN-innehåll {#invalidate-cdn-cached-content}
 
-Du kan nu använda användargränssnittet för[!DNL  Dynamic Media] att göra Cachelagrat innehåll i Content Delivery Network (CDN) ogiltigt. Därför är de uppdaterade resurserna tillgängliga direkt i stället för att vänta på att cachen ska upphöra att gälla. Du kan göra CDN ogiltig genom att:
+Du kan nu använda [!DNL Dynamic Media] användargränssnittet för att göra Cachelagrat innehåll i Content Delivery Network (CDN) ogiltigt. Därför är de uppdaterade resurserna tillgängliga direkt i stället för att vänta på att cachen ska upphöra att gälla. Du kan göra CDN ogiltig genom att:
 
 * Skapa en CDN-invalideringsmall: Välja resurser och formulärassocierade mallbaserade URL:er
 
