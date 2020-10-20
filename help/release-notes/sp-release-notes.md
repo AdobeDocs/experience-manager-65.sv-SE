@@ -4,9 +4,9 @@ description: Versionsinformation för [!DNL Adobe Experience Manager] 6.5 Servic
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 74ab94126383d53dac5f55171266c66c28757969
+source-git-commit: ba744c7f58ae7d359c13b11403921da0948c71a7
 workflow-type: tm+mt
-source-wordcount: '4327'
+source-wordcount: '4339'
 ht-degree: 0%
 
 ---
@@ -39,15 +39,15 @@ De viktigaste funktionerna och förbättringarna i Adobe Experience Manager 6.5.
 
 * Standardalternativen för `test` och `aiprocess` uppdateras till `Thumbnail`, från `Rasterize` tidigare versioner i Dynamic Media, för att säkerställa att användarna bara behöver skapa miniatyrbilder och hoppa över sidextraheringen och extraheringen av nyckelord.
 
-* Fyll i ett anpassat formulär i förväg på klienten.
+* [Fyll i ett anpassat formulär i förväg på klienten](../../help/forms/using/prepopulate-adaptive-form-fields.md#prefill-at-client).
 
-* Integrering av formulärdatamodell med RESTful API:er på en server med tvåvägs SSL-implementering.
+* [Integrering av formulärdatamodell med RESTful API:er på en server med tvåvägs SSL-implementering](../../help/forms/using/configure-data-sources.md).
 
-* Förbättrad cachning för översatta adaptiva formulärsidor.
+* [Förbättrad cachning för översatta adaptiva formulärsidor](../../help/forms/using/configure-adaptive-forms-cache.md).
 
-* Stöd för Adobe Sign-texttaggar i den automatiska Forms Conversion Service.
+* Stöd för [Adobe Sign-texttaggar i den automatiska Forms Conversion Service](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms.html).
 
-* Support to convert colored forms to adaptive forms using [!DNL Automated Forms Conversion service].
+* Stöd för att [konvertera färgade formulär till adaptiva formulär](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms.html) med [!DNL Automated Forms Conversion service].
 
 * Stöd för SMB 2- och SMB 3-protokoll.
 
@@ -152,13 +152,13 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 
    ![Hjälpmenyn i sidhuvudet](assets/Help_aem_header.png)
 
-   *Bild:[!UICONTROL Search for Help]på[!UICONTROL Help]menyn.*
+   *Bild: [!UICONTROL Search for Help] på [!UICONTROL Help] menyn.*
 
    * Felmeddelandet om ett felaktigt värde anges i [!UICONTROL Impersonate as] fältet under [!UICONTROL User] alternativet och fokus flyttas korrekt till textfältet (NPR-33804).
 
    ![Användarmeny i sidhuvud](assets/User_aem_header.png)
 
-   *Bild:[!UICONTROL Impersonate as]i[!UICONTROL User]menyn i sidhuvudet.*
+   *Bild: [!UICONTROL Impersonate as] i [!UICONTROL User] menyn i sidhuvudet.*
 
 * Användaren kan nu ändra fokus med tangentbordet i:
 
@@ -207,7 +207,7 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 * Körningskopian av resurser i en anpassad arbetsflödesmodell (skapas i `/var/workflow/models/dam`) tas bort när du installerar [!DNL Experience Manager] 6.5 Service Pack 5 eller en tidigare version på [!DNL Experience Manager] 6.5 (NPR-34532). Om du vill hämta körtidskopian synkroniserar du designtidskopian av arbetsflödesmodellen med körtidskopian med HTTP API:
    `<designModelPath>/jcr:content.generate.json`.
 
-**Problem som har åtgärdats i Dynamic Media**
+**Problem som har korrigerats i Dynamic Media**
 
 * Om användaren definierar kodningsinställningarna i redigeringar efter att videoprofilen har skapats, tas inställningarna för smart beskärning bort från videoprofiler (CQ-4299177).
 
