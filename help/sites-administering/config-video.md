@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: a1efef3c-0e4b-4a17-bcad-e3cc17adbbf7
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 535a175486a2d0f31762d71954c4fead2ef246e1
 workflow-type: tm+mt
-source-wordcount: '448'
+source-wordcount: '451'
 ht-degree: 0%
 
 ---
@@ -32,9 +32,9 @@ Definiera videoprofiler om du vill använda HTML5-element. De som väljs här an
 
 I den här dialogrutan kan du även konfigurera designen för videokomponenten och parametrar för [!UICONTROL Playback], [!UICONTROL Flash]och [!UICONTROL Advanced].
 
-## Installera MPEG och konfigurera AEM {#install-ffmpeg}
+## Installera och konfigurera AEM {#install-ffmpeg}
 
-Videokomponenten använder öppen källkod-produkten från tredje part för omkodning av videoklipp. Hämtat från [https://ffmpeg.org/](https://ffmpeg.org/). När du har installerat MPEG konfigurerar du AEM så att en viss ljudkodek och specifika körningsalternativ används.
+Videokomponenten använder öppen källkod-produkten från tredje part för omkodning av videoklipp. Hämtat från [https://ffmpeg.org/](https://ffmpeg.org/). När du har installerat mpeg konfigurerar du AEM att använda en viss ljudkodek och specifika körningsalternativ.
 
 Följ de här stegen för att installera **MPEG i Windows**:
 
@@ -45,7 +45,7 @@ Följ de här stegen för att installera **MPEG i Windows**:
 
 Så här installerar du mpeg i **Mac OS X**:
 
-1. Installera Xcode som finns på [developer.apple.com/xcode](hhttps://developer.apple.com/xcode/).
+1. Installera Xcode som finns på [developer.apple.com/xcode](https://developer.apple.com/xcode/).
 1. Installera på [XQuartz](https://www.xquartz.org) för att hämta [X11](https://support.apple.com/en-us/HT201341).
 1. Installera MacPorts som finns på [www.macports.org](https://www.macports.org/).
 1. Kör `sudo port install ffmpeg` kommandot på konsolen och följ instruktionerna på skärmen. Kontrollera att sökvägen till den `FFmpeg` körbara filen läggs till i `PATH` systemvariabeln.
@@ -78,4 +78,4 @@ Så här **konfigurerar du AEM**:
 
 >[!NOTE]
 >
->Ändringar av standardarbetsflödesmodellerna som är färdiga att användas (OTB) bevaras inte när du uppgraderar din AEM-instans. Adobe rekommenderar att du kopierar de ändrade arbetsflödesmodellerna innan du redigerar dem. Du kan till exempel kopiera OTB- [!UICONTROL DAM Update Asset] modellen innan du redigerar steget Fmpeg-omkodning i [!UICONTROL DAM Update Asset] modellen för att välja videoprofilnamn som fanns före uppgraderingen. Sedan kan du täcka över noden så att AEM kan hämta de anpassade ändringarna i OOTB-modellen `/apps` .
+>Ändringar i standardarbetsflödesmodellerna som är färdiga att användas (OTB) bevaras inte när du uppgraderar AEM. Adobe rekommenderar att du kopierar de ändrade arbetsflödesmodellerna innan du redigerar dem. Du kan till exempel kopiera OTB- [!UICONTROL DAM Update Asset] modellen innan du redigerar steget Fmpeg-omkodning i [!UICONTROL DAM Update Asset] modellen för att välja videoprofilnamn som fanns före uppgraderingen. Sedan kan du täcka över noden så att AEM kan hämta de anpassade ändringarna i OTB-modellen `/apps` .
