@@ -11,9 +11,9 @@ topic-tags: upgrading
 discoiquuid: fcb17227-ff1f-4b47-ae94-6b7f60923876
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cbd48b28798c1bb7c00175fc1faecfea5484b07b
+source-git-commit: 1718aac3d39662fb35336a4db3e3403641f9529a
 workflow-type: tm+mt
-source-wordcount: '1242'
+source-wordcount: '1275'
 ht-degree: 0%
 
 ---
@@ -176,6 +176,10 @@ Var `/path/to/datastore` representerar sökvägen till File DataStore.
 
 För att kunna genomföra uppgraderingen är det viktigt att du börjar AEM använda filen jar för att ta fram instansen. Om du uppgraderar till 6.5 kan du även läsa andra alternativ för innehållsomstrukturering och migrering i [Lazy Content Migration](/help/sites-deploying/lazy-content-migration.md) som du kan välja med uppgraderingskommandot.
 
+>[!IMPORTANT]
+>
+>Om du kör Oracle Java 11 (eller i allmänhet versioner av Java nyare än 8) måste ytterligare växlar läggas till på kommandoraden när du startar AEM. Mer information finns i [Java 11 Considerations](/help/sites-deploying/custom-standalone-install.md#java-considerations).
+
 Observera att AEM från startskriptet inte startar uppgraderingen. De flesta kunder börjar AEM med startskriptet och har anpassat det här startskriptet för att inkludera växlar för miljökonfigurationer som minnesinställningar, säkerhetscertifikat osv. Därför rekommenderar vi att du följer den här proceduren för att fastställa rätt uppgraderingskommando:
 
 1. Kör följande från kommandoraden på en AEM som körs:
@@ -196,7 +200,7 @@ Observera att AEM från startskriptet inte startar uppgraderingen. De flesta kun
    /usr/bin/java -server -Xmx1024m -XX:MaxPermSize=256M -Djava.awt.headless=true -Dsling.run.modes=author,crx3,crx3tar -jar cq-quickstart-6.5.0.jar -c crx-quickstart -p 4502 -Dsling.properties=conf/sling.properties
    ```
 
-   Detta säkerställer att alla korrekta minnesinställningar, anpassade körningssätt och andra miljöparametrar används för uppgraderingen. När uppgraderingen har slutförts kan instansen startas från startskriptet vid framtida starter.
+   Detta säkerställer att alla korrekta minnesinställningar, anpassade körningslägen och andra miljöparametrar används för uppgraderingen. När uppgraderingen har slutförts kan instansen startas från startskriptet vid framtida starter.
 
 ## Distribuera uppgraderad kodbas {#deploy-upgraded-codebase}
 
