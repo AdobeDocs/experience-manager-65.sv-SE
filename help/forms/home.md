@@ -4,9 +4,9 @@ seo-title: AEM 6.5 Forms Guide
 description: Den här guiden täcker alla uppgifter som AEM Forms utför, inklusive hur man skapar, hanterar, publicerar och uppdaterar digitala formulär.
 seo-description: Omfattar alla AEM Forms-uppgifter, inklusive hur man skapar, hanterar, publicerar och uppdaterar digitala formulär.
 translation-type: tm+mt
-source-git-commit: 5b5937303dd543195b6c8300e6579a58e03a97d1
+source-git-commit: d97cc2ad393fc10ff545ae374180426eb1574ba9
 workflow-type: tm+mt
-source-wordcount: '369'
+source-wordcount: '368'
 ht-degree: 18%
 
 ---
@@ -23,7 +23,7 @@ Den här guiden täcker alla uppgifter som AEM Forms utför, inklusive hur man s
 * [Senaste dokumentationsuppdateringarna](https://helpx.adobe.com/experience-manager/documentation-updates.html)
 * [AEM](/help/sites-administering/security-checklist.md)
 
-## AEM 6.5 användarhandböcker
+## AEM 6.5-stödlinjer
 
 | Användarhandbok | Beskrivning |
 |--- |---|
