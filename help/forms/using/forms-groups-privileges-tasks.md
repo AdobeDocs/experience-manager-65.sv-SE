@@ -11,7 +11,7 @@ topic-tags: Configuration
 discoiquuid: 1717b1b4-1c2a-450e-8e79-4156a974d5fa
 docset: aem65
 translation-type: tm+mt
-source-git-commit: dbb99875cc6f3c8810670ffe923756f7c13d4ace
+source-git-commit: 494551d3d886c1ed70d252a28b03cfa9d8e82a6a
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Du kan [skapa grupper](/help/sites-administering/user-group-ac-admin.md#group-administration) och tilldela profiler och [användare](/help/sites-administering/user-group-ac-admin.md#user-administration) till grupperna i AEM. Dessa profiler styr behörigheter för de användare som är en del av gruppen.
 
-När du har installerat [AEM Forms-tilläggspaketet](../../forms/using/installing-configuring-aem-forms-osgi.md)blir de grupper som omnämns i den här artikeln automatiskt tillgängliga för tilldelning, till exempel formuläranvändare och användare med formulärfunktioner. I följande tabell visas de uppgifter som en användare kan utföra för AEM Forms på OSGi baserat på grupptilldelningarna:
+När du har installerat [AEM Forms-tilläggspaketet](../../forms/using/installing-configuring-aem-forms-osgi.md)blir de grupper som omnämns i den här artikeln automatiskt tillgängliga för tilldelning, till exempel formuläranvändare och användare med formulärbehörighet. I följande tabell visas de uppgifter som en användare kan utföra för AEM Forms på OSGi baserat på grupptilldelningarna:
 
 <table>
  <tbody>
@@ -32,12 +32,12 @@ När du har installerat [AEM Forms-tilläggspaketet](../../forms/using/installin
    <td>Uppgifter</td> 
   </tr>
   <tr>
-   <td>formuläranvändare <sup>[1]</sup></td> 
+   <td>forms-users <sup>[1]</sup></td> 
    <td>
     <ul> 
      <li>Skapa, förhandsgranska, publicera och skicka adaptiva formulär</li> 
      <li>Skapa, förhandsgranska och publicera interaktiv kommunikation och dokumentfragment</li> 
-     <li>Överföra resurser till en AEM-instans</li> 
+     <li>Överföra resurser till en AEM instans</li> 
      <li>Skapa teman</li> 
     </ul> </td> 
   </tr>
@@ -94,7 +94,7 @@ När du har installerat [AEM Forms-tilläggspaketet](../../forms/using/installin
    <td>arbetsflöde-användare</td> 
    <td>
     <ul> 
-     <li>Använd AEM-inkorgsprogram<br /> <strong>Obs! </strong>Du måste ha grupptilldelningar för cm-agent-users och arbetsflödesanvändare för att få tillgång till gränssnittet för Interactive Communications Agent i AEM-inkorg.</li> 
+     <li>Använd AEM inkorgsprogram<br /> <strong>Obs! </strong>Du måste ha grupptilldelningar för cm-agent-users och arbetsflödesanvändare för att få åtkomst till gränssnittet för Interactive Communications Agent i AEM.</li> 
      <li>Hantera arbetsflödesinstanser</li> 
     </ul> </td> 
   </tr>
@@ -110,6 +110,6 @@ När du har installerat [AEM Forms-tilläggspaketet](../../forms/using/installin
  </tbody>
 </table>
 
-1. Användaren med gruppbehörighet för formulär-användare kan inte skriva skript för anpassade formulär.
+1. Användaren med gruppbehörighet för formuläranvändare kan inte skriva skript för anpassade formulär.
 1. Användaren med gruppbehörighet för mallförfattare kan inte skriva skript för mallar.
 
