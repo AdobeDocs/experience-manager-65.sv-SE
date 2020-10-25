@@ -10,7 +10,10 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: aa89326a-ad33-4b0b-8d09-c68c5a5c790a
 translation-type: tm+mt
-source-git-commit: 55a4c7eee6f1305fe84a22bc9b23cd77d73d414a
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+workflow-type: tm+mt
+source-wordcount: '651'
+ht-degree: 0%
 
 ---
 
@@ -49,8 +52,9 @@ Ett särskilt [läge](/help/sites-authoring/author-environment-tools.md#page-mod
 >
 >Du kan anteckna en mängd olika resurser:
 >
->* [Anteckna resurser](/help/assets/managing-assets-touch-ui.md#annotating)
+>* [Anteckna resurser](/help/assets/manage-assets.md#annotating)
 >* [Kommentera videomaterial](/help/assets/managing-video-assets.md#annotate-video-assets)
+
 >
 
 
@@ -88,9 +92,11 @@ I anteckningsläget kan du skapa, redigera, flytta eller ta bort anteckningar i 
    ![](do-not-localize/screen_shot_2018-03-22at110640.png)
 
    * Välj/ändra färg:
+
    ![](do-not-localize/chlimage_1-19.png)
 
    * Ta bort anteckningen.
+
    ![](do-not-localize/screen_shot_2018-03-22at110647.png)
 
 1. Du kan stänga anteckningsdialogrutan genom att klicka/trycka utanför dialogrutan. En trunkerad vy (det första ordet) av anteckningen, tillsammans med eventuella skisser, visas:
