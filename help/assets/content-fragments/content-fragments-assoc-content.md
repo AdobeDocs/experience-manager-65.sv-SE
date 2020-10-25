@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 5af45caf-5e85-4c57-bcd1-e8f7fc460315
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 759d2dd8d12861757bf7f54b77d8d3ca170887fe
+source-git-commit: 0d5a48be283484005013ef3ed7ad015b43f6398b
 workflow-type: tm+mt
 source-wordcount: '241'
 ht-degree: 12%
@@ -29,7 +29,7 @@ Associerat innehåll ger anslutningen så att resurser (t.ex.) kan (valfritt) an
 >
 >Det finns olika metoder för att lägga till [visuella resurser (t.ex. bilder)](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets) till fragmentet och/eller sidan.
 
-För att kunna skapa en association måste du först lägga [till dina mediefiler i en samling](/help/assets/managing-collections-touch-ui.md#adding-assets-to-a-collection). När det är klart kan du:
+För att kunna skapa en association måste du först lägga [till dina mediefiler i en samling](/help/assets/manage-collections.md#adding-assets-to-a-collection). När det är klart kan du:
 
 1. Öppna fragmentet och välj **Associerat innehåll** på sidopanelen.
 
