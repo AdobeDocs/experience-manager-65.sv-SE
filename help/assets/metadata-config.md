@@ -3,7 +3,7 @@ title: Konfiguration och administration av metadatafunktioner.
 description: Konfigurations- och administrationstjänster [!DNL Experience Manager Assets] som rör tillägg och hantering av metadata.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b14b377e52ab10c41355f069d97508b588d82216
+source-git-commit: 0d5a48be283484005013ef3ed7ad015b43f6398b
 workflow-type: tm+mt
 source-wordcount: '1798'
 ht-degree: 4%
@@ -269,7 +269,7 @@ Ange metadatavärden i de olika fälten och klicka **[!UICONTROL Save]** för at
 >[!MORELIKETHIS]
 >
 >* [Metadata-koncept och -förståelse](metadata-concepts.md).
->* [Redigera metadataegenskaper för flera samlingar](managing-collections-touch-ui.md#editing-collection-metadata-in-bulk).
+>* [Redigera metadataegenskaper för flera samlingar](manage-collections.md#editing-collection-metadata-in-bulk).
 >* [Import och export av metadata i Experience Manager Assets](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/metadata-import-feature-video-use.html).
 >* [Profiler för att bearbeta metadata, bilder och videoklipp](processing-profiles.md).
 >* [De bästa sätten att ordna digitala resurser så att de kan använda bearbetningsprofiler](/help/assets/organize-assets.md).
