@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '5591'
 ht-degree: 6%
@@ -237,7 +237,7 @@ Du kan definiera vilka resurstyper som ska bearbetas av Dynamic Media och anpass
 * Rastrera en Adobe Illustrator-fil (.AI) eller en Adobe Photoshop Encapsulated Postscript-fil (.EPS).
 * Obs! Videoprofiler och bildprofiler kan användas för att definiera bearbetning av videoklipp och bilder.
 
-Se [Överföra resurser](/help/assets/managing-assets-touch-ui.md#uploading-assets).
+Se [Överföra resurser](/help/assets/manage-assets.md#uploading-assets).
 
 **Så här konfigurerar du bearbetning av resurser**
 
@@ -428,7 +428,7 @@ När rotationsuppsättningen har överförts och publicerats aktiverar du namnet
 
    Dina autentiseringsuppgifter och din inloggning tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
 
-1. I navigeringsfältet nära sidans överkant klickar du på **[!UICONTROL Setup]>[!UICONTROL Application Setup]>[!UICONTROL Batch Set Presets]>[!UICONTROL Batch Set Preset]**.
+1. I navigeringsfältet nära sidans överkant klickar du på **[!UICONTROL Setup]> [!UICONTROL Application Setup] > [!UICONTROL Batch Set Presets] >[!UICONTROL Batch Set Preset]**.
 
    Observera att **[!UICONTROL View Form]** standardvyn är inställd i det övre högra hörnet på detaljsidan.
 
