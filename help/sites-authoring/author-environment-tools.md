@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: f488ba79-5bda-46e9-9c15-9a8c3dbfa2ce
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2451f4994a18b1566ea0efddbefcaa5bb8e41c99
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+workflow-type: tm+mt
+source-wordcount: '2239'
+ht-degree: 9%
 
 ---
 
@@ -22,7 +25,7 @@ I redigeringsmiljön i AEM finns olika sätt att ordna och redigera ditt innehå
 
 ## Hantera din webbplats {#managing-your-site}
 
-Med **platskonsolen** kan du navigera och hantera webbplatsen med hjälp av sidhuvudsfältet, verktygsfältet, åtgärdsikonerna (gäller för den valda resursen), vägbeskrivningar och, när du väljer det, sekundära spår (t.ex. tidslinje och referenser).
+The **Sites** console allows you to navigate and manage your website, using the header bar, toolbar, action icons (applicable for the selected resource), breadcrumbs and when selected, secondary rails (for example, timeline and references).
 
 Till exempel kolumnvy:
 
@@ -30,7 +33,7 @@ Till exempel kolumnvy:
 
 ## Redigera sidinnehåll {#editing-page-content}
 
-Du kan redigera en sida med sidredigeraren. Exempel:
+Du kan redigera en sida med sidredigeraren. Till exempel:
 
 `https://localhost:4502/editor.html/content/we-retail/us/en/equipment.html`
 
@@ -46,7 +49,7 @@ Du kan redigera en sida med sidredigeraren. Exempel:
 
 När du redigerar en sida kan du komma åt **hjälpen** från:
 
-* Väljaren för [**sidinformation **](/help/sites-authoring/editing-page-properties.md#page-properties). Då visas introduktionsbilderna (som visas första gången du öppnar redigeraren).
+* Väljaren för [**sidinformation**](/help/sites-authoring/editing-page-properties.md#page-properties) . Då visas introduktionsbilderna (som visas första gången du öppnar redigeraren).
 * dialogrutan för [konfiguration](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) av specifika komponenter (med ? ikon i dialogrutans verktygsfält); detta visar sammanhangsberoende hjälp.
 
 Ytterligare [hjälprelaterade resurser finns på konsoler](/help/sites-authoring/basic-handling.md#accessing-help).
@@ -55,7 +58,7 @@ Ytterligare [hjälprelaterade resurser finns på konsoler](/help/sites-authoring
 
 Komponentwebbläsaren visar alla komponenter som är tillgängliga för användning på den aktuella sidan. Dessa kan dras till rätt plats och sedan redigeras för att lägga till ditt innehåll.
 
-Komponentwebbläsaren är en flik i sidopanelen (tillsammans med [resursläsaren](/help/sites-authoring/author-environment-tools.md#assets-browser) och [innehållsträdet](/help/sites-authoring/author-environment-tools.md#content-tree)). Om du vill öppna (eller stänga) sidopanelen använder du ikonen längst upp till vänster i verktygsfältet:
+Komponentläsaren är en flik i sidopanelen (tillsammans med [resursläsaren](/help/sites-authoring/author-environment-tools.md#assets-browser) och [innehållsträdet](/help/sites-authoring/author-environment-tools.md#content-tree)). Om du vill öppna (eller stänga) sidopanelen använder du ikonen längst upp till vänster i verktygsfältet:
 
 ![ateat-03](assets/ateat-03.png)
 
@@ -91,11 +94,13 @@ Det faktiska utseendet och hanteringen beror på vilken enhetstyp du använder:
 
       * Standardkomponentens ikoner är monokroma.
       * Förkortningar är alltid de två första tecknen i komponentnamnet.
+
    I det övre verktygsfältet i **komponentwebbläsaren** kan du:
 
    * Filtrera komponenter efter namn.
    * Begränsa visningen till en viss grupp med listrutan.
-   Om du vill ha en mer detaljerad beskrivning av komponenten kan du klicka eller trycka på informationsikonen bredvid komponenten i **komponentwebbläsaren** (om den är tillgänglig). För **layoutbehållaren**:
+
+   Om du vill ha en mer detaljerad beskrivning av komponenten kan du klicka eller trycka på informationsikonen bredvid komponenten i **komponentläsaren** (om den är tillgänglig). För **layoutbehållaren**:
 
    ![ateat-06](assets/ateat-06.png)
 
@@ -105,7 +110,7 @@ Det faktiska utseendet och hanteringen beror på vilken enhetstyp du använder:
 
 Resursläsaren visar alla [resurser](/help/assets/home.md) som är tillgängliga för direkt användning på den aktuella sidan.
 
-Resursläsaren är en flik i sidopanelen tillsammans med [komponenternas](/help/sites-authoring/author-environment-tools.md#components-browser)webbläsare och [innehållsträd](/help/sites-authoring/author-environment-tools.md#content-tree). Om du vill öppna eller stänga sidopanelen använder du ikonen längst upp till vänster i verktygsfältet:
+The assets browser is a tab within the side panel along with the [components browse](/help/sites-authoring/author-environment-tools.md#components-browser)r and [content tree](/help/sites-authoring/author-environment-tools.md#content-tree). Om du vill öppna eller stänga sidopanelen använder du ikonen längst upp till vänster i verktygsfältet:
 
 ![ateat-03-1](assets/ateat-03-1.png)
 
@@ -150,7 +155,7 @@ Det faktiska utseendet och hanteringen beror på vilken enhetstyp du använder:
 
    Resursläsaren täcker hela sidan som redigeras.
 
-   Om du vill lägga till en resurs på sidan håller du pekaren över den resurs du behöver och sedan flyttar den åt höger. Resursläsaren stängs och sidan visas igen, där du kan lägga till resursen i den nödvändiga komponenten.
+   Om du vill lägga till en resurs på sidan håller du pekaren över den resurs du behöver och sedan flyttar den åt höger. Resursläsaren stängs och sidan visas igen där du kan lägga till resursen i den nödvändiga komponenten.
 
    ![ateat-09](assets/ateat-09.png)
 
@@ -162,7 +167,7 @@ Det faktiska utseendet och hanteringen beror på vilken enhetstyp du använder:
 
    ![ateat-10](assets/ateat-10.png)
 
-Om du snabbt behöver göra en ändring i en resurs kan du starta [resursredigeraren](/help/assets/managing-assets-touch-ui.md) direkt från resursläsaren genom att klicka på redigeringsikonen som visas bredvid resursens namn.
+Om du snabbt behöver göra en ändring i en resurs kan du starta [resursredigeraren](/help/assets/manage-assets.md) direkt från resursläsaren genom att klicka på redigeringsikonen som visas bredvid resursens namn.
 
 ![](do-not-localize/screen_shot_2018-03-22at142448.png)
 
@@ -216,8 +221,8 @@ Om sidan innehåller innehållsfragment får du även åtkomst till [webbläsare
 
 **Referenser** visar anslutningar till den valda sidan:
 
-* Blueprints
-* Startar
+* Ritningar
+* Launches
 * Live-kopior
 * Språkversioner
 * Inkommande länkar
@@ -262,7 +267,7 @@ För lämpliga resurser (t.ex. sidor från konsolen **Platser** eller resurser f
 
 ## Sidinformation {#page-information}
 
-Sidinformation (ikonen för utjämning) öppnar en meny som även innehåller information om den senaste redigeringen och det senaste dokumentet. Beroende på sidans egenskaper, dess plats och din instans kan det finnas fler eller färre alternativ:
+Sidinformation (equalizer-ikonen) öppnar en meny som även innehåller information om den senaste redigeringen och det senaste dokumentet. Beroende på sidans egenskaper, dess plats och din instans kan det finnas fler eller färre alternativ:
 
 ![ateat-17](assets/ateat-17.png)
 
@@ -315,7 +320,8 @@ Du kommer åt dem med hjälp av ikonerna i det övre högra hörnet. Den faktisk
 >* Beroende på sidans egenskaper kanske vissa lägen inte är tillgängliga.
 >* Åtkomst till vissa lägen kräver lämplig behörighet/behörighet.
 >* Utvecklarläget är inte tillgängligt på mobila enheter på grund av utrymmesbegränsningar.
->* Det finns ett [kortkommando](/help/sites-authoring/page-authoring-keyboard-shortcuts.md) ( `Ctrl-Shift-M`) som du kan använda för att växla mellan **förhandsvisning** och det aktuella läget (t.ex. **Redigera**, **Layout**).
+>* Det finns ett [kortkommando](/help/sites-authoring/page-authoring-keyboard-shortcuts.md) (`Ctrl-Shift-M`) som du kan använda för att växla mellan **förhandsvisning** och det aktuella läget (t.ex. **Redigera** eller **Layout**).
+
 >
 
 
@@ -334,7 +340,7 @@ Om du klickar på knappen **Öppna dialogrutan** för markering i sökvägsfält
 
 ![](do-not-localize/screen_shot_2018-03-22at154427.png)
 
-Du kan också börja skriva i sökvägsfältet så kommer AEM att erbjuda matchande sökvägar när du skriver.
+Du kan också börja skriva i sökvägsfältet och AEM erbjuder matchande sökvägar när du skriver.
 
 ![ateat-19](assets/ateat-19.png)
 
@@ -345,7 +351,7 @@ Sökvägsläsaren är organiserad som [kolumnvyn](/help/sites-authoring/basic-ha
 ![screen_shot_2018-03-22at154521](assets/screen_shot_2018-03-22at154521.png)
 
 * När en resurs har valts aktiveras knappen **Välj** i dialogrutans övre högra hörn. Klicka eller tryck för att bekräfta markeringen eller **Avbryt** för att avbryta.
-* Om kontexten tillåter val av flera resurser aktiveras även knappen **Välj** när du väljer en resurs, men även antalet markerade resurser läggs till i fönstrets övre högra hörn. Klicka på **X** bredvid talet för att avmarkera alla.
+* Om det går att välja flera resurser aktiveras även knappen **Välj** när du väljer en resurs och antalet valda resurser läggs till i det övre högra hörnet fönstret. Klicka på **X** bredvid talet för att avmarkera alla.
 * När du navigerar genom trädet visas platsen i de synliga kolumnerna högst upp i dialogrutan. Dessa vägbeskrivningar kan också användas för att snabbt hoppa in i resurshierarkin.
 * Du kan när som helst använda sökfältet högst upp i dialogrutan. Klicka på **X** i sökfältet för att rensa sökningen.
 * Om du vill begränsa sökningen kan du visa filteralternativen och filtrera resultaten baserat på en viss bana.
