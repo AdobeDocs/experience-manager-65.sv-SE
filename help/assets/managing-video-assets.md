@@ -3,7 +3,7 @@ title: Hantera videoresurser
 description: Överför, förhandsgranska, kommentera och publicera videomaterial i [!DNL Adobe Experience Manager].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '727'
 ht-degree: 8%
@@ -22,7 +22,7 @@ Lär dig hur du hanterar och redigerar videoresurserna i [!DNL Adobe Experience 
 [!DNL Adobe Experience Manager Assets] skapar förhandsvisningar för videoresurser med filnamnstillägget MP4. Om resursens format inte är MP4 installerar du FFmpeg-paketet för att generera en förhandsvisning. FFmpeg skapar videoåtergivningar av typen OGG och MP4. Du kan förhandsgranska återgivningarna i [!DNL Assets] användargränssnittet.
 
 1. Navigera till den plats där du vill lägga till digitala resurser i mappen eller undermapparna för digitala resurser.
-1. Om du vill överföra resursen klickar du **[!UICONTROL Create]** i verktygsfältet och väljer **[!UICONTROL Files]**. Du kan också dra en fil till användargränssnittet. Mer information finns i [Överför resurser](managing-assets-touch-ui.md#uploading-assets) .
+1. Om du vill överföra resursen klickar du **[!UICONTROL Create]** i verktygsfältet och väljer **[!UICONTROL Files]**. Du kan också dra en fil till användargränssnittet. Mer information finns i [Överför resurser](manage-assets.md#uploading-assets) .
 1. Om du vill förhandsgranska en video i kortvyn klickar du på alternativet **[!UICONTROL Play]** för ![](assets/do-not-localize/play.png) uppspelning i videoresursen. Du kan bara pausa eller spela upp video i kortvyn. Alternativen [!UICONTROL Play] och [!UICONTROL Pause] är inte tillgängliga i listvyn.
 
 1. Om du vill förhandsgranska videon på sidan med resursinformation klickar du **[!UICONTROL Edit]** på kortet. Videon spelas upp i webbläsarens inbyggda videospelare. Du kan spela upp, pausa, styra volymen och zooma videon till helskärm.
@@ -87,7 +87,7 @@ Efter publiceringen kan du inkludera videomaterialet på en webbsida som en URL 
 
 >[!MORELIKETHIS]
 >
->* [Hantera digitala resurser i Experience Manager Assets](/help/assets/managing-assets-touch-ui.md)
->* [Hantera samlingar i Experience Manager Assets](/help/assets/managing-collections-touch-ui.md)
+>* [Hantera digitala resurser i Experience Manager Assets](/help/assets/manage-assets.md)
+>* [Hantera samlingar i Experience Manager Assets](/help/assets/manage-collections.md)
 >* [Videodokumentation](/help/assets/video.md)för Dynamic Media.
 
