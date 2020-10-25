@@ -1,9 +1,9 @@
 ---
-title: AEM Fluid Experiences Feature List
+title: AEM med flytande upplevelser
 description: Lista med flytande upplevelser
 index: n
 translation-type: tm+mt
-source-git-commit: 307a1db2e5bbb72d730c89ba14f5ce02b96c108d
+source-git-commit: 33abb544c5f12f7d7a44fc326f07fe9b53ebc9d3
 workflow-type: tm+mt
 source-wordcount: '350'
 ht-degree: 6%
@@ -11,35 +11,35 @@ ht-degree: 6%
 ---
 
 
-# AEM Fluid Experiences Feature List{#aem-fluid-experiences-feature-list}
+# AEM med flytande upplevelser{#aem-fluid-experiences-feature-list}
 
-Adobe Experience Manager Fluid Experiences bygger på de kraftfulla funktionerna i AEM Sites, AEM Dynamic Media och AEM Assets för en robust lösning för leverans av headless-material.
+Adobe Experience Manager Fluid Experiences bygger på de kraftfulla funktionerna i AEM Sites, AEM Dynamic Media och AEM Assets och ger en robust lösning för leverans av headless-material.
 
-AEM Fluid Experiences skiljer sig från klassiska AEM genom att endast det headless-användningsfallet behandlas. Framtagning och leverans av högklassigt innehåll och AEM:s starka stöd för hybridanvändning finns med [fullständiga lösningar för AEM Sites, Assets och Dynamic Media.](https://docs.adobe.com/content/help/en/experience-manager-65/user-guide/home.html)
+AEM Fluid Experiences skiljer sig från klassiska AEM genom att endast använda headless delivery use case. Framtagning och distribution av högklassigt innehåll och AEM starkt stöd för hybridanvändning finns för [AEM Sites, Assets och Dynamic Media.](https://docs.adobe.com/content/help/en/experience-manager-65/user-guide/home.html)
 
-I följande tabeller definieras funktionerna i AEM Fluid Experiences och länken till relevant supportdokumentation.
+I följande tabeller definieras funktionerna i AEM flytande upplevelser och länken till relevant supportdokumentation.
 
 * [Databas](#repository-features)
 * [Åtkomst, API:er och leverans](#access-api-and-delivery-features)
 * [Administratörer och integreringar](#admin-and-integration-features)
-* [Analytics och personalisering](#analytics-and-personalization)
+* [Analyser och personalisering](#analytics-and-personalization)
 
 >[!NOTE]
 >
->AEM Fluid Experiences är en delmängd av AEM-funktionaliteten. De funktioner som är länkade till i dessa tabeller kan innehålla ytterligare funktioner som ingår i AEM, men inte i AEM Fluid Experiences.
+>AEM Fluid Experiences är en delmängd av AEM funktionalitet. De funktioner som är länkade till i dessa tabeller kan innehålla ytterligare funktioner som ingår i AEM, men inte i AEM flytande upplevelser.
 
 ## Databasfunktioner {#repository-features}
 
 |  |
 |---|
-| [Innehållsdatabas](/help/assets/managing-assets-touch-ui.md) |
+| [Innehållsdatabas](/help/assets/manage-assets.md) |
 | [Resurstyper](/help/assets/assets-formats.md) |
 | [Bildåtergivningar](/help/assets/image-presets.md) |
 | [Metadata och tagghantering](/help/assets/metadata.md) |
-| [Sökning](/help/assets/managing-assets-touch-ui.md) |
-| [Samlingar](/help/assets/managing-collections-touch-ui.md) och [ljusbord](/help/assets/touch-ui-light-box.md) |
+| [Sökning](/help/assets/manage-assets.md) |
+| [Samlingar](/help/assets/manage-assets.md) och [ljusbord](/help/assets/light-box.md) |
 | [Profiler](/help/assets/processing-profiles.md) |
-| [Versionskontroll](/help/assets/managing-assets-touch-ui.md) |
+| [Versionskontroll](/help/assets/manage-assets.md) |
 | [Dubblettidentifiering](/help/assets/duplicate-detection.md) |
 | [Smarta taggar](/help/assets/enhanced-smart-tags.md) |
 
@@ -72,7 +72,7 @@ I följande tabeller definieras funktionerna i AEM Fluid Experiences och länken
 | [Arbetsflöden](/help/sites-administering/workflows-starting.md) |
 | Anslutning (molntjänster) |
 
-## Analytics och personalisering {#analytics-and-personalization}
+## Analyser och personalisering {#analytics-and-personalization}
 
 |  |
 |---|
@@ -83,7 +83,7 @@ I följande tabeller definieras funktionerna i AEM Fluid Experiences och länken
 ## Läs mer {#learn-more}
 
 * [Flytande upplevelser för användning i headless](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-headless-usecases.html)
-* [AEM Content Service: Vad, varför och hur?](https://helpx.adobe.com/experience-manager/kt/eseminars/ask-the-expert/aem-content-services.html)
+* [AEM: Vad, varför och hur?](https://helpx.adobe.com/experience-manager/kt/eseminars/ask-the-expert/aem-content-services.html)
 * [Använda innehållstjänster](https://helpx.adobe.com/experience-manager/kt/sites/using/structured-fragments-content-services-feature-video-use.html)
 * [Utveckla mobilappar](https://docs.adobe.com/content/help/en/experience-manager-64/mobile/developing/developing-content-services.html)
 * [Vanliga frågor om åtkomst till tredje part](https://helpx.adobe.com/experience-manager/kt/sites/using/content-services-tutorial-use/part7.html)
