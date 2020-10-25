@@ -3,7 +3,7 @@ title: Använd Connected Assets när du vill dela DAM-resurser i [!DNL Sites]
 description: Använd resurser som är tillgängliga på en [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] fjärrdistribution.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 2c3836cb7e2275c30e88e8a750eafce24a05837a
+source-git-commit: 2fe2b5fcaff2b2f2402f0bc638a0df2afd335b31
 workflow-type: tm+mt
 source-wordcount: '2161'
 ht-degree: 39%
@@ -159,7 +159,7 @@ De hämtade resurserna kan användas som andra lokala resurser, förutom att ass
 
 ## Limitations and best practices {#tips-and-limitations}
 
-* Om du vill få insikter om resursanvändning konfigurerar du funktionen [Asset Insight](/help/assets/touch-ui-asset-insights.md) för [!DNL Sites] instansen.
+* Om du vill få insikter om resursanvändning konfigurerar du funktionen [Asset Insight](/help/assets/asset-insights.md) för [!DNL Sites] instansen.
 
 ### Tillstånd och resurshantering {#permissions-and-managing-assets}
 
