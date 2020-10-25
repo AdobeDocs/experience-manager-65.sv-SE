@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 21a18d60-f3fe-4048-9949-8416b5cb4596
 docset: aem65
 translation-type: tm+mt
-source-git-commit: c71c24a291b728ab429b18a405123c96123cf617
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '1486'
 ht-degree: 10%
@@ -39,7 +39,7 @@ Content Fragments lagras som **Assets**, så hanteras främst från **Assets** C
 
 ### Skapa ett innehållsfragment {#creating-a-content-fragment}
 
-Metoden för att skapa ett innehållsfragment är (i princip) densamma för både enkla och strukturerade fragment:
+Metoden för att skapa ett innehållsfragment är (i stort) densamma för både enkla och strukturerade fragment:
 
 1. Navigera till mappen **Resurser** där du vill skapa fragmentet.
 1. Välj **Skapa** och sedan **Innehållsfragment** för att öppna guiden.
@@ -120,7 +120,7 @@ Markera fragmentet för att visa verktygsfältet med tillämpliga åtgärder:
 
 >[!NOTE]
 >
->Många av dessa åtgärder är [standardåtgärder för Assets](/help/assets/managing-assets-touch-ui.md) och/eller [AEM](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html).
+>Många av dessa åtgärder är [standardåtgärder för Assets](/help/assets/manage-assets.md) och/eller [AEM](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html).
 
 ## Öppna fragmentredigeraren {#opening-the-fragment-editor}
 
@@ -193,7 +193,7 @@ Redigeraren har två alternativ:
 
    Redigeraren avslutas utan att de senaste ändringarna sparas.
 
-När du redigerar ditt innehållsfragment skapas AEM automatiskt versioner för att säkerställa att tidigare innehåll kan återställas om du **avbryter** dina ändringar:
+När du redigerar ditt innehållsfragment skapar AEM automatiskt versioner för att säkerställa att tidigare innehåll kan återställas om du **avbryter** dina ändringar:
 
 1. När ett innehållsfragment öppnas för redigering AEM söker efter den cookie-baserade token som anger om det finns en *redigeringssession* :
 
@@ -233,14 +233,14 @@ Du kan visa och redigera egenskaperna för ett fragment på fliken [Metadata](/h
 
 ## Tidslinje för innehållsfragment {#timeline-for-content-fragments}
 
-Förutom standardalternativen innehåller [tidslinjen](/help/assets/managing-assets-touch-ui.md#timeline) både information och åtgärder som är specifika för innehållsfragment:
+Förutom standardalternativen innehåller [tidslinjen](/help/assets/manage-assets.md#timeline) både information och åtgärder som är specifika för innehållsfragment:
 
 * Visa information om versioner, kommentarer och anteckningar
 * Åtgärder för versioner
 
-   * **[Återgå till den här versionen](#reverting-to-a-version)**(välj ett befintligt fragment och sedan en specifik version)
+   * **[Återgå till den här versionen](#reverting-to-a-version)** (välj ett befintligt fragment och sedan en specifik version)
 
-   * **[Jämför med aktuell](#comparing-fragment-versions)**(välj ett befintligt fragment och sedan en specifik version)
+   * **[Jämför med aktuell](#comparing-fragment-versions)** (välj ett befintligt fragment och sedan en specifik version)
 
    * Lägg till en **etikett** och/eller **kommentar** (välj ett befintligt fragment och sedan en specifik version)
 
@@ -277,7 +277,7 @@ Till exempel:
 
 Åtgärden **Jämför med aktuell** är tillgänglig från [tidslinjen](/help/assets/content-fragments/content-fragments-managing.md#timeline-for-content-fragments) när du har valt en viss version.
 
-Den här öppnas:
+Detta öppnas:
 
 * den **aktuella** (senaste) versionen (vänster)
 
