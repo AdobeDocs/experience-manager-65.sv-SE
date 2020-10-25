@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: ed84157a-e6b4-4dde-af2e-a1e0b6259628
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '1395'
 ht-degree: 19%
@@ -27,7 +27,7 @@ Blandade medieuppsättningar definieras av en banderoll med ordet **[!UICONTROL 
 
 >[!NOTE]
 >
->Mer information om användargränssnittet Resurser finns i [Hantera resurser med Touch-gränssnittet](/help/assets/managing-assets-touch-ui.md).
+>Mer information om användargränssnittet Resurser finns i [Hantera resurser med Touch-gränssnittet](/help/assets/manage-assets.md).
 
 ## Snabbstart: Blandade medieuppsättningar {#quick-start-mixed-media-sets}
 
@@ -67,7 +67,7 @@ Följ de här stegen för att komma igång snabbt med blandade medieuppsättning
 
    Se [Länka en uppsättning med blandade medier till en webbsida](/help/assets/linking-urls-to-yourwebapplication.md) och [Bädda in video- eller bildvisningsprogrammet](/help/assets/embed-code.md).
 
-Om du behöver kan du redigera [blandade medieuppsättningar](#editing-mixed-media-sets). Dessutom kan du visa och ändra egenskaperna [för](/help/assets/managing-assets-touch-ui.md#editing-properties)den blandade medieuppsättningen.
+Om du behöver kan du redigera [blandade medieuppsättningar](#editing-mixed-media-sets). Dessutom kan du visa och ändra egenskaperna [för](/help/assets/manage-assets.md#editing-properties)den blandade medieuppsättningen.
 
 >[!NOTE]
 >
@@ -123,7 +123,7 @@ När du lägger till resurser i uppsättningen läggs de automatiskt till i alfa
 
 ## Redigera blandade medieuppsättningar {#editing-mixed-media-sets}
 
-Du kan utföra en mängd redigeringsåtgärder för resurser i blandade medieuppsättningar direkt i användargränssnittet, [precis som för andra resurser i Resurser](/help/assets/managing-assets-touch-ui.md). Du kan även utföra följande åtgärder i Blandade medieuppsättningar:
+Du kan utföra en mängd redigeringsåtgärder för resurser i blandade medieuppsättningar direkt i användargränssnittet, [precis som för andra resurser i Resurser](/help/assets/manage-assets.md). Du kan även utföra följande åtgärder i Blandade medieuppsättningar:
 
 * Lägg till resurser i den blandade medieuppsättningen.
 * Ändra ordning på resurser i den blandade medieuppsättningen.
