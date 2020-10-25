@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: ccc4eb23-934c-4e67-860b-a6faa2bcaafc
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '2009'
 ht-degree: 14%
@@ -33,7 +33,7 @@ Anta till exempel att du vill visa bilder med olika färgskalor; räkningarna ä
 
 >[!NOTE]
 >
->Mer information om användargränssnittet Resurser finns i [Hantera resurser med Touch-gränssnittet](/help/assets/managing-assets-touch-ui.md).
+>Mer information om användargränssnittet Resurser finns i [Hantera resurser med Touch-gränssnittet](/help/assets/manage-assets.md).
 
 ## Snabbstart: Bilduppsättningar {#quick-start-image-sets}
 
@@ -83,7 +83,7 @@ Så här kommer du igång snabbt:
 
    Läs mer i [Länka en bilduppsättning till en webbsida](/help/assets/linking-urls-to-yourwebapplication.md) och [Bädda in video- eller bildvisningsprogrammet](/help/assets/embed-code.md).
 
-Mer information om hur du redigerar bilduppsättningar finns i [Redigera bilduppsättningar.](#editing-image-sets) Dessutom kan du visa och redigera [bilduppsättningsegenskaper](/help/assets/managing-assets-touch-ui.md#editing-properties).
+Mer information om hur du redigerar bilduppsättningar finns i [Redigera bilduppsättningar.](#editing-image-sets) Dessutom kan du visa och redigera [bilduppsättningsegenskaper](/help/assets/manage-assets.md#editing-properties).
 
 Om du har problem med att skapa uppsättningar kan du läsa Bilder och uppsättningar i [Felsökning av dynamiska media - Scene7-läge](/help/assets/troubleshoot-dms7.md#images-and-sets).
 
@@ -91,7 +91,7 @@ Om du har problem med att skapa uppsättningar kan du läsa Bilder och uppsättn
 
 Börja med att ladda upp bilderna för dina bilduppsättningar. Eftersom användare kan zooma in på bilder i bilduppsättningsvisningsprogrammet bör du ta hänsyn till zoomning när du väljer bilder. Se till att bilderna har minst 2 000 pixlar i den största dimensionen. Bilduppsättningar har stöd för många bildfilsformat, men förlustfria TIFF-, PNG- och EPS-bilder rekommenderas.
 
-Du kan överföra bilder för bilduppsättningar på samma sätt som du [överför andra resurser i Resurser](/help/assets/managing-assets-touch-ui.md#uploading-assets).
+Du kan överföra bilder för bilduppsättningar på samma sätt som du [överför andra resurser i Resurser](/help/assets/manage-assets.md#uploading-assets).
 
 ### Förbereder bilduppsättningsresurser för överföring {#preparing-image-set-assets-for-upload}
 
