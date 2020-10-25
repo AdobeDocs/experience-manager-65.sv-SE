@@ -4,7 +4,7 @@ description: Lär dig hur du förhandsgranskar 3D-resurser
 contentOwner: Rick Brough
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '558'
 ht-degree: 4%
@@ -16,7 +16,7 @@ ht-degree: 4%
 
 Adobe Experience Manager stöder överföring, leverans och interaktiv förhandsgranskning av 3D-resurser som en del av utvecklingsprocessen.
 
-Det interaktiva 3D-visningsprogrammet finns på sidan med resursinformation i AEM. Visningsprogrammet innehåller bland annat en samling interaktiva kamerakontroller som du kan använda för att rotera, zooma och panorera 3D-resursen.
+Det interaktiva 3D-visningsprogrammet är tillgängligt från sidan med resursinformation i AEM. Visningsprogrammet innehåller bland annat en samling interaktiva kamerakontroller som du kan använda för att rotera, zooma och panorera 3D-resursen.
 
 <!-- See also [Working with 3D assets in Dynamic Media](/help/assets/assets-3d.md). -->
 
@@ -50,9 +50,9 @@ Dessutom är funktioner i klientdatorn - t.ex. en arbetsstation, bärbar dator e
 
 **Förhandsgranska 3D-resurser i AEM**
 
-1. Kontrollera att du har överfört 3D-resurser till AEM.
-See [Supported formats for 3D preview](#supported-3d-previewing-assets) and [Uploading assets](/help/assets/managing-assets-touch-ui.md#uploading-assets).
-1. Från AEM, på **[!UICONTROL Navigation]** sidan, tryck **[!UICONTROL Assets > Files.]**
+1. Se till att du har överfört 3D-resurser till AEM.
+See [Supported formats for 3D preview](#supported-3d-previewing-assets) and [Uploading assets](/help/assets/manage-assets.md#uploading-assets).
+1. Tryck på AEM på **[!UICONTROL Navigation]** sidan **[!UICONTROL Assets > Files.]**
 
    ![Navigeringssida](/help/assets/assets-dm/navigation-assets.png)
 
