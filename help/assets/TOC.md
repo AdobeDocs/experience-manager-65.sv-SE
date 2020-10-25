@@ -6,7 +6,7 @@ user-guide-title: Resurshandbok
 breadcrumb-title: Resurshandbok
 user-guide-description: Skapa, hantera, leverera och optimera digitala resurser.
 translation-type: tm+mt
-source-git-commit: 5599e0d4a3e52a4ad98b776b9178722c7ac47cbc
+source-git-commit: c1362c2c1f32d02d36d2067e0e74d927ddbc1554
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 34%
@@ -113,7 +113,7 @@ ht-degree: 34%
    + [[!DNL Experience Manager] and [!DNL Creative Cloud] integration](aem-cc-integration-best-practices.md)
    + [Integrera med [!DNL InDesign Server]](indesign.md)
    + [Digital Rights Management i tillgångar](drm.md)
-   + [Använd demopaket för resursinsikter](touch-ui-using-demo-package-for-asset-insights.md)
+   + [Använd demopaket för resursinsikter](use-demo-package-for-asset-insights.md)
    + [Bästa metoder för att använda filformat](assets-file-format-best-practices.md)
    + [Metodtips för att övervaka resurser](assets-monitoring-best-practices.md)
    + [Camera Raw stöd](camera-raw.md)
@@ -139,21 +139,21 @@ ht-degree: 34%
    + [Content Fragments - Markdown](content-fragments/content-fragments-markdown.md)
    + [Skapa översättningsprojekt för innehållsfragment](creating-translation-projects-for-content-fragments.md)
 + Hantera resurser {#managing}
-   + [Hantera digitala resurser](managing-assets-touch-ui.md)
-   + [Hantera samlingar](managing-collections-touch-ui.md)
+   + [Hantera digitala resurser](manage-assets.md)
+   + [Hantera samlingar](manage-collections.md)
    + [Aktivera dubblettidentifiering](duplicate-detection.md)
    + [Ordna digitala resurser](organize-assets.md)
    + [Hantera videoresurser](managing-video-assets.md)
    + [Skapa översättningsprojekt](translation-projects.md)
    + [Förbered resurser för översättning](preparing-assets-for-translation.md)
    + [Hämta resurser från Experience Manager](download-assets-from-aem.md)
-   + [Ljuslåda](touch-ui-light-box.md)
-   + [Resursinsikter](touch-ui-asset-insights.md)
-   + [Aktivera tillgångsinsikter via DTM](touch-ui-using-dtm-for-asset-insights.md)
-   + [Konfigurera resursinsikter](touch-ui-configuring-asset-insights.md)
+   + [Ljuslåda](light-box.md)
+   + [Resursinsikter](asset-insights.md)
+   + [Aktivera tillgångsinsikter via DTM](use-dtm-for-asset-insights.md)
+   + [Konfigurera resursinsikter](configure-asset-insights.md)
    + [Checka in och checka ut resurser](check-out-and-submit-assets.md)
    + [Använd översättningsmolntjänster på mappar](transition-cloud-services.md)
-   + [Använda sidspårning och bädda in kod på webbsidor](touch-ui-using-page-tracker.md)
+   + [Använda sidspårning och bädda in kod på webbsidor](use-page-tracker.md)
    + [Hantera sammansatta resurser](managing-linked-subassets.md)
    + [Relaterade tillgångar](related-assets.md)
    + [Delning av privata mappar](private-folder.md)
