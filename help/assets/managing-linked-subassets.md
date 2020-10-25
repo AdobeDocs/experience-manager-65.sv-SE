@@ -3,7 +3,7 @@ title: Hantera sammansatta resurser med referenser och flera sidor
 description: Lär dig hur du skapar referenser till digitala resurser inifrån [!DNL Adobe InDesign], [!DNL Adobe Illustrator], and [!DNL Adobe Photoshop]. Använd funktionen för sidvisningsprogram för att visa enskilda underresurssidor för flersidiga filer som PDF-, INDD-, PPT-, PPTX- och AI-filer.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '1298'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Du kan referera till befintliga digitala resurser inifrån en [!DNL Adobe Illust
 1. Hämta de digitala resurserna på det lokala filsystemet med hjälp av [Experience Manager-datorprogrammet](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html). Navigera till filsystemplatsen för resursen som du vill referera till.
 1. Dra resursen från den lokala mappen till [!DNL Illustrator] filen.
 
-1. Spara [!DNL Illustrator] filen på den monterade enheten eller [överför](/help/assets/managing-assets-touch-ui.md#uploading-assets) den till [!DNL Experience Manager] databasen.
+1. Spara [!DNL Illustrator] filen på den monterade enheten eller [överför](/help/assets/manage-assets.md#uploading-assets) den till [!DNL Experience Manager] databasen.
 
 1. När arbetsflödet är klart går du till sidan med resursinformation för resursen. Referenserna till befintliga digitala resurser listas under **[!UICONTROL Dependencies]** i **[!UICONTROL References]** kolumnen.
 
@@ -72,7 +72,7 @@ Den här proceduren liknar hur du [lägger till digitala resurser som referenser
 
    ![chlimage_1-87](assets/chlimage_1-261.png)
 
-1. Spara som [!DNL Photoshop] fil till den monterade enheten eller [överför](/help/assets/managing-assets-touch-ui.md#uploading-assets) till [!DNL Experience Manager] databasen.
+1. Spara som [!DNL Photoshop] fil till den monterade enheten eller [överför](/help/assets/manage-assets.md#uploading-assets) till [!DNL Experience Manager] databasen.
 1. När arbetsflödet är klart visas referenserna till befintliga [!DNL Experience Manager] resurser på sidan med resursinformation.
 
    Om du vill visa de refererade resurserna stänger du [Rail](/help/sites-authoring/basic-handling.md#rail-selector) på sidan med tillgångsinformation.
