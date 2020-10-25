@@ -12,7 +12,7 @@ discoiquuid: 59780112-6a9b-4de2-bf65-f026c8c74a31
 docset: aem65
 targetaudience: target-audience upgrader
 translation-type: tm+mt
-source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
+source-git-commit: c1362c2c1f32d02d36d2067e0e74d927ddbc1554
 workflow-type: tm+mt
 source-wordcount: '2201'
 ht-degree: 0%
@@ -133,7 +133,7 @@ Du kan förbereda anpassningar av resursgränssnittet genom att göra följande:
 
 ### Genererar resurs-ID:n för befintliga resurser {#generating-asset-ids-for-existing-assets}
 
-Om du vill generera resurs-ID:n för befintliga resurser ska du uppgradera resurserna när du uppgraderar din AEM så att AEM 6.5 körs. Detta krävs för att aktivera funktionen [](/help/assets/touch-ui-asset-insights.md)Resursinsikter. Mer information finns i [Lägga till inbäddningskod](/help/assets/touch-ui-using-page-tracker.md#add-embed-code).
+Om du vill generera resurs-ID:n för befintliga resurser ska du uppgradera resurserna när du uppgraderar din AEM så att AEM 6.5 körs. Detta krävs för att aktivera funktionen [](/help/assets/asset-insights.md)Resursinsikter. Mer information finns i [Lägga till inbäddningskod](/help/assets/use-page-tracker.md#add-embed-code).
 
 Om du vill uppgradera resurser konfigurerar du paketet Associate Asset IDs i JMX-konsolen. Beroende på antalet resurser i databasen kan det `migrateAllAssets` ta lång tid. Våra interna tester beräknar cirka en timme för 125 000 tillgångar på TjärMK.
 
