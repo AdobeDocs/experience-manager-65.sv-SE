@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: e72da81b-4085-49b0-86c3-11ad48978a8a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 0d5a48be283484005013ef3ed7ad015b43f6398b
 workflow-type: tm+mt
 source-wordcount: '5487'
 ht-degree: 0%
@@ -68,8 +68,8 @@ I följande tabeller visas varje objekt tillsammans med:
   <tr>
    <td><p>admin</p> <p>Standardlösenord: admin</p> </td>
    <td>Användare</td>
-   <td><p>Systemadministratörskonto med fullständig behörighet.</p> <p>Det här kontot används för anslutningen mellan AEM WCM och CRX.</p> <p>Om du råkar ta bort det här kontot återskapas det när databasen startas om (i standardinställningen).</p> <p>Administratörskontot är ett krav för AEM-plattformen. Detta konto kan därför inte tas bort.</p> </td>
-   <td><p>Adobe rekommenderar att lösenordet för det här användarkontot ändras från standardvärdet.</p> <p>Bäst vid installationen, men det kan göras i efterhand.</p> <p>Obs! Det här kontot ska inte blandas ihop med administratörskontot för CQ Servlet Engine.</p> </td>
+   <td><p>Systemadministratörskonto med fullständig behörighet.</p> <p>Det här kontot används för anslutningen mellan AEM WCM och CRX.</p> <p>Om du råkar ta bort det här kontot återskapas det när databasen startas om (i standardinställningen).</p> <p>Administratörskontot är ett krav för den AEM plattformen. Detta konto kan därför inte tas bort.</p> </td>
+   <td><p>Adobe rekommenderar starkt att lösenordet för det här användarkontot ändras från standardvärdet.</p> <p>Bäst vid installationen, men det kan göras i efterhand.</p> <p>Obs! Det här kontot ska inte blandas ihop med administratörskontot för CQ Servlet Engine.</p> </td>
   </tr>
   <tr>
    <td><p>anonym</p> <p> </p> </td>
@@ -93,7 +93,7 @@ I följande tabeller visas varje objekt tillsammans med:
    <td>innehållsförfattare</td>
    <td>Grupp</td>
    <td><p>Grupp ansvarig för innehållsredigering. Kräver behörighet att läsa, ändra, skapa och ta bort.</p> </td>
-   <td>Du kan skapa egna grupper med innehållsförfattare med projektspecifika åtkomsträttigheter, förutsatt att du lägger till behörighet för att läsa, ändra, skapa och ta bort.</td>
+   <td>Du kan skapa egna grupper med innehållsförfattare med projektspecifik behörighet, förutsatt att du lägger till behörighet för att läsa, ändra, skapa och ta bort.</td>
   </tr>
   <tr>
    <td>medverkande</td>
@@ -110,7 +110,7 @@ I följande tabeller visas varje objekt tillsammans med:
   <tr>
    <td>alla</td>
    <td>Grupp</td>
-   <td><p>Alla användare i AEM är medlemmar i gruppen Alla, även om du inte kan se gruppen eller medlemskapsrelationen i alla verktyg.</p> <p>Den här gruppen kan betraktas som standardrättigheter eftersom den kan användas för att tillämpa behörigheter för alla, även användare som kommer att skapas i framtiden.</p> </td>
+   <td><p>Alla användare i AEM är medlemmar i gruppen, men du kanske inte ser gruppen eller medlemskapsrelationen i alla verktyg.</p> <p>Den här gruppen kan betraktas som standardrättigheter eftersom den kan användas för att tillämpa behörigheter för alla, även användare som kommer att skapas i framtiden.</p> </td>
    <td><p>Ändra eller ta inte bort den här gruppen.</p> <p>Om du ändrar det här kontot får det ytterligare säkerhetskonsekvenser.</p> </td>
   </tr>
   <tr>
@@ -141,15 +141,15 @@ I följande tabeller visas varje objekt tillsammans med:
 
 ## Behörigheter i AEM {#permissions-in-aem}
 
-AEM använder ACL:er för att avgöra vilka åtgärder en användare eller grupp kan vidta och var den kan utföra dessa åtgärder.
+AEM använder åtkomstkontrollistor för att avgöra vilka åtgärder en användare eller grupp kan vidta och var den kan utföra dessa åtgärder.
 
 ### Behörigheter och åtkomstkontrollistor {#permissions-and-acls}
 
 Behörigheter definierar vem som får utföra vilka åtgärder på en resurs. Behörigheterna är resultatet av [åtkomstkontrollsutvärderingar](#access-control-lists-and-how-they-are-evaluated) .
 
-Du kan ändra behörigheterna som beviljas/nekas till en viss användare genom att markera eller avmarkera kryssrutorna för de enskilda AEM- [åtgärderna](security.md#actions). En bock anger att en åtgärd är tillåten. Ingen bock indikerar att en åtgärd nekas.
+Du kan ändra behörigheterna som ges/nekas till en viss användare genom att markera eller avmarkera kryssrutorna för de enskilda AEM [åtgärderna](security.md#actions). En bock anger att en åtgärd är tillåten. Ingen bock indikerar att en åtgärd nekas.
 
-Där bockmarkeringen finns i rutnätet visas även vilka behörigheter användarna har på vilka platser i AEM (det vill säga vilka sökvägar).
+Där bockmarkeringen finns i rutnätet visas även vilka behörigheter användarna har på vilka platser i AEM (d.v.s. vilka sökvägar).
 
 ### Åtgärder {#actions}
 
@@ -205,7 +205,7 @@ Där bockmarkeringen finns i rutnätet visas även vilka behörigheter användar
 
 >[!NOTE]
 >
->AEM genererar automatiskt användargrupper för rolltilldelning (ägare, redigerare, visningsprogram) i [samlingar](/help/assets/managing-collections-touch-ui.md). Om du lägger till åtkomstkontrollistor manuellt för sådana grupper kan säkerhetsluckor i AEM uppstå. Adobe rekommenderar att du undviker att lägga till åtkomstkontrollistor manuellt.
+>AEM genererar automatiskt användargrupper för rolltilldelning (ägare, redigerare, visningsprogram) i [samlingar](/help/assets/manage-collections.md). Om du lägger till åtkomstkontrollistor manuellt för sådana grupper kan det dock medföra säkerhetsluckor i AEM. Adobe rekommenderar att du undviker att lägga till åtkomstkontrollistor manuellt.
 
 ### Åtkomstkontrollistor och hur de utvärderas {#access-control-lists-and-how-they-are-evaluated}
 
@@ -238,7 +238,7 @@ AEM WCM använder ACL-listor (Access Control Lists) för att organisera de behö
 
 | **Åtgärd** | **Beskrivning** |
 |---|---|
-| Tillåt (bock) | Med AEM WCM kan användaren utföra åtgärden på den här sidan eller på alla underordnade sidor. |
+| Tillåt (bock) | AEM WCM gör att användaren kan utföra åtgärden på den här sidan eller på underordnade sidor. |
 | Neka (ingen bock) | AEM WCM tillåter inte att användaren utför åtgärden på den här sidan eller på några underordnade sidor. |
 
 Behörigheterna tillämpas även på underordnade sidor.
@@ -298,7 +298,7 @@ Innan du ändrar någon av behörigheterna måste du se till att du förstår hu
 
 ### Behörigheter {#permissions}
 
-Behörigheter ger användare och grupper åtkomst till AEM-funktioner på AEM-sidor.
+Behörigheter ger användare och grupper åtkomst till AEM på AEM sidor.
 
 Du bläddrar bland behörigheter genom att utöka/komprimera noderna och du kan spåra behörighetsarvet upp till rotnoden.
 
@@ -308,7 +308,7 @@ Du tillåter eller nekar behörigheter genom att markera eller avmarkera lämpli
 
 ### Visa detaljerad behörighetsinformation {#viewing-detailed-permission-information}
 
-Tillsammans med stödrastervyn ger AEM en detaljerad vy över behörigheter för en vald användare/grupp på en viss sökväg. Detaljvyn innehåller ytterligare information.
+Tillsammans med stödrastervyn AEM en detaljerad vy över behörigheter för en markerad användare/grupp på en viss sökväg. Detaljvyn innehåller ytterligare information.
 
 Förutom att visa information kan du även inkludera eller exkludera den aktuella användaren eller gruppen från en grupp. Se [Lägga till användare eller grupper när behörigheter](#adding-users-or-groups-while-adding-permissions)läggs till. Ändringarna som görs här visas omedelbart i den övre delen av den detaljerade vyn.
 
@@ -388,13 +388,13 @@ Båda kan konfigureras med funktionen för användaradministration i säkerhetsk
 
 Du får åtkomst till alla användare, grupper och tillhörande behörigheter med hjälp av säkerhetskonsolen. Alla procedurer som beskrivs i det här avsnittet utförs i det här fönstret.
 
-Gör något av följande för att få åtkomst till AEM WCM-säkerhet:
+Gör något av följande om du vill få åtkomst AEM WCM-säkerhet:
 
 * Klicka på säkerhetsikonen på välkomstskärmen eller olika platser i AEM:
 
 ![](do-not-localize/wcmtoolbar.png)
 
-* Navigera direkt till `https://<server>:<port>/useradmin`. Se till att du loggar in på AEM som administratör.
+* Navigera direkt till `https://<server>:<port>/useradmin`. Se till att du loggar in AEM som administratör.
 
 Följande fönster visas:
 
@@ -456,10 +456,12 @@ Så här skapar du en ny användare eller grupp:
 
 1. Ange nödvändig information beroende på om du skapar en användare eller en grupp.
 
-   * Om du väljer **Skapa användare anger** du inloggnings-ID, för- och efternamn, e-postadress och lösenord. Som standard skapar AEM en bana baserat på den första bokstaven i efternamnet, men du kan välja en annan bana.
+   * Om du väljer **Skapa användare anger** du inloggnings-ID, för- och efternamn, e-postadress och lösenord. Som standard skapar AEM en bana som baseras på den första bokstaven i efternamnet, men du kan välja en annan bana.
+
    ![createusdialog](assets/createuserdialog.png)
 
    * Om du väljer **Skapa grupp** anger du ett grupp-ID och en valfri beskrivning.
+
    ![creategroupdialog](assets/creategroupdialog.png)
 
 1. Klicka på **Skapa**. Användaren eller gruppen som du skapade visas i trädlistan.
@@ -469,7 +471,7 @@ Så här skapar du en ny användare eller grupp:
 Så här tar du bort en användare eller grupp:
 
 1. Markera den användare eller grupp som du vill ta bort i **säkerhetskonsolen** . Om du vill ta bort flera objekt Skift-klickar eller Ctrl-klickar du för att markera dem.
-1. Klicka på **Redigera och** välj sedan Ta bort. AEM WCM frågar om du vill ta bort användaren eller gruppen.
+1. Klicka på **Redigera och** välj sedan Ta bort. AEM frågar om du vill ta bort användaren eller gruppen.
 1. Klicka på **OK** för att bekräfta eller Avbryt för att avbryta åtgärden.
 
 ### Ändra användar- och gruppegenskaper {#modifying-user-and-group-properties}
@@ -494,7 +496,7 @@ Använd följande procedur för att ändra en användares lösenord.
 >
 >Du kan inte använda säkerhetskonsolen för att ändra administratörslösenordet. Om du vill ändra lösenordet för administratörskontot använder du [användarkonsolen](/help/sites-administering/granite-user-group-admin.md#changing-the-password-for-an-existing-user) som Granite Operations tillhandahåller.
 >
->Om du använder AEM Forms på JEE ska du inte använda nedanstående instruktioner för att ändra lösenord, utan i stället använda AEM Forms på JEE-administratörskonsolen (/adminui) för att ändra lösenordet.
+>Om du använder AEM Forms på JEE ska du inte använda nedanstående instruktioner för att ändra lösenord, utan i stället använda AEM Forms på JEE Admin Console (/adminui) för att ändra lösenordet.
 
 1. Dubbelklicka på det användarnamn du vill ändra lösenordet för i **säkerhetskonsolen** .
 1. Klicka på fliken **Egenskaper** (om den inte redan är aktiv).
@@ -637,7 +639,8 @@ Replikeringsprivilegium är rätten att publicera innehåll, och det kan anges f
 >
 >* Alla replikeringsrättigheter som tillämpas på en grupp gäller för alla användare i gruppen.
 >* En användares replikeringsbehörighet åsidosätter en grupps replikeringsbehörighet.
->* Tillåt replikeringsrättigheter har högre prioritet än Neka-replikeringsrättigheter. Mer information finns i [Behörigheter i AEM](#permissions-in-aem) .
+>* Tillåt replikeringsrättigheter har en högre prioritet än Neka-replikeringsrättigheter. Mer information finns i [Behörigheter i AEM](#permissions-in-aem) .
+
 >
 
 
