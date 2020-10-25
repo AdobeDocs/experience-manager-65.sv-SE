@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ea39bb870fd20f7e30afc2c4f5bceb2fe6427848
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '11356'
 ht-degree: 6%
@@ -70,7 +70,7 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
       * Visa källvideon och de kodade återgivningarna av videon tillsammans med tillhörande miniatyrer:
          [Förhandsgranska videoklipp](managing-video-assets.md#upload-and-preview-video-assets) eller [förhandsgranska resurser](previewing-assets.md)
          [Visa videoåtergivningar](video-renditions.md)
-         [Hantera videoåtergivningar](managing-assets-touch-ui.md#managing-renditions)
+         [Hantera videoåtergivningar](manage-assets.md#managing-renditions)
 
       * [Hantera förinställningar för visningsprogram](managing-viewer-presets.md)
       * [Publicera resurser](publishing-dynamicmedia-assets.md)
@@ -80,16 +80,16 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
          [Visa egenskaper för videoåtergivning](video-renditions.md)
 
       * Redigera egenskaperna för video, till exempel titel, beskrivning och taggar, anpassade metadatafält:
-         [Redigera videoegenskaper](managing-assets-touch-ui.md#editing-properties)
+         [Redigera videoegenskaper](manage-assets.md#editing-properties)
 
       * [Hantera metadata för digitala resurser](metadata.md)
       * [Metadata-scheman](metadata-schemas.md)
    * Granska, godkänn och kommentera videoklipp och behåll fullständig versionskontroll
 
-      * [Anteckna videoklipp](managing-video-assets.md#annotate-video-assets) eller [anteckningsresurser](managing-assets-touch-ui.md#annotating)
+      * [Anteckna videoklipp](managing-video-assets.md#annotate-video-assets) eller [anteckningsresurser](manage-assets.md#annotating)
 
-      * [Skapa en version](managing-assets-touch-ui.md#asset-versioning)
-      * [Tillämpa arbetsflöden på resurser](assets-workflow.md) eller se [Starta ett arbetsflöde på en resurs](managing-assets-touch-ui.md#starting-a-workflow-on-an-asset)
+      * [Skapa en version](manage-assets.md#asset-versioning)
+      * [Tillämpa arbetsflöden på resurser](assets-workflow.md) eller se [Starta ett arbetsflöde på en resurs](manage-assets.md#starting-a-workflow-on-an-asset)
 
       * [Granska mappresurser](bulk-approval.md)
       * [Projekt](../sites-authoring/projects.md)
@@ -1165,7 +1165,7 @@ Se [WebVTT: Textspår för webbvideo](https://dev.w3.org/html5/webvtt/)
    Vanligtvis vill du ge kapitlet VTT-filen samma namn som videofilen och bifoga den med kapitel. Genom att göra det kan det hjälpa dig att automatisera genereringen av video-URL:er med ditt befintliga system för hantering av webbinnehåll.
 1. I AEM överför du din WebVTT-kapitelfil.
 
-   Se [Överföra resurser](/help/assets/managing-assets-touch-ui.md#uploading-assets).
+   Se [Överföra resurser](/help/assets/manage-assets.md#uploading-assets).
 
 1. Gör något av följande:
 
