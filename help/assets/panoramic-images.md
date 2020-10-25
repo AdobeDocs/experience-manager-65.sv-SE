@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 632a9074-b747-49a1-a57d-1f42bba1f4e9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '556'
 ht-degree: 4%
@@ -37,7 +37,7 @@ Du kan åsidosätta standardinställningen för proportioner på 2 i CRXDE Lite 
 
 Kriterierna för proportioner och nyckelord gäller även för panoramaresurser på sidan med resursinformation och för komponenten `Panoramic Media` i innehållshanteringssystemet.
 
-Information om hur du överför resurser som ska användas med panoramabildsvisningsprogrammet finns i [Överföra resurser](/help/assets/managing-assets-touch-ui.md#uploading-assets).
+Information om hur du överför resurser som ska användas med panoramabildsvisningsprogrammet finns i [Överföra resurser](/help/assets/manage-assets.md#uploading-assets).
 
 ## Konfigurera Dynamic Media Classic (Scene7) {#configuring-dynamic-media-classic-scene}
 
