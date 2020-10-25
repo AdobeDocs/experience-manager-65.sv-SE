@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 04be55f2-c7d8-45ef-89e5-58856b971de5
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '6007'
 ht-degree: 4%
@@ -237,14 +237,14 @@ Se [Skapa en ny visningsförinställning](/help/assets/managing-viewer-presets.m
 
 Om du redan har överfört videoklipp och miniatyrbilder går du vidare till [Lägga till interaktivitet i videon](#adding-interactivity-to-your-video).
 
-Om du har överfört fel videoklipp eller bilder, eller om du vill ta bort överförda videoklipp eller bilder som du inte längre behöver, se [Ta bort resurser](/help/assets/managing-assets-touch-ui.md#deleting-assets).
+Om du har överfört fel videoklipp eller bilder, eller om du vill ta bort överförda videoklipp eller bilder som du inte längre behöver, se [Ta bort resurser](/help/assets/manage-assets.md#deleting-assets).
 
 Så här överför du en video och dess associerade miniatyrbildsresurser:
 
 1. Överför videon och tillhörande miniatyrbilder till den eller de mappar du vill använda.
 
-   Se [Överföra resurser](/help/assets/managing-assets-touch-ui.md).
-Se [Överföra resurser med FTP-jobbplanering](/help/assets/managing-assets-touch-ui.md).
+   Se [Överföra resurser](/help/assets/manage-assets.md).
+Se [Överföra resurser med FTP-jobbplanering](/help/assets/manage-assets.md).
 
    Nu kan du lägga till interaktivitet i videon.
 
