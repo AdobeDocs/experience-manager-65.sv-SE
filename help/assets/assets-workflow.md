@@ -3,7 +3,7 @@ title: Bearbeta resurser med arbetsflöden
 description: Resursbearbetning för att konvertera format, skapa renderingar, hantera resurser, validera resurser och köra arbetsflöden.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 0d5a48be283484005013ef3ed7ad015b43f6398b
 workflow-type: tm+mt
 source-wordcount: '938'
 ht-degree: 3%
@@ -27,7 +27,7 @@ Information om de olika arbetsflödesmodellerna som är tillgängliga som standa
 
 ![En del av standardarbetsflödet](assets/aem-default-workflows.png)
 
-*Bild: Vissa standardarbetsflöden som är tillgängliga i[!DNL Experience Manager].*
+*Bild: Vissa standardarbetsflöden som är tillgängliga i [!DNL Experience Manager].*
 
 ## Använda arbetsflöden för att bearbeta resurser {#applying-workflows-to-assets}
 
@@ -84,7 +84,7 @@ Hur du tillämpar ett arbetsflöde på flera mappar liknar hur du tillämpar ett
 
 ## Tillämpa ett arbetsflöde på en samling {#applying-a-workflow-to-a-collection}
 
-Se [Använda ett arbetsflöde i en samling](/help/assets/managing-collections-touch-ui.md#running-a-workflow-on-a-collection).
+Se [Använda ett arbetsflöde i en samling](/help/assets/manage-collections.md#running-a-workflow-on-a-collection).
 
 ## Starta ett arbetsflöde automatiskt för att bearbeta resurser {#auto-execute-workflow-on-some-assets}
 
