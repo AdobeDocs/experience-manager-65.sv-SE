@@ -4,7 +4,7 @@ description: Lär dig hur du söker efter nödvändiga resurser [!DNL Adobe Expe
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 5599e0d4a3e52a4ad98b776b9178722c7ac47cbc
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '5917'
 ht-degree: 4%
@@ -35,7 +35,7 @@ Sök efter resurser med hjälp av Omnissearch-fältet högst upp i [!DNL Experie
 
 Använd panelen för att begränsa sökningen genom att filtrera sökresultaten baserat på olika alternativ (prediktiv), t.ex. filtyp, filstorlek, senaste ändringsdatum, resursens status, information om insikter och Adobe Stock-licensiering. **[!UICONTROL Filters]** Administratörerna kan anpassa filterpanelen och lägga till eller ta bort sökpredikt med hjälp av sökfaktorer. Filtret [!UICONTROL File Type] på [!UICONTROL Filters] panelen har kryssrutor för olika lägen. Om du inte markerar alla kapslade predikat (eller format) markeras därför kryssrutorna på första nivån delvis.
 
-[!DNL Experience Manager] sökfunktionen stöder sökning efter samlingar och sökning efter resurser i en samling. Se [söksamlingar](/help/assets/managing-collections-touch-ui.md).
+[!DNL Experience Manager] sökfunktionen stöder sökning efter samlingar och sökning efter resurser i en samling. Se [söksamlingar](/help/assets/manage-collections.md).
 
 ## Förstå sökgränssnittet {#searchui}
 
@@ -222,7 +222,7 @@ Författare kan använda Content Finder för att söka i DAM-databasen efter rel
 
 ### Sök i samlingar {#collections}
 
-[!DNL Experience Manager] sökfunktionen stöder sökning efter samlingar och sökning efter resurser i en samling. Se [söksamlingar](/help/assets/managing-collections-touch-ui.md).
+[!DNL Experience Manager] sökfunktionen stöder sökning efter samlingar och sökning efter resurser i en samling. Se [söksamlingar](/help/assets/manage-collections.md).
 
 ## Resursväljare {#assetpicker}
 
@@ -374,7 +374,7 @@ För att öka hastigheten på identifieringen erbjuder [!DNL Experience Manager 
 
 ### Extrahera text när resurser överförs {#extracttextupload}
 
-Du kan konfigurera så [!DNL Experience Manager] att texten extraheras från resurserna när användare överför resurser, till exempel PSD- eller PDF-filer. [!DNL Experience Manager] indexerar den extraherade texten och hjälper användarna att söka efter dessa resurser baserat på den extraherade texten. Se [Överföra resurser](/help/assets/managing-assets-touch-ui.md#uploading-assets).
+Du kan konfigurera så [!DNL Experience Manager] att texten extraheras från resurserna när användare överför resurser, till exempel PSD- eller PDF-filer. [!DNL Experience Manager] indexerar den extraherade texten och hjälper användarna att söka efter dessa resurser baserat på den extraherade texten. Se [Överföra resurser](/help/assets/manage-assets.md#uploading-assets).
 
 Om textextraheringen blir alltför resurskrävande för distributionen bör du [inaktivera textrahering](https://helpx.adobe.com/experience-manager/kb/Disable-binary-text-extraction-to-optimize-Lucene-indexing-AEM.html).
 
@@ -447,7 +447,7 @@ En samling är en ordnad uppsättning resurser som kan innehålla resurser från
 * En statisk referenslista med resurser, mappar och andra samlingar.
 * En dynamisk lista (smart samling) som fyller i resurser i samlingen baserat på sökvillkor.
 
-Du kan skapa smarta samlingar baserat på sökvillkoren. På panelen **[!UICONTROL Filters]** väljer du **[!UICONTROL Files]** och klickar på **[!UICONTROL Save Smart Collection]**. Läs mer i [Hantera samlingar](/help/assets/managing-collections-touch-ui.md).
+Du kan skapa smarta samlingar baserat på sökvillkoren. På panelen **[!UICONTROL Filters]** väljer du **[!UICONTROL Files]** och klickar på **[!UICONTROL Save Smart Collection]**. Läs mer i [Hantera samlingar](/help/assets/manage-collections.md).
 
 ## Felsöka oväntade sökresultat och problem {#troubleshoot-unexpected-search-results-and-issues}
 
