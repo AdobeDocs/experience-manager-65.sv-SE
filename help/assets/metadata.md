@@ -3,7 +3,7 @@ title: Hantera metadata för era digitala resurser i [!DNL Adobe Experience Mana
 description: Lär dig mer om metadatatyperna och [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager] hur du automatiskt kan ordna och bearbeta resurser baserat på deras metadata.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b14b377e52ab10c41355f069d97508b588d82216
+source-git-commit: e49fa8ec19411648841b19bad4b8c1e0efcc1dc1
 workflow-type: tm+mt
 source-wordcount: '2324'
 ht-degree: 10%
@@ -163,7 +163,7 @@ Några exempel på användningsområden för att exportera flera metadata samtid
 
 ## Redigera metadata för samlingar {#collections-metadata}
 
-Mer information finns i [Visa och redigera samlingsmetadata](/help/assets/managing-collections-touch-ui.md#view-edit-collection-metadata) och [redigera metadata för flera samlingar samtidigt](/help/assets/managing-collections-touch-ui.md#editing-collection-metadata-in-bulk).
+Mer information finns i [Visa och redigera samlingsmetadata](/help/assets/manage-collections.md#view-edit-collection-metadata) och [redigera metadata för flera samlingar samtidigt](/help/assets/manage-collections.md#editing-collection-metadata-in-bulk).
 
 ## Använda en metadataprofil för mappar {#applying-a-metadata-profile-to-folders}
 
@@ -242,7 +242,7 @@ Du kan ta bort en metadataprofil från en mapp på **[!UICONTROL Tools]** menyn 
 >[!MORELIKETHIS]
 >
 >* [Metadata-koncept och -förståelse](metadata-concepts.md).
->* [Redigera metadataegenskaper för flera samlingar](managing-collections-touch-ui.md#editing-collection-metadata-in-bulk)
+>* [Redigera metadataegenskaper för flera samlingar](manage-collections.md#editing-collection-metadata-in-bulk)
 >* [Import och export av metadata i Experience Manager Assets](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/metadata-import-feature-video-use.html)
 
 
