@@ -1,9 +1,9 @@
 ---
-title: Introduction to [!DNL Adobe Experience Manager Assets].
+title: Introduktion till [!DNL Adobe Experience Manager Assets].
 description: Lär dig vad som är digital resurshantering, användningsexempel och [!DNL Adobe Experience Manager Asset] erbjudanden.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '852'
 ht-degree: 0%
@@ -67,7 +67,7 @@ När du arbetar med digitala resurser i [!DNL Experience Manager]måste du förs
 
 * **Återgivningar**: En återgivning är den binära representationen av en resurs. [!DNL Assets] har alltid en primär representation - den överförda filen. De kan ha valfritt antal ytterligare representationer som skapas, till exempel genom anpassade arbetsflödessteg eller när en resurs överförs. Återgivningar kan ha en annan storlek, med en annan upplösning, med en vattenstämpel eller någon annan förändrad egenskap.
 
-* **Versioner**: Versionshantering skapar en ögonblicksbild av digitala resurser vid en viss tidpunkt. Du kan återställa resurser till tidigare versioner. Se [versionshantering i Resurser](managing-assets-touch-ui.md#asset-versioning).
+* **Versioner**: Versionshantering skapar en ögonblicksbild av digitala resurser vid en viss tidpunkt. Du kan återställa resurser till tidigare versioner. Se [versionshantering i Resurser](manage-assets.md#asset-versioning).
 
 * **Deltillgångar**: Delresurser är resurser som utgör en resurs, till exempel lager i en [!DNL Adobe Photoshop] fil eller sidor i en PDF-fil. I [!DNL Assets]kan du hantera delresurser på samma sätt som du hanterar resurser.
 
