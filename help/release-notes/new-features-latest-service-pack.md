@@ -4,7 +4,7 @@ description: Nyheter i Adobe Experience Manager 6.5 Service Pack 6
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 750e3729a33718d54dca8b2514468d4a40910d4c
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '2534'
 ht-degree: 0%
@@ -194,7 +194,7 @@ Vilka steg som ska konfigureras [!DNL Experience Manager Assets] med [!DNL Brand
 
 [!DNL Experience Manager Assets] innehåller följande tillgänglighetsförbättringar:
 
-* Piltangenter på tangentbordet kan användas för att flytta och panorera områden i zoomade bilder. Mer information finns i [Förhandsgranska resurser endast](../assets/managing-assets-touch-ui.md#previewing-assets)med tangentbordstangenter.
+* Piltangenter på tangentbordet kan användas för att flytta och panorera områden i zoomade bilder. Mer information finns i [Förhandsgranska resurser endast](../assets/manage-assets.md#previewing-assets)med tangentbordstangenter.
 
 * Kryssrutorna för blandat läge (där kryssrutorna på första nivån inte markeras och genomstrykas) på panelen Filter kan läsas av skärmläsare om du inte markerar alla kapslade alternativ.
 
