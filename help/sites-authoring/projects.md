@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: dee7ac7c-ca86-48e9-8d95-7826fa926c68
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 0d5a48be283484005013ef3ed7ad015b43f6398b
 workflow-type: tm+mt
 source-wordcount: '1395'
 ht-degree: 10%
@@ -82,7 +82,7 @@ Du överför resurser direkt i rutan. Du kan dessutom skapa bilduppsättningar, 
 
 ### Resurssamlingar {#asset-collections}
 
-Precis som resurser kan du lägga till [resurssamlingar](/help/assets/managing-collections-touch-ui.md) direkt i projektet. Du definierar samlingar i Resurser.
+Precis som resurser kan du lägga till [resurssamlingar](/help/assets/manage-collections.md) direkt i projektet. Du definierar samlingar i Resurser.
 
 ![chlimage_1-72](assets/chlimage_1-72.png)
 
