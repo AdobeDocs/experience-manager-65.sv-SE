@@ -3,7 +3,7 @@ title: Ordna dina digitala resurser
 description: Organisera dina digitala resurser, bilder, filer, mappar och så vidare med Experience Manager.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: bf49f515adb75bf4c0d50a53d0eaa7bb915389a9
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '780'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Alla digitala resurser, metadata och innehåll i Microsoft Office- och PDF-dokum
 
 ## Ordna resurser i mappar {#organize-using-folders}
 
-Det mest grundläggande sättet att ordna resurser är att spara dessa i mappar. Det motsvarar att ordna filer i mappar i vårt lokala filsystem. Mer information om hur du skapar och hanterar mappar finns i [Hantera resurser](managing-assets-touch-ui.md). Hur du namnger filer och mappar, hur du ordnar undermappar och hur du hanterar filerna i dessa mappar kan påverka hur dessa resurser bearbetas. Genom att använda enhetliga och lämpliga namngivningsstrategier för filer och mappar tillsammans med god metadatapraxis kan ni få ut det mesta av era digitala resurslager.
+Det mest grundläggande sättet att ordna resurser är att spara dessa i mappar. Det motsvarar att ordna filer i mappar i vårt lokala filsystem. Mer information om hur du skapar och hanterar mappar finns i [Hantera resurser](manage-assets.md). Hur du namnger filer och mappar, hur du ordnar undermappar och hur du hanterar filerna i dessa mappar kan påverka hur dessa resurser bearbetas. Genom att använda enhetliga och lämpliga namngivningsstrategier för filer och mappar tillsammans med god metadatapraxis kan ni få ut det mesta av era digitala resurslager.
 
 * I de flesta fall växer din databas för digitala resurser. Därför är det viktigt att formalisera metadataanvändning, mappstruktur och filnamngivning tidigt när du skapar innehåll.
 * Använd endast mappar för att få en enhetlig lagringsstruktur för dina digitala resurser. Denna konsekvens hjälper er att hantera era resurser bättre. Resurser som placeras i följande typer av mappar kan till exempel hjälpa dig att använda rätt [profiler för att bearbeta](processing-profiles.md)resurser:
@@ -53,7 +53,7 @@ Mer information finns i följande artiklar:
 
 Med resurssamlingar i [!DNL Experience Manager Assets]kan du effektivisera möjligheten att skapa, redigera och dela resurser mellan användare. Skapa flera typer av samlingar baserat på hur du använder dem, inklusive samlingar som innehåller en statisk referenslista över resurser, mappar och samlingar, samt samlingar som hämtar resurser baserat på sökvillkor.  Du kan också skapa samlingar med resurser från olika platser och dela dem med flera användare med olika åtkomstnivåer, behörighet att visa och redigera.
 
-Mer information finns i [Hantera samlingar](managing-collections-touch-ui.md)
+Mer information finns i [Hantera samlingar](manage-collections.md)
 
 <!-- TBD items: add screenshots where applicable
 Any hints/recommendations of when to use what method of organizing? Some examples of how organizing helps towards a better taxonomy and improved content velocity.
