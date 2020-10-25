@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 8e9b3815-2893-4e6b-ac41-77720b42d56b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '1765'
 ht-degree: 9%
@@ -29,7 +29,7 @@ Snurra uppsättningar definieras av en banderoll med ordet **[!UICONTROL SPINSET
 
 >[!NOTE]
 >
->Mer information om användargränssnittet Resurser finns i [Hantera resurser med Touch-gränssnittet](/help/assets/managing-assets-touch-ui.md).
+>Mer information om användargränssnittet Resurser finns i [Hantera resurser med Touch-gränssnittet](/help/assets/manage-assets.md).
 
 ## Snabbstart: Snurra uppsättningar {#quick-start-spin-sets}
 
@@ -77,13 +77,13 @@ Så här kommer du igång snabbt med Spin Sets:
 
    Läs [Länka en rotationsuppsättning till en webbsida](/help/assets/linking-urls-to-yourwebapplication.md) och [Bädda in video- eller bildvisningsprogrammet](/help/assets/embed-code.md).
 
-Om du behöver kan du [redigera snurra uppsättningar](#editing-spin-sets). Dessutom kan du visa och ändra egenskaperna [för](/help/assets/managing-assets-touch-ui.md#editing-properties)rotationsuppsättningen.
+Om du behöver kan du [redigera snurra uppsättningar](#editing-spin-sets). Dessutom kan du visa och ändra egenskaperna [för](/help/assets/manage-assets.md#editing-properties)rotationsuppsättningen.
 
 ## Överför resurser för snurpuppsättningar {#uploading-assets-for-spin-sets}
 
 Du behöver minst 8-12 tagningar av ett objekt för en endimensionell snurra och 16-24 för en tvådimensionell snurra uppsättning. Fotografierna måste tas med jämna mellanrum för att ge intryck av att objektet roteras och vändas. Om en endimensionell snurra t.ex. innehåller 12 tagningar roterar du objektet 30 grader (360/12) för varje tagning.
 
-Du kan överföra bilder för snurra uppsättningar på samma sätt som du [överför andra resurser i AEM Assets](/help/assets/managing-assets-touch-ui.md).
+Du kan överföra bilder för snurra uppsättningar på samma sätt som du [överför andra resurser i AEM Assets](/help/assets/manage-assets.md).
 
 ### Riktlinjer för hämtning av bilder för din snurruppsättning {#guidelines-for-shooting-spin-set-images}
 
