@@ -10,7 +10,10 @@ topic-tags: projects
 content-type: reference
 discoiquuid: 0e5d0a45-c663-4d91-b793-03d39119d103
 translation-type: tm+mt
-source-git-commit: e3683f6254295e606e9d85e88979feaaea76c42e
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+workflow-type: tm+mt
+source-wordcount: '3013'
+ht-degree: 1%
 
 ---
 
@@ -30,7 +33,7 @@ Du kan särskilt använda Creative Project för att effektivisera följande uppg
 >
 >Mer information [om hur du tilldelar användarroller och arbetsflöden till vissa typer av användare finns i](/help/sites-authoring/projects.md#user-roles-in-a-project) Projektanvändarroller.
 
-## Utforska arbetsflöden för produktfotografering {#exploring-product-photo-shoot-workflows}
+## Utforska arbetsflöden för produktfotografering  {#exploring-product-photo-shoot-workflows}
 
 Creative Project innehåller olika projektmallar som uppfyller olika projektkrav. Mallen **Produktfotoprojekt** är tillgänglig direkt. Den här mallen innehåller arbetsflöden för fotoplåtning där du kan initiera och hantera begäranden om produktfotografering. Det innehåller även en rad uppgifter som gör att du kan få digitala bilder för produkter genom lämpliga gransknings- och godkännandeprocesser.
 
@@ -153,6 +156,7 @@ Så här konfigurerar du arbetsflödet för **produktfotografering** :
    * Retuschera produktfoto
    * Fotofotograferingsgranskning
    * Flytta till produktion
+
    Utför en liknande procedur för att konfigurera uppgifter i arbetsflödet **för** produktfototagning (Commerce Integration).
 
 I det här avsnittet beskrivs hur du integrerar produktinformationshantering med ditt kreativa projekt.
@@ -218,7 +222,8 @@ Med aktiviteten **Skapa lista** över bilder kan projektägaren välja de produk
 
    * Resurser som motsvarar produkthierarkin skapas i en mapp med samma namn som arbetsflödets rubrik.
    * Metadata för resurserna kan redigeras med Assets-konsolen, även innan fotografen visar bilderna.
-   * En fotofotomapp skapas som lagrar de bilder som fotografen tillhandahåller. Mappen Fototagning innehåller undermappar för varje produktpost i listan Fototagning.
+   * Mappen Fototagning skapas som lagrar de bilder som fotografen tillhandahåller. Mappen Fototagning innehåller undermappar för varje produktpost i listan Fototagning.
+
    För arbetsflödet för produktfototagning (utan integration med andra program) är Upload Shot List den första uppgiften. Tryck/klicka på **Överför scenlista** för att överföra en **fillista.csv** -fil. CSV-filen ska innehålla produkt-ID:t. De andra fälten är valfria. Du kan använda dem för att mappa resurser till produkter.
 
 ### Uppgift för överföring av lista över bilder {#upload-shot-list-task}
@@ -282,7 +287,7 @@ Om du har redigeringsbehörighet utför du åtgärden Retuschera fototagning fö
 
    ![chlimage_1-155](assets/chlimage_1-155a.png)
 
-   Om det behövs kan du redigera bilderna med ett Adobe Creative Cloud-program.
+   Om det behövs kan du redigera bilderna i ett Adobe Creative Cloud-program.
 
    ![chlimage_1-156](assets/chlimage_1-156a.png)
 
@@ -316,10 +321,10 @@ Du kan navigera till projektresurser med resursgränssnittet och verifiera godk�
 
 Tryck/klicka på nästa nivå om du vill visa produkter enligt din produktdatahierarki.
 
-Creative Project associerar godkända resurser med den refererade produkten. Metadata för resursen uppdateras med produktreferens och grundläggande information på fliken **Produktdata** under de resursegenskaper som de visas i avsnittet AEM-tillgångsmetadata.
+Creative Project associerar godkända resurser med den refererade produkten. Metadata för resursen uppdateras med produktreferensen och grundläggande information på fliken **Produktdata** under de resursegenskaper som visas i avsnittet AEM.
 
 >[!NOTE]
-De godkända bilderna är inte kopplade till produkterna i arbetsflödet för produktfotografering (utan integrering med e-handel).
+I arbetsflödet för produktfototagning (utan integration med andra program) har de godkända bilderna ingen koppling till produkterna.
 
 ### Flytta till produktionsuppgift {#move-to-production-task}
 
@@ -340,11 +345,11 @@ Den här aktiviteten flyttar de godkända resurserna till den produktionsklara m
 
    Tryck/klicka på **Flytta till produktion**. Stäng bekräftelsemeddelandet. Resurserna flyttas till den angivna sökvägen och en snurruppsättning skapas automatiskt för de godkända resurserna för varje produkt baserat på mapphierarkin.
 
-1. Tryck/klicka på ikonen **Slutför** i verktygsfältet. Arbetsflödet slutförs när det sista steget markeras som slutfört.
+1. Tap/click the **Complete** icon from the toolbar. Arbetsflödet slutförs när det sista steget markeras som slutfört.
 
 ## Visa DAM-resursmetadata {#viewing-dam-asset-metadata}
 
-När du har godkänt mediefilerna länkas de till motsvarande produkter. På [egenskapssidan](/help/assets/managing-assets-touch-ui.md#editing-properties) för de godkända resurserna finns nu en extra flik för **produktdata** (länkad produktinformation). På den här fliken visas produktinformation, SKU-nummer och annan produktrelaterad information som länkar resursen. Tryck/klicka på ikonen **Redigera** för att uppdatera en resursegenskap. Produktrelaterad information förblir skrivskyddad.
+När du har godkänt mediefilerna länkas de till motsvarande produkter. På [egenskapssidan](/help/assets/manage-assets.md#editing-properties) för de godkända resurserna finns nu en extra flik för **produktdata** (länkad produktinformation). På den här fliken visas produktinformation, SKU-nummer och annan produktrelaterad information som länkar resursen. Tryck/klicka på ikonen **Redigera** för att uppdatera en resursegenskap. Produktrelaterad information förblir skrivskyddad.
 
 Tryck/klicka på länken som visas för att navigera till respektive produktinformationssida i produktkonsolen som resursen är associerad med.
 
@@ -352,7 +357,7 @@ Tryck/klicka på länken som visas för att navigera till respektive produktinfo
 
 Du kan anpassa arbetsflödena för projektfototagning baserat på behov. Detta är en valfri rollbaserad uppgift som du utför för att ange värdet för en variabel i projektet. Senare kan du använda det konfigurerade värdet för att komma fram till ett beslut.
 
-1. Klicka på/tryck på AEM-logotypen och gå sedan till **Verktyg** > **Arbetsflöde** > **Modeller** för att öppna sidan Arbetsflödesmodeller.
+1. Klicka på/tryck på AEM logotyp och gå sedan till **Verktyg** > **Arbetsflöde** > **Modeller** för att öppna sidan Arbetsflödesmodeller.
 1. Välj arbetsflödet **Produktfototagning (Commerce Integration)** eller **Produktfototagning** och klicka/tryck på **Redigera** i verktygsfältet för att öppna arbetsflödet i redigeringsläge.
 1. Öppna **projektaktiviteterna** och dra steget **Skapa rollbaserad projektuppgift** till arbetsflödet.
 
