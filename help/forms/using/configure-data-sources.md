@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ee2b13f2fc1f044f119ff54f332844d458663287
+source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
 workflow-type: tm+mt
-source-wordcount: '1661'
+source-wordcount: '1669'
 ht-degree: 0%
 
 ---
@@ -98,6 +98,7 @@ Alla konfigurationer av molntjänster i AEM konsolideras i mappen `/conf` i AEM.
 Så här konfigurerar du mappen för molntjänstkonfigurationer:
 
 1. Gå till **[!UICONTROL Tools > General > Configuration Browser]**.
+   * See the [Configuration Browser](/help/sites-administering/configurations.md) documentation for more information.
 1. Gör följande för att aktivera den globala mappen för molnkonfigurationer eller hoppa över det här steget för att skapa och konfigurera en annan mapp för molntjänstkonfigurationer.
 
    1. I **[!UICONTROL Configuration Browser]** markerar du `global` mappen och trycker på **[!UICONTROL Properties]**.
