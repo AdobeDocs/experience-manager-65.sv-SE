@@ -6,9 +6,9 @@ user-guide-title: Användarhandbok för AEM 6.5
 breadcrumb-title: Administratörshandbok
 user-guide-description: Läs om hur du administrerar AEM.
 translation-type: tm+mt
-source-git-commit: fe3e8c29abe832899a6466c4b018b9aa2104e908
+source-git-commit: c7de7bee2368a558620aafdff5272e4bd07aae00
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '630'
 ht-degree: 6%
 
 ---
@@ -36,6 +36,7 @@ ht-degree: 6%
    + [Guiden Kopiera språk](tc-wizard.md)
    + [Översättningsförbättringar](tc-enhancements.md)
    + [Bästa praxis för översättning](tc-bp.md)
+   + [Konfigurationer och Configuration Browser](configurations.md)
    + [AEM frågor och svar](aem-faqs.md)
 + Användning {#operations}
    + [Kontrollpaneler](dashboards.md)
