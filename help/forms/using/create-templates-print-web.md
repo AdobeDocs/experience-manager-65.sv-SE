@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 879ff6ca-e5f3-451d-acc2-f75142101ddd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bd70508b361ac8b62ebc0344538a18369a075f3e
+source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
 workflow-type: tm+mt
-source-wordcount: '1801'
+source-wordcount: '1809'
 ht-degree: 0%
 
 ---
@@ -23,15 +23,15 @@ ht-degree: 0%
 
 Den här självstudiekursen är ett steg i [Skapa din första interaktiva kommunikationsserie](/help/forms/using/create-your-first-interactive-communication.md) . Vi rekommenderar att du följer serien i kronologisk ordning för att förstå, utföra och demonstrera det fullständiga exemplet på självstudiekurser.
 
-Om du vill skapa en interaktiv kommunikation måste du ha mallar tillgängliga på AEM-servern för utskrifts- och webbkanaler.
+Om du vill skapa en interaktiv kommunikation måste du ha mallar tillgängliga på AEM server för utskrifts- och webbkanaler.
 
-Mallarna för utskriftskanalen skapas i Adobe Forms Designer och överförs till AEM-servern. Mallarna kan sedan användas när du skapar en interaktiv kommunikation.
+Mallarna för utskriftskanalen skapas i Adobe Forms Designer och överförs till AEM. Mallarna kan sedan användas när du skapar en interaktiv kommunikation.
 
 Mallarna för webbkanalen skapas i AEM. Mallförfattare och administratörer kan skapa, redigera och aktivera webbmallar. När mallarna har skapats och aktiverats kan de användas när du skapar en interaktiv kommunikation.
 
 I den här självstudiekursen får du hjälp med att skapa mallar för utskrifts- och webbkanaler så att de blir tillgängliga när du skapar interaktiv kommunikation. I slutet av den här självstudiekursen kan du:
 
-* Skapa XDP-mallar för tryckkanaler med Adobe Forms Designer
+* Skapa XDP-mallar för utskriftskanalen med Adobe Forms Designer
 * Överför XDP-mallarna till AEM Forms Server
 * Skapa och aktivera mallar för webbkanalen
 
@@ -120,7 +120,7 @@ När du har skapat en XDP-mall med Forms Designer måste du överföra den till 
 1. Välj **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
 1. Tryck på **Skapa** > **Filöverföring**.
 
-   Navigera till och markera mallen **create_first_ic_print_template** (XDP) och tryck på **Öppna** för att importera XDP-mallen till AEM Forms-servern.
+   Navigera till och välj mallen **create_first_ic_print_template** (XDP) och tryck på **Öppna** för att importera XDP-mallen till AEM Forms-servern.
 
 ### Skapa XDP-mall för layoutfragment {#create-xdp-template-for-layout-fragments}
 
@@ -180,6 +180,7 @@ Om du vill skapa en webbkanalmall definierar du en mapp där du kan spara de ska
 Så här skapar du en mapp för de redigerbara mallarna:
 
 1. Tryck på **Tools** ![hammer-icon](assets/hammer-icon.svg) > **Configuration Browser**.
+   * See the [Configuration Browser](/help/sites-administering/configurations.md) documentation for more information.
 1. Tryck på **Skapa** på sidan Configuration Browser.
 1. I dialogrutan **Skapa konfiguration** anger du **Create_First_IC_templates** som mappens titel, markerar **Redigerbara mallar** och trycker sedan på **Skapa**.
 
