@@ -1,6 +1,6 @@
 ---
-title: Övervaka och underhålla din AEM-instans
-seo-title: Övervaka och underhålla din AEM-instans
+title: Övervaka och underhålla AEM
+seo-title: Övervaka och underhålla AEM
 description: Lär dig övervaka AEM.
 seo-description: Lär dig övervaka AEM.
 uuid: 14466552-5c92-4730-a427-85675a2b121c
@@ -11,17 +11,17 @@ content-type: reference
 discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
+source-git-commit: 9f22cb618d487a2b02dc17149d11b81a9e9e27be
 workflow-type: tm+mt
-source-wordcount: '5899'
+source-wordcount: '5895'
 ht-degree: 0%
 
 ---
 
 
-# Övervaka och underhålla din AEM-instans{#monitoring-and-maintaining-your-aem-instance}
+# Övervaka och underhålla AEM{#monitoring-and-maintaining-your-aem-instance}
 
-När dina AEM-instanser har distribuerats behövs vissa uppgifter för att övervaka och underhålla deras åtgärder, prestanda och integritet.
+När AEM har distribuerats behövs vissa uppgifter för att övervaka och underhålla deras åtgärder, prestanda och integritet.
 
 En nyckelfaktor här är att för att identifiera potentiella problem måste du veta hur dina system ser ut och beter sig under normala förhållanden. Detta görs bäst genom att övervaka systemet och samla in information över en tidsperiod.
 
@@ -33,8 +33,8 @@ En nyckelfaktor här är att för att identifiera potentiella problem måste du 
 | Filsystemen övervakas. | CRX-databasen &quot;fryser&quot; om det inte finns tillräckligt med ledigt diskutrymme. Den återupptas när det finns utrymme tillgängligt. | &quot; `*ERROR* LowDiskSpaceBlocker`&quot;-meddelanden kan visas i loggfilen när det lediga utrymmet börjar ta slut. |
 | [Loggfiler](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files) övervakas. |  |  |
 | Systemövervakning körs kontinuerligt i bakgrunden. | Inklusive processor-, minnes-, disk- och nätverksanvändning. Med exempelvis iostat / vmstat / permon. | Loggade data visas och kan användas för att spåra prestandaproblem. Rådata är också tillgängliga. |
-| [AEM-prestanda övervakas](/help/sites-deploying/monitoring-and-maintaining.md#monitoring-performance). | Inklusive [begäranderäknare](/help/sites-deploying/monitoring-and-maintaining.md#request-counters) för övervakning av trafiknivåer. | Om en betydande eller långsiktig förlust av resultat konstateras bör en detaljerad undersökning göras. |
-| Du övervakar dina [replikeringsagenter](/help/sites-deploying/monitoring-and-maintaining.md#monitoring-your-replication-agents). &quot; |  |  |
+| [AEM prestanda övervakas](/help/sites-deploying/monitoring-and-maintaining.md#monitoring-performance). | Inklusive [begäranderäknare](/help/sites-deploying/monitoring-and-maintaining.md#request-counters) för övervakning av trafiknivåer. | Om en betydande eller långsiktig förlust av resultat konstateras bör en detaljerad undersökning göras. |
+| Du övervakar dina [replikeringsagenter](/help/sites-deploying/monitoring-and-maintaining.md#monitoring-your-replication-agents). |  |  |
 | Rensa arbetsflödesinstanser regelbundet. | Databasstorlek och arbetsflödets prestanda. | Se [Vanlig tömning av arbetsflödesinstanser](/help/sites-administering/workflows-administering.md#regular-purging-of-workflow-instances). |
 
 ## Säkerhetskopior {#backups}
@@ -58,9 +58,9 @@ Ofta utförs en fullständig säkerhetskopiering med regelbundna intervall (t.ex
 >[!CAUTION]
 >
 >När du implementerar säkerhetskopieringar av produktionsinstanser *måste* du göra tester för att se till att säkerhetskopian kan återställas.
-
->Utan detta kan säkerhetskopieringen vara oanvändbar (värsta scenariot).
 >
+>Utan detta kan säkerhetskopieringen vara oanvändbar (värsta scenariot).
+
 >[!NOTE]
 >
 >Mer information om säkerhetskopieringsprestanda finns i avsnittet [Säkerhetskopieringsprestanda](/help/sites-deploying/configuring-performance.md#backup-performance) .
@@ -71,7 +71,7 @@ När installationen är klar, eller om konfigurationen har ändrats på ett bety
 
 Om du vill göra det måste du [säkerhetskopiera hela databasen](#backing-up-your-repository) och sedan:
 
-1. Stoppa AEM.
+1. Sluta AEM.
 1. Säkerhetskopiera hela `<cq-installation-dir>` filen från filsystemet.
 
 >[!CAUTION]
@@ -96,11 +96,11 @@ Mer information om hur du skapar en &quot;hot&quot;-säkerhetskopiering online f
 
 Verktyget **Rensa versioner** är avsett att rensa versioner av en nod eller en hierarki av noder i databasen. Dess främsta syfte är att hjälpa dig att minska storleken på databasen genom att ta bort tidigare versioner av dina noder.
 
-I det här avsnittet behandlas underhållsåtgärder som rör versionshanteringsfunktionen i AEM. Verktyget **Rensa version** är avsett att rensa versioner av en nod eller en hierarki av noder i databasen. Dess främsta syfte är att hjälpa dig att minska storleken på databasen genom att ta bort tidigare versioner av dina noder.
+I det här avsnittet behandlas underhållsåtgärder som rör versionsfunktionen i AEM. Verktyget **Rensa version** är avsett att rensa versioner av en nod eller en hierarki av noder i databasen. Dess främsta syfte är att hjälpa dig att minska storleken på databasen genom att ta bort tidigare versioner av dina noder.
 
 ### Översikt {#overview}
 
-Verktyget **Rensa versioner** finns i **[verktygskonsolen](/help/sites-administering/tools-consoles.md)under **Versionshantering****eller direkt på:
+Verktyget **Rensa versioner** finns i **[verktygskonsolen](/help/sites-administering/tools-consoles.md) under** Versionshantering **** eller direkt på:
 
 `https://<server>:<port>/etc/versioning/purge.html`
 
@@ -122,7 +122,7 @@ Verktyget **Rensa versioner** finns i **[verktygskonsolen](/help/sites-administe
 
 Så här rensar du versioner av en webbplats:
 
-1. Gå till **[verktygskonsolen](/help/sites-administering/tools-consoles.md)**,**välj**Versionshantering **och dubbelklicka på****Rensa versioner.**
+1. Gå till **[verktygskonsolen](/help/sites-administering/tools-consoles.md)** , **välj** Versionshantering **och dubbelklicka på** **Rensa versioner.**
 1. Ange startsökvägen för innehållet som ska rensas (t.ex. `/content/geometrixx-outdoors`).
 
    * Om du bara vill rensa den nod som definieras av sökvägen avmarkerar du **Rekursiv**.
@@ -145,7 +145,7 @@ Processerna **Torr körning** och **Töm** listar alla noder som har bearbetats.
 
 * `ignore (not versionnable)`: noden stöder inte versionshantering och ignoreras under processen.
 
-* `ignore (no version)`: noden har ingen version och ignoreras under processen. &quot;
+* `ignore (no version)`: noden har ingen version och ignoreras under processen.
 
 * `retained`: noden rensas inte.
 * `purged`: noden rensas.
@@ -186,7 +186,7 @@ Rotation av loggfiler avser den process som begränsar filens tillväxt genom at
 
 >[!NOTE]
 >
->Om du uppgraderar din AEM-installation bör du tänka på att alla befintliga loggfiler som inte längre används av AEM finns kvar på disken. Du kan ta bort dem utan risk. Alla nya loggposter skrivs i de nya loggfilerna.
+>Om du uppgraderar AEM kommer alla befintliga loggfiler som inte längre används av AEM att finnas kvar på disken. Du kan ta bort dem utan risk. Alla nya loggposter skrivs i de nya loggfilerna.
 
 ### Hitta loggfilerna {#finding-the-log-files}
 
@@ -223,7 +223,7 @@ Innehåller loggningsmeddelanden som anger händelser under start.
 Tillhandahåller en logg över alla uppgraderingsåtgärder som körs från 
 `com.day.compat.codeupgrade` och `com.adobe.cq.upgradesexecutor` paket.
 
-* `<*cq-installation-dir*>/crx-quickstart/repository`
+* `<cq-installation-dir>/crx-quickstart/repository`
 
    * `revision.log`
 Information om revideringsjournaler.
@@ -253,7 +253,7 @@ Loggnivåerna är följande:
 | 0 | Allvarligt fel | Åtgärden misslyckades och installationsprogrammet kan inte fortsätta. |
 |---|---|---|
 | 1 | Fel | Åtgärden misslyckades. Installationen fortsätter, men en del av AEM WCM installerades inte korrekt och kommer inte att fungera. |
-| 2 | Varning | Åtgärden har slutförts men problem uppstod. AEM WCM fungerar eventuellt inte korrekt. |
+| 2 | Varning | Åtgärden har slutförts men problem uppstod. AEM WCM kanske inte fungerar som det ska. |
 | 3 | Information | Åtgärden har slutförts. |
 
 ### Skapa en anpassad loggfil {#create-a-custom-log-file}
@@ -264,19 +264,19 @@ Loggnivåerna är följande:
 
 I vissa fall kanske du vill skapa en anpassad loggfil med en annan loggnivå. Du kan göra detta i databasen genom att:
 
-1. Om den inte redan finns skapar du en ny konfigurationsmapp ( `sling:Folder`) för projektet `/apps/<*project-name*>/config`.
-1. Under `/apps/<*project-name*>/config`skapar du en nod för den nya [loggningskonfigurationen](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingloggerconfigurationfactoryconfiguration)för Apache Sling-loggning:
+1. Om den inte redan finns skapar du en ny konfigurationsmapp ( `sling:Folder`) för projektet `/apps/<project-name>/config`.
+1. Under `/apps/<project-name>/config`skapar du en nod för den nya [loggningskonfigurationen](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingloggerconfigurationfactoryconfiguration)för Apache Sling-loggning:
 
-   * Namn: `org.apache.sling.commons.log.LogManager.factory.config-<*identifier*>` (eftersom detta är en loggare)
+   * Namn: `org.apache.sling.commons.log.LogManager.factory.config-<identifier>` (eftersom detta är en loggare)
 
-      Där `<*identifier*>` ersätts av fri text som du (måste) anger för att identifiera förekomsten (du kan inte utelämna den här informationen).
+      Där `<identifier>` ersätts av fri text som du (måste) anger för att identifiera förekomsten (du kan inte utelämna den här informationen).
 
       Till exempel, `org.apache.sling.commons.log.LogManager.factory.config-MINE`
 
    * Typ: `sling:OsgiConfig`
    >[!NOTE]
    >
-   >Även om det inte är ett tekniskt krav är det tillrådligt att göra `<*identifier*>` unikt.
+   >Även om det inte är ett tekniskt krav är det tillrådligt att göra `<identifier>` unikt.
 
 1. Ange följande egenskaper för den här noden:
 
@@ -313,9 +313,19 @@ I vissa fall kanske du vill skapa en anpassad loggfil med en annan loggnivå. Du
    >[!NOTE]
    >
    >`org.apache.sling.commons.log.pattern` stöder upp till sex argument.
-
-   >{0}{1}{2} the time stamp of type `java.util.Date`{1} the log marker{3} the name of the current thread{4} the log level{5} the log message
-
+   >
+   >{0} Tidsstämpeln av typen `java.util.Date`
+   >
+   >{1} loggmarkören
+   >
+   >{2} namnet på den aktuella tråden
+   >
+   >{3} namnet på loggen
+   >
+   >{4} loggnivån
+   >
+   >{5} loggmeddelandet
+   >
    >Om logganropet innehåller en `Throwable` stackspårning läggs den till i meddelandet.
 
    >[!CAUTION]
@@ -325,37 +335,42 @@ I vissa fall kanske du vill skapa en anpassad loggfil med en annan loggnivå. Du
    >[!NOTE]
    >
    >Loggskrivarsökvägarna är relativa till `crx-quickstart` platsen.
+   >
    >Därför har en loggfil angetts som:
+   >
    >`logs/thelog.log`
-
+   >
    >skriver till:
-   >`` ` ` `<*cq-installation-dir*>/``crx-quickstart/logs/thelog.log`.
+   >
+   >`<cq-installation-dir>/crx-quickstart/logs/thelog.log`.
+   >
    >Och en loggfil har angetts som:
+   >
    >`../logs/thelog.log`
-
+   >
    >skriver till en katalog:
-   >` <*cq-installation-dir*>/logs/`
-
-&quot;(dvs. bredvid ` `&lt;*cq-installation-dir*>/`crx-quickstart/`)
+   >
+   >`<cq-installation-dir>/logs/`\
+   >(t.ex. bredvid `<cq-installation-dir>/crx-quickstart/`)
 
 1. Det här steget är bara nödvändigt när ett nytt skrivprogram krävs (dvs. med en konfiguration som inte är densamma som standardskrivaren).
 
    >[!CAUTION]
    >
    >En ny loggningsskrivarkonfiguration krävs bara när den befintliga standardinställningen inte är lämplig.
-
+   >
    >Om inget explicit skrivprogram är konfigurerat genereras automatiskt ett implicit skrivprogram baserat på standardvärdet.
 
-   Under `/apps/<*project-name*>/config`skapar du en nod för den nya skrivarkonfigurationen [för](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingwriterconfigurationfactoryconfiguration)Apache Sling Logging Writer:
+   Under `/apps/<project-name>/config`skapar du en nod för den nya skrivarkonfigurationen [för](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingwriterconfigurationfactoryconfiguration)Apache Sling Logging Writer:
 
-   * Namn: `org.apache.sling.commons.log.LogManager.factory.writer-<*identifier*>` (eftersom detta är ett skrivprogram)
+   * Namn: `org.apache.sling.commons.log.LogManager.factory.writer-<identifier>` (eftersom detta är ett skrivprogram)
 
-      Precis som med Logger `<*identifier*>` ersätts den av fri text som du (måste) anger för att identifiera instansen (du kan inte utelämna den här informationen). Till exempel, `org.apache.sling.commons.log.LogManager.factory.writer-MINE`
+      Precis som med Logger `<identifier>` ersätts den av fri text som du (måste) anger för att identifiera instansen (du kan inte utelämna den här informationen). Till exempel, `org.apache.sling.commons.log.LogManager.factory.writer-MINE`
 
    * Typ: `sling:OsgiConfig`
    >[!NOTE]
    >
-   >Även om det inte är ett tekniskt krav är det tillrådligt att göra `<*identifier*>` unikt.
+   >Även om det inte är ett tekniskt krav är det tillrådligt att göra `<identifier>` unikt.
 
    Ange följande egenskaper för den här noden:
 
@@ -383,25 +398,36 @@ I vissa fall kanske du vill skapa en anpassad loggfil med en annan loggnivå. Du
    >[!NOTE]
    >
    >`org.apache.sling.commons.log.file.size` styr rotationen av loggfilen genom att ange antingen:
+   >
    >* maximal filstorlek
    >* ett tids-/datumschema
 
-   för att ange när en ny fil ska skapas (och den befintliga filen får ett nytt namn enligt namnmönstret).
-   * En storleksgräns kan anges med ett tal. Om ingen storleksindikator anges används detta som antal byte, eller så kan du lägga till en av storleksindikatorerna - `KB`, `MB`eller `GB` (versaler ignoreras).
-   * Ett tids-/datumschema kan anges som ett `java.util.SimpleDateFormat` mönster. Detta anger den tidsperiod efter vilken filen ska roteras. det suffix som läggs till i den roterade filen (för identifiering).
+   >
+   >för att ange när en ny fil ska skapas (och den befintliga filen får ett nytt namn enligt namnmönstret).
+   >
+   >* En storleksgräns kan anges med ett tal. Om ingen storleksindikator anges används detta som antal byte, eller så kan du lägga till en av storleksindikatorerna - `KB`, `MB`eller `GB` (versaler ignoreras).
+   >* Ett tids-/datumschema kan anges som ett `java.util.SimpleDateFormat` mönster. Detta anger den tidsperiod efter vilken filen ska roteras. det suffix som läggs till i den roterade filen (för identifiering).
 
-   Standardvärdet är &#39;.&#39;yyyy-MM-dd (för daglig loggrotation)
-   Så vid midnatt den 20 januari 2010 (eller när det första loggmeddelandet efter detta blir exakt) kommer ../logs/error.log att byta namn till ../logs/error.log.2010-01-20. Loggning för den 21 januari kommer att skickas till (en ny och tom) ../logs/error.log tills den överförs vid nästa ändring av dagen.
-   | `'.'yyyy-MM` | Rotation i början av varje månad |
-   |---|---|
-   | `'.'yyyy-ww` | Rotation på den första dagen i varje vecka (beror på språkområdet). |
-   | `'.'yyyy-MM-dd` | Rotation vid midnatt varje dag. |
-   | `'.'yyyy-MM-dd-a` | Rotation vid midnatt och middag varje dag. |
-   | `'.'yyyy-MM-dd-HH` | Rotation överst varje timme. |
-   | `'.'yyyy-MM-dd-HH-mm` | Rotation i början av varje minut. |
-   Obs! När du anger tid/datum:
-   1. Du bör&quot;escape&quot;-text inom ett par enkla citattecken (&#39; &#39;);
-om du vill undvika att vissa tecken tolkas som mönsterbokstäver.
+   >
+   >Standardvärdet är &#39;.&#39;yyyy-MM-dd (för daglig loggrotation)
+   >
+   >Så vid midnatt den 20 januari 2010 (eller när det första loggmeddelandet efter detta blir exakt) kommer ../logs/error.log att byta namn till ../logs/error.log.2010-01-20. Loggning för den 21 januari kommer att skickas till (en ny och tom) ../logs/error.log tills den överförs vid nästa ändring av dagen.
+   >
+   >| `'.'yyyy-MM` | Rotation i början av varje månad |
+   >|---|---|
+   >| `'.'yyyy-ww` | Rotation på den första dagen i varje vecka (beror på språkområdet). |
+   >| `'.'yyyy-MM-dd` | Rotation vid midnatt varje dag. |
+   >| `'.'yyyy-MM-dd-a` | Rotation vid midnatt och middag varje dag. |
+   >| `'.'yyyy-MM-dd-HH` | Rotation överst varje timme. |
+   >| `'.'yyyy-MM-dd-HH-mm` | Rotation i början av varje minut. |
+   >
+   >Obs! När du anger tid/datum:
+   > 1. Du bör&quot;escape&quot;-text inom ett par enkla citattecken (&#39; &#39;);
+      >
+      >     
+      om du vill undvika att vissa tecken tolkas som mönsterbokstäver.
+      >
+      >  
    1. Använd bara tecken som är tillåtna för ett giltigt filnamn var som helst i alternativet.
 
 
@@ -433,7 +459,7 @@ Dessa poster innehåller samma information som den som visas när du redigerar e
 
 #### OSGi Granskningsposter från webbkonsolen {#osgi-audit-records-from-the-web-console}
 
-OSGi-händelser genererar också granskningsposter som kan visas på fliken **Konfigurationsstatus** -> **Loggfiler **fliken i AEM Web Console:
+OSGi-händelser genererar också granskningsposter som kan visas på fliken **Konfigurationsstatus** -> **Loggfiler** på AEM webbkonsol:
 
 ![screen_shot_2012-02-13at50346pm](assets/screen_shot_2012-02-13at50346pm.png)
 
@@ -474,8 +500,11 @@ Så här övervakar du en replikeringsagent:
    >[!CAUTION]
    >
    >Använd inte länken Testa anslutning för den omvända replikeringsutkorgen på en publiceringsinstans.
+   >
    >Om ett replikeringstest utförs för en Utkorgskö kommer alla objekt som är äldre än testreplikeringen att bearbetas på nytt med varje omvänd replikering.
+   >
    >Om sådana objekt redan finns i en kö kan de hittas med följande XPath JCR-fråga och bör tas bort.
+   >
    >`/jcr:root/var/replication/outbox//*[@cq:repActionType='TEST']`
 
 Även här kan du utveckla en lösning för att identifiera alla replikeringsagenter (som finns under `/etc/replication/author` eller `/etc/replication/publish`) och sedan kontrollera status för agenten (, `enabled`) och den underliggande kön ( `disabled`, `active`, `idle``blocked`).
@@ -502,7 +531,7 @@ Nedan visas vanliga prestandaproblem som uppstår, tillsammans med förslag på 
 |  | Det går snabbt att bläddra lokalt på servern (relativt). | Öka nätverkets bandbredd. | Minska&quot;vikten&quot; på dina webbsidor (t.ex. färre bilder, optimerad HTML). |
 | Webbserver | Processoranvändningen på webbservern är hög. | Klustra dina webbservrar. | Minska antalet träffar per sida (besök). |
 |  |  | Använd en maskinvarubaserad belastningsutjämnare. |  |
-| Program | Serverns processoranvändning är hög. | Klustera dina AEM-instanser. | Sök efter, och eliminera, processor- och minnesgropar (använd kodgranskning, tidsutdata osv.). |
+| Program | Serverns processoranvändning är hög. | Klustera dina AEM instanser. | Sök efter, och eliminera, processor- och minnesgropar (använd kodgranskning, tidsutdata osv.). |
 |  | Hög minnesförbrukning. |  | Förbättra cachelagringen på alla nivåer. |
 |  | Låga svarstider. |  | Optimera mallar och komponenter (t.ex. struktur, logik). |
 | Databas |  |  |  |
@@ -623,7 +652,7 @@ Vissa av dessa kommer att vara beroende av operativsystemet.
 
 ### Tolka request.log {#interpreting-the-request-log}
 
-Den här filen registrerar grundläggande information om alla förfrågningar som görs till AEM. Denna värdefulla slutsats kan extraheras.
+Den här filen registrerar grundläggande information om varje begäran som görs till AEM. Denna värdefulla slutsats kan extraheras.
 
 Det `request.log` erbjuder ett inbyggt sätt att se hur lång tid det tar att begära. I utvecklingssyfte är det användbart för användaren `tail -f` och `request.log` för att hålla utkik efter långsamma svarstider. Om du vill analysera en större `request.log` effekt rekommenderar vi att du [använder `rlog.jar` den för att sortera och filtrera efter svarstider](#using-rlog-jar-to-find-requests-with-long-duration-times).
 
@@ -638,13 +667,13 @@ Begärandeloggen registrerar varje begäran som gjorts, tillsammans med svaret:
 09:43:41 [66] <- 200 text/html 797ms
 ```
 
-Genom att summera alla GET-poster inom en viss period (t.ex. under olika 24-timmarsperioder) kan du göra utdrag om den genomsnittliga trafiken på din webbplats.
+Genom att summera alla GETTER under en viss period (t.ex. under olika 24-timmarsperioder) kan du göra utdrag om den genomsnittliga trafiken på webbplatsen.
 
 #### Övervaka svarstider med request.log {#monitoring-response-times-with-the-request-log}
 
 En bra utgångspunkt för prestandaanalys är begärandeloggen:
 
-`<*cq-installation-dir*>/crx-quickstart/logs/request.log`
+`<cq-installation-dir>/crx-quickstart/logs/request.log`
 
 Loggen ser ut så här (raderna förkortas för enkelhetens skull):
 
@@ -712,7 +741,7 @@ Testerna måste göras för att avgöra hur många samtidiga användare som syst
 ### Använda rlog.jar för att hitta begäranden med lång varaktighet {#using-rlog-jar-to-find-requests-with-long-duration-times}
 
 AEM innehåller olika hjälpverktyg som finns i:
-`<*cq-installation-dir*>/crx-quickstart/opt/helpers`
+`<cq-installation-dir>/crx-quickstart/opt/helpers`
 
 En av dessa `rlog.jar`kan användas för att snabbt sortera `request.log` så att förfrågningar visas med varaktighet, från längsta till kortaste tid.
 
@@ -820,7 +849,7 @@ Percentage of the requests served within a certain time (ms)
 100% 8106 (longest request)
 ```
 
-Siffrorna ovan hämtas från en vanlig bärbar MAcBook Pro-dator (mitten av 2010) som har åtkomst till företagssidan geometrixx, som ingår i en standard-AEM-installation. Sidan är mycket enkel, men inte optimerad för prestanda.
+Siffrorna ovan är tagna från en vanlig bärbar MAcBook Pro-dator (mitten av 2010) med åtkomst till företagssidan för geometrixx, som ingår i en AEM. Sidan är mycket enkel, men inte optimerad för prestanda.
 
 `apachebench` visar också tiden per begäran som medelvärde för alla samtidiga begäranden, se `Time per request: 54.595 [ms]` (medelvärde, för alla samtidiga begäranden). Du kan ändra värdet på parametern concurrency `-c` (antal flera begäranden som ska utföras samtidigt) för att se eventuella effekter.
 
@@ -856,9 +885,9 @@ Vi rekommenderar att alla projekt innehåller `html comments` serverprestanda. M
 
 Verktygskommandot `jconsole` är tillgängligt med JDK.
 
-1. Starta din AEM-instans.
+1. Starta AEM.
 1. Kör `jconsole.`
-1. Välj din AEM-instans och **anslut**.
+1. Markera AEM och **anslut**.
 
 1. Dubbelklicka i `Local` programmet `com.day.crx.quickstart.Main`; Översikten visas som standard:
 
@@ -870,7 +899,7 @@ Verktygskommandot `jconsole` är tillgängligt med JDK.
 
 Verktygskommandot är `jvisualvm` tillgängligt sedan JDK 1.6. När du har installerat JDK 1.6 kan du:
 
-1. Starta din AEM-instans.
+1. Starta AEM.
 
    >[!NOTE]
    >
@@ -902,7 +931,7 @@ Följande information kan vara användbar:
 * [Hur många sidor har du i det här systemet?](#how-many-pages-do-you-currently-maintain-on-this-system)
 * [Om du använder MSM, vilket är det genomsnittliga antalet utrullningar per månad?](#if-you-use-msm-what-is-the-average-number-of-rollouts-per-month)
 * [Vilket är det genomsnittliga antalet Live-kopior per månad?](#what-is-the-average-number-of-live-copies-per-month)
-* [Om du använder AEM Assets, hur många resurser har du för närvarande i Assets?](#ifyouusecqdamhowmanyassetsdoyoucurrentlymaintainincqdam)
+* [Om du använder AEM Assets, hur många mediefiler har du för närvarande i Assets?](#ifyouusecqdamhowmanyassetsdoyoucurrentlymaintainincqdam)
 * [Vilken är den genomsnittliga storleken på resurserna?](#what-is-the-average-size-of-the-assets)
 * [Hur många mallar används för närvarande?](#how-many-templates-are-currently-used)
 * [Hur många komponenter används för närvarande?](#how-many-components-are-currently-used)
@@ -970,7 +999,7 @@ För att fastställa det totala antalet live-kopior som gjorts sedan installatio
 
 Använd återigen antalet månader som har gått sedan installationen för att beräkna genomsnittet.
 
-#### Om du använder AEM Assets, hur många resurser har du för närvarande i Assets? {#if-you-use-aem-assets-how-many-assets-do-you-currently-maintain-in-assets}
+#### Om du använder AEM Assets, hur många mediefiler har du för närvarande i Assets? {#if-you-use-aem-assets-how-many-assets-do-you-currently-maintain-in-assets}
 
 Om du vill se hur många DAM-resurser du för närvarande har använder du en databasfråga; via CRXDE - Tools - Query:
 
@@ -1040,10 +1069,13 @@ Här följer en lista med förslag på vad du ska kontrollera om du får vissa p
 >[!NOTE]
 >
 >Se även följande artiklar för mer information:
+>
 >* [Tråddumpar](https://helpx.adobe.com/experience-manager/kb/TakeThreadDump.html)
 >* [Analysera minnesproblem](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html)
 >* [Analysera med inbyggd profilerare](https://helpx.adobe.com/experience-manager/kb/AnalyzeUsingBuiltInProfiler.html)
 >* [Analysera långsamma och blockerade processer](https://helpx.adobe.com/experience-manager/kb/AnalyzeSlowAndBlockedProcesses.html)
+
+>
 
 
 
@@ -1065,7 +1097,7 @@ Om minnet håller på att ta slut kan du se det på olika sätt, bland annat på
 
 I dessa fall ska du kontrollera:
 
-* JVM-inställningarna som används för att [starta AEM](/help/sites-deploying/deploy.md#getting-started)
+* De JVM-inställningar som används för att [starta AEM](/help/sites-deploying/deploy.md#getting-started)
 * Kunskapsbasen:
 
    * [Analysera minnesproblem](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html)
@@ -1138,4 +1170,5 @@ Detta hjälper dig att se hur mycket minne som används, vilka GC-algoritmer som
 >[!NOTE]
 >
 >För Oracles virtuella dator finns även information på:
+>
 >[https://docs.oracle.com/javase/7/docs/technotes/guides/vm/server-class.html](https://docs.oracle.com/javase/7/docs/technotes/guides/vm/server-class.html)
