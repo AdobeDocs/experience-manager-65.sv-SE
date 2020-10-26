@@ -4,7 +4,7 @@ description: Versionsinformation för [!DNL Adobe Experience Manager] 6.5 Servic
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: ba744c7f58ae7d359c13b11403921da0948c71a7
+source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
 workflow-type: tm+mt
 source-wordcount: '4339'
 ht-degree: 0%
@@ -248,7 +248,7 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 ### Användargränssnitt {#ui-6560}
 
 * Gränssnittet för avlastningsläsaren visar inte alla jobbämnen (NPR-34308).
-* Gränssnittet i Configuration Browser visar inte alla konfigurationer (NPR-33644).
+* Alla konfigurationer visas inte i [Configuration Browser](/help/sites-administering/configurations.md) -gränssnittet (NPR-33644).
 * När du trycker på `Esc` **[!UICONTROL User]** tangenten när du söker efter användare som ska personifiera, stängs dialogrutan i stället för användarlistan (NPR-34084).
 
 ### Integreringar {#integrations-6560}
