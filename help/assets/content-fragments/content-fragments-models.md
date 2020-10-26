@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: 9da10294-2dc8-4e82-8d32-f034e6a5aeeb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: afed13a2f832b91d0df825d1075852cc84443646
+source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
 workflow-type: tm+mt
 source-wordcount: '745'
 ht-degree: 20%
@@ -30,7 +30,7 @@ Modeller för innehållsfragment definierar innehållsstrukturen för dina [inne
 
 Om du vill aktivera innehållsfragmentmodeller måste du:
 
-* Aktivera användning av innehållsfragmentmodeller i konfigurationshanteraren
+* Aktivera användning av innehållsfragmentmodeller i [Configuration Browser](/help/sites-administering/configurations.md)
 * Använda konfigurationen i resursmappen
 
 ### Aktivera modeller för innehållsfragment i Configuration Manager {#enable-content-fragment-models-in-configuration-manager}
@@ -43,6 +43,7 @@ Om du vill [skapa en ny modell](#creating-a-content-fragment-model) för innehå
 
    1. Ange en **titel**.
    1. Markera **Content Fragment Models** för att aktivera användningen.
+
    ![cfm-6420-09](assets/cfm-6420-09.png)
 
 1. Välj **Skapa** för att spara definitionen.
@@ -86,6 +87,7 @@ Modellen för innehållsfragment definierar effektivt strukturen för de resulte
 
    * vänster: fält har redan definierats
    * höger: **Datatyper** som är tillgängliga för att skapa fält (och **egenskaper** som kan användas när fälten har skapats)
+
    >[!NOTE]
    >
    >När ett fält är **obligatoriskt** markeras den **etikett** som visas i den vänstra rutan med en asterisk (*****).
@@ -95,9 +97,11 @@ Modellen för innehållsfragment definierar effektivt strukturen för de resulte
 1. **Lägga till ett fält**
 
    * Dra en obligatorisk datatyp till önskad plats för ett fält:
+
    ![cfm-6420-11](assets/cfm-6420-11.png)
 
    * När ett fält har lagts till i modellen visar den högra panelen de **egenskaper** som kan definieras för den aktuella datatypen. Här definierar du vad som krävs för fältet. Till exempel:
+
    ![cfm-6420-13](assets/cfm-6420-13.png)
 
    >[!NOTE]
@@ -107,6 +111,7 @@ Modellen för innehållsfragment definierar effektivt strukturen för de resulte
    * **Markdown**
 
    * **Oformaterad text**
+
    Om inget anges används standardvärdet **RTF** för det här fältet.
    Om du ändrar **standardtypen** i en innehållsfragmentmodell börjar detta bara gälla för ett befintligt, relaterat innehållsfragment efter att fragmentet har öppnats i redigeraren och sparats.
 
