@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: aac3c850-ae84-4bff-80de-d370e150f675
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
+source-git-commit: 0d5ee29141c897284f3f298d921f4f8528216f8f
 workflow-type: tm+mt
 source-wordcount: '1087'
 ht-degree: 0%
@@ -50,7 +50,7 @@ Se [Redigera 360/VR-video](https://helpx.adobe.com/premiere-pro/how-to/edit-360-
 **Så här överför du resurser som ska användas med 360-videovisningsprogrammet:**
 
 1. Skapade en mapp som är dedikerad till ditt 360-videomaterial.
-1. [Använd en adaptiv videoprofil på mappen](/help/assets/video-profiles.md#applying-a-video-profile-to-folders).
+1. [Använd en adaptiv videoprofil på mappen.](/help/assets/video-profiles.md#applying-a-video-profile-to-folders)
 
    Om du återger 360-videoinnehåll ställs högre krav på källvideoupplösning och för kodad återgivningsupplösning än standardvideoinnehåll som inte är 360.
 
@@ -96,8 +96,8 @@ Se även [Redigera visningsförinställningar](/help/assets/managing-viewer-pres
 
 När du är nöjd med 360-videon kan du publicera den.
 
-See [Embedding the Video or Image Viewer on a Web Page](https://helpx.adobe.com/experience-manager/6-5/help/assets/embed-code.html).
-See [Linking URLs to your web application](https://helpx.adobe.com/experience-manager/6-5/help/assets/linking-urls-to-yourwebapplication.html). Observera att den URL-baserade länkningsmetoden inte är möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till AEM Sites-sidor.
+See [Embedding the Video or Image Viewer on a Web Page.](https://helpx.adobe.com/experience-manager/6-5/help/assets/embed-code.html)
+Se [Länka URL:er till ditt webbprogram](https://helpx.adobe.com/experience-manager/6-5/help/assets/linking-urls-to-yourwebapplication.html). Observera att den URL-baserade länkningsmetoden inte är möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till AEM Sites-sidor.
 See [Adding Dynamic Media Assets to pages.](https://helpx.adobe.com/experience-manager/6-5/help/assets/adding-dynamic-media-assets-to-pages.html)
 
 **Så här förhandsgranskar du 360-videoklipp**
