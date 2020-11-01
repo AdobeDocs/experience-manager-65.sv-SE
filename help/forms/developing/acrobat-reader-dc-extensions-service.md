@@ -1,17 +1,16 @@
 ---
 title: Acrobat Reader DC-tillägg ServiceJava API - snabbstart (SOAP)
 seo-title: Acrobat Reader DC-tillägg ServiceJava API - snabbstart (SOAP)
-description: 'null'
-seo-description: 'null'
+description: Acrobat Reader DC-tillägg ServiceJava API - snabbstart (SOAP)
 uuid: 8e72ca94-a8c1-43aa-9845-a0da597051c5
 contentOwner: admin
 content-type: reference
 topic-tags: develop
 discoiquuid: 31a9bfc6-462d-4535-888f-31026b8fa674
 translation-type: tm+mt
-source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
+source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
 workflow-type: tm+mt
-source-wordcount: '282'
+source-wordcount: '289'
 ht-degree: 0%
 
 ---
@@ -27,7 +26,7 @@ Följande snabbstarter är tillgängliga för tjänsten Acrobat Reader DC Extens
 
 [Snabbstart (SOAP-läge): Hämta autentiseringsinformation med Java API](acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-retrieving-credential-information-using-the-java-api)
 
-AEM Forms-åtgärder kan utföras med AEM Forms-API:t med stark typning och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
