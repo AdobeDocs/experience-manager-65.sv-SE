@@ -1,27 +1,29 @@
 ---
-title: Dokumentsäkerhet| Hantera användardata
-seo-title: Dokumentsäkerhet| Hantera användardata
-description: 'null'
-seo-description: 'null'
+title: Dokumentsäkerhet | Hantera användardata
+seo-title: Dokumentsäkerhet | Hantera användardata
+description: Dokumentsäkerhet | Hantera användardata
 uuid: 1624a465-8b0c-4347-a53f-1118bfa6e18f
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 898268cb-4426-421f-8f63-d75bd85cb57f
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
+workflow-type: tm+mt
+source-wordcount: '938'
+ht-degree: 0%
 
 ---
 
 
-# Dokumentsäkerhet| Hantera användardata {#document-security-handling-user-data}
+# Dokumentsäkerhet | Hantera användardata {#document-security-handling-user-data}
 
-Med dokumentsäkerhet för AEM Forms kan du skapa, lagra och använda fördefinierade säkerhetsinställningar i dina dokument. Det säkerställer att endast behöriga användare kan använda dokumenten. Du kan skydda dokument med hjälp av profiler. En profil är en samling information som innehåller säkerhetsinställningar och en lista över behöriga användare. Du kan tillämpa en profil på ett eller flera dokument och auktorisera användare som läggs till i AEM Forms JEE-användarhantering.
+Med AEM Forms dokumentsäkerhet kan du skapa, lagra och använda fördefinierade säkerhetsinställningar i dina dokument. Det säkerställer att endast behöriga användare kan använda dokumenten. Du kan skydda dokument med hjälp av profiler. En profil är en samling information som innehåller säkerhetsinställningar och en lista över behöriga användare. Du kan tillämpa en profil på ett eller flera dokument och auktorisera användare som läggs till i AEM Forms JEE-användarhantering.
 
 <!-- Fix broken link For more information about how document security works, see AEM Forms JEE administration help. -->
 
 ## Användardata och datalager {#user-data-and-data-stores}
 
-Dokumentsäkerhet lagrar profiler och data som rör skyddade dokument, inklusive användardata i en databas, t.ex. My Sql, Oracle, MS SQL Server och IBM DB2. Dessutom lagras data för behöriga användare i en princip i användarhanteringen. Mer information om data som lagras i användarhantering finns i [Formuläranvändarhantering: Hantera användardata](/help/forms/using/user-management-handling-user-data.md).
+Dokumentsäkerhet lagrar profiler och data som rör skyddade dokument, inklusive användardata i en databas, t.ex. My Sql, Oracle, MS SQL Server och IBM DB2. Dessutom lagras data för behöriga användare i en princip i användarhanteringen. Mer information om data som lagras i användarhantering finns i [Forms användarhantering: Hantera användardata](/help/forms/using/user-management-handling-user-data.md).
 
 Följande tabell visar hur dokumentsäkerhet organiserar data i databastabeller.
 
@@ -126,7 +128,7 @@ Select * from edcinviteduserentity where principalId = '<principal_id>';
 >
 >Om du vill exportera data från `EdcAuditEntity` tabellen använder du API:t [EventManager.exportEvents](https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/index.html?com/adobe/livecycle/rightsmanagement/client/EventManager.html) som använder [EventSearchFilter](https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/infomodel/EventSearchFilter.html) som en parameter för att exportera granskningsdata baserat på `principalId`, `policyId`eller `licenseId`.
 
-Om du vill få fram fullständiga data om en användare i systemet måste du få åtkomst till och exportera data från databasen för användarhantering. Mer information finns i [Hantering av formuläranvändare: Hantera användardata](/help/forms/using/user-management-handling-user-data.md).
+Om du vill få fram fullständiga data om en användare i systemet måste du få åtkomst till och exportera data från databasen för användarhantering. Mer information finns i [Forms användarhantering: Hantera användardata](/help/forms/using/user-management-handling-user-data.md).
 
 ### Ta bort användardata {#delete-user-data}
 
@@ -156,6 +158,7 @@ Gör följande för att ta bort dokumentsäkerhetsdata för ett säkerhetsobjekt
    1. Öppna XML-blobben för varje rad i tabellen `EdcPolicyXMLEntity` eller `EdcPolicyArchiveEntity` tabellen och extrahera XML-filen. XML-filen liknar den som visas nedan.
    1. Redigera XML-filen för att ta bort blobben för huvuds-ID:t.
    1. Upprepa steg 1 och 2 för den andra filen.
+
    >[!NOTE]
    >
    >Du måste ta bort hela blobben i taggen för ett säkerhetsobjekt-ID, annars kan XML-koden bli skadad eller oanvändbar. `Principal`
@@ -192,19 +195,21 @@ Gör följande för att ta bort dokumentsäkerhetsdata för ett säkerhetsobjekt
    **Använda administrationskonsolen**
 
    1. Som administratör loggar du in på administrationskonsolen för Forms JEE på https://[*server*]:[*port*]/adminui.
-   1. Navigera till **[!UICONTROL Tjänster > Dokumentsäkerhet > Principuppsättningar]**.
+   1. Navigera till **[!UICONTROL Services > Document Security > Policy Sets]**.
    1. Öppna en principuppsättning och ta bort användaren från profilen.
+
    **Använda webbsidan Dokumentsäkerhet**
 
    Dokumentsäkerhetsanvändare som har behörighet att skapa personliga profiler kan ta bort användardata från sina profiler. Så här gör du:
 
    1. Användare med egna profiler loggar in på sin dokumentsäkerhetswebbsida på https://[*server*]:[*port*]/edc.
-   1. Navigera till **[!UICONTROL Tjänster > Dokumentsäkerhet > Mina principer]**.
+   1. Navigera till **[!UICONTROL Services > Document Security > My Policies]**.
    1. Öppna en profil och ta bort användaren från profilen.
+
    >[!NOTE]
    >
-   >Administratörer kan söka efter, komma åt och ta bort användardata från andra användares personliga profiler i **[!UICONTROL Tjänster > Dokumentsäkerhet > Mina principer]** med administrationskonsolen.
+   >Administratörer kan söka efter, komma åt och ta bort användardata från andra användares personliga profiler i **[!UICONTROL Services > Document Security > My Policies]** administrationskonsolen.
 
-1. Ta bort data för huvuds-ID från användarhanteringsdatabasen. Detaljerade steg finns i [Hantering av formuläranvändare| Hantera användardata](/help/forms/using/user-management-handling-user-data.md).
+1. Ta bort data för huvuds-ID från användarhanteringsdatabasen. Detaljerade anvisningar finns i [Forms användarhantering | Hantera användardata](/help/forms/using/user-management-handling-user-data.md).
 1. Starta AEM Forms-servern.
 
