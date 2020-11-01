@@ -1,17 +1,16 @@
 ---
 title: Forms Portal | Hantera användardata
 seo-title: Forms Portal | Hantera användardata
-description: 'null'
-seo-description: 'null'
+description: Forms Portal | Hantera användardata
 uuid: 2ac2b2a9-b603-489a-86b8-a78b697f130d
 contentOwner: vishgupt
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 48f841b7-0e7f-4216-9ee8-fb6e843acaf0
 translation-type: tm+mt
-source-git-commit: 4e0709031aca030e50840811a9b3717f3cb20340
+source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
 workflow-type: tm+mt
-source-wordcount: '853'
+source-wordcount: '856'
 ht-degree: 0%
 
 ---
@@ -69,7 +68,7 @@ Du kan komma åt formulärdata för inloggade och anonyma användare i konfigure
 
 ### AEM {#aem-instances}
 
-Alla utkast och skickade formulärdata i AEM instanser (författare, publicering eller fjärranvändare) för inloggade och anonyma användare lagras i noden `/content/forms/fp/` för den aktuella AEM. Varje gång en inloggad eller anonym användare sparar ett utkast eller skickar ett formulär, ett formulär `draft ID` eller `submission ID`, ett `user data ID`och ett slumpmässigt `ID` för varje bifogad fil (om tillämpligt) genereras, vilket är kopplat till respektive utkast eller inskickat material.
+Alla utkast och skickade formulärdata i AEM instanser (författare, publicering eller fjärranvändare) för inloggade och anonyma användare lagras i noden `/content/forms/fp/` för den aktuella AEM. Varje gång en inloggad eller anonym användare sparar ett utkast eller skickar ett formulär, ett formulär `draft ID` eller `submission ID`, ett `user data ID`och ett slumpmässigt `ID` för varje bifogad fil (om tillämpligt) genereras, vilket är associerat med respektive utkast eller inskickat material.
 
 #### Åtkomst till användardata {#access-user-data}
 
@@ -97,7 +96,7 @@ I följande tabell förklaras hur data för alla utkast som `srose` lagras i AEM
 
 Om du vill ta bort användardata från utkast och inskickade data för en inloggad användare från AEM system helt måste du ta bort noden för en viss användare från författarnoden `user ID` . Du måste ta bort data manuellt från alla tillämpliga AEM.
 
-Utkast och inlämningsdata för alla anonyma användare lagras i de gemensamma `drafts` noderna och `submit` noderna under `/content/forms/fp/anonymous`. Det finns ingen metod för att hitta data för en viss anonym användare om inte viss identifierbar information är känd. I det här fallet kan du söka efter information som identifierar den anonyma användaren i AEM och manuellt ta bort noden som innehåller den från alla tillämpliga AEM för att ta bort data från AEM. Om du vill ta bort data för alla anonyma användare kan du ta bort noden för att ta bort utkast och skicka data för alla anonyma användare. `anonymous`
+Utkast och inlämningsdata för alla anonyma användare lagras i de gemensamma `drafts` noderna och `submit` noderna under `/content/forms/fp/anonymous`. Det finns ingen metod för att hitta data för en viss anonym användare om inte viss identifierbar information är känd. I det här fallet kan du söka efter information som identifierar den anonyma användaren i AEM och manuellt ta bort noden som innehåller den från alla tillämpliga AEM för att ta bort data från AEM. Om du däremot vill ta bort data för alla anonyma användare kan du ta bort noden för att ta bort utkast och skicka data för alla anonyma användare. `anonymous`
 
 ### Databas {#database}
 
