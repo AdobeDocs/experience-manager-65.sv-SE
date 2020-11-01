@@ -1,8 +1,7 @@
 ---
 title: JavaAPI-snabbstart (SOAP) för Application Manager-tjänsten
 seo-title: JavaAPI-snabbstart (SOAP) för Application Manager-tjänsten
-description: 'null'
-seo-description: 'null'
+description: JavaAPI-snabbstart (SOAP) för Application Manager-tjänsten
 uuid: 01a9bce3-868b-495b-bdee-bc60f029129e
 contentOwner: admin
 content-type: reference
@@ -10,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 12da2a9b-4009-496e-953f-c2ae0352f59f
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
 workflow-type: tm+mt
-source-wordcount: '204'
+source-wordcount: '209'
 ht-degree: 0%
 
 ---
@@ -30,11 +29,11 @@ Java API Quick Start (SOAP) är tillgängligt för tjänsten Application Manager
 >
 >API:erna för programhanteraren har bara stöd för AEM Forms LCA-filer. Det stöder inte LCA-filer i LiveCycle ES2 och ES4.
 
-AEM Forms-åtgärder kan utföras med AEM Forms-API av absolut typ och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
->Java API(SOAP) Quick Start som finns i Programmering med AEM-formulär baseras på Forms om du använder ett annat operativsystem, till exempel Unix, och ersätter Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>Java API(SOAP) Quick Start som finns i Programmering med AEM formulär baseras på Forms om du använder ett annat operativsystem, till exempel Unix, och ersätter Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## Snabbstart (SOAP-läge): Distribuera program med Java API {#quick-start-soap-mode-deploying-applications-using-the-java-api}
 
