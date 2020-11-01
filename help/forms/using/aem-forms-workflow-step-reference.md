@@ -4,13 +4,12 @@ seo-title: Forms-centrerat arbetsflöde i OSGi - stegreferens
 description: Med ett Forms-baserat arbetsflöde i OSGi-steg kan du snabbt skapa anpassningsbara formulärbaserade arbetsflöden.
 seo-description: Med ett Forms-baserat arbetsflöde i OSGi-steg kan du snabbt skapa anpassningsbara formulärbaserade arbetsflöden.
 uuid: 6f791c45-0e35-4c55-9106-5340caab94b7
-contentOwner: null
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: f0a5588d-f210-4f04-bc35-b62834f90ab1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: aff67332de7295936ea45e3f38cd204fd448a570
+source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
 workflow-type: tm+mt
 source-wordcount: '7013'
 ht-degree: 0%
