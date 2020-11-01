@@ -1,8 +1,7 @@
 ---
 title: JavaAPI-snabbstart för Application Manager-klient (SOAP)
 seo-title: JavaAPI-snabbstart för Application Manager-klient (SOAP)
-description: 'null'
-seo-description: 'null'
+description: JavaAPI-snabbstart för Application Manager-klient (SOAP)
 uuid: 043f1c08-c7de-4e2d-88ca-b46428b1b551
 contentOwner: admin
 content-type: reference
@@ -10,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 2ec2a75e-4191-4660-a6f2-26cc667720b3
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '445'
 ht-degree: 0%
 
 ---
@@ -34,15 +33,15 @@ Följande Java API Quick Start (SOAP) är tillgängliga för Application Manager
 
 [Snabbstart (SOAP-läge): Hämta status för program med Java API](application-manager-client-java-api.md#quick-start-soap-mode-getting-status-of-applications-using-java-api)
 
-[Snabbstart (SOAP-läge):Förhandsgranska AEM Forms och senare programarkiv med Java API](application-manager-client-java-api.md#quick-start-soap-mode-previewing-the-livecycle-es2-and-later-application-archive-using-the-java-api)
+[Snabbstart (SOAP-läge):Förhandsgranska AEM Forms-programarkivet och senare med Java API](application-manager-client-java-api.md#quick-start-soap-mode-previewing-the-livecycle-es2-and-later-application-archive-using-the-java-api)
 
-[Snabbstart (SOAP-läge):ta bort AEM Forms programarkiv med Java API](application-manager-client-java-api.md#quick-start-soap-mode-deleting-the-application-archive-using-the-java-api)
+[Snabbstart (SOAP-läge):ta bort AEM Forms-programarkivet med Java API](application-manager-client-java-api.md#quick-start-soap-mode-deleting-the-application-archive-using-the-java-api)
 
-AEM Forms-åtgärder kan utföras med AEM Forms-API:t med stark typning och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
->Snabbstarten i Programmering med AEM Forms baseras på den Forms Server som distribueras på JBoss och operativsystemet Windows. Om du använder ett annat operativsystem, till exempel Unix, ersätter du fönsterspecifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>Snabbstart i Programmering med AEM Forms baseras på Forms Server som distribueras på JBoss och Windows. Om du använder ett annat operativsystem, till exempel Unix, ersätter du fönsterspecifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## Snabbstart (SOAP-läge): Skapa programversion med Java API {#quick-start-soap-mode-creating-application-version-using-the-java-api}
 
@@ -444,7 +443,7 @@ public class GetApplication_SOAP {
 
 I följande Java-kodexempel hämtas programmen med Java API.
 
-**Obs**! Hämtningen av AEM Forms program-API, getApplications(), returnerar endast distribuerade program.
+**Obs**! När AEM Forms Application API hämtas, getApplications(), returneras endast distribuerade program.
 
 ```java
 /*
@@ -644,9 +643,9 @@ public class GetApplicationStatus_SOAP {
 }
 ```
 
-## Snabbstart (SOAP-läge):Förhandsgranska LiveCycle ES2 och senare programarkiv med Java API {#quick-start-soap-mode-previewing-the-livecycle-es2-and-later-application-archive-using-the-java-api}
+## Snabbstart (SOAP-läge):Förhandsgranska LiveCycle ES2-programarkivet och senare med Java API {#quick-start-soap-mode-previewing-the-livecycle-es2-and-later-application-archive-using-the-java-api}
 
-I följande Java-kodexempel visas hur du kan förhandsgranska AEM Forms och senare programarkiv med Java API.
+Följande Java-kodexempel används för att förhandsgranska AEM Forms-programarkiv och senare med Java API.
 
 ```java
 /*
