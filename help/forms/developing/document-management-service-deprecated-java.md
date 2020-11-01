@@ -1,8 +1,7 @@
 ---
 title: Document Management Service (utgått) Java API Quick Start (SOAP)
 seo-title: Document Management Service (utgått) Java API Quick Start (SOAP)
-description: 'null'
-seo-description: 'null'
+description: Document Management Service (utgått) Java API Quick Start (SOAP)
 uuid: 967c282a-ccde-4489-a4d5-53c6a1a0cac0
 contentOwner: admin
 content-type: reference
@@ -10,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 9cffdb77-c8a4-4a15-b64f-1d3aadaa60c7
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
 workflow-type: tm+mt
-source-wordcount: '645'
+source-wordcount: '652'
 ht-degree: 0%
 
 ---
@@ -24,7 +23,7 @@ Följande snabbstarter är tillgängliga för dokumenthanteringstjänsten (bortt
 
 >[!NOTE]
 >
->Från och med 5 augusti 2011 migrerar Adobe Content Services ES-kunder till Adobe Digital Enterprise Platform Experience Services. Produktens färdplan för kunder som använder Content Services är att gå över till den nya ADEP Experience Services - Core, som innehåller en inbyggd Content Repository som bygger på den moderna, modulära CRX-arkitekturen, som förvärvats under Adobes förvärv av Day Software.
+>Från och med den 5 augusti 2011 migrerar Adobe Content Services ES-kunder till Adobe Digital Enterprise Platform Experience Services. Produktens färdplan för kunder som använder Content Services är att gå över till den nya ADEP Experience Services - Core, som innehåller en inbyggd Content Repository som bygger på den moderna, modulära CRX-arkitekturen, som förvärvades under Adobe-förvärvet av Day Software.
 
 [Snabbstart (SOAP-läge): Skapa Content Services-space med Java API](document-management-service-deprecated-java.md#quick-start-soap-mode-create-content-services-spaces-using-the-java-api-deprecated)
 
@@ -42,11 +41,11 @@ Följande snabbstarter är tillgängliga för dokumenthanteringstjänsten (bortt
 
 [Snabbstart (SOAP-läge): Ange behörigheter för innehållstjänster med Java API](document-management-service-deprecated-java.md#quick-start-soap-mode-setting-content-services-permissions-using-the-java-api-deprecated)
 
-AEM Forms-åtgärder kan utföras med AEM Forms-API:t med stark typning och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 
-Snabbstart i Programmering med AEM-formulär baseras på den Forms Server som distribueras på JBoss och operativsystemet Windows. Om du använder ett annat operativsystem, t.ex. UNIX, kan du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+Snabbstart i Programmering med AEM baseras på Forms Server som distribueras på JBoss och Windows. Om du använder ett annat operativsystem, t.ex. UNIX, kan du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## Snabbstart (SOAP-läge): Skapa innehållstjänstutrymmen med Java API (inaktuellt) {#quick-start-soap-mode-create-content-services-spaces-using-the-java-api-deprecated}
 
