@@ -1,20 +1,22 @@
 ---
-title: Skydda ett dokument för en annan användares räkning
-seo-title: Skydda ett dokument för en annan användares räkning
-description: 'null'
-seo-description: 'null'
+title: Protect ett dokument för en annan användares räkning
+seo-title: Protect ett dokument för en annan användares räkning
+description: Protect ett dokument för en annan användares räkning
 uuid: 76f4b30b-6d0c-4cae-98b3-334efdbf27bb
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 discoiquuid: 7cb8140d-dd62-4659-8cc7-21361bd5d3f6
 translation-type: tm+mt
-source-git-commit: 5120bbdefea528ad6d07a9c99df565555b6a8444
+source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
+workflow-type: tm+mt
+source-wordcount: '376'
+ht-degree: 0%
 
 ---
 
 
-# Skydda ett dokument för en annan användares räkning {#protect-a-document-on-behalf-of-another-user}
+# Protect ett dokument för en annan användares räkning {#protect-a-document-on-behalf-of-another-user}
 
-AEM Forms Document Security Java SDK innehåller API:er som gör det möjligt för ett användarkonto att skydda ett dokument åt en annan användare utan att ge behörighet att redigera dokumentet. Du kan använda API:erna i en arbetsflödesprocess eller programmatiskt som en dokumenttjänst. De nya API:erna är:
+AEM Forms Document Security Java SDK innehåller API:er som gör att ett användarkonto kan skydda ett dokument åt en annan användare utan att behöva ha behörighet att redigera dokumentet. Du kan använda API:erna i en arbetsflödesprocess eller programmatiskt som en dokumenttjänst. De nya API:erna är:
 
 * **protectDocumentAnvänd** API:t ProtectDocument för att tillämpa en profil på ett dokument för
 
