@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: e26c7f7f-bdd7-421a-8614-ba48abf381d2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: c3ae4447581d946554d792c68d31b47a6b67d5df
 workflow-type: tm+mt
-source-wordcount: '4730'
+source-wordcount: '4720'
 ht-degree: 3%
 
 ---
@@ -92,7 +92,7 @@ Så här kommer du igång snabbt:
    * [Lägg till en karusellbanderoll på din webbplats i AEM](/help/assets/adding-dynamic-media-assets-to-pages.md) Om du är AEM Sites-kund kan du lägga till karuselluppsättningen direkt på sidan i AEM med hjälp av komponenten Interactive Media.
 
 
-Om du behöver redigera Carousel-uppsättningar läser du [redigera Carousel-uppsättningar.](#editing-carousel-sets) Dessutom kan du visa och redigera [Carousel Set-egenskaper](https://docs.adobe.com/content/help/en/experience-manager-65/assets/managing/managing-assets-touch-ui.html#editing-properties).
+Om du behöver redigera Carousel-uppsättningar läser du [redigera Carousel-uppsättningar.](#editing-carousel-sets) Dessutom kan du visa och redigera [Carousel Set-egenskaper](manage-assets.md#editing-properties).
 
 ## Identifiera variabler för aktiveringspunkt och bildschema {#identifying-hotspot-and-image-map-variables}
 
