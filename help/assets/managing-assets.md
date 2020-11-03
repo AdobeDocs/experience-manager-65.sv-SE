@@ -8,10 +8,10 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: a323bf5a-b5b2-4b15-bcf8-48d0fe819512
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: c3ae4447581d946554d792c68d31b47a6b67d5df
 workflow-type: tm+mt
-source-wordcount: '118'
-ht-degree: 13%
+source-wordcount: '114'
+ht-degree: 14%
 
 ---
 
@@ -22,7 +22,7 @@ Hantera Dynamic Media-resurser - bilder, video och interaktiva resurser - efter 
 
 När du förhandsgranskar kan du även använda bildförinställningar (endast för bilder) eller visningsförinställningar (för video och bilder). Du kan inte använda båda för en resurs. Se [Använda visningsförinställningar](/help/assets/viewer-presets.md) och [Använda bildförinställningar](/help/assets/image-sets.md).
 
-Allmän information om hur du hanterar resurser finns i [Hantera resurser med Touch-gränssnittet](/help/assets/manage-assets.md).
+Allmän information om hur du hanterar resurser finns i [Hantera resurser](/help/assets/manage-assets.md).
 
 I följande avsnitt beskrivs vad du behöver göra för att hantera dynamiska medieresurser:
 
@@ -30,4 +30,3 @@ I följande avsnitt beskrivs vad du behöver göra för att hantera dynamiska me
 * [Förhandsgranska Dynamic Media-resurser](/help/assets/previewing-assets.md)
 * [Publicera dynamiska medieresurser](/help/assets/publishing-dynamicmedia-assets.md)
 * [Arbeta med väljare](/help/assets/working-with-selectors.md)
-
