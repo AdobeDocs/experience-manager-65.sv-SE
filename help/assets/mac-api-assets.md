@@ -3,7 +3,7 @@ title: '[!DNL Assets] HTTP API.'
 description: Skapa, läsa, uppdatera, ta bort, hantera digitala resurser med HTTP API i [!DNL Adobe Experience Manager Assets].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: add8be813ce377384ee4d90600f54a1455a1ab0d
+source-git-commit: c3ae4447581d946554d792c68d31b47a6b67d5df
 workflow-type: tm+mt
 source-wordcount: '1715'
 ht-degree: 0%
@@ -183,7 +183,7 @@ Uppdaterar metadataegenskaperna för resursen. Om du uppdaterar någon egenskap 
 
 ### Synkronisera metadatauppdatering mellan `dc` och `jcr` namnområde {#sync-metadata-between-namespaces}
 
-API-metoden uppdaterar metadataegenskaperna i `jcr` namnutrymmet. Uppdateringarna som görs med Touch-UI ändrar metadataegenskaperna i `dc` namnutrymmet. Om du vill synkronisera metadatavärdena mellan `dc` och `jcr` namnutrymmet kan du skapa ett arbetsflöde och konfigurera Experience Manager så att arbetsflödet körs när resursen redigeras. Använd ett ECMA-skript för att synkronisera de metadataegenskaper som krävs. Följande exempelskript synkroniserar titelsträngen mellan `dc:title` och `jcr:title`.
+API-metoden uppdaterar metadataegenskaperna i `jcr` namnutrymmet. Uppdateringarna som görs med användargränssnittet ändrar metadataegenskaperna i `dc` namnutrymmet. Om du vill synkronisera metadatavärdena mellan `dc` och `jcr` namnutrymmet kan du skapa ett arbetsflöde och konfigurera Experience Manager så att arbetsflödet körs när resursen redigeras. Använd ett ECMA-skript för att synkronisera de metadataegenskaper som krävs. Följande exempelskript synkroniserar titelsträngen mellan `dc:title` och `jcr:title`.
 
 ```javascript
 var workflowData = workItem.getWorkflowData();
