@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 discoiquuid: 154255e7-468a-42e6-a33d-eee691cf854d
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 615b0db6da0986d7a74c42ec0d0e14bad7ede168
 workflow-type: tm+mt
-source-wordcount: '331'
+source-wordcount: '355'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Med AEM Forms kan du spara ett formulär som ett utkast. Med utkastsfunktionen kan du underhålla ett pågående formulär som du kan fylla i och skicka senare från vilken enhet som helst.
 
-Som standard lagrar AEM Forms användardata som är kopplade till utkastet och skickandet av ett formulär på `/content/forms/fp` noden i Publish-instansen. Dessutom innehåller AEM Forms portalkomponenterna datatjänster, som du kan använda för att anpassa implementeringen av lagring av användardata för utkast och överföringar. Du kan till exempel lagra användardata i ett datalager.
+Som standard lagrar AEM Forms de användardata som är kopplade till utkastet och överföringen av ett formulär på `/content/forms/fp` noden i Publish-instansen. Dessutom innehåller AEM Forms portalkomponenter datatjänster som du kan använda för att anpassa implementeringen av lagring av användardata för utkast och inskickade data. Du kan till exempel lagra användardata i ett datalager.
 
 ## Förutsättningar  {#prerequisites}
 
@@ -96,6 +96,10 @@ public interface DraftDataService {
     public byte[] getAttachment (String attachmentID) throws FormsPortalException;
 }
 ```
+
+>[!NOTE]
+>
+>Minsta tillåtna värde för längden på utkastets ID-fält är 26 tecken. Adobe rekommenderar att du anger 26 eller fler tecken för utkast-ID:t.
 
 ## Datatjänst för överföring {#submission-data-service}
 
@@ -184,7 +188,7 @@ public interface SubmitDataService {
 }
 ```
 
-Formulärportalen använder ett UUID-koncept (Universally Unique Identifier) för att generera ett unikt ID för varje utkast och skickat formulär. Du kan också generera ett unikt ID. Du kan implementera gränssnittet FPKeyGeneratorService, åsidosätta dess metoder och utveckla en anpassad logik för att generera ett anpassat unikt ID för varje utkast och skickat formulär. Ange också tjänstrankning för implementering av anpassad ID-generering som är högre än 0. Det ser till att den anpassade implementeringen används i stället för standardimplementeringen.
+Forms Portal använder UUID (Universally Unique Identifier) för att generera ett unikt ID för varje utkast och skickat formulär. Du kan också generera ett unikt ID. Du kan implementera gränssnittet FPKeyGeneratorService, åsidosätta dess metoder och utveckla en anpassad logik för att generera ett anpassat unikt ID för varje utkast och skickat formulär. Ange också tjänstrankning för implementering av anpassad ID-generering som är högre än 0. Det ser till att den anpassade implementeringen används i stället för standardimplementeringen.
 
 ```java
 public interface FPKeyGeneratorService {
