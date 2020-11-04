@@ -1,16 +1,16 @@
 ---
 title: Bästa tillvägagångssätt för arbete med anpassningsbara formulär
 seo-title: Bästa tillvägagångssätt för arbete med anpassningsbara formulär
-description: Beskriver de bästa sätten att skapa ett AEM Forms-projekt, utveckla adaptiva formulär och optimera prestanda för AEM Forms-systemet.
-seo-description: Beskriver de bästa sätten att skapa ett AEM Forms-projekt, utveckla adaptiva formulär och optimera prestanda för AEM Forms-systemet.
+description: Beskriver de bästa sätten att skapa ett AEM Forms-projekt, utveckla adaptiva formulär och optimera prestanda för AEM Forms-system.
+seo-description: Beskriver de bästa sätten att skapa ett AEM Forms-projekt, utveckla adaptiva formulär och optimera prestanda för AEM Forms-system.
 uuid: ed95fc64-56b3-4ea1-a5ba-2e96953fca56
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 43c431e4-5286-4f4e-b94f-5a7451c4a22c
 translation-type: tm+mt
-source-git-commit: d5efcec4a0397d99c899643ff13a883a0ed02c81
+source-git-commit: 615b0db6da0986d7a74c42ec0d0e14bad7ede168
 workflow-type: tm+mt
-source-wordcount: '4249'
+source-wordcount: '4296'
 ht-degree: 0%
 
 ---
@@ -20,11 +20,11 @@ ht-degree: 0%
 
 ## Översikt {#overview}
 
-Med Adobe Experience Manager (AEM)-formulär kan du omvandla komplexa transaktioner till enkla, roliga digitala upplevelser. Det kräver dock en samordnad insats för att införa, bygga, genomföra och underhålla ett effektivt och produktivt ekosystem i AEM Forms.
+Adobe Experience Manager (AEM)-formulär kan hjälpa er att omvandla komplexa transaktioner till enkla, roliga digitala upplevelser. Det kräver dock samordnade insatser för att implementera, bygga, genomföra och underhålla ett effektivt och produktivt AEM Forms-ekosystem.
 
-Det här dokumentet innehåller riktlinjer och rekommendationer som formuläradministratörer, författare och utvecklare kan dra nytta av när de arbetar med AEM Forms, särskilt adaptiva formulärkomponenter. Här diskuteras de bästa sätten, från att skapa ett formulärutvecklingsprojekt till att konfigurera, anpassa, skapa och optimera AEM Forms. Dessa bästa metoder bidrar tillsammans till det övergripande resultatet för AEM Forms ekosystemet.
+Det här dokumentet innehåller riktlinjer och rekommendationer som formuläradministratörer, författare och utvecklare kan dra nytta av när de arbetar med AEM Forms, särskilt adaptiva formulärkomponenter. Här diskuteras de effektivaste strategierna, från att skapa ett formulärutvecklingsprojekt till att konfigurera, anpassa, skapa och optimera AEM Forms. Dessa bästa metoder bidrar tillsammans till AEM Forms ekosystems allmänna prestanda.
 
-Här följer dessutom några rekommenderade artiklar för allmän AEM-praxis:
+Här följer dessutom några rekommenderade artiklar för allmänna AEM bästa praxis:
 
 * [God praxis: Driftsätta och underhålla AEM](/help/sites-deploying/best-practices.md)
 * [God praxis: Skapa innehåll](/help/sites-authoring/best-practices.md)
@@ -35,18 +35,18 @@ Här följer dessutom några rekommenderade artiklar för allmän AEM-praxis:
 
 ### Konfigurera formulärutvecklingsprojekt {#setting-up-forms-development-project}
 
-En förenklad och standardiserad projektstruktur kan avsevärt minska arbetet med utveckling och underhåll. Apache Maven är ett verktyg med öppen källkod som rekommenderas för att skapa AEM-projekt.
+En förenklad och standardiserad projektstruktur kan avsevärt minska arbetet med utveckling och underhåll. Apache Maven är ett verktyg med öppen källkod som rekommenderas för att bygga AEM projekt.
 
-* Använd Apache Maven `aem-project-archetype` för att skapa och hantera strukturen för AEM-projekt. Den skapar rekommenderade strukturer och mallar för ditt AEM-projekt. Dessutom innehåller det system för automatisering och ändringskontroll som underlättar hanteringen av projektet.
+* Använd Apache Maven `aem-project-archetype` för att skapa och hantera struktur för AEM projekt. Den skapar rekommenderade strukturer och mallar för AEM projekt. Dessutom innehåller det system för automatisering och ändringskontroll som underlättar hanteringen av projektet.
 
    * Använd kommandot maven `archetype:generate` för att generera den inledande strukturen.
    * Använd kommandot maven `eclipse:eclipse` för att generera de förmörkade projektfilerna och importera projektet till förmörkning.
 
-Mer information finns i [Så här skapar du AEM-projekt med Apache Maven](/help/sites-developing/ht-projects-maven.md).
+Mer information finns i [Så här skapar du AEM projekt med Apache Maven](/help/sites-developing/ht-projects-maven.md).
 
-* Med FileVault-verktyget eller VLT kan du mappa innehållet i en CRX- eller AEM-instans till ditt filsystem. Den innehåller åtgärder för ändringshantering, som in- och utcheckning av AEM-projektinnehåll. Se [Så här använder du VLT-verktyget](/help/sites-developing/ht-vlttool.md).
+* Med FileVault-verktyget eller VLT kan du mappa innehållet i en CRX- eller AEM-instans till filsystemet. Den innehåller åtgärder för ändringshantering, som in- och utcheckning av AEM projektinnehåll. Se [Så här använder du VLT-verktyget](/help/sites-developing/ht-vlttool.md).
 
-* Om du använder en Eclipse-integrerad utvecklingsmiljö kan du använda AEM Developer-verktygen för smidig integrering av Eclipse IDE med AEM-instanser för att skapa AEM-program. Mer information finns i [AEM-utvecklingsverktyg för Eclipse](/help/sites-developing/aem-eclipse.md).
+* Om du använder en Eclipse-integrerad utvecklingsmiljö kan du använda AEM utvecklingsverktyg för smidig integrering av Eclipse IDE med AEM instanser för att skapa AEM program. Mer information finns i [AEM utvecklarverktyg för Eclipse](/help/sites-developing/aem-eclipse.md).
 
 * Lagra inte något innehåll och gör inga ändringar i mappen /libs. Skapa övertäckningar i /app-mappar för att utöka eller skriva över standardfunktioner.
 
@@ -60,15 +60,15 @@ Mer information finns i [Så här skapar du AEM-projekt med Apache Maven](/help/
 
 ### Planering för redigeringsmiljö {#planning-for-authoring-environment}
 
-När du har skapat AEM-projektet definierar du en strategi för att skapa och anpassa adaptiva formulärmallar och komponenter.
+När du väl har skapat AEM projekt kan du definiera en strategi för att skapa och anpassa anpassningsbara blankettmallar och komponenter.
 
-* En adaptiv formulärmall är en specialiserad AEM-sida som definierar struktur och sidhuvud-sidfot-information i ett adaptivt formulär. En mall har förkonfigurerade layouter, format och grundstruktur för ett adaptivt formulär. AEM Forms har färdiga mallar och komponenter som du kan använda för att skapa anpassade formulär. Du kan dock skapa egna mallar och komponenter efter behov. Vi rekommenderar att du samlar in krav för ytterligare mallar och komponenter som du behöver i dina adaptiva formulär. Mer information finns i [Anpassa adaptiva formulär och komponenter](/help/forms/using/adaptive-forms-best-practices.md#customize-components).
-* Med AEM Forms kan du skapa anpassade formulär baserade på följande formulärmodeller. Blankettmodellerna fungerar som gränssnitt för datautbyte mellan ett formulär och ett AEM-system och ger en XML-baserad struktur för dataflöde både innanför och utanför ett adaptivt formulär. Formulärmodellerna innehåller dessutom regler och begränsningar för anpassningsbara formulär i form av schema- och XFA-begränsningar.
+* En adaptiv formulärmall är en specialiserad AEM som definierar struktur och sidhuvud/sidfot-information i ett adaptivt formulär. En mall har förkonfigurerade layouter, format och grundstruktur för ett adaptivt formulär. AEM Forms innehåller färdiga mallar och komponenter som du kan använda för att skapa anpassningsbara formulär. Du kan dock skapa egna mallar och komponenter efter behov. Vi rekommenderar att du samlar in krav för ytterligare mallar och komponenter som du behöver i dina adaptiva formulär. Mer information finns i [Anpassa adaptiva formulär och komponenter](/help/forms/using/adaptive-forms-best-practices.md#customize-components).
+* Med AEM Forms kan du skapa anpassningsbara formulär baserade på följande formulärmodeller. Blankettmodellerna fungerar som gränssnitt för datautbyte mellan ett formulär och AEM och ger en XML-baserad struktur för dataflöde både innanför och utanför ett adaptivt formulär. Formulärmodellerna innehåller dessutom regler och begränsningar för anpassningsbara formulär i form av schema- och XFA-begränsningar.
 
    * **Ingen**: Anpassningsbara formulär som skapas med det här alternativet använder inte någon formulärmodell. Data-XML som genereras från sådana formulär har en platt struktur med fält och motsvarande värden.
    * **XML- eller JSON-schema**: XML- och JSON-scheman representerar den struktur i vilken data produceras eller förbrukas av organisationens serversystem. Du kan koppla ett schema till ett anpassat formulär och använda dess element för att lägga till dynamiskt innehåll i det anpassningsbara formuläret. Elementen i schemat är tillgängliga på fliken Datamodellsobjekt i innehållsläsaren för att skapa adaptiva formulär. Du kan dra och släppa schemaelementen för att skapa formuläret.
    * **XFA-formulärmall**: Det är en idealisk formulärmodell om du har investeringar i XFA-baserade HTML5-formulär. Det är ett direkt sätt att konvertera XFA-baserade formulär till anpassningsbara formulär. Alla befintliga XFA-regler behålls i de tillhörande adaptiva formulären. De färdiga adaptiva formulären har stöd för XFA-konstruktioner, till exempel valideringar, händelser, egenskaper och mönster.
-   * **Formulärdatamodell**: Det är att föredra om du vill integrera backend-system som databaser, webbtjänster och AEM-användarprofiler för att förifylla anpassningsbara formulär och skriva in inlämnade formulärdata i bakomliggande system. Med en redigerare för formulärdatamodell kan du definiera och konfigurera enheter och tjänster i en formulärdatamodell som du kan använda för att skapa adaptiva formulär. Mer information finns i [AEM Forms Data Integration](/help/forms/using/data-integration.md).
+   * **Formulärdatamodell**: Det är att föredra om du vill integrera backend-system som databaser, webbtjänster och AEM användarprofil för att förifylla anpassningsbara formulär och skriva in inlämnade formulärdata i bakomliggande system. Med en redigerare för formulärdatamodell kan du definiera och konfigurera enheter och tjänster i en formulärdatamodell som du kan använda för att skapa adaptiva formulär. Mer information finns i [AEM Forms dataintegrering](/help/forms/using/data-integration.md).
 
 Det är viktigt att du noga väljer den datamodell som inte bara passar dina behov utan också utökar dina befintliga investeringar i XFA- och XSD-resurser, om det finns några. Vi rekommenderar att du använder XSD-modell för att skapa formulärmallar eftersom den genererade XML-filen innehåller data enligt XPATH som definieras av schemat. Att använda XSD-modell som standardval för formulärdatamodell är också till hjälp eftersom det frigör formulärdesignen från det bakomliggande system som bearbetar och förbrukar data och förbättrar formulärens prestanda på grund av en-till-en-mappning av formulärfält. Dessutom kan BindRef för fältet göras till XPATH för dess datavärde i XML.
 
@@ -102,15 +102,15 @@ Mer information finns i [Skapa ett anpassat formulär](/help/forms/using/creatin
 
 * Använd objektwebbläsaren i sidlisten för att snabbt komma åt fält som är djupa i formulärhierarkin. Du kan använda sökrutan för att söka efter objekt i formulär- eller objektträdet och navigera mellan olika objekt.
 * Om du vill visa och redigera egenskaperna för en komponent i komponentwebbläsaren i sidofältet markerar du komponenten och klickar på ![cmpr-1](assets/cmppr-1.png). Du kan också dubbelklicka på en komponent om du vill visa dess egenskaper i egenskapsläsaren.
-* Använd kortkommandon för att vidta snabba åtgärder i formulären. Se [Kortkommandon](/help/forms/using/keyboard-shortcuts.md)för AEM Forms.
+* Använd kortkommandon för att vidta snabba åtgärder i formulären. Se [AEM Forms kortkommandon](/help/forms/using/keyboard-shortcuts.md).
 
-* Adaptiva formulärkomponenter rekommenderas för användning endast i adaptiva formulärsidor. Komponenterna är beroende av sin överordnade hierarki. Använd dem därför inte på en AEM-sida.
+* Adaptiva formulärkomponenter rekommenderas för användning endast i adaptiva formulärsidor. Komponenterna är beroende av sin överordnade hierarki. Använd dem därför inte på en AEM sida.
 
 Se även komponentbeskrivningar och metodtips i [Introduktion till utveckling av adaptiva formulär](/help/forms/using/introduction-forms-authoring.md).
 
 ### Använda regler i anpassningsbara formulär {#using-rules-in-adaptive-forms}
 
-AEM Forms tillhandahåller en [regelredigerare](/help/forms/using/rule-editor.md) som gör att du kan skapa regler för att lägga till dynamiskt beteende i adaptiva formulärkomponenter. Med dessa regler kan du utvärdera villkor och utlösa åtgärder för komponenter, som att visa eller dölja fält, beräkna värden, ändra listrutan dynamiskt och så vidare.
+AEM Forms har en [regelredigerare](/help/forms/using/rule-editor.md) som gör att du kan skapa regler för att lägga till dynamiskt beteende i adaptiva formulärkomponenter. Med dessa regler kan du utvärdera villkor och utlösa åtgärder för komponenter, som att visa eller dölja fält, beräkna värden, ändra listrutan dynamiskt och så vidare.
 
 Regelredigeraren innehåller en visuell redigerare och en kodredigerare för att skriva regler. Tänk på följande när du skriver regler i kodredigeringsläget:
 
@@ -122,7 +122,7 @@ Regelredigeraren innehåller en visuell redigerare och en kodredigerare för att
 * Referera komponenter efter en relativ unik hierarki för att undvika konflikter. Till exempel, `parentName.fieldName`.
 
 * När du hanterar komplexa eller ofta använda regler bör du överväga att skriva affärslogik som funktioner i ett separat klientbibliotek som du kan ange och återanvända i adaptiva formulär. Klientbiblioteket ska vara ett självständigt bibliotek och inte ha några externa beroenden, förutom jQuery och Underscore.js. Du kan också använda klientbiblioteket för att framtvinga [serverbaserad omvalidering](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form) av skickade formulärdata.
-* Adaptiva formulär innehåller en uppsättning API:er som du kan använda för att kommunicera med och utföra åtgärder på adaptiva formulär. Några av de viktigaste API:erna är följande. Mer information finns i API-referens för [JavaScript-bibliotek för adaptiva formulär](https://adobe.com/go/learn_aemforms_documentation_63).
+* Adaptiva formulär innehåller en uppsättning API:er som du kan använda för att kommunicera med och utföra åtgärder på adaptiva formulär. Några av de viktigaste API:erna är följande. Mer information finns i API-referens för [JavaScript-bibliotek för Adaptiv Forms](https://adobe.com/go/learn_aemforms_documentation_63).
 
    * `guideBridge.reset()`: Återställer ett formulär.
    * `guideBridge.submit()`: Skickar ett formulär.
@@ -177,13 +177,13 @@ Använd följande metodtips för att lösa prestandaproblem med stora formulär:
 
 Du kan förifylla anpassningsbara formulärfält med data som hämtats från backend-sidan för att hjälpa användarna att snabbt fylla i formuläret och undvika skrivfel.
 
-* AEM Forms tillhandahåller en förifyllningstjänst för att läsa data från en fördefinierad XML-datafil och förifylla fälten i ett adaptivt formulär med innehållet i den förifyllda XML-filen.
+* AEM Forms tillhandahåller en förifyllningstjänst för att läsa data från en fördefinierad XML-datafil och förifylla fälten i ett adaptivt formulär med innehållet i XML-filen för förifyllnad.
 * XML-koden för förifyllda data måste vara kompatibel med schemat för den formulärmodell som är associerad med det adaptiva formuläret.
 * Inkludera `afBoundedData` och `afUnBoundedData` avsnitt i förifyll XML för att förifylla både bundna och obundna fält i ett adaptivt formulär.
 
-* För anpassningsbara formulär baserade på formulärdatamodell tillhandahåller AEM Forms en färdig tjänst för förifyllnad av formulärdatamodell. förifyllningstjänsten söker efter datakällor för datamodellobjekt i det adaptiva formuläret och fyller i fältvärden i förväg när formuläret återges.
+* För anpassningsbara formulär baserade på formulärdatamodell tillhandahåller AEM Forms en färdig tjänst för förifyllning av formulärdatamodell. förifyllningstjänsten söker efter datakällor för datamodellobjekt i det adaptiva formuläret och fyller i fältvärden i förväg när formuläret återges.
 * Du kan också använda de adaptiva formulären för förifyllnad av filer, krökningar, tjänster och http-protokoll.
-* AEM Forms har stöd för anpassade förifyllningstjänster som du kan ansluta som en OSGi-tjänst för att förifylla adaptiva formulär.
+* AEM Forms har stöd för anpassade förifyllningstjänster som du kan använda som en OSGi-tjänst för att förifylla adaptiva formulär.
 
 Mer information finns i [Förifyll adaptiva formulärfält](/help/forms/using/prepopulate-adaptive-form-fields.md).
 
@@ -195,9 +195,9 @@ För adaptiva formulär krävs Skicka-åtgärder för att bearbeta användarspec
 * Du kan skriva en anpassad sändningsåtgärd om standardåtgärderna för att skicka inte uppfyller ditt användningssätt. Mer information finns i [Skriva anpassad skickaåtgärd för anpassningsbara formulär](/help/forms/using/custom-submit-action-form.md).
 * Inkludera validering på serversidan för att förhindra att ogiltiga data skickas.
 
-Ni kan utnyttja Adobe Sign med flera signaturer i anpassningsbara formulär. Tänk på följande när du konfigurerar Adobe Sign i adaptiva formulär. Mer information finns i [Använda Adobe Sign i ett anpassat formulär](/help/forms/using/working-with-adobe-sign.md).
+Ni kan utnyttja Adobe Sign multisigneringsfunktion i anpassningsbara formulär. Tänk på följande när du konfigurerar Adobe Sign i adaptiva formulär. Mer information finns i [Använda Adobe Sign i en adaptiv form](/help/forms/using/working-with-adobe-sign.md).
 
-* Anpassningsbart formulär aktiverat för Adobe Sign skickas bara när alla signerare har signerat formuläret. Formulär visas i Väntande signering tills formuläret har signerats av alla signerare.
+* Anpassningsbart formulär som aktiveras av Adobe Sign skickas endast när alla signerare har signerat formuläret. Forms visas i Väntande signering tills formuläret har signerats av alla signerare.
 * Du kan konfigurera signeringsupplevelsen i ett formulär eller dirigera om signerare till en signeringssida när de skickas.
 * Konfigurera sekventiell eller parallell signering efter behov.
 
@@ -226,9 +226,9 @@ Ett urkunder är en förenklad PDF-version av ett adaptivt formulär som du kan 
 * Felsöka regler och skript i formuläret
 * Utforska och lär dig mer om guideBridge API:er
 
-Mer information finns i [AEM Chrome Plug-in - Adaptiv form](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/adaptive-form/).
+Mer information finns i [AEM Chrome Plug-in - Adaptive Form](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/adaptive-form/).
 
-Calvin SDK är ett verktyg-API för utvecklare av adaptiva formulär för att testa adaptiva formulär. Calvin SDK är byggt ovanpå testmiljön [för](https://docs.adobe.com/docs/en/aem/6-3/develop/ref/test-api/index.html)Hobbes.js. Du kan använda ramverket för att testa följande:
+Calvin SDK är ett program-API för Adaptiva Forms-utvecklare som testar Adaptiv Forms. Calvin SDK är byggt ovanpå testmiljön [för](https://docs.adobe.com/docs/en/aem/6-3/develop/ref/test-api/index.html)Hobbes.js. Du kan använda ramverket för att testa följande:
 
 * Återgivning av ett adaptivt formulär
 * Förifyll upplevelsen av ett adaptivt formulär
@@ -239,7 +239,7 @@ Calvin SDK är ett verktyg-API för utvecklare av adaptiva formulär för att te
 
 Mer information finns i [Automatisera testning av adaptiva formulär](/help/forms/using/calvin.md).
 
-### Validerar anpassningsbara formulär på AEM-servern {#validating-adaptive-forms-on-aem-server}
+### Validerar anpassningsbara formulär på AEM server {#validating-adaptive-forms-on-aem-server}
 
 Valideringar på serversidan krävs för att förhindra försök att kringgå valideringar på klienten och eventuella kompromisser med inskickade data och överträdelser av affärsregler. Valideringar på serversidan körs på servern genom att det nödvändiga klientbiblioteket läses in.
 
@@ -248,7 +248,7 @@ Valideringar på serversidan krävs för att förhindra försök att kringgå va
 
 ### Lokalisera anpassningsbara formulär {#localizing-adaptive-forms}
 
-AEM tillhandahåller översättningsarbetsflöden som du kan använda för att lokalisera adaptiva formulär. Mer information finns i [Använda arbetsflöde för AEM-översättning för att lokalisera adaptiva formulär](/help/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.md).
+AEM tillhandahåller översättningsarbetsflöden som du kan använda för att lokalisera adaptiva formulär. Mer information finns i [Använda arbetsflöde AEM översättning för att lokalisera adaptiva formulär](/help/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.md).
 
 Nedan beskrivs några tips om hur du översätter anpassningsbara formulär:
 
@@ -271,21 +271,21 @@ Du kan konfigurera ytterligare en instans av AEM Forms-servern som finns bakom b
 
 ### Flyttar projekt till en annan miljö {#moving-project-to-another-environment}
 
-Du behöver ofta flytta dina AEM-projekt från en miljö till en annan. Några av de viktigaste saker man bör komma ihåg när man rör sig är följande:
+Du behöver ofta flytta dina AEM projekt från en miljö till en annan. Några av de viktigaste saker man bör komma ihåg när man rör sig är följande:
 
 * Säkerhetskopiera befintliga klientbibliotek, anpassad kod och konfigurationer.
 * Distribuera produktpaket och korrigeringsfiler manuellt och i angiven ordning i den nya miljön.
-* Distribuera projektspecifika kodpaket och paket manuellt och som ett separat paket eller paket på den nya AEM-servern.
+* Distribuera projektspecifika kodpaket och paket manuellt och som ett separat paket eller paket på den nya AEM servern.
 * (Endast ** AEM Forms på JEE) Distribuera LCA och DSC manuellt på Forms Workflow-servern.
 * Använd funktionerna [Exportera och importera](/help/forms/using/import-export-forms-templates.md) för att flytta resurser till den nya miljön. Du kan också konfigurera replikeringsagenten och publicera resurserna.
 * När du uppgraderar ersätter du alla föråldrade API:er och funktioner med nya API:er och funktioner.
 
-### Konfigurerar AEM {#configuring-aem}
+### Konfigurera AEM {#configuring-aem}
 
 Nedan beskrivs några tips om hur du konfigurerar AEM för att förbättra prestanda generellt:
 
 * Aktivera HTML-klientbibliotekskomprimering för JavaScript och CSS från Felix Console. Se [Clientlibs](https://blogs.adobe.com/experiencedelivers/experience-management/clientlibs-explained-example/).
-* Cachelagra alla klientbibliotek på `/etc.clientlibs/fd` och eventuella ytterligare anpassade klientbibliotek på AEM Dispatcher för att öka svarstiderna och säkerheten i de publicerade formulären. For more information, see [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html).
+* Cachelagra alla klientbibliotek på `/etc.clientlibs/fd` och eventuella ytterligare anpassade klientbibliotek på AEM dispatcher för att öka svarstiderna och säkerheten i de publicerade formulären. For more information, see [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html).
 
 * Cachelagra inte `/content/forms/af/` och `/content/dam/formsanddocuments/*` sökvägar. Mer information om hur du konfigurerar cachning av adaptiva formulär finns i [Cachelagra adaptiva formulär](/help/forms/using/configure-adaptive-forms-cache.md).
 
@@ -296,20 +296,22 @@ Nedan beskrivs några tips om hur du konfigurerar AEM för att förbättra prest
 
    * Använd `nosamplecontent` körningsläget för att kontrollera att det inte finns något exempelinnehåll och exempelanvändare som distribuerats på produktionsservern. Se [Köra AEM i produktionsklart läge](/help/sites-administering/production-ready.md).
 
-* Behåll stackstorleken till minst 8 GB. Andra inställningar finns i [Prestandajustering för AEM Forms-servern](/help/forms/using/performance-tuning-aem-forms.md).
+* Behåll stackstorleken till minst 8 GB. Andra inställningar finns i [Prestandajustering av AEM Forms-server](/help/forms/using/performance-tuning-aem-forms.md).
 * Använd tjänstanvändarsessioner i stället för administratörssessioner för att köra uppgifter på tjänstnivå. Mer information finns i [Tjänstautentisering](https://sling.apache.org/documentation/the-sling-engine/service-authentication.html).
 
 >[!VIDEO](https://vimeo.com/)
 
 ### Konfigurera extern lagring för utkast och skickade formulärdata {#external-storage}
 
-I en produktionsmiljö bör du inte lagra inskickade formulärdata i AEM-databasen. Standardimplementeringen av skicka-åtgärderna för Forms Portal Store, Store Content och Store PDF lagrar formulärdata i AEM-databasen. De här Skicka-åtgärderna är endast avsedda för demonstrationssyften. Dessutom används portallagring som standard för funktionerna Spara, Återuppta och Spara automatiskt. Ta därför följande rekommendationer i beaktande:
+I en produktionsmiljö bör du inte lagra inskickade formulärdata i AEM. Standardimplementeringen av Forms Portal Store, Store Content och Store PDF-inlämningsåtgärderna lagrar formulärdata i AEM. De här Skicka-åtgärderna är endast avsedda för demonstrationssyften. Dessutom används portallagring som standard för funktionerna Spara, Återuppta och Spara automatiskt. Ta därför följande rekommendationer i beaktande:
 
 * **Lagra utkastdata**: Om du använder funktionen Utkast i adaptiva formulär bör du implementera ett anpassat SPI-gränssnitt (Service Provide Interface) för att lagra utkastdata i en säkrare lagringsplats, som en databas. Mer information finns i [Exempel på hur du integrerar utkast och inskickningskomponenter med databaser](/help/forms/using/integrate-draft-submission-database.md).
 
 * **Lagrar inskickningsdata**: Om du använder Form Portal Submit Store bör du implementera en anpassad SPI för att lagra data i en databas. Se [Exempel för integrering av utkast och inskickningskomponenter i databaser](/help/forms/using/integrate-draft-submission-database.md) för en exempelintegrering.
 
    Du kan också skriva en anpassad skicka-åtgärd som lagrar formulärdata och bifogade filer i säker lagring. Mer information finns i [Skriva anpassad skickaåtgärd för adaptiva formulär](/help/forms/using/custom-submit-action-form.md) .
+
+* **Utkast-ID**-längd: När du sparar ett anpassat formulär som ett utkast genereras ett utkast-ID som unikt identifierar utkastet. Minsta tillåtna värde för längden på utkastets ID-fält är 26 tecken. Adobe rekommenderar att du anger 26 eller fler tecken för utkast-ID:t.
 
 ### Hantera personligt identifierbar information {#handling-personally-identifiable-information}
 
