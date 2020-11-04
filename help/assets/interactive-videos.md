@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 04be55f2-c7d8-45ef-89e5-58856b971de5
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: ce43c49f8f7d4509e414554b8f4eba368ff66e95
 workflow-type: tm+mt
-source-wordcount: '6007'
+source-wordcount: '6013'
 ht-degree: 4%
 
 ---
@@ -89,7 +89,7 @@ Se [Publicera resurser](/help/assets/publishing-dynamicmedia-assets.md).
 1. **Lägga till en interaktiv video på en webbplats eller på en webbplats i AEM** Om du använder AEM Sites eller AEM e-handel, eller båda, kan du lägga till den interaktiva videon direkt på en webbsida i AEM genom att dra komponenten Interactive Media till sidan. See [Adding Dynamic Media Assets to Pages.](/help/assets/adding-dynamic-media-assets-to-pages.md)
 Använd inbäddningskoden eller URL-adressen för att integrera interaktiv video med webbplatsupplevelserna. Se [Integrera en interaktiv video med din webbplats](#integrating-an-interactive-video-with-your-website).
 Om du använder en WCM-fil (Web Content Manager) från tredje part måste du integrera den nya interaktiva videon med den befintliga QuickView-implementeringen som används på webbplatsen. Se [Integrera en interaktiv video med en befintlig snabbvy](#integrating-an-interactive-video-with-an-existing-quickview).
-   [](/help/assets/adding-dynamic-media-assets-to-pages.md)
+   [Lägga till dynamiska medieresurser på sidor](/help/assets/adding-dynamic-media-assets-to-pages.md)
 
 ## (Valfritt) Identifiera Quickview-variabler {#optional-identifying-quickview-variables}
 
