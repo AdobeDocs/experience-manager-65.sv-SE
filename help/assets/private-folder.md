@@ -3,9 +3,9 @@ title: Privata mappar för att dela resurser
 description: Lär dig hur du skapar en privat mapp [!DNL Adobe Experience Manager Assets] och delar den med andra användare samt tilldelar olika behörigheter till dem.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: ce43c49f8f7d4509e414554b8f4eba368ff66e95
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '556'
 ht-degree: 0%
 
 ---
@@ -47,11 +47,11 @@ Så här skapar och delar du en privat mapp:
 
    >[!NOTE]
    >
-   >Du kan tilldela olika roller, till exempel redigeraren, ägaren eller visningsprogrammet, till användaren som du delar mappen med. Om du tilldelar användaren en ägarroll har användaren redigeringsbehörighet för mappen. Dessutom kan användaren dela mappen med andra. Om du tilldelar en redigeringsroll kan användaren redigera resurserna i din privata mapp. Om du tilldelar en visningsprogramroll kan användaren bara visa resurserna i din privata mapp.
+   >Du kan tilldela olika roller, till exempel `Editor`, `Owner`eller `Viewer` till användaren som du delar mappen med. Om du tilldelar användaren en `Owner` roll har användaren `Editor` behörighet för mappen. Dessutom kan användaren dela mappen med andra. Om du tilldelar en `Editor` roll kan användaren redigera resurserna i din privata mapp. Om du tilldelar en visningsprogramroll kan användaren bara visa resurserna i din privata mapp.
 
    >[!NOTE]
    >
-   >Den privata mappen har minst en medlem med ägarrollen. Administratören kan därför inte ta bort alla ägarmedlemmar från en privat mapp. Om du vill ta bort befintliga ägare (och själva administratören) från den privata mappen måste administratören lägga till en annan användare som ägare.
+   >Den privata mappen har minst en medlem med `Owner` roll. Administratören kan därför inte ta bort alla ägarmedlemmar från en privat mapp. Om du vill ta bort befintliga ägare (och själva administratören) från den privata mappen måste administratören lägga till en annan användare som ägare.
 
 1. Klicka på **[!UICONTROL Save]**. Beroende på vilken roll du tilldelar tilldelas användaren en uppsättning behörigheter i din privata mapp när användaren loggar in på [!DNL Assets].
 1. Klicka **[!UICONTROL Ok]** för att stänga bekräftelsemeddelandet.
@@ -59,7 +59,7 @@ Så här skapar och delar du en privat mapp:
 
    ![chlimage_1-416](assets/chlimage_1-416.png)
 
-1. Klicka på Notifications (Meddelanden) för att öppna listan med meddelanden.
+1. Klicka [!UICONTROL Notifications] för att öppna en lista med meddelanden.
 
    ![Förteckning över meddelanden](assets/Assets-Notification.png)
 
@@ -83,4 +83,4 @@ Du kan ta bort en mapp genom att markera mappen och välja [!UICONTROL Delete] a
 >
 >Om du tar bort en mapp med metoden ovan från användargränssnittet tas även de associerade användargrupperna bort.
 >
->Befintliga redundanta, oanvända och autogenererade användargrupper kan rensas bort från databasen med hjälp av `clean` metoden i JMX i författarinstansen (`http://[server]:[port]/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`).
+>Befintliga överflödiga, oanvända och automatiskt genererade användargrupper kan dock tas bort från databasen med hjälp av `clean` metoden i JMX i författarinstansen (`http://[server]:[port]/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`).
