@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 6fdce35d-2709-41cc-87fb-27a4b867e960
 translation-type: tm+mt
-source-git-commit: 316e53720071da41cc4ac5ae62c280ad3804a8f4
+source-git-commit: 0a082d3cff66b82ef6de551a735a16a001446a1e
 workflow-type: tm+mt
 source-wordcount: '1175'
 ht-degree: 0%
@@ -38,7 +38,7 @@ Mer information om hur du installerar webbprogram, serverkonfigurationer och hur
 
 >[!NOTE]
 >
->Om du använder Dynamic Media i en WAR-distribution kan du läsa dokumentationen [för](/help/assets/config-dynamic.md#enabling-dynamic-media)dynamiska medier.
+>Om du använder Dynamic Media i en WAR-distribution kan du läsa dokumentationen [för](/help/assets/config-dynamic.md#enabling-dynamic-media)dynamiska media.
 
 ## Allmän beskrivning {#general-description}
 
@@ -136,7 +136,7 @@ Ange minnesargument i din conf-fil (t.ex. `standalone.conf`)
 
 * JAVA_OPTS=&quot;-Xms64m -Xmx2048m&quot;
 
-Om du använder distributionsskannern för att installera AEM webbprogram kan det vara bra att öka värdet `deployment-timeout,` för det set- `deployment-tiimeout` attributet i xml-filen för instansen (t.ex. `configuration/standalone.xml)`:
+Om du använder distributionsskannern för att installera AEM webbprogram kan det vara bra att öka värdet `deployment-timeout,` för det set- `deployment-timeout` attributet i xml-filen för instansen (t.ex. `configuration/standalone.xml)`:
 
 ```xml
 <subsystem xmlns="urn:jboss:domain:deployment-scanner:1.1">
@@ -218,7 +218,7 @@ Läs [Allmän beskrivning](#general-description) ovan före en distribution.
       * Stoppa och avdistribuera ROOT-webbprogram
       * Byt namn på mappen ROOT.war i Tomcat-webbappen
       * Starta webbprogrammet igen
-   * Om du installerar AEM webbprogram med hanteraren-gui måste du öka den maximala storleken för en överförd fil, eftersom standardvärdet endast tillåter 50 MB uppladdningsstorlek. Då öppnas web.xml för hanterarens webbprogram,
+   * Om du installerar AEM webbprogram med hanteraren-gui måste du öka den maximala storleken för en överförd fil, eftersom standardvärdet endast tillåter 50 MB uppladdningsstorlek. För att göra det öppnar web.xml för webbprogrammet manager,
 
       `webapps/manager/WEB-INF/web.xml`
 
