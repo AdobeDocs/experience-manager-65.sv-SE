@@ -4,7 +4,7 @@ description: Versionsinformation för [!DNL Adobe Experience Manager] 6.5 Servic
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
+source-git-commit: 2e56a44fce08bc127a7ec920d2cb985ce2842bbc
 workflow-type: tm+mt
 source-wordcount: '4339'
 ht-degree: 0%
