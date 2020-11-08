@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 648b9601445a46b6a2734d5a47545c0439b9c283
+source-git-commit: ee527712b4d7f6ebf9ef2996de1405f6f9c3d335
 workflow-type: tm+mt
 source-wordcount: '5611'
 ht-degree: 6%
@@ -73,7 +73,7 @@ Mer information finns i [Installera funktionspaket 18912 för migrering](/help/a
 
 ## Skapa en dynamisk mediekonfiguration i Cloud Services {#configuring-dynamic-media-cloud-services}
 
-**Innan du konfigurerar Dynamic Media**: När du har fått ditt e-postmeddelande med inloggningsuppgifter för Dynamic Media måste du [logga in](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) på Dynamic Media Classic för att ändra ditt lösenord. Lösenordet som anges i e-postmeddelandet om etablering genereras av systemet och är endast avsett som ett tillfälligt lösenord. Det är viktigt att du uppdaterar lösenordet så att Dynamic Media Cloud Service har rätt autentiseringsuppgifter.
+**Innan du konfigurerar Dynamic Media** - När du har fått ditt e-postmeddelande med inloggningsuppgifter för Dynamic Media måste du [logga in](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) på Dynamic Media Classic för att ändra ditt lösenord. Lösenordet som anges i e-postmeddelandet om etablering genereras av systemet och är endast avsett som ett tillfälligt lösenord. Det är viktigt att du uppdaterar lösenordet så att Dynamic Media Cloud Service har rätt autentiseringsuppgifter.
 
 ![dynamicmediaconfiguration2updated](assets/dynamicmediaconfiguration2updated.png)
 
