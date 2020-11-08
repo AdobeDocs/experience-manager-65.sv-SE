@@ -8,9 +8,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 translation-type: tm+mt
-source-git-commit: b4b500cc80c6d498baaabe3a6863a3843b904f9b
+source-git-commit: 5a3045b89ba6bb32482926ea8d2c5533e5394d9a
 workflow-type: tm+mt
-source-wordcount: '2034'
+source-wordcount: '1765'
 ht-degree: 0%
 
 ---
@@ -193,34 +193,6 @@ Under den inledande övergången kommer de icke-cachelagrade bilderna direkt til
 Alla bilder konverteras inte. Smart Imaging avgör om konverteringen behövs för att förbättra prestandan. I vissa fall, där det inte finns någon förväntad prestandaökning eller där formatet inte är JPEG eller PNG, konverteras inte bilden.
 
 ![image2017-11-14_15398](assets/image2017-11-14_15398.png)
-
-## Hur vet jag hur väl jag kan prestera? Finns det något sätt att se på fördelarna med Smart bildbehandling? {#performance-gain}
-
-**Om rubriker för smarta bilder**
-
-Värdena för huvudet Smart Imaging fungerar endast när begäranden som inte är cachelagrade hanteras från och med nu. Detta görs för att den aktuella cachen ska vara kompatibel och för att undvika behovet av beräkning när bilder hanteras via cachen.
-
-Om du vill använda rubriker för smarta bilder måste du lägga till modifieraren`cache=off`i dina begäranden. Se[cacheminne i API:t](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-cache.html)för dynamisk mediabildsserver och återgivning.
-
-Exempel på användning `cache=off` (endast i illustrationssyfte):
-
-`https://domain.scene7.com/is/image/companyName/imageName?cache=off` 
-
-När du har använt en sådan begäran kan du se sidhuvudet i avsnittet Svarshuvuden `-x-adobe-smart-imaging` . Se följande skärmbild med `-x-adobe-smart-imaging` markering.
-
-![smart-imaging-header](/help/assets/assets-dm/smart-imaging-header2.png) 
-
-Detta rubrikvärde anger följande:
-
-* Smart Imaging fungerar för företaget.
-* Positivt värde (>=0) anger att konverteringen lyckades. I det här fallet returneras en ny bild (webP här).
-* Negativt värde (&lt;0) anger att konverteringen inte lyckades. I det här fallet returneras den begärda originalbilden (JPEG som standard, om inget anges).
-* Värdet anger skillnaden i byte mellan den begärda bilden och den nya bilden. I det här fallet sparas 75048 byte, vilket är ungefär 75 kB för en bild. 
-   * Det negativa värdet anger att den begärda bilden var mindre än den nya bilden. Den negativa storleksskillnaden visas, men bilden som visas är endast den ursprungliga begärda bilden
-
-**När ska du använda rubriker för smarta bilder?**
-
-Responshuvuden för smart bildbehandling är aktiverade för felsökning eller samtidigt som fördelarna med enbart smart bildbehandling markeras. Om du använder`cache=off`i normala scenarier kan belastningstiden påverkas avsevärt.
 
 ## Kan Smart Imaging stängas av på begäran? {#turning-off-smart-imaging}
 
