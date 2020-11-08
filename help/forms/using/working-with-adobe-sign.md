@@ -10,9 +10,9 @@ topic-tags: develop
 discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: f0038c1f88ea0047cbaae4fe49456a665aa67f10
 workflow-type: tm+mt
-source-wordcount: '3784'
+source-wordcount: '3822'
 ht-degree: 0%
 
 ---
@@ -76,6 +76,10 @@ Så här skapar du ett signeringsaktiverat anpassat formulär:
    1. Ange **namn** och **titel** för det anpassade formuläret.
 
    1. Välj den [konfigurationsbehållare](../../forms/using/adobe-sign-integration-adaptive-forms.md#configure-adobe-sign-with-aem-forms) som skapades när Adobe Sign konfigurerades med AEM Forms.
+
+      >[!NOTE]
+      >
+      >I **[!UICONTROL Adobe Sign Cloud Service]** listrutan visas de molntjänster som är konfigurerade i den konfigurationsbehållare som du väljer i det här fältet. Listrutan **[!UICONTROL Adobe Sign Cloud Service]** är tillgänglig i avsnittet med **[!UICONTROL Electronic Signature]** anpassade formuläregenskaper när du väljer **[!UICONTROL Enable Adobe Sign]** alternativet.
 
 1. In the **[!UICONTROL Form Model]** tab, select one of the following options:
 
