@@ -3,9 +3,9 @@ title: Hantera [!DNL Adobe Stock] resurser
 description: Sök, hämta, licensiera och [!DNL Adobe Stock] hantera resurser inifrån [!DNL Adobe Experience Manager]. Använd de licensierade mediefilerna som andra digitala resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1016'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ Organisationer kan integrera sin [!DNL Adobe Stock] Enterprise-plan med [!DNL Ex
 
 ## Förutsättningar {#prerequisites}
 
-För integreringen krävs en Adobe Stock-plan [för](https://stockenterprise.adobe.com/)företag.
+Integreringen kräver en [ [!DNL Adobe Stock] enterpriseplan](https://stockenterprise.adobe.com/).
 
 ## Integrera [!DNL Experience Manager] och [!DNL Adobe Stock] {#integrate-aem-and-adobe-stock}
 
@@ -52,7 +52,7 @@ Om du vill tillåta kommunikation mellan [!DNL Experience Manager] och [!DNL Ado
 
 >[!NOTE]
 >
->Om det finns flera [!DNL Adobe Stock] konfigurationer väljer du den önskade konfigurationen på panelen Användarinställningar. Du öppnar panelen från Experience Manager hemsida genom att klicka på användarikonen och sedan på **[!UICONTROL User Preferences]** > **[!UICONTROL Stock Configuration]**).
+>Om det finns flera [!DNL Adobe Stock] konfigurationer väljer du den önskade konfigurationen på [!UICONTROL User Preferences] panelen. Om du vill öppna panelen från [!DNL Experience Manager] startsidan klickar du på användarikonen och sedan på **[!UICONTROL User Preferences]** > **[!UICONTROL Stock Configuration]**.
 
 ## Använd och hantera [!DNL Adobe Stock] resurser i [!DNL Experience Manager] {#usemanage}
 
@@ -60,9 +60,9 @@ Med den här funktionen kan organisationer låta användarna arbeta med [!DNL Ad
 
 När en [!DNL Adobe Stock] mediefil är licensierad i [!DNL Experience Manager]kan den användas och hanteras som en vanlig mediefil. I [!DNL Experience Manager]kan användarna söka efter och förhandsgranska resurserna. kopiera och publicera tillgångarna, dela tillgångarna på [!DNL Brand Portal], få tillgång till och använda resurserna via [!DNL Experience Manager] datorprogrammet, och så vidare.
 
-![Söka efter Adobe Stock-resurser och filtrera resultat från Adobe Experience Manager arbetsyta](assets/adobe-stock-search-results-workspace.png)
+![Sök efter [!DNL Adobe Stock] resurser och filtrera resultat från din [!DNL Adobe Experience Manager] arbetsyta](assets/adobe-stock-search-results-workspace.png)
 
-*Bild: Sök efter[!DNL Adobe Stock]resurser och filtrera resultat från ditt[!DNL Experience Manager]gränssnitt.*
+*Bild: Sök efter [!DNL Adobe Stock] resurser och filtrera resultat från ditt [!DNL Experience Manager] gränssnitt.*
 
 **A.**[!DNL Adobe Stock] Sök efter resurser som liknar de resurser vars ID har angetts. **B.** Sök efter resurser som matchar ditt val av form eller orientering. **C.** Sök efter en av de resurstyper som stöds **D.** Öppna eller dölj filterrutan **E.** Licensiera och spara den valda resursen i [!DNL Experience Manager]**F.** Spara resursen i [!DNL Experience Manager] med vattenstämpel **G.** Utforska resurser på [!DNL Adobe Stock] webbplatsen som liknar den valda resursen **H.** Visa de valda resurserna på [!DNL Adobe Stock] webbplats **I.** Antal valda resurser från sökresultaten **J.** Växla mellan kortvyn och listvyn
 
@@ -80,9 +80,9 @@ Du kan också börja skriva `Location: Adobe Stock` i sökfältet för att välj
 >
 >Assets searched from [!DNL Adobe Stock] are just displayed in [!DNL Experience Manager]. [!DNL Adobe Stock] resurser hämtas och lagras i [!DNL Experience Manager] databasen först när en användare antingen [sparar en resurs](/help/assets/aem-assets-adobe-stock.md#saveassets) eller [licenser och sparar en resurs](/help/assets/aem-assets-adobe-stock.md#licenseassets). Assets that are already stored in [!DNL Experience Manager] are displayed and highlighted for ease of reference and access. Also, the [!DNL Stock] assets are saved with some additional metadata to indicate the source as [!DNL Stock].
 
-![Sökfilter i Experience Manager och markerade Adobe Stock-resurser i sökresultat](assets/aem-search-filters2.jpg)
+![Söka efter filter i [!DNL Experience Manager] och markerade [!DNL Adobe Stock] resurser i sökresultat](assets/aem-search-filters2.jpg)
 
-*Bild: Sök efter filter i[!DNL Experience Manager]och markerade[!DNL Adobe Stock]resurser i sökresultaten.*
+*Bild: Sök efter filter i [!DNL Experience Manager] och markerade [!DNL Adobe Stock] resurser i sökresultaten.*
 
 ### Spara och visa nödvändiga resurser {#saveassets}
 
@@ -98,9 +98,9 @@ Nästa gång du söker efter resurser markeras de sparade resurserna med ett mä
 
 Användare kan licensiera [!DNL Adobe Stock] mediefiler genom att använda kvoten i sin [!DNL Adobe Stock] Enterprise-plan. När du licensierar en mediefil sparas den utan vattenstämpel och är tillgänglig för sökning och användning i [!DNL Experience Manager Assets].
 
-![Dialogruta där du kan licensiera och spara Adobe Stock-resurser i Experience Manager Assets](assets/aem-stock_licenseandsave.jpg)
+![Dialogruta där du kan licensiera och spara [!DNL Adobe Stock] resurser i [!DNL Experience Manager Assets]](assets/aem-stock_licenseandsave.jpg)
 
-*Bild: Dialogruta där du kan licensiera och spara[!DNL Adobe Stock]resurser i[!DNL Experience Manager Assets].*
+*Bild: Dialogruta där du kan licensiera och spara [!DNL Adobe Stock] resurser i [!DNL Experience Manager Assets].*
 
 ### Få åtkomst till metadata och resursegenskaper {#access-metadata-and-asset-properties}
 
@@ -122,7 +122,7 @@ Användarna kan se egenskaperna för både, licensierade och olicensierade resur
 
 >[!MORELIKETHIS]
 >
->* [Videosjälvstudiekurs om hur du använder Adobe Stock-resurser med Experience Manager Assets](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/creative-workflows/adobe-stock.html)
->* [Adobe Stock Enterprise Plan - hjälp](https://helpx.adobe.com/enterprise/using/adobe-stock-enterprise.html)
->* [Adobe Stock FAQ](https://helpx.adobe.com/stock/faq.html)
+>* [Videosjälvstudiekurs om hur du [!DNL Adobe Stock] använder resurser med [!DNL Experience Manager Assets]](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/creative-workflows/adobe-stock.html)
+>* [[!DNL Adobe Stock] hjälp med Enterprise Plan](https://helpx.adobe.com/enterprise/using/adobe-stock-enterprise.html)
+>* [[!DNL Adobe Stock] Vanliga frågor](https://helpx.adobe.com/stock/faq.html)
 
