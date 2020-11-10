@@ -3,9 +3,9 @@ title: Aktivera tillgångsinsikter via DTM
 description: Lär dig hur du använder Adobe Dynamic Tag Management (DTM) för att aktivera tillgångsinsikter.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: d13381d961f7663366b041168da369c0b01c9336
+source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '610'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ Adobe Dynamic Tag Management är ett verktyg som aktiverar era digitala marknads
 
 >[!CAUTION]
 >
->Adobe DTM är ersatt med Adobe Experience Platform Launch och kommer snart att nå [slutet](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f). Adobe rekommenderar att du [använder Launch för att få tillgångsinsikter](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html).
+>Adobe DTM är ersatt för [!DNL Adobe Experience Platform Launch] och kommer snart att nå [slutet](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f). Adobe rekommenderar att du [ [!DNL Launch] använder resursinsikter](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html).
 
 Utför dessa steg för att aktivera tillgångsinsikter via DTM.
 
@@ -31,7 +31,7 @@ Utför dessa steg för att aktivera tillgångsinsikter via DTM.
 
    * Markera **[!UICONTROL Web Properties]** fliken och klicka sedan på **[!UICONTROL Add Property]**.
 
-   * Uppdatera fälten efter behov och klicka på **[!UICONTROL Create Property]**. Se [dokumentationen](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html).
+   * Uppdatera fälten efter behov och klicka på **[!UICONTROL Create Property]**. Se [dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html).
 
    ![Skapa redigera webbegenskap](assets/Create-edit-web-property.png)
 
