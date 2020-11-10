@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 23745dd3-1424-4d22-8456-d2dbd42467f4
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 9ba00322588326df6fbcc02bdfba88491d39c289
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '680'
 ht-degree: 0%
 
 ---
@@ -92,8 +92,13 @@ Se även:
 >[!NOTE]
 >
 >**Exempel på egenskapsnamn**
->
 >Alla egenskapsnamn som visas, till exempel **/0050** och **/0170**, bör justeras så att de passar i en befintlig dispatcher.alla konfigurationsfiler.
+
+
+>[!CAUTION]
+>
+>Se [Dispatcher Security Checklist](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html?lang=en) för mer information om hur du begränsar åtkomsten med Dispatcher. Läs även [AEM Security Cheklist](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/security-checklist.html) om du vill ha mer säkerhetsinformation om din AEM installation.
+
 
 Följande poster ska läggas till i slutet av /filter-avsnittet, särskilt efter alla neka-poster.
 
