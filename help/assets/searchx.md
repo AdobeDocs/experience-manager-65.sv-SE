@@ -3,9 +3,9 @@ title: Utöka sökfunktionen.
 description: Utöka sökfunktionerna [!DNL Adobe Experience Manager Assets] utöver standardinställningarna.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '838'
 ht-degree: 15%
 
 ---
@@ -21,7 +21,7 @@ Du kan också lägga till fler flikar på [!DNL Assets] administratörspanelen.
 
 >[!CAUTION]
 >
->Från och med [!DNL Experience Manager] 6.4 används inte det klassiska användargränssnittet. Information finns i [Borttagna och borttagna funktioner](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/deprecated-removed-features.html). Adobe rekommenderar att du använder ett användargränssnitt som har stöd för pekfunktioner. Mer information om anpassning finns i [sökfaktorer](/help/assets/search-facets.md).
+>Från och med [!DNL Experience Manager] 6.4 används inte det klassiska användargränssnittet. Information finns i [Borttagna och borttagna funktioner](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/deprecated-removed-features.html). Adobe rekommenderar att du använder ett användargränssnitt som har stöd för pekfunktioner. Mer information om anpassning finns i [sökfaktorer](/help/assets/search-facets.md).
 
 ## Övertäckning {#overlaying}
 
