@@ -3,9 +3,9 @@ title: Konfigurera resurstaggning med Smart Content Service
 description: Lär dig hur du konfigurerar smart taggning och förbättrad smart taggning [!DNL Adobe Experience Manager]med hjälp av Smart Content Service.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 1fa79a49ce3590fcba63e6e7d1a63586650251d2
+source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
-source-wordcount: '1925'
+source-wordcount: '1916'
 ht-degree: 29%
 
 ---
@@ -23,7 +23,7 @@ Innan du använder tjänsten för smart innehåll bör du kontrollera följande:
    <!-- TBD: This link will update soon after the new articles goes live on docs.adobe.com. Change it when new URL is available.
   -->
 
-* Installera det senaste [Experience Manager-servicepaketet](https://docs.adobe.com/content/help/en/experience-manager-release-information/aem-release-updates/aem-releases-updates.html).
+* Installera det senaste [Experience Manager-servicepaketet](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html).
 
 ## Integrera med Adobe Developer Console {#integrate-adobe-io}
 
@@ -281,12 +281,12 @@ Om du vill kontrollera om Smart Content Service är utbildad i dina taggar i öv
 
    * Oförmåga att identifiera små skillnader i bilder. Till exempel tunna eller jämna skjortor.
    * Oförmåga att identifiera taggar baserat på små mönster/delar av en bild. Till exempel logotyper på T-shirts.
-   * Taggning stöds i de språkområden som [!DNL Experience Manager] stöds i. En lista med språk finns i Versionsinformation för [Smart Content Services](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/smart-content-service-release-notes.html).
+   * Taggning stöds i de språkområden som [!DNL Experience Manager] stöds i. En lista med språk finns i Versionsinformation för [Smart Content Services](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/smart-content-service-release-notes.html).
 
 * Om du vill söka efter resurser med smarta taggar (vanliga eller förbättrade) använder du [!DNL Assets] Omnissearch (fulltextsökning). Det finns inget separat sökpredikat för smarta taggar.
 
 >[!MORELIKETHIS]
 >
 >* [Översikt och utbildning av smarta taggar](enhanced-smart-tags.md)
->* [Videosjälvstudiekurs om hur du konfigurerar smarta taggar](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/smart-tags-technical-video-setup.html)
+>* [Videosjälvstudiekurs om smarta taggar](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html)
 
