@@ -2,7 +2,7 @@
 title: SharePoint-anslutning
 seo-title: SharePoint-anslutning
 description: Day JCR Connector för Microsoft SharePoint 2010 och Microsoft SharePoint 2013, version 4.0.
-seo-description: Läs mer om Sharepoint Connector i AEM.
+seo-description: Läs mer om SharePoint Connector i AEM.
 uuid: df650476-4e2a-486f-a007-b5ac437ff99f
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 907316d1-3d23-4c46-bccb-bad6fe1bd1bb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 6686c10f1af24cc4fbdcf6d4e8b07f7dc0e2a8bb
+source-git-commit: cc3a2ce7cb3dc020f5466a4b65cf5a9714e7a344
 workflow-type: tm+mt
-source-wordcount: '1599'
+source-wordcount: '1571'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ SharePoint-anslutningen stöder följande grundfunktioner:
 * Läser innehåll och metadata från SharePoint.
 * Bekräftar SharePoint-säkerhetsinställningar för åtkomst av innehåll genom att tillämpa intern SharePoint-autentisering och -auktorisering
 * Innehållsintegrering med Content Finder
-* Använda AEM-komponenter, till exempel Extern resurs, för att visa SharePoint-bilder och -videor
+* Använda AEM, t.ex. Extern resurs, för att visa SharePoint-bilder och -videor
 * Synkroniserar SharePoint med AEM Assets
 
 Alla funktioner implementeras med SharePoint-webbtjänster som gränssnitt till SharePoint-innehåll och -tjänster.
@@ -45,7 +45,7 @@ Alla funktioner implementeras med SharePoint-webbtjänster som gränssnitt till 
 Så här kommer du igång med anslutningen:
 
 * Kontrollera att du har minst Java 7 installerat.
-* Hämta distributionsfilen för kopplingspaketet från paketresursen.
+* Ladda ned distributionsfilen för kopplingspaketet från Software Distribution.
 * Kopiera en giltig *license.properties* -fil till katalogen som innehåller *filen cq-quickstart-6.4.0.jar* .
 
 * Dubbelklicka/tryck på .jar-filen för att starta AEM eller starta den från kommandoraden.
@@ -54,7 +54,7 @@ Så här kommer du igång med anslutningen:
 
 ## Installerar SharePoint-anslutning {#installing-sharepoint-connector}
 
-Kopplingen är ett innehållspaket som underlättar enkel installation. Installera paketet med hjälp av Pakethanteraren och ange sedan URL:en för SharePoint-servern och andra konfigurationsalternativ. SharePoint-innehållet är tillgängligt i AEM-databasen.
+Kopplingen är ett innehållspaket som underlättar enkel installation. Installera paketet med hjälp av Pakethanteraren och ange sedan URL:en för SharePoint-servern och andra konfigurationsalternativ. SharePoint-innehållet är tillgängligt i AEM.
 
 ### Installationskrav {#installation-requirements}
 
@@ -66,13 +66,13 @@ Kopplingen kräver följande:
 * Användarautentiseringsuppgifter och behörigheter för CRX- och SharePoint-databaser
 * [Plattformar som stöds](#supported-platforms)
 
-SharePoint-anslutningen är tillgänglig för hämtning från [paketdelning](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-17673).
+SharePoint-anslutningen är tillgänglig för hämtning från [programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-17673).
 
 ### Plattformar som stöds {#supported-platforms}
 
 Kopplingen stöder följande:
 
-* AEM-versioner:
+* AEM versioner:
 
    * AEM 6.4, 6.3
 
@@ -81,7 +81,7 @@ Kopplingen stöder följande:
    * Microsoft Office SharePoint Server (MOSS) 2010
    * Microsoft Office SharePoint Server (MOSS) 2013
 
-* Om du behöver support för anpassad driftsättning av anslutningsprogrammet (OEM, särskilda krav, anpassade autentiseringsmetoder) kontaktar du Adobe-kontoret i din region.
+* Om du behöver support för anpassad driftsättning av anslutningsprogrammet (OEM, särskilda krav, anpassade autentiseringsmetoder) kontaktar du Adobe-kontoret i ditt område.
 
 >[!NOTE]
 >
@@ -89,16 +89,15 @@ Kopplingen stöder följande:
 
 ### Standardinstallation {#standard-installation}
 
-AEM Package Share används för att distribuera produktfunktioner, exempel och snabbkorrigeringar. Mer information finns i dokumentationen [för](/help/sites-administering/package-manager.md#package-share)paketdelning.
+Distribution av programvara används för att distribuera produktfunktioner, exempel och snabbkorrigeringar. Mer information finns i dokumentationen [för](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html#software-distribution)programvarudistribution.
 
-Tryck/klicka på **Verktyg** och välj sedan **Paketresurs** för att öppna Paketdelning på AEM-välkomstsidan. Du behöver ett giltigt Adobe ID som innehåller företagets e-postadress. När du har loggat in på ditt konto ansöker du dessutom om åtkomst till paketdelning.
 
 #### Integrera med AEM {#integrating-with-aem}
 
 Så här installerar du innehållspaketet för anslutningsprogrammet.
 
 1. Öppna en Adobe Support-biljett och begär anslutningsfunktionen.
-1. Hämta paketet när det är tillgängligt och öppna sedan Package Manager för din AEM-instans.
+1. Hämta paketet när det är tillgängligt och öppna sedan Package Manager för AEM.
 1. Tryck/klicka på **Installera** på paketbeskrivningssidan.
 1. I dialogrutan **Installera paket** trycker/klickar du på **Installera**.
 
@@ -186,21 +185,21 @@ Du kan också konfigurera synkroniseringsfördröjningen mellan olika synkronise
 SharePoint innehåller klassiska och anspråksbaserade autentiseringsmetoder, som båda stöder följande autentiseringstyper:
 
 * Grundläggande
-* Formulärbaserad
+* Forms-baserad
 
 Bland annat finns följande typer av autentisering:
 
 * Classic-Basic
-* Klassisk-formulärbaserad
+* Klassisk-Forms-baserad
 * Claims-Basic
-* Anspråksblanketter-baserade
+* Claims-Forms-based
 
 AEM JCR Connector för Microsoft SharePoint 2010 och Microsoft SharePoint 2013, version 4.0. har stöd för anspråksbaserad autentisering (som föreslås av Microsoft) som fungerar i följande lägen:
 
 * **Grundläggande/NTLM-autentisering**: Kopplingen försöker först ansluta med grundläggande autentisering. Om den inte är tillgänglig växlar den till NTLM-baserad autentisering.
-* **Formulärbaserad autentisering**: SharePoint validerar användare baserat på inloggningsuppgifter som användare skriver i ett inloggningsformulär (vanligtvis en webbsida). Systemet utfärdar en token för autentiserade begäranden som innehåller en nyckel för att återupprätta identiteten för efterföljande begäranden.
+* **Forms-baserad autentisering**: SharePoint validerar användare baserat på inloggningsuppgifter som användare skriver i ett inloggningsformulär (vanligtvis en webbsida). Systemet utfärdar en token för autentiserade begäranden som innehåller en nyckel för att återupprätta identiteten för efterföljande begäranden.
 
-**Konfigurerar formulärbaserad autentisering**
+**Konfigurerar Forms-baserad autentisering**
 
 Gå till: [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)
 
@@ -222,7 +221,7 @@ Gå till: [http://localhost:4502/system/console/bundles](http://localhost:4502/s
 
 Endast användare som är autentiserade på både AEM och SharePoint kan komma åt SharePoint-innehållet via anslutningen.
 
-Du kan också använda anslutningstillägget för autentisering för att skapa en anpassad autentiseringsmodul, som t.ex. mappar AEM-användares åtkomst till specifika SharePoint-användare. Skapa AEM-användare som motsvarar SharePoint-användare (användarnamn och lösenord måste matcha) för att kunna se SharePoint-innehåll som mappas till kopplingsinstansen.
+Du kan också använda anslutningstillägget för autentisering för att skapa en anpassad autentiseringsmodul, som t.ex. mappar åtkomsten för AEM till specifika SharePoint-användare. Skapa AEM användare som motsvarar SharePoint-användare (användarnamn och lösenord måste matcha) för att kunna se SharePoint-innehåll som är mappat till kopplingsinstansen.
 
 Så här skapar du en användare i AEM:
 
@@ -245,7 +244,7 @@ Så här lägger du till användaren i administratörsgruppen:
 
 ### Inaktivera tokenautentisering {#disable-token-authentication}
 
-1. Hämta och installera paketet `basic auth`. `zip` från paketresurs.
+1. Hämta och installera paketet `basic auth`. `zip` från Software Distribution.
 
 1. Stäng QuickStart.
 1. Öppna filen *\crx-quickstart\repository\repository.xml*.
@@ -256,7 +255,7 @@ Så här lägger du till användaren i administratörsgruppen:
 
 #### Stöd för olika autentiseringsmetoder i SharePoint-servern {#supporting-different-authentication-methods-of-the-sharepoint-server}
 
-I standardversionen har kopplingen stöd för standardautentisering i IIS **Windows** (Basic) och formulärbaserad autentisering (tokenbaserad). De [andra autentiseringsmetoderna](https://technet.microsoft.com/en-us/library/cc262350.aspx#section2) kan stödjas via utökningsmekanismen.
+I standardversionen stöder anslutningsprogrammet IIS **Windows** -standardautentisering (Basic) och Forms-baserad autentisering (tokenbaserad). De [andra autentiseringsmetoderna](https://technet.microsoft.com/en-us/library/cc262350.aspx#section2) kan stödjas via utökningsmekanismen.
 
 Följande steg innehåller riktlinjer om hur du utökar standardautentiseringen så att den stöder olika autentiseringsmetoder i SharePoint-servern:
 
