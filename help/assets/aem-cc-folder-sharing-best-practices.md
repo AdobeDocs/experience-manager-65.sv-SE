@@ -3,9 +3,9 @@ title: Mappdelning [!DNL Adobe Creative Cloud] enligt vedertagna rutiner
 description: Konfigurera [!DNL Adobe Experience Manager] to allow users in [!DNL Experience Manager Assets] för utbyte av mappar med Adobe Creative Cloud-användare (CC).
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
-source-wordcount: '956'
+source-wordcount: '952'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->Funktionen [!DNL Experience Manager] till [!DNL Creative Cloud] mappdelning är föråldrad. Adobe rekommenderar starkt att du använder nyare funktioner som [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) eller [Experience Manager](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html). Läs mer om god praxis [för integrering av](/help/assets/aem-cc-integration-best-practices.md)Experience Manager och Creative Cloud.
+>Funktionen [!DNL Experience Manager] till [!DNL Creative Cloud] mappdelning är föråldrad. Adobe rekommenderar starkt att du använder nyare funktioner som [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) eller [Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html). Läs mer om god praxis [för integrering av](/help/assets/aem-cc-integration-best-practices.md)Experience Manager och Creative Cloud.
 
 [!DNL Adobe Experience Manager] kan konfigureras så att användare i kan [!DNL Assets] dela mappar med [!DNL Adobe Creative Cloud] appanvändarna, så att de är tillgängliga som delade mappar i [!DNL Adobe Creative Cloud] resurstjänsten. Funktionen kan användas för utbyte av filer mellan kreativa team och [!DNL Assets] användare, särskilt när de kreativa användarna inte har tillgång till [!DNL Assets] distributionen (de finns inte i företagsnätverket).
 
@@ -39,7 +39,7 @@ I följande diagram visas en översikt över integreringen.
 Integreringen innehåller följande element:
 
 * **[!DNL Experience Manager Assets]** distribueras i företagsnätverket (hanterade tjänster eller lokalt): Mappdelning initieras här.
-* **[!DNL Adobe Marketing Cloud Assets]bastjänst**: Fungerar som mellanhand mellan [!DNL Experience Manager] - och [!DNL Creative Cloud] lagringstjänster. En administratör för en organisation som använder integreringen måste upprätta ett förtroendeförhållande mellan organisationen Marketing Cloud och [!DNL Assets] distributionen. De [definierar också en lista över godkända medarbetare](https://docs.adobe.com/content/help/en/core-services/interface/assets/t-admin-add-cc-user.html)i Creative Cloud som [!DNL Assets] användare kan dela mappar för att öka säkerheten.
+* **[!DNL Adobe Marketing Cloud Assets]bastjänst**: Fungerar som mellanhand mellan [!DNL Experience Manager] - och [!DNL Creative Cloud] lagringstjänster. En administratör för en organisation som använder integreringen måste upprätta ett förtroendeförhållande mellan organisationen Marketing Cloud och [!DNL Assets] distributionen. De [definierar också en lista över godkända medarbetare](https://experienceleague.adobe.com/docs/core-services/interface/assets/t-admin-add-cc-user.html)i Creative Cloud som [!DNL Assets] användare kan dela mappar för att öka säkerheten.
 
 * **[!DNL Creative Cloud]Resurser för webbtjänster** (webgränssnittet för lagring och [!DNL Creative Cloud] filer): Det är här specifika användare av appen Creative Cloud, som har en [!DNL Assets] mapp delad med, kan acceptera inbjudan och se mappen i sitt Creative Cloud-konto.
 * **Creative Cloud-datorprogram**: (Valfritt) Möjliggör direkt åtkomst till delade mappar/filer från den kreativa användarens skrivbord via synkronisering med [!DNL Creative Cloud] Assets-lagring.
