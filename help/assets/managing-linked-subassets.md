@@ -3,9 +3,9 @@ title: Hantera sammansatta resurser med referenser och flera sidor
 description: Lär dig hur du skapar referenser till digitala resurser inifrån [!DNL Adobe InDesign], [!DNL Adobe Illustrator], and [!DNL Adobe Photoshop]. Använd funktionen för sidvisningsprogram för att visa enskilda underresurssidor för flersidiga filer som PDF-, INDD-, PPT-, PPTX- och AI-filer.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
-source-wordcount: '1298'
+source-wordcount: '1286'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Referenser tolkas utifrån sökväg, dokument-ID och instans-ID för de referera
 
 Du kan referera till befintliga digitala resurser inifrån en [!DNL Adobe Illustrator] fil.
 
-1. Hämta de digitala resurserna på det lokala filsystemet med hjälp av [Experience Manager-datorprogrammet](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html). Navigera till filsystemplatsen för resursen som du vill referera till.
+1. Hämta de digitala resurserna på det lokala filsystemet med [[!DNL Experience Manager] skrivbordsappen](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html). Navigera till filsystemplatsen för resursen som du vill referera till.
 1. Dra resursen från den lokala mappen till [!DNL Illustrator] filen.
 
 1. Spara [!DNL Illustrator] filen på den monterade enheten eller [överför](/help/assets/manage-assets.md#uploading-assets) den till [!DNL Experience Manager] databasen.
@@ -68,7 +68,7 @@ Den här proceduren liknar hur du [lägger till digitala resurser som referenser
 
 ## Lägg till digitala resurser som referenser i [!DNL Adobe Photoshop] {#refps}
 
-1. Använd [!DNL Experience Manager] skrivbordsappen för att komma åt [!DNL Experience Manager Assets]. Hämta och visa resurserna i det lokala filsystemet. Använd funktionerna [!UICONTROL Place Linked] i [!DNL Adobe Photoshop]. Se [placera resurser i skrivbordsappen](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#place-assets-in-native-documents).
+1. Använd [!DNL Experience Manager] skrivbordsappen för att komma åt [!DNL Experience Manager Assets]. Hämta och visa resurserna i det lokala filsystemet. Använd funktionerna [!UICONTROL Place Linked] i [!DNL Adobe Photoshop]. Se [placera resurser i skrivbordsappen](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#place-assets-in-native-documents).
 
    ![chlimage_1-87](assets/chlimage_1-261.png)
 
@@ -119,7 +119,7 @@ Du kan till [!DNL InDesign]exempel extrahera sidor med [!DNL InDesign Server]. O
 
 Följande alternativ är tillgängliga i verktygsfältet, i den vänstra listen och i kontrollerna i sidvisningsprogrammet:
 
-* **[!UICONTROL Desktop Actions]** för att öppna eller visa en viss underresurs med [!DNL Experience Manager] skrivbordsappen. Se hur du [konfigurerar skrivbordsåtgärder](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#desktopactions-v2) om du använder [!DNL Experience Manager] datorprogrammet.
+* **[!UICONTROL Desktop Actions]** för att öppna eller visa en viss underresurs med [!DNL Experience Manager] skrivbordsappen. Se hur du [konfigurerar skrivbordsåtgärder](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#desktopactions-v2) om du använder [!DNL Experience Manager] datorprogrammet.
 
 * **[!UICONTROL Properties]** öppnar sidan [!UICONTROL Properties] för den specifika underresursen.
 
@@ -135,8 +135,8 @@ Följande alternativ är tillgängliga i verktygsfältet, i den vänstra listen 
 
 >[!MORELIKETHIS]
 >
->* [Använd Adobe Experience Manager datorprogram](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html)
->* [Konfigurera skrivbordsåtgärder i Adobe Experience Manager](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#desktopactions-v2)
+>* [Använd Adobe Experience Manager datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html)
+>* [Konfigurera skrivbordsåtgärder i Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#desktopactions-v2)
 >* [Skapa länkade smarta objekt i Adobe Photoshop](https://helpx.adobe.com/photoshop/using/create-smart-objects.html#create-linked-smart-objects)
 >* [Montera grafik i Adobe InDesign](https://helpx.adobe.com/indesign/using/placing-graphics.html)
 
