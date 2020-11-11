@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: b5607343-a13b-4520-a771-f1a555bfcc7b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9a4ae73c08657195da2741cccdb196bd7f7142c9
+source-git-commit: d510decba9b2af23bab54c78779f98a36a6172d4
 workflow-type: tm+mt
 source-wordcount: '537'
 ht-degree: 1%
@@ -19,7 +19,7 @@ ht-degree: 1%
 ---
 
 
-# Utvärdera uppgraderingskomplexiteten med mönsteravkännaren{#assessing-the-upgrade-complexity-with-the-pattern-detector}
+# Utvärdera uppgraderingskomplexiteten med mönsteravkännaren
 
 ## Översikt {#overview}
 
@@ -43,9 +43,10 @@ Mönsteravkännaren släpps separat som ett [paket](https://www.adobeaemcloud.co
 >* öka detekteringsgraden
 >* undvika flaskhalsar i affärskritiska instanser
 
-
->båda samtidigt rekommenderas att köra programmet **i miljöer** som är så nära produktionsmiljöer som möjligt inom områden som användarprogram, innehåll och konfigurationer.
 >
+>
+båda samtidigt rekommenderas att köra programmet **i miljöer** som är så nära produktionsmiljöer som möjligt inom områden som användarprogram, innehåll och konfigurationer.
+
 Du kan använda flera metoder för att kontrollera mönsteravkännarens utdata:
 
 * **Via Felix Inventory Console:**
@@ -56,7 +57,6 @@ Du kan använda flera metoder för att kontrollera mönsteravkännarens utdata:
    ![screenshot-2018-2-5pattern-Dettor](assets/screenshot-2018-2-5pattern-detector.png)
 
 * **Via ett reaktivt textbaserat eller reguljärt JSON-gränssnitt**
-
 * **Via ett reaktivt gränssnitt för JSON-rader, **som genererar ett separat JSON-dokument på varje rad.
 
 Båda dessa metoder beskrivs nedan:
@@ -211,7 +211,8 @@ Med utdata:
 ```
 
 >[!NOTE]
-Det rekommenderade sättet är att spara hela utdata från urklipp i filen och sedan bearbeta det via `jq` eller `grep` för att filtrera informationstypen.
+>
+>Det rekommenderade sättet är att spara hela utdata från urklipp i filen och sedan bearbeta det via `jq` eller `grep` för att filtrera informationstypen.
 
 ## Identifieringsomfång {#scope}
 
@@ -224,5 +225,5 @@ Mönsteravkännaren kan för närvarande kontrollera:
 * rep:kompatibilitet med användarnoder (i samband med OAuth-konfiguration)
 
 >[!NOTE]
-Observera att mönsteravkännaren försöker förutsäga varningarna för uppgraderingen korrekt. I vissa scenarier kan det dock generera falska positiva resultat.
-
+>
+>Observera att mönsteravkännaren försöker förutsäga varningarna för uppgraderingen korrekt. I vissa scenarier kan det dock generera falska positiva resultat.
