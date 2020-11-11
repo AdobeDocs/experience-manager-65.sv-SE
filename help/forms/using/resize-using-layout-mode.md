@@ -1,40 +1,30 @@
 ---
-title: Använd layoutläget för att ändra storlek på komponenter
-seo-title: Använd layoutläget för att ändra storlek på komponenter
+title: Använd layoutläget för att ändra storlek på komponenter för anpassningsbara formulär
 description: 'Definiera placeringen av komponenterna med det responsiva stödrastret som finns i layoutläget '
-seo-description: 'Definiera placeringen av komponenterna med det responsiva stödrastret som finns i layoutläget '
-uuid: 6b077ebe-caea-4ae3-b17a-be2dca94eeb3
-contentOwner: anujkapo
-topic-tags: interactive-communications, author
-products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 9e9aaf36-bb86-4954-83cc-fa6b3e80ae4b
-docset: aem65
 translation-type: tm+mt
-source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+source-git-commit: c62ad355469a95db89db44c34bb6df72d8f4bf77
 workflow-type: tm+mt
-source-wordcount: '1104'
+source-wordcount: '1023'
 ht-degree: 0%
 
 ---
 
 
-# Använd layoutläget för att ändra storlek på komponenter{#use-layout-mode-to-resize-components}
+# Använd layoutläget för att ändra storlek på komponenter {#use-layout-mode-to-resize-components}
 
-Med det adaptiva formuläret och redigeringsgränssnittet för webbkanalen för interaktiv kommunikation kan du ändra storlek på komponenter i layoutläget. Dra och släpp blå punkter i kolumner för att definiera start- och slutpunkterna för placering av komponenter. De blå punkterna visas när du har tryckt på komponenten i det responsiva rutnätet. Det responsiva rutnätet består av 12 lika stora kolumner. Den vita och blå färgskuggningen i alternativa kolumner skiljer den ena kolumnen från den andra.
+Med det adaptiva gränssnittet för formulärutveckling kan du ändra storlek på komponenter i layoutläget. Dra och släpp blå punkter i kolumner för att definiera start- och slutpunkterna för placering av komponenter. De blå punkterna visas när du har tryckt på komponenten i det responsiva rutnätet. Det responsiva rutnätet består av 12 lika stora kolumner. Den vita och blå färgskuggningen i alternativa kolumner skiljer den ena kolumnen från den andra.
 
 Du kan använda layoutläget för att ändra storlek på komponenter för alla enhetstyper, som stationära datorer, surfplattor, telefoner och andra mindre enheter. Tabletten hämtar automatiskt layoutkonfigurationen från skrivbordsversionen och de mindre enheterna hämtar layoutkonfigurationen från telefonen. Du kan dock åsidosätta de automatiskt härledda konfigurationerna för att definiera olika konfigurationer för varje enhetstyp.
 
-Om du skapar webbkanalen med [utskriftskanalen som överordnad](../../forms/using/create-interactive-communication.md) för en interaktiv kommunikation, innehåller de komponenter som är tillgängliga för storleksändring även de delformulär och fält som genereras automatiskt i webbkanalen med hjälp av utskriftskanalen. Webbkanalen behåller layouten för Print channel-elementen i layoutläge.
-
 ## Åtkomst till layoutläge {#access-layout-mode}
 
-Välj **Layout** i listrutan som visas högst upp i det adaptiva formuläret och redigeringsgränssnittet för interaktiv kommunikation bredvid alternativet **Förhandsgranska** . Formuläret visas i layoutläget.
+Välj **Layout** i listrutan som visas högst upp i det adaptiva formulärredigeringsgränssnittet bredvid alternativet **Förhandsgranska** . Formuläret visas i layoutläget.
 
 1. Logga in på AEM författarinstans och gå till **Adobe Experience Manager** > **Forms** > **Forms &amp; Documents**.
-1. [Skapa ett nytt](../../forms/using/create-interactive-communication.md) eller öppna ett befintligt adaptivt formulär eller en interaktiv kommunikation.
+1. Create a new or open an existing [adaptive form](../../forms/using/creating-adaptive-form.md).
 1. Välj **Layout** i listrutan som visas högst upp bredvid alternativet **Förhandsgranska** . Formuläret visas i layoutläget.
 
-   ![Layoutläge för interaktiv kommunikation](assets/layout_mode_ic_new.png)
+   ![Layoutläge](assets/layout_mode_ic_new.png)
 
 ## Ändra storlek på komponenter {#resize-components}
 
@@ -56,9 +46,9 @@ Välj **Layout** i listrutan som visas högst upp i det adaptiva formuläret och
 
 ### Exempel {#example}
 
-**Mål:** Du vill infoga en tabellkomponent och en bildkomponent och placera dem parallellt med varandra i en interaktiv kommunikation.
+**Mål:** Du vill infoga en tabellkomponent och en bildkomponent och placera dem parallellt med varandra i en adaptiv form.
 
-1. Infoga tabell- och bildkomponenterna i redigeringsläget i webbkanalen. Bildkomponenten visas efter tabellkomponenten.
+1. Infoga tabell- och bildkomponenterna i redigeringsläget i det adaptiva formuläret. Bildkomponenten visas efter tabellkomponenten.
 1. Växla till layoutläget och tryck på tabellkomponenten. De blå punkter som komponentvisningen ska ändra storlek på i kolumnerna 1 och 12.
 1. Dra och släpp den blå punkten i kolumn 12 till kolumn 6 i det responsiva rutnätet.
 
