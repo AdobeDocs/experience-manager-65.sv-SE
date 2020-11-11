@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms Guide
 breadcrumb-title: Forms Guide
 user-guide-description: Skapa, hantera, publicera och uppdatera digitala formulär.
 translation-type: tm+mt
-source-git-commit: 984e50ec1a523ff8a4f618016797c326fd679511
+source-git-commit: c62ad355469a95db89db44c34bb6df72d8f4bf77
 workflow-type: tm+mt
-source-wordcount: '3710'
+source-wordcount: '3716'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ ht-degree: 0%
       + [Installera och konfigurera datainhämtningsfunktioner](using/installing-configuring-aem-forms-osgi.md)
       + [Installera och konfigurera ett Forms-centrerat arbetsflöde i OSGi](using/installing-configuring-forms-centric-workflow-on-osgi.md)
       + [Installera och konfigurera interaktiv kommunikation](using/installing-configuring-intreactive-communication-correspondence-management.md)
-      + [Installera och konfigurera tjänsten Automatisk Forms Conversion](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/table-of-contents/configure-service.html)
+      + [Installera och konfigurera tjänsten Automated forms conversion](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/table-of-contents/configure-service.html)
    + Installera AEM Forms i JEE {#jee-installation}
       + [Plattformar som stöds för AEM formulär på JEE](using/aem-forms-jee-supported-platforms.md)
       + [Installera och distribuera AEM Forms på JEE med JBoss-körningsnyckel](http://www.adobe.com/go/learn_aemforms_installTurnkey_65)
@@ -193,6 +193,7 @@ ht-degree: 0%
    + [Skriva ut kanal och webbkanal](using/web-channel-print-channel.md)
    + [Konfigurationsegenskaper för interaktiv kommunikation](using/interactive-communication-configuration-properties.md)
    + [Generera interaktiv kommunikation](using/generate-multiple-interactive-communication-using-batch-api.md)
+   + [Använd layoutläget för att ändra storlek på komponenter](using/resize-using-layout-mode-interactive-communication.md)
 + Arbetsflöden {#workflows}
    + [Forms-centrerat arbetsflöde i OSGi](using/aem-forms-workflow.md)
    + [Forms-centrerat arbetsflöde i OSGi - stegreferens](using/aem-forms-workflow-step-reference.md)
