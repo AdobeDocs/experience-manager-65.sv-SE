@@ -10,9 +10,9 @@ topic-tags: develop
 discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f0038c1f88ea0047cbaae4fe49456a665aa67f10
+source-git-commit: 11f3e2f7cb742340388bc9421a3ea8f25deabec5
 workflow-type: tm+mt
-source-wordcount: '3822'
+source-wordcount: '3861'
 ht-degree: 0%
 
 ---
@@ -163,6 +163,8 @@ Gör så här för att välja en molntjänst och signeringsordning:
 1. Välj en molntjänst i den redan konfigurerade listan över Adobe Sign-Cloud Services.
 
    Om listan med **Adobe Sign-Cloud Service** är tom följer du artikeln [Konfigurera Adobe Sign med AEM Forms](../../forms/using/adobe-sign-integration-adaptive-forms.md) för att konfigurera tjänsten.
+
+   I listrutan visas de molntjänster som finns i `global` mappen under Verktyg > **[!UICONTROL Cloud Services]** > **[!UICONTROL Adobe Sign]**. Dessutom listas de molntjänster som finns i den mapp du väljer i **[!UICONTROL Configuration Container]** fältet när du skapar ett anpassat formulär.
 
 1. Välj signeringsordning i dialogrutan **Signerare kan signera** . Adobe Sign-signerare kan signera ett adaptivt formulär **sekventiellt** - en efter en annan signerare eller **samtidigt** - i valfri ordning.
 
