@@ -4,9 +4,9 @@ description: Versionsinformation för [!DNL Adobe Experience Manager] 6.5 Servic
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b23b66e9d57742f6771bc4b26753a47b334e06bc
+source-git-commit: c4e602a208fa5f66e79a5705a7f1f2f844fb23b5
 workflow-type: tm+mt
-source-wordcount: '4362'
+source-wordcount: '4379'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ De viktigaste funktionerna och förbättringarna i Adobe Experience Manager 6.5.
 
 * [Förbättrad cachning för översatta adaptiva formulärsidor](../../help/forms/using/configure-adaptive-forms-cache.md).
 
-* Stöd för [Adobe Sign-texttaggar i den automatiska Forms Conversion Service](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms.html).
+* Stöd för [Adobe Sign-texttaggar i Automated forms conversion Service](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms.html).
 
 * Stöd för att [konvertera färgade formulär till adaptiva formulär](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms.html) med [!DNL Automated Forms Conversion service].
 
@@ -258,6 +258,12 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 ### Integreringar {#integrations-6560}
 
 * Aktiviteter med långa namn synkroniseras inte med [!DNL Adobe Target] (NPR-34254).
+
+* Om du väljer en egenskap när du skapar en ny konfiguration för Adobe Launch visas följande felmeddelande (NPR-33947):
+
+   ```javascript
+   GET http://hostname:Port/libs/cq/dtm-reactor/content/configurations/createcloudconfigwizard/jcr:content/body/items/form/items/wizard/items/general/items/fixedcolumns/items/container/items/general/items/property/data.html?query=&start=0&end=25&imsConfigurationId=Adobe%20Launch&companyId=&_charset_=utf-8 400 (Bad Request)
+   ```
 
 ### Översättningsprojekt {#translation-6560}
 
