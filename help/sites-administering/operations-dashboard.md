@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: b210f5d7-1d68-49ee-ade7-667c6ab11d2b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 19a6a4f80e2af37b8de49080a977d02bf0e43507
 workflow-type: tm+mt
-source-wordcount: '6229'
+source-wordcount: '6198'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ## Introduktion {#introduction}
 
-På Operations Dashboard i AEM 6 kan systemansvariga snabbt övervaka AEM-systemets hälsa. Den innehåller även automatiskt genererad diagnos om relevanta aspekter av AEM och gör det möjligt att konfigurera och köra självständig automatisering av underhåll för att minska projektdriften och supportärenden avsevärt. Kontrollpanelen för åtgärder kan utökas med anpassade hälsokontroller och underhållsuppgifter. Data från Operations Dashboard kan dessutom nås från externa övervakningsverktyg via JMX.
+På kontrollpanelen för åtgärder i AEM 6 kan systemansvariga övervaka AEM systemhälsan snabbt. Den innehåller även automatiskt genererad diagnos om relevanta aspekter av AEM och gör det möjligt att konfigurera och köra självständig automatisering av underhåll för att avsevärt minska projektdriften och supportärenden. Kontrollpanelen för åtgärder kan utökas med anpassade hälsokontroller och underhållsuppgifter. Data från Operations Dashboard kan dessutom nås från externa övervakningsverktyg via JMX.
 
 **Kontrollpanelen för åtgärder:**
 
@@ -32,7 +32,7 @@ På Operations Dashboard i AEM 6 kan systemansvariga snabbt övervaka AEM-system
 * Minskar tiden för att hitta, analysera och åtgärda problem
 * Automatisering av underhåll som kan minska projektkostnaderna avsevärt
 
-Du kommer åt den genom att gå till **Verktyg** - **Åtgärder** från AEM-välkomstskärmen.
+Du kommer åt den genom att gå till **Verktyg** - **Åtgärder** från AEM välkomstskärm.
 
 >[!NOTE]
 >
@@ -40,7 +40,7 @@ Du kommer åt den genom att gå till **Verktyg** - **Åtgärder** från AEM-väl
 
 ## Hälsorapporter {#health-reports}
 
-I systemet för hälsorapporter finns information om hälsa för en AEM-instans genom Sling Health Checks. Detta kan göras antingen via OSGI, JMX, HTTP-begäranden (via JSON) eller via Touch-gränssnittet. Den erbjuder mått och tröskelvärden för vissa konfigurerbara räknare och ger i vissa fall information om hur problemet kan lösas.
+I systemet för hälsorapporter finns information om hälsotillståndet i en AEM via Sling Health Checks. Detta kan göras antingen via OSGI, JMX, HTTP-begäranden (via JSON) eller via Touch-gränssnittet. Den erbjuder mått och tröskelvärden för vissa konfigurerbara räknare och ger i vissa fall information om hur problemet kan lösas.
 
 Den har flera funktioner som beskrivs nedan.
 
@@ -48,7 +48,7 @@ Den har flera funktioner som beskrivs nedan.
 
 **Hälsorapporterna** är ett kortsystem som anger god eller dålig hälsa med avseende på ett visst produktområde. Dessa kort är visualiseringar av Sling Health Checks, som samlar in data från JMX och andra källor och visar bearbetad information igen som MBeans. Dessa MBeans kan också inspekteras i [JMX-webbkonsolen](/help/sites-administering/jmx-console.md), under domänen **org.apache.sling.healthCheck** .
 
-Gränssnittet Hälsorapporter finns på **Verktyg** - **Åtgärder** - **Hälsorapporter** på AEM-välkomstskärmen, eller direkt via följande URL:
+Gränssnittet Hälsorapporter finns på **Verktyg** - **Åtgärder** - **Hälsorapporter** på AEM välkomstskärm, eller direkt via följande URL:
 
 `https://<serveraddress>:port/libs/granite/operations/content/healthreports/healthreportlist.html`
 
@@ -65,7 +65,7 @@ Det finns två typer av hälsokontroller i AEM 6:
 1. Individuella hälsokontroller
 1. Sammansatta hälsokontroller
 
-En **enskild hälsokontroll** är en enda hälsokontroll som motsvarar ett statuskort. Enskilda hälsokontroller kan konfigureras med regler eller tröskelvärden och de kan ge ett eller flera tips och länkar för att lösa identifierade hälsoproblem. Låt oss ta kontrollen &quot;Loggfel&quot; som ett exempel: Om det finns FEL-poster i instansloggarna finns de på informationssidan i hälsokontrollen. Längst upp på sidan finns en länk till &quot;Loggmeddelandeanalyseraren&quot; i avsnittet Diagnosverktyg, där du kan analysera felen mer detaljerat och konfigurera om loggarna.
+En **enskild hälsokontroll** är en enda hälsokontroll som motsvarar ett statuskort. Enskilda hälsokontroller kan konfigureras med regler eller tröskelvärden och de kan ge ett eller flera tips och länkar för att lösa identifierade hälsoproblem. Låt oss ta kontrollen &quot;Loggfel&quot; som ett exempel: Om det finns FEL-poster i instansloggarna finns de på informationssidan i hälsokontrollen. Längst upp på sidan finns en länk till &quot;Loggmeddelandeanalyseraren&quot; i avsnittet Diagnosverktyg, där du kan analysera felen mer ingående och konfigurera om loggarna.
 
 En **sammansatt hälsokontroll** är en kontroll som samlar in information från flera enskilda kontroller.
 
@@ -81,7 +81,7 @@ Du skapar en enskild hälsokontroll i två steg: implementera en kontroll av ski
 
 1. För att kunna skapa en Sling Health Check måste du skapa en OSGI-komponent som implementerar Sling HealthCheck-gränssnittet. Du lägger till den här komponenten i ett paket. Komponentens egenskaper identifierar hälsokontrollen fullständigt. När komponenten har installerats skapas en JMX MBean automatiskt för hälsokontrollen. Mer information finns i dokumentationen om [hälsokontroll](https://sling.apache.org/documentation/bundles/sling-health-check-tool.html) vid sjösling.
 
-   Exempel på en Sling Health Check-komponent, skriven med OSGI-tjänstkomponentsanteckningar:
+   Exempel på en Sling Health Check-komponent, skriven med OSGI-tjänstkomponentanteckningar:
 
    ```java
    @Component(service = HealthCheck.class,
@@ -115,6 +115,7 @@ Du skapar en enskild hälsokontroll i två steg: implementera en kontroll av ski
 
       * **Typ:** `String`
       * **Värde:** `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/exampleHealthCheck`
+
    >[!NOTE]
    >
    >Resurssökvägen ovan skapas enligt följande: Om huvudnamnet för din hälsokontroll är &quot;test&quot; lägger du till &quot;test&quot; i slutet av sökvägen `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck`
@@ -153,6 +154,7 @@ En sammansatt hälsokontroll har till uppgift att sammanställa ett antal enskil
    * **Taggar (hc.tags):** Taggarna för den här hälsokontrollen. Om den här sammansatta hälsokontrollen är avsedd att ingå i en annan sammansatt hälsokontroll (till exempel i en hierarki av hälsokontroller) lägger du till de taggar som den sammansatta kontrollen är relaterad till.
    * **MBean-namn (hc.mbean.name):** Namnet på den böna som ska ges till JMX MBean för den här sammansatta hälsokontrollen.
    * **Filtertaggar (filter.tags):** Detta är en egenskap som är specifik för sammansatta hälsokontroller. Det här är de taggar som det sammansatta objektet ska aggregera. Den sammansatta hälsokontrollen sammanfogas under sin grupp med alla hälsokontroller som har en tagg som matchar någon av filtertaggarna i den sammansatta samlingen. En sammansatt hälsokontroll med filtertaggarna **test** och **check** sammanställer till exempel alla enskilda och sammansatta hälsokontroller som har någon av **test** - och **check** -taggarna i taggegenskapen ( `hc.tags`).
+
    >[!NOTE]
    >
    >En ny JMX Mbean skapas för varje ny konfiguration av den sammansatta hälsokontrollen för Apache Sling.**
@@ -164,6 +166,7 @@ En sammansatt hälsokontroll har till uppgift att sammanställa ett antal enskil
    * **Namn:** `Composite Health Check`
 
       * **Typ:** `nt:unstructured`
+
    Med följande egenskaper:
 
    * **Namn:** `sling:resourceType`
@@ -174,6 +177,7 @@ En sammansatt hälsokontroll har till uppgift att sammanställa ett antal enskil
 
       * **Typ:** `String`
       * **Värde:** `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/diskusage`
+
    >[!NOTE]
    >
    >Om du skapar enskilda hälsokontroller som logiskt sett hör till en sammansatt kontroll som redan finns på kontrollpanelen som standard, hämtas de automatiskt och grupperas under respektive sammansatta kontroll. På grund av detta behöver du inte skapa en ny konfigurationsnod för dessa kontroller.
@@ -198,7 +202,7 @@ En sammansatt hälsokontroll har till uppgift att sammanställa ett antal enskil
     <ul>
      <li>returnerar Kritisk status om <code>queueSize</code> värdet överstiger <code>maxQueueSize</code> värdet (det vill säga när händelser tas bort)</li>
      <li>returnerar Varna om <code>queueSize</code> värdet är över <code>maxQueueSize * WARN_THRESHOLD</code> (standardvärdet är 0,75) </li>
-    </ul> <p>Den maximala längden för varje kö kommer från separata konfigurationer (Oak och AEM) och kan inte konfigureras från den här hälsokontrollen. MBean för den här hälsokontrollen är <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DObservationQueueLengthHealthCheck%2Ctype%3DHealthCheck">org.apache.sling.healthCheck:name=ObservationQueueLengthHealthCheck,type=HealthCheck</a>.</p> </td>
+    </ul> <p>Den maximala längden för varje kö kommer från olika konfigurationer (Oak och AEM) och kan inte konfigureras från den här hälsokontrollen. MBean för den här hälsokontrollen är <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DObservationQueueLengthHealthCheck%2Ctype%3DHealthCheck">org.apache.sling.healthCheck:name=ObservationQueueLengthHealthCheck,type=HealthCheck</a>.</p> </td>
   </tr>
   <tr>
    <td>Gränser för genomgång av frågor</td>
@@ -229,7 +233,7 @@ En sammansatt hälsokontroll har till uppgift att sammanställa ett antal enskil
        <li>returnerar OK-status om det är mindre än 45 minuter sedan </li>
       </ul> </li>
      <li>om inget av dessa villkor uppfylls returneras OK-statusen</li>
-    </ul> <p>Både statuströskelvärdena Kritisk och Varna är konfigurerbara. Mönstret för den här hälsokontrollen är <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DasyncIndexHealthCheck%2Ctype%3DHealthCheck">org.apache.sling.healthCheck:name=asyncIndexHealthCheck,type=HealthCheck</a>.</p> <p><strong>Obs! </strong>Den här hälsokontrollen är tillgänglig med AEM 6.4 och har backporterats till AEM 6.3.0.1.</p> </td>
+    </ul> <p>Både statuströskelvärdena Kritisk och Varna är konfigurerbara. Mönstret för den här hälsokontrollen är <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DasyncIndexHealthCheck%2Ctype%3DHealthCheck">org.apache.sling.healthCheck:name=asyncIndexHealthCheck,type=HealthCheck</a>.</p> <p><strong>Obs! </strong>Den här hälsokontrollen är tillgänglig i AEM 6.4 och har flyttats tillbaka till AEM 6.3.0.1.</p> </td>
   </tr>
   <tr>
    <td>Stora Lucene-index</td>
@@ -237,7 +241,7 @@ En sammansatt hälsokontroll har till uppgift att sammanställa ett antal enskil
     <ul>
      <li>en varningsstatus om det finns ett index med mer än 1 miljard dokument</li>
      <li>en kritisk status om det finns ett index med mer än 1,5 miljarder dokument</li>
-    </ul> <p>Tröskelvärdena kan konfigureras och MBean för hälsokontrollen är <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DlargeIndexHealthCheck%2Ctype%3DHealthCheck">org.apache.sling.hälsocheck:name=largeIndexHealthCheck,type=HealthCheck.</a></p> <p><strong>Obs! </strong>Den här kontrollen är tillgänglig med AEM 6.4 och har backporterats till AEM 6.3.2.0.</p> </td>
+    </ul> <p>Tröskelvärdena kan konfigureras och MBean för hälsokontrollen är <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DlargeIndexHealthCheck%2Ctype%3DHealthCheck">org.apache.sling.hälsocheck:name=largeIndexHealthCheck,type=HealthCheck.</a></p> <p><strong>Obs! </strong>Den här kontrollen är tillgänglig i AEM 6.4 och har flyttats tillbaka till AEM 6.3.2.0.</p> </td>
   </tr>
   <tr>
    <td>Systemunderhåll</td>
@@ -246,7 +250,7 @@ En sammansatt hälsokontroll har till uppgift att sammanställa ett antal enskil
      <li>varje underhållsåtgärd åtföljs av en tillhörande hälsokontroll</li>
      <li>Om en uppgift inte läggs till i ett underhållsfönster returneras den kritiska hälsokontrollen</li>
      <li>du måste konfigurera underhållsaktiviteterna Granskningslogg och Arbetsflödestömning eller på annat sätt ta bort dem från underhållsfönstren. Om de inte konfigureras kommer dessa uppgifter att misslyckas vid den första körningen, så systemunderhållskontrollen returnerar statusen Kritisk.</li>
-     <li><strong>Med AEM 6.4</strong>görs också en kontroll av underhållsuppgiften <a href="/help/sites-administering/operations-dashboard.md#automated-maintenance-tasks">Lucene Binaries</a> .</li>
+     <li><strong>I AEM 6.4</strong>görs också en kontroll av underhållsuppgiften för <a href="/help/sites-administering/operations-dashboard.md#automated-maintenance-tasks">Lucene Binaries</a> .</li>
      <li>på AEM 6.2 och lägre returnerar systemunderhållskontrollen en varningsstatus direkt efter start eftersom aktiviteterna aldrig körs. Från och med 6.3 returneras OK om det första underhållet inte har nåtts än.</li>
     </ul> <p>MBean för den här hälsokontrollen är <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3Dsystemchecks%2Ctype%3DHealthCheck">org.apache.sling.healthCheck:name=systemchecks,type=HealthCheck</a>.</p> </td>
   </tr>
@@ -292,7 +296,7 @@ En sammansatt hälsokontroll har till uppgift att sammanställa ett antal enskil
   </tr>
   <tr>
    <td>Säkerhetskontroller</td>
-   <td><p>Säkerhetskontrollen är en sammansatt kontroll som sammanställer resultaten av flera säkerhetsrelaterade kontroller. Dessa individuella hälsokontroller tar upp andra problem än checklistan för säkerhet som finns på dokumentationssidan för <a href="/help/sites-administering/security-checklist.md">checklistan.</a> Kontrollen är användbar som säkerhetsröktest när instansen startas. </p> <p>MBean för den här hälsokontrollen är <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3Dsecuritychecks%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthCheck:name=</a><a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3Dsecuritychecks%2Ctype%3DHealthCheck" target="_blank"></a><a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3Dsecuritychecks%2Ctype%3DHealthCheck" target="_blank"></a><a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3Dsecuritychecks%2Ctype%3DHealthCheck" target="_blank">securityChecks,type=HealthCheck</a></p> </td>
+   <td><p>Säkerhetskontrollen är en sammansatt kontroll som sammanställer resultaten av flera säkerhetsrelaterade kontroller. Dessa individuella hälsokontroller tar upp andra problem än checklistan för säkerhet som finns på dokumentationssidan för <a href="/help/sites-administering/security-checklist.md">checklistan.</a> Kontrollen är användbar som säkerhetsröktest när instansen startas. </p> <p>MBean för den här hälsokontrollen är <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3Dsecuritychecks%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthCheck:name=securityCheck,type=HealthCheck</a></p> </td>
   </tr>
   <tr>
    <td>Aktiva paket</td>
@@ -322,7 +326,7 @@ En sammansatt hälsokontroll har till uppgift att sammanställa ett antal enskil
 
 ## Övervakning med Nagios {#monitoring-with-nagios}
 
-Kontrollpanelen för hälsokontroll kan integreras med Nagios via Granite JMX Mbeans. I följande exempel visas hur du lägger till en kontroll som visar hur mycket minne som används på servern som kör AEM.
+Kontrollpanelen för hälsokontroll kan integreras med Nagios via Granite JMX Mbeans. I följande exempel visas hur du lägger till en kontroll som visar hur mycket minne som används på AEM.
 
 1. Installera och installera Nagios på övervakningsservern.
 1. Installera sedan Nagios Remote Plugin Executor (NRPE).
@@ -331,13 +335,14 @@ Kontrollpanelen för hälsokontroll kan integreras med Nagios via Granite JMX Mb
    >
    >Mer information om hur du installerar Nagios och NRPE i ditt system finns i [Nagios-dokumentationen](https://library.nagios.com/library/products/nagioscore/manuals/).
 
-1. Lägg till en värddefinition för AEM-servern. Detta kan göras via webbgränssnittet för Nagios XI med hjälp av Configuration Manager:
+1. Lägg till en värddefinition för AEM. Detta kan göras via webbgränssnittet för Nagios XI med hjälp av Configuration Manager:
 
    1. Öppna en webbläsare och peka på Nagios-servern.
    1. Tryck på knappen **Konfigurera** i den övre menyn.
    1. I den vänstra rutan trycker du på **Core Config Manager** under **Advanced Configuration**.
    1. Tryck på länken **Värdar** under **övervakningsavsnittet** .
    1. Lägg till värddefinitionen:
+
    ![chlimage_1-118](assets/chlimage_1-118.png)
 
    Nedan visas ett exempel på en värdkonfigurationsfil, om du använder Nagios Core:
@@ -354,7 +359,7 @@ Kontrollpanelen för hälsokontroll kan integreras med Nagios via Granite JMX Mb
    }
    ```
 
-1. Installera Nagios och NRPE på AEM-servern.
+1. Installera Nagios och NRPE på AEM.
 1. Installera plugin-programmet [check_http_json](https://github.com/phrawzty/check_http_json) på båda servrarna.
 1. Definiera ett generiskt JSON-kontrollkommando på båda servrarna:
 
@@ -368,7 +373,7 @@ Kontrollpanelen för hälsokontroll kan integreras med Nagios via Granite JMX Mb
    }
    ```
 
-1. Lägg till en tjänst för använt minne på AEM-servern:
+1. Lägg till en tjänst för använt minne på AEM:
 
    ```xml
    define service {
@@ -398,7 +403,7 @@ Bland de viktigaste funktionerna finns:
 * Möjlighet att komma åt stackar och tråddumpar
 * Begäranden och frågeprestandaanalyser
 
-Du kan nå skärmen Diagnosverktyg genom att gå till **Verktyg - Åtgärder - Diagnos** från AEM-välkomstskärmen. Du kan även få åtkomst till skärmen via följande URL: `https://serveraddress:port/libs/granite/operations/content/diagnosis.html`
+Du kommer till skärmen Diagnosverktyg genom att gå till **Verktyg - Åtgärder - Diagnos** från AEM välkomstskärm. Du kan även få åtkomst till skärmen via följande URL: `https://serveraddress:port/libs/granite/operations/content/diagnosis.html`
 
 ![chlimage_1-120](assets/chlimage_1-120.png)
 
@@ -478,7 +483,7 @@ Sidan visar:
 
 För varje given fråga försöker Oak att ta reda på det bästa sättet att köra baserat på de Oak-index som definieras i databasen under noden **oak:index** . Oak kan välja olika index beroende på frågan. Att förstå hur Oak kör en fråga är det första steget till att optimera frågan.
 
-Förklara frågan är ett verktyg som förklarar hur Oak kör en fråga. Du kommer åt den genom att gå till **Verktyg - Åtgärder - Diagnos** från AEM-välkomstskärmen och sedan klicka på **Frågeprestanda** och växla till fliken **Förklara fråga** .
+Förklara frågan är ett verktyg som förklarar hur Oak kör en fråga. Du kommer åt den genom att gå till **Verktyg - Åtgärder - Diagnos** från AEM välkomstskärm, klicka på **Frågeprestanda** och växla till fliken **Förklara fråga** .
 
 **Funktioner**
 
@@ -515,7 +520,7 @@ Gränssnittet kan användas för att filtrera index i tabellen genom att skriva 
 
 ### Download Status ZIP {#download-status-zip}
 
-Detta aktiverar nedladdningen av en zip som innehåller användbar information om systemstatus och konfiguration. Arkivet innehåller instanskonfigurationer, en lista över paket, OSGI, Sling-statistik och statistik. Detta kan resultera i en stor fil. Du kan minska effekten av stora statusfiler genom att använda **fönstret** Download Status ZIP. Du kommer åt fönstret från:**AEM > Verktyg > Åtgärder > Diagnos > Download Status ZIP.**
+Detta aktiverar nedladdningen av en zip som innehåller användbar information om systemstatus och konfiguration. Arkivet innehåller instanskonfigurationer, en lista över paket, OSGI, Sling-statistik och statistik. Detta kan resultera i en stor fil. Du kan minska effekten av stora statusfiler genom att använda **fönstret** Download Status ZIP. Du kommer åt fönstret från:**AEM > Verktyg > Åtgärder > Diagnostik > Download Status ZIP.**
 
 I det här fönstret kan du välja vad som ska exporteras (loggfiler och/eller tråddumpar) och antalet loggdagar som ska inkluderas i hämtningen i förhållande till det aktuella datumet.
 
@@ -533,7 +538,7 @@ Du kan också hämta en ögonblicksbild av heap för att kunna analysera den vid
 
 Sidan Automatiserade underhållsaktiviteter är en plats där du kan visa och spåra rekommenderade underhållsaktiviteter som schemalagts för periodisk körning. Uppgifterna integreras med systemet för hälsokontroll. Uppgifterna kan också utföras manuellt från gränssnittet.
 
-För att komma till sidan Underhåll på kontrollpanelen för drift måste du gå till **Verktyg - Drift - Kontrollpanel - Underhåll** från välkomstskärmen i AEM eller följa den här länken:
+Om du vill komma till sidan Underhåll på kontrollpanelen för drift måste du gå till **Verktyg - Drift - Kontrollpanel - Underhåll** från välkomstskärmen eller direkt följa den här länken:
 
 `https://serveraddress:port/libs/granite/operations/content/maintenance.html`
 
@@ -567,9 +572,9 @@ Genom att använda rensningsaktiviteten för Lucene-binärfiler kan du rensa bor
 Även om underhållsarbetet utvecklades för att minska Lucene-relaterat revisionsskräp, finns det allmänna effektivitetsvinster när uppgiften körs:
 
 * Den veckovisa körningen av skräpinsamlingen för datalagret slutförs snabbare
-* Det kan också förbättra den totala AEM-prestandan något
+* Den kan också förbättra AEM prestanda något
 
-Du kommer åt aktiviteten Rensa Lucene-binärfiler från: **AEM > Tools > Operations > Maintenance > Daily Maintenance Window > Lucene Binaries Cleanup**.
+Du kommer åt aktiviteten Rensa Lucene-binärfiler från: **AEM > Verktyg > Åtgärder > Underhåll > Dagligt underhåll > Lucene Binaries Cleanup**.
 
 ### Skräpinsamling för datalager {#data-store-garbage-collection}
 
@@ -687,7 +692,7 @@ Detta lägger till en motsvarande resurs på /apps/granite/operations/config/Mai
 
 ## Systemöversikt {#system-overview}
 
-På **systemöversiktspanelen** visas en översikt på hög nivå över AEM-instansens konfiguration, maskinvara och hälsa. Detta innebär att systemets hälsostatus är transparent och att all information samlas på en enda kontrollpanel.
+På **systemöversiktspanelen** visas en översikt på hög nivå över konfiguration, maskinvara och hälsa för den AEM instansen. Detta innebär att systemets hälsostatus är transparent och att all information samlas på en enda kontrollpanel.
 
 >[!NOTE]
 >
@@ -767,7 +772,7 @@ Du kan också hämta en `JSON` fil som sammanfattar instrumentpanelsinformatione
    <td>Instans</td>
    <td>
     <ul>
-     <li>AEM-versionen</li>
+     <li>aem</li>
      <li>lista över körningslägen</li>
      <li>det datum då instansen startades</li>
     </ul> </td>
@@ -855,7 +860,7 @@ Du kan också hämta en `JSON` fil som sammanfattar instrumentpanelsinformatione
   </tr>
   <tr>
    <td>Försäljningsjobb</td>
-   <td><p>Antal jobb vid körning - antal jobb i en given status (om sådana finns):</p>
+   <td><p>Antal jobb vid körning - antal jobb med en given status (om sådana finns):</p>
     <ul>
      <li>misslyckades</li>
      <li>köad</li>
