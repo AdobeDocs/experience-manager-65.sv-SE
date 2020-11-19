@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: 2fd0047d-d0f6-4289-98cf-454486f9cd61
 translation-type: tm+mt
-source-git-commit: 69226ffeb79e0b425b28456cbc64192432863f5d
+source-git-commit: 8e663a3c11523796a2bad15e9c088e484f2b573b
 workflow-type: tm+mt
 source-wordcount: '2780'
 ht-degree: 1%
@@ -53,7 +53,6 @@ Detaljerade instruktioner beskrivs i det här dokumentet.
 >[!NOTE]
 >
 >När du lägger till e-postmallar måste du lägga till dem under **/innehåll/kampanjer** för att de ska vara tillgängliga.
-
 
 #### Skapa nytt e-postinnehåll {#creating-new-email-content-1}
 
@@ -160,9 +159,6 @@ En fullständig beskrivning av Campaign-komponenterna finns i [Adobe Campaign Co
 >
 >* Endast områdena för målgruppsdimensionen i Adobe Campaign **Profiles** beaktas.
 >* När du visar Egenskaper från **Webbplatser** har du inte åtkomst till kontextfälten i Adobe Campaign. Du kan komma åt dessa direkt från e-postmeddelandet när du redigerar.
-
->
-
 
 
 Så här infogar du personalisering:
