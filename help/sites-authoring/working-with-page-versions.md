@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 1368347a-9b65-4cfc-87e1-62993dc627fd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
+source-git-commit: 188434543403fab48f79be06356b86e132e2888a
+workflow-type: tm+mt
+source-wordcount: '1094'
+ht-degree: 6%
 
 ---
 
@@ -71,12 +74,14 @@ När en version har skapats kan du vid behov återgå till den versionen.
 >När du återställer en sida blir den skapade versionen en del av en ny gren.
 >
 >Så här illustrerar du:
-
+>
 >1. Skapa versioner av valfri sida.
 >1. De inledande etiketterna och versionsnodnamnen är 1.0, 1.1, 1.2 och så vidare.
-1. Återställa den första versionen. dvs. 1.0.
-1. Skapa nya versioner igen.
-1. De genererade etiketterna och nodnamnen blir nu 1.0.0, 1.0.1, 1.0.2 osv.
+>1. Återställa den första versionen. dvs. 1.0.
+>1. Skapa nya versioner igen.
+>1. De genererade etiketterna och nodnamnen blir nu 1.0.0, 1.0.1, 1.0.2 osv.
+
+>
 
 
 
@@ -105,8 +110,10 @@ Du kan förhandsgranska en viss version:
 1. Välj **Förhandsgranska**. Sidan visas på en ny flik.
 
    >[!CAUTION]
-   Om en sida har flyttats kan du inte längre förhandsgranska versioner som gjorts före flyttningen.
-   * Om du får problem med en förhandsgranskning kan du kontrollera om sidan har flyttats i [tidslinjen](/help/sites-authoring/basic-handling.md#timeline) .
+   >
+   >Om en sida har flyttats kan du inte längre förhandsgranska versioner som gjorts före flyttningen.
+   >
+   >* Om du får problem med en förhandsgranskning kan du kontrollera om sidan har flyttats i [tidslinjen](/help/sites-authoring/basic-handling.md#timeline) .
 
 
 ## Jämföra en version med den aktuella sidan {#comparing-a-version-with-current-page}
@@ -164,4 +171,5 @@ Med Timewarp kan du göra ett bra försök att återskapa en sida vid en viss ti
 * **Timewarp baseras bara på sidinnehåll** - Om element (som kod, css, resurser/bilder osv.) för återgivning av webbplatsen har ändrats skiljer sig vyn från den ursprungliga vyn, eftersom objekten inte har versionshanterats i databasen.
 
 >[!CAUTION]
-Timewarp är ett verktyg som hjälper författare att förstå och skapa sitt innehåll. Den är inte avsedd som en revisionslogg eller för juridiska ändamål.
+>
+>Timewarp är ett verktyg som hjälper författare att förstå och skapa sitt innehåll. Den är inte avsedd som en revisionslogg eller för juridiska ändamål.
