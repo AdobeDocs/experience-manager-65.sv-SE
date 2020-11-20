@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 67625e62-7035-4eb5-8dd5-6840d775a547
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
+source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
+workflow-type: tm+mt
+source-wordcount: '933'
+ht-degree: 1%
 
 ---
 
@@ -46,7 +49,7 @@ Eller genom att använda **hjälpknappen** i redigeringsdialogrutan för specifi
 
 ## Sidekick {#sidekick}
 
-På fliken **Komponenter** i sidsparten kan du bläddra bland de komponenter som är tillgängliga för att läggas till på den aktuella sidan. Den önskade gruppen kan expanderas och sedan dras en komponent till önskad plats på sidan.
+På fliken **Komponenter** i sidosparken kan du bläddra bland de komponenter som är tillgängliga för att läggas till på den aktuella sidan. Den önskade gruppen kan expanderas och sedan dras en komponent till önskad plats på sidan.
 
 ![chlimage_1-110](assets/chlimage_1-110.png)
 
@@ -86,7 +89,7 @@ När du har skapat ett nedladdningsstycke på sidan kan du dra ett objekt och sl
 
 ### Söka efter filmer {#finding-movies}
 
-På den här fliken visas alla filmer (till exempel Flash-objekt) i databasen.
+På den här fliken visas alla filmer (till exempel Flash) i databasen.
 
 När du har skapat ett lämpligt stycke (till exempel Flash) på sidan kan du dra ett objekt och släppa det i stycket.
 
@@ -153,7 +156,7 @@ Du kan använda valfritt antal jokertecken i en fråga.
 
 ## Visar referenser {#showing-references}
 
-Med AEM kan du visa vilka sidor som är länkade till den sida du arbetar med just nu.
+AEM låter dig se vilka sidor som är länkade till den sida du arbetar med just nu.
 
 Så här visar du direkta sidreferenser:
 
@@ -161,13 +164,13 @@ Så här visar du direkta sidreferenser:
 
    ![screen_shot_2012-02-16at83127pm](assets/screen_shot_2012-02-16at83127pm.png)
 
-1. **Välj** Visa referenser... AEM öppnar fönstret Referenser och visar vilka sidor som refererar till den valda sidan, inklusive deras sökvägar.
+1. Välj **Visa referenser...** AEM öppnar fönstret Referenser och visar vilka sidor som refererar till den markerade sidan, inklusive deras sökvägar.
 
    ![screen_shot_2012-02-16at83311pm](assets/screen_shot_2012-02-16at83311pm.png)
 
 I vissa situationer finns ytterligare åtgärder tillgängliga från Sidekick, bland annat:
 
-* [Startar](/help/sites-classic-ui-authoring/classic-launches.md)
+* [Launches](/help/sites-classic-ui-authoring/classic-launches.md)
 * [Live-kopior](/help/sites-administering/msm.md)
 
 * [Blueprint](/help/sites-administering/msm-best-practices.md)
@@ -201,12 +204,11 @@ Ikonerna längst ned i Spark används för att växla mellan olika lägen för a
 >[!NOTE]
 >
 >Andra alternativ är också tillgängliga:
-
+>
 >* [Ställning](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md)
 >* [Klientkontext](/help/sites-administering/client-context.md)
-* Webbplatser - öppnar webbplatskonsolen.
-* Läs in igen - uppdaterar sidan.
-
+>* Webbplatser - öppnar webbplatskonsolen.
+>* Läs in igen - uppdaterar sidan.
 
 
 ## Kortkommandon {#keyboard-shortcuts}
