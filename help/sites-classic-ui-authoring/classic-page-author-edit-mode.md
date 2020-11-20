@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 9aa0521f-f321-42e9-b022-7ff968a36212
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bec587e3722c4c2e5aebd2579a2a7acbf807587a
+source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
+workflow-type: tm+mt
+source-wordcount: '6169'
+ht-degree: 1%
 
 ---
 
@@ -24,7 +27,7 @@ Vissa är omedelbart tillgängliga via sidbrytaren, andra är också tillgängli
 
 >[!CAUTION]
 >
->I det här avsnittet behandlas endast komponenter som finns i en färdig AEM-installation.
+>I det här avsnittet behandlas endast komponenter som är tillgängliga i en AEM.
 >
 >Beroende på vilken instans du har kan du ha utvecklat anpassade komponenter explicit för dina behov. De kan till och med ha samma namn som vissa av de komponenter som beskrivs här.
 
@@ -151,7 +154,8 @@ Beroende på vilket objekt du väljer visas en ny panel:
          * **Överordnad sida** Ange en bana antingen manuellt eller med väljaren. Lämna tomt om du vill använda den aktuella sidan som överordnad.
       * **Alternativ för fast lista**
 
-         * **Sidor** Välj en lista med sidor. Använd `+` för att lägga till fler poster och upp-/nedknapparna för att justera ordningen.
+         * **Sidor** Välj en lista med sidor. Användning 
+`+` om du vill lägga till fler poster och upp-/nedknapparna för att justera ordningen.
       * **Alternativ för sökning**
 
          * **Börja i** Ange en startbana, antingen manuellt eller med väljaren.
@@ -161,7 +165,8 @@ Beroende på vilket objekt du väljer visas en ny panel:
 
          * **Querybuilder-predikatnotation**Du kan ange en sökfråga med Querybuilder-predikatnotation. Du kan till exempel ange &quot;fulltext=Marketing&quot; om du vill att alla sidor med &quot;Marketing&quot; i innehållet ska visas i Carousel.
 Se [QueryBuilder API](/help/sites-developing/querybuilder-api.md) för en fullständig diskussion om frågeuttryck och fler exempel.
-   * **Ordna efter** Välj `jcr:title`, `jcr:created``cq:lastModified`eller `cq:template` från listrutan.
+   * **Sortera efter** val 
+`jcr:title`, `jcr:created`, `cq:lastModified`eller `cq:template` från listrutan.
 
    * **Begränsa** det högsta antal objekt som du vill använda i Carousel; detta är valfritt.
 
@@ -170,7 +175,7 @@ Se [QueryBuilder API](/help/sites-developing/querybuilder-api.md) för en fullst
 
 
 >[!NOTE]
-Du kan skapa en anpassad karusellkomponent för Adobe Experience Manager som visar digitala resurser i AEM DAM. Mer information finns i [Skapa anpassade Carousel-komponenter för Adobe Experience Manager](https://helpx.adobe.com/experience-manager/using/custom-carousel-components.html).
+Du kan skapa en anpassad karusellkomponent för Adobe Experience Manager som visar digitala resurser som finns i AEM DAM. Mer information finns i [Skapa anpassade Carousel-komponenter för Adobe Experience Manager](https://helpx.adobe.com/experience-manager/using/custom-carousel-components.html).
 
 ### Diagram {#chart}
 
@@ -195,7 +200,7 @@ I följande exempel visas ett exempel på diagramdata följt av det resulterande
 ![chlimage_1-6](assets/chlimage_1-6.png) ![dc_chart_use](assets/dc_chart_use.png)
 
 >[!NOTE]
-Du kan skapa en anpassad AEM-diagramkontroll som visar data i AEM JCR. Mer information finns i [Visa Adobe Experience Manager-data i ett diagram](https://helpx.adobe.com/experience-manager/using/displaying-experience-manager-data-chart.html).
+Du kan skapa en anpassad AEM som visar data i AEM JCR. Mer information finns i [Visa Adobe Experience Manager-data i ett diagram](https://helpx.adobe.com/experience-manager/using/displaying-experience-manager-data-chart.html).
 
 ### Innehållsfragment {#content-fragment}
 
@@ -225,7 +230,7 @@ I följande exempel visas komponenten Download i Geometrixx:
 
 ### External {#external}
 
-Med den externa programintegrationskomponenten (**extern**) kan du bädda in externa program på din AEM-sida med hjälp av en iframe.
+Med den externa programintegrationskomponenten (**extern**) kan du bädda in externa program på AEM med hjälp av en iframe.
 
 * **Extern**
 
@@ -245,7 +250,7 @@ Med den externa programintegrationskomponenten (**extern**) kan du bädda in ext
 
       Definiera storleken på iframe
 
-Den externa tillämpningen är integrerad i AEM-sidans styckesystem. till exempel när du använder ett Target-program av `https://en.wikipedia.org/wiki/Main_Page`:
+Den externa tillämpningen är integrerad i den AEM sidans styckesystem. till exempel när du använder ett Target-program av `https://en.wikipedia.org/wiki/Main_Page`:
 
 ![chlimage_1-7](assets/chlimage_1-7.png)
 
@@ -254,17 +259,17 @@ Beroende på ditt sätt att arbeta är andra alternativ tillgängliga för integ
 
 ### Flash {#flash}
 
-Med Flash-komponenten kan du läsa in en Flash-film. Du kan dra en Flash-resurs från innehållssökaren till komponenten eller använda dialogrutan:
+Med komponenten Flash kan du läsa in en Flash-film. Du kan dra en Flash-resurs från innehållssökaren till komponenten eller använda dialogrutan:
 
 * **Flash**
 
-   * **Flash-film**
+   * **Flash movie**
 
       Flash-filmfilen. Dra en resurs från innehållssökaren eller klicka för att öppna ett bläddringsfönster.
 
    * **Storlek**
 
-      Mått i pixlar på visningsområdet där filmen finns.
+      Dimensioner i pixlar i visningsområdet där filmen finns.
 
 * **Alternativ bild**
 
@@ -305,8 +310,7 @@ Du kan antingen dra och släppa en bild från [Innehållssökning](/help/sites-c
 >[!NOTE]
 Överföringens förlopp kan inte övervakas med Internet Explorer.
 Internet Explorer-användare måste överföra bilden och sedan klicka på **OK** och öppna bilden igen för att se den överförda filen i förhandsgranskningen och kunna utföra ändringar (d.v.s. beskära).
-
->Mer information om HTML5-funktioner som används av AEM finns i avsnittet [Certifierade plattformar](/help/release-notes/release-notes.md#certifiedplatforms) .
+Mer information om HTML5-funktioner som används av AEM finns i avsnittet [Certifierade plattformar](/help/release-notes/release-notes.md#certifiedplatforms) .
 
 När en bild har lästs in kan du konfigurera följande:
 
@@ -483,7 +487,7 @@ Du kan konfigurera:
 
 ### Referens {#reference}
 
-Med **komponenten Reference** kan du referera till text från en annan sida på AEM-webbplatsen (i den aktuella instansen). Innehållet i det refererade stycket visas sedan som om det fanns på den aktuella sidan. Innehållet uppdateras när källstycket ändras (du kan behöva uppdatera sidan).
+Med **komponenten Reference** kan du referera till text från en annan sida på AEM webbplats (i den aktuella instansen). Innehållet i det refererade stycket visas sedan som om det fanns på den aktuella sidan. Innehållet uppdateras när källstycket ändras (du kan behöva uppdatera sidan).
 
 * **Styckereferens**
 
@@ -495,7 +499,7 @@ Om du vill ange sökvägen till ett stycke måste du lägga till ett suffix till
 
 `.../jcr:content/par/<paragraph-ID>`
 
-Exempel:
+Till exempel:
 
 `/content/geometrixx-outdoors/en/equipment/biking/cajamara/jcr:content/par/similar-products`
 
@@ -503,7 +507,7 @@ Förutom att referera till ett visst stycke, kan sökvägen även ändras för a
 
 `/jcr:content/par`
 
-Exempel:
+Till exempel:
 
 `/content/geometrixx-outdoors/en/equipment/biking/cajamara/jcr:content/par`
 
@@ -511,13 +515,13 @@ När innehållet har konfigurerats visas det exakt som på källsidan. Det faktu
 
 ![chlimage_1-11](assets/chlimage_1-11.png)
 
-### Sök {#searching}
+### Sökning {#searching}
 
 Sökkomponenten lägger till sökfunktioner på sidan.
 
 Du kan konfigurera:
 
-* Sök
+* Sökning
 
    * **Nodtyper**
 
@@ -619,7 +623,7 @@ Bildspelskomponenten visar sedan varje sekvens upprepade gånger, under en kort 
 ### Table {#table}
 
 >[!NOTE]
-Komponenten **Tabell** är baserad på [RTF-redigeraren](/help/sites-classic-ui-authoring/classic-page-author-rich-text-editor.md), liksom **[Text](#text)**-komponenten.
+Komponenten **Tabell** är baserad på [RTF-redigeraren](/help/sites-classic-ui-authoring/classic-page-author-rich-text-editor.md), liksom **[Text](#text)** -komponenten.
 Vi rekommenderar att du använder **tabellkomponenten** för tabeller, även om de också kan skapas med komponenten **Text** .
 
 Komponenten **Table** är förkonfigurerad så att du kan skapa, fylla i och formatera en tabell. I dialogrutan kan du konfigurera tabellen och skapa innehållet genom att antingen:
@@ -652,10 +656,10 @@ Mer information om hur du använder taggar finns i [Använda taggar](/help/sites
 ### Text {#text}
 
 >[!NOTE]
-Komponenten **Text** är baserad på [RTF-redigeraren](/help/sites-classic-ui-authoring/classic-page-author-rich-text-editor.md), liksom **[komponenten Table](#table)**.
+Komponenten **Text** är baserad på [RTF-redigeraren](/help/sites-classic-ui-authoring/classic-page-author-rich-text-editor.md), liksom **[komponenten Table](#table)** .
 Vi rekommenderar att du använder **tabellkomponenten** för tabeller, även om de också kan skapas med komponenten **Text** .
 
-Med komponenten Text kan du ange ett textblock med en WYSIWYG-redigerare, som har funktioner från [RTF-redigeraren](/help/sites-classic-ui-authoring/classic-page-author-rich-text-editor.md). Med ett urval ikoner kan du formatera texten, inklusive teckensnittsegenskaper, justering, länkar, listor och indrag.
+Med komponenten Text kan du ange ett textblock med en WYSIWYG-redigerare, som har funktioner från [RTF-redigeraren](/help/sites-classic-ui-authoring/classic-page-author-rich-text-editor.md). Med en rad ikoner kan du formatera texten, inklusive teckensnittsegenskaper, justering, länkar, listor och indrag.
 
 ![dc_text](assets/dc_text.png)
 
@@ -672,7 +676,7 @@ Mer information om komponenten Text och funktionerna i RTF-redigeraren finns på
 
 #### Redigering på plats {#inplace-editing}
 
-Förutom det dialogbaserade redigeringsläget Rich Text, innehåller AEM även [Inplace Editing](/help/sites-authoring/editing-content.md), som gör det möjligt att redigera texten direkt när den visas i layouten på sidan.
+Förutom det dialogbaserade redigeringsläget Rich Text innehåller AEM även [Inplace Editing](/help/sites-authoring/editing-content.md), som gör att du kan redigera texten direkt när den visas i layouten på sidan.
 
 ### Text och bild {#text-image}
 
@@ -765,7 +769,7 @@ När du har placerat en instans av komponenten på sidan kan du konfigurera:
 Format som stöds:
 * `.mp4`
 * `Ogg`
-* `FLV` (Flash-video)
+* `FLV` (Flash)
 
 
 
@@ -797,12 +801,12 @@ Med komponenten Kolumnkontroll kan användarna välja hur de vill dela upp inneh
 
 ## Form {#form}
 
-Formulärkomponenter används för att skapa formulär som besökare kan skicka in indata i. Formulär och formulärkomponenter kan användas för att samla in information, t.ex. användarfeedback (t.ex. ett kundfrågeformulär) och användarinformation (t.ex. användarregistrering).
+Formulärkomponenter används för att skapa formulär som besökare kan skicka in indata i. Forms och blankettkomponenter kan användas för att samla in information, t.ex. användarfeedback (t.ex. ett kundfrågeformulär) och användarinformation (t.ex. användarregistrering).
 
 >[!NOTE]
-Mer information om AEM Forms finns i hjälpen [för](/help/forms/home.md) AEM Forms.
+Mer information om AEM Forms finns i [AEM Forms-hjälpen](/help/forms/home.md) .
 
-Formulär byggs upp av flera olika komponenter:
+Forms är uppbyggt av flera olika komponenter:
 
 * **Formulär**
 
@@ -821,7 +825,7 @@ I följande exempel visas ett exempelformulär: består av **Form** -komponenten
 ![dc_form](assets/dc_form.png)
 
 >[!NOTE]
-Information om hur du utvecklar och anpassar formulär finns på sidan [](/help/sites-developing/developing-forms.md)Utveckla formulär. Detta inkluderar bland annat att lägga till åtgärder, begränsningar, förhandsladda fält och att använda skript för att anropa en tjänst för att utföra åtgärder.
+Mer information om hur du utvecklar och anpassar formulär finns på sidan [](/help/sites-developing/developing-forms.md)Utveckla Forms. Detta inkluderar bland annat att lägga till åtgärder, begränsningar, förhandsladda fält och att använda skript för att anropa en tjänst för att utföra åtgärder.
 
 ### Inställningar som är gemensamma för (många) formulärkomponenter {#settings-common-to-many-form-components}
 
@@ -936,7 +940,7 @@ Den här komponenten behövs för att definiera början på ett nytt formulär p
 
       Ett formulär behöver en åtgärd. Åtgärden definierar den åtgärd som utlöses för körning med data som skickas av användaren (liknar action= i HTML). Vissa behöver en motsvarande **åtgärdskonfiguration**.
 
-      En rad åtgärdstyper ingår i en AEM-standardinstallation:
+      En rad åtgärdstyper ingår i en AEM standardinstallation:
 
       * **Kontobegäran**
       * **Skapa innehåll**
@@ -1262,7 +1266,7 @@ Du kan ange olika parametrar, inklusive namnutrymmen som kan användas med hjäl
 
    * **Tillåtna namnutrymmen**
 
-      * **Geometrixx utomhus**
+      * **Geometrixx Outdoors**
       * **Arbetsflöde**
       * **Forum**
       * **Arkivfotografier**
