@@ -1,8 +1,8 @@
 ---
-title: Adobe Campaign-komponenter
-seo-title: Adobe Campaign-komponenter
-description: När ni integrerar med Adobe Campaign finns det komponenter som ni kan använda när ni arbetar med nyhetsbrev och formulär
-seo-description: När ni integrerar med Adobe Campaign finns det komponenter som ni kan använda när ni arbetar med nyhetsbrev och formulär
+title: Adobe Campaign Components
+seo-title: Adobe Campaign Components
+description: När du integrerar med Adobe Campaign finns det komponenter som du kan använda när du arbetar med nyhetsbrev och formulär
+seo-description: När du integrerar med Adobe Campaign finns det komponenter som du kan använda när du arbetar med nyhetsbrev och formulär
 uuid: a858d5ca-aa6e-4bde-92db-a6dcd8b48ae6
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,26 +11,29 @@ topic-tags: personalization
 discoiquuid: 9da34dab-7e89-4127-ab26-532687746b2a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cf0c80928bc9f6cfcf472fc5c75215b3812e2c7c
+source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
+workflow-type: tm+mt
+source-wordcount: '2854'
+ht-degree: 1%
 
 ---
 
 
-# Adobe Campaign-komponenter{#adobe-campaign-components}
+# Adobe Campaign Components{#adobe-campaign-components}
 
-När ni integrerar med Adobe Campaign finns det komponenter tillgängliga för när ni arbetar med nyhetsbrev och formulär. Båda beskrivs i det här dokumentet.
+När du integrerar med Adobe Campaign finns det komponenter som du kan använda när du arbetar med nyhetsbrev och formulär. Båda beskrivs i det här dokumentet.
 
 >[!CAUTION]
 >
->AEM-e-postkomponenterna har tagits bort. På grund av e-postens natur, som sammanfogar innehåll och format, kommer de e-postkomponenter som tillhandahålls av AEM att ha begränsad återanvändning för kunderna eftersom de måste implementera anpassade format i de komponenter som behövs för projekten.
+>AEM e-postkomponenter har tagits bort. På grund av e-postens natur, som sammanfogar innehåll och format, blir de e-postkomponenter som AEM tillhandahåller direkt i kartong av begränsad återanvändning för kunderna på grund av behovet av att implementera anpassade format i de komponenter som behövs för projekt.
 >
->E-postkomponenter kan implementeras på projektnivå och de inaktuella AEM-e-postkomponenterna visar hur man kan uppnå detta. Dessa inaktuella komponenter bör dock inte användas i projekt.
+>E-postkomponenter kan implementeras på projektnivå och de borttagna AEM e-postkomponenterna visar hur man kan uppnå detta. Dessa inaktuella komponenter bör dock inte användas i projekt.
 
 ## Adobe Campaign Newsletter Components {#adobe-campaign-newsletter-components}
 
-Alla Campaign-komponenter följer den bästa praxis som beskrivs i [Bästa praxis för e-postmallar](/help/sites-administering/best-practices-for-email-templates.md) och baseras på Adobes [HTML-kod](https://helpx.adobe.com/experience-manager/htl/using/overview.html).
+Alla Campaign-komponenter följer den bästa praxis som beskrivs i [Bästa praxis för e-postmallar](/help/sites-administering/best-practices-for-email-templates.md) och baseras på Adobe-markeringsspråket [HTML](https://helpx.adobe.com/experience-manager/htl/using/overview.html).
 
-När du öppnar ett nyhetsbrev/e-postmeddelande som är konfigurerat för integrering med Adobe Campaign bör du se följande komponenter i **Adobe Campaign Newsletter** :
+När du öppnar ett nyhetsbrev/e-postmeddelande som är konfigurerat för integrering med Adobe Campaign, bör du se följande komponenter i **Adobe Campaign nyhetsbrev** :
 
 * Rubrik (kampanj)
 * Bild (Campaign)
@@ -88,9 +91,9 @@ När bilden har överförts (och inte tidigare) kan du använda [redigering](/he
 >[!NOTE]
 >
 >I redigeraren på plats används bildens ursprungliga storlek och proportioner vid redigering. Du kan också ange höjd- och breddegenskaper. Alla storleks- och proportionsbegränsningar som definieras i egenskaperna används när du sparar redigeringsändringarna.
-
->Beroende på din instans kan minimi- och maximibegränsningar även anges av sidans [](/help/sites-developing/designer.md)design. dessa utvecklas under projektgenomförandet.
 >
+>Beroende på din instans kan minimi- och maximibegränsningar även anges av sidans [](/help/sites-developing/designer.md)design. dessa utvecklas under projektgenomförandet.
+
 Flera ytterligare alternativ finns i helskärmsläge. till exempel mappa och zooma:
 
 ![](do-not-localize/chlimage_1-11.png)
@@ -117,8 +120,10 @@ När en bild har lästs in kan du konfigurera följande:
 * **Storlek** Anger bildens höjd och bredd.
 
 >[!NOTE]
-Du måste ange information i fältet **Alt-text** på fliken **Avancerat** , annars kan bilden inte sparas och följande felmeddelande visas:
-`Validation failed. Verify the values of the marked fields.`
+>
+>Du måste ange information i fältet **Alt-text** på fliken **Avancerat** , annars kan bilden inte sparas och följande felmeddelande visas:
+>
+>`Validation failed. Verify the values of the marked fields.`
 
 
 I följande exempel visas en bildkomponent (Campaign).
@@ -135,13 +140,16 @@ Du kan konfigurera följande på flikarna **Visning**, **URL-information** eller
 
 * **Länkverktygstips** Lägger till ytterligare information om hur du använder länken.
 
-* **LinkType** I listrutan väljer du mellan en **anpassad URL** och ett **anpassat dokument**. Det här fältet är obligatoriskt. Om du väljer Anpassad URL kan du ange länkens URL. Om du väljer Adaptivt dokument kan du ange dokumentets sökväg.
+* **LinkType** Välj mellan en 
+**Anpassad URL** och ett **adaptivt dokument**. Det här fältet är obligatoriskt. Om du väljer Anpassad URL kan du ange länkens URL. Om du väljer Adaptivt dokument kan du ange dokumentets sökväg.
 
 * **Ytterligare URL-parameter** Lägg till ytterligare URL-parametrar. Klicka på Lägg till objekt om du vill lägga till flera objekt.
 
 >[!NOTE]
-Du måste ange information i fältet **Länktyp** på fliken **URL-information** , annars kan komponenten inte sparas och följande felmeddelande visas:
-`Validation failed. Verify the values of the marked fields.`
+>
+>Du måste ange information i fältet **Länktyp** på fliken **URL-information** , annars kan komponenten inte sparas och följande felmeddelande visas:
+>
+>`Validation failed. Verify the values of the marked fields.`
 
 
 I följande exempel visas en länkkomponent (Campaign).
@@ -150,13 +158,13 @@ I följande exempel visas en länkkomponent (Campaign).
 
 ### Scene7 Image Template (Campaign) {#scene-image-template-campaign}
 
-[Scene7-bildmallar](https://help.adobe.com/en_US/scene7/using/WS60B68844-9054-4099-BF69-3DC998A04D3C.html) är lageruppbyggda bildfiler, där innehåll och egenskaper kan parametriseras för variabilitet. Med **bildmallskomponenten** kan du använda Scene7-mallar i nyhetsbrev och ändra värdena för mallparametrar. Dessutom kan ni använda Adobe Campaign-metadatavariabler inuti parametrarna, så att varje användare upplever bilden på ett personaliserat sätt.
+[Scene7-bildmallar](https://help.adobe.com/en_US/scene7/using/WS60B68844-9054-4099-BF69-3DC998A04D3C.html) är lageruppbyggda bildfiler, där innehåll och egenskaper kan parametriseras för variabilitet. Med **bildmallskomponenten** kan du använda Scene7-mallar i nyhetsbrev och ändra värdena för mallparametrar. Dessutom kan du använda Adobe Campaign-metadatavariabler inuti parametrarna, så att varje användare upplever bilden på ett personaliserat sätt.
 
 ![chlimage_1-49](assets/chlimage_1-49.png)
 
-Klicka på **Redigera** för att konfigurera komponenten. Du kan konfigurera inställningarna som beskrivs i det här avsnittet. Den här Scene7-bildmallen beskrivs i detalj i [Bildmallskomponenten](/help/assets/scene7.md#image-template)Scene7.
+Klicka på **Redigera** för att konfigurera komponenten. Du kan konfigurera inställningarna som beskrivs i det här avsnittet. Den här Scene7 Image-mallen beskrivs mer ingående i [Scene7 Image Template-komponenten](/help/assets/scene7.md#image-template).
 
-Dessutom visar parameterpanelen alla mallparametrar som har definierats för mallen i Scene7. För var och en av dessa parametrar kan du anpassa värdet, infoga variabler eller återställa dem till deras standardvärde.
+Dessutom listas alla mallparametrar som har definierats för mallen i Scene7 på parameterpanelen. För var och en av dessa parametrar kan du anpassa värdet, infoga variabler eller återställa dem till deras standardvärde.
 
 ![chlimage_1-50](assets/chlimage_1-50.png)
 
@@ -205,8 +213,10 @@ Precis som med komponenterna Text &amp; Personalization (Campaign) och Image (Ca
    * **Storlek** Anger bildens höjd och bredd.
 
 >[!NOTE]
-Fältet **Alt-text** på fliken **Avancerat** är obligatoriskt eller så kan komponenten inte spara och du ser följande felmeddelande:
-`Validation failed. Verify the values of the marked fields.`
+>
+>Fältet **Alt-text** på fliken **Avancerat** är obligatoriskt eller så kan komponenten inte spara och du ser följande felmeddelande:
+>
+>`Validation failed. Verify the values of the marked fields.`
 
 
 I följande exempel visas en text- och bildkomponent (Campaign).
@@ -215,7 +225,7 @@ I följande exempel visas en text- och bildkomponent (Campaign).
 
 ### Text och personalisering (Campaign) {#text-personalization-campaign}
 
-Med komponenten Text &amp; Personalization (Campaign) kan du ange ett textblock med en WYSIWYG-redigerare, med funktioner som tillhandahålls av [RTF-redigeraren](/help/sites-authoring/rich-text-editor.md). Med den här komponenten kan du dessutom använda kontextfält och personaliseringsblock som finns i Adobe Campaign; Se även [Infoga personalisering](/help/sites-authoring/campaign.md#inserting-personalization).
+Med komponenten Text &amp; Personalization (Campaign) kan du ange ett textblock med en WYSIWYG-redigerare, med funktioner som tillhandahålls av [RTF-redigeraren](/help/sites-authoring/rich-text-editor.md). Med den här komponenten kan du dessutom använda kontextfält och anpassningsblock som finns i Adobe Campaign; Se även [Infoga personalisering](/help/sites-authoring/campaign.md#inserting-personalization).
 
 Om du väljer ikoner kan du formatera texten, inklusive teckensnittsegenskaper, justering, länkar, listor och indrag. Funktionen är i stort sett densamma i [båda gränssnitten](/help/sites-authoring/editing-content.md), även om utseendet och känslan är annorlunda:
 
@@ -224,23 +234,27 @@ Om du väljer ikoner kan du formatera texten, inklusive teckensnittsegenskaper, 
 I redigeraren kan du lägga till text, ändra justeringen, lägga till och ta bort länkar, lägga till kontextfält eller anpassningsblock och ange helskärmsläge. När du är klar med att lägga till text/personalisering markerar du kryssrutan för att spara ändringarna (eller x för att avbryta). Mer information finns i [Direktredigering](/help/sites-authoring/editing-content.md#editcontenttouchoptimizedui) .
 
 >[!NOTE]
-* Vilka anpassningsfält som är tillgängliga beror på vilken Adobe Campaign-mall nyhetsbrevet är länkat till.
-* När du har valt en profil från ContextHub ersätts personaliseringsfälten automatiskt av data från den valda profilen.
+>
+>* Vilka anpassningsfält som är tillgängliga beror på vilken Adobe Campaign-mall nyhetsbrevet är länkat till.
+>* När du har valt en profil från ContextHub ersätts personaliseringsfälten automatiskt av data från den valda profilen.
 
+>
+>
 Se [Infoga personalisering](/help/sites-authoring/campaign.md#inserting-personalization).
 
 ![chlimage_1-54](assets/chlimage_1-54.png)
 
 >[!NOTE]
-Endast de fält som definieras i **nms:seedMember** -schemat eller ett av dess tillägg tas med i beräkningen. Attributen för de tabeller som är länkade till **nms:seedMember** är inte tillgängliga.
+>
+>Endast de fält som definieras i **nms:seedMember** -schemat eller ett av dess tillägg tas med i beräkningen. Attributen för de tabeller som är länkade till **nms:seedMember** är inte tillgängliga.
 
-## Adobe Campaign-formulärkomponenter {#adobe-campaign-form-components}
+## Adobe Campaign Form Components {#adobe-campaign-form-components}
 
-Du använder Adobe Campaign-komponenter för att skapa ett formulär som användarna fyller i för att antingen prenumerera på ett nyhetsbrev, avbryta prenumerationen på ett nyhetsbrev eller uppdatera sina användarprofiler. Mer information finns i [Skapa Adobe Campaign-formulär](/help/sites-authoring/adobe-campaign-forms.md) .
+Du använder Adobe Campaign-komponenter för att skapa ett formulär som användarna fyller i för att antingen prenumerera på ett nyhetsbrev, avbryta prenumerationen på ett nyhetsbrev eller uppdatera sina användarprofiler. Mer information finns i [Skapa Adobe Campaign Forms](/help/sites-authoring/adobe-campaign-forms.md) .
 
 Varje komponentfält kan länkas till ett Adobe Campaign-databasfält. De tillgängliga fälten skiljer sig åt beroende på vilken typ av data de innehåller, vilket beskrivs i avsnittet [Komponenter och Datatyp](#components-and-data-type). Om du utökar ditt mottagarschema i Adobe Campaign är de nya fälten tillgängliga i de komponenter vars datatyper matchar.
 
-När du öppnar ett formulär som är konfigurerat att integreras med Adobe Campaign visas följande komponenter i **Adobe Campaign** -avsnittet:
+När du öppnar ett formulär som är konfigurerat för integrering med Adobe Campaign visas följande komponenter i **Adobe Campaign** -avsnittet:
 
 * Kryssruta (kampanj)
 * Datumfält (kampanj) och Datumfält/HTML5 (kampanj)
@@ -266,7 +280,7 @@ I följande tabell beskrivs de komponenter som är tillgängliga för att visa o
  <tbody>
   <tr>
    <td><p><strong>Komponent</strong></p> </td>
-   <td><p><strong>Datatyp för Adobe Campaign-fältet</strong></p> </td>
+   <td><p><strong>Datatyp för Adobe Campaign-fält</strong></p> </td>
    <td><p><strong>Exempelfält</strong></p> </td>
   </tr>
   <tr>
@@ -350,7 +364,7 @@ I följande exempel visas en CheckBox-komponent (Campaign).
 
 ### Datumfält (kampanj) och Datumfält/HTML 5 (kampanj) {#date-field-campaign-and-date-field-html-campaign}
 
-Använd datumfältet för att tillåta mottagarna att ange ett datum, Du kanske till exempel vill att mottagarna ska ange sina födelsedatum. Datumformatet matchar formatet som används i Adobe Campaign-instansen.
+Använd datumfältet för att tillåta mottagarna att ange ett datum, Du kanske till exempel vill att mottagarna ska ange sina födelsedatum. Datumformatet matchar det format som används i din Adobe Campaign-instans.
 
 Förutom de [inställningar som är gemensamma för de flesta Adobe Campaign-komponenter](#settings-common-to-most-components)kan du konfigurera följande:
 
@@ -365,7 +379,7 @@ I följande exempel visas en datumfältskomponent (Campaign) där bredden juster
 
 ### Krypterad primärnyckel (kampanj) {#encrypted-primary-key-campaign}
 
-Den här komponenten definierar namnet på URL-parametern som ska innehålla identifieraren för en Adobe Campaign-profil (**Main Resource Identifier** eller **Encrypted primary key** in Adobe Campaign Standard and 6.1).
+Den här komponenten definierar namnet på URL-parametern som kommer att innehålla identifieraren för en Adobe Campaign-profil (**huvudresurs-ID** eller **krypterad primärnyckel** i Adobe Campaign Standard respektive 6.1).
 
 Varje formulär som visar och ändrar Adobe Campaign-profildata **måste** innehålla en krypterad primärnyckelkomponent.
 
@@ -393,7 +407,7 @@ Med komponenten Dold avstämningsnyckel (Campaign) kan du lägga till dolda fäl
 Du kan konfigurera följande i komponenten Dold avstämningsnyckel (Campaign):
 
 * **Titel och text - Elementnamnet** är som standard concilKey. Du behöver bara ändra elementnamnet när det står i konflikt med namnet på ett annat element i formuläret. Två formulärfält kan inte ha samma elementnamn.
-* **Adobe Campaign - Mappa** kartor till ett personaliseringsfält för Adobe Campaign.
+* **Adobe Campaign - Mappa** kartor till ett personaliseringsfält i Adobe Campaign.
 
 I följande exempel visas en komponent för dold avstämningsnyckel (Campaign).
 
@@ -418,7 +432,7 @@ I följande exempel visas en Numeric Field-komponent (Campaign) med den konfigur
 
 I den här nedrullningsbara listan kan du välja ett alternativ; till exempel en mottagares kön eller status.
 
-Du kan [konfigurera inställningar som är gemensamma för de flesta Adobe Campaign-komponenter](#settings-common-to-most-components) i alternativfältskomponenten (Campaign). Om du vill fylla i den nedrullningsbara listan väljer du lämpligt fält i Adobe Campaign-anpassningsfälten genom att klicka eller trycka på Adobe Campaign-symbolen och navigera till fältet.
+Du kan [konfigurera inställningar som är gemensamma för de flesta Adobe Campaign-komponenter](#settings-common-to-most-components) i alternativfältskomponenten (Campaign). Om du vill fylla i den nedrullningsbara listan väljer du lämpligt fält i Adobe Campaign personaliseringsfält genom att klicka eller trycka på Adobe Campaign-symbolen och navigera till fältet.
 
 ![chlimage_1-66](assets/chlimage_1-66.png)
 
@@ -430,10 +444,11 @@ I följande exempel visas en alternativfältskomponent (Campaign).
 
 Använd komponenten **Checklista för prenumerationer (Campaign)** om du vill ändra de prenumerationer som är kopplade till en Adobe Campaign-profil.
 
-När den här komponenten läggs till i ett formulär visas alla tillgängliga prenumerationer som kryssrutor där användaren kan välja önskad prenumeration. När användare skickar formuläret prenumererar den här komponenten på användaren eller avbryter prenumerationen på de valda tjänsterna beroende på typ av formuläråtgärd (**Adobe Campaign: Prenumerera på Services** eller **Adobe Campaign: Avbeställ tjänsterna**).
+När den här komponenten läggs till i ett formulär visas alla tillgängliga prenumerationer som kryssrutor där användaren kan välja önskad prenumeration. När användare skickar formuläret prenumererar den här komponenten på eller avbryter prenumerationen för användaren från de valda tjänsterna beroende på typ av formuläråtgärd (**Adobe Campaign: Prenumerera på Services** eller **Adobe Campaign: Avbeställ tjänsterna**).
 
 >[!NOTE]
-Komponenten kontrollerar inte vilka tjänster användaren redan prenumererar på/avbeställer.
+>
+>Komponenten kontrollerar inte vilka tjänster användaren redan prenumererar på/avbeställer.
 
 Du kan [konfigurera inställningar som är gemensamma för de flesta Adobe Campaign-komponenter](#settings-common-to-most-components) i komponenten Checklista för prenumerationer (Campaign). (Det finns inga Adobe Campaign-konfigurationer tillgängliga för den här komponenten.)
 
