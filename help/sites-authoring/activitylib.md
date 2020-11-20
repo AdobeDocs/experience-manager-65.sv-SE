@@ -11,7 +11,7 @@ topic-tags: personalization
 discoiquuid: ef2321a3-cd51-4298-8782-e1a2ca721868
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f62d2d639499c128fd4cafa5f9c39307ae9a607d
+source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
 workflow-type: tm+mt
 source-wordcount: '2022'
 ht-degree: 13%
@@ -37,25 +37,29 @@ Aktiviteter är tillgängliga i målläge för [redigering av riktat innehåll](
 
 Aktiviteter visas med en etikett som beskriver vilken typ av aktivitet som definieras:
 
-* XT - målinriktning för Adobe Target-upplevelser
+* XT - målinriktad Adobe Target-upplevelse
 * A/B - Adobe Target A/B-testning
-* AEM - Adobe Experience Manager med målinriktning (kontextub- eller klientstyrd)
+* AEM - målinriktning för Adobe Experience Manager (kontextub- eller klientstyrd)
 
 ![chlimage_1-114](assets/chlimage_1-114.png)
 
 >[!NOTE]
 >
 >Vilka typer av aktiviteter som är tillgängliga bestäms av följande:
-
+>
 >* If the **xt_only** option is enabled on the Adobe Target tenant (clientcode) used on the AEM side to connect to Adobe Target, then you can create **only** XT activities in AEM.
    >
+   >
 * If the **xt_only** options is **not** enabled on the Adobe Target tenant (clientcode), then you can create **both** XT and A/B activities in AEM.
-
+>
+>
 **Ytterligare information:** **Alternativen xt_only** är en inställning som används för en viss målklient (clientcode) och kan bara ändras direkt i Adobe Target. Du kan inte aktivera eller inaktivera det här alternativet i AEM.
 
 >[!CAUTION]
-Du måste skydda aktivitetsinställningsnoden **cq:ActivitySettings** i publiceringsinstansen så att den inte är tillgänglig för vanliga användare. Noden för aktivitetsinställningar ska endast vara tillgänglig för tjänsten som hanterar aktivitetssynkroniseringen till Adobe Target.
-Mer information finns i [Förutsättningar för att integrera med Adobe Target](/help/sites-administering/target-requirements.md#securingtheactivitysettings) .
+>
+>Du måste skydda aktivitetsinställningsnoden **cq:ActivitySettings** i publiceringsinstansen så att den inte är tillgänglig för vanliga användare. Noden för aktivitetsinställningar ska bara vara tillgänglig för tjänsten som hanterar aktivitetssynkroniseringen till Adobe Target.
+>
+>Mer information finns i [Förutsättningar för att integrera med Adobe Target](/help/sites-administering/target-requirements.md#securingtheactivitysettings) .
 
 ## Skapa ett varumärke med hjälp av aktivitetskonsolen {#creating-a-brand-using-the-activities-console}
 
@@ -89,8 +93,10 @@ Lägg till en aktivitet eller redigera en befintlig aktivitet för att fokusera 
 * **Målmått:** Om du väljer Adobe Target som målinriktningsmotor kan du lägga till framgångsmått för aktiviteten. Ett framgångsmått krävs.
 
 >[!NOTE]
-Nya Adobe Target-aktiviteter måste ***skapas*** i den innehållsredigerare som angetts som mål, inte i **aktivitetskonsolen**, eftersom synkroniseringen med Adobe Target misslyckas annars.
-Du kan dock redigera befintliga Adobe Target-aktiviteter i konsolen.
+>
+>Nya Adobe Target-aktiviteter måste ***skapas*** i den innehållsredigerare som angetts som mål, inte i **aktivitetskonsolen**, eftersom synkroniseringen med Adobe Target misslyckas annars.
+>
+>Du kan dock redigera befintliga Adobe Target-aktiviteter i konsolen.
 
 Så här lägger du till en aktivitet:
 
@@ -98,19 +104,20 @@ Så här lägger du till en aktivitet:
 1. Ange följande information och klicka eller tryck sedan på **Nästa**:
 
    * Ett namn för aktiviteten.
-   * Målmotorn som ska användas. ContextHub (AEM) är valt som standard. Om du behöver använda Adobe Target skapar du aktiviteten i den aktiva innehållsredigeraren.
+   * Målmotorn som ska användas. ContextHub (AEM) är markerat som standard. Om du behöver använda Adobe Target skapar du aktiviteten i den aktiva innehållsredigeraren.
    * Om du valde Adobe Target som målmotor väljer/redigerar du den molnkonfiguration som ska användas för att ansluta till Adobe Target. (Se till att du inte väljer något ramverk som du har skapat för din molnkonfiguration.)
    * (Valfritt) Syftet med eller en beskrivning av aktiviteten.
    * Välj aktivitetstyp.
 
 1. Lägg till en eller flera upplevelser till aktiviteten. Klicka eller tryck på **Lägg till upplevelse**.
-1. Om ni använder AEM-målinriktning eller Adobe Target-upplevelser som mål:
+1. Om ni använder AEM målinriktning eller Adobe Target upplevelseanpassning:
 
    1. Klicka eller tryck på **Välj publik **och välj det segment som upplevelsen ska rikta in sig på.
    1. Klicka eller tryck på **Lägg till upplevelse**, skriv ett namn och klicka eller tryck på **OK**.
 
    1. Klicka eller tryck på **Nästa**.
-   Om du använder A/B-testning i Adobe Target:
+
+   Om du använder Adobe Target A/B-testning:
 
    1. Klicka på eller tryck på pennan i rutan Målgrupper för att välja en målgrupp.
    1. Klicka eller tryck på **Lägg till upplevelse**, skriv ett namn och klicka eller tryck på **OK**.
@@ -134,14 +141,16 @@ Så här lägger du till en aktivitet:
 1. Klicka eller tryck på **Spara**.
 
    >[!NOTE]
-   När du har skapat en aktivitet måste du publicera den så att den blir tillgänglig.
+   >
+   >När du har skapat en aktivitet måste du publicera den så att den blir tillgänglig.
 
 ## Förlags- och avpubliceringsverksamhet {#publishing-and-unpublishing-activities}
 
 Du måste publicera aktiviteter för att göra dem tillgängliga. Omvänt kanske du vill göra aktiviteter otillgängliga genom att avpublicera dem.
 
 >[!NOTE]
-När du avpublicerar en aktivitet ändras inte aktivitetens status om du inte uppdaterar sidan.
+>
+>När du avpublicerar en aktivitet ändras inte aktivitetens status om du inte uppdaterar sidan.
 
 Så här publicerar eller avpublicerar du aktiviteter:
 
@@ -154,7 +163,7 @@ Så här publicerar eller avpublicerar du aktiviteter:
 
 ## Aktiviteter för författare och publiceringsinstanser {#activities-on-author-and-publish-instances}
 
-När en aktivitet som använder målmotorn i Adobe Target aktiveras skapas en andra aktivitet i publiceringsinstansen:
+När en aktivitet som använder Adobe Target målmotor aktiveras skapas en andra aktivitet i publiceringsinstansen:
 
 * Aktiviteten på författarinstansen spårar aktivitet på författarinstansen och är användbar för att simulera besökarupplevelsen. De analyser som registreras för den här aktiviteten återspeglar bara vad som händer på författarinstansen.
 * Aktiviteten i publiceringsinstansen speglar och svarar på aktiviteten på publiceringsservern. Detta är den aktivitet som körs på den offentliga webbplatsen. Det är bara publiceringsaktiviteten som är relevant för att spåra och analysera användningen av den publika webbplatsen.
@@ -177,6 +186,7 @@ Så här visar du aktivitetsprestanda och konverterar vinnande upplevelser:
 
    * Det inaktiverar den aktuella aktiviteten
    * Ändrar alla sidor och ersätter målinnehållet med det faktiska innehållet i den vinnande upplevelsen. Innehållet i den vinnande upplevelsen blir en del av den normala sidan **utan** målinriktning.
+
    ![chlimage_1-116](assets/chlimage_1-116.png)
 
    En vinnande upplevelse är den upplevelse som genererar mer Lyft i rapporterna, som baseras på konverteringsgraden.
@@ -185,7 +195,7 @@ Så här visar du aktivitetsprestanda och konverterar vinnande upplevelser:
 
 ## Synkronisera aktiviteter med Adobe Target {#synchronizing-activities-with-adobe-target}
 
-Aktiviteter som använder Adobe Target-målmotorn synkroniseras med Adobe Target-kampanjer. En aktivitet synkroniseras automatiskt till Adobe Target när följande villkor uppfylls:
+Aktiviteter som använder Adobe Target målinriktningsmotor synkroniseras med Adobe Target kampanjer. En aktivitet synkroniseras automatiskt till Adobe Target när följande villkor uppfylls:
 
 * Aktiviteten innehåller minst en upplevelse.
 * Minst en upplevelse innehåller ett mappat segment och ett erbjudande.
@@ -202,26 +212,29 @@ När en aktivitet synkroniseras skapas en motsvarande kampanj i Adobe Target:
 
 _författaraktiviteter synkroniseras omedelbart när aktiviteten ändras. Omedelbar synkronisering möjliggör simulering av aktiviteter med Client Context eller ContextHub.
 
-Publiceringsaktiviteter synkroniseras när aktiviteten publiceras till AEM-publiceringsinstansen.
+Publiceringsaktiviteter synkroniseras när aktiviteten publiceras till den AEM publiceringsinstansen.
 
 ## Felsökning av aktivitetssynkronisering {#troubleshooting-activity-synchronization}
 
-När AEM synkroniserar en aktivitet med Adobe Target inkluderar AEM en egenskap för aktiviteten med namnet `thirdPartyId`. Värdet för den här egenskapen baseras på sökvägen för aktiviteten i AEM-databasen. Två kampanjer i Adobe Target kan inte ha samma värde för `thirdPartyId` egenskapen. En aktivitet kan därför inte synkroniseras om en befintlig kampanj (av en annan typ AB, XT) i Adobe Target använder samma värde för `thirdPartyId`.
+När AEM synkroniserar en aktivitet med Adobe Target innehåller AEM en egenskap för aktiviteten med namnet `thirdPartyId`. Värdet för den här egenskapen baseras på sökvägen för aktiviteten i AEM. Två kampanjer i Adobe Target kan inte ha samma värde för `thirdPartyId` egenskapen. En aktivitet kan därför inte synkroniseras om en befintlig kampanj (av en annan typ AB, XT) i Adobe Target använder samma värde för `thirdPartyId`.
 
 Denna situation kan uppstå under följande omständigheter:
 
 1. En aktivitet skapas och synkroniseras med Adobe Target.
-1. I en annan AEM-instans skapas en aktivitet under samma varumärke och med samma namn. Synkronisering av den här aktiviteten misslyckas vid försök.
+1. I en annan AEM skapas en aktivitet under samma varumärke och med samma namn. Synkronisering av den här aktiviteten misslyckas vid försök.
 
 Denna situation kan även uppstå under följande omständigheter:
 
-1. En aktivitet skapas och synkroniseras med Adobe Target. Aktiviteten tas sedan bort på AEM.
+1. En aktivitet skapas och synkroniseras med Adobe Target. Aktiviteten tas sedan bort AEM.
 1. En aktivitet skapas under samma varumärke och använder samma namn som den borttagna aktiviteten. Synkronisering av den här aktiviteten misslyckas vid försök.
 
 Använd alltid unika namn för aktiviteter för att undvika synkroniseringsproblem. Om en aktivitet inte kan synkroniseras kan du ta bort kampanjen i Adobe Target som använder samma namn om kampanjen inte används.
 
 >[!NOTE]
-När du skapar en kampanj i Adobe Target tilldelas varje kampanj en egenskap `thirdPartyId t`som kallas. När du tar bort kampanjen i Adobe Target tas `thirdPartyId` inte bort. Du kan inte återanvända `thirdPartyId` för kampanjer av olika typer (AB, XT) och den kan inte tas bort manuellt. För att undvika detta bör varje kampanj namnges med ett unikt namn. kampanjnamn kan därför inte återanvändas i olika kampanjtyper.
-Om du använder samma namn i samma kampanjtyp skriver du över den befintliga kampanjen.
-Om du får felmeddelandet&quot;Begäran misslyckades&quot; under synkroniseringen. `thirdPartyId` finns redan&quot;, ändrar namnet på kampanjen och synkroniserar igen.
+>
+>När du skapar en kampanj i Adobe Target tilldelas varje kampanj en egenskap `thirdPartyId t`som kallas. När du tar bort kampanjen i Adobe Target tas `thirdPartyId` den inte bort. Du kan inte återanvända `thirdPartyId` för kampanjer av olika typer (AB, XT) och den kan inte tas bort manuellt. För att undvika detta bör varje kampanj namnges med ett unikt namn. kampanjnamn kan därför inte återanvändas i olika kampanjtyper.
+>
+>Om du använder samma namn i samma kampanjtyp skriver du över den befintliga kampanjen.
+>
+>Om du får felmeddelandet&quot;Begäran misslyckades&quot; under synkroniseringen. `thirdPartyId` finns redan&quot;, ändrar namnet på kampanjen och synkroniserar igen.
 
