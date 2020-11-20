@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: a6f58f6a-015a-4ced-941c-ef1b6d3e1d6f
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
 workflow-type: tm+mt
 source-wordcount: '4301'
 ht-degree: 1%
@@ -49,7 +49,7 @@ Interactive Images:
 Men om du använder AEM Sites, eller AEM e-handel, eller båda, är det här steget inte nödvändigt.
 Se [e-handelskoncept i AEM Assets](/help/sites-administering/concepts.md).
 
-1. **(Valfritt) Skapa en förinställning** för Interactive Image Viewer - Anpassa den grafiska bild som används för att representera aktiveringspunkter. Du behöver inte skapa en egen förinställning för Interactive Image Viewer om du tänker använda den färdiga Interactive Image Viewer-förinställningen med namnet `Shoppable_Banner` .
+1. **(Valfritt) Skapa en förinställning** för Interactive Image viewer - Anpassa den grafiska bild som används för att representera aktiveringspunkter. Du behöver inte skapa en egen förinställning för Interactive Image Viewer om du tänker använda den färdiga Interactive Image Viewer-förinställningen med namnet `Shoppable_Banner` .
 Se [(Valfritt) Skapa en förinställning](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset)för visningsprogrammet för interaktiva bilder.
 
 1. **Överför en bildbanderoll** - Överför bildbanderoller som du vill göra interaktiva.
@@ -246,7 +246,7 @@ Se [(Valfritt) Förhandsvisa interaktiva bilder](#optional-previewing-interactiv
 >[!NOTE]
 >
 >När du lägger till aktiveringspunkter i en bild i en interaktiv bild eller en Carousel-banderoll lagras hotspot-informationen på samma metadataplats - i förhållande till bildens plats - oavsett om det är en interaktiv bild eller en Carousel-banderoll. Den här funktionen innebär att du enkelt kan återanvända samma bild - tillsammans med dess definierade hotspot-data - i båda visningsprogrammen.
-
+>
 >Observera dock att Carousel Banners stöder bildscheman på bilder som även kan innehålla hotspot-områden. en interaktiv bild gör det inte. Tänk på detta om du tänker skapa en interaktiv bild eller en Carousel-banderoll som använder samma bild. Du kanske vill skapa interaktiva bilder och Carousel Banners med separata kopior av samma bild istället.
 >
 >Se även [Carousel Banners](/help/assets/carousel-banners.md).
