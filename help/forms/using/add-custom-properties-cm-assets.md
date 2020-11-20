@@ -105,6 +105,7 @@ Följ de här stegen för att lägga till en anpassad egenskap för alla resurst
 
    >[!NOTE]
    >
+
    >De gemensamma egenskaperna för alla resurser som du lägger till visas på fliken Grundläggande i resursegenskaperna. Som standard visas de gemensamma egenskaper som lagts till för alla resurser på egenskapssidan samt på sidan för att skapa resurser. Om du vill dölja de gemensamma egenskaperna måste du <!--link to show / hide properties]-->.
 
 ### Scenario: Lägga till anpassad listruta och värden till en anpassad egenskap/ett anpassat fält {#scenario-add-custom-drop-down-and-values-to-a-custom-property-field}
