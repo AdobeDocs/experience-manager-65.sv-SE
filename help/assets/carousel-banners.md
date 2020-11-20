@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: e26c7f7f-bdd7-421a-8614-ba48abf381d2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: c3ae4447581d946554d792c68d31b47a6b67d5df
+source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
 workflow-type: tm+mt
-source-wordcount: '4720'
+source-wordcount: '4719'
 ht-degree: 3%
 
 ---
@@ -43,7 +43,7 @@ Titta på en genomgång på 10 minuter och 33 sekunder om [hur karusellbanners s
 
 >[!NOTE]
 >
->Icke-administrativa användare måste läggas till i **[!UICONTROL dam-users]** gruppen för att kunna skapa eller redigera karusellbanderoller. Om du har problem med att skapa eller redigera kontaktar du systemadministratören som kan lägga till dig i **D[!UICONTROL am-users]** -gruppen.
+>Icke-administrativa användare måste läggas till i **[!UICONTROL dam-users]** gruppen för att kunna skapa eller redigera karusellbanderoller. Om du har problem med att skapa eller redigera kontaktar du systemadministratören som kan lägga till dig i **[!UICONTROL dam-users]** gruppen.
 
 ## Snabbstart: Carousel Banners {#quick-start-carousel-banners}
 
@@ -255,8 +255,7 @@ Se [(valfritt) Förhandsgranska Carousel Banners.](#optional-previewing-carousel
 >[!NOTE]
 >
 >När du lägger till aktiveringspunkter i en bild i en [interaktiv bild](/help/assets/interactive-images.md) eller en Carousel-banderoll lagras hotspot-informationen på samma metadataplats, i förhållande till bildens plats&amp;mdashvärde, oavsett om det är en interaktiv bild eller en Carousel-banderoll. Den här funktionen innebär att du enkelt kan återanvända samma bild - tillsammans med dess definierade hotspot-data - i båda visningsprogrammen.
-
->Observera dock att Carousel Banners stöder bildscheman på bilder som även kan innehålla hotspot-områden. en interaktiv bild gör det inte. Tänk på detta om du tänker skapa en interaktiv bild eller en Carousel-banderoll som använder samma bild. Du kanske vill skapa interaktiva bilder och Carousel Banners med separata kopior av samma bild istället.
+Observera dock att Carousel Banners stöder bildscheman på bilder som även kan innehålla hotspot-områden. en interaktiv bild gör det inte. Tänk på detta om du tänker skapa en interaktiv bild eller en Carousel-banderoll som använder samma bild. Du kanske vill skapa interaktiva bilder och Carousel Banners med separata kopior av samma bild istället.
 
 >[!NOTE]
 Om du redigerar interaktiva bilder med aktiveringspunkter och beskär bilden tas dina aktiveringspunkter bort.
