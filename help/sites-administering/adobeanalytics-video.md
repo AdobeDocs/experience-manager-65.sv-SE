@@ -1,8 +1,8 @@
 ---
 title: Konfigurera videospårning för Adobe Analytics
 seo-title: Konfigurera videospårning för Adobe Analytics
-description: Lär dig hur du konfigurerar videospårning för SiteCatalyst.
-seo-description: Lär dig hur du konfigurerar videospårning för SiteCatalyst.
+description: Läs om hur du konfigurerar videospårning för SiteCatalyst.
+seo-description: Läs om hur du konfigurerar videospårning för SiteCatalyst.
 uuid: 5a862f05-abfa-42a2-ad40-4c1c32f1bd75
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: a18ddac1-9e4c-4857-9cb3-4d5eeb8dd9ec
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
 workflow-type: tm+mt
 source-wordcount: '1766'
 ht-degree: 1%
@@ -25,9 +25,9 @@ Det finns flera metoder för att spåra videohändelser, varav två är äldre a
 
 >[!NOTE]
 >
->Innan du fortsätter bör du kontrollera** **att det finns en** uppspelningsbar video** som du laddar upp i AEM.
-
->Om du vill vara säker på att dina videofilmer spelas upp på sidan kan du läsa **[den här självstudiekursen](/help/sites-authoring/default-components-foundation.md#video)**för mer information om hur du kodar om videofiler i AEM.
+>Innan du fortsätter kontrollerar du att du har överfört en **uppspelningsbar video** i AEM.
+>
+>Om du vill vara säker på att dina videofilmer spelas upp på sidan kan du läsa **[den här självstudiekursen](/help/sites-authoring/default-components-foundation.md#video)** för mer information om hur du kodar om videofiler i AEM.
 
 Använd följande procedur för att konfigurera ett ramverk för videospårning med hjälp av varje metod.
 
@@ -39,7 +39,7 @@ Använd följande procedur för att konfigurera ett ramverk för videospårning 
 
 1. Konfigurera en webbsida genom att dra en **videokomponent** från sidosparken och lägga till en uppspelningsbar **video som en resurs** för komponenten
 
-1. [Skapa en konfiguration och ett ramverk](/help/sites-administering/adobeanalytics.md)för Adobe Analytics.
+1. [Skapa en Adobe Analytics-konfiguration och ett ramverk](/help/sites-administering/adobeanalytics.md).
 
    * Exemplen i de följande avsnitten använder namnet **my-sc-configuration** för konfigurationen och **videoflödet** för ramverket.
 
@@ -52,7 +52,7 @@ Använd följande procedur för att konfigurera ett ramverk för videospårning 
    * [Äldre milstolpar](/help/sites-administering/adobeanalytics.md)
    * [Äldre sekunder](/help/sites-administering/adobeanalytics.md)
 
-1. När du väljer en spårningsmetod ändras listan med CQ-variabler därefter. I följande avsnitt finns information om hur du konfigurerar komponenten ytterligare och mappar CQ-variablerna med egenskaper i Adobe Analytics.
+1. När du väljer en spårningsmetod ändras listan med CQ-variabler därefter. Använd följande avsnitt för information om hur du konfigurerar komponenten ytterligare och mappar CQ-variablerna med Adobe Analytics-egenskaper.
 
 ## Milstolpar {#milestones}
 
@@ -144,7 +144,7 @@ I följande tabell beskrivs CQ-standardvariablerna som anges för metoden Milest
    Information om hur du optimerar mappningarna finns i guiden [Mäta video i Adobe Analytics](https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html) .
 
 1. [Lägg till ramverket](/help/sites-administering/adobeanalytics.md) på sidan.
-1. Om du vill testa konfigurationen i **förhandsgranskningsläget** spelar du upp videon och får de anrop från Adobe Analytics som ska utlösas.
+1. Om du vill testa konfigurationen i **förhandsgranskningsläget** spelar du upp videon och får Adobe Analytics-anrop att utlösa.
 
 De följande exemplen på spårningsdata för Adobe Analytics gäller för spårning av milstolpar med hjälp av spårförskjutningar på 4,8,16,20 och 24, och följande mappningar för CQ-variablerna:
 
@@ -223,9 +223,9 @@ I det här exemplet visas videokomponenten på följande sätt på ramverkssidan
 
 >[!NOTE]
 >
->För att se anropen till Adobe Analytics använder du ett lämpligt verktyg, som DigitalPulse Debugger eller Fiddler.
+>Om du vill se anropen till Adobe Analytics använder du ett lämpligt verktyg, som DigitalPulse Debugger eller Fiddler.
 
-Anrop till Adobe Analytics med exemplet ska se ut så här när de visas med DigitalPulse Debugger:
+Anrop till Adobe Analytics som använder exemplet ska se ut så här när de visas med DigitalPulse Debugger:
 
 ![chlimage_1-128](assets/chlimage_1-128.png)
 
@@ -279,11 +279,11 @@ eventdata.events.milestoneXX
    Information om hur du optimerar mappningarna finns i guiden [Mäta video i Adobe Analytics](https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html) .
 
 1. [Lägg till ramverket](/help/sites-administering/adobeanalytics.md) på sidan.
-1. Om du vill testa konfigurationen i **förhandsgranskningsläget** spelar du upp videon och får de anrop från Adobe Analytics som ska utlösas.
+1. Om du vill testa konfigurationen i **förhandsgranskningsläget** spelar du upp videon och får Adobe Analytics-anrop att utlösa.
 
 ## Äldre milstolpar {#legacy-milestones}
 
-Den här metoden liknar metoden milstolpar med skillnaden att de milstolpar som anges i fältet *Spärra förskjutning* är procentvärden i stället för att ange punkter i videon.
+Den här metoden liknar metoden milstolpar med skillnaden att de milstolpar som anges i fältet *Spårningsförskjutning* är procentvärden i stället för att ange punkter i videon.
 
 >[!NOTE]
 >
@@ -292,7 +292,8 @@ Den här metoden liknar metoden milstolpar med skillnaden att de milstolpar som 
 1. Ange spårförskjutning.
 
    * e.g.10,50,75,100
-   Informationen som skickas till Adobe Analytics är dessutom mindre anpassningsbar; det finns bara tre variabler för mappning:
+
+   Dessutom är informationen som skickas till Adobe Analytics mindre anpassningsbar. det finns bara tre variabler för mappning:
 
 <table>
  <tbody>
@@ -339,7 +340,7 @@ Den här metoden liknar metoden milstolpar med skillnaden att de milstolpar som 
 
 ## Äldre sekunder {#legacy-seconds}
 
-När du använder metoden** för äldre sekunder** aktiveras Adobe Analytics-anrop var N:e sekund, där N anges i fältet för spårförskjutning.
+När du använder metoden** för tidigare sekunder* aktiveras Adobe Analytics-anrop var N:e sekund, där N anges i fältet för spårförskjutning.
 
 1. Ställ in spårförskjutningen till valfritt antal sekunder,
 
@@ -375,11 +376,11 @@ När du använder metoden** för äldre sekunder** aktiveras Adobe Analytics-anr
 
    Övriga **relevanta uppgifter** i samtalet skickas till **en** variabel med namnet **pev3**.
 
-   Anrop till Adobe Analytics med exemplet ska se ut så här när de visas med DigitalPulse Debugger:
+   Anrop till Adobe Analytics som använder exemplet ska se ut så här när de visas med DigitalPulse Debugger:
 
    ![lseconds](assets/lseconds.png)
 
-   *Anropet liknar samtalet i det tidigare samtalet om milstolpar. Se informationen om föregående3 **[som finns](/help/sites-administering/adobeanalytics.md)**där.*
+   *Anropet liknar samtalet i det tidigare milstolparna. Se informationen om föregående3 **[som finns](/help/sites-administering/adobeanalytics.md)**där.*
 
 **Referenser som används i den här självstudien:**
 
