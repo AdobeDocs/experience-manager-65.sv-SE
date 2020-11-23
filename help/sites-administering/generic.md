@@ -1,5 +1,5 @@
 ---
-ttitle: Administering generic eCommerce
+title: Administrera generisk e-handel
 seo-title: Administrera generisk e-handel
 description: Den AEM generiska lösningen innehåller metoder för att hantera den handelsinformation som finns i databasen.
 seo-description: Den AEM generiska lösningen innehåller metoder för att hantera den handelsinformation som finns i databasen.
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 9167cbe2-2efb-422d-b58b-0c24b9476fe6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1207cd54d9d605b7fbf606393cd33b5c19b603f4
+source-git-commit: 06d6696a5493f0e166e400bcd9a379b7be062c1e
 workflow-type: tm+mt
-source-wordcount: '3008'
+source-wordcount: '3011'
 ht-degree: 1%
 
 ---
@@ -379,7 +379,7 @@ Du kan titta på dem i webbkonsolen i OSGI-händelser ( `/system/console/events`
 
 ### Bild med Lägg till i kundvagnslänkar {#image-with-add-to-cart-links}
 
-Med komponenten Bild med Lägg i kundvagnslänkar kan du snabbt lägga till en produkt i kundvagnen genom att skapa en aktiveringspunkt länkad till en produkt i en bild.
+Med komponenten Bild med Lägg till i kundvagnslänkar kan du snabbt lägga till en produkt i kundvagnen genom att skapa en aktiveringspunkt länkad till en produkt i en bild.
 
 När du klickar på aktiveringspunkten öppnas en dialogruta där du kan välja storlek och kvantitet för produkten.
 
@@ -654,7 +654,7 @@ På demowebbplatsen (Geometrixx Outdoors - engelska) kan du se kupongformuläret
 
 >[!NOTE]
 >
->Orderkonsolen visar leverantörsorderinformationen, som aldrig publiceras.
+>Orderkonsolen visar information om leverantörsorder, som aldrig publiceras.
 >
 >Kundorderinformationen finns i deras hemkataloger och visas i orderhistoriken för deras konto. Denna information publiceras tillsammans med resten av deras hemkatalog.
 
