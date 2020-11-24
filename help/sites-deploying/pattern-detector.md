@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: b5607343-a13b-4520-a771-f1a555bfcc7b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d510decba9b2af23bab54c78779f98a36a6172d4
+source-git-commit: ba7ac70858b7b2fd610d63355a22a69c3a7586e3
 workflow-type: tm+mt
-source-wordcount: '537'
+source-wordcount: '544'
 ht-degree: 1%
 
 ---
@@ -32,7 +32,7 @@ Detta kan fungera som en bedömning av den utvecklingsinsats som är nödvändig
 
 ## Konfigurera {#how-to-set-up}
 
-Mönsteravkännaren släpps separat som ett [paket](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/compatpack/pd-all-aem65) som fungerar med alla AEM från 6.1 till 6.5 AEM 6.5. Den kan installeras med [pakethanteraren](/help/sites-administering/package-manager.md).
+Mönsteravkännaren släpps separat som ett [paket](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/compatpack/pd-all-aem65) som fungerar med alla AEM från 6.1 till 6.5 AEM 6.5. Den kan installeras med [pakethanteraren](/help/sites-administering/package-manager.md).
 
 ## Användning {#how-to-use}
 
