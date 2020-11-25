@@ -1,6 +1,6 @@
 ---
-title: ASRP - Adobe Storage Resource Provider
-seo-title: ASRP - Adobe Storage Resource Provider
+title: ASRP - Adobe lagringsresursleverantör
+seo-title: ASRP - Adobe lagringsresursleverantör
 description: Konfigurera AEM Communities för att använda en relationsdatabas som gemensam lagringsplats
 seo-description: Konfigurera AEM Communities för att använda en relationsdatabas som gemensam lagringsplats
 uuid: abe47ad9-9f72-4dad-a5e9-6d621a9722d4
@@ -11,15 +11,15 @@ content-type: reference
 discoiquuid: 3e81b519-57ca-4ee1-94bd-7adac4605407
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cf2733ecee5c74b79b85267191fbdf3cbce9c98b
+source-git-commit: fd205cd6253991f527f87b9868d503f64a99a600
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '816'
 ht-degree: 0%
 
 ---
 
 
-# ASRP - Adobe Storage Resource Provider {#asrp-adobe-storage-resource-provider}
+# ASRP - Adobe lagringsresursleverantör {#asrp-adobe-storage-resource-provider}
 
 ## Om ASRP {#about-asrp}
 
@@ -31,7 +31,7 @@ Se även [egenskaper för SRP-alternativ](/help/communities/working-with-srp.md#
 
 Ytterligare en licens krävs för ASRP.
 
-Kontakta din kontorepresentant för att konfigurera din AEM Communities-webbplats så att den använder ASRP för UGC:
+Kontrollera att du har följande för att konfigurera din AEM Communities-webbplats så att den använder ASRP för UGC:
 
 * URL till datacenter (adress till ASRP-slutpunkten)
 * Konsumentnyckel
@@ -69,13 +69,13 @@ Testa anslutningen när konfigurationen har skickats:
 
 * Välj **Testa konfiguration**.
 
-   Testa anslutningen till datacentret från konsolen Lagringskonfiguration för varje författare och publiceringsinstans.
+   Testa anslutningen till datacentret från lagringskonsolen för varje författare och publiceringsinstans.
 
 * Se till att URL:er för webbplatsen för profildata kan dirigeras från datacentret genom att [externalisera länkar](#externalize-links).
 
 ### Replikera krypteringsnyckeln {#replicate-the-crypto-key}
 
-Konsumentnyckeln och hemlig nyckel är krypterade. För att nycklarna ska kunna krypteras eller dekrypteras på rätt sätt måste den primära krypteringsnyckeln för Granite vara vara densamma för alla AEM-instanser.
+Konsumentnyckeln och hemlig nyckel är krypterade. För att nycklarna ska kunna krypteras eller dekrypteras på rätt sätt måste den primära krypteringsnyckeln för Granite vara vara densamma för alla AEM.
 
 Följ instruktionerna på [Replikera krypteringsnyckeln](/help/communities/deploy-communities.md#replicate-the-crypto-key).
 
@@ -87,7 +87,7 @@ Var noga med att ange att domänerna ska vara URL:er som är routningsbara från
 
 ### Tidssynkronisering {#time-synchronization}
 
-För att autentiseringen med ASRP-slutpunkten ska lyckas måste datorerna som kör din värdbaserade AEM Communities vara tidssynkroniserade, till exempel med [NTP (Network Time Protocol)](https://www.ntp.org/).
+För att autentiseringen med ASRP-slutpunkten ska lyckas måste datorerna som kör ditt värdbaserade AEM Communities vara tidssynkroniserade, till exempel med [NTP (Network Time Protocol)](https://www.ntp.org/).
 
 ### Publicera konfigurationen {#publishing-the-configuration}
 
@@ -109,7 +109,7 @@ I AEM Author-instans:
 >
 >Om du aktiverar ASRP på en publicerad communitywebbplats visas inte längre UGC som redan lagrats i [JCR](/help/communities/jsrp.md) , eftersom det inte finns någon synkronisering av data mellan lokal lagring och molnlagring.
 
-**`AEM Communities Extension`** introducerades tidigare i AEM 6.0 sociala communityn som en molntjänst. Från och med AEM 6.1 Communities behövs ingen molnkonfiguration. Välj bara ASRP från [lagringskonfigurationskonsolen](/help/communities/srp-config.md).
+**`AEM Communities Extension`** introducerades tidigare i AEM 6.0 sociala communities som en molntjänst. Från och med AEM 6.1 Communities behövs ingen molnkonfiguration. Välj bara ASRP från [lagringskonfigurationskonsolen](/help/communities/srp-config.md).
 
 På grund av den nya lagringsstrukturen är det nödvändigt att följa [uppgraderingsinstruktionerna](/help/communities/upgrade.md#adobe-cloud-storage) när du uppgraderar från sociala communityn till Communities.
 
@@ -124,17 +124,17 @@ Information om *användare*, *användarprofiler* och *användargrupper* som ofta
 
 ### UGC försvinner efter uppgradering {#ugc-disappears-after-upgrade}
 
-Om du uppgraderar från en befintlig AEM 6.0-webbplats för sociala nätverk måste du följa [uppgraderingsinstruktionerna](/help/communities/upgrade.md#adobe-cloud-storage), annars försvinner användargenererat innehåll.
+Om du uppgraderar från en befintlig AEM 6.0 social community måste du följa [uppgraderingsinstruktionerna](/help/communities/upgrade.md#adobe-cloud-storage), annars försvinner användargenererat innehåll.
 
 ### Autentiseringsfel {#authentication-errors}
 
 Om du får autentiseringsfel mot datacenter-URL:en, och AEM error.log innehåller meddelanden om inaktuella tidsstämplar, kontrollerar du att tidssynkronisering pågår.
 
-Använd ett verktyg som NTP ( [Network Time Protocol)](https://www.ntp.org/) för att synkronisera alla AEM-författare och publiceringsservrar.
+Använd ett verktyg som NTP ( [Network Time Protocol)](https://www.ntp.org/) för att synkronisera alla AEM författare- och publiceringsservrar.
 
 ### Nytt innehåll visas inte i sökningar {#new-content-does-not-appear-in-searches}
 
-Adobes infrastruktur för molnlagring använder *en konsekvent* lösning för att uppnå sina mål för skalning och prestanda. Därför är nytt innehåll inte tillgängligt direkt och det tar flera sekunder innan det visas i sökresultaten.
+Adobe molnlagringsinfrastruktur använder *en konsekvent* lösning för att uppnå sina mål för skalning och prestanda. Därför är nytt innehåll inte tillgängligt direkt och det tar flera sekunder innan det visas i sökresultaten.
 
 Medan intervallet som påverkar den slutliga konsekvensen övervakas, ska du kontakta din kontorepresentant om det tar längre tid än några sekunder innan nytt innehåll visas i sökningar.
 
@@ -142,7 +142,7 @@ Medan intervallet som påverkar den slutliga konsekvensen övervakas, ska du kon
 
 Kontrollera att ASRP har konfigurerats som standardprovider genom att kontrollera konfigurationen av lagringsalternativet. Som standard är lagringsresursprovidern JSRP, inte ASRP.
 
-Gå till konsolen Lagringskonfiguration eller kontrollera AEM-databasen på alla författare och publicera AEM-instanser.
+Gå till konsolen Lagringskonfiguration på alla författare och publicera AEM eller kontrollera AEM.
 
 I JCR, if [/etc/socialconfig](https://localhost:4502/crx/de/index.jsp#/etc/socialconfig/):
 
