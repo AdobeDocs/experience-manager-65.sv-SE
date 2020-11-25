@@ -4,9 +4,9 @@ description: Nyheter i Adobe Experience Manager 6.5 Service Pack 7
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 34e41cf5984f5f69ae0ccead137fe4f180bd84ad
+source-git-commit: e056d25cf16d79e8eadc80b9cb17b60b2ba8d7e1
 workflow-type: tm+mt
-source-wordcount: '2668'
+source-wordcount: '2667'
 ht-degree: 0%
 
 ---
@@ -32,9 +32,9 @@ Nu kan du utföra sidflyttningar och MSM-rollouter som asynkrona åtgärder för
 
 ## [!DNL Adobe Experience Manager Assets] {#aem-assets}
 
-* Användare kan sortera digitala resurser i kort- och kolumnvyn.
+* [!DNL Assets] och [!DNL Dynamic Media] erbjuder flera olika tillgänglighetsförbättringar. Förbättringarna är relaterade till tangentbordsnavigering, användning av skärmläsare och liknande förbättringar som möjliggör användning av hjälpmedelstekniker (AT). Se [[!DNL Assets] förbättringar](/help/release-notes/sp-release-notes.md#assets-6570) och [[!DNL Dynamic Media] förbättringar](/help/release-notes/sp-release-notes.md#dynamic-media-6570).
 
-* [!DNL Assets] och [!DNL Dynamic Media] erbjuder flera olika tillgänglighetsförbättringar. Förbättringarna är relaterade till tangentbordsnavigering, användning av skärmläsare och liknande förbättringar som möjliggör användning av hjälpmedelstekniker (AT). Se Förbättringar [av](/help/release-notes/sp-release-notes.md#assets-6570) resurser och [[!DNL Dynamic Media] förbättringar](/help/release-notes/sp-release-notes.md#dynamic-media-6570). <!-- TBD: Add link to a11y article after go-live. Adding RN link for now. -->
+* Användare kan sortera digitala resurser i kort- och kolumnvyn.
 
 ## [!DNL Adobe Experience Manager Forms] {#aem-forms}
 
