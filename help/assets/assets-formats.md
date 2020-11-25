@@ -3,9 +3,9 @@ title: Filformat och MIME-typer som stöds
 description: Filformat och MIME-typer stöds [!DNL Assets] and [!DNL Dynamic Media] av och funktioner som stöds för varje format.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c2c0f38d0c8e403264db05064d4423ef46880d9a
+source-git-commit: 83c5e92c55f374cc0a8f8bf0f4af3333893f4a59
 workflow-type: tm+mt
-source-wordcount: '1624'
+source-wordcount: '1605'
 ht-degree: 2%
 
 ---
@@ -237,7 +237,7 @@ De arkivformat som stöds och tillämpligheten för de vanliga DAM-arbetsflöden
 
 ## Andra format som stöds {#other-supported-formats}
 
-De vanliga DAM-funktionerna som lagring, versionshantering, ACL, arbetsflöde, publicering och metadatahantering, förutom [!DNL Dynamic Media] leverans, stöds för många filformat. Tillämpligheten av funktionerna för ett fåtal specifika filformat beskrivs nedan.
+Hur de vanliga DAM-funktionerna kan användas för ett fåtal specifika filformat beskrivs nedan.
 
 | Format | Lagring | Versionshantering | Arbetsflöde | Publicering | Åtkomstkontroll | Dynamic Media Delivery |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
