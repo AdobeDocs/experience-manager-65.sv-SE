@@ -10,9 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: bfaf80c5-448b-47fb-9f22-57ee0eb169b2
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: b29945dc73e85504cd42102eafb9e2bf6198c9cc
 workflow-type: tm+mt
-source-wordcount: '1091'
+source-wordcount: '1090'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ När ett ramverk för översättningsintegrering har konfigurerats utöver över
 
 ## Standardöversättningstjänsten {#the-default-translation-service}
 
-AEM Communities levereras med en [testlicens](../../help/sites-administering/tc-msconf.md#microsoft-translator-trial-license) för en [standardöversättningstjänst](../../help/sites-administering/tc-msconf.md) som är aktiverad för flera språk.
+AEM Communities innehåller en [testlicens](../../help/sites-administering/tc-msconf.md#microsoft-translator-trial-license) för en [standardöversättningstjänst](../../help/sites-administering/tc-msconf.md) som är aktiverad för flera språk.
 
 När du [skapar en communitywebbplats](sites-console.md)aktiveras standardöversättningstjänsten när `Allow Machine Translation` markeras från [underpanelen TRANSLATION](sites-console.md#translation) .
 
