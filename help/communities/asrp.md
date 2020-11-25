@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 3e81b519-57ca-4ee1-94bd-7adac4605407
 docset: aem65
 translation-type: tm+mt
-source-git-commit: fd205cd6253991f527f87b9868d503f64a99a600
+source-git-commit: ef57d53fc780bd222abbe994fc71e133ce8a77fc
 workflow-type: tm+mt
-source-wordcount: '816'
+source-wordcount: '815'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Se även [egenskaper för SRP-alternativ](/help/communities/working-with-srp.md#
 
 Ytterligare en licens krävs för ASRP.
 
-Kontrollera att du har följande för att konfigurera din AEM Communities-webbplats så att den använder ASRP för UGC:
+Kontakta din kontorepresentant för att konfigurera din AEM Communities-webbplats så att den använder ASRP för UGC:
 
 * URL till datacenter (adress till ASRP-slutpunkten)
 * Konsumentnyckel
