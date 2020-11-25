@@ -3,10 +3,10 @@ title: Använd Connected Assets när du vill dela DAM-resurser i [!DNL Sites]
 description: Använd resurser som är tillgängliga på en [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] fjärrdistribution.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 916b49572981115f6178c04f260ce63bcfc6d054
+source-git-commit: f0d91a32caa4d3b862d852028e3bc5547aeb8015
 workflow-type: tm+mt
-source-wordcount: '2165'
-ht-degree: 39%
+source-wordcount: '2177'
+ht-degree: 38%
 
 ---
 
@@ -19,7 +19,7 @@ Användare kan skapa webbsidor i [!DNL Experience Manager Sites]. [!DNL Experien
 
 ## Översikt över Connected Assets {#overview-of-connected-assets}
 
-When editing pages in [!UICONTROL Page Editor], the authors can seamlessly search, browse, and embed assets from a different [!DNL Assets] deployment. Administratörerna skapar en engångs integrering av en distribution av [!DNL Sites] med en annan (fjärransluten) distribution av [!DNL Assets].
+När du redigerar sidor i [!UICONTROL Page Editor] målkatalogen kan författarna enkelt söka efter, bläddra bland och bädda in resurser från en annan [!DNL Assets] distribution som fungerar som en källa för resurser. Administratörerna skapar en engångsintegrering av en driftsättning av [!DNL Experience Manager] med [!DNL Sites] kapacitet med en annan driftsättning av [!DNL Experience Manager] med [!DNL Assets] kapacitet.
 
 For the [!DNL Sites] authors, the remote assets are available as read-only local assets. Funktionen stöder enkel sökning och användning av ett fåtal fjärresurser i taget. To make many remote assets available on a [!DNL Sites] deployment in one-go, consider migrating the assets in bulk. Se Migreringsguide för [Experience Manager Assets](/help/assets/assets-migration-guide.md).
 
