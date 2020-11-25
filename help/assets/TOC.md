@@ -7,9 +7,9 @@ user-guide-title: Resurshandbok
 breadcrumb-title: Resurshandbok
 user-guide-description: Skapa, hantera, leverera och optimera digitala resurser.
 translation-type: tm+mt
-source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
+source-git-commit: caf5737a05a312308f817ac24a3800965d2c2555
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '585'
 ht-degree: 34%
 
 ---
@@ -21,6 +21,7 @@ ht-degree: 34%
 + [[!DNL Experience Manager] 6.5 Versionsinformation om resurser](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/assets.html)
 + [Om DAM](assets.md)
 + [Metodtips för resurser](best-practices-for-assets.md)
++ [Tillgänglighet i [!DNL Assets]](accessibility.md)
 + Använd Experience Manager Assets {#using}
    + [[!DNL Assets] upplevelse på hemsidan](assets-home-page.md)
    + [Söka efter digitala resurser](search-assets.md)
