@@ -4,9 +4,9 @@ description: Versionsinformation för [!DNL Adobe Experience Manager] 6.5 Servic
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 34e41cf5984f5f69ae0ccead137fe4f180bd84ad
+source-git-commit: e056d25cf16d79e8eadc80b9cb17b60b2ba8d7e1
 workflow-type: tm+mt
-source-wordcount: '3694'
+source-wordcount: '3703'
 ht-degree: 0%
 
 ---
@@ -139,7 +139,7 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 
 [!DNL Adobe Experience Manager] 6.5.7.0 [!DNL Assets] åtgärdar följande problem och ger följande förbättringar.
 
-* Följande förbättringar har gjorts för tillgänglighet i [!DNL Experience Manager Assets]:
+* Följande förbättringar av tillgängligheten har gjorts i den här [!DNL Experience Manager Assets] versionen. Mer information finns i [hjälpmedelsfunktioner i [!DNL Assets]](/help/assets/accessibility.md).
 
    * När du navigerar på tidslinjen med ett tangentbord kan `Esc` tangenten komprimera [!UICONTROL Show All] alternativet utan att förlora fokus (CQ-4293598).
    * När du navigerar med tangentbordets tabbtangent behålls fokus i taggfältet (NPR-35109) när du har tagit bort den sista taggen från de tillagda taggarna.
@@ -193,7 +193,7 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
 
 #### [!DNL Dynamic Media] {#dynamic-media-6570}
 
-* Följande större förbättringar har gjorts för tillgänglighet i [!DNL Dynamic Media] (CQ-4290306). Mer information finns i Tillgänglighetsfunktioner i [!DNL Dynamic Media].  <!-- TBD: link to DM content post GA -->
+* Följande förbättringar har gjorts för tillgänglighet i [!DNL Dynamic Media] (CQ-4290306). Mer information finns i [hjälpmedelsfunktionerna i [!DNL Dynamic Media]](/help/assets/accessibility-dm.md).
 
    * Skärmläsare (JAWS, Skärmläsaren) lägger till en berättarröst för menyalternativens namn, roll och tillstånd på menyn Bädda in storlek (CQ-4290927).
    * Användare kan navigera i e-postlänkens dialogruta med `Tab` -tangenten (CQ-4290926).
