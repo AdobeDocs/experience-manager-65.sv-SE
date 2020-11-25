@@ -11,9 +11,9 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: b29945dc73e85504cd42102eafb9e2bf6198c9cc
 workflow-type: tm+mt
-source-wordcount: '1891'
+source-wordcount: '1890'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 1%
 
 ## Checklista för installation {#installation-checklist}
 
-**För[AEM](/help/sites-deploying/deploy.md#what-is-aem)**:
+**För [AEM](/help/sites-deploying/deploy.md#what-is-aem)**:
 
 * Installera de senaste [AEM 6.5 uppdateringarna](#aem64updates).
 
@@ -43,7 +43,7 @@ ht-degree: 1%
 * [Replikera krypteringsnyckel](#replicate-the-crypto-key)
 * Om det finns stöd för globalisering kan du [konfigurera automatisk översättning](/help/sites-administering/translation.md)(exempelinställningar tillhandahålls för utveckling).
 
-**För funktionaliteten[](/help/communities/overview.md)** Communities:
+**För funktionaliteten [](/help/communities/overview.md)** Communities:
 
 * Om du distribuerar en [publiceringsgrupp](/help/sites-deploying/recommended-deploys.md#tarmk-farm)[identifierar du den primära utgivaren](#primary-publisher)
 
@@ -90,7 +90,7 @@ ht-degree: 1%
 
 ## Latest Releases {#latest-releases}
 
-AEM 6.5 Communities GA levereras med Communities-paketet. Om du vill veta mer om uppdateringar av AEM 6.5 [Communities](/help/release-notes/release-notes.md#experiencemanagercommunities)kan du läsa [AEM 6.5 Release Notes](/help/release-notes/release-notes.md#communities-release-notes.html).
+AEM 6.5 Communities GA innehåller Communities-paketet. Om du vill veta mer om uppdateringar av AEM 6.5 [Communities](/help/release-notes/release-notes.md#experiencemanagercommunities)kan du läsa [AEM 6.5 Release Notes](/help/release-notes/release-notes.md#communities-release-notes.html).
 
 ### AEM 6.5 - uppdateringar {#aem-updates}
 
