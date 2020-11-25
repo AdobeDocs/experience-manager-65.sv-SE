@@ -3,9 +3,9 @@ title: Tillgänglighet i [!DNL Experience Manager Assets]
 description: Se hur tillgänglighetsfunktionerna [!DNL Adobe Experience Manager] 6.5 [!DNL Assets] kan hjälpa användare med funktionshinder.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 00f5a6194c8c29d358f362441c155c9c2a52cac7
+source-git-commit: e056d25cf16d79e8eadc80b9cb17b60b2ba8d7e1
 workflow-type: tm+mt
-source-wordcount: '1887'
+source-wordcount: '1900'
 ht-degree: 1%
 
 ---
@@ -42,8 +42,7 @@ Possible topics to cover in this article are below.
 
 Om du vill läsa en rapport med information om efterlevnadsnivån går du till [sidan för rapport](https://www.adobe.com/accessibility/compliance.html) om hjälpmedelsöverensstämmelse (ACR).
 
-<!-- TBD: Add link after release.
-To know how [!DNL Dynamic Media] is accessible, see [accessibility in [!DNL Dynamic Media]](/). -->
+Mer information om hur [!DNL Dynamic Media] är tillgängligt finns i [hjälpmedel i [!DNL Dynamic Media]](/help/assets/accessibility-dm.md).
 
 ## Hjälpmedel {#at-support}
 
@@ -224,7 +223,8 @@ Använd följande metoder för att ge feedback, ställa frågor och begära prod
 
 >[!MORELIKETHIS]
 >
->* [Versionsinformation om förbättringar som gjorts i varje release](/help/release-notes/new-features-latest-service-pack.md).
+>* [Tillgänglighetsfunktioner i [!DNL Dynamic Media]](/help/assets/accessibility-dm.md).
+>* [Versionsinformation om förbättringar som gjorts i varje Service Pack-version](/help/release-notes/new-features-latest-service-pack.md).
 >* [[!DNL Adobe Experience Manager] hjälpmedelsvägledning](/help/managing/web-accessibility.md).
 >* [Överensstämmelserapporter (ACR) och VPAT-listor för Adobe-lösningar](https://www.adobe.com/accessibility/compliance.html).
 
