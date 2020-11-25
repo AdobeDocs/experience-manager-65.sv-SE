@@ -6,7 +6,7 @@ user-guide-title: Versionsinformation om Adobe Experience Manager 6.5
 breadcrumb-title: Versionsinformation
 user-guide-description: Läs om de senaste nya funktionerna i AEM 6.5 i versionsinformationen.
 translation-type: tm+mt
-source-git-commit: 90ab21c4a25fa1a2dcdf04af61fd30982cae7aae
+source-git-commit: 56551f31e87188cebc2754f6a2c756ae96164ed1
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 8%
@@ -20,7 +20,7 @@ ht-degree: 8%
 + [Allmän versionsinformation](release-notes.md)
 + Versionsinformation för Service Pack {#service-pack}
    + [Nyheter](new-features-latest-service-pack.md)
-   + [Versionsinformation för Service Pack 6](sp-release-notes.md)
+   + [Versionsinformation för Service Pack 7](sp-release-notes.md)
    + [Versionsinformation för föregående Service Pack](previous-hotfixes-featurepacks.md)
 + [Versionsinformation för AEM Sites](sites.md)
 + [Versionsinformation för AEM Assets](assets.md)
