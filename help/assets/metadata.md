@@ -3,7 +3,7 @@ title: Hantera metadata för era digitala resurser i [!DNL Adobe Experience Mana
 description: Lär dig mer om metadatatyperna och [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager] hur du automatiskt kan ordna och bearbeta resurser baserat på deras metadata.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
+source-git-commit: d070f5dca569dfb90d3034b74c2940fd68d8ceab
 workflow-type: tm+mt
 source-wordcount: '2322'
 ht-degree: 10%
@@ -112,7 +112,7 @@ Import av metadata är asynkron och påverkar inte systemets prestanda. Samtidig
 1. Navigera till [!DNL Assets] användargränssnittet och klicka **[!UICONTROL Create]** i verktygsfältet.
 1. Välj **[!UICONTROL Metadata]** i menyn.
 1. In the **[!UICONTROL Metadata Import]** page, click **[!UICONTROL Select File]**. Markera CSV-filen med metadata.
-1. Ange följande parametrar. Se ett exempel på en CSV-fil på [metadata-import-sample-file.csv](assets/metadata-import-sample-file.csv).
+1. Ange följande parametrar. Se ett exempel på en CSV-fil på [metadata-import-sample-file.csv](/help/assets/assets/metadata-import-sample-file.csv).
 
    | Parametrar för metadataimport | Beskrivning |
    |:---|:---|
