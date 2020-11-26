@@ -7,9 +7,9 @@ user-guide-title: Resurshandbok
 breadcrumb-title: Resurshandbok
 user-guide-description: Skapa, hantera, leverera och optimera digitala resurser.
 translation-type: tm+mt
-source-git-commit: 3443fe49e7eacbdacf7d21077f920d38b34daeae
+source-git-commit: 696aaa54007e4a78fe6b07d8ba65660595286dca
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '589'
 ht-degree: 34%
 
 ---
@@ -43,7 +43,7 @@ ht-degree: 34%
    + [Konfigurera Dynamic Media - Scene7-läge](config-dms7.md)
    + [Konfigurera dynamiska media - hybridläge](config-dynamic.md)
    + [Felsökning av dynamiska media - Scene7-läge](troubleshoot-dms7.md)
-   + [Tillgänglighetsfunktioner i [!DNL Dynamic Media]](accessibility-dm.md)
+   + [Tillgänglighet i dynamiska media](accessibility-dm.md)
    + [Migrera från Dynamic Media - hybrid-läge till Dynamic Media - S7-läge](migrate-from-hybrid-to-dms7.md)
    + [Hantera Dynamic Media-resurser](managing-assets.md)
    + [Bästa tillvägagångssätt för att optimera bildkvalitet](best-practices-for-optimizing-the-quality-of-your-images.md)
