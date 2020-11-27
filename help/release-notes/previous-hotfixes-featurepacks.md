@@ -3,9 +3,9 @@ title: '[!DNL Adobe Experience Manager] 6.5 Versionsinformation om föregående 
 description: Versionsinformation för [!DNL Adobe Experience Manager] 6.5 Service Packs.
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: 62a04c1d9f62a5a5fa6f97f415015001daa94747
+source-git-commit: 22112319b31576d542d04bdc3519795b02db356c
 workflow-type: tm+mt
-source-wordcount: '14481'
+source-wordcount: '14525'
 ht-degree: 0%
 
 ---
@@ -326,6 +326,8 @@ Efter installation av tilläggspaketet [!DNL Experience Manager Forms] 6.5.6.0:
 * Adaptiva formulär har vissa öppna resurslösningar. Detta leder till att det inte går att skicka in. Problemet inträffar då och då (CQ-4299407).
 
 * När du öppnar fältkonfigurationen för första gången visas inte egenskapsikonen (CQ-4296284).
+
+* Användarna kan redigera inskickningsmetadata, till exempel `afPath``afSubmissionTime` och `signers`när de skickar in ett anpassat formulär. För att lösa problemet tas metadatavärdena bort från informationen om att skicka formulär på klientsidan. Användare kan använda objektet `FormSubmitInfo` för att hämta dessa värden från servern (NPR-33654).
 
 **Arbetsflöde**
 
@@ -1418,7 +1420,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 * Ett problem med Scene7 videospelare när den expanderar till helskärm. Programfix för CQ-4266700
 * ZoomVerticalViewer: Panoreringsknappar ska inte visas om en enda bildresurs används. Programfix för CQ-4264795
 * Om du tar bort en underordnad nod i live-kopian bör liveRelationship frigöras. Programfix för CQ-4270395
-* Metadataschemat innehåller bara objekt från den globala konfigurationen och saknar dem från den aktiva klientorganisationen. URL-värdet för formPath återställs till standard även om det ändras. NPR-29944: Programfix för CQ-4262898
+* Metadataschemat innehåller bara objekt från den globala konfigurationen och saknar dem från den aktiva klientorganisationen. URL-värdet för formPath återställs till standard även om det ändras. NPR-29945: Programfix för CQ-4262898
 * Publicera bildförinställningar som [!DNL Brand Portal] misslyckas med 500-felkod. NPR-29510: Programfix för CQ-4268659
 
 ### Sites
