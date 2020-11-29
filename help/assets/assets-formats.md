@@ -3,9 +3,9 @@ title: Filformat och MIME-typer som stöds
 description: Filformat och MIME-typer stöds [!DNL Assets] and [!DNL Dynamic Media] av och funktioner som stöds för varje format.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 83c5e92c55f374cc0a8f8bf0f4af3333893f4a59
+source-git-commit: eaff176bf3ffc197607b8eb39b15c1e945927f8e
 workflow-type: tm+mt
-source-wordcount: '1605'
+source-wordcount: '1629'
 ht-degree: 2%
 
 ---
@@ -247,6 +247,10 @@ Hur de vanliga DAM-funktionerna kan användas för ett fåtal specifika filforma
 | XML | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | JavaScript (när konfigureras med egen leveransdomän) | − | − | − | − | − | ✓ |
 
+>[!NOTE]
+>
+>Att överföra och distribuera JavaScript-filer kan vara säkert eller inte. Om det behövs kan övertäckningar användas för att hindra användare från att överföra JS-filer.
+
 ## MIME-typer som stöds {#supported-mime-types}
 
 Som standard identifierar [!DNL Experience Manager] filtypen med hjälp av filtillägget. [!DNL Experience Manager] kan identifiera det från innehållet i filerna. För det senare väljer du [!UICONTROL Detect MIME from content] ett alternativ [!UICONTROL Day CQ DAM Mime Type Service] i [!DNL Experience Manager] webbkonsolen.
@@ -301,7 +305,7 @@ En lista över MIME-typer som stöds finns i CRXDE Lite `/conf/global/settings/c
 | TAR | application/x-tar |  |  |
 | TIF/TIFF | bild/tiff |  |  |
 | TTC | application/x-font-ttf |  |  |
-| TTF | application/x-font-ttf |  |  |
+| RTF | application/x-font-ttf |  |  |
 | VOB | video/dvd |  | [ExcludeMasterVideoFromAVS](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-production-api/data-types/r-exclude-master-video-from-avs.html) |
 | VTT | text/vtt |  |  |
 | WAV | audio/x-wav |  |  |
