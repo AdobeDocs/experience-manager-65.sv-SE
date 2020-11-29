@@ -4,9 +4,9 @@ description: Versionsinformation för [!DNL Adobe Experience Manager] 6.5 Servic
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 0389508f7870dd2ce6ed7bfc5fb8a9bc88fedffb
+source-git-commit: ed8299662139c2c2ab2fa304c9fa3448b0fce223
 workflow-type: tm+mt
-source-wordcount: '3703'
+source-wordcount: '3696'
 ht-degree: 0%
 
 ---
@@ -145,7 +145,7 @@ Nedan följer en lista över korrigeringar i version [!DNL Experience Manager] 6
    * När du navigerar med tangentbordets tabbtangent behålls fokus i taggfältet (NPR-35109) när du har tagit bort den sista taggen från de tillagda taggarna.
    * [!DNL Experience Manager] innehåller nu lämplig information för namn, roll och värde som ska användas av skärmläsare (NPR-34255).
    * När du har tagit bort kombinationsrutan Typ/storlek, kombinationsrutan Länk, Kombinationsrutan Språk eller textredigeringsrutan, återgår tangentbordsfokus till nästa eller föregående element i användargränssnittet eller till ett mer relevant element i användargränssnittet (CQ-4293585).
-   * När du håller pekaren över olika alternativ visas tips som Markera och Hämta. Användare som använder skärmförstoring kan få problem med att visa filminiatyrbilder på grund av innehållet som visas på grund av hovring. Nu går det att behålla fokus efter att du har tagit bort alternativet med en `Escape` -tangent (CQ-4293554).
+   * När du håller pekaren över alternativ visas tips som Markera och Hämta. Användare som använder en skärmförstorare kanske inte ser filminiatyrbilderna på grund av dessa tips. Nu går det att behålla fokus när du har tagit bort alternativet med `Escape` tangenten. (CQ-4293554).
    * När du väljer en stödrastercell från det stödraster som finns på sidan flyttas fokus till det åtgärdsfält som visas på skärmen (CQ-4282127).
    * Visuella användare kan skilja mellan normal text och en länk, eftersom visuella ledtrådar (underline- och chevron-ikoner) visas för länkar till alla lösningar på [!DNL Experience Manager] hemsidan (CQ-4282072).
 
