@@ -10,7 +10,10 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 6cade87c-9ed5-47d7-9b39-c942268afdad
 translation-type: tm+mt
-source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
+source-git-commit: e5e00cc181c2dc3a28e25beb52f9a4c459ee313a
+workflow-type: tm+mt
+source-wordcount: '1779'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +31,7 @@ Beroende på den information du redan har samlat in om webbplatsbesökarna och v
 
 Dessa segment används sedan för att förse en besökare med specifikt riktat innehåll. Innehållet finns i avsnittet [Personalisering](/help/sites-authoring/personalization.md) på webbplatsen. [Verksamheter](/help/sites-authoring/activitylib.md) som definieras här kan inkluderas på alla sidor och definiera vilket besökarsegment det specialiserade innehållet gäller.
 
-Med AEM kan ni enkelt personalisera användarnas upplevelse. Du kan även kontrollera resultatet av segmentdefinitionerna.
+AEM gör det enkelt att personalisera användarnas upplevelse. Du kan även kontrollera resultatet av segmentdefinitionerna.
 
 ## Åtkomst till segment {#accessing-segments}
 
@@ -100,11 +103,11 @@ Följande segmentjämförelser är tillgängliga när du vill utvärdera segment
 
 >[!NOTE]
 >
->Om datatypen för jämförelsen inte är inställd (d.v.s. inställd på automatisk identifiering) vid jämförelse av värden, kommer segmenteringsmotorn för ContextHub helt enkelt att jämföra värdena som javascript skulle göra. Den konverterar inte värden till de förväntade typerna, vilket kan leda till missvisande resultat. Exempel:
+>Om datatypen för jämförelsen inte är inställd (d.v.s. inställd på automatisk identifiering) vid jämförelse av värden, kommer segmenteringsmotorn för ContextHub helt enkelt att jämföra värdena som javascript skulle göra. Den konverterar inte värden till de förväntade typerna, vilket kan leda till missvisande resultat. Till exempel:
 >
 >`null < 30 // will return true`
 >
->När du [skapar ett segment](/help/sites-administering/segmentation.md#creating-a-new-segment)bör du därför välja en **datatyp** när typerna av jämförda värden är kända. Exempel:
+>När du [skapar ett segment](/help/sites-administering/segmentation.md#creating-a-new-segment)bör du därför välja en **datatyp** när typerna av jämförda värden är kända. Till exempel:
 >
 >När du jämför egenskapen `profile/age`vet du redan att jämförelsetypen kommer att vara **tal**, så även om `profile/age` inte är inställd returnerar en jämförelse `profile/age` som är mindre än 30 **false**, som du hade förväntat dig.
 
@@ -129,7 +132,9 @@ Följande referenser är tillgängliga när du vill länka direkt till ett skrip
 
 Så här definierar du det nya segmentet:
 
-1. När du har [öppnat segmenten](/help/sites-administering/segmentation.md#accessing-segments)klickar eller trycker du på knappen Skapa och väljer **Skapa ContextHub-segment**.
+1. När du har [öppnat segmenten](/help/sites-administering/segmentation.md#accessing-segments)[navigerar du till den mapp](#organizing-segments) där du vill skapa segmentet, eller låter det vara kvar i roten.
+
+1. klicka eller tryck på knappen Skapa och välj **Skapa ContextHub-segment**.
 
    ![chlimage_1-311](assets/chlimage_1-311.png)
 
@@ -154,7 +159,7 @@ Så här definierar du det nya segmentet:
 
 ### Använda OCH- och ELLER-behållare {#using-and-and-or-containers}
 
-Med hjälp av komponenterna AND och OR kan du skapa komplexa segment i AEM. När du gör det är det bra att tänka på några grundläggande saker:
+Med hjälp av komponenterna AND och OR kan du skapa komplexa segment i AEM. När du gör detta är det bra att tänka på några grundläggande saker:
 
 * Definitionens översta nivå är alltid den AND-behållare som skapas från början. Detta kan inte ändras, men påverkar inte resten av segmentdefinitionen.
 * Se till att det är rimligt att kapsla behållaren. Behållarna kan ses som parenteser i ditt booleska uttryck.
@@ -178,7 +183,7 @@ Genom att använda komponenten Skriptreferens kan utvärderingen av en segmenteg
 #### Definiera ett skript som ska refereras {#defining-a-script-to-reference}
 
 1. Lägg till fil i `contexthub.segment-engine.scripts` clientlib.
-1. Implementera en funktion som returnerar ett värde. Exempel:
+1. Implementera en funktion som returnerar ett värde. Till exempel:
 
    ```
    ContextHub.console.log(ContextHub.Shared.timestamp(), '[loading] contexthub.segment-engine.scripts - script.profile-info.js');
@@ -222,6 +227,75 @@ this.dependOn(ContextHub.SegmentEngine.Property('profile/age'));
 1. Skapa ContextHub-segment.
 1. Lägg till **skriptreferenskomponenten** på önskad plats i segmentet.
 1. Öppna redigeringsdialogrutan för **skriptreferenskomponenten** . Om skriptet är [korrekt konfigurerat](/help/sites-administering/segmentation.md#defining-a-script-to-reference)bör det vara tillgängligt i listrutan **Skriptnamn** .
+
+## Organisera segment {#organizing-segments}
+
+Om du har många segment kan det bli svårt att hantera dem som en platt lista. I sådana fall kan det vara användbart att skapa mappar för att hantera dina segment.
+
+### Skapa en ny mapp {#create-folder}
+
+1. När du har [öppnat segmenten](#accessing-segments)klickar eller trycker du på knappen **Skapa** och väljer **Mapp**.
+
+   ![Lägg till mapp](assets/contexthub-create-segment.png)
+
+1. Ange en **titel** och ett **namn** för mappen.
+   * Titeln **ska vara** beskrivande.
+   * Namnet **** blir nodnamnet i databasen.
+      * Den genereras automatiskt baserat på titeln och justeras enligt [AEM namnkonventioner.](/help/sites-developing/naming-conventions.md)
+      * Den kan vid behov justeras.
+
+   ![Skapa mapp](assets/contexthub-create-folder.png)
+
+1. Tryck eller klicka på **Skapa**.
+
+   ![Bekräfta mapp](assets/contexthub-confirm-folder.png)
+
+1. Mappen visas i segmentlistan.
+   * Hur du sorterar kolumnerna påverkar var i listan den nya mappen visas.
+   * Du kan justera sorteringen genom att trycka eller klicka på kolumnrubrikerna.
+      ![Den nya mappen](assets/contexthub-folder.png)
+
+### Ändra befintliga mappar {#modify-folders}
+
+1. När du har [öppnat segmenten](#accessing-segments)klickar eller trycker du på den mapp du vill ändra för att markera den.
+
+   ![Välj mapp](assets/contexthub-select-folder.png)
+
+1. Tryck eller klicka på **Byt namn** i verktygsfältet för att byta namn på mappen.
+
+1. Ange en ny **mapptitel** och tryck eller klicka på **Spara**.
+
+   ![Byt namn på mapp](assets/contexthub-rename-folder.png)
+
+>[!NOTE]
+>
+>När du byter namn på mappar kan du bara ändra titeln. Namnet kan inte ändras.
+
+### Ta bort en mapp
+
+1. När du har [öppnat segmenten](#accessing-segments)klickar eller trycker du på den mapp du vill ändra för att markera den.
+
+   ![Välj mapp](assets/contexthub-select-folder.png)
+
+1. Tryck eller klicka på **Ta bort** i verktygsfältet för att ta bort mappen.
+
+1. En dialogruta innehåller en lista med mappar som har markerats för borttagning.
+
+   ![Bekräfta borttagning](assets/contexthub-confirm-segment-delete.png)
+
+   * Tryck eller klicka på **Ta bort** för att bekräfta.
+   * Tryck eller klicka på **Avbryt** för att avbryta.
+
+1. Om någon av de markerade mapparna innehåller undermappar eller segment måste borttagningen bekräftas.
+
+   ![Bekräfta borttagning av underordnade](assets/contexthub-confirm-segment-child-delete.png)
+
+   * Tryck eller klicka på **Tvinga borttagning** för att bekräfta.
+   * Tryck eller klicka på **Avbryt** för att avbryta.
+
+>[!NOTE]
+>
+> Det går inte att flytta ett segment från en mapp till en annan.
 
 ## Testa tillämpningen av ett segment {#testing-the-application-of-a-segment}
 
