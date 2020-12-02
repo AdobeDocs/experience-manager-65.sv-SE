@@ -8,6 +8,9 @@ contentOwner: sarchiz
 discoiquuid: 8ee843b6-8cea-45fc-be6c-99c043f075d4
 translation-type: tm+mt
 source-git-commit: 85a3dac5db940b81da9e74902a6aa475ec8f1780
+workflow-type: tm+mt
+source-wordcount: '432'
+ht-degree: 6%
 
 ---
 
@@ -26,7 +29,7 @@ På AEM Foundation-nivå är de personuppgifter som lagras användarprofilen. D�
 
 ### Manuella steg {#manual-steps}
 
-1. Öppna konsolen Användaradministration genom att gå till **[!UICONTROL Inställningar - Säkerhet - Användare]** eller genom att bläddra direkt till `https://<serveraddress>:<serverport>/libs/granite/security/content/useradmin.html`
+1. Öppna konsolen för användaradministration genom att bläddra till **[!UICONTROL Settings - Security - Users]** eller genom att bläddra direkt till `https://<serveraddress>:<serverport>/libs/granite/security/content/useradmin.html`
 
    ![useradmin2](assets/useradmin2.png)
 
@@ -34,13 +37,13 @@ På AEM Foundation-nivå är de personuppgifter som lagras användarprofilen. D�
 
    ![användarsökning](assets/usersearch.png)
 
-1. Slutligen öppnar du användarprofilen genom att klicka på den och kontrollerar sedan under fliken **[!UICONTROL Detaljer]** .
+1. Öppna sedan användarprofilen genom att klicka på den och kontrollera den under fliken **[!UICONTROL Details]**.
 
    ![userprofile_small](assets/userprofile_small.png)
 
-### HTTP-API {#http-api}
+### HTTP API {#http-api}
 
-Som vi nämnt tillhandahåller Adobe API:er för åtkomst av användardata för att underlätta automatisering. Det finns flera typer av API:er som du kan använda:
+Som vi nämnt tillhandahåller Adobe API:er för åtkomst av användardata, för att underlätta automatisering. Det finns flera typer av API:er som du kan använda:
 
 **UserProperties API**
 
@@ -69,7 +72,7 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYLBXvdTuN/profiles.-1.json'
 ```
 
-## Inaktivera en användare och ta bort associerade profiler {#disabling-a-user-and-deleting-the-associated-profiles}
+## Inaktivera en användare och ta bort de associerade profilerna {#disabling-a-user-and-deleting-the-associated-profiles}
 
 ### Inaktivera användare {#disable-user}
 
@@ -98,15 +101,16 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
    ![image2018-2-6_1-58-25](assets/image2018-2-6_1-58-25.png)
 
-1. Ta bort profilnoder och alla underordnade noder. Profilnoderna har två format beroende på AEM-versionen:
+1. Ta bort profilnoder och alla underordnade noder. Profilnoderna har två format beroende på AEM:
 
-   1. Standardprofilen under `[!UICONTROL /profile]`
+   1. Den privata standardprofilen under `[!UICONTROL /profile]`
    1. `[!UICONTROL /profiles]`, för nya profiler som skapats med AEM 6.5.
+
    ![image2018-2-6_2-0-4](assets/image2018-2-6_2-0-4.png)
 
-### HTTP-API {#http-api-1}
+### HTTP API {#http-api-1}
 
-I följande procedurer används kommandoradsverktyget för att illustrera hur du inaktiverar användaren med `curl` kaveriet **** `userId` och tar bort de profiler som finns på standardplatsen.
+Följande procedurer använder kommandoradsverktyget `curl` för att visa hur du inaktiverar användaren med `userId` **[!UICONTROL cavery]** och tar bort dennes profiler på standardplatsen.
 
 * *Identifiera användarens hemsida*
 
