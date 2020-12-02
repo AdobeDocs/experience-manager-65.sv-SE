@@ -23,7 +23,7 @@ ht-degree: 1%
 
 Följande komponenter är avsedda att användas vid utveckling av innehåll för en standardwebbsida. De utgör en delmängd av de komponenter som finns tillgängliga direkt för en standardinstallation av AEM.
 
-Vissa är omedelbart tillgängliga via sidbrytaren, andra är också tillgängliga genom att aktivera/inaktivera dem i [designläge](/help/sites-classic-ui-authoring/classic-page-author-design-mode.md) .
+Vissa är omedelbart tillgängliga via sidbrytaren, andra är också tillgängliga genom att använda [designläget](/help/sites-classic-ui-authoring/classic-page-author-design-mode.md) för att aktivera/inaktivera dem.
 
 >[!CAUTION]
 >
@@ -31,9 +31,9 @@ Vissa är omedelbart tillgängliga via sidbrytaren, andra är också tillgängli
 >
 >Beroende på vilken instans du har kan du ha utvecklat anpassade komponenter explicit för dina behov. De kan till och med ha samma namn som vissa av de komponenter som beskrivs här.
 
-Komponenterna är tillgängliga när du [redigerar en sida](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md) från fliken **Komponenter** i sidosparken och **Infoga ny komponent** (när du dubbelklickar i området **Dra komponenter eller resurser här** ).
+Komponenterna är tillgängliga när du [redigerar en sida](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md) på fliken **Komponenter** i sidosparken och **Infoga ny komponent**-väljaren (när du dubbelklickar i området **Dra komponenter eller resurser här**).
 
-Du kan markera en komponent och dra den till önskad plats på sidan och sedan [redigera innehåll och egenskaper](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#editing-a-component-content-and-properties).
+Du kan markera en komponent och dra den till önskad plats på sidan och sedan [Redigera innehåll och egenskaper](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#editing-a-component-content-and-properties).
 
 Komponenterna sorteras efter olika kategorier (komponentgrupper), inklusive (för sidredigering):
 
@@ -75,7 +75,7 @@ Du kan använda bildfiler med följande filnamnstillägg med komponenten Adaptiv
 >
 >** Animerade .gif-filer stöds inte i AEM för adaptiva återgivningar.
 
-#### Bildstorlekar och -kvalitet {#images-sizes-and-quality}
+#### Bildstorlekar och kvalitet {#images-sizes-and-quality}
 
 I följande tabell visas bredden på bilden som genereras för den angivna visningsrutans bredd. Höjden på den genererade bilden beräknas för att bibehålla en konstant proportion och inget mellanrum inträffar inuti bildkanten. Beskärning kan användas för att undvika mellanrum.
 
@@ -100,27 +100,35 @@ I dialogrutan kan du redigera egenskaper för din instans av komponenten Adaptiv
 
 * **Bild**
 
-   * **Bild** Dra en bild från innehållssökaren eller klicka för att öppna ett bläddringsfönster där du kan läsa in en bild. När bilden har lästs in kan du beskära bilden, rotera den eller ta bort den. Om du vill zooma in och ut i bilden använder du bildfältet under bilden (ovanför knapparna OK och Avbryt)
+   * ****
+BildDra en bild från innehållssökaren eller klicka för att öppna ett bläddringsfönster där du kan läsa in en bild. När bilden har lästs in kan du beskära bilden, rotera den eller ta bort den. Om du vill zooma in och ut i bilden använder du bildfältet under bilden (ovanför knapparna OK och Avbryt)
 
-   * **Beskär** en bild. Dra kanten för att beskära bilden.
+   * **Beskär**
+Beskär en bild. Dra kanten för att beskära bilden.
 
-   * **Rotera** Klicka på Rotera upprepade gånger tills bilden roteras som du vill.
+   * ****
+RoteraKlicka på Rotera upprepade gånger tills bilden roteras som du vill.
 
-   * **Rensa** Ta bort den aktuella bilden.
+   * ****
+RaderaTa bort den aktuella bilden.
 
 * **Avancerat**
 
-   * **Title** The Adaptive Image component does not use this property.
+   * **TitleKomponenten**
+Adaptive Image använder inte den här egenskapen.
 
-   * **Alt-text** Den alternativa texten som ska användas för bilden.
+   * **Alt**
+TextDen alternativa texten som ska användas för bilden.
 
-   * **Länk till** komponenten Adaptiv bild använder inte den här egenskapen.
+   * **Länka**
+till Komponenten Adaptiv bild använder inte den här egenskapen.
 
-   * **Beskrivning** Komponenten Adaptiv bild använder inte den här egenskapen.
+   * **Beskrivning**
+Komponenten Adaptiv bild använder inte den här egenskapen.
 
 #### Utöka den adaptiva bildkomponenten {#extending-the-adaptive-image-component}
 
-Mer information om hur du anpassar komponenten Adaptiv bild finns i [Förstå komponenten](/help/sites-developing/responsive.md#using-adaptive-images)Adaptiv bild.
+Mer information om hur du anpassar komponenten Adaptiv bild finns i [Förstå komponenten Adaptiv bild](/help/sites-developing/responsive.md#using-adaptive-images).
 
 ### Carousel {#carousel}
 
@@ -137,38 +145,51 @@ Med klickbara kontroller kan användaren även bläddra igenom de visade sidorna
 
 Dessa finns på två flikar:
 
-* **Carousel** Här anger du hur karusellen fungerar:
+* ****
+CarouselHär anger du hur karusellen fungerar:
 
-   * Uppspelningshastighet Tiden i millisekunder innan nästa bild visas.
-   * Övergångstid i millisekunder för övergången mellan två bildrutor.
-   * Styr StilOlika alternativ finns på en listruta. Exempel: Föregående/Nästa-knappar, Överst till höger-växlar.
+   * Uppspelningshastighet
+Tiden i millisekunder innan nästa bild visas.
+   * Övergångstid
+Tid i millisekunder för övergången mellan två bildrutor.
+   * Kontrollformat
+Det finns olika alternativ på en listruta. Exempel: Föregående/Nästa-knappar, Överst till höger-växlar.
 
-* **Lista** Här anger du hur sidorna ska inkluderas i Carousel:
+* ****
+ListHär anger du hur sidorna ska inkluderas i Carousel:
 
-   * **Skapa en lista med hjälp**Det finns flera sätt att skapa en sidlista - Underordnade sidor, Fast lista, Sök eller Avancerad sökning (alla beskrivs nedan).
+   * **Skapa lista**
+medDet finns flera sätt att skapa en sidlista - Underordnade sidor, Fast lista, Sök eller Avancerad sökning (alla beskrivs nedan).
 Observera, att oavsett vilken metod du väljer, så kommer den bild som visas i Carousel att visas på de sidor som finns med i listan. Om det inte finns någon bild för en viss sida under sidans Sidegenskaper, bör du koppla en bild till sidan innan du börjar, eftersom Carousel annars visar en tom (eller nästan tom) sida. Se [Redigera sidegenskaper](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md).
 Beroende på vilket objekt du väljer visas en ny panel:
 
       * **Alternativ för underordnade sidor**
 
-         * **Överordnad sida** Ange en bana antingen manuellt eller med väljaren. Lämna tomt om du vill använda den aktuella sidan som överordnad.
+         * **Överordnad**
+sidaAnge en bana antingen manuellt eller med väljaren. Lämna tomt om du vill använda den aktuella sidan som överordnad.
       * **Alternativ för fast lista**
 
-         * **Sidor** Välj en lista med sidor. Användning 
+         * **SidorVälj en**
+lista med sidor. Användning 
 `+` om du vill lägga till fler poster och upp-/nedknapparna för att justera ordningen.
       * **Alternativ för sökning**
 
-         * **Börja i** Ange en startbana, antingen manuellt eller med väljaren.
+         * **Starta**
+inAnge en startbana, antingen manuellt eller med väljaren.
 
-         * **Sökfråga** Du kan ange en vanlig textsökfråga.
+         * **Sök**
+frågaDu kan ange en vanlig textsökfråga.
       * **Alternativ för avancerad sökning**
 
-         * **Querybuilder-predikatnotation**Du kan ange en sökfråga med Querybuilder-predikatnotation. Du kan till exempel ange &quot;fulltext=Marketing&quot; om du vill att alla sidor med &quot;Marketing&quot; i innehållet ska visas i Carousel.
-Se [QueryBuilder API](/help/sites-developing/querybuilder-api.md) för en fullständig diskussion om frågeuttryck och fler exempel.
-   * **Sortera efter** val 
-`jcr:title`, `jcr:created`, `cq:lastModified`eller `cq:template` från listrutan.
+         * **Querybuilder-predikatnotation**
+Du kan ange en sökfråga med Querybuilder-predikatnotation. Du kan till exempel ange &quot;fulltext=Marketing&quot; om du vill att alla sidor med &quot;Marketing&quot; i innehållet ska visas i Carousel.
+Mer information om frågeuttryck och fler exempel finns i [QueryBuilder API](/help/sites-developing/querybuilder-api.md).
+   * **Sortera**
+efter val 
+`jcr:title`,  `jcr:created`,  `cq:lastModified`eller  `cq:template` från listrutan.
 
-   * **Begränsa** det högsta antal objekt som du vill använda i Carousel; detta är valfritt.
+   * ****
+GränsMaximalt antal objekt som du vill använda i Carousel. detta är valfritt.
 
 
 
@@ -183,17 +204,22 @@ Med diagramkomponenten kan du lägga till ett stapel-, linje- eller cirkeldiagra
 
 * **Data**
 
-   * **Diagramdata** Ange diagramdata i CSV-format. I formatet för kommaseparerade värden används kommatecken (&quot;,&quot;) som fältavgränsare.
+   * **Diagramdata**
+Ange diagramdata i CSV-format. I formatet för kommaseparerade värden används kommatecken (&quot;,&quot;) som fältavgränsare.
 
 * **Avancerat**
 
-   * **Diagramtyp** Välj från cirkeldiagram, linjediagram och stapeldiagram.
+   * **DiagramtypVälj**
+från cirkeldiagram, linjediagram och stapeldiagram.
 
-   * **Alternativ text** Alternativ text som visas i stället för diagrammet.
+   * **Alternativ**
+textAlternativ text som visas i stället för diagrammet.
 
-   * **Diagrammets** bredd i pixlar.
+   * **Diagrammets**
+bredd i pixlar.
 
-   * **Diagrammets höjd** i pixlar.
+   * **Diagrammets**
+HeightHeight i pixlar.
 
 I följande exempel visas ett exempel på diagramdata följt av det resulterande stapeldiagrammet:
 
@@ -208,7 +234,7 @@ Du kan skapa en anpassad AEM som visar data i AEM JCR. Mer information finns i [
 Den fullständiga funktionen för hantering av innehållsfragment är endast tillgänglig med det pekoptimerade användargränssnittet.
 Komponenten Content Fragment kan visas i den klassiska användargränssnittets sidospark, men ytterligare funktioner är inte tillgängliga.
 
-[Innehållsfragment](/help/sites-classic-ui-authoring/classic-page-author-content-fragments.md) skapas och hanteras som sidoberoende resurser. Du kan sedan använda dessa fragment och deras variationer när du redigerar innehållssidorna.
+[Innehållsfragmentering ](/help/sites-classic-ui-authoring/classic-page-author-content-fragments.md) skapas och hanteras som sidoberoende resurser. Du kan sedan använda dessa fragment och deras variationer när du redigerar innehållssidorna.
 
 ### Designimporteraren {#design-importer}
 
@@ -220,17 +246,19 @@ Komponenten Download skapar en länk på den valda webbsidan för att hämta en 
 
 * **Hämta**
 
-   * **Beskrivning** En kort beskrivning med nedladdningslänken.
+   * ****
+BeskrivningEn kort beskrivning visas med nedladdningslänken.
 
-   * **Filen** finns tillgänglig för hämtning på den slutliga webbsidan. Dra en resurs från innehållssökaren eller klicka på området för att överföra filen som ska vara tillgänglig för hämtning.
+   * **File**
+File är tillgängligt för hämtning på den slutliga webbsidan. Dra en resurs från innehållssökaren eller klicka på området för att överföra filen som ska vara tillgänglig för hämtning.
 
 I följande exempel visas komponenten Download i Geometrixx:
 
 ![dc_download_use](assets/dc_download_use.png)
 
-### External {#external}
+### Extern {#external}
 
-Med den externa programintegrationskomponenten (**extern**) kan du bädda in externa program på AEM med hjälp av en iframe.
+Med den externa programintegrationskomponenten (**External**) kan du bädda in externa program på AEM med hjälp av en iframe.
 
 * **Extern**
 
@@ -250,12 +278,12 @@ Med den externa programintegrationskomponenten (**extern**) kan du bädda in ext
 
       Definiera storleken på iframe
 
-Den externa tillämpningen är integrerad i den AEM sidans styckesystem. till exempel när du använder ett Target-program av `https://en.wikipedia.org/wiki/Main_Page`:
+Den externa tillämpningen är integrerad i den AEM sidans styckesystem. om du till exempel använder ett målprogram på `https://en.wikipedia.org/wiki/Main_Page`:
 
 ![chlimage_1-7](assets/chlimage_1-7.png)
 
 >[!NOTE]
-Beroende på ditt sätt att arbeta är andra alternativ tillgängliga för integrering av externa program, till exempel. integreringen [av portlets](/help/sites-administering/aem-as-portal.md).
+Beroende på ditt sätt att arbeta är andra alternativ tillgängliga för integrering av externa program, till exempel. [Integrering av portlets](/help/sites-administering/aem-as-portal.md).
 
 ### Flash {#flash}
 
@@ -303,14 +331,14 @@ I bildkomponenten visas en bild och tillhörande text enligt de angivna parametr
 
 Du kan överföra en bild och sedan redigera den (t.ex. beskära, rotera, lägga till länk/titel/text).
 
-Du kan antingen dra och släppa en bild från [Innehållssökning](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#the-content-finder) direkt till komponenten eller dess redigeringsdialogruta. Du kan också dubbelklicka i mitten av dialogrutan Redigera för att bläddra i det lokala filsystemet och överföra en bild. De två flikarna i dialogrutan Redigera styr också alla definitioner och ändringar av bilden:
+Du kan antingen dra och släppa en bild från [Content Finder](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#the-content-finder) direkt till komponenten eller dess redigeringsdialogruta. Du kan också dubbelklicka i mitten av dialogrutan Redigera för att bläddra i det lokala filsystemet och överföra en bild. De två flikarna i dialogrutan Redigera styr också alla definitioner och ändringar av bilden:
 
 ![dc_image](assets/dc_image.png)
 
 >[!NOTE]
 Överföringens förlopp kan inte övervakas med Internet Explorer.
-Internet Explorer-användare måste överföra bilden och sedan klicka på **OK** och öppna bilden igen för att se den överförda filen i förhandsgranskningen och kunna utföra ändringar (d.v.s. beskära).
-Mer information om HTML5-funktioner som används av AEM finns i avsnittet [Certifierade plattformar](/help/release-notes/release-notes.md#certifiedplatforms) .
+Användare av Internet Explorer måste överföra bilden och klicka på **OK** och sedan öppna bilden igen för att se den överförda filen i förhandsgranskningen och för att kunna utföra ändringar (d.v.s. beskära).
+Mer information om HTML5-funktioner som används av AEM finns i [Certified Platforms](/help/release-notes/release-notes.md#certifiedplatforms)-avsnittet.
 
 När en bild har lästs in kan du konfigurera följande:
 
@@ -354,7 +382,7 @@ När en bild har lästs in kan du konfigurera följande:
 
    Anger bildens höjd och bredd.
 
-Den slutliga bilden (med **rubrik** och **beskrivning**) kan visas som:
+Den slutliga bilden (med **Rubrik** och **Beskrivning**) kan visas som:
 
 ![chlimage_1-8](assets/chlimage_1-8.png)
 
@@ -377,7 +405,7 @@ Med List-komponenten kan du konfigurera sökvillkor för att visa en lista:
 
       * **Alternativ för underordnade sidor**
 
-         * **Underordnade till** (överordnad sida) Ange en bana antingen manuellt eller med väljaren. Lämna tomt om du vill använda den aktuella sidan som överordnad.
+         * **Underordnade till**  (överordnad sida) Ange en bana antingen manuellt eller med väljaren. Lämna tomt om du vill använda den aktuella sidan som överordnad.
       * **Alternativ för fast lista**
 
          * **Sidor**
@@ -398,7 +426,7 @@ Med List-komponenten kan du konfigurera sökvillkor för att visa en lista:
 
             Du kan ange en sökfråga med Querybuilder-predikatnotation. Du kan till exempel ange &quot;fulltext=Marketing&quot; om du vill att alla sidor med &quot;Marketing&quot; i innehållet ska visas i Carousel.
 
-            Se [QueryBuilder API](/help/sites-developing/querybuilder-api.md) för en fullständig diskussion om frågeuttryck och fler exempel.
+            Mer information om frågeuttryck och fler exempel finns i [QueryBuilder API](/help/sites-developing/querybuilder-api.md).
       * **Taggar**
 
          Ange **överordnad sida**, **taggar/nyckelord** och de matchningskriterier som krävs.
@@ -427,7 +455,7 @@ Med List-komponenten kan du konfigurera sökvillkor för att visa en lista:
 
 
 
-I följande exempel visas en **List** -komponent på samma sätt som en lista med underordnade sidor (designen styrs av en webbplatsdesigns anpassade CSS-definitioner).
+I följande exempel visas en **List**-komponent på samma sätt som en lista med underordnade sidor (designen styrs av en webbplatsdesigns anpassade CSS-definitioner).
 
 ![dc_list_use](assets/dc_list_use.png)
 
@@ -487,7 +515,7 @@ Du kan konfigurera:
 
 ### Referens {#reference}
 
-Med **komponenten Reference** kan du referera till text från en annan sida på AEM webbplats (i den aktuella instansen). Innehållet i det refererade stycket visas sedan som om det fanns på den aktuella sidan. Innehållet uppdateras när källstycket ändras (du kan behöva uppdatera sidan).
+Med komponenten **Reference** kan du referera till text från en annan sida på AEM webbplats (i den aktuella instansen). Innehållet i det refererade stycket visas sedan som om det fanns på den aktuella sidan. Innehållet uppdateras när källstycket ändras (du kan behöva uppdatera sidan).
 
 * **Styckereferens**
 
@@ -580,7 +608,7 @@ I följande exempel visas en felstavad sökterm som inte är tillgänglig:
 
 ![dc_search_usenotfound](assets/dc_search_usenotfound.png)
 
-### Webbplatskarta {#sitemap}
+### Platskarta {#sitemap}
 
 En automatisk platskarta som (med standardinställningarna) visar alla sidor (som aktiva länkar) på den aktuella webbplatsen. Ett extrakt visar till exempel:
 
@@ -623,10 +651,10 @@ Bildspelskomponenten visar sedan varje sekvens upprepade gånger, under en kort 
 ### Table {#table}
 
 >[!NOTE]
-Komponenten **Tabell** är baserad på [RTF-redigeraren](/help/sites-classic-ui-authoring/classic-page-author-rich-text-editor.md), liksom **[Text](#text)** -komponenten.
-Vi rekommenderar att du använder **tabellkomponenten** för tabeller, även om de också kan skapas med komponenten **Text** .
+Komponenten **Tabell** är baserad på [RTF-redigeraren](/help/sites-classic-ui-authoring/classic-page-author-rich-text-editor.md), liksom **[Text](#text)**-komponenten.
+Du bör använda komponenten **Tabell** för tabeller, men de kan också skapas med komponenten **Text**.
 
-Komponenten **Table** är förkonfigurerad så att du kan skapa, fylla i och formatera en tabell. I dialogrutan kan du konfigurera tabellen och skapa innehållet genom att antingen:
+Komponenten **Tabell** är förkonfigurerad så att du kan skapa, fylla i och formatera en tabell. I dialogrutan kan du konfigurera tabellen och skapa innehållet genom att antingen:
 
 * från början
 * kopiera och klistra in ett kalkylblad eller en tabell från en extern redigerare (t.ex. Excel, OpenOffice, Anteckningar).
@@ -637,7 +665,7 @@ I följande skärmbild visas ett exempel på tabellkomponenten: designen bestäm
 
 ![dc_table_use](assets/dc_table_use.png)
 
-### Tag Cloud {#tag-cloud}
+### Tagga molnet {#tag-cloud}
 
 I ett taggmoln visas ett grafiskt presenterat urval av de taggar som används i innehållet på webbplatsen:
 
@@ -645,25 +673,28 @@ I ett taggmoln visas ett grafiskt presenterat urval av de taggar som används i 
 
 När du konfigurerar taggmolnkomponenten kan du ange:
 
-* **Taggar som ska visas** varifrån taggarna som ska visas samlas in. Välj från en sida, en sida med alla underordnade eller alla taggar.
+* **Taggar som ska**
+visasVarifrån taggarna som ska visas hämtas. Välj från en sida, en sida med alla underordnade eller alla taggar.
 
-* **Sida** Välj sidan som du vill referera till.
+* ****
+SidaVälj sidan som du vill referera till.
 
-* **Inga länkar på taggar** Anger om taggarna som visas ska fungera som länkar.
+* **Inga länkar i**
+taggarOm taggarna som visas ska fungera som länkar.
 
-Mer information om hur du använder taggar finns i [Använda taggar](/help/sites-classic-ui-authoring/classic-feature-tags.md).
+Mer information om hur du använder taggar finns på [Använda taggar](/help/sites-classic-ui-authoring/classic-feature-tags.md).
 
 ### Text {#text}
 
 >[!NOTE]
-Komponenten **Text** är baserad på [RTF-redigeraren](/help/sites-classic-ui-authoring/classic-page-author-rich-text-editor.md), liksom **[komponenten Table](#table)** .
-Vi rekommenderar att du använder **tabellkomponenten** för tabeller, även om de också kan skapas med komponenten **Text** .
+Komponenten **Text** är baserad på [RTF-redigeraren](/help/sites-classic-ui-authoring/classic-page-author-rich-text-editor.md), liksom **[Tabell](#table)**-komponenten.
+Du bör använda komponenten **Tabell** för tabeller, men de kan också skapas med komponenten **Text**.
 
-Med komponenten Text kan du ange ett textblock med en WYSIWYG-redigerare, som har funktioner från [RTF-redigeraren](/help/sites-classic-ui-authoring/classic-page-author-rich-text-editor.md). Med en rad ikoner kan du formatera texten, inklusive teckensnittsegenskaper, justering, länkar, listor och indrag.
+Med komponenten Text kan du ange ett textblock med en WYSIWYG-redigerare, med funktioner som finns i [RTF-redigeraren](/help/sites-classic-ui-authoring/classic-page-author-rich-text-editor.md). Med en rad ikoner kan du formatera texten, inklusive teckensnittsegenskaper, justering, länkar, listor och indrag.
 
 ![dc_text](assets/dc_text.png)
 
-När du öppnar fliken **Format** i dialogrutan **Redigera** kan du också ange:
+När du öppnar fliken **Format** i dialogrutan **Redigera** kan du även ange:
 
 * **Avstånd**
 * **Textformat**
@@ -672,25 +703,25 @@ Den formaterade texten visas då på sidan; den faktiska designen beror på webb
 
 ![dc_text_use](assets/dc_text_use.png)
 
-Mer information om komponenten Text och funktionerna i RTF-redigeraren finns på sidan [RTF-redigerare](/help/sites-classic-ui-authoring/classic-page-author-rich-text-editor.md) .
+Mer detaljerad information om komponenten Text och de funktioner som finns i RTF-redigeraren finns på sidan [RTF-redigerare](/help/sites-classic-ui-authoring/classic-page-author-rich-text-editor.md).
 
 #### Redigering på plats {#inplace-editing}
 
-Förutom det dialogbaserade redigeringsläget Rich Text innehåller AEM även [Inplace Editing](/help/sites-authoring/editing-content.md), som gör att du kan redigera texten direkt när den visas i layouten på sidan.
+Förutom det dialogrutebaserade redigeringsläget RTF innehåller AEM även [Inplace Editing](/help/sites-authoring/editing-content.md), som tillåter direktredigering av texten som den visas i sidlayouten.
 
 ### Text och bild {#text-image}
 
-Komponenten Text och bild lägger till ett textblock och en bild. Du kan också lägga till och redigera text och bilder separat. Mer information finns i komponenterna [Text](#text) och [Bild](#image) .
+Komponenten Text och bild lägger till ett textblock och en bild. Du kan också lägga till och redigera text och bilder separat. Mer information finns i [Text](#text) och [Image](#image)-komponenterna.
 
 ![chlimage_1-12](assets/chlimage_1-12.png) ![chlimage_1-13](assets/chlimage_1-13.png)
 
 Du kan konfigurera:
 
-* **Komponentformat** (**format**)
+* **Komponentformat**  (**format**)
 
    Här kan du justera bilden åt vänster eller höger. Standardvärdet är **Vänster** justerat, med bilden till vänster.
 
-* **Bildegenskaper** (**avancerade bildegenskaper**)
+* **Bildegenskaper**  (**avancerade bildegenskaper**)
 
    Gör att du kan ange följande:
 
@@ -743,15 +774,15 @@ Du kan konfigurera:
 
    Välj Liten eller Stor i listrutan. Liten genereras som en bild. Stor genereras som text.
 
-I följande exempel visas en **Title** -komponent: designen bestäms av den platsspecifika CSS:n.
+I följande exempel visas en **Title**-komponent; designen bestäms av den platsspecifika CSS:n.
 
 ![dc_title_use](assets/dc_title_use.png)
 
 ### Video {#video}
 
-Med **videokomponenten** kan du placera ett fördefinierat videoelement direkt på en sida.
+Med komponenten **Video** kan du placera ett fördefinierat videoelement direkt på en sida.
 
-Se även [Konfigurera videoprofiler](/help/sites-administering/config-video.md#configuringvideoprofiles) för användning med HTML5-element.
+Se även [Konfigurera dina videoprofiler](/help/sites-administering/config-video.md#configuringvideoprofiles) för användning med HTML5-element.
 
 När du har placerat en instans av komponenten på sidan kan du konfigurera:
 
@@ -781,11 +812,11 @@ I följande exempel visas komponenterna 2 kolumner och 3 kolumner som används. 
 
 ![chlimage_1-14](assets/chlimage_1-14.png)
 
-### 2 Columns {#columns-1}
+### 2 kolumner {#columns-1}
 
 En Column Control-komponent som har standardvärdet 2 lika med-kolumner.
 
-### 3 Columns {#columns-2}
+### 3 kolumner {#columns-2}
 
 En Column Control-komponent som har standardvärdet 3 lika med-kolumner.
 
@@ -799,12 +830,12 @@ Med komponenten Kolumnkontroll kan användarna välja hur de vill dela upp inneh
 
       Markera det antal kolumner som du vill återge. När varje kolumn har skapats har den en egen länk för att dra komponenter eller resurser när du lägger till innehåll.
 
-## Form {#form}
+## Formulär {#form}
 
 Formulärkomponenter används för att skapa formulär som besökare kan skicka in indata i. Forms och blankettkomponenter kan användas för att samla in information, t.ex. användarfeedback (t.ex. ett kundfrågeformulär) och användarinformation (t.ex. användarregistrering).
 
 >[!NOTE]
-Mer information om AEM Forms finns i [AEM Forms-hjälpen](/help/forms/home.md) .
+Mer information om AEM Forms finns i [AEM Forms Hjälp](/help/forms/home.md).
 
 Forms är uppbyggt av flera olika komponenter:
 
@@ -820,12 +851,12 @@ Forms är uppbyggt av flera olika komponenter:
 
    Profilkomponenter relaterar till besökarprofiler som används för socialt samarbete och andra områden där besökaranpassning krävs.
 
-I följande exempel visas ett exempelformulär: består av **Form** -komponenten (start och slut), med två **Form** **Text** -fält som används för inmatning, ett **Allmänt** **Text** **** -fält som används för lead-texten och en¥Submit¥-knapp.
+I följande exempel visas ett exempelformulär: består av **Form**-komponenten (start och slut), med två **Form** **Text**-fält som används för indata, ett **Allmänt** **Text**-fält som används för lead-texten och ett **Skicka&lt;a1 1/>.**
 
 ![dc_form](assets/dc_form.png)
 
 >[!NOTE]
-Mer information om hur du utvecklar och anpassar formulär finns på sidan [](/help/sites-developing/developing-forms.md)Utveckla Forms. Detta inkluderar bland annat att lägga till åtgärder, begränsningar, förhandsladda fält och att använda skript för att anropa en tjänst för att utföra åtgärder.
+Information om hur du utvecklar och anpassar formulär finns på [Utveckla Forms-sidan](/help/sites-developing/developing-forms.md). Detta inkluderar bland annat att lägga till åtgärder, begränsningar, förhandsladda fält och att använda skript för att anropa en tjänst för att utföra åtgärder.
 
 ### Inställningar som är gemensamma för (många) formulärkomponenter {#settings-common-to-many-form-components}
 
@@ -914,7 +945,7 @@ Detta är ett obligatoriskt fält och får endast innehålla följande tecken:
 
 ### Formulär (komponent) {#form-component}
 
-Form-komponenten definierar både början och slutet av ett formulär med elementen **Formulärstart** och **Formulärslut** . Dessa är alltid kopplade för att säkerställa att formuläret är korrekt definierat.
+Formulärexponenten definierar både början och slutet av ett formulär med elementen **Formulärstart** och **Formulärslut**. Dessa är alltid kopplade för att säkerställa att formuläret är korrekt definierat.
 
 ![dc_form-1](assets/dc_form-1.png)
 
@@ -977,7 +1008,7 @@ Med **Läs in sökväg** kan du läsa in formuläret i förväg med värden i de
 
    * **Klientvalidering**
 
-      Anger om klientvalidering krävs för det här formuläret (servervalidering sker *alltid* ). Detta kan du göra med **Forms Captcha** -komponenten.
+      Anger om klientvalidering krävs för det här formuläret (servervalidering *alltid* inträffar.) Detta kan uppnås med komponenten **Forms Captcha**.
 
    * **Typ av verifieringsresurs**
 
@@ -992,14 +1023,16 @@ Med **Läs in sökväg** kan du läsa in formuläret i förväg med värden i de
          `/apps/<myApp>/form/<myValidation>/formservervalidation.jsp`
    * **Åtgärdskonfiguration**
 
-      Vilka alternativ som är tillgängliga i **Åtgärdskonfiguration** beror på vilken **åtgärdstyp** som har valts:
+      Vilka alternativ som är tillgängliga i **Åtgärdskonfiguration** är beroende av vilken **åtgärdstyp** som är vald:
 
       * **Kontobegäran**
 
-         * **Skapa kontosida** Den sida som används när ett nytt konto skapas.
+         * **Skapa**
+kontosidaSidan som används när ett nytt konto skapas.
       * **Skapa innehåll**
 
-         * Sökväg till innehåll Innehållssökvägen för allt innehåll som formuläret dumpar. Ange en bana som slutar med ett snedstreck `/`. Snedstrecket innebär att för varje formulärport skapas en ny nod på den angivna platsen. till exempel:
+         * Innehållsbana
+Innehållssökvägen för allt innehåll som formuläret dumpar. Ange en sökväg som slutar med ett snedstreck `/`. Snedstrecket innebär att för varje formulärport skapas en ny nod på den angivna platsen. till exempel:
             `/forms/feedback/`
 
          * **Typ**
@@ -1021,7 +1054,8 @@ Med **Läs in sökväg** kan du läsa in formuläret i förväg med värden i de
          * **Visa väljare**
       * **Skapa lead**
 
-         * **Lead läggs till i listan** Ange önskad leadlista.
+         * **Lead kommer att läggas till i den här**
+listan. Ange önskad leadlista.
       * **Skapa och uppdatera konto**
 
          * **Inledande grupp**
@@ -1038,7 +1072,7 @@ Med **Läs in sökväg** kan du läsa in formuläret i förväg med värden i de
 
          * **Visa data...**
 
-            Klicka på den här knappen för att komma åt information om formulärresultat i gruppredigeraren. Härifrån kan du exportera informationen till en `.tsv` (tabbseparerad) fil (som exempelvis kan användas i ett Excel-kalkylblad).
+            Klicka på den här knappen för att komma åt information om formulärresultat i gruppredigeraren. Härifrån kan du exportera informationen till en `.tsv`-fil (tabbavgränsad) (som exempelvis i ett Excel-kalkylblad).
       * **E-post**
 
          * **Från**
@@ -1069,7 +1103,7 @@ Med **Läs in sökväg** kan du läsa in formuläret i förväg med värden i de
 
          * **Innehållsbana**
 
-            Innehållssökvägen för allt innehåll som formuläret dumpar. Ange en bana som slutar med ett snedstreck `/`. Snedstrecket innebär att för varje formulärport skapas en ny nod på den angivna platsen. till exempel:
+            Innehållssökvägen för allt innehåll som formuläret dumpar. Ange en sökväg som slutar med ett snedstreck `/`. Snedstrecket innebär att för varje formulärport skapas en ny nod på den angivna platsen. till exempel:
             `/forms/feedback/`
 
          * **Visa data...**
@@ -1155,7 +1189,7 @@ Med en kryssruta kan du skapa en lista med en av flera kryssrutor, som flera kan
 Du kan ange olika parametrar, inklusive rubrik, beskrivning och elementnamn. Med knapparna + och - kan du lägga till eller ta bort objekt och sedan placera dem med upp- och nedpilarna.
 
 >[!NOTE]
-Med **Objekt Läs in sökväg** kan du förhandsladda kryssrutegrupplistan med värden.
+Med **Objekt Läs in sökväg** kan du läsa in grupplistan med kryssrutor i förväg med värden.
 Se [Förhandsladda formulärfält med flera värden](/help/sites-developing/developing-forms.md#preloading-form-fields-with-multiple-values).
 
 ### Kreditkortsinformation {#credit-card-details}
@@ -1221,7 +1255,7 @@ Detta används för att tillåta användaren att ange sitt lösenord:
 
 ![dc_form_password](assets/dc_form_password.png)
 
-### Återställ lösenord {#password-reset}
+### Lösenordsåterställning {#password-reset}
 
 Den här komponenten ger användaren två fält för:
 
@@ -1232,7 +1266,7 @@ Med standardinställningarna visas komponenten som:
 
 ![dc_password_reset](assets/dc_password_reset.png)
 
-### Grupp med alternativknappar {#radio-group}
+### Grupp för alternativknappar {#radio-group}
 
 En alternativknappsgrupp ger dig en lista över en eller flera kryssrutor, där bara en av kryssrutorna kan markeras vid en viss tidpunkt.
 
@@ -1241,10 +1275,10 @@ Du kan ange elementnamnet tillsammans med en titel och en beskrivning Med knappa
 ![dc_form_radiogroupuse](assets/dc_form_radiogroupuse.png)
 
 >[!NOTE]
-Om du använder **Objekt Läs in bana** kan du förhandsladda gruppen med värden.
+Med **Objekt, Läs in sökväg** kan du förhandsladda alternativgruppen med värden.
 Se [Förhandsladda formulärfält med flera värden](/help/sites-developing/developing-forms.md#preloading-form-fields-with-multiple-values).
 
-### Submit Button {#submit-button}
+### Skicka-knapp {#submit-button}
 
 Med den här komponenten kan du skapa en skicka-knapp med antingen standardtexten:
 
@@ -1254,7 +1288,7 @@ Eller med egen text:
 
 ![dc_form_submit_button_use](assets/dc_form_submitbuttonuse.png)
 
-### Märkordsfält {#tags-field}
+### Tagg Field {#tags-field}
 
 I det här fältet kan du välja taggar:
 
