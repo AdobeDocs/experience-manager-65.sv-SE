@@ -1,6 +1,6 @@
 ---
-title: Återger formulär som HTML
-seo-title: Återger formulär som HTML
+title: Återger Forms som HTML
+seo-title: Återger Forms som HTML
 description: 'null'
 seo-description: 'null'
 uuid: bd8edb6f-333b-4ceb-9877-618f5377f56f
@@ -19,7 +19,7 @@ ht-degree: 1%
 ---
 
 
-# Återger formulär som HTML {#rendering-forms-as-html}
+# Återger Forms som HTML {#rendering-forms-as-html}
 
 Forms-tjänsten återger formulär som HTML som svar på en HTTP-begäran från en webbläsare. En fördel med att återge ett formulär som HTML är att datorn där klientwebbläsaren finns inte behöver Adobe Reader, Acrobat eller Flash Player (för formulärguider (borttagen)).
 
@@ -31,7 +31,7 @@ Om du vill återge ett formulär som HTML måste formulärdesignen sparas som en
 
 >[!NOTE]
 >
->När du återger ett formulär som innehåller TIFF-bilder med `FormServiceClient` objektets `(Deprecated) renderHTMLForm` - och `renderHTMLForm2` -metoder, visas inte TIFF-bilderna i det återgivna HTML-formuläret som visas i webbläsarna Internet Explorer eller Mozilla Firefox. De här webbläsarna har inte inbyggt stöd för TIFF-bilder.
+>När du återger ett formulär som innehåller TIFF-bilder med `FormServiceClient`-objektets `(Deprecated) renderHTMLForm`- och `renderHTMLForm2`-metoder, visas inte TIFF-bilderna i det återgivna HTML-formuläret som visas i webbläsarna Internet Explorer eller Mozilla Firefox. De här webbläsarna har inte inbyggt stöd för TIFF-bilder.
 
 ## HTML-sidor {#html-pages}
 
@@ -55,11 +55,11 @@ När formulärdesigner återges som HTML-formulär begränsas inte panelerna til
 
 När ett formulär återges som ett HTML-formulär har sidstorlekar (som krävs för att sidnumrera formulär som återges som PDF) ingen betydelse. Eftersom ett formulär med flödeslayout kan expandera till ett obegränsat antal HTML-sidor är det viktigt att undvika sidfötter på den överordnad sidan. En sidfot under innehållsområdet på en överordnad sida kan skriva över HTML-innehåll som flödar förbi en sidgräns.
 
-Du måste gå från panel till panel med metoderna `xfa.host.pageUp` och `xfa.host.pageDown` . Du ändrar sidor genom att skicka ett formulär till Forms-tjänsten och låta Forms-tjänsten återge formuläret till klientenheten, vanligtvis en webbläsare.
+Du måste gå från panel till panel med metoderna `xfa.host.pageUp` och `xfa.host.pageDown`. Du ändrar sidor genom att skicka ett formulär till Forms och låta Forms-tjänsten återge formuläret till klientenheten, vanligtvis en webbläsare.
 
 >[!NOTE]
 >
->Processen med att skicka ett formulär till Forms-tjänsten och sedan låta Forms-tjänsten återge formuläret till klientenheten kallas för att återge utlösande data till servern.
+>Processen med att skicka ett formulär till Forms-tjänsten och sedan låta Forms-tjänsten återge formuläret till klientenheten kallas för att skicka runt data till servern.
 
 >[!NOTE]
 >
@@ -77,13 +77,13 @@ Du måste gå från panel till panel med metoderna `xfa.host.pageUp` och `xfa.ho
 
 **.fsc-ds-popup-btn**: Den här formatmallsegenskapen används inte.
 
-## Köra skript {#running-scripts}
+## Kör skript {#running-scripts}
 
-En formulärförfattare anger om ett skript ska köras på servern eller klienten. Forms-tjänsten skapar en distribuerad händelsebearbetningsmiljö för att exekvera formulärintelligens som kan distribueras mellan klienten och servern med hjälp av `runAt` -attributet. Mer information om det här attributet och hur du skapar skript i formulärdesigner finns i [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63)
+En formulärförfattare anger om ett skript ska köras på servern eller klienten. Forms-tjänsten skapar en distribuerad händelsebearbetningsmiljö för att köra formulärintelligens som kan distribueras mellan klienten och servern med attributet `runAt`. Mer information om det här attributet och hur du skapar skript i formulärdesigner finns i [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63)
 
-Forms-tjänsten kan köra skript medan formuläret återges. Det innebär att du kan förifylla ett formulär med data genom att ansluta till en databas eller till webbtjänster som kanske inte är tillgängliga på klienten. Du kan också ange att en knapps `Click` händelse ska köras på servern så att klienten skickar data till servern. Detta gör att klienten kan köra skript som kan kräva serverresurser, t.ex. en företagsdatabas, medan en användare interagerar med ett formulär. För HTML-formulär kan formulärskript endast köras på servern. Därför måste du markera dessa skript som ska köras vid `server` eller `both`.
+Forms-tjänsten kan köra skript medan formuläret återges. Det innebär att du kan förifylla ett formulär med data genom att ansluta till en databas eller till webbtjänster som kanske inte är tillgängliga på klienten. Du kan också ange att en knapps `Click`-händelse ska köras på servern så att klienten kan skicka data till servern. Detta gör att klienten kan köra skript som kan kräva serverresurser, t.ex. en företagsdatabas, medan en användare interagerar med ett formulär. För HTML-formulär kan formulärskript endast köras på servern. Därför måste du markera dessa skript så att de körs vid `server` eller `both`.
 
-Du kan utforma formulär som rör sig mellan sidor (paneler) genom att anropa `xfa.host.pageUp` och `xfa.host.pageDown` metoder. Skriptet placeras i en knapps `Click` -händelse och `runAt` attributet ställs in på `Both`. Anledningen till att du väljer `Both` är att Adobe Reader eller Acrobat (för formulär som återges som PDF) kan ändra sidor utan att behöva gå till servern, och HTML-formulär kan ändra sidor genom att skicka utdata till servern. Det innebär att ett formulär skickas till Forms-tjänsten och att ett formulär återges som HTML med den nya sidan som visas.
+Du kan utforma formulär som rör sig mellan sidor (paneler) genom att anropa metoderna `xfa.host.pageUp` och `xfa.host.pageDown`. Det här skriptet placeras i en knapps `Click`-händelse och `runAt`-attributet är inställt på `Both`. Anledningen till att du väljer `Both` är att Adobe Reader eller Acrobat (för formulär som återges som PDF) kan ändra sidor utan att gå till servern, och HTML-formulär kan ändra sidor genom att skicka utdata till servern. Det innebär att ett formulär skickas till Forms-tjänsten och att ett formulär återges som HTML med den nya sidan som visas.
 
 Vi rekommenderar att du inte ger skriptvariabler och formulärfält samma namn, till exempel objekt. I vissa webbläsare, t.ex. Internet Explorer, går det inte att initiera en variabel med samma namn som ett formulärfält, vilket resulterar i ett skriptfel. Det är god praxis att ge formulärfält och skriptvariabler olika namn.
 
@@ -94,11 +94,11 @@ Formulärskript som finns i händelsen form:ready körs bara en gång under den 
 >[!NOTE]
 På ett flersidigt formulär behålls inte ändringar som JavaScript gjort på en sida om du flyttar till en annan sida.
 
-Du kan anropa egna skript innan du skickar in ett formulär. Den här funktionen fungerar i alla tillgängliga webbläsare. Den kan dock bara användas när användarna återger det HTML-formulär som har egenskapen `Output Type` inställd på `Form Body`. Det kommer inte att fungera när det `Output Type` är `Full HTML`. Mer information om hur du konfigurerar den här funktionen finns i Konfigurera formulär i administrationshjälpen.
+Du kan anropa egna skript innan du skickar in ett formulär. Den här funktionen fungerar i alla tillgängliga webbläsare. Den kan dock bara användas när användare återger det HTML-formulär som har egenskapen `Output Type` inställd på `Form Body`. Det fungerar inte när `Output Type` är `Full HTML`. Mer information om hur du konfigurerar den här funktionen finns i Konfigurera formulär i administrationshjälpen.
 
 Du måste definiera en callback-funktion som anropas innan du skickar formuläret, där funktionens namn är `_user_onsubmit`. Det antas att funktionen inte genererar något undantag, eller att undantaget ignoreras om det gör det. Vi rekommenderar att du placerar JavaScript-funktionen i huvudet i html. Du kan emellertid deklarera den var som helst före slutet av de skripttaggar som innehåller `xfasubset.js`.
 
-När formserver återger en XDP-fil som innehåller en nedrullningsbar lista skapas även två dolda textfält förutom att listrutan skapas. Dessa textfält lagrar data i den nedrullningsbara listan (ett lagrar alternativens visningsnamn och andra lagrar alternativens värden). Därför skickas alla data i den nedrullningsbara listan varje gång en användare skickar formuläret. Om du inte vill skicka så mycket data varje gång kan du skriva ett eget skript som inaktiverar det. Till exempel: Listrutans namn är `drpOrderedByStateProv` och omsluts av delformulärsrubriken. Namnet på HTML-indataelementet blir `header[0].drpOrderedByStateProv[0]`. Namnet på de dolda fält som lagrar och skickar data i listrutan har följande namn: `header[0].drpOrderedByStateProv_DISPLAYITEMS_[0] header[0].drpOrderedByStateProv_VALUEITEMS_[0]`
+När formserver återger en XDP-fil som innehåller en nedrullningsbar lista skapas även två dolda textfält förutom att listrutan skapas. Dessa textfält lagrar data i den nedrullningsbara listan (ett lagrar alternativens visningsnamn och andra lagrar alternativens värden). Därför skickas alla data i den nedrullningsbara listan varje gång en användare skickar formuläret. Om du inte vill skicka så mycket data varje gång kan du skriva ett eget skript som inaktiverar det. Till exempel: Listrutans namn är `drpOrderedByStateProv` och omsluts av delformulärsrubriken. Namnet på HTML-indataelementet kommer att vara `header[0].drpOrderedByStateProv[0]`. Namnet på de dolda fält som lagrar och skickar data i listrutan har följande namn: `header[0].drpOrderedByStateProv_DISPLAYITEMS_[0] header[0].drpOrderedByStateProv_VALUEITEMS_[0]`
 
 Du kan inaktivera dessa indataelement på följande sätt om du inte vill publicera data. `var __CUSTOM_SCRIPTS_VERSION = 1; //enabling the feature function _user_onsubmit() { var elems = document.getElementsByName("header[0].drpOrderedByStateProv_DISPLAYITEMS_[0]"); elems[0].disabled = true; elems = document.getElementsByName("header[0].drpOrderedByStateProv_VALUEITEMS_[0]"); elems[0].disabled = true; }`
 
@@ -120,7 +120,7 @@ var __CUSTOM_SCRIPTS_VERSION = 1; //enabling the feature
 
 När du skapar formulärdesigner som ska återges som HTML måste du begränsa skripten till XFA-delmängden för skript i JavaScript-språket.
 
-Skript som körs på klienten eller körs både på klienten och servern måste skrivas i XFA-delmängden. Skript som körs på servern kan använda den fullständiga XFA-skriptmodellen och även FormCalc. Mer information om att använda JavaScript finns i [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63).
+Skript som körs på klienten eller körs både på klienten och servern måste skrivas i XFA-delmängden. Skript som körs på servern kan använda den fullständiga XFA-skriptmodellen och även FormCalc. Mer information om JavaScript finns i [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63).
 
 När skript körs på klienten kan bara den aktuella panelen som visas använda skript. Du kan till exempel inte skriva skript mot fält som finns i panel A när panel B visas. När du kör skript på servern är alla paneler tillgängliga.
 
@@ -128,11 +128,11 @@ Du måste också vara försiktig när du använder SOM-uttryck (Scripting Object
 
 ## Händelsetiming {#event-timing}
 
-XFA-delmängden definierar XFA-händelser som mappas till HTML-händelser. Det finns en liten skillnad i beteendet när det gäller tidpunkten för beräkning och validering av händelser. I en webbläsare körs en fullständig calculate-händelse när du avslutar ett fält. Beräkningshändelser körs inte automatiskt när du ändrar ett fältvärde. Du kan tvinga fram en calculate-händelse genom att anropa `xfa.form.execCalculate` metoden.
+XFA-delmängden definierar XFA-händelser som mappas till HTML-händelser. Det finns en liten skillnad i beteendet när det gäller tidpunkten för beräkning och validering av händelser. I en webbläsare körs en fullständig calculate-händelse när du avslutar ett fält. Beräkningshändelser körs inte automatiskt när du ändrar ett fältvärde. Du kan tvinga fram en calculate-händelse genom att anropa metoden `xfa.form.execCalculate`.
 
-I en webbläsare körs valideringshändelser bara när ett fält avslutas eller när ett formulär skickas. Du kan tvinga fram en validate-händelse med hjälp av `xfa.form.execValidate` metoden.
+I en webbläsare körs valideringshändelser bara när ett fält avslutas eller när ett formulär skickas. Du kan tvinga fram en validate-händelse med metoden `xfa.form.execValidate`.
 
-Formulär som visas i en webbläsare (till skillnad från Adobe Reader eller Acrobat) följer XFA null-testet (fel eller varningar) för obligatoriska fält.
+Forms som visas i en webbläsare (till skillnad från Adobe Reader eller Acrobat) följer XFA null-testet (fel eller varningar) för obligatoriska fält.
 
 * Om null-testet genererar ett fel och du avslutar ett fält utan att ange ett värde, visas en meddelanderuta och du flyttas till fältet efter att du klickat på OK.
 * Om ett null-test ger en varning och du avslutar ett fält utan att ange ett värde, uppmanas du att klicka på OK eller Avbryt, så att du kan fortsätta utan att ange ett värde eller gå tillbaka till fältet för att ange ett värde.
@@ -141,21 +141,21 @@ Mer information om ett null-test finns i [Forms Designer](https://www.adobe.com/
 
 ## Formulärknappar {#form-buttons}
 
-När du klickar på en skicka-knapp skickas formulärdata till Forms-tjänsten och anger att formulärbearbetningen är slutförd. Händelsen kan ställas in så att den körs på klienten eller servern. `preSubmit` Händelsen `preSubmit` körs före formuläröverföringen om den är konfigurerad att köras på klienten. I annat fall körs händelsen på `preSubmit` servern när formuläret skickas. Mer information om `preSubmit` händelsen finns i [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63).
+När du klickar på en skicka-knapp skickas formulärdata till Forms-tjänsten och anger att formulärbearbetningen är slutförd. Händelsen `preSubmit` kan ställas in att köras på klienten eller servern. Händelsen `preSubmit` körs före formuläröverföringen om den är konfigurerad att köras på klienten. Annars körs händelsen `preSubmit` på servern när formuläret skickas. Mer information om händelsen `preSubmit` finns i [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63).
 
 Om en knapp inte har något klientskript kopplat till sig, skickas data till servern, beräkningar utförs på servern och HTML-formuläret genereras om. Om en knapp innehåller ett klientskript skickas inga data till servern och klientskriptet körs i webbläsaren.
 
-## Webbläsare för HTML 4.0 {#html-4-0-web-browser}
+## HTML 4.0-webbläsare {#html-4-0-web-browser}
 
 En webbläsare som bara har stöd för HTML 4.0 kan inte hantera XFA-deluppsättningens klientskriptmodell. När du skapar en formulärdesign som ska fungera i både HTML 4.0 och MSDHTML eller CSS2HTML kommer ett skript som är markerat för att köras på klienten att köras på servern. Anta att en användare klickar på en knapp som finns i ett formulär som visas i en HTML 4.0-webbläsare. I sådana fall skickas formulärdata till servern där skriptet på klientsidan körs.
 
 Vi rekommenderar att du placerar formulärlogiken i calculate-händelser som körs på servern i HTML 4.0 och på klienten för MSDHTML eller CSS2HTML.
 
-## Underhåll presentationsändringar {#maintaining-presentation-changes}
+## Bibehåll presentationsändringar {#maintaining-presentation-changes}
 
-När du förflyttar dig mellan HTML-sidor (paneler) bevaras endast datastatus. Inställningar som bakgrundsfärg eller obligatoriska fältinställningar bevaras inte (om de skiljer sig från de ursprungliga inställningarna). Om du vill behålla presentationstillståndet måste du skapa fält (vanligen dolda) som representerar presentationstillståndet för fält. Om du lägger till ett skript till en fälthändelse som ändrar presentationen baserat på dolda fältvärden, kan du bevara presentationstillståndet när du går fram och tillbaka mellan HTML-sidor (paneler). `Calculate`
+När du förflyttar dig mellan HTML-sidor (paneler) bevaras endast datastatus. Inställningar som bakgrundsfärg eller obligatoriska fältinställningar bevaras inte (om de skiljer sig från de ursprungliga inställningarna). Om du vill behålla presentationstillståndet måste du skapa fält (vanligen dolda) som representerar presentationstillståndet för fält. Om du lägger till ett skript till en `Calculate`-händelse för ett fält som ändrar presentationen baserat på dolda fältvärden, kan du behålla presentationstillståndet när du går fram och tillbaka mellan HTML-sidor (paneler).
 
-Följande skript bevarar `fillColor` fältets innehåll baserat på värdet för `hiddenField`. Anta att det här skriptet finns i ett fälts `Calculate` händelse.
+Följande skript bevarar `fillColor` för ett fält baserat på värdet `hiddenField`. Anta att det här skriptet finns i ett fälts `Calculate`-händelse.
 
 ```java
      If (hiddenField.rawValue == 1)
@@ -176,7 +176,7 @@ Du kan inte signera ett HTML-formulär som innehåller ett fält för elektronis
 * StaticHTML
 * NoScriptXHTML
 
-Information om hur du signerar ett dokument digitalt finns i [Signera och certifiera dokument digitalt](/help/forms/developing/digitally-signing-certifying-documents.md)
+Mer information om att signera ett dokument digitalt finns i [Digitalt signera och certifiera dokument](/help/forms/developing/digitally-signing-certifying-documents.md)
 
 ## Rendera ett hjälpmedelsanpassat XHTML-formulär {#rendering-an-accessibility-guidelines-compliant-xhtml-form}
 
@@ -184,17 +184,17 @@ Du kan återge ett fullständigt HTML-formulär som är kompatibelt med riktlinj
 
 ## Validerar formulärdata {#validating-form-data}
 
-Vi rekommenderar att du begränsar användningen av valideringsregler för formulärfält när du återger formuläret som ett HTML-formulär. Vissa verifieringsregler kanske inte stöds för HTML-formulär. Om till exempel valideringsmönstret MM-DD-YYY används på ett `Date/Time` fält som finns i en formulärdesign som återges som ett HTML-formulär, fungerar det inte korrekt, även om datumet är korrekt angivet. Det här valideringsmönstret fungerar emellertid korrekt för formulär som återges som PDF.
+Vi rekommenderar att du begränsar användningen av valideringsregler för formulärfält när du återger formuläret som ett HTML-formulär. Vissa verifieringsregler kanske inte stöds för HTML-formulär. Om till exempel ett valideringsmönster för MM-DD-YYY används på ett `Date/Time`-fält som finns i en formulärdesign som återges som ett HTML-formulär, fungerar det inte korrekt, även om datumet har angetts korrekt. Det här valideringsmönstret fungerar emellertid korrekt för formulär som återges som PDF.
 
 >[!NOTE]
-Mer information om Forms-tjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+Mer information om tjänsten Forms finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ## Sammanfattning av steg {#summary-of-steps}
 
 Så här återger du ett HTML-formulär:
 
 1. Inkludera projektfiler.
-1. Skapa ett API-objekt för Forms Client.
+1. Skapa ett Forms Client API-objekt.
 1. Ange körningsalternativ för HTML.
 1. Återge ett HTML-formulär.
 1. Skriv formulärdataströmmen till klientens webbläsare.
@@ -203,7 +203,7 @@ Så här återger du ett HTML-formulär:
 
 Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprogram med Java, inkluderar du de JAR-filer som behövs. Om du använder webbtjänster måste du inkludera proxyfilerna.
 
-**Skapa ett API-objekt för FormsClient**
+**Skapa ett Forms Client API-objekt**
 
 Innan du programmässigt kan importera data till ett PDF-formulärKlient-API måste du skapa en klient för Form Data Integration-tjänsten. När du skapar en tjänstklient definierar du de anslutningsinställningar som krävs för att anropa en tjänst.
 
@@ -219,7 +219,7 @@ När ett HTML-verktygsfält visas i ett HTML-formulär kan användaren välja h�
 
 När du återger ett formulär som HTML kan du ange ett användaragentvärde. Ett användaragentvärde ger information om webbläsare och system. Detta är ett valfritt värde och du kan skicka ett tomt strängvärde. När du återger ett HTML-formulär med Java API-snabbstarten visas hur du får ett användaragentvärde och använder det för att återge ett formulär som HTML.
 
-HTTP-URL:er dit formulärdata skickas kan anges genom att ange mål-URL:en med hjälp av API:t för Forms Service Client eller anges i knappen Skicka i XDP-formulärdesignen. Om mål-URL:en anges i formulärdesignen ska du inte ange något värde med API:t för Forms Service Client.
+HTTP-URL:er dit formulärdata skickas kan anges genom att ange mål-URL:en med hjälp av Forms Service Client-API:t eller anges i knappen Skicka i XDP-formulärdesignen. Om mål-URL:en anges i formulärdesignen ska du inte ange något värde med Forms Service Client API.
 
 >[!NOTE]
 Det är valfritt att återge ett HTML-formulär med ett verktygsfält.
@@ -251,60 +251,60 @@ När Forms-tjänsten återger ett HTML-formulär returneras en formulärdatastr�
 
 [Återger interaktiv PDF forms](/help/forms/developing/rendering-interactive-pdf-forms.md)
 
-[Återge HTML-formulär med anpassade verktygsfält](/help/forms/developing/rendering-html-forms-custom-toolbars.md)
+[Återge HTML Forms med anpassade verktygsfält](/help/forms/developing/rendering-html-forms-custom-toolbars.md)
 
-[Skapa webbprogram som återger formulär](/help/forms/developing/creating-web-applications-renders-forms.md)
+[Skapa webbprogram som återger Forms](/help/forms/developing/creating-web-applications-renders-forms.md)
 
 ## Återge ett formulär som HTML med Java API {#render-a-form-as-html-using-the-java-api}
 
-Återge ett HTML-formulär med hjälp av Forms API (Java):
+Återge ett HTML-formulär med Forms API (Java):
 
 1. Inkludera projektfiler
 
    Inkludera JAR-klientfiler, t.ex. adobe-forms-client.jar, i Java-projektets klassökväg.
 
-1. Skapa ett API-objekt för FormsClient
+1. Skapa ett Forms Client API-objekt
 
-   * Skapa ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa ett `FormsServiceClient` objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory` objektet.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `FormsServiceClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Ange körningsalternativ för HTML
 
-   * Skapa ett `HTMLRenderSpec` objekt med hjälp av dess konstruktor.
-   * Om du vill återge ett HTML-formulär med ett verktygsfält anropar du `HTMLRenderSpec` objektets `setHTMLToolbar` metod och skickar ett `HTMLToolbar` uppräkningsvärde. Om du till exempel vill visa ett lodrätt HTML-verktygsfält skickar du `HTMLToolbar.Vertical`.
-   * Om du vill ange språkvärdet för HTML-formuläret anropar du `HTMLRenderSpec` objektets `setLocale` metod och skickar ett strängvärde som anger språkvärdet. (Det här är en valfri inställning.)
-   * Om du vill återge HTML-formuläret med fullständiga HTML-taggar anropar du `HTMLRenderSpec` objektets `setOutputType` -metod och skickar `OutputType.FullHTMLTags`. (Det här är en valfri inställning.)
+   * Skapa ett `HTMLRenderSpec`-objekt med hjälp av dess konstruktor.
+   * Om du vill återge ett HTML-formulär med ett verktygsfält anropar du `HTMLRenderSpec`-objektets `setHTMLToolbar`-metod och skickar ett `HTMLToolbar`-uppräkningsvärde. Om du till exempel vill visa ett lodrätt HTML-verktygsfält skickar du `HTMLToolbar.Vertical`.
+   * Om du vill ange språkvärdet för HTML-formuläret anropar du `HTMLRenderSpec`-objektets `setLocale`-metod och skickar ett strängvärde som anger språkvärdet. (Det här är en valfri inställning.)
+   * Om du vill återge HTML-formuläret i fullständiga HTML-taggar anropar du `HTMLRenderSpec`-objektets `setOutputType`-metod och skickar `OutputType.FullHTMLTags`. (Det här är en valfri inställning.)
 
    >[!NOTE]
-   Formulär återges inte korrekt i HTML när `StandAlone` alternativet är `true` och `ApplicationWebRoot` refererar till en annan server än J2EE-programservern som är värd för AEM Forms ( `ApplicationWebRoot` värdet anges med `URLSpec` objektet som skickas till `FormsServiceClient` objektets `(Deprecated) renderHTMLForm` -metod). När servern `ApplicationWebRoot` är en annan server från den som är värd för AEM Forms måste värdet för webb-URI:n i administrationskonsolen anges som formulärets webbprogram-URI-värde. Detta kan du göra genom att logga in på administrationskonsolen, klicka på Tjänster > Formulär och ange webbrots-URI:n som https://server-name:port/FormServer. Spara sedan inställningarna.
+   Forms återges inte korrekt i HTML när alternativet `StandAlone` är `true` och `ApplicationWebRoot` refererar till en annan server än J2EE-programservern som är värd för AEM Forms (värdet `ApplicationWebRoot` anges med `URLSpec`-objektet som skickas till `FormsServiceClient`-objektets `(Deprecated) renderHTMLForm`-metod). När `ApplicationWebRoot` är en annan server från den som är värd för AEM Forms, måste värdet för webb-URI:n i administrationskonsolen anges som formulärets webbprogram-URI-värde. Detta kan du göra genom att logga in på administrationskonsolen, klicka på Tjänster > Forms och ange webbrots-URI som https://server-name:port/FormServer. Spara sedan inställningarna.
 
 1. Återge ett HTML-formulär
 
-   Anropa `FormsServiceClient` objektets `(Deprecated) renderHTMLForm` metod och skicka följande värden:
+   Anropa `FormsServiceClient`-objektets `(Deprecated) renderHTMLForm`-metod och skicka följande värden:
 
-   * Ett strängvärde som anger formulärdesignens namn, inklusive filnamnstillägget. Om du refererar till en formulärdesign som är en del av ett formulärprogram måste du ange den fullständiga sökvägen, till exempel `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
-   * Ett `TransformTo` uppräkningsvärde som anger HTML-inställningstypen. Om du till exempel vill återge ett HTML-formulär som är kompatibelt med dynamisk HTML för Internet Explorer 5.0 eller senare anger du `TransformTo.MSDHTML`.
-   * Ett `com.adobe.idp.Document` objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du ett tomt `com.adobe.idp.Document` objekt.
-   * Det objekt `HTMLRenderSpec` som lagrar körningsalternativ för HTML.
-   * Ett strängvärde som anger `HTTP_USER_AGENT` rubrikvärdet; till exempel `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`.
-   * Ett `URLSpec` objekt som lagrar de URI-värden som krävs för att återge ett HTML-formulär.
-   * Ett `java.util.HashMap` objekt som lagrar bifogade filer. Det här är en valfri parameter och du kan ange `null` om du inte vill bifoga filer till formuläret.
+   * Ett strängvärde som anger formulärdesignens namn, inklusive filnamnstillägget. Om du refererar till en formulärdesign som ingår i ett Forms-program måste du ange den fullständiga sökvägen, till exempel `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
+   * Ett `TransformTo`-uppräkningsvärde som anger HTML-inställningstypen. Om du till exempel vill återge ett HTML-formulär som är kompatibelt med dynamisk HTML för Internet Explorer 5.0 eller senare anger du `TransformTo.MSDHTML`.
+   * Ett `com.adobe.idp.Document`-objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du ett tomt `com.adobe.idp.Document`-objekt.
+   * Det `HTMLRenderSpec`-objekt som lagrar körningsalternativ för HTML.
+   * Ett strängvärde som anger rubrikvärdet `HTTP_USER_AGENT`; till exempel `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`.
+   * Ett `URLSpec`-objekt som lagrar URI-värden som krävs för att återge ett HTML-formulär.
+   * Ett `java.util.HashMap`-objekt som lagrar bifogade filer. Det här är en valfri parameter och du kan ange `null` om du inte vill bifoga filer till formuläret.
 
-   Metoden returnerar `(Deprecated) renderHTMLForm` ett `FormsResult` objekt som innehåller en formulärdataström som kan skrivas till klientens webbläsare.
+   Metoden `(Deprecated) renderHTMLForm` returnerar ett `FormsResult`-objekt som innehåller en formulärdataström som kan skrivas till klientens webbläsare.
 
 1. Skriv formulärdataströmmen till klientens webbläsare
 
-   * Skapa ett `com.adobe.idp.Document` objekt genom att anropa `FormsResult` objektets `getOutputContent` metod.
-   * Hämta innehållstypen för `com.adobe.idp.Document` objektet genom att anropa dess `getContentType` metod.
-   * Ange `javax.servlet.http.HttpServletResponse` objektets innehållstyp genom att anropa dess `setContentType` metod och skicka `com.adobe.idp.Document` objektets innehållstyp.
-   * Skapa ett `javax.servlet.ServletOutputStream` objekt som används för att skriva formulärdataströmmen till klientens webbläsare genom att anropa `javax.servlet.http.HttpServletResponse` objektets `getOutputStream` metod.
-   * Skapa ett `java.io.InputStream` objekt genom att anropa `com.adobe.idp.Document` objektets `getInputStream` metod.
-   * Skapa en bytearray och fyll i den med formulärdataströmmen genom att anropa `InputStream` objektets `read` metod och skicka bytearrayen som ett argument.
-   * Anropa `javax.servlet.ServletOutputStream` objektets `write` metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till `write` metoden.
+   * Skapa ett `com.adobe.idp.Document`-objekt genom att anropa `FormsResult`-objektets `getOutputContent`-metod.
+   * Hämta innehållstypen för `com.adobe.idp.Document`-objektet genom att anropa dess `getContentType`-metod.
+   * Ange `javax.servlet.http.HttpServletResponse`-objektets innehållstyp genom att anropa dess `setContentType`-metod och skicka innehållstypen för `com.adobe.idp.Document`-objektet.
+   * Skapa ett `javax.servlet.ServletOutputStream`-objekt som används för att skriva formulärdataströmmen till klientens webbläsare genom att anropa `javax.servlet.http.HttpServletResponse`-objektets `getOutputStream`-metod.
+   * Skapa ett `java.io.InputStream`-objekt genom att anropa `com.adobe.idp.Document`-objektets `getInputStream`-metod.
+   * Skapa en bytearray och fyll i den med formulärdataströmmen genom att anropa `InputStream`-objektets `read`-metod och skicka bytearrayen som ett argument.
+   * Anropa `javax.servlet.ServletOutputStream`-objektets `write`-metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till metoden `write`.
 
 **Se även**
 
-[Återger formulär som HTML](#rendering-forms-as-html)
+[Återger Forms som HTML](#rendering-forms-as-html)
 
 [Snabbstart (SOAP-läge): Återge ett HTML-formulär med Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-using-the-java-api)
 
@@ -312,62 +312,62 @@ När Forms-tjänsten återger ett HTML-formulär returneras en formulärdatastr�
 
 [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## Återge ett formulär som HTML med hjälp av webbtjänstens API {#render-a-form-as-html-using-the-web-service-api}
+## Återge ett formulär som HTML med webbtjänstens API {#render-a-form-as-html-using-the-web-service-api}
 
 Återge ett HTML-formulär med Forms API (webbtjänsten):
 
 1. Inkludera projektfiler
 
-   * Skapa Java-proxyklasser som använder Forms-tjänstens WSDL.
+   * Skapa Java-proxyklasser som använder Forms tjänst-WSDL.
    * Inkludera Java-proxyklasserna i klassökvägen.
 
-1. Skapa ett API-objekt för FormsClient
+1. Skapa ett Forms Client API-objekt
 
-   Skapa ett `FormsService` objekt och ange autentiseringsvärden.
+   Skapa ett `FormsService`-objekt och ange autentiseringsvärden.
 
 1. Ange körningsalternativ för HTML
 
-   * Skapa ett `HTMLRenderSpec` objekt med hjälp av dess konstruktor.
-   * Om du vill återge ett HTML-formulär med ett verktygsfält anropar du `HTMLRenderSpec` objektets `setHTMLToolbar` metod och skickar ett `HTMLToolbar` uppräkningsvärde. Om du till exempel vill visa ett lodrätt HTML-verktygsfält skickar du `HTMLToolbar.Vertical`.
-   * Om du vill ange språkvärdet för HTML-formuläret anropar du `HTMLRenderSpec` objektets `setLocale` metod och skickar ett strängvärde som anger språkvärdet. Mer information finns i [AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
-   * Om du vill återge HTML-formuläret med fullständiga HTML-taggar anropar du `HTMLRenderSpec` objektets `setOutputType` -metod och skickar `OutputType.FullHTMLTags`.
+   * Skapa ett `HTMLRenderSpec`-objekt med hjälp av dess konstruktor.
+   * Om du vill återge ett HTML-formulär med ett verktygsfält anropar du `HTMLRenderSpec`-objektets `setHTMLToolbar`-metod och skickar ett `HTMLToolbar`-uppräkningsvärde. Om du till exempel vill visa ett lodrätt HTML-verktygsfält skickar du `HTMLToolbar.Vertical`.
+   * Om du vill ange språkvärdet för HTML-formuläret anropar du `HTMLRenderSpec`-objektets `setLocale`-metod och skickar ett strängvärde som anger språkvärdet. Mer information finns i [API-referens för AEM Forms](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+   * Om du vill återge HTML-formuläret i fullständiga HTML-taggar anropar du `HTMLRenderSpec`-objektets `setOutputType`-metod och skickar `OutputType.FullHTMLTags`.
 
    >[!NOTE]
-   Formulär återges inte korrekt i HTML när `StandAlone` alternativet är `true` och `ApplicationWebRoot` refererar till en annan server än J2EE-programservern som är värd för AEM Forms ( `ApplicationWebRoot` värdet anges med `URLSpec` objektet som skickas till `FormsServiceClient` objektets `(Deprecated) renderHTMLForm` -metod). När servern `ApplicationWebRoot` är en annan server från den som är värd för AEM Forms måste värdet för webb-URI:n i administrationskonsolen anges som formulärets webbprogram-URI-värde. Detta kan du göra genom att logga in på administrationskonsolen, klicka på Tjänster > Formulär och ange webbrots-URI:n som https://server-name:port/FormServer. Spara sedan inställningarna.
+   Forms återges inte korrekt i HTML när alternativet `StandAlone` är `true` och `ApplicationWebRoot` refererar till en annan server än J2EE-programservern som är värd för AEM Forms (värdet `ApplicationWebRoot` anges med `URLSpec`-objektet som skickas till `FormsServiceClient`-objektets `(Deprecated) renderHTMLForm`-metod). När `ApplicationWebRoot` är en annan server från den som är värd för AEM Forms, måste värdet för webb-URI:n i administrationskonsolen anges som formulärets webbprogram-URI-värde. Detta kan du göra genom att logga in på administrationskonsolen, klicka på Tjänster > Forms och ange webbrots-URI som https://server-name:port/FormServer. Spara sedan inställningarna.
 
 1. Återge ett HTML-formulär
 
-   Anropa `FormsService` objektets `(Deprecated) renderHTMLForm` metod och skicka följande värden:
+   Anropa `FormsService`-objektets `(Deprecated) renderHTMLForm`-metod och skicka följande värden:
 
-   * Ett strängvärde som anger formulärdesignens namn, inklusive filnamnstillägget. Om du refererar till en formulärdesign som är en del av ett formulärprogram måste du ange den fullständiga sökvägen, till exempel `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
-   * Ett `TransformTo` uppräkningsvärde som anger HTML-inställningstypen. Om du till exempel vill återge ett HTML-formulär som är kompatibelt med dynamisk HTML för Internet Explorer 5.0 eller senare anger du `TransformTo.MSDHTML`.
-   * Ett `BLOB` objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du `null`. (Se [Fylla i formulär i förväg med flödeslayouter](/help/forms/developing/prepopulating-forms-flowable-layouts.md#prepopulating-forms-with-flowable-layouts).)
-   * Det objekt `HTMLRenderSpec` som lagrar körningsalternativ för HTML.
-   * Ett strängvärde som anger `HTTP_USER_AGENT` rubrikvärdet; till exempel `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`. Du kan skicka en tom sträng om du inte vill ange det här värdet.
-   * Ett `URLSpec` objekt som lagrar de URI-värden som krävs för att återge ett HTML-formulär. (Se [Ange URI-värden](/help/forms/developing/rendering-interactive-pdf-forms.md).)
-   * Ett `java.util.HashMap` objekt som lagrar bifogade filer. Det här är en valfri parameter och du kan ange `null` om du inte vill bifoga filer till formuläret. (Se [Bifoga filer i formuläret](/help/forms/developing/rendering-interactive-pdf-forms.md).)
-   * Ett tomt `com.adobe.idp.services.holders.BLOBHolder` objekt som fylls i av metoden. Det här parametervärdet lagrar det återgivna formuläret.
-   * Ett tomt `com.adobe.idp.services.holders.BLOBHolder` objekt som fylls i av metoden. Den här parametern lagrar XML-utdata.
-   * Ett tomt `javax.xml.rpc.holders.LongHolder` objekt som fylls i av metoden. Det här argumentet lagrar antalet sidor i formuläret.
-   * Ett tomt `javax.xml.rpc.holders.StringHolder` objekt som fylls i av metoden. Det här argumentet lagrar språkets värde.
-   * Ett tomt `javax.xml.rpc.holders.StringHolder` objekt som fylls i av metoden. Det här argumentet lagrar det HTML-återgivningsvärde som används.
-   * Ett tomt `com.adobe.idp.services.holders.FormsResultHolder` objekt som innehåller resultatet av den här åtgärden.
+   * Ett strängvärde som anger formulärdesignens namn, inklusive filnamnstillägget. Om du refererar till en formulärdesign som ingår i ett Forms-program måste du ange den fullständiga sökvägen, till exempel `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
+   * Ett `TransformTo`-uppräkningsvärde som anger HTML-inställningstypen. Om du till exempel vill återge ett HTML-formulär som är kompatibelt med dynamisk HTML för Internet Explorer 5.0 eller senare anger du `TransformTo.MSDHTML`.
+   * Ett `BLOB`-objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du `null`. (Se [Förifyll Forms med flödeslayouter](/help/forms/developing/prepopulating-forms-flowable-layouts.md#prepopulating-forms-with-flowable-layouts).)
+   * Det `HTMLRenderSpec`-objekt som lagrar körningsalternativ för HTML.
+   * Ett strängvärde som anger rubrikvärdet `HTTP_USER_AGENT`; till exempel `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`. Du kan skicka en tom sträng om du inte vill ange det här värdet.
+   * Ett `URLSpec`-objekt som lagrar URI-värden som krävs för att återge ett HTML-formulär. (Se [Ange URI-värden](/help/forms/developing/rendering-interactive-pdf-forms.md).)
+   * Ett `java.util.HashMap`-objekt som lagrar bifogade filer. Det här är en valfri parameter och du kan ange `null` om du inte vill bifoga filer till formuläret. (Se [Bifoga filer i formuläret](/help/forms/developing/rendering-interactive-pdf-forms.md).)
+   * Ett tomt `com.adobe.idp.services.holders.BLOBHolder`-objekt som fylls i av metoden. Det här parametervärdet lagrar det återgivna formuläret.
+   * Ett tomt `com.adobe.idp.services.holders.BLOBHolder`-objekt som fylls i av metoden. Den här parametern lagrar XML-utdata.
+   * Ett tomt `javax.xml.rpc.holders.LongHolder`-objekt som fylls i av metoden. Det här argumentet lagrar antalet sidor i formuläret.
+   * Ett tomt `javax.xml.rpc.holders.StringHolder`-objekt som fylls i av metoden. Det här argumentet lagrar språkets värde.
+   * Ett tomt `javax.xml.rpc.holders.StringHolder`-objekt som fylls i av metoden. Det här argumentet lagrar det HTML-återgivningsvärde som används.
+   * Ett tomt `com.adobe.idp.services.holders.FormsResultHolder`-objekt som kommer att innehålla resultatet av den här åtgärden.
 
-   Metoden `(Deprecated) renderHTMLForm` fyller i det `com.adobe.idp.services.holders.FormsResultHolder` objekt som skickas som det sista argumentvärdet med en formulärdataström som måste skrivas till klientens webbläsare.
+   Metoden `(Deprecated) renderHTMLForm` fyller i det `com.adobe.idp.services.holders.FormsResultHolder`-objekt som skickas som det sista argumentvärdet med en formulärdataström som måste skrivas till klientens webbläsare.
 
 1. Skriv formulärdataströmmen till klientens webbläsare
 
-   * Skapa ett `FormResult` objekt genom att hämta värdet för `com.adobe.idp.services.holders.FormsResultHolder` objektets `value` datamedlem.
-   * Skapa ett `BLOB` objekt som innehåller formulärdata genom att anropa `FormsResult` objektets `getOutputContent` metod.
-   * Hämta innehållstypen för `BLOB` objektet genom att anropa dess `getContentType` metod.
-   * Ange `javax.servlet.http.HttpServletResponse` objektets innehållstyp genom att anropa dess `setContentType` metod och skicka `BLOB` objektets innehållstyp.
-   * Skapa ett `javax.servlet.ServletOutputStream` objekt som används för att skriva formulärdataströmmen till klientens webbläsare genom att anropa `javax.servlet.http.HttpServletResponse` objektets `getOutputStream` metod.
-   * Skapa en bytearray och fyll i den genom att anropa `BLOB` objektets `getBinaryData` metod. Den här aktiviteten tilldelar innehållet i `FormsResult` objektet till bytearrayen.
-   * Anropa `javax.servlet.http.HttpServletResponse` objektets `write` metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till `write` metoden.
+   * Skapa ett `FormResult`-objekt genom att hämta värdet för `com.adobe.idp.services.holders.FormsResultHolder`-objektets `value`-datamedlem.
+   * Skapa ett `BLOB`-objekt som innehåller formulärdata genom att anropa `FormsResult`-objektets `getOutputContent`-metod.
+   * Hämta innehållstypen för `BLOB`-objektet genom att anropa dess `getContentType`-metod.
+   * Ange `javax.servlet.http.HttpServletResponse`-objektets innehållstyp genom att anropa dess `setContentType`-metod och skicka innehållstypen för `BLOB`-objektet.
+   * Skapa ett `javax.servlet.ServletOutputStream`-objekt som används för att skriva formulärdataströmmen till klientens webbläsare genom att anropa `javax.servlet.http.HttpServletResponse`-objektets `getOutputStream`-metod.
+   * Skapa en bytearray och fyll i den genom att anropa `BLOB`-objektets `getBinaryData`-metod. Den här aktiviteten tilldelar innehållet i `FormsResult`-objektet till bytearrayen.
+   * Anropa `javax.servlet.http.HttpServletResponse`-objektets `write`-metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till metoden `write`.
 
 **Se även**
 
-[Återger formulär som HTML](#rendering-forms-as-html)
+[Återger Forms som HTML](#rendering-forms-as-html)
 
-[Anropar AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
 
