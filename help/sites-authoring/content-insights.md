@@ -11,6 +11,9 @@ topic-tags: site-features
 discoiquuid: 60f980fd-049e-43c1-8b5d-60a8279b357a
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '536'
+ht-degree: 1%
 
 ---
 
@@ -25,7 +28,7 @@ Layouten på sidan Content Insight ändras så att den passar skärmdimensionern
 
 ## Rapportdata
 
-På Content Insight-sidan finns rapporter som använder data från Adobe SiteCatalyst, Adobe Target, Adobe Social och BrightStor:
+På Content Insight-sidan finns rapporter om Adobe SiteCatalyst, Adobe Target, Adobe Social och BrightStor-data:
 
 * SiteCatalyst: Det finns rapporter om följande mätvärden:
 
@@ -36,7 +39,7 @@ På Content Insight-sidan finns rapporter som använder data från Adobe SiteCat
 * Mål: Rapporter om kampanjaktiviteter som din sida innehåller erbjudanden för.
 * BrightEdge: Rapporterar sidfunktioner som gör sidan mer synlig för sökmotorer och rekommenderar funktioner som ska implementeras.
 
-Se [Öppna analyser och rekommendationer för en sida](/help/sites-authoring/ci-analyze.md#opening-analytics-and-recommendations-for-a-page).
+Se [Öppna Analytics och Recommendations för en sida](/help/sites-authoring/ci-analyze.md#opening-analytics-and-recommendations-for-a-page).
 
 ## Rapporteringsperiod
 
@@ -48,7 +51,7 @@ Se [Ändra rapporteringsperiod](/help/sites-authoring/ci-analyze.md#changing-the
 
 >[!NOTE]
 >
->Content Insights-rapporterna kräver att administratören har integrerat AEM med SiteCatalyst, Target och BrightEdge. Se [Integrera med SightCatalyst](/help/sites-administering/adobeanalytics.md), [Integrera med Adobe Target](/help/sites-administering/target.md)och [Integrera med BrightEdge](/help/sites-administering/brightedge.md).
+>Content Insights-rapporterna kräver att administratören har integrerat AEM med SiteCatalyst, Target och BrightStor. Se [Integrera med SightCatalyst](/help/sites-administering/adobeanalytics.md), [Integrera med Adobe Target](/help/sites-administering/target.md) och [Integrera med BrightEdge](/help/sites-administering/brightedge.md).
 
 ## Vyrapporten {#the-views-report}
 
@@ -62,7 +65,7 @@ Vyrapporten innehåller följande funktioner för utvärdering av sidtrafik:
 
 ![chlimage_1-312](assets/chlimage_1-312.png)
 
-## Genomsnittlig engagerad sidrapport {#the-page-average-engaged-report}
+## Sidmedelvärdet för engagerad rapport {#the-page-average-engaged-report}
 
 Rapporten Page Average Engaged innehåller följande funktioner för utvärdering av sideffektivitet:
 
@@ -85,15 +88,15 @@ Satsrapporten innehåller ett diagram som visar antalet studsar som har inträff
 
 ## Kampanjaktivitetsrapporten {#the-campaign-activity-report}
 
-För varje kampanj som sidan är aktiv för visas en rapport med namnet *Kampanjnamnsaktivitet* . Rapporten visar hur många sidor och konverteringar som gjorts för varje segment som erbjudandet gäller.
+För varje kampanj som sidan är aktiv för visas en rapport med namnet *Kampanjnamn* Aktivitet. Rapporten visar hur många sidor och konverteringar som gjorts för varje segment som erbjudandet gäller.
 
 ![chlimage_1-316](assets/chlimage_1-316.png)
 
-## SEO-rekommendationsrapporten {#the-seo-recommendations-report}
+## SEO Recommendations Report {#the-seo-recommendations-report}
 
-SEO-rekommendationsrapporten innehåller resultaten av BrightEdge-analysen för sidan. Rapporten är en checklista med sidfunktioner som anger vilka funktioner sidan innehåller och inte innehåller för att maximera sökbarheten med sökmotorer.
+SEO Recommendations-rapporten innehåller resultaten av BrightEdge-analysen för sidan. Rapporten är en checklista med sidfunktioner som anger vilka funktioner sidan innehåller och inte innehåller för att maximera sökbarheten med sökmotorer.
 
-I rapporten kan du skapa uppgifter så att det görs förbättringar för att förbättra sidans sökbarhet. Rekommendationer indikerar att åtgärder har skapats för att implementera rekommendationen. Se [Tilldela uppgifter för SEO-rekommendationer](/help/sites-authoring/ci-analyze.md#assigning-tasks-for-seo-recommendations).
+I rapporten kan du skapa uppgifter så att det görs förbättringar för att förbättra sidans sökbarhet. Recommendations anger att uppgifter har skapats för att implementera rekommendationen. Se [Tilldela uppgifter för SEO Recommendations](/help/sites-authoring/ci-analyze.md#assigning-tasks-for-seo-recommendations).
 
 ![chlimage_1-317](assets/chlimage_1-317.png)
 
