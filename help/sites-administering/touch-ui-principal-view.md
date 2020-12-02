@@ -12,6 +12,9 @@ discoiquuid: db8665fa-353f-45c2-8e37-169d5c1df873
 docset: aem65
 translation-type: tm+mt
 source-git-commit: a156e09e77951041dce017f2f78069bc050b6bdb
+workflow-type: tm+mt
+source-wordcount: '702'
+ht-degree: 1%
 
 ---
 
@@ -20,9 +23,9 @@ source-git-commit: a156e09e77951041dce017f2f78069bc050b6bdb
 
 ## Översikt {#overview}
 
-AEM 6.5 introducerar behörighetshantering för användare och grupper. Huvudfunktionaliteten är densamma som det klassiska användargränssnittet, men är mer användarvänlig och effektiv.
+I AEM 6.5 introduceras behörighetshantering för användare och grupper. Huvudfunktionaliteten är densamma som det klassiska användargränssnittet, men är mer användarvänlig och effektiv.
 
-## Så här använder du {#how-to-use}
+## Användning {#how-to-use}
 
 ### Åtkomst till användargränssnittet {#accessing-the-ui}
 
@@ -36,7 +39,7 @@ CRXDE för att hantera avancerade behörigheter och begränsningar. Den har kons
 
 ![](assets/unu-1.png)
 
-Det finns ett filter som gör att användaren kan välja vilken typ av huvudobjekt som ska användas för att titta på **Användare**, **Grupper** eller **Alla** och söka efter huvudobjekt **.**
+Det finns ett filter som gör att användaren kan välja vilken typ av huvudobjekt som ska användas för att kontrollera **Användare**, **Grupper** eller **Alla** och söka efter ett huvudnamn **.**
 
 ![](assets/image2019-3-20_23-52-51.png)
 
@@ -50,7 +53,7 @@ Om du klickar på namnet visas de tilldelade behörigheterna till höger. I beh�
 
 ![](assets/trei-1.png)
 
-### Lägga till ny åtkomstkontrollpost för ett huvudkonto {#adding-new-access-control-entry-for-a-principal}
+### Lägger till ny åtkomstkontrollpost för ett huvudkonto {#adding-new-access-control-entry-for-a-principal}
 
 Du kan lägga till nya behörigheter genom att lägga till en ny åtkomstkontrollpost genom att klicka på knappen Lägg till ACE.
 
@@ -60,11 +63,11 @@ Då öppnas fönstret som visas nedan. Nästa steg är att välja en sökväg d�
 
 ![](assets/cinci-1.png)
 
-Här väljer vi en sökväg där vi vill konfigurera behörighet för **dammanvändare**:
+Här väljer vi en sökväg där vi vill konfigurera behörighet för **dam-users**:
 
 ![](assets/sase-1.png)
 
-När sökvägen har valts återgår arbetsflödet till den här skärmen, där användaren kan välja en eller flera av de tillgängliga namnutrymmena (som `jcr`eller `rep` `crx`) enligt nedan.
+När sökvägen har valts återgår arbetsflödet till den här skärmen, där användaren kan välja en eller flera av de tillgängliga namnutrymmena (som `jcr`, `rep` eller `crx`) enligt nedan.
 
 Du kan lägga till behörigheter genom att söka i textfältet och sedan välja från listan.
 
@@ -88,15 +91,15 @@ Förutom en lista över behörigheter och behörighetstypen för en viss sökvä
 >
 >Mer information om vad varje begränsning innebär finns på [den här sidan](/help/sites-administering/user-group-ac-admin.md#restrictions).
 
-Du kan lägga till begränsningar enligt nedan genom att välja begränsningstyp, ange värdet och klicka på **+** -ikonen. ![](assets/sapte-1.png) ![](assets/opt-1.png)
+Du kan lägga till begränsningar enligt nedan genom att välja begränsningstyp, ange värdet och klicka på ikonen **+**. ![](assets/sapte-1.png) ![](assets/opt-1.png)
 
-Den nya åtkomstkontrollistan visas i åtkomstkontrollistan enligt nedan. Observera att `jcr:write` är ett aggregerat privilegium som inkluderar `jcr:removeNode` det som lades till ovan, men inte visas nedan som dess täckta under `jcr:write`.
+Den nya åtkomstkontrollistan visas i åtkomstkontrollistan enligt nedan. Observera att `jcr:write` är ett aggregeringsprivilegium som inkluderar `jcr:removeNode` som lades till ovan, men som inte visas nedan som det beskrivs under `jcr:write`.
 
-### Redigera ACE {#editing-aces}
+### Redigera ACE:er {#editing-aces}
 
 Du kan redigera åtkomstkontrollposter genom att markera ett huvudnamn och välja det ACE som du vill redigera.
 
-Här kan du till exempel redigera posten nedan för **dammanvändare** genom att klicka på pennikonen till höger:
+Här kan vi till exempel redigera posten nedan för **dam-users** genom att klicka på pennikonen till höger:
 
 ![](assets/image2019-3-21_0-35-39.png)
 
@@ -104,7 +107,7 @@ Redigeringsskärmen visas med konfigurerade ACE-adresser förmarkerade. Du kan t
 
 ![](assets/noua-1.png)
 
-Här lägger vi till `addChildNodes` privilegiet för **dammanvändare** på den angivna sökvägen.
+Här lägger vi till privilegiet `addChildNodes` för **dam-users** på den angivna sökvägen.
 
 ![](assets/image2019-3-21_0-45-35.png)
 
@@ -112,7 +115,7 @@ Du kan spara ändringarna genom att klicka på knappen **Spara** överst till h�
 
 ![](assets/zece-1.png)
 
-### Ta bort ACE {#deleting-aces}
+### Tar bort ACE:er {#deleting-aces}
 
 Åtkomstkontrollposter kan tas bort om du vill ta bort alla behörigheter som tilldelats ett huvudkonto på en viss sökväg. X-ikonen bredvid ACE kan användas för att ta bort den så som visas nedan:
 
