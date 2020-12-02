@@ -12,6 +12,9 @@ discoiquuid: 6612f89d-c518-4e5a-8df1-6487cc330a9a
 docset: aem65
 translation-type: tm+mt
 source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+workflow-type: tm+mt
+source-wordcount: '362'
+ht-degree: 0%
 
 ---
 
@@ -24,11 +27,11 @@ Att skapa innehåll är en repetitiv process. Effektiv redigering kräver att ma
 
 Med sidskillnader kan en användare jämföra den aktuella sidan med startsidor, tidigare versioner osv. Mer information om den här användarfunktionen finns i [Sidskillnad](/help/sites-authoring/page-diff.md).
 
-## Operationsinformation {#operation-details}
+## Åtgärdsinformation {#operation-details}
 
-När man jämför versioner av en sida skapas den tidigare versionen som användaren vill jämföra av AEM i bakgrunden för att underlätta skillnaderna. Detta behövs för att kunna återge innehållet [för jämförelse](/help/sites-developing/pagediff.md#operation-details)sida vid sida.
+När du jämför versioner av en sida skapas den tidigare versionen som användaren vill jämföra av AEM i bakgrunden för att underlätta skillnaderna. Detta behövs för att kunna återge innehållet [för jämförelse sida vid sida](/help/sites-developing/pagediff.md#operation-details).
 
-Denna rekreationsåtgärd utförs internt av AEM och är transparent för användaren och kräver ingen åtgärd. En administratör som visar databasen, till exempel i CRX DE Lite, skulle dock se dessa återskapade versioner i innehållsstrukturen.
+Denna rekreationsåtgärd görs internt av AEM och är transparent för användaren och kräver ingen åtgärd. En administratör som visar databasen, till exempel i CRX DE Lite, skulle dock se dessa återskapade versioner i innehållsstrukturen.
 
 När innehållet jämförs återskapas hela trädet fram till sidan som ska jämföras på följande plats:
 
@@ -36,13 +39,13 @@ När innehållet jämförs återskapas hela trädet fram till sidan som ska jäm
 
 En rensningsåtgärd körs automatiskt för att rensa upp det tillfälliga innehållet.
 
-## Permissions {#permissions}
+## Behörigheter {#permissions}
 
-I det klassiska användargränssnittet behövde man tidigare tänka på hur man skulle kunna underlätta AEM-differentiering (t.ex. genom att använda `cq:text` tag lib eller integrera `DiffService` OSGi-tjänsten i komponenter). Det här behövs inte längre för den nya diff-funktionen, eftersom skillnaden inträffar på klientsidan via DOM-jämförelse.
+I det klassiska användargränssnittet tidigare var det nödvändigt att ta särskild hänsyn till utvecklingen för att underlätta AEM (t.ex. med `cq:text` tag lib eller för att integrera OSGi-tjänsten i komponenter). `DiffService` Det här behövs inte längre för den nya diff-funktionen, eftersom skillnaden inträffar på klientsidan via DOM-jämförelse.
 
 Det finns dock ett antal begränsningar som måste beaktas av utvecklaren.
 
-* Den här funktionen använder CSS-klasser som inte har namnmellanrum med AEM-produkten. Om andra anpassade CSS-klasser eller CSS-klasser från tredje part med samma namn inkluderas på sidan kan visningen av skillnaderna påverkas.
+* Den här funktionen använder CSS-klasser som inte har något namnutrymme för AEM. Om andra anpassade CSS-klasser eller CSS-klasser från tredje part med samma namn inkluderas på sidan kan visningen av skillnaderna påverkas.
 
    * `html-added`
    * `html-removed`
