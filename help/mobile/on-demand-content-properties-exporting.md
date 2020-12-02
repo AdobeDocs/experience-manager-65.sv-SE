@@ -11,11 +11,14 @@ topic-tags: developing-on-demand-services-app
 discoiquuid: a3006835-b1d2-47d6-959a-cdb692e34e1e
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '344'
+ht-degree: 1%
 
 ---
 
 
-# Exportera innehåll med hjälp av innehållsegenskaper{#using-content-properties-to-export-content}
+# Exportera innehåll{#using-content-properties-to-export-content} med innehållsegenskaper
 
 >[!NOTE]
 >
@@ -23,9 +26,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 Appar representeras som *cq:Pages* i AEM.
 
-De delar samma gemensamma egenskaper som finns i *cq:Page* , förutom de som visas nedan och som representerar egenskaper som stöder integrering.
+De delar samma gemensamma egenskaper som finns i alla *cq:Page* utöver de andra som visas nedan och som representerar integrationsegenskaper som stöds.
 
-## Appegenskaper {#app-properties}
+## Programegenskaper {#app-properties}
 
 I följande tabell visas **Programegenskaper och noder**.
 
@@ -39,7 +42,7 @@ I följande tabell visas **Programegenskaper och noder**.
   <tr>
    <td>dps-cloudConfig</td>
    <td>String:Path</td>
-   <td><p>Sökväg till en konfigurerad Mobile On-Demand-molntjänst. Används för AEM Mobile till Mobile On Demand-åtgärder (API-anrop)</p> <p>Den här associationen konfigureras via panelen Hantera anslutning när en författare väljer en molntjänst för mobil på begäran att koppla appen till.</p> </td>
+   <td><p>Sökväg till en konfigurerad Mobile On-Demand-Cloud Service. Används för AEM Mobile till Mobile On-Demand-åtgärder (API-anrop)</p> <p>Den här associationen konfigureras via panelen Hantera anslutning när en författare väljer en Cloud Service för mobil på begäran att koppla appen till.</p> </td>
   </tr>
   <tr>
    <td>dps-exportTemplate</td>
@@ -49,7 +52,7 @@ I följande tabell visas **Programegenskaper och noder**.
   <tr>
    <td>dps-projectId</td>
    <td>Sträng</td>
-   <td><p>ID/URI för det Mobile On-Demand-projekt som den här appen är länkad/bunden till.</p> <p>Den här associationen konfigureras via panelen Hantera anslutning när en författare väljer projektet från en lista över tillgängliga projekt för den associerade tjänsten Mobile On-Demand Cloud.</p> </td>
+   <td><p>ID/URI för det Mobile On-Demand-projekt som den här appen är länkad/bunden till.</p> <p>Den här associationen konfigureras via panelen Hantera anslutning när en författare väljer projektet från en lista över tillgängliga projekt för den associerade Cloud Servicen Mobile On-Demand.</p> </td>
   </tr>
   <tr>
    <td>dps-projectTitle</td>
