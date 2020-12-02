@@ -24,13 +24,13 @@ ht-degree: 1%
 
 Tjänsten Barcoded Forms extraherar data från elektroniska bilder av streckkoder. Tjänsten accepterar TIFF- och PDF-filer som innehåller en eller flera streckkoder som indata och extraherar streckkodsdata. Streckkodsdata kan formateras på olika sätt, t.ex. XML, avgränsade strängar eller andra anpassade format som skapats med JavaScript.
 
-Tjänsten Barcoded Forms har stöd för följande **tvådimensionella (2D)** symboler som tillhandahålls som skannade TIFF- eller PDF-dokument:
+Tjänsten Barcoded Forms stöder följande **tvådimensionella (2D)**-symboler som tillhandahålls som skannade TIFF- eller PDF-dokument:
 
 * PDF417
 * Datamatris
 * QR-kod
 
-Tjänsten stöder även följande **endimensionella** symboler som tillhandahålls som skannade TIFF- eller PDF-dokument:
+Tjänsten stöder även följande **endimensionella**-symboler som tillhandahålls som skannade TIFF- eller PDF-dokument:
 
 * Codabar
 * Code 128
@@ -94,9 +94,9 @@ Tjänsten Barcoded Forms returnerar följande XML-dokument när streckkoderna ha
 
 ## Överväganden för tjänsten {#considerations}
 
-### Arbetsflöden som använder streckkodade formulär {#workflows-that-use-barcoded-forms}
+### Arbetsflöden som använder streckkodsformulär {#workflows-that-use-barcoded-forms}
 
-Formulärförfattare skapar interaktiva streckkodsformulär med Designer. (Se [Designer-hjälpen](https://www.adobe.com/go/learn_aemforms_designer_63).) När en användare fyller i ett streckkodsformulär med Adobe Reader eller Acrobat uppdateras streckkoden automatiskt för att koda formulärdata.
+Formulärförfattare skapar interaktiva streckkodsformulär med Designer. (Se [Designer-hjälp](https://www.adobe.com/go/learn_aemforms_designer_63).) När en användare fyller i ett streckkodsformulär med Adobe Reader eller Acrobat uppdateras streckkoden automatiskt för att koda formulärdata.
 
 Tjänsten Barcoded Forms är användbar vid konvertering av data som finns på papper till elektroniskt format. När ett streckkodsformulär fylls i och skrivs ut kan den utskrivna kopian skannas och användas som indata till tjänsten Barcoded Forms.
 
@@ -143,7 +143,7 @@ Barcoded Forms Service innehåller följande två API:er:
 
 * **[extractToXML](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode)**: Konvertera data som avkodats med avkodnings-API till XML-data. Dessa XML-data kan sammanfogas med ett XFA-formulär. Den returnerar en lista med XML-dokument, en för varje streckkod.
 
-### Använda BCF Service med JSP eller Servlets {#using-bcf-service-with-a-jsp-or-servlets}
+### Använda BCF Service med en JSP eller Servlets {#using-bcf-service-with-a-jsp-or-servlets}
 
 Följande exempelkod avkodar en streckkod i ett dokument och sparar XML-utdata på disken.
 
