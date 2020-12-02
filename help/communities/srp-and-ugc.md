@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## Introduktion {#introduction}
 
-Om du inte känner till lagringsresursens leverantör (SRP) och dess relation till användargenererat innehåll (UGC) kan du besöka [Community Content Storage](working-with-srp.md) and [Storage Resource Provider Overview](srp.md).
+Om du inte känner till lagringsresursens leverantör (SRP) och dess relation till användargenererat innehåll (UGC) går du till [Community Content Storage](working-with-srp.md) och [lagringsresursprovideröversikt](srp.md).
 
 I det här avsnittet av dokumentationen finns viktig information om SRP och UGC.
 
@@ -44,7 +44,7 @@ När du uppgraderar från AEM 6.0 eller tidigare måste du migrera UGC för alla
 >
 >Tidigare hittades verktyg för att komma åt UGC i paketet SocialUtils, som inte längre finns.
 >
->Information om ersättningsverktyg finns i [Omfaktorisering](socialutils.md)för SocialUtils.
+>Information om ersättningsverktyg finns i [Omfaktorisering av SocialUtils](socialutils.md).
 
 ## Verktygsmetod för åtkomst till UGC {#utility-method-to-access-ugc}
 
@@ -65,13 +65,13 @@ protected void doGet(final SlingHttpServletRequest request, final SlingHttpServl
 }
 ```
 
-Andra ersättningar för SocialUtils finns i [Omfaktorisering](socialutils.md)för SocialUtils.
+Andra SocialUtils-ersättningar finns i [SocialUtils-omfaktorisering](socialutils.md).
 
-Riktlinjer för kodning finns på [Accessing UGC with SRP](accessing-ugc-with-srp.md).
+Riktlinjer för kodning finns på [Gå till UGC med SRP](accessing-ugc-with-srp.md).
 
 >[!CAUTION]
 >
->Sökvägen resourceToUGCStoragePath() returnerar *inte* lämplig för [ACL-kontroll](srp.md#for-access-control-acls).
+>Sökvägen resourceToUGCStoragePath() returnerar *som inte är* lämplig för [ACL-kontroll](srp.md#for-access-control-acls).
 
 ## Verktygsmetod för åtkomst till åtkomstkontrollistor {#utility-method-to-access-acls}
 
@@ -98,17 +98,17 @@ protected void doGet(final SlingHttpServletRequest request, final SlingHttpServl
 
 >[!CAUTION]
 >
->Sökvägen som returneras av resourceToACLPath() är *inte* lämplig för [åtkomst till själva UGC](#utility-method-to-access-acls) .
+>Sökvägen som returneras av resourceToACLPath() är *inte* lämplig för [åtkomst till själva UGC](#utility-method-to-access-acls).
 
 ## UGC-relaterade lagringsplatser {#ugc-related-storage-locations}
 
-Följande beskrivningar av lagringsplats kan vara till hjälp när du utvecklar med JSRP eller kanske MSRP. Det finns för närvarande inget användargränssnitt som kan komma åt UGC som lagras i ASRP, vilket finns för verktygen JSRP ([CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)) och MSRP (MongoDB).
+Följande beskrivningar av lagringsplats kan vara till hjälp när du utvecklar med JSRP eller kanske MSRP. Det finns för närvarande inget användargränssnitt som kan komma åt UGC som lagras i ASRP, vilket finns för JSRP ([CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)) och MSRP (MongoDB-verktyg).
 
 **Komponentplats**
 
 När en medlem går in i UGC i publiceringsmiljön interagerar de med en komponent som en del av en AEM.
 
-Ett exempel på en sådan komponent är [kommentarkomponenten](http://localhost:4502/content/community-components/en/comments.html) som finns på webbplatsen för [Community Components Guide](components-guide.md) . Sökvägen till kommentarnoden i den lokala databasen är:
+Ett exempel på en sådan komponent är [kommentarkomponenten](http://localhost:4502/content/community-components/en/comments.html) som finns i [Community Components Guide](components-guide.md)-webbplatsen. Sökvägen till kommentarnoden i den lokala databasen är:
 
 * Komponentsökväg = `/content/community-components/en/comments/jcr:content/content/includable/comments`
 
@@ -126,10 +126,10 @@ UGC skapas på båda dessa platser och ska bara nås med en [verktygsmetod](#uti
 * Rotsökväg = `/content/usergenerated/asi/srp-choice`
 * UGC-nod för JSRP = `/content/usergenerated/asi/jcr/content/community-components/en/comments/jcr:content/content/includable/comments/srzd-let_it_be_`
 
-*För JSRP är du medveten* om att UGC-noden *bara* finns på den AEM instansen (antingen författaren eller publiceringen) som den angavs för. Om det anges i en publiceringsinstans går det inte att moderera från modereringskonsolen på författaren.
+*Observera* att för JSRP finns UGC-noden  ** bara på den AEM instansen (antingen författaren eller publiceringen) som den angavs för. Om det anges i en publiceringsinstans går det inte att moderera från modereringskonsolen på författaren.
 
 ## Relaterad information {#related-information}
 
-* [Översikt över](srp.md) lagringsresursprovidern - Introduktion och översikt över databasanvändningen.
-* [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - riktlinjer för kodning.
-* [Omfaktorisering för SocialUtils](socialutils.md) - Mappar borttagna verktygsmetoder till aktuella SRP-verktygsmetoder.
+* [Översikt över](srp.md)  lagringsresursprovidern - Introduktion och översikt över databasanvändningen.
+* [Använder UGC med riktlinjerna för SRP](accessing-ugc-with-srp.md) -kodning.
+* [Omfaktorisering för SocialUtils](socialutils.md) - Mappar utgått verktygsmetod till aktuella SRP-verktygsmetoder.
