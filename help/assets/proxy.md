@@ -1,23 +1,23 @@
 ---
-title: Proxyutveckling för [!DNL Assets]
-description: En proxy är en [!DNL Experience Manager] instance that uses proxy workers to process jobs. Learn how to configure an [!DNL Experience Manager] proxy, åtgärder som stöds, proxykomponenter och hur du utvecklar en anpassad proxyarbetare.
+title: '[!DNL Assets] proxyutveckling'
+description: En proxy är en  [!DNL Experience Manager] instance that uses proxy workers to process jobs. Learn how to configure an [!DNL Experience Manager] proxy, åtgärder som stöds, proxykomponenter och hur du utvecklar en anpassad proxyarbetare.
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '859'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Assets] proxyutveckling {#assets-proxy-development}
+# [!DNL Assets] proxyutveckling  {#assets-proxy-development}
 
 [!DNL Adobe Experience Manager Assets] använder en proxy för att distribuera bearbetning för vissa uppgifter.
 
-En proxy är en specifik (och ibland separat) Experience Manager-instans som använder proxyarbetare som processorer som hanterar ett jobb och skapar ett resultat. En proxyarbetare kan användas för en mängd olika uppgifter. När det gäller en [!DNL Assets] proxy kan detta användas för att läsa in resurser för återgivning i Assets. IDS- [proxyarbetaren](indesign.md) använder till exempel en [!DNL Adobe InDesign] server för att bearbeta filer som ska användas i Assets.
+En proxy är en specifik (och ibland separat) Experience Manager-instans som använder proxyarbetare som processorer som hanterar ett jobb och skapar ett resultat. En proxyarbetare kan användas för en mängd olika uppgifter. Om det är en [!DNL Assets]-proxy kan den användas för att läsa in resurser för återgivning i Assets. Exempelvis använder IDS-proxyarbetaren [en ](indesign.md)-server för att bearbeta filer som ska användas i Assets.[!DNL Adobe InDesign]
 
-När proxyn är en separat [!DNL Experience Manager] instans minskar detta belastningen på författarinstansen/instanserna i Experience Manager. Som standard utförs resurshanteringsuppgifterna i samma JVM (externaliserat via Proxy) för att minska belastningen på Experience Manager-utvecklingsinstansen. [!DNL Assets]
+När proxyn är en separat [!DNL Experience Manager]-instans minskar detta belastningen på författarinstansen/instanserna i Experience Manager. Som standard kör [!DNL Assets] resurshanteringsuppgifterna i samma JVM (externaliserat via Proxy) för att minska belastningen på författarinstansen i Experience Manager.
 
 ## Proxy (HTTP Access) {#proxy-http-access}
 
@@ -27,7 +27,7 @@ En proxy är tillgänglig via HTTP-servern när den är konfigurerad att accepte
 
 * `job`
 
-   **Krav**: parametern `jobevent` måste anges som en serialiserad värdekarta. Detta används för att skapa en `Event` för en jobbprocessor.
+   **Krav**: parametern  `jobevent` måste anges som en serialiserad värdekarta. Detta används för att skapa en `Event` för en jobbprocessor.
 
    **Resultat**: Lägger till ett nytt jobb. Om det lyckas returneras ett unikt jobb-ID.
 
@@ -38,7 +38,7 @@ curl -u admin:admin -F":operation=job" -F"someproperty=xxxxxxxxxxxx"
 
 * `result`
 
-   **Krav**: parametern `jobid` måste anges.
+   **Krav**: parametern  `jobid` måste anges.
 
    **Resultat**: Returnerar en JSON-representation av den resulterande noden som skapats av jobbprocessorn.
 
@@ -71,11 +71,11 @@ curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
 
 ### Proxyarbetare {#proxy-worker}
 
-En proxyarbetare är en processor som hanterar ett jobb och skapar ett resultat. Arbetare finns i proxyinstansen och måste implementera [snedställande JobProcessor](https://sling.apache.org/site/eventing-and-jobs.html) för att identifieras som en proxyarbetare.
+En proxyarbetare är en processor som hanterar ett jobb och skapar ett resultat. Arbetare finns på proxyinstansen och måste implementera [Sing JobProcessor](https://sling.apache.org/site/eventing-and-jobs.html) för att identifieras som en proxyarbetare.
 
 >[!NOTE]
 >
->Arbetaren måste implementera [snedställningsjobbbearbetaren](https://sling.apache.org/site/eventing-and-jobs.html) för att kunna identifieras som en proxyarbetare.
+>Arbetaren måste implementera [sling JobProcessor](https://sling.apache.org/site/eventing-and-jobs.html) för att identifieras som en proxyarbetare.
 
 ### Klient-API {#client-api}
 
@@ -103,17 +103,17 @@ Här följer ett exempel på API-användning:
  proxyJobService.removeJob(jobId);
 ```
 
-### Cloud Service Configurations {#cloud-service-configurations}
+### Konfigurationer för Cloud Service {#cloud-service-configurations}
 
 >[!NOTE]
 >
 >Referensdokumentation för proxy-API:t finns under [`com.day.cq.dam.api.proxy`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/dam/api/proxy/package-summary.html).
 
-Både proxy- och proxy-arbetskonfigurationer är tillgängliga via molntjänster som är tillgängliga från [!DNL Assets] Tools **Console eller under** `/etc/cloudservices/proxy`. Varje proxyarbetare förväntas lägga till en nod under `/etc/cloudservices/proxy` för arbetarspecifik konfigurationsinformation (till exempel `/etc/cloudservices/proxy/workername`).
+Både proxy- och proxyarbetarkonfigurationer är tillgängliga via molntjänster som tillgängliga från [!DNL Assets] **Verktyg**-konsolen eller under `/etc/cloudservices/proxy`. Varje proxyarbetare förväntas lägga till en nod under `/etc/cloudservices/proxy` för arbetarspecifik konfigurationsinformation (till exempel `/etc/cloudservices/proxy/workername`).
 
 >[!NOTE]
 >
->Mer information finns i [InDesign Server Proxy Worker-konfiguration](indesign.md#configuring-the-proxy-worker-for-indesign-server) och [Cloud Services-konfiguration](../sites-developing/extending-cloud-config.md) .
+>Mer information finns i [InDesign Server Proxy Worker-konfiguration](indesign.md#configuring-the-proxy-worker-for-indesign-server) och [Cloud Services konfiguration](../sites-developing/extending-cloud-config.md).
 
 Här följer ett exempel på API-användning:
 
@@ -132,9 +132,9 @@ Här följer ett exempel på API-användning:
 
 ### Utveckla en anpassad proxyarbetare {#developing-a-customized-proxy-worker}
 
-IDS- [proxyarbetaren](indesign.md) är ett exempel på en [!DNL Assets] proxyarbetare som redan har tillhandahållits direkt för att lägga ut bearbetning av InDesign-resurser på entreprenad.
+[IDS-proxyarbetaren](indesign.md) är ett exempel på en [!DNL Assets]-proxyarbetare som redan finns tillgänglig för att lägga ut bearbetningen av InDesign-resurser på entreprenad.
 
-Du kan också utveckla och konfigurera din egen [!DNL Assets] proxyarbetare för att skapa en specialiserad arbetare som skickar ut och lägger ut dina [!DNL Assets] bearbetningsuppgifter på entreprenad.
+Du kan också utveckla och konfigurera din egen [!DNL Assets]-proxyarbetare för att skapa en specialarbetare som skickar och lägger ut dina [!DNL Assets]-bearbetningsuppgifter på entreprenad.
 
 Om du konfigurerar en egen anpassad proxyarbetare måste du:
 
@@ -160,7 +160,7 @@ Följande diagram och steg visar hur du fortsätter:
 
 1. Ett [delningsjobb](https://sling.apache.org/site/eventing-and-jobs.html) används, så du måste definiera ett jobbämne för ditt användningsfall.
 
-   Ett exempel finns `IDSJob.IDS_EXTENDSCRIPT_JOB` i IDS-proxyarbetaren.
+   Se till exempel `IDSJob.IDS_EXTENDSCRIPT_JOB` för IDS-proxyarbetaren.
 
 1. Det externa steget används för att utlösa händelsen och sedan vänta tills det är klart. detta görs genom att avfråga ID:t. Du måste utveckla ett eget steg för att implementera nya funktioner.
 
@@ -170,15 +170,15 @@ Följande diagram och steg visar hur du fortsätter:
 
 1. Implementera en jobbhanterare för ditt ämne. Hanteraren kräver utveckling så att den utför din specifika åtgärd och anses vara implementeringen av arbetaren.
 
-   Ett exempel finns `IDSJobProcessor.java` i IDS-proxyarbetaren.
+   Se till exempel `IDSJobProcessor.java` för IDS-proxyarbetaren.
 
-1. Använda `ProxyUtil.java` i dammråttor. På så sätt kan du skicka jobb till arbetare med dammproxyn.
+1. Använd `ProxyUtil.java` i dammkompositioner. På så sätt kan du skicka jobb till arbetare med dammproxyn.
 
 >[!NOTE]
 >
->Det som inte finns med i proxyramverket är poolmekanismen [!DNL Assets] .
+>Det som [!DNL Assets]-proxyramverket inte tillhandahåller är poolmekanismen.
 >
->Integreringen ger [!DNL InDesign] åtkomst till en pool med [!DNL InDesign] servrar (IDSPool). Den här poolen är specifik för [!DNL InDesign] integrering och inte en del av [!DNL Assets] proxyramverket.
+>Integreringen [!DNL InDesign] ger åtkomst till en pool med [!DNL InDesign]-servrar (IDSPool). Den här poolen är specifik för [!DNL InDesign]-integrering och ingår inte i [!DNL Assets]-proxyramverket.
 
 >[!NOTE]
 >
