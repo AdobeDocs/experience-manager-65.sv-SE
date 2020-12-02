@@ -36,23 +36,23 @@ Använd produktväljaren för att välja en produkt när du vill ha en aktiverin
 
 1. Navigera till karuselluppsättningen, den interaktiva bilden eller den interaktiva videon och tryck på fliken **[!UICONTROL Actions]** (endast tillgänglig om du har definierat ett hotspot-område eller bildschema).
 
-   The Product selector is in the **[!UICONTROL Action Type]** area.
+   Produktväljaren finns i området **[!UICONTROL Action Type]**.
 
    ![chlimage_1-521](assets/chlimage_1-521.png)
 
-1. Tryck på **[!UICONTROL Product Selector]** ikonen (förstoringsglas) och navigera till en produkt i katalogen.
+1. Tryck på ikonen **[!UICONTROL Product Selector]** (förstoringsglas) och navigera till en produkt i katalogen.
 
    ![chlimage_1-522](assets/chlimage_1-522.png)
 
-   Du kan också filtrera efter nyckelord eller taggar genom att trycka på **[!UICONTROL Filter]** och ange nyckelord, markera taggar eller båda.
+   Du kan också filtrera efter nyckelord eller tagg genom att trycka på **[!UICONTROL Filter]** och ange nyckelord, markera taggar eller båda.
 
    ![chlimage_1-523](assets/chlimage_1-523.png)
 
-   Du kan ändra var AEM bläddrar efter produktdata genom att trycka **[!UICONTROL Browse]** och navigera till en annan mapp.
+   Du kan ändra var AEM bläddrar efter produktdata genom att trycka på **[!UICONTROL Browse]** och navigera till en annan mapp.
 
    ![chlimage_1-524](assets/chlimage_1-524.png)
 
-   Tryck **[!UICONTROL Sort]** på för att ändra om AEM sorterar efter senaste till äldsta eller äldsta till nyaste.
+   Tryck på **[!UICONTROL Sort]** om du vill ändra om AEM sorterar efter senaste till äldsta eller äldsta till nyaste.
 
    ![chlimage_1-525](assets/chlimage_1-525.png)
 
@@ -64,7 +64,7 @@ Använd produktväljaren för att välja en produkt när du vill ha en aktiverin
 
    ![chlimage_1-527](assets/chlimage_1-527.png)
 
-1. I **[!UICONTROL Preview]** läget kan du trycka på aktiveringspunkten eller bildschemat och se hur snabbvyn ser ut.
+1. I **[!UICONTROL Preview]**-läget kan du trycka på hotspot eller bildschema och se hur snabbvyn ser ut.
 
    ![chlimage_1-528](assets/chlimage_1-528.png)
 
@@ -86,15 +86,15 @@ Använd webbplatsväljaren för att välja en webbsida när du vill att ett hots
 
    ![chlimage_1-531](assets/chlimage_1-531.png)
 
-1. Om du trycker på hotspot eller bildschema i **[!UICONTROL Preview]** läget navigerar du till den AEM webbplatssida du angav.
+1. Om du trycker på hotspot eller bildschema i **[!UICONTROL Preview]**-läget navigerar du till den AEM webbplatssida du angav.
 
 ## Välja resurser {#selecting-assets}
 
-Använd den här väljaren för att välja bilder som ska användas i en Carousel Banner, en interaktiv video, bilduppsättningar, blandade medieuppsättningar och snurruppsättningar. I interaktiv video är resursväljaren tillgänglig när du trycker **[!UICONTROL Select Assets]** på **[!UICONTROL Content]** fliken. I Carousel Sets är resursväljaren tillgänglig när du skapar en ny bildruta. I Bilduppsättningar, Blandade medieuppsättningar och Snurra uppsättningar är resursväljaren tillgänglig när du skapar en ny bilduppsättning, blandad medieuppsättning eller snurra uppsättning.
+Använd den här väljaren för att välja bilder som ska användas i en Carousel Banner, en interaktiv video, bilduppsättningar, blandade medieuppsättningar och snurruppsättningar. I interaktiv video är resursväljaren tillgänglig när du trycker på **[!UICONTROL Select Assets]** på fliken **[!UICONTROL Content]**. I Carousel Sets är resursväljaren tillgänglig när du skapar en ny bildruta. I Bilduppsättningar, Blandade medieuppsättningar och Snurra uppsättningar är resursväljaren tillgänglig när du skapar en ny bilduppsättning, blandad medieuppsättning eller snurra uppsättning.
 
-Mer information finns även i [Resursväljaren](search-assets.md#assetpicker) .
+Mer information finns även i [Resursväljaren](search-assets.md#assetpicker).
 
-1. Navigera till Carousel Set och skapa en ny bild. Du kan också navigera till den interaktiva videon, gå till **[!UICONTROL Content]** fliken och välja resurser. Du kan också skapa en uppsättning med blandade media, bilduppsättning eller snurra.
+1. Navigera till Carousel Set och skapa en ny bild. Du kan också navigera till den interaktiva videon, gå till fliken **[!UICONTROL Content]** och välja resurser. Du kan också skapa en uppsättning med blandade media, bilduppsättning eller snurra.
 1. Tryck på ikonen **[!UICONTROL Asset Selector]** (mapp med förstoringsglas) och navigera till en resurs.
 
    ![chlimage_1-532](assets/chlimage_1-532.png)
@@ -103,9 +103,9 @@ Mer information finns även i [Resursväljaren](search-assets.md#assetpicker) .
 
    ![chlimage_1-533](assets/chlimage_1-533.png)
 
-   Du kan ändra var AEM bläddrar efter resurser genom att navigera till en annan mapp i **[!UICONTROL Path]** fältet.
+   Du kan ändra var AEM bläddrar efter resurser genom att navigera till en annan mapp i fältet **[!UICONTROL Path]**.
 
-   Tryck **[!UICONTROL Collection]** om du bara vill söka efter resurser i samlingar.
+   Tryck på **[!UICONTROL Collection]** om du bara vill söka efter resurser i samlingar.
 
    ![chlimage_1-534](assets/chlimage_1-534.png)
 
