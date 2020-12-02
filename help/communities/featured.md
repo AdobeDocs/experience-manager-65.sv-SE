@@ -37,25 +37,25 @@ Möjligheten att använda innehåll kan vara tillåten eller otillåten per komp
 I det här avsnittet av dokumentationen beskrivs:
 
 * Lägga till aktuellt innehåll på en communitywebbplats.
-* Konfigurationsinställningar för `Featured Content` komponenten.
+* Konfigurationsinställningar för komponenten `Featured Content`.
 
 ## Lägga till innehåll på en sida {#adding-featured-content-to-a-page}
 
-Om du vill lägga till en `Featured Content` komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att leta reda på
+Om du vill lägga till en `Featured Content`-komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att leta reda på
 
 * `Communities / Featured Content`
 
 och dra den till rätt plats på en sida där det aktuella innehållet ska visas.
 
-Mer information finns i Grunderna för [communitykomponenter](basics.md).
+Mer information finns på [Grunderna för communitykomponenter](basics.md).
 
-När de [nödvändiga klientbiblioteken](essentials-featured.md#essentials-for-client-side) inkluderas visas `Featured Content` komponenten så här:
+När de [nödvändiga klientbiblioteken](essentials-featured.md#essentials-for-client-side) inkluderas visas `Featured Content`-komponenten så här:
 
 ![chlimage_1-13](assets/chlimage_1-13.png)
 
-## Konfigurera aktuellt innehåll {#configuring-featured-content}
+## Konfigurerar aktuellt innehåll {#configuring-featured-content}
 
-Markera den monterade `Featured Content` komponent som du vill öppna och välj den `Configure` ikon som öppnar redigeringsdialogrutan.
+Markera den monterade `Featured Content`-komponenten som ska öppnas och välj ikonen `Configure` som öppnar redigeringsdialogrutan.
 
 ![chlimage_1-14](assets/chlimage_1-14.png)
 
@@ -63,15 +63,15 @@ Markera den monterade `Featured Content` komponent som du vill öppna och välj 
 
 ### Fliken Inställningar {#settings-tab}
 
-Under **[!UICONTROL Settings]** fliken identifierar du innehållet som ska visas:
+Under fliken **[!UICONTROL Settings]** identifierar du innehållet som ska visas:
 
 * **[!UICONTROL Display Name]**
 
-   Namnet på listan med aktuellt innehåll. For example `Featured Questions` or `Featured Ideas`. Standard är `Featured Content` om det lämnas tomt.
+   Namnet på listan med aktuellt innehåll. Till exempel `Featured Questions` eller `Featured Ideas`. Standardvärdet är `Featured Content` om inget anges.
 
 * **[!UICONTROL Location of the Featured Content]**
 
-   *(Obligatoriskt)* Bläddra till sidan med innehållet som kan vara funktionellt (komponenterna på den sidan måste konfigureras för att tillåta aktuellt innehåll). Till exempel, `/content/sites/engage/en/forum`.
+   *(Obligatoriskt)* Bläddra till sidan med det innehåll som kan vara funktionellt (komponenterna på den sidan måste konfigureras för att tillåta aktuellt innehåll). Till exempel, `/content/sites/engage/en/forum`.
 
 * **[!UICONTROL Display Limit]**
 
@@ -81,20 +81,20 @@ Under **[!UICONTROL Settings]** fliken identifierar du innehållet som ska visas
 
 Möjligheten att flagga innehåll som aktuellt innehåll kräver moderatorbehörighet.
 
-När en moderator visar publicerat innehåll har de tillgång till modereringsflaggorna som innehåller den nya `Feature` flaggan.
+När en moderator visar publicerat innehåll har de tillgång till modereringsflaggorna som innehåller den nya flaggan `Feature`.
 
 ![chlimage_1-16](assets/chlimage_1-16.png)
 
-När den har flaggats som en funktion blir modellflaggan `Unfeature`.
+När modellflaggan har flaggats som en funktion blir den `Unfeature`.
 
-Sidan som innehåller `Featured Content` komponenten kommer nu att inkludera det här inlägget.
+Sidan som innehåller komponenten `Featured Content` kommer nu att innehålla det här inlägget.
 
 ![chlimage_1-17](assets/chlimage_1-17.png)
 
 `Read More` är en länk till själva inlägget.
 
-## Additional Information {#additional-information}
+## Ytterligare information {#additional-information}
 
-Mer information finns på [sidan Innehåll](essentials-featured.md) för utvecklare.
+Mer information finns på sidan [Aktuellt innehåll](essentials-featured.md) för utvecklare.
 
-Information om hur du flaggar innehåll finns i [Moderera användargenererat innehåll](moderate-ugc.md).
+Information om hur du flaggar innehåll finns i [Moderating User Generated Content](moderate-ugc.md).
