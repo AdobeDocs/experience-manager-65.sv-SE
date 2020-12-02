@@ -1,8 +1,8 @@
 ---
 title: Konfigurera Connector för IBM Content Manager
 seo-title: Konfigurera Connector för IBM Content Manager
-description: Konfigurera Connector for IBM Content Manager för att möjliggöra kommunikation mellan AEM-formulär och IBM Content Manager.
-seo-description: Konfigurera Connector for IBM Content Manager för att möjliggöra kommunikation mellan AEM-formulär och IBM Content Manager.
+description: Konfigurera Connector for IBM Content Manager för att möjliggöra kommunikation mellan AEM och IBM Content Manager.
+seo-description: Konfigurera Connector for IBM Content Manager för att möjliggöra kommunikation mellan AEM och IBM Content Manager.
 uuid: 3d55169d-93e3-4d4e-b18b-2a3394e1de3b
 contentOwner: admin
 content-type: reference
@@ -11,13 +11,16 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 3094b178-3b1a-46b3-8fbd-c20388afa3a7
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '300'
+ht-degree: 0%
 
 ---
 
 
-# Konfigurera Connector för IBM Content Manager{#configuring-connector-for-ibm-content-manager}
+# Konfigurerar koppling för IBM Content Manager{#configuring-connector-for-ibm-content-manager}
 
-Koppling för IBM Content Manager möjliggör kommunikation mellan AEM-formulär och IBM Content Manager. Mer bakgrundsinformation finns i&quot;Connectors for ECM&quot; i [Services Reference](https://www.adobe.com/go/learn_aemforms_services_63).
+Koppling för IBM Content Manager möjliggör kommunikation mellan AEM och IBM Content Manager. Mer bakgrundsinformation finns i &quot;Connectors for ECM&quot; i [Services Reference](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ## Konfigurera IBM Content Manager-anslutningen {#configure-the-ibm-content-manager-connection}
 
@@ -28,7 +31,7 @@ Koppling för IBM Content Manager möjliggör kommunikation mellan AEM-formulär
 1. (Valfritt) I rutan Aliasanslutningssträng anger du ytterligare anslutningsargument. I de flesta fall ska den här rutan vara tom. Mer information finns i dokumentationen för IBM.
 1. Klicka på Spara.
 
-## Validering av tjänstinställningar {#validation-of-service-settings}
+## Verifiering av tjänstinställningar {#validation-of-service-settings}
 
 Om du anger fel alias, användarnamn eller lösenord för dataStore får du följande resultat beroende på om tjänsten Content Repository Connector för IBM Content Manager körs för närvarande:
 
