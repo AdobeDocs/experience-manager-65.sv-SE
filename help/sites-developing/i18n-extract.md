@@ -11,6 +11,9 @@ topic-tags: components
 discoiquuid: 034f70f1-fbd2-4f6b-b07a-5758f0461a5b
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '492'
+ht-degree: 0%
 
 ---
 
@@ -65,8 +68,8 @@ Mönsterdelen av en regel används för att matcha namnen på de filer som ska i
 | Prefix | Effekt |
 |---|---|
 | / | Anger en JCR-sökväg. Det innebär att det här prefixet matchar filer under katalogen jcr_root. |
-|  &amp;ast; | Anger en vanlig fil i filsystemet. |
-| inga | Inget prefix, eller ett mönster som börjar med en mapp eller ett filnamn, anger att filen är en vanlig fil i filsystemet. |
+| &amp;ast; | Anger en vanlig fil i filsystemet. |
+| inga | Inget prefix, eller ett mönster som börjar med en mapp eller ett filnamn, visar att filen är en vanlig fil i filsystemet. |
 
 Vid användning inom ett mönster anger tecknet / en underkatalog och &amp;ast; tecken matchar alla. I följande tabell visas flera exempelregler.
 
@@ -97,7 +100,7 @@ Vid användning inom ett mönster anger tecknet / en underkatalog och &amp;ast; 
  </tbody>
 </table>
 
-### Extrahera strängarna {#extracting-the-strings}
+### Extraherar strängarna {#extracting-the-strings}
 
 ingen POM:
 
@@ -134,7 +137,7 @@ mvn xgettext:extract
 ### Utdatafiler {#output-files}
 
 * `raw.xliff`: extraherade strängar
-* `warn.log`: varningar (om sådana finns), om API:t inte används korrekt. `CQ.I18n.getMessage()` De behöver alltid en fix och sedan en omstart.
+* `warn.log`: varningar (om sådana finns), om  `CQ.I18n.getMessage()` API används felaktigt. De behöver alltid en fix och sedan en omstart.
 
 * `parserwarn.log`: parservarningar (om sådana finns), t.ex. problem med js-parsern
 * `potentials.xliff`: &quot;potentiella&quot; kandidater som inte extraheras, men som kan vara läsbara strängar som behöver översättas (kan ignoreras, men ändå skapa en enorm mängd falskt positiva resultat)
