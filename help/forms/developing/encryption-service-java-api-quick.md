@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# Snabbstart för Java API för krypteringstjänsten (SOAP) {#encryption-service-java-api-quickstart-soap}
+# SOAP (Java API Quick Start) {#encryption-service-java-api-quickstart-soap} för krypteringstjänsten
 
 [Snabbstart (SOAP-läge): Kryptera ett PDF-dokument med Java API](encryption-service-java-api-quick.md#quick-start-soap-mode-encrypting-a-pdf-document-using-the-java-api)
 
@@ -157,7 +157,7 @@ I följande Java-kodexempel krypteras ett PDF-dokument med namnet *Loan.pdf* med
  }
 ```
 
-## Snabbstart (SOAP-läge): Ta bort lösenordsbaserad kryptering med Java API {#quick-start-soap-mode-removing-password-based-encryption-using-the-java-api}
+## Snabbstart (SOAP-läge): Tar bort lösenordsbaserad kryptering med Java API {#quick-start-soap-mode-removing-password-based-encryption-using-the-java-api}
 
 I följande Java-kodexempel tas lösenordsbaserad kryptering bort från ett PDF-dokument med namnet *EncryptLoan.pdf*. Det överordnad lösenordsvärdet som används för att ta bort lösenordsbaserad kryptering är *PermissionPassword*. Det oskyddade PDF-dokumentet sparas som en PDF-fil med namnet *noEncryptionLoan.pdf*. (Se [Ta bort lösenordskryptering](/help/forms/developing/encrypting-decrypting-pdf-documents.md#removing-password-encryption).)
 
@@ -385,7 +385,7 @@ I följande Java-kodexempel krypteras ett PDF-dokument med namnet *Loan.pdf* med
 
 ## Snabbstart (SOAP-läge): Tar bort certifikatbaserad kryptering med Java API {#quick-start-soap-mode-removing-certificate-based-encryption-using-the-java-api}
 
-Följande Java-kodexempel tar bort certifikatbaserad kryptering från ett PDF-dokument med namnet *EncryptLoanCert.pdf*. Aliaset för den offentliga nyckeln som används för att ta bort kryptering är `Encryption`. Det oskyddade PDF-dokumentet sparas som en PDF-fil med namnet *noEncryptionLoan.pdf*. (Se [Ta bort certifikatbaserad kryptering](/help/forms/developing/encrypting-decrypting-pdf-documents.md#removing-certificate-based-encryption).)
+Följande Java-kodexempel tar bort certifikatbaserad kryptering från ett PDF-dokument med namnet *EncryptLoanCert.pdf*. Aliaset för den offentliga nyckeln som används för att ta bort kryptering är `Encryption`. Det oskyddade PDF-dokumentet sparas som en PDF-fil med namnet *noEncryptionLoan.pdf*. (Se [Tar bort certifikatbaserad kryptering](/help/forms/developing/encrypting-decrypting-pdf-documents.md#removing-certificate-based-encryption).)
 
 ```java
  /*
