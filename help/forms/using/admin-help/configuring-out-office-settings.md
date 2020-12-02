@@ -1,8 +1,8 @@
 ---
 title: Konfigurerar frånvaroinställningar
 seo-title: Konfigurerar frånvaroinställningar
-description: Med funktionen Frånvarande kan du ange när en användare ska vara frånvarande och inte kunna utföra uppgifter som tilldelats av AEM-formulär.
-seo-description: Med funktionen Frånvarande kan du ange när en användare ska vara frånvarande och inte kunna utföra uppgifter som tilldelats av AEM-formulär.
+description: Med funktionen Frånvarande kan du ange när en användare ska vara frånvarande och inte kunna utföra uppgifter som tilldelats av AEM formulär.
+seo-description: Med funktionen Frånvarande kan du ange när en användare ska vara frånvarande och inte kunna utföra uppgifter som tilldelats av AEM formulär.
 uuid: 0d01df0a-aa6a-40e5-bf24-423ed1c932cc
 contentOwner: admin
 content-type: reference
@@ -11,13 +11,16 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 30312159-58a5-4781-b554-29dcbce696cb
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '691'
+ht-degree: 0%
 
 ---
 
 
 # Konfigurerar frånvaroinställningar {#configuring-out-of-office-settings}
 
-Med funktionen Frånvarande kan användare och administratörer ange när en användare ska vara utanför kontoret och inte kunna utföra uppgifter som tilldelats av AEM-formulär. När en användare är inställd på Frånvarande tilldelas användaren sina uppgifter till en eller flera angivna användare. Användare kan ändra sina frånvaroinställningar i arbetsytan eller så kan administratörer ändra inställningarna för en användares räkning i formulärarbetsflödet.
+Funktionen Frånvarande gör att användare och administratörer kan ange när en användare ska vara utanför kontoret och inte kunna slutföra uppgifter som tilldelats av AEM formulär. När en användare är inställd på Frånvarande tilldelas användaren sina uppgifter till en eller flera angivna användare. Användare kan ändra sina frånvaroinställningar i arbetsytan eller så kan administratörer ändra inställningarna för en användares räkning i formulärarbetsflödet.
 
 När du skapar en process kan Workbench-användaren ange om en uppgift kan omdirigeras på grund av inställningar för frånvaro.
 
@@ -28,7 +31,7 @@ När du skapar en process kan Workbench-användaren ange om en uppgift kan omdir
 
    **Sök efter namn**
 
-   Välj alternativet Sök efter namn. Skriv hela eller en del av användarnamnet och klicka på Sök. Om du lämnar fältet tomt returneras en lista med alla användare i formulärarbetsflödet
+   Välj alternativet Sök efter namn. Skriv hela eller en del av användarnamnet och klicka på Sök. Om du lämnar fältet tomt returnerar Forms-arbetsflödet en lista över alla användare
 
    **Sök efter datumintervall**
 
@@ -40,10 +43,10 @@ När du skapar en process kan Workbench-användaren ange om en uppgift kan omdir
 
 1. Hitta användaren enligt beskrivningen i [Visa användarens frånvaroinformation](configuring-out-office-settings.md#view-a-user-s-out-of-office-information).
 1. Klicka på namnet på den användare som du vill ändra.
-1. I listan *Användarnamn* är för närvarande väljer du antingen In the Office eller Out of the Office.
+1. I listan *Användarnamn* är för närvarande väljer du antingen In the Office or Out of the Office.
 1. Klicka på Spara.
 
-## Lägga till ett datumintervall utanför kontoret för en användare {#add-an-out-of-office-date-range-for-a-user}
+## Lägg till ett datumintervall utanför kontoret för en användare {#add-an-out-of-office-date-range-for-a-user}
 
 1. Hitta användaren enligt beskrivningen i [Visa användarens frånvaroinformation](configuring-out-office-settings.md#view-a-user-s-out-of-office-information).
 1. Klicka på namnet på den användare som du vill ändra.
@@ -51,7 +54,7 @@ När du skapar en process kan Workbench-användaren ange om en uppgift kan omdir
 1. Ange en starttid och en sluttid. Du kan klicka på kalenderikonen för att välja ett datum. Om du inte anger någon sluttid anges användaren som ledig på obestämd tid.
 1. Klicka på Spara.
 
-## Tilldela en användare en frånvarouppgift {#assign-a-user-for-out-of-office-tasks}
+## Tilldela en användare för frånvarouppgifter {#assign-a-user-for-out-of-office-tasks}
 
 När en användare inte är på kontoret kan du tilldela en eller flera användare för att utföra nya uppgifter för användaren. Du kan konfigurera följande konfigurationer:
 
