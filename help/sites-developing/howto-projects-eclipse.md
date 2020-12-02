@@ -1,8 +1,8 @@
 ---
-title: Utveckla AEM-projekt med Eclipse
-seo-title: Utveckla AEM-projekt med Eclipse
-description: I den här guiden beskrivs hur du använder Eclipse för att utveckla AEM-baserade projekt
-seo-description: I den här guiden beskrivs hur du använder Eclipse för att utveckla AEM-baserade projekt
+title: Utveckla AEM projekt med Eclipse
+seo-title: Utveckla AEM projekt med Eclipse
+description: I den här guiden beskrivs hur du använder Eclipse för att utveckla AEM projekt
+seo-description: I den här guiden beskrivs hur du använder Eclipse för att utveckla AEM projekt
 uuid: 79fee76f-6bcc-498f-af46-530816b41bbe
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,42 +11,45 @@ content-type: reference
 discoiquuid: aa58cfb8-ec15-4698-a8f0-97683b0de51c
 translation-type: tm+mt
 source-git-commit: 06f1f753b9bb7f7336454f166e03f753e3735a16
+workflow-type: tm+mt
+source-wordcount: '454'
+ht-degree: 0%
 
 ---
 
 
-# Utveckla AEM-projekt med Eclipse{#how-to-develop-aem-projects-using-eclipse}
+# Utveckla AEM projekt med Eclipse{#how-to-develop-aem-projects-using-eclipse}
 
-I den här guiden beskrivs hur du använder Eclipse för att utveckla AEM-baserade projekt.
+I den här guiden beskrivs hur du använder Eclipse för att utveckla AEM projekt.
 
 >[!NOTE]
 >
->Adobe tillhandahåller nu [AEM Development Tools för Eclipse](/help/sites-developing/aem-eclipse.md) , som hjälper dig att utveckla AEM-lösningar med Eclipse.
+>Adobe har nu [AEM Development Tools for Eclipse](/help/sites-developing/aem-eclipse.md) som hjälper dig att utveckla AEM lösningar med Eclipse.
 
 ## Översikt {#overview}
 
-För att komma igång med AEM-utveckling i Eclipse krävs följande steg.
+För att komma igång med AEM på Eclipse krävs följande steg.
 
 Var och en av dem förklaras mer ingående i resten av denna handledning.
 
 * Installera Eclipse 4.3 (Kepler)
-* Konfigurera ditt AEM-projekt baserat på Maven
+* Konfigurera ditt AEM baserat på Maven
 * Förbered JSP-stöd för Eclipse i Maven POM
 * Importera Maven Project till Eclipse
 
 >[!NOTE]
 >
->Den här guiden är baserad på Eclipse 4.3 (Kepler) och AEM 5.6.1.
+>Den här handboken är baserad på Eclipse 4.3 (Kepler) och AEM 5.6.1.
 
 ## Installera Eclipse {#install-eclipse}
 
-Ladda ned&quot;Eclipse IDE for Java EE Developers&quot; från [nedladdningssidan](https://www.eclipse.org/downloads/)för Eclipse.
+Hämta&quot;Eclipse IDE for Java EE Developers&quot; från [Eclipse Downloads-sidan](https://www.eclipse.org/downloads/).
 
-Installera Eclipse enligt [installationsanvisningarna](https://wiki.eclipse.org/Eclipse/Installation).
+Installera Eclipse enligt [installationsinstruktionerna](https://wiki.eclipse.org/Eclipse/Installation).
 
-## Konfigurera ditt AEM-projekt baserat på Maven {#set-up-your-aem-project-based-on-maven}
+## Konfigurera ditt AEM baserat på Maven {#set-up-your-aem-project-based-on-maven}
 
-Konfigurera sedan projektet med Maven enligt [How-To Build AEM Projects med Apache Maven](/help/sites-developing/ht-projects-maven.md).
+Konfigurera sedan projektet med Maven enligt beskrivningen i [Så här skapar du AEM projekt med Apache Maven](/help/sites-developing/ht-projects-maven.md).
 
 ## Förbered JSP-stöd för Eclipse {#prepare-jsp-support-for-eclipse}
 
@@ -57,12 +60,12 @@ Eclipse kan även ge stöd vid arbete med JSP, t.ex.
 
 För att det ska fungera:
 
-1. Följ anvisningarna om [hur du arbetar med JSP](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps) i [How-To Build AEM Projects med Apache Maven](/help/sites-developing/ht-projects-maven.md).
+1. Följ instruktionerna i [Så här arbetar du med JSP:er](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps) i [Så här skapar du AEM projekt med Apache Maven](/help/sites-developing/ht-projects-maven.md).
 1. Lägg till följande i avsnittet &lt;build /> i innehållsmodulens POM.
 
    Eclipse&#39;s Maven support plugin, m2e, ger inte stöd för maven-jspc-plugin, och den här konfigurationen anger för m2e att ignorera plugin-programmet och den relaterade uppgiften att rensa upp de tillfälliga kompileringsresultaten.
 
-   Detta är inget problem: som beskrivs i [How-To Work with JSPs](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps), används plugin-programmet maven-jspc-plugin i den här konfigurationen endast för att validera att JSP:er kompileras som en del av byggprocessen. Eclipse rapporterar redan om JSP-problem och förlitar sig inte på denna Maven-plugin för att kunna göra det.
+   Detta är inget problem: som anges i [Så här fungerar du med JSP:er](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps). Maven-jspc-plugin i den här konfigurationen används bara för att validera att JSP:er kompileras som en del av byggprocessen. Eclipse rapporterar redan om JSP-problem och förlitar sig inte på denna Maven-plugin för att kunna göra det.
 
    **myproject/content/pom.xml**
 
@@ -125,11 +128,11 @@ För att det ska fungera:
 
    ![chlimage_1-42](assets/chlimage_1-42a.png)
 
-1. Nu kan du börja använda Eclipse för att utveckla ditt AEM-projekt, inklusive automatisk komplettering av JSP.
+1. Nu kan du börja använda Eclipse för att utveckla ditt AEM, inklusive JSP autocomplete.
 
    ![chlimage_1-43](assets/chlimage_1-43a.png)
 
    >[!NOTE]
    >
-   >Om du inkluderar `/libs/foundation/global.jsp` eller andra JSP:er i `/libs`måste du kopiera det till ditt projekt så att Eclipse kan lösa problemet. Samtidigt måste ni se till att den inte paketeras i ert innehållspaket av Maven. Hur du uppnår detta beskrivs i [Så här skapar du AEM-projekt med Apache Maven](/help/sites-developing/ht-projects-maven.md).
+   >Om du inkluderar `/libs/foundation/global.jsp` eller andra JSP:er i `/libs` måste du kopiera den till ditt projekt så att Eclipse kan lösa inkluderingen. Samtidigt måste ni se till att den inte paketeras i ert innehållspaket av Maven. Hur du uppnår detta beskrivs i [Så här skapar du AEM projekt med Apache Maven](/help/sites-developing/ht-projects-maven.md).
 
