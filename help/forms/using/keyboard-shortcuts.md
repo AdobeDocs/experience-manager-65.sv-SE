@@ -21,7 +21,7 @@ ht-degree: 10%
 
 I den här artikeln listas de kortkommandon som kan användas med Adaptiv formulärredigerare, Theme Editor, Content Browser och Correspondence Management för Windows och Macintosh.
 
-## Adaptiv formulärredigerare {#adaptiveformeditor}
+## Anpassad formulärredigerare {#adaptiveformeditor}
 
 | **Åtgärd** | **Kortkommando i Windows** | **Kortkommando i Mac OS** |
 |---|---|---|
@@ -57,7 +57,7 @@ I den här artikeln listas de kortkommandon som kan användas med Adaptiv formul
 
 
 
-## Theme Editor  {#themeeditor}
+## Theme Editor {#themeeditor}
 
 | **Åtgärd** | **Kortkommando i Windows** | **Kortkommando i Mac OS** |
 |---|---|---|
@@ -71,7 +71,7 @@ I den här artikeln listas de kortkommandon som kan användas med Adaptiv formul
 >
 >Kortkommandon som är markerade med &#39;&amp;ast;&#39; fungerar både med Ctrl- och Kommando-tangenterna i Mac OS.
 
-## Content Browser  {#contentbrowser}
+## Content Browser {#contentbrowser}
 
 | **Åtgärd** | **Kortkommando i Windows** | **Kortkommando i Mac OS** |
 |---|---|---|
@@ -89,10 +89,10 @@ I den här artikeln listas de kortkommandon som kan användas med Adaptiv formul
 
 I det här avsnittet visas olika tangentbord och kortkommandon för hjälpmedel som du kan använda i textredigeraren för Correspondence Management. Du kan använda följande kortkommandon medan du är:
 
-* Skapa eller redigera en [textresurs](texts-interactive-communications.md)
-* Redigera en textmodul när du har tryckt på den relevanta redigeringsikonen ( ![edittextmodule](assets/edittextmodule.png)) när du [skapar en korrespondens](/help/forms/using/create-correspondence.md).
+* Skapa eller redigera en [Text](texts-interactive-communications.md)-resurs
+* Redigera en textmodul när användaren har tryckt på den relevanta redigeringsikonen ( ![edittextmodule](assets/edittextmodule.png)) när [du skapar en korrespondens](/help/forms/using/create-correspondence.md).
 
-### Textmarkering och flytta runt markören {#text-selection-and-moving-the-cursor-around}
+### Textmarkering och flytta markören runt {#text-selection-and-moving-the-cursor-around}
 
 <table> 
  <tbody>
@@ -189,7 +189,7 @@ I det här avsnittet visas olika tangentbord och kortkommandon för hjälpmedel 
   <tr>
    <td><p>Markera text från aktuell position till slutet (i modulen)</p> </td> 
    <td><p>Skift+Ctrl+End</p> </td> 
-   <td>Kommando+Skift+Nedpil<br /> </td> 
+   <td>Kommando+Skift+Nedåtpil<br /> </td> 
   </tr>
   <tr>
    <td><p>Markera text från aktuell position till början (i modulen)</p> </td> 
@@ -286,7 +286,7 @@ I det här avsnittet visas olika tangentbord och kortkommandon för hjälpmedel 
  </tbody>
 </table>
 
-### Ta bort ett ord {#deleting-a-word}
+### Tar bort ett ord {#deleting-a-word}
 
 <table> 
  <tbody>
