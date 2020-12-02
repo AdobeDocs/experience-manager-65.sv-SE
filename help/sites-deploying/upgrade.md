@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# Uppgradera till AEM 6.5 {#upgrading-to-aem}
+# Uppgraderar till AEM 6.5 {#upgrading-to-aem}
 
 I detta avsnitt beskriver vi uppgradering av en AEM till AEM 6.5:
 
@@ -40,8 +40,8 @@ I detta avsnitt beskriver vi uppgradering av en AEM till AEM 6.5:
 
 För att underlätta referensen till de AEM förekomsterna i dessa procedurer används följande termer i alla dessa artiklar:
 
-* Källinstansen ** är den AEM som du uppgraderar från.
-* Det är *målinstansen* som du uppgraderar till.
+* *source*-instansen är den AEM instansen som du uppgraderar från.
+* *target*-instansen är den som du uppgraderar till.
 
 >[!NOTE]
 >
@@ -67,9 +67,9 @@ Kommandoradsalternativen för crx2oak-verktyget har ändrats till att vara autom
 
 Kontrollerna efter uppgraderingen har också gjorts automatiseringsvänliga.
 
-Periodisk skräpinsamling med revideringar och skräpinsamling i datalager är nu rutinuppgifter som måste utföras regelbundet. I och med introduktionen av AEM 6.3 stöder och rekommenderar Adobe Online Revision Cleanup. Mer information om hur du konfigurerar dessa uppgifter finns i [Revision Cleanup](/help/sites-deploying/revision-cleanup.md) .
+Periodisk skräpinsamling med revideringar och skräpinsamling i datalager är nu rutinuppgifter som måste utföras regelbundet. I och med introduktionen av AEM 6.3 stöder och rekommenderar Adobe Online Revision Cleanup. Mer information om hur du konfigurerar de här aktiviteterna finns i [Revision Cleanup](/help/sites-deploying/revision-cleanup.md).
 
-AEM introducerar nyligen [mönsteravkännaren](/help/sites-deploying/pattern-detector.md) för att bedöma uppgraderingens komplexitet när du börjar planera för uppgraderingen. 6.5 fokuserar också starkt på [bakåtkompatibilitet](/help/sites-deploying/backward-compatibility.md) . Slutligen läggs även bästa praxis för [hållbara uppgraderingar](/help/sites-deploying/sustainable-upgrades.md) till.
+AEM introducerar nyligen [mönsteravkännaren](/help/sites-deploying/pattern-detector.md) för att bedöma uppgraderingens komplexitet när du börjar planera för uppgraderingen. 6.5 har också ett starkt fokus på [bakåtkompatibilitet](/help/sites-deploying/backward-compatibility.md) för funktioner. Slutligen läggs även bästa praxis för [hållbara uppgraderingar](/help/sites-deploying/sustainable-upgrades.md) till.
 
 Mer information om vad mer som har ändrats i de senaste AEM versionerna finns i den fullständiga versionsinformationen:
 
@@ -78,7 +78,7 @@ Mer information om vad mer som har ändrats i de senaste AEM versionerna finns i
 * [https://helpx.adobe.com/experience-manager/6-4/release-notes.html](https://helpx.adobe.com/experience-manager/6-4/release-notes.html)
 * [https://helpx.adobe.com/experience-manager/6-5/release-notes.html](https://helpx.adobe.com/experience-manager/6-5/release-notes.html)
 
-## Uppgradera - översikt {#upgrade-overview}
+## Uppgradera översikt {#upgrade-overview}
 
 Uppgradering av AEM är en flerstegsprocess som ibland tar flera månader. Följande översikt har bifogats som en översikt över vad som ingår i ett uppgraderingsprojekt och det innehåll som ingår i den här dokumentationen:
 
@@ -88,9 +88,9 @@ Uppgradering av AEM är en flerstegsprocess som ibland tar flera månader. Följ
 
 Bilden nedan visar det rekommenderade arbetsflödet för uppgradering. Observera referensen till de nya funktioner som vi har infört. Uppgraderingen ska börja med mönsteravkännaren (se [Utvärdera uppgraderingskomplexiteten med mönsteravkännaren](/help/sites-deploying/pattern-detector.md)), som du kan använda för att bestämma vilken sökväg du vill använda för kompatibilitet med AEM 6.4 baserat på mönstren i den genererade rapporten.
 
-I 6.5 fokuserades alla nya funktioner bakåt så att de var kompatibla, men i de fall där du fortfarande ser problem med bakåtkompatibilitet kan du i kompatibilitetsläget tillfälligt skjuta upp utvecklingen så att den anpassade koden är kompatibel med 6.5. Med den här metoden undviker du utvecklingsarbete direkt efter uppgraderingen (se [Bakåtkompatibilitet i AEM 6.5](/help/sites-deploying/backward-compatibility.md)).
+I 6.5 fokuserades alla nya funktioner bakåt så att de var kompatibla, men i de fall där du fortfarande ser problem med bakåtkompatibilitet kan du i kompatibilitetsläget tillfälligt skjuta upp utvecklingen så att den anpassade koden är kompatibel med 6.5. På så sätt undviker du utvecklingsarbete direkt efter uppgraderingen (se [Bakåtkompatibilitet i AEM 6.5](/help/sites-deploying/backward-compatibility.md)).
 
-Slutligen, i din 6.5-utvecklingscykel, hjälper funktioner som introducerats under Hållbara uppgraderingar (se [Hållbara uppgraderingar](/help/sites-deploying/sustainable-upgrades.md)) er att följa bästa praxis för att göra framtida uppgraderingar ännu effektivare och smidigare.
+I din 6.5-utvecklingscykel kan funktioner som introducerats under Hållbara uppgraderingar (se [Hållbara uppgraderingar](/help/sites-deploying/sustainable-upgrades.md)) hjälpa dig att följa bästa praxis för att göra framtida uppgraderingar ännu effektivare och smidigare.
 
 ![6_4_upgrade_overview_flowchart-newpage3](assets/6_4_upgrade_overviewflowchart-newpage3.png)
 
