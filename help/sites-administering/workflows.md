@@ -11,22 +11,25 @@ content-type: reference
 discoiquuid: 4b09cd44-434e-4834-bc0d-c9c082a4ba5a
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '773'
+ht-degree: 0%
 
 ---
 
 
 # Administrera arbetsflöden{#administering-workflows}
 
-Med arbetsflöden kan ni automatisera Adobe Experience Manager-aktiviteter (AEM). Arbetsflöden:
+Med arbetsflöden kan du automatisera Adobe Experience Manager-aktiviteter (AEM). Arbetsflöden:
 
 * Består av en serie steg som körs i en viss ordning.
 
    * Varje steg har en egen verksamhet. som att vänta på användarindata, aktivera en sida eller skicka ett e-postmeddelande.
 
-* Kan samverka med resurser i databasen, användarkonton och AEM-tjänster.
-* Kan samordna komplicerade aktiviteter som berör någon aspekt av AEM.
+* Kan samverka med resurser i databasen, användarkonton och AEM.
+* Kan samordna komplicerade aktiviteter som omfattar alla aspekter av AEM.
 
-De affärsprocesser som din organisation har etablerat kan representeras som arbetsflöden. Processen med att publicera webbplatsinnehåll omfattar till exempel vanligtvis steg för godkännande och godkännande av olika intressenter. Dessa processer kan implementeras som AEM-arbetsflöden och tillämpas på innehållssidor och resurser.
+De affärsprocesser som din organisation har etablerat kan representeras som arbetsflöden. Processen med att publicera webbplatsinnehåll omfattar till exempel vanligtvis steg för godkännande och godkännande av olika intressenter. Dessa processer kan implementeras som AEM arbetsflöden och tillämpas på innehållssidor och resurser.
 
 * [Starta arbetsflöden](/help/sites-administering/workflows-starting.md)
 * [Administrera arbetsflödesinstanser](/help/sites-administering/workflows-administering.md)
@@ -39,13 +42,14 @@ De affärsprocesser som din organisation har etablerat kan representeras som arb
 >* Använda och delta i arbetsflöden: [Arbeta med arbetsflöden](/help/sites-authoring/workflows.md).
 >* Skapa arbetsflödesmodeller och utöka arbetsflödesfunktioner: [Utveckla och utöka arbetsflöden](/help/sites-developing/workflows.md).
 >* Förbättra prestanda för arbetsflöden som använder betydande serverresurser: [Samtidig arbetsflödesbearbetning](/help/sites-deploying/configuring-performance.md#concurrent-workflow-processing).
+
 >
 
 
 
 ## Arbetsflödesmodeller och instanser {#workflow-models-and-instances}
 
-[Arbetsflödesmodeller](/help/sites-developing/workflows.md#model) i AEM är representation och implementering av affärsprocesser:
+[Arbetsflödesmodelli ](/help/sites-developing/workflows.md#model) AEM representerar och implementerar affärsprocesser:
 
 * Vanligtvis arbetar de med sidor eller resurser för att uppnå ett visst resultat.
 * Dessa sidor och/eller resurser kallas arbetsflödets nyttolast.
@@ -56,7 +60,7 @@ När en arbetsflödesmodell startas (körs) skapas en arbetsflödesinstans. En a
 
 >[!CAUTION]
 >
->Stegen som utförs är de som definieras av arbetsflödesmodellen *när instansen genereras*. Mer information finns i [Utveckla arbetsflöden](/help/sites-developing/workflows.md#model) .
+>Stegen som utförs är de som definieras av arbetsflödesmodellen *när instansen skapas*. Mer information finns i [Utveckla arbetsflöden](/help/sites-developing/workflows.md#model).
 
 Arbetsflödesinstanser går igenom följande livscykel:
 
@@ -64,7 +68,7 @@ Arbetsflödesinstanser går igenom följande livscykel:
 
    1. Arbetsflödesinstansens nyttolast identifieras när modellen startas.
    1. Instansen är i själva verket en kopia av modellen (som när den skapades).
-   1. AEM-författare, administratörer och tjänster kan starta arbetsflödesmodeller.
+   1. AEM kan skapa arbetsflödesmodeller.
 
 1. Det första steget i arbetsflödesmodellen körs.
 1. Stegen slutförs och arbetsflödesmotorn använder modellen för att bestämma nästa steg som ska köras.
@@ -86,7 +90,7 @@ Antingen utför en användare eller tjänst arbetsflödessteg beroende på typ a
 >
 >Om ett fel inträffar bör tjänste-/stegimplementeringen hantera beteendet för ett felscenario. Arbetsflödesmotorn kommer själv att försöka utföra jobbet igen, logga ett fel och stoppa instansen.
 
-## Arbetsflödets status och åtgärder {#workflow-status-and-actions}
+## Arbetsflödesstatus och åtgärder {#workflow-status-and-actions}
 
 Ett arbetsflöde kan ha någon av följande status:
 
@@ -99,11 +103,11 @@ Ett arbetsflöde kan ha någon av följande status:
 
 >[!NOTE]
 >
->När körningen av ett processsteg resulterar i fel, visas steget i administratörens inkorg och arbetsflödets status är **KÖRNING**.
+>När körningen av ett processsteg resulterar i fel visas steget i administratörens inkorg och arbetsflödets status är **RUNNING**.
 
 Beroende på aktuell status kan du utföra åtgärder för att köra arbetsflödesinstanser när du behöver ingripa i den normala förloppet för en arbetsflödesinstans:
 
 * **Gör uppehåll**: Stoppar tillfälligt körningen av arbetsflödet. Att göra uppehåll är användbart i undantagsfall när du inte vill att arbetsflödet ska fortsätta, t.ex. för underhåll. När du gör uppehåll ändras arbetsflödets status till Pausat.
 * **Återuppta**: Startar om ett pausat arbetsflöde på samma plats där det pausades, med samma konfiguration.
-* **Avsluta**: Avslutar arbetsflödets körning och ändrar tillståndet till **ABORTED**. En avbruten arbetsflödesinstans kan inte startas om.
+* **Avsluta**: Avslutar arbetsflödets körning och ändrar tillståndet till  **ABORTED**. En avbruten arbetsflödesinstans kan inte startas om.
 
