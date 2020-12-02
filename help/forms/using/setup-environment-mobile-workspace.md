@@ -1,8 +1,8 @@
 ---
-title: Konfigurera miljö för appen AEM Forms
-seo-title: Konfigurera miljö för appen AEM Forms
-description: Maskinvara, programvara och licenser för att bygga och driftsätta appen AEM Forms.
-seo-description: Maskinvara, programvara och licenser för att bygga och driftsätta appen AEM Forms.
+title: Konfigurera miljö för AEM Forms-program
+seo-title: Konfigurera miljö för AEM Forms-program
+description: Maskinvara, programvara och licenser för att bygga och driftsätta AEM Forms-appen.
+seo-description: Maskinvara, programvara och licenser för att bygga och driftsätta AEM Forms-appen.
 uuid: 4123a6b7-5766-476c-9afb-f57029b148ad
 contentOwner: robhagat
 content-type: reference
@@ -12,13 +12,16 @@ discoiquuid: e6b01ade-7ea3-42a7-872d-cc35a3d2782a
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+workflow-type: tm+mt
+source-wordcount: '228'
+ht-degree: 0%
 
 ---
 
 
-# Konfigurera miljö för appen AEM Forms{#set-up-environment-for-aem-forms-app}
+# Konfigurera miljö för AEM Forms app{#set-up-environment-for-aem-forms-app}
 
-Du behöver följande maskinvara, programvara och licenser för att skapa och distribuera appen AEM Forms:
+Du behöver följande maskinvara, programvara och licenser för att skapa och distribuera AEM Forms-appen:
 
 ## För Windows-enheter {#for-windows-devices}
 
@@ -39,7 +42,7 @@ Du behöver följande maskinvara, programvara och licenser för att skapa och di
 
 * Android Development Toolkit (ADT bundle) som kan hämtas från [https://developer.android.com/sdk/index.html](https://developer.android.com/sdk/index.html)
 * Om miljön är konfigurerad på ett MAC-system bör ADT installeras i mappen Program.
-* Om ADT är installerat på någon annan plats på MAC, eller om miljön är konfigurerad på ett Windows-system, måste ADT SDK-sökvägen uppdateras i `local.properties` filen som är tillgänglig i `src\android` mappen i det extraherade källarkivet `mobileworkspace-src.zip`. I den här filen pekar du på `sdk.dir` variabeln på ADT SDK-platsen på skrivbordet.
+* Om ADT är installerat på någon annan plats på MAC, eller om miljön är konfigurerad på ett Windows-system, måste ADT SDK-sökvägen uppdateras i `local.properties`-filen som är tillgänglig i mappen `src\android` i det extraherade källarkivet `mobileworkspace-src.zip`. I den här filen pekar du på variabeln `sdk.dir` till ADT SDK-platsen på skrivbordet.
 
 >[!NOTE]
 >
