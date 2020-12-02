@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: 3763e985-7dd8-47fd-bfdf-2368b424c270
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '548'
+ht-degree: 1%
 
 ---
 
 
-# Översiktskonsol för Live Copy{#live-copy-overview-console}
+# Översiktskonsol för Live-kopia{#live-copy-overview-console}
 
-Med **Live Copy Overview** kan du
+Med **Live Copy Overview** kan du:
 
 * Visa/hantera arv på en webbplats:
 
@@ -27,7 +30,7 @@ Med **Live Copy Overview** kan du
 
 * Utför utrullningsåtgärder
 
-## Öppna Live Copy-översikt {#opening-the-live-copy-overview}
+## Öppnar Live Copy-översikt {#opening-the-live-copy-overview}
 
 Du kan öppna Live-kopieringsöversikt från:
 
@@ -36,10 +39,10 @@ Du kan öppna Live-kopieringsöversikt från:
 
 ### Öppna Live Copy-översikt - referenser för en designsida {#opening-live-copy-overview-references-for-a-blueprint-page}
 
-Översikt över **Live-kopian** kan öppnas på panelen **Referenser** i **webbplatskonsolen** :
+Översikt över Live-kopian **kan öppnas från panelen** Referenser **i konsolen** Platser **:**
 
-1. Gå **till din plantryckssida i** Sites [-konsolen och markera](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)den.
-1. Öppna panelen **[Referenser](/help/sites-authoring/basic-handling.md#references)**och välj **Live-kopior**.
+1. I konsolen **Platser**, [navigerar du till din ritningssida och markerar den](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
+1. Öppna panelen **[Referenser](/help/sites-authoring/basic-handling.md#references)** och välj **Live-kopior**.
 
    ![chlimage_1-359](assets/chlimage_1-359.png)
 
@@ -47,34 +50,34 @@ Du kan öppna Live-kopieringsöversikt från:
    >
    >Du kan också öppna Referenser först och sedan välja en plan.
 
-1. Markera **Live Copy Overview** om du vill visa och använda översikten över alla live-kopior som hör till den valda planen.
-1. Använd **Stäng** för att avsluta och återgå till **platskonsolen** .
+1. Välj **Översikt över Live-kopia** om du vill visa och använda översikten över alla live-kopior som hör till den valda planen.
+1. Använd **Stäng** för att avsluta och återgå till konsolen **Platser**.
 
-### Öppna Live Copy-översikt - egenskaper för en designsida {#opening-live-copy-overview-properties-of-a-blueprint-page}
+### Öppna Live Copy-översikt - Egenskaper för en designsida {#opening-live-copy-overview-properties-of-a-blueprint-page}
 
-Översikt över **Live-kopian** kan öppnas när du visar egenskaper för en ritningssida:
+**Översikt över Live-kopian** kan öppnas när du visar egenskaper för en översiktssida:
 
 1. Öppna **Egenskaper** för lämplig ritningssida.
-1. Öppna fliken **Utskrift** - alternativet **Live-kopieringsöversikt** visas i det övre verktygsfältet:
+1. Öppna fliken **Design** - alternativet **Live Copy Overview** visas i det övre verktygsfältet:
 
    ![chlimage_1-360](assets/chlimage_1-360.png)
 
-1. Markera **Live Copy Overview** om du vill visa och använda översikten över alla live-kopior som hör till den aktuella planen.
+1. Välj **Översikt över Live-kopia** om du vill visa och använda översikten över alla live-kopior som hör till den aktuella planen.
 
    >[!NOTE]
    >
-   >Mer information finns också i artikeln [Livecopy status message - Update/Green/In Sync](https://helpx.adobe.com/experience-manager/kb/livecopy-status-message---up-to-date-green-in-sync.html)i kunskapsbasen.
+   >Mer information finns också i kunskapsbasartikeln [Livecopy status message - Update/Green/In Sync](https://helpx.adobe.com/experience-manager/kb/livecopy-status-message---up-to-date-green-in-sync.html).
 
-1. Använd **Stäng** för att avsluta och återgå till **platskonsolen** .
+1. Använd **Stäng** för att avsluta och återgå till konsolen **Platser**.
 
 ## Använda Live Copy-översikt {#using-the-live-copy-overview}
 
-Översikten **över** Live-kopian kan även användas för att utföra åtgärder på den aktiva kopian:
+**Översikt över Live-kopian** kan även användas för att utföra åtgärder på den aktiva kopian:
 
 1. Öppna **Live Copy Overview**.
-1. Välj önskad skiss- eller Live copy-sida - verktygsfältet uppdateras för att visa tillgängliga åtgärder. Vilka [åtgärder](/help/sites-administering/msm.md#terms-used) som är tillgängliga beror på om du har valt en [ritning](#actions-for-a-blueprint-page) eller en [live-kopia](#actions-for-a-live-copy-page) :
+1. Välj önskad skiss- eller Live copy-sida - verktygsfältet uppdateras för att visa tillgängliga åtgärder. Vilka [åtgärder](/help/sites-administering/msm.md#terms-used) som är tillgängliga beror på om du väljer en [ritning](#actions-for-a-blueprint-page)- eller [live-kopia](#actions-for-a-live-copy-page)-sida:
 
-### Åtgärder för en designsida {#actions-for-a-blueprint-page}
+### Åtgärder för en blå sida {#actions-for-a-blueprint-page}
 
 När du väljer en ritningssida är följande åtgärder tillgängliga:
 
@@ -124,7 +127,7 @@ När du väljer en live-kopieringssida är följande åtgärder tillgängliga:
 
 ## Relationsstatus {#relationship-status}
 
-Konsolen för **relationsstatus** har två flikar med en rad funktioner:
+Konsolen **Relationsstatus** har två flikar med en rad funktioner:
 
 * [Statusinformation för relation](#relationship-status-information)
 * [Live Copy-information](#live-copy-information)
