@@ -20,9 +20,9 @@ ht-degree: 0%
 
 # Grundläggande röstning {#voting-essentials}
 
-Röstkomponenten, en [tally](tally.md) subclass, är ett användbart verktyg som gör att medlemmar kan betygsätta en viss del av innehållet genom att bara markera upp- eller nedpilarna för att ange sin åsikt.
+Röstkomponenten, en [tally](tally.md)-underklass, är ett användbart verktyg som gör att medlemmar kan betygsätta en viss del av innehållet genom att bara markera upp- eller nedpilar för att ange sin åsikt.
 
-Det är tillåtet att placera flera instanser av en röstkomponent på samma sida. varje instans måste konfigureras med en unik `tally name` egenskap.
+Det är tillåtet att placera flera instanser av en röstkomponent på samma sida. Varje instans måste konfigureras med en unik `tally name`-egenskap.
 
 Anonym publicering av en röst stöds inte. Besökare på platsen måste registrera sig och logga in för att endast delta i omröstningen en gång. Den inloggade besökaren (medlemmen) kan när som helst ändra sin röst.
 
@@ -36,7 +36,7 @@ Anonym publicering av en röst stöds inte. Besökare på platsen måste registr
   </tr>
   <tr>
    <td> <a href="scf.md#add-or-include-a-communities-component"><strong>oklanderlig</strong></a></td>
-   <td>Ja - egenskaper kan redigeras i <i></i>designläge</td>
+   <td>Ja - egenskaper kan redigeras i <i>design </i>läge</td>
   </tr>
   <tr>
    <td> <a href="client-customize.md#clientlibs-for-scf"><strong>klientlibs</strong></a></td>
@@ -70,7 +70,7 @@ Anonym publicering av en röst stöds inte. Besökare på platsen måste registr
 ### Åtkomst till bokförd röstning (UGC) {#accessing-posted-voting-ugc}
 
 UGC bör modereras med någon av standardmetoderna för moderering.
-Se [Moderera användargenererat innehåll](moderate-ugc.md).
+Se [Moderating User Generated Content](moderate-ugc.md).
 
 Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](working-with-srp.md) för UGC programmatisk åtkomst till UGC oavsett valt lagringsalternativ (som ASRP, MSRP eller JSRP).
 
@@ -78,8 +78,8 @@ Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](
 
 Se:
 
-* [Översikt över](srp.md) lagringsresursprovidern - introduktion och översikt över databasanvändningen.
-* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och exempel.
-* [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - riktlinjer för kodning.
-* [Omfaktorisering för SocialUtils](socialutils.md) - mappning av utfasade verktygsmetoder till aktuella SRP-verktygsmetoder.
+* [Översikt över](srp.md)  lagringsresursprovidern - introduktion och översikt över databasanvändningen.
+* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och -exempel.
+* [Åtkomst till UGC med riktlinjerna för SRP](accessing-ugc-with-srp.md) -kodning.
+* [Omfaktorisering](socialutils.md)  för SocialUtils - mappning av utgått från verktygsmetoder till aktuella SRP-verktygsmetoder.
 
