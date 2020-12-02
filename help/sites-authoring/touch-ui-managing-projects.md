@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: fb354c72-debb-4fb6-9ccf-56ff5785c3ae
 translation-type: tm+mt
 source-git-commit: 58fa0f05bae7ab5ba51491be3171b5c6ffbe870d
+workflow-type: tm+mt
+source-wordcount: '1057'
+ht-degree: 11%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 58fa0f05bae7ab5ba51491be3171b5c6ffbe870d
 
 Med projekt kan du ordna ditt projekt genom att gruppera resurser i en enhet.
 
-I **projektkonsolen** får du tillgång till och kan vidta åtgärder för dina projekt:
+I konsolen **Projects** får du åtkomst till och utför åtgärder på dina projekt:
 
 ![chlimage_1-255](assets/chlimage_1-255.png)
 
@@ -35,25 +38,25 @@ I Projekt kan du skapa ett projekt, associera resurser med projektet och även t
 
 >[!CAUTION]
 >
->För användare i projekt som vill se andra användare/grupper när de använder projektfunktioner som att skapa projekt, skapa uppgifter/arbetsflöden, se och hantera team, måste dessa användare ha läsåtkomst på **/hem/användare** och **/hem/grupper**. Det enklaste sättet att implementera detta är att ge **projekt-användare** -gruppen läsåtkomst till **/hem/användare** och **/hem/grupper**.
+>För användare i projekt som vill se andra användare/grupper när de använder projektfunktioner som att skapa projekt, skapa uppgifter/arbetsflöden, se och hantera team, måste dessa användare ha läsåtkomst på **/home/users** och **/home/groups**. Det enklaste sättet att implementera detta är att ge gruppen **projects-users** läsåtkomst till **/home/users** och **/home/groups**.
 
 ## Skapa ett projekt {#creating-a-project}
 
-När du skapar ett projekt innehåller AEM följande mallar som du kan välja mellan:
+AEM innehåller de här mallarna som du kan välja mellan när du skapar ett projekt:
 
 * Enkelt projekt
 * Medieprojekt
 * Fotoprojekt för produkt
 * Översättningsprojekt
 
-Du skapar ett projekt på samma sätt, från projekt till projekt. Skillnaden mellan projekttyperna inkluderar tillgängliga [användarroller](/help/sites-authoring/projects.md) och [arbetsflöden](/help/sites-authoring/projects-with-workflows.md).  Så här skapar du ett nytt projekt:
+Du skapar ett projekt på samma sätt med alla projekt. Projekttyperna skiljer sig åt bland annat vad gäller tillgängliga [användarroller](/help/sites-authoring/projects.md) och [arbetsflöden](/help/sites-authoring/projects-with-workflows.md).  Så här skapar du ett nytt projekt:
 
-1. I **Projekt**: tryck/klicka på **Skapa** för att öppna guiden **Skapa projekt** :
-1. Välj en mall. Enkelt projekt, medieprojekt, [översättningsprojekt](/help/sites-administering/tc-manage.md)och fotoprodukter [](/help/sites-authoring/managing-product-information.md) finns tillgängliga i kartongen och klicka på **Nästa**.
+1. I **Projekt** trycker/klickar du på **Skapa** för att öppna guiden **Skapa projekt**:
+1. Välj en mall. Enkelt projekt, medieprojekt, [Översättningsprojekt](/help/sites-administering/tc-manage.md) och [Produkt/Fotofoto](/help/sites-authoring/managing-product-information.md) är tillgängliga och klicka på **Nästa**.
 
    ![chlimage_1-256](assets/chlimage_1-256.png)
 
-1. Definiera **titel** och **beskrivning** och lägg till en **miniatyrbild** om det behövs. Du kan också lägga till eller ta bort användare och vilken grupp de tillhör. Klicka dessutom på **Avancerat** för att lägga till ett namn som används i URL:en.
+1. Definiera **titeln** och **Beskrivning** och lägg till en **miniatyrbild** om det behövs. Du kan också lägga till eller ta bort användare och vilken grupp de tillhör. Klicka dessutom på **Avancerat** för att lägga till ett namn som används i URL:en.
 
    ![chlimage_1-257](assets/chlimage_1-257.png)
 
@@ -61,12 +64,12 @@ Du skapar ett projekt på samma sätt, från projekt till projekt. Skillnaden me
 
 ### Associera resurser med ditt projekt {#associating-resources-with-your-project}
 
-När du kan gruppera resurser i en enhet i projekt vill du koppla resurser till projektet. Resurserna kallas **plattor**. De typer av resurser du kan lägga till beskrivs i [Projektfiler](/help/sites-authoring/projects.md#project-tiles).
+När du kan gruppera resurser i en enhet i projekt vill du koppla resurser till projektet. Resurserna kallas **plattor**. De typer av resurser som du kan lägga till beskrivs i [Projektfiler](/help/sites-authoring/projects.md#project-tiles).
 
 Så här associerar du resurser med ditt projekt:
 
-1. Öppna projektet från **projektkonsolen** .
-1. Tryck/klicka på **Lägg till platta** och välj den platta som du vill länka till projektet. Du kan markera flera typer av rutor.
+1. Öppna projektet från konsolen **Projekt**.
+1. Tryck/klicka på **Lägg till sida** och välj den ruta som du vill länka till projektet. Du kan markera flera typer av rutor.
 
    ![chlimage_1-258](assets/chlimage_1-258.png)
 
@@ -76,23 +79,23 @@ Så här associerar du resurser med ditt projekt:
 
 1. Tryck/klicka på **Skapa**. Resursen är länkad till ditt projekt och från och med nu kan du komma åt den från ditt projekt.
 
-### Ta bort ett projekt eller en resurslänk {#deleting-a-project-or-resource-link}
+### Tar bort ett projekt eller en resurslänk {#deleting-a-project-or-resource-link}
 
 Samma metod används för att ta bort ett projekt från konsolen eller en länkad resurs från ditt projekt:
 
 1. Navigera till rätt plats:
 
-   * Om du vill ta bort ett projekt går du till den översta nivån i **projektkonsolen** .
-   * Om du vill ta bort en resurslänk i ett projekt öppnar du projektet i **projektkonsolen** .
+   * Om du vill ta bort ett projekt går du till den översta nivån i konsolen **Projekt**.
+   * Om du vill ta bort en resurslänk i ett projekt öppnar du projektet i konsolen **Projekt**.
 
-1. Ange markeringsläge genom att klicka på **Välj** och välja projekt- eller resurslänken.
+1. Öppna markeringsläget genom att klicka på **Välj** och välja projekt- eller resurslänken.
 1. Tryck/klicka på **Ta bort**.
 
-1. Du måste bekräfta borttagningen i en dialogruta. Om den bekräftas tas projekt- eller resurslänken bort. Tryck/klicka på **Avmarkera** för att avsluta markeringsläget.
+1. Du måste bekräfta borttagningen i en dialogruta. Om den bekräftas tas projekt- eller resurslänken bort. Tryck/klicka på **Avmarkera** om du vill avsluta markeringsläget.
 
 >[!NOTE]
 >
->När du skapar projektet och lägger till användare till de olika rollerna skapas grupper som är kopplade till projektet automatiskt för att hantera associerade behörigheter. Ett projekt med namnet Myproject skulle till exempel ha tre grupper, **Myproject Owners**, **Myproject Editors**, **Myproject Observers**. Om projektet däremot tas bort tas de grupperna inte bort automatiskt. En administratör måste ta bort grupperna manuellt i **Verktyg** > **Dokumentskydd** > **Grupper**.
+>När du skapar projektet och lägger till användare för de olika rollerna skapas grupper som är kopplade till projektet automatiskt för att hantera associerade behörigheter. Ett projekt med namnet Myproject skulle till exempel ha tre grupper, **Myproject Owners**, **Myproject Editors** och **Myproject Observers**. Om projektet tas bort tas de grupperna dock inte bort automatiskt. En administratör måste ta bort grupperna manuellt i **Verktyg** > **Säkerhet** > **Grupper**.
 
 ### Lägga till objekt i en platta {#adding-items-to-a-tile}
 
@@ -100,11 +103,11 @@ I vissa rutor kanske du vill lägga till mer än ett objekt. Du kan till exempel
 
 Så här lägger du till objekt i en platta:
 
-1. Gå till projektet i **Projekt** och klicka på ikonen Lägg till + på den ruta där du vill lägga till ett objekt.
+1. I **Projekt** navigerar du till projektet och klickar på ikonen Lägg till + på den ruta där du vill lägga till ett objekt.
 
    ![chlimage_1-259](assets/chlimage_1-259.png)
 
-1. Lägg till ett objekt i rutan på samma sätt som när du skapar en ny platta. Projektpaneler beskrivs [här](/help/sites-authoring/projects.md#project-tiles). I det här exemplet har ett annat arbetsflöde lagts till.
+1. Lägg till ett objekt i rutan på samma sätt som när du skapar en ny platta. Projekttitlar beskrivs [här](/help/sites-authoring/projects.md#project-tiles). I det här exemplet har ett annat arbetsflöde lagts till.
 
    ![chlimage_1-260](assets/chlimage_1-260.png)
 
@@ -122,21 +125,21 @@ Så här öppnar du en platta så att du kan visa eller ändra objekt:
 
    ![chlimage_1-262](assets/chlimage_1-262.png)
 
-## Visa projektstatistik {#viewing-project-statistics}
+## Visar projektstatistik {#viewing-project-statistics}
 
-Om du vill visa projektstatistik går du till **projektkonsolen** och klickar på **Visa statistikvy**. Slutförandenivån för varje projekt visas. Klicka på **Visa statistikvy** igen för att gå till **projektkonsolen** .
+Om du vill visa projektstatistik går du till konsolen **Projekt** och klickar på **Visa statistikvy**. Slutförandenivån för varje projekt visas. Klicka på **Visa statistikvy** igen för att gå till konsolen **Projekt**.
 
 ![chlimage_1-263](assets/chlimage_1-263.png)
 
 ### Visa en projekttidslinje {#viewing-a-project-timeline}
 
-Projektets tidslinje innehåller information om när resurser i projektet senast användes. Om du vill visa projekttidslinjen klickar/trycker du på **tidslinjen**, anger ett markeringsläge och väljer projektet. Resurser visas i den vänstra rutan. Klicka/tryck på **Tidslinjen** för att gå tillbaka till **projektkonsolen** .
+Projektets tidslinje innehåller information om när resurser i projektet senast användes. Om du vill visa projekttidslinjen klickar/trycker du på **Tidslinjen**, anger markeringsläget och väljer projektet. Resurser visas i den vänstra rutan. Klicka/tryck på **Tidslinje** för att återgå till konsolen **Projekt**.
 
 ![chlimage_1-264](assets/chlimage_1-264.png)
 
 ### Visa aktiva/inaktiva projekt {#viewing-active-inactive-projects}
 
-Om du vill växla mellan dina aktiva och inaktiva projekt klickar du på **Växla aktiva projekt** i konsolen **Projekt**. Om ikonen har en bockmarkering visas de aktiva projekten.
+Om du vill växla mellan dina aktiva och inaktiva projekt går du till konsolen **Projekt** och klickar på **Växla aktiva projekt**. Om ikonen har en bockmarkering visas de aktiva projekten.
 
 ![chlimage_1-265](assets/chlimage_1-265.png)
 
@@ -144,13 +147,13 @@ Om ikonen har ett x bredvid visas de inaktiva projekten.
 
 ![chlimage_1-266](assets/chlimage_1-266.png)
 
-## Göra projekt inaktiva eller aktiva {#making-projects-inactive-or-active}
+## Gör projekt inaktiva eller aktiva {#making-projects-inactive-or-active}
 
 Du kanske vill göra ett projekt inaktivt om du har slutfört det men ändå vill behålla informationen om projektet.
 
 Så här gör du ett projekt inaktivt (eller aktivt):
 
-1. Öppna projektet i **projektkonsolen** och hitta sedan rutan **Projektinformation** .
+1. Öppna projektet i konsolen **Projekt** och hitta sedan panelen **Projektinformation**.
 
    >[!NOTE]
    Du kan behöva lägga till den här panelen om den inte redan finns i ditt projekt. Se [Lägga till rutor](#adding-items-to-a-tile).
