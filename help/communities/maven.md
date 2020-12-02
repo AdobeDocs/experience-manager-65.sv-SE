@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Använda Maven for Communities {#using-maven-for-communities}
+# Använda Maven för Communities {#using-maven-for-communities}
 
 ## Översikt {#overview}
 
@@ -28,7 +28,7 @@ Detta avsnitt i AEM Communities-dokumentationen innehåller även:
 
 Det finns nu två&quot;uber&quot;-artefakter som ersätter enskilda artefakter:
 
-* AEM [Communities API jar](#communities-api-jar-artifact)
+* AEM [WebbCommunities API jar](#communities-api-jar-artifact)
 * AEM [Uber API jar](../../help/sites-developing/ht-projects-maven.md#what-is-the-uberjar)
 
 ## Jar-artefakt för Communities-API {#communities-api-jar-artifact}
@@ -58,9 +58,9 @@ Kontrollera att den angivna versionen motsvarar den version av webbcommunityn so
 >
 >Vi rekommenderar att du håller dig uppdaterad med den senaste versionen av Communities.
 >
->Gå till avsnittet [Senaste versioner](deploy-communities.md#latest-releases) för att identifiera den senaste versionen.
+>Besök [Senaste releaser](deploy-communities.md#latest-releases)-avsnittet för att identifiera den senaste versionen.
 
-## Exempel på Maven Dependency {#maven-dependency-example}
+## Maven Dependency Example {#maven-dependency-example}
 
 Communities API jar måste anges före Uber API jar.
 
