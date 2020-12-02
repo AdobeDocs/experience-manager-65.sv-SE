@@ -14,10 +14,10 @@ ht-degree: 20%
 ---
 
 
-# Användarhandbok för redigering av AEM 6.5 Classic UI {#classic-ui}
+# AEM 6.5 Classic UI Authoring User Guide {#classic-ui}
 
 + [Översikt över redigeringshandboken för det klassiska användargränssnittet](home.md)
-+ Introduktion till klassisk gränssnittsredigering {#introduction}
++ Introduktion till redigering av klassiskt användargränssnitt {#introduction}
    + [Steg 1 för författare](classic-page-author-first-steps.md)
    + [Om du skriver i det klassiska gränssnittet](classicui.md)
    + [Arbeta med författarmiljön](author-env.md)
@@ -78,7 +78,7 @@ ht-degree: 20%
    + [Adobe Campaign Components](classic-personalization-ac-components.md)
    + [Inrikta er på Adobe Campaign](classic-personalization-ac-target.md)
    + [Skapa Adobe Campaign Forms i AEM](classic-personalization-ac-forms.md)
-+ Skapa resurser i det klassiska användargränssnittet {#assets}
++ Funktionsredigering i det klassiska användargränssnittet {#assets}
    + [Arbeta med resurser](classicui-assets.md)
    + [Leverera dynamiska medieresurser](dynamic-media-assets-delivering.md)
    + [Lägga till dynamiska medieresurser på sidor](dynamic-media-assets-adding-to-page.md)
