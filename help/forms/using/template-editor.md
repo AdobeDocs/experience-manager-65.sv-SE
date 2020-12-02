@@ -18,9 +18,9 @@ ht-degree: 0%
 ---
 
 
-# Adaptiva formulärmallar{#adaptive-form-templates}
+# Anpassade formulärmallar{#adaptive-form-templates}
 
-När du skapar ett formulär lägger du till fält och komponenter för att definiera formulärstruktur, innehåll och åtgärder i redigeraren. Du lägger till fält och komponenter i `guideRootPanel` formulärbehållaren. Med mallredigeraren kan du skapa en mall som innehåller grundläggande struktur och ursprungligt innehåll som författare kan använda för att skapa formulär.
+När du skapar ett formulär lägger du till fält och komponenter för att definiera formulärstruktur, innehåll och åtgärder i redigeraren. Du lägger till fält och komponenter i `guideRootPanel` för formulärbehållaren. Med mallredigeraren kan du skapa en mall som innehåller grundläggande struktur och ursprungligt innehåll som författare kan använda för att skapa formulär.
 
 Du vill till exempel att alla formulärförfattare ska ha vissa textrutor, navigeringsknappar och en skicka-knapp i ett registreringsformulär. Du kan skapa en mall med de komponenter som författare kan använda för att skapa ett formulär som är konsekvent med andra registreringsformulär. När författare använder mallen för att skapa ett anpassat formulär ärver det nya formuläret strukturen och komponenterna som du har angett i mallen. Med mallredigeraren kan du:
 
@@ -38,33 +38,34 @@ När du trycker för att öppna en mapp finns knappen Skapa som gör att du kan 
 
 När du har skapat en mapp öppnar du mappen och utför följande steg för att skapa en mall:
 
-1. I mallkonsolen trycker du på **Skapa** i den mapp du har skapat.
+1. I mallkonsolen trycker du på **Create** i den mapp du har skapat.
 1. I avsnittet Välj en malltyp väljer du **Adaptiv formulärmall** och trycker på **Nästa**.
 
 1. Ange en malltitel i avsnittet Mallinformation och tryck på **Skapa**.
 Du kan ange en beskrivning och miniatyrbild som du kan se när du kan välja den skapade mallen när du redigerar formuläret.
 
-1. Tryck på **Klar** för att återgå till konsolen eller tryck på **Öppna** för att öppna mallen i redigeraren.
+1. Tryck på **Done** för att återgå till konsolen eller tryck på **Open** för att öppna mallen i redigeraren.
 
 ### Mallredigeringsgränssnitt {#template-editor-ui}
 
 När du öppnar en mall för redigering kan du se följande AEM Editor-komponenter:
 
-* **Verktygsfältet** Sida innehåller följande alternativ:
+* **Verktygsfältet Sida**
+Innehåller följande alternativ:
 
    * **Växla sidopanel**: Här kan du visa eller dölja sidofältet.
    * **Sidinformation**: Här kan du ange information som publicerings-/avpubliceringstid, miniatyrbilder, klientbibliotek, sidprincip och klientbibliotek för siddesign.
    * **Emulator**: Gör att du kan simulera och anpassa utseendet för olika enheter.
-   * **Lagerväljare:** Här kan du ändra lagret.
-Du kan välja **Strukturlager** eller **Inledande** innehållslager. Med strukturlagret kan du lägga till och anpassa sidhuvud och sidfot. Med lagret Ursprungligt innehåll kan du anpassa formulärinnehållet.
+   * **Lagerväljare:** Gör att du kan ändra lagret.
+Du kan välja lagret **Struktur** eller lagret **Ursprungligt innehåll**. Med strukturlagret kan du lägga till och anpassa sidhuvud och sidfot. Med lagret Ursprungligt innehåll kan du anpassa formulärinnehållet.
 
-   * **Förhandsgranska:** Gör att du kan förhandsgranska hur mallen ser ut när du publicerar den. Du kan använda Lagerväljaren och Förhandsgranska för att växla redigerings- och förhandsgranskningsläge.
+   * **Förhandsgranska:** Du kan förhandsgranska hur mallen ser ut när du publicerar den. Du kan använda Lagerväljaren och Förhandsgranska för att växla redigerings- och förhandsgranskningsläge.
 
-* **Sidofält:** Tillhandahåller webbläsarna Innehåll, Egenskaper, Resurser och Komponenter.
+* **Sidofältet:** Tillhandahåller webbläsarna Innehåll, Egenskaper, Resurser och Komponenter.
 * **Komponentverktygsfältet:** När du markerar en komponent visas ett verktygsfält där du kan anpassa komponenten.
 * **Sida**: Det område där du lägger till innehåll för att skapa mallen.
 
-Se [Introduktion till redigering av adaptiva formulär](../../forms/using/introduction-forms-authoring.md) för att förstå redigeraren i Touch-gränssnittet.
+Se [Introduktion till redigering av adaptiva formulär](../../forms/using/introduction-forms-authoring.md) om du vill veta mer om redigeraren för Touch UI.
 
 ### Redigera en mall {#editing-a-template}
 
@@ -83,7 +84,7 @@ När du markerar strukturlagret i mallredigeraren kan du se layoutbehållarna ov
 
 Layoutbehållare i strukturlagret
 
-**S.** Layoutbehållare för rubrikkomponent **B.** Layoutbehållare för sidfotskomponent
+**A.** Layoutbehållare för huvudkomponent  **B.** Layoutbehållare för sidfotskomponent
 
 Dra och släpp komponenten Adaptiv formulärrubrik i layoutbehållaren ovanför behållaren för adaptiv form. När du har lagt till komponenten kan du ange dess egenskaper så att du kan lägga till en logotyp och ange dess titel.
 
@@ -107,7 +108,7 @@ Du kan till exempel lägga till rubrikkomponenten i mallen. När du markerar kom
 
 När alternativet Ursprungligt innehåll är markerat öppnas mallens adaptiva formulärbehållare som ett adaptivt formulär för redigering. Precis som när du skapar ett anpassat formulär kan du ange inledande inställningar, som att välja ett tema och skicka åtgärder.
 
-Formulärförfattare använder det som bas för att skapa ett formulär. Innehållsflödesstrukturen anges i lagret Ursprungligt innehåll i mallen. Om du vill växla till att redigera det ursprungliga innehållet i formulärmallen, innan du förhandsgranskar i sidverktygsfältet, trycker du på ![listrutan](assets/canvas-drop-down.png) Canvas **> Ursprungligt innehåll**.
+Formulärförfattare använder det som bas för att skapa ett formulär. Innehållsflödesstrukturen anges i lagret Ursprungligt innehåll i mallen. Om du vill växla till att redigera det ursprungliga innehållet i formulärmallen trycker du på ![canvas-drop-down](assets/canvas-drop-down.png) **Initialt innehåll** innan du förhandsgranskar i sidverktygsfältet.
 ![Ursprungligt innehållslager i mallredigeraren](assets/initial-content-layer.png)
 
 Ursprungligt innehållslager i mallredigeraren med adaptiv formulärbehållare markerad för att ange egenskaper.
@@ -116,7 +117,7 @@ Ursprungligt innehållslager i mallredigeraren med adaptiv formulärbehållare m
 
 I lagret Ursprungligt innehåll skapar du den anpassningsbara formulärmallen som författarna använder som bas. Om du redigerar en mall på samma sätt som när du redigerar ett formulär, använder du de alternativ som finns i sidofältet. Sidofältet innehåller webbläsare för innehåll, egenskaper, resurser och komponenter.
 
-Se [Sidpanelen](../../forms/using/introduction-forms-authoring.md#sidebar).
+Se [Sidofältet](../../forms/using/introduction-forms-authoring.md#sidebar).
 
 >[!NOTE]
 >
@@ -133,20 +134,20 @@ Du har lagt till en logotyp, angett en rubrik och lagt till en sidfot i struktur
 
 Ändra lagret från Struktur till Inledande innehåll och börja lägga till innehåll i formuläret. Om du vill skapa en flikstruktur lägger du till en underordnad panel i guideRootPanel i behållaren för adaptivt format. Så här lägger du till en panel:
 
-* Du kan lägga till en panel genom att trycka på **+** -knappen när du väljer alternativet **Dra komponenter här** .
+* Du kan lägga till en panel genom att trycka på knappen **+** när du väljer alternativet **Dra komponenter hit**.
 
 * Du kan dra och släppa panelkomponenten från komponentwebbläsaren i sidofältet.
-* Du kan lägga till en underordnad panel till `guideRootPanel` från komponentverktygsfältet.
+* Du kan lägga till en underordnad panel för `guideRootPanel` från komponentens verktygsfält.
 
-Om du vill skapa flikarna Allmän information och Professionell information lägger du till två paneler på den underordnade panelen till `guideRootPanel`. Markera panelerna och tryck på ![cmpr](assets/cmppr.png) för att öppna egenskaperna i sidofältet. Ändra elementnamnen som `general-info` och `professional-info`samt rubrikerna som Allmän information respektive Professional Information. I sidlisten: tryck på innehåll för att öppna innehållsläsaren. Markera på fliken Formulärobjekt `guideRootPanel`. I redigeraren markeras guideRootPanel. Tryck på ![cmpr](assets/cmppr.png) i komponentens verktygsfält för att öppna dess egenskaper. I fältet Panellayout väljer du **Tabbar överst** och trycker på **Klar**. Flikmallstrukturen används.
+Om du vill skapa flikarna Allmän information och Professional Information lägger du till två paneler i den underordnade panelen för `guideRootPanel`. Markera panelerna och tryck på ![cmpr](assets/cmppr.png) för att öppna egenskaperna i sidofältet. Ändra elementnamnen som `general-info` och `professional-info` och titlar som Allmän information respektive Professional Information. I sidlisten: tryck på innehåll för att öppna innehållsläsaren. Välj `guideRootPanel` på fliken Formulärobjekt. I redigeraren markeras guideRootPanel. Tryck på ![cmpr](assets/cmppr.png) i komponentens verktygsfält för att öppna dess egenskaper. I fältet Panellayout väljer du **Tabbar överst** och trycker på **Klar**. Flikmallstrukturen används.
 
 #### Lägga till innehåll på flikar {#adding-content-in-tabs}
 
 ![Lägga till fält i den adaptiva formulärmallen](assets/template-edit-initial-content.png)
 
-När du har lagt till paneler och strukturerat dem som flikar kan du lägga till fält inuti flikarna. När du markerar en flik i redigeraren visas alternativet **Dra komponenter här** . Du kan dra och släppa komponenter som textrutor, listobjekt och knappar. Du kan dra och släppa komponenter från komponentwebbläsaren i sidofältet.
+När du har lagt till paneler och strukturerat dem som flikar kan du lägga till fält inuti flikarna. När du väljer en flik i redigeraren kan du se alternativet **Dra komponenter hit**. Du kan dra och släppa komponenter som textrutor, listobjekt och knappar. Du kan dra och släppa komponenter från komponentwebbläsaren i sidofältet.
 
-Varje komponent har egenskaper som förbättrar datainhämtning och -hantering. Du kan till exempel aktivera egenskapen **Obligatoriskt fält** för en komponent. Författarna kan ange ett meddelande som kunderna ser när de inte fyller i ett obligatoriskt fält. Ange meddelandet i **egenskapen Meddelande** för obligatoriskt fält.
+Varje komponent har egenskaper som förbättrar datainhämtning och -hantering. Du kan till exempel aktivera egenskapen **Obligatoriskt fält** för en komponent. Författarna kan ange ett meddelande som kunderna ser när de inte fyller i ett obligatoriskt fält. Ange meddelandet i egenskapen **Obligatoriskt fältmeddelande**.
 
 I exempelmallen läggs fälten Namn, Telefonnummer och Födelsedatum till på fliken Allmän information. På fliken Professional Information, Anställda, typ av anställning, läggs fält för utbildningsbehörighet till.
 
@@ -164,30 +165,30 @@ När du skapar ett anpassat formulär kan du se mallen som visas när du ombeds 
 
 ## Importera eller exportera en mall {#importing-or-exporting-a-template}
 
-Ett formulär fungerar med sin mall. När du hämtar ett adaptivt formulär som skapats med en anpassad mall hämtas inte mallen. När du importerar formuläret till en annan AEM Forms-instans importeras det utan någon mall. Om ett formulär importeras men mallen inte är tillgänglig, återges inte formuläret. Du kan paketera den anpassade mallen från `/conf` noden i `https://<server>:<port>/crx/packmgr`och portera den i den AEM Forms-instans där du vill överföra formuläret.
+Ett formulär fungerar med sin mall. När du hämtar ett adaptivt formulär som skapats med en anpassad mall hämtas inte mallen. När du importerar formuläret till en annan AEM Forms-instans importeras det utan någon mall. Om ett formulär importeras men mallen inte är tillgänglig, återges inte formuläret. Du kan paketera den anpassade mallen från noden `/conf` i `https://<server>:<port>/crx/packmgr` och portera den i den AEM Forms-instans där du vill överföra formuläret.
 
-## Skapa ett anpassat formulär med hjälp av mallen {#creating-an-adaptive-form-using-the-template}
+## Skapa ett anpassat formulär med mallen {#creating-an-adaptive-form-using-the-template}
 
-När du har skapat och aktiverat en mall är den tillgänglig i formulärhanteraren när du skapar ett anpassat formulär. Mer information om hur du använder en mall och skapar ett anpassat formulär finns i [Skapa ett anpassat formulär](../../forms/using/creating-adaptive-form.md).
+När du har skapat och aktiverat en mall är den tillgänglig i formulärhanteraren när du skapar ett anpassat formulär. Mer information om hur du använder en mall och skapar ett adaptivt formulär finns i [Skapa ett adaptivt formulär](../../forms/using/creating-adaptive-form.md).
 
-## Ändra visningsalternativ för mallar som inte är i kartong  {#change-display-option-of-out-of-the-box-templates}
+## Ändra visningsalternativ för mallar {#change-display-option-of-out-of-the-box-templates}
 
 Du kan skapa anpassade mallar för adaptiva formulär för att definiera grundläggande struktur och ursprungligt innehåll. AEM Forms har också en uppsättning färdiga mallar för anpassningsbara formulär. Du kan välja att visa eller dölja mallarna.
 
 Så här visar och döljer du mallar:
 
-1. Logga in på AEM Forms författarinstans och gå till **Verktyg** > **Åtgärder** > **Webbkonsol**.
+1. Logga in på AEM Forms författarinstans och navigera till **Verktyg** > **Åtgärder** > **Webbkonsol**.
 
    >[!NOTE]
    >
-   >URL:en för AEM webbkonsol är https://&#39;[server]:[port]&#39;/system/console/configMgr
+   >Webbkonsolens URL är https://&#39;[server]:[port]&#39;/system/console/configMgr
 
-1. Leta reda på och öppna konfigurationsinställningarna för **FormsManager** :
+1. Leta reda på och öppna **FormsManager Configuration**-inställningarna:
 
-   * Markera eller avmarkera alternativet **Inkludera från i rutan AF- och AD-mallar** om du vill visa eller dölja formulärmallar.
-   * Markera eller avmarkera alternativet **Inkludera AEM 6.0 AF-mallar** om du vill visa eller dölja anpassade formulärmallar som lagts till i Forms version AEM 6.0 eller AEM 6.1 men som nu är borttagna. Om det här alternativet är markerat måste konfigurationen **Inkludera i rutorna AF och AD-mallar** vara aktiverad för att det ska börja gälla.
+   * Markera eller avmarkera alternativet **Inkludera utanför rutan AF- och AD-mallar** om du vill visa eller dölja formulärmallen för anpassade formulär.
+   * Om du vill visa eller dölja anpassade formulärmallar som lagts till i Forms-utgåvorna AEM 6.0 eller AEM 6.1 men nu är inaktuella, markerar eller avmarkerar du alternativet **Inkludera AEM 6.0 AF-mallar**. Om det här alternativet är markerat måste konfigurationen **Inkludera utanför rutan AF och AD-mallar** vara aktiverad för att det ska börja gälla.
 
-1. Click **Save**. Visningsalternativen för mallar som inte finns i kartongen ändras.
+1. Klicka på **Spara**. Visningsalternativen för mallar som inte finns i kartongen ändras.
 
 ## Recommendations {#recommendations}
 
