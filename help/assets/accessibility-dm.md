@@ -19,22 +19,22 @@ ht-degree: 0%
 
 ## Stöd för tangentbordstillgänglighet i [!DNL Dynamic Media]
 
-Eftersom [!DNL Dynamic Media] är ett plugin-program till [!DNL Adobe Experience Manager Assets]är det mesta av tangentbordskontrollbeteendet precis som i [!DNL Experience Manager Assets]. Knappen i `Cancel` har till exempel samma fokus som i [!DNL Dynamic Media] och reagerar på [!DNL Experience Manager Assets]tangenten som i `Spacebar` [!DNL Experience Manager Assets]. Se [Kortkommandon i Resurser](/help/assets/accessibility.md#keyboard-shortcuts).
+Eftersom [!DNL Dynamic Media] är ett plugin-program till [!DNL Adobe Experience Manager Assets] är det mesta av tangentbordskontrollbeteendet exakt detsamma som i [!DNL Experience Manager Assets]. Knappen `Cancel` i [!DNL Dynamic Media] har till exempel samma fokus som i [!DNL Experience Manager Assets] och reagerar på `Spacebar`-tangenten som i [!DNL Experience Manager Assets]. Se [Kortkommandon i Resurser](/help/assets/accessibility.md#keyboard-shortcuts).
 
-Tangenttryckningar som stöds av enskilda element i användargränssnittet är i de flesta fall [!DNL Dynamic Media] enkla att upptäcka. Tangentbordskontrollen i [!DNL Dynamic Media] handlar om följande:
+Tangentbordslinjer som stöds av enskilda element i användargränssnittet i [!DNL Dynamic Media] är i de flesta fall enkla att upptäcka och se. Tangentbordskontrollen i [!DNL Dynamic Media] handlar om följande:
 
-* Möjlighet att använda `Tab` - och `Shift+Tab` tangenttryckningar för att navigera mellan interaktiva element på sidan.
-Användning av `Tab` flyttar indatafokus till nästa element i användargränssnittet i tabbordningen. med `Shift+Tab` får indatafokus tillbaka till föregående element i användargränssnittet.
+* Möjlighet att använda `Tab` och `Shift+Tab`-tangenttryckningar för att navigera mellan interaktiva element på sidan.
+Om du använder `Tab` flyttas indatafokus till nästa element i användargränssnittet i tabbordningen; om du använder `Shift+Tab` får indatafokus tillbaka till det föregående elementet i användargränssnittet.
 Fokusförflyttningen följer det naturliga elementet i användargränssnittet på skärmen och flyttas från vänster till höger och sedan uppifrån och ned. Om ett fält innehåller ett fel kan du dessutom trycka på `Tab` för att flytta fokus till det.
-* Möjlighet att använda tangenten `Spacebar` och `Enter` för att aktivera standardelement i användargränssnittet, som knappar, listrutor o.s.v.
+* Möjlighet att använda tangenterna `Spacebar` och `Enter` för att aktivera standardelement i användargränssnittet, som knappar, listrutor och så vidare.
 * Möjlighet att se fokus på tangentbordet på det aktiva elementet. Det element i användargränssnittet som har indatafokus kan få en visuell fokusindikation som en kantlinje som återges runt elementet i användargränssnittet.
 * I Hotspot-redigeraren kan du använda vissa anpassade tangenttryckningar, till exempel piltangenter, för att interagera med komplexa element i användargränssnittet för att flytta hotspot-områden.
-* I den interaktiva videoredigeraren kan du använda `Spacebar` för att markera en bild och lägga till den i ett segment. Du kan dessutom använda `Backspace` tangenten för att ta bort det markerade objektet från **[!UICONTROL Content]** fliken. Du kan också trycka på `Tab` de funktioner som behövs för att navigera mellan interaktiva element på sidan.
+* I den interaktiva videoredigeraren kan du använda `Spacebar` för att markera en bild och lägga till den i ett segment. Dessutom kan du använda `Backspace`-tangenten för att ta bort det markerade objektet från fliken **[!UICONTROL Content]**. Om du trycker på `Tab`-funktioner efter behov för att navigera mellan interaktiva element på sidan.
 * I redigeraren för bildbeskärning/smart beskärning kan du göra följande:
    * Använd piltangenterna för att beskära bildrutestorleken, flytta om bilden eller båda.
-   * Det första `Tab` steget markerar hela bildramen. Du kan sedan använda piltangenterna på tangentbordet för att placera bildrutan igen.
-   * Nästa fyra `Tab` stopp är ramens fyra hörn. När fokus placeras i ett ramhörn markeras hörnet. Återigen kan du använda piltangenterna på tangentbordet för att flytta det fokuserade hörnet.
-Se [Redigera smart beskärning eller smarta färgrutor för en enskild bild](/help/assets/image-profiles.md#editing-the-smart-crop-or-smart-swatch-of-a-single-image)
+   * Det första `Tab`-steget markerar hela bildramen. Du kan sedan använda piltangenterna på tangentbordet för att placera bildrutan igen.
+   * De följande fyra `Tab` stoppen är ramens fyra hörn. När fokus placeras i ett ramhörn markeras hörnet. Återigen kan du använda piltangenterna på tangentbordet för att flytta det fokuserade hörnet.
+Se [Redigera den smarta beskärningen eller den smarta färgrutan för en enskild bild](/help/assets/image-profiles.md#editing-the-smart-crop-or-smart-swatch-of-a-single-image)
 
 <!-- Keyboarding is the same because Dynamic Media is using the same UI library (Coral 3 (AEM 6.5) or Coral Spectrum (in Skyline)) as entire AEM Assets.  -->
 
@@ -44,20 +44,20 @@ Se [Redigera smart beskärning eller smarta färgrutor för en enskild bild](/he
 
 <!-- I would not get into much of details of specific keyboard support logic of these editors. One of the reasons - chances are that accessibility support will receive Phase2-like attention, with more holistic approach. -->
 
-## Teknikstöd för assistans inom [!DNL Dynamic Media] {#assistive-technology-support-for-dm}
+## Stöd för hjälpfunktioner i [!DNL Dynamic Media] {#assistive-technology-support-for-dm}
 
-[!DNL Dynamic Media] Element i användargränssnittet fungerar med hjälpmedelstekniker som skärmläsare. Den känner till exempel igen landmärken på en sida när du navigerar mellan landmärken med kortkommandon `D` eller regioner med kortkommandon `R`. Rubriken visas också med en berättarröst när du navigerar med rubrikens kortkommando `H`.
+[!DNL Dynamic Media] Element i användargränssnittet fungerar med hjälpmedelstekniker som skärmläsare. Det känner till exempel igen landmärken på en sida när du navigerar mellan landmärken med kortkommandot `D` eller regioner med kortkommandot `R`. Rubriken visas också med en berättarröst när du navigerar med rubrikens kortkommando `H`.
 
-## Stöd för tangentbordstillgänglighet i [!DNL Dynamic Media] visningsprogram {#keyboard-accessibility-for-dm-viewers}
+## Stöd för tangentbordstillgänglighet i [!DNL Dynamic Media]-visningsprogram {#keyboard-accessibility-for-dm-viewers}
 
-Alla färdiga [!DNL Dynamic Media] visningsprogram har stöd för tangentbordstillgänglighet för dina kunder.
+Alla färdiga [!DNL Dynamic Media]-visningsprogramkomponenter stöder tangentbordstillgänglighet för dina kunder.
 
-Se [Tangentbordstillgänglighet och -navigering](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/c-keyboard-accessibility.html) i referenshandboken för Dynamic Media Viewer.
+Se [Tangentbordstillgänglighet och navigering](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/c-keyboard-accessibility.html) i referenshandboken för dynamiska medievyer.
 
-## Stöd för hjälpmedel i [!DNL Dynamic Media] visningsprogram {#assistive-technology-support-for-dm-viewers}
+## Stöd för hjälpfunktioner i [!DNL Dynamic Media]-visningsprogram {#assistive-technology-support-for-dm-viewers}
 
-Alla [!DNL Dynamic Media] visningsprogramkomponenter stöder rollerna och attributen ARIA (Accessible Rich Internet Applications) för att förbättra integrationen med hjälpmedelstekniker som skärmläsare.
-Läs hjälpavsnittet om **stöd** för hjälpfunktioner i avsnittet om anpassning av visningsprogram i referenshandboken för Dynamic Media Viewer. Se till exempel [Teknikstöd](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/r-html5-video-viewer-20-assistive.html) för Video Viewer eller [Teknikstöd](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-assistive.html#viewers-for-aem-assets-only) för Interactive Image Viewer.
+Alla [!DNL Dynamic Media]-visningsprogramkomponenter har stöd för ARIA-roller (Accessible Rich Internet Applications) och -attribut för att förbättra integrationen med hjälpmedelstekniker som skärmläsare.
+Se hjälpavsnittet **Stöd för hjälpteknik** i alla hjälpavsnitt som rör anpassning av visningsprogram i referenshandboken för Dynamic Media Viewer. Se till exempel [Stöd för hjälpfunktioner](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/r-html5-video-viewer-20-assistive.html) för Video Viewer eller [Stöd för hjälpfunktioner](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-assistive.html#viewers-for-aem-assets-only) för Interactive Image Viewer.
 
 >[!MORELIKETHIS]
 >
