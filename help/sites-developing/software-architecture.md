@@ -11,6 +11,9 @@ topic-tags: best-practices
 discoiquuid: 92971747-1c74-4917-b5a0-7b79b3ae1e68
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '583'
+ht-degree: 0%
 
 ---
 
@@ -19,9 +22,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## Design för uppgraderingar {#design-for-upgrades}
 
-När du utökar OTB-beteenden är det viktigt att tänka på uppgraderingarna. Använd alltid anpassningar i katalogen /apps och lägg antingen över motsvarande noder i katalogen /libs eller använd sling:resourceSuperType för att utöka beteendet utanför rutan. Även om vissa ändringar kan behövas för att stödja en ny AEM-version, bör den nya versionen inte skriva över dina anpassningar om den här metoden följs.
+När du utökar OTB-beteenden är det viktigt att tänka på uppgraderingarna. Använd alltid anpassningar i katalogen /apps och lägg antingen över motsvarande noder i katalogen /libs eller använd sling:resourceSuperType för att utöka beteendet utanför rutan. Vissa ändringar kan behövas för att stödja en ny AEM, men den nya versionen bör inte skriva över dina anpassningar om den här metoden följs.
 
-### Återanvänd mallar och komponenter när det är möjligt {#reuse-template-and-components-when-possible}
+### Återanvänd mall och komponenter när det är möjligt {#reuse-template-and-components-when-possible}
 
 På så sätt kan webbplatsen få ett mer konsekvent utseende och känsla och förenkla kodunderhållet. När en ny mall behövs måste du se till att utöka från en delad basmall så att globala krav som klientlib-inkludering kan kodas på ett ställe. När en ny komponent behövs letar du efter möjligheter att utöka från en befintlig komponent.
 
@@ -41,7 +44,7 @@ SOLID är en förkortning som beskriver fem arkitektoniska principer som bör f�
 
 Att sträva efter att följa dessa fem principer bör leda till ett system som är strikt åtskilt från oron.
 
-### Följ tillförlitlighetsprincipen {#follow-the-robustness-principle}
+### Följ principen {#follow-the-robustness-principle}
 
 Robusitetsprincipen säger att vi bör vara konservativa i det vi skickar, men vara liberala i det vi accepterar. Med andra ord, när vi skickar meddelanden till en tredje part bör vi helt och hållet följa specifikationerna, men när vi tar emot meddelanden från en tredje part bör vi acceptera meddelanden som inte överensstämmer så länge som meddelandets betydelse är tydlig.
 
@@ -49,9 +52,9 @@ Robusitetsprincipen säger att vi bör vara konservativa i det vi skickar, men v
 
 Taggar och testkod är en integrerad del av alla Agile-programimplementeringar, men vi vill försäkra oss om att de inte kommer in i vår produktionskodbas utan lämplig nivå av övervakning. Därför rekommenderar vi att du skapar toppar i en egen modul.
 
-### Implementera skript för datamigrering i sin egen modul {#implement-data-migration-scripts-in-their-own-module}
+### Implementera datamigreringsskript i sin egen modul {#implement-data-migration-scripts-in-their-own-module}
 
-Skript för datamigrering körs vanligtvis bara en gång när en webbplats startas första gången. Så fort sajten är publicerad blir den därför död. För att säkerställa att vi inte bygger implementeringskod som är beroende av migreringsskripten, bör de implementeras i sin egen modul. Detta gör att vi kan ta bort och kassera koden direkt efter start, vilket eliminerar den döda koden från systemet.
+Skript för datamigrering körs vanligtvis bara en gång när en webbplats startas första gången. Så fort sajten är publicerad blir den därför död. För att säkerställa att vi inte bygger implementeringskod som är beroende av migreringsskripten, bör de implementeras i sin egen modul. Detta gör även att vi kan ta bort och kassera den här koden direkt efter start, vilket eliminerar den döda koden från systemet.
 
 ### Följ publicerade Maven-konventioner i POM-filer {#follow-published-maven-conventions-in-pom-files}
 
