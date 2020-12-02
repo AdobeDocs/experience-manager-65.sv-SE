@@ -19,7 +19,7 @@ ht-degree: 0%
 ---
 
 
-# Forumfunktion{#forum-feature}
+# Forum, funktion{#forum-feature}
 
 ## Introduktion {#introduction}
 
@@ -35,25 +35,25 @@ Forumfunktionen tillhandahåller ett område där besökare (community-medlemmar
 I det här avsnittet av dokumentationen beskrivs:
 
 * Lägga till forumfunktionen på en AEM webbplats.
-* Konfigurationsinställningar för `Forum` komponenten.
+* Konfigurationsinställningar för komponenten `Forum`.
 
 ### Lägga till ett forum på en sida {#adding-a-forum-to-a-page}
 
-Om du vill lägga till en `Forum` komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att leta reda på
+Om du vill lägga till en `Forum`-komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att leta reda på
 
 * `Communities / Forum`
 
 och dra den till rätt plats på en sida där forumet ska visas.
 
-Mer information finns i Grunderna för [communitykomponenter](/help/communities/basics.md).
+Mer information finns på [Grunderna för communitykomponenter](/help/communities/basics.md).
 
-När de [nödvändiga klientbiblioteken](/help/communities/essentials-forum.md#essentials-for-client-side) inkluderas visas `Forum` komponenten så här:
+När de [nödvändiga klientbiblioteken](/help/communities/essentials-forum.md#essentials-for-client-side) inkluderas visas `Forum`-komponenten så här:
 
 ![chlimage_1-60](assets/chlimage_1-60.png)
 
 ### Konfigurera ett forum {#configuring-a-forum}
 
-Markera den monterade `Forum` komponent som du vill öppna och välj den `Configure` ikon som öppnar redigeringsdialogrutan.
+Markera den monterade `Forum`-komponenten som ska öppnas och välj ikonen `Configure` som öppnar redigeringsdialogrutan.
 
 ![chlimage_1-61](assets/chlimage_1-61.png)
 
@@ -61,7 +61,7 @@ Markera den monterade `Forum` komponent som du vill öppna och välj den `Config
 
 #### Fliken Inställningar {#settings-tab}
 
-Ange inställningar för ämnen och svar på fliken **Inställningar** :
+Under fliken **Inställningar** anger du inställningar för ämnen och svar:
 
 * **Tillåt miniatyrbild för bifogad fil**
 
@@ -94,7 +94,7 @@ Ange inställningar för ämnen och svar på fliken **Inställningar** :
 
 * **Tillåt taggning**
 
-   Om det här alternativet är markerat kan medlemmar lägga till taggetiketter i sina inlägg (se fliken **Taggfält** ). Standard är avmarkerat.
+   Om det här alternativet är markerat kan medlemmar lägga till taggetiketter i sina inlägg (se **Tagg field** tab). Standard är avmarkerat.
 
 * **Tillåt filöverföringar**
 
@@ -102,7 +102,7 @@ Ange inställningar för ämnen och svar på fliken **Inställningar** :
 
 * **Tillåt följande**
 
-   Om det här alternativet är markerat kan du inkludera följande funktion för foruminlägg, som gör att medlemmar kan [informeras](/help/communities/notifications.md) om nya inlägg. Standard är avmarkerat.
+   Om du markerar det här alternativet inkluderas följande funktion för foruminlägg, som gör att medlemmar kan [meddelas](/help/communities/notifications.md) om nya inlägg. Standard är avmarkerat.
 
 * **Tillåt fästa**
 
@@ -110,21 +110,22 @@ Ange inställningar för ämnen och svar på fliken **Inställningar** :
 
 * **Tillåt innehåll**
 
-   Om du markerar det här alternativet kan idén identifieras som [aktuellt innehåll](/help/communities/featured.md). Standard är avmarkerat.
+   Om det här alternativet är markerat kan idén identifieras som [aktuellt innehåll](/help/communities/featured.md). Standard är avmarkerat.
 
 * **Tillåt e-postprenumerationer**
 
-   Om det här alternativet är markerat kan medlemmar meddelas om nya inlägg via e-post ([prenumeration](/help/communities/subscriptions.md)). Kräver `Allow Following` att kontrolleras och att [e-post konfigureras](/help/communities/email.md). Standard är avmarkerat.
+   Om det här alternativet är markerat kan medlemmar meddelas om nya inlägg via e-post ([prenumeration](/help/communities/subscriptions.md)). Kräver att `Allow Following` kontrolleras och [e-post konfigureras](/help/communities/email.md). Standard är avmarkerat.
 
 * **Maximal filstorlek**
 
-   Relevant endast om `Allow File Uploads` är markerat. Det här fältet begränsar storleken (i byte) på en överförd fil. Standardvärdet är 104857600 (10 MB).
+   Endast relevant om `Allow File Uploads` är markerat. Det här fältet begränsar storleken (i byte) på en överförd fil. Standardvärdet är 104857600 (10 MB).
 
 * **Tillåtna filtyper**
 
-   Relevant endast om `Allow File Uploads` är markerat. En kommaavgränsad lista med filtillägg med&quot;punktavgränsaren&quot;. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp har angetts kan de som inte har angetts inte överföras. Ingen standard har angetts så att alla filtyper tillåts.
+   Endast relevant om `Allow File Uploads` är markerat. En kommaavgränsad lista med filtillägg med&quot;punktavgränsaren&quot;. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp har angetts kan de som inte har angetts inte överföras. Ingen standard har angetts så att alla filtyper tillåts.
 
-* **Max Attach Image File Size** Relevant only if Allow File Uploads is checked. Maximalt antal byte som en överförd bildfil kan ha. Standardvärdet är 2097152 (2 MB).
+* **Max Attach Image File**
+SizeRelevant only if Allow File Uploads is checked. Maximalt antal byte som en överförd bildfil kan ha. Standardvärdet är 2097152 (2 MB).
 
 * **Tillåt kopplade svar**
 
@@ -144,7 +145,7 @@ Ange inställningar för ämnen och svar på fliken **Inställningar** :
 
 * **Visa emblem**
 
-   Om det här alternativet är markerat visas färdiga och tilldelade [märken](/help/communities/implementing-scoring.md) med en medlems blogginlägg. Standard är avmarkerat.
+   Om det här alternativet är markerat visas intjänade och tilldelade [märken](/help/communities/implementing-scoring.md) med en medlems blogginlägg. Standard är avmarkerat.
 
 * **Tillåt behöriga medlemmar**
 
@@ -172,11 +173,11 @@ Ange inställningar för ämnen och svar på fliken **Inställningar** :
 
 >[!NOTE]
 >
->Det kan vara nödvändigt att kontrollera både `AllowThreaded Replies` och `Allow users to Delete Comments and Topics` aktivera kommentarer om ett ämne.
+>Du kan behöva kontrollera både `AllowThreaded Replies` och `Allow users to Delete Comments and Topics` för att kunna aktivera kommentarer om ett ämne.
 
 #### Fliken Användarmoderering {#user-moderation-tab}
 
-På fliken **Användarmoderering** anger du hur publicerade ämnen och svar (användargenererat innehåll) ska hanteras. Mer information finns i [Hantera användargenererat innehåll](/help/communities/moderate-ugc.md).
+Under fliken **Användarmoderering** anger du hur publicerade ämnen och svar (användargenererat innehåll) ska hanteras. Mer information finns i [Moderating User Generated Content](/help/communities/moderate-ugc.md).
 
 * **Neka inlägg**
 
@@ -210,21 +211,21 @@ På fliken **Användarmoderering** anger du hur publicerade ämnen och svar (anv
 
    Ange hur många gånger ett ämne eller en kommentar måste flaggas innan det döljs för den offentliga vyn. Om värdet är -1 döljs aldrig det flaggade ämnet eller kommentaren från den offentliga vyn. Annars måste talet vara större än eller lika med modereringströskeln. Standardvärdet är 5.
 
-#### Fliken Taggfält {#tag-field-tab}
+#### Tagg field tab {#tag-field-tab}
 
-Under fliken **Tagg** begränsas de taggar som kan användas, om de tillåts under fliken **Inställningar** , enligt de namnutrymmen som valts.
+Under fliken **Tagg field** är de taggar som kan användas, om de tillåts under fliken **Settings** begränsade enligt de valda namnutrymmena.
 
 * **Tillåtna namnutrymmen**
 
-   Relevant om `Allow Tagging` är markerat under fliken **Inställningar** . De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som kontrolleras. Listan med namnutrymmen innehåller &quot;Standardtaggar&quot; (standardnamnutrymmet) och &quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
+   Relevant om `Allow Tagging` är markerat under fliken **Inställningar**. De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som kontrolleras. Listan med namnutrymmen innehåller &quot;Standardtaggar&quot; (standardnamnutrymmet) och &quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
 
 * **Förslagsgräns**
 
    Ange antalet taggar som ska visas som ett förslag till medlemmens inlägg i forumet. Standardvärdet är **-**1 (inga gränser).
 
-#### Fliken Översättning {#translation-tab}
+#### Översättningsflik {#translation-tab}
 
-Om översättning är aktiverat för communitywebbplatsen på fliken **Översättning** kan översättning ställas in för att översätta hela ämnet eller valda inlägg.
+Under fliken **Översättning**, om översättning är aktiverat för communitywebbplatsen, kan översättning ställas in för att översätta hela ämnet eller valda inlägg.
 
 * **Översätt alla**
 
@@ -232,7 +233,7 @@ Om översättning är aktiverat för communitywebbplatsen på fliken **Översät
 
 #### Fliken Sorteringsinställningar {#sort-settings-tab}
 
-På fliken **Sorteringsinställningar** anger du hur de skickade kommentarerna ska sorteras när de visas.
+Under fliken **Sorteringsinställningar** anger du hur de bokförda kommentarerna ska sorteras när de visas.
 
 * **Sortera efter**
 
@@ -248,11 +249,11 @@ På fliken **Sorteringsinställningar** anger du hur de skickade kommentarerna s
 
    Standardvärdet är `All`.
 
-### Additional Information {#additional-information}
+### Ytterligare information {#additional-information}
 
 Mer information finns på sidan [Forum Essentials](/help/communities/essentials-forum.md) för utvecklare.
 
-Mer information om moderering av publicerade ämnen och kommentarer finns i [Hantera användargenererat innehåll](/help/communities/moderate-ugc.md).
+moderering av publicerade ämnen och kommentarer finns i [Moderating User Generated Content](/help/communities/moderate-ugc.md).
 
 Information om hur du taggar publicerade ämnen och kommentarer finns i [Tagga användargenererat innehåll](/help/communities/tag-ugc.md).
 
