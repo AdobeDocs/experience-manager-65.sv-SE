@@ -21,18 +21,18 @@ ht-degree: 3%
 
 # Skapar kapslade grupper{#authoring-nested-groups}
 
-## Skapar grupper på författare {#creating-groups-on-author}
+## Skapar grupper på författaren {#creating-groups-on-author}
 
-Från global navigering i AEM Author:
+Från global navigering i AEM Author-instansen:
 
 * Välj **[!UICONTROL Communities]** > **[!UICONTROL Sites]**.
-* Välj **[!UICONTROL engage folder]** att öppna den.
-* Välj kortet för den **[!UICONTROL Getting Started Tutorial]** engelska webbplatsen.
+* Välj **[!UICONTROL engage folder]** för att öppna den.
+* Välj kortet för den engelska webbplatsen **[!UICONTROL Getting Started Tutorial]**.
 
    * Välj kortbilden.
-   * Markera *inte* en ikon.
+   * Välj *inte* en ikon.
 
-Resultatet blir att [gruppkonsolen](/help/communities/groups.md)nås:
+Resultatet är att [Groups console](/help/communities/groups.md) nås:
 
 ![create-group](assets/create-group.png)
 
@@ -40,9 +40,9 @@ Gruppfunktionen visas som en mapp där instanser av grupper skapas. Markera mapp
 
 ![create-new-group](assets/create-new-group.png)
 
-## Skapa huvudkonst {#create-main-arts-group}
+## Skapa huvudkonsgrupp {#create-main-arts-group}
 
-Den här gruppen kan skapas eftersom webbplatsstrukturen för interaktion innehåller en gruppfunktion. Konfigurationen av funktionen i platsens `Reference Template` standardinställningar tillåter val av aktiverad gruppmall. Därför är mallen som väljs för den nya gruppen `Reference Group`.
+Den här gruppen kan skapas eftersom webbplatsstrukturen för interaktion innehåller en gruppfunktion. Konfigurationen av funktionen i platsens `Reference Template` tillåter som standard val av aktiverad gruppmall. Mallen som väljs för den nya gruppen är alltså `Reference Group`.
 
 De här konsolerna liknar konsolen Communities Sites.
 
@@ -52,10 +52,10 @@ De här konsolerna liknar konsolen Communities Sites.
 
    * **[!UICONTROL Community Group Title]**: Konst.
    * **[!UICONTROL Community Group Description]**: En överordnad grupp för olika konstnärliga grupper.
-   * **[!UICONTROL Community Group Root]**: *lämna som standard*.
+   * **[!UICONTROL Community Group Root]**:  *lämna som standard*.
    * **[!UICONTROL Additional Available Community Group Language(s)]**: Använd listrutan för att välja tillgängliga språk för communitygrupper. Menyn innehåller alla språk som den överordnade communitywebbplatsen skapas i. Användarna kan välja mellan dessa språk för att skapa grupper i flera språkområden i det här steget. Samma grupp skapas på flera angivna språk i gruppkonsolen för respektive communityplats.
    * **[!UICONTROL Community Group Name]**: konst.
-   * **[!UICONTROL Template]**: listruta för att välja `Reference Group.`
+   * **[!UICONTROL Template]**: listruta för att välja  `Reference Group.`
    * Välj **[!UICONTROL Next]**.
 
 ![Kapslade communitygrupper](assets/parent-to-nestedgroup.png)
@@ -84,7 +84,7 @@ Fortsätt genom de andra panelerna med följande inställningar:
 
 * Välj **[!UICONTROL Create]**.
 
-### Kapslade grupper inom konst {#nesting-groups-within-arts-group}
+### Kapslade grupper inom konsthantgrupp {#nesting-groups-within-arts-group}
 
 Mappen `groups` innehåller nu två grupper (uppdatera sidan).
 
@@ -92,7 +92,7 @@ Mappen `groups` innehåller nu två grupper (uppdatera sidan).
 
 #### Publicera grupp {#publish-group}
 
-Innan du skapar grupper som är kapslade i `arts` gruppen håller du pekaren över `arts` kortet och väljer publiceringsikonen för att publicera det.
+Innan du skapar grupper som är kapslade i `arts`-gruppen håller du pekaren över `arts`-kortet och väljer publiceringsikonen för att publicera det.
 
 ![publicera-webbplats](assets/publish-site.png)
 
@@ -100,14 +100,14 @@ Vänta på bekräftelse på att gruppen publicerades.
 
 ![grupppublicerad](assets/group-published.png)
 
-Gruppen bör också innehålla en `arts` `groups` mapp, men en som är tom och där nya grupper kan skapas. Navigera till gruppmappen för konst och skapa 3 kapslade grupper, där var och en har olika medlemsinställningar:
+Gruppen `arts` ska också innehålla en `groups`-mapp, men en som är tom och i vilken nya grupper kan skapas. Navigera till gruppmappen för konst och skapa 3 kapslade grupper, där var och en har olika medlemsinställningar:
 
 1. **[!UICONTROL Visual]**
 
    * Titel: `Visual Arts`
    * Namn: `visual`
    * Mall: `Reference Group`
-   * Medlemskap: välj `Optional Membership`, en offentlig grupp, öppen för alla medlemmar.
+   * Medlemskap: välj `Optional Membership`, en offentlig grupp, som är öppen för alla medlemmar.
 
 1. **[!UICONTROL Auditory]**
 
@@ -129,13 +129,13 @@ Så här navigerar du till de kapslade grupperna från konsolen Webbplatser för
 
 * Välj **[!UICONTROL engage folder]**
 * Välj **[!UICONTROL Getting Started Tutorial card]**
-* Välj **[!UICONTROL Groups]** mapp
+* Välj mappen **[!UICONTROL Groups]**
 * Välj **[!UICONTROL arts card]**
-* Välj **[!UICONTROL Groups]** mapp
+* Välj mappen **[!UICONTROL Groups]**
 
 ![create-new-group2](assets/create-new-group2.png)
 
-## Förlagskoncern {#publishing-groups}
+## Publiceringsgrupper {#publishing-groups}
 
 ![publicera-webbplats](assets/publish-site.png)
 
@@ -151,9 +151,9 @@ Efter publicering av den huvudsakliga communitywebbplatsen:
 
 ![grupppublicerad](assets/group-published.png)
 
-## Experience on Publish {#experience-on-publish}
+## Upplevelse vid publicering {#experience-on-publish}
 
-Det går att uppleva de olika grupperna när de loggas in, till exempel med de [demoanvändare](/help/communities/tutorials.md#demo-users) som används för:
+Det går att uppleva de olika grupperna när de är inloggade, till exempel med [demoanvändarna](/help/communities/tutorials.md#demo-users) som används för:
 
 * Medlem i konst-/historikgrupp: emily.andrews@mailinator.com/lösenord
    * Den begränsade (hemliga) gruppen, konst/historik, är synlig:
@@ -166,5 +166,5 @@ Det går att uppleva de olika grupperna när de loggas in, till exempel med de [
    * Kan förena begränsade (öppna) grupper.
    * Kan inte se begränsade (hemliga) grupper.
 
-Gå till konsolerna [Communities](/help/communities/members.md) Members and Groups för författare om du vill lägga till andra användare i olika medlemsgrupper som motsvarar communitygrupperna.
+Gå till konsolerna [Medlemmar och grupper](/help/communities/members.md) på författaren för att lägga till andra användare i olika medlemsgrupper som motsvarar communitygrupperna.
 
