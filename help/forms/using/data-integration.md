@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# [!DNL AEM Forms] Dataintegrering {#aem-forms-data-integration}
+# [!DNL AEM Forms] Dataintegrering  {#aem-forms-data-integration}
 
 ![](do-not-localize/data-integeration.png)
 
@@ -32,7 +32,7 @@ Ett distribuerat modulärt system har sina fördelar, men utmaningen består i a
 
 ![aem-forms-data-integeration](assets/aem-forms-data-integeration.png)
 
-[!DNL AEM Forms] Med dataintegrering kan du konfigurera och ansluta olika datakällor med [!DNL AEM Forms]. Det ger ett intuitivt användargränssnitt för att skapa ett enhetligt datarepresentationsschema för affärsenheter och tjänster över anslutna datakällor. Den enhetliga representationen kallas för en formulärdatamodell, ett tillägg till JSON-schema. Enheterna i en formulärdatamodell kallas datamodellsobjekt. Med en formulärdatamodell kan du:
+[!DNL AEM Forms] Med dataintegrering kan du konfigurera och ansluta olika datakällor med  [!DNL AEM Forms]. Det ger ett intuitivt användargränssnitt för att skapa ett enhetligt datarepresentationsschema för affärsenheter och tjänster över anslutna datakällor. Den enhetliga representationen kallas för en formulärdatamodell, ett tillägg till JSON-schema. Enheterna i en formulärdatamodell kallas datamodellsobjekt. Med en formulärdatamodell kan du:
 
 * Få åtkomst till datamodellsobjekt, egenskaper och tjänster från anslutna datakällor.
 * Skapa anpassade datamodellsobjekt och egenskaper
@@ -42,7 +42,7 @@ Ett distribuerat modulärt system har sina fördelar, men utmaningen består i a
 När du har skapat en formulärdatamodell kan du använda den i olika anpassningsbara formulär och interaktiva kommunikationsarbetsflöden, till exempel:
 
 * Skapa anpassningsbara formulär och interaktiv kommunikation baserat på formulärdatamodell
-* Förifyll anpassningsbara formulär och interaktiv kommunikation från konfigurerade datakällor
+* Förifyll adaptiva formulär och interaktiv kommunikation från konfigurerade datakällor
 * Anropa datakälltjänster/åtgärder med hjälp av anpassningsbara formulärregler
 * Skriv anpassade formulärdata till datakällor
 
