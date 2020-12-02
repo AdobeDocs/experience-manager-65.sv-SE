@@ -12,6 +12,9 @@ discoiquuid: b279c033-bc93-4e62-81ad-123c40b9fdd2
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 684d2d5f73d571a15c8155e7870134c28dc892b7
+workflow-type: tm+mt
+source-wordcount: '871'
+ht-degree: 0%
 
 ---
 
@@ -26,13 +29,14 @@ Så här kommer du åt konsolen Klassisk UI-taggning:
 
 * on author
 * logga in med administratörsbehörighet
-* bläddra till konsolen, till exempel [https://localhost:4502/tagging](https://localhost:4502/tagging)
+* bläddra till konsolen
+till exempel [https://localhost:4502/tagging](https://localhost:4502/tagging)
 
 ![](assets/managing_tags_usingthetagasministrationconsole.png)
 
-## Skapa taggar och namnutrymmen {#creating-tags-and-namespaces}
+## Skapar taggar och namnutrymmen {#creating-tags-and-namespaces}
 
-1. Beroende på vilken nivå du börjar på kan du skapa en tagg eller ett namnutrymme med **Nytt**:
+1. Beroende på vilken nivå du börjar på kan du skapa en tagg eller ett namnutrymme med **New**:
 
    Om du väljer **Taggar** kan du skapa ett namnutrymme:
 
@@ -44,15 +48,23 @@ Så här kommer du åt konsolen Klassisk UI-taggning:
 
 1. I båda fallen anger du
 
-   * **Titel**(*obligatoriskt*) Visningsrubriken för taggen. Alla tecken kan anges, men du bör inte använda dessa specialtecken:
+   * **Titel**
+(
+*Obligatoriskt*) Visningsrubriken för taggen. Alla tecken kan anges
+Vi rekommenderar att du inte använder dessa specialtecken:
 
       * `colon (:)` - namnutrymmesavgränsare
       * `forward slash (/)` - avgränsare för undertagg
+
       Dessa tecken visas inte om de anges.
 
-   * **Namn**(*obligatoriskt*) Taggens nodnamn.
+   * **Namn**
+(
+*Obligatoriskt*) Nodnamnet för taggen.
 
-   * **Beskrivning**(*valfritt*) En beskrivning av taggen.
+   * **Beskrivning**
+(
+*Valfritt*) En beskrivning av taggen.
 
    * välj **Skapa**
 
@@ -60,15 +72,15 @@ Så här kommer du åt konsolen Klassisk UI-taggning:
 ## Redigera taggar {#editing-tags}
 
 1. Markera den tagg som du vill redigera i den högra rutan.
-1. Click **Edit**.
-1. Du kan ändra **Titel** och **Beskrivning**.
-1. Stäng dialogrutan genom att klicka på **Spara** .
+1. Klicka på **Redigera**.
+1. Du kan ändra **titeln** och **beskrivningen**.
+1. Klicka på **Spara** för att stänga dialogrutan.
 
-## Ta bort taggar {#deleting-tags}
+## Tar bort taggar {#deleting-tags}
 
 1. Markera den tagg som du vill ta bort i den högra rutan.
-1. Click **Delete**.
-1. Stäng dialogrutan genom att klicka på **Ja** .
+1. Klicka på **Ta bort**.
+1. Klicka på **Ja** för att stänga dialogrutan.
 
    Taggen ska inte längre listas.
 
@@ -77,9 +89,9 @@ Så här kommer du åt konsolen Klassisk UI-taggning:
 1. I den högra rutan markerar du namnutrymmet eller taggen som du vill aktivera (publicera) eller inaktivera (avpublicera).
 1. Klicka på **Aktivera** eller **Inaktivera** efter behov.
 
-## Lista - visa var taggar refereras {#list-showing-where-tags-are-referenced}
+## Lista - visar var taggar refereras {#list-showing-where-tags-are-referenced}
 
-**List** öppnar ett nytt fönster med sökvägarna till alla sidor som använder den markerade taggen:
+**** Listöppnar ett nytt fönster med sökvägarna till alla sidor som använder den markerade taggen:
 
 ![](assets/list_showing_wheretagsarereferenced.png)
 
@@ -87,8 +99,8 @@ Så här kommer du åt konsolen Klassisk UI-taggning:
 
 För att tagga administratörer och utvecklare så att de kan rensa taxonomin eller byta namn på ett tagg-ID kan du flytta en tagg till en ny plats:
 
-1. Öppna **taggningskonsolen** .
-1. **Markera taggen och klicka på** Flytta... i det övre verktygsfältet (eller på snabbmenyn).
+1. Öppna konsolen **Taggning**.
+1. Markera taggen och klicka på **Flytta..** i det övre verktygsfältet (eller på snabbmenyn).
 1. I dialogrutan **Flytta tagg** definierar du:
 
    * **till** målnoden.
@@ -102,16 +114,16 @@ Dialogrutan **Flytta tagg** ser ut så här:
 
 >[!NOTE]
 >
->Författare bör inte flytta taggar eller byta namn på ett tagg-ID. Vid behov bör författare endast [ändra taggtitlarna](#editing-tags).
+>Författare bör inte flytta taggar eller byta namn på ett tagg-ID. Vid behov ska författare endast [ändra taggtitlarna](#editing-tags).
 
-## Sammanfoga taggar {#merging-tags}
+## Sammanfogar taggar {#merging-tags}
 
 Du kan använda sammanfogningstaggar när en taxonomi har dubbletter. När tagg A sammanfogas med tagg B kommer alla sidor som taggas med tagg A att taggas med tagg B och tagg A är inte längre tillgängliga för författare.
 
 Så här sammanfogar du en tagg till en annan:
 
-1. Öppna **taggningskonsolen** .
-1. **Markera taggen och klicka på** Sammanfoga... i det övre verktygsfältet (eller på snabbmenyn).
+1. Öppna konsolen **Taggning**.
+1. Markera taggen och klicka på **Sammanfoga..** i det övre verktygsfältet (eller på snabbmenyn).
 1. I dialogrutan **Sammanfoga tagg** definierar du:
 
    * **till** målnoden.
@@ -126,18 +138,18 @@ Dialogrutan **Sammanfoga tagg** ser ut så här:
 
 Så här ser du hur många gånger en tagg används:
 
-1. Öppna **taggningskonsolen** .
-1. Klicka på **Räkna användning** i det övre verktygsfältet: i kolumnen Antal visas resultatet.
+1. Öppna konsolen **Taggning**.
+1. Klicka på **Räkningsanvändning** i det övre verktygsfältet: i kolumnen Antal visas resultatet.
 
 ## Hantera taggar på olika språk {#managing-tags-in-different-languages}
 
-Den valfria `title`egenskapen för en tagg kan översättas till flera språk. Taggen `titles` kan sedan visas beroende på användarspråk eller sidspråk.
+Den valfria egenskapen `title`för en tagg kan översättas till flera språk. Taggen `titles` kan sedan visas enligt användarspråket eller sidspråket.
 
 ### Definiera taggtitlar på flera språk {#defining-tag-titles-in-multiple-languages}
 
 Följande procedur visar hur du översätter `title`taggen **Djur** till engelska, tyska och franska:
 
-1. Gå till **taggningskonsolen** .
+1. Gå till konsolen **Taggning**.
 1. Redigera taggen **Djur** under **Taggar** > **Stock Photography**.
 1. Lägg till översättningarna på följande språk:
 
@@ -153,16 +165,16 @@ Dialogrutan ser ut så här:
 
 Taggningskonsolen använder språkinställningen för användaren, så för taggen Animal visas Animaux för en användare som anger språket som franska i användaregenskaperna.
 
-Om du vill lägga till ett nytt språk i dialogrutan läser du avsnittet [Lägga till ett nytt språk i dialogrutan](/help/sites-developing/building.md#adding-a-new-language-to-the-edit-tag-dialog) Redigera tagg i avsnittet **Tagga för utvecklare** .
+Om du vill lägga till ett nytt språk i dialogrutan läser du avsnittet [Lägga till ett nytt språk i dialogrutan Redigera tagg](/help/sites-developing/building.md#adding-a-new-language-to-the-edit-tag-dialog) i **taggningen för utvecklare**.
 
-### Visa taggtitlar i Sidegenskaper på ett visst språk {#displaying-tag-titles-in-page-properties-in-a-specified-language}
+### Visa taggtitlar i Sidegenskaper på det angivna språket {#displaying-tag-titles-in-page-properties-in-a-specified-language}
 
-Som standard visas taggen `titles`i sidegenskaperna på sidspråket. Dialogrutan Tagg i sidegenskaperna har ett språkfält där du kan visa taggen `titles`på ett annat språk. I proceduren nedan beskrivs hur du visar taggen `titles`på franska:
+Som standard visas taggen `titles`i sidegenskaperna på sidspråket. I taggdialogrutan i sidegenskaperna finns ett språkfält som gör att taggen `titles`kan visas på ett annat språk. I proceduren nedan beskrivs hur du visar taggen `titles`på franska:
 
-1. Se föregående avsnitt för att lägga till den franska översättningen till **Djur** under **Taggar** > **Stock Photography**.
-1. Öppna sidegenskaperna för sidan **Produkter** i den engelska grenen av webbplatsen **Geometrixx** .
-1. Öppna dialogrutan **Taggar/nyckelord** (genom att välja den nedrullningsbara menyn till höger om visningsområdet Taggar/nyckelord) och välj det **franska** språket i den nedrullningsbara menyn i det nedre högra hörnet.
-1. Bläddra med vänster-/högerpilarna tills du kan välja fliken **Stock Photography**
+1. I föregående avsnitt kan du lägga till den franska översättningen till **Djur** nedanför **taggar** > **Stock Photography**.
+1. Öppna sidegenskaperna för sidan **Produkter** i den engelska grenen på webbplatsen **Geometrixx**.
+1. Öppna dialogrutan **Taggar/nyckelord** (genom att välja den nedrullningsbara menyn till höger om visningsområdet Taggar/nyckelord) och välj **franska** i den nedrullningsbara menyn i det nedre högra hörnet.
+1. Rulla med vänster-/högerpilarna tills du kan välja fliken **Stock Photography**
 
    Markera taggen **Djur** (**Animaux**) och markera utanför dialogrutan för att stänga den och lägga till taggen i sidegenskaperna.
 
@@ -170,8 +182,8 @@ Som standard visas taggen `titles`i sidegenskaperna på sidspråket. Dialogrutan
 
 Som standard visas taggen `titles`enligt sidspråket i dialogrutan Sidegenskaper.
 
-I allmänhet hämtas taggens språk från sidspråket om sidspråket är tillgängligt. När [ `tag` widgeten](/help/sites-developing/building.md#tagging-on-the-client-side) används i andra fall (till exempel i formulär eller i dialogrutor) beror taggspråket på sammanhanget.
+I allmänhet hämtas taggens språk från sidspråket om sidspråket är tillgängligt. När [ `tag`-widgeten](/help/sites-developing/building.md#tagging-on-the-client-side) används i andra fall (till exempel i formulär eller i dialogrutor) beror taggspråket på sammanhanget.
 
 >[!NOTE]
 >
->I taggmolnet och meta-nyckelorden i standardsidkomponenten används den lokaliserade taggen `titles`baserat på sidspråket, om det är tillgängligt.
+>I taggmolnet och meta-nyckelorden i standardsidkomponenten används den lokaliserade taggen `titles`baserat på sidspråket, om tillgängligt.
