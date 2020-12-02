@@ -1,8 +1,8 @@
 ---
 title: Synkroniserar appen
 seo-title: Synkroniserar appen
-description: Synkronisera appen AEM Forms på din mobila enhet med AEM Forms-servern.
-seo-description: Synkronisera appen AEM Forms på din mobila enhet med AEM Forms-servern.
+description: Synkronisera AEM Forms-appen på din mobila enhet med AEM Forms-servern.
+seo-description: Synkronisera AEM Forms-appen på din mobila enhet med AEM Forms-servern.
 uuid: 3a6fb2d5-2ec4-4f78-a42a-fc921b66238e
 contentOwner: robhagat
 content-type: reference
@@ -12,6 +12,9 @@ discoiquuid: 393e4332-a2cc-42c8-a18f-3035addbcfaa
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+workflow-type: tm+mt
+source-wordcount: '386'
+ht-degree: 0%
 
 ---
 
@@ -20,15 +23,15 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ## Synkroniserar appen {#synchronizing-the-app-1}
 
-Formulären i din app hämtas från AEM Forms-servern. Formulären hämtas på flikarna Åtgärder och Formulär. Utkast som skapas från formulär hämtas på fliken Utkast och utkast som skapas från uppgifter hämtas på fliken Åtgärder. För ett fristående formulär på OSGi-servern hämtas formulär och utkast på flikarna Formulär och Utkast.
+Formulären i din app hämtas från AEM Forms-servern. Formulären hämtas på flikarna Åtgärder och Forms. Utkast som skapas från formulär hämtas på fliken Utkast och utkast som skapas från uppgifter hämtas på fliken Åtgärder. För ett fristående formulär på OSGi-server hämtas formulär och utkast på flikarna Forms respektive Draft.
 
-När du fyller i och skickar ett formulär överförs formuläret direkt tillbaka till AEM Forms-servern om appen är online. Formulären hämtas från servern när appen synkroniseras. Utkasten synkroniseras emellertid direkt med servern om appen är online.
+När du fyller i och skickar ett formulär överförs formuläret direkt till AEM Forms-servern om appen är online. Formulären hämtas från servern när appen synkroniseras. Utkasten synkroniseras emellertid direkt med servern om appen är online.
 
-När du är online med AEM Forms-servern synkroniseras din app som standard var 15:e minut. Du kan dock ändra synkroniseringsfrekvensen. Du kan också när som helst synkronisera appen manuellt.
+När du är online med AEM Forms-servern synkroniseras ditt program som standard var 15:e minut. Du kan dock ändra synkroniseringsfrekvensen. Du kan också när som helst synkronisera appen manuellt.
 
 **Synkronisera appen manuellt**
 
-Tryck på knappen Synkronisera ![synkroniseringsprogram](assets/sync-app.png) längst ned till höger på startskärmen.
+Tryck på knappen Synkronisera ![sync-app](assets/sync-app.png) längst ned till höger på startskärmen.
 
 **Ändra synkroniseringsfrekvensen**
 
@@ -42,7 +45,7 @@ Tryck på knappen Synkronisera ![synkroniseringsprogram](assets/sync-app.png) l�
 
 ### Tekniska specifikationer {#technical-specifications}
 
-* Den viktigaste logiken för att skicka in data från offlineappar till AEM Forms-servern finns i runtime/offline/util/offline.js.
-* I .js-filen skickar anropet till funktionen processOfflineSubmittedSavedTasks(...) de sparade/skickade uppgifterna till servern. Den hanterar även fel och konflikter i synkroniseringsprocessen. Om överföringen av en uppgift misslyckas markeras aktiviteten i programmet som misslyckad. Dessutom finns uppgiften kvar i Utkorgen.
+* Den viktigaste logiken för att skicka offlineappdata till AEM Forms-servern finns i runtime/offline/util/offline.js.
+* I .js-filen skickar anropet till funktionen processOfflineSubmitSavedTasks(...) de sparade/skickade uppgifterna till servern. Den hanterar även fel och konflikter i synkroniseringsprocessen. Om överföringen av en uppgift misslyckas markeras aktiviteten i programmet som misslyckad. Dessutom finns uppgiften kvar i Utkorgen.
 * Funktionerna syncSubowedTask() och syncSavedTask() utför åtgärder på enskilda uppgifter.
 * Anropet till funktionen processOfflineSubmitSavedTasks() initieras av uppgiftslistkomponenten efter att en användare har valt att synkronisera offlineläget med servern eller en automatisk synkronisering av bakgrundstråden.
