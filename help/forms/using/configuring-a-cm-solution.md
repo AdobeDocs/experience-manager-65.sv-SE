@@ -18,13 +18,13 @@ ht-degree: 0%
 
 # Konfigurera en Correspondence Management-lösning {#configuring-a-correspondence-management-solution}
 
-## Definiera författarinstansens URL för VersionRestoreManagerImpl {#defining-author-instance-url-for-versionrestoremanagerimpl}
+## Definierar författarinstansens URL för VersionRestoreManagerImpl {#defining-author-instance-url-for-versionrestoremanagerimpl}
 
 Följ de här stegen för att definiera en URL för författarinstansen för återställning av författarinstansversion:
 
 1. Gå till *https://:&lt;PublishHost>:&lt;PublishPort>/lc/system/console/configMgr*. Logga in med autentiseringsuppgifter för OSGi Management Console. Standardautentiseringsuppgifterna är admin/admin.
-1. Sök och klicka på **[!UICONTROL Edit]** ikonen bredvid **[!UICONTROL com.adobe.livecycle.content.activate.impl.VersionRestoreManagerImpl.name]** inställningen.
-1. I **[!UICONTROL VersionRestoreManager Author URL]** fältet anger du URL:en till författarinstansen av VersionRestoreManager.
+1. Sök och klicka på ikonen **[!UICONTROL Edit]** bredvid inställningen **[!UICONTROL com.adobe.livecycle.content.activate.impl.VersionRestoreManagerImpl.name]**.
+1. I fältet **[!UICONTROL VersionRestoreManager Author URL]** anger du URL:en för författarinstansen av VersionRestoreManager.
 
    **URL-sträng**:
 
@@ -32,17 +32,17 @@ Följ de här stegen för att definiera en URL för författarinstansen för åt
 
    >[!NOTE]
    >
-   >Om det finns flera författarinstanser (grupperade) som föregås av en belastningsutjämnare anger du URL:en till belastningsutjämnaren i **[!UICONTROL VersionRestoreManager Author URL]** fältet.
+   >Om det finns flera författarinstanser (grupperade) som föregås av en belastningsutjämnare anger du URL:en till belastningsutjämnaren i fältet **[!UICONTROL VersionRestoreManager Author URL]**.
 
 1. Klicka på **[!UICONTROL Save]**.
 
-## Definiera publiceringsinstansens URL för ActivationManagerImpl (hanteraren för aktivering av offentlig instans) {#defining-the-publish-instance-url-for-activationmanagerimpl-public-instance-activation-manager}
+## Definiera publiceringsinstansens URL för ActivationManagerImpl (hanterare för aktivering av offentlig instans) {#defining-the-publish-instance-url-for-activationmanagerimpl-public-instance-activation-manager}
 
 Följ de här stegen för att definiera publiceringsinstansens URL för aktiveringshanteraren för den offentliga instansen:
 
 1. Gå till *https://:&lt;authorHost>:&lt;authorPort>/lc/system/console/configMgr*. Logga in med autentiseringsuppgifter för OSGi Management Console. Standardautentiseringsuppgifterna är admin/admin.
-1. Sök och klicka på **[!UICONTROL Edit]** ikonen bredvid **[!UICONTROL com.adobe.livecycle.content.activate.impl.ActivationManagerImpl.name]** inställningen.
-1. I **[!UICONTROL ActivationManager Publish URL]** fältet anger du URL:en för åtkomst till Publish-instansen ActivationManager. Du kan ange följande URL:er.
+1. Sök och klicka på ikonen **[!UICONTROL Edit]** bredvid inställningen **[!UICONTROL com.adobe.livecycle.content.activate.impl.ActivationManagerImpl.name]**.
+1. I fältet **[!UICONTROL ActivationManager Publish URL]** anger du URL:en för åtkomst till Publish-instansen ActivationManager. Du kan ange följande URL:er.
 
    * **URL för belastningsutjämnare (rekommenderas)**: Ange URL för belastningsutjämnare om du har en webbserver som fungerar som belastningsutjämnare framför publiceringsservergruppen (flera icke-klustrade publiceringsinstanser).
    * **Publiceringsinstans-URL**: Ange en URL för publiceringsinstans. Om du har en enda publiceringsinstans eller webbservern där publiceringsgruppen finns är den inte tillgänglig från författarmiljön på grund av begränsningar. Om den angivna publiceringsinstansen är nere finns det en reservmekanism att hantera på författarsidan.
@@ -52,4 +52,4 @@ Följ de här stegen för att definiera publiceringsinstansens URL för aktiveri
 
 1. Klicka på **[!UICONTROL Save]**.
 
-Mer information om hur du konfigurerar Correspondence Management finns i Konfigurationsegenskaper för [Correspondence Management](https://helpx.adobe.com/aem-forms/6-2/cm-configuration-properties.html).
+Mer information om hur du konfigurerar Correspondence Management finns i [Egenskaper för Correspondence Management Configuration](https://helpx.adobe.com/aem-forms/6-2/cm-configuration-properties.html).
