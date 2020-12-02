@@ -13,39 +13,42 @@ pagetitle: Query Builder API
 tagskeywords: querybuilder
 translation-type: tm+mt
 source-git-commit: a491d4e9bd9ffc68c4ba7cac3149f48cf7576ee8
+workflow-type: tm+mt
+source-wordcount: '2350'
+ht-degree: 0%
 
 ---
 
 
 # Query Builder API{#query-builder-api}
 
-Funktionerna i [Asset Share Query Builder](/help/assets/assets-finder-editor.md) visas via Java API och REST API. I det här avsnittet beskrivs dessa API:er.
+Funktionerna i [Resursdelningsfrågeverktyget](/help/assets/assets-finder-editor.md) visas via ett Java-API och ett REST-API. I det här avsnittet beskrivs dessa API:er.
 
-Frågebyggaren ( [`QueryBuilder`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html)) på serversidan accepterar en frågebeskrivning, skapar och kör en XPath-fråga, kan även filtrera resultatuppsättningen och extrahera facets, om så önskas.
+Frågebyggaren på serversidan ( [`QueryBuilder`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html)) accepterar en frågebeskrivning, skapar och kör en XPath-fråga, kan filtrera resultatuppsättningen och extrahera facets om så önskas.
 
-Frågebeskrivningen är bara en uppsättning prediktiv ([`Predicate`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/Predicate.html)). Exempel är ett fulltextpredikat, som motsvarar funktionen i XPath `jcr:contains()` .
+Frågebeskrivningen är bara en uppsättning predikat ([`Predicate`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/Predicate.html)). Exemplen innehåller ett fulltextpredikat, som motsvarar funktionen `jcr:contains()` i XPath.
 
-För varje predikattyp finns det en utvärderingskomponent ([`PredicateEvaluator`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/PredicateEvaluator.html)) som kan hantera det specifika predikatet för XPath, filtrering och facetextrahering. Det är mycket enkelt att skapa anpassade utvärderare, som kopplas in via OSGi-komponentkörningen.
+För varje predikattyp finns det en utvärderingskomponent ([`PredicateEvaluator`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/PredicateEvaluator.html)) som kan hantera det specifika predikatet för XPath, filtrering och ansiktsextrahering. Det är mycket enkelt att skapa anpassade utvärderare, som kopplas in via OSGi-komponentkörningen.
 
 REST API ger åtkomst till exakt samma funktioner via HTTP med svar som skickas i JSON.
 
 >[!NOTE]
 >
->QueryBuilder-API:t byggs med JCR-API:t. Du kan också fråga JCR-läsaren för Adobe Experience Manager genom att använda JCR-API:t i ett OSGi-paket. Mer information finns i [Fråga Adobe Experience Manager-data med JCR-API:t](https://helpx.adobe.com/experience-manager/using/querying-experience-manager-data-using1.html).
+>QueryBuilder-API:t byggs med JCR-API:t. Du kan även fråga Adobe Experience Manager JCR genom att använda JCR-API:t i ett OSGi-paket. Mer information finns i [Fråga Adobe Experience Manager-data med JCR API](https://helpx.adobe.com/experience-manager/using/querying-experience-manager-data-using1.html).
 
 ## Gem-session {#gem-session}
 
-[AEM Gems](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-index.html) är en serie tekniska djupdykningar i Adobe Experience Manager som levereras av Adobes experter. Den här sessionen som är avsedd för frågebyggaren är mycket användbar för en översikt över och användning av verktyget.
+[AEM ](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-index.html) Gemsis har en serie tekniska djupdykningar i Adobe Experience Manager som levereras av Adobe experter. Den här sessionen som är avsedd för frågebyggaren är mycket användbar för en översikt över och användning av verktyget.
 
 >[!NOTE]
 >
->Se AEM Gem-sessionen [Söka enkelt i formulär med AEM querybuilder](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-search-forms-using-querybuilder.html) för en detaljerad översikt av frågebyggaren.
+>I AEM Gem-session [Söka efter formulär som är enkla med AEM querybuilder](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-search-forms-using-querybuilder.html) finns en detaljerad översikt över frågebyggaren.
 
 ## Exempelfrågor {#sample-queries}
 
-Dessa exempel anges i Java-egenskapsformatsnotation. Om du vill använda dem med Java API använder du ett Java-exempel `HashMap` som i det följande API-exemplet.
+Dessa exempel anges i Java-egenskapsformatsnotation. Om du vill använda dem med Java API använder du Java `HashMap` som i följande API-exempel.
 
-För `QueryBuilder` JSON-servern innehåller varje exempel en länk till den lokala CQ-installationen (på standardplatsen `http://localhost:4502`). Observera att du måste logga in på CQ-instansen innan du använder länkarna.
+För JSON-servern `QueryBuilder` innehåller varje exempel en länk till den lokala CQ-installationen (på standardplatsen `http://localhost:4502`). Observera att du måste logga in på CQ-instansen innan du använder länkarna.
 
 >[!CAUTION]
 >
@@ -59,9 +62,9 @@ För `QueryBuilder` JSON-servern innehåller varje exempel en länk till den lok
 >
 >Om du vill visa returnerade JSON-data i webbläsaren kan du använda ett plugin-program som JSONView för Firefox.
 
-### Returnera alla resultat {#returning-all-results}
+### Returnerar alla resultat {#returning-all-results}
 
-Följande fråga kommer att **returnera tio resultat** (eller max tio), men informera dig om **Antal träffar:** som faktiskt finns tillgängliga:
+Följande fråga kommer att **returnera tio resultat** (eller som mest exakt 10), men informera dig om **Antal träffar:** som är tillgängliga:
 
 `http://localhost:4502/bin/querybuilder.json?path=/content&1_property=sling:resourceType&1_property.value=foundation/components/text&1_property.operation=like&orderby=path`
 
@@ -73,7 +76,7 @@ path=/content
 orderby=path
 ```
 
-Samma fråga (med parametern `p.limit=-1`) **returnerar alla resultat** (detta kan vara ett högt tal beroende på instansen):
+Samma fråga (med parametern `p.limit=-1`) kommer att **returnera alla resultat** (detta kan vara ett högt tal beroende på din instans):
 
 `http://localhost:4502/bin/querybuilder.json?path=/content&1_property=sling:resourceType&1_property.value=foundation/components/text&1_property.operation=like&p.limit=-1&orderby=path`
 
@@ -86,13 +89,13 @@ p.limit=-1
 orderby=path
 ```
 
-### Använda p.gissningssumma för att returnera resultaten {#using-p-guesstotal-to-return-the-results}
+### Returnerar resultaten {#using-p-guesstotal-to-return-the-results} med p.gissningTotal
 
-Syftet med `p.guessTotal` parametern är att returnera rätt antal resultat som kan visas genom att kombinera de lägsta p.offset- och p.limit-värdena. Fördelen med den här parametern är bättre prestanda med stora resultatuppsättningar. På så sätt undviker du att beräkna hela summan (t.ex. genom att anropa result.getSize()) och läsa hela resultatuppsättningen, optimerad hela vägen ned till OAK-motorn och indexvärdet. Detta kan vara en stor skillnad när det finns 100 000 resultat, både när det gäller körningstid och minnesanvändning.
+Syftet med parametern `p.guessTotal` är att returnera rätt antal resultat som kan visas genom att kombinera de minsta viabla p.offset- och p.limit-värdena. Fördelen med den här parametern är bättre prestanda med stora resultatuppsättningar. På så sätt undviker du att beräkna hela summan (t.ex. genom att anropa result.getSize()) och läsa hela resultatuppsättningen, optimerad hela vägen ned till OAK-motorn och indexvärdet. Detta kan vara en stor skillnad när det finns 100 000 resultat, både när det gäller körningstid och minnesanvändning.
 
 Nackdelen med parametern är att användarna inte ser exakt summa. Men du kan ange ett minimivärde som p.gissningstotal=1000 så att det alltid läses upp till 1000, så du får exakta summor för mindre resultatuppsättningar, men om det är mer än så kan du bara visa&quot;och mer&quot;.
 
-Lägg `p.guessTotal=true` till frågan nedan för att se hur den fungerar:
+Lägg till `p.guessTotal=true` i frågan nedan för att se hur den fungerar:
 
 `http://localhost:4502/bin/querybuilder.json?path=/content&1_property=sling:resourceType&1_property.value=foundation/components/text&1_property.operation=like&p.guessTotal=true&orderby=path`
 
@@ -105,7 +108,7 @@ p.guessTotal=true
 orderby=path
 ```
 
-Frågan returnerar `p.limit` standardvärdet för `10` resultat med en `0` förskjutning:
+Frågan returnerar `p.limit`-standardvärdet för `10`-resultat med en `0`-förskjutning:
 
 ```xml
 "success": true,
@@ -131,17 +134,17 @@ Den returnerar ett tal som är lika med standardgränsen på 10 resultat med fö
 
 ### Implementera sidnumrering {#implementing-pagination}
 
-Som standard ger Query Builder även antalet träffar. Beroende på den resulterande storleken kan det ta lång tid att fastställa det korrekta antalet, bland annat genom att kontrollera alla resultat för åtkomstkontroll. Summan används oftast för att implementera sidnumrering för slutanvändargränssnittet. Eftersom det kan ta lång tid att fastställa det exakta antalet rekommenderar vi att du använder funktionen gissaTotal för att implementera sidnumreringen.
+Som standard ger Query Builder även antalet träffar. Beroende på den resulterande storleken kan det ta lång tid att fastställa det korrekta antalet, bland annat genom att kontrollera alla resultat för åtkomstkontroll. För det mesta används summan för att implementera sidnumrering för slutanvändargränssnittet. Eftersom det kan ta lång tid att fastställa det exakta antalet rekommenderar vi att du använder funktionen gissaTotal för att implementera sidnumreringen.
 
 Gränssnittet kan till exempel anpassa följande metod:
 
-* Hämta och visa det exakta antalet för det totala antalet träffar ([SearchResult.getTotalMatches()](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/result/SearchResult.html#gettotalmatches) eller totalt i querybuilder.json-svaret) är mindre än eller lika med 100.
+* Hämta och visa det exakta antalet för det totala antalet träffar ([SearchResult.getTotalMatches()](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/result/SearchResult.html#gettotalmatches) eller det totala antalet i querybuilder.json-svaret) är mindre än eller lika med 100.
 * Ange `guessTotal` till 100 när du anropar Query Builder.
 
 * Svaret kan ha följande resultat:
 
-   * `total=43`, `more=false` - Anger att det totala antalet träffar är 43. Gränssnittet kan visa upp till tio resultat som en del av den första sidan och ge sidnumrering för de kommande tre sidorna. Du kan också använda den här implementeringen för att visa en beskrivande text som **&quot;43 resultat hittades&quot;**.
-   * `total=100`, `more=true` - Anger att det totala antalet träffar är större än 100 och att det exakta antalet inte är känt. Gränssnittet kan visas upp till tio som en del av den första sidan och sidnumreringen kan göras för de kommande tio sidorna. Du kan också använda den här för att visa text som **&quot;fler än 100 resultat hittades&quot;**. När användaren går till nästa sida ökar anrop till Query Builder begränsningen för `guessTotal` och även för parametrarna `offset` och `limit` .
+   * `total=43`,  `more=false` - Anger att det totala antalet träffar är 43. Gränssnittet kan visa upp till tio resultat som en del av den första sidan och ge sidnumrering för de kommande tre sidorna. Du kan också använda den här implementeringen för att visa en beskrivande text som **&quot;43-resultat hittades&quot;**.
+   * `total=100`,  `more=true` - Anger att det totala antalet träffar är större än 100 och att det exakta antalet inte är känt. Gränssnittet kan visas upp till tio som en del av den första sidan och sidnumreringen kan göras för de kommande tio sidorna. Du kan också använda detta för att visa text som **&quot;över 100 resultat hittades&quot;**. När användaren går till nästa sida ökar anrop till Query Builder gränsen på `guessTotal` och även för parametrarna `offset` och `limit`.
 
 `guessTotal` bör också användas i de fall där användargränssnittet behöver använda oändlig rullning för att undvika att frågeverktyget avgör det exakta träffantalet.
 
@@ -156,7 +159,7 @@ orderby=@jcr:content/jcr:lastModified
 orderby.sort=desc
 ```
 
-### Söka efter alla sidor och sortera dem efter senaste ändring {#find-all-pages-and-order-them-by-last-modified}
+### Hitta alla sidor och sortera dem genom att senast ändra {#find-all-pages-and-order-them-by-last-modified}
 
 `http://localhost:4502/bin/querybuilder.json?type=cq:Page&orderby=@jcr:content/cq:lastModified`
 
@@ -165,7 +168,7 @@ type=cq:Page
 orderby=@jcr:content/cq:lastModified
 ```
 
-### Söka efter alla sidor och sortera dem efter senast ändrade, men fallande {#find-all-pages-and-order-them-by-last-modified-but-descending}
+### Söka efter alla sidor och sortera dem efter den senaste ändringen, men i fallande ordning {#find-all-pages-and-order-them-by-last-modified-but-descending}
 
 `http://localhost:4502/bin/querybuilder.json?type=cq:Page&orderby=@jcr:content/cq:lastModified&orderby.sort=desc]`
 
@@ -175,7 +178,7 @@ orderby=@jcr:content/cq:lastModified
 orderby.sort=desc
 ```
 
-### Fulltextsökning, sorterad efter poäng {#fulltext-search-ordered-by-score}
+### Fulltextsökning, sorterad efter {#fulltext-search-ordered-by-score}
 
 `http://localhost:4502/bin/querybuilder.json?fulltext=Management&orderby=@jcr:score&orderby.sort=desc`
 
@@ -195,11 +198,11 @@ tagid=marketing:interest/product
 tagid.property=jcr:content/cq:tags
 ```
 
-Använd predikatet som i exemplet om du känner till det explicita tagg-ID:t. `tagid`
+Använd predikatet `tagid` som i exemplet om du känner till det explicita tagg-ID:t.
 
-Använd predikatet för `tag` taggens titelbana (utan blanksteg).
+Använd predikatet `tag` för taggens titelsökväg (utan blanksteg).
 
-Eftersom du i föregående exempel söker efter sidor ( `cq:Page` noder) måste du använda den relativa sökvägen från den noden för `tagid.property` predikatet, det vill säga `jcr:content/cq:tags`. Som standard `tagid.property` är det bara `cq:tags`.
+Eftersom du i föregående exempel söker efter sidor ( `cq:Page` noder) måste du använda den relativa sökvägen från den noden för predikatet `tagid.property`, som är `jcr:content/cq:tags`. Som standard är `tagid.property` bara `cq:tags`.
 
 ### Sök under flera sökvägar (med grupper) {#search-under-multiple-paths-using-groups}
 
@@ -212,15 +215,15 @@ group.1_path=/content/geometrixx/en/company/management
 group.2_path=/content/geometrixx/en/company/bod
 ```
 
-Den här frågan använder en *grupp* (med namnet &quot; `group`&quot;) som avgränsa deluttryck i en fråga, ungefär som parenteser gör i fler standardtecken. Den föregående frågan kan till exempel uttryckas i ett mer välbekant format som:
+Den här frågan använder en *grupp* (med namnet &quot; `group`&quot;) som avgränsa deluttryck i en fråga, ungefär som parenteser gör i fler standardanteckningar. Den föregående frågan kan till exempel uttryckas i ett mer välbekant format som:
 
 `"Management" and ("/content/geometrixx/en/company/management" or "/content/geometrixx/en/company/bod")`
 
-I gruppen i exemplet används predikatet flera gånger `path` . Om du vill differentiera och ordna de två instanserna av predikatet (ordning krävs för vissa prediat) måste du prefix prefixet med *N* `_ where`*N *är ordningsindex. I föregående exempel är resultatpredikaten`1_path`och`2_path`.
+I gruppen i exemplet används `path`-predikatet flera gånger. Om du vill differentiera och ordna de två instanserna av predikatet (ordning krävs för vissa predikat) måste du prefix med *N* `_ where`*N* är ordningsindex. I föregående exempel är resultatpredikaten `1_path` och `2_path`.
 
-I `p` är `p.or` det en särskild avgränsare som anger att vad som följer (i det här fallet `or`) är en *parameter* i gruppen, i motsats till ett underpredikat för gruppen, som `1_path`.
+`p` i `p.or` är en specialavgränsare som anger att vad som följer (i det här fallet en `or`) är en *parameter* för gruppen, i motsats till ett underpredikat för gruppen, till exempel `1_path`.
 
-Om inget `p.or` anges kombineras alla predikat med AND, vilket innebär att varje resultat måste uppfylla alla predikat.
+Om ingen `p.or` ges, kombineras alla predikat med AND, vilket innebär att varje resultat måste uppfylla alla predikat.
 
 >[!NOTE]
 >
@@ -228,7 +231,7 @@ Om inget `p.or` anges kombineras alla predikat med AND, vilket innebär att varj
 
 ### Sök efter egenskaper {#search-for-properties}
 
-Här söker du efter alla sidor i en viss mall med hjälp av `cq:template` egenskapen:
+Här söker du efter alla sidor i en viss mall med egenskapen `cq:template`:
 
 `http://localhost:4502/bin/querybuilder.json?property=cq%3atemplate&property.value=%2fapps%2fgeometrixx%2ftemplates%2fhomepage&type=cq%3aPageContent`
 
@@ -238,7 +241,7 @@ property=cq:template
 property.value=/apps/geometrixx/templates/homepage
 ```
 
-Det är en nackdel att `jcr:content` noderna på sidorna, inte själva sidorna, returneras. Du kan lösa detta genom att söka efter relativ sökväg:
+Detta har nackdelen att `jcr:content`-noderna på sidorna, inte själva sidorna, returneras. Du kan lösa detta genom att söka efter relativ sökväg:
 
 `http://localhost:4502/bin/querybuilder.json?property=jcr%3acontent%2fcq%3atemplate&property.value=%2fapps%2fgeometrixx%2ftemplates%2fhomepage&type=cq%3aPage`
 
@@ -264,7 +267,7 @@ type=cq:Page
 
 ### Sök efter flera egenskapsvärden {#search-for-multiple-property-values}
 
-Om du vill undvika stora grupper när du vill söka efter flera värden för en egenskap ( `"A" or "B" or "C"`) kan du ange flera värden för `property` predikatet:
+Om du vill undvika stora grupper när du vill söka efter flera värden för en egenskap ( `"A" or "B" or "C"`) kan du ange flera värden för `property`-predikatet:
 
 `http://localhost:4502/bin/querybuilder.json?property=jcr%3atitle&property.1_value=Products&property.2_value=Square&property.3_value=Events`
 
@@ -287,7 +290,7 @@ property.2_value=foo
 property.3_value=bar
 ```
 
-## Förfina vad som returneras {#refining-what-is-returned}
+## Förfina det som returneras {#refining-what-is-returned}
 
 Som standard returnerar JSON-servern för QueryBuilder en standarduppsättning med egenskaper för varje nod i sökresultatet (t.ex. sökväg, namn, titel). För att få kontroll över vilka egenskaper som returneras kan du göra något av följande:
 
@@ -323,7 +326,7 @@ avgränsat med blanksteg:
 
 `http://localhost:4502/bin/querybuilder.json?p.hits=selective&property=jcr%3atitle&property.value=Triangle`
 
-[ `http://localhost:4502/bin/querybuilder.json?`](http://localhost:4502/bin/querybuilder.json?p.hits=selective&p.properties=sling%3aresourceType%20jcr%3aprimaryType&property=jcr%3atitle&property.value=Triangle)[p.hits=selective&amp;](http://localhost:4502/bin/querybuilder.json?p.hits=selective&p.nodedepth=5&p.properties=sling%3aresourceType%20jcr%3apath&property=jcr%3atitle&property.value=Triangle)p.properties=sling%3aresourceType%20jcr%3aprimaryType&amp;property=jcr%3atitle&amp;property.value=Triangle
+[ `http://localhost:4502/bin/querybuilder.json?`](http://localhost:4502/bin/querybuilder.json?p.hits=selective&amp;p.properties=sling%3aresourceType%20jcr%3aprimaryType&amp;property=jcr%3atitle&amp;property.value=Triangle) [p.hits=selective&amp;](http://localhost:4502/bin/querybuilder.json?p.hits=selective&amp;p.nodedepth=5&amp;p.properties=sling%3aresourceType%20jcr%3apath&amp;property=jcr%3atitle&amp;property.value=Triangle)p.properties=sling%3aresourceType%20jcr%3aprimaryType&amp;property=jcr%3atitle&amp;property.value=Triangle
 
 ```xml
 property=jcr:title
@@ -338,7 +341,7 @@ En annan sak du kan göra är att ta med underordnade noder i QueryBuilder-svare
 p.nodedepth=n
 ```
 
-var `n` är antalet nivåer som du vill att frågan ska returnera. Observera att för att en underordnad nod ska kunna returneras måste den anges av egenskapsväljaren
+där `n` är antalet nivåer som du vill att frågan ska returnera. Observera att för att en underordnad nod ska kunna returneras måste den anges av egenskapsväljaren
 
 ```
 p.hits=full
@@ -357,15 +360,15 @@ p.nodedepth=5
 
 ## Fler prognoser {#morepredicates}
 
-Mer information finns på sidan [Predicate Reference i](/help/sites-developing/querybuilder-predicate-reference.md)Query Builder.
+Mer information finns på [sidan Predicate Reference i Query Builder](/help/sites-developing/querybuilder-predicate-reference.md).
 
-Du kan också kontrollera [Javadoc efter `PredicateEvaluator` klasserna](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/PredicateEvaluator.html). Javadoc för dessa klasser innehåller en lista med egenskaper som du kan använda.
+Du kan också kontrollera [Javadoc för `PredicateEvaluator`-klasserna](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/PredicateEvaluator.html). Javadoc för dessa klasser innehåller en lista med egenskaper som du kan använda.
 
-Prefixet för klassnamnet (till exempel &quot; `similar`&quot; in [`SimilarityPredicateEvaluator`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/SimilarityPredicateEvaluator.html)) är klassens *huvudegenskap* . Den här egenskapen är också namnet på predikatet som ska användas i frågan (i gemener).
+Prefixet för klassnamnet (till exempel &quot; `similar`&quot; i [`SimilarityPredicateEvaluator`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/SimilarityPredicateEvaluator.html)) är *egenskapen* för klassen. Den här egenskapen är också namnet på predikatet som ska användas i frågan (i gemener).
 
 För sådana huvudegenskaper kan du korta ned frågan och använda &quot; `similar=/content/en`&quot; i stället för den fullständigt kvalificerade varianten &quot; `similar.similar=/content/en`&quot;. Det fullständiga, kvalificerade formuläret måste användas för alla icke-huvudsakliga egenskaper i en klass.
 
-## Exempel på API-användning för frågebyggaren {#example-query-builder-api-usage}
+## Exempel på Query Builder API-användning {#example-query-builder-api-usage}
 
 ```java
    String fulltextSearchTerm = "Geometrixx";
@@ -423,7 +426,7 @@ För sådana huvudegenskaper kan du korta ned frågan och använda &quot; `simil
 
 >[!NOTE]
 >
->Mer information om hur du skapar ett OSGi-paket som använder QueryBuilder-API:t och använder det OSGi-paketet i ett Adobe Experience Manager-program finns i [Skapa Adobe CQ OSGi-paket som använder Query Builder-](https://helpx.adobe.com/experience-manager/using/using-query-builder-api.html)API:t.
+>Mer information om hur du skapar ett OSGi-paket som använder QueryBuilder API och använder det OSGi-paketet i ett Adobe Experience Manager-program finns i [Skapa Adobe CQ OSGi-paket som använder Query Builder AP](https://helpx.adobe.com/experience-manager/using/using-query-builder-api.html)I.
 
 Samma fråga som körs över HTTP med JSON-servern (Query Builder):
 
@@ -431,31 +434,31 @@ Samma fråga som körs över HTTP med JSON-servern (Query Builder):
 
 ## Lagra och läsa in frågor {#storing-and-loading-queries}
 
-Frågor kan lagras i databasen så att du kan använda dem senare. I `QueryBuilder` finns&quot; `storeQuery` -metoden med följande signatur:
+Frågor kan lagras i databasen så att du kan använda dem senare. `QueryBuilder` tillhandahåller metoden `storeQuery` med följande signatur:
 
 ```java
 void storeQuery(Query query, String path, boolean createFile, Session session) throws RepositoryException, IOException;
 ```
 
-När du använder [ metoden `QueryBuilder#storeQuery`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html#storequerycomdaycqsearchqueryjavalangstringbooleanjavaxjcrsession) lagras den angivna `Query` i databasen som en fil eller som en egenskap enligt `createFile` argumentvärdet. I följande exempel visas hur du sparar en fil `Query` i sökvägen `/mypath/getfiles` som en fil:
+När du använder metoden [ `QueryBuilder#storeQuery`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html#storequerycomdaycqsearchqueryjavalangstringbooleanjavaxjcrsession) sparas den angivna `Query` i databasen som en fil eller som en egenskap enligt argumentvärdet för `createFile`. I följande exempel visas hur du sparar en `Query` i sökvägen `/mypath/getfiles` som en fil:
 
 ```java
 builder.storeQuery(query, "/mypath/getfiles", true, session);
 ```
 
-Tidigare lagrade frågor kan läsas in från databasen med [`QueryBuilder#loadQuery`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html#loadqueryjavalangstringjavaxjcrsession) metoden:
+Tidigare lagrade frågor kan läsas in från databasen med metoden [`QueryBuilder#loadQuery`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html#loadqueryjavalangstringjavaxjcrsession):
 
 ```java
 Query loadQuery(String path, Session session) throws RepositoryException, IOException
 ```
 
-En fil som är sparad till sökvägen `Query` `/mypath/getfiles` kan till exempel läsas in med följande kodutdrag:
+Ett `Query`-värde som lagras till sökvägen `/mypath/getfiles` kan läsas in med följande kodutdrag:
 
 ```java
 Query loadedQuery = builder.loadQuery("/mypath/getfiles", session);
 ```
 
-## Testning och felsökning {#testing-and-debugging}
+## Testa och felsöka {#testing-and-debugging}
 
 Om du vill spela upp runt och felsöka frågor Builder-frågor kan du använda felsökningskonsolen för QueryBuilder på
 
@@ -467,11 +470,11 @@ eller också kan querybuilder json servlet på
 
 ( `path=/tmp` är bara ett exempel).
 
-### Allmänna felsökningsrekommendationer {#general-debugging-recommendations}
+### Allmän felsökning av Recommendations {#general-debugging-recommendations}
 
-### Få förklarlig XPath via loggning {#obtain-explain-able-xpath-via-logging}
+### Hämta förklaringsbar XPath via loggning {#obtain-explain-able-xpath-via-logging}
 
-Förklara **alla** frågor under utvecklingscykeln mot målindexuppsättningen.
+Förklara **alla**-frågor under utvecklingscykeln mot målindexuppsättningen.
 
 * Aktivera DEBUG-loggar för QueryBuilder för att få underliggande, förklarlig XPath-fråga
 
@@ -482,13 +485,13 @@ Förklara **alla** frågor under utvecklingscykeln mot målindexuppsättningen.
 
    * `com.day.cq.search.impl.builder.QueryImpl XPath query: /jcr:root/content//element(*, cq:Page)[(jcr:contains(jcr:content, "Geometrixx") or jcr:contains(jcr:content/@cq:tags, "Geometrixx"))]`
 
-* Klistra in XPath-frågan i [Förklara fråga](/help/sites-administering/operations-dashboard.md#explain-query) som XPath för att kringgå frågeplanen
+* Klistra in XPath-frågan i [Förklara fråga](/help/sites-administering/operations-dashboard.md#explain-query) som XPath för att undertrycka frågeplanen
 
-### Hämta förklaringsbar XPath via felsökningsfunktionen i Query Builder {#obtain-explain-able-xpath-via-the-query-builder-debugger}
+### Hämta förklaringsbar XPath via felsökningsprogrammet i Query Builder {#obtain-explain-able-xpath-via-the-query-builder-debugger}
 
-* Använd felsökningsprogrammet AEM Query Builder för att generera en förklarande XPath-fråga:
+* Använd AEM QueryBuilder-felsökningsprogrammet för att generera en förklarande XPath-fråga:
 
-Förklara **alla** frågor under utvecklingscykeln mot målindexuppsättningen.
+Förklara **alla**-frågor under utvecklingscykeln mot målindexuppsättningen.
 
 **Få förklarlig XPath via loggning**
 
@@ -501,11 +504,11 @@ Förklara **alla** frågor under utvecklingscykeln mot målindexuppsättningen.
 
    * `com.day.cq.search.impl.builder.QueryImpl XPath query: /jcr:root/content//element(*, cq:Page)[(jcr:contains(jcr:content, "Geometrixx") or jcr:contains(jcr:content/@cq:tags, "Geometrixx"))]`
 
-* Klistra in XPath-frågan i [Förklara fråga](/help/sites-administering/operations-dashboard.md#explain-query) som XPath för att hämta frågeplanen
+* Klistra in XPath-frågan i [Förklara fråga](/help/sites-administering/operations-dashboard.md#explain-query) som XPath för att erhålla frågeplanen
 
 **Hämta förklaringsbar XPath via felsökningsfunktionen i Query Builder**
 
-* Använd felsökningsprogrammet AEM Query Builder för att generera en förklarande XPath-fråga:
+* Använd AEM QueryBuilder-felsökningsprogrammet för att generera en förklarande XPath-fråga:
 
 ![chlimage_1-66](assets/chlimage_1-66a.png)
 
@@ -528,7 +531,7 @@ En demonstrationsvideo om hur du felsöker frågor med QueryBuilder finns nedan.
 
 >[!NOTE]
 >
->Konfigurationen av loggarna beskrivs i avsnittet [Skapa egna loggare och författare](/help/sites-deploying/configure-logging.md#creating-your-own-loggers-and-writers).
+>Loggarnas konfiguration beskrivs i avsnittet [Skapa egna loggare och författare](/help/sites-deploying/configure-logging.md#creating-your-own-loggers-and-writers).
 
 Loggutdata (INFO-nivå) för frågebyggarimplementeringen när frågan som beskrivs i Testa och felsöka körs:
 
@@ -571,6 +574,6 @@ com.day.cq.search.impl.builder.QueryImpl query execution took 272 ms
 | [com.day.cq.search.facets](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/facets/package-summary.html) | Fasetter |
 | [com.day.cq.search.facets.bufickor](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/facets/buckets/package-summary.html) | Bucklar (inneslutna i facets) |
 | [com.day.cq.search.eval](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/package-summary.html) | Förutse utvärderare |
-| [com.day.cq.search.facets.extractor](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/facets/extractors/package-summary.html) | Fasettextraherare (för utvärderare) |
+| [com.day.cq.search.facets.extractor](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/facets/extractors/package-summary.html) | Facet Extractor (för utvärderare) |
 | [com.day.cq.search.writer](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/writer/package-summary.html) | JSON Result Hit Writer för Querybuilder-servlet (/bin/querybuilder.json) |
 
