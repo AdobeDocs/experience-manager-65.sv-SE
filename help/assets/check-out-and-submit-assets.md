@@ -13,17 +13,17 @@ ht-degree: 3%
 
 # Checka in och checka ut filer i [!DNL Experience Manager] DAM {#check-in-and-check-out-files-in-assets}
 
-[!DNL Adobe Experience Manager Assets] Med kan du checka ut resurser för redigering och checka in dem igen när du har gjort ändringarna. När du har checkat ut en resurs kan bara du redigera, kommentera, publicera, flytta eller ta bort resursen. När du checkar ut en resurs låses den. Andra användare kan inte utföra någon av dessa åtgärder på resursen förrän du checkar in resursen igen [!DNL Assets]. De kan dock fortfarande ändra metadata för den låsta resursen.
+[!DNL Adobe Experience Manager Assets] Med kan du checka ut resurser för redigering och checka in dem igen när du har gjort ändringarna. När du har checkat ut en resurs kan bara du redigera, kommentera, publicera, flytta eller ta bort resursen. När du checkar ut en resurs låses den. Andra användare kan inte utföra någon av dessa åtgärder på resursen förrän du checkar in resursen igen på [!DNL Assets]. De kan dock fortfarande ändra metadata för den låsta resursen.
 
 Om du vill kunna checka ut/in resurser måste du ha skrivbehörighet för dem.
 
 Den här funktionen förhindrar att andra användare åsidosätter ändringar som gjorts av en författare där flera användare samarbetar i redigeringsarbetsflöden mellan team.
 
-## Checka ut resurser {#checking-out-assets}
+## Kolla in resurser {#checking-out-assets}
 
-1. I [!DNL Assets] användargränssnittet väljer du den resurs du vill checka ut. Du kan också välja flera resurser att checka ut.
+1. Välj den resurs du vill checka ut i [!DNL Assets]-användargränssnittet. Du kan också välja flera resurser att checka ut.
 1. Klicka på **[!UICONTROL Checkout]** i verktygsfältet.
-Alternativet växlar **[!UICONTROL Checkout]** till **[!UICONTROL Checkin]**.
+Alternativet **[!UICONTROL Checkout]** växlar till **[!UICONTROL Checkin]**.
 Logga in som en annan användare om du vill kontrollera om andra användare kan redigera den utcheckade resursen. En låssymbol visas på miniatyrbilden för den resurs som du har checkat ut.
 
    ![chlimage_1-471](assets/chlimage_1-471.png)
@@ -32,9 +32,9 @@ Logga in som en annan användare om du vill kontrollera om andra användare kan 
 
    ![chlimage_1-472](assets/chlimage_1-472.png)
 
-   Du kan klicka **[!UICONTROL View Properties]** för att redigera metadata för den låsta resursen.
+   Du kan klicka på **[!UICONTROL View Properties]** om du vill redigera metadata för den låsta resursen.
 
-1. Klicka **[!UICONTROL Edit]** för att öppna resursen i redigeringsläge.
+1. Klicka på **[!UICONTROL Edit]** för att öppna resursen i redigeringsläge.
 
    ![chlimage_1-473](assets/chlimage_1-473.png)
 
@@ -44,14 +44,14 @@ Logga in som en annan användare om du vill kontrollera om andra användare kan 
 
    Du kan också välja att anteckna eller publicera resursen.
 
-1. Välj den redigerade resursen i [!DNL Assets] gränssnittet och klicka på **[!UICONTROL Checkin]** i verktygsfältet. Den ändrade resursen checkas in i [!DNL Assets] och är tillgänglig för andra användare för redigering.
+1. Välj den redigerade resursen i gränssnittet [!DNL Assets] och klicka på **[!UICONTROL Checkin]** i verktygsfältet. Den ändrade resursen checkas in i [!DNL Assets] och är tillgänglig för andra användare för redigering.
 
 ## Tvingad incheckning {#forced-check-in}
 
 Administratörer kan checka in resurser som är utcheckade av andra användare.
 
-1. Logga in som [!DNL Assets] administratör.
-1. I [!DNL Assets] användargränssnittet väljer du en eller flera resurser som har checkats ut av andra användare.
+1. Logga in på [!DNL Assets] som administratör.
+1. I [!DNL Assets]-användargränssnittet väljer du en eller flera resurser som har checkats ut av andra användare.
 
    ![chlimage_1-476](assets/chlimage_1-476.png)
 
