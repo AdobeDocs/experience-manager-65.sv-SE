@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 6148f8e6-ab62-4eb8-8a2d-c431b8318000
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '293'
+ht-degree: 0%
 
 ---
 
@@ -42,7 +45,7 @@ Olika roller kan vara involverade i testningen och i olika faser av projektutvec
     <ul>
      <li><p>Ger kunden en upplevelse av det projekt som utvecklas.</p> </li>
      <li><p>Ger tidig feedback från kunden.</p> </li>
-     <li><p>Användarna uttrycker ofta sina krav i fråga om tidigare erfarenheter. om kunderna deltar i testningen så tidigt som möjligt ökar deras upplevelse av det nya projektet i form av <i>praktisk</i> upplevelse.</p> </li>
+     <li><p>Användarna uttrycker ofta sina krav i fråga om tidigare erfarenheter. om kunderna deltar i testningen så tidigt som möjligt ökar deras upplevelse av det nya projektet i form av <i>praktisk</i>-upplevelse.</p> </li>
     </ul> </td>
    <td><p>Återigen är tidiga engagemang bra, men alla releaser som kunderna använder bör vara stabila, med rimlig funktionalitet.</p> <p>Första intrycket är alltid viktigt.</p> </td>
   </tr>
