@@ -13,7 +13,7 @@ ht-degree: 12%
 
 # Skapa översättningsprojekt {#creating-translation-projects}
 
-Om du vill skapa en språkkopia utlöser du ett av följande språkkopieringsarbetsflöden som finns under referenslisten i [!DNL Experience Manager] användargränssnittet.
+Om du vill skapa en språkkopia utlöser du ett av följande språkkopieringsarbetsflöden som finns under referenslinjen i användargränssnittet för [!DNL Experience Manager].
 
 * **Skapa och översätt**: I det här arbetsflödet kopieras resurser som ska översättas till språkroten för det språk som du vill översätta till. Beroende på vilka alternativ du väljer skapas dessutom ett översättningsprojekt för resurserna i projektkonsolen. Beroende på inställningarna kan översättningsprojektet startas manuellt eller köras automatiskt så fort översättningsprojektet skapas.
 
@@ -25,7 +25,7 @@ Om du vill skapa en språkkopia utlöser du ett av följande språkkopieringsarb
 
 >[!NOTE]
 >
->Om du startar ett översättningsarbetsflöde för komplexa resurser, till exempel PDF-filer och [!DNL Adobe InDesign] -filer, skickas inte delresurserna eller återgivningarna (om sådana finns) för översättning.
+>Om du startar ett översättningsarbetsflöde för komplexa resurser, som PDF- och [!DNL Adobe InDesign]-filer, skickas inte deras delresurser eller återgivningar (om det finns några) för översättning.
 
 ## Skapa och översätta arbetsflöde {#create-and-translate-workflow}
 
@@ -37,16 +37,16 @@ Du använder arbetsflödet för att skapa och översätta för att generera spr�
 
 ### Skapa endast struktur {#create-structure-only}
 
-Use the **[!UICONTROL Create structure only]** option to create a target folder hierarchy within the target language root to match the hierarchy of the source folder within the source language root. I det här fallet kopieras källresurserna till målmappen. Inget översättningsprojekt genereras emellertid.
+Använd alternativet **[!UICONTROL Create structure only]** för att skapa en målmappshierarki inom målspråkets rot som matchar källmappens hierarki i källspråkets rot. I det här fallet kopieras källresurserna till målmappen. Inget översättningsprojekt genereras emellertid.
 
-1. I [!DNL Assets] gränssnittet väljer du den källmapp som du vill skapa en struktur för i målspråkets rot.
-1. Open the **[!UICONTROL References]** pane and click **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]**.
+1. I gränssnittet [!DNL Assets] väljer du den källmapp som du vill skapa en struktur för i målspråkets rot.
+1. Öppna rutan **[!UICONTROL References]** och klicka på **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]**.
 
    ![chlimage_1-57](assets/chlimage_1-57.png)
 
-1. Klicka **[!UICONTROL Create & Translate]** längst ned.
+1. Klicka på **[!UICONTROL Create & Translate]** längst ned.
 
-1. From the **[!UICONTROL Target Languages]** list, select the language for which you want to create a folder structure.
+1. Välj det språk du vill skapa en mappstruktur för i listan **[!UICONTROL Target Languages]**.
 
 1. Välj **[!UICONTROL Create structure only]** i listan **[!UICONTROL Project]**.
 
@@ -64,18 +64,18 @@ Use the **[!UICONTROL Create structure only]** option to create a target folder 
 
 Om du använder det här alternativet kopieras resurser som ska översättas till språkroten för det språk som du vill översätta till. Beroende på vilka alternativ du väljer skapas ett översättningsprojekt för resurserna i projektkonsolen. Beroende på inställningarna kan översättningsprojektet startas manuellt eller automatiskt så snart översättningsprojektet skapas.
 
-1. I [!DNL Assets] användargränssnittet väljer du den källmapp som du vill skapa en språkkopia för.
-1. Open the **[!UICONTROL References]** pane and click **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]**.
+1. I [!DNL Assets]-användargränssnittet väljer du den källmapp som du vill skapa en språkkopia för.
+1. Öppna rutan **[!UICONTROL References]** och klicka på **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]**.
 
    ![chlimage_1-63](assets/chlimage_1-63.png)
 
-1. Klicka **[!UICONTROL Create & Translate]** längst ned.
+1. Klicka på **[!UICONTROL Create & Translate]** längst ned.
 
 1. I listan **[!UICONTROL Target Languages]** väljer du det/de språk du vill skapa en mappstruktur för.
 
    ![chlimage_1-65](assets/chlimage_1-65.png)
 
-1. From the **[!UICONTROL Project]** list, select **[!UICONTROL Create a new translation project]**.
+1. Välj **[!UICONTROL Create a new translation project]** i listan **[!UICONTROL Project]**.
 
    ![chlimage_1-66](assets/chlimage_1-66.png)
 
@@ -103,13 +103,13 @@ Om du använder det här alternativet kopieras resurser som ska översättas til
 
    ![chlimage_1-72](assets/chlimage_1-72.png)
 
-1. Om du vill visa översättningsjobbets status klickar du på ellipsen längst ned i **[!UICONTROL Translation Job]** rutan.
+1. Om du vill visa översättningsjobbets status klickar du på ellipsen längst ned i rutan **[!UICONTROL Translation Job]**.
 
    ![chlimage_1-73](assets/chlimage_1-73.png)
 
    Mer information om jobbstatus finns i [Övervaka status för ett översättningsjobb](/help/sites-administering/tc-manage.md#monitoring-the-status-of-a-translation-job).
 
-1. Navigera till [!DNL Assets] användargränssnittet och öppna sidan Egenskaper för vart och ett av de översatta resurserna för att visa översatta metadata.
+1. Navigera till användargränssnittet för [!DNL Assets] och öppna sidan Egenskaper för vart och ett av de översatta resurserna för att visa översatta metadata.
 
    ![visa översatta metadata på sidan Egenskaper för resurs](assets/translated-metadata-asset-properties.png)
 
@@ -123,10 +123,10 @@ Om du använder det här alternativet kopieras resurser som ska översättas til
 
 Om du använder det här alternativet körs översättningsarbetsflödet för resurser som du lägger till i källmappen efter att ha kört ett tidigare arbetsflöde för översättning. Endast resurser som nyligen lagts till kopieras till målmappen som innehåller tidigare översatta resurser. Inget nytt översättningsprojekt skapas i det här fallet.
 
-1. Gå till källmappen som innehåller oöversatta resurser i [!DNL Assets] användargränssnittet.
+1. Navigera till källmappen som innehåller oöversatta resurser i gränssnittet [!DNL Assets].
 1. Markera en resurs som du vill översätta och öppna **[!UICONTROL Reference pane]**. I avsnittet **[!UICONTROL Language Copies]** visas antalet översättningskopior som är tillgängliga.
-1. Klicka **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]**. En lista över tillgängliga översättningskopior visas.
-1. Klicka **[!UICONTROL Create & Translate]** längst ned.
+1. Klicka på **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]**. En lista över tillgängliga översättningskopior visas.
+1. Klicka på **[!UICONTROL Create & Translate]** längst ned.
 
 1. I listan **[!UICONTROL Target Languages]** väljer du det/de språk du vill skapa en mappstruktur för.
 
@@ -136,9 +136,9 @@ Om du använder det här alternativet körs översättningsarbetsflödet för re
 
    >[!NOTE]
    >
-   >Om du väljer **[!UICONTROL Add to existing translation project]** alternativet läggs ditt översättningsprojekt till i ett befintligt projekt endast om dina projektinställningar exakt matchar inställningarna för det befintliga projektet. Annars skapas ett nytt projekt.
+   >Om du väljer alternativet **[!UICONTROL Add to existing translation project]** läggs ditt översättningsprojekt till i ett befintligt projekt endast om dina projektinställningar exakt matchar inställningarna för det befintliga projektet. Annars skapas ett nytt projekt.
 
-1. Välj ett projekt i **[!UICONTROL Existing translation project]** listan för att lägga till resursen för översättning.
+1. Välj ett projekt i listan **[!UICONTROL Existing translation project]** som du vill lägga till resursen för översättning.
 
 1. Klicka på **[!UICONTROL Create]**. Resurserna som ska översättas läggs till i målmappen. Den uppdaterade mappen listas i avsnittet **[!UICONTROL Language Copies]**.
 
@@ -163,19 +163,19 @@ Om du använder det här alternativet körs översättningsarbetsflödet för re
    >
    >Om den resurs som du lägger till i översättningsjobbet innehåller delresurser, markerar du delresurserna och tar bort dem för översättningen för att fortsätta utan några fel.
 
-1. Om du vill starta översättningen av resurserna klickar du på pilen på **[!UICONTROL Translation Job]** plattan och väljer **[!UICONTROL Start]** i listan.
+1. Om du vill starta översättningen för resurserna klickar du på pilen på plattan **[!UICONTROL Translation Job]** och väljer **[!UICONTROL Start]** i listan.
 
    ![chlimage_1-81](assets/chlimage_1-81.png)
 
    Ett meddelande meddelar när översättningsjobbet påbörjas.
 
-1. Om du vill visa översättningsjobbets status klickar du på ellipsen längst ned i **[!UICONTROL Translation Job]** rutan.
+1. Om du vill visa översättningsjobbets status klickar du på ellipsen längst ned i rutan **[!UICONTROL Translation Job]**.
 
    ![chlimage_1-83](assets/chlimage_1-83.png)
 
    Mer information finns i [Övervaka status för ett översättningsjobb](/help/sites-administering/tc-manage.md#monitoring-the-status-of-a-translation-job).
 
-1. När översättningen är klar ändras statusen till Klart för granskning. Navigera till [!DNL Assets] användargränssnittet och öppna sidan Egenskaper för vart och ett av de översatta resurserna för att visa översatta metadata.
+1. När översättningen är klar ändras statusen till Klart för granskning. Navigera till användargränssnittet för [!DNL Assets] och öppna sidan Egenskaper för vart och ett av de översatta resurserna för att visa översatta metadata.
 
 ## Uppdatera språkkopior {#update-language-copies}
 
@@ -188,13 +188,13 @@ Kör det här arbetsflödet för att översätta alla ytterligare resurser och i
 
 Om du använder det här alternativet skapas ett översättningsprojekt för den resursuppsättning som du vill uppdatera en språkkopia för.
 
-1. I [!DNL Assets] användargränssnittet väljer du den källmapp där du lade till en resurs.
-1. Open the **[!UICONTROL References]** pane, and click **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]** to display the list of language copies.
+1. I gränssnittet för [!DNL Assets] väljer du den källmapp där du lade till en resurs.
+1. Öppna rutan **[!UICONTROL References]** och klicka på **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]** för att visa listan över språkkopior.
 1. Markera kryssrutan före **[!UICONTROL Language Copies]** och välj sedan den målmapp som motsvarar rätt språkinställning.
 
    ![välj språkkopia](assets/lang-copy1.png)
 
-1. Klicka **[!UICONTROL Update language copies]** längst ned.
+1. Klicka på **[!UICONTROL Update language copies]** längst ned.
 
 1. Välj **[!UICONTROL Create a new translation project]** i listan **[!UICONTROL Project]**.
 
@@ -215,26 +215,26 @@ Om du använder det här alternativet skapas ett översättningsprojekt för den
 
    ![chlimage_1-90](assets/chlimage_1-90.png)
 
-1. Om du vill starta översättningen av resurserna klickar du på pilen på **[!UICONTROL Translation Job]** plattan och väljer **[!UICONTROL Start]** i listan.
+1. Om du vill starta översättningen för resurserna klickar du på pilen på plattan **[!UICONTROL Translation Job]** och väljer **[!UICONTROL Start]** i listan.
 
    ![chlimage_1-91](assets/chlimage_1-91.png)
 
    Ett meddelande meddelar när översättningsjobbet påbörjas.
 
-1. Om du vill visa översättningsjobbets status klickar du på ellipsen längst ned i **[!UICONTROL Translation Job]** rutan.
+1. Om du vill visa översättningsjobbets status klickar du på ellipsen längst ned i rutan **[!UICONTROL Translation Job]**.
 
    ![chlimage_1-93](assets/chlimage_1-93.png)
 
    Mer information om jobbstatus finns i [Övervaka status för ett översättningsjobb](../sites-administering/tc-manage.md#monitoring-the-status-of-a-translation-job).
 
-1. Navigera till [!DNL Assets] användargränssnittet och öppna sidan Egenskaper för vart och ett av de översatta resurserna för att visa översatta metadata.
+1. Navigera till användargränssnittet för [!DNL Assets] och öppna sidan Egenskaper för var och en av de översatta resurserna för att visa översatta metadata.
 
 ### Lägg till i befintligt översättningsprojekt {#add-to-existing-translation-project-1}
 
 Om du använder det här alternativet läggs resursuppsättningen till i ett befintligt översättningsprojekt för att uppdatera språkkopian för det språkområde du väljer.
 
-1. I [!DNL Assets] användargränssnittet väljer du den källmapp där du lade till en resursmapp.
-1. Open the **[!UICONTROL References pane]**, and click **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]** to display the list of language copies.
+1. I gränssnittet för [!DNL Assets] väljer du den källmapp där du lade till en resursmapp.
+1. Öppna **[!UICONTROL References pane]** och klicka på **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]** för att visa listan över språkkopior.
 
    ![chlimage_1-94](assets/chlimage_1-94.png)
 
@@ -242,13 +242,13 @@ Om du använder det här alternativet läggs resursuppsättningen till i ett bef
 
    ![välj språkkopia](assets/lang-copy1.png)
 
-1. Klicka **[!UICONTROL Update language copies]** längst ned.
+1. Klicka på **[!UICONTROL Update language copies]** längst ned.
 
 1. Välj **[!UICONTROL Add to existing translation project]** i listan **[!UICONTROL Project]**.
 
    ![chlimage_1-97](assets/chlimage_1-97.png)
 
-1. Välj ett projekt i **[!UICONTROL Existing translation project]** listan för att lägga till resursen för översättning.
+1. Välj ett projekt i listan **[!UICONTROL Existing translation project]** som du vill lägga till resursen för översättning.
 
 1. Klicka på **[!UICONTROL Start]**.
 1. Se steg 9-14 i [Lägg till i befintligt översättningsprojekt](translation-projects.md#add-to-existing-translation-project) för att slutföra resten av proceduren.
@@ -257,27 +257,27 @@ Om du använder det här alternativet läggs resursuppsättningen till i ett bef
 
 När du kör ett översättningsarbetsflöde för att uppdatera en språkkopia med redigerade versioner av originalresurser bevaras den befintliga språkkopian tills du godkänner översatta resurser. [!DNL Adobe Experience Manager Assets] lagrar de nyligen översatta resurserna på en tillfällig plats och uppdaterar den befintliga språkkopian när du uttryckligen har godkänt resurserna. Om du avvisar resurserna ändras inte språkkopian.
 
-1. Click the source root folder under **[!UICONTROL Language Copies]** for which you already created a language copy, and then click **[!UICONTROL Reveal in Assets]** to open the folder in [!DNL Experience Manager Assets].
+1. Klicka på källrotmappen under **[!UICONTROL Language Copies]** som du redan har skapat en språkkopia för och klicka sedan på **[!UICONTROL Reveal in Assets]** för att öppna mappen i [!DNL Experience Manager Assets].
 
    ![chlimage_1-99](assets/chlimage_1-99.png)
 
-1. I [!DNL Assets] gränssnittet väljer du en resurs som du redan har översatt och klickar på **[!UICONTROL Edit]** i verktygsfältet för att öppna resursen i redigeringsläge.
+1. I gränssnittet [!DNL Assets] väljer du en resurs som du redan har översatt och klickar på **[!UICONTROL Edit]** i verktygsfältet för att öppna resursen i redigeringsläge.
 1. Redigera resursen och spara sedan ändringarna.
-1. Uppdatera språkkopian genom att utföra steg 2-14 i proceduren [Lägg till i befintligt översättningsprojekt](#add-to-existing-translation-project) .
-1. Klicka på ellipsen längst ned i **[!UICONTROL Translation Job]** rutan. I listan med resurser på **[!UICONTROL Translation Job]** sidan kan du tydligt visa den tillfälliga plats där den översatta versionen av resursen lagras.
+1. Utför steg 2-14 i [Lägg till i befintligt översättningsprojekt](#add-to-existing-translation-project)-proceduren för att uppdatera språkkopian.
+1. Klicka på ellipsen längst ned i plattan **[!UICONTROL Translation Job]**. Från listan med resurser på sidan **[!UICONTROL Translation Job]** kan du tydligt visa den tillfälliga plats där den översatta versionen av resursen lagras.
 
    ![chlimage_1-101](assets/chlimage_1-101.png)
 
 1. Markera kryssrutan bredvid **[!UICONTROL Title]**.
-1. From the toolbar, click **[!UICONTROL Accept Translation]** ![accept translation](assets/do-not-localize/thumb-up.png) and then click **[!UICONTROL Accept]** in the dialog to overwrite the translated asset in the target folder with the translated version of the edited asset.
+1. Klicka på **[!UICONTROL Accept Translation]** ![acceptera översättning](assets/do-not-localize/thumb-up.png) i verktygsfältet och klicka sedan på **[!UICONTROL Accept]** i dialogrutan för att skriva över den översatta resursen i målmappen med den översatta versionen av den redigerade resursen.
 
    >[!NOTE]
    >
    >Om du vill att översättningsarbetsflödet ska kunna uppdatera målresurserna, godkänner du både resursen och metadata.
 
-   Klicka på **[!UICONTROL Reject Translation]** Avvisa ![översättning](assets/do-not-localize/thumb-down.png) för att behålla den ursprungligen översatta versionen av resursen i målspråkets rot och avvisa den redigerade versionen.
+   Klicka på **[!UICONTROL Reject Translation]** ![Avvisa översättning](assets/do-not-localize/thumb-down.png) om du vill behålla den ursprungligen översatta versionen av resursen i målspråkets rot och avvisa den redigerade versionen.
 
-1. Om du vill visa översatta metadata går du till [!DNL Assets] konsolen och öppnar [!UICONTROL Properties] sidan för varje översatt resurs.
+1. Om du vill visa översatta metadata går du till konsolen [!DNL Assets] och öppnar sidan [!UICONTROL Properties] för var och en av de översatta resurserna.
 
 >[!MORELIKETHIS]
 >
