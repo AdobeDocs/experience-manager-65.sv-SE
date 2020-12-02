@@ -18,13 +18,13 @@ ht-degree: 0%
 ---
 
 
-# Webbplatsmallar {#site-templates}
+# Platsmallar {#site-templates}
 
-Konsolen Platsmallar liknar konsolen [Gruppmallar](tools-groups.md) , som är inriktad på funktioner som är av intresse för communitygrupper.
+Konsolen Webbplatsmallar påminner mycket om konsolen [Gruppmallar](tools-groups.md), som är inriktad på funktioner som är av intresse för communitygrupper.
 
 >[!NOTE]
 >
->Konsolerna för att skapa [communitysajter](sites-console.md), [communitymallar](sites.md), mallar [för](tools-groups.md) communitygrupper [och](functions.md) communityfunktionerär endast avsedda att användas i författarmiljön.
+>Konsolerna för att skapa [communitywebbplatser](sites-console.md), [mallar för communitywebbplatser](sites.md), [mallar för communitygrupper](tools-groups.md) och [communityfunktioner](functions.md) får endast användas i författarmiljön.
 
 ## Konsol för webbplatsmallar {#site-templates-console}
 
@@ -32,11 +32,11 @@ I författarmiljön kan du nå webbcommunitywebbplatskonsolen:
 
 * Från global navigering: **[!UICONTROL Tools > Communities > Site Templates]**
 
-Den här konsolen visar mallarna som en [community](sites-console.md) kan skapas från och som gör att nya webbplatsmallar kan skapas.
+Den här konsolen visar de mallar från vilka en [community-plats](sites-console.md) kan skapas och tillåter att nya webbplatsmallar skapas.
 
 ![site-template](assets/site-template.png)
 
-## Skapa platsmall {#create-site-template}
+## Skapa webbplatsmall {#create-site-template}
 
 Om du vill börja skapa en ny platsmall väljer du `Create`.
 
@@ -72,7 +72,7 @@ På panelen Grundläggande information konfigureras ett namn, en beskrivning och
 
 Om du vill lägga till communityfunktioner drar du från höger sida till vänster i den ordning som länkarna på webbplatsmenyn ska visas. Format används på mallen när webbplatsen skapas.
 
-Om du till exempel vill ha en hemsida drar du funktionen Sida från biblioteket och släpper under mallbyggaren. Detta resulterar i att dialogrutan för sidkonfiguration öppnas. Mer information om konfigurationsdialogrutorna finns i [funktionskonsolen](functions.md) .
+Om du till exempel vill ha en hemsida drar du funktionen Sida från biblioteket och släpper under mallbyggaren. Detta resulterar i att dialogrutan för sidkonfiguration öppnas. Mer information om konfigurationsdialogrutorna finns i [funktionskonsolen](functions.md).
 
 Fortsätt att dra och släppa andra communityfunktioner som du vill ha för en community-webbplats som baseras på den här mallen.
 
@@ -80,19 +80,19 @@ Sidfunktionen ger en tom sida. Med gruppfunktionen kan du skapa en gruppwebbplat
 
 >[!CAUTION]
 >
->Gruppfunktionen får *inte* vara den *första eller enda* funktionen i platsstrukturen.
+>Gruppfunktionen får *inte* vara *först eller den enda*-funktionen i platsstrukturen.
 >
->Alla andra funktioner, till exempel [sidfunktionen](functions.md#page-function), måste inkluderas och listas först.
+>Alla andra funktioner, till exempel [sidfunktionen](functions.md#page-function), måste inkluderas och visas först.
 
 ![webbplatsredigerare](assets/site-editor.png)
 
-### Gruppmallar för gruppfunktion {#group-templates-for-groups-function}
+### Gruppmallar för gruppfunktionen {#group-templates-for-groups-function}
 
 När du inkluderar en gruppfunktion i platsmallen, kräver konfigurationen att du anger vilka gruppmallsalternativ som tillåts när en ny grupp skapas i publiceringsmiljön.
 
 >[!CAUTION]
 >
->Funktionen Grupper får *inte* vara den *första eller enda* funktionen i platsstrukturen.
+>Funktionen Groups får *inte* vara *först eller den enda funktionen* i platsstrukturen.
 
 ![platsfunktioner](assets/site-functions.png)
 
@@ -102,6 +102,6 @@ Genom att välja två eller flera mallar för communitygrupper får gruppadminis
 
 ## Redigera webbplatsmall {#edit-site-template}
 
-När du visar platsmallar i huvudkonsolen [för](#site-templates-console)platsmallar kan du välja en befintlig platsmall för redigering.
+När du visar platsmallar i huvudkonsolen [Platsmallar](#site-templates-console) går det att välja en befintlig platsmall för redigering.
 
-I den här processen finns samma paneler som när du [skapar en platsmall](#create-site-template).
+Den här processen ger samma paneler som [när du skapar en platsmall](#create-site-template).
