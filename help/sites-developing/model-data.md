@@ -11,19 +11,22 @@ content-type: reference
 discoiquuid: 39546c0a-b72f-42df-859b-98428ee0d5fb
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '1828'
+ht-degree: 0%
 
 ---
 
 
-# Datamodellering - David Nueschelers modell{#data-modeling-david-nuescheler-s-model}
+# Datamodellering - David Nuescheler&#39;s Model{#data-modeling-david-nuescheler-s-model}
 
-## Source {#source}
+## Källa {#source}
 
 Följande detaljer är idéer och kommentarer från David Nuescheler.
 
-David var en av grundarna och CTO på Day Software AG, en ledande leverantör av programvara för global innehållshantering och innehållsinfrastruktur, som Adobe förvärvade 2010. Han är nu medlem i och VP för Enterprise Technology hos Adobe och leder också utvecklingen av JSR-170, Java Content Repository (JCR), applikationsgränssnitt (API), teknikstandarden för innehållshantering.
+David var en av grundarna och CTO på Day Software AG, en ledande leverantör av programvara för global innehållshantering och innehållsinfrastruktur, som Adobe förvärvade 2010. Han är nu medlem i och VP för Enterprise Technology på Adobe och leder också utvecklingen av JSR-170, Java Content Repository (JCR), applikationsprogrammeringsgränssnittet (API), teknikstandarden för innehållshantering.
 
-Ytterligare uppdateringar finns också på [https://wiki.apache.org/jackrabbit/DavidsModel](https://wiki.apache.org/jackrabbit/DavidsModel).
+Ytterligare uppdateringar kan också ses på [https://wiki.apache.org/jackrabbit/DavidsModel](https://wiki.apache.org/jackrabbit/DavidsModel).
 
 ## Introduktion från David {#introduction-from-david}
 
@@ -57,7 +60,7 @@ Ytterligare databegränsningar som obligatoriska eller typ- och värdebegränsni
 
 #### Exempel {#example-1}
 
-Ovanstående exempel på hur du använder en `lastModified` Date-egenskap på till exempel en blogginläggsnod innebär inte att det behövs en särskild nodtyp. Jag använder definitivt `nt:unstructured` blogginläggsnoderna åtminstone från början. Eftersom jag i mitt bloggprogram bara kommer att visa datumet lastModified i alla fall (eventuellt &quot;order by&quot;) bryr jag mig knappt om det är ett datum alls. Eftersom jag ändå litar på att mitt blogginläggsprogram ska placera ett &quot;datum&quot; behöver jag inte deklarera ett `lastModified` datum i formatet en nodetype.
+Ovanstående exempel på hur du använder en `lastModified` Date-egenskap på till exempel en blogginläggsnod betyder inte att det behövs en särskild nodtyp. Jag använder definitivt `nt:unstructured` för mina blogginläggsnoder åtminstone från början. Eftersom jag i mitt bloggprogram bara kommer att visa datumet lastModified i alla fall (eventuellt &quot;order by&quot;) bryr jag mig knappt om det är ett datum alls. Eftersom jag i alla fall har förtroende för att mitt bloggskrivande-program ska placera ett datum där behöver jag inte deklarera ett `lastModified`-datum i formatet en nodtype.
 
 ### Regel 2: Låt inte innehållshierarkin hända. {#rule-drive-the-content-hierarchy-don-t-let-it-happen}
 
@@ -75,11 +78,11 @@ Personligen föredrar jag hierarkiska konventioner framför nodetypsystemet i m�
 >
 >Det sätt på vilket en innehållsdatabas är strukturerad kan även påverka prestanda. För bästa prestanda bör antalet underordnade noder som är kopplade till enskilda noder i en innehållsdatabas i allmänhet inte överstiga 1 000.
 >
->Se [hur mycket data CRX kan hantera?](https://helpx.adobe.com/experience-manager/kb/CrxLimitation.html) för mer information.
+>Se [Hur mycket data kan CRX hantera?](https://helpx.adobe.com/experience-manager/kb/CrxLimitation.html) för mer information.
 
 #### Exempel {#example-2}
 
-Jag skulle modellera ett enkelt bloggsystem enligt följande. Observera att jag från början inte ens bryr mig om vilka nodtyper jag använder just nu.
+Jag skulle vilja skapa ett enkelt bloggsystem enligt följande. Observera att jag från början inte ens bryr mig om vilka nodtyper jag använder just nu.
 
 ```xml
 /content/myblog
@@ -101,7 +104,7 @@ Med innehållsmodellen ovan kan jag enkelt låta den anonyma användaren&quot;sk
 
 #### Förklaring {#explanation-3}
 
-Om du inte använder `clone()`det är förmodligen en enda arbetsyta `merge()` eller `update()` metoder i programmet som är rätt väg.
+Om du inte använder metoderna `clone()`, `merge()` eller `update()` i ditt program är en enda arbetsyta antagligen vägen dit.
 
 &quot;Motsvarande noder&quot; är ett koncept som definieras i JCR-specifikationen. Det handlar i princip om noder som representerar samma innehåll, i olika så kallade arbetsytor.
 
@@ -174,13 +177,13 @@ Jag tror att det finns situationer där ett system verkligen inte fungerar om en
 
 #### Förklaring {#explanation-6}
 
-Om en innehållsmodell visar något som till och med *känner* av lukt på fjärrbasis, som en fil eller en mapp som jag försöker använda (eller utöka från) `nt:file`och `nt:folder` `nt:resource`.
+Om en innehållsmodell visar något som till och med fjärrkänner *luktar* som en fil eller en mapp som jag försöker använda (eller sträcker sig från) `nt:file`, `nt:folder` och `nt:resource`.
 
 Enligt min erfarenhet tillåter många generiska program interaktion med nt:folder och nt:files implicit och vet hur de ska hantera och visa dessa händelser om de har berikats med ytterligare metainformation. En direkt interaktion med filserverimplementeringar som CIFS eller WebDAV som sitter ovanpå JCR blir till exempel implicit.
 
-Jag tror att en bra tumregel kan behöva följande: Om du behöver lagra filnamnet och mime-typen så är `nt:file`/ `nt:resource` en bra matchning. Om du kan ha flera &quot;filer&quot; kan det vara bra att spara dem i mappen nt:folder.
+Jag tror att en bra tumregel kan behöva följande: Om du behöver lagra filnamnet och mime-typen är `nt:file`/ `nt:resource` en mycket bra matchning. Om du kan ha flera &quot;filer&quot; kan det vara bra att lagra mappen int:folder.
 
-Om du behöver lägga till metainformation för resursen kan vi säga &quot;författare&quot; eller &quot;beskrivning&quot;, men utöka `nt:resource` inte `nt:file`. Jag utökar sällan inte:fil och utökar ofta `nt:resource`.
+Om du behöver lägga till metainformation för resursen, kan vi säga &quot;författare&quot; eller &quot;beskrivning&quot;, utöka `nt:resource` inte `nt:file`. Jag utökar sällan nt:file och utökar ofta `nt:resource`.
 
 #### Exempel {#example-6}
 
@@ -200,7 +203,7 @@ och kanske den initiala uttarningsreaktionen är att lägga till en binär egens
 /content/myblog/posts/iphone_shipping/attachments/front.jpg/jcr:content [nt:resource]
 ```
 
-### Regel 7:ID:n är onda. {#rule-ids-are-evil}
+### Regel 7: ID:n är onda. {#rule-ids-are-evil}
 
 #### Förklaring {#explanation-7}
 
@@ -212,7 +215,7 @@ Det är sant att vissa noder behöver en stabil identifiering under hela sin liv
 
 Tänk också på att objekt kan identifieras med sökväg, och så mycket som &quot;symlinks&quot; är mer användbart för de flesta användare än maskinlänkar i ett enhetligt filsystem, är en sökväg ett bra sätt för de flesta program att referera till en målnod.
 
-Dessutom är det **mix**:referenable, vilket betyder att det kan användas på en nod vid den tidpunkt då du faktiskt behöver referera till den.
+Viktigare är att den är **mix**:referenable, vilket betyder att den kan tillämpas på en nod vid den tidpunkt då du faktiskt behöver referera till den.
 
 Låt oss säga bara för att du vill kunna referera till en nod av typen&quot;Dokument&quot; innebär det inte att din&quot;Dokument&quot;-nodtyp måste byggas ut från mix:referenable på ett statiskt sätt eftersom den kan läggas till dynamiskt i alla instanser av&quot;Dokument&quot;.
 
