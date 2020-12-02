@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 88b634bb-8f6c-4830-ad01-821668609615
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '467'
+ht-degree: 0%
 
 ---
 
@@ -27,21 +30,21 @@ En allmän sökning efter en process är lämpligast om du känner till process-
 
 Ange grundläggande villkor för att utföra en allmän sökning. Om du anger flera villkor utförs sökningen med ett underförstått AND-villkor.
 
-1. I administrationskonsolen klickar du på Tjänster > Formulärarbetsflöde > Processsökning.
+1. I administrationskonsolen klickar du på Tjänster > Forms-arbetsflöde > Processsökning.
 1. Ange följande villkor under Allmän sökning på sidan Processsökning:
 
-   * **** Process-ID: Det positiva heltal som identifierar varje unik processinstans.
-   * **** Processstatus: Välj en status i listan.
-   * **** Program: Välj ett program i listan. Endast distribuerade program visas.
-   * **** Processnamn - version: Välj ett processnamn på menyn. Endast distribuerade processer visas.
+   * **Process-ID:** Det positiva heltal som identifierar varje unik processinstans.
+   * **Processstatus:** Välj en status i listan.
+   * **Program:** Välj ett program i listan. Endast distribuerade program visas.
+   * **Processnamn - Version:** Välj ett processnamn på menyn. Endast distribuerade processer visas.
 
 1. Klicka på Sök. Sidan Processinstans visas med en lista över de hittade instanserna.
 
 ## Utför en detaljerad sökning efter en process {#perform-a-detailed-search-for-a-process}
 
-Du kan ange specifika attribut för att göra en detaljerad sökning. En detaljerad sökning är lämpligast om du har många processinstanser igång och du måste begränsa antalet möjliga sökningar efter vissa villkor.
+Du kan ange specifika attribut för att göra en detaljerad sökning. En detaljerad sökning passar bäst om du har många processinstanser igång och du måste begränsa antalet möjliga sökningar efter vissa villkor.
 
-1. I administrationskonsolen klickar du på Tjänster > Formulärarbetsflöde > Processsökning.
+1. I administrationskonsolen klickar du på Tjänster > Forms-arbetsflöde > Processsökning.
 1. Ange din första villkorsuppsättning under Detaljerad sökning på sidan Processsökning:
 
    * Välj ett attribut i attributlistan.
