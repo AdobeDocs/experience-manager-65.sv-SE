@@ -36,11 +36,11 @@ Java API Quick Start (SOAP) är tillgängligt för API:t för användarhanterare
 
 [Snabbstart (SOAP-läge): Hantera inställningsnoderna programmatiskt med Java API](user-manager-java-api-quick.md#quick-start-soap-mode-programmatically-managing-the-preferences-nodes-using-the-java-api)
 
-AEM Forms-åtgärder kan utföras med AEM Forms-API:t med stark typning och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
->Snabbstart i Programmering med AEM-formulär baseras på dokumentet om du använder ett annat operativsystem, till exempel Unix, och ersätter Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>Snabbstart i Programmering med AEM formulär baseras på dokumentet om du använder ett annat operativsystem, till exempel Unix, och ersätter Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## Snabbstart (SOAP-läge): Lägga till användare med Java API {#quick-start-soap-mode-adding-users-using-the-java-api}
 
@@ -904,7 +904,7 @@ I följande kodexempel skapas en grupp med namnet AdobeGroup till AEM Forms. (Se
 
 ## Snabbstart (SOAP-läge) Hantera inställningsnoder {#quick-start-soap-mode-managing-preferences-nodes}
 
-Följande Java-kodmodeller hanterar Preferences Nodes med API:erna för användarhantering. (Se [Programmatisk hantering av inställningsnoder](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes))
+Följande Java-kodmodeller hanterar Preferences Nodes med API:erna för användarhantering. ( Se [Programmatisk hantering av inställningsnoder](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes))
 
 ```java
 /*
@@ -1007,7 +1007,7 @@ public class ManagePreferences {
 
 ## Snabbstart (SOAP-läge): Hantera inställningsnoderna programmatiskt med Java API {#quick-start-soap-mode-programmatically-managing-the-preferences-nodes-using-the-java-api}
 
-Följande Java-kodmodeller hanterar inställningsnoder med API:er för användarhantering (se [Programmatisk hantering av inställningsnoder](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes)):
+Följande Java-kodmodeller hanterar inställningsnoder med API:erna för användarhantering ( Se [Programmatisk hantering av inställningsnoderna](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes))
 
 ```java
 /*
