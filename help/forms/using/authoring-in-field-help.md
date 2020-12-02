@@ -10,17 +10,20 @@ discoiquuid: 78000342-a6a7-4c2e-acab-a88851b82c2a
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
+workflow-type: tm+mt
+source-wordcount: '393'
+ht-degree: 0%
 
 ---
 
 
-# Sammanhangsberoende hjälp för formulärfält{#authoring-in-context-help-for-form-fields}
+# Skriv sammanhangsberoende hjälp för formulärfält{#authoring-in-context-help-for-form-fields}
 
 ## Introduktion {#introduction}
 
 Det finns situationer när slutanvändare som fyller i ett formulär inte vet hur de ska fylla i information i ett visst formulärfält. För att åtgärda sådana problem har adaptiva formulär stöd för att lägga till text eller sammanhangsberoende hjälp i ett formulärfält. Det underlättar ifyllandet av formulär och undviker eventuella tvetydigheter för slutanvändarna.
 
-I den här artikeln beskrivs hur formulärförfattare kan lägga till sammanhangsberoende hjälp när de skapar adaptiva formulär.
+I den här artikeln beskrivs hur formulärförfattare kan lägga till sammanhangsberoende hjälp när de skriver Adaptiv Forms.
 
 ## Lägg till sammanhangsberoende hjälp {#add-in-context-help}
 
@@ -43,7 +46,7 @@ Fältet Kort beskrivning ger snabba och korta tips om hur du fyller i ett formul
 
 >[!NOTE]
 >
->Markera **Visa alltid kort beskrivning** för att permanent visa hjälptexten under fältet.
+>Välj **Visa alltid kort beskrivning** om du vill visa hjälptexten under fältet permanent.
 
 ![Permanent kort sammanhangsberoende hjälp nedanför fältet](assets/short1.png)
 
@@ -63,7 +66,7 @@ Utöver sammanhangsberoende hjälp för formulärfält kan du ange hjälp på pa
 
 ![Lägga till sammanhangsberoende hjälp för en formulärpanel](assets/panel-level-help.png)
 
-Vill du lägga till hjälp för panelen visas en **?** -ikonen bredvid panelbeskrivningen. När du klickar på ikonen visas det innehåll som lagts till i hjälpdelen i dialogrutan Redigera i panelen.
+Om du lägger till hjälp för panelen visas en **?** -ikonen bredvid panelbeskrivningen. När du klickar på ikonen visas det innehåll som lagts till i hjälpdelen i dialogrutan Redigera i panelen.
 
 ![Exempel på sammanhangsberoende hjälp på formulärpanelsnivå](assets/photoshop-1.png)
 
