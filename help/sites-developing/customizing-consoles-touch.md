@@ -1,8 +1,8 @@
 ---
 title: Anpassa konsolerna
 seo-title: Anpassa konsolerna
-description: AEM innehåller olika mekanismer som gör att du kan anpassa konsolerna i din redigeringsinstans
-seo-description: AEM innehåller olika mekanismer som gör att du kan anpassa konsolerna i din redigeringsinstans
+description: AEM innehåller olika mekanismer som gör att du kan anpassa konsolerna i redigeringsinstansen
+seo-description: AEM innehåller olika mekanismer som gör att du kan anpassa konsolerna i redigeringsinstansen
 uuid: 8ecce9ff-5907-41e1-af3b-a8646352d633
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,6 +12,9 @@ discoiquuid: 61a4e196-bd53-4ef0-816b-c14401462457
 docset: aem65
 translation-type: tm+mt
 source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
+workflow-type: tm+mt
+source-wordcount: '717'
+ht-degree: 0%
 
 ---
 
@@ -22,13 +25,15 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
 >
 >I det här dokumentet beskrivs hur du anpassar konsoler i det moderna, pekaktiverade användargränssnittet och det gäller inte det klassiska användargränssnittet.
 
-I AEM finns olika mekanismer som gör att du kan anpassa konsolerna (och [sidredigeringsfunktionerna](/help/sites-developing/customizing-page-authoring-touch.md)) i din redigeringsinstans.
+AEM innehåller olika mekanismer som gör att du kan anpassa konsolerna (och [funktionen för sidredigering](/help/sites-developing/customizing-page-authoring-touch.md)) för redigeringsinstansen.
 
-* Med ClientlibsClientlibs kan du utöka standardimplementeringen för att få nya funktioner, samtidigt som du återanvänder standardfunktioner, objekt och standardmetoder. När du anpassar kan du skapa ett eget klientbibliotek under `/apps.` Det kan t.ex. innehålla den kod som krävs för den anpassade komponenten.
+* Clientlibs
+Med Clientlibs kan du utöka standardimplementeringen för att få nya funktioner, samtidigt som du återanvänder standardfunktioner, objekt och standardmetoder. När du anpassar kan du skapa ett eget klientbibliotek under `/apps.`. Det kan till exempel innehålla den kod som krävs för den anpassade komponenten.
 
-* OverlaysOverlays baseras på noddefinitioner och gör att du kan täcka över standardfunktionerna (i `/libs`) med dina egna anpassade funktioner (i `/apps`). När du skapar en övertäckning krävs inte en 1:1-kopia av originalet, eftersom sammanslagningen av försäljningsresurser tillåter arv.
+* Övertäckningar
+Övertäckningar baseras på noddefinitioner och gör att du kan täcka över standardfunktionerna (i `/libs`) med din egen anpassade funktion (i `/apps`). När du skapar en övertäckning krävs inte en 1:1-kopia av originalet, eftersom sammanslagningen av försäljningsresurser tillåter arv.
 
-Dessa kan användas på många sätt för att utöka dina AEM-konsoler. En liten markering beskrivs nedan (på en hög nivå).
+De kan användas på många sätt för att utöka dina AEM. En liten markering beskrivs nedan (på en hög nivå).
 
 >[!NOTE]
 >
@@ -37,13 +42,14 @@ Dessa kan användas på många sätt för att utöka dina AEM-konsoler. En liten
 >* Använda och skapa [klientlibs](/help/sites-developing/clientlibs.md).
 >* Använda och skapa [övertäckningar](/help/sites-developing/overlays.md).
 >* [Granit](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html)
+
 >
 >
-Det här avsnittet behandlas också i [AEM Gems](https://docs.adobe.com/content/ddc/en/gems.html) -sessionen - [Anpassa användargränssnittet för AEM 6.0](https://docs.adobe.com/content/ddc/en/gems/user-interface-customization-for-aem-6.html).
+Det här avsnittet behandlas också i [AEM Gems](https://docs.adobe.com/content/ddc/en/gems.html)-sessionen - [Anpassning av användargränssnittet för AEM 6.0](https://docs.adobe.com/content/ddc/en/gems/user-interface-customization-for-aem-6.html).
 
 >[!CAUTION]
 >
->Du ***får*** inte ändra något i `/libs` banan.
+>Du ***får*** inte ändra något i `/libs`-sökvägen.
 >
 >Detta beror på att innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
 >
@@ -53,11 +59,12 @@ Det här avsnittet behandlas också i [AEM Gems](https://docs.adobe.com/content/
    >
    >
 1. Gör ändringar i `/apps`
+
 >
 
 
 
-Följande plats i `/libs` strukturen kan till exempel överlappas:
+Följande plats i `/libs`-strukturen kan till exempel överlappas:
 
 * Konsoler (alla konsoler baserade på GRA-sidor). till exempel:
 
@@ -65,7 +72,7 @@ Följande plats i `/libs` strukturen kan till exempel överlappas:
 
 >[!NOTE]
 >
->Mer information finns i artikeln [Troubleshooting AEM TouchUI issues](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-touchui-issues.html)i kunskapsbasen.
+>Mer information finns i artikeln [Troubleshooting AEM TouchUI issues](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-touchui-issues.html) i kunskapsbasen.
 
 ## Anpassa standardvyn för en konsol {#customizing-the-default-view-for-a-console}
 
@@ -89,13 +96,13 @@ Du kan anpassa standardvyn (kolumn, kort, lista) för en konsol:
 
    Definiera följande egenskap:
 
-   * **Namn**: `sling:orderBefore`
-   * **Typ**: `String`
-   * **Värde**: `column`
+   * **Namn**:  `sling:orderBefore`
+   * **Typ**:  `String`
+   * **Värde**:  `column`
 
 ### Lägg till ny åtgärd i verktygsfältet {#add-new-action-to-the-toolbar}
 
-1. Du kan skapa egna komponenter och inkludera motsvarande klientbibliotek för anpassade åtgärder. Exempel: en **åtgärd från Befordra till Twitter** på:
+1. Du kan skapa egna komponenter och inkludera motsvarande klientbibliotek för anpassade åtgärder. Exempel: en **Befordra till Twitter**-åtgärd vid:
 
    `/apps/wcm/core/clientlibs/sites/js/twitter.js`
 
@@ -127,14 +134,13 @@ Du kan anpassa standardvyn (kolumn, kort, lista) för en konsol:
 
    `jcr:content/body/content/header/items/default/items/create/items/createsite/rendercondition`
 
-   Med hjälp av egenskaper på den här noden kan du definiera vilka som `groups` får utföra den specifika åtgärden;
-till exempel `administrators`
+   Med hjälp av egenskaper på den här noden kan du definiera `groups` som kan utföra den specifika åtgärden; till exempel `administrators`
 
 ### Anpassa kolumner i listvyn {#customizing-columns-in-the-list-view}
 
 >[!NOTE]
 >
->Den här funktionen är optimerad för kolumner med textfält; för andra datatyper är det möjligt att täcka över `cq/gui/components/siteadmin/admin/listview/columns/analyticscolumnrenderer` in `/apps`.
+>Den här funktionen är optimerad för kolumner med textfält; för andra datatyper är det möjligt att täcka över `cq/gui/components/siteadmin/admin/listview/columns/analyticscolumnrenderer` i `/apps`.
 
 Så här anpassar du kolumnerna i listvyn:
 
@@ -147,12 +153,13 @@ Så här anpassar du kolumnerna i listvyn:
       ```
 
    * Lägg till nya kolumner eller ta bort befintliga.
-   Mer information finns i [Använda övertäckningar (och Samla resurser)](/help/sites-developing/overlays.md) .
+   Mer information finns i [Använda övertäckningar (och Samla resurser)](/help/sites-developing/overlays.md).
 
 1. Valfritt:
 
-   * Om du vill lägga till ytterligare data måste du skriva en [PageInforProvider](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageInfoProvider.html) med en
+   * Om du vill koppla ytterligare data måste du skriva en [PageInforProvider](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageInfoProvider.html) med en
       `pageInfoProviderType` -egenskap.
+
    Se till exempel klassen/paketet som bifogas (från GitHub) nedan.
 
 1. Nu kan du markera kolumnen i listvyns kolumnkonfigurator.
@@ -161,4 +168,4 @@ Så här anpassar du kolumnerna i listvyn:
 
 När du använder en konsol är ett vanligt användningsfall när användaren måste välja bland resurser (t.ex. sidor, komponenter, resurser osv.). Detta kan vara en lista som författaren till exempel måste välja ett objekt från.
 
-För att hålla listan i en rimlig storlek och även relevant för användningsfallet kan ett filter implementeras i form av ett anpassat predikat. Mer information finns i [den här artikeln](/help/sites-developing/customizing-page-authoring-touch.md#filtering-resources) .
+För att hålla listan i en rimlig storlek och även relevant för användningsfallet kan ett filter implementeras i form av ett anpassat predikat. Mer information finns i [den här artikeln](/help/sites-developing/customizing-page-authoring-touch.md#filtering-resources).
