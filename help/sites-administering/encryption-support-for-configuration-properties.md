@@ -11,6 +11,9 @@ topic-tags: security
 discoiquuid: 4e08c297-aa4b-44cf-84c8-1e11582d9ebb
 translation-type: tm+mt
 source-git-commit: 58fa0f05bae7ab5ba51491be3171b5c6ffbe870d
+workflow-type: tm+mt
+source-wordcount: '279'
+ht-degree: 1%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 58fa0f05bae7ab5ba51491be3171b5c6ffbe870d
 
 ## Översikt {#overview}
 
-Med den här funktionen kan alla OSGi-konfigurationsegenskaper lagras i en skyddad krypterad form i stället för i klartext. Formuläret i webbkonsolens användargränssnitt används för att skapa krypterad text från klartext med hjälp av den systemomfattande krypteringsnyckeln.
+Med den här funktionen kan alla OSGi-konfigurationsegenskaper lagras i en skyddad krypterad form i stället för i klartext. Formuläret i webbkonsolens användargränssnitt används för att skapa krypterad text från klartext med hjälp av den överordnad krypteringsnyckeln för hela systemet.
 
 Stöd för OSGi Configuration Plugin har lagts till för att dekryptera egenskapen innan den används av en tjänst.
 
@@ -31,7 +34,7 @@ Stöd för OSGi Configuration Plugin har lagts till för att dekryptera egenskap
 
 De här stegen visar hur du krypterar SMTP-lösenordet för e-posttjänsten. Du kan slutföra de här stegen för en OSGI-egenskap som du vill kryptera.
 
-1. Gå till AEM Web Console på *https://&lt;serveradress>:&lt;serverport>/system/console/configMgr*
+1. Gå till AEM webbkonsol på *https://&lt;serveradress>:&lt;serverport>/system/console/configMgr*
 1. I det övre vänstra hörnet går du till **Main - Crypto Support**
 
    ![chlimage_1-325](assets/chlimage_1-325.png)
@@ -40,8 +43,8 @@ De här stegen visar hur du krypterar SMTP-lösenordet för e-posttjänsten. Du 
 
    ![screen_shot_2018-08-01at113417am](assets/screen_shot_2018-08-01at113417am.png)
 
-1. I fältet **Oformaterad text** anger du texten i känsliga data som du vill skydda.
-1. Välj **Skydda**. Den skyddade texten visas som krypterad text.
+1. I fältet **Oformaterad text** anger du texten för känsliga data som du vill skydda.
+1. Välj **Protect**. Den skyddade texten visas som krypterad text.
 
    ![screen_shot_2018-08-01at113844am](assets/screen_shot_2018-08-01at113844am.png)
 
@@ -53,4 +56,4 @@ De här stegen visar hur du krypterar SMTP-lösenordet för e-posttjänsten. Du 
 
 ## Stöd för dekryptering {#decryption-support}
 
-AEM tillhandahåller nu ett konfigurations-plugin-program som dekrypterar konfigurationsegenskaper. Denna AEM-plugin dekrypterar och hämtar automatiskt egenskaperna för klartext.
+AEM tillhandahåller nu ett konfigurations-plugin-program för att dekryptera konfigurationsegenskaper. Den här AEM-plugin-programmet dekrypterar och hämtar textegenskaperna automatiskt.
