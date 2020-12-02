@@ -12,6 +12,9 @@ discoiquuid: d8546227-d78d-4fe2-a092-222482bb69c9
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+workflow-type: tm+mt
+source-wordcount: '4025'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ När du visar dina Att göra-listor kan du se uppgifter från en affärsprocess 
 
 ## Om att göra-listor {#about-todo-lists}
 
-På arbetsytan i AEM Forms finns följande tre typer av Att göra-listor:
+AEM Forms arbetsyta har följande tre typer av Att göra-listor:
 
 * Enskilda listor, som innehåller uppgifter som har tilldelats direkt till dig.
 * Grupplistor, som innehåller uppgifter som har tilldelats en grupp. Alla medlemmar i gruppen kan öppna och slutföra uppgifterna. Om du vill öppna en uppgift måste en medlem i en grupp göra anspråk på uppgiften först.
@@ -58,7 +61,7 @@ Ytterligare verktyg som kan vara tillgängliga med någon av ovanstående åtgä
 * Anteckningar
 * Bifogade filer
 
-## Öppna uppgifter {#opening-tasks}
+## Öppnar aktiviteter {#opening-tasks}
 
 Du kan öppna och låsa uppgifter från din att göra-lista eller göra anspråk på och öppna uppgifter från en grupp eller delad att göra-lista. När du öppnar en uppgift visas den i huvudrutan. De andra uppgifterna visas i uppgiftslistan bredvid listan Att göra.
 
@@ -68,7 +71,7 @@ Om det finns en URL för uppgiftssammanfattning öppnas vyn Sammanfattning som s
 >
 >När du öppnar en uppgift, beroende på vad som är standard för uppgiften, kan det tillhörande formuläret visas i helskärmsläge.
 
-### Öppna och låsa en uppgift från listan {#open-and-lock-a-task-from-your-list}
+### Öppna och låsa en aktivitet från listan {#open-and-lock-a-task-from-your-list}
 
 När du öppnar en uppgift från din att göra-lista kan du låsa uppgiften om listan delas, så att ingen annan användare som har åtkomst till listan kan arbeta med uppgiften.
 
@@ -90,7 +93,7 @@ När du öppnar en uppgift från din att göra-lista kan du låsa uppgiften om l
 
 1. Öppna uppgiften genom att klicka på den.
 
-### Öppna och begära en uppgift från en delad lista eller grupplista {#open-and-claim-a-task-from-a-shared-or-group-list}
+### Öppna och ta emot en aktivitet från en delad lista eller grupplista {#open-and-claim-a-task-from-a-shared-or-group-list}
 
 När du öppnar och gör anspråk på en uppgift från en grupp eller delad lista, flyttas uppgiften från gruppen eller den delade listan till din individuella Att göra-lista. Andra användare med åtkomst till listan hindras från att arbeta med uppgiften.
 
@@ -98,9 +101,9 @@ När du öppnar och gör anspråk på en uppgift från en grupp eller delad list
 1. Gör något av följande:
 
    * Om du vill göra anspråk på en uppgift, utan att öppna den, från en grupp eller delad Att göra-lista, klickar du på **Gör anspråk** genom att hålla pekaren över uppgiften. När en uppgift är öppen är anspråksknappen också tillgänglig i åtgärdsfältet nedanför åtgärdsrutan. När du gör anspråk på en uppgift flyttas den från gruppen eller den delade Att göra-listan till din lista.
-   * Om du vill göra anspråk på och öppna en uppgift från en grupp eller delad Att göra-lista klickar du på **Gör anspråk på och öppnar**.
+   * Om du vill göra anspråk på och öppna en uppgift från en grupp eller delad Att göra-lista klickar du på **Anspråk och öppnar**.
 
-## Working with tasks {#working-with-tasks}
+## Arbeta med uppgifter {#working-with-tasks}
 
 När du har öppnat en uppgift beror uppgiften på vilka flikar som visas i huvudrutan och vilka verktyg som är tillgängliga. Flikarna som du kan se beskrivs nedan:
 
@@ -118,7 +121,7 @@ När du har öppnat en uppgift beror uppgiften på vilka flikar som visas i huvu
 
 När du arbetar med en uppgift beskrivs de verktyg du kan se och de åtgärder du kan vidta nedan.
 
-### Vidarebefordra, dela eller rådfråga en uppgift {#forward-share-or-consult-on-a-task}
+### Vidarebefordra, dela eller konsultera en uppgift {#forward-share-or-consult-on-a-task}
 
 Du kan vidarebefordra en uppgift tillsammans med anteckningar eller bilagor till en annan användare eller dela uppgiften eller rådfråga en annan användare. Om du ändrar formulärdata som är kopplade till en uppgift, sparar du formuläret som ett utkast innan du vidarebefordrar, delar eller läser uppgiften. Annars skickas uppgiften utan det uppdaterade formuläret. När du har vidarebefordrat och delat en uppgift kan den användare som tar emot uppgiften göra anspråk på och slutföra den eller returnera den till dig. Om du läser en uppgift kan användaren bara returnera uppgiften till dig.
 
@@ -133,15 +136,16 @@ Du kan vidarebefordra en uppgift tillsammans med anteckningar eller bilagor till
    * **Framåt**
    * **Dela**
    * **Konsult**
+
    >[!NOTE]
    >
    >Beroende på vilken uppgift det är kan du även utföra dessa åtgärder från Att göra-listan utan att öppna uppgiften.
 
 1. I popup-dialogrutans fönster söker du efter och markerar namnet på användaren som ska vidarebefordra, dela eller läsa uppgiften med.
 
-### Returnera en uppgift {#return-a-task}
+### Returnera en aktivitet {#return-a-task}
 
-1. Klicka på **Retur** på valfri flik. Uppgiften återgår till att göra-listan för den användare som tidigare vidarebefordrade uppgiften till dig, eller som delade eller konsulterade uppgiften med dig.
+1. Klicka på **Retur** på en flik. Uppgiften återgår till att göra-listan för den användare som tidigare vidarebefordrade uppgiften till dig, eller som delade eller konsulterade uppgiften med dig.
 
 ### Ta en uppgift offline {#take-a-task-offline}
 
@@ -150,14 +154,14 @@ Du kan arbeta med en uppgift offline och senare skicka in formuläret från Adob
 1. Klicka på **Offline** på valfri flik.
 1. Ange ett filnamn för att spara formuläret under och klicka på **Spara**. Formuläret som är kopplat till uppgiften sparas lokalt och uppgiften finns kvar i din Att göra-lista tills formuläret skickas.
 
-### Arbeta med bilagor {#work-with-attachments}
+### Arbeta med bifogade filer {#work-with-attachments}
 
 Du kan lägga till, uppdatera, ta bort eller spara bifogade filer lokalt.
 
 **Lägg till en bifogad fil**
 
-1. Klicka på **Bläddra** på fliken **Bifogade filer** för att välja den fil som ska bifogas.
-1. Välj **behörighetsnivå** för den bifogade filen för andra användare som deltar i processen. Om du väljer **Läs** kan andra användare spara filen lokalt. Om du väljer någon av redigeringsbehörigheterna kan andra användare även överföra en ny fil som ersätter den bifogade filen.
+1. På fliken **Bifogade filer** klickar du på **Bläddra** och väljer den fil som ska bifogas.
+1. Välj nivån **Behörigheter** för bilagan för andra användare som deltar i processen. Om du väljer **Läs** kan andra användare spara filen lokalt. Om du väljer någon av redigeringsbehörigheterna kan andra användare även överföra en ny fil som ersätter den bifogade filen.
 
    >[!NOTE]
    >
@@ -167,7 +171,7 @@ Du kan lägga till, uppdatera, ta bort eller spara bifogade filer lokalt.
 
 **Visa en bifogad fil**
 
-1. Klicka på filnamnet på den bifogade filen på fliken **Bifogade filer** för att visa den.
+1. På fliken **Bifogade filer** klickar du på filnamnet på den bifogade filen för att visa den.
 
 **Spara en bifogad fil lokalt**
 
@@ -175,15 +179,15 @@ Du kan lägga till, uppdatera, ta bort eller spara bifogade filer lokalt.
 
 **Uppdatera en bifogad fil**
 
-1. Klicka på **Redigera** för den bifogade filen. Välj den fil som du vill ersätta den befintliga bifogade filen med genom att klicka på **Bläddra**.
+1. Klicka på **Redigera** för bilagan. Välj den fil som du vill ersätta den befintliga bifogade filen med genom att klicka på **Bläddra**.
 
 **Ta bort en bifogad fil**
 
 1. Klicka på **Ta bort** för en bifogad fil.
 
-### Spara arbetet utan att slutföra uppgiften {#save-your-work-without-completing-the-task}
+### Spara ditt arbete utan att slutföra uppgiften {#save-your-work-without-completing-the-task}
 
-1. Tryck på **Spara** på valfri flik.
+1. Tryck på **Spara** på en flik.
 
    Dialogrutan Spara som utkast visas. Standardnamnet för utkastet är uppgiftsnamnet från uppgiftsmallen.
 
@@ -204,7 +208,7 @@ Du kan lägga till, uppdatera, ta bort eller spara bifogade filer lokalt.
 
    ![sökafortfråga](assets/searchfortask.png)
 
-## Slutföra uppgifter {#completing-tasks}
+## Slutför uppgifter {#completing-tasks}
 
 Hur du slutför en uppgift beror på själva uppgiften och din roll i processen. Du kan bli ombedd att godkänna eller neka en begäran, tillhandahålla innehåll, granska och verifiera information eller ange att du har agerat.
 
@@ -216,23 +220,24 @@ Du kan slutföra en uppgift på flera olika sätt:
 
 >[!NOTE]
 >
->Det här alternativet är tillgängligt om `isMustOpenToComplete` fältet inte är markerat i `Assign Task` steget i Workbench när du utformar en process.
+>Det här alternativet är tillgängligt om `isMustOpenToComplete`-fältet inte är markerat i `Assign Task`-steget i Workbench när du utformar en process.
 
 * Om du får e-postmeddelanden via e-post
 
-När du har slutfört en uppgift kan en bekräftelsedialogruta visas som bekräftar åtgärden. Du kan till exempel se en dialogruta där du ombeds bekräfta att den information som du har angett är giltig.
+När du har slutfört en uppgift kan en bekräftelsedialogruta visas som bekräftar åtgärden. Du kan till exempel se en dialogruta där du ombeds bekräfta att den information du har angett är giltig.
 
 >[!NOTE]
 >
 >Om du har ändrat en uppgift men inte är redo att slutföra den, kan du spara den som ett utkast genom att klicka på Spara och sedan gå tillbaka till den.
 
-### Slutför en uppgift {#complete-a-task}
+### Slutför en aktivitet {#complete-a-task}
 
 1. Utför något av följande steg:
 
    * Markera uppgiften och klicka på lämplig knapp för nästa steg som krävs i processen längst ned i listan.
-   * Om formuläret inte har några knappar och knappen Slutför på arbetsytan i AEM Forms är tillgänglig klickar du på **Slutför**.
-   * Om formuläret har knappar och knappen Slutför inte är tillgänglig på arbetsytan i AEM Forms klickar du på lämplig knapp i formuläret för nästa steg i processen.
+   * Om formuläret inte har några knappar och knappen Slutför i AEM Forms-arbetsytan är tillgänglig klickar du på **Fullständig**.
+   * Om formuläret har knappar och knappen Slutför i AEM Forms inte är tillgänglig klickar du på lämplig knapp i formuläret för nästa steg som ska utföras.
+
    Om formuläret inte har några knappar och knappen Slutför i AEM Forms inte är tillgänglig visas ett meddelande om att formuläret inte kan skickas.
 
 1. Om en bekräftelsedialogruta visas gör du något av följande:
@@ -242,11 +247,11 @@ När du har slutfört en uppgift kan en bekräftelsedialogruta visas som bekräf
 
 >[!NOTE]
 >
->Du kan se knappen Skicka i HTML-formulär när Processegenskaper används i ett formulär. Den här knappen visas inte när samma formulär återges som PDF. Slutför en åtgärd genom att klicka på knappen Skicka längst ned på AEM Forms-arbetsytan, utanför formuläret och inte på knappen Skicka i formuläret.
+>Du kan se knappen Skicka i HTML-formulär när Processegenskaper används i ett formulär. Den här knappen visas inte när samma formulär återges som PDF. Slutför en åtgärd genom att klicka på knappen Skicka längst ned på arbetsytan i AEM Forms, utanför formuläret och inte på Skicka-knappen i formuläret.
 
 ### Godkänn uppgifter gruppvis {#bulk-approve-tasks}
 
-Du kan skicka flera uppgifter från din Att göra-lista. Det går endast att skicka uppgifter med samma process, med samma uppgiftsnamn, och samma flödesalternativ.
+Du kan skicka flera uppgifter från din Att göra-lista. Det går endast att skicka uppgifter med samma process, med samma uppgiftsnamn, och samma flödesalternativ tillsammans.
 
 >[!NOTE]
 >
@@ -271,39 +276,39 @@ Du kan skicka flera uppgifter från din Att göra-lista. Det går endast att ski
 
 Du kan ta emot och slutföra uppgifter via e-post. Genom att delta i uppgifter via e-post slipper du regelbundet kontrollera din att-göra-lista innehåller nya uppgifter eller kontrollera om det finns status för en uppgift på spårningssidan.
 
-Först anger du dina inställningar för AEM Forms-arbetsytan så att du får e-postmeddelanden. AEM Forms-arbetsytan kan skicka e-postmeddelanden för uppgifter i din Att göra-lista eller vilka gruppAtt göra-listor du tillhör. Administratören avgör när e-postmeddelanden skickas och vem som tar emot dem.
+Först ställer du in inställningarna för din AEM Forms-arbetsyta så att du får e-postmeddelanden. AEM Forms arbetsyta kan skicka e-postmeddelanden för uppgifter i din Att göra-lista eller vilka gruppAtt göra-listor du tillhör. Administratören avgör när e-postmeddelanden skickas och vem som tar emot dem.
 
-E-postmeddelandena kan innehålla en länk som öppnar uppgiften på arbetsytan i AEM Forms, en bifogad fil som används för uppgiften eller åtgärder för att slutföra uppgiften via e-post. Om ett formulär ingår i e-postmeddelandet kan du öppna formuläret och slutföra åtgärden om knapparna för att slutföra uppgiften finns i formuläret. Om åtgärder för att slutföra uppgiften ingår i e-postmeddelandet kan du slutföra uppgiften genom att klicka på åtgärderna i e-postmeddelandet eller genom att svara på e-postmeddelandet med åtgärden som är skriven som första rad i e-postmeddelandet.
+E-postmeddelandena kan innehålla en länk som öppnar uppgiften i AEM Forms arbetsyta, en bifogad fil som används för uppgiften eller åtgärder för att slutföra uppgiften via e-post. Om ett formulär ingår i e-postmeddelandet kan du öppna formuläret och slutföra åtgärden om knapparna för att slutföra uppgiften finns i formuläret. Om åtgärder för att slutföra uppgiften ingår i e-postmeddelandet kan du slutföra uppgiften genom att klicka på åtgärderna i e-postmeddelandet eller genom att svara på e-postmeddelandet med åtgärden som är skriven som första rad i e-postmeddelandet.
 
 >[!NOTE]
 >
 >Information om hur du konfigurerar arbetsytan så att den använder rätt e-postmallar finns i [AEM Forms JEE Administrator Guide](https://help.adobe.com/en_US/AEMForms/6.1/AdminHelp/).
 
-När du slutför en uppgift via e-post tas uppgiften bort från din Att göra-lista på arbetsytan i AEM Forms.
+När du slutför en uppgift via e-post tas uppgiften bort från din att göra-lista i AEM Forms arbetsyta.
 
 >[!NOTE]
 >
->Om användaren inte är inloggad på AEM Forms-arbetsytan i webbläsaren och öppnar en länk till en Att göra-uppgift, kan länken för att göra-uppgift inte öppnas och ett undantag visas. Logga in på arbetsytan i AEM Forms innan du klickar på länkar i e-postmeddelanden.
+>Om användaren inte är inloggad på AEM Forms-arbetsytan i webbläsaren och öppnar en länk till en Att göra-uppgift, kan länken för att göra-uppgift inte öppnas och ett undantag visas. Logga in på arbetsytan i AEM Forms innan du klickar på länkarna i e-postmeddelandena.
 
 >[!NOTE]
 >
->Du kan inte vidarebefordra ett e-postmeddelande för att tilldela en uppgift till någon annan. Du kan bara vidarebefordra uppgifter till andra användare från AEM Forms-arbetsytan.
+>Du kan inte vidarebefordra ett e-postmeddelande för att tilldela en uppgift till någon annan. Du kan bara vidarebefordra uppgifter till andra användare från AEM Forms arbetsyta.
 
 ### Ta emot e-postmeddelanden {#receive-email-notification-messages}
 
 1. Klicka på **Inställningar**.
-1. Välj **Ja** i listan **Meddela aktivitetshändelser via e-post**.
-1. Om du vill inkludera formuläret och data med e-postmeddelandet väljer du **Ja** i listan **Bifoga formulär i e-post**.
+1. I listan **Notify Task Events via Email** väljer du **Yes**.
+1. Om du vill inkludera formuläret och data med e-postmeddelandet väljer du **Ja** Bifoga Forms i e-postlistan **.**
 
 ## Delta i uppgifter via mobila enheter {#participating-in-tasks-through-mobile-devices}
 
-Du kan använda arbetsyteappen AEM Forms för att delta i uppgifter från din mobila enhet. Innan du installerar programmet bör du kontakta systemadministratören för att kontrollera att din organisation stöder användningen av arbetsytan i AEM Forms.
+Du kan använda AEM Forms arbetsyteapp för att delta i uppgifter från din mobila enhet. Innan du installerar programmet bör du kontakta systemadministratören för att kontrollera att din organisation stöder användningen av AEM Forms-arbetsyteprogrammet.
 
 ## Om deadlines och påminnelser {#about-deadlines-and-reminders}
 
 En *deadline* bestämmer vilket datum och vilken tid du måste slutföra en uppgift innan. När en deadline har passerats dirigerar servern aktiviteten till nästa steg i processen (som kan vara en annan användares Att göra-lista) och sedan visas deadlineikonen på uppgiften. Deadalikonen visas oavsett vilka regler som är kopplade till processen.
 
-En *påminnelse* meddelar dig om en åtgärd som du behöver åtgärda. Påminnelser inträffar vid en förbestämd tidpunkt och sedan med regelbundna intervall tills du slutför den associerade uppgiften. När du får en påminnelse visas påminnelseikonen på uppgiften.
+En *påminnelse* meddelar dig om en åtgärd som kräver din uppmärksamhet. Påminnelser inträffar vid en förbestämd tidpunkt och sedan med regelbundna intervall tills du slutför den associerade uppgiften. När du får en påminnelse visas påminnelseikonen på uppgiften.
 
 Affärsprocessen avgör beteende och tidpunkt för deadlines och påminnelser. Alla processer har inte deadlines och påminnelser. Administratören anger om e-postmeddelanden ska skickas för deadlines och påminnelser. Du kan ange om du vill få e-postmeddelanden.
 
@@ -315,7 +320,7 @@ Alla grupper och delade Att göra-listor som du har åtkomst till visas också i
 
 En lista med att göra-uppgifter för en grupp kan ha fler än en medlem. En administratör konfigurerar grupper att göra-listor baserat på organisationens specifika krav. Gruppera Att göra-listor är ett sätt att distribuera arbete bland flera personer som delar liknande ansvarsområden.
 
-Alla i teamet hanterar t.ex. låneblanketter. Alla dessa uppgifter skickas till en gruppAtt göra-lista som alla medlemmar i gruppen har åtkomst till. Varje medlem i din grupp har åtkomst till uppgifterna från Att göra-listan.
+Till exempel behandlar alla medlemmar i teamet låneansökningar. Alla dessa uppgifter skickas till en gruppAtt göra-lista som alla medlemmar i gruppen har åtkomst till. Varje medlem i din grupp har åtkomst till uppgifterna från Att göra-listan.
 
 En delad Att göra-lista visas när en annan användare delar sin Att göra-lista med dig eller delar en uppgift explicit med dig. Sedan kan du visa uppgifterna i användarens Att göra-lista och slutföra dem för användarens räkning. Om du till exempel tar semester kan du välja att dela din Att göra-lista med en medarbetare som slutför dina uppgifter medan du är borta.
 
@@ -323,9 +328,9 @@ En delad Att göra-lista visas när en annan användare delar sin Att göra-list
 >
 >Du kan även ange inställningar för frånvaro för att vidarebefordra uppgifter till andra användare medan du är borta.
 
-Om du vill arbeta med en uppgift från en grupp eller delad Att göra-lista, gör anspråk på uppgiften först. Du blir sedan ägare av uppgiften tills du slutför den eller vidarebefordrar den till en annan användare.
+Om du vill arbeta med en uppgift från en grupp eller en delad Att göra-lista, gör anspråk på uppgiften först. Du blir sedan ägare av uppgiften tills du slutför den eller vidarebefordrar den till en annan användare.
 
-### Delningsköer {#sharing-queues}
+### Delar köer {#sharing-queues}
 
 Du kan dela din att göra-lista med en annan användare, som sedan kan visa de nya uppgifterna i din att göra-lista och agera på dem åt dig. Om det finns några uppgifter i din att göra-lista innan du delar din att göra-lista kan den andra användaren inte visa dem. Användaren kan bara visa och göra anspråk på de uppgifter som finns i din Att göra-lista efter att du har gett åtkomst till din Att göra-lista.
 
@@ -339,12 +344,12 @@ Tänk på att för att en användare ska kunna se en uppgift i en delad kö mås
 
 1. På fliken **Köer** på fliken **Inställningar** klickar du på ikonen + för Användare som för närvarande delar min kö.
 1. Sök efter och välj namnet på användaren.
-1. Klicka på knappen **Dela** för att dela kön med den valda användaren.
+1. Klicka på **Dela** om du vill dela kön med den valda användaren.
 1. Markera namnet på användaren och klicka på **Dela**.
 
    >[!NOTE]
    >
-   >Du kan ta bort en användare från att dela din Att göra-lista genom att klicka på **X** -ikonen i slutet av den rad där användaren finns med.
+   >Du kan ta bort en användare från att dela din Att göra-lista genom att klicka på ikonen **X** i slutet av raden där användaren finns med.
 
 ### Åtkomst till andra köer {#accessing-other-queues}
 
@@ -356,9 +361,9 @@ Om du får åtkomst till en annan användares Att göra-lista kan du inte visa n
 
 **Öppna en annan kö**
 
-1. Öppna fliken **Köer** på fliken **Inställningar** .
+1. Öppna fliken **Köer** på fliken **Inställningar**.
 1. Klicka på + för de användarköer som jag har åtkomst till. Sök efter användarens namn i popup-dialogrutan.
-1. Markera namnet på användaren och klicka på **Begäran**.
+1. Markera namnet på användaren och klicka på **Begär**.
 
    >[!NOTE]
    >
@@ -376,20 +381,20 @@ Du kan ange en standardperson som alla dina uppgifter skickas till. Du kan ocks�
 >
 >När du inte är på kontoret finns alla uppgifter som tidigare fanns i din Att göra-lista kvar där och vidarebefordras inte till andra användare.
 
-### Ange inställningar för frånvaro {#set-out-of-office-preferences}
+### Ange inställningar utanför kontoret {#set-out-of-office-preferences}
 
-1. Klicka på **Inställningar** och sedan på **Frånvaro**.
+1. Klicka på **Inställningar** och klicka på **Frånvarande**.
 1. Gör något av följande för att ange när du inte är på kontoret:
 
-   * Om du vill ange att du inte är på kontoret nu för en obegränsad tidsperiod väljer du **Frånvarande** i listan **Jag är för närvarande** , men lägger inte till något datumintervall.
+   * Om du vill ange att du inte är på kontoret just nu under en obegränsad tidsperiod väljer du **Från Office** i listan &lt;a0/>Jag är **, men lägger inte till något datumintervall.**
    * Om du vill ange ett startdatum och en starttid som du inte är på kontoret och klickar på + för **Frånvaroschema**. Använd kalendern och tidslistan för att ange startdatum och starttid. Om du inte anger något slutdatum eller någon sluttid räknas du som ledig från kontoret på obestämd tid från startdatumet och -tiden tills du ändrar dina inställningar.
 
-1. Om du vill ange hur dina uppgifter ska hanteras som standard, väljer du något av följande alternativ på menyn **Vid frånvaro: Standardanvändare för aktivitetslista** utanför kontoret:
+1. Om du vill ange hur dina uppgifter ska hanteras som standard väljer du något av följande alternativ i **När du är utanför kontoret: Standardanvändare för aktiviteter utanför kontoret**-lista:
 
-   * Välj **Tilldela** inte om du vill behålla uppgifter i listan Att göra förrän du kommer tillbaka.
-   * Välj **Sök efter användare** om du vill söka efter en användare som du vill tilldela uppgifter till. När du väljer en användare kan du även visa användarens frånvaroschema.
+   * Välj **Tilldela inte** om du vill behålla uppgifter i din Att göra-lista förrän du kommer tillbaka.
+   * Välj **Sök efter användare** om du vill söka efter en användare som du vill tilldela dina uppgifter till. När du väljer en användare kan du även visa användarens frånvaroschema.
 
-1. Om du vill ange undantag till standardinställningen klickar du på + för **Processundantag**, väljer den process som ett undantag ska skapas för och väljer sedan en annan användare eller väljer **Tilldela** inte från **listan som** ska tilldelas.
+1. Om du vill ange undantag till standardinställningen klickar du på + för **Processundantag**, väljer den process som ska skapa ett undantag och väljer sedan en annan användare eller väljer **Tilldela inte** från **listan är tilldelad**.
 
    >[!NOTE]
    >
