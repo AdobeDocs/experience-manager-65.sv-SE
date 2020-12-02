@@ -11,6 +11,9 @@ topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: 4a034e15-3394-4be3-9e8e-bc894668946a
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '712'
+ht-degree: 0%
 
 ---
 
@@ -31,17 +34,17 @@ För att kunna köra följande exempel behöver du ett system som kör OSx (Mac)
 
 För iOS: Om du vill utveckla för iPhone och iPad behöver du Apples Xcode IDE.
 
-* Ladda ned kostnadsfritt [här](https://developer.apple.com/xcode/downloads/).
+* Hämta den kostnadsfritt [här](https://developer.apple.com/xcode/downloads/).
 * [Plattformshandbok för PhoneGap iOS](https://docs.phonegap.com/en/4.0.0/guide_platforms_ios_index.md.html#iOS%20Platform%20Guide)
 
 För Android: Om du vill utveckla för iPhone och iPad behöver du Googles Android Studio IDE.
 
-* Ladda ned kostnadsfritt [här](https://developer.android.com/sdk/index.html).
+* Hämta den kostnadsfritt [här](https://developer.android.com/sdk/index.html).
 * [Plattformshandbok för PhoneGap Android](https://docs.phonegap.com/en/4.0.0/guide_platforms_android_index.md.html#Android%20Platform%20Guide)
 
 ## Hämta källan {#download-the-source}
 
-När du har startat om utvecklingsmiljön kan du hämta källan från AEM App Build Tile:
+När du har startat om utvecklingsmiljön hämtar du källan från AEM App Build Tile:
 
 * Klicka på den nedrullningsbara menyn PhoneGap Build.
 
@@ -67,7 +70,7 @@ PhoneGap CLI kan skapa ett plattformsprojekt, kompilera källan och distribuera 
 
 >[!NOTE]
 >
->Du kan göra allt detta separat, se [PhoneGap CLI-dokument](https://phonegap.com/blog/2014/11/13/phonegap-cli-3-6-3/).
+>Du kan utföra alla dessa steg separat, se [PhoneGap CLI docs](https://phonegap.com/blog/2014/11/13/phonegap-cli-3-6-3/).
 
 1. Kontrollera att du har installerat PhoneGap CLI, se ovan.
 1. I ett konsolfönster (eller terminalfönster) går du till rotkatalogen för den extraherade källan.
@@ -91,11 +94,12 @@ phonegap run ios
 >1. Navigera till helloWorld (cd helloWorld)
 >1. Kör &#39;phonegap run android (eller ersätt android med ios som ovan).
 >1. Emulatorn kommer att öppna och köra din nya PhoneGap-app och säga &#39;Device Ready&#39; om JavaScript-bryggan till native fungerar.
+
 >
 >
 Detta verifierar att PhoneGap CLI-utvecklingsmiljön fungerar som den ska.
 
-## Felsöka Javascript med felsökning av Safari och IOS {#debug-javascripts-with-safari-and-ios-debug}
+## Felsöka Javascript med Safari och IOS-felsökning {#debug-javascripts-with-safari-and-ios-debug}
 
 Du kan felsöka appens JavaScript-skript med hjälp av utvecklarverktygen i Safari, på samma sätt som med ett webbprogram.
 
@@ -115,7 +119,7 @@ Så här aktiverar du utvecklarverktygen:
 * Markera &quot;Visa menyn Framkalla i menyraden&quot;
 * Stäng inställningsfönstret
 
-## Ansluta Safari till iOS {#connect-safari-to-ios}
+## Anslut Safari till iOS {#connect-safari-to-ios}
 
 Du kan ansluta Safari till en iOS-enhet eller emulator.
 
