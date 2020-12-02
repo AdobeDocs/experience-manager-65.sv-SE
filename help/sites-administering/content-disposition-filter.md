@@ -11,6 +11,9 @@ topic-tags: Security
 discoiquuid: badfaa18-472e-4777-a7dc-9c28441b38b7
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '271'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ När filtret har installerats blockeras åtkomsten till alla resurser. Du kan ti
 
 ## Konfigurera filtret för innehållsdisposition {#configure-content-disposition-filter}
 
-Du kan visa filtret för disposition av [Apache Sling-innehåll i GitHub](https://github.com/apache/sling-org-apache-sling-security/blob/master/src/main/java/org/apache/sling/security/impl/ContentDispositionFilterConfiguration.java).
+Du kan visa filtret [Apache Sling Content Disposition Filter i GitHub](https://github.com/apache/sling-org-apache-sling-security/blob/master/src/main/java/org/apache/sling/security/impl/ContentDispositionFilterConfiguration.java).
 
 Alternativen för Innehållsdispositionsfilter innehåller följande funktioner:
 
