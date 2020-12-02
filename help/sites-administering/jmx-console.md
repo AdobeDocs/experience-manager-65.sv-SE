@@ -23,13 +23,13 @@ ht-degree: 0%
 
 Med JMX Console kan du övervaka och hantera tjänster på CRX-servern. De följande avsnitten sammanfattar de attribut och åtgärder som visas via JMX-ramverket.
 
-Mer information om hur du använder konsolkontrollerna finns i [Använda JMX-konsolen](#using-the-jmx-console). Bakgrundsinformation om JMX finns på [Java Management Extensions (JMX) Technology](https://www.oracle.com/technetwork/java/javase/tech/javamanagement-140525.html) page på Oracles webbplats.
+Mer information om hur du använder konsolkontrollerna finns i [Använda JMX-konsolen](#using-the-jmx-console). Bakgrundsinformation om JMX finns på sidan [Java Management Extensions (JMX) Technology](https://www.oracle.com/technetwork/java/javase/tech/javamanagement-140525.html) på Oracle webbplats.
 
 Mer information om hur du skapar MBeans för att hantera tjänster med JMX-konsolen finns i [Integrera tjänster med JMX-konsolen](/help/sites-developing/jmx-integration.md).
 
-## Underhåll av arbetsflöden {#workflow-maintenance}
+## Underhåll av arbetsflöde {#workflow-maintenance}
 
-Åtgärder för att administrera körda, slutförda, inaktuella och misslyckade arbetsflödesinstanser.
+Åtgärder för att administrera instanser av arbetsflöden som körs, har slutförts, inaktuell och misslyckats.
 
 * Domän: com.adobe.granite.workflow
 * Typ: Underhåll
@@ -40,17 +40,17 @@ Mer information om hur du skapar MBeans för att hantera tjänster med JMX-konso
 
 ### Användning {#operations}
 
-**listRunningWorkflowsPerModel** Visar antalet arbetsflödesinstanser som körs för varje arbetsflödesmodell.
+**listRunningWorkflowsPerModelVisar** antalet arbetsflödesinstanser som körs för varje arbetsflödesmodell.
 
 * Argument: ingen
 * Returnerat värde: Tabelldata som innehåller kolumnerna Count och ModelId.
 
-**listCompletedWorkflowsPerModel** Visar antalet slutförda arbetsflödesinstanser för varje arbetsflödesmodell.
+**list** CompletedWorkflowsPerModelVisar antalet slutförda arbetsflödesinstanser för varje arbetsflödesmodell.
 
 * Argument: ingen
 * Returnerat värde: Tabelldata som innehåller kolumnerna Count och ModelId.
 
-**returnWorkflowQueueInfo** Visar information om arbetsflödesobjekt som har bearbetats och som står i kö för bearbetning.
+**returnWorkflowQueueInfoVisar** information om arbetsflödesobjekt som har bearbetats och som står i kö för bearbetning.
 
 * Argument: ingen
 * Returnerat värde: Tabelldata som innehåller följande kolumner:
@@ -66,7 +66,7 @@ Mer information om hur du skapar MBeans för att hantera tjänster med JMX-konso
    * Bearbetade jobb
    * Köade jobb
 
-**returnWorkflowJobTopicInfo** Visar bearbetningsinformation för arbetsflödesjobb, ordnade efter ämne.
+**** returnWorkflowJobTopicInfoVisar bearbetningsinformation för arbetsflödesjobb, ordnade efter ämne.
 
 * Argument: ingen
 * Returnerat värde: Tabelldata som innehåller följande kolumner:
@@ -79,7 +79,7 @@ Mer information om hur du skapar MBeans för att hantera tjänster med JMX-konso
    * Slutförda jobb
    * Bearbetade jobb
 
-**returnFailedWorkflowCount** Visar antalet misslyckade arbetsflödesinstanser. Du kan ange en arbetsflödesmodell för att fråga efter eller hämta information för alla arbetsflödesmodeller.
+**** returnFailedWorkflowCountVisar antalet misslyckade arbetsflödesinstanser. Du kan ange en arbetsflödesmodell för att fråga efter eller hämta information för alla arbetsflödesmodeller.
 
 * Argument:
 
@@ -89,17 +89,17 @@ Mer information om hur du skapar MBeans för att hantera tjänster med JMX-konso
 
 * Returnerat värde: Antalet misslyckade arbetsflödesinstanser.
 
-**returnFailedWorkflowCountPerModel** Visar antalet arbetsflödesinstanser som har misslyckats för varje arbetsflödesmodell.
+**** returnFailedWorkflowCountPerModelVisar antalet arbetsflödesinstanser som har misslyckats för varje arbetsflödesmodell.
 
 * Argument: ingen.
 * Returnerat värde: Tabelldata som innehåller kolumnerna Antal och Modell-ID.
 
-**terminateFailedInstances** Avsluta arbetsflödesinstanser som har misslyckats. Du kan avsluta alla misslyckade instanser eller endast de misslyckade instanserna för en viss modell. Du kan också starta om instanserna när de har avslutats. Du kan också testa åtgärden för att se resultaten utan att faktiskt utföra åtgärden.
+**terminateFailedInstancesTerminate-arbetsflödesinstanser** som har misslyckats. Du kan avsluta alla misslyckade instanser eller endast de misslyckade instanserna för en viss modell. Du kan också starta om instanserna när de har avslutats. Du kan också testa åtgärden för att se resultaten utan att faktiskt utföra åtgärden.
 
 * Argument:
 
-   * Starta om instansen: (Valfritt) Ange värdet för `true` att starta om instanserna när de har avslutats. Standardvärdet för `false` orsakar ingen omstart av avslutade arbetsflödesinstanser.
-   * Torr körning: (Valfritt) Ange ett värde på om du `true` vill visa resultatet av åtgärden utan att utföra åtgärden. Standardvärdet för `false` utför åtgärden.
+   * Starta om instansen: (Valfritt) Ange värdet `true` om du vill starta om instanserna när de har avslutats. Standardvärdet `false` orsakar ingen omstart av avslutade arbetsflödesinstanser.
+   * Torr körning: (Valfritt) Ange värdet `true` om du vill visa resultatet av åtgärden utan att utföra åtgärden. Standardvärdet `false` gör att åtgärden utförs.
    * Modell: (Valfritt) ID:t för den modell som åtgärden tillämpas på. Ange ingen modell för att använda åtgärden på misslyckade instanser av alla arbetsflödesmodeller. ID är sökvägen till modellnoden, till exempel:
 
       `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
@@ -113,11 +113,11 @@ Mer information om hur du skapar MBeans för att hantera tjänster med JMX-konso
    * StartComment
    * WorkflowTitle
 
-**retryFailedWorkItems** Försöker köra misslyckade arbetsobjektsteg. Du kan försöka göra om alla misslyckade arbetsobjekt eller endast misslyckade arbetsobjekt för en viss arbetsflödesmodell. Du kan också testa åtgärden för att se resultaten utan att faktiskt utföra åtgärden.
+**Försök** igenFailedWorkItemsFörsöker köra misslyckade arbetsobjektssteg. Du kan försöka göra om alla misslyckade arbetsobjekt eller endast misslyckade arbetsobjekt för en viss arbetsflödesmodell. Du kan också testa åtgärden för att se resultaten utan att faktiskt utföra åtgärden.
 
 * Argument:
 
-   * Torr körning: (Valfritt) Ange ett värde på om du `true` vill visa resultatet av åtgärden utan att utföra åtgärden. Standardvärdet för `false` utför åtgärden.
+   * Torr körning: (Valfritt) Ange värdet `true` om du vill visa resultatet av åtgärden utan att utföra åtgärden. Standardvärdet `false` gör att åtgärden utförs.
    * Modell: (Valfritt) ID:t för den modell som åtgärden tillämpas på. Ange ingen modell för att använda åtgärden på misslyckade arbetsobjekt i alla arbetsflödesmodeller. ID är sökvägen till modellnoden, till exempel:
 
       `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
@@ -131,7 +131,7 @@ Mer information om hur du skapar MBeans för att hantera tjänster med JMX-konso
    * StartComment
    * WorkflowTitle
 
-**RensaAktiv** Tar bort aktiva arbetsflödesinstanser av en viss ålder. Du kan rensa aktiva instanser för alla modeller eller bara instanser för en viss modell. Du kan också testa åtgärden för att se resultaten utan att utföra åtgärden.
+**** PurgeActiveTar bort aktiva arbetsflödesinstanser av en viss ålder. Du kan rensa aktiva instanser för alla modeller eller bara instanser för en viss modell. Du kan också testa åtgärden för att se resultaten utan att utföra åtgärden.
 
 * Argument:
 
@@ -139,7 +139,7 @@ Mer information om hur du skapar MBeans för att hantera tjänster med JMX-konso
 
       `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
    * Antal dagar sedan arbetsflödet startades: Åldern på arbetsflödesinstanserna som ska rensas, i dagar.
-   * Torr körning: (Valfritt) Ange ett värde på om du `true` vill visa resultatet av åtgärden utan att utföra åtgärden. Standardvärdet för `false` utför åtgärden.
+   * Torr körning: (Valfritt) Ange värdet `true` om du vill visa resultatet av åtgärden utan att utföra åtgärden. Standardvärdet `false` gör att åtgärden utförs.
 
 * Returnerat värde: Tabelldata om de aktiva arbetsflödesinstanserna som rensas, inklusive följande kolumner:
 
@@ -150,7 +150,7 @@ Mer information om hur du skapar MBeans för att hantera tjänster med JMX-konso
    * StartComment
    * WorkflowTitle
 
-**countStaleWorkflows** Returnerar antalet inaktuella arbetsflödesinstanser. Du kan hämta antalet inaktuella instanser för alla arbetsflödesmodeller eller för en viss modell.
+**count** StaleWorkflowsReturnerar antalet arbetsflödesinstanser som är inaktuella. Du kan hämta antalet inaktuella instanser för alla arbetsflödesmodeller eller för en viss modell.
 
 * Argument:
 
@@ -160,23 +160,23 @@ Mer information om hur du skapar MBeans för att hantera tjänster med JMX-konso
 
 * Returnerat värde: Antalet inaktuella arbetsflödesinstanser.
 
-**launchStaleWorkflows** Startar om inaktuella arbetsflödesinstanser. Du kan starta om alla inaktuella instanser eller bara inaktuella instanser för en viss modell. Du kan också testa åtgärden för att se resultaten utan att faktiskt utföra åtgärden.
+**startStaleWorkflows** Startar om inaktuella arbetsflödesinstanser. Du kan starta om alla inaktuella instanser eller bara inaktuella instanser för en viss modell. Du kan också testa åtgärden för att se resultaten utan att faktiskt utföra åtgärden.
 
 * Argument:
 
    * Modell: (Valfritt) ID:t för den modell som åtgärden tillämpas på. Ange ingen modell för att använda åtgärden på inaktuella instanser av alla arbetsflödesmodeller. ID är sökvägen till modellnoden, till exempel:
 
       `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
-   * Torr körning: (Valfritt) Ange ett värde på om du `true` vill visa resultatet av åtgärden utan att utföra åtgärden. Standardvärdet för `false` utför åtgärden.
+   * Torr körning: (Valfritt) Ange värdet `true` om du vill visa resultatet av åtgärden utan att utföra åtgärden. Standardvärdet `false` gör att åtgärden utförs.
 
 * Returnerat värde: En lista över arbetsflödesinstanser som har startats om.
 
-**fetchModelList** Visar alla arbetsflödesmodeller.
+**** fetchModelListVisar alla arbetsflödesmodeller.
 
 * Argument: ingen
 * Returnerat värde: Tabelldata som identifierar arbetsflödesmodellerna inklusive kolumnerna ModelId och ModelName.
 
-**countRunningWorkflows** Returnerar antalet arbetsflödesinstanser som körs. Du kan hämta antalet instanser som körs för alla arbetsflödesmodeller eller för en viss modell.
+**** countRunningWorkflowsReturnerar antalet arbetsflödesinstanser som körs. Du kan hämta antalet instanser som körs för alla arbetsflödesmodeller eller för en viss modell.
 
 * Argument:
 
@@ -186,7 +186,7 @@ Mer information om hur du skapar MBeans för att hantera tjänster med JMX-konso
 
 * Returnerat värde: Antalet arbetsflödesinstanser som körs.
 
-**countCompletedWorkflows** Returnerar antalet slutförda arbetsflödesinstanser. Du kan hämta antalet slutförda instanser för alla arbetsflödesmodeller eller för en viss modell.
+**count** CompletedWorkflowsReturnerar antalet slutförda arbetsflödesinstanser. Du kan hämta antalet slutförda instanser för alla arbetsflödesmodeller eller för en viss modell.
 
 * Argument:
 
@@ -196,7 +196,7 @@ Mer information om hur du skapar MBeans för att hantera tjänster med JMX-konso
 
 * Returnerat värde: Antalet slutförda arbetsflödesinstanser.
 
-**clearCompleted** Tar bort poster för slutförda arbetsflöden med en viss ålder från databasen. Använd den här åtgärden regelbundet för att minimera storleken på databasen när du använder arbetsflöden i stor utsträckning. Du kan rensa slutförda instanser för alla modeller eller bara instanser för en viss modell. Du kan också testa åtgärden för att se resultaten utan att utföra åtgärden.
+**** purgeCompletedTar bort poster för slutförda arbetsflöden med en viss ålder från databasen. Använd den här åtgärden regelbundet för att minimera storleken på databasen när du använder arbetsflöden i stor utsträckning. Du kan rensa slutförda instanser för alla modeller eller bara instanser för en viss modell. Du kan också testa åtgärden för att se resultaten utan att utföra åtgärden.
 
 * Argument:
 
@@ -204,7 +204,7 @@ Mer information om hur du skapar MBeans för att hantera tjänster med JMX-konso
 
       `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
    * Antal dagar sedan arbetsflödet har slutförts: Antalet dagar som arbetsflödesinstanserna har försatts i slutfört läge.
-   * Torr körning: (Valfritt) Ange ett värde på om du `true` vill visa resultatet av åtgärden utan att utföra åtgärden. Standardvärdet för `false` utför åtgärden.
+   * Torr körning: (Valfritt) Ange värdet `true` om du vill visa resultatet av åtgärden utan att utföra åtgärden. Standardvärdet `false` gör att åtgärden utförs.
 
 * Returnerat värde: Tabelldata om de slutförda arbetsflödesinstanserna som rensas, inklusive följande kolumner:
 
@@ -226,21 +226,21 @@ Information om CRX-databasen
 
 **Namn** Namnet på JCR-databasimplementeringen. Skrivskyddad.
 
-**Version** Databasens implementeringsversion. Skrivskyddad.
+**** Version Databasens implementeringsversion. Skrivskyddad.
 
-**HomeDir** Katalogen där databasen finns. Standardplatsen är &lt;QuickStart_Jar_Location>/crx-quickstart/database. Skrivskyddad.
+**** HomeDirKatalogen där databasen finns. Standardplatsen är &lt;QuickStart_Jar_Location>/crx-quickstart/database. Skrivskyddad.
 
-**CustomerName** Namnet på kunden som programvarulicensen utfärdas till. Skrivskyddad.
+**** CustomerName Namnet på kunden som programvarulicensen utfärdas till. Skrivskyddad.
 
-**LicenseKey** Den unika licensnyckeln för den här installationen av databasen. Skrivskyddad.
+**** LicenseKeyDen unika licensnyckeln för den här installationen av databasen. Skrivskyddad.
 
-**AvailableDiskSpace** Det diskutrymme som är tillgängligt för den här instansen av databasen, i MB. Skrivskyddad.
+**** AvailableDiskSpaceDet diskutrymme som är tillgängligt för den här instansen av databasen, i MB. Skrivskyddad.
 
-**MaximumNumberOfOpenFiles** Det antal filer som kan öppnas samtidigt. Skrivskyddad.
+**** MaximumNumberOfOpenFiles Det antal filer som kan öppnas samtidigt. Skrivskyddad.
 
-**SessionTracker** Värdet på systemvariabeln crx.debug.sessions. true anger en felsökningssession. false anger en normal session. Läs/skriv.
+**** SessionTrackerVärdet på systemvariabeln crx.debug.sessions. true anger en felsökningssession. false anger en normal session. Läs/skriv.
 
-**Beskriver** en uppsättning nyckelvärdepar som representerar databasegenskaper. Alla egenskaper är skrivskyddade.
+**BeskrivningarEn** uppsättning nyckelvärdepar som representerar databasegenskaper. Alla egenskaper är skrivskyddade.
 
 <table>
  <tbody>
@@ -312,7 +312,7 @@ Information om CRX-databasen
   </tr>
   <tr>
    <td>node.type.management.primary.item.name.supported</td>
-   <td>true anger att databasen aktiverar noddefinitioner så att de innehåller ett primärt objekt som underordnat objekt. Ett primärt objekt kan nås med API:t utan att objektnamnet är känt.</td>
+   <td>true anger att databasen aktiverar noddefinitioner så att de innehåller ett primärt objekt som underordnat objekt. Ett primärt objekt kan nås via API utan att objektnamnet är känt.</td>
   </tr>
   <tr>
    <td>level.2.supported</td>
@@ -376,7 +376,7 @@ Information om CRX-databasen
   </tr>
   <tr>
    <td>crx.cluster.preferredMaster</td>
-   <td>true anger att den här klusternoden är den primära huvudnoden i klustret.</td>
+   <td>true anger att den här klusternoden är den rekommenderade överordnad i klustret.</td>
   </tr>
   <tr>
    <td>option.transactions.supported</td>
@@ -441,7 +441,7 @@ Information om CRX-databasen
   </tr>
   <tr>
    <td>crx.cluster.master</td>
-   <td>true anger att den här databasnoden är huvudnoden i klustret.</td>
+   <td>true anger att den här databasnoden är den överordnad noden i klustret.</td>
   </tr>
   <tr>
    <td>level.1.supported</td>
@@ -490,21 +490,21 @@ Information om CRX-databasen
  </tbody>
 </table>
 
-**WorkspaceNames** Namnen på arbetsytorna i databasen. Skrivskyddad.
+**** WorkspaceNamesNamnen på arbetsytorna i databasen. Skrivskyddad.
 
-**DataStoreGarbageCollectionDelay** Den tid i millisekunder som skräpinsamlingen strömmar efter skanning av var tionde nod. Läs/skriv.
+**** DataStoreGarbageCollectionDelay Den tid i millisekunder som skräpinsamlingen strömmar efter genomsökning av varje tionde nod. Läs/skriv.
 
-**Säkerhetskopieringsfördröjning** Den tid i millisekunder som säkerhetskopieringsprocessen går mellan varje steg i säkerhetskopieringen. Läs/skriv.
+**** Säkerhetskopiera fördröjning Den tid i millisekunder som säkerhetskopieringsprocessen går mellan varje steg i säkerhetskopieringen. Läs/skriv.
 
-**BackupInProgress** Värdet true anger att en säkerhetskopieringsprocess körs. Skrivskyddad.
+**Värdet** BackupInProgressVärdet true anger att en säkerhetskopieringsprocess körs. Skrivskyddad.
 
-**Säkerhetskopieringsförlopp** för den aktuella säkerhetskopian, procentandelen av alla filer som har säkerhetskopierats. Skrivskyddad.
+**Säkerhetskopiera** förlopp Den procentandel av alla filer som har säkerhetskopierats för den aktuella säkerhetskopian. Skrivskyddad.
 
-**CurrentBackupTarget** För den aktuella säkerhetskopian är den ZIP-fil där säkerhetskopierade filer lagras. När en säkerhetskopiering inte pågår visas inget värde. Skrivskyddad.
+**** CurrentBackupTarget För den aktuella säkerhetskopian är den ZIP-fil där säkerhetskopierade filer lagras. När en säkerhetskopiering inte pågår visas inget värde. Skrivskyddad.
 
-**BackupwasSuccessful** Värdet true anger att inga fel har inträffat under den aktuella säkerhetskopieringen eller att ingen säkerhetskopiering pågår. false anger att ett fel uppstod under den aktuella säkerhetskopieringen. Skrivskyddad.
+**** BackupwasSuccessfulVärdet true anger att inga fel har inträffat under den aktuella säkerhetskopieringen eller att ingen säkerhetskopiering pågår. false anger att ett fel uppstod under den aktuella säkerhetskopieringen. Skrivskyddad.
 
-**BackupResult** Status för den aktuella säkerhetskopian. Följande värden är möjliga:
+**** Säkerhetskopiera resultat Status för den aktuella säkerhetskopian. Följande värden är möjliga:
 
 * Säkerhetskopiering pågår: En säkerhetskopia körs.
 * Säkerhetskopieringen avbröts: Säkerhetskopieringen har avbrutits.
@@ -514,23 +514,23 @@ Information om CRX-databasen
 
 Skrivskyddad.
 
-**TAROptimizationRunningSince** Den tidpunkt då den aktuella TAR-filoptimeringsprocessen började. Skrivskyddad.
+**Tjäroptimering** KörningSedanDen tidpunkt då den aktuella TAR-filoptimeringsprocessen påbörjades. Skrivskyddad.
 
-**TAROptimizationDelay** Den tid i millisekunder som TR-optimeringsprocessen går mellan varje steg i processen. Läs/skriv.
+**** TjäroptimeringDelayDen tid i millisekunder som TR-optimeringsprocessen går mellan varje steg i processen. Läs/skriv.
 
 **ClusterProperties** En uppsättning nyckelvärdepar som representerar klusteregenskaper och -värden. Varje rad i tabellen representerar en klusteregenskap. Skrivskyddad.
 
-**ClusterNodes** Medlemmarna i databasklustret.
+**** ClusterNodesMedlemmarna i databasklustret.
 
-**ClusterId** Identifieraren för det här databaskluster. Skrivskyddad.
+**** ClusterIdIdentifieraren för det här databaskluster. Skrivskyddad.
 
-**ClusterMasterId** Identifieraren för databasklustrets huvudnod. Skrivskyddad.
+**** ClusterMasterIdIdentifieraren för den överordnad noden i det här databaskluster. Skrivskyddad.
 
-**ClusterNodeId** Identifieraren för den här noden i databaskluster. Skrivskyddad.
+**Cluster** NodeIdIdentifieraren för den här noden i databaskluster. Skrivskyddad.
 
 ### Användning {#operations-1}
 
-**createWorkspace** Skapar en arbetsyta i den här databasen.
+**** createWorkspaceSkapar en arbetsyta i den här databasen.
 
 * Argument:
 
@@ -538,7 +538,7 @@ Skrivskyddad.
 
 * Returnerat värde: ingen
 
-**runDataStoreGarbageCollection** Kör skräpinsamling på databasnoderna.
+**runDataStoreGarbageCollectionKör skräpinsamlingen på databasnoderna.** 
 
 * Argument:
 
@@ -546,51 +546,51 @@ Skrivskyddad.
 
 * Returnerat värde: ingen
 
-**stopDataStoreGarbageCollection** Stoppar en skräpinsamling för datalager som körs.
+**** stopDataStoreGarbageCollectionStoppar en skräpinsamling för datalager som körs.
 
 * Argument: ingen
 * Returnerat värde: strängbeteckning för aktuell status
 
-**startBackup** Säkerhetskopierar databasdata i en ZIP-fil.
+**** startBackup Säkerhetskopierar databasdata i en ZIP-fil.
 
 * Argument:
 
-   * `target`: (Valfritt) Ett `String` värde som representerar namnet på den ZIP-fil eller katalog där databasdata ska arkiveras. Om du vill använda en ZIP-fil inkluderar du filnamnstillägget ZIP. Om du vill använda en katalog ska du inte inkludera något filnamnstillägg.
+   * `target`: (Valfritt) Ett  `String` värde som representerar namnet på den ZIP-fil eller katalog där databasdata ska arkiveras. Om du vill använda en ZIP-fil inkluderar du filnamnstillägget ZIP. Om du vill använda en katalog ska du inte inkludera något filnamnstillägg.
 
       Om du vill utföra en stegvis säkerhetskopiering anger du katalogen som tidigare användes för säkerhetskopieringen.
 
       Du kan ange en absolut eller relativ sökväg. Relativa sökvägar är relativa till den överordnade för crx-quickstart-katalogen.
 
-      När du inte anger något värde används standardvärdet för `backup-currentdate.zip` , där `currentdate` är i formatet `yyyyMMdd-HHmm`.
+      När du inte anger något värde används standardvärdet `backup-currentdate.zip`, där `currentdate` har formatet `yyyyMMdd-HHmm`.
 
 * Returnerat värde: ingen
 
-**cancelBackup** Stoppar den aktuella säkerhetskopieringsprocessen och tar bort det temporära arkivet som processen skapade för arkivering av data.
+**Avbryt** säkerhetskopieringAvbryter den aktuella säkerhetskopieringsprocessen och tar bort det tillfälliga arkivet som processen skapade för arkivering av data.
 
 * Argument: ingen
 * Returnerat värde: ingen
 
-**blockRepositoryWrites** Blockerar ändringar i databasdata. Alla databassäkerhetskopieringslyssnare meddelas om blocket.
+**** blockRepositoryWritesBlocks ändringar i databasdata. Alla databassäkerhetskopieringslyssnare meddelas om blocket.
 
 * Argument: ingen
 * Returnerat värde: ingen
 
-**unblockRepositoryWrites** Tar bort blocket från databasen. Alla databassäkerhetskopieringslyssnare meddelas om att block har tagits bort.
+**unblock** RepositoryWritesTar bort blocket från databasen. Alla databassäkerhetskopieringslyssnare meddelas om att block har tagits bort.
 
 * Argument: ingen
 * Returnerat värde: ingen
 
-**starttarOptimization** Startar optimeringsprocessen för TAR-filen med standardvärdet för tarOptimizationDelay.
+**** startTAROptimizationStartar optimeringsprocessen för TAR-filen med standardvärdet för tarOptimizationDelay.
 
 * Argument: ingen
 * Returnerat värde: ingen
 
-**stoptarOptimization** Stoppar TAR-filoptimering.
+**Optimering av** stoptarOptimizationStops TAR-filer.
 
 * Argument: ingen
 * Returnerat värde: ingen
 
-**tarIndexMerge** Sammanfogar de övre indexfilerna för alla TAR-uppsättningar. De vanligaste indexfilerna är filer med olika huvudversioner. Följande filer sammanfogas till filen index_3_1.tar: index_1_1.tar, index_2_0.tar, index_3_0.tar. De filer som har sammanfogats tas bort (i föregående exempel tas index_1_1.tar, index_2_0.tar och index_3_0.tar bort).
+**** tarIndexMergeMerges the top index files of all TAR sets. De vanligaste indexfilerna är filer med olika huvudversioner. Följande filer sammanfogas till filen index_3_1.tar: index_1_1.tar, index_2_0.tar, index_3_0.tar. De filer som har sammanfogats tas bort (i föregående exempel tas index_1_1.tar, index_2_0.tar och index_3_0.tar bort).
 
 * Argument:
 
@@ -598,30 +598,30 @@ Skrivskyddad.
 
 * Returnerat värde: ingen
 
-**becomesClusterMaster** Anger denna databasnod som huvudnod i klustret. Om det inte redan är en huvudserver stoppar det här kommandot den aktuella huvudinstansens avlyssnare och startar en huvudavlyssnare på den aktuella noden. Den här noden anges sedan som huvudnod och startas om, vilket gör att alla andra noder i klustret (dvs. de som styrs av huvudnoden) ansluter till den här instansen.
+**** becomesClusterMasterAnger den här databasnoden som överordnad nod i klustret. Om det inte redan är överordnad stoppar det här kommandot den aktuella överordnad instansens avlyssnare och startar en överordnad avlyssnare på den aktuella noden. Den här noden anges sedan som den överordnad noden och startas om, vilket gör att alla andra noder i klustret (dvs. de som styrs av den överordnad) ansluter till den här instansen.
 
 * Argument: ingen
 * Returnerat värde: ingen
 
-**joinCluster** Lägger till den här databasen i ett kluster som en nod som styrs av klusterhanteraren. Du måste ange ett användarnamn och lösenord för autentisering. Anslutningen använder grundläggande autentisering. Säkerhetsuppgifterna är base-64-kodade innan de skickas till servern.
+**joinClusterLägger** till den här databasen i ett kluster som en nod som styrs av överordnad i klustret. Du måste ange ett användarnamn och lösenord för autentisering. Anslutningen använder grundläggande autentisering. Säkerhetsuppgifterna är base-64-kodade innan de skickas till servern.
 
 * Argument:
 
-   * `master`: Ett strängvärde som representerar IP-adressen eller datornamnet för den dator som kör huvuddatabasnoden.
+   * `master`: Ett strängvärde som representerar IP-adressen eller datornamnet för den dator som kör den överordnad databasnoden.
    * `username`: Namnet som ska användas för att autentisera med klustret.
    * `password`: Lösenordet som ska användas för autentisering.
 
 * Returnerat värde: ingen
 
-**traversalCheck** Traverses och åtgärdar eventuellt inkonsekvenser i ett underträd som börjar vid en viss nod. Detta beskrivs ingående i dokumentationen om Persistence Managers.
+**traversalCheckTraverses** och åtgärdar eventuellt inkonsekvenser i ett underträd som börjar vid en viss nod. Detta beskrivs ingående i dokumentationen om Persistence Managers.
 
-**consistentCheck** Checks and optional fixes consistent in the Datastore. Detta beskrivs utförligt i dokumentationen om datalagret.
+**** consistentCheckChecks och alternativt korrigerar konsekvens i datalagret. Detta beskrivs utförligt i dokumentationen om datalagret.
 
 ## Databasstatistik (TimeSeries) {#repository-statistics-timeseries}
 
-Värdet för fältet TimeSeries för varje statistisk typ som `org.apache.jackrabbit.api.stats.RepositoryStatistics` definieras.
+Värdet för fältet TimeSeries för varje statistiktyp som `org.apache.jackrabbit.api.stats.RepositoryStatistics` definierar.
 
-* Domain: `com.adobe.granite`
+* Domän: `com.adobe.granite`
 * Typ: `TimeSeries`
 * Namn: Ett av följande värden från klassen `org.apache.jackrabbit.api.stats.RepositoryStatistics.Type` Enum:
 
@@ -666,22 +666,22 @@ Statistisk information om databasfrågor.
 
 ### Attribut {#attributes-2}
 
-**SlowFrågar** information om databasfrågor som tagit längst tid att slutföra. Skrivskyddad.
+**** SlowQueriesInformation om databasfrågor som tagit längst tid att slutföra. Skrivskyddad.
 
-**SlowQueriesQueueSize** Det maximala antalet frågor som ska tas med i listan SlowQueries. Läs/skriv.
+**** SlowQueriesQueueSizeDet maximala antalet frågor som ska tas med i listan SlowQueries. Läs/skriv.
 
-**PopularQueries** Information om de databasfrågor som har uppstått mest. Skrivskyddad.
+**PopularQueriesInformation** om databasfrågor som har uppstått mest. Skrivskyddad.
 
-**PopularQueriesQueueSize** Det maximala antalet frågor i PopularQueries-listan. Läs/skriv.
+**PopularQueriesQueueSizeDet maximala antalet frågor i PopularQueries-listan.** Läs/skriv.
 
 ### Användning {#operations-2}
 
-**clearSlowQueriesQueue** Tar bort alla frågor från listan SlowQueries.
+**clear** SlowQueriesQueueTar bort alla frågor från listan SlowQueries.
 
 * Argument: ingen
 * Returnerat värde: ingen
 
-**clearPopularQueriesQueue** Tar bort alla frågor från PopularQueries-listan.
+**clear** PopularQueriesQueueTar bort alla frågor från PopularQueries-listan.
 
 * Argument: ingen
 * Returnerat värde: ingen
@@ -693,63 +693,63 @@ Statistisk information om databasfrågor.
 * **Domän:** com.adobe.granite.replication
 * **Typ:** agent
 * **Namn:** inget värde
-* **Egenskaper:** {id=&quot;*Name*&quot;}, där *Name* är värdet för agentens Name-egenskap.
+* **Egenskaper:** {id=&quot;*Name*&quot;}, där  ** name är värdet på agentens Name-egenskap.
 
 ### Attribut {#attributes-3}
 
-**ID** Ett strängvärde som representerar identifieraren för replikeringsagentens konfiguration. Flera agenter kan använda samma konfiguration. Skrivskyddad.
+**Id** A String-värde som representerar identifieraren för replikeringsagentens konfiguration. Flera agenter kan använda samma konfiguration. Skrivskyddad.
 
-**Giltigt** booleskt värde som anger om agenten är korrekt konfigurerad:
+**** Giltigt booleskt värde som anger om agenten är korrekt konfigurerad:
 
 * `true`: Giltig konfiguration.
 * `false` : Konfigurationen innehåller fel.
 
 Skrivskyddad.
 
-**Aktiverat** Ett booleskt värde som anger om agenten är aktiverad:
+**AktiveradEtt booleskt** värde som anger om agenten är aktiverad:
 
 * `true`: Aktiverad.
 * `false`: Inaktiverad.
 
-**QueueBlocked** Ett booleskt värde som anger om kön finns och är blockerad:
+**QueueBlockedEtt booleskt** värde som anger om kön finns och är blockerad:
 
 * `true`: Blockerad. Ett automatiskt försök väntar.
 * `false`: Inte blockerad eller finns inte.
 
 Skrivskyddad.
 
-**QueuePaused** Ett booleskt värde som anger om jobbkön är pausad:
+**QueuePausedEtt booleskt** värde som anger om jobbkön är pausad:
 
 * `true`: Pausad (pausad)
 * `false`: Inte pausad eller finns inte.
 
 Läs/skriv.
 
-**QueueNumEnentries** Ett int-värde som representerar antalet jobb i agentkön. Skrivskyddad.
+**** QueueNumEnentriesEtt int-värde som representerar antalet jobb i agentkön. Skrivskyddad.
 
-**QueueStatusTime** Ett Date-värde som anger tiden på servern när de visade statusvärdena hämtades. Värdet motsvarar den tid då sidan lästes in. Skrivskyddad.
+**Värdet** QueueStatusTimeA Date anger tiden på servern när de visade statusvärdena hämtades. Värdet motsvarar den tid då sidan lästes in. Skrivskyddad.
 
-**QueueNextRetryTime** för blockerade köer, ett datumvärde som anger när nästa automatiska försök görs. Kön blockeras inte när ingen tid visas. Skrivskyddad.
+**** QueueNextRetryTimeFör blockerade köer är ett datumvärde som anger när nästa automatiska försök görs. Kön blockeras inte när ingen tid visas. Skrivskyddad.
 
-**QueueProcessingSedan** ett Date-värde som anger när bearbetningen påbörjades för det aktuella jobbet. Om ingen tid visas är kön antingen blockerad eller inaktiv. Skrivskyddad.
+**** QueueProcessingSinceA Date-värde som anger när bearbetningen påbörjades för det aktuella jobbet. Om ingen tid visas är kön antingen blockerad eller inaktiv. Skrivskyddad.
 
-**QueueLastProcessTime** Ett Date-värde som anger när det föregående jobbet slutfördes. Skrivskyddad.
+**Värdet** QueueLastProcessTimeA Date anger när det föregående jobbet slutfördes. Skrivskyddad.
 
 ### Användning {#operations-3}
 
-**queueForceRetry** för blockerade köer skickar kommandot Försök igen till kön.
+**** queueForceRetryFor blockerade köer skickar kommandot retry till kön.
 
 * Argument: ingen
 * Returnerat värde: ingen
 
-**queueClear** Tar bort alla jobb från kön.
+**queue** ClearTar bort alla jobb från kön.
 
 * Argument: ingen
 * Returnerat värde: ingen
 
 ## Sling Engine {#sling-engine}
 
-Tillhandahåller statistik om HTTP-begäranden så att du kan övervaka prestanda för tjänsten SlingRequestProcessor.
+Tillhandahåller statistik om HTTP-begäranden så att du kan övervaka prestandan för SlingRequestProcessor-tjänsten.
 
 * Domän: org.apache.sling
 * Typ: motor
@@ -759,33 +759,33 @@ Tillhandahåller statistik om HTTP-begäranden så att du kan övervaka prestand
 
 **RequestsCount** Antalet begäranden som har gjorts sedan statistiken senast återställdes.
 
-**MinRequestDurationMsec** Den kortaste tiden (i millisekunder) som krävdes för att bearbeta en begäran sedan statistiken senast återställdes.
+**** MinRequestDurationMsecDen kortaste tiden (i millisekunder) som krävdes för att bearbeta en begäran sedan statistiken senast återställdes.
 
-**MaxRequestDurationMsec** Den längsta tiden (i millisekunder) som krävdes för att bearbeta en begäran sedan statistiken senast återställdes.
+**** MaxRequestDurationMsecDen längsta tiden (i millisekunder) som krävdes för att bearbeta en begäran sedan statistiken senast återställdes.
 
-**StandardDedationDurationMsec** Standardavvikelsen för den tid som krävdes för att bearbeta begäranden. Standardavvikelsen beräknas med hjälp av alla begäranden sedan statistiken senast återställdes.
+**Standardavvikelsen** för den tid som krävdes för att bearbeta begäranden. Standardavvikelsen beräknas med hjälp av alla begäranden sedan statistiken senast återställdes.
 
-**MeanRequestDurationMsec** Den genomsnittliga tid som krävs för att bearbeta en begäran. Medelvärdet beräknas med hjälp av alla begäranden sedan statistiken senast återställdes
+**Mean** RequestDurationMsecDen genomsnittliga tid som krävdes för att bearbeta en begäran. Medelvärdet beräknas med hjälp av alla begäranden sedan statistiken senast återställdes
 
 ### Användning {#operations-4}
 
-**resetStatistics** Anger att all statistik ska vara noll. Återställ statistiken när du behöver analysera bearbetningsprestanda för begäranden under en viss tidsperiod.
+**reset** StatisticsAnger all statistik till noll. Återställ statistiken när du behöver analysera bearbetningsprestanda för begäranden under en viss tidsperiod.
 
 * Argument: ingen
 * Returnerat värde: ingen
 
-**id** Strängbeteckningen för paket-ID:t.
+**** id String-representationen av paket-ID:t.
 
-**installerat** Ett booleskt värde som anger om paketet är installerat:
+**** installedEtt booleskt värde som anger om paketet är installerat:
 
 * `true`: Installerad.
 * `false`: Inte installerat.
 
-**installedBy** ID för den användare som senast installerade paketet.
+**** installedByID för den användare som senast installerade paketet.
 
-**installedDate** Det datum då paketet senast installerades.
+**** installedDateDet datum då paketet senast installerades.
 
-**size** Ett långt värde som innehåller paketets storlek i byte.
+**sizeEtt** långt värde som innehåller paketets storlek i byte.
 
 
 ## Quickstart Launcher {#quickstart-launcher}
@@ -803,7 +803,7 @@ Visar ett meddelande i QuickStart-fönstret.
 
 Argument:
 
-* p1: Ett `String` värde som representerar meddelandet som ska visas. Följande bild visar resultatet av att anropa `log` med p1-värdet `this is a log message`.
+* p1: Ett `String`-värde som representerar meddelandet som ska visas. Följande bild visar resultatet av att anropa `log` med p1-värdet `this is a log message`.
 
 ![launcheruilog](assets/launcheruilog.png)
 
@@ -828,7 +828,7 @@ Anger slutvärdet för serverns startprocess. Förloppsindikatorn i QuickStart-f
 
 ![starcherprogress](assets/launcherprogress.png)
 
-## Tjänster från tredje part {#third-party-services}
+## Tredjepartstjänster {#third-party-services}
 
 Flera tredjepartsserverresurser installerar MBeans som visar attribut och åtgärder för JMX-konsolen. I följande tabell visas resurser från tredje part och länkar till mer information.
 
@@ -863,7 +863,7 @@ Flera tredjepartsserverresurser installerar MBeans som visar attribut och åtgä
      <li>Körning</li>
      <li>Koppling</li>
     </ul> </td>
-   <td><a href="https://docs.oracle.com/javase/8/docs/api/javax/management/package-summary.html">javax.management</a> -paket</td>
+   <td><a href="https://docs.oracle.com/javase/8/docs/api/javax/management/package-summary.html">javax.</a> managementpackage</td>
   </tr>
   <tr>
    <td>java.util.logging</td>
@@ -879,7 +879,7 @@ Flera tredjepartsserverresurser installerar MBeans som visar attribut och åtgä
      <li>packageState</li>
      <li>serviceState</li>
     </ul> </td>
-   <td><a href="https://osgi.org/specification/osgi.enterprise/7.0.0/service.jmx.html#d0e42567">org.osgi.jmx.framework</a> package</td>
+   <td><a href="https://osgi.org/specification/osgi.enterprise/7.0.0/service.jmx.html#d0e42567">org.osgi.jmx.</a> frameworkpackage</td>
   </tr>
  </tbody>
 </table>
@@ -902,7 +902,7 @@ JMX-konsolens huvudsida innehåller en tjänsttabell. Varje rad i tabellen repre
 
 ## Använda externa JMX-program för övervakning {#using-external-jmx-applications-for-monitoring}
 
-Med CRX kan externa program interagera med hanterade bönor (MBeans) via Java Management Extensions (JMX) [](https://docs.oracle.com/javase/6/docs/technotes/guides/management/overview.html). Med generiska konsoler som [JConsole](https://java.sun.com/developer/technicalArticles/J2SE/jconsole.html) eller domänspecifika övervakningsprogram kan du hämta och ställa in CRX-konfigurationer och -egenskaper samt övervaka prestanda och resursanvändning.
+Med CRX kan externa program interagera med hanterade bönor (MBeans) via [Java Management Extensions (JMX)](https://docs.oracle.com/javase/6/docs/technotes/guides/management/overview.html). Om du använder generiska konsoler som [JConsole](https://java.sun.com/developer/technicalArticles/J2SE/jconsole.html) eller domänspecifika övervakningsprogram kan du hämta och ställa in CRX-konfigurationer och -egenskaper samt övervaka prestanda och resursanvändning.
 
 ### Använda JConsole för att ansluta till CRX {#using-jconsole-to-connect-to-crx}
 
@@ -929,13 +929,13 @@ Om du vill aktivera fjärr-JMX-anslutningar måste följande systemegenskap ange
 
 `com.sun.management.jmxremote.port=portNum`
 
-I egenskapen ovan `portNum` är portnumret genom vilket du vill aktivera JMX RMI-anslutningar. Ange ett portnummer som inte används. Förutom att publicera en RMI-anslutning för lokal åtkomst, publicerar den här egenskapen en extra RMI-anslutning i ett privat skrivskyddat register på den angivna porten med ett välkänt namn, &quot;jmxrmi&quot;.
+I egenskapen ovan är `portNum` det portnummer genom vilket du vill aktivera JMX RMI-anslutningar. Ange ett portnummer som inte används. Förutom att publicera en RMI-anslutning för lokal åtkomst, publicerar den här egenskapen en extra RMI-anslutning i ett privat skrivskyddat register på den angivna porten med ett välkänt namn, &quot;jmxrmi&quot;.
 
 När du aktiverar JMX-agenten för fjärrövervakning använder den som standard lösenordsautentisering baserat på en lösenordsfil som måste anges med följande systemegenskap när Java VM startas:
 
 `com.sun.management.jmxremote.password.file=pwFilePath`
 
-I den [relevanta JMX-dokumentationen](https://docs.oracle.com/javase/6/docs/technotes/guides/management/agent.html) finns detaljerade anvisningar om hur du konfigurerar en lösenordsfil.
+Mer information om hur du konfigurerar en lösenordsfil finns i [JMX-dokumentationen](https://docs.oracle.com/javase/6/docs/technotes/guides/management/agent.html).
 
 Exempel:
 
@@ -946,7 +946,7 @@ $ java
   -jar ./cq-quickstart.jar
 ```
 
-### Använda de MBeans som tillhandahålls av CRX {#using-the-mbeans-provided-by-crx}
+### Använda MBeans från CRX {#using-the-mbeans-provided-by-crx}
 
 När du har anslutit till snabbstartprocessen innehåller JConsole ett antal allmänna övervakningsverktyg för den JVM som CRX körs i.
 
@@ -954,7 +954,7 @@ När du har anslutit till snabbstartprocessen innehåller JConsole ett antal all
 
 För att få tillgång till CRX interna övervaknings- och konfigurationsalternativ går du till fliken MBeans och från det hierarkiska innehållsträdet till vänster väljer du de attribut eller åtgärder som du är intresserad av. Till exempel avsnittet com.adobe.granite/Repository/Operations.
 
-I det avsnittet markerar du det önskade attributet eller funktionsmakrot i den vänstra rutan.
+I det avsnittet väljer du önskat attribut eller önskad åtgärd i den vänstra rutan.
 
 ![screen_shot_2012-03-26at115728am](assets/screen_shot_2012-03-26at115728am.png)
 
