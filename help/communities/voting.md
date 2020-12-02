@@ -20,39 +20,39 @@ ht-degree: 0%
 
 # Använda röstning {#using-voting}
 
-Komponenten är ett användbart verktyg som gör att communitymedlemmar kan betygsätta en viss del av innehållet, till exempel ett svar i en QnA-komponent. `Voting` Med komponenten markerar `Voting` medlemmarna upp- eller nedpilarna för att ange sin åsikt.
+Komponenten `Voting` är ett användbart verktyg som gör att communitymedlemmar kan klassificera en viss del av innehållet, till exempel ett svar i en QnA-komponent. Med komponenten `Voting` markerar medlemmarna upp- eller nedpilar för att ange sin åsikt.
 
-## Lägga till omröstning på en sida {#adding-voting-to-a-page}
+## Lägger till röstning på en sida {#adding-voting-to-a-page}
 
-Om du vill lägga till en `Voting` komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att leta reda på `Communities / Voting` och dra den till rätt plats på en sida, t.ex. en position som är relativ till funktionen som användarna kan rösta på.
+Om du vill lägga till en `Voting`-komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att leta reda på `Communities / Voting` och dra den till rätt plats på en sida, t.ex. en relativ position till funktionen som användarna ska rösta på.
 
-Mer information finns i Grunderna för [communitykomponenter](basics.md).
+Mer information finns på [Grunderna för communitykomponenter](basics.md).
 
-När de [nödvändiga klientbiblioteken](essentials-voting.md#essentials-for-client-side) inkluderas visas `Voting` komponenten på det här sättet.
+När de [nödvändiga klientbiblioteken](essentials-voting.md#essentials-for-client-side) inkluderas visas `Voting`-komponenten så här.
 
 ![röstningskomponent](assets/voting-component.png)
 
 ## Konfigurerar röstning {#configuring-voting}
 
-Markera den monterade `Voting` komponent som du vill öppna och välj den `Configure` ikon som öppnar redigeringsdialogrutan.
+Markera den monterade `Voting`-komponenten som ska öppnas och välj ikonen `Configure` som öppnar redigeringsdialogrutan.
 
 ![konfigurera](assets/configure-new.png)
 
-Ange de egenskaper som ska användas för att spela in röster på fliken **[!UICONTROL Texts & Labels]** .
+Under fliken **[!UICONTROL Texts & Labels]** anger du de egenskaper som ska användas för att spela in röster.
 
 ![röstsetikett](assets/voting-label.png)
 
 * **[!UICONTROL Positive Response Label]**
 
-   (*Obligatoriskt*) Egenskapsnamnet internal för ett positivt svar.
+   (*Obligatoriskt*) Namnet på den interna egenskapen för ett positivt svar.
 
 * **[!UICONTROL Negative Response Label]**
 
-   (*Obligatoriskt*) Det interna egenskapsnamnet för ett negativt svar.
+   (*Obligatoriskt*) Namnet på den interna egenskapen för ett negativt svar.
 
 * **[!UICONTROL Tally Name]**
 
-   (*Obligatoriskt*) Det interna, identifierbara egenskapsnamnet för den här instansen av en röstkomponent.
+   (*Obligatoriskt*) Det interna, identifierbara egenskapsnamnet för den här instansen av en röstningskomponent.
 
 ## Site Visitor Experience {#site-visitor-experience}
 
@@ -64,6 +64,6 @@ Ledamöter får endast rösta en gång, men de får när som helst ändra sin r�
 
 Anonym röstning stöds inte. Besökare måste registrera sig (bli medlem) och logga in för att kunna delta i omröstningen en gång.
 
-## Additional Information {#additional-information}
+## Ytterligare information {#additional-information}
 
-Mer information finns på [sidan Voice Essentials](essentials-voting.md) för utvecklare.
+Mer information finns på [sidan Röstningsfunktioner](essentials-voting.md) för utvecklare.
