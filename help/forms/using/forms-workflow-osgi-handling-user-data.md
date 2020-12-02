@@ -22,12 +22,12 @@ Med Forms-centrerade AEM kan ni automatisera Forms-centrerade affärsprocesser. 
 Ett formulärbaserat arbetsflöde kan aktiveras eller startas på något av följande sätt:
 
 * Skicka ett program från AEM Inbox
-* Skicka ett program från AEM [!DNL Forms] app
+* Skicka ett program från AEM [!DNL Forms]-appen
 * Skicka ett anpassat formulär
 * Använda en bevakad mapp
 * Skicka ett interaktivt meddelande eller ett brev
 
-Mer information om Forms-centrerade AEM arbetsflöden och funktioner finns i [Forms-centrerade arbetsflöden i OSGi](/help/forms/using/aem-forms-workflow.md).
+Mer information om Forms-centrerade AEM arbetsflöden och funktioner finns i [Forms-centrerat arbetsflöde på OSGi](/help/forms/using/aem-forms-workflow.md).
 
 ## Användardata och datalager {#user-data-and-data-stores}
 
@@ -82,9 +82,9 @@ Du kan dock inte identifiera eller så kan resultatet vara tvetydigt när du ide
 
 Så här identifierar och får du åtkomst till användardata som lagras för en arbetsflödesinstans:
 
-1. I AEM författarinstans går du till `https://'[server]:[port]'/crx/de` och navigerar till **[!UICONTROL Tools > Query]**.
+1. På AEM författarinstans går du till `https://'[server]:[port]'/crx/de` och navigerar till **[!UICONTROL Tools > Query]**.
 
-   Välj **[!UICONTROL SQL2]** i **[!UICONTROL Type]** listrutan.
+   Välj **[!UICONTROL SQL2]** i listrutan **[!UICONTROL Type]**.
 
 1. Utför någon av följande frågor beroende på vilken information som är tillgänglig:
 
@@ -98,7 +98,7 @@ Så här identifierar och får du åtkomst till användardata som lagras för en
 
    Frågan returnerar platsen för alla arbetsflödesinstanser för den angivna arbetsflödesinitieraren eller den aktuella arbetsflödestilldelaren.
 
-   Följande fråga returnerar till exempel två arbetsflödesinstanser från den `/var/workflow/instances` nod vars arbetsflödesinitierare är `srose`.
+   Följande fråga returnerar till exempel två arbetsflödesinstanser från noden `/var/workflow/instances` vars arbetsflödesinitierare är `srose`.
 
    ![workflow-instance](assets/workflow-instance.png)
 
@@ -106,7 +106,7 @@ Så här identifierar och får du åtkomst till användardata som lagras för en
 
    ![status](assets/status.png)
 
-1. Navigera till arbetsflödesinstansnoden `data/payload/`. Egenskapen lagrar `path` sökvägen till arbetsflödesinstansens nyttolast. Du kan navigera till sökvägen för att komma åt data som lagras i nyttolasten.
+1. Navigera till `data/payload/` i arbetsflödesinstansnoden. Egenskapen `path` lagrar sökvägen till nyttolasten för arbetsflödesinstansen. Du kan navigera till sökvägen för att komma åt data som lagras i nyttolasten.
 
    ![nyttload-path](assets/payload-path.png)
 
@@ -122,38 +122,38 @@ Så här identifierar och får du åtkomst till användardata som lagras för en
 
    >[!NOTE]
    >
-   >AEM [!DNL Forms] lagrar också data i offlineläge. Det är möjligt att data för en arbetsflödesinstans lagras lokalt på enskilda enheter och skickas till [!DNL Forms] servern när programmet synkroniseras med servern.
+   >AEM [!DNL Forms]-appen lagrar även data i offlineläge. Det är möjligt att data för en arbetsflödesinstans lagras lokalt på enskilda enheter och skickas till [!DNL Forms]-servern när programmet synkroniseras med servern.
 
 ### Ta bort användardata {#delete-user-data}
 
 Du måste vara AEM administratör för att kunna ta bort användardata från arbetsflödesinstanser genom att utföra följande steg:
 
-1. Följ instruktionerna i [Access-användardata](/help/forms/using/forms-workflow-osgi-handling-user-data.md#access) och notera följande:
+1. Följ instruktionerna i [Få åtkomst till användardata](/help/forms/using/forms-workflow-osgi-handling-user-data.md#access) och notera följande:
 
    * Sökvägar till arbetsflödesinstanser som är associerade med användaren
    * Status för arbetsflödesinstanserna
    * Sökvägar till nyttolaster för arbetsflödesinstanser
    * Banor till utkast och historik för arbetsflödesinstanser
 
-1. Utför det här steget för arbetsflödesinstanser med statusen **KÖRNING**, **SUSPENDED** eller **STALE** :
+1. Utför det här steget för arbetsflödesinstanser i **KÖRNING**, **SUSPENDED** eller **STALE**-status:
 
    1. Gå till `https://'[server]:[port]'/aem/start.html` och logga in med administratörsautentiseringsuppgifter.
    1. Navigera till **[!UICONTROL Tools > Workflow> Instances]**.
-   1. Välj relevanta arbetsflödesinstanser för användaren och tryck på **[!UICONTROL Terminate]** för att avsluta pågående instanser.
+   1. Välj relevanta arbetsflödesinstanser för användaren och tryck på **[!UICONTROL Terminate]** för att avsluta instanser som körs.
 
       Mer information om hur du arbetar med arbetsflödesinstanser finns i [Administrera arbetsflödesinstanser](/help/sites-administering/workflows-administering.md).
 
-1. Gå till [!DNL CRXDE Lite] konsolen, navigera till nyttolastsökvägen för en arbetsflödesinstans och ta bort `payload` noden.
-1. Navigera till utkastssökvägen för en arbetsflödesinstans och ta bort `draft` noden.
-1. Navigera till historiksökvägen för en arbetsflödesinstans och ta bort `history` noden.
-1. Navigera till arbetsflödets instanssökväg för en arbetsflödesinstans och ta bort `[workflow-instance-ID]` noden för arbetsflödet.
+1. Gå till [!DNL CRXDE Lite]-konsolen, navigera till nyttolastsökvägen för en arbetsflödesinstans och ta bort noden `payload`.
+1. Navigera till utkastssökvägen för en arbetsflödesinstans och ta bort noden `draft`.
+1. Navigera till historiksökvägen för en arbetsflödesinstans och ta bort noden `history`.
+1. Navigera till arbetsflödesinstanssökvägen för en arbetsflödesinstans och ta bort noden `[workflow-instance-ID]` för arbetsflödet.
 
    >[!NOTE]
    >
    >Om du tar bort arbetsflödesinstansnoden tas arbetsflödesinstansen bort för alla arbetsflödesdeltagare.
 
 1. Upprepa steg 2-6 för alla arbetsflödesinstanser som identifieras för en användare.
-1. Identifiera och ta bort offlineutkast och överföringsdata från AEM [!DNL Forms] -app-utkorgen för arbetsflödesdeltagare för att undvika att skickas till servern.
+1. Identifiera och ta bort offlineutkast och överföringsdata från AEM [!DNL Forms]-apputkorgen för arbetsflödesdeltagare för att undvika att skickas till servern.
 
 Du kan också använda API:er för att komma åt och ta bort noder och egenskaper. Mer information finns i följande dokument.
 
