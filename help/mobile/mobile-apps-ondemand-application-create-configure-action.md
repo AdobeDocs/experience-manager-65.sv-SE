@@ -11,6 +11,9 @@ topic-tags: authoring-on-demand-services-app
 discoiquuid: ccafd49a-5c8a-44eb-9b0c-37070560bb52
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '469'
+ht-degree: 0%
 
 ---
 
@@ -23,24 +26,24 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## Skapa ett on demand-program {#creating-an-on-demand-application}
 
-Att skapa en app är ofta det första steget mot att skapa och hantera AEM Mobile On-Demand-innehåll, och det görs ofta på AEM-administratörsnivå. Det representerar ett innehållskal som kan visas på mobila enheter och som kan visa innehåll som författaren skapat, t.ex. artiklar, bilder, samlingar osv.
+Att skapa en app är ofta det första steget mot att skapa och hantera AEM Mobile On-Demand-innehåll, och det görs ofta på AEM administratörsnivå. Det representerar ett innehållskal som kan visas på mobila enheter och som kan visa innehåll som författaren skapat, t.ex. artiklar, bilder, samlingar osv.
 
-Information om din app kan visas på Dashboard eller AEM Mobile Control Center.
+Information om ditt program kan visas på kontrollpanelen eller i AEM Mobile Control Center.
 
 >[!NOTE]
 >
->Kontrollpanelen är en serie användbara paneler som ger en översikt över appens innehåll, metadata och anslutningsstatus för AEM Mobile On-Demand.
+>Kontrollpanelen är en serie användbara paneler som ger en översikt över programmets innehåll, metadata och anslutningsstatus för AEM Mobile On-Demand.
 >
->Mer information finns i [AEM Mobile Application Dashboard](/help/mobile/mobile-apps-ondemand-application-dashboard.md) .
+>Mer information finns i [AEM Mobile Application Dashboard](/help/mobile/mobile-apps-ondemand-application-dashboard.md).
 
 **Så här skapar du en on demand-app:**
 
 1. Välj **Mobil** från sidospåret.
-1. Välj **Appar** i Navigering.
+1. Välj **Appar** i navigeringen.
 1. Klicka på **Skapa** och välj **App** i listrutan.
 1. Välj mallen för mobilappar och klicka på **Nästa**.
-1. Ange appegenskaper som **Title**, **Name** och **Description**.
-1. Click **Next**.
+1. Ange appegenskaper som **Title**, **Name**, **Description**.
+1. Klicka på **Nästa**.
 1. Om du känner till detta anger du information om molnkonfigurationen. Klicka annars på **Skapa**.
 1. Klicka på **Klar** för att visa din nya AEM Mobile-app i katalogen.
 
@@ -63,11 +66,11 @@ Du måste ha en befintlig mobilappsmall (eller en app som har en appmall) för a
 
 När du har skapat en On-Demand-app från kontrollpanelen för program är nästa steg att koppla din app till molnkonfigurationen.
 
-Mer information finns i [Associera din app med molnkonfigurationen](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md) .
+Mer information finns i [Associera din app med molnkonfigurationen](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md).
 
 ### Komma framåt {#getting-ahead}
 
-När du är bekant med att skapa ett on demand-program och därmed koppla det programmet till en molnkonfiguration, se [Åtgärder](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md)för innehållshantering.
+När du är bekant med att skapa ett on demand-program och därmed koppla det programmet till en molnkonfiguration, se [Innehållshanteringsåtgärder](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md).
 
 **Innehållshanteringsåtgärder** innefattar att skapa och hantera följande innehåll:
 
@@ -79,5 +82,5 @@ När du är bekant med att skapa ett on demand-program och därmed koppla det pr
 
 Mer information om roller och ansvar för en administratör och utvecklare finns i resurserna nedan:
 
-* [Utveckla AEM-innehåll för AEM Mobile On Demand-tjänster](/help/mobile/aem-mobile-on-demand.md)
-* [Administrera innehåll för att använda AEM Mobile On Demand Services](/help/mobile/aem-mobile.md)
+* [Utveckla AEM för AEM Mobile On-demand Services](/help/mobile/aem-mobile-on-demand.md)
+* [Administrera innehåll för användning av AEM Mobile On-demand Services](/help/mobile/aem-mobile.md)
