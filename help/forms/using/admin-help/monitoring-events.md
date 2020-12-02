@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 379957bf-0634-4182-b269-1b010da4c90f
 translation-type: tm+mt
 source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+workflow-type: tm+mt
+source-wordcount: '989'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ När granskningsfunktionen är aktiverad kan du med dokumentsäkerhet övervaka 
 
 **Användare:** Kan visa granskade händelser för sina policyskyddade dokument och för alla skyddade dokument som de tar emot och använder.
 
-**Koordinatorer för principuppsättning:** Kan visa granskade händelser, inklusive dokument- och principhändelser, för dokument som skyddas av policyer från sina uppsättningar av policyer.
+**Koordinatorer för principuppsättning:** Kan visa granskade händelser, inklusive dokument- och principhändelser, för dokument som skyddas av profiler från sina principuppsättningar.
 
 **Administratörer:** Kan visa granskade händelser som är relaterade till alla policyskyddade dokument och användare. Administratörer kan även spåra andra typer av händelser, bland annat användare, dokument, principer och systemhändelser.
 
@@ -29,7 +32,7 @@ När granskningsfunktionen är aktiverad kan du med dokumentsäkerhet övervaka 
 >
 >Händelser som utförs på en kopia av ett policyskyddat dokument spåras också som händelser i det ursprungliga skyddade dokumentet.
 
-(Se Alternativ för [händelsegranskning](/help/forms/using/admin-help/configuring-client-server-options.md#event-auditing-options).)
+(Se [Alternativ för händelsegranskning](/help/forms/using/admin-help/configuring-client-server-options.md#event-auditing-options).)
 
 En misslyckad händelse registreras om en obehörig användare försöker visa ett dokument eller försöker logga in med ett felaktigt användarnamn eller lösenord.
 
@@ -59,13 +62,13 @@ Du kan söka efter händelser på sidan Händelser genom att använda en kombina
 
 **Händelser som rör mig:** Användare kan hitta händelser för alla principskyddade dokument som de har skapat eller tagit emot. Om en användare till exempel öppnar, visar eller skriver ut ett dokument som en annan person har skyddat, ser användaren bara dessa händelser för det dokumentet.
 
-**Händelser som rör mina dokument:** Användarna kan hitta alla händelser som är relaterade till deras egna policyskyddade dokument. Användarna ser händelser som genereras av alla som hanterar deras dokument.
+**Händelser som rör mina dokument:** Användare kan hitta alla händelser som är relaterade till deras egna policyskyddade dokument. Användarna ser händelser som genereras av alla som hanterar deras dokument.
 
-**Koordinatorer för principuppsättning:** Kan visa granskade händelser, inklusive dokument- och principhändelser, för dokument som skyddas av policyer från sina uppsättningar av policyer. Tillgängliga alternativ:
+**Koordinatorer för principuppsättning:** Kan visa granskade händelser, inklusive dokument- och principhändelser, för dokument som skyddas av profiler från sina principuppsättningar. Tillgängliga alternativ:
 
-**Dokumenthändelser där jag är koordinator för principuppsättning:** Koordinatorer för principuppsättningar som har behörighet att visa händelser kan hitta händelser som är relaterade till dokument som skyddas av profiler från deras principuppsättningar.
+**Dokumenthändelser där jag är principuppsättningskoordinator:** Principuppsättningskoordinatorer som har behörighet att visa händelser kan hitta händelser som är relaterade till dokument som skyddas av principer i deras principuppsättningar.
 
-**Policyhändelser där jag är koordinator för principuppsättning:** Koordinatorer för principuppsättningar som har behörighet att visa händelser kan hitta händelser som är relaterade till principer från sina principuppsättningar.
+**Principhändelser där jag är principuppsättningskoordinator:** Principuppsättningskoordinatorer som har behörighet att visa händelser kan hitta händelser som är relaterade till principer från sina principuppsättningar.
 
 **Administratörer:** Kan visa granskade händelser som är relaterade till alla policyskyddade dokument och användare. Administratörer kan även spåra andra typer. Administratörer kan dessutom dela upp händelsesökningar ytterligare efter typ av användare:
 
@@ -78,7 +81,7 @@ Du kan söka efter händelser på sidan Händelser genom att använda en kombina
 1. Klicka på Händelser på dokumentsäkerhetssidan.
 1. Markera de sökvillkor som du vill använda i söklistan. Beroende på vad du har valt i söklistan visas en andra lista med ytterligare sökvillkor. Skriv sökvillkoren i textrutan, om tillämpligt.
 
-   Mer information om de specifika händelsetyperna finns i Alternativ för [händelsegranskning](/help/forms/using/admin-help/configuring-client-server-options.md#event-auditing-options).
+   Mer information om de specifika händelsetyperna finns i [Alternativ för händelsegranskning](/help/forms/using/admin-help/configuring-client-server-options.md#event-auditing-options).
 
 1. I listan Användare väljer du den användartyp som utförde händelsen:
 
@@ -103,6 +106,6 @@ Du kan söka efter händelser på sidan Händelser genom att använda en kombina
 
 Du kan sortera händelselistan efter kolumnrubriker för att enklare hitta händelser. Triangelikoner bredvid kolumnrubriken anger vilken kolumn som används för att sortera. En uppåtriktad triangel visar stigande ordning, medan en nedåtriktad triangel anger fallande ordning.
 
-1. Klicka på en kolumnrubrik.
+1. Klicka på lämplig kolumnrubrik.
 1. Om du vill ändra sorteringsordningen klickar du på kolumnrubriken igen.
 
