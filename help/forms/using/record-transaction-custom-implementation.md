@@ -21,11 +21,11 @@ ht-degree: 0%
 
 Använd TransactionRecorder-API:t för att registrera åtgärder som inte räknas som transaktioner automatiskt
 
-Du kan använda en anpassad kod för att skicka ett PDF-formulär, för att skicka förhandsgransknings-URL:er för agentanvändargränssnittet till slutanvändare för att förhandsgranska en interaktiv kommunikation eller för att skicka ett formulär med anpassade metoder i stället för att använda skickningsmetoder som finns i AEM Forms. Alla tidigare nämnda åtgärder och anpassade implementeringar av AEM Forms API:er räknas inte som transaktioner. AEM Forms tillhandahåller ett API, [TransactionRecorder](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/aem/transaction/core/ITransactionRecorder.html), för att registrera sådana åtgärder som transaktioner.
+Du kan använda en anpassad kod för att skicka ett PDF-formulär, för att skicka förhandsgransknings-URL:er för agentanvändargränssnittet till slutanvändare för att förhandsgranska en interaktiv kommunikation eller för att skicka ett formulär med anpassade metoder i stället för att använda de sändningsmetoder som finns i AEM Forms. Alla tidigare nämnda åtgärder och anpassade implementeringar av AEM Forms API:er räknas inte som transaktioner. AEM Forms tillhandahåller ett API, [TransactionRecorder](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/aem/transaction/core/ITransactionRecorder.html), för att registrera åtgärder som transaktioner.
 
-Om du vill spela in en transaktion skriver du [standardsäljservern](https://helpx.adobe.com/experience-manager/using/custom-sling-servlets.html) och anropar servertjänsten från en klient för att registrera en transaktion. Du kan anropa servleten med AJAX eller någon annan standardmetod.
+Om du vill spela in en transaktion skriver du [standardservern för sling](https://helpx.adobe.com/experience-manager/using/custom-sling-servlets.html) och anropar serverleten från en klient för att spela in en transaktion. Du kan anropa servleten med AJAX eller någon annan standardmetod.
 
-## Exempel på kod på serversidan {#sample-server-sided-code}
+## Exempel på kod för serversidan {#sample-server-sided-code}
 
 Du kan använda exempelkoden nedan för att köra TransactionRecorder API från en JAVA-klass med ett anpassat OSGi-paket.
 
