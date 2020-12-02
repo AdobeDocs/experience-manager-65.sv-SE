@@ -1,6 +1,6 @@
 ---
-title: Versionsinformation om AEM Sites
-description: Versionsinformation för webbplatser som tillhör Adobe Experience Manager 6.5.
+title: Versionsinformation för AEM Sites
+description: Versionsinformation om webbplatser som tillhör Adobe Experience Manager 6.5.
 translation-type: tm+mt
 source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
 workflow-type: tm+mt
@@ -10,14 +10,14 @@ ht-degree: 0%
 ---
 
 
-# Versionsinformation om AEM Sites {#aem-sites-release-notes}
+# Versionsinformation för AEM Sites {#aem-sites-release-notes}
 
 Se följande för AEM Sites 6.5-förbättringar i detalj:
 
 ## Utveckling av komponenter och mallar {#component-amp-template-development}
 
 * Maven Project Archetype 18+ för nya projekt, se [Github för versionsinformation](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype/releases).
-* Single-page App Maven Project Archetype 1.0.6+ for new projects, see [Github for release notes](https://github.com/adobe/aem-spa-project-archetype/releases).
+* Single-page App Maven Project Archetype 1.0.6+ för nya projekt, se [Github för versionsinformation](https://github.com/adobe/aem-spa-project-archetype/releases).
 * HTML version 1.4, se [Github för versionsinformation](https://github.com/adobe/htl-spec/releases/tag/1.4).
 
    * operatorn &quot;in&quot; för strängar, arrayer och objekt:
@@ -49,39 +49,39 @@ Se följande för AEM Sites 6.5-förbättringar i detalj:
 * Clientlib Manager: gjorde Google Closure Compiler till standard för minification of JavaScript clientlibs (gammalt standard var Yahoo YUI) och uppdaterade Google Closure Compiler till version v20190121
 * Mallredigerare och profiler
 
-   * Skapa och redigera mallar för enkelsidiga appar som använder JS SDK (kallas även SPA-redigerare)
+   * Skapa och redigera mallar för single-page-appar som använder JS SDK (kallas även SPA Editor)
 
-* Referenswebbplats Vi.Retail 4.0, se [Github för versionsinformation](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases).
-* Verktyg för att uppgradera befintliga webbplatser för att utnyttja de senaste redigeringsfunktionerna finns i [Github-databasen](https://github.com/adobe/aem-modernize-tools)
+* Referenswebbplats We.Retail 4.0, se [Github för versionsinformation](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases).
+* Verktyg för att uppgradera befintliga webbplatser och utnyttja de senaste redigeringsfunktionerna finns i [Github-databasen](https://github.com/adobe/aem-modernize-tools)
 
 >[!CAUTION]
 >
 >AEM innehåller version 1.12.4 av jQuery-biblioteket för att ge maximal kompatibilitet med befintlig anpassad kod. Adobe har gjort ändringar för att åtgärda kända säkerhetsproblem.
 
-## Webbplatsadministration {#site-administration}
+## Platsadministration {#site-administration}
 
-* Rälen [Referens](/help/sites-authoring/author-environment-tools.md#references) innehåller ett nytt avsnitt med en lista över interna länkar som pekar mot den valda sidan. Det här är användbart när du planerar att ta en sida offline eller ta bort för att se vilka sidor som behöver justeras innan du tar dem offline.
+* Ratten [Referens](/help/sites-authoring/author-environment-tools.md#references) har ett nytt avsnitt som visar interna länkar som pekar på den valda sidan. Det här är användbart när du planerar att ta en sida offline eller ta bort för att se vilka sidor som behöver justeras innan du tar dem offline.
 * I [listvyn](/help/sites-authoring/basic-handling.md#list-view) finns en ny arbetsflödeskolumn som visar status när sidan befinner sig i ett arbetsflöde.
-* I [sidegenskaperna](/help/sites-authoring/editing-page-properties.md)kan du nu bläddra efter befintliga resurser när du tilldelar en miniatyrbild till sidan (fliken Miniatyrbilder).
+* I [sidegenskaperna](/help/sites-authoring/editing-page-properties.md) går det nu att bläddra efter befintliga resurser när du tilldelar en miniatyrbild till sidan (fliken Miniatyrbilder).
 
-## Page Editor {#page-editor}
+## Sidredigeraren {#page-editor}
 
-* Möjliggör kontextredigering och komposition av ensidiga appupplevelser med React- och Angular-komponenter på klientsidan som utnyttjar JS SDK (kallas även SPA-redigerare)
+* Möjliggör kontextredigering och komposition av ensidiga appupplevelser med React- och Angular-komponenter på klientsidan som utnyttjar JS SDK (kallas även SPA Editor)
 * Skolningsläge visas bara om sidan har en konfigurerad ställningar.
 
-## Content Fragments &amp; Editor {#content-fragments-amp-editor}
+## Innehållsfragment och redigerare {#content-fragments-amp-editor}
 
-* Ny [anteckningsruta](/help/assets/content-fragments/content-fragments-variations.md#viewing-editing-deleting-annotations) i Content Fragment Editor för att göra allmänna kommentarer och se kommentarer som görs i texten (visas även i tidslinjen)
+* Ny [Anteckningar](/help/assets/content-fragments/content-fragments-variations.md#viewing-editing-deleting-annotations) i Content Fragment Editor för att göra allmänna kommentarer och se kommentarer i texten (visas även i tidslinjen)
 * Möjlighet att ange standardinnehållstypen för ett flerradigt textelement i en [Content Fragment-modell](/help/assets/content-fragments/content-fragments-models.md) till enkel text, formaterad text eller markering
-* Lägga till [kommentarer/anteckningar](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment) genom att markera text i textredigeraren (helskärmsläge)
-* [Jämför versioner](/help/assets/content-fragments/content-fragments-managing.md#comparing-fragment-versions) av ett innehållsfragment sida vid sida via referensspåret
+* Lägg till [kommentar/anteckningar](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment) genom att markera text i textredigeraren (helskärmsläge)
+* [Jämför ](/help/assets/content-fragments/content-fragments-managing.md#comparing-fragment-versions) versioner av ett innehållsfragment sida vid sida via referensspåret
 * Resurserna i hämtningsrapporten visar nu innehållsfragment utifrån detta
-* Lägg till stöd för [innehållsfragment i Assets HTTP API](/help/assets/assets-api-content-fragments.md) via /api.json. Det finns API:er för att skapa, uppdatera, läsa och ta bort innehållsfragment.
+* Lägg till [Stöd för innehållsfragment i Assets HTTP API](/help/assets/assets-api-content-fragments.md) via /api.json. Det finns API:er för att skapa, uppdatera, läsa och ta bort innehållsfragment.
 
 ## Experience Fragments {#experience-fragments}
 
-* Förbättrad indexering av [Experience Fragments](/help/sites-authoring/experience-fragments.md), så deras innehåll hittas i sökningen efter sidor där de används
-* Med alternativet [Exportera till Target](/help/sites-administering/experience-fragments-target.md) kan du nu skicka Experience Fragment som JSON (standard är HTML), eller både och
+* Förbättrade indexeringen av [Experience Fragments](/help/sites-authoring/experience-fragments.md), så deras innehåll hittas i sökningen efter sidor där de används
+* Alternativet [Exportera till mål](/help/sites-administering/experience-fragments-target.md) tillåter nu att Experience Fragment skickas som JSON (standard är HTML), eller båda
 
 ## Översättning {#translation}
 
@@ -91,16 +91,16 @@ Se följande för AEM Sites 6.5-förbättringar i detalj:
 * Tillåt export av översättningsjobb i JSON-format
 * Uppdatera Microsoft Translation-integrering så att V3 API används
 
-## Hantering av flera webbplatser (MSM) {#multi-site-management-msm}
+## Hantering av flera platser (MSM) {#multi-site-management-msm}
 
 * För rollout-konfigurationer som använder PushOnModify, bättre hantering av sidflyttningsåtgärd för att undvika inkonsekvent läge
 * Om du skapar en ny sida i livecopy-strukturen skapas nu som standard en fristående sida
-* Använd MSM-funktioner i enkelsidiga appar som använder JS SDK (kallas även SPA-redigerare)
+* Använd MSM-funktioner i enkelsidiga appar som använder JS SDK (kallas även SPA Editor)
 
 ## Launches {#launches}
 
 * Nytt arbetsflöde för granskning och godkännande för lanseringar och möjlighet att endast befordra godkända startsidor
-* Tillagt [alternativ i användargränssnittet för att välja att ta bort Launch direkt efter erbjudandesteget](/help/sites-authoring/launches-promoting.md#promoting-launch-pages)
+* [Alternativet i användargränssnittet har lagts till för att välja att ta bort starten direkt efter kampanjsteget](/help/sites-authoring/launches-promoting.md#promoting-launch-pages)
 
 ## Målinriktning och simulering av innehåll {#content-targeting-simulation}
 
@@ -112,9 +112,9 @@ Se följande för AEM Sites 6.5-förbättringar i detalj:
 >
 >at.js 2.x stöds inte med AEM vid tidpunkten för AEM 6.5-versionen. Använd den senaste versionen av at.js 1.x
 
-* Integreringen av Adobe Target kan nu använda Target Standard-API:t. I tidigare versioner av AEM används Target Classic HTTP API, som nu är föråldrat.
-* Adobe Target `mbox.js` version 63 ingår. Adobe rekommenderar starkt att implementeringen ändras till `at.js` v1.x.
-* `at.js` version 1.5.0 ingår nu. Adobe rekommenderar att du använder [Adobe Experience Platform Launch](https://www.adobe.com/experience-platform/launch.html) för att distribuera `at.js` v1.x till webbplatsen.
+* Adobe Target-integrering kan nu använda Target Standard API. I tidigare versioner av AEM används Target Classic HTTP API, som nu är föråldrat.
+* Adobe Target `mbox.js` version 63 ingår. Adobe rekommenderar starkt att implementeringen växlas till `at.js` v1.x.
+* `at.js` version 1.5.0 ingår nu. Adobe rekommenderar att du använder [Adobe Experience Platform Launch](https://www.adobe.com/experience-platform/launch.html) för att etablera `at.js` v1.x på platsen.
 
 ## AEM och Adobe Analytics {#aem-amp-adobe-analytics}
 
@@ -125,14 +125,14 @@ Se följande för AEM Sites 6.5-förbättringar i detalj:
 
 Förbättringar av Commerce Integration Framework pågår snabbare sedan AEM 6.4. [Läs mer här](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/docs.html).
 
-## Webbgrupper, tillägg {#communities-add-on}
+## Webbgruppstillägg {#communities-add-on}
 
-Se sidan [Versionsinformation för webbgrupper](../release-notes/communities-release-notes.md)
+Se [Versionsinformation för Communities](../release-notes/communities-release-notes.md)
 
-## Skärmar, tillägg {#screens-add-on}
+## Skärmtillägg {#screens-add-on}
 
 * Använda Startar för att planera framtida innehållsändringar för signeringsinnehåll
 * Uppspelning med datapriser i en sekvenskanal
 * Skapa projektstruktur automatiskt med hjälp av en källfil, t.ex. Excel-blad
 
-Mer information om ändringar av AEM Screens finns i versionsinformationen i användarhandboken [för](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html)AEM Screens.
+Mer information om ändringar i AEM Screens finns i versionsinformationen i [AEM Screens användarhandbok](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html).
