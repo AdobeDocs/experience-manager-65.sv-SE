@@ -1,8 +1,8 @@
 ---
 title: Aktivera och inaktivera säkert säkerhetskopieringsläge
 seo-title: Aktivera och inaktivera säkert säkerhetskopieringsläge
-description: På sidan Säkerhetskopieringsinställningar kan du använda AEM-formulär i säkert säkerhetskopieringsläge så att du kan säkerhetskopiera databasen och GDS-katalogen (Global Document Storage). Lär dig hur du aktiverar och inaktiverar läget för säker säkerhetskopiering.
-seo-description: På sidan Säkerhetskopieringsinställningar kan du använda AEM-formulär i säkert säkerhetskopieringsläge så att du kan säkerhetskopiera databasen och GDS-katalogen (Global Document Storage). Lär dig hur du aktiverar och inaktiverar läget för säker säkerhetskopiering.
+description: På sidan Säkerhetskopieringsinställningar kan du använda AEM formulär i säkert säkerhetskopieringsläge så att du kan säkerhetskopiera databasen och GDS-katalogen (Global Document Storage). Lär dig hur du aktiverar och inaktiverar läget för säker säkerhetskopiering.
+seo-description: På sidan Säkerhetskopieringsinställningar kan du använda AEM formulär i säkert säkerhetskopieringsläge så att du kan säkerhetskopiera databasen och GDS-katalogen (Global Document Storage). Lär dig hur du aktiverar och inaktiverar läget för säker säkerhetskopiering.
 uuid: 2fdeaeaf-e969-40a4-8aee-1f2b627d3942
 contentOwner: admin
 content-type: reference
@@ -11,15 +11,18 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9fda71e4-78a1-4581-9d02-bf06a75c3bcb
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '241'
+ht-degree: 0%
 
 ---
 
 
 # Aktivera och inaktivera säkert säkerhetskopieringsläge {#enabling-and-disabling-safe-backup-mode}
 
-På sidan Säkerhetskopieringsinställningar kan du använda AEM-formulär i säkert säkerhetskopieringsläge så att du kan säkerhetskopiera databasen och GDS-katalogen (Global Document Storage).
+På sidan Säkerhetskopieringsinställningar kan du använda AEM formulär i säkert säkerhetskopieringsläge så att du kan säkerhetskopiera databasen och GDS-katalogen (Global Document Storage).
 
-AEM-formulär är i säkert säkerhetskopieringsläge, men fungerar normalt, förutom att de inte aktivt tar bort filer från GDS-katalogen.
+AEM formulär är i säkert säkerhetskopieringsläge, men fungerar normalt, förutom att det inte aktivt tar bort filer från GDS-katalogen.
 
 >[!NOTE]
 >
