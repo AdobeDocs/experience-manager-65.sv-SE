@@ -19,7 +19,7 @@ ht-degree: 0%
 ---
 
 
-# Mappning av anpassade användargrupper i AEM 6.5 {#custom-user-group-mapping-in-aem}
+# Mappning av anpassad användargrupp i AEM 6.5 {#custom-user-group-mapping-in-aem}
 
 ## Jämförelse av JCR-innehåll relaterat till CUG {#comparison-of-jcr-content-related-to-cug}
 
@@ -33,12 +33,12 @@ ht-degree: 0%
   <tr>
    <td><p>Egenskap: cq:cugEnabled</p> <p>Deklarerar nodtyp: N/A, övrig egendom</p> </td>
    <td><p>Behörighet:</p> <p>Nod: rep:cugPolicy för nodtypen rep:CugPolicy</p> <p>Deklarerar nodtyp: rep:CugMixin</p> <p> </p> <p> </p> <p> </p> Autentisering:</p> <p>Blandningstyp: granit:AuthenticationRequired</p> </td>
-   <td><p>För att begränsa läsåtkomst tillämpas en dedikerad CUG-princip på målnoden.</p> <p>OBS! Profiler kan bara tillämpas på de sökvägar som har konfigurerats och stöds.</p> <p>Noder med namnet rep:cugPolicy och typen rep:CugPolicy är skyddade och kan inte skrivas med vanliga JCR API-anrop; använd JCR-åtkomstkontroll i stället.</p> <p>Mer information finns på <a href="https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html">den här sidan</a> .</p> <p>För att framtvinga autentiseringskrav på en nod räcker det att lägga till blandningstypen granite:AuthenticationRequired.</p> <p>OBS! Endast respekterad under de sökvägar som stöds.</p> </td>
+   <td><p>För att begränsa läsåtkomst tillämpas en dedikerad CUG-princip på målnoden.</p> <p>OBS! Profiler kan bara tillämpas på de sökvägar som har konfigurerats och stöds.</p> <p>Noder med namnet rep:cugPolicy och typen rep:CugPolicy är skyddade och kan inte skrivas med vanliga JCR API-anrop; använd JCR-åtkomstkontroll i stället.</p> <p>Mer information finns på <a href="https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html">den här sidan</a>.</p> <p>För att framtvinga autentiseringskrav på en nod räcker det att lägga till blandningstypen granite:AuthenticationRequired.</p> <p>OBS! Endast respekterad under de sökvägar som stöds.</p> </td>
   </tr>
   <tr>
    <td><p>Egenskap: cq:cugPrincipals</p> <p>Deklarerar nodtyp: NA, övrig egendom</p> </td>
    <td><p>Egenskap: rep:mainNames</p> <p>Deklarerar nodtyp: rep:CugPolicy</p> </td>
-   <td><p>Egenskapen som innehåller namnen på de principer som får läsa innehållet under den begränsade CUG:n är skyddad och kan inte skrivas med vanliga JCR API-anrop. använd JCR-åtkomstkontroll i stället.</p> <p>På <a href="https://svn.apache.org/repos/asf/jackrabbit/trunk/jackrabbitapi/src/main/java/org/apache/jackrabbit/api/security/authorization/PrincipalSetPolicy.java">den här sidan</a> finns mer information om implementeringen.</p> </td>
+   <td><p>Egenskapen som innehåller namnen på de principer som får läsa innehållet under den begränsade CUG:n är skyddad och kan inte skrivas med vanliga JCR API-anrop. använd JCR-åtkomstkontroll i stället.</p> <p>Mer information om implementeringen finns på <a href="https://svn.apache.org/repos/asf/jackrabbit/trunk/jackrabbitapi/src/main/java/org/apache/jackrabbit/api/security/authorization/PrincipalSetPolicy.java">den här sidan</a>.</p> </td>
   </tr>
   <tr>
    <td><p>Egenskap: cq:cugLoginPage</p> <p>Deklarerar nodtyp: NA, övrig egendom</p> </td>
@@ -89,7 +89,7 @@ Tjänst för att konfigurera exkluderingslista för huvudobjekt som inte ska på
 
    >[!NOTE]
    > 
-   >Om inställningen inte `CugExcludeImpl` är konfigurerad `CugConfiguration` återgår den till standardinställningen.
+   >Om `CugExcludeImpl` inte är konfigurerad återgår `CugConfiguration` till standardvärdet.
 
    Det går att koppla en anpassad CugExclude-implementering om det finns särskilda behov.
 
