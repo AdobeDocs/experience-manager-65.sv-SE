@@ -27,24 +27,24 @@ När du skapar ett anpassat arbetsflödessteg ingår följande aktiviteter:
 * Utveckla stegkomponenten för arbetsflödet.
 * Implementera stegfunktionerna som en OSGi-tjänst eller ett ECMA-skript.
 
-Du kan också [interagera med arbetsflödena från program och skript](/help/sites-developing/workflows-program-interaction.md).
+Du kan också [interagera med dina arbetsflöden från program och skript](/help/sites-developing/workflows-program-interaction.md).
 
-## Steg-komponenter för arbetsflöde - Grunderna {#workflow-step-components-the-basics}
+## Komponenter i arbetsflödessteg - Grunderna {#workflow-step-components-the-basics}
 
 En arbetsflödesstegkomponent definierar utseendet och beteendet för steget när du skapar arbetsflödesmodeller:
 
-* Kategori- och stegnamn i arbetsflödets sidbrytning.
+* Kategori- och stegnamn i arbetsflödets sidospark.
 * Stegen i arbetsflödesmodeller.
 * Redigeringsdialogrutan för konfiguration av komponentegenskaper.
 * Tjänsten eller skriptet som körs vid körning.
 
-Precis som för [alla komponenter](/help/sites-developing/components.md)ärver stegkomponenter i arbetsflödet från den komponent som har angetts för `sling:resourceSuperType` egenskapen. I följande diagram visas hierarkin med `cq:component` noder som utgör grunden för alla komponenter i arbetsflödessteg. Diagrammet innehåller också komponenterna **Processsteg**, **Deltagarsteg** och **Dynamic Deltagare Step** , eftersom dessa är de vanligaste (och mest grundläggande) startpunkterna för utveckling av anpassade stegkomponenter.
+Precis som med [alla komponenter](/help/sites-developing/components.md) ärver komponenter för arbetsflödessteg från komponenten som anges för egenskapen `sling:resourceSuperType`. I följande diagram visas hierarkin för `cq:component`-noder som utgör grunden för alla komponenter för arbetsflödessteg. Diagrammet innehåller även komponenterna **Processsteg**, **Deltagarsteg** och **Dynamiskt deltagarsteg**, eftersom dessa är de vanligaste (och vanligaste) startpunkterna för utveckling av anpassade stegkomponenter.
 
 ![aem_wf_component_inherit](assets/aem_wf_componentinherit.png)
 
 >[!CAUTION]
 >
->Du ***får*** inte ändra något i `/libs` banan.
+>Du ***får*** inte ändra något i `/libs`-sökvägen.
 >
 >Detta beror på att innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
 >
@@ -54,11 +54,11 @@ Precis som för [alla komponenter](/help/sites-developing/components.md)ärver s
 >2. Gör ändringar i `/apps`
 
 
-Komponenten är den närmaste gemensamma överordnade för `/libs/cq/workflow/components/model/step` Processsteg **,** Deltagarsteg **och** Dynamiskt deltagarsteg ****, som alla ärver följande objekt:
+Komponenten `/libs/cq/workflow/components/model/step` är närmast gemensamma överordnade för **Processsteg**, **Deltagarsteg** och **Dynamiskt deltagarsteg**, som alla ärver följande objekt:
 
 * `step.jsp`
 
-   Skriptet återger `step.jsp` titeln på stegkomponenten när den läggs till i en modell.
+   Skriptet `step.jsp` återger titeln på stegkomponenten när den läggs till i en modell.
 
    ![wf-22-1](assets/wf-22-1.png)
 
@@ -68,6 +68,7 @@ Komponenten är den närmaste gemensamma överordnade för `/libs/cq/workflow/co
 
    * **Vanliga**: för att redigera titeln och beskrivningen.
    * **Avancerat**: för att redigera egenskaper för e-postmeddelanden.
+
    ![wf-44](assets/wf-44.png) ![wf-45](assets/wf-45.png)
 
    >[!NOTE]
@@ -78,9 +79,9 @@ Komponenten är den närmaste gemensamma överordnade för `/libs/cq/workflow/co
 
 Följande objekt är tillgängliga (beroende på stegtyp) i ECMA-skript:
 
-* [WorkItem](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/exec/WorkItem.html) workItem
-* [WorkflowSession](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/WorkflowSession.html) workflowSession
-* [WorkflowData](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/exec/WorkflowData.html) workflowData
+* [](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/exec/WorkItem.html) WorkItemWorkItem
+* [](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/WorkflowSession.html) WorkflowSessionWorkflowSession
+* [](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/exec/WorkflowData.html) WorkflowDataWorkflowData
 * `args`: -array med processargumenten.
 
 * `sling`: för att få tillgång till andra tjänster.
@@ -90,17 +91,17 @@ Följande objekt är tillgängliga (beroende på stegtyp) i ECMA-skript:
 
 Du kan använda arbetsflödets metadata för att behålla information som krävs under arbetsflödets livstid. Ett vanligt krav för arbetsflödessteg är att behålla data för framtida användning i arbetsflödet eller att hämta beständiga data.
 
-Det finns tre typer av MetaDataMap-objekt - för `Workflow`, `WorkflowData` och `WorkItem` objekt. De har alla samma syfte - att lagra metadata.
+Det finns tre typer av MetaDataMap-objekt - för `Workflow`-, `WorkflowData`- och `WorkItem`-objekt. De har alla samma syfte - att lagra metadata.
 
 En WorkItem har en egen MetaDataMap som bara kan användas medan arbetsobjektet (t.ex. steg) körs.
 
-Både `Workflow` och `WorkflowData` metadatamappningar delas över hela arbetsflödet. I så fall bör du bara använda metadatamappningen `WorkflowData` .
+Både `Workflow` och `WorkflowData` metadata delas över hela arbetsflödet. I dessa fall bör du bara använda metadatamappningen `WorkflowData`.
 
-## Skapa anpassade komponenter för arbetsflödessteg {#creating-custom-workflow-step-components}
+## Skapar anpassade komponenter för arbetsflödessteg {#creating-custom-workflow-step-components}
 
-Du kan [skapa komponenter för arbetsflödessteg på samma sätt som andra komponenter](/help/sites-developing/components.md).
+Arbetsflödesstegkomponenter kan [skapas på samma sätt som andra komponenter](/help/sites-developing/components.md).
 
-Om du vill ärva från en av de (befintliga) grundläggande stegkomponenterna lägger du till följande egenskap i `cq:Component` noden:
+Om du vill ärva från en av de (befintliga) basstegskomponenterna lägger du till följande egenskap i noden `cq:Component`:
 
 * Namn: `sling:resourceSuperType`
 * Typ: `String`
@@ -112,7 +113,7 @@ Om du vill ärva från en av de (befintliga) grundläggande stegkomponenterna l�
 
 ### Ange standardtitel och beskrivning för steginstanser {#specifying-the-default-title-and-description-for-step-instances}
 
-Använd följande procedur för att ange standardvärden för fälten **Titel** och **Beskrivning** på fliken **Allmänt** .
+Använd följande procedur för att ange standardvärden för fälten **Titel** och **Beskrivning** på fliken **Allmänt**.
 
 >[!NOTE]
 >
@@ -121,40 +122,42 @@ Använd följande procedur för att ange standardvärden för fälten **Titel** 
 >* I redigeringsdialogrutan för steget lagras titeln och beskrivningen på följande platser: >
 >* `./jcr:title`
 >* `./jcr:description` platser
+
 >
 >  
-Detta krav uppfylls när redigeringsdialogrutan använder fliken Allmänt som `/libs/cq/flow/components/step/step` komponenten implementerar.
+Detta krav uppfylls när redigeringsdialogrutan använder fliken Allmänt som `/libs/cq/flow/components/step/step`-komponenten implementerar.
 >
->* Stegkomponenten eller ett överordnat element för komponenten åsidosätter inte det skript som `step.jsp` implementeras av `/libs/cq/flow/components/step/step` komponenten.
+>* Stegkomponenten eller ett överordnat element för komponenten åsidosätter inte `step.jsp`-skriptet som `/libs/cq/flow/components/step/step`-komponenten implementerar.
 
 
-1. Lägg till följande nod under `cq:Component` noden:
+1. Lägg till följande nod under `cq:Component`-noden:
 
    * Namn: `cq:editConfig`
    * Typ: `cq:EditConfig`
+
    >[!NOTE]
    >
    >Mer information om cq:editConfig-noden finns i [Konfigurera redigeringsbeteendet för en komponent](/help/sites-developing/developing-components.md#configuring-the-edit-behavior).
 
-1. Lägg till följande nod under `cq:EditConfig` noden:
+1. Lägg till följande nod under `cq:EditConfig`-noden:
 
    * Namn: `cq:formParameters`
    * Typ: `nt:unstructured`
 
-1. Lägg till `String` egenskaper för följande namn i `cq:formParameters` noden:
+1. Lägg till `String`-egenskaper för följande namn i noden `cq:formParameters`:
 
-   * `jcr:title`: Värdet fyller i fältet **Titel** på fliken **Allmänt** .
-   * `jcr:description`: Värdet fyller i fältet **Beskrivning** på fliken **Allmänt** .
+   * `jcr:title`: Värdet fyller i  **** fältet Titel på fliken  **** Allmänt.
+   * `jcr:description`: Värdet fyller i  **** beskrivningsfältet på  **** fliken Allmänt.
 
-### Spara egenskapsvärden i arbetsflödesmetadata {#saving-property-values-in-workflow-metadata}
+### Sparar egenskapsvärden i arbetsflödesmetadata {#saving-property-values-in-workflow-metadata}
 
 >[!NOTE]
 >
->Se [Bevara och få åtkomst till data](#persisting-and-accessing-data). Mer information om hur du får åtkomst till egenskapsvärdet vid körning finns i [Åtkomst till egenskapsvärden för dialogrutor vid körning](#accessing-dialog-property-values-at-runtime).
+>Se [Bevara och få åtkomst till data](#persisting-and-accessing-data). Mer information om åtkomst till egenskapsvärdet vid körning finns i [Åtkomst till egenskapsvärden för dialogrutor vid körning](#accessing-dialog-property-values-at-runtime).
 
-Egenskapen name för `cq:Widget` objekt anger den JCR-nod som lagrar widgetens värde. När widgetar i dialogrutan för arbetsflödesstegkomponenter lagrar värden under `./metaData` noden läggs värdet till i arbetsflödet `MetaDataMap`.
+Egenskapen name för `cq:Widget`-objekt anger den JCR-nod som lagrar widgetens värde. När widgetar i dialogrutan för arbetsflödesstegkomponenter lagrar värden under noden `./metaData` läggs värdet till i arbetsflödet `MetaDataMap`.
 
-Ett textfält i en dialogruta är till exempel en `cq:Widget` nod som har följande egenskaper:
+Ett textfält i en dialogruta är till exempel en `cq:Widget`-nod som har följande egenskaper:
 
 | Namn | Typ | Värde |
 |---|---|---|
@@ -162,11 +165,11 @@ Ett textfält i en dialogruta är till exempel en `cq:Widget` nod som har följa
 | `name` | `String` | `./metaData/subject` |
 | `fieldLabel` | `String` | `Email Subject` |
 
-Värdet som anges i det här textfältet läggs till i arbetsflödesinstansens ` [MetaDataMap](#metadatamaps)` objekt och kopplas till `subject` nyckeln.
+Värdet som anges i det här textfältet läggs till i arbetsflödesinstansens ` [MetaDataMap](#metadatamaps)`-objekt och är associerat med `subject`-tangenten.
 
 >[!NOTE]
 >
->När nyckeln är `PROCESS_ARGS`tillgänglig är värdet enkelt tillgängligt i ECMA-skriptimplementeringar via `args` variabeln. I det här fallet är värdet för name-egenskapen `./metaData/PROCESS_ARGS.`
+>När nyckeln är `PROCESS_ARGS` är värdet tillgängligt i ECMA-skriptimplementeringar via variabeln `args`. I det här fallet är värdet för name-egenskapen `./metaData/PROCESS_ARGS.`
 
 ### Åsidosätta stegimplementeringen {#overriding-the-step-implementation}
 
@@ -182,6 +185,7 @@ Om du vill fokusera komponenten för användning i ett specifikt arbetsflödessc
 
    * Namn: `cq:editConfig`
    * Typ: `cq:EditConfig`
+
    Mer information om cq:editConfig-noden finns i [Konfigurera redigeringsbeteendet för en komponent](/help/sites-developing/developing-components.md#configuring-the-edit-behavior).
 
 1. Under cq:EditConfig-noden lägger du till följande nod:
@@ -189,7 +193,7 @@ Om du vill fokusera komponenten för användning i ett specifikt arbetsflödessc
    * Namn: `cq:formParameters`
    * Typ: `nt:unstructured`
 
-1. Lägg till en `String` egenskap i `cq:formParameters` noden. Komponentens överordnade typ avgör egenskapens namn:
+1. Lägg till en `String`-egenskap i noden `cq:formParameters`. Komponentens överordnade typ avgör egenskapens namn:
 
    * Processsteg: `PROCESS`
    * Deltagarsteg: `PARTICIPANT`
@@ -203,19 +207,20 @@ Om du vill fokusera komponenten för användning i ett specifikt arbetsflödessc
 
 1. Om du vill ta bort möjligheten för modellutvecklare att ändra egenskapsvärden åsidosätter du dialogrutan för komponentens supertyp.
 
-### Lägga till formulär och dialogrutor i deltagarsteg {#adding-forms-and-dialogs-to-participant-steps}
+### Lägga till Forms och dialogrutor i deltagarsteg {#adding-forms-and-dialogs-to-participant-steps}
 
-Anpassa deltagarstegskomponenten för att tillhandahålla funktioner som finns i komponenterna [Formulärdeltagarsteg](/help/sites-developing/workflows-step-ref.md#form-participant-step) och [Dialog Participant Step](/help/sites-developing/workflows-step-ref.md#dialog-participant-step) :
+Anpassa stegkomponenten för deltagaren så att den innehåller funktioner som finns i [steget Formulärdeltagare](/help/sites-developing/workflows-step-ref.md#form-participant-step) och [Steg för dialogdeltagare](/help/sites-developing/workflows-step-ref.md#dialog-participant-step)-komponenterna:
 
 * Visa ett formulär för användaren när han/hon öppnar det genererade arbetsobjektet.
 * Visa en anpassad dialogruta för användaren när han/hon slutför det genererade arbetsobjektet.
 
-Utför följande procedur för den nya komponenten (se [Skapa anpassade stegkomponenter](#creating-custom-workflow-step-components)för arbetsflöde):
+Utför följande procedur på den nya komponenten (se [Skapa anpassade komponenter för arbetsflödessteg](#creating-custom-workflow-step-components)):
 
-1. Lägg till följande nod under `cq:Component` noden:
+1. Lägg till följande nod under `cq:Component`-noden:
 
    * Namn: `cq:editConfig`
    * Typ: `cq:EditConfig`
+
    Mer information om cq:editConfig-noden finns i [Konfigurera redigeringsbeteendet för en komponent](/help/sites-developing/components-basics.md#edit-behavior).
 
 1. Under cq:EditConfig-noden lägger du till följande nod:
@@ -223,13 +228,13 @@ Utför följande procedur för den nya komponenten (se [Skapa anpassade stegkomp
    * Namn: `cq:formParameters`
    * Typ: `nt:unstructured`
 
-1. Om du vill visa ett formulär när användaren öppnar arbetsposten lägger du till följande egenskap i `cq:formParameters` noden:
+1. Om du vill visa ett formulär när användaren öppnar arbetsobjektet lägger du till följande egenskap i noden `cq:formParameters`:
 
    * Namn: `FORM_PATH`
    * Typ: `String`
    * Värde: Sökvägen som matchar formuläret
 
-1. Om du vill visa en anpassad dialogruta när användaren slutför arbetsposten lägger du till följande egenskap i `cq:formParameters` noden
+1. Om du vill visa en anpassad dialogruta när användaren slutför arbetsobjektet lägger du till följande egenskap i noden `cq:formParameters`
 
    * Namn: `DIALOG_PATH`
    * Typ: `String`
@@ -237,15 +242,15 @@ Utför följande procedur för den nya komponenten (se [Skapa anpassade stegkomp
 
 ### Konfigurera beteende för arbetsflödesstegets körningsmiljö {#configuring-the-workflow-step-runtime-behavior}
 
-Lägg till en `cq:Component` nod nedanför `cq:EditConfig` noden. Under den lägger du till en `nt:unstructured` nod (måste namnges `cq:formParameters`) och i den noden lägger du till följande egenskaper:
+Lägg till en `cq:EditConfig`-nod under `cq:Component`-noden. Nedan lägger du till en `nt:unstructured`-nod (måste ha namnet `cq:formParameters`) och lägger till följande egenskaper i den noden:
 
 * Namn: `PROCESS_AUTO_ADVANCE`
 
    * Typ: `Boolean`
    * Värde:
 
-      * när `true` arbetsflödet är inställt kommer det att köras och fortsätta - detta är standard och rekommenderas också
-      * När `false`arbetsflödet ska köras och stoppas. detta kräver extra hantering, så `true` vi rekommenderar
+      * om `true` anges körs arbetsflödet det steget och fortsätter - detta är standard och rekommenderas också
+      * När `false` körs arbetsflödet och stoppas. detta kräver extra hantering, så `true` rekommenderas
 
 * Namn: `DO_NOTIFY`
 
@@ -258,11 +263,11 @@ Lägg till en `cq:Component` nod nedanför `cq:EditConfig` noden. Under den läg
 
 Du kan använda arbetsflödets metadata för att behålla information som krävs under arbetsflödets livstid - och mellan steg. Ett vanligt krav för arbetsflödessteg är att bevara data för framtida bruk eller att hämta beständiga data från tidigare steg.
 
-Metadata för arbetsflöde lagras i ett [`MetaDataMap`](#metadatamaps) objekt. Java-API:t innehåller en metod för [`Workflow.getWorkflowData`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/Workflow.html) att returnera ett [`WorkflowData`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkflowData.html) objekt som innehåller rätt `MetaDataMap` objekt. Det här `WorkflowData``MetaDataMap` objektet är tillgängligt för OSGi-tjänsten eller ECMA-skriptet för en stegkomponent.
+Metadata för arbetsflöde lagras i ett [`MetaDataMap`](#metadatamaps)-objekt. Java API innehåller metoden [`Workflow.getWorkflowData`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/Workflow.html) för att returnera ett [`WorkflowData`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkflowData.html)-objekt som innehåller rätt `MetaDataMap`-objekt. Det här `WorkflowData` `MetaDataMap`-objektet är tillgängligt för OSGi-tjänsten eller ECMA-skriptet för en stegkomponent.
 
 #### Java {#java}
 
-Implementeringens körningsmetod `WorkflowProcess` skickas till `WorkItem` objektet. Använd det här objektet för att hämta `WorkflowData` objektet för den aktuella arbetsflödesinstansen. I följande exempel läggs ett objekt till i arbetsflödesobjektet `MetaDataMap` och sedan loggas varje objekt. Objektet (&quot;minkey&quot;,&quot;My Step Value&quot;) är tillgängligt för efterföljande steg i arbetsflödet.
+Körningsmetoden för implementeringen av `WorkflowProcess` skickas till objektet `WorkItem`. Använd det här objektet för att hämta `WorkflowData`-objektet för den aktuella arbetsflödesinstansen. I följande exempel läggs ett objekt till i arbetsflödets `MetaDataMap`-objekt och sedan loggas varje objekt. Objektet (&quot;minkey&quot;,&quot;My Step Value&quot;) är tillgängligt för efterföljande steg i arbetsflödet.
 
 ```java
 public void execute(WorkItem item, WorkflowSession session, MetaDataMap args) throws WorkflowException {
@@ -282,11 +287,11 @@ public void execute(WorkItem item, WorkflowSession session, MetaDataMap args) th
 
 #### ECMA-skript {#ecma-script}
 
-Variabeln är ECMA-skriptrepresentationen av det aktuella `graniteWorkItem` `WorkItem` Java-objektet. Du kan därför använda variabeln `graniteWorkItem` för att hämta arbetsflödets metadata. Följande ECMA-skript kan användas för att implementera ett **processteg** för att lägga till ett objekt i `MetaDataMap` arbetsflödesobjektet och sedan logga varje objekt. Dessa objekt är sedan tillgängliga för efterföljande steg i arbetsflödet.
+Variabeln `graniteWorkItem` är ECMA-skriptrepresentationen av det aktuella Java-objektet `WorkItem`. Du kan därför använda variabeln `graniteWorkItem` för att hämta arbetsflödets metadata. Följande ECMA-skript kan användas för att implementera ett **processteg** för att lägga till ett objekt i arbetsflödets `MetaDataMap`-objekt och sedan logga varje objekt. Dessa objekt är sedan tillgängliga för efterföljande steg i arbetsflödet.
 
 >[!NOTE]
 >
->Den `metaData` variabel som är omedelbart tillgänglig för stegskriptet är metadata för steget. Metadata för steget skiljer sig från metadata för arbetsflödet.
+>Variabeln `metaData` som är omedelbart tillgänglig för stegskriptet är metadata för steget. Metadata för steget skiljer sig från metadata för arbetsflödet.
 
 ```
 var currentDateInMillis = new Date().getTime();
@@ -304,7 +309,7 @@ while (iterator.hasNext()){
 
 ### Åtkomst till egenskapsvärden för dialogrutor vid körning {#accessing-dialog-property-values-at-runtime}
 
-Objektet med arbetsflödesinstanser är användbart när du vill lagra och hämta data under arbetsflödets livstid. `MetaDataMap` För implementeringar av komponenter för arbetsflödessteg är funktionen särskilt användbar när du vill hämta egenskapsvärden för komponenter vid körning. `MetaDataMap`
+Objektet `MetaDataMap` för arbetsflödesinstanser är användbart för att lagra och hämta data under arbetsflödets hela livstid. För implementeringar av komponenter för arbetsflödessteg är `MetaDataMap` särskilt användbart när du hämtar egenskapsvärden för komponenter vid körning.
 
 >[!NOTE]
 >
@@ -312,13 +317,13 @@ Objektet med arbetsflödesinstanser är användbart när du vill lagra och hämt
 
 Arbetsflödet `MetaDataMap` är tillgängligt för implementering av Java- och ECMA-skriptprocessen:
 
-* I Java-implementeringar av WorkflowProcess-gränssnittet är parametern `args` objektet `MetaDataMap` för arbetsflödet.
+* I Java-implementeringar av WorkflowProcess-gränssnittet är `args`-parametern `MetaDataMap`-objektet för arbetsflödet.
 
-* I ECMA-skriptimplementeringar är värdet tillgängligt med hjälp av variablerna `args` och `metadata` .
+* I ECMA-skriptimplementeringar är värdet tillgängligt med variablerna `args` och `metadata`.
 
-### Exempel: Hämtar argument för processtegskomponenten {#example-retrieving-the-arguments-of-the-process-step-component}
+### Exempel: Hämtar argumenten för processtegskomponenten {#example-retrieving-the-arguments-of-the-process-step-component}
 
-Redigeringsdialogrutan för komponenten **Processsteg** innehåller egenskapen **Arguments** . Värdet för egenskapen **Arguments** lagras i arbetsflödets metadata och associeras med `PROCESS_ARGS` nyckeln.
+Redigeringsdialogrutan för komponenten **Processsteg** innehåller egenskapen **Arguments**. Värdet för egenskapen **Arguments** lagras i arbetsflödets metadata och är associerat med nyckeln `PROCESS_ARGS`.
 
 I följande diagram är värdet för egenskapen **Arguments** `argument1, argument2`:
 
@@ -326,7 +331,7 @@ I följande diagram är värdet för egenskapen **Arguments** `argument1, argume
 
 #### Java {#java-1}
 
-Följande Java-kod är `execute` metod för en `WorkflowProcess` implementering. Metoden loggar värdet i `args` den `MetaDataMap` som är associerad med `PROCESS_ARGS` nyckeln.
+Följande Java-kod är `execute`-metoden för en `WorkflowProcess`-implementering. Metoden loggar värdet i `args` `MetaDataMap` som är associerat med `PROCESS_ARGS`-tangenten.
 
 ```java
 public void execute(WorkItem item, WorkflowSession session, MetaDataMap args) throws WorkflowException {
@@ -344,7 +349,7 @@ När ett processsteg som använder den här Java-implementeringen körs innehål
 
 #### ECMA-skript {#ecma-script-1}
 
-Följande ECMA-skript används som process för **processteget**. Här loggas antalet argument och argumentvärdena:
+Följande ECMA-skript används som process för **Processsteg**. Här loggas antalet argument och argumentvärdena:
 
 ```
 var iterator = graniteWorkItem.getWorkflowData().getMetaDataMap().keySet().iterator();
@@ -365,11 +370,11 @@ log.info("currentDateInMillisKey "+ graniteWorkItem.getWorkflowData().getMetaDat
 
 ### Skript och processargument {#scripts-and-process-arguments}
 
-I ett skript för en **Process Step** -komponent är argument tillgängliga via `args` objektet.
+I ett skript för en **Process Step**-komponent är argument tillgängliga via objektet `args`.
 
-När du skapar en anpassad stegkomponent `metaData` är objektet tillgängligt i ett skript. Det här objektet är begränsat till ett strängargument.
+När du skapar en anpassad stegkomponent är objektet `metaData` tillgängligt i ett skript. Det här objektet är begränsat till ett strängargument.
 
-## Utveckla stegimplementeringar för processer {#developing-process-step-implementations}
+## Utveckla processstegsimplementeringar {#developing-process-step-implementations}
 
 När processteg startas under en arbetsflödesprocess skickar stegen en begäran till en OSGi-tjänst eller kör ett ECMA-skript. Utveckla den tjänst eller det ECMA-skript som utför de åtgärder som arbetsflödet kräver.
 
@@ -385,15 +390,15 @@ Så här definierar du ett processteg som en OSGI-tjänstkomponent (Java bundle)
 
    >[!NOTE]
    >
-   >OSGI-komponenten måste implementera `WorkflowProcess` gränssnittet med sin `execute()` metod. Se exempelkoden nedan.
+   >OSGI-komponenten måste implementera gränssnittet `WorkflowProcess` med metoden `execute()`. Se exempelkoden nedan.
 
    >[!NOTE]
    >
-   >Paketnamnet måste läggas till i avsnittet `<*Private-Package*>` i `maven-bundle-plugin` konfigurationen.
+   >Paketnamnet måste läggas till i avsnittet `<*Private-Package*>` i `maven-bundle-plugin`-konfigurationen.
 
-1. Lägg till SCR-egenskapen `process.label` och ange värdet efter behov. Detta är det namn som processsteget listas som när du använder den generiska **processstegskomponenten** . Se exemplet nedan.
-1. I **modellredigeraren** lägger du till processsteget i arbetsflödet med den generiska **processstegskomponenten** .
-1. Gå till fliken **Process** i dialogrutan Redigera (i **Processsteget** ) och välj processimplementering.
+1. Lägg till SCR-egenskapen `process.label` och ange värdet efter behov. Detta är det namn som processsteget listas som när du använder den generiska **processsteget**-komponenten. Se exemplet nedan.
+1. I redigeraren för **modeller** lägger du till processsteget i arbetsflödet med den generiska komponenten **Processsteg**.
+1. Gå till fliken **Process** i dialogrutan Redigera (i **Processsteg**) och välj processimplementering.
 1. Om du använder argument i koden anger du **Processargument**. Till exempel: false.
 1. Spara ändringarna för både steget och arbetsflödesmodellen (modellredigerarens övre vänstra hörn).
 
@@ -479,7 +484,7 @@ I följande tabell visas de variabler som är omedelbart tillgängliga för att 
 | `com.adobe.granite.workflow.metadata.MetaDataMap` | `metaData` | Metadata för den aktuella steginstansen. |
 | `org.apache.sling.scripting.core.impl.InternalScriptHelper` | `sling` | Ger åtkomst till Sling-miljön. |
 
-Följande exempelskript visar hur du får åtkomst till JCR-noden som representerar arbetsflödets nyttolast. Variabeln `graniteWorkflowSession` anpassas till en JCR-sessionsvariabel, som används för att hämta noden från nyttolastsökvägen.
+Följande exempelskript visar hur du får åtkomst till JCR-noden som representerar arbetsflödets nyttolast. Variabeln `graniteWorkflowSession` är anpassad till en JCR-sessionsvariabel, som används för att hämta noden från nyttolastsökvägen.
 
 ```
 var workflowData = graniteWorkItem.getWorkflowData();
@@ -494,7 +499,7 @@ if (workflowData.getPayloadType() == "JCR_PATH") {
 }
 ```
 
-Följande skript kontrollerar om nyttolasten är en bild ( `.png` fil), skapar en svartvit bild från den och sparar den som en nod på samma nivå.
+Följande skript kontrollerar om nyttolasten är en bild ( `.png` fil), skapar en svartvit bild utifrån den och sparar den som en nod på samma nivå.
 
 ```
 var workflowData = graniteWorkItem.getWorkflowData();
@@ -529,7 +534,7 @@ if (workflowData.getPayloadType() == "JCR_PATH") {
 Så här använder du skriptet:
 
 1. Skapa skriptet (till exempel med CRXDE Lite) och spara det i databasen nedan `/apps/myapp/workflow/scripts`
-1. Om du vill ange en titel som identifierar skriptet i dialogrutan **Processstegsredigering** lägger du till följande egenskaper i skriptets `jcr:content` nod:
+1. Om du vill ange en titel som identifierar skriptet i dialogrutan **Processsteg** redigering lägger du till följande egenskaper i noden `jcr:content` för skriptet:
 
    | Namn | Typ | Värde |
    |---|---|---|
@@ -540,9 +545,9 @@ Så här använder du skriptet:
 
 ## Utveckla deltagarväljare {#developing-participant-choosers}
 
-Du kan utveckla deltagarval för komponenter i **Dynamic Deltagare Step** .
+Du kan utveckla deltagarval för **komponenter för dynamiska deltagarsteg**.
 
-När en komponent för **dynamiskt deltagarsteg** startas under ett arbetsflöde, måste steget definiera deltagaren som det genererade arbetsobjektet kan tilldelas till. Så här gör du i det här steget:
+När en **dynamisk deltagarsteg**-komponent startas under ett arbetsflöde, måste steget definiera deltagaren som det genererade arbetsobjektet kan tilldelas till. Så här gör du i det här steget:
 
 * skickar en begäran till en OSGi-tjänst
 * kör ett ECMA-skript för att välja deltagaren
@@ -551,17 +556,17 @@ Du kan utveckla en tjänst eller ett ECMA-skript som väljer deltagare enligt kr
 
 >[!NOTE]
 >
->Mer information om hur du associerar **komponenten Dynamic Participant Step** med tjänsten eller skriptet finns i [Dynamic Participant Step](/help/sites-developing/workflows-step-ref.md#dynamic-participant-step) eller [Override the Step Implementation](#persisting-and-accessing-data).
+>Mer information om hur du associerar din **Dynamic Participant Step**-komponent med tjänsten eller skriptet finns i [Dynamiskt deltagarsteg](/help/sites-developing/workflows-step-ref.md#dynamic-participant-step) eller [Åsidosätta stegimplementeringen](#persisting-and-accessing-data).
 
 ### Utveckla en deltagarväljare Använda en Java-klass {#developing-a-participant-chooser-using-a-java-class}
 
 Så här definierar du ett deltagarsteg som en OSGI-tjänstkomponent (Java-klass):
 
-1. OSGI-komponenten måste implementera `ParticipantStepChooser` gränssnittet med sin `getParticipant()` metod. Se exempelkoden nedan.
+1. OSGI-komponenten måste implementera gränssnittet `ParticipantStepChooser` med metoden `getParticipant()`. Se exempelkoden nedan.
 
    Skapa paketet och distribuera det i OSGI-behållaren.
 
-1. Lägg till SCR-egenskapen `chooser.label` och ställ in värdet efter behov. Detta är namnet som deltagarväljaren visas med hjälp av komponenten **Dynamic Deltagare Step** . Se exemplet:
+1. Lägg till SCR-egenskapen `chooser.label` och ställ in värdet efter behov. Det här är namnet som deltagarväljaren visas med komponenten **Dynamic Deltagare Step**. Se exemplet:
 
    ```java
    package com.adobe.example.workflow.impl.process;
@@ -610,14 +615,14 @@ Så här definierar du ett deltagarsteg som en OSGI-tjänstkomponent (Java-klass
    }
    ```
 
-1. I **modellredigeraren** lägger du till det dynamiska deltagarsteget i arbetsflödet med den generiska komponenten **Dynamic Participant Step** .
+1. I redigeraren **Models** lägger du till steget för den dynamiska deltagaren i arbetsflödet med den generiska komponenten **Dynamic Participant Step**.
 1. I redigeringsdialogrutan väljer du fliken **Deltagarväljaren** och väljer en implementering av väljaren.
 1. Om du använder argument i koden anger du **Processargument**. I det här exemplet: `/content/we-retail/de`.
 1. Spara ändringarna för både steget och arbetsflödesmodellen.
 
-### Utveckla en deltagarväljare med hjälp av ett ECMA-skript {#developing-a-participant-chooser-using-an-ecma-script}
+### Utveckla en deltagarväljare med ett ECMA-skript {#developing-a-participant-chooser-using-an-ecma-script}
 
-Du kan skapa ett ECMA-skript som väljer den användare som tilldelas arbetsposten som **Deltagarsteget** genererar. Skriptet måste innehålla en funktion med namnet `getParticipant` som inte kräver några argument, och returnerar en `String` som innehåller användarens eller gruppens ID.
+Du kan skapa ett ECMA-skript som väljer den användare som har tilldelats arbetsposten som **Deltagarsteget** genererar. Skriptet måste innehålla en funktion med namnet `getParticipant` som inte kräver några argument, och returnerar ett `String` som innehåller ID:t för en användare eller grupp.
 
 Skript finns i JCR-databasen och körs därifrån.
 
@@ -646,18 +651,18 @@ function getParticipant() {
 ```
 
 1. Skapa skriptet (till exempel med CRXDE Lite) och spara det i databasen nedan `/apps/myapp/workflow/scripts`
-1. Om du vill ange en titel som identifierar skriptet i dialogrutan **Processstegsredigering** lägger du till följande egenskaper i skriptets `jcr:content` nod:
+1. Om du vill ange en titel som identifierar skriptet i dialogrutan **Processsteg** redigering lägger du till följande egenskaper i noden `jcr:content` för skriptet:
 
    | Namn | Typ | Värde |
    |---|---|---|
    | `jcr:mixinTypes` | `Name[]` | `mix:title` |
    | `jcr:title` | `String` | Namnet som ska visas i redigeringsdialogrutan. |
 
-1. Redigera instansen [Dynamic Participant Step](/help/sites-developing/workflows-step-ref.md#dynamic-participant-step) och ange det skript som ska användas.
+1. Redigera instansen [Dynamiskt deltagarsteg](/help/sites-developing/workflows-step-ref.md#dynamic-participant-step) och ange det skript som ska användas.
 
 ## Hantera arbetsflödespaket {#handling-workflow-packages}
 
-[Arbetsflödespaket](/help/sites-authoring/workflows-applying.md#specifying-workflow-details-in-the-create-workflow-wizard) kan skickas till ett arbetsflöde för bearbetning. Arbetsflödespaket innehåller referenser till resurser som sidor och resurser.
+[Arbetsflödespaket ](/help/sites-authoring/workflows-applying.md#specifying-workflow-details-in-the-create-workflow-wizard) kan skickas till ett arbetsflöde för bearbetning. Arbetsflödespaket innehåller referenser till resurser som sidor och resurser.
 
 >[!NOTE]
 >
@@ -665,11 +670,12 @@ function getParticipant() {
 >
 >* [`com.day.cq.wcm.workflow.process.ActivatePageProcess`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/workflow/process/ActivatePageProcess.html)
 >* [`com.day.cq.wcm.workflow.process.DeactivatePageProcess`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/workflow/process/DeactivatePageProcess.html)
+
 >
 
 
 
-Du kan utveckla arbetsflödessteg som hämtar paketresurserna och bearbetar dem. Följande medlemmar i paketet ger åtkomst till arbetsflödespaket `com.day.cq.workflow.collection` :
+Du kan utveckla arbetsflödessteg som hämtar paketresurserna och bearbetar dem. Följande medlemmar i `com.day.cq.workflow.collection`-paketet ger åtkomst till arbetsflödespaket:
 
 * `ResourceCollection`: Klassen för arbetsflödespaket.
 * `ResourceCollectionUtil`: Används för att hämta ResourceCollection-objekt.
@@ -815,7 +821,7 @@ Ett enkelt sätt att börja skapa ett eget anpassat steg är att kopiera ett bef
 
    >[!CAUTION]
    >
-   >Eftersom det i standardgränssnittet inte visas mer än bara texten och inte informationen på kortet behövs inte `details.jsp` som den var för den klassiska gränssnittsredigeraren.
+   >Eftersom endast rubriken och inte informationen inte visas på kortet i standardgränssnittet behövs inte `details.jsp` som den var för den klassiska gränssnittsredigeraren.
 
 1. Använd följande egenskaper på noden:
 
@@ -827,7 +833,7 @@ Ett enkelt sätt att börja skapa ett eget anpassat steg är att kopiera ett bef
 
       Måste ärva från ett befintligt steg.
 
-      I det här exemplet ärver vi från bassteget vid `cq/workflow/components/model/step`, men du kan använda andra supertyper som `participant`, `process`osv.
+      I det här exemplet ärver vi från bassteget på `cq/workflow/components/model/step`, men du kan använda andra supertyper som `participant`, `process` osv.
 
    * `jcr:title`
 
@@ -843,17 +849,18 @@ Ett enkelt sätt att börja skapa ett eget anpassat steg är att kopiera ett bef
 
       * Arbetsflöde för samarbete
       * DAM-arbetsflöde
-      * Formulärarbetsflöde
+      * Forms Workflow
       * Projekt
       * WCM-arbetsflöde
       * Arbetsflöde
+
    ![wf-35](assets/wf-35.png)
 
-1. Nu kan du öppna en arbetsflödesmodell för redigering. I stegwebbläsaren kan du filtrera så att **Mina anpassade steg** visas:
+1. Nu kan du öppna en arbetsflödesmodell för redigering. I stegwebbläsaren kan du filtrera så att du ser **Mina anpassade steg**:
 
    ![wf-36](assets/wf-36.png)
 
-   Kortet visas när **du drar det anpassade steget** till modellen:
+   Om du drar **Mitt anpassade steg** till modellen visas kortet:
 
    ![wf-37](assets/wf-37.png)
 
@@ -861,9 +868,9 @@ Ett enkelt sätt att börja skapa ett eget anpassat steg är att kopiera ett bef
 
    ![wf-38](assets/wf-38.png)
 
-#### Definiera dialogrutan Stega in konfiguration {#defining-the-step-configure-dialog}
+#### Definiera dialogrutan Konfigurera steg {#defining-the-step-configure-dialog}
 
-När du har [skapat det grundläggande steget](#creating-the-basic-step)definierar du dialogrutan **Konfigurera** enligt följande:
+Efter [skapandet av det grundläggande steget](#creating-the-basic-step) definierar du dialogrutan **Konfigurera** enligt följande:
 
 1. Konfigurera egenskaperna på noden `cq:editConfig` enligt följande:
 
@@ -871,7 +878,7 @@ När du har [skapat det grundläggande steget](#creating-the-basic-step)definier
 
    * `cq:inherit`
 
-      Om du anger `true`det ärver stegkomponenten egenskaperna från det steg du angav i `sling:resourceSuperType`.
+      Om du anger `true` ärver stegkomponenten egenskaperna från det steg du angav i `sling:resourceSuperType`.
 
    * `cq:disableTargeting`
 
@@ -884,14 +891,15 @@ När du har [skapat det grundläggande steget](#creating-the-basic-step)definier
 
    * `jcr:title`
 
-      Anger standardtiteln på stegkortet i modellkartan och i fältet **Titel** i dialogrutan **Min egen konfiguration - stegegenskaper** .
+      Ställer in standardtiteln på stegkortet i modellkartan och i fältet **Titel** i konfigurationsdialogrutan **Min egen - stegegenskaper**.
 
    * Du kan också definiera egna anpassade egenskaper.
+
    ![wf-40](assets/wf-40.png)
 
 1. Konfigurera egenskaperna på noden `cq:listeners`.
 
-   Med `cq:listener` noden och dess egenskaper kan du ange händelsehanterare som reagerar på händelser i den pekaktiverade modellredigeraren i användargränssnittet. som att dra ett steg till en modellsida eller redigera en stegegenskap.
+   Med noden `cq:listener` och dess egenskaper kan du ange händelsehanterare som reagerar på händelser i den beröringsaktiverade modellredigeraren för användargränssnitt. som att dra ett steg till en modellsida eller redigera en stegegenskap.
 
    **Intresseområden:**
 
@@ -899,21 +907,22 @@ När du har [skapat det grundläggande steget](#creating-the-basic-step)definier
    * `afterdelete: CQ.workflow.flow.Step.afterDelete`
    * `afteredit: CQ.workflow.flow.Step.afterEdit`
    * `afterinsert: CQ.workflow.flow.Step.afterInsert`
+
    Den här konfigurationen är viktig för att redigeraren ska fungera korrekt. I de flesta fall får den här konfigurationen inte ändras.
 
-   Om du ställer in `cq:inherit` på true (på `cq:editConfig` noden se ovan) kan du ärva den här konfigurationen utan att explicit behöva inkludera den i stegdefinitionen. Om inget arv finns på plats måste du lägga till den här noden med följande egenskaper och värden.
+   Om du ställer in `cq:inherit` på true (på noden `cq:editConfig`, se ovan) kan du ärva den här konfigurationen utan att behöva inkludera den explicit i stegdefinitionen. Om inget arv finns på plats måste du lägga till den här noden med följande egenskaper och värden.
 
-   I det här exemplet har arv aktiverats så att vi kan ta bort `cq:listeners` noden och steget fungerar fortfarande korrekt.
+   I det här exemplet har arv aktiverats så att vi kan ta bort noden `cq:listeners` och steget kommer fortfarande att fungera korrekt.
 
    ![wf-41](assets/wf-41.png)
 
-1. Nu kan du lägga till en instans av steget i en arbetsflödesmodell. När du **konfigurerar** steget visas dialogrutan:
+1. Nu kan du lägga till en instans av steget i en arbetsflödesmodell. När du **konfigurerar** visas dialogrutan:
 
    ![wf-42](assets/wf-42.png) ![wf-43](assets/wf-43.png)
 
 #### Exempelkod som används i det här exemplet {#sample-markup-used-in-this-example}
 
-Markeringar för ett anpassat steg visas i `.content.xml` komponentens rotnod. Det exempel `.content.xml` som används i det här exemplet:
+Markering för ett anpassat steg representeras i `.content.xml` för komponentens rotnod. Exemplet `.content.xml` som används för det här exemplet:
 
 `/apps/cq/workflow/components/model/myCustomStep/.content.xml`
 
@@ -928,7 +937,7 @@ Markeringar för ett anpassat steg visas i `.content.xml` komponentens rotnod. D
     componentGroup="Workflow"/>
 ```
 
-Det exempel som används i det här exemplet `_cq_editConfig.xml` :
+`_cq_editConfig.xml`-exemplet som används i det här exemplet:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -949,7 +958,7 @@ Det exempel som används i det här exemplet `_cq_editConfig.xml` :
 </jcr:root>
 ```
 
-Det exempel som används i det här exemplet `_cq_dialog/.content.xml` :
+`_cq_dialog/.content.xml`-exemplet som används i det här exemplet:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -1030,9 +1039,9 @@ Det exempel som används i det här exemplet `_cq_dialog/.content.xml` :
 >
 >Klassiska dialogrutor för modellredigering i användargränssnittet fungerar fortfarande med den pekaktiverade standardredigeraren.
 >
->Även om AEM har ett [dialogkonverteringsverktyg](/help/sites-developing/dialog-conversion.md) om du vill uppgradera dina klassiska dialogrutor för användargränssnittssteg till standarddialogrutor för användargränssnitt. Efter konverteringen finns det fortfarande några manuella förbättringar som kan göras i dialogrutan för vissa fall.
+>AEM har dock ett [dialogkonverteringsverktyg](/help/sites-developing/dialog-conversion.md) om du vill uppgradera dina klassiska dialogrutor för gränssnittssteg till standarddialogrutor. Efter konverteringen finns det fortfarande några manuella förbättringar som kan göras i dialogrutan för vissa fall.
 >
->* Om en uppgraderad dialogruta är tom kan du titta på dialogrutor i `/libs` som har liknande funktionalitet som exempel på hur en lösning kan tillhandahållas. Till exempel:
+>* Om en uppgraderad dialogruta är tom kan du titta på dialogrutor i `/libs` som har liknande funktionalitet som exempel på hur du tillhandahåller en lösning. Till exempel:
    >
    >
 * `/libs/cq/workflow/components/model`
@@ -1040,6 +1049,7 @@ Det exempel som används i det här exemplet `_cq_dialog/.content.xml` :
 >* `/libs/dam/components`
 >* `/libs/wcm/workflow/components/autoassign`
 >* `/libs/cq/projects`
+
 >
 >  
-Du får inte ändra något i `/libs`utan bara använda dem som exempel. Om du vill utnyttja något av de befintliga stegen kopierar du dem till `/apps` och ändrar dem där.
+Du får inte ändra något i `/libs`, utan bara använda dem som exempel. Om du vill utnyttja något av de befintliga stegen kopierar du dem till `/apps` och ändrar dem där.
