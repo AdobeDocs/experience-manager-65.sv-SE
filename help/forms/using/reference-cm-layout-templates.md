@@ -10,11 +10,14 @@ topic-tags: correspondence-management
 discoiquuid: afeb9f4d-3feb-4a0e-8884-e3ec1309b33b
 translation-type: tm+mt
 source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+workflow-type: tm+mt
+source-wordcount: '496'
+ht-degree: 0%
 
 ---
 
 
-# Mallar för referensbrev {#reference-letter-templates}
+# Referensbokstavsmallar {#reference-letter-templates}
 
 I Correspondence Management innehåller en brevmall typiska formulärfält, layoutfunktioner som sidhuvud och sidfot samt tomma målområden för innehållsplacering.
 
@@ -45,7 +48,7 @@ När du har installerat paketet AEM-FORMS-6.3-REFERENCE-LAYOUT-TEMPLATES visas m
 
 ## Klassisk {#classic}
 
-Klassisk mall med en logotyp överst passar för ett vanligt professionellt brev.
+Klassisk mall passar för ett enkelt professionellt brev med en logotyp överst.
 
 ![klassisk](assets/classic.png)
 
@@ -75,7 +78,7 @@ Mallen Balanced Right har företagslogotypen till vänster och ger utrymme för 
 
 PDF-förhandsgranskning av ett brev som skapats med mallen för balanserat höger
 
-## Visual Left {#visual-left}
+## Visuell vänster {#visual-left}
 
 Mallen Visual Left har ett sidohuvud till vänster på sidan med företagets logotyp placerad över sidhuvudet. Mallen Visual Left har ett ämnesfält men ingen sidfot.
 
