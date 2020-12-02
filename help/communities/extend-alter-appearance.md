@@ -19,7 +19,7 @@ ht-degree: 0%
 ---
 
 
-# Ändra utseendet (HBS) {#alter-the-appearance-hbs}
+# Ändra utseende (HBS) {#alter-the-appearance-hbs}
 
 Nu när komponenterna för det anpassade kommentarsystemet i programkatalogen (/apps) finns på plats, med en resourceSuperType som refererar till standardkommentarsystemet och den anpassade modellen/vyn registrerad, är det möjligt att ändra implementeringen.
 
@@ -29,11 +29,11 @@ För en enkel demonstration, en visuell funktion, tas den avatar som visas för 
 >
 >Om du vill använda tillägget måste instansen av kommentarsystemet på en webbplats som ska påverkas (/content) ange att dess resourceType ska vara det anpassade kommentarsystemet.
 
-## Ändra HBS-skript {#modify-the-hbs-scripts}
+## Ändra HBS-skripten {#modify-the-hbs-scripts}
 
 Använda [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md):
 
-* Open [/apps/custom/components/comments/comment/**comment.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment/comment.hbs)
+* Öppna [/apps/custom/components/comments/comment/**comment.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment/comment.hbs)
 
    * Kommentera taggen som innehåller avataren för ett kommentarinlägg (~ line 21):
 
@@ -43,7 +43,7 @@ Använda [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md):
          -->
       ```
 
-* Open [/apps/custom/components/comments/**comments.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comments.hbs)
+* Öppna [/apps/custom/components/comments/**comments.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comments.hbs)
 
    * Kommentera taggen som innehåller avataren för nästa kommentarspost (~ line 44):
 
@@ -67,11 +67,11 @@ Ett sätt är att
    * Välj **[!UICONTROL Activate Tree]**.
    * Ange `Start Path` till `/apps/custom`.
    * Avmarkera **[!UICONTROL Only Modified]**.
-   * Välj **[!UICONTROL Activate]** knapp.
+   * Välj **[!UICONTROL Activate]**-knappen.
 
 ### Visa ändrad kommentar på publicerad exempelsida {#view-modified-comment-on-published-sample-page}
 
-[Nu kan du uppdatera sidan i publiceringsmiljön och visa ändringen för att ta bort avataren genom att fortsätta med upplevelsen](/help/communities/extend-sample-page.md#publish-sample-page) på publiceringsinstansen, som fortfarande är inloggad som samma användare:
+[När ](/help/communities/extend-sample-page.md#publish-sample-page) upplevelsen av publiceringsinstansen fortsätter, som fortfarande är inloggad som samma användare, går det nu att uppdatera sidan i publiceringsmiljön för att visa ändringen för att ta bort avataren:
 
 ![view-modified-content](assets/view-modified-content.png)
 
