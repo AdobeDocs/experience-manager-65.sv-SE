@@ -12,13 +12,16 @@ discoiquuid: b315720f-e9b8-4063-99e2-1b9aa6bba460
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 5597fb39500ac1f85d03263bfa1e5239d35d2a2c
+workflow-type: tm+mt
+source-wordcount: '685'
+ht-degree: 4%
 
 ---
 
 
 # Migrering till Touch UI{#migration-to-the-touch-ui}
 
-Från och med version 6.0 har Adobe Experience Manager (AEM) introducerat ett nytt användargränssnitt som kallas *pekaktiverat användargränssnitt* (kallas även *pekgränssnittet*). Det är anpassat till Adobe Marketing Cloud och till de allmänna riktlinjerna för Adobes användargränssnitt. Det här har blivit standardgränssnittet i AEM med det äldre, skrivbordsorienterade gränssnittet, som kallas det *klassiska gränssnittet*.
+Från och med version 6.0 introducerade Adobe Experience Manager (AEM) ett nytt användargränssnitt som kallas *användargränssnittet med pekfunktioner* (kallas även *användargränssnittet*). Den är anpassad efter Adobe Marketing Cloud och Adobe användargränssnittets allmänna riktlinjer. Detta har blivit standardgränssnittet i AEM med det äldre skrivbordsorienterade gränssnittet som kallas *klassiskt användargränssnitt*.
 
 Om du har använt AEM med klassiskt gränssnitt måste du vidta åtgärder för att migrera instansen. Den här sidan är avsedd att fungera som en språngbräda genom länkar till enskilda resurser.
 
@@ -26,7 +29,7 @@ Om du har använt AEM med klassiskt gränssnitt måste du vidta åtgärder för 
 >
 >Ett sådant migreringsprojekt kan få stor effekt på din instans. Se [Hantera projekt - Bästa metoder](/help/managing/best-practices.md) för rekommenderade riktlinjer.
 
-## Grunderna {#the-basics}
+## Grundläggande {#the-basics}
 
 När du migrerar bör du vara medveten om följande (stora) skillnader mellan det klassiska gränssnittet och det pekande gränssnittet:
 
@@ -48,7 +51,7 @@ När du migrerar bör du vara medveten om följande (stora) skillnader mellan de
    <td><code>sling:resourceType</code>
     <ul>
      <li>används</li>
-     <li>for example<br /> <code>cq/gui/components/authoring/dialog</code><br /> </li>
+     <li>till exempel<br /> <code>cq/gui/components/authoring/dialog</code><br /> </li>
     </ul> </td>
   </tr>
   <tr>
@@ -103,38 +106,38 @@ Att migrera ett avsnitt i användargränssnittet från det klassiska gränssnitt
 Kontrollera status och relaterade rekommendationer innan du börjar:
 
 * [Status för Touch UI-funktioner](/help/release-notes/touch-ui-features-status.md)
-* [Rekommendationer för användargränssnitt för kunder](/help/sites-deploying/ui-recommendations.md)
+* [Användargränssnitt Recommendations för kunder](/help/sites-deploying/ui-recommendations.md)
 
 Grundläggande information om hur du utvecklar användargränssnittet för pekskärmar ger en solid grund:
 
-* [AEM Touch-aktiverat användargränssnitt](/help/sites-developing/touch-ui-concepts.md)
-* [Struktur för det AEM Touch-aktiverade gränssnittet](/help/sites-developing/touch-ui-structure.md)
+* [Koncepten i det AEM användargränssnittet med pekskärm](/help/sites-developing/touch-ui-concepts.md)
+* [Struktur för det AEM användargränssnittet med pekskärm](/help/sites-developing/touch-ui-structure.md)
 
 ## Migrerar sidredigering {#migrating-page-authoring}
 
 Dialogrutor är en viktig faktor när du migrerar komponenter:
 
-* [Utveckla AEM-komponenter](/help/sites-developing/developing-components.md) (med det pekaktiverade användargränssnittet)
+* [Utveckla AEM komponenter](/help/sites-developing/developing-components.md)  (med det beröringsaktiverade användargränssnittet)
 * [Migrera från en klassisk komponent](/help/sites-developing/developing-components.md#migrating-from-a-classic-component)
-* [Verktyget](/help/sites-developing/dialog-conversion.md) Dialogkonvertering - hjälper dig att konvertera dialogrutorna för dina klassiska användargränssnittskomponenter till användargränssnitt
+* [Konverteringsverktyg](/help/sites-developing/dialog-conversion.md)  för dialogrutor - hjälper dig att konvertera dialogrutorna för dina klassiska användargränssnittskomponenter till användargränssnitt
 
    * Det finns ett kompatibilitetslager med pekfunktion för att öppna en klassisk användargränssnittsdialogruta i en&quot;Touch UI wrapper&quot;, men det har begränsad funktionalitet och rekommenderas inte på lång sikt.
 
 * [Anpassa dialogrutefält i Touch UI](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-customizing-dialog-fields-in-touch-ui.html)
 * [Skapa en ny GRE-fältkomponent](/help/sites-developing/granite-ui-component.md)
-* [Anpassa sidredigering](/help/sites-developing/customizing-page-authoring-touch.md) (med det beröringsaktiverade användargränssnittet)
+* [Anpassa sidredigering](/help/sites-developing/customizing-page-authoring-touch.md)  (med det pekaktiverade användargränssnittet)
 
-## Migrera konsoler {#migrating-consoles}
+## Migrerar konsoler {#migrating-consoles}
 
 Du kan också anpassa konsolerna:
 
-* [Anpassa konsolerna](/help/sites-developing/customizing-consoles-touch.md) (för det beröringsaktiverade användargränssnittet)
+* [Anpassa konsolerna](/help/sites-developing/customizing-consoles-touch.md)  (för det beröringsaktiverade användargränssnittet)
 
 ## Relaterade överväganden {#related-considerations}
 
 Även om det inte är direkt relaterat till en migrering till pekgränssnittet finns det relaterade problem som är värda att ta hänsyn till samtidigt, eftersom de också rekommenderas:
 
-* [Mallar](/help/sites-developing/templates.md) - [Redigerbara mallar](/help/sites-developing/page-templates-editable.md)
+* [Mallar](/help/sites-developing/templates.md)  -  [Redigerbara mallar](/help/sites-developing/page-templates-editable.md)
 * [Kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
 * [HTL](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)
 
@@ -144,16 +147,16 @@ Du kan också anpassa konsolerna:
 
 ## Ytterligare resurser {#further-resources}
 
-Mer information om hur du utvecklar AEM finns i samlingen av resurser under:
+Fullständig information om hur du utvecklar AEM finns i samlingen av resurser under:
 
 * [Utveckla användarhandbok](/help/sites-developing/home.md)
 * [Bevilja gränssnittsdokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html)
-* [Självstudiekurser och videoklipp för AEM 6.5-webbplatser](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/overview.html)
-* [Komma igång med utveckling av AEM-webbplatser - WKND-självstudiekurs](/help/sites-developing/getting-started.md)
+* [AEM 6.5 Sites Tutorials and Videos](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/overview.html)
+* [Komma igång med utveckling i AEM Sites – WKND-självstudiekurs](/help/sites-developing/getting-started.md)
 * [AEM Gems](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-index.html)
 * [AEM Modernization Tools](https://opensource.adobe.com/aem-modernize-tools/)
 
 >[!CAUTION]
 >
->AEM Modernization Tools är en community-åtgärd som inte stöds eller garanteras av Adobe.
+>AEM är en gemenskapsinsats som inte stöds eller motiveras av Adobe.
 
