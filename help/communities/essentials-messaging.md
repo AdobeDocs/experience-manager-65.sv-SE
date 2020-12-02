@@ -19,7 +19,7 @@ ht-degree: 1%
 ---
 
 
-# Viktiga meddelanden {#messaging-essentials}
+# Essentials för meddelanden {#messaging-essentials}
 
 På den här sidan visas information om hur du arbetar med att använda meddelandekomponenten för att inkludera en meddelandefunktion på en webbplats.
 
@@ -71,7 +71,7 @@ På den här sidan visas information om hur du arbetar med att använda meddelan
    <td><p>cq.social.hbs.messaging</p> </td>
   </tr>
   <tr>
-   <td> <strong>templates</strong></td>
+   <td> <strong>mallar</strong></td>
    <td>/libs/social/messaging/components/hbs/messagebox/messagebox.hbs</td>
   </tr>
   <tr>
@@ -89,13 +89,13 @@ På den här sidan visas information om hur du arbetar med att använda meddelan
  </tbody>
 </table>
 
-Se även anpassning av [klientsidan](/help/communities/client-customize.md)
+Se även [Anpassningar på klientsidan](/help/communities/client-customize.md)
 
 ## Grundläggande för serversidan {#essentials-for-server-side}
 
 * [Konfigurerar meddelanden](/help/communities/configure-messaging.md)
-* [Meddelandeklient-API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/client/api/package-summary.html) för SCF-komponenter
-* [MeddelandeAPI:er](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/api/package-summary.html) för tjänsten
+* [Meddelandeklient-](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/client/api/package-summary.html) API:er för SCF-komponenter
+* [MeddelandeAPI:](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/api/package-summary.html) er för tjänsten
 * [Meddelandeslutpunkter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/client/endpoints/package-summary.html)
 * [Anpassningar på serversidan](/help/communities/server-customize.md)
 
@@ -118,17 +118,17 @@ Till exempel:
 
 ### Community-webbplats {#community-site}
 
-En community-platsstruktur som skapats med guiden innehåller meddelandefunktionen när den väljs. Se `User Management` inställningarna för [Community Sites Console](/help/communities/sites-console.md#user-management).
+En community-platsstruktur som skapats med guiden innehåller meddelandefunktionen när den väljs. Se `User Management` inställningar för [Community Sites Console](/help/communities/sites-console.md#user-management).
 
 ### Exempelkod: Meddelande mottaget {#sample-code-message-received-notification}
 
 Funktionen för sociala meddelanden genererar händelser för åtgärder, till exempel `send`, `marking read`, `marking delete`. Dessa händelser kan fångas upp och åtgärder vidtas utifrån data i händelsen.
 
-Följande exempel är en händelsehanterare som lyssnar efter `message sent` händelsen och skickar ett e-postmeddelande till alla meddelandemottagare som använder `Day CQ Mail Service`.
+Följande exempel är en händelsehanterare som lyssnar efter händelsen `message sent` och skickar ett e-postmeddelande till alla meddelandemottagare som använder `Day CQ Mail Service`.
 
 För att testa exempelskriptet på serversidan behöver du en utvecklingsmiljö och möjlighet att skapa ett OSGi-paket:
 
-1. Logga in som administratör till ` [CRXDE|Lite](https://localhost:4502/crx/de)`.
+1. Logga in som administratör på ` [CRXDE|Lite](https://localhost:4502/crx/de)`.
 1. Skapa en `bundle node`i `/apps/engage/install` med godtyckliga namn, som:
 
    * Symboliskt namn: `com.engage.media.social.messaging.MessagingNotification`
@@ -136,16 +136,16 @@ För att testa exempelskriptet på serversidan behöver du en utvecklingsmiljö 
    * Beskrivning: En exempeltjänst för att skicka ett e-postmeddelande till användare när de får ett meddelande
    * Paket: `com.engage.media.social.messaging.notification`
 
-1. Navigera till `/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/src/main/java/com/engage/media/social/messaging/notification`och sedan:
+1. Navigera till `/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/src/main/java/com/engage/media/social/messaging/notification` och sedan:
 
-   1. Ta bort den `Activator.java` klass som skapas automatiskt.
-   1. Skapa klass `MessageEventHandler.java`.
+   1. Ta bort klassen `Activator.java` som har skapats automatiskt.
+   1. Skapa klassen `MessageEventHandler.java`.
    1. Kopiera och klistra in koden nedan i `MessageEventHandler.java`.
 
 1. Klicka på **Spara alla**.
-1. Navigera till `/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/com.engage.media.social.messaging.MessagingNotification.bnd`och lägg till alla importsatser som de skrivs i `MessageEventHandler.java` koden.
+1. Navigera till `/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/com.engage.media.social.messaging.MessagingNotification.bnd` och lägg till alla importsatser som skrivits i `MessageEventHandler.java`-koden.
 1. Bygg paketet.
-1. Kontrollera att `Day CQ Mail Service`OSGi-tjänsten är konfigurerad.
+1. Kontrollera att tjänsten `Day CQ Mail Service`OSGi är konfigurerad.
 1. Logga in som demoanvändare och skicka e-post till en annan användare.
 1. Mottagaren får ett e-postmeddelande om ett nytt meddelande.
 
