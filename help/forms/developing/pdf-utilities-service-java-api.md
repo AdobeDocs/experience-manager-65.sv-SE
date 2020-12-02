@@ -32,15 +32,15 @@ Följande snabbstarter är tillgängliga för tjänsten PDF Utilities.
 
 [Snabbstart (SOAP-läge): Sanera PDF-dokument](pdf-utilities-service-java-api.md#quick-start-soap-mode-sanitizing-pdf-documents)
 
-AEM Forms-åtgärder kan utföras med AEM Forms-API:t med stark typning och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
->Snabbstarter i Programmering med AEM-formulär baseras på operativsystemet Forms Server. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>Snabbstarter som finns i Programmering med AEM är baserade på operativsystemet Forms Server. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## Snabbstart (SOAP-läge): Konvertera ett PDF-dokument till ett XDP-dokument med Java API {#quick-start-soap-mode-converting-a-pdf-document-to-an-xdp-document-using-the-java-api}
 
-I följande kodexempel konverteras ett PDF-dokument till ett XDP-dokument. (Se [Konvertera PDF-dokument till XDP-dokument](/help/forms/developing/pdf-utilities.md#converting-pdf-documents-into-xdp-documents).)
+I följande kodexempel konverteras ett PDF-dokument till ett XDP-dokument. (Se [Konvertera PDF-dokument till XDP-dokument](/help/forms/developing/pdf-utilities.md#converting-pdf-documents-into-xdp-documents).
 
 ```java
  /*
@@ -241,7 +241,7 @@ I följande kodexempel konverteras ett XDP-dokument till ett PDF-dokument. (Se [
 
 ## Snabbstart (SOAP-läge): Hämta PDF-dokumentegenskaper med Java API {#quick-start-soap-mode-retrieving-pdf-document-properties-using-the-java-api}
 
-I följande kodexempel avgörs om dokumentet är ett PDF-dokument och i så fall den tidigaste Acrobat-versionen som kan läsa det. (Se [Hämta PDF-dokumentegenskaper](/help/forms/developing/pdf-utilities.md#retrieving-pdf-document-properties).)
+Följande kodexempel avgör om dokumentet är ett PDF-dokument och, i så fall, den tidigaste Acrobat-versionen som kan läsa det. (Se [Hämta PDF-dokumentegenskaper](/help/forms/developing/pdf-utilities.md#retrieving-pdf-document-properties).)
 
 ```java
  /*
@@ -358,7 +358,7 @@ I följande kodexempel avgörs om dokumentet är ett PDF-dokument och i så fall
 
 ## Snabbstart (SOAP-läge): Ställa in sparningsstil för ett PDF-dokument med Java API {#quick-start-soap-mode-setting-the-save-style-for-a-pdf-document-using-the-java-api}
 
-Följande kodexempel ställer in sparningsläget för snabb webbvisning och skickar sedan PDF-dokumentet till krypteringstjänsten där det är krypterat. Det krypterade PDF-dokumentet som sparas för snabb webbvisning sparas som en PDF-fil med namnet* FastWebViewLoan.pdf*. (Se [Ställa in sparningslägen](/help/forms/developing/pdf-utilities.md#setting-pdf-document-save-modes)för PDF-dokument.)
+Följande kodexempel ställer in sparningsläget för snabb webbvisning och skickar sedan PDF-dokumentet till krypteringstjänsten där det är krypterat. Det krypterade PDF-dokumentet som sparas för snabb webbvisning sparas som en PDF-fil med namnet* FastWebViewLoan.pdf*. (Se [Ange sparningslägen för PDF-dokument](/help/forms/developing/pdf-utilities.md#setting-pdf-document-save-modes).)
 
 ```java
  /*
@@ -584,7 +584,7 @@ public class CreatePDFADocument {
 }
 ```
 
-## Snabbstart (SOAP-läge): Sanera PDF-dokument {#quick-start-soap-mode-sanitizing-pdf-documents}
+## Snabbstart (SOAP-läge): Sanerar PDF-dokument {#quick-start-soap-mode-sanitizing-pdf-documents}
 
 I följande Java-kodexempel saneras ett PDF-dokument med namnet *Loan.pdf*.
 
