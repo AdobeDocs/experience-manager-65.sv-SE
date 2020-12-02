@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: e26bf608-c57c-4346-88fb-32a82cfa82d2
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '96'
+ht-degree: 5%
 
 ---
 
@@ -24,8 +27,8 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    ![](do-not-localize/chlimage_1-11.png)
 
-1. Klicka på **Ny ...**
-1. Du kan ange **titel**, **namn** och typ av upplevelse som ska skapas. i det här fallet Test&amp;Target-erbjudande.
+1. Klicka på **Nytt ...**
+1. Du kan ange **titel**, **namn** och vilken typ av upplevelse som ska skapas; i det här fallet Test&amp;Target-erbjudande.
 
    ![chlimage_1-139](assets/chlimage_1-139.png)
 
@@ -33,8 +36,8 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    >[!NOTE]
    >
-   >Test&amp;Target-upplevelser är för närvarande inte listade i MCM. De kan nås via **webbplatskonsolen** under Campaigns.
+   >Test&amp;Target-upplevelser är för närvarande inte listade i MCM. De kan nås via konsolen **Webbplatser** under Campaigns.
 
 ## Integrera med Adobe Target {#integrating-with-adobe-target}
 
-Mer information finns i [Integrera med Adobe](/help/sites-administering/target.md) [Target](/help/sites-administering/target.md) .
+Mer information finns i [Integrera med Adobe](/help/sites-administering/target.md) [Mål](/help/sites-administering/target.md).
