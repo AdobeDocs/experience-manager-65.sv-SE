@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f9b40e1f-956d-498b-92e4-4fe21e23fc4a
 translation-type: tm+mt
 source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
+workflow-type: tm+mt
+source-wordcount: '198'
+ht-degree: 0%
 
 ---
 
@@ -19,11 +22,11 @@ source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
 
 För att kunna administrera formulärarbetsflödet effektivt bör du förstå följande termer och elementens hierarki:
 
-* *Processkategorier* organiserar processer i logiska grupper.
-* *Processer* representerar automatiserade affärsprocesser. Det bör finnas minst en process för varje affärsprocess som implementeras.
-* Ett *processdiagram* är den visuella återgivningen av den affärsprocess som automatiseras.
+* *Bearbeta* kategorier:ordna processer i logiska grupper.
+* *Processerna* representerar de automatiserade affärsprocesserna. Det bör finnas minst en process för varje affärsprocess som implementeras.
+* Ett *processdiagram* är den visuella representationen av den affärsprocess som automatiseras.
 * En *processinstans* är en process som har initierats av en användare (som att fylla i och skicka ett formulär) eller ett automatiskt steg. Det kan finnas flera instanser av en process.
 * En *åtgärd* är ett steg i ett processdiagram, som representeras av en ikon i processdiagrammet i Workbench.
-* En *uppgift* är en åtgärd som har tilldelats en användare. När aktiviteten körs och åtgärden körs tilldelar användartjänsten en uppgift till en användare.
+* En *aktivitet* är en åtgärd som har tilldelats en användare. När aktiviteten körs och åtgärden körs tilldelar användartjänsten en uppgift till en användare.
 
 Mer information om dessa termer finns i [Workbench-hjälpen](https://www.adobe.com/go/learn_aemforms_workbench_63).
