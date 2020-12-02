@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 14de0652-717d-4c84-b7b4-b7b78f325baa
 translation-type: tm+mt
 source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+workflow-type: tm+mt
+source-wordcount: '117'
+ht-degree: 0%
 
 ---
 
@@ -23,5 +26,5 @@ Systeminformationstjänsten tillhandahåller REST API:er för att hämta informa
 1. Navigera till Tjänster > Program och tjänster > Tjänsthantering.
 1. Klicka på tjänsten **SystemInfo** på sidan Tjänsthantering.
 1. Välj REST i listan på fliken Slutpunkter och klicka på **Lägg till**.
-1. Klicka på **Lägg till** på skärmen Lägg till REST-slutpunkt.
+1. På skärmen Lägg till REST-slutpunkt klickar du på **Lägg till**.
 
