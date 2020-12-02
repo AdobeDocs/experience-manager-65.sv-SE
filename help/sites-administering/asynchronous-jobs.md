@@ -146,7 +146,7 @@ Om antalet referenser till de sidor som ska flyttas överstiger gränsvärdet ut
 >* [Skapa och ordna sidor](/help/sites-authoring/managing-pages.md)
 >* [Skapa och synkronisera Live-kopior](/help/sites-administering/msm-livecopy.md)
 >* [Konfigurera e-post i Experience Manager](/help/sites-administering/notification.md).
->* [Importera metadata](/help/assets/metadata.md#import-metadata)för resurser.
->* [Exportera metadata](/help/assets/metadata.md#export-metadata)för resurser.
+>* [Importera metadata](/help/assets/metadata.md#import-metadata) för resurser.
+>* [Exportera metadata](/help/assets/metadata.md#export-metadata) för resurser.
 >* [Använd länkade resurser för att dela DAM-resurser från fjärrdistributioner](/help/assets/use-assets-across-connected-assets-instances.md).
 
