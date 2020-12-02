@@ -17,13 +17,13 @@ ht-degree: 4%
 ---
 
 
-# Panoramic images{#panoramic-images}
+# Panoramabilder{#panoramic-images}
 
 I det här avsnittet beskrivs hur du arbetar med visningsprogrammet för panoramabilder för att återge sfäriska panoramabilder så att du får en totalupplevelse på 360° i ett rum, en egenskap, en plats eller ett landskap.
 
 Se även [Hantera visningsförinställningar](/help/assets/managing-viewer-presets.md).
 
-![panoramic-image2](assets/panoramic-image2.png)
+![panoramabild2](assets/panoramic-image2.png)
 
 ## Överföra resurser som ska användas med panoramabildsvisningsprogrammet {#uploading-assets-for-use-with-the-panoramic-image-viewer}
 
@@ -33,23 +33,23 @@ För att en överförd resurs ska kvalificeras som en sfärisk panoramabild som 
 Du kan åsidosätta standardinställningen för proportioner på 2 i CRXDE Lite enligt följande:
    `/conf/global/settings/cloudconfigs/dmscene7/jcr:content`
 
-* Taggad med nyckelorden `equirectangular`, eller `spherical`och `panorama`, eller `spherical` och `panoramic`. Se [Använda taggar](/help/sites-authoring/tags.md).
+* Taggad med nyckelorden `equirectangular`, `spherical`och `panorama`, eller `spherical` och `panoramic`. Se [Använda taggar](/help/sites-authoring/tags.md).
 
 Kriterierna för proportioner och nyckelord gäller även för panoramaresurser på sidan med resursinformation och för komponenten `Panoramic Media` i innehållshanteringssystemet.
 
-Information om hur du överför resurser som ska användas med panoramabildsvisningsprogrammet finns i [Överföra resurser](/help/assets/manage-assets.md#uploading-assets).
+Information om hur du överför resurser som ska användas med visningsprogrammet för panoramabilder finns i [Överföra resurser](/help/assets/manage-assets.md#uploading-assets).
 
 ## Konfigurera Dynamic Media Classic (Scene7) {#configuring-dynamic-media-classic-scene}
 
 För att visningsprogrammet för panoramabilder ska fungera på rätt sätt i AEM måste du synkronisera förinställningarna för visningsprogrammet för panoramabilder med metadata som är specifika för Dynamic Media Classic (Scene7) och Dynamic Media Classic (Scene7) så att visningsförinställningarna uppdateras i JCR-läsaren. Konfigurera Dynamic Media Classic (Scene7) på följande sätt:
 
-1. [Logga in på din instans av Dynamic Media Classic (Scene7)](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) för varje företagskonto.
+1. [Logga in på din instans av Dynamic Media Classic (Scene7) ](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) för varje företagskonto.
 
-1. Near the upper-right corner of the page, click **[!UICONTROL Setup > Application Setup > Publish Setup > Image Server.]**
-1. På sidan Image Server Publish (Image Server Publish) på den **[!UICONTROL Publish Context]** nedrullningsbara menyn uppe väljer du **[!UICONTROL Image Serving.]**
+1. Klicka på **[!UICONTROL Setup > Application Setup > Publish Setup > Image Server.]** längst upp till höger på sidan
+1. Välj **[!UICONTROL Image Serving.]** på menyn **[!UICONTROL Publish Context]** längst upp på sidan Image Server Publish (Publicera)
 
 1. På samma Image Server Publish-sida hittar du rubriken **[!UICONTROL Request Attributes.]**
-1. Under rubriken Attribut för begäran letar du upp **[!UICONTROL Reply Image Size Limit.]** Öka sedan den maximalt tillåtna bildstorleken för panoramabilder i de associerade fälten Bredd och Höjd.
+1. Under rubriken Begäransattribut går du till **[!UICONTROL Reply Image Size Limit.]** och i de associerade fälten Bredd och Höjd ökar du den maximalt tillåtna bildstorleken för panoramabilder.
 
    Dynamic Media Classic (Scene7) har en begränsning på 25 000 000 pixlar. Den största tillåtna storleken för bilder med 2:1-proportioner är 7 000 x 3 500. För vanliga skärmar räcker det dock med 4 096 x 2 048 pixlar.
 
@@ -59,29 +59,29 @@ För att visningsprogrammet för panoramabilder ska fungera på rätt sätt i AE
 
 1. Gör följande under rubriken Begärandeattribut:
 
-   * Ställ in begärandefelsökningsläget på **[!UICONTROL Disabled.]**
+   * Ställ in begäranobfuktningsläget till **[!UICONTROL Disabled.]**
    * Ange låsläge för begäran till **[!UICONTROL Disabled.]**
 
-   Dessa inställningar är nödvändiga för att du ska kunna använda `Panoramic Media` WCM-komponenten i AEM.
+   Dessa inställningar är nödvändiga för att du ska kunna använda WCM-komponenten `Panoramic Media` i AEM.
 
-1. Längst ned på sidan Image Server Publish (Publicera på vänster sida) klickar du på **[!UICONTROL Save.]**
+1. Klicka på **[!UICONTROL Save.]** längst ned på sidan Image Server Publish (Publicera på vänster sida)
 
-1. Klicka på i det nedre högra hörnet **[!UICONTROL Close.]**
+1. Klicka på **[!UICONTROL Close.]** i det nedre högra hörnet
 
-### Felsöka komponenten Panoramic Media WCM {#troubleshooting-the-panoramic-media-wcm-component}
+### Felsökning av WCM-komponenten för panoramamedia {#troubleshooting-the-panoramic-media-wcm-component}
 
 Om du har släppt en bild i panoramamediakomponenten i WCM-filen och platshållaren för komponenten är komprimerad kanske du vill felsöka följande:
 
-* Om du får ett otillåtet fel 403 kan det bero på att den begärda bildstorleken är för stor. Granska **[!UICONTROL Reply Image Size Limit]** inställningarna i [Konfigurera Dynamic Media Classic (Scene7)](/help/assets/panoramic-images.md#configuring-dynamic-media-classic-scene).
+* Om du får ett otillåtet fel 403 kan det bero på att den begärda bildstorleken är för stor. Granska **[!UICONTROL Reply Image Size Limit]**-inställningarna i [Konfigurera Dynamic Media Classic (Scene7)](/help/assets/panoramic-images.md#configuring-dynamic-media-classic-scene).
 
 * Om objektet har ett ogiltigt lås eller om ett parsningsfel visas på sidan, kontrollerar du Begär felsökningsläge och Begär låsläge för att se om de är inaktiverade.
 * Om det uppstår ett fel på arbetsytan för en målad arbetsyta skapar du en sökväg till definitionsfilen för regeluppsättningen och kontrollerar CTN för de tidigare förfrågningarna om bildresursen.
-* Om bildkvaliteten blir mycket låg efter en bildbegäran med en storlek som ligger över den gräns som stöds, kontrollerar du att **[!UICONTROL JPEG Encoding Attributes > Quality]** inställningen inte är tom. En typisk inställning för **[!UICONTROL Quality]** fältet är `95`. Inställningen finns på sidan Image Server Publish (Bildserverpublicering). Mer information finns i [Konfigurera Dynamic Media Classic (Scene7)](/help/assets/panoramic-images.md#configuring-dynamic-media-classic-scene).
+* Om bildkvaliteten blir mycket låg efter en bildbegäran med en storlek över den gräns som stöds, kontrollerar du att inställningen **[!UICONTROL JPEG Encoding Attributes > Quality]** inte är tom. En typisk inställning för fältet **[!UICONTROL Quality]** är `95`. Inställningen finns på sidan Image Server Publish (Bildserverpublicering). Mer information finns i [Konfigurera Dynamic Media Classic (Scene7)](/help/assets/panoramic-images.md#configuring-dynamic-media-classic-scene).
 
 ## Förhandsgranska panoramabilder {#previewing-panoramic-images}
 
 Se [Förhandsgranska resurser](/help/assets/previewing-assets.md).
 
-## Publicera panoramabilder {#publishing-panoramic-images}
+## Publicerar panoramabilder {#publishing-panoramic-images}
 
 Se [Publicera resurser](/help/assets/publishing-dynamicmedia-assets.md).
