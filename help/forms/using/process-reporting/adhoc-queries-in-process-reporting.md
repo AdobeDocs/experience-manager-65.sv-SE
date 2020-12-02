@@ -1,8 +1,8 @@
 ---
 title: Ad hoc-frågor i processrapportering
 seo-title: Ad hoc-frågor i processrapportering
-description: Skapa anpassade frågor för att söka efter AEM Forms i JEE-process och uppgiftsinformation i Process Reporting
-seo-description: Create custom queries to search for AEM Forms on JEE  process and task details in Process Reporting
+description: Skapa anpassade frågor för att söka efter AEM Forms om JEE-process och uppgiftsinformation i processrapportering
+seo-description: Skapa anpassade frågor för att söka efter AEM Forms om JEE-process och uppgiftsinformation i processrapportering
 uuid: db0c5c28-b213-4582-a6ed-df127e570a4e
 content-type: reference
 topic-tags: process-reporting
@@ -11,6 +11,9 @@ discoiquuid: b0a544e2-2ce4-48e2-a721-82f481d36004
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+workflow-type: tm+mt
+source-wordcount: '1691'
+ht-degree: 0%
 
 ---
 
@@ -19,15 +22,15 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ## Ad hoc-frågor i processrapportering {#ad-hoc-queries-in-process-reporting-1}
 
-Med ad hoc-frågor i processrapportering kan du skapa anpassade frågor som du kan använda för att söka efter process- och uppgiftsinformation för de AEM Forms-processinstanser som definieras i AEM Forms-miljön.
+Med ad hoc-frågor i processrapportering kan du skapa anpassade frågor som du kan använda för att söka efter process- och uppgiftsinformation för AEM Forms processinstanser som definieras i din AEM Forms-miljö.
 
 Dessutom kan ad hoc-frågor definieras med hjälp av egenskapsfilter för process och uppgift. Dessa filter kan sedan sparas och användas för att köra rapporterna senare.
 
-[**Processsökning **](/help/forms/using/process-reporting/adhoc-queries-in-process-reporting.md#p-process-task-search-p): Sök efter processinstanser med ett användardefinierat sökfilter baserat på processattribut.
+[**Processsökning**](/help/forms/using/process-reporting/adhoc-queries-in-process-reporting.md#p-process-task-search-p): Sök efter processinstanser med ett användardefinierat sökfilter baserat på processattribut.
 
-[**Processinformation **](/help/forms/using/process-reporting/adhoc-queries-in-process-reporting.md#p-process-task-details-p): Visa information om en processinstans genom att ange process-ID.
+[**Processinformation**](/help/forms/using/process-reporting/adhoc-queries-in-process-reporting.md#p-process-task-details-p): Visa information om en processinstans genom att ange process-ID.
 
-**Task Search**: Search for task instances with a user-defined search filter based on task attributes.
+**Uppgiftssökning**: Sök efter aktivitetsinstanser med ett användardefinierat sökfilter baserat på aktivitetsattribut.
 
 **Uppgiftsinformation**: Visa information om en aktivitetsinstans genom att ange uppgifts-ID.
 
@@ -43,9 +46,9 @@ I den här artikeln beskrivs avsnitten Process/Task Search och Process/Task Deta
 
 Du använder process-/uppgiftssökning för att definiera filter för frågor i process-/uppgiftsinstanser.
 
-### Skapa en process-/uppgiftssökningsfråga {#to-create-a-process-task-search-query}
+### Så här skapar du en process-/uppgiftssökningsfråga {#to-create-a-process-task-search-query}
 
-1. Om du vill visa de sparade process-/uppgiftssökningsfrågorna eller skapa en fråga klickar du på **Ad-frågor** och sedan på **Process-/uppgiftssökning**.
+1. Om du vill visa de sparade process-/uppgiftssökningsfrågorna eller skapa en fråga klickar du på **Aktiva frågor** och sedan på **Process-/uppgiftssökning**.
 
    ![search_nodes](assets/search_nodes.png)
 
@@ -55,7 +58,7 @@ Du använder process-/uppgiftssökning för att definiera filter för frågor i 
 
    ![my_filters_panel](assets/my_filters_panel.png)
 
-1. Om du vill köra en befintlig fråga klickar du bara på frågan på panelen **Mina filter** .
+1. Om du vill köra en befintlig fråga klickar du bara på frågan i panelen **Mina filter**.
 1. Om du vill skapa en fråga klickar du på **Lägg till** (+).
 
    Panelen **Skapa filter** visas.
@@ -72,7 +75,7 @@ Du använder process-/uppgiftssökning för att definiera filter för frågor i 
 
       >[!NOTE]
       >
-      >Fältlistan innehåller fält som är specifika för AEM Forms-processen/uppgiften.
+      >Fältlistan innehåller fält som är specifika för AEM Forms process/uppgift.
 
    1. Välj ett villkor.
 
@@ -92,22 +95,22 @@ Du använder process-/uppgiftssökning för att definiera filter för frågor i 
 
       ![filter_add_del](assets/filter_add_del.png)
 
-När du har skapat en fråga använder du alternativen i det övre högra hörnet på panelen **Skapa filter** för att:
+När du har skapat en fråga använder du alternativen i det övre högra hörnet i panelen **Skapa filter** för att:
 
-* **Avbryt**: Avbryt ändringarna och gå tillbaka till panelen **Mina filter** .
+* **Avbryt**: Avbryt ändringarna och gå tillbaka till panelen  **Mina** filter.
 * **Kör**: Kör den aktuella frågan för att se och/eller verifiera resultatet. I det här fallet behöver du inte spara frågan innan du kör frågan. Du kan verifiera resultatet, göra eventuella ändringar och sedan spara frågan när du är nöjd med resultatet.
-* **Spara**: Spara filtret. Filtret kan sedan visas och köras från panelen **Mina filter** .
+* **Spara**: Spara filtret. Filtret kan sedan visas och köras från panelen **Mina filter**.
 
 ### Alternativ på panelen Mina filter {#options-in-my-filters-panel}
 
-Använd alternativen på panelen **Mina filter** för att **lägga till** ![lc_pr_add_filter](assets/lc_pr_add_filter.png), **redigera** ![lc_pr_delete_filter](assets/lc_pr_delete_filter.png)**** ![](assets/lc_pr_edit_filter.png)eller¥Delete¥lc_pr_edit_¥filteran ad hoc-fråga.
+Använd alternativen på panelen **Mina filter** för att **Lägg till** ![lc_pr_add_filter](assets/lc_pr_add_filter.png), **Redigera** ![lc_pr_delete_filter](assets/lc_pr_delete_filter.png) eller **Ta bort** ![lc_pr_edit_filter](assets/lc_pr_edit_filter.png)en ad hoc-fråga.
 
 ![my_filters_options](assets/my_filters_options.png)
 
 ### Så här kör du en sökfråga {#to-execute-a-search-query}
 
 1. Om du vill köra en fråga klickar du på filtret på panelen **Mina filter** eller på knappen **Kör** om du skapar eller redigerar ett filter.
-1. Resultatet av frågan visas på panelen **Rapport** i fönstret **Processrapportering** .
+1. Resultatet av frågan visas i panelen **Rapport** i fönstret **Processrapportering**.
 
    ![process_search_result](assets/process_search_result.png)
 
@@ -115,37 +118,39 @@ Använd alternativen på panelen **Mina filter** för att **lägga till** ![lc_p
 
    ![process_result_pgn](assets/process_result_pgn.png)
 
-   I listrutan **Visa** väljer du hur många resultat som ska visas per sida.
+   I listrutan **Visa** väljer du antalet resultat som ska visas per sida.
 
-   Ange ett sidnummer i textrutan **Sida** om du vill gå direkt till den sidan.
+   I textrutan **Sida** anger du ett sidnummer som ska gå direkt till den sidan.
 
 1. Följande fält visas i resultatet av en processsökning:
 
-   * **Process-ID**: ID för processen. Fältet är hyperlänkat. Om du klickar på ett process-ID i det här fältet omdirigeras du till panelen **[!UICONTROL Processinformation]** för processen.
+   * **Process-ID**: ID för processen. Fältet är hyperlänkat. Om du klickar på ett process-ID i det här fältet omdirigeras du till panelen **[!UICONTROL Process Details]** för processen.
    * **Initierare**: Den AEM Forms-användare som startade processinstansen
    * **Skapad**: Datum och tid då processinstansen startades
    * **Slutförandetid**: Datum och tid då processinstansen slutfördes
    * **Varaktighet**: Varaktigheten från start till slutförande av processinstansen
    * **Status**: Processinstansens aktuella status.
+
    Som standard sorteras resultatet efter process-ID. Om du vill sortera resultatet efter något av fälten klickar du på fältrubriken.
 
    Eftersom sorteringen är en växlingsåtgärd kan du sortera resultatet i stigande ordning genom att klicka på en kolumnrubrik och sedan klicka på den igen för att sortera i fallande ordning.
 
    På samma sätt visas följande fält i ett resultat av en uppgiftssökning:
 
-   * **Aktivitets-ID**: Aktivitetens ID. Fältet är hyperlänkat. Om du klickar på ett uppgifts-ID i det här fältet omdirigeras du till panelen **[!UICONTROL Uppgiftsinformation]** för uppgiften.
+   * **Aktivitets-ID**: Aktivitetens ID. Fältet är hyperlänkat. Om du klickar på ett aktivitets-ID i det här fältet omdirigeras du till panelen **[!UICONTROL Task Details]** för uppgiften.
    * **Initierare**: Den AEM Forms-användare som startade processinstansen
    * **Skapad**: Datum och tid då processinstansen startades
    * **Slutförandetid**: Datum och tid då processinstansen slutfördes
    * **Varaktighet**: Varaktigheten från start till slutförande av processinstansen
    * **Status**: Processinstansens aktuella status.
+
    Som standard sorteras resultatet efter aktivitets-ID. Om du vill sortera resultatet efter något av fälten klickar du på fältrubriken. Resultatet sorteras efter den kolumn som indikeras av en mörk pil bredvid kolumnrubriken.
 
    Eftersom sorteringen är en växlingsåtgärd kan du sortera resultatet i stigande ordning genom att klicka på en fältrubrik och sedan sortera i fallande ordning genom att klicka på den igen. Den aktuella sorteringsordningen (stigande/fallande) anges med riktningen för den mörkare pilen bredvid kolumnrubriken.
 
    ![task_search_result](assets/task_search_result.png)
 
-1. Klicka på knappen ![lc_pr_rail_button](assets/lc_pr_rail_button.png) i det övre vänstra hörnet för att komprimera rutan **Mina filter** och utökar utrymmet för **rapportpanelen** .
+1. Klicka på knappen ![lc_pr_rail_button](assets/lc_pr_rail_button.png) i det övre vänstra hörnet för att komprimera rutan **Mina filter** och utöka utrymmet som är tillgängligt för panelen **Rapport**.
 1. Använd alternativen i det övre högra hörnet av panelen **Rapport **för att utföra åtgärder på frågeresultatet.
 
    * **Uppdatera**: Uppdaterar rapporten med de senaste data som finns i lagringen
@@ -161,7 +166,7 @@ Du använder panelen **Processinformation** för att visa information om en viss
 
 På samma sätt använder du panelen **Uppgiftsinformation** för att visa information om en viss uppgift.
 
-### Visa process-/uppgiftsinformation {#to-view-process-task-details}
+### Visa process-/aktivitetsinformation {#to-view-process-task-details}
 
 Du kan visa information om en viss AEM Forms-process/uppgift:
 
@@ -170,15 +175,15 @@ Du kan visa information om en viss AEM Forms-process/uppgift:
 
 #### Från ett process-/uppgiftssökresultat {#from-a-process-task-search-result}
 
-1. Kör en process-/uppgiftssökning. Mer information finns i [Så här kör du en processsökfråga](#to-execute-a-search-query).
+1. Kör en process-/uppgiftssökning. Mer information finns i [Så här kör du en processsökningsfråga](#to-execute-a-search-query).
 
    Observera att de process-ID som visas i resultatet är hyperlänkade.
 
    ![process_id_list](assets/process_id_list.png)
 
-1. Klicka på ett process-ID i listan för att visa information om processen på panelen **Processinformation** .
+1. Klicka på ett process-ID i listan för att visa information om processen på panelen **Processinformation**.
 
-   Frågeresultatet för **process-/uppgiftsinformation** visar detaljer om de uppgifter/formulär som finns i processen/uppgiften.
+   Frågeresultatet **Process/Task Details** visar information om de uppgifter/formulär som finns i processen/uppgiften.
 
    Som standard sorteras resultatet efter Aktivitets-/formulär-ID. Om du vill sortera resultatet efter något av fälten klickar du på fältrubriken. Kolumnen som resultatet sorteras efter anges med en mörk pil bredvid kolumnrubriken.
 
@@ -196,7 +201,8 @@ Du kan visa information om en viss AEM Forms-process/uppgift:
    * Processens längd
    * Processstatus
    * Processinitierare
-   **Panelen längst upp till höger:** Visar följande information om de uppgifter som utgör den valda processen:
+
+   **Övre högra panelen:** Visar följande information om de uppgifter som utgör den markerade processen:
 
    * Aktivitets-ID
    * Uppgiftsnamn
@@ -206,6 +212,7 @@ Du kan visa information om en viss AEM Forms-process/uppgift:
    * Datum och tid för slutförande av uppgift
    * Aktivitetsvaraktighet
    * Uppgiftsstatus
+
    **Panelen längst ned till höger:** Visar följande information om processhistoriken för den valda processen:
 
    * Processnamn
@@ -213,11 +220,12 @@ Du kan visa information om en viss AEM Forms-process/uppgift:
    * Datum och tid för processuppdatering
    * Datum och tid för slutförande av process
    * Processstatus
+
    **Resultat av aktivitetsinformation**
 
    ![task_details](assets/task_details.png)
 
-   **Vänster panel:** Visar följande information om den valda aktiviteten:
+   **Vänster panel:** Visar följande information om den valda åtgärden:
 
    * Aktivitetsnamn
    * ID för processen som den här aktiviteten tillhör
@@ -227,12 +235,14 @@ Du kan visa information om en viss AEM Forms-process/uppgift:
    * Aktivitetsvaraktighet
    * Uppgiftsstatus
    * Markerat uppgiftsflöde
-   **Panelen längst upp till höger:** Visar följande information om de formulär som utgör den valda uppgiften:
+
+   **Övre högra panelen:** Visar följande information om de formulär som utgör den markerade åtgärden:
 
    * Foprm-ID
    * Datum och tid då formuläret skapades
    * Datum och tid för formuläruppdatering
    * Formulärmallens URL
+
    **Panelen längst ned till höger:** Visar följande information om processhistoriken för den valda uppgiften:
 
    * Typ av aktivitetstilldelning
@@ -245,15 +255,15 @@ Du kan visa information om en viss AEM Forms-process/uppgift:
 
 
 
-1. Klicka på **Tillbaka till process-/uppgiftssökning** om du vill gå tillbaka till sökresultatet som processen/uppgiftsinformationen fördjupades från.
+1. Klicka på **Tillbaka till process-/uppgiftssökning** för att gå tillbaka till sökresultatet som process-/uppgiftsinformationen fördjupades från.
 
    ![back_to_search](assets/back_to_search.png)
 
    Om process-/uppgiftsinformationen hittas genom att ett visst process-/uppgifts-ID anges, kommer du tillbaka till **process-/uppgiftssökning** när du klickar på Tillbaka till process-/uppgiftssökning, utan att visa något sökresultat.
 
-#### Genom att ange process-/uppgifts-ID på panelen Process/Task Details {#by-entering-the-process-task-id-in-the-process-task-details-panel-br}
+#### Genom att ange process-/uppgifts-ID i panelen Process/Task Details {#by-entering-the-process-task-id-in-the-process-task-details-panel-br}
 
-1. Gå till panelen **Process/Aktivitetsinformation** .
+1. Gå till panelen **Process/Task Details**.
 
    ![details_nodes](assets/details_nodes.png)
 
@@ -261,7 +271,7 @@ Du kan visa information om en viss AEM Forms-process/uppgift:
 
    ![process_details-1](assets/process_details-1.png)
 
-   Fälten i frågeresultatet **Process/Uppgiftsinformation** är fält som är specifika för en AEM Forms-process/uppgift.
+   Fälten i frågeresultatet **Process/Task Details** är fält som är specifika för en AEM Forms-process/uppgift.
 
    För en process visar frågeresultatet information om de uppgifter som ingår i processen.
 
