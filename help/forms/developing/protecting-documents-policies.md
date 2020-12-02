@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Skydda dokument med regler {#protecting-documents-with-policies}
+# Skydda dokument med profiler {#protecting-documents-with-policies}
 
 **Om Document Security Service**
 
@@ -40,11 +40,11 @@ Följande två avsnitt beskriver tydligt hur du arbetar med Word-dokument:
 Du kan utföra följande uppgifter med tjänsten Dokumentsäkerhet:
 
 * Skapa profiler. Mer information finns i [Skapa profiler](protecting-documents-policies.md#creating-policies).
-* Ändra profiler. Mer information finns i [Ändra profiler](protecting-documents-policies.md#modifying-policies).
+* Ändra profiler. Mer information finns i [Ändra principer](protecting-documents-policies.md#modifying-policies).
 * Ta bort profiler. Mer information finns i [Ta bort profiler](protecting-documents-policies.md#deleting-policies).
 * Tillämpa profiler på PDF-dokument. Mer information finns i [Tillämpa profiler på PDF-dokument](protecting-documents-policies.md#applying-policies-to-pdf-documents).
 * Ta bort profiler från PDF-dokument. Mer information finns i [Ta bort profiler från PDF-dokument](protecting-documents-policies.md#removing-policies-from-pdf-documents).
-* Granska policyskyddade dokument. Mer information finns i [Inspektera skyddsskyddade PDF-dokument](protecting-documents-policies.md#inspecting-policy-protected-pdf-documents).
+* Inspect policyskyddade dokument. Mer information finns i [Inspektera skyddade PDF-dokument](protecting-documents-policies.md#inspecting-policy-protected-pdf-documents).
 * Återkalla åtkomst till PDF-dokument. Mer information finns i [Återkalla åtkomst till dokument](protecting-documents-policies.md#revoking-access-to-documents).
 * Återskapa åtkomst till återkallade dokument. Mer information finns i [Återställa åtkomst till återkallade dokument](protecting-documents-policies.md#reinstating-access-to-revoked-documents).
 * Skapa vattenstämplar. Mer information finns i [Skapa vattenstämplar](protecting-documents-policies.md#creating-watermarks).
@@ -54,9 +54,9 @@ Du kan utföra följande uppgifter med tjänsten Dokumentsäkerhet:
 >
 >Mer information om tjänsten Document Security finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
-## Skapa profiler {#creating-policies}
+## Skapar profiler {#creating-policies}
 
-Du kan skapa profiler programmatiskt med Java API:t för dokumentsäkerhet eller webbtjänstAPI:t. En *profil* är en samling information som innehåller dokumentskyddsinställningar, behöriga användare och användarrättigheter. Du kan skapa och spara valfritt antal profiler med hjälp av skyddsinställningar som passar olika situationer och användare.
+Du kan skapa profiler programmatiskt med Java API:t för dokumentsäkerhet eller webbtjänstAPI:t. En *profil* är en samling information som innehåller dokumentskyddsinställningar, behöriga användare och användningsrättigheter. Du kan skapa och spara valfritt antal profiler med hjälp av skyddsinställningar som passar olika situationer och användare.
 
 Med hjälp av profiler kan du utföra följande uppgifter:
 
@@ -65,7 +65,7 @@ Med hjälp av profiler kan du utföra följande uppgifter:
 * Ändra inställningar för åtkomst och säkerhet när som helst, även efter att du distribuerat det profilskyddade dokumentet.
 * Övervaka hur dokumentet används när du har distribuerat det. Du kan se hur dokumentet används och vem som använder det. Du kan till exempel ta reda på när någon har öppnat dokumentet.
 
-### Skapa en profil med webbtjänster {#creating-a-policy-using-web-services}
+### Skapa en profil med hjälp av webbtjänster {#creating-a-policy-using-web-services}
 
 När du skapar en profil med webbtjänstens API ska du referera till en befintlig PDF-fil (Portable Document Rights Language) som beskriver principen. Principbehörigheter och huvudnamn definieras i PDRL-dokumentet. Följande XML-dokument är ett exempel på ett PDRL-dokument.
 
@@ -153,18 +153,18 @@ Följande JAR-filer måste läggas till i projektets klassökväg:
 
 * adobe-rightsmanagement-client.jar
 * namespace.jar (om AEM Forms distribueras på JBoss)
-* jaxb-api.jar (om AEM Forms distribueras på JBoss)
-* jaxb-impl.jar (om AEM Forms distribueras på JBoss)
-* jaxb-libs.jar (om AEM Forms distribueras på JBoss)
-* jaxb-xjc.jar (om AEM Forms distribueras på JBoss)
-* relaxngDatatype.jar (om AEM Forms distribueras på JBoss)
-* xsdlib.jar (om AEM Forms distribueras på JBoss)
+* jaxb-api.jar (om AEM Forms används på JBoss)
+* jaxb-impl.jar (om AEM Forms används på JBoss)
+* jaxb-libs.jar (om AEM Forms körs på JBoss)
+* jaxb-xjc.jar (om AEM Forms används på JBoss)
+* relaxngDatatype.jar (om AEM Forms körs på JBoss)
+* xsdlib.jar (om AEM Forms körs på JBoss)
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-utilities.jar
-* jbossall-client.jar (använd en annan JAR-fil om AEM Forms inte distribueras på JBoss)
+* jbossall-client.jar (använd en annan JAR-fil om AEM Forms inte är distribuerat på JBoss)
 
-Mer information om var dessa JAR-filer finns i [Inkludera Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)för AEM Forms.
+Information om platsen för dessa JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **Skapa ett API-objekt för Document Security Client**
 
@@ -191,11 +191,11 @@ När du anger attribut som tillhör en profil kan du även ange krypteringsinst�
 * **AES128**: Representerar AES-krypteringsalgoritmen med en 128-bitars nyckel.
 * **NoEncryption:** Representerar ingen kryptering.
 
-När du anger `NoEncryption` alternativet kan du inte ange `PlaintextMetadata` alternativet till `false`. Om du försöker göra det genereras ett undantag.
+När du anger alternativet `NoEncryption` kan du inte ange `PlaintextMetadata` som `false`. Om du försöker göra det genereras ett undantag.
 
 >[!NOTE]
 >
->Mer information om andra attribut som du kan ange finns i gränssnittsbeskrivningen i `Policy` AEM Forms API-referens [](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+>Mer information om andra attribut som du kan ange finns i `Policy`-gränssnittsbeskrivningen i [AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
 **Skapa en princippost**
 
@@ -221,39 +221,39 @@ Skapa en profil med hjälp av API:t för dokumentsäkerhet (Java):
 
 1. Skapa ett API-objekt för Document Security Client.
 
-   * Skapa ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa ett `DocumentSecurityClient` objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory` objektet.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `DocumentSecurityClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Ange profilens attribut.
 
-   * Skapa ett `Policy` objekt genom att anropa `InfomodelObjectFactory` objektets statiska `createPolicy` metod. Den här metoden returnerar ett `Policy` objekt.
-   * Ange principens name-attribut genom att anropa `Policy` objektets `setName` metod och skicka ett strängvärde som anger principnamnet.
-   * Ange principens beskrivning genom att anropa `Policy` objektets `setDescription` metod och skicka ett strängvärde som anger principens beskrivning.
-   * Ange den principuppsättning som den nya principen tillhör genom att anropa `Policy` objektets `setPolicySetName` metod och skicka ett strängvärde som anger namnet på principuppsättningen. (Du kan ange `null` för det här parametervärdet som resulterar i att principen läggs till i principuppsättningen *Mina principer* .)
-   * Skapa principens giltighetsperiod genom att anropa `InfomodelObjectFactory` objektets statiska `createValidityPeriod` metod. Den här metoden returnerar ett `ValidityPeriod` objekt.
-   * Ange antalet dagar som ett principskyddat dokument är tillgängligt för genom att anropa `ValidityPeriod` objektets `setRelativeExpirationDays` metod och skicka ett heltalsvärde som anger antalet dagar.
-   * Ange principens giltighetsperiod genom att anropa `Policy` objektets `setValidityPeriod` metod och skicka `ValidityPeriod` objektet.
+   * Skapa ett `Policy`-objekt genom att anropa `InfomodelObjectFactory`-objektets statiska `createPolicy`-metod. Den här metoden returnerar ett `Policy`-objekt.
+   * Ange principens namnattribut genom att anropa `Policy`-objektets `setName`-metod och skicka ett strängvärde som anger principnamnet.
+   * Ange profilens beskrivning genom att anropa `Policy`-objektets `setDescription`-metod och skicka ett strängvärde som anger principens beskrivning.
+   * Ange den principuppsättning som den nya principen tillhör genom att anropa `Policy`-objektets `setPolicySetName`-metod och skicka ett strängvärde som anger namnet på principuppsättningen. (Du kan ange `null` för det här parametervärdet som resulterar i att principen läggs till i *Mina principer*-principuppsättningen.)
+   * Skapa principens giltighetsperiod genom att anropa `InfomodelObjectFactory`-objektets statiska `createValidityPeriod`-metod. Den här metoden returnerar ett `ValidityPeriod`-objekt.
+   * Ange antalet dagar som ett principskyddat dokument är tillgängligt för genom att anropa `ValidityPeriod`-objektets `setRelativeExpirationDays`-metod och ange ett heltalsvärde som anger antalet dagar.
+   * Ange principens giltighetsperiod genom att anropa `Policy`-objektets `setValidityPeriod`-metod och skicka `ValidityPeriod`-objektet.
 
 1. Skapa en princippost.
 
-   * Skapa en princippost genom att anropa `InfomodelObjectFactory` objektets statiska `createPolicyEntry` metod. Den här metoden returnerar ett `PolicyEntry` objekt.
-   * Ange principens behörigheter genom att anropa `InfomodelObjectFactory` objektets statiska `createPermission` metod. Skicka en statisk datamedlem som tillhör det gränssnitt som `Permission` representerar behörigheten. Den här metoden returnerar ett `Permission` objekt. Om du till exempel vill lägga till en behörighet som gör att användare kan kopiera data från ett profilskyddat PDF-dokument, skickar du `Permission.COPY`. (Upprepa det här steget för varje behörighet att lägga till).
-   * Lägg till behörigheten till principposten genom att anropa `PolicyEntry` objektets `addPermission` metod och skicka `Permission` objektet. (Upprepa det här steget för varje `Permission` objekt som du har skapat).
-   * Skapa principobjektet genom att anropa `InfomodelObjectFactory` objektets statiska `createSpecialPrincipal` metod. Skicka en datamedlem som tillhör det objekt som `InfomodelObjectFactory` representerar huvudkontot. Den här metoden returnerar ett `Principal` objekt. Om du till exempel vill lägga till dokumentets utgivare som huvudnamn skickar du `InfomodelObjectFactory.PUBLISHER_PRINCIPAL`.
-   * Lägg till huvudkontot i principposten genom att anropa `PolicyEntry` objektets `setPrincipal`metod och skicka `Principal` objektet.
-   * Lägg till principposten i principen genom att anropa `Policy` objektets `addPolicyEntry` metod och skicka `PolicyEntry` objektet.
+   * Skapa en princippost genom att anropa `InfomodelObjectFactory`-objektets statiska `createPolicyEntry`-metod. Den här metoden returnerar ett `PolicyEntry`-objekt.
+   * Ange principens behörigheter genom att anropa `InfomodelObjectFactory`-objektets statiska `createPermission`-metod. Skicka en statisk datamedlem som tillhör gränssnittet `Permission` som representerar behörigheten. Den här metoden returnerar ett `Permission`-objekt. Om du till exempel vill lägga till behörigheten som gör att användare kan kopiera data från ett profilskyddat PDF-dokument, skickar du `Permission.COPY`. (Upprepa det här steget för varje behörighet att lägga till).
+   * Lägg till behörigheten till principposten genom att anropa `PolicyEntry`-objektets `addPermission`-metod och skicka `Permission`-objektet. (Upprepa det här steget för varje `Permission`-objekt som du skapade).
+   * Skapa principobjektet genom att anropa `InfomodelObjectFactory`-objektets statiska `createSpecialPrincipal`-metod. Skicka en datamedlem som tillhör objektet `InfomodelObjectFactory` som representerar huvudpersonen. Den här metoden returnerar ett `Principal`-objekt. Om du till exempel vill lägga till utgivaren av dokumentet som huvudnamn skickar du `InfomodelObjectFactory.PUBLISHER_PRINCIPAL`.
+   * Lägg till huvudkontot i principposten genom att anropa `PolicyEntry`-objektets `setPrincipal`metod och skicka `Principal`-objektet.
+   * Lägg till principposten i principen genom att anropa `Policy`-objektets `addPolicyEntry`-metod och skicka `PolicyEntry`-objektet.
 
 1. Registrera policyn.
 
-   * Skapa ett `PolicyManager` objekt genom att anropa `DocumentSecurityClient` objektets `getPolicyManager` metod.
-   * Registrera profilen genom att anropa `PolicyManager` objektets `registerPolicy` metod och skicka följande värden:
+   * Skapa ett `PolicyManager`-objekt genom att anropa `DocumentSecurityClient`-objektets `getPolicyManager`-metod.
+   * Registrera profilen genom att anropa `PolicyManager`-objektets `registerPolicy`-metod och skicka följande värden:
 
-      * Det objekt `Policy` som representerar principen som ska registreras.
+      * Det `Policy`-objekt som representerar den princip som ska registreras.
    * Ett strängvärde som representerar den principuppsättning som principen tillhör.
 
-   Om du använder ett AEM-formuläradministratörskonto i anslutningsinställningarna för att skapa `DocumentSecurityClient` objektet anger du namnet på principuppsättningen när du anropar `registerPolicy` metoden. Om du skickar ett `null` värde för principuppsättningen skapas principen i principuppsättningen för administratörer *Mina principer* .
+   Om du använder ett AEM formuläradministratörskonto i anslutningsinställningarna för att skapa `DocumentSecurityClient`-objektet anger du namnet på principuppsättningen när du anropar metoden `registerPolicy`. Om du skickar ett `null`-värde för principuppsättningen skapas principen i administratörerna *Mina principer*.
 
-   Om du använder en dokumentsäkerhetsanvändare i anslutningsinställningarna kan du anropa den överlagrade `registerPolicy` metoden som bara accepterar profilen. Du behöver alltså inte ange namnet på principuppsättningen. Principen läggs dock till i principuppsättningen med namnet *Mina principer*. Om du inte vill lägga till den nya principen i den här principinställningen anger du ett principuppsättningsnamn när du anropar `registerPolicy` metoden.
+   Om du använder en dokumentsäkerhetsanvändare i anslutningsinställningarna kan du anropa den överlagrade `registerPolicy`-metoden som bara accepterar principen. Du behöver alltså inte ange namnet på principuppsättningen. Principen läggs dock till i principuppsättningen med namnet *Mina principer*. Om du inte vill lägga till den nya principen i den här principinställningen anger du ett principuppsättningsnamn när du anropar metoden `registerPolicy`.
 
    >[!NOTE]
    >
@@ -277,13 +277,13 @@ Skapa en profil med hjälp av API:t för dokumentsäkerhet (webbtjänsten):
 
 1. Skapa ett API-objekt för Document Security Client.
 
-   * Skapa ett `DocumentSecurityServiceClient` objekt med hjälp av dess standardkonstruktor.
-   * Skapa ett `DocumentSecurityServiceClient.Endpoint.Address` objekt med hjälp av `System.ServiceModel.EndpointAddress` konstruktorn. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`.). Du behöver inte använda attributet `lc_version` . Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa ett `System.ServiceModel.BasicHttpBinding` objekt genom att hämta värdet för `RightsManagementServiceClient.Endpoint.Binding` fältet. Sänd returvärdet till `BasicHttpBinding`.
-   * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa ett `DocumentSecurityServiceClient`-objekt med hjälp av dess standardkonstruktor.
+   * Skapa ett `DocumentSecurityServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`). Du behöver inte använda attributet `lc_version`. Det här attributet används när du skapar en tjänstreferens.)
+   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `RightsManagementServiceClient.Endpoint.Binding`. Sänd returvärdet till `BasicHttpBinding`.
+   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `RightsManagementServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela användarnamnet för AEM formulär till fältet `RightsManagementServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `RightsManagementServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
    * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -291,12 +291,12 @@ Skapa en profil med hjälp av API:t för dokumentsäkerhet (webbtjänsten):
 
 1. Ange profilens attribut.
 
-   * Skapa ett `PolicySpec` objekt med hjälp av dess konstruktor.
-   * Ange principens namn genom att tilldela ett strängvärde till `PolicySpec` objektets `name` datamedlem.
-   * Ange principens beskrivning genom att tilldela ett strängvärde till `PolicySpec` objektets `description` datamedlem.
-   * Ange den principuppsättning som principen ska tillhöra genom att tilldela ett strängvärde till `PolicySpec` objektets `policySetName` datamedlem. Du måste ange ett befintligt principuppsättningsnamn. (Du kan ange `null` för det här parametervärdet som resulterar i att principen läggs till i *Mina principer*.)
-   * Ange principens låneperiod offline genom att tilldela ett heltalsvärde till `PolicySpec` objektets `offlineLeasePeriod` datamedlem.
-   * Ange `PolicySpec` objektets `policyXml` datamedlem med ett strängvärde som representerar PDRL XML-data. Om du vill utföra den här åtgärden skapar du ett .NET- `StreamReader` objekt med hjälp av dess konstruktor. Skicka platsen för en PDRL XML-fil som representerar principen till `StreamReader` konstruktorn. Anropa sedan `StreamReader` objektets `ReadLine` metod och tilldela returvärdet till en strängvariabel. Iterera genom `StreamReader` objektet tills `ReadLine` metoden returnerar null. Tilldela strängvariabeln till `PolicySpec` objektets `policyXml` datamedlem.
+   * Skapa ett `PolicySpec`-objekt med hjälp av dess konstruktor.
+   * Ange principens namn genom att tilldela ett strängvärde till `PolicySpec`-objektets `name`-datamedlem.
+   * Ange principens beskrivning genom att tilldela ett strängvärde till `PolicySpec`-objektets `description`-datamedlem.
+   * Ange den principuppsättning som principen ska tillhöra genom att tilldela ett strängvärde till `PolicySpec`-objektets `policySetName`-datamedlem. Du måste ange ett befintligt principuppsättningsnamn. (Du kan ange `null` för det här parametervärdet som resulterar i att principen läggs till i *Mina principer*.)
+   * Ange principens låneperiod offline genom att tilldela ett heltalsvärde till `PolicySpec`-objektets `offlineLeasePeriod`-datamedlem.
+   * Ange `PolicySpec`-objektets `policyXml`-datamedlem med ett strängvärde som representerar PDRL XML-data. Om du vill utföra den här åtgärden skapar du ett .NET `StreamReader`-objekt med hjälp av dess konstruktor. Skicka platsen för en PDRL XML-fil som representerar principen till `StreamReader`-konstruktorn. Anropa sedan `StreamReader`-objektets `ReadLine`-metod och tilldela returvärdet till en strängvariabel. Upprepa genom `StreamReader`-objektet tills metoden `ReadLine` returnerar null. Tilldela strängvariabeln till `PolicySpec`-objektets `policyXml`-datamedlem.
 
 1. Skapa en princippost.
 
@@ -304,14 +304,14 @@ Skapa en profil med hjälp av API:t för dokumentsäkerhet (webbtjänsten):
 
 1. Registrera policyn.
 
-   Registrera profilen genom att anropa `DocumentSecurityServiceClient` objektets `registerPolicy` metod och skicka följande värden:
+   Registrera profilen genom att anropa `DocumentSecurityServiceClient`-objektets `registerPolicy`-metod och skicka följande värden:
 
-   * Det objekt `PolicySpec` som representerar principen som ska registreras.
-   * Ett strängvärde som representerar den principuppsättning som principen tillhör. Du kan ange ett `null` värde som resulterar i att profilen läggs till i *MyPolices* -principuppsättningen.
+   * Det `PolicySpec`-objekt som representerar den princip som ska registreras.
+   * Ett strängvärde som representerar den principuppsättning som principen tillhör. Du kan ange ett `null`-värde som gör att profilen läggs till i *MyPolices*-principuppsättningen.
 
-   Om du använder ett AEM-formuläradministratörskonto i anslutningsinställningarna för att skapa `DocumentSecurityClient` objektet anger du namnet på principuppsättningen när du anropar `registerPolicy` metoden.
+   Om du använder ett AEM formuläradministratörskonto i anslutningsinställningarna för att skapa `DocumentSecurityClient`-objektet anger du namnet på principuppsättningen när du anropar metoden `registerPolicy`.
 
-   Om du använder en Document SecurityDocument Security-användare i anslutningsinställningarna kan du anropa den överlagrade `registerPolicy` metoden som bara accepterar profilen. Du behöver alltså inte ange namnet på principuppsättningen. Principen läggs dock till i principuppsättningen med namnet *Mina principer*. Om du inte vill lägga till den nya principen i den här principinställningen anger du ett principuppsättningsnamn när du anropar `registerPolicy` metoden.
+   Om du använder en Document SecurityDocument Security-användare i anslutningsinställningarna kan du anropa den överlagrade `registerPolicy`-metoden som bara accepterar principen. Du behöver alltså inte ange namnet på principuppsättningen. Principen läggs dock till i principuppsättningen med namnet *Mina principer*. Om du inte vill lägga till den nya principen i den här principinställningen anger du ett principuppsättningsnamn när du anropar metoden `registerPolicy`.
 
    >[!NOTE]
    >
@@ -322,13 +322,13 @@ Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäke
 * &quot;Snabbstart (MTOM): Skapa en profil med hjälp av webbtjänstens API&quot;
 * &quot;Snabbstart (SwaRef): Skapa en profil med hjälp av webbtjänstens API&quot;
 
-## Ändra principer {#modifying-policies}
+## Ändra profiler {#modifying-policies}
 
 Du kan ändra en befintlig profil med Java API:t för dokumentsäkerhet eller webbtjänstens API. Om du vill ändra en befintlig princip hämtar du den, ändrar den och uppdaterar sedan principen på servern. Anta till exempel att du hämtar en befintlig princip och förlänger dess giltighetsperiod. Du måste uppdatera profilen innan ändringen börjar gälla.
 
 Du kan ändra en profil när affärskraven ändras och profilen inte längre speglar dessa krav. I stället för att skapa en ny profil kan du helt enkelt uppdatera en befintlig profil.
 
-Om du vill ändra principattribut med en webbtjänst (till exempel med Java-proxyklasser som har skapats med JAX-WS) måste du se till att profilen har registrerats med dokumentsäkerhetstjänsten. Du kan sedan referera till den befintliga profilen med hjälp av metoden `PolicySpec.getPolicyXml` och ändra principattributen med de tillämpliga metoderna. Du kan till exempel ändra låneperioden offline genom att anropa `PolicySpec.setOfflineLeasePeriod` metoden.
+Om du vill ändra principattribut med en webbtjänst (till exempel med Java-proxyklasser som har skapats med JAX-WS) måste du se till att profilen har registrerats med dokumentsäkerhetstjänsten. Du kan sedan referera till den befintliga profilen med metoden `PolicySpec.getPolicyXml` och ändra principattributen med de tillämpliga metoderna. Du kan till exempel ändra låneperioden offline genom att anropa metoden `PolicySpec.setOfflineLeasePeriod`.
 
 >[!NOTE]
 >
@@ -350,21 +350,21 @@ Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprog
 
 **Skapa ett API-objekt för Document Security Client**
 
-Innan du programmässigt kan utföra en Document Security-tjänståtgärd måste du skapa ett klientobjekt för Document Security-tjänsten. Om du använder Java API skapar du ett `RightsManagementClient` objekt. Om du använder webbtjänstens API för dokumentsäkerhet skapar du ett `RightsManagementServiceService` objekt.
+Innan du programmässigt kan utföra en Document Security-tjänståtgärd måste du skapa ett klientobjekt för Document Security-tjänsten. Om du använder Java API skapar du ett `RightsManagementClient`-objekt. Om du använder webbtjänstens API för dokumentsäkerhet skapar du ett `RightsManagementServiceService`-objekt.
 
 **Hämta en befintlig princip**
 
-Du måste hämta en befintlig princip för att kunna ändra den. Om du vill hämta en princip anger du principnamnet och den principuppsättning som principen tillhör. Om du anger ett `null` värde för principuppsättningens namn hämtas profilen från *Mina principer* .
+Du måste hämta en befintlig princip för att kunna ändra den. Om du vill hämta en princip anger du principnamnet och den principuppsättning som principen tillhör. Om du anger ett `null`-värde för principuppsättningens namn hämtas profilen från *Min principuppsättning*.
 
 **Ange profilens attribut**
 
 Om du vill ändra en profil ändrar du värdet för principattributen. Det enda principattribut som du inte kan ändra är namnattributet. Om du till exempel vill ändra principens låneperiod offline kan du ändra värdet på principens attribut för låneperiod offline.
 
-När du ändrar en princips låneperiod offline med hjälp av en webbtjänst ignoreras `offlineLeasePeriod` fältet i `PolicySpec` gränssnittet. Om du vill uppdatera offlinelåneperioden ändrar du elementet i PDF- `OfflineLeasePeriod` filens XML-dokument. Referera sedan till det uppdaterade PDRL XML-dokumentet med hjälp av `PolicySpec` gränssnittets `policyXML` datamedlem.
+När du ändrar en princips låneperiod offline med hjälp av en webbtjänst ignoreras fältet `offlineLeasePeriod` i gränssnittet `PolicySpec`. Om du vill uppdatera offlinelåneperioden ändrar du elementet `OfflineLeasePeriod` i PDRL XML-dokumentet. Referera sedan till det uppdaterade PDRL XML-dokumentet med `PolicySpec`-gränssnittets `policyXML`-datamedlem.
 
 >[!NOTE]
 >
->Mer information om andra attribut som du kan ange finns i gränssnittsbeskrivningen i `Policy` AEM Forms API-referens [](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+>Mer information om andra attribut som du kan ange finns i `Policy`-gränssnittsbeskrivningen i [AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
 **Uppdatera profilen**
 
@@ -380,24 +380,24 @@ Innan de ändringar du gör i en profil börjar gälla måste du uppdatera den m
 
 1. Skapa ett API-objekt för Document Security Client.
 
-   * Skapa ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa ett `RightsManagementClient` objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory` objektet.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `RightsManagementClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Hämta en befintlig princip.
 
-   * Skapa ett `PolicyManager` objekt genom att anropa `RightsManagementClient` objektets `getPolicyManager` metod.
-   * Skapa ett `Policy` objekt som representerar principen som ska uppdateras genom att anropa `PolicyManager` objektets `getPolicy` metod och skicka följande värden&quot;
+   * Skapa ett `PolicyManager`-objekt genom att anropa `RightsManagementClient`-objektets `getPolicyManager`-metod.
+   * Skapa ett `Policy`-objekt som representerar principen som ska uppdateras genom att anropa `PolicyManager`-objektets `getPolicy`-metod och skicka följande värden&quot;
 
-      * Ett strängvärde som representerar namnet på den principuppsättning som principen tillhör. Du kan ange `null` det resultatet i den `MyPolicies` principuppsättning som används.
+      * Ett strängvärde som representerar namnet på den principuppsättning som principen tillhör. Du kan ange `null` som resulterar i att `MyPolicies`-principuppsättningen används.
       * Ett strängvärde som representerar principnamnet.
 
 1. Ange profilens attribut.
 
-   Ändra regelns attribut så att de uppfyller era affärskrav. Om du till exempel vill ändra principens låneperiod offline anropar du `Policy` objektets `setOfflineLeasePeriod` metod.
+   Ändra regelns attribut så att de uppfyller era affärskrav. Om du till exempel vill ändra principens låneperiod offline anropar du `Policy`-objektets `setOfflineLeasePeriod`-metod.
 
 1. Uppdatera profilen.
 
-   Uppdatera profilen genom att anropa `PolicyManager` objektets `updatePolicy` metod. Skicka det `Policy` objekt som representerar principen som ska uppdateras.
+   Uppdatera profilen genom att anropa `PolicyManager`-objektets `updatePolicy`-metod. Skicka `Policy`-objektet som representerar principen som ska uppdateras.
 
 **Exempel på koder**
 
@@ -417,13 +417,13 @@ Exempel på kod som använder tjänsten Dokumentsäkerhet finns i Snabbstart (SO
 
 1. Skapa ett API-objekt för Document Security Client.
 
-   * Skapa ett `RightsManagementServiceClient` objekt med hjälp av dess standardkonstruktor.
-   * Skapa ett `RightsManagementServiceClient.Endpoint.Address` objekt med hjälp av `System.ServiceModel.EndpointAddress` konstruktorn. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`.). Du behöver inte använda attributet `lc_version` . Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa ett `System.ServiceModel.BasicHttpBinding` objekt genom att hämta värdet för `RightsManagementServiceClient.Endpoint.Binding` fältet. Sänd returvärdet till `BasicHttpBinding`.
-   * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa ett `RightsManagementServiceClient`-objekt med hjälp av dess standardkonstruktor.
+   * Skapa ett `RightsManagementServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`). Du behöver inte använda attributet `lc_version`. Det här attributet används när du skapar en tjänstreferens.)
+   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `RightsManagementServiceClient.Endpoint.Binding`. Sänd returvärdet till `BasicHttpBinding`.
+   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `RightsManagementServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela användarnamnet för AEM formulär till fältet `RightsManagementServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `RightsManagementServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
    * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -431,9 +431,9 @@ Exempel på kod som använder tjänsten Dokumentsäkerhet finns i Snabbstart (SO
 
 1. Hämta en befintlig princip.
 
-   Skapa ett `PolicySpec` objekt som representerar principen som ska ändras genom att anropa `RightsManagementServiceClient` objektets `getPolicy` metod och skicka följande värden:
+   Skapa ett `PolicySpec`-objekt som representerar principen som ska ändras genom att anropa `RightsManagementServiceClient`-objektets `getPolicy`-metod och skicka följande värden:
 
-   * Ett strängvärde som anger namnet på den principuppsättning som principen tillhör. Du kan ange `null` det resultatet i den `MyPolicies` principuppsättning som används.
+   * Ett strängvärde som anger namnet på den principuppsättning som principen tillhör. Du kan ange `null` som resulterar i att `MyPolicies`-principuppsättningen används.
    * Ett strängvärde som anger principens namn.
 
 1. Ange profilens attribut.
@@ -442,7 +442,7 @@ Exempel på kod som använder tjänsten Dokumentsäkerhet finns i Snabbstart (SO
 
 1. Uppdatera profilen.
 
-   Uppdatera principen genom att anropa `RightsManagementServiceClient` objektets `updatePolicyFromSDK` metod och skicka det objekt som representerar den princip som ska uppdateras. `PolicySpec`
+   Uppdatera profilen genom att anropa `RightsManagementServiceClient`-objektets `updatePolicyFromSDK`-metod och skicka `PolicySpec`-objektet som representerar principen som ska uppdateras.
 
 **Exempel på koder**
 
@@ -451,7 +451,7 @@ Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäke
 * &quot;Snabbstart (MTOM): Ändra en profil med hjälp av webbtjänstens API&quot;
 * &quot;Snabbstart (SwaRef): Ändra en profil med hjälp av webbtjänstens API&quot;
 
-## Ta bort profiler {#deleting-policies}
+## Tar bort principer {#deleting-policies}
 
 Du kan ta bort en befintlig princip med Java API:t för dokumentsäkerhet eller webbtjänstens API. När en profil har tagits bort kan den inte längre användas för att skydda dokument. Befintliga principskyddade dokument som använder profilen är dock fortfarande skyddade. Du kan ta bort en profil när en nyare blir tillgänglig.
 
@@ -473,7 +473,7 @@ Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprog
 
 **Skapa ett API-objekt för Document Security Client**
 
-Innan du programmässigt kan utföra en dokumentsäkerhetstjänståtgärd måste du skapa ett klientobjekt för dokumentsäkerhetstjänsten. Om du använder Java API skapar du ett `RightsManagementClient` objekt. Om du använder webbtjänstens API för dokumentsäkerhet skapar du ett `RightsManagementServiceService` objekt.
+Innan du programmässigt kan utföra en dokumentsäkerhetstjänståtgärd måste du skapa ett klientobjekt för dokumentsäkerhetstjänsten. Om du använder Java API skapar du ett `RightsManagementClient`-objekt. Om du använder webbtjänstens API för dokumentsäkerhet skapar du ett `RightsManagementServiceService`-objekt.
 
 **Ta bort profilen**
 
@@ -489,15 +489,15 @@ Ta bort en profil med hjälp av dokumentsäkerhets-API (Java):
 
 1. Skapa ett API-objekt för Document Security Client.
 
-   * Skapa ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa ett `RightsManagementClient` objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory` objektet.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `RightsManagementClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Ta bort profilen.
 
-   * Skapa ett `PolicyManager` objekt genom att anropa `RightsManagementClient` objektets `getPolicyManager` metod.
-   * Ta bort profilen genom att anropa `PolicyManager` objektets `deletePolicy` metod och skicka följande värden:
+   * Skapa ett `PolicyManager`-objekt genom att anropa `RightsManagementClient`-objektets `getPolicyManager`-metod.
+   * Ta bort profilen genom att anropa `PolicyManager`-objektets `deletePolicy`-metod och skicka följande värden:
 
-      * Ett strängvärde som anger namnet på den principuppsättning som principen tillhör. Du kan ange `null` det resultatet i den `MyPolicies` principuppsättning som används.
+      * Ett strängvärde som anger namnet på den principuppsättning som principen tillhör. Du kan ange `null` som resulterar i att `MyPolicies`-principuppsättningen används.
       * Ett strängvärde som anger namnet på principen som ska tas bort.
 
 **Exempel på koder**
@@ -520,13 +520,13 @@ Ta bort en profil med hjälp av API:t för dokumentsäkerhet (webbtjänsten):
 
 1. Skapa ett API-objekt för Document Security Client.
 
-   * Skapa ett `RightsManagementServiceClient` objekt med hjälp av dess standardkonstruktor.
-   * Skapa ett `RightsManagementServiceClient.Endpoint.Address` objekt med hjälp av `System.ServiceModel.EndpointAddress` konstruktorn. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`.). Du behöver inte använda attributet `lc_version` . Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa ett `System.ServiceModel.BasicHttpBinding` objekt genom att hämta värdet för `RightsManagementServiceClient.Endpoint.Binding` fältet. Sänd returvärdet till `BasicHttpBinding`.
-   * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa ett `RightsManagementServiceClient`-objekt med hjälp av dess standardkonstruktor.
+   * Skapa ett `RightsManagementServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`). Du behöver inte använda attributet `lc_version`. Det här attributet används när du skapar en tjänstreferens.)
+   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `RightsManagementServiceClient.Endpoint.Binding`. Sänd returvärdet till `BasicHttpBinding`.
+   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `RightsManagementServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela användarnamnet för AEM formulär till fältet `RightsManagementServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `RightsManagementServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
    * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -534,9 +534,9 @@ Ta bort en profil med hjälp av API:t för dokumentsäkerhet (webbtjänsten):
 
 1. Ta bort profilen.
 
-   Ta bort en profil genom att anropa `RightsManagementServiceClient` objektets `deletePolicy` metod och skicka följande värden:
+   Ta bort en profil genom att anropa `RightsManagementServiceClient`-objektets `deletePolicy`-metod och skicka följande värden:
 
-   * Ett strängvärde som anger namnet på den principuppsättning som principen tillhör. Du kan ange `null` det resultatet i den `MyPolicies` principuppsättning som används.
+   * Ett strängvärde som anger namnet på den principuppsättning som principen tillhör. Du kan ange `null` som resulterar i att `MyPolicies`-principuppsättningen används.
    * Ett strängvärde som anger namnet på principen som ska tas bort.
 
 **Exempel på koder**
@@ -550,7 +550,7 @@ Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäke
 
 Du kan tillämpa en profil på ett PDF-dokument för att skydda dokumentet. Genom att tillämpa en profil på ett PDF-dokument begränsar du åtkomsten till dokumentet. Du kan inte tillämpa en profil på ett dokument om dokumentet redan är skyddat med en profil.
 
-När dokumentet är öppet kan du även begränsa åtkomsten till Acrobat- och Adobe Reader-funktioner, t.ex. möjligheten att skriva ut och kopiera text, göra ändringar samt lägga till signaturer och kommentarer i ett dokument. Dessutom kan du återkalla ett profilskyddat PDF-dokument när du inte längre vill att användarna ska få tillgång till dokumentet.
+Medan dokumentet är öppet kan du även begränsa åtkomsten till Acrobat- och Adobe Reader-funktioner, inklusive möjligheten att skriva ut och kopiera text, göra ändringar samt lägga till signaturer och kommentarer i ett dokument. Dessutom kan du återkalla ett profilskyddat PDF-dokument när du inte längre vill att användarna ska få tillgång till dokumentet.
 
 Du kan övervaka användningen av ett profilskyddat dokument när du har distribuerat det. Det innebär att du kan se hur dokumentet används och vem som använder det. Du kan till exempel ta reda på när någon har öppnat dokumentet.
 
@@ -560,7 +560,7 @@ Du kan övervaka användningen av ett profilskyddat dokument när du har distrib
 
 ### Sammanfattning av steg {#summary_of_steps-3}
 
-Gör så här för att tillämpa en profil på ett PDF-dokument:
+Så här använder du en profil i ett PDF-dokument:
 
 1. Inkludera projektfiler.
 1. Skapa ett API-objekt för Document Security Client.
@@ -574,7 +574,7 @@ Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprog
 
 **Skapa ett API-objekt för dokumentsäkerhetsklienten**
 
-Skapa ett klientobjekt för tjänsten Dokumentsäkerhet innan du programmässigt utför en åtgärd. Om du använder Java API skapar du ett `DocumentSecurityClient` objekt. Om du använder webbtjänstens API för dokumentsäkerhet skapar du ett `DocumentSecurityServiceService` objekt.
+Skapa ett klientobjekt för tjänsten Dokumentsäkerhet innan du programmässigt utför en åtgärd. Om du använder Java API skapar du ett `DocumentSecurityClient`-objekt. Om du använder webbtjänstens API för dokumentsäkerhet skapar du ett `DocumentSecurityServiceService`-objekt.
 
 **Hämta ett PDF-dokument**
 
@@ -606,35 +606,35 @@ Tillämpa en profil på ett PDF-dokument med dokumentets säkerhets-API (Java):
 
 1. Skapa ett API-objekt för Document Security Client.
 
-   * Skapa ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa ett `RightsManagementClient` objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory` objektet.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `RightsManagementClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Hämta ett PDF-dokument.
 
-   * Skapa ett `java.io.FileInputStream` objekt som representerar PDF-dokumentet med hjälp av dess konstruktor. Skicka ett strängvärde som anger platsen för PDF-dokumentet.
-   * Skapa ett `com.adobe.idp.Document` objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream` objektet.
+   * Skapa ett `java.io.FileInputStream`-objekt som representerar PDF-dokumentet med hjälp av dess konstruktor. Skicka ett strängvärde som anger platsen för PDF-dokumentet.
+   * Skapa ett `com.adobe.idp.Document`-objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream`-objektet.
 
 1. Tillämpa en befintlig profil på PDF-dokumentet.
 
-   * Skapa ett `DocumentManager` objekt genom att anropa `RightsManagementClient` objektets `getDocumentManager` metod.
-   * Tillämpa en profil på PDF-dokumentet genom att anropa `DocumentManager` objektets `protectDocument` metod och skicka följande värden:
+   * Skapa ett `DocumentManager`-objekt genom att anropa `RightsManagementClient`-objektets `getDocumentManager`-metod.
+   * Tillämpa en profil på PDF-dokumentet genom att anropa `DocumentManager`-objektets `protectDocument`-metod och skicka följande värden:
 
-      * Det objekt `com.adobe.idp.Document` som innehåller PDF-dokumentet som profilen tillämpas på.
+      * Det `com.adobe.idp.Document`-objekt som innehåller PDF-dokumentet som profilen tillämpas på.
       * Ett strängvärde som anger dokumentets namn.
-      * Ett strängvärde som anger namnet på den principuppsättning som principen tillhör. Du kan ange ett `null` värde som resulterar i att `MyPolicies` principuppsättningen används.
+      * Ett strängvärde som anger namnet på den principuppsättning som principen tillhör. Du kan ange ett `null`-värde som resulterar i att `MyPolicies`-principuppsättningen används.
       * Ett strängvärde som anger principnamnet.
       * Ett strängvärde som representerar namnet på användarhanterardomänen för den användare som är dokumentets utgivare. Det här parametervärdet är valfritt och kan vara null (om parametern är null måste nästa parametervärde vara null).
       * Ett strängvärde som representerar namnet på den kanoniska användaren av användarhanteraren som är dokumentets utgivare. Det här parametervärdet är valfritt och kan vara `null` (om parametern är null måste det föregående parametervärdet vara `null`).
-      * A `com.adobe.livecycle.rightsmanagement.Locale` som representerar det språkområde som används för att välja MS Office-mallen. Det här parametervärdet är valfritt och används inte för PDF-dokument. Om du vill skydda ett PDF-dokument anger du `null`.
+      * En `com.adobe.livecycle.rightsmanagement.Locale` som representerar det språkområde som används för att välja MS Office-mallen. Det här parametervärdet är valfritt och används inte för PDF-dokument. Om du vill skydda ett PDF-dokument anger du `null`.
 
-      Metoden returnerar `protectDocument` ett `RMSecureDocumentResult` objekt som innehåller det principskyddade PDF-dokumentet.
+      Metoden `protectDocument` returnerar ett `RMSecureDocumentResult`-objekt som innehåller det principskyddade PDF-dokumentet.
 
 
 1. Spara PDF-dokumentet.
 
-   * Anropa `RMSecureDocumentResult` objektets `getProtectedDoc` metod för att hämta det profilskyddade PDF-dokumentet. Den här metoden returnerar ett `com.adobe.idp.Document` objekt.
-   * Skapa ett `java.io.File` objekt och kontrollera att filtillägget är PDF.
-   * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att kopiera innehållet i `Document` objektet till filen (se till att du använder det `Document` objekt som returnerades av `getProtectedDoc` metoden).
+   * Anropa `RMSecureDocumentResult`-objektets `getProtectedDoc`-metod för att hämta det principskyddade PDF-dokumentet. Den här metoden returnerar ett `com.adobe.idp.Document`-objekt.
+   * Skapa ett `java.io.File`-objekt och kontrollera att filtillägget är PDF.
+   * Anropa `com.adobe.idp.Document`-objektets `copyToFile`-metod för att kopiera innehållet i `Document`-objektet till filen (kontrollera att du använder `Document`-objektet som returnerades av metoden `getProtectedDoc`).
 
 **Exempel på koder**
 
@@ -663,13 +663,13 @@ Tillämpa en profil på ett PDF-dokument med hjälp av API:t för dokumentsäker
 
 1. Skapa ett API-objekt för Document Security Client.
 
-   * Skapa ett `RightsManagementServiceClient` objekt med hjälp av dess standardkonstruktor.
-   * Skapa ett `RightsManagementServiceClient.Endpoint.Address` objekt med hjälp av `System.ServiceModel.EndpointAddress` konstruktorn. Skicka ett strängvärde som anger WSDL till Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`.). Du behöver inte använda attributet `lc_version` . Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa ett `System.ServiceModel.BasicHttpBinding` objekt genom att hämta värdet för `RightsManagementServiceClient.Endpoint.Binding` fältet. Sänd returvärdet till `BasicHttpBinding`.
-   * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa ett `RightsManagementServiceClient`-objekt med hjälp av dess standardkonstruktor.
+   * Skapa ett `RightsManagementServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`). Du behöver inte använda attributet `lc_version`. Det här attributet används när du skapar en tjänstreferens.)
+   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `RightsManagementServiceClient.Endpoint.Binding`. Sänd returvärdet till `BasicHttpBinding`.
+   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `RightsManagementServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela användarnamnet för AEM formulär till fältet `RightsManagementServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `RightsManagementServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
    * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -677,35 +677,35 @@ Tillämpa en profil på ett PDF-dokument med hjälp av API:t för dokumentsäker
 
 1. Hämta ett PDF-dokument.
 
-   * Skapa ett `BLOB` objekt med hjälp av dess konstruktor. Objektet används `BLOB` för att lagra ett PDF-dokument som en profil tillämpas på.
-   * Skapa ett `System.IO.FileStream` objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för PDF-dokumentet och läget som filen ska öppnas i.
-   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` objektet. Ta reda på bytearrayens storlek genom att hämta `System.IO.FileStream` objektets `Length` egenskap.
-   * Fyll bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` metod. Skicka bytearrayen, startpositionen och strömlängden som ska läsas.
-   * Fyll objektet `BLOB` genom att tilldela dess `MTOM` fält med innehållet i bytearrayen.
+   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor. Objektet `BLOB` används för att lagra ett PDF-dokument som en profil tillämpas på.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för PDF-dokumentet och läget som filen ska öppnas i.
+   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream`-objektet. Ta reda på bytearraystorleken genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
+   * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod. Skicka bytearrayen, startpositionen och strömlängden som ska läsas.
+   * Fyll i `BLOB`-objektet genom att tilldela dess `MTOM`-fält med innehållet i bytearrayen.
 
 1. Tillämpa en befintlig profil på PDF-dokumentet.
 
-   Tillämpa en profil på PDF-dokumentet genom att anropa `RightsManagementServiceClient` objektets `protectDocument` metod och skicka följande värden:
+   Tillämpa en profil på PDF-dokumentet genom att anropa `RightsManagementServiceClient`-objektets `protectDocument`-metod och skicka följande värden:
 
-   * Det objekt `BLOB` som innehåller PDF-dokumentet som profilen tillämpas på.
+   * Det `BLOB`-objekt som innehåller PDF-dokumentet som profilen tillämpas på.
    * Ett strängvärde som anger dokumentets namn.
-   * Ett strängvärde som anger namnet på den principuppsättning som principen tillhör. Du kan ange ett `null` värde som resulterar i att `MyPolicies` principuppsättningen används.
+   * Ett strängvärde som anger namnet på den principuppsättning som principen tillhör. Du kan ange ett `null`-värde som resulterar i att `MyPolicies`-principuppsättningen används.
    * Ett strängvärde som anger principnamnet.
    * Ett strängvärde som representerar namnet på användarhanterardomänen för den användare som är dokumentets utgivare. Det här parametervärdet är valfritt och kan vara null (om parametern är null måste nästa parametervärde vara `null`).
    * Ett strängvärde som representerar namnet på den kanoniska användaren av användarhanteraren som är dokumentets utgivare. Det här parametervärdet är valfritt och kan vara null (om parametern är null måste det föregående parametervärdet vara `null`).
-   * Ett `RMLocale` värde som anger språkvärdet (till exempel `RMLocale.en`).
+   * Ett `RMLocale`-värde som anger språkvärdet (till exempel `RMLocale.en`).
    * En strängutdataparameter som används för att lagra principens identifierarvärde.
    * En strängutdataparameter som används för att lagra det principskyddade identifierarvärdet.
    * En strängutdataparameter som används för att lagra mime-typen (till exempel `application/pdf`).
 
-   Metoden returnerar `protectDocument` ett `BLOB` objekt som innehåller det principskyddade PDF-dokumentet.
+   Metoden `protectDocument` returnerar ett `BLOB`-objekt som innehåller det principskyddade PDF-dokumentet.
 
 1. Spara PDF-dokumentet.
 
-   * Skapa ett `System.IO.FileStream` objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det profilskyddade PDF-dokumentet.
-   * Skapa en bytearray som lagrar datainnehållet i det `BLOB` objekt som returnerades av `protectDocument` metoden. Fyll i bytearrayen genom att hämta värdet för `BLOB` objektets `MTOM` datamedlem.
-   * Skapa ett `System.IO.BinaryWriter` objekt genom att anropa dess konstruktor och skicka `System.IO.FileStream` objektet.
-   * Skriv bytearrayens innehåll till en PDF-fil genom att anropa `System.IO.BinaryWriter` objektets `Write` metod och skicka bytearrayen.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det profilskyddade PDF-dokumentet.
+   * Skapa en bytearray som lagrar datainnehållet i `BLOB`-objektet som returnerades av metoden `protectDocument`. Fyll i bytearrayen genom att hämta värdet för `BLOB`-objektets `MTOM`-datamedlem.
+   * Skapa ett `System.IO.BinaryWriter`-objekt genom att anropa dess konstruktor och skicka `System.IO.FileStream`-objektet.
+   * Skriv bytearrayens innehåll till en PDF-fil genom att anropa `System.IO.BinaryWriter`-objektets `Write`-metod och skicka bytearrayen.
 
 **Exempel på koder**
 
@@ -714,7 +714,7 @@ Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäke
 * &quot;Snabbstart (MTOM): Tillämpa en profil på ett PDF-dokument med hjälp av webbtjänstens API&quot;
 * &quot;Snabbstart (SwaRef): Tillämpa en profil på ett PDF-dokument med hjälp av webbtjänstens API&quot;
 
-## Ta bort profiler från PDF-dokument {#removing-policies-from-pdf-documents}
+## Tar bort profiler från PDF-dokument {#removing-policies-from-pdf-documents}
 
 Du kan ta bort en profil från ett profilskyddat dokument för att ta bort skyddet från dokumentet. Det vill säga om du inte längre vill att dokumentet ska skyddas av en profil. Om du vill uppdatera ett policyskyddat dokument med en nyare profil är det effektivare att byta profil i stället för att ta bort profilen och lägga till den uppdaterade profilen.
 
@@ -746,7 +746,7 @@ Du kan hämta ett profilskyddat PDF-dokument för att ta bort en profil. Om du f
 
 **Ta bort profilen från PDF-dokumentet**
 
-Du kan ta bort en profil från ett profilskyddat PDF-dokument under förutsättning att en administratör anges i anslutningsinställningarna. Om inte måste profilen som används för att skydda ett dokument innehålla behörigheten för att kunna ta bort en profil från ett PDF-dokument. `SWITCH_POLICY` Dessutom måste användaren som anges i anslutningsinställningarna för AEM Forms också ha den behörigheten. Annars genereras ett undantag.
+Du kan ta bort en profil från ett profilskyddat PDF-dokument under förutsättning att en administratör anges i anslutningsinställningarna. Annars måste profilen som används för att skydda ett dokument innehålla behörigheten `SWITCH_POLICY` för att kunna ta bort en profil från ett PDF-dokument. Dessutom måste den användare som anges i AEM Forms anslutningsinställningar också ha den behörigheten. Annars genereras ett undantag.
 
 **Spara det oskyddade PDF-dokumentet**
 
@@ -770,23 +770,23 @@ Ta bort en profil från ett profilskyddat PDF-dokument med hjälp av dokumentsä
 
 1. Skapa ett API-objekt för Document Security Client.
 
-   * Skapa ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa ett `DocumentSecurityClient` objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory` objektet.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `DocumentSecurityClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Hämta ett profilskyddat PDF-dokument.
 
-   * Skapa ett `java.io.FileInputStream` objekt som representerar det principskyddade PDF-dokumentet genom att använda dess konstruktor och skicka ett strängvärde som anger PDF-dokumentets plats.
-   * Skapa ett `com.adobe.idp.Document` objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream` objektet.
+   * Skapa ett `java.io.FileInputStream`-objekt som representerar det principskyddade PDF-dokumentet genom att använda dess konstruktor och skicka ett strängvärde som anger PDF-dokumentets plats.
+   * Skapa ett `com.adobe.idp.Document`-objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream`-objektet.
 
 1. Ta bort profilen från PDF-dokumentet.
 
-   * Skapa ett `DocumentManager` objekt genom att anropa `DocumentSecurityClient` objektets `getDocumentManager` metod.
-   * Ta bort en profil från PDF-dokumentet genom att anropa `DocumentManager` objektets `removeSecurity` metod och skicka det `com.adobe.idp.Document` objekt som innehåller det profilskyddade PDF-dokumentet. Den här metoden returnerar ett `com.adobe.idp.Document` objekt som innehåller ett oskyddat PDF-dokument.
+   * Skapa ett `DocumentManager`-objekt genom att anropa `DocumentSecurityClient`-objektets `getDocumentManager`-metod.
+   * Ta bort en profil från PDF-dokumentet genom att anropa `DocumentManager`-objektets `removeSecurity`-metod och skicka `com.adobe.idp.Document`-objektet som innehåller det principskyddade PDF-dokumentet. Den här metoden returnerar ett `com.adobe.idp.Document`-objekt som innehåller ett oskyddat PDF-dokument.
 
 1. Spara det oskyddade PDF-dokumentet.
 
-   * Skapa ett `java.io.File` objekt och kontrollera att filtillägget är PDF.
-   * Anropa `Document` objektets `copyToFile` metod för att kopiera innehållet i `Document` objektet till filen (se till att du använder det `Document` objekt som returnerades av `removeSecurity` metoden).
+   * Skapa ett `java.io.File`-objekt och kontrollera att filtillägget är PDF.
+   * Anropa `Document`-objektets `copyToFile`-metod för att kopiera innehållet i `Document`-objektet till filen (kontrollera att du använder `Document`-objektet som returnerades av metoden `removeSecurity`).
 
 **Exempel på koder**
 
@@ -808,13 +808,13 @@ Ta bort en profil från ett profilskyddat PDF-dokument med hjälp av API:t för 
 
 1. Skapa ett API-objekt för Document Security Client.
 
-   * Skapa ett `DocumentSecurityServiceClient` objekt med hjälp av dess standardkonstruktor.
-   * Skapa ett `DocumentSecurityServiceClient.Endpoint.Address` objekt med hjälp av `System.ServiceModel.EndpointAddress` konstruktorn. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`.). Du behöver inte använda attributet `lc_version` . Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa ett `System.ServiceModel.BasicHttpBinding` objekt genom att hämta värdet för `DocumentSecurityServiceClient.Endpoint.Binding` fältet. Sänd returvärdet till `BasicHttpBinding`.
-   * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa ett `DocumentSecurityServiceClient`-objekt med hjälp av dess standardkonstruktor.
+   * Skapa ett `DocumentSecurityServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`). Du behöver inte använda attributet `lc_version`. Det här attributet används när du skapar en tjänstreferens.)
+   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `DocumentSecurityServiceClient.Endpoint.Binding`. Sänd returvärdet till `BasicHttpBinding`.
+   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela användarnamnet för AEM formulär till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
    * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -822,21 +822,21 @@ Ta bort en profil från ett profilskyddat PDF-dokument med hjälp av API:t för 
 
 1. Hämta ett profilskyddat PDF-dokument.
 
-   * Skapa ett `BLOB` objekt med hjälp av dess konstruktor. Objektet används `BLOB` för att lagra det profilskyddade PDF-dokumentet som profilen tas bort från.
-   * Skapa ett `System.IO.FileStream` objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för PDF-dokumentet och läget som filen ska öppnas i.
-   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` objektet. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` egenskap.
-   * Fyll bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` metod och skicka bytearrayen, startpositionen och den strömlängd som ska läsas.
-   * Fyll objektet `BLOB` genom att tilldela dess `MTOM` fält med innehållet i bytearrayen.
+   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor. Objektet `BLOB` används för att lagra det principskyddade PDF-dokumentet som profilen tas bort från.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för PDF-dokumentet och läget som filen ska öppnas i.
+   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream`-objektet. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
+   * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod och skicka bytearrayen, startpositionen och strömlängden som ska läsas.
+   * Fyll i `BLOB`-objektet genom att tilldela dess `MTOM`-fält med innehållet i bytearrayen.
 
 1. Ta bort profilen från PDF-dokumentet.
 
-   Ta bort profilen från PDF-dokumentet genom att anropa `DocumentSecurityServiceClient` objektets `removePolicySecurity` metod och skicka det `BLOB` objekt som innehåller det profilskyddade PDF-dokumentet. Den här metoden returnerar ett `BLOB` objekt som innehåller ett oskyddat PDF-dokument.
+   Ta bort profilen från PDF-dokumentet genom att anropa `DocumentSecurityServiceClient`-objektets `removePolicySecurity`-metod och skicka `BLOB`-objektet som innehåller det profilskyddade PDF-dokumentet. Den här metoden returnerar ett `BLOB`-objekt som innehåller ett oskyddat PDF-dokument.
 
 1. Spara det oskyddade PDF-dokumentet.
 
-   * Skapa ett `System.IO.FileStream` objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det oskyddade PDF-dokumentet.
-   * Skapa en bytearray som lagrar datainnehållet i det `BLOB` objekt som returnerades av `removePolicySecurity` metoden. Fyll i bytearrayen genom att hämta värdet för `BLOB` objektets `MTOM` fält.
-   * Skapa ett `System.IO.BinaryWriter` objekt genom att anropa dess konstruktor och skicka `System.IO.FileStream` objektet.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det oskyddade PDF-dokumentet.
+   * Skapa en bytearray som lagrar datainnehållet i `BLOB`-objektet som returnerades av metoden `removePolicySecurity`. Fyll i bytearrayen genom att hämta värdet för `BLOB`-objektets `MTOM`-fält.
+   * Skapa ett `System.IO.BinaryWriter`-objekt genom att anropa dess konstruktor och skicka `System.IO.FileStream`-objektet.
 
 **Exempel på koder**
 
@@ -851,7 +851,7 @@ Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäke
 
 [Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## Återkalla åtkomst till dokument {#revoking-access-to-documents}
+## Återkallar åtkomst till dokument {#revoking-access-to-documents}
 
 Du kan återkalla åtkomsten till ett profilskyddat PDF-dokument så att alla kopior av dokumentet inte är tillgängliga för användarna. När en användare försöker öppna ett återkallat PDF-dokument omdirigeras de till en angiven URL där ett ändrat dokument kan visas. URL:en som användaren omdirigeras till måste anges programmatiskt. När du återkallar åtkomsten till ett dokument träder ändringen i kraft nästa gång användaren synkroniserar med dokumentsäkerhetstjänsten genom att öppna det profilskyddade dokumentet online.
 
@@ -912,24 +912,24 @@ Om du vill återkalla ett profilskyddat dokument anger du ID för licensen för 
 
 1. Skapa ett API-objekt för Document Security Client
 
-   * Skapa ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa ett `DocumentSecurityClient` objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory` objektet.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `DocumentSecurityClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Hämta ett profilskyddat PDF-dokument
 
-   * Skapa ett `java.io.FileInputStream` objekt som representerar det profilskyddade PDF-dokumentet genom att använda dess konstruktor och skicka ett strängvärde som anger PDF-dokumentets plats.
-   * Skapa ett `com.adobe.idp.Document` objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream` objektet.
+   * Skapa ett `java.io.FileInputStream`-objekt som representerar det principskyddade PDF-dokumentet genom att använda dess konstruktor och skicka ett strängvärde som anger PDF-dokumentets plats.
+   * Skapa ett `com.adobe.idp.Document`-objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream`-objektet.
 
 1. Återkalla det profilskyddade dokumentet
 
-   * Skapa ett `DocumentManager` objekt genom att anropa `DocumentSecurityClient` objektets `getDocumentManager` metod.
-   * Hämta det profilskyddade dokumentets ID-värde genom att anropa `DocumentManager` objektets `getLicenseId` metod. Skicka det `com.adobe.idp.Document` objekt som representerar det principskyddade dokumentet. Den här metoden returnerar ett strängvärde som representerar licensens identifierarvärde.
-   * Skapa ett `LicenseManager` objekt genom att anropa `DocumentSecurityClient` objektets `getLicenseManager` metod.
-   * Återkalla det principskyddade dokumentet genom att anropa `LicenseManager` objektets `revokeLicense` metod och skicka följande värden:
+   * Skapa ett `DocumentManager`-objekt genom att anropa `DocumentSecurityClient`-objektets `getDocumentManager`-metod.
+   * Hämta det principskyddade dokumentets ID-värde genom att anropa `DocumentManager`-objektets `getLicenseId`-metod. Skicka `com.adobe.idp.Document`-objektet som representerar det principskyddade dokumentet. Den här metoden returnerar ett strängvärde som representerar licensens identifierarvärde.
+   * Skapa ett `LicenseManager`-objekt genom att anropa `DocumentSecurityClient`-objektets `getLicenseManager`-metod.
+   * Återkalla det principskyddade dokumentet genom att anropa `LicenseManager`-objektets `revokeLicense`-metod och skicka följande värden:
 
-      * Ett strängvärde som anger det principskyddade dokumentets ID-värde (ange returvärdet för `DocumentManager` objektets `getLicenseId` metod).
-      * En statisk datamedlem i `License` gränssnittet som anger orsaken till att dokumentet återkallas. Du kan till exempel ange `License.DOCUMENT_REVISED`.
-      * Ett `java.net.URL` värde som anger platsen där ett reviderat dokument finns. Om du inte vill dirigera om en användare till en annan URL kan du skicka `null`.
+      * Ett strängvärde som anger det principskyddade dokumentets ID-värde (ange returvärdet för `DocumentManager`-objektets `getLicenseId`-metod).
+      * En statisk datamedlem i gränssnittet `License` som anger orsaken till att dokumentet återkallas. Du kan till exempel ange `License.DOCUMENT_REVISED`.
+      * Ett `java.net.URL`-värde som anger platsen där det reviderade dokumentet finns. Om du inte vill dirigera om en användare till en annan URL kan du skicka `null`.
 
 **Exempel på koder**
 
@@ -951,13 +951,13 @@ Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäke
 
 1. Skapa ett API-objekt för Document Security Client
 
-   * Skapa ett `DocumentSecurityServiceClient` objekt med hjälp av dess standardkonstruktor.
-   * Skapa ett `DocumentSecurityServiceClient.Endpoint.Address` objekt med hjälp av `System.ServiceModel.EndpointAddress` konstruktorn. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`.). Du behöver inte använda attributet `lc_version` . Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa ett `System.ServiceModel.BasicHttpBinding` objekt genom att hämta värdet för `DocumentSecurityServiceClient.Endpoint.Binding` fältet. Sänd returvärdet till `BasicHttpBinding`.
-   * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa ett `DocumentSecurityServiceClient`-objekt med hjälp av dess standardkonstruktor.
+   * Skapa ett `DocumentSecurityServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`). Du behöver inte använda attributet `lc_version`. Det här attributet används när du skapar en tjänstreferens.)
+   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `DocumentSecurityServiceClient.Endpoint.Binding`. Sänd returvärdet till `BasicHttpBinding`.
+   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela användarnamnet för AEM formulär till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
    * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -965,20 +965,20 @@ Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäke
 
 1. Hämta ett profilskyddat PDF-dokument
 
-   * Skapa ett `BLOB` objekt med hjälp av dess konstruktor. Objektet används `BLOB` för att lagra ett återkallat principskyddat PDF-dokument.
-   * Skapa ett `System.IO.FileStream` objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det profilskyddade PDF-dokumentet som ska återkallas samt läget som filen ska öppnas i.
-   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` objektet. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` egenskap.
-   * Fyll bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` metod och skicka bytearrayen, startpositionen och den strömlängd som ska läsas.
-   * Fyll objektet `BLOB` genom att tilldela dess `MTOM` fält med innehållet i bytearrayen.
+   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor. Objektet `BLOB` används för att lagra ett policyskyddat PDF-dokument som har återkallats.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det profilskyddade PDF-dokumentet som ska återkallas samt läget som filen ska öppnas i.
+   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream`-objektet. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
+   * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod och skicka bytearrayen, startpositionen och strömlängden som ska läsas.
+   * Fyll i `BLOB`-objektet genom att tilldela dess `MTOM`-fält med innehållet i bytearrayen.
 
 1. Återkalla det profilskyddade dokumentet
 
-   * Hämta det profilskyddade dokumentets ID-värde genom att anropa `DocumentSecurityServiceClient` objektets `getLicenseID` metod och skicka det `BLOB` objekt som representerar det principskyddade dokumentet. Den här metoden returnerar ett strängvärde som representerar licens-ID:t.
-   * Återkalla det principskyddade dokumentet genom att anropa `DocumentSecurityServiceClient` objektets `revokeLicense` metod och skicka följande värden:
+   * Hämta det principskyddade dokumentets ID-värde genom att anropa `DocumentSecurityServiceClient`-objektets `getLicenseID`-metod och skicka `BLOB`-objektet som representerar det principskyddade dokumentet. Den här metoden returnerar ett strängvärde som representerar licens-ID:t.
+   * Återkalla det principskyddade dokumentet genom att anropa `DocumentSecurityServiceClient`-objektets `revokeLicense`-metod och skicka följande värden:
 
-      * Ett strängvärde som anger det principskyddade dokumentets ID-värde (ange returvärdet för `DocumentSecurityServiceService` objektets `getLicenseId` metod).
-      * En statisk datamedlem av `Reason` uppräkningen som anger orsaken till att dokumentet återkallas. Du kan till exempel ange `Reason.DOCUMENT_REVISED`.
-      * Ett `string` värde som anger den URL-plats där det reviderade dokumentet finns. Om du inte vill dirigera om en användare till en annan URL kan du skicka `null`.
+      * Ett strängvärde som anger det principskyddade dokumentets ID-värde (ange returvärdet för `DocumentSecurityServiceService`-objektets `getLicenseId`-metod).
+      * En statisk datamedlem av uppräkningen `Reason` som anger orsaken till att dokumentet återkallas. Du kan till exempel ange `Reason.DOCUMENT_REVISED`.
+      * Ett `string`-värde som anger den URL-plats där det reviderade dokumentet finns. Om du inte vill dirigera om en användare till en annan URL kan du skicka `null`.
 
 **Exempel på koder**
 
@@ -995,7 +995,7 @@ Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäke
 
 [Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## Återställa åtkomst till återkallade dokument {#reinstating-access-to-revoked-documents}
+## Återställer åtkomst till återkallade dokument {#reinstating-access-to-revoked-documents}
 
 Du kan återställa åtkomsten till ett återkallat PDF-dokument, vilket gör att alla kopior av det återkallade dokumentet blir tillgängliga för användarna. När en användare öppnar ett återskapat dokument som har återkallats kan användaren visa dokumentet.
 
@@ -1018,7 +1018,7 @@ Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprog
 
 **Skapa ett API-objekt för Document Security Client**
 
-Innan du programmässigt kan utföra en dokumentsäkerhetstjänståtgärd måste du skapa ett klientobjekt för dokumentsäkerhetstjänsten. Om du använder Java API skapar du ett `DocumentSecurityClient` objekt. Om du använder webbtjänstens API för dokumentsäkerhet skapar du ett `DocumentSecurityServiceService` objekt.
+Innan du programmässigt kan utföra en dokumentsäkerhetstjänståtgärd måste du skapa ett klientobjekt för dokumentsäkerhetstjänsten. Om du använder Java API skapar du ett `DocumentSecurityClient`-objekt. Om du använder webbtjänstens API för dokumentsäkerhet skapar du ett `DocumentSecurityServiceService`-objekt.
 
 **Hämta det återkallade PDF-dokumentets licensidentifierare**
 
@@ -1038,7 +1038,7 @@ Om du vill återskapa åtkomst till ett återkallat PDF-dokument måste du ange 
 
 [Återkalla åtkomst till dokument](protecting-documents-policies.md#revoking-access-to-documents)
 
-### Återställa åtkomst till återkallade dokument med Java API {#reinstate-access-to-revoked-documents-using-the-java-api}
+### Återskapa åtkomst till återkallade dokument med Java API {#reinstate-access-to-revoked-documents-using-the-java-api}
 
 Återskapa åtkomst till ett återkallat dokument med hjälp av dokumentsäkerhets-API (Java):
 
@@ -1048,20 +1048,20 @@ Om du vill återskapa åtkomst till ett återkallat PDF-dokument måste du ange 
 
 1. Skapa ett API-objekt för Document Security Client.
 
-   * Skapa ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa ett `DocumentSecurityClient` objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory` objektet.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `DocumentSecurityClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Hämta det återkallade PDF-dokumentets licensidentifierare.
 
-   * Skapa ett `java.io.FileInputStream` objekt som representerar det återkallade PDF-dokumentet med hjälp av dess konstruktor och skicka ett strängvärde som anger PDF-dokumentets plats.
-   * Skapa ett `com.adobe.idp.Document` objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream` objektet.
-   * Skapa ett `DocumentManager` objekt genom att anropa `DocumentSecurityClient` objektets `getDocumentManager` metod.
-   * Hämta ID-värdet för det återkallade dokumentet genom att anropa `DocumentManager` objektets `getLicenseId` metod och skicka det `com.adobe.idp.Document` objekt som representerar det återkallade dokumentet. Den här metoden returnerar ett strängvärde som representerar licens-ID:t.
+   * Skapa ett `java.io.FileInputStream`-objekt som representerar det återkallade PDF-dokumentet genom att använda dess konstruktor och skicka ett strängvärde som anger PDF-dokumentets plats.
+   * Skapa ett `com.adobe.idp.Document`-objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream`-objektet.
+   * Skapa ett `DocumentManager`-objekt genom att anropa `DocumentSecurityClient`-objektets `getDocumentManager`-metod.
+   * Hämta ID-värdet för det återkallade dokumentet genom att anropa `DocumentManager`-objektets `getLicenseId`-metod och skicka `com.adobe.idp.Document`-objektet som representerar det återkallade dokumentet. Den här metoden returnerar ett strängvärde som representerar licens-ID:t.
 
 1. Återställa åtkomsten till det återkallade PDF-dokumentet.
 
-   * Skapa ett `LicenseManager` objekt genom att anropa `DocumentSecurityClient` objektets `getLicenseManager` metod.
-   * Återskapa åtkomst till det återkallade PDF-dokumentet genom att anropa `LicenseManager` objektets `unrevokeLicense` metod och skicka det återkallade dokumentets ID-värde.
+   * Skapa ett `LicenseManager`-objekt genom att anropa `DocumentSecurityClient`-objektets `getLicenseManager`-metod.
+   * Återskapa åtkomst till det återkallade PDF-dokumentet genom att anropa `LicenseManager`-objektets `unrevokeLicense`-metod och skicka det återkallade dokumentets ID-värde.
 
 **Exempel på koder**
 
@@ -1069,7 +1069,7 @@ Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäke
 
 * &quot;Snabbstart (SOAP-läge): Återställa åtkomst till ett återkallat dokument med hjälp av webbtjänstens API&quot;
 
-### Återställa åtkomst till återkallade dokument med hjälp av webbtjänstens API {#reinstate-access-to-revoked-documents-using-the-web-service-api}
+### Återskapa åtkomst till återkallade dokument med webbtjänstens API {#reinstate-access-to-revoked-documents-using-the-web-service-api}
 
 Återställa åtkomst till ett återkallat dokument med hjälp av API:t för dokumentsäkerhet (webbtjänsten):
 
@@ -1083,13 +1083,13 @@ Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäke
 
 1. Skapa ett API-objekt för Document Security Client.
 
-   * Skapa ett `DocumentSecurityServiceClient` objekt med hjälp av dess standardkonstruktor.
-   * Skapa ett `DocumentSecurityServiceClient.Endpoint.Address` objekt med hjälp av `System.ServiceModel.EndpointAddress` konstruktorn. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`.). Du behöver inte använda attributet `lc_version` . Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa ett `System.ServiceModel.BasicHttpBinding` objekt genom att hämta värdet för `DocumentSecurityServiceClient.Endpoint.Binding` fältet. Sänd returvärdet till `BasicHttpBinding`.
-   * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa ett `DocumentSecurityServiceClient`-objekt med hjälp av dess standardkonstruktor.
+   * Skapa ett `DocumentSecurityServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`). Du behöver inte använda attributet `lc_version`. Det här attributet används när du skapar en tjänstreferens.)
+   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `DocumentSecurityServiceClient.Endpoint.Binding`. Sänd returvärdet till `BasicHttpBinding`.
+   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela användarnamnet för AEM formulär till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
    * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -1097,16 +1097,16 @@ Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäke
 
 1. Hämta det återkallade PDF-dokumentets licensidentifierare.
 
-   * Skapa ett `BLOB` objekt med hjälp av dess konstruktor. Objektet används för att lagra ett återkallat PDF-dokument som åtkomsten återställs till. `BLOB`
-   * Skapa ett `System.IO.FileStream` objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det återkallade PDF-dokumentet och läget som filen ska öppnas i.
-   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` objektet. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` egenskap.
-   * Fyll bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` metod och skicka bytearrayen, startpositionen och den strömlängd som ska läsas.
-   * Fyll objektet `BLOB` genom att tilldela dess `MTOM` fält med innehållet i bytearrayen.
+   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor. Objektet `BLOB` används för att lagra ett återkallat PDF-dokument som åtkomsten återställs till.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det återkallade PDF-dokumentet och läget som filen ska öppnas i.
+   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream`-objektet. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
+   * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod och skicka bytearrayen, startpositionen och strömlängden som ska läsas.
+   * Fyll i `BLOB`-objektet genom att tilldela dess `MTOM`-fält med innehållet i bytearrayen.
 
 1. Återställa åtkomsten till det återkallade PDF-dokumentet.
 
-   * Hämta ID-värdet för det återkallade dokumentet genom att anropa `DocumentSecurityServiceClient` objektets `getLicenseID` metod och skicka det `BLOB` objekt som representerar det återkallade dokumentet. Den här metoden returnerar ett strängvärde som representerar licens-ID:t.
-   * Återskapa åtkomst till det återkallade PDF-dokumentet genom att anropa `DocumentSecurityServiceClient` objektets `unrevokeLicense` metod och skicka ett strängvärde som anger det återkallade PDF-dokumentets licensidentifierarvärde (skicka returvärdet för `DocumentSecurityServiceClient` objektets `getLicenseId` metod).
+   * Hämta ID-värdet för det återkallade dokumentet genom att anropa `DocumentSecurityServiceClient`-objektets `getLicenseID`-metod och skicka `BLOB`-objektet som representerar det återkallade dokumentet. Den här metoden returnerar ett strängvärde som representerar licens-ID:t.
+   * Återskapa åtkomst till det återkallade PDF-dokumentet genom att anropa `DocumentSecurityServiceClient`-objektets `unrevokeLicense`-metod och skicka ett strängvärde som anger det återkallade PDF-dokumentets licensidentifierarvärde (skicka returvärdet för `DocumentSecurityServiceClient`-objektets `getLicenseId`-metod).
 
 **Exempel på koder**
 
@@ -1121,11 +1121,11 @@ Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäke
 
 [Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## Inspektera skyddade PDF-dokument med policyer {#inspecting-policy-protected-pdf-documents}
+## Inspektera skyddade PDF-dokument {#inspecting-policy-protected-pdf-documents}
 
 Du kan använda API:t för dokumentsäkerhetstjänsten (Java och webbtjänsten) för att inspektera profilskyddade PDF-dokument. När du inspekterar profilskyddade PDF-dokument returneras information om det profilskyddade PDF-dokumentet. Du kan till exempel bestämma vilken profil som användes för att skydda dokumentet och datumet då dokumentet var skyddat.
 
-Du kan inte utföra den här uppgiften om din version av LiveCycle är 8.x eller en tidigare version. Det finns stöd för att inspektera policyskyddade dokument i AEM Forms. Om du försöker inspektera ett principskyddat dokument med LiveCycle 8.x (eller tidigare) genereras ett undantag.
+Du kan inte utföra den här åtgärden om din version av LiveCycle är 8.x eller en tidigare version. I AEM Forms finns stöd för att inspektera policyskyddade dokument. Om du försöker inspektera ett principskyddat dokument med LiveCycle 8.x (eller tidigare) genereras ett undantag.
 
 >[!NOTE]
 >
@@ -1146,13 +1146,13 @@ Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprog
 
 **Skapa ett API-objekt för Document Security Client**
 
-Skapa ett klientobjekt för tjänsten Dokumentsäkerhet innan du programmässigt utför en åtgärd. Om du använder Java API skapar du ett `RightsManagementClient` objekt. Om du använder webbtjänstens API för dokumentsäkerhet skapar du ett `RightsManagementServiceService` objekt.
+Skapa ett klientobjekt för tjänsten Dokumentsäkerhet innan du programmässigt utför en åtgärd. Om du använder Java API skapar du ett `RightsManagementClient`-objekt. Om du använder webbtjänstens API för dokumentsäkerhet skapar du ett `RightsManagementServiceService`-objekt.
 
 **Hämta ett profilskyddat dokument att inspektera**
 
 Hämta ett policyskyddat dokument om du vill inspektera det. Om du försöker inspektera ett dokument som inte är skyddat med en profil eller som har återkallats genereras ett undantag.
 
-**Inspektera dokumentet**
+**Inspect dokumentet**
 
 När du har hämtat ett policyskyddat dokument kan du inspektera det.
 
@@ -1160,9 +1160,9 @@ När du har hämtat ett policyskyddat dokument kan du inspektera det.
 
 När du har inspekterat ett profilskyddat PDF-dokument kan du få information om det. Du kan till exempel bestämma vilken profil som ska användas för att skydda dokumentet.
 
-Om du skyddar ett dokument med en profil som tillhör Mina principer och sedan anropar `RMInspectResult.getPolicysetName` eller `RMInspectResult.getPolicysetId`returneras null.
+Om du skyddar ett dokument med en princip som tillhör Mina principer och sedan anropar `RMInspectResult.getPolicysetName` eller `RMInspectResult.getPolicysetId`, returneras null.
 
-Om dokumentet är skyddat med en profil som finns i en principuppsättning (annan än Min profil) `RMInspectResult.getPolicysetName` och `RMInspectResult.getPolicysetId` returnerar giltiga strängar.
+Om dokumentet är skyddat med en profil som finns i en principuppsättning (annan än Mina principer) returnerar `RMInspectResult.getPolicysetName` och `RMInspectResult.getPolicysetId` giltiga strängar.
 
 **Se även**
 
@@ -1170,32 +1170,32 @@ Om dokumentet är skyddat med en profil som finns i en principuppsättning (anna
 
 [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### Inspektera skyddade PDF-dokument med Java API {#inspect-policy-protected-pdf-documents-using-the-java-api}
+### Inspect Policy Protected PDF-dokument med Java API {#inspect-policy-protected-pdf-documents-using-the-java-api}
 
-Inspektera ett profilskyddat PDF-dokument med hjälp av dokumentsäkerhetstjänstens API (Java):
+Inspect är ett policyskyddat PDF-dokument med hjälp av dokumentsäkerhetstjänstens API (Java):
 
 1. Inkludera projektfiler.
 
-   Inkludera JAR-klientfiler, t.ex. adobe-rightsmanagement-client.jar, i Java-projektets klassökväg. Mer information om platsen för dessa filer finns i [Inkludera Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)för AEM Forms.
+   Inkludera JAR-klientfiler, t.ex. adobe-rightsmanagement-client.jar, i Java-projektets klassökväg. Information om platsen för dessa filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 1. Skapa ett API-objekt för Document Security Client.
 
-   * Skapa ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper. (Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
-   * Skapa ett `RightsManagementClient` objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory` objektet.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper. (Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
+   * Skapa ett `RightsManagementClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Hämta ett profilskyddat dokument som ska inspekteras.
 
-   * Skapa ett `java.io.FileInputStream` objekt som representerar det profilskyddade PDF-dokumentet med hjälp av dess konstruktor. Skicka ett strängvärde som anger platsen för PDF-dokumentet.
-   * Skapa ett `com.adobe.idp.Document` objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream` objektet.
+   * Skapa ett `java.io.FileInputStream`-objekt som representerar det principskyddade PDF-dokumentet med hjälp av dess konstruktor. Skicka ett strängvärde som anger platsen för PDF-dokumentet.
+   * Skapa ett `com.adobe.idp.Document`-objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream`-objektet.
 
-1. Granska dokumentet.
+1. Inspect dokumentet.
 
-   * Skapa ett `DocumentManager` objekt genom att anropa `RightsManagementClient` objektets `getDocumentManager` metod.
-   * Granska det principskyddade dokumentet genom att anropa `LicenseManager` objektets `inspectDocument` metod. Skicka det `com.adobe.idp.Document` objekt som innehåller det profilskyddade PDF-dokumentet. Den här metoden returnerar ett `RMInspectResult` objekt som innehåller information om det principskyddade dokumentet.
+   * Skapa ett `DocumentManager`-objekt genom att anropa `RightsManagementClient`-objektets `getDocumentManager`-metod.
+   * Inspect det principskyddade dokumentet genom att anropa `LicenseManager`-objektets `inspectDocument`-metod. Skicka `com.adobe.idp.Document`-objektet som innehåller det principskyddade PDF-dokumentet. Den här metoden returnerar ett `RMInspectResult`-objekt som innehåller information om det principskyddade dokumentet.
 
 1. Hämta information om det profilskyddade dokumentet.
 
-   Om du vill få information om det principskyddade dokumentet anropar du rätt metod som hör till `RMInspectResult` objektet. Om du till exempel vill hämta principnamnet anropar du `RMInspectResult` objektets `getPolicyName` metod.
+   Om du vill ha information om det principskyddade dokumentet anropar du den metod som tillhör `RMInspectResult`-objektet. Om du till exempel vill hämta principnamnet anropar du `RMInspectResult`-objektets `getPolicyName`-metod.
 
 **Exempel på koder**
 
@@ -1203,9 +1203,9 @@ Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäke
 
 * &quot;Snabbstart (SOAP-läge): Inspektera profilskyddade PDF-dokument med Java API&quot;
 
-### Inspektera skyddade PDF-dokument med webbtjänstens API {#inspect-policy-protected-pdf-documents-using-the-web-service-api}
+### Inspect Policy Protected PDF-dokument med webbtjänstens API {#inspect-policy-protected-pdf-documents-using-the-web-service-api}
 
-Inspektera ett profilskyddat PDF-dokument med hjälp av API:t för dokumentsäkerhetstjänsten (webbtjänsten):
+Inspect är ett policyskyddat PDF-dokument med hjälp av API:t för dokumentsäkerhetstjänsten (webbtjänsten):
 
 1. Inkludera projektfiler.
 
@@ -1217,13 +1217,13 @@ Inspektera ett profilskyddat PDF-dokument med hjälp av API:t för dokumentsäke
 
 1. Skapa ett API-objekt för Document Security Client.
 
-   * Skapa ett `RightsManagementServiceClient` objekt med hjälp av dess standardkonstruktor.
-   * Skapa ett `RightsManagementServiceClient.Endpoint.Address` objekt med hjälp av `System.ServiceModel.EndpointAddress` konstruktorn. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`.). Du behöver inte använda attributet `lc_version` . Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa ett `System.ServiceModel.BasicHttpBinding` objekt genom att hämta värdet för `RightsManagementServiceClient.Endpoint.Binding` fältet. Sänd returvärdet till `BasicHttpBinding`.
-   * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa ett `RightsManagementServiceClient`-objekt med hjälp av dess standardkonstruktor.
+   * Skapa ett `RightsManagementServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`). Du behöver inte använda attributet `lc_version`. Det här attributet används när du skapar en tjänstreferens.)
+   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `RightsManagementServiceClient.Endpoint.Binding`. Sänd returvärdet till `BasicHttpBinding`.
+   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `RightsManagementServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela användarnamnet för AEM formulär till fältet `RightsManagementServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `RightsManagementServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
    * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -1231,19 +1231,19 @@ Inspektera ett profilskyddat PDF-dokument med hjälp av API:t för dokumentsäke
 
 1. Hämta ett profilskyddat dokument som ska inspekteras.
 
-   * Skapa ett `BLOB` objekt med hjälp av dess konstruktor. Objektet används `BLOB` för att lagra ett PDF-dokument som ska inspekteras.
-   * Skapa ett `System.IO.FileStream` objekt genom att anropa dess konstruktor. Skicka ett strängvärde som representerar filplatsen för PDF-dokumentet och läget som filen ska öppnas i.
-   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` objektet. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` egenskap.
-   * Fyll bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` metod. Skicka bytearrayen, startpositionen och strömlängden som ska läsas.
-   * Fyll objektet `BLOB` genom att tilldela dess `MTOM` fält med innehållet i bytearrayen.
+   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor. Objektet `BLOB` används för att lagra ett PDF-dokument som ska inspekteras.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor. Skicka ett strängvärde som representerar filplatsen för PDF-dokumentet och läget som filen ska öppnas i.
+   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream`-objektet. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
+   * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod. Skicka bytearrayen, startpositionen och strömlängden som ska läsas.
+   * Fyll i `BLOB`-objektet genom att tilldela dess `MTOM`-fält med innehållet i bytearrayen.
 
-1. Granska dokumentet.
+1. Inspect dokumentet.
 
-   Granska det principskyddade dokumentet genom att anropa `RightsManagementServiceClient` objektets `inspectDocument` metod. Skicka det `BLOB` objekt som innehåller det profilskyddade PDF-dokumentet. Den här metoden returnerar ett `RMInspectResult` objekt som innehåller information om det principskyddade dokumentet.
+   Inspect det principskyddade dokumentet genom att anropa `RightsManagementServiceClient`-objektets `inspectDocument`-metod. Skicka `BLOB`-objektet som innehåller det principskyddade PDF-dokumentet. Den här metoden returnerar ett `RMInspectResult`-objekt som innehåller information om det principskyddade dokumentet.
 
 1. Hämta information om det profilskyddade dokumentet.
 
-   Hämta information om det principskyddade dokumentet genom att hämta värdet för det fält som tillhör `RMInspectResult` objektet. Om du till exempel vill hämta principnamnet hämtar du värdet för `RMInspectResult` objektets `policyName` fält.
+   Hämta information om det principskyddade dokumentet genom att hämta värdet för det fält som tillhör `RMInspectResult`-objektet. Om du till exempel vill hämta principnamnet hämtar du värdet för `RMInspectResult`-objektets `policyName`-fält.
 
 **Exempel på koder**
 
@@ -1258,7 +1258,7 @@ Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäke
 
 [Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## Skapa vattenstämplar {#creating-watermarks}
+## Skapar vattenstämplar {#creating-watermarks}
 
 Vattenstämplar säkerställer dokumentets säkerhet genom att unikt identifiera dokumentet och kontrollera upphovsrättsintrång. Du kan t.ex. skapa och placera en vattenstämpel med statusen Konfidentiellt på alla sidor i ett dokument. När du har skapat en vattenstämpel kan du inkludera den som en del av en profil. Det innebär att du kan ange principens vattenstämpelattribut med den nya vattenstämpeln. När en profil som innehåller en vattenstämpel har tillämpats på ett dokument, visas vattenstämpeln i det profilskyddade dokumentet.
 
@@ -1285,7 +1285,7 @@ Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprog
 
 **Skapa ett API-objekt för Document Security Client**
 
-Innan du programmässigt kan utföra en dokumentsäkerhetstjänståtgärd måste du skapa ett klientobjekt för dokumentsäkerhetstjänsten. Om du använder Java API skapar du ett `RightsManagementClient` objekt. Om du använder webbtjänstens API för dokumentsäkerhet skapar du ett `RightsManagementServiceService` objekt.
+Innan du programmässigt kan utföra en dokumentsäkerhetstjänståtgärd måste du skapa ett klientobjekt för dokumentsäkerhetstjänsten. Om du använder Java API skapar du ett `RightsManagementClient`-objekt. Om du använder webbtjänstens API för dokumentsäkerhet skapar du ett `RightsManagementServiceService`-objekt.
 
 **Ange vattenstämpelattribut**
 
@@ -1339,7 +1339,7 @@ I följande tabell visas de nyckel- och värdepar som krävs när du skapar en v
   </tr>
   <tr>
    <td><p><code>WaterBackCmd:SCALE</code></p></td>
-   <td><p>Om det här värdet anges <code>WaterBackCmd:IS_SIZE_ENABLED</code> måste det finnas och värdet måste vara true. Om det här attributet inte anges anpassas standardbeteendet till sidan.</p></td>
+   <td><p>Om det här värdet anges måste <code>WaterBackCmd:IS_SIZE_ENABLED</code> finnas och värdet måste vara true. Om det här attributet inte anges anpassas standardbeteendet till sidan.</p></td>
    <td><p>Ett värde större än 0.0 och mindre än 1.0.</p></td>
   </tr>
   <tr>
@@ -1364,7 +1364,7 @@ I följande tabell visas de nyckel- och värdepar som krävs när du skapar en v
   </tr>
   <tr>
    <td><p><code>WaterBackCmd:SRCTEXT</code></p></td>
-   <td><p>Anger den anpassade texten för en vattenstämpel. Om det här värdet finns måste det också finnas <code>WaterBackCmd:IS_CUSTOMTEXT_ENABLED</code> och anges till true.</p></td>
+   <td><p>Anger den anpassade texten för en vattenstämpel. Om det här värdet finns måste <code>WaterBackCmd:IS_CUSTOMTEXT_ENABLED</code> också finnas och anges till true.</p></td>
    <td><p>True eller False</p></td>
   </tr>
  </tbody>
@@ -1397,25 +1397,25 @@ Skapa en vattenstämpel med API:t för dokumentsäkerhet (Java):
 
 1. Inkludera projektfiler.
 
-   Inkludera JAR-klientfiler, t.ex. `adobe-rightsmanagement-client.jar`, i Java-projektets klassökväg.
+   Inkludera klient-JAR-filer, t.ex. `adobe-rightsmanagement-client.jar`, i Java-projektets klassökväg.
 
 1. Skapa ett API-objekt för Document Security Client.
 
-   * Skapa ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa ett `RightsManagementClient` objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory` objektet.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `RightsManagementClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Ange vattenstämpelattribut
 
-   * Skapa ett `Watermark` objekt genom att anropa `InfomodelObjectFactory` objektets statiska `createWatermark` metod. Den här metoden returnerar ett `Watermark` objekt.
-   * Ange vattenstämpelns name-attribut genom att anropa `Watermark` objektets `setName` -metod och skicka ett strängvärde som anger principnamnet.
-   * Ange vattenstämpelns bakgrundsattribut genom att anropa `Watermark` objektets `setBackground` metod och skicka `true`. Om du anger det här attributet visas vattenstämpeln i dokumentets bakgrund.
-   * Ange vattenstämpelns anpassade textattribut genom att anropa `Watermark` objektets `setCustomText` metod och skicka ett strängvärde som representerar vattenstämpelns text.
-   * Ange vattenstämpelns opacitetsattribut genom att anropa `Watermark` objektets `setOpacity` metod och skicka ett heltalsvärde som anger opacitetsnivån. Värdet 100 anger att vattenstämpeln är helt ogenomskinlig och värdet 0 anger att vattenstämpeln är helt genomskinlig.
+   * Skapa ett `Watermark`-objekt genom att anropa `InfomodelObjectFactory`-objektets statiska `createWatermark`-metod. Den här metoden returnerar ett `Watermark`-objekt.
+   * Ange vattenstämpelns namnattribut genom att anropa `Watermark`-objektets `setName`-metod och skicka ett strängvärde som anger principnamnet.
+   * Ange vattenstämpelns bakgrundsattribut genom att anropa `Watermark`-objektets `setBackground`-metod och skicka `true`. Om du anger det här attributet visas vattenstämpeln i dokumentets bakgrund.
+   * Ange vattenstämpelns anpassade textattribut genom att anropa `Watermark`-objektets `setCustomText`-metod och skicka ett strängvärde som representerar vattenstämpelns text.
+   * Ange vattenstämpelns opacitetsattribut genom att anropa `Watermark`-objektets `setOpacity`-metod och skicka ett heltalsvärde som anger opacitetsnivån. Värdet 100 anger att vattenstämpeln är helt ogenomskinlig och värdet 0 anger att vattenstämpeln är helt genomskinlig.
 
 1. Registrera vattenstämpeln.
 
-   * Skapa ett `WatermarkManager` objekt genom att anropa `RightsManagementClient` objektets `getWatermarkManager` metod. Den här metoden returnerar ett `WatermarkManager` objekt.
-   * Registrera vattenstämpeln genom att anropa `WatermarkManager` objektets `registerWatermark` metod och skicka det `Watermark` objekt som representerar vattenstämpeln som ska registreras. Den här metoden returnerar ett strängvärde som representerar vattenstämpelns ID-värde.
+   * Skapa ett `WatermarkManager`-objekt genom att anropa `RightsManagementClient`-objektets `getWatermarkManager`-metod. Den här metoden returnerar ett `WatermarkManager`-objekt.
+   * Registrera vattenstämpeln genom att anropa `WatermarkManager`-objektets `registerWatermark`-metod och skicka `Watermark`-objektet som representerar vattenstämpeln som ska registreras. Den här metoden returnerar ett strängvärde som representerar vattenstämpelns ID-värde.
 
 **Exempel på koder**
 
@@ -1437,13 +1437,13 @@ Skapa en vattenstämpel med API:t för dokumentsäkerhet (webbtjänst):
 
 1. Skapa ett API-objekt för Document Security Client.
 
-   * Skapa ett `RightsManagementServiceClient` objekt med hjälp av dess standardkonstruktor.
-   * Skapa ett `RightsManagementServiceClient.Endpoint.Address` objekt med hjälp av `System.ServiceModel.EndpointAddress` konstruktorn. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`.). Du behöver inte använda attributet `lc_version` . Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa ett `System.ServiceModel.BasicHttpBinding` objekt genom att hämta värdet för `RightsManagementServiceClient.Endpoint.Binding` fältet. Sänd returvärdet till `BasicHttpBinding`.
-   * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa ett `RightsManagementServiceClient`-objekt med hjälp av dess standardkonstruktor.
+   * Skapa ett `RightsManagementServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`). Du behöver inte använda attributet `lc_version`. Det här attributet används när du skapar en tjänstreferens.)
+   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `RightsManagementServiceClient.Endpoint.Binding`. Sänd returvärdet till `BasicHttpBinding`.
+   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `RightsManagementServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela användarnamnet för AEM formulär till fältet `RightsManagementServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `RightsManagementServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
    * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -1451,18 +1451,18 @@ Skapa en vattenstämpel med API:t för dokumentsäkerhet (webbtjänst):
 
 1. Ange vattenstämpelattribut.
 
-   * Skapa ett `WatermarkSpec` objekt genom att anropa `WatermarkSpec` konstruktorn.
-   * Ange vattenstämpelns namn genom att tilldela ett strängvärde till `WatermarkSpec` objektets `name` datamedlem.
-   * Ange vattenstämpelns `id` attribut genom att tilldela ett strängvärde till `WatermarkSpec` objektets `id` datamedlem.
-   * Skapa ett separat `MyMapOf_xsd_string_To_xsd_anyType_Item` objekt för varje vattenstämpelegenskap som ska ställas in.
-   * Ange nyckelvärdet genom att tilldela ett värde till `MyMapOf_xsd_string_To_xsd_anyType_Item` objektets `key` datamedlem (till exempel `WaterBackCmd:OPACITY)`.
-   * Ange värdet genom att tilldela ett värde till `MyMapOf_xsd_string_To_xsd_anyType_Item` objektets `value` datamedlem (till exempel `.25`).
-   * Create a `MyArrayOf_xsd_anyType` object. Anropa `MyMapOf_xsd_string_To_xsd_anyType_Item` objektets `MyArrayOf_xsd_anyType` metod för varje `Add` objekt. Skicka `MyMapOf_xsd_string_To_xsd_anyType_Item` objektet.
-   * Tilldela `MyArrayOf_xsd_anyType` objektet till `WatermarkSpec` objektets `values` datamedlem.
+   * Skapa ett `WatermarkSpec`-objekt genom att anropa konstruktorn `WatermarkSpec`.
+   * Ange vattenstämpelns namn genom att tilldela ett strängvärde till `WatermarkSpec`-objektets `name`-datamedlem.
+   * Ange vattenstämpelns `id`-attribut genom att tilldela ett strängvärde till `WatermarkSpec`-objektets `id`-datamedlem.
+   * För varje vattenstämpelegenskap som ska anges skapar du ett separat `MyMapOf_xsd_string_To_xsd_anyType_Item`-objekt.
+   * Ange nyckelvärdet genom att tilldela ett värde till `MyMapOf_xsd_string_To_xsd_anyType_Item`-objektets `key`-datamedlem (till exempel `WaterBackCmd:OPACITY)`).
+   * Ange värdet genom att tilldela ett värde till `MyMapOf_xsd_string_To_xsd_anyType_Item`-objektets `value`-datamedlem (till exempel `.25`).
+   * Skapa ett `MyArrayOf_xsd_anyType`-objekt. För varje `MyMapOf_xsd_string_To_xsd_anyType_Item`-objekt anropar du `MyArrayOf_xsd_anyType`-objektets `Add`-metod. Skicka `MyMapOf_xsd_string_To_xsd_anyType_Item`-objektet.
+   * Tilldela `MyArrayOf_xsd_anyType`-objektet till `WatermarkSpec`-objektets `values`-datamedlem.
 
 1. Registrera vattenstämpeln.
 
-   Registrera vattenstämpeln genom att anropa `RightsManagementServiceClient` objektets `registerWatermark` metod och skicka det `WatermarkSpec` objekt som representerar vattenstämpeln som ska registreras.
+   Registrera vattenstämpeln genom att anropa `RightsManagementServiceClient`-objektets `registerWatermark`-metod och skicka `WatermarkSpec`-objektet som representerar vattenstämpeln som ska registreras.
 
 **Exempel på koder**
 
@@ -1507,7 +1507,7 @@ Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprog
 
 **Skapa ett API-objekt för Document Security Client**
 
-Innan du programmässigt kan utföra en dokumentsäkerhetstjänståtgärd måste du skapa ett klientobjekt för dokumentsäkerhetstjänsten. Om du använder Java API skapar du ett `DocumentSecurityClient` objekt. Om du använder webbtjänstens API för dokumentsäkerhet skapar du ett `DocumentSecurityServiceService` objekt.
+Innan du programmässigt kan utföra en dokumentsäkerhetstjänståtgärd måste du skapa ett klientobjekt för dokumentsäkerhetstjänsten. Om du använder Java API skapar du ett `DocumentSecurityClient`-objekt. Om du använder webbtjänstens API för dokumentsäkerhet skapar du ett `DocumentSecurityServiceService`-objekt.
 
 **Hämta vattenstämpeln som ska ändras**
 
@@ -1515,7 +1515,7 @@ Om du vill ändra en vattenstämpel måste du hämta en befintlig vattenstämpel
 
 **Ange vattenstämpelattribut**
 
-Om du vill ändra en befintlig vattenstämpel ändrar du värdet för ett eller flera vattenstämpelattribut. När du uppdaterar en vattenstämpel med hjälp av en webbtjänst måste du ange alla de attribut som ursprungligen var angivna, även om värdet inte ändras. Anta till exempel att följande vattenstämpelattribut har angetts: `WaterBackCmd:IS_USERID_ENABLED`, `WaterBackCmd:IS_CUSTOMTEXT_ENABLED`, `WaterBackCmd:OPACITY`och `WaterBackCmd:SRCTEXT`. Även om det enda attributet du vill ändra är `WaterBackCmd:OPACITY`måste du ange de andra värdena korrekt.
+Om du vill ändra en befintlig vattenstämpel ändrar du värdet för ett eller flera vattenstämpelattribut. När du uppdaterar en vattenstämpel med hjälp av en webbtjänst måste du ange alla de attribut som ursprungligen var angivna, även om värdet inte ändras. Anta till exempel att följande vattenstämpelattribut har angetts: `WaterBackCmd:IS_USERID_ENABLED`, `WaterBackCmd:IS_CUSTOMTEXT_ENABLED`, `WaterBackCmd:OPACITY` och `WaterBackCmd:SRCTEXT`. Även om det enda attributet som du vill ändra är `WaterBackCmd:OPACITY`, måste du ange att de andra värdena är bra.
 
 >[!NOTE]
 >
@@ -1547,16 +1547,16 @@ När du har ändrat en vattenstämpels attribut måste du uppdatera vattenstämp
 
 1. Skapa ett API-objekt för Document Security Client.
 
-   * Skapa ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa ett `DocumentSecurityClient` objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory` objektet.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `DocumentSecurityClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Hämta vattenstämpeln som du vill ändra.
 
-   Skapa ett `WatermarkManager` objekt genom att anropa `DocumentSecurityClient` objektets `getWatermarkManager` metod och skicka ett strängvärde som anger vattenstämpelnamnet. Den här metoden returnerar ett `Watermark` objekt som representerar vattenstämpeln som ska ändras.
+   Skapa ett `WatermarkManager`-objekt genom att anropa `DocumentSecurityClient`-objektets `getWatermarkManager`-metod och skicka ett strängvärde som anger vattenstämpelnamnet. Den här metoden returnerar ett `Watermark`-objekt som representerar den vattenstämpel som ska ändras.
 
 1. Ange vattenstämpelattribut.
 
-   Ange vattenstämpelns opacitetsattribut genom att anropa `Watermark` objektets `setOpacity` metod och skicka ett heltalsvärde som anger opacitetsnivån. Värdet 100 anger att vattenstämpeln är helt ogenomskinlig och värdet 0 anger att vattenstämpeln är helt genomskinlig.
+   Ange vattenstämpelns opacitetsattribut genom att anropa `Watermark`-objektets `setOpacity`-metod och skicka ett heltalsvärde som anger opacitetsnivån. Värdet 100 anger att vattenstämpeln är helt ogenomskinlig och värdet 0 anger att vattenstämpeln är helt genomskinlig.
 
    >[!NOTE]
    >
@@ -1564,7 +1564,7 @@ När du har ändrat en vattenstämpels attribut måste du uppdatera vattenstämp
 
 1. Uppdatera vattenstämpeln.
 
-   * Uppdatera vattenstämpeln genom att anropa `WatermarkManager` objektets `updateWatermark` metod och skicka det `Watermark` objekt vars attribut ändrades.
+   * Uppdatera vattenstämpeln genom att anropa `WatermarkManager`-objektets `updateWatermark`-metod och skicka `Watermark`-objektet vars attribut ändrades.
 
 **Exempel på koder**
 
@@ -1584,13 +1584,13 @@ Exempel på kod som använder tjänsten Dokumentsäkerhet finns i Snabbstart (SO
 
 1. Skapa ett API-objekt för Document Security Client.
 
-   * Skapa ett `DocumentSecurityServiceClient` objekt med hjälp av dess standardkonstruktor.
-   * Skapa ett `RightsManagementServiceClient.Endpoint.Address` objekt med hjälp av `System.ServiceModel.EndpointAddress` konstruktorn. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/DocumentSecurityService?WSDL`.). Du behöver inte använda attributet `lc_version` . Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa ett `System.ServiceModel.BasicHttpBinding` objekt genom att hämta värdet för `DocumentSecurityServiceClient.Endpoint.Binding` fältet. Sänd returvärdet till `BasicHttpBinding`.
-   * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa ett `DocumentSecurityServiceClient`-objekt med hjälp av dess standardkonstruktor.
+   * Skapa ett `RightsManagementServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/DocumentSecurityService?WSDL`). Du behöver inte använda attributet `lc_version`. Det här attributet används när du skapar en tjänstreferens.)
+   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `DocumentSecurityServiceClient.Endpoint.Binding`. Sänd returvärdet till `BasicHttpBinding`.
+   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela användarnamnet för AEM formulär till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
    * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -1598,19 +1598,19 @@ Exempel på kod som använder tjänsten Dokumentsäkerhet finns i Snabbstart (SO
 
 1. Hämta vattenstämpeln som du vill ändra.
 
-   Hämta vattenstämpeln som ska ändras genom att anropa `DocumentSecurityServiceClient` objektets `getWatermarkByName` metod. Skicka ett strängvärde som anger vattenstämpelns namn. Den här metoden returnerar ett `WatermarkSpec` objekt som representerar vattenstämpeln som ska ändras.
+   Hämta den vattenstämpel som ska ändras genom att anropa `DocumentSecurityServiceClient`-objektets `getWatermarkByName`-metod. Skicka ett strängvärde som anger vattenstämpelns namn. Den här metoden returnerar ett `WatermarkSpec`-objekt som representerar den vattenstämpel som ska ändras.
 
 1. Ange vattenstämpelattribut.
 
-   * Skapa ett separat `MyMapOf_xsd_string_To_xsd_anyType_Item` objekt för varje vattenstämpelegenskap som ska uppdateras.
-   * Ange nyckelvärdet genom att tilldela ett värde till `MyMapOf_xsd_string_To_xsd_anyType_Item` objektets `key` datamedlem (till exempel `WaterBackCmd:OPACITY)`.
-   * Ange värdet genom att tilldela ett värde till `MyMapOf_xsd_string_To_xsd_anyType_Item` objektets `value` datamedlem (till exempel `.50`).
-   * Create a `MyArrayOf_xsd_anyType` object. Anropa `MyMapOf_xsd_string_To_xsd_anyType_Item` objektets `MyArrayOf_xsd_anyType` metod för varje `Add` objekt. Skicka `MyMapOf_xsd_string_To_xsd_anyType_Item` objektet.
-   * Tilldela `MyArrayOf_xsd_anyType` objektet till `WatermarkSpec` objektets `values` datamedlem.
+   * Skapa ett separat `MyMapOf_xsd_string_To_xsd_anyType_Item`-objekt för varje vattenstämpelegenskap som ska uppdateras.
+   * Ange nyckelvärdet genom att tilldela ett värde till `MyMapOf_xsd_string_To_xsd_anyType_Item`-objektets `key`-datamedlem (till exempel `WaterBackCmd:OPACITY)`).
+   * Ange värdet genom att tilldela ett värde till `MyMapOf_xsd_string_To_xsd_anyType_Item`-objektets `value`-datamedlem (till exempel `.50`).
+   * Skapa ett `MyArrayOf_xsd_anyType`-objekt. För varje `MyMapOf_xsd_string_To_xsd_anyType_Item`-objekt anropar du `MyArrayOf_xsd_anyType`-objektets `Add`-metod. Skicka `MyMapOf_xsd_string_To_xsd_anyType_Item`-objektet.
+   * Tilldela `MyArrayOf_xsd_anyType`-objektet till `WatermarkSpec`-objektets `values`-datamedlem.
 
 1. Uppdatera vattenstämpeln.
 
-   Uppdatera vattenstämpeln genom att anropa `DocumentSecurityServiceClient` objektets `updateWatermark` metod och skicka det `WatermarkSpec` objekt som representerar den vattenstämpel som ska ändras.
+   Uppdatera vattenstämpeln genom att anropa `DocumentSecurityServiceClient`-objektets `updateWatermark`-metod och skicka `WatermarkSpec`-objektet som representerar den vattenstämpel som ska ändras.
 
 **Exempel på koder**
 
@@ -1618,29 +1618,29 @@ Följande snabbstart innehåller kodexempel på hur du använder dokumentsäkerh
 
 * &quot;Snabbstart (MTOM): Ändra en vattenstämpel med hjälp av webbtjänstens API&quot;
 
-## Söka efter händelser {#searching-for-events}
+## Söker efter händelser {#searching-for-events}
 
-Rights Management-tjänsten spårar specifika åtgärder när de utförs, t.ex. att tillämpa en profil på ett dokument, öppna ett policyskyddat dokument och återkalla åtkomst till dokument. Händelsegranskning måste aktiveras för Rights Management-tjänsten, annars spåras inte händelser.
+Tjänsten Rights Management spårar specifika åtgärder när de inträffar, t.ex. att tillämpa en profil på ett dokument, öppna ett policyskyddat dokument och återkalla åtkomst till dokument. Händelsegranskning måste aktiveras för tjänsten Rights Management, annars spåras inte händelser.
 
 Händelser faller inom en av följande kategorier:
 
 * Administratörshändelser är åtgärder som är relaterade till en administratör, till exempel att skapa ett nytt administratörskonto.
 * Dokumenthändelser är åtgärder som är relaterade till ett dokument, t.ex. stängning av ett policyskyddat dokument.
 * Policyhändelser är åtgärder som är relaterade till en profil, till exempel att skapa en ny policy.
-* Tjänstehändelser är åtgärder som är relaterade till Rights Management-tjänsten, till exempel synkronisering med användarkatalogen.
+* Tjänstehändelser är åtgärder som är relaterade till tjänsten Rights Management, t.ex. synkronisering med användarkatalogen.
 
 Du kan söka efter specifika händelser genom att använda Java API:t för Rights Management eller webbtjänstens API. Genom att söka efter händelser kan du utföra åtgärder, till exempel skapa en loggfil med vissa händelser.
 
 >[!NOTE]
 >
->Mer information om Rights Management-tjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Rights Management finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-10}
 
 Så här söker du efter en Rights Management-händelse:
 
 1. Inkludera projektfiler.
-1. Skapa ett API-objekt för Rights Management Client.
+1. Skapa ett Rights Management Client API-objekt.
 1. Ange händelsen som du vill söka efter.
 1. Sök efter händelsen.
 
@@ -1648,9 +1648,9 @@ Så här söker du efter en Rights Management-händelse:
 
 Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprogram med Java inkluderar du de JAR-filer som behövs. Om du använder webbtjänster måste du inkludera proxyfilerna.
 
-**Skapa ett API-objekt för Rights Management Client**
+**Skapa ett Rights Management Client API-objekt**
 
-Innan du programmässigt kan utföra en Rights Management-tjänståtgärd måste du skapa ett klientobjekt för Rights Management-tjänsten. Om du använder Java API skapar du ett `DocumentSecurityClient` objekt. Om du använder webbtjänstens API för Rights Management skapar du ett `DocumentSecurityServiceService` objekt.
+Innan du programmässigt kan utföra en Rights Management-tjänståtgärd måste du skapa ett klientobjekt för tjänsten Rights Management. Om du använder Java API skapar du ett `DocumentSecurityClient`-objekt. Om du använder Rights Management webbtjänste-API:t skapar du ett `DocumentSecurityServiceService`-objekt.
 
 **Ange vilka händelser som ska sökas efter**
 
@@ -1658,7 +1658,7 @@ Du måste ange vilken händelse du vill söka efter. Du kan till exempel söka e
 
 **Sök efter händelsen**
 
-När du har angett vilken händelse du vill söka efter kan du söka efter händelsen med antingen Rights Management Java API eller Rights Management-webbtjänstens API.
+När du har angett vilken händelse du vill söka efter kan du söka efter händelsen med hjälp av Rights Management Java API eller Rights Management webbtjänstAPI.
 
 **Se även**
 
@@ -1666,41 +1666,41 @@ När du har angett vilken händelse du vill söka efter kan du söka efter händ
 
 [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### Söka efter händelser med Java API {#search-for-events-using-the-java-api}
+### Sök efter händelser med Java API {#search-for-events-using-the-java-api}
 
-Sök efter händelser med Rights Management API (Java):
+Sök efter händelser med hjälp av Rights Management API (Java):
 
 1. Inkludera projektfiler
 
    Inkludera JAR-klientfiler, som adobe-rightsmanagement-client.jar, i Java-projektets klassökväg.
 
-1. Skapa ett API-objekt för Rights Management Client
+1. Skapa ett Rights Management Client API-objekt
 
-   Skapa ett `DocumentSecurityClient` objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
+   Skapa ett `DocumentSecurityClient`-objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
 
 1. Ange vilka händelser som ska sökas efter
 
-   * Skapa ett `EventManager` objekt genom att anropa `DocumentSecurityClient` objektets `getEventManager` metod. Den här metoden returnerar ett `EventManager` objekt.
-   * Skapa ett `EventSearchFilter` objekt genom att anropa dess konstruktor.
-   * Ange den händelse som ska sökas igenom genom att anropa `EventSearchFilter` objektets `setEventCode` metod och skicka en statisk datamedlem som tillhör den `EventManager` klass som representerar händelsen som ska sökas efter. Om du till exempel vill söka efter principskapningshändelsen skickar du `EventManager.POLICY_CREATE_EVENT`.
+   * Skapa ett `EventManager`-objekt genom att anropa `DocumentSecurityClient`-objektets `getEventManager`-metod. Den här metoden returnerar ett `EventManager`-objekt.
+   * Skapa ett `EventSearchFilter`-objekt genom att anropa dess konstruktor.
+   * Ange den händelse som ska sökas igenom genom att anropa `EventSearchFilter`-objektets `setEventCode`-metod och skicka en statisk datamedlem som tillhör klassen `EventManager` som representerar händelsen som ska sökas efter. Om du till exempel vill söka efter principskapningshändelsen skickar du `EventManager.POLICY_CREATE_EVENT`.
 
    >[!NOTE]
    >
-   >Du kan definiera ytterligare sökvillkor genom att anropa `EventSearchFilter` objektmetoder. Anropa till exempel `setUserName` metoden för att ange en användare som är associerad med händelsen.
+   >Du kan definiera ytterligare sökvillkor genom att anropa objektmetoder i `EventSearchFilter`. Anropa till exempel metoden `setUserName` för att ange en användare som är associerad med händelsen.
 
 1. Sök efter händelsen
 
-   Sök efter händelsen genom att anropa `EventManager` objektets `searchForEvents` metod och skicka det `EventSearchFilter` objekt som definierar sökvillkoren för händelsen. Den här metoden returnerar en array med `Event` objekt.
+   Sök efter händelsen genom att anropa `EventManager`-objektets `searchForEvents`-metod och skicka `EventSearchFilter`-objektet som definierar sökvillkoren för händelsen. Den här metoden returnerar en array med `Event`-objekt.
 
 **Exempel på koder**
 
-Följande snabbstarter innehåller kodexempel på hur Rights Management-tjänsten används:
+Följande snabbstarter innehåller kodexempel på hur du använder tjänsten Rights Management:
 
 * &quot;Snabbstart (SOAP): Söka efter händelser med Java API&quot;
 
-### Sök efter händelser med hjälp av webbtjänstens API {#search-for-events-using-the-web-service-api}
+### Sök efter händelser med webbtjänstens API {#search-for-events-using-the-web-service-api}
 
-Sök efter händelser med Rights Management API (webbtjänsten):
+Sök efter händelser med hjälp av Rights Management API (webbtjänst):
 
 1. Inkludera projektfiler
 
@@ -1710,15 +1710,15 @@ Sök efter händelser med Rights Management API (webbtjänsten):
    >
    >Ersätt `localhost` med IP-adressen för servern som är värd för AEM Forms.
 
-1. Skapa ett API-objekt för Rights Management Client
+1. Skapa ett Rights Management Client API-objekt
 
-   * Skapa ett `DocumentSecurityServiceClient` objekt med hjälp av dess standardkonstruktor.
-   * Skapa ett `DocumentSecurityServiceClient.Endpoint.Address` objekt med hjälp av `System.ServiceModel.EndpointAddress` konstruktorn. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`.). Du behöver inte använda attributet `lc_version` . Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa ett `System.ServiceModel.BasicHttpBinding` objekt genom att hämta värdet för `DocumentSecurityServiceClient.Endpoint.Binding` fältet. Sänd returvärdet till `BasicHttpBinding`.
-   * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa ett `DocumentSecurityServiceClient`-objekt med hjälp av dess standardkonstruktor.
+   * Skapa ett `DocumentSecurityServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`). Du behöver inte använda attributet `lc_version`. Det här attributet används när du skapar en tjänstreferens.)
+   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `DocumentSecurityServiceClient.Endpoint.Binding`. Sänd returvärdet till `BasicHttpBinding`.
+   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela användarnamnet för AEM formulär till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
    * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -1726,12 +1726,12 @@ Sök efter händelser med Rights Management API (webbtjänsten):
 
 1. Ange vilka händelser som ska sökas efter
 
-   * Skapa ett `EventSpec` objekt med hjälp av dess konstruktor.
-   * Ange början på den tidsperiod under vilken händelsen inträffade genom att ange `EventSpec` objektets `firstTime.date` datamedlem med `DataTime` instansen som representerar början på datumintervallet när händelsen inträffade.
-   * Tilldela värdet `true` till `EventSpec` objektets `firstTime.dateSpecified` datamedlem.
-   * Ange slutet på den tidsperiod under vilken händelsen inträffade genom att ange `EventSpec` objektets `lastTime.date` datamedlem med `DataTime` instansen som representerar slutet på datumintervallet när händelsen inträffade.
-   * Tilldela värdet `true` till `EventSpec` objektets `lastTime.dateSpecified` datamedlem.
-   * Ange händelsen som ska sökas efter genom att tilldela ett strängvärde till `EventSpec` objektets `eventCode` datamedlem. I följande tabell visas de numeriska värden som du kan tilldela den här egenskapen:
+   * Skapa ett `EventSpec`-objekt med hjälp av dess konstruktor.
+   * Ange början på den tidsperiod under vilken händelsen inträffade genom att ställa in `EventSpec`-objektets `firstTime.date`-datamedlem med `DataTime`-instansen som representerar början på datumintervallet när händelsen inträffade.
+   * Tilldela värdet `true` till `EventSpec`-objektets `firstTime.dateSpecified`-datamedlem.
+   * Ange slutet på den tidsperiod under vilken händelsen inträffade genom att ställa in `EventSpec`-objektets `lastTime.date`-datamedlem med `DataTime`-instansen som representerar slutet på datumintervallet när händelsen inträffade.
+   * Tilldela värdet `true` till `EventSpec`-objektets `lastTime.dateSpecified`-datamedlem.
+   * Ange händelsen som ska sökas efter genom att tilldela ett strängvärde till `EventSpec`-objektets `eventCode`-datamedlem. I följande tabell visas de numeriska värden som du kan tilldela den här egenskapen:
 
    <table>
     <thead>
@@ -1934,11 +1934,11 @@ Sök efter händelser med Rights Management API (webbtjänsten):
 
 1. Sök efter händelsen
 
-   Sök efter händelsen genom att anropa `DocumentSecurityServiceClient` objektets `searchForEvents` metod och skicka det `EventSpec` objekt som representerar händelsen som ska sökas efter och det maximala antalet resultat. Den här metoden returnerar en `MyArrayOf_xsd_anyType` samling där varje element är en `AuditSpec` instans. Om du använder en `AuditSpec` instans kan du få information om händelsen, till exempel när den inträffade. Instansen `AuditSpec` innehåller en `timestamp` datamedlem som anger den här informationen.
+   Sök efter händelsen genom att anropa `DocumentSecurityServiceClient`-objektets `searchForEvents`-metod och skicka `EventSpec`-objektet som representerar händelsen som ska sökas efter och det maximala antalet resultat. Den här metoden returnerar en `MyArrayOf_xsd_anyType`-samling där varje element är en `AuditSpec`-instans. Om du använder en `AuditSpec`-instans kan du få information om händelsen, till exempel när den inträffade. Instansen `AuditSpec` innehåller en `timestamp`-datamedlem som anger den här informationen.
 
 **Exempel på koder**
 
-Följande snabbstarter innehåller kodexempel på hur Rights Management-tjänsten används:
+Följande snabbstarter innehåller kodexempel på hur du använder tjänsten Rights Management:
 
 * &quot;Snabbstart (MTOM): Söka efter händelser med hjälp av webbtjänstens API&quot;
 * &quot;Snabbstart (SwaRef): Söka efter händelser med hjälp av webbtjänstens API&quot;
@@ -1949,7 +1949,7 @@ Följande snabbstarter innehåller kodexempel på hur Rights Management-tjänste
 
 [Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## Tillämpa profiler på Word-dokument {#applying-policies-to-word-documents}
+## Tillämpar principer på Word-dokument {#applying-policies-to-word-documents}
 
 Utöver PDF-dokument har Rights Management-tjänsten stöd för ytterligare dokumentformat, som Microsoft Word-dokument (DOC-fil) och andra Microsoft Office-filformat. Du kan till exempel tillämpa en profil på ett Word-dokument för att skydda det. Genom att tillämpa en profil på ett Word-dokument begränsar du åtkomsten till dokumentet. Du kan inte tillämpa en profil på ett dokument om dokumentet redan är skyddat med en profil.
 
@@ -2007,35 +2007,35 @@ Tillämpa en profil på ett Word-dokument med hjälp av dokumentets säkerhets-A
 
 1. Skapa ett API-objekt för Document Security Client.
 
-   * Skapa ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa ett `DocumentSecurityClient` objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory` objektet.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `DocumentSecurityClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Hämta ett Word-dokument.
 
-   * Skapa ett `java.io.FileInputStream` objekt som representerar Word-dokumentet genom att använda dess konstruktor och skicka ett strängvärde som anger platsen för Word-dokumentet.
-   * Skapa ett `com.adobe.idp.Document` objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream` objektet.
+   * Skapa ett `java.io.FileInputStream`-objekt som representerar Word-dokumentet genom att använda dess konstruktor och skicka ett strängvärde som anger platsen för Word-dokumentet.
+   * Skapa ett `com.adobe.idp.Document`-objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream`-objektet.
 
 1. Använd en befintlig profil i Word-dokumentet.
 
-   * Skapa ett `DocumentManager` objekt genom att anropa `DocumentSecurityClient` objektets `getDocumentManager` metod.
-   * Tillämpa en profil på Word-dokumentet genom att anropa `DocumentManager` objektets `protectDocument` metod och skicka följande värden:
+   * Skapa ett `DocumentManager`-objekt genom att anropa `DocumentSecurityClient`-objektets `getDocumentManager`-metod.
+   * Tillämpa en profil på Word-dokumentet genom att anropa `DocumentManager`-objektets `protectDocument`-metod och skicka följande värden:
 
-      * Det objekt `com.adobe.idp.Document` som innehåller det Word-dokument som profilen tillämpas på.
+      * Det `com.adobe.idp.Document`-objekt som innehåller det Word-dokument som profilen tillämpas på.
       * Ett strängvärde som anger dokumentets namn.
-      * Ett strängvärde som anger namnet på den principuppsättning som principen tillhör. Du kan ange ett `null` värde som resulterar i att `MyPolicies` principuppsättningen används.
+      * Ett strängvärde som anger namnet på den principuppsättning som principen tillhör. Du kan ange ett `null`-värde som resulterar i att `MyPolicies`-principuppsättningen används.
       * Ett strängvärde som anger principnamnet.
       * Ett strängvärde som representerar namnet på användarhanterardomänen för den användare som är dokumentets utgivare. Det här parametervärdet är valfritt och kan vara null (om parametern är null måste nästa parametervärde vara null).
-      * Ett strängvärde som representerar namnet på den kanoniska användaren av användarhanteraren som är dokumentets utgivare. Det här parametervärdet är valfritt och kan vara `null` (om parametern är `null`måste det föregående parametervärdet vara `null`).
-      * A `com.adobe.livecycle.rightsmanagement.Locale` som representerar det språkområde som används för att välja MS Office-mallen. Det här parametervärdet är valfritt och du kan ange det `null`.
+      * Ett strängvärde som representerar namnet på den kanoniska användaren av användarhanteraren som är dokumentets utgivare. Det här parametervärdet är valfritt och kan vara `null` (om parametern är `null` måste det föregående parametervärdet vara `null`).
+      * En `com.adobe.livecycle.rightsmanagement.Locale` som representerar det språkområde som används för att välja MS Office-mallen. Det här parametervärdet är valfritt och du kan ange `null`.
 
-      Metoden returnerar `protectDocument` ett `RMSecureDocumentResult` objekt som innehåller det principskyddade Word-dokumentet.
+      Metoden `protectDocument` returnerar ett `RMSecureDocumentResult`-objekt som innehåller det principskyddade Word-dokumentet.
 
 
 1. Spara Word-dokumentet.
 
-   * Anropa `RMSecureDocumentResult` objektets `getProtectedDoc` metod för att hämta det principskyddade Word-dokumentet. Den här metoden returnerar ett `com.adobe.idp.Document` objekt.
-   * Skapa ett `java.io.File` objekt och kontrollera att filtillägget är DOC.
-   * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att kopiera innehållet i `Document` objektet till filen (se till att du använder det `Document` objekt som returnerades av `getProtectedDoc` metoden).
+   * Anropa `RMSecureDocumentResult`-objektets `getProtectedDoc`-metod för att hämta det principskyddade Word-dokumentet. Den här metoden returnerar ett `com.adobe.idp.Document`-objekt.
+   * Skapa ett `java.io.File`-objekt och kontrollera att filtillägget är DOC.
+   * Anropa `com.adobe.idp.Document`-objektets `copyToFile`-metod för att kopiera innehållet i `Document`-objektet till filen (kontrollera att du använder `Document`-objektet som returnerades av metoden `getProtectedDoc`).
 
 **Exempel på koder**
 
@@ -2043,7 +2043,7 @@ Följande snabbstart innehåller kodexempel på hur du använder dokumentsäkerh
 
 * &quot;Snabbstart (SOAP-läge): Tillämpa en profil på ett Word-dokument med Java API&quot;
 
-### Tillämpa en profil på ett Word-dokument med hjälp av webbtjänstens API {#apply-a-policy-to-a-word-document-using-the-web-service-api}
+### Tillämpa en profil på ett Word-dokument med webbtjänstens API {#apply-a-policy-to-a-word-document-using-the-web-service-api}
 
 Tillämpa en profil på ett Word-dokument med hjälp av API:t för dokumentsäkerhet (webbtjänsten):
 
@@ -2057,13 +2057,13 @@ Tillämpa en profil på ett Word-dokument med hjälp av API:t för dokumentsäke
 
 1. Skapa ett API-objekt för Document Security Client.
 
-   * Skapa ett `DocumentSecurityServiceClient` objekt med hjälp av dess standardkonstruktor.
-   * Skapa ett `DocumentSecurityServiceClient.Endpoint.Address` objekt med hjälp av `System.ServiceModel.EndpointAddress` konstruktorn. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/DocumentSecurityService?WSDL`.). Du behöver inte använda attributet `lc_version` . Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa ett `System.ServiceModel.BasicHttpBinding` objekt genom att hämta värdet för `DocumentSecurityServiceClient.Endpoint.Binding` fältet. Sänd returvärdet till `BasicHttpBinding`.
-   * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa ett `DocumentSecurityServiceClient`-objekt med hjälp av dess standardkonstruktor.
+   * Skapa ett `DocumentSecurityServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/DocumentSecurityService?WSDL`). Du behöver inte använda attributet `lc_version`. Det här attributet används när du skapar en tjänstreferens.)
+   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `DocumentSecurityServiceClient.Endpoint.Binding`. Sänd returvärdet till `BasicHttpBinding`.
+   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela användarnamnet för AEM formulär till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `DocumentSecurityServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
    * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -2071,35 +2071,35 @@ Tillämpa en profil på ett Word-dokument med hjälp av API:t för dokumentsäke
 
 1. Hämta ett Word-dokument.
 
-   * Skapa ett `BLOB` objekt med hjälp av dess konstruktor. Objektet används `BLOB` för att lagra ett Word-dokument som en profil tillämpas på.
-   * Skapa ett `System.IO.FileStream` objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för Word-dokumentet och läget som filen ska öppnas i.
-   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` objektet. Ta reda på bytearrayens storlek genom att hämta `System.IO.FileStream` objektets `Length` egenskap.
-   * Fyll bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` metod. Skicka bytearrayen, startpositionen och strömlängden som ska läsas.
-   * Fyll objektet `BLOB` genom att tilldela dess `MTOM` fält med innehållet i bytearrayen.
+   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor. Objektet `BLOB` används för att lagra ett Word-dokument som en profil tillämpas på.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för Word-dokumentet och läget som filen ska öppnas i.
+   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream`-objektet. Ta reda på bytearraystorleken genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
+   * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod. Skicka bytearrayen, startpositionen och strömlängden som ska läsas.
+   * Fyll i `BLOB`-objektet genom att tilldela dess `MTOM`-fält med innehållet i bytearrayen.
 
 1. Använd en befintlig profil i Word-dokumentet.
 
-   Tillämpa en profil på Word-dokumentet genom att anropa `DocumentSecurityServiceClient` objektets `protectDocument` metod och skicka följande värden:
+   Tillämpa en profil på Word-dokumentet genom att anropa `DocumentSecurityServiceClient`-objektets `protectDocument`-metod och skicka följande värden:
 
-   * Det objekt `BLOB` som innehåller det Word-dokument som profilen tillämpas på.
+   * Det `BLOB`-objekt som innehåller det Word-dokument som profilen tillämpas på.
    * Ett strängvärde som anger dokumentets namn.
-   * Ett strängvärde som anger namnet på den principuppsättning som principen tillhör. Du kan ange ett `null` värde som resulterar i att `MyPolicies` principuppsättningen används.
+   * Ett strängvärde som anger namnet på den principuppsättning som principen tillhör. Du kan ange ett `null`-värde som resulterar i att `MyPolicies`-principuppsättningen används.
    * Ett strängvärde som anger principnamnet.
    * Ett strängvärde som representerar namnet på användarhanterardomänen för den användare som är dokumentets utgivare. Det här parametervärdet är valfritt och kan vara null (om parametern är null måste nästa parametervärde vara `null`).
    * Ett strängvärde som representerar namnet på den kanoniska användaren av användarhanteraren som är dokumentets utgivare. Det här parametervärdet är valfritt och kan vara null (om parametern är null måste det föregående parametervärdet vara `null`).
-   * Ett `RMLocale` värde som anger språkvärdet (till exempel `RMLocale.en`).
+   * Ett `RMLocale`-värde som anger språkvärdet (till exempel `RMLocale.en`).
    * En strängutdataparameter som används för att lagra principens identifierarvärde.
    * En strängutdataparameter som används för att lagra det principskyddade identifierarvärdet.
    * En strängutdataparameter som används för att lagra mime-typen (till exempel `application/doc`).
 
-   Metoden returnerar `protectDocument` ett `BLOB` objekt som innehåller det principskyddade Word-dokumentet.
+   Metoden `protectDocument` returnerar ett `BLOB`-objekt som innehåller det principskyddade Word-dokumentet.
 
 1. Spara Word-dokumentet.
 
-   * Skapa ett `System.IO.FileStream` objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det principskyddade Word-dokumentet.
-   * Skapa en bytearray som lagrar datainnehållet i det `BLOB` objekt som returnerades av `protectDocument` metoden. Fyll i bytearrayen genom att hämta värdet för `BLOB` objektets `MTOM` datamedlem.
-   * Skapa ett `System.IO.BinaryWriter` objekt genom att anropa dess konstruktor och skicka `System.IO.FileStream` objektet.
-   * Skriv bytearrayens innehåll till en Word-fil genom att anropa `System.IO.BinaryWriter` objektets `Write` metod och skicka bytearrayen.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det principskyddade Word-dokumentet.
+   * Skapa en bytearray som lagrar datainnehållet i `BLOB`-objektet som returnerades av metoden `protectDocument`. Fyll i bytearrayen genom att hämta värdet för `BLOB`-objektets `MTOM`-datamedlem.
+   * Skapa ett `System.IO.BinaryWriter`-objekt genom att anropa dess konstruktor och skicka `System.IO.FileStream`-objektet.
+   * Skriv bytearrayens innehåll till en Word-fil genom att anropa `System.IO.BinaryWriter`-objektets `Write`-metod och skicka bytearrayen.
 
 **Exempel på koder**
 
@@ -2107,7 +2107,7 @@ Följande snabbstart innehåller kodexempel på hur du använder dokumentsäkerh
 
 * &quot;Snabbstart (MTOM): Tillämpa en profil på ett Word-dokument med hjälp av webbtjänstens API&quot;
 
-## Ta bort profiler från Word-dokument {#removing-policies-from-word-documents}
+## Tar bort profiler från Word-dokument {#removing-policies-from-word-documents}
 
 Du kan ta bort en profil från ett profilskyddat Word-dokument om du vill ta bort skyddet från dokumentet. Det vill säga om du inte längre vill att dokumentet ska skyddas av en profil. Om du vill uppdatera ett principskyddat Word-dokument med en nyare profil är det effektivare att byta profil i stället för att ta bort profilen och lägga till den uppdaterade profilen.
 
@@ -2139,7 +2139,7 @@ Du måste hämta ett principskyddat Word-dokument för att kunna ta bort en prof
 
 **Ta bort profilen från Word-dokumentet**
 
-Du kan ta bort en princip från ett principskyddat Word-dokument förutsatt att en administratör har angetts i anslutningsinställningarna. Annars måste profilen som används för att skydda ett dokument innehålla behörigheten för att kunna ta bort en profil från ett Word-dokument `SWITCH_POLICY` . Dessutom måste användaren som anges i anslutningsinställningarna för AEM Forms också ha den behörigheten. Annars genereras ett undantag.
+Du kan ta bort en princip från ett principskyddat Word-dokument förutsatt att en administratör har angetts i anslutningsinställningarna. Om inte måste profilen som används för att skydda ett dokument innehålla behörigheten `SWITCH_POLICY` för att kunna ta bort en profil från ett Word-dokument. Dessutom måste den användare som anges i AEM Forms anslutningsinställningar också ha den behörigheten. Annars genereras ett undantag.
 
 **Spara det oskyddade Word-dokumentet**
 
@@ -2163,23 +2163,23 @@ Ta bort en profil från ett principskyddat Word-dokument med hjälp av dokumente
 
 1. Skapa ett API-objekt för Document Security Client
 
-   * Skapa ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa ett `RightsManagementClient` objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory` objektet.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `RightsManagementClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Hämta ett policyskyddat Word-dokument
 
-   * Skapa ett `java.io.FileInputStream` objekt som representerar det principskyddade Word-dokumentet genom att använda dess konstruktor och skicka ett strängvärde som anger platsen för Word-dokumentet.
-   * Skapa ett `com.adobe.idp.Document` objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream` objektet.
+   * Skapa ett `java.io.FileInputStream`-objekt som representerar det principskyddade Word-dokumentet genom att använda dess konstruktor och skicka ett strängvärde som anger platsen för Word-dokumentet.
+   * Skapa ett `com.adobe.idp.Document`-objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream`-objektet.
 
 1. Ta bort profilen från Word-dokumentet
 
-   * Skapa ett `DocumentManager` objekt genom att anropa `RightsManagementClient` objektets `getDocumentManager` metod.
-   * Ta bort en profil från Word-dokumentet genom att anropa `DocumentManager` objektets `removeSecurity` metod och skicka det `com.adobe.idp.Document` objekt som innehåller det principskyddade Word-dokumentet. Den här metoden returnerar ett `com.adobe.idp.Document` objekt som innehåller ett oskyddat Word-dokument.
+   * Skapa ett `DocumentManager`-objekt genom att anropa `RightsManagementClient`-objektets `getDocumentManager`-metod.
+   * Ta bort en profil från Word-dokumentet genom att anropa `DocumentManager`-objektets `removeSecurity`-metod och skicka `com.adobe.idp.Document`-objektet som innehåller det principskyddade Word-dokumentet. Den här metoden returnerar ett `com.adobe.idp.Document`-objekt som innehåller ett oskyddat Word-dokument.
 
 1. Spara det oskyddade Word-dokumentet
 
-   * Skapa ett `java.io.File` objekt och kontrollera att filtillägget är DOC.
-   * Anropa `Document` objektets `copyToFile` metod för att kopiera innehållet i `Document` objektet till filen (se till att du använder det `Document` objekt som returnerades av `removeSecurity` metoden).
+   * Skapa ett `java.io.File`-objekt och kontrollera att filtillägget är DOC.
+   * Anropa `Document`-objektets `copyToFile`-metod för att kopiera innehållet i `Document`-objektet till filen (kontrollera att du använder `Document`-objektet som returnerades av metoden `removeSecurity`).
 
 **Exempel på koder**
 
@@ -2187,7 +2187,7 @@ Följande snabbstart innehåller kodexempel på hur du använder dokumentsäkerh
 
 * &quot;Snabbstart (SOAP-läge): Ta bort en profil från ett Word-dokument med Java API&quot;
 
-### Ta bort en profil från ett Word-dokument med hjälp av webbtjänstens API {#remove-a-policy-from-a-word-document-using-the-web-service-api}
+### Ta bort en profil från ett Word-dokument med webbtjänstens API {#remove-a-policy-from-a-word-document-using-the-web-service-api}
 
 Ta bort en profil från ett principskyddat Word-dokument med hjälp av API:t för dokumentsäkerhet (webbtjänsten):
 
@@ -2201,13 +2201,13 @@ Ta bort en profil från ett principskyddat Word-dokument med hjälp av API:t fö
 
 1. Skapa ett API-objekt för Document Security Client
 
-   * Skapa ett `RightsManagementServiceClient` objekt med hjälp av dess standardkonstruktor.
-   * Skapa ett `RightsManagementServiceClient.Endpoint.Address` objekt med hjälp av `System.ServiceModel.EndpointAddress` konstruktorn. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`.). Du behöver inte använda attributet `lc_version` . Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa ett `System.ServiceModel.BasicHttpBinding` objekt genom att hämta värdet för `RightsManagementServiceClient.Endpoint.Binding` fältet. Sänd returvärdet till `BasicHttpBinding`.
-   * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa ett `RightsManagementServiceClient`-objekt med hjälp av dess standardkonstruktor.
+   * Skapa ett `RightsManagementServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/RightsManagementService?WSDL`). Du behöver inte använda attributet `lc_version`. Det här attributet används när du skapar en tjänstreferens.)
+   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `RightsManagementServiceClient.Endpoint.Binding`. Sänd returvärdet till `BasicHttpBinding`.
+   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `RightsManagementServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela användarnamnet för AEM formulär till fältet `RightsManagementServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `RightsManagementServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
    * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
@@ -2215,21 +2215,21 @@ Ta bort en profil från ett principskyddat Word-dokument med hjälp av API:t fö
 
 1. Hämta ett policyskyddat Word-dokument
 
-   * Skapa ett `BLOB` objekt med hjälp av dess konstruktor. Objektet används `BLOB` för att lagra det principskyddade Word-dokumentet som profilen tas bort från.
-   * Skapa ett `System.IO.FileStream` objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för Word-dokumentet och läget som filen ska öppnas i.
-   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` objektet. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` egenskap.
-   * Fyll bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` metod och skicka bytearrayen, startpositionen och den strömlängd som ska läsas.
-   * Fyll objektet `BLOB` genom att tilldela dess `MTOM` fält med innehållet i bytearrayen.
+   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor. Objektet `BLOB` används för att lagra det principskyddade Word-dokumentet som principen tas bort från.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för Word-dokumentet och läget som filen ska öppnas i.
+   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream`-objektet. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
+   * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod och skicka bytearrayen, startpositionen och strömlängden som ska läsas.
+   * Fyll i `BLOB`-objektet genom att tilldela dess `MTOM`-fält med innehållet i bytearrayen.
 
 1. Ta bort profilen från Word-dokumentet
 
-   Ta bort profilen från Word-dokumentet genom att anropa `RightsManagementServiceClient` objektets `removePolicySecurity` metod och skicka det `BLOB` objekt som innehåller det principskyddade Word-dokumentet. Den här metoden returnerar ett `BLOB` objekt som innehåller ett oskyddat Word-dokument.
+   Ta bort profilen från Word-dokumentet genom att anropa `RightsManagementServiceClient`-objektets `removePolicySecurity`-metod och skicka `BLOB`-objektet som innehåller det principskyddade Word-dokumentet. Den här metoden returnerar ett `BLOB`-objekt som innehåller ett oskyddat Word-dokument.
 
 1. Spara det oskyddade Word-dokumentet
 
-   * Skapa ett `System.IO.FileStream` objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det oskyddade Word-dokumentet.
-   * Skapa en bytearray som lagrar datainnehållet i det `BLOB` objekt som returnerades av `removePolicySecurity` metoden. Fyll i bytearrayen genom att hämta värdet för `BLOB` objektets `MTOM` fält.
-   * Skapa ett `System.IO.BinaryWriter` objekt genom att anropa dess konstruktor och skicka `System.IO.FileStream` objektet.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det oskyddade Word-dokumentet.
+   * Skapa en bytearray som lagrar datainnehållet i `BLOB`-objektet som returnerades av metoden `removePolicySecurity`. Fyll i bytearrayen genom att hämta värdet för `BLOB`-objektets `MTOM`-fält.
+   * Skapa ett `System.IO.BinaryWriter`-objekt genom att anropa dess konstruktor och skicka `System.IO.FileStream`-objektet.
 
 **Exempel på koder**
 
