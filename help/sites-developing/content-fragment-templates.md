@@ -23,7 +23,7 @@ ht-degree: 4%
 
 >[!CAUTION]
 >
->[Modeller](/help/assets/content-fragments/content-fragments-models.md) för innehållsfragment rekommenderas nu för att skapa alla dina fragment.
+>[Modellerna för ](/help/assets/content-fragments/content-fragments-models.md) innehållsfragment rekommenderas nu för att skapa alla dina fragment.
 >
 >Modeller för innehållsfragment används för alla exempel i We.Retail.
 
@@ -45,7 +45,7 @@ Prioritetsordningen är (i fallande ordning) `/conf`, `/apps`, `/libs`.
 
 >[!CAUTION]
 >
->Du ***får*** inte ändra något i `/libs` banan.
+>Du ***får*** inte ändra något i `/libs`-sökvägen.
 >
 >Detta beror på att innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
 >
@@ -55,6 +55,7 @@ Prioritetsordningen är (i fallande ordning) `/conf`, `/apps`, `/libs`.
    >
    >
 1. Gör ändringar i `/apps`
+
 >
 
 
@@ -120,12 +121,12 @@ Mer information om noderna och deras egenskaper är:
     <tr>
      <td><code>jcr:title</code></td>
      <td><p><code>String</code></p> <p>required<br /> </p> </td>
-     <td>Mallens titel (visas i guiden <strong>Skapa fragment</strong> ).</td>
+     <td>Mallens titel (visas i guiden <strong>Skapa fragment</strong>).</td>
     </tr>
     <tr>
      <td><code>jcr:description</code></td>
      <td><p><code>String</code></p> <p>valfritt</p> </td>
-     <td>En text som beskriver syftet med mallen (visas i guiden <strong>Skapa fragment</strong> ).</td>
+     <td>En text som beskriver syftet med mallen (visas i guiden <strong>Skapa fragment</strong>).</td>
     </tr>
     <tr>
      <td><code>initialAssociatedContent</code></td>
@@ -135,12 +136,12 @@ Mer information om noderna och deras egenskaper är:
     <tr>
      <td><code>precreateElements</code></td>
      <td><p><code>Boolean</code></p> <p>required</p> </td>
-     <td><p><code>true</code>, om de delresurser som representerar elementen (utom huvudelementet) i innehållsfragmentet ska skapas när innehållsfragmentet skapas, <em>false</em> om de ska skapas "i farten".</p> <p><strong>Obs</strong>: för närvarande måste den här parametern anges till <code>true</code>.</p> </td>
+     <td><p><code>true</code>, om de delresurser som representerar elementen (utom det överordnad elementet) i innehållsfragmentet ska skapas när innehållsfragmentet skapas, <em>false</em> om de ska skapas "i farten".</p> <p><strong>Obs</strong>: för närvarande måste den här parametern anges till  <code>true</code>.</p> </td>
     </tr>
     <tr>
      <td><code>version</code></td>
-     <td><p><code>Long</code></p> <p>required</p> </td>
-     <td><p>Innehållsstrukturens version. stöds för närvarande:</p> <p><strong>Obs</strong>: för närvarande måste den här parametern anges till <code>2</code>.<br /> </p> </td>
+     <td><p><code>Long</code></p> <p>obligatoriskt</p> </td>
+     <td><p>Innehållsstrukturens version. stöds för närvarande:</p> <p><strong>Obs</strong>: för närvarande måste den här parametern anges till  <code>2</code>.<br /> </p> </td>
     </tr>
    </tbody>
   </table>
@@ -156,8 +157,8 @@ Mer information om noderna och deras egenskaper är:
     </tr>
     <tr>
      <td><code>elements</code> </td>
-     <td><p><code>nt:unstructured</code></p> <p>required</p> </td>
-     <td><p>En nod som innehåller definitionen av elementen i innehållsfragmentet. Det är obligatoriskt och måste innehålla minst en underordnad nod för <strong>Main</strong> -elementet, men kan innehålla [1..n] underordnade noder.</p> <p>När mallen används kopieras elementundergrenen till fragmentets modellundergren.</p> <p>Det första elementet (som det visas i CRXDE Lite) anses automatiskt vara <i>huvudelementet</i> . nodnamnet är irrelevant och noden i sig inte har någon särskild betydelse, förutom det faktum att den representeras av huvudtillgången, övriga element hanteras som undertillgångar.</p> </td>
+     <td><p><code>nt:unstructured</code></p> <p>obligatoriskt</p> </td>
+     <td><p>En nod som innehåller definitionen av elementen i innehållsfragmentet. Det är obligatoriskt och måste innehålla minst en underordnad nod för <strong>Main</strong>-elementet, men kan innehålla [1..n] underordnade noder.</p> <p>När mallen används kopieras elementundergrenen till fragmentets modellundergren.</p> <p>Det första elementet (som det visas i CRXDE Lite) anses automatiskt vara <i>main</i>-elementet. nodnamnet är irrelevant och noden i sig inte har någon särskild betydelse, förutom det faktum att den representeras av huvudtillgången, övriga element hanteras som undertillgångar.</p> </td>
     </tr>
    </tbody>
   </table>
@@ -178,7 +179,7 @@ Mer information om noderna och deras egenskaper är:
     </tr>
     <tr>
      <td><code>jcr:title</code></td>
-     <td><p><code>String</code></p> <p>required</p> </td>
+     <td><p><code>String</code></p> <p>obligatoriskt</p> </td>
      <td>Elementets rubrik (visas i fragmentredigerarens elementväljare).</td>
     </tr>
     <tr>
@@ -198,7 +199,7 @@ Mer information om noderna och deras egenskaper är:
     </tr>
     <tr>
      <td><code>name</code></td>
-     <td><p><code>String</code></p> <p>required</p> </td>
+     <td><p><code>String</code></p> <p>obligatoriskt</p> </td>
      <td>Elementets interna namn. måste vara unik för fragmenttypen.</td>
     </tr>
    </tbody>
@@ -233,18 +234,18 @@ Mer information om noderna och deras egenskaper är:
     <tr>
      <td><code>&lt;<i>variation-name</i>&gt;</code> </td>
      <td><p><code>nt:unstructured</code></p> <p>krävs om det finns en variantnod</p> </td>
-     <td><p>Definierar en ursprunglig variation.<br /> Variationen läggs som standard till i alla element i innehållsfragmentet.</p> <p>Variationen kommer att ha samma ursprungliga innehåll som respektive element (se <code class="code">defaultContent/
+     <td><p>Definierar en ursprunglig variation.<br /> Variationen läggs som standard till i alla element i innehållsfragmentet.</p> <p>Variationen kommer att ha samma inledande innehåll som respektive element (se <code class="code">defaultContent/
        initialContentType</code>)</p> </td>
     </tr>
     <tr>
      <td><code>jcr:title</code></td>
-     <td><p><code>String</code></p> <p>required</p> </td>
-     <td>Variantens titel (visas på fliken <strong>Variation</strong> i fragmentredigeraren (vänster)).</td>
+     <td><p><code>String</code></p> <p>obligatoriskt</p> </td>
+     <td>Variantens titel (visas på fliken <strong>Variation</strong> i fragmentredigeraren (vänster rad)).</td>
     </tr>
     <tr>
      <td><code>jcr:desciption</code></td>
-     <td><p><code>String</code></p> <p>valfritt</p> <p>default: ""</p> </td>
-     <td>En text som innehåller en beskrivning av variationen <span>(visas på fliken <strong>Variation</strong> i fragmentredigeraren (vänster)).</code></td>
+     <td><p><code>String</code></p> <p>valfritt</p> <p>standard: ""</p> </td>
+     <td>En text som innehåller en beskrivning av variationen <span>(som visas på fliken <strong>Variation</strong> i fragmentredigeraren (vänster)).</code></td>
     </tr>
    </tbody>
   </table>
