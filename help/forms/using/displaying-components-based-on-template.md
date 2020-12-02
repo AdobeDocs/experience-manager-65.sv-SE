@@ -12,17 +12,20 @@ discoiquuid: f658da57-0134-4458-9ef9-a99787b66742
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
+workflow-type: tm+mt
+source-wordcount: '378'
+ht-degree: 1%
 
 ---
 
 
 # Visa komponenter baserat på den mall som används{#displaying-components-based-on-the-template-used}
 
-När en formulärförfattare skapar ett anpassat formulär med hjälp av en [mall](../../forms/using/template-editor.md)kan formulärförfattaren se och använda specifika komponenter som är baserade på en mallprofil. Du kan ange en innehållsprincip för mallar där du kan välja en grupp komponenter som formulärförfattaren ser när formuläret skapas.
+När en formulärförfattare skapar ett anpassat formulär med en [mall](../../forms/using/template-editor.md) kan formulärförfattaren se och använda specifika komponenter som är baserade på mallprincipen. Du kan ange en innehållsprincip för mallar där du kan välja en grupp komponenter som formulärförfattaren ser när formuläret skapas.
 
 ## Ändra innehållsprincipen för en mall {#changing-the-content-policy-of-a-template}
 
-När du skapar en mall skapas den under `/conf` i innehållsdatabasen. Baserat på de mappar du har skapat i `/conf` katalogen är sökvägen till mallen: `/conf/<your-folder>/settings/wcm/templates/<your-template>`.
+När du skapar en mall skapas den under `/conf` i innehållsdatabasen. Baserat på de mappar du har skapat i katalogen `/conf` är sökvägen till mallen: `/conf/<your-folder>/settings/wcm/templates/<your-template>`.
 
 Följ de här stegen för att visa komponenterna i sidofältet baserat på en malls innehållsprincip:
 
@@ -30,7 +33,7 @@ Följ de här stegen för att visa komponenterna i sidofältet baserat på en ma
    Webbadress: `https://<server>:<port>/crx/de/index.jsp`
 1. I CRXDE navigerar du till mappen där mallen skapas.
 
-   Exempel: `/conf/<your-folder>/`
+   Till exempel: `/conf/<your-folder>/`
 
 1. I CRXDE navigerar du till: `/conf/<your-folder>/settings/wcm/policies/fd/af/layouts/gridFluidLayout/`
 
@@ -38,23 +41,23 @@ Följ de här stegen för att visa komponenterna i sidofältet baserat på en ma
 
    Sökvägen till standardinnehållsprincipen är: `/conf/<your-folder>/settings/wcm/policies/fd/af/layouts/gridFluidLayout/default`
 
-   Kopiera och klistra in standardprincipen i `gridFluidLayout` mappen och byt namn på den. Exempel, `myPolicy`.
+   I mappen `gridFluidLayout` kopierar och klistrar du in standardprincipen och byter namn på den. Till exempel, `myPolicy`.
 
    ![Kopierar standardprinciper](assets/crx-default1.png)
 
-1. Välj den nya profilen som du skapar och välj **komponentegenskapen** på den högra panelen med typen `string[]`.
+1. Välj den nya profilen som du skapar och välj egenskapen **components** på den högra panelen med typen `string[]`.
 
-   När du markerar och öppnar komponentegenskapen visas dialogrutan Redigera komponenter. I dialogrutan Redigera komponenter kan du lägga till eller ta bort komponentgrupper med knapparna **+** och **-** . Du kan lägga till komponentgrupper som innehåller komponenter som du vill att författarna ska använda.
+   När du markerar och öppnar komponentegenskapen visas dialogrutan Redigera komponenter. I dialogrutan Redigera komponenter kan du lägga till eller ta bort komponentgrupper med knapparna **+** och **-**. Du kan lägga till komponentgrupper som innehåller komponenter som du vill att författarna ska använda.
 
    ![Lägga till eller ta bort komponenter i profilen](assets/add-components-list1.png)
 
-   När du har lagt till en komponentgrupp uppdaterar du listan genom att klicka på **OK** . Klicka sedan på **Spara alla** ovanför adressfältet för CRXDE och uppdatera.
+   När du har lagt till en komponentgrupp klickar du på **OK** för att uppdatera listan och sedan på **Spara alla** ovanför adressfältet för CRXDE och uppdatera.
 
 1. I mallen ändrar du innehållsprincipen från standard till den nya profilen som du skapade. ( `myPolicy` i det här exemplet.)
 
-   Om du vill ändra profilen går du till CRXDE `/conf/<your-folder>/settings/wcm/templates/<your-template>/policies/jcr:content/guideContainer/rootPanel/items`.
+   Om du vill ändra profilen går du till `/conf/<your-folder>/settings/wcm/templates/<your-template>/policies/jcr:content/guideContainer/rootPanel/items` i CRXDE.
 
-   I `cq:policy` egenskapen ändrar du `default` till det nya principnamnet ( `myPolicy`).
+   I egenskapen `cq:policy` ändrar du `default` till det nya principnamnet ( `myPolicy`).
 
    ![Uppdaterad princip för mallinnehåll](assets/updated-policy.png)
 
