@@ -14,7 +14,7 @@ ht-degree: 18%
 ---
 
 
-# AEM 6.5 Handbok för användarhantering {#managing}
+# AEM 6.5 Managing User Guide {#managing}
 
 + [Hantera användarhandbok](home.md)
 + Hantera - checklista för bästa praxis {#managing-best-practices-checklist}
