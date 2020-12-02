@@ -12,6 +12,9 @@ discoiquuid: 612b45de-4505-4fc8-9f11-ae5a0952ed65
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 7e23cfaf8d61ee268bc6062f0b87a3306e1e18ce
+workflow-type: tm+mt
+source-wordcount: '178'
+ht-degree: 2%
 
 ---
 
@@ -20,8 +23,8 @@ source-git-commit: 7e23cfaf8d61ee268bc6062f0b87a3306e1e18ce
 
 Integreringsramverket innehåller ett integreringslager med ett API. På så sätt kan du:
 
-* koppla in ett e-handelssystem och hämta produktdata till AEM
-* bygga AEM-komponenter för handelsfunktioner oberoende av e-handelsmotorn
+* koppla in ett e-handelssystem och hämta in produktdata i AEM
+* bygga AEM för handelsfunktioner oberoende av e-handelsmotorn
 
 Mer information finns i:
 
@@ -30,13 +33,13 @@ Mer information finns i:
 
 >[!NOTE]
 >
->Eftersom e-handelsramverket kan användas med alla e-handelslösningar finns mer information om hur du utvecklar möjligheter i [Utveckla (allmänt)](/help/sites-developing/generic.md) .
+>Eftersom e-handelsramverket kan användas med alla e-handelslösningar finns mer information om hur du utvecklar möjligheter i [Utveckla (generiskt)](/help/sites-developing/generic.md).
 
 >[!NOTE]
 >
 >Om du vill använda integreringsramverket med externa e-handelsleverantörer måste du först installera de paket som krävs. Mer information finns i [Distribuera e-handel](/help/sites-deploying/ecommerce.md).
 >
->Mer information om koncept och hur du administrerar e-handelsimplementeringar finns i [Administrera e-handel](/help/sites-administering/ecommerce.md).
+>Mer information om koncept och administration av e-handelsimplementeringar finns i [Administrera e-handel](/help/sites-administering/ecommerce.md).
 
 ## API-dokumentation {#api-documentation}
 
@@ -44,8 +47,8 @@ eCommerce API tillhandahålls av paketen:
 
 `com.adobe.cq.commerce.*`
 
-Mer information finns i [API-dokumentationen](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html) .
+Mer information finns i [API-dokumentationen](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html).
 
 >[!NOTE]
 >
->En komplett artikel med information om alla steg som krävs för att bygga en e-handelsleverantör finns i [Skapa anpassade e-handelsleverantörer](https://helpx.adobe.com/experience-manager/using/ecommerce62.html)för Adobe Experience Manager 6.2.
+>En fullständig artikel med information om alla steg som krävs för att skapa en e-handelsleverantör finns i [Skapa anpassade Adobe Experience Manager 6.2-e-handelsleverantörer](https://helpx.adobe.com/experience-manager/using/ecommerce62.html).
