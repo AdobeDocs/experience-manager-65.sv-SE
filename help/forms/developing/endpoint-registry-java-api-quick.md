@@ -254,7 +254,7 @@ I följande Java-kodexempel läggs en bevakad mappslutpunkt till i en tjänst me
 
 >[!NOTE]
 >
->Du måste inkludera filen WatchedFolderEndpointConfigConstants.java i ditt projekt för att kompilera och köra följande snabbstart. (Se Konstanta filer för [Bevakade mappkonfigurationsvärden](/help/forms/developing/programmatically-endpoints.md#watched-folder-configuration-values-constant-file).)
+>Du måste inkludera filen WatchedFolderEndpointConfigConstants.java i ditt projekt för att kompilera och köra följande snabbstart. (Se [Konstanta filer för övervakade mappkonfigurationsvärden](/help/forms/developing/programmatically-endpoints.md#watched-folder-configuration-values-constant-file).)
 
 ```java
  /*
@@ -385,11 +385,11 @@ I följande Java-kodexempel läggs en bevakad mappslutpunkt till i en tjänst me
 
 ## QuickStart: Lägga till en e-postslutpunkt med Java API {#quickstart-adding-an-email-endpoint-using-the-java-api}
 
-I följande Java-kodexempel läggs en e-postslutpunkt till i en tjänst med namnet *MyApplication/* EncryptDocument. (Se [Lägga till e-postslutpunkter](/help/forms/developing/programmatically-endpoints.md#adding-email-endpoints).)
+I följande Java-kodexempel läggs en e-postslutpunkt till i en tjänst med namnet *MyApplication/EncryptDocument* t. (Se [Lägga till e-postslutpunkter](/help/forms/developing/programmatically-endpoints.md#adding-email-endpoints).)
 
 >[!NOTE]
 >
->Du måste inkludera filen EmailEndpointConfigConstants.java i ditt projekt för att kompilera och köra följande snabbstart. (Se Konstanta filer för [e-postkonfigurationsvärden](/help/forms/developing/programmatically-endpoints.md#email-configuration-values-constant-file).)
+>Du måste inkludera filen EmailEndpointConfigConstants.java i ditt projekt för att kompilera och köra följande snabbstart. (Se [E-postkonfigurationsvärdenas konstantfil](/help/forms/developing/programmatically-endpoints.md#email-configuration-values-constant-file).)
 
 ```java
  /*
@@ -633,7 +633,7 @@ I följande Java-kodexempel läggs en fjärrslutpunkt till i en tjänst med namn
 
 ## QuickStart: Lägga till en TaskManager-slutpunkt med Java API {#quickstart-adding-a-taskmanager-endpoint-using-the-java-api}
 
-I följande Java-kodexempel läggs en TaskManager-slutpunkt till i en tjänst med namnet *MyApplication/EncryptDocument*. Observera att namnet på kategorin är *EncryptProcess*. (Se [Lägga till slutpunkter](/help/forms/developing/programmatically-endpoints.md#adding-taskmanager-endpoints)för TaskManager.)
+I följande Java-kodexempel läggs en TaskManager-slutpunkt till i en tjänst med namnet *MyApplication/EncryptDocument*. Observera att kategorins namn är *EncryptProcess*. (Se [Lägga till slutpunkter för TaskManager](/help/forms/developing/programmatically-endpoints.md#adding-taskmanager-endpoints).)
 
 ```java
  /*
@@ -742,7 +742,7 @@ I följande Java-kodexempel läggs en TaskManager-slutpunkt till i en tjänst me
 
 ## QuickStart: Ändra en slutpunkt med Java API {#quickstart-modifying-an-endpoint-using-the-java-api}
 
-I följande Java-kodexempel ändras en bevakad mappslutpunkt. Slutpunkten är för *MyApplication/EncryptDocument* -processen. Den bevakade mappen ändras till `C:\NewWatchedFolder`. (Se [Ändra slutpunkter](/help/forms/developing/programmatically-endpoints.md#modifying-endpoints).)
+I följande Java-kodexempel ändras en bevakad mappslutpunkt. Slutpunkten är för processen *MyApplication/EncryptDocument*. Den bevakade mappen ändras till `C:\NewWatchedFolder`. (Se [Ändra slutpunkter](/help/forms/developing/programmatically-endpoints.md#modifying-endpoints).)
 
 ```java
  /*
@@ -1009,9 +1009,9 @@ Följande Java-kod tar bort en EJB-slutpunkt från en tjänst med namnet *MyAppl
  
 ```
 
-## QuickStart: Hämta slutpunktsanslutningsinformation med Java API {#quickstart-retrieving-endpoint-connector-information-using-the-java-api}
+## QuickStart: Hämtar slutpunktsanslutningsinformation med Java API {#quickstart-retrieving-endpoint-connector-information-using-the-java-api}
 
-Följande Java-kod hämtar information om en bevakad mappslutpunkt. Information om varje konfigurationsvärde hämtas och visas. Den här kodlistan anger om varje konfigurationsvärde är obligatoriskt eller valfritt. Dessutom visas namn och värde för varje konfigurationsvärde. (Se [Hämta information](/help/forms/developing/programmatically-endpoints.md#retrieving-endpoint-connector-information)om slutpunktsanslutning.)
+Följande Java-kod hämtar information om en bevakad mappslutpunkt. Information om varje konfigurationsvärde hämtas och visas. Den här kodlistan anger om varje konfigurationsvärde är obligatoriskt eller valfritt. Dessutom visas namn och värde för varje konfigurationsvärde. (Se [Hämta information om slutpunktskoppling](/help/forms/developing/programmatically-endpoints.md#retrieving-endpoint-connector-information).)
 
 ```java
  /*
