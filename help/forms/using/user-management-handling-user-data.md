@@ -29,7 +29,7 @@ Användarhantering är en AEM Forms JEE-komponent som gör det möjligt att skap
 
 ## Användardata och datalager {#user-data-and-data-stores}
 
-Användarhantering lagrar användardata i en databas, t.ex. My Sql, Oracle, MS SQL Server och IBM DB2. Dessutom skapas en användare som har loggat in minst en gång i Forms-program på AEM författare `https://'[server]:[port]'lc`i AEM. Därför lagras användarhantering i följande datalager:
+Användarhantering lagrar användardata i en databas, t.ex. My Sql, Oracle, MS SQL Server och IBM DB2. Dessutom skapas en användare som har loggat in minst en gång i Forms-program på AEM författare på `https://'[server]:[port]'lc` i AEM. Därför lagras användarhantering i följande datalager:
 
 * Databas
 * AEM
@@ -86,9 +86,9 @@ Användarhantering lagrar användardata i följande databastabeller:
  </tbody>
 </table>
 
-### AEM {#aem-repository}
+### AEM databas {#aem-repository}
 
-Användarhanteringsdata för användare som minst en gång har använt Forms-programmen under `https://'[server]:[port]'lc` lagras också i AEM.
+Användarhanteringsdata för användare som minst en gång har använt Forms-programmen i `https://'[server]:[port]'lc` lagras också i AEM.
 
 ## Få åtkomst till och ta bort användardata {#access-and-delete-user-data}
 
@@ -96,9 +96,9 @@ Du kan komma åt och exportera användarhanteringsdata för användare i använd
 
 ### Databas {#database-1}
 
-Om du vill exportera eller ta bort användardata från användarhanteringsdatabasen måste du ansluta till databasen med en databasklient och ta reda på det huvud-ID som baseras på användarens PII-kod. Om du till exempel vill hämta användarens huvud-ID med ett inloggnings-ID kör du följande `select` kommando i databasen.
+Om du vill exportera eller ta bort användardata från användarhanteringsdatabasen måste du ansluta till databasen med en databasklient och ta reda på det huvud-ID som baseras på användarens PII-kod. Om du till exempel vill hämta användarens huvud-ID med ett inloggnings-ID kör du följande `select`-kommando i databasen.
 
-I `select` kommandot ersätter du den `<user_login_id>` med inloggnings-ID:t för den användare vars huvud-ID du vill hämta.
+I kommandot `select` ersätter du `<user_login_id>` med inloggnings-ID:t för den användare vars huvud-ID du vill hämta.
 
 ```sql
 select refprincipalid from EdcPrincipalUserEntity where uidstring = <user_login_id>
@@ -108,11 +108,11 @@ När du känner till ditt huvuds-ID kan du exportera eller ta bort användardata
 
 #### Exportera användardata {#export-user-data}
 
-Kör följande databaskommandon om du vill exportera användarhanteringsdata för ett huvud-ID från databastabeller. Ersätt i `select` kommandot `<principal_id>` med det huvud-ID för användaren vars data du vill exportera.
+Kör följande databaskommandon om du vill exportera användarhanteringsdata för ett huvud-ID från databastabeller. I kommandot `select` ersätter du `<principal_id>` med huvuds-ID:t för den användare vars data du vill exportera.
 
 >[!NOTE]
 >
->Följande kommandon använder databastabellnamn i My SQL- och IBM DB2-databaser. När du kör dessa kommandon på Oracle- och MS SQL-databaser ersätter du följande tabellnamn i kommandona:
+>Följande kommandon använder databastabellnamn i My SQL- och IBM DB2-databaser. När du kör dessa kommandon i Oracle- och MS SQL-databaser ersätter du följande tabellnamn i kommandona:
 >
 >* Ersätt `EdcPrincipalLocalAccountEntity` med `EdcPrincipalLocalAccount`
    >
@@ -153,7 +153,7 @@ Så här tar du bort användarhanteringsdata för ett huvuds-ID från databastab
 
 1. Ta bort användardata från AEM, om tillämpligt, enligt beskrivningen i [Ta bort användardata](/help/forms/using/user-management-handling-user-data.md#delete-aem).
 1. Stäng av AEM Forms-servern.
-1. Kör följande databaskommandon för att ta bort användarhanteringsdata för ett huvuds-ID från databastabeller. Ersätt i `Delete` kommandot `<principal_id>` med det huvud-ID för användaren vars data du vill ta bort.
+1. Kör följande databaskommandon för att ta bort användarhanteringsdata för ett huvuds-ID från databastabeller. I kommandot `Delete` ersätter du `<principal_id>` med användar-ID:t för den användare vars data du vill ta bort.
 
    ```sql
    Delete from EdcPrincipalLocalAccountEntity where refuserprincipalid in (Select id from EdcPrincipalUserEntity where refprincipalid in (select id from EdcPrincipalEntity where id='<principal_id>'));
@@ -175,20 +175,20 @@ Så här tar du bort användarhanteringsdata för ett huvuds-ID från databastab
 
 1. Starta AEM Forms-servern.
 
-### AEM {#aem-repository-1}
+### AEM databas {#aem-repository-1}
 
 Forms JEE-användare har sina data AEM databasen om de har öppnat minst en av AEM Forms författarinstanser. Du kan komma åt och ta bort användardata från AEM.
 
 #### Åtkomst till användardata {#access-user-data}
 
-Om du vill visa användare som har skapats i AEM loggar du in `https://'[server]:[port]'/lc/useradmin` med AEM administratörsuppgifter. Observera att `server` och `port` i URL:en är den AEM författarinstansen. Här kan du söka efter användare med deras användarnamn. Dubbelklicka på en användare för att visa information om egenskaper, behörigheter och grupper för användaren. Egenskapen `Path` för en användare anger sökvägen till användarnoden som skapas AEM databasen.
+Om du vill visa användare som har skapats i AEM loggar du in på `https://'[server]:[port]'/lc/useradmin` med AEM administratörsuppgifter. Observera att `server` och `port` i URL:en är samma som i AEM författarinstans. Här kan du söka efter användare med deras användarnamn. Dubbelklicka på en användare för att visa information om egenskaper, behörigheter och grupper för användaren. Egenskapen `Path` för en användare anger sökvägen till användarnoden som skapas AEM databasen.
 
 #### Ta bort användardata {#delete-aem}
 
 Så här tar du bort en användare:
 
 1. Gå till `https://'[server]:[port]'/lc/useradmin` med AEM administratörsautentiseringsuppgifter.
-1. Sök efter en användare och dubbelklicka på användarnamnet för att öppna användaregenskaperna. Kopiera `Path` egenskapen.
-1. Gå till AEM CRX DELite `https://'[server]:[port]'/lc/crx/de/index.jsp` och navigera eller sök i användarsökvägen.
-1. Ta bort sökvägen och klicka **[!UICONTROL Save All]** för att permanent ta bort användaren från AEM.
+1. Sök efter en användare och dubbelklicka på användarnamnet för att öppna användaregenskaperna. Kopiera egenskapen `Path`.
+1. Gå till AEM CRX DELite på `https://'[server]:[port]'/lc/crx/de/index.jsp` och navigera eller sök i användarsökvägen.
+1. Ta bort sökvägen och klicka på **[!UICONTROL Save All]** för att permanent ta bort användaren från AEM.
 
