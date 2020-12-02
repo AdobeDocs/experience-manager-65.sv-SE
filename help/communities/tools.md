@@ -19,7 +19,7 @@ ht-degree: 0%
 ---
 
 
-# Communities Tools {#communities-tools}
+# Webbgruppsverktyg {#communities-tools}
 
 Logga in din författarinstans för att få åtkomst till webbgruppsverktygskonsolen:
 
@@ -27,15 +27,15 @@ Logga in din författarinstans för att få åtkomst till webbgruppsverktygskons
 
    ![communities](assets/communities-home.png)
 
-* [Webbplatsmallar](sites.md) - Konsol för att skapa och hantera webbplatsmallar.
+* [Webbplatsmallar](sites.md)  - Konsol för att skapa och hantera webbplatsmallar.
 
-* [Gruppmallar](tools-groups.md) - Konsol för att skapa och hantera gruppmallar.
+* [Gruppmallar](tools-groups.md)  - Konsol för att skapa och hantera gruppmallar.
 
-* [Community-funktioner](functions.md) - Konsol för att skapa och hantera communityfunktioner.
+* [Community-funktioner](functions.md)  - Konsol för att skapa och hantera communityfunktioner.
 
-* [Lagringskonfiguration](srp-config.md) - Konsol för konfiguration och val av [standard-SRP](working-with-srp.md).
+* [Lagringskonfiguration](srp-config.md)  - Konsol för konfiguration och val av  [standard-SRP](working-with-srp.md).
 
-* [Komponentguide](components-guide.md) - Öppnar en interaktiv plats där du kan experimentera med hur SCF-komponenterna fungerar och hur de kan konfigureras eller anpassas.
+* [Komponenthandbok](components-guide.md)  - Öppnar en interaktiv webbplats som gör det möjligt att experimentera med hur SCF-komponenterna fungerar och hur de kan konfigureras eller anpassas.
 
-* [Badges](badges.md) - Konsol varifrån egna emblem kan läggas till för användning i regler för [poäng och emblem](implementing-scoring.md)
+* [Badges](badges.md) - Konsol varifrån egna emblem kan läggas till för användning i regler för  [poäng och emblem](implementing-scoring.md)
 
