@@ -21,7 +21,7 @@ ht-degree: 12%
 
 # Innehållsfragment – ta bort överväganden{#content-fragments-delete-considerations}
 
-## Behörigheter - ta bort eller inte ta bort {#permissions-delete-or-not-delete}
+## Behörigheter - Ta bort eller ta inte bort {#permissions-delete-or-not-delete}
 
 Möjligheten att ta bort innehåll är kraftfull, men potentiellt känslig, och många branscher måste begränsa och styra hur dessa behörigheter distribueras.
 
@@ -29,19 +29,19 @@ När det gäller borttagningsbehörigheter måste innehållsfragment beaktas på
 
 1. **Innehållsfragmentet som en enskild enhet.**
 
-   * **Användningsfall**: En användare som behöver redigera/uppdatera ett innehållsfragment - **och ta bort ett helt fragment**.
-   * **Behörigheter**: Behörigheten [Ta bort](/help/sites-administering/security.md#actions) kan [tilldelas via användar- och/eller grupphantering](/help/sites-administering/security.md#managing-permissions).
+   * **Användningsfall**: En användare som behöver redigera/uppdatera ett innehållsfragment -  **och ta bort ett helt fragment**.
+   * **Behörigheter**: Behörigheten  [](/help/sites-administering/security.md#actions) Ta bort kan  [tilldelas via användar- och/eller grupphantering](/help/sites-administering/security.md#managing-permissions).
 
 1. **De flera underenheter som utgör ett innehållsfragment. till exempel variationer, undernoder.**
 
    Den grundläggande åtgärden i redigeraren för innehållsfragment kräver att sådana tillfälliga underelement kan tas bort. t.ex. vid manipulering av variationer, även när du redigerar metadata eller hanterar associerat innehåll.
 
-   * **Användningsfall**: En användare som behöver redigera/uppdatera ett innehållsfragment - **utan att kunna ta bort ett helt fragment**.
-   * **Behörigheter**: Se [Behörigheter krävs endast](/help/assets/content-fragments/content-fragments-delete.md#permissions-required-for-editor-functionality-only)för redigeringsfunktionen.
+   * **Användningsfall**: En användare som behöver redigera/uppdatera ett innehållsfragment -  **utan att kunna ta bort ett helt fragment**.
+   * **Behörigheter**: Se  [Behörigheter krävs endast](/help/assets/content-fragments/content-fragments-delete.md#permissions-required-for-editor-functionality-only) för redigeringsfunktionen.
 
 >[!NOTE]
 >
->When a user does not have any [Delete](/help/sites-administering/security.md#actions) permissions, the Content Fragment editor operates in *read-only* mode.
+>När en användare inte har någon [Ta bort](/help/sites-administering/security.md#actions)-behörighet fungerar redigeraren för innehållsfragment i läget *skrivskyddad*.
 
 >[!NOTE]
 >
@@ -55,7 +55,7 @@ t.ex. vid manipulering av variationer, även när du redigerar metadata eller ha
 
 >[!NOTE]
 >
->De borttagningsbehörigheter som krävs för att redigera/uppdatera ett innehållsfragment ingår i borttagningsbehörigheten som [tilldelats via användar- och/eller grupphantering](/help/sites-administering/security.md#managing-permissions).
+>Borttagningsbehörigheterna, som krävs för att redigera/uppdatera ett innehållsfragment, ingår i behörigheten Ta bort [som tilldelats via Användare och/eller Grupphantering](/help/sites-administering/security.md#managing-permissions).
 
 Behörigheterna som behövs för att redigera/uppdatera ett fragment måste tillämpas på antingen noden som innehåller innehållsfragmentet eller på en lämplig överordnad nod (på alla nivåer under `/content/dam`). När den tilldelas till en sådan överordnad nod tillämpas behörigheterna på alla noder i den grenen.
 
@@ -79,19 +79,19 @@ Behörigheten som krävs för att en viss användare och/eller grupp ska kunna r
 
    * `jcr:addChildNodes`, `jcr:modifyProperties`
 
-* För `jcr:content`noden för alla innehållsfragment:
+* För noden `jcr:content`för alla innehållsfragment:
 
-   * `jcr:addChildNodes`, `jcr:modifyProperties` och `jcr:removeChildNodes`
+   * `jcr:addChildNodes`,  `jcr:modifyProperties` och  `jcr:removeChildNodes`
 
-* För alla noder under `jcr:content` alla innehållsfragment:
+* För alla noder under `jcr:content` i alla innehållsfragment:
 
-   * `jcr:addChildNodes`, `jcr:modifyProperties` och `jcr:removeChildNodes`, `jcr:removeNode`
+   * `jcr:addChildNodes`,  `jcr:modifyProperties` och  `jcr:removeChildNodes`,  `jcr:removeNode`
 
-Dessa `remove` behörigheter måste [administreras med åtkomstkontrollistor i CRXDE Lite](/help/sites-administering/user-group-ac-admin.md#access-right-management).
+Dessa `remove`-privilegier måste vara [administrerade med åtkomstkontrollistor i CRXDE Lite](/help/sites-administering/user-group-ac-admin.md#access-right-management).
 
-Behörigheterna `add` och `modify` behörigheterna kan också administreras i CRXDE Lite eller med hjälp av användarhanteringskonsolen.
+Behörigheterna `add` och `modify` kan också administreras i CRXDE Lite eller med användarhanteringskonsolen.
 
-Definitionen av en grupps `remove` behörigheter `content-authors-no-delete`:
+Definitionen av `remove`-behörigheten för en grupp `content-authors-no-delete`:
 
 ![cf-delete-03](assets/cf-delete-03.png)
 
