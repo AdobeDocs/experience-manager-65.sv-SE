@@ -17,7 +17,7 @@ ht-degree: 1%
 ---
 
 
-# Delivering Dynamic Media Assets{#delivering-dynamic-media-assets}
+# Leverera dynamiska medieresurser{#delivering-dynamic-media-assets}
 
 Hur du kan leverera dynamiska medieresurser - både video och bilder - beror på hur webbplatsen implementeras.
 
@@ -32,7 +32,7 @@ Med Dynamic Media har du flera alternativ:
 
 >[!NOTE]
 >
->Smart bildbehandling fungerar med befintliga bildförinställningar och använder intelligens under de sista millisekunderna i leveransen för att ytterligare minska bildfilens storlek baserat på webbläsarens eller nätverkets anslutningshastighet. Mer information finns i [Smart](/help/assets/imaging-faq.md) Imaging.
+>Smart bildbehandling fungerar med befintliga bildförinställningar och använder intelligens under de sista millisekunderna i leveransen för att ytterligare minska bildfilens storlek baserat på webbläsarens eller nätverkets anslutningshastighet. Mer information finns i [Smart bildbehandling](/help/assets/imaging-faq.md).
 
 Mer information finns i följande avsnitt:
 
@@ -50,4 +50,4 @@ Mer information finns i följande avsnitt:
 
 AEM har nu stöd för leverans av allt dynamiskt medieinnehåll (bilder och video) via HTTP/2. Det betyder att en publicerad URL eller inbäddningskod för bilden eller videon är tillgänglig för integrering med alla program som accepterar en värdbaserad resurs. Den publicerade resursen levereras sedan via HTTP/2-protokollet. Den här leveransmetoden förbättrar sättet som webbläsare och servrar kommunicerar på, vilket ger bättre respons och laddningstider för alla dynamiska medieresurser.
 
-Mer information finns i [HTTP/2 Delivery of Content Frequently Asked Questions](/help/sites-administering/scene7-http2faq.md) .
+Mer information finns i [HTTP/2 Delivery of Content Frequently Asked Questions](/help/sites-administering/scene7-http2faq.md).
