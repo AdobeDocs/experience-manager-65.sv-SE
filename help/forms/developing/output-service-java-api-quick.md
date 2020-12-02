@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Snabbstart för Java API för Output Service (SOAP) {#output-service-java-api-quick-start-soap}
+# Snabbstart för Java API för utdatatjänst (SOAP) {#output-service-java-api-quick-start-soap}
 
 Java API Quick Start (SOAP) är tillgängligt för utdatatjänsten.
 
@@ -44,15 +44,15 @@ Java API Quick Start (SOAP) är tillgängligt för utdatatjänsten.
 
 [Snabbstart (SOAP-läge): Omforma ett PDF-dokument med Java API](output-service-java-api-quick.md#quick-start-soap-mode-transforming-a-pdf-document-using-the-java-api)
 
-AEM Forms-åtgärder kan utföras med AEM Forms-API:t med stark typning och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
->Snabbstarter i Programmering med AEM-formulär baseras på operativsystemet Forms Server. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>Snabbstarter som finns i Programmering med AEM är baserade på operativsystemet Forms Server. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## Snabbstart (SOAP-läge): Skapa ett PDF-dokument med Java API {#quick-start-soap-mode-creating-a-pdf-document-using-the-java-api}
 
-I följande Java-kodexempel skapas ett PDF-dokument med namnet *Loan.pdf*. PDF-dokumentet är baserat på en formulärdesign som heter *Loan.xdp* och en XML-datafil som heter *Loan.xml*. Loan. *pdf* skrivs till C:\Adobe folder located on the J2EE application server hosting AEM Forms, inte till klientdatorn. (Se [Skapa PDF-dokument](/help/forms/developing/creating-document-output-streams.md#creating-pdf-documents).)
+I följande Java-kodexempel skapas ett PDF-dokument med namnet *Loan.pdf*. PDF-dokumentet är baserat på en formulärdesign med namnet *Loan.xdp* och en XML-datafil med namnet *Loan.xml*. *Loan.pdf* skrivs till C:\Adobe folder located on the J2EE application server hosting AEM Forms, inte till klientdatorn. (Se [Skapa PDF-dokument](/help/forms/developing/creating-document-output-streams.md#creating-pdf-documents).)
 
 ```java
  /*
@@ -170,11 +170,11 @@ I följande Java-kodexempel skapas ett PDF-dokument med namnet *Loan.pdf*. PDF-d
 
 ## Snabbstart (SOAP-läge): Skapa ett PDF-dokument baserat på en program-XDP-fil med Java API {#quick-start-soap-mode-creating-a-pdf-document-based-on-an-application-xdp-file-using-the-java-api}
 
-I följande Java-kodexempel skapas ett PDF-dokument med namnet *Loan.pdf*. PDF-dokumentet är baserat på en formulärdesign som heter *Loan.xdp* och en XML-datafil som heter *Loan.xml*. XDP-filen distribueras som en del av ett AEM Forms-program med namnet `Applications/FormsApplication`. Observera att URI-sökvägen är `repository:///Applications/FormsApplication/1.0/FormsFolder/`. Loan. *pdf* skrivs till C:\Adobe folder located on the J2EE application server hosting AEM Forms, inte till klientdatorn. (Se [Skapa PDF-dokument](/help/forms/developing/creating-document-output-streams.md#creating-pdf-documents).)
+I följande Java-kodexempel skapas ett PDF-dokument med namnet *Loan.pdf*. PDF-dokumentet är baserat på en formulärdesign med namnet *Loan.xdp* och en XML-datafil med namnet *Loan.xml*. XDP-filen distribueras som en del av ett AEM Forms-program med namnet `Applications/FormsApplication`. Observera att URI-sökvägen är `repository:///Applications/FormsApplication/1.0/FormsFolder/`. *Loan.pdf* skrivs till C:\Adobe folder located on the J2EE application server hosting AEM Forms, inte till klientdatorn. (Se [Skapa PDF-dokument](/help/forms/developing/creating-document-output-streams.md#creating-pdf-documents).)
 
 >[!NOTE]
 >
->Innan du kör den här snabbstarten måste du skapa ett AEM Forms-program med namnet Applications/FormsApplication. Skapa en mapp i programmet som heter FormsFolder och placera XDP-filen i mappen. Mer information finns i [Skapa ett PDF-dokument](/help/forms/developing/creating-document-output-streams.md)*.*
+>Innan du kör den här snabbstarten måste du skapa ett AEM Forms-program med namnet Applications/FormsApplication. Skapa en mapp i programmet som heter FormsFolder och placera XDP-filen i mappen. Mer information finns i [Generera ett PDF-dokument ](/help/forms/developing/creating-document-output-streams.md)*.*
 
 ```java
  /*
@@ -293,19 +293,19 @@ I följande Java-kodexempel skapas ett PDF-dokument med namnet *Loan.pdf*. PDF-d
 
 ## Snabbstart (SOAP-läge): Skicka ett dokument som finns i databasen till utdatatjänsten med Java API {#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api}
 
-Följande Java-kod hämtar en XDP-fil från databasen och skickar den till utdatatjänsten i `com.adobe.idp.Document` instansen. XDP-filen distribueras som en del av ett AEM Forms-program med namnet `Applications/FormsApplication`. Observera att URI-sökvägen är `repository:///Applications/FormsApplication/1.0/FormsFolder/`.
+Följande Java-kod hämtar en XDP-fil från databasen och skickar den till utdatatjänsten i `com.adobe.idp.Document`-instansen. XDP-filen distribueras som en del av ett AEM Forms-program med namnet `Applications/FormsApplication`. Observera att URI-sökvägen är `repository:///Applications/FormsApplication/1.0/FormsFolder/`.
 
 >[!NOTE]
 >
->Databas-API:t används för att hämta XDP-filen från den här platsen. (Se [Läsresurser](/help/forms/developing/aem-forms-repository.md#reading-resources).)
+>Databas-API:t används för att hämta XDP-filen från den här platsen. (Se [Läser resurser](/help/forms/developing/aem-forms-repository.md#reading-resources).)
 
-Lägg också märke till att innehållets rotvärde `repository:///Applications/FormsApplication/1.0/FormsFolder/` skickas till `OutputClient` objektets `generatePDFOutput2` metod (den andra parametern). Det här värdet skickas till utdatatjänsten för att informera utdatatjänsten om att säkerheten, t.ex. bilder, lagras på den här platsen.
+Lägg också märke till att innehållets rotvärde `repository:///Applications/FormsApplication/1.0/FormsFolder/` skickas till `OutputClient`-objektets `generatePDFOutput2`-metod (den andra parametern). Det här värdet skickas till utdatatjänsten för att informera utdatatjänsten om att säkerheten, t.ex. bilder, lagras på den här platsen.
 
 >[!NOTE]
 >
->Du kan ange innehållets rotvärde på samma sätt när du anropar `generatePrintedOutput2` metoden.
+>Du kan ange innehållets rotvärde på samma sätt när du anropar metoden `generatePrintedOutput2`.
 
-The *Loan.pdf* is written to the C:\Adobe folder located on the J2EE application server hosting AEM Forms. (Se [Överföra dokument i databasen till utdatatjänsten](/help/forms/developing/creating-document-output-streams.md#passing-documents-located-in-the-repository-to-the-output-service).)
+*Loan.pdf* skrivs till C:\Adobe folder located on the J2EE application server hosting AEM Forms. (Se [Överföra dokument i databasen till utdatatjänsten](/help/forms/developing/creating-document-output-streams.md#passing-documents-located-in-the-repository-to-the-output-service).)
 
 >[!NOTE]
 >
@@ -445,7 +445,7 @@ The *Loan.pdf* is written to the C:\Adobe folder located on the J2EE application
 
 ## Snabbstart (SOAP-läge): Skapa ett PDF-dokument med Java API {#quick_start_soap_mode_creating_a_pdf_document_using_the_java_api-1}
 
-I följande Java-kodexempel skapas ett PDF-dokument med namnet *Loan.pdf*. PDF-dokumentet är baserat på en formulärdesign som heter *Loan.xdp* och en XML-datafil som heter *Loan.xml*. Loan. *pdf* skrivs till C:\Adobe folder located on the J2EE application server hosting AEM Forms, inte till klientdatorn. (Se [Skapa PDF-dokument](/help/forms/developing/creating-document-output-streams.md#creating-pdf-documents).)
+I följande Java-kodexempel skapas ett PDF-dokument med namnet *Loan.pdf*. PDF-dokumentet är baserat på en formulärdesign med namnet *Loan.xdp* och en XML-datafil med namnet *Loan.xml*. *Loan.pdf* skrivs till C:\Adobe folder located on the J2EE application server hosting AEM Forms, inte till klientdatorn. (Se [Skapa PDF-dokument](/help/forms/developing/creating-document-output-streams.md#creating-pdf-documents).)
 
 ```java
  /*
@@ -555,7 +555,7 @@ I följande Java-kodexempel skapas ett PDF-dokument med namnet *Loan.pdf*. PDF-d
 
 ## Snabbstart (SOAP-läge): Skapa ett PDF/A-dokument med Java API {#quick-start-soap-mode-creating-a-pdf-a-document-using-the-java-api}
 
-I följande Java-kodexempel skapas ett PDF/A-dokument med namnet *LoanArchive.pdf*. PDF-dokumentet är baserat på en formulärdesign som heter *Loan.xdp* och en XML-datafil som heter *Loan.xml*. Loan *Archive.pdf* skrivs till C:\Adobe folder located on the J2EE application server hosting AEM Forms, inte till klientdatorn. (Se [Skapa PDF/A-dokument](/help/forms/developing/creating-document-output-streams.md#creating-pdf-a-documents).)
+I följande Java-kodexempel skapas ett PDF/A-dokument med namnet *LoanArchive.pdf*. PDF-dokumentet är baserat på en formulärdesign med namnet *Loan.xdp* och en XML-datafil med namnet *Loan.xml*. *LoanArchive.pdf* skrivs till C:\Adobe folder located on the J2EE application server hosting AEM Forms, inte till klientdatorn. (Se [Skapa PDF/A-dokument](/help/forms/developing/creating-document-output-streams.md#creating-pdf-a-documents).)
 
 ```java
  /*
@@ -673,7 +673,7 @@ I följande Java-kodexempel skapas ett PDF/A-dokument med namnet *LoanArchive.pd
 
 ## Snabbstart (SOAP-läge): Skicka dokument till utdatatjänsten med Java API {#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api}
 
-Följande Java-snabbstart hämtar filen *Loan.xdp* från Content Services. Den här XDP-filen finns i `space /Company Home/Form Designs`. XDP-filen returneras i en `com.adobe.idp.Document` instans. Instansen skickas `com.adobe.idp.Document` till utdatatjänsten. Det icke-interaktiva formuläret sparas som en PDF-fil med namnet *Loan.pdf *på klientdatorn. Eftersom alternativet Fil-URI är inställt sparas även PDF-filen *Loan.pdf *på J2EE-programservern som är värd för AEM Forms. (Se [Skicka dokument i Content Services ES2 till utdatatjänsten](/help/forms/developing/creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service).)
+Följande Java-snabbstart hämtar filen *Loan.xdp* från Content Services. Den här XDP-filen finns i `space /Company Home/Form Designs`. XDP-filen returneras i en `com.adobe.idp.Document`-instans. Instansen `com.adobe.idp.Document` skickas till utdatatjänsten. Det icke-interaktiva formuläret sparas som en PDF-fil med namnet *Loan.pdf *på klientdatorn. Eftersom alternativet Fil-URI är inställt sparas även PDF-filen *Loan.pdf *på J2EE-programservern som är värd för AEM Forms. (Se [Skicka dokument i Content Services ES2 till utdatatjänsten](/help/forms/developing/creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service).)
 
 ```java
  /*
@@ -1378,7 +1378,7 @@ Följande Java-kod skapar flera PDF-filer för varje datapost som finns i en XML
 
 ## Snabbstart (SOAP-läge): Skapa sökregler med Java API {#quick-start-soap-mode-creating-search-rules-using-the-java-api}
 
-I följande Java-kodexempel skapas två textmönster som utdatatjänsten söker efter. Det första textmönstret är Låta. Om det hittas används formulärdesignen *Mortgage.xdp*. Det andra textmönstret är Automomobile. Om det hittas använder Output-tjänsten formulärdesignen *AutomobleLoan.xdp*. Om inget av textmönstren finns, använder Output-tjänsten standardformulärdesignen som heter* Loan.xdp. *(Se [Skapa sökregler](/help/forms/developing/creating-document-output-streams.md#creating-search-rules).)
+I följande Java-kodexempel skapas två textmönster som utdatatjänsten söker efter. Det första textmönstret är Låta. Om det hittas använder utdatatjänsten formulärdesignen *Mortgage.xdp*. Det andra textmönstret är Automomobile. Om det hittas använder Output-tjänsten formulärdesignen *AutomobleLoan.xdp*. Om inget av textmönstren finns använder Output-tjänsten standardformulärdesignen som heter* Loan.xdp. *(Se [Skapa sökregler](/help/forms/developing/creating-document-output-streams.md#creating-search-rules).)
 
 ```java
  /*
