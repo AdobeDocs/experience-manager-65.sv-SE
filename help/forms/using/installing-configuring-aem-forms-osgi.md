@@ -23,11 +23,11 @@ ht-degree: 0%
 
 AEM Forms tillhandahåller en uppsättning formulär för att hämta data från slutanvändaren: adaptiva formulär, HTML5 Forms och PDF forms. Det innehåller även verktyg för att lista alla tillgängliga formulär på en webbsida, analysera formuläranvändningen och för att identifiera målanvändare utifrån deras profil. Dessa funktioner ingår i AEM Forms tilläggspaket. Tilläggspaketet distribueras på en Author- eller Publish-instans av AEM.
 
-**Adaptiva former:** Dessa formulär ändrar utseende baserat på enhetens skärmstorlek, är engagerande och interaktiva till sin natur. Adaptiv Forms kan även integreras med Adobe Analytics, Adobe Sign och Adobe Target. Ni kunde leverera personaliserade formulär och processorienterade upplevelser till användarna baserat på deras demografi och andra funktioner. Man kan också integrera adaptiva blanketter med Adobe Sign.
+**Anpassningsbara formulär:** Dessa formulär ändrar utseende baserat på enhetens skärmstorlek, är engagerande och interaktiva till sin natur. Adaptiv Forms kan även integreras med Adobe Analytics, Adobe Sign och Adobe Target. Ni kunde leverera personaliserade formulär och processorienterade upplevelser till användarna baserat på deras demografi och andra funktioner. Man kan också integrera adaptiva blanketter med Adobe Sign.
 
-**PDF forms** passar för pixelperfekt utskrift och digital informationsinhämtning i ett PDF-dokument. I den digitala avataren kan du använda Adobe Acrobat eller Acrobat Reader för att fylla i dessa formulär. Du kan lägga upp dessa formulär på din webbplats eller använda formulärportalen för att lista dem på en AEM webbplats. Du kan även skicka dessa formulär till andra som bilagor. De här formulären passar bäst för skrivbordsmiljöer.
+**PDF-** formulär lämpar sig för pixelperfekt utskrift och digital informationsinhämtning i ett PDF-dokument. I den digitala avataren kan du använda Adobe Acrobat eller Acrobat Reader för att fylla i dessa formulär. Du kan lägga upp dessa formulär på din webbplats eller använda formulärportalen för att lista dem på en AEM webbplats. Du kan även skicka dessa formulär till andra som bilagor. De här formulären passar bäst för skrivbordsmiljöer.
 
-**HTML5 Forms** är en webbläsarvänlig version av PDF forms. HTML5 Forms passar för miljöer som saknar stöd för PDF-plugin-program. HTML5 Forms möjliggör återgivning av XFA-baserade formulär på mobila enheter och webbläsare på datorer där XFA-baserad PDF inte stöds. Dessa formulär passar bäst för surfplattor och datorer.
+**HTML5** Forms är en webbläsarvänlig version av PDF forms. HTML5 Forms passar för miljöer som saknar stöd för PDF-plugin-program. HTML5 Forms möjliggör återgivning av XFA-baserade formulär på mobila enheter och webbläsare på datorer där XFA-baserad PDF inte stöds. Dessa formulär passar bäst för surfplattor och datorer.
 
 AEM Forms är en kraftfull plattform i företagsklass och datainhämtning (adaptiva formulär, PDF forms och HTML5 Forms) är bara en av AEM Forms funktioner. En fullständig lista över funktioner finns i [Introduktion till AEM Forms](/help/forms/using/introduction-aem-forms.md).
 
@@ -44,7 +44,7 @@ Innan du börjar installera och konfigurera datainhämtningsfunktionen i AEM For
 * Maskinvaru- och programvaruinfrastruktur finns på plats. En detaljerad lista över maskin- och programvara som stöds finns i [tekniska krav](/help/sites-deploying/technical-requirements.md).
 
 * Installationssökvägen för AEM-instansen innehåller inte blanksteg.
-* En AEM körs. För Windows-användare måste du installera AEM i förhöjt läge. I AEM är &quot;instance&quot; en kopia av AEM som körs på en server i författar- eller publiceringsläge. Du behöver minst två [AEM instanser (en författare och en publicering)](/help/sites-deploying/deploy.md) för att kunna köra AEM Forms datainhämtningsfunktioner:
+* En AEM körs. För Windows-användare måste du installera AEM i förhöjt läge. I AEM är &quot;instance&quot; en kopia av AEM som körs på en server i författar- eller publiceringsläge. Du måste ha minst två [AEM instanser (en författare och en Publicera)](/help/sites-deploying/deploy.md) för att kunna köra AEM Forms datainhämtningsfunktioner:
 
    * **Författare**: En AEM som används för att skapa, överföra och redigera innehåll och för att administrera webbplatsen. När innehållet är klart att publiceras replikeras det till publiceringsinstansen.
    * **Publicera**: En AEM som skickar det publicerade innehållet till allmänheten via Internet eller ett internt nätverk.
@@ -54,7 +54,7 @@ Innan du börjar installera och konfigurera datainhämtningsfunktionen i AEM For
    * 15 GB temporärt utrymme för Microsoft Windows-baserade installationer.
    * 6 GB temporärt utrymme för UNIX-baserade installationer.
 
-* Replikering och omvänd replikering har angetts för författaren och publiceringsinstanserna. For details, see [Replication](/help/sites-deploying/replication.md).
+* Replikering och omvänd replikering har angetts för författaren och publiceringsinstanserna. Mer information finns i [Replikering](/help/sites-deploying/replication.md).
 * För UNIX-baserade system:
 
    * Installera följande 32-bitarspaket från installationsmediet:
@@ -111,24 +111,24 @@ Innan du börjar installera och konfigurera datainhämtningsfunktionen i AEM For
 
 AEM Forms tilläggspaket är ett program som distribueras till AEM. Paketet innehåller AEM Forms datainhämtning och andra funktioner. Så här installerar du tilläggspaketet:
 
-1. Öppna [programvarudistribution](https://experience.adobe.com/downloads). Du behöver en Adobe ID för att logga in på Software Distribution.
-1. Tryck **[!UICONTROL Adobe Experience Manager]** på rubrikmenyn.
-1. I **[!UICONTROL Filters]** avsnittet:
-   1. Välj **[!UICONTROL Forms]** i **[!UICONTROL Solution]** listrutan.
+1. Öppna [Programvarudistribution](https://experience.adobe.com/downloads). Du behöver en Adobe ID för att logga in på Software Distribution.
+1. Tryck på **[!UICONTROL Adobe Experience Manager]** som finns i rubrikmenyn.
+1. I avsnittet **[!UICONTROL Filters]**:
+   1. Välj **[!UICONTROL Forms]** i listrutan **[!UICONTROL Solution]**.
    2. Välj version och typ för paketet. Du kan också använda alternativet **[!UICONTROL Search Downloads]** för att filtrera resultaten.
-1. Tryck på det paketnamn som gäller för ditt operativsystem, markera **[!UICONTROL Accept EULA Terms]** och tryck **[!UICONTROL Download]**.
-1. Öppna [Pakethanteraren](https://docs.adobe.com/content/help/en/experience-manager-65/administering/contentmanagement/package-manager.html) och klicka **[!UICONTROL Upload Package]** för att överföra paketet.
+1. Tryck på det paketnamn som gäller för ditt operativsystem, välj **[!UICONTROL Accept EULA Terms]** och tryck på **[!UICONTROL Download]**.
+1. Öppna [Pakethanteraren](https://docs.adobe.com/content/help/en/experience-manager-65/administering/contentmanagement/package-manager.html) och klicka på **[!UICONTROL Upload Package]** för att överföra paketet.
 1. Markera paketet och klicka på **[!UICONTROL Install]**.
 
-   Du kan även hämta paketet via länken i artikeln om [AEM Forms-utgåvor](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) .
-1. När paketet har installerats uppmanas du att starta om AEM. **Starta inte om servern omedelbart.** Innan du stoppar AEM Forms-servern väntar du tills ServiceEvent REGISTERED- och ServiceEvent UNREGISTERED-meddelandena inte längre visas i `[AEM-Installation-Directory]/crx-quickstart/logs/error.log` filen och loggen är stabil.
+   Du kan även hämta paketet via den direktlänk som visas i [AEM Forms-releaserna](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)-artikeln.
+1. När paketet har installerats uppmanas du att starta om AEM. **Starta inte om servern omedelbart.** Innan du stoppar AEM Forms-servern väntar du tills meddelandena ServiceEvent REGISTERED och ServiceEvent UNREGISTERED inte visas i  `[AEM-Installation-Directory]/crx-quickstart/logs/error.log` filen och loggen är stabil.
 1. Upprepa steg 1-7 för alla författare- och publiceringsinstanser.
 
-### (Endast Windows) Automatisk installation av Visual Studio-omdistribuerbara filer {#automatic-installation-visual-studio-redistributables}
+### (Endast Windows) Automatisk installation av Visual Studio-omdistribuerbara {#automatic-installation-visual-studio-redistributables}
 
 Om du installerar en AEM i förhöjt läge installeras de saknade Visual Studio-omdistribuerbara komponenterna automatiskt när AEM Forms tilläggspaket installeras.
 
-Om du vill utvärdera om Visual Studio-omdistribuerbara filer installeras automatiskt öppnar du den `error.log` fil som finns i `/crx-repository/logs/` katalogen. Loggarna innehåller följande meddelande:
+Om du vill utvärdera om Visual Studio-omdistribuerbara filer installeras automatiskt öppnar du `error.log`-filen som finns i katalogen `/crx-repository/logs/`. Loggarna innehåller följande meddelande:
 
 `Redist <service name> already installed on system, will not attempt re-installation`
 
@@ -142,18 +142,18 @@ Om behörighetskontrollen misslyckas innehåller loggarna följande meddelande:
 
 `Privilege escalation check failed with error: <error message>`
 
-## Konfiguration efter installation {#post-installation-configurations}
+## Konfigurationer efter installation {#post-installation-configurations}
 
 AEM Forms har några obligatoriska och valfria konfigurationer. De obligatoriska konfigurationerna är bland annat att konfigurera BouncyCastle-bibliotek och serialiseringsagent. De valfria konfigurationerna är bland annat att konfigurera dispatcher, Forms-portalen, Adobe Sign, Adobe Analytics och Adobe Target.
 
-### Obligatoriska efterinstallationskonfigurationer {#mandatory-post-installation-configurations}
+### Obligatoriska konfigurationer efter installation {#mandatory-post-installation-configurations}
 
-#### Konfigurera RSA- och BouncyCastle-bibliotek  {#configure-rsa-and-bouncycastle-libraries}
+#### Konfigurera RSA- och BouncyCastle-bibliotek {#configure-rsa-and-bouncycastle-libraries}
 
 Utför följande steg på alla författare- och publiceringsinstanser för att starta delegeringen av biblioteken:
 
 1. Stoppa den underliggande AEM.
-1. Öppna `[AEM installation directory]\crx-quickstart\conf\sling.properties` filen för redigering.
+1. Öppna `[AEM installation directory]\crx-quickstart\conf\sling.properties`-filen för redigering.
 
    Om du använde `[AEM installation directory]\crx-quickstart\bin\start.bat` för att starta AEM redigerar du sling.properties som finns på `[AEM_root]\crx-quickstart\`.
 
@@ -172,14 +172,14 @@ Utför följande steg på alla Author- och Publish-instanser för att lägga til
 
 1. Öppna AEM Configuration Manager i ett webbläsarfönster. Standardwebbadressen är `https://'[server]:[port]'/system/console/configMgr`.
 1. Sök efter **com.adobe.cq.deserfw.impl.DeserializationFirewallImpl.name** och öppna konfigurationen.
-1. Lägg till paketet **sun.util.calendar** i fältet **tillåtelselista** . Click **Save**.
+1. Lägg till **sun.util.calendar**-paketet i **tillåtelselista**-fältet. Klicka på **Spara**.
 1. Upprepa steg 1-3 för alla författarinstanser och publiceringsinstanser.
 
-### Ytterligare konfigurationer efter installation {#optional-post-installation-configurations}
+### Valfria konfigurationer efter installation {#optional-post-installation-configurations}
 
 #### Konfigurera Dispatcher {#configure-dispatcher}
 
-Dispatcher är ett Adobe Experience Manager verktyg för cachelagring och/eller belastningsutjämning som kan användas tillsammans med en webbserver i företagsklass. Om du använder [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html)gör du följande konfigurationer för AEM Forms:
+Dispatcher är ett Adobe Experience Manager verktyg för cachelagring och/eller belastningsutjämning som kan användas tillsammans med en webbserver i företagsklass. Om du använder [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html) ska du göra följande konfigurationer för AEM Forms:
 
 1. Konfigurera åtkomst för AEM Forms:
 
@@ -187,11 +187,11 @@ Dispatcher är ett Adobe Experience Manager verktyg för cachelagring och/eller 
 
    `/0025 { /type "allow" /glob "* /bin/xfaforms/submitaction*" } # to enable AEM Forms submission`
 
-   Spara och stäng filen. Mer information om filter finns i [Dispatcher-dokumentationen](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html).
+   Spara och stäng filen. Mer information om filter finns i [Dispatcher documentation](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html).
 
 1. Konfigurera tjänsten för refererarfilter:
 
-   Logga in som administratör i konfigurationshanteraren för Apache Felix. Konfigurationshanterarens standardwebbadress är `https://[server]:[port_number]/system/console/configMgr`. På menyn **Konfigurationer** väljer du alternativet **Apache Sling Reference Filter** . I fältet Tillåt värdar anger du värdnamnet för dispatchern så att den kan användas som referent och klickar på **Spara**. Posten har formatet &quot;https://[server]:[port]&quot;.
+   Logga in som administratör i konfigurationshanteraren för Apache Felix. Konfigurationshanterarens standardwebbadress är `https://[server]:[port_number]/system/console/configMgr`. Välj alternativet **Refererarfilter för Apache Sling** på menyn **Konfigurationer**. I fältet Tillåt värdar anger du värdnamnet för dispatchern så att den kan användas som referent och klickar på **Spara**. Postens format är &quot;https://[server]:[port]&quot;.
 
 #### Konfigurera cache {#configure-cache}
 
@@ -203,7 +203,7 @@ Cachelagring är en mekanism som förkortar dataåtkomsttider, minskar fördröj
 Utför följande steg för att konfigurera cachen för adaptiva formulär:
 
 1. Gå till konfigurationshanteraren AEM webbkonsolen på https://&#39;[server]:[port]&#39;/system/console/configMgr.
-1. Klicka på **Adaptiv form och Interactive Communication Web Channel Configuration** för att redigera dess konfigurationsvärden. I dialogrutan Redigera konfigurationsvärden anger du det maximala antalet formulär eller dokument som en instans av AEM Forms-servern kan cachelagra i fältet **Antal adaptiva Forms** . Standardvärdet är 100. Click **Save**.
+1. Klicka på **Adaptiv form och Interactive Communication Web Channel Configuration** för att redigera dess konfigurationsvärden. I dialogrutan Redigera konfigurationsvärden anger du det maximala antalet formulär eller dokument som en instans av AEM Forms-servern kan cachelagra i fältet **Antal adaptiva Forms**. Standardvärdet är 100. Klicka på **Spara**.
 
    >[!NOTE]
    >
@@ -219,9 +219,9 @@ Du kan aktivera SSL-kommunikation för formulärdatamodellen. Om du vill aktiver
 
 Adobe Sign möjliggör e-signaturarbetsflöden för anpassningsbara formulär. E-signaturer förbättrar arbetsflödena för att bearbeta dokument inom juridik, försäljning, löneadministration, personaladministration och många andra områden.
 
-I ett typiskt Adobe Sign-scenario och ett scenario med adaptiva formulär fyller en användare i ett adaptivt formulär och **ansöker om en tjänst**. Till exempel kan en kreditkortsansökan och en medborgare få förmåner. När en användare fyller i, skickar och signerar ansökningsformuläret skickas formuläret till tjänsteleverantören för ytterligare åtgärder. Tjänsteleverantören granskar programmet och använder Adobe Sign för att markera det som godkänt. För att möjliggöra liknande arbetsflöden för elektroniska signaturer kan du integrera Adobe Sign med AEM Forms.
+I ett typiskt Adobe Sign-scenario och i ett adaptivt formulärscenario fyller en användare i ett adaptivt formulär som **ska ansöka om en tjänst**. Till exempel kan en kreditkortsansökan och en medborgare få förmåner. När en användare fyller i, skickar och signerar ansökningsformuläret skickas formuläret till tjänsteleverantören för ytterligare åtgärder. Tjänsteleverantören granskar programmet och använder Adobe Sign för att markera det som godkänt. För att möjliggöra liknande arbetsflöden för elektroniska signaturer kan du integrera Adobe Sign med AEM Forms.
 
-Om du vill använda Adobe Sign med AEM Forms [integrerar du Adobe Sign med AEM Forms](/help/forms/using/adobe-sign-integration-adaptive-forms.md).
+[Integrera Adobe Sign med AEM Forms](/help/forms/using/adobe-sign-integration-adaptive-forms.md) om du vill använda Adobe Sign med AEM Forms.
 
 #### Konfigurera Adobe Analytics {#configure-adobe-analytics}
 
@@ -233,7 +233,7 @@ Information om hur du använder Adobe Analytics med AEM Forms finns i [Konfigure
 
 Kunderna överger troligtvis ett formulär om upplevelsen inte är engagerande. Även om det är frustrerande för kunderna kan det också öka supportvolymen och kostnaderna för organisationen. Det är både viktigt och utmanande att identifiera och tillhandahålla rätt kundupplevelse som ökar konverteringsgraden. AEM innehåller nyckeln till detta problem.
 
-AEM kan integreras med Adobe Target, en Adobe Marketing Cloud-lösning, för att leverera personaliserade och engagerande kundupplevelser i flera digitala kanaler. Om du vill använda Adobe Target för att testa adaptiva formulär [integrerar du Adobe Target med AEM Forms](/help/forms/using/ab-testing-adaptive-forms.md#setupandintegratetargetinaemforms).
+AEM kan integreras med Adobe Target, en Adobe Marketing Cloud-lösning, för att leverera personaliserade och engagerande kundupplevelser i flera digitala kanaler. [Integrera Adobe Target med AEM Forms](/help/forms/using/ab-testing-adaptive-forms.md#setupandintegratetargetinaemforms) om du vill använda Adobe Target för att testa adaptiva formulär.
 
 ## Nästa steg {#next-steps}
 
