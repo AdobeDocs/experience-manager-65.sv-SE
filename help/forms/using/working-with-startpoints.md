@@ -26,24 +26,24 @@ En startpunkt anropar en process som skapats i Workbench. Den är kopplad till e
 >
 >Termerna startpunkter, startprocess och formulär används omväxlande när de refererar till det här konceptet.
 
-Om du vill initiera en process från AEM Forms-programmet måste du ha en startpunkt av typen **Arbetsyta** i processen. Du måste också välja alternativet **[!UICONTROL Visibile in Mobile Workspace]** för startpunkten.
+Om du vill initiera en process från AEM Forms-appen måste du ha en startpunkt av typen **Workspace** i processen. Du måste även välja alternativet **[!UICONTROL Visibile in Mobile Workspace]** för startpunkten.
 
 ![mws_startpoint_select_option](assets/mws_startpoint_select_option.png)
 
 **Så här startar du en process som definieras i Workbench**
 
-1. Om du vill visa startpunkterna som är tillgängliga i AEM Forms-appen går du till [startskärmen](../../forms/using/home-screen.md).
-1. Listan visas som standard på **[!UICONTROL Home]** skärmen **[!UICONTROL All Forms]** .
+1. Gå till [Startskärmen](../../forms/using/home-screen.md) för att visa startpunkterna i AEM Forms-appen.
+1. Listan **[!UICONTROL All Forms]** visas som standard på skärmen **[!UICONTROL Home]**.
 
    Startpunkten är kopplad till ett formulär. Tryck på det startpunktassocierade formuläret i listan för att öppna det.
 
    Formuläret som är kopplat till startpunkten öppnas.
 
-1. Ange informationen i **[!UICONTROL Startpoint]** formuläret.
+1. Ange informationen i **[!UICONTROL Startpoint]**-formuläret.
 
-   Du kan lägga till anteckningar i den här uppgiften med knappen [Bifogad](../../forms/using/add-attachments.md) fil.
+   Du kan lägga till anteckningar i den här aktiviteten med knappen [attachment](../../forms/using/add-attachments.md).
 
-1. Tryck på **[!UICONTROL Submit]** knappen när du har fyllt i formuläret.
+1. När du har fyllt i formuläret trycker du på **[!UICONTROL Submit]**.
 
 Om programmet är offline sparas formuläret och dess data i mappen Utkorgen.
 
