@@ -1,8 +1,8 @@
 ---
 title: Arbeta med Adobe Campaign 6.1 och Adobe Campaign Standard
 seo-title: Arbeta med Adobe Campaign 6.1 och Adobe Campaign Standard
-description: Du kan skapa e-postinnehåll i AEM och bearbeta det i e-postmeddelanden från Adobe Campaign.
-seo-description: Du kan skapa e-postinnehåll i AEM och bearbeta det i e-postmeddelanden från Adobe Campaign.
+description: Du kan skapa e-postinnehåll i AEM och bearbeta det i Adobe Campaign e-postmeddelanden.
+seo-description: Du kan skapa e-postinnehåll i AEM och bearbeta det i Adobe Campaign e-postmeddelanden.
 uuid: 439df7fb-590b-45b8-9768-565b022a808b
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,24 +11,27 @@ content-type: reference
 discoiquuid: 61b2bd47-dcef-4107-87b1-6bf7bfd3043b
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '1192'
+ht-degree: 1%
 
 ---
 
 
 # Arbeta med Adobe Campaign 6.1 och Adobe Campaign Standard{#working-with-adobe-campaign-and-adobe-campaign-standard}
 
-Du kan skapa e-postinnehåll i AEM och bearbeta det i e-postmeddelanden från Adobe Campaign. Om du vill göra det måste du:
+Du kan skapa e-postinnehåll i AEM och bearbeta det i Adobe Campaign e-postmeddelanden. Om du vill göra det måste du:
 
 1. Skapa ett nytt nyhetsbrev i AEM från en Adobe Campaign-specifik mall.
 1. Välj [en Adobe Campaign-tjänst](#selectingtheadobecampaigncloudservice) innan du redigerar innehållet för att få tillgång till alla funktioner.
 1. Redigera innehållet.
 1. Validera innehållet.
 
-Innehållet kan sedan synkroniseras med en leverans i Adobe Campaign. Detaljerade instruktioner beskrivs i det här dokumentet.
+Innehållet kan sedan synkas med en leverans i Adobe Campaign. Detaljerade instruktioner beskrivs i det här dokumentet.
 
 >[!NOTE]
 >
->Innan du kan använda den här funktionen måste du konfigurera AEM så att det integreras med antingen [Adobe Campaign](/help/sites-administering/campaignonpremise.md) eller [Adobe Campaign Standard](/help/sites-administering/campaignstandard.md).
+>Innan du kan använda den här funktionen måste du konfigurera AEM att integrera med antingen [Adobe Campaign](/help/sites-administering/campaignonpremise.md) eller [Adobe Campaign Standard](/help/sites-administering/campaignstandard.md).
 
 ## Skicka e-postinnehåll via Adobe Campaign {#sending-email-content-via-adobe-campaign}
 
@@ -38,19 +41,19 @@ När du skapar Adobe Campaign-innehåll i AEM måste du länka till en Adobe Cam
 
 Det finns två möjliga fall:
 
-* Innehåll kan synkroniseras med en leverans från Adobe Campaign. På så sätt kan du använda AEM-innehåll i en leverans.
+* Innehållet kan synkas med en leverans från Adobe Campaign. På så sätt kan du använda AEM innehåll i en leverans.
 * (Endast Adobe Campaign lokalt) Innehållet kan skickas direkt till Adobe Campaign, som automatiskt genererar en ny e-postleverans. Det här läget har begränsningar.
 
 Detaljerade instruktioner beskrivs i det här dokumentet.
 
-### Skapa nytt e-postinnehåll {#creating-new-email-content}
+### Skapar nytt e-postinnehåll {#creating-new-email-content}
 
 >[!NOTE]
 >
->När du lägger till e-postmallar måste du lägga till dem under **/innehåll/kampanjer** för att de ska vara tillgängliga.
+>När du lägger till e-postmallar måste du lägga till dem under **/content/campaign** för att göra dem tillgängliga.
 
 
-1. I AEM väljer du **webbplatsmappen** och bläddrar sedan i utforskaren för att hitta var era e-postkampanjer hanteras. I följande exempel är den berörda noden **Webbplatser** > **Kampanjer** > **Geometrixx Outdoor** > **E-postkampanjer**.
+1. I AEM väljer du mappen **Webbplatser** och bläddrar sedan i utforskaren för att hitta var e-postkampanjerna hanteras. I följande exempel är den berörda noden **Webbplatser** > **Kampanjer** > **Geometrixx Outdoors** > **E-postkampanjer**.
 
    >[!NOTE]
    >
@@ -58,23 +61,24 @@ Detaljerade instruktioner beskrivs i det här dokumentet.
 
    ![chlimage_1-172](assets/chlimage_1-172.png)
 
-1. Välj **Nytt** > **Ny sida** för att skapa nytt e-postinnehåll.
+1. Välj **Nytt** > **Ny sida** om du vill skapa nytt e-postinnehåll.
 1. Välj en av de tillgängliga mallarna för Adobe Campaign och fyll sedan i de allmänna egenskaperna för sidan. Tre mallar är tillgängliga som standard:
 
-   * **Adobe Campaign Email (AC 6.1)**: Med kan du lägga till innehåll i en fördefinierad mall innan du skickar den till Adobe Campaign 6.1 för leverans.
+   * **Adobe Campaign e-post (AC 6.1)**: I kan du lägga till innehåll i en fördefinierad mall innan du skickar den till Adobe Campaign 6.1 för leverans.
    * **Adobe Campaign Email (ACS)**: Med kan du lägga till innehåll i en fördefinierad mall innan du skickar den till Adobe Campaign Standard för leverans.
+
    ![chlimage_1-173](assets/chlimage_1-173.png)
 
 1. Klicka på **Skapa** för att skapa e-post eller nyhetsbrev.
 
 ### Välja molntjänst och mall för Adobe Campaign {#selecting-the-adobe-campaign-cloud-service-and-template}
 
-Om du vill integrera med Adobe Campaign måste du lägga till en Adobe Campaign-molntjänst på sidan. Då får ni tillgång till personalisering och annan Adobe Campaign-information.
+Om du vill integrera med Adobe Campaign måste du lägga till en molntjänst från Adobe Campaign på sidan. Om du gör det får du tillgång till personalisering och annan Adobe Campaign-information.
 
 Dessutom kan du behöva välja Adobe Campaign-mallen, ändra ämnet och lägga till oformaterad text för användare som inte vill visa e-postmeddelandet i HTML.
 
 1. Välj fliken **Sida** i sidosparken och välj sedan **Sidegenskaper.**
-1. På fliken **Cloud-tjänster** i popup-fönstret väljer du **Lägg till tjänst** för att lägga till Adobe Campaign-tjänsten och klickar på **OK**.
+1. På fliken **Molntjänster** i popup-fönstret väljer du **Lägg till tjänst** för att lägga till Adobe Campaign-tjänsten och klickar på **OK**.
 
    ![chlimage_1-174](assets/chlimage_1-174.png)
 
@@ -82,13 +86,13 @@ Dessutom kan du behöva välja Adobe Campaign-mallen, ändra ämnet och lägga t
 
    >[!NOTE]
    >
-   >Tryck/klicka på **OK** eller **Använd** när du har lagt till molntjänsten. På så sätt kan fliken **Adobe Campaign** fungera som den ska.
+   >Tryck/klicka på **OK** eller **Använd** när du har lagt till molntjänsten. Detta gör att fliken **Adobe Campaign** kan fungera som den ska.
 
-1. Om du vill använda en annan mall för e-postleverans (från Adobe Campaign) än standardmallen för **e-post** väljer du **Sidegenskaper** igen. På fliken **Adobe Campaign** anger du e-postleveransmallens interna namn i den relaterade Adobe Campaign-instansen.
+1. Om du vill använda en annan e-postleveransmall (från Adobe Campaign) än standardmallen **mail** väljer du **Sidegenskaper** igen. På fliken **Adobe Campaign** anger du e-postleveransmallens interna namn i den relaterade Adobe Campaign-instansen.
 
-   I Adobe Campaign Standard är mallen **Delivery with AEM Content**. I Adobe Campaign 6.1 är mallen **E-postleverans med AEM-innehåll**.
+   I Adobe Campaign Standard är mallen **Delivery with AEM Content**. I Adobe Campaign 6.1 är mallen **E-postleverans med AEM**.
 
-   När du väljer en mall aktiveras komponenterna i **Adobe Campaign Newsletter** automatiskt.
+   När du väljer en mall aktiveras komponenterna **Adobe Campaign Newsletter** automatiskt i AEM.
 
 ### Redigera e-postinnehåll {#editing-email-content}
 
@@ -104,7 +108,7 @@ Du kan redigera e-postinnehåll antingen i det klassiska användargränssnittet 
 
    ![chlimage_1-176](assets/chlimage_1-176.png)
 
-   Se [Adobe Campaign Components](/help/sites-classic-ui-authoring/classic-personalization-ac-components.md) (Komponenter i Adobe Campaign) för en beskrivning av komponenter som är tillgängliga för nyhetsbrev/e-postkampanjer i Adobe Campaign.
+   I [Adobe Campaign Components](/help/sites-classic-ui-authoring/classic-personalization-ac-components.md) finns en beskrivning av komponenter som är tillgängliga för Adobe Campaign nyhetsbrev/e-postkampanjer.
 
    ![chlimage_1-177](assets/chlimage_1-177.png)
 
@@ -112,27 +116,28 @@ Du kan redigera e-postinnehåll antingen i det klassiska användargränssnittet 
 
 När du redigerar innehåll kan du infoga:
 
-* Kontextfält för Adobe Campaign. Det här är fält som du kan infoga i texten och som anpassas efter mottagarens data (till exempel förnamn, efternamn eller andra data i måldimensionen).
-* Personaliseringsblock för Adobe Campaign. Detta är block med fördefinierat innehåll som inte är relaterat till mottagarens data, t.ex. en logotyp eller en länk till en spegelsida.
+* Adobe Campaign-kontextfält. Det här är fält som du kan infoga i texten och som anpassas efter mottagarens data (till exempel förnamn, efternamn eller andra data i måldimensionen).
+* Adobe Campaign personaliseringsblock. Detta är block med fördefinierat innehåll som inte är relaterat till mottagarens data, t.ex. en logotyp eller en länk till en spegelsida.
 
-En fullständig beskrivning av Campaign-komponenterna finns i [Adobe Campaign-komponenter](/help/sites-classic-ui-authoring/classic-personalization-ac-components.md) .
+En fullständig beskrivning av Campaign-komponenterna finns i [Adobe Campaign Components](/help/sites-classic-ui-authoring/classic-personalization-ac-components.md).
 
 >[!NOTE]
 >
->* Endast områdena för målgruppsdimensionen i Adobe Campaign- **profiler** beaktas.
->* När du visar Egenskaper från **Webbplatser** har du inte tillgång till kontextfälten i Adobe Campaign. Du kan komma åt dessa direkt från e-postmeddelandet när du redigerar.
+>* Endast fälten i måldimensionen **Profiler** för Adobe Campaign beaktas.
+>* När du visar Egenskaper från **Platser** har du inte åtkomst till kontextfälten i Adobe Campaign. Du kan komma åt dessa direkt från e-postmeddelandet när du redigerar.
+
 >
 
 
 
-1. Infoga ett nytt **nyhetsbrev** > **Text &amp; Personalization (Campaign)** .
+1. Infoga ett nytt **nyhetsbrev** > **Text &amp; Personalization (Campaign)**-komponent.
 1. Öppna komponenten genom att dubbelklicka på den. Fönstret **Redigera** har en funktion som gör att du kan infoga anpassningselementen.
 
    >[!NOTE]
    >
-   >De tillgängliga kontextfälten motsvarar måldimensionen för **profiler** i Adobe Campaign.
+   >De tillgängliga kontextfälten motsvarar måldimensionen **Profiler** i Adobe Campaign.
    >
-   >Se [Länka en AEM-sida till ett Adobe Campaign-e-postmeddelande](/help/sites-classic-ui-authoring/classic-personalization-ac-campaign.md#linkinganaempagetoanadobecampaignemail).
+   >Se [Länka en AEM till ett Adobe Campaign-e-postmeddelande](/help/sites-classic-ui-authoring/classic-personalization-ac-campaign.md#linkinganaempagetoanadobecampaignemail).
 
    ![chlimage_1-178](assets/chlimage_1-178.png)
 
@@ -155,15 +160,15 @@ Du kan förhandsgranska hur nyhetsbrevet kommer att se ut samt förhandsgranska 
 
 1. Expandera sidosparken för att börja redigera igen.
 
-### Godkänna innehåll i AEM {#approving-content-in-aem}
+### Godkänn innehåll i AEM {#approving-content-in-aem}
 
-När innehållet är klart kan du starta godkännandeprocessen. Gå till fliken **Arbetsflöde** i verktygslådan och välj arbetsflödet **Godkänn för Adobe Campaign** .
+När innehållet är klart kan du starta godkännandeprocessen. Gå till fliken **Arbetsflöde** i verktygslådan och välj arbetsflödet **Godkänn för Adobe Campaign**.
 
 Detta färdiga arbetsflöde har två steg: revidering, godkännande eller revidering, och sedan refusering. Arbetsflödet kan dock utvidgas och anpassas till en mer komplex process.
 
 ![chlimage_1-182](assets/chlimage_1-182.png)
 
-Om du vill godkänna innehåll för Adobe Campaign ska du tillämpa arbetsflödet genom att välja **Arbetsflöde** i sidosparken och välja **Godkänn för Adobe Campaign** och klicka på **Starta arbetsflöde**. Gå igenom stegen och godkänn innehållet. Du kan också avvisa innehållet genom att välja **Avvisa** i stället för **Godkänn** i det sista arbetsflödessteget.
+Om du vill godkänna innehåll för Adobe Campaign tillämpar du arbetsflödet genom att välja **Arbetsflöde** i sidosparken och välja **Godkänn för Adobe Campaign** och klicka på **Starta arbetsflöde**. Gå igenom stegen och godkänn innehållet. Du kan också avvisa innehållet genom att välja **Avvisa** i stället för **Godkänn** i det sista arbetsflödessteget.
 
 ![chlimage_1-183](assets/chlimage_1-183.png)
 
@@ -185,5 +190,5 @@ I Adobe Campaign 6.1:
 
 >[!NOTE]
 >
->Mer information finns i [Länka AEM med Adobe Campaign Standard och Adobe Campaign 6.1](/help/sites-authoring/campaign.md#linking-aem-with-adobe-campaign-standard-and-adobe-campaign-classic) under [Arbeta med Adobe Campaign 6.1 och Adobe Campaign Standard](/help/sites-authoring/campaign.md) i standarddokumentationen.
+>Mer information finns i [Länka AEM med Adobe Campaign Standard och Adobe Campaign 6.1](/help/sites-authoring/campaign.md#linking-aem-with-adobe-campaign-standard-and-adobe-campaign-classic) under [Arbeta med Adobe Campaign 6.1 och Adobe Campaign Standard](/help/sites-authoring/campaign.md) i standarddokumentationen för redigering.
 
