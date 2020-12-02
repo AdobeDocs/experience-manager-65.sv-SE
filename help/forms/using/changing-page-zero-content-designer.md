@@ -19,21 +19,21 @@ ht-degree: 1%
 
 # Ändra sidans nollinnehåll i Designer {#changing-page-zero-content-in-designer}
 
-Sidnollinnehåll visas som standard när ett visningsprogram som inte är från Adobe PDF, t.ex. standardvisningsprogrammet för PDF i [!DNL Chrome] eller [!DNL Firefox], inte kan läsa innehållet i PDF/XFA-formuläret. Standardmeddelandet Sidan är noll visas nedan.
+Sidans nollinnehåll visas som standard när ett visningsprogram som inte är från Adobe PDF, t.ex. standardvisningsprogrammet för PDF i [!DNL Chrome] eller [!DNL Firefox], inte kan läsa innehållet i PDF/XFA-formuläret. Standardmeddelandet Sidan är noll visas nedan.
 
 ![defaultpage0message](assets/defaultpage0message.png)
 
 [!DNL AEM Forms] version av Designer låter dig ändra meddelandet som visas på sidan noll. Gör så här om du vill ändra sidans nollmeddelande:
 
-1. Kontrollera att du har installerat [!DNL AEM Forms] versionen av Designer. Du kan kontrollera versionen från Om-skärmen i Designer.
+1. Kontrollera att du har [!DNL AEM Forms]-versionen av Designer installerad. Du kan kontrollera versionen från Om-skärmen i Designer.
 
 1. Öppna formuläret som du vill ändra sidans nollinnehåll för.
 
 1. Klicka på **[!UICONTROL File]** > **[!UICONTROL Form Properties]**.
 
-1. I [!UICONTROL Form Properties] dialogrutan klickar du på ![plus](assets/plus.png) (plusikonen) för att lägga till en anpassad egenskap.
+1. I dialogrutan [!UICONTROL Form Properties] klickar du på ![plus](assets/plus.png) (plusikonen) för att lägga till en anpassad egenskap.
 
-1. Ange **_pagezerocontent** som egenskapens namn.
+1. Ange **_pagezerocontent** som namn på egenskapen.
 1. Lägg till det nya sidans nollmeddelande i RTF-format som värde. Till exempel:
 
 
