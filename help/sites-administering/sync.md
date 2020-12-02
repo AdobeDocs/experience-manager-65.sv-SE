@@ -23,7 +23,7 @@ ht-degree: 2%
 
 ## Introduktion {#introduction}
 
-När distributionen är en [publiceringsgrupp](/help/sites-deploying/recommended-deploys.md#tarmk-farm)måste medlemmarna kunna logga in och se sina data på valfri publiceringsnod.
+När distributionen är en [publiceringsgrupp](/help/sites-deploying/recommended-deploys.md#tarmk-farm) måste medlemmarna kunna logga in och se sina data på valfri publiceringsnod.
 
 Användare och användargrupper (användardata) som har skapats i publiceringsmiljön behövs inte i författarmiljön.
 
@@ -35,15 +35,15 @@ När användarsynkronisering är aktiverat synkroniseras användardata automatis
 
 ## Sling Distribution {#sling-distribution}
 
-Användardata, tillsammans med deras [åtkomstkontrollistor](/help/sites-administering/security.md), lagras i [Oak Core](/help/sites-deploying/platform.md), lagret nedanför Oak JCR, och du får åtkomst till dem via [Oak API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/jackrabbit/oak/api/package-tree.html). Med ovanliga uppdateringar är det rimligt att användardata synkroniseras med andra publiceringsinstanser via [Sling Content Distribution](https://github.com/apache/sling/blob/trunk/contrib/extensions/distribution/README.md) (Sling-distribution).
+Användardata, tillsammans med deras [ACL:er](/help/sites-administering/security.md), lagras i [Oak Core](/help/sites-deploying/platform.md), lagret under Oak JCR, och du kommer åt dem med [Oak API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/jackrabbit/oak/api/package-tree.html). Med ovanliga uppdateringar är det rimligt att användardata synkroniseras med andra publiceringsinstanser med [Sling Content Distribution](https://github.com/apache/sling/blob/trunk/contrib/extensions/distribution/README.md) (Sling Distribution).
 
 Fördelarna med användarsynkronisering med Sling-distribution jämfört med traditionell replikering är:
 
-* *användare*, *användarprofiler* och *användargrupper* som skapas vid publicering skapas inte för författaren
+* *användare*,  *användarprofiler* och  *användare* grupperade som skapats vid publicering skapas inte på författare
 
 * Sling distribution anger egenskaper i jcr-händelser, vilket gör det möjligt att agera i händelseavlyssnare på publiceringssidan utan att bekymra sig om oändliga replikeringsslingor
 * Sling-distribution skickar endast användardata till icke-ursprungliga publiceringsinstanser, vilket eliminerar onödig trafik
-* [Åtkomstkontrollistorna](/help/sites-administering/security.md) i användarnoden ingår i synkroniseringen
+* [ACL-](/help/sites-administering/security.md) uppsättningar i användarnoden ingår i synkroniseringen
 
 >[!NOTE]
 >
@@ -51,27 +51,27 @@ Fördelarna med användarsynkronisering med Sling-distribution jämfört med tra
 
 >[!CAUTION]
 >
->Synkronisering av ***administratörsgruppen*** stöds inte, även om användarsynkronisering är aktiverat. I stället loggas ett fel att &quot;importera diff&quot; i felloggen.
+>Synkronisering av gruppen ***administratörer*** stöds inte, även om användarsynkronisering är aktiverat. I stället loggas ett fel att &quot;importera diff&quot; i felloggen.
 >
->Om en användare läggs till i eller tas bort från gruppen ***administratörer** måste ändringen därför göras manuellt för varje publiceringsinstans när distributionen är en publiceringsgrupp.
+>Om en användare läggs till eller tas bort från gruppen ***administratörer** måste ändringen därför göras manuellt för varje publiceringsinstans när distributionen är en publiceringsgrupp.
 
 ## Aktivera användarsynkronisering {#enable-user-sync}
 
 >[!NOTE]
 >
->Som standard är användarsynkronisering `disabled`.
+>Som standard är användarsynkroniseringen `disabled`.
 >
->Att aktivera användarsynkronisering innebär att ändra *befintliga* OSGi-konfigurationer.
+>När du aktiverar användarsynkronisering måste du ändra *befintliga OSGi-konfigurationer.*
 >
 >Inga nya konfigurationer ska läggas till som ett resultat av aktivering av användarsynkronisering.
 
 Användarsynkronisering förlitar sig på redigeringsmiljön för att hantera distributionen av användardata, även om användardata inte skapas på författaren. Mycket, men inte allt, av konfigurationen sker i författarmiljön och varje steg identifierar tydligt om den ska utföras på författaren eller publiceringen.
 
-Följande steg är nödvändiga för att aktivera användarsynkronisering, följt av ett [felsökningsavsnitt](#troubleshooting) :
+Följande steg krävs för att aktivera användarsynkronisering, följt av avsnittet [Felsökning](#troubleshooting):
 
 ### Förutsättningar {#prerequisites}
 
-1. Om användare och användargrupper redan har skapats på en utgivare bör du synkronisera [användardata](#manually-syncing-users-and-user-groups) manuellt med alla utgivare innan du konfigurerar och aktiverar användarsynkronisering.
+1. Om användare och användargrupper redan har skapats på en utgivare bör du [manuellt synkronisera](#manually-syncing-users-and-user-groups) användardata till alla utgivare innan du konfigurerar och aktiverar användarsynkronisering.
 
 När användarsynkroniseringen är aktiverad synkroniseras endast nyskapade användare och grupper.
 
@@ -90,11 +90,12 @@ När användarsynkroniseringen är aktiverad synkroniseras endast nyskapade anv�
    * åtkomst till [webbkonsolen](/help/sites-deploying/configuring-osgi.md)
 
       * till exempel [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
-   * leta `Apache Sling Distribution Agent - Sync Agents Factory`
+   * lokalisera `Apache Sling Distribution Agent - Sync Agents Factory`
 
-      * välj den befintliga konfiguration som ska öppnas för redigering (pennikonen)Verifiera `name`: **`socialpubsync`**
+      * välj den befintliga konfiguration som ska öppnas för redigering (pennikon)
+Verifiera `name`: **`socialpubsync`**
 
-      * markera `Enabled` kryssrutan
+      * markera kryssrutan `Enabled`
       * select `Save`
 
 
@@ -102,21 +103,22 @@ När användarsynkroniseringen är aktiverad synkroniseras endast nyskapade anv�
 
 ### 2. Skapa auktoriserad användare {#createauthuser}
 
-**Konfigurera behörigheter** Den här behöriga användaren kommer att användas i steg 3 för att konfigurera Sling-distributionen på författaren.
+**Konfigurera**
+behörigheterDen här behöriga användaren används i steg 3 för att konfigurera Sling-distributionen på författaren.
 
 * **på varje publiceringsinstans**
 
    * logga in med administratörsbehörighet
-   * åtkomst till [säkerhetskonsolen](/help/sites-administering/security.md)
+   * behörighet till [säkerhetskonsolen](/help/sites-administering/security.md)
 
       * till exempel [https://localhost:4503/useradmin](https://localhost:4503/useradmin)
    * skapa en ny användare
 
-      * for example, `usersync-admin`
-   * lägg till den här användaren i **`administrators`** användargruppen
+      * till exempel `usersync-admin`
+   * lägg till den här användaren i användargruppen **`administrators`**
    * [lägg till ACL för den här användaren i /home](#howtoaddacl)
 
-      * `Allow jcr:all` med begränsning `rep:glob=*/activities/*`
+      * `Allow jcr:all` med begränsning  `rep:glob=*/activities/*`
 
 
 
@@ -124,7 +126,7 @@ När användarsynkroniseringen är aktiverad synkroniseras endast nyskapade anv�
 >
 >En ny användare måste skapas.
 >
->* Standardanvändaren som är tilldelad är **`admin`**.
+>* Standardanvändaren är **`admin`**.
 >* Använd inte `communities-user-admin user.`
 
 >
@@ -137,14 +139,14 @@ När användarsynkroniseringen är aktiverad synkroniseras endast nyskapade anv�
 
    * till exempel [https://localhost:4503/crx/de](https://localhost:4503/crx/de)
 
-* välj `/home` nod
-* i den högra rutan väljer du `Access Control` fliken
-* markera knappen för att lägga till en ACL-post `+`
+* välj `/home`-nod
+* i den högra rutan väljer du fliken `Access Control`
+* markera knappen `+` för att lägga till en ACL-post
 
-   * **Huvudkonto**: *sök efter användare som har skapats för användarsynkronisering*
-   * **Typ**: `Allow`
-   * **Behörigheter**: `jcr:all`
-   * **Restrictions** rep:glob: `*/activities/*`
+   * **Huvudkonto**:  *sök efter användare som har skapats för användarsynkronisering*
+   * **Typ**:  `Allow`
+   * **Behörigheter**:  `jcr:all`
+   * **Restrictionsrep:** glob:  `*/activities/*`
    * välj **OK**
 
 * välj **Spara alla**
@@ -154,13 +156,13 @@ När användarsynkroniseringen är aktiverad synkroniseras endast nyskapade anv�
 Se även
 
 * [Behörighetshantering](/help/sites-administering/user-group-ac-admin.md#access-right-management)
-* Felsökningsavsnittet [Ändra åtgärdsundantag under](#modify-operation-exception-during-response-processing)svarsbearbetning.
+* Felsökningsavsnitt [Ändra åtgärdsundantag under svarsbearbetning](#modify-operation-exception-during-response-processing).
 
 ### 3. Adobe Granite-distribution - krypterad lösenordsleverantör {#adobegraniteencpasswrd}
 
 **Konfigurera behörigheter**
 
-När en auktoriserad användare, som är medlem i **`administrators`**användargruppen, har skapats för alla publiceringsinstanser måste den auktoriserade användaren identifieras som behörig användare av författaren med behörighet att synkronisera användardata från författaren till publiceringen.
+När en auktoriserad användare, som är medlem i användargruppen **`administrators`**har skapats för alla publiceringsinstanser, måste den auktoriserade användaren identifieras som en författare med behörighet att synkronisera användardata från författaren till publiceringen.
 
 * **on author**
 
@@ -168,17 +170,18 @@ När en auktoriserad användare, som är medlem i **`administrators`**användarg
    * åtkomst till [webbkonsolen](/help/sites-deploying/configuring-osgi.md)
 
       * till exempel [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
-   * leta `com.adobe.granite.distribution.core.impl.CryptoDistributionTransportSecretProvider.name`
-   * välj den befintliga konfiguration som ska öppnas för redigering (pennikonen)Verifiera `property name`: **`socialpubsync-publishUser`**
+   * lokalisera `com.adobe.granite.distribution.core.impl.CryptoDistributionTransportSecretProvider.name`
+   * välj den befintliga konfiguration som ska öppnas för redigering (pennikon)
+Verifiera `property name`: **`socialpubsync-publishUser`**
 
-   * ange användarnamn och lösenord till den [behöriga användare](#createauthuser) som skapades vid publicering i steg 2
+   * ange användarnamn och lösenord för den [behöriga användaren](#createauthuser) som skapades vid publicering i steg 2
 
-      * for example, `usersync-admin`
+      * till exempel `usersync-admin`
 
 
 ![](assets/chlimage_1-22.png)
 
-### 4. Apache Sling Distribution Agent - Queue Agents Factory {#apache-sling-distribution-agent-queue-agents-factory}
+### 4. Apache Sling Distribution Agent - köagentfabrik {#apache-sling-distribution-agent-queue-agents-factory}
 
 **Aktivera användarsynkronisering**
 
@@ -188,12 +191,13 @@ När en auktoriserad användare, som är medlem i **`administrators`**användarg
    * åtkomst till [webbkonsolen](/help/sites-deploying/configuring-osgi.md)
 
       * till exempel [https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
-   * leta `Apache Sling Distribution Agent - Queue Agents Factory`
+   * lokalisera `Apache Sling Distribution Agent - Queue Agents Factory`
 
-      * välj den befintliga konfiguration som ska öppnas för redigering (pennikonen)Verifiera `Name`: `socialpubsync-reverse`
+      * välj den befintliga konfiguration som ska öppnas för redigering (pennikon)
+Verifiera `Name`: `socialpubsync-reverse`
 
-      * markera `Enabled` kryssrutan
-      * select `Save`
+      * markera kryssrutan `Enabled`
+      * välj `Save`
    * **repeat **for each publish instance
 
 
@@ -210,19 +214,19 @@ När en auktoriserad användare, som är medlem i **`administrators`**användarg
    * åtkomst till [webbkonsolen](/help/sites-deploying/configuring-osgi.md)
 
       * till exempel [https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
-   * leta **`Adobe Social Sync - Diff Observer Factory`**
+   * lokalisera **`Adobe Social Sync - Diff Observer Factory`**
 
       * välj den befintliga konfiguration som ska öppnas för redigering (pennikon)
 
-         Verify `agent name`: `socialpubsync-reverse`
+         Verifiera `agent name`: `socialpubsync-reverse`
 
-      * markera `Enabled` kryssrutan
-      * select `Save`
+      * markera kryssrutan `Enabled`
+      * välj `Save`
 
 
 ![](assets/screen-shot_2019-05-24at090809.png)
 
-### 6. Apache Sling Distribution Trigger - Factory för schemalagda utlösare {#apache-sling-distribution-trigger-scheduled-triggers-factory}
+### 6. Utlösare för Apache Sling Distribution - Factory för schemalagda utlösare {#apache-sling-distribution-trigger-scheduled-triggers-factory}
 
 **(Valfritt) Ändra avsökningsintervall**
 
@@ -234,13 +238,13 @@ Som standard kommer författaren att söka efter ändringar var 30:e sekund. Så
    * åtkomst till [webbkonsolen](/help/sites-deploying/configuring-osgi.md)
 
       * till exempel [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
-   * leta `Apache Sling Distribution Trigger - Scheduled Triggers Factory`
+   * lokalisera `Apache Sling Distribution Trigger - Scheduled Triggers Factory`
 
       * välj den befintliga konfiguration som ska öppnas för redigering (pennikon)
 
-         * Verify `Name`: `socialpubsync-scheduled-trigger`
-      * ange `Interval in Seconds` till önskat intervall
-      * select `Save`
+         * Verifiera `Name`: `socialpubsync-scheduled-trigger`
+      * ställ in `Interval in Seconds` till önskat intervall
+      * välj `Save`
 
 
 
@@ -260,26 +264,29 @@ Standardkonfigurationen är för en enda publiceringsinstans. Eftersom orsaken t
    * åtkomst till [webbkonsolen](/help/sites-deploying/configuring-osgi.md)
 
       * till exempel [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
-   * leta `Apache Sling Distribution Agent - Sync Agents Factory`
+   * lokalisera `Apache Sling Distribution Agent - Sync Agents Factory`
 
-      * välj den befintliga konfiguration som ska öppnas för redigering (pennikonen)Verifiera `Name`: `socialpubsync`
+      * välj den befintliga konfiguration som ska öppnas för redigering (pennikon)
+Verifiera `Name`: `socialpubsync`
 
 
 ![](assets/chlimage_1-25.png)
 
-* **Exporterarslutpunkter** Det ska finnas en exportörslutpunkt för varje utgivare. Om det till exempel finns två utgivare, localhost:4503 och 4504, ska det finnas två poster:
+* **Exporter**
+EndpointsDet ska finnas en exportörslutpunkt för varje utgivare. Om det till exempel finns två utgivare, localhost:4503 och 4504, ska det finnas två poster:
 
    * `https://localhost:4503/libs/sling/distribution/services/exporters/socialpubsync-reverse`
    * `https://localhost:4504/libs/sling/distribution/services/exporters/socialpubsync-reverse`
 
-* **Importerarslutpunkter** Det ska finnas en importerarslutpunkt för varje utgivare. Om det till exempel finns två utgivare, localhost:4503 och 4504, ska det finnas två poster:
+* **Importerarens**
+slutpunkterDet ska finnas en importslutpunkt för varje utgivare. Om det till exempel finns två utgivare, localhost:4503 och 4504, ska det finnas två poster:
 
    * `https://localhost:4503/libs/sling/distribution/services/importers/socialpubsync`
    * `https://localhost:4504/libs/sling/distribution/services/importers/socialpubsync`
 
-* select `Save`
+* välj `Save`
 
-### 8. AEM Communities Sync Listener {#aem-communities-user-sync-listener}
+### 8. AEM Communities-lyssnare för användarsynkronisering {#aem-communities-user-sync-listener}
 
 **(Valfritt) Synkronisera ytterligare JCR-noder**
 
@@ -290,39 +297,44 @@ Om det finns anpassade data som ska synkroniseras över flera publiceringsinstan
    * logga in med administratörsbehörighet
    * åtkomst till [webbkonsolen](/help/sites-deploying/configuring-osgi.md)
 
-      * for example, `https://localhost:4503/system/console/configMgr`
-   * leta `AEM Communities User Sync Listener`
-   * välj den befintliga konfiguration som ska öppnas för redigering (pennikonen)Verifiera `Name`: `socialpubsync-scheduled-trigger`
+      * till exempel `https://localhost:4503/system/console/configMgr`
+   * lokalisera `AEM Communities User Sync Listener`
+   * välj den befintliga konfiguration som ska öppnas för redigering (pennikon)
+Verifiera `Name`: `socialpubsync-scheduled-trigger`
 
 
 ![](assets/chlimage_1-26.png)
 
-* **Nodtyper**Det här är listan över nodtyper som ska synkroniseras. Alla andra nodtyper än sling:Mappen måste listas här (sling:folder hanteras separat).
+* **Nodtyper**
+Det här är listan över nodtyper som ska synkroniseras. Alla andra nodtyper än sling:Mappen måste listas här (sling:folder hanteras separat).
 Standardlista över nodtyper som ska synkroniseras:
 
    * rep:User
    * nt:ostrukturerad
    * nt:resurs
 
-* **Ignorerbara egenskaper**Det här är listan över egenskaper som kommer att ignoreras om några ändringar identifieras. Ändringar av de här egenskaperna kan synkroniseras som en sidoeffekt av andra ändringar (eftersom synkronisering alltid finns på nodnivå), men ändringar av de här egenskaperna utlöser inte själva synkroniseringen.
+* **Ignorerbara**
+egenskaperDet här är listan över egenskaper som kommer att ignoreras om några ändringar identifieras. Ändringar av de här egenskaperna kan synkroniseras som en sidoeffekt av andra ändringar (eftersom synkronisering alltid finns på nodnivå), men ändringar av de här egenskaperna utlöser inte själva synkroniseringen.
 Standardegenskap som ska ignoreras:
 
    * cq:lastModified
 
-* **Ignorerbara noder**-undersökvägar som helt ignoreras under synkroniseringen. Inget under dessa delsökvägar kommer att synkroniseras när som helst.
+* **Ignorerbara**
+NodesSubpaths som ignoreras helt under synkroniseringen. Inget under dessa delsökvägar kommer att synkroniseras när som helst.
 Standardnoder som ska ignoreras:
 
    * .tokens
    * system
 
-* **Distribuerade mappar**Mest sling:Mappar ignoreras eftersom synkronisering inte behövs. Här anges de få undantagen.
+* **Distributed**
+FoldersMost sling:Folders ignoreras eftersom synkronisering inte behövs. Här anges de få undantagen.
 Standardmappar att synkronisera
 
    * segment/poäng
    * sociala medier/relationer
    * verksamhet
 
-### 9. Unikt försäljnings-ID {#unique-sling-id}
+### 9. Unikt ID för försäljning {#unique-sling-id}
 
 >[!CAUTION]
 >
@@ -342,7 +354,7 @@ Om Sling ID för en publiceringsinstans matchar Sling ID för någon annan publi
 1. stoppa en av publiceringsinstanserna som har ett matchande Sling ID
 1. i katalogen crx-quickstart/launchpad/felix
 
-   * söka efter och ta bort filen med namnet *sling.id.file*
+   * sök efter och ta bort filen *sling.id.file*
 
       * i ett Linux-system:
          `rm -i $(find . -type f -name sling.id.file)`
@@ -367,7 +379,7 @@ För att uppdateringarna ska kunna synkroniseras på rätt sätt måste du ändr
 
    * till exempel [https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
 
-* leta upp `Apache Sling Distribution Packaging - Vault Package Builder Factory`
+* hitta `Apache Sling Distribution Packaging - Vault Package Builder Factory`
 
    * `Builder name: socialpubsync-vlt`
 
@@ -395,19 +407,19 @@ För att uppdateringarna ska kunna synkroniseras på rätt sätt måste du ändr
 
 Användare och profiler som skapats i publiceringsmiljön (självregistrering) visas inte i författarmiljön.
 
-När topologin är en [publiceringsgrupp](/help/sites-deploying/recommended-deploys.md#tarmk-farm) och användarsynkroniseringen har konfigurerats korrekt, synkroniseras *användare *och *användarprofil* över hela publiceringsgruppen med Sling-distribution.
+När topologin är en [publiceringsgrupp](/help/sites-deploying/recommended-deploys.md#tarmk-farm) och användarsynkroniseringen har konfigurerats korrekt, synkroniseras användarprofilen *user *och *användarprofilen* över hela publiceringsgruppen med Sling-distribution.
 
 ### Användare eller användargrupper skapas med säkerhetskonsolen {#users-or-user-groups-are-created-using-security-console}
 
 Användardata som skapats i publiceringsmiljön visas inte som avsett i redigeringsmiljön och vice versa.
 
-När konsolen [Användaradministration och -säkerhet](/help/sites-administering/security.md) används för att lägga till nya användare i publiceringsmiljön synkroniserar användarsynkroniseringen de nya användarna och deras gruppmedlemskap med andra publiceringsinstanser, om det behövs. Användarsynkronisering synkroniserar även användargrupper som skapats via säkerhetskonsolen.
+När konsolen [Användaradministration och Säkerhet](/help/sites-administering/security.md) används för att lägga till nya användare i publiceringsmiljön synkroniserar användarsynkroniseringen de nya användarna och deras gruppmedlemskap med andra publiceringsinstanser, om det behövs. Användarsynkronisering synkroniserar även användargrupper som skapats via säkerhetskonsolen.
 
 ## Felsökning {#troubleshooting}
 
 ### Använda användarsynkronisering offline {#how-to-take-user-sync-offline}
 
-Distributionskön måste vara tom och tyst om du vill inaktivera användarsynkronisering för att [ta bort en utgivare](#how-to-remove-a-publisher) eller [manuellt synkronisera data](#manually-syncing-users-and-user-groups).
+Distributionskön måste vara tom och tyst om du vill inaktivera användarsynkronisering av data för [att ta bort en utgivare](#how-to-remove-a-publisher) eller [manuellt synkronisera data](#manually-syncing-users-and-user-groups).
 
 Så här kontrollerar du status för distributionskön:
 
@@ -418,7 +430,7 @@ Så här kontrollerar du status för distributionskön:
       * sök efter poster i `/var/sling/distribution/packages`
 
          * mappnoder namngivna med mönstret `distrpackage_*`
-   * med [Package Manager](/help/sites-administering/package-manager.md)
+   * med [Pakethanteraren](/help/sites-administering/package-manager.md)
 
       * söka efter väntande paket (ännu inte installerat)
 
@@ -430,19 +442,19 @@ Inaktivera användarsynkronisering när distributionskön är tom:
 
 * on author
 
-   * *uncheck * `Enabled` kryssrutan för [Apache Sling Distribution Agent - Sync Agents Factory](#apache-sling-distribution-agent-sync-agents-factory)
+   * *uncheck *kryssrutan `Enabled` för [Apache Sling Distribution Agent - Sync Agents Factory](#apache-sling-distribution-agent-sync-agents-factory)
 
 Så här återaktiverar du användarsynkronisering när åtgärderna har slutförts:
 
 * on author
 
-   * markera kryssrutan för `Enabled` [Apache Sling Distribution Agent - Sync Agents Factory](#apache-sling-distribution-agent-sync-agents-factory)
+   * markera kryssrutan `Enabled` för [Apache Sling Distribution Agent - Sync Agents Factory](#apache-sling-distribution-agent-sync-agents-factory)
 
 ### Diagnostik för användarsynkronisering {#user-sync-diagnostics}
 
 Diagnostik för användarsynkronisering är ett verktyg som kontrollerar konfigurationen och försöker identifiera eventuella problem.
 
-Gå bara från huvudkonsolen via **Verktyg, Åtgärder, Diagnostik och Diagnostik för användarsynkronisering.**
+Gå bara från huvudkonsolen via **Verktyg, Åtgärder, Diagnostik, Användarsynkronisering Diagnostik.**
 
 Om du bara anger användarsynkroniseringskonsolen visas resultatet.
 
@@ -452,17 +464,17 @@ Detta visas när användarsynkronisering inte har aktiverats:
 
 #### Så här kör du diagnostik för utgivare {#how-to-run-diagnostics-for-publishers}
 
-När diagnostiken körs från redigeringsmiljön kommer resultatet att inkludera ett [INFO] -avsnitt som visar listan med konfigurerade publiceringsinstanser som kan bekräftas.
+När diagnostiken körs från redigeringsmiljön innehåller resultatet för godkänt/fel ett [INFO]-avsnitt med en lista över konfigurerade publiceringsinstanser som ska bekräftas.
 
-I listan finns en URL för varje publiceringsinstans som kör diagnostiken för den instansen. URL-parametern `syncUser` läggs till i diagnostikwebbadressen med dess värde inställt på den *auktoriserade synkroniseringsanvändaren* som skapades i [steg 2](#createauthuser).
+I listan finns en URL för varje publiceringsinstans som kör diagnostiken för den instansen. URL-parametern `syncUser` läggs till i diagnostikwebbadressen med värdet *auktoriserad synkroniseringsanvändare* som skapats i [steg 2](#createauthuser).
 
-**Obs**: Innan du startar URL:en måste den *auktoriserade synkroniseringsanvändaren* redan vara inloggad på den publiceringsinstansen.
+**Obs**: Innan du startar URL:en måste den  *auktoriserade synkroniseringsanvändaren* vara inloggad på den publiceringsinstansen.
 
 ![](assets/chlimage_1-29.png)
 
 ### Felaktig konfiguration {#configuration-improperly-added}
 
-När användarsynkroniseringen inte fungerar är det vanligaste problemet att ytterligare konfigurationer har *lagts till*. I stället borde den befintliga *standardkonfigurationen ha *redigerats*.
+När användarsynkroniseringen inte fungerar är det vanligaste problemet att ytterligare konfigurationer *lades till*. I stället borde den befintliga *standardkonfigurationen ha redigerats **.
 
 Här följer några vyer över hur den redigerade bilden visas standardkonfigurationer i webbkonsolen. Om fler än en instans visas bör den tillagda konfigurationen tas bort.
 
@@ -474,7 +486,7 @@ Här följer några vyer över hur den redigerade bilden visas standardkonfigura
 
 ![](assets/chlimage_1-31.png)
 
-#### (publicera) One Apache Sling Distribution Agent - Queue Agents Factory {#publish-one-apache-sling-distribution-agent-queue-agents-factory}
+#### (publish) One Apache Sling Distribution Agent - Queue Agents Factory {#publish-one-apache-sling-distribution-agent-queue-agents-factory}
 
 ![](assets/chlimage_1-32.png)
 
@@ -482,7 +494,7 @@ Här följer några vyer över hur den redigerade bilden visas standardkonfigura
 
 ![](assets/chlimage_1-33.png)
 
-#### (författare) One Apache Sling Distribution Trigger - Factory för schemalagda utlösare {#author-one-apache-sling-distribution-trigger-scheduled-triggers-factory}
+#### (författare) En utlösare för Apache Sling Distribution - Schemalagd utlösare Factory {#author-one-apache-sling-distribution-trigger-scheduled-triggers-factory}
 
 ![](assets/chlimage_1-34.png)
 
@@ -494,11 +506,11 @@ Om följande syns i loggen:
 
 `java.lang.IllegalStateException: This tree does not exist`
 
-Kontrollera sedan att avsnitt [2. Skapa auktoriserad användare](#createauthuser) följdes korrekt.
+Kontrollera sedan att avsnittet [2. Skapa auktoriserad användare](#createauthuser) följdes korrekt.
 
-I det här avsnittet beskrivs hur du skapar en behörig användare, som finns i alla publiceringsinstanser, och identifierar dem i OSGi-konfigurationen för den hemliga providern. By default, the user is `admin`.
+I det här avsnittet beskrivs hur du skapar en behörig användare, som finns i alla publiceringsinstanser, och identifierar dem i OSGi-konfigurationen för den hemliga providern. Som standard är användaren `admin`.
 
-Den behöriga användaren bör göras medlem i **`administrators`** användargruppen och behörigheterna för den gruppen bör inte ändras.
+Den auktoriserade användaren bör göras medlem i **`administrators`**-användargruppen och behörigheterna för den gruppen bör inte ändras.
 
 Den behöriga användaren bör uttryckligen ha följande behörigheter och begränsningar för alla publiceringsinstanser:
 
@@ -508,9 +520,9 @@ Den behöriga användaren bör uttryckligen ha följande behörigheter och begr�
 | /home/users | X | */aktiviteter/* |
 | /home/groups | X | */aktiviteter/* |
 
-Som medlem i `administrators` gruppen bör den auktoriserade användaren ha följande behörigheter för alla publiceringsinstanser:
+Som medlem i gruppen `administrators` bör den behöriga användaren ha följande behörigheter för alla publiceringsinstanser:
 
-| **path** | **jcr:all** | **jcr:read** | **rep:write** |
+| **bana** | **jcr:all** | **jcr:read** | **rep:write** |
 |---|---|---|---|
 | /etc/packages/sling/distribution |  |  | X |
 | /libs/sling/distribution |  | X |  |
@@ -529,7 +541,7 @@ Se avsnitt [9. Unikt försäljnings-ID](#unique-sling-id)
 * på utgivaren där användare och användargrupper finns:
 
    * [om det är aktiverat, inaktivera användarsynkronisering](#how-to-take-user-sync-offline)
-   * [skapa ett paket](/help/sites-administering/package-manager.md#creating-a-new-package) med `/home`
+   * [skapa ett ](/help/sites-administering/package-manager.md#creating-a-new-package) paket med  `/home`
 
       * när du redigerar paketet
 
@@ -562,7 +574,7 @@ När en utgivare inte är tillgänglig har författarloggen undantag som liknar:
 
 ### Så här tar du bort en utgivare {#how-to-remove-a-publisher}
 
-Om du vill ta bort en utgivare från [Apache Sling Distribution Agent - Sync Agents Factory](#apache-sling-distribution-agent-sync-agents-factory)måste distributionskön vara tom och tyst.
+Om du vill ta bort en utgivare från [Apache Sling Distribution Agent - Sync Agents Factory](#apache-sling-distribution-agent-sync-agents-factory) måste distributionskön vara tom och tyst.
 
 * on author:
 
@@ -573,4 +585,4 @@ Om du vill ta bort en utgivare från [Apache Sling Distribution Agent - Sync Age
       * `Importer Endpoints`
    * återaktivera användarsynkronisering
 
-      * markera kryssrutan för `Enabled` [Apache Sling Distribution Agent - Sync Agents Factory](#apache-sling-distribution-agent-sync-agents-factory)
+      * markera kryssrutan `Enabled` för [Apache Sling Distribution Agent - Sync Agents Factory](#apache-sling-distribution-agent-sync-agents-factory)
