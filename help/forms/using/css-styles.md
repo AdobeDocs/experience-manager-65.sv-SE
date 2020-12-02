@@ -11,6 +11,9 @@ topic-tags: hTML5_forms
 discoiquuid: a8d986ab-2a4c-488b-957e-4606f7391bd3
 translation-type: tm+mt
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+workflow-type: tm+mt
+source-wordcount: '838'
+ht-degree: 2%
 
 ---
 
@@ -23,19 +26,19 @@ HTML5-återgivningen av en XFA-baserad formulärmall består av flera HTML-eleme
 >
 >I CSS-klasserna ska du inte ändra värdet för attributen width, height, border-tjocklek, top, left, right, bottom, padding, margin och other position and size. Alla ändringar i attributen position och storlek medför ändringar i formulärets layout.
 
-## CSS-klasser för element {#css-classes-nbsp-for-elements-nbsp}
+## CSS-klasser  för element  {#css-classes-nbsp-for-elements-nbsp}
 
 Alla element innehåller väldefinierade CSS-klasser. Du kan ändra dessa klasser om du vill ändra utseendet på ett element. Alla element, förutom fältet och draw-elementen, har två CSS-klasser - Type-klassen och Name-klassen.
 
-* Klassen **** Type representerar typen av XFA-fält. Du kan åsidosätta `type` klassen om du vill ändra formaten för alla element av en viss typ.
+* Klassen **Type** representerar typen av XFA-fält. Du kan åsidosätta klassen `type` om du vill ändra formaten för alla element av en viss typ.
 
-* Klassen **** Name motsvarar namnet på XFA-fältet. Du kan åsidosätta den `name` klass som du vill ändra och använda ett anpassat format på ett element.
+* **Namnklassen** motsvarar namnet på XFA-fältet. Du kan åsidosätta klassen `name` om du vill ändra och använda ett anpassat format på ett element.
 
 >[!NOTE]
 >
 >Vissa XFA-element har inget namn. Om du vill ändra formaten för sådana komponenter ändrar du alla komponenter av den typen.
 
-För sidor som inte är namngivna i AEM Forms Designer namnges sidorna i ett HTML5-formulär i stigande ordningsföljd. För ett HTML5-formulär med två sidor heter sidorna t.ex. Page1, Page2.
+För sidor som inte är namngivna i AEM Forms Designer namnges sidorna i ett HTML5-formulär i nummerordningen. För ett HTML5-formulär med två sidor heter sidorna t.ex. Page1, Page2.
 
 ## Fältelement {#field-element}
 
@@ -66,7 +69,7 @@ Widgetelementet innehåller användargränssnittselementet för interaktion med 
 </div>
 ```
 
-Förutom klassen type och name innehåller fältkomponenten även en annan CSS-klass med namnet **subtype**. En undertyp identifierar vilken typ av fält det är, till exempel NumericField, DateField och TextField. Du kan åsidosätta undertypsklassen om du vill ändra formateringen för alla fält av typen, undertyp.
+Förutom klassen type och name innehåller fältkomponenten även en annan CSS-klass med namnet **undertyp**. En undertyp identifierar vilken typ av fält det är, till exempel NumericField, DateField och TextField. Du kan åsidosätta undertypsklassen om du vill ändra formateringen för alla fält av typen, undertyp.
 
 ## CSS-klasser för olika komponenter {#css-classes-for-different-components}
 
@@ -80,7 +83,7 @@ Förutom klassen type och name innehåller fältkomponenten även en annan CSS-k
   <tr>
    <td>Sidan</td>
    <td>page</td>
-   <td>Användardefinierat namn<br /> eller<br /> Page&lt;pageNumber&gt; (standard)</td>
+   <td>Användardefinierat namn<br /> eller<br /> Sida&lt;pageNumber&gt; (standard)</td>
   </tr>
   <tr>
    <td>Innehållsområde</td>
@@ -99,7 +102,7 @@ Förutom klassen type och name innehåller fältkomponenten även en annan CSS-k
   </tr>
   <tr>
    <td>Rita</td>
-   <td>draw</td>
+   <td>rita</td>
    <td>Användardefinierat namn</td>
   </tr>
   <tr>
@@ -122,7 +125,7 @@ Förutom klassen type och name innehåller fältkomponenten även en annan CSS-k
 
 ## CSS-klasser för olika fält {#css-classes-for-different-fields}
 
-AEM Forms Designer stöder olika typer av fält i ett formulär, t.ex. NumericField, DecimalField och Date Field. Alla dessa fält i HTML innehåller de ovannämnda CSS-klasserna. De innehåller också vissa extra klasser beroende på fälttypen.
+AEM Forms Designer har stöd för olika typer av fält i ett formulär som NumericField, DecimalField och Date Field. Alla dessa fält i HTML innehåller de ovannämnda CSS-klasserna. De innehåller också vissa extra klasser beroende på fälttypen.
 
 Varje fält har en tillhörande widget som representerar gränssnittselementet. Klasserna för varje fält och de widgetar som är kopplade till varje fält listas nedan.
 
@@ -139,26 +142,26 @@ Varje fält har en tillhörande widget som representerar gränssnittselementet. 
    <td>Knapp<br type="_moz" /> </td>
    <td>NA</td>
    <td>xfaButton<br type="_moz" /> </td>
-   <td>buttonfieldwidget<br type="_moz" /> </td>
-   <td>indatatyp=knapp<br type="_moz" /> </td>
+   <td>knapptonfieldwidget<br type="_moz" /> </td>
+   <td>indatatyp=button<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>CheckButton<br type="_moz" /> </td>
    <td>kryssrutefält<br /> </td>
    <td>XfaCheckBox<br type="_moz" /> </td>
-   <td>kryssrutfältwidget<br type="_moz" /> </td>
+   <td>kryssrutefältwidget<br type="_moz" /> </td>
    <td>indatatyp=kryssruta<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>DateField<br type="_moz" /> </td>
-   <td>datafält<br type="_moz" /> </td>
+   <td>datefield<br type="_moz" /> </td>
    <td>dateField<br type="_moz" /> </td>
    <td>datefieldwidget<br type="_moz" /> </td>
    <td>indatatyp=text<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>DateTimeField<br type="_moz" /> </td>
-   <td>textfield<br type="_moz" /> </td>
+   <td>textfält<br type="_moz" /> </td>
    <td>textField<br type="_moz" /> </td>
    <td>textfältwidget</td>
    <td>indatatyp=text<br type="_moz" /> </td>
@@ -172,16 +175,16 @@ Varje fält har en tillhörande widget som representerar gränssnittselementet. 
   </tr>
   <tr>
    <td>DropDown<br type="_moz" /> </td>
-   <td>choicelist<br type="_moz" /> </td>
+   <td>urvalslista<br type="_moz" /> </td>
    <td>dropDownListWidget<br type="_moz" /> </td>
-   <td>vallistorwidget<br type="_moz" /> </td>
+   <td>välj en listwidget<br type="_moz" /> </td>
    <td>select</td>
   </tr>
   <tr>
    <td>ListBox<br type="_moz" /> </td>
-   <td>choicelist<br type="_moz" /> </td>
+   <td>urvalslista<br type="_moz" /> </td>
    <td>listBoxWidget<br type="_moz" /> </td>
-   <td>vallistorwidget<br type="_moz" /> </td>
+   <td>välj en listwidget<br type="_moz" /> </td>
    <td>ol</td>
   </tr>
   <tr>
@@ -195,28 +198,28 @@ Varje fält har en tillhörande widget som representerar gränssnittselementet. 
    <td>PasswordField<br type="_moz" /> </td>
    <td>lösenordsfält<br type="_moz" /> </td>
    <td>defaultWidget<br type="_moz" /> </td>
-   <td>lösenordfältwidget<br type="_moz" /> </td>
+   <td>passwordFieldwidget<br type="_moz" /> </td>
    <td>input type=password<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>RadioButton<br type="_moz" /> </td>
    <td>radiofält<br type="_moz" /> </td>
    <td>XfaCheckBox<br type="_moz" /> </td>
-   <td>radiofältwidget<br type="_moz" /> </td>
+   <td>radiofieldwidget<br type="_moz" /> </td>
    <td>indatatyp=radio<br type="_moz" /> </td>
   </tr>
   <tr>
-   <td>TextField<br type="_moz" /> </td>
-   <td>textfield<br type="_moz" /> </td>
+   <td>Textfält<br type="_moz" /> </td>
+   <td>textfält<br type="_moz" /> </td>
    <td>textField<br type="_moz" /> </td>
-   <td>textfältwidget<br type="_moz" /> </td>
+   <td>textfieldwidget<br type="_moz" /> </td>
    <td>indatatyp=text<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>TimeField<br type="_moz" /> </td>
-   <td>textfield<br type="_moz" /> </td>
+   <td>textfält<br type="_moz" /> </td>
    <td>textField<br type="_moz" /> </td>
-   <td>textfältwidget<br type="_moz" /> </td>
+   <td>textfieldwidget<br type="_moz" /> </td>
    <td>indatatyp=text<br type="_moz" /> </td>
   </tr>
  </tbody>
@@ -224,12 +227,12 @@ Varje fält har en tillhörande widget som representerar gränssnittselementet. 
 
 ## CSS-klasser för olika Draw-element {#css-classes-for-different-draw-elements}
 
-Du kan infoga statiska ritelement som text och bilder med hjälp av AEM Forms Designer. För varje draw-element kopplas en separat CSS-klass till det elementet. Listan med CSS-klasser för draw-element visas nedan. Alla draw-element har en draw-klass kopplad till sig.
+Du kan infoga statiska ritelement som text och bilder med AEM Forms Designer. För varje draw-element kopplas en separat CSS-klass till det elementet. Listan med CSS-klasser för draw-element visas nedan. Alla draw-element har en draw-klass kopplad till sig.
 
 | **Rita typ** | **CSS, klass** |
 |---|---|
 | Text | text |
-| Bild | image |
+| Bild | bild |
 | Rektangel | rectangle |
 | Linje | line |
 
@@ -239,12 +242,12 @@ Förutom utseendet på gränssnittskomponenter i HTML-formuläret kan du ändra 
 
 `Styling Inline Errors`
 
-När valideringen av ett fält resulterar i ett fel visas ett internt fel när fältet är aktivt. Om du vill ändra formatet för infogade fel åsidosätter du CSS ID- **felmeddelandet**.
+När valideringen av ett fält resulterar i ett fel visas ett internt fel när fältet är aktivt. Om du vill ändra formatet för infogade fel åsidosätter du CSS-ID **error-msg**.
 
 `Styling Inline Warnings`
 
-När valideringen av ett fält resulterar i en varning visas en intern varning när fältet är aktivt. Om du vill ändra formatet för dessa infogade varningar åsidosätter du CSS ID- **varningsmeddelandet**.
+När valideringen av ett fält resulterar i en varning visas en intern varning när fältet är aktivt. Om du vill ändra formatet för de här infogade varningarna åsidosätter du CSS-ID **warning-msg**.
 
 `Styling Fields with Validation Errors`
 
-När valideringen för ett fält misslyckas ändras formatet på widgeten. Den här formatändringen görs genom att en CSS-klass **widgetError** används på widgetkomponenten. Om du vill ändra standardformatet åsidosätter du **klassen widgetError** .
+När valideringen för ett fält misslyckas ändras formatet på widgeten. Den här formatändringen görs genom att en CSS-klass **widgetError** används på widgetkomponenten. Om du vill ändra standardformatet åsidosätter du klassen **widgetError**.
