@@ -11,13 +11,16 @@ topic-tags: best-practices
 discoiquuid: 4b5c0677-c630-4fae-867e-4f4583ac8507
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '438'
+ht-degree: 0%
 
 ---
 
 
-# Distribuera bästa praxis{#deploying-best-practices}
+# Distribuera metodtips{#deploying-best-practices}
 
-Bästa tillvägagångssätt för att driftsätta eller underhålla AEM på det mest effektiva och effektiva sättet. Den här växande ämneslistan innehåller en rad olika områden i AEM.
+Bästa tillvägagångssätt beskriver hur ni driftsätter eller upprätthåller AEM på det mest effektiva och effektiva sättet. Den här växande listan med ämnen innehåller en mängd olika områden i AEM.
 
 Följande områden har dokumentation om användning och underhåll av bästa metoder och rekommendationer:
 
@@ -36,7 +39,7 @@ Specifika dokument beskrivs och länkas till i de tabeller som följer.
 
 ## OAK {#oak}
 
-[Oak](/help/sites-deploying/platform.md) är ett skalbart och prestandabaserat hierarkiskt innehållsarkiv som utgör grunden för AEM.
+[](/help/sites-deploying/platform.md) Oakis är en skalbar och kraftfull hierarkisk databas för innehåll som utgör grunden för AEM.
 
 <table>
  <tbody>
@@ -58,7 +61,7 @@ Specifika dokument beskrivs och länkas till i de tabeller som följer.
   <tr>
    <td>Alternativ för datalagring</td>
    <td><a href="/help/sites-deploying/data-store-config.md">Konfigurera nod- och datalager</a></td>
-   <td>I det här dokumentet förklaras de bästa sätten att lagra binära data och innehållsnoder. Innehåller information om hur du använder datalagret Amazon S3.</td>
+   <td>I det här dokumentet förklaras de bästa sätten att lagra binära data och innehållsnoder. Innehåller information om hur du använder datalagret i Amazon S3.</td>
   </tr>
   <tr>
    <td>Sök i OAK</td>
@@ -72,15 +75,15 @@ Specifika dokument beskrivs och länkas till i de tabeller som följer.
 
 AEM Communities förenklar framtagning och hantering av lokala communityn. Bästa tillvägagångssätt för AEM Communities beskrivs här:
 
-[Community Content Store](/help/communities/working-with-srp.md) - Diskuterar den nya funktionen för delad lagring av användargenererat innehåll (UGC) och överväganden för val av underliggande [topologi](/help/communities/topologies.md).
+[Community Content Store](/help/communities/working-with-srp.md)  - Diskuterar den nya funktionen för delad lagring av användargenererat innehåll (UGC) och överväganden för val av underliggande  [topologi](/help/communities/topologies.md).
 
-[Rekommenderade distributioner för communities](/help/sites-deploying/recommended-deploys.md#considerations-for-aem-communities) - Beskriver de rekommenderade distributionerna för Communities. |
+[Rekommenderade distributioner för communities](/help/sites-deploying/recommended-deploys.md#considerations-for-aem-communities)  - Beskriver de rekommenderade distributionerna för Communities. |
 
-## UI {#ui}
+## Gränssnitt {#ui}
 
 De bästa sätten att använda användargränssnittet beskrivs här:
 
-[Rekommendationer för användargränssnitt för kunder](/help/sites-deploying/ui-recommendations.md)
+[Användargränssnitt Recommendations för kunder](/help/sites-deploying/ui-recommendations.md)
 
 AEM har för närvarande två gränssnitt: klassiskt och pekoptimerat gränssnitt i samma version. Därför måste kunderna fatta ett beslut om vilken användning som ska ske under projektets genomförande. Det här dokumentet är avsett att hjälpa till att hitta rätt alternativ.
 
@@ -93,7 +96,7 @@ De bästa metoderna för prestandaanvändning listas här:
   <tr>
    <td>Bästa metoder för kvalitetssäkring</td>
    <td><a href="/help/sites-deploying/configuring-performance.md#best-practices-for-quality-assurance">Bästa metoder för kvalitetssäkring</a></td>
-   <td>En standardiserad översikt över problem med att definiera ett testkoncept specifikt för prestandatester i din <em>publiceringsmiljö</em> . Detta är främst av intresse för kvalitetstekniker, projektledare och systemadministratörer.</td>
+   <td>En standardiserad översikt över problem med att definiera ett testkoncept specifikt för prestandatester i din <em>publicerings</em>-miljö. Detta är främst av intresse för kvalitetstekniker, projektledare och systemadministratörer.</td>
   </tr>
   <tr>
    <td>Använda Dispatcher med ett CDN</td>
@@ -108,7 +111,7 @@ De bästa metoderna för prestandaanvändning listas här:
   <tr>
    <td>Prestandatestning</td>
    <td><a href="/help/sites-deploying/best-practices-for-performance-testing.md">Bästa metoder för prestandatestning</a></td>
-   <td>Beskriver de bästa sätten att köra prestandatester på en AEM-distribution.<br /> </td>
+   <td>Beskriver de bästa sätten att köra prestandatester på en AEM.<br /> </td>
   </tr>
  </tbody>
 </table>
