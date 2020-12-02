@@ -36,7 +36,7 @@ ht-degree: 0%
    + [Uppgradera till AEM 6.5 Communities](upgrade.md)
    + [Rekommenderade topologier för communities](topologies.md)
    + [Konfigurera Dispatcher för Communities](dispatcher.md)
-+ Administratör {#administer}
++ Administrera {#administer}
    + [Tjänsten för hantering av användare och användargenererat innehåll i AEM Communities](user-ugc-management-service.md)
    + [Communities Sites](administer-landing.md)
    + [Communities-konsoler](consoles.md)
