@@ -1,8 +1,8 @@
 ---
 title: Kortkommandon för konsoler
 seo-title: Kortkommandon för konsoler
-description: Olika kortkommandon finns tillgängliga i hela AEM. En del gäller för användning av konsoler, andra för sidredigering.
-seo-description: Olika kortkommandon finns tillgängliga i hela AEM. En del gäller för användning av konsoler, andra för sidredigering.
+description: Olika kortkommandon finns i hela AEM. En del gäller för användning av konsoler, andra för sidredigering.
+seo-description: Olika kortkommandon finns i hela AEM. En del gäller för användning av konsoler, andra för sidredigering.
 uuid: 3be775f4-ea44-4843-9041-dbcf0c41eec4
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,22 +11,26 @@ content-type: reference
 discoiquuid: b6e42b9d-9e27-4f22-8543-442d03af48f3
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '136'
+ht-degree: 2%
 
 ---
 
 
 # Kortkommandon för konsoler{#keyboard-shortcuts-for-consoles}
 
-Olika kortkommandon finns tillgängliga i hela AEM. En del gäller användning av konsoler, andra för [sidredigering](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md).
+Olika kortkommandon finns i hela AEM. Vissa gäller för användning av konsoler, andra för [sidredigering](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md).
 
 >[!NOTE]
 >
 >Flera val på en stationär enhet:
 >
->* Windows: **Ctrl**+**klicka** på de nödvändiga komponenterna.
+>* Windows: **Ctrl**+**klicka** på nödvändiga komponenter.
    >
    >
-* Mac: **Cmd**+**klicka** på komponenterna.
+* Mac: **Cmd**+**klicka** på nödvändiga komponenter.
+
 >
 
 
@@ -43,7 +47,7 @@ Olika kortkommandon finns tillgängliga i hela AEM. En del gäller användning a
   <tr>
    <td>Konsol</td>
    <td><strong><code>Shift-Double-Click</code></strong><br /> (på obligatorisk sida)</td>
-   <td>Öppna sidan i nytt fönster.<br /><strong> </strong>Obs! detta fungerar om <a href="/help/sites-classic-ui-authoring/author-env-user-props.md">användaregenskaperna</a> är inställda på ett fönster, om flera fönster är detta standardbeteende.</td>
+   <td>Öppna sidan i nytt fönster.<br /> <strong>Obs!</strong> Detta fungerar om  <a href="/help/sites-classic-ui-authoring/author-env-user-props.md">användaregenskaperna </a> är inställda på ett fönster; om flera fönster är detta standardbeteende.</td>
   </tr>
  </tbody>
 </table>
