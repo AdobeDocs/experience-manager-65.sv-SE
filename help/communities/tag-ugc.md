@@ -28,7 +28,7 @@ Taggar används oftast av författare och administratörer i författarmiljön. 
 
 Taggnamnutrymmen och taxonomier är samma för båda programmen.
 
-## Funktioner i Communities {#communities-features}
+## Communities Features {#communities-features}
 
 AEM Communities-funktionerna som kan konfigureras för att tillåta taggning är:
 
@@ -42,9 +42,9 @@ AEM Communities-funktionerna som kan konfigureras för att tillåta taggning är
 
 Se [Administrera taggar](../../help/sites-administering/tags.md#tagging-console) för att skapa och hantera taggnamnutrymmen och taxonomier.
 
-Mer information om utvecklare finns i [Tagga Essentials](tag.md) .
+Mer utvecklarinformation finns i [Tagga viktiga](tag.md).
 
-Se [Använda molnet](tagcloud.md) för sociala taggar för att lägga till en komponent i molnet för sociala taggar på en sida för att underlätta sökning efter publicerad UGC med de taggar som används.
+Se [Använda molnet för sociala taggar](tagcloud.md) för att lägga till en komponent i molnet för sociala taggar på en sida för att underlätta sökning efter publicerad UGC med de taggar som används.
 
 ### Taggbehörigheter {#tag-permissions}
 
@@ -54,7 +54,7 @@ Eftersom taggar används i UGC i publiceringsmiljön måste läsbehörighet akti
 
 Se [Ange taggbehörigheter](../../help/sites-administering/tags.md#setting-tag-permissions).
 
-Så här visas det i CRXDE när en administratör tillämpar läsbehörigheter på `/etc/tag/discussions` gruppen `Community Engage Members`.
+Så här visas det i CRXDE när en administratör tillämpar läsbehörigheter på `/etc/tag/discussions` för gruppen `Community Engage Members`.
 
 ![tag-permissions](assets/tag-permissions.png)
 
