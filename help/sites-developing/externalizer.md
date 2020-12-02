@@ -12,13 +12,16 @@ discoiquuid: 938469ad-f466-42f4-8b6f-bfc060ae2785
 docset: aem65
 translation-type: tm+mt
 source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+workflow-type: tm+mt
+source-wordcount: '523'
+ht-degree: 0%
 
 ---
 
 
-# Extern URL{#externalizing-urls}
+# Externaliserar URL:er{#externalizing-urls}
 
-I AEM är **Externalizer** en OSGI-tjänst som du kan använda för att programmässigt omvandla en resurssökväg (t.ex. till `/path/to/my/page`en extern och absolut URL (till exempel `https://www.mycompany.com/path/to/my/page`) genom att prefix-sökvägen med en förkonfigurerad DNS.
+I AEM är **Externalizer** en OSGI-tjänst som gör att du kan omforma en resurssökväg programmatiskt (t.ex. `/path/to/my/page`) till en extern och absolut URL (till exempel `https://www.mycompany.com/path/to/my/page`) genom att prefix-sökvägen med en förkonfigurerad DNS.
 
 Eftersom en instans inte känner till sin externt synliga URL-adress om den körs bakom ett webblager, och eftersom en länk ibland måste skapas utanför det begärda omfånget, utgör den här tjänsten en central plats för att konfigurera de externa URL-adresserna och skapa dem.
 
@@ -26,11 +29,11 @@ På den här sidan beskrivs hur du konfigurerar tjänsten **Externalizer** och h
 
 ## Konfigurera tjänsten Externalizer {#configuring-the-externalizer-service}
 
-Med **tjänsten Externalizer** kan du centralt definiera flera domäner som kan användas för att programmässigt prefix för resurssökvägar. Varje domän identifieras med ett unikt namn som används för att programmässigt referera till domänen.
+Med tjänsten **Externalizer** kan du centralt definiera flera domäner som kan användas för att programmässigt prefix för resurssökvägar. Varje domän identifieras med ett unikt namn som används för att programmässigt referera till domänen.
 
-Så här definierar du en domänmappning för tjänsten **Externalizer** :
+Så här definierar du en domänmappning för tjänsten **Externalizer**:
 
-1. Navigera till konfigurationshanteraren via **Verktyg** och **Webbkonsol** eller ange:
+1. Navigera till konfigurationshanteraren via **Verktyg**, **Webbkonsol** eller ange:
 
    `https://<host>:<port>/system/console/configMgr`
 
@@ -42,32 +45,31 @@ Så här definierar du en domänmappning för tjänsten **Externalizer** :
 
    ![aem-externalizer-01](assets/aem-externalizer-01.png)
 
-1. Definiera en **domänmappning** : en mappning består av ett unikt namn som kan användas i koden för att referera till domänen, ett blanksteg och domänen:
+1. Definiera en **domänmappning**: en mappning består av ett unikt namn som kan användas i koden för att referera till domänen, ett blanksteg och domänen:
 
    `<unique-name> [scheme://]server[:port][/contextpath]`
 
    Var:
 
-    * **Schemat** är vanligtvis http eller https, men kan också vara ftp, osv.
+   * **scheman är vanligtvis** http eller https, men kan också vara ftp, osv.
 
-        * använd https för att framtvinga https-länkar vid behov
-        * den kommer att användas om klientkoden inte åsidosätter schemat när den frågar efter en URL-adress.
+      * använd https för att framtvinga https-länkar vid behov
+      * den kommer att användas om klientkoden inte åsidosätter schemat när en URL-adress begärs externt.
+   * **** server är värdnamnet (kan vara ett domännamn eller en IP-adress).
+   * **port**  (valfritt) är portnumret.
+   * **contextpath**  (valfritt) anges bara om AEM har installerats som en webbapp under en annan kontextsökväg.
 
-    * **server** är värdnamnet (kan vara ett domännamn eller en IP-adress).
-    * **port** (valfritt) är portnumret.
-    * **kontextsökväg** (valfritt) anges bara om AEM är installerat som en webbapp under en annan kontextsökväg.
-
-   Exempel: `production https://my.production.instance`
+   Till exempel: `production https://my.production.instance`
 
    Följande mappningsnamn är fördefinierade och måste alltid anges som AEM är beroende av dem:
 
-    * `local` - den lokala instansen
-    * `author` - redigeringssystemets DNS
-    * `publish` - den offentliga webbplatsens DNS
+   * `local` - den lokala instansen
+   * `author` - redigeringssystemets DNS
+   * `publish` - den offentliga webbplatsens DNS
 
    >[!NOTE]
    >
-   >Med en anpassad konfiguration kan du lägga till en ny kategori, till exempel `production``staging` eller till och med externa icke-AEM-system som `my-internal-webservice`. Det är praktiskt att undvika hårdkodning av sådana URL:er på olika platser i ett projekts kodbas.
+   >Med en anpassad konfiguration kan du lägga till en ny kategori, till exempel `production`, `staging` eller till och med externa icke-AEM system som `my-internal-webservice`. Det är praktiskt att undvika hårdkodning av sådana URL:er på olika platser i ett projekts kodbas.
 
 1. Klicka på **Spara** för att spara ändringarna.
 
@@ -77,7 +79,7 @@ Så här definierar du en domänmappning för tjänsten **Externalizer** :
 
 ### Använda tjänsten Externalizer {#using-the-externalizer-service}
 
-I det här avsnittet visas några exempel på hur du kan använda **tjänsten Externalizer** :
+I det här avsnittet visas några exempel på hur du kan använda tjänsten **Externalizer**:
 
 1. **Så här hämtar du tjänsten Externalizer i en JSP:**
 
@@ -94,6 +96,7 @@ I det här avsnittet visas några exempel på hur du kan använda **tjänsten Ex
    Anta domänmappningen:
 
    * `publish https://www.website.com`
+
    `myExternalizedUrl` slutar med värdet:
 
    * `https://www.website.com/contextpath/my/page.html`
@@ -108,6 +111,7 @@ I det här avsnittet visas några exempel på hur du kan använda **tjänsten Ex
    Anta domänmappningen:
 
    * `author https://author.website.com`
+
    `myExternalizedUrl` slutar med värdet:
 
    * `https://author.website.com/contextpath/my/page.html`
@@ -122,6 +126,7 @@ I det här avsnittet visas några exempel på hur du kan använda **tjänsten Ex
    Anta domänmappningen:
 
    * `local https://publish-3.internal`
+
    `myExternalizedUrl` slutar med värdet:
 
    * `https://publish-3.internal/contextpath/my/page.html`
