@@ -19,14 +19,14 @@ ht-degree: 0%
 
 # Skapa hjälpmedelsanpassade komplexa tabeller i HTML5-formulär {#create-accessible-complex-tables-in-html-forms}
 
-Standardimplementeringen av tabeller i HTML5-formulär använder HTML DIV-element för att återge en tabell. Återgivning innebär att ARIA-roller används för att uppfylla tillgänglighetskraven.
+Standardimplementeringen av tabeller i HTML5 Forms använder HTML DIV-element för att återge en tabell. Återgivning innebär att ARIA-roller används för att uppfylla tillgänglighetskraven.
 
-För att undvika tillgänglighetsproblem med skärmläsare som inte har fullt stöd för de ARIA-roller som används med datatabeller, erbjuder HTML5-formulär en alternativ återgivning för tabellerna. Tabellerna är baserade på det nya tabellformatet som introducerades i Designer och som även stöder:
+För att undvika tillgänglighetsproblem med skärmläsare som inte har fullt stöd för de ARIA-roller som används med datatabeller, erbjuder HTML5 Forms en alternativ återgivning för tabellerna. Tabellerna är baserade på det nya tabellformatet som introducerades i Designer och som även stöder:
 
 * Radrubriker
 * Radomfång
 
-Om du vill använda det nya formatet i HTML5-formulär markerar du tabellen som komplex. Om du vill markera tabellen som komplex lägger du till `extras` -taggen i XML-källan för tabelldelformuläret enligt följande:
+Om du vill använda det nya formatet i HTML5 Forms markerar du tabellen som komplex. Om du vill markera tabellen som komplex lägger du till taggen `extras` i XML-källan för tabelldelformuläret enligt följande:
 
 ```xml
 </extras>
@@ -34,17 +34,17 @@ Om du vill använda det nya formatet i HTML5-formulär markerar du tabellen som 
  </extras>
 ```
 
-Tabellerna som markeras som *complexTable* följer den inbyggda HTML-återgivningen och ger bättre stöd för tillgänglighet för vissa skärmläsare.  Om du vill skapa ett radintervall markerar du celler i en tabell i följd i samma kolumn, högerklickar på markeringen och klickar sedan på **[!UICONTROL Merge Cells]**.
+Tabellerna som är markerade som *complexTable* följer den inbyggda HTML-återgivningen och ger bättre stöd för tillgänglighet för vissa skärmläsare.  Om du vill skapa ett radintervall markerar du celler i en tabell i följd i samma kolumn, högerklickar på markeringen och klickar sedan på **[!UICONTROL Merge Cells]**.
 
 >[!NOTE]
 >
 >Det går bara att skapa ett radintervall för celler längst till vänster.
 
-Om du vill markera en rad som radhuvud markerar du alla celler i raden, högerklickar på markeringen och klickar sedan på **[!UICONTROL Mark Header]**.
+Om du vill markera en rad som radrubrik markerar du alla celler i raden, högerklickar på markeringen och klickar sedan på **[!UICONTROL Mark Header]**.
 
 Om du vill markera en cell som kolumnrubrik markerar du en cell i kolumnen, högerklickar på markeringen och klickar sedan på **[!UICONTROL Mark Header]**.
 
-Begränsningar i det nya *AccessibleTable* -formatet:
+Begränsningar i det nya *AccessibleTable*-formatet:
 
 * Brist på stöd för utökningsbara fält om rowspan används i tabellen
 * Inget stöd för kapslade tabeller (tabeller i tabellceller)
