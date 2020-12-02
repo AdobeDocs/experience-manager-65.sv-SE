@@ -10,13 +10,16 @@ topic-tags: correspondence-management
 discoiquuid: f2955419-c680-44a7-9913-c594b4577551
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '877'
+ht-degree: 1%
 
 ---
 
 
-# Egenskaper för konfiguration av korrespondenshantering {#correspondence-management-configuration-properties}
+# Konfigurationsegenskaper för korrespondenshantering {#correspondence-management-configuration-properties}
 
-Om du vill konfigurera de här egenskaperna öppnar du följande URL-adress i en webbläsare: `https://<server>:<port>/<contextPath>/system/console/configMgr` och välj **Correspondence Management Configurations**.
+Om du vill konfigurera de här egenskaperna öppnar du följande URL-adress i en webbläsare: `https://<server>:<port>/<contextPath>/system/console/configMgr` och välj **Konfiguration för korrespondenshantering**.
 
 Correspondence Management har följande konfigurationsegenskaper:
 
@@ -31,19 +34,19 @@ Correspondence Management har följande konfigurationsegenskaper:
   <tr>
    <td><p>Indrag</p> </td>
    <td>Indrag för moduler<p> </p> </td>
-   <td><p>12.7mm</p> </td>
+   <td><p>12,7 mm</p> </td>
    <td><p>Valfritt tal</p> </td>
   </tr>
   <tr>
    <td>Minsta numerisk bredd</td>
-   <td>Minsta bredd som ska användas i punkt-/nummerfältet när numrerade listor används utom latinska nummer</td>
-   <td>8.0mm</td>
+   <td>Minsta bredd som ska användas i fältet punkt/nummer när numrerade listor används utom latinska nummer</td>
+   <td>8,0 mm</td>
    <td>Valfritt tal</td>
   </tr>
   <tr>
    <td><p>Minsta bredd för romerska siffror</p> </td>
    <td><p>Minsta bredd som ska användas på punkt-/nummerfältet när romerska siffror används</p> </td>
-   <td><p>12.7mm</p> </td>
+   <td><p>12,7 mm</p> </td>
    <td><p>Valfritt tal</p> </td>
   </tr>
   <tr>
@@ -152,13 +155,13 @@ Correspondence Management har följande konfigurationsegenskaper:
    <td><p>Datavisningsformat</p> </td>
    <td><p>Anger språkspecifikt visningsformat för data</p> </td>
    <td><p>locale=en_US; dateFormat=dd-MM-yyyy; numberDecimalSeparator=.; numberGroupSeparator=,; numberUseGroupSeparator=truelocale=de_DE; dateFormat=dd-MM-yyyy; numberDecimalSeparator=,; numberGroupSeparator=.; numberUseGroupSeparator=truelocale=fr_FR; dateFormat=dd-MM-yyyy; numberDecimalSeparator=,; numberGroupSeparator= ; numberUseGroupSeparator=truelocale=ja_JP; dateFormat=dd-MM-yyyy; numberDecimalSeparator=.; numberGroupSeparator=,; numberUseGroupSeparator=true</p> </td>
-   <td><p>--</p> </td>
+   <td><p>—</p> </td>
   </tr>
   <tr>
    <td><p>Dataredigeringsformat</p> </td>
    <td><p>Redigera dataformat. Detta används vid skrivning av data som String eller tolkning av data från String</p> </td>
    <td><p>locale=en_US; dateFormat=dd-MM-yyyy; numberDecimalSeparator=.; numberGroupSeparator=,; numberUseGroupSeparator=true</p> </td>
-   <td>--<p> </p> </td>
+   <td>—<p> </p> </td>
   </tr>
   <tr>
    <td><p>Hantera bokstavsinstanser vid publicering</p> </td>
@@ -241,18 +244,18 @@ Correspondence Management har följande konfigurationsegenskaper:
   <tr>
    <td><p>CM-användarrot</p> </td>
    <td><p>URL för mappen som innehåller alla Correspondence Management-användarresurser</p> </td>
-   <td><p>--</p> </td>
+   <td><p>—</p> </td>
    <td><p>Giltig mapplats</p> </td>
   </tr>
   <tr>
    <td><p>Storlek på bokstavscache</p> </td>
-   <td><p>Ange maximalt antal bokstäver som ska behållas i cachen.</p> <p>Om du ändrar det här värdet rensas <code>in-memory</code> cachen.</p> </td>
+   <td><p>Ange maximalt antal bokstäver som ska behållas i cachen.</p> <p>Om du ändrar det här värdet rensas cachen <code>in-memory</code>.</p> </td>
    <td><p>100</p> </td>
    <td><p>Valfritt numeriskt värde</p> </td>
   </tr>
   <tr>
    <td><p>Aktivera bokstavscache</p> </td>
-   <td><p>Aktivera/inaktivera bokstavscachen.</p> <p>Om du ändrar det här värdet rensas <code>in-memory </code> cachen.</p> </td>
+   <td><p>Aktivera/inaktivera bokstavscachen.</p> <p>Om du ändrar det här värdet rensas cachen <code>in-memory </code>.</p> </td>
    <td><p>true</p> </td>
    <td><p>true / false</p> </td>
   </tr>
@@ -288,7 +291,7 @@ Correspondence Management har följande konfigurationsegenskaper:
   </tr>
   <tr>
    <td><p>Felsökningskatalog </p> <p> </p> </td>
-   <td>Sökväg till filsystemmappen för felsökning. Om katalogen inte gör det <code>exists</code>genereras inga felsökningsdumpar.</td>
+   <td>Sökväg till filsystemmappen för felsökning. Om katalogen inte <code>exists</code> genereras inga felsökningsdumpar.</td>
    <td>acm.debugDirectory</td>
    <td> </td>
   </tr>
