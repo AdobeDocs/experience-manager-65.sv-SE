@@ -12,21 +12,24 @@ discoiquuid: 39b8cf9b-afec-4c9a-8a5d-7fc87e643f26
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 9f923782d3d0a7bdf45b18e8025bd2d083acf77c
+workflow-type: tm+mt
+source-wordcount: '581'
+ht-degree: 23%
 
 ---
 
 
 # Publicera mappar på varumärkesportalen{#publish-folders-to-brand-portal}
 
-Som administratör för Adobe Experience Manager-resurser (AEM) kan du publicera resurser och mappar i instansen av AEM Assets Brand Portal (eller schemalägga publiceringsarbetsflödet till ett senare datum/tid) för organisationen. Du måste dock först integrera AEM Assets med varumärkesportalen. Mer information finns i [Konfigurera AEM-resurser med varumärkesportalen](/help/assets/configure-aem-assets-with-brand-portal.md).
+Som Adobe Experience Manager (AEM) Assets-administratör kan du publicera resurser och mappar till AEM Assets Brand Portal-instansen (eller schemalägga publiceringsarbetsflödet till ett senare datum/tid) för din organisation. Du måste dock först integrera AEM Assets med Brand Portal. Mer information finns i [Konfigurera AEM Assets med varumärkesportalen](/help/assets/configure-aem-assets-with-brand-portal.md).
 
 När du har publicerat en resurs eller mapp är den tillgänglig för användare i varumärkesportalen.
 
-Om du gör senare ändringar av den ursprungliga resursen eller mappen i AEM Resurser återspeglas inte ändringarna i Varumärkeportalen förrän du publicerar resursen eller mappen på nytt. Den här funktionen ser till att pågående ändringar inte är tillgängliga i varumärkesportalen. Endast godkända ändringar som publiceras av en administratör är tillgängliga i varumärkesportalen.
+Om du gör senare ändringar i den ursprungliga resursen eller mappen i AEM Assets återspeglas inte ändringarna i varumärkesportalen förrän du publicerar resursen eller mappen på nytt. Funktionen säkerställer att pågående ändringar inte finns i varumärkesportalen. Endast godkända ändringar som publiceras av en administratör finns i varumärkesportalen.
 
 ## Publicera mappar på varumärkesportalen {#publish-folders-to-brand-portal-1}
 
-1. I gränssnittet för AEM Resurser håller du pekaren över den önskade mappen och väljer **alternativet Publicera** bland snabbåtgärderna.
+1. I AEM Assets-gränssnittet för du pekaren över den önskade mappen och väljer **Publicera**-alternativ bland snabbåtgärderna.
 
    Du kan också markera önskad mapp och följa stegen nedan.
 
@@ -34,26 +37,27 @@ Om du gör senare ändringar av den ursprungliga resursen eller mappen i AEM Res
 
 1. **Publicera mappar nu**
 
-   Om du vill publicera de markerade mapparna på varumärkesportalen gör du något av följande:
+   Gör något av följande för att publicera de markerade mapparna på varumärkesportalen:
 
    * Välj **Snabbpublicering** i verktygsfältet. Välj sedan **Publicera på varumärkesportalen** på menyn.
 
    * Välj **Hantera publikation** i verktygsfältet.
-   1. Från **Åtgärd** väljer du **Publicera på varumärkesportal**. Från **Schemaläggning** väljer du **nu** och klickar sedan på **Nästa.**
-   1. Bekräfta ditt val i **Omfång** och klicka på **Publicera på varumärkesportal**.
-   Det visas ett meddelande om att mappen har placerats i kö för publicering på varumärkesportalen. Logga in i gränssnittet för varumärkesportalen för att se den publicerade mappen.
+   1. I **Åtgärd** väljer du **Publicera på varumärkesportal** från **Schemaläggning**, välj **Nu** och klicka på **Nästa.**
+   1. Bekräfta ditt val i **Scope** och klicka på **Publicera på varumärksportal**.
+
+   Ett meddelande visas som anger att mappen har placerats i kö för publicering på varumärkesportalen. Logga in i gränssnittet för varumärkesportalen för att se den publicerade mappen.
 
    **Publicera mappar senare**
 
    Så här schemalägger du arbetsflödet för publicering till varumärkesportalen för resursmappar till ett senare datum eller en senare tidpunkt:
 
    1. När du har valt resurser/mappar att publicera väljer du **Hantera publikation** i verktygsfältet högst upp.
-   1. Från **Åtgärd** väljer du **Publicera på varumärkesportal**. Från **Schemaläggning** väljer du **Senare**.
+   1. I **Åtgärd** väljer du **Publicera på varumärkesportal** från **Schemaläggning** och **Senare**.
 
-      ![publiclaterbp](assets/publishlaterbp.png)
+      ![publishlaterbp](assets/publishlaterbp.png)
 
-   1. Välj ett **aktiveringsdatum** och ange tid. Click **Next**.
-   1. Bekräfta ditt val i **Omfång**. Click **Next**.
+   1. Välj ett **aktiveringsdatum** och ange en tid. Klicka på **Nästa**.
+   1. Bekräfta ditt val i **Scope**. Klicka på **Nästa**.
    1. Ange en arbetsflödesrubrik under **Arbetsflöden**. Klicka på **Publicera senare**.
 
       ![manageschedulepub](assets/manageschedulepub.png)
@@ -62,11 +66,11 @@ Om du gör senare ändringar av den ursprungliga resursen eller mappen i AEM Res
 
 ## Avpublicera mappar från varumärkesportalen {#unpublish-folders-from-brand-portal}
 
-Du kan ta bort alla resursmappar som publicerats på varumärkesportalen genom att avpublicera dem från AEM Author-instansen. När du har avpublicerat originalmappen är dess kopia inte längre tillgänglig för användare av varumärkesportalen.
+Du kan ta bort alla resursmappar som publicerats på varumärkesportalen genom att avpublicera dem från AEM Author-instansen. När du har avpublicerat originalmappen har varumärkesportalens användare har inte längre tillgång till kopian.
 
-Du kan avpublicera mappar från varumärkesportalen snabbt eller schemalägga dem för ett senare datum och en senare tidpunkt. Så här avpublicerar du resursmappar från varumärkesportalen:
+Du kan avpublicera mappar från varumärkesportalen snabbt eller schemalägga dem för ett senare datum och en senare tidpunkt. Gör så här för att avpublicerar resursmappar från varumärkesportalen:
 
-1. I gränssnittet AEM Resurser i AEM Author-instansen väljer du den mapp du vill avpublicera.
+1. I AEM Assets-gränssnittet i AEM Author-instansen väljer du den mapp du vill avpublicera.
 
    ![publish2bp-1](assets/publish2bp.png)
 
@@ -77,21 +81,22 @@ Du kan avpublicera mappar från varumärkesportalen snabbt eller schemalägga de
    Så här avpublicerar du snabbt den önskade mappen från varumärkesportalen:
 
    1. Välj **Hantera publikation** i verktygsfältet.
-   1. I **Åtgärd** väljer du **Avpublicera från varumärkesportalen**, **välj Schemaläggning** **nu** och klicka sedan på **Nästa.**
-   1. Bekräfta ditt val i **Omfång** och klicka på **Avpublicera från varumärkesportalen**.
-   ![bekräfta-avpublicera](assets/confirm-unpublish.png)
+   1. I **Åtgärd** väljer du **Avpublicera från varumärkesportalen**, från **Schemaläggning**, välj **Nu** och klicka på **Nästa.**
+   1. Bekräfta ditt val i **Scope** och klicka på **Avpublicera från varumärkesportalen**.
+
+   ![confirm-unpublish](assets/confirm-unpublish.png)
 
    **Avpublicera från varumärkesportalen senare**
 
    Så här schemalägger du publiceringen av en mapp från varumärkesportalen till ett senare datum och en senare tidpunkt:
 
    1. Välj **Hantera publikation** i verktygsfältet.
-   1. Från **Åtgärd** väljer du **Avpublicera från varumärkesportalen** och från **Schemaläggning** väljer du **Senare**.
-   1. Välj ett **aktiveringsdatum** och ange tid. Click **Next**.
-   1. Bekräfta ditt val i **Omfång** och klicka på **Nästa**.
-   1. Ange en **arbetsflödesrubrik** i **arbetsflöden**. Klicka på **Avpublicera senare.**
+   1. I **Åtgärd** väljer du **Avpublicera från varumärkesportalen** och från **Schemaläggning** väljer du **Senare**.
+   1. Välj ett **aktiveringsdatum** och ange tidpunkten. Klicka på **Nästa**.
+   1. Bekräfta ditt val i **Scope** och klicka på **Nästa**.
+   1. Ange en **arbetsflödets titel** i **arbetsflöden**. Klicka på **Avpublicera senare.**
 
-      ![ej publicerade arbetsflöden](assets/unpublishworkflows.png)
+      ![unpublishworkflows](assets/unpublishworkflows.png)
 
 
 >[!NOTE]
