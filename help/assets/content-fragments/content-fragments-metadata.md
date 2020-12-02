@@ -21,21 +21,21 @@ ht-degree: 9%
 
 # Metadata – fragmentegenskaper{#metadata-fragment-properties}
 
-## Redigera egenskaper/metadata {#editing-properties-meta-data}
+## Redigera egenskaper/Metadata {#editing-properties-meta-data}
 
 Du kan visa och redigera metadata (egenskaper) för innehållsfragment:
 
-1. I **Assets** Console navigerar du till platsen för innehållsfragmentet.
+1. I konsolen **Resurser** navigerar du till platsen för innehållsfragmentet.
 1. Antingen:
 
    * Välj [**Visa egenskaper** för att öppna dialogrutorna](/help/assets/manage-assets.md#editing-properties). När du har öppnat för visning kan du även redigera.
-   * Öppna [innehållsfragmentet för redigering](/help/assets/content-fragments/content-fragments-managing.md#opening-the-fragment-editor)och välj sedan **Metadata** på sidopanelen.
+   * Öppna [innehållsfragmentet för Edit](/help/assets/content-fragments/content-fragments-managing.md#opening-the-fragment-editor) och välj **Metadata** på sidopanelen.
 
    ![cfm-6420-06](assets/cfm-6420-06.png)
 
 1. Fliken **Grundläggande** innehåller alternativ som du kan visa eller redigera:
 
-   * Miniatyrbild som du kan **överföra bild till**
+   * Miniatyrbild som du kan **överföra bild** för
    * **Titel**
    * **Beskrivning**
    * **Taggar**
