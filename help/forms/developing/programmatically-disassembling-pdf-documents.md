@@ -18,15 +18,15 @@ ht-degree: 0%
 ---
 
 
-# Dela upp PDF-dokument programmatiskt {#programmatically-disassembling-pdf-documents}
+# Dela upp PDF-dokument (a0/>){#programmatically-disassembling-pdf-documents}
 
 Du kan demontera ett PDF-dokument genom att skicka det till Assembler-tjänsten. Vanligtvis är den här uppgiften användbar när PDF-dokumentet ursprungligen skapades från många enskilda dokument, till exempel en samling programsatser. På följande bild delas DocA in i flera resulterande dokument, där det första bokmärket på nivå 1 på en sida anger början på ett nytt resulterande dokument.
 
 ![pd_pd_pdfsfrombokmärken](assets/pd_pd_pdfsfrombookmarks.png)
 
-Om du vill demontera ett PDF-dokument kontrollerar du att `PDFsFromBookmarks` elementet finns i DDX-dokumentet. Elementet `PDFsFromBookmarks` är ett resultatelement och kan bara vara ett underordnat element till `DDX` elementet. Den har inget `result` attribut eftersom den kan generera flera dokument.
+Om du vill demontera ett PDF-dokument kontrollerar du att elementet `PDFsFromBookmarks` finns i DDX-dokumentet. `PDFsFromBookmarks`-elementet är ett resultatelement och kan bara vara ett underordnat element till `DDX`-elementet. Det har inget `result`-attribut eftersom det kan leda till att flera dokument genereras.
 
-Elementet `PDFsFromBookmarks` gör att ett dokument genereras för varje nivå 1-bokmärke i källdokumentet.
+`PDFsFromBookmarks`-elementet gör att ett dokument skapas för varje nivå 1-bokmärke i källdokumentet.
 
 Anta att följande DDX-dokument används för den här diskussionen.
 
@@ -41,11 +41,11 @@ Anta att följande DDX-dokument används för den här diskussionen.
 
 >[!NOTE]
 >
->Innan du läser det här avsnittet bör du känna till hur du sammanställer PDF-dokument med hjälp av tjänsten Assembler. (Se [Sammanställa PDF-dokument](/help/forms/developing/programmatically-assembling-pdf-documents.md)programmatiskt.)
+>Innan du läser det här avsnittet bör du känna till hur du sammanställer PDF-dokument med hjälp av tjänsten Assembler. (Se [Programmatisk sammansättning av PDF-dokument](/help/forms/developing/programmatically-assembling-pdf-documents.md).)
 
 >[!NOTE]
 >
->När du skickar ett PDF-dokument till Assembler-tjänsten och återgår till ett enda dokument kan du aktivera `invokeOneDocument` åtgärden. Om du vill demontera ett PDF-dokument använder du `invokeDDX` åtgärden eftersom Assembler-tjänsten returnerar ett samlingsobjekt som innehåller ett eller flera dokument även om ett PDF-indatadokument skickas till Assembler-tjänsten.
+>När du skickar ett PDF-dokument till Assembler-tjänsten och återgår till ett enda dokument kan du anropa åtgärden `invokeOneDocument`. Om du vill demontera ett PDF-dokument använder du `invokeDDX`-åtgärden eftersom även om ett PDF-indatadokument skickas till Assembler-tjänsten, returnerar Assembler-tjänsten ett samlingsobjekt som innehåller ett eller flera dokument.
 
 >[!NOTE]
 >
@@ -76,10 +76,10 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-assembler-client.jar
-* adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss)
-* jbossall-client.jar (krävs om AEM Forms distribueras på JBoss)
+* adobe-utilities.jar (krävs om AEM Forms används i JBoss)
+* jbossall-client.jar (krävs om AEM Forms används i JBoss)
 
-Om AEM Forms distribueras på en J2EE-programserver som stöds och som inte är JBoss, måste du ersätta adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern där AEM Forms distribueras.
+Om AEM Forms körs på en J2EE-programserver som stöds och som inte är JBoss, måste du ersätta adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern som AEM Forms är distribuerad på.
 
 **Skapa en PDF Assembler-klient**
 
@@ -87,7 +87,7 @@ Innan du programmässigt kan utföra en Assembler-åtgärd måste du skapa en As
 
 **Referera till ett befintligt DDX-dokument**
 
-Det måste finnas en referens till ett DX-dokument för att du ska kunna demontera ett PDF-dokument. Det här DDX-dokumentet måste innehålla `PDFsFromBookmarks` elementet.
+Det måste finnas en referens till ett DX-dokument för att du ska kunna demontera ett PDF-dokument. Det här DDX-dokumentet måste innehålla elementet `PDFsFromBookmarks`.
 
 **Referera ett PDF-dokument som ska demonteras**
 
@@ -99,7 +99,7 @@ Du kan ställa in körningsalternativ som styr beteendet för Assembler-tjänste
 
 **Dela upp PDF-dokumentet**
 
-När du har skapat Assembler-tjänstklienten, refererat till DDX-dokumentet, refererat till ett PDF-dokument som ska demonteras och angett körningsalternativ, kan du demontera ett PDF-dokument genom att anropa `invokeDDX` metoden. Förutsatt att DDX-dokumentet innehåller instruktioner för att demontera PDF-dokumentet returnerar Assembler-tjänsten omonterade PDF-dokument i ett samlingsobjekt.
+När du har skapat Assembler-tjänstklienten, refererat till DDX-dokumentet, refererat till ett PDF-dokument som ska demonteras och angett körningsalternativ, kan du demontera ett PDF-dokument genom att anropa metoden `invokeDDX`. Förutsatt att DDX-dokumentet innehåller instruktioner för att demontera PDF-dokumentet returnerar Assembler-tjänsten omonterade PDF-dokument i ett samlingsobjekt.
 
 **Spara de upplösta PDF-dokumenten**
 
@@ -123,46 +123,46 @@ Disassemble a PDF document by using the Assembler Service API (Java):
 
 1. Skapa en PDF Assembler-klient.
 
-   * Skapa ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa ett `AssemblerServiceClient` objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory` objektet.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `AssemblerServiceClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Referera till ett befintligt DDX-dokument.
 
-   * Skapa ett `java.io.FileInputStream` objekt som representerar DDX-dokumentet med hjälp av dess konstruktor och skicka ett strängvärde som anger platsen för DDX-filen.
-   * Skapa ett `com.adobe.idp.Document` objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream` objektet.
+   * Skapa ett `java.io.FileInputStream`-objekt som representerar DDX-dokumentet genom att använda dess konstruktor och skicka ett strängvärde som anger platsen för DDX-filen.
+   * Skapa ett `com.adobe.idp.Document`-objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream`-objektet.
 
 1. Referera till ett PDF-dokument som ska demonteras.
 
-   * Skapa ett `java.util.Map` objekt som används för att lagra PDF-indatadokument med hjälp av en `HashMap` konstruktor.
-   * Skapa ett `java.io.FileInputStream` objekt med hjälp av dess konstruktor och skicka platsen för det PDF-dokument som ska demonteras.
-   * Skapa ett `com.adobe.idp.Document` objekt och skicka det `java.io.FileInputStream` objekt som innehåller det PDF-dokument som ska demonteras.
-   * Lägg till en post i `java.util.Map` objektet genom att anropa dess `put` metod och skicka följande argument:
+   * Skapa ett `java.util.Map`-objekt som används för att lagra PDF-indatadokument med hjälp av en `HashMap`-konstruktor.
+   * Skapa ett `java.io.FileInputStream`-objekt med hjälp av konstruktorn och skicka platsen för PDF-dokumentet som ska demonteras.
+   * Skapa ett `com.adobe.idp.Document`-objekt och skicka `java.io.FileInputStream`-objektet som innehåller PDF-dokumentet som ska demonteras.
+   * Lägg till en post i `java.util.Map`-objektet genom att anropa dess `put`-metod och skicka följande argument:
 
       * Ett strängvärde som representerar nyckelnamnet. Detta värde måste matcha värdet för PDF-källelementet som anges i DDX-dokumentet.
-      * Ett `com.adobe.idp.Document` objekt som innehåller det PDF-dokument som ska demonteras.
+      * Ett `com.adobe.idp.Document`-objekt som innehåller det PDF-dokument som ska demonteras.
 
 1. Ange körningsalternativ.
 
-   * Skapa ett `AssemblerOptionSpec` objekt som lagrar körningsalternativ med hjälp av dess konstruktor.
-   * Ange körningsalternativ som uppfyller dina affärsbehov genom att anropa en metod som tillhör `AssemblerOptionSpec` objektet. Om du till exempel vill instruera Assembler-tjänsten att fortsätta bearbeta ett jobb när ett fel inträffar, anropar du `AssemblerOptionSpec` objektets `setFailOnError` metod och skickar `false`.
+   * Skapa ett `AssemblerOptionSpec`-objekt som lagrar körningsalternativ med hjälp av dess konstruktor.
+   * Ange körningsalternativ som uppfyller dina affärskrav genom att anropa en metod som tillhör `AssemblerOptionSpec`-objektet. Om du till exempel vill instruera Assembler-tjänsten att fortsätta bearbeta ett jobb när ett fel inträffar, anropar du `AssemblerOptionSpec`-objektets `setFailOnError`-metod och skickar `false`.
 
 1. Disassemblera PDF-dokumentet.
 
-   Anropa `AssemblerServiceClient` objektets `invokeDDX` metod och skicka följande obligatoriska värden:
+   Anropa `AssemblerServiceClient`-objektets `invokeDDX`-metod och skicka följande obligatoriska värden:
 
-   * Ett `com.adobe.idp.Document` objekt som representerar det DDX-dokument som ska användas
-   * Ett `java.util.Map` objekt som innehåller det PDF-dokument som ska demonteras
-   * Ett `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` objekt som anger körningsalternativen, inklusive standardteckensnittet och jobbloggsnivån
+   * Ett `com.adobe.idp.Document`-objekt som representerar det DDX-dokument som ska användas
+   * Ett `java.util.Map`-objekt som innehåller det PDF-dokument som ska demonteras
+   * Ett `com.adobe.livecycle.assembler.client.AssemblerOptionSpec`-objekt som anger körningsalternativen, inklusive standardteckensnittet och jobbloggsnivån
 
-   Metoden returnerar `invokeDDX` ett `com.adobe.livecycle.assembler.client.AssemblerResult` objekt som innehåller de uppdelade PDF-dokumenten och eventuella undantag som har inträffat.
+   Metoden `invokeDDX` returnerar ett `com.adobe.livecycle.assembler.client.AssemblerResult`-objekt som innehåller de demonterade PDF-dokumenten och eventuella undantag som har inträffat.
 
 1. Spara de upplösta PDF-dokumenten.
 
    Gör så här för att få fram de uppdelade PDF-dokumenten:
 
-   * Anropa `AssemblerResult` objektets `getDocuments` metod. Detta returnerar ett `java.util.Map` objekt.
-   * Upprepa genom `java.util.Map` objektet tills du hittar det resulterande `com.adobe.idp.Document` objektet.
-   * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att extrahera PDF-dokumentet.
+   * Anropa `AssemblerResult`-objektets `getDocuments`-metod. Detta returnerar ett `java.util.Map`-objekt.
+   * Iterera genom `java.util.Map`-objektet tills du hittar det resulterande `com.adobe.idp.Document`-objektet.
+   * Anropa `com.adobe.idp.Document`-objektets `copyToFile`-metod för att extrahera PDF-dokumentet.
 
 **Se även**
 
@@ -174,7 +174,7 @@ Disassemble a PDF document by using the Assembler Service API (Java):
 
 [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## Dela upp ett PDF-dokument med hjälp av webbtjänstens API {#disassemble-a-pdf-document-using-the-web-service-api}
+## Dela upp ett PDF-dokument med webbtjänstens API {#disassemble-a-pdf-document-using-the-web-service-api}
 
 Dela upp ett PDF-dokument med Assembler Service API (webbtjänst):
 
@@ -188,60 +188,60 @@ Dela upp ett PDF-dokument med Assembler Service API (webbtjänst):
 
 1. Skapa en PDF Assembler-klient.
 
-   * Skapa ett `AssemblerServiceClient` objekt med hjälp av dess standardkonstruktor.
-   * Skapa ett `AssemblerServiceClient.Endpoint.Address` objekt med hjälp av `System.ServiceModel.EndpointAddress` konstruktorn. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/AssemblerService?blob=mtom`). Du behöver inte använda attributet `lc_version` . Det här attributet används när du skapar en tjänstreferens.
-   * Skapa ett `System.ServiceModel.BasicHttpBinding` objekt genom att hämta värdet för `AssemblerServiceClient.Endpoint.Binding` fältet. Sänd returvärdet till `BasicHttpBinding`.
-   * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa ett `AssemblerServiceClient`-objekt med hjälp av dess standardkonstruktor.
+   * Skapa ett `AssemblerServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/AssemblerService?blob=mtom`). Du behöver inte använda attributet `lc_version`. Det här attributet används när du skapar en tjänstreferens.
+   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `AssemblerServiceClient.Endpoint.Binding`. Sänd returvärdet till `BasicHttpBinding`.
+   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `AssemblerServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela användarnamnet för AEM formulär till fältet `AssemblerServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `AssemblerServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
 1. Referera till ett befintligt DDX-dokument.
 
-   * Skapa ett `BLOB` objekt med hjälp av dess konstruktor. Objektet används `BLOB` för att lagra DDX-dokumentet.
-   * Skapa ett `System.IO.FileStream` objekt genom att anropa dess konstruktor. Skicka ett strängvärde som representerar filplatsen för DDX-dokumentet och läget som filen ska öppnas i.
-   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` objektet. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` egenskap.
-   * Fyll bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` metod och skicka bytearrayen, startpositionen och den strömlängd som ska läsas.
-   * Fyll objektet `BLOB` genom att tilldela dess `MTOM` egenskap med innehållet i bytearrayen.
+   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor. Objektet `BLOB` används för att lagra DDX-dokumentet.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor. Skicka ett strängvärde som representerar filplatsen för DDX-dokumentet och läget som filen ska öppnas i.
+   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream`-objektet. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
+   * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod och skicka bytearrayen, startpositionen och strömlängden som ska läsas.
+   * Fyll i `BLOB`-objektet genom att tilldela dess `MTOM`-egenskap med innehållet i bytearrayen.
 
 1. Referera till ett PDF-dokument som ska demonteras.
 
-   * Skapa ett `BLOB` objekt med hjälp av dess konstruktor. Objektet används `BLOB` för att lagra PDF-indatadokumentet. Detta `BLOB` objekt skickas till `invokeOneDocument` som ett argument.
-   * Skapa ett `System.IO.FileStream` objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar platsen för PDF-indatadokumentet och läget som filen ska öppnas i.
-   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` objektet. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` egenskap.
-   * Fyll bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` metod och skicka bytearrayen, startpositionen och den strömlängd som ska läsas.
-   * Fyll i `BLOB` objektet genom att tilldela dess `MTOM` fält innehållet i bytearrayen.
-   * Create a `MyMapOf_xsd_string_To_xsd_anyType` object. Samlingsobjektet används för att lagra PDF-filen som ska demonteras.
-   * Create a `MyMapOf_xsd_string_To_xsd_anyType_Item` object.
-   * Tilldela ett strängvärde som representerar nyckelnamnet till `MyMapOf_xsd_string_To_xsd_anyType_Item` objektets `key` fält. Detta värde måste matcha värdet för PDF-källelementet som anges i DDX-dokumentet.
-   * Tilldela det `BLOB` objekt som lagrar PDF-dokumentet till `MyMapOf_xsd_string_To_xsd_anyType_Item` objektets `value` fält.
-   * Lägg till `MyMapOf_xsd_string_To_xsd_anyType_Item` objektet i `MyMapOf_xsd_string_To_xsd_anyType` objektet. Anropa `MyMapOf_xsd_string_To_xsd_anyType` objektets `Add` metod och skicka `MyMapOf_xsd_string_To_xsd_anyType` objektet.
+   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor. Objektet `BLOB` används för att lagra PDF-indatadokumentet. Det här `BLOB`-objektet skickas till `invokeOneDocument` som ett argument.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för PDF-indatadokumentet och läget som filen ska öppnas i.
+   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream`-objektet. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
+   * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod och skicka bytearrayen, startpositionen och strömlängden som ska läsas.
+   * Fyll i `BLOB`-objektet genom att tilldela dess `MTOM`-fält innehållet i bytearrayen.
+   * Skapa ett `MyMapOf_xsd_string_To_xsd_anyType`-objekt. Samlingsobjektet används för att lagra PDF-filen som ska demonteras.
+   * Skapa ett `MyMapOf_xsd_string_To_xsd_anyType_Item`-objekt.
+   * Tilldela ett strängvärde som representerar nyckelnamnet till `MyMapOf_xsd_string_To_xsd_anyType_Item`-objektets `key`-fält. Detta värde måste matcha värdet för PDF-källelementet som anges i DDX-dokumentet.
+   * Tilldela det `BLOB`-objekt som lagrar PDF-dokumentet till `MyMapOf_xsd_string_To_xsd_anyType_Item`-objektets `value`-fält.
+   * Lägg till `MyMapOf_xsd_string_To_xsd_anyType_Item`-objektet till `MyMapOf_xsd_string_To_xsd_anyType`-objektet. Anropa `MyMapOf_xsd_string_To_xsd_anyType`-objektets `Add`-metod och skicka `MyMapOf_xsd_string_To_xsd_anyType`-objektet.
 
 1. Ange körningsalternativ.
 
-   * Skapa ett `AssemblerOptionSpec` objekt som lagrar körningsalternativ med hjälp av dess konstruktor.
-   * Ange körningsalternativ som uppfyller dina affärskrav genom att tilldela ett värde till en datamedlem som tillhör `AssemblerOptionSpec` objektet. Om du till exempel vill instruera Assembler-tjänsten att fortsätta bearbeta ett jobb när ett fel inträffar, tilldelar du `false` till `AssemblerOptionSpec` objektets `failOnError` fält.
+   * Skapa ett `AssemblerOptionSpec`-objekt som lagrar körningsalternativ med hjälp av dess konstruktor.
+   * Ange körningsalternativ som uppfyller dina affärskrav genom att tilldela ett värde till en datamedlem som tillhör `AssemblerOptionSpec`-objektet. Om du till exempel vill instruera Assembler-tjänsten att fortsätta bearbeta ett jobb när ett fel inträffar tilldelar du `false` till `AssemblerOptionSpec`-objektets `failOnError`-fält.
 
 1. Disassemblera PDF-dokumentet.
 
-   Anropa `AssemblerServiceClient` objektets `invokeDDX` metod och skicka följande värden:
+   Anropa `AssemblerServiceClient`-objektets `invokeDDX`-metod och skicka följande värden:
 
-   * Ett `BLOB` objekt som representerar det DX-dokument som demonterar PDF-dokumentet
-   * Det `MyMapOf_xsd_string_To_xsd_anyType` objekt som innehåller PDF-dokumentet som ska demonteras
-   * Ett `AssemblerOptionSpec` objekt som anger körningsalternativ
+   * Ett `BLOB`-objekt som representerar DDX-dokumentet som demonterar PDF-dokumentet
+   * Det `MyMapOf_xsd_string_To_xsd_anyType`-objekt som innehåller det PDF-dokument som ska demonteras
+   * Ett `AssemblerOptionSpec`-objekt som anger körningsalternativ
 
-   Metoden returnerar `invokeDDX` ett `AssemblerResult` objekt som innehåller jobbresultaten och eventuella undantag som har inträffat.
+   Metoden `invokeDDX` returnerar ett `AssemblerResult`-objekt som innehåller jobbresultaten och eventuella undantag som inträffade.
 
 1. Spara de upplösta PDF-dokumenten.
 
    Utför följande åtgärder för att hämta de nya PDF-dokumenten:
 
-   * Få åtkomst till `AssemblerResult` objektets `documents` fält, som är ett `Map` objekt som innehåller de uppdelade PDF-dokumenten.
-   * Iterera genom objektet `Map` för att få fram varje resulterande dokument. Sedan konverterar du arraymedlemmens `value` till en `BLOB`.
-   * Extrahera de binära data som representerar PDF-dokumentet genom att få åtkomst till dess `BLOB` objektegenskap `MTOM` . Detta returnerar en array med byte som du kan skriva till en PDF-fil.
+   * Få åtkomst till `AssemblerResult`-objektets `documents`-fält, som är ett `Map`-objekt som innehåller de demonterade PDF-dokumenten.
+   * Iterera genom `Map`-objektet för att hämta varje resulterande dokument. Sedan konverterar du den matrismedlemmens `value` till `BLOB`.
+   * Extrahera de binära data som representerar PDF-dokumentet genom att gå till dess `BLOB`-objektegenskap `MTOM`. Detta returnerar en array med byte som du kan skriva till en PDF-fil.
 
 **Se även**
 
