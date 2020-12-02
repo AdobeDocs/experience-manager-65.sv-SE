@@ -39,7 +39,7 @@ Om du vill skapa en tabell drar och släpper du tabellkomponenten från komponen
 
 ![Tabellkomponent i AEM](assets/sidebar-tables.png)
 
-### Om rubrik- och brödceller {#about-header-and-body-cells}
+### Om huvud- och brödceller {#about-header-and-body-cells}
 
 Rubrikcellerna är textfält. Om du vill ändra rubrikens etikett högerklickar du på rubrikcellen och klickar på **Redigera**. Uppdatera etiketten i fältet **Värde** i dialogrutan Redigera och klicka på **OK**.
 
@@ -49,9 +49,9 @@ Den första innehållsraden i följande tabell innehåller till exempel textruta
 
 ![radcellstyper](assets/row-cell-types.png)
 
-Du kan sammanfoga två eller flera innehållsceller genom att markera cellerna som du vill sammanfoga, högerklicka och välja **Sammanfoga**. Du kan också dela en sammanfogad cell genom att högerklicka på den och välja **Dela celler**.
+Du kan sammanfoga två eller flera innehållsceller genom att markera cellerna som du vill sammanfoga, högerklicka och välja **Sammanfoga**. Du kan även dela en sammanfogad cell genom att högerklicka på den och välja **Dela celler**.
 
-### Lägga till, ta bort, flytta rader och kolumner {#add-delete-move-rows-and-columns}
+### Lägg till, ta bort, flytta rader och kolumner {#add-delete-move-rows-and-columns}
 
 Du kan lägga till och ta bort en rad eller kolumn och flytta en rad uppåt och nedåt i en tabell.
 
@@ -73,7 +73,7 @@ I den nedrullningsbara menyn för raden finns även redigeringsåtgärden för a
 
 Du kan lägga till en beskrivning av tabellen för att förklara hur informationen är organiserad och att skärmläsare kan tolka och läsa upp den. Så här lägger du till beskrivningen:
 
-1. Markera tabellen och tryck på ![cmpr](assets/cmppr.png) för att visa dess egenskaper i sidlisten.
+1. Markera tabellen och tryck på ![cmpr](assets/cmppr.png) för att visa dess egenskaper i sidofältet.
 1. Ange en sammanfattning på fliken Tillgänglighet.
 1. Klicka på **Klar**.
 
@@ -91,13 +91,13 @@ Om du vill använda sortering på tabellkolumner måste tabellkolumncellerna inn
 
 Så här aktiverar du sortering:
 
-1. Markera tabellen och tryck på ![configure_icon](assets/configure_icon.png) (Configure). Du kan också markera tabellen med hjälp av **innehållsläsaren** i sidokickaren i den interaktiva kommunikationen.
+1. Markera tabellen och tryck på ![configure_icon](assets/configure_icon.png) (Configure). Du kan också markera tabellen med hjälp av webbläsaren **Content** i sidoknappen i den interaktiva kommunikationen.
 1. Välj **Aktivera sortering**.
-1. Tryck på ![made_icon](assets/done_icon.png) för att spara tabellegenskaperna. Sorteringsikonerna, uppåt- och nedåtpilarna, i kolumnrubriker representerar att sorteringen har aktiverats.
+1. Tryck på ![ready_icon](assets/done_icon.png) för att spara tabellegenskaperna. Sorteringsikonerna, uppåt- och nedåtpilarna, i kolumnrubriker representerar att sorteringen har aktiverats.
 
    ![Aktivera sortering](assets/enable_sorting_new.png)
 
-1. Växla till **förhandsvisningsläget** för att visa utdata. Tabellen sorteras automatiskt baserat på tabellens första kolumn.
+1. Växla till läget **Förhandsgranska** om du vill visa utdata. Tabellen sorteras automatiskt baserat på tabellens första kolumn.
 1. Klicka på kolumnrubriken om du vill sortera värdena baserat på kolumnen.
 
    En kolumnrubrik med en uppåtpil representerar att tabellen sorteras baserat på den kolumnen. Dessutom visas värdena i kolumnen i stigande ordning.
@@ -106,15 +106,15 @@ Så här aktiverar du sortering:
 
    På samma sätt visas en kolumnrubrik med en nedpil som värden i kolumnen i fallande ordning.
 
-   Du kan också göra ändringar i tabellen i **förhandsgranskningsläget** och sedan klicka på kolumnrubriken igen för att sortera kolumnvärdena.
+   Du kan också göra ändringar i tabellen i läget **Förhandsgranska** och sedan klicka på kolumnrubriken igen för att sortera kolumnvärdena.
 
 ## Konfigurera tabellformat {#configure}
 
 Du kan definiera formatet för en tabell med hjälp av stilläget i verktygsfältet på sidan. Utför följande steg för att växla till formateringsläge och redigera tabellformatet
 
-1. Tryck på listrutan ![Canvas >](assets/canvas-drop-down.png) Stil **** i verktygsfältet för sidan innan du förhandsgranskar.
+1. Tryck på ![canvas-drop-down](assets/canvas-drop-down.png) > **Style** i sidverktygsfältet före förhandsvisning.
 
-1. Markera en tabell i sidlisten och tryck på redigeringsknappen för ![redigering](assets/edit-button.png).
+1. Markera tabellen i sidlisten och tryck på redigeringsknappen ![edit-button](assets/edit-button.png).
 Du kan se formategenskaperna i sidofältet.
 
 ![Formategenskaper för en tabell](assets/style-table.png)
@@ -123,7 +123,7 @@ Du kan se formategenskaperna i sidofältet.
 >
 >Du kan ändra färgtemat för huvud- och innehållsrader genom att ändra värdena för LESS-variabler. Mer information finns i [Teman i AEM Forms](/help/forms/using/themes.md) [](/help/forms/using/creating-custom-adaptive-form-themes.md).
 
-## Lägga till eller ta bort en rad dynamiskt {#add-or-delete-a-row-dynamically}
+## Lägg till eller ta bort en rad dynamiskt {#add-or-delete-a-row-dynamically}
 
 Tabeller har färdiga funktioner för att dynamiskt lägga till eller ta bort rader vid körning.
 
@@ -131,7 +131,7 @@ Tabeller har färdiga funktioner för att dynamiskt lägga till eller ta bort ra
 1. På fliken Upprepa inställningar anger du minsta och högsta antal rader för att begränsa antalet rader i tabellen.
 1. Klicka på **Klar**.
 
-Under körning visas **+** - och *-* -knappar för att lägga till eller ta bort en rad.
+Under körning visas knapparna **+** och *-* för att lägga till eller ta bort en rad.
 
 ![add-delete-rows-dynamically](assets/add-delete-rows-dynamically.png)
 
@@ -146,7 +146,7 @@ Tabeller i anpassningsbara formulär gör att du kan skriva uttryck i JavaScript
 Tabellerna och raderna har endast stöd för synlighetsuttryck som styr synligheten baserat på värdet som returneras av ett uttryck, men cellerna har stöd för följande uttryck:
 
 * **Initieringsskript:** för att utföra en åtgärd vid initiering av ett fält.
-* **Värde för implementeringsskript:** om du vill ändra komponenterna i ett formulär efter att värdet för ett fält har ändrats.
+* **Värde implementera skript:** för att ändra komponenterna i ett formulär efter att värdet för ett fält har ändrats.
 
 >[!NOTE]
 >
@@ -159,7 +159,7 @@ Tabellerna och raderna har endast stöd för synlighetsuttryck som styr synlighe
 
 Synlighetsuttrycket för en tabell eller rad kan definieras på fliken Panelegenskaper i motsvarande dialogruta för redigeringskomponenter. Uttrycken för en cell kan definieras på fliken Skript i dialogrutan Redigera komponent.
 
-En fullständig lista över adaptiva formulärklasser, händelser, objekt och offentliga API:er finns i API-referens för [JavaScript-bibliotek för adaptiva formulär](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html).
+En fullständig lista över adaptiva formulärklasser, händelser, objekt och offentliga API:er finns i [API-referens för JavaScript-bibliotek för adaptiva formulär](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html).
 
 ## Mobillayouter {#mobile-layouts}
 
@@ -210,7 +210,7 @@ I det här exemplet är elementnamnegenskapen för:
 * raden är **Rad1**
 * innehållscellen under transaktionsdatumet är **tableItem1**
 * innehållscellen under Beskrivning är **tableItem2**
-* innehållscellen under Transaktionstypen är **typ**
+* innehållscellen under transaktionstypen är **typ**
 * innehållscellen under Belopp i USD är **tableItem3**
 
 XML-filen som innehåller data i följande format:
@@ -271,7 +271,7 @@ XML-filen som innehåller data i följande format:
 </afData>
 ```
 
-I XML-exempelkoden definieras data för en rad med `<Row1>` -taggarna, som är elementnamnet för raden i tabellen. I taggen `<Row1>` definieras data för varje cell i taggen för elementnamnet, till exempel `<tableItem1>`, `<tableItem2>`, `<tableItem3>`och `<type>`.
+I XML-exempelkoden definieras data för en rad med `<Row1>`-taggarna, som är elementnamnet för raden i tabellen. I taggen `<Row1>` definieras data för varje cell i taggen för elementnamnet, till exempel `<tableItem1>`, `<tableItem2>`, `<tableItem3>` och `<type>`.
 
 Om du vill sammanfoga dessa data med tabellen vid körning måste vi peka det adaptiva formuläret som innehåller tabellen mot den absoluta XML-platsen med wcmmode inaktiverat. Om det adaptiva formuläret till exempel finns på *https://localhost:4502/myForms/bankTransaction.html* och XML-datafilen sparas på *C:/myTransactions/bankSummary.xml* kan du visa tabellen med data på följande URL:
 
@@ -279,7 +279,7 @@ Om du vill sammanfoga dessa data med tabellen vid körning måste vi peka det ad
 
 ![datasammanfogad tabell](assets/data-merged-table.png)
 
-## Använd XDP-komponenter och komplexa XSD-typer {#use-xdp-components-and-xsd-complex-types}
+## Använd XDP-komponenter och XSD-komplexa typer {#use-xdp-components-and-xsd-complex-types}
 
 Om du har skapat ett adaptivt formulär baserat på en XFA-formulärmall är XFA-elementen tillgängliga på fliken Datamodell AEM Content Finder. Du kan dra och släppa dessa XFA-element, inklusive tabeller, i det anpassningsbara formuläret.
 
