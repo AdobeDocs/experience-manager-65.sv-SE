@@ -1,8 +1,8 @@
 ---
 title: Arbeta med arbetsytan i AEM Forms
 seo-title: Arbeta med arbetsytan i AEM Forms
-description: Kom igång med arbetsytan i AEM Forms med den här snabba översikten över processarbetsflödena.
-seo-description: Kom igång med arbetsytan i AEM Forms med den här snabba översikten över processarbetsflödena.
+description: Kom igång med AEM Forms arbetsyta med en snabb översikt av processarbetsflödena.
+seo-description: Kom igång med AEM Forms arbetsyta med en snabb översikt av processarbetsflödena.
 uuid: 36381e7b-1533-459c-80de-92e806a49cd5
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,6 +11,9 @@ discoiquuid: 866cd9cb-6661-4b0f-a3af-e39453e6e51b
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 21efe30c6a69d04c737bc523aeaab504db8f605b
+workflow-type: tm+mt
+source-wordcount: '1062'
+ht-degree: 0%
 
 ---
 
@@ -19,39 +22,39 @@ source-git-commit: 21efe30c6a69d04c737bc523aeaab504db8f605b
 
 ## Introduktion {#introduction}
 
-Arbetsytan i AEM Forms ingår i AEM Forms. Arbetsytan underlättar återgivning av både HTML-formulär och PDF-formulär. Nu kan ni engagera er i affärsprocesser från mobilgränssnitt och webbapplikationer.
+AEM Forms arbetsyta ingår i AEM Forms. Arbetsytan underlättar återgivning av både HTML Forms och PDF forms. Nu kan ni engagera er i affärsprocesser från mobilgränssnitt och webbapplikationer.
 
-Arbetsytan i AEM Forms är dessutom mycket anpassningsbar med utvecklingsmetoderna HTML och JavaScript™. Det är ett komponentbaserat program som enkelt kan integreras med andra webbprogram.
+Dessutom är AEM Forms arbetsyta mycket anpassningsbar med utvecklingsmetoderna HTML och JavaScript™. Det är ett komponentbaserat program som enkelt kan integreras med andra webbprogram.
 
-Mer information finns i [Introduktion till arbetsytan](/help/forms/using/introduction-html-workspace.md)för AEM-formulär.
+Mer information finns i [Introduktion till arbetsytan i AEM Forms](/help/forms/using/introduction-html-workspace.md).
 
-## Getting Familiar {#getting-familiar}
+## Hämtar välbekant {#getting-familiar}
 
-Följ genomgången för att lära dig hur man skapar en blankettapplikation som automatiserar en affärsprocess. Du kan skapa, hantera och testa ett program med arbetsytan i Workbench, Designer och AEM Forms efter genomgången. Mer information om implementering finns i [Skapa ditt första AEM-formulärprogram](https://help.adobe.com/en_US/livecycle/11.0/CreateFirstApp/index.html).
+Följ genomgången för att lära dig hur man skapar en blankettapplikation som automatiserar en affärsprocess. Du kan skapa, hantera och testa ett program med arbetsytan i Workbench, Designer och AEM Forms efter genomgången. Mer information om implementering finns i [Skapa ditt första AEM Forms-program](https://help.adobe.com/en_US/livecycle/11.0/CreateFirstApp/index.html).
 
 ## Funktionell översikt {#functional-overview}
 
-Du kan använda arbetsytan i AEM Forms för att utföra följande uppgifter:
+Du kan använda AEM Forms arbetsyta för att utföra följande uppgifter:
 
-**Påbörja en affärsprocess:** AEM Forms-arbetsytan kategoriserar dina processer så som de har utformats och konfigurerats av din organisation. Du kan använda de kategorier du använder ofta till att snabbt komma åt kategorierna. När du påbörjar en process fyller du vanligtvis i ett formulär för att påbörja en affärsprocess som styr arbetsflödet för formulär. Mer information finns i [Starta processer](/help/forms/using/starting-processes.md).
+**Påbörja en affärsprocess:** AEM Forms arbetsyta kategoriserar dina processer så som de har utformats och konfigurerats av din organisation. Du kan använda de kategorier du använder ofta till att snabbt komma åt kategorierna. När du påbörjar en process fyller du vanligtvis i ett formulär för att påbörja en affärsprocess som styr arbetsflödet för formulär. Mer information finns i [Starta processer](/help/forms/using/starting-processes.md).
 
-**Visa och agera på uppgifter:** När du visar dina Att göra-listor kan du se uppgifter från en affärsprocess som är tilldelade dig, eller till grupper som du tillhör eller som är delade uppgifter för andra användare. Du kan öppna, arbeta med och slutföra uppgifter efter behov. Vanligtvis innebär det att tillhandahålla information, godkänna ett formulär eller avslå ett formulär. Mer information finns i [Arbeta med att göra-listor](/help/forms/using/todo-lists.md).
+**Visa och agera på uppgifter:** När du visar dina Att göra-listor kan du se uppgifter från en affärsprocess som har tilldelats dig, eller grupper som du tillhör, eller som är delade uppgifter för andra användare. Du kan öppna, arbeta med och slutföra uppgifter efter behov. Vanligtvis innebär det att tillhandahålla information, godkänna ett formulär eller avslå ett formulär. Mer information finns i [Arbeta med Att göra-listor](/help/forms/using/todo-lists.md).
 
 **Spåra uppgifter**: Om du vill spåra dina uppgifter använder du fliken Spärra/knip på arbetsytan i AEM Forms. Du kan söka efter aktiva eller slutförda processer som du har påbörjat eller deltagit i. Du kan visa uppgifter, uppdrag och formulär som ingår i processen. Du kan också starta nya processer med formulärdata från en process som du tidigare har initierat. Mer information finns i [Spåra processer](/help/forms/using/tracking-processes.md).
 
-## Nytt erbjudande på arbetsytan i AEM Forms {#new-offering-of-aem-forms-workspace}
+## Nytt erbjudande på AEM Forms arbetsyta {#new-offering-of-aem-forms-workspace}
 
 **Stöd för gruppgodkännande av uppgifter**:
 
-Du kan godkänna flera uppgifter av samma typ. När du har valt en uppgift för godkännande är det bara de uppgifter som har samma process, med samma uppgiftsnamn och samma flödesalternativ, som är aktiverade. Se [Arbeta med Att göra-listor](/help/forms/using/todo-lists.md) för mer information om implementeringen.
+Du kan godkänna flera uppgifter av samma typ. När du har valt en uppgift för godkännande är det bara de uppgifter som har samma process, med samma uppgiftsnamn och samma flödesalternativ, som är aktiverade. Se [Arbeta med Att göra-listor](/help/forms/using/todo-lists.md) för implementeringsinformation.
 
-## Migrera från Flex Workspace till AEM Forms-arbetsytan {#migrating-from-flex-workspace-to-aem-forms-workspace}
+## Migrera från Flex Workspace till AEM Forms Workspace {#migrating-from-flex-workspace-to-aem-forms-workspace}
 
-Flex Workspace stöds inte av AEM Forms-kunder. Alla kunder som använder Flex Workspace bör gå över till AEM Forms Workspace.
+Flex Workspace stöds inte för AEM Forms-kunder. Alla kunder som använder Flex Workspace bör gå över till AEM Forms Workspace.
 
-I AEM Forms-arbetsytan har standardtjänsterna för återgivning och sändning, i standardåtgärdsprofilen, som är kopplad till XDP-formulär ändrats och nya tjänster introducerats. Mer information finns i [Ny rendering och skicka-tjänst](/help/forms/using/new-render-submit-service.md). Om du vill migrera befintliga processer, som fungerar med XDP-formulär, för att använda dessa tjänster, kan du följa [dessa steg](new-render-submit-service.md).
+I AEM Forms-arbetsytan har standardtjänsterna för återgivning och sändning, i standardåtgärdsprofilen, som är kopplad till XDP-formulär ändrats och nya tjänster introducerats. Mer information finns i [Ny renderings- och skicka-tjänst](/help/forms/using/new-render-submit-service.md). Om du vill migrera befintliga processer, som fungerar med XDP-formulär, för att använda dessa tjänster kan du följa [de här stegen](new-render-submit-service.md).
 
-**Anpassa Flex-arbetsytan med arbetsytan i AEM Forms**
+**Anpassa Flex Workspace med AEM Forms**
 
 Mappningen mellan olika typer av anpassningar i båda arbetsytorna är följande.
 
@@ -70,7 +73,7 @@ Mappningen mellan olika typer av anpassningar i båda arbetsytorna är följande
     </ol> </td>
    <td>
     <ol>
-     <li><a href="/help/forms/using/changing-locale-user-interface.md">Ändra arbetsytan för AEM-formulär</a></li>
+     <li><a href="/help/forms/using/changing-locale-user-interface.md">Ändra språkområde för arbetsytan i AEM Forms</a></li>
     </ol> </td>
   </tr>
   <tr>
@@ -104,36 +107,36 @@ Mappningen mellan olika typer av anpassningar i båda arbetsytorna är följande
  </tbody>
 </table>
 
-Några av funktionerna i Flex Workspace som inte är tillgängliga i AEM Forms-arbetsytan är: meddelanden och meddelanden, välkomstsida, godkännandebehållare och alternativ för att hantera kolumnrubriker. En fullständig lista finns i [Funktioner i Flex-arbetsytan som inte är tillgängliga i AEM Forms-arbetsytan](/help/forms/using/features-flex-workspace-available-html.md).
+Några av de funktioner i Flex Workspace som inte finns på arbetsytan i AEM Forms är: meddelanden och meddelanden, välkomstsida, godkännandebehållare och alternativ för att hantera kolumnrubriker. En fullständig lista finns i [Funktioner i Flex Workspace som inte är tillgängliga i AEM Forms Workspace](/help/forms/using/features-flex-workspace-available-html.md).
 
 ## Utveckla med arbetsytan i AEM Forms {#developing-with-aem-forms-workspace}
 
 ### Arkitektur {#architecture}
 
-Arbetsytan i AEM Forms är en HTML- och JavaScript™-baserad webbapplikation som körs på CRX™. När Workspace URL öppnas i en webbläsare öppnas en CRX™-resurs och programmet återges som en HTML-sida i webbläsaren. JavaScript-biblioteken och den anpassade JavaScript-koden hanterar programmets interna och externa funktioner, till exempel användargränssnitt, användarinteraktion och kommunikation med AEM Forms-servern. Mer information finns i AEM Forms-arbetsytans [arkitektur](/help/forms/using/html-workspace-architecture.md).
+AEM Forms arbetsyta är ett HTML- och JavaScript™-baserat webbprogram som körs på CRX™. När Workspace URL öppnas i en webbläsare öppnas en CRX™-resurs och programmet återges som en HTML-sida i webbläsaren. JavaScript-biblioteken och den anpassade JavaScript-koden hanterar programmets interna och externa funktioner, till exempel användargränssnitt, användarinteraktion och kommunikation med AEM Forms-servern. Mer information finns i AEM Forms arbetsyta [arkitektur](/help/forms/using/html-workspace-architecture.md).
 
-### Anpassa arbetsytan i AEM Forms {#aem-forms-workspace-customization}
+### Anpassning av arbetsytan i AEM Forms {#aem-forms-workspace-customization}
 
-Arbetsytan i AEM Forms har stöd för en mängd anpassningar för att uppdatera användargränssnittets layout, utseende, funktioner och mycket annat. Anpassningarna innefattar att uppdatera ett eller flera av följande:
+AEM Forms arbetsyta har stöd för en mängd anpassningar för att uppdatera användargränssnittets layout, utseende, funktioner och mycket annat. Anpassningarna innefattar att uppdatera ett eller flera av följande:
 
 * Användargränssnittets utseende
 * Funktioner som använder semantiska anpassningar
 * Återanvända HTML-komponenter i andra webbprogram
 
-Artikeln om [anpassning](introduction-customizing-html-workspace.md#types-of-customizations) förklarar vilka typer av sådana anpassningar som finns.
+I artikeln [customization](introduction-customizing-html-workspace.md#types-of-customizations) förklaras de olika typerna av anpassningar.
 
-### Set up the developer environment {#set-up-the-developer-environment}
+### Konfigurera utvecklarmiljön {#set-up-the-developer-environment}
 
-AEM Forms-arbetsytan innehåller ett CRX-paket som distribuerats på CRX, ett SDK-arkiv som innehåller den fullständiga källkoden, JavaScript-bibliotek från tredje part och byggskript för arbetsytan AEM Forms. Använd dessa för att konfigurera utvecklingsmiljön för att utföra de anpassningar som nämns ovan. Mer information finns i [Skapa kod](introduction-customizing-html-workspace.md#building-html-workspace-code)för arbetsytan i AEM Forms.
+AEM Forms arbetsyta innehåller ett CRX-paket som distribuerats på CRX, ett SDK-arkiv som innehåller den fullständiga källkoden, JavaScript-bibliotek från tredje part och byggskript för AEM Forms arbetsyta. Använd dessa för att konfigurera utvecklingsmiljön för att utföra de anpassningar som nämns ovan. Mer information finns i [Skapa AEM Forms-arbetsytekod](introduction-customizing-html-workspace.md#building-html-workspace-code).
 
-Du kan anpassa en stor del av gränssnittet och viktiga funktioner som teckensnitt, färgscheman, logotyp, inloggningsskärmen, feldialogrutor, integrering med tredjepartsprogram och återanvändning av komponenter i tredjepartsprogram. Du kan även förbättra innehållet som visas på sidan Sammanfattning av uppgifter, visa bilder för åtgärder för uppgiftsvägar och även ändra de lågnivåmodeller och vyer för Backbone som skapar arbetsytan i AEM Forms.
+Du kan anpassa en stor del av gränssnittet och viktiga funktioner som teckensnitt, färgscheman, logotyp, inloggningsskärmen, feldialogrutor, integrering med tredjepartsprogram och återanvändning av komponenter i tredjepartsprogram. Du kan också förbättra innehållet som visas på sidan Uppgiftssammanfattning, visa bilder för åtgärder för uppgiftsvägar och även ändra de lågnivåmodeller och vyer för Backbone som skapar AEM Forms-arbetsyteprogrammet.
 
-### HTML-återgivning av XDP-formulär {#html-rendering-of-xdp-forms}
+### HTML-återgivning av XDP Forms {#html-rendering-of-xdp-forms}
 
-Som standard återges ett XDP-formulär i PDF-format på en dator och i HTML-format på en surfplatta för en ny process. Det går alltid att återge ett XDP-formulär i HTML-format. Mer information finns i [Nya renderings- och Skicka-tjänster](/help/forms/using/new-render-submit-service.md).
+Som standard återges ett XDP-formulär i PDF-format på en dator och i HTML-format på en surfplatta för en ny process. Det går alltid att återge ett XDP-formulär i HTML-format. Mer information finns i [Nya tjänster för återgivning och sändning](/help/forms/using/new-render-submit-service.md).
 
-[Funktionen för mobilformulär](https://helpx.adobe.com/livecycle/help/mobile-forms/introduction.html) , som fungerar med [profiler](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html), möjliggör HTML-återgivning av XDP-formulär. Som standard används `default.html` profilen Återge nytt HTML-formulär som du kan ändra. Du kan också lägga till anpassade ändringar som inträffar innan ett XDP-formulär återges i HTML-format.
+[Funktionen Mobile ](https://helpx.adobe.com/livecycle/help/mobile-forms/introduction.html) Forms, som fungerar med  [profiler](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html), möjliggör HTML-återgivning av XDP-formulär. Som standard använder &#39;Återge nytt HTML-formulär&#39; profilen `default.html` som du kan ändra. Du kan också lägga till anpassade ändringar som inträffar innan ett XDP-formulär återges i HTML-format.
 
-## AEM Forms arbetsyta {#aem-forms-workspace-app}
+## AEM Forms Workspace app {#aem-forms-workspace-app}
 
-Om du vill arbeta med dina affärsprocesser på en mobil enhet kan du använda AEM Forms-arbetsyteappen som erbjuder AEM Forms. Mer information finns i Översikt över [arbetsytan i](https://helpx.adobe.com/livecycle/help/mobile-workspace/mobile-workspace-overview.html)AEM Forms.
+Om du vill arbeta med dina affärsprocesser på en mobil enhet kan du använda AEM Forms-appen för arbetsytor i AEM Forms. Mer information finns i [AEM Forms Workspace app overview](https://helpx.adobe.com/livecycle/help/mobile-workspace/mobile-workspace-overview.html).
