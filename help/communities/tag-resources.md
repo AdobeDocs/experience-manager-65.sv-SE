@@ -26,7 +26,7 @@ Om du taggar aktiveringsresurser kan du filtrera resurser och utbildningssökvä
 
 I grund och botten:
 
-* [Skapa ett taggnamnutrymme](../../help/sites-administering/tags.md#creating-a-namespace) för varje katalog
+* [Skapa ett ](../../help/sites-administering/tags.md#creating-a-namespace) namnutrymme för taggar för varje katalog
 
    * [Ange taggbehörigheter](../../help/sites-administering/tags.md#setting-tag-permissions)
    * Endast för communitymedlemmar (sluten community)
@@ -34,7 +34,7 @@ I grund och botten:
       * Tillåt läsåtkomst för [communityplatsens medlemsgrupp](users.md#publish-group-roles)
    * För alla webbplatsbesökare, oavsett om de är inloggade eller anonyma (öppen community)
 
-      * Tillåt läsåtkomst för `Everyone` gruppen
+      * Tillåt läsåtkomst för gruppen `Everyone`
    * [Publicera taggarna](../../help/sites-administering/tags.md#publishing-tags)
 
 
@@ -44,15 +44,15 @@ I grund och botten:
    * [Konfigurera kataloger som finns i platsens struktur](functions.md#catalog-function)
 
       * Kan lägga till taggar i kataloginstansen för att styra listan med taggar som finns i gränssnittsfiltren.
-      * Kan lägga till [förfilter](catalog-developer-essentials.md#pre-filters)för att begränsa vilka resurser som ingår i en katalog.
+      * Kan lägga till [förfilter](catalog-developer-essentials.md#pre-filters) för att begränsa katalogernas inkluderade resurser.
 
 * [Publicera communitywebbplatsen](sites-console.md#publishing-the-site)
-* [Använd taggar för aktiveringsresurser](resources.md#create-a-resource) så att de kan filtreras kategoriserat
+* [Använd taggar för att aktivera ](resources.md#create-a-resource) resurser så att de kan filtreras kategoriserat
 * [Publicera aktiveringsresurserna](resources.md#publish)
 
 ## Taggar för communitywebbplats {#community-site-tags}
 
-När du skapar eller redigerar en community-webbplats anger [taggningsinställningen](sites-console.md#tagging) omfattningen för de taggar som är tillgängliga för funktioner på webbplatsen genom att markera en delmängd av de befintliga taggnamnutrymmena.
+När du skapar eller redigerar en community-webbplats anger [taggningsinställningen](sites-console.md#tagging) omfattningen av de taggar som är tillgängliga för funktioner på webbplatsen genom att markera en delmängd av de befintliga taggnamnutrymmena.
 
 Även om taggar kan skapas och läggas till på communitywebbplatsen när som helst, bör du utforma en taxonomi i förväg, ungefär som när du utformar en databas. Se [Använda taggar](../../help/sites-authoring/tags.md).
 
@@ -60,7 +60,7 @@ När du senare lägger till taggar i en befintlig communitywebbplats måste du s
 
 För en communitywebbplats måste du aktivera läsåtkomst för medlemmar i communityn efter att webbplatsen har publicerats och taggarna har publicerats. Se [Ange taggbehörigheter](../../help/sites-administering/tags.md#setting-tag-permissions).
 
-Så här visas det i CRXDE när en administratör tillämpar läsbehörigheter på `/etc/tags/ski-catalog` gruppen `Community Enable Members`.
+Så här visas det i CRXDE när en administratör tillämpar läsbehörigheter på `/etc/tags/ski-catalog` för gruppen `Community Enable Members`.
 
 ![platstaggar](assets/site-tags.png)
 
@@ -72,17 +72,17 @@ Katalogfunktionen innehåller en tagginställning som definierar taggarna som fi
 
 ![catalog-namespace](assets/catalog-namespace.png)
 
-## Tillämpa taggar på aktiveringsresurser {#applying-tags-to-enablement-resources}
+## Tillämpar taggar på aktiveringsresurser {#applying-tags-to-enablement-resources}
 
-Aktiveringsresurser och utbildningsvägar visas i alla kataloger när `Show in Catalog` det är markerat. Om du lägger till taggar i resurser och utbildningsvägar kan du förfiltrera i specifika kataloger och filtrera i kataloggränssnittet.
+Aktiveringsresurser och utbildningssökvägar visas i alla kataloger när `Show in Catalog` är markerat. Om du lägger till taggar i resurser och utbildningsvägar kan du förfiltrera i specifika kataloger och filtrera i kataloggränssnittet.
 
-Du kan begränsa aktiveringsresurser och utbildningsvägar till specifika kataloger genom att skapa [förfilter](catalog-developer-essentials.md#pre-filters).
+Du begränsar aktiveringsresurser och utbildningsvägar till specifika kataloger genom att skapa [pre-filters](catalog-developer-essentials.md#pre-filters).
 
 Med kataloggränssnittet kan besökare använda ett taggfilter i listan över resurser och utbildningssökvägar som visas i katalogen.
 
 Administratören som använder taggarna i aktiveringsresurserna måste känna till de taggnamnutrymmen som är associerade med katalogerna samt taxonomin för att kunna välja en undertagg för mer detaljerad kategorisering.
 
-Om ett `ski-catalog` namnutrymme till exempel skapades och angavs för en katalog med namnet `Ski Catalog`kan det ha två underordnade taggar: `lesson-1` och `lesson-2`.
+Om till exempel ett `ski-catalog`-namnutrymme skapas och anges i en katalog med namnet `Ski Catalog` kan det ha två underordnade taggar: `lesson-1` och `lesson-2`.
 
 Alla aktiveringsresurser som är taggade med något av följande:
 
