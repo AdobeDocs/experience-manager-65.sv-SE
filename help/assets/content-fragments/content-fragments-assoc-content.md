@@ -21,15 +21,15 @@ ht-degree: 12%
 
 # Associerat innehåll{#associated-content}
 
-Associerat innehåll ger anslutningen så att resurser (t.ex.) kan (valfritt) användas med fragmentet när det läggs till på en innehållssida. Detta ger flexibilitet genom [att tillhandahålla ett antal resurser som du kan komma åt när du använder innehållsfragmentet på en sida](/help/sites-authoring/content-fragments.md#using-associated-content), samtidigt som det minskar tiden för att söka efter rätt resurs.
+Associerat innehåll ger anslutningen så att resurser (t.ex.) kan (valfritt) användas med fragmentet när det läggs till på en innehållssida. Detta ger flexibilitet genom att [tillhandahålla ett antal resurser att komma åt när du använder innehållsfragmentet på en sida](/help/sites-authoring/content-fragments.md#using-associated-content), samtidigt som det minskar tiden som krävs för att söka efter rätt resurs.
 
-## Lägga till associerat innehåll {#adding-associated-content}
+## Lägger till associerat innehåll {#adding-associated-content}
 
 >[!NOTE]
 >
->Det finns olika metoder för att lägga till [visuella resurser (t.ex. bilder)](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets) till fragmentet och/eller sidan.
+>Det finns olika metoder för att lägga till [visuella resurser (t.ex. bilder)](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets) till avsnittet och/eller sidan.
 
-För att kunna skapa en association måste du först lägga [till dina mediefiler i en samling](/help/assets/manage-collections.md#adding-assets-to-a-collection). När det är klart kan du:
+Om du vill skapa en association måste du först [lägga till dina mediefiler i en samling](/help/assets/manage-collections.md#adding-assets-to-a-collection). När det är klart kan du:
 
 1. Öppna fragmentet och välj **Associerat innehåll** på sidopanelen.
 
@@ -50,8 +50,8 @@ För att kunna skapa en association måste du först lägga [till dina mediefile
 
 När du har kopplat en samling kan du:
 
-* **Ta bort** associationen.
-* **Lägg till resurser** i samlingen.
+* **Ta** bort associationen.
+* **Lägg till** resurser i samlingen.
 * Välj en resurs för ytterligare åtgärder.
 * Redigera resursen.
 
