@@ -17,24 +17,24 @@ ht-degree: 0%
 ---
 
 
-# Anpassad lagring för utkast och inskickningskomponenter {#custom-storage-for-drafts-and-submissions-component}
+# Anpassad lagring för utkast och inskickningskomponent {#custom-storage-for-drafts-and-submissions-component}
 
 ## Översikt {#overview}
 
 Med AEM Forms kan du spara ett formulär som ett utkast. Med utkastsfunktionen kan du underhålla ett pågående formulär som du kan fylla i och skicka senare från vilken enhet som helst.
 
-Som standard lagrar AEM Forms de användardata som är kopplade till utkastet och överföringen av ett formulär på `/content/forms/fp` noden i Publish-instansen. Dessutom innehåller AEM Forms portalkomponenter datatjänster som du kan använda för att anpassa implementeringen av lagring av användardata för utkast och inskickade data. Du kan till exempel lagra användardata i ett datalager.
+Som standard lagrar AEM Forms användardata som är kopplade till utkastet och överföringen av ett formulär i noden `/content/forms/fp` i Publish-instansen. Dessutom innehåller AEM Forms portalkomponenter datatjänster som du kan använda för att anpassa implementeringen av lagring av användardata för utkast och inskickade data. Du kan till exempel lagra användardata i ett datalager.
 
 ## Förutsättningar  {#prerequisites}
 
-* Aktivera komponenter för [formulärportalen](/help/forms/using/enabling-forms-portal-components.md)
+* Aktivera [komponenter i formulärportalen](/help/forms/using/enabling-forms-portal-components.md)
 * Skapa en [formulärportalsida](/help/forms/using/creating-form-portal-page.md)
-* Aktivera [anpassningsbara formulär för formulärportalen](/help/forms/using/draft-submission-component.md)
+* Aktivera [adaptiva formulär för formulärportalen](/help/forms/using/draft-submission-component.md)
 * Lär dig [implementeringsinformation för anpassad lagring](/help/forms/using/draft-submission-component.md#customizing-the-storage)
 
 ## Utkastdatatjänst {#draft-data-service}
 
-Om du vill anpassa lagringen av användardata för utkast måste du implementera alla metoder i `DraftDataService` gränssnittet. I följande exempelkod beskrivs metoderna och argumenten.
+Om du vill anpassa lagring av användardata för utkast måste du implementera alla metoder i `DraftDataService`-gränssnittet. I följande exempelkod beskrivs metoderna och argumenten.
 
 ```java
 /**
@@ -103,7 +103,7 @@ public interface DraftDataService {
 
 ## Datatjänst för överföring {#submission-data-service}
 
-Om du vill anpassa lagringen av användardata för överföring måste du implementera alla metoder i `SubmitDataService` gränssnittet. I följande exempelkod beskrivs metoderna och argumenten.
+Om du vill anpassa lagringen av användardata för överföringar måste du implementera alla metoder i `SubmitDataService`-gränssnittet. I följande exempelkod beskrivs metoderna och argumenten.
 
 ```java
 /**
