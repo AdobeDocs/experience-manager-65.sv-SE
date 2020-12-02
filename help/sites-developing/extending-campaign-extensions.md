@@ -1,8 +1,8 @@
 ---
 title: Skapa anpassade tillägg
 seo-title: Skapa anpassade tillägg
-description: Du kan ringa din anpassade kod i Adobe Campaign från AEM eller från AEM till Adobe Campaign
-seo-description: Du kan ringa din anpassade kod i Adobe Campaign från AEM eller från AEM till Adobe Campaign
+description: Du kan anropa din anpassade kod i Adobe Campaign från AEM eller från AEM till Adobe Campaign
+seo-description: Du kan anropa din anpassade kod i Adobe Campaign från AEM eller från AEM till Adobe Campaign
 uuid: 8392aa0d-06cd-4b37-bb20-f67e6a0550b1
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: f536bcc1-7744-4f05-ac6a-4cec94a1ffb6
 translation-type: tm+mt
 source-git-commit: 06f1f753b9bb7f7336454f166e03f753e3735a16
+workflow-type: tm+mt
+source-wordcount: '538'
+ht-degree: 0%
 
 ---
 
 
 # Skapa anpassade tillägg{#creating-custom-extensions}
 
-När du implementerar ett projekt har du vanligtvis anpassad kod i både AEM och Adobe Campaign. Med hjälp av det befintliga API:t kan du anropa din anpassade kod i Adobe Campaign från AEM eller från AEM till Adobe Campaign. I det här dokumentet beskrivs hur du gör det.
+När du implementerar ett projekt har du vanligtvis anpassad kod i både AEM och Adobe Campaign. Med det befintliga API:t kan du anropa din anpassade kod i Adobe Campaign från AEM eller från AEM till Adobe Campaign. I det här dokumentet beskrivs hur du gör det.
 
 ## Förutsättningar {#prerequisites}
 
@@ -26,7 +29,7 @@ Du måste ha följande installerat:
 * Adobe Experience Manager
 * Adobe Campaign 6.1
 
-Mer information finns i [Integrera AEM med Adobe Campaign 6.1](/help/sites-administering/campaignonpremise.md) .
+Mer information finns i [Integrera AEM med Adobe Campaign 6.1](/help/sites-administering/campaignonpremise.md).
 
 ## Exempel 1: AEM till Adobe Campaign {#example-aem-to-adobe-campaign}
 
@@ -38,13 +41,13 @@ Standardintegrationen mellan AEM och Campaign baseras på JSON och JSSP (JavaScr
 >
 >[Det här exemplet finns i Geometrixx](/help/sites-developing/we-retail.md), som är tillgänglig från Paketresurs.
 
-I det här exemplet skapar vi en ny anpassad JSSP-fil och anropar den från AEM-sidan för att hämta resultatet. Detta kan till exempel användas för att hämta data från Adobe Campaign eller för att spara data i Adobe Campaign.
+I det här exemplet skapar vi en ny anpassad JSSP-fil och anropar den från AEM sida för att hämta resultatet. Detta kan till exempel användas för att hämta data från Adobe Campaign eller för att spara data i Adobe Campaign.
 
-1. Om du vill skapa en ny JSSP-fil i Adobe Campaign klickar du på ikonen **Nytt** .
+1. Om du vill skapa en ny JSSP-fil i Adobe Campaign klickar du på ikonen **Nytt**.
 
    ![](do-not-localize/chlimage_1-4a.png)
 
-1. Ange namnet på den här JSSP-filen. I det här exemplet använder vi **cus:custom.jssp** (vilket betyder att det kommer att finnas i **cus** -namnutrymmet).
+1. Ange namnet på den här JSSP-filen. I det här exemplet använder vi **cus:custom.jssp** (vilket betyder att det kommer att finnas i namnutrymmet **cus**).
 
    ![chlimage_1-16](assets/chlimage_1-16a.png)
 
@@ -58,10 +61,11 @@ I det här exemplet skapar vi en ny anpassad JSSP-fil och anropar den från AEM-
    ```
 
 1. Spara ditt arbete. Det återstående arbetet är i AEM.
-1. Skapa en enkel servlet på AEM-sidan för att anropa denna JSSP. I det här exemplet antar vi följande:
+1. Skapa en enkel servett på AEM sida för att anropa denna JSSP. I det här exemplet antar vi följande:
 
-   * Anslutningen fungerar mellan AEM och Campaign
+   * Kopplingen fungerar mellan AEM och Campaign
    * Kampanjmolntjänsten är konfigurerad på **/content/geometrixx-outdoor**
+
    Det viktigaste objektet i det här exemplet är **GenericCampaignConnector**, som gör att du kan anropa (hämta och posta) jssp-filer på Adobe Campaign-sidan.
 
    Här är ett litet kodfragment:
@@ -159,7 +163,7 @@ public class CustomServlet extends SlingSafeMethodsServlet {
 }
 ```
 
-## Exempel 2: Adobe Campaign to AEM {#example-adobe-campaign-to-aem}
+## Exempel 2: Adobe Campaign till AEM {#example-adobe-campaign-to-aem}
 
 AEM erbjuder API:er som kan hämta objekt var som helst i platadminutforskarvyn.
 
@@ -177,7 +181,7 @@ API:t är:
 
 * [http://localhost:4502/content/campaigns/geometrixx/scott-recommends.1.json](http://localhost:4502/content/campaigns/geometrixx/scott-recommends.2.json)
 
-Slutet av URL:en **.1.json** kan ersättas med **.2.json**, **.3.json**, enligt antalet undernivåer som du vill ha För att få alla nyckelordens **oändlighet** kan användas:
+Slutet av URL:en **.1.json** kan ersättas med **.2.json**, **.3.json**, enligt antalet undernivåer som du vill hämta För att få alla nyckelordet **infinity** kan användas:
 
 * [http://localhost:4502/content/campaigns/geometrixx/scott-recommends.infinity.json](http://localhost:4502/content/campaigns/geometrixx/scott-recommends.2.json)
 
