@@ -17,13 +17,13 @@ ht-degree: 5%
 ---
 
 
-# API:er för att arbeta med inskickade formulär på formulärportalen {#apis-to-work-with-submitted-forms-on-forms-portal}
+# API:er för att arbeta med skickade formulär på formulärportalen {#apis-to-work-with-submitted-forms-on-forms-portal}
 
-AEM Forms tillhandahåller API:er som du kan använda för att fråga efter formulärdata som skickas via formulärportalen. Dessutom kan du publicera kommentarer eller uppdatera egenskaperna för skickade formulär med de API:er som beskrivs i det här dokumentet.
+AEM Forms tillhandahåller API:er som du kan använda för att fråga efter formulärdata som skickas via formulärportalen. Dessutom kan du publicera kommentarer eller uppdatera egenskaper för skickade formulär med de API:er som beskrivs i det här dokumentet.
 
 >[!NOTE]
 >
->Användare som ska anropa API:erna måste läggas till i granskningsgruppen enligt beskrivningen i [Associera granskare med ett formulär](/help/forms/using/adding-reviewers-form.md).
+>Användare som ska anropa API:erna måste läggas till i granskningsgruppen enligt beskrivningen i [Associera granskare som skickar in till ett formulär](/help/forms/using/adding-reviewers-form.md).
 
 ## GET /content/forms/portal/submission.review.json?func=getFormsForSubmissionReview {#get-content-forms-portal-submission-review-json-func-getformsforsubmissionreview-br}
 
@@ -33,7 +33,7 @@ Returnerar en lista med alla giltiga formulär.
 
 Detta API kräver inga ytterligare parametrar.
 
-### Response {#response}
+### Svar {#response}
 
 Svarsobjektet innehåller en JSON-array som innehåller formulärnamn och databassökväg. Responsens struktur är följande:
 
@@ -91,7 +91,7 @@ Ange följande parametrar i begärande-URL:
   </tr>
   <tr>
    <td><code>sort</code> <br /> (valfritt)</td>
-   <td>Anger sorteringsordningen för resultat. Standardvärdet är <strong>desc</strong>, vilket sorterar resultatet i fallande ordning. Du kan ange <code>asc</code> att sorteringen ska ske i stigande ordning.</td>
+   <td>Anger sorteringsordningen för resultat. Standardvärdet är <strong>desc</strong>, vilket sorterar resultatet i fallande ordning. Du kan ange <code>asc</code> om du vill sortera resultaten i stigande ordning.</td>
   </tr>
   <tr>
    <td><code>cutPoints</code> <br /> (valfritt)</td>
@@ -104,7 +104,7 @@ Ange följande parametrar i begärande-URL:
  </tbody>
 </table>
 
-### Response {#response-1}
+### Svar {#response-1}
 
 Svarsobjektet innehåller en JSON-array som innehåller information om de angivna formulären. Responsens struktur är följande:
 
@@ -142,7 +142,7 @@ Ange följande parametrar i begärande-URL:
 | `submitID` | Anger det metadata-ID som är associerat med en överföringsinstans. |
 | `Comment` | Anger den text som ska läggas till i den angivna överföringsinstansen. |
 
-### Response {#response-2}
+### Svar {#response-2}
 
 Returnerar ett kommentar-ID när en kommentar har publicerats.
 
@@ -172,7 +172,7 @@ Ange följande parameter i begärande-URL:
 |---|---|
 | `submitID` | Anger metadata-ID för en skickningsinstans. |
 
-### Response {#response-3}
+### Svar {#response-3}
 
 Svarsobjektet innehåller en JSON-array som innehåller alla kommentarer som är associerade med det angivna överförings-ID:t. Responsens struktur är följande:
 
@@ -212,7 +212,7 @@ Ange följande parametrar i begärande-URL:
 | `property` | Anger den formuläregenskap som ska uppdateras. |
 | `value` | Anger värdet på den formuläregenskap som ska uppdateras. |
 
-### Response {#response-4}
+### Svar {#response-4}
 
 Returnerar ett JSON-objekt med information om den publicerade uppdateringen.
 
