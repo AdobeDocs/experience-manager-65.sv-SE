@@ -16,9 +16,9 @@ ht-degree: 0%
 ---
 
 
-# Vi.Gov:s referenswebbplats FOIA genomgång {#we-gov-reference-site-foia-walkthrough}
+# Vi.Gov referenswebbplats FOIA genomgång {#we-gov-reference-site-foia-walkthrough}
 
-## Scenario för lagen om informationsfrihet för webbplatser {#reference-site-freedom-of-information-act-scenario}
+## Referenswebbplats Freedom of Information Act scenario {#reference-site-freedom-of-information-act-scenario}
 
 We.Gov är en statlig organisation som låter adoptivföräldrar registrera sig för barnsupport om de använder ett barn. We.Gov tillåter också föräldrar att begära information från följande myndigheter inom ramen för lagen om informationsfrihet:
 
@@ -28,7 +28,7 @@ We.Gov är en statlig organisation som låter adoptivföräldrar registrera sig 
 * Avdelningen för flottan
 * Naturvårdsverket
 
-Mer information om lagen om informationsfrihet finns på [www.foia.gov](https://www.foia.gov).
+Mer information om lagen om informationsfrihet finns i [www.foia.gov](https://www.foia.gov).
 
 Scenariot omfattar följande personligheter:
 
@@ -44,13 +44,13 @@ Enligt lagen om informationsfrihet begär Sarah en kopia av ärendeloggen från 
 
 ### Se det själv {#see-it-yourself}
 
-Öppna i webbläsaren `https://<hostname>:<PublishPort>/wegov`. Tryck på Program > Alla program på webbplatsen Web.Gov. På sidan Alla program trycker du på Apply under Application for FOIA Request.
+Öppna `https://<hostname>:<PublishPort>/wegov` i webbläsaren. Tryck på Program > Alla program på webbplatsen Web.Gov. På sidan Alla program trycker du på Apply under Application for FOIA Request.
 
-## Sarah börjar sin ansökan om information under FOIA {#sarah-starts-her-application-for-information-under-foia}
+## Sarah startar sin ansökan om information under FOIA {#sarah-starts-her-application-for-information-under-foia}
 
-Sarah klickar på **Apply** och på sidan&quot;Freedom of Information Act Request Form&quot; anger Sarah bland annat följande information:
+Sarah klickar på **Apply** och på sidan&quot;Freedom of Information Act Request Form&quot; anger Sarah följande information:
 
-* **Kontor:** Sarah anger vilken myndighet som begäran riktar sig till som justitiedepartementet - informationskontoret.
+* **Myndighet:** Sarah anger vilken myndighet som ansökan riktades till som justitiedepartementet - informationskontoret.
 
 * **Betala**: Sarah anger att hon är villig att betala upp till 100 USD för utskrifts- och portokostnader.
 * **Beskriv begäran i detalj**: Sarah anger&quot;Requesting copy of the Administration for Children and Families case logs for Fiscal year 2013 through 2016&quot;.
@@ -65,7 +65,7 @@ Sarah kan när som helst trycka på Save för att spara utkastet av formuläret 
 >
 >Arbetsflödet från e-post fungerar endast med inloggade användare. I scenariot för referensplatsen ser du till att användaren Sarah Rose läggs till. Sarah inloggningsuppgifter är `srose/password`.
 
-## John Jacobs tar emot och godkänner ansökan {#john-jacobs-receives-and-approves-the-application}
+## John Jacobs tar emot och godkänner programmet {#john-jacobs-receives-and-approves-the-application}
 
 John Jacobs tar emot förfrågningarna och skickar dem till rätt person. Med AEM Inbox kan hon se alla inskickade program på ett och samma ställe.
 
@@ -75,7 +75,7 @@ När Sarah fyller i och skickar in FOIA-programmet skickas en anmälan till John
 
 ### Se det själv {#see-it-yourself-1}
 
-Du kommer åt AEM på https://&lt;***värdnamn***>:&lt;***PublishPort***>/content/we-finance/global/en/login.html?resource=/aem/inbox.html. Logga in på AEM inkorg med jjacobs/password som användarnamn/lösenord för John Jacobs och se FOIA-programmet. Information om hur du använder AEM Inkorg för formulärbaserade arbetsflödesuppgifter finns i [Hantera Forms-program och -uppgifter i AEM Inkorg](/help/forms/using/manage-applications-inbox.md).
+Du kommer åt AEM i https://&lt;***värdnamn***>:&lt;***PublishPort***>/content/we-finance/global/en/login.html?resource=/aem/inbox.html. Logga in på AEM inkorg med jjacobs/password som användarnamn/lösenord för John Jacobs och se FOIA-programmet. Information om hur du använder AEM Inkorg för formulärcentrerade arbetsflödesuppgifter finns i [Hantera Forms-program och -uppgifter i AEM Inkorg](/help/forms/using/manage-applications-inbox.md).
 
 ![johnjacobs](assets/johnjacobs.png)
 
@@ -101,7 +101,7 @@ När John Jacobs godkänner FOIA-begäran skapas en PDF-fil eller ett dokument m
 
 ### Se själv {#see-for-yourself}
 
-Du kommer åt AEM på https://&lt;***värdnamn***>:&lt;***PublishPort***>/content/we-finance/global/en/login.html?resource=/aem/inbox.html. Logga in i AEM inkorg med hjälp av grios/password som användarnamn/lösenord för Gloria Rios och se FOIS-begäran.
+Du kommer åt AEM i https://&lt;***värdnamn***>:&lt;***PublishPort***>/content/we-finance/global/en/login.html?resource=/aem/inbox.html. Logga in i AEM inkorg med hjälp av grios/password som användarnamn/lösenord för Gloria Rios och se FOIS-begäran.
 
 Gloria öppnar förfrågan och undersöker informationen i FOIA-begäran. Efter att ha granskat detaljerna i begäran och kontrollerat om det går att skicka in de begärda dokumenten, godkänner Gloria begäran.
 
