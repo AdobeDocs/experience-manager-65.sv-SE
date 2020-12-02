@@ -20,20 +20,20 @@ ht-degree: 0%
 
 # Konfigurera översättningsintegreringsramverket{#configuring-the-translation-integration-framework}
 
-Översättningsintegreringsramverket integreras med översättningstjänster från tredje part för att samordna översättningen av AEM-innehåll.
+Översättningsintegreringsramverket integreras med översättningstjänster från tredje part för att samordna översättningen av AEM.
 
 * Anslut till översättningstjänsten.
 * Skapa en konfiguration för Translation Integration Framework.
 * Associera molnkonfigurationerna med sidorna.
 
-En översikt över funktionerna för innehållsöversättning i AEM finns i [Översätta innehåll för flerspråkiga webbplatser](/help/sites-administering/translation.md).
+En översikt över funktionerna för översättning av innehåll i AEM finns i [Översätta innehåll för flerspråkiga platser](/help/sites-administering/translation.md).
 
 ## Ansluta till en översättningstjänstleverantör {#connecting-to-a-translation-service-provider}
 
-Skapa en molnkonfiguration som ansluter AEM till din översättningstjänstleverantör. AEM har funktioner för att ansluta till Microsoft Translator som standard.
+Skapa en molnkonfiguration som ansluter AEM till översättningstjänstleverantören. AEM kan ansluta till Microsoft Translator som standard.
 Följande översättningsleverantörer tillhandahåller en implementering av det nya API:t för översättningsprojekten. Länkar för mer information om integrationen:
 
-* [Translations.com](https://exchange.adobe.com/experiencecloud.details.90104.globallink-connect-plus-for-aem.html) (Adobe Exchange Premier Partner)
+* [Translations.com](https://exchange.adobe.com/experiencecloud.details.90104.globallink-connect-plus-for-aem.html)  (Adobe Exchange Premier Partner)
 * [Clay Tablet Technologies](https://exchange.adobe.com/experiencecloud.details.90064.clay-tablet-translation-for-experience-manager.html)
 * [Lionbridge](https://exchange.adobe.com/experiencecloud.details.100064.lionbridge-connector-for-experience-manager-63.html)
 * [Memsource](https://exchange.adobe.com/experiencecloud.details.103166.memsource-connector-for-adobe-experience-manager.html)
@@ -51,8 +51,9 @@ Följande översättningsleverantörer tillhandahåller en implementering av det
 >Här hittar du en lista över de senaste leverantörerna av personal- och maskinöversättning:
 >
 >
->* [AEM Human Translation](https://www.adobe.com/go/aem-human-translation-connectors)
->* [AEM Machine Translation](https://www.adobe.com/go/aem-machine-translation-connectors)
+>* [AEM mänsklig översättning](https://www.adobe.com/go/aem-human-translation-connectors)
+>* [AEM maskinöversättning](https://www.adobe.com/go/aem-machine-translation-connectors)
+
 >
 
 
@@ -63,7 +64,7 @@ Du kan skapa flera molnkonfigurationer för samma anslutning om det behövs. Ska
 
 När du har konfigurerat en anslutning kan du skapa den konfiguration av översättningsintegreringsramverket som använder den.
 
-## Skapa en konfiguration för översättningsintegrering {#creating-a-translation-integration-configuration}
+## Skapar en konfiguration för översättningsintegrering {#creating-a-translation-integration-configuration}
 
 Skapa en konfiguration för ramverk för översättningsintegrering som anger hur ditt innehåll ska översättas. Konfigurationen innehåller följande information:
 
@@ -75,9 +76,9 @@ När du har skapat en ramverkskonfiguration associerar du molnkonfigurationen me
 
 Om olika delar av webbplatsen har olika översättningskrav skapar du flera ramverkskonfigurationer utifrån detta. En flerspråkig webbplats innehåller t.ex. engelska, spanska och japanska språkkopior. Webbplatsägaren använder två olika översättningstjänstleverantörer för spanska och japanska översättningar. Därför är två konfigurationer av ramverket konfigurerade. Varje konfiguration använder en annan översättningstjänstleverantör.
 
-När du har konfigurerat ett ramverk för översättningsintegrering kan du [koppla det till sidorna](/help/sites-administering/tc-prep.md) som använder det.
+När du har konfigurerat ett ramverk för översättningsintegrering kan du [associera det med de sidor](/help/sites-administering/tc-prep.md) som använder det.
 
-**Obs!** En översikt över funktionerna för innehållsöversättning i AEM finns i [Översätta innehåll för flerspråkiga webbplatser](/help/sites-administering/translation.md).
+**Obs!** En översikt över funktionerna för översättning av innehåll i AEM finns i  [Översätta innehåll för flerspråkiga platser](/help/sites-administering/translation.md).
 
 En enda konfiguration av ramverket styr hur sidinnehåll, communityinnehåll och resurser ska översättas.
 ![chlimage_1-386](assets/translation-config-65.jpg)
@@ -129,7 +130,7 @@ Webbplatsegenskaperna styr hur översättning av sidinnehåll utförs.
  </tbody>
 </table>
 
-### Egenskaper för webbkonfiguration {#communities-configuration-properties}
+### Egenskaper för webbgruppskonfiguration {#communities-configuration-properties}
 
 Communities-egenskaper styr hur översättning av användargenererat innehåll utförs. Översättningen av användargenererat innehåll använder alltid maskinöversättning. Mer information finns i [Översätta användargenererat innehåll](/help/communities/translate-ugc.md).
 
@@ -137,7 +138,7 @@ Communities-egenskaper styr hur översättning av användargenererat innehåll u
 |---|---|
 | Översättningsprovider | Välj översättningsprovidern som ska utföra översättningen. Providern som molnkonfigurationer skapas för visas i listan. |
 | Innehållskategori | En kategori som beskriver innehållet som du översätter. Kategorin kan påverka valet av terminologi och fraser när innehåll översätts. |
-| Välj en språkinställning som ska användas som globalt resurslager | (Valfritt) Genom att välja en språkinställning för lagring av UGC, visas inlägg från alla språkkopior i en global konversation. Välj språkinställning som [basspråk](/help/communities/sites-console.md#translation) för webbplatsen. Om du väljer Ingen gemensam lagringsplats inaktiveras global översättning. Som standard är global översättning inaktiverat. |
+| Välj en språkinställning som ska användas som globalt resurslager | (Valfritt) Genom att välja en språkinställning för lagring av UGC, visas inlägg från alla språkkopior i en global konversation. Välj språkinställning för [basspråket](/help/communities/sites-console.md#translation) för webbplatsen. Om du väljer Ingen gemensam lagringsplats inaktiveras global översättning. Som standard är global översättning inaktiverat. |
 
 ### Egenskaper för resurskonfiguration {#assets-configuration-properties}
 
@@ -185,7 +186,7 @@ Resursegenskaperna styr hur resurser konfigureras. Mer information om översätt
  </tbody>
 </table>
 
-1. Klicka på eller tryck på Verktyg > Åtgärder > Moln > Cloud Service i sidofältet.
+1. Klicka på eller tryck på Verktyg > Åtgärder > Moln > Cloud Services i sidofältet.
 1. I området Översättningsintegrering avgör om några konfigurationer har skapats vilken länk som visas:
 
    * Om inga konfigurationer har skapats klickar du på eller trycker på Konfigurera nu.
@@ -194,7 +195,7 @@ Resursegenskaperna styr hur resurser konfigureras. Mer information om översätt
 1. Ange ett namn för konfigurationen och klicka eller tryck sedan på Skapa.
 1. Konfigurera egenskaperna på fliken Platser, Communities och Assets och klicka sedan på OK.
 
-## Konfigurera sidor för översättning {#configuring-pages-for-translation}
+## Konfigurerar sidor för översättning {#configuring-pages-for-translation}
 
 Om du vill konfigurera översättning av källsidor till andra språk associerar du sidorna med följande molnkonfigurationer:
 
@@ -207,23 +208,23 @@ När du associerar en sida med en molnkonfiguration ärver de underordnade sidor
 
 Vid behov kan du åsidosätta associationen på en underordnad sida. Innehållet på en webbplats handlar till exempel mest om kläder. En av sidorna beskriver dock företaget. Webbplatsens rotsida är associerad med ett Translation Integration Framework som anger maskinöversättning med kategorin Clothing. Den gren som beskriver företaget använder ett ramverk som utför maskinöversättning med kategorin Allmänt.
 
-Dessutom, för alla communitykomponenter [för](/help/communities/scf.md) SCF på sidorna, kommer det användargenererade innehållet (UGC) att innehålla möjligheten för användare att översätta innehåll. Mer information finns i [Översättning av användargenererat innehåll](/help/communities/translate-ugc.md).
+Dessutom, för alla communities [SCF-komponenter](/help/communities/scf.md) på sidorna, kommer det användargenererade innehållet (UGC) att innehålla möjligheten för användare att översätta innehåll. Mer information finns i [Översättning av användargenererat innehåll](/help/communities/translate-ugc.md).
 
-### Koppla en sida till en översättningsleverantör {#associating-a-page-with-a-translation-provider}
+### Koppla en sida till en översättningsprovider {#associating-a-page-with-a-translation-provider}
 
 Koppla en sida till översättningsleverantören som du använder för att översätta sidan och underordnade sidor.
 
 1. På webbplatskonsolen markerar du sidan som du vill konfigurera och klickar eller trycker på Visa egenskaper.
-1. Klicka eller tryck på Redigera och sedan på fliken Cloud Service.
+1. Klicka eller tryck på Redigera och sedan på fliken Cloud Services.
 1. Klicka eller tryck på Add Configuration (Lägg till konfiguration) > Translation Integration (Översättningsintegrering).
 1. Välj den översättningsleverantör som ska användas och klicka eller tryck sedan på Klar.
 
-### Associera sidor med ett översättningsintegreringsramverk {#associating-pages-with-a-translation-integration-framework}
+### Associera sidor med ett Translation Integration Framework {#associating-pages-with-a-translation-integration-framework}
 
 Koppla en sida till översättningsintegreringsramverket som definierar hur du vill översätta sidan och underordnade sidor.
 
 1. På webbplatskonsolen markerar du sidan som du vill konfigurera och klickar eller trycker på Visa egenskaper.
-1. Klicka eller tryck på Redigera och sedan på fliken Cloud Service.
+1. Klicka eller tryck på Redigera och sedan på fliken Cloud Services.
 1. Klicka eller tryck på Add Configuration (Lägg till konfiguration) > Translation Integration (Översättningsintegrering).
 1. Markera det översättningsintegreringsramverk som ska användas och klicka eller tryck sedan på Klar.
 
