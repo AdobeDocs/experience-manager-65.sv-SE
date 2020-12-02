@@ -1,8 +1,8 @@
 ---
-title: Adobe IMS-autentisering [!DNL Admin Console] och stöd för AEM Managed Services
-seo-title: Adobe IMS-autentisering [!DNL Admin Console] och stöd för AEM Managed Services
-description: Lär dig hur du använder [!DNL Admin Console] AEM.
-seo-description: Lär dig hur du använder [!DNL Admin Console] AEM.
+title: Adobe IMS-autentisering och [!DNL Admin Console] Stöd för AEM Managed Services
+seo-title: Adobe IMS-autentisering och [!DNL Admin Console] Stöd för AEM Managed Services
+description: Lär dig hur du använder  [!DNL Admin Console] AEM.
+seo-description: Lär dig hur du använder  [!DNL Admin Console] AEM.
 uuid: 3f5b32c7-cf62-41a4-be34-3f71bbf224eb
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -18,7 +18,7 @@ ht-degree: 11%
 ---
 
 
-# Adobe IMS-autentisering och [!DNL Admin Console] stöd för AEM Managed Services {#adobe-ims-authentication-and-admin-console-support-for-aem-managed-services}
+# Adobe IMS-autentisering och [!DNL Admin Console]-stöd för AEM Managed Services {#adobe-ims-authentication-and-admin-console-support-for-aem-managed-services}
 
 >[!NOTE]
 >
@@ -26,19 +26,19 @@ ht-degree: 11%
 
 ## Introduktion {#introduction}
 
-I AEM 6.4.3.0 introduceras [!DNL Admin Console] stöd för AEM och Adobe IMS (Identity Management System)-baserad autentisering för **AEM Managed Services** -kunder.
+I AEM 6.4.3.0 introduceras [!DNL Admin Console]-stöd för AEM och Adobe IMS(Identity Management System)-baserad autentisering för **AEM Managed Services**-kunder.
 
-AEM på nyanställda kommer att göra det möjligt för AEM Managed Services-kunder att hantera alla Experience Cloud-användare i en konsol. [!DNL Admin Console] Användare och grupper kan tilldelas till produktprofiler som är kopplade till AEM instanser, så att de kan logga in på en viss instans.
+AEM till [!DNL Admin Console] gör att AEM Managed Services-kunder kan hantera alla Experience Cloud-användare i en konsol. Användare och grupper kan tilldelas till produktprofiler som är kopplade till AEM instanser, så att de kan logga in på en viss instans.
 
 ## Viktiga funktioner {#key-highlights}
 
 * Stöd för AEM IMS-autentisering gäller endast för AEM-författare, administratörer och utvecklare, inte för externa slutanvändare på kundens webbplats, som webbplatsbesökare
-* AEM Managed Services-kunder [!DNL Admin Console] representeras som IMS-organisationer och deras instanser som produktkontexter. Kundsystem- och produktadministratörer kan hantera åtkomst till instanser
-* AEM Managed Services kommer att synkronisera kundtopologier med [!DNL Admin Console]. Det kommer att finnas en instans AEM Managed Services produktkontext per instans i [!DNL Admin Console].
-* Product Profiles in [!DNL Admin Console] will determine which instances a user can access
+* [!DNL Admin Console] representerar AEM Managed Services-kunder som IMS-organisationer och deras instanser som produktkontexter. Kundsystem- och produktadministratörer kan hantera åtkomst till instanser
+* AEM Managed Services synkroniserar kundtopologier med [!DNL Admin Console]. Det kommer att finnas en instans AEM Managed Services produktkontext per instans i [!DNL Admin Console].
+* Produktprofiler i [!DNL Admin Console] avgör vilka instanser en användare kan komma åt
 * Federerad autentisering med kundens egna SAML 2-kompatibla identitetsleverantörer stöds
 * Endast Enterprise ID:n eller Federated ID:n (för kunder med enkel inloggning) stöds, inte Adobe ID:n.
-* [!DNL User Management] (i Adobe [!DNL Admin Console]) kommer även fortsättningsvis att ägas av kundadministratörer.
+* [!DNL User Management] (i Adobe  [!DNL Admin Console]) kommer även fortsättningsvis att ägas av kundadministratörer.
 
 ## Arkitektur {#architecture}
 
@@ -48,15 +48,15 @@ Inloggningsflödet för användaren visas nedan. Användaren omdirigeras till IM
 
 ![image2018-9-23_23-55-8](assets/image2018-9-23_23-55-8.png)
 
-## How To Set Up {#how-to-set-up}
+## Konfigurera {#how-to-set-up}
 
-### Onboarding Organizations to [!DNL Admin Console] {#onboarding-organizations-to-admin-console}
+### Onboarding-organisationer till [!DNL Admin Console] {#onboarding-organizations-to-admin-console}
 
-The customer onboarding to [!DNL Admin Console] is a pre-requisite to using Adobe IMS for AEM authentication.
+Kunden måste registrera sig för [!DNL Admin Console] för att kunna använda Adobe IMS för AEM autentisering.
 
 Som ett första steg bör kunden ha en organisation i Adobe IMS. Adobe Enterprise-kunder representeras som IMS-organisationer i [Adobe [!DNL Admin Console]](https://helpx.adobe.com/enterprise/using/admin-console.html).
 
-AEM Managed Services customers should already have an organization provisioned, and as part of the IMS provisioning, the customer instances will be made available in the [!DNL Admin Console] for managing user entitlements and access.
+AEM Managed Services-kunder bör redan ha en organisation etablerad, och som en del av IMS-etableringen kommer kundinstanserna att vara tillgängliga i [!DNL Admin Console] för hantering av användarberättiganden och åtkomst.
 
 Övergången till IMS för användarautentisering är en gemensam åtgärd mellan AMS och kunder, där vart och ett av dem har sina arbetsflöden att slutföra.
 
@@ -64,17 +64,17 @@ När en kund finns som IMS-organisation och AMS har etablerat kunden för IMS ä
 
 ![image2018-9-23_23-33-25](assets/image2018-9-23_23-33-25.png)
 
-1. The designated System Admin receives an invite to log in to the [!DNL Admin Console]
+1. Den utsedda systemadministratören får en inbjudan att logga in på [!DNL Admin Console]
 1. Anspråksdomänen för systemadministratören som bekräftar ägarskapet för domänen (i det här exemplet acme.com)
 1. Systemadministratören ställer in användarkataloger
-1. Systemadministratören konfigurerar identitetsleverantören (IDP) i inställningarna [!DNL Admin Console] för enkel inloggning.
+1. Systemadministratören konfigurerar identitetsleverantören (IDP) i [!DNL Admin Console] för SSO-installationen.
 1. AEM Admin hanterar de lokala grupperna, behörigheterna och behörigheterna som vanligt. Se Användar- och gruppsynkronisering
 
 >[!NOTE]
 >
->Mer information om grunderna i Adobe Identity Management, inklusive IDP-konfigurationen, finns i artikeln [här.](https://helpx.adobe.com/enterprise/using/set-up-identity.html)
+>Mer information om grunderna i Adobe Identity Management, inklusive IDP-konfigurationen, finns i artikeln [den här sidan.](https://helpx.adobe.com/enterprise/using/set-up-identity.html)
 >
->Mer information om Enterprise Administration finns i artikeln [!DNL Admin Console] här [](https://helpx.adobe.com/enterprise/managing/user-guide.html).
+>Mer information om företagsadministration och [!DNL Admin Console] finns i artikeln [den här sidan](https://helpx.adobe.com/enterprise/managing/user-guide.html).
 
 ### Onboarding-användare till [!DNL Admin Console] {#onboarding-users-to-the-admin-console}
 
@@ -84,15 +84,15 @@ Det finns tre sätt att introducera användare beroende på kundens storlek och 
 1. Överföra en CSV-fil med användare
 1. Synkronisera användare och grupper från kundens Enterprise Active Directory.
 
-#### Manual Addition through [!DNL Admin Console] UI {#manual-addition-through-admin-console-ui}
+#### Manuell addition via [!DNL Admin Console]-gränssnitt {#manual-addition-through-admin-console-ui}
 
-Users and Groups can be manually created in the [!DNL Admin Console] UI. Den här metoden kan användas om de inte har ett stort antal användare att hantera. Ett antal färre än 50 AEM användare.
+Användare och grupper kan skapas manuellt i användargränssnittet för [!DNL Admin Console]. Den här metoden kan användas om de inte har ett stort antal användare att hantera. Ett antal färre än 50 AEM användare.
 
 Användare kan också skapas manuellt om kunden redan använder den här metoden för att administrera andra Adobe-produkter som Analytics, Target eller Creative Cloud.
 
 ![image2018-9-23_20-39-9](assets/image2018-9-23_20-39-9.png)
 
-#### Filöverföring i [!DNL Admin Console] användargränssnittet {#file-upload-in-the-admin-console-ui}
+#### Filöverföring i [!DNL Admin Console]-gränssnittet {#file-upload-in-the-admin-console-ui}
 
 En CSV-fil kan laddas upp för att användarna ska kunna lägga till flera användare samtidigt:
 
@@ -102,9 +102,9 @@ En CSV-fil kan laddas upp för att användarna ska kunna lägga till flera anvä
 
 Med verktyget för användarsynkronisering (UST i korthet) kan företagskunder skapa eller hantera Adobe-användare med hjälp av Active Directory eller andra testade OpenLDAP-katalogtjänster. Målanvändarna är IT-identitetsadministratörer (Enterprise Directory och System Admins) som kan installera och konfigurera verktyget. Verktyget med öppen källkod är anpassbart så att kunderna kan låta en utvecklare ändra det efter sina egna behov.
 
-When User Sync runs, it fetches a list of users from the organization’s Active Directory (or any other compatible data source) and compares it with the list of users within the [!DNL Admin Console]. It then calls the Adobe [!DNL User Management] API so that the [!DNL Admin Console] is synchronized with the organization’s directory. Förändringarna är helt envägs. Ändringar som görs i katalogen [!DNL Admin Console] skickas inte ut till katalogen.
+När användarsynkronisering körs hämtar den en lista över användare från organisationens Active Directory (eller någon annan kompatibel datakälla) och jämför den med listan över användare i [!DNL Admin Console]. Därefter anropas API:t för Adobe [!DNL User Management] så att [!DNL Admin Console] synkroniseras med organisationens katalog. Förändringarna är helt envägs. Ändringar som görs i [!DNL Admin Console] skickas inte ut till katalogen.
 
-Verktyget gör att systemadministratören kan mappa användargrupper i kundens katalog med produktkonfiguration och användargrupper i [!DNL Admin Console]den nya UST-versionen, vilket även gör att det går att dynamiskt skapa användargrupper i [!DNL Admin Console].
+Verktyget gör att systemadministratören kan mappa användargrupper i kundens katalog med produktkonfiguration och användargrupper i [!DNL Admin Console], den nya UST-versionen tillåter även att användargrupper skapas dynamiskt i [!DNL Admin Console].
 
 För att användarsynkronisering ska kunna konfigureras måste organisationen skapa en uppsättning inloggningsuppgifter på samma sätt som [[!DNL User Management] API:t för ](https://www.adobe.io/apis/cloudplatform/usermanagement/docs/setup.html) används.
 
@@ -116,7 +116,7 @@ Användarsynkronisering distribueras via Adobe Github-databasen på den här pla
 
 Observera att en förhandsversion 2.4RC1 finns tillgänglig med stöd för att skapa dynamiska grupper och finns här: [https://github.com/adobe-apiplatform/user-sync.py/releases/tag/v2.4rc1](https://github.com/adobe-apiplatform/user-sync.py/releases/tag/v2.4rc1)
 
-The major features for this release are the ability to dynamically map new LDAP groups for user membership in the [!DNL Admin Console], as well as dynamic user group creation.
+De viktigaste funktionerna i den här versionen är möjligheten att dynamiskt mappa nya LDAP-grupper för användarmedlemskap i [!DNL Admin Console] samt att skapa dynamiska användargrupper.
 
 Mer information om de nya gruppfunktionerna finns här:
 
@@ -127,12 +127,12 @@ Mer information om de nya gruppfunktionerna finns här:
 >Mer information om verktyget för användarsynkronisering finns på [dokumentationssidan](https://adobe-apiplatform.github.io/user-sync.py/en/).
 >
 >
->The User Sync Tool needs to register as an Adobe I/O client UMAPI using the procedure described [here](https://adobe-apiplatform.github.io/umapi-documentation/en/UM_Authentication.html).
+>Verktyget för användarsynkronisering måste registrera sig som Adobe I/O klient-UMAPI enligt proceduren [här](https://adobe-apiplatform.github.io/umapi-documentation/en/UM_Authentication.html).
 >
->The Adobe I/O Console Documentation can be found [here](https://www.adobe.io/apis/cloudplatform/console.html).
+>Adobe I/O Console Documentation finns [här](https://www.adobe.io/apis/cloudplatform/console.html).
 >
 >
->API:t som [!DNL User Management] används av verktyget för användarsynkronisering beskrivs på den här [platsen](https://www.adobe.io/apis/cloudplatform/umapi-new.html).
+>API:t [!DNL User Management] som används av verktyget för användarsynkronisering beskrivs på den här [platsen](https://www.adobe.io/apis/cloudplatform/umapi-new.html).
 
 >[!NOTE]
 >
@@ -140,13 +140,13 @@ Mer information om de nya gruppfunktionerna finns här:
 
 ## Användning {#how-to-use}
 
-### Managing Products and User Access in [!DNL Admin Console] {#managing-products-and-user-access-in-admin-console}
+### Hantera produkter och användaråtkomst i [!DNL Admin Console] {#managing-products-and-user-access-in-admin-console}
 
-When the customer Product Administrator logs in to [!DNL Admin Console], they will see multiple instances of the AEM Managed Services Product Context as shown below:
+När kundens produktadministratör loggar in på [!DNL Admin Console] visas flera instanser av den AEM Managed Services-produktkontexten enligt nedan:
 
 ![screen_shot_2018-09-17at105804pm](assets/screen_shot_2018-09-17at105804pm.png)
 
-In this example, the org *AEM-MS-Onboard* has 32 instances spanning different topologies and environments like Stage, Prod, etc.
+I det här exemplet har organisationen *AEM-MS-Onboard* 32 instanser som sträcker sig över olika topologier och miljöer som Stage, Prod, osv.
 
 ![screen_shot_2018-09-17at105517pm](assets/screen_shot_2018-09-17at105517pm.png)
 
@@ -162,7 +162,7 @@ Alla användare och grupper som läggs till under den här produktprofilen kan l
 
 ![screen_shot_2018-09-17at105623pm](assets/screen_shot_2018-09-17at105623pm.png)
 
-### Loggar in AEM {#logging-into-aem}
+### Loggar in i AEM {#logging-into-aem}
 
 #### Inloggning för lokal administratör {#local-admin-login}
 
@@ -172,7 +172,7 @@ AEM kan fortfarande ha stöd för lokala inloggningar för administratörsanvän
 
 #### IMS-baserad inloggning {#ims-based-login}
 
-Andra användare kan använda IMS-baserad inloggning när IMS har konfigurerats för instansen. The user will first click on the **Sign in with Adobe** button as shown below:
+Andra användare kan använda IMS-baserad inloggning när IMS har konfigurerats för instansen. Användaren klickar först på knappen **Logga in med Adobe** enligt nedan:
 
 ![image2018-9-18_0-10-32](assets/image2018-9-18_0-10-32.png)
 
@@ -180,7 +180,7 @@ De dirigeras sedan till inloggningsskärmen för IMS och anger sina inloggningsu
 
 ![screen_shot_2018-09-17at115629pm](assets/screen_shot_2018-09-17at115629pm.png)
 
-If a federated IDP is configured during initial [!DNL Admin Console] setup, then the user will be redirected to the customer IDP for SSO.
+Om en federerad IDP konfigureras under den initiala [!DNL Admin Console]-konfigurationen kommer användaren att omdirigeras till kund-ID:t för enkel inloggning.
 
 IDP är Okta i följande exempel:
 
@@ -204,7 +204,7 @@ Detta verktyg kommer att köras av ditt AMS-team som en del av IMS-etableringen.
 
 I exemplet nedan lägger vi till synkroniserade grupper i den lokala gruppen *Dam_Users* som exempel.
 
-Här har en användare också tilldelats ett fåtal grupper i [!DNL Admin Console]. (Observera att användare och grupper kan synkroniseras från LDAP med användarsynkroniseringsverktyget eller skapas lokalt, se avsnittet **Onboarding Users (Onboarding Users)[!DNL Admin Console]** ovan).
+Här har en användare också tilldelats ett fåtal grupper i [!DNL Admin Console]. (Observera att användare och grupper kan synkroniseras från LDAP med användarsynkroniseringsverktyget eller skapas lokalt, se avsnittet **Onboarding Users to the[!DNL Admin Console]** above).
 
 &amp;ast;Observera att användargrupper endast synkroniseras när användarna loggar in på instansen. För kunder som har ett stort antal användare och grupper kan ett gruppsynkroniseringsverktyg köras av AMS för att hämta grupper i förväg för åtkomstkontroll och behörighetshantering som beskrivs ovan.
 
@@ -222,6 +222,6 @@ I AEM kan användargrupper som synkroniseras från IMS läggas till som medlemma
 
 ![screen_shot_2018-09-17at95804pm](assets/screen_shot_2018-09-17at95804pm.png)
 
-Som framgår nedan ärver gruppen *AEM-GRP_008* DAM-användarnas behörigheter och behörigheter. Detta är ett effektivt sätt att hantera behörigheter för synkroniserade grupper och används ofta även i LDAP-baserade autentiseringsmetoder.
+Som framgår nedan ärver gruppen *AEM-GRP_008* DAM-användares behörigheter. Detta är ett effektivt sätt att hantera behörigheter för synkroniserade grupper och används ofta även i LDAP-baserade autentiseringsmetoder.
 
 ![screen_shot_2018-09-17at110505pm](assets/screen_shot_2018-09-17at110505pm.png)
