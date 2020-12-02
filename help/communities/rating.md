@@ -20,21 +20,21 @@ ht-degree: 0%
 
 # Använda klassificeringar {#using-ratings}
 
-Komponenten `Rating` används fristående eller tillsammans med andra communityfunktioner. Med den här komponenten kan inloggade communitymedlemmar uttrycka sina åsikter genom att gradera innehåll.
+Komponenten `Rating` används fristående eller tillsammans med andra webbgruppsfunktioner. Med den här komponenten kan inloggade communitymedlemmar uttrycka sina åsikter genom att gradera innehåll.
 
 ## Lägga till en klassificering på en sida {#adding-a-rating-to-a-page}
 
-Om du vill lägga till en `Rating` komponent på en sida i redigeringsläge, letar du reda på komponenten `Communities / Rating` och drar den på plats på en sida, t.ex. en position som är relativ till funktionen som medlemmarna ska betygsätta.
+Om du vill lägga till en `Rating`-komponent på en sida i redigeringsläge, letar du reda på komponenten `Communities / Rating` och drar den till rätt plats på en sida, t.ex. i förhållande till funktionen som medlemmarna ska betygsätta.
 
-Mer information finns i Grunderna för [communitykomponenter](basics.md).
+Mer information finns på [Grunderna för communitykomponenter](basics.md).
 
-När de [nödvändiga klientbiblioteken](rating-basics.md#essentials-for-client-side) inkluderas visas `Rating` komponenten på det här sättet.
+När de [nödvändiga klientbiblioteken](rating-basics.md#essentials-for-client-side) inkluderas visas `Rating`-komponenten så här.
 
 ![värdering](assets/rating.png)
 
 ## Konfigurerar klassificering {#configuring-rating}
 
-Markera den monterade `Rating` komponent som du vill öppna och välj den `Configure` ikon som öppnar redigeringsdialogrutan.
+Markera den monterade `Rating`-komponenten som ska öppnas och välj ikonen `Configure` som öppnar redigeringsdialogrutan.
 
 ![configure-new](assets/configure-new.png)
 
@@ -43,7 +43,7 @@ Under fliken **[!UICONTROL Texts & Labels]** anger du den interna identifieraren
 ![tallyname](assets/tallyname.png)
 
 **[!UICONTROL Tally Name]**
-(*Obligatoriskt*) Ett enkelt namn för den instans `Rating` som unikt identifierar den här instansen. Måste vara ett giltigt nodnamn för databasen.
+(*Obligatoriskt*) Ett enkelt namn  `Rating` som unikt identifierar den här instansen. Måste vara ett giltigt nodnamn för databasen.
 
 ## Site Visitor Experience {#site-visitor-experience}
 
@@ -55,6 +55,6 @@ Endast en klassificering per medlem tillåts. Medlemmen kan när som helst ändr
 
 Anonym publicering av en klassificering stöds inte. Besökarna måste registrera sig (bli medlem) och logga in för att kunna delta.
 
-## Additional Information {#additional-information}
+## Ytterligare information {#additional-information}
 
-Mer information finns på sidan [Värderingsgrunder](rating-basics.md) för utvecklare.
+Mer information finns på sidan [Rating Essentials](rating-basics.md) för utvecklare.
