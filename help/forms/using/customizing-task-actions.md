@@ -19,11 +19,11 @@ ht-degree: 0%
 
 # Anpassa uppgiftsåtgärder {#customizing-task-actions}
 
-Med arbetsytan i AEM Forms kan användare anpassa uppgiftsåtgärderna. Innan du anpassar uppgiftsåtgärderna måste du följa de steg som beskrivs i [Allmänna steg för anpassning](/help/forms/using/generic-steps-html-workspace-customization.md)av arbetsytan i AEM Forms.
+Med AEM Forms arbetsyta kan användare anpassa uppgiftsåtgärderna. Innan du anpassar uppgiftsåtgärderna måste du följa de steg som anges i [Allmänna steg för anpassning av arbetsytan i AEM Forms](/help/forms/using/generic-steps-html-workspace-customization.md).
 
 ## Anpassa textstil {#customizing-text-style}
 
-Om du vill anpassa textformatet lägger du till följande kodfragment i `/apps/ws/css/newStyle.css` filen:
+Om du vill anpassa textformatet lägger du till följande kodfragment i `/apps/ws/css/newStyle.css`-filen:
 
 ```css
 /*-------- For Task Actions visible in task list task action popup ----------------------------------------------------*/
@@ -111,7 +111,7 @@ Om du vill anpassa textformatet lägger du till följande kodfragment i `/apps/w
 
 ## Anpassa bilder {#customizing-images}
 
-Om du vill anpassa bilderna lägger du till följande kodfragment i `/apps/ws/css/newStyle.css` filen. Följande kodfragment anpassar bilden för *låsåtgärden* :
+Om du vill anpassa bilderna lägger du till följande kodfragment i `/apps/ws/css/newStyle.css`-filen. Följande kodfragment anpassar bilden för åtgärden *lock*:
 
 ```css
 #taskarea .taskActionsPopUp .lock, .task .taskActionsPopUp .lock{
@@ -132,15 +132,15 @@ Om du vill anpassa bilderna lägger du till följande kodfragment i `/apps/ws/cs
 }
 ```
 
-## Visa endast bilder för åtgärder {#showing-only-images-for-actions}
+## Visar endast bilder för åtgärder {#showing-only-images-for-actions}
 
 Om du bara vill visa bilder för åtgärder anpassar du bilderna som används i flödesåtgärder. Mer information finns i [Bilder för flödesåtgärder](/help/forms/using/images-route-actions.md).
 
-### Åtgärdssnabbmeny för uppgiftslistans åtgärd {#task-list-task-action-nbsp-pop-up-menu}
+### Åtgärdssnabbmenyn {#task-list-task-action-nbsp-pop-up-menu} för uppgiftslistans åtgärd
 
-1. Du behöver ett utvecklingspaket för att kunna anpassa alternativ på aktivitetsmenyn i arbetsytan AEM Forms. Mer information om hur du skapar utvecklingspaket finns i [Skapa AEM Forms-arbetsytekod.](/help/forms/using/introduction-customizing-html-workspace.md#building-html-workspace-code)
+1. Du behöver ett utvecklingspaket för att kunna anpassa alternativ på åtgärdsmenyn Åtgärd för arbetsytan i AEM Forms. Mer information om hur du skapar utvecklingspaket finns i [Skapa AEM Forms-arbetsytekod.](/help/forms/using/introduction-customizing-html-workspace.md#building-html-workspace-code).
 
-1. Kopiera /libs/ws/js/runtime/templates/task.html för att `/apps/ws/js/runtime/templates/task.html`ersätta följande kodfragment:
+1. Kopiera /libs/ws/js/runtime/templates/task.html till `/apps/ws/js/runtime/templates/task.html`ersätt följande kodfragment:
 
    ```html
    // Orignal code
@@ -213,7 +213,7 @@ Om du bara vill visa bilder för åtgärder anpassar du bilderna som används i 
        </div>
    ```
 
-1. Ta bort den fasta bredden som tilldelats en ankartagg från `/apps/ws/css/newStyle.css` filen:
+1. Ta bort den fasta bredden som tilldelats en ankartagg från `/apps/ws/css/newStyle.css`-filen:
 
    ```css
    .task .taskActionsPopUp ul{
@@ -263,12 +263,12 @@ Om du bara vill visa bilder för åtgärder anpassar du bilderna som används i 
    }
    ```
 
-### Åtgärdssnabbmenyn Åtgärd för uppgiftsinformation {#task-details-task-action-pop-up-menu}
+### Åtgärdsåtgärdssnabbmenyn {#task-details-task-action-pop-up-menu} för uppgiftsinformation
 
 Utför följande steg för att anpassa snabbmenyn Detaljåtgärdsåtgärder:
 
-* Kopiera /libs/ws/js/runtime/templates/taskdetails.html till `/apps/ws/js/runtime/templates/` mappen:
-* Kapsla in ikontaggen inuti ankartaggen i stället för text. Den *nya koden* nedan kapslar till exempel in ikontaggen inuti ankartaggen:
+* Kopiera /libs/ws/js/runtime/templates/taskdetails.html till mappen `/apps/ws/js/runtime/templates/`:
+* Kapsla in ikontaggen inuti ankartaggen i stället för text. Den *nya koden* som visas nedan kapslar in ikontaggen inuti ankartaggen:
 
 ```html
 // Original code
