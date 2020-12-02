@@ -18,29 +18,29 @@ ht-degree: 1%
 ---
 
 
-# Grunderna för communitykomponenter {#communities-components-basics}
+# Grundläggande om communitykomponenter {#communities-components-basics}
 
 ## Översikt {#overview}
 
 I redigeringsavsnittet i dokumentationen beskrivs hur du lägger till communityfunktioner AEM webbplatser i redigeringsläge för författare samt beskriver komponentkonfigurationer.
 
-Komponenter kan undersökas med hjälp av en AEM och den interaktiva [communitykomponentguiden](components-guide.md).
+Komponenter kan utforskas med hjälp av en AEM och den interaktiva [guiden för communitykomponenter](components-guide.md).
 
 ## Åtkomst till webbgruppskomponenter {#accessing-communities-components}
 
 Om den underliggande mallen tillåter ändringar av sidans design vid redigering av sidinnehåll, är det möjligt att aktivera komponenter som inte redan är tillgängliga i komponentwebbläsaren som en del av webbplatsdesignen.
 
-Tillgängliga webbgruppskomponenter listas [här](author-communities.md#available-communities-components).
+Tillgängliga webbgruppskomponenter visas [här](author-communities.md#available-communities-components).
 
 >[!NOTE]
 >
 >Allmän redigeringsinformation finns i [snabbguiden till redigeringssidorna](../../help/sites-authoring/qg-page-authoring.md).
 >
->Om du inte känner till AEM kan du läsa dokumentationen om [grundläggande hantering](../../help/sites-authoring/basic-handling.md).
+>Om du inte känner till AEM läser du dokumentationen om [grundläggande hantering](../../help/sites-authoring/basic-handling.md).
 
-### Gå in i designläge {#entering-design-mode}
+### Startar designläge {#entering-design-mode}
 
-Om en **webbgruppskomponent** inte hittas i komponentwebbläsaren (sidespark) måste du ange `Design Mode` att andra webbgruppskomponenter ska läggas till. [Nödvändiga klientbibliotek](#required-clientlibs) (klientbibliotek) kan också behöva läggas till.
+Om en **Webbgrupper**-komponent inte hittas i komponentwebbläsaren (sidespark) måste du ange `Design Mode` för att lägga till andra webbgruppskomponenter. [Nödvändiga klientbibliotek](#required-clientlibs)  (klientbibliotek) kan också behöva läggas till.
 
 Mer information finns i [Konfigurera komponenter i designläge](../../help/sites-authoring/default-components-designmode.md).
 
@@ -54,7 +54,7 @@ De valda komponenterna är nu tillgängliga i komponentwebbläsaren:
 
 ## Nödvändiga klienter {#required-clientlibs}
 
-[Klientbaserade bibliotek](../../help/sites-developing/clientlibs.md) (clientlibs) krävs för att en komponent ska fungera korrekt (JavaScript) och formatera (CSS).
+[Klientbibliotek](../../help/sites-developing/clientlibs.md)  (clientlibs) krävs för att en komponent ska fungera korrekt (JavaScript) och formatera (CSS).
 
 När du lägger till en webbgruppskomponent på en sida, om resultatet är ett fel eller ett oväntat utseende, är det första du ska försöka att lägga till de nödvändiga klientlibs för webbkomponenterna. Mer information finns i [Clientlibs for Communities Components](clientlibs.md).
 
@@ -70,11 +70,11 @@ När du lägger till en webbgruppskomponent på en sida, om resultatet är ett f
 
 Många webbgruppsfunktioner kan konfigureras så att medlemmar kan tagga innehåll som anges (publiceras) i publiceringsmiljön.
 
-Om taggning tillåts kan communityplatsens konfiguration ställas in så att den begränsar de namnutrymmen som visas för medlemmar i publiceringsmiljön. Se konsolen [](sites-console.md#tagging)Community Sites.
+Om taggning tillåts kan communityplatsens konfiguration ställas in så att den begränsar de namnutrymmen som visas för medlemmar i publiceringsmiljön. Se [Konsolen Community Sites](sites-console.md#tagging).
 
 Funktioner som tillåter taggning: [blogg](blog-feature.md), [kalender](calendar.md), [filbibliotek](file-library.md), [forum](forum.md)
 
-Funktioner som använder taggar: [katalog](catalog.md), [sökning](search.md), moln för [sociala taggar](tagcloud.md)
+Funktioner som använder taggar: [katalog](catalog.md), [sök](search.md), [moln för sociala taggar](tagcloud.md)
 
 För redigeringsinformation:
 
