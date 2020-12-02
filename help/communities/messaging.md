@@ -25,7 +25,7 @@ ht-degree: 0%
 
 Meddelandefunktionen för AEM Communities gör det möjligt för besökare på den inloggade webbplatsen (medlemmar) att skicka meddelanden till varandra som är tillgängliga när de loggar in på webbplatsen.
 
-Meddelanden aktiveras för en community-webbplats genom att en kryssruta markeras när en [community-webbplats skapas](/help/communities/sites-console.md).
+Meddelanden aktiveras för en community-webbplats genom att en kryssruta markeras när [communitywebbplatsen skapas](/help/communities/sites-console.md).
 
 Den här sidan innehåller information om standardkonfigurationen och eventuella justeringar.
 
@@ -33,23 +33,23 @@ Mer information för utvecklare finns i [Messaging Essentials](/help/communities
 
 ## Tjänsten Meddelandeåtgärder {#messaging-operations-service}
 
-Konfigurationen av tjänsten [](https://localhost:4502/system/console/configMgr/com.adobe.cq.social.messaging.client.endpoints.impl.MessagingOperationsServiceImpl) AEM Communities Messaging Operations identifierar slutpunkten som hanterar meddelanderelaterade begäranden, de mappar som tjänsten ska använda för att lagra meddelanden och, om meddelanden kan innehålla bifogade filer, vilka filtyper som tillåts.
+Konfigurationen [AEM Communities Messaging Operations Service](https://localhost:4502/system/console/configMgr/com.adobe.cq.social.messaging.client.endpoints.impl.MessagingOperationsServiceImpl) identifierar slutpunkten som hanterar meddelanderelaterade begäranden, mapparna som tjänsten ska använda för att lagra meddelanden och, om meddelanden kan innehålla bifogade filer, vilka filtyper som tillåts.
 
-För communitysajter som skapats med `Communities Sites console`finns det redan en instans av tjänsten med inkorgen inställd på `/mail/inbox`.
+För communitysajter som skapats med `Communities Sites console` finns det redan en instans av tjänsten med inkorgen inställd på `/mail/inbox`.
 
 ### Tjänsten Community Messaging Operations {#community-messaging-operations-service}
 
-Så som visas nedan finns det en konfiguration av tjänsten för webbplatser som skapats med guiden [Skapa](/help/communities/sites-console.md)plats. Du kan visa eller redigera konfigurationen genom att välja pennikonen bredvid konfigurationen.
+Som framgår nedan finns det en konfiguration av tjänsten för webbplatser som skapats med [guiden Skapa plats](/help/communities/sites-console.md). Du kan visa eller redigera konfigurationen genom att välja pennikonen bredvid konfigurationen.
 
 ![meddelandeåtgärder](assets/messaging-operations.png)
 
 ### Lägg till ny konfiguration {#add-new-configuration}
 
-Om du vill lägga till en ny konfiguration väljer du plusikonen &quot;**+**&quot; bredvid tjänstens namn:
+Om du vill lägga till en ny konfiguration väljer du plusikonen **+** bredvid tjänstens namn:
 
 * **Meddelandefält Tillåtslista**
 
-   Anger egenskaperna för den Compose Message-komponent som användare kan redigera och behålla. Om nya formulärelement läggs till måste element-ID läggas till om det ska lagras i SRP. Standard är två poster: *ämne* och *innehåll*.
+   Anger egenskaperna för den Compose Message-komponent som användare kan redigera och behålla. Om nya formulärelement läggs till måste element-ID läggas till om det ska lagras i SRP. Standard är två poster: *subject* och *content*.
 
 * **Storleksgräns för meddelanderuta**
 
@@ -57,11 +57,11 @@ Om du vill lägga till en ny konfiguration väljer du plusikonen &quot;**+**&quo
 
 * **Antal meddelanden**
 
-   Det totala antalet meddelanden som tillåts per användare. Värdet -1 anger att ett obegränsat antal meddelanden tillåts, enligt storleksgränsen för meddelanderutan. Standardvärdet är *1000* (10 kB).
+   Det totala antalet meddelanden som tillåts per användare. Värdet -1 anger att ett obegränsat antal meddelanden tillåts, enligt storleksgränsen för meddelanderutan. Standardvärdet är *10000* (10k).
 
 * **Meddela leveransfel**
 
-   Om du markerar det här alternativet ska du meddela avsändaren om meddelandeleveransen misslyckas för vissa mottagare. Standard är *markerat*.
+   Om du markerar det här alternativet ska du meddela avsändaren om meddelandeleveransen misslyckas för vissa mottagare. Standardvärdet är *checked*.
 
 * **Avsändarens ID för felleverans**
 
@@ -69,7 +69,7 @@ Om du vill lägga till en ny konfiguration väljer du plusikonen &quot;**+**&quo
 
 * **Mallsökväg för felmeddelande**
 
-   Absolut sökväg till leveransmallroten för misslyckade meddelanden. Standard är */etc/notification/messaging/default*.
+   Absolut sökväg till leveransmallroten för misslyckade meddelanden. Standardvärdet är */etc/notification/messaging/default*.
 
 * **Antal återförsök**
 
@@ -85,21 +85,21 @@ Om du vill lägga till en ny konfiguration väljer du plusikonen &quot;**+**&quo
 
 * **Inkorgsbana**
 
-   (*Obligatoriskt*) Sökvägen, i förhållande till användarens nod (/home/users/*username*), som ska användas för `inbox` mappen. Sökvägen får INTE avslutas med ett avslutande snedstreck (/). Standard är */e-post/inkorg*.
+   (*Obligatoriskt*) Sökvägen i förhållande till användarens nod (/home/users/*användarnamn*) som ska användas för mappen `inbox`. Sökvägen får INTE avslutas med ett avslutande snedstreck (/). Standardvärdet är */mail/inbox*.
 
 * **Sökväg för skickade objekt**
 
-   (*Obligatoriskt*) Sökvägen, i förhållande till användarens nod (/home/users/*username*), som ska användas för `sent items` mappen. Sökvägen får INTE avslutas med ett avslutande snedstreck (/). Standardvärdet är */mail/sentists* .
+   (*Obligatoriskt*) Sökvägen i förhållande till användarens nod (/home/users/*användarnamn*) som ska användas för mappen `sent items`. Sökvägen får INTE avslutas med ett avslutande snedstreck (/). Standardvärdet är */mail/sentitems*.
 
 * **Supportbilagor**
 
-   Om det här alternativet är markerat kan användare lägga till bilagor i sina meddelanden. Standard är *markerat*.
+   Om det här alternativet är markerat kan användare lägga till bilagor i sina meddelanden. Standardvärdet är *checked*.
 
 * **Aktivera gruppmeddelanden**
 
-   Om det här alternativet är markerat kan registrerade användare skicka massmeddelanden till en grupp medlemmar. Standard är *avmarkerat*.
+   Om det här alternativet är markerat kan registrerade användare skicka massmeddelanden till en grupp medlemmar. Standardvärdet är *avmarkerat*.
 
-* **Högsta antal totalt antal mottagare**
+* **Högsta antal av totalt antal mottagare**
 
    Om gruppmeddelanden är aktiverat anger du det högsta antal mottagare som gruppmeddelanden kan skickas till åt gången. Standardvärdet är *100*.
 
@@ -113,31 +113,31 @@ Om du vill lägga till en ny konfiguration väljer du plusikonen &quot;**+**&quo
 
 * **Bilagetyp blockeringslista**
 
-   En blockeringslista med filnamnstillägg, prefix med &#39;**.**&#39;, som kommer att refuseras av systemet. Om tillägget inte blocklist tillåts det. Tillägg kan läggas till eller tas bort med ikonerna **+** och **-**.
+   En blockeringslista med filnamnstillägg, prefix med **.**&#39;, som kommer att refuseras av systemet. Om tillägget inte blocklist tillåts det. Tillägg kan läggas till eller tas bort med ikonerna **+** och **-**.
 
 * **Tillåtna bilagetyper**
 
-   **(*Åtgärd krävs*)** En tillåtelselista med filnamnstillägg, motsatsen till blockeringslista. Om du vill tillåta alla filnamnstillägg, förutom de som är blocklist, använder du ikonen **-** för att ta bort den tomma posten.
+   **(*Åtgärd krävs*)** En tillåtelselista med filnamnstillägg, motsatsen till blockeringslista. Om du vill tillåta alla filnamnstillägg, förutom de som blocklist, använder du ikonen **-** för att ta bort den tomma posten.
 
 * **Tjänstväljare**
 
-   (*Obligatoriskt*) En absolut sökväg (slutpunkt) genom vilken tjänsten anropas (en virtuell resurs). Roten för den valda sökvägen måste vara en som ingår i konfigurationsinställningen för *körningssökvägar* i OSGi-konfigurationen [ `Apache Sling Servlet/Script Resolver and Error Handler`](https://localhost:4502/system/console/configMgr/org.apache.sling.servlets.resolver.SlingServletResolver)som `/bin/`, `/apps/`och `/services/`. Om du vill välja den här konfigurationen för en webbplats meddelandefunktion anges den här slutpunkten som **`Service selector`** värde för `Message List and Compose Message components` (se [Meddelandefunktion](/help/communities/configure-messaging.md)).
+   (*Obligatorisk*) En absolut sökväg (slutpunkt) genom vilken tjänsten anropas (en virtuell resurs). Roten för den valda sökvägen måste finnas med i konfigurationsinställningen *Körningssökvägar* för OSGi config [ `Apache Sling Servlet/Script Resolver and Error Handler`](https://localhost:4502/system/console/configMgr/org.apache.sling.servlets.resolver.SlingServletResolver), till exempel `/bin/`, `/apps/` och `/services/`. Om du vill välja den här konfigurationen för en webbplats meddelandefunktion anges den här slutpunkten som **`Service selector`**-värde för `Message List and Compose Message components` (se [Meddelandefunktion](/help/communities/configure-messaging.md)).
 
-   Standardvärdet är */bin/messaging* .
+   Standardvärdet är */bin/messaging*.
 
 * **Tillåtelselista i fält**
 
-   Använd **meddelandefält Tillåtelselista**.
+   Använd **Meddelandefält Tillåtelselista**.
 
 >[!CAUTION]
 >
->Varje gång en `Messaging Operations Service` konfiguration öppnas för redigering, om den `allowedAttachmentTypes.name` tagits bort, läggs en tom post till så att egenskapen kan konfigureras. En enda tom post inaktiverar effektivt bifogade filer.
+>Varje gång en `Messaging Operations Service`-konfiguration öppnas för redigering, om `allowedAttachmentTypes.name` har tagits bort, läggs en tom post till så att egenskapen kan konfigureras. En enda tom post inaktiverar effektivt bifogade filer.
 >
->Om du vill tillåta alla filnamnstillägg, förutom de som är blocklist, använder du ikonen **-** för att (igen) ta bort den tomma posten innan du klickar på **Spara**.
+>Om du vill tillåta alla filnamnstillägg, förutom de som blocklist, använder du ikonen **-** för att (igen) ta bort den tomma posten innan du klickar på **Spara**.
 
 ## Gruppmeddelanden {#group-messaging}
 
-Om du vill tillåta registrerade användare att skicka direktmeddelanden i grupp till användargrupper, ska du se till att **aktivera gruppmeddelanden** i följande två instanser av **konfigurationen av meddelandetjänster** :
+Om du vill tillåta registrerade användare att skicka direktmeddelanden i grupp till användargrupper, ska du **Aktivera gruppmeddelanden** i följande två instanser av **Messaging Operation Services**-konfigurationen:
 
 * `com.adobe.cq.social.messaging.client.endpoints.impl.MessagingOperationsServiceImpl~social-console`
 * `com.adobe.cq.social.messaging.client.endpoints.impl.MessagingOperationsServiceImpl~social-messaging`
