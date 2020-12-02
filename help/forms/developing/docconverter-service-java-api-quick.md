@@ -136,7 +136,7 @@ I följande Java-kodexempel konverteras ett PDF-dokument med namnet *Loan.pdf* t
 
 ## Snabbstart (SOAP-läge): Kontrollera PDF/A-kompatibilitet med Java API {#quick-start-soap-mode-determining-pdf-a-compliancy-using-the-java-api}
 
-I följande Java-kodexempel avgörs om PDF-indatadokumentet är PDF/A-kompatibelt. PDF-indatadokumentet som skickas till tjänsten DocConverter heter *LoanArchive.pdf*. Valideringsresultat skrivs till en XML-fil med namnet *ValidationResults.xml*. (Se [Programmatisk identifiering av PDF/A-kompatibilitet](/help/forms/developing/pdf-a-documents.md#programmatically-determining-pdf-a-compliancy).)
+I följande Java-kodexempel avgörs om PDF-indatadokumentet är PDF/A-kompatibelt. PDF-indatadokumentet som skickas till tjänsten DocConverter heter *LoanArchive.pdf*. Valideringsresultat skrivs till en XML-fil med namnet *ValidationResults.xml*. (Se [Programmatisk bestämning av PDF/A-kompatibilitet](/help/forms/developing/pdf-a-documents.md#programmatically-determining-pdf-a-compliancy).)
 
 ```java
  /*
