@@ -21,25 +21,25 @@ ht-degree: 10%
 
 # Hantera innehållsfragment{#managing-content-fragments}
 
-Content Fragments lagras som **Assets**, så hanteras främst från **Assets** Console.
+Innehållsfragment lagras som **Resurser**, så hanteras primärt från konsolen **Resurser**.
 
 >[!NOTE]
 >
->Innehållsfragment används sedan med redigeringssidor; Se [Sidredigering med innehållsfragment](/help/sites-authoring/content-fragments.md).
+>Innehållsfragment används sedan med redigeringssidor; se [Sidredigering med innehållsfragment](/help/sites-authoring/content-fragments.md).
 
 ## Skapa innehållsfragment {#creating-content-fragments}
 
 ### Skapa en innehållsmodell {#creating-a-content-model}
 
-[Modeller](/help/assets/content-fragments/content-fragments-models.md) för innehållsfragment kan aktiveras och skapas innan du skapar innehållsfragment med strukturerat innehåll.
+[Modellskanning ](/help/assets/content-fragments/content-fragments-models.md) av innehållsfragment kan aktiveras och skapas innan innehållsfragment med strukturerat innehåll skapas.
 
 >[!NOTE]
 >
->Mer information om mallar finns i [Utveckla innehållsfragment](/help/sites-developing/customizing-content-fragments.md) . används för enkla innehållsfragment.
+>Mer information om mallar finns i [Utveckla innehållsfragment](/help/sites-developing/customizing-content-fragments.md). används för enkla innehållsfragment.
 
 ### Skapa ett innehållsfragment {#creating-a-content-fragment}
 
-Metoden för att skapa ett innehållsfragment är (i stort) densamma för både enkla och strukturerade fragment:
+Metoden för att skapa ett innehållsfragment är (i princip) densamma för både enkla och strukturerade fragment:
 
 1. Navigera till mappen **Resurser** där du vill skapa fragmentet.
 1. Välj **Skapa** och sedan **Innehållsfragment** för att öppna guiden.
@@ -47,9 +47,9 @@ Metoden för att skapa ett innehållsfragment är (i stort) densamma för både 
 
    * Detta kan vara en:
 
-      * [Mall](/help/sites-developing/content-fragment-templates.md) - till exempel **Enkelt fragment**
+      * [Mall](/help/sites-developing/content-fragment-templates.md)  - till exempel  **Enkelt fragment**
 
-      * [Modell](/help/assets/content-fragments/content-fragments-models.md) - används för att skapa ett fragment som kräver strukturerat innehåll. till exempel **flygplatsmodellen**
+      * [Modell](/help/assets/content-fragments/content-fragments-models.md)  - använd för att skapa ett fragment som kräver strukturerat innehåll. till exempel  **** flygplatsmodellen
    * Alla tillgängliga mallar och modeller visas.
 
    Efter markeringen använder du **Nästa** för att fortsätta.
@@ -85,7 +85,7 @@ Metoden för att skapa ett innehållsfragment är (i stort) densamma för både 
 I konsolen **Resurser** finns en rad åtgärder tillgängliga för dina innehållsfragment, antingen:
 
 * Från verktygsfältet; när du har valt fragmentet är alla lämpliga åtgärder tillgängliga.
-* som [snabbåtgärder](/help/sites-authoring/basic-handling.md#quick-actions), en delmängd av åtgärder som är tillgängliga för de enskilda fragmentkorten.
+* Som [snabbåtgärder](/help/sites-authoring/basic-handling.md#quick-actions); en delmängd av åtgärder som är tillgängliga för de enskilda fragmentkorten.
 
 ![cfm-6420-17](assets/cfm-6420-17.png)
 
@@ -109,7 +109,7 @@ Markera fragmentet för att visa verktygsfältet med tillämpliga åtgärder:
 * **Till samling**
 
    * Lägg till fragmentet i en samling.
-   * Detta kan även göras när en samling [kopplas till fragmentet](/help/assets/content-fragments/content-fragments-assoc-content.md#adding-associated-content).
+   * Detta kan också göras när [en samling kopplas till fragmentet](/help/assets/content-fragments/content-fragments-assoc-content.md#adding-associated-content).
 
 * **Kopiera**/**klistra in**
 
@@ -120,7 +120,7 @@ Markera fragmentet för att visa verktygsfältet med tillämpliga åtgärder:
 
 >[!NOTE]
 >
->Många av dessa åtgärder är [standardåtgärder för Assets](/help/assets/manage-assets.md) och/eller [AEM](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html).
+>Många av dessa är [standardåtgärder för Assets](/help/assets/manage-assets.md) och/eller [AEM skrivbordsappen](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html).
 
 ## Öppna fragmentredigeraren {#opening-the-fragment-editor}
 
@@ -128,13 +128,13 @@ Så här öppnar du fragmentet för redigering:
 
 >[!CAUTION]
 >
->Om du vill redigera ett innehållsfragment behöver du [rätt behörigheter](/help/sites-developing/customizing-content-fragments.md#asset-permissions). Kontakta systemadministratören om du har problem.
+>Om du vill redigera ett innehållsfragment behöver du [de behörigheter som krävs](/help/sites-developing/customizing-content-fragments.md#asset-permissions). Kontakta systemadministratören om du har problem.
 
-1. Använd **Assets** Console för att navigera till platsen för ditt innehållsfragment.
+1. Använd konsolen **Resurser** för att navigera till platsen för ditt innehållsfragment.
 1. Öppna fragmentet för redigering, antingen genom att:
 
    * Klicka/tryck på fragment- eller fragment-länken (detta beror på konsolvyn).
-   * Markera fragmentet och **redigera** sedan i verktygsfältet.
+   * Markera fragmentet och **Redigera** i verktygsfältet.
 
    Fragmentredigeraren öppnas:
 
@@ -143,12 +143,12 @@ Så här öppnar du fragmentet för redigering:
    >[!NOTE]
    >
    >1. Ett meddelande visas när fragmentet redan refereras på en innehållssida.
-   >2. Sidpanelen kan döljas/visas med hjälp av **ikonen Växla sida** .
+   >2. Sidpanelen kan döljas/visas med ikonen **Växla sidpanel**.
 
 
 1. Navigera genom de tre lägena med ikonerna på sidopanelen:
 
-   * Variationer: [Redigera innehåll](#editing-the-content-of-your-fragment) och [hantera variationer](#creating-and-managing-variations-within-your-fragment)
+   * Variationer: [Redigera innehållet](#editing-the-content-of-your-fragment) och [Hantera dina variationer](#creating-and-managing-variations-within-your-fragment)
 
    * [Anteckningar](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment)
    * [Associerat innehåll](#associating-content-with-your-fragment)
@@ -176,7 +176,7 @@ Redigeraren har två alternativ:
 
    >[!CAUTION]
    >
-   >Om du vill redigera ett innehållsfragment behöver du [rätt behörigheter](/help/sites-developing/customizing-content-fragments.md#asset-permissions). Kontakta systemadministratören om du har problem.
+   >Om du vill redigera ett innehållsfragment behöver du [de behörigheter som krävs](/help/sites-developing/customizing-content-fragments.md#asset-permissions). Kontakta systemadministratören om du har problem.
 
    >[!NOTE]
    >
@@ -184,7 +184,7 @@ Redigeraren har två alternativ:
 
    >[!CAUTION]
    >
-   >Förutom att bara spara ändringarna uppdaterar **Spara** också alla referenser och ser till att dispatchern rensas efter behov. Dessa ändringar kan ta tid att bearbeta. På grund av detta kan prestandan påverkas på ett stort/komplext/tungt belastat system.
+   >Förutom att bara spara ändringarna uppdaterar **Spara** alla referenser och ser till att dispatchern rensas efter behov. Dessa ändringar kan ta tid att bearbeta. På grund av detta kan prestandan påverkas på ett stort/komplext/tungt belastat system.
    >
    >
    >Tänk på detta när du använder **Spara** och ange sedan snabbt fragmentredigeraren igen för att göra och spara ytterligare ändringar.
@@ -195,16 +195,16 @@ Redigeraren har två alternativ:
 
 När du redigerar ditt innehållsfragment skapar AEM automatiskt versioner för att säkerställa att tidigare innehåll kan återställas om du **avbryter** dina ändringar:
 
-1. När ett innehållsfragment öppnas för redigering AEM söker efter den cookie-baserade token som anger om det finns en *redigeringssession* :
+1. När ett innehållsfragment öppnas för redigering AEM söker efter den cookie-baserade token som anger om det finns en *redigeringssession*:
 
    1. Om token hittas betraktas fragmentet som en del av den befintliga redigeringssessionen.
-   2. Om token *inte* är tillgänglig och användaren börjar redigera innehåll, skapas en version och en token för den nya redigeringssessionen skickas till klienten, där den sparas i en cookie.
+   2. Om token är *inte* tillgänglig och användaren börjar redigera innehåll, skapas en version och en token för den nya redigeringssessionen skickas till klienten, där den sparas i en cookie.
 
 2. När det finns en *aktiv* redigeringssession sparas innehållet som redigeras automatiskt var 600:e sekund (standard).
 
    >[!NOTE]
    >
-   >Intervallet för att spara automatiskt kan konfigureras med hjälp av `/conf` mekanismen.
+   >Intervallet för att spara automatiskt kan konfigureras med hjälp av mekanismen `/conf`.
    >
    >
    >Standardvärde, se:
@@ -212,8 +212,8 @@ När du redigerar ditt innehållsfragment skapar AEM automatiskt versioner för 
    >
    >`/libs/settings/dam/cfm/jcr:content/autoSaveInterval`
 
-3. Om användaren väljer att **avbryta** redigeringen återställs den version som skapades i början av redigeringssessionen och denna token tas bort för att avsluta redigeringssessionen.
-4. Om användaren väljer att **spara** redigeringarna behålls de uppdaterade elementen/varianterna och token tas bort för att avsluta redigeringssessionen.
+3. Om användaren väljer att **avbryta** redigeringen återställs den version som skapades i början av redigeringssessionen och token tas bort för att avsluta redigeringssessionen.
+4. Om användaren väljer att **spara** redigeringarna sparas de uppdaterade elementen/varianterna och token tas bort för att avsluta redigeringssessionen.
 
 ## Redigera innehållet i fragmentet {#editing-the-content-of-your-fragment}
 
@@ -221,30 +221,30 @@ När du har öppnat fragmentet kan du använda fliken [Variationer](/help/assets
 
 ## Skapa och hantera variationer i fragment {#creating-and-managing-variations-within-your-fragment}
 
-När du har skapat det Överordnad innehållet kan du skapa och hantera [varianter](/help/assets/content-fragments/content-fragments-variations.md) av det innehållet.
+När du har skapat det Överordnad innehållet kan du skapa och hantera [Variationer](/help/assets/content-fragments/content-fragments-variations.md) av det innehållet.
 
 ## Koppla innehåll till fragment {#associating-content-with-your-fragment}
 
-Du kan också [koppla innehåll](/help/assets/content-fragments/content-fragments-assoc-content.md) till ett fragment. Detta ger en anslutning så att resurser (t.ex. bilder) kan användas (valfritt) med fragmentet när det läggs till på en innehållssida.
+Du kan även [associera innehåll](/help/assets/content-fragments/content-fragments-assoc-content.md) med ett fragment. Detta ger en anslutning så att resurser (t.ex. bilder) kan användas (valfritt) med fragmentet när det läggs till på en innehållssida.
 
 ## Visa och redigera metadata (egenskaper) för fragmentet {#viewing-and-editing-the-metadata-properties-of-your-fragment}
 
-Du kan visa och redigera egenskaperna för ett fragment på fliken [Metadata](/help/assets/content-fragments/content-fragments-metadata.md) .
+Du kan visa och redigera egenskaperna för ett fragment på fliken [Metadata](/help/assets/content-fragments/content-fragments-metadata.md).
 
 ## Tidslinje för innehållsfragment {#timeline-for-content-fragments}
 
-Förutom standardalternativen innehåller [tidslinjen](/help/assets/manage-assets.md#timeline) både information och åtgärder som är specifika för innehållsfragment:
+Förutom standardalternativen ger [Tidslinjen](/help/assets/manage-assets.md#timeline) både information och åtgärder som är specifika för innehållsfragment:
 
 * Visa information om versioner, kommentarer och anteckningar
 * Åtgärder för versioner
 
-   * **[Återgå till den här versionen](#reverting-to-a-version)** (välj ett befintligt fragment och sedan en specifik version)
+   * **[Återgå till den här versionen](#reverting-to-a-version)**  (välj ett befintligt fragment, sedan en specifik version)
 
-   * **[Jämför med aktuell](#comparing-fragment-versions)** (välj ett befintligt fragment och sedan en specifik version)
+   * **[Jämför med aktuell](#comparing-fragment-versions)**  (välj ett befintligt fragment och sedan en specifik version)
 
-   * Lägg till en **etikett** och/eller **kommentar** (välj ett befintligt fragment och sedan en specifik version)
+   * Lägg till en **etikett** och/eller **Kommentar** (välj ett befintligt fragment och sedan en specifik version)
 
-   * **Spara som version** (markera ett befintligt fragment och sedan uppilen längst ned på tidslinjen)
+   * **Spara som version**  (markera ett befintligt fragment och sedan uppilen längst ned på tidslinjen)
 
 * Åtgärder för anteckningar
 
@@ -275,11 +275,11 @@ Till exempel:
 
 ## Jämföra fragmentversioner {#comparing-fragment-versions}
 
-Åtgärden **Jämför med aktuell** är tillgänglig från [tidslinjen](/help/assets/content-fragments/content-fragments-managing.md#timeline-for-content-fragments) när du har valt en viss version.
+Åtgärden **Jämför med aktuell** är tillgänglig från [tidslinjen](/help/assets/content-fragments/content-fragments-managing.md#timeline-for-content-fragments) när du har valt en specifik version.
 
 Detta öppnas:
 
-* den **aktuella** (senaste) versionen (vänster)
+* **Aktuell** (senaste) version (vänster)
 
 * den valda versionen **v&lt;*x.y*>** (höger)
 
@@ -293,7 +293,7 @@ De visas sida vid sida, där:
 
 * Med helskärmsikonen kan du öppna båda versionerna separat; växla sedan tillbaka till den parallella vyn
 * Du kan **återställa** till den specifika versionen
-* **Klart** återgår till konsolen
+* **** Donewill return you to the console
 
 >[!NOTE]
 >
@@ -301,27 +301,27 @@ De visas sida vid sida, där:
 
 ![cfm-6420-20](assets/cfm-6420-20.png)
 
-## Återställa till en version  {#reverting-to-a-version}
+## Återställer till version {#reverting-to-a-version}
 
 Du kan återgå till en viss version av fragmentet:
 
 * Direkt från [tidslinjen](/help/assets/content-fragments/content-fragments-managing.md#timeline-for-content-fragments).
 
-   Välj önskad version och sedan åtgärden **Återställ till denna version** .
+   Välj önskad version och sedan åtgärden **Återställ till denna version**.
 
-* När du [jämför en version med den aktuella versionen](/help/assets/content-fragments/content-fragments-managing.md#comparing-fragment-versions) kan du **återställa** till den valda versionen.
+* När du jämför en version med den aktuella versionen[ kan du ](/help/assets/content-fragments/content-fragments-managing.md#comparing-fragment-versions)återställa **till den valda versionen.**
 
 ## Publicera och referera till ett fragment {#publishing-and-referencing-a-fragment}
 
 >[!CAUTION]
 >
->Om fragmentet är baserat på en modell bör du se till att [modellen har publicerats](/help/assets/content-fragments/content-fragments-models.md#publishing-a-content-fragment-model).
+>Om fragmentet är baserat på en modell bör du kontrollera att [modellen har publicerats](/help/assets/content-fragments/content-fragments-models.md#publishing-a-content-fragment-model).
 >
 >Om du publicerar ett innehållsfragment för vilket modellen ännu inte har publicerats, visas detta i en urvalslista och modellen publiceras med fragmentet.
 
 Innehållsfragment måste publiceras för användning i publiceringsmiljön. De kan publiceras:
 
-* Efter skapande; från **Assets** Console.
+* Efter skapande; från konsolen **Resurser**.
 * När du [publicerar en sida som använder fragmentet](/help/sites-authoring/content-fragments.md#publishing); fragmentet kommer att listas i sidreferenserna.
 
 >[!CAUTION]
@@ -332,15 +332,15 @@ Innehållsfragment måste publiceras för användning i publiceringsmiljön. De 
 
 Så här tar du bort ett fragment:
 
-1. I **Assets** Console navigerar du till platsen för innehållsfragmentet.
+1. I konsolen **Resurser** navigerar du till platsen för innehållsfragmentet.
 2. Markera fragmentet.
 
    >[!NOTE]
    >
    >Åtgärden **Ta bort** är inte tillgänglig som en snabbåtgärd.
 
-3. Välj **Ta bort** i verktygsfältet.
-4. Bekräfta åtgärden **Ta bort** .
+3. Välj **Ta bort** från verktygsfältet.
+4. Bekräfta åtgärden **Ta bort**.
 
    >[!CAUTION]
    >
