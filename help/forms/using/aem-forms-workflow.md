@@ -31,11 +31,11 @@ Du kan använda AEM arbetsflöden för att snabbt skapa anpassningsbara formulä
 
 Med Forms-baserade arbetsflöden i OSGi kan du snabbt skapa och distribuera arbetsflöden för olika uppgifter i OSGi-stacken, utan att behöva installera den fullständiga processhanteringsfunktionen i JEE-stacken. För utveckling och hantering av arbetsflöden används de välbekanta funktionerna för AEM och AEM. Arbetsflöden är grunden för automatisering av affärsprocesser som spänner över flera olika system, nätverk, avdelningar och till och med organisationer.
 
-När du väl har konfigurerat arbetsflödena kan de aktiveras manuellt för att slutföra en definierad process eller köras programmatiskt när användare skickar ett formulär eller [brev för](/help/forms/using/cm-overview.md) korrespondenshantering. Med de här förbättrade AEM Workflow-funktionerna erbjuder AEM Forms två distinkta, men likartade, funktioner. Som en del av er distributionsstrategi måste ni bestämma vilken som fungerar för er. Se en [jämförelse](capabilities-osgi-jee-workflows.md) av Forms-centrerade AEM arbetsflöden för OSGi och Process Management för JEE. För distributionstopologin, se [Arkitektur och driftsättningstopologier för AEM Forms](/help/forms/using/aem-forms-architecture-deployment.md).
+När du har konfigurerat arbetsflödena kan de aktiveras manuellt för att slutföra en definierad process eller köras programmatiskt när användare skickar ett formulär eller [korrespondenshantering](/help/forms/using/cm-overview.md)-brev. Med de här förbättrade AEM Workflow-funktionerna erbjuder AEM Forms två distinkta, men likartade, funktioner. Som en del av er distributionsstrategi måste ni bestämma vilken som fungerar för er. Se en [jämförelse](capabilities-osgi-jee-workflows.md) av de Forms-centrerade AEM arbetsflödena i OSGi och Process Management i JEE. Information om distributionstopologin finns i [Arkitektur och distributionstopologier för AEM Forms](/help/forms/using/aem-forms-architecture-deployment.md).
 
-Forms-centrerat arbetsflöde i OSGi utökar [AEM Inbox](/help/sites-authoring/inbox.md) och innehåller extra komponenter (steg) för AEM Workflow Editor som lägger till stöd för AEM Forms-centrerade arbetsflöden. Den utökade AEM Inkorgen har funktioner som liknar [AEM Forms Workspace](introduction-html-workspace.md). Förutom att hantera humancentrerade arbetsflöden (Godkännande, Granskning och så vidare) kan du använda AEM arbetsflöden för att automatisera [dokumenttjänster](/help/sites-developing/workflows-step-ref.md)(till exempel Generera PDF) och elektroniskt signera (Adobe Sign) dokument.
+Forms-centrerat arbetsflöde i OSGi utökar [AEM Inbox](/help/sites-authoring/inbox.md) och innehåller extra komponenter (steg) för AEM Workflow editor som lägger till stöd för AEM Forms-centrerade arbetsflöden. Den utökade AEM Inkorgen har funktioner som liknar [AEM Forms Workspace](introduction-html-workspace.md). Förutom att hantera humancentrerade arbetsflöden (Godkännande, Granskning och så vidare) kan du använda AEM arbetsflöden för att automatisera [dokumenttjänster](/help/sites-developing/workflows-step-ref.md)-relaterade åtgärder (till exempel Generera PDF) och dokument för elektronisk signering (Adobe Sign).
 
-Alla arbetsflödessteg i AEM Forms stöder användning av variabler. Variabler möjliggör arbetsflödessteg för att lagra och skicka metadata mellan steg vid körning. Du kan skapa olika typer av variabler för att lagra olika typer av data. Du kan också skapa variabelsamlingar (arrayer) för att lagra flera instanser av relaterade data av samma typ. Vanligtvis använder du en variabel eller en samling variabler när du behöver fatta ett beslut baserat på det värde som den innehåller eller lagra information som du behöver senare i en process. Mer information om hur du använder variabler i dessa Forms-centrerade arbetsflödeskomponenter (steg) finns i [Forms-centrerade arbetsflöden i OSGi - Step Reference](../../forms/using/aem-forms-workflow-step-reference.md). Mer information om att skapa och hantera variabler finns i [Variabler i AEM arbetsflöden](../../forms/using/variable-in-aem-workflows.md).
+Alla arbetsflödessteg i AEM Forms stöder användning av variabler. Variabler möjliggör arbetsflödessteg för att lagra och skicka metadata mellan steg vid körning. Du kan skapa olika typer av variabler för att lagra olika typer av data. Du kan också skapa variabelsamlingar (arrayer) för att lagra flera instanser av relaterade data av samma typ. Vanligtvis använder du en variabel eller en samling variabler när du behöver fatta ett beslut baserat på det värde som den innehåller eller lagra information som du behöver senare i en process. Mer information om hur du använder variabler i dessa Forms-centrerade arbetsflödeskomponenter (steg) finns i [Forms-centrerat arbetsflöde i OSGi - stegreferens](../../forms/using/aem-forms-workflow-step-reference.md). Mer information om att skapa och hantera variabler finns i [Variabler i AEM](../../forms/using/variable-in-aem-workflows.md).
 
 I följande diagram visas hela proceduren för att skapa, köra och övervaka ett Forms-orienterat arbetsflöde i OSGi.
 
@@ -45,8 +45,8 @@ I följande diagram visas hela proceduren för att skapa, köra och övervaka et
 
 * Ett arbetsflöde är en representation av en affärsprocess i verkligheten. Håll er verkliga affärsprocess och lista över deltagarna i affärsprocessen klar. Ha också materialet (adaptiva formulär, PDF-dokument med mera) färdigt innan du börjar skapa ett arbetsflöde.
 * Ett arbetsflöde kan ha flera steg. De här stegen visas i AEM Inkorg och hjälper till att rapportera arbetsflödets förlopp. Dela upp affärsprocessen i logiska steg.
-* Du kan konfigurera tilldelningssteget AEM arbetsflöden för att skicka e-postmeddelanden till användare eller tilldelade användare. Aktivera [e-postmeddelanden](#configure-email-service).
-* Ett arbetsflöde kan även använda Adobe-signaturer för digitala signaturer. Om du tänker använda Adobe Sign i ett arbetsflöde [konfigurerar du Adobe Sign för AEM Forms](../../forms/using/adobe-sign-integration-adaptive-forms.md) innan du använder det i ett arbetsflöde.
+* Du kan konfigurera tilldelningssteget AEM arbetsflöden för att skicka e-postmeddelanden till användare eller tilldelade användare. [aktivera e-postmeddelanden](#configure-email-service).
+* Ett arbetsflöde kan även använda Adobe-signaturer för digitala signaturer. Om du tänker använda Adobe Sign i ett arbetsflöde måste du [konfigurera Adobe Sign för AEM Forms](../../forms/using/adobe-sign-integration-adaptive-forms.md) innan du använder det i ett arbetsflöde.
 
 ## Skapa en arbetsflödesmodell {#create-a-workflow-model}
 
@@ -69,8 +69,8 @@ I exemplet skapas en arbetsflödesmodell för en låneansökan som ska fyllas av
 [Hämta fil](assets/example-mortgage-loan-application.zip)
 
 1. Öppna konsolen Arbetsflödesmodeller. Standardwebbadressen är `https://[server]:[port]/libs/cq/workflow/admin/console/content/models.html/etc/workflow/models`
-1. Välj **Skapa** och sedan **Skapa modell**. Dialogrutan Lägg till arbetsflödesmodell visas.
-1. Ange **Titel** och **Namn** (valfritt). Till exempel en låneansökan. Tryck på **Klar**.
+1. Välj **Skapa** och **Skapa modell**. Dialogrutan Lägg till arbetsflödesmodell visas.
+1. Ange **titeln** och **Namn** (valfritt). Till exempel en låneansökan. Tryck på **Klar**.
 1. Välj den nya arbetsflödesmodellen och tryck på **Redigera**. Nu kan du lägga till arbetsflödessteg för att skapa affärslogik. När du först skapar en arbetsflödesmodell innehåller den:
 
    * Stegen: Flödesstart och Flödesslut. De här stegen representerar början och slutet av arbetsflödet. Dessa steg är obligatoriska och kan inte redigeras eller tas bort.
@@ -78,23 +78,23 @@ I exemplet skapas en arbetsflödesmodell för en låneansökan som ska fyllas av
 
 1. Aktivera e-postmeddelanden. Du kan konfigurera ett Forms-orienterat arbetsflöde på OSGi för att skicka e-postmeddelanden till användare eller tilldelade användare. Gör följande konfigurationer för att aktivera e-postmeddelanden:
 
-   1. Gå till AEM Configuration Manager på `https://[server]:[port]/system/console/configMgr`.
-   1. Öppna **[!UICONTROL Day CQ Mail Service]** konfigurationen. Ange ett värde för fälten **[!UICONTROL SMTP server host name]**, **[!UICONTROL SMTP server port,]** och **[!UICONTROL "From" address]** . Klicka på **[!UICONTROL Save]**.
-   1. Öppna **[!UICONTROL Day CQ Link Externalizer]** konfigurationen. I **[!UICONTROL Domains]** fältet anger du den faktiska värdnamnet/IP-adressen och portnumret för lokala instanser, författare och publiceringsinstanser. Klicka på **[!UICONTROL Save]**.
+   1. Gå till AEM konfigurationshanteraren på `https://[server]:[port]/system/console/configMgr`.
+   1. Öppna **[!UICONTROL Day CQ Mail Service]**-konfigurationen. Ange ett värde för fälten **[!UICONTROL SMTP server host name]**, **[!UICONTROL SMTP server port,]** och **[!UICONTROL "From" address]**. Klicka på **[!UICONTROL Save]**.
+   1. Öppna **[!UICONTROL Day CQ Link Externalizer]**-konfigurationen. I fältet **[!UICONTROL Domains]** anger du den faktiska värdnamnet/IP-adressen och portnumret för lokala instanser, författare och publiceringsinstanser. Klicka på **[!UICONTROL Save]**.
 
 1. Skapa arbetsflödesfaser. Ett arbetsflöde kan ha flera steg. De här stegen visas i AEM Inkorg och rapporterar arbetsflödets förlopp.
 
-   Om du vill definiera en scen trycker du på ikonen ![informationscirkel](assets/info-circle.png) för att öppna arbetsflödesmodellens egenskaper, öppnar fliken **Steg** , lägger till faser för arbetsflödesmodellen och trycker på **Spara och stäng**. I exemplet med låneansökan skapar du faser: låneansökan, låneanspråksstatus, signerade dokument och signerade lånedokument.
+   Om du vill definiera en scen trycker du på ikonen ![info-circle](assets/info-circle.png) för att öppna arbetsflödesmodellegenskaperna, öppnar fliken **Steg**, lägger till faser för arbetsflödesmodellen och trycker på **Spara och stäng**. I exemplet med låneansökan skapar du faser: låneansökan, låneanspråksstatus, signerade dokument och signerade lånedokument.
 
-1. Dra och släpp webbläsaren **Tilldela uppgift** -steg till arbetsflödesmodellen. Gör det till modellens första steg.
+1. Dra och släpp webbläsaren **Tilldela uppgift**-steg till arbetsflödesmodellen. Gör det till modellens första steg.
 
    Tilldela en uppgiftskomponent tilldelar uppgiften, som skapas i ett arbetsflöde, till en användare eller grupp. Förutom att tilldela uppgiften kan du använda komponenten för att ange ett adaptivt formulär eller en icke-interaktiv PDF för uppgiften. Det adaptiva formuläret krävs för att kunna ta emot indata från användare och icke-interaktiva PDF-filer eller ett skrivskyddat anpassat formulär används endast för granskning.
 
-   Du kan också använda steget för att styra aktivitetens beteende. Om du till exempel skapar ett automatiskt postdokument, tilldelar uppgiften till en viss användare eller grupp, sökvägen till skickade data, sökvägen till data som ska fyllas i i i förväg samt standardåtgärder. Detaljerad information om alternativen för tilldelningssteget finns i [Forms-centrerat arbetsflöde i OSGi - Step Reference](../../forms/using/aem-forms-workflow.md) -dokument.
+   Du kan också använda steget för att styra aktivitetens beteende. Om du till exempel skapar ett automatiskt postdokument, tilldelar uppgiften till en viss användare eller grupp, sökvägen till skickade data, sökvägen till data som ska fyllas i i i förväg samt standardåtgärder. Detaljerad information om alternativen för tilldelningssteget finns i [Forms-centrerat arbetsflöde i OSGi - Step Reference](../../forms/using/aem-forms-workflow.md)-dokument.
 
    ![arbetsflödesredigerare](assets/workflow-editor.png)
 
-   I exemplet med låneansökan ska du konfigurera tilldelningssteget så att det använder ett skrivskyddat anpassat formulär och visa PDF-dokumentet när uppgiften är klar. Välj även en användargrupp som kan godkänna lånebegäran. På fliken **Åtgärder** inaktiverar du alternativet **Skicka** . Skapa en **actionTaken** -variabel av datatypen String och ange variabeln som **flödesvariabel**. Till exempel actionTaken. Lägg även till rutterna Godkänn och Avvisa. Vägarna visas som separata åtgärder (knappar) i AEM. Arbetsflödet väljer en gren baserat på den åtgärd (knapp) som användaren knackar på.
+   I exemplet med låneansökan ska du konfigurera tilldelningssteget så att det använder ett skrivskyddat anpassat formulär och visa PDF-dokumentet när uppgiften är klar. Välj även en användargrupp som kan godkänna lånebegäran. På fliken **Åtgärder** inaktiverar du alternativet **Skicka**. Skapa en **actionTaken**-variabel av datatypen String och ange variabeln som **vägvariabel**. Till exempel actionTaken. Lägg även till rutterna Godkänn och Avvisa. Vägarna visas som separata åtgärder (knappar) i AEM. Arbetsflödet väljer en gren baserat på den åtgärd (knapp) som användaren knackar på.
 
    Du kan importera exempelpaketet, som är tillgängligt för hämtning i början av avsnittet, för den fullständiga uppsättningen värden för alla fält i tilldelningssteget som konfigurerats för exempelvis låneprogram.
 
@@ -106,13 +106,13 @@ I exemplet skapas en arbetsflödesmodell för en låneansökan som ska fyllas av
 
    **Routningsuttryck för gren 1**
 
-   När en användare trycker på **Godkänn** AEM Inkorg aktiveras Förgrening 1.
+   När en användare trycker på **Godkänn** i AEM Inkorg aktiveras Förgrening 1.
 
    ![ELLER Dela exempel](assets/orsplit_branch1_active_new.png)
 
    **Routningsuttryck för gren 2**
 
-   När en användare trycker på **Avvisa** AEM Inkorg aktiveras Förgrening 2.
+   När en användare trycker på **Reject** i AEM Inkorg aktiveras gren 2.
 
    ![ELLER Dela exempel](assets/orsplit_branch2_active_new.png)
 
@@ -120,11 +120,11 @@ I exemplet skapas en arbetsflödesmodell för en låneansökan som ska fyllas av
 
 1. Lägg till andra arbetsflödessteg för att skapa affärslogiken.
 
-   I hypoteksexemplet lägger du till ett genererat postdokument, två tilldelningar av uppgiftssteg och ett signeringsdokumentsteg i förgrening 1 av modellen, vilket visas i bilden nedan. Ett tilldelningssteg är att visa och skicka **signerade lånedokument till sökanden** och en annan tilldelningsåtgärd är **att visa signerade dokument**. Lägg också till en tilldelad uppgiftskomponent i gren 2. Den aktiveras när en användare trycker på Avvisa i AEM.
+   I hypoteksexemplet lägger du till ett genererat postdokument, två tilldelningar av uppgiftssteg och ett signeringsdokumentsteg i förgrening 1 av modellen, vilket visas i bilden nedan. Ett tilldelningssteg är att visa och skicka **signerade lånedokument till sökanden** och en annan tilldelningsaktivitetskomponent är **att visa signerade dokument**. Lägg också till en tilldelad uppgiftskomponent i gren 2. Den aktiveras när en användare trycker på Avvisa i AEM.
 
    Om du vill visa en komplett uppsättning värden för alla fält i tilldelningsstegen, dokumentsteget och signeringsdokumentsteget som konfigurerats för exempelvis låneprogram importerar du exempelpaketet som är tillgängligt för hämtning i början av det här avsnittet.
 
-   Arbetsflödesmodellen är klar. Du kan starta arbetsflödet på olika sätt. Mer information finns i [Starta ett Forms-orienterat arbetsflöde i OSGi](#launch).
+   Arbetsflödesmodellen är klar. Du kan starta arbetsflödet på olika sätt. Mer information finns i [Starta ett Forms-centrerat arbetsflöde på OSGi](#launch).
 
    ![arbetsflödeseditor-inteckning](assets/workflow-editor-mortgage.png)
 
@@ -136,8 +136,8 @@ Programmet är det adaptiva formulär som är associerat med arbetsflödet. När
 >
 >Du måste vara medlem i gruppen fd-administrator för att kunna skapa och hantera arbetsflödesprogram.
 
-1. Gå till ![tools-1](assets/tools-1.png) > **[!UICONTROL Forms]** > **[!UICONTROL Manage Workflow Application]** och tryck **[!UICONTROL Create]** på AEM författare.
-1. I fönstret Skapa arbetsflödesprogram anger du indata för följande fält och trycker på **Skapa**. Ett nytt program skapas och visas på skärmen Arbetsflödesprogram.
+1. Gå till ![tools-1](assets/tools-1.png) > **[!UICONTROL Forms]** > **[!UICONTROL Manage Workflow Application]** och tryck på **[!UICONTROL Create]** på din AEM författarinstans.
+1. I fönstret Skapa arbetsflödesprogram anger du indata för följande fält och trycker på **Create**. Ett nytt program skapas och visas på skärmen Arbetsflödesprogram.
 
 <table>
  <tbody>
@@ -155,7 +155,7 @@ Programmet är det adaptiva formulär som är associerat med arbetsflödet. När
   </tr>
   <tr>
    <td>Beskrivning</td>
-   <td>Beskrivningen visas i AEM. Ange detaljerad information om programmet i beskrivningsfälten. Till exempel programmets syfte.<br /> </td>
+   <td>Beskrivningen visas i AEM. Ange detaljerad information om programmet i beskrivningsfälten. Programmets syfte, till exempel.<br /> </td>
   </tr>
   <tr>
    <td>Adaptiv form</td>
@@ -188,7 +188,7 @@ Programmet är det adaptiva formulär som är associerat med arbetsflödet. När
  </tbody>
 </table>
 
-## Starta ett Forms-orienterat arbetsflöde i OSGi {#launch}
+## Starta ett Forms-centrerat arbetsflöde på OSGi {#launch}
 
 Du kan starta eller utlösa ett Forms-centrerat arbetsflöde genom att:
 
@@ -202,15 +202,15 @@ Du kan starta eller utlösa ett Forms-centrerat arbetsflöde genom att:
 
 ### Skicka ett program från AEM Inbox {#inbox}
 
-Arbetsflödesprogrammet som du skapade är tillgängligt som ett program i Inkorgen. Användare som är medlemmar i en grupp med arbetsflödesanvändare kan fylla i och skicka programmet som utlöser det associerade arbetsflödet. Information om hur du använder AEM Inbox för att skicka program och hantera uppgifter finns i [Hantera Forms-program och -uppgifter i AEM Inkorg](../../forms/using/manage-applications-inbox.md).
+Arbetsflödesprogrammet som du skapade är tillgängligt som ett program i Inkorgen. Användare som är medlemmar i en grupp med arbetsflödesanvändare kan fylla i och skicka programmet som utlöser det associerade arbetsflödet. Information om hur du använder AEM Inbox för att skicka program och hantera uppgifter finns i [Hantera Forms-program och -uppgifter i AEM Inbox](../../forms/using/manage-applications-inbox.md).
 
 ### Skicka ett program från AEM Forms App {#afa}
 
-AEM Forms-appen synkroniseras med en AEM Forms-server så att du kan ändra formulärdata, uppgifter, arbetsflödesprogram och sparad information (utkast/mallar) i ditt konto. Mer information finns i [AEM Forms-program](/help/forms/using/aem-forms-app.md) och relaterade artiklar.
+AEM Forms-appen synkroniseras med en AEM Forms-server så att du kan ändra formulärdata, uppgifter, arbetsflödesprogram och sparad information (utkast/mallar) i ditt konto. Mer information finns i [AEM Forms app](/help/forms/using/aem-forms-app.md) och relaterade artiklar.
 
 ### Skicka ett anpassat formulär {#af}
 
-Du kan konfigurera skicka-åtgärderna för ett adaptivt formulär så att ett arbetsflöde startas när det adaptiva formuläret skickas. Med adaptiva formulär kan du starta ett arbetsflöde när du skickar ett anpassat formulär genom att **anropa en AEM arbetsflöde** . Mer information om åtgärden Skicka finns i [Konfigurera åtgärden](../../forms/using/configuring-submit-actions.md)Skicka. Om du vill skicka ett adaptivt formulär via appen AEM Forms aktiverar du Synkronisera med AEM Forms App i de adaptiva formuläregenskaperna.
+Du kan konfigurera skicka-åtgärderna för ett adaptivt formulär så att ett arbetsflöde startas när det adaptiva formuläret skickas. Anpassade formulär innehåller **Anropa en AEM arbetsflöde**-åtgärd för att starta ett arbetsflöde när ett anpassat formulär skickas. Mer information om åtgärden Skicka finns i [Konfigurera åtgärden Skicka](../../forms/using/configuring-submit-actions.md). Om du vill skicka ett adaptivt formulär via appen AEM Forms aktiverar du Synkronisera med AEM Forms App i de adaptiva formuläregenskaperna.
 
 Du kan konfigurera ett anpassningsbart formulär så att det synkroniserar, skickar och utlöser ett arbetsflöde från AEM Forms-appen. Mer information finns i [Arbeta med ett formulär](/help/forms/using/working-with-form.md).
 
@@ -218,7 +218,7 @@ Du kan konfigurera ett anpassningsbart formulär så att det synkroniserar, skic
 
 En administratör (medlem i gruppen fd-administratörer) kan konfigurera en nätverksmapp så att den kör ett förkonfigurerat arbetsflöde när en användare placerar en fil (t.ex. en PDF-fil) i mappen. När arbetsflödet har slutförts kan resultatfilen sparas i en angiven utdatamapp. En sådan mapp kallas [Bevakad mapp](../../forms/using/watched-folder-in-aem-forms.md). Så här konfigurerar du en bevakad mapp för att starta ett arbetsflöde:
 
-1. Gå till ![tools-1](assets/tools-1.png) > **[!UICONTROL Forms]** > **[!UICONTROL Configure Watched Folder]**. En lista över redan konfigurerade bevakade mappar visas.
+1. Gå till ![tools-1](assets/tools-1.png) > **[!UICONTROL Forms]** > **[!UICONTROL Configure Watched Folder]** på AEM författarinstans. En lista över redan konfigurerade bevakade mappar visas.
 1. Tryck på **[!UICONTROL New]**. En lista med fält visas. Ange ett värde för följande fält för att konfigurera en bevakad mapp för ett arbetsflöde:
 
 <table>
@@ -237,7 +237,7 @@ En administratör (medlem i gruppen fd-administratörer) kan konfigurera en nät
   </tr>
   <tr>
    <td><span class="uicontrol">Bearbeta filer med</code></td>
-   <td>Välj <span class="uicontrol">alternativet </code>Arbetsflöde. </code></td>
+   <td>Välj alternativet <span class="uicontrol">Arbetsflöde </code>. </code></td>
   </tr>
   <tr>
    <td><span class="uicontrol">Arbetsflödesmodell</code></td>
@@ -250,17 +250,17 @@ En administratör (medlem i gruppen fd-administratörer) kan konfigurera en nät
  </tbody>
 </table>
 
-1. Tryck på **Avancerat**. Ange ett värde för följande fält och tryck på **Skapa**. Den bevakade mappen är konfigurerad för att starta ett arbetsflöde. När en fil placeras i indatakatalogen för den bevakade mappen aktiveras nu det angivna arbetsflödet.
+1. Tryck på **Avancerat**. Ange ett värde för följande fält och tryck på **Create**. Den bevakade mappen är konfigurerad för att starta ett arbetsflöde. När en fil placeras i indatakatalogen för den bevakade mappen aktiveras nu det angivna arbetsflödet.
 
    | Fält | Beskrivning |
    |---|---|
    | Nyttolastmappningsfilter | När du skapar en bevakad mapp skapas en mappstruktur i crx-databasen. Mappstrukturen kan fungera som en nyttolast för arbetsflödet. Du kan skriva ett skript för att mappa ett AEM arbetsflöde och acceptera indata från den bevakade mappstrukturen. En out of the box-implementering är tillgänglig och visas i filtret för nyttolastmapparen. Om du inte har någon anpassad implementering väljer du standardimplementeringen. |
 
-   Fliken Avancerat innehåller fler fält. De flesta av dessa fält innehåller ett standardvärde. Mer information om alla fält finns i artikeln [Skapa eller Konfigurera en bevakad mapp](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md) .
+   Fliken Avancerat innehåller fler fält. De flesta av dessa fält innehåller ett standardvärde. Mer information om alla fält finns i [Skapa eller konfigurera en bevakad mapp](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md)-artikeln.
 
-### Skicka ett interaktivt meddelande eller ett brev {#letter}
+### Skicka en interaktiv kommunikation eller en bokstav {#letter}
 
-Du kan associera och köra ett Forms-centrerat arbetsflöde i OSGi när du skickar ett interaktivt meddelande eller ett brev. I arbetsflöden för korrespondenshantering används för efterbearbetning av interaktiv kommunikation och brev. Du kan till exempel skicka e-post, skriva ut, faxa eller arkivera de slutliga breven. Detaljerade anvisningar finns i [Efterbehandling av interaktiv kommunikation och brev](../../forms/using/submit-letter-topostprocess.md).
+Du kan associera och köra ett Forms-centrerat arbetsflöde i OSGi när du skickar ett interaktivt meddelande eller ett brev. I arbetsflöden för korrespondenshantering används för efterbearbetning av interaktiv kommunikation och brev. Du kan till exempel skicka e-post, skriva ut, faxa eller arkivera de slutliga breven. Mer information finns i [Efterbearbetning av interaktiv kommunikation och brev](../../forms/using/submit-letter-topostprocess.md).
 
 ## Ytterligare konfigurationer {#additional-configurations}
 
@@ -268,10 +268,10 @@ Du kan associera och köra ett Forms-centrerat arbetsflöde i OSGi när du skick
 
 Du kan använda stegen Tilldela uppgift och Skicka e-post AEM arbetsflöden för att skicka ett e-postmeddelande. Utför följande steg för att ange e-postservrar och andra konfigurationer som krävs för att skicka e-post:
 
-1. Gå till AEM Configuration Manager på `https://[server]:[port]/system/console/configMgr`.
-1. Öppna **[!UICONTROL Day CQ Mail Service]** konfigurationen. Ange ett värde för fälten **[!UICONTROL SMTP server host name]**, **[!UICONTROL SMTP server port,]** och **[!UICONTROL "From" address]** . Klicka på **[!UICONTROL Save]**.
-1. Öppna **[!UICONTROL Day CQ Link Externalizer]** konfigurationen. I **[!UICONTROL Domains]** fältet anger du den faktiska värdnamnet/IP-adressen och portnumret för lokala instanser, författare och publiceringsinstanser. Klicka på **[!UICONTROL Save]**.
+1. Gå till AEM konfigurationshanteraren på `https://[server]:[port]/system/console/configMgr`.
+1. Öppna **[!UICONTROL Day CQ Mail Service]**-konfigurationen. Ange ett värde för fälten **[!UICONTROL SMTP server host name]**, **[!UICONTROL SMTP server port,]** och **[!UICONTROL "From" address]**. Klicka på **[!UICONTROL Save]**.
+1. Öppna **[!UICONTROL Day CQ Link Externalizer]**-konfigurationen. I fältet **[!UICONTROL Domains]** anger du den faktiska värdnamnet/IP-adressen och portnumret för lokala instanser, författare och publiceringsinstanser. Klicka på **[!UICONTROL Save]**.
 
 ### Rensa arbetsflödesinstanser {#purge-workflow-instances}
 
-Om du minimerar antalet arbetsflödesinstanser ökas arbetsflödesmotorns prestanda, så att du regelbundet kan rensa avslutade eller pågående arbetsflödesinstanser från databasen. Mer information finns i [Vanlig rensning av arbetsflödesinstanser](/help/sites-administering/workflows-administering.md#regular) med rensning av arbetsflödesinstanser
+Om du minimerar antalet arbetsflödesinstanser ökas arbetsflödesmotorns prestanda, så att du regelbundet kan rensa avslutade eller pågående arbetsflödesinstanser från databasen. Mer information finns i [Vanlig tömning av arbetsflödesinstanser](/help/sites-administering/workflows-administering.md#regular) rensning av arbetsflödesinstanser
