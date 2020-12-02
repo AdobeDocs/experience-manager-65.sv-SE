@@ -38,16 +38,16 @@ Mer information finns i [Resurser som gjorts kompatibla med AEM Forms 6.5 genom 
 
 När du har utfört en uppgradering gör du följande för att installera AEMFD-kompatibilitetspaketet och göra dina resurser kompatibla med 6.5:
 
-Kontrollera att du har förinstallerat [AEM Kompatibilitetspaket](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) .
+Kontrollera att du har [AEM Kompatibilitetspaket](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) förinstallerat.
 
-1. Installera det senaste 6.5- [kompatibilitetspaketet](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html).
+1. Installera den senaste 6.5 [Kompatibilitetspaketet](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html).
 
    Mer information om hur du överför och installerar paketet finns i [Arbeta med paket](/help/sites-administering/package-manager.md).
 
 1. Starta om servern när loggarna har stabiliserats.
 1. Använd flyttningsverktyget för att göra dina resurser kompatibla med 6.5.
 
-   Mer information finns i [Migreringsverktyg](../../forms/using/migration-utility.md).
+   Mer information finns i [migreringsverktyget](../../forms/using/migration-utility.md).
 
 ## Resurser som gjorts kompatibla med AEM Forms 6.5 genom att installera kompatibilitetspaketet {#assetsmadecompatible}
 
