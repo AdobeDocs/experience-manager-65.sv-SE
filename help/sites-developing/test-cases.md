@@ -12,6 +12,9 @@ discoiquuid: f01eb2aa-6891-4f5d-8a4a-43fc1534c222
 docset: aem65
 translation-type: tm+mt
 source-git-commit: da08613be784f43ad3e3c3652b7e015640a48a9d
+workflow-type: tm+mt
+source-wordcount: '548'
+ht-degree: 0%
 
 ---
 
@@ -49,18 +52,20 @@ Automatisering av testfall är dock en betydande investering, så vissa aspekter
 
 ## Testa specifika aspekter {#testing-specific-aspects}
 
-Vid testning av AEM är några specifika detaljer av särskilt intresse:
+När AEM testas är det av särskilt intresse med vissa detaljer:
 
 **Skapa och publicera miljöer**
 
-Även om det ingår i [miljöer](/help/sites-developing/the-basics.md#environments) är det värt att betona en avgörande faktor för AEM när det gäller testning.
+Även om det ingår i [miljöer](/help/sites-developing/the-basics.md#environments) är det värt att betona en avgörande faktor för AEM med avseende på testning.
 
-Du måste tänka på AEM som två program:
+Du måste överväga AEM som två program:
 
-* i *redigeringsmiljönDen här instansen* tillåter författare att ange och publicera innehåll.
+* miljön *Författare*
+Den här instansen tillåter författare att ange och publicera innehåll.
 Detta har en liten(er), förutsägbar uppsättning användare, för vilka specifika funktioner och prestanda är avgörande.
 
-* i *publiceringsmiljön* Den här instansen presenterar webbplatsen i dess publicerade form så att besökarna kan komma åt den.
+* miljön *Publish*
+I den här instansen visas webbplatsen i dess publicerade form så att besökarna kan komma åt den.
 Detta har vanligtvis en större uppsättning användare, där trafikvolymen inte alltid är helt förutsägbar. Prestanda är fortfarande avgörande - vid svar på förfrågningar. Cachelagring och lastbalansering måste också beaktas.
 
 Även om de är samma programvara:
@@ -73,7 +78,7 @@ Detta har vanligtvis en större uppsättning användare, där trafikvolymen inte
 
 Med andra ord måste de testas separat och med olika testfall.
 
-**Personalisering**
+**Personanpassning**
 
 Vid testning av personalisering ska varje enskilt användningsfall upprepas med flera användarkonton för att bevisa beteendet.
 
@@ -85,19 +90,24 @@ I de flesta projekt installeras Dispatcher för cachelagring och belastningsutj�
 
 Testningen är svår (cachelagring sker på olika nivåer och på olika platser) och måste göras i svarta lådor. Viktiga aspekter att testa för är:
 
-* **Noggrannheten** säkerställer att webbplatsens besökare kan se innehållsuppdateringarna.
+* **Se**
+till att webbplatsens besökare kan se innehållsuppdateringarna korrekt.
 
-* **Kontinuitet** säkerställer att webbplatsen fortfarande är tillgänglig när en server stängs av.
+* **Se**
+till att webbplatsen fortfarande är tillgänglig när en server stängs av.
 
-* **Klusterkluster** används för att tillhandahålla:
+* ****
+ClustersClusters används för att tillhandahålla:
 
-   * **Redundans** Om en server misslyckas tar andra servrar i klustret över bearbetningen.
+   * ****
+RedundansOm en server inte fungerar tar andra servrar i klustret över bearbetningen.
 
-   * **Prestandabelastningsbalansering med fullständig failover ökar prestanda för ett kluster.**
+   * **PerformanceLoad-**
+balansering med fullständig failover ökar prestanda för ett kluster.
 När det används för ett kundprojekt måste klustret testas för att bekräfta att konfigurationen fungerar korrekt.
 
-## Testar program från tredje part {#testing-third-party-software}
+## Testar tredjepartsprogram {#testing-third-party-software}
 
-Alla tredjepartsprogram som interagerar med AEM beskrivs i Detaljerade kravspecifikationer.
+Alla tredjepartsprogram som AEM interagerar med kommer att anges i Detaljerade kravspecifikationer.
 
 Alla provningar som krävs (beroende på det definierade omfånget) ska analyseras och rena provningar utföras.
