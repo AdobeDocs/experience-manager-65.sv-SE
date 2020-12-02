@@ -1,6 +1,6 @@
 ---
-title: Bästa tillvägagångssätt för [!DNL Assets] övervakning av driftsättning
-description: Bästa tillvägagångssätt för att övervaka miljön och prestanda för [!DNL Adobe Experience Manager] din distribution efter att den har distribuerats.
+title: Bästa tillvägagångssätt för att övervaka [!DNL Assets] distribution
+description: Bästa tillvägagångssätt för att övervaka miljön och prestandan för din  [!DNL Adobe Experience Manager] distribution efter att den har distribuerats.
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: b14b377e52ab10c41355f069d97508b588d82216
@@ -11,9 +11,9 @@ ht-degree: 0%
 ---
 
 
-# Bästa tillvägagångssätt för att övervaka [!DNL Adobe Experience Manager Assets] distributionen {#assets-monitoring-best-practices}
+# Bästa tillvägagångssätt för att övervaka [!DNL Adobe Experience Manager Assets]-distribution {#assets-monitoring-best-practices}
 
-Ur ett [!DNL Experience Manager Assets] perspektiv bör övervakningen omfatta övervakning och rapportering av följande processer och tekniker:
+Från [!DNL Experience Manager Assets]-synpunkt bör övervakningen omfatta övervakning och rapportering av följande processer och tekniker:
 
 * Systemprocessor
 * Systemminnesanvändning
@@ -22,7 +22,7 @@ Ur ett [!DNL Experience Manager Assets] perspektiv bör övervakningen omfatta �
 * JMX MBeans för heap-användning och asynkrona processer, som arbetsflöden
 * OSGi-konsolens hälsokontroller
 
-Vanligtvis [!DNL Experience Manager Assets] kan du övervaka på två sätt: live-övervakning och långtidsövervakning.
+Vanligtvis kan [!DNL Experience Manager Assets] övervakas på två sätt: live-övervakning och långtidsövervakning.
 
 ## Live-övervakning {#live-monitoring}
 
@@ -36,11 +36,11 @@ Du bör utföra direktövervakning under prestandatestningsfasen av din utveckli
 
 * [Iftop](https://www.ex-parrot.com/pdw/iftop/): Iftop visar detaljerad information om Ethernet-/nätverksanvändning. Om Iftop visar statistik per kommunikationskanal för de enheter som använder Ethernet och den bandbredd de använder. Iftop kan installeras på de flesta Linux-system med `yum install iftop` eller `apt-get install iftop`.
 
-* Java Flight Recorder (JFR): Ett kommersiellt verktyg från Oracle som du kan använda fritt i icke-produktionsmiljöer. Mer information finns i [Använda Java Flight Recorder för att diagnostisera CQ-körningsproblem](https://cq-ops.tumblr.com/post/73865704329/how-to-use-java-flight-recorder-to-diagnose-cq).
-* [!DNL Experience Manager] `error.log` fil: Du kan undersöka [!DNL Experience Manager] `error.log` filen för att få information om fel som loggats i systemet. Använd kommandot för `tail -F quickstart/logs/error.log` att identifiera fel som ska undersökas.
+* Java Flight Recorder (JFR): Ett kommersiellt verktyg från Oracle som du kan använda fritt i icke-produktionsmiljöer. Mer information finns i [Så här använder du Java Flight Recorder för att diagnostisera CQ-körningsproblem](https://cq-ops.tumblr.com/post/73865704329/how-to-use-java-flight-recorder-to-diagnose-cq).
+* [!DNL Experience Manager] `error.log` fil: Du kan undersöka  [!DNL Experience Manager] `error.log` filen för att få information om fel som har loggats i systemet. Använd kommandot `tail -F quickstart/logs/error.log` för att identifiera fel som ska undersökas.
 * [Arbetsflödeskonsol](/help/sites-administering/workflows.md): Utnyttja arbetsflödeskonsolen för att övervaka arbetsflöden som släpar efter eller fastnar.
 
-Vanligtvis använder du dessa verktyg tillsammans för att få en heltäckande bild av hur din [!DNL Experience Manager] driftsättning fungerar.
+Vanligtvis använder du dessa verktyg tillsammans för att få en heltäckande bild av hur din [!DNL Experience Manager]-distribution fungerar.
 
 >[!NOTE]
 >
@@ -54,11 +54,11 @@ Vanligtvis använder du dessa verktyg tillsammans för att få en heltäckande b
 
 ## Långsiktig övervakning {#long-term-monitoring}
 
-Långsiktig övervakning av en [!DNL Experience Manager] distribution innefattar övervakning under en längre tid av samma delar som övervakas live. Det innehåller även definitioner av varningar som är specifika för din miljö.
+Långsiktig övervakning av en [!DNL Experience Manager]-distribution innebär övervakning under en längre tid av samma delar som övervakas live. Det innehåller även definitioner av varningar som är specifika för din miljö.
 
 ### Loggaggning och rapportering {#log-aggregation-and-reporting}
 
-Det finns flera verktyg tillgängliga för att samla loggar, till exempel Splunk(TM) och Elastic Search, Logstash och Kabana (ELK). För att utvärdera drifttiden för din [!DNL Experience Manager] distribution är det viktigt att du förstår logghändelser som är specifika för ditt system och skapar varningar baserade på dem. En god kunskap om dina utvecklings- och operationsrutiner kan hjälpa dig att bättre förstå hur du kan trimma loggsammanställningsprocessen för att generera kritiska varningar.
+Det finns flera verktyg tillgängliga för att samla loggar, till exempel Splunk(TM) och Elastic Search, Logstash och Kabana (ELK). För att utvärdera drifttiden för din [!DNL Experience Manager]-distribution är det viktigt att du förstår vilka logghändelser som är specifika för ditt system och skapar varningar baserade på dem. En god kunskap om dina utvecklings- och operationsrutiner kan hjälpa dig att bättre förstå hur du kan trimma loggsammanställningsprocessen för att generera kritiska varningar.
 
 ### Miljöövervakning {#environment-monitoring}
 
@@ -75,7 +75,7 @@ Du behöver externa verktyg, som NewRelic(TM) och AppDynamics(TM), för att kunn
 
 #### Intern programövervakning {#internal-application-monitoring}
 
-Intern programövervakning omfattar övervakning av de programkomponenter som utgör [!DNL Experience Manager] stacken, inklusive JVM, innehållsdatabasen och övervakning via anpassad programkod som är byggd på plattformen. I allmänhet genomförs det via JMX Mbeans, som kan övervakas direkt av många populära övervakningslösningar, till exempel SolarWinds (TM), HP OpenView(TM), Hyperic(TM), Zabbix(TM) och andra. För system som inte har stöd för en direkt anslutning till JMX kan du skriva gränssnittsskript för att extrahera JMX-data och exponera dem för dessa system i ett format som de själva förstår.
+Intern programövervakning omfattar övervakning av de programkomponenter som utgör [!DNL Experience Manager]-stacken, inklusive JVM, innehållsdatabasen och övervakning via anpassad programkod som är byggd på plattformen. I allmänhet genomförs det via JMX Mbeans, som kan övervakas direkt av många populära övervakningslösningar, till exempel SolarWinds (TM), HP OpenView(TM), Hyperic(TM), Zabbix(TM) och andra. För system som inte har stöd för en direkt anslutning till JMX kan du skriva gränssnittsskript för att extrahera JMX-data och exponera dem för dessa system i ett format som de själva förstår.
 
 Fjärråtkomst till JMX Mbeans är inte aktiverat som standard. Mer information om övervakning via JMX finns i [Övervakning och hantering med JMX-teknik](https://docs.oracle.com/javase/7/docs/technotes/guides/management/agent.html).
 
@@ -83,7 +83,7 @@ I många fall krävs en baslinje för att effektivt kunna övervaka en statistik
 
 **JVM-övervakning**
 
-Precis som med alla Java-baserade programstackar är [!DNL Experience Manager] de beroende av vilka resurser som tillhandahålls via den underliggande Java Virtual Machine. Du kan övervaka status för många av dessa resurser via plattforms-MXBeans som exponeras av JVM. Mer information om MXBeans finns i [Använda Platform MBean Server och Platform MXBeans](https://docs.oracle.com/javase/7/docs/technotes/guides/management/mxbeans.html).
+Precis som för alla Java-baserade programstackar är [!DNL Experience Manager] beroende av vilka resurser som finns tillgängliga via den underliggande Java Virtual Machine. Du kan övervaka status för många av dessa resurser via plattforms-MXBeans som exponeras av JVM. Mer information om MXBeans finns i [Använda Platform MBean Server och Platform MXBeans](https://docs.oracle.com/javase/7/docs/technotes/guides/management/mxbeans.html).
 
 Här följer några baslinjeparametrar som du kan övervaka för JVM:
 
@@ -109,9 +109,9 @@ Trådar
 
 **Bildskärm[!DNL Experience Manager]**
 
-[!DNL Experience Manager] visar också en uppsättning statistik och åtgärder via JMX. Dessa kan hjälpa till att utvärdera systemets hälsa och identifiera potentiella problem innan de påverkar användarna. Mer information finns i [dokumentationen](/help/sites-administering/jmx-console.md) om [!DNL Experience Manager] JMX MBeans.
+[!DNL Experience Manager] visar också en uppsättning statistik och åtgärder via JMX. Dessa kan hjälpa till att utvärdera systemets hälsa och identifiera potentiella problem innan de påverkar användarna. Mer information finns i [dokumentationen](/help/sites-administering/jmx-console.md) för [!DNL Experience Manager] JMX MBeans.
 
-Här följer några baslinjetsparametrar som du kan övervaka för [!DNL Experience Manager]:
+Här är några baslinjeparametrar som du kan övervaka för [!DNL Experience Manager]:
 
 Replikeringsagenter
 
@@ -136,7 +136,7 @@ Sessionsräknare
 
 Hälsokontroller
 
-Hälsokontroller som är tillgängliga i [kontrollpanelen](/help/sites-administering/operations-dashboard.md#health-reports) för åtgärder har motsvarande JMX MBeans för övervakning. Du kan dock skriva anpassade hälsokontroller för att visa ytterligare systemstatistik.
+Hälsokontroller som är tillgängliga i [åtgärdspanelen](/help/sites-administering/operations-dashboard.md#health-reports) har motsvarande JMX MBeans för övervakning. Du kan dock skriva anpassade hälsokontroller för att visa ytterligare systemstatistik.
 
 Här följer några färdiga hälsokontroller som är bra att övervaka:
 
@@ -187,16 +187,16 @@ Här följer några färdiga hälsokontroller som är bra att övervaka:
    * Larm threshold: När statusen inte är OK
    * Larm-definition: Det finns fel i loggfilerna. Mer information om orsaken till problemet finns i loggattributet.
 
-## Vanliga problem och lösningar  {#common-issues-and-resolutions}
+## Vanliga problem och lösningar {#common-issues-and-resolutions}
 
-Om du råkar ut för problem i samband med övervakningen finns det några felsökningsuppgifter som du kan utföra för att lösa vanliga problem med [!DNL Experience Manager] distributioner:
+Om du råkar ut för problem i samband med övervakningen finns det några felsökningsuppgifter som du kan utföra för att lösa vanliga problem med [!DNL Experience Manager]-distributioner:
 
 * Om du använder tarMK ska du köra Tjärkomprimering ofta. Mer information finns i [Underhåll databasen](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository).
-* Kontrollera `OutOfMemoryError` loggar. Mer information finns i [Analysera minnesproblem](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html).
+* Kontrollera `OutOfMemoryError`-loggar. Mer information finns i [Analysera minnesproblem](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html).
 
 * Kontrollera loggarna om det finns referenser till oindexerade frågor, trädgenomgångar eller indexgenomgångar. Dessa indikerar oindexerade frågor eller otillräckligt indexerade frågor. Mer information om hur du optimerar fråga- och indexeringsprestanda finns i [Bästa tillvägagångssätt för frågor och indexering](/help/sites-deploying/best-practices-for-queries-and-indexing.md).
 * Använd arbetsflödeskonsolen för att verifiera att arbetsflödena fungerar som förväntat. Om det är möjligt kan du komprimera flera arbetsflöden till ett enda arbetsflöde.
 * Läs om live-övervakning och leta efter fler flaskhalsar eller konsumenter av specifika resurser.
-* Undersök ingångspunkterna från klientnätverket och ingångspunkterna till [!DNL Experience Manager] distributionsnätverket, inklusive dispatchern. Det är ofta flaskhalsar. Mer information finns i [Resursnätverkshänsyn](/help/assets/assets-network-considerations.md).
-* Storleksanpassa [!DNL Experience Manager] servern. Din [!DNL Experience Manager] driftsättning kan vara otillräckligt stor. Adobe kundtjänst kan hjälpa dig att identifiera om din server är för liten.
-* Undersök `access.log` och `error.log` filer för att se om det finns poster runt tiden när något gick fel. Leta efter mönster som kan indikera anpassade kodavvikelser. Lägg till dem i listan med händelser som du övervakar.
+* Undersök ingångspunkterna från klientnätverket och ingångspunkterna till [!DNL Experience Manager]-distributionsnätverket, inklusive dispatchern. Det är ofta flaskhalsar. Mer information finns i [Resursnätverkshänsyn](/help/assets/assets-network-considerations.md).
+* Storleksändra din [!DNL Experience Manager]-server. Din [!DNL Experience Manager]-distribution kan ha en otillräckligt stor storlek. Adobe kundtjänst kan hjälpa dig att identifiera om din server är för liten.
+* Undersök `access.log`- och `error.log`-filerna för att se om det finns poster runt tiden när något gick fel. Leta efter mönster som kan indikera anpassade kodavvikelser. Lägg till dem i listan med händelser som du övervakar.
