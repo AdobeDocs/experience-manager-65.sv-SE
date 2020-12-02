@@ -20,25 +20,25 @@ ht-degree: 0%
 
 # OWASP Top 10{#owasp-top}
 
-I [Open Web Application Security Project](https://www.owasp.org) (OWASP) finns en lista över vad de anser vara [de 10 främsta säkerhetsriskerna](https://www.owasp.org/index.php/OWASP_Top_Ten_Project)för webbprogram.
+[Open Web Application Security Project](https://www.owasp.org) (OWASP) innehåller en lista över vad de anser vara de 10 viktigaste säkerhetsriskerna för webbprogram](https://www.owasp.org/index.php/OWASP_Top_Ten_Project).[
 
 Dessa är listade nedan tillsammans med en förklaring av hur CRX hanterar dem.
 
 ## 1. Injektion {#injection}
 
-* SQL - Förebyggs av design: Standarddatabaskonfigurationen innehåller ingen eller kräver en traditionell databas. Alla data lagras i innehållsdatabasen. All åtkomst är begränsad till autentiserade användare och kan endast utföras via JCR API. SQL stöds endast för sökfrågor (SELECT). Dessutom har SQL stöd för värdebindning.
+* SQL - Förebyggs av design: Standarddatabaskonfigurationen innehåller ingen eller kräver en traditionell databas. Alla data lagras i innehållsdatabasen. All åtkomst är begränsad till autentiserade användare och kan endast utföras via JCR API. SQL stöds endast för sökfrågor (SELECT). Furthemore SQL har stöd för värdebindning.
 * LDAP - LDAP-injektion är inte möjlig eftersom autentiseringsmodulen filtrerar indata och utför användarimporten med bind-metoden.
 * OS - Ingen skalkörning utförs inifrån programmet.
 
 ## 2. XSS (Cross-Site Scripting) {#cross-site-scripting-xss}
 
-Det allmänna begränsningsarbetet är att koda allt utdata av användargenererat innehåll med hjälp av ett XSS-skyddsbibliotek på serversidan som baseras på [OWASP Encoder](https://www.owasp.org/index.php/OWASP_Java_Encoder_Project) och [AntiSamy](https://www.owasp.org/index.php/Category:OWASP_AntiSamy_Project).
+Det allmänna begränsningsarbetet är att koda alla utdata av användargenererat innehåll med hjälp av ett XSS-skyddsbibliotek på serversidan som baseras på [OWASP Encoder](https://www.owasp.org/index.php/OWASP_Java_Encoder_Project) och [AntiSamy](https://www.owasp.org/index.php/Category:OWASP_AntiSamy_Project).
 
 XSS är en topprioritering både under testning och utveckling, och eventuella problem som hittas löses (normalt) omedelbart.
 
 ## 3. Bruten autentisering och sessionshantering {#broken-authentication-and-session-management}
 
-AEM använder ljudtekniker och beprövade autentiseringstekniker som bygger på [Apache Jackrabbit](https://jackrabbit.apache.org/) och [Apache Sling](https://sling.apache.org/). Webbläsar-/HTTP-sessioner används inte i AEM.
+AEM använder ljudtekniker och beprövade autentiseringstekniker som är beroende av [Apache Jackrabbit](https://jackrabbit.apache.org/) och [Apache Sling](https://sling.apache.org/). Webbläsar-/HTTP-sessioner används inte i AEM.
 
 ## 4. Osäkra direkta objektreferenser {#insecure-direct-object-references}
 
@@ -46,15 +46,15 @@ All åtkomst till dataobjekt förmedlas av databasen och begränsas därför av 
 
 ## 5. CSRF (Cross-Site Request Forgery) {#cross-site-request-forgery-csrf}
 
-CSRF (Cross-Site Request Forgery) reduceras genom att en kryptografisk token automatiskt matas in i alla formulär och AJAX-begäranden och denna token verifieras på servern för varje POST.
+CSRF (Cross-Site Request Forgery) reduceras genom att en kryptografisk token automatiskt matas in i alla formulär och AJAX och denna token verifieras på servern för varje POST.
 
-Dessutom levereras AEM med ett hänvisningsrubrikbaserat filter, som kan konfigureras för att *endast* tillåta POST-begäranden från specifika värdar (definieras i en lista).
+Dessutom levereras AEM med ett hänvisningsrubrikbaserat filter, som kan konfigureras till *endast* tillåter förfrågningar från POSTER från specifika värdar (definieras i en lista).
 
 ## 6. Felkonfiguration av säkerhet {#security-misconfiguration}
 
-Det är omöjligt att garantera att all programvara alltid är korrekt konfigurerad. Vi strävar dock efter att ge så mycket vägledning som möjligt och göra konfigurationen så enkel som möjligt. Dessutom levereras AEM med [integrerade säkerhetshälsokontroller](/help/sites-administering/operations-dashboard.md) som hjälper dig att snabbt övervaka säkerhetskonfigurationen.
+Det är omöjligt att garantera att all programvara alltid är korrekt konfigurerad. Vi strävar dock efter att ge så mycket vägledning som möjligt och göra konfigurationen så enkel som möjligt. Dessutom levereras AEM med [integrerade säkerhetshälsokontroller](/help/sites-administering/operations-dashboard.md) som hjälper dig att övervaka säkerhetskonfigurationen snabbt.
 
-Mer information finns i [checklistan](/help/sites-administering/security-checklist.md) .
+Läs [säkerhetschecklistan](/help/sites-administering/security-checklist.md) om du vill ha mer information som ger dig steg-för-steg-anvisningar om hur du härdar.
 
 ## 7. Osäker kryptografisk lagring {#insecure-cryptographic-storage}
 
@@ -64,9 +64,9 @@ Känsliga data, som autentiseringsuppgifter från tredje part, lagras i kryptera
 
 ## 8. Det gick inte att begränsa URL-åtkomst {#failure-to-restrict-url-access}
 
-I databasen kan du ange [finstilta behörigheter (som anges av JCR)](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/16_Access_Control_Management.html) för en given användare eller grupp på en given sökväg, via åtkomstkontrollposter. Åtkomstbegränsningar används av databasen.
+Databasen tillåter inställning av [finstilt kornig behörighet (enligt JCR)](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/16_Access_Control_Management.html) för en given användare eller grupp på en given sökväg, via åtkomstkontrollposter. Åtkomstbegränsningar används av databasen.
 
-## 9. Otillräckligt skydd av transportlager {#insufficient-transport-layer-protection}
+## 9. Otillräckligt skydd för transportskikt {#insufficient-transport-layer-protection}
 
 Hanteras av serverkonfigurationen (använd t.ex. endast HTTPS).
 
