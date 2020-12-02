@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Komponenten Utöka kommentarer  {#extend-comments-component}
+# Utöka kommentarkomponent {#extend-comments-component}
 
 Avsikten med att [utöka](client-customize.md#extensions) en standardkomponent är att ändra en komponents utseende eller beteende för specifika användningsområden.
 
@@ -26,7 +26,7 @@ Sökvägen till komponenten är unik och refererar standardkomponenten som en ö
 
 >[!NOTE]
 >
->Det går inte att utöka en [överlagrad](client-customize.md#overlays) komponent.
+>Det går inte att utöka en [överlagrad](client-customize.md#overlays)-komponent.
 
 ## Exempel {#example}
 
@@ -34,7 +34,7 @@ Anta att rubriken för kommentarkomponenten måste visas med ett alternativt uts
 
 Om du vill implementera den här lösningen skapar du en ny komponent som utökar (åsidosätter) den befintliga och ändrar Handlebars-skriptet. Det område på webbplatsen som använder de nya kommentarerna kan använda det utökade området, medan de webbplatser som använder standardutseendet inte påverkas.
 
-Kommentarskomponenten är i själva verket en av två komponenter som utgör kommentarssystemet. Det finns alltså två komponenter att utöka: *kommentarer* och *kommentarer*. Skriptet som ska redigeras finns i *kommentarkomponentens* fil, medan den överordnade `header.hbs` kommentarkomponenten ** (kommentarsystemet) är det som en författare faktiskt lägger till på sidan.
+Kommentarskomponenten är i själva verket en av två komponenter som utgör kommentarssystemet. Det finns alltså två komponenter att utöka: *kommentarer* och *kommentar*. Skriptet som ska redigeras finns i *kommentaren*-komponentens `header.hbs`-fil, medan den överordnade *kommentarkomponenten* (kommentarsystemet) är det som en författare lägger till på sidan.
 
 Om du vill lägga in kommentarer måste du
 
