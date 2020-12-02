@@ -1,8 +1,8 @@
 ---
 title: Grundläggande hantering
 seo-title: Grundläggande hantering
-description: En översikt över grundläggande hantering när du använder AEM-redigeringsmiljön. Den använder platskonsolen som grund.
-seo-description: En översikt över grundläggande hantering när du använder AEM-redigeringsmiljön. Den använder platskonsolen som grund.
+description: En översikt över grundläggande hantering när du använder AEM redigeringsmiljö. Den använder platskonsolen som grund.
+seo-description: En översikt över grundläggande hantering när du använder AEM redigeringsmiljö. Den använder platskonsolen som grund.
 uuid: ab488d7c-7b7f-4a23-a80c-99d37ac84246
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 9737ead9-e324-43c9-9780-7abd292f4e5b
 translation-type: tm+mt
 source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
+workflow-type: tm+mt
+source-wordcount: '1215'
+ht-degree: 2%
 
 ---
 
@@ -19,11 +22,12 @@ source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
 
 >[!NOTE]
 >
->* Den här sidan är utformad för att ge en översikt över grundläggande hantering när du använder AEM-redigeringsmiljön. Den använder **platskonsolen** som grund.
+>* Den här sidan är avsedd att ge en översikt över grundläggande hantering när du använder AEM redigeringsmiljö. Konsolen **Platser** används som bas.
    >
    >
 * Vissa funktioner är inte tillgängliga i alla konsoler och/eller så är ytterligare funktioner tillgängliga i vissa konsoler. Specifik information om de enskilda konsolerna och deras tillhörande funktioner beskrivs mer ingående på andra sidor.
->* Kortkommandon är tillgängliga i hela AEM. Särskilt när du [använder konsoler](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md) och [redigerar sidor](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md).
+>* Kortkommandon är tillgängliga i hela AEM. Speciellt när [du använder konsoler](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md) och [redigerar sidor](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md).
+
 >
 
 
@@ -48,35 +52,35 @@ Huvudkonsolerna är:
   </tr>
   <tr>
    <td><strong>Välkommen</strong></td>
-   <td>Ger en översikt och direkt åtkomst (via länkar) till huvudfunktionerna i AEM.</td>
+   <td>Ger en översikt och direkt åtkomst (via länkar) till AEM huvudfunktioner.</td>
   </tr>
   <tr>
    <td><strong>Digital Assets</strong><br /> </td>
-   <td>Med dessa konsoler kan du importera och <a href="/help/sites-classic-ui-authoring/classicui-assets.md">hantera digitala resurser</a> som bilder, videor, dokument och ljudfiler. Dessa resurser kan sedan användas av alla webbplatser som körs på samma AEM-instans. </td>
+   <td>Med dessa konsoler kan du importera och <a href="/help/sites-classic-ui-authoring/classicui-assets.md">hantera digitala resurser</a>, till exempel bilder, videor, dokument och ljudfiler. Dessa resurser kan sedan användas av alla webbplatser som körs på samma AEM. </td>
   </tr>
   <tr>
-   <td><strong>Startar</strong></td>
-   <td>Detta hjälper dig att hantera dina <a href="/help/sites-classic-ui-authoring/classic-launches.md">starter</a>; Med dessa kan du utveckla innehåll för en framtida release av en eller flera aktiverade webbsidor.<br /> <i>Obs! I det beröringskänsliga användargränssnittet finns mycket av samma funktioner i webbplatskonsolen tillsammans med referenslisten.</i> <i>Om det behövs kan konsolen nås från verktygskonsolen. välj Åtgärder och startar sedan.</i></td>
+   <td><strong>Launches</strong></td>
+   <td>Detta hjälper dig att hantera dina <a href="/help/sites-classic-ui-authoring/classic-launches.md">starter</a>; Med dessa kan du utveckla innehåll för en framtida release av en eller flera aktiverade webbsidor.<br /> <i>Obs! I det beröringskänsliga användargränssnittet finns mycket av samma funktioner i webbplatskonsolen tillsammans med referenslisten.</i> <i>Om det behövs är konsolen tillgänglig från verktygskonsolen. välj Åtgärder och startar sedan.</i></td>
   </tr>
   <tr>
    <td><strong>Inkorg </strong></td>
    <td>I många fall är ett antal personer inblandade i ett arbetsflödes underuppgifter och varje person måste slutföra sitt steg innan han eller hon kan lämna jobbet till nästa person. I Inkorgen kan du se meddelanden som rör sådana uppgifter. Se <a href="/help/sites-administering/workflows.md">Arbeta med arbetsflöden</a>. <br /> </td>
   </tr>
   <tr>
-   <td><strong>Taggning</strong></td>
+   <td><strong>Taggar</strong></td>
    <td>Med taggningskonsolerna kan du administrera taggar. Taggar är korta namn eller fraser som du kan använda för att klassificera och kommentera innehållsdelar, vilket gör det enklare att hitta och ordna dem. Mer information finns i <a href="/help/sites-classic-ui-authoring/classic-feature-tags.md">Använda och hantera taggar</a>.</td>
   </tr>
   <tr>
    <td><strong>Verktyg</strong></td>
-   <td>Med <a href="/help/sites-administering/tools-consoles.md">verktygskonsolerna</a> får du tillgång till ett antal specialiserade verktyg och konsoler som du kan använda för att administrera webbplatser, digitala resurser och andra aspekter av innehållsdatabasen.</td>
+   <td><a href="/help/sites-administering/tools-consoles.md">Verktygskonsolerna</a> ger åtkomst till ett antal specialiserade verktyg och konsoler som hjälper dig att administrera dina webbplatser, digitala resurser och andra aspekter av innehållsdatabasen.</td>
   </tr>
   <tr>
    <td><strong>Användare</strong></td>
-   <td>Med dessa konsoler kan du hantera åtkomsträttigheter för användare och grupper. Mer information finns i <a href="/help/sites-administering/security.md">Användaradministration och -säkerhet</a>.<br /> </td>
+   <td>Med dessa konsoler kan du hantera åtkomsträttigheter för användare och grupper. Mer information finns i <a href="/help/sites-administering/security.md">Användaradministration och -säkerhet</a>.<br />. </td>
   </tr>
   <tr>
    <td><strong>Webbplatser</strong></td>
-   <td>Med konsolerna Webbplatser/Webbplatser kan du <a href="/help/sites-classic-ui-authoring/classic-page-author.md">skapa, visa och hantera webbplatser</a> som körs på din AEM-instans. Med dessa konsoler kan du skapa, kopiera, flytta och ta bort webbsidor, starta arbetsflöden och aktivera (publicera) sidor. Du kan också öppna en sida för redigering.<br /> </td>
+   <td>Med konsolerna Platser/Webbplatser kan du <a href="/help/sites-classic-ui-authoring/classic-page-author.md">skapa, visa och hantera webbplatser</a> som körs på din AEM. Med dessa konsoler kan du skapa, kopiera, flytta och ta bort webbsidor, starta arbetsflöden och aktivera (publicera) sidor. Du kan även öppna en sida för redigering.<br /> </td>
   </tr>
   <tr>
    <td><strong>Arbetsflöden</strong></td>
@@ -91,44 +95,44 @@ Konsolen **Webbplatser** innehåller två rutor där du kan navigera och hantera
 
    Här visas trädstrukturen för dina webbplatser och sidorna på dessa webbplatser.
 
-   Här visas även information om andra aspekter av AEM, inklusive projekt, ritningar och resurser.
+   Här visas även information om andra aspekter eller AEM, bland annat projekt, ritningar och resurser.
 
 * Höger ruta
 
    Här visas sidorna (på den plats som är markerad i den vänstra rutan) och de kan användas för att utföra åtgärder.
 
-Därifrån kan du [hantera sidorna](/help/sites-authoring/managing-pages.md) med hjälp av verktygsfältet, en snabbmeny eller genom att öppna en sida för ytterligare åtgärder.
+Därifrån kan du [hantera dina sidor](/help/sites-authoring/managing-pages.md) antingen med verktygsfältet, en snabbmeny eller genom att öppna en sida för ytterligare åtgärder.
 
 >[!NOTE]
 >
->Den grundläggande hanteringen är densamma i alla konsoler. Det här avsnittet fokuserar på **webbplatskonsolen** eftersom det är den primära konsolen som används vid utvecklingen.
+>Den grundläggande hanteringen är densamma i alla konsoler. Det här avsnittet är inriktat på konsolen **Webbplatser** eftersom det är den primära konsolen som används vid utvecklingen.
 
 ![chlimage_1-9](assets/chlimage_1-9a.png)
 
 ## Få hjälp {#accessing-help}
 
-På olika konsoler (t.ex. webbplatser) finns det även en **hjälpknapp** , som öppnar antingen paketresurs eller dokumentationswebbplatsen.
+På olika konsoler (t.ex. webbplatser) finns även **Hjälp**-knappen tillgänglig, som antingen öppnar Paketresurs eller dokumentationswebbplatsen.
 
 ![chlimage_1-10](assets/chlimage_1-10a.png)
 
-När du redigerar en sida har [sidosparken även en knapp för att komma åt hjälpen](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#accessing-help).
+När du redigerar en sida har sidosparken också en knapp för att komma åt hjälp[.](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#accessing-help)
 
 ## Navigera med webbplatskonsolen {#navigating-with-the-websites-console}
 
-I **webbplatskonsolen** visas sidorna i en trädstruktur (vänster ruta). För att underlätta navigeringen kan delar av trädstrukturen expanderas (+) eller komprimeras (-) efter behov:
+Konsolen **Webbplatser** visar sidorna med innehåll i en trädstruktur (vänster ruta). För att underlätta navigeringen kan delar av trädstrukturen expanderas (+) eller komprimeras (-) efter behov:
 
 * Ett enda klick på sidnamnet (i den vänstra rutan) gör att:
 
    * Lista de underordnade sidorna i den högra rutan
    * Utvidga även strukturen i den vänstra rutan.
 
-      Av prestandaskäl är den här åtgärden beroende av antalet underordnade noder. Med en standardinstallation fungerar den här utbyggnadsmetoden när det finns `30` eller färre underordnade noder.
+      Av prestandaskäl är den här åtgärden beroende av antalet underordnade noder. Med en standardinstallation fungerar den här utbyggnadsmetoden när det finns `30` eller mindre underordnade noder.
 
 * Om du dubbelklickar på sidnamnet (den vänstra rutan) expanderas också trädet, även om den här effekten inte är så självklar när sidan öppnas samtidigt.
 
 >[!NOTE]
 >
->Det här standardvärdet ( `30`) kan ändras per konsol i dina programspecifika konfigurationer av webbplatsadmin-widgeten:
+>Det här standardvärdet ( `30`) kan ändras per konsol i dina programspecifika konfigurationer för webbplatsadmin-widgeten:
 >
 >På noden siteAdmin:
 >
@@ -143,11 +147,11 @@ I **webbplatskonsolen** visas sidorna i en trädstruktur (vänster ruta). För a
 >in:
 >`/apps/cq/ui/widgets/themes/default/widgets/wcm/SiteAdmin.js`
 >
->Mer information finns i [SiteAdmin i CQ Widget API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.SiteAdmin) .
+>Mer information finns i [SiteAdmin i CQ Widget API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.SiteAdmin).
 
 ## Sidinformation på webbplatskonsolen {#page-information-on-the-websites-console}
 
-Den högra rutan i **webbplatskonsolen** innehåller en listvy med information om sidor:
+Den högra rutan i konsolen **Webbplatser** innehåller en listvy med information om sidor:
 
 ![page-info](assets/page-info.png)
 
@@ -169,7 +173,7 @@ Följande finns tillgängliga: en delmängd av dessa fält visas som standard:
   </tr>
   <tr>
    <td>Namn</td>
-   <td>Namnet AEM hänvisar till sidan</td>
+   <td>Namnet AEM refererar till sidan</td>
   </tr>
   <tr>
    <td>Publicerad</td>
@@ -212,9 +216,9 @@ Följande finns tillgängliga: en delmängd av dessa fält visas som standard:
 
 >[!NOTE]
 >
->Om du vill markera kolumnerna som visas håller du musen över en kolumnrubrik. En nedrullningsbar meny visas där du kan använda alternativet **Kolumner** .
+>Om du vill markera kolumnerna som visas håller du musen över en kolumnrubrik. En nedrullningsbar meny visas. Här kan du använda alternativet **Kolumner**.
 
-Färgerna bredvid sidorna i kolumnerna **Publicerad** och **Ändrad** anger publiceringsstatus:
+Färgerna bredvid sidorna i kolumnerna **Publicerad** och **Ändrad** visar publiceringsstatus:
 
 | **Kolumn** | **Färg** | **Beskrivning** |
 |---|---|---|
