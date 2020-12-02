@@ -11,21 +11,24 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dc53a6d0-317a-4abd-990c-455e13f8b824
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '831'
+ht-degree: 0%
 
 ---
 
 
 # Importera och hantera program{#import-and-manage-applications}
 
-I AEM-formulär är ett *program* en behållare för att lagra resurser som krävs för att implementera en AEM-formulärslösning. Exempel på resurser är formulärdesigner, formulärfragment, bilder, processer, DDX-filer, formulärguider, HTML-sidor och SWF-filer. Under utvecklingsfasen av ett projekt kan Workbench-användare distribuera program direkt från programvyn i Workbench. När programmen har distribuerats visas de i administrationskonsolen på fliken Program på sidan Programhantering.
+I AEM är ett *program* en behållare för att lagra resurser som krävs för att implementera en lösning för AEM formulär. Exempel på resurser är formulärdesigner, formulärfragment, bilder, processer, DDX-filer, formulärguider, HTML-sidor och SWF-filer. Under utvecklingsfasen av ett projekt kan Workbench-användare distribuera program direkt från programvyn i Workbench. När programmen har distribuerats visas de i administrationskonsolen på fliken Program på sidan Programhantering.
 
-När ett program är klart att distribueras till en produktionsserver paketerar Workbench-användaren programmet i en *AEM-formulärprogramfil* (.lca). Därefter använder en administratör administrationskonsolen för att importera och distribuera programfilen på fliken Program på sidan Programhantering.
+När ett program är klart att distribueras till en produktionsserver paketerar Workbench-användaren programmet i en *AEM formulärprogramfil* (.lca). Därefter använder en administratör administrationskonsolen för att importera och distribuera programfilen på fliken Program på sidan Programhantering.
 
 Du kan också använda fliken Kurvor på sidan Programhantering för att importera LCA-konton som har skapats med workbench 8.x.
 
 >[!NOTE]
 >
->Det finns ett känt problem med att LCA-filer från en framtida version inte nödvändigtvis är bakåtkompatibla. Även om det kan vara möjligt att visa och importera LCA-filer från en framtida version av AEM-formulär (till exempel en förhandsversion), stöds inte detta och kan leda till avvikande beteenden.
+>Det finns ett känt problem med att LCA-filer från en framtida version inte nödvändigtvis är bakåtkompatibla. Även om det kan vara möjligt att visa och importera LCA-filer från en framtida version av AEM formulär (till exempel en förhandsgranskningsversion) stöds inte detta, vilket kan leda till avvikande beteenden.
 
 Använd fliken Program för att importera och hantera program som har skapats i Workbench. Programadministratörer kan också exportera runtime-konfigurationen för ett program. Genom att exportera runtime-konfigurationen elimineras behovet av att manuellt konfigurera om inställningarna i produktionsmiljön innan distribuerade program startas. Konfigurationsfilen för miljön innehåller:
 
@@ -53,7 +56,7 @@ Använd fliken Program för att importera och hantera program som har skapats i 
 
    Egenskaperna för den valda CRX-noden visas på fliken Egenskaper till höger.
 
-   Egenskapen **syncState** anger status för synkronisering av data mellan AEM-formulärservern och CRX-databasen. Så snart importprocessen börjar är det här läget inställt på 0 (noll). Det här läget anger att data inte är synkroniserade just nu. När data synkroniseras ställs läget in på 1.
+   Egenskapen **syncState** anger status för synkronisering av data mellan AEM formulärserver och CRX-databasen. Så snart importprocessen börjar är det här läget inställt på 0 (noll). Det här läget anger att data inte är synkroniserade just nu. När data synkroniseras ställs läget in på 1.
 
 ## Distribuera ett program {#deploy-an-application}
 
@@ -97,7 +100,7 @@ Du kan exportera konfigurationsinformation vid körning för distribuerade progr
 1. Klicka på programmets namn.
 1. Klicka på Exportera runtime-konfiguration och spara konfigurationsfilen (XML) som skapas.
 
-## Skriptbaserad driftsättning av AEM-formulärapplikationer {#scripted-deployment-of-aem-forms-applications}
+## Skriptbaserad distribution AEM formulärprogram {#scripted-deployment-of-aem-forms-applications}
 
 Du kan också använda ett skriptbaserat distributionsverktyg för att distribuera programfiler, inklusive en settings.xml-fil som anger följande inställningar:
 
@@ -111,5 +114,5 @@ Med skriptbaserad driftsättning slipper du manuellt konfigurera om inställning
 1. Navigera från en kommandotolk till *[aem-forms root]*/sdk/misc/Foundation/ArchiveManagement.
 1. Läs filen ReadMe.txt om du vill ha mer detaljerade anvisningar.
 1. Ändra filen scriptedDeploy.bat och sample-files/sample.xml manuellt enligt beskrivningen i filen readme.txt.
-1. Kör filen scriptedDeploy.bat. Den här åtgärden distribuerar AEM-formulärarkivfilen med åsidosättningsinställningarna.
+1. Kör filen scriptedDeploy.bat. Den här åtgärden distribuerar AEM formulärarkivfil med åsidosättningsinställningarna.
 
