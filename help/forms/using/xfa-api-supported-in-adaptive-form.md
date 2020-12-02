@@ -31,7 +31,7 @@ När ett anpassat formulär skapas baserat på en XDP-fil fylls egenskaperna, h�
 
 I den här artikeln listas XFA-händelser, egenskaper och valideringar som stöds i anpassningsbara formulär och hur du åsidosätter dem i anpassningsbara formulär.
 
-## XFA-element som stöds och deras mappning i adaptiva formulär {#supported-xfa-elements-and-their-mapping-in-adaptive-forms-br}
+## XFA-element som stöds och deras mappning i adaptiva former {#supported-xfa-elements-and-their-mapping-in-adaptive-forms-br}
 
 ### fält {#fields}
 
@@ -141,7 +141,7 @@ Följande tabell visar hur olika XFA-skript som definieras i XDP-filerna fungera
    <td><p>Mappad till egenskapen short description i adaptiv form.</p> </td>
   </tr>
   <tr>
-   <td><p>bildtext<em> (alla fälttyper)</em></p> </td>
+   <td><p>caption<em> (alla fälttyper)</em></p> </td>
    <td><p>Mappad till egenskapen Title i adaptiv form.</p> </td>
   </tr>
   <tr>
@@ -161,7 +161,7 @@ Följande tabell visar hur olika XFA-skript som definieras i XDP-filerna fungera
    <td><p>Mappas till egenskapen Maximum för tillåtna tecken i adaptiv form.</p> </td>
   </tr>
   <tr>
-   <td><p>flera rader<em> (textfält)</em></p> </td>
+   <td><p>multiline<em> (textfält)</em></p> </td>
    <td><p>Mappad till egenskapen Tillåt flera rader i adaptiv form.</p> </td>
   </tr>
   <tr>
@@ -203,7 +203,7 @@ Följande tabell visar hur olika XFA-skript som definieras i XDP-filen fungerar 
   </tr>
   <tr>
    <td><p>validationState </p> </td>
-   <td><p>Det här skriptet körs under körning och kan inte åsidosättas i adaptiv form.<br /> </p> </td>
+   <td><p>Skriptet körs under körning och kan inte åsidosättas i anpassningsbar form.<br /> </p> </td>
   </tr>
   <tr>
    <td><p>exit </p> </td>
