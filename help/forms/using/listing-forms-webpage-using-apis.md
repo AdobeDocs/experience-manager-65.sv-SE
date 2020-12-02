@@ -21,7 +21,7 @@ ht-degree: 1%
 
 AEM Forms tillhandahåller ett REST-baserat söknings-API som webbutvecklare kan använda för att fråga och hämta en uppsättning formulär som uppfyller sökvillkoren. Du kan använda API:er för att söka efter formulär baserat på olika filter. Svarsobjektet innehåller formulärattribut, egenskaper och återge formulärens slutpunkter.
 
-Om du vill söka efter formulär med REST API skickar du en GET-begäran till servern `https://'[server]:[port]'/libs/fd/fm/content/manage.json` med frågeparametrar som beskrivs nedan.
+Om du vill söka efter formulär med REST API skickar du en GET-förfrågan till servern på `https://'[server]:[port]'/libs/fd/fm/content/manage.json` med frågeparametrar som beskrivs nedan.
 
 ## Frågeparametrar {#query-parameters}
 
@@ -33,9 +33,9 @@ Om du vill söka efter formulär med REST API skickar du en GET-begäran till se
   </tr>
   <tr>
    <td>func<br /> </td>
-   <td><p>Anger den funktion som ska anropas. Om du vill söka efter formulär anger du värdet för <code>func </code>attributet till <code>searchForms</code>.</p> <p>Till exempel, <code class="code">
+   <td><p>Anger den funktion som ska anropas. Om du vill söka efter formulär anger du <code>func </code>attributet till <code>searchForms</code>.</p> <p>Till exempel, <code class="code">
        URLParameterBuilder entityBuilder=new URLParameterBuilder ();
-       entityBuilder.add("func", "searchForms");</code></p> <p><strong>Obs!</strong> <em>Den här parametern är obligatorisk.</em><br /> </p> </td>
+       entityBuilder.add("func", "searchForms");</code></p> <p><strong>Obs! </strong> <em>Den här parametern är obligatorisk.</em><br /> </p> </td>
   </tr>
   <tr>
    <td>appPath<br /> </td>
@@ -94,11 +94,11 @@ Om du vill söka efter formulär med REST API skickar du en GET-begäran till se
        <li>ENDSWITH - A slutar med B om B är slutdelen av A</li>
        <li>LIKE - Implementerar operatorn LIKE</li>
        <li>AND - Kombinera flera programsatser</li>
-      </ul> <p><strong>Obs!</strong> <em>GT-, LT-, GTEQ- och LTEQ-operatorer kan användas för egenskaper av linjär typ som LONG, DUBLE och DATE.</em></p> </li>
+      </ul> <p><strong>Obs!</strong> <em>GT-, LT-, GTEQ- och LTEQ-operatorer kan användas för egenskaper av linjär typ, till exempel LONG, DOUBLE och DATE.</em></p> </li>
     </ul> </td>
   </tr>
   <tr>
-   <td>orderfunktioner<br /> </td>
+   <td>beställningar<br /> </td>
    <td><p>Anger sökresultatens ordningsvillkor. Kriterierna definieras i JSON-formatet. Du kan sortera sökresultat i mer än ett fält. Resultatet sorteras i den ordning som fälten visas i frågan.</p> <p>Till exempel,</p> <p>Om du vill hämta frågeresultat ordnade efter title-egenskap i stigande ordning lägger du till följande parameter: </p> <p><code class="code">JSONArray orderingsArray=new JSONArray();
        JSONObject orderings=new JSONObject();
        orderings.put("name", "title");
@@ -109,14 +109,14 @@ Om du vill söka efter formulär med REST API skickar du en GET-begäran till se
      <li><strong>namn</strong>: Anger namnet på den egenskap som ska användas för att ordna sökresultaten.</li>
      <li><strong>villkor</strong>: Anger resultatordningen. Attributet order accepterar följande värden:
       <ul>
-       <li>ASC - Använd ASC för att ordna resultatet i stigande ordning.<br /> </li>
+       <li>ASC - Använd ASC för att ordna resultat i stigande ordning.<br /> </li>
        <li>DES - Använd DES för att ordna resultatet i fallande ordning.</li>
       </ul> </li>
     </ul> </td>
   </tr>
   <tr>
    <td>includeXdp</td>
-   <td>Anger om det binära innehållet ska hämtas eller inte. Attributet <code>includeXdp</code> gäller för tillgångar av typen <code>FORM</code>, <code>PDFFORM</code>och <code>PRINTFORM</code>.</td>
+   <td>Anger om det binära innehållet ska hämtas eller inte. Attributet <code>includeXdp</code> gäller för resurser av typen <code>FORM</code>, <code>PDFFORM</code> och <code>PRINTFORM</code>.</td>
   </tr>
   <tr>
    <td>assetType</td>
