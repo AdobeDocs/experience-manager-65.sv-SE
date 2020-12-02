@@ -1,8 +1,8 @@
 ---
 title: Anpassade nodtyper
 seo-title: Anpassade nodtyper
-description: AEM baseras på Sling och använder en JCR-databas med de nodtyper som erbjuds av båda, men AEM erbjuder även en rad anpassade nodtyper
-seo-description: AEM baseras på Sling och använder en JCR-databas med de nodtyper som erbjuds av båda, men AEM erbjuder även en rad anpassade nodtyper
+description: AEM baseras på Sling och använder en JCR-databas med nodtyper som erbjuds av båda, men AEM innehåller även en rad anpassade nodtyper
+seo-description: AEM baseras på Sling och använder en JCR-databas med nodtyper som erbjuds av båda, men AEM innehåller även en rad anpassade nodtyper
 uuid: f2022504-e433-4b42-9cc1-eef41086483a
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -80,7 +80,7 @@ Definierar nodtypen för en kommentarnod.
 
 **Beskrivning**
 
-Definierar nodtypen för en `commentattachment` nod
+Definierar nodtypen för en `commentattachment`-nod
 
 **Definition**
 
@@ -120,7 +120,7 @@ En blandning som definierar en geografisk plats i decimalgrader (DD)
 * `- latitude (double)`
 * `- longitude (double)`
 
-### cq:bakåtspårning {#cq-trackback}
+### cq:Trackback {#cq-trackback}
 
 **Beskrivning**
 
@@ -130,9 +130,9 @@ Definierar nodtypen för en bakåtspårningsnod.
 
 * `[cq:Trackback] > mix:title, mix:created, mix:language, nt:unstructured`
 
-## Core {#core}
+## Kärna {#core}
 
-### cq:Page {#cq-page}
+### cq:Sida {#cq-page}
 
 **Beskrivning**
 
@@ -166,7 +166,7 @@ Definierar standardnoden för sidinnehåll, med de minimala egenskaper som anvä
 * `@prop jcr:description` - Beskrivning av den här sidan.
 * `@prop cq:template` - Sökväg till mallen som användes för att skapa sidan.
 * `@prop cq:allowedTemplates` - Lista med reguljära uttryck som används för att bestämma sökvägen/sökvägarna till den tillåtna mallen.
-* `@prop pageTitle` - Rubrik visas vanligtvis i `<title>` -taggen.
+* `@prop pageTitle` - Rubrik visas vanligtvis i  `<title>` taggen.
 * `@prop navTitle` - Rubrik som vanligtvis används vid navigering.
 * `@prop hideInNav` - Anger om sidan ska döljas i navigeringen.
 * `@prop onTime` - Tid när den här sidan blir giltig.
@@ -237,18 +237,18 @@ Definierar en CQ-komponent.
 * `@prop dialogPath` - Sökväg till primär dialogruta (alternativ till dialogruta).
 * `@node design_dialog` - Design.
 * `@prop cq:cellName` - Namn på designcellen.
-* `@prop cq:isContainer` - Anger om detta är en behållarkomponent. Detta tvingar cellnamnen för de underordnade komponenterna att användas i stället för sökvägsnamn. Till exempel `parsys` är det en behållarkomponent. Om det här värdet inte är definierat görs kontrollen utifrån om det finns ett `cq:childEditConfig`.
-* `@prop cq:noDecoration` - Om true ritas inga dekorationstaggar `div` när den här komponenten inkluderas.
+* `@prop cq:isContainer` - Anger om detta är en behållarkomponent. Detta tvingar cellnamnen för de underordnade komponenterna att användas i stället för sökvägsnamn. `parsys` är till exempel en behållarkomponent. Om det här värdet inte är definierat görs kontrollen utifrån om det finns en `cq:childEditConfig`.
+* `@prop cq:noDecoration` - Om true ritas inga  `div` dekorationstaggar när den här komponenten inkluderas.
 * `@node cq:editConfig` - Den konfiguration som definierar parametrarna för redigeringsfältet.
 * `@node cq:childEditConfig` - Den redigeringskonfiguration som ärvs av underordnade komponenter.
-* `@node cq:htmlTag` - Definierar ytterligare taggattribut som läggs till i den omgivande `div` taggen när komponenten inkluderas.
+* `@node cq:htmlTag` - Definierar ytterligare taggattribut som läggs till i den omgivande  `div` taggen när komponenten inkluderas.
 * `@node icon.png`- En fil som innehåller en karakteristisk ikon.
 * `@node thumbnail.png` - En fil som innehåller en karakteristisk miniatyrbild.
 * `@prop allowedParents` - Mönster för reguljära uttryck för att bestämma sökvägen/sökvägarna för komponenter som tillåts som överordnade komponenter.
 * `@prop allowedChildren` - Mönster för reguljära uttryck för att bestämma sökvägen/sökvägarna för komponenter som tillåts som underordnade komponenter.
 * `@node virtual` - Innehåller undernoder som återspeglar virtuella komponenter som används för att dra och släppa komponenter.
 * `@prop componentGroup` - Namnet på komponentgruppen som används för att dra och släppa komponenten.
-* `@node cq:infoProviders` - Innehåller undernoder, som alla har en egenskap `className` som refererar till en `PageInfoProvider`.
+* `@node cq:infoProviders` - Innehåller undernoder, som alla har en egenskap  `className` som refererar till en  `PageInfoProvider`.
 
 **Definition**
 
@@ -302,7 +302,7 @@ Definierar konfigurationen för&quot;redigeringsfältet&quot;.
 * `@prop cq:actions`- Lista över åtgärder (redigeringsfältsknappar eller menyalternativ).
 * `@node cq:actionConfigs` - Widgetkonfigurationer för redigeringsfält eller menyalternativ.
 * `@prop cq:emptyText` - Text som ska visas om det inte finns något visuellt innehåll.
-* `@node cq:dropTargets` - Samling med `{@link cq:DropTargetConfig}` noder.
+* `@node cq:dropTargets` - Samling med  `{@link cq:DropTargetConfig}` noder.
 
 **Definition**
 
@@ -321,7 +321,7 @@ Definierar konfigurationen för&quot;redigeringsfältet&quot;.
 
 Konfigurerar ett släppmål för en komponent. Namnet på den här noden används som ett ID för dra och släpp.
 
-* `@prop accept` - Förteckning över MIME-typer som accepteras av detta släppmål. t.ex. `["image/*"]`
+* `@prop accept` - Förteckning över MIME-typer som accepteras av detta släppmål. t.ex.  `["image/*"]`
 * `@prop groups` - Lista med dra och släpp-grupper som accepterar en källa.
 * `@prop propertyName` - Namnet på egenskapen som används för att lagra referensen.
 
@@ -418,7 +418,7 @@ DAM-resurs.
 `+ jcr:content (dam:AssetContent) = dam:AssetContent copy primary`
 `+ * (nt:base) = nt:base version`
 
-### dam:Miniatyr {#dam-thumbnail}
+### dam:Thumbnail {#dam-thumbnail}
 
 **Beskrivning**
 
@@ -449,7 +449,7 @@ Behållarlista.
 
 **Beskrivning**
 
-`cq:attributes` är nodtypen för ContentBus-versionstaggarna. Den här noden har bara en serie egenskaper; av vilka tre är fördefinierade &quot;created&quot;, &quot;csd&quot; och &quot;timestamp&quot;.
+`cq:attributes` är nodtypen för ContentBus versionstaggar. Den här noden har bara en serie egenskaper; av vilka tre är fördefinierade &quot;created&quot;, &quot;csd&quot; och &quot;timestamp&quot;.
 
 * `@prop created (long) mandatory copy` - Tidsstämpel för när versionsinformationen skapades, vanligtvis tiden för incheckning av den tidigare versionen eller tiden då sidan skapades.
 * `@prop csd (string) mandatory copy` - csd-standardattribut, kopia av egenskapen cq:csd för sidnoden
@@ -468,11 +468,11 @@ Behållarlista.
 
 **Beskrivning**
 
-Nodtypen `cq:contentPage` innehåller egenskaps- och undernoddefinitioner för ContentBus-innehållssidor. Endast när den här blandningstypen läggs till i en nod av typen `cq:page`blir en nod en ContentBus-innehållssida.
+Nodtypen `cq:contentPage` innehåller egenskaps- och undernoddefinitioner för innehållssidor i ContentBus. Endast när den här blandningstypen läggs till i en nod av typen `cq:page` blir en nod en innehållssida för ContentBus.
 
 Objekten i en `cq:Cq4ContentPage` är:
 
-* `@prop cq:csd` - ContentBus-värdepapperscentralen på sidan.
+* `@prop cq:csd` - Sidans ContentBus värdepapperscentral.
 * `@node cq:content` - Sidans innehåll. Den underordnade noden finns inte om sidnoden är i läget &quot;Befintlig utan innehåll&quot; eller &quot;Borttagen&quot;.
 * `@node cq:attributes` - Listan med sidattribut, som tidigare kallades versionstaggar. Den här noden är obligatorisk för typen cq:contentPage. Attributnoden får en ny version när sidan får en ny version.
 
@@ -493,7 +493,7 @@ Avsökningskonfiguration.
 * `@prop source (String) mandatory` - Datakällans URI, detta är obligatoriskt och får inte vara tomt
 * `@prop target (String)` - Målplatsen där data som hämtats från datakällan lagras. Detta är valfritt och standard är cq:PollConfig-noden.
 * `@prop interval (Long)` - Intervallet i sekunder som nya eller uppdaterade data från datakällan ska avsökas. Detta är valfritt och standardvärdet är 30 minuter (1 800 sekunder).
-* [Skapar anpassade dataimporttjänster för Adobe Experience Manager](https://helpx.adobe.com/experience-manager/using/polling.html)
+* [Skapa anpassade dataportortjänster för Adobe Experience Manager](https://helpx.adobe.com/experience-manager/using/polling.html)
 
 **Definition**
 
@@ -566,7 +566,7 @@ Definierar en LiveRelationship-blandning. En primär källnod (kontrollnod) och 
 
 **Beskrivning**
 
-Definierar en LiveSync-blandning. Om en nod ingår i en LiveRelationship med en primär källnod (kontrollnod) och en live-kopia (kontrollerad)-nod, markeras den som LiveSync.
+Definierar en LiveSync-blandning. Om en nod ingår i en LiveRelationship med en primär källnod (kontrollnod) och en live-kopia (kontrollerad)-nod markeras den som LiveSync.
 
 * `@prop cq:master` - Sökväg till den primära källan (kontroll) för LiveRelationship.
 * `@prop cq:isDeep` - Definierar om relationen är tillgänglig för underordnade.
@@ -618,7 +618,7 @@ Konfiguration av Live Sync.
    * `- cq:isDeep (boolean)`
    * `- cq:trigger (string) /** deprecated **/`
 
-För AEM 5.4 ska följande läggas till i slutet av listan:
+I AEM 5.4 ska följande läggas till i slutet av listan:
 
 * `- cq:rolloutConfigs (string) multiple /** deprecated **/`
 
@@ -632,7 +632,7 @@ Funktionsmakro för utkast
 
 * `[cq:BlueprintAction] > nt:unstructured`
 
-## Platform {#platform}
+## Plattform {#platform}
 
 ### cq:Console {#cq-console}
 
@@ -781,7 +781,7 @@ Definierar en enskild tagg, men kan även innehålla taggar, vilket skapar en ta
    * `- * (undefined)`
    * `+ * (nt:base) = cq:Tag version`
 
-### cq:Taggbar {#cq-taggable}
+### cq:Taggable {#cq-taggable}
 
 **Beskrivning**
 
@@ -819,7 +819,7 @@ Alla användare/offentliga webbplatser kan tagga innehållet (Web2.0-format), so
 
 **Beskrivning**
 
-Lägger till en `cq:userContent` undernod som kan ändras av användare. Varje användare har sin egen `cq:userContent/<userid>` undernod, som vanligtvis har mixin `cq:UserTaggable`.
+Lägger till en `cq:userContent`-undernod som kan ändras av användare. Varje användare har sin egen `cq:userContent/<userid>`-undernod, som vanligtvis har mixinen `cq:UserTaggable`.
 
 **Definition**
 
@@ -827,7 +827,7 @@ Lägger till en `cq:userContent` undernod som kan ändras av användare. Varje a
    * `mixin`
    * `+ cq:userContent (nt:unstructured)`
 
-Utökad variant, mer explicit definierat `cq:userContent` trädet
+Utökad variant, mer explicit definierat `cq:userContent`-trädet
 
 * `[cq:AllowsUserContent]`
    * `mixin`
@@ -928,7 +928,7 @@ Panelen Tabb
 * `[cq:TabPanel] > cq:Panel orderable&quot;
    * `- activeTab (long)`
 
-### cq:Fält {#cq-field}
+### cq:Field {#cq-field}
 
 **Beskrivning**
 
@@ -964,7 +964,7 @@ Wiki-ämne
    * `- wiki:logMessage (string)`
    * `- wiki:quietSave (boolean)`
 
-### wiki:användare {#wiki-user}
+### wiki:Användare {#wiki-user}
 
 **Beskrivning**
 
@@ -975,7 +975,7 @@ Wiki-användare
 * `[wiki:User] mixin`
    * `- wiki:subscriptions (string) multiple`
 
-### wiki:egenskaper {#wiki-properties}
+### wiki:Egenskaper {#wiki-properties}
 
 **Beskrivning**
 
