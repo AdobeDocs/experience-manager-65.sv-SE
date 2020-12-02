@@ -20,16 +20,16 @@ ht-degree: 0%
 
 # Uppdaterar länken till dokumentationen {#updating-the-link-to-the-documentation}
 
-Du kommer åt standardhjälpinnehållet för arbetsytan i AEM Forms genom att välja **Hjälp > Hjälp** om arbetsyta. Det hänvisar till onlinedokumentationen på Adobes webbplats. Du kan dock uppdatera den så att den pekar på en annan URL.
+Du kommer åt standardhjälpinnehållet för AEM Forms genom att välja **Hjälp > Hjälp om arbetsytan**. Den hänvisar till onlinedokumentationen på Adobe webbplats. Du kan dock uppdatera den så att den pekar på en annan URL.
 
-Här följer några exempel på hur du kan ändra standardhjälpens URL:
+Här följer några exempel på hur du kan ändra standardhjälpens URL: n:
 
 * För att få hjälp på valfritt språk.
-* Skräddarsy hjälpmaterial för en skräddarsydd arbetsyta.
+* Skräddarsy hjälpinnehåll för din anpassade arbetsyta.
 
-Om du vill uppdatera webbadressen för onlinedokumentationen följer du de [allmänna anpassningsstegen](/help/forms/using/generic-steps-html-workspace-customization.md) och sedan följande steg.
+Om du vill uppdatera webbadressen för onlinedokumentationen följer du [allmänna steg för anpassning](/help/forms/using/generic-steps-html-workspace-customization.md) och följande steg.
 
-1. Kopiera `userinfo.html` filen från `/libs/ws/js/runtime/templates` till `/apps/ws/js/runtime/templates`.
+1. Kopiera `userinfo.html`-filen från `/libs/ws/js/runtime/templates` till `/apps/ws/js/runtime/templates`.
 1. Ändra:
 
    ```html
