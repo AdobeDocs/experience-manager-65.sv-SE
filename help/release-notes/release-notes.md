@@ -1,10 +1,10 @@
 ---
 title: Allmän versionsinformation för [!DNL Adobe Experience Manager] 6.5
-description: I [!DNL Adobe Experience Manager] 6.5 beskrivs versionsinformation, nyheter, hur du installerar och detaljerade ändringslistor.
+description: '[!DNL Adobe Experience Manager] 6.5 som beskriver versionsinformation, nyheter, hur man installerar och detaljerade ändringslistor.'
 translation-type: tm+mt
 source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
 workflow-type: tm+mt
-source-wordcount: '2154'
+source-wordcount: '2150'
 ht-degree: 1%
 
 ---
@@ -29,9 +29,9 @@ Versionscykeln för den här versionen av [!DNL Adobe Experience Manager] börja
 
 ![AEM 6.5 Inloggningsskärm](/help/assets/assets/aem65-login-v4.png)
 
-## What&#39;s New {#what-s-new}
+## Nyheter {#what-s-new}
 
-[!DNL Adobe Experience Manager] 6.5 är en uppgraderingsversion till [!DNL Adobe Experience Manager] 6.4-kodbasen. Den innehåller nya och förbättrade funktioner, viktiga kundkorrigeringar, högprioriterade kundförbättringar och allmänna felkorrigeringar som är inriktade på produktstabilisering. Det innehåller även [!DNL Adobe Experience Manager] 6.4 Service Pack-versioner upp till SP4.
+[!DNL Adobe Experience Manager] 6.5 är en uppgraderingsversion till  [!DNL Adobe Experience Manager] 6.4-kodbasen. Den innehåller nya och förbättrade funktioner, viktiga kundkorrigeringar, högprioriterade kundförbättringar och allmänna felkorrigeringar som är inriktade på produktstabilisering. Den innehåller även [!DNL Adobe Experience Manager] 6.4 Service Pack-versioner upp till SP4.
 
 Listan nedan innehåller en översikt, medan de efterföljande sidorna innehåller fullständig information.
 
@@ -39,19 +39,19 @@ Listan nedan innehåller en översikt, medan de efterföljande sidorna innehåll
 
 Fullständig lista över ändringar i [AEM Foundation](/help/release-notes/wcm-platform.md).
 
-Plattformen för [!DNL Adobe Experience Manager] 6.5 bygger på uppdaterade versioner av det OSGi-baserade ramverket (Apache Sling och Apache Felix) och Java Content Repository: Apache Jackrabbit Oak 1.10.2.
+Plattformen [!DNL Adobe Experience Manager] 6.5 bygger på uppdaterade versioner av det OSGi-baserade ramverket (Apache Sling och Apache Felix) och Java Content Repository: Apache Jackrabbit Oak 1.10.2.
 
 Quickstart använder Eclipse Jetty 9.4.15 som servermotor.
 
-#### Java-stöd  {#java-support}
+#### Java-stöd {#java-support}
 
 * Nytt stöd för Java 11 och Java 8 som redan stöds.
-* För optimala prestanda bör du åsidosätta GC-standardvärden med andra värden. Mer information finns i avsnittet [Installera och uppdatera](/help/sites-deploying/custom-standalone-install.md) .
-* Underhållsuppdateringar för Java 11 och Java 8 distribueras av Adobe för kundanvändning i AEM-relaterade projekt, när de inte är allmänt tillgängliga från Oracle.
+* För optimala prestanda bör du åsidosätta GC-standardvärden med andra värden. Mer information finns i avsnittet [installera och uppdatera](/help/sites-deploying/custom-standalone-install.md).
+* Underhållsuppdateringar för Java 11 och Java 8 distribueras av Adobe för kundanvändning i AEM projekt, när de inte är allmänt tillgängliga från Oracle.
 
 #### Java Development {#java-development}
 
-* Det finns nu [två versioner av Uberjar](/help/sites-developing/ht-projects-maven.md#experience-manager-api-dependencies), en rekommenderad version med publika gränssnitt som inte är markerade för borttagning, samt en version som innehåller gränssnitt som är markerade för borttagning.
+* Det finns nu [två versioner av Uberjar](/help/sites-developing/ht-projects-maven.md#experience-manager-api-dependencies), en rekommenderad version med publika gränssnitt som inte har markerats för borttagning, samt en version som innehåller gränssnitt som har markerats för borttagning.
 
 #### Användargränssnitt {#user-interface}
 
@@ -60,14 +60,14 @@ Ett antal förbättringar har gjorts i användargränssnittet för att göra det
 * Nytt användargränssnitt för behörighetshantering för användare och grupper.
 * Kolumnvyer läser nu bara in poster som är synliga på skärmen och som bara läses in mer när användaren börjar rulla. List- och kortvyn gjorde redan det sedan 6.0 (förbättrat i 6.4).
 * Kolumnvyer innehåller nu arbetsflödesstatus för sidor/resurser när det är tillämpligt.
-* Åtgärden [Markera alla](/help/sites-authoring/basic-handling.md#select-all) är ett snabbt sätt att köra en åtgärd med alla sidor/resurser i samma mapp.
-* Åtgärden [Markera alla](/help/sites-authoring/basic-handling.md#select-all) försöker utföra åtgärden på alla sidor/resurser, inte bara det som har lästs in. En varningsdialogruta visas om åtgärden inte har uppgraderats för att hantera gruppåtgärder.
+* Åtgärden [Markera allt](/help/sites-authoring/basic-handling.md#select-all) är ett snabbt sätt att utföra en åtgärd med alla sidor/resurser i samma mapp.
+* Åtgärden [Markera allt](/help/sites-authoring/basic-handling.md#select-all) försöker utföra åtgärden på alla sidor/resurser, inte bara det som har lästs in. En varningsdialogruta visas om åtgärden inte har uppgraderats för att hantera gruppåtgärder.
 
 >[!CAUTION]
 >
 >Adobe planerar inte att göra fler förbättringar av det klassiska användargränssnittet. AEM 6.5 innehåller det klassiska användargränssnittet och kunder som uppgraderar från tidigare versioner kan fortsätta använda det som det är. Observera att Classic-användargränssnittet fortfarande stöds fullt ut när det är inaktuellt. [Läs mer](/help/sites-deploying/ui-recommendations.md).
 
-#### Sökning och indexering {#indexing-and-search}
+#### Söka och indexera {#indexing-and-search}
 
 * Sök i Oak har nu stöd för dynamiska aspekter. Filterfältet i resurssökningen visar t.ex. den uppskattade mängden resultat.
 * QueryBuilder utökades för att ge resultat med dynamiska aspekter.
@@ -84,26 +84,26 @@ Ett antal förbättringar har gjorts i användargränssnittet för att göra det
 
 Fullständig lista över ändringar i [AEM Sites och tillägg](/help/release-notes/sites.md).
 
-#### Hanterade single-page-appar {#managed-single-page-apps}
+#### Hanterade ensidiga appar {#managed-single-page-apps}
 
-Med Page Editor kan du redigera innehåll i sitt sammanhang och skapa/layouta i klientsidans renderade upplevelser (kallas även [SPA Editor](/help/sites-developing/spa-architecture.md)). Befintliga enkelsidiga appar som byggs med JavaScript-ramverket React eller Angular kan utökas med AEM SJ SDK för att göras redigerbara för användare.
+Page Editor lägger till möjligheten att redigera innehåll i sitt sammanhang och skapa/layouta i renderade upplevelser på klientsidan (kallas även [SPA Editor](/help/sites-developing/spa-architecture.md)). Befintliga enkelsidiga appar som byggs med JavaScript-ramverket React eller Angular kan utökas med AEM SJ SDK för att göras redigerbara för användare.
 
-Först levererad som en del av AEM 6.4 SP2, med AEM 6.5 får SPA-supporten följande funktioner:
+Först levererad som en del av AEM 6.4 SP2, med AEM 6.5 får SPA support följande fördelar:
 
-* Använd mallredigeraren för att redigera och konfigurera de AEM redigerbara delarna i SPA
-* Använd hantering av flera webbplatser för att skapa SPA-upplevelser med länder, franchise eller vit etiketter
+* Använd mallredigeraren för att redigera och konfigurera AEM redigerbara delar av SPA
+* Använd hantering av flera webbplatser för att skapa SPA, franchise eller white-label
 
 #### Headless Content Management {#headless-content-management}
 
-AEM kan hantera innehållet i olika format och från olika nivåer i högen. Vissa har funnits sedan 2008 med [Sling GET](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) och [POST Servlet](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html). Content Services ([Sling Model Exporter](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/develop-sling-model-exporter.html)) introducerades i AEM 6.3 och är den metod som används av AEM SJ SDK för att hysa enkelsidiga appar. API:t för [HTTP för Assets](/help/assets/mac-api-assets.md) är ett CRUD-API, som utökades för AEM 6.5.
+AEM kan hantera innehållet i olika format och från olika nivåer i högen. Vissa har funnits sedan 2008 med [Sling GET](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) och [POST Servlet](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html). Innehållstjänster ([Sling Model Exporter](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/develop-sling-model-exporter.html)) introducerades i AEM 6.3 och är den metod som används av AEM SJ SDK för att hydratisera enkelsidiga appar. [HTTP-API:t för Assets](/help/assets/mac-api-assets.md) är ett CRUD-API, som utökades för AEM 6.5.
 
 Nya HTTP API-funktioner:
 
-* Stöd för [innehållsfragment har lagts till i HTTP API för resurser](/help/assets/assets-api-content-fragments.md) för att skapa, uppdatera, läsa och ta bort fragment.
-* Visa listor med innehållsfragment via Content Services med kärnkomponenten [Content Fragment List](https://opensource.adobe.com/aem-core-wcm-components/library/content-fragment-list.html).
-* [Core Component Library](https://opensource.adobe.com/aem-core-wcm-components/library.html) som visar standardutdata för Content Services JSON för varje komponent
+* [Stöd för innehållsfragment har lagts till i HTTP API för Assets](/help/assets/assets-api-content-fragments.md) för att skapa, uppdatera, läsa och ta bort fragment.
+* Visa listor med innehållsfragment via Content Services med huvudkomponenten [Content Fragment List](https://opensource.adobe.com/aem-core-wcm-components/library/content-fragment-list.html).
+* [Core Component ](https://opensource.adobe.com/aem-core-wcm-components/library.html) Library som visar standardutdata för Content Services JSON för varje komponent
 
-#### Tillägget Skärmar {#screens-add-on}
+#### Skärmtillägg {#screens-add-on}
 
 Designa, leverera och optimera effektivt upplevelser på alla digitala skärmar, från interaktiva kioskdatorer till digitala skyltar.
 
@@ -120,19 +120,19 @@ Designa, leverera och optimera effektivt upplevelser på alla digitala skärmar,
 **Optimera**
 
 * Anpassa efter plats eller konfiguration av data som triggat innehåll med hjälp av dynamiska platshållare.
-* Enhetliga insikter som bygger på Adobe Analytics integrering i AEM Screens Player
+* Enhetliga insikter som bygger på Adobe Analytics integration i AEM Screens Player
 
-Mer information om ändringar av AEM Screens finns i versionsinformationen i användarhandboken [för](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html)AEM Screens.
+Mer information om ändringar i AEM Screens finns i versionsinformationen i [AEM Screens användarhandbok](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html).
 
 ### [!DNL Experience Manager Assets] {#experience-manager-assets}
 
-Fullständig lista över ändringar i [AEM 6.5 Assets release notes](/help/release-notes/assets.md).
+Fullständig lista över ändringar i [AEM 6.5 Versionsinformation för resurser](/help/release-notes/assets.md).
 
 I AEM 6.5 introduceras följande funktioner och förbättringar som ökar produktiviteten hos AEM, DAM-roller och associerade kreativa roller och marknadsföringsroller.
 
-#### Integration with Adobe Creative Cloud {#integration-with-adobe-creative-cloud}
+#### Integrering med Adobe Creative Cloud {#integration-with-adobe-creative-cloud}
 
-Introduktion av [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html), en upplevelse i appen för kreativa användare som arbetar i Adobe Creative Cloud-program, som Photoshop, Illustrator och InDesign, effektiviserar samarbetet mellan kreatörer och marknadsförare när man skapar innehåll. AEM program har fortfarande stöd för de behov som användare har när de arbetar med resurser från AEM på datorn, oavsett filtyp och datorprogram.
+[Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html), en upplevelse i appen för kreativa användare som arbetar i Adobe Creative Cloud-program som Photoshop, Illustrator och InDesign, effektiviserar samarbetet mellan kreatörer och marknadsförare när man skapar innehåll. AEM program har fortfarande stöd för de behov som användare har när de arbetar med resurser från AEM på datorn, oavsett filtyp och datorprogram.
 
 Dessutom kan AEM integreras med Adobe Stock för att hjälpa till att hitta, förhandsgranska, licensiera och spara Adobe Stock-material direkt från det AEM webbgränssnittet.
 
@@ -140,11 +140,11 @@ Dessutom kan AEM integreras med Adobe Stock för att hjälpa till att hitta, fö
 
 #### Anslutna resurser {#connected-assets}
 
-Funktionen för sammankopplade resurser är avsedd för större driftsättningar med ett antal driftsättningar av AEM Sites som behöver utnyttja resurser från en central AEM Assets DAM-driftsättning. Det gör det möjligt att förbättra styrningen av resurser som hanteras centralt samtidigt som det blir mycket effektivt att leverera resurser till de olika platsernas driftsättningar.
+Funktionen för sammankopplade resurser är avsedd för större driftsättningar med ett antal AEM Sites-driftsättningar som behöver utnyttja resurser från en central AEM Assets DAM-driftsättning. Det gör det möjligt att förbättra styrningen av resurser som hanteras centralt samtidigt som det blir mycket effektivt att leverera resurser till de olika platsernas driftsättningar.
 
 ### Dynamic Media {#dynamic-media}
 
-Dynamic Media har förbättrat multimedieredigering och leverans i AEM Assets för att skapa avancerade upplevelser som är både engagerande och personaliserade. Med en enda högklassig överordnad resurs kan ni utnyttja vår avancerade molnrendering, Smart Crop och förstklassiga visningsprogram för att leverera de mest engagerande upplevelserna med branschledande prestanda.
+Dynamic Media ger förbättrad multimedieproduktion i AEM Assets och skapar banbrytande upplevelser som är både engagerande och personaliserade. Med en enda högklassig överordnad resurs kan ni utnyttja vår avancerade molnrendering, Smart Crop och förstklassiga visningsprogram för att leverera de mest engagerande upplevelserna med branschledande prestanda.
 
 Nya funktioner:
 
@@ -164,7 +164,7 @@ AEM 6.5 Forms har flera nya funktioner och förbättringar. Högdagrarna är fö
 * Transaktionsrapporter för att spåra antalet skickade formulär, bearbetade dokument och återgivna dokument
 * Förbättrad användning av interaktiv kommunikation
 * Molnbaserade digitala signaturer i anpassningsbara formulär
-* Bädda in adaptiva formulär och interaktiv kommunikation i AEM Sites Single-page applications (SPA).
+* Bädda in adaptiva formulär och interaktiv kommunikation i AEM Sites single page-applikationer (SPA).
 * Stöd för variabler i AEM arbetsflöden
 * Stöd för datavisningsmönster i interaktiv kommunikation
 * Sortera adaptiva formulär och interaktiva kommunikationstabeller
@@ -181,11 +181,11 @@ AEM 6.5 innehåller nya funktioner och förbättringar för Communities. Den hä
 * Anpassade filter har utvecklats och lagts till i användargränssnittet för massmoderering. Ett [exempelprojekt](https://github.com/Adobe-Marketing-Cloud/aem-communities-extensions/tree/master/aem-communities-moderation-filter) som visar filtrering med taggar kan användas som bas för att utveckla analoga anpassade filter.
 * Ny listvy med förbättrat användargränssnitt vid gruppmoderering.
 * Separata administratörer för olika communitysajter och kapslade grupper kan tilldelas i stället för en enda community-administratör.
-* Aktiveringsfunktionen i AEM 6.5 Communities har stöd [(SCORM) 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/) .
+* Aktiveringsfunktionen i AEM 6.5 Communities stöder motorn [(SCORM) 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/).
 * Stöd för tangentbordsnavigering i aktiveringskomponenter för förbättrad tillgänglighet.
 * Stöd för Apache Solr 7.0 vid konfiguration av MSRP och DSRP.
 
-En detaljerad lista över ändringar finns i [AEM 6.5 Communities versionsinformation](/help/release-notes/communities-release-notes.md).
+En detaljerad lista över ändringar finns i [AEM 6.5 Communities Release Notes](/help/release-notes/communities-release-notes.md).
 
 ### [!DNL Experience Manager Livefyre] {#experience-manager-livefyre}
 
@@ -195,18 +195,18 @@ Du kan integrera Livefyre med AEM 6.5-instansen. Se [hur du integrerar Livefyre 
 
 Adobe använder en kundfokuserad utvecklingsmodell som gör det möjligt för kunderna att bidra till alla faser i utvecklingsprocessen, under specifikation, utveckling och testning. Vi tackar alla kunder och partners som deltar i den här processen.
 
-Adobe har de rutiner och processer som behövs för att kunna samla in, prioritera och spåra kundfokuserade fellösningar och utveckla förbättringsförfrågningar. Supportportalen [för](https://helpx.adobe.com/se/contact/enterprise-support.ec.html) Adobe Marketing Cloud är integrerad med Adobe Enhancement and Defect Tracking System. Kundfrågor identifieras och löses med kundtjänst där det är möjligt. När den eskaleras till FoU hämtas all kundinformation in och används för prioritering och rapportering. Vid utveckling av betald support, garantifrågor och kundbetalda förbättringar prioriteras.
+Adobe har de rutiner och processer som behövs för att kunna samla in, prioritera och spåra kundfokuserade fellösningar och utveckla förbättringsförfrågningar. [Adobe Marketing Cloud supportportal](https://helpx.adobe.com/se/contact/enterprise-support.ec.html) är integrerad med Adobe Enhancement and Defect Tracking System. Kundfrågor identifieras och löses med kundtjänst där det är möjligt. När den eskaleras till FoU hämtas all kundinformation in och används för prioritering och rapportering. Vid utveckling av betald support, garantifrågor och kundbetalda förbättringar prioriteras.
 
 Denna prioriteringsprocess har resulterat i över 750 kundfokuserade förändringar som fastslagits i AEM 6.5.
 
-## Lista över filer som ingår i releasen {#list-of-files-that-are-part-of-the-release}
+## Lista över filer som ingår i versionen {#list-of-files-that-are-part-of-the-release}
 
 **Foundation**
 
 * Fristående QuickStart: `cq-quickstart-6.5.0.jar`.
 * Snabbstart för programserver: `cq-quickstart-6.5.0.war`.
-* Dispatcher 4.3.2 eller senare för olika webbservrar och plattformar. Se [nedladdningslänk](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/getting-started/release-notes.html)
-* Plugin för Eclipse IDE ([läs mer och ladda ned](/help/sites-developing/aem-eclipse.md))
+* Skicka 4.3.2 eller senare för olika webbservrar och plattformar. Se [nedladdningslänk](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/getting-started/release-notes.html)
+* Plugin-program för Eclipse IDE ([läs mer och ladda ned](/help/sites-developing/aem-eclipse.md))
 
 * Tillägg för Brackets Code Editor ([läs mer och ladda ned](/help/sites-developing/aem-brackets.md))
 * Maven/Gradle-beroenden ([nedladdningslänk](https://repo.adobe.com/nexus/content/repositories/releases/com/adobe/aem/uber-jar/6.5.0/))
@@ -214,7 +214,7 @@ Denna prioriteringsprocess har resulterat i över 750 kundfokuserade förändrin
 **Sites**
 
 * Kärnkomponenter ([GitHub-projekt](https://github.com/adobe/aem-core-wcm-components))
-* Implementering av referens för butik ([läs mer](/help/sites-developing/we-retail.md))
+* Implementering av referens för Vi.butik ([läs mer](/help/sites-developing/we-retail.md))
 * Maven Project Archetypes:
 
    * för fullstacksplatser: [GitHub-projekt](https://github.com/adobe/aem-project-archetype)
@@ -238,7 +238,7 @@ Denna prioriteringsprocess har resulterat i över 750 kundfokuserade förändrin
 
 **Forms**
 
-* [Paket för AEM Forms-funktioner](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)
+* [Paket för AEM Forms](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)
 * [AEM Forms OSGi Client SDK](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/6.0.80/)
 
 ## Språk {#languages}
@@ -260,23 +260,23 @@ Användargränssnittet finns på följande språk:
 
 ## Installera och uppdatera {#install-update}
 
-Installationsanvisningar finns i [installationsanvisningar](/help/sites-deploying/custom-standalone-install.md).
+Installationskrav finns i [installationsanvisningar](/help/sites-deploying/custom-standalone-install.md).
 
-Detaljerade anvisningar finns i [uppgraderingsdokumentationen](/help/sites-deploying/upgrade.md).
+Detaljerade instruktioner finns i [uppgraderingsdokumentation](/help/sites-deploying/upgrade.md).
 
 ## Plattformar som stöds {#supported-platforms}
 
-Se hela tabellen över de plattformar som stöds, inklusive supportnivå i [AEM 6.5 tekniska krav](/help/sites-deploying/technical-requirements.md).
+Den fullständiga matrisen med plattformar som stöds, inklusive support på [AEM 6.5 Technical requirements](/help/sites-deploying/technical-requirements.md).
 
 >[!NOTE]
 >
->Oracle har flyttat till en LTS-modell (Long Term Support) för Oracle Java SE-produkter. Java 9 och 10 är icke-LTS-versioner från Oracle. Se [Oracle Java SE - supportöversikt](https://www.oracle.com/technetwork/java/eol-135779.html). Adobe har stöd för LTS-versioner av Java som endast kan köras AEM i produktionen. Java 11 är den rekommenderade versionen som ska användas med AEM 6.5.
+>Oracle har övergått till en LTS-modell (Long Term Support) för Oracle Java SE-produkter. Java 9 och 10 är icke-LTS-versioner från Oracle. Se [Oracle Java SE support roadmap](https://www.oracle.com/technetwork/java/eol-135779.html). Adobe har stöd för LTS-versioner av Java som endast kan köras AEM i produktionen. Java 11 är den rekommenderade versionen som ska användas med AEM 6.5.
 
 ## Föråldrade och borttagna funktioner {#deprecated-and-removed-features}
 
 Adobe utvärderar ständigt funktionerna i produkten och planerar att ersätta funktioner med kraftfullare versioner, eller bestämmer sig för att omimplementera utvalda delar så att de blir bättre förberedda för framtida förväntningar eller tillägg.
 
-För [!DNL Adobe Experience Manager] 6.5, [se listan över borttagna funktioner](/help/release-notes/deprecated-removed-features.md). Sidan innehåller även förhandsmeddelanden om förändringar inom den närmaste framtiden och viktiga meddelanden för kunder som uppdaterar från tidigare versioner.
+För [!DNL Adobe Experience Manager] 6.5, [läs listan över borttagna funktioner](/help/release-notes/deprecated-removed-features.md) som tagits bort. Sidan innehåller även förhandsmeddelanden om förändringar inom den närmaste framtiden och viktiga meddelanden för kunder som uppdaterar från tidigare versioner.
 
 ## Kända fel {#known-issues}
 
@@ -288,6 +288,6 @@ Följande webbplatser är bara tillgängliga för kunder. Om du är kund och beh
 
 * [Nedladdning av produkt på licensing.adobe.com](https://licensing.adobe.com/).
 
-* Produktuppdateringar, patchar och paket för ytterligare funktionalitet vid [programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html).
+* Produktuppdateringar, patchar och paket för ytterligare funktionalitet i [Programdistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html).
 
-* [Kundsupport via Admin Console](https://adminconsole.adobe.com/). Mer information finns i [nya Adobe Customer Support Experience](https://docs.adobe.com/content/help/en/customer-one/using/home.html).
+* [Kundsupport via Admin Console](https://adminconsole.adobe.com/). Mer information finns i [New Adobe Customer Support Experience](https://docs.adobe.com/content/help/en/customer-one/using/home.html).
