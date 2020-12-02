@@ -19,7 +19,7 @@ ht-degree: 1%
 ---
 
 
-# Ändra utseendet {#alter-the-appearance}
+# Ändra utseende {#alter-the-appearance}
 
 ## Ändra skriptet {#modify-the-script}
 
@@ -34,7 +34,7 @@ Så här visar du inte avataren bredvid varje publicerad kommentar:
    1. Välj `/apps/social/commons/components/hbs/comments/comment`
    1. Välj **[!UICONTROL Paste]**
 
-1. Öppna överlägg `comment.hbs`
+1. Öppna det överliggande `comment.hbs`
 
    * Dubbelklicka på noden `comment.hbs` i `/apps/social/commons/components/hbs/comments/comment folder`
 
@@ -45,7 +45,7 @@ Så här visar du inte avataren bredvid varje publicerad kommentar:
         <img class="scf-comment-avatar {{#if topLevel}}withTopLevel{{/if}}" src="{{author.avatarUrl}}"></img>
 ```
 
-Radera raderna eller omge dem med `<!--` och kommentera `-->` ut dem. Dessutom läggs tecknen &#39;xxx&#39; till som en visuell indikator på var avataren skulle ha varit.
+Ta bort raderna eller omge dem med `<!--` och `-->` för att kommentera dem. Dessutom läggs tecknen &#39;xxx&#39; till som en visuell indikator på var avataren skulle ha varit.
 
 ```xml
    xxx
@@ -64,7 +64,7 @@ Radera raderna eller omge dem med `<!--` och kommentera `-->` ut dem. Dessutom l
 
 I den globala navigeringen väljer du **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Replication]** och klickar på **[!UICONTROL Activate Tree]**.
 
-Ange `/apps/social/commons` och välj Start Path **[!UICONTROL Activate]**.
+Ange `/apps/social/commons` som startsökväg och välj **[!UICONTROL Activate]**.
 
 ![verify-content-template](assets/verify-content-template.png)
 
