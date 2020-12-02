@@ -24,20 +24,20 @@ Komponenter kan anpassas för att generera JSON-export av deras innehåll basera
 
 ## Översikt {#overview}
 
-JSON-exporten baseras på [Sling Models](https://sling.apache.org/documentation/bundles/models.html)och på [Sling Model Exporter](https://sling.apache.org/documentation/bundles/models.html#exporter-framework-since-130) (som i sin tur bygger på [Jackson-anteckningar](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations)).
+JSON-exporten baseras på [Sling Models](https://sling.apache.org/documentation/bundles/models.html) och [Sling Model Exporter](https://sling.apache.org/documentation/bundles/models.html#exporter-framework-since-130)-ramverket (som i sin tur är beroende av [Jackson-anteckningar](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations)).
 
 Det innebär att komponenten måste ha en Sling-modell om den behöver exportera JSON. Därför måste du följa dessa två steg för att aktivera JSON-export för alla komponenter.
 
 * [Definiera en segmentmodell för komponenten](/help/sites-developing/json-exporter-components.md#define-a-sling-model-for-the-component)
 * [Anteckna gränssnittet för segmenteringsmodellen](#annotate-the-sling-model-interface)
 
-## Definiera en delningsmodell för komponenten {#define-a-sling-model-for-the-component}
+## Definiera en segmenteringsmodell för komponenten {#define-a-sling-model-for-the-component}
 
 Först måste en segmentmodell definieras för komponenten.
 
 >[!NOTE]
 >
->Ett exempel på hur du använder Sling Models finns i artikeln [Developing Sling Model Exporters in AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/sling-model-exporter-tutorial-develop.html).
+>Ett exempel på hur du använder delningsmodeller finns i artikeln [Developing Sling Model Exporters in AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/sling-model-exporter-tutorial-develop.html).
 
 Implementeringsklassen för Sling-modellen måste kommenteras med följande:
 
@@ -47,31 +47,31 @@ Implementeringsklassen för Sling-modellen måste kommenteras med följande:
 @JsonSerialize(as = MyComponent.class)
 ```
 
-Detta garanterar att komponenten kan exporteras fristående med hjälp av väljaren och `.model` `.json` tillägget.
+Detta garanterar att komponenten kan exporteras fristående med `.model`-väljaren och `.json`-tillägget.
 
-Dessutom anger detta att klassen Sling Model kan anpassas till `ComponentExporter` gränssnittet.
-
->[!NOTE]
->
->Jackson-anteckningar anges vanligtvis inte på klassnivån Sling Model, utan i stället på gränssnittsnivån Model. Detta för att säkerställa att JSON-exporten betraktas som en del av komponent-API:t.
+Dessutom anger detta att klassen Sling Model kan anpassas till gränssnittet `ComponentExporter`.
 
 >[!NOTE]
 >
->Klasserna `ExporterConstants` och `ComponentExporter` kommer från `com.adobe.cq.export.json` paketet.
+>Jackson-anteckningar anges vanligtvis inte på klassnivå för Sling Model, utan på gränssnittsnivå för Model. Detta för att säkerställa att JSON-exporten betraktas som en del av komponent-API:t.
+
+>[!NOTE]
+>
+>Klasserna `ExporterConstants` och `ComponentExporter` kommer från paketet `com.adobe.cq.export.json`.
 
 ### Använda flera väljare {#multiple-selectors}
 
-Även om det inte är ett standardanvändningsfall är det möjligt att konfigurera flera väljare förutom `model` väljaren.
+Även om det inte är ett standardanvändningsfall är det möjligt att konfigurera flera väljare förutom `model`-väljaren.
 
 ```
 https://<server>:<port>/content/page.model.selector1.selector2.json
 ```
 
-I så fall måste dock väljaren vara den första väljaren och tillägget måste vara `model` `.json`.
+I så fall måste `model`-väljaren vara den första väljaren och tillägget måste vara `.json`.
 
 ## Anteckna gränssnittet för segmenteringsmodellen {#annotate-the-sling-model-interface}
 
-Modellgränssnittet bör implementera gränssnittet (eller, `ComponentExporter` `ContainerExporter`om det är en behållarkomponent) för att det ska kunna beaktas av JSON-exportramverket.
+Modellgränssnittet bör implementera gränssnittet `ComponentExporter` (eller `ContainerExporter` om det är en behållarkomponent) för att JSON-exportramverket ska kunna ta hänsyn till.
 
 Motsvarande Sling Model-gränssnitt ( `MyComponent`) kommenteras sedan med [Jackson-anteckningar](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations) för att definiera hur det ska exporteras (serialiseras).
 
@@ -90,7 +90,7 @@ Koden för den här sidan finns på GitHub
 * [Öppna aem-core-wcm-components-projekt på GitHub](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components)
 * Hämta projektet som [en ZIP-fil](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/archive/master.zip)
 
-## Related Documentation {#related-documentation}
+## Relaterad dokumentation {#related-documentation}
 
 Mer information finns i:
 
@@ -99,5 +99,5 @@ Mer information finns i:
 * [Modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md)
 * [Skapa med innehållsfragment](/help/sites-authoring/content-fragments.md)
 * [JSON-exporterare för innehållstjänster](/help/sites-developing/json-exporter.md)
-* [Kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) och komponenten [Innehållsfragment](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)
+* [Kärnkomponenter ](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) och komponenten  [Innehållsfragment](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)
 
