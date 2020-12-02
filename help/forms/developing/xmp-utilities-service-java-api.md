@@ -22,19 +22,19 @@ ht-degree: 0%
 
 Följande snabbstarter är tillgängliga för tjänsten XMP Utilities.
 
-[Snabbstart (SOAP-läge): Exportera XMP-metadata med Java API](xmp-utilities-service-java-api.md#quick-start-soap-mode-exporting-xmp-metadata-using-the-java-api)
+[Snabbstart (SOAP-läge): Exportera XMP metadata med Java API](xmp-utilities-service-java-api.md#quick-start-soap-mode-exporting-xmp-metadata-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Importera XMP-metadata med Java API](xmp-utilities-service-java-api.md#quick-start-soap-mode-importing-xmp-metadata-using-the-java-api)
+[Snabbstart (SOAP-läge): Importera XMP metadata med Java API](xmp-utilities-service-java-api.md#quick-start-soap-mode-importing-xmp-metadata-using-the-java-api)
 
-AEM Forms-åtgärder kan utföras med AEM Forms-API:t med stark typning och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
->Snabbstart i Programmering med AEM-formulär baseras på Forms-servern om du använder ett annat operativsystem, till exempel UNIX, och ersätter fönsterspecifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>Snabbstarter som finns i Programmering med AEM formulär baseras på Forms-servern om du använder ett annat operativsystem, till exempel UNIX, och ersätter fönsterspecifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## Snabbstart (SOAP-läge): Exportera XMP-metadata med Java API {#quick-start-soap-mode-exporting-xmp-metadata-using-the-java-api}
+## Snabbstart (SOAP-läge): Exportera XMP metadata med Java API {#quick-start-soap-mode-exporting-xmp-metadata-using-the-java-api}
 
-Följande kodexempel hämtar, inspekterar och sparar XMP-metadata. (Se [Exportera metadata från PDF-dokument](/help/forms/developing/xmp-utilities.md#exporting-metadata-from-pdf-documents).)
+I följande kodexempel hämtas, granskas och sparas XMP metadata. (Se [Exportera metadata från PDF-dokument](/help/forms/developing/xmp-utilities.md#exporting-metadata-from-pdf-documents).)
 
 ```java
  /*
@@ -137,9 +137,9 @@ Följande kodexempel hämtar, inspekterar och sparar XMP-metadata. (Se [Exporter
  
 ```
 
-## Snabbstart (SOAP-läge): Importera XMP-metadata med Java API {#quick-start-soap-mode-importing-xmp-metadata-using-the-java-api}
+## Snabbstart (SOAP-läge): Importera XMP metadata med Java API {#quick-start-soap-mode-importing-xmp-metadata-using-the-java-api}
 
-I följande kodexempel importeras XMP-metadata och den nya PDF-filen sparas på disken. PDF-dokumentet är baserat på en PDF-fil med namnet Loan.pdf. XML-dokumentet som innehåller de metadata som ska importeras till PDF-dokumentet baseras på en XML-fil med namnet *LoanMetaData.xml*. Mer information om XML-filen finns i [Importera metadata till PDF-dokument](/help/forms/developing/xmp-utilities.md#importing-metadata-into-pdf-documents).
+I följande kodexempel importeras XMP metadata och den nya PDF-filen sparas på disken. PDF-dokumentet är baserat på en PDF-fil med namnet Loan.pdf. XML-dokumentet som innehåller de metadata som ska importeras till PDF-dokumentet är baserat på en XML-fil med namnet *LoanMetaData.xml*. Mer information om XML-filen finns i [Importera metadata till PDF-dokument](/help/forms/developing/xmp-utilities.md#importing-metadata-into-pdf-documents).
 
 ```java
  /*
