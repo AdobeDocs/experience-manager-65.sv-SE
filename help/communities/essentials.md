@@ -18,11 +18,11 @@ ht-degree: 2%
 ---
 
 
-# Grundläggande om komponenter, funktioner och funktioner  {#component-function-and-feature-essentials}
+# Grundläggande om komponenter, funktioner och funktioner {#component-function-and-feature-essentials}
 
-AEM Communities funktioner kräver att besökarna blir medlemmar och loggar in på [communitywebbplatsen](overview.md#communitiessites) innan de kan publicera innehåll. Därför är mallarna [för](sites.md)communitysajter, som används för att [skapa](sites-console.md)en communitywebbplats, utformade för att innehålla en inloggningsfunktion samt användarprofiler, meddelanden, sökning, moderering och översättning.
+AEM Communities funktioner kräver att webbplatsbesökarna blir medlemmar och loggar in på [communitywebbplatsen](overview.md#communitiessites) innan de kan publicera innehåll. Därför är [communitymallar](sites.md), från vilka en community-webbplats [skapas](sites-console.md), utformade för att innehålla en inloggningsfunktion samt användarprofiler, meddelanden, sökning, moderering och översättning.
 
-En communitywebbplats kommer att stödja medlemmar som skapar communitygrupper när funktionen [för](functions.md#groups-function) communitygrupper ingår i den valda communitywebbplatsmallen.
+En communitywebbplats stöder medlemmar som skapar communitygrupper när [communitygruppsfunktionen](functions.md#groups-function) inkluderas i den valda communitywebbplatsmallen.
 
 Nedan följer länkar till viktig information för Communities-komponenter, -funktioner och -funktioner.
 
@@ -41,7 +41,7 @@ Nedan följer länkar till viktig information för Communities-komponenter, -fun
 
 * [Aktivitetsströmmar](essentials-activities.md)
 * [Uppdrag](essentials-assignments.md)
-* [Blogg](blog-developer-basics.md) ( `Journal`)
+* [Blog](blog-developer-basics.md) (  `Journal`)
 
 * [Kalender](calendar-basics-for-developers.md)
 * [Katalog](catalog-developer-essentials.md)
@@ -70,12 +70,12 @@ Nedan följer länkar till viktig information för Communities-komponenter, -fun
 
 ## Javadocs {#javadocs}
 
-Javadoskorna [online](../../help/sites-developing/reference-materials.md) återspeglar API:erna i AEM 6.3-versionen.
-Communities-API:er finns i `com.adobe.cq.social.*` paket.
+[online-javadocs](../../help/sites-developing/reference-materials.md) återspeglar de API:er som finns i AEM 6.3.
+Communities-API:er finns i `com.adobe.cq.social.*`-paket.
 
-För varje [funktionspaket](deploy-communities.md#latestfeaturepack)finns en javadoc burk. Mer information finns på [Using Maven for Communities](maven.md#javadocs).
+För varje [funktionspaket](deploy-communities.md#latestfeaturepack) finns en javadoc jar tillgänglig. Mer information finns på [Using Maven for Communities](maven.md#javadocs).
 
-## Additional Information {#additional-information}
+## Ytterligare information {#additional-information}
 
 * [Social Component Framework (SCF)](scf.md)
 
@@ -84,6 +84,6 @@ För varje [funktionspaket](deploy-communities.md#latestfeaturepack)finns en jav
    * [Översikt över lagringsresursprovider](srp.md)
 
 * [Riktlinjer för kodning](code-guide.md)
-* [Självstudiekurser](tutorials.md)
+* [Tutorials](tutorials.md)
 * [Felsökning](troubleshooting.md)
 
