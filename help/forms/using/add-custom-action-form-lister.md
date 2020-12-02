@@ -47,7 +47,7 @@ Nedan finns den kod som krävs för att lägga till åtgärden i mallen. Attribu
 </div>
 ```
 
-Du kan lägga till liknande åtgärder i den anpassade mallen. Om du vill definiera en JavaScript-funktion lägger du till funktionen på ett skript på sidnivå och länkar den med det HTML-element som krävs. I exemplet ovan är `onclick` uttrycket den länkade funktionen.
+Du kan lägga till liknande åtgärder i den anpassade mallen. Om du vill definiera en JavaScript-funktion lägger du till funktionen på ett skript på sidnivå och länkar den med det HTML-element som krävs. I ovanstående exempel är uttrycket `onclick` den länkade funktionen.
 
 När du har redigerat mallen innehåller exempelportalsidan en knapp för att skicka länken till formuläret via e-post, vilket visas nedan.
 
