@@ -11,6 +11,9 @@ topic-tags: configuring
 discoiquuid: 80118cd1-73e1-4675-bbdf-85d66d150abc
 translation-type: tm+mt
 source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
+workflow-type: tm+mt
+source-wordcount: '6713'
+ht-degree: 1%
 
 ---
 
@@ -19,15 +22,15 @@ source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 >[!NOTE]
 >
->Allmänna riktlinjer för prestanda finns på sidan [Prestandainstruktioner](/help/sites-deploying/performance-guidelines.md) .
+>Allmänna riktlinjer för prestanda finns på sidan [Prestanda Guidelines](/help/sites-deploying/performance-guidelines.md).
 >
->Mer information om felsökning och korrigering av prestandaproblem finns också i [Prestandaträdet](/help/sites-deploying/performance-tree.md).
+>Mer information om felsökning och korrigering av prestandaproblem finns i [Prestandaträdet](/help/sites-deploying/performance-tree.md).
 >
->Dessutom kan du läsa en kunskapsbasartikel om tips för [prestandajustering.](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html)
+>Du kan även läsa en kunskapsbasartikel på [tips för prestandajustering.](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html)
 
 Ett viktigt problem är den tid det tar för er webbplats att svara på besökarnas förfrågningar. Även om det här värdet varierar för varje begäran kan ett genomsnittligt målvärde definieras. När det här värdet har visat sig vara både genomförbart och underhållbart kan det användas för att övervaka webbplatsens prestanda och indikera utvecklingen av potentiella problem.
 
-De svarstider du vill använda skiljer sig åt mellan skribent- och publiceringsmiljöerna, vilket återspeglar målgruppens olika egenskaper:
+De svarstider du vill ha skiljer sig åt mellan skribent- och publiceringsmiljöerna, vilket återspeglar målgruppens olika egenskaper:
 
 ## Författarmiljö {#author-environment}
 
@@ -41,6 +44,7 @@ Den här miljön innehåller innehåll som du gör tillgängligt för användarn
 >
 >* När du har konfigurerat för prestandaoptimering följer du procedurerna i [Tough Day](/help/sites-developing/tough-day.md) för att testa miljön under tung belastning.
 >* Se även [Prestandajusteringstips](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html).
+
 >
 
 
@@ -77,7 +81,7 @@ Om du publicerar en webbplats och efter lanseringen får reda på att du stöter
 
 Det är svårt att simulera verkligheten och hur mycket arbete du rimligen kommer att vilja göra för att bli&quot;verklig&quot; beror på projektets karaktär. &quot;Real&quot; betyder inte bara&quot;riktig kod&quot; och&quot;verklig trafik&quot;, utan även&quot;verkligt innehåll&quot;, särskilt när det gäller innehållets storlek och struktur. Tänk på att mallarna kan uppträda helt olika beroende på databasens storlek och struktur.
 
-### Fastställ solida mål {#establish-solid-goals}
+### Fastställ heldragna mål {#establish-solid-goals}
 
 ![chlimage_1-5](assets/chlimage_1-5.jpeg)
 
@@ -91,7 +95,7 @@ Att uppnå goda, gedigna prestationsmål är verkligen ett av de svåraste områ
 
 Det är viktigt att optimera en flaskhals i taget. Om du försöker göra saker parallellt utan att validera effekten av den optimerade optimeringen, kommer du att förlora räkningen på vilken optimeringsåtgärd som faktiskt hjälpte.
 
-### Flexibla itereringscykler {#agile-iteration-cycles}
+### Automatiska itereringscykler {#agile-iteration-cycles}
 
 ![chlimage_1-7](assets/chlimage_1-7.jpeg)
 
@@ -128,7 +132,7 @@ Det sätt på vilket en innehållsdatabas är strukturerad kan även påverka pr
 
 Dina bästa vänner under en vanlig prestandaoptimeringsövning är:
 
-* the `request.log`
+* `request.log`
 * komponentbaserad timing
 * sist men inte minst en java-profilerare.
 
@@ -173,7 +177,7 @@ Prestanda är också en balans mellan volym och kapacitet:
 
 **Volym** Den mängd utdata som bearbetas och levereras av systemet.
 
-**Kapacitet** Systemets förmåga att leverera volymen.
+**** KapacitetSystemets förmåga att leverera volymen.
 
 Detta kan illustreras på olika platser i hela webbkedjan.
 
@@ -189,7 +193,7 @@ Det finns flera funktionsområden som ofta är ansvariga för att påverka prest
 
 Vissa regler bör beaktas vid prestandaoptimering:
 
-* Prestandajustering *måste* ingå i varje projekt.
+* Prestandajustering *måste* vara en del av varje projekt.
 * Optimera inte tidigt i utvecklingscykeln.
 * Prestanda är bara så bra som den svagaste länken.
 * Tänk alltid på kapacitet kontra volym.
@@ -200,7 +204,7 @@ Vissa regler bör beaktas vid prestandaoptimering:
 >
 >Tänk på att den mekanism du använder för att mäta prestanda ofta kommer att påverka exakt det du försöker mäta. Du bör alltid försöka ta hänsyn till dessa skillnader och eliminera så mycket av deras effekt som möjligt. särskilt bör webbläsarplugin-program avaktiveras när det är möjligt.
 
-## Konfigurera för prestanda {#configuring-for-performance}
+## Konfigurerar för prestanda {#configuring-for-performance}
 
 Vissa aspekter av CQ (och/eller den underliggande CRX) kan konfigureras för att optimera prestanda. Följande är möjligheter och förslag. Du måste veta om, eller hur, du använder funktionerna i fråga innan du gör några ändringar.
 
@@ -217,7 +221,7 @@ Den uppdaterade indexeringsinformationen finns här:
 * [Metodtips för frågor och indexering](/help/sites-deploying/best-practices-for-queries-and-indexing.md)
 * [Frågor och indexering](/help/sites-deploying/queries-and-indexing.md)
 
-### Samtidig bearbetning av arbetsflöden {#concurrent-workflow-processing}
+### Samtidig bearbetning av arbetsflöde {#concurrent-workflow-processing}
 
 Begränsa antalet arbetsflödesprocesser som körs samtidigt för att förbättra prestandan. Som standard bearbetar arbetsflödesmotorn så många arbetsflöden parallellt som det finns processorer tillgängliga för Java VM. När arbetsflödessteg kräver stora mängder bearbetningsresurser (RAM eller CPU) kan flera av dessa arbetsflöden parallellt placera höga krav på tillgängliga serverresurser.
 
@@ -226,21 +230,21 @@ När bilder (eller DAM-resurser i allmänhet) överförs, importeras bilderna au
 Arbetsflödesmotorn använder Apache Sling-jobbköer för hantering och schemaläggning av bearbetning av arbetsobjekt. Följande jobbkötjänster har skapats som standard från tjänsten Apache Sling Job Queue Configuration för bearbetning av arbetsflödesjobb:
 
 * Begränsa arbetsflödeskö: De flesta arbetsflödesstegen, till exempel de som bearbetar DAM-resurser, använder tjänsten Begränsa arbetsflödeskö.
-* Begränsa arbetsflöde för extern processjobbkö: Den här tjänsten används för särskilda externa arbetsflödessteg som vanligtvis används för att kontakta ett externt system och avfråga resultat. Exempel: InDesign Media Extraction Process-steget implementeras som en extern process. Arbetsflödesmotorn använder den externa kön för att bearbeta avsökningen. (Se [com.day.cq.workflow.exec.WorkflowExternalProcess](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/exec/WorkflowExternalProcess.html).)
+* Begränsa arbetsflöde för extern processjobbkö: Den här tjänsten används för särskilda externa arbetsflödessteg som vanligtvis används för att kontakta ett externt system och avfråga resultat. InDesign Media Extraheringsprocess-steget implementeras till exempel som en extern process. Arbetsflödesmotorn använder den externa kön för att bearbeta avsökningen. (Se [com.day.cq.workflow.exec.WorkflowExternalProcess](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/exec/WorkflowExternalProcess.html).)
 
 Konfigurera de här tjänsterna för att begränsa antalet arbetsflödesprocesser som körs samtidigt.
 
-**Obs!** När du konfigurerar dessa jobbköer påverkas alla arbetsflöden såvida du inte har skapat en jobbkö för en viss arbetsflödesmodell (se [Konfigurera kön för en viss arbetsflödesmodell](/help/sites-deploying/configuring-performance.md#configure-the-queue-for-a-specific-workflow) nedan).
+**Obs!Om du** konfigurerar dessa jobbköer påverkas alla arbetsflöden såvida du inte har skapat en jobbkö för en viss arbetsflödesmodell (se  [Konfigurera kön för en viss ](/help/sites-deploying/configuring-performance.md#configure-the-queue-for-a-specific-workflow) arbetsflödesmodell nedan).
 
 **Konfiguration i databasen**
 
-Om du konfigurerar tjänsterna [med en sling:OsgiConfig-nod](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository)måste du hitta PID:t för de befintliga tjänsterna, till exempel: org.apache.sling.event.job.QueueConfiguration.370aad73-d01b-4a0b-abe4-20198d85f705. Du kan identifiera ditt PID med webbkonsolen.
+Om du konfigurerar tjänsterna [med en sling:OsgiConfig-nod](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository) måste du hitta PID:t för de befintliga tjänsterna, till exempel: org.apache.sling.event.job.QueueConfiguration.370aad73-d01b-4a0b-abe4-20198d85f705. Du kan identifiera ditt PID med webbkonsolen.
 
 Du måste konfigurera egenskapen queue.maxparallel.
 
 **Konfiguration i webbkonsolen**
 
-Om du vill konfigurera de här tjänsterna [med webbkonsolen](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)letar du reda på de befintliga konfigurationsobjekten under konfigurationsfabriken för Apache Sling-jobbkön.
+Om du vill konfigurera de här tjänsterna [med webbkonsolen](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) letar du reda på de befintliga konfigurationsobjekten under konfigurationsfabriken för Apache Sling-jobbkön.
 
 Du måste konfigurera egenskapen Maximum Parallel Jobs.
 
@@ -259,9 +263,9 @@ com/adobe/granite/workflow/job/etc/workflow/models/dam/update_asset/jcr_content/
 
 Därför kan du skapa en jobbkö för ämnet som matchar jobbavsnitten i arbetsflödesmodellen. När du konfigurerar de prestandarelaterade egenskaperna för kön påverkas endast arbetsflödesmodellen som genererar jobben som matchar köavsnittet.
 
-Följande procedur skapar en jobbkö för ett arbetsflöde med arbetsflödet [!UICONTROL DAM-uppdatering av resurser] som exempel.
+Följande procedur skapar en jobbkö för ett arbetsflöde och använder arbetsflödet [!UICONTROL DAM Update Asset] som exempel.
 
-1. Kör arbetsflödesmodellen som du vill skapa jobbkön för så att ämnesstatistik genereras. Lägg till exempel till en bild i Resurser för att köra arbetsflödet [!UICONTROL DAM Update Asset] .
+1. Kör arbetsflödesmodellen som du vill skapa jobbkön för så att ämnesstatistik genereras. Lägg till exempel till en bild i Resurser för att köra arbetsflödet [!UICONTROL DAM Update Asset].
 1. Öppna Sling Jobs-konsolen. ([http://localhost:4502/system/console/slingevent](http://localhost:4502/system/console/slingevent))
 1. Identifiera arbetsflödesrelaterade ämnen i konsolen. Följande avsnitt finns för DAM Update Asset:
 
@@ -275,9 +279,9 @@ Följande procedur skapar en jobbkö för ett arbetsflöde med arbetsflödet [!U
 
 ### CQ5 DAM Asset Synchronization Service {#cq-dam-asset-synchronization-service}
 
-Den `AssetSynchronizationService` används för att synkronisera resurser från monterade databaser (inklusive LiveLink, Documentum, bland annat). Som standard utförs en vanlig kontroll var 300:e sekund (5 minuter), så om du inte använder monterade databaser kan du inaktivera den här tjänsten.
+`AssetSynchronizationService` används för att synkronisera resurser från monterade databaser (inklusive LiveLink, Documentum, bland annat). Som standard utförs en vanlig kontroll var 300:e sekund (5 minuter), så om du inte använder monterade databaser kan du inaktivera den här tjänsten.
 
-Detta görs genom [att konfigurera OSGi-tjänsten](/help/sites-deploying/configuring-osgi.md) **CQ DAM Asset Synchronization Service** för att ange **Synkroniseringsperioden** ( `scheduler.period`) till (minst) 1 år (anges i sekunder).
+Detta görs genom att [konfigurera OSGi-tjänsten](/help/sites-deploying/configuring-osgi.md) **CQ DAM Asset Synchronization Service** för att ställa in **synkroniseringsperioden** ( `scheduler.period`) till (minst 1 år (definieras i sekunder).
 
 ### Flera DAM-instanser {#multiple-dam-instances}
 
@@ -295,9 +299,9 @@ Ytterligare överväganden är:
 
 Prestanda är av stor betydelse för er publiceringsmiljö. Därför måste du planera och analysera prestandatesterna noga för publiceringsmiljön när du implementerar projektet.
 
-Detta avsnitt syftar till att ge en standardiserad översikt över problemen med att definiera ett testkoncept specifikt för prestandatester i din *publiceringsmiljö* . Detta är främst av intresse för kvalitetstekniker, projektledare och systemadministratörer.
+Det här avsnittet syftar till att ge en standardiserad översikt över problemen med att definiera ett testkoncept specifikt för prestandatester i din *publicerings*-miljö. Detta är främst av intresse för kvalitetstekniker, projektledare och systemadministratörer.
 
-Nedan beskrivs en standardiserad metod för prestandatester för ett CQ-program i *publiceringsmiljön* . Detta omfattar följande fem faser:
+Nedan beskrivs en standardiserad metod för prestandatester för ett CQ-program i *publiceringsmiljön*. Detta omfattar följande fem faser:
 
 * [Kunskapsverifiering](#verification-of-knowledge)
 * [Definition av tillämpningsområde](#scope-definition)
@@ -307,7 +311,7 @@ Nedan beskrivs en standardiserad metod för prestandatester för ett CQ-program 
 
 Kontrollen är en extra, heltäckande process - nödvändig men inte begränsad till testning.
 
-### Kunskapsverifiering {#verification-of-knowledge}
+### Verifiering av kunskap {#verification-of-knowledge}
 
 Ett första steg är att dokumentera den grundläggande information som du behöver känna till innan du kan börja testa:
 
@@ -326,7 +330,7 @@ Om du vill få en tydlig översikt kan du skapa en karta över hela programmet (
 
 En diagramrepresentation av applikationens interna delar kan ge en översikt över testkraven. med färgkodning kan den också fungera som grund för rapporter.
 
-### Omfattningsdefinition {#scope-definition}
+### Scope-definition {#scope-definition}
 
 Ett program har vanligtvis ett urval av användningsfall. Vissa kommer att vara mycket viktiga, andra mindre viktiga.
 
@@ -353,7 +357,7 @@ Det här konceptet har fyra scenarier som används för att definiera och testa 
 
 * Enkomponentstester
 * Kombinerade komponenttester
-* *Går live* -scenario
+* *Going* Livescenario
 * Felscenarier
 
 Baserat på följande principer.
@@ -367,7 +371,7 @@ Baserat på följande principer.
 
 **Transaktioner**
 
-* Termen transaktion används för att representera begäran om en hel webbsida, inklusive själva sidan och alla efterföljande anrop. dvs. sidförfrågan, eventuella AJAX-anrop, bilder och andra objekt.**Begär detaljgranskning nedåt**
+* Termen transaktion används för att representera begäran om en hel webbsida, inklusive själva sidan och alla efterföljande anrop. dvs. sidförfrågan, eventuella AJAX anrop, bilder och andra objekt.**Begär detaljgranskning nedåt**
 * Om du vill analysera varje begäran fullständigt kan du representera varje element i anropsstacken och sedan summera den genomsnittliga bearbetningstiden för varje.
 
 ### Definiera prestandamål {#defining-the-performance-goals}
@@ -387,11 +391,11 @@ I båda fallen kan du definiera det förväntade antalet transaktioner per sekun
 | Komponent | Testtyp | #Användare | Tx/sek (förväntas) | Tx/sek (testad) | Beskrivning |
 |---|---|---|---|---|---|
 | Startsida - en användare | Medel | 1 | 1 |  |  |
-|  | Toppvärde | 1 | 3 |  |  |
-| Startsida 100 användare | Medel | 100 | 3 |  |  |
-|  | Toppvärde | 100 | 3 |  |
+|  | Toppvärde | 3 | 3 |  |  |
+| Startsida 100 användare | Medel | 100 | 1 |  |  |
+|  | Toppvärde | 100 | 1 |  |
 
-#### Komponenttester {#combined-component-tests}
+#### Kombinerade komponenttester {#combined-component-tests}
 
 Genom att testa komponenterna i kombination får du en närmare bild av hur programmen fungerar. Även här måste man testa genomsnittliga och högsta förhållanden.
 
@@ -401,14 +405,14 @@ Genom att testa komponenterna i kombination får du en närmare bild av hur prog
 |  | Sökning | 10 | 1 |  |  |
 |  | Nyheter | 10 | 2 |  |  |
 |  | Händelser | 10 | 1 |  |  |
-|  | Aktiveringar | 10 | 3 |  | Simulering av författarbeteende. |
+|  | Aktiveringar | 10 | 1 |  | Simulering av författarbeteende. |
 | Blandad topp | Hemsida | 100 | 5 |  |  |
 |  | Sökning | 50 | 5 |  |  |
 |  | Nyheter | 100 | 10 |  |  |
 |  | Händelser | 100 | 10 |  |  |
 |  | Aktiveringar | 20 | 20 |  | Simulering av författarbeteende. |
 
-#### Pågående direkttester {#going-live-tests}
+#### Går igenom direkttester {#going-live-tests}
 
 Under de första dagarna efter det att webbplatsen har tillgängliggjorts kan du förvänta dig ett ökat intresse. Detta kommer förmodligen att vara ännu större än de toppvärden som du har testat för. Vi rekommenderar att du testar Going Live-scenarier för att se till att systemet klarar detta.
 
@@ -422,7 +426,7 @@ Under de första dagarna efter det att webbplatsen har tillgängliggjorts kan du
 
 #### Felscenariotest {#error-scenario-tests}
 
-Felscenarier måste också testas för att säkerställa att systemet reagerar korrekt och korrekt. Inte bara hur själva felet hanteras, utan även hur det kan påverka prestandan. Exempel:
+Felscenarier måste också testas för att säkerställa att systemet reagerar korrekt och korrekt. Inte bara hur själva felet hanteras, utan även hur det kan påverka prestandan. Till exempel:
 
 * vad som händer när användaren försöker ange ett ogiltigt sökord i sökrutan
 * vad som händer när söktermen är så allmän att den returnerar ett stort antal resultat
@@ -434,19 +438,19 @@ När man utformar dessa tester bör man komma ihåg att inte alla scenarier komm
 | Överlagring av sökkomponent | Sök på globalt jokertecken (asterisk) | 10 | 1 |  | Endast &amp;stämpel;ast;&amp;ast;&amp;ast; söks igenom. |
 |  | Stoppord | 20 | 2 |  | Söker efter ett stoppord. |
 |  | Tom sträng | 10 | 1 |  | Söker efter en tom sträng. |
-|  | Specialtecken | 10 | 1 |  | Söker efter specialtecken. |
+|  | Specialtecken | 10 | 3 |  | Söker efter specialtecken. |
 
-#### Bevarandetester {#endurance-tests}
+#### Bevarandetest {#endurance-tests}
 
 Vissa problem kommer inte att uppstå förrän systemet har körts under en kontinuerlig period. det är timmar eller till och med dagar. En uthållighetsprovning används för att testa en konstant genomsnittlig belastning under en viss tidsperiod. Alla prestandaförsämringar kan sedan analyseras.
 
 | Scenario | Testtyp | #Användare | Tx/sek (förväntas) | Tx/sek (testad) | Beskrivning |
 |---|---|---|---|---|---|
 | Varaktighetsprovning (72 timmar) | Hemsida | 10 | 1 |  |  |
-|  | Sökning | 10 | 1 |  |  |
+|  | Sökning | 10 | 3 |  |  |
 |  | Nyheter | 20 | 2 |  |  |
 |  | Händelser | 10 | 1 |  |  |
-|  | Aktiveringar | 1 | 3 |  | Simulering av författarbeteende. |
+|  | Aktiveringar | 1 | 1 |  | Simulering av författarbeteende. |
 
 ### Optimering {#optimization}
 
@@ -461,7 +465,7 @@ Det finns ett urval verktyg som kan hjälpa dig med lastgenerering, prestandaöv
 
 * [JMeter](https://jakarta.apache.org/jmeter/)
 * [Load Runner](https://www.microfocus.com/en-us/products/loadrunner-load-testing/overview)
-* [Determiner](https://www.determyne.com/) InsideApps
+* [](https://www.determyne.com/) DetermineInsideApps
 * [InfraRED](https://www.infraredsoftware.com/)
 * [Java Interactive Profile](https://jiprof.sourceforge.net/)
 * många fler...
@@ -481,11 +485,11 @@ När alla tester är klara vill du rapportera om:
 
 ## Optimera prestanda när du använder Dispatcher {#optimizing-performance-when-using-the-dispatcher}
 
-Dispatcher [är](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html) Adobes verktyg för cachelagring och/eller belastningsutjämning. När du använder Dispatcher bör du överväga att optimera webbplatsen för cacheprestanda.
+[Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html) är Adobe-cachning och/eller belastningsutjämningsverktyg. När du använder Dispatcher bör du överväga att optimera webbplatsen för cacheprestanda.
 
 >[!NOTE]
 >
->Dispatcher-versionerna är oberoende av AEM, men Dispatcher-dokumentationen är inbäddad i AEM-dokumentationen. Använd alltid Dispatcher-dokumentationen som är inbäddad i dokumentationen för den senaste versionen av AEM.
+>Dispatcher-versionerna är oberoende av AEM, men Dispatcher-dokumentationen är inbäddad i AEM. Använd alltid Dispatcher-dokumentationen som är inbäddad i dokumentationen för den senaste versionen av AEM.
 >
 >Du kan ha omdirigerats till den här sidan om du har följt en länk till Dispatcher-dokumentationen som är inbäddad i dokumentationen för en tidigare version av AEM.
 
@@ -497,6 +501,7 @@ Dispatcher har ett antal inbyggda funktioner som du kan använda för att optime
 >
 >* kan cachelagra allt som du kan lagra som en sida och begära med en URL
 >* kan inte lagra andra saker, som cookies, sessionsdata och formulärdata.
+
 >
 >
 I allmänhet handlar många cachelagringsstrategier om att välja bra URL:er och inte förlita sig på dessa ytterligare data.
@@ -504,19 +509,19 @@ I allmänhet handlar många cachelagringsstrategier om att välja bra URL:er och
 >Med Dispatcher version 4.1.11 kan du även cachelagra svarshuvuden, se [Cachelagra HTTP-svarshuvuden](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache).
 
 
-### Beräkna Dispatcher-cachens proportioner {#calculating-the-dispatcher-cache-ratio}
+### Beräknar Dispatcher-cacheförhållandet {#calculating-the-dispatcher-cache-ratio}
 
 Cachekvotsformeln uppskattar procentandelen begäranden som hanteras av cachen av det totala antalet begäranden som kommer in i systemet. För att beräkna cachekvoten behöver du följande:
 
-* Totalt antal begäranden. Den här informationen finns i Apache `access.log`. Mer information finns i den [officiella Apache-dokumentationen](https://httpd.apache.org/docs/2.4/logs.html#accesslog).
+* Totalt antal begäranden. Den här informationen finns i Apache `access.log`. Mer information finns i [den officiella Apache-dokumentationen](https://httpd.apache.org/docs/2.4/logs.html#accesslog).
 
-* Antalet begäranden som den publicerade instansen betjänade. Den här informationen är tillgänglig i `request.log` instansens namn. Mer information finns i [Tolka request.log](/help/sites-deploying/monitoring-and-maintaining.md#interpreting-the-request-log) och [Hitta loggfilerna](/help/sites-deploying/monitoring-and-maintaining.md#finding-the-log-files).
+* Antalet begäranden som den publicerade instansen betjänade. Den här informationen är tillgänglig i `request.log` för instansen. Mer information finns i [Tolka request.log](/help/sites-deploying/monitoring-and-maintaining.md#interpreting-the-request-log) och [Söka efter loggfiler](/help/sites-deploying/monitoring-and-maintaining.md#finding-the-log-files).
 
 Formeln för beräkning av cacheförhållandet är:
 
 * (Det totala antalet begäranden **minus** antalet begäranden vid publicering) **delat** med det totala antalet begäranden.
 
-Om det totala antalet begäranden till exempel är 129491 och antalet begäranden som hanteras av Publish-instansen är 58959 är cachekvoten: **(129491 - 58959)/129491= 54,5%**.
+Om det totala antalet begäranden till exempel är 129491 och antalet begäranden som hanteras av Publish-instansen är 58959 är cachekvoten: **(129491 - 58959)/129491= 54,5 %**.
 
 Om du inte har en till en utgivare/utgivare måste du lägga ihop förfrågningar från alla utgivare och utgivare för att få en korrekt mätning. Se även [Rekommenderade distributioner](/help/sites-deploying/recommended-deploys.md).
 
@@ -528,8 +533,8 @@ Om du inte har en till en utgivare/utgivare måste du lägga ihop förfrågninga
 
 Med Dispatcher version 4.1.11 kan du cachelagra svarshuvuden. Om du inte cachelagrar svarshuvuden i Dispatcher kan problem uppstå om du lagrar sidkodningsinformation i sidhuvudet. I det här fallet används webbserverns standardkodning för sidan när Dispatcher visar en sida från cachen. Det finns två sätt att undvika det här problemet:
 
-* Om du bara använder en kodning kontrollerar du att kodningen som används på webbservern är densamma som standardkodningen på AEM-webbplatsen.
-* Använd en `<META>` -tagg i HTML- `head` avsnittet för att ställa in kodningen, som i följande exempel:
+* Om du bara använder en kodning kontrollerar du att den kodning som används på webbservern är densamma som standardkodningen för den AEM webbplatsen.
+* Använd en `<META>`-tagg i avsnittet HTML `head` för att ställa in kodningen, som i följande exempel:
 
 ```xml
         <META http-equiv="Content-Type" content="text/html; charset=EUC-JP">
@@ -537,7 +542,7 @@ Med Dispatcher version 4.1.11 kan du cachelagra svarshuvuden. Om du inte cachela
 
 #### Undvik URL-parametrar {#avoid-url-parameters}
 
-Undvik om möjligt URL-parametrar för sidor som du vill cachelagra. Om du till exempel har ett bildgalleri cachelagras aldrig följande URL (såvida inte Dispatcher har [konfigurerats korrekt](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache)):
+Undvik om möjligt URL-parametrar för sidor som du vill cachelagra. Om du till exempel har ett bildgalleri cachelagras aldrig följande URL (såvida inte Dispatcher är [konfigurerad därefter](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache)):
 
 ```xml
 www.myCompany.com/pictures/gallery.html?event=christmas&amp;page=1
@@ -575,7 +580,7 @@ www.myCompany.com/news/main.large.html
 >
 >Med hjälp av skriptordlistan för malldefinitionen kan du ange ett separat skript som återger utskriftssidorna.
 
-#### Invaliderar bildfiler som används som titlar {#invalidating-image-files-used-as-titles}
+#### Ogiltiga bildfiler som används som titlar {#invalidating-image-files-used-as-titles}
 
 Om du återger sidrubriker, eller annan text, som bilder bör du lagra filerna så att de tas bort vid en innehållsuppdatering på sidan:
 
@@ -588,7 +593,7 @@ Du kan till exempel lagra titeln för sidan myPage.html i filen myPage.title.gif
 
 >[!NOTE]
 >
->Bildfilen finns inte nödvändigtvis fysiskt på AEM-instansen. Du kan använda ett skript som skapar bildfilen dynamiskt. Dispatcher lagrar sedan filen på webbservern.
+>Bildfilen finns inte nödvändigtvis fysiskt på AEM. Du kan använda ett skript som skapar bildfilen dynamiskt. Dispatcher lagrar sedan filen på webbservern.
 
 #### Ogiltiga bildfiler som används för navigering {#invalidating-image-files-used-for-navigation}
 
@@ -617,13 +622,14 @@ Dispatcher kan inte cachelagra anpassade data, så vi rekommenderar att du begr�
 >
 >* Använd iFrames för att dela upp sidan i en del som är densamma för alla användare och en del som är densamma för alla sidor i användaren. Du kan sedan cachelagra båda dessa delar.
 >* använda JavaScript på klientsidan för att visa personlig information. Du måste dock se till att sidan fortfarande visas korrekt om en användare stänger av JavaScript.
+
 >
 
 
 
-#### Fästiga anslutningar {#sticky-connections}
+#### Sticky Connections {#sticky-connections}
 
-[Antikiga anslutningar](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html#the-benefits-of-load-balancing) säkerställer att dokumenten för en användare finns på samma server. Om en användare lämnar den här mappen och senare återgår till den, stannar anslutningen fortfarande kvar. Definiera en mapp för alla dokument som kräver klisterlappar för webbplatsen. Försök att inte ha med andra dokument i den. Detta påverkar belastningsutjämningen om du använder personaliserade sidor och sessionsdata.
+[Anteckningar ](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html#the-benefits-of-load-balancing) gör att dokumenten för en användare kan sammanställas på samma server. Om en användare lämnar den här mappen och senare återgår till den, stannar anslutningen fortfarande kvar. Definiera en mapp för alla dokument som kräver klisterlappar för webbplatsen. Försök att inte ha med andra dokument i den. Detta påverkar belastningsutjämningen om du använder personaliserade sidor och sessionsdata.
 
 #### MIME-typer {#mime-types}
 
@@ -639,7 +645,7 @@ För de flesta filer används MIME-typen i filtillägget. i.e.:
 
 Om filnamnet inte har något filtillägg visas det som oformaterad text.
 
-Med Dispatcher version 4.1.11 kan du cachelagra svarshuvuden. Om du inte cachelagrar svarshuvuden på Dispatcher bör du vara medveten om att MIME-typen är en del av HTTP-huvudet. Om ditt AEM-program returnerar filer som inte har ett känt filslut, och i stället använder MIME-typen, kan dessa filer visas felaktigt.
+Med Dispatcher version 4.1.11 kan du cachelagra svarshuvuden. Om du inte cachelagrar svarshuvuden på Dispatcher bör du vara medveten om att MIME-typen är en del av HTTP-huvudet. Om ditt AEM returnerar filer som inte har ett känt filslut, och i stället använder MIME-typen, kan dessa filer visas felaktigt.
 
 Följ dessa riktlinjer för att vara säker på att filerna cachelagras korrekt:
 
@@ -682,7 +688,7 @@ Följande tabell visar storleken på datavolymer som används i prestandatestern
   </tr>
   <tr>
    <td>Grundinstallation</td>
-   <td>69,610</td>
+   <td>69 610</td>
    <td>562</td>
    <td>256</td>
    <td>237</td>
@@ -697,36 +703,36 @@ Följande tabell visar storleken på datavolymer som används i prestandatestern
   <tr>
    <td>Stort innehåll för fullständig säkerhetskopiering</td>
    <td><br type="_moz" /> </td>
-   <td>+10,000</td>
+   <td>+10 000</td>
    <td>+100</td>
    <td>+100</td>
   </tr>
  </tbody>
 </table>
 
-Prestandatestvärdet för säkerhetskopiering upprepas med ytterligare innehållsuppsättningar som läggs till vid varje repetition.
+Prestandatestvärdet för säkerhetskopiering upprepas med ytterligare innehållsuppsättningar som läggs till vid varje upprepning.
 
 #### Benchmark-scenarier {#benchmark-scenarios}
 
 Referensvärdena för säkerhetskopiering omfattar två huvudscenarier: säkerhetskopieringar när systemet är under stor programbelastning och säkerhetskopieringar när systemet är ledigt. Även om den allmänna rekommendationen är att säkerhetskopieringar ska utföras när CQ-systemet är så inaktivt som möjligt, finns det situationer där det är nödvändigt att säkerhetskopieringen måste köras när systemet är under laddning.
 
-**Säkerhetskopiering av vänteläge** utförs utan någon annan aktivitet på CQ.
+**Inaktiv** StateBackups utförs utan någon annan aktivitet på CQ.
 
-**Under Load** Backups utförs medan systemet är under 80 % inläst från onlineprocesser. Fördröjningen för säkerhetskopiering varierade för att se effekten på inläsningen.
+**Under** LoadBackups utförs medan systemet är mindre än 80 % inläst från onlineprocesser. Fördröjningen för säkerhetskopiering varierade för att se effekten på inläsningen.
 
 Tidpunkter för säkerhetskopiering och storlek för säkerhetskopieringen hämtas från CQ-serverloggarna. Det rekommenderas normalt att säkerhetskopieringar schemaläggs i fel tider när CQ är ledig, till exempel mitt i natten. Detta scenario är representativt för den rekommenderade metoden.
 
 Inläsningen består av sidor som skapar/tar bort, bläddrar och frågor där större delen av inläsningen kommer från sidbläddringar och frågor. Om du lägger till och tar bort för många sidor ökar arbetsytans storlek kontinuerligt och förhindrar att säkerhetskopiorna slutförs. Distributionen av den last som skriptet ska använda är 75 % sidöverföringar, 24 % frågor och 1 % sidskapande (en nivå utan kapslade undersidor). Maximalt medelvärde för transaktioner per sekund i ett system som är inaktivt uppnås med fyra samtidiga trådar, vilket är vad som kommer att användas vid testning av säkerhetskopior under inläsning.
 
-Inläsningens inverkan på säkerhetskopieringsprestanda kan uppskattas av skillnaden mellan prestanda med och utan den här programinläsningen. Effekten av säkerhetskopieringen på programmets dataflöde hittas genom att man jämför scenariogenomströmningen i transaktioner per timme med och utan en pågående samtidig säkerhetskopiering och med säkerhetskopieringar som körs med olika inställningar för fördröjning av säkerhetskopiering.
+Inläsningens inverkan på säkerhetskopieringsprestanda kan uppskattas av skillnaden mellan prestanda med och utan den här programinläsningen. Effekten av säkerhetskopieringen på programmets dataflöde hittas genom att man jämför scenariogenomströmningen i transaktioner per timme med och utan en pågående säkerhetskopiering, och med säkerhetskopieringar som körs med olika inställningar för fördröjning av säkerhetskopiering.
 
-**Fördröjningsinställning** För flera av scenarierna varierade vi även fördröjningsinställningen för säkerhetskopiering med värden på 10 ms (standard), 1 ms och 0 ms, för att undersöka hur den här inställningen påverkade säkerhetskopieringens prestanda.
+**Fördröjningsinställning** För flera scenarier varierade vi även fördröjningsinställningen för säkerhetskopiering med värden på 10 ms (standard), 1 ms och 0 ms, för att undersöka hur den här inställningen påverkade säkerhetskopieringens prestanda.
 
 **Säkerhetskopieringstyp** Alla säkerhetskopior var externa säkerhetskopior av databasen som gjorts till en säkerhetskopieringskatalog utan att skapa en zip, förutom i ett fall där tjärkommandot användes direkt. Eftersom det inte går att skapa stegvisa säkerhetskopieringar till en zip-fil, eller när den tidigare fullständiga säkerhetskopieringen är en zip-fil, är säkerhetskopieringskatalogmetoden den metod som oftast används i produktionssituationer.
 
 ### Sammanfattning av resultat {#summary-of-results}
 
-#### Tid och fel för säkerhetskopiering {#backup-time-and-troughput}
+#### Säkerhetskopieringstid och felsökning {#backup-time-and-troughput}
 
 Det främsta resultatet av dessa prestandatester är att visa hur tiden för säkerhetskopiering varierar beroende på säkerhetskopieringstyp och total datamängd. I följande diagram visas säkerhetskopieringstiden som hämtats med standardkonfigurationen för säkerhetskopiering, som en funktion av det totala antalet sidor.
 
