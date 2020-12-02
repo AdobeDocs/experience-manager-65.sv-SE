@@ -10,6 +10,9 @@ topic-tags: correspondence-management
 discoiquuid: 1291b395-a981-4ef9-b4f0-c0d3026c5f19
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '228'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ Correspondence Management centraliserar och hanterar framtagning, sammanställni
 
 ## Fördelar {#benefits}
 
-### Effektivt och produktivt {#efficient-and-productive}
+### Effektiv och produktiv {#efficient-and-productive}
 
 Det effektiviserar bearbetningen så att du kan:
 
@@ -43,6 +46,6 @@ Den ger högklassig kommunikation som gör att du kan:
 Det förbättrar kundengagemanget och gör att ni kan:
 
 * Lägg till interaktiva tekniker för att möjliggöra en tvåvägskanal och minska mängden papper som skickas in
-* Skydda känslig information med dokumentsäkerhet från början till slut
+* Protect-känslig information med inbyggd, komplett dokumentsäkerhet
 * Skicka korrespondens via den kommunikationskanal kunden föredrar, oavsett om det är e-post, mobil eller fax.
 
