@@ -12,6 +12,9 @@ discoiquuid: b657f95d-7be3-4409-a31b-d47fb2bfa550
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 4dc4a518c212555b7833ac27de02087a403d3517
+workflow-type: tm+mt
+source-wordcount: '264'
+ht-degree: 24%
 
 ---
 
@@ -20,17 +23,17 @@ source-git-commit: 4dc4a518c212555b7833ac27de02087a403d3517
 
 Med komponentkonsolen kan du bläddra igenom alla komponenter som definierats för instansen och visa nyckelinformation för varje komponent.
 
-Den finns under **Verktyg ->** Allmänt -> **** Komponenter ****. I konsolen är kort- och listvyn tillgängliga. Eftersom det inte finns någon trädstruktur för komponenter är kolumnvyn inte tillgänglig.
+Den finns under **Verktyg ->** **Allmänt ->** **Komponenter**. I konsolen finns kortvyn och listvyn. Eftersom det inte finns någon trädstruktur för komponenter är kolumnvyn inte tillgänglig.
 
 ![screen-shot_2019-03-05at113145](assets/screen-shot_2019-03-05at113145.png)
 
 >[!NOTE]
 >
->Komponentkonsolen visar alla komponenter i systemet. I [komponentwebbläsaren](/help/sites-authoring/author-environment-tools.md#components-browser) visas komponenter som är tillgängliga för författare och alla komponentgrupper som börjar med en punkt ( `.`) döljs.
+>Komponentkonsolen visar alla komponenter i systemet. [Komponentbläddraren](/help/sites-authoring/author-environment-tools.md#components-browser) visar komponenter som är tillgängliga för författare och döljer komponentgrupper som börjar med en punkt ( `.`).
 
-## Sök {#searching}
+## Sökning {#searching}
 
-Med ikonen Endast **** innehåll (överst till vänster) kan du öppna **sökpanelen** och söka efter och/eller filtrera komponenterna:
+Med ikonen **Endast innehåll** (överst till vänster) kan du öppna **sökpanelen** och söka efter och/eller filtrera komponenterna:
 
 ![screen-shot_2019-03-05at113251](assets/screen-shot_2019-03-05at113251.png)
 
@@ -45,10 +48,10 @@ Om du vill visa information om en viss komponent trycker/klickar du på den nöd
    På fliken Egenskaper kan du:
 
    * Visa komponentens allmänna egenskaper.
-   * Visa hur [ikonen eller förkortningen har definierats](/help/sites-developing/components-basics.md#component-icon-in-touch-ui) för komponenten.
+   * Visa hur ikonen eller förkortningen [har definierats](/help/sites-developing/components-basics.md#component-icon-in-touch-ui) för komponenten.
 
       * Om du klickar på ikonens källa kommer du till den komponenten.
-   * Visa komponentens **resurstyp** och **resurssupertyp** (om den är definierad).
+   * Visa **Resurstyp** och **Resurssupertyp** (om den är definierad) för komponenten.
 
       * Om du klickar på Resurssupertypen kommer du till den komponenten.
    >[!NOTE]
@@ -69,7 +72,7 @@ Om du vill visa information om en viss komponent trycker/klickar du på den nöd
 
 * **Dokumentation**
 
-   Om utvecklaren har tillhandahållit [dokumentation för komponenten](/help/sites-developing/developing-components.md#documenting-your-component)visas den på fliken **Dokumentation** . Om det inte finns någon tillgänglig dokumentation visas inte fliken **Dokumentation** .
+   Om utvecklaren har tillhandahållit [dokumentation för komponenten](/help/sites-developing/developing-components.md#documenting-your-component) visas den på fliken **Dokumentation**. Om det inte finns någon tillgänglig dokumentation visas inte fliken **Dokumentation**.
 
    ![chlimage_1-171](assets/chlimage_1-171.png)
 
