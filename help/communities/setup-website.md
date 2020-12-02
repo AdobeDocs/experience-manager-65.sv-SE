@@ -34,7 +34,7 @@ Instruktionerna nedan beskriver mapparna som ska skapas på följande platser n�
 
    Det är här som de hämtningsbara webbsidorna finns.
 
-Koden i den här självstudien är beroende av att huvudmappnamnet är samma för programmet, designen och innehållet. Om du väljer något annat namn för webbplatsen ska du alltid ersätta `an-scf-sandbox` med det namn du har valt.
+Koden i den här självstudien är beroende av att huvudmappnamnet är samma för programmet, designen och innehållet. Om du väljer något annat namn för webbplatsen ersätter du alltid `an-scf-sandbox` med det namn du har valt.
 
 >[!NOTE]
 >
@@ -56,30 +56,30 @@ Katalogen /apps i databasen innehåller koden som implementerar beteendet och å
 
 Katalogen /apps är skyddad och inte allmänt tillgänglig, vilket är katalogerna /content och /etc/designs.
 
-1. Skapa `/apps/an-scf-sandbox` mapp.
+1. Skapa mappen `/apps/an-scf-sandbox`.
 
    Använda **[!UICONTROL CRXDE Lite]** i utforskarrutan
 
-   1. Markera `/apps` mappen.
-   1. Högerklicka **[!UICONTROL Create]**.. eller dra ned på **[!UICONTROL Create...]** menyn.
+   1. Välj mappen `/apps`.
+   1. Högerklicka på **[!UICONTROL Create]**.. eller dra ned menyn **[!UICONTROL Create...]**.
    1. Välj **[!UICONTROL Create Folder...]**.
-   1. In the **[!UICONTROL Create Folder]** dialog, enter `an-scf-sandbox`.
+   1. I dialogrutan **[!UICONTROL Create Folder]** anger du `an-scf-sandbox`.
    1. Klicka på **[!UICONTROL OK]**.
 
-1. Skapa **[!UICONTROL components]** undermapp.
+1. Skapa undermappen **[!UICONTROL components]**.
 
-   1. Markera `/apps/an-scf-sandbox` mappen.
+   1. Välj mappen `/apps/an-scf-sandbox`.
    1. Klicka på **[!UICONTROL Create > Create Folder]**.
-   1. In the **[!UICONTROL Create Folder]** dialog, enter **[!UICONTROL components]**.
+   1. I dialogrutan **[!UICONTROL Create Folder]** anger du **[!UICONTROL components]**.
    1. Klicka på **[!UICONTROL OK]**.
 
-1. Skapa **[!UICONTROL templates]** undermapp.
+1. Skapa undermappen **[!UICONTROL templates]**.
 
-   1. Markera `/apps/an-scf-sandbox` mappen.
+   1. Välj mappen `/apps/an-scf-sandbox`.
    1. Klicka på **[!UICONTROL Create > Create Folder]**.
-   1. In the **[!UICONTROL Create Folder]** dialog, enter **[!UICONTROL templates]**.
+   1. I dialogrutan **[!UICONTROL Create Folder]** anger du **[!UICONTROL templates]**.
    1. Klicka på **[!UICONTROL OK]**.
-   1. Markera igen `/apps/an-scf-sandbox`.
+   1. Välj `/apps/an-scf-sandbox` igen.
    1. Välj **[!UICONTROL Save All]**.
 
    Spara ofta, precis som med andra redigeringsprocesser. Om du får problem med att ange data kan det bero på att tidsgränsen för inloggningen har överskridits eller på att du måste spara tidigare redigeringar.
@@ -94,9 +94,9 @@ Katalogen /etc/designs innehåller de bilder, skript och formatmallar som ska h�
 
 1. Om du vill använda verktyget Designer i det klassiska användargränssnittet går du till [https://&lt;server>:&lt;port>/miscadmin](http://localhost:4502/miscadmin).
 
-   Obs! Om du använder CRXDE Lite för att skapa en nod av typen `cq:Page`ställs åtkomstkontroll och replikering inte in på standardinställningar för en sida.
+   Obs! Om du använder CRXDE Lite för att skapa en nod av typen `cq:Page` kommer åtkomstkontroll och replikering inte att anges som standardinställningar för en sida.
 
-1. Markera **[!UICONTROL Designs]** mappen i Utforskarfönstret och klicka sedan på **[!UICONTROL New]** > **[!UICONTROL New Page]**.
+1. Markera mappen **[!UICONTROL Designs]** i Utforskarfönstret och klicka sedan på **[!UICONTROL New]** > **[!UICONTROL New Page]**.
 
    Ange:
 
@@ -120,4 +120,4 @@ Katalogen /etc/designs innehåller de bilder, skript och formatmallar som ska h�
 
 Katalogen /content i databasen är den plats där webbplatsinnehållet finns. Sökvägarna under /content utgör sökvägarna till webbadressen för webbläsarbegäranden.
 
-*När* [sidmallen](initial-app.md#createthepagetemplate) har skapats som en del av det inledande programmet kan det inledande sidinnehållet skapas baserat på mallen.... [**Mama**](initial-app.md)
+** När  [sidmallarna ](initial-app.md#createthepagetemplate) har skapats som en del av det inledande programmet kan det inledande sidinnehållet skapas baserat på mallen...  [**Mama**](initial-app.md)
