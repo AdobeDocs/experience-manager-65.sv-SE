@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Adobe Sign möjliggör e-signaturarbetsflöden för anpassningsbara formulär. E-signaturer förbättrar arbetsflödena för att bearbeta dokument inom juridik, försäljning, löneadministration, personaladministration och många andra områden.
 
-I ett typiskt Adobe Sign-scenario och ett scenario med adaptiva formulär fyller en användare i ett adaptivt formulär och **ansöker om en tjänst**. Till exempel kan en kreditkortsansökan och en medborgare få förmåner. När en användare fyller i, skickar och signerar ansökningsformuläret skickas formuläret till tjänsteleverantören för ytterligare åtgärder. Tjänsteleverantören granskar programmet och använder Adobe Sign för att markera det som godkänt. För att möjliggöra liknande arbetsflöden för elektroniska signaturer kan du integrera Adobe Sign med AEM Forms.
+I ett typiskt Adobe Sign-scenario och i ett adaptivt formulärscenario fyller en användare i ett adaptivt formulär som **ska ansöka om en tjänst**. Till exempel kan en kreditkortsansökan och en medborgare få förmåner. När en användare fyller i, skickar och signerar ansökningsformuläret skickas formuläret till tjänsteleverantören för ytterligare åtgärder. Tjänsteleverantören granskar programmet och använder Adobe Sign för att markera det som godkänt. För att möjliggöra liknande arbetsflöden för elektroniska signaturer kan du integrera Adobe Sign med AEM Forms.
 
 Konfigurera Adobe Sign i AEM Cloud Services om du vill använda Adobe Sign med AEM Forms:
 
@@ -35,27 +35,27 @@ Du behöver följande för att kunna integrera Adobe Sign med AEM Forms:
 * Ett [Adobe Sign API-program](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/create_app.md).
 * Autentiseringsuppgifter (klient-ID och klienthemlighet) för Adobe Sign API-program.
 * När du konfigurerar om tar du bort den befintliga Adobe Sign-konfigurationen från både författare- och publiceringsinstanser.
-* Använd [identisk krypteringsnyckel](/help/sites-administering/security-checklist.md#make-sure-you-properly-replicate-encryption-keys-when-needed) för författare och publiceringsinstanser.
+* Använd [identisk krypteringsnyckel](/help/sites-administering/security-checklist.md#make-sure-you-properly-replicate-encryption-keys-when-needed) för författare- och publiceringsinstanser.
 
 ## Konfigurera Adobe Sign med AEM Forms {#configure-adobe-sign-with-aem-forms}
 
 När förutsättningarna är uppfyllda utför du följande steg för att konfigurera Adobe Sign med AEM Forms på Author-instansen:
 
-1. I AEM Forms-författarinstansen går du till **Tools** ![hammer](assets/hammer.png) > **General** > **Configuration Browser**.
-1. On the **[!UICONTROL Configuration Browser]** page, tap **[!UICONTROL Create]**.
-   * See the [Configuration Browser](/help/sites-administering/configurations.md) documentation for more information.
-1. I **[!UICONTROL Create Configuration]** dialogrutan anger du en **[!UICONTROL Title]** för konfigurationen, aktiverar **[!UICONTROL Cloud Configurations]** och trycker på **[!UICONTROL Create]**. Den skapar en konfigurationsbehållare för molntjänster.
-1. Navigera till **Verktyg** ![hammare](assets/hammer.png) > **Cloud Services** > **Adobe Sign** och markera den konfigurationsbehållare som du skapade i steget ovan.
+1. I AEM Forms-författarinstansen går du till **Verktyg** ![hammer](assets/hammer.png) > **Allmänt** > **Konfigurationsläsaren**.
+1. Tryck på **[!UICONTROL Create]** på sidan **[!UICONTROL Configuration Browser]**.
+   * Mer information finns i [Configuration Browser](/help/sites-administering/configurations.md)-dokumentationen.
+1. I dialogrutan **[!UICONTROL Create Configuration]** anger du **[!UICONTROL Title]** för konfigurationen, aktiverar **[!UICONTROL Cloud Configurations]** och trycker på **[!UICONTROL Create]**. Den skapar en konfigurationsbehållare för molntjänster.
+1. Navigera till **Verktyg** ![hammer](assets/hammer.png) > **Cloud Services** > **Adobe Sign** och markera konfigurationsbehållaren som du skapade i ovanstående steg.
 
    >[!NOTE]
    >
-   >Du kan antingen utföra steg 1-4 för att skapa en ny konfigurationsbehållare och skapa en Adobe Sign-konfiguration i behållaren eller använda den befintliga `global` mappen i **Verktyg** ![hammare](assets/hammer.png) > **Cloud Services** > **Adobe Sign**. Om du skapar konfigurationen i den nya konfigurationsbehållaren måste du ange behållarnamnet i **[!UICONTROL Configuration Container]** fältet när du skapar ett anpassat formulär.
+   >Du kan antingen köra steg 1-4 för att skapa en ny konfigurationsbehållare och skapa en Adobe Sign-konfiguration i behållaren eller använda den befintliga mappen `global` i **Verktyg** ![hammer](assets/hammer.png) > **Cloud Services** > **Adobe Sign**. Om du skapar konfigurationen i den nya konfigurationsbehållaren måste du ange behållarnamnet i fältet **[!UICONTROL Configuration Container]** när du skapar ett anpassat formulär.
 
    >[!NOTE]
    Kontrollera att URL:en för konfigurationssidan för molntjänster börjar med **HTTPS**. Om inte, [aktivera SSL](/help/sites-administering/ssl-by-default.md) för AEM Forms-servern.
 
-1. På konfigurationssidan trycker du på **[!UICONTROL Create]** för att skapa en Adobe Sign-konfiguration i AEM Forms.
-1. Ange ett **[!UICONTROL General]** namn **[!UICONTROL Create Adobe Sign Configuration]** för konfigurationen på **fliken** och tryck sedan på **Nästa**. Du kan också ange en titel och bläddra för att välja en miniatyrbild för konfigurationen.
+1. Tryck på **[!UICONTROL Create]** på konfigurationssidan för att skapa Adobe Sign-konfigurationen i AEM Forms.
+1. På fliken **[!UICONTROL General]** på sidan **[!UICONTROL Create Adobe Sign Configuration]** anger du ett **namn** för konfigurationen och trycker på **Nästa**. Du kan också ange en titel och bläddra för att välja en miniatyrbild för konfigurationen.
 
 1. Kopiera URL-adressen i det aktuella webbläsarfönstret till en anteckningsruta. Du måste konfigurera Adobe Sign-programmet med AEM Forms.
 
@@ -71,11 +71,11 @@ När förutsättningarna är uppfyllda utför du följande steg för att konfigu
    * widget_write
    * workflow_read
 
-   Stegvis information om hur du konfigurerar OAuth-inställningar för ett Adobe Sign-program och hämtar nycklarna finns i [Konfigurera autentiseringsinställningar för programutvecklardokumentationen](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/configure_oauth.md) .
+   Stegvis information om hur du konfigurerar OAuth-inställningar för ett Adobe Sign-program och hämtar nycklarna finns i [Konfigurera autentiseringsinställningar för programmets ](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/configure_oauth.md) utvecklardokumentation.
 
    ![OAuth-konfiguration](assets/oauthconfig_new.png)
 
-1. Gå tillbaka till sidan **Skapa Adobe Sign-konfiguration** . På **[!UICONTROL Settings]** fliken anges följande standard-URL i **[!UICONTROL OAuth URL]** fältet:
+1. Gå tillbaka till sidan **Skapa Adobe Sign-konfiguration**. På fliken **[!UICONTROL Settings]** anger fältet **[!UICONTROL OAuth URL]** följande standard-URL:
 
    https://secure.na1.echosign.com/public/oauth
 
@@ -85,19 +85,19 @@ När förutsättningarna är uppfyllda utför du följande steg för att konfigu
 
    Du kan ändra värdet för databasdelningen. Starta om servern för att kunna använda det nya värdet för databasdelningen.
 
-1. Ange **klient-ID** (kallas även program-ID) och **klienthemlighet**. Markera alternativet **Aktivera Adobe Sign för bilagor också** om du vill lägga till filer som är kopplade till ett adaptivt formulär i motsvarande Adobe Sign-dokument som skickas för signering.
+1. Ange **klient-ID** (kallas även program-ID) och **Klienthemlighet**. Markera alternativet **Aktivera Adobe Sign för bilagor även** om du vill lägga till filer som är kopplade till ett adaptivt formulär i motsvarande Adobe Sign-dokument som skickats för signering.
 
    Tryck på **[!UICONTROL Connect to Adobe Sign]**. Ange användarnamn och lösenord för kontot som används när Adobe Sign-programmet skapas när du uppmanas att ange inloggningsuppgifter.
 
-   Tryck **[!UICONTROL Create]** för att skapa Adobe Sign-konfigurationen.
+   Tryck på **[!UICONTROL Create]** för att skapa Adobe Sign-konfigurationen.
 
 1. Öppna AEM webbkonsol. URL:en är `https://'[server]:[port]'/system/console/configMgr`
 1. Öppna **Forms Common Configuration Service.**
-1. I fältet **Tillåt** **väljer** du Alla användare - Alla användare, anonyma eller inloggade, kan förhandsgranska bilagor, verifiera och signera formulär och klicka på **Spara.** Författarinstansen är konfigurerad att använda Adobe Sign.
+1. I fältet **Tillåt** **välj** Alla användare - Alla användare, anonyma eller inloggade, kan förhandsgranska bilagor, verifiera och signera formulär och klicka på **Spara.** Författarinstansen är konfigurerad att använda Adobe Sign.
 1. Publicera konfigurationen.
 1. Använd [replikering](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/configuring/replication.html) för att skapa en identisk konfiguration för motsvarande publiceringsinstanser.
 
-Nu är Adobe Sign integrerat med AEM Forms och klart att användas i anpassningsbara formulär. Om du vill [använda Adobe Sign-tjänsten i ett adaptivt formulär](../../forms/using/working-with-adobe-sign.md#configure-adobe-sign-for-an-adaptive-form)anger du den konfigurationsbehållare som skapas ovan i adaptiva formuläregenskaper.
+Nu är Adobe Sign integrerat med AEM Forms och klart att användas i anpassningsbara formulär. Om du vill [använda Adobe Sign-tjänsten i en adaptiv form](../../forms/using/working-with-adobe-sign.md#configure-adobe-sign-for-an-adaptive-form) anger du den konfigurationsbehållare som skapas ovan i adaptiva formuläregenskaper.
 
 
 
@@ -105,12 +105,12 @@ Nu är Adobe Sign integrerat med AEM Forms och klart att användas i anpassnings
 
 Ett anpassat formulär som har aktiverats av Adobe Sign skickas endast när alla signerare har slutfört signeringsprocessen. Som standard är Adobe Sign Scheduler-tjänster schemalagda att kontrollera (avfråga) signerarens svar efter 24 timmars intervall. Du kan ändra standardintervallet för din miljö. Utför följande steg för att ändra standardintervallet:
 
-1. Logga in på AEM Forms-servern med administratörsuppgifter och gå till **Verktyg** > **Åtgärder** > **Webbkonsol**.
+1. Logga in på AEM Forms-servern med administratörsuppgifter och navigera till **Verktyg** > **Åtgärder** > **Webbkonsol**.
 
    Du kan även öppna följande URL-adress i ett webbläsarfönster:
    `https://[localhost]:'port'/system/console/configMgr`
 
-1. Leta upp och öppna alternativet **Adobe Sign Configuration Service** . Ange ett [cron-uttryck](https://en.wikipedia.org/wiki/Cron#CRON_expression) i fältet **Status Update Scheduler Expression** och klicka på **Save**. Om du till exempel vill köra konfigurationstjänsten varje dag klockan 00:00 anger du `0 0 0 1/1 * ? *` i fältet **Status Update Scheduler Expression** .
+1. Leta reda på och öppna alternativet **Adobe Sign Configuration Service**. Ange ett [cron-uttryck](https://en.wikipedia.org/wiki/Cron#CRON_expression) i fältet **Schemaläggarens uttryck för statusuppdatering** och klicka på **Spara**. Om du till exempel vill köra konfigurationstjänsten varje dag kl. 00:00 anger du `0 0 0 1/1 * ? *` i fältet **Schemaläggaren för statusuppdatering**.
 
 Standardintervallet för synkroniseringsstatus för Adobe Sign har ändrats.
 
