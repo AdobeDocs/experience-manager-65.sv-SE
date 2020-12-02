@@ -1,8 +1,8 @@
 ---
 title: Arbeta med arbetsflöden
 seo-title: Arbeta med arbetsflöden
-description: Med AEM-arbetsflöden kan du automatisera en serie steg som utförs på en sida eller en resurs. Vid publicering måste till exempel en redigerare granska innehållet innan en webbplatsadministratör aktiverar sidan. Ett arbetsflöde som automatiserar det här exemplet meddelar varje deltagare när det är dags att utföra det arbete de behöver.
-seo-description: Med AEM-arbetsflöden kan du automatisera en serie steg som utförs på en sida eller en resurs. Vid publicering måste till exempel en redigerare granska innehållet innan en webbplatsadministratör aktiverar sidan. Ett arbetsflöde som automatiserar det här exemplet meddelar varje deltagare när det är dags att utföra det arbete de behöver.
+description: AEM arbetsflöden gör att du kan automatisera en serie steg som utförs på en sida eller en resurs. Vid publicering måste till exempel en redigerare granska innehållet innan en webbplatsadministratör aktiverar sidan. Ett arbetsflöde som automatiserar det här exemplet meddelar varje deltagare när det är dags att utföra det arbete de behöver.
+seo-description: AEM arbetsflöden gör att du kan automatisera en serie steg som utförs på en sida eller en resurs. Vid publicering måste till exempel en redigerare granska innehållet innan en webbplatsadministratör aktiverar sidan. Ett arbetsflöde som automatiserar det här exemplet meddelar varje deltagare när det är dags att utföra det arbete de behöver.
 uuid: 3eb6e790-6589-414a-8e51-33c358f47a73
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -20,7 +20,7 @@ ht-degree: 5%
 
 # Arbeta med arbetsflöden{#working-with-workflows}
 
-Med AEM-arbetsflöden kan du automatisera en serie steg som utförs på en sida eller en resurs. Vid publicering måste till exempel en redigerare granska innehållet innan en webbplatsadministratör aktiverar sidan. Ett arbetsflöde som automatiserar det här exemplet meddelar varje deltagare när det är dags att utföra det arbete de behöver:
+AEM arbetsflöden gör att du kan automatisera en serie steg som utförs på en sida eller en resurs. Vid publicering måste till exempel en redigerare granska innehållet innan en webbplatsadministratör aktiverar sidan. Ett arbetsflöde som automatiserar det här exemplet meddelar varje deltagare när det är dags att utföra det arbete de behöver:
 
 1. Författaren tillämpar arbetsflödet på sidan.
 1. Redigeraren får ett arbetsobjekt som anger att de måste granska sidinnehållet. När de är klara anger de att deras arbetsuppgifter är slutförda.
