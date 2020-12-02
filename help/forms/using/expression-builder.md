@@ -42,7 +42,7 @@ Här är några vanliga JSP EL-exempel som du kan använda i din Correspondence 
 
 Mer information finns i [JSP EL-specifikationen](https://download.oracle.com/otn-pub/jcp/jsp-2.1-fr-spec-oth-JSpec/jsp-2_1-fr-spec-el.pdf). Uttryckshanteraren på klientsidan stöder inte vissa variabler och funktioner i JSP EL-specifikationen, närmare bestämt:
 
-* Samlingsindex och kartnycklar (med [] notation) stöds inte i variabelnamn för uttryck som utvärderas på klientsidan.
+* Samlingsindex och kartnycklar (med []-notation) stöds inte i variabelnamn för uttryck som utvärderas på klientsidan.
 * Följande är parametertyper eller returtyper för funktioner som används i uttryck:
 
    * java.lang.String
@@ -157,8 +157,8 @@ public class RemoteFuntionImpl implements RemoteFunction {
 
 Nedan finns exempelarkiv att använda:
 
-* **GoodFunctions.jar.zip** är en jar-fil med ett paket som innehåller en fjärrfunktionsdefinition. Ladda ned filen GoodFunctions.jar.zip och zippa upp den för att få filen jar.
-* **GoodFunctions.zip** är det paket med källkod som används för att definiera en anpassad fjärrfunktion och skapa ett paket för den.
+* **GoodFunctions.jar.** zipis the jar file with bundle containing a sample remote function definition. Ladda ned filen GoodFunctions.jar.zip och zippa upp den för att få filen jar.
+* **GoodFunctions.** zipis är det paket med källkod som används för att definiera en anpassad fjärrfunktion och skapa ett paket för den.
 
 GoodFunctions.jar.zip
 
