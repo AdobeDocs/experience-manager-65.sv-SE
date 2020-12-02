@@ -22,7 +22,7 @@ ht-degree: 0%
 
 I det här avsnittet finns detaljerad information om loggar som kan hjälpa dig att felsöka. Här finns även information om några av de problem som du kan råka ut för AEM.
 
-## Felsöka författarprestanda {#troubleshoot-author-performance}
+## Felsök författarprestanda {#troubleshoot-author-performance}
 
 Det kan bli ganska komplicerat att analysera långsamma prestanda i redigeringsinstansen. Som ett första steg måste du ta reda på vilken nivå av teknikhögen som prestandan minskar.
 
@@ -36,7 +36,7 @@ Följande beslutsträd ger vägledning för att minska flaskhalsen.
 
 ## Konfigurera loggfiler och granskningsloggar {#configuring-log-files-and-audit-logs}
 
-AEM loggar som du kan behöva konfigurera för att felsöka installationsproblem. Mer information finns i avsnittet [Arbeta med granskningsposter och loggfiler](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files) .
+AEM loggar som du kan behöva konfigurera för att felsöka installationsproblem. Mer information finns i avsnittet [Arbeta med granskningsposter och loggfiler](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files).
 
 ## Använda alternativet Detaljerad {#using-the-verbose-option}
 
@@ -84,7 +84,7 @@ Använd följande kommando för att automatiskt skapa en stackdump när minnet t
 
 java -Xmx256m -XX:+HeapDumpOnOutOfMemoryError -jar &amp;ast;.jar
 
-Detta genererar en heap dump-fil (**java_...hprof**) när minnet tar slut. Processen kan fortsätta att köras efter att stackdumpen har skapats. Vanligtvis räcker det med en stackdumpfil för att analysera problemet.
+Detta genererar en heap dump-fil (**java_...hprof**) när minnet tar slut i processen. Processen kan fortsätta att köras efter att stackdumpen har skapats. Vanligtvis räcker det med en stackdumpfil för att analysera problemet.
 
 ### AEM välkomstskärm visas inte i webbläsaren när du dubbelklickat AEM QuickStart {#the-aem-welcome-screen-does-not-display-in-the-browser-after-double-clicking-aem-quickstart}
 
@@ -100,19 +100,19 @@ Om allt annat misslyckas, kontrollera loggarna för att ta reda på vad som har 
 
 ## Felsöka installationer med en programserver {#troubleshooting-installations-with-an-application-server}
 
-### Sidan hittades inte returnerades när en geometrixx-outdoor-sida begärdes {#page-not-found-returned-when-requesting-a-geometrixx-outdoor-page}
+### Sidan hittades inte när en geometrixx-outdoor-sida {#page-not-found-returned-when-requesting-a-geometrixx-outdoor-page} begärdes
 
 **Gäller WebLogic 10.3.5 och JBoss 5.1**
 
 När en begäran om geometrixx-outdoor/en page returnerar 404 (Page Not Foun), kan du kontrollera att du har angett den extra sling-egenskapen i filen sling.properties som behövs för dessa specifika programservrar.
 
-Mer information finns i *Distribuera AEM* .
+Mer information finns i *Distribuera AEM*-stegen.
 
 ### Svarshuvudets storlek kan vara större än 4 kB {#response-header-size-can-be-greater-than-kb}
 
 502 fel kan indikera att webbservern inte kan hantera storleken på AEM HTTP-svarshuvud. AEM kan generera HTTP-svarshuvuden som innehåller cookies som är större än 4 kB. Kontrollera att serverbehållaren är konfigurerad så att den maximala svarshuvudets storlek kan överskrida 4 kB.
 
-För Tomcat 7.0 styr till exempel attributet maxHttpHeaderSize för [HTTP Connector](https://tomcat.apache.org/tomcat-7.0-doc/config/http.html) begränsningar för rubrikstorlek.
+För Tomcat 7.0 styr attributet maxHttpHeaderSize i [HTTP Connector](https://tomcat.apache.org/tomcat-7.0-doc/config/http.html) begränsningar för rubrikstorlek.
 
 ## Avinstallerar Adobe Experience Manager {#uninstalling-adobe-experience-manager}
 
@@ -128,4 +128,5 @@ Om din installation av AEM använder extern lagring, till exempel en databasserv
 
 ### JSP-filer kompileras inte på JBoss {#jsp-files-are-not-compiled-on-jboss}
 
-Om du installerar eller uppdaterar JSP-filer till Experience Manager på JBoss och motsvarande servrar inte kompileras kontrollerar du att JBoss JSP-kompilatorn är korrekt konfigurerad. Mer information finns i[JSP-kompileringsproblem i JBoss](https://helpx.adobe.com/experience-manager/kb/jsps-dont-compile-jboss.html) -artikeln.
+Om du installerar eller uppdaterar JSP-filer till Experience Manager på JBoss och motsvarande servrar inte kompileras kontrollerar du att JBoss JSP-kompilatorn är korrekt konfigurerad. Mer information finns i
+[JSP Compilation Issues in JBoss](https://helpx.adobe.com/experience-manager/kb/jsps-dont-compile-jboss.html) article.
