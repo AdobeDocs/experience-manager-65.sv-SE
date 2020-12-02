@@ -15,7 +15,7 @@ ht-degree: 6%
 ---
 
 
-# Användarhandbok för AEM 6.5 {#administering}
+# AEM 6.5 Administering User Guide {#administering}
 
 + [Administrera användarhandboken - översikt](home.md)
 + Webbplatsfunktioner {#introduction}
@@ -106,7 +106,7 @@ ht-degree: 6%
    + [Konfigurera segmentering](campaign-segmentation.md)
    + [Utöka och konfigurera designimporteraren för landningssidor](extending-the-design-importer-for-landingpages.md)
    + [Integrera landningssidor med Adobe Analytics](integrating-landing-pages-with-adobe-analytics.md)
-+ eCommerce {#ecommerce}
++ e-handel {#ecommerce}
    + [eCommerce](ecommerce.md)
    + [Concepts](concepts.md)
    + [Administrera allmän e-handel](generic.md)
