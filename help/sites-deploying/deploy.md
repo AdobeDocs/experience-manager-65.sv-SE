@@ -19,7 +19,7 @@ ht-degree: 1%
 ---
 
 
-# Driftsättning och underhåll{#deploying-and-maintaining}
+# Distribuera och underhålla{#deploying-and-maintaining}
 
 På den här sidan hittar du:
 
@@ -85,7 +85,7 @@ AEM bygger på denna bas och erbjuder även ett antal funktioner på programniv�
 
 Slutligen kan kunderna använda dessa infrastruktur- och programnivåbyggstenar för att skapa anpassade lösningar genom att bygga egna applikationer.
 
-Den AEM servern är **Java-baserad** och körs på de flesta operativsystem som stöder den plattformen. All kundinteraktion med AEM sker via en **webbläsare**.
+Den AEM servern är **Java-baserad** och körs på de flesta operativsystem som stöder den plattformen. All klientinteraktion med AEM görs via en **webbläsare**.
 
 ### Vanliga distributionsscenarier {#typical-deployment-scenarios}
 
@@ -106,9 +106,9 @@ I följande avsnitt beskrivs båda scenarierna:
 
 * **Managed Services - Cloud Manager för Adobe Experience Manager**: AEM driftsätts och hanteras av Adobes hanterade tjänster.
 
-### On-premise {#on-premise}
+### Lokal {#on-premise}
 
-Du kan installera AEM på servrar i din företagsmiljö. Vanliga installationsinstanser: Utvecklings-, testnings- och publiceringsmiljöer. I avsnittet [Komma igång](/help/sites-deploying/deploy.md#getting%20started) finns grundläggande information om hur du hämtar AEM för att installera den lokalt.
+Du kan installera AEM på servrar i din företagsmiljö. Vanliga installationsinstanser: Utvecklings-, testnings- och publiceringsmiljöer. Se avsnittet [Komma igång](/help/sites-deploying/deploy.md#getting%20started) för mer information om hur du får AEM program att installera det lokalt.
 
 Mer information om typiska lokala distributioner finns i [Rekommenderade distributioner](/help/sites-deploying/recommended-deploys.md).
 
@@ -118,7 +118,7 @@ AEM Managed Services är en komplett lösning för hantering av digitala uppleve
 
 Med AEM Managed Services kan man dra nytta av följande fördelar:
 
-**Snabbare time to market:** Med flexibel molninfrastruktur i Adobe Managed Services kan organisationer snabbt planera, lansera och optimera framgångsrika digitala upplevelser. Adobe hanterar molnarkitekturen utan ytterligare kapital-, maskinvaru- eller programvarubehov och Adobe&#39;s Customer Success Engineers, hjälp med AEM arkitektur, provisionering, anpassning för att ansluta till serverprogram och bästa praxis för att publicera.
+**Snabbare time to Market:** Med flexibel molninfrastruktur i Adobe Managed Services kan organisationer snabbt planera, lansera och optimera framgångsrika digitala upplevelser. Adobe hanterar molnarkitekturen utan ytterligare kapital-, maskinvaru- eller programvarubehov och Adobe&#39;s Customer Success Engineers, hjälp med AEM arkitektur, provisionering, anpassning för att ansluta till serverprogram och bästa praxis för att publicera.
 
 **Högre prestanda:** Ger tillförlitliga digitala upplevelser för företaget med fyra alternativ för tillgänglighet: 99,5 %, 99,9 %, 99,95 % och 99,99 %. Dessutom kan man med programmet automatiskt säkerhetskopiera och återställa flera lägen för att säkerställa tillförlitlighet och beredskapshantering.
 
@@ -128,17 +128,17 @@ Med AEM Managed Services kan man dra nytta av följande fördelar:
 
 **Cloud Manager**: Cloud Manager, som ingår i Adobe Experience Manager Managed Services-erbjudandet, är en självbetjäningsportal som ytterligare gör det möjligt för organisationer att självhantera Adobe Experience Manager i molnet. Den innehåller en modern pipeline för kontinuerlig integrering och kontinuerlig leverans (CI/CD) som gör att IT-team och implementeringspartners kan snabba upp leveransen av anpassningar eller uppdateringar utan att kompromissa med prestanda eller säkerhet. Cloud Manager är bara tillgängligt för Adobe-kunder med hanterade tjänster.
 
-Mer information om Cloud Manager och dess resurser finns i användarhandboken för [**Cloud Manager**](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html).
+Mer information om Cloud Manager och dess resurser finns i [**Användarhandbok för Cloud Manager**](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html).
 
 ## Komma igång {#getting-started}
 
 ### Förutsättningar {#prerequisites}
 
-Medan produktionsinstanser vanligtvis körs på dedikerade datorer som kör ett operativsystem som stöds officiellt (se [Tekniska krav](/help/sites-deploying/technical-requirements.md)) kommer Experience Manager-servern att köras på alla system som stöder [**Java Standard Edition 8**](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+Medan produktionsinstanser vanligtvis körs på dedikerade datorer som kör ett operativsystem som stöds officiellt (se [Tekniska krav](/help/sites-deploying/technical-requirements.md)), kommer Experience Manager-servern att köras på alla system som stöder [**Java Standard Edition 8**](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
 För att bli bekant och för att kunna utveckla AEM är det mycket vanligt att använda en instans som är installerad på din lokala dator och som kör Apple OS X eller skrivbordsversioner av Microsoft Windows eller Linux.
 
-På klientsidan fungerar AEM med alla moderna webbläsare (**Microsoft Edge**, **Internet Explorer** 11, **Chrome **51+** **, **Firefox **47+, **Safari** 8+) både på datorer och surfplattor. Mer information finns i [Klientplattformar](/help/sites-deploying/technical-requirements.md#supported-client-platforms) som stöds.
+På klientsidan fungerar AEM med alla moderna webbläsare (**Microsoft Edge**, **Internet Explorer** 11, **Chrome **51+** **, **Firefox **47+, **Safari** 8+) på både dator- och surfplattans operativsystem. Mer information finns i [Klientplattformar som stöds](/help/sites-deploying/technical-requirements.md#supported-client-platforms).
 
 ### Hämta programvaran {#getting-the-software}
 
@@ -146,11 +146,11 @@ Kunder med giltigt underhålls- och supportavtal bör ha fått ett e-postmeddela
 
 Programpaketet AEM finns i två former:
 
-* **cq-quickstart-6.5.0.jar:** En fristående körbar *burkfil* som innehåller allt som behövs för att komma igång.
+* **cq-quickstart-6.5.0.jar:** En fristående körbar  ** jarfil som innehåller allt som behövs för att komma igång.
 
-* **cq-quickstart-6.5.0.war:** En *krigsfil* för distribution på en tredjepartsprogramserver.
+* **cq-quickstart-6.5.0.war:** En  ** warfile för distribution i en tredjepartsprogramserver.
 
-I följande avsnitt beskriver vi den **fristående installationen**. Mer information om hur du installerar AEM på en programserver finns i [Programserverinstallation](/help/sites-deploying/application-server-install.md).
+I följande avsnitt beskriver vi den fristående **installationen**. Mer information om hur du installerar AEM på en programserver finns i [Programserverinstallation](/help/sites-deploying/application-server-install.md).
 
 ### Lokal standardinstallation {#default-local-install}
 
@@ -166,7 +166,7 @@ I följande avsnitt beskriver vi den **fristående installationen**. Mer informa
 
    *Observera att sökvägen till filkatalogen endast får bestå av ASCII-tecken från USA.*
 
-1. Lägg **burk** - och **license **filer i den här katalogen:
+1. Placera filerna **jar** och **license **i den här katalogen:
 
    ```shell
    <aem-install>/
@@ -174,9 +174,9 @@ I följande avsnitt beskriver vi den **fristående installationen**. Mer informa
        license.properties
    ```
 
-   Om du inte anger någon `license.properties` fil dirigeras AEM om webbläsaren till en **välkomstskärm** när du startar programmet, där du kan ange en licensnyckel. Du måste begära en giltig licensnyckel från Adobe om du inte redan har en.
+   Om du inte anger en `license.properties`-fil dirigeras AEM om webbläsaren till en **välkomstskärm när du startar, där du kan ange en licensnyckel.** Du måste begära en giltig licensnyckel från Adobe om du inte redan har en.
 
-1. Om du vill starta instansen i en GUI-miljö dubbelklickar du bara på **`cq-quickstart-6.5.0.jar`** filen.
+1. Om du vill starta instansen i en GUI-miljö dubbelklickar du bara på filen **`cq-quickstart-6.5.0.jar`**.
 
    Du kan även starta AEM från kommandoraden. För en 32-bitars Java VM anger du följande:
 
@@ -192,9 +192,9 @@ I följande avsnitt beskriver vi den **fristående installationen**. Mer informa
 
 AEM tar några minuter att packa upp burkfilen, installera och starta. Ovannämnda procedur ger följande resultat:
 
-* en **AEM författarinstans**
+* en **AEM författare**-instans
 * körs på **localhost**
-* i hamn **4502**
+* på port **4502**
 
 Så här kommer du åt instansen genom att peka webbläsaren på:
 
@@ -204,7 +204,7 @@ Resultatet i författarinstansen konfigureras automatiskt för att ansluta till 
 
 ### Skapa och publicera installationer {#author-and-publish-installs}
 
-Standardinstallationen (en **författarinstans** på **`localhost:4502`**) kan ändras genom att namnet på `jar` filen ändras innan den startas för första gången. Namnmönstret är:
+Standardinstallationen (en **författare**-instans på **`localhost:4502`**) kan ändras genom att namnet på filen `jar` ändras innan den startas för första gången. Namnmönstret är:
 
 **`cq-<instance-type>-p<port-number>.jar`**
 
@@ -212,7 +212,7 @@ Byt namn på filen till
 
 **`cq-author-p4502.jar`**
 
-om du startar programmet kommer en författarinstans att köras **`localhost:4502`**.
+om du startar programmet kommer en författarinstans att köras på **`localhost:4502`**.
 
 På samma sätt byter du namn på och startar filen
 
@@ -263,15 +263,15 @@ Om instansen installerades från användargränssnittet öppnas ett webbläsarf�
 
 >[!NOTE]
 >
->Om du använder symboler bör du ta en titt på [problem med länken](https://helpx.adobe.com/experience-manager/kb/changing-symlink.html).
+>Om du använder symboler bör du ta en titt på [problem med symlink](https://helpx.adobe.com/experience-manager/kb/changing-symlink.html).
 
 ### Starta och stoppa {#starting-and-stopping}
 
 När AEM har packat upp sig och startat för första gången startar du bara instansen genom att dubbelklicka på burkfilen i installationskatalogen. Den installeras inte igen.
 
-Om du vill stoppa instansen från det grafiska användargränssnittet klickar du bara på **på/av** i datorprogrammets fönster.
+Om du vill stoppa instansen från det grafiska användargränssnittet klickar du på **på/av** i skrivbordsprogramfönstret.
 
-Du kan också stoppa och starta AEM från kommandoraden. Om du redan har installerat instansen för första gången finns **kommandoradsskripten** här:
+Du kan också stoppa och starta AEM från kommandoraden. Om du redan har installerat instansen för första gången finns kommandoradsskripten **här:**
 
 **`<aem-install>/crx-quickstart/bin/`**
 
@@ -282,7 +282,7 @@ Den här mappen innehåller följande Unix-basskalskript:
 * **`status`**: Rapporterar status för instansen
 * **`quickstart`**: Används för att konfigurera startinformation, om det behövs.
 
-Det finns även motsvarande **`bat`** filer för Windows. Mer detaljerad information finns i:
+Det finns också motsvarande **`bat`**-filer för Windows. Mer detaljerad information finns i:
 
 * [Kommandoradens start och stopp](/help/sites-deploying/command-line-start-and-stop.md)
 
