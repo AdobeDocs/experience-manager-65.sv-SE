@@ -29,9 +29,9 @@ Information om hur du konfigurerar funktionen finns i
 
 Den här sidan innehåller ytterligare teknisk information:
 
-* Så här [visar du ett märke](#displaying-badges) som bild eller text
+* [visa ett märke](#displaying-badges) som bild eller text
 * Aktivera omfattande [felsökningsloggning](#debug-log-for-scoring-and-badging)
-* Så här [får du åtkomst till UGC](#ugc-for-scoring-and-badging) för bedömning och märkning
+* [åtkomst till UGC](#ugc-for-scoring-and-badging) relaterat till poängsättning och märkning
 
 >[!CAUTION]
 >
@@ -73,28 +73,28 @@ Om värdet är true anger isAssigned att märket har tilldelats en roll och att 
 
 Om värdet är false anges märket Tilldelad att märket tilldelats för ett upparbetat resultat och att märket ska visas som en bild.
 
-Alla ändringar av detta beteende bör göras i ett anpassat skript (antingen åsidosätt eller övertäckning). Se Anpassa [på klientsidan](/help/communities/client-customize.md).
+Alla ändringar av detta beteende bör göras i ett anpassat skript (antingen åsidosätt eller övertäckning). Se [Anpassning på klientsidan](/help/communities/client-customize.md).
 
-## Felsökningslogg för poängsättning och märkning {#debug-log-for-scoring-and-badging}
+## Felsökningslogg för poäng och badging {#debug-log-for-scoring-and-badging}
 
 En anpassad loggfil kan konfigureras för felsökning av poängsättning och badging. Innehållet i loggfilen kan sedan tillhandahållas kundsupporten om problem uppstår med funktionen.
 
-Detaljerade anvisningar finns i [Skapa en anpassad loggfil](/help/sites-deploying/monitoring-and-maintaining.md#create-a-custom-log-file).
+Detaljerade instruktioner finns på [Skapa en anpassad loggfil](/help/sites-deploying/monitoring-and-maintaining.md#create-a-custom-log-file).
 
 Så här konfigurerar du snabbt en slinglog-fil:
 
-1. Få åtkomst till loggstödet **för** Adobe Experience Manager Web Console, till exempel
+1. Få åtkomst till **loggstödet för Adobe Experience Manager Web Console**, till exempel
 
    * https://localhost:4502/system/console/slinglog
 
 1. Välj **Lägg till ny loggare**
 
-   1. Välj `DEBUG` för **loggnivå**
+   1. Välj `DEBUG` för **Loggnivå**
 
    1. Ange ett namn för **loggfilen**, till exempel
 
       * logs/scoring-debug.log
-   1. Ange två **Logger** -poster (klass) (med `+` ikon)
+   1. Ange två **Logger**-poster (klass) (med ikonen `+`)
 
       * `com.adobe.cq.social.scoring`
       * `com.adobe.cq.social.badging`
@@ -109,37 +109,37 @@ Så här visar du loggposter:
 * Från webbkonsolen
 
    * Under menyn **Status**
-   * Välj **loggfiler**
+   * Välj **Loggfiler**
    * Sök efter loggfilens namn, till exempel `scoring-debug`
 
 * På serverns lokala disk
 
-   * Loggfilen finns på &lt;*server-install-dir*>/crx-quickstart/logs/&lt;*log-file-name*>.log
+   * Loggfilen finns på &lt;*server-install-dir*/crx-quickstart/logs/&lt;*log-file-name*>.log
 
    * Till exempel, `.../crx-quickstart/logs/scoring-debug.log`
 
 ![poänglogg](assets/scoring-log.png)
 
-## UGC för poängsättning och märkning {#ugc-for-scoring-and-badging}
+## UGC för poängsättning och badging {#ugc-for-scoring-and-badging}
 
-Det går att visa användargenererat innehåll som är relaterat till poängsättning och märkning när den valda SRP är antingen JSRP eller MSRP, men inte ASRP. (Om du inte känner till dessa termer läser du Översikt över [Community Content Storage](/help/communities/working-with-srp.md) and [Storage Resource Provider](/help/communities/srp.md).)
+Det går att visa användargenererat innehåll som är relaterat till poängsättning och märkning när den valda SRP är antingen JSRP eller MSRP, men inte ASRP. (Om du inte känner till dessa termer läser du [Community Content Storage](/help/communities/working-with-srp.md) och [Storage Resource Provider Overview](/help/communities/srp.md).)
 
-Beskrivningarna för att komma åt betygs- och badging-data använder JSRP, eftersom användargenerationen är lättillgänglig via [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
+Beskrivningarna för att komma åt betygs- och badging-data använder JSRP, eftersom UGC är lätt att komma åt med [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
 
 **JSRP on author**: när du experimenterar i redigeringsmiljön resulterar det i användargenererat innehåll som bara är synligt från författarmiljön.
 
-**JSRP vid publicering**: På samma sätt måste du, om du testar i publiceringsmiljön, ha administratörsbehörighet för en publiceringsinstans i CRXDE Lite. Om publiceringsinstansen körs i [produktionsläge](/help/sites-administering/production-ready.md) (noSampleContent Runmode) måste du [aktivera CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md).
+**JSRP vid publicering**: På samma sätt måste du, om du testar i publiceringsmiljön, ha administratörsbehörighet för en publiceringsinstans i CRXDE Lite. Om publiceringsinstansen körs i [produktionsläge](/help/sites-administering/production-ready.md) (nosampling content runmode) måste du [aktivera CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md).
 
-UGC:s basplats på JSRP är `/content/usergenerated/asi/jcr/`.
+UGC-basplatsen på JSRP är `/content/usergenerated/asi/jcr/`.
 
-### API:er för klassificering och märkning {#scoring-and-badging-apis}
+### API:er för bedömning och märkning {#scoring-and-badging-apis}
 
 Följande API:er kan användas:
 
 * [com.adobe.cq.social.scoring.api](https://docs.adobe.com/content/docs/en/aem/6-3/develop/ref/javadoc/com/adobe/cq/social/scoring/api/package-summary.html)
 * [com.adobe.cq.social.badging.api](https://docs.adobe.com/content/docs/en/aem/6-3/develop/ref/javadoc/com/adobe/cq/social/badging/api/package-summary.html)
 
-De senaste Javadocs-filerna för det installerade funktionspaketet är tillgängliga för utvecklare från Adobe-databasen. Se [Använda Maven for Communities: Javadocs](/help/communities/maven.md#javadocs).
+De senaste Javadocs-filerna för det installerade funktionspaketet är tillgängliga för utvecklare från Adobe-databasen. Se [Använda Maven för Communities: Javadocs](/help/communities/maven.md#javadocs).
 
 **Platsen och formatet för användargenererat innehåll i databasen kan ändras utan förvarning**.
 
@@ -147,7 +147,7 @@ De senaste Javadocs-filerna för det installerade funktionspaketet är tillgäng
 
 Skärmbilderna av databasdata kommer från hur du ställer in poängsättning och märkning för ett forum på två olika AEM:
 
-1. En AEM webbplats *med* ett unikt ID (community-webbplats skapad med guide):
+1. En AEM webbplats *med* ett unikt ID (communitywebbplatsen skapades med guiden):
 
    * Använda självstudiekursen Komma igång (engagera) som skapades under självstudiekursen [Komma igång](/help/communities/getting-started.md)
    * Hitta forumsidnoden
@@ -178,7 +178,7 @@ Skärmbilderna av databasdata kommer från hur du ställer in poängsättning oc
    * En användare loggar in, skapar ett forumämne och tilldelas ett bronze-märke
 
 
-1. En AEM webbplats *utan* ett unikt ID:
+1. En AEM plats *utan* ett unikt ID:
 
    * Använda guiden [Community Components](/help/communities/components-guide.md)
    * Hitta forumsidnoden
@@ -200,7 +200,7 @@ Skärmbilderna av databasdata kommer från hur du ställer in poängsättning oc
    * Hitta forumkomponentnoden
 
       `/content/community-components/en/forum/jcr:content/content/forum`
-( `sling:resourceType = social/forum/components/hbs/forum`)
+(  `sling:resourceType = social/forum/components/hbs/forum`)
 
    * Lägg till egenskap för att visa emblem
 
@@ -226,7 +226,7 @@ Skärmbilderna av databasdata kommer från hur du ställer in poängsättning oc
 >* Poängregelnamnen ska vara globalt unika. de ska inte sluta med samma namn.
 >
 >  
-Ett exempel på vad som *inte* ska göras:
+Ett exempel på vad *inte* ska göra:
 >
 >  /libs/settings/community/scoring/rules/site1/forums-scoring
 >  /libs/settings/community/scoring/rules/site2/forums-scoring
@@ -234,9 +234,9 @@ Ett exempel på vad som *inte* ska göras:
 >* Skapa unika märkesbilder för olika AEM
 
 
-### UGC för åtkomstbedömning {#access-scoring-ugc}
+### Åtkomstbedömningsgränssnittet {#access-scoring-ugc}
 
-Du bör använda [API:erna](#scoring-and-badging-apis) .
+Du bör använda [API:erna](#scoring-and-badging-apis).
 
 I undersökningssyfte, till exempel med JSRP, är baskamappen som innehåller poäng
 
@@ -244,21 +244,21 @@ I undersökningssyfte, till exempel med JSRP, är baskamappen som innehåller po
 
 Den underordnade noden för `scoring` är resultatregelns namn. Det bästa sättet är alltså att betygsregelnamn på en server är globalt unika.
 
-För webbplatsen Geometrixx Engage finns användaren och poängen i en sökväg som är konstruerad med resultatregelnamnet, communityplatsens webbplats-ID ( `engage-ba81p`), ett unikt ID och användarens ID:
+För Geometrixx Engage-webbplatsen finns användaren och poängen i en sökväg som är konstruerad med resultatregelnamnet, webbplatsens webbplats-ID ( `engage-ba81p`), ett unikt ID och användarens ID:
 
 * `.../scoring/forums-scoring/engage-ba81p/6d179715c0e93cb2b20886aa0434ca9b5a540401/riley`
 
-För stödwebbplatsen för Community Components är användaren och poängen i en sökväg som konstruerats med resultatregelnamnet, ett standard-ID ( `default-site`), ett unikt ID och användarens ID:
+För guidad webbplats för communitykomponenter är användaren och poängen i en sökväg som konstruerats med resultatregelnamnet, ett standard-ID ( `default-site`), ett unikt ID och användarens ID:
 
 * `.../scoring/forums-scoring/default-site/b27a17cb4910a9b69fe81fb1b492ba672d2c086e/riley`
 
-Ljudspåret lagras i egenskapen `scoreValue_tl` som bara kan innehålla ett värde eller indirekt referera till en atomicCounter.
+Ljudspåret lagras i egenskapen `scoreValue_tl` som direkt kan innehålla ett värde eller indirekt referera till en atomicCounter.
 
 ![access-scoring-ugc](assets/access-scoring-ugc.png)
 
 ### Access Badging UGC {#access-badging-ugc}
 
-Du bör använda [API:erna](#scoring-and-badging-apis) .
+Du bör använda [API:erna](#scoring-and-badging-apis).
 
 I undersökningssyfte, till exempel med JSRP, är baskappen som innehåller information om tilldelade eller tilldelade märken
 
@@ -268,7 +268,7 @@ Följs av sökvägen till användarens profil och avslutas i en badges-mapp, til
 
 * `/home/users/community/w271OOup2Z4DjnOQrviv/profile/badges`
 
-#### Tilldelad bricka {#awarded-badge}
+#### Tilldelat märke {#awarded-badge}
 
 ![tilldelad-badging-ugc](assets/access-badging-ugc.png)
 
@@ -276,10 +276,10 @@ Följs av sökvägen till användarens profil och avslutas i en badges-mapp, til
 
 ![tilldelad-badge](assets/assigned-badge.png)
 
-## Additional Information {#additional-information}
+## Ytterligare information {#additional-information}
 
 Så här visar du en sorterad lista med medlemmar baserat på punkter:
 
-* [Ledarpanelsfunktion](/help/communities/functions.md#leaderboard-function) för att ingå i en communitywebbplats eller gruppmall.
+* [Ledarpanelsfunktion ](/help/communities/functions.md#leaderboard-function) för att ingå i en community- eller gruppmall.
 * [Leaderboard-komponenten](/help/communities/enabling-leaderboard.md), den komponent som finns i Leaderboard-funktionen, för framtagning av sidor.
 
