@@ -1,8 +1,8 @@
 ---
 title: eCommerce
 seo-title: eCommerce
-description: AEM eCommerce hjälper marknadsförare att leverera varumärkesanpassade, personaliserade shoppingupplevelser över webben, mobiler och sociala kontaktytor.
-seo-description: AEM eCommerce hjälper marknadsförare att leverera varumärkesanpassade, personaliserade shoppingupplevelser över webben, mobiler och sociala kontaktytor.
+description: AEM e-handel hjälper marknadsförare att leverera varumärkesanpassade, personaliserade shoppingupplevelser på webben, i mobilen och via sociala kontaktytor.
+seo-description: AEM e-handel hjälper marknadsförare att leverera varumärkesanpassade, personaliserade shoppingupplevelser på webben, i mobilen och via sociala kontaktytor.
 uuid: 75818c60-1cf1-4a91-94ce-d722563b661c
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,6 +12,9 @@ discoiquuid: e972ee05-f0cb-40ca-9ae2-34395791c709
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 46610888fd61900c52b197e73a8a5850dc9c4c35
+workflow-type: tm+mt
+source-wordcount: '748'
+ht-degree: 0%
 
 ---
 
@@ -31,8 +34,8 @@ Adobe tillhandahåller två versioner av Commerce Integration Framework:
    <th><p>CIF Cloud</p> </th>
   </tr>
   <tr>
-   <td><p>AEM-versioner som stöds</p> </td>
-   <td><p>AEM on-prem eller AMS 6.x</p> </td>
+   <td><p>AEM</p> </td>
+   <td><p>AEM på plats eller AMS 6.x</p> </td>
    <td>AEM AMS 6.4 och 6.5</td>
   </tr>
   <tr>
@@ -52,7 +55,7 @@ Adobe tillhandahåller två versioner av Commerce Integration Framework:
   </tr>
   <tr>
    <td><p>Front-end</p> </td>
-   <td><p>Återgivna sidor på AEM-serversidan</p> </td>
+   <td><p>AEM återgivna sidor på serversidan</p> </td>
    <td>Blandat sidprogram (hybridåtergivning)</td>
   </tr>
   <tr>
@@ -85,12 +88,12 @@ Adobe tillhandahåller två versioner av Commerce Integration Framework:
   <tr>
    <td>Standardiserad datamodell</td>
    <td>Nej</td>
-   <td>Ja, Magento GraphQL schema</td>
+   <td>Ja, Magento GraphQL-schema</td>
   </tr>
   <tr>
    <td>Tillgänglighet</td>
-   <td><p>Ja. SAP Commerce Cloud (tillägget har uppdaterats med stöd för AEM 6.4 och Hybris 5 (standard) och bibehåller kompatibiliteten med Hybris 4</p> <p>Salesforce Commerce Cloud (Connector öppen källkod för stöd av AEM 6.4)</p> </td>
-   <td>Ja via öppen källkod via GitHub. Magento Commerce (stöder Magento 2.3.2 (standard) och är kompatibel med Magento 2.3.1).</td>
+   <td><p>Ja. SAP Commerce Cloud (tillägget har uppdaterats för att stödja AEM 6.4 och Hybris 5 (standard) och bibehåller kompatibiliteten med Hybris 4</p> <p>Salesforce Commerce Cloud (Connector open-sourced to support AEM 6.4)</p> </td>
+   <td>Ja via öppen källkod via GitHub. Magento Commerce (Stöder Magento 2.3.2 (standard) och är kompatibelt med Magento 2.3.1).</td>
   </tr>
   <tr>
    <td>När ska användas</td>
@@ -109,7 +112,7 @@ eCommerce hanterar tillsammans med Product Information Management (PIM) verksamh
 * Live och centraliserad lagringspost
 * Webbgränssnitt
 
-AEM eCommerce hjälper marknadsförare att leverera varumärkesanpassade, personaliserade shoppingupplevelser över webben, mobiler och sociala kontaktytor. I AEM-redigeringsmiljön kan du anpassa sidor och komponenter baserat på målgruppskontext och försäljningsstrategier. till exempel:
+AEM e-handel hjälper marknadsförare att leverera varumärkesanpassade, personaliserade shoppingupplevelser på webben, i mobilen och via sociala kontaktytor. I AEM kan du anpassa sidor och komponenter baserat på målgruppskontext och försäljningsstrategier. till exempel:
 
 * Produktsidor
 * Kundvagnskomponenter
@@ -130,9 +133,9 @@ Implementeringen ger åtkomst i realtid till produktinformation. Detta kan anvä
 
 ## Huvudfunktioner {#main-features}
 
-AEM eCommerce erbjuder:
+AEM eCommerce tillhandahåller:
 
-* Ett antal färdiga AEM- **komponenter** som visar vad du kan göra med ditt projekt:
+* Ett antal **färdiga AEM**-komponenter för att visa vad som kan göras i ditt projekt:
 
    * Produktvisning
    * Kundvagn
@@ -140,25 +143,27 @@ AEM eCommerce erbjuder:
    * Nyligen visade produkter
    * Vouchers
    * och andra
+
    ![](assets/chlimage_1-130.png)
 
    >[!NOTE]
    >
-   >Integreringsramverket som tillhandahålls av AEM gör det även möjligt att bygga ytterligare AEM-komponenter för handelsfunktioner oberoende av din specifika e-handelsmotor.
+   >Integreringsramverket som AEM tillhandahåller gör det även möjligt att skapa ytterligare AEM komponenter för handelsfunktioner oberoende av din specifika e-handelsmotor.
 
-* **Sök** - med antingen:
+* **Sök**  med antingen:
 
-   * AEM-sökningen
+   * aem
    * sökningen i e-handelssystemet
-   * en tredje parts sökning (t.ex. Sök&amp;Befordra)
+   * en sökning efter tredje part (till exempel Search &amp; Promote)
    * eller en kombination av dessa.
+
    ![](assets/chlimage_1-131.png)
 
-* Använder AEM-möjligheten för att **presentera ditt innehåll i flera kanaler**, oavsett om det är hela webbläsarfönstret eller en mobil enhet. Detta levererar innehållet i det format som besökarna behöver.
+* Använder AEM möjlighet att **presentera ditt innehåll i flera kanaler**, oavsett om det är hela webbläsarfönstret eller den mobila enheten. Detta levererar innehållet i det format som besökarna behöver.
 
    ![](assets/chlimage_1-132.png)
 
-* Möjlighet att **utveckla er egen integreringsimplementering baserat på[AEM eCommerce-ramverket](#the-framework)**.
+* Möjligheten att **utveckla din egen integreringsimplementering baserat på [AEM eCommerce-ramverket](#the-framework)**.
 
    De två implementeringar som är tillgängliga för närvarande är båda byggda på samma grund - utöver det allmänna API:t (ramverket). Implementering av en ny integrering innebär bara implementering av de funktioner som din integrering behöver. Front end-komponenter kan användas av alla nya implementeringar när de använder gränssnitt (så är oberoende av implementeringen).
 
@@ -166,6 +171,7 @@ AEM eCommerce erbjuder:
 
    * Ett exempel kan vara minskade fraktkostnader när den totala ordern överstiger ett visst belopp.
    * Ett annat kan göra att du kan erbjuda säsongserbjudanden som använder profildata (t.ex. plats). Dessa kan sedan markeras ytterligare, beroende på andra faktorer vid behov.
+
    I exemplet nedan visas en teaser eftersom innehållet i vagnen är mindre än $75:
 
    ![](assets/chlimage_1-133.png)
@@ -182,13 +188,13 @@ AEM eCommerce erbjuder:
 
 ## Ramverket {#the-framework}
 
-Avsnittet [Concepts](/help/sites-administering/concepts.md) behandlar ramverket mer ingående, men i det följande ges en översikt över ramverket på hög nivå och med hög hastighet:
+Avsnittet [Koncepts](/help/sites-administering/concepts.md) beskriver ramverket mer ingående, men följande ger en snabb vy av ramverket på hög nivå:
 
 ### Vad? {#what}
 
 * Integreringsramverket innehåller API:t, en rad komponenter som illustrerar funktioner och flera tillägg som ger exempel på anslutningsmetoder.
 * Ramverket innehåller den grundläggande struktur som krävs för en projektimplementering.
-* Ramverket kan utökas.
+* Ramverket är utökningsbart.
 * I ramverket finns ingen användbar och färdig webbplats. En viss del av utvecklingsarbetet behövs alltid för att anpassa ramverket till dina specifikationer.
 
 ### Varför? {#why}
