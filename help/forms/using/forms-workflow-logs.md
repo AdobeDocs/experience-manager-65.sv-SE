@@ -1,8 +1,8 @@
 ---
-title: Inloggning i arbetsflöden för AEM Forms
-seo-title: Inloggning i arbetsflöden för AEM Forms
-description: Använd loggar för att felsöka arbetsflödesproblem i AEM Forms.
-seo-description: Använd loggar för att felsöka arbetsflödesproblem i AEM Forms.
+title: Logga in i AEM Forms arbetsflöden
+seo-title: Logga in i AEM Forms arbetsflöden
+description: Använd loggar för att felsöka problem i AEM Forms arbetsflöde.
+seo-description: Använd loggar för att felsöka problem i AEM Forms arbetsflöde.
 uuid: 869d0271-c7e3-4b6d-8e63-893dc6af8b8a
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -18,11 +18,11 @@ ht-degree: 6%
 ---
 
 
-# Inloggning i arbetsflöden för AEM Forms{#logging-in-aem-forms-workflows}
+# Logga in i AEM Forms-arbetsflöden{#logging-in-aem-forms-workflows}
 
-I formulärarbetsflödesstegen finns detaljerade loggar som du kan använda för att felsöka arbetsflödesrelaterade problem. Aktivera felsökningsloggning för arbetsflöden i AEM Forms för att visa loggarna.
+I Forms arbetsflödessteg finns detaljerade loggar som du kan använda för att felsöka arbetsflödesrelaterade problem. Aktivera felsökningsloggning för AEM Forms-arbetsflöden för att visa loggarna.
 
-Som standard är all loggningsinformation tillgänglig i filen **error.log** i katalogen */crx-database/logs/* .
+Som standard är all loggningsinformation tillgänglig i filen **error.log** i katalogen */crx-database/logs/*.
 
 Felsökningsloggarna för formulärarbetsflöden innehåller:
 
@@ -77,11 +77,11 @@ Använd loggarna för att utvärdera att:
 
 Om det finns ett undantag kan du visa hela stackspårningen för att utvärdera orsaken till felet.
 
-## Aktivera felsökningsloggning för arbetsflöden i AEM Forms {#enable-debug-logging-for-aem-forms-workflows}
+## Aktivera felsökningsloggning för AEM Forms-arbetsflöden {#enable-debug-logging-for-aem-forms-workflows}
 
-Gör så här för att aktivera felsökningsloggning för arbetsflöden i AEM Forms:
+Gör så här för att aktivera felsökningsloggning för AEM Forms-arbetsflöden:
 
-1. Gå till konfigurationshanteraren för AEM-webbkonsolen på:
+1. Gå till konfigurationshanteraren AEM webbkonsolen på:
 
    https://&#39;[server]:[port]&#39;/system/console/configMgr
 
@@ -89,9 +89,9 @@ Gör så här för att aktivera felsökningsloggning för arbetsflöden i AEM Fo
 1. Tryck på **[!UICONTROL Add new Logger.]**
 1. Välj **[!UICONTROL Debug]** som **[!UICONTROL Log Level]**.
 1. Ange platsen för loggfilen. Standardplatsen för loggfilen är: *loggar\error.log*
-1. Ange paketets namn som **com.adobe.granite.workflow.core** i **[!UICONTROL Logger]** kolumnen.
+1. Ange paketets namn som **com.adobe.granite.workflow.core** i kolumnen **[!UICONTROL Logger]**.
 
-   Om du utför dessa steg kan du lagra felsökningsloggarna för paketet **com.adobe.granite.workflow.core** . Tryck **[!UICONTROL +]** och lägg till följande paketnamn i listan:
+   Om du utför dessa steg kan du lagra felsökningsloggarna för **com.adobe.granite.workflow.core**-paketet. Tryck på **[!UICONTROL +]** och lägg till följande paketnamn i listan:
 
    * com.adobe.fd.workflow
    * com.adobe.fd.workspace
