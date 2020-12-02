@@ -1,8 +1,8 @@
 ---
 title: Utseenderamverk för adaptiva formulär och HTML5-formulär
 seo-title: Utseenderamverk för adaptiva formulär och HTML5-formulär
-description: Mobilformulär återger formulärmallar som HTML5-formulär. Dessa formulär använder jQuery-, Backbone.js- och Underscore.js-filer för utseendet och för att aktivera skript.
-seo-description: Mobilformulär återger formulärmallar som HTML5-formulär. Dessa formulär använder jQuery-, Backbone.js- och Underscore.js-filer för utseendet och för att aktivera skript.
+description: Mobile Forms återger formulärmallar som HTML5-formulär. Dessa formulär använder jQuery-, Backbone.js- och Underscore.js-filer för utseendet och för att aktivera skript.
+seo-description: Mobile Forms återger formulärmallar som HTML5-formulär. Dessa formulär använder jQuery-, Backbone.js- och Underscore.js-filer för utseendet och för att aktivera skript.
 uuid: 183b8d71-44fc-47bf-8cb2-1cf920ffd23a
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,13 +10,16 @@ topic-tags: customization
 discoiquuid: 3c2a44a7-24e7-49ee-bf18-eab0e44efa42
 translation-type: tm+mt
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+workflow-type: tm+mt
+source-wordcount: '1200'
+ht-degree: 2%
 
 ---
 
 
 # Utseenderamverk för adaptiva formulär och HTML5-formulär {#appearance-framework-for-adaptive-and-html-forms}
 
-I formulär (adaptiva formulär och HTML5-formulär) används biblioteken [jQuery](https://jquery.com/), [Backbone.js](https://backbonejs.org/) och [Underscore.js](https://underscorejs.org/) för utseende och skript. Formulären använder också [jQuery-gränssnittets](https://jqueryui.com/) **widgetarkitektur** för alla interaktiva element (till exempel fält och knappar) i formuläret. Med den här arkitekturen kan formulärutvecklare använda en mängd tillgängliga jQuery-widgetar och plugin-program i Forms. Du kan också implementera formulärspecifik logik samtidigt som du hämtar in data från användare som leadDigits/trailDigits-restriktioner eller implementerar bildklausuler. Formulärutvecklare kan skapa och använda anpassade utseenden för att förbättra datainhämtningen och göra den mer användarvänlig.
+Forms (adaptiva formulär och HTML5-formulär) använder [jQuery](https://jquery.com/), [Backbone.js](https://backbonejs.org/) och [Underscore.js](https://underscorejs.org/)-bibliotek för utseende och skript. Formulären använder också [jQuery-gränssnittet](https://jqueryui.com/) **Widgetar**-arkitekturen för alla interaktiva element (till exempel fält och knappar) i formuläret. Med den här arkitekturen kan formulärutvecklare använda en mängd tillgängliga jQuery-widgetar och plugin-program i Forms. Du kan också implementera formulärspecifik logik samtidigt som du hämtar in data från användare som leadDigits/trailDigits-restriktioner eller implementerar bildklausuler. Formulärutvecklare kan skapa och använda anpassade utseenden för att förbättra datainhämtningen och göra den mer användarvänlig.
 
 Den här artikeln är avsedd för utvecklare med tillräcklig kunskap om jQuery- och jQuery-widgetar. Den ger insikt i utseenderamverket och gör det möjligt för utvecklare att skapa ett alternativt utseende för ett formulärfält.
 
@@ -26,7 +29,7 @@ Utseenderamverket bygger på olika alternativ, händelser (utlösare) och funkti
 * Utseendet, som en del av kontraktet, utlöser en uppsättning händelser som enter och exit.
 * Utseendet krävs för att implementera en uppsättning funktioner. Vissa funktioner är vanliga medan andra är specifika för fälttypsfunktioner.
 
-## Vanliga alternativ {#common-options}
+## Gemensamma alternativ {#common-options}
 
 Här följer de angivna globala alternativen. Dessa alternativ är tillgängliga för alla fält.
 
@@ -50,7 +53,7 @@ Här följer de angivna globala alternativen. Dessa alternativ är tillgängliga
   </tr>
   <tr>
    <td>screenReaderText</td>
-   <td>Skärmläsare använder det här värdet för att lägga till en berättarinformation om fältet. Formuläret innehåller värdet och du kan åsidosätta värdet.<br /> </td>
+   <td>Skärm Reader använder det här värdet för att lägga till en berättarinformation om fältet. Formuläret innehåller värdet och du kan åsidosätta värdet.<br /> </td>
   </tr>
   <tr>
    <td>tabIndex</td>
@@ -85,11 +88,11 @@ Här följer de angivna globala alternativen. Dessa alternativ är tillgängliga
 
 Förutom dessa alternativ innehåller ramverket några andra alternativ som varierar beroende på fälttypen. Information om fältsspecifika alternativ visas nedan.
 
-### Interaktion med blankettens ramverk {#interaction-with-forms-framework}
+### Interaktion med formulärramverket {#interaction-with-forms-framework}
 
 För att interagera med formulärramverket utlöser en widget vissa händelser som gör att formulärskriptet kan fungera. Om widgeten inte genererar dessa händelser fungerar inte vissa av skripten som är skrivna i formuläret för det fältet.
 
-#### Händelser som utlöses av widget {#events-triggered-by-widget}
+#### Händelser som utlöses av widgeten {#events-triggered-by-widget}
 
 <table>
  <tbody>
@@ -135,7 +138,7 @@ Utseenderamverket anropar vissa funktioner i widgeten som implementeras i de anp
    <td>Fokuserar på fältet och anropar XFA_CLICK_EVENT.</td>
   </tr>
   <tr>
-   <td><p>markError:function(errorMessage, errorType)<br /> <br /> <em>errorMessage: sträng </em>som representerar felet<br /> <em>errorType: string ("warning"/"error")</em></p> <p><strong>Obs</strong>: Gäller endast för HTML5-formulär.</p> </td>
+   <td><p>markError:function(errorMessage, errorType)<br /> <br /> <em>errorMessage: sträng </em>som representerar felet<br /> <em>errorType: sträng ("varning"/"fel")</em></p> <p><strong>Obs</strong>: Gäller endast för HTML5-formulär.</p> </td>
    <td>Skickar felmeddelande och feltyp till widgeten. Widgeten visar felet.</td>
   </tr>
   <tr>
@@ -145,7 +148,7 @@ Utseenderamverket anropar vissa funktioner i widgeten som implementeras i de anp
  </tbody>
 </table>
 
-## Alternativ som är specifika för fälttyp {#options-specific-to-type-of-field}
+## Alternativ som är specifika för fälttypen {#options-specific-to-type-of-field}
 
 Alla anpassade widgetar ska följa ovanstående specifikationer. Om du vill använda funktionerna i olika fält måste widgeten följa riktlinjerna för det specifika fältet.
 
@@ -182,11 +185,11 @@ Alla anpassade widgetar ska följa ovanstående specifikationer. Om du vill anv�
   </tr>
   <tr>
    <td>value<br /> </td>
-   <td>Array med valda värden.<br /> </td>
+   <td>Matris med valda värden.<br /> </td>
   </tr>
   <tr>
    <td>items<br /> </td>
-   <td>Array med objekt som ska visas som alternativ. Varje objekt innehåller två egenskaper -<br /> spara: värde att spara, visa: värde som ska visas.<br /> <br /> </td>
+   <td>Array med objekt som ska visas som alternativ. Varje objekt innehåller två egenskaper -<br /> save: värde att spara, visa: värde att visa.<br /> <br /> </td>
   </tr>
   <tr>
    <td><p>redigerbar</p> <p><strong>Obs</strong>: Gäller endast för HTML5-formulär.<br /> </p> </td>
@@ -216,7 +219,7 @@ Alla anpassade widgetar ska följa ovanstående specifikationer. Om du vill anv�
    <td>Lägger till ett objekt i listan.</td>
   </tr>
   <tr>
-   <td>deleteItem<em>: function(nIndex)<br /> nIndex: index för det objekt som ska tas bort från listan<br /> </em><br /><br /> </td>
+   <td>deleteItem<em>: function(nIndex)<br /> nIndex: index för objektet som ska tas bort från listan <br /> </em><br /> <br /> </td>
    <td>Tar bort ett alternativ från listan.</td>
   </tr>
   <tr>
