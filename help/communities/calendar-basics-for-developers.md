@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Grundläggande kalender {#calendar-essentials}
+# Grundläggande om kalender {#calendar-essentials}
 
 Den här sidan innehåller viktig information om hur du arbetar med kalenderfunktionen.
 
@@ -66,9 +66,9 @@ Den här sidan innehåller viktig information om hur du arbetar med kalenderfunk
 
 ### Kalenderfunktion {#calendar-function}
 
-En community-platsstruktur som innehåller [kalenderfunktionen](functions.md#calendar-function) kommer att ha en konfigurerad `calendar` komponent. Kalenderfunktionen stöder identifiering av en [behörig medlemsgrupp](users.md#privileged-members-group).
+En community-platsstruktur som innehåller [kalenderfunktionen](functions.md#calendar-function) har en konfigurerad `calendar`-komponent. Kalenderfunktionen stöder identifiering av en [privilegierad medlemsgrupp](users.md#privileged-members-group).
 
-### Åtkomst till kalenderinlägg (UGC) {#accessing-calendar-posts-ugc}
+### Åtkomst till kalenderposter (UGC) {#accessing-calendar-posts-ugc}
 
 Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](working-with-srp.md) för UGC programmatisk åtkomst till UGC oavsett valt lagringsalternativ (som ASRP, MSRP eller JSRP).
 
@@ -76,8 +76,8 @@ Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](
 
 Se:
 
-* [Översikt över](srp.md) lagringsresursprovidern - introduktion och databasanvändning - översikt
+* [Översikt över](srp.md)  lagringsresursprovidern - introduktion och databasanvändning - översikt
 * [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och -exempel
-* [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - riktlinjer för kodning
+* [Åtkomst till UGC med riktlinjer för SRP](accessing-ugc-with-srp.md) -kodning
 * [Omfaktorisering för SocialUtils](socialutils.md) - mappning av utgått verktygsmetoder till aktuella SRP-verktygsmetoder
 
