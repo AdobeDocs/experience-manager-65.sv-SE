@@ -11,11 +11,14 @@ topic-tags: components
 discoiquuid: adf3364c-11f1-45c6-b41d-2c7d48b626f9
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '2345'
+ht-degree: 1%
 
 ---
 
 
-# Använda översättare för att hantera ordlistor{#using-translator-to-manage-dictionaries}
+# Använda Translator för att hantera ordlistor{#using-translator-to-manage-dictionaries}
 
 AEM tillhandahåller en konsol för hantering av olika översättningar av texter som används i komponentens användargränssnitt. Den här konsolen är tillgänglig på
 
@@ -23,19 +26,19 @@ AEM tillhandahåller en konsol för hantering av olika översättningar av texte
 
 Använd översättningsverktyget för att hantera engelska strängar och deras översättningar. Ordlistorna skapas i databasen, till exempel /apps/myproject/i18n.
 
-Observera att översättningsverktyget och de ordlistor du hanterar är till för att presentera komponentgränssnitt på olika språk. Om du vill översätta sida eller användargenererat innehåll läser du [Översätta innehåll för flerspråkiga webbplatser](/help/sites-administering/translation.md) och [Översättning av användargenererat innehåll](/help/communities/translate-ugc.md).
+Observera att översättningsverktyget och de ordlistor du hanterar är till för att presentera komponentgränssnitt på olika språk. Om du vill översätta sida eller användargenererat innehåll läser du [Översätta innehåll för flerspråkiga platser](/help/sites-administering/translation.md) och [Översättning av användargenererat innehåll](/help/communities/translate-ugc.md).
 
 >[!CAUTION]
 >
 >Redigera bara ordlistor som har skapats för ditt projekt och som finns under `/apps`.
 >
->AEM-systemordlistor finns också i det här verktyget. Ändra inte AEM-systemordlistorna eftersom detta kan orsaka problem med AEM-användargränssnittet. Dessutom kan ändringar gå förlorade vid uppgraderingen. AEM-systemordlistor finns under `/libs`.
+>AEM systemlexikon finns också i det här verktyget. Ändra inte AEM systemordlistor eftersom detta kan orsaka problem med det AEM användargränssnittet. Dessutom kan ändringar gå förlorade vid uppgraderingen. AEM finns under `/libs`.
 
 >[!NOTE]
 >
 >Även om översättningsverktyget har ett klassiskt användargränssnitt används det för översättning av fraser oavsett vilket gränssnitt som dessa fraser finns i.
 
-Översättaren listar de texter som används i AEM med olika språköversättningar tillsammans:
+Översättaren visar de texter som används i AEM med de olika språköversättningarna tillsammans:
 
 ![chlimage_1-205](assets/chlimage_1-205.png)
 
@@ -45,7 +48,7 @@ Det går också att lägga till i18n-ordlistorna i ett översättningsprojekt fr
 
 1. Klicka på **Översätt ordlista**.
 
-   ![chlimage_1-205](assets/chlimage_1-206.png)
+   ![chlimage_1-206](assets/chlimage_1-206.png)
 
 1. Välj Skapa eller Lägg till beroende på behov. En dialogruta öppnas.
 
@@ -53,7 +56,7 @@ Det går också att lägga till i18n-ordlistorna i ett översättningsprojekt fr
 
 1. Fyll i fälten efter behov och klicka på OK. ![chlimage_1-208](assets/chlimage_1-208.png)
 
-1. Nu kan du klicka på **OK** eller se målordlistan.
+1. Du kan nu klicka på **OK** eller se målordlistan.
 
    >[!NOTE]
    >
@@ -63,13 +66,13 @@ Det går också att lägga till i18n-ordlistorna i ett översättningsprojekt fr
 
 Skapa en ordlista för hantering av lokaliserade gränssnittssträngar. När du har skapat en ordlista kan du använda översättningsverktyget för att hantera den.
 
-1. Med CRXDE Lite lägger du till rotnoden ( `sling:Folder`) för den nya ordlistan som den struktur som ska innehålla språkdefinitionerna:
+1. Använd CRXDE Lite och lägg till rotnoden ( `sling:Folder`) för den nya ordlistan som den struktur som ska innehålla språkdefinitionerna:
 
    ` /apps/<projectName>/i18n`
 
-   Exempel, `/apps/myProject/i18n`
+   Till exempel, `/apps/myProject/i18n`
 
-1. Lägg till den språkstruktur som krävs under den här roten. Exempel:
+1. Lägg till den språkstruktur som krävs under den här roten. Till exempel:
 
    ```shell
    /apps/myProject/i18n [sling:Folder]
@@ -81,7 +84,7 @@ Skapa en ordlista för hantering av lokaliserade gränssnittssträngar. När du 
 
    >[!NOTE]
    >
-   >Detta är strukturen från modulen [](https://sling.apache.org/site/internationalization-support.html)Sling i18n.
+   >Detta är strukturen från modulen [Sling i18n](https://sling.apache.org/site/internationalization-support.html).
 
 1. Läs in konverteraren och ordlistesökvägen igen (t.ex. `/apps/myProject/i18n`) är tillgängligt i den nedrullningsbara väljaren i verktygsfältet. Välj det här om du vill börja lägga till strängar och deras översättningar.
 
@@ -99,7 +102,7 @@ Använd översättningsverktyget för att hantera strängarna i dina ordlistor. 
 >
 >Redigera bara ordlistor som har skapats för ditt projekt och som finns under `/apps`.
 >
->Ändra inte AEM-systemordlistorna eftersom detta kan orsaka problem med AEM-användargränssnittet. Dessutom kan ändringar gå förlorade vid uppgraderingen. AEM-systemordlistor finns under `/libs`.
+>Ändra inte AEM systemordlistor eftersom detta kan orsaka problem med det AEM användargränssnittet. Dessutom kan ändringar gå förlorade vid uppgraderingen. AEM finns under `/libs`.
 
 ### Lägga till, ändra och ta bort strängar {#adding-changing-and-removing-strings}
 
@@ -119,7 +122,7 @@ Inkludera variabler i den lokaliserade strängen för att skapa sammanhangsbaser
 
 Om du vill ta med variabler i den lokaliserade strängen placerar du index inom hakparentes på variabelns plats i det första argumentet i get-metoden. Använd lokaliseringstipset för att beskriva värdena. Översättaren måste förstå vad variablerna betyder, eftersom olika språk använder olika meningsstrukturer.
 
-Observera att koden [som begär den översatta strängen](/help/sites-developing/i18n-dev.md#including-variables-in-localized-sentences) innehåller värden för de indexerade variablerna enligt sammanhanget.
+Observera att [koden som begär den översatta strängen](/help/sites-developing/i18n-dev.md#including-variables-in-localized-sentences) innehåller värden för de indexerade variablerna enligt kontexten.
 
 Följande sträng visas till exempel när en användare loggar in på en webbplats och ingår i ordlistan:
 
@@ -174,8 +177,8 @@ Använd följande procedur för att ta bort en sträng från ett lexikon.
 
 Sökfältet längst ned i översättningsverktyget innehåller alternativ för strängval:
 
-* **** Filtrera efter text: Ett mönster som matchar den engelska strängen, kommentaren eller översättningen. Endast objekt som matchar hela eller delar av mönstret visas i tabellen.
-* **** Ändringar: Valfri, ändrad, ny, borttagen: Visa objekt som har ändrats och inte sparats.
+* **Filtrera efter text:** Ett mönster som matchar den engelska strängen, kommentaren eller översättningen. Endast objekt som matchar hela eller delar av mönstret visas i tabellen.
+* **Ändringar: Alla, Ändrade, Nya, Borttagna:** Visa objekt som har ändrats och inte sparats.
 
    * Alla: Visa objekt som har ändrats, lagts till eller tagits bort.
    * Ändrad: Visa objekt som har ändrats.
@@ -184,7 +187,7 @@ Sökfältet längst ned i översättningsverktyget innehåller alternativ för s
    * Flera markeringar: Visa objekt som har alla markerade egenskaper.
 
 * **Har kommentar**: Visa objekt som har kommentarer för översättare.
-* **** Översättningar saknas: Visa objekt där minst ett språk inte har någon översättning.
+* **Översättningar saknas:** Visa objekt där minst ett språk inte har någon översättning.
 
 ![chlimage_1-215](assets/chlimage_1-215.png)
 
@@ -196,7 +199,7 @@ Sökfältet längst ned i översättningsverktyget innehåller alternativ för s
 
 När du har lagt till den engelska strängen i ett lexikon kan du lägga till översättningar av strängen. Du kan också [exportera ordlistan](/help/sites-developing/i18n-translator.md#exporting-a-dictionary) så att den översätts av en tredje part.
 
-1. Välj [din projektspecifika ordlista](#creating-a-dictionary) så som den anger sökvägen i databasen som innehåller översättningarna. Välj till exempel **Ordlistor** som:
+1. Välj [din projektspecifika ordlista](#creating-a-dictionary) när den anger sökvägen i databasen som innehåller översättningarna. Välj till exempel **Ordlistor** som:
 
    `/apps/myProject/i18n`
 
@@ -204,21 +207,23 @@ När du har lagt till den engelska strängen i ett lexikon kan du lägga till ö
    >
    >Redigera bara ordlistor som har skapats för ditt projekt och som finns under `/apps`.
    >
-   >AEM-systemordlistor finns också i det här verktyget. Ändra inte AEM-systemordlistorna eftersom detta kan orsaka problem med AEM-användargränssnittet. Dessutom kan ändringar gå förlorade vid uppgraderingen. AEM-systemordlistor finns under `/libs`.
+   >AEM systemlexikon finns också i det här verktyget. Ändra inte AEM systemordlistor eftersom detta kan orsaka problem med det AEM användargränssnittet. Dessutom kan ändringar gå förlorade vid uppgraderingen. AEM finns under `/libs`.
 
 1. Om du vill redigera den översatta texten för en av strängarna kan du antingen:
 
    * Dubbelklicka på rätt språk för strängen för att redigera den enskilda texten:
+
    ![chlimage_1-216](assets/chlimage_1-216.png)
 
-   * Dubbelklicka på fälten **String** eller **Comment** för strängen för att öppna dialogrutan **Redigera sträng** , redigera översättningen/översättningarna efter behov och klicka sedan på **OK** för att stänga dialogrutan:
+   * Dubbelklicka på fälten **String** eller **Kommentar** för strängen som krävs för att öppna dialogrutan **Redigera sträng**, redigera översättningen/översättningarna efter behov och klicka sedan på **OK** för att stänga dialogrutan:
+
    ![chlimage_1-217](assets/chlimage_1-217.png)
 
 1. Klicka på **Spara** i verktygsfältet för att genomföra ändringarna.
 
    >[!NOTE]
    >
-   >Om du klickar på **Återställ och uppdatera** (i stället för att **spara**) återställs alla ändringar i den föregående texten.
+   >Om du klickar på **Återställ och uppdatera** (i stället för **Spara**) återställs alla ändringar i den föregående texten.
 
 ## Använda tredjepartsöversättare {#using-third-party-translators}
 
@@ -231,13 +236,13 @@ Exportera ett lexikon till en XLIFF-fil så att en tredjepartstjänst kan övers
 * Exportera en ordlista och inkludera engelska och de översatta termerna för ett språk.
 * Exportera några eller alla endast engelska strängar.
 
-När du exporterar en XLIFF-fil och inkluderar ett språk, måste nodstrukturen för ordlistan i databasen innehålla det språket. Om språket inte inkluderas uppstår fel. Om du till exempel vill exportera den franska XLIFF-filen måste lexikonmappen innehålla den `mix:language` underordnade noden `fr`. (Se [Skapa en ordlista](/help/sites-developing/i18n-translator.md#creating-a-dictionary).)
+När du exporterar en XLIFF-fil och inkluderar ett språk, måste nodstrukturen för ordlistan i databasen innehålla det språket. Om språket inte inkluderas uppstår fel. Om du till exempel vill exportera den franska XLIFF-filen måste lexikonmappen innehålla den underordnade `mix:language`-noden `fr`. (Se [Skapa en ordlista](/help/sites-developing/i18n-translator.md#creating-a-dictionary).)
 
 Gör så här för att exportera en XLIFF-fil för ett visst språk.
 
 1. Öppna översättningsverktyget `http://<host>:<port>/libs/cq/i18n/translator.html`
 1. Använd listrutan Ordlistor för att välja det lexikon som ska exporteras.
-1. Klicka på Exportera > Exportera fullständiga *XX* Xliff-alternativ, där *XX* är den språkkod med två bokstäver som DE eller FR.
+1. Klicka på Exportera > Exportera fullständig *XX* Xliff-alternativ, där *XX* är en språkkod med två bokstäver, till exempel DE eller FR.
 
    XLIFF-filen öppnas i en ny flik eller i ett nytt fönster.
 
@@ -285,29 +290,30 @@ Använd följande procedur för att lägga till eller ta bort språk.
 
 1. Skapa en egenskap på den här noden:
 
-   * **Namn**: `languages`
-   * **Typ**: `Multi-String`
-   * **Värde**: listan med språk som du vill visa. Exempel:
+   * **Namn**:  `languages`
+   * **Typ**:  `Multi-String`
+   * **Värde**: listan med språk som du vill visa. Till exempel:
 
       * fr
       * es
+
    >[!NOTE]
    >
    >Språkkoderna måste vara små.
 
-1. Klicka på **Spara alla** i CRXDE Lite och läs in konverteraren igen. Rutnätet uppdateras för att visa definierade språk.
+1. Klicka på **Spara alla** i CRXDE Lite och läs in översättaren igen. Rutnätet uppdateras för att visa definierade språk.
 
    >[!NOTE]
    >
-   >Översättaren sparar endast översättningar för språk som faktiskt finns [i ordlistan](#creating-a-dictionary) (t.ex. under ordlistans sökväg `/apps/myProject/i18n`).
+   >Översättaren sparar endast översättningar för språk som faktiskt är [närvarande i ordlistan](#creating-a-dictionary) (d.v.s. under ordlistans sökväg, t.ex. `/apps/myProject/i18n`).
    >
    >Kontrollera att de motsvarar de språk som visas i rutnätet.
 
 ### Göra språk tillgängliga för författare {#making-languages-available-to-authors}
 
-När du har definierat en ordlista för ett språk som är nytt för din AEM-instans måste du göra den tillgänglig för författare (t.ex. för användning i **Inställningar**):
+När du har definierat en ordlista för ett språk som är nytt för AEM måste du göra den tillgänglig för författarna (till exempel för användning i **Inställningar**):
 
-1. Så här ändrar du listan över tillgängliga språk i **Inställningar** i **säkerhetskonsolen** :
+1. Så här ändrar du listan över tillgängliga språk i **Inställningar** på **Security**-konsolen:
 
    1. Skapa en övertäckning i programkoden för:
 
@@ -316,7 +322,7 @@ När du har definierat en ordlista för ett språk som är nytt för din AEM-ins
        and update as required.
       ```
 
-1. Om du vill göra språket tillgängligt i **Inställningar** från **webbplatskonsolen** måste du göra följande ändringar i programmet:
+1. Om du vill göra språket tillgängligt i **Inställningar** från konsolen **Webbplatser** måste du göra följande ändringar i programmet:
 
    1. Skapa en övertäckning för strukturen under:
 
@@ -330,13 +336,13 @@ När du har definierat en ordlista för ett språk som är nytt för din AEM-ins
 
 ### Ändra språknamn och standardländer {#changing-language-names-and-default-countries}
 
-I olika länder används samma språk, till exempel i USA, Storbritannien och Australien används alla engelska. Detta anges med en kod som anger både språk och land som `en_US`, `en_GB` och `en_AU`.
+I olika länder används samma språk, till exempel i USA, Storbritannien och Australien används alla engelska. Detta indikeras av en kod som anger både språk och land som `en_US`, `en_GB` och `en_AU`.
 
 Standardländerna används när flaggor visas (t.ex. i dialogrutan för språkkopiering). De används för att tolka landet för en språkkod.
 
 >[!NOTE]
 >
->För lokaliseringar som hanteras av översättaren ovan fungerar bara det exakta språket. Om listrutan för språkinställningar används `en_uk`måste det finnas en `en_uk` ordlista i databasen.
+>För lokaliseringar som hanteras av översättaren ovan fungerar bara det exakta språket. Om listrutan för språkinställningar använder `en_uk` måste det finnas en `en_uk`-ordlista i databasen.
 
 Så här ändrar du standarddefinitionerna:
 
@@ -348,7 +354,7 @@ Så här ändrar du standarddefinitionerna:
 
    `/apps/wcm/core/resources/languages`
 
-   Ändra eller utöka listan där. Egenskapen `defaultCountry` för en språknod (t.ex. `ja`) måste innehålla den fullständiga koden, t.ex. `ja_jp`, som skulle definiera `jp` som standardland för språket `ja`.
+   Ändra eller utöka listan där. Egenskapen `defaultCountry` på en språknod (t.ex. `ja`) måste innehålla den fullständiga koden, till exempel `ja_jp`, som skulle definiera `jp` som standardland för språket `ja`.
 
 1. Uppdatera **CQ WCM Language Manager**.
 
@@ -367,7 +373,7 @@ Så här ändrar du standarddefinitionerna:
 
 ## Publiceringsordlistor {#publishing-dictionaries}
 
-Lägg in dina ordlistor i processen för versionshantering av AEM-programmen. Ta till exempel med ordlistan i programinnehållspaketet för distribution till publiceringsinstansen. Denna strategi ger följande fördelar:
+Lägg in ordlistorna i processen för versionshantering av era AEM program. Ta till exempel med ordlistan i programinnehållspaketet för distribution till publiceringsinstansen. Denna strategi ger följande fördelar:
 
 * Ordlistor är tillgängliga för komponenter i deras publiceringsmiljö.
 * Ändringar i gränssnittssträngar för komponenter distribueras tillsammans med de uppdaterade översättningarna.
@@ -376,9 +382,9 @@ På samma sätt bör testning av ordlistesträngar utföras som en del av den no
 
 >[!NOTE]
 >
->Regelbunden publiceringsfunktion, eller replikering, ska inte användas för ordlistor. Ordlistor ska i stället behandlas på samma sätt som kod och konfiguration. Detta inkluderar att använda källkontroll för att spåra ändringar och att använda innehållspaket för att tillämpa ändringar på författare och publicering.
+>Regelbunden publicering, eller replikering, ska inte användas för ordlistor. Ordlistor ska i stället behandlas på samma sätt som kod och konfiguration. Detta inkluderar att använda källkontroll för att spåra ändringar och att använda innehållspaket för att tillämpa ändringar på författare och publicering.
 
 >[!NOTE]
 >
->När du använder Dispatcher måste du [göra cachelagrade sidor](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html) ogiltiga för att inkludera nya ordbokssträngar i återgivna komponentsträngar.
+>När du använder Dispatcher måste du [ogiltigförklara cachelagrade sidor](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html) för att inkludera nya ordbokssträngar i renderade komponentsträngar.
 
