@@ -10,6 +10,9 @@ topic-tags: hTML5_forms
 discoiquuid: 8eebfcd6-0597-44ed-b718-bf9a1baa6c12
 translation-type: tm+mt
 source-git-commit: 00e14be8a0775149b3ee7ce8cd781dd7f1e49e4f
+workflow-type: tm+mt
+source-wordcount: '335'
+ht-degree: 0%
 
 ---
 
@@ -18,15 +21,16 @@ source-git-commit: 00e14be8a0775149b3ee7ce8cd781dd7f1e49e4f
 
 Du kan överföra, förhandsgranska och skicka bilagor med HTML5-formulär. Som standard är stöd för bifogade filer inaktiverat. Så här aktiverar du stöd för bifogade filer:
 
-1. Skapa en [anpassad profil](/help/forms/using/custom-profile.md) med egenskapen multiselect-sträng `mfAttachmentOptions`.
-1. I den anpassade profilen anger du egenskaper `fileSizeLimit`och `multiSelect``buttonTex`inte för att konfigurera alternativ för widgeten för bifogade filer. Om det behövs kan du även ange fler anpassade egenskaper.
+1. Skapa en [anpassad profil](/help/forms/using/custom-profile.md) med multiselect-strängegenskap `mfAttachmentOptions`.
+1. I den anpassade profilen anger du egenskaperna `fileSizeLimit`, `multiSelect` och `buttonTex`t för att konfigurera alternativ för widgeten för bifogade filer. Om det behövs kan du även ange fler anpassade egenskaper.
 
 1. Använd följande konfigurationer i den anpassade profilen:
 
    * **multiSelect** -> true eller false (true som standard)
    * **fileSizeLimit** -> value_in_mb (say 5) (2 MB som standard)
    * **buttonText** -> Button text for pop-up window (&quot;Attach&quot; as default)
-   * **acceptera** -> filtyper att acceptera (&quot;ljud/&amp;ast;, video/&amp;ast;, bild/&amp;ast;, text/&amp;ast;, .pdf&quot; som standard)
+   * **acceptera** -> filtyper att acceptera (&quot;audio/&amp;ast;, video/&amp;ast;, image/&amp;ast;, text/&amp;ast;, .pdf&quot; som standard)
+
    >[!NOTE]
    >
    >I Microsoft Internet Explorer 9 kan användare bifoga filer som är större än den angivna gränsen. Det är ett känt problem.
@@ -48,12 +52,12 @@ Du kan överföra, förhandsgranska och skicka bilagor med HTML5-formulär. Som 
    >
    >Filförhandsvisningsalternativet är inte tillgängligt för anonyma användare.
 
-## Bifogad filinlämningsformat {#attachment-submission-format}
+## Överföringsformat för bifogad fil {#attachment-submission-format}
 
-När bilagor är aktiverade skickar HTML5-formulär multipart-data. Flerdelsdata har två **dataXml** och **bilagor**.
+När bilagor är aktiverade skickar HTML5-formulär multipart-data. Flerdelsdata har två delar **dataXml** och **bilagor**.
 
 >[!NOTE]
 >
->För bakåtkompatibilitet gäller att om `mfAllowAttachments` alternativet är inaktiverat skickas inte data i flera delar med HTML5-formulären. Det skickar enkel data-xml i **program-/xml** -format.
+>För bakåtkompatibilitet gäller att om `mfAllowAttachments`-alternativet är inaktiverat skickar HTML5-formulären inte multipart-data. Det skickar enkel data-xml i formatet **application/xml**.
 
-Om mfAllowAttachments-flaggan är aktiverad, skickar [tjänstproxytjänsten](/help/forms/using/service-proxy.md) även multipart-data med dataXml och bilagor.
+Om mfAllowAttachments-flaggan är aktiverad skickar [tjänstproxytjänsten](/help/forms/using/service-proxy.md) även multipart-data med dataXml och bilagor.
