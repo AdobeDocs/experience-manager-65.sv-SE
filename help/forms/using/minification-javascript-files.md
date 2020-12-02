@@ -1,8 +1,8 @@
 ---
 title: Miniatyrbilder av JavaScript-filer
 seo-title: Miniatyrbilder av JavaScript-filer
-description: Instruktioner för att generera minierad kod efter anpassning av arbetsytan i AEM Forms för att optimera JS-filerna för webben.
-seo-description: Instruktioner för att generera minierad kod efter anpassning av arbetsytan i AEM Forms för att optimera JS-filerna för webben.
+description: Instruktioner för att generera minierad kod efter AEM Forms-arbetsyteanpassningar för att optimera JS-filerna för webben.
+seo-description: Instruktioner för att generera minierad kod efter AEM Forms-arbetsyteanpassningar för att optimera JS-filerna för webben.
 uuid: ad91e380-a988-4740-9534-e09657e0322a
 contentOwner: robhagat
 content-type: reference
@@ -18,17 +18,17 @@ ht-degree: 0%
 ---
 
 
-# Miniatyrbilder av JavaScript-filer {#minification-of-the-javascript-files}
+# Miniatyr av JavaScript-filerna {#minification-of-the-javascript-files}
 
 Med miniatyr tas de redundanta tecknen bort från källkoden, till exempel blanksteg, ny rad och kommentarer. Detta förbättrar prestandan genom att minska storleken på koden. Miniatyrfunktionen påverkar inte funktionen, men den minskar kodens läsbarhet.
 
 Följ de här stegen för att generera miniatyrkod för semantiska ändringar.
 
-1. Kopiera `client-html/src/main/webapp/js` från src-paket i filsystemet.
+1. Kopiera `client-html/src/main/webapp/js` från src-package i filsystemet.
 
    >[!NOTE]
    >
-   >Mer information om paketen finns i [Introduktion till att anpassa arbetsytan](/help/forms/using/introduction-customizing-html-workspace.md) AEM Forms.
+   >Mer information om paketen finns i [Introduktion till anpassning av AEM Forms-arbetsytan](/help/forms/using/introduction-customizing-html-workspace.md).
 
 1. Uppdatera sökvägar i `main.js` som finns under client-html/src/main/webapp/js, för tillagda/uppdaterade modeller/vyer.
 
