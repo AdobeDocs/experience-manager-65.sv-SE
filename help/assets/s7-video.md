@@ -22,8 +22,8 @@ Med resurser kan du centralisera hanteringen av videoresurser så att du kan öv
 
 Med videointegrationen i Dynamic Media Classic kan du nå optimerad video på alla skärmar (automatisk enhets- och bandbreddsidentifiering).
 
-* Komponenten utför automatiskt **[!UICONTROL Scene7 Video]** enhets- och bandbreddsidentifiering för att spela upp video i rätt format och med rätt kvalitet på datorer, surfplattor och mobila enheter.
-* Resurser - Du kan inkludera adaptiva videouppsättningar i stället för bara enskilda videoresurser. En adaptiv videouppsättning är en behållare för alla videoåtergivningar som krävs för att spela upp video sömlöst på flera skärmar. En adaptiv videouppsättning grupperar versioner av samma video som är kodade med olika bithastigheter och format som 400 kbit/s, 800 kbit/s och 1 000 kbit/s. Du använder en adaptiv videouppsättning, tillsammans med S7-videokomponenten, för adaptiv videoströmning på flera skärmar, inklusive stationära datorer, iOS, Android, Blackberry och Windows mobila enheter. Mer information finns i [Scene7 dokumentation om adaptiva videouppsättningar](https://help.adobe.com/en_US/scene7/using/WS53492AE1-6029-45d8-BF80-F4B5CF33EB08.html).
+* Komponenten **[!UICONTROL Scene7 Video]** utför automatiskt enhets- och bandbreddsidentifiering för att spela upp video i rätt format och med rätt kvalitet på datorer, surfplattor och mobiler.
+* Resurser - Du kan inkludera adaptiva videouppsättningar i stället för bara enskilda videoresurser. En adaptiv videouppsättning är en behållare för alla videoåtergivningar som krävs för att spela upp video sömlöst på flera skärmar. En adaptiv videouppsättning grupperar versioner av samma video som är kodade med olika bithastigheter och format som 400 kbit/s, 800 kbit/s och 1 000 kbit/s. Du använder en adaptiv videouppsättning, tillsammans med S7-videokomponenten, för adaptiv videoströmning på flera skärmar, inklusive stationära datorer, iOS, Android, Blackberry och Windows mobila enheter. Mer information finns i [Scene7-dokumentation om adaptiva videouppsättningar](https://help.adobe.com/en_US/scene7/using/WS53492AE1-6029-45d8-BF80-F4B5CF33EB08.html).
 
 ## Om FFMPEG och Dynamic Media Classic {#about-ffmpeg-and-scene}
 
@@ -58,40 +58,40 @@ Om du behöver ett arbetsflöde eller en versionshantering för dina resurser b�
 
 1. Ladda upp videomaterialet till Adobe DAM och koda och publicera automatiskt till Dynamic Media Classic.
 1. I AEM kommer du åt videomaterial i WCM på fliken **[!UICONTROL Movies]** i Content Finder.
-1. Skapa med **[!UICONTROL Scene7 Video]** eller **[!UICONTROL Foundation Video]** komponent.
+1. Skapa med en **[!UICONTROL Scene7 Video]**- eller **[!UICONTROL Foundation Video]**-komponent.
 
 ### Om du överför din video till Scene7 {#if-you-are-uploading-your-video-to-scene}
 
 Om du inte behöver ett arbetsflöde eller en versionshantering för dina resurser bör du överföra dina resurser till Scene7. Här följer det rekommenderade arbetsflödet:
 
-1. I Dynamic Media Classic [ställer du in en schemalagd FTP-överföring och -kodning till Scene7 (system automatiserad)](https://help.adobe.com/en_US/scene7/using/WS70B173EC-4CAD-4b4c-BF9C-43A11F3A5950.html).
+1. I Dynamic Media Classic [konfigurerar du en schemalagd FTP-överföring och -kodning till Scene7 (automatiserad)](https://help.adobe.com/en_US/scene7/using/WS70B173EC-4CAD-4b4c-BF9C-43A11F3A5950.html).
 1. I AEM kommer du åt videomaterial i WCM på fliken **[!UICONTROL Scene7]** i Content Finder.
-1. Skapa med **[!UICONTROL Scene7 Video]** komponenten.
+1. Skapa med komponenten **[!UICONTROL Scene7 Video]**.
 
 ## Konfigurera integrering med Scene7 Video {#configuring-integration-with-scene-video}
 
 Så här konfigurerar du universella förinställningar:
 
-1. I **[!UICONTROL Cloud Services]** navigerar du till din **[!UICONTROL Scene7]** konfiguration och klickar på **[!UICONTROL Edit.]**
-1. Klicka på **[!UICONTROL Video]** fliken.
+1. I **[!UICONTROL Cloud Services]** navigerar du till din **[!UICONTROL Scene7]**-konfiguration och klickar på **[!UICONTROL Edit.]**
+1. Välj fliken **[!UICONTROL Video]**.
 
    ![chlimage_1-363](assets/chlimage_1-363.png)
 
    >[!NOTE]
    >
-   >Fliken visas inte **[!UICONTROL Video]** om sidan inte har någon molnkonfiguration.
+   >Fliken **[!UICONTROL Video]** visas inte om sidan inte har någon molnkonfiguration.
 
 1. Välj den adaptiva videokodningsprofilen, en färdig videokodningsprofil eller en anpassad videokodningsprofil.
 
    >[!NOTE]
    >
-   >Mer information om vad videoförinställningarna betyder finns i dokumentationen [för](https://help.adobe.com/en_US/scene7/using/WSE86ACF2B-BD50-4c48-A1D7-9CD4405B62D0.html)Dynamic Media Classic.
+   >Mer information om vad videoförinställningarna betyder finns i [dokumentationen för Dynamic Media Classic](https://help.adobe.com/en_US/scene7/using/WSE86ACF2B-BD50-4c48-A1D7-9CD4405B62D0.html).
    >
-   >Adobe rekommenderar att du antingen väljer båda adaptiva videouppsättningar när du konfigurerar de universella förinställningarna eller väljer **[!UICONTROL Adaptive Video Encoding]** alternativet.
+   >Adobe rekommenderar att du antingen markerar båda adaptiva videouppsättningar när du konfigurerar de universella förinställningarna eller väljer alternativet **[!UICONTROL Adaptive Video Encoding]**.
 
 1. De valda kodningsprofilerna tillämpas automatiskt på alla videoklipp som överförs till CQ DAM-målmappen som du konfigurerar för den här Scene7-molnkonfigurationen. Du kan konfigurera flera Scene7 molnkonfigurationer med olika målmappar för att tillämpa olika kodningsprofiler efter behov.
 
-## Uppdatera visningsprogram och kodningsförinställningar {#updating-viewer-and-encoding-presets}
+## Uppdaterar förinställningar för visningsprogram och kodning {#updating-viewer-and-encoding-presets}
 
 Om du behöver uppdatera visningsprogrammet och kodningsförinställningarna för video i AEM eftersom förinställningarna har uppdaterats i Scene7 går du till Scene7-konfigurationen i molnkonfigurationen och klickar på **[!UICONTROL Update the viewer and encoding presets.]**
 
@@ -100,13 +100,13 @@ Om du behöver uppdatera visningsprogrammet och kodningsförinställningarna fö
 ## Överför din primära källvideo till Scene7 från Adobe DAM {#uploading-your-master-video}
 
 1. Navigera till målmappen för CQ DAM där du har konfigurerat molnkonfigurationen med Scene7-kodningsprofiler.
-1. Klicka **[!UICONTROL Upload]** för att överföra primärt källvideoklipp. Överföringen och kodningen av video är klar när [!UICONTROL DAM Update Asset] arbetsflödet är klart och **[!UICONTROL Publish to Scene7]** har en bock.
+1. Klicka på **[!UICONTROL Upload]** för att överföra primärt källvideoklipp. Överföringen och kodningen av videon är klar när arbetsflödet [!UICONTROL DAM Update Asset] är klart och **[!UICONTROL Publish to Scene7]** är markerat.
 
    >[!NOTE]
    >
    >Det kan ta en stund innan videominiatyrbilderna genereras.
 
-   Genom att dra den primära källvideon för DAM till videokomponenten får du tillgång till *alla* Scene7-kodade proxyåtergivningar för leverans.
+   Om du drar den primära källvideon för DAM till videokomponenten får du tillgång till *alla* av de Scene7-kodade proxyåtergivningarna för leverans.
 
 ## Foundation Video Component jämfört med Scene7 Video Component {#foundation-video-component-versus-scene-video-component}
 
@@ -126,7 +126,7 @@ I följande matris förklaras när du bör använda vilken komponent:
 
 Även om du bör använda videokomponenten för Scene7 för att visa Scene7-videofilmer beskrivs det här avsnittet hur du använder Scene7-videofiler med komponenten Foundation Video i AEM för att få en fullständig beskrivning.
 
-### AEM Video och Scene7 Video Comparison {#aem-video-and-scene-video-comparison}
+### AEM Video- och Scene7 Video-jämförelse {#aem-video-and-scene-video-comparison}
 
 I följande tabell visas en högnivåjämförelse av funktioner som stöds mellan AEM Foundation Video-komponenten och Scene7 Video-komponenten:
 
@@ -140,7 +140,7 @@ I följande tabell visas en högnivåjämförelse av funktioner som stöds mella
 
 ### Konfigurera {#setting-up}
 
-#### Skapa videoprofiler {#creating-video-profiles}
+#### Skapar videoprofiler {#creating-video-profiles}
 
 De olika videokodningarna skapas enligt de kodningsförinställningar för S7 som valts i molnkonfigurationen för S7. För att den grundläggande videokomponenten ska kunna använda dem måste en videoprofil skapas för varje vald S7-kodningsförinställning. Detta gör att videokomponenten kan välja DAM-återgivningar utifrån detta.
 
@@ -149,8 +149,8 @@ De olika videokodningarna skapas enligt de kodningsförinställningar för S7 so
 >Nya videoprofiler och ändringar av dem måste aktiveras för publicering.
 
 1. I AEM trycker du på **[!UICONTROL Tools]>[!UICONTROL Configuration Console]**.
-1. Navigera **[!UICONTROL Configuration Console]** till **[!UICONTROL Tools > DAM > Video Profiles]** i navigeringsträdet.
-1. Skapa en ny S7-videoprofil. På **[!UICONTROL New...]** menyn väljer du **[!UICONTROL Create Page]** och sedan Scene7 videoprofilmall. Ge den nya videoprofilsidan ett namn och klicka på **[!UICONTROL Create.]**
+1. I **[!UICONTROL Configuration Console]** navigerar du till **[!UICONTROL Tools > DAM > Video Profiles]** i navigeringsträdet.
+1. Skapa en ny S7-videoprofil. På menyn **[!UICONTROL New...]** väljer du **[!UICONTROL Create Page]** och sedan Scene7 videoprofilmall. Ge den nya videoprofilsidan ett namn och klicka på **[!UICONTROL Create.]**
 
    ![chlimage_1-366](assets/chlimage_1-366.png)
 
@@ -166,26 +166,26 @@ De olika videokodningarna skapas enligt de kodningsförinställningar för S7 so
 
    Upprepa det här steget för alla kodningsförinställningar som är markerade i molnkonfigurationen och som du vill använda i videokomponenten.
 
-#### Konfigurera design {#configuring-design}
+#### Konfigurerar design {#configuring-design}
 
-Komponenten måste **[!UICONTROL Foundation Video]** känna till vilka videoprofiler som ska användas för att skapa listan över videokällor. Du måste öppna dialogrutan för videokomponentdesign och konfigurera komponentdesignen för de nya videoprofilerna.
+Komponenten **[!UICONTROL Foundation Video]** måste känna till vilka videoprofiler som ska användas för att skapa listan över videokällor. Du måste öppna dialogrutan för videokomponentdesign och konfigurera komponentdesignen för de nya videoprofilerna.
 
 >[!NOTE]
 >
->Om du använder **[!UICONTROL Foundation Video]** komponenten på en mobilsida kan du behöva upprepa de här stegen när du designar mobilsidan.
+>Om du använder komponenten **[!UICONTROL Foundation Video]** på en mobilsida kan du behöva upprepa de här stegen när du designar mobilsidan.
 
 >[!NOTE]
 >
 >Ändringar i designen kräver att designen aktiveras för att börja gälla vid publiceringen.
 
-1. Öppna **[!UICONTROL Foundation Video]** komponentens designdialogruta och växla till **[!UICONTROL Profiles]** fliken. Ta sedan bort färdiga profiler och lägg till de nya videoprofilerna för S7. Ordningen på profillistan i designdialogrutan definierar ordningen på videokällelementet vid återgivning.
-1. För webbläsare som inte stöder HTML5 kan videokomponenten konfigurera ett Flash-reserv. Öppna dialogrutan för design av videokomponenter och gå till **[!UICONTROL Flash]** fliken. Konfigurera inställningarna för Flash-spelaren och tilldela en reservprofil för Flash Player.
+1. Öppna **[!UICONTROL Foundation Video]**-komponentens designdialogruta och ändra till fliken **[!UICONTROL Profiles]**. Ta sedan bort färdiga profiler och lägg till de nya videoprofilerna för S7. Ordningen på profillistan i designdialogrutan definierar ordningen på videokällelementet vid återgivning.
+1. För webbläsare som inte stöder HTML5 kan videokomponenten konfigurera ett Flash-reserv. Öppna dialogrutan för design av videokomponenter och ändra till fliken **[!UICONTROL Flash]**. Konfigurera inställningarna för Flash-spelaren och tilldela en reservprofil för Flash Player.
 
 #### Checklista {#checklist}
 
 1. Skapa en S7-molnkonfiguration. Kontrollera att förinställningarna för videokodning är angivna och att importeraren körs.
 1. Skapa en S7-videoprofil för varje videokodningsförinställning som har valts i molnkonfigurationen.
 1. Videoprofilerna måste aktiveras.
-1. Konfigurera designen för **[!UICONTROL oundation Video]** komponenten på sidan.
+1. Konfigurera designen för **[!UICONTROL oundation Video]**-komponenten på sidan.
 1. Aktivera designen när du är klar med designändringarna.
 
