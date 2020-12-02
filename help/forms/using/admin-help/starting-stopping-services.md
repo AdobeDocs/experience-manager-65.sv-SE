@@ -20,26 +20,26 @@ ht-degree: 0%
 
 # Starta och stoppa tjänster {#starting-and-stopping-services}
 
-Det finns två typer av tjänster som ingår i AEM-formulär:
+Det finns två typer av tjänster som ingår i AEM:
 
-* Tjänster som styr AEM-formulärens programserver och databas.
-* Tjänster som styr AEM-formulärmoduler
+* Tjänster som styr AEM och databas.
+* Tjänster som styr AEM formulärmoduler
 
-## Starta eller stoppa tjänster som är kopplade till AEM-formulärmoduler {#start-or-stop-the-services-associated-with-aem-forms-modules}
+## Starta eller stoppa tjänster som är kopplade till AEM formulärmoduler {#start-or-stop-the-services-associated-with-aem-forms-modules}
 
-AEM-formulärmoduler (till exempel Forms, Rights Management, Output) fungerar som tjänster. Ibland kan du behöva stoppa eller starta tjänsterna för dessa AEM-formulärmoduler. Du måste till exempel stoppa och sedan starta om en AEM-formulärtjänst när du har ändrat en inställning för tjänsten.
+AEM (t.ex. Forms, Rights Management, Output) fungerar som tjänster. Ibland kan du behöva stoppa eller starta tjänsterna för dessa AEM. Du måste till exempel stoppa och sedan starta om en AEM formulärtjänst när du har ändrat en inställning för tjänsten.
 
 1. I administrationskonsolen klickar du på **Tjänster** > **Program och tjänster** > **Tjänsthantering**.
 1. Markera kryssrutan bredvid tjänsten som ska stoppas eller startas på sidan Tjänsthantering och klicka på Stopp eller Start.
 
 ## Starta eller stoppa tjänster för programservern och databasen {#start-or-stop-services-for-the-application-server-and-database}
 
-En komplett implementering av AEM-formulär innefattar en programserver och databastjänster:
+En fullständig implementering av AEM innehåller en programserver och databastjänster:
 
-* *`[application server]`* för AEM-formulär
-* *`[database]`* för AEM-formulär
+* *`[application server]`* aem formulär
+* *`[database]`* aem formulär
 
-I Windows är dessa tjänster tillgängliga via **Administrationsverktyg** > **Tjänster**. Om du t.ex. har installerat AEM-formulär på JBoss med körningsmetoden är följande tjänster tillgängliga på datorn:
+I Windows är dessa tjänster tillgängliga via **Administrationsverktyg** > **Tjänstpanelen**. Om du t.ex. har installerat AEM formulär på JBoss med körningsmetoden är följande tjänster tillgängliga på datorn:
 
 * JBoss för Adobe Experience Manager-formulär
 * MySQL för Adobe Experience Manager-formulär
