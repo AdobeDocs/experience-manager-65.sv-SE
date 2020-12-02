@@ -17,9 +17,9 @@ ht-degree: 0%
 ---
 
 
-# Genomgång av referenswebbplatsen för förnyelse av autoförsäkring{#we-finance-auto-insurance-renewal-reference-site-walkthrough}
+# Genomgång av referenswebbplatsen för förnyelse av automatisk försäkring{#we-finance-auto-insurance-renewal-reference-site-walkthrough}
 
-## Scenario för referenswebbplats för ekonomi  {#we-finance-reference-site-scenario}
+## Scenario för referenswebbplats för Web.Finance {#we-finance-reference-site-scenario}
 
 Webbplatsen We.Finance är en sajt för finansiella tjänster som är utformad för att hjälpa dig att lära dig interaktiva kommunikationsfunktioner i AEM Forms.
 
@@ -38,7 +38,7 @@ Scenariot för automatisk försäkring för Web.Finance är en visuell berättar
 
 ### Gloria skickar ett meddelande om förnyelse av försäkringsavtal från We.Finance {#gloria-sends-an-insurance-policy-renewal-communication-from-we-finance}
 
-Gloria loggar in AEM instansen, klickar på **Förnyelse av försäkring** och klickar sedan på **Open Agent-gränssnittet.** Klicket fyller i försäkringsdokumentet med information om Sarah Rose. Gloria klickar på&#x200B;**Skicka** och ett meddelande visas på skärmen&quot;Inskickning initierad&quot; och sedan på några sekunder&quot;Inskickad klar&quot;.
+Gloria loggar in AEM instansen, klickar på **Förnyelse av autoförsäkring,** och klickar sedan på **Användargränssnitt för Open Agent.** Klicket fyller i försäkringsdokumentet med information om Sarah Rose. Gloria klickar på&#x200B;**Submit** och ett meddelande visas på skärmen&quot;Submission Initiated&quot; (Sändningen har initierats) och sedan på några sekunder&quot;Submit Successful&quot; (Skickades utan fel).
 
 Sarah får ett mejl med rubriken&quot;Din förnyelse av autoförsäkring&quot;.
 
@@ -46,15 +46,15 @@ Sarah får ett mejl med rubriken&quot;Din förnyelse av autoförsäkring&quot;.
 
 #### Se det själv {#see-it-yourself}
 
-Gå till **Adobe Experience Manager** > **Forms** > **Forms &amp; Documents** > **We.Finance** > **Auto Insurance**. Välj den **interaktiva kommunikationen** för förnyelse av autoförsäkring och klicka på **Open Agent-gränssnittet**. Den interaktiva kommunikationen öppnas i agentgränssnittet. Ange en giltig e-postadress för att ta emot e-postmeddelandet med det bifogade principdokumentet och klicka på Skicka.
+Gå till **Adobe Experience Manager** > **Forms** > **Forms &amp; Documents** > **We.Finance** > **Automatisk försäkring**. Välj den automatiska försäkringsförnyelsen **interaktiv kommunikation** och klicka på **Öppna agentgränssnitt**. Den interaktiva kommunikationen öppnas i agentgränssnittet. Ange en giltig e-postadress för att ta emot e-postmeddelandet med det bifogade principdokumentet och klicka på Skicka.
 
-Du kan öppna och granska den interaktiva kommunikationen om förnyelse av autoförsäkring direkt från `https://[authorHost]: authorPort]/aem/formdetails.html/content/dam/formsanddocuments/we-finance/autoinsurance/auto-insurance-renewal.`
+Du kan komma åt och granska den interaktiva kommunikationen om förnyelse av autoförsäkring direkt från `https://[authorHost]: authorPort]/aem/formdetails.html/content/dam/formsanddocuments/we-finance/autoinsurance/auto-insurance-renewal.`
 
 ### Sarah får ett meddelande om förnyelse av försäkringsavtal från We.Finance och bestämmer sig för att förnya {#sarah-receives-an-insurance-policy-renewal-communication-from-we-finance-and-decides-to-renew}
 
 Sarah får ett mejl med en bilaga från We.Finance som påminner henne om att hennes policy för autoförsäkring håller på att löpa ut. Den bifogade filen är den utskrivna versionen av det automatiska försäkringsbrevet.
 
-Sarah klickar på **Förnya nu** och dirigeras till webbversionen av sitt autofyrbrev. Utöver det här brevet hittar Sarah antalet dagar kvar innan hennes policy upphör att gälla. Sidan ger Sarah en grundläggande översikt över sin försäkringsinformation, t.ex. försäkringsnummer, förfallobelopp och annan information som rabatterbjudanden och förmånsersättningar. Sarah klickar igen på **Förnya nu** längst ned i policyn.
+Sarah klickar på **Förnya nu** och är dirigerad till webbversionen av sitt Autofoningsbrev. Utöver det här brevet hittar Sarah antalet dagar kvar innan hennes policy upphör att gälla. Sidan ger Sarah en grundläggande översikt över sin försäkringsinformation, t.ex. försäkringsnummer, förfallobelopp och annan information som rabatterbjudanden och förmånsersättningar. Sarah klickar igen på **Förnya nu** längst ned i profilen.
 
 ![ref1](assets/ref1.png)
 
@@ -66,9 +66,9 @@ Knappen Förnya nu i e-postmeddelandet är länkad till programmet Förnya autom
 
 #### Se det själv {#see-it-yourself-1}
 
-Du måste ha fått ett e-postmeddelande med en bifogad PDF. PDF-filen är en utskriftsversion av ditt autofonkbrev. Klicka på **Förnya nu** för att gå till webbversionen av profilen. Kontrollera din personliga information och policyinformation och klicka på **Förnya nu** , som tar dig till en annan interaktiv kommunikation.
+Du måste ha fått ett e-postmeddelande med en bifogad PDF. PDF-filen är en utskriftsversion av ditt autofonkbrev. Klicka på **Förnya nu** för att nå webbversionen av profilen. Kontrollera dina personuppgifter och din policy och klicka på **Förnya nu** som tar dig till en annan interaktiv kommunikation.
 
-Knappen **Förnya nu** i e-postmeddelandet dirigerar Sarah till webbversionen av policyn. Du kan gå till följande URL:
+Knappen **Förnya nu** i e-postmeddelandet dirigerar Sarah till webbversionen av principen. Du kan gå till följande URL:
 
 `https://[authorServer]:[authorPort]/content/document.html?schema=fdm&documentId=/content/forms/af/we-finance/autoinsurance/auto-insurance-renewal/channels/web.html&customerId=1`
 
