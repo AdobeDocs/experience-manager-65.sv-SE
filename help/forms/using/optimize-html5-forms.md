@@ -35,7 +35,7 @@ Skaffa webbserverprogrammet Apache som kan användas i ditt operativsystem:
 
 Apache kan kommunicera med JBoss med HTTP eller AJP-protokollet.
 
-1. Avkommentera följande modulkonfigurationer i filen *APACHE_HOME/conf/httpd.conf* .
+1. Avkommentera följande modulkonfigurationer i filen *APACHE_HOME/conf/httpd.conf*.
 
    ```java
    LoadModule proxy_balancer_module modules/mod_proxy.so
@@ -49,7 +49,7 @@ Apache kan kommunicera med JBoss med HTTP eller AJP-protokollet.
 
 1. Konfigurera proxyn på port 8080 för JBoss.
 
-   Lägg till följande konfiguration i *APACHE_HOME/conf/httpd.conf* .
+   Lägg till följande konfiguration i konfigurationsfilen *APACHE_HOME/conf/httpd.conf*.
 
    ```java
    ProxyPass / https://<server_Name>:8080/
@@ -67,7 +67,7 @@ Apache kan kommunicera med JBoss med HTTP eller AJP-protokollet.
 
 1. Aktivera komprimering.
 
-   Lägg till följande konfiguration i *APACHE_HOME/conf/httpd.conf* .
+   Lägg till följande konfiguration i konfigurationsfilen *APACHE_HOME/conf/httpd.conf*.
 
    ```xml
    <Location /content/xfaforms>
@@ -85,4 +85,4 @@ Apache kan kommunicera med JBoss med HTTP eller AJP-protokollet.
    </Location>
    ```
 
-1. Använd https://[Apache_server]:80 för att få åtkomst till AEM-servern.
+1. Använd https://[Apache_server]:80 för att få åtkomst till AEM.
