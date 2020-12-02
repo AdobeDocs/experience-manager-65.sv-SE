@@ -16,7 +16,7 @@ ht-degree: 0%
 ---
 
 
-# Förbereda och skicka interaktiv kommunikation med agentens användargränssnitt {#prepare-and-send-interactive-communication-using-the-agent-ui}
+# Förbered och skicka interaktiv kommunikation med agentgränssnittet {#prepare-and-send-interactive-communication-using-the-agent-ui}
 
 Agentgränssnittet gör att agenterna kan förbereda och skicka interaktiv kommunikation till postprocessen. Agenten gör de ändringar som krävs och skickar den interaktiva kommunikationen till en postprocess, som e-post eller utskrift.
 
@@ -30,10 +30,10 @@ När agenten förbereder den interaktiva kommunikationen med hjälp av agentgrä
 * **Innehåll**: På fliken Innehåll hanterar agenten innehåll som dokumentfragment och innehållsvariabler i den interaktiva kommunikationen. Agenten kan göra de ändringar som är tillåtna i dokumentfragmentet när den interaktiva kommunikationen skapas i egenskaperna för dessa dokumentfragment. Agenten kan också ändra ordning på, lägga till/ta bort ett dokumentfragment och lägga till sidbrytningar, om det är tillåtet.
 * **Bifogade filer**: Fliken Bifogade filer visas bara i agentgränssnittet om den interaktiva kommunikationen har några bilagor eller agenten har biblioteksåtkomst. Agenten får ändra eller redigera de bifogade filerna, men får inte göra det.
 
-## Förbereda interaktiv kommunikation med hjälp av agentgränssnittet {#prepare-interactive-communication-using-the-agent-ui}
+## Förbered interaktiv kommunikation med agentgränssnittet {#prepare-interactive-communication-using-the-agent-ui}
 
 1. Välj **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
-1. Välj lämplig interaktiv kommunikation och tryck **[!UICONTROL Open Agent UI]**.
+1. Välj lämplig interaktiv kommunikation och tryck på **[!UICONTROL Open Agent UI]**.
 
    >[!NOTE]
    >
@@ -49,7 +49,7 @@ När agenten förbereder den interaktiva kommunikationen med hjälp av agentgrä
 
 ### Ange data {#enter-data}
 
-1. På fliken Data anger du data för variabler, formulärdatamodegenskaper och utskriftsmallfält (XDP) efter behov. Fyll i alla obligatoriska fält markerade med en asterisk (&amp;ast;) för att aktivera knappen **Skicka** .
+1. På fliken Data anger du data för variabler, formulärdatamodegenskaper och utskriftsmallfält (XDP) efter behov. Fyll i alla obligatoriska fält markerade med en asterisk (&amp;ast;) för att aktivera knappen **Skicka**.
 
    Tryck på ett datafältvärde i förhandsvisningen av interaktiv kommunikation för att markera motsvarande datafält på fliken Data eller vice versa.
 
@@ -67,9 +67,9 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
 
    ![contentmodulefocus](assets/contentmodulefocus.png)
 
-   Genom att trycka på Markera markerade moduler i innehåll ( ![markerat](assets/highlightselectedmodulesincontentccr.png)dmodulesincontentccr) längst upp till vänster i förhandsvisningen på fliken Innehåll eller Data kan du inaktivera eller aktivera funktioner för att gå till dokumentfragmentet när användaren trycker på/markerar den relevanta texten, stycket eller datafältet i förhandsvisningen.
+   Genom att trycka på Markera valda moduler i innehåll ( ![highhighlightselectedmodulesincontentccr](assets/highlightselectedmodulesincontentccr.png)) längst upp till vänster i förhandsvisningen på fliken Innehåll eller Data kan du inaktivera eller aktivera funktioner för att gå till dokumentfragmentet när användaren trycker på/markerar den relevanta texten, stycket eller datafältet i förhandsvisningen.
 
-   De fragment som agenten kan redigera när den skapar den interaktiva kommunikationen har ikonen Redigera markerat innehåll ( ![iconeditselected content](assets/iconeditselectedcontent.png)). Tryck på ikonen Redigera markerat innehåll för att starta fragmentet i redigeringsläge och göra ändringar i det. Använd följande alternativ för att formatera och hantera text:
+   De fragment som agenten tillåter att redigera när interaktiv kommunikation skapas har ikonen Redigera markerat innehåll ( ![iconeditselectedContent](assets/iconeditselectedcontent.png)). Tryck på ikonen Redigera markerat innehåll för att starta fragmentet i redigeringsläge och göra ändringar i det. Använd följande alternativ för att formatera och hantera text:
 
    * [Formateringsalternativ](#formattingtext)
 
@@ -78,9 +78,9 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
    * [Specialtecken](#specialcharacters)
    * [Kortkommandon](/help/forms/using/keyboard-shortcuts.md)
 
-   Mer information om tillgängliga åtgärder för olika dokumentfragment i användargränssnittet för agenten finns i [Åtgärder och information i användargränssnittet](#actionsagentui)för agenten.
+   Mer information om vilka åtgärder som är tillgängliga för olika dokumentfragment i användargränssnittet för agenten finns i [Åtgärder och information i användargränssnittet för agenten](#actionsagentui).
 
-1. Om du vill lägga till en sidbrytning i utskriften av den interaktiva kommunikationen placerar du markören där du vill infoga en sidbrytning och väljer Sidbrytning före eller Sidbrytning efter ( ![sidbrytning före](assets/pagebreakbeforeafter.png)).
+1. Om du vill lägga till en sidbrytning i utskriften av den interaktiva kommunikationen placerar du markören där du vill infoga en sidbrytning före eller sidbrytning efter ( ![sidbrytning före](assets/pagebreakbeforeafter.png)).
 
    En explicit platshållare för sidbrytningar infogas i interaktiv kommunikation. Om du vill se hur en explicit sidbrytning påverkar den interaktiva kommunikationen läser du i förhandsvisningen.
 
@@ -96,7 +96,7 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
 
    ![attachmentsagentui](assets/attachmentsagentui.png)
 
-1. Tryck på ikonen Biblioteksåtkomst ( ![biblioteksåtkomst](assets/libraryaccess.png)) för att komma åt innehållsbiblioteket och infoga DAM-resurser som bilagor.
+1. Tryck på biblioteksåtkomstikonen ( ![biblioteksåtkomst](assets/libraryaccess.png)) för att komma åt innehållsbiblioteket för att infoga DAM-resurser som bilagor.
 
    >[!NOTE]
    >
@@ -105,13 +105,13 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
 1. Om ordningen på de bifogade filerna inte var låst när du skapade den interaktiva kommunikationen kan du ändra ordningen på de bifogade filerna genom att markera en bifogad fil och trycka på nedåtpilen och uppåtpilen.
 1. Använd Förhandsgranska via webben och Förhandsgranska för att se om de två utdatafilerna är som du vill ha dem.
 
-   Om du tycker att förhandsvisningarna är tillräckliga trycker du för **[!UICONTROL Submit]** att skicka/skicka interaktiv kommunikation till en postprocess. Om du vill göra ändringar avslutar du förhandsgranskningen och går tillbaka till ändringarna.
+   Om du tycker att förhandsvisningarna är tillräckliga trycker du på **[!UICONTROL Submit]** för att skicka/skicka den interaktiva kommunikationen till en postprocess. Om du vill göra ändringar avslutar du förhandsgranskningen och går tillbaka till ändringarna.
 
 ## Formatera text {#formattingtext}
 
 När du redigerar ett textfragment i agentgränssnittet ändras verktygsfältet beroende på vilken typ av redigeringar du väljer att göra: Teckensnitt, Stycke eller Lista:
 
-![typeofformattverktygsfältet](assets/typeofformattingtoolbar.png) ![Teckensnitt](do-not-localize/fonttoolbar.png)
+![](assets/typeofformattingtoolbar.png) ![typeofformattverktygsfältVerktygsfältet Teckensnitt](do-not-localize/fonttoolbar.png)
 
 Verktygsfältet Teckensnitt
 
@@ -133,17 +133,17 @@ Markera texten och tryck på Markera färg om du vill framhäva delar av texten 
 
 ![inklistrad text](assets/pastedtext.png)
 
-### Infoga specialtecken i text {#specialcharacters}
+### Infoga specialtecken i texten {#specialcharacters}
 
 Agentgränssnittet har inbyggt stöd för 210 specialtecken. Administratören kan [lägga till stöd för fler/anpassade specialtecken genom anpassning](/help/forms/using/custom-special-characters.md).
 
-#### Leverans av bifogade filer {#attachmentdelivery}
+#### Leverans av bifogad fil {#attachmentdelivery}
 
 * När den interaktiva kommunikationen återges med serversidans API:er som en interaktiv eller icke-interaktiv PDF innehåller den återgivna PDF-filen bilagor som PDF-bilagor.
 * När en inläggsprocess som är kopplad till en interaktiv kommunikation läses in som en del av Skicka med agentgränssnittet, skickas bilagor som List&lt;com.adobe.idp.Document> inAttachmentDocs-parametern.
 * Arbetsflöden för leveransfunktion, som e-post och utskrift, ger även bilagor tillsammans med PDF-versionen av Interactive Communication.
 
-## Åtgärder och information som finns i agentens användargränssnitt {#actionsagentui}
+## Åtgärder och information som är tillgänglig i agentens användargränssnitt {#actionsagentui}
 
 ### Dokumentfragment {#document-fragments}
 
@@ -151,9 +151,9 @@ Agentgränssnittet har inbyggt stöd för 210 specialtecken. Administratören ka
 
 * **Upp- och nedpilar**: Pilar för att flytta dokumentfragment uppåt eller nedåt i interaktiv kommunikation.
 * **Ta bort**: Ta bort dokumentfragmentet från den interaktiva kommunikationen om det tillåts.
-* **Sidbrytning före** (gäller för underordnade fragment i målområdet): Infogar sidbrytning före dokumentfragmentet.
+* **Sidbrytning före**  (gäller för underordnade fragment i målområdet): Infogar sidbrytning före dokumentfragmentet.
 * **Indrag**: Öka eller minska indrag för ett dokumentfragment.
-* **Sidbrytning efter** (gäller för underordnade fragment i målområdet): Infogar sidbrytning efter dokumentfragmentet.
+* **Sidbrytning efter**  (gäller för underordnade fragment i målområdet): Infogar sidbrytning efter dokumentfragmentet.
 
 ![docfragoptions](assets/docfragoptions.png)
 
@@ -171,7 +171,7 @@ Agentgränssnittet har inbyggt stöd för 210 specialtecken. Administratören ka
 * Hoppa över punkter/nummer: Aktivera det här alternativet om du vill hoppa över punkter/numrering i listdokumentfragmentet.
 * Ofyllda värden (info): Anger antalet ofyllda variabler i dokumentfragmentet.
 
-## Spara interaktiv kommunikation som utkast {#save-as-draft}
+## Spara interaktiv kommunikation som ett utkast {#save-as-draft}
 
 Du kan använda agentgränssnittet för att spara ett eller flera utkast för varje interaktiv kommunikation och hämta utkastet senare för att fortsätta arbeta med det. Du kan ange olika namn för varje utkast för att identifiera det.
 
@@ -181,17 +181,17 @@ Adobe rekommenderar att du kör dessa instruktioner i följd för att spara ett 
 
 Funktionen Spara som utkast är inte aktiverad som standard. Gör så här för att aktivera funktionen:
 
-1. Implementera SPI ( [ccrDocumentInstance](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/ccm/ccr/ccrDocumentInstance/api/services/CCRDocumentInstanceService.html) Service Provider Interface).
+1. Implementera [ccrDocumentInstance](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/ccm/ccr/ccrDocumentInstance/api/services/CCRDocumentInstanceService.html) Service Provider Interface (SPI).
 
    Med SPI kan du spara utkastet till version av den interaktiva kommunikationen i databasen med ett utkast-ID som unik identifierare. Dessa instruktioner förutsätter att du har kunskap om hur du bygger ett OSGi-paket med ett Maven-projekt.
 
-   Exempel på SPI-implementering finns i [Exempel på SPI-implementering](#sample-ccrDocumentInstance-spi)för ccrDocumentInstance.
-1. Öppna `http://<hostname>:<port>/ system/console/bundles` och tryck **[!UICONTROL Install/Update]** för att ladda upp OSGi-paketet. Kontrollera att det överförda paketets status visas som **Aktiv**. Starta om servern om paketets status inte visas som **Aktiv**.
+   Exempel på SPI-implementering finns i [Exempel på SPI-implementering av ccrDocumentInstance](#sample-ccrDocumentInstance-spi).
+1. Öppna `http://<hostname>:<port>/ system/console/bundles` och tryck på **[!UICONTROL Install/Update]** för att överföra OSGi-paketet. Kontrollera att det överförda paketets status visas som **Aktiv**. Starta om servern om paketets status inte visas som **Aktiv**.
 1. Gå till `https://'[server]:[port]'/system/console/configMgr`.
 1. Tryck på **[!UICONTROL Create Correspondence Configuration]**.
-1. Markera **[!UICONTROL Enable Save Using CCRDocumentInstanceService]** och tryck **[!UICONTROL Save]**.
+1. Välj **[!UICONTROL Enable Save Using CCRDocumentInstanceService]** och tryck på **[!UICONTROL Save]**.
 
-### Spara interaktiv kommunikation som utkast {#save-as-draft-agent-ui}
+### Spara en interaktiv kommunikation som utkast {#save-as-draft-agent-ui}
 
 Så här sparar du en interaktiv kommunikation som ett utkast:
 
@@ -199,25 +199,25 @@ Så här sparar du en interaktiv kommunikation som ett utkast:
 
 1. Gör lämpliga ändringar i agentens användargränssnitt och tryck på **[!UICONTROL Save as Draft]**.
 
-1. Ange namnet på utkastet i **[!UICONTROL Name]** fältet och tryck sedan på **[!UICONTROL Done]**.
+1. Ange namnet på utkastet i fältet **[!UICONTROL Name]** och tryck på **[!UICONTROL Done]**.
 
 När du har sparat det interaktiva meddelandet som ett utkast trycker du på **[!UICONTROL Save Changes]** för att spara ytterligare ändringar i utkastet.
 
-### Hämta utkastet till interaktiv kommunikation {#retrieve-draft}
+### Hämta utkastet till en interaktiv kommunikation {#retrieve-draft}
 
 När du har sparat ett utkast för interaktiv kommunikation kan du hämta det och fortsätta arbeta med det. Hämta interaktiv kommunikation med:
 
 `https://server:port/aem/forms/createcorrespondence.hmtl?draftid=[draftid]`
 
-[DRAFID] refererar till den unika identifieraren för utkastversionen som genereras när en interaktiv kommunikation har sparats som ett utkast.
+[utkast ] refererar till den unika identifieraren för utkastet som genereras när ett interaktivt meddelande har sparats som ett utkast.
 
 >[!NOTE]
 >
 >Om du gör några ändringar i det interaktiva meddelandet när du har sparat det som ett utkast, kommer utkastet inte att öppnas.
 
-### Exempel på SPI-implementering av ccrDocumentInstance {#sample-ccrDocumentInstance-spi}
+### Exempelimplementering av ccrDocumentInstance SPI {#sample-ccrDocumentInstance-spi}
 
-Implementera `ccrDocumentInstance` SPI för att spara ett interaktivt meddelande som ett utkast. Här följer ett exempel på implementering av `ccrDocumentInstance` SPI.
+Implementera SPI-filen `ccrDocumentInstance` om du vill spara ett interaktivt meddelande som ett utkast. Nedan följer ett exempel på implementering av SPI-filen `ccrDocumentInstance`.
 
 ```javascript
 package Implementation;
@@ -317,9 +317,9 @@ public class CCRDraftService implements CCRDocumentInstanceService {
 }
 ```
 
-Operationerna `save`, `update`, `get`och `getAll` anropar databastjänsten för att spara en interaktiv kommunikation som ett utkast, uppdatera en interaktiv kommunikation, hämta data från databasen och hämta data för all interaktiv kommunikation som är tillgänglig i databasen. Det här exemplet använder `mySQLDataBaseServiceCRUD` som namn på databastjänsten.
+Åtgärderna `save`, `update`, `get` och `getAll` anropar databastjänsten för att spara en interaktiv kommunikation som ett utkast, uppdatera en interaktiv kommunikation, hämta data från databasen och hämta data för all interaktiv kommunikation som är tillgänglig i databasen. I det här exemplet används `mySQLDataBaseServiceCRUD` som namn på databastjänsten.
 
-I följande tabell förklaras exemplet på `ccrDocumentInstance` SPI-implementering. Det visar hur åtgärderna `save`, `update`, `get`och `getAll` anropar databastjänsten i exempelimplementeringen.
+I följande tabell förklaras exemplet `ccrDocumentInstance` SPI-implementering. Det visar hur åtgärderna `save`, `update`, `get` och `getAll` anropar databastjänsten i exempelimplementeringen.
 
 <table> 
  <tbody>
@@ -346,7 +346,7 @@ I följande tabell förklaras exemplet på `ccrDocumentInstance` SPI-implementer
   </tbody>
 </table>
 
-Följande är ett exempel på den `pom.xml` fil som är en del av implementeringen:
+Följande är ett exempel på `pom.xml`-filen som är en del av implementeringen:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -443,4 +443,4 @@ Följande är ett exempel på den `pom.xml` fil som är en del av implementering
 
 >[!NOTE]
 >
->Se till att du uppdaterar beroendet till 6.0.160 i `aemfd-client-sdk` `pom.xml` filen.
+>Kontrollera att du uppdaterar `aemfd-client-sdk`-beroendet till 6.0.160 i `pom.xml`-filen.
