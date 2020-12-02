@@ -12,17 +12,20 @@ content-type: reference
 discoiquuid: 9ed820de-c108-416e-aaf7-b63a64ab4f80
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '233'
+ht-degree: 1%
 
 ---
 
 
 # Komponenter{#components}
 
-Adobe Experience Manager (AEM) innehåller en mängd färdiga komponenter som ger omfattande funktionalitet för webbplatsförfattare. De är tillgängliga när du [redigerar en sida](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md) och grupperas efter huvudfunktionsområde (dvs. komponentgrupp) för att underlätta filtreringen.
+Adobe Experience Manager (AEM) innehåller en mängd färdiga komponenter som ger omfattande funktionalitet för webbplatsförfattare. De är tillgängliga när du [redigerar en sida](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md) och grupperas efter huvudfunktionsområdet (d.v.s. komponentgruppen) för att underlätta filtreringen.
 
 >[!CAUTION]
 >
->I det här avsnittet behandlas endast komponenter som finns i en färdig AEM-installation.
+>I det här avsnittet behandlas endast komponenter som är tillgängliga i en AEM.
 >
 >Beroende på vilken instans du har kan du ha utvecklat anpassade komponenter explicit för dina behov. De kan till och med ha samma namn som vissa av de komponenter som beskrivs här.
 
@@ -32,11 +35,11 @@ Följande sidor ger snabba länkar till några av de viktigaste områdena inom i
 
 * [Komponenter för sidredigering](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md)
 
-   Komponenter som används för att skapa standardsidinnehåll finns i första hand i grupperna **Allmänt**, **Kolumner** och **Formulär**.
+   Komponenter som används för att skapa standardsidinnehåll finns i första hand i grupperna **Allmänt**, **Kolumner** och **Forms**.
 
 * [eCommerce](/help/sites-administering/ecommerce.md)
 
-   e-handelsfunktionen i AEM innehåller också en rad komponenter som ingår i **Commerce** -gruppen. Faktisk användning kan bero på vilken e-handelsmotor som används.
+   e-handelsfunktionen i AEM innehåller också en rad komponenter som finns i gruppen **Commerce**. Faktisk användning kan bero på vilken e-handelsmotor som används.
 
 ## Använda designläge för att konfigurera komponenter {#using-design-mode-to-configure-components}
 
