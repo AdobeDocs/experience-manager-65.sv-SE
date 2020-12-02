@@ -36,14 +36,14 @@ E-postfunktionen fungerar inte som standard eftersom den kräver en specifikatio
 
 Standardtjänsten för e-post krävs för både meddelanden och prenumerationer.
 
-* Logga in på den primära utgivaren med administratörsbehörighet och få tillgång till [webbkonsolen](../../help/sites-deploying/configuring-osgi.md):
+* Logga in på den primära utgivaren med administratörsbehörighet och gå till [webbkonsolen](../../help/sites-deploying/configuring-osgi.md):
 
    * Till exempel [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
-* Leta rätt på `Day CQ Mail Service`.
+* Leta reda på `Day CQ Mail Service`.
 * Välj redigeringsikonen.
 
-Detta baseras på dokumentationen för [konfigurering av e-postmeddelanden](../../help/sites-administering/notification.md), men med en skillnad i att fältet `"From" address` inte ** är obligatoriskt och ska lämnas tomt.
+Detta baseras på dokumentationen för [Konfigurera e-postmeddelande](../../help/sites-administering/notification.md), men med en skillnad i att fältet `"From" address` är *inte* krävs och ska lämnas tomt.
 
 Till exempel (ifylld med värden endast för illustrationsändamål):
 
@@ -77,39 +77,39 @@ Till exempel (ifylld med värden endast för illustrationsändamål):
 
 ## AEM Communities e-postkonfiguration {#aem-communities-email-configuration}
 
-När [standardtjänsten](#default-mail-service-configuration) för e-post har konfigurerats fungerar de två befintliga instanserna av `AEM Communities Email Reply Configuration` OSGi-konfigurationen som ingår i versionen.
+När [standardtjänsten för e-post](#default-mail-service-configuration) har konfigurerats kommer de två befintliga instanserna av OSGi-konfigurationen, som ingår i versionen, att fungera.`AEM Communities Email Reply Configuration`
 
 Endast prenumerationsinstansen behöver konfigureras ytterligare när svar tillåts via e-post.
 
-1. [E-postinstans](#configuration-for-notifications) :
+1. [E-](#configuration-for-notifications) mailinstance:
 
    För meddelanden, som inte har stöd för svarsmeddelanden via e-post, och bör inte ändras.
 
-1. [Subscriptions-email](#configuration-for-subscriptions) instance:
+1. [Subscriptions-](#configuration-for-subscriptions) emailInstance:
 
    Kräver konfiguration för att fullständigt aktivera skapande av inlägg från svarsmeddelanden via e-post.
 
 Så här når du instanserna för webbgruppskonfigurationen:
 
-* Logga in på den primära utgivaren med administratörsbehörighet och åtkomst till [webbkonsolen](../../help/sites-deploying/configuring-osgi.md)
+* Logga in på den primära utgivaren med administratörsbehörighet och gå till [webbkonsolen](../../help/sites-deploying/configuring-osgi.md)
 
    * Till exempel [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
-* Hitta `AEM Communities Email Reply Configuration`.
+* Leta reda på `AEM Communities Email Reply Configuration`.
 
 ![email-reply-config](assets/email-reply-config.png)
 
 ### Konfiguration för meddelanden {#configuration-for-notifications}
 
-Instansen av `AEM Communities Email Reply Configuration` OSGi-konfigurationen med e-postmeddelandet Namn är funktionen för meddelanden. Den här funktionen inkluderar inte e-postsvar.
+Instansen av OSGi-konfigurationen med e-postmeddelandet Namn är en funktion för meddelanden. `AEM Communities Email Reply Configuration` Den här funktionen inkluderar inte e-postsvar.
 
 Den här konfigurationen bör inte ändras.
 
-* Leta rätt på `AEM Communities Email Reply Configuration`.
+* Leta reda på `AEM Communities Email Reply Configuration`.
 * Välj redigeringsikonen.
 * Kontrollera att **namnet** är `email`.
 
-* Kontrollera att **Skapa inlägg från svarsmeddelanden** är `unchecked`.
+* Verifiera att **Create post from reply email** är `unchecked`.
 
 ![configure-email-reply](assets/configure-email-reply.png)
 
@@ -117,7 +117,7 @@ Den här konfigurationen bör inte ändras.
 
 För webbgruppsprenumerationer är det möjligt att aktivera eller inaktivera möjligheten för en medlem att publicera innehåll genom att svara på ett e-postmeddelande.
 
-* Leta rätt på `AEM Communities Email Reply Configuration`.
+* Leta reda på `AEM Communities Email Reply Configuration`.
 * Välj redigeringsikonen.
 * Kontrollera att **namnet** är `subscriptions-email`.
 
@@ -154,7 +154,7 @@ För webbgruppsprenumerationer är det möjligt att aktivera eller inaktivera m�
 
    Om spårar-ID läggs till i meddelandetexten används det här prefixet. Standardvärdet är `Please do not remove this:`.
 
-* **[!UICONTROL Email as HTML]**: Om det här alternativet är markerat anges innehållstypen för e-post som `"text/html;charset=utf-8"`. Standard är markerat.
+* **[!UICONTROL Email as HTML]**: Om det här alternativet är markerat anges innehållstypen för e-post som  `"text/html;charset=utf-8"`. Standard är markerat.
 
 * **[!UICONTROL Default user name]**
 
@@ -180,7 +180,7 @@ För att e-postmeddelandet ska kunna hämtas till databasen måste du konfigurer
 
 * **[!UICONTROL Type]**
 
-   *(Obligatoriskt)* Välj genom att dra nedåt `POP3 (over SSL)`.
+   *(Obligatoriskt)* Välj genom att dra nedåt  `POP3 (over SSL)`.
 
 * **[!UICONTROL URL]**
 
@@ -188,11 +188,12 @@ För att e-postmeddelandet ska kunna hämtas till databasen måste du konfigurer
 
 * **[!UICONTROL Import to Path]**&amp;ast;
 
-   *(Obligatoriskt)* Ange till `/content/usergenerated/mailFolder/postEmails`genom att bläddra till `postEmails`mappen och välj **OK**.
+   *(Obligatoriskt)* Ange till  `/content/usergenerated/mailFolder/postEmails`
+genom att bläddra till  `postEmails`mappen och välj  **OK**.
 
 * **[!UICONTROL Update Interval in Seconds]**
 
-   *(Valfritt)* E-postservern som är konfigurerad för standardtjänsten för e-post kan ha krav på uppdateringsintervallvärdet. Gmail kan till exempel kräva ett intervall av `300`.
+   *(Valfritt)* E-postservern som konfigurerats för standardtjänsten för e-post kan ha krav på uppdateringsintervallvärdet. Gmail kan till exempel kräva ett intervall på `300`.
 
 * **[!UICONTROL Login]**
 
@@ -213,8 +214,8 @@ Använda [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)
 * Logga in på den primära utgivaren med administratörsbehörighet och gå till [https://&lt;server>:&lt;port>/crx/de/index.jsp#/etc/importer/polling](http://localhost:4503/crx/de/index.jsp#/etc/importers/polling).
 * Markera den nya konfigurationen och ändra följande egenskaper:
 
-   * **feedType**: Ersätt `pop3s` med **`emailreply`**
-   * **källa**: Ersätt källans protokoll `pop3s://` med **`emailreply://`**
+   * **feedType**: Ersätt  `pop3s` med  **`emailreply`**
+   * **källa**: Ersätt källans protokoll  `pop3s://` med  **`emailreply://`**
 
 ![polling-protocol](assets/polling-protocol.png)
 
