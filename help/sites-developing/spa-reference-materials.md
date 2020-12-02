@@ -1,6 +1,6 @@
 ---
-title: SPA-referensmaterial
-seo-title: SPA-referensmaterial
+title: SPA referensmaterial
+seo-title: SPA referensmaterial
 description: En översikt över enkelsidiga API-referenser och källkodsdatabaser
 seo-description: En översikt över enkelsidiga API-referenser och källkodsdatabaser
 uuid: 503a1bec-da8b-4f5e-adcc-fe65c3c96034
@@ -18,27 +18,27 @@ ht-degree: 0%
 ---
 
 
-# SPA-referensmaterial {#spa-reference-materials}
+# SPA referensmaterial {#spa-reference-materials}
 
-## SPA Javascript API-referenser{#spa-javascript-api-references}
+## SPA JavaScript API-referenser{#spa-javascript-api-references}
 
-Nedan följer de tillgängliga JavaScript API-referenserna för NPM-modulerna för AEM SPA Editor SDK-ramverket.
+Nedan följer de tillgängliga JavaScript API-referenserna för NPM-modulerna för AEM SDK-ramverket för redigeraren.
 
 >[!NOTE]
 >
->SPA-redigeraren är den rekommenderade lösningen för projekt som kräver SPA-ramverksbaserad rendering på klientsidan (t.ex. React eller Angular).
+>SPA Editor är den rekommenderade lösningen för projekt som kräver SPA ramverksbaserad återgivning på klientsidan (t.ex. Reaktion eller Vinkel).
 
 * [Komponentmappning](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
 * [Sidmodellshanteraren](https://www.npmjs.com/package/@adobe/aem-spa-model-manager)
 * [Reagera på redigerbara komponenter](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
 * [Vinkelredigerbara komponenter](https://www.npmjs.com/package/@adobe/aem-angular-editable-components)
 
-## GitHub-databaser med öppen källkod {#github-repositories}
+## Öppna källans GitHub-databaser {#github-repositories}
 
-Nedan följer databaserna med öppen källkod i GitHub för SPA-biblioteken.
+Nedan följer databaserna med öppen källkod i GitHub för SPA bibliotek.
 
 * [Komponentmappning](https://github.com/adobe/aem-spa-component-mapping)
 * [Sidmodellshanteraren](https://github.com/adobe/aem-spa-page-model-manager)
 * [Reagera på redigerbara komponenter](https://github.com/adobe/aem-react-editable-components)
 * [Vinkelredigerbara komponenter](https://github.com/adobe/aem-angular-editable-components)
-* [SPA-projektkärna](https://github.com/adobe/aem-spa-project-core)
+* [SPA](https://github.com/adobe/aem-spa-project-core)
