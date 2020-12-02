@@ -1,8 +1,8 @@
 ---
 title: Lösningsintegrering
 seo-title: Lösningsintegrering
-description: Läs mer om lösningsintegrering i AEM.
-seo-description: Läs mer om lösningsintegrering i AEM.
+description: Läs mer om integrering av lösningar i AEM.
+seo-description: Läs mer om integrering av lösningar i AEM.
 uuid: 3bf56b1b-284d-4f14-8974-0a595ece5028
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: b5ff918d-08ab-4307-a807-693468fc083b
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '131'
+ht-degree: 0%
 
 ---
 
@@ -24,14 +27,15 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 * [Konfigurera AEM Assets-integrering med Marketing Cloud och Creative Cloud](/help/sites-administering/configure-assets-cc-integration.md)
 * [SharePoint-anslutning](/help/sites-administering/sharepoint-connector.md)
 
-Följande information finns om hur du integrerar AEM med andra tjänster från Adobe eller tredje part:
+Följande information finns om hur du integrerar AEM med andra Adobe- eller tredjepartstjänster:
 
 >[!NOTE]
 >
->Om du använder en anpassad proxykonfiguration tillsammans med integreringen måste du konfigurera båda HTTP-klientproxykonfigurationerna eftersom vissa funktioner i AEM använder 3.x-API:erna och några andra 4.x-API:er:
+>Om du använder en anpassad proxykonfiguration tillsammans med integreringen måste du konfigurera båda HTTP-klientproxykonfigurationerna eftersom vissa funktioner i AEM använder 3.x-API:erna och andra 4.x-API:er:
 >
->* 3.x är konfigurerat med [http://localhost:4502/system/console/configMgr/com.day.commons.httpclient](http://localhost:4502/system/console/configMgr/com.day.commons.httpclient)
->* 4.x är konfigurerat med [http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator)
+>* 3.x har konfigurerats med [http://localhost:4502/system/console/configMgr/com.day.commons.httpclient](http://localhost:4502/system/console/configMgr/com.day.commons.httpclient)
+>* 4.x har konfigurerats med [http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator)
+
 >
 
 
