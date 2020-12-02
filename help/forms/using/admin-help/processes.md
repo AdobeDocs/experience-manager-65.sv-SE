@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 37e702c2-8716-4360-a3eb-d9877b28cc86
 translation-type: tm+mt
 source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+workflow-type: tm+mt
+source-wordcount: '1656'
+ht-degree: 0%
 
 ---
 
@@ -19,11 +22,11 @@ source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 På sidan Processlista visas de processer som en användare har initierat eller som startades automatiskt.
 
-1. I administrationskonsolen klickar du på Tjänster > Formulärarbetsflöde > Formulärarbetsflöde. I processlistan visas följande information:
+1. I administrationskonsolen klickar du på Tjänster > Forms-arbetsflöde > Forms-arbetsflöde. I processlistan visas följande information:
 
    **Processnamn - version:** Processens namn, enligt definition i Workbench.
 
-   **Program:** Programmet som processen tillhör, enligt definition i Workbench.
+   **Program:** Det program som processen tillhör, enligt definition i Workbench.
 
    **Status:** Aktiv innebär att processen är den som aktiveras för processversionen. Inaktiv innebär att processen är en gammal version som fortfarande har processinstanser.
 
@@ -43,9 +46,9 @@ För varje processinstans visas följande information i listan:
 
 **Status:** Anger om processinstansen körs normalt, om tillståndet ändras eller om den har stoppats. (Se Om processinstansstatus.)
 
-**Skapad:** Det datum och den tidpunkt då processinstansen skapades.
+**Skapad:** Datum och tid då processinstansen skapades.
 
-**Uppdateringsdatum:** Datum och tid då processinstansens status senast ändrades.
+**Uppdateringsdatum:** Det datum och den tidpunkt då processinstansens status senast ändrades.
 
 Du kan göra följande på sidan Processinstans:
 
@@ -57,23 +60,23 @@ Du kan göra följande på sidan Processinstans:
 
 En processinstans, inklusive underprocesser, kan ha följande status:
 
-**SLUTFÖRT:** Alla förgreningar och åtgärder i processinstansen har slutförts. COMPLETE är den slutliga statusen för en processinstans.
+**COMPLETE:** Alla förgreningar och åtgärder i processinstansen har slutförts. COMPLETE är den slutliga statusen för en processinstans.
 
-**SLUTFÖRANDE:** Processinstansens status ändras till COMPLETE.
+**SLUTFÖRANDE:** Status för processinstansen ändras till COMPLETE.
 
-**INITIERAD:** Processinstansen har skapats men körs inte än. INITIATED är den första statusen för en processinstans.
+**INITIERAT:** Processinstansen har skapats men körs inte än. INITIATED är den första statusen för en processinstans.
 
-**KÖRS:** Processinstansen körs normalt. Ett automatiskt steg kan vara på gång, eller så kan processinstansen ta emot användarindata eller vänta på användarinteraktion.
+**RUNNING:** Processinstansen körs normalt. Ett automatiskt steg kan vara på gång, eller så kan processinstansen ta emot användarindata eller vänta på användarinteraktion.
 
-**UPPSKJUTEN:** Processinstansen har inaktiverats av en administratör eller av ett steg i processen. Inga fler åtgärder utförs förrän statusen har ändrats.
+**SUSPENDED:** Processinstansen har inaktiverats av en administratör eller av ett steg i processen. Inga fler åtgärder utförs förrän statusen har ändrats.
 
-**AVBRYT:** Statusen ändras nu till SUSPENDED. Om en åtgärd har utformats för att ignorera pausbegäranden och ännu inte har slutförts, måste den åtgärden slutföras innan processinstansen pausas.
+**AVBRYT:** Statusen ändras nu till AVBRYT. Om en åtgärd har utformats för att ignorera pausbegäranden och ännu inte har slutförts, måste den åtgärden slutföras innan processinstansen pausas.
 
 **AVSLUTAD:** Processinstansen har avslutats av en administratör.
 
-**AVSLUTNING:** Statusen ändras nu till AVSLUTAD. Om en åtgärd har utformats för att ignorera avslutningsbegäranden och ännu inte har slutförts, måste åtgärden slutföras innan processinstansen avslutas.
+**AVSLUTA:** Statusen ändras nu till AVSLUTAD. Om en åtgärd har utformats för att ignorera avslutningsbegäranden och ännu inte har slutförts, måste åtgärden slutföras innan processinstansen avslutas.
 
-**AVBRYT:** Statusen ändras till KÖRNING efter att ha SUSPENDED.
+**AVBRYT:** Statusen ändras till KÖRNING efter att ha AVBRUTITS.
 
 >[!NOTE]
 >
@@ -93,7 +96,7 @@ När du avbryter uppehållet för en processinstans ändras dess status till RUN
 
 När du gör uppehåll i en processinstans som har anropat andra processer (underordnade processer) med sin invoke-åtgärd, pausas även de underordnade processerna.
 
-1. I administrationskonsolen klickar du på Tjänster > Formulärarbetsflöde > Formulärarbetsflöde.
+1. I administrationskonsolen klickar du på Tjänster > Forms-arbetsflöde > Forms-arbetsflöde.
 1. Markera processen på sidan Processinstans och klicka på Gör uppehåll eller Gör uppehåll.
 
 ### Avsluta en processinstans {#terminate-a-process-instances}
@@ -104,7 +107,7 @@ Du kan avsluta processinstanser som har vilken status som helst.
 
 När du avslutar en processinstans ändras dess status till TERMINATING, sedan TERMINATED, och processen stoppas vid den aktuella åtgärden. Inga fler åtgärder körs och alla associerade åtgärder och uppgifter avslutas.
 
-1. I administrationskonsolen klickar du på Tjänster > Formulärarbetsflöde > Formulärarbetsflöde.
+1. I administrationskonsolen klickar du på Tjänster > Forms-arbetsflöde > Forms-arbetsflöde.
 1. Markera processen på processinstanssidan och klicka på Avsluta.
 
 ## Arbeta med processinstansinformation {#working-with-process-instance-details}
@@ -125,11 +128,11 @@ På fliken Åtgärder visas varje åtgärd för processinstansen i den ordning s
 
 **Slutförd den:** Datum och tid då åtgärden slutfördes.
 
-En underprocess är en processinstans som startas av en annan process och som körs oberoende av den andra processen. Underprocesser visas bara om de har utformats som en del av processen i Workbench. På fliken Underprocesser visas varje underprocess med följande information:
+En delprocess är en processinstans som startas av en annan process och som körs oberoende av den andra processen. Underprocesser visas bara om de har utformats som en del av processen i Workbench. På fliken Underprocesser visas varje underprocess med följande information:
 
 **Process-ID:** Detta positiva heltal som formulärarbetsflödet tilldelar när processen initieras (det vill säga när en användare eller ett automatiskt steg initierar processen). Du kan använda den här identifieraren för att spåra processinstansen genom dess livscykel.
 
-**Processnamn - version:** Processens namn, enligt Designer.
+**Processnamn - version:** processens namn, enligt definition i Designer.
 
 **Status:** Anger om processinstansen körs normalt, om tillståndet ändras eller om den stoppas. (Se Om processinstansstatus.)
 
@@ -147,11 +150,11 @@ Du kan göra följande på sidan Processinstansinformation:
 
 En åtgärd (ett steg i en process) kan ha följande status:
 
-**SLUTFÖRT:** Åtgärden har slutförts.
+**COMPLETE:** Åtgärden har slutförts.
 
-**KÖRS:** Åtgärden körs normalt. Den kan ta emot användarindata eller vänta på användarinteraktion, eller så kan ett automatiskt steg vara på gång.
+**KÖRNING:** Åtgärden körs normalt. Den kan ta emot användarindata eller vänta på användarinteraktion, eller så kan ett automatiskt steg vara på gång.
 
-**STALLERAD:** Ett problem uppstod när åtgärden bearbetades. Leta efter felet eller undantaget på sidan Installerade åtgärder.
+**STALLED:** Ett problem uppstod när åtgärden bearbetades. Leta efter felet eller undantaget på sidan Installerade åtgärder.
 
 **AVSLUTAD:** Åtgärden avbröts av en administratör.
 
@@ -172,11 +175,11 @@ Du kan inte avsluta processer som har gatewayelement i processdiagrammet. Om du 
 1. Klicka på fliken Åtgärder eller fliken Underprocesser på sidan Processinstansinformation.
 1. Markera åtgärden eller underprocessen och klicka på Avsluta.
 
-### Försök igen {#retry-an-operation}
+### Försök igen med en åtgärd {#retry-an-operation}
 
 Du kan försöka utföra en åtgärd som har statusen STALLED igen.
 
-När du försöker utföra en åtgärd på nytt skickas en begäran om att starta om åtgärden. Om begäran lyckas ändras statusen till RUNNING. Om åtgärden inte kan startas om, förblir den STALLED och du kan behöva avsluta den.
+När du försöker utföra en åtgärd på nytt skickas en begäran om att starta om åtgärden från Forms. Om begäran lyckas ändras statusen till RUNNING. Om åtgärden inte kan startas om, förblir den STALLED och du kan behöva avsluta den.
 
 1. Klicka på fliken Åtgärder på sidan Processinstansinformation.
 1. Markera åtgärden och klicka på Försök igen.
@@ -185,14 +188,14 @@ När du försöker utföra en åtgärd på nytt skickas en begäran om att start
 
 På sidan Åtgärdsinformation visas en sammanfattning av en åtgärd i en process och dess aktuella användartilldelningar.
 
-1. I administrationskonsolen klickar du på Tjänster > Formulärarbetsflöde > Formulärarbetsflöde.
+1. I administrationskonsolen klickar du på Tjänster > Forms-arbetsflöde > Forms-arbetsflöde.
 1. Klicka på ett processnamn för att visa dess processinstanser. Klicka på en processinstans för att visa sidan Processinstansinformation och välj sedan en åtgärd för att visa sidan Åtgärdsinformation.
 
    För varje uppgift visas följande information i listan:
 
    **Processnamn - version:** Processens namn, enligt definition i Workbench.
 
-   **Program:** Programmet som processen tillhör, enligt definition i Workbench.
+   **Program:** Det program som processen tillhör, enligt definition i Workbench.
 
    **Status:** Aktiv innebär att processen är den som aktiveras för processversionen. Inaktiv innebär att processen är en gammal version som fortfarande har processinstanser.
 
