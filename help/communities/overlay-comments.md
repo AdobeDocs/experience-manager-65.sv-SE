@@ -12,11 +12,14 @@ discoiquuid: 502c0916-6c54-440c-be8c-eae56001fa26
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 48afa2146d0dcbab4beaa1044645c269b49fd7ff
+workflow-type: tm+mt
+source-wordcount: '252'
+ht-degree: 0%
 
 ---
 
 
-# Komponenter för överlappande communities {#overlay-communities-components}
+# Överlägg communitykomponenter {#overlay-communities-components}
 
 Avsikten med att [täcka över](/help/communities/client-customize.md#overlays) en standardkomponent är att ändra utseendet eller beteendet för en komponent globalt, för alla relativa referenser till komponenten. Det är beroende av vilken typ av sling som du kan lösa till mappen /apps innan du söker i mappen /libs. Sökvägen till komponenten är alltså identisk med sökvägen till standardkomponenten, förutom att den finns i mappen /apps och inte i mappen /libs.
 
@@ -34,9 +37,9 @@ Om du vill lägga över kommentarer måste du:
 
 **E-postmeddelanden om överlägg**
 
-Anta att du vill anpassa meddelandet med e-postmeddelanden genom att [täcka över](/help/communities/client-customize.md#overlays) mallarna på **/libs/settings/community/templates/email/html**.
+Anta att du vill anpassa meddelandet med e-postmeddelanden genom att [lägga över mallarna på **/libs/settings/community/templates/email/html**.](/help/communities/client-customize.md#overlays)
 
-Om du till exempel vill ändra meddelandena om omnämnanden (för en specifik communitykomponent där ugc skapas) lägger du till ett **if** -villkor för verb- **omnämnande** i mallarna för de komponenter som du har aktiverat stödet för **@omnämns** .
+Om du till exempel vill ändra meddelandena om omnämnanden (för en specifik communitykomponent där ugc skapas) lägger du till ett **if**-villkor för verb **mention** i mallarna för de komponenter som du aktiverade stödet för **@mentions**.
 
 ```java
 {{#equals this.verb "mention"}}\
