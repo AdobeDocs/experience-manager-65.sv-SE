@@ -12,6 +12,9 @@ discoiquuid: 5b1e46c5-7e56-433e-b62e-2a76ea7be0fd
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 0eda6ee61acf737abc91d1e5df731e719663b3f2
+workflow-type: tm+mt
+source-wordcount: '1904'
+ht-degree: 0%
 
 ---
 
@@ -29,13 +32,13 @@ AEM använder databasen som lagring för ett antal interna aktiviteter och hush�
 * Arbetsflödesnyttolaster
 * Resurser som skapats temporärt under DAM-återgivning
 
-När något av dessa temporära objekt är stort nog för att kräva lagring i datalagret, och när objektet inte längre används, förblir själva datalagret som&quot;skräp&quot;. I ett typiskt WCM-program för författare/publicering är den största källan till skräp av den här typen vanligtvis processen för publiceringsaktivering. När data replikeras till Publish, samlas de in i samlingar i ett effektivt dataformat som kallas&quot;Durbo&quot; och lagras i databasen under `/var/replication/data`. Datapaketen är ofta större än den kritiska storlekströskeln för datalagret och därför lagras de som datalagringsposter. När replikeringen är klar tas noden i `/var/replication/data` bort, men datalagringsposten förblir&quot;skräp&quot;.
+När något av dessa temporära objekt är stort nog för att kräva lagring i datalagret, och när objektet inte längre används, förblir själva datalagret som&quot;skräp&quot;. I ett typiskt WCM-program för författare/publicering är den största källan till skräp av den här typen vanligtvis processen för publiceringsaktivering. När data replikeras till Publish, samlas de först in i samlingar i ett effektivt dataformat som kallas&quot;Durbo&quot; och lagras i databasen under `/var/replication/data`. Datapaketen är ofta större än den kritiska storlekströskeln för datalagret och därför lagras de som datalagringsposter. När replikeringen är klar tas noden i `/var/replication/data` bort, men datalagringsposten förblir&quot;skräp&quot;.
 
 En annan källa till återvinningsbart skräp är paket. Paketdata lagras, precis som allt annat, i databasen och därmed för paket som är större än 4 kB i datalagret. Under ett utvecklingsprojekt eller under en längre tid med ett system kan paket byggas och byggas om många gånger, och varje bygge resulterar i en ny datalagringspost, vilket gör den föregående byggens arkiv överbliven.
 
 ## Hur fungerar skräpinsamlingen i datalagret? {#how-does-data-store-garbage-collection-work}
 
-Om databasen har konfigurerats med ett externt datalager kommer skräpinsamlingen i [datalagret att köras automatiskt](/help/sites-administering/data-store-garbage-collection.md#automating-data-store-garbage-collection) som en del av veckounderhållsperioden. Systemadministratören kan även [köra skräpinsamlingen för datalager manuellt](#running-data-store-garbage-collection) efter behov. I allmänhet rekommenderar vi att skräpinsamlingen för datalager utförs regelbundet, men att följande faktorer beaktas vid planering av skräpinsamlingar för datalager:
+Om databasen har konfigurerats med ett externt datalager körs skräpinsamlingen [automatiskt](/help/sites-administering/data-store-garbage-collection.md#automating-data-store-garbage-collection) som en del av veckounderhållsperioden. Systemadministratören kan även [köra skräpinsamlingen för datalagret manuellt](#running-data-store-garbage-collection) efter behov. I allmänhet rekommenderar vi att skräpinsamlingen för datalager utförs regelbundet, men att följande faktorer beaktas vid planering av skräpinsamlingar för datalager:
 
 * Skräpinsamlingar i datalagret tar tid och kan påverka prestanda, så de bör planeras i enlighet med detta.
 * Borttagning av skräpposter i datalager påverkar inte normala prestanda, vilket inte är en prestandaoptimering.
@@ -56,18 +59,18 @@ Den här metoden fungerar bra för en enskild nod med ett privat datalager. Men 
 >
 >När du utför skräpinsamling i ett klustrat eller delat datalager (med mongo- eller segmentmål) kan loggen visa varningar om att vissa blob-ID inte kan tas bort. Detta beror på att blob-ID:n som tagits bort i en tidigare skräpinsamling felaktigt refereras igen av andra kluster eller delade noder som inte har information om ID-borttagningar. När skräpinsamlingen utförs loggas därför en varning när den försöker ta bort ett ID som redan har tagits bort i den senaste körningen. Det här beteendet påverkar inte prestanda eller funktioner.
 
-## Kör skräpinsamling för datalager {#running-data-store-garbage-collection}
+## Skräpinsamlingen för datalagret körs {#running-data-store-garbage-collection}
 
-Det finns tre sätt att köra skräpinsamling för datalager, beroende på vilken datalagerinställning som AEM körs på:
+Det finns tre sätt att köra skräpinsamling för datalager, beroende på vilket datalager som AEM körs på:
 
 1. Via [Revision Cleanup](/help/sites-deploying/revision-cleanup.md) - en skräpinsamlingsmekanism som vanligtvis används för rensning av nodarkiv.
 
 1. Via [Data Store-skräpinsamlingen](/help/sites-administering/data-store-garbage-collection.md#running-data-store-garbage-collection-via-the-operations-dashboard) - en skräpinsamlingsmekanism som är specifik för externa datalager, som finns på Operations Dashboard.
-1. Via [JMX Console](/help/sites-administering/jmx-console.md).
+1. Via [JMX-konsolen](/help/sites-administering/jmx-console.md).
 
 Om tarMK används både som nodarkiv och datalager kan Revision Cleanup användas för skräpinsamling för både nodarkivet och datalagret. Om ett externt datalager har konfigurerats, till exempel ett filsystemsdatalager, måste skräpinsamlingen för datalagret aktiveras separat från Revision Cleanup. Skräpinsamlingen i datalagret kan aktiveras antingen via instrumentpanelen för åtgärder eller JMX-konsolen.
 
-Tabellen nedan visar vilken typ av skräpinsamling i datalagret som behöver användas för alla datalagerdistributioner som stöds i AEM 6:
+Tabellen nedan visar vilken typ av skräpinsamling för datalager som måste användas för alla datalager-distributioner som stöds i AEM 6:
 
 <table>
  <tbody>
@@ -101,18 +104,18 @@ Tabellen nedan visar vilken typ av skräpinsamling i datalagret som behöver anv
 
 ### Kör skräpinsamlingen för datalagret via kontrollpanelen för åtgärder {#running-data-store-garbage-collection-via-the-operations-dashboard}
 
-Det inbyggda veckounderhållet, som finns via [Operations Dashboard](/help/sites-administering/operations-dashboard.md), innehåller en inbyggd uppgift att utlösa Data Store-skräpinsamlingen kl. 1:00 på söndagar.
+Det inbyggda fönstret för veckounderhåll, som är tillgängligt via [Operations Dashboard](/help/sites-administering/operations-dashboard.md), innehåller en inbyggd åtgärd som utlöser Data Store-skräpinsamlingen kl. 1:00 på söndagar.
 
 Om du behöver köra skräpinsamlingen för datalagret utanför den här tiden kan den aktiveras manuellt via kontrollpanelen för åtgärder.
 
 Innan du kör skräpinsamlingen för datalagret bör du kontrollera att inga säkerhetskopieringar körs samtidigt.
 
-1. Öppna kontrollpanelen för åtgärder via **Navigering** -> **Verktyg** -> **Åtgärder** -> **Underhåll**.
-1. Klicka på eller tryck på **veckounderhållet**.
+1. Öppna Operations Dashboard med **Navigation** -> **Verktyg** -> **Åtgärder** -> **Underhåll**.
+1. Klicka på eller tryck på **Veckounderhåll**.
 
    ![chlimage_1-64](assets/chlimage_1-64.png)
 
-1. Välj **Data Store-skräpinsamlingen** och klicka eller tryck sedan på ikonen **Kör** .
+1. Välj aktiviteten **Skräpsamling för datalager** och klicka eller tryck sedan på ikonen **Kör**.
 
    ![chlimage_1-65](assets/chlimage_1-65.png)
 
@@ -122,11 +125,11 @@ Innan du kör skräpinsamlingen för datalagret bör du kontrollera att inga sä
 
 >[!NOTE]
 >
->Åtgärden Skräpsamling i datalagret visas bara om du har konfigurerat ett externt fildatalager. Mer information om hur du konfigurerar ett arkiv med fildata finns i [Konfigurera nodarkiv och datalager i AEM 6](/help/sites-deploying/data-store-config.md#file-data-store) .
+>Åtgärden Skräpsamling i datalagret visas bara om du har konfigurerat ett externt fildatalager. Mer information om hur du konfigurerar ett fildatalager finns i [Konfigurera nodarkiv och datalager i AEM 6](/help/sites-deploying/data-store-config.md#file-data-store).
 
-### Kör skräpinsamlingen för datalagret via JMX-konsolen {#running-data-store-garbage-collection-via-the-jmx-console}
+### Skräpinsamlingen för datalagret körs via JMX-konsolen {#running-data-store-garbage-collection-via-the-jmx-console}
 
-Det här avsnittet handlar om att manuellt köra skräpinsamling för datalager via JMX-konsolen. Om installationen har konfigurerats utan ett externt datalager gäller detta inte installationen. Se i stället instruktionerna om hur du kör Revision-rensning under [Underhålla databasen](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository).
+Det här avsnittet handlar om att manuellt köra skräpinsamling för datalager via JMX-konsolen. Om installationen har konfigurerats utan ett externt datalager gäller detta inte installationen. Se i stället instruktionerna om hur du kör Revision-rensning under [Underhåll databasen](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository).
 
 >[!NOTE]
 >
@@ -136,8 +139,8 @@ Så här kör du skräpinsamlingen:
 
 1. I Apache Felix OSGi Management Console markerar du fliken **Main** och väljer **JMX** på följande meny.
 1. Sök efter och klicka sedan på **Databashanteraren** MBean (eller gå till `https://<host>:<port>/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Drepository+manager%2Ctype%3DRepositoryManagement`).
-1. Klicka på **startDataStoreGC (boolesk markOnly)**.
-1. Ange &quot;`true`&quot; för `markOnly` parametern om det behövs:
+1. Klicka på **startDataStoreGC(boolean markOnly)**.
+1. ange &quot;`true`&quot; för parametern `markOnly` om det behövs:
 
    | **Alternativ** | **Beskrivning** |
    |---|---|
@@ -151,13 +154,13 @@ Så här kör du skräpinsamlingen:
 
 >[!NOTE]
 >
->Skräpinsamlingsaktiviteten för datalagret startar bara om du har konfigurerat ett externt fildatalager. Om ett externt fildatalager inte har konfigurerats returnerar aktiviteten meddelandet `Cannot perform operation: no service of type BlobGCMBean found` efter anropet. Mer information om hur du konfigurerar ett arkiv med fildata finns i [Konfigurera nodarkiv och datalager i AEM 6](/help/sites-deploying/data-store-config.md#file-data-store) .
+>Skräpinsamlingsaktiviteten för datalagret startar bara om du har konfigurerat ett externt fildatalager. Om ett externt fildatalager inte har konfigurerats returnerar aktiviteten meddelandet `Cannot perform operation: no service of type BlobGCMBean found` efter anropet. Mer information om hur du konfigurerar ett fildatalager finns i [Konfigurera nodarkiv och datalager i AEM 6](/help/sites-deploying/data-store-config.md#file-data-store).
 
-## Automatisera skräpinsamling för datalager {#automating-data-store-garbage-collection}
+## Automatiserar skräpinsamlingen för datalagret {#automating-data-store-garbage-collection}
 
 Om det är möjligt bör skräpinsamlingen i datalagret köras när det finns liten belastning på systemet, till exempel på morgonen.
 
-Det inbyggda veckounderhållet, som finns via [Operations Dashboard](/help/sites-administering/operations-dashboard.md), innehåller en inbyggd uppgift att utlösa Data Store-skräpinsamlingen kl. 1:00 på söndagar. Du bör även kontrollera att inga säkerhetskopieringar körs just nu. Underhållsperiodens början kan anpassas via kontrollpanelen efter behov.
+Det inbyggda fönstret för veckounderhåll, som är tillgängligt via [Operations Dashboard](/help/sites-administering/operations-dashboard.md), innehåller en inbyggd åtgärd som utlöser Data Store-skräpinsamlingen kl. 1:00 på söndagar. Du bör även kontrollera att inga säkerhetskopieringar körs just nu. Underhållsperiodens början kan anpassas via kontrollpanelen efter behov.
 
 >[!NOTE]
 >
@@ -167,7 +170,7 @@ Om du inte vill köra skräpinsamlingen i datalagret med fönstret för veckound
 
 >[!CAUTION]
 >
->I följande exempel kan `curl` olika parametrar behöva konfigureras för din instans: till exempel värdnamnet ( `localhost`), port ( `4502`), administratörslösenordet ( `xyz`) och olika parametrar för den faktiska skräpinsamlingen i datalagret.
+>I följande exempel `curl`-kommandon kan olika parametrar behöva konfigureras för din instans: till exempel värdnamnet ( `localhost`), porten ( `4502`), administratörslösenordet ( `xyz`) och olika parametrar för den faktiska skräpinsamlingen i datalagret.
 
 Här följer ett exempel på ett curl-kommando för att anropa skräpinsamling för datalagring via kommandoraden:
 
@@ -183,9 +186,9 @@ Konsekvenskontrollen av datalagret rapporterar eventuella binära data som sakna
 
 1. Gå till JMX-konsolen. Mer information om hur du använder JMX-konsolen finns i [den här artikeln](/help/sites-administering/jmx-console.md#using-the-jmx-console).
 1. Sök efter **BlobGarbageCollection** Mbean och klicka på den.
-1. Click the `checkConsistency()` link.
+1. Klicka på länken `checkConsistency()`.
 
-När konsekvenskontrollen är klar visas antalet binärfiler som rapporterats som saknade i ett meddelande. Om siffran är större än 0 kan du kontrollera `error.log` om det finns mer information om binärfilerna som saknas.
+När konsekvenskontrollen är klar visas antalet binärfiler som rapporterats som saknade i ett meddelande. Om talet är större än 0 kan du kontrollera `error.log` för mer information om binärfilerna som saknas.
 
 Här nedan hittar du ett exempel på hur de saknade binärfilerna rapporteras i loggarna:
 
