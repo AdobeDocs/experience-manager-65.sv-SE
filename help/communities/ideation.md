@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: a9e4f2f0-d1ff-40c0-abcf-645e40586a84
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '111'
+ht-degree: 1%
 
 ---
 
@@ -33,7 +36,7 @@ Den här sidan innehåller viktig information för att arbeta med idéfunktionen
   </tr>
   <tr>
    <td> <a href="clientlibs.md"><strong>klientlibs</strong></a></td>
-   <td>cq.social.hbs.voice<br /> cq.social.hbs.like<br /> cq.social.hbs.ideation</td>
+   <td>cq.social.hbs.voice<br /> cq.social.hbs.liking<br /> cq.social.hbs.ideation</td>
   </tr>
   <tr>
    <td> <strong>templates</strong></td>
@@ -45,7 +48,7 @@ Den här sidan innehåller viktig information för att arbeta med idéfunktionen
   </tr>
   <tr>
    <td><strong> egenskaper</strong></td>
-   <td>Se <a href="ideation-feature.md">Idéfunktion</a></td>
+   <td>Se <a href="ideation-feature.md">Ideationsfunktion</a></td>
   </tr>
  </tbody>
 </table>
@@ -54,4 +57,4 @@ Den här sidan innehåller viktig information för att arbeta med idéfunktionen
 
 ### Ideationsfunktion {#ideation-function}
 
-En community-webbplatsstruktur som innehåller [Ideation-funktionen](functions.md#ideation-function)innehåller en konfigurerad `ideation` komponent.
+En community-platsstruktur som innehåller [Ideation-funktionen](functions.md#ideation-function) innehåller en konfigurerad `ideation`-komponent.
