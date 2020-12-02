@@ -1,8 +1,8 @@
 ---
 title: SPA Blueprint
 seo-title: SPA Blueprint
-description: I detta dokument beskrivs det allmänna, ramverksoberoende kontrakt som alla SPA-ramverk ska uppfylla för att implementera redigerbara SPA-komponenter inom AEM.
-seo-description: I detta dokument beskrivs det allmänna, ramverksoberoende kontrakt som alla SPA-ramverk ska uppfylla för att implementera redigerbara SPA-komponenter inom AEM.
+description: I det här dokumentet beskrivs det allmänna, ramverksoberoende kontrakt som SPA ska uppfylla för att implementera redigerbara SPA komponenter inom AEM.
+seo-description: I det här dokumentet beskrivs det allmänna, ramverksoberoende kontrakt som SPA ska uppfylla för att implementera redigerbara SPA komponenter inom AEM.
 uuid: 48f2d415-ec34-49dc-a8e1-6feb5a8a5bbe
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
@@ -18,17 +18,17 @@ ht-degree: 0%
 ---
 
 
-# SPA Blueprint{#spa-blueprint}
+# SPA blå{#spa-blueprint}
 
-Om du vill att författaren ska kunna använda AEM SPA-redigerare för att redigera innehållet i en SPA, finns det krav som SPA måste uppfylla, vilket beskrivs i det här dokumentet.
+Om du vill att författaren ska kunna använda AEM SPA Editor för att redigera innehållet i en SPA, finns det krav som SPA måste uppfylla, vilket beskrivs i det här dokumentet.
 
 >[!NOTE]
 >
->SPA-redigeraren är den rekommenderade lösningen för projekt som kräver SPA-ramverksbaserad rendering på klientsidan (t.ex. React eller Angular).
+>SPA Editor är den rekommenderade lösningen för projekt som kräver SPA ramverksbaserad återgivning på klientsidan (t.ex. Reaktion eller Vinkel).
 
 ## Introduktion {#introduction}
 
-I det här dokumentet beskrivs det allmänna kontraktet att alla SPA-ramverk ska uppfylla (dvs. typ av AEM stödlager) för att implementera redigerbara SPA-komponenter i AEM.
+I det här dokumentet beskrivs det allmänna kontraktet att alla SPA ramverk ska uppfylla (dvs. typ av AEM stödlager) för att implementera redigerbara SPA komponenter inom AEM.
 
 >[!NOTE]
 >
@@ -38,19 +38,19 @@ I det här dokumentet beskrivs det allmänna kontraktet att alla SPA-ramverk ska
 
 >[!CAUTION]
 >
->Även om SPA-funktionerna i AEM är ramverksoberoende stöds för närvarande bara ramverken React och Angular.
+>Även om SPA i AEM är ramverksoberoende stöds för närvarande bara ramverken React och Angular.
 
-Om du vill att författaren ska kunna använda AEM Page Editor för att redigera data som exponeras av ett ramverk för ett enkelsidigt program, måste ett projekt kunna tolka modellstrukturen som representerar semantiken för data som lagras för ett program i AEM. För att uppnå detta mål finns två ramverksbaserade bibliotek: och `PageModelManager` och `ComponentMapping`.
+Om du vill att författaren ska kunna använda AEM Page Editor för att redigera data som exponeras av ett ramverk för ett enkelsidigt program, måste ett projekt kunna tolka modellstrukturen som representerar semantiken för data som lagras för ett program i AEM. För att uppnå detta mål finns två ramverksbaserade bibliotek: `PageModelManager` och `ComponentMapping`.
 
 ### PageModelManager {#pagemodelmanager}
 
-Biblioteket `PageModelManager` tillhandahålls som ett NPM-paket som ska användas av ett SPA-projekt. Det medföljer SPA och fungerar som en datamodellshanterare.
+Biblioteket `PageModelManager` tillhandahålls som ett NPM-paket som ska användas av ett SPA projekt. Den medföljer SPA och fungerar som en datamodellshanterare.
 
-För SPA:s räkning tar det bort och hanterar JSON-strukturen som representerar den faktiska innehållsstrukturen. Den ansvarar också för synkroniseringen med SPA för att meddela när komponenterna ska återges på nytt.
+För SPA:s räkning tar den bort och hanterar JSON-strukturen som representerar den faktiska innehållsstrukturen. Den ansvarar också för synkroniseringen med SPA för att meddela när komponenterna ska återges på nytt.
 
 Se NPM-paketet [@adobe/aem-spa-page-model-manager](https://www.npmjs.com/package/@adobe/aem-spa-page-model-manager)
 
-När biblioteket initieras `PageModelManager`läser biblioteket först in den angivna rotmodellen för appen (via parameter, metaegenskap eller aktuell URL). Om biblioteket identifierar att den aktuella sidans modell inte är en del av den rotmodell som hämtas, och tar med den som modell för en underordnad sida.
+När du initierar `PageModelManager` läser biblioteket först in den angivna rotmodellen för appen (via parameter, metaegenskap eller aktuell URL). Om biblioteket identifierar att den aktuella sidans modell inte är en del av den rotmodell som hämtas, och tar med den som modell för en underordnad sida.
 
 ![page_model_conversion](assets/page_model_consolidation.png)
 
@@ -58,11 +58,11 @@ När biblioteket initieras `PageModelManager`läser biblioteket först in den an
 
 Modulen `ComponentMapping` tillhandahålls som ett NPM-paket till frontendprojektet. Det lagrar komponenter i gränssnittet och tillhandahåller ett sätt för SPA att mappa komponenter i gränssnittet till AEM resurstyper. Detta aktiverar en dynamisk upplösning för komponenter när JSON-modellen för programmet analyseras.
 
-Varje objekt i modellen innehåller ett `:type` fält som visar en AEM resurstyp. När den är monterad kan den främre komponenten återge sig själv med det fragment av modellen som den har fått från de underliggande biblioteken.
+Varje objekt i modellen innehåller ett `:type`-fält som visar en AEM resurstyp. När den är monterad kan den främre komponenten återge sig själv med det fragment av modellen som den har fått från de underliggande biblioteken.
 
 #### Dynamisk mappning av modell till komponent {#dynamic-model-to-component-mapping}
 
-Mer information om hur den dynamiska mappningen av modell till komponent sker i Javascript SPA SDK för AEM finns i artikeln [Dynamic Model to Component Mapping for SPA](/help/sites-developing/spa-dynamic-model-to-component-mapping.md).
+Mer information om hur den dynamiska mappningen av modell till komponent sker i Javascript SPA SDK för AEM finns i artikeln [Dynamisk mappning av modell till komponent för SPA](/help/sites-developing/spa-dynamic-model-to-component-mapping.md).
 
 ### Ramverksspecifikt lager {#framework-specific-layer}
 
@@ -74,17 +74,17 @@ Resten av detta dokument beskriver kraven för det mellanliggande ramverksspecif
 
 ### Sidmodell {#page-model}
 
-Innehållsstrukturen för sidan lagras i AEM. Sidans modell används för att mappa och instansiera SPA-komponenter. SPA-utvecklarna skapar SPA-komponenter som de mappar till AEM. För att göra detta använder de resurstypen (eller sökvägen till AEM) som en unik nyckel.
+Innehållsstrukturen för sidan lagras i AEM. Sidans modell används för att mappa och instansiera SPA. SPA utvecklare skapar SPA komponenter som de mappar till AEM komponenter. För att göra detta använder de resurstypen (eller sökvägen till AEM) som en unik nyckel.
 
-SPA-komponenterna måste vara synkroniserade med sidmodellen och uppdateras om innehållet ändras i enlighet med detta. Ett mönster som utnyttjar dynamiska komponenter måste användas för att instansiera komponenter i farten efter den angivna sidmodellstrukturen.
+De SPA komponenterna måste vara synkroniserade med sidmodellen och uppdateras med eventuella ändringar av innehållet. Ett mönster som utnyttjar dynamiska komponenter måste användas för att instansiera komponenter i farten efter den angivna sidmodellstrukturen.
 
 ### Metafält {#meta-fields}
 
-Sidmodellen utnyttjar JSON-modellens exporterare, som i sin tur är baserad på API:t för [segmenteringsmodellen](https://sling.apache.org/documentation/bundles/models.html) . De exporterbara snedsättningsmodellerna visar följande fältlista för att de underliggande biblioteken ska kunna tolka datamodellen:
+Sidmodellen utnyttjar JSON-modellens exporterare, som i sin tur är baserad på API:t [Sling Model](https://sling.apache.org/documentation/bundles/models.html). De exporterbara snedsättningsmodellerna visar följande fältlista för att de underliggande biblioteken ska kunna tolka datamodellen:
 
 * `:type`: Typ av AEM (standard = resurstyp)
 * `:children`: Hierarkiska underordnade för den aktuella resursen. Underordnade är inte en del av den aktuella resursens inre innehåll (kan hittas på objekt som representerar en sida)
-* `:hierarchyType`: Hierarkisk typ av en resurs. Den `PageModelManager` aktuella sidtypen stöds
+* `:hierarchyType`: Hierarkisk typ av en resurs. `PageModelManager` stöder för närvarande sidtypen
 
 * `:items`: Underordnade innehållsresurser för den aktuella resursen (kapslad struktur, endast i behållare)
 * `:itemsOrder`: Ordnad lista över de underordnade. JSON-mappningsobjektet garanterar inte fältordningen. Genom att ha både kartan och den aktuella arrayen får API-konsumenten fördelarna med båda strukturerna
@@ -105,13 +105,13 @@ För att underlätta bibliotekens driftskompatibilitet rekommenderar Adobe den r
 
 #### Reagera {#react}
 
-npm-modul: [@adobe/aem-rea-editable-components](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
+npm-modul: [@adobe/aem-response-editable-components](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
 
 #### Vinkel {#angular}
 
 npm-modul: kommer snart
 
-## Huvudsakliga tjänster och komponenter {#main-services-and-components}
+## Huvudtjänster och komponenter {#main-services-and-components}
 
 Följande enheter bör genomföras i enlighet med de riktlinjer som är specifika för varje ramverk. Implementeringen kan variera mycket beroende på ramverkets arkitektur, men de beskrivna funktionerna måste tillhandahållas.
 
@@ -119,7 +119,7 @@ Följande enheter bör genomföras i enlighet med de riktlinjer som är specifik
 
 Projektkomponenter måste delegera åtkomst till en modells fragment till en modellprovider. Modellprovidern ansvarar sedan för att lyssna efter ändringar som gjorts i det angivna fragmentet i modellen och returnerar den uppdaterade modellen till den delegerande komponenten.
 
-För att göra detta måste modellprovidern registrera sig hos ` [PageModelManager](/help/sites-developing/spa-blueprint.md#pagemodelmanager)`. När en ändring inträffar tar den emot och skickar den uppdaterade informationen till den delegerande komponenten. Egenskapen som gjorts tillgänglig för den delegerande komponenten som ska bära fragmentet av modellen namnges `cqModel`. Implementeringen kan fritt tillhandahålla den här egenskapen till komponenten men bör beakta aspekter som integrering med ramverksarkitekturen, upptäckbarhet och användarvänlighet.
+För att göra detta måste modellprovidern registrera sig för ` [PageModelManager](/help/sites-developing/spa-blueprint.md#pagemodelmanager)`. När en ändring inträffar tar den emot och skickar den uppdaterade informationen till den delegerande komponenten. Egenskapen som görs tillgänglig för den delegerande komponenten som ska bära fragmentet i modellen heter `cqModel`. Implementeringen kan fritt tillhandahålla den här egenskapen till komponenten men bör beakta aspekter som integrering med ramverksarkitekturen, upptäckbarhet och användarvänlighet.
 
 ### Komponentens HTML-dekorator {#the-component-html-decorator}
 
@@ -129,7 +129,7 @@ Komponentdekoratorn ansvarar för att dekorera den yttre HTML-koden för element
 
 Följande metadata måste läggas till i det yttre HTML-elementet som skapas av projektkomponenten. De gör att sidredigeraren kan hämta motsvarande redigeringskonfiguration.
 
-* `data-cq-data-path`: Sökväg till resursen i förhållande till `jcr:content`
+* `data-cq-data-path`: Sökväg till resursen i förhållande till  `jcr:content`
 
 #### Funktionsdeklaration och platshållare för redigering {#editing-capability-declaration-and-placeholder}
 
@@ -149,13 +149,13 @@ Varje komponent måste utökas med en funktion som dekorerar det yttre HTML-elem
 
 ### Behållare {#container}
 
-En behållare är en komponent som ska innehålla och återge underordnade komponenter. För att göra det itererar behållaren över modellens `:itemsOrder``:items` och `:children` egenskaper.
+En behållare är en komponent som ska innehålla och återge underordnade komponenter. För att göra det itererar behållaren över modellens egenskaper `:itemsOrder`, `:items` och `:children`.
 
-Behållaren hämtar de underordnade komponenterna dynamiskt från arkivet i ` [ComponentMapping](/help/sites-developing/spa-blueprint.md#componentmapping)` biblioteket. Behållaren utökar sedan den underordnade komponenten med modellproviderfunktionerna och instansierar den till slut.
+Behållaren hämtar de underordnade komponenterna dynamiskt från arkivet för ` [ComponentMapping](/help/sites-developing/spa-blueprint.md#componentmapping)`-biblioteket. Behållaren utökar sedan den underordnade komponenten med modellproviderfunktionerna och instansierar den till slut.
 
 ### Sidan {#page}
 
-Komponenten utökar `Page` `Container` komponenten. En behållare är en komponent som är avsedd att innehålla och återge underordnade komponenter, inklusive underordnade sidor. För att göra det itererar behållaren över modellens `:itemsOrder`, `:items`och `:children` egenskaper. Komponenten hämtar de underordnade komponenterna dynamiskt från arkivet för `Page` ComponentMapping [](/help/sites-developing/spa-blueprint.md#componentmapping) -biblioteket. Den `Page` ansvarar för att instansiera underordnade komponenter.
+Komponenten `Page` utökar komponenten `Container`. En behållare är en komponent som är avsedd att innehålla och återge underordnade komponenter, inklusive underordnade sidor. För att göra det itererar behållaren över egenskaperna `:itemsOrder`, `:items` och `:children` för modellen. Komponenten `Page` hämtar de underordnade komponenterna dynamiskt från arkivet för [ComponentMapping](/help/sites-developing/spa-blueprint.md#componentmapping)-biblioteket. `Page` ansvarar för att instansiera underordnade komponenter.
 
 ### Responsivt rutnät {#responsive-grid}
 
@@ -172,7 +172,7 @@ Se även npm-resursen [@adobe/aem-rea-editable-components#srccomponentssresponsi
 
 #### Platshållare för det motstående stödrastret {#placeholder-of-the-reponsive-grid}
 
-SPA-komponenten mappas till en grafisk behållare som t.ex. det responsiva stödrastret och måste lägga till en virtuell underordnad platshållare när innehållet skapas. När innehållet i SPA-filen redigeras av sidredigeraren bäddas innehållet in i redigeraren med en iframe och attributet läggs till i dokumentnoden för det innehållet `data-cq-editor` . När attributet finns med måste behållaren innehålla ett HTMLElement som representerar det område som författaren interagerar med när en ny komponent infogas på sidan. `data-cq-editor`
+Komponenten SPA mappas till en grafisk behållare, t.ex. det responsiva stödrastret, och måste lägga till en virtuell underordnad platshållare när innehållet skapas. När innehållet i SPA redigeras av sidredigeraren bäddas innehållet in i redigeraren med en iframe och attributet `data-cq-editor` läggs till i dokumentnoden för det innehållet. När attributet `data-cq-editor` finns måste behållaren innehålla ett HTMLElement som representerar det område som författaren interagerar med när en ny komponent infogas på sidan.
 
 Till exempel:
 
@@ -193,7 +193,7 @@ Till exempel:
 
 #### Komponentmappning {#component-mapping}
 
-Det underliggande [`Component Mapping`](/help/sites-developing/spa-blueprint.md#componentmapping) biblioteket och dess `MapTo` funktion kan kapslas in och utökas för att ge funktioner i förhållande till redigeringskonfigurationen som finns bredvid den aktuella komponentklassen.
+Det underliggande [`Component Mapping`](/help/sites-developing/spa-blueprint.md#componentmapping)-biblioteket och dess `MapTo`-funktion kan kapslas in och utökas för att tillhandahålla de funktioner som är relativa till redigeringskonfigurationen som finns bredvid den aktuella komponentklassen.
 
 ```
 const EditConfig = {
@@ -215,7 +215,7 @@ class MyComponent extends Component {
 MapTo('component/resource/path')(MyComponent, EditConfig);
 ```
 
-I implementeringen ovan utökas projektkomponenten med tomrumsfunktionen innan den registreras i [komponentmappningsarkivet](/help/sites-developing/spa-blueprint.md#componentmapping) . Detta gör du genom att kapsla in och utöka [`ComponentMapping`](/help/sites-developing/spa-blueprint.md#componentmapping) biblioteket för att ge stöd för `EditConfig` konfigurationsobjektet:
+I implementeringen ovan utökas projektkomponenten med tomrumsfunktionen innan den registreras i [komponentmappningen](/help/sites-developing/spa-blueprint.md#componentmapping)-butiken. Detta görs genom att kapsla in och utöka [`ComponentMapping`](/help/sites-developing/spa-blueprint.md#componentmapping)-biblioteket för att ge stöd för konfigurationsobjektet `EditConfig`:
 
 ```
 /**
@@ -238,11 +238,11 @@ I implementeringen ovan utökas projektkomponenten med tomrumsfunktionen innan d
 ComponentMapping.map = function map (resourceTypes, clazz, editConfig) {};
 ```
 
-## Arbeta med sidredigeraren {#contract-with-the-page-editor}
+## Kontrakt med sidredigeraren {#contract-with-the-page-editor}
 
 Projektkomponenterna måste generera minst följande dataattribut så att redigeraren kan interagera med dem.
 
-* `data-cq-data-path`: Komponentens relativa sökväg enligt `PageModel` (t.ex. `"root/responsivegrid/image"`). Det här attributet ska inte läggas till på sidor.
+* `data-cq-data-path`: Komponentens relativa sökväg enligt  `PageModel` (t.ex.  `"root/responsivegrid/image"`). Det här attributet ska inte läggas till på sidor.
 
 Sammanfattningsvis, för att sidredigeraren ska kunna tolka som redigerbar, måste en projektkomponent respektera följande kontrakt:
 
@@ -254,10 +254,10 @@ Sammanfattningsvis, för att sidredigeraren ska kunna tolka som redigerbar, mås
 
 Följande fragment illustrerar den typiska HTML-representationen av en sidinnehållsstruktur. Här är några viktiga punkter:
 
-* Det responsiva rutnätselementet innehåller klassnamn med prefixet `aem-Grid--`
-* Det responsiva kolumnelementet innehåller klassnamn som föregås av `aem-GridColumn--`
+* Det responsiva rutnätselementet innehåller klassnamn med `aem-Grid--` som prefix
+* Det responsiva kolumnelementet innehåller klassnamn som har prefixet `aem-GridColumn--`
 * Ett responsivt stödraster som också är kolumnen i ett överordnat stödraster kapslas, t.ex. de två föregående prefixen visas inte i samma element
-* Element som motsvarar redigerbara resurser har en `data-cq-data-path` egenskap. Se [Kontrakt med sidredigeraren](#contract-wtih-the-page-editor) i det här dokumentet.
+* Element som motsvarar redigerbara resurser har en `data-cq-data-path`-egenskap. Se avsnittet [Kontrakt med sidredigeraren](#contract-wtih-the-page-editor) i det här dokumentet.
 
 ```
 <div data-cq-data-path="/content/page">
@@ -277,19 +277,19 @@ Följande fragment illustrerar den typiska HTML-representationen av en sidinneh�
 
 Appen äger routningen. Utvecklaren måste först implementera en Navigation-komponent (mappas till en AEM navigeringskomponent). Den här komponenten återger URL-länkar som ska användas tillsammans med en serie vägar som visar eller döljer innehållsfragment.
 
-Det underliggande [ biblioteket och dess `PageModelManager`](/help/sites-developing/spa-blueprint.md#pagemodelmanager) ` [ModelRouter](/help/sites-developing/spa-routing.md)` modul (aktiverad som standard) ansvarar för förhämtning och ger åtkomst till modellen som är kopplad till en given resurssökväg.
+Det underliggande [ `PageModelManager`](/help/sites-developing/spa-blueprint.md#pagemodelmanager)-biblioteket och dess ` [ModelRouter](/help/sites-developing/spa-routing.md)`-modul (aktiverad som standard) ansvarar för förhämtning och ger åtkomst till modellen som är associerad med en given resurssökväg.
 
-De två entiteterna är relaterade till begreppet routning, men de ` [ModelRouter](/help/sites-developing/spa-routing.md)` ansvarar bara för att den ` [PageModelManager](/help/sites-developing/spa-blueprint.md#pagemodelmanager)` inlästa datamodellen har strukturerats synkroniserat med det aktuella programtillståndet.
+De två entiteterna relaterar till begreppet routning, men ` [ModelRouter](/help/sites-developing/spa-routing.md)` ansvarar bara för att ` [PageModelManager](/help/sites-developing/spa-blueprint.md#pagemodelmanager)` har lästs in med en datamodell som är synkroniserad med det aktuella programtillståndet.
 
-Mer information finns i artikeln [SPA-modellroutning](/help/sites-developing/spa-routing.md) .
+Mer information finns i artikeln [SPA Model Routing](/help/sites-developing/spa-routing.md).
 
 ## SPA in action {#spa-in-action}
 
-Se hur en enkel SPA fungerar och experimentera med en SPA själv genom att fortsätta med dokumentet [Getting Started with SPAs in AEM](/help/sites-developing/spa-getting-started-react.md).
+Se hur en enkel SPA fungerar och experimentera med en SPA själv genom att fortsätta med dokumentet [Komma igång med SPA i AEM](/help/sites-developing/spa-getting-started-react.md).
 
 ## Ytterligare läsning {#further-reading}
 
 Mer information om SPA i AEM finns i följande dokument:
 
-* [SPA-redigeringsöversikt](/help/sites-developing/spa-overview.md) för en översikt över SPA i AEM och kommunikationsmodellen
-* [Getting Started with SPAs in AEM](/help/sites-developing/spa-getting-started-react.md) for a guide to a simple SPA and how it works
+* [SPA ](/help/sites-developing/spa-overview.md) redigeringsöversikt för en översikt över SPA i AEM och kommunikationsmodellen
+* [Komma igång med SPA i ](/help/sites-developing/spa-getting-started-react.md) AEMför en guide till ett enkelt SPA och hur det fungerar
