@@ -1,8 +1,8 @@
 ---
-title: AEM Touch-aktiverat användargränssnitt
-seo-title: AEM Touch-aktiverat användargränssnitt
-description: Med AEM 5.6 introducerade Adobe ett nytt pekoptimerat gränssnitt med responsiv design för redigeringsmiljön
-seo-description: Med AEM 5.6 introducerade Adobe ett nytt pekoptimerat gränssnitt med responsiv design för redigeringsmiljön
+title: Koncepten i det AEM användargränssnittet med pekskärm
+seo-title: Koncepten i det AEM användargränssnittet med pekskärm
+description: Med AEM 5.6 Adobe introducerades ett nytt pekoptimerat gränssnitt med responsiv design för redigeringsmiljön
+seo-description: Med AEM 5.6 Adobe introducerades ett nytt pekoptimerat gränssnitt med responsiv design för redigeringsmiljön
 uuid: 401c5a65-6ddc-4942-ab8e-395016f9c629
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,24 +12,27 @@ discoiquuid: df3aaed1-97b5-4a4a-af74-cb887462475b
 docset: aem65
 translation-type: tm+mt
 source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+workflow-type: tm+mt
+source-wordcount: '2197'
+ht-degree: 0%
 
 ---
 
 
-# AEM Touch-aktiverat användargränssnitt{#concepts-of-the-aem-touch-enabled-ui}
+# Koncept för det AEM användargränssnittet med pekskärm{#concepts-of-the-aem-touch-enabled-ui}
 
-AEM har ett pekaktiverat användargränssnitt med [responsiv design](/help/sites-authoring/responsive-layout.md) för redigeringsmiljön som är utformat för att fungera både på pekskärmar och på stationära enheter.
+AEM har ett pekaktiverat användargränssnitt med [responsiv design](/help/sites-authoring/responsive-layout.md) för redigeringsmiljön som är utformad för att fungera både på pekskärmar och på stationära enheter.
 
 >[!NOTE]
 >
->Det pekaktiverade användargränssnittet är standardgränssnittet för AEM. Det klassiska användargränssnittet har tagits bort med AEM 6.4.
+>Det beröringskänsliga användargränssnittet är standardgränssnittet för AEM. Det klassiska användargränssnittet har ersatts med AEM 6.4.
 
 Användargränssnittet med pekfunktioner innehåller:
 
 * Suite header som:
    * Visar logotypen
    * Tillhandahåller en länk till den globala navigeringen
-   * Tillhandahåller länk till andra allmänna åtgärder. som Sök, Hjälp, Marketing Cloud-lösningar, Meddelanden och Användarinställningar.
+   * Tillhandahåller länk till andra allmänna åtgärder. som Sök, Hjälp, Marketing Cloud Solutions, Notifications och User Settings.
 * Den vänstra listen (visas när den behövs och är dold) som kan visa:
    * Tidslinje
    * Referenser
@@ -38,7 +41,7 @@ Användargränssnittet med pekfunktioner innehåller:
    * Anger vilken konsol du använder och/eller din plats inom den konsolen
    * Markering för den vänstra rälen
    * Breadcrumbs
-   * Tillgång till lämpliga **Create** -åtgärder
+   * Åtkomst till lämpliga **Skapa**-åtgärder
    * Visa markeringar
 * Innehållsområdet som:
    * Visar en lista över innehållsobjekt (sidor, resurser, foruminlägg osv.)
@@ -50,16 +53,16 @@ Användargränssnittet med pekfunktioner innehåller:
 
 >[!NOTE]
 >
->Nästan alla AEM-funktioner har porterats till det pekaktiverade användargränssnittet. I vissa begränsade fall återställs dock funktionen till det klassiska användargränssnittet. Mer information finns i [Funktionsstatus](/help/release-notes/touch-ui-features-status.md) för pekskärmsgränssnittet.
+>Nästan alla AEM funktioner har porterats till det pekaktiverade användargränssnittet. I vissa begränsade fall återställs dock funktionen till det klassiska användargränssnittet. Mer information finns i [Touch UI Feature Status](/help/release-notes/touch-ui-features-status.md).
 
-Användargränssnittet med pekfunktioner har utformats av Adobe för att ge en konsekvent användarupplevelse för flera produkter. Den bygger på följande:
+Det pekaktiverade användargränssnittet har utformats av Adobe för att ge en konsekvent användarupplevelse för flera produkter. Den bygger på följande:
 
-* **Coral UI** (CUI) är en implementering av Adobes visuella stil för det pekaktiverade användargränssnittet. Coral UI innehåller allt som produkten/projektet/webbprogrammet behöver för att använda den visuella gränssnittsstilen.
-* **Gränssnittskomponenter i Granite** är byggda med Coral UI.
+* **Coral UI**  (CUI) är en implementering av Adobe visuell stil för det pekaktiverade användargränssnittet. Coral UI innehåller allt som produkten/projektet/webbprogrammet behöver för att använda den visuella gränssnittsstilen.
+* **Granitets** gränssnittskomponenter är byggda med Coral UI.
 
 De grundläggande principerna för det beröringskänsliga användargränssnittet är:
 
-* Mobil först (med stationära datorer i åtanke)
+* Mobil först (med skrivbordet i åtanke)
 * Responsiv design
 * Sammanhangsberoende visning
 * Återanvändbar
@@ -67,7 +70,7 @@ De grundläggande principerna för det beröringskänsliga användargränssnitte
 * Inkludera inbäddade tester
 * Nedifrån och upp-design för att säkerställa att dessa principer tillämpas på alla element och komponenter
 
-Mer information om den beröringsaktiverade gränssnittsstrukturen finns i artikelstrukturen [för det AEM Touch-aktiverade gränssnittet](/help/sites-developing/touch-ui-structure.md).
+Mer information om den beröringsaktiverade gränssnittsstrukturen finns i artikeln [Struktur för det AEM beröringsaktiverade användargränssnittet](/help/sites-developing/touch-ui-structure.md).
 
 ## AEM Technology Stack {#aem-technology-stack}
 
@@ -77,7 +80,7 @@ AEM använder Granite-plattformen som bas och Granite-plattformen innehåller bl
 
 ## Granit {#granite}
 
-Granite är Adobes Open Web-stack med olika komponenter:
+Granite är en Adobe Open Web-stack med olika komponenter:
 
 * En programstart
 * Ett OSGi-ramverk där allt distribueras
@@ -91,9 +94,9 @@ Granite är Adobes Open Web-stack med olika komponenter:
 >
 >Granite körs som ett öppet utvecklingsprojekt i Adobe: bidrag till koden, diskussioner och frågor görs i hela företaget.
 >
->Granite är dock **inte** ett öppen källkodsprojekt. Det bygger till stor del på flera öppen källkodsprojekt (särskilt Apache Sling, Felix, Jackrabbit och Lucene), men Adobe har en tydlig gräns mellan vad som är offentligt och vad som är internt.
+>Granite är dock **inte** ett öppen källkodsprojekt. Den bygger till stor del på flera öppen källkodsprojekt (särskilt Apache Sling, Felix, Jackrabbit och Lucene), men Adobe drar en tydlig linje mellan vad som är offentligt och vad som är internt.
 
-## Granite-gränssnitt {#granite-ui}
+## Granit-gränssnitt {#granite-ui}
 
 Granites teknikplattform utgör också ett grundläggande ramverk för användargränssnitt. De främsta målen med detta är att
 
@@ -107,9 +110,11 @@ Dessa uppfyller kraven:
 * Var utökningsbar
 * Enkelt att åsidosätta
 
-![chlimage_1-81](assets/chlimage_1-81.png)GraniteUI.pdf
+![chlimage_1-81](assets/chlimage_1-81.png)
+GraniteUI.pdf
 
-[Hämta filen](assets/graniteui.pdf)för GRE-gränssnittet:
+[Hämta ](assets/graniteui.pdf)
+filGränssnittet för Granite:
 
 * Använder RESTful-arkitekturen i Sling
 * Implementerar komponentbibliotek som är avsedda för att skapa innehållscentrerade webbprogram
@@ -117,11 +122,12 @@ Dessa uppfyller kraven:
 * Tillhandahåller ett standardgränssnitt
 * Är utökningsbar
 * Är utformad för både mobila och stationära enheter (respekterar mobilen först)
-* Kan användas i alla Granite-baserade plattformar/produkter/projekt. eg AEM
+* Kan användas i alla Granite-baserade plattformar/produkter/projekt. e AEM
 
 ![chlimage_1-82](assets/chlimage_1-82.png)
 
-* [Granite UI Foundation Components](#granite-ui-foundation-components)Det här biblioteket med grundkomponenter kan användas eller utökas av andra bibliotek.
+* [Granite UI Foundation ](#granite-ui-foundation-components)
+ComponentsDet här biblioteket med grundkomponenter kan användas eller utökas av andra bibliotek.
 * [Granite UI Administration Components](#granite-ui-administration-components)
 
 ### Klientsida jämfört med serversida {#client-side-vs-server-side}
@@ -135,13 +141,13 @@ Klient-server-kommunikationen i Granite-gränssnittet består av hypertext, inte
 
 #### Klientsida {#client-side}
 
-Detta använder ett tillägg till HTML-språket, förutsatt att författaren kan uttrycka sin avsikt att skapa en interaktiv webbapp. Detta liknar [WAI-ARIA](https://www.w3.org/TR/wai-aria/) och [mikroformat](https://microformats.org/).
+Detta använder ett tillägg till HTML-språket, förutsatt att författaren kan uttrycka sin avsikt att skapa en interaktiv webbapp. Detta liknar [WAI-ARIA](https://www.w3.org/TR/wai-aria/) och [mikroformaten](https://microformats.org/).
 
 Det består främst av en samling interaktionsmönster (till exempel asynkron sändning av ett formulär) som tolkas av JS- och CSS-koder, som körs på klientsidan. Klientsidans roll är att förstärka markeringen (som serverns hypermedia) för interaktivitet.
 
 Klientsidan är oberoende av serverteknik. Så länge servern ger rätt kod kan klientsidan uppfylla sin roll.
 
-För närvarande levereras JS- och CSS-koderna som Granite- [klienter](/help/sites-developing/clientlibs.md) under kategorin:
+För närvarande levereras JS- och CSS-koderna som Granite [klientlibs](/help/sites-developing/clientlibs.md) under kategorin:
 
 `granite.ui.foundation and granite.ui.foundation.admin`
 
@@ -151,7 +157,7 @@ Dessa levereras som en del av innehållspaketet:
 
 #### Serversida {#server-side}
 
-Detta skapas av en samling slingkomponenter som gör att författaren snabbt kan *skapa* en webbapp. Utvecklaren utvecklar komponenter, författaren sätter ihop komponenterna till en webbapp. Serversidans roll är att förse klienten med hypermedia-råd (markup).
+Detta formas av en samling slingkomponenter som gör att författaren snabbt kan *komponera* en webbapp. Utvecklaren utvecklar komponenter, författaren sätter ihop komponenterna till en webbapp. Serversidans roll är att förse klienten med hypermedia-råd (markup).
 
 Komponenterna finns för närvarande i Granite-databasen på:
 
@@ -196,7 +202,7 @@ Skillnaderna mellan GRUI och ExtJS (används för det klassiska användargränss
 
 ### Granite UI Foundation Components {#granite-ui-foundation-components}
 
-Grundkomponenterna [i](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html) Granite UI utgör de grundläggande byggstenarna som behövs för att bygga ett användargränssnitt. De omfattar bland annat följande:
+[Grundkomponenterna i GRUND-gränssnittet](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html) innehåller de grundläggande byggstenarna som behövs för att skapa ett användargränssnitt. De omfattar bland annat följande:
 
 * Knapp
 * Hyperlänk
@@ -251,9 +257,9 @@ När du uppgraderar ExtJS-kod för att använda GRA-gränssnittet ger följande 
 | `cq:TabPanel` | `granite/ui/components/foundation/container``granite/ui/components/foundation/layouts/tabs` |
 | `cq:panel` | `granite/ui/components/foundation/container` |
 
-### Granite UI Administration Components {#granite-ui-administration-components}
+### Bevilja komponenter för gränssnittsadministration {#granite-ui-administration-components}
 
-Administrationskomponenterna [för](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html) Granites användargränssnitt bygger på grundkomponenterna och ger generiska byggstenar som alla administrationsprogram kan implementera. Dessa omfattar bland annat följande:
+Administrationskomponenterna [Granite UI](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html) bygger på grundkomponenterna för att tillhandahålla generiska byggstenar som alla administrationsprogram kan implementera. Dessa omfattar bland annat följande:
 
 * Globalt navigeringsfält
 * Rail (skelett)
@@ -269,24 +275,26 @@ Implementering:
 * Fördefinierade komponenter med baskomponenterna
 * Komponenter kan anpassas
 
-## Coral UI {#coral-ui}
+## Korallgränssnitt {#coral-ui}
 
 CoralUI.pdf
 
-[Gränssnittet Get File](assets/coralui.pdf)Coral (CUI) är en implementering av Adobes visuella stil för användargränssnittet med pekfunktioner, som har utformats för att ge en konsekvent användarupplevelse för flera produkter. Coral UI innehåller allt du behöver för att använda den visuella stil som används i redigeringsmiljön.
+[Gränssnittet Get ](assets/coralui.pdf)
+FileCoral (CUI) är en implementering av Adobe Visual-stil för det beröringskänsliga användargränssnittet som har utformats för att ge en konsekvent användarupplevelse för flera produkter. Coral UI innehåller allt du behöver för att använda den visuella stil som används i redigeringsmiljön.
 
 >[!CAUTION]
 >
->Coral UI är ett användargränssnittsbibliotek som är tillgängligt för AEM-kunder för att skapa applikationer och webbgränssnitt inom gränserna för deras licensierade användning av produkten.
+>Coral UI är ett användargränssnittsbibliotek som AEM kunder kan använda för att skapa applikationer och webbgränssnitt inom gränserna för deras licensierade användning av produkten.
 >
 >Användning av Coral UI är endast tillåten:
 >
 >
 >* När den har levererats och paketerats med AEM.
 >* Används när du utökar det befintliga gränssnittet i redigeringsmiljön.
->* Adobes marknadsmaterial, annonser och presentationer.
->* Användargränssnittet i Adobe-program (teckensnittet får inte vara lätt tillgängligt för andra användningsområden).
+>* Material, annonser och presentationer för Adobe.
+>* Gränssnittet för program med Adobe-varumärke (teckensnittet får inte vara lätt tillgängligt för annan användning).
 >* Med mindre anpassningar.
+
 >
 >
 Användning av Coral UI bör undvikas vid:
@@ -294,6 +302,7 @@ Användning av Coral UI bör undvikas vid:
 >* Dokument och andra objekt som inte är relaterade till Adobe.
 >* Miljöer där innehållet skapas (där föregående objekt kan genereras av andra).
 >* Program/komponenter/webbsidor som inte är tydligt kopplade till Adobe.
+
 >
 
 
@@ -304,7 +313,7 @@ Coral UI är en samling byggstenar för utveckling av webbapplikationer.
 
 Varje modul är utformad för att vara modulär från början och utgör ett distinkt lager baserat på dess primära roll. Även om lagren har utformats för att stödja varandra kan de också användas oberoende av varandra vid behov. Detta gör det möjligt att implementera Corals användarupplevelse i alla HTML-kompatibla miljöer.
 
-Med Coral UI är det inte obligatoriskt att använda en viss utvecklingsmodell och/eller plattform. Det främsta målet för Coral är att tillhandahålla enhetlig och ren HTML5-kod, oberoende av den metod som används för att generera den här koden. Detta kan användas för återgivning på klient- eller serversidan, mallar, JSP, PHP eller till och med Adobe Flash RIA-program - bara för att nämna några få.
+Med Coral UI är det inte obligatoriskt att använda en viss utvecklingsmodell och/eller plattform. Det främsta målet för Coral är att tillhandahålla enhetlig och ren HTML5-kod, oberoende av den metod som används för att generera den här koden. Detta kan användas för återgivning på klient- eller serversidan, mallar, JSP, PHP eller till och med Adobe Flash RIA-program - för att nämna några få.
 
 ### HTML-element - markeringslagret {#html-elements-the-markup-layer}
 
@@ -312,7 +321,7 @@ HTML-elementen ger ett gemensamt utseende och en gemensam känsla för alla grun
 
 På den mest grundläggande nivån är ett HTML-element en HTML-tagg med ett dedikerat klassnamn. Mer komplexa element kan bestå av flera taggar som är kapslade i varandra (på ett visst sätt).
 
-CSS används för att ge det verkliga utseendet och känslan. För att göra det enkelt att anpassa utseendet (t.ex. för varumärken) deklareras faktiska formatvärden som variabler som expanderas av [LESS](https://lesscss.org/) -preprocessorn under körningen.
+CSS används för att ge det verkliga utseendet och känslan. För att göra det enkelt att anpassa utseendet och känslan (t.ex. för varumärket) deklareras faktiska formatvärden som variabler som expanderas av [LESS](https://lesscss.org/)-preprocessorn under körningen.
 
 Syfte:
 
@@ -363,19 +372,19 @@ Många av HTML-elementen måste ha något slags dynamiskt beteende, till exempel
 Ett plugin-program är antingen:
 
 * Utformad för att fungera på ett specifikt DOM-element. En dialogruteplugin förväntar sig till exempel att hitta `DIV class=dialog`
-* Allmän till sin natur. En layouthanterare kan till exempel skapa layout för alla listor med `DIV` - eller `LI` element
+* Allmän till sin natur. En layouthanterare kan till exempel skapa layout för alla `DIV`- eller `LI`-element
 
 Plugin-beteendet kan anpassas med parametrar, antingen genom att:
 
 * Skicka parametrarna med ett javascript-anrop
-* Använda dedikerade `data-*` attribut kopplade till HTML-koden
+* Använda dedikerade `data-*`-attribut kopplade till HTML-koden
 
 Även om utvecklaren kan välja det bästa sättet för alla plugin-program är tumregeln att använda:
 
 * `data-*` attribut för alternativ som är relaterade till HTML-layout. Du kan till exempel ange antalet kolumner
 * API-alternativ/klasser för funktioner som är relaterade till data. Skapa till exempel en lista med objekt som ska visas
 
-Samma koncept används för att implementera formulärvalidering. För ett element som du vill validera måste du ange det obligatoriska indataformuläret som ett anpassat `data-*` attribut. Det här attributet används sedan som ett alternativ för ett validerings-plugin-program.
+Samma koncept används för att implementera formulärvalidering. För ett element som du vill validera måste du ange det obligatoriska indataformuläret som ett anpassat `data-*`-attribut. Det här attributet används sedan som ett alternativ för ett validerings-plugin-program.
 
 >[!NOTE]
 >
@@ -391,7 +400,7 @@ Syfte:
 Implementering:
 
 * jQuery-plugin, kopplad till specifika DOM-element
-* Anpassa beteendet med `data-*` attribut
+* Använda `data-*`-attribut för att anpassa beteendet
 
 Ett extrakt av exempelkod (observera de alternativ som anges som data-*-attribut):
 
@@ -427,7 +436,7 @@ Detta visas som:
 
 ![chlimage_1-86](assets/chlimage_1-86.png)
 
-I `cardLayout` plugin-programmet placeras de inneslutna `UL` elementen utifrån deras respektive höjder och med hänsyn tagen till den överordnade objektets bredd.
+Plugin-programmet `cardLayout` lägger ut de omslutna `UL`-elementen baserat på deras respektive höjd och tar även hänsyn till den överordnade objektets bredd.
 
 ### HTML Elements-widgetar {#html-elements-widgets}
 
