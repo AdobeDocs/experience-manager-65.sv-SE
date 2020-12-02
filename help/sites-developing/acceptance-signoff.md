@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: d8da194f-f161-4ba7-b8cc-c2c282dc9c83
 translation-type: tm+mt
 source-git-commit: 6d216e7521432468a01a29ad2879f8708110d970
+workflow-type: tm+mt
+source-wordcount: '135'
+ht-degree: 0%
 
 ---
 
 
-# Godkännande och godkännande{#acceptance-and-sign-off}
+# Acceptera och signera{#acceptance-and-sign-off}
 
-Som nämnts ovan är [acceptanstester](/help/sites-developing/planning.md) en särskild testkategori som används för att kontrollera att
+Som vi nämnt är [Godkännandetester](/help/sites-developing/planning.md) en särskild testkategori som används för att verifiera att:
 
 * Projektet uppfyller kundens krav.
 * Kunden godkänner projektet.
