@@ -20,13 +20,13 @@ ht-degree: 0%
 
 # Omfaktorisering för SocialUtils {#socialutils-refactoring}
 
-## Paketet SocialUtils har tagits bort {#socialutils-package-deprecated}
+## Paketet SocialUtils är inaktuellt {#socialutils-package-deprecated}
 
-Paketet `com.adobe.cq.social.ugcbase.SocialUtils` togs bort i AEM 6.1.
+Paketet `com.adobe.cq.social.ugcbase.SocialUtils` har tagits bort i AEM 6.1.
 
-I följande tabell visas de metoder som ska användas i stället för `SocialUtils` metoder.
+I följande tabeller visas de metoder som ska användas i stället för `SocialUtils`-metoder.
 
-## Paket för SocialResourceUtilities  {#socialresourceutilities-package}
+## Paket för SocialResourceUtilities {#socialresourceutilities-package}
 
 | Metoder i com.adobe.cq.social.srp.utilities.api.SocialResourceUtilities |
 |---|
@@ -48,7 +48,7 @@ I följande tabell visas de metoder som ska användas i stället för `SocialUti
 |---|
 | SocialResourceProvider getSocialResourceProvider(Resurs) | ersätter SocialResourceProvider getConfiguringProvider(Resource) |
 
-## SCFUtilities Package {#scfutilities-package}
+## SCFUtilities-paket {#scfutilities-package}
 
 | Metoder i `com.adobe.cq.social.`utilities.scf.api.SCFUtilites |
 |---|
