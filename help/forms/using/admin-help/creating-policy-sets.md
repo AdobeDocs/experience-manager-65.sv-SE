@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: a4fb1a11-8fe3-4092-a036-1c079aea1250
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '1324'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 Policyuppsättningar används för att gruppera principer som har ett gemensamt affärssyfte. Policyuppsättningar kan göras tillgängliga för en delmängd av användarna i systemet.
 
-Varje principuppsättning har minst en associerad principuppsättningskoordinator. Koordinatorn för *principuppsättningen* är en administratör eller en användare som har ytterligare behörigheter. Policyuppsättningens koordinator är vanligtvis en specialist i organisationen som bäst kan skapa policyer i en viss uppsättning.
+Varje principuppsättning har minst en associerad principuppsättningskoordinator. *principuppsättningskoordinatorn* är en administratör eller en användare som har ytterligare behörigheter. Policyuppsättningens koordinator är vanligtvis en specialist i organisationen som bäst kan skapa policyer i en viss uppsättning.
 
 Koordinatorer för principuppsättningar kan utföra följande uppgifter:
 
@@ -37,9 +40,9 @@ När du tar bort en principuppsättning kan profiler som ingår i uppsättningen
 
 Den överordnade användaren eller principuppsättningskoordinatorn lägger till domäner som skapas i användarhantering till den synliga användaren och gruppen för varje principuppsättning. Den här listan är synlig för principuppsättningens koordinator och används för att ange gränser för vilka domäner som principuppsättningens koordinator kan bläddra i när användaren väljer att lägga till i profiler.
 
- När du skapar principuppsättningar tilldelar du användare rollen som dokumentutgivare. Utgivaren *av* dokumentet är den användare som skyddar dokumentet med en profil. Den här användaren ingår som standard alltid i en princip med fullständig behörighet, inklusive funktioner för återkallande och policyväxling. Administratörer kan dock ändra dokumentutgivarens åtkomsträttigheter för delade profiler. Administratören kan till exempel inaktivera dokumentutgivarens rätt att återkalla dokumentåtkomst eller ändra profilen. Om en administratör byter profil för dokumentet uppdateras utgivarens namn till namnet på ägaren till profilen som senast användes för dokumentet.
+När du skapar principuppsättningar tilldelar du användare rollen som dokumentutgivare. *dokumentutgivaren* är den användare som skyddar dokumentet med en profil. Den här användaren ingår som standard alltid i en princip med fullständig behörighet, inklusive funktioner för återkallande och policyväxling. Administratörer kan dock ändra dokumentutgivarens åtkomsträttigheter för delade profiler. Administratören kan till exempel inaktivera dokumentutgivarens rätt att återkalla dokumentåtkomst eller ändra profilen. Om en administratör byter profil för dokumentet uppdateras utgivarens namn till namnet på ägaren till profilen som senast användes för dokumentet.
 
-Vid installation av dokumentsäkerhet skapas en standardprincipuppsättning som kallas *global principuppsättning*. Den här principinställningen hanteras av administratören som installerade programvaran eller av principuppsättningens koordinator som är utsedd för den här principinställningen.
+Vid installation av dokumentsäkerhet skapas en standardprincipuppsättning som heter *Global Policy Set*. Den här principinställningen hanteras av administratören som installerade programvaran eller av principuppsättningens koordinator som är utsedd för den här principinställningen.
 
 ## Skapa en principuppsättning {#create-a-policy-set}
 
@@ -52,7 +55,7 @@ När du skapar en principuppsättning kan du när som helst använda knappen Bak
 
    >[!NOTE]
    >
-   >Du kan skapa ett namn på en principuppsättning som innehåller utökade tecken; När en jämförelse görs mellan två strängar anses emellertid tecken med accent och tecken utan accent som &quot;e&quot; och &quot;é&quot; vara desamma. När någon skapar en principuppsättning görs en jämförelse för att kontrollera om det redan finns en principuppsättning med samma namn. Jämförelsen kan inte skilja mellan namn som är desamma förutom för tecken med accent. Det antas att principuppsättningen redan har lagts till i databasen och att den nya inte läggs till.
+   >Du kan skapa ett namn på en principuppsättning som innehåller utökade tecken; När en jämförelse görs mellan två strängar anses emellertid tecken med accent och tecken utan accent som &quot;e&quot; och &quot;é&quot; vara desamma. När någon skapar en principuppsättning görs en jämförelse för att kontrollera om det redan finns en principuppsättning med samma namn. Jämförelsen kan inte skilja mellan namn som är samma förutom för tecken med accent. Det antas att principuppsättningen redan har lagts till i databasen och att den nya inte läggs till.
 
 1. (Valfritt) Om du vill ange vilka domäner som ska visas för Document Publishers när de lägger till användare i en profil klickar du på Lägg till domäner, markerar de domäner som ska vara sökbara, klickar på Lägg till och sedan på OK.
 1. Klicka på Nästa på sidan Lägg till synliga användare och grupper.
@@ -91,11 +94,11 @@ Nu kan du lägga till profiler i din profiluppsättning. (Se [Skapa och redigera
 1. Klicka på Profiler på dokumentsäkerhetssidan, klicka på fliken Principuppsättningar och klicka på den profiluppsättning som du vill redigera.
 1. Klicka på lämplig flik och redigera enligt behov:
 
-   * **** Detalj: Redigera namn och beskrivning för principuppsättningen.
-   * **** Profiler: Skapa, aktivera, redigera och ta bort profiler i principuppsättningen.
-   * **** Synliga användare och grupper: Lägg till och ta bort synliga användare och grupper som kan inkluderas i en profil.
-   * **** Koordinatorer för principuppsättning: Lägg till, ta bort och ändra behörigheter för koordinatorer.
-   * **** Dokumentutgivare: Lägg till och ta bort användare som kan publicera dokument med hjälp av profilerna i uppsättningen.
+   * **Detalj:** Redigera namn och beskrivning för principuppsättningen.
+   * **profiler:** Skapa, aktivera, redigera och ta bort profiler i principuppsättningen.
+   * **Synliga användare och grupper:** Lägg till och ta bort synliga användare och grupper som kan inkluderas i en profil.
+   * **Koordinatorer för principuppsättning:** Lägg till, ta bort och ändra behörigheter för koordinatorer.
+   * **Dokumentutgivare:** Lägg till och ta bort användare som kan publicera dokument med hjälp av profilerna i uppsättningen.
 
 1. Om du vill ta bort en synlig användare eller grupp, Policy Set Coordinator eller Document Publisher klickar du på lämplig flik, markerar kryssrutan för posten, klickar på Ta bort och sedan på OK.
 1. Om du vill lägga till synliga användare eller grupper, en principuppsättningskoordinator eller Dokumentutgivare klickar du på lämplig flik, klickar på Lägg till användare eller grupper, söker efter användaren eller gruppen som ska läggas till, markerar posten, klickar på Lägg till och klickar sedan på OK.
