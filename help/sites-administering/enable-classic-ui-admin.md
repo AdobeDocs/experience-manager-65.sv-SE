@@ -1,8 +1,8 @@
 ---
-title: Admin Consoles
-seo-title: Admin Consoles
-description: Lär dig hur du använder de Admin Consoles som finns i AEM.
-seo-description: Lär dig hur du använder de Admin Consoles som finns i AEM.
+title: Admin Console
+seo-title: Admin Console
+description: Lär dig hur du använder Admin Console som finns i AEM.
+seo-description: Lär dig hur du använder Admin Console som finns i AEM.
 uuid: 82ab5267-2f2a-4772-85d5-678d883a0294
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,11 +12,14 @@ discoiquuid: 6dbe82c2-7a25-49ab-a980-3635f0344817
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 954c1d5b06b54d59f523483ce5c1af36c2083a76
+workflow-type: tm+mt
+source-wordcount: '234'
+ht-degree: 0%
 
 ---
 
 
-# Admin Consoles{#admin-consoles}
+# Admin Console{#admin-consoles}
 
 Som standard har möjligheten att växla till det klassiska användargränssnittet via administratörskonsolerna inaktiverats. Därför visas inte längre de popup-ikoner som visades när användaren placerade musen över vissa konsolikoner, vilket ger åtkomst till det klassiska gränssnittet.
 
@@ -24,11 +27,11 @@ Alla konsoler som har en klassisk användargränssnittsversion i `/libs/cq/core/
 
 I det här exemplet återaktiverar vi det klassiska gränssnittet för webbplatskonsolen.
 
-1. Använd CRXDE Lite för att hitta noden som motsvarar administrationskonsolen som du vill aktivera Classic-gränssnittet för igen. De finns under:
+1. Använd CRXDE Lite för att hitta den nod som motsvarar administratörskonsolen som du vill aktivera Classic-gränssnittet för igen. De finns under:
 
    `/libs/cq/core/content/nav`
 
-   Exempel
+   Till exempel
 
    [ `https://localhost:4502/crx/de/index.jsp#/libs/cq/core/content/nav`](https://localhost:4502/crx/de/index.jsp#/libs/cq/core/content/nav)
 
@@ -36,10 +39,10 @@ I det här exemplet återaktiverar vi det klassiska gränssnittet för webbplats
 
    `/libs/cq/core/content/nav/sites`
 
-1. Skapa en övertäckning med alternativet **Överläggsnod** ; till exempel:
+1. Skapa en övertäckning med alternativet **Överläggsnod**; till exempel:
 
-   * **Sökväg**: `/apps/cq/core/content/nav/sites`
-   * **Överläggsplats**: `/apps/`
+   * **Sökväg**:  `/apps/cq/core/content/nav/sites`
+   * **Överläggsplats**:  `/apps/`
    * **Matcha nodtyper**: aktiv (markera kryssrutan)
 
 1. Lägg till följande boolesk egenskap till den överlagrade noden:
