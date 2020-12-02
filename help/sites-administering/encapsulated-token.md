@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## Introduktion {#introduction}
 
-Som standard använder AEM Token Authentication Handler för att autentisera varje begäran. För att autentiseringsbegäranden ska kunna hanteras måste hanteraren för tokenautentisering ha åtkomst till databasen för varje begäran. Detta inträffar eftersom cookies används för att upprätthålla autentiseringstillståndet. Logiskt sett måste tillståndet sparas i databasen för att efterföljande begäranden ska kunna valideras. Detta innebär att autentiseringsmekanismen är tillståndskänslig.
+Som standard använder AEM hanteraren för tokenautentisering för att autentisera varje begäran. För att autentiseringsbegäranden ska kunna hanteras måste hanteraren för tokenautentisering ha åtkomst till databasen för varje begäran. Detta inträffar eftersom cookies används för att upprätthålla autentiseringstillståndet. Logiskt sett måste tillståndet sparas i databasen för att efterföljande begäranden ska kunna valideras. Detta innebär att autentiseringsmekanismen är tillståndskänslig.
 
 Detta är särskilt viktigt för horisontell skalbarhet. I en konfiguration med flera instanser som den publiceringsgrupp som visas nedan kan belastningsutjämning inte uppnås på ett optimalt sätt. Med tillståndskänslig autentisering är det beständiga autentiseringstillståndet bara tillgängligt för den instans där användaren först autentiseras.
 
@@ -38,7 +38,7 @@ Om en publiceringsinstans inte blir tillgänglig förlorar alla användare som a
 
 ## Tillståndslös autentisering med den inkapslade token {#stateless-authentication-with-the-encapsulated-token}
 
-Lösningen för horisontell skalbarhet är tillståndslös autentisering med hjälp av det nya stödet för inkapslad token i AEM.
+Lösningen för horisontell skalbarhet är tillståndslös autentisering med hjälp av det nya stödet för kapslad token i AEM.
 
 Encapsulated Token är en kryptografi som gör att AEM kan skapa och validera autentiseringsinformation offline på ett säkert sätt utan att behöva komma åt databasen. På så sätt kan en autentiseringsbegäran ske på alla publiceringsinstanser utan att några snäva anslutningar behövs. Det har också en fördel med att förbättra autentiseringsprestanda eftersom databasen inte behöver nås för varje autentiseringsbegäran.
 
@@ -53,7 +53,7 @@ Du kan se hur detta fungerar i en geografiskt distribuerad distribution med Mong
 >Om en ny användare till exempel skapas på publiceringsinstans nummer ett på grund av hur den inkapslade token fungerar, kommer den att autentiseras korrekt på publiceringsinstans nummer två. Om användaren inte finns i den andra publiceringsinstansen kommer begäran fortfarande inte att lyckas.
 
 
-## Konfigurera den inkapslade token {#configuring-the-encapsulated-token}
+## Konfigurerar den inkapslade token {#configuring-the-encapsulated-token}
 
 >[!NOTE]
 >Alla autentiseringshanterare som synkroniserar användare och förlitar sig på tokenautentisering (som SAML och OAuth) fungerar bara med inkapslade tokens om:
@@ -61,7 +61,7 @@ Du kan se hur detta fungerar i en geografiskt distribuerad distribution med Mong
 >* Anteckningssessioner är aktiverade, eller
    >
    >
-* Användare skapas redan i AEM när synkroniseringen startar. Detta innebär att inkapslade token inte stöds i situationer där hanterarna **skapar** användare under synkroniseringsprocessen.
+* Användare skapas redan i AEM när synkroniseringen startar. Detta innebär att inkapslade token inte stöds i situationer där hanterarna **skapar**-användare under synkroniseringsprocessen.
 
 
 Det finns några saker du behöver tänka på när du konfigurerar den inkapslade token:
@@ -71,37 +71,38 @@ Det finns några saker du behöver tänka på när du konfigurerar den inkapslad
 
 ### Replikerar HMAC-nyckeln {#replicating-the-hmac-key}
 
-HMAC-nyckeln finns som en binär egenskap för `/etc/key` i databasen. Du kan hämta den separat genom att trycka på **vylänken** bredvid den:
+HMAC-nyckeln finns som en binär egenskap på `/etc/key` i databasen. Du kan hämta den separat genom att trycka på länken **view** bredvid den:
 
 ![chlimage_1-35](assets/chlimage_1-35a.png)
 
 För att replikera nyckeln mellan instanser måste du:
 
-1. Få tillgång till AEM-instansen, vanligtvis en författarinstans, som innehåller det nyckelmaterial som ska kopieras.
-1. Leta reda på paketet i det lokala filsystemet `com.adobe.granite.crypto.file` . Under den här sökvägen:
+1. få åtkomst till AEM, vanligtvis en författarinstans, som innehåller det nyckelmaterial som ska kopieras,
+1. Leta reda på `com.adobe.granite.crypto.file`-paketet i det lokala filsystemet. Under den här sökvägen:
 
    * &lt;author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21
-   Den `bundle.info` fil som finns i varje mapp identifierar paketnamnet.
+
+   `bundle.info`-filen i varje mapp identifierar paketnamnet.
 
 1. Navigera till datamappen. Till exempel:
 
    * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
 
-1. Kopiera HMAC- och mallfilerna.
+1. Kopiera HMAC-filer och överordnad filer.
 1. Gå sedan till den målinstans som du vill duplicera HMAC-nyckeln till och navigera till datamappen. Till exempel:
 
    * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
 
 1. Klistra in de två filer som du kopierade tidigare.
-1. [Uppdatera Crypto Bundle](/help/communities/deploy-communities.md#refresh-the-granite-crypto-bundle) om målinstansen redan körs.
+1. [Uppdatera Crypto ](/help/communities/deploy-communities.md#refresh-the-granite-crypto-bundle) Bundleom målinstansen redan körs.
 
 1. Upprepa stegen ovan för alla förekomster som du vill replikera nyckeln till.
 
-#### Aktivera den inkapslade token {#enabling-the-encapsulated-token}
+#### Aktiverar den inkapslade token {#enabling-the-encapsulated-token}
 
 När HMAC-nyckeln har replikerats kan du aktivera den inkapslade token via webbkonsolen:
 
-1. Peka webbläsaren till `https://serveraddress:port/system/console/configMgr`
+1. Peka webbläsaren på `https://serveraddress:port/system/console/configMgr`
 1. Leta efter en post med namnet **Day CRX Token Authentication Handler** och klicka på den.
-1. I följande fönster markerar du rutan **Aktivera inkapslat tokenstöd** och trycker på **Spara**.
+1. I följande fönster: markera rutan **Aktivera inkapslat tokenstöd** och tryck på **Spara**.
 
