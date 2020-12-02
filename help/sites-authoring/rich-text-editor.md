@@ -25,9 +25,9 @@ RTE (Rich Text Editor) är en grundläggande byggsten för att infoga textinneh�
 * Textbild
 * Tabell
 
-## Direktredigering {#in-place-editing}
+## Redigering på plats {#in-place-editing}
 
-Om du markerar en textbaserad komponent med ett enda tryck eller klick visas [komponentens verktygsfält](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) som alla andra komponenter.
+Om du markerar en textbaserad komponent med en enda tryckning eller klickning visas [komponentverktygsfältet](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) som med vilken komponent som helst.
 
 ![screen_shot_2018-03-21at163054](assets/screen_shot_2018-03-21at163054.png)
 
@@ -47,9 +47,9 @@ Det här verktygsfältet innehåller följande alternativ:
 
 ## Helskärmsredigering {#full-screen-editing}
 
-Om du trycker på helskärmsläget i verktygsfältet för textbaserade komponenter ![](do-not-localize/screen_shot_2018-03-21at163236.png) öppnas textredigeraren och resten av sidinnehållet döljs.
+Om du trycker på helskärmsläget i verktygsfältet ![](do-not-localize/screen_shot_2018-03-21at163236.png) för textbaserade komponenter öppnas textredigeraren och resten av sidinnehållet döljs.
 
-I helskärmsläge visas alla konfigurerade alternativ som du kan använda för att skapa. Vilka alternativ som är tillgängliga beror [på konfigurationen](/help/sites-administering/rich-text-editor.md).
+I helskärmsläge visas alla konfigurerade alternativ som du kan använda för att skapa. Tillgängligheten är alternativ [beroende på konfigurationen](/help/sites-administering/rich-text-editor.md).
 
 ![screen_shot_2018-03-21at163248](assets/screen_shot_2018-03-21at163248.png)
 
