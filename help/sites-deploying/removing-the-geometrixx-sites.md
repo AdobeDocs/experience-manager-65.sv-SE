@@ -1,6 +1,6 @@
 ---
-title: Ta bort Geometrixx-platser
-seo-title: Ta bort Geometrixx-platser
+title: Ta bort Geometrixx
+seo-title: Ta bort Geometrixx
 description: Lär dig hur du tar bort exempelinnehållet i Geometrixx.
 seo-description: Lär dig hur du tar bort exempelinnehållet i Geometrixx.
 uuid: 07d20837-3375-4e64-bb07-3e4d10452335
@@ -10,13 +10,16 @@ content-type: reference
 discoiquuid: 56761a36-ce21-46e1-856f-75a7e94acae9
 translation-type: tm+mt
 source-git-commit: 1f7a45adc73b407c402a51b061632e72d97ca306
+workflow-type: tm+mt
+source-wordcount: '144'
+ht-degree: 0%
 
 ---
 
 
-# Ta bort Geometrixx-platser{#removing-the-geometrixx-sites}
+# Tar bort Geometrixx{#removing-the-geometrixx-sites}
 
-AEM levereras med en uppsättning exempelwebbplatser för Geometrixx. Du kan ta bort det här exempelinnehållet med **Pakethanteraren**.
+AEM innehåller ett antal exempelwebbplatser för Geometrixx. Du kan ta bort det här exempelinnehållet med **Pakethanteraren**.
 
 De enskilda geometrixx-relaterade paketen är:
 
@@ -30,15 +33,15 @@ De enskilda geometrixx-relaterade paketen är:
 * `cq-geometrixx-commons-pkg-<version>.zip`
 * `cq-geometrixx-media-pkg-<version>.zip`
 
-Om du vill ta bort ett enskilt paket klickar du bara på **Avinstallera** .
+Om du vill ta bort ett enskilt paket klickar du bara på **Avinstallera** på det paketet.
 
 Det finns också ett superpaket:
 
 * `cq-geometrixx-all-pkg-5.6.12.zip`
 
-Detta paket innehåller alla ovanstående individuella paket. Om du vill ta bort allt geometrixrelaterat innehåll på en gång klickar du på **Avinstallera** i det här paketet. Superpaketet försätts i det avinstallerade läget och alla enskilda paket försvinner från pakethanterarvyn.
+Detta paket innehåller alla ovanstående individuella paket. Om du vill ta bort allt geometrixrelaterat innehåll på en gång klickar du på **Avinstallera** på det här paketet. Superpaketet försätts i det avinstallerade läget och alla enskilda paket försvinner från pakethanterarvyn.
 
-Du har nu en&quot;tom&quot; AEM-instans utan demonstrationssajter.
+Du har nu en tom AEM utan några demonstrationssajter.
 
 >[!NOTE]
 >
