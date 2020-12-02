@@ -1,8 +1,8 @@
 ---
 title: Omstrukturering av Dynamic Media-databasen i AEM 6.5
 seo-title: Omstrukturering av Dynamic Media-databasen i AEM 6.5
-description: Lär dig hur du gör de ändringar som krävs för att migrera till den nya databasstrukturen i AEM 6.5 for Dynamic Media.
-seo-description: Lär dig hur du gör de ändringar som krävs för att migrera till den nya databasstrukturen i AEM 6.5 for Dynamic Media.
+description: Lär dig hur du gör nödvändiga ändringar för att migrera till den nya databasstrukturen i AEM 6.5 för Dynamic Media.
+seo-description: Lär dig hur du gör nödvändiga ändringar för att migrera till den nya databasstrukturen i AEM 6.5 för Dynamic Media.
 uuid: e26d61a4-47b6-493a-9ba2-4c58b200ddd9
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
@@ -10,20 +10,23 @@ topic-tags: repo_restructuring
 discoiquuid: 61cd5751-0dc8-48e0-873e-3a64899489bb
 translation-type: tm+mt
 source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
+workflow-type: tm+mt
+source-wordcount: '443'
+ht-degree: 1%
 
 ---
 
 
-# Omstrukturering av Dynamic Media-databasen i AEM 6.5 {#dynamic-media-repository-restructuring-in-aem}
+# Omstrukturering av databasen med dynamiska medier i AEM 6.5 {#dynamic-media-repository-restructuring-in-aem}
 
-Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.5](/help/sites-deploying/repository-restructuring.md) bör kunder som uppgraderar till AEM 6.5 använda den här sidan för att bedöma arbetsinsatsen i samband med databasändringar som påverkar Dynamic Media Solution. Vissa ändringar kräver arbete under uppgraderingsprocessen för AEM 6.5, medan andra kan skjutas upp till en framtida uppgradering.
+Så som beskrivs på den överordnade sidan [Databasomstrukturering på AEM 6.5](/help/sites-deploying/repository-restructuring.md) bör kunder som uppgraderar till AEM 6.5 använda den här sidan för att bedöma arbetsinsatsen i samband med databasändringar som påverkar Dynamic Media Solution. Vissa ändringar kräver arbete under uppgraderingsprocessen för AEM 6.5, medan andra kan skjutas upp till en framtida uppgradering.
 
 **Före framtida uppgradering**
 
 * [Anpassade konfigurationer för adaptiv videokodning](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-5.md#custom-adaptive-video-encoding-configurations)
 * [Konfiguration av Dynamic Media (DMS7) Cloud](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-5.md#dynamic-media-dms-cloud-configuration)
-* [Konfiguration av molntjänst för Dynamic Media (DM Hybrid)](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-5.md#cloudserviceconfiguration)
-* [Dynamiska media - konfiguration av YouTube Cloud-tjänster](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-5.md#youtubecloudserviceconfiguration)
+* [Konfiguration av DM-Cloud Service (Dynamic Media)](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-5.md#cloudserviceconfiguration)
+* [Dynamic Media - konfiguration av YouTube-Cloud Service](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-5.md#youtubecloudserviceconfiguration)
 * [Diverse](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-5.md#misc)
 
 ## Före framtida uppgradering {#prior-to-upgrade}
@@ -42,16 +45,16 @@ Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.5](/
   </tr>
   <tr>
    <td><strong>Omstruktureringsvägledning</strong></td>
-   <td><p>Du kan köra följande migreringsskript för att migrera till den nya platsen:</p> <p><em>https://serveraddress:serverport/libs/settings/dam/dm/presets.migratedmcontent.json</em></p> <p>Du kan också redigera konfigurationen i AEM UI, och ändringarna sparas på den nya platsen.</p> </td>
+   <td><p>Du kan köra följande migreringsskript för att migrera till den nya platsen:</p> <p><em>https://serveraddress:serverport/libs/settings/dam/dm/presets.migratedmcontent.json</em></p> <p>Du kan också redigera konfigurationen i AEM och ändringarna sparas på den nya platsen.</p> </td>
   </tr>
   <tr>
    <td><strong>Anteckningar</strong></td>
-   <td>N/A<br /> </td>
+   <td>Ej tillämpligt<br /> </td>
   </tr>
  </tbody>
 </table>
 
-### Dynamic Media (DMS7) - molnkonfiguration {#dynamic-media-dms-cloud-configuration}
+### Dynamic Media (DMS7) Cloud-konfiguration {#dynamic-media-dms-cloud-configuration}
 
 <table>
  <tbody>
@@ -78,7 +81,7 @@ Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.5](/
  </tbody>
 </table>
 
-### Konfiguration av molntjänsten Dynamic Media (DM Hybrid) {#cloudserviceconfiguration}
+### Konfiguration av DM-Cloud Service (Dynamic Media) {#cloudserviceconfiguration}
 
 <table>
  <tbody>
@@ -96,12 +99,12 @@ Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.5](/
   </tr>
   <tr>
    <td><strong>Anteckningar</strong></td>
-   <td>N/A<br /> </td>
+   <td>Ej tillämpligt<br /> </td>
   </tr>
  </tbody>
 </table>
 
-### Dynamic Media - konfiguration av YouTube Cloud-tjänsten {#youtubecloudserviceconfiguration}
+### Dynamic Media - YouTube-Cloud Servicens konfiguration {#youtubecloudserviceconfiguration}
 
 <table>
  <tbody>
@@ -119,7 +122,7 @@ Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.5](/
   </tr>
   <tr>
    <td><strong>Anteckningar</strong></td>
-   <td>N/A<br /> </td>
+   <td>Ej tillämpligt<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -138,7 +141,7 @@ Som beskrivs på den överordnade [databasomstruktureringen på sidan AEM 6.5](/
   </tr>
   <tr>
    <td><strong>Omstruktureringsvägledning</strong></td>
-   <td><p>Kunden kan köra migreringsskriptet nedan.</p> <p><em>https://serveraddress:serverport/libs/settings/dam/dm/presets.migratedmcontent.json</em></p> <p>Du kan också redigera konfigurationen i AEM UI, och ändringarna sparas på den nya platsen.</p> </td>
+   <td><p>Kunden kan köra migreringsskriptet nedan.</p> <p><em>https://serveraddress:serverport/libs/settings/dam/dm/presets.migratedmcontent.json</em></p> <p>Du kan också redigera konfigurationen i AEM och ändringarna sparas på den nya platsen.</p> </td>
   </tr>
   <tr>
    <td><strong>Anteckningar</strong></td>
