@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 2878b145-e6c0-48d3-810c-3540de13c826
 translation-type: tm+mt
 source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+workflow-type: tm+mt
+source-wordcount: '941'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ Användare och administratörer använder dokumentsäkerhetswebbsidorna för att
 
 >[!NOTE]
 >
->Du kan också logga in på dokumentsäkerhet via Acrobat och andra klientprogram med ditt användarkonto. (Se [Konfigurera åtkomst till dokumentsäkerhet från klientprogram](using-document-security-web-pages.md#setting-up-access-to-document-security-from-client-applications).)
+>Du kan även logga in på dokumentsäkerhet via Acrobat och andra klientprogram med ditt användarinloggningskonto. (Se [Konfigurera åtkomst till dokumentsäkerhet från klientprogram](using-document-security-web-pages.md#setting-up-access-to-document-security-from-client-applications).)
 
 Om du vill öppna webbsidorna måste du ha en webbläsare och en URL och inloggningsinformation för dokumentsäkerhet. URL:en för användare skiljer sig från URL:en för administratörer.
 
@@ -70,7 +73,7 @@ Använd de här länkarna för att komma åt de olika sidorna, där du skapar oc
 
 **Gå tillbaka till föregående sida**
 
-1. Klicka på navigeringslänken högst upp på sidan för den sida som du vill gå tillbaka till.
+1. Klicka på navigeringslänken längst upp på sidan för den sida som du vill gå tillbaka till.
 
 **Uppdatera datalistan på en sida**
 
@@ -82,7 +85,7 @@ Använd de här länkarna för att komma åt de olika sidorna, där du skapar oc
 
 ## Konfigurera åtkomst till dokumentsäkerhet från klientprogram {#setting-up-access-to-document-security-from-client-applications}
 
-Klientprogram måste vara konfigurerade för att kunna ansluta till dokumentsäkerhet för att skydda dokument, öppna principskyddade dokument och ansluta till dokumentets säkerhetswebbsidor. Mer information om hur du konfigurerar anslutningen i klientprogrammet finns i *Acrobat-hjälpen* eller i lämplig *Rights ManagementExtension-hjälp* .
+Klientprogram måste vara konfigurerade för att kunna ansluta till dokumentsäkerhet för att skydda dokument, öppna principskyddade dokument och ansluta till dokumentets säkerhetswebbsidor. Mer information om hur du konfigurerar anslutningen i klientprogrammet finns i *Acrobat Hjälp* eller *Rights ManagementExtension Help*.
 
 Dokumentsäkerhet nås via SSL (Secure Sockets Layer). Du måste installera webbplatsens certifikat i certifikatarkivet så att du kan komma åt dokumentsäkerhet via klientprogrammen.
 
@@ -92,7 +95,7 @@ De här instruktionerna är specifika för Internet Explorer, men du kan install
 
 **Installera servercertifikatet med Internet Explorer**
 
-1. Öppna webbläsaren och skriv bas-URL:en för dokumentsäkerhet i rutan Adress. For example, type `https://[host]:[port]`. Dialogrutan Säkerhetsvarning visas.
+1. Öppna webbläsaren och skriv bas-URL:en för dokumentsäkerhet i rutan Adress. Skriv till exempel `https://[host]:[port]`. Dialogrutan Säkerhetsvarning visas.
 1. Klicka på Visa certifikat och sedan på Installera certifikat och välj standardinställningar för installationen. Certifikatet måste installeras i de betrodda rotcertifikatutfärdarna.
 1. Stäng webbläsarsessionen.
 1. Öppna ett annat webbläsarfönster och skriv samma URL i rutan Adress. En dialogruta för säkerhetsvarning ska inte visas. Det här testet bekräftar att certifikatet är korrekt installerat.
