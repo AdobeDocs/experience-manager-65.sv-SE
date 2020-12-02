@@ -1,6 +1,6 @@
 ---
-title: Utveckla AEM-komponenter - kodexempel
-seo-title: Utveckla AEM-komponenter - kodexempel
+title: Utveckla AEM - kodexempel
+seo-title: Utveckla AEM - kodexempel
 description: I det här avsnittet finns några exempel på hur du skapar egna komponenter för AEM.
 seo-description: I det här avsnittet finns några exempel på hur du skapar egna komponenter för AEM.
 uuid: 764b5dad-d3bb-48c6-9e93-9dc4e3f623db
@@ -12,27 +12,31 @@ discoiquuid: 402c0d6b-2c26-490a-97c5-dfd4dea778e0
 legacypath: /content/docs/en/aem/6-2/develop/components/components-develop
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '236'
+ht-degree: 2%
 
 ---
 
 
-# Utveckla AEM-komponenter - kodexempel{#developing-aem-components-code-samples}
+# Utveckla AEM - Kodexempel{#developing-aem-components-code-samples}
 
 I det här avsnittet finns några exempel på hur du skapar egna komponenter för AEM.
 
 Information om de underliggande begreppen finns i:
 
-* [AEM Components - the Basics](/help/sites-developing/components-basics.md)
-* [Utveckla AEM-komponenter](/help/sites-developing/developing-components.md)
+* [AEM - Grunderna](/help/sites-developing/components-basics.md)
+* [Utveckla AEM](/help/sites-developing/developing-components.md)
 
-Mer information om det klassiska användargränssnittet finns i [AEM-komponenter för det klassiska användargränssnittet](/help/sites-developing/developing-components-classic.md).
+Mer information om det klassiska användargränssnittet finns i [AEM komponenter för det klassiska användargränssnittet](/help/sites-developing/developing-components-classic.md).
 
 >[!NOTE]
 >
->För att hjälpa dig att analysera, testa och felsöka dina komponenter tillhandahåller AEM:
+>För att hjälpa dig att analysera, testa och felsöka dina komponenter AEM:
 >
 >* [Utvecklarläge](/help/sites-developing/developer-mode.md)
 >* ett [ramverk för automatisering av tester, baserat på biblioteket Hobbes.js](/help/sites-developing/hobbes.md)
+
 >
 
 
@@ -48,7 +52,7 @@ Koden för den här sidan finns på GitHub
 
 >[!NOTE]
 >
->Detta kodexempel är relaterat till AEM Gems-sessionen i [Anpassa dialogrutefält](https://docs.adobe.com/content/ddc/en/gems/customizing-dialog-fields-in-touch-ui.html).
+>Detta kodexempel är relaterat till AEM Gems-sessionen på [Anpassa dialogrutefält](https://docs.adobe.com/content/ddc/en/gems/customizing-dialog-fields-in-touch-ui.html).
 
 ## Relaterade resurser {#related-resources}
 
@@ -58,7 +62,7 @@ Nya åtgärder kan läggas till i komponentverktygsfält med redigeringslagret i
 
 Information, tillsammans med länkar till kodexemplet, finns under [Lägg till ny åtgärd i ett komponentverktygsfält](/help/sites-developing/customizing-page-authoring-touch.md#add-new-action-to-a-component-toolbar).
 
-### Anpassa och utöka innehållsfragment {#customizing-and-extending-content-fragments}
+### Anpassa och utöka Content Fragments {#customizing-and-extending-content-fragments}
 
 Du kanske vill utöka standardkomponenten för innehållsfragment för att lägga till funktioner.
 
