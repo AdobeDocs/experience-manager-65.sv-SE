@@ -19,17 +19,17 @@ ht-degree: 1%
 ---
 
 
-# Advanced Scoring and Badges{#advanced-scoring-and-badges}
+# Avancerade poäng och märken{#advanced-scoring-and-badges}
 
 ## Översikt {#overview}
 
-Med avancerad poängsättning kan man tilldela märken för att identifiera medlemmar som experter. Avancerad poängsättning tilldelar poäng baserat på mängden *och* kvaliteten på det innehåll som skapas av en medlem, medan grundläggande poängberäkning tilldelar poäng helt enkelt baserat på mängden innehåll som skapas.
+Med avancerad poängsättning kan man tilldela märken för att identifiera medlemmar som experter. Med avancerad poängsättning tilldelas poäng baserat på kvantiteten *och* kvalitet för innehåll som skapas av en medlem, medan grundläggande poängsättning tilldelar poäng helt enkelt baserat på mängden innehåll som skapas.
 
 Denna skillnad beror på poängsättningsmotorn som används för att beräkna poängen. Den grundläggande poängsättningsmotorn använder enkel matematik. Den avancerade bedömningsmotorn är en adaptiv algoritm som belönar aktiva medlemmar som bidrar med värdefullt och relevant innehåll, som dras av genom ämnesens naturliga språkbearbetning.
 
 Förutom innehållets relevans tar bedömningsalgoritmerna hänsyn till medlemsaktiviteter, som röstning och procent av svaren. Även om grundläggande poängsättning innehåller dem kvantitativt, används de algoritmiskt i avancerad poängsättning.
 
-Den avancerade bedömningsmotorn kräver därför tillräckligt med data för att göra analysen meningsfull. Tröskelvärdet för att bli expert omprövas ständigt när algoritmen kontinuerligt anpassas till volymen och kvaliteten på det innehåll som skapas. Det finns också ett koncept om *minskning* av en medlems äldre tjänster. Om en expertmedlem slutar delta i det ämne där han/hon fick expertstatus, kan han/hon vid någon förutbestämd tidpunkt (se [poängsättningsmotorkonfigurationen](#configurable-scoring-engine)) förlora sin status som expert.
+Den avancerade bedömningsmotorn kräver därför tillräckligt med data för att göra analysen meningsfull. Tröskelvärdet för att bli expert omprövas ständigt när algoritmen kontinuerligt anpassas till volymen och kvaliteten på det innehåll som skapas. Det finns också ett koncept för *minskning* av en medlems äldre inlägg. Om en expertmedlem slutar delta i det ämne där han/hon fick expertstatus, vid något fördefinierat tillfälle (se [konfigurationen av bedömningsmotorn](#configurable-scoring-engine)) kan han/hon förlora sin status som expert.
 
 Att ställa in avancerad poängsättning är i stort sett detsamma som grundläggande poängsättning:
 
@@ -37,25 +37,25 @@ Att ställa in avancerad poängsättning är i stort sett detsamma som grundläg
 
    * Grundläggande och avancerade regler för poängsättning och märkning kan tillämpas på samma innehåll.
 
-* [Att aktivera emblem för komponenter](/help/communities/implementing-scoring.md#enable-badges-for-component) är generiskt.
+* [Aktivering av emblem för ](/help/communities/implementing-scoring.md#enable-badges-for-component) komponenter är allmän.
 
 Skillnaderna i hur du ställer in poängsättnings- och badging-regler är:
 
 * Konfigurerbar avancerad bedömningsmotor
 * Avancerade poängregler:
 
-   * `scoringType` ange till `advanced`
+   * `scoringType` ange till  `advanced`
    * Kräver `stopwords`
 
 * Avancerade märkningsregler:
 
-   * `badgingType` ange till `advanced`
-   * `badgingLevels` ange till **antalet expertnivåer att tilldela**
-   * Kräver `badgingPaths` en array med emblem i stället för med mappningspunkter för trösklar till badges.
+   * `badgingType` ange till  `advanced`
+   * `badgingLevels` ange till  **antalet expertnivåer att tilldela**
+   * Kräver `badgingPaths`-matris med emblem i stället för att mappa punkter till badges för arrayen threshold.
 
 >[!NOTE]
 >
->Om du vill använda avancerade funktioner för bedömning och märkning installerar du [expertpaketet](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/cq-social-expert-identification-pkg).
+>Installera [Expertidentifieringspaketet](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/cq-social-expert-identification-pkg) om du vill använda de avancerade funktionerna för poängsättning och märkning.
 
 ## Konfigurerbar bedömningsmotor {#configurable-scoring-engine}
 
@@ -65,8 +65,8 @@ Den avancerade bedömningsmotorn tillhandahåller en OSGi-konfiguration med para
 
 * **Poängvikter**
 
-   För ett ämne anger du det verb som ska ha högst prioritet när du beräknar poängen. Ett eller flera ämnen kan anges, men begränsas till **ett verb per ämne**. Se [Ämnen och Verb](/help/communities/implementing-scoring.md#topics-and-verbs).
-Angicks som `topic,verb` med kommatecknet escape. Till exempel:
+   För ett ämne anger du det verb som ska ha högst prioritet när du beräknar poängen. Ett eller flera ämnen kan anges, men begränsas till **ett verb per ämne**. Se [Ämnen och verb](/help/communities/implementing-scoring.md#topics-and-verbs).
+Anges som `topic,verb` med kommatecken escape. Till exempel:
    `/social/forum/hbs/social/forum\,ADD`
 Standardvärdet är ADD-verbet för QnA- och forumkomponenter.
 
@@ -82,11 +82,12 @@ Standardvärdet är ADD-verbet för QnA- och forumkomponenter.
 
    Standardvärdet är 216000 timmar (~24 år).
 
-* **Resultat av tillväxthastighet** Detta anger poängen mellan 0 och poängintervallet, efter vilket tillväxten saktar ned för att begränsa antalet experter.
+* **Resultattillväxt**
+frekvensDetta anger poängen mellan 0 och poängintervallet, efter vilket tillväxten saktar ned för att begränsa antalet experter.
 
    Standardvärdet är 50.
 
-## Avancerade poängregler {#advanced-scoring-rules}
+## Avancerade bedömningsregler {#advanced-scoring-rules}
 
 Vid grundläggande poängsättning är den kvantitet som behövs för att få ett märke känd.
 
@@ -96,11 +97,11 @@ Om en medlem har fått ett expertmärke för ett ämne som inte längre är akti
 
 ### scoringType {#scoringtype}
 
-En resultatregel är en uppsättning underregler, som alla deklarerar `scoringType`.
+En resultatregel är en uppsättning poängsättningsunderregler, som alla deklarerar `scoringType`.
 
-Om du vill anropa den avancerade bedömningsmotorn `scoringType`bör du ange den till `advanced`.
+Om du vill anropa den avancerade bedömningsmotorn ska `scoringType`anges till `advanced`.
 
-Se [Underregler](/help/communities/implementing-scoring.md#scoring-sub-rules)för poängsättning.
+Se [Klassificera underregler](/help/communities/implementing-scoring.md#scoring-sub-rules).
 
 ![avancerad poängsättning](assets/advanced-scoring-type.png)
 
@@ -118,7 +119,7 @@ Om stoppordsfilen saknas genereras ett fel i den avancerade bedömningsmotorn.
 
 ## Avancerade märkningsregler {#advanced-badging-rules}
 
-De avancerade egenskaperna för märkningsregeln skiljer sig från de [grundläggande märkningsregelegenskaperna](/help/communities/implementing-scoring.md#badging-rules).
+Egenskaperna för den avancerade badging-regeln skiljer sig från de [grundläggande badging-regelegenskaperna](/help/communities/implementing-scoring.md#badging-rules).
 
 I stället för att associera punkter med en badge-bild är det bara nödvändigt att identifiera det antal experter som tillåts och den badge-bild som ska tilldelas.
 
@@ -139,24 +140,24 @@ I stället för att associera punkter med en badge-bild är det bara nödvändig
   <tr>
    <td>badgingLevels</td>
    <td>Lång</td>
-   <td><em>(Valfritt)</em> Anger vilka kunskapsnivåer som ska tilldelas. Om det till exempel ska finnas ett <code>expert </code>och ett <code>almost expert</code> (två emblem), ska värdet anges till 2. badgingLevel ska motsvara antalet expertrelaterade badge-bilder som anges för egenskapen badgingPath. Standardvärdet är 1.</td>
+   <td><em>(Valfritt)</em> Anger vilka kunskapsnivåer som ska tilldelas. Om det till exempel ska finnas en <code>expert </code>och en <code>almost expert</code> (två emblem), ska värdet anges till 2. badgingLevel ska motsvara antalet expertrelaterade badge-bilder som anges för egenskapen badgingPath. Standardvärdet är 1.</td>
   </tr>
   <tr>
    <td>badgingType</td>
    <td>Sträng</td>
-   <td><em>(Obligatoriskt)</em> Identifierar poängsättningsmotorn som antingen "grundläggande" eller "avancerad". Ange som "avancerat", annars är standardvärdet "grundläggande".</td>
+   <td><em>(Obligatoriskt)</em> Identifierar bedömningsmotorn som antingen "grundläggande" eller "avancerad". Ange som "avancerat", annars är standardvärdet "grundläggande".</td>
   </tr>
   <tr>
    <td>scoringRules</td>
    <td>Sträng[]</td>
-   <td><em>(Valfritt)</em> En sträng med flera värden som begränsar badging-regeln till de poäng som identifieras av de poängsättningsregler som visas.<br /> Exempelpost:<br /> <code>/libs/settings/community/scoring/rules/adv-comments-scoring</code><br /> Standard är ingen begränsning.</td>
+   <td><em>(Valfritt)</em> En sträng med flera värden som begränsar badging-regeln till bedömningshändelser som identifieras av de poängsättningsregler som anges.<br /> Exempelpost: <br /> <code>/libs/settings/community/scoring/rules/adv-comments-scoring</code><br /> Standard är ingen begränsning.</td>
   </tr>
  </tbody>
 </table>
 
-## Inkluderade regler och emblem {#included-rules-and-badge}
+## Inkluderade regler och märke {#included-rules-and-badge}
 
-### Inkluderat märke {#included-badge}
+### Inkluderad bricka {#included-badge}
 
 I den här betaversionen ingår ett belöningsbaserat expertmärke:
 
@@ -179,7 +180,7 @@ Se den grundläggande informationen för:
 
 ### Inkluderade poängsättningsregler och underregler {#included-scoring-rules-and-sub-rules}
 
-I betaversionen finns två avancerade poängregler för [forumfunktionen](/help/communities/functions.md#forum-function) (en för forumfunktionen och kommentarkomponenterna i forumfunktionen):
+I betaversionen finns två avancerade poängregler för funktionen [forum](/help/communities/functions.md#forum-function) (en för forumfunktionen och kommentarkomponenterna i forumfunktionen):
 
 1. `/libs/settings/community/scoring/rules/adv-comments-scoring`
 
@@ -197,9 +198,9 @@ I betaversionen finns två avancerade poängregler för [forumfunktionen](/help/
 
 **Anteckningar:**
 
-* Både `rules` och `sub-rules` noder är av typen `cq:Page`.
+* Både `rules`- och `sub-rules`-noder är av typen `cq:Page`.
 
-* `subRules` är ett attribut av typen String[] i regelns `jcr:content` nod.
+* `subRules` är ett attribut av typen [] String på regelns  `jcr:content` nod.
 
 * `sub-rules` kan delas mellan olika poängregler.
 
@@ -209,7 +210,7 @@ I betaversionen finns två avancerade poängregler för [forumfunktionen](/help/
 
 ### Inkluderade märkningsregler {#included-badging-rules}
 
-I releasen finns två avancerade regler för märkning som motsvarar de [avancerade forumen och kommentarsreglerna](#included-scoring-rules-and-sub-rules).
+I releasen finns två avancerade regler för märkning som motsvarar [de avancerade forumen och kommentarsbetygsreglerna](#included-scoring-rules-and-sub-rules).
 
 * `/libs/settings/community/badging/rules/adv-comments-badging`
 * `/libs/settings/community/badging/rules/adv-forums-badging`
