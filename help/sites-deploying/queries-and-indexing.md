@@ -19,11 +19,11 @@ ht-degree: 0%
 ---
 
 
-# Fråga och indexering{#oak-queries-and-indexing}
+# Fråga och indexera{#oak-queries-and-indexing}
 
 >[!NOTE]
 >
->Den här artikeln handlar om att konfigurera index i AEM 6. De bästa sätten att optimera fråga- och indexeringsprestanda finns i [Bästa metoder för frågor och indexering](/help/sites-deploying/best-practices-for-queries-and-indexing.md).
+>Den här artikeln handlar om att konfigurera index i AEM 6. De bästa sätten att optimera fråga- och indexeringsprestanda finns i [God praxis för frågor och indexering](/help/sites-deploying/best-practices-for-queries-and-indexing.md).
 
 ## Introduktion {#introduction}
 
@@ -52,7 +52,7 @@ En indexerare är **egenskapsindexet**, som indexdefinitionen lagras i själva d
 
 Implementeringar för **Apache Lucene** och **Solr** är också tillgängliga som standard, som båda stöder fulltextindexering.
 
-Om det inte finns någon annan indexerare används **Traversal Index** . Det innebär att innehållet inte är indexerat och att innehållsnoderna gås igenom för att hitta matchningar med frågan.
+**Traversal Index** används om ingen annan indexerare är tillgänglig. Det innebär att innehållet inte är indexerat och att innehållsnoderna gås igenom för att hitta matchningar med frågan.
 
 Om det finns flera tillgängliga indexerare för en fråga beräknar varje tillgänglig indexerare kostnaden för att köra frågan. Därefter väljer Oak indexeraren med den lägsta uppskattade kostnaden.
 
@@ -68,11 +68,11 @@ Därefter används varje index för att beräkna kostnaden för frågan. När de
 
 >[!NOTE]
 >
->För stora databaser är det tidskrävande att skapa ett index. Detta gäller både när ett index skapas första gången och när ett index indexeras om (när definitionen ändrats). Se även [Felsöka ekindex](/help/sites-deploying/troubleshooting-oak-indexes.md) och [förhindra långsam omindexering](/help/sites-deploying/troubleshooting-oak-indexes.md#preventing-slow-re-indexing).
+>För stora databaser är det tidskrävande att skapa ett index. Detta gäller både när ett index skapas första gången och när ett index indexeras om (när definitionen ändrats). Se även [Felsökning av ekningsindex](/help/sites-deploying/troubleshooting-oak-indexes.md) och [Förhindra långsam omindexering](/help/sites-deploying/troubleshooting-oak-indexes.md#preventing-slow-re-indexing).
 
 Om omindexering behövs i mycket stora databaser, särskilt när du använder MongoDB och fulltextindex, bör du överväga att extrahera text och använda eko-run för att skapa det ursprungliga indexet och indexera om.
 
-Index konfigureras som noder i databasen under noden **oak:index** .
+Index konfigureras som noder i databasen under noden **oak:index**.
 
 Indexnodens typ måste vara **oak:QueryIndexDefinition.** Det finns flera konfigurationsalternativ tillgängliga för varje indexerare som nodegenskaper. Mer information finns i konfigurationsinformationen för varje indexerartyp nedan.
 
@@ -81,30 +81,31 @@ Indexnodens typ måste vara **oak:QueryIndexDefinition.** Det finns flera konfig
 Egenskapsindexet är vanligtvis användbart för frågor som har egenskapsbegränsningar men som inte är fulltext. Den kan konfigureras genom att följa proceduren nedan:
 
 1. Öppna CRXDE genom att gå till `http://localhost:4502/crx/de/index.jsp`
-1. Skapa en ny nod under **ekning:index**
+1. Skapa en ny nod under **oak:index**
 1. Namnge noden **PropertyIndex** och ange nodtypen till **oak:QueryIndexDefinition**
 1. Ange följande egenskaper för den nya noden:
 
-   * **typ:**  `property` (av typen String)
-   * **propertyNames:**  `jcr:uuid` (av typen Namn)
-   I det här exemplet indexeras `jcr:uuid` egenskapen, vars jobb är att visa den universellt unika identifieraren (UUID) för noden som den är kopplad till.
+   * **type:**  `property` (of type String)
+   * **propertyNames:**  `jcr:uuid` (av typen Name)
+
+   I det här exemplet indexeras egenskapen `jcr:uuid`, vars jobb är att visa den universellt unika identifieraren (UUID) för den nod som den är kopplad till.
 
 1. Spara ändringarna.
 
 Egenskapsindexet har följande konfigurationsalternativ:
 
-* Egenskapen **type** anger typen av index, och i det här fallet måste den anges till **egenskap**
+* Egenskapen **type** anger indextypen och i det här fallet måste den anges till **property**
 
-* Egenskapen **propertyNames** anger listan med egenskaper som ska lagras i indexet. Om det saknas används nodnamnet som referensvärde för egenskapsnamnet. I det här exemplet läggs egenskapen **jcr:uid** , vars jobb är att visa den unika identifieraren (UUID) för dess nod, till i indexet.
+* Egenskapen **propertyNames** anger listan med egenskaper som ska lagras i indexet. Om det saknas används nodnamnet som referensvärde för egenskapsnamnet. I det här exemplet läggs egenskapen **jcr:uid**, vars jobb är att visa den unika identifieraren (UUID) för dess nod, till i indexet.
 
-* Den **unika** flaggan som, om den anges till **true** , lägger till en unik begränsning i egenskapsindexet.
+* Flaggan **unique** som, om den är inställd på **true**, lägger till en unik begränsning i egenskapsindexet.
 
-* Med egenskapen **declareNodeTypes** kan du ange en viss nodtyp som indexet bara gäller för.
-* The **reindex** flag that if set to **true**, will trigger a full content reindex.
+* Med egenskapen **DeclaringNodeTypes** kan du ange en viss nodtyp som indexet bara gäller för.
+* Flaggan **reindex** som, om den är inställd på **true**, utlöser ett fullständigt innehållsomindex.
 
-### Orderat index {#the-ordered-index}
+### Det sorterade indexet {#the-ordered-index}
 
-Det sorterade indexet är ett tillägg till egenskapsindexet. Den har dock tagits bort. Index av den här typen måste ersättas med [Lucene-egenskapsindexet](#the-lucene-property-index).
+Det sorterade indexet är ett tillägg till egenskapsindexet. Den har dock tagits bort. Index av den här typen måste ersättas med [Lucene-egenskapsindex](#the-lucene-property-index).
 
 ### Fullständigt Lucene-textindex {#the-lucene-full-text-index}
 
@@ -118,26 +119,26 @@ Eftersom indexet uppdateras via en asynkron bakgrundstråd kommer vissa textsök
 
 Du kan konfigurera ett fulltextindex för Lucene enligt följande procedur:
 
-1. Öppna CRXDE och skapa en ny nod under **ek:index**.
+1. Öppna CRXDE och skapa en ny nod under **oak:index**.
 1. Namnge noden **LuceneIndex** och ange nodtypen **oak:QueryIndexDefinition**
 1. Lägg till följande egenskaper i noden:
 
-   * **typ:**  `lucene` (av typen String)
-   * **asynk:**  `async` (av typen String)
+   * **type:**  `lucene` (of type String)
+   * **async:**  `async` (av typen String)
 
 1. Spara ändringarna.
 
 Lucene-indexet har följande konfigurationsalternativ:
 
-* Den **type** -egenskap som anger indextypen måste anges till **lucene**
-* Den **asynkrona** egenskapen som måste anges som **asynkron**. Detta skickar indexuppdateringsprocessen till en bakgrundstråd.
-* Egenskapen **includePropertyTypes** , som definierar vilken delmängd av egenskapstyper som ska inkluderas i indexet.
-* Egenskapen **excludePropertyNames** som definierar en lista med egenskapsnamn - egenskaper som ska uteslutas från indexet.
+* Egenskapen **type** som anger typen av index måste anges till **lucene**
+* Egenskapen **async** som måste anges till **async**. Detta skickar indexuppdateringsprocessen till en bakgrundstråd.
+* Egenskapen **includePropertyTypes** som definierar vilken delmängd av egenskapstyper som ska inkluderas i indexet.
+* Egenskapen **excludePropertyNames** som definierar en lista med egenskapsnamn - egenskaper som ska exkluderas från indexet.
 * Flaggan **reindex** som, när den anges till **true**, aktiverar ett fullständigt innehållsindexvärde.
 
 ### Egenskapsindexet Lucene {#the-lucene-property-index}
 
-Sedan **Oak 1.0.8** kan Lucene användas för att skapa index som innehåller egenskapsbegränsningar som inte är fulltext.
+Eftersom **Oak 1.0.8** kan Lucene användas för att skapa index som innehåller egenskapsbegränsningar som inte är fulltext.
 
 För att uppnå ett Lucene-egenskapsindex måste egenskapen **fulltextEnabled** alltid anges till false.
 
@@ -180,7 +181,7 @@ När noden har skapats lägger du till följande egenskaper:
 
 >[!NOTE]
 >
->Mer information om Lucene-egenskapsindexet finns på dokumentationssidan [för](https://jackrabbit.apache.org/oak/docs/query/lucene.html)Apache Jackrabbit Oak Lucene.
+>Mer specifik information om Lucene-egenskapsindexet finns på [dokumentationssidan för Apache Jackrabbit Oak Lucene](https://jackrabbit.apache.org/oak/docs/query/lucene.html).
 
 ### Lucene Analyzers {#lucene-analyzers}
 
@@ -188,9 +189,9 @@ Sedan version 1.2.0 stöder Oak Lucene-analysatorer.
 
 Analysatorer används både när ett dokument indexeras och vid frågetillfället. En analyserare undersöker texten i fälten och genererar en tokenström. Lucene-analysatorerna består av en serie tokeniserings- och filterklasser.
 
-Analysatorerna kan konfigureras via `analyzers` noden (av typen `nt:unstructured`) inuti `oak:index` definitionen.
+Analysatorerna kan konfigureras via noden `analyzers` (av typen `nt:unstructured`) i definitionen `oak:index`.
 
-Standardanalysatorn för ett index är konfigurerad i noden analysatorns underordnade `default` nod.
+Standardanalysatorn för ett index är konfigurerad i det underordnade `default`-objektet för analysatornoden.
 
 ![chlimage_1-149](assets/chlimage_1-149.png)
 
@@ -202,30 +203,32 @@ Standardanalysatorn för ett index är konfigurerad i noden analysatorns underor
 
 Om du vill använda någon av de färdiga analysverktygen kan du konfigurera den enligt följande procedur:
 
-1. Leta reda på det index som du vill använda analyseraren med under `oak:index` -noden.
+1. Leta reda på det index som du vill använda analyseraren med under noden `oak:index`.
 
-1. Skapa en underordnad nod under indexet med namnet `default` type `nt:unstructured`.
+1. Under indexvärdet skapar du en underordnad nod med namnet `default` av typen `nt:unstructured`.
 
 1. Lägg till en egenskap i standardnoden med följande egenskaper:
 
    * **Namn:** `class`
    * **Typ:** `String`
    * **Värde:** `org.apache.lucene.analysis.standard.StandardAnalyzer`
+
    Värdet är namnet på den analyserarklass som du vill använda.
 
-   Du kan också ange att analyseraren ska användas med en specifik lucene-version genom att använda den valfria `luceneMatchVersion` strängegenskapen. Ett giltigt syntaxvärde för användning med Lucene 4.7 är:
+   Du kan också ange att analyseraren ska användas med en specifik lucene-version genom att använda den valfria strängegenskapen `luceneMatchVersion`. Ett giltigt syntaxvärde för användning med Lucene 4.7 är:
 
    * **Namn:** `luceneMatchVersion`
    * **Typ:** `String`
    * **Värde:** `LUCENE_47`
-   Om `luceneMatchVersion` inte anges kommer Oak att använda den version av Lucene som levereras med.
 
-1. Om du vill lägga till en stoppordsfil i analyskonfigurationerna kan du skapa en ny nod under den med följande egenskaper: `default`
+   Om `luceneMatchVersion` inte anges kommer Oak att använda den version av Lucene som det levereras med.
+
+1. Om du vill lägga till en stoppordsfil i analyskonfigurationerna kan du skapa en ny nod under `default` med följande egenskaper:
 
    * **Namn:** `stopwords`
    * **Typ:** `nt:file`
 
-#### Skapa analytiker via Composition {#creating-analyzers-via-composition}
+#### Skapa analytiker via komposition {#creating-analyzers-via-composition}
 
 Analysatorer kan också sättas samman baserat på `Tokenizers`, `TokenFilters` och `CharFilters`. Du kan göra detta genom att ange en analysator och skapa underordnade noder till dess tillvalstokensorer och filter som ska användas i listordning. Se även [https://wiki.apache.org/solr/AnalyzersTokenizersTokenFilters#Specifying_an_Analyzer_in_the_schema](https://wiki.apache.org/solr/AnalyzersTokenizersTokenFilters#Specifying_an_Analyzer_in_the_schema)
 
@@ -269,15 +272,15 @@ Se den här nodstrukturen som ett exempel:
 
 Namnet på filtren, charFilters och tokenizers formas genom att fabrikssuffixen tas bort. Således:
 
-* `org.apache.lucene.analysis.standard.StandardTokenizerFactory` blir `standard`
+* `org.apache.lucene.analysis.standard.StandardTokenizerFactory` blir  `standard`
 
-* `org.apache.lucene.analysis.charfilter.MappingCharFilterFactory` blir `Mapping`
+* `org.apache.lucene.analysis.charfilter.MappingCharFilterFactory` blir  `Mapping`
 
-* `org.apache.lucene.analysis.core.StopFilterFactory` blir `Stop`
+* `org.apache.lucene.analysis.core.StopFilterFactory` blir  `Stop`
 
 Alla konfigurationsparametrar som krävs för fabriken anges som egenskaper för den aktuella koden.
 
-För exempelvis inläsning av stoppord där innehåll från externa filer måste läsas in, kan innehållet anges genom att en underordnad nod av `nt:file` typen för filen skapas.
+För exempelvis inläsning av stoppord där innehåll från externa filer måste läsas in, kan innehållet anges genom att en underordnad nod av typen `nt:file` skapas för filen i fråga.
 
 ### Solr-index {#the-solr-index}
 
@@ -285,7 +288,7 @@ Syftet med Solr-indexet är i huvudsak fulltextsökning, men det kan också anv�
 
 Integrationen i AEM sker på databasnivå så att Solr är ett av de möjliga index som kan användas i Oak, den nya databasimplementeringen som levererades med AEM.
 
-Den kan konfigureras för att fungera som en inbäddad server med AEM-instansen eller som en fjärrserver.
+Den kan konfigureras för att fungera som en inbäddad server med AEM eller som en fjärrserver.
 
 ### Konfigurera AEM med en inbäddad Solr-server {#configuring-aem-with-an-embedded-solr-server}
 
@@ -293,43 +296,45 @@ Den kan konfigureras för att fungera som en inbäddad server med AEM-instansen 
 >
 >Använd inte en inbäddad Solr-server i en produktionsmiljö. Det ska endast användas i utvecklingsmiljö.
 
-AEM kan användas med en inbäddad Solr-server som kan konfigureras via webbkonsolen. I det här fallet körs Solr-servern i samma JVM som den AEM-instans som den är inbäddad i.
+AEM kan användas med en inbäddad Solr-server som kan konfigureras via webbkonsolen. I det här fallet körs Solr-servern i samma JVM som den AEM instansen den är inbäddad i.
 
 Du kan konfigurera den inbäddade Solr-servern genom att:
 
 1. Gå till webbkonsolen på `https://serveraddress:4502/system/console/configMgr`
-1. Sök efter &quot;**Oak Solr server provider**&quot;.
+1. Sök efter **Oak Solr-serverprovider**.
 1. Tryck på redigeringsknappen och i följande fönster anger du servertypen till **Inbäddad solr** i listrutan.
 
-1. Redigera sedan &quot;**Oak Solr embedded server configuration**&quot; och skapa en konfiguration. Mer information om konfigurationsalternativen finns på [Apache Solr-webbplatsen](https://lucene.apache.org/solr/documentation.html).
+1. Redigera sedan **Sök efter inbäddad serverkonfiguration** och skapa en konfiguration. Mer information om konfigurationsalternativen finns på [webbplatsen Apache Solr](https://lucene.apache.org/solr/documentation.html).
 
    >[!NOTE]
    >
-   >Konfigurationen av Solr-arbetskatalogen (solr.home.path) söker efter en mapp med samma namn i AEM-installationsmappen.
+   >Konfigurationen av Solr-arbetskatalogen (solr.home.path) söker efter en mapp med samma namn i AEM installationsmapp.
 
 1. Öppna CRXDE och logga in som administratör.
-1. Lägg till en nod med namnet **solnodex** av typen **oak:QueryIndexDefinition** under **oak:index** med följande egenskaper:
+1. Lägg till en nod med namnet **solrlndex** av typen **oak:QueryIndexDefinition** under **oak:index** med följande egenskaper:
 
-   * **typ:** `solr`(av typen String)
-   * **asynk:** `async`(av typen String)
-   * **omindexera:** `true`(av typen Boolean)
+   * **type:** `solr`(of type String)
+   * **async:** `async`(av typen String)
+   * **reindex:** `true`(av typen Boolean)
 
 1. Spara ändringarna.
 
-### Konfigurera AEM med en enda fjärrserver för Solr {#configuring-aem-with-a-single-remote-solr-server}
+### Konfigurera AEM med en enda fjärr-Solr-server {#configuring-aem-with-a-single-remote-solr-server}
 
-AEM kan även konfigureras för att fungera med en Solr-fjärrserverinstans:
+AEM kan också konfigureras för att fungera med en fjärrinstans av en Solr-server:
 
-1. Hämta och extrahera den senaste versionen av Solr. Mer information om hur du gör detta finns i dokumentationen [för installation av](https://cwiki.apache.org/confluence/display/solr/Installing+Solr)Apache Solr.
+1. Hämta och extrahera den senaste versionen av Solr. Mer information om hur du gör detta finns i [dokumentationen för installation av Apache Solr](https://cwiki.apache.org/confluence/display/solr/Installing+Solr).
 1. Skapa nu två Solr-kort. Du kan göra detta genom att skapa mappar för varje delning i mappen där Solr har uppgraderats:
 
    * Skapa mappen för det första delfönstret:
+
    `<solrunpackdirectory>\aemsolr1\node1`
 
    * Skapa mappen för den andra delningen:
+
    `<solrunpackdirectory>\aemsolr2\node2`
 
-1. Leta reda på exempelinstansen i Solr-paketet. Den finns vanligtvis i en mapp som heter &quot; `example`&quot; i paketets rot.
+1. Leta reda på exempelinstansen i Solr-paketet. Den finns vanligtvis i en mapp med namnet &quot; `example`&quot; i paketets rot.
 1. Kopiera följande mappar från exempelinstansen till de två delade mapparna ( `aemsolr1\node1` och `aemsolr2\node2`):
 
    * `contexts`
@@ -341,12 +346,12 @@ AEM kan även konfigureras för att fungera med en Solr-fjärrserverinstans:
    * `webapps`
    * `start.jar`
 
-1. Skapa en ny mapp med namnet &quot; `cfg`&quot; i var och en av de två delade mapparna.
-1. Placera dina Solr- och Zookeeper-konfigurationsfiler i de nya `cfg` mapparna.
+1. Skapa en ny mapp med namnet `cfg` i var och en av de två delade mapparna.
+1. Placera Solr- och Zookeeper-konfigurationsfilerna i de nya `cfg`-mapparna.
 
    >[!NOTE]
    >
-   >Mer information om Solr- och ZooKeeper-konfigurationen finns i dokumentationen [för](https://wiki.apache.org/solr/ConfiguringSolr) Solr-konfiguration och i [guiden](https://zookeeper.apache.org/doc/r3.1.2/zookeeperStarted.html)ZooKeeper Getting Started.
+   >Mer information om Solr- och ZooKeeper-konfigurationen finns i [Solr Configuration documentation](https://wiki.apache.org/solr/ConfiguringSolr) och [ZooKeeper Getting Started Guide](https://zookeeper.apache.org/doc/r3.1.2/zookeeperStarted.html).
 
 1. Starta den första delningen med stöd för ZooKeeper genom att gå till `aemsolr1\node1` och köra följande kommando:
 
@@ -362,24 +367,24 @@ AEM kan även konfigureras för att fungera med en Solr-fjärrserverinstans:
 
 1. När båda delarna har startats testar du att allt är igång genom att ansluta till Solr-gränssnittet på `http://localhost:8983/solr/#/`
 1. Starta AEM och gå till webbkonsolen på `http://localhost:4502/system/console/configMgr`
-1. Ange följande konfiguration under **fjärrserverkonfigurationen** för Oak Solr:
+1. Ange följande konfiguration under **Konfiguration av fjärrserver för Oak Solr**:
 
    * HTTP-URL för Solr: `http://localhost:8983/solr/`
 
-1. Välj **Fjärrserver** i listrutan under **Oak Solr** -serverprovider.
+1. Välj **Fjärrsolr** i listrutan under **Oak Solr** serverprovider.
 
 1. Gå till CRXDE och logga in som administratör.
 1. Skapa en ny nod med namnet **solrIndex** under **oak:index** och ange följande egenskaper:
 
-   * **typ:** solr (av typen String)
-   * **asynk:** async (av typen String)
-   * **omindexera:** true (av typen Boolean)
+   * **text:** solr (av typen String)
+   * **async:** async (av typen String)
+   * **reindex:** true (av typen Boolean)
 
 1. Spara ändringarna.
 
 #### Rekommenderad konfiguration för Solr {#recommended-configuration-for-solr}
 
-Nedan visas ett exempel på en baskonfiguration som kan användas med alla tre Solr-distributioner som beskrivs i den här artikeln. Den passar de dedikerade egenskapsindexen som redan finns i AEM och bör inte användas med andra program.
+Nedan visas ett exempel på en baskonfiguration som kan användas med alla tre Solr-distributioner som beskrivs i den här artikeln. Den rymmer de dedikerade egenskapsindex som redan finns i AEM och bör inte användas med andra program.
 
 För att kunna använda det på rätt sätt måste du placera innehållet i arkivet direkt i Solr Home Directory. Vid distributioner med flera noder bör den placeras direkt under rotmappen för varje nod.
 
@@ -387,22 +392,22 @@ Rekommenderade Solr-konfigurationsfiler
 
 [Hämta fil](assets/recommended-conf.zip)
 
-### AEM Indexing Tools {#aem-indexing-tools}
+### AEM för indexering {#aem-indexing-tools}
 
-AEM 6.1 integrerar även två indexeringsverktyg som finns i AEM 6.0 som en del av Adobe Consulting Services Commons-verktygen:
+AEM 6.1 integrerar även två indexeringsverktyg som finns i AEM 6.0 som en del av verktygsuppsättningen Adobe Consulting Services Commons:
 
 1. **Förklara frågan**, ett verktyg som hjälper administratörer att förstå hur frågor utförs.
 1. **Oak Index Manager**, ett webbanvändargränssnitt för att underhålla befintliga index.
 
-Nu kan du nå dem genom att gå till **Verktyg - Åtgärder - Kontrollpanel - Diagnos** på AEM-välkomstskärmen.
+Nu kan du nå dem genom att gå till **Verktyg - Åtgärder - Kontrollpanel - Diagnos** från AEM välkomstskärm.
 
-Mer information om hur du använder dem finns i dokumentationen [till](/help/sites-administering/operations-dashboard.md)kontrollpanelen för åtgärder.
+Mer information om hur du använder dem finns i [dokumentationen till kontrollpanelen för åtgärder](/help/sites-administering/operations-dashboard.md).
 
 #### Skapa egenskapsindex via OSGi {#creating-property-indexes-via-osgi}
 
 ACS Commons-paketet visar även OSGi-konfigurationer som kan användas för att skapa egenskapsindex.
 
-Du kan komma åt den från webbkonsolen genom att söka efter &quot;**Se till att egenskapsindex** för eko&quot;.
+Du kan komma åt den från webbkonsolen genom att söka efter &quot;**Se till att egenskapsindex**&quot;.
 
 ![chlimage_1-150](assets/chlimage_1-150.png)
 
@@ -414,19 +419,19 @@ I det här avsnittet presenteras en uppsättning rekommendationer om vad som beh
 
 #### Förbereder felsökningsinformation för analys {#preparing-debugging-info-for-analysis}
 
-Det enklaste sättet att få den information som krävs för den fråga som körs är via verktyget [](/help/sites-administering/operations-dashboard.md#explain-query)Förklara fråga. På så sätt kan du samla in exakt den information som behövs för att felsöka en långsam fråga utan att behöva läsa loggnivåinformationen. Detta är önskvärt om du känner till frågan som felsöks.
+Det enklaste sättet att få den information som krävs för den fråga som körs är via [Förklara fråga](/help/sites-administering/operations-dashboard.md#explain-query). På så sätt kan du samla in exakt den information som behövs för att felsöka en långsam fråga utan att behöva läsa loggnivåinformationen. Detta är önskvärt om du känner till frågan som felsöks.
 
 Om detta inte är möjligt av någon anledning, kan du samla indexeringsloggarna i en enda fil och använda den för att felsöka just det problemet.
 
 #### Aktivera loggning {#enable-logging}
 
-Om du vill aktivera loggning måste du aktivera loggar på **DEBUG** -nivå för de kategorier som gäller Oak-indexering och frågor. Dessa kategorier är:
+Om du vill aktivera loggning måste du aktivera **DEBUG**-nivåloggar för de kategorier som gäller Oak-indexering och frågor. Dessa kategorier är:
 
 * org.apache.jackrabbit.oak.plugins.index
 * org.apache.jackrabbit.oak.query
 * com.day.cq.search
 
-Kategorin **com.day.cq.search** gäller bara om du använder verktyget AEM provided Query Builder.
+Kategorin **com.day.cq.search** kan bara användas om du använder det AEM tillhandahållna QueryBuilder-verktyget.
 
 >[!NOTE]
 >
@@ -434,13 +439,13 @@ Kategorin **com.day.cq.search** gäller bara om du använder verktyget AEM provi
 
 Du kan aktivera loggning genom att följa den här proceduren:
 
-1. Peka webbläsaren till `https://serveraddress:port/system/console/slinglog`
+1. Peka webbläsaren på `https://serveraddress:port/system/console/slinglog`
 1. Klicka på knappen **Lägg till ny loggare** i den nedre delen av konsolen.
-1. Lägg till de kategorier som nämns ovan på den nyligen skapade raden. Du kan använda **+** -tecknet om du vill lägga till mer än en kategori i en enskild loggare.
-1. Välj **DEBUG** i listrutan **Loggnivå** .
+1. Lägg till de kategorier som nämns ovan på den nyligen skapade raden. Du kan använda tecknet **+** om du vill lägga till mer än en kategori i en enskild loggare.
+1. Välj **DEBUG** i listrutan **Loggnivå**.
 1. Ställ in utdatafilen på `logs/queryDebug.log`. Detta korrelerar alla DEBUG-händelser till en enda loggfil.
 1. Kör frågan eller återge sidan som använder frågan som du vill felsöka.
-1. När du har kört frågan går du tillbaka till loggningskonsolen och ändrar loggnivån för den nyligen skapade loggboken till **INFO**.
+1. När du har kört frågan går du tillbaka till loggningskonsolen och ändrar loggnivån för den nyligen skapade loggningsfunktionen till **INFO**.
 
 #### Indexkonfiguration {#index-configuration}
 
@@ -481,6 +486,6 @@ Du kan också tillhandahålla konsoliderade JMX-utdata via `https://serveraddres
 
 Du kan samla in ytterligare information för att hjälpa till att felsöka problemet, till exempel:
 
-1. Den Oak-version som instansen körs på. Du kan se detta genom att öppna CRXDE och titta på versionen i det nedre högra hörnet av välkomstsidan, eller genom att kontrollera versionen av `org.apache.jackrabbit.oak-core` paketet.
+1. Den Oak-version som instansen körs på. Du kan se detta genom att öppna CRXDE och titta på versionen i det nedre högra hörnet av välkomstsidan, eller genom att kontrollera versionen av `org.apache.jackrabbit.oak-core`-paketet.
 1. Felsökningsutdata för QueryBuilder-felsökningsfrågan. Felsökaren finns på: `https://serveraddress:port/libs/cq/search/content/querydebug.html`
 
