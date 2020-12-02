@@ -11,13 +11,16 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 982f7b7e-9ba9-437f-a337-76c355b328ac
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '181'
+ht-degree: 0%
 
 ---
 
 
 # Ändra konverteringsinställningarna för PDF-export {#modifying-the-pdf-export-conversion-settings}
 
-Använd proceduren nedan för att ändra konverteringsinställningarna för export av en PDF-, EPS-, DOC-, TXT-, RTF-, XML- eller HTML-fil. Som standard används de standardinställningar för Spara som som som konfigurerats i Adobe Acrobat Professional eller Acrobat Standard i PDF-filen. Om du t.ex. använder standardinställningarna för Spara som i Acrobat för att konvertera en PDF-fil till EPS, konverteras bara en sida från PDF-filen till EPS.
+Använd proceduren nedan för att ändra konverteringsinställningarna för export av en PDF-, EPS-, DOC-, TXT-, RTF-, XML- eller HTML-fil. Som standard används standardinställningarna för Spara som i Adobe Acrobat Professional eller Acrobat Standard. Om du t.ex. använder standardinställningarna Spara som i Acrobat för att konvertera en PDF-fil till EPS, konverteras bara en sida från PDF-filen till EPS.
 
 >[!NOTE]
 >
