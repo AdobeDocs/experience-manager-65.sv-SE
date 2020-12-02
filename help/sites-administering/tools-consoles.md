@@ -12,13 +12,16 @@ discoiquuid: 6732ef1f-0bfd-44e6-b24d-e22fe427d8b4
 docset: aem65
 translation-type: tm+mt
 source-git-commit: d366e9f9a1c44ff4866907e83432ab2b1438bbb3
+workflow-type: tm+mt
+source-wordcount: '618'
+ht-degree: 26%
 
 ---
 
 
 # Verktygskonsoler{#tools-consoles}
 
-Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som hjälper dig att administrera webbplatser, digitala resurser och andra aspekter av ditt innehållsarkiv. Det finns för närvarande två varianter av **verktygskonsolen** beroende på vilket gränssnitt du använder:
+Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som hjälper dig att administrera webbplatser, digitala resurser och andra aspekter av ditt innehållslager. Det finns för närvarande två varianter av **Tools**-konsolen som är beroende av det användargränssnitt du använder:
 
 * [Verktyg - Touchoptimerat gränssnitt](#tools-touch-optimized-ui)
 * [Verktyg - Klassiskt användargränssnitt](#tools-classic-ui)
@@ -57,11 +60,11 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
   </tr>
   <tr>
    <td> </td>
-   <td>Taggning</td>
+   <td>Taggar</td>
   </tr>
   <tr>
    <td> </td>
-   <td>Konfigurationsläsaren</td>
+   <td>Konfigurationsläsare</td>
   </tr>
   <tr>
    <td> </td>
@@ -85,7 +88,7 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
   </tr>
   <tr>
    <td> </td>
-   <td>Startare</td>
+   <td>Startprogram</td>
   </tr>
   <tr>
    <td> </td>
@@ -96,7 +99,7 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
    <td>Fel</td>
   </tr>
   <tr>
-   <td>Operationer</td>
+   <td>Användning</td>
    <td> </td>
   </tr>
   <tr>
@@ -117,7 +120,7 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
   </tr>
   <tr>
    <td> </td>
-   <td>Säkerhetskopiera</td>
+   <td>Säkerhetskopiering</td>
   </tr>
   <tr>
    <td> </td>
@@ -125,7 +128,7 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
   </tr>
   <tr>
    <td> </td>
-   <td>Diagnos</td>
+   <td>Diagnostik</td>
   </tr>
   <tr>
    <td> </td>
@@ -140,16 +143,16 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
    <td>Jobb</td>
   </tr>
   <tr>
-   <td>Webbplatser</td>
+   <td>Sites</td>
    <td> </td>
   </tr>
   <tr>
    <td> </td>
-   <td>Blueprints</td>
+   <td>Ritningar</td>
   </tr>
   <tr>
    <td> </td>
-   <td>Startar</td>
+   <td>Launches</td>
   </tr>
   <tr>
    <td> </td>
@@ -160,7 +163,7 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
    <td>Extern länkkontroll<br /> </td>
   </tr>
   <tr>
-   <td>Resurser</td>
+   <td>Assets</td>
    <td> </td>
   </tr>
   <tr>
@@ -169,19 +172,19 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
   </tr>
   <tr>
    <td> </td>
-   <td>Metadatascheman för mapp<br /> </td>
+   <td>Metadatascheman för mappar<br /> </td>
   </tr>
   <tr>
    <td> </td>
-   <td>Metadata-scheman</td>
+   <td>Metadatascheman</td>
   </tr>
   <tr>
    <td> </td>
-   <td>Desktop Tools for AEM<br /> </td>
+   <td>Skrivbordsverktyg för AEM<br /> </td>
   </tr>
   <tr>
    <td> </td>
-   <td>Konfiguration av insikter</td>
+   <td>Insights-konfiguration</td>
   </tr>
   <tr>
    <td> </td>
@@ -225,7 +228,7 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
   </tr>
   <tr>
    <td> </td>
-   <td>Paketresurs</td>
+   <td>Paketdelning</td>
   </tr>
   <tr>
    <td> </td>
@@ -272,20 +275,20 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
    <td>Adobe IMS-konfigurationer</td>
   </tr>
   <tr>
-   <td>Molntjänster<br /> </td>
+   <td>Cloud Services<br /> </td>
    <td> </td>
   </tr>
   <tr>
    <td> </td>
-   <td>Äldre molntjänster</td>
+   <td>Äldre Cloud Services</td>
   </tr>
   <tr>
    <td> </td>
-   <td>Översättningsmolntjänster</td>
+   <td>Cloud Services för översättning</td>
   </tr>
   <tr>
    <td> </td>
-   <td>YouTube Publishing Configuration</td>
+   <td>Konfigurera YouTube-publicering</td>
   </tr>
   <tr>
    <td> </td>
@@ -293,7 +296,7 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
   </tr>
   <tr>
    <td> </td>
-   <td>Adobe Launch Configurations</td>
+   <td>Startkonfigurationer för Adobe</td>
   </tr>
   <tr>
    <td> </td>
@@ -317,7 +320,7 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
   </tr>
   <tr>
    <td> </td>
-   <td>Pinterest Social Login-konfiguration<br /> </td>
+   <td>Pinterest Social Login Configuration<br /> </td>
   </tr>
   <tr>
    <td>Communities</td>
@@ -362,7 +365,7 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
  </tbody>
 </table>
 
-## Verktyg - Klassiskt användargränssnitt {#tools-classic-ui}
+## Verktyg - Klassiskt gränssnitt {#tools-classic-ui}
 
 <table>
  <tbody>
@@ -375,11 +378,11 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
    <td>Centraliserad plats för hantering av flera webbplatser.</td>
   </tr>
   <tr>
-   <td>Konfigurationer av klientkontext<br /> </td>
+   <td>Klientkonfigurationer<br /> </td>
    <td>Klientkontexten representerar en dynamiskt sammansatt samling med användardata. Standardkonfigurationerna och marknadsföringskonfigurationerna för molnet finns här.<br /> </td>
   </tr>
   <tr>
-   <td>Konfigurationer av molntjänster<br /> </td>
+   <td>Konfigurationer av Cloud Services<br /> </td>
    <td>Innehåller konfigurationer som rör integrering med Adobe Marketing Cloud.</td>
   </tr>
   <tr>
@@ -432,7 +435,7 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
   </tr>
   <tr>
    <td>Rapporter</td>
-   <td>Med AEM får du ett antal anpassade rapporter som du kan använda för att skapa anpassade rapporter och/eller utveckla egna.</td>
+   <td>AEM innehåller ett antal anpassade rapporter, med vilka du kan skapa anpassade rapporter och/eller utveckla egna.</td>
   </tr>
   <tr>
    <td>Standardsidans placering</td>
