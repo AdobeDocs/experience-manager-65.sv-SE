@@ -24,15 +24,15 @@ I det här dokumentet beskrivs hur den dynamiska mappningen av modell till kompo
 
 >[!NOTE]
 >
->SPA-redigeraren är den rekommenderade lösningen för projekt som kräver SPA-ramverksbaserad rendering på klientsidan (t.ex. React eller Angular).
+>SPA Editor är den rekommenderade lösningen för projekt som kräver SPA ramverksbaserad återgivning på klientsidan (t.ex. Reaktion eller Vinkel).
 
-## ComponentMapping-modul {#componentmapping-module}
+## ComponentMapping Module {#componentmapping-module}
 
 Modulen `ComponentMapping` tillhandahålls som ett NPM-paket till frontendprojektet. Det lagrar komponenter för användargränssnitt och tillhandahåller ett sätt för Single Page Application att mappa komponenter för användargränssnitt till AEM resurstyper. Detta aktiverar en dynamisk upplösning för komponenter när JSON-modellen för programmet analyseras.
 
-Varje objekt i modellen innehåller ett `:type` fält som visar en AEM resurstyp. När den är monterad kan den främre komponenten återge sig själv med det fragment av modellen som den har fått från de underliggande biblioteken.
+Varje objekt i modellen innehåller ett `:type`-fält som visar en AEM resurstyp. När den är monterad kan den främre komponenten återge sig själv med det fragment av modellen som den har fått från de underliggande biblioteken.
 
-Mer information om modellparsning och åtkomst för komponenter i gränssnittet finns i [SPA](/help/sites-developing/spa-blueprint.md) -utkast-dokumentet.
+Läs [SPA Blueprint](/help/sites-developing/spa-blueprint.md)-dokumentet om du vill ha mer information om modellparsning och åtkomst till modellens front-end-komponent.
 
 Se även npm-paketet: [https://www.npmjs.com/package/@adobe/aem-spa-component-mapping](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
 
@@ -40,20 +40,20 @@ Se även npm-paketet: [https://www.npmjs.com/package/@adobe/aem-spa-component-ma
 
 Single Page-program som använder Javascript SPA SDK för AEM är modelldrivna:
 
-1. Front-end-komponenter registrerar sig själva för [Component Mapping Store](/help/sites-developing/spa-dynamic-model-to-component-mapping.md#componentmapping-module).
-1. När [behållaren](/help/sites-developing/spa-blueprint.md#container)har levererats med en modell av [modellprovidern](/help/sites-developing/spa-blueprint.md#the-model-provider)itererar den sedan över sitt modellinnehåll ( `:items`).
+1. Front-end-komponenter registrerar sig för [Component Mapping Store](/help/sites-developing/spa-dynamic-model-to-component-mapping.md#componentmapping-module).
+1. Sedan itererar [behållaren](/help/sites-developing/spa-blueprint.md#container), när den har fått en modell av [modellprovidern](/help/sites-developing/spa-blueprint.md#the-model-provider), över sitt modellinnehåll ( `:items`).
 
 1. För en sida hämtar dess underordnade ( `:children`) först en komponentklass från [komponentmappningen](/help/sites-developing/spa-blueprint.md#componentmapping) och instansierar den sedan.
 
 ## Programinitiering {#app-initialization}
 
-Varje komponent utökas med funktionerna i [`ModelProvider`](/help/sites-developing/spa-blueprint.md#the-model-provider). Initieringen har därför följande allmänna form:
+Varje komponent utökas med funktionerna i [ `ModelProvider`](/help/sites-developing/spa-blueprint.md#the-model-provider). Initieringen har därför följande allmänna form:
 
 1. Varje modellprovider initierar sig själv och lyssnar efter ändringar som gjorts i den del av modellen som motsvarar dess inre komponent.
-1. Initieringen [ `PageModelManager`](/help/sites-developing/spa-blueprint.md#pagemodelmanager) måste initieras så som den representeras av [initieringsflödet](/help/sites-developing/spa-blueprint.md).
+1. [ `PageModelManager`](/help/sites-developing/spa-blueprint.md#pagemodelmanager) måste initieras så som den representeras av [initieringsflödet](/help/sites-developing/spa-blueprint.md).
 
 1. När sidmodellhanteraren har lagrats returnerar den hela appmodellen.
-1. Den här modellen skickas sedan till [rotbehållarkomponenten](/help/sites-developing/spa-blueprint.md#container) i början av programmet.
+1. Den här modellen skickas sedan till frontendroten [Container](/help/sites-developing/spa-blueprint.md#container)-komponenten i programmet.
 1. Delar av modellen sprids slutligen till varje enskild underordnad komponent.
 
 ![app_model_initialization](assets/app_model_initialization.png)
