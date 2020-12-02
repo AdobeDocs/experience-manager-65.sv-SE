@@ -11,6 +11,9 @@ topic-tags: best-practices
 discoiquuid: 4adce3b4-f209-4a01-b116-a5e01c4cc123
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '874'
+ht-degree: 0%
 
 ---
 
@@ -25,17 +28,17 @@ Om du inkluderar skript i JSP:er blir det svårt att felsöka problem i koden. D
 
 Koden skrivs en gång, men läses många gånger. Om vi lägger lite tid på att städa koden vi skriver kommer vi att betala ut utdelningar längs vägen när vi och andra utvecklare behöver läsa den senare.
 
-### Välj namn som ska avslöjas {#choose-intention-revealing-names}
+### Välj namn som ska visas avsiktligt {#choose-intention-revealing-names}
 
 Helst behöver inte en annan programmerare öppna en modul för att förstå vad den gör. De bör också kunna avgöra vad en metod gör utan att läsa den. Ju bättre vi kan prenumerera på dessa idéer, desto enklare blir det att läsa vår kod och desto snabbare kan vi skriva och ändra vår kod.
 
-I AEM-kodbasen används följande konventioner:
+I AEM används följande konventioner:
 
 
-* En enskild implementering av ett gränssnitt namnges `<Interface>Impl`, dvs. `ReaderImpl`.
-* Flera implementeringar av ett gränssnitt namnges `<Variant><Interface>`, dvs. `JcrReader` och `FileSystemReader`.
-* Abstrakta basklasser namnges `Abstract<Interface>` eller `Abstract<Variant><Interface>`.
-* Paket namnges `com.adobe.product.module`.  Varje Maven-artefakt eller OSGi-paket måste ha ett eget paket.
+* En enskild implementering av ett gränssnitt heter `<Interface>Impl`, dvs. `ReaderImpl`.
+* Flera implementeringar av ett gränssnitt har namnet `<Variant><Interface>`, dvs. `JcrReader` och `FileSystemReader`.
+* Abstrakta basklasser heter `Abstract<Interface>` eller `Abstract<Variant><Interface>`.
+* Paket har namnet `com.adobe.product.module`.  Varje Maven-artefakt eller OSGi-paket måste ha ett eget paket.
 * Java-implementeringar placeras i ett impl-paket under deras API.
 
 
@@ -66,23 +69,23 @@ DRY anger att samma uppsättning kod aldrig ska dupliceras. Detta gäller även 
 
 ### Undvik nakna CSS-regler {#avoid-naked-css-rules}
 
-CSS-reglerna ska vara specifika för målelementet i programmets sammanhang. En CSS-regel som tillämpas på *.content.center* skulle till exempel vara alltför bred och skulle kunna påverka mycket innehåll i hela systemet, vilket kräver att andra åsidosätter formatet i framtiden. *.myapp-centertext* är en mer specifik regel eftersom centrerad *text* anges i programmets sammanhang.
+CSS-reglerna ska vara specifika för målelementet i programmets sammanhang. En CSS-regel som används på *.content.center* skulle till exempel vara för bred och skulle kunna påverka mycket av innehållet i systemet, vilket kräver att andra åsidosätter formatet i framtiden. *.myapp-centertext* skulle vara en mer specifik regel eftersom den anger centrerad  ** text i programmets sammanhang.
 
-### Eliminera användning av inaktuella API:er {#eliminate-usage-of-deprecated-apis}
+### Eliminera användningen av inaktuella API:er {#eliminate-usage-of-deprecated-apis}
 
 När ett API är inaktuellt är det alltid bättre att hitta det nya rekommenderade sättet i stället för att förlita sig på det inaktuella API:t. Detta ger smidigare uppgraderingar i framtiden.
 
 ### Skriv lokaliserbar kod {#write-localizable-code}
 
-Alla strängar som inte tillhandahålls av en författare ska kapslas in i ett anrop till AEM:s i18n-ordlista via *I18n.get()* i JSP/Java och *CQ.I18n.get()* i JavaScript. Den här implementeringen returnerar strängen som skickades till den om ingen implementering hittas, vilket ger flexibiliteten att implementera lokalisering efter implementering av funktionerna på det primära språket.
+Alla strängar som inte tillhandahålls av en författare ska kapslas in i ett anrop till AEM i18n-ordlista via *I18n.get()* i JSP/Java och *CQ.I18n.get()* i JavaScript. Den här implementeringen returnerar strängen som skickades till den om ingen implementering hittas, vilket ger flexibiliteten att implementera lokalisering efter implementering av funktionerna på det primära språket.
 
 ### Escape-resurssökvägar för säkerhet {#escape-resource-paths-for-safety}
 
-Även om sökvägar i JCR inte får innehålla blanksteg, bör koden inte brytas om de finns. Jackrabbit tillhandahåller en Text-verktygsklass med metoderna *escape()* och *escapePath()* . För JSP:er visar Granite-gränssnittet en *granite:encodeURIPath() EL* -funktion.
+Även om sökvägar i JCR inte får innehålla blanksteg, bör koden inte brytas om de finns. Jackrabbit tillhandahåller en textverktygsklass med metoderna *escape()* och *escapePath()*. För JSP:er visar Granite-gränssnittet en *granite:encodeURIPath() EL*-funktion.
 
-### Använd XSS API och/eller HTML för att skydda mot serveröverskridande skriptattacker (cross-site scripting) {#use-the-xss-api-and-or-htl-to-protect-against-cross-site-scripting-attacks}
+### Använd XSS API och/eller HTML för att skydda mot serveröverskridande skriptattacker {#use-the-xss-api-and-or-htl-to-protect-against-cross-site-scripting-attacks}
 
-AEM har ett XSS-API för att enkelt rensa parametrar och skydda sig mot serveröverskridande skriptattacker (cross-site scripting). Dessutom har HTML dessa skydd inbyggda direkt i mallspråket. Ett API-kalkylblad finns att ladda ned på [Development - Guidelines and Best Practices](/help/sites-developing/dev-guidelines-bestpractices.md).
+AEM tillhandahåller ett XSS-API för att enkelt rensa parametrar och säkerställa säkerheten vid serveröverskridande skriptattacker (cross-site scripting). Dessutom har HTML dessa skydd inbyggda direkt i mallspråket. Ett API-kalkylblad kan laddas ned på [Development - Guidelines and Best Practices](/help/sites-developing/dev-guidelines-bestpractices.md).
 
 ### Implementera lämplig loggning {#implement-appropriate-logging}
 
@@ -92,9 +95,9 @@ För Java-kod har AEM stöd för slf4j som standard-API för loggningsmeddelande
 * VARNING: När något inte har fungerat som det ska, men bearbetningen kan fortsätta. Detta beror ofta på ett undantag som vi förväntade oss, till exempel ett *PathNotFoundException*.
 * INFORMATION: Information som kan vara användbar vid övervakning av ett system. Tänk på att detta är standardinställningen och att de flesta kunder låter detta vara på plats i sina miljöer. Använd den därför inte för mycket.
 * FELSÖKNING: Lägre information om bearbetning. Användbart vid felsökning av supportproblem.
-* SPÅR: Information på den lägsta nivån, till exempel genom att ange/avsluta metoder. Detta används vanligtvis bara av utvecklare.
+* TRACE: Information på den lägsta nivån, till exempel genom att ange/avsluta metoder. Detta används vanligtvis bara av utvecklare.
 
-I JavaScript bör *console.log* endast användas under utvecklingen och alla loggsatser bör tas bort före lanseringen.
+I JavaScript ska *console.log* endast användas under utvecklingen och alla loggsatser ska tas bort före lanseringen.
 
 ### Undvik lasthanteringsprogrammering {#avoid-cargo-cult-programming}
 
