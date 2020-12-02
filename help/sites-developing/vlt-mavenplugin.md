@@ -20,9 +20,9 @@ Distributionen av de konstruerade paketen till AEM utförs av plugin-programmet 
 >
 >Mer information finns i:
 >
->* Plugin-programmet [för](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developer-tools/maven-plugin.html?lang=en#developer-tools) Adobe Content Package Maven i AEM är en Cloud Service som beskriver hur du distribuerar AEM program.
->* Artikeln [AEM projektstruktur](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) i AEM som en Cloud Service för hur du strukturerar moderna AEM projekt.
->* Dokumentationen [AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html) innehåller information om hur du startar ett nytt AEM projekt med hjälp av arkitypen.
+>* Plugin-programmet [Adobe Content Package Maven](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developer-tools/maven-plugin.html?lang=en#developer-tools) är en artikel i AEM som en Cloud Service för hur du distribuerar AEM program.
+>* Artikeln [AEM Project Structure](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) i AEM som en Cloud Service om hur du strukturerar moderna AEM projekt.
+>* I [AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html)-dokumentationen beskrivs hur du startar ett nytt AEM med hjälp av arkivtypen.
 
 >
 >
