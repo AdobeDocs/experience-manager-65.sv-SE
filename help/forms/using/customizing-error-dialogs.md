@@ -19,11 +19,11 @@ ht-degree: 4%
 
 # Anpassa feldialogrutor {#customizing-error-dialogs}
 
-Med arbetsytan i AEM Forms kan du anpassa feldialogrutor. Utför de [allmänna stegen för anpassning](/help/forms/using/generic-steps-html-workspace-customization.md) av arbetsytan i AEM Forms följt av stegen nedan för att anpassa feldialogrutor.
+Med AEM Forms arbetsyta kan du anpassa feldialogrutor. Utför de allmänna [stegen för anpassning av arbetsytan i AEM Forms](/help/forms/using/generic-steps-html-workspace-customization.md) följt av stegen nedan för att anpassa feldialogrutorna.
 
 ## Anpassa text {#customizing-text}
 
-1. Ändra värdena för i `/apps/ws/locales/en-US/translation.json` filen `wserror` till anpassade värden. Till exempel:
+1. I filen `/apps/ws/locales/en-US/translation.json` ändrar du värdena för `wserror` till de anpassade värdena. Till exempel:
 
    ```json
    "wserror" : {
@@ -53,7 +53,7 @@ Med arbetsytan i AEM Forms kan du anpassa feldialogrutor. Utför de [allmänna s
 
 ## Anpassa CSS {#customizing-css}
 
-1. Du kan uppdatera dialogruta, rubrik, innehållsområde, fotstreck, fotfältsknappar och andra kollateraler genom att lägga till följande kodutdrag i `/apps/ws/css/newStyle.css` filen:
+1. Du kan uppdatera dialogruta, rubrik, innehållsområde, fotstreck, fotfältsknappar och andra kollateraler genom att lägga till följande kodutdrag i `/apps/ws/css/newStyle.css`-filen:
 
    ```css
    /*-------- Error Dialog -------------------------------------------------------------------------------------------------------------------*/
@@ -188,7 +188,7 @@ Med arbetsytan i AEM Forms kan du anpassa feldialogrutor. Utför de [allmänna s
    }
    ```
 
-1. För knappområdet för fotstangenten separerar du `.error-dialog` - och `.foot-bar` knappintervallen från den sammansatta listan. Om du vill göra den här ändringen lägger du till följande i filen newStyle.css:
+1. Avgränsa knappintervallen `.error-dialog` och `.foot-bar` för fotfältets knappintervall från den sammansatta listan. Om du vill göra den här ändringen lägger du till följande i filen newStyle.css:
 
    ```css
    .browse-btn span, .attachementbtn span, .cancelAttachmentUpdate span, #taskAttachmentsContainer .uploadStatus span, .submitNoteButton span, .updateNoteButton span, .cancelNoteUpdate span,
