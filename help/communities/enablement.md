@@ -18,11 +18,11 @@ ht-degree: 0%
 ---
 
 
-# Konfigurera aktiveringsfunktioner {#configuring-enablement-features}
+# Konfigurerar aktiveringsfunktioner {#configuring-enablement-features}
 
 ## Översikt {#overview}
 
-Med aktiveringsfunktionerna kan du skapa [aktiveringscommunityn](overview.md#enablement-community).
+Med aktiveringsfunktionerna kan du skapa [aktiveringsgrupper](overview.md#enablement-community).
 
 * Den här funktionen kräver ytterligare licensiering för användning i en produktionsmiljö.
 
@@ -46,13 +46,13 @@ Inställningar för:
 
 * **Community Managers**
 
-   För aktiveringsgrupper kan endast medlemmar i `Community Enablement Managers` användargruppen tilldelas rollen `Community Site Enablement Manager`vars behörigheter kan omfatta innehållsskapande, uppdrag och medlemshantering i publiceringsmiljön.
+   Endast medlemmar i användargruppen `Community Enablement Managers` kan tilldelas rollen `Community Site Enablement Manager`, vars behörigheter kan omfatta innehållsskapande, uppdrag och medlemshantering i publiceringsmiljön.
 
 Valfri konfiguration av:
 
 * **Adobe Analytics**
 
-   Integrationen med Adobe Analytics ger omfattande rapportfunktioner och stöder tillägget Videopuls i Analytics.
+   Integrationen med Adobe Analytics ger omfattande rapportfunktioner och stöder tillägget Video Heartbeat i Analytics.
 
 * **Dispatcher**
 
@@ -68,7 +68,7 @@ Varje steg länkar till dokumentation med nödvändig information.
 
    Använd webbkonsol (paket): *http://localhost:4502/system/console/bundles*
 
-   Installera *innan* du installerar SCORM-paketet
+   Installera *innan* SCORM-paketet installeras
 
 1. **[Installera SCORM-paket](deploy-communities.md#scorm-package)**
 
@@ -105,7 +105,7 @@ Varje steg länkar till dokumentation med nödvändig information.
 
 **On author instance:**
 
-1. (*Valfritt*) **[Konfigurera tjänsten Analytics](analytics.md)**
+1. (*Valfritt*) **[Konfigurera analystjänsten](analytics.md)**
 
    Använd verktygs-, distributions- och Cloud Services-konsolen: *http://localhost:4502/etc/cloudservices/sitecatalyst.html*
 
@@ -130,4 +130,4 @@ Varje steg länkar till dokumentation med nödvändig information.
 
 ## Dispatcher {#dispatcher}
 
-När driftsättningen omfattar [AEM:s Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)måste avsnitten `clientheader` och `filter` ändras för att aktiveringsfunktionerna ska fungera korrekt. Se [Konfigurera Dispatcher för webbgrupper](dispatcher.md#enablement).
+När distributionen innehåller [AEM Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html) måste avsnitten `clientheader` och `filter` ändras för att aktiveringsfunktionerna ska fungera korrekt. Se [Konfigurera Dispatcher för Communities](dispatcher.md#enablement).
