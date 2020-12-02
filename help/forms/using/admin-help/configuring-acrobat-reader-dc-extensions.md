@@ -11,26 +11,29 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 8f8367fe-a8e9-46ee-a980-1633be02932d
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '357'
+ht-degree: 0%
 
 ---
 
 
 # Konfigurera Acrobat Reader DC-tillägg för datainhämtning {#configuring-acrobat-reader-dc-extensions-for-data-capture}
 
-Om användare av AEM-formulärsinstallationen använder datainhämtningsfunktionen i Content Services (Borttagen) rekommenderar vi att du skapar en roll med skrivskyddad åtkomst för dessa användare.
+Om användare av AEM använder datainhämtningsfunktionen i Content Services (Borttagen) rekommenderar vi att du skapar en roll med skrivskyddad åtkomst för dessa användare.
 
-***Obs **!Adobe® LiveCycle® Content Services ES (utgått) är ett innehållshanteringssystem som installeras med LiveCycle. Det gör det möjligt för användarna att utforma, hantera, övervaka och optimera humancentrerade processer. Supporten för innehållstjänster (borttaget) upphör 2014-12-31. Se[Adobes livscykeldokument](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html). Mer information om hur du konfigurerar innehållstjänster (borttaget) finns i[Administrera innehållstjänster](https://help.adobe.com/en_US/livecycle/9.0/admin_contentservices.pdf).*
+***Obs **! Adobe® LiveCycle® Content Services ES (utgått) är ett innehållshanteringssystem som installeras med LiveCycle. Det gör det möjligt för användarna att utforma, hantera, övervaka och optimera humancentrerade processer. Supporten för innehållstjänster (borttaget) upphör 2014-12-31. Se [Adobe produktlivscykeldokument](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html). Mer information om hur du konfigurerar innehållstjänster (borttaget) finns i [Administrera innehållstjänster](https://help.adobe.com/en_US/livecycle/9.0/admin_contentservices.pdf).*
 
-För datainhämtning krävs att du tilldelar en användarroll för att få åtkomst till SampleReaderExtensionsCredential. Du kan tilldela rollen som pålitlig standardadministratör, men tänk på att den här rollen ger allmänna, icke-administrativa användare de administratörsbehörigheter som styr PKI Trust-inställningarna och hanterar PKI-autentiseringsuppgifter, vilket kan äventyra säkerheten i AEM-formulärsinstallationen i en produktionsmiljö. Vi rekommenderar att systemadministratören för AEM-formulär skapar en roll som endast ger skrivskyddad åtkomst till Trust Store och tilldelar den nya rollen till icke-administratörsanvändare som använder datainhämtning.
+För datainhämtning krävs att du tilldelar en användarroll för att få åtkomst till SampleReaderExtensionsCredential. Du kan tilldela rollen som pålitlig standardadministratör, men tänk på att den här rollen ger allmänna, icke-administrativa användare de administratörsbehörigheter som styr PKI-förtroendeinställningarna och hanterar PKI-autentiseringsuppgifter, vilket kan äventyra säkerheten för dina AEM i en produktionsmiljö. Vi rekommenderar att systemadministratören för AEM formulär skapar en roll som endast ger skrivskyddad åtkomst till Trust Store och tilldelar den nya rollen till icke-administratörsanvändare som använder datainhämtning.
 
-## Skapa en roll för datainhämtningsanvändare {#create-a-role-for-data-capture-users}
+## Skapa en roll för datainsamlingsanvändare {#create-a-role-for-data-capture-users}
 
 1. I administrationskonsolen klickar du på Inställningar > Användarhantering > Rollhantering och sedan på Ny roll.
 1. Ange rollnamnet (t.ex. Datainsamlingsanvändare) och beskrivningen i fälten och klicka sedan på Nästa.
 1. På skärmen Rollbehörigheter klickar du på Sök behörigheter och väljer sedan Läs autentiseringsuppgifter i listan över tillgängliga behörigheter.
 1. Klicka på OK och sedan på Slutför.
 
-## Tilldela datainhämtningsrollen {#assign-the-data-capture-role}
+## Tilldela datainsamlingsrollen {#assign-the-data-capture-role}
 
 1. I administrationskonsolen klickar du på Inställningar > Användarhantering > Rollhantering och sedan på Sök.
 1. Klicka på användarrollen för datainhämtning som du skapade.
