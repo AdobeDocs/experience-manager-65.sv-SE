@@ -23,13 +23,13 @@ ht-degree: 0%
 ## Förutsättningar {#prerequisites}
 
 * [Skapa OSGI-paket](https://helpx.adobe.com/experience-manager/using/creating-osgi-bundles-digital-marketing.html)
-* [Utveckla AEM-komponenter](/help/sites-developing/components.md)
+* [Utveckla AEM](/help/sites-developing/components.md)
 * [Skapa anpassat formulär](../../forms/using/creating-adaptive-form.md)
 * [Skapa anpassat formulär](../../forms/using/introduction-forms-authoring.md)
 
 ## Procedur för att dynamiskt fylla i nedrullningsbara listor {#procedure-to-dynamically-populate-drop-down-lists}
 
-Tänk dig ett scenario där du vill fylla i listrutan **Läge** baserat på ett värde som du väljer i listrutan **Land** . Om du väljer Australien i listrutan **Land** visas lägena i Australien i listrutan **Läge** . I proceduren nedan beskrivs hur du utför den här uppgiften.
+Tänk dig ett scenario där du vill fylla i listrutan **Läge** baserat på ett värde som du väljer i listrutan **Land**. Om du väljer Australien i listrutan **Land** visas lägena i Australien i listrutan **Läge**. I proceduren nedan beskrivs hur du utför den här uppgiften.
 
 1. Skapa ett projekt med följande moduler:
 
@@ -147,7 +147,7 @@ Tänk dig ett scenario där du vill fylla i listrutan **Läge** baserat på ett 
    }
    ```
 
-1. Skapa en nedrullningsbar nod under en viss mapphierarki i program (skapa till exempel en nod under /apps/myfolder/demo). Kontrollera att `sling:resourceType` parametern för noden är densamma som den som servleten pekar på (/apps/populatedDropDown).
+1. Skapa en nedrullningsbar nod under en viss mapphierarki i program (skapa till exempel en nod under /apps/myfolder/demo). Kontrollera att parametern `sling:resourceType` för noden är densamma som den som serverletspunkterna (/apps/populatedLieddown) pekar på.
 
    ![Skapa en nedrullningsbar nod](assets/dropdown-node.png)
 
@@ -156,7 +156,7 @@ Tänk dig ett scenario där du vill fylla i listrutan **Läge** baserat på ett 
 
    Lägg till namnen på länderna som ska visas i listan Land. I listan Läge lägger du till ett skript som fyller i det baserat på namnet på landet i listan Land.
 
-   ![Lägga till landsnamn](assets/country-dropdown.png) ![Lägga till skript för att fylla i listrutorna med](assets/state-dropdown.png) delstatsnamn ![Land och delstat för att samla in](assets/2dropdowns.png)
+   ![Lägga till ](assets/country-dropdown.png) ![landsnamnLägga till skript för att fylla i ](assets/state-dropdown.png) ![tillståndsnamnListrutor med länder och stater för att samla in](assets/2dropdowns.png)
 
    ```javascript
    JSON.parse(
@@ -174,6 +174,6 @@ Tänk dig ett scenario där du vill fylla i listrutan **Läge** baserat på ett 
    .responseText);
    ```
 
-Innehållspaketet som innehåller ett exempel på en adaptiv form (demo/AFdemo) med koden ovan implementerad.
+Innehållspaketet som innehåller ett exempel på en adaptiv form (demo/AFdemo) med ovanstående kod implementerad.
 
 [Hämta fil](assets/dropdown-demo-content-1.0.1-snapshot.zip)
