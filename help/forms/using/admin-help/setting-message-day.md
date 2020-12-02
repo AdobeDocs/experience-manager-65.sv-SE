@@ -11,29 +11,32 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c2b3a412-70c2-4257-bfb4-1430bb1f8891
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '206'
+ht-degree: 0%
 
 ---
 
 
-# Ställa in dagens meddelande {#setting-the-message-of-the-day}
+# Anger dagens meddelande {#setting-the-message-of-the-day}
 
 Du kan ange att ett meddelande ska visas på välkomstsidan i användargränssnittet för arbetsytan.
 
-Om det behövs kan du använda de HTML-taggar som stöds av Adobe Flash® Player för att formatera textens utseende:
+Om det behövs kan du använda HTML-taggarna som stöds av Adobe Flash® Player för att formatera textens utseende:
 
-* &lt;a> Ankartagg
-* &lt;b> Fet tagg
+* &lt;a> Ankarmärke&lt;/a>
+* &lt;b> Fet tagg&lt;/b>
 * &lt;br> Bryttagg
-* Teckensnittstaggen &lt;font>
-* Bild-taggen &lt;img>
-* Taggen &lt;i> Kursiv
-* &lt;li>-tagg för listobjekt
-* Taggen &lt;p> Stycke
-* &lt;span> Span-tagg
-* Tagg för textformat
-* &lt;u> Understrykningstagg
+* &lt;font> Teckensnittstagg&lt;/font>
+* &lt;img> Bildtagg
+* &lt;i> Kursiv tagg&lt;/i>
+* &lt;li> Tagg för listobjekt
+* &lt;p> Stycketagg
+* &lt;span> Spänn tagg&lt;/span>
+* &lt;textformat> Tagg för textformat
+* &lt;u> Understrykningstagg&lt;/u>
 
-Mer information om de taggar som stöds finns i definitionen av egenskapen `htmlText` för klassen TextField i [Flex Language Reference](https://www.adobe.com/support/documentation/en/flex/).
+Mer information om vilka taggar som stöds finns i definitionen av egenskapen `htmlText` för klassen TextField i [Flex Language Reference](https://www.adobe.com/support/documentation/en/flex/).
 
 ## Ange dagens meddelande {#set-the-message-of-the-day}
 
@@ -43,5 +46,5 @@ Mer information om de taggar som stöds finns i definitionen av egenskapen `html
 
 >[!NOTE]
 >
->Flex Workspace används inte i AEM-formulärsversioner.
+>Flex Workspace är föråldrat för AEM formulärreleaser.
 
