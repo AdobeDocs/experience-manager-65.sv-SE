@@ -10,6 +10,9 @@ content-type: reference
 discoiquuid: f934eb02-1f84-44f2-9f14-3f17250c9a90
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '730'
+ht-degree: 1%
 
 ---
 
@@ -26,7 +29,7 @@ Webbkonsolen i AEM baseras på [Apache Felix Web Management Console](https://fel
 
 Webbkonsolen erbjuder ett urval flikar för underhåll av OSGi-paketen, bland annat:
 
-* [Konfiguration](#configuration): används för att konfigurera OSGi-paketen och är därför den underliggande mekanismen för att konfigurera AEM-systemparametrar
+* [Konfiguration](#configuration): används för att konfigurera OSGi-paketen och är därför den underliggande mekanismen för att konfigurera AEM systemparametrar
 * [Paket](#bundles): används för att installera paket
 * [Komponenter](#components): används för att kontrollera status för komponenter som krävs för AEM
 
@@ -38,11 +41,11 @@ Konsolen kan nås från `../system/console`; till exempel:
 
 ## Konfiguration {#configuration}
 
-Fliken **Konfiguration** används för att konfigurera OSGi-paket och är därför den underliggande mekanismen för att konfigurera AEM-systemparametrar.
+Fliken **Konfiguration** används för att konfigurera OSGi-paket och är därför den underliggande mekanismen för att konfigurera AEM systemparametrar.
 
 >[!NOTE]
 >
->Mer information finns i [OSGi Configuration with the Web Console](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) .
+>Mer information finns i [OSGi Configuration with the Web Console](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console).
 
 Fliken **Konfiguration** kan nås av antingen:
 
@@ -103,7 +106,7 @@ Du kan sedan uppdatera parametrarna efter behov och:
 
 ## Paket {#bundles}
 
-Fliken **Bundles** är mekanismen för att installera de OSGi-paket som krävs för AEM. Du kommer åt fliken på något av följande sätt:
+Fliken **Paket** är den mekanism som används för att installera OSGi-paket som krävs för AEM. Du kommer åt fliken på något av följande sätt:
 
 * Listrutan:
 
@@ -121,7 +124,7 @@ På den här fliken kan du:
 
 * **Installera eller uppdatera**
 
-   Du kan **bläddra** för att hitta filen som innehåller ditt paket och ange om det ska **starta** omedelbart och vid vilken **startnivå**.
+   Du kan **Bläddra** för att hitta filen som innehåller ditt paket och ange om den ska **starta** omedelbart och vid vilken **startnivå**.
 
 * **Läs in igen**
 
@@ -151,7 +154,7 @@ På den här fliken kan du:
 
 >[!NOTE]
 >
->Efter **uppdatering** rekommenderas att du utför **uppdateringspaket**.
+>Efter **Uppdatera** bör du utföra en **uppdatering av paket**.
 
 ## Komponenter {#components}
 
