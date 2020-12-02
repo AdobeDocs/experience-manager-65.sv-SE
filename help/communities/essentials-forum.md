@@ -48,7 +48,7 @@ Den här sidan innehåller viktig information om hur du arbetar med forumfunktio
   </tr>
   <tr>
    <td><strong> egenskaper</strong></td>
-   <td>Se <a href="forum.md">forumfunktion</a></td>
+   <td>Se <a href="forum.md">Forum Feature</a></td>
   </tr>
  </tbody>
 </table>
@@ -63,14 +63,14 @@ Den här sidan innehåller viktig information om hur du arbetar med forumfunktio
 
 * [Anpassningar på serversidan](server-customize.md)
 
-### Forum {#forum-function}
+### Forum Function {#forum-function}
 
-En community-webbplatsstruktur som innehåller [forumfunktionen](functions.md#forum-function), innehåller en konfigurerad `forum` komponent samt inställningar som påverkar moderering, taggning och översättning.
+En community-webbplatsstruktur som innehåller [forumfunktionen](functions.md#forum-function), innehåller en konfigurerad `forum`-komponent samt inställningar som påverkar moderering, taggning och översättning.
 
 ### Åtkomst till foruminlägg (UGC) {#accessing-forum-posts-ugc}
 
 UGC bör modereras med någon av standardmetoderna för moderering.
-Se [Moderera användargenererat innehåll](moderate-ugc.md).
+Se [Moderating User Generated Content](moderate-ugc.md).
 
 Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](working-with-srp.md) för UGC programmatisk åtkomst till UGC oavsett valt lagringsalternativ (som ASRP, MSRP eller JSRP).
 
@@ -78,8 +78,8 @@ Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](
 
 Se:
 
-* [Översikt över](srp.md) lagringsresursprovidern - Introduktion och översikt över databasanvändningen.
-* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och exempel.
-* [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - riktlinjer för kodning.
-* [Omfaktorisering för SocialUtils](socialutils.md) - Mappar borttagna verktygsmetoder till aktuella SRP-verktygsmetoder.
+* [Översikt över](srp.md)  lagringsresursprovidern - Introduktion och översikt över databasanvändningen.
+* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och -exempel.
+* [Använder UGC med riktlinjerna för SRP](accessing-ugc-with-srp.md) -kodning.
+* [Omfaktorisering för SocialUtils](socialutils.md) - Mappar utgått verktygsmetod till aktuella SRP-verktygsmetoder.
 
