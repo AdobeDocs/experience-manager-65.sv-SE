@@ -49,7 +49,7 @@ Snabbstart i Programmering med AEM baseras på Forms Server som distribueras på
 
 ## Snabbstart (SOAP-läge): Skapa innehållstjänstutrymmen med Java API (inaktuellt) {#quick-start-soap-mode-create-content-services-spaces-using-the-java-api-deprecated}
 
-I följande Java-kodexempel skapas ett nytt space med namnet *Test Directory* som finns i Företagets startsida. ID-värdet för det nya utrymmet skrivs till konsolen.
+I följande Java-kodexempel skapas ett nytt space med namnet *Test Directory* i företagshem. ID-värdet för det nya utrymmet skrivs till konsolen.
 
 ```java
  /*
@@ -245,7 +245,7 @@ I följande Java-kodexempel tas ett blanksteg med namnet /Company Home/Test Dire
 
 ## Snabbstart (SOAP-läge): Lägg till innehåll i innehållstjänster med Java API (inaktuellt) {#quick-start-soap-mode-add-content-to-content-services-using-the-java-api-deprecated}
 
-I följande Java-kodexempel läggs en PDF-fil med namnet *MortgageForm.pdf* till i en mapp med namnet /Company Home/Test Directory. Attributen creator och description har angetts. Identifieringsvärdet för det nya innehållet skrivs till konsolen.
+I följande Java-kodexempel läggs en PDF-fil med namnet *MortgageForm.pdf* till i mappen /Company Home/Test Directory. Attributen creator och description har angetts. Identifieringsvärdet för det nya innehållet skrivs till konsolen.
 
 ```java
  /*
@@ -368,7 +368,7 @@ I följande Java-kodexempel läggs en PDF-fil med namnet *MortgageForm.pdf* till
 
 ## Snabbstart (SOAP-läge): Hämta innehåll från innehållstjänster med Java API (inaktuellt) {#quick-start-soap-mode-retrieve-content-from-content-services-using-the-java-api-deprecated}
 
-I följande Java-kodexempel hämtas en PDF-fil med namnet *MortgageForm.pdf* från /Company Home. PDF-filen sparas i det lokala filsystemet och heter *UpdatedMortgageForm.pdf*.
+I följande Java-kodexempel hämtas en PDF-fil med namnet *MortgageForm.pdf* från /Company Home. PDF-filen sparas i det lokala filsystemet och har namnet *UpdatedMortgageForm.pdf*.
 
 ```java
  /*
@@ -798,7 +798,7 @@ Följande Java-kod söker efter ett dokument som innehåller texten MortgageForm
 
 ## Snabbstart (SOAP-läge): Ange behörigheter för innehållstjänster med Java API (inaktuellt) {#quick-start-soap-mode-setting-content-services-permissions-using-the-java-api-deprecated}
 
-I följande Java-kodexempel anges en behörighet för en användare med namnet tony blue. Den angivna domänen är standarddomän. Konsumentbehörigheten anges och noden är `/Company Home/Test Directory`.
+I följande Java-kodexempel anges en behörighet för en användare med namnet tony blue. Den angivna domänen är standarddomän. Konsumentbehörigheten har angetts och noden är `/Company Home/Test Directory`.
 
 ```java
  /*
