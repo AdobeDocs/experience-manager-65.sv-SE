@@ -18,13 +18,13 @@ ht-degree: 0%
 ---
 
 
-# Skapa en anpassad verktygsfältslayout{#creating-custom-toolbar-layout}
+# Skapa anpassad verktygsfältslayout{#creating-custom-toolbar-layout}
 
 ## Verktygsfältslayouter {#layout}
 
 När du skapar ett anpassat formulär kan du ange en verktygsfältslayout för formuläret. Verktygsfältets layout definierar kommandona och layouten för verktygsfältet i formuläret.
 
-Verktygsfältslayouten använder i hög grad klientbearbetning som styrs av komplex JavaScript- och CSS-kod. Det kan vara komplicerat att organisera och optimera serveringen av koden. För att lösa det här problemet tillhandahåller AEM biblioteksmappar på klientsidan, som gör att du kan lagra din klientkod i databasen, ordna den i kategorier och definiera när och hur varje kodkategori ska skickas till klienten. Klientsidans bibliotekssystem tar sedan hand om att skapa rätt länkar på den slutliga webbsidan för att läsa in rätt kod. Mer information finns i [Så fungerar klientbibliotek i AEM.](/help/sites-developing/clientlibs.md)
+Verktygsfältslayouten använder i hög grad klientbearbetning som styrs av komplex JavaScript- och CSS-kod. Det kan vara komplicerat att organisera och optimera serveringen av koden. AEM tillhandahåller biblioteksmappar på klientsidan som du kan använda för att lagra din klientkod i databasen, ordna den i kategorier och definiera när och hur varje kodkategori ska skickas till klienten. Klientsidans bibliotekssystem tar sedan hand om att skapa rätt länkar på den slutliga webbsidan för att läsa in rätt kod. Mer information finns i [Hur klientbibliotek fungerar i AEM.](/help/sites-developing/clientlibs.md)
 
 ![Exempellayout för verktygsfältet](assets/default_toolbar_layout.png)
 
@@ -32,7 +32,7 @@ Exempellayout för verktygsfältet
 
 Adaptiva formulär har en uppsättning färdiga layouter:
 
-![Verktygsfältslayouter som finns färdiga ](assets/toolbar1.png)
+![Verktygsfältslayouter som finns färdiga  ](assets/toolbar1.png)
 
 Verktygsfältslayouter som finns färdiga
 
@@ -40,11 +40,12 @@ Dessutom kan du skapa en anpassad verktygsfältslayout.
 
 Följande procedur beskriver stegen för att skapa ett anpassat verktygsfält som visar tre åtgärder i verktygsfältet och de andra åtgärderna i en listruta i verktygsfältet.
 
-Det bifogade innehållspaketet innehåller hela koden som beskrivs nedan. När du har installerat innehållspaketet kan du öppna `/content/forms/af/CustomLayoutDemo.html` den anpassade demon av verktygsfältslayouten.
+Det bifogade innehållspaketet innehåller hela koden som beskrivs nedan. När du har installerat innehållspaketet öppnar du `/content/forms/af/CustomLayoutDemo.html` för att visa demonstrationen av den anpassade verktygsfältslayouten.
 
 CustomToolbarLayoutDemo.zip
 
-[Hämta anpassad layout för verktygsfältet Fildemo](assets/customtoolbarlayoutdemo.zip)
+[Hämta ](assets/customtoolbarlayoutdemo.zip)
+anpassad layout för verktygsfältet FileDemo
 
 ## Skapa en anpassad verktygsfältslayout {#layout-1}
 
@@ -56,17 +57,17 @@ CustomToolbarLayoutDemo.zip
 
    `/libs/fd/af/layouts/toolbar`
 
-   Kopiera till exempel `mobileFixedToolbarLayout` noden från `/libs/fd/af/layouts/toolbar` mappen till `/apps/customlayout/toolbar` mappen.
+   Kopiera till exempel noden `mobileFixedToolbarLayout` från mappen `/libs/fd/af/layouts/toolbar` till mappen `/apps/customlayout/toolbar`.
 
-   Kopiera också toolbarCommon.jsp till `/apps/customlayout/toolbar` mappen.
+   Kopiera också toolbarCommon.jsp till mappen `/apps/customlayout/toolbar`.
 
    >[!NOTE]
    >
-   >Mappen som du skapar för att behålla de anpassade layouterna har skapats med `apps` mappen.
+   >Mappen som du skapar för att behålla de anpassade layouterna har skapats med mappen `apps`.
 
-1. Byt namn på den kopierade noden `mobileFixedToolbarLayout`till `customToolbarLayout.`
+1. Byt namn på den kopierade noden, `mobileFixedToolbarLayout`, till `customToolbarLayout.`
 
-   Ange även en relevant beskrivning för noden. Ändra till exempel jcr:description för noden till **anpassad layout för verktygsfältet**.
+   Ange även en relevant beskrivning för noden. Ändra till exempel jcr:description för noden till **Anpassad layout för verktygsfältet**.
 
    Egenskapen `guideComponentType` för noden avgör layouttypen. I det här fallet är layouttypen ett verktygsfält och visas därför i listrutan för val av verktygsfältslayout.
 
@@ -74,7 +75,7 @@ CustomToolbarLayoutDemo.zip
 
    En nod med relevant beskrivning
 
-   Den nya anpassade verktygsfältslayouten visas i **verktygsfältets** dialogrutekonfiguration.
+   Den nya anpassade verktygsfältslayouten visas i **verktygsfältet för adaptiv form**-dialogrutans konfiguration.
 
    ![Lista över tillgängliga verktygsfältslayouter](assets/toolbar4.png)
 
@@ -86,7 +87,7 @@ CustomToolbarLayoutDemo.zip
 
 1. Välj den här anpassade verktygsfältslayouten och klicka på OK.
 
-   Lägg till clientlib (javascript och css) i noden och ta med referensen för clientlib i `/etc/customlayout` `customToolbarLayout.jsp`.
+   Lägg till clientlib (javascript och css) i noden `/etc/customlayout` och ta med referensen för clientlib i `customToolbarLayout.jsp`.
 
    ![Sökväg till filen customToolbarLayout.css](assets/toolbar_3.png)
 
