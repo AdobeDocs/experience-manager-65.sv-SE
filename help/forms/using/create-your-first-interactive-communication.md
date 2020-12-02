@@ -25,7 +25,7 @@ Lär dig skapa din första interaktiva kommunikation.
 
 Interactive Communications centraliserar och hanterar framtagning, sammanställning och leverans av säkra, personaliserade och interaktiva korrespondenser som affärskorrespondens, dokument, kontoutdrag, marknadsföringsmejl, räkningar och välkomstpaket. Interaktiv kommunikation kan levereras via två kanaler: Tryck och webb. Print-kanalen används för att skapa PDF:er och pappersdokument, medan webbkanalen används för att leverera onlineupplevelser.
 
-Den här självstudiekursen är ett komplett ramverk för interaktiv kommunikation. Självstudiekursen är indelad i ett användningsfall och i flera guider. Varje guide hjälper dig att skapa funktioner som används som byggstenar för att skapa en interaktiv kommunikation.
+Den här självstudiekursen är ett komplett ramverk för interaktiv kommunikation. Självstudiekursen är indelad i ett användningsfall och flera guider. Varje guide hjälper dig att skapa funktioner som används som byggstenar för att skapa en interaktiv kommunikation.
 
 Följande bild visar de byggstenar som krävs för att skapa ett interaktivt meddelande.
 
@@ -50,9 +50,9 @@ En telekomoperatör skickar månadsräkningar till kunderna via e-post. Fakturan
 ## Förutsättningar {#prerequisites}
 
 * Konfigurera en AEM författarinstans.
-* Installera [AEM Forms-tillägget](/help/forms/using/installing-configuring-aem-forms-osgi.md) på författarinstansen
+* Installera [AEM Forms add-on](/help/forms/using/installing-configuring-aem-forms-osgi.md) på författarinstansen
 * Konfigurera MYSQL-databasen
-* Hämta JDBC-databasdrivrutin (JAR-fil) från databasprovidern. Exemplen i självstudien är baserade på MySQL-databasen och använder Oracles JDBC-databasdrivrutin [](https://dev.mysql.com/downloads/connector/j/5.1.html)MySQL.
+* Hämta JDBC-databasdrivrutin (JAR-fil) från databasprovidern. Exemplen i självstudien är baserade på MySQL-databasen och använder Oracle [MySQL JDBC-databasdrivrutin](https://dev.mysql.com/downloads/connector/j/5.1.html).
 
 ## Steg 1: Planera interaktiv kommunikation {#step-plan-the-interactive-communication}
 
@@ -76,7 +76,7 @@ Så här skapar du en anatomi för den interaktiva kommunikationen med följande
 
 ![03-create-adaptive-form-main-image_small](assets/03-create-adaptive-form-main-image_small.png)
 
-Med en formulärdatamodell kan du koppla en interaktiv kommunikation till olika datakällor. Till exempel AEM användarprofil, RESTful-webbtjänster, SOAP-baserade webbtjänster, OData-tjänster och relationsdatabaser. En formulärdatamodell är ett enhetligt datarepresentationsschema för affärsenheter och tjänster som är tillgängliga i anslutna datakällor. Du kan använda formulärdatamodellen med en interaktiv kommunikation för att hämta data från anslutna datakällor. Mer information om formulärdatamodell finns i [AEM Forms-dataintegrering](/help/forms/using/data-integration.md).
+Med en formulärdatamodell kan du koppla en interaktiv kommunikation till olika datakällor. Till exempel AEM användarprofil, RESTful-webbtjänster, SOAP-baserade webbtjänster, OData-tjänster och relationsdatabaser. En formulärdatamodell är ett enhetligt datarepresentationsschema för affärsenheter och tjänster som är tillgängliga i anslutna datakällor. Du kan använda formulärdatamodellen med en interaktiv kommunikation för att hämta data från anslutna datakällor. Mer information om formulärdatamodell finns i [AEM Forms Data Integration](/help/forms/using/data-integration.md).
 
 **Mål:**
 
@@ -142,7 +142,7 @@ Interaktiv kommunikation kan levereras via två kanaler: Tryck och webb. Du kan 
 
    [ ![see-the-guide-sm](assets/see-the-guide-sm.png)](/help/forms/using/create-interactive-communication0.md)
 
-## Steg 6: Testa interaktiv kommunikation {#step-test-your-interactive-communication}
+## Steg 6: Testa din interaktiva kommunikation {#step-test-your-interactive-communication}
 
 ![11-test-your-adaptive-form](assets/11-test-your-adaptive-form.png)
 
