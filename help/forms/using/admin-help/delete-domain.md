@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: ec062567-1c6b-497b-a1e7-1dbac2d60852
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '109'
+ht-degree: 0%
 
 ---
 
@@ -21,6 +24,6 @@ Använd sidan Domänhantering för att markera en befintlig domän som föråldr
 
 Om du skapar en domän med samma namn som en borttagen domän återställs den borttagna domänen tillsammans med informationen som den innehåller. Det går inte att ta bort DefaultDom-domänen.
 
-1. I administrationskonsolen klickar du på **[!UICONTROL Inställningar > Användarhantering > Domänhantering]**.
-1. Markera kryssrutan för den domän som ska tas bort, klicka på **[!UICONTROL Ta bort]** och klicka sedan på **[!UICONTROL OK]**.
+1. Klicka på **[!UICONTROL Settings > User Management > Domain Management]** i administrationskonsolen.
+1. Markera kryssrutan för den domän som ska tas bort, klicka på **[!UICONTROL Delete]** och klicka sedan på **[!UICONTROL OK]**.
 
