@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Referensteman{#reference-themes}
 
-[Med teman](../../forms/using/themes.md) kan du formatera formulär utan djupa kunskaper om CSS. Förutom standardtemat kan du hämta följande teman genom att installera paketet [AEM-FORMS-REFERENCE-THEMES](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/fd/AEM-FORMS-6.3-REFERENCE-THEMES) :
+[Med ](../../forms/using/themes.md) teman kan du formatera formulär utan djupa kunskaper om CSS. Förutom standardtemat kan du hämta följande teman genom att installera paketet [AEM-FORMS-REFERENCE-THEMES](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/fd/AEM-FORMS-6.3-REFERENCE-THEMES):
 
 * Beryl
 * Kör
@@ -58,7 +58,7 @@ Exec-temat undviker heltäckande bakgrundsfyllningar för att framhäva formulä
 
 ](assets/exec-1.png)-->
 
-## Exec Light {#exec-light}
+## Kör ljus {#exec-light}
 
 Exec Light-temat använder tomrum för att skapa en sömlös upplevelse. Knapparna Nästa och Skicka ger en heltäckande fyllning och 3D-skugga. De markerade flikarna till vänster får en pil i stället för dubbelbockmarkeringar.
 
@@ -98,7 +98,7 @@ Ultramarintemat använder djupa blå skuggor för att framhäva komponenter som 
 
 ## Urbane {#urbane}
 
-Urbane-temat betonar ett minimalistiskt och funktionellt utseende på ditt formulär. När du använder Urbane-temat i ditt formulär ser du att komponenterna är platta. Panelerna får tunna konturer för att skapa ett modernt utseende.
+Urbane-temat framhäver ett minimalistiskt och funktionellt utseende på ditt formulär. När du använder Urbane-temat i ditt formulär ser du att komponenterna är platta. Panelerna får tunna konturer för att skapa ett modernt utseende.
 
 ![Urbantema](assets/urbane.png)
 
