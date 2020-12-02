@@ -1,8 +1,8 @@
 ---
 title: Startar och stoppar WebLogic-servern
 seo-title: Startar och stoppar WebLogic-servern
-description: Flera procedurer kräver att du startar eller stoppar instansen av WebLogic Server där du vill distribuera AEM-formulärmoduler. I det här dokumentet beskrivs hur du startar och stoppar WebLogic-servern.
-seo-description: Flera procedurer kräver att du startar eller stoppar instansen av WebLogic Server där du vill distribuera AEM-formulärmoduler. I det här dokumentet beskrivs hur du startar och stoppar WebLogic-servern.
+description: Flera procedurer kräver att du startar eller stoppar instansen av WebLogic Server där du vill distribuera AEM formulärmoduler. I det här dokumentet beskrivs hur du startar och stoppar WebLogic-servern.
+seo-description: Flera procedurer kräver att du startar eller stoppar instansen av WebLogic Server där du vill distribuera AEM formulärmoduler. I det här dokumentet beskrivs hur du startar och stoppar WebLogic-servern.
 uuid: 957787fe-4cea-4ecd-b49a-c33023c5c309
 contentOwner: admin
 content-type: reference
@@ -11,13 +11,16 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c908d064-6596-473a-b218-22a2496c83f7
 translation-type: tm+mt
 source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+workflow-type: tm+mt
+source-wordcount: '639'
+ht-degree: 0%
 
 ---
 
 
 # Startar och stoppar WebLogic-servern {#starting-and-stopping-weblogic-server}
 
-Flera procedurer kräver att du startar eller stoppar instansen av WebLogic Server där du vill distribuera AEM-formulärmoduler. Kontrollera att WebLogic Server har stoppats eller körs, beroende på vilken åtgärd du utför.
+Flera procedurer kräver att du startar eller stoppar instansen av WebLogic Server där du vill distribuera AEM formulärmoduler. Kontrollera att WebLogic Server har stoppats eller körs, beroende på vilken åtgärd du utför.
 
 <table>
  <thead>
@@ -40,7 +43,7 @@ Flera procedurer kräver att du startar eller stoppar instansen av WebLogic Serv
    <td><p>Körs</p></td>
   </tr>
   <tr>
-   <td><p>Distribuera AEM-formulärprodukter</p></td>
+   <td><p>Distribuera AEM formulärprodukter</p></td>
    <td><p>Körs</p></td>
   </tr>
  </tbody>
@@ -48,19 +51,19 @@ Flera procedurer kräver att du startar eller stoppar instansen av WebLogic Serv
 
 >[!NOTE]
 >
->Om du kör WebLogic Server på Red Hat® Enterprise Linux Advanced Server 4.0 anger du miljövariabeln till 2.4.19 med hjälp av `LD_ASSUME_KERNEL` `export LD_ASSUME_KERNEL=2.4.19` kommandot. Kör sedan WebLogic Server från samma gränssnitt där du anger den här systemvariabeln.
+>Om du kör WebLogic Server på Red Hat® Enterprise Linux Advanced Server 4.0 anger du miljövariabeln `LD_ASSUME_KERNEL` till 2.4.19 med kommandot `export LD_ASSUME_KERNEL=2.4.19`. Kör sedan WebLogic Server från samma gränssnitt där du anger den här systemvariabeln.
 
-## Starta WebLogic-server {#start-weblogic-server}
+## Starta WebLogic-servern {#start-weblogic-server}
 
-1. Gå till *[appserver root]*/user_projects/domains/*[appserverdomain]* från en kommandotolk.
+1. Gå till *[appserverroot]*/user_projects/domains/*[appserverdomain]* från en kommandotolk.
 1. Ange följande kommando:
 
    * (Windows) `startWebLogic.cmd`
    * (Linux, UNIX) ./ `startWebLogic.sh`
 
-## Stoppa WebLogic-server {#stop-weblogic-server}
+## Stoppa WebLogic-servern {#stop-weblogic-server}
 
-1. Starta administrationskonsolen för WebLogic Server genom att skriva `https://[host name]:7001/console` i URL-raden för en webbläsare.
+1. Starta administrationskonsolen för WebLogic Server genom att skriva `https://[host name]:7001/console` på URL-raden i en webbläsare.
 1. Logga in med det användarnamn och lösenord som användes när den här WebLogic-konfigurationen skapades och klicka sedan på Logga in.
 1. Klicka på Lås och redigera under Ändringscenter.
 1. Klicka på Miljö > Servrar under Domänstruktur.
@@ -73,18 +76,18 @@ Administrationskonsolen för WebLogic Server är inte längre tillgänglig och k
 
 ## Starta administrationskonsolen för WebLogic {#start-weblogic-administration-console}
 
-1. Om WebLogic Admin Server inte redan körs går du från en kommandotolk till *[katalogen appServer root]\user_projects\domains\[domainname]*och anger följande kommando:
+1. Om WebLogic Admin Server inte redan körs går du från en kommandotolk till katalogen *[appserver root]\user_projects\domains\[domainname]* och anger följande kommando:
 
    * (Windows) `startWebLogic.cmd`
    * (Linux, UNIX) ./ `startWebLogic.sh`
 
-1. Gå till administrationskonsolen för WebLogic Server genom att skriva `https://[host name]:[port]/console` i URL-raden för en webbläsare, där *[porten]* är den osäkra avlyssningsporten. Portvärdet är som standard 7001.
+1. Gå till administrationskonsolen för WebLogic Server genom att skriva `https://[host name]:[port]/console` på URL-raden i en webbläsare, där *[port]* är den osäkra avlyssningsporten. Portvärdet är som standard 7001.
 1. På inloggningsskärmen skriver du ditt administratörsanvändarnamn och lösenord och klickar på Logga in.
 
 ## Starta nodhanteraren {#start-node-manager}
 
 1. Kontrollera att WebLogic Server körs.
-1. Gå till *[appserverroten]*/servern/bin från en ny kommandotolk.
+1. Gå till *[appserver root]*/server/bin i en ny kommandotolk.
 1. Ange följande kommando:
 
    * (Windows) `startNodeManager.cmd`
@@ -101,7 +104,7 @@ När du har stängt av WebLogic Server kan du stänga den kommandotolk som du ka
 >Denna uppgift kan bara utföras när du har skapat en WebLogic-domän och en hanterad server.
 
 1. Kontrollera att WebLogic-servern och nodhanteraren körs.
-1. Starta administrationskonsolen för WebLogic-servern genom att skriva `https://host name]:[port]`/console&quot; på URL-raden i en webbläsare.
+1. Starta administrationskonsolen för WebLogic-servern genom att skriva `https://host name]:[port]`/console` på URL-raden i en webbläsare.
 1. Klicka på Miljö > Servrar under Domänstruktur.
 1. Klicka på fliken Kontroll i den högra rutan.
 1. Välj den hanterade server som du vill starta.
@@ -109,7 +112,7 @@ När du har stängt av WebLogic Server kan du stänga den kommandotolk som du ka
 
 ## Stoppa en WebLogic-hanterad server {#stop-a-weblogic-managed-server}
 
-1. Starta administrationskonsolen för WebLogic-servern genom att skriva `https://`*[värdnamnet]:[port ]*`/console`på URL-raden i en webbläsare.
+1. Starta administrationskonsolen för WebLogic-servern genom att skriva `https://`*[värdnamn]:[port ]*`/console` i URL-raden för en webbläsare.
 1. Klicka på Miljö > Servrar under Domänstruktur.
 1. Klicka på fliken Kontroll i den högra rutan.
 1. Markera den hanterade server som du vill stoppa.
