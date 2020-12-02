@@ -31,7 +31,7 @@ ContextHub installerar flera gränssnittslägen och gränssnittsmoduler. Din adm
 
 ![screen_shot_2018-03-23at093446](assets/screen_shot_2018-03-23at093446.png)
 
-## Visa verktygsfältet ContextHub {#revealing-the-contexthub-toolbar}
+## Visar ContextHub-verktygsfältet {#revealing-the-contexthub-toolbar}
 
 Verktygsfältet ContextHub är tillgängligt i förhandsgranskningsläget. Verktygsfältet är bara tillgängligt på författarinstanser och endast när administratören har aktiverat det.
 
@@ -45,11 +45,11 @@ Verktygsfältet ContextHub är tillgängligt i förhandsgranskningsläget. Verkt
 
    ![](do-not-localize/screen_shot_2018-03-23at093621.png)
 
-## Funktioner i gränssnittsmodul {#ui-module-features}
+## Funktioner för användargränssnittsmodul {#ui-module-features}
 
 Varje gränssnittsmodul innehåller olika uppsättningar funktioner, men följande typer av funktioner är vanliga. Eftersom gränssnittsmodulerna kan utökas kan utvecklaren implementera andra funktioner efter behov.
 
-### Innehåll i verktygsfält {#toolbar-content}
+### Verktygsfältsinnehåll {#toolbar-content}
 
 Gränssnittsmoduler kan visa data från en eller flera ContextHub-butiker i verktygsfältet. I gränssnittsmoduler används en ikon och en titel för att identifiera sig själva.
 
