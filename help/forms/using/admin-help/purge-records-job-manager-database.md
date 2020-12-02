@@ -1,8 +1,8 @@
 ---
 title: Rensa poster från Job Manager-databasen
 seo-title: Rensa poster från Job Manager-databasen
-description: Stora processdata kan ge lägre prestanda för AEM-formulär. Det är god praxis att rensa processdata när det inte längre behövs några poster.
-seo-description: Stora processdata kan ge lägre prestanda för AEM-formulär. Det är god praxis att rensa processdata när det inte längre behövs några poster.
+description: Stora processdata kan ge sämre prestanda AEM formulär. Det är god praxis att rensa processdata när det inte längre behövs några poster.
+seo-description: Stora processdata kan ge sämre prestanda AEM formulär. Det är god praxis att rensa processdata när det inte längre behövs några poster.
 uuid: cf214498-36e9-4dcc-b4d4-e7c46f80dbab
 contentOwner: admin
 content-type: reference
@@ -11,13 +11,16 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 69a406f2-4fa8-40bb-b671-7b0f5b6a2c4c
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '499'
+ht-degree: 0%
 
 ---
 
 
-# Rensa poster från Job Manager-databasen {#purge-records-from-the-job-manager-database}
+# Rensa poster från jobbhanterardatabasen {#purge-records-from-the-job-manager-database}
 
-Processdata som genereras när en långvarig process anropas kan bli för stora, vilket ger lägre prestanda för AEM-formulär och kräver onödigt diskutrymme. Det är god praxis att rensa processdata när det inte längre behövs några poster.
+Processdata som genereras när en långvarig process anropas kan bli för stora, vilket kan ge sämre prestanda för AEM och kräver onödigt diskutrymme. Det är god praxis att rensa processdata när det inte längre behövs några poster.
 
 Du kan använda administrationskonsolen för att rensa bort inaktuella poster en gång eller för att schemalägga regelbundna automatiska rensningar. Andra metoder för att rensa inaktuella poster beskrivs i [Rensa processdata](/help/forms/using/admin-help/purging-process-data.md#purging-process-data).
 
@@ -52,7 +55,7 @@ Information om eventuella schemalagda rensningar visas i rutan Information om sc
 **Konfigurera ett automatiskt rensningsschema**
 
 1. Välj Återskapa varje och ange antalet dagar eller veckor mellan tömningar.
-1. I området Töm slutförda poster anger du antalet dagar eller veckor efter vilka en post anses föråldrad och klar för rensning. Du kan inte ange värdet till `0`.
+1. I området Töm slutförda poster anger du antalet dagar eller veckor efter vilka en post anses föråldrad och klar för rensning. Du kan inte ange värdet `0`.
 
    >[!NOTE]
    >
@@ -62,7 +65,7 @@ Information om eventuella schemalagda rensningar visas i rutan Information om sc
 
    >[!NOTE]
    >
-   >Om du anger ett tidigare startdatum och en tidigare starttid, beräknas det logiska nästa startdatumet baserat på det angivna datumet i AEM-formuläret. Om du till exempel schemalägger att jobbtömningen ska ske varje vecka från den 7 april och nu är den 9 april, sker den första tömningen den 14 april.
+   >Om du anger ett tidigare startdatum och en tidigare starttid, beräknas det logiska nästa startdatum som baseras på det angivna datumet AEM formuläret. Om du till exempel schemalägger att jobbtömningen ska ske varje vecka från den 7 april och nu är den 9 april, sker den första tömningen den 14 april.
 
 1. Klicka på Starta schemaläggare. Tidigare schemalagda schemaläggningsinställningar ersätts med de nya inställningarna.
 
