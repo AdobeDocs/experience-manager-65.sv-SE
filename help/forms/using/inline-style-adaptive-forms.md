@@ -10,6 +10,9 @@ discoiquuid: 21dec713-c76d-408b-baea-fc585377b429
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 33f73225fbb2c48353c1f34db3339c0bb79d4236
+workflow-type: tm+mt
+source-wordcount: '556'
+ht-degree: 1%
 
 ---
 
@@ -18,12 +21,12 @@ source-git-commit: 33f73225fbb2c48353c1f34db3339c0bb79d4236
 
 Du kan definiera det övergripande utseendet och formatet för ett anpassat formulär genom att ange format med [temaredigeraren](../../forms/using/themes.md). Du kan också använda infogade CSS-format på enskilda adaptiva formulärkomponenter och förhandsgranska ändringarna direkt. Inline-format åsidosätter format som finns i temat.
 
-## Använda infogade CSS-egenskaper {#apply-inline-css-properties}
+## Använd infogade CSS-egenskaper {#apply-inline-css-properties}
 
 Så här lägger du till infogade format i en komponent:
 
-1. Öppna formuläret i formulärredigeraren och ändra läget till formateringsläge. Om du vill ändra läget till ett formateringsläge trycker du på ![arbetsytelistrutan](assets/canvas-drop-down.png) > **Format** i sidverktygsfältet.
-1. Markera en komponent på sidan och tryck på redigeringsknappens ![redigeringsknapp](assets/edit-button.png). Stilegenskaper öppnas i sidofältet.
+1. Öppna formuläret i formulärredigeraren och ändra läget till formateringsläge. Om du vill ändra läge till formateringsläge trycker du på ![arbetsytelistrutan](assets/canvas-drop-down.png) > **Format** i sidverktygsfältet.
+1. Markera en komponent på sidan och tryck på redigeringsknappen ![edit-button](assets/edit-button.png). Stilegenskaper öppnas i sidofältet.
 
    Du kan också välja komponenter från formulärhierarkiträdet i sidlisten. Formulärhierarkiträdet är tillgängligt som formulärobjekt i sidlisten.
 
@@ -33,7 +36,7 @@ Så här lägger du till infogade format i en komponent:
 
 1. Klicka på en flik i sidofältet för att ange CSS-egenskaper. Du kan ange egenskaper som:
 
-   * Mått och position (visningsinställning, utfyllnad, höjd, bredd, marginal, position, z-index, flyttal, klar, spill)
+   * Dimensioner och position (visningsinställning, utfyllnad, höjd, bredd, marginal, position, z-index, flyttal, klar, spill)
    * Text (teckensnittsfamilj, vikt, färg, storlek, radhöjd och justering)
    * Bakgrund (bild och övertoning, bakgrundsfärg)
    * Kant (bredd, stil, färg, radie)
