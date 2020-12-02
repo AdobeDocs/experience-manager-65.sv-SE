@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e83b1a59-a730-4d22-9d58-1c9c38e5d534
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '177'
+ht-degree: 0%
 
 ---
 
@@ -19,13 +22,13 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 Om du har installerat Connector for EMC Documentum måste du, förutom instruktionerna i det här kapitlet, även säkerhetskopiera (eller återställa) den dator där respektive ECM-system är installerat. (Se ECM Documentum-dokumentationen).
 
-Säkerhetskopiera din AEM-formulärmiljö med ECM-databasen och utför följande uppgifter:
+Säkerhetskopiera AEM genom att använda ECM-databasen och utföra följande uppgifter:
 
-* Säkerhetskopiera AEM-formulär enligt instruktionerna i det här dokumentet.
+* Säkerhetskopiera AEM genom att följa instruktionerna i det här dokumentet.
 * Säkerhetskopiera ECM Documentum-systemet genom att följa instruktionerna i [Säkerhetskopiera EMC Documentum Content Server](/help/forms/using/admin-help/backing-recovering-emc-documentum-repository.md#back-up-the-emc-documentum-content-server).
 
-Återställ AEM-formulärmiljön med ECM-databasen och utför följande uppgifter:
+Återställ AEM genom att använda ECM-databasen och utföra följande uppgifter:
 
 * Återställ respektive ECM-system genom att följa instruktionerna i [Återställ EMC Documentum Content Server](/help/forms/using/admin-help/backing-recovering-emc-documentum-repository.md#restore-the-emc-documentum-content-server).
-* Återställ AEM-formulär genom att följa instruktionerna i det här dokumentet.
+* Återställ AEM genom att följa instruktionerna i det här dokumentet.
 
