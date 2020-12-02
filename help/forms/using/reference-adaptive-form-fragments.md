@@ -1,8 +1,8 @@
 ---
 title: Referera till adaptiva formulärfragment
 seo-title: Referera till adaptiva formulärfragment
-description: 'AEM Forms innehåller adaptiva formulärfragment som du kan använda som resurser för att snabbt skapa ett formulär. '
-seo-description: 'AEM Forms innehåller adaptiva formulärfragment som du kan använda som resurser för att snabbt skapa ett formulär. '
+description: 'AEM Forms har adaptiva formulärfragment som du kan använda som resurser för att snabbt skapa ett formulär. '
+seo-description: 'AEM Forms har adaptiva formulärfragment som du kan använda som resurser för att snabbt skapa ett formulär. '
 uuid: 85401274-6691-4726-8b70-b93fd46de053
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
@@ -10,13 +10,16 @@ discoiquuid: a1229970-5a5a-4f76-a880-278f972587cc
 docset: aem65
 translation-type: tm+mt
 source-git-commit: a3ccb1ffe2b2e24c453afac8cf3efc098f393030
+workflow-type: tm+mt
+source-wordcount: '417'
+ht-degree: 0%
 
 ---
 
 
 # Referera till adaptiva formulärfragment{#reference-adaptive-form-fragments}
 
-[Anpassat formulärfragment](../../forms/using/adaptive-form-fragments.md) är en grupp fält eller en panel som innehåller en grupp fält som du kan använda när du skapar ett formulär. Du kan skapa ett formulär snabbt och enkelt. Du kan dra och släppa ett anpassat formulärfragment i ett formulär med hjälp av resursläsaren i sidofältet, och du kan redigera det i formulärredigeraren.
+[Anpassat ](../../forms/using/adaptive-form-fragments.md) formulärfragment är en grupp fält eller en panel som innehåller en grupp fält som du kan använda när du skapar ett formulär. Du kan skapa ett formulär snabbt och enkelt. Du kan dra och släppa ett anpassat formulärfragment i ett formulär med hjälp av resursläsaren i sidofältet, och du kan redigera det i formulärredigeraren.
 
 För formulärförfattare med adaptiv formatering finns referensfragment i AEM Forms-paketet [AEM-FORMS-6.3-REFERENCE-FRAGMENTS](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/fd/AEM-FORMS-6.3-REFERENCE-FRAGMENTS). Den innehåller följande fragment:
 
@@ -31,7 +34,7 @@ För formulärförfattare med adaptiv formatering finns referensfragment i AEM F
 * Villkor
 * Villkor med Klottra
 
-När du installerar paketet skapas en referensfragmentmapp med referensfragment under Formulär och dokument. Information om hur du installerar ett paket finns i [Arbeta med paket](/help/sites-administering/package-manager.md).
+När du installerar paketet skapas en referensfragmentmapp med referensfragment under Forms &amp; Documents. Information om hur du installerar ett paket finns i [Arbeta med paket](/help/sites-administering/package-manager.md).
 
 ![Alla fragment listas](assets/ootb-frags.png)
 
@@ -58,7 +61,7 @@ Inkluderar fält för att hämta telefonnummer och e-postadress.
 ## Kreditkortsinformation {#credit-card-information}
 
 Inkluderar fält för att samla in kreditkortsinformation som kan användas för att bearbeta betalningar.
-[ Fragment för ![kreditkortsinformation](assets/cc-info.png)](assets/cc-info-1.png)
+[ ![Information om kreditkort](assets/cc-info.png)](assets/cc-info-1.png)
 
 ## Aktuell anställning {#current-employment}
 
@@ -90,9 +93,9 @@ Inkluderar fält som fångar anställningshistorik. Det gör det möjligt att l�
 
 ](assets/emp-history-1.png)-->
 
-## Inkomster och utgifter {#income-expenditure}
+## Inkomst och utgifter {#income-expenditure}
 
-Inkluderar fält för att samla in månatligt kassaflöde och utgifter. Formulär som kräver att användaren anger ekonomiska uppgifter kan använda det här avsnittet för att hämta in inkomster och utgifter.
+Inkluderar fält för att samla in månatligt kassaflöde och utgifter. Forms som kräver att användare anger ekonomiska uppgifter kan använda detta fragment för att hämta in inkomster och utgifter.
 
 ![Inkomst- och utgiftsfragment](assets/income.png)
 
