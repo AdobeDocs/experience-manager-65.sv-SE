@@ -18,7 +18,7 @@ ht-degree: 5%
 ---
 
 
-# Skapa komponenterna  {#create-the-components}
+# Skapa komponenterna {#create-the-components}
 
 Exemplet med utökade komponenter använder kommentarsystemet, som i själva verket består av två komponenter
 
@@ -33,9 +33,9 @@ Båda komponenterna måste installeras, särskilt om du anpassar utseendet på e
 >
 >Många webbgruppsfunktioner innehåller redan ett kommentarssystem vars resourceType kan ändras för att referera till det utökade kommentarsystemet.
 
-## Skapa komponenten Kommentarer {#create-the-comments-component}
+## Skapa kommentarskomponenten {#create-the-comments-component}
 
-I de här riktningarna anges ett annat **gruppvärde** än `.hidden` så komponenten kan göras tillgänglig från komponentwebbläsaren (sidespark).
+I de här instruktionerna anges ett annat **Group**-värde än `.hidden` så att komponenten kan göras tillgänglig från komponentwebbläsaren (sidespark).
 
 Borttagningen av den automatiskt skapade JSP-filen beror på att HBS-standardfilen används i stället.
 
@@ -43,23 +43,23 @@ Borttagningen av den automatiskt skapade JSP-filen beror på att HBS-standardfil
 
 1. Skapa en plats för anpassade program:
 
-   * Markera `/apps` noden
+   * Välj noden `/apps`
 
-      * **Skapa mapp** med namnet **[!UICONTROL custom]**
-   * Markera `/apps/custom` noden
+      * **Skapa** mapp med namnet  **[!UICONTROL custom]**
+   * Välj noden `/apps/custom`
 
-      * **Skapa mapp** med namnet **[!UICONTROL components]**
+      * **Skapa** mapp med namnet  **[!UICONTROL components]**
 
 
-1. Markera `/apps/custom/components` noden
+1. Välj noden `/apps/custom/components`
 
    * **[!UICONTROL Create > Component...]**
 
-      * **Etikett**: *kommentarer*
-      * **Titel**: *Alt-kommentarer*
-      * **Beskrivning**: *Format för alternativa kommentarer*
-      * **Supertyp**: *social/gemensam/komponent/hbs/comments*
-      * **Grupp**: *Egen*
+      * **Etikett**:  *kommentarer*
+      * **Titel**:  *Alt-kommentarer*
+      * **Beskrivning**:  *Format för alternativa kommentarer*
+      * **Supertyp**:  *social/gemensam/komponent/hbs/comments*
+      * **Grupp**:  *Egen*
    * Välj **[!UICONTROL Next]**
    * Välj **[!UICONTROL Next]**
    * Välj **[!UICONTROL Next]**
@@ -68,7 +68,7 @@ Borttagningen av den automatiskt skapade JSP-filen beror på att HBS-standardfil
 
 1. Expandera noden som nyss skapades: `/apps/custom/components/comments`
 1. Välj **[!UICONTROL Save All]**
-1. Högerklicka `comments.jsp`
+1. Högerklicka på `comments.jsp`
 1. Välj **[!UICONTROL Delete]**
 1. Välj **[!UICONTROL Save All]**
 
@@ -76,20 +76,20 @@ Borttagningen av den automatiskt skapade JSP-filen beror på att HBS-standardfil
 
 ### Skapa den underordnade kommentarskomponenten {#create-the-child-comment-component}
 
-I de här instruktionerna anges **Gruppera** som `.hidden` bara den överordnade komponenten ska inkluderas på en sida.
+Dessa vägbeskrivningar ställer in **Grupp** till `.hidden` eftersom endast den överordnade komponenten ska inkluderas på en sida.
 
 Borttagningen av den automatiskt skapade JSP-filen beror på att HBS-standardfilen används i stället.
 
-1. Navigate to the `/apps/custom/components/comments` node
+1. Navigera till noden `/apps/custom/components/comments`
 1. Högerklicka på noden
 
    * Välj **[!UICONTROL Create] > **[!UICONTROL Component...]**
 
-      * **Etikett**: *kommentar*
-      * **Titel**: *Alt-kommentar*
-      * **Beskrivning**: *Alternativ kommentarsstil*
-      * **Supertyp**: *social/gemensam/komponent/hbs/comments/comment*
-      * **Grupp**: `*.hidden*`
+      * **Etikett**:  *kommentar*
+      * **Titel**:  *Alt-kommentar*
+      * **Beskrivning**:  *Alternativ kommentarsstil*
+      * **Supertyp**:  *social/gemensam/komponent/hbs/comments/comment*
+      * **Grupp**:  `*.hidden*`
    * Välj **[!UICONTROL Next]**
    * Välj **[!UICONTROL Next]**
    * Välj **[!UICONTROL Next]**
@@ -98,7 +98,7 @@ Borttagningen av den automatiskt skapade JSP-filen beror på att HBS-standardfil
 
 1. Expandera noden som nyss skapades: `/apps/custom/components/comments/comment`
 1. Välj **[!UICONTROL Save All]**
-1. Högerklicka `comment.jsp`
+1. Högerklicka på `comment.jsp`
 1. Välj **[!UICONTROL Delete]**
 1. Välj **[!UICONTROL Save All]**
 
@@ -106,20 +106,20 @@ Borttagningen av den automatiskt skapade JSP-filen beror på att HBS-standardfil
 
 ![chlimage_1-72](assets/chlimage_1-72.png)
 
-### Kopiera och ändra standard-HBS-skript {#copy-and-modify-the-default-hbs-scripts}
+### Kopiera och ändra standardskript för HBS {#copy-and-modify-the-default-hbs-scripts}
 
 Använda [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md):
 
 * Kopiera `comments.hbs`
 
    * Från [/libs/social/Commons/components/hbs/comments](http://localhost:4502/crx/de/index.jsp#/libs/social/commons/components/hbs/comments)
-   * To [/apps/custom/components/comments](http://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments)
+   * Till [/apps/custom/components/comments](http://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments)
 
 * Redigera `comments.hbs` till:
 
-   * Ändra värdet på `data-scf-component` attributet (~line 20):
+   * Ändra värdet för attributet `data-scf-component` (~rad 20):
 
-      * From `social/commons/components/hbs/comments`
+      * Från `social/commons/components/hbs/comments`
       * Till `/apps/custom/components/comments`
    * Ändra om du vill ta med den anpassade kommentarkomponenten (~line 75):
 
@@ -130,49 +130,49 @@ Använda [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)
 * Kopiera `comment.hbs`
 
    * Från [/libs/social/Commons/components/hbs/comments/comment](http://localhost:4502/crx/de/index.jsp#/libs/social/commons/components/hbs/comments/comment)
-   * To [/apps/custom/components/comments/comment](http://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment)
+   * Till [/apps/custom/components/comments/comment](http://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment)
 
 * Redigera `comment.hbs` till:
 
    * Ändra värdet på data-scf-component-attributet (~ line 19)
 
-      * From `social/commons/components/hbs/comments/comment`
+      * Från `social/commons/components/hbs/comments/comment`
       * Till `/apps/custom/components/comments/comment`
 
-* Markera `/apps/custom` nod
+* Välj `/apps/custom`-nod
 * Välj **[!UICONTROL Save All]**
 
-## Skapa en biblioteksmapp för klient {#create-a-client-library-folder}
+## Skapa en klientbiblioteksmapp {#create-a-client-library-folder}
 
-För att undvika att uttryckligen ta med det här klientbiblioteket kan kategorivärdet för standardkommentarsystemets clientlib användas ( `cq.social.author.hbs.comments`), men sedan inkluderas klientlib även för alla instanser av standardkomponenten.
+För att undvika att uttryckligen ta med det här klientbiblioteket kan kategorivärdet för standardkommentarsystemets klientlib användas ( `cq.social.author.hbs.comments`), men då inkluderas klientlib även för alla instanser av standardkomponenten.
 
 Använda [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md):
 
-* Markera `/apps/custom/components/comments` nod
+* Välj `/apps/custom/components/comments`-nod
 * Välj **[!UICONTROL Create Node]**
 
-   * **Namn**: `clientlibs`
-   * **Typ**: `cq:ClientLibraryFolder`
-   * Lägg till på **[!UICONTROL Properties]** flik:
+   * **Namn**:  `clientlibs`
+   * **Typ**:  `cq:ClientLibraryFolder`
+   * Lägg till på fliken **[!UICONTROL Properties]**:
 
-      * **Namn** `categories`**typ** `String`**värde** `cq.social.author.hbs.comments` `Multi`
-      * **Namn** `dependencies`**typ** `String`**värde** `cq.social.scf` `Multi`
+      * **** `categories` **** `String` **NameTypeValue** `cq.social.author.hbs.comments` `Multi`
+      * **** `dependencies` **** `String` **NameTypeValue** `cq.social.scf` `Multi`
 
 * Välj **[!UICONTROL Save All]**
-* Med `/apps/custom/components/comments/clientlib`noden markerad skapar du tre filer:
+* När `/apps/custom/components/comments/clientlib`s-noden är markerad skapar du 3 filer:
 
-   * **Namn**: `css.txt`
-   * **Namn**: `js.txt`
+   * **Namn**:  `css.txt`
+   * **Namn**:  `js.txt`
    * **Namn**: customcommentsystem.js
 
-* Ange &#39;customcommentsystem.js&#39; som innehåll i `js.txt`
+* Ange &#39;custom commentsystem.js&#39; som innehåll i `js.txt`
 * Välj **[!UICONTROL Save All]**
 
 ![chlimage_1-73](assets/chlimage_1-73.png)
 
-## Registrera SCF-modellen och vyn {#register-the-scf-model-view}
+## Registrera SCF-modellen och visa {#register-the-scf-model-view}
 
-När du utökar (åsidosätter) en SCF-komponent är resourceType annorlunda (overlay använder den relativa sökmekanismen som genomsöks `/apps` före `/libs` så att resourceType förblir densamma). Därför måste du skriva JavaScript (i klientbiblioteket) för att registrera SCF JS-modellen och visa för den anpassade resourceType.
+När du utökar (åsidosätter) en SCF-komponent är resourceType annorlunda (overlay använder den relativa sökfunktionen som söker igenom `/apps` före `/libs` så att resourceType förblir densamma). Därför måste du skriva JavaScript (i klientbiblioteket) för att registrera SCF JS-modellen och visa för den anpassade resourceType.
 
 Ange följande text som innehåll i `customcommentsystem.js`:
 
@@ -208,5 +208,5 @@ Ett sätt att göra detta är att
    * Välj **[!UICONTROL Activate Tree]**
    * Ange `Start Path` till `/apps/custom`
    * Avmarkera **[!UICONTROL Only Modified]**
-   * Markera **[!UICONTROL Activate]** knapp
+   * Välj knappen **[!UICONTROL Activate]**
 
