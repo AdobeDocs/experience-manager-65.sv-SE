@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Konfigurera SSL för WebSphere Application Server {#configuring-ssl-for-websphere-application-server}
+# Konfigurerar SSL för WebSphere Application Server {#configuring-ssl-for-websphere-application-server}
 
 I det här avsnittet beskrivs följande steg för att konfigurera SSL med IBM WebSphere Application Server.
 
@@ -37,15 +37,15 @@ För att aktivera SSL behöver WebSphere åtkomst till ett användarkonto i det 
    * (Linux och Sun Solaris) `useradd`
    * (IBM AIX) `mkuser`
 
-1. Ange den nya användarens lösenord genom att ange det `passwd` i kommandotolken.
+1. Ange den nya användarens lösenord genom att ange `passwd` i kommandotolken.
 1. (Linux och Solaris) Skapa en skugglösenordsfil genom att ange `pwconv` (utan parametrar) i kommandotolken.
 
    >[!NOTE]
    >
-   >(Linux och Solaris) För att säkerhetsregistret Local OS i WebSphere Application Server ska fungera måste det finnas en skugglösenordsfil. Skugglösenordsfilen har vanligtvis namnet **/etc/shadow** och baseras på filen /etc/password. Om skugglösenordsfilen inte finns inträffar ett fel när global säkerhet har aktiverats och användarregistret har konfigurerats som lokalt operativsystem.
+   >(Linux och Solaris) För att säkerhetsregistret Local OS i WebSphere Application Server ska fungera måste det finnas en skugglösenordsfil. Skugglösenordsfilen har vanligtvis namnet **/etc/shadow** och är baserad på filen /etc/password. Om skugglösenordsfilen inte finns inträffar ett fel när global säkerhet har aktiverats och användarregistret har konfigurerats som lokalt operativsystem.
 
 1. Öppna gruppfilen från katalogen /etc i en textredigerare.
-1. Lägg till användaren som du skapade i steg 2 i `root` gruppen.
+1. Lägg till användaren som du skapade i steg 2 i gruppen `root`.
 1. Spara och stäng filen.
 1. (UNIX med SSL aktiverat) Starta och stoppa WebSphere som rotanvändare.
 
@@ -57,14 +57,14 @@ För att aktivera SSL behöver WebSphere åtkomst till ett användarkonto i det 
 1. Skriv ett användarnamn och lösenord i rutorna och ange eventuell annan information som du behöver i de övriga rutorna.
 1. Avmarkera **Användaren måste ändra lösenordet vid nästa inloggning**, klicka på **Skapa** och klicka sedan på **Stäng**.
 1. Klicka på **Användare**, högerklicka på den användare du just skapade och välj **Egenskaper**.
-1. Klicka på fliken **Medlem** och sedan på **Lägg till**.
-1. I rutan Ange de objektnamn du vill markera `Administrators`klickar du på Kontrollera namn för att se till att gruppnamnet är korrekt.
-1. Klicka på **OK** och sedan på **OK** igen.
+1. Klicka på fliken **Medlem i** och klicka sedan på **Lägg till**.
+1. Skriv `Administrators` i rutan Ange de objektnamn som ska markeras och klicka på Kontrollera namn för att se till att gruppnamnet är korrekt.
+1. Klicka på **OK** och klicka sedan på **OK** igen.
 1. Välj **Start > Kontrollpanelen > Administrationsverktyg > Lokal säkerhetsprincip > Lokala profiler**.
 1. Klicka på Tilldelning av användarrättigheter, högerklicka sedan på Agera som en del av operativsystemet och välj Egenskaper.
 1. Klicka på **Lägg till användare eller grupp**.
-1. Skriv namnet på den användare som du skapade i steg 4 i rutan Ange de objektnamn som ska väljas, klicka på **Kontrollera namn** för att kontrollera att namnet är korrekt och klicka sedan på **OK**.
-1. Klicka på **OK** för att stänga funktionsmakrot som en del av dialogrutan Egenskaper för operativsystem.
+1. Skriv namnet på den användare som du skapade i steg 4 i rutan Ange de objektnamn som ska väljas, klicka på **Kontrollera namn** för att se till att namnet är korrekt och klicka sedan på **OK**.
+1. Klicka på **OK** för att stänga funktionsmakrot som en del av dialogrutan för operativsystemsegenskaper.
 
 ### Konfigurera WebSphere för att använda den nyskapade användaren som administratör {#configure-websphere-to-use-the-newly-created-user-as-administrator}
 
@@ -73,7 +73,7 @@ För att aktivera SSL behöver WebSphere åtkomst till ett användarkonto i det 
 1. Under Administrativ säkerhet väljer du **Administrativa användarroller**.
 1. Klicka på Lägg till och gör följande:
 
-   1. Type **&amp;ast;** i sökrutan och klicka på Sök.
+   1. Skriv **&amp;ast;** i sökrutan och klicka på sök.
    1. Klicka på **Administratör** under roller.
    1. Lägg till den nyskapade användaren i Mappad till roll och mappa den till Administratör.
 
@@ -83,11 +83,11 @@ För att aktivera SSL behöver WebSphere åtkomst till ett användarkonto i det 
 ## Aktivera administrativ säkerhet {#enable-administrative-security}
 
 1. I administrationskonsolen för WebSphere väljer du **Säkerhet > Global säkerhet**.
-1. Klicka på **guiden** Säkerhetskonfiguration.
+1. Klicka på **Guiden Säkerhetskonfiguration**.
 1. Kontrollera att kryssrutan **Aktivera programsäkerhet** är aktiverad. Klicka på **Nästa**.
 1. Välj **Federated databaser** och klicka på **Nästa**.
 1. Ange de autentiseringsuppgifter som du vill ange och klicka på **Nästa**.
-1. Click **Finish**.
+1. Klicka på **Slutför**.
 1. Starta om WebSphere-profilen.
 
    WebSphere börjar använda standardnyckelbehållaren och förtroendebutiken.
@@ -98,7 +98,7 @@ Du kan skapa förtroendelager och nyckelbehållare med hjälp av nyckelverktyget
 
 1. I administrationskonsolen för WebSphere väljer du **Säkerhet > SSL-certifikat och nyckelhantering**.
 1. Klicka på **Nyckelbehållare och certifikat** under Relaterade objekt.
-1. Kontrollera att **SSL-nyckelbehållare** är markerat i listrutan **Nyckelarkivanvändning** . Klicka på **Nytt**.
+1. I listrutan **Nyckelarkiv använder** kontrollerar du att **SSL-nyckelbehållare** är markerat. Klicka på **Nytt**.
 1. Ange ett logiskt namn och en beskrivning.
 1. Ange sökvägen där du vill att nyckelbehållaren ska skapas. Om du redan har skapat en nyckelbehållare via nyckelbehållaren anger du sökvägen till nyckelbehållarfilen.
 1. Ange och bekräfta lösenordet.
@@ -116,7 +116,7 @@ Du kan skapa förtroendelager och nyckelbehållare med hjälp av nyckelverktyget
 ## Använd anpassad nyckelbehållare och förtrostore på servern {#apply-custom-keystore-and-truststore-to-the-server}
 
 1. I administrationskonsolen för WebSphere väljer du **Säkerhet > SSL-certifikat och nyckelhantering**.
-1. Klicka på **Hantera säkerhetskonfiguration** för slutpunkt. Den lokala topologikartan öppnas.
+1. Klicka på **Hantera säkerhetskonfiguration för slutpunkt**. Den lokala topologikartan öppnas.
 1. Under Inkommande väljer du direkt underordnad nod.
 1. Välj **SSL-konfigurationer** under Relaterade objekt.
 1. Välj **NodeDefaultSSLSetting**.
@@ -127,11 +127,11 @@ Du kan skapa förtroendelager och nyckelbehållare med hjälp av nyckelverktyget
 
    Din profil kan nu köras med anpassade SSL-inställningar och ditt certifikat.
 
-## Aktivera stöd för AEM {#enabling-support-for-aem-forms-natives}
+## Aktivera stöd för AEM formulär native {#enabling-support-for-aem-forms-natives}
 
 1. I administrationskonsolen för WebSphere väljer du **Säkerhet > Global säkerhet**.
-1. Expandera **RMI/IIOP-säkerhet** i avsnittet Autentisering och klicka på **CSIv2-inkommande kommunikation**.
-1. Kontrollera att **SSL-stöd** är valt i listrutan Transport.
+1. Expandera **RMI/IIOP-säkerhet** i avsnittet Autentisering och klicka på **CSIv2 inkommande kommunikation**.
+1. Kontrollera att **SSL-supported** är markerat i listrutan Transport.
 1. Starta om WebSphere-profilen.
 
 ## Konfigurera WebSphere för att konvertera URL:er som börjar med https {#configuring-websphere-to-convert-urls-that-begins-with-https}
@@ -141,11 +141,11 @@ Om du vill konvertera en URL som börjar med https lägger du till ett signerarc
 **Skapa ett signerarcertifikat för en https-aktiverad webbplats**
 
 1. Kontrollera att WebSphere körs.
-1. Navigera till Signerarcertifikat i administrationskonsolen för WebSphere och klicka sedan på Säkerhet > SSL-certifikat och nyckelhantering > Nyckelarkiv och certifikat > NodeDefaultTrustStore > Signerarcertifikat.
+1. I administrationskonsolen för WebSphere navigerar du till signerarcertifikat och klickar sedan på Säkerhet > SSL-certifikat och nyckelhantering > Nyckelarkiv och certifikat > NodeDefaultTrustStore > Signerarcertifikat.
 1. Klicka på Hämta från port och utför följande åtgärder:
 
-   * Skriv URL-adressen i rutan Värd. For example, type `www.paypal.com`.
-   * Skriv i rutan Port `443`. Den här porten är standardport för SSL.
+   * Skriv URL-adressen i rutan Värd. Skriv till exempel `www.paypal.com`.
+   * I rutan Port skriver du `443`. Den här porten är standardport för SSL.
    * Skriv ett alias i rutan Alias.
 
 1. Klicka på Hämta signerarinformation och kontrollera sedan att informationen har hämtats.
@@ -163,10 +163,10 @@ IBM WebSphere tillåter inte flera anrop till ORB.init() när Global Security ä
 
 Utför följande steg för att ange att porten ska vara dynamisk och för att lösa problemet:
 
-1. I administrationskonsolen för WebSphere väljer du **Servrar** > **Servertyper** > **WebSphere-programserver**.
+1. I administrationskonsolen för WebSphere väljer du **Servrar** > **Servertyper** > **Webbplatsprogramserver**.
 1. Välj servern i avsnittet Inställningar.
-1. Expandera **portar** under **Kommunikation** på fliken **Konfiguration** och klicka på **Information**.
-1. Klicka på följande portnamn, ändra **portnumret** till 0 och klicka på **OK**.
+1. Expandera **Portar** under **Kommunikation** under fliken **Konfiguration** och klicka på **Information**.
+1. Klicka på följande portnamn, ändra **portnummer** till 0 och klicka på **OK**.
 
    * `ORB_LISTENER_ADDRESS`
    * `SAS_SSL_SERVERAUTH_LISTENER_ADDRESS`
@@ -175,8 +175,8 @@ Utför följande steg för att ange att porten ska vara dynamisk och för att l�
 
 ## Konfigurera filen sling.properties {#configure-the-sling-properties-file}
 
-1. Öppna `[aem-forms_root]`\crx-repository\launchpad\sling.properties för redigering.
-1. Leta reda på `sling.bootdelegation.ibm` egenskapen och lägg `com.ibm.websphere.ssl.*`till den i värdefältet. Det uppdaterade fältet ser ut så här:
+1. Öppna `[aem-forms_root]`\crx-repository\launchpad\sling.properties fil för redigering.
+1. Leta reda på egenskapen `sling.bootdelegation.ibm` och lägg till `com.ibm.websphere.ssl.*`i värdefältet. Det uppdaterade fältet ser ut så här:
 
    ```shell
    sling.bootdelegation.ibm=com.ibm.xml.*, com.ibm.websphere.ssl.*
