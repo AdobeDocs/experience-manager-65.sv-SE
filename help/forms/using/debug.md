@@ -24,7 +24,7 @@ Det här dokumentet innehåller flera felsökningsscenarier. För varje scenario
 
 ## Problem: När formuläret återges visas undantagssidan för org.apache.sling.api.SlingException {#problem-when-rendering-the-form-i-see-org-apache-sling-api-slingexception-exception-page}
 
-Sök efter ord **som** orsakats i undantagsinformationen.
+Sök efter ordet **som orsakas av** i undantagsinformationen.
 
 Den troliga orsaken är att en eller flera parametrar i URL:en är felaktiga.
 
@@ -46,7 +46,7 @@ Kontrollera följande parametrar:
   </tr>
   <tr>
    <td>dataRef</td>
-   <td>Absolut sökväg till datafilen som sammanfogas med mallen.<br /> Obs! Sökvägen definierar den absoluta sökvägen för datafilen.</td>
+   <td>Absolut sökväg för den datafil som sammanfogas med mallen.<br /> Obs! Sökvägen definierar den absoluta sökvägen för datafilen.</td>
   </tr>
   <tr>
    <td>data</td>
@@ -119,12 +119,12 @@ Kontrollera följande parametrar:
 
 1. Kontrollera att du har behörighet att komma åt AEM och att du är ansluten till servern.
 1. Kontrollera att parametern submitUrl är korrekt.
-1. Aktivera loggarna på klientsidan enligt [loggarna för HTML5-formulären](/help/forms/using/enable-logs.md) med felsökningsalternativet **1-a5-b5-c5**. Återge sedan formuläret och klicka på Skicka. Öppna webbläsarens felsökningskonsol och kontrollera om det finns något fel.
-1. Leta reda på serverloggarna som anges i [Logs för HTML5-formulären](/help/forms/using/enable-logs.md). Kontrollera om det uppstod något fel i serverloggarna under överföringen.
+1. Aktivera loggarna på klientsidan enligt [Loggar för HTML5-formulären](/help/forms/using/enable-logs.md) med felsökningsalternativet **1-a5-b5-c5**. Återge sedan formuläret och klicka på Skicka. Öppna webbläsarens felsökningskonsol och kontrollera om det finns något fel.
+1. Leta reda på serverloggarna enligt [Loggar för HTML5-formulären](/help/forms/using/enable-logs.md). Kontrollera om det uppstod något fel i serverloggarna under överföringen.
 
-## Problem: Lokaliserade felmeddelanden visas inte {#problem-localized-error-messages-do-not-display}
+## Problem: Lokaliserade felmeddelanden visar inte {#problem-localized-error-messages-do-not-display}
 
-1. Rendera formuläret med den extra frågeparametern **debugClientLibs=true** i webbläsaren på skrivbordet och gå sedan till Developer Tools -> Resources och sök efter filen I18N.css.
+1. Rendera formuläret med ytterligare frågeparameter **debugClientLibs=true** i webbläsaren på skrivbordet och gå sedan till Utvecklarverktyg -> Resurser och sök efter filen I18N.css.
 1. Om filen inte är tillgänglig loggar du in på CRX DE på https://&lt;server>:&lt;port>/crx/de.
 1. I mapphierarkin till vänster går du till /libs/fd/xfaforms/clientlibs/I18N och kontrollerar att följande filer och mappar finns:
 
@@ -132,7 +132,7 @@ Kontrollera följande parametrar:
    * LogMessages.js
    * Mappar för språk
 
-1. Om någon av filerna eller mapparna ovan inte finns installerar du paketet **adobe-lc-forms-runtime-pkg-&lt;version>.zip** igen.
+1. Om någon av filerna eller mapparna ovan inte finns installerar du **adobe-lc-forms-runtime-pkg-&lt;version>.zip**-paketet igen.
 1. Navigera till mappen som har samma namn som namnet på språkinställningen och kontrollera innehållet i den. Mappen måste innehålla följande filer:
 
    * I18N.js
@@ -150,7 +150,7 @@ Kontrollera följande parametrar:
 
 1. Kontrollera att bild-URL:en är korrekt.
 1. Kontrollera om webbläsaren stöder den här typen av bild.
-1. Sök efter ord **som** orsakats i undantagsinformationen.
+1. Sök efter ordet **som orsakas av** i undantagsinformationen.
 
    Den troliga orsaken är att en eller flera parametrar i URL:en är felaktiga.
 
@@ -164,7 +164,7 @@ Stega text
    <td><strong>Beskrivning</strong></td>
   </tr>
   <tr>
-   <td>template</td>
+   <td>mall</td>
    <td>Mallens filnamn</td>
   </tr>
   <tr>
@@ -173,7 +173,7 @@ Stega text
   </tr>
   <tr>
    <td>dataRef</td>
-   <td>Absolut sökväg till datafilen som sammanfogas med mallen.<br /> Obs! Sökvägen definierar den absoluta sökvägen för datafilen.</td>
+   <td>Absolut sökväg för den datafil som sammanfogas med mallen.<br /> Obs! Sökvägen definierar den absoluta sökvägen för datafilen.</td>
   </tr>
   <tr>
    <td>data</td>
