@@ -36,15 +36,15 @@ Följande snabbstarter är tillgängliga för tjänsten Task Manager.
 
 [Snabbstart (SOAP-läge): Hämta aktivitetsinformation med Java API](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-task-information-using-the-java-api)
 
-AEM Forms-åtgärder kan utföras med AEM Forms-API:t med stark typning och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
->Du kan inte söka efter uppgifter som tilldelats användare med hjälp av webbtjänstens API. Orsaken är att du inte kan anropa `taskList` metoden, som är ett nödvändigt metodanrop för att utföra den här åtgärden.
+>Du kan inte söka efter uppgifter som tilldelats användare med hjälp av webbtjänstens API. Orsaken är att du inte kan anropa metoden `taskList`, som är ett nödvändigt metodanrop för att utföra den här åtgärden.
 
 >[!NOTE]
 >
->Snabbstart i Programmering med AEM Forms är baserat på operativsystemet för Forms-servern. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>Snabbstart i Programmering med AEM Forms är baserat på Forms serveroperativsystem. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## Snabbstart (SOAP-läge): Tilldela uppgifter med Java API {#quick-start-soap-mode-assigning-tasks-using-the-java-api}
 
@@ -270,7 +270,7 @@ I följande Java-kodexempel låses en aktivitet som motsvarar aktivitetsidentifi
 
 ## Snabbstart (SOAP-läge): Hämta uppgifter som tilldelats användare med Java API {#quick-start-soap-mode-retrieving-tasks-assigned-to-users-using-the-java-api}
 
-I följande Java-kodexempel hämtas alla uppgifter som tilldelats en användare med namnet *tony blue*. Observera att den här användaren anges i anslutningsegenskaperna. Information om returnerade uppgifter, som identifierarvärde och beskrivning, visas.
+I följande Java-kodexempel hämtas alla uppgifter som tilldelats en användare med namnet *tonblå*. Observera att den här användaren anges i anslutningsegenskaperna. Information om returnerade uppgifter, som identifierarvärde och beskrivning, visas.
 
 ```java
  /*
@@ -502,7 +502,7 @@ I följande Java-kodexempel hämtas formulärdata från en uppgift med identifie
 
 ## Snabbstart (SOAP-läge): Ändra formulärdata med Java API {#quick-start-soap-mode-modifying-form-data-using-the-java-api}
 
-I följande Java-kodexempel uppdateras ett formulär med data som finns i *filen FormData.xml* .
+I följande Java-kodexempel uppdateras ett formulär med data som finns i filen *FormData.xml*.
 
 ```java
  /*
