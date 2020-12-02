@@ -154,9 +154,9 @@ Ett AEM Forms-program innehåller flera metadatavariabler (nyckelvärdepar). Du 
 
 Du kan också använda anpassade metadata i ett e-postmeddelande. Anpassade metadata innehåller information utöver systemgenererade metadata. Exempel: principinformation som hämtats från en databas. Du kan använda ett ECMAScript- eller OSGi-paket för att lägga till anpassade metadata i crx-databasen:
 
-### Använd ECMAScript för att lägga till anpassade metadata  {#use-ecmascript-to-add-custom-metadata}
+### Använd ECMAScript för att lägga till anpassade metadata {#use-ecmascript-to-add-custom-metadata}
 
-[ECMAScript](https://en.wikipedia.org/wiki/ECMAScript) är ett skriptspråk. Det används för skript och serverprogram på klientsidan. Utför följande steg för att använda ECMAScript för att lägga till anpassade metadata för en e-postmall:
+[](https://en.wikipedia.org/wiki/ECMAScript) ECMAScript är ett skriptspråk. Det används för skript och serverprogram på klientsidan. Utför följande steg för att använda ECMAScript för att lägga till anpassade metadata för en e-postmall:
 
 1. Logga in på CRX DE med ett administratörskonto. URL:en är https://&#39;[server]:[port]&#39;/crx/de/index.jsp
 
@@ -178,7 +178,7 @@ Du kan också använda anpassade metadata i ett e-postmeddelande. Anpassade meta
    }
    ```
 
-1. Klicka på Spara alla. Skriptet kan nu väljas i arbetsflödesmodellen AEM.
+1. Klicka på Spara alla. Nu kan skriptet väljas i AEM arbetsflödesmodell.
 
    ![tilldelningsuppgifter-metadata](assets/assigntask-metadata.png)
 
@@ -186,8 +186,8 @@ Du kan också använda anpassade metadata i ett e-postmeddelande. Anpassade meta
 
    Om du inte anger titeln visas den fullständiga sökvägen till ECMAScript-filen i fältet Egna metadata. Utför följande steg för att ange en beskrivande titel för skriptet:
 
-   1. Expandera skriptnoden, högerklicka på **[!UICONTROL jcr:content]** noden och klicka på **[!UICONTROL Mixins]**.
-   1. Textblandning:titel i dialogrutan Redigera mixar och klicka **+**.
+   1. Expandera skriptnoden, högerklicka på noden **[!UICONTROL jcr:content]** och klicka på **[!UICONTROL Mixins]**.
+   1. Skriv mix:title i dialogrutan Redigera mixar och klicka på **+**.
    1. Lägg till en egenskap med följande värden.
 
       | Namn | jcr:title |
@@ -199,7 +199,7 @@ Du kan också använda anpassade metadata i ett e-postmeddelande. Anpassade meta
 
 Du kan använda Java-gränssnittet WorkitemUserMetadataService för att lägga till anpassade metadata för e-postmallar. Du kan skapa ett OSGi-paket som använder Java-gränssnittet WorkitemUserMetadataService och distribuera det till AEM Forms-servern. Metadata blir tillgängliga för val i steget Tilldela uppgift.
 
-Om du vill skapa ett OSGi-paket med Java-gränssnitt lägger du till [AEM Forms Client SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) jar- och [granite jar](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/) -filer som externa beroenden i OSGi-paketprojektet. Du kan använda vilken Java-utvecklingsmiljö som helst för att skapa ett OSGi-paket. I följande procedur beskrivs hur du använder Eclipse för att skapa ett OSGi-paket:
+Om du vill skapa ett OSGi-paket med Java-gränssnitt lägger du till filerna [AEM Forms Client SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) jar och [granite jar](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/) som externa beroenden till OSGi-paketprojektet. Du kan använda vilken Java-utvecklingsmiljö som helst för att skapa ett OSGi-paket. I följande procedur beskrivs hur du använder Eclipse för att skapa ett OSGi-paket:
 
 1. Öppna Eclipse IDE. Navigera till Arkiv > Nytt projekt.
 
