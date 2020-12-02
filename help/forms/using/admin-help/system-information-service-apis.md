@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 79fccce2-d090-4b50-9c58-3f2a00e651b2
 translation-type: tm+mt
 source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+workflow-type: tm+mt
+source-wordcount: '352'
+ht-degree: 0%
 
 ---
 
@@ -31,7 +34,7 @@ Systeminformationstjänsten tillhandahåller en uppsättning REST API:er för at
   <tr>
    <td><p>SystemInfo.properties</p></td>
    <td><p>https://'[server]:[port]'/rest/services/SystemInfo.properties`</p></td>
-   <td><p>Detta API är en wrapper för Java API:t <a href="https://docs.oracle.com/javase/6/docs/api/java/lang/System.html#getProperties()">system.getProperties</a> . Den hämtar konfigurationen för den aktuella arbetsmiljön. </p></td>
+   <td><p>Detta API är en wrapper för Java API:t <a href="https://docs.oracle.com/javase/6/docs/api/java/lang/System.html#getProperties()">system.getProperties</a>. Den hämtar konfigurationen för den aktuella arbetsmiljön. </p></td>
   </tr>
   <tr>
    <td><p>SystemInfo.envVar</p></td>
@@ -51,10 +54,10 @@ Systeminformationstjänsten tillhandahåller en uppsättning REST API:er för at
   <tr>
    <td><p>SystemInfo.services</p></td>
    <td><p>https://'[server]:[port]'/rest/services/ SystemInfo.services</p></td>
-   <td><p>Hämtar status- och konfigurationsparametrar för AEM-formulärtjänster.</p></td>
+   <td><p>Hämtar status- och konfigurationsparametrar för AEM formulärtjänster.</p></td>
   </tr>
   <tr>
-   <td><p>SystemInfo.essentialDetails</p></td>
+   <td><p>SystemInfo.vitalDetails</p></td>
    <td><p>https://'[server]:[port]'/rest/services/ SystemInfo.essentialDetails</p></td>
    <td><p>Hämtar serverns drifttid, JVM-argument, systemminne, stackstorlek, operativsystemets namn, antal aktiva trådar och trådantal. </p></td>
   </tr>
@@ -85,7 +88,7 @@ Systeminformationstjänsten tillhandahåller en uppsättning REST API:er för at
   <tr>
    <td><p>SystemInfo.licenseInfo</p></td>
    <td><p>https://'[server]:[port]'/rest/services/ SystemInfo.licenseInfo</p></td>
-   <td><p>Hämtar versions- och licensinformation för installerade AEM-formulärkomponenter. </p></td>
+   <td><p>Hämtar versions- och licensinformation för installerade AEM. </p></td>
   </tr>
   <tr>
    <td><p>SystemInfNo.serverConfig</p></td>
