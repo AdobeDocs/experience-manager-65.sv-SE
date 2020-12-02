@@ -26,7 +26,7 @@ Så här lägger du till en aktiveringsresurs på den nya communitywebbplatsen:
 
 * Logga in som systemadministratör på författarinstansen:
    * Till exempel [http://localhost:4502/](http://localhost:4503/)
-* Välj **[!UICONTROL Communities]** > **[!UICONTROL Resources]**
+* Välj **[!UICONTROL Communities]** > **[!UICONTROL Resources]** från global navigering
 
    ![resurser](assets/resources.png)
 
@@ -74,7 +74,7 @@ Fyll i grundläggande information för resursen:
 
 Det ser ut som om flera resurser kan väljas, men bara en är tillåten.
 
-Markera `'+' icon`i det övre högra hörnet när du vill börja välja resursen genom att identifiera källan.
+Välj `'+' icon` i det övre högra hörnet för att börja välja resursen genom att identifiera källan.
 
 ![add-content](assets/add-content.png)
 
@@ -94,7 +94,7 @@ Markera `'+' icon`i det övre högra hörnet när du vill börja välja resursen
 
 * **[!UICONTROL Due Date]**
 
-   *(Valfritt)* Ett datum då uppdraget ska vara slutfört kan väljas.
+   *(Valfritt)*  Ett datum då uppdraget ska vara slutfört kan väljas.
 
 * **[!UICONTROL Resource Author]**
 
@@ -102,13 +102,13 @@ Markera `'+' icon`i det övre högra hörnet när du vill börja välja resursen
 
 * **[!UICONTROL Resource Contact&ast;]**
 
-   *(Obligatoriskt)* Använd listrutan för att välja medlem `Quinn Harper`.
+   *(Obligatoriskt)* Använd listrutan för att välja medlem  `Quinn Harper`.
 
 * **[!UICONTROL Resource Expert]**
 
    *(Valfritt)* Lämna tomt.
 
-   **Obs**: Om användare eller grupper inte visas kontrollerar du att de har lagts till i `Community Enable Members` gruppen och *sparats* i publiceringsinstansen.
+   **Obs**: Om användare eller grupper inte visas kontrollerar du att de har lagts till i  `Community Enable Members` gruppen och  ** sparats i publiceringsinstansen.
 
    ![enablement-settings](assets/enablement-settings.png)
 
@@ -134,7 +134,7 @@ Om du vill överföra en ny version av aktiveringsresursen rekommenderar vi att 
 
 Innan registrerare kan se den tilldelade kursen måste den publiceras:
 
-* Välj World `Publish` icon
+* Välj ikonen `Publish` för världen
 
 Aktiveringen har bekräftats med ett meddelande:
 
@@ -158,7 +158,7 @@ Gå tillbaka till självstudiekursen om aktivering av dess resurser.
 
 En inlärningsväg är en logisk gruppering av aktiveringsresurser som utgör en kurs.
 
-* I resurskonsolen väljer du `+ Create`
+* Välj `+ Create` från resurskonsolen
 * Välj **[!UICONTROL Learning Path]**
 
 ![add-learning-path](assets/add-learning-path.png)
@@ -191,7 +191,7 @@ Hoppa över nästa panel eftersom det inte finns några nödvändiga inlärnings
 
 På panelen Lägg till resurser:
 
-* Välj `+ Add Resources` att välja de två skidlektionsresurserna som ska läggas till i inlärningsbanan.
+* Välj `+ Add Resources` om du vill välja de två skidsessionerna som ska läggas till i inlärningsvägen.
 
    Obs! Endast **publicerade** resurser kan markeras.
 
@@ -211,11 +211,11 @@ På panelen Lägg till resurser:
 
 * **[!UICONTROL Add Assignees]**
 
-   Använd listrutemenyn för att markera `Community Ski Class` gruppen som ska innehålla medlemmar `Riley Taylor` och `Sidney Croft.`
+   Använd listrutan för att välja gruppen `Community Ski Class` som ska innehålla medlemmarna `Riley Taylor` och `Sidney Croft.`
 
 * **[!UICONTROL Learning Path Contact&ast;]**
 
-   *(Obligatoriskt)* Använd listrutan för att välja medlem `Quinn Harper`.
+   *(Obligatoriskt)* Använd listrutan för att välja medlem  `Quinn Harper`.
 
 * Välj **[!UICONTROL Create]**.
 
