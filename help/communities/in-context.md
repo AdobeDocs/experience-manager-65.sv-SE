@@ -18,15 +18,15 @@ ht-degree: 0%
 ---
 
 
-# Sammanhangsbaserad moderering {#in-context-moderation}
+# Kontextmoderering {#in-context-moderation}
 
 För AEM Communities kan moderering utföras av administratörer och betrodda communitymedlemmar direkt på den publicerade sidan där communityinnehållet publicerades.
 
-När du använder en [modereringskonsol](moderation.md)innehåller den information som visas för innehållet en länk till den publicerade sidan som ger åtkomst till ytterligare modereringsåtgärder som är tillgängliga vid moderering i sitt sammanhang.
+När du använder en [moderationskonsol](moderation.md) innehåller den information som visas för innehållet en länk till den publicerade sidan som ger åtkomst till ytterligare modereringsåtgärder som är tillgängliga vid moderering i kontext.
 
 ## Modereringsåtgärder {#moderation-actions}
 
-Besök modereringsöversikten för en beskrivning av [modereringsåtgärder](moderate-ugc.md#moderation-actions).
+På modereringsöversikten finns en beskrivning av [modereringsåtgärder](moderate-ugc.md#moderation-actions).
 
 ## Modereringsgränssnitt {#moderation-ui}
 
@@ -40,11 +40,11 @@ Användargränssnittet som visas för moderatorn i publiceringsinstansen finns i
 
 ## Exempel {#example}
 
-Med hjälp av den [Geometrixx Engage](http://localhost:4503/content/sites/engage/en.html) -webbplats som skapades när du [kom igång med AEM Communities](getting-started.md)kan du snabbt konfigurera en tråd i ett forum där du kan uppleva olika modereringsaktiviteter i publiceringsmiljön, vilket visas nedan.
+Med hjälp av [Geometrixx Engage](http://localhost:4503/content/sites/engage/en.html)-webbplatsen som skapades när [Komma igång med AEM Communities](getting-started.md) går det snabbt att konfigurera en tråd i ett forum där olika modereringsaktiviteter i publiceringsmiljön kan användas, vilket visas nedan.
 
 Aaron McDonald (aaron.mcdonald@mailinator.com) identifierades som en betrodd community-medlem genom att han lades till i gruppen community-engage-moderators när webbplatsen skapades.
 
-Rebekah Larsen (rebekah.larsen@trashymail.com) kan läggas till som medlem i en community-engage-members-grupp med hjälp av [medlemskonsolen](members.md).
+Rebekah Larsen (rebekah.larsen@trashymail.com) kan läggas till som medlem i en community-engage-members-grupp med [Medlemskonsolen](members.md).
 
 Mer information om användargrupper finns på [Hantera användare och användargrupper](users.md).
 
@@ -60,7 +60,7 @@ Mer information om användargrupper finns på [Hantera användare och användarg
 
    * Ange brödtexten
 
-      Jag har inte haft så stor framgång när jag hänger upp en matare för en hummeringfågel varje år. De verkar komma en dag eller två, då är det klart. Jag ändrar det en gång i veckan är det för långt? Måste jag ändra den tidigare?
+      Jag har inte haft så stor framgång när jag har lagt på en matare till en luftfågel varje år. De verkar komma en dag eller två, då är det klart. Jag ändrar det en gång i veckan är det för långt? Måste jag ändra den tidigare?
 
    * Välj inlägg
    * Välj Logga ut
@@ -97,9 +97,9 @@ En anonym besökare kan endast visa forumet, men inte publicera något innehåll
 
 ### Ny medlem (#4) {#new-member}
 
-Logga in som administratör och lägg till Boyd Larsen (boyd.larsen@dodgit.com) som ny medlem i en community-engage-members-grupp med hjälp av [medlemskonsolen](members.md). Logga sedan ut.
+Logga in som administratör och lägg till Boyd Larsen (boyd.larsen@dodgit.com) som ny medlem i en community-engage-members-grupp med [Medlemskonsolen](members.md) och logga sedan ut.
 
-Vid publicering loggar du in som Boyd Larsen och öppnar tråden genom att välja `Forum`och sedan `Read more` för den hummerande fågelposten.
+Vid publicering loggar du in som Boyd Larsen och öppnar tråden genom att välja `Forum` och sedan `Read more` för den hummingbird-posten.
 
 Obs!
 
@@ -124,7 +124,7 @@ Obs!
 
 ![community-admin-forum](assets/community-admin-forum.png)
 
-Välj menyalternativet Administration om du vill öppna [moderationskonsolen](moderation.md) från publiceringsmiljön.
+Välj menyalternativet Administration om du vill få åtkomst till [moderationskonsolen](moderation.md) från publiceringsmiljön.
 
 Observera att för en administratör är allt modereringsbart innehåll synligt, inte bara innehåll från Geometrixx Engage Community-webbplatsen.
 
@@ -134,7 +134,7 @@ Logga ut.
 
 ![moderation-console-publish](assets/moderation-console-publish.png)
 
-### Community Moderator (#2) {#community-moderator}
+### Community-moderator (#2) {#community-moderator}
 
 Logga in som Aaron McDonald (aaron.mcdonal@mailinator.com), som är moderator i communityn, och gå till tråden genom att välja Forum och sedan Läs mer för den hummingbird-posten.
 
@@ -147,11 +147,11 @@ Obs!
 
 ![community-forum-moderator](assets/community-forum-moderator.png)
 
-Välj menyalternativet Administration om du vill öppna [moderationskonsolen](moderation.md) från publiceringsmiljön.
+Välj menyalternativet Administration om du vill få åtkomst till [moderationskonsolen](moderation.md) från publiceringsmiljön.
 
-Observera att för en community-moderator är endast moderatbart innehåll från Geometrixx Engage-communitywebbplatsen synligt.
+Observera att för en community-moderator är det bara moderatorbart innehåll från Geometrixx Engage community-webbplatsen som visas.
 
-Observera att community-moderatorn har samma alternativ som administratören (bilden är när söksidofältet är stängt), men ingen åtkomst till andra AEM-konsoler.
+Observera att community-moderatorn har samma alternativ som administratören (bilden är när söksidofältet är stängt), men ingen åtkomst till andra AEM.
 
 Logga ut.
 
