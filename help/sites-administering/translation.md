@@ -13,27 +13,30 @@ docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/third-party-services/machine-translation
 translation-type: tm+mt
 source-git-commit: 8b53e79e3a88f58423e99477db930a4912a1ba09
+workflow-type: tm+mt
+source-wordcount: '267'
+ht-degree: 0%
 
 ---
 
 
-# Översätta innehåll för flerspråkiga webbplatser {#translating-content-for-multilingual-sites}
+# Översätter innehåll för flerspråkiga webbplatser {#translating-content-for-multilingual-sites}
 
-Automatisera översättning av sidinnehåll, resurser och användargenererat innehåll för att skapa och underhålla flerspråkiga webbplatser. Om du vill automatisera översättningsarbetsflöden integrerar du översättningstjänster med AEM och skapar projekt för översättning av innehåll till flera språk. AEM har stöd för arbetsflöden för översättning mellan människor och datorer.
+Automatisera översättning av sidinnehåll, resurser och användargenererat innehåll för att skapa och underhålla flerspråkiga webbplatser. Om du vill automatisera arbetsflöden för översättning integrerar du översättare med AEM och skapar projekt för översättning av innehåll till flera språk. AEM har stöd för arbetsflöden för översättning mellan människor och datorer.
 
-* Översättning: Innehållet skickas till översättningsleverantören och översätts av professionella översättare. När det är klart returneras det översatta innehållet och importeras till AEM. När din översättningsleverantör är integrerad med AEM skickas innehåll automatiskt mellan AEM och översättningsleverantören.
+* Översättning: Innehållet skickas till översättningsleverantören och översätts av professionella översättare. När det är klart returneras det översatta innehållet och importeras till AEM. När översättningsleverantören är integrerad med AEM skickas innehåll automatiskt mellan AEM och översättningsleverantören.
 * Maskinöversättning: Maskinöversättningstjänsten översätter ditt innehåll omedelbart.
 
 Översättning av innehåll omfattar följande steg:
 
-1. [Anslut AEM till din översättningstjänst](/help/sites-administering/tc-tic.md#connecting-to-a-translation-service-provider) och [skapa konfigurationer](/help/sites-administering/tc-tic.md)för översättningsintegrering.
-1. [Associera sidorna på din språkinställning](/help/sites-administering/tc-tic.md#configuring-pages-for-translation) med översättningstjänsten och ramverkskonfigurationerna.
-1. [Identifiera vilken typ av innehåll](/help/sites-administering/tc-rules.md) som ska översättas.
-1. [Förbered innehållet för översättning](/help/sites-administering/tc-prep.md) genom att skapa språkinställningen och skapa rotsidorna för språkkopior.
-1. [Skapa översättningsprojekt](/help/sites-administering/tc-manage.md) för att samla in innehållet som ska översättas och förbereda översättningsprocessen.
+1. [Koppla AEM med översättningstjänsten ](/help/sites-administering/tc-tic.md#connecting-to-a-translation-service-provider) och  [skapa konfigurationer](/help/sites-administering/tc-tic.md) för översättningsintegrering.
+1. [Koppla sidorna i ditt språk till ](/help/sites-administering/tc-tic.md#configuring-pages-for-translation) översättningstjänsten och ramverkskonfigurationerna.
+1. [Identifiera vilken typ av ](/help/sites-administering/tc-rules.md) innehåll som ska översättas.
+1. [Förbered innehållet för ](/help/sites-administering/tc-prep.md) översättning genom att skapa språket överordnad och skapa rotsidorna för språkkopior.
+1. [Skapa översättningsprojekt ](/help/sites-administering/tc-manage.md) för att samla in det innehåll som ska översättas och förbereda översättningsprocessen.
 1. Använd översättningsprojekten för att [hantera innehållsöversättningsprocessen](/help/sites-administering/tc-manage.md).
 
-Om din översättningstjänst inte har någon koppling till integrationen med AEM, kan AEM extrahera och återinfoga översättningsinnehåll manuellt i XML-format.
+Om översättningstjänsten inte har någon koppling till AEM stöder AEM manuell extrahering och återinfogning av översättningsinnehåll i XML-format.
 
 >[!NOTE]
 >
@@ -41,4 +44,4 @@ Om din översättningstjänst inte har någon koppling till integrationen med AE
 
 ## Bästa praxis {#best-practices}
 
-Sidan [Översättningsmetodtips](/help/sites-administering/tc-bp.md) innehåller viktig information om implementeringen.
+Sidan [Bästa praxis för översättning](/help/sites-administering/tc-bp.md) innehåller viktig information om implementeringen.
