@@ -19,13 +19,13 @@ ht-degree: 0%
 ---
 
 
-# Communities-meddelanden {#communities-notifications}
+# Communities Notifications {#communities-notifications}
 
 ## Översikt {#overview}
 
 AEM Communities tillhandahåller ett meddelandeavsnitt som visar händelser av intresse för den signerade communitymedlemmen.
 
-Meddelanden liknar [aktiviteter](/help/communities/essentials-activities.md) och [prenumerationer](/help/communities/subscriptions.md) eftersom de kan härröra från:
+Meddelanden liknar [aktiviteter](/help/communities/essentials-activities.md) och [prenumerationer](/help/communities/subscriptions.md) eftersom de kan vara ett resultat av:
 
 * Medlemmens bokföringsinnehåll.
 * Medlemmen väljer att följa en annan medlem.
@@ -36,7 +36,7 @@ Det som skiljer meddelanden från aktiviteter och prenumerationer är:
 
 * En länk till meddelandeavsnittet finns alltid i en communitysajts rubrik:
 
-   * Aktiviteter kräver att [aktivitetsströmsfunktionen](/help/communities/functions.md#activity-stream-function) inkluderas i communityplatsens struktur.
+   * Aktiviteter kräver att funktionen [aktivitetsström](/help/communities/functions.md#activity-stream-function) inkluderas i communityplatsens struktur.
    * Prenumerationer kräver [konfigurering av e-post](/help/communities/email.md).
 
 * Implementeringen av meddelanden sker via skalbara och anslutningsbara kanaler:
@@ -44,9 +44,9 @@ Det som skiljer meddelanden från aktiviteter och prenumerationer är:
    * Aktiviteter är bara tillgängliga på webben.
    * Prenumerationer är bara tillgängliga via e-post.
 
-Från och med Communities [FP1](/help/communities/deploy-communities.md#latestfeaturepack)är de tillgängliga meddelandekanalerna:
+Från och med Communities [FP1](/help/communities/deploy-communities.md#latestfeaturepack) är de tillgängliga meddelandekanalerna:
 
-* Webbkanalen som du kommer åt via `Notifications` länken.
+* Webbkanalen som nås via länken `Notifications`.
 * E-postkanalen, som är tillgänglig när e-post har konfigurerats korrekt.
 
 Framtida kanaler är mobila och stationära.
@@ -61,11 +61,11 @@ Instruktioner om hur du konfigurerar e-post finns i [Konfigurera e-post](/help/c
 
 **Aktivera Följ**
 
-Komponenter måste konfigureras för att aktivera följande. Funktioner som tillåter följande är [blogg](/help/communities/blog-feature.md), [forum](/help/communities/forum.md), [QnA](/help/communities/working-with-qna.md), [kalender](/help/communities/calendar.md), [filbibliotek](/help/communities/file-library.md)[](/help/communities/comments.md)och¥comments.
+Komponenter måste konfigureras för att aktivera följande. Följande funktioner tillåter [blogg](/help/communities/blog-feature.md), [forum](/help/communities/forum.md), [QnA](/help/communities/working-with-qna.md), [kalender](/help/communities/calendar.md), [filelibrary](/help/communities/file-library.md) och [kommentarer](/help/communities/comments.md).
 
 **Obs**:
 
-* Komponenter som används i [communitymallar](/help/communities/sites.md) och [gruppmallar](/help/communities/tools-groups.md) kanske redan är konfigurerade att följa efter.
+* Komponenter som används i community [webbplatsmallar](/help/communities/sites.md) och [gruppmallar](/help/communities/tools-groups.md) kan redan vara konfigurerade att följa efter.
 
 * Medlemsprofiler är redan konfigurerade så att andra medlemmar kan följa efter.
 
@@ -73,9 +73,9 @@ Komponenter måste konfigureras för att aktivera följande. Funktioner som till
 
 ![meddelanden](assets/notifications.png)
 
-Med knappen **[!UICONTROL Follow]** kan du följa upp tävlingsbidrag som aktiviteter, prenumerationer och/eller meddelanden. Varje gång knappen är markerad går det att aktivera eller inaktivera en markering. **[!UICONTROL Follow]** Markeringen visas bara när den är konfigurerad. `Email Subscriptions`
+Med knappen **[!UICONTROL Follow]** kan du följa upp aktiviteter, prenumerationer och/eller meddelanden. Varje gång knappen **[!UICONTROL Follow]** är markerad går det att aktivera eller inaktivera en markering. Markeringen `Email Subscriptions` finns bara när den är konfigurerad.
 
-Om någon av följande metoder är markerad ändras knappens text till **[!UICONTROL Following]**. Du kan välja `Unfollow All` att inaktivera alla metoder.
+Om någon av följande metoder är markerad ändras knappens text till **[!UICONTROL Following]**. Du kan av praktiska skäl välja `Unfollow All` för att inaktivera alla metoder.
 
 Knappen **[!UICONTROL Follow]** visas:
 
@@ -94,39 +94,39 @@ Genom att välja länken Meddelandeinställningar på meddelandesidan kan varje 
 
 Webbkanalen är alltid aktiverad.
 
-![notifications14](assets/notifications1.png)
+![meddelanden14](assets/notifications1.png)
 
-E-postkanalen, som bygger på rätt [konfiguration av e-post](/help/communities/email.md), ger samma inställningar som för webbkanalen.
+E-postkanalen, som är beroende av rätt [konfiguration av e-post](/help/communities/email.md), innehåller samma inställningar som för webbkanalen.
 
 E-postkanalen är inaktiverad som standard.
 
-![notifications2](assets/notifications2.png)
+![meddelanden2](assets/notifications2.png)
 
 Den kan vara aktiverad av en medlem, men är ändå beroende av att e-post konfigureras.
 
-![notifications3](assets/notifications3.png)
+![meddelanden3](assets/notifications3.png)
 
 ## Visa meddelanden {#viewing-notifications}
 
 ### Webbmeddelanden {#web-notifications}
 
-En [guide skapade en communitywebbplats](/help/communities/sites-console.md) innehåller nu en länk till `Notifications` funktionen i webbplatsens sidhuvud ovanför banderollen. Till skillnad från meddelanden skapas meddelanden för alla communitysajter, medan meddelanden måste aktiveras när webbplatsen skapas.
+En [guide skapade en communityplats](/help/communities/sites-console.md) innehåller nu en länk till funktionen `Notifications` i webbplatsens rubrikfält ovanför banderollen. Till skillnad från meddelanden skapas meddelanden för alla communitysajter, medan meddelanden måste aktiveras när webbplatsen skapas.
 
-När du besöker den publicerade webbplatsen visas alla meddelanden för medlemmen om du väljer `Notifications` länken.
+När du går till den publicerade webbplatsen och väljer länken `Notifications` visas alla meddelanden för medlemmen.
 
-![notifications4](assets/notifications4.png)
+![meddelanden4](assets/notifications4.png)
 
 ### E-postmeddelanden {#email-notifications}
 
 När e-postkanalen är aktiverad får medlemmen ett e-postmeddelande som innehåller en länk till innehållet på webben.
 
-![notifications5](assets/notifications5.png)
+![meddelanden5](assets/notifications5.png)
 
 ## Anpassa e-postmeddelanden {#customize-email-notifications}
 
-Organisationer kan anpassa e-postmeddelandena genom att [täcka över](/help/communities/client-customize.md#overlays) mallarna på **/libs/settings/community/templates/email/html**.
+Organisationer kan anpassa e-postmeddelanden genom att [lägga över](/help/communities/client-customize.md#overlays) mallarna på **/libs/settings/community/templates/email/html**.
 
-Om du till exempel vill ändra omnämns e-postmeddelanden (för en community-komponent) lägger du till ett **if** -villkor för verb- **omnämnande** i mallarna för de komponenter som du aktiverade stödet för **@omnämns** .
+Om du till exempel vill ändra e-postmeddelandena om omnämnanden (för en community-komponent) lägger du till ett **if**-villkor för verb **mention** i mallarna för de komponenter som du aktiverade stödet för **@omnämns**.
 
 Om du vill ändra e-postmeddelandemallen för @mention i bloggkommentarer placerar du ut mallen utanför rutan på: **/libs/settings/community/templates/email/html/social.journal.components.hbs.comment/en**
 
