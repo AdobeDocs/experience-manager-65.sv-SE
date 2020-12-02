@@ -1,8 +1,8 @@
 ---
-title: Allmänna säkerhetsfrågor för AEM Forms på JEE
-seo-title: Allmänna säkerhetsfrågor för AEM Forms på JEE
-description: Lär dig hur du förbereder dig för att förstärka dina AEM-formulär i JEE-miljö.
-seo-description: Lär dig hur du förbereder dig för att förstärka dina AEM-formulär i JEE-miljö.
+title: Allmänna säkerhetsfrågor för AEM Forms i JEE
+seo-title: Allmänna säkerhetsfrågor för AEM Forms i JEE
+description: Lär dig hur du förbereder dig för att härska din AEM Forms i JEE-miljö.
+seo-description: Lär dig hur du förbereder dig för att härska din AEM Forms i JEE-miljö.
 uuid: 4d098731-fc8f-41d7-98b5-5c2e31211614
 content-type: reference
 topic-tags: Security
@@ -11,17 +11,20 @@ discoiquuid: 64bc6018-2828-4634-9275-48f1d411452b
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 06335b9a85414b6b1141dd19c863dfaad0812503
+workflow-type: tm+mt
+source-wordcount: '1082'
+ht-degree: 0%
 
 ---
 
 
 # Allmänna säkerhetsfrågor för AEM Forms på JEE{#general-security-considerations-for-aem-forms-on-jee}
 
-Den här artikeln innehåller introduktionsinformation som hjälper dig att förbereda dig för att förbättra din AEM Forms-miljö. Den innehåller information om AEM Forms på JEE, operativsystem, programserver och databassäkerhet. Granska informationen innan du fortsätter att låsa miljön.
+Den här artikeln innehåller introduktionsinformation som hjälper dig att förbereda dig för att förbättra din AEM Forms-miljö. Det innehåller information om krav på AEM Forms på JEE, operativsystem, programserver och databassäkerhet. Granska informationen innan du fortsätter att låsa miljön.
 
 ## Leverantörsspecifik säkerhetsinformation {#vendor-specific-security-information}
 
-Det här avsnittet innehåller säkerhetsrelaterad information om operativsystem, programservrar och databaser som ingår i din AEM Forms on JEE-lösning.
+Det här avsnittet innehåller säkerhetsrelaterad information om operativsystem, programservrar och databaser som ingår i din AEM Forms i JEE-lösning.
 
 Använd länkarna i det här avsnittet för att hitta leverantörsspecifik säkerhetsinformation för operativsystemet, databasen och programservern.
 
@@ -34,7 +37,7 @@ När du skyddar ditt operativsystem bör du noga överväga att implementera de 
 * Onödiga tjänster och program tas bort
 * Säkerhetskopiera filer
 
-Säkerhetsinformation om operativsystem som AEM Forms på JEE stöder finns i resurserna i tabellen:
+Säkerhetsinformation om operativsystem som stöds av AEM Forms på JEE finns i resurserna i tabellen:
 
 <table>
  <thead>
@@ -65,7 +68,7 @@ Säkerhetsinformation om operativsystem som AEM Forms på JEE stöder finns i re
    <td><a href="https://docs.oracle.com/cd/E52668_01/E54670/E54670.pdf" target="_blank">Säkerhetshandbok för version 7</a><br /> </td>
   </tr>
   <tr>
-   <td>CentOS 7<sup></sup></td>
+   <td>CentOS 7<sup> </sup></td>
    <td><a href="https://wiki.centos.org/HowTos/OS_Protection" target="_blank">Skyddsdokumentation</a></td>
   </tr>
  </tbody>
@@ -117,7 +120,7 @@ När du skyddar din databas bör du överväga att implementera de åtgärder so
 * Dölja databasen bakom en brandvägg
 * Kryptera känsliga data innan du skriver dem till databasen (se databastillverkarens dokumentation)
 
-Säkerhetsinformation om databaser som AEM Forms på JEE stöder finns i resurserna i den här tabellen.
+Säkerhetsinformation om databaser som stöds av AEM Forms på JEE finns i resurserna i den här tabellen.
 
 <table>
  <thead>
@@ -141,7 +144,7 @@ Säkerhetsinformation om databaser som AEM Forms på JEE stöder finns i resurse
   </tr>
   <tr>
    <td><p>Oracle® 12c</p> </td>
-   <td><p>Se kapitlet om säkerhet i dokumentationen för <a href="https://docs.oracle.com/database/121/TDPSG/GUID-6E2F4E53-5D87-4FCD-9C9C-6792217D7014.htm#TDPSG94426" target="_blank">Oracle 12g</a></p> </td>
+   <td><p>Se kapitlet om säkerhet i <a href="https://docs.oracle.com/database/121/TDPSG/GUID-6E2F4E53-5D87-4FCD-9C9C-6792217D7014.htm#TDPSG94426" target="_blank">Oracle 12g-dokumentationen</a></p> </td>
   </tr>
  </tbody>
 </table>
@@ -203,7 +206,7 @@ I den här tabellen beskrivs de standardportar som krävs för att vara öppna u
  </tbody>
 </table>
 
-### Konfigurera JBoss att använda en HTTP-port som inte är standard {#configuring-jboss-to-use-a-non-default-http-port}
+### Konfigurera JBoss så att en HTTP-port {#configuring-jboss-to-use-a-non-default-http-port} som inte är standard används
 
 JBoss Application Server använder 8080 som standard-HTTP-port. JBoss har även förkonfigurerade portarna 8180, 8280 och 8380, som kommenteras ut i filen jboss-service.xml. Om du har ett program på datorn som redan använder den här porten ändrar du den port som AEM Forms på JEE använder genom att följa de här stegen:
 
@@ -213,26 +216,26 @@ JBoss Application Server använder 8080 som standard-HTTP-port. JBoss har även 
 
    Klusterinstallationer: [JBoss-rot]/domain/configuration/domain.xml
 
-1. Ändra värdet för **portattributet** i taggen **&lt;socket-binding>** till ett anpassat portnummer. I följande exempel används port 8090:
+1. Ändra värdet för **port**-attributet i taggen **&lt;socket-binding>** till ett anpassat portnummer. I följande exempel används port 8090:
 
-   &lt;socket-binding name=&quot;http&quot; port=&quot;8090&quot;/>
+   &lt;socket-binding name=&quot;http&quot; port=&quot;8090&quot; />
 
 1. Spara och stäng filen.
 1. Starta om JBoss-programservern.
 
 ## AEM Forms om JEE-säkerhet {#aem-forms-on-jee-security-considerations}
 
-I det här avsnittet beskrivs några AEM-formulär om JEE-specifika säkerhetsfrågor som du bör känna till.
+I det här avsnittet beskrivs några av AEM Forms om JEE-specifika säkerhetsfrågor som du bör känna till.
 
-### E-postautentiseringsuppgifter är inte krypterade i databasen {#email-credentials-not-encrypted-in-database}
+### E-postautentiseringsuppgifterna är inte krypterade i databasen {#email-credentials-not-encrypted-in-database}
 
 De e-postautentiseringsuppgifter som lagras av program krypteras inte innan de lagras i AEM Forms i JEE-databasen. När du konfigurerar en tjänstslutpunkt att använda e-post krypteras inte lösenordsinformation som används som en del av den slutpunktskonfigurationen när den lagras i databasen.
 
 ### Känsligt innehåll för Rights Management i databasen {#sensitive-content-for-rights-management-in-the-database}
 
-AEM Forms på JEE använder AEM Forms på JEE-databasen för att lagra känslig dokumentnyckelinformation och annat kryptografiskt material som används för policydokument. Skydda känslig information genom att skydda databasen mot intrång.
+AEM Forms on JEE använder AEM Forms on JEE-databasen för att lagra känslig dokumentnyckelinformation och annat kryptografiskt material som används för policydokument. Skydda känslig information genom att skydda databasen mot intrång.
 
-### Lösenord i klartext {#password-in-clear-text-format-in-adobe-ds-xml}
+### Lösenord i klartextformulär {#password-in-clear-text-format-in-adobe-ds-xml}
 
 Programservern som används för att köra AEM Forms på JEE kräver en egen konfiguration för åtkomst till databasen via en datakälla som är konfigurerad på programservern. Se till att programservern inte visar databaslösenordet i klartext i sin datakällkonfigurationsfil.
 
@@ -240,10 +243,10 @@ Filen lc_[database].xml får inte innehålla lösenord i klartextformat. Kontakt
 
 >[!NOTE]
 >
->AEM Forms på JEE JBoss med nyckelfärdiga installationsprogram krypterar databaslösenordet.
+>AEM Forms på JEE JBoss-installationsprogrammet med környckel krypterar databaslösenordet.
 
-IBM WebSphere Application Server och Oracle WebLogic Server kan kryptera lösenord för datakällor som standard. Kontrollera dock med programserverns dokumentation att detta händer.
+IBM WebSphere Application Server och Oracle WebLogic Server kan kryptera datakälllösenord som standard. Kontrollera dock med programserverns dokumentation att detta händer.
 
 ### Skydda den privata nyckeln som lagras i Trust Store {#protecting-the-private-key-stored-in-trust-store}
 
-De privata nycklarna eller autentiseringsuppgifterna som importeras i Trust Store lagras i AEM Forms i JEE-databasen. Vidta lämpliga försiktighetsåtgärder för att skydda databasen och begränsa åtkomsten till endast de angivna administratörerna.
+De privata nycklar eller autentiseringsuppgifter som importeras i Trust Store lagras i AEM Forms i JEE-databasen. Vidta lämpliga försiktighetsåtgärder för att skydda databasen och begränsa åtkomsten till endast de angivna administratörerna.
