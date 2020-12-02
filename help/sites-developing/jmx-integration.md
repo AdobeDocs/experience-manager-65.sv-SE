@@ -12,6 +12,9 @@ discoiquuid: 83c590e0-2e6c-4499-a6ea-216e4c7bc43c
 docset: aem65
 translation-type: tm+mt
 source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+workflow-type: tm+mt
+source-wordcount: '1689'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +31,7 @@ På Apache Felix-plattformen driftsätter du MBeans som OSGi-tjänster. När en 
 
 ![jmxwhiteboard](assets/jmxwhiteboard.png)
 
-## Skapa MBeans för CQ5 och CRX {#creating-mbeans-for-cq-and-crx}
+## Skapar MBeans för CQ5 och CRX {#creating-mbeans-for-cq-and-crx}
 
 De MBeans du skapar för CQ5- eller CRX-resurser baseras på gränssnittet javax.management.DynamicMBean. För att skapa dem följer du de vanliga designmönstren i JMX-specifikationen:
 
@@ -38,27 +41,27 @@ De MBeans du skapar för CQ5- eller CRX-resurser baseras på gränssnittet javax
 
 Förutom att definiera hanteringsgränssnittet definierar gränssnittet även OSGi-tjänstgränssnittet. Implementeringsklassen implementerar OSGi-tjänsten.
 
-### Använda anteckningar för att tillhandahålla MBean-information {#using-annotations-to-provide-mbean-information}
+### Använda anteckningar för att ange MBean-information {#using-annotations-to-provide-mbean-information}
 
-Paketet [com.adobe.granite.jmx.annotation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/jmx/annotation/package-summary.html) innehåller flera anteckningar och klasser för att enkelt tillhandahålla MBean-metadata till JMX-konsolen. Använd dessa anteckningar och klasser i stället för att lägga till information direkt i MBeanInfo-objektet.
+Paketet [com.adobe.granite.jmx.annotation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/jmx/annotation/package-summary.html) innehåller flera anteckningar och klasser för att enkelt ge JMX-konsolen MBean-metadata. Använd dessa anteckningar och klasser i stället för att lägga till information direkt i MBeanInfo-objektet.
 
 **Anteckningar**
 
-Lägg till anteckningar i hanteringsgränssnittet för att ange MBean-metadata. Informationen visas i JMX-konsolen för varje implementeringsklass som distribueras. Följande anteckningar är tillgängliga (för fullständig information, se JavaDocs [på](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/jmx/annotation/package-summary.html)com.adobe.granite.jmx.annotation):
+Lägg till anteckningar i hanteringsgränssnittet för att ange MBean-metadata. Informationen visas i JMX-konsolen för varje implementeringsklass som distribueras. Följande anteckningar är tillgängliga (för fullständig information, se [com.adobe.granite.jmx.annotation JavaDocs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/jmx/annotation/package-summary.html)):
 
-* **** Beskrivning: Innehåller en beskrivning av klassen eller metoden MBean. När det används i klassdeklarationen visas beskrivningen på JMX-konsolsidan för MBean. När den används på en metod visas beskrivningen som hovringstext för motsvarande attribut eller åtgärd.
-* **** Effekt: En metods påverkan. Giltiga parametervärden är de fält som definieras av [javax.management.MBeanOperationInfo](https://docs.oracle.com/javase/1.5.0/docs/api/javax/management/MBeanOperationInfo.html).
+* **Beskrivning:** Innehåller en beskrivning av klassen eller metoden MBean. När det används i klassdeklarationen visas beskrivningen på JMX-konsolsidan för MBean. När den används på en metod visas beskrivningen som hovringstext för motsvarande attribut eller åtgärd.
+* **Inverkan:** En metods påverkan. Giltiga parametervärden är de fält som definieras av [javax.management.MBeanOperationInfo](https://docs.oracle.com/javase/1.5.0/docs/api/javax/management/MBeanOperationInfo.html).
 
-* **** Namn: Anger namnet som ska visas för en åtgärdsparameter. Använd den här anteckningen för att åsidosätta det faktiska namnet på metodparametern som används i gränssnittet.
-* **** OpenTypeInfo: Anger den klass som ska användas för att representera sammansatta data eller tabelldata i JMX-konsolen. För användning med Open MBeans
-* **** TabularTypeInfo: Används för att kommentera klassen som används för att representera tabelldata.
+* **Namn:** Anger namnet som ska visas för en åtgärdsparameter. Använd den här anteckningen för att åsidosätta det faktiska namnet på metodparametern som används i gränssnittet.
+* **OpenTypeInfo:** Anger den klass som ska användas för att representera sammansatta data eller tabelldata i JMX-konsolen. För användning med Open MBeans
+* **TabularTypeInfo:** Används för att kommentera klassen som används för att representera tabelldata.
 
 **Klasser**
 
 Klasser finns för att skapa dynamiska MBeans som använder de anteckningar du lägger till i deras gränssnitt:
 
-* **** AnnotatedStandardMBean: En underklass till klassen javax.management.StandardMBean som automatiskt förser JMX-konsolen med anteckningens metadata.
-* **** OpenAnnotatedStandardMBean: En underklass till klassen AnnotatedStandardMBean för att skapa Open Mans som använder OpenTypeInfo-anteckningen.
+* **AnnotatedStandardMBean:** En underklass till klassen javax.management.StandardMBean som automatiskt förser JMX-konsolen med anteckningens metadata.
+* **OpenAnnotatedStandardMBean:** En underklass till klassen AnnotatedStandardMBean för att skapa Open Mans som använder OpenTypeInfo-anteckningen.
 
 ### Utveckla MBeans {#developing-mbeans}
 
@@ -137,15 +140,15 @@ När du registrerar MBeans som en OSGi-tjänst registreras de automatiskt med MB
 
 Förutom OSGi-relaterade metadata måste du även tillhandahålla metadata som krävs för att Aries JMX Whiteboard-modulen ska kunna registrera MBean med MBean-servern:
 
-* **** Namnet på DynamicMBean-gränssnittet: Deklarera att MBean-tjänsten implementerar `javax.management.DynamicMBea`n-gränssnittet. Den här deklarationen meddelar Aries JMX Whiteboard-modulen att tjänsten är en MBean-tjänst.
+* **Namnet på DynamicMBean-gränssnittet:** Deklarera att MBean-tjänsten implementerar  `javax.management.DynamicMBea`n-gränssnittet. Den här deklarationen meddelar Aries JMX Whiteboard-modulen att tjänsten är en MBean-tjänst.
 
-* **** Egenskaperna för MBean-domänen och nyckeln: På Felix anger du den här informationen som en egenskap för tjänsten OSGi i MBean. Det här är samma information som du vanligtvis anger för MBean-servern i ett `javax.management.ObjectName` objekt.
+* **The MBean domain and key properties:** On Felix, you provide this information as a property of the MBean&#39;s OSGi service. Det här är samma information som du vanligtvis anger för MBean-servern i ett `javax.management.ObjectName`-objekt.
 
 När din MBean är en spegling av en enskild tjänst behövs bara en instans av tjänsten MBean. Om du i det här fallet använder Felix SCR Maven-pluginen kan du använda Apache Felix Service Component Runtime-anteckningar (SCR) på implementeringsklassen MBean för att ange JMX-relaterade metadata. Om du vill instansiera flera MBean-instanser kan du skapa en annan klass som utför registreringen av MBean-tjänsten OSGi. I det här fallet genereras JMX-relaterade metadata vid körning.
 
 **Enkelt MBean**
 
-MBeans som du kan definiera alla attribut och åtgärder för i designläge kan distribueras med SCR-anteckningar i implementeringsklassen MBean. I följande exempel deklarerar attributet `value` för `Service` anteckningen att tjänsten implementerar `DynamicMBean` gränssnittet. Attributet `name` för `Property` anteckningen anger JMX-domänen och nyckelegenskaperna.
+MBeans som du kan definiera alla attribut och åtgärder för i designläge kan distribueras med SCR-anteckningar i implementeringsklassen MBean. I följande exempel deklarerar attributet `value` för `Service`-anteckningen att tjänsten implementerar gränssnittet `DynamicMBean`. Attributet `name` för `Property`-anteckningen anger JMX-domänen och nyckelegenskaperna.
 
 #### MBean-implementeringsklass med SCR-anteckningar {#mbean-implementation-class-with-scr-annotations}
 
@@ -216,7 +219,7 @@ MBean i det här exemplet innehåller information om CQ5-arbetsflödesmodellerna
 * WorkflowMBeanManager: Gränssnittet för klassen MBean-hanterare.
 * WorkflowMBeanManagerImpl: Implementeringsklassen för MBean-hanteraren.
 
-**** Obs! För enkelhetens skull utför koden i det här exemplet inte loggning eller reagerar på utlösta undantag.
+**Obs!** För enkelhetens skull utförs inte loggning eller reagerar koden i det här exemplet på utlösta undantag.
 
 WorkflowMBeanManagerImpl innehåller en metod för komponentaktivering. När komponenten aktiveras utför metoden följande uppgifter:
 
@@ -231,7 +234,7 @@ Metadata för MBean visas i JMX-konsolen med domänen com.adobe.example, typen w
 
 ### Exempel på MBean {#the-example-mbean}
 
-Det här exemplet kräver ett MBean-gränssnitt och en implementering som reflekterar gränssnittet `com.day.cq.workflow.model.WorkflowModel` . MBean är mycket enkelt så att exemplet kan fokusera på design- och driftsättningsaspekter. MBean visar ett enda attribut, modellnamnet.
+Det här exemplet kräver ett MBean-gränssnitt och en implementering som reflekterar `com.day.cq.workflow.model.WorkflowModel`-gränssnittet. MBean är mycket enkelt så att exemplet kan fokusera på design- och driftsättningsaspekter. MBean visar ett enda attribut, modellnamnet.
 
 #### WorkflowMBean-gränssnitt {#workflowmbean-interface}
 
@@ -433,7 +436,7 @@ För enkelhetens skull kan du kopiera och klistra in följande XML-kod i din pom
 * Apache Felix Maven Bundle Plugin: Skapar paketet och manifestet
 * Apache Felix Maven SCR Plugin: Skapar komponentbeskrivningsfilen och konfigurerar tjänstkomponentens manifesthuvud.
 
-**** Obs! Vid skrivandet är maven scr-pluginen inte kompatibel med m2e-pluginen för Eclipse. (Se [Felix bug 3170](https://issues.apache.org/jira/browse/FELIX-3170).) Om du vill använda Eclipse IDE installerar du Maven och använder kommandoradsgränssnittet för att utföra byggen.
+**Obs!** Vid skrivningen är maven scr-pluginen inte kompatibel med m2e-pluginen för Eclipse. (Se [Felix bug 3170](https://issues.apache.org/jira/browse/FELIX-3170).) Om du vill använda Eclipse IDE installerar du Maven och använder kommandoradsgränssnittet för att utföra byggen.
 
 #### Exempel på POM-fil {#example-pom-file}
 
@@ -546,9 +549,9 @@ För enkelhetens skull kan du kopiera och klistra in följande XML-kod i din pom
 </project>
 ```
 
-Lägg till följande profil i din maven-inställningsfil för att använda den offentliga Adobe-databasen.
+Lägg till följande profil i din maven-inställningsfil för att använda databasen för publika Adobe.
 
-#### Maven Profile {#maven-profile}
+#### Maskprofil {#maven-profile}
 
 ```xml
 <profile>
