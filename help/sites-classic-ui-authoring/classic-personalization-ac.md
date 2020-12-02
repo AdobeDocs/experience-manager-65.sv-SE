@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: a62ddf8b-97ea-40b9-9c3b-0922fe134567
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '149'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +30,7 @@ I den här dokumentationen beskrivs hur du arbetar med Adobe Campaign:
 Se följande:
 
 * [Arbeta med Adobe Campaign 6.1 och Adobe Campaign Standard](/help/sites-classic-ui-authoring/classic-personalization-ac-campaign.md)
-* [Adobe Campaign-komponenter](/help/sites-classic-ui-authoring/classic-personalization-ac-components.md)
+* [Adobe Campaign Components](/help/sites-classic-ui-authoring/classic-personalization-ac-components.md)
 * [Inrikta er på Adobe Campaign](/help/sites-classic-ui-authoring/classic-personalization-ac-target.md)
 
 Du måste tidigare ha [integrerat AEM med Adobe Campaign](/help/sites-administering/campaign.md).
