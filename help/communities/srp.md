@@ -18,15 +18,15 @@ ht-degree: 0%
 ---
 
 
-# Översikt över lagringsresursprovider {#storage-resource-provider-overview}
+# Översikt över lagringsresursprovidern {#storage-resource-provider-overview}
 
 ## Introduktion {#introduction}
 
-Från och med AEM Communities 6.1 lagras communityinnehåll, som ofta kallas användargenererat innehåll (UGC), i en enda gemensam butik som tillhandahålls av en [lagringsresursleverantör](working-with-srp.md) (SRP).
+Från och med AEM Communities 6.1 lagras communityinnehåll, som ofta kallas användargenererat innehåll (UGC), i en enda gemensam butik som tillhandahålls av en [leverantör av lagringsresurser](working-with-srp.md) (SRP).
 
-Det finns flera SRP-alternativ, som alla har tillgång till UGC via ett nytt AEM Communities-gränssnitt, [SRP API](srp-and-ugc.md) (SocialResourceProvider API), som omfattar alla CRUD-åtgärder (create, read, update).
+Det finns flera SRP-alternativ, som alla har tillgång till UGC via ett nytt AEM Communities-gränssnitt, [SocialResourceProvider API](srp-and-ugc.md) (SRP API), som innehåller alla CRUD-åtgärder (create, read, update).
 
-Alla SCF-komponenter implementeras med SRP API, vilket gör att kod kan utvecklas utan kunskap om den [underliggande topologin](topologies.md) eller platsen för UGC.
+Alla SCF-komponenter implementeras med SRP API, vilket gör att kod kan utvecklas utan kunskap om antingen den [underliggande topologin](topologies.md) eller platsen för UGC.
 
 ***API:t SocialResourceProvider är bara tillgängligt för licensierade kunder till AEM Communities.***
 
@@ -36,19 +36,21 @@ Alla SCF-komponenter implementeras med SRP API, vilket gör att kod kan utveckla
 
 Se även:
 
-* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och exempel.
-* [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - riktlinjer för kodning.
-* [Omfaktorisering för SocialUtils](socialutils.md) - Mappar borttagna verktygsmetoder till aktuella SRP-verktygsmetoder.
+* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och -exempel.
+* [Använder UGC med riktlinjerna för SRP](accessing-ugc-with-srp.md) -kodning.
+* [Omfaktorisering för SocialUtils](socialutils.md) - Mappar utgått verktygsmetod till aktuella SRP-verktygsmetoder.
 
 ## Om databasen {#about-the-repository}
 
 För att förstå SRP är det bra att förstå vilken roll AEM (OAK) har på en AEM communitywebbplats.
 
-**Java Content Repository (JCR)** Den här standarden definierar en datamodell och ett[JCR-API](https://jackrabbit.apache.org/jcr/jcr-api.html)(Application Programming Interface) för innehållsdatabaser. Det kombinerar egenskaper i konventionella filsystem med egenskaper i relationsdatabaser och lägger till ett antal extrafunktioner som innehållsprogram ofta behöver.
+**Java Content Repository (JCR)**
+Den här standarden definierar en datamodell och ett [JCR-API](https://jackrabbit.apache.org/jcr/jcr-api.html) (Application Programming Interface) för innehållsdatabaser. Det kombinerar egenskaper i konventionella filsystem med egenskaper i relationsdatabaser och lägger till ett antal extrafunktioner som innehållsprogram ofta behöver.
 
 En implementering av JCR är AEM, OAK.
 
-**Apache Jackrabbit Oak (OAK)**[OAK](../../help/sites-deploying/platform.md) är en implementering av JCR 2.0 som är ett datalagringssystem som är särskilt utformat för innehållscentrerade program. Det är en typ av hierarkisk databas som är utformad för ostrukturerade eller halvstrukturerade data. I databasen lagras inte bara användarriktat innehåll utan även all kod, mallar och interna data som används av programmet. Gränssnittet för åtkomst av innehåll är [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md).
+**Apache Jackrabbit Oak (OAK)**
+[](../../help/sites-deploying/platform.md) OAK är en implementering av JCR 2.0 som är ett datalagringssystem som är särskilt utformat för innehållscentrerade program. Det är en typ av hierarkisk databas som är utformad för ostrukturerade eller halvstrukturerade data. I databasen lagras inte bara användarriktat innehåll utan även all kod, mallar och interna data som används av programmet. Gränssnittet för åtkomst av innehåll är [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md).
 
 Både JCR och OAK används vanligtvis för att referera till AEM.
 
@@ -66,13 +68,13 @@ När UGC sparas i delad lagring finns det en enda instans av medlemsinnehåll so
 >
 >Se [SRP och UGC Essentials](srp-and-ugc.md) för exempelkod och ytterligare information.
 >
->Mer information om de effektivaste strategierna vid kodning finns i [Åtkomst av UGC med SRP](accessing-ugc-with-srp.md) .
+>Mer information om hur du använder UGC med SRP](accessing-ugc-with-srp.md) finns i [Åtkomst till UGC med SRP&lt;a1/>.
 
 ### ASRP {#asrp}
 
 När det gäller ASRP lagras UGC inte i JCR, utan lagras i en molntjänst som hanteras av Adobe. UGC som lagras i ASRP kan varken visas med CRXDE Lite eller nås med JCR-API:t.
 
-Se [ASRP - Adobe-lagringsresursprovider](asrp.md).
+Se [ASRP - Adobe lagringsresursprovider](asrp.md).
 
 Det är inte möjligt för utvecklare att komma åt användargenererat innehåll direkt.
 
@@ -119,19 +121,19 @@ ACL-kontrollen använder en verktygsmetod som returnerar en sökväg som är lä
 
 Se [SRP och UGC Essentials](srp-and-ugc.md) för exempelkod.
 
-### För icke-befintliga resurser {#for-non-existing-resources-ners}
+### För icke-befintliga resurser (NER) {#for-non-existing-resources-ners}
 
-Vissa communitykomponenter kan ingå i ett skript och kräver därför en Sling-adresserbar nod för att stödja Communities-funktioner. [Inkluderade komponenter](scf.md#add-or-include-a-communities-component) kallas icke-befintliga resurser.
+Vissa communitykomponenter kan ingå i ett skript och kräver därför en Sling-adresserbar nod för att stödja Communities-funktioner. [Inkluderade ](scf.md#add-or-include-a-communities-component) komponenter kallas icke-befintliga resurser.
 
 Skuggnoder är en adresserbar plats för Sling i databasen.
 
 >[!CAUTION]
 >
->Eftersom skuggnoden har flera användningar innebär en skuggnod *inte* att komponenten är en NER.
+>Eftersom skuggnoden har flera användningsområden innebär en skuggnod *inte* att komponenten är NER.
 
 ### Lagringsplats {#storage-location}
 
-Här följer ett exempel på en skuggnod där komponenten [](http://localhost:4502/content/community-components/en/comments.html) Comments i [Community Components Guide](components-guide.md)används:
+Följande är ett exempel på en skuggnod där komponenten [Kommentarer](http://localhost:4502/content/community-components/en/comments.html) används i [Community Components Guide](components-guide.md):
 
 * Komponenten finns i den lokala databasen på:
 
