@@ -13,6 +13,9 @@ docset: aem65
 legacypath: /content/help/en/experience-manager/6-4/help/sites-authoring/pa-using.html
 translation-type: tm+mt
 source-git-commit: e3683f6254295e606e9d85e88979feaaea76c42e
+workflow-type: tm+mt
+source-wordcount: '456'
+ht-degree: 0%
 
 ---
 
@@ -35,10 +38,10 @@ Varje kolumn visar ett värde för den aktuella rapporteringsperioden och anger 
 
 >[!NOTE]
 >
->Om du vill ändra uppdateringsperioden [konfigurerar du importintervallet](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval).
+>[Konfigurera importintervallet](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval) om du vill ändra uppdateringsperioden.
 
-1. Öppna **Sites** Console; till exempel [https://localhost:4502/sites.html/content](https://localhost:4502/sites.html/content)
-1. Klicka på eller tryck på ikonen längst till höger i verktygsfältet (övre högra hörnet) för att välja **listvyn** (ikonen som visas beror på den [aktuella vyn](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)).
+1. Öppna konsolen **Platser**; till exempel [https://localhost:4502/sites.html/content](https://localhost:4502/sites.html/content)
+1. Klicka på eller tryck på ikonen längst till höger i verktygsfältet för att välja **listvy** (den ikon som visas beror på den [aktuella vyn](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)).
 
 1. Återigen, längst till höger i verktygsfältet (övre högra hörnet), klicka eller tryck på ikonen och välj sedan **Visa inställningar**. Dialogrutan **Konfigurera kolumner** öppnas. Gör nödvändiga ändringar och bekräfta med **Uppdatera**.
 
@@ -62,7 +65,7 @@ Medlemmar i användargruppen analytics-administrators kan konfigurera konsolen S
 
 >[!NOTE]
 >
->När ett träd med sidor innehåller underordnade objekt som är kopplade till olika Adobe Analytics-molnkonfigurationer, kan du inte konfigurera tillgängliga datakolumner för sidorna.
+>När ett sidträd innehåller underordnade sidor som är kopplade till olika Adobe Analytics molnkonfigurationer, kan du inte konfigurera tillgängliga datakolumner för sidorna.
 
 1. I listvyn använder du vyväljarna (höger om verktygsfältet), väljer **Visa inställningar** och sedan **Lägg till anpassade analysdata**.
 
@@ -74,19 +77,19 @@ Medlemmar i användargruppen analytics-administrators kan konfigurera konsolen S
 
    ![aa-16](assets/aa-16.png)
 
-### Öppna innehållsinsikter från webbplatser {#opening-content-insights-from-sites}
+### Öppnar innehållsinsikter från webbplatser {#opening-content-insights-from-sites}
 
-Öppna [Content Insight](/help/sites-authoring/content-insights.md) från Sites-konsolen för att utforska hur sidan fungerar.
+Öppna [Content Insight](/help/sites-authoring/content-insights.md) från Sites-konsolen för att utforska sidans effektivitet ytterligare.
 
 1. I webbplatskonsolen väljer du den sida som du vill se innehållsinsikter för.
-1. Klicka på ikonen Analytics (Analyser och rekommendationer) i verktygsfältet.
+1. Klicka på ikonen Analytics (Analyser) och Recommendations () i verktygsfältet.
 
    ![](do-not-localize/chlimage_1-14.png)
 
-## Synliga analyser från sidredigeraren (aktivitetskarta) {#analytics-visible-from-the-page-editor-activity-map}
+## Synliga analyser från sidredigeraren (Activity Map) {#analytics-visible-from-the-page-editor-activity-map}
 
 >[!CAUTION]
 >
->På grund av säkerhetsändringar i Adobe Analytics-API:t är det inte längre möjligt att använda den version av Activity Map som ingår i AEM.
+>På grund av säkerhetsändringar i Adobe Analytics API är det inte längre möjligt att använda den version av Activity Map som ingår i AEM.
 >
 >Det [ActivityMap-plugin som tillhandahålls av Adobe Analytics](https://docs.adobe.com/content/help/en/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) bör nu användas.
