@@ -13,9 +13,9 @@ ht-degree: 4%
 
 # Resurshandbok
 
-Den här guiden täcker alla [!DNL Experience Manager Assets] uppgifter, t.ex. hur du skapar, hanterar, levererar och optimerar digitala resurser.
+Den här guiden täcker alla [!DNL Experience Manager Assets]-uppgifter, t.ex. hur du skapar, hanterar, levererar och optimerar digitala resurser.
 
-## Viktiga [!DNL Experience Manager] artiklar
+## Viktiga [!DNL Experience Manager]-artiklar
 
 <!-- TBD: Some of these links will soon be updated. Change these when new articles go live on docs.adobe.com.
 -->
@@ -42,7 +42,7 @@ Den här guiden täcker alla [!DNL Experience Manager Assets] uppgifter, t.ex. h
 | [Användarhandbok för mobiler](/help/mobile/home.md) | I den här guiden beskrivs hur du skapar och hanterar innehåll för mobilprogram. |
 | [Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html) | Den här guiden visar hur du delar användargenererat innehåll med [!DNL Livefyre]. |
 
-## Viktiga [!DNL Experience Manager] resurser
+## Nyckelresurser för [!DNL Experience Manager]
 
 * [Experience Manager Video Tutorials](https://helpx.adobe.com/experience-manager/kt/index/aem-6-5-videos.html#Assets)
 * [GDPR-efterlevnad](/help/managing/data-protection-and-privacy.md)
