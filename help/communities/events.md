@@ -18,19 +18,20 @@ ht-degree: 1%
 ---
 
 
-# OSGi Events for Communities-komponenter  {#osgi-events-for-communities-components}
+# OSGi Events för webbgruppskomponenter {#osgi-events-for-communities-components}
 
 ## Översikt {#overview}
 
 När medlemmar interagerar med communityfunktioner skickas OSGi-händelser som kan utlösa asynkrona avlyssnare, som meddelanden eller spel (poängsättning och märkning).
 
-En komponents [SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html) -instans registrerar händelserna som `actions` de inträffar för en `topic`. SocialEvent innehåller en metod för att returnera en `verb` associerad åtgärd. Det finns en *n-1* -relation mellan `actions` och `verbs`.
+En komponents [SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html)-instans registrerar händelserna som `actions` som inträffar för en `topic`. SocialEvent innehåller en metod för att returnera en `verb` som är associerad med åtgärden. Det finns en *n-1*-relation mellan `actions` och `verbs`.
 
-För webbgruppskomponenterna som levereras i releasen beskriver följande tabeller de `verbs` definierade för varje `topic` tillgänglig för användning.
+Följande tabeller beskriver vilka `verbs` som är definierade för varje `topic` som är tillgängliga för användning för webbkomponenterna i den publicerade versionen.
 
 ## Ämnen och verb {#topics-and-verbs}
 
-[Calendar Component](calendar-basics-for-developers.md)SocialEvent `topic`= com/adobe/cq/social/calendar
+[Calendar ](calendar-basics-for-developers.md)
+ComponentSocialEvent  `topic`= com/adobe/cq/social/calendar
 
 | **Verb** | **Beskrivning** |
 |---|---|
@@ -39,7 +40,8 @@ För webbgruppskomponenterna som levereras i releasen beskriver följande tabell
 | UPPDATERA | Medlemmens kalenderhändelse eller kommentar har redigerats |
 | DELETE | Medlemmens kalenderhändelse eller kommentar tas bort |
 
-[Comments Component](essentials-comments.md)SocialEvent `topic`= com/adobe/cq/social/comment
+[Comments ](essentials-comments.md)
+ComponentSocialEvent  `topic`= com/adobe/cq/social/comment
 
 | **Verb** | **Beskrivning** |
 |---|---|
@@ -48,7 +50,8 @@ För webbgruppskomponenterna som levereras i releasen beskriver följande tabell
 | UPPDATERA | Medlemmens kommentar har redigerats |
 | DELETE | Medlemmens kommentar har tagits bort |
 
-[File Library Component](essentials-file-library.md)SocialEvent `topic`= com/adobe/cq/social/fileLibrary
+[File Library ](essentials-file-library.md)
+ComponentSocialEvent  `topic`= com/adobe/cq/social/fileLibrary
 
 | **Verb** | **Beskrivning** |
 |---|---|
@@ -57,7 +60,8 @@ För webbgruppskomponenterna som levereras i releasen beskriver följande tabell
 | UPPDATERA | Medlemmen uppdaterar en mapp eller fil |
 | DELETE | Medlemmen tar bort en mapp eller fil |
 
-[Forum Component](essentials-forum.md)SocialEvent `topic`= com/adobe/cq/social/forum
+[Forum ](essentials-forum.md)
+ComponentSocialEvent  `topic`= com/adobe/cq/social/forum
 
 | **Verb** | **Beskrivning** |
 |---|---|
@@ -66,7 +70,8 @@ För webbgruppskomponenterna som levereras i releasen beskriver följande tabell
 | UPPDATERA | Ämnet eller svaret för en medlem redigeras |
 | DELETE | Ämnet eller svaret för en medlem tas bort |
 
-[Journal Component](blog-developer-basics.md)SocialEvent `topic`= com/adobe/cq/social/journal
+[Journal ](blog-developer-basics.md)
+ComponentSocialEvent  `topic`= com/adobe/cq/social/journal
 
 | **Verb** | **Beskrivning** |
 |---|---|
@@ -75,7 +80,8 @@ För webbgruppskomponenterna som levereras i releasen beskriver följande tabell
 | UPPDATERA | Medlemmens bloggartikel eller kommentar redigeras |
 | DELETE | Medlemmens bloggartikel eller kommentar tas bort |
 
-[QnA Component](qna-essentials.md)SocialEvent `topic` = com/adobe/cq/social/qna
+[QnA ](qna-essentials.md)
+ComponentSocialEvent  `topic` = com/adobe/cq/social/qna
 
 | **Verb** | **Beskrivning** |
 |---|---|
@@ -86,7 +92,8 @@ För webbgruppskomponenterna som levereras i releasen beskriver följande tabell
 | AVMARKERA | Medlemmens svar har avmarkerats |
 | DELETE | Medlemsens fråga eller svar tas bort |
 
-[Review Component](reviews-basics.md)SocialEvent `topic`= com/adobe/cq/social/review
+[Reviews ](reviews-basics.md)
+ComponentSocialEvent  `topic`= com/adobe/cq/social/review
 
 | **Verb** | **Beskrivning** |
 |---|---|
@@ -94,21 +101,24 @@ För webbgruppskomponenterna som levereras i releasen beskriver följande tabell
 | UPPDATERA | Medlemmens granskning har redigerats |
 | DELETE | Medlemmens granskning har tagits bort |
 
-[Värderingskomponent](rating-basics.md)SocialEvent `topic`= com/adobe/cq/social/tally
+[Rating ](rating-basics.md)
+ComponentSocialEvent  `topic`= com/adobe/cq/social/tally
 
 | **Verb** | **Beskrivning** |
 |---|---|
 | LÄGG TILL KLASSIFICERING | Medlemmens innehåll har fått ett högre omdöme |
 | TA BORT KLASSIFICERING | Medlemmens innehåll har nedgraderats |
 
-[Röstkomponent](essentials-voting.md)SocialEvent `topic`= com/adobe/cq/social/tally
+[Röstande ](essentials-voting.md)
+ComponentSocialEvent  `topic`= com/adobe/cq/social/tally
 
 | **Verb** | **Beskrivning** |
 |---|---|
 | LÄGG TILL RÖST | Medlemmens innehåll har röstats upp |
 | TA BORT RÖSTNING | Medlemmens innehåll har inte röstats ned |
 
-**Moderation-enabled Components** SocialEvent `topic`= com/adobe/cq/social/moderation
+**Moderation-enabled**
+ComponentsSocialEvent  `topic`= com/adobe/cq/social/moderation
 
 | **Verb** | **Beskrivning** |
 |---|---|
@@ -121,9 +131,9 @@ För webbgruppskomponenterna som levereras i releasen beskriver följande tabell
 
 ## Händelser för anpassade komponenter {#events-for-custom-components}
 
-För en anpassad komponent måste den abstrakta [klassen](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html) SocialEvent utökas till d för att spela in komponentens händelser som `actions`de inträffar för en `topic`.
+För en anpassad komponent måste den abstrakta klassen [SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html) utökas till d för att spela in komponentens händelser som `actions`som inträffar för en `topic`.
 
-Den anpassade händelsen åsidosätter metoden `getVerb()` så att en lämplig händelse `verb`returneras för varje `action`. Den `verb` som returneras för en åtgärd kan vara en vanlig (t.ex. `POST`) eller en speciell komponent (t.ex. `ADD RATING`). Det finns en *n-1* -relation mellan `actions`och `verbs`.
+Den anpassade händelsen åsidosätter metoden `getVerb()` så att en lämplig `verb`returneras för varje `action`. `verb` som returneras för en åtgärd kan vara en vanlig åtgärd (till exempel `POST`) eller en som är anpassad för komponenten (till exempel `ADD RATING`). Det finns en *n-1*-relation mellan `actions`och `verbs`.
 
 >[!NOTE]
 >
@@ -131,9 +141,9 @@ Den anpassade händelsen åsidosätter metoden `getVerb()` så att en lämplig h
 
 ### Pseudokod för anpassad komponenthändelse {#pseudo-code-for-custom-component-event}
 
-[org.osgi.service.event.Event](https://osgi.org/javadoc/r4v41/org/osgi/service/event/Event.html);
-[com.adobe.cq.social.scf.core.SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html);
-[com.adobe.granite.activitystreams.ObjectTypes](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/ObjectTypes.html);
+[org.osgi.service.event.Event](https://osgi.org/javadoc/r4v41/org/osgi/service/event/Event.html); 
+[com.adobe.cq.social.scf.core.SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html); 
+[com.adobe.granite.activitystreams.ObjectTypes](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/ObjectTypes.html); 
 [com.adobe.granite.activitystreams.Verbs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/Verbs.html);
 
 ```java
