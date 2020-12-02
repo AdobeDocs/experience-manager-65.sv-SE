@@ -11,15 +11,15 @@ docset: aem65
 translation-type: tm+mt
 source-git-commit: ade3747ba608164a792a62097b82c55626245891
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '990'
 ht-degree: 0%
 
 ---
 
 
-# Bädda in anpassningsbara formulär på en extern webbsida{#embed-adaptive-form-in-external-web-page}
+# Bädda in anpassat formulär på en extern webbsida{#embed-adaptive-form-in-external-web-page}
 
-Du kan [bädda in anpassningsbara formulär på en AEM Sites-sida](/help/forms/using/embed-adaptive-form-aem-sites.md) eller en webbsida som ligger på en annan plats än AEM. Det inbäddade adaptiva formuläret fungerar fullt ut och användarna kan fylla i och skicka formuläret utan att behöva lämna sidan. Det hjälper användaren att stanna kvar i sitt sammanhang för andra element på webbsidan och interagera med formuläret samtidigt.
+Du kan [bädda in adaptiva formulär på en AEM Sites-sida](/help/forms/using/embed-adaptive-form-aem-sites.md) eller en webbsida som ligger utanför AEM. Det inbäddade adaptiva formuläret fungerar fullt ut och användarna kan fylla i och skicka formuläret utan att behöva lämna sidan. Det hjälper användaren att stanna kvar i sitt sammanhang för andra element på webbsidan och interagera med formuläret samtidigt.
 
 ## Förutsättningar {#prerequisites}
 
@@ -27,9 +27,9 @@ Utför följande steg innan du bäddar in ett anpassat formulär på en extern w
 
 * Publicera det adaptiva formulär som ska bäddas in i publiceringsinstansen på AEM Forms-servern.
 * Skapa eller identifiera en webbsida på din webbplats som värd för det adaptiva formuläret. Kontrollera att webbsidan kan [läsa jQuery-filer från ett CDN](https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js) eller ha en lokal kopia av jQuery inbäddad. jQuery krävs för att återge ett anpassat formulär.
-* När AEM server och webbsida finns i olika domäner utför du de steg som anges i avsnittet och [aktiverar AEM Forms för att skicka adaptiva formulär till en domänövergripande webbplats](#cross-site).
+* När AEM server och webbsida finns i olika domäner utför du de steg som anges i avsnittet [aktivera AEM Forms för att hantera adaptiva formulär till en korsdomänplats](#cross-site).
 
-## Bädda in anpassat formulär {#embed-adaptive-form}
+## Bädda in anpassningsbart formulär {#embed-adaptive-form}
 
 Du kan bädda in ett anpassat formulär genom att infoga några rader med JavaScript på webbsidan. API:t i koden skickar en HTTP-begäran till AEM för adaptiva formulärresurser och injicerar det adaptiva formuläret i den angivna formulärbehållaren.
 
@@ -99,7 +99,7 @@ Så här bäddar du in det anpassade formuläret:
 1. I den inbäddade koden:
 
    * Ändra värdet för variabeln *options.path* med sökvägen för den anpassningsbara formulärets publicerings-URL. Om AEM körs på en kontextsökväg kontrollerar du att URL:en innehåller kontextsökvägen. Ange alltid det fullständiga namnet på det adaptiva formuläret inklusive tillägget.   Ovanstående kod och adaptiv kod finns till exempel på samma AEM formulärserver, så exemplet använder kontextsökvägen för adaptiv form /content/forms/af/locbasic.html.
-   * Ersätt *options.dataRef* med attribut som ska skickas med URL:en. Du kan använda dataref-variabeln för att [förifylla ett anpassat formulär](/help/forms/using/prepopulate-adaptive-form-fields.md).
+   * Ersätt *options.dataRef* med attribut som ska skickas med URL:en. Du kan använda dataref-variabeln för att [fylla i ett adaptivt formulär](/help/forms/using/prepopulate-adaptive-form-fields.md) i förväg.
    * Ersätt *options.themePath* med sökvägen till ett annat tema än det som konfigurerats i det adaptiva formuläret. Du kan också ange temats sökväg med hjälp av attributet request.
    * CSS_Selector är CSS-väljaren för den formulärbehållare där det adaptiva formuläret är inbäddat. Klassen .customafsection css är till exempel CSS-väljaren i exemplet ovan.
 
@@ -112,20 +112,20 @@ Det anpassningsbara formuläret är inbäddat på webbsidan. Observera följande
 * Upplevelsemål och A/B-tester som konfigurerats i det ursprungliga adaptiva formuläret fungerar inte i det inbäddade formuläret.
 * Om Adobe Analytics har konfigurerats på originalformuläret hämtas analysdata till Adobe Analytics-servern. Den finns dock inte i Forms analysrapport.
 
-## Exempel på topologi {#sample-topology}
+## Exempeltopologi {#sample-topology}
 
 Den externa webbsidan som bäddar in det adaptiva formuläret skickar begäranden till AEM server, som vanligtvis ligger bakom brandväggen i ett privat nätverk. För att säkerställa att förfrågningarna dirigeras säkert till AEM bör du konfigurera en omvänd proxyserver.
 
-Låt oss titta på ett exempel på hur du kan konfigurera en omvänd Apache 2.4-proxyserver utan dispatcher. I det här exemplet är AEM värd med `/forms` kontextsökväg och mappning `/forms` för den omvända proxyn. Den ser till att alla begäranden om Apache- `/forms` servern dirigeras till AEM. Den här topologin hjälper till att minska antalet regler i dispatcherlagret som alla förfrågningar som föregås av dirigering `/forms` till AEM server.
+Låt oss titta på ett exempel på hur du kan konfigurera en omvänd Apache 2.4-proxyserver utan dispatcher. I det här exemplet är AEM värd med `/forms`-kontextsökväg och mappa `/forms` för den omvända proxyn. Den ser till att alla begäranden för `/forms` på Apache-servern dirigeras till AEM. Den här topologin minskar antalet regler i dispatcherlagret som alla begäranden som har prefixet `/forms` till AEM server.
 
-1. Öppna `httpd.conf` konfigurationsfilen och avkommentera följande kodrader. Du kan också lägga till de här kodraderna i filen.
+1. Öppna konfigurationsfilen `httpd.conf` och avkommentera följande kodrader. Du kan också lägga till de här kodraderna i filen.
 
    ```text
    LoadModule proxy_html_module modules/mod_proxy_html.so
    LoadModule proxy_http_module modules/mod_proxy_http.so
    ```
 
-1. Ställ in proxyregler genom att lägga till följande kodrader i `httpd-proxy.conf` konfigurationsfilen.
+1. Ställ in proxyregler genom att lägga till följande kodrader i `httpd-proxy.conf`-konfigurationsfilen.
 
    ```text
    ProxyPass /forms https://[AEM_Instance]/forms
@@ -153,7 +153,7 @@ ProxyPassReverse /content https://<AEM_Instance>/content
 >
 >Om du konfigurerar någon annan topologi måste du lägga till överförings-, förifyllnings- och andra URL-adresser till tillåtelselista i dispatcherlagret.
 
-## Best practices {#best-practices}
+## God praxis {#best-practices}
 
 Tänk på följande när du bäddar in ett anpassat formulär på en webbsida:
 
@@ -163,9 +163,9 @@ Tänk på följande när du bäddar in ett anpassat formulär på en webbsida:
 * Använd `[unloadAdaptiveForm](https://helpx.adobe.com/experience-manager/6-3/forms/javascript-api/GuideBridge.html)` API för att ta bort det adaptiva formuläret från HTML DOM.
 * Ange huvudet för åtkomstkontrollens ursprung när du skickar svar från AEM server.
 
-## Möjliggör för AEM Forms att skicka adaptiva formulär till en domänövergripande webbplats {#cross-site}
+## Gör det möjligt för AEM Forms att skicka adaptiva formulär till en domänövergripande webbplats {#cross-site}
 
 1. AEM författarinstans går du till AEM Web Console Configuration Manager på `https://'[server]:[port]'/system/console/configMgr`.
-1. Leta reda på och öppna **filterkonfigurationen för** Apache Sling Referrer.
+1. Leta upp och öppna konfigurationen **Refererarfilter för Apache Sling**.
 1. I fältet Tillåtna värdar anger du den domän där webbsidan finns. Det gör att värddatorn kan göra POST-förfrågningar till AEM. Du kan också använda reguljära uttryck för att ange en serie externa programdomäner.
 
