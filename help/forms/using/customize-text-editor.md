@@ -43,7 +43,7 @@ Så här anpassar du teckensnitt genom att redigera filen tbxeditor-config.xml:
 1. Gå till `https://'[server]:[port]'/[ContextPath]/crx/de` och logga in som administratör.
 1. I programmappen skapar du en mapp med namnet config med en sökväg/struktur som liknar konfigurationsmappen, som finns på libs/fd/cm/config, enligt följande:
 
-   1. Högerklicka på objektmappen i följande sökväg och välj **Overlay Node**:
+   1. Högerklicka på objektmappen i följande sökväg och välj **Överläggsnod**:
 
       `/libs/fd/cm/config`
 
@@ -53,13 +53,13 @@ Så här anpassar du teckensnitt genom att redigera filen tbxeditor-config.xml:
 
       **Sökväg:** /libs/fd/cm/config
 
-      **Plats:** /apps/
+      **Plats:** /appar/
 
-      **Matcha nodtyper:** Markerad
+      **Matcha nodtyper:** markerade
 
       ![Överläggsnod](assets/2.png)
 
-   1. Click **OK**. Mappstrukturen skapas i programmappen.
+   1. Klicka på **OK**. Mappstrukturen skapas i programmappen.
 
    1. Klicka på **Spara alla**.
 
@@ -70,7 +70,7 @@ Så här anpassar du teckensnitt genom att redigera filen tbxeditor-config.xml:
 
       `apps/fd/cm/config`
 
-   1. Namnet på den inklistrade filen är som standard `copy of tbxeditor-config.xml.` Byt namn på filen till `tbxeditor-config.xml` och klicka på **Spara alla**.
+   1. Som standard är namnet på den inklistrade filen `copy of tbxeditor-config.xml.` Byt namn på filen till `tbxeditor-config.xml` och klicka på **Spara alla**.
 
 1. Öppna filen tbxeditor-config.xml i apps/fd/cm/config och gör sedan nödvändiga ändringar.
 
@@ -175,7 +175,7 @@ Så här anpassar du teckensnitt genom att redigera filen tbxeditor-config.xml:
    1. Klicka på **Spara alla**.
 
 
-## Lägga till anpassade teckensnitt på klientdatorn {#addcustomfonts}
+## Lägg till anpassade teckensnitt på klientdatorn {#addcustomfonts}
 
 När du öppnar ett teckensnitt i textredigeraren för Correspondence Management måste det finnas på klientdatorn som du använder för att få åtkomst till Correspondence Management. Om du vill kunna använda ett anpassat teckensnitt i textredigeraren måste du först installera det på klientdatorn.
 
@@ -184,11 +184,11 @@ Mer information om hur du installerar teckensnitt finns i:
 * [Installera eller avinstallera teckensnitt i Windows](https://windows.microsoft.com/en-us/windows-vista/install-or-uninstall-fonts)
 * [Grundläggande om Mac: Teckensnittsbok](https://support.apple.com/en-us/HT201749)
 
-## Få tillgång till teckensnittsanpassningar {#access-font-customizations}
+## Få åtkomst till teckensnittsanpassningar {#access-font-customizations}
 
-När du har ändrat teckensnitt i filen tbxeditor-config.xml i CRX och installerat teckensnitten på klientdatorn som används för att komma åt AEM Forms, visas ändringarna i textredigeraren.
+När du har ändrat teckensnitten i filen tbxeditor-config.xml i CRX och installerat teckensnitten på klientdatorn som används för att få åtkomst till AEM Forms, visas ändringarna i textredigeraren.
 
-Teckensnittet Sazanami Mincho Medium som har lagts till i [Anpassa teckensnitt genom att redigera filen tbxeditor-config.xml i CRX](#customizefonts) -proceduren visas i textredigerarens användargränssnitt enligt följande:
+Teckensnittet Sazanami Mincho Medium som lagts till i [Anpassa teckensnitt genom att redigera filen tbxeditor-config.xml i CRX](#customizefonts)-proceduren visas i textredigerarens användargränssnitt enligt följande:
 
 ![sazanamiminchointext](assets/sazanamiminchointext.png)
 
