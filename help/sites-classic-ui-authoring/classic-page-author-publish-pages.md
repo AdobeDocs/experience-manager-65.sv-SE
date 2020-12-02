@@ -12,6 +12,9 @@ discoiquuid: 46d6bde0-8645-4cff-b79c-8e1615ba4ed4
 docset: aem65
 translation-type: tm+mt
 source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
+workflow-type: tm+mt
+source-wordcount: '1069'
+ht-degree: 0%
 
 ---
 
@@ -48,6 +51,7 @@ Du kan även publicera/avpublicera en sida direkt eller vid ett fördefinierat d
 >
 >* Ett arbetsflöde kommer att utlösas för att meddela lämplig person om din begäran om publicering.
 >* Ett meddelande om detta visas (under en kort tidsperiod).
+
 >
 
 
@@ -70,7 +74,7 @@ Du kan aktivera sidor i webbplatskonsolen. När du har öppnat en sida och ändr
 1. Markera den sida som du vill aktivera i webbplatskonsolen.
 1. Välj **Aktivera**, antingen på den översta menyn eller på den nedrullningsbara menyn på det markerade sidobjektet.
 
-   Om du vill aktivera innehållet på sidan och alla dess undersidor använder du [**verktygskonsolen **](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#howtoactivateacompletesectiontreeofyourwebsite).
+   Om du vill aktivera innehållet på sidan och alla dess undersidor använder du [**Verktyg**-konsolen](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#howtoactivateacompletesectiontreeofyourwebsite).
 
    ![screen_shot_2012-02-08at13817pm](assets/screen_shot_2012-02-08at13817pm.png)
 
@@ -82,17 +86,17 @@ Du kan aktivera sidor i webbplatskonsolen. När du har öppnat en sida och ändr
 
    ![chlimage_1-100](assets/chlimage_1-100.png)
 
-1. AEM WCM aktiverar det valda innehållet. Den eller de publicerade sidorna visas i [webbplatskonsolen](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console) (markerat som grön) med information om vem som aktiverat innehållet samt datum och tid för aktiveringen.
+1. AEM WCM aktiverar det markerade innehållet. Den eller de publicerade sidorna visas i [webbplatskonsolen](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console) (markerad som grön) med information om vem som aktiverat innehållet samt datum och tid för aktiveringen.
 
    ![screen_shot_2012-02-08at14335pm](assets/screen_shot_2012-02-08at14335pm.png)
 
-### Aktivera en sida från Sidekick {#activating-a-page-from-sidekick}
+### Aktivera en sida från Sidespark {#activating-a-page-from-sidekick}
 
 Du kan också aktivera en sida när du har den öppen för redigering.
 
 När du har öppnat sidan och ändrat innehållet i den:
 
-1. Klicka på fliken **Sida** i sparken.
+1. Välj fliken **Sida** i Spark.
 1. Klicka på **Aktivera sida**.
 Ett meddelande visas längst upp till höger i fönstret som bekräftar att sidan har aktiverats.
 
@@ -103,11 +107,11 @@ Om du vill ta bort en sida från publiceringsmiljön inaktiverar du innehållet.
 Så här inaktiverar du en sida:
 
 1. Markera den sida som du vill inaktivera i webbplatskonsolen.
-1. Välj **Inaktivera**, antingen på den översta menyn eller på den nedrullningsbara menyn för det markerade sidobjektet. Du ombeds bekräfta borttagningen.
+1. Välj **Inaktivera**, antingen på den översta menyn eller på den nedrullningsbara menyn på det markerade sidobjektet. Du ombeds bekräfta borttagningen.
 
    ![screen_shot_2012-02-08at14859pm](assets/screen_shot_2012-02-08at14859pm.png)
 
-1. Uppdatera [webbplatskonsolen](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console) och innehållet är markerat med rött, vilket anger att det inte längre är publicerat.
+1. Uppdatera konsolen [Webbplatser](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console) och innehållet är markerat i rött, vilket anger att det inte längre är publicerat.
 
    ![screen_shot_2012-02-08at15018pm](assets/screen_shot_2012-02-08at15018pm.png)
 
@@ -142,21 +146,21 @@ Om du vill avbryta inaktiveringen går du till [arbetsflödeskonsolen](/help/sit
 
 ## Schemalagd aktivering/inaktivering (på/av-tid) {#scheduled-activation-deactivation-on-off-time}
 
-Du kan schemalägga tider för en sida som ska publiceras/avpubliceras med **På-tid** och **Fråntid** som kan definieras i [Sidegenskaper](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md).
+Du kan schemalägga tider för en sida som ska publiceras/avpubliceras med **On Time** och **Off Time** som kan definieras i [Sidegenskaper](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md).
 
 ### Bestämmer sidpubliceringsstatus {#determining-page-publication-status-classic-ui}
 
-Statusen visas i [webbplatskonsolen](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console). Färgerna anger publiceringsstatus.
+Statusen visas i konsolen [Webbplatser](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console). Färgerna anger publiceringsstatus.
 
-## Aktivera ett komplett avsnitt (träd) av webbplatsen {#activating-a-complete-section-tree-of-your-website}
+## Aktivera ett komplett avsnitt (träd) på webbplatsen {#activating-a-complete-section-tree-of-your-website}
 
 På fliken **Webbplatser** kan du aktivera de enskilda sidorna. När du har angett eller uppdaterat ett stort antal innehållssidor, som alla finns på samma rotsida, kan det vara enklare att aktivera hela trädet i en åtgärd. Du kan också köra en torr körning för att emulera en aktivering och markera vilka sidor som ska aktiveras.
 
-1. Öppna **verktygskonsolen** genom att markera den på sidan **Välkommen** och dubbelklicka sedan på **Replikering** för att öppna konsolen ( `https://localhost:4502/etc/replication.html`).
+1. Öppna konsolen **Verktyg** genom att markera den på sidan **Välkommen** och dubbelklicka sedan på **Replikering** för att öppna konsolen ( `https://localhost:4502/etc/replication.html`).
 
    ![screen_shot_2012-02-08at125033pm](assets/screen_shot_2012-02-08at125033pm.png)
 
-1. På **replikeringskonsolen** klickar du på **Aktivera träd**.
+1. Klicka på **Aktivera träd** på konsolen **Replikering**.
 
    Följande fönster ( `https://localhost:4502/etc/replication/treeactivation.html`) visas.
 
@@ -171,6 +175,6 @@ På fliken **Webbplatser** kan du aktivera de enskilda sidorna. När du har ange
 
 1. Välj den åtgärd som du vill utföra:
 
-   1. Välj **Torr körning** om du vill kontrollera vilka sidor som *skulle* aktiveras. Detta är bara en emulering, inga sidor aktiveras.
+   1. Välj **Torr körning** om du vill kontrollera vilka sidor *som skulle* aktiveras. Detta är bara en emulering, inga sidor aktiveras.
 
    1. Välj **Aktivera** om du vill aktivera sidorna.
