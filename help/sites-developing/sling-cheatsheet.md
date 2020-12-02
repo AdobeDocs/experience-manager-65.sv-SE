@@ -1,6 +1,6 @@
 ---
-title: Sling Cheatsheet
-seo-title: Sling Cheatsheet
+title: Fusklapp för Sling
+seo-title: Fusklapp för Sling
 description: En enkel Sling-referens
 seo-description: En enkel Sling-referens
 uuid: 8e5e90da-2e97-45a4-be06-91e5e07e5bed
@@ -13,13 +13,13 @@ translation-type: tm+mt
 source-git-commit: c6b1d651940b5c556dea81d19354aac36d14b423
 workflow-type: tm+mt
 source-wordcount: '36'
-ht-degree: 0%
+ht-degree: 16%
 
 ---
 
 
-# Sling Cheatsheet{#sling-cheatsheet}
+# Fusklapp för Sling{#sling-cheatsheet}
 
 ![Om Apache Sling-skriptupplösningen.](assets/sling-cheatsheet-01.png)
 
-![Använda SlingPostServlet - det här är standardhanteraren för POST-begäranden. det kan göra nästan vad som helst.](assets/sling-cheatsheet-02.png)
+![Använda SlingPostServlet - det här är standardhanteraren för dina POSTER. det kan göra nästan vad som helst.](assets/sling-cheatsheet-02.png)
