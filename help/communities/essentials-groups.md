@@ -18,11 +18,11 @@ ht-degree: 0%
 ---
 
 
-# Grundläggande om communitygrupper  {#community-group-essentials}
+# Grundläggande om communitygrupper {#community-group-essentials}
 
 Funktionen för communitygrupper är möjligheten för en undercommunity att skapas dynamiskt på en community-webbplats av behöriga användare från publicerings- och författarmiljöerna.
 
-Från och med [funktionspaket 1](deploy-communities.md#latestfeaturepack)för Communities är det möjligt att kapsla grupper inom andra grupper
+Från och med webbgrupper [funktionspaket 1](deploy-communities.md#latestfeaturepack) är det möjligt att kapsla grupper inom andra grupper
 
 ## Grundläggande för klientsidan {#essentials-for-client-side}
 
@@ -53,7 +53,7 @@ Från och med [funktionspaket 1](deploy-communities.md#latestfeaturepack)för Co
  </tbody>
 </table>
 
-### Community-grupper {#community-groups}
+### Community Groups {#community-groups}
 
 <table>
  <tbody>
@@ -66,7 +66,7 @@ Från och med [funktionspaket 1](deploy-communities.md#latestfeaturepack)för Co
    <td>cq.social.hbs.communitygroups</td>
   </tr>
   <tr>
-   <td> <strong>templates</strong></td>
+   <td> <strong>mallar</strong></td>
    <td> /libs/social/group/components/hbs/communitygroups/communitygroups.hbs<br /> </td>
   </tr>
   <tr>
@@ -86,17 +86,17 @@ Från och med [funktionspaket 1](deploy-communities.md#latestfeaturepack)för Co
 
 * [Anpassningar på serversidan](server-customize.md)
 
-### Funktionen Grupper {#groups-function}
+### Gruppfunktion {#groups-function}
 
-En community-webbplatsstruktur som innehåller en [gruppfunktion](functions.md#groups-function) har stöd för att skapa nya `community groups` från publicerings- och författarmiljöerna. Den skapade communitygruppen kommer att innehålla en `community groups member list` komponent som visar gruppens medlemmar.
+En community-webbplatsstruktur som innehåller en [gruppfunktion](functions.md#groups-function) har stöd för att skapa nya `community groups` från publicerings- och författarmiljöerna. Den skapade communitygruppen innehåller en `community groups member list`-komponent som visar gruppens medlemmar.
 
-En eller flera mallar [för](tools-groups.md)communitygrupper, som tillhandahåller designen för communitygruppssidor, kan konfigureras för funktionen Grupper när funktionen läggs till i en mall för en [community-webbplats](sites.md) eller kapslas i en mall för communitygrupper.
+En eller flera [communitygruppsmallar](tools-groups.md), som tillhandahåller designen för communitygruppssidor, kan konfigureras för funktionen Grupper när funktionen läggs till i en [community-webbplatsmall](sites.md) eller kapslas i en community-gruppmall.
 
-Om flera communitygruppsmallar ingår visas ett urval av designalternativ för den behöriga användaren när en ny community-grupp skapas för communitywebbplatsen, vilket visas i avsnittet om [communitygrupper](creating-groups.md) för författare.
+Om flera communitygruppsmallar ingår visas ett val av design för den behöriga användaren när en ny community-grupp skapas för communitywebbplatsen, vilket visas i avsnittet [communitygrupper](creating-groups.md) för författare.
 
 ### Kapslade grupper {#nested-groups}
 
-Från och med Communities [FP1](deploy-communities.md#latestfeaturepack)är det möjligt att inkludera en gruppfunktion i en gruppmall, vilket möjliggör kapslade grupper (undergrupper).
+Från och med Communities [FP1](deploy-communities.md#latestfeaturepack) är det möjligt att inkludera en gruppfunktion i en gruppmall, vilket möjliggör kapslade grupper (undergrupper).
 
 När en communitywebbplats eller gruppmall innehåller funktionen Grupper kan du:
 
@@ -106,7 +106,7 @@ När en communitywebbplats eller gruppmall innehåller funktionen Grupper kan du
 
 När du skapar en grupp i författarmiljön måste du först publicera communitywebbplatsen och sedan publicera gruppen. När du publicerar communitywebbplatsen publiceras gruppens sidor, utan att det skapas undercommunityns medlemsgrupper som åtkomstkontrollistorna ställs in på. En begränsad (hemlig) grupp kan därför vara synlig tills gruppen uttryckligen publiceras.
 
-## Länkar och tillhörande information {#links-and-related-information}
+## Länkar och relaterad information {#links-and-related-information}
 
 * [Hantera användare och användargrupper](users.md)
 * [Konsolen Communities Groups](groups.md)
