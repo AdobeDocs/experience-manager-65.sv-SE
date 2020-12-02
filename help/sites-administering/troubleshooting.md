@@ -12,6 +12,9 @@ discoiquuid: da92d751-6f14-4512-9d77-7ecf098bd58e
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 8b53e79e3a88f58423e99477db930a4912a1ba09
+workflow-type: tm+mt
+source-wordcount: '246'
+ht-degree: 2%
 
 ---
 
@@ -26,7 +29,7 @@ CRX registrerar detaljerade loggar. När du har packat upp och startat Quickstar
 * crx-quickstart/server/logs
 * crx-quickstart/logs
 
-## Aktivera felsökningsloggnivån {#activating-the-debug-log-level}
+## Aktivera loggnivån för felsökning {#activating-the-debug-log-level}
 
 Standardloggnivån är INFO, d.v.s. DEBUG-meddelanden loggas inte.
 
@@ -38,7 +41,7 @@ Om du vill aktivera DEBUG-loggnivån använder du CRX-utforskaren för att ange
 
 egenskap som ska felsökas. Lämna inte loggen på DEBUG-loggnivån längre än nödvändigt eftersom den genererar många loggar.
 
-En rad i felsökningsfilen börjar oftast med DEBUG och anger sedan loggnivån, installationsåtgärden och loggmeddelandet. Exempel:
+En rad i felsökningsfilen börjar oftast med DEBUG och anger sedan loggnivån, installationsåtgärden och loggmeddelandet. Till exempel:
 
 ```xml
 DEBUG 3 WebApp Panel: WebApp successfully deployed
@@ -50,7 +53,7 @@ Loggnivåerna är följande:
 |---|---|---|
 | 1 | Fel | Åtgärden misslyckades. Installationen fortsätter, men en del av CRX installerades inte korrekt och kommer inte att fungera. |
 | 2 | Varning | Åtgärden har slutförts men problem uppstod. CRX fungerar eventuellt inte korrekt. |
-| 3 |  Information | Åtgärden har slutförts. |
+| 3 | Information | Åtgärden har slutförts. |
 
 ## Detaljerat alternativ som används för felsökning {#verbose-option-used-for-troubleshooting}
 
