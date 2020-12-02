@@ -27,7 +27,7 @@ När en affärsanvändare eller en agent sparar en korrespondens som utkast elle
 
 ## Användardata och datalager {#data}
 
-Korrespondenshantering lagrar data för utkast och skickade brev AEM databasen endast om publiceringsinstansen är konfigurerad för att hantera bokstavsinstanser. Mer information om konfigurationen finns i Konfigurationsegenskaper för [korrespondenshantering](/help/forms/using/cm-configuration-properties.md).
+Korrespondenshantering lagrar data för utkast och skickade brev AEM databasen endast om publiceringsinstansen är konfigurerad för att hantera bokstavsinstanser. Mer information om konfigurationen finns i [Konfigurationsegenskaper för korrespondenshantering](/help/forms/using/cm-configuration-properties.md).
 
 Beroende på den datalagringsbeständighet som har konfigurerats för din AEM-distribution lagras utkast och skickade korrespondensdata på följande platser.
 
@@ -72,7 +72,7 @@ Du kan få åtkomst till utkast och skickade korrespondensdata i de konfigurerad
 
 ### Åtkomst till användardata {#access-user-data}
 
-Korrespondenshanteringen innehåller API:er som du kan använda för att hitta och komma åt utkast och skickade brev. Med API:erna kan du söka efter och öppna bokstavsinstanser med hjälp av bokstavsinstans-ID:t eller den användare som sparade eller skickade korrespondensen. Mer information finns i API: [er för att komma åt bokstavsinstanser](/help/forms/using/cm-apis-to-access-letter-instances.md).
+Korrespondenshanteringen innehåller API:er som du kan använda för att hitta och komma åt utkast och skickade brev. Med API:erna kan du söka efter och öppna bokstavsinstanser med hjälp av bokstavsinstans-ID:t eller den användare som sparade eller skickade korrespondensen. Mer information finns i [API:er för att komma åt bokstavsinstanser](/help/forms/using/cm-apis-to-access-letter-instances.md).
 
 Du kan också navigera till bokstavsinstansen i AEM med CRX DELite. Se [Användardata och datalager](/help/forms/using/correspondence-management-handling-user-data.md#data) för information om lagrade data och databasplats.
 
