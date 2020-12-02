@@ -30,7 +30,7 @@ Du kan göra följande med tjänsten Konvertera PDF:
 
 ## Konfigurera egenskaper för tjänsten   {#properties}
 
-Du kan använda **AEMFD ConvertPDF-tjänsten** i AEM Console för att konfigurera egenskaper för den här tjänsten. Standardwebbadressen för AEM-konsolen är `https://[host]:'port'/system/console/configMgr`.
+Du kan använda tjänsten **AEMFD ConvertPDF** i AEM Console för att konfigurera egenskaper för den här tjänsten. Standardwebbadressen för AEM är `https://[host]:'port'/system/console/configMgr`.
 
 ## Använda tjänsten {#using-the-service}
 
@@ -40,7 +40,7 @@ ConvertPDF-tjänsten tillhandahåller följande två API:er:
 
 * **[toImage](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toImage)**: Konverterar ett PDF-dokument till en bildfil. Bildformat som stöds är JPEG, JPEG2000, PNG och TIFF.
 
-### Använda toPS API med en JSP eller Servlets {#using-tops-api-with-a-jsp-or-servlets}
+### Använda toPS API med JSP eller Servlets {#using-tops-api-with-a-jsp-or-servlets}
 
 ```jsp
 <%@ page import="java.util.List, java.io.File,
@@ -131,11 +131,13 @@ String documentPath = "/content/dam/formsanddocuments/ExpenseClaimFlat.pdf";
 %>
 ```
 
-### Använda ConvertPDF Service med AEM-arbetsflöden {#using-convertpdf-service-with-aem-workflows}
+### Använda ConvertPDF Service med AEM arbetsflöden {#using-convertpdf-service-with-aem-workflows}
 
 Att köra ConvertPDF-tjänsten från ett arbetsflöde påminner om att köra från JSP/Servlet.
 
-Den enda skillnaden är när tjänsten körs från JSP/Servlet som dokumentobjektet automatiskt hämtar en instans av ResourceResolver-objektet från objektet ResourceResolverHelper. Den här automatiska mekanismen fungerar inte när koden anropas från ett arbetsflöde. För ett arbetsflöde skickar du en instans av ResourceResolver-objektet explicit till Document-klasskonstruktorn. Document-objektet använder sedan ResourceResolver-objektet för att läsa innehåll från databasen.
+Den enda skillnaden är när tjänsten körs från JSP/Servlet som dokumentobjektet automatiskt hämtar en instans av ResourceResolver-objektet från objektet ResourceResolverHelper. Denna automatiska mekanism
+fungerar inte när koden anropas från ett arbetsflöde. För ett arbetsflöde skickar du en instans av ResourceResolver-objektet explicit till Document-klasskonstruktorn. Dokumentobjektet använder sedan
+tillhandahåller ResourceResolver-objekt för att läsa innehåll från databasen.
 
 Följande exempelarbetsflödesprocess konverterar indatadokumentet till ett PostScript-dokument. Koden skrivs i ECMAScript och dokumentet skickas som arbetsflödets nyttolast:
 
