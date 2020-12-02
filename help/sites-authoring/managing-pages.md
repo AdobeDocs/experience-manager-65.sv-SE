@@ -16,17 +16,17 @@ I det här avsnittet beskrivs hur du skapar och hanterar sidor med Adobe Experie
 
 >[!NOTE]
 >
->Ditt konto behöver [rätt åtkomsträttigheter](/help/sites-administering/security.md) och [behörigheter](/help/sites-administering/security.md#permissions) för att kunna utföra åtgärder på sidor som skapa, kopiera, flytta, redigera och ta bort.
+>Ditt konto behöver [åtkomsträttigheter](/help/sites-administering/security.md) och [behörighet](/help/sites-administering/security.md#permissions) för att kunna utföra åtgärder på sidor som skapa, kopiera, flytta, redigera och ta bort.
 >
 >Om du råkar ut för problem rekommenderar vi att du kontaktar systemadministratören.
 
 >[!NOTE]
 >
->Det finns ett antal [kortkommandon](/help/sites-authoring/keyboard-shortcuts.md) som du kan använda från webbplatskonsolen som gör att du kan ordna dina sidor mer effektivt.
+>Det finns ett antal [kortkommandon](/help/sites-authoring/keyboard-shortcuts.md) som du kan använda från webbplatskonsolen för att ordna dina sidor mer effektivt.
 
 ## Organisera din webbplats {#organizing-your-website}
 
-Som författare måste du ordna din webbplats i AEM. Detta innebär att du skapar och namnger innehållssidorna så att:
+Som författare måste du ordna din webbplats inom AEM. Detta innebär att du skapar och namnger innehållssidorna så att:
 
 * Du kan enkelt hitta dem i redigeringsmiljön
 * Besökare på webbplatsen kan enkelt hitta dem i publiceringsmiljön
@@ -43,7 +43,7 @@ I följande exempel visas ett exempel från webbplatsen We.Retail, där du kan k
 * Publiceringsmiljö
    `https://localhost:4503/content/we-retail/us/en/products/equipment/hiking/desert-sky-shorts.html`
 
-Beroende på instansens konfiguration kan det vara valfritt `/content` att använda den i publiceringsmiljön.
+Beroende på instansens konfiguration kan det vara valfritt att använda `/content` i publiceringsmiljön.
 
 ```xml
  /content
@@ -71,13 +71,13 @@ Beroende på instansens konfiguration kan det vara valfritt `/content` att anvä
  /...
 ```
 
-Den här strukturen kan visas i **webbplatskonsolen** , där du kan [navigera bland webbplatsens](/help/sites-authoring/basic-handling.md#navigating) sidor och utföra åtgärder på sidorna. Du kan också skapa nya webbplatser och [nya sidor](#creating-a-new-page).
+Den här strukturen kan visas Från konsolen **Platser**, där du kan [navigera bland sidorna på webbplatsen](/help/sites-authoring/basic-handling.md#navigating) och utföra åtgärder på sidorna. Du kan också skapa nya webbplatser och [nya sidor](#creating-a-new-page).
 
 Du kan se grenen uppåt från vägbeskrivningar i sidhuvudsfältet:
 
 ![caop-01](assets/caop-01.png)
 
-### Konventioner för sidnamngivning {#page-naming-conventions}
+### Sidnamnkonventioner {#page-naming-conventions}
 
 När du skapar en ny sida finns det två nyckelfält:
 
@@ -89,23 +89,23 @@ När du skapar en ny sida finns det två nyckelfält:
 * **[Namn](#name)**:
 
    * Detta används för att generera URI:n.
-   * Användarindata för det här fältet är valfria. Om inget anges hämtas namnet från titeln. Mer information finns i följande avsnitt [Sidnamnsbegränsningar och Bästa metoder](/help/sites-authoring/managing-pages.md#page-name-restrictions-and-best-practices) .
+   * Användarindata för det här fältet är valfria. Om inget anges hämtas namnet från titeln. Mer information finns i följande avsnitt [Begränsningar för sidnamn och bästa praxis](/help/sites-authoring/managing-pages.md#page-name-restrictions-and-best-practices).
 
 #### Begränsningar för sidnamn och bästa praxis {#page-name-restrictions-and-best-practices}
 
 Sidans **titel** och **namn** kan skapas separat men hänger ihop:
 
-* När du skapar en sida är endast fältet **Titel** obligatoriskt. Om inget **namn** anges när sidan skapas genererar AEM ett namn från de 64 första tecknen i titeln (med den validering som anges nedan). Endast de första 64 tecknen används för att ge stöd åt de bästa sätten med namn på korta sidor.
+* När du skapar en sida krävs bara fältet **Titel**. Om inget **namn** anges när sidan skapas, kommer AEM att generera ett namn från de första 64 tecknen i titeln (med den validering som anges nedan). Endast de första 64 tecknen används för att ge stöd åt de bästa sätten med namn på korta sidor.
 
 * Om ett sidnamn anges manuellt av författaren gäller inte gränsen på 64 tecken, men andra tekniska begränsningar på sidnamnets längd kan förekomma.
 
 >[!NOTE]
 >
->När du definierar ett sidnamn är en bra tumregel att hålla sidnamnet så kort, men så uttrycksfullt och minnesvärt som möjligt så att det blir lätt att förstå för läsaren. Mer information finns i [W3C-formatguiden](https://www.w3.org/Provider/Style/TITLE.html) för `title` elementet.
+>När du definierar ett sidnamn är en bra tumregel att hålla sidnamnet så kort, men så uttrycksfullt och minnesvärt som möjligt så att det blir lätt att förstå för läsaren. Mer information finns i [W3C-formatguiden](https://www.w3.org/Provider/Style/TITLE.html) för `title`-elementet.
 >
 >Tänk också på att vissa webbläsare (t.ex. äldre versioner av IE) bara kan acceptera URL:er med en viss längd, så det finns också tekniska skäl att hålla sidnamnen korta.
 
-När du skapar en ny sida [validerar AEM sidans namn enligt konventionerna](/help/sites-developing/naming-conventions.md) från AEM och JCR.
+När du skapar en ny sida kommer AEM att [validera sidnamnet enligt konventionerna](/help/sites-developing/naming-conventions.md) som AEM och JCR har infört.
 
 Minsta tillåtna tecken är:
 
@@ -119,11 +119,11 @@ Fullständig information om alla tillåtna tecken finns i [namnkonventionen](/he
 
 >[!NOTE]
 >
->Om AEM körs på en [MongoMK persistence Manager-distribution](/help/sites-deploying/recommended-deploys.md)är sidnamnen begränsade till 150 tecken.
+>Om AEM körs på en [MongoMK persistence Manager-distribution](/help/sites-deploying/recommended-deploys.md) är sidnamnen begränsade till 150 tecken.
 
 #### Titel {#title}
 
-Om du bara anger en **sidtitel** när du skapar en ny sida härleds sidans **namn**[ i AEM från den här strängen och namnet valideras enligt konventionerna i AEM och JCR. ](/help/sites-developing/naming-conventions.md) Ett **titelfält** som innehåller ogiltiga tecken accepteras, men det härledda namnet kommer att ersätta de ogiltiga tecknen. Till exempel:
+Om du bara anger en **sidtitel** när du skapar en ny sida härleds sidans **namn**[ i AEM från den här strängen och namnet valideras enligt konventionerna i AEM och JCR. ](/help/sites-developing/naming-conventions.md) Ett **titelfält** som innehåller ogiltiga tecken accepteras, men det härledda namnet kommer att ersätta ogiltiga tecken. Till exempel:
 
 | Titel | Härlett namn |
 |---|---|
@@ -132,7 +132,7 @@ Om du bara anger en **sidtitel** när du skapar en ny sida härleds sidans **nam
 
 #### Namn {#name}
 
-När du anger ett **sidnamn** när du skapar en ny sida, [validerar AEM namnet enligt konventionerna](/help/sites-developing/naming-conventions.md) från AEM och JCR. Du kan inte skicka ogiltiga tecken i fältet **Namn** . När AEM identifierar ogiltiga tecken markeras fältet med en förklaring.
+När du anger en sida **Namn** när du skapar en ny sida, kommer AEM att [validera namnet enligt konventionerna](/help/sites-developing/naming-conventions.md) som AEM och JCR har infört. Du kan inte skicka ogiltiga tecken i fältet **Namn**. När AEM upptäcker ogiltiga tecken markeras fältet med en förklaring.
 
 ![caop-02](assets/caop-02.png)
 
@@ -140,7 +140,7 @@ När du anger ett **sidnamn** när du skapar en ny sida, [validerar AEM namnet e
 >
 >Du bör undvika att använda en kod med två bokstäver enligt ISO-639-1 som sidnamn, såvida det inte är en språkrot.
 >
->See [Preparing Content for Translation](/help/sites-administering/tc-prep.md) for more information.
+>Mer information finns i [Förbereda innehåll för översättning](/help/sites-administering/tc-prep.md).
 
 ### Mallar {#templates}
 
@@ -150,19 +150,22 @@ Mallen definierar strukturen för en sida, inklusive en miniatyrbild och andra e
 
 AEM innehåller flera färdiga mallar. Vilka mallar som är tillgängliga beror på den enskilda webbplatsen. Nyckelfälten är:
 
-* **Titel** Titeln som visas på den slutliga webbsidan.
+* **Titel**
+Den titel som visas på den slutliga webbsidan.
 
-* **Namn** som används när sidan namnges.
+* **Namn**
+Används när sidan namnges.
 
-* **Mall** En lista med mallar som är tillgängliga för att användas när den nya sidan genereras.
+* ****
+MallEn lista med mallar som är tillgängliga för att användas när den nya sidan genereras.
 
 >[!NOTE]
 >
->Om mallskapare konfigureras på din instans kan [de skapa mallar med mallredigeraren](/help/sites-authoring/templates.md).
+>Om den är konfigurerad på din instans kan [mallförfattare skapa mallar med mallredigeraren](/help/sites-authoring/templates.md).
 
 ### Komponenter {#components}
 
-Komponenterna är de element som tillhandahålls av AEM så att du kan lägga till specifika typer av innehåll. AEM har en rad [färdiga komponenter](/help/sites-authoring/default-components-console.md) med omfattande funktionalitet. Bland dessa finns:
+Komponenterna är de element som AEM tillhandahåller så att du kan lägga till specifika typer av innehåll. AEM innehåller ett urval [körklara komponenter](/help/sites-authoring/default-components-console.md) som ger omfattande funktionalitet. Bland dessa finns:
 
 * Text
 * Bild
@@ -170,15 +173,15 @@ Komponenterna är de element som tillhandahålls av AEM så att du kan lägga ti
 * Video
 * Och många fler
 
-När du har skapat och öppnat en sida kan du [lägga till innehåll med komponenterna](/help/sites-authoring/editing-content.md#insertinganewparagraph), som är tillgängliga från [komponentwebbläsaren](/help/sites-authoring/author-environment-tools.md#componentbrowser).
+När du har skapat och öppnat en sida kan du [lägga till innehåll med komponenterna](/help/sites-authoring/editing-content.md#insertinganewparagraph), som är tillgängliga i [komponentwebbläsaren](/help/sites-authoring/author-environment-tools.md#componentbrowser).
 
 >[!NOTE]
 >
->Med [komponentkonsolen](/help/sites-authoring/default-components-console.md) får du en översikt över komponenterna i din instans.
+>[Komponentkonsolen](/help/sites-authoring/default-components-console.md) ger en översikt över komponenterna i din instans.
 
 ## Hantera sidor {#managing-pages}
 
-### Skapa en ny sida {#creating-a-new-page}
+### Skapar en ny sida {#creating-a-new-page}
 
 Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida innan du kan börja skapa innehåll:
 
@@ -200,7 +203,7 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
 
    * Använd de tre flikarna för att ange de [sidegenskaper](/help/sites-authoring/editing-page-properties.md) som du vill tilldela den nya sidan och klicka/tryck sedan på **Skapa** för att skapa sidan.
 
-   * Använd **Bakåt** för att återgå till mallval.
+   * Använd **Tillbaka** om du vill återgå till mallvalet.
 
    Nyckelfält är:
 
@@ -210,24 +213,24 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
    * **Namn**:
 
       * Detta används för att generera URI:n. Om inget anges hämtas namnet från titeln.
-      * Om du anger ett **sidnamn** när du skapar en ny sida, kommer AEM att [validera namnet i enlighet med konventionerna](/help/sites-developing/naming-conventions.md) från AEM och JCR.
+      * Om du anger en sida **Namn** när du skapar en ny sida, kommer AEM att [validera namnet enligt konventionerna](/help/sites-developing/naming-conventions.md) som AEM och JCR har infört.
 
-      * Du **kan inte skicka ogiltiga tecken** i **namnfältet** . När AEM identifierar ogiltiga tecken markeras fältet och en förklaring visas som anger vilka tecken som behöver tas bort/ersättas.
+      * Du **kan inte skicka ogiltiga tecken** i fältet **Namn**. När AEM upptäcker ogiltiga tecken markeras fältet och en förklaring visas som anger vilka tecken som behöver tas bort/ersättas.
    >[!NOTE]
    >
-   >Se [Namnkonventioner](#page-naming-conventions)för sidor.
+   >Se [Konventioner för sidnamngivning](#page-naming-conventions).
 
-   Minimiinformationen som krävs för att skapa en ny sida är **Titel**.
+   Den information som krävs för att skapa en ny sida är **titeln**.
 
    ![caop-05](assets/caop-05.png)
 
-1. Använd **Skapa** för att slutföra processen och skapa en ny sida. I bekräftelsedialogrutan får du frågan om du vill **öppna** sidan direkt eller återgå till konsolen (**Klar**):
+1. Använd **Skapa** för att slutföra processen och skapa en ny sida. Bekräftelsedialogrutan frågar om du vill **öppna** sidan direkt eller återgå till konsolen (**Klar**):
 
    ![chlimage_1-118](assets/chlimage_1-118.png)
 
    >[!NOTE]
    >
-   >Om du skapar en sida med ett namn som redan finns på den platsen, genereras automatiskt en variant av namnet genom att en siffra läggs till. Om det till exempel `winter` redan finns en ny sida blir den `winter0`.
+   >Om du skapar en sida med ett namn som redan finns på den platsen, genereras automatiskt en variant av namnet genom att en siffra läggs till. Om `winter` till exempel redan finns blir en ny sida `winter0`.
 
 1. Om du återgår till konsolen ser du den nya sidan:
 
@@ -235,20 +238,20 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
 
 >[!CAUTION]
 >
->När en sida har skapats kan dess mall inte ändras - såvida du inte [skapar en startsida med en ny mall](/help/sites-authoring/launches-creating.md#create-launch-with-new-template), men innehåll som redan finns går förlorat.
+>När en sida har skapats går det inte att ändra dess mall, såvida du inte [skapar en startsida med en ny mall](/help/sites-authoring/launches-creating.md#create-launch-with-new-template), även om innehåll som redan finns försvinner.
 
 ### Öppna en sida för redigering {#opening-a-page-for-editing}
 
 När du har skapat en sida eller navigerat till en befintlig sida (i konsolen) kan du öppna den för redigering:
 
-1. Öppna konsolen **Platser** .
+1. Öppna konsolen **Platser**.
 1. Navigera tills du hittar sidan som du vill redigera.
 1. Välj sida genom att använda något av följande:
 
    * [Snabbåtgärder](/help/sites-authoring/basic-handling.md#quick-actions)
-   * [Markeringsläget](/help/sites-authoring/basic-handling.md#navigatingandselectionmode) och verktygsfältet
+   * [Markeringsläge ](/help/sites-authoring/basic-handling.md#navigatingandselectionmode) och verktygsfältet
 
-   Välj sedan ikonen **Redigera** :
+   Välj sedan ikonen **Redigera**:
 
    ![screen_shot_2018-03-22at105355](assets/screen_shot_2018-03-22at105355.png)
 
@@ -262,13 +265,13 @@ När du har skapat en sida eller navigerat till en befintlig sida (i konsolen) k
 
 Du kan kopiera en sida och alla dess underordnade sidor till en ny plats:
 
-1. Navigera i **webbplatskonsolen** tills du hittar sidan som du vill kopiera.
+1. Navigera i konsolen **Platser** tills du hittar sidan som du vill kopiera.
 1. Välj sida med någon av följande metoder:
 
    * [Snabbåtgärder](/help/sites-authoring/basic-handling.md#quick-actions)
-   * [Markeringsläget](/help/sites-authoring/basic-handling.md#navigatingandselectionmode) och verktygsfältet
+   * [Markeringsläge ](/help/sites-authoring/basic-handling.md#navigatingandselectionmode) och verktygsfältet
 
-   Sedan ikonen **Kopiera** :
+   Sedan sidikonen **Copy**:
 
    ![screen_shot_2018-03-22at105425](assets/screen_shot_2018-03-22at105425.png)
 
@@ -282,12 +285,12 @@ Du kan kopiera en sida och alla dess underordnade sidor till en ny plats:
    ![Klistra in](assets/paste-without-children.png)
 
    Du kan antingen:
-   * Markera själva ikonen **Klistra in** : En kopia av originalsidan och eventuella underordnade sidor skapas på den här platsen.
-   * Markera listrutepilen för att visa alternativet **Klistra in utan underordnade** . En kopia av originalsidan kommer att skapas på denna plats. underordnade sidor kopieras inte.
+   * Markera sidikonen **Klistra in**: En kopia av originalsidan och eventuella underordnade sidor skapas på den här platsen.
+   * Markera listrutepilen för att visa alternativet **Klistra in utan underordnade**. En kopia av originalsidan kommer att skapas på denna plats. underordnade sidor kopieras inte.
 
    >[!NOTE]
    >
-   >Om du kopierar sidan till en plats där det redan finns en sida med samma namn som originalet, kommer systemet automatiskt att generera en variant av namnet genom att lägga till en siffra. Om det till exempel `winter` redan finns `winter` blir det `winter1`.
+   >Om du kopierar sidan till en plats där det redan finns en sida med samma namn som originalet, kommer systemet automatiskt att generera en variant av namnet genom att lägga till en siffra. Om `winter` till exempel redan finns `winter` blir `winter1`.
 
 ### Flytta eller byta namn på en sida {#moving-or-renaming-a-page}
 
@@ -297,7 +300,7 @@ Du kan kopiera en sida och alla dess underordnade sidor till en ny plats:
 
 >[!NOTE]
 >
->En sida kan bara flyttas till en plats där mallen som sidan baseras på tillåts. Mer information finns i [Malltillgänglighet](/help/sites-developing/templates.md#template-availability) .
+>En sida kan bara flyttas till en plats där mallen som sidan baseras på tillåts. Mer information finns i [Malltillgänglighet](/help/sites-developing/templates.md#template-availability).
 
 Proceduren för att flytta eller byta namn på en sida är i princip densamma och hanteras av samma guide. Med den här guiden kan du:
 
@@ -305,23 +308,23 @@ Proceduren för att flytta eller byta namn på en sida är i princip densamma oc
 * Flytta sidan utan att byta namn på den.
 * Flytta och byt namn samtidigt.
 
-Med AEM kan du uppdatera interna länkar som refererar till sidan som byter namn/flyttas. Detta kan göras sida för sida för att ge full flexibilitet.
+I AEM finns funktioner för att uppdatera interna länkar som refererar till sidan som byter namn/flyttas. Detta kan göras sida för sida för att ge full flexibilitet.
 
 1. Navigera tills du hittar sidan som du vill flytta.
 1. Välj sida med någon av följande metoder:
 
    * [Snabbåtgärder](/help/sites-authoring/basic-handling.md#quick-actions)
-   * [Markeringsläget](/help/sites-authoring/basic-handling.md#navigatingandselectionmode) och verktygsfältet
+   * [Markeringsläge ](/help/sites-authoring/basic-handling.md#navigatingandselectionmode) och verktygsfältet
 
-   Välj sedan ikonen **Flytta** sida:
+   Välj sedan sidikonen **Flytta**:
 
    ![screen_shot_2018-03-22at105534](assets/screen_shot_2018-03-22at105534.png)
 
    Guiden Flytta sida öppnas.
 
-1. Under **Byt namn** på guiden kan du antingen:
+1. Från **Ändra namn**-fasen i guiden kan du antingen:
 
-   * Ange det namn du vill att sidan ska ha när den har flyttats och klicka/tryck sedan på **Nästa** för att fortsätta.
+   * Ange det namn du vill att sidan ska ha efter att den har flyttats och klicka/tryck sedan på **Nästa** för att fortsätta.
 
    * **Avbryt** om du vill avbryta processen.
 
@@ -331,15 +334,15 @@ Med AEM kan du uppdatera interna länkar som refererar till sidan som byter namn
 
    >[!NOTE]
    >
-   >Om du flyttar en sida till en plats där det redan finns en sida med samma namn, kommer systemet automatiskt att generera en variant av namnet genom att lägga till en siffra. Om det till exempel `winter` redan finns `winter` blir det `winter1`.
+   >Om du flyttar en sida till en plats där det redan finns en sida med samma namn, kommer systemet automatiskt att generera en variant av namnet genom att lägga till en siffra. Om `winter` till exempel redan finns `winter` blir `winter1`.
 
-1. I **fasen Välj mål** i guiden kan du antingen:
+1. Från **Välj mål**-fasen i guiden kan du antingen:
 
    * Använd [kolumnvyn](/help/sites-authoring/basic-handling.md#column-view) för att navigera till sidans nya plats:
 
       * Markera målet genom att klicka på målets miniatyrbild.
       * Klicka på **Nästa** för att fortsätta.
-   * Använd **Bakåt** för att återgå till sidnamnsspecifikationen.
+   * Använd **Tillbaka** för att återgå till sidnamnsspecifikationen.
 
    >[!NOTE]
    >
@@ -349,9 +352,9 @@ Med AEM kan du uppdatera interna länkar som refererar till sidan som byter namn
 
    >[!NOTE]
    >
-   >Om du flyttar en sida till en plats där det redan finns en sida med samma namn, kommer systemet automatiskt att generera en variant av namnet genom att lägga till en siffra. Om det till exempel `winter` redan finns `winter` blir det `winter1`.
+   >Om du flyttar en sida till en plats där det redan finns en sida med samma namn, kommer systemet automatiskt att generera en variant av namnet genom att lägga till en siffra. Om `winter` till exempel redan finns `winter` blir `winter1`.
 
-1. Om sidan är länkad till eller refererad, eller har publicerats, visas informationen i steget **Justera/Publicera** igen.
+1. Om sidan är länkad till eller refererad, eller har publicerats, visas informationen i steget **Justera/Publicera om**.
 
    Du kan ange vilka som ska justeras och/eller publiceras på nytt efter behov.
 
@@ -361,15 +364,15 @@ Med AEM kan du uppdatera interna länkar som refererar till sidan som byter namn
 
    ![caop-09](assets/caop-09.png)
 
-1. Om du väljer **Flytta** slutförs processen och du kan flytta/ändra namn på sidan efter behov.
+1. Om du väljer **Flytta** slutförs processen och du flyttar/byter namn på sidan efter behov.
 
 >[!NOTE]
 >
->Om sidan redan har publicerats avpubliceras den automatiskt när du flyttar den. By default, it will be republished when the move is complete, but this can changed by unchecking the **Republish** field in the **Adjust/Republish** step.
+>Om sidan redan har publicerats avpubliceras den automatiskt när du flyttar den. Som standard publiceras den om när flytten är klar, men detta kan ändras genom att avmarkera fältet **Publicera om** i **Justera/Publicera**-steget.
 
 >[!NOTE]
 >
->Om det inte finns någon referens till sidan på något sätt hoppas steget **Justera/Publicera** om över.
+>Om det inte finns någon referens till sidan på något sätt hoppas steget **Justera/Publicera** över.
 
 #### Asynkrona åtgärder {#asynchronous-actions}
 
@@ -381,12 +384,12 @@ Om antalet sidor som påverkas ligger över en angiven gräns, kommer åtgärden
 * Om antalet sidor som påverkas ligger under gränsen utförs en synkron åtgärd.
 * Om antalet sidor som påverkas ligger över gränsen utförs en asynkron åtgärd.
    * Användaren måste definiera när den asynkrona åtgärden ska utföras
-      * **Nu** börjar körningen av det asynkrona jobbet omedelbart.
-      * **Senare** kan användaren definiera när det asynkrona jobbet ska starta.
+      * **Kör** nu det asynkrona jobbet omedelbart.
+      * **Med** Laterge kan användaren definiera när det asynkrona jobbet ska starta.
 
          ![Asynkron flyttning av sida](assets/asynchronous-page-move.png)
 
-Statusen för asynkrona jobb kan kontrolleras på kontrollpanelen [**Async Jobs Status **på](/help/sites-administering/asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)** Global Navigation **->** Tools **->** Operations **->** Jobb **
+Status för asynkrona jobb kan kontrolleras i kontrollpanelen [**Async Jobs Status**](/help/sites-administering/asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations) på **Global navigering** -> **Verktyg** -> **Åtgärder** -> **Jobs**
 
 >[!NOTE]
 >
@@ -396,10 +399,10 @@ Statusen för asynkrona jobb kan kontrolleras på kontrollpanelen [**Async Jobs 
 >
 >Asynkron bearbetning av sidflyttning kräver AEM 6.5.3.0 eller senare.
 
-### Ta bort en sida {#deleting-a-page}
+### Tar bort en sida {#deleting-a-page}
 
 1. Navigera tills du ser sidan som du vill ta bort.
-1. Använd [markeringsläget](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources) för att markera önskad sida och använd sedan **Ta bort** från verktygsfältet:
+1. Använd [markeringsläget](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources) för att markera önskad sida och använd sedan **Ta bort** i verktygsfältet:
 
    ![screen_shot_2018-03-22at105622](assets/screen_shot_2018-03-22at105622.png)
 
@@ -410,10 +413,10 @@ Statusen för asynkrona jobb kan kontrolleras på kontrollpanelen [**Async Jobs 
 1. En dialogruta öppnas där du uppmanas att bekräfta. Använd:
 
    * **Avbryt** om du vill avbryta åtgärden
-   * **Ta bort** för att bekräfta åtgärden:
+   * **Bekräfta åtgärden genom att** ta bort:
 
       * Om sidan inte har några referenser tas sidan bort.
-      * Om sidan innehåller referenser visas ett meddelande om att det finns referenser till **en eller flera sidor.** Du kan välja **Tvinga borttagning** eller **Avbryt**.
+      * Om sidan innehåller referenser visas ett meddelande om att **en eller flera sidor refereras.** Du kan välja  **Tvinga** borttagning eller  **Avbryt**.
 
 >[!NOTE]
 >
@@ -425,13 +428,13 @@ Du kan [låsa/låsa upp en sida](/help/sites-authoring/editing-content.md#lockin
 
 ![screen_shot_2018-03-22at105713](assets/screen_shot_2018-03-22at105713.png) ![screen_shot_2018-03-22at105720](assets/screen_shot_2018-03-22at105720.png)
 
-### Skapa en ny mapp {#creating-a-new-folder}
+### Skapar en ny mapp {#creating-a-new-folder}
 
 Du kan skapa mappar som hjälper dig att ordna dina filer och sidor.
 
 >[!NOTE]
 >
->Mappar lyder även under [Sidnamngivningskonventioner](#page-naming-conventions) när du anger det nya mappnamnet.
+>Mappar omfattas också av [sidnamngivningskonventionerna](#page-naming-conventions) när du anger det nya mappnamnet.
 
 >[!CAUTION]
 >
@@ -443,10 +446,10 @@ Du kan skapa mappar som hjälper dig att ordna dina filer och sidor.
 
 
 
-1. Open the **Sites** console and navigate to the required location.
+1. Öppna konsolen **Platser** och navigera till önskad plats.
 1. Om du vill öppna alternativlistan väljer du **Skapa** i verktygsfältet
-1. Öppna dialogrutan genom att välja **Mapp** . Här anger du **namn** och **titel**:
+1. Välj **Mapp** för att öppna dialogrutan. Här anger du **Namn** och **Titel**:
 
    ![chlimage_1-119](assets/chlimage_1-119.png)
 
-1. Skapa mappen genom att välja **Skapa** .
+1. Välj **Skapa** för att skapa mappen.
