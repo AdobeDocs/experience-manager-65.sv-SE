@@ -27,19 +27,19 @@ Från och med AEM Communities 6.1 lagras användargenererat innehåll (UGC) i en
 
 Till skillnad från tidigare versioner finns det ingen omvänd/framåtriktad replikering av UGC över AEM instanser. I stället gör SRP att UGC är direkt tillgängligt för att skapa, läsa, uppdatera och ta bort (CRUD) åtgärder från alla författare- och publiceringsinstanser, med undantag för JSRP.
 
-Nedan följer [egenskaperna för varje SRP-alternativ](#characteristics-of-srp-options), som är viktig information för beslutsprocessen när man väljer lämplig SRP och [underliggande driftsättning](/help/communities/topologies.md).
+Nedan följer [egenskaperna för varje SRP-alternativ](#characteristics-of-srp-options), som är viktig information för beslutsprocessen när du väljer lämplig SRP och [underliggande distribution](/help/communities/topologies.md).
 
-Mer information om användningen av SRP för UGC finns i Översikt över [lagringsresursprovidern](/help/communities/srp.md).
+Mer information om användning av SRP för UGC finns i [Översikt över lagringsresursprovidern](/help/communities/srp.md).
 
 >[!NOTE]
 >
->SRP gäller endast för communityinnehåll. Det påverkar inte var webbplatsinnehållet lagras ([nodarkiv](/help/sites-deploying/data-store-config.md)) och påverkar inte den säkra hanteringen av användarregistrering, användarprofiler och användargrupper mellan AEM instanser (se även [Hantera användardata](#managing-user-data)).
+>SRP gäller endast för communityinnehåll. Det påverkar inte var webbplatsinnehållet lagras ([nodstore](/help/sites-deploying/data-store-config.md)) och påverkar inte den säkra hanteringen av användarregistrering, användarprofiler och användargrupper mellan AEM instanser (se även [Hantera användardata](#managing-user-data)).
 
 >[!CAUTION]
 >
->Från och med AEM 6.1 replikeras [aldrig](#ugc-never-replicated)UGC.
+>Från och med AEM 6.1 är [UGC aldrig replikerat](#ugc-never-replicated).
 >
->När distributionen inte innehåller någon gemensam butik, t.ex. [JSRP](/help/communities/topologies.md#jsrp) -standardtopologi, visas bara UGC i den AEM publicerings- eller författarinstansen som den angavs för. Endast om topologin innehåller ett publiceringskluster visas UGC:n på alla publiceringsinstanser.
+>När distributionen inte innehåller någon gemensam lagringsplats, till exempel standardtopologin [JSRP](/help/communities/topologies.md#jsrp), visas bara UGC i den AEM publicerings- eller författarinstansen som den angavs för. Endast om topologin innehåller ett publiceringskluster visas UGC:n på alla publiceringsinstanser.
 
 ## Egenskaper för SRP-alternativ {#characteristics-of-srp-options}
 
@@ -107,7 +107,7 @@ JSRP:
 
 ## Konfigurerar SRP {#configuring-srp}
 
-Ange standardlagringsalternativet, baserat på den underliggande distributionen, via konsolen [för](/help/communities/srp-config.md)lagringskonfiguration.
+Ange standardlagringsalternativet, baserat på den underliggande distributionen, via konsolen [Lagringskonfiguration](/help/communities/srp-config.md).
 
 Konfigurationsinformation om varje alternativ finns i:
 
@@ -118,7 +118,7 @@ Konfigurationsinformation om varje alternativ finns i:
 
 Om inget lagringsalternativ är aktivt, aktiveras JSRP som standard.
 
-## Additional Information {#additional-information}
+## Ytterligare information {#additional-information}
 
 ### UGC har aldrig replikerats {#ugc-never-replicated}
 
@@ -132,12 +132,12 @@ När platsinnehållet replikeras replikeras aldrig UGC.
 
 ### Hantera användardata {#managing-user-data}
 
-CommunitIes är också av intresse för [*användare*, *användargrupper* och *användarprofiler*](/help/communities/users.md). Dessa användarrelaterade data, som skapas och uppdateras i publiceringsmiljön, måste göras tillgängliga för andra publiceringsinstanser när topologin är en [publiceringsgrupp](/help/sites-deploying/recommended-deploys.md#tarmk-farm).
+CommunitIes är [*användare*, *användargrupper* och *användarprofiler*](/help/communities/users.md). Dessa användarrelaterade data, som skapas och uppdateras i publiceringsmiljön, måste göras tillgängliga för andra publiceringsinstanser när topologin är en [publiceringsgrupp](/help/sites-deploying/recommended-deploys.md#tarmk-farm).
 
-Från och med AEM Communities 6.1 synkroniseras användarrelaterade data med Sling-distribution i stället för replikering. Mer information finns i [Användarsynkronisering](/help/communities/sync.md).
+Från och med AEM Communities 6.1 synkroniseras användarrelaterade data med Sling-distribution i stället för replikering. Mer information finns på [Användarsynkronisering](/help/communities/sync.md).
 
-### Uppgradera till AEM Communities 6.5 {#upgrading-to-aem-communities}
+### Uppgraderar till AEM Communities 6.5 {#upgrading-to-aem-communities}
 
 Vid uppgradering till AEM 6.5 Communities, om befintlig UGC måste behållas, bör åtgärder vidtas beroende på om AEM 5.6.1- eller AEM 6.0-communityn använde Adobe on demand-lagring eller lokal lagring av UGC.
 
-Mer information finns i [Uppgradera till AEM Communities 6.5](/help/communities/upgrade.md).
+Mer information finns på [Uppgradera till AEM Communities 6.5](/help/communities/upgrade.md).
