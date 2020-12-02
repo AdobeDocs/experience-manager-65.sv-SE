@@ -15,15 +15,15 @@ ht-degree: 1%
 ---
 
 
-# Användarhandbok för distribution av AEM 6.5 {#deploying}
+# AEM 6.5 Användarhandbok för distribution {#deploying}
 
 + [Distribuera användarhandbok](home.md)
-+ Introduktion till AEM {#introduction}
++ Introduktion till AEM{#introduction}
    + [Introduktion till AEM](platform.md)
    + [Tekniska krav](technical-requirements.md)
    + [Lagringselement i AEM 6.5](storage-elements-in-aem-6.md)
    + [AEM med MongoDB](aem-with-mongodb.md)
-+ Distribuera AEM {#deploying}
++ Distribuerar AEM {#deploying}
    + [Driftsättning och underhåll](deploy.md)
    + [Rekommenderade distributioner](recommended-deploys.md)
    + [Installation av programserver](application-server-install.md)
@@ -39,7 +39,7 @@ ht-degree: 1%
    + [Felsöka ekindex](troubleshooting-oak-indexes.md)
    + [Insamling av aggregerad användningsstatistik](opt-in-aggregated-usage-statistics.md)
    + [Felsökning](troubleshooting.md)
-+ Konfigurera AEM {#configuring}
++ Konfigurerar AEM {#configuring}
    + [Grundläggande konfigurationskoncept](configuring.md)
    + [Loggning](configure-logging.md)
    + [Konfigurerar OSGi](configuring-osgi.md)
@@ -62,7 +62,7 @@ ht-degree: 1%
    + [Prestandahandbok för resurser](assets-performance-sizing.md)
    + [Instruktionsartiklar för konfiguration](ht-deploy.md)
    + [Konfigurerar webbkonsolen](configuring-web-console.md)
-+ Uppgradera till AEM 6.5 {#upgrading}
++ Uppgraderar till AEM 6.5 {#upgrading}
    + [Uppgradera till AEM 6.5](upgrade.md)
    + [Planera din uppgradering](upgrade-planning.md)
    + [Utvärdera uppgraderingskomplexiteten med mönsteravkännaren](pattern-detector.md)
@@ -79,7 +79,7 @@ ht-degree: 1%
    + [Uppgradera kod och anpassningar](upgrading-code-and-customizations.md)
    + [Uppgradera steg för programserverinstallationer](app-server-upgrade.md)
    + [Lista över föråldrade paket som avinstallerats efter uppgraderingen](obsolete-bundles.md)
-+ Omstrukturering av lager {#restructuring}
++ Databasomstrukturering {#restructuring}
    + [Omstrukturering av lager i AEM 6.5](repository-restructuring.md)
    + [Omstrukturering av de gemensamma tillgångarna i AEM 6.5](all-repository-restructuring-in-aem-6-5.md)
    + [Omstrukturering av anläggningar Repository i AEM 6.5](sites-repository-restructuring-in-aem-6-5.md)
@@ -88,7 +88,7 @@ ht-degree: 1%
    + [Omstrukturering av Forms-lager i AEM 6.5](forms-repository-restructuring-in-aem-6-5.md)
    + [Omstrukturering av e-handelslager i AEM 6.5](ecommerce-repository-restructuring-in-aem-6-5.md)
    + [Repositionsomstrukturering för AEM Communities i 6.5](communities-repository-restructuring-in-aem-6-5.md)
-+ eCommerce {#ecommerce}
++ e-handel {#ecommerce}
    + [e-handel - översikt](ecommerce.md)
    + [SAP Commerce Cloud](sap-commerce-cloud.md)
    + [Salesforce Commerce Cloud](https://github.com/adobe/commerce-salesforce)
