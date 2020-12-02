@@ -27,7 +27,7 @@ Arbetsflödet för korrespondenshantering består av fyra faser:
 1. Skapa brev
 1. Efterbehandling
 
-### Skapa mallar {#template-creation}
+### Skapa mall {#template-creation}
 
 I följande bild visas ett typiskt arbetsflöde när du skapar en brevbrevmall.
 
@@ -35,7 +35,7 @@ I följande bild visas ett typiskt arbetsflöde när du skapar en brevbrevmall.
 
 I det här arbetsflödet:
 
-1. Formulärdesigners skapar layouter och fragmentlayouter med Adobe Forms Designer och överför dem till en CRX-databas. Layouterna innehåller typiska formulärfält, layoutfunktioner som sidhuvud och sidfot och tomma&quot;målområden&quot; för innehållsplacering. Programspecialister mappar senare det innehåll som krävs för dessa målområden. Mer information om [designlayout](/help/forms/using/layout-design-details.md).
+1. Formulärdesigners skapar layouter och fragmentlayouter med Adobe Forms Designer och överför dem till en CRX-databas. Layouterna innehåller typiska formulärfält, layoutfunktioner som sidhuvud och sidfot och tomma&quot;målområden&quot; för innehållsplacering. Programspecialister mappar senare det innehåll som krävs för dessa målområden. Mer information om [design layout](/help/forms/using/layout-design-details.md).
 1. Subject Matter Experts från jurister-, finans- och marknadsföringsavdelningar skapar och överför innehåll som textklausuler, friskrivningar, villkor och bilder som logotyper som återanvänds i olika brevmallar.
 1. Programspecialister skapar brevmallar. Ansökningsspecialisten
 
@@ -45,7 +45,7 @@ I det här arbetsflödet:
 
 1. Författaren förhandsgranskar brevet och skickar det för efterbearbetning. Mer information om [efterbearbetning](/help/forms/using/submit-letter-topostprocess.md).
 
-#### Använda brevmallar som tillhandahålls av Correspondence Management {#using-letter-templates-provided-with-correspondence-management}
+#### Använda brevmallar som tillhandahålls med Correspondence Management {#using-letter-templates-provided-with-correspondence-management}
 
 I stället för att skapa en layoutmall från grunden kan du välja att ändra och återanvända de mallar som Correspondence Management tillhandahåller. Du kan använda designern för att snabbt ändra profileringen och data- och innehållsfälten i mallarna så att de passar organisationens behov. Mer information om Correspondence Management-mallar finns i [Referensbrevmallar](/help/forms/using/reference-cm-layout-templates.md).
 
@@ -69,7 +69,7 @@ Med villkor kan du definiera vilket innehåll som ska inkluderas när korrespond
 
 #### Layoutfragment {#layout-fragment}
 
-Ett layoutfragment är en layout som kan användas i en eller flera bokstäver. Ett layoutfragment används för att skapa repeterbara mönster, särskilt dynamiska tabeller. Layouten kan innehålla typiska formulärfält som &quot;Adress&quot; och &quot;Referensnummer&quot;. Den innehåller också tomma delformulär som anger målområden. Layouterna (XDP) skapas i Designer och [överförs sedan till Forms och Documents](/help/forms/using/get-xdp-pdf-documents-aem.md).
+Ett layoutfragment är en layout som kan användas i en eller flera bokstäver. Ett layoutfragment används för att skapa repeterbara mönster, särskilt dynamiska tabeller. Layouten kan innehålla typiska formulärfält som &quot;Adress&quot; och &quot;Referensnummer&quot;. Den innehåller också tomma delformulär som anger målområden. Layouterna (XDP) skapas i Designer och överförs sedan [till Forms och Documents](/help/forms/using/get-xdp-pdf-documents-aem.md).
 
 ### Skapa brev {#letter-creation}
 
@@ -81,7 +81,7 @@ Kundcentrerade medarbetare som skadejusteringsföretag eller handläggare kan sk
 
 ![Användarstyrd, anpassad korrespondens](assets/02.png)
 
-#### Systemstyrd {#system-driven}
+#### Systemdriven {#system-driven}
 
 Korrespondensgenereringen automatiseras och styrs av händelseutlösare. Ett påminnelsemeddelande som skickas till en medborgare som ber henne om förhandsregistrering av skatt genereras genom att den fördefinierade mallen slås samman med uppgifter om medborgare. Det sista brevet kan skickas via e-post, skrivas ut, faxas eller arkiveras.
 
@@ -119,27 +119,27 @@ Detta meddelande om annullering är ett exempel på en vanlig korrespondens:
   <tr> 
    <td>Data från back-end Enterprise-system</td> 
    <td>Data som hämtas från serverbaserade företagssystem. Informationen sammanfogas dynamiskt med brevbrevmallar.</td> 
-   <td>Den<br /> datafil som skapas baserat på en datamordlista</td> 
+   <td>Datafilen <br /> som har skapats baserat på en datamordlista</td> 
   </tr> 
   <tr> 
-   <td>Data<br /> som angetts av frontlinjemedarbetaren</td> 
+   <td>Data<br /> Anges av frontlinjemedarbetare</td> 
    <td>Data som kan tillhandahållas av en frontlinjeanställd som anpassar brevet innan det skickas ut.<br /> </td> 
    <td><p>Oskyddade DD-element<br /> Redigerbara textstycken<br /> Variabler/platshållare<br /> </p> </td> 
   </tr> 
   <tr> 
-   <td>Godkända<br /> textstycken</td> 
+   <td>I förväg godkända <br /> textstycken</td> 
    <td>Förgodkänt textinnehåll. Experter inom juridik, ekonomi, eller en affärsgren som förstår brevets affärskontext skriver vanligtvis textinnehållet. Innehåll som sidhuvud, sidfot, friskrivningsklausuler och hälsningsfras är vanligt för de flesta bokstäver. Innehåll som"orsak till uppsägning" skulle dock vara specifikt för den aktuella bokstaven.</td> 
    <td><p>Text\Lists\<br /> Villkor\Layout</p> <p> </p> </td> 
   </tr> 
   <tr> 
-   <td>Data<br /> som bygger på anpassad logik -</td> 
+   <td>Data<br /> Baserat på anpassad logik ?</td> 
    <td>För vissa bokstäver, t.ex. ett brev för att begära mer information om ett anspråk, kan användare som Anspråksjustering lägga till eget textinnehåll.</td> 
-   <td>Dokumentfragment<br /> av typen Villkor </td> 
+   <td>Dokument<br /> Fragment av typen Condition </td> 
   </tr> 
   <tr> 
    <td>Lagrade<br /> bilder från den centrala databasen</td> 
    <td>Bilder som logotyper och signaturbilder. Bilder som företagslogotyper visas i de flesta eller alla meddelanden. Signaturbilderna är specifika för brevet och för den person för vars räkning brevet skickas.</td> 
-   <td><p>Bilder som lagras i AEM (DAM)<br /> </p> <p> </p> </td> 
+   <td><p>Bilder som lagras i AEM resurser (DAM)<br /> </p> <p> </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -166,21 +166,21 @@ Analysera varje brev för att identifiera de olika delarna som brevet består av
 
 ## Fördelar med att utföra analysen {#benefits-of-performing-the-analysis}
 
-**Återanvändning** av innehåll Du har en konsoliderad lista över nytt innehåll som krävs för att generera korrespondens. En stor del av innehållet, som sidhuvuden, sidfötter, friskrivningsklausuler och introduktioner, är vanligt för många bokstäver och kan återanvändas för olika bokstäver. Allt sådant gemensamt innehåll kan skapas och godkännas av experter en gång och sedan återanvändas i många meddelanden.
+**Återanvändning av** innehållDu har en konsoliderad lista över nytt innehåll som krävs för att generera korrespondens. En stor del av innehållet, som sidhuvuden, sidfötter, friskrivningsklausuler och introduktioner, är vanligt för många bokstäver och kan återanvändas för olika bokstäver. Allt sådant gemensamt innehåll kan skapas och godkännas av experter en gång och sedan återanvändas i många meddelanden.
 
-**Skapar dataordlistan** Det kommer att finnas datavärden som &quot;Kund-ID&quot; och &quot;Kundnamn&quot; som är gemensamma för många bokstäver. Du kan skapa en konsoliderad lista över alla sådana datavärden. Vanligtvis kontaktas någon från företagets mellanvaruteam när de planerar strukturen. Detta utgör grunden för att skapa datamordlistan.
+**Skapar** dataordlistanDet kommer att finnas datavärden som &quot;Kund-ID&quot; och &quot;Kundnamn&quot; som är gemensamma för många bokstäver. Du kan skapa en konsoliderad lista över alla sådana datavärden. Vanligtvis kontaktas någon från företagets mellanvaruteam när de planerar strukturen. Detta utgör grunden för att skapa datamordlistan.
 
-**Källdata från serverdelssystem** . Du känner också till alla datavärden som behövs och varifrån dessa data hämtas. Sedan kan du skapa implementeringen för att extrahera data från företagssystemet och mata in till bokstavslösningen.
+**Källdata från serverdelssystem** Du känner också till alla datavärden som behövs och varifrån dessa data hämtas. Sedan kan du skapa implementeringen för att extrahera data från företagssystemet och mata in till bokstavslösningen.
 
-**Uppskattning av bokstavskomplexiteten** Det är viktigt att fastställa hur komplicerat det är att skapa en viss korrespondens. Denna analys hjälper till att fastställa hur lång tid och kompetens som krävs för att skapa brevmallarna. Detta kommer i sin tur att hjälpa till att beräkna resurser och kostnader för att implementera bokstavslösningen.
+**Uppskattning av** bokstavskomplexitetenDet är viktigt att fastställa hur komplext det blir att skapa en viss korrespondens. Denna analys hjälper till att fastställa hur lång tid och kompetens som krävs för att skapa brevmallarna. Detta kommer i sin tur att hjälpa till att beräkna resurser och kostnader för att implementera bokstavslösningen.
 
 ## Korrespondenskomplexitet {#correspondence-complexity}
 
 Hur komplicerad korrespondensen är kan bestämmas genom att analysera följande parametrar:
 
-**Komplexa** layouter Hur komplicerad är layouten? Bokstäver som Meddelande om annullering har enkla layouter. Bokstäver som anspråksskydd har en komplex layout med flera tabeller och mer än 60 formulärfält. Att skapa komplexa layouter tar längre tid och kräver avancerade kunskaper om layoutdesign.
+**Komplexa** layouterHur komplicerad är layouten? Bokstäver som Meddelande om annullering har enkla layouter. Bokstäver som anspråksskydd har en komplex layout med flera tabeller och mer än 60 formulärfält. Att skapa komplexa layouter tar längre tid och kräver avancerade kunskaper om layoutdesign.
 
-**Antal textstycken och villkor** Ett låneavtal kan vara tio sidor långt och innehålla mer än 40 textklausuler. Många av dessa klausuler är beroende av&quot;låneparametrar&quot;. På grundval av de exakta villkoren skulle klausulerna inkluderas eller uteslutas från avtalet. För att skapa sådana brev krävs noggrann planering och noggrann definition av de komplexa förhållandena.
+**Antal textstycken och** villkorEtt låneavtal kan vara tio sidor långt och innehålla mer än 40 textklausuler. Många av dessa klausuler är beroende av&quot;låneparametrar&quot;. På grundval av de exakta villkoren skulle klausulerna inkluderas eller uteslutas från avtalet. För att skapa sådana brev krävs noggrann planering och noggrann definition av de komplexa förhållandena.
 
 Tabellen innehåller några riktlinjer som du kan använda för att klassificera bokstäverna:
 
@@ -228,12 +228,12 @@ Tabellen innehåller några riktlinjer som du kan använda för att klassificera
 
 Du behöver följande innan du kan skapa en korrespondens:
 
-* [Kompatibilitetspaket](compatibility-package.md). Installera Kompatibilitetspaketet för att visa alternativet **Bokstäver** på **Forms** -sidan.
+* [Kompatibilitetspaket](compatibility-package.md). Installera Kompatibilitetspaketet för att visa alternativet **Letters** på sidan **Forms**.
 * Bokstaven XDP ([layout](/help/forms/using/document-fragments.md)).
 * Andra XDP-filer ([layoutfragment](document-fragments.md#document-fragments)) som utgör delar av bokstaven. XDP:er\Layouts skapas i [Designer](https://help.adobe.com/en-US/AEMForms/6.1/DesignerHelp/).
-* Relevant [dataordlista](/help/forms/using/data-dictionary.md) (valfritt).
+* Den relevanta [dataordlistan](/help/forms/using/data-dictionary.md) (valfritt).
 * De [datamoduler](/help/forms/using/document-fragments.md) som du vill använda i korrespondensen.
-* [Testdata](/help/forms/using/data-dictionary.md#p-working-with-test-data-p) är XML-filen med testdata. Du måste testa data om du använder ett datalexikon.
+* [Testa ](/help/forms/using/data-dictionary.md#p-working-with-test-data-p) Data är XML-filen med testdata. Du måste testa data om du använder ett datalexikon.
 
 ## Skapa en brevmall {#create-a-letter-template}
 
@@ -241,30 +241,30 @@ Du behöver följande innan du kan skapa en korrespondens:
 
 1. Välj **Forms** > **Bokstäver**.
 
-1. Välj **Skapa > Bokstav**. Correspondence Management visar tillgängliga layouter (XDP). De här layouterna kommer från Designer. Layouterna innehåller också brevmallar som Correspondence Management tillhandahåller direkt. Mer information om Correspondence Management-mallar finns i [Referensbrevmallar](/help/forms/using/reference-cm-layout-templates.md). Om du vill lägga till egna layouter skapar du XDP-filer (layout) i Designer och [överför dem sedan till AEM Forms](/help/forms/using/get-xdp-pdf-documents-aem.md).
+1. Välj **Skapa > Letter**. Correspondence Management visar tillgängliga layouter (XDP). De här layouterna kommer från Designer. Layouterna innehåller också brevmallar som Correspondence Management tillhandahåller direkt. Mer information om Correspondence Management-mallar finns i [Referensbrevmallar](/help/forms/using/reference-cm-layout-templates.md). Om du vill lägga till egna layouter skapar du XDP-filer (layout) i Designer och [överför dem till AEM Forms](/help/forms/using/get-xdp-pdf-documents-aem.md).
 
    ![create-letter](assets/create-letter.png)
 
-1. Välj en layout genom att trycka på den och trycka på **Nästa**.
+1. Välj en layout genom att trycka på den och tryck på **Nästa**.
 
    ![Välj layout för att skapa en bokstav](assets/selectlayout.png)
 
 1. Ange egenskaperna för korrespondensen och tryck på **Spara:**
 
-   * **Titel (valfritt):** Ange brevets titel. Titeln behöver inte vara unik och kan innehålla specialtecken och tecken som inte är engelska.
-   * **Namn:** Brevets unika namn. Det får inte finnas två bokstäver i något läge med samma namn. I fältet Namn kan du bara ange engelska tecken, siffror och bindestreck. Fältet Namn fylls i automatiskt baserat på fältet Titel. De specialtecken, blanksteg, siffror och icke-engelska tecken som anges i fältet Titel ersätts med bindestreck i fältet Namn. Även om värdet i fältet Titel automatiskt kopieras till namnet kan du redigera värdet.
-   * **Beskrivning (valfritt):** Beskriv referensbrevet.
+   * **Titel (valfritt):** Ange bokstavens rubrik. Titeln behöver inte vara unik och kan innehålla specialtecken och tecken som inte är engelska.
+   * **Namn:** Bokstaven unika namn. Det får inte finnas två bokstäver i något läge med samma namn. I fältet Namn kan du bara ange engelska tecken, siffror och bindestreck. Fältet Namn fylls i automatiskt baserat på fältet Titel. De specialtecken, blanksteg, siffror och icke-engelska tecken som anges i fältet Titel ersätts med bindestreck i fältet Namn. Även om värdet i fältet Titel automatiskt kopieras till namnet kan du redigera värdet.
+   * **Beskrivning (valfritt):** Beskriv bokstaven för din referens.
    * **Dataordlista (valfritt)**: Dataordlistan kan kopplas till korrespondensen. Resurserna som du senare infogar i den här korrespondensen bör antingen ha samma dataordlista som den du väljer för korrespondensen här eller ingen dataordlista.
    * **Taggar (valfritt):** Markera de taggar som ska användas för korrespondensen. Du kan också skriva in ett nytt/anpassat taggnamn och trycka på Retur för att skapa det.
-   * **Efterprocess (valfritt):** Välj den bokföringsprocess som ska användas för brevmallen. Det finns färdiga publiceringsprocesser och de som du har skapat med AEM, som e-post och utskrift.
+   * **Bokför process (valfritt):** Välj den bokföringsprocess som ska användas för brevmallen. Det finns färdiga publiceringsprocesser och de som du har skapat med AEM, som e-post och utskrift.
 
    ![Korrespondensegenskaper](assets/createcorrespondenceproperties.png)
 
-1. Systemet visar ett meddelande: &quot;Bokstaven har skapats.&quot; (i varningsmeddelandet) Tryck på **Öppna** för att konfigurera datamodulerna och layoutfragmenten i det. Eller tryck på **Klar** för att gå tillbaka till föregående sida.
+1. Systemet visar ett meddelande: &quot;Bokstaven har skapats.&quot; (i varningsmeddelandet) Tryck på **Öppna** för att konfigurera datamodulerna och layoutfragmenten i det. Du kan också trycka på **Klart** för att gå tillbaka till föregående sida.
 
    ![Varningsmeddelande: brevet har skapats](assets/createcorrespondencecreated.png)
 
-   **Nästa**: När du trycker på **Öppna** visas en representation av layouten med alla komponenter i layouten (XDP). Fortsätt med att infoga [datamoduler och layoutfragment och konfigurera dem](/help/forms/using/create-letter.md#p-insert-data-modules-and-layout-fragments-in-a-letter-and-configure-them-p).
+   **Nästa**: När du trycker på  **Öppna** visas en representation av layouten med alla komponenter i layouten (XDP). Infoga [datamoduler och layoutfragment och konfigurera dem](/help/forms/using/create-letter.md#p-insert-data-modules-and-layout-fragments-in-a-letter-and-configure-them-p).
 
 ### Infoga datamoduler och layoutfragment i en bokstav och konfigurera dem {#insert-data-modules-and-layout-fragments-in-a-letter-and-configure-them}
 
@@ -288,7 +288,7 @@ När du har skapat en korrespondens när du trycker på Öppna, visar Korrespond
    1. **Redigerbar**: När det här alternativet är markerat kan innehållet redigeras i användargränssnittet Skapa korrespondens. Markera innehåll som redigerbart endast om det kräver att företagsanvändaren (till exempel en anspråksjustering) ändrar det.
    1. **Obligatoriskt**: När det här alternativet är markerat krävs innehållet i användargränssnittet Skapa korrespondens.
    1. **Markerad**: När det här alternativet är markerat markeras innehållet som standard i användargränssnittet Skapa korrespondens.
-   1. **Indrag**: Öka eller minska indraget för modulen/innehållet i bokstaven. Indrag anges som nivåer, med början 0. Varje nivå drar in 36pts. Mer information om hur du anpassar formulär finns **[!UICONTROL Correspondence Management Configurations]** i [Forms-arbetsflöde](submit-letter-topostprocess.md#formsworkflow).
+   1. **Indrag**: Öka eller minska indraget för modulen/innehållet i bokstaven. Indrag anges som nivåer, med början 0. Varje nivå drar in 36pts. Mer information om hur du anpassar formulär finns i **[!UICONTROL Correspondence Management Configurations]** i [Forms-arbetsflöde](submit-letter-topostprocess.md#formsworkflow).
    1. **Sidbrytning före**: Om du anger sidbrytningen före visas alltid innehållet i den här modulen på en ny sida.
    1. **Sidbrytning efter**: Om du anger att sidbrytning efter ska vara aktiverat för en viss modul visas alltid innehållet i NÄSTA-modulen på en ny sida.
 
@@ -303,9 +303,9 @@ När du har skapat en korrespondens när du trycker på Öppna, visar Korrespond
 
    På den här sidan kan du även göra följande för varje resurs i delformulären:
 
-   1. **Ändra ordningen på resurserna**: dra och släpp en resurs som innehåller en sorteringsikon för en resurs ( ![dra och släpp](assets/dragndrop.png)).
+   1. **Ändra ordningen på resurserna**: dra och släpp en resurs som innehåller en sorteringsikon för en resurs (  ![dra och släpp](assets/dragndrop.png)).
    1. **Ta bort resurser**: Tryck på ikonen Ta bort bredvid en resurs för att ta bort den.
-   1. **Förhandsgranska resurser**: Tryck på förhandsvisningsikonen ( ![förhandsvisning](assets/showpreview.png)) bredvid en resurs.
+   1. **Förhandsgranska resurser**: Tryck på förhandsvisningsikonen (  ![förhandsvisning](assets/showpreview.png)) bredvid en resurs.
 
 
 1. Tryck på **Nästa**.
@@ -313,8 +313,8 @@ När du har skapat en korrespondens när du trycker på Öppna, visar Korrespond
 
    Länkning:
 
-   * Du kan länka **fältelementen** till en litteral, ett dataordlisteelement, en resurs eller ett användarspecificerat värde. Du kan också ignorera ett fältelement genom att binda det till alternativet Ignorera.
-   * **Variabelelementen** kan länkas till en litteral, ett dataordlisteelement, ett fält, en variabel, en resurs eller ett användarspecificerat värde.
+   * Elementen **field** kan länkas till en litteral, ett dataordlisteelement, en resurs eller ett användarspecificerat värde. Du kan också ignorera ett fältelement genom att binda det till alternativet Ignorera.
+   * **Variabeln**-elementen kan länkas till ett literalt, dataordlisteelement, ett fält, en variabel, en resurs eller ett användarspecificerat värde.
 
    Här följer några huvudfält i länkningen:
 
@@ -322,7 +322,7 @@ När du har skapat en korrespondens när du trycker på Öppna, visar Korrespond
    * **Valfritt**: Du kan ange om värdet för fältet eller variabeln är valfritt eller inte. Alternativet för valfritt fält är tillgängligt för fält och variabler med länkningstypen Användare eller oskyddade element i dataordlistan.
 
    * **Fält/variabelvalidering**: Om du vill ha förbättrad validering av värdet för ett fält eller en variabel kan du tilldela en validerare till fältet eller variabeln. Det här alternativet är endast tillgängligt för fält och variabler med länkningstypen Användare eller oskyddade element i datamordlistan.
-   * **Bildtext** och **verktygstips**: Bildtext är etiketten för det fält som visas före fältet i CCR-användargränssnittet. Det här alternativet är tillgängligt för fält och variabler med länktypen Användare eller oskyddade element i dataordlistan.
+   * **** Bildtext och  **verktygstips**: Bildtext är etiketten för det fält som visas före fältet i CCR-användargränssnittet. Det här alternativet är tillgängligt för fält och variabler med länktypen Användare eller oskyddade element i dataordlistan.
 
    Följande valideringstyper kan du använda för fälten:
 
@@ -337,17 +337,17 @@ När du har skapat en korrespondens när du trycker på Öppna, visar Korrespond
 
    ![länkar](assets/linkages.png)
 
-1. Tryck på **Nästa** när du har angett länkningen. Korrespondenshanteringen visar skärmen Bifogade filer.
+1. När du har angett länkningen trycker du på **Nästa**. Korrespondenshanteringen visar skärmen Bifogade filer.
 
-### Konfigurera bilagor {#set-up-the-attachments}
+### Konfigurera bifogade filer {#set-up-the-attachments}
 
 1. Välj **Lägg till resurs**.
-1. På skärmen Välj resurs trycker du på de resurser som ska bifogas med brevet och sedan på **Klar**. Du måste först överföra resurserna till Assets. Vi rekommenderar att du bara bifogar PDF- och Microsoft Office-dokument, men du kan även bifoga bilder. Mer information om hur du överför resurser i DAM finns i [Överföra resurser](/help/assets/manage-assets.md).
+1. På skärmen Välj resurs trycker du på de resurser som ska bifogas med brevet och trycker på **Done**. Du måste först överföra resurserna till Assets. Vi rekommenderar att du bara bifogar PDF- och Microsoft Office-dokument, men du kan även bifoga bilder. Mer information om hur du överför resurser i DAM finns i [Överföra resurser](/help/assets/manage-assets.md).
 1. Om du vill låsa ordningen för resurserna i listan så att anspråksjusteraren inte kan ändra ordningen trycker du på **Lås ordning**. Om du inte markerar det här alternativet kan du ändra ordningen på listobjekten med Anspråksjustering.
-1. Om du vill ändra ordningen på resurserna drar och släpper du en resurs som har ikonen för att ändra ordning för en resurs ( ![dra och släpp](assets/dragndrop.png)).
+1. Om du vill ändra ordningen på resurserna drar och släpper du en resurs som har ikonen för att ändra ordning för en resurs ( ![dra](assets/dragndrop.png)).
 1. Tryck på **Redigera** framför en bifogad fil och ange en bifogad fil som obligatorisk om du inte vill att författaren ska kunna ta bort den. Ange en bifogad fil som markerad om du vill att den ska vara förmarkerad i CCR-gränssnittet.
 1. Välj **Biblioteksåtkomst** för att ge åtkomst till biblioteket. Om biblioteksåtkomst är aktiverad kan anspråksjusteraren komma åt innehållsbiblioteket när ett brev skapas och bilagor infogas.
-1. Välj Konfiguration **av** bifogade filer och ange maximalt antal bifogade filer.
+1. Välj **Konfiguration av bifogade filer** och ange maximalt antal bifogade filer.
 
 1. Tryck på **Spara**. Din korrespondens skapas och visas på sidan Bokstäver.
 
@@ -423,7 +423,7 @@ Följande värden i tabellen
    <td>Ja</td> 
    <td>Ja<br /> </td> 
    <td>Ej tillämpligt</td> 
-   <td>N/A<br /> </td> 
+   <td>Ej tillämpligt<br /> </td> 
   </tr> 
   <tr> 
    <td><strong>richtext</strong></td> 
@@ -436,7 +436,7 @@ Följande värden i tabellen
    <td>Ej tillämpligt</td> 
   </tr> 
   <tr> 
-   <td><strong>normal</strong> <strong>text</strong></td> 
+   <td><strong></strong> <strong>plaintext</strong></td> 
    <td>Ja</td> 
    <td>endast text</td> 
    <td>Ja</td> 
@@ -463,12 +463,12 @@ Följande värden i tabellen
    <td>Ja</td> 
    <td>Nej</td> 
    <td>Ej tillämpligt</td> 
-   <td>N/A<br /> </td> 
+   <td>Ej tillämpligt<br /> </td> 
   </tr> 
  </tbody> 
 </table>
 
-## Skapa en kopia av en brevmall {#createcopylettertemplate}
+## Skapa kopia av en brevmall {#createcopylettertemplate}
 
 Du kan använda en befintlig brevmall för att snabbt skapa en brevmall med liknande egenskaper, innehåll och ärvda resurser, som dokumentfragment och dataordlista. Det gör du genom att kopiera och klistra in en bokstav.
 
