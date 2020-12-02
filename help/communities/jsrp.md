@@ -22,11 +22,11 @@ ht-degree: 1%
 
 ## Om JSRP {#about-jsrp}
 
-När AEM Communities använder JSRP som lagringsalternativ (standard) lagras communityinnehåll i JCR och användargenererat innehåll (UGC) är endast tillgängligt från författaren eller den publiceringsinstans som det publicerades i.
+När AEM Communities använder JSRP som lagringsalternativ (standard) lagras community-innehåll i JCR och användargenererat innehåll (UGC) är endast tillgängligt från författaren eller den publiceringsinstans som det publicerades i.
 
 På grund av enkelheten i distributionen passar JSRP oftast bäst för demonstrations- eller utvecklingsmiljöer med en publiceringsinstans och en författarinstans.
 
-Se även [egenskaper för SRP-alternativ](working-with-srp.md#characteristics-of-srp-options) och [rekommenderade topologier](topologies.md).
+Se även [Egenskaper för SRP-alternativ](working-with-srp.md#characteristics-of-srp-options) och [Rekommenderade topologier](topologies.md).
 
 ## Konfiguration {#configuration}
 
@@ -34,7 +34,7 @@ Se även [egenskaper för SRP-alternativ](working-with-srp.md#characteristics-of
 
 Som standard är JSRP lagringsalternativet för UGC.
 
-Med konsolen [för](srp-config.md) lagringskonfiguration kan du välja standardlagringskonfiguration, som identifierar vilken implementering av SRP som ska användas.
+Med konsolen [Lagringskonfiguration](srp-config.md) kan du välja standardlagringskonfiguration, som identifierar vilken implementering av SRP som ska användas.
 
 För att nå konsolen Lagringskonfiguration i redigeringsmiljön
 
@@ -48,7 +48,7 @@ För att nå konsolen Lagringskonfiguration i redigeringsmiljön
 
 ### Publicera konfigurationen {#publishing-the-configuration}
 
-När JSRP är standardkonfigurationen, kontrollerar du att den identiska konfigurationen är inställd i publiceringsmiljön:
+JSRP är standardkonfigurationen, och för att säkerställa att den identiska konfigurationen ställs in i publiceringsmiljön:
 
 * Från global navigering: **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Replication]**
 * Välj **[!UICONTROL Activate Tree]** > **[!UICONTROL Start Path]**:
@@ -59,7 +59,7 @@ När JSRP är standardkonfigurationen, kontrollerar du att den identiska konfigu
 
 ## Hantera användardata {#managing-user-data}
 
-Information om *användare*, *användarprofiler* och *användargrupper* som ofta används i publiceringsmiljön finns på:
+Mer information om *användare*, *användarprofiler* och *användargrupper*, som ofta anges i publiceringsmiljön, finns på:
 
 * [Användarsynkronisering](sync.md)
 * [Hantera användare och användargrupper](users.md)
@@ -70,20 +70,20 @@ Information om *användare*, *användarprofiler* och *användargrupper* som ofta
 
 Kontrollera att JSRP har konfigurerats som standardprovider genom att kontrollera konfigurationen av lagringsalternativet. Som standard är lagringsresursprovidern JSRP.
 
-Gå till konsolen för lagringskonfiguration eller kontrollera AEM-databasen på alla författare och publicera AEM-instanser:
+Gå till konsolen för lagringskonfiguration eller kontrollera den AEM databasen för alla författare och publiceringsinstanser:
 
-* I JCR, if [/conf/global/settings/community](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community)
+* I JCR, om [/conf/global/settings/community](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community)
 
-   * Innehåller ingen [srpc](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc) -nod, vilket betyder att lagringsprovidern är JSRP.
-   * Om srpc-noden finns och innehåller [standardkonfiguration](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc/defaultconfiguration)för nod, ska standardkonfigurationens egenskaper definiera JSRP som standardprovider.
+   * Innehåller ingen [srpc](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc)-nod, vilket betyder att lagringsprovidern är JSRP.
+   * Om srpc-noden finns och innehåller noden [defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc/defaultconfiguration), ska standardkonfigurationens egenskaper definiera JSRP som standardprovider.
 
-### UGC är inte synlig på författarinstans {#ugc-not-visible-on-author-instance}
+### UGC är inte synligt på författarinstansen {#ugc-not-visible-on-author-instance}
 
 Det här är inte något fel. En egenskap hos JSRP är att communityinnehåll som anges i publiceringsmiljön endast visas i publiceringsmiljön.
 
 ### UGC är inte synlig vid publiceringsinstans {#ugc-not-visible-on-publish-instance}
 
-Om en enskild publiceringsinstans eller ett publiceringskluster distribueras följer du instruktionerna för [UGC som inte är synlig i JCR](#ugc-not-visible-in-jcr).
+Om en enskild publiceringsinstans eller ett publiceringskluster distribueras följer du instruktionerna för [UGC är inte synlig i JCR](#ugc-not-visible-in-jcr).
 
 Om en publiceringsgrupp distribueras är egenskapen för JSRP att communityinnehåll bara visas på den publiceringsinstans som det publicerades i.
 
