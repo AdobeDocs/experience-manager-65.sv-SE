@@ -11,11 +11,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 5f2f8129-e45e-4f3f-ae30-c09330d0e152
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '374'
+ht-degree: 2%
 
 ---
 
 
-# Konfigurera valideringsmeddelanden {#configuring-validation-messages}
+# Konfigurerar valideringsmeddelanden {#configuring-validation-messages}
 
 För formulär som återges som HTML visas formulärvalideringsfel som inträffar för användaren. Du kan anpassa hur valideringsmeddelanden visas. Beroende på var valideringsmeddelandena visas kan du även styra platsen för meddelandet i formuläret och storleken på ramkanten.
 
@@ -24,17 +27,17 @@ För formulär som återges som HTML visas formulärvalideringsfel som inträffa
 1. Klicka på Tjänster > Formulär i administrationskonsolen.
 1. Välj något av följande alternativ i rapportlistan under Valideringsutdata:
 
-   **** Meddelanderuta: Om du vill visa valideringsmeddelanden i en separat dialogruta.
+   **Meddelanderuta:** Om du vill visa valideringsmeddelanden i en separat dialogruta.
 
-   **** Ram: Om du vill visa valideringsmeddelanden i en bildruta i samma fönster.
+   **Bildruta:** Om du vill visa valideringsmeddelanden i en bildruta i samma fönster.
 
-   **** Ingen bildruta: Om du vill visa valideringsmeddelanden i samma fönster. Det här värdet är standardvärdet.
+   **Ingen bildruta:** Om du vill visa valideringsmeddelanden i samma fönster. Det här värdet är standardvärdet.
 
-   **** Via API (med data): Returnera valideringsmeddelandena via API (med data). Valideringsmeddelandena visas inte på skärmen.
+   **Via API (med data):** Returnera valideringsmeddelanden via API:t (med data). Valideringsmeddelandena visas inte på skärmen.
 
-   **** Via API (med formulär): Returnera valideringsmeddelandena via API (med formuläret). Valideringsmeddelandena visas inte på skärmen.
+   **Via API (med formulär):** Returnera valideringsmeddelanden via API:t (med formuläret). Valideringsmeddelandena visas inte på skärmen.
 
-   **** Ingen: Visa inte valideringsmeddelanden.
+   **Ingen:** Visa inte valideringsmeddelanden.
 
 1. Klicka på Spara.
 
@@ -44,9 +47,9 @@ Om Rapportering är inställt på Bildruta eller Ingen bildruta kan du ange plat
 
 1. Välj något av följande alternativ i listan Position under Valideringsutdata:
 
-   **** Vänster: Om du vill visa valideringsmeddelanden till vänster i webbläsaren.
+   **Vänster:** Om du vill visa valideringsmeddelanden till vänster i webbläsaren.
 
-   **** Höger: Om du vill visa valideringsmeddelanden till höger i webbläsaren.
+   **Höger:** Om du vill visa valideringsmeddelanden till höger i webbläsaren.
 
    **Överkant**: Om du vill visa valideringsmeddelanden högst upp i webbläsaren. Det här värdet är standardvärdet.
 
