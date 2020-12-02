@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 65720eed-ab06-463f-9567-2fdc468b6219
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '1220'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 Använd sidan Inbjudna och lokala användare för att hantera inbjudna och lokala användare. Den här sidan visas bara om följande krav uppfylls:
 
 * Du är en administratör som har tilldelats rollen Hantera inbjudna och lokala användare och användarrollen för administrationskonsolen. (Se [Skapa och konfigurera roller](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles).)
-* Inbjuden användarregistrering är aktiverat. (Se [Konfigurera registrering](/help/forms/using/admin-help/configuring-client-server-options.md#configuring-invited-user-registration)av inbjudna användare.)
+* Inbjuden användarregistrering är aktiverat. (Se [Konfigurera registrering av inbjudna användare](/help/forms/using/admin-help/configuring-client-server-options.md#configuring-invited-user-registration).)
 
 Sidan Inbjudna och lokala användare innehåller två flikar som du kan använda för att söka efter, visa, redigera, låsa, låsa upp och ta bort inbjude och lokala användarkonton.
 
@@ -37,7 +40,7 @@ Du kan lägga till ett eller flera inbjudna användarkonton i dokumentskyddet sa
 1. I administrationskonsolen klickar du på Tjänster > Dokumentsäkerhet > Inbjudna och lokala användare och sedan på Bjud in ny användare.
 1. Skriv e-postadresserna till de användare som du vill bjuda in. Ange flera adresser på en rad, avgränsade med kommatecken.
 
-   Meddelandet som du skapade när du aktiverade registrering för inbjudna användare skickas till användarna. (Se [Konfigurera registrering](/help/forms/using/admin-help/configuring-client-server-options.md#configuring-invited-user-registration)av inbjudna användare.)
+   Meddelandet som du skapade när du aktiverade registrering för inbjudna användare skickas till användarna. (Se [Konfigurera registrering av inbjudna användare](/help/forms/using/admin-help/configuring-client-server-options.md#configuring-invited-user-registration).)
 
 1. Klicka på OK.
 
@@ -62,7 +65,7 @@ När du lägger till en inbjuden användare skickar dokumentsäkerheten automati
 
 Du kan återställa lösenord för aktiverade inbjudna användare som har registrerat sig med dokumentsäkerhet men har glömt sitt lösenord. När du återställer ett lösenord skapas ett e-postmeddelande som innehåller ett nytt, tillfälligt lösenord för användaren.
 
-När du aktiverade den inbjudna användarregistreringsprocessen skapade du ett e-postmeddelande som kommer att skickas till användarna som ber dem att återställa sina lösenord. (Se [Konfigurera registrering](/help/forms/using/admin-help/configuring-client-server-options.md#configuring-invited-user-registration)av inbjudna användare.)
+När du aktiverade den inbjudna användarregistreringsprocessen skapade du ett e-postmeddelande som kommer att skickas till användarna som ber dem att återställa sina lösenord. (Se [Konfigurera registrering av inbjudna användare](/help/forms/using/admin-help/configuring-client-server-options.md#configuring-invited-user-registration).)
 
 1. I administrationskonsolen klickar du på Tjänster > Dokumentsäkerhet > Inbjudna och lokala användare och sedan på fliken Lokala användare.
 1. Välj lämplig användare i användarlistan.
@@ -94,7 +97,7 @@ Om du tar bort ett användarkonto kan bara du eller en annan administratör åte
 
 >[!NOTE]
 >
->Inbjudna användare som har tagits bort via AEM-formulärens användarhanteringsgränssnitt kan inte bjudas in igen förrän de har tagits bort igen enligt följande procedur.
+>Inbjudna användare som har tagits bort via AEM användarhanteringsgränssnitt kan inte bjudas in igen förrän de har tagits bort igen enligt följande procedur.
 
 1. I administrationskonsolen klickar du på Tjänster > Dokumentsäkerhet > Inbjudna och lokala användare och sedan på fliken Inbjudna användare.
 1. Markera kryssrutan bredvid en eller flera användare, klicka på Ta bort och sedan på OK.
