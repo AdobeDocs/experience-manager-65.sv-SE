@@ -11,17 +11,18 @@ ht-degree: 0%
 ---
 
 
-# Multi-tenancy för mallar för samlingar, fragment och fragment {#multi-tenancy-for-collections-snippets-and-snippet-templates}
+# Multi-tenancy for Collections, snippets, and snippet templates {#multi-tenancy-for-collections-snippets-and-snippet-templates}
 
 Med funktionen för flera innehavare kan du separera innehåll i CRX baserat på organisationens prefix och organisations-ID för att skydda innehållet från obehörig åtkomst för användare i andra organisationer.
 
-[!DNL Adobe Experience Manager Assets] lagrar data för varje organisation på olika sätt. Varje organisationsspecifik sökväg identifieras av organisationsprefixet och organisations-ID som ingår i den traditionella platsen där olika typer av resurser lagras i CRX.
+[!DNL Adobe Experience Manager Assets] lagrar data för varje organisation på olika sätt. Varje organisationsspecifik sökväg identifieras av organisationens prefix och organisations-ID
+som ingår i den traditionella platsen där olika typer av resurser lagras i CRX.
 
-Om du t.ex. skapar en mapp med namnet `Demo`, lagrar resurser vanligtvis mappen på [!DNL Experience Manager] `../content/dam/Demo`. När multi-tenancy är aktiverat kan du nu lagra data på `../content/dam/<organization prefix>/<organization id>Demo`
+Om du till exempel skapar en mapp med namnet `Demo`, lagrar [!DNL Experience Manager]-resurser vanligtvis mappen på `../content/dam/Demo`. När multi-tenancy är aktiverat kan du nu lagra data på `../content/dam/<organization prefix>/<organization id>Demo`
 
-Om till exempel [!DNL Adobe Marketing Cloud] användare av [!DNL Assets] (on demand) som har tilldelats `aodpremium` organisationen kan du använda funktionen multi-tenancy för att konfigurera `../content/dam/<mac>/<aodpremium>Demo` sökvägen för att dela upp innehållet. I det här exemplet `mac` är organisationsprefixet och `aodpremium` organisations-ID.
+Om du till exempel har [!DNL Adobe Marketing Cloud]-användare av [!DNL Assets] (on demand) som är tilldelade till `aodpremium`-organisationen kan du använda funktionen multi-tenancy för att konfigurera `../content/dam/<mac>/<aodpremium>Demo`-sökvägen för att dela upp innehållet. I det här exemplet är `mac` organisationsprefixet och `aodpremium` organisations-ID.
 
-Baserat på användarens organisation och ID visas den här kvalificerade sökvägen i gränssnittet och i olika guider, bland annat guiderna för att flytta och skapa fragment för att framtvinga separering. [!DNL Assets]
+Baserat på användarens organisation och ID visas den här kvalificerade sökvägen i [!DNL Assets]-gränssnittet och i olika guider, inklusive guiderna för att skapa Flytta och Fragment för att framtvinga separation.
 
 Med funktionen Multi-tenancy kan du dela upp följande typer av resurser och komponenter:
 
