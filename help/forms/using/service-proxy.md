@@ -11,35 +11,38 @@ discoiquuid: 081f7c17-4e5d-4c7e-a5c3-5541a29b9d55
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+workflow-type: tm+mt
+source-wordcount: '730'
+ht-degree: 1%
 
 ---
 
 
-# Tjänstproxy för HTML5-formulär{#html-forms-service-proxy}
+# Proxy för HTML5-formulärtjänst{#html-forms-service-proxy}
 
-Tjänstproxy för HTML5-formulär är en konfiguration som registrerar en proxy för överföringstjänsten. Om du vill konfigurera tjänstproxy anger du URL:en för överföringstjänsten via parametern *submitServiceProxy* för begäran.
+Tjänstproxy för HTML5-formulär är en konfiguration som registrerar en proxy för överföringstjänsten. Om du vill konfigurera tjänstproxy anger du URL:en för överföringstjänsten via parametern request *submitServiceProxy*.
 
 ## Fördelar med tjänstproxy {#benefits-of-service-proxy-br}
 
 Tjänstproxyn eliminerar följande:
 
-* Arbetsflödet för HTML5-formulär kräver att skicka in tjänsten &quot;/content/xfaforms/submission/default&quot; för HTML5-formuläranvändarna. Den visar AEM-servrar för en bredare oönskad publik.
-* Tjänstens-URL är inbäddad i formulärets körningsmodell. Det går inte att ändra tjänstens URL-sökväg.
+* Arbetsflödet för HTML5-formulär kräver att skicka in tjänsten &quot;/content/xfaforms/submission/default&quot; för HTML5-formuläranvändarna. Den exponerar AEM servrar för en större, oavsiktlig publik.
+* Tjänst-URL:en är inbäddad i formulärets körningsmodell. Det går inte att ändra tjänstens URL-sökväg.
 * Inlämningen är en tvåstegsprocess. För att skicka in formulärdata krävs minst två resor till servern. Ökar därmed belastningen på servern.
-* HTML5-formulär skickar data i POST-begäran i stället för PDF-begäran. För arbetsflöden som omfattar både PDF- och HTML5-formulär krävs två olika metoder för att bearbeta inskickade data.
+* HTML5-formulär skickar data i begäran om POST i stället för PDF-begäran. För arbetsflöden som omfattar både PDF- och HTML5-formulär krävs två olika metoder för att bearbeta inskickade data.
 
-### Topologies {#topologies-br}
+### Topologier {#topologies-br}
 
-HTML5-formulär kan använda följande topologier för att ansluta till AEM-servrarna.
+HTML5-formulär kan använda följande topologier för att ansluta till AEM servrar.
 
 * En topologi där AEM Server- eller HTML5-formulär skickar data via POST till servern.
-* En topologi där proxyservern skickar POST-data till servern.
+* En topologi där proxyservern skickar POST till servern.
 
 ![Proxytopologier för HTML5-formulärtjänst](assets/topology.png)
 
 Proxytopologier för HTML5-formulärtjänst
 
-HTML5-formulär ansluts till AEM-servrarna för att köra serverbaserade skript, webbtjänster och överföringar. XFA-miljön för HTML5-formulären använder Ajax-anrop på &quot;/bin/xfaforms/submit&quot;-slutpunkten med olika parametrar för att ansluta till AEM-servrarna. HTML5-formulär ansluter AEM-servrar för att utföra följande åtgärder:
+HTML5-formulär ansluts till AEM servrar för att köra serverbaserade skript, webbtjänster och överföringar. XFA-miljön för HTML5-formulären använder Ajax-anrop på &quot;/bin/xfaforms/submit&quot;-slutpunkten med olika parametrar för att ansluta till AEM servrar. HTML5-formulär ansluter AEM servrar för att utföra följande åtgärder:
 
 #### Kör serverbaserade skript och webbtjänster {#execute-server-sided-scripts-and-web-services}
 
@@ -129,7 +132,7 @@ Skicka-tjänstproxyn fungerar som ett genomströmningsalternativ om det inte fin
 
 Skicka-tjänstproxyn väljer en topologi om den skicka-URL:en finns i request-parametern.
 
-* Om AEM-servrar skickar data fungerar proxytjänsten som en vidarekoppling. Begäran skickas till slutpunkten för /bin/xfaforms/submit och svaret skickas till XFA-miljön.
+* Om AEM skickar data fungerar proxytjänsten som en vidarekoppling. Begäran skickas till slutpunkten för /bin/xfaforms/submit och svaret skickas till XFA-miljön.
 * Om proxyn skickar data, skickar proxytjänsten alla parametrar utom submitUrl till slutpunkten */bin/xfaforms/submit* och tar emot xml-byte i svarsströmmen. Sedan skickar proxytjänsten data-xml-byte till submitUrl för bearbetning.
 
-* Innan data skickas (POST-begäran) till en server kontrollerar HTML5-formulär serverns anslutning och tillgänglighet. HTML-formulär skickar en tom huvudbegäran till servern för att verifiera anslutningen och tillgängligheten. Om servern är tillgänglig skickar HTML5-formuläret data (POST-begäran) till servern. Om servern inte är tillgänglig visas ett felmeddelande, *Could not connect to the server,* . Avancerad identifiering förhindrar att användarna behöver fylla i formuläret på ett enkelt sätt. Proxyservern hanterar huvudbegäran och genererar inget undantag.
+* HTML5-formulär kontrollerar serverns anslutning och tillgänglighet innan de skickar data (begäran om POST) till en server. HTML-formulär skickar en tom huvudbegäran till servern för att verifiera anslutningen och tillgängligheten. Om servern är tillgänglig skickar HTML5-formuläret data (begäran om POST) till servern. Om servern inte är tillgänglig visas ett felmeddelande *Det gick inte att ansluta till servern*. Avancerad identifiering förhindrar att användarna behöver fylla i formuläret på ett enkelt sätt. Proxyservern hanterar huvudbegäran och genererar inget undantag.
