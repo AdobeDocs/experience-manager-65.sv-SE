@@ -17,27 +17,29 @@ ht-degree: 0%
 ---
 
 
-# Bädda in ett anpassningsbart formulär eller interaktiv kommunikation på AEM webbplatssida {#embed-an-adaptive-form-or-interactive-communication-in-aem-sites-page}
+# Bädda in ett adaptivt formulär eller interaktiv kommunikation AEM webbplatssidan {#embed-an-adaptive-form-or-interactive-communication-in-aem-sites-page}
 
 ## Översikt {#overview}
 
 Med AEM Forms kan formulärutvecklare smidigt bädda in adaptiva formulär och interaktiv kommunikation på en AEM Sites-sida eller en webbsida som ligger utanför AEM. Det inbäddade adaptiva formuläret och den interaktiva kommunikationen fungerar fullt ut och användarna kan fylla i och skicka formuläret utan att behöva lämna sidan. Det hjälper användaren att hålla sig i rätt sammanhang för andra element på webbsidan och interagera samtidigt med formuläret eller interaktiv kommunikation.
 
-Mer information om hur du bäddar in adaptiva formulär på en extern webbsida finns i [Bädda in adaptiva formulär på en extern webbsida](/help/forms/using/embed-adaptive-form-external-web-page.md).
+Mer information om hur du bäddar in ett adaptivt formulär på en extern webbsida finns i [Bädda in adaptivt formulär på en extern webbsida](/help/forms/using/embed-adaptive-form-external-web-page.md).
 
 På AEM Sites-sidan kan du lägga till ett anpassningsbart formulär eller interaktiv kommunikation med:
 
-* **[AEM Forms Container-komponenten](/help/forms/using/embed-adaptive-form-aem-sites.md#af-component)** AEM Forms innehåller en komponent som du kan lägga till på dina webbplatssidor. Med AEM Forms Container-komponenten kan du bädda in ett adaptivt formulär och interaktiv kommunikation.
+* **[AEM Forms Container-](/help/forms/using/embed-adaptive-form-aem-sites.md#af-component)**
+komponenten AEM Forms innehåller en komponent som du kan lägga till på webbplatsens sidor. Med AEM Forms Container-komponenten kan du bädda in ett adaptivt formulär och interaktiv kommunikation.
 
-* **[Resursläsaren](/help/forms/using/embed-adaptive-form-aem-sites.md#asset-browser)** Alla formulär och interaktiv kommunikation du skapar finns under Assets. Du kan dra och släppa formuläret som en resurs på sidan.
+* **[Resursläsare](/help/forms/using/embed-adaptive-form-aem-sites.md#asset-browser)**
+Alla formulär och interaktiv kommunikation du skapar finns under Assets. Du kan dra och släppa formuläret som en resurs på sidan.
 
 ## Förutsättningar {#prerequisites}
 
-Om du vill bädda in ett adaptivt formulär eller interaktiv kommunikation på en AEM webbplatssida som använder en redigerbar mall, kontrollerar du att AEM Form-komponent är konfigurerad som en tillåten komponent i den associerade mallen. Mer information finns i avsnittet **Regler och egenskaper (layoutbehållare)** i [Skapa sidmallar](/help/sites-authoring/templates.md).
+Om du vill bädda in ett adaptivt formulär eller interaktiv kommunikation på en AEM webbplatssida som använder en redigerbar mall, kontrollerar du att AEM Form-komponent är konfigurerad som en tillåten komponent i den associerade mallen. Mer information finns i avsnittet **Princip och egenskaper (layoutbehållare)** i [Skapa sidmallar](/help/sites-authoring/templates.md).
 
-Om en platssida använder en statisk mall måste du konfigurera den i styckesystemet på webbplatssidan. Mer information finns i [Konfigurera komponenter i designläge](/help/sites-authoring/default-components-designmode.md) .
+Om en platssida använder en statisk mall måste du konfigurera den i styckesystemet på webbplatssidan. Mer information finns i [Konfigurera komponenter i designläge](/help/sites-authoring/default-components-designmode.md).
 
-## Bädda in ett anpassningsbart formulär eller interaktiv kommunikation {#af-component}
+## Bädda in ett adaptivt formulär eller interaktiv kommunikation {#af-component}
 
 Så här bäddar du in ett adaptivt formulär eller interaktiv kommunikation med komponenten AEM Forms Container:
 
@@ -55,7 +57,7 @@ Så här bäddar du in ett adaptivt formulär eller interaktiv kommunikation med
 
    * **Resurstyp:** Välj vilken typ av resurs som ska bäddas in. Alternativen är anpassningsbar form och interaktiv kommunikation
    * **Resurssökväg**: Bläddra och välj det adaptiva formulär eller den interaktiva kommunikation som ska bäddas in. Den fylls i automatiskt om du släppte den från Assets-webbläsaren.
-   * (Endast anpassat formulär) **Skicka** in: Välj den åtgärd som ska utlösas när formulär skickas. Du kan välja att visa ett tackmeddelande eller en tacksida.
+   * (Endast anpassad form) **Skicka**: Välj den åtgärd som ska utlösas när formulär skickas. Du kan välja att visa ett tackmeddelande eller en tacksida.
 
       * **Tack**! Skriv ett meddelande med RTF-redigeraren som ska visas när formulär skickas. Det här alternativet är endast tillgängligt när du väljer att visa ett tackmeddelande.
       * **Tack**! Bläddra och välj den sida som ska visas när formuläret skickas. Det här alternativet är bara tillgängligt när du väljer att visa en tacksida.
@@ -67,7 +69,7 @@ Så här bäddar du in ett adaptivt formulär eller interaktiv kommunikation med
 
 1. Spara inställningarna. Det anpassningsbara formuläret eller den interaktiva kommunikationen är nu inbäddad på sidan.
 
-## Publicera inbäddad adaptiv form och interaktiv kommunikation {#publishing-embedded-adaptive-form-and-interactive-communication}
+## Publicerar inbäddat adaptivt formulär och interaktiv kommunikation {#publishing-embedded-adaptive-form-and-interactive-communication}
 
 Vi ska titta på följande scenarier för publicering av en inbäddad resurs (adaptiv form eller interaktiv kommunikation) på AEM webbplatssida:
 
@@ -75,20 +77,20 @@ Vi ska titta på följande scenarier för publicering av en inbäddad resurs (ad
 * Om du bara ändrade det inbäddade adaptiva formuläret eller den interaktiva kommunikationen på en publicerad webbplatssida publicerar du den ursprungliga resursen och ändringarna återspeglas på den publicerade webbplatssidan. Den publicerade webbplatssidan innehåller en referens till resursen och behöver inte publicera om sidan.
 * Om du ändrade webbplatssidan och det inbäddade adaptiva formuläret eller den interaktiva kommunikationen publicerar du webbplatssidan och den inbäddade resursen igen.
 
-## Modifiera inbäddad adaptiv form och interaktiv kommunikation {#modifying-embedded-adaptive-form-and-interactive-communication}
+## Ändra inbäddat adaptivt formulär och interaktiv kommunikation {#modifying-embedded-adaptive-form-and-interactive-communication}
 
 AEM webbplatssida innehåller en referens till det adaptiva formuläret och den interaktiva kommunikationen i AEM Forms Container. Därför behålls alla konfigurationer och egenskaper, som tema, format och överföringsåtgärd, som konfigurerats i den ursprungliga adaptiva formen och interaktiv kommunikation i den inbäddade adaptiva formen och i den interaktiva kommunikationen.
 
 Gör något av följande om du vill ändra någon konfiguration eller egenskap för det inbäddade adaptiva formuläret och den interaktiva kommunikationen.
 
 * Öppna originalformuläret i anpassningsbara formulär eller interaktiv kommunikation i respektive redigerare och ändra dem.
-* Tryck på det adaptiva formuläret eller den interaktiva kommunikationen inifrån webbplatssidan i redigeringsläge och tryck sedan på **[!UICONTROL Edit in a new window]**. Det ursprungliga formuläret öppnas i redigeringsläge som du kan ändra.
+* Tryck på det adaptiva formuläret eller den interaktiva kommunikationen från webbplatssidan i redigeringsläge och tryck sedan på **[!UICONTROL Edit in a new window]**. Det ursprungliga formuläret öppnas i redigeringsläge som du kan ändra.
 
 >[!NOTE]
 >
 >De ändringar som gjorts i det ursprungliga adaptiva formuläret eller den interaktiva kommunikationen återspeglas automatiskt i det inbäddade formuläret. Publicera om det adaptiva formuläret, den interaktiva kommunikationen eller webbplatssidan så att ändringarna på den publicerade sidan återspeglas.
 
-## Considerations and best practices {#considerations-and-best-practices}
+## Överväganden och bästa praxis {#considerations-and-best-practices}
 
 Tänk på följande när du bäddar in anpassningsbara formulär på AEM sidor:
 
