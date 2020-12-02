@@ -11,6 +11,9 @@ discoiquuid: 9f26565c-a7ba-4e9e-bf77-a95eb8e351f2
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+workflow-type: tm+mt
+source-wordcount: '652'
+ht-degree: 1%
 
 ---
 
@@ -30,20 +33,20 @@ Du kan till exempel infoga följande specialtecken:
 Du kan infoga specialtecken med bokstäver:
 
 * I [textredigeraren](/help/forms/using/document-fragments.md#createtext)
-* I en [redigerbar, textbunden modul i en korrespondens](../../forms/using/create-correspondence.md#managecontent)
+* I en [redigerbar, infogad modul i en korrespondens](../../forms/using/create-correspondence.md#managecontent)
 
 ![specialteckensinlinemodulen](assets/specialcharactersinlinemodule.png)
 
 Administratören kan lägga till stöd för fler/anpassade specialtecken genom anpassning. I den här artikeln finns instruktioner om hur du kan lägga till stöd för ytterligare anpassade specialtecken.
 
-## Lägga till eller ändra stöd för anpassade specialtecken i Correspondence Management {#creatingfolderstructure}
+## Lägg till eller ändra stöd för anpassade specialtecken i Correspondence Management {#creatingfolderstructure}
 
 Följ de här stegen för att lägga till stöd för anpassade specialtecken:
 
 1. Gå till `https://'[server]:[port]'/[ContextPath]/crx/de` och logga in som administratör.
 1. I mappen apps skapar du en mapp med namnet **[!UICONTROL specialcharacters]** med en sökväg/struktur som liknar specialteckenmappen (som finns i mappen textEditorConfig under libs):
 
-   1. Högerklicka på mappen med **specialtecken** i följande sökväg och välj **Overlay Node**:
+   1. Högerklicka på mappen **specialtecken** på följande sökväg och välj **Överläggsnod**:
 
       `/libs/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters`
 
@@ -51,9 +54,9 @@ Följ de här stegen för att lägga till stöd för anpassade specialtecken:
 
       **Sökväg:** /libs/fd/cm/ma/gui/configuration/textEditorConfig/specialtecken
 
-      **Plats för övertäckning:** /apps/
+      **Överläggsplats:** /appar/
 
-      **Matcha nodtyper:** Markerad
+      **Matcha nodtyper:** markerade
 
       >[!NOTE]
       >
@@ -72,14 +75,14 @@ Följ de här stegen för att lägga till stöd för anpassade specialtecken:
 
 
 
-1. Kontrollera att **[!UICONTROL noden textEditorConfig]** har följande egenskaper och värden:
+1. Kontrollera att noden **[!UICONTROL textEditorConfig]** har följande egenskaper och värden:
 
    | Namn | Typ | Värde |
    |---|---|---|
    | cmConfigurationType | Sträng | cmTextEditorConfiguration |
    | cssPath | Sträng | /libs/fd/cm/ma/gui/components/admin/createasset/textcontrol/clientlibs/textcontrol |
 
-1. Högerklicka på mappen med **[!UICONTROL specialtecken]** i följande sökväg och välj **Skapa > Underordnad nod** och klicka sedan på **Spara alla**:
+1. Högerklicka på mappen **[!UICONTROL specialcharacters]** på följande sökväg och välj **Skapa > Underordnad nod** och klicka sedan på **Spara alla**:
 
    /apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters/&lt;YourChildNode>
 
@@ -138,7 +141,7 @@ Följ de här stegen för att lägga till stöd för anpassade specialtecken:
     <ol>
      <li>Lägg till en underordnad nod under "/apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters" med obligatoriska egenskaper. </li>
      <li>Lägg till egenskapen "sling:orderBefore (String)" i den nyskapade underordnade noden. </li>
-     <li>Lägg till nodnamn som ett värde som det nya specialtecknet ska visas före. </li>
+     <li>Lägg till nodnamn som ett värde innan det nya specialtecknet visas. </li>
      <li>Klicka på Spara alla. </li>
      <li>Uppdatera textredigeraren\Skapa korrespondensgränssnitt för att se ändringarna.<br /> </li>
     </ol> </td>
