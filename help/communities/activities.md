@@ -19,11 +19,11 @@ ht-degree: 0%
 ---
 
 
-# Funktionen Aktivitetsströmmar {#activity-streams-feature}
+# Aktivitetsströmmar, funktion {#activity-streams-feature}
 
 ## Introduktion {#introduction}
 
-En inloggad community-medlems aktiviteter, till exempel publicering på ett forum eller i en blogg, samlas i en ström som kan filtreras och visas på olika sätt genom att `Activity Streams` komponenten konfigureras.
+Aktiviteter som tillhör en signerad medlem i communityn, till exempel publicering på ett forum eller en blogg, samlas i en ström som kan filtreras och visas på olika sätt genom konfiguration av `Activity Streams`-komponenten.
 
 Möjligheten att följa ger en annan bild av aktiviteter när communitymedlemmar följer inlägg av intresse eller följer aktiviteter som andra communitymedlemmar utför.
 
@@ -32,27 +32,27 @@ Dokumentet beskriver:
 * Lägga till komponenten Activity Streams på en AEM
 * Konfigurationsinställningar för komponenten för aktivitetsströmmar
 
-### Lägga till aktivitetsströmmar till en sida {#adding-activity-streams-to-a-page}
+### Lägga till aktivitetsströmmar på en sida {#adding-activity-streams-to-a-page}
 
-Om du vill lägga till en `Activity Streams` komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att hitta
+Om du vill lägga till en `Activity Streams`-komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att leta reda på
 
 * `Communities / Activity Streams`
 
 och dra den till rätt plats på en sida där aktivitetsströmmar ska visas.
 
-Mer information finns i Grunderna för [communitykomponenter](/help/communities/basics.md).
+Mer information finns på [Grunderna för communitykomponenter](/help/communities/basics.md).
 
-När de [nödvändiga klientbiblioteken](/help/communities/essentials-activities.md#essentials-for-client-side) inkluderas visas `Activity Streams` komponenten så här:
+När de [nödvändiga klientbiblioteken](/help/communities/essentials-activities.md#essentials-for-client-side) inkluderas visas följande `Activity Streams`-komponent:
 
 ![activity-streams](assets/activity-component.png)
 
-### Konfigurera aktivitetsströmmar {#configuring-activity-streams}
+### Konfigurerar aktivitetsströmmar {#configuring-activity-streams}
 
-Markera den monterade `Activity Streams` komponent som du vill öppna och välj den `Configure` ikon som öppnar redigeringsdialogrutan.
+Markera den monterade `Activity Streams`-komponenten som ska öppnas och välj ikonen `Configure` som öppnar redigeringsdialogrutan.
 
 ![konfigurera](assets/configure-new.png)
 
-Ange vilka aktiviteter som ska visas på fliken **Användaraktiviteter** :
+Under fliken **Användaraktiviteter** anger du vilka aktiviteter som ska visas:
 
 ![användaraktiviteter](assets/user-activities.png)
 
@@ -78,13 +78,13 @@ Ange vilka aktiviteter som ska visas på fliken **Användaraktiviteter** :
 
 ### Följande vy {#following-view}
 
-Komponenter måste konfigureras för att aktivera följande. Funktioner som tillåter följande är [blogg](/help/communities/blog-feature.md), [forum](/help/communities/forum.md), [QnA](/help/communities/working-with-qna.md), [kalender](/help/communities/calendar.md), [filbibliotek](/help/communities/file-library.md)[](/help/communities/comments.md)och¥comments.
+Komponenter måste konfigureras för att aktivera följande. Följande funktioner tillåter [blogg](/help/communities/blog-feature.md), [forum](/help/communities/forum.md), [QnA](/help/communities/working-with-qna.md), [kalender](/help/communities/calendar.md), [filelibrary](/help/communities/file-library.md) och [kommentarer](/help/communities/comments.md).
 
 ![följande vy](assets/following-activities.png)
 
-Med knappen **Följ** kan du följa inmatningar som aktiviteter, [meddelanden](/help/communities/notifications.md)eller [prenumerationer](/help/communities/subscriptions.md). Varje gång knappen **Följ** är markerad går det att aktivera eller inaktivera en markering. Markeringen visas bara när den är konfigurerad. `Email Subscriptions`
+Med knappen **Följ** kan du följa poster som aktiviteter, [meddelanden](/help/communities/notifications.md) eller [prenumerationer](/help/communities/subscriptions.md). Varje gång knappen **Följ** är markerad går det att aktivera eller inaktivera en markering. Markeringen `Email Subscriptions` finns bara när den är konfigurerad.
 
-Om någon av följande metoder är markerad ändras texten för knappen till **Följ**. Du kan välja `Unfollow All` att inaktivera alla metoder.
+Om någon av följande metoder är markerad ändras knappens text till **Följande**. Du kan av praktiska skäl välja `Unfollow All` för att inaktivera alla metoder.
 
 Knappen **Följ** visas:
 
@@ -97,6 +97,6 @@ Knappen **Följ** visas:
 
    * Följer all aktivitet för den specifika posten.
 
-### Additional Information {#additional-information}
+### Ytterligare information {#additional-information}
 
 Mer information finns på sidan [Activity Streams Essentials](/help/communities/essentials-activities.md) för utvecklare.
