@@ -22,11 +22,11 @@ ht-degree: 20%
 
 Modeller för innehållsfragment definierar innehållsstrukturen för dina [innehållsfragment](/help/assets/content-fragments/content-fragments.md).
 
-## Enable Content Fragment Models {#enable-content-fragment-models}
+## Aktivera modeller för innehållsfragment {#enable-content-fragment-models}
 
 >[!CAUTION]
 >
->Om du inte aktiverar **Content Fragment Models** kommer alternativet **Create** inte att vara tillgängligt när du skapar nya modeller.
+>Om du inte aktiverar **Content Fragment Models** kommer alternativet **Create** inte att vara tillgängligt för att skapa nya modeller.
 
 Om du vill aktivera innehållsfragmentmodeller måste du:
 
@@ -35,40 +35,40 @@ Om du vill aktivera innehållsfragmentmodeller måste du:
 
 ### Aktivera modeller för innehållsfragment i Configuration Manager {#enable-content-fragment-models-in-configuration-manager}
 
-Om du vill [skapa en ny modell](#creating-a-content-fragment-model) för innehållsfragment **måste** du först aktivera dem med Configuration Manager:
+Om du vill [skapa en ny innehållsfragmentmodell](#creating-a-content-fragment-model) måste du **först aktivera dem med Configuration Manager:**
 
 1. Navigera till **Verktyg**, **Allmänt** och öppna sedan **Konfigurationsläsaren**.
 1. Välj lämplig plats för webbplatsen.
 1. Använd **Skapa** för att öppna dialogrutan där du:
 
    1. Ange en **titel**.
-   1. Markera **Content Fragment Models** för att aktivera användningen.
+   1. Välj **Modeller för innehållsfragment** om du vill aktivera deras användning.
 
    ![cfm-6420-09](assets/cfm-6420-09.png)
 
-1. Välj **Skapa** för att spara definitionen.
+1. Välj **Skapa** om du vill spara definitionen.
 
 ### Använd konfigurationen i resursmappen {#apply-the-configuration-to-your-assets-folder}
 
-När konfigurationen **global** är aktiverad för innehållsfragmentmodeller kan alla modeller som användarna skapar användas i alla resursmappar.
+När konfigurationen **global** är aktiverad för innehållsfragmentmodeller kan alla modeller som användarna skapar användas i alla Resursmappar.
 
 Om du vill använda andra konfigurationer (dvs. exkludera globala) med en jämförbar Assets-mapp måste du definiera kopplingen. Detta görs i **Konfiguration** på fliken **Cloud Services** i **Mappegenskaper** för önskad mapp.
 
 ## Skapa en innehållsfragmentmodell {#creating-a-content-fragment-model}
 
-1. Navigera till **Verktyg**, **Resurser** och öppna sedan **Content Fragment Models**.
+1. Navigera till **Verktyg**, **Resurser** och öppna sedan **Modeller för innehållsfragment**.
 1. Navigera till den mapp som passar din [konfiguration](#enable-content-fragment-models).
 1. Använd **Skapa** för att öppna guiden.
 
    >[!CAUTION]
    >
-   >Om [användningen av innehållsfragmentmodeller inte har aktiverats](#enable-content-fragment-models)är alternativet **Skapa** inte tillgängligt.
+   >Om [användningen av innehållsfragmentmodeller inte har aktiverats](#enable-content-fragment-models) är alternativet **Skapa** inte tillgängligt.
 
 1. Ange **modelltitel**. Du kan också lägga till en **beskrivning** om det behövs.
 
    ![cfm-6420-10](assets/cfm-6420-10.png)
 
-1. Använd **Skapa** för att spara den tomma modellen. Ett meddelande visar att åtgärden lyckades, du kan välja **Öppna** för att redigera modellen direkt eller **Klar** för att återgå till konsolen.
+1. Använd **Skapa** för att spara den tomma modellen. Ett meddelande visar att åtgärden lyckades, du kan välja **Öppna** om du vill redigera modellen direkt eller **Klar** om du vill återgå till konsolen.
 
 ## Definiera innehållsfragmentmodellen {#defining-your-content-fragment-model}
 
@@ -78,10 +78,10 @@ Modellen för innehållsfragment definierar effektivt strukturen för de resulte
 >
 >Om du redigerar en befintlig innehållsfragmentmodell kan det påverka beroende fragment.
 
-1. Navigera till **Verktyg**, **Resurser** och öppna sedan **Content Fragment Models**.
+1. Navigera till **Verktyg**, **Resurser** och öppna sedan **Modeller för innehållsfragment**.
 
 1. Navigera till mappen som innehåller innehållsfragmentmodellen.
-1. Öppna den modell som krävs för **redigering**; använd snabbåtgärden eller välj modell och sedan åtgärden från verktygsfältet.
+1. Öppna önskad modell för **Redigera**; använd snabbåtgärden eller välj modell och sedan åtgärden från verktygsfältet.
 
    När du har öppnat modellredigeraren visas följande:
 
@@ -132,10 +132,10 @@ Om du tar bort en innehållsfragmentmodell kan det påverka beroende fragment.
 
 Så här tar du bort en innehållsfragmentmodell:
 
-1. Navigera till **Verktyg**, **Resurser** och öppna sedan **Content Fragment Models**.
+1. Navigera till **Verktyg**, **Resurser** och öppna sedan **Modeller för innehållsfragment**.
 
 1. Navigera till mappen som innehåller innehållsfragmentmodellen.
-1. Välj en modell, följt av **Ta bort** i verktygsfältet.
+1. Markera modellen följt av **Ta bort** från verktygsfältet.
 
    >[!NOTE]
    Om det refereras till modellen visas en varning. Vidta lämpliga åtgärder.
@@ -146,10 +146,10 @@ Modeller för innehållsfragment måste publiceras när/innan beroende innehåll
 
 Så här publicerar du en innehållsfragmentmodell:
 
-1. Navigera till **Verktyg**, **Resurser** och öppna sedan **Content Fragment Models**.
+1. Navigera till **Verktyg**, **Resurser** och öppna sedan **Modeller för innehållsfragment**.
 
 1. Navigera till mappen som innehåller innehållsfragmentmodellen.
-1. Välj en modell, följt av **Publicera** i verktygsfältet.
+1. Välj modell följt av **Publicera** i verktygsfältet.
 
    >[!NOTE]
    Om du publicerar ett innehållsfragment för vilket modellen ännu inte har publicerats, visas detta i en urvalslista och modellen publiceras med fragmentet.
