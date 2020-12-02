@@ -11,17 +11,20 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e25c1b35-73eb-4353-8e39-a2d4cdccd101
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '395'
+ht-degree: 0%
 
 ---
 
 
-# Importera och exportera PDF Generator-konfigurationsfiler {#importing-and-exporting-pdf-generator-configuration-files}
+# Importera och exportera konfigurationsfiler för PDF Generator {#importing-and-exporting-pdf-generator-configuration-files}
 
 Konfigurationsfilen innehåller PDF-generatorns konverteringsinformation, inklusive PDF-filen, filtypen och säkerhetsinställningarna.
 
 >[!NOTE]
 >
->Du kan inte ändra timeout-inställningen för PDF Generator genom att importera en anpassad native2pdfconfig.xml-fil. Tidsgränsen i den filen är endast avsedd som information och den aktuella inställningen visas i PDF Generator. Information om hur du ändrar timeout-inställningen finns i&quot;Setting PDF Generator performance parameters&quot; i [Installera och distribuera AEM-formulär](https://www.adobe.com/go/learn_aemforms_installJBoss_63).
+>Du kan inte ändra timeout-inställningen för PDF Generator genom att importera en anpassad native2pdfconfig.xml-fil. Tidsgränsen i den filen är endast avsedd som information och den aktuella inställningen visas i PDF Generator. Information om hur du ändrar timeout-inställningen finns i&quot;Setting PDF Generator performance parameters&quot; i [Installera och distribuera AEM formulär](https://www.adobe.com/go/learn_aemforms_installJBoss_63).
 
 ## Exportera den aktuella konfigurationsfilen {#export-your-current-configuration-file}
 
@@ -51,7 +54,7 @@ Som standard konverterar PDF Generator bara standardlagret för AutoCAD-filer ti
 
 1. I administrationskonsolen klickar du på Tjänster > PDF-generator > Konfigurationsfiler > Exportera konfiguration.
 1. Välj Hämta hela konfigurationen och klicka på Hämta.
-1. Öppna den hämtade filen i en textredigerare och lägg till texten under taggen `AutoCAD` i `PDFMaker` -taggen `convertAllPages="true"`.
+1. Öppna den hämtade filen i en textredigerare och lägg till texten `convertAllPages="true"` under taggen `AutoCAD` i taggen `PDFMaker`.
 1. I administrationskonsolen klickar du på Tjänster > PDF-generator > Konfigurationsfiler > Importera konfiguration.
 1. Välj Importera en befintlig konfigurationsfil, ange den uppdaterade filen och klicka på Importera.
 
