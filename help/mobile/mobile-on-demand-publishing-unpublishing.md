@@ -11,11 +11,14 @@ topic-tags: authoring-on-demand-services-app
 discoiquuid: 8c88a2ff-766f-481b-b6dc-0b3e2eed8596
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '302'
+ht-degree: 0%
 
 ---
 
 
-# Publicera inte publicera innehåll{#publish-unpublish-content}
+# Publicera ej publicerat innehåll{#publish-unpublish-content}
 
 >[!NOTE]
 >
@@ -25,7 +28,7 @@ När du känner till innehållshanteringsåtgärder för artiklar, banners och s
 
 >[!NOTE]
 >
->Mer information om designöverväganden för AEM-mobilappar finns i [Designöverväganden för AEM-mobilappar](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html) i onlinehjälpen.
+>Mer information om designöverväganden för AEM Mobile-program finns i [Designöverväganden för AEM Mobile-program](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html) i onlinehjälpen.
 
 ## Publicera/avpublicera innehållet {#publishing-unpublishing-the-content}
 
@@ -53,9 +56,9 @@ Det allmänna arbetsflödet för att publicera/avpublicera en artikel:
 
 När du har lärt dig att skapa och publicera innehåll, se
 
-* [Utveckla AEM-innehåll för AEM Mobile On Demand-tjänster](/help/mobile/aem-mobile-on-demand.md)
-* [Administrera innehåll för att använda AEM Mobile On Demand Services](/help/mobile/aem-mobile.md)
+* [Utveckla AEM för AEM Mobile On-demand Services](/help/mobile/aem-mobile-on-demand.md)
+* [Administrera innehåll för användning av AEM Mobile On-demand Services](/help/mobile/aem-mobile.md)
 
 Du kan även behöva lära dig mer om redigeringsämnen, se
 
-[Skapa AEM-innehåll för AEM-appar (On Demand Services) för mobila enheter](/help/mobile/mobile-apps-ondemand.md)
+[Skapa AEM innehåll för AEM Mobile On-demand Services-appar](/help/mobile/mobile-apps-ondemand.md)
