@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 6e4b4dfa-3af5-4c21-a2a1-b90ef02d8514
 translation-type: tm+mt
 source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+workflow-type: tm+mt
+source-wordcount: '891'
+ht-degree: 0%
 
 ---
 
@@ -44,9 +47,9 @@ Du kan skapa så många sökmallar som behövs.
 
    * Välj ett processelement eller ett aktivitetselement högst upp på fliken Villkor.
 
-      **Tips**: *Om du tidigare har markerat elementet Processnamn och angett en process kan även alla processvariabler som definieras i den processen väljas.*
+      **Tips**:  *Om du tidigare har markerat elementet Processnamn och angett en process kan du även välja processvariabler som definierats i den processen.*
 
-      **Tips**: *Om du väljer elementet Task Visible kan användarna ta bort slutförda uppgifter från sökresultaten.*
+      **Tips**:  *Om du väljer elementet Task Visible kan användarna ta bort slutförda uppgifter från sökresultaten.*
 
       Sökvillkorsfälten för det markerade elementet visas längst ned på fliken Kriterier.
 
@@ -55,9 +58,10 @@ Du kan skapa så många sökmallar som behövs.
       * Välj en relationsoperator (till exempel &quot;vara lika med&quot;) i listan och ange operandvärdet i rutan bredvid.
       * (Valfritt) Om du vill att användare ska kunna ändra operandvärdet i arbetsytan väljer du Tillåt användaren att ändra operanden.
       * (Valfritt) Om du vill att användare ska kunna ändra relationsoperatorn markerar du Tillåt användaren att välja en annan relationsoperator. I listan som visas väljer du de operatorer som ska vara tillgängliga för användaren.
-      **Tips**: *Om du valde Processnamn som element kan du klicka på ikonen bredvid operandfältet för att visa en lista där du kan välja en process som körs på formulärservern. När du har valt en process är alla processvariabler som definieras i den processen tillgängliga under Processvariabler i det övre avsnittet på fliken Kriterier.*
 
-      **Tips**: *Du kan ta bort ett element från sökmallen genom att klicka på ikonen Ta bort bredvid elementets sökvillkor.*
+      **Tips**:  *Om du valde Processnamn som element kan du klicka på ikonen bredvid operandfältet för att visa en lista där du kan välja en process som körs på formulärservern. När du har valt en process är alla processvariabler som definieras i den processen tillgängliga under Processvariabler i det övre avsnittet på fliken Kriterier.*
+
+      **Tips**:  *Du kan ta bort ett element från sökmallen genom att klicka på ikonen Ta bort bredvid elementets sökvillkor.*
 
 
 1. (Valfritt) För varje kolumnrubrik som ska visas i sökresultaten klickar du på fliken Layout och utför följande steg:
@@ -65,6 +69,7 @@ Du kan skapa så många sökmallar som behövs.
    * Markera en process eller ett uppgiftselement och klicka på högerpilen för att flytta det till listan Kolumner att rapportera.
    * Markera process- eller uppgiftselementet i listan Kolumner att rapportera och klicka på uppilen eller nedpilen för att flytta det till sin plats i kolumnordningen. Kolumnrubrikerna i sökresultaten visas i den ordning som de listas här.
    * (Valfritt) Om du vill ändra namnet på elementet för kolumnrubriken markerar du elementet i listan Kolumner att rapportera och anger det nya namnet.
+
    >[!NOTE]
    >
    >Layouten som anges i sökmallen åsidosätter användarens inställningar som anges för kolumnrubriker i Workspace.
