@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: b97abfc9-62e6-470c-bb86-086e662c8091
 translation-type: tm+mt
 source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
+workflow-type: tm+mt
+source-wordcount: '41'
+ht-degree: 0%
 
 ---
 
@@ -19,6 +22,6 @@ source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 **[Lägg till klienter](add-clientlibs.md)**
 
-Nu är det möjligt att utforska communityfunktioner i sandlådan tillsammans med att använda [We-Retail Community](../../help/sites-developing/we-retail.md), [Community Components Guide](components-guide.md) och [feature essentials](essentials.md) som referens.
+Nu kan du utforska communityfunktioner i sandlådan tillsammans med [We-Retail Community](../../help/sites-developing/we-retail.md), [Community Components Guide](components-guide.md) och [feature essentials](essentials.md) som referens.
 
 
