@@ -18,11 +18,11 @@ ht-degree: 0%
 ---
 
 
-# Konfigurera Dispatcher för Communities {#configuring-dispatcher-for-communities}
+# Konfigurerar Dispatcher för Communities {#configuring-dispatcher-for-communities}
 
 ## AEM Communities {#aem-communities}
 
-För AEM Communities är det nödvändigt att konfigurera Dispatcher för att säkerställa att [communityplatserna](overview.md#community-sites)fungerar korrekt. Ytterligare konfigurationer krävs när funktioner som Communities-aktivering och social inloggning inkluderas.
+För AEM Communities är det nödvändigt att konfigurera Dispatcher för att säkerställa att [communitywebbplatser](overview.md#community-sites) fungerar korrekt. Ytterligare konfigurationer krävs när funktioner som Communities-aktivering och social inloggning inkluderas.
 
 För att ta reda på vad som är nödvändigt för just din driftsättning och webbplatsdesign
 
@@ -58,7 +58,7 @@ OSGi-konfigurationen **ACS AEM Commons - Dispatcher Cache Control Header - Max A
 
    * Till exempel [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
-* Sök `ACS AEM Commons - Dispatcher Cache Control Header - Max Age`
+* Sök efter `ACS AEM Commons - Dispatcher Cache Control Header - Max Age`
 * Välj ikonen + om du vill skapa en ny anslutningskonfiguration
 
    ![avsändare](assets/dispatcher.png)
@@ -69,15 +69,15 @@ OSGi-konfigurationen **ACS AEM Commons - Dispatcher Cache Control Header - Max A
 
 * **Maximal ålder för cachekontroll**
 
-   *(obligatoriskt)* Maximal ålder (i sekunder) som ska läggas till i cachekontrollhuvudet. Värdet måste vara större än noll (0).
+   *(obligatoriskt)* Den maximala ålder (i sekunder) som ska läggas till i huvudet Cachekontroll. Värdet måste vara större än noll (0).
 
-## Dispatcher-klienthuvuden {#dispatcher-client-headers}
+## Skicka klientrubriker {#dispatcher-client-headers}
 
-I avsnittet /clientheaders i `dispatcher.any`måste du inkludera en uppsättning rubriker `"CSRF-Token"` för att [aktiveringsfunktionen](enablement.md) ska fungera.
+I avsnittet /clientheaders i `dispatcher.any` måste du ta med `"CSRF-Token"` om du vill visa en viss rubrikuppsättning för att [aktiveringsfunktionen](enablement.md) ska fungera korrekt.
 
 ## Dispatcher-filter {#dispatcher-filters}
 
-Avsnittet /filter i `dispatcher.any` filen beskrivs i [Konfigurera åtkomst till innehåll - /filter](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#filter).
+Avsnittet /filter i filen `dispatcher.any` beskrivs i [Konfigurera åtkomst till innehåll - /filter](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#filter).
 
 I det här avsnittet beskrivs poster som troligtvis är nödvändiga för att funktionen i Communities ska fungera korrekt.
 
@@ -92,12 +92,12 @@ Se även:
 >[!NOTE]
 >
 >**Exempel på egenskapsnamn**
->Alla egenskapsnamn som visas, till exempel **/0050** och **/0170**, bör justeras så att de passar i en befintlig dispatcher.alla konfigurationsfiler.
+>Alla egenskapsnamn som visas, t.ex. **/0050** och **/0170**, bör justeras så att de passar i en befintlig dispatcher.any-konfigurationsfil.
 
 
 >[!CAUTION]
 >
->Se [Dispatcher Security Checklist](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html?lang=en) för mer information om hur du begränsar åtkomsten med Dispatcher. Läs även [AEM Security Cheklist](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/security-checklist.html) om du vill ha mer säkerhetsinformation om din AEM installation.
+>Se [Dispatcher Security Checklist](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html?lang=en) om du vill veta mer när du begränsar åtkomsten med Dispatcher. Läs även [AEM Security Cheklist](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/security-checklist.html) om du vill ha mer säkerhetsinformation om din AEM installation.
 
 
 Följande poster ska läggas till i slutet av /filter-avsnittet, särskilt efter alla neka-poster.
@@ -172,7 +172,7 @@ Följande poster ska läggas till i slutet av /filter-avsnittet, särskilt efter
 /7001 { /type "allow" /glob "GET /libs/cq/security/userinfo.json?cq_ck=*"
 ```
 
-## Dispatcher Rules {#dispatcher-rules}
+## Dispatcher-regler {#dispatcher-rules}
 
 Regelavsnittet i `dispatcher.any` definierar vilka svar som ska cachas baserat på den begärda URL:en. För Communities används regelavsnittet för att definiera vad som aldrig ska cachas.
 
@@ -203,7 +203,7 @@ Det allra första filtermönstret används ofta för att neka allt så att efter
 
 ## Exempeldispatcher.any {#sample-dispatcher-any}
 
-Här följer ett exempel på en `dispatcher.any` fil som innehåller Communities /filters och /rules.
+Nedan följer ett exempel på en `dispatcher.any`-fil som innehåller Communities /filters och /rules.
 
 ```shell
 # Each farm configures a set of load balanced renders (i.e. remote servers)
