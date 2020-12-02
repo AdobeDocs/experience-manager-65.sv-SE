@@ -31,7 +31,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutning
 >
 >Snabbstarter i Programmering med AEM Forms är baserade på Forms operativsystem. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## Snabbstart (SOAP-läge): Ange säkerhetskopieringsläge med Java API {#quick-start-soap-mode-entering-backup-mode-using-the-java-api}
+## Snabbstart (SOAP-läge): Gå in i säkerhetskopieringsläge med Java API {#quick-start-soap-mode-entering-backup-mode-using-the-java-api}
 
 Följande Java-kodexempel försätts i säkerhetskopieringsläge med en unik etikett i två timmar. När säkerhetskopieringstiden har gått ut eller om säkerhetskopieringsläget uttryckligen har avslutats, återgår formulärservern till att rensa filer från den globala dokumentlagringen. (Se [Ange säkerhetskopieringsläge på formulärservern](/help/forms/developing/preparing-aem-forms-backup.md#entering-backup-mode-on-the-forms-server).)
 
