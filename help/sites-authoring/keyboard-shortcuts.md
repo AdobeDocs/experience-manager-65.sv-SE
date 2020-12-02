@@ -11,17 +11,20 @@ content-type: reference
 discoiquuid: f5ab3f61-aa5a-49ae-a976-6ab7f0d11ea6
 translation-type: tm+mt
 source-git-commit: 34aadbc35d7aad127fe98211a5f37d623d101c0c
+workflow-type: tm+mt
+source-wordcount: '391'
+ht-degree: 2%
 
 ---
 
 
 # Kortkommandon för konsoler{#keyboard-shortcuts-for-consoles}
 
-Olika kortkommandon finns tillgängliga i hela AEM. En del gäller användning av konsoler, andra för [sidredigering](/help/sites-authoring/page-authoring-keyboard-shortcuts.md).
+Olika kortkommandon finns i hela AEM. Vissa gäller för användning av konsoler, andra för [sidredigering](/help/sites-authoring/page-authoring-keyboard-shortcuts.md).
 
 >[!NOTE]
 >
->Vilka [modifieringstangenter](/help/sites-authoring/keyboard-shortcuts.md#os-specific-modifier-keys) som krävs för AEM-kortkommandon varierar beroende på operativsystem.
+>[modifieringstangenterna](/help/sites-authoring/keyboard-shortcuts.md#os-specific-modifier-keys) som krävs för AEM kortkommandon varierar beroende på operativsystem.
 
 ## Kortkommandon {#keyboard-shortcuts}
 
@@ -38,7 +41,7 @@ Följande genvägar är tillgängliga för konsolerna Webbplatser, Handel, Skär
 |  | `Esc` | Flytta upp en lista med sidor på samma nivå |
 | Konsoler | `?` | Hjälp för kortkommandon |
 |  | `/` | Anropa [sökning](/help/sites-authoring/search.md) |
-|  | `Alt+`&lt;`Number`> | Växla vilket [alternativ för](/help/sites-authoring/basic-handling.md#rail-selector) järnvägsväljare som ska visas |
+|  | `Alt+`&lt;`Number`> | Växla vilken [järnvägsväljare](/help/sites-authoring/basic-handling.md#rail-selector) som ska visas |
 |  | ` | Göm rälsstöd |
 |  | `e` | Redigera |
 |  | `p` | Egenskaper |
@@ -48,7 +51,7 @@ Följande genvägar är tillgängliga för konsolerna Webbplatser, Handel, Skär
 |  | `Backspace` | Ta bort |
 | Egenskapssidor | `Ctrl+s` | Spara |
 
-Tangentkombinationerna visas med Windows- [modifieringstangenterna](/help/sites-authoring/keyboard-shortcuts.md#os-specific-modifier-keys).
+Tangentkombinationerna visas med Windows [modifieringstangenterna](/help/sites-authoring/keyboard-shortcuts.md#os-specific-modifier-keys).
 
 Du kan även använda olika kortkommandon för skrivbordsanvändare när du använder [sidredigeraren](/help/sites-authoring/page-authoring-keyboard-shortcuts.md) för att skapa sidor.
 
@@ -63,32 +66,32 @@ De modifieringstangenter som används för kortkommandon varierar beroende på v
 
 ## Webbläsare och kortkommandon {#browsers-and-keyboard-shortcuts}
 
-Med AEM undviker du vanliga genvägar som redan används av vanliga webbläsare, men standardwebbläsarbeteendet åsidosätts inte av AEM-genvägar.
+AEM undviker vanliga kortkommandon som redan används av vanliga webbläsare, men webbläsarens standardbeteende åsidosätts inte av AEM kortkommandon.
 
 Dessutom är kortkommandon samma för alla språk och tangentbordslayouter.
 
 >[!NOTE]
 >
->AEM-kortkommandon åsidosätter inte webbläsarens standardbeteende.
+>AEM åsidosätter inte webbläsarens standardbeteende.
 >
->Om det uppstår konflikter mellan AEM-kortkommandon och webbläsargenvägar fungerar inte AEM-kortkommandona, vilket ger bättre webbläsarfunktioner.
+>Om det uppstår konflikter mellan AEM och webbläsargenvägar fungerar inte AEM, vilket ger webbläsarfunktionaliteten.
 
 >[!CAUTION]
 >
->Kortkommandon för AEM kan störa skärmläsare, vissa webbläsarfunktioner och andra tillgänglighetsverktyg.
+>AEM kortkommandon kan störa skärmläsare, vissa webbläsarfunktioner och andra tillgänglighetsverktyg.
 >
->Adobe rekommenderar att du [inaktiverar AEM-kortkommandon](/help/sites-authoring/keyboard-shortcuts.md#deactivating-keyboard-shortcuts) när du använder en skärmläsare.
+>Adobe rekommenderar [att du inaktiverar AEM kortkommandon](/help/sites-authoring/keyboard-shortcuts.md#deactivating-keyboard-shortcuts) när du använder en skärmläsare.
 
 ## Inaktivera kortkommandon {#deactivating-keyboard-shortcuts}
 
-I AEM finns kortkommandon för några av de vanligaste funktionerna (redigering, egenskaper, kopiera/klistra in, med olika sidospetsmenyer osv.).
+AEM innehåller kortkommandon för några av de vanligaste funktionerna (redigering, egenskaper, kopiera/klistra in, med olika sidospetsmenyer osv.).
 
 För användare som inte använder kortkommandon eller har vissa tillgänglighetskrav kan alla kortkommandon inaktiveras.
 
 Du kan inaktivera kortkommandon på två platser:
 
 * [Mina inställningar](/help/sites-authoring/user-properties.md#my-preferences)
-* Menyn [Hjälp](/help/sites-authoring/basic-handling.md#accessing-help)
+* [hjälpmenyn](/help/sites-authoring/basic-handling.md#accessing-help)
 
 >[!NOTE]
 >
