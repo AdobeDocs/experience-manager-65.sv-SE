@@ -11,6 +11,9 @@ topic-tags: site-features
 discoiquuid: 22712b73-90f2-4329-b32f-dbb7ce802d1d
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '273'
+ht-degree: 11%
 
 ---
 
@@ -19,9 +22,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 När du använder arbetsflödet anger du följande information:
 
-* Arbetsflödet som ska användas.
+* Det arbetsflöde som ska användas.
 
-   Du kan tillämpa vilket arbetsflöde som helst (som du har tillgång till, enligt din AEM-administratörs anvisningar).
+   Du kan använda vilket arbetsflöde som helst (som du fått tillgång till av AEM-administratören).
 * Valfritt:
 
    * En kommentar som ger information om varför du startade arbetsflödet.
@@ -29,7 +32,7 @@ När du använder arbetsflödet anger du följande information:
 
 >[!NOTE]
 >
->AEM-administratörer kan starta arbetsflöden med [flera andra metoder](/help/sites-administering/workflows-starting.md).
+>AEM kan starta arbetsflöden med [flera andra metoder](/help/sites-administering/workflows-starting.md).
 
 ## Använda arbetsflöden {#applying-workflows}
 
@@ -51,9 +54,9 @@ Kolumnen **Status** i konsolen **Webbplatser** anger om ett arbetsflöde har til
 1. Öppna webbplatskonsolen.
 1. Öppna önskad sida.
 1. Välj fliken Arbetsflöde i Spark.
-1. Utöka dialogrutan **Arbetsflöde** så att du kan välja **Arbetsflöde** och eventuellt ange **arbetsflödets titel** och **kommentar**.
+1. Expandera dialogrutan **Arbetsflöde** så att du kan välja **Arbetsflöde** och eventuellt ange **arbetsflödestitel** och **Kommentar**.
 
    ![arbetsflödenstartsidespark](assets/workflowstartsidekick.png)
 
-1. Klicka på **Starta arbetsflöde** för att starta en ny arbetsflödesinstans med de egenskaper som du har konfigurerat och den aktuella sidan som nyttolast. Nu körs arbetsflödet.
+1. Klicka på **Starta arbetsflöde** om du vill starta en ny arbetsflödesinstans med de egenskaper som du har konfigurerat och den aktuella sidan som nyttolast. Nu körs arbetsflödet.
 
