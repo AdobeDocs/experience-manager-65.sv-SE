@@ -11,6 +11,9 @@ topic-tags: operations
 discoiquuid: 95804bff-9e6f-4807-aae4-790bd9e7cb57
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '6191'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 **Om användarhantering**
 
-Du kan använda API:t för användarhantering för att skapa klientprogram som kan hantera roller, behörigheter och principer (som kan vara användare eller grupper) samt autentisera användare. API:t för användarhantering består av följande API:er för AEM Forms:
+Du kan använda API:t för användarhantering för att skapa klientprogram som kan hantera roller, behörigheter och principer (som kan vara användare eller grupper) samt autentisera användare. API:t för användarhantering består av följande AEM Forms-API:er:
 
 * Tjänst-API för kataloghanteraren
 * Tjänst-API för Autentiseringshanteraren
@@ -27,15 +30,15 @@ Du kan använda API:t för användarhantering för att skapa klientprogram som k
 
 Med Hantering av användare kan du tilldela, ta bort och bestämma roller och behörigheter. Du kan också tilldela, ta bort och fråga domäner, användare och grupper. Slutligen kan du använda Hantering av användare för att autentisera användare.
 
-När du [lägger till användare](users.md#adding-users) får du veta hur du programmässigt lägger till användare. I det här avsnittet används API:t för kataloghanterartjänsten.
+I [Lägga till användare](users.md#adding-users) kommer du att förstå hur du programmässigt lägger till användare. I det här avsnittet används API:t för kataloghanterartjänsten.
 
-När du [tar bort användare](users.md#deleting-users) får du veta hur du tar bort användare programmatiskt. I det här avsnittet används API:t för kataloghanterartjänsten.
+I [Ta bort användare](users.md#deleting-users) kommer du att förstå hur du tar bort användare programmatiskt. I det här avsnittet används API:t för kataloghanterartjänsten.
 
-I [Hantera användare och grupper](users.md#managing-users-and-groups) får du veta skillnaden mellan en lokal användare och en kataloganvändare, och se exempel på hur du använder Java- och webbtjänstens API:er för att programmässigt hantera användare och grupper. I det här avsnittet används API:t för kataloghanterartjänsten.
+I [Hantera användare och grupper](users.md#managing-users-and-groups) kommer du att förstå skillnaden mellan en lokal användare och en kataloganvändare och se exempel på hur du använder Java- och webbtjänstens API:er för att hantera användare och grupper programmatiskt. I det här avsnittet används API:t för kataloghanterartjänsten.
 
 I [Hantera roller och behörigheter](users.md#managing-roles-and-permissions) får du lära dig mer om systemroller och behörigheter och vad du kan göra programmatiskt för att förstärka dem, och se exempel på hur du använder Java- och webbtjänstens API:er för att programmässigt hantera roller och behörigheter. I det här avsnittet används både API:t för kataloghanterarens tjänst och API:t för auktoriseringshanterarens tjänst.
 
-I [Autentisera användare](users.md#authenticating-users) visas exempel på hur du använder Java- och webbtjänstens API:er för att programmässigt autentisera användare. I det här avsnittet används API:t för tjänsten Authorization Manager.
+I [Autentisera användare](users.md#authenticating-users) visas exempel på hur du använder Java- och webbtjänstens API:er för programmässig autentisering av användare. I det här avsnittet används API:t för tjänsten Authorization Manager.
 
 **Om autentiseringsprocessen**
 
@@ -80,7 +83,7 @@ I följande tabell beskrivs varje steg i autentiseringsprocessen.
 
 >[!NOTE]
 >
->Om serverns tidszon inte är densamma som klientens tidszon kan följande autentiseringsfel uppstå när WSDL används för tjänsten AEM Forms Generera PDF i en inbyggd SOAP-stack med en .NET-klient i ett WebSphere Application Server-kluster:
+>Om serverns tidszon inte är densamma som klientens tidszon kan följande autentiseringsfel uppstå när WSDL används för tjänsten AEM Forms Generate PDF i en inbyggd SOAP-stack med en .NET-klient i ett WebSphere Application Server-kluster:
 
 `[com.adobe.idp.um.webservices.WSSecurityHandler] errorCode:12803 errorCodeHEX:0x3203 message:WSSecurityHandler: UM authenticate returns exception : An error was discovered processing the <wsse:Security> header. (WSSecurityEngine: Invalid timestamp The security semantics of message have expired).`
 
@@ -98,13 +101,13 @@ I den konfigurations-XML som användarhanteringen exporterar innehåller rotnode
 
 **Om objectSID-värden**
 
-När du använder Active Directory är det viktigt att förstå att ett `objectSID` värde inte är ett unikt attribut i flera domäner. Det här värdet lagrar ett objekts säkerhetsidentifierare. I en flerdomänsmiljö (till exempel ett träd med domäner) kan `objectSID` värdet vara annorlunda.
+När du använder Active Directory är det viktigt att förstå att ett `objectSID`-värde inte är ett unikt attribut i flera domäner. Det här värdet lagrar ett objekts säkerhetsidentifierare. I en flerdomänsmiljö (till exempel ett träd med domäner) kan `objectSID`-värdet vara annorlunda.
 
-Ett `objectSID` värde ändras om ett objekt flyttas från en Active Directory-domän till en annan domän. Vissa objekt har samma `objectSID` värde var som helst i domänen. Grupper som BUILTIN\Administrators, BUILTIN\Power Users osv. har till exempel samma `objectSID` värde oavsett domäner. Dessa `objectSID` värden är välkända.
+Ett `objectSID`-värde ändras om ett objekt flyttas från en Active Directory-domän till en annan domän. Vissa objekt har samma `objectSID`-värde var som helst i domänen. Grupper som BUILTIN\Administrators, BUILTIN\Power Users och så vidare skulle ha samma `objectSID`-värde oavsett domäner. Dessa `objectSID`-värden är välkända.
 
 ## Lägga till användare {#adding-users}
 
-Du kan använda kataloghanterarens tjänst-API (Java och webbtjänst) för att programmässigt lägga till användare i AEM Forms. När du har lagt till en användare kan du använda den användaren när du utför en tjänståtgärd som kräver en användare. Du kan till exempel tilldela en uppgift till den nya användaren.
+Du kan använda kataloghanterarens tjänst-API (Java och webbtjänst) för att lägga till användare i AEM Forms via programkod. När du har lagt till en användare kan du använda den användaren när du utför en tjänståtgärd som kräver en användare. Du kan till exempel tilldela en uppgift till den nya användaren.
 
 ### Sammanfattning av steg {#summary-of-steps}
 
@@ -128,16 +131,16 @@ Innan du programmässigt kan utföra en kataloghanterartjänståtgärd måste du
 
 När du lägger till en ny användare med hjälp av kataloghanterarens tjänst-API, definierar du information för den användaren. När du lägger till en ny användare anger du vanligtvis följande värden:
 
-* **Domännamn**: Domänen som användaren tillhör (till exempel `DefaultDom`).
-* **Användaridentifierarvärde**: Användarens identifierarvärde (till exempel `wblue`).
-* **Huvudtyp**: Typ av användare (du kan till exempel ange `USER)`.
-* **Förnamn**: Ett angivet namn för användaren (till exempel `Wendy`).
-* **Efternamn**: Användarens familjenamn (till exempel `Blue)`.
+* **Domännamn**: Domänen som användaren tillhör (till exempel  `DefaultDom`).
+* **Användaridentifierarvärde**: Användarens identifierarvärde (till exempel  `wblue`).
+* **Huvudtyp**: Typ av användare (du kan till exempel ange  `USER)`.
+* **Förnamn**: Ett angivet namn för användaren (till exempel  `Wendy`).
+* **Efternamn**: Användarens familjenamn (till exempel  `Blue)`.
 * **Språk**: Språkinformation för användaren.
 
 **Lägg till användaren i AEM Forms**
 
-När du har definierat användarinformationen kan du lägga till användaren i AEM Forms. Om du vill lägga till en användare anropar du `DirectoryManagerServiceClient` objektets `createLocalUser` metod.
+När du har definierat användarinformationen kan du lägga till användaren i AEM Forms. Om du vill lägga till en användare anropar du `DirectoryManagerServiceClient`-objektets `createLocalUser`-metod.
 
 **Verifiera att användaren har lagts till**
 
@@ -165,34 +168,36 @@ Lägg till användare med hjälp av kataloghanterarens tjänst-API (Java):
 
 1. Skapa en DirectoryManagerServices-klient.
 
-   Skapa ett `DirectoryManagerServiceClient` objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
+   Skapa ett `DirectoryManagerServiceClient`-objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
 
 1. Definiera användarinformation.
 
-   * Skapa ett `UserImpl` objekt med hjälp av dess konstruktor.
-   * Ange standardnamnet genom att anropa `UserImpl` objektets `setDomainName` metod. Skicka ett strängvärde som anger domännamnet.
-   * Ange huvudtypen genom att anropa `UserImpl` objektets `setPrincipalType` metod. Skicka ett strängvärde som anger användartypen. Du kan till exempel ange `USER`.
-   * Ange användaridentifierarvärdet genom att anropa `UserImpl` objektets `setUserid` metod. Skicka ett strängvärde som anger användaridentifierarvärdet. Du kan till exempel ange `wblue`.
-   * Ange det kanoniska namnet genom att anropa `UserImpl` objektets `setCanonicalName` metod. Skicka ett strängvärde som anger användarens kanoniska namn. Du kan till exempel ange `wblue`.
-   * Ange det angivna namnet genom att anropa `UserImpl` objektets `setGivenName` metod. Skicka ett strängvärde som anger användarens angivna namn. Du kan till exempel ange `Wendy`.
-   * Ange familjens namn genom att anropa `UserImpl` objektets `setFamilyName` metod. Skicka ett strängvärde som anger användarens familjenamn. Du kan till exempel ange `Blue`.
+   * Skapa ett `UserImpl`-objekt med hjälp av dess konstruktor.
+   * Ange huvudnamnet genom att anropa `UserImpl`-objektets `setDomainName`-metod. Skicka ett strängvärde som anger domännamnet.
+   * Ange huvudtypen genom att anropa `UserImpl`-objektets `setPrincipalType`-metod. Skicka ett strängvärde som anger användartypen. Du kan till exempel ange `USER`.
+   * Ange användaridentifierarvärdet genom att anropa `UserImpl`-objektets `setUserid`-metod. Skicka ett strängvärde som anger användaridentifierarvärdet. Du kan till exempel ange `wblue`.
+   * Ange det kanoniska namnet genom att anropa `UserImpl`-objektets `setCanonicalName`-metod. Skicka ett strängvärde som anger användarens kanoniska namn. Du kan till exempel ange `wblue`.
+   * Ange det angivna namnet genom att anropa `UserImpl`-objektets `setGivenName`-metod. Skicka ett strängvärde som anger användarens angivna namn. Du kan till exempel ange `Wendy`.
+   * Ange familjenamnet genom att anropa `UserImpl`-objektets `setFamilyName`-metod. Skicka ett strängvärde som anger användarens familjenamn. Du kan till exempel ange `Blue`.
+
    >[!NOTE]
    >
-   >Anropa en metod som hör till `UserImpl` objektet för att ange andra värden. Du kan till exempel ange språkvärdet genom att anropa `UserImpl` objektets `setLocale` metod.
+   >Anropa en metod som tillhör `UserImpl`-objektet för att ange andra värden. Du kan till exempel ange språkvärdet genom att anropa `UserImpl`-objektets `setLocale`-metod.
 
 1. Lägg till användaren i AEM Forms.
 
-   Anropa `DirectoryManagerServiceClient` objektets `createLocalUser` metod och skicka följande värden:
+   Anropa `DirectoryManagerServiceClient`-objektets `createLocalUser`-metod och skicka följande värden:
 
-   * Det `UserImpl` objekt som representerar den nya användaren
+   * Det `UserImpl`-objekt som representerar den nya användaren
    * Ett strängvärde som representerar användarens lösenord
-   Metoden returnerar `createLocalUser` ett strängvärde som anger det lokala användaridentifierarvärdet.
+
+   Metoden `createLocalUser` returnerar ett strängvärde som anger det lokala användaridentifierarvärdet.
 
 1. Kontrollera att användaren har lagts till.
 
-   * Skapa ett `PrincipalSearchFilter` objekt med hjälp av dess konstruktor.
-   * Ange användaridentifierarvärdet genom att anropa `PrincipalSearchFilter` objektets `setUserId` metod. Skicka ett strängvärde som representerar användaridentifierarvärdet.
-   * Anropa `DirectoryManagerServiceClient` objektets `findPrincipals` metod och skicka `PrincipalSearchFilter` objektet. Den här metoden returnerar en `java.util.List` instans, där varje element är ett `User` objekt. Iterera genom `java.util.List` instansen för att hitta användaren.
+   * Skapa ett `PrincipalSearchFilter`-objekt med hjälp av dess konstruktor.
+   * Ange användaridentifierarvärdet genom att anropa `PrincipalSearchFilter`-objektets `setUserId`-metod. Skicka ett strängvärde som representerar användaridentifierarvärdet.
+   * Anropa `DirectoryManagerServiceClient`-objektets `findPrincipals`-metod och skicka `PrincipalSearchFilter`-objektet. Den här metoden returnerar en `java.util.List`-instans, där varje element är ett `User`-objekt. Iterera via `java.util.List`-instansen för att hitta användaren.
 
 **Se även**
 
@@ -204,7 +209,7 @@ Lägg till användare med hjälp av kataloghanterarens tjänst-API (Java):
 
 [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### Lägga till användare med webbtjänstens API {#add-users-using-the-web-service-api}
+### Lägg till användare med webbtjänstens API {#add-users-using-the-web-service-api}
 
 Lägg till användare med hjälp av kataloghanterarens tjänst-API (webbtjänst):
 
@@ -218,50 +223,51 @@ Lägg till användare med hjälp av kataloghanterarens tjänst-API (webbtjänst)
 
 1. Skapa en DirectoryManagerService-klient.
 
-   * Skapa ett `DirectoryManagerServiceClient` objekt med hjälp av dess standardkonstruktor.
-   * Skapa ett `DirectoryManagerServiceClient.Endpoint.Address` objekt med hjälp av `System.ServiceModel.EndpointAddress` konstruktorn. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/DirectoryManagerService?blob=mtom`). Du behöver inte använda attributet `lc_version` . Det här attributet används när du skapar en tjänstreferens. Se till att du anger `?blob=mtom`.
-   * Skapa ett `System.ServiceModel.BasicHttpBinding` objekt genom att hämta värdet för `DirectoryManagerServiceClient.Endpoint.Binding` fältet. Sänd returvärdet till `BasicHttpBinding`.
-   * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa ett `DirectoryManagerServiceClient`-objekt med hjälp av dess standardkonstruktor.
+   * Skapa ett `DirectoryManagerServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/DirectoryManagerService?blob=mtom`). Du behöver inte använda attributet `lc_version`. Det här attributet används när du skapar en tjänstreferens. Se till att du anger `?blob=mtom`.
+   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `DirectoryManagerServiceClient.Endpoint.Binding`. Sänd returvärdet till `BasicHttpBinding`.
+   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `DirectoryManagerServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela användarnamnet för AEM formulär till fältet `DirectoryManagerServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `DirectoryManagerServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
 1. Definiera användarinformation.
 
-   * Skapa ett `UserImpl` objekt med hjälp av dess konstruktor.
-   * Ange standardnamnet genom att tilldela ett strängvärde till `UserImpl` objektets `domainName` fält.
-   * Ange huvudtypen genom att tilldela ett strängvärde till `UserImpl` objektets `principalType` fält. Du kan till exempel ange `USER`.
-   * Ange användaridentifierarvärdet genom att tilldela ett strängvärde till `UserImpl` objektets `userid` fält.
-   * Ange det kanoniska namnvärdet genom att tilldela ett strängvärde till `UserImpl` objektets `canonicalName` fält.
-   * Ange det angivna namnvärdet genom att tilldela ett strängvärde till `UserImpl` objektets `givenName` fält.
-   * Ange familjenamnvärdet genom att tilldela ett strängvärde till `UserImpl` objektets `familyName` fält.
+   * Skapa ett `UserImpl`-objekt med hjälp av dess konstruktor.
+   * Ange huvudnamnet genom att tilldela ett strängvärde till `UserImpl`-objektets `domainName`-fält.
+   * Ange huvudtypen genom att tilldela ett strängvärde till `UserImpl`-objektets `principalType`-fält. Du kan till exempel ange `USER`.
+   * Ange användaridentifierarvärdet genom att tilldela ett strängvärde till `UserImpl`-objektets `userid`-fält.
+   * Ange det kanoniska namnvärdet genom att tilldela ett strängvärde till `UserImpl`-objektets `canonicalName`-fält.
+   * Ange det angivna namnvärdet genom att tilldela ett strängvärde till `UserImpl`-objektets `givenName`-fält.
+   * Ange familjenamnvärdet genom att tilldela ett strängvärde till `UserImpl`-objektets `familyName`-fält.
 
 1. Lägg till användaren i AEM Forms.
 
-   Anropa `DirectoryManagerServiceClient` objektets `createLocalUser` metod och skicka följande värden:
+   Anropa `DirectoryManagerServiceClient`-objektets `createLocalUser`-metod och skicka följande värden:
 
-   * Det `UserImpl` objekt som representerar den nya användaren
+   * Det `UserImpl`-objekt som representerar den nya användaren
    * Ett strängvärde som representerar användarens lösenord
-   Metoden returnerar `createLocalUser` ett strängvärde som anger det lokala användaridentifierarvärdet.
+
+   Metoden `createLocalUser` returnerar ett strängvärde som anger det lokala användaridentifierarvärdet.
 
 1. Kontrollera att användaren har lagts till.
 
-   * Skapa ett `PrincipalSearchFilter` objekt med hjälp av dess konstruktor.
-   * Ange användaridentifierarvärdet för användaren genom att tilldela ett strängvärde som representerar användaridentifierarvärdet till `PrincipalSearchFilter` objektets `userId` fält.
-   * Anropa `DirectoryManagerServiceClient` objektets `findPrincipals` metod och skicka `PrincipalSearchFilter` objektet. Den här metoden returnerar ett `MyArrayOfUser` samlingsobjekt, där varje element är ett `User` objekt. Iterera genom `MyArrayOfUser` samlingen för att hitta användaren.
+   * Skapa ett `PrincipalSearchFilter`-objekt med hjälp av dess konstruktor.
+   * Ange användaridentifierarvärdet för användaren genom att tilldela ett strängvärde som representerar användaridentifierarvärdet till `PrincipalSearchFilter`-objektets `userId`-fält.
+   * Anropa `DirectoryManagerServiceClient`-objektets `findPrincipals`-metod och skicka `PrincipalSearchFilter`-objektet. Den här metoden returnerar ett `MyArrayOfUser`-samlingsobjekt, där varje element är ett `User`-objekt. Iterera via `MyArrayOfUser`-samlingen för att hitta användaren.
 
 **Se även**
 
 [Sammanfattning av steg](users.md#summary-of-steps)
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## Ta bort användare {#deleting-users}
+## Tar bort användare {#deleting-users}
 
 Du kan använda kataloghanterarens tjänst-API (Java och webbtjänst) för att ta bort användare från AEM Forms programmatiskt. När du har tagit bort en användare kan användaren inte längre användas för att utföra en tjänståtgärd som kräver en användare. Du kan till exempel inte tilldela en uppgift till en borttagen användare.
 
@@ -288,7 +294,7 @@ Du kan ange en användare som ska tas bort med användarens identifierarvärde.
 
 **Ta bort användaren från AEM Forms**
 
-Om du vill ta bort en användare anropar du `DirectoryManagerServiceClient` objektets `deleteLocalUser` metod.
+Om du vill ta bort en användare anropar du `DirectoryManagerServiceClient`-objektets `deleteLocalUser`-metod.
 
 **Se även**
 
@@ -312,17 +318,17 @@ Ta bort användare med hjälp av kataloghanterarens tjänst-API (Java):
 
 1. Skapa en DirectoryManagerService-klient.
 
-   Skapa ett `DirectoryManagerServiceClient` objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
+   Skapa ett `DirectoryManagerServiceClient`-objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
 
 1. Ange vilken användare som ska tas bort.
 
-   * Skapa ett `PrincipalSearchFilter` objekt med hjälp av dess konstruktor.
-   * Ange användaridentifierarvärdet genom att anropa `PrincipalSearchFilter` objektets `setUserId` metod. Skicka ett strängvärde som representerar användaridentifierarvärdet.
-   * Anropa `DirectoryManagerServiceClient` objektets `findPrincipals` metod och skicka `PrincipalSearchFilter` objektet. Den här metoden returnerar en `java.util.List` instans, där varje element är ett `User` objekt. Iterera genom `java.util.List` instansen för att hitta användaren som ska tas bort.
+   * Skapa ett `PrincipalSearchFilter`-objekt med hjälp av dess konstruktor.
+   * Ange användaridentifierarvärdet genom att anropa `PrincipalSearchFilter`-objektets `setUserId`-metod. Skicka ett strängvärde som representerar användaridentifierarvärdet.
+   * Anropa `DirectoryManagerServiceClient`-objektets `findPrincipals`-metod och skicka `PrincipalSearchFilter`-objektet. Den här metoden returnerar en `java.util.List`-instans, där varje element är ett `User`-objekt. Iterera via `java.util.List`-instansen för att hitta användaren som ska tas bort.
 
 1. Ta bort användaren från AEM Forms.
 
-   Anropa `DirectoryManagerServiceClient` objektets `deleteLocalUser` metod och skicka värdet för `User` objektets `oid` fält. Anropa `User` objektets `getOid` metod. Använd det `User` objekt som hämtats från `java.util.List` instansen.
+   Anropa `DirectoryManagerServiceClient`-objektets `deleteLocalUser`-metod och skicka värdet för `User`-objektets `oid`-fält. Anropa `User`-objektets `getOid`-metod. Använd objektet `User` som hämtats från instansen `java.util.List`.
 
 **Se även**
 
@@ -346,38 +352,38 @@ Ta bort användare med hjälp av kataloghanterarens tjänst-API (webbtjänst):
 
 1. Skapa en DirectoryManagerService-klient.
 
-   * Skapa ett `DirectoryManagerServiceClient` objekt med hjälp av dess standardkonstruktor.
-   * Skapa ett `DirectoryManagerServiceClient.Endpoint.Address` objekt med hjälp av `System.ServiceModel.EndpointAddress` konstruktorn. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/DirectoryManagerService?blob=mtom`). Du behöver inte använda attributet `lc_version` . Det här attributet används när du skapar en tjänstreferens. Se till att du anger `blob=mtom.`
-   * Skapa ett `System.ServiceModel.BasicHttpBinding` objekt genom att hämta värdet för `DirectoryManagerServiceClient.Endpoint.Binding` fältet. Sänd returvärdet till `BasicHttpBinding`.
-   * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa ett `DirectoryManagerServiceClient`-objekt med hjälp av dess standardkonstruktor.
+   * Skapa ett `DirectoryManagerServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/DirectoryManagerService?blob=mtom`). Du behöver inte använda attributet `lc_version`. Det här attributet används när du skapar en tjänstreferens. Se till att du anger `blob=mtom.`
+   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `DirectoryManagerServiceClient.Endpoint.Binding`. Sänd returvärdet till `BasicHttpBinding`.
+   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `DirectoryManagerServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela användarnamnet för AEM formulär till fältet `DirectoryManagerServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `DirectoryManagerServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
 1. Ange vilken användare som ska tas bort.
 
-   * Skapa ett `PrincipalSearchFilter` objekt med hjälp av dess konstruktor.
-   * Ange användaridentifierarvärdet genom att tilldela ett strängvärde till `PrincipalSearchFilter` objektets `userId` fält.
-   * Anropa `DirectoryManagerServiceClient` objektets `findPrincipals` metod och skicka `PrincipalSearchFilter` objektet. Den här metoden returnerar ett `MyArrayOfUser` samlingsobjekt, där varje element är ett `User` objekt. Iterera genom `MyArrayOfUser` samlingen för att hitta användaren. Det `User` objekt som hämtas från `MyArrayOfUser` samlingsobjektet används för att ta bort användaren.
+   * Skapa ett `PrincipalSearchFilter`-objekt med hjälp av dess konstruktor.
+   * Ange användaridentifierarvärdet genom att tilldela ett strängvärde till `PrincipalSearchFilter`-objektets `userId`-fält.
+   * Anropa `DirectoryManagerServiceClient`-objektets `findPrincipals`-metod och skicka `PrincipalSearchFilter`-objektet. Den här metoden returnerar ett `MyArrayOfUser`-samlingsobjekt, där varje element är ett `User`-objekt. Iterera via `MyArrayOfUser`-samlingen för att hitta användaren. `User`-objektet som hämtas från `MyArrayOfUser`-samlingsobjektet används för att ta bort användaren.
 
 1. Ta bort användaren från AEM Forms.
 
-   Ta bort användaren genom att skicka `User` objektets `oid` fältvärde till `DirectoryManagerServiceClient` objektets `deleteLocalUser` metod.
+   Ta bort användaren genom att skicka `User`-objektets `oid`-fältvärde till `DirectoryManagerServiceClient`-objektets `deleteLocalUser`-metod.
 
 **Se även**
 
 [Sammanfattning av steg](users.md#summary-of-steps)
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## Skapa grupper {#creating-groups}
+## Skapar grupper {#creating-groups}
 
-Du kan använda kataloghanterarens tjänst-API (Java och webbtjänst) för att skapa AEM Forms-grupper programmatiskt. När du har skapat en grupp kan du använda den gruppen för att utföra en tjänståtgärd som kräver en grupp. Du kan till exempel tilldela en användare till den nya gruppen. (Se [Hantera användare och grupper](users.md#managing-users-and-groups).)
+Du kan använda API:t för kataloghanteringstjänsten (Java och webbtjänst) för att skapa AEM Forms-grupper programmatiskt. När du har skapat en grupp kan du använda den gruppen för att utföra en tjänståtgärd som kräver en grupp. Du kan till exempel tilldela en användare till den nya gruppen. (Se [Hantera användare och grupper](users.md#managing-users-and-groups).)
 
 ### Sammanfattning av steg {#summary_of_steps-2}
 
@@ -397,10 +403,10 @@ Följande JAR-filer måste läggas till i projektets klassökväg:
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar (krävs om AEM Forms distribueras på JBoss)
+* adobe-utilities.jar (krävs om AEM Forms används i JBoss)
 * jbossall-client.jar (krävs om AEM Forms distribueras på JBoss)
 
-Mer information om var dessa JAR-filer finns i [Inkludera Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)för AEM Forms.
+Information om platsen för dessa JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **Skapa en DirectoryManagerService-klient**
 
@@ -408,7 +414,7 @@ Innan du programmässigt kan utföra en kataloghanterartjänståtgärd måste du
 
 **Kontrollera om gruppen finns**
 
-När du skapar en grupp måste du se till att gruppen inte finns i samma domän. Två grupper kan alltså inte ha samma namn inom samma domän. Om du vill utföra den här åtgärden gör du en sökning och filtrerar sökresultaten baserat på två värden. Ange huvudtypen för att se `com.adobe.idp.um.api.infomodel.Principal.PRINCIPALTYPE_GROUP` till att bara grupper returneras. Se även till att du anger domännamnet.
+När du skapar en grupp måste du se till att gruppen inte finns i samma domän. Två grupper kan alltså inte ha samma namn inom samma domän. Om du vill utföra den här åtgärden gör du en sökning och filtrerar sökresultaten baserat på två värden. Ange huvudtypen till `com.adobe.idp.um.api.infomodel.Principal.PRINCIPALTYPE_GROUP` för att säkerställa att endast grupper returneras. Se även till att du anger domännamnet.
 
 **Skapa gruppen**
 
@@ -420,7 +426,7 @@ När du har fastställt att gruppen inte finns i domänen skapar du gruppen och 
 
 **Utför en åtgärd med gruppen**
 
-När du har skapat en grupp kan du utföra en åtgärd med gruppen. Du kan till exempel lägga till en användare i gruppen. Om du vill lägga till en användare i en grupp hämtar du det unika identifieringsvärdet för både användaren och gruppen. Skicka dessa värden till `addPrincipalToLocalGroup` metoden.
+När du har skapat en grupp kan du utföra en åtgärd med gruppen. Du kan till exempel lägga till en användare i gruppen. Om du vill lägga till en användare i en grupp hämtar du det unika identifieringsvärdet för både användaren och gruppen. Skicka dessa värden till metoden `addPrincipalToLocalGroup`.
 
 **Se även**
 
@@ -444,30 +450,31 @@ Skapa en grupp med hjälp av kataloghanterarens tjänst-API (Java):
 
 1. Skapa en DirectoryManagerService-klient.
 
-   Skapa ett `DirectoryManagerServiceClient` objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
+   Skapa ett `DirectoryManagerServiceClient`-objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
 
 1. Avgör om gruppen finns.
 
-   * Skapa ett `PrincipalSearchFilter` objekt med hjälp av dess konstruktor.
-   * Ange huvudtypen genom att anropa `PrincipalSearchFilter` objektets `setPrincipalType` objekt. Skicka värdet `com.adobe.idp.um.api.infomodel.Principal.PRINCIPALTYPE_GROUP`.
-   * Ange domänen genom att anropa `PrincipalSearchFilter` objektets `setSpecificDomainName` objekt. Skicka ett strängvärde som anger domännamnet.
-   * Om du vill söka efter en grupp anropar du `DirectoryManagerServiceClient` objektets `findPrincipals` metod (ett huvudnamn kan vara en grupp). Skicka objektet `PrincipalSearchFilter` som anger huvudtypen och domännamnet. Den här metoden returnerar en `java.util.List` instans där varje element är en `Group` instans. Varje gruppinstans följer det filter som anges med hjälp av `PrincipalSearchFilter` objektet.
-   * Iterera genom `java.util.List` instansen. Hämta gruppnamnet för varje element. Kontrollera att gruppnamnet inte är lika med det nya gruppnamnet.
+   * Skapa ett `PrincipalSearchFilter`-objekt med hjälp av dess konstruktor.
+   * Ange huvudtypen genom att anropa `PrincipalSearchFilter`-objektets `setPrincipalType`-objekt. Skicka värdet `com.adobe.idp.um.api.infomodel.Principal.PRINCIPALTYPE_GROUP`.
+   * Ange domänen genom att anropa `PrincipalSearchFilter`-objektets `setSpecificDomainName`-objekt. Skicka ett strängvärde som anger domännamnet.
+   * Om du vill söka efter en grupp anropar du `DirectoryManagerServiceClient`-objektets `findPrincipals`-metod (ett huvudnamn kan vara en grupp). Skicka `PrincipalSearchFilter`-objektet som anger huvudtypen och domännamnet. Den här metoden returnerar en `java.util.List`-instans där varje element är en `Group`-instans. Varje gruppinstans följer det filter som anges med objektet `PrincipalSearchFilter`.
+   * Iterera genom `java.util.List`-instansen. Hämta gruppnamnet för varje element. Kontrollera att gruppnamnet inte är lika med det nya gruppnamnet.
 
 1. Skapa gruppen.
 
-   * Om gruppen inte finns anropar du `Group` objektets `setCommonName` metod och skickar ett strängvärde som anger gruppnamnet.
-   * Anropa `Group` objektets `setDescription` metod och skicka ett strängvärde som anger gruppbeskrivningen.
-   * Anropa `Group` objektets `setDomainName` metod och skicka ett strängvärde som anger domännamnet.
-   * Anropa `DirectoryManagerServiceClient` objektets `createLocalGroup` metod och skicka `Group` instansen.
-   Metoden returnerar `createLocalUser` ett strängvärde som anger det lokala användaridentifierarvärdet.
+   * Om gruppen inte finns anropar du `Group`-objektets `setCommonName`-metod och skickar ett strängvärde som anger gruppnamnet.
+   * Anropa `Group`-objektets `setDescription`-metod och skicka ett strängvärde som anger gruppbeskrivningen.
+   * Anropa `Group`-objektets `setDomainName`-metod och skicka ett strängvärde som anger domännamnet.
+   * Anropa `DirectoryManagerServiceClient`-objektets `createLocalGroup`-metod och skicka `Group`-instansen.
+
+   Metoden `createLocalUser` returnerar ett strängvärde som anger det lokala användaridentifierarvärdet.
 
 1. Utför en åtgärd med gruppen.
 
-   * Skapa ett `PrincipalSearchFilter` objekt med hjälp av dess konstruktor.
-   * Ange användaridentifierarvärdet genom att anropa `PrincipalSearchFilter` objektets `setUserId` metod. Skicka ett strängvärde som representerar användaridentifierarvärdet.
-   * Anropa `DirectoryManagerServiceClient` objektets `findPrincipals` metod och skicka `PrincipalSearchFilter` objektet. Den här metoden returnerar en `java.util.List` instans, där varje element är ett `User` objekt. Iterera genom `java.util.List` instansen för att hitta användaren.
-   * Lägg till en användare i gruppen genom att anropa `DirectoryManagerServiceClient` objektets `addPrincipalToLocalGroup` metod. Skicka returvärdet för `User` objektets `getOid` metod. Skicka returvärdet för `Group` objektets `getOid` metod (använd den `Group` instans som representerar den nya gruppen).
+   * Skapa ett `PrincipalSearchFilter`-objekt med hjälp av dess konstruktor.
+   * Ange användaridentifierarvärdet genom att anropa `PrincipalSearchFilter`-objektets `setUserId`-metod. Skicka ett strängvärde som representerar användaridentifierarvärdet.
+   * Anropa `DirectoryManagerServiceClient`-objektets `findPrincipals`-metod och skicka `PrincipalSearchFilter`-objektet. Den här metoden returnerar en `java.util.List`-instans, där varje element är ett `User`-objekt. Iterera via `java.util.List`-instansen för att hitta användaren.
+   * Lägg till en användare i gruppen genom att anropa `DirectoryManagerServiceClient`-objektets `addPrincipalToLocalGroup`-metod. Skicka returvärdet för `User`-objektets `getOid`-metod. Skicka returvärdet för `Group`-objektets `getOid`-metod (använd `Group`-instansen som representerar den nya gruppen).
 
 **Se även**
 
@@ -483,10 +490,10 @@ I det här avsnittet beskrivs hur du kan använda (Java) för att programmässig
 
 >[!NOTE]
 >
->När du konfigurerar en domän måste du ange den unika identifieraren för grupper och användare. Attributet som väljs får inte bara vara unikt i LDAP-miljön, utan måste också vara oföränderligt och ändras inte i katalogen. Det här attributet måste också vara av en enkel strängdatatyp (det enda undantag som för närvarande tillåts för Active Directory 2000/2003 är `"objectsid"`, som är ett binärt värde). Novell eDirectory-attributet `"GUID"`är till exempel inte en enkel strängdatatyp och kommer därför inte att fungera.
+>När du konfigurerar en domän måste du ange den unika identifieraren för grupper och användare. Attributet som väljs får inte bara vara unikt i LDAP-miljön, utan måste också vara oföränderligt och ändras inte i katalogen. Det här attributet måste också vara av en enkel strängdatatyp (det enda undantag som för närvarande tillåts för Active Directory 2000/2003 är `"objectsid"`, som är ett binärt värde). Novell eDirectory-attributet `"GUID"` är till exempel inte en enkel strängdatatyp och fungerar därför inte.
 
-* Använd Active Directory `"objectsid"`.
-* För SunOne, använd `"nsuniqueid"`.
+* Använd `"objectsid"` för Active Directory.
+* För SunOne använder du `"nsuniqueid"`.
 
 >[!NOTE]
 >
@@ -506,7 +513,7 @@ Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprog
 
 **Skapa en DirectoryManagerService-klient**
 
-Innan du programmässigt kan utföra en kataloghanterartjänståtgärd måste du skapa en kataloghanterartjänstklient. Med Java-API:t uppnås detta genom att ett `DirectoryManagerServiceClient` objekt skapas. Med webbtjänste-API:t uppnås detta genom att ett `DirectoryManagerServiceService` objekt skapas.
+Innan du programmässigt kan utföra en kataloghanterartjänståtgärd måste du skapa en kataloghanterartjänstklient. Med Java-API:t uppnås detta genom att ett `DirectoryManagerServiceClient`-objekt skapas. Med webbtjänstens API:t uppnås detta genom att ett `DirectoryManagerServiceService`-objekt skapas.
 
 **Anropa lämpliga användar- eller gruppåtgärder**
 
@@ -524,29 +531,29 @@ När du har skapat tjänstklienten kan du sedan anropa användar- eller grupphan
 
 [API-snabbstart för användarhanteraren](/help/forms/developing/user-manager-java-api-quick.md#user-manager-java-api-quick-start-soap)
 
-###  Hantera användare och grupper med Java API {#managing-users-and-groups-using-the-java-api}
+### Hantera användare och grupper med Java API {#managing-users-and-groups-using-the-java-api}
 
 Utför följande uppgifter för att programmässigt hantera användare, grupper och domäner med (Java):
 
 1. Inkludera projektfiler.
 
-   Inkludera JAR-klientfiler, t.ex. adobe-usermanager-client.jar, i Java-projektets klassökväg. Mer information om var dessa filer finns i [Inkludera Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)för AEM Forms.
+   Inkludera JAR-klientfiler, t.ex. adobe-usermanager-client.jar, i Java-projektets klassökväg. Information om platsen för dessa filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 1. Skapa en DirectoryManagerService-klient.
 
-   Skapa ett `DirectoryManagerServiceClient` objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper. Mer information finns i [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)*.*
+   Skapa ett `DirectoryManagerServiceClient`-objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper. Mer information finns i [Ange anslutningsegenskaper ](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)*.*
 
 1. Anropa lämpliga användar- eller gruppåtgärder.
 
-   Om du vill söka efter en användare eller grupp anropar du någon av objektets metoder för att hitta objekt (eftersom ett huvudnamn kan vara en användare eller en grupp). `DirectoryManagerServiceClient` I exemplet nedan anropas `findPrincipals` metoden med hjälp av ett sökfilter (ett `PrincipalSearchFilter` objekt).
+   Om du vill söka efter en användare eller grupp anropar du en av `DirectoryManagerServiceClient`-objektets metoder för att hitta objekt (eftersom ett huvudnamn kan vara en användare eller en grupp). I exemplet nedan anropas metoden `findPrincipals` med hjälp av ett sökfilter (ett `PrincipalSearchFilter`-objekt).
 
-   Eftersom returvärdet i det här fallet är ett `java.util.List` objekt som innehåller `Principal` objekt, itererar du genom resultatet och konverterar `Principal` objekten till antingen `User` eller `Group` .
+   Eftersom returvärdet i det här fallet är ett `java.util.List`-objekt som innehåller `Principal`-objekt, itererar du genom resultatet och konverterar `Principal`-objekten till antingen `User` eller `Group`-objekt.
 
-   Hämta den information du behöver i dina arbetsflöden med hjälp av det resulterande objektet `User` eller `Group` objektet (som båda ärver från `Principal` gränssnittet). Domännamnet och kanoniska namnvärden är i kombination unika för ett huvudnamn. Dessa hämtas genom att `Principal` objektets `getDomainName` - respektive `getCanonicalName` -metoder anropas.
+   Använd det resulterande `User`- eller `Group`-objektet (som båda ärver från gränssnittet `Principal`) för att hämta den information du behöver i dina arbetsflöden. Domännamnet och kanoniska namnvärden är i kombination unika för ett huvudnamn. Dessa hämtas genom att anropa `Principal`-objektets `getDomainName`- respektive `getCanonicalName`-metoder.
 
-   Om du vill ta bort en lokal användare anropar du `DirectoryManagerServiceClient` objektets `deleteLocalUser` metod och skickar användarens identifierare.
+   Om du vill ta bort en lokal användare anropar du `DirectoryManagerServiceClient`-objektets `deleteLocalUser`-metod och skickar användarens identifierare.
 
-   Om du vill ta bort en lokal grupp anropar du `DirectoryManagerServiceClient` objektets `deleteLocalGroup` metod och skickar gruppens identifierare.
+   Om du vill ta bort en lokal grupp anropar du `DirectoryManagerServiceClient`-objektets `deleteLocalGroup`-metod och skickar gruppens identifierare.
 
 **Se även**
 
@@ -562,40 +569,40 @@ Utför följande uppgifter för att programmässigt hantera användare, grupper 
 
 1. Inkludera projektfiler.
 
-   * Skapa en Microsoft .NET-klientsammansättning som använder kataloghanterarens WSDL. (Se [Anropa AEM-formulär med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).)
+   * Skapa en Microsoft .NET-klientsammansättning som använder kataloghanterarens WSDL. (Se [Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).)
    * Referera till Microsoft .NET-klientsammansättningen. (Se [Skapa en .NET-klientsammansättning som använder Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding).)
 
 1. Skapa en DirectoryManagerService-klient.
 
-   Skapa ett `DirectoryManagerServiceService` objekt med hjälp av proxyklassens konstruktor.
+   Skapa ett `DirectoryManagerServiceService`-objekt med hjälp av proxyklassens konstruktor.
 
 1. Anropa lämpliga användar- eller gruppåtgärder.
 
-   Om du vill söka efter en användare eller grupp anropar du någon av objektets metoder för att hitta objekt (eftersom ett huvudnamn kan vara en användare eller en grupp). `DirectoryManagerServiceService` I exemplet nedan anropas `findPrincipalsWithFilter` metoden med hjälp av ett sökfilter (ett `PrincipalSearchFilter` objekt). När du använder ett `PrincipalSearchFilter` objekt returneras lokala objekt bara om `isLocal` egenskapen är inställd på `true`. Detta beteende skiljer sig från vad som skulle hända med Java API.
+   Om du vill söka efter en användare eller grupp anropar du en av `DirectoryManagerServiceService`-objektets metoder för att hitta objekt (eftersom ett huvudnamn kan vara en användare eller en grupp). I exemplet nedan anropas metoden `findPrincipalsWithFilter` med hjälp av ett sökfilter (ett `PrincipalSearchFilter`-objekt). När du använder ett `PrincipalSearchFilter`-objekt returneras lokala objekt endast om egenskapen `isLocal` är inställd på `true`. Detta beteende skiljer sig från vad som skulle hända med Java API.
 
    >[!NOTE]
    >
-   >Om det maximala antalet resultat inte anges i sökfiltret (via `PrincipalSearchFilter.resultsMax` fältet) returneras maximalt 1 000 resultat. Detta är ett annat beteende än det som inträffar med Java API, där 10 resultat är standardvärdet. Dessutom ger sökmetoderna som `findGroupMembers` inte några resultat om inte det maximala antalet resultat anges i sökfiltret (till exempel via `GroupMembershipSearchFilter.resultsMax` fältet). Detta gäller alla sökfilter som ärver från `GenericSearchFilter` klassen. Mer information finns i API-referens för [AEM-formulär](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+   >Om det maximala antalet resultat inte anges i sökfiltret (via fältet `PrincipalSearchFilter.resultsMax`) returneras maximalt 1 000 resultat. Detta är ett annat beteende än det som inträffar med Java API, där 10 resultat är standardvärdet. Sökmetoder som `findGroupMembers` ger inga resultat såvida inte det maximala antalet resultat anges i sökfiltret (till exempel via fältet `GroupMembershipSearchFilter.resultsMax`). Detta gäller alla sökfilter som ärver från klassen `GenericSearchFilter`. Mer information finns i [API-referens för AEM Forms](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
-   Eftersom returvärdet i det här fallet är ett `object[]` objekt som innehåller `Principal` objekt, itererar du genom resultatet och konverterar `Principal` objekten till antingen `User` eller `Group` .
+   Eftersom returvärdet i det här fallet är ett `object[]`-objekt som innehåller `Principal`-objekt, itererar du genom resultatet och konverterar `Principal`-objekten till antingen `User`- eller `Group`-objekt.
 
-   Hämta den information du behöver i dina arbetsflöden med hjälp av det resulterande objektet `User` eller `Group` objektet (som båda ärver från `Principal` gränssnittet). Domännamnet och kanoniska namnvärden är i kombination unika för ett huvudnamn. Dessa hämtas genom att `Principal` objektets `domainName` - respektive `canonicalName` fält anropas.
+   Använd det resulterande `User`- eller `Group`-objektet (som båda ärver från gränssnittet `Principal`) för att hämta den information du behöver i dina arbetsflöden. Domännamnet och kanoniska namnvärden är i kombination unika för ett huvudnamn. Dessa hämtas genom att anropa `Principal`-objektets `domainName`- respektive `canonicalName`-fält.
 
-   Om du vill ta bort en lokal användare anropar du `DirectoryManagerServiceService` objektets `deleteLocalUser` metod och skickar användarens identifierare.
+   Om du vill ta bort en lokal användare anropar du `DirectoryManagerServiceService`-objektets `deleteLocalUser`-metod och skickar användarens identifierare.
 
-   Om du vill ta bort en lokal grupp anropar du `DirectoryManagerServiceService` objektets `deleteLocalGroup` metod och skickar gruppens identifierare.
+   Om du vill ta bort en lokal grupp anropar du `DirectoryManagerServiceService`-objektets `deleteLocalGroup`-metod och skickar gruppens identifierare.
 
 **Se även**
 
 [Sammanfattning av steg](users.md#summary-of-steps)
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
 ## Hantera roller och behörigheter {#managing-roles-and-permissions}
 
 I det här avsnittet beskrivs hur du kan använda Java (Authorization Manager Service API) för att programmässigt tilldela, ta bort och fastställa roller och behörigheter.
 
-I AEM Forms är en *roll* en grupp behörigheter för åtkomst till en eller flera resurser på systemnivå. Dessa behörigheter skapas med hjälp av användarhantering och används av tjänstkomponenterna. En administratör kan t.ex. tilldela rollen &quot;Principuppsättningens författare&quot; till en grupp användare. Rights Management skulle sedan ge användarna i den gruppen med den rollen möjlighet att skapa principuppsättningar via administrationskonsolen.
+I AEM Forms är en *roll* en grupp behörigheter för åtkomst till en eller flera resurser på systemnivå. Dessa behörigheter skapas med hjälp av användarhantering och används av tjänstkomponenterna. En administratör kan t.ex. tilldela rollen &quot;Principuppsättningens författare&quot; till en grupp användare. Rights Management skulle sedan tillåta användare i den gruppen med den rollen att skapa principuppsättningar via administrationskonsolen.
 
 Det finns två typer av roller: *standardroller* och *anpassade roller*. Standardroller (*systemroller)* finns redan i AEM Forms. Det antas att standardroller inte kan tas bort eller ändras av administratören och därför inte kan ändras. Anpassade roller som skapas av administratören, som senare kan ändra eller ta bort dem, kan därför ändras.
 
@@ -615,7 +622,7 @@ Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprog
 
 **Skapa en AuthorizationManagerService-klient**
 
-Innan du programmässigt kan utföra en AuthorizationManagerService-åtgärd måste du skapa en AuthorizationManagerService-klient. Med Java-API:t uppnås detta genom att ett `AuthorizationManagerServiceClient` objekt skapas.
+Innan du programmässigt kan utföra en AuthorizationManagerService-åtgärd måste du skapa en AuthorizationManagerService-klient. Med Java-API:t uppnås detta genom att ett `AuthorizationManagerServiceClient`-objekt skapas.
 
 **Anropa lämpliga roll- eller behörighetsåtgärder**
 
@@ -633,7 +640,7 @@ När du har skapat tjänstklienten kan du sedan anropa rollen eller behörighets
 
 [API-snabbstart för användarhanteraren](/help/forms/developing/user-manager-java-api-quick.md#user-manager-java-api-quick-start-soap)
 
-###  Hantera roller och behörigheter med Java API {#managing-roles-and-permissions-using-the-java-api}
+### Hantera roller och behörigheter med Java API {#managing-roles-and-permissions-using-the-java-api}
 
 Så här hanterar du roller och behörigheter med Java (Authorization Manager Service API):
 
@@ -643,18 +650,19 @@ Så här hanterar du roller och behörigheter med Java (Authorization Manager Se
 
 1. Skapa en AuthorizationManagerService-klient.
 
-   Skapa ett `AuthorizationManagerServiceClient` objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
+   Skapa ett `AuthorizationManagerServiceClient`-objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
 
 1. Anropa lämpliga roll- eller behörighetsåtgärder.
 
-   Om du vill tilldela en roll till ett huvudkonto anropar du `AuthorizationManagerServiceClient` objektets `assignRole` metod och skickar följande värden:
+   Om du vill tilldela en roll till ett huvudkonto anropar du `AuthorizationManagerServiceClient`-objektets `assignRole`-metod och skickar följande värden:
 
-   * Ett `java.lang.String` objekt som innehåller rollidentifieraren
-   * En array med `java.lang.String` objekt som innehåller huvudidentifierarna.
-   Om du vill ta bort en roll från ett huvudkonto anropar du `AuthorizationManagerServiceClient` objektets `unassignRole` metod och skickar följande värden:
+   * Ett `java.lang.String`-objekt som innehåller rollidentifieraren
+   * En array med `java.lang.String`-objekt som innehåller huvudidentifierarna.
 
-   * Ett `java.lang.String` objekt som innehåller rollidentifieraren.
-   * En array med `java.lang.String` objekt som innehåller huvudidentifierarna.
+   Om du vill ta bort en roll från ett huvudkonto anropar du `AuthorizationManagerServiceClient`-objektets `unassignRole`-metod och skickar följande värden:
+
+   * Ett `java.lang.String`-objekt som innehåller rollidentifieraren.
+   * En array med `java.lang.String`-objekt som innehåller huvudidentifierarna.
 
 
 **Se även**
@@ -681,34 +689,35 @@ Hantera roller och behörigheter med hjälp av API:t för tjänsten Authorizatio
 
 1. Skapa en AuthorizationManagerService-klient.
 
-   * Skapa ett `AuthorizationManagerServiceClient` objekt med hjälp av dess standardkonstruktor.
-   * Skapa ett `AuthorizationManagerServiceClient.Endpoint.Address` objekt med hjälp av `System.ServiceModel.EndpointAddress` konstruktorn. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/AuthorizationManagerService?blob=mtom`.). Du behöver inte använda attributet `lc_version` . Det här attributet används när du skapar en tjänstreferens.
-   * Skapa ett `System.ServiceModel.BasicHttpBinding` objekt genom att hämta värdet för `AuthorizationManagerServiceClient.Endpoint.Binding` fältet. Sänd returvärdet till `BasicHttpBinding`.
-   * Ställ in `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa ett `AuthorizationManagerServiceClient`-objekt med hjälp av dess standardkonstruktor.
+   * Skapa ett `AuthorizationManagerServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/AuthorizationManagerService?blob=mtom`). Du behöver inte använda attributet `lc_version`. Det här attributet används när du skapar en tjänstreferens.
+   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `AuthorizationManagerServiceClient.Endpoint.Binding`. Sänd returvärdet till `BasicHttpBinding`.
+   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM-formulär till fältet `AuthorizationManagerServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela användarnamnet för AEM formulär till fältet `AuthorizationManagerServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `AuthorizationManagerServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
 1. Anropa lämpliga roll- eller behörighetsåtgärder.
 
-   Om du vill tilldela en roll till ett huvudkonto anropar du `AuthorizationManagerServiceClient` objektets `assignRole` metod och skickar följande värden:
+   Om du vill tilldela en roll till ett huvudkonto anropar du `AuthorizationManagerServiceClient`-objektets `assignRole`-metod och skickar följande värden:
 
-   * Ett `string` objekt som innehåller rollidentifieraren
-   * Ett `MyArrayOf_xsd_string` objekt som innehåller huvudidentifierarna.
-   Om du vill ta bort en roll från ett huvudkonto anropar du `AuthorizationManagerServiceService` objektets `unassignRole` metod och skickar följande värden:
+   * Ett `string`-objekt som innehåller rollidentifieraren
+   * Ett `MyArrayOf_xsd_string`-objekt som innehåller huvudidentifierarna.
 
-   * Ett `string` objekt som innehåller rollidentifieraren.
-   * En array med `string` objekt som innehåller huvudidentifierarna.
+   Om du vill ta bort en roll från ett huvudkonto anropar du `AuthorizationManagerServiceService`-objektets `unassignRole`-metod och skickar följande värden:
+
+   * Ett `string`-objekt som innehåller rollidentifieraren.
+   * En array med `string`-objekt som innehåller huvudidentifierarna.
 
 
 **Se även**
 
 [Sammanfattning av steg](users.md#summary-of-steps)
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
 ## Autentiserar användare {#authenticating-users}
 
@@ -716,7 +725,7 @@ I det här avsnittet beskrivs hur du kan använda tjänstAPI:t för Autentiserin
 
 Användarautentisering kan krävas för interaktion med en företagsdatabas eller andra företagsdatabaser där säkra data lagras.
 
-Tänk dig till exempel ett scenario där en användare anger ett användarnamn och lösenord på en webbsida och skickar värdena till en J2EE-programserver som är värd för Forms. Ett anpassat Forms-program kan autentisera användaren med tjänsten Authentication Manager.
+Tänk dig till exempel ett scenario där en användare anger ett användarnamn och lösenord på en webbsida och skickar värdena till en J2EE-programserver som är värd för Forms. Ett anpassat Forms-program kan autentisera användaren med tjänsten Autentiseringshanteraren.
 
 Om autentiseringen lyckas får programmet åtkomst till en skyddad företagsdatabas. Annars skickas ett meddelande till användaren om att användaren inte är en behörig användare.
 
@@ -736,7 +745,7 @@ I följande tabell beskrivs stegen i det här diagrammet
  <tbody>
   <tr>
    <td><p>1</p></td>
-   <td><p>Användaren kommer åt en webbplats och anger användarnamn och lösenord. Denna information skickas till en J2EE-programserver som är värd för AEM Forms.</p></td>
+   <td><p>Användaren kommer åt en webbplats och anger användarnamn och lösenord. Den här informationen skickas till en J2EE-programserver som är värd för AEM Forms.</p></td>
   </tr>
   <tr>
    <td><p>2</p></td>
@@ -768,7 +777,7 @@ Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprog
 
 **Skapa en AuthenticationManagerService-klient**
 
-Innan du kan autentisera en användare programmatiskt måste du skapa en AuthenticationManagerService-klient. Skapa ett `AuthenticationManagerServiceClient` objekt när du använder Java API.
+Innan du kan autentisera en användare programmatiskt måste du skapa en AuthenticationManagerService-klient. Skapa ett `AuthenticationManagerServiceClient`-objekt när du använder Java API.
 
 **Anropa autentiseringsåtgärden**
 
@@ -776,7 +785,7 @@ När du har skapat tjänstklienten kan du sedan anropa autentiseringsåtgärden.
 
 **Hämta autentiseringskontexten**
 
-När du har autentiserat användaren kan du skapa en kontext baserad på den autentiserade användaren. Sedan kan du använda innehållet för att anropa en annan AEM Forms-tjänst. Du kan till exempel använda kontexten för att skapa ett `EncryptionServiceClient` och kryptera ett PDF-dokument med ett lösenord. Kontrollera att den användare som autentiserades har rollen som krävs för `Services User` att anropa en AEM Forms-tjänst.
+När du har autentiserat användaren kan du skapa en kontext baserad på den autentiserade användaren. Sedan kan du använda innehållet för att anropa andra AEM Forms-tjänster. Du kan till exempel använda kontexten för att skapa ett `EncryptionServiceClient`-dokument och kryptera ett PDF-dokument med ett lösenord. Kontrollera att den användare som autentiserades har rollen `Services User` som krävs för att anropa en AEM Forms-tjänst.
 
 **Se även**
 
@@ -798,21 +807,22 @@ Autentisera en användare med tjänstens API (Java) för Autentiseringshanterare
 
 1. Skapa en AuthenticationManagerServices-klient.
 
-   Skapa ett `AuthenticationManagerServiceClient` objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
+   Skapa ett `AuthenticationManagerServiceClient`-objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
 
 1. Anropa autentiseringsåtgärden.
 
-   Anropa `AuthenticationManagerServiceClient` objektets `authenticate` metod och skicka följande värden:
+   Anropa `AuthenticationManagerServiceClient`-objektets `authenticate`-metod och skicka följande värden:
 
-   * Ett `java.lang.String` objekt som innehåller användarens namn.
-   * En bytearray (ett `byte[]` objekt) som innehåller användarens lösenord. Du kan hämta `byte[]` objektet genom att anropa `java.lang.String` objektets `getBytes` metod.
-   Metoden authenticate returnerar ett `AuthResult` objekt som innehåller information om den autentiserade användaren.
+   * Ett `java.lang.String`-objekt som innehåller användarens namn.
+   * En bytearray (ett `byte[]`-objekt) som innehåller användarens lösenord. Du kan hämta `byte[]`-objektet genom att anropa `java.lang.String`-objektets `getBytes`-metod.
+
+   Metoden authenticate returnerar ett `AuthResult`-objekt som innehåller information om den autentiserade användaren.
 
 1. Hämta autentiseringskontexten.
 
-   Anropa `ServiceClientFactory` objektets `getContext` metod som returnerar ett `Context` objekt.
+   Anropa `ServiceClientFactory`-objektets `getContext`-metod, som returnerar ett `Context`-objekt.
 
-   Anropa sedan `Context` objektets `initPrincipal` metod och skicka `AuthResult`.
+   Anropa sedan `Context`-objektets `initPrincipal`-metod och skicka `AuthResult`.
 
 ### Autentisera en användare med webbtjänstens API {#authenticate-a-user-using-the-web-service-api}
 
@@ -820,30 +830,30 @@ Autentisera en användare med Authentication Manager Service API (webbtjänst):
 
 1. Inkludera projektfiler.
 
-   * Skapa en Microsoft .NET-klientsammansättning som använder WSDL för Autentiseringshanteraren. (Se [Anropa AEM-formulär med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).)
-   * Referera till Microsoft .NET-klientsammansättningen. (Se&quot;Referera till .NET-klientsammansättningen&quot; i [Anropa AEM-formulär med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).)
+   * Skapa en Microsoft .NET-klientsammansättning som använder WSDL för Autentiseringshanteraren. (Se [Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).)
+   * Referera till Microsoft .NET-klientsammansättningen. (Se &quot;Referera till .NET-klientsammansättningen&quot; i [Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).)
 
 1. Skapa en AuthenticationManagerService-klient.
 
-   Skapa ett `AuthenticationManagerServiceService` objekt med hjälp av proxyklassens konstruktor.
+   Skapa ett `AuthenticationManagerServiceService`-objekt med hjälp av proxyklassens konstruktor.
 
 1. Anropa autentiseringsåtgärden.
 
-   Anropa `AuthenticationManagerServiceClient` objektets `authenticate` metod och skicka följande värden:
+   Anropa `AuthenticationManagerServiceClient`-objektets `authenticate`-metod och skicka följande värden:
 
-   * Ett `string` objekt som innehåller användarens namn
-   * En bytearray (ett `byte[]` objekt) som innehåller användarens lösenord. Du kan hämta objektet `byte[]` genom att konvertera ett `string` objekt som innehåller lösenordet till en `byte[]` array med hjälp av logiken som visas i exemplet nedan.
-   * Det returnerade värdet blir ett `AuthResult` objekt som kan användas för att hämta information om användaren. I exemplet nedan hämtas användarens information genom att först hämta `AuthResult` objektets `authenticatedUser` fält och därefter hämta det resulterande `User` objektets `canonicalName` - och `domainName` -fält.
+   * Ett `string`-objekt som innehåller användarens namn
+   * En bytearray (ett `byte[]`-objekt) som innehåller användarens lösenord. Du kan hämta `byte[]`-objektet genom att konvertera ett `string`-objekt som innehåller lösenordet till en `byte[]`-array med hjälp av logiken som visas i exemplet nedan.
+   * Det returnerade värdet blir ett `AuthResult`-objekt som kan användas för att hämta information om användaren. I exemplet nedan hämtas användarens information genom att först hämta `AuthResult`-objektets `authenticatedUser`-fält och därefter hämta det resulterande `User`-objektets `canonicalName`- och `domainName`-fält.
 
 **Se även**
 
-[Anropa AEM-formulär med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[Anropa AEM-formulär med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## Synkronisera användare programmatiskt {#programmatically-synchronizing-users}
+## Synkronisera användare automatiskt {#programmatically-synchronizing-users}
 
-Du kan synkronisera användare programmatiskt med API:t för användarhantering. När du synkroniserar användare uppdaterar du AEM-formulär med användardata som finns i din användardatabas. Anta till exempel att du lägger till nya användare i din användardatabas. När du har utfört en synkroniseringsåtgärd blir de nya användarna AEM-formuläranvändare. Även användare som inte längre finns i din användardatabas tas bort från AEM Forms.
+Du kan synkronisera användare programmatiskt med API:t för användarhantering. När du synkroniserar användare uppdaterar du AEM Forms med användardata som finns i din användardatabas. Anta till exempel att du lägger till nya användare i din användardatabas. När du har utfört en synkroniseringsåtgärd blir de nya användarna AEM formuläranvändare. Även användare som inte längre finns i din användardatabas tas bort från AEM Forms.
 
 I följande diagram visas AEM Forms-synkronisering med en användardatabas.
 
@@ -868,7 +878,7 @@ I följande tabell beskrivs stegen i det här diagrammet
    <td><p>AEM Forms utför en synkroniseringsåtgärd.</p></td>
   </tr>
   <tr>
-   <td><p>3</p></td>
+   <td><p>1</p></td>
    <td><p>Användarinformationen uppdateras.</p></td>
   </tr>
   <tr>
@@ -894,11 +904,11 @@ Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprog
 
 **Skapa en UserManagerUtilServiceClientclient**
 
-Innan du kan synkronisera användare programmatiskt måste du skapa ett `UserManagerUtilServiceClient` objekt.
+Innan du kan synkronisera användare programmatiskt måste du skapa ett `UserManagerUtilServiceClient`-objekt.
 
 **Ange företagsdomänen**
 
-Innan du utför en synkroniseringsåtgärd med API:t för användarhantering anger du den företagsdomän som användarna tillhör. Du kan ange en eller flera företagsdomäner. Innan du programmässigt kan utföra en synkroniseringsåtgärd måste du konfigurera en företagsdomän med hjälp av administrationskonsolen. (Se [Administrationshjälp](https://www.adobe.com/go/learn_aemforms_admin_63).)
+Innan du utför en synkroniseringsåtgärd med API:t för användarhantering anger du den företagsdomän som användarna tillhör. Du kan ange en eller flera företagsdomäner. Innan du programmässigt kan utföra en synkroniseringsåtgärd måste du konfigurera en företagsdomän med hjälp av administrationskonsolen. (Se [Hjälp för administration](https://www.adobe.com/go/learn_aemforms_admin_63).)
 
 **Anropa synkroniseringsåtgärden**
 
@@ -918,7 +928,7 @@ När du har utfört en synkroniseringsåtgärd programmatiskt kan du avgöra om 
 
 [Kryptera PDF-dokument med ett lösenord](/help/forms/developing/encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-a-password)
 
-###  Synkronisera användare programmatiskt med Java API {#programmatically-synchronizing-users-using-the-java-api}
+### Synkronisera användare programmatiskt med Java API {#programmatically-synchronizing-users-using-the-java-api}
 
 Synkronisera användare med hjälp av API:t för användarhantering (Java):
 
@@ -928,19 +938,19 @@ Synkronisera användare med hjälp av API:t för användarhantering (Java):
 
 1. Skapa en UserManagerUtilServiceClient-klient.
 
-   Skapa ett `UserManagerUtilServiceClient` objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
+   Skapa ett `UserManagerUtilServiceClient`-objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
 
 1. Ange företagsdomänen.
 
-   * Starta användarsynkroniseringen genom att anropa `UserManagerUtilServiceClient` objektets `scheduleSynchronization` metod.
-   * Skapa en `java.util.Set` instans med hjälp av en `HashSet` konstruktor. Se till att du anger `String` som datatyp. Den här `Java.util.Set` instansen lagrar de domännamn som synkroniseringsåtgärden gäller för.
-   * För varje domännamn som ska läggas till anropar du `java.util.Set` objektets add-metod och skickar domännamnet.
+   * Starta användarsynkroniseringsåtgärden genom att anropa `UserManagerUtilServiceClient`-objektets `scheduleSynchronization`-metod.
+   * Skapa en `java.util.Set`-instans med en `HashSet`-konstruktor. Se till att du anger `String` som datatyp. Den här `Java.util.Set`-instansen lagrar de domännamn som synkroniseringsåtgärden gäller för.
+   * För varje domännamn som ska läggas till anropar du `java.util.Set`-objektets add-metod och skickar domännamnet.
 
 1. Anropa synkroniseringsåtgärden.
 
-   Anropa `ServiceClientFactory` objektets `getContext` metod som returnerar ett `Context` objekt.
+   Anropa `ServiceClientFactory`-objektets `getContext`-metod, som returnerar ett `Context`-objekt.
 
-   Anropa sedan `Context` objektets `initPrincipal` metod och skicka `AuthResult`.
+   Anropa sedan `Context`-objektets `initPrincipal`-metod och skicka `AuthResult`.
 
 **Se även**
 
