@@ -1,8 +1,8 @@
 ---
-title: Introduktion till AEM Platform
-seo-title: Introduktion till AEM Platform
-description: I den här artikeln finns en allmän översikt över AEM-plattformen och dess viktigaste komponenter.
-seo-description: I den här artikeln finns en allmän översikt över AEM-plattformen och dess viktigaste komponenter.
+title: Introduktion till AEM
+seo-title: Introduktion till AEM
+description: I den här artikeln finns en allmän översikt över den AEM plattformen och dess viktigaste komponenter.
+seo-description: I den här artikeln finns en allmän översikt över den AEM plattformen och dess viktigaste komponenter.
 uuid: 214d4c49-1f5c-432c-a2c0-c1fbdceee716
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,15 +12,18 @@ discoiquuid: fccf9a0f-ebab-45ab-8460-84c86b3c4192
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/introduction-to-oak
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '789'
+ht-degree: 0%
 
 ---
 
 
-# Introduktion till AEM Platform{#introduction-to-the-aem-platform}
+# Introduktion till AEM{#introduction-to-the-aem-platform}
 
-AEM-plattformen i AEM 6 bygger på Apache Jackrabbit Oak.
+Den AEM plattformen i AEM 6 bygger på Apache Jackrabbit Oak.
 
-Apache Jackrabbit Oak är ett försök att implementera en skalbar och prestandabaserad hierarkisk innehållsdatabas som kan användas som grund för moderna webbplatser i världsklass och andra krävande innehållsprogram.
+Apache Jackrabbit Oak satsar på att implementera en skalbar och prestandabaserad hierarkisk innehållsdatabas som kan användas som grund för moderna webbplatser i världsklass och andra krävande innehållsprogram.
 
 Det är efterföljaren till Jackrabbit 2 och används av AEM 6 som standardbackend för sin innehållsdatabas, CRX.
 
@@ -33,7 +36,7 @@ Oak implementerar specifikationen [JSR-283](https://www.day.com/day/en/products/
 * Bättre prestanda
 * Stöd för många underordnade noder och åtkomstkontrollsnivåer
 
-## Arkitekturbegrepp {#architecture-concept}
+## Arkitekturskoncept {#architecture-concept}
 
 ![chlimage_1-84](assets/chlimage_1-84.png)
 
@@ -60,7 +63,7 @@ Det främsta målet för JCR-rapporterna är att omvandla JCR-semantik till trä
 * Implementera JCR-API
 * Innehåller implementeringskopplingar som implementerar JCR-begränsningar
 
-Dessutom är nu icke-Java-implementeringar möjliga och en del av JCR-konceptet för eken.
+Dessutom är nu icke-Java-implementeringar möjliga och en del av JCR-konceptet för Oak.
 
 ## Lagringsöversikt {#storage-overview}
 
@@ -114,13 +117,13 @@ MongoDB-lagring lägger till data i ett dokument vid varje ändring. Data tas do
 
 Data om aktiva och inaktiva klusternoder sparas i databasen för att underlätta klusteråtgärder.
 
-En typisk AEM-klusterkonfiguration med MongoDB-lagring:
+En typisk konfiguration AEM kluster med MongoDB-lagring:
 
 ![chlimage_1-85](assets/chlimage_1-85.png)
 
 ## Vad är annorlunda än Jackrabbit 2? {#what-is-different-from-jackrabbit}
 
-Eftersom Oak är utformad för att vara bakåtkompatibel med JCR 1.0-standarden kommer det att ske nästan inga förändringar på användarnivå. Det finns dock vissa märkbara skillnader som du måste ta hänsyn till när du konfigurerar en Oak-baserad AEM-installation:
+Eftersom Oak är utformad för att vara bakåtkompatibel med JCR 1.0-standarden kommer det att ske nästan inga förändringar på användarnivå. Det finns dock vissa märkbara skillnader som du måste ta hänsyn till när du konfigurerar en Oak-baserad AEM:
 
 * Oak skapar inte index automatiskt. Därför måste anpassade index skapas när det behövs.
 * Till skillnad från Jackrabbit 2, där sessionerna alltid återspeglar databasens senaste status, visar Oak en session en stabil vy av databasen från den tidpunkt då sessionen skapades. Detta beror på MVCC-modellen som Oak baseras på.
@@ -128,7 +131,7 @@ Eftersom Oak är utformad för att vara bakåtkompatibel med JCR 1.0-standarden 
 
 ## Annan plattformsrelaterad dokumentation {#other-platform-related-documentation}
 
-Mer information om AEM-plattformen finns i följande artiklar:
+Mer information om den AEM plattformen finns i följande artiklar:
 
 * [Konfigurera nodarkiv och datalager i AEM 6](/help/sites-deploying/data-store-config.md)
 * [Fråga och indexering](/help/sites-deploying/queries-and-indexing.md)
