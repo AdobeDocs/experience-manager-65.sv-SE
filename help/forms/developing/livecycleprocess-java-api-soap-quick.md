@@ -18,9 +18,9 @@ ht-degree: 0%
 ---
 
 
-# LiveCycleProcess Java API (SOAP) - snabbstart {#livecycleprocess-java-api-soap-quick-start}
+# Snabbstart för LiveCycleProcess Java API (SOAP) {#livecycleprocess-java-api-soap-quick-start}
 
-Java API(SOAP) Quick Start är tillgängligt för processer. En *processinstans* är en förekomst av en specifik process som startades av en anropsmetod som anrops-API:t eller från Workspace.
+Java API(SOAP) Quick Start är tillgängligt för processer. En *processinstans* är en förekomst av en specifik process som startades av en anropsmetod som anrops-API:t eller från arbetsytan.
 
 [Snabbstart (SOAP-läge): Söka efter processinstanser med Java API](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-searching-for-process-instances-using-the-java-api)
 
@@ -34,15 +34,15 @@ Java API(SOAP) Quick Start är tillgängligt för processer. En *processinstans*
 
 [Snabbstart (SOAP-läge): Hämta status för ett jobb med Java API](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-retrieving-the-status-of-a-job-using-the-java-api)
 
-AEM Forms-åtgärder kan utföras med AEM Forms-API:t med stark typning och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
->Snabbstart i Programmering med AEM Forms baseras på Forms om du använder ett annat operativsystem, till exempel Unix, och ersätter Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. (Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
+>Snabbstarter som finns i Programmering med AEM Forms är baserade på Forms om du använder ett annat operativsystem, till exempel Unix, och ersätter Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. (Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
 
 ## Snabbstart (SOAP-läge): Söka efter processinstanser med Java API {#quick-start-soap-mode-searching-for-process-instances-using-the-java-api}
 
-I följande Java-kodexempel söks det efter processinstanser som är baserade på *processen MortgageLoan - Prebuilt* .
+Följande Java-kodexempel söker efter processinstanser som är baserade på processen *MortgageLoan - Fördefinierad*.
 
 ```java
  /*
@@ -250,7 +250,7 @@ I följande Java-kodexempel pausas en processinstans. Om du vill göra uppehåll
  
 ```
 
-## Snabbstart (SOAP-läge): Starta inaktiverade processinstanser med Java API {#quick-start-soap-mode-starting-suspended-process-instances-using-the-java-api}
+## Snabbstart (SOAP-läge): Startar inaktiverade processinstanser med Java API {#quick-start-soap-mode-starting-suspended-process-instances-using-the-java-api}
 
 I följande Java-kodexempel startas en instans av en pausad process.
 
@@ -431,7 +431,7 @@ I följande Java-kodexempel avslutas en processinstans med identifierarvärdet 7
 
 ## Snabbstart (SOAP-läge): Rensa processdata med Java API {#quick-start-soap-mode-purging-process-data-using-the-java-api}
 
-Följande Java-kod rensar data från en process som heter *SecureDocument*. Ett filter används som anger att data ska rensas för de processinstanser där processvariabeln *inValue* är större än 200.
+Följande Java-kod rensar data från en process med namnet *SecureDocument*. Ett filter används som anger att data ska rensas för de processinstanser där processvariabeln *inValue* är större än 200.
 
 ```java
  /*
