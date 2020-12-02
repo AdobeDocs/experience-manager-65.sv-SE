@@ -1,6 +1,6 @@
 ---
 title: Hämta resurser
-description: Lär dig hur du hämtar resurser [!DNL Adobe Experience Manager] från och aktiverar eller inaktiverar hämtningsfunktionen.
+description: Lär dig hur du hämtar resurser från [!DNL Adobe Experience Manager] och aktiverar eller inaktiverar hämtningsfunktionen.
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
@@ -11,23 +11,23 @@ ht-degree: 0%
 ---
 
 
-# Download assets from [!DNL Adobe Experience Manager] {#download-assets-from-aem}
+# Hämta resurser från [!DNL Adobe Experience Manager] {#download-assets-from-aem}
 
 Du kan hämta resurser, inklusive statiska och dynamiska återgivningar. Du kan också skicka e-postmeddelanden med länkar till resurser direkt från [!DNL Adobe Experience Manager Assets]. Hämtade resurser paketeras i en ZIP-fil. Den komprimerade ZIP-filen har en maximal filstorlek på 1 GB för exportjobbet. Högst 500 resurser per exportjobb tillåts.
 
 >[!NOTE]
 >
->Mottagare av e-postmeddelanden måste vara medlemmar i gruppen för att få åtkomst till länken för ZIP-hämtning i e-postmeddelandet. `dam-users` För att kunna hämta resurserna måste medlemmarna ha behörighet att starta arbetsflöden som utlöser hämtning av resurser.
+>Mottagare av e-postmeddelanden måste vara medlemmar i gruppen `dam-users` för att få åtkomst till länken för ZIP-hämtning i e-postmeddelandet. För att kunna hämta resurserna måste medlemmarna ha behörighet att starta arbetsflöden som utlöser hämtning av resurser.
 
 Det går inte att hämta resurstyperna Bilduppsättningar, Snurra uppsättningar, Blandade medieuppsättningar och Carousel-uppsättningar.
 
 Så här hämtar du resurser:
 
-1. Klicka på logotypen i det övre vänstra hörnet. Klicka på i den vänstra listen **[!UICONTROL Navigation]**.
-1. On the [!UICONTROL Navigation] page, click **[!UICONTROL Assets]** > **[!UICONTROL Files.]**
+1. Klicka på logotypen i det övre vänstra hörnet. Klicka på **[!UICONTROL Navigation]** i den vänstra listen.
+1. På sidan [!UICONTROL Navigation] klickar du på **[!UICONTROL Assets]** > **[!UICONTROL Files.]**
 1. Navigera till en mapp som innehåller resurser som du vill hämta.
 1. Markera mappen eller välj en eller flera resurser i mappen.
-1. On the toolbar, click **[!UICONTROL Download.]**
+1. Klicka på **[!UICONTROL Download.]** i verktygsfältet
 
    ![Tillgängliga alternativ vid hämtning av resurser från Experience Manager Assets](/help/assets/assets/asset-download1.png)
 
@@ -42,39 +42,39 @@ Så här hämtar du resurser:
    | **[!UICONTROL Asset(s)]** | Välj det här alternativet om du vill hämta resursen i dess ursprungliga form utan några återgivningar.<br>Alternativet Delresurser är tillgängligt om den ursprungliga tillgången har delresurser. |
    | **[!UICONTROL Rendition(s)]** | En återgivning är den binära representationen av en resurs. Resurser har en primär representation - den som utgörs av den överförda filen. De kan ha valfritt antal representationer. <br> Med det här alternativet kan du välja de återgivningar du vill hämta. Vilka återgivningar som är tillgängliga beror på vilken resurs du väljer. Alternativet är tillgängligt om resursen har några återgivningar. |
    | **[!UICONTROL Smart Crops]** | Välj det här alternativet om du vill hämta alla smarta beskärningsåtergivningar för den valda resursen från AEM. En ZIP-fil med renderingarna Smart Crop skapas och hämtas till din lokala dator. |
-   | **[!UICONTROL Dynamic Rendition(s)]** | Välj det här alternativet om du vill generera en serie alternativa återgivningar i realtid. När du väljer det här alternativet väljer du också de återgivningar som du vill skapa dynamiskt genom att välja i listan [Bildförinställning](image-presets.md) . <br>Du kan dessutom välja storlek och måttenhet, format, färgrymd, upplösning och alla valfria bildmodifierare, t.ex. invertering av bilden. Alternativet är bara tillgängligt om du har [!DNL Dynamic Media] aktiverat. |
+   | **[!UICONTROL Dynamic Rendition(s)]** | Välj det här alternativet om du vill generera en serie alternativa återgivningar i realtid. När du väljer det här alternativet väljer du också de återgivningar som du vill skapa dynamiskt genom att välja i listan [Bildförinställning](image-presets.md). <br>Du kan dessutom välja storlek och måttenhet, format, färgrymd, upplösning och alla valfria bildmodifierare, t.ex. invertering av bilden. Alternativet är bara tillgängligt om du har [!DNL Dynamic Media] aktiverat. |
 
-1. In the dialog box, click **[!UICONTROL Download.]**.
+1. Klicka på **[!UICONTROL Download.]** i dialogrutan.
 
 När du väljer en mapp att hämta hämtas hela resurshierarkin under mappen. Om du vill inkludera varje resurs som du hämtar (inklusive resurser i underordnade mappar som är kapslade under den överordnade mappen) i en enskild mapp väljer du **[!UICONTROL Create separate folder for each asset]**.
 
 ## Aktivera resurshämtningsserver {#enable-asset-download-servlet}
 
-Med standardservleten i [!DNL Experience Manager] kan autentiserade användare godtyckligt skicka stora, samtidiga hämtningsbegäranden för att skapa ZIP-filer med resurser som är synliga för dem och som kan överbelasta servern och nätverket. För att minska de potentiella DoS-riskerna som orsakas av den här funktionen är `AssetDownloadServlet` OSGi-komponenten inaktiverad som standard för publiceringsinstanser.
+Med standardservleten i [!DNL Experience Manager] kan autentiserade användare utfärda godtyckligt stora, samtidiga hämtningsbegäranden för att skapa ZIP-filer med resurser som är synliga för dem och som kan överbelasta servern och nätverket. För att minska de potentiella DoS-riskerna som orsakas av den här funktionen är `AssetDownloadServlet` OSGi-komponenten inaktiverad som standard för publiceringsinstanser.
 
 Om du vill tillåta hämtning av resurser från DAM, till exempel när du använder Assets Share Commons eller någon annan portalliknande implementering, aktiverar du servleten manuellt via en OSGi-konfiguration. Adobe rekommenderar att du anger en så låg hämtningsstorlek som möjligt utan att det påverkar den dagliga hämtningen. Ett högt värde kan påverka prestandan.
 
-1. Skapa en mapp med en namnkonvention som anger publiceringsmiljön som mål (`config.publish`): `/apps/<your-app-name>/config.publish`. Mer information om hur du definierar konfigurationsegenskaper för ett körningsläge finns i [Körningslägen](/help/sites-deploying/configure-runmodes.md#defining-configuration-properties-for-a-run-mode).
-1. Skapa en fil av typen `nt:file` med namnet i konfigurationsmappen `com.day.cq.dam.core.impl.servlet.AssetDownloadServlet.config`.
-1. Fyll `com.day.cq.dam.core.impl.servlet.AssetDownloadServlet.config` med följande: Anger en maximal storlek (i byte) för hämtningen som värdet för `asset.download.prezip.maxcontentsize`. Nedanstående exempel konfigurerar den maximala storleken för ZIP-nedladdningen till högst 100 kB.
+1. Skapa en mapp med en namnkonvention som anger publiceringskörningsläget som mål (`config.publish`): `/apps/<your-app-name>/config.publish`. Mer information om hur du definierar konfigurationsegenskaper för ett körningsläge finns i [Körningslägen](/help/sites-deploying/configure-runmodes.md#defining-configuration-properties-for-a-run-mode).
+1. Skapa en fil av typen `nt:file` med namnet `com.day.cq.dam.core.impl.servlet.AssetDownloadServlet.config` i konfigurationsmappen.
+1. Fyll i `com.day.cq.dam.core.impl.servlet.AssetDownloadServlet.config` med följande: Anger en maximal storlek (i byte) för hämtningen som `asset.download.prezip.maxcontentsize`. Nedanstående exempel konfigurerar den maximala storleken för ZIP-nedladdningen till högst 100 kB.
 
    ```conf
    enabled=B"true"
    asset.download.prezip.maxcontentsize=I"102400"
    ```
 
-## Inaktivera resurshämtningsserver {#disable-asset-download-servlet}
+## Inaktivera resurshämtningsservlet {#disable-asset-download-servlet}
 
-Du `Asset Download Servlet` kan inaktivera funktionen på en [!DNL Experience Manager] publiceringsinstans genom att uppdatera dispatcherns konfiguration för att blockera eventuella hämtningsbegäranden. Servern kan även inaktiveras manuellt via OSGi-konsolen direkt.
+`Asset Download Servlet` kan inaktiveras för en [!DNL Experience Manager]-publiceringsinstans genom att uppdatera dispatcherkonfigurationen för att blockera eventuella hämtningsbegäranden. Servern kan även inaktiveras manuellt via OSGi-konsolen direkt.
 
-1. Om du vill blockera resurshämtningsbegäranden via en dispatcherkonfiguration redigerar du `dispatcher.any` konfigurationen och lägger till en regel i [filteravsnittet](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#defining-a-filter). `/0100 { /type "deny" /url "*.assetdownload.zip/assets.zip*" }`
+1. Om du vill blockera resurshämtningsbegäranden via en dispatcherkonfiguration redigerar du `dispatcher.any`-konfigurationen och lägger till en regel i [filteravsnittet](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#defining-a-filter). `/0100 { /type "deny" /url "*.assetdownload.zip/assets.zip*" }`
 
-1. Om du vill inaktivera OSGi-komponenten på en Publish-instans öppnar du OSGi-konsolen på `http://[aem_server]:[port]/system/console/components`. Leta reda på `com.day.cq.dam.core.impl.servlet.AssetDownloadServlet` och klicka **[!UICONTROL Disable]**.
+1. Om du vill inaktivera OSGi-komponenten på en Publish-instans öppnar du OSGi-konsolen på `http://[aem_server]:[port]/system/console/components`. Leta reda på `com.day.cq.dam.core.impl.servlet.AssetDownloadServlet` och klicka på **[!UICONTROL Disable]**.
 
 >[!MORELIKETHIS]
 >
 >* [Hämta resurser med varumärkesportalen](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/download/brand-portal-download-assets.html)
 >* [Hämta DRM-skyddade resurser](drm.md).
 >* [Hämta resurser med datorprogrammet Experience Manager på Win- eller Mac-datorer](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#download-assets).
->* [Hämta resurser med Adobe Assets Link inifrån de Adobe Creative Cloud-program](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html)som stöds.
+>* [Hämta resurser med Adobe Assets Link inifrån de Adobe Creative Cloud-program](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html) som stöds.
 
