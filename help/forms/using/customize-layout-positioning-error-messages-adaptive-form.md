@@ -11,11 +11,14 @@ discoiquuid: 136ac7e3-9d1f-4d58-bd4f-9dbe09eeafee
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+workflow-type: tm+mt
+source-wordcount: '554'
+ht-degree: 0%
 
 ---
 
 
-# Anpassa layout och placering av felmeddelanden i ett anpassat formulär{#customize-layout-and-positioning-of-error-messages-of-an-adaptive-form}
+# Anpassa layout och placering av felmeddelanden i ett adaptivt formulär{#customize-layout-and-positioning-of-error-messages-of-an-adaptive-form}
 
 Du kan anpassa layout och placering av felmeddelanden i ett anpassat formulär. Du kan utföra följande anpassningar:
 
@@ -24,7 +27,7 @@ Du kan anpassa layout och placering av felmeddelanden i ett anpassat formulär. 
 * Anpassa innehållet i indikatorn för dynamisk hjälp
 * Anpassa placeringen av fältkomponenterna (bildtext, widget, kort beskrivning, lång beskrivning och hjälpindikatorkomponenter) utan att göra några ändringar i motsvarande CSS-egenskaper
 
-## Anpassa fältlayout {#customize-layout-of-fields}
+## Anpassa layout för fält {#customize-layout-of-fields}
 
 Du kan anpassa layouten för ett enskilt fält eller för alla fält för att ändra positionen för bildtexter och felmeddelanden. Utför följande steg för att tillämpa en anpassad layout på ett fält:
 
@@ -32,15 +35,15 @@ Du kan anpassa layouten för ett enskilt fält eller för alla fält för att ä
 
 Utför följande steg för att tillämpa en anpassad layout på ett enskilt fält:
 
-1. Öppna formuläret i **stilläge** . Om du vill öppna formuläret i formatläge trycker du på ![arbetsytelistrutan](assets/canvas-drop-down.png) > **Format** i sidverktygsfältet.
-1. Markera fältet under **Formulärobjekt** i sidofältet och tryck på redigeringsknappen ![Redigera-knapp](assets/edit-button.png).
+1. Öppna formuläret i **Style**-läge. Om du vill öppna formuläret i formatläge trycker du på ![canvas-drop-down](assets/canvas-drop-down.png) > **Style** i verktygsfältet för sidan.
+1. Markera fältet under **Formulärobjekt** i sidofältet och tryck på redigeringsknappen ![edit-button](assets/edit-button.png).
 1. Markera läget för det fält som du vill anpassa och ange format för det läget.
 
    ![Ange infogad formatering för ett fält](assets/edit-error-state.png)
 
-### Anpassa layouten för alla fält i ett formulär {#customize-layout-of-all-the-fields-of-a-form}
+### Anpassa layout för alla fält i ett formulär {#customize-layout-of-all-the-fields-of-a-form}
 
-Med AEM Forms kan du nu skapa ett tema och använda det i ditt formulär. Med temaredigeraren kan du ange format för formulärkomponenter på ett och samma ställe. När du skapar ett tema anger du en stil på komponentnivå. Mer information om teman finns i [Teman i AEM-formulär](../../forms/using/themes.md).
+Med AEM Forms kan du nu skapa ett tema och använda det i ditt formulär. Med temaredigeraren kan du ange format för formulärkomponenter på ett och samma ställe. När du skapar ett tema anger du en stil på komponentnivå. Mer information om teman finns i [Teman i AEM Forms](../../forms/using/themes.md).
 
 Skapa ett tema med hjälp av temaredigeraren för att anpassa layouten för alla fält i formuläret. När du har skapat ett tema utför du följande steg för att tillämpa det på ett formulär:
 
@@ -80,7 +83,7 @@ Skapa ett tema med hjälp av temaredigeraren för att anpassa layouten för alla
    ```
 
 1. Om du vill förbättra utseendet och beteendet inkluderar du klientbiblioteket som skapades i layoutfilen (errorOnRight.jsp).
-1. Öppna redigeringsdialogrutan för fältet och välj fliken **Format** . I listrutan **Konfigurera fältlayout** markerar du den nya layouten och klickar på **OK**.
+1. Öppna redigeringsdialogrutan för fältet och välj fliken **Format**. I listrutan **Konfigurera fältlayout** markerar du den nya layouten och klickar på **OK**.
 
 Paketet ErrorOnRight.zip innehåller kod som visar felmeddelanden till höger om fält.
 
