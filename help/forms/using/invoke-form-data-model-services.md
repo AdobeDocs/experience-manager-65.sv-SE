@@ -16,23 +16,23 @@ ht-degree: 0%
 ---
 
 
-# API för att anropa formulärdatamodelltjänst från anpassningsbara formulär {#api-to-invoke-form-data-model-service-from-adaptive-forms}
+# API för att anropa formulärdatamodelltjänst från adaptiva formulär {#api-to-invoke-form-data-model-service-from-adaptive-forms}
 
 ## Översikt {#overview}
 
-AEM Forms gör det möjligt för formulärförfattare att ytterligare förenkla och förbättra formulärifyllningen genom att anropa tjänster som konfigurerats i en formulärdatamodell inifrån ett adaptivt formulärfält. Om du vill anropa en datamodelltjänst kan du antingen skapa en regel i den visuella redigeraren eller ange ett JavaScript med `guidelib.dataIntegrationUtils.executeOperation` -API:t i kodredigeraren för [regelredigeraren](/help/forms/using/rule-editor.md).
+Med AEM Forms kan formulärförfattare ytterligare förenkla och förbättra ifyllandet av formulär genom att anropa tjänster som konfigurerats i en formulärdatamodell inifrån ett adaptivt formulärfält. Om du vill anropa en datamodelltjänst kan du antingen skapa en regel i den visuella redigeraren eller ange ett JavaScript med hjälp av API:t `guidelib.dataIntegrationUtils.executeOperation` i kodredigeraren för [regelredigeraren](/help/forms/using/rule-editor.md).
 
-Det här dokumentet fokuserar på att skriva ett JavaScript-skript med API:t för att anropa en tjänst. `guidelib.dataIntegrationUtils.executeOperation`
+Det här dokumentet fokuserar på att skriva ett JavaScript med hjälp av `guidelib.dataIntegrationUtils.executeOperation`-API:t för att anropa en tjänst.
 
 ## Använda API {#using-the-api}
 
-API:t anropar `guidelib.dataIntegrationUtils.executeOperation` en tjänst inifrån ett adaptivt formulärfält. API-syntaxen är följande:
+API:t `guidelib.dataIntegrationUtils.executeOperation` anropar en tjänst från ett adaptivt formulärfält. API-syntaxen är följande:
 
 ```javascript
 guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs)
 ```
 
-API:ts struktur anger `guidelib.dataIntegrationUtils.executeOperation` information om tjänståtgärden. Strukturen har följande syntax.
+Strukturen för API:t `guidelib.dataIntegrationUtils.executeOperation` anger information om tjänståtgärden. Strukturen har följande syntax.
 
 ```javascript
 var operationInfo = {
@@ -76,24 +76,24 @@ API-strukturen anger följande information om tjänståtgärden.
   </tr>
   <tr>
    <td><code>Outputs</code></td>
-   <td>Kopplar ett eller flera formulärobjekt till utdatavärden från tjänståtgärden för att fylla i formulärfält<br /> </td>
+   <td>Mappar ett eller flera formulärobjekt till utdatavärden från tjänståtgärden för att fylla i formulärfält<br /> </td>
   </tr>
   <tr>
    <td><code>success</code></td>
-   <td>Returnerar värden baserat på indataargumenten för serviceåtgärden. Det är en valfri parameter som används som en callback-funktion.<br /> </td>
+   <td>Returnerar värden baserat på indataargumenten för serviceåtgärden. Det är en valfri parameter som används som en återanropsfunktion.<br /> </td>
   </tr>
   <tr>
    <td><code>failure</code></td>
-   <td>Visar ett felmeddelande om återanropsfunktionen lyckas inte visa utdatavärden baserat på indataargumenten. Det är en valfri parameter som används som en callback-funktion.<br /> </td>
+   <td>Visar ett felmeddelande om återanropsfunktionen lyckas inte visa utdatavärden baserat på indataargumenten. Det är en valfri parameter som används som en återanropsfunktion.<br /> </td>
   </tr>
  </tbody>
 </table>
 
 ## Exempelskript för att anropa en tjänst {#sample-script-to-invoke-a-service}
 
-I följande exempelskript används API:t för att `guidelib.dataIntegrationUtils.executeOperation` anropa den `getAccountById` tjänståtgärd som konfigurerats i `employeeAccount` formulärdatamodellen.
+Följande exempelskript använder API:t `guidelib.dataIntegrationUtils.executeOperation` för att anropa den `getAccountById`-tjänståtgärd som konfigurerats i formulärdatamodellen `employeeAccount`.
 
-Åtgärden tar `getAccountById` värdet i `employeeID` formulärfältet som indata för `empId` argumentet och returnerar medarbetarens namn, kontonummer och kontosaldo för motsvarande medarbetare. Utdatavärdena fylls i i de angivna formulärfälten. Värdet i `name` argumentet fylls till exempel i `fullName` formulärelementet och värdet för `accountNumber` argument i `account` formulärelementet.
+Åtgärden `getAccountById` tar värdet i formulärfältet `employeeID` som indata för argumentet `empId` och returnerar medarbetarens namn, kontonummer och kontosaldo för motsvarande medarbetare. Utdatavärdena fylls i i de angivna formulärfälten. Värdet i argumentet `name` fylls till exempel i i formulärelementet `fullName` och värdet för argumentet `accountNumber` i formulärelementet `account`.
 
 ```javascript
 var operationInfo = {
@@ -111,25 +111,25 @@ var outputs = {
 guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs);
 ```
 
-## Använda API:t med återanropsfunktionen {#using-the-api-callback}
+## Använda API:t med callback-funktionen {#using-the-api-callback}
 
-Du kan också anropa datamodelltjänsten för formulär med API:t med en callback-funktion `guidelib.dataIntegrationUtils.executeOperation` . API-syntaxen är följande:
+Du kan också anropa datamodelltjänsten för formulär med API:t `guidelib.dataIntegrationUtils.executeOperation` med en callback-funktion. API-syntaxen är följande:
 
 ```javascript
 guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs, callbackFunction)
 ```
 
-Återanropsfunktionen kan ha `success` - och `failure` återanropsfunktioner.
+Återanropsfunktionen kan ha callback-funktionerna `success` och `failure`.
 
-### Exempelskript med återanropsfunktioner för lyckade och misslyckade åtgärder {#callback-function-success-failure}
+### Exempelskript med återanropsfunktioner för lyckade och misslyckade {#callback-function-success-failure}
 
-I följande exempelskript används API:t för att `guidelib.dataIntegrationUtils.executeOperation` anropa den `GETOrder` tjänståtgärd som konfigurerats i `employeeOrder` formulärdatamodellen.
+Följande exempelskript använder API:t `guidelib.dataIntegrationUtils.executeOperation` för att anropa den `GETOrder`-tjänståtgärd som konfigurerats i formulärdatamodellen `employeeOrder`.
 
-Åtgärden tar `GETOrder` värdet i `Order ID` formulärfältet som indata för `orderId` argumentet och returnerar orderkvantitetsvärdet i `success` callback-funktionen.  Om återanropsfunktionen inte returnerar `success` ordningsantalet, visas `failure` meddelandet av återanropsfunktionen `Error occured` .
+Åtgärden `GETOrder` tar värdet i formulärfältet `Order ID` som indata för argumentet `orderId` och returnerar orderkvantitetsvärdet i callback-funktionen `success`.  Om återanropsfunktionen `success` inte returnerar ordningsantalet visar återanropsfunktionen `failure` meddelandet `Error occured`.
 
 >[!NOTE]
 >
-> Om du använder återanropsfunktionen fylls inte utdatavärdena i de angivna formulärfälten. `success`
+> Om du använder callback-funktionen `success` fylls inte utdatavärdena i de angivna formulärfälten.
 
 ```javascript
 var operationInfo = {
