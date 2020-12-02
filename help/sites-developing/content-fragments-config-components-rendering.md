@@ -1,8 +1,8 @@
 ---
-title: Innehållsfragment Konfigurera komponenter för återgivning
-seo-title: Innehållsfragment Konfigurera komponenter för återgivning
-description: Innehållsfragment Konfigurera komponenter för återgivning
-seo-description: Innehållsfragment Konfigurera komponenter för återgivning
+title: Content Fragments – konfigurera komponenter för återgivning
+seo-title: Content Fragments – konfigurera komponenter för återgivning
+description: Content Fragments – konfigurera komponenter för återgivning
+seo-description: Content Fragments – konfigurera komponenter för återgivning
 uuid: 3f5aaf36-e6a7-4a3c-b305-e35ebcc98d0d
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
@@ -11,15 +11,18 @@ discoiquuid: 2aef9048-9d6e-4f5d-b443-5e73f8066d76
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+workflow-type: tm+mt
+source-wordcount: '467'
+ht-degree: 8%
 
 ---
 
 
-# Innehållsfragment Konfigurera komponenter för återgivning{#content-fragments-configuring-components-for-rendering}
+# Content Fragments – konfigurera komponenter för återgivning{#content-fragments-configuring-components-for-rendering}
 
-Det finns flera [avancerade tjänster](/help/sites-developing/content-fragments-config-components-rendering.md#definition-of-advanced-services-that-need-configuration) som rör återgivning av innehållsfragment. För att kunna använda dessa tjänster måste resurstyperna för sådana komponenter göra sig kända för innehållsfragmentets ramverk.
+Det finns flera [avancerade tjänster](/help/sites-developing/content-fragments-config-components-rendering.md#definition-of-advanced-services-that-need-configuration) relaterade till återgivning av innehållsfragment. För att kunna använda dessa tjänster måste resurstyperna för sådana komponenter göra sig kända för innehållsfragmentets ramverk.
 
-Detta görs genom att konfigurera [OSGi-tjänsten - komponentkonfigurationen](#osgi-service-content-fragment-component-configuration)för innehållsfragment.
+Detta görs genom att konfigurera [OSGi-tjänsten - komponentkonfigurationen för innehållsfragment](#osgi-service-content-fragment-component-configuration).
 
 >[!CAUTION]
 >
@@ -35,7 +38,7 @@ Detta görs genom att konfigurera [OSGi-tjänsten - komponentkonfigurationen](#o
 >
 >Därför rekommenderas att kärnkomponenterna används.
 
-## Definition av avancerade tjänster som behöver konfigureras {#definition-of-advanced-services-that-need-configuration}
+## Definition av avancerade tjänster som behöver konfiguration {#definition-of-advanced-services-that-need-configuration}
 
 De tjänster som kräver registrering av en komponent är:
 
@@ -50,15 +53,15 @@ Om du behöver en eller flera av de här funktionerna är det (oftast) enklare a
 
 ## OSGi-tjänst - Konfiguration av komponent för innehållsfragment {#osgi-service-content-fragment-component-configuration}
 
-Konfigurationen måste bindas till OSGi-tjänstens **Content Fragment Component Configuration**:
+Konfigurationen måste bindas till OSGi-tjänsten **Konfiguration av komponent för innehållsfragment**:
 
 `com.adobe.cq.dam.cfm.impl.component.ComponentConfigImpl`
 
 >[!NOTE]
 >
->Mer information finns i [Konfigurera OSGi](/help/sites-deploying/configuring-osgi.md) .
+>Mer information finns i [Konfigurera OSGi](/help/sites-deploying/configuring-osgi.md).
 
-Exempel:
+Till exempel:
 
 ![cfm-01](assets/cfm-01.png)
 
@@ -74,7 +77,7 @@ OSGi-konfigurationen är:
   <tr>
    <td><strong>Resurstyp</strong></td>
    <td><code>dam.cfm.component.resourceType</code></td>
-   <td>Resurstypen som ska registreras.t.ex. <br /> <p><span class="cmp-examples-demo__property-value"><code>core/wcm/components/contentfragment/v1/contentfragment</code></code></p> </td>
+   <td>Resurstypen som ska registreras. t.ex. <br /> <p><span class="cmp-examples-demo__property-value"><code>core/wcm/components/contentfragment/v1/contentfragment</code></code></p> </td>
   </tr>
   <tr>
    <td><strong>Referensegenskap</strong></td>
@@ -84,12 +87,12 @@ OSGi-konfigurationen är:
   <tr>
    <td><strong>Elementegenskap(er)</strong></td>
    <td><code>dam.cfm.component.elementsProp</code></td>
-   <td>Namnet på den egenskap som innehåller namnen på de element som ska återges.t.ex.<code>elementName</code></td>
+   <td>Namnet på den egenskap som innehåller namnen på de element som ska återges. t.ex.<code>elementName</code></td>
   </tr>
   <tr>
    <td><strong>Variationsegenskap</strong><br /> </td>
    <td><code>dam.cfm.component.variationProp</code></td>
-   <td>Namnet på den egenskap som innehåller namnet på variationen som ska återges.t.ex.<code>variationName</code></td>
+   <td>Namnet på den egenskap som innehåller namnet på variationen som ska återges. t.ex.<code>variationName</code></td>
   </tr>
  </tbody>
 </table>
@@ -104,15 +107,15 @@ För vissa funktioner (t.ex. för att endast återge ett styckeintervall) måste
   </tr>
   <tr>
    <td><code>paragraphRange</code></td>
-   <td><p>En strängegenskap som definierar det intervall med stycken som ska skrivas ut i återgivningsläget <em>för</em>ett element.</p> <p>Format:</p>
+   <td><p>En strängegenskap som definierar det styckeintervall som ska skrivas ut om det i <em>renderingsläget för ett element är </em>.</p> <p>Format:</p>
     <ul>
      <li><code>1</code> eller <code>1-3</code> eller <code>1-3;6;7-8</code> eller <code>*-3;5-*</code></li>
-     <li>utvärderas bara om <code>paragraphScope</code> värdet är inställt på <code>range</code></li>
+     <li>utvärderas bara om <code>paragraphScope</code> är inställt på <code>range</code></li>
     </ul> </td>
   </tr>
   <tr>
    <td><code>paragraphScope</code></td>
-   <td><p>En strängegenskap som definierar hur stycken ska skrivas ut i återgivningsläget <em>för</em>ett element.</p> <p>Värden:</p>
+   <td><p>En strängegenskap som definierar hur stycken ska skrivas ut i <em>renderingsläge för ett element</em>.</p> <p>Värden:</p>
     <ul>
      <li><code>all</code> : återge alla stycken</li>
      <li><code>range</code> : för att återge styckeintervallet som tillhandahålls av <code>paragraphRange</code></li>
@@ -131,7 +134,7 @@ För vissa funktioner (t.ex. för att endast återge ett styckeintervall) måste
 
 ## Exempel {#example}
 
-Se följande (i en körklar AEM-instans) som exempel:
+Se följande (i en AEM som inte finns i kartongen):
 
 ```
 /apps/core/wcm/config/com.adobe.cq.dam.cfm.impl.component.ComponentConfigImpl-core-comp-v1.config
