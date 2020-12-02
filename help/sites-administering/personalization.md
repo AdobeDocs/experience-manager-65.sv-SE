@@ -1,8 +1,8 @@
 ---
-title: Personalisering
-seo-title: Personalisering
-description: Läs mer om personalisering i AEM.
-seo-description: Läs mer om personalisering i AEM.
+title: Personanpassning
+seo-title: Personanpassning
+description: Läs om personalisering i AEM.
+seo-description: Läs om personalisering i AEM.
 uuid: 5790a3e0-f0ec-4785-b915-330a10dea30c
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,11 +11,14 @@ content-type: reference
 discoiquuid: 03ebc494-8baa-4741-b8de-dac5ace743c8
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '1684'
+ht-degree: 0%
 
 ---
 
 
-# Personalisering{#personalization}
+# Personanpassning{#personalization}
 
 ## Vad är personalisering? {#what-is-personalization}
 
@@ -106,7 +109,7 @@ Tänk på följande när du använder personalisering:
 **Regelernas exakthet**
 
 * Personalisering som uppnås genom att spåra användarens beteende, eller genom att ställa in regler som baseras på användarens profil, måste vara korrekt och logiskt.
-* Det finns inget som är mer frustrerande för användaren än att ha innehåll som tvingats på eller nekats till dem på grund av den felaktiga logiken i en regel.
+* Det finns inget mer frustrerande för användaren än att ha innehåll som tvingats på eller nekats till dem på grund av den felaktiga logiken i en regel.
 * Därför måste regler vara väl genomtänkta - med användarens krav i förgrunden. Detta kan kräva mycket arbete och ska inte underskattas. Att definiera affärsreglerna uppväger ofta den tekniska ansträngningen vid personalisering.
 
 **När ska användas**
@@ -128,25 +131,25 @@ Personalisering i sig skapar inte någon form av åtkomstkontroll. Det är helt 
 
 ## Komponenter tillgängliga för personalisering {#components-available-for-personalization}
 
-Olika komponenter ingår i AEM för personalisering. Vissa tillåter användare att logga in och redigera sina profiler, andra (som Mina gadgets) tillåter användarna att konfigurera en viss sida:
+Det finns olika komponenter med AEM för personalisering. Vissa tillåter användare att logga in och redigera sina profiler, andra (som Mina gadgets) tillåter användarna att konfigurera en viss sida:
 
 | Title in Sidekick | Syfte |
 |---|---|
 | Kontrollerat lösenordsfält | Begär lösenord och bekräftelse av lösenord. |
 | Kombinerad inloggningsregistrering | Låter användaren antingen logga in på ett befintligt konto eller registrera sig för ett nytt konto. |
-| Formuläradressfält | Ett komplext fält som tillåter inmatning av en internationell adress. |
-| Formulär börjar | Startar en formulärdefinition |
+| Forms-adressfält | Ett komplext fält som tillåter inmatning av en internationell adress. |
+| Forms Begin | Startar en formulärdefinition |
 | Forms Captcha | Ett fält som består av ett alfanumeriskt ord som uppdateras automatiskt. Captcha-komponenten skyddar webbplatser mot stötar. |
-| Kryssrutegrupp för formulär | Flera objekt ordnade i en lista och föregås av kryssrutor. Användarna kan markera flera kryssrutor. |
-| Listruta för formulär | Flera objekt är ordnade i en nedrullningsbar lista. Växeln Flervalbar anger om flera element kan väljas i listan. |
-| Formulärslut | Avslutar formulärdefinitionen. |
-| Filöverföring med formulär | An upload element that allows the user to upload a file to the server. |
-| Formulär - dolt fält | Det här fältet visas inte för användaren. Den kan användas för att överföra ett värde till klienten och tillbaka till servern. Fältet ska inte ha några begränsningar. |
-| Knappen Formulärbild | En extra Skicka-knapp för formuläret som återges som en bild. |
-| Formulärlösenordsfält | Samma som textfält, men bara en rad tillåts och textinmatningen från användaren visas inte i fältet. |
-| Formuläralternativknappar | Flera objekt ordnade i en lista föregås av en alternativknapp. Användare får bara välja en alternativknapp. |
-| Knappen Skicka formulär | En extra Skicka-knapp för formuläret där titeln visas som text på knappen. |
-| Formulärtextfält | Textfält där användarna kan ange information. |
+| Forms Checkbox Group | Flera objekt ordnade i en lista och föregås av kryssrutor. Användarna kan markera flera kryssrutor. |
+| Forms-listruta | Flera objekt är ordnade i en nedrullningsbar lista. Växeln Flervalbar anger om flera element kan väljas i listan. |
+| Forms End | Avslutar formulärdefinitionen. |
+| Forms filöverföring | An upload element that allows the user to upload a file to the server. |
+| Forms Dolt fält | Det här fältet visas inte för användaren. Den kan användas för att överföra ett värde till klienten och tillbaka till servern. Fältet ska inte ha några begränsningar. |
+| Forms Image Button | En extra Skicka-knapp för formuläret som återges som en bild. |
+| Forms-lösenordsfält | Samma som textfält, men bara en rad tillåts och textinmatningen från användaren visas inte i fältet. |
+| Forms Radio Group | Flera objekt ordnade i en lista föregås av en alternativknapp. Användare får bara välja en alternativknapp. |
+| Forms Submit Button | En extra Skicka-knapp för formuläret där titeln visas som text på knappen. |
+| Forms textfält | Textfält där användarna kan ange information. |
 | Mina gadgets | Gör att du kan ta med en av flera tillgängliga gadgets. |
 | Profil Avatar Photo | Tillåter indata från ett Avatar-foto. |
 | Detaljerat profilnamn | Ange namndetaljer, inklusive element som titel, mellannamn och suffix om det behövs. |
@@ -163,9 +166,9 @@ Olika komponenter ingår i AEM för personalisering. Vissa tillåter användare 
 
 ## Personalisering och communityinnehåll {#personalization-and-community-content}
 
-Community-funktioner som bloggar, forum och kalendrar resulterar i att användargenererat innehåll skapas, vilket ofta kallas användargenererat innehåll (UGC). När UGC anges i en publiceringsmiljö som består av flera AEM-instanser (en [publiceringsgrupp](/help/communities/topologies.md)) har ett stort problem varit hur UGC ska synkroniseras i alla instanser.
+Community-funktioner som bloggar, forum och kalendrar resulterar i att användargenererat innehåll skapas, vilket ofta kallas användargenererat innehåll (UGC). När UGC anges i en publiceringsmiljö som består av flera AEM instanser (en [publiceringsgrupp](/help/communities/topologies.md)) har ett stort problem varit hur UGC ska synkroniseras i alla instanser.
 
-Med tillägget [AEM Communities 6.1](/help/communities/overview.md) löses problemet genom att en [gemensam butik för UGC](/help/communities/working-with-srp.md)används. När det gäller personalisering omfattar Communities [Social Login](/help/communities/social-login.md) - möjlighet att ge besökare möjlighet att logga in med Facebook och Twitter.
+Med tillägget [AEM Communities 6.1](/help/communities/overview.md) löses problemet genom att använda en [gemensam lagringsplats för UGC](/help/communities/working-with-srp.md). När det gäller personalisering innehåller Communities [social inloggning](/help/communities/social-login.md) - möjlighet att ge webbplatsbesökare möjlighet att logga in med Facebook och Twitter.
 
 Utan Communities-tillägg kan olika metoder för att undersöka frågan om enhetlighet i användargenererat innehåll vara:
 
