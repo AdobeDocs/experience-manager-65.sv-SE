@@ -39,7 +39,7 @@ Om du vill slutföra följande scenario eller liknande behöver du känna till:
 * JavaScript
 * Java
 
-## Scenario: Lägg till ett kommando i användargränssnittet för bokstavslistan för att ladda ned en platt PDF-version av ett brev {#addcommandtoletters}
+## Scenario: Lägg till ett kommando i användargränssnittet för bokstavslistan för att hämta en platt PDF-version av en bokstav {#addcommandtoletters}
 
 Stegen nedan lägger till kommandot &quot;Hämta platt PDF&quot; i resurslista för brev och gör att dina användare kan hämta en platt PDF-fil av det valda brevet. Med dessa steg och rätt kod och parametrar kan du lägga till andra funktioner för en annan resurs, till exempel dataordlistor eller texter.
 
@@ -49,7 +49,7 @@ Följ de här stegen för att anpassa Correspondence Management så att använda
 
 1. I mappen apps skapar du en mapp med namnet items med en sökväg/struktur som liknar mappen items i en urvalsmapp enligt följande:
 
-   1. Högerklicka på **objektmappen** i följande sökväg och välj **Overlay Node**:
+   1. Högerklicka på mappen **items** på följande sökväg och välj **Overlay Node**:
 
       `/libs/fd/cm/ma/gui/content/cmassets/jcr:content/body/content/header/items/selection/items`
 
@@ -66,25 +66,25 @@ Följ de här stegen för att anpassa Correspondence Management så att använda
 
       **Sökväg:** /libs/fd/cm/ma/gui/content/cmassets/jcr:content/body/content/header/items/selection/items
 
-      **Plats:** /apps/
+      **Plats:** /appar/
 
-      **Matcha nodtyper:** Markerad
+      **Matcha nodtyper:** markerade
 
       ![Överläggsnod](assets/2_createnodedownloadflatpdf.png)
 
-   1. Click **OK**. Mappstrukturen skapas i programmappen.
+   1. Klicka på **OK**. Mappstrukturen skapas i programmappen.
 
       Klicka på **Spara alla**.
 
 1. Lägg till en nod för den anpassade knappen/åtgärden i en viss resurs under den nyligen skapade objektmappen (Exempel: downloadFlatPDF) med följande steg:
 
-   1. Högerklicka på **objektmappen** och välj **Skapa** > **Skapa nod**.
+   1. Högerklicka på mappen **items** och välj **Create** > **Create Node**.
 
-   1. Se till att dialogrutan Skapa nod har följande värden och klicka på **OK**:
+   1. Kontrollera att dialogrutan Skapa nod har följande värden och klicka på **OK**:
 
-      **Namn:** downloadFlatPDF (eller det namn du vill ge den här egenskapen)
+      **Namn:** downloadFlatPDF (eller namnet som du vill ge den här egenskapen)
 
-      **Typ:** nt:ostrukturerad
+      **text:** nt:ostrukturerad
 
    1. Klicka på den nya noden som du har skapat (här downloadFlatPDF). CRX visar nodens egenskaper.
 
@@ -105,12 +105,12 @@ Följ de här stegen för att anpassa Correspondence Management så att använda
         <tr>
         <td>Foundation-collection-action</td>
         <td>Sträng</td>
-        <td><p>{"target": ".cq-management asset-admin-childpages", "activeSelectionCount": "single","type": "LETTER"}<br /> <br /> <br /> activeSelectionCount <strong></strong> kan vara en eller flera för att tillåta val av en eller flera resurser som den anpassade åtgärden utförs på.</p> <p><strong>-typen</strong> kan vara en eller flera (kommaavgränsade flera poster) av följande: BOKSTAV,TEXT,LISTA,VILLKOR,DATADICTIONÄR</p> </td>
+        <td><p>{"target": ".cq-management asset-admin-childpages", "activeSelectionCount": "single","type": "LETTER"}<br /> <br /> <br /> <strong>activeSelectionCount</strong> kan vara ett eller flera för att tillåta val av en eller flera resurser som den anpassade åtgärden utförs på.</p> <p><strong>kan </strong> vara en eller flera (kommaseparerade flera poster) av följande: BOKSTAV,TEXT,LISTA,VILLKOR,DATADICTIONÄR</p> </td>
         </tr>
         <tr>
         <td>icon</td>
         <td>Sträng</td>
-        <td>icon-download<br /> <br /> Den ikon som Correspondence Management visar till vänster om kommandot/menyn. Olika ikoner och inställningar finns i dokumentationen för <a href="https://docs.adobe.com/docs/en/aem/6-3/develop/ref/coral-ui/coralui3/Coral.Icon.html" target="_blank">CoralUI-ikoner</a>.<br /> </td>
+        <td>icon-download<br /> <br /> Den ikon som Correspondence Management visar till vänster om kommandot/menyn. Olika ikoner och inställningar finns i <a href="https://docs.adobe.com/docs/en/aem/6-3/develop/ref/coral-ui/coralui3/Coral.Icon.html" target="_blank">dokumentationen för CoralUI-ikoner</a>.<br /> </td>
         </tr>
         <tr>
         <td>jcr:primärType</td>
@@ -130,19 +130,19 @@ Följ de här stegen för att anpassa Correspondence Management så att använda
         <tr>
         <td>text</td>
         <td>Sträng</td>
-        <td>Ladda ned platt PDF-fil (eller någon annan etikett)<br /><br /> Kommandot som visas i gränssnittet Resurslista</td>
+        <td>Ladda ned platt PDF (eller någon annan etikett)<br /> <br /> Kommandot som visas i gränssnittet Resurslista</td>
         </tr>
         <tr>
         <td>title</td>
         <td>Sträng</td>
-        <td>Ladda ned en platt PDF-fil av det markerade brevet (eller annan etikett/alternativ text)<br /> <br /> Rubriken är den alt-text som Correspondence Management visar när användaren hovrar över det anpassade kommandot.</td>
+        <td>Ladda ned en platt PDF-fil av det markerade brevet (eller annan etikett/Alt-text)<br /> <br /> Titeln är den alt-text som Correspondence Management visar när användaren hovrar över det anpassade kommandot.</td>
         </tr>
         </tbody>
        </table>
 
 1. I mappen apps skapar du en mapp med namnet js med en sökväg/struktur som liknar objektmappen i admin-mappen enligt följande steg:
 
-   1. Högerklicka på **js** -mappen vid följande sökväg och välj **Överläggsnod**:
+   1. Högerklicka på mappen **js** på följande sökväg och välj **Overlay Node**:
 
       `/libs/fd/cm/ma/gui/components/admin/clientlibs/admin/js`
 
@@ -150,15 +150,15 @@ Följ de här stegen för att anpassa Correspondence Management så att använda
 
       **Sökväg:** /libs/fd/cm/ma/gui/components/admin/clientlibs/admin/js
 
-      **Plats:** /apps/
+      **Plats:** /appar/
 
-      **Matcha nodtyper:** Markerad
+      **Matcha nodtyper:** markerade
 
-   1. Click **OK**. Mappstrukturen skapas i programmappen. Klicka på **Spara alla**.
+   1. Klicka på **OK**. Mappstrukturen skapas i programmappen. Klicka på **Spara alla**.
 
 1. I mappen js skapar du en fil med namnet formaction.js med koden för knappens åtgärder enligt följande steg:
 
-   1. Högerklicka på **js** -mappen på följande sökväg och välj **Skapa > Skapa fil**:
+   1. Högerklicka på mappen **js** på följande sökväg och välj **Skapa > Skapa fil**:
 
       `/apps/fd/cm/ma/gui/components/admin/clientlibs/admin/js`
 
@@ -232,19 +232,19 @@ Följ de här stegen för att anpassa Correspondence Management så att använda
 
 1. I mappen apps skapar du en mapp med namnet items med en sökväg/struktur som liknar mappen items i mappen actionhandlers med följande steg:
 
-   1. Högerklicka på **objektmappen** i följande sökväg och välj **Overlay Node**:
+   1. Högerklicka på mappen **items** på följande sökväg och välj **Overlay Node**:
 
       `/libs/fd/cm/ma/gui/content/commons/actionhandlers/items/`
 
    1. Kontrollera att dialogrutan Overlay Node har följande värden:
 
-      **Sökväg:** /libs/fd/cm/ma/gui/content/commons/actionhandlers/items/
+      **Bana:** /libs/fd/cm/ma/gui/content/commons/actionhandlers/items/
 
-      **Plats:** /apps/
+      **Plats:** /appar/
 
-      **Matcha nodtyper:** Markerad
+      **Matcha nodtyper:** markerade
 
-   1. Click **OK**. Mappstrukturen skapas i programmappen.
+   1. Klicka på **OK**. Mappstrukturen skapas i programmappen.
 
    1. Klicka på **Spara alla**.
 
@@ -252,11 +252,11 @@ Följ de här stegen för att anpassa Correspondence Management så att använda
 
    1. Högerklicka på objektmappen och välj **Skapa > Skapa nod**.
 
-   1. Se till att dialogrutan Skapa nod har följande värden och klicka på **OK**:
+   1. Kontrollera att dialogrutan Skapa nod har följande värden och klicka på **OK**:
 
-      **Namn:** letterpdfdownloader (eller det namn du vill ge den här egenskapen) måste vara unikt. Om du använder ett annat namn här anger du samma namn i formaction.js-filens ACTION_URL-variabel.)
+      **Namn:** letterpdfdownloader (eller namnet som du vill ge den här egenskapen) måste vara unikt. Om du använder ett annat namn här anger du samma namn i formaction.js-filens ACTION_URL-variabel.)
 
-      **Typ:** nt:ostrukturerad
+      **text:** nt:ostrukturerad
 
    1. Klicka på den nya noden som du har skapat (här downloadFlatPDF). CRX visar nodens egenskaper.
 
@@ -270,18 +270,18 @@ Följ de här stegen för att anpassa Correspondence Management så att använda
 
    /apps/fd/cm/ma/gui/components/admin/clientlibs/admin
 
-   1. Högerklicka på **administratörsmappen** på följande sökväg och välj **Skapa > Skapa fil**:
+   1. Högerklicka på mappen **admin** på följande sökväg och välj **Skapa > Skapa fil**:
 
       /apps/fd/cm/ma/gui/components/admin/clientlibs/admin
 
       Ge filen namnet POST.jsp. (Filnamnet behöver bara vara POST.jsp.)
 
-   1. Dubbelklicka på **POST.jsp** -filen för att öppna den i CRX.
+   1. Dubbelklicka på filen **POST.jsp** för att öppna den i CRX.
    1. Lägg till följande kod i filen POST.jsp och klicka på **Spara alla**:
 
       Den här koden är specifik för bokstavsåtergivningstjänsten. För andra resurser lägger du till resursens java-bibliotek i den här koden. Mer information om AEM Forms API:er finns i [AEM Forms API](https://adobe.com/go/learn_aemforms_javadocs_63_en).
 
-      Mer information om AEM-bibliotek finns i AEM- [komponenter](/help/sites-developing/components.md).
+      Mer information om AEM finns i AEM [Komponenter](/help/sites-developing/components.md).
 
       ```xml
       /*Import libraries. Here we are downloading letter flat pdf with input xml data so we require letterRender Api. For any other Module functionality we need to first import that library. */
@@ -354,11 +354,11 @@ När du har lagt till en anpassad funktion för att ladda ned en platt PDF-fil a
 
 1. Gå till `https://'[server]:[port]'/[ContextPath]/projects.html` och logga in.
 
-1. Välj **Formulär > Bokstäver**. Correspondence Management listar bokstäverna som finns i systemet.
-1. Klicka på **Markera** och sedan på en bokstav för att markera den.
-1. Välj **Mer** > **&lt;Hämta platt PDF>** (De anpassade funktionerna som skapas med instruktionerna i den här artikeln). Dialogrutan Hämta brev som PDF visas.
+1. Välj **Forms > Bokstäver**. Correspondence Management listar bokstäverna som finns i systemet.
+1. Klicka på **Markera** och klicka sedan på en bokstav för att markera den.
+1. Välj **Mer** > **&lt;Hämta platt PDF>** (Den anpassade funktionaliteten som skapas med instruktionerna i den här artikeln). Dialogrutan Hämta brev som PDF visas.
 
-   Menyalternativets namn, funktioner och alt-text anpassas efter den anpassning som har skapats i [Scenario: Lägg till ett kommando i användargränssnittet för bokstavslistan om du vill hämta en platt PDF-version av ett brev.](#addcommandtoletters)
+   Menyalternativets namn, funktion och alt-text följer den anpassning som har skapats i [Scenario: Lägg till ett kommando i användargränssnittet för bokstavslistan om du vill hämta en platt PDF-version av ett brev.](#addcommandtoletters)
 
    ![Anpassade funktioner: Ladda ned platt PDF](assets/5_downloadflatpdf.png)
 
@@ -366,7 +366,7 @@ När du har lagt till en anpassad funktion för att ladda ned en platt PDF-fil a
 
    >[!NOTE]
    >
-   >Innan du laddar ned bokstaven som en platt PDF-fil kan du skapa XML-filen med informationen i brevet med alternativet **Skapa rapport** .
+   >Innan du hämtar bokstaven som en platt PDF-fil kan du skapa XML-filen med informationen i brevet med alternativet **Skapa rapport**.
 
    ![Ladda ned brev som PDF](assets/6_downloadflatpdf.png)
 
