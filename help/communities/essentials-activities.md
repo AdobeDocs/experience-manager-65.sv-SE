@@ -27,15 +27,15 @@ Möjligheten att följa efter lägger till ytterligare en uppsättning aktivitet
 
 Alla [communitywebbplatser](/help/communities/overview.md#communitiessites) innehåller en användarprofilsida för den inloggade medlemmen som visar medlemsaktiviteter på samma sätt.
 
-## Concepts {#concepts}
+## Koncept {#concepts}
 
-En *aktivitetsström* är en lista över de senaste aktiviteterna som utförts av en medlem eller en lista över de senaste aktiviteterna för en enskild tråd med innehåll, till exempel ett forumämne eller en blogg.
+En *aktivitetsström* är en lista över de senaste aktiviteterna som utförts av en medlem eller en lista över de senaste aktiviteterna för en enskild tråd med innehåll, t.ex. ett forumämne eller en blogg.
 
 En medlem kan följa en aktivitetsström antingen efter en annan person eller ett annat innehåll.
 
-Ett *nyhetsflöde* är en sammanslagning av de aktivitetsströmmar som följs av en medlem till en enda ström.
+Ett *nyhetsflöde* är en sammanslagning av aktivitetsströmmar som följs av en medlem till en enda ström.
 
-Ett *[socialt diagram](/help/communities/essentials-socialgraph.md)*fångar följande relationer mellan en medlem och en annan.
+Ett *[socialt diagram](/help/communities/essentials-socialgraph.md)* fångar följande relationer mellan en medlem och en annan.
 
 ## Grundläggande för klientsidan {#essentials-for-client-side}
 
@@ -80,4 +80,4 @@ Ett *[socialt diagram](/help/communities/essentials-socialgraph.md)*fångar föl
 
 ### Funktion för aktivitetsström {#activity-stream-function}
 
-En community-platsstruktur som innehåller funktionen [för](/help/communities/functions.md#activity-stream-function)aktivitetsström innehåller en konfigurerad `activity streams` komponent.
+En community-platsstruktur som innehåller funktionen [Aktivitetsström](/help/communities/functions.md#activity-stream-function) innehåller en konfigurerad `activity streams`-komponent.
