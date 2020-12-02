@@ -8,6 +8,9 @@ contentOwner: trushton
 discoiquuid: 9399dd3d-a485-4f53-a6f2-7b190da4235b
 translation-type: tm+mt
 source-git-commit: 85a3dac5db940b81da9e74902a6aa475ec8f1780
+workflow-type: tm+mt
+source-wordcount: '694'
+ht-degree: 0%
 
 ---
 
@@ -20,21 +23,21 @@ source-git-commit: 85a3dac5db940b81da9e74902a6aa475ec8f1780
 
 ## Stöd för AEM Mobile GDPR {#aem-mobile-gdpr-support}
 
-AEM Mobile är redo att hjälpa kunderna med deras GDPR-efterlevnadsskyldigheter. Inga personuppgifter lagras i AEM Mobile. Om du är etablerad kan du logga in på Adobe Experience Mobile med ditt Adobe ID.
+AEM Mobile är redo att hjälpa kunderna med deras GDPR-efterlevnadsskyldigheter. Inga personuppgifter lagras i AEM Mobile. Om du är etablerad kan du logga in på Adobe Experience Mobile med din Adobe ID.
 
 [https://aemmobile.adobe.com/signin/index.html](https://aemmobile.adobe.com/signin/index.html)
 
 ## Adobe Digital Publishing Suite {#adobe-digital-publishing-suite}
 
-Adobes digitala publiceringsprodukt (som föregår AEM Mobile) stöder Adobes beredskapsinitiativ i GDPR. Se [https://www.adobe.com/privacy/general-data-protection-regulation.html](https://www.adobe.com/privacy/general-data-protection-regulation.html). Nedan finns information om stöd för GDPR-relevanta funktioner i Digital Publishing Suite-produkten, inklusive hur du arbetar med Adobe för att initiera GDPR-förfrågningar.
+Adobe digitala publiceringsprodukt (som föregår AEM Mobile) stöder Adobe:s beredskapsinitiativ för GDPR. Se [https://www.adobe.com/privacy/general-data-protection-regulation.html](https://www.adobe.com/privacy/general-data-protection-regulation.html). Nedan ges information om stöd för GDPR-relevanta funktioner i Digital Publishing Suite-produkten, inklusive hur man arbetar med Adobe för att initiera GDPR-förfrågningar.
 
 För att vara säker på att du inte blandar ihop AEM Mobile med den äldre Digital Publishing Suite-produkten kan du logga in på Digital Publishing Suite här:
 
 [https://digitalpublishing.acrobat.com/welcome.html](https://digitalpublishing.acrobat.com/welcome.html)
 
-### Initiera en GDPR-begäran {#initiating-a-gdpr-request}
+### Initierar en GDPR-begäran {#initiating-a-gdpr-request}
 
-Kontakta Adobes kundtjänst för att få en GDPR-förfrågan om Digital Publishing Suite.
+Kontakta Adobe kundtjänst för att starta en GDPR-förfrågan om Digital Publishing Suite.
 
 Följande ID krävs för att hitta kunddata. Alla delmängder som tas emot innebär att andra ID:n inte är tillämpliga för den här användaren.
 
@@ -50,13 +53,13 @@ Ange minst 1 av följande:
 
 ### Vanliga frågor och svar (FAQ) {#frequently-asked-questions-faq}
 
-**Kommer Adobe att ta bort mina App Store-köp när jag initierar en DELETE-begäran?**
+**Kommer Adobe att ta bort mina App Store-köp när jag initierar en begäran från DELETE?**
 
-Adobe raderar information om App Store-köp (prenumerationer osv.) men inköp registreras fortfarande i appbutikerna. Om appen (slutanvändaren) är inloggad i App Store hämtas dessa kvitton igen och skickas till Adobe, och därefter betraktas de som nya inköp och återställs av appen för att få åtkomst igen.
+Adobe tar bort information om App Store-köp (prenumerationer osv.) men inköp registreras fortfarande i appbutikerna. Om appen (slutanvändaren) är inloggad i App Store hämtas dessa kvitton igen och skickas till Adobe, och därefter betraktas de som nya inköp och återställs av appen för att få åtkomst igen.
 
-**Kommer Adobe att ta bort kundens angivna rättigheter när en DELETE-begäran initieras?**
+**Kommer Adobe att ta bort kundens angivna rättigheter när en begäran från DELETE initieras?**
 
-Adobe kommer att ta bort information om kundens ytterligare rättigheter. Om appen (slutanvändaren) loggar in på den OAuth-mekanism som kunden har använt, skickar den information till Adobe och tjänsterna hämtar de extra berättigandena igen.
+Adobe kommer att ta bort information om kundens ytterligare direkta berättiganden. Om appen (slutanvändaren) loggar in på OAuth-mekanismen som kunden har använt, skickas information till Adobe och tjänsterna hämtar de extra berättigandena igen.
 
 **Vad förväntas av slutanvändaren?**
 
@@ -76,7 +79,7 @@ I takt med att Digital Publishing Suite-produkten utvecklades ändrades implemen
 
 ### Exempel {#example}
 
-Kontakta Adobes kundtjänst för att få en GDPR-förfrågan.
+Kontakta Adobe kundtjänst för att starta en GDPR-förfrågan.
 
 Här följer ett exempel på indata och resultat från en Digital Publishing Suite GDPR-förfrågan:
 
