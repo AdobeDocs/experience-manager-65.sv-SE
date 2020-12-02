@@ -12,6 +12,9 @@ discoiquuid: d1ccd194-8549-4188-8932-7136be1e88a2
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 0a94bf49a7136c5831c42eb274d07517c12014ec
+workflow-type: tm+mt
+source-wordcount: '153'
+ht-degree: 0%
 
 ---
 
@@ -28,9 +31,9 @@ En extern länkkontroll tillhandahålls i AEM. Länkkontrollen:
 
 Så här använder du den externa länkkontrollen:
 
-1. Välj **Navigering**, **Verktyg** och sedan **Platser**.
+1. Använd **Navigering**, välj **Verktyg** och sedan **Platser**.
 1. Välj **Extern länkkontroll**. En lista över alla externa länkar genereras.
-1. Validera en specifik länk genom att markera den i listan och sedan klicka på **Kontrollera**:
+1. Validera en specifik länk genom att markera den i listan och sedan klicka på **Markera**:
 
    ![](assets/telc-01.png)
 
@@ -39,11 +42,11 @@ Så här använder du den externa länkkontrollen:
    * **Status** för länken
    * **Webbadress**
    * **Referent**
-   * tid sedan länken **senast kontrollerades** (validerad)
-   * den **senaste statusen** returnerades
+   * tid sedan länken **senast kontrollerad** (validerad)
+   * **Senaste status** returnerades
 
-   * tid sedan länken var **senast tillgänglig**
-   * tid sedan länken **senast användes**
+   * tid sedan länken var **Senast tillgänglig**
+   * tid sedan länken **Senast använd**
 
 1. På de enskilda innehållssidorna visas ogiltiga länkar som brutna:
 
