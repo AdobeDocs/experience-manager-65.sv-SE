@@ -11,6 +11,9 @@ discoiquuid: 13a93111-c08c-4457-b69a-a6f6eb6da330
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+workflow-type: tm+mt
+source-wordcount: '1099'
+ht-degree: 0%
 
 ---
 
@@ -32,12 +35,12 @@ Den anpassade ikonen i gränssnittet Skapa korrespondens
 Så här ställer du in en logobild:
 
 1. Skapa lämplig [mappstruktur i CRX](#creatingfolderstructure).
-1. [Ladda upp den nya logotypfilen](#uploadlogo) i den mapp du har skapat i CRX.
+1. [Ladda upp den nya ](#uploadlogo) logotypfilen i den mapp du har skapat i CRX.
 
-1. [Konfigurera CSS](#createcss) för CRX för att hänvisa till den nya logotypen.
-1. Rensa webbläsarhistoriken och [uppdatera användargränssnittet](#refreshccrui)Skapa korrespondens.
+1. [Konfigurera ](#createcss) CSSon CRX så att den hänvisar till den nya logotypen.
+1. Rensa webbläsarhistoriken och [uppdatera användargränssnittet för Skapa korrespondens](#refreshccrui).
 
-## Skapar den mappstruktur som krävs {#creatingfolderstructure}
+## Skapar den nödvändiga mappstrukturen {#creatingfolderstructure}
 
 Skapa mappstrukturen som beskrivs nedan för värdtjänster för den anpassade logotypbilden och formatmallen. Den nya mappstrukturen med rotmappen /apps liknar strukturen i mappen /libs.
 
@@ -47,16 +50,16 @@ Avdelningen /apps (mappstruktur):
 
 * Säkerställer att dina filer är säkra om systemet uppdateras. Om det gäller uppgradering, funktionspaket eller en snabbkorrigering uppdateras grenen /libs och om du har dina ändringar i grenen /libs skrivs de över.
 * Hjälper dig att inte störa det aktuella systemet/den aktuella grenen, som du kanske kan lösa upp av misstag om du använder standardplatserna för lagring av anpassade filer.
-* Hjälper dina resurser att få högre prioritet när AEM söker efter resurser. AEM är konfigurerat att söka igenom grenen /apps först och sedan grenen /libs för att hitta en resurs. Den här mekanismen innebär att systemet använder övertäckningen (och de anpassningar som definieras där).
+* Hjälper dina resurser att få högre prioritet när AEM söker efter resurser. AEM är konfigurerad att söka igenom grenen /apps först och sedan grenen /libs för att hitta en resurs. Den här mekanismen innebär att systemet använder övertäckningen (och de anpassningar som definieras där).
 
 Följ de här stegen för att skapa den nödvändiga mappstrukturen i grenen /apps:
 
 1. Gå till `https://'[server]:[port]'/[ContextPath]/crx/de` och logga in som administratör.
-1. I mappen apps skapar du en mapp med namnet `css` med en sökväg/struktur som liknar css-mappen (finns i ccrui-mappen).
+1. I mappen apps skapar du en mapp med namnet `css` med en sökväg/struktur som liknar css-mappen (som finns i ccrui-mappen).
 
    Steg för att skapa css-mappen:
 
-   1. Högerklicka på **css** -mappen i följande sökväg och välj **Overlay Node**: `/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/css`
+   1. Högerklicka på mappen **css** på följande sökväg och välj **Overlay Node**: `/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/css`
 
       ![Överläggsnod](assets/1_overlaynode_css.png)
 
@@ -64,9 +67,9 @@ Följ de här stegen för att skapa den nödvändiga mappstrukturen i grenen /ap
 
       **Sökväg:** /libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/css
 
-      **Plats för övertäckning:** /apps/
+      **Överläggsplats:** /appar/
 
-      **Matcha nodtyper:** Markerad
+      **Matcha nodtyper:** markerade
 
       ![Sökväg till överläggsnod](assets/0_1_5ioverlaynodedialog.png)
 
@@ -81,7 +84,7 @@ Följ de här stegen för att skapa den nödvändiga mappstrukturen i grenen /ap
       >    * Installera ett funktionspaket
 
 
-   1. Click **OK**. CSS-mappen skapas i den angivna sökvägen.
+   1. Klicka på **OK**. CSS-mappen skapas i den angivna sökvägen.
 
 
 
@@ -92,11 +95,11 @@ Följ de här stegen för att skapa den nödvändiga mappstrukturen i grenen /ap
 
       **Sökväg:** /libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs
 
-      **Plats för övertäckning:** /apps/
+      **Överläggsplats:** /appar/
 
-      **Matcha nodtyper:** Markerad
+      **Matcha nodtyper:** markerade
 
-   1. Click **OK**.
+   1. Klicka på **OK**.
 
       >[!NOTE]
       >
@@ -106,7 +109,7 @@ Följ de här stegen för att skapa den nödvändiga mappstrukturen i grenen /ap
 
 ## Överför den nya logotypen till CRX {#uploadlogo}
 
-Överför din anpassade logotypfil till CRX. HTML-standardregler styr återgivningen av logotypen. De bildfilsformat som stöds är beroende av vilken webbläsare du använder för att komma åt AEM Forms. Alla webbläsare har stöd för JPEG, GIF och PNG. Mer information finns i den webbläsarspecifika dokumentationen om de bildformat som stöds.
+Överför din anpassade logotypfil till CRX. HTML-standardregler styr återgivningen av logotypen. De bildfilformat som stöds är beroende av vilken webbläsare du använder för att få åtkomst till AEM Forms. Alla webbläsare har stöd för JPEG, GIF och PNG. Mer information finns i den webbläsarspecifika dokumentationen om de bildformat som stöds.
 
 * Standardmåtten för logotypbilden är 48 px * 48 px. Se till att bilden liknar den här storleken eller är större än 48 px * 48 px.
 * Om höjden på logotypbilden är större än 50 px, skalas bilden ned i användargränssnittet Create Correspondence till en maximal höjd på 50 px eftersom det är höjden på sidhuvudet. När du skalar ned bilden behåller användargränssnittet Skapa korrespondens bildens proportioner.
@@ -135,7 +138,7 @@ Följ de här stegen för att överföra den anpassade logotypfilen till CRX:
 
    ![jcrcontentproperties](assets/jcrcontentproperties.png)
 
-1. Dubbelklicka på egenskapen **jcr:data** .
+1. Dubbelklicka på egenskapen **jcr:data**.
 
    Dialogrutan Redigera jcr:data visas.
 
@@ -143,7 +146,7 @@ Följ de här stegen för att överföra den anpassade logotypfilen till CRX:
 
 1. I dialogrutan Redigera jcr:data klickar du på **Bläddra** och väljer den bildfil som du vill använda som logotyp (här CustomLogo.png).
 
-   De bildfilsformat som stöds är beroende av vilken webbläsare du använder för att komma åt AEM Forms. Alla webbläsare har stöd för JPEG, GIF och PNG. Mer information finns i den webbläsarspecifika dokumentationen om de bildformat som stöds.
+   De bildfilformat som stöds är beroende av vilken webbläsare du använder för att få åtkomst till AEM Forms. Alla webbläsare har stöd för JPEG, GIF och PNG. Mer information finns i den webbläsarspecifika dokumentationen om de bildformat som stöds.
 
    ![Exempel på anpassad logotypfil](assets/geometrixx-outdoors.png)
 
@@ -164,8 +167,8 @@ Följ de här stegen för att konfigurera formatmallen för återgivning av logo
 
    Steg för att skapa filen customcss.css:
 
-   1. Högerklicka på **css** -mappen och välj **Skapa > Skapa fil**.
-   1. I dialogrutan Ny fil anger du namnet på CSS som `customcss.css`(du kan inte använda ett annat filnamn) och klickar på **OK**.
+   1. Högerklicka på mappen **css** och välj **Skapa > Skapa fil**.
+   1. I dialogrutan Ny fil anger du CSS-namnet som `customcss.css` (du kan inte använda ett annat filnamn) och klickar på **OK**.
    1. Lägg till följande kod i den nyligen skapade CSS-filen. I content:url i koden anger du bildnamnet som du har överfört till imgs-mappen i CRXDE.
 
       ```css
