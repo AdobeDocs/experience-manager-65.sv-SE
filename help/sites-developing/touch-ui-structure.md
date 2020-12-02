@@ -1,8 +1,8 @@
 ---
-title: Struktur för det AEM Touch-aktiverade gränssnittet
-seo-title: Struktur för det AEM Touch-aktiverade gränssnittet
-description: Det pekoptimerade användargränssnittet, som det implementeras i AEM, har flera underliggande principer och består av flera nyckelelement
-seo-description: Det pekoptimerade användargränssnittet, som det implementeras i AEM, har flera underliggande principer och består av flera nyckelelement
+title: Struktur för det AEM användargränssnittet med pekskärm
+seo-title: Struktur för det AEM användargränssnittet med pekskärm
+description: Det pekoptimerade användargränssnittet, som implementeras i AEM, har flera underliggande principer och består av flera nyckelelement
+seo-description: Det pekoptimerade användargränssnittet, som implementeras i AEM, har flera underliggande principer och består av flera nyckelelement
 uuid: 9a255238-1adc-4a40-9c37-30cb53ffb26c
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,21 +11,24 @@ content-type: reference
 discoiquuid: 55dba890-4847-4986-b272-33480bc1d573
 translation-type: tm+mt
 source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+workflow-type: tm+mt
+source-wordcount: '886'
+ht-degree: 1%
 
 ---
 
 
-# Struktur för det AEM Touch-aktiverade gränssnittet{#structure-of-the-aem-touch-enabled-ui}
+# Struktur för det AEM Touch-aktiverade användargränssnittet{#structure-of-the-aem-touch-enabled-ui}
 
-Det användargränssnitt som har AEM touch-funktioner har flera underliggande principer och består av flera nyckelelement:
+Det AEM användargränssnittet med pekskärm har flera underliggande principer och består av flera nyckelelement:
 
 ## Konsoler {#consoles}
 
 ### Grundläggande layout och storleksändring {#basic-layout-and-resizing}
 
-Gränssnittet fungerar både för mobila och stationära enheter, men i stället för att skapa två format som Adobe har valt att använda använder Adobe ett format som fungerar för alla skärmar och enheter.
+Gränssnittet fungerar både för mobila och stationära enheter, men i stället för att skapa två format har Adobe valt att använda ett format som fungerar för alla skärmar och enheter.
 
-Alla moduler använder samma grundläggande layout, i AEM ser du det här:
+Alla moduler använder samma grundläggande layout, AEM detta kan ses som:
 
 ![chlimage_1-142](assets/chlimage_1-142.png)
 
@@ -35,20 +38,20 @@ Om upplösningen till exempel ligger under 1 024 px (som på en mobil enhet) jus
 
 ![chlimage_1-143](assets/chlimage_1-143.png)
 
-### Sidhuvudsfält {#header-bar}
+### Huvudfält {#header-bar}
 
 ![chlimage_1-144](assets/chlimage_1-144.png)
 
 Rubrikraden visar globala element som:
 
-* logotypen och den specifika produkt/lösning som du för närvarande använder, för AEM utgör detta också en länk till Global Navigation
-* Sök
+* logotypen och den specifika produkt/lösning som du för närvarande använder, för AEM utgör detta också en länk till den globala navigeringen
+* Sökning
 * ikon för att komma åt hjälpresurserna
 * ikon för att komma åt andra lösningar
-* en indikator för (och åtkomst till) alla varningar eller inkorgsobjekt som väntar på dig
+* en indikator för (och åtkomst till) alla aviseringar eller inkorgsobjekt som väntar på dig
 * användarikonen tillsammans med en länk till din profilhantering
 
-### Toolbar {#toolbar}
+### Verktygsfält {#toolbar}
 
 Det här är kontextuellt för platsen och ytverktygen som är relevanta för att styra vyn eller resurserna på sidan nedan. Verktygsfältet är produktspecifikt, men det finns vissa gemensamma element.
 
@@ -68,7 +71,7 @@ Den vänstra listen kan öppnas/döljas efter behov för att visa:
 * **Referenser**
 * **Filter**
 
-Standardvärdet är Endast **innehåll** (dold räl).
+Standardvärdet är **Endast innehåll** (dolda skenor).
 
 ![chlimage_1-147](assets/chlimage_1-147.png)
 
@@ -84,11 +87,11 @@ Innehållsramen finns till höger i fönstret, under verktygsfältet.
 
 ![chlimage_1-148](assets/chlimage_1-148.png)
 
-### Redigeringsram {#editor-frame}
+### Redigeringsbildruta {#editor-frame}
 
 Redigeringsramen har redigeringsfunktionerna.
 
-Redigeringsramen är en behållare (abstrakt) för alla *sidredigeringselement*. Den ligger ovanpå innehållsramen och innehåller:
+Redigeringsbildrutan är en behållare (abstrakt) för alla *element för sidredigering*. Den ligger ovanpå innehållsramen och innehåller:
 
 * det övre verktygsfältet
 * sidopanelen
@@ -97,7 +100,7 @@ Redigeringsramen är en behållare (abstrakt) för alla *sidredigeringselement*.
 
 ![chlimage_1-149](assets/chlimage_1-149.png)
 
-### Side Panel {#side-panel}
+### Panelen Sida {#side-panel}
 
 Detta innehåller två standardflikar där du kan välja resurser och komponenter; de kan dras härifrån och släppas på sidan.
 
@@ -111,7 +114,7 @@ På fliken Resurser kan du välja bland flera resurser. Du kan också filtrera e
 
 ![chlimage_1-151](assets/chlimage_1-151.png)
 
-### Sida - Resursgrupper {#side-panel-asset-groups}
+### Sidopanelen - resursgrupper {#side-panel-asset-groups}
 
 På fliken Resurser finns det en listruta där du kan välja specifika resursgrupper.
 
@@ -140,7 +143,7 @@ Ett lager är ett oberoende funktionspaket som kan aktiveras för att:
 
 Lagren har avancerade funktioner för hela sidan, i motsats till specifika åtgärder för en enskild komponent.
 
-AEM innehåller flera lager som redan är implementerade för att skapa sidor. som till exempel redigering, förhandsgranskning och anteckning.
+AEM innehåller flera lager som redan har implementerats för sidredigering, som till exempel redigering, förhandsgranskning och anteckning.
 
 >[!NOTE]
 >
@@ -166,5 +169,5 @@ Beroende på vilket utrymme som är tillgängligt placeras komponentens verktygs
 
 Mer information om begreppen kring det beröringsaktiverade användargränssnittet finns i artikeln [Concepts of the AEM Touch-Enabled UI](/help/sites-developing/touch-ui-concepts.md).
 
-Mer teknisk information finns i [JS-dokumentationen för den beröringsaktiverade sidredigeraren](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html) .
+Mer teknisk information finns i [JS-dokumentationsuppsättningen](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html) för den beröringsaktiverade sidredigeraren.
 
