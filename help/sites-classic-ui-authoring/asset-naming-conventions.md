@@ -1,8 +1,8 @@
 ---
 title: Namnkonventioner för tillgångstestning
 seo-title: Namnkonventioner för resurser
-description: Noderna i databasen omfattas av namnkonventioner i Java Content Repository. Adobe Experience Manager lägger dock till ytterligare konventioner för namnet på resursnoder.
-seo-description: Noderna i databasen omfattas av namnkonventioner i Java Content Repository. Adobe Experience Manager lägger dock till ytterligare konventioner för namnet på resursnoder.
+description: Noderna i databasen omfattas av namnkonventioner i Java Content Repository. Adobe Experience Manager inför dock ytterligare konventioner för resursnodernas namn.
+seo-description: Noderna i databasen omfattas av namnkonventioner i Java Content Repository. Adobe Experience Manager inför dock ytterligare konventioner för resursnodernas namn.
 uuid: 6b622a60-90e8-461e-9b67-42c11c7038f9
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -11,15 +11,18 @@ content-type: reference
 discoiquuid: 55e66c66-0120-4ed4-94c5-d65a434bb59b
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '159'
+ht-degree: 0%
 
 ---
 
 
 # Namnkonventioner för tillgångstestning{#naming-conventions-for-assets-testing}
 
-Noderna i databasen omfattas av namnkonventioner i [Java Content Repository](/help/sites-developing/the-basics.md#java-content-repository). Adobe Experience Manager lägger dock till ytterligare konventioner för namnet på resursnoder.
+Noderna i databasen omfattas av namnkonventioner i [Java Content Repository](/help/sites-developing/the-basics.md#java-content-repository). Adobe Experience Manager inför dock ytterligare konventioner för resursnodernas namn.
 
-## Klassiskt användargränssnitt {#classic-ui}
+## Klassiskt gränssnitt {#classic-ui}
 
 Det klassiska användargränssnittet har tätare begränsningar:
 
