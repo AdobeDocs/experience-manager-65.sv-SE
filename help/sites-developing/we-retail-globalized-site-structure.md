@@ -11,11 +11,14 @@ topic-tags: best-practices
 discoiquuid: d674458c-d5f3-4dee-a673-b0777c02ad30
 translation-type: tm+mt
 source-git-commit: b3e1493811176271ead54bae55b1cd0cf759fe71
+workflow-type: tm+mt
+source-wordcount: '423'
+ht-degree: 2%
 
 ---
 
 
-# Prova den globala webbplatsstrukturen i webb.butik{#trying-out-the-globalized-site-structure-in-we-retail}
+# Prova den globala platsstrukturen i We.Retail{#trying-out-the-globalized-site-structure-in-we-retail}
 
 Vi.Retail har byggts med en global webbplatsstruktur som erbjuder språkmallar som kan kopieras live till landsspecifika webbplatser. Allt är klart att användas för att experimentera med den här strukturen och de inbyggda översättningsfunktionerna.
 
@@ -34,17 +37,17 @@ Vi.Retail har byggts med en global webbplatsstruktur som erbjuder språkmallar s
 
    ![chlimage_1-89](assets/chlimage_1-89a.png)
 
-1. Återgå till kolumnvyn och klicka på Language Master och se språkinställningens rötter med innehåll. Observera att endast engelska har innehåll.
+1. Gå tillbaka till kolumnvyn och klicka på Överordnad Språk och se det språk som är överordnad med innehåll. Observera att endast engelska har innehåll.
 
    Vi.Retail innehåller inget översatt innehåll, men strukturen och konfigurationen finns på plats så att du kan demonstrera översättningstjänsterna.
 
    ![chlimage_1-90](assets/chlimage_1-90a.png)
 
-1. När den engelska språkmallen är markerad öppnar du **referenslisten** i webbplatskonsolen och väljer **Språkkopior**.
+1. När Överordnad för engelska är markerad öppnar du **Referenser** i webbplatskonsolen och väljer **Språkkopior**.
 
    ![chlimage_1-91](assets/chlimage_1-91.png)
 
-1. Markera kryssrutan bredvid etiketten **Språkkopior** om du vill välja alla språkkopior. I avsnittet **Uppdatera språkkopior** på listen väljer du alternativet att **skapa ett nytt översättningsprojekt**. Ange ett namn för projektet och klicka på **Uppdatera**.
+1. Markera kryssrutan bredvid etiketten **Språkkopior** om du vill markera alla språkkopior. I avsnittet **Uppdatera språkkopior** på listen väljer du alternativet **Skapa ett nytt översättningsprojekt**. Ange ett namn för projektet och klicka på **Uppdatera**.
 
    ![chlimage_1-92](assets/chlimage_1-92.png)
 
@@ -56,18 +59,18 @@ Vi.Retail har byggts med en global webbplatsstruktur som erbjuder språkmallar s
 
    ![chlimage_1-94](assets/chlimage_1-94.png)
 
-1. Översättningsprojektet startar. Klicka på ellipsen längst ned på kortet Översättningsjobb för att se mer information. Sidor med tillståndet **Ready for review** har redan översatts av översättningstjänsten.
+1. Översättningsprojektet startar. Klicka på ellipsen längst ned på kortet Översättningsjobb för att se mer information. Sidor med tillståndet **Klart för granskning** har redan översatts av översättningstjänsten.
 
    ![chlimage_1-95](assets/chlimage_1-95.png)
 
-1. Om du väljer en av sidorna i listan och sedan **Förhandsgranska på platser** i verktygsfältet öppnas den översatta sidan i sidredigeraren.
+1. Om du väljer en av sidorna i listan och sedan **Förhandsgranska i platser** i verktygsfältet öppnas den översatta sidan i sidredigeraren.
 
    ![chlimage_1-96](assets/chlimage_1-96.png)
 
 >[!NOTE]
 >
->Den här proceduren demonstrerade den inbyggda integrationen med Microsoft maskinöversättning. Med hjälp av [AEM Translation Integration Framework](/help/sites-administering/translation.md)kan du integrera med många standardöversättningstjänster för att översätta AEM.
+>Den här proceduren demonstrerade den inbyggda integrationen med Microsoft maskinöversättning. Med [AEM Translation Integration Framework](/help/sites-administering/translation.md) kan du integrera med många standardöversättningstjänster för att samordna översättning av AEM.
 
 ## Ytterligare information {#further-information}
 
-Mer information finns i redigeringsdokumentet [Translating Content for Multilingual Sites](/help/sites-administering/translation.md) (Översätta innehåll för flerspråkiga platser).
+Mer information finns i redigeringsdokumentet [Translating Content for Multilingual Sites](/help/sites-administering/translation.md) för fullständig teknisk information.
