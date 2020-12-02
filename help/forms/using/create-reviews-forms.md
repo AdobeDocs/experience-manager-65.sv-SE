@@ -11,6 +11,9 @@ discoiquuid: d8c1c507-a6c4-44f5-be01-ee902bc28410
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+workflow-type: tm+mt
+source-wordcount: '685'
+ht-degree: 0%
 
 ---
 
@@ -23,8 +26,8 @@ En granskning är en mekanism som gör att en eller flera granskare kan kommente
 
 ## Konfigurera en granskning {#setting-up-a-review}
 
-1. Navigera till fliken Formulär och markera ett formulär.
-1. Om resursen inte har någon pågående granskning visas ikonen Starta granskning ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png) i åtgärdsfältet. Klicka på ikonen Starta granskning ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png) .
+1. Navigera till fliken Forms och markera ett formulär.
+1. Om resursen inte har någon pågående granskning visas ikonen Starta granskning ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png) i åtgärdsfältet. Klicka på ikonen Starta granskning ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png).
 1. Ange följande information:
 
    * Granskningsnamn: Obligatoriskt, kan innehålla alfanumeriska tecken, bindestreck eller understreck.
@@ -53,11 +56,11 @@ I det här avsnittet beskrivs vad som händer när en granskning skapas eller ko
 >
 >Endast pågående granskningar kan ändras. Fullständiga granskningar kan inte ändras.
 
-1. Navigera till fliken Formulär och markera ett formulär.
+1. Navigera till fliken Forms och markera ett formulär.
 
 1. Om en granskning pågår för en resurs och du är initierare för granskningen, visas ikonerna Hantera granskning ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png) i åtgärdsfältet. Det är bara granskningsinitieraren som kan hantera (uppdatera/avsluta) granskningen.
 
-   Klicka på Hantera granskning ![aem6forms_review_chat_](assets/aem6forms_review_chat_comment.png)commenticon.
+   Klicka på ikonen Hantera granskning ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png).
 
    För andra användare än initieraren är ikonen Hantera granskning inaktiverad.
 
@@ -106,7 +109,7 @@ I det här avsnittet beskrivs vad som händer när granskningen avslutas/ändras
 
 1. När en granskning avslutas:
 
-   1. **Granskare**: För varje granskare avslutas den ofullständiga uppgiften som är relaterad till granskningen. Aktiviteten visas inte längre som Väntande i granskarens meddelandeavsnitt.
+   1. **Granskare**: För varje granskare avslutas den ofullständiga uppgift som är relaterad till granskningen. Aktiviteten visas inte längre som Väntande i granskarens meddelandeavsnitt.
    1. **Initierare**: Uppgiften som tilldelats granskningsinitieraren är markerad som slutförd. Aktiviteten tas bort från meddelandeavsnittet för granskningsinitieraren.
    1. **Alla**: Granskningen visas i avsnittet Tidigare granskningar. Inga fler kommentarer kan läggas till.
 
