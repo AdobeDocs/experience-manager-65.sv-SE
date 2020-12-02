@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Java API snabbstart (SOAP) för integreringstjänsten för formulärdata {#form-data-integration-service-javaapi-quick-start-soap}
+# Java API snabbstart (SOAP) {#form-data-integration-service-javaapi-quick-start-soap} för integreringstjänsten för formulärdata
 
 Följande snabbstarter är tillgängliga för integreringstjänsten för formulärdata.
 
@@ -26,11 +26,11 @@ Följande snabbstarter är tillgängliga för integreringstjänsten för formul�
 
 [Snabbstart (SOAP-läge): Exportera formulärdata med Java API](form-data-integration-service-java.md#quick-start-soap-mode-exporting-form-data-using-the-java-api)
 
-AEM Forms-åtgärder kan utföras med AEM Forms-API:t med stark typning och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
->Snabbstart som finns i Programmering med AEM-formulär baseras på den Forms Server som distribueras på JBoss Application Server och operativsystemet Microsoft Windows. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>Snabbstart som finns i Programmering med AEM baseras på den Forms-server som distribueras på JBoss Application Server och operativsystemet Microsoft Windows. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## Snabbstart (SOAP-läge): Importera formulärdata med Java API {#quick-start-soap-mode-importing-form-data-using-the-java-api}
 
