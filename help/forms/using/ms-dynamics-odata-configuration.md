@@ -123,7 +123,7 @@ Konfigurationen **MS Dynamics OData Cloud Service (OData Service)** levereras me
 
    1. Ange värdet för fältet **Tjänstrot**. Gå till Dynamics-instansen och navigera till **Developer Resources** för att visa värdet för fältet Service Root. Till exempel https://&lt;tenant-name>/api/data/v9.1/
 
-   1. Replace the default values in the **Client Id**(also referred to as **Application ID**), **Client Secret**, **OAuth URL**, **Refresh Token URL**, **Access Token URL**, and **Resource** fields with values from your Microsoft Dynamics service configuration. Det är obligatoriskt att ange den dynamiska instansens URL i fältet **Resurs** för att konfigurera Microsoft Dynamics med en formulärdatamodell. Använd tjänstens rot-URL för att härleda den dynamiska instansens URL. Exempel: [https://org.crm.dynamics.com](https://org.crm.dynamics.com/).
+   1. Ersätt standardvärdena i **klient-ID**(kallas även **program-ID**), **Klienthemlighet**, **OAuth URL**, **Uppdatera token-URL**, **Åtkomsttoken-URL&lt;a1 1/> och** Resurs **fält med värden från din Microsoft Dynamics-tjänstkonfiguration.** Det är obligatoriskt att ange den dynamiska instansens URL i fältet **Resurs** för att konfigurera Microsoft Dynamics med en formulärdatamodell. Använd tjänstens rot-URL för att härleda den dynamiska instansens URL. Exempel: [https://org.crm.dynamics.com](https://org.crm.dynamics.com/).
 
    1. Ange **openid** i fältet **Auktoriseringsomfång** för auktoriseringsprocess i Microsoft Dynamics.
 
