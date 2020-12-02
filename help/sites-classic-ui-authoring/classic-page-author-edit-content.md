@@ -12,6 +12,9 @@ discoiquuid: de321869-ebf9-41a1-8203-e12bdb088678
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 71b1301faf3ea3d881bcbf34eac101f3ed5c514c
+workflow-type: tm+mt
+source-wordcount: '1780'
+ht-degree: 1%
 
 ---
 
@@ -24,7 +27,7 @@ Innehåll läggs till med [komponenter](/help/sites-classic-ui-authoring/classic
 
 >[!NOTE]
 >
->Ditt konto behöver [lämpliga behörigheter](/help/sites-administering/security.md) och [behörigheter](/help/sites-administering/security.md#permissions) för att kunna redigera sidor. till exempel lägga till, redigera eller ta bort komponenter, anteckna, låsa upp.
+>Ditt konto behöver [lämpliga åtkomsträttigheter](/help/sites-administering/security.md) och [behörighet](/help/sites-administering/security.md#permissions) för att kunna redigera sidor. till exempel lägga till, redigera eller ta bort komponenter, anteckna, låsa upp.
 >
 >Om du råkar ut för problem rekommenderar vi att du kontaktar systemadministratören.
 
@@ -36,11 +39,11 @@ Det finns flera flikar och ikoner, bland annat:
 
 * Komponenter
 * Sidan
-*  Information
+* Information
 * Versionshantering
 * Arbetsflöde
 * Lägen
-*  Ställning
+* Ställning
 * Klientkontext
 * Webbplatser
 
@@ -52,9 +55,9 @@ Dessa ger tillgång till ett brett urval av funktioner. inklusive:
 * [visa referenser](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#showing-references)
 * [åtkomst till granskningsloggen](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#audit-log)
 * [växlingslägen](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#page-modes)
-* [skapa](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#creating-a-new-version), [återställa](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#restoring-a-page-version-from-sidekick) och [jämföra](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#comparing-with-a-previous-version) versioner
+* [skapa](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#creating-a-new-version),  [](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#restoring-a-page-version-from-sidekick) återställa och  [](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#comparing-with-a-previous-version) jämföra versioner
 
-* [publicera](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#publishing-a-page), [avpublicera](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#unpublishing-a-page) en sida
+* [publicera](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#publishing-a-page),  [](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#unpublishing-a-page) avpublicera en sida
 
 * [redigera sidegenskaper](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md)
 
@@ -72,21 +75,22 @@ Så här infogar du en ny komponent:
 
 1. Det finns flera sätt att välja den typ av stycke som du vill infoga:
 
-   * **Dubbelklicka på området med etiketten** Dra komponenter eller resurser här... - verktygsfältet **Infoga ny komponent** öppnas. Markera en komponent och klicka på **OK**.
+   * Dubbelklicka på området **Dra komponenter eller resurser hit..** - verktygsfältet **Infoga ny komponent** öppnas. Markera en komponent och klicka på **OK**.
 
    * Dra en komponent från det flytande verktygsfältet (kallas sidospark) för att infoga ett nytt stycke.
-   * **Högerklicka på ett befintligt stycke och välj** Nytt... - verktygsfältet Infoga ny komponent öppnas. Markera en komponent och klicka på **OK**.
+   * Högerklicka på ett befintligt stycke och välj **Nytt..** - verktygsfältet Infoga ny komponent öppnas. Markera en komponent och klicka på **OK**.
+
    ![screen_shot_2012-02-15at115605am](assets/screen_shot_2012-02-15at115605am.png)
 
-1. I både sidospåret och verktygsfältet **Infoga ny komponent** visas en lista med tillgängliga komponenter (stycketyper). Dessa kan delas upp i olika avsnitt (t.ex. Allmänt, Kolumner o.s.v.) som kan färdigställas efter behov.
+1. I både sidesparken och verktygsfältet **Infoga ny komponent** visas en lista med tillgängliga komponenter (stycketyper). Dessa kan delas upp i olika avsnitt (t.ex. Allmänt, Kolumner o.s.v.) som kan färdigställas efter behov.
 
    Beroende på din produktionsmiljö kan dessa alternativ skilja sig åt. Fullständig information om komponenter finns i [Standardkomponenter](/help/sites-classic-ui-authoring/classic-page-author-default-components.md).
 
 1. Infoga komponenten som du vill ha på sidan. Dubbelklicka sedan på stycket så öppnas ett fönster där du kan konfigurera stycket och lägga till innehåll.
 
-### Infoga en komponent med hjälp av Innehållssökning {#inserting-a-component-using-the-content-finder}
+### Infoga en komponent med hjälp av Content Finder {#inserting-a-component-using-the-content-finder}
 
-Du kan också lägga till en ny komponent på sidan genom att dra en resurs från [Innehållssökning](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#the-content-finder). Då skapas automatiskt en ny komponent av lämplig typ som innehåller resursen.
+Du kan också lägga till en ny komponent på sidan genom att dra en resurs från [Content Finder](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#the-content-finder). Då skapas automatiskt en ny komponent av lämplig typ som innehåller resursen.
 
 Detta gäller för följande tillgångstyper (vissa kommer att vara beroende av sid-/styckesystem):
 
@@ -99,27 +103,27 @@ Detta gäller för följande tillgångstyper (vissa kommer att vara beroende av 
 
 >[!NOTE]
 >
->Det här beteendet kan konfigureras för din installation. Mer information finns i [Konfigurera ett styckesystem så att en komponentinstans](/help/sites-developing/developing-components.md#configuring-a-paragraph-system-so-that-dragging-an-asset-creates-a-component-instance) skapas när du drar en resurs.
+>Det här beteendet kan konfigureras för din installation. Mer information finns i [Konfigurera ett styckesystem så att det skapas en komponentinstans](/help/sites-developing/developing-components.md#configuring-a-paragraph-system-so-that-dragging-an-asset-creates-a-component-instance) när du drar en resurs.
 
 Så här skapar du en komponent genom att dra en av resurstyperna ovan:
 
-1. Kontrollera att sidan är i [**redigeringsläge **](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#page-modes).
-1. Öppna [Innehållssökning](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#the-content-finder).
-1. Dra den önskade resursen till önskad position. Platshållaren [för](#componentplaceholder) komponenten visar var komponenten kommer att placeras.
+1. Kontrollera att sidan är i [**redigeringsläge**.](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#page-modes)
+1. Öppna [Content Finder](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#the-content-finder).
+1. Dra den önskade resursen till önskad position. [komponentplatshållaren](#componentplaceholder) visar var komponenten kommer att placeras.
 
    En komponent som passar resurstypen skapas på den önskade platsen, den innehåller den valda resursen.
 
-1. [Redigera](#editmovecopypastedelete) komponenten vid behov.
+1. [Redigera ](#editmovecopypastedelete) komponenten om det behövs.
 
 ## Redigera en komponent (innehåll och egenskaper) {#editing-a-component-content-and-properties}
 
 Om du vill redigera ett befintligt stycke gör du något av följande:
 
-* **Dubbelklicka på** stycket för att öppna det. Du ser samma fönster som när du skapade stycket med det befintliga innehållet. Make your changes and click **OK**.
+* **Dubbelklicka** på stycket för att öppna det. Du ser samma fönster som när du skapade stycket med det befintliga innehållet. Gör ändringarna och klicka på **OK**.
 
-* **Högerklicka på** stycket och klicka på **Redigera**.
+* **Högerklicka** på stycket och klicka på  **Redigera**.
 
-* **Klicka** två gånger på stycket (en långsam dubbelklickning) för att gå in i läget för redigering på plats. Du kan redigera texten direkt på sidan i stället för i ett dialogrutefönster. I det här läget visas ett verktygsfält högst upp på sidan. Gör bara ändringarna så sparas de automatiskt.
+* **Klicka** två gånger på stycket (ett långsamt dubbelklick) för att gå in i redigeringsläget på plats. Du kan redigera texten direkt på sidan i stället för i ett dialogrutefönster. I det här läget visas ett verktygsfält högst upp på sidan. Gör bara ändringarna så sparas de automatiskt.
 
 ## Flytta en komponent {#moving-a-component}
 
@@ -138,7 +142,7 @@ Så här flyttar du ett stycke:
 
    ![screen_shot_2012-02-15at120030pm](assets/screen_shot_2012-02-15at120030pm.png)
 
-## Ta bort en komponent {#deleting-a-component}
+## Tar bort en komponent {#deleting-a-component}
 
 Så här tar du bort ett stycke:
 
@@ -147,23 +151,23 @@ Så här tar du bort ett stycke:
    ![screen_shot_2012-02-15at120220pm](assets/screen_shot_2012-02-15at120220pm.png)
 
 1. Välj **Ta bort** på menyn. AEM WCM begär en bekräftelse på att du vill ta bort stycket eftersom den här åtgärden inte kan ångras.
-1. Click **OK**.
+1. Klicka på **OK**.
 
 >[!NOTE]
 >
->Om du har angett att [användaregenskaperna ska visa verktygsfältet](/help/sites-classic-ui-authoring/author-env-user-props.md) Global redigering kan du även utföra vissa åtgärder på styckena med knapparna **Kopiera**, **Klipp ut**, **Klistra** in och **Ta bort** .
+>Om du har ställt in dina [användaregenskaper så att det globala redigeringsverktygsfältet](/help/sites-classic-ui-authoring/author-env-user-props.md) visas, kan du även utföra vissa åtgärder på styckena genom att använda knapparna **Kopiera**, **Klipp ut**, **Klistra in**, **Ta bort**.
 >
->Det finns även olika [kortkommandon](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md) .
+>Det finns även olika [kortkommandon](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md).
 
 ## Klipp ut/kopiera/klistra in en komponent {#cut-copy-paste-a-component}
 
-Precis som när du [tar bort en komponent](#deleting-a-component) kan du använda snabbmenyn för att kopiera, klippa ut och/eller klistra in en komponent
+Precis som när [du tar bort en komponent](#deleting-a-component) kan du använda snabbmenyn för att kopiera, klippa ut och/eller klistra in en komponent
 
 >[!NOTE]
 >
->Om du har angett att [användaregenskaperna ska visa verktygsfältet](/help/sites-classic-ui-authoring/author-env-user-props.md) Global redigering kan du även utföra vissa åtgärder på styckena med knapparna **Kopiera**, **Klipp ut**, **Klistra** in och **Ta bort** .
+>Om du har ställt in dina [användaregenskaper så att det globala redigeringsverktygsfältet](/help/sites-classic-ui-authoring/author-env-user-props.md) visas, kan du även utföra vissa åtgärder på styckena genom att använda knapparna **Kopiera**, **Klipp ut**, **Klistra in**, **Ta bort**.
 >
->Det finns även olika [kortkommandon](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md) .
+>Det finns även olika [kortkommandon](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md).
 
 >[!NOTE]
 >
@@ -173,9 +177,9 @@ Precis som när du [tar bort en komponent](#deleting-a-component) kan du använd
 
 Ärvda komponenter kan vara produkten av olika scenarier, bland annat:
 
-* [Hantering](/help/sites-administering/msm.md)av flera platser. även i kombination med [ställningar](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md#scaffolding-with-msm-inheritance).
+* [Hantering](/help/sites-administering/msm.md) av flera platser. även i kombination med  [ställningar](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md#scaffolding-with-msm-inheritance).
 
-* [Startar](/help/sites-classic-ui-authoring/classic-launches.md) (baserat på livecopy).
+* [Startar](/help/sites-classic-ui-authoring/classic-launches.md)  (när baserat på livecopy).
 * Särskilda komponenter. till exempel det ärvda styckesystemet i Geometrixx.
 
 Du kan avbryta (och sedan återaktivera) arvet. Beroende på vilken komponent det gäller kan det här vara tillgängligt från:
@@ -185,9 +189,11 @@ Du kan avbryta (och sedan återaktivera) arvet. Beroende på vilken komponent de
    Om en komponent är en del av en livecopy eller en start visas den med en hänglåsikon. Du kan klicka på hänglåset för att avbryta arvet.
 
    * hänglåsikonen visas när komponenten är markerad; till exempel:
+
    ![chlimage_1-72](assets/chlimage_1-72.png)
 
    * hänglåset visas också i komponentdialogen, till exempel:
+
    ![chlimage_1-73](assets/chlimage_1-73.png)
 
 1. **Ett ärvt styckesystem**
@@ -196,9 +202,9 @@ Du kan avbryta (och sedan återaktivera) arvet. Beroende på vilken komponent de
 
    ![chlimage_1-74](assets/chlimage_1-74.png)
 
-## Lägga till anteckningar {#adding-annotations}
+## Lägger till anteckningar {#adding-annotations}
 
-[Anteckningar](/help/sites-classic-ui-authoring/classic-page-author-annotations.md) gör att andra författare kan ge feedback på ditt innehåll. Detta används ofta för granskning och validering.
+[Med ](/help/sites-classic-ui-authoring/classic-page-author-annotations.md) anteckningar kan andra författare ge feedback på ditt innehåll. Detta används ofta för granskning och validering.
 
 ## Förhandsgranska sidor {#previewing-pages}
 
@@ -220,25 +226,25 @@ Det finns två ikoner i den nedre kanten av sidesparten som är viktiga för att
 
 ## Sök och ersätt {#find-replace}
 
-För större skalredigeringar av samma fras kan du med menyalternativet **[Sök och ersätt](/help/sites-classic-ui-authoring/author-env-search.md#find-and-replace)**söka efter och ersätta flera förekomster av en sträng i ett avsnitt på webbplatsen.
+För större skalredigeringar av samma fras kan du med menyalternativet **[Sök och ersätt](/help/sites-classic-ui-authoring/author-env-search.md#find-and-replace)** söka efter och ersätta flera förekomster av en sträng i ett avsnitt på webbplatsen.
 
 ## Låsa en sida {#locking-a-page}
 
-Med AEM kan du låsa en sida så att ingen annan kan ändra innehållet. Detta är praktiskt när du gör många ändringar på en viss sida eller när du behöver frysa en sida en kort stund.
+AEM kan du låsa en sida så att ingen annan kan ändra innehållet. Detta är praktiskt när du gör många ändringar på en viss sida eller när du behöver frysa en sida en kort stund.
 
 >[!CAUTION]
 >
->Låsning av en sida bör användas med försiktighet eftersom den enda person som kan låsa upp en sida är den person som har låst den (eller ett konto med administratörsbehörighet).
+>Låsning av en sida bör användas med försiktighet eftersom den enda person som kan låsa upp en sida är den person som låste den (eller ett konto med administratörsbehörighet).
 
 Så här låser du en sida:
 
-1. Markera den sida som du vill låsa på fliken **Webbplatser** .
+1. På fliken **Webbplatser** väljer du den sida som du vill låsa.
 1. Dubbelklicka på sidan för att öppna den för redigering.
 1. På fliken **Sida** i sidosparken väljer du **Lås sida**:
 
    ![screen_shot_2012-02-08at15750pm](assets/screen_shot_2012-02-08at15750pm.png)
 
-   Ett meddelande visar att sidan är låst för andra användare. Dessutom visas sidan som låst i den högra rutan i konsolen **Webbplatser** , där AEM WCM anger vilken användare som har låst sidan.
+   Ett meddelande visar att sidan är låst för andra användare. I den högra rutan i konsolen **Webbplatser** visar AEM WCM sidan som låst och anger vilken användare som har låst sidan.
 
    ![screen_shot_2012-02-08at20657pm](assets/screen_shot_2012-02-08at20657pm.png)
 
@@ -246,7 +252,7 @@ Så här låser du en sida:
 
 Så här låser du upp en sida:
 
-1. Markera den sida som du vill låsa upp på fliken **Webbplatser** .
+1. På fliken **Webbplatser** väljer du den sida som du vill låsa upp.
 1. Dubbelklicka på sidan för att öppna den.
 1. På fliken **Sida** i sidosparken väljer du **Lås upp sida**.
 
@@ -261,13 +267,13 @@ När du ångrar eller gör om borttagning, tillägg eller omplacering av ett ell
 
 >[!NOTE]
 >
->Se [Ångra och Gör om sidredigeringar - Teoriet](#undoing-and-redoing-page-edits-the-theory) innehåller alla detaljer om vad som är möjligt när du ångrar och gör om sidredigeringar.
+>Se [Ångra och Gör om sidredigeringar - Teoriet](#undoing-and-redoing-page-edits-the-theory) för mer information om vad som är möjligt när du ångrar och gör om sidredigeringar.
 
 ## Ångra och göra om sidredigeringar - The Theory {#undoing-and-redoing-page-edits-the-theory}
 
 >[!NOTE]
 >
->Systemadministratören kan [konfigurera olika aspekter av funktionerna](/help/sites-administering/config-undo.md) Ångra/Gör om enligt kraven för din instans.
+>Systemadministratören kan [konfigurera olika aspekter av funktionerna Ångra/Gör om](/help/sites-administering/config-undo.md) enligt kraven för din instans.
 
 AEM lagrar en historik över åtgärder som du utför och i vilken ordning du utförde dem. Du ångrar därför flera åtgärder i den ordning som du utförde dem. Sedan kan du använda gör om för att återanvända en eller flera av åtgärderna.
 
@@ -281,7 +287,8 @@ Funktionen för kommandona ångra och gör om liknar den i andra program. Använ
 >
 >* gör om åtgärder så länge du inte har gjort någon sidredigering sedan du använde Ångra.
 >* Ångra högst 20 redigeringsåtgärder (standardinställning).
->* Du kan även använda [kortkommandon](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md) för att ångra och göra om.
+>* Använd även [kortkommandon](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md) för att ångra och göra om.
+
 >
 
 
