@@ -1,8 +1,8 @@
 ---
 title: Anpassa bilder som används i flödesåtgärder
 seo-title: Anpassa bilder som används i flödesåtgärder
-description: Hur man anpassar bilderna som används i vägåtgärder i LiveCycle AEM Forms.
-seo-description: Hur man anpassar bilderna som används i vägåtgärder i LiveCycle AEM Forms.
+description: Hur man anpassar bilderna som används i vägåtgärder på arbetsytan i LiveCycle AEM Forms.
+seo-description: Hur man anpassar bilderna som används i vägåtgärder på arbetsytan i LiveCycle AEM Forms.
 uuid: 42608376-587e-4b57-a9d5-8f9ebd981426
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -17,9 +17,9 @@ ht-degree: 0%
 ---
 
 
-# Anpassa bilder som används i flödesåtgärder {#customize-images-used-in-route-actions}
+# Anpassa bilder som används i vägåtgärder {#customize-images-used-in-route-actions}
 
-Om du vill anpassa bilderna som används i vägåtgärder utför du stegen som beskrivs i [Allmänna steg för anpassning](/help/forms/using/generic-steps-html-workspace-customization.md) , följt av stegen som beskrivs i den här artikeln.
+Om du vill anpassa bilderna som används i flödesåtgärder följer du de steg som beskrivs i [Allmänna anpassningssteg](/help/forms/using/generic-steps-html-workspace-customization.md) och de steg som beskrivs i den här artikeln.
 
 ## Bilder för vägåtgärder {#images-for-route-actions}
 
@@ -27,11 +27,11 @@ Om du vill anpassa bilderna som används i vägåtgärder utför du stegen som b
 
    `/apps/ws/css/newStyle.css`
 
-   Till exempel: Lägg till ett nytt format `myStyle1`som kallas nedan och överför bildfilen `myStyleIcon1.png` till mappen `/apps/ws/image`s med en WebDAV-klient.
+   Till exempel: Lägg till ett nytt format med namnet `myStyle1`som visas nedan och överför bildfilen `myStyleIcon1.png` till mappen `/apps/ws/image`s med en WebDAV-klient.
 
    >[!NOTE]
    >
-   >Mer information om WebDAV-åtkomst finns på [https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://docs.adobe.com/docs/en/crx/current/how_to/webdav_access.html).
+   >Mer information om WebDAV-åtkomst finns i [https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://docs.adobe.com/docs/en/crx/current/how_to/webdav_access.html).
 
    >[!NOTE]
    >
@@ -45,9 +45,9 @@ Om du vill anpassa bilderna som används i vägåtgärder utför du stegen som b
        }
    ```
 
-## Åtgärdspopup för uppgiftslisteåtgärd {#task-list-task-action-popup}
+## Åtgärdsfönster för uppgiftslistans åtgärd {#task-list-task-action-popup}
 
-1. Skapa en åtgärdspopup för uppgiftslista, se [Skapa AEM Forms-arbetsytekod](introduction-customizing-html-workspace.md#building-html-workspace-code). Dev-paketet måste användas.
+1. Skapa ett åtgärdsfönster för uppgiftslistan, se [Skapa AEM Forms-arbetsytekod](introduction-customizing-html-workspace.md#building-html-workspace-code). Dev-paketet måste användas.
 
 1. Kopiera `/libs/ws/js/runtime/templates/task.html` till `/apps/ws/js/runtime/templates/task.html`.
 
@@ -81,7 +81,7 @@ Om du vill anpassa bilderna som används i vägåtgärder utför du stegen som b
                <%}%>
    ```
 
-1. Om namnet på CSS-formatet skiljer sig från namnet på vägåtgärden som kommer från servern ändrar du följande kod i `/apps/ws/js/runtime/templates/task.html`. Den lägger till en hög med serverletsvillkoren för att mappa formatet med flödesåtgärdens namn. `if-else`
+1. Om namnet på CSS-formatet skiljer sig från namnet på vägåtgärden som kommer från servern ändrar du följande kod i `/apps/ws/js/runtime/templates/task.html`. Den lägger till en hög med serverletvillkoren `if-else` för att mappa formatet med vägåtgärdens namn.
 
 ```jsp
 <%if(routeList == null){%>
@@ -117,7 +117,7 @@ To
             <%}%>
 ```
 
-## Åtgärdsfönster för aktivitetsåtgärd för aktivitetsinformation {#task-details-task-action-popup}
+## Åtgärdsåtgärdspopup för aktivitetsinformation {#task-details-task-action-popup}
 
 1. Kopiera `/libs/ws/js/runtime/templates/taskdetails.html` till `/apps/ws/js/runtime/templates/taskdetails.html`.
 
@@ -141,7 +141,7 @@ To
                        <%}%>
    ```
 
-1. Om namnet på CSS-formatet skiljer sig från namnet på vägåtgärden som kommer från servern ändrar du följande kod i `/apps/ws/js/runtime/templates/taskdetails.html`. Den lägger till en hög med `if-else` serverletvillkor för att mappa formatet med vägåtgärdens namn.
+1. Om namnet på CSS-formatet skiljer sig från namnet på vägåtgärden som kommer från servern ändrar du följande kod i `/apps/ws/js/runtime/templates/taskdetails.html`. Den lägger till en hög med `if-else` serverletsvillkor för att mappa formatet med vägåtgärdens namn.
 
    ```jsp
    <%for (var i = 0; i < availableCommands.directCommands.length; i++) {%>
@@ -169,7 +169,7 @@ To
                <%}%>
    ```
 
-1. Öppna `/apps/ws/js/registry.js` för redigering och sök efter följande text:
+1. Öppna `/apps/ws/js/registry.js` för att redigera och sök efter följande text:
    `"text!/lc/libs/ws/js/runtime/templates/taskdetails.html"`
 
 1. Ersätt texten med följande:
