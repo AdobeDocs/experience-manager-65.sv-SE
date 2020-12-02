@@ -35,30 +35,30 @@ Konfigurera följande två tjänster för att identifiera namnet på attributet 
 * Inloggningsmodulen.
 * Tjänsten för SSO-autentisering.
 
-Du måste ange samma attributnamn för båda tjänsterna. Attributet ingår i `SimpleCredentials` det som anges `Repository.login`. Attributets värde är irrelevant och ignoreras, och bara dess närvaro är viktig och verifierad.
+Du måste ange samma attributnamn för båda tjänsterna. Attributet ingår i `SimpleCredentials` som anges för `Repository.login`. Attributets värde är irrelevant och ignoreras, och bara dess närvaro är viktig och verifierad.
 
 ## Konfigurerar enkel inloggning {#configuring-sso}
 
-Om du vill konfigurera enkel inloggning för en AEM instans måste du konfigurera [autentiseringshanteraren](/help/sites-deploying/osgi-configuration-settings.md#adobegranitessoauthenticationhandler)för enkel inloggning:
+Om du vill konfigurera enkel inloggning för en AEM instans måste du konfigurera [autentiseringshanteraren för enkel inloggning](/help/sites-deploying/osgi-configuration-settings.md#adobegranitessoauthenticationhandler):
 
-1. När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Mer information och rekommendationer finns i [Konfigurera OSGi](/help/sites-deploying/configuring-osgi.md) .
+1. När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Mer information och rekommenderade metoder finns i [Konfigurera OSGi](/help/sites-deploying/configuring-osgi.md).
 
    För NTLM:
 
-   * **Sökväg:** vid behov, till exempel `/`
-   * **Rubriknamn**: `LOGON_USER`
-   * **ID-format**: `^<DOMAIN>\\(.+)$`
+   * **sökväg:** efter behov; till exempel  `/`
+   * **Rubriknamn**:  `LOGON_USER`
+   * **ID-format**:  `^<DOMAIN>\\(.+)$`
 
       Där `<*DOMAIN*>` ersätts av ditt eget domännamn.
    För CoSign:
 
-   * **Sökväg:** vid behov, till exempel `/`
+   * **sökväg:** efter behov; till exempel  `/`
    * **Rubriknamn**: remote_user
    * **ID-format:** asIs
 
    För SiteMinder:
 
-   * **Sökväg:** vid behov, till exempel `/`
+   * **sökväg:** efter behov; till exempel  `/`
    * **Rubriknamn:** SM_USER
    * **ID-format**: asIs
 
@@ -90,8 +90,8 @@ Om du vill konfigurera enkel inloggning för en AEM instans måste du konfigurer
 
 >
 >
-I `disp_iis.ini` uppsättningen:
->(mer information finns i [Installera Dispatcher med Microsoft Internet Information Server](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html#microsoft-internet-information-server) )
+I `disp_iis.ini`-uppsättningen:
+>(Mer information finns i [installera Dispatcher med Microsoft Internet Information Server](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html#microsoft-internet-information-server))
 >
 >* `servervariables=1` (vidarebefordrar IIS-servervariabler som begäranrubriker till fjärrinstansen)
 >* `replaceauthorization=1` (ersätter en rubrik med namnet&quot;Authorization&quot;, som inte är&quot;Basic&quot;, med motsvarande&quot;Basic&quot;)
@@ -103,17 +103,17 @@ I IIS:
 >* inaktivera **anonym åtkomst**
    >
    >
-* aktivera **integrerad Windows-autentisering**
+* aktivera **Integrerad Windows-autentisering**
 
 >
 
 
 
-Du kan se vilken autentiseringshanterare som tillämpas på valfri del av innehållsträdet med hjälp av alternativet **Autentiserare** i Felix Console. till exempel:
+Du kan se vilken autentiseringshanterare som används i valfri del av innehållsträdet med alternativet **Authenticator** i Felix Console; till exempel:
 
 `http://localhost:4502/system/console/slingauth`
 
-Hanteraren som bäst matchar banan efterfrågas först. Om du till exempel konfigurerar handler-A för sökvägen `/` och handler-B för sökvägen `/content`kommer en begäran att `/content/mypage.html` fråga handler-B först.
+Hanteraren som bäst matchar banan efterfrågas först. Om du till exempel konfigurerar handler-A för sökvägen `/` och handler-B för sökvägen `/content` kommer en begäran till `/content/mypage.html` att fråga handler-B först.
 
 ![screen_shot_2012-02-15at21006pm](assets/screen_shot_2012-02-15at21006pm.png)
 
@@ -129,15 +129,15 @@ Cookie: TestCookie=admin
 
 Använda följande konfiguration:
 
-* **Sökväg**: `/`
+* **Sökväg**:  `/`
 
-* **Rubriknamn**: `TestHeader`
+* **Rubriknamn**:  `TestHeader`
 
-* **Cookie-namn**: `TestCookie`
+* **Cookie-namn**:  `TestCookie`
 
-* **Parameternamn**: `TestParameter`
+* **Parameternamn**:  `TestParameter`
 
-* **ID-format**: `AsIs`
+* **ID-format**:  `AsIs`
 
 Svaret skulle vara:
 
@@ -160,14 +160,14 @@ Transfer-Encoding: chunked
 Detta fungerar även om du begär:
 `http://localhost:4502/libs/cq/core/content/welcome.html?TestParameter=admin`
 
-Du kan också använda följande bock-kommando för att skicka sidhuvudet till `TestHeader` `admin:`
+Du kan också använda följande curl-kommando för att skicka `TestHeader`-huvudet till `admin:`
 `curl -D - -H "TestHeader: admin" http://localhost:4502/libs/cq/core/content/welcome.html`
 
 >[!NOTE]
 >
 >När du använder parametern request i en webbläsare visas bara en del av HTML - utan CSS. Detta beror på att alla begäranden från HTML görs utan parametern request.
 
-## Ta bort AEM utloggningslänkar {#removing-aem-sign-out-links}
+## Tar bort AEM utloggningslänkar {#removing-aem-sign-out-links}
 
 När du använder enkel inloggning hanteras inloggning och utloggning externt, så att AEM egna utloggningslänkar inte längre kan användas och bör tas bort.
 
