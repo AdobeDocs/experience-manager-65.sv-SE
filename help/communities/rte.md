@@ -24,15 +24,15 @@ ht-degree: 1%
 
 Med en textredigerare kan du skriva text med markeringar.
 
-För webbgruppskomponenter, som liknar redigeraren för [formaterad text i författarmiljön](../../help/sites-authoring/rich-text-editor.md), påverkar det text som anges i publiceringsmiljön.
+För webbgruppskomponenter, som liknar [textredigeraren i författarmiljön](../../help/sites-authoring/rich-text-editor.md), påverkar det text som anges i publiceringsmiljön.
 
 ![textredigerare](assets/rich-text-editor.png)
 
-## Aktivera RTF-redigerare {#enabling-rich-text-editor}
+## Aktivera RTF-redigeraren {#enabling-rich-text-editor}
 
-Communities-komponenter som tillåter användargenererat innehåll (UGC) kan aktiveras för att tillåta RTE. Beroende på om komponenten har lagts till på en sida eller inkluderats i en [funktion](functions.md)kan RTE vara aktiverat som standard.
+Communities-komponenter som tillåter användargenererat innehåll (UGC) kan aktiveras för att tillåta RTE. Beroende på om komponenten har lagts till på en sida eller inkluderats i en [funktion](functions.md), kan RTE vara aktiverat som standard.
 
-Om den inte är aktiverad anger du bara [redigeringsläget](sites-console.md#authoring-site-content)för författaren, markerar komponenten för redigering och markerar `Rich Text Editor` kryssrutan.
+Om den inte är aktiverad anger du bara [redigeringsläget för författare](sites-console.md#authoring-site-content), markerar komponenten för redigering och markerar kryssrutan `Rich Text Editor`.
 
 RTE är tillgängligt för följande Communities-komponenter:
 
