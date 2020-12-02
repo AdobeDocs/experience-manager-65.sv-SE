@@ -21,11 +21,11 @@ ht-degree: 10%
 
 # Projekt{#projects}
 
-Med projekt kan du gruppera resurser i en enhet. En gemensam, delad miljö gör det enkelt att hantera projekt. De typer av resurser som du kan associera med ett projekt kallas för Plattor i AEM. Rutorna kan innehålla projekt- och teaminformation, resurser, arbetsflöden och andra typer av information, vilket beskrivs i detalj i [Projektrutor.](#project-tiles)
+Med projekt kan du gruppera resurser i en enhet. En gemensam, delad miljö gör det enkelt att hantera projekt. De typer av resurser som du kan associera med ett projekt kallas för Plattor i AEM. Rutorna kan innehålla projekt- och teaminformation, resurser, arbetsflöden och andra typer av information, vilket beskrivs i detalj i [Projektfiler.](#project-tiles)
 
 >[!CAUTION]
 >
->För användare i projekt som vill se andra användare/grupper när de använder projektfunktioner som att skapa projekt, skapa uppgifter/arbetsflöden, se och hantera team, måste dessa användare ha läsåtkomst på **/hem/användare** och **/hem/grupper**. Det enklaste sättet att implementera detta är att ge **projekt-användare** -gruppen läsåtkomst till **/hem/användare** och**/hem/grupper**.
+>För användare i projekt som vill se andra användare/grupper när de använder projektfunktioner som att skapa projekt, skapa uppgifter/arbetsflöden, se och hantera team, måste dessa användare ha läsåtkomst på **/home/users** och **/home/groups**. Det enklaste sättet att implementera detta är att ge gruppen **projects-users** läsåtkomst till **/home/users** och**/home/groups**.
 
 Som användare kan du göra följande:
 
@@ -48,12 +48,12 @@ Projektkonsolen är den plats där du får åtkomst till och hanterar dina proje
 ![screen-shot_2019-03-05at125110](assets/screen-shot_2019-03-05at125110.png)
 
 * Välj **Tidslinje** och sedan ett projekt för att visa tidslinjen.
-* Klicka/tryck på **Välj** för att öppna markeringsläget.
+* Klicka/tryck på **Välj** för att gå till markeringsläget.
 * Klicka på **Skapa** för att lägga till projekt.
-* **Med Växla aktiva projekt** kan du växla mellan alla projekt och endast de som är aktiva.
-* **Med Visa statistikvy** kan du visa projektstatistik för slutförda uppgifter.
+* **Växla mellan aktiva** projekt och endast aktiva projekt.
+* **Visa** statistikvyer - visa projektstatistik för slutförda uppgifter.
 
-## Projektpaneler {#project-tiles}
+## Projektrutor {#project-tiles}
 
 Med Projekt kan du koppla olika typer av information till dina projekt. Dessa kallas **plattor**. Var och en av plattorna och vilken typ av information de innehåller beskrivs i detta avsnitt.
 
@@ -72,7 +72,7 @@ Du kan associera följande rutor med ditt projekt. Var och en av dem beskrivs i 
 
 ### Assets {#assets}
 
-I **resurspanelen** kan du samla alla resurser som du använder för ett visst projekt.
+I rutan **Resurser** kan du samla alla resurser som du använder för ett visst projekt.
 
 ![chlimage_1-70](assets/chlimage_1-70.png)
 
@@ -88,9 +88,9 @@ Precis som resurser kan du lägga till [resurssamlingar](/help/assets/manage-col
 
 Lägg till en samling genom att klicka på **Lägg till samling** och välja önskad samling i listan.
 
-### Erfarenheter {#experiences}
+### Upplevelser {#experiences}
 
-I **panelen Erfarenheter** kan du lägga till en mobilapp, en webbplats eller en publikation i projektet.
+Med **Experience**-panelen kan du lägga till en mobilapp, en webbplats eller en publikation i projektet.
 
 ![chlimage_1-73](assets/chlimage_1-73.png)
 
@@ -98,7 +98,7 @@ Ikonerna anger vilken typ av upplevelse som visas: webbplats, mobilapp eller pub
 
 ![chlimage_1-74](assets/chlimage_1-74.png)
 
-Välj sökväg för miniatyrbilderna och ändra miniatyrbilden för upplevelsen om det är tillämpligt. Erfarenheter grupperas tillsammans i **panelen Erfarenheter** .
+Välj sökväg för miniatyrbilderna och ändra miniatyrbilden för upplevelsen om det är tillämpligt. Erfarenheter grupperas tillsammans i **Experience**-panelen.
 
 ### Länkar {#links}
 
@@ -142,11 +142,11 @@ Du kan lägga till och ta bort teammedlemmar från teamet. Dessutom kan du redig
 
 ### Landningssidor {#landing-pages}
 
-Med plattan **Landningssidor** kan du begära en ny landningssida.
+Med sidpanelen **Landning** Sidor kan du begära en ny landningssida.
 
 ![chlimage_1-83](assets/chlimage_1-83.png)
 
-Det här arbetsflödet beskrivs i [Skapa en startsida](/help/sites-authoring/projects-with-workflows.md#request-landing-page-workflow).
+Det här arbetsflödet beskrivs i [Skapa ett arbetsflöde för landningssida](/help/sites-authoring/projects-with-workflows.md#request-landing-page-workflow).
 
 ### E-post {#emails}
 
@@ -154,27 +154,27 @@ Med rutan **E-post** kan du hantera e-postbegäranden. Det startar arbetsflödet
 
 ![chlimage_1-84](assets/chlimage_1-84.png)
 
-Mer information finns i arbetsflödet [Begär e-post.](/help/sites-authoring/projects-with-workflows.md#request-email-workflow)
+Mer information finns i [Begär e-post-arbetsflödet.](/help/sites-authoring/projects-with-workflows.md#request-email-workflow)
 
 ### Arbetsflöden {#workflows}
 
-Du kan tilldela ditt projekt för att följa vissa arbetsflöden. Om något arbetsflöde körs visas deras status på panelen **Arbetsflöden** i Projekt.
+Du kan tilldela ditt projekt för att följa vissa arbetsflöden. Om några arbetsflöden körs visas deras status i rutan **Arbetsflöden** i Projekt.
 
 ![chlimage_1-85](assets/chlimage_1-85.png)
 
 Du kan tilldela ditt projekt för att följa vissa arbetsflöden. Beroende på vilket projekt du väljer finns olika arbetsflöden tillgängliga.
 
-Dessa beskrivs i [Arbeta med projektarbetsflöden.](/help/sites-authoring/projects-with-workflows.md)
+Dessa beskrivs i [Arbeta med projektarbetsflöden.](/help/sites-authoring/projects-with-workflows.md).
 
 ### Launches {#launches}
 
-I rutan Launches (Starta) visas alla starter som har begärts i ett arbetsflöde för att starta en [begäran.](/help/sites-authoring/projects-with-workflows.md)
+I rutan Launches (Starta) visas alla starter som har begärts med ett [begärandestartarbetsflöde.](/help/sites-authoring/projects-with-workflows.md)
 
 ![chlimage_1-86](assets/chlimage_1-86.png)
 
 ### Uppgifter {#tasks}
 
-Med uppgifter kan du övervaka status för projektrelaterade uppgifter, inklusive arbetsflöden. Uppgifter beskrivs i detalj i [Arbeta med uppgifter](/help/sites-authoring/task-content.md).
+Med uppgifter kan du övervaka status för projektrelaterade uppgifter, inklusive arbetsflöden. Uppgifter beskrivs mer ingående i [Arbeta med uppgifter](/help/sites-authoring/task-content.md).
 
 ![chlimage_1-87](assets/chlimage_1-87.png)
 
@@ -184,8 +184,8 @@ AEM levereras med tre olika mallar:
 
 * Ett enkelt projekt - Ett referensexempel för projekt som inte passar in i andra kategorier (en&quot;catch-all&quot;). Det innehåller tre grundläggande roller (ägare, redigerare och observatörer) och fyra arbetsflöden (projektgodkännande, begäranstart, begäranstartsida och e-postbegäran).
 * Ett medieprojekt - Ett referensexempelprojekt för medierelaterade aktiviteter. Det innehåller flera medierelaterade projektroller (fotografer, redigerare, copywriters, designers, Owners och Observers). Det innehåller även två arbetsflöden för medieinnehåll - Begär kopia (för att begära och granska text) och Produktfoto (för hantering av produktrelaterade foton)
-* [Product Photo Shoot Project](/help/sites-authoring/managing-product-information.md) - Ett referensexempel för hantering av e-handelsrelaterade produktfotografier. Det innehåller roller för fotografer, redigerare, fotoretuscherare, ägare, creative directors, marknadsförare i sociala medier, marknadschefer, granskare och observatörer.
-* [Ett översättningsprojekt](/help/sites-administering/translation.md) - Ett referensexempel för hantering av översättningsrelaterade aktiviteter. Det innehåller tre grundläggande roller (ägare, redigerare och observatörer). Det innehåller två arbetsflöden som du kommer åt i användargränssnittet för arbetsflöden.
+* [Product Photo Shoot Project](/help/sites-authoring/managing-product-information.md)  - Ett referensexempel för hantering av e-handelsrelaterade produktfotografier. Det innehåller roller för fotografer, redigerare, fotoretuscherare, ägare, creative directors, marknadsförare i sociala medier, marknadschefer, granskare och observatörer.
+* [Ett översättningsprojekt](/help/sites-administering/translation.md)  - Ett referensexempel för hantering av översättningsrelaterade aktiviteter. Det innehåller tre grundläggande roller (ägare, redigerare och observatörer). Det innehåller två arbetsflöden som du kommer åt i användargränssnittet för arbetsflöden.
 
 Beroende på vilken mall du väljer har du olika alternativ tillgängliga, särskilt när det gäller användarroller och arbetsflöden.
 
