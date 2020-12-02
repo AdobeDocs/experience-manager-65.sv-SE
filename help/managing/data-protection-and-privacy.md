@@ -39,7 +39,7 @@ Adobe tillhandahåller dokumentation och procedurer (med API:er när sådana fin
 >
 >Data från en annan Adobe On-demand-tjänst, tillsammans med eventuella relaterade sekretessförfrågningar, kommer att kräva åtgärder för den tjänsten.
 >
->Mer information finns i [Adobe Sekretesscenter](https://www.adobe.com/privacy.html).
+>Mer information finns i [Adobe Privacy Center](https://www.adobe.com/privacy.html).
 
 ## Introduktion {#introduction}
 
@@ -87,31 +87,31 @@ Följande diagram visar hur ett arbetsflöde för sekretesspolicy kan se ut (ill
 
 ![Dataskydd och integritet](assets/data-protection-and-privacy-01.png)
 
-## Adobe Experience Manager och beredskap för regelefterlevnad {#aem-and-regulatory-readiness}
+## Adobe Experience Manager och regelberedskap {#aem-and-regulatory-readiness}
 
 Se avsnitten nedan för dokumentation av AEM.
 
-## AEM {#aem-foundation}
+## AEM Foundation {#aem-foundation}
 
-Se [Hantera förfrågningar om dataskydd och sekretess för AEM Foundation](/help/sites-administering/handling-gdpr-requests-for-aem-platform.md).
+Se [Hantera dataskydds- och sekretessförfrågningar för AEM Foundation](/help/sites-administering/handling-gdpr-requests-for-aem-platform.md).
 
-## AEM väljer att slå samman användningsstatistiksamling {#aem-opting-into-aggregate-usage-statistics-collection}
+## AEM väljer att aggregera användningsstatistik {#aem-opting-into-aggregate-usage-statistics-collection}
 
-Se Samling med statistik om [aggregerad användning](/help/sites-deploying/opt-in-aggregated-usage-statistics.md).
+Se [Samlad användningsstatistik](/help/sites-deploying/opt-in-aggregated-usage-statistics.md).
 
 ## AEM Sites {#aem-sites}
 
-Se [AEM Sites - Dataskydd och integritet](/help/sites-administering/gdpr-compliance-sites.md)
+Se [AEM Sites - Dataskydd och sekretesshantering.](/help/sites-administering/gdpr-compliance-sites.md)
 
-## AEM {#aem-commerce}
+## AEM Commerce {#aem-commerce}
 
 Se [AEM Commerce - Data Protection and Privacy Readiness](/help/sites-administering/gdpr-compliance-commerce.md).
 
 ## AEM Mobile {#aem-mobile}
 
-Se [AEM Mobile - Dataskydd och beredskap](/help/mobile/aem-mobile-gdpr-compliance.md)för integritetsskydd.
+Se [AEM Mobile - Dataskydd och sekretesshantering](/help/mobile/aem-mobile-gdpr-compliance.md).
 
-## AEM integrering med Adobe Target och Adobe Analytics {#aem-integration-with-adobe-target-adobe-analytics}
+## AEM integrering med Adobe Target &amp; Adobe Analytics {#aem-integration-with-adobe-target-adobe-analytics}
 
 Dessa Adobe Experience Manager-integreringar är anpassade för dataskydd och sekretess (till exempel GDPR eller CCPA). Inga personuppgifter från Adobe Target eller Adobe Analytics lagras i AEM för integreringarna.
 Mer information finns i:
@@ -122,7 +122,7 @@ Mer information finns i:
 
 ## AEM Communities {#aem-communities}
 
-AEM Communities uppskattar de registrerade rätt till deras dataportabilitet, rätt till åtkomst och rätt att bli bortglömda med hjälp av API:er som är [färdiga](/help/communities/user-ugc-management-service.md). Dessa API:er möjliggör massborttagning och bulkexport av användargenererat innehåll och inaktiverar användarkonton som identifieras med deras auktoriserbara ID:n. Det går dock att permanent ta bort användarkontot genom att ta bort användarnoden i CRXDE Lite, vilket tar bort behovet av enkel avanmälan från systemet.
+AEM Communities uppskattar de registrerade rätt till dataportabilitet, rätt till åtkomst och rätt att bli bortglömd med [färdiga API:er](/help/communities/user-ugc-management-service.md). Dessa API:er möjliggör massborttagning och bulkexport av användargenererat innehåll och inaktiverar användarkonton som identifieras med deras auktoriserbara ID:n. Det går dock att permanent ta bort användarkontot genom att ta bort användarnoden i CRXDE Lite, vilket tar bort behovet av enkel avanmälan från systemet.
 
 Dessutom erbjuder AEM Communities sekretess genom design tack vare sin konsol för massmoderering, som tillåter behöriga medlemmar att hitta och ta bort bidrag och information om användarna. Hanteringskonsolen för medlemmar gör det möjligt att begränsa till att förbjuda en medverkande. Dessutom ger det de registrerade rätt att ta bort de bidrag som de har skapat.
 
@@ -134,6 +134,6 @@ AEM Forms innehåller komponenter och arbetsflöden som samlar in, bearbetar och
 * [Korrespondenshantering](/help/forms/using/correspondence-management-handling-user-data.md)
 * [Integrering med Adobe Sign](/help/forms/using/integration-adobe-sign-handling-user-data.md)
 * [Forms-centrerade arbetsflöden på OSGi](/help/forms/using/forms-workflow-osgi-handling-user-data.md)
-* [Forms JEE-arbetsflöden](/help/forms/using/forms-workflow-jee-handling-user-data.md) (endast AEM Forms JEE)
-* [Dokumentsäkerhet](/help/forms/using/document-security-handling-user-data.md) (endast AEM Forms JEE)
-* [Användarhantering](/help/forms/using/user-management-handling-user-data.md) (endast AEM Forms JEE)
+* [Forms JEE-arbetsflöden](/help/forms/using/forms-workflow-jee-handling-user-data.md)  (endast AEM Forms JEE)
+* [Dokumentsäkerhet](/help/forms/using/document-security-handling-user-data.md)  (endast AEM Forms JEE)
+* [Användarhantering](/help/forms/using/user-management-handling-user-data.md)  (endast AEM Forms JEE)
