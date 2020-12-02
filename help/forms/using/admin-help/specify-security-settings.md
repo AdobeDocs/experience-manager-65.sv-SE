@@ -11,13 +11,16 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 3c017f9a-aa7f-4d12-ba8b-9fd92c029157
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '82'
+ht-degree: 2%
 
 ---
 
 
 # Ange säkerhetsinställningar {#specify-security-settings}
 
-Med Output kan du styra om externa enheter i XML-indata ska matchas. Som standard är de lösta, men du kan ändra detta för att öka säkerheten i AEM-formulärsystemet.
+Med Output kan du styra om externa enheter i XML-indata ska matchas. Som standard är de lösta, men du kan ändra det här beteendet för att öka säkerheten i AEM formulärsystem.
 
 **Förhindra bearbetning av XML-datafiler som innehåller referenser till externa entiteter**
 
