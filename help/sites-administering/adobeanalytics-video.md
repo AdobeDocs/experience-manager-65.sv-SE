@@ -25,7 +25,7 @@ Det finns flera metoder för att spåra videohändelser, varav två är äldre a
 
 >[!NOTE]
 >
->Innan du fortsätter kontrollerar du att du har överfört en **uppspelningsbar video** i AEM.
+>Innan du fortsätter bör du kontrollera att du har överfört en **uppspelningsbar video** i AEM.
 >
 >Om du vill vara säker på att dina videofilmer spelas upp på sidan kan du läsa **[den här självstudiekursen](/help/sites-authoring/default-components-foundation.md#video)** för mer information om hur du kodar om videofiler i AEM.
 
@@ -41,7 +41,7 @@ Använd följande procedur för att konfigurera ett ramverk för videospårning 
 
 1. [Skapa en Adobe Analytics-konfiguration och ett ramverk](/help/sites-administering/adobeanalytics.md).
 
-   * Exemplen i de följande avsnitten använder namnet **my-sc-configuration** för konfigurationen och **videoflödet** för ramverket.
+   * Exemplen i följande avsnitt använder namnet **my-sc-configuration** för konfigurationen och **videofunktionen** för ramverket.
 
 1. På ramverkssidan väljer du ett RSID och anger användningen till alla. ([https://localhost:4502/cf#/etc/cloudservices/sitecatalyst/videoconf/videofw.html](https://localhost:4502/cf#/etc/cloudservices/sitecatalyst/videoconf/videofw.html))
 1. Dra videokomponenten från kategorin Allmänt i Sidekick till ramverket.
@@ -82,7 +82,7 @@ I följande tabell beskrivs CQ-standardvariablerna som anges för metoden Milest
   </tr>
   <tr>
    <td>eventdata.videoName </td>
-   <td>Variabler som mappas till detta kommer att innehålla videons <strong>användarvänliga</strong> namn (<strong>titel</strong>) om det anges i DAM. Om detta inte anges skickas videons <strong>filnamn</strong> i stället. Skickas endast en gång, i början av uppspelningen av en video.</td>
+   <td>Variabler som mappas till detta kommer att innehålla <strong>användarvänliga</strong>-namn (<strong>Title</strong>) för videon om de anges i DAM; Om detta inte anges skickas videons <strong>filnamn</strong> i stället. Skickas endast en gång, i början av uppspelningen av en video.</td>
   </tr>
   <tr>
    <td>eventdata.videoFileName </td>
@@ -114,7 +114,7 @@ I följande tabell beskrivs CQ-standardvariablerna som anges för metoden Milest
   </tr>
   <tr>
    <td>eventdata.a.contentType </td>
-   <td>Sänds på varje milstolpe. visas som föregående3 i Adobe Analytics-samtalet, vanligen som "video"<br /> </td>
+   <td>Sänds på varje milstolpe. visas som föregående3 i Adobe Analytics-samtalet, vanligen som"video"<br /> </td>
   </tr>
   <tr>
    <td>eventdata.a.media.name </td>
@@ -129,7 +129,7 @@ I följande tabell beskrivs CQ-standardvariablerna som anges för metoden Milest
 
 >[!NOTE]
 >
->Du kan ange en videos **användarvänliga** namn genom att öppna videon för redigering i DAM och ange metadatafältet **Titel** till önskat namn.
+>Du kan ange ett användarvänligt **namn för en video genom att öppna videon för redigering i DAM och ställa in metadatafältet** Title **på det önskade namnet.**
 
 1. När du har valt milstolpar som spårningsmetod anger du en kommaseparerad lista med spårningsförskjutningar i sekunder i rutan Spåra förskjutning. Följande värde definierar till exempel milstolpar vid 4, 8, 16, 20 och 28 sekunder efter videostarten:
 
@@ -141,10 +141,10 @@ I följande tabell beskrivs CQ-standardvariablerna som anges för metoden Milest
 
 1. Om du vill mappa CQ-variablerna till Adobe Analytics-egenskaper drar du Adobe Analytics-egenskaperna från ContentFinder bredvid CQ-variabeln för komponenten.
 
-   Information om hur du optimerar mappningarna finns i guiden [Mäta video i Adobe Analytics](https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html) .
+   Information om hur du optimerar mappningarna finns i guiden [Mäta video i Adobe Analytics](https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html).
 
-1. [Lägg till ramverket](/help/sites-administering/adobeanalytics.md) på sidan.
-1. Om du vill testa konfigurationen i **förhandsgranskningsläget** spelar du upp videon och får Adobe Analytics-anrop att utlösa.
+1. [Lägg till ](/help/sites-administering/adobeanalytics.md) ramverket på sidan.
+1. Om du vill testa konfigurationen i **förhandsgranskningsläge** spelar du upp videon och får Adobe Analytics-anrop att utlösa.
 
 De följande exemplen på spårningsdata för Adobe Analytics gäller för spårning av milstolpar med hjälp av spårförskjutningar på 4,8,16,20 och 24, och följande mappningar för CQ-variablerna:
 
@@ -229,7 +229,7 @@ Anrop till Adobe Analytics som använder exemplet ska se ut så här när de vis
 
 ![chlimage_1-128](assets/chlimage_1-128.png)
 
-*Detta är det **första anropet**till Adobe Analytics som innehåller följande värden:*
+*Detta är det **första**anropet till Adobe Analytics som innehåller följande värden:*
 
 * *prop1 och eVar1 för eventdata.a.media.name,*
 * *props2-4, tillsammans med eVar2 och eVar3 som innehåller contentType (video) och segment (1:O:1-4)*
@@ -237,7 +237,7 @@ Anrop till Adobe Analytics som använder exemplet ska se ut så här när de vis
 
 ![chlimage_1-129](assets/chlimage_1-129.png)
 
-*Detta är det **tredje samtalet**till Adobe Analytics:*
+*Detta är den **tredje**kallelsen till Adobe Analytics:*
 
 * *prop1 och eVar1 innehåller a.media.name;*
 * *event1 eftersom ett segment har visats*
@@ -250,7 +250,7 @@ Anrop till Adobe Analytics som använder exemplet ska se ut så här när de vis
 Metoden Icke-äldre milstolpar liknar metoden milstolpar, förutom att milstolpar definieras med procentvärden av spårlängden. Följande är gemensamma:
 
 * När en videouppspelning passerar en milstolpe anropar sidan Adobe Analytics för att spåra händelsen.
-* Den [statiska uppsättningen CQ-variabler](#cqvars) som är definierade för mappning med Adobe Analytics-egenskaper.
+* Den statiska uppsättningen [CQ-variabler](#cqvars) som definieras för mappning med Adobe Analytics-egenskaper.
 * För varje milstolpe som du definierar skapar komponenten en CQ-variabel som du kan mappa till en Adobe Analytics-egenskap.
 
 Namnet på CQ-variablerna har följande format:
@@ -276,14 +276,14 @@ eventdata.events.milestoneXX
 
 1. Om du vill mappa CQ-variablerna till Adobe Analytics-egenskaper drar du Adobe Analytics-egenskaperna från ContentFinder bredvid CQ-variabeln för komponenten.
 
-   Information om hur du optimerar mappningarna finns i guiden [Mäta video i Adobe Analytics](https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html) .
+   Information om hur du optimerar mappningarna finns i guiden [Mäta video i Adobe Analytics](https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html).
 
-1. [Lägg till ramverket](/help/sites-administering/adobeanalytics.md) på sidan.
-1. Om du vill testa konfigurationen i **förhandsgranskningsläget** spelar du upp videon och får Adobe Analytics-anrop att utlösa.
+1. [Lägg till ](/help/sites-administering/adobeanalytics.md) ramverket på sidan.
+1. Om du vill testa konfigurationen i **förhandsgranskningsläge** spelar du upp videon och får Adobe Analytics-anrop att utlösa.
 
 ## Äldre milstolpar {#legacy-milestones}
 
-Den här metoden liknar metoden milstolpar med skillnaden att de milstolpar som anges i fältet *Spårningsförskjutning* är procentvärden i stället för att ange punkter i videon.
+Den här metoden liknar metoden milstolpar med skillnaden att de milstolpar som anges i *spårningsförskjutningen* är procentvärden i stället för att ange punkter i videon.
 
 >[!NOTE]
 >
@@ -299,7 +299,7 @@ Den här metoden liknar metoden milstolpar med skillnaden att de milstolpar som 
  <tbody>
   <tr>
    <td>eventdata.videoName <br /> </td>
-   <td>Variabler som mappas till detta kommer att innehålla videons <strong>användarvänliga</strong> namn (<strong>titel</strong>) om det anges i DAM. Om titeln inte är inställd skickas videons <strong>filnamn</strong> i stället. Skickas endast en gång, i början av uppspelningen av en video.<br /> </td>
+   <td>Variabler som mappas till detta kommer att innehålla <strong>användarvänliga</strong>-namn (<strong>Title</strong>) för videon om de anges i DAM; Om titeln inte är inställd skickas videons <strong>filnamn</strong> istället. Skickas endast en gång, i början av uppspelningen av en video.<br /> </td>
   </tr>
   <tr>
    <td>eventdata.videoFileName </td>
@@ -314,29 +314,29 @@ Den här metoden liknar metoden milstolpar med skillnaden att de milstolpar som 
 
 >[!NOTE]
 >
->Du kan ange en videos **användarvänliga** namn genom att öppna videon för redigering i DAM och ange metadatafältet **Titel** till önskat namn. Du måste också spara ändringarna som gjorts när du är klar.
+>Du kan ange ett användarvänligt **namn för en video genom att öppna videon för redigering i DAM och ställa in metadatafältet** Title **på det önskade namnet.** Du måste också spara ändringarna som gjorts när du är klar.
 
 1. Mappa dessa variabler till steg 1 till 3
 
-   Övriga **relevanta uppgifter** i samtalet skickas tillsammans till **en** variabel med namnet **pev3**.
+   **Resten av den relevanta informationen** i anropet skickas sammanfogat till **en**-variabel med namnet **pev3**.
 
-   **Exempelanrop** till Adobe Analytics med exemplet ska se ut så här när de visas med DigitalPulse Debugger:
+   **Exempelanrop** till Adobe Analytics med det här exemplet ska se ut så här när de visas med DigitalPulse Debugger:
 
-   ![lmilestones1](assets/lmilestones1.png)
+   ![milstolpar1](assets/lmilestones1.png)
 
    *Variabeln **pev3**som skickas i anropet innehåller följande information:*
 
-   * *Namn* - Namnet på videofilen (*film.avi*)
+   * *Namn*  - Namnet på videofilen (*film.avi*)
 
-   * *Längd* - längden på videofilen i sekunder (*100*)
+   * *Längd*  - längden på videofilen i sekunder (*100*)
 
-   * *Spelarnamn* - Den videospelare som används för att spela upp videofilen (*HTML5-video*)
+   * *Spelarnamn*  - Den videospelare som används för att spela upp videofilen (*HTML5-video*)
 
-   * *Totalt antal sekunder som spelats* - Totalt antal sekunder som videon spelades upp (*25*)
+   * *Totalt antal sekunder som spelats*  - Totalt antal sekunder som videon spelades upp (*25*)
 
-   * *Starttidsstämpel* - Tidsstämpel som identifierar när videon spelas upp (*1331035567*)
+   * *Starttidsstämpel*  - Tidsstämpel som identifierar när videon spelas upp (*1331035567*)
 
-   * *Uppspelningssession* - Information om uppspelningssessionen. I det här fältet visas hur användaren interagerade med videon. Detta kan omfatta data som var de började spela upp videon, oavsett om de använde videomeglaget för att gå vidare med videon och var de slutade spela upp videon (*L10E24S58L58 - videon stoppades på sek. 25 i avsnitt L10, som sedan hoppas över till sek. 48*)
+   * *Spela upp session*  - Information om uppspelningssessionen. I det här fältet visas hur användaren interagerade med videon. Detta kan omfatta data som var de började spela upp videon, om de använde videoläget för att gå vidare med videon och var de slutade spela upp videon (*L10E24S58L58 - videon stoppades på sek. 25 i avsnitt L10, som sedan hoppas över till sek. 48*)
 
 ## Äldre sekunder {#legacy-seconds}
 
@@ -355,7 +355,7 @@ När du använder metoden** för tidigare sekunder* aktiveras Adobe Analytics-an
  <tbody>
   <tr>
    <td>eventdata.videoName <br /> </td>
-   <td>Variabler som mappas till detta kommer att innehålla videons <strong>användarvänliga</strong> namn (<strong>titel</strong>) om det anges i DAM. Om titeln inte är inställd skickas videons <strong>filnamn</strong> i stället. Skickas endast en gång, i början av uppspelningen av en video.<br /> </td>
+   <td>Variabler som mappas till detta kommer att innehålla <strong>användarvänliga</strong>-namn (<strong>Title</strong>) för videon om de anges i DAM; Om titeln inte är inställd skickas videons <strong>filnamn</strong> istället. Skickas endast en gång, i början av uppspelningen av en video.<br /> </td>
   </tr>
   <tr>
    <td>eventdata.videoFileName </td>
@@ -370,17 +370,17 @@ När du använder metoden** för tidigare sekunder* aktiveras Adobe Analytics-an
 
 >[!NOTE]
 >
->Du kan ange en videos **användarvänliga** namn genom att öppna videon för redigering i DAM och ange metadatafältet **Titel** till önskat namn. Du måste också spara ändringarna som gjorts när du är klar.
+>Du kan ange ett användarvänligt **namn för en video genom att öppna videon för redigering i DAM och ställa in metadatafältet** Title **på det önskade namnet.** Du måste också spara ändringarna som gjorts när du är klar.
 
 1. Mappa dessa variabler till prop1, prop2 och prop3
 
-   Övriga **relevanta uppgifter** i samtalet skickas till **en** variabel med namnet **pev3**.
+   **Resten av den relevanta informationen** i anropet skickas sammanfogat till **en**-variabel med namnet **pev3**.
 
    Anrop till Adobe Analytics som använder exemplet ska se ut så här när de visas med DigitalPulse Debugger:
 
    ![lseconds](assets/lseconds.png)
 
-   *Anropet liknar samtalet i det tidigare milstolparna. Se informationen om föregående3 **[som finns](/help/sites-administering/adobeanalytics.md)**där.*
+   *Anropet liknar samtalet i det tidigare milstolparna. Se informationen om pev3 **[som anges där](/help/sites-administering/adobeanalytics.md)**.*
 
 **Referenser som används i den här självstudien:**
 
