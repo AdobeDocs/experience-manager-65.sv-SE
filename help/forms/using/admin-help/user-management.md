@@ -1,8 +1,8 @@
 ---
 title: Användarhantering
 seo-title: Användarhantering
-description: Med användarhantering kan du aktivera enkel inloggning mellan AEM-formulärmoduler och Netegrity SiteMinder-skyddade program med SAML. Det här dokumentet innehåller mer information om användarhantering.
-seo-description: Med användarhantering kan du aktivera enkel inloggning mellan AEM-formulärmoduler och Netegrity SiteMinder-skyddade program med SAML. Det här dokumentet innehåller mer information om användarhantering.
+description: Med användarhantering kan du aktivera enkel inloggning mellan AEM formulärmoduler och Netegrity SiteMinder-skyddade program med SAML. Det här dokumentet innehåller mer information om användarhantering.
+seo-description: Med användarhantering kan du aktivera enkel inloggning mellan AEM formulärmoduler och Netegrity SiteMinder-skyddade program med SAML. Det här dokumentet innehåller mer information om användarhantering.
 uuid: f0c8331a-d995-483d-97b7-259df53b1a1a
 contentOwner: admin
 content-type: reference
@@ -11,13 +11,16 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 10e6177a-8228-4515-aba9-bbe59bede449
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '502'
+ht-degree: 0%
 
 ---
 
 
 # Användarhantering {#user-management}
 
-Med användarhantering kan du aktivera enkel inloggning (SSO) mellan AEM-formulärmoduler och Netegrity SiteMinder-skyddade program med SAML (Security Assertion Markup Language). När enkel inloggning är implementerad krävs inte AEM-formulärens användarinloggningssidor och visas inte om användaren redan är autentiserad via företagsportalen.
+Med användarhantering kan du aktivera enkel inloggning (SSO) mellan AEM formulärmoduler och Netegrity SiteMinder-skyddade program med SAML (Security Assertion Markup Language). När enkel inloggning är implementerad är AEM inloggningssidor inte obligatoriska och visas inte om användaren redan är autentiserad via företagsportalen.
 
 Mer information om hur du förbättrar prestanda för databas- och katalogsynkronisering för DB2 finns i [IBM DB2-databasen: Kör kommandon för regelbundet underhåll](/help/forms/using/admin-help/ibm-db2-database-running-commands.md#ibm-db2-database-running-commands-for-regular-maintenance).
 
@@ -25,9 +28,9 @@ Mer information om hur du förbättrar prestanda för databas- och katalogsynkro
 
 Om du har en SSL-aktiverad LDAP-server konfigurerar du användarhantering så att den fungerar med den. (Se [Konfigurera användarhantering för en SSL-aktiverad LDAP-server](/help/forms/using/admin-help/configure-user-management-ssl-enabled.md#configure-user-management-for-an-ssl-enabled-ldap-server).)
 
-## Ställa in användarbehörighet för dokumentsäkerhet {#setting-user-privileges-for-use-with-document-security}
+## Ange användarbehörighet för dokumentsäkerhet {#setting-user-privileges-for-use-with-document-security}
 
-Skapa en administratörsanvändare som har lämplig behörighet för att skapa användare och grupper. Om din AEM-formulärmiljö innehåller dokumentskydd ger du behörighet att hantera inbjudna och lokala användare till en användare som är administratör för dessa användare. Tilldela även administratörskonsolens användarroll för att ge användaren åtkomst till administrationskonsolen. (Se [Skapa och konfigurera roller](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles).)
+Skapa en administratörsanvändare som har lämplig behörighet för att skapa användare och grupper. Om din AEM innehåller dokumentskydd ger du behörighet att hantera inbjudna och lokala användare till en användare som är administratör för dessa användare. Tilldela även administratörskonsolens användarroll för att ge användaren åtkomst till administrationskonsolen. (Se [Skapa och konfigurera roller](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles).)
 
 Om du vill visa användare och grupper i valda domäner under principanvändarsökningar måste en superadministratör eller administratör för principuppsättningen markera och lägga till domäner (skapade i Användarhantering) i listan över synliga användare och grupper för varje principuppsättning som skapas.
 
@@ -39,7 +42,7 @@ Listan med synliga användare och grupper är synlig för principuppsättningens
 
 ### Ange synliga användare och grupper {#set-visible-users-and-groups}
 
-När du har installerat och konfigurerat din AEM-formulärmiljö med Document Security konfigurerar du alla lämpliga domäner i Användarhantering.
+När du har installerat och konfigurerat din AEM formulärmiljö med Document Security konfigurerar du alla lämpliga domäner i Användarhantering.
 
 1. I administrationskonsolen klickar du på Tjänster > Dokumentsäkerhet > Profiler och sedan på fliken Principuppsättningar.
 1. Välj Global principuppsättning och klicka sedan på fliken Synliga användare och grupper.
@@ -53,5 +56,5 @@ Användare med vissa typer av administratörsbehörighet kan av säkerhetsskäl 
 
 >[!NOTE]
 >
->Flex Workspace används inte i AEM-formulärsversioner.
+>Flex Workspace är föråldrat för AEM formulärreleaser.
 
