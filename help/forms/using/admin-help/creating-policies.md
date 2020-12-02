@@ -1,8 +1,8 @@
 ---
 title: Skapa och hantera profiler
 seo-title: Skapa och hantera profiler
-description: En profil är en uppsättning sekretessinställningar och användare som kan komma åt ett dokument som profilen tillämpas på. Du kan skapa och hantera olika typer av profiler med hjälp av AEM-formulär.
-seo-description: En profil är en uppsättning sekretessinställningar och användare som kan komma åt ett dokument som profilen tillämpas på. Du kan skapa och hantera olika typer av profiler med hjälp av AEM-formulär.
+description: En profil är en uppsättning sekretessinställningar och användare som kan komma åt ett dokument som profilen tillämpas på. Du kan skapa och hantera olika typer av profiler med AEM formulär.
+seo-description: En profil är en uppsättning sekretessinställningar och användare som kan komma åt ett dokument som profilen tillämpas på. Du kan skapa och hantera olika typer av profiler med AEM formulär.
 uuid: 72be06f3-3e90-495e-8425-72380d95704a
 contentOwner: admin
 content-type: reference
@@ -11,15 +11,18 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: fa054d30-c7dc-4b64-acf1-cbcbe8827df5
 translation-type: tm+mt
 source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+workflow-type: tm+mt
+source-wordcount: '4755'
+ht-degree: 0%
 
 ---
 
 
 # Skapa och hantera profiler {#creating-and-managing-policies}
 
-En *profil* definierar en uppsättning sekretessinställningar och användare som kan komma åt ett dokument som profilen tillämpas på. En *principuppsättning* används för att gruppera en uppsättning principer som har ett gemensamt affärssyfte. Dessa principuppsättningar görs sedan tillgängliga för en delmängd av användarna i systemet. Mer information om profiler finns i [Profiler och policyskyddade dokument](/help/forms/using/admin-help/document-security.md#policies-and-policy-protected-documents).
+En *princip* definierar en uppsättning sekretessinställningar och användare som kan komma åt ett dokument som profilen tillämpas på. En *principuppsättning* används för att gruppera en uppsättning principer som har ett gemensamt affärssyfte. Dessa principuppsättningar görs sedan tillgängliga för en delmängd av användarna i systemet. Mer information om profiler finns i [Profiler och policyskyddade dokument](/help/forms/using/admin-help/document-security.md#policies-and-policy-protected-documents).
 
-## Typer av profiler {#types-of-policies}
+## Typer av principer {#types-of-policies}
 
 Dokumentsäkerhet innehåller följande typer av profiler.
 
@@ -27,23 +30,23 @@ Dokumentsäkerhet innehåller följande typer av profiler.
 
 Användare kan skapa, redigera, kopiera, ta bort och tillämpa egna profiler med inställningar som passar en viss situation. Det är bara den person som skapar en profil och administratören som har tillgång till den personliga principen. Personliga profiler visas på fliken Mina principer på sidan Profiler.
 
-Inbjudna användare kan också skapa, redigera, kopiera och ta bort personliga profiler om administratören aktiverar den funktionen.
+Inbjudna användare kan även skapa, redigera, kopiera och ta bort personliga profiler om administratören aktiverar den funktionen.
 
 **Delade principer**
 
 Administratörer och samordnare för principuppsättningar skapar delade profiler baserat på de sekretessregler som din organisation identifierar för olika typer av dokument och användare. Delade profiler finns i principuppsättningar och är tillgängliga för alla behöriga användare (dokumentutgivare, principuppsättningskoordinatorer och dokumentmottagare) för en viss principuppsättning. Administratörer och koordinatorer för principuppsättningar kan aktivera och inaktivera delade principer. Delade profiler visas i principuppsättningar på fliken Principuppsättningar på sidan Profiler.
 
-När du först installerar dokumentsäkerhet innehåller den en delad princip med namnet *Begränsa till alla huvudkonton*. När den här profilen tillämpas på ett dokument kan alla användare som kan logga in på dokumentsäkerhet få åtkomst till dokumentet. Den här principen finns i principuppsättningen med namnet *Global principuppsättning*. Den här principen är som standard inte aktiverad. Du kan aktivera det om det passar din organisations behov.
+När du först installerar dokumentsäkerhet innehåller den en delad princip med namnet *Begränsa till alla huvudkonton*. När den här profilen tillämpas på ett dokument kan alla användare som kan logga in på dokumentsäkerhet få åtkomst till dokumentet. Den här principen finns i principuppsättningen *Global Policy Set*. Den här principen är som standard inte aktiverad. Du kan aktivera det om det passar din organisations behov.
 
 **Automatiskt genererade profiler för Microsoft Outlook**
 
-Med Acrobat kan du tillämpa profiler på dokument som du skickar som e-postbilagor i Microsoft Outlook. I Outlook kan du skydda ett dokument med hjälp av en befintlig profil eller med hjälp av en automatiskt genererad profil som Acrobat genererar med standardinställningar för sekretess och som gäller för dokumentet som bifogas till ett e-postmeddelande. (Se *[Acrobat-hjälpen](https://help.adobe.com/en_US/acrobat/pro/using/index.html)*.)
+Med Acrobat kan du tillämpa profiler på dokument som du skickar som e-postbilagor i Microsoft Outlook. I Outlook kan du skydda ett dokument med hjälp av en befintlig profil eller med hjälp av en automatiskt genererad profil som Acrobat genererar med standardinställningar för sekretess och som gäller för dokumentet som bifogas till ett e-postmeddelande. (Se *[Hjälp om Acrobat](https://help.adobe.com/en_US/acrobat/pro/using/index.html)*.)
 
 >[!NOTE]
 >
 >För att en profil ska vara tillgänglig i Outlook måste du ange den som en favorit i Acrobat. Alla andra profiler, inklusive de som du är utgivare där, visas inte i Outlook.
 
-## Vem kan skapa och hantera policyer och uppsättningar {#who-can-create-and-manage-policies-and-policy-sets}
+## Vem kan skapa och hantera policyer och principuppsättningar {#who-can-create-and-manage-policies-and-policy-sets}?
 
 Hur du interagerar med policyer och uppsättningar beror på din roll inom organisationen:
 
@@ -53,7 +56,7 @@ Hur du interagerar med policyer och uppsättningar beror på din roll inom organ
 
 **Administratörer:** Administratörer kan redigera alla användares personliga profiler. De kan skapa delade profiler. De kan också skapa, redigera och ta bort principuppsättningar och utse samordnare för principuppsättningar.
 
-Mer information om de olika säkerhetsrollerna för dokument finns i [Om dokumentsäkerhetsanvändare](/help/forms/using/admin-help/document-security.md#about-document-security-users).
+Mer information om de olika säkerhetsrollerna för dokument finns i [Om användare av dokumentsäkerhet](/help/forms/using/admin-help/document-security.md#about-document-security-users).
 
 ## Skapa och redigera profiler {#creating-and-editing-policies}
 
@@ -78,7 +81,7 @@ När du redigerar profiler gäller dessa begränsningar:
 * Koordinatorer för principuppsättningar kan bara redigera profiler i principuppsättningar om de har rätt behörigheter. Den överordnade användaren eller administratören för principuppsättningen anger dessa behörigheter i dokumentets säkerhetsadministratörsgränssnitt.
 * Om principen har en vattenstämpel som har konfigurerats som administratören har tagit bort sedan principen skapades, kommer den här vattenstämpeln inte längre att användas för dokument om du redigerar och sparar profilen. Borttagna vattenstämplar gäller bara för befintliga profiler så länge du inte redigerar profilen. Om du redigerar profilen måste du välja en annan vattenstämpel som ska ersätta den borttagna.
 * Du kan inte ge anonym åtkomst till ett dokument genom att redigera den princip som används för närvarande. Om du redigerar profilen måste användarna fortfarande logga in för att få åtkomst till dokumentet. Om du vill använda anonym åtkomst till det här dokumentet tar du först bort principen i klientprogrammet och tillämpar sedan en annan princip som tillåter anonym åtkomst.
-* Profiler som Acrobat automatiskt genererar för mottagarna av ett dokument som är kopplat till ett e-postmeddelande i Microsoft Outlook visas inte i principlistan. Om du vill komma åt den här profilen letar du reda på dokumentet på sidan Dokument, öppnar sidan Dokumentinformation och klickar på principnamnet i listan med dokumentinformation.
+* Profiler som Acrobat automatiskt genererar för mottagarna av ett dokument som är kopplat till ett e-postmeddelande i Microsoft Outlook visas inte i principlistan. Om du vill komma åt den här profilen ska du leta upp dokumentet på sidan Dokument, öppna sidan Dokumentinformation och klicka på profilnamnet i listan med dokumentinformation.
 
 **Skapa eller redigera en profil**
 
@@ -99,13 +102,15 @@ När du redigerar profiler gäller dessa begränsningar:
    * citattecken (&quot;)
    * omvänt snedstreck (\)
    * snedstreck (/)
+
    Om du använder följande tecken i namnet eller beskrivningen konverteras de till blanksteg:
 
    * vagnretur (ASCII-tecken 13)
    * ny rad (ASCII-tecken 10).
+
    >[!NOTE]
    >
-   >Du kan skapa ett principnamn som innehåller utökade tecken; När en jämförelse görs mellan två strängar anses emellertid tecken med accent och tecken utan accent som &quot;e&quot; och &quot;é&quot; vara desamma. När någon skapar en profil görs en jämförelse för att kontrollera om det redan finns en princip med samma namn. Jämförelsen kan inte skilja mellan namn som är desamma förutom för tecken med accent. Vi antar att principen redan har lagts till i databasen och att den nya inte har lagts till.
+   >Du kan skapa ett principnamn som innehåller utökade tecken; När en jämförelse görs mellan två strängar anses emellertid tecken med accent och tecken utan accent som &quot;e&quot; och &quot;é&quot; vara desamma. När någon skapar en profil görs en jämförelse för att kontrollera om det redan finns en princip med samma namn. Jämförelsen kan inte skilja mellan namn som är samma förutom för tecken med accent. Vi antar att principen redan har lagts till i databasen och att den nya inte har lagts till.
 
 1. Lägg till användare och grupper i profilen och ange lämpliga behörigheter. (Se [Användare och grupper](creating-policies.md#users-and-groups).)
 1. Välj lämpliga alternativ under Allmänna inställningar. (Se [Allmänna inställningar](creating-policies.md#general-settings).)
@@ -114,10 +119,10 @@ När du redigerar profiler gäller dessa begränsningar:
    En extern auktoriseringsprovider används för att ställa in egenskaper i profilen och när den väljs används den externa auktoriseringsprovidern för att utvärdera principen. De tillgängliga egenskaperna konfigureras av administratören och den person som installerar programvaran.
 
 1. Välj lämpliga alternativ under Avancerade inställningar. (Se [Avancerade inställningar](creating-policies.md#advanced-settings).)
-1. Välj lämpliga alternativ under Ej ändringsbara avancerade inställningar. (Se [Ej ändringsbara avancerade inställningar](creating-policies.md#unchangeable-advanced-settings).)
+1. Välj lämpliga alternativ under Ej ändringsbara avancerade inställningar. (Se [Avancerade inställningar som inte kan ändras](creating-policies.md#unchangeable-advanced-settings).)
 1. Klicka på Spara. Profilen visas i principlistan. En ikon med en röd cirkel visas bredvid den nya profilen, vilket anger att den fortfarande är inaktiverad.
 
-   Aktivera profilen om du vill göra den tillgänglig för användare. (Se [Aktivera eller inaktivera delade profiler](creating-policies.md#enable-or-disable-shared-policies).)
+   Aktivera profilen om du vill göra den tillgänglig för användare. (Se [Aktivera eller inaktivera delade principer](creating-policies.md#enable-or-disable-shared-policies).)
 
 ### Användare och grupper {#users-and-groups}
 
@@ -151,7 +156,7 @@ Efter registrering kan inbjudna användare använda principskyddade dokument som
 
 #### Ange dokumentbehörigheter för användare och grupper {#specify-the-document-permissions-for-users-and-groups}
 
-Du kan ange dokumentbehörigheter för en användare eller grupp åt gången, eller så kan du markera flera användare och grupper i listan och ändra deras behörigheter med alternativen i området för kolumnrubriker.
+Du kan ange dokumentbehörigheter för en användare eller grupp åt gången, eller så kan du markera flera användare och grupper i listan och ändra deras behörigheter med hjälp av alternativen i området för kolumnrubriker.
 
 Som standard har alla principskyddade dokument en behörighet som tillåter användare att öppna dem online.
 
@@ -159,41 +164,41 @@ Fliken Behörigheter och alternativ visas i dokumentskydd.
 
 Dessa dokumentbehörigheter är tillgängliga på fliken Behörigheter. Du kan tillämpa dessa behörigheter på PDF-, PTC Pro/E- och Microsoft Office-filer.
 
-**Skriv ut:** Låter användaren skriva ut ett dokument som är skyddat med den här profilen. För Office- och Pro/E-filer kan du markera kryssrutan Skriv ut om du vill tillåta utskrift eller avmarkera den om du vill förhindra utskrift. Om du markerar kryssrutan Visa anpassade behörigheter för PDF kan du välja bland följande alternativ:
+**Skriv ut:** Tillåter användaren att skriva ut ett dokument som är skyddat med den här profilen. För Office- och Pro/E-filer kan du markera kryssrutan Skriv ut om du vill tillåta utskrift eller avmarkera den om du vill förhindra utskrift. Om du markerar kryssrutan Visa anpassade behörigheter för PDF kan du välja bland följande alternativ:
 
 **Ej tillåtet:** Användaren får inte skriva ut PDF-filen.
 
-**Tillåtet:** Användaren får skriva ut PDF-filen.
+**Tillåts:** Användaren får skriva ut PDF-filen.
 
-**Låg upplösning. endast:** Användaren kan skriva ut PDF-filen med låg upplösning.
+**Låg upplösning. Endast:** Användaren får skriva ut PDF-filen med låg upplösning.
 
-**Ändra:** Låter användaren ändra ett dokument som är skyddat med den här principen. För Office- och Pro/E-filer kan du markera kryssrutan Ändra om du vill tillåta ändringar, eller avmarkera den om du vill förhindra ändringar. Om du markerar kryssrutan Visa anpassade behörigheter för PDF kan du välja bland följande alternativ:
+**Ändra:** Tillåter användaren att ändra ett dokument som är skyddat med den här profilen. För Office- och Pro/E-filer kan du markera kryssrutan Ändra om du vill tillåta ändringar, eller avmarkera den om du vill förhindra ändringar. Om du markerar kryssrutan Visa anpassade behörigheter för PDF kan du välja bland följande alternativ:
 
 **Ej tillåtet:** Användaren får inte ändra PDF-filen.
 
-**Alla:** Användaren kan ändra PDF-filen.
+**Valfritt:** Användaren kan ändra PDF-filen.
 
-**Samarbeta:** Användaren kan samarbeta med andra och använda samarbetsalternativen i Adobe Acrobat. Med den här behörigheten kan användaren kopiera formulärdata även om behörigheten Kopiera inte uttryckligen anges i principen.
+**Samarbeta:** Användare kan samarbeta med andra med hjälp av Samarbeta i Adobe Acrobat. Med den här behörigheten kan användaren kopiera formulärdata även om behörigheten Kopiera inte uttryckligen anges i principen.
 
 **Ändra sidor:** Användaren kan lägga till och ta bort sidor och redigera innehåll i PDF-filen.
 
-**Fyll i och signera:** Användaren kan fylla i formulärfält i PDF-filen och signera den.
+**Fill &amp; Sign:** Användaren får fylla i formulärfält i PDF-filen och signera den.
 
-**Copy:** Låter användaren kopiera text från ett dokument som är skyddat med den här profilen.
+**Copy:** Användaren kan kopiera text från ett dokument som är skyddat med den här profilen.
 
-**Skärmläsare:** Den här behörigheten visas om du markerar kryssrutan Visa anpassade behörigheter för PDF. När det här alternativet är markerat har Adobe Acrobat behörighet att lägga till tillfälliga taggar i PDF-filen för att förbättra läsbarheten med en skärmläsare.
+**Reader:** Den här behörigheten visas om du markerar kryssrutan Visa anpassade behörigheter för PDF. När det här alternativet är markerat har Adobe Acrobat behörighet att lägga till tillfälliga taggar i PDF-filen för att förbättra läsbarheten med en skärmläsare.
 
 Dessa dokumentbehörigheter är tillgängliga på fliken Alternativ. Du kan använda dessa behörigheter för PDF-, PTC Pro/E- och Microsoft Office-filer:
 
 **Offline:** Låter användaren visa ett dokument offline som är skyddat med den här principen.
 
-**Behörighetsgiltighet:** Välj Behörigheter är alltid giltiga eller ange en giltighetsperiod för dokumentbehörigheter. Om du väljer en giltighetsperiod klickar du på kalenderikonerna för att välja ett datum och använder pilarna för att ange tiden i 24-timmarsformat.
+**Behörighetsgiltighet:** Välj behörigheter är alltid giltiga eller ange en giltighetsperiod för dokumentbehörigheter. Om du väljer en giltighetsperiod klickar du på kalenderikonerna för att välja ett datum och använder pilarna för att ange tiden i 24-timmarsformat.
 
 För delade profiler kan administratörer inaktivera följande behörigheter för dokumentutgivaren (den användare som tillämpar profilen på ett dokument):
 
-**Återkalla:** Låter dokumentutgivaren återkalla dokumentbehörigheter.
+**Återkalla:** ger dokumentutgivaren behörighet att återkalla dokumentbehörigheter.
 
-**Växel:** Tillåter dokumentutgivaren att växla principbehörigheter.
+**Växla:** Tillåter dokumentutgivaren att byta principbehörighet.
 
 ### Allmänna inställningar {#general-settings}
 
@@ -201,11 +206,11 @@ Området Allmänna inställningar innehåller följande inställningar:
 
 **Giltighetsperiod:** Den tidsperiod under vilken det profilskyddade dokumentet är tillgängligt för behöriga mottagare. Du kan välja mellan följande alternativ för giltighetsperiod:
 
-**Dokumentet kommer inte att vara giltigt efter:** Dokumentet är tillgängligt under det angivna antalet dagar från när dokumentet skyddades.
+**Dokumentet är inte giltigt efter:** Dokumentet är tillgängligt under det angivna antalet dagar från när dokumentet var skyddat.
 
 **Dokumentet kommer inte att vara giltigt efter detta datum:** Dokumentet är giltigt från det datum då profilen tillämpas på dokumentet till det slutdatum som anges.
 
-**Giltig från, till:** Dokumentet är giltigt under de angivna datumen. Du kan använda kalendern för att välja ett datum, där det är tillämpligt, genom att klicka på kalenderikonen.
+**Giltig från, till:** Dokumentet är giltigt under de datum du angav. Du kan använda kalendern för att välja ett datum, där det är tillämpligt, genom att klicka på kalenderikonen.
 
 **Dokumentet är alltid giltigt:** Dokumentets giltighetsperiod går inte ut.
 
@@ -213,7 +218,7 @@ Området Allmänna inställningar innehåller följande inställningar:
 >
 >Giltighetsdatumen baseras på tidszonen i dokumentsäkerhetssystemet, inte på tidszonen på den lokala datorn.
 
-**Granskning:** Aktivera eller inaktivera granskning av händelser som är kopplade till ett policyskyddat dokument. Dokumentsäkerhet kan t.ex. registrera händelser som försök att öppna ett dokument. Granskade händelser visas i listan på sidan Händelser. Om du inte väljer det här alternativet registreras inte händelser för dokument som är kopplade till profilen.
+**Granskning:** Aktivera eller inaktivera granskning av händelser som är kopplade till ett principskyddat dokument. Dokumentsäkerhet kan t.ex. registrera händelser som försök att öppna ett dokument. Granskade händelser visas i listan på sidan Händelser. Om du inte väljer det här alternativet registreras inte händelser för dokument som är kopplade till profilen.
 
 >[!NOTE]
 >
@@ -221,7 +226,7 @@ Området Allmänna inställningar innehåller följande inställningar:
 
 **Spårning av utökad användning:** Aktivera eller inaktivera spårning av utökad användning. dokumentskydd har stöd för spårning av användarhändelser som är kopplade till olika åtgärder som utförs på en PDF-fil. Dokumentsäkerhetsobjektet kan nås med ett Java-skript. En knappklickning, en multimediefil som spelas upp eller sparandet av en fil är några exempel på händelser som kan utlösas från en profilskyddad PDF. Med dokumentsäkerhetsobjektet kan du även hämta användarinformation. Händelsespårning kan aktiveras från dokumentsäkerhetsservern på global nivå eller på principnivå.
 
-**Leasingperiod automatiskt offline:** Det högsta antal dagar som mottagaren kan använda det principskyddade dokumentet offline (utan en aktiv Internet- eller nätverksanslutning). När låneperioden löper ut måste mottagaren synkronisera dokumentet igen för att kunna fortsätta använda det.
+**Automatiskt offline-låneperiod:** Det maximala antal dagar som mottagaren kan använda det principskyddade dokumentet offline (utan en aktiv Internet- eller nätverksanslutning). När låneperioden löper ut måste mottagaren synkronisera dokumentet igen för att kunna fortsätta använda det.
 
 ### Externa auktoriseringsleverantörer {#external-authorization-providers}
 
@@ -237,7 +242,7 @@ Du kan åsidosätta de autentiseringsinställningar som du har konfigurerat på 
 
 **Tillåt klientcertifikatautentisering:** Välj det här alternativet om du vill att klientprogram ska kunna använda certifikatautentisering när de ansluter till servern.
 
-**Tillåt utökad autentisering** Välj för att aktivera utökad autentisering. Om du väljer det här alternativet kan klientprogram använda utökad autentisering. Utökad autentisering möjliggör anpassade autentiseringsprocesser och olika autentiseringsalternativ som konfigurerats på dokumentsäkerhetsservern
+**Tillåt utökad** autentiseringVälj för att aktivera utökad autentisering. Om du väljer det här alternativet kan klientprogram använda utökad autentisering. Utökad autentisering möjliggör anpassade autentiseringsprocesser och olika autentiseringsalternativ som konfigurerats på dokumentsäkerhetsservern
 
 Om du åsidosätter de globala autentiseringsinställningarna kan du välja de autentiseringsalternativ som är relevanta för den här principen. Om du t.ex. har aktiverat tre autentiseringsalternativ (användarnamn och lösenord, klientcertifikat och utökad autentisering) på servern kan du åsidosätta den globala inställningen och endast välja utökad autentisering för den här principen. Du måste se till att det autentiseringsalternativ som du väljer här redan har konfigurerats på servern. I det här exemplet kan du inte välja Kerberos som autentiseringsalternativ eftersom det inte har konfigurerats på servern.
 
@@ -249,7 +254,7 @@ Om du åsidosätter de globala autentiseringsinställningarna kan du välja de a
 
 Området Avancerade inställningar innehåller följande inställningar:
 
-**Dynamisk vattenstämpel:** Välj en vattenstämpel som ska visas dynamiskt på sidorna i ett dokument (t.ex. när en mottagare skriver ut dokumentet). Dynamiska vattenstämplar identifierar unikt ett dokument och bidrar därför till att säkerställa dokumentets sekretess och förhindra upphovsrättsintrång. Administratören kan till exempel konfigurera en dynamisk vattenstämpel som visar aktuellt datum, användarnamnet eller identifieraren för den person som använder dokumentet eller namnet på profilen som används för att skydda dokumentet. En vattenstämpel kan även visa anpassad text eller grafiska element om den är konfigurerad. Administratörer konfigurerar alternativen för vattenstämplar och administratörer och användare kan tillämpa dem på profiler.
+**Dynamisk vattenstämpel:** Välj en vattenstämpel som ska visas dynamiskt på sidorna i ett dokument (till exempel när en mottagare skriver ut dokumentet). Dynamiska vattenstämplar identifierar unikt ett dokument och bidrar därför till att säkerställa dokumentets sekretess och förhindra upphovsrättsintrång. Administratören kan till exempel konfigurera en dynamisk vattenstämpel som visar aktuellt datum, användarnamnet eller identifieraren för den person som använder dokumentet eller namnet på profilen som används för att skydda dokumentet. En vattenstämpel kan även visa anpassad text eller grafiska element om den är konfigurerad. Administratörer konfigurerar alternativen för vattenstämplar och administratörer och användare kan tillämpa dem på profiler.
 
 (Se [Konfigurera dynamiska vattenstämplar](/help/forms/using/admin-help/configuring-client-server-options.md#configure-dynamic-watermarks).)
 
@@ -261,15 +266,15 @@ Om du redigerar en profil och administratören har tagit bort en konfigurerad va
 
 **Använd endast certifierade Acrobat-plugin-program för PDF:** När du väljer det här alternativet för en profil måste Acrobat 8.0 och senare köras i certifierat läge när dokument som är skyddade med profilen öppnas. När Acrobat körs i certifierat läge läses inga plugin-program från tredje part in.
 
-Välj det här alternativet om du är orolig för att en dokumentmottagare ska skriva ett plugin-program som kan kringgå något av dokumentskyddet i Acrobat 8.0 eller senare. Välj inte det här alternativet om dokumentmottagarna behöver använda plugin-program från tredje part i Acrobat för att interagera med dokument.
+Välj det här alternativet om du är oroad över att en dokumentmottagare skriver ett plugin-program som kan kringgå något av dokumentskyddet i Acrobat 8.0 eller senare. Välj inte det här alternativet om dokumentmottagarna behöver använda plugin-program från tredje part i Acrobat för att interagera med dokument.
 
-Det här alternativet aktiverar endast det certifierade läget i Acrobat 8.0 eller senare. administratören måste inaktivera åtkomsten till Acrobat 7.0.
+Detta alternativ aktiverar endast certifierat läge i Acrobat 8.0 eller senare. administratören måste inaktivera åtkomst för Acrobat 7.0.
 
 (Se [Konfigurera dokumentsäkerhetsservern](/help/forms/using/admin-help/configuring-client-server-options.md#configure-the-document-security-server).)
 
-Det här alternativet gäller inte Adobe Reader.
+Detta alternativ gäller inte Adobe Reader.
 
-**Felmeddelande om nekad åtkomst:** Ett meddelande som visas för alla som försöker öppna ett policyskyddat dokument utan behörighet. Det här meddelandet visas i Acrobat. Klienter som inte kan visa det här meddelandet visar ett standardmeddelande som anger att åtkomst nekas.
+**Felmeddelande om nekad åtkomst:** Ett meddelande som visas för alla som försöker öppna ett principskyddat dokument utan behörighet. Det här meddelandet visas i Acrobat. Klienter som inte kan visa det här meddelandet visar ett standardmeddelande som anger att åtkomst nekas.
 
 ### Avancerade inställningar som inte kan ändras {#unchangeable-advanced-settings}
 
@@ -278,12 +283,12 @@ Området Avancerade inställningar som inte kan ändras innehåller följande in
 **Krypteringsalgoritm och nyckellängd:** Används för att skydda dina dokument. Du kan välja mellan följande alternativ:
 
 * 128-bitars AES
-* 256-bitars AES. Endast Acrobat 9.0 och senare stöder det här alternativet. Om du vill använda AES 256-kryptering för PDF-filer hämtar och installerar du Java Cryptography Extension (JCE) Unlimited Strength Jurisdential Policy-filer. Dessa filer ersätter filerna local_policy.jar och US_export_policy.jar i mappen [JAVE_HOME]/lib/security. Om du till exempel använder Sun JDK 1.6 kopierar du de hämtade filerna till [mappen]dep root/Java/jdk1.6.0_26/lib/security. Du kan hämta dessa filer från [Java SE Downloads](https://java.sun.com/javase/downloads/index.jsp).
+* 256-bitars AES. Endast Acrobat 9.0 och senare stöder det här alternativet. Om du vill använda AES 256-kryptering för PDF-filer hämtar och installerar du Java Cryptography Extension (JCE) Unlimited Strength Jurisdential Policy-filer. Dessa filer ersätter filerna local_policy.jar och US_export_policy.jar i mappen [JAVE_HOME]/lib/security. Om du till exempel använder Sun JDK 1.6 kopierar du de hämtade filerna till mappen [dep root]/Java/jdk1.6.0_26/lib/security. Du kan hämta dessa filer från [Java SE Downloads](https://java.sun.com/javase/downloads/index.jsp).
 * Ingen kryptering. Acrobat 9.0 och senare stöder det här alternativet. Om du väljer det här alternativet inaktiveras alternativen Dokumentbegränsningar. Det här alternativet kan vara användbart om du vill använda dokumentskydd för dokumentgranskning eller versionskontroll, men inte vill kryptera dokumentet.
 
 **Dokumentbegränsningar:** Markera de PDF-dokumentkomponenter som ska krypteras. Andra klientprogram krypterar hela dokumentet men inte länkade eller inbäddade filer. Du kan välja mellan följande alternativ:
 
-* Hela dokumentet, inklusive dess bilagor och metadata. *Metadata* är information om dokumentet och dess innehåll som du kan visa via dialogrutan Dokumentegenskaper eller Acrobats avancerade-meny. I Acrobat kan du bifoga filer av olika typer (till exempel text-, ljud- och videofiler) till PDF-dokument.
+* Hela dokumentet, inklusive dess bilagor och metadata. *Metadatainformation* om dokumentet och dess innehåll som du kan visa via dialogrutan Dokumentegenskaper eller på menyn Avancerat i Acrobat. I Acrobat kan du bifoga filer av olika typer (till exempel text-, ljud- och videofiler) till PDF-dokument.
 * Dokumentet och dess bilagor, men inte metadata.
 * Endast dokumentbilagor. Du kan kryptera de bifogade filerna till en PDF-fil utan att behöva kryptera dokumentinnehållet.
 
@@ -301,7 +306,7 @@ Ett rött X visas bredvid en inaktiverad princip.
 1. Klicka på lämpligt namn på principuppsättningen och klicka på fliken Profiler.
 1. Markera kryssrutan bredvid rätt profil, klicka på Aktivera eller Inaktivera och klicka sedan på OK.
 
-## Visa information om en profil {#view-information-about-a-policy}
+## Visa information om en princip {#view-information-about-a-policy}
 
 På fliken Mina profiler kan du söka efter personliga profiler.
 
@@ -338,9 +343,9 @@ Administratörer kan söka efter delade profiler och personliga profiler som har
 
 1. Välj något av följande alternativ i söklistan:
 
-   **Princip-ID:** ID-numret för profilen som genereras när användaren skapar profilen. Du måste ange det exakta princip-ID:t.
+   **Princip-ID:** Det ID-nummer som genereras när användaren skapar profilen. Du måste ange det exakta princip-ID:t.
 
-   **Principnamn:** Namnet på principen. Du kan söka efter delar av eller hela principnamnet.
+   **Principnamn:** Namnet på profilen. Du kan söka efter delar av eller hela principnamnet.
 
 1. Skriv motsvarande värde i textrutan. Om du till exempel har valt Principnamn skriver du det principnamn du söker efter.
 1. I visningslistan väljer du antalet resultat som ska visas och klickar sedan på Sök. Sökresultaten visas.
@@ -366,17 +371,19 @@ Externa användare kan bara kopiera profiler om administratören aktiverar den h
    * citattecken (&quot;)
    * omvänt snedstreck (\)
    * snedstreck (/)
+
    Om du använder följande tecken i namnet eller beskrivningen konverteras de till blanksteg:
 
    * vagnretur (ASCII-tecken 13)
    * ny rad (ASCII-tecken 10).
+
    >[!NOTE]
    >
-   >Du kan skapa ett principnamn som innehåller utökade tecken; När en jämförelse görs mellan två strängar anses emellertid tecken med accent och tecken utan accent som &quot;e&quot; och &quot;é&quot; vara desamma. När någon skapar en profil görs en jämförelse för att kontrollera om det redan finns en princip med samma namn. Jämförelsen kan inte skilja mellan namn som är desamma förutom för tecken med accent. Vi antar att principen redan har lagts till i databasen och att den nya inte har lagts till.
+   >Du kan skapa ett principnamn som innehåller utökade tecken; När en jämförelse görs mellan två strängar anses emellertid tecken med accent och tecken utan accent som &quot;e&quot; och &quot;é&quot; vara desamma. När någon skapar en profil görs en jämförelse för att kontrollera om det redan finns en princip med samma namn. Jämförelsen kan inte skilja mellan namn som är samma förutom för tecken med accent. Vi antar att principen redan har lagts till i databasen och att den nya inte har lagts till.
 
 1. Klicka på OK.
 
-## Ta bort en profil {#delete-a-policy}
+## Ta bort en princip {#delete-a-policy}
 
 Du kan ta bort profiler som du har skapat. Administratörer kan ta bort profiler som alla användare har skapat. Koordinatorer för principuppsättningar kan ta bort profiler i sina principuppsättningar. En princip som du tar bort gäller fortfarande för dokument som är skyddade med den profilen. Du kan ta bort flera profiler åt gången.
 
@@ -389,7 +396,7 @@ Inbjudna användare kan bara ta bort profiler om administratören aktiverar den 
 
 >[!NOTE]
 >
->Du måste använda klientprogrammet för att ta bort profiler från dokument. (Se hjälpen för Acrobat eller rätt Acrobat Reader DC-tillägg.)
+>Du måste använda klientprogrammet för att ta bort profiler från dokument. (Se hjälpen för Acrobat eller motsvarande Acrobat Reader DC-tillägg.)
 
 ## Sortera principlistan {#sort-the-policy-list}
 
@@ -397,6 +404,6 @@ Du kan sortera policylistan efter kolumnrubriker för att enklare hitta profiler
 
 1. Klicka på Profiler på dokumentsäkerhetssidan och sedan på fliken Principuppsättning.
 1. Välj en principuppsättning och klicka sedan på fliken Profiler.
-1. Klicka på en kolumnrubrik.
+1. Klicka på lämplig kolumnrubrik.
 1. Om du vill ändra sorteringsordningen klickar du på kolumnen igen.
 
