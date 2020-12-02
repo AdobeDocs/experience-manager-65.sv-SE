@@ -9,6 +9,9 @@ topic-tags: author
 discoiquuid: 377d804d-4a75-4c93-8125-d2660cf56418
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '392'
+ht-degree: 0%
 
 ---
 
@@ -35,7 +38,7 @@ I följande tabell visas de förhandsvisningsalternativ som är tillgängliga f�
   </tr>
   <tr>
    <td>PDF-formulär</td>
-   <td>Förhandsgranska PDF och Förhandsgranska med data<br /> </td>
+   <td>Förhandsgranska PDF och förhandsgranska med data<br /> </td>
   </tr>
   <tr>
    <td>adaptiv form</td>
@@ -54,7 +57,7 @@ I följande tabell visas de förhandsvisningsalternativ som är tillgängliga f�
 
    >[!NOTE]
    >
-   >Om du vill välja en resurs växlar du till listvyn från standardkortvyn. Klicka på ![aem6forms_viewlist](assets/aem6forms_viewlist.png) eller ![aem6forms_viewcard](assets/aem6forms_viewcard.png) för att växla mellan vyer.
+   >Om du vill välja en resurs växlar du till listvyn från standardkortvyn. Klicka på ![aem6forms_viewlist](assets/aem6forms_viewlist.png) eller ![aem6forms_viewcard](assets/aem6forms_viewcard.png) för att växla vy.
 
 1. Om du klickar på Förhandsvisa visas en lista med möjliga förhandsvisningsalternativ för den valda resurstypen. Klicka på önskat alternativ för att återge den markerade resursen på en ny flik.
 
@@ -66,8 +69,8 @@ I följande tabell visas de förhandsvisningsalternativ som är tillgängliga f�
 
 ## Förhandsgranska med data {#preview-with-data}
 
-När du väljer **Förhandsgranska med data** kan du se hur formuläret ser ut med verkliga data som anges i det. Med alternativet Förhandsgranska med data kan du överföra en XML-fil som innehåller exempelanvändardata. Exempelinformationen används för att fylla i förhandsgranskningsformuläret i det format du väljer.
+När du väljer **Förhandsgranska med data** kan du se hur formuläret ser ut med riktiga data som anges i det. Med alternativet Förhandsgranska med data kan du överföra en XML-fil som innehåller exempelanvändardata. Exempelinformationen används för att fylla i förhandsgranskningsformuläret i det format du väljer.
 
-1. Välj en resurs, klicka på Förhandsgranska ![aem6forms_preview](assets/aem6forms_preview.png)och välj **Förhandsgranska med data**.
+1. Välj en resurs, klicka på Förhandsgranska ![aem6forms_preview](assets/aem6forms_preview.png) och välj **Förhandsgranska med data**.
 1. Ange FormData som en XML-fil i dialogrutan Förhandsgranska formulär. Klicka på Förhandsgranska om du vill återge formuläret med sammanfogade data från XML.
 
