@@ -1,8 +1,8 @@
 ---
 title: Anpassa sidan med uppgiftsinformation
 seo-title: Anpassa sidan med uppgiftsinformation
-description: Anpassa uppgiftsinformationssidan på arbetsytan i AEM Forms för att ändra standardinformationen som visas för en uppgift.
-seo-description: Anpassa uppgiftsinformationssidan på arbetsytan i AEM Forms för att ändra standardinformationen som visas för en uppgift.
+description: Anpassa informationssidan i AEM Forms arbetsyta för att ändra standardinformationen som visas för en uppgift.
+seo-description: Anpassa informationssidan i AEM Forms arbetsyta för att ändra standardinformationen som visas för en uppgift.
 uuid: d85fae55-8e66-4595-8560-5485622b6841
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -17,21 +17,21 @@ ht-degree: 0%
 ---
 
 
-# Anpassa sidan med uppgiftsinformation {#customizing-the-task-details-page}
+# Anpassa informationssidan {#customizing-the-task-details-page}
 
 Sidan med uppgiftsinformation innehåller information om en uppgift och dess processer. Du kan dock anpassa informationssidan för att lägga till eller ta bort information.
 
 Du kan lägga till följande information på informationssidan:
 
-* Information som är tillgänglig i JSON-objektet för en uppgift (aktivitetsavsnittet i JSON-objektbeskrivningen [för arbetsytan i](/help/forms/using/html-workspace-json-object-description.md)AEM Forms)
-* Information tillgänglig i JSON-objektet för en processinstans (avsnittet Processinstans i JSON-objektbeskrivningen [för arbetsytan i](/help/forms/using/html-workspace-json-object-description.md)AEM Forms)
+* Information tillgänglig i JSON-objektet för en uppgift (aktivitetsavsnittet i [JSON-objektbeskrivning för AEM Forms-arbetsytan](/help/forms/using/html-workspace-json-object-description.md))
+* Information tillgänglig i JSON-objektet för en processinstans (avsnittet Processinstans i [JSON-objektbeskrivning för AEM Forms-arbetsytan](/help/forms/using/html-workspace-json-object-description.md))
 
 Så här anpassar du informationssidan:
 
-1. Följ de [allmänna stegen för anpassning av arbetsytan i AEM Forms.](/help/forms/using/generic-steps-html-workspace-customization.md)
-1. Om du vill visa ytterligare information lägger du till motsvarande nyckelvärdepar i `translation.json` filen vid `todo`block > `details`block > `app`block > [ block `required`].
+1. Följ [Allmänna steg för anpassning av arbetsytan i AEM Forms.](/help/forms/using/generic-steps-html-workspace-customization.md)
+1. Om du vill visa ytterligare information lägger du till motsvarande nyckelvärdepar i `translation.json`-filen på `todo`block > `details`block > `app`block > [ `required`block].
 
-   Det här [`required`blocket] refererar till tillgängliga block, t.ex. uppgiftsblocket, processblock för processinformation och det aktuella väntande uppgiftsblocket för information om väntande uppgifter.
+   [ `required`blocket] refererar till tillgängliga block, t.ex. aktivitetsblocket för aktivitetsinformation, processblock för processinformation och aktuellt väntande aktivitetsblock för information om väntande aktiviteter.
 
    Om du till exempel vill lägga till information om val av väg krävs på sidan med uppgiftsinformation kan du lägga till följande nyckelvärdepar i åtgärdsblocket:
 
@@ -85,6 +85,6 @@ Så här anpassar du informationssidan:
 
 >[!NOTE]
 >
->Om du vill anpassa uppgiftsinformationssidan med uppgifter som har skapats på fliken **Starta process** på arbetsytan i AEM Forms lägger du till den nya informationen `/apps/ws/js/runtime/templates/startprocess.html`.
+>Om du vill anpassa uppgiftsinformationssidan med uppgifter som skapats på fliken **Starta process** på arbetsytan i AEM Forms lägger du till den nya informationen i `/apps/ws/js/runtime/templates/startprocess.html`.
 >
->Om du vill lägga till nya format för informationen som läggs till på informationssidan, ändrar du CSS-filen med hjälp av ändringsavsnittet *för* användargränssnittet i [Anpassa](changing-locale-user-interface.md)arbetsytan.
+>Om du vill lägga till nya format för informationen som läggs till på informationssidan ändrar du CSS-filen med *Ändringarna i användargränssnittet* i [Anpassa arbetsytan](changing-locale-user-interface.md).
