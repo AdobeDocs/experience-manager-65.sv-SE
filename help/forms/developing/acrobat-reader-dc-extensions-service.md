@@ -34,7 +34,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutning
 
 ## Snabbstart (SOAP-läge):Tillämpa användningsrättigheter med Java API {#quick-start-soap-mode-applying-usage-rights-using-the-java-api}
 
-I följande Java-kodexempel tillämpas användarrättigheter på ett PDF-dokument med namnet *Loan.pdf*. Det rättighetsaktiverade PDF-dokumentet sparas som en PDF-fil med namnet *LoanUsageRights.pdf*. Följande användarrättigheter gäller för det här PDF-dokumentet: `enabledComments`, `enabledFormFillIn`och `enabledDigitalSignatures`. (Se [Använda användningsrättigheter i PDF-dokument](/help/forms/developing/assigning-usage-rights.md).)
+I följande Java-kodexempel tillämpas användarrättigheter på ett PDF-dokument med namnet *Loan.pdf*. Det rättighetsaktiverade PDF-dokumentet sparas som en PDF-fil med namnet *LoanUsageRights.pdf*. Följande användarrättigheter gäller för det här PDF-dokumentet: `enabledComments`, `enabledFormFillIn` och `enabledDigitalSignatures`. (Se [Tillämpa användningsrättigheter på PDF-dokument](/help/forms/developing/assigning-usage-rights.md).)
 
 
 ```java
@@ -244,9 +244,9 @@ I följande Java-kodexempel tas användarrättigheter bort från ett rättighets
  
 ```
 
-## Snabbstart (SOAP-läge): Hämta autentiseringsinformation med Java API {#quick-start-soap-mode-retrieving-credential-information-using-the-java-api}
+## Snabbstart (SOAP-läge): Hämta inloggningsinformation med Java API {#quick-start-soap-mode-retrieving-credential-information-using-the-java-api}
 
-I följande Java-kodexempel hämtas information om de autentiseringsuppgifter som används för att tillämpa användarrättigheter på ett rättighetsaktiverat PDF-dokument med namnet *LoanUsageRights.pdf*. (Se [Hämta autentiseringsuppgifter](/help/forms/developing/assigning-usage-rights.md).)
+I följande Java-kodexempel hämtas information om de autentiseringsuppgifter som används för att tillämpa användarrättigheter på ett rättighetsaktiverat PDF-dokument med namnet *LoanUsageRights.pdf*. (Se [Hämta information om autentiseringsuppgifter](/help/forms/developing/assigning-usage-rights.md).)
 
 ```java
  /* 
