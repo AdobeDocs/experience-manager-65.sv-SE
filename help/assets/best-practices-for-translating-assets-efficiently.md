@@ -15,7 +15,7 @@ ht-degree: 1%
 
 [!DNL Adobe Experience Manager Assets] har stöd för flerspråkiga arbetsflöden för att översätta binära filer, metadata och taggar för digitala resurser till flera språkområden och för att hantera översatta resurser. Mer information finns i [Flerspråkiga resurser](multilingual-assets.md).
 
-För effektiv hantering av resurser, för att säkerställa att olika översatta versioner förblir synkroniserade, skapar du [språkkopior](preparing-assets-for-translation.md) av resurser innan du kör översättningsarbetsflöden.
+För effektiv hantering av resurser, för att säkerställa att olika översatta versioner förblir synkroniserade, skapar du [språkkopior](preparing-assets-for-translation.md) av resurserna innan du kör översättningsarbetsflöden.
 
 En språkkopia av en resurs eller en grupp av resurser är ett språkjämlikt (eller en version av resursen/resurserna på ett modersmål) med en liknande innehållshierarki.
 
@@ -42,9 +42,9 @@ Du kan också göra några konfigurationsändringar i ett par arbetsflöden och 
    >Disabling the [!UICONTROL DAM MetaData Writeback] workflow turns off XMP metadata write-back on asset binaries. Consequently, future metadata changes are no longer be saved within the assets. Evaluate the consequences before disabling this workflow.
 -->
 
-1. Aktivera [!UICONTROL Set last modified date] arbetsflödet.
+1. Aktivera arbetsflödet [!UICONTROL Set last modified date].
 
-   Arbetsflödet [!UICONTROL DAM MetaData Writeback] konfigurerar det senaste ändringsdatumet för en resurs. Eftersom du inaktiverar det här arbetsflödet i steg 2 [!DNL Assets] kan inte längre hålla det senaste ändrade datumet för resurser uppdaterat. Aktivera därför arbetsflödet *Ange senaste ändringsdatum* för att se till att senaste ändrade datum för resurser är uppdaterade. Resurser med inaktuella senast ändrade datum kan orsaka fel.
+   Arbetsflödet [!UICONTROL DAM MetaData Writeback] konfigurerar det senaste ändringsdatumet för en resurs. Eftersom du inaktiverar det här arbetsflödet i steg 2 kan [!DNL Assets] inte längre hålla det senaste ändrade datumet för resurser uppdaterat. Aktivera därför arbetsflödet *Ange senaste ändringsdatum* för att säkerställa att de senaste ändrade datumen för resurser är uppdaterade. Resurser med inaktuella senast ändrade datum kan orsaka fel.
 
-1. [Konfigurera översättningsintegreringsramverket](/help/sites-administering/tc-tic.md) så att översättningen av resursbinärfiler avbryts. Avmarkera **[!UICONTROL Translate Assets]** alternativet under [!UICONTROL Assets] fliken om du vill avbryta översättningen av resurbinärfiler.
-1. Översätt metadata/taggar för resurser med hjälp av [flerspråkiga arbetsflöden](multilingual-assets.md).
+1. [Konfigurera ](/help/sites-administering/tc-tic.md) ramverket för översättningsintegrering så att översättningen av resursbinärfiler avbryts. Avmarkera alternativet **[!UICONTROL Translate Assets]** på fliken [!UICONTROL Assets] om du vill stoppa översättningen av resurbinärfiler.
+1. Översätt metadata/taggar för resurser med [arbetsflöden för flerspråkiga resurser](multilingual-assets.md).
