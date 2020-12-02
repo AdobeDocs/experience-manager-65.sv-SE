@@ -10,9 +10,9 @@ ht-degree: 0%
 ---
 
 
-# AEM Foundation och arkiv {#aem-foundation-repository}
+# AEM Foundation och databas {#aem-foundation-repository}
 
-## Ändringslista {#list-of-changes}
+## Lista över ändringar {#list-of-changes}
 
 ### Databas {#repository}
 
@@ -21,13 +21,13 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->Den nya versionen av Oak Segment-taggen som finns sedan AEM 6.3 kräver en databasmigrering. Det här steget är obligatoriskt om du uppgraderar från en äldre version av tarMK eller vill växla den nya segmenttaggen från en annan typ av beständighet. Mer information om fördelarna med de nya segmenttjärna finns i Vanliga frågor och svar om [migrering till Oak Segment-tjära](/help/sites-deploying/revision-cleanup.md#migrating-to-oak-segment-tar).
+>Den nya versionen av Oak Segment-taggen som finns sedan AEM 6.3 kräver en databasmigrering. Det här steget är obligatoriskt om du uppgraderar från en äldre version av tarMK eller vill växla den nya segmenttaggen från en annan typ av beständighet. Mer information om fördelarna med de nya segmenttjärna finns i [Vanliga frågor och svar om migrering till Oak Segment-tjära](/help/sites-deploying/revision-cleanup.md#migrating-to-oak-segment-tar).
 
 ### Java-stöd {#java-support}
 
 * Nytt stöd för Java 11 och Java 8 som redan stöds.
-* För optimala prestanda bör du åsidosätta GC-standardvärden med andra värden. Mer information finns i avsnittet [Installera och uppdatera](/help/sites-deploying/custom-standalone-install.md) .
-* Underhållsuppdateringar för Java 11 och Java 8 distribueras av Adobe för kundanvändning i AEM-relaterade projekt, när de inte är allmänt tillgängliga från Oracle.
+* För optimala prestanda bör du åsidosätta GC-standardvärden med andra värden. Mer information finns i avsnittet [Installera och uppdatera](/help/sites-deploying/custom-standalone-install.md).
+* Underhållsuppdateringar för Java 11 och Java 8 distribueras av Adobe för kundanvändning i AEM projekt, när de inte är allmänt tillgängliga från Oracle.
 
 ### OSGI {#osgi}
 
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 ### Projekt och arbetsflöden {#projects-and-workflows}
 
-* Den nya redigeraren för arbetsflödesmodeller som introducerades i 6.4 har förbättrats så att den omfattar fler åtgärder som kopiera och publicera, stöd för variabel i arbetsflödessteg samt förbättrat `OR` och förbättrat `AND` delning.
+* Den nya redigeraren för arbetsflödesmodeller som introducerades i 6.4 har förbättrats så att den omfattar fler åtgärder som Kopiera och Publicera, Variabelstöd i arbetsflödessteg och förbättrad `OR`- och `AND`-delning.
 
 ### Sökning {#searching}
 
@@ -58,7 +58,7 @@ Ett antal förbättringar har gjorts i användargränssnittet för att göra det
 
 >[!CAUTION]
 >
->Adobe kommer inte att göra fler förbättringar av det klassiska användargränssnittet. Experience Manager 6.5 innehåller Classic UI för bakåtkompatibilitet. Klassiskt användargränssnitt stöds fortfarande fullt ut medan [Läs mer](/help/sites-deploying/ui-recommendations.md)är föråldrat.
+>Adobe kommer inte att göra fler förbättringar av det klassiska användargränssnittet. Experience Manager 6.5 innehåller Classic UI för bakåtkompatibilitet. Klassiskt användargränssnitt stöds inte fullt ut medan [Läs mer](/help/sites-deploying/ui-recommendations.md) är föråldrat.
 
 ### Uppgradera {#upgrade}
 
