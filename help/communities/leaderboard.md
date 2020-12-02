@@ -18,11 +18,11 @@ ht-degree: 2%
 ---
 
 
-# Grundläggande om Ledningsbord {#leaderboard-essentials}
+# Grundläggande om Leaderboard {#leaderboard-essentials}
 
 Den här sidan innehåller viktig information om hur du arbetar med funktionen Ledpanel.
 
-Innan du tar med huvudpanelskomponenten på en sida måste du konfigurera [Scoring and Badges](implementing-scoring.md)för Communities.
+Innan du inkluderar huvudpanelskomponenten på en sida måste du konfigurera [Webbgruppsbedömning och emblem](implementing-scoring.md).
 
 Se [Grundläggande om poäng och emblem](configure-scoring.md).
 
@@ -61,4 +61,4 @@ Se [Grundläggande om poäng och emblem](configure-scoring.md).
 
 ### Filbiblioteksfunktion {#file-library-function}
 
-En community-webbplatsstruktur som innehåller [funktionen](functions.md#leaderboard-function)Leaderboard innehåller en konfigurerad `leaderboard` komponent.
+En community-platsstruktur som innehåller [Ledarpanelsfunktionen](functions.md#leaderboard-function) innehåller en konfigurerad `leaderboard`-komponent.
