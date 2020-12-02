@@ -11,7 +11,7 @@ ht-degree: 2%
 ---
 
 
-# Relaterade tillgångar {#related-assets}
+# Relaterade resurser {#related-assets}
 
 [!DNL Adobe Experience Manager Assets] I kan du manuellt relatera resurser baserat på organisationens behov med hjälp av funktionen för relaterade resurser. Du kan till exempel relatera en licensfil till en resurs eller en bild/video på ett liknande ämne. Du kan relatera resurser som delar vissa gemensamma attribut. Du kan också använda funktionen för att skapa käll-/härledda relationer mellan resurser. Om du till exempel har en PDF-fil som genereras från en INDD-fil kan du koppla PDF-filen till dess INDD-källfil.
 
@@ -23,11 +23,11 @@ Med den här funktionen kan du dela en lågupplöst PDF- eller JPG-fil med lever
 
 ## Relatera resurser {#relating-assets}
 
-1. I [!DNL Experience Manager] gränssnittet öppnar du **[!UICONTROL Properties]** sidan för en resurs som du vill relatera.
+1. I gränssnittet [!DNL Experience Manager] öppnar du sidan **[!UICONTROL Properties]** för en resurs som du vill relatera.
 
    ![öppna en tillgångs egenskapssida för att relatera resursen](assets/asset-properties-relate-assets.png)
 
-   *Bild:[!DNL Assets][!UICONTROL Properties]sida för att relatera tillgångar.*
+   *Bild:  [!DNL Assets] [!UICONTROL Properties] sida för att relatera tillgångar.*
 
    Du kan också välja resursen i listvyn.
 
@@ -37,33 +37,33 @@ Med den här funktionen kan du dela en lågupplöst PDF- eller JPG-fil med lever
 
    ![chlimage_1-274](assets/chlimage_1-274.png)
 
-1. Om du vill koppla en annan resurs till den valda resursen klickar du på **[!UICONTROL Relate]** Relatera ![resurser](assets/do-not-localize/link-relate.png) i verktygsfältet.
+1. Om du vill koppla en annan resurs till den valda resursen klickar du på **[!UICONTROL Relate]** ![Relatera resurser](assets/do-not-localize/link-relate.png) i verktygsfältet.
 1. Gör något av följande:
 
    * Om du vill relatera källfilen för resursen väljer du **[!UICONTROL Source]** i listan.
    * Om du vill relatera en härledd fil väljer du **[!UICONTROL Derived]** i listan.
-   * Om du vill skapa en dubbelriktad relation mellan resurserna väljer du **[!UICONTROL Others]** i listan.
+   * Om du vill skapa en tvåvägsrelation mellan resurserna väljer du **[!UICONTROL Others]** i listan.
 
-1. Navigera från **[!UICONTROL Select Asset]** skärmen till platsen för resursen som du vill relatera och markera den.
+1. På skärmen **[!UICONTROL Select Asset]** navigerar du till platsen för resursen som du vill relatera och markerar den.
 
    ![chlimage_1-277](assets/chlimage_1-277.png)
 
 1. Klicka på **[!UICONTROL Confirm]**.
-1. Klicka **[!UICONTROL OK]** för att stänga dialogrutan. Beroende på ditt val av relation i steg 3 listas den relaterade resursen under en lämplig kategori i **[!UICONTROL Related]** avsnittet. Om den resurs du har relaterat är källfilen för den aktuella resursen visas den under **[!UICONTROL Source]**.
+1. Klicka på **[!UICONTROL OK]** för att stänga dialogrutan. Beroende på vad du väljer för relation i steg 3 listas den relaterade resursen under en lämplig kategori i avsnittet **[!UICONTROL Related]**. Om den resurs du har relaterat är källfilen för den aktuella resursen visas den under **[!UICONTROL Source]**.
 
    ![chlimage_1-278](assets/chlimage_1-278.png)
 
-1. Om du vill ta bort kopplingen för en resurs klickar du på **[!UICONTROL Unrelate]** Ta bort ![koppling för resurser](assets/do-not-localize/link-unrelate-icon.png) i verktygsfältet.
+1. Om du vill ta bort kopplingen för en resurs klickar du på **[!UICONTROL Unrelate]** ![ta bort kopplingen för resurser](assets/do-not-localize/link-unrelate-icon.png) i verktygsfältet.
 
-1. Markera de resurser som du vill ta bort kopplingen för i **[!UICONTROL Remove Relations]** dialogrutan och klicka på **[!UICONTROL Unrelate]**.
+1. Markera de resurser som du vill ta bort kopplingen för i dialogrutan **[!UICONTROL Remove Relations]** och klicka på **[!UICONTROL Unrelate]**.
 
    ![chlimage_1-280](assets/chlimage_1-280.png)
 
-1. Klicka **[!UICONTROL OK]** för att stänga dialogrutan. Resurserna som du har tagit bort relationer för tas bort från listan över relaterade resurser under **[!UICONTROL Related]** avsnittet.
+1. Klicka på **[!UICONTROL OK]** för att stänga dialogrutan. Resurserna som du har tagit bort relationer för tas bort från listan över relaterade resurser under avsnittet **[!UICONTROL Related]**.
 
-## Översätta relaterade resurser {#translating-related-assets}
+## Översätt relaterade resurser {#translating-related-assets}
 
-Det är också praktiskt att skapa käll-/härledda relationer mellan resurser med hjälp av funktionen för relaterade resurser i översättningsarbetsflöden. När du kör ett översättningsarbetsflöde på en härledd resurs hämtar automatiskt alla resurser som källfilen refererar till och inkluderar dem för översättning. [!DNL Experience Manager Assets] På så sätt översätts den resurs som källresursen refererar till tillsammans med källresursen och de härledda resurserna. Tänk dig till exempel ett scenario där den engelska språkkopian innehåller en härledd resurs och dess källfil som visas.
+Det är också praktiskt att skapa käll-/härledda relationer mellan resurser med hjälp av funktionen för relaterade resurser i översättningsarbetsflöden. När du kör ett översättningsarbetsflöde på en härledd resurs hämtar [!DNL Experience Manager Assets] automatiskt alla resurser som källfilen refererar till och inkluderar dem för översättning. På så sätt översätts den resurs som källresursen refererar till tillsammans med källresursen och de härledda resurserna. Tänk dig till exempel ett scenario där den engelska språkkopian innehåller en härledd resurs och dess källfil som visas.
 
 ![chlimage_1-281](assets/chlimage_1-281.png)
 
@@ -75,7 +75,7 @@ Om källfilen är relaterad till en annan resurs hämtar [!DNL Experience Manage
 
 1. Översätt resurserna i källmappen till ett målspråk genom att följa stegen i [Skapa ett nytt översättningsprojekt](translation-projects.md#create-a-new-translation-project). I det här fallet kan du till exempel översätta dina resurser till franska.
 
-1. Öppna översättningsmappen från [!UICONTROL Projects] sidan.
+1. Öppna översättningsmappen på sidan [!UICONTROL Projects].
 
 1. Klicka på projektpanelen för att öppna informationssidan.
 
