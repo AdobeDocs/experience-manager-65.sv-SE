@@ -19,9 +19,9 @@ ht-degree: 0%
 ---
 
 
-# Grundläggande om uppdrag {#assignments-essentials}
+# Grundläggande om tilldelningar {#assignments-essentials}
 
-Läs vidare om du vill veta mer om den viktigaste informationen för att arbeta med uppdragsfunktionen på webbplatser [i användargrupper](/help/communities/overview.md#enablement-community) .
+Läs vidare om du vill veta mer om den viktiga informationen för att arbeta med tilldelningsfunktionen i [aktiveringscommunityn](/help/communities/overview.md#enablement-community).
 
 Tilldelningsfunktionen är möjligheten att tilldela aktiveringsresurser och utbildningsvägar till medlemmar i aktiveringscommunityn.
 
@@ -86,7 +86,7 @@ De enda möjliga kombinationerna av slutförande och lyckad status är:
 
 ### Tilldelningsfunktion {#assignments-function}
 
-En community-platsstruktur som innehåller [uppdragsfunktionen](/help/communities/functions.md#assignments-function), innehåller en konfigurerad ` [assignments](/help/communities/assignments.md)` komponent.
+En community-platsstruktur som innehåller [uppdragsfunktionen](/help/communities/functions.md#assignments-function) innehåller en konfigurerad ` [assignments](/help/communities/assignments.md)`-komponent.
 
 ### Referens-API:er {#reference-apis}
 
@@ -94,5 +94,5 @@ En community-platsstruktur som innehåller [uppdragsfunktionen](/help/communitie
 
 * [Rapporterings-API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/reporting/dv/api/package-summary.html)
 
-* [Rapportera Analytics API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/reporting/analytics/api/package-summary.html)
+* [API för rapporteringsanalys](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/reporting/analytics/api/package-summary.html)
 
