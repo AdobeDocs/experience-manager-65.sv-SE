@@ -19,29 +19,29 @@ ht-degree: 0%
 ---
 
 
-# Community-grupper {#community-groups}
+# Community Groups {#community-groups}
 
 Funktionen för communitygrupper är möjligheten för en undercommunity att skapas dynamiskt på en community-webbplats av behöriga användare (community-medlemmar och författare) från publicerings- och författarmiljöerna.
 
-Den här möjligheten finns när [gruppfunktionen](/help/communities/functions.md#groups-function) finns i [communitywebbplatsens](/help/communities/sites-console.md) struktur.
+Den här möjligheten finns när [gruppfunktionen](/help/communities/functions.md#groups-function) finns i [community-strukturen](/help/communities/sites-console.md).
 
-En mall [för en](/help/communities/tools-groups.md) community-grupp ger designen för communitygruppssidan när en community-grupp skapas dynamiskt.
+En [community-gruppmall](/help/communities/tools-groups.md) innehåller designen för communitygruppssidan när en community-grupp skapas dynamiskt.
 
 En eller flera gruppmallar väljs för gruppfunktionen när funktionen läggs till i en community-webbplatsstruktur eller i en community-webbplatsmall. Den här listan över gruppmallar visas för den medlem eller författare som dynamiskt skapar en ny grupp på communitywebbplatsen.
 
-## Skapa en ny grupp {#creating-a-new-group}
+## Skapar en ny grupp {#creating-a-new-group}
 
-Möjligheten att skapa en ny community-grupp bygger på att det finns en community-webbplats som innehåller gruppfunktionen, t.ex. en som har skapats från [referenswebbplatsmallen](/help/communities/sites.md).
+Möjligheten att skapa en ny community-grupp är beroende av att det finns en community-webbplats som innehåller gruppfunktionen, till exempel en som skapats med [Reference Site Template](/help/communities/sites.md).
 
-Exemplen som följer använder den communitywebbplats som skapats från `Reference Site Template` enligt beskrivningen i [självstudiekursen Komma igång med AEM Communities](/help/communities/getting-started.md) .
+Exemplen som följer använder den communitywebbplats som skapats från `Reference Site Template` enligt beskrivningen i [Komma igång med AEM Communities](/help/communities/getting-started.md)-självstudiekursen.
 
-Det här är sidan som läses in vid publicering när menyalternativet **Grupper** är markerat:
+Det här är sidan som läses in vid publicering när menyobjektet **Grupper** är markerat:
 
 ![new-group](assets/new-group.png)
 
 När du väljer ikonen **Ny grupp** öppnas en redigeringsdialogruta.
 
-Under fliken **Inställningar** kan du ange gruppens grundläggande funktioner:
+Under fliken **Inställningar** anger du gruppens grundläggande funktioner:
 
 ![group-settings](assets/group-settings.png)
 
@@ -63,17 +63,18 @@ Under fliken **Inställningar** kan du ange gruppens grundläggande funktioner:
 
 * **Öppna grupp**
 
-   Markeringen `Open Group` anger att en anonym besökare kan visa innehållet och kommer att avmarkera `Member Only Group`.
+   Om du väljer `Open Group` innebär det att alla anonyma besökare kan visa innehållet och avmarkerar `Member Only Group`.
 
 * **Endast medlemsgrupp**
 
-   Om du väljer `Member Only Group` det här alternativet visas endast gruppens medlemmar som kan visa innehållet, och det avmarkeras `Open Group`.
+   Om du väljer `Member Only Group` innebär det endast att medlemmar i gruppen kan visa innehållet, och avmarkerar `Open Group`.
 
-Under fliken **Mall** kan du välja från listan med gruppmallar som angavs när gruppfunktionen inkluderades i communityplatsens struktur eller i en mall för communitywebbplatser.
+Under fliken **Mall** kan du
+välj i listan över mallar för communitygrupper som angavs när gruppfunktionen inkluderades i communityplatsens struktur eller i en mall för communitywebbplatser.
 
 ![group-template](assets/group-template.png)
 
-Under fliken **Bild** finns möjligheten att överföra en bild som ska visas för gruppen på gruppwebbplatsens gruppsida. Standardformatmallen ändrar bildens storlek till 170 x 90 pixlar.
+Under fliken **Bild** kan du överföra en bild som ska visas för gruppen på gruppwebbplatsens gruppsida. Standardformatmallen ändrar bildens storlek till 170 x 90 pixlar.
 
 ![group-image](assets/group-image.png)
 
@@ -83,15 +84,15 @@ Sidan Grupper med en ny undercommunity med namnet&quot;Focus Group&quot;, som en
 
 ![gruppsida](assets/group-page.png)
 
-Om du väljer `Focus Group` länken öppnas sidan Fokusgrupp i webbläsaren, som har ett ursprungligt utseende baserat på den valda mallen, och som innehåller en undermeny under den huvudsakliga communitywebbplatsens meny:
+Om du väljer länken `Focus Group` öppnas sidan Fokusgrupp i webbläsaren, som har ett ursprungligt utseende baserat på den valda mallen, och som innehåller en undermeny under den huvudsakliga communityplatsens meny:
 
 ![open-group-page](assets/open-group-page.png)
 
-### Medlemslistkomponent för community {#community-group-member-list-component}
+### Medlemsländlistkomponent för community-grupper {#community-group-member-list-component}
 
-Komponenten är avsedd att användas av utvecklare av gruppmallar. `Community Group Member List`
+Komponenten `Community Group Member List` är avsedd för utvecklare av gruppmallar.
 
-### Additional Information {#additional-information}
+### Ytterligare information {#additional-information}
 
 Mer information finns på sidan [Community Group Essentials](/help/communities/essentials-groups.md) för utvecklare.
 
