@@ -1,6 +1,6 @@
 ---
 title: Markdown
-seo-title: Markdown
+seo-title: Markering
 description: När du redigerar innehållsfragmentet använder redigeraren markeringssyntax så att du enkelt kan skriva innehåll.
 seo-description: När du redigerar innehållsfragmentet använder redigeraren markeringssyntax så att du enkelt kan skriva innehåll.
 uuid: afcbf82f-3a75-4491-9172-706188db65bb
@@ -21,7 +21,7 @@ ht-degree: 4%
 
 # Markdown{#markdown}
 
-När du [redigerar](content-fragments-variations.md#authoring-your-content)innehållsfragment använder redigeraren *markeringssyntax* så att du enkelt kan skriva innehåll:
+När du [redigerar](content-fragments-variations.md#authoring-your-content) använder innehållsfragmentredigeraren syntaxen *markdown* så att du enkelt kan skriva innehåll:
 
 ![markeringsredigerare](/help/assets/content-fragments/assets/cfm-6420-08.png)
 
@@ -187,7 +187,7 @@ Kodblock används vanligtvis för att illustrera källkod. Du kan skapa kodblock
 
         `This is a code block.`
 
-## Omvända snedstreck {#backslash-escapes}
+## Omvänt snedstreck hoppar över {#backslash-escapes}
 
 Du kan använda omvänt snedstreck för att generera litterala tecken som har en speciell betydelse för formateringssyntaxen. Om du till exempel vill omsluta ett ord med literala asterisker (i stället för en HTML &lt;em>-tagg) kan du använda omvända snedstreck före asteriskerna, enligt följande:
 
