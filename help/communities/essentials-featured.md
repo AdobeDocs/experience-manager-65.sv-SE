@@ -18,7 +18,7 @@ ht-degree: 2%
 ---
 
 
-# Content Essentials  {#featured-content-essentials}
+# Content Essentials {#featured-content-essentials}
 
 Den här sidan innehåller viktig information för att arbeta med aktuellt innehåll.
 
@@ -60,4 +60,4 @@ I motsats till att fästa ett inlägg överst i ett forum kan den här funktione
 
 ### Filbiblioteksfunktion {#file-library-function}
 
-En community-webbplatsstruktur som innehåller funktionen [](functions.md#featured-content-function)Aktuellt innehåll innehåller en konfigurerad `featured content` komponent.
+En community-webbplatsstruktur som innehåller [funktionen för aktuellt innehåll](functions.md#featured-content-function) innehåller en konfigurerad `featured content`-komponent.
