@@ -11,6 +11,9 @@ discoiquuid: 6a32d240-c6a6-4937-a31f-7a5ec3c60b1f
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+workflow-type: tm+mt
+source-wordcount: '929'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ## Introduktion {#introduction}
 
-När du definierar en `AssignTask` åtgärd i Workbench anger du ett visst formulär (XDP- eller PDF-formulär). Ange även en uppsättning renderings- och Skicka-tjänster via en åtgärdsprofil.
+När du definierar en `AssignTask`-åtgärd i Workbench anger du ett visst formulär (XDP- eller PDF-formulär). Ange även en uppsättning renderings- och Skicka-tjänster via en åtgärdsprofil.
 
 En XDP kan återges som ett PDF-formulär eller ett HTML-formulär. Bland de nya funktionerna finns möjligheten att:
 
@@ -28,7 +31,7 @@ En XDP kan återges som ett PDF-formulär eller ett HTML-formulär. Bland de nya
 
 ### Ny HTML Forms-tjänst {#new-html-forms-service}
 
-Den nya tjänsten HTML Forms använder den nya funktionen i Forms för att ge stöd för återgivning av XDP-formulär som HTML. Den nya HTML Forms-tjänsten har följande metoder:
+Den nya tjänsten HTML Forms utnyttjar den nya funktionen i Forms för att ge stöd för återgivning av XDP-formulär som HTML. Den nya HTML Forms-tjänsten visar följande metoder:
 
 ```java
 /*
@@ -55,51 +58,51 @@ public Map<String, Object> renderHTMLForm (TaskContext taskContext, String profi
 
 Mer information om profiler för mobilformulär finns i [Skapa en anpassad profil](/help/forms/using/custom-profile.md).
 
-## Ny HTML-formulärrendering och nya inskickningsprocesser {#new-html-form-render-amp-submit-processes}
+## Ny HTML-formulärrendering och skickaprocesser {#new-html-form-render-amp-submit-processes}
 
-För varje AssignTask-åtgärd anger du en renderings- och en Submit-process med formuläret. Dessa processer anropas av TaskManager `renderForm`och API: `submitForm`er för att tillåta anpassad hantering. De här processernas semantik för Nytt HTML-formulär:
+För varje AssignTask-åtgärd anger du en renderings- och en Submit-process med formuläret. Dessa processer anropas av TaskManager `renderForm`och `submitForm`API:er för att tillåta anpassad hantering. De här processernas semantik för Nytt HTML-formulär:
 
 ### Återge ett nytt HTML-formulär {#render-a-new-html-form}
 
 Den nya processen att återge HTML, precis som vid alla återgivningsprocesser, har följande I/O-parametrar -
 
-Input - `taskContext`
+Indata - `taskContext`
 
-Output - `runtimeMap`
+Utdata - `runtimeMap`
 
-Output - `outFormDoc`
+Utdata - `outFormDoc`
 
-Den här metoden simulerar det exakta beteendet hos API:t för NewHTMLFormsService `renderHTMLForm` . Det anropar API:t för att hämta URL:en för HTML-återgivning av formuläret. `generateFormURL` Därefter fylls runtimeMap i med följande nyckel eller värden:
+Den här metoden simulerar det exakta beteendet för `renderHTMLForm` API:t för NewHTMLFormsService. Det anropar API:t `generateFormURL` för att hämta URL:en för HTML-återgivning av formuläret. Därefter fylls runtimeMap i med följande nyckel eller värden:
 
 new html form = true
 
-newHTMLFormURL = den URL som returneras efter anrop av `generateFormURL` API.
+newHTMLFormURL = den URL som returneras efter anrop av API:t `generateFormURL`.
 
 ### Skicka ett nytt HTML-formulär {#submit-a-new-html-form}
 
 Den här processen för att skicka ett nytt HTML-formulär fungerar med följande I/O-parametrar -
 
-Input - `taskContext`
+Indata - `taskContext`
 
-Output - `runtimeMap`
+Utdata - `runtimeMap`
 
-Output - `outputDocument`
+Utdata - `outputDocument`
 
-Processen ställer in värdet `outputDocument`till det som `inputDocument`hämtas från `taskContext`.
+Processen ställer in `outputDocument`till `inputDocument`som hämtats från `taskContext`.
 
-## Standardprocesser för återgivning och överföring samt åtgärdsprofiler {#default-render-or-submit-processes-and-action-profiles}
+## Standardprocesser för återgivning eller överföring och åtgärdsprofiler {#default-render-or-submit-processes-and-action-profiles}
 
 Med standardtjänsterna Återgivning och Skicka kan du återge PDF-filer på en dator och HTML på mobila enheter (iPad).
 
 ### Standardåtergivningsformulär {#default-render-form}
 
-Den här processen återger ett XDP-formulär på flera plattformar, sömlöst. Processen hämtar användaragenten från `taskContext`och använder data för att anropa processen för att återge antingen HTML eller PDF.
+Den här processen återger ett XDP-formulär på flera plattformar, sömlöst. Processen hämtar användaragenten från `taskContext` och använder data för att anropa processen för att återge antingen HTML eller PDF.
 
 ![default-render-form](assets/default-render-form.png)
 
 ### Standardformulär för att skicka {#default-submit-form}
 
-Den här processen skickar ett XDP-formulär sömlöst på flera plattformar. Den hämtar användaragenten från `taskContext`och använder data för att anropa processen för att skicka antingen HTML eller PDF.
+Den här processen skickar ett XDP-formulär sömlöst på flera plattformar. Det hämtar användaragenten från `taskContext`och använder data för att anropa processen för att skicka antingen HTML eller PDF.
 
 ![default-submit-form](assets/default-submit-form.png)
 
@@ -114,7 +117,7 @@ Webbläsare drar gradvis tillbaka stödet för NPAPI-baserade plugin-program, in
 
 1. Markera de program som du vill ändra återgivningen av mobilformulär för och klicka på **OK**.
 1. Öppna den process som du vill ändra återgivningen för.
-1. Öppna startpunkten/aktiviteten som du har som mål, navigera till avsnittet Presentation &amp; Data och klicka på **Hantera åtgärdsprofiler**.
+1. Öppna målstartpunkten/målaktiviteten, navigera till avsnittet Presentation &amp; Data och klicka på **Hantera åtgärdsprofiler**.
 
    Dialogrutan Hantera åtgärdsprofiler visas.
 1. Ändra standardåtergivningsprofilskonfigurationer från PDF till HTML och klicka på **OK**.
@@ -141,7 +144,7 @@ Och likvärdiga sändningsprocesser.
 
 ![gen_question_b_20](assets/gen_question_b_20.png) **Vilka åtgärdsprofiler kommer att vara tillgängliga?**
 
-För XDP-formulär:
+För XDP Forms:
 
 * Standard (återge/skicka med de nya standardprocesserna för återgivning/sändning)
 
