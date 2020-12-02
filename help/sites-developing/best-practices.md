@@ -1,8 +1,8 @@
 ---
 title: Bästa praxis
 seo-title: Bästa praxis
-description: Adobes tekniker och konsultteam har utvecklat en omfattande uppsättning metodtips för AEM-utvecklare
-seo-description: Adobes tekniker och konsultteam har utvecklat en omfattande uppsättning metodtips för AEM-utvecklare
+description: Adobe tekniker och konsultteam har utvecklat en omfattande uppsättning bästa metoder för AEM utvecklare
+seo-description: Adobe tekniker och konsultteam har utvecklat en omfattande uppsättning bästa metoder för AEM utvecklare
 uuid: f962c31f-8140-482f-b189-16376e23bfed
 contentOwner: Justin Edelson
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,17 +11,20 @@ topic-tags: best-practices
 discoiquuid: 99678c1a-81f3-4fb3-bf73-98f0691c3fb6
 translation-type: tm+mt
 source-git-commit: e562939f1c64d8345b4c2a28e4b882200d9e4c07
+workflow-type: tm+mt
+source-wordcount: '485'
+ht-degree: 3%
 
 ---
 
 
 # Bästa praxis{#best-practices}
 
-## Best Practices for Developers - Getting Started {#best-practices-for-developers-getting-started}
+## Bästa praxis för utvecklare - Komma igång {#best-practices-for-developers-getting-started}
 
-Adobe Engineering and Consulting-teamet har utvecklat en omfattande uppsättning metodtips för AEM-utvecklare. Adobes utvecklare följer dessa standarder när de utvecklar viktiga AEM-produktuppdateringar och kundkod för kundimplementeringar.
+Adobe tekniker och konsultteam har utvecklat en omfattande uppsättning bästa metoder för AEM utvecklare. Utvecklaren av Adobe följer de bästa metoderna när de utvecklar AEM produktuppdateringar och kundkod för kundimplementeringar.
 
-Innan du börjar ditt AEM-utvecklingsprojekt bör du först granska följande metodtips:
+Innan du börjar AEM utvecklingsprojektet bör du först granska följande metodtips:
 
 * [Utvecklingspraxis](/help/sites-developing/development-practices.md)
 * [Innehållsarkitektur](/help/sites-developing/content-architecture.md)
@@ -72,25 +75,25 @@ Hantering och redigering av webbplatsinnehåll har några beprövade metoder:
   <tr>
    <td>Arbetsflöden</td>
    <td><a href="/help/sites-developing/workflows-best-practices.md">Utveckla och utöka arbetsflöden</a></td>
-   <td><p>Med arbetsflöden kan du automatisera Adobe Experience Manager-aktiviteter (AEM) och representera en stor del av den bearbetning som sker i en AEM-miljö, så vi rekommenderar att du noggrant planerar implementeringarna av arbetsflöden.</p> </td>
+   <td><p>Med arbetsflöden kan du automatisera Adobe Experience Manager (AEM)-aktiviteter och representera en stor del av den bearbetning som sker i en AEM miljö, så vi rekommenderar att du noggrant planerar implementeringarna av arbetsflöden.</p> </td>
   </tr>
  </tbody>
 </table>
 
 ## Communities {#communities}
 
-[AEM Communities](/help/communities/overview.md) förenklar framtagning och hantering av lokala communities.
+[AEM ](/help/communities/overview.md) förenklar framtagning och hantering av lokala communityn.
 
 Här beskrivs några tips för Communities:
 
 |  |  |  |
 |---|---|---|
-| Bästa tillvägagångssätt för att arbeta med användargenererat innehåll (UGC) | [Riktlinjer för kodning](/help/communities/code-guide.md) | Riktlinjer för utveckling av flexibel, portabel kod för ramverket [för](/help/communities/scf.md) sociala komponenter (SCF). |
+| Bästa tillvägagångssätt för att arbeta med användargenererat innehåll (UGC) | [Riktlinjer för kodning](/help/communities/code-guide.md) | Riktlinjer för utveckling av flexibel, portabel kod för [ramverket för sociala komponenter](/help/communities/scf.md) (SCF). |
 | Exempel på användning av webbgruppskomponenter | [Community Components Guide](/help/communities/components-guide.md) | Ett interaktivt utvecklingsverktyg. |
 
 ## Verktyg/HTML {#tooling-htl}
 
-HTML-mallspråk (HTL) är ett nytt HTML-mallsystem som introducerades med AEM 6.0. Den ersätter JSP och ESP som det föredragna mallsystemet i AEM.
+HTML-mallspråk (HTL) är ett nytt HTML-mallsystem som introducerades med AEM 6.0. Den ersätter JSP och ESP som det förvalda mallsystemet för AEM.
 
 |  |  |  |
 |---|---|---|
@@ -99,6 +102,6 @@ HTML-mallspråk (HTL) är ett nytt HTML-mallsystem som introducerades med AEM 6.
 
 >[!NOTE]
 >
->Följande självstudiekurs i flera delar kan vara av intresse för den bästa metoden för att skapa ett nytt AEM-projekt, med information om kärnkomponenter, redigerbara mallar, klientbibliotek och komponentutveckling:
->[Getting Started with AEM Sites - WKND Tutorial](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)
+>Följande självstudiekurs i flera delar kan vara av intresse för den bästa metoden för att skapa ett nytt AEM, med information om kärnkomponenter, redigerbara mallar, klientbibliotek och komponentutveckling:
+>[Komma igång med AEM Sites - WKND självstudiekurs](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)
 
