@@ -11,6 +11,9 @@ discoiquuid: 4e83ed7b-3f48-4bf6-be4c-89f79949c1df
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+workflow-type: tm+mt
+source-wordcount: '309'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ![processrapportering](assets/process-reporting.png)
 
-Process Reporting är ett webbläsarbaserat verktyg som du använder för att skapa och visa rapporter om AEM Forms-processer och -uppgifter.
+Process Reporting är ett webbläsarbaserat verktyg som du använder för att skapa och visa rapporter om AEM Forms processer och uppgifter.
 
 Processrapportering innehåller en uppsättning användningsklara rapporter som gör att du kan filtrera, visa information om långvariga processer, processers varaktighet och arbetsflödesvolym.
 
@@ -43,7 +46,7 @@ Visa en lista över processer som körs länge, tidsscheman för processer och k
 
 Med Process Reporting kan du också exportera rapport- och frågedata i CSV-format.
 
-### Ad hoc-rapporter {#adhoc-reports}
+### Adhoc-rapporter {#adhoc-reports}
 
 ![print-&amp;-color](assets/print-&-colour.png)
 
