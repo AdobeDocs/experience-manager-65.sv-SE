@@ -11,6 +11,9 @@ topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: f45d8a9b-14d6-468f-a44c-3933e962922c
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '2665'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## Sidmallar för mobilappar {#page-templates-for-mobile-apps-1}
 
-Sidkomponenter som du skapar för din app baseras på /libs/mobileapps/components/angular/ng-page ([öppna i CRXDE Lite på en lokal server](http://localhost:4502/crx/de/index.jsp#/libs/mobileapps/components/angular/ng-page)). Den här komponenten innehåller följande JSP-skript som din komponent antingen ärver eller åsidosätter:
+Sidkomponenter som du skapar för din app baseras på /libs/mobileapps/components/angular/ng-page-komponenten ([öppna i CRXDE Lite på en lokal server](http://localhost:4502/crx/de/index.jsp#/libs/mobileapps/components/angular/ng-page)). Den här komponenten innehåller följande JSP-skript som din komponent antingen ärver eller åsidosätter:
 
 * ng-page.jsp
 * head.jsp
@@ -41,17 +44,17 @@ Sidkomponenter som du skapar för din app baseras på /libs/mobileapps/component
 
 ### ng-page.jsp {#ng-page-jsp}
 
-Bestämmer namnet på programmet med hjälp av `applicationName` egenskapen och visar det via pageContext.
+Bestämmer namnet på programmet med egenskapen `applicationName` och visar det via pageContext.
 
 Innehåller head.jsp och body.jsp.
 
 ### head.jsp {#head-jsp}
 
-Skriver ut `<head>` elementet på programsidan.
+Skriver ut elementet `<head>` på programsidan.
 
 Om du vill åsidosätta metaegenskapen för visningsrutan för appen är det den här filen som du åsidosätter.
 
-Enligt bästa praxis inkluderar appen css-delen av klientbiblioteken i huvudet, medan JS inkluderas i det avslutande &lt; `body>` -elementet.
+Enligt bästa praxis inkluderar appen css-delen av klientbiblioteken i huvudet, medan JS-filen inkluderas i det avslutande &lt;`body>`-elementet.
 
 ### body.jsp {#body-jsp}
 
@@ -59,11 +62,11 @@ Brödtexten på en vinkelsida återges på olika sätt beroende på om wcmMode i
 
 **Författarläge**
 
-I redigeringsläge återges varje enskild sida separat. Vinkeln hanterar inte dirigering mellan sidor och inte heller en ng-vy som används för att läsa in en del av en mall som innehåller sidans komponenter. I stället inkluderas sidmallens innehåll (template.jsp) på serversidan via `cq:include` -taggen.
+I redigeringsläge återges varje enskild sida separat. Vinkeln hanterar inte dirigering mellan sidor och inte heller en ng-vy som används för att läsa in en del av en mall som innehåller sidans komponenter. I stället inkluderas sidmallens innehåll (template.jsp) på serversidan via taggen `cq:include`.
 
-Den här strategin aktiverar författarfunktioner (som att lägga till och redigera komponenter i styckesystemet, Sidekick, designläge osv.) att fungera utan ändringar. Sidor som är beroende av klientåtergivning, t.ex. de för appar, fungerar inte så bra i AEM-redigeringsläge.
+Den här strategin aktiverar författarfunktioner (som att lägga till och redigera komponenter i styckesystemet, Sidekick, designläge osv.) att fungera utan ändringar. Sidor som förlitar sig på klientsidans återgivning, t.ex. de för appar, fungerar inte så bra i AEM.
 
-Observera att include i template.jsp är omsluten i ett `div` -element som innehåller `ng-controller` direktivet. Den här strukturen gör att DOM-innehållet kan länkas till kontrollenheten. Även om sidor som återges på klientsidan misslyckas, fungerar därför enskilda komponenter som gör det bra (se avsnittet Komponenter nedan).
+Observera att include i template.jsp är omsluten i ett `div`-element som innehåller `ng-controller`-direktivet. Den här strukturen gör att DOM-innehållet kan länkas till kontrollenheten. Även om sidor som återges på klientsidan misslyckas, fungerar därför enskilda komponenter som gör det bra (se avsnittet Komponenter nedan).
 
 ```xml
 <div ng-controller="<c:out value="${controllerNameStripped}"/>">
@@ -73,9 +76,9 @@ Observera att include i template.jsp är omsluten i ett `div` -element som inneh
 
 **Publiceringsläge**
 
-I publiceringsläge (till exempel när appen exporteras med Innehållssynkronisering) blir alla sidor en SPA-fil (single page app). (Om du vill veta mer om SPA-program använder du den vinkelbaserade självstudiekursen, speciellt [https://docs.angularjs.org/tutorial/step_07](https://docs.angularjs.org/tutorial/step_07).)
+I publiceringsläge (t.ex. när appen exporteras med Innehållssynkronisering) blir alla sidor en app för en sida (SPA). (Om du vill lära dig mer om SPA använder du självstudiekursen Vinkel, speciellt [https://docs.angularjs.org/tutorial/step_07](https://docs.angularjs.org/tutorial/step_07).)
 
-Det finns bara en HTML-sida i en SPA (en sida som innehåller `<html>` elementet). Den här sidan kallas för&quot;layoutmall&quot;. I vinkelterminologi är det..en mall som är gemensam för alla vyer i programmet.&quot; Se den här sidan som den översta appsidan. Programsidan på den översta nivån är den nod i programmet som ligger närmast roten (och är inte en omdirigering). `cq:Page`
+Det finns bara en HTML-sida i en SPA (en sida som innehåller `<html>`-elementet). Den här sidan kallas för&quot;layoutmall&quot;. I vinkelterminologi är det..en mall som är gemensam för alla vyer i programmet.&quot; Se den här sidan som den översta appsidan. Programsidan på den översta nivån är den `cq:Page`-nod i programmet som är närmast roten (och är inte en omdirigering).
 
 Eftersom den faktiska URI:n för din app inte ändras i publiceringsläget måste referenser till externa resurser från den här sidan använda relativa sökvägar. Därför finns det en särskild bildkomponent som tar hänsyn till den här sidan på den översta nivån när bilder återges för export.
 
@@ -89,19 +92,19 @@ Tjänsten Vinkelrutt använder det här elementet för att visa innehållet på 
 
 Filen body.jsp innehåller header.jsp och footer.jsp som är tomma. Om du vill ange statiskt innehåll på varje sida kan du åsidosätta dessa skript i appen.
 
-Slutligen finns javascript-klienter längst ned i &lt;body>-elementet, inklusive två speciella JS-filer som genereras på servern: *&lt;page name>*.angular-app-module.js och *&lt;page name>*.angular-app-controller.js.
+Slutligen finns javascript-klienter längst ned i &lt;body>-elementet, inklusive två speciella JS-filer som genereras på servern: *&lt;sidnamn>*.angular-app-module.js och *&lt;sidnamn>*.angular-app-controller.js.
 
 ### angular-app-module.js.jsp {#angular-app-module-js-jsp}
 
-Det här skriptet definierar vinkelmodulen för programmet. Skriptets utdata är länkade till den kod som resten av mallkomponenten genererar via elementet `html` i ng-page.jsp, som innehåller följande attribut:
+Det här skriptet definierar vinkelmodulen för programmet. Skriptets utdata är länkade till koden som resten av mallens komponent genererar via elementet `html` i ng-page.jsp, som innehåller följande attribut:
 
 ```xml
 ng-app="<c:out value='${applicationName}'/>"
 ```
 
-Det här attributet anger för vinkeln att innehållet i det här DOM-elementet ska länkas till följande modul. Den här modulen länkar vyerna (i AEM är dessa cq:Page-resurser) med motsvarande styrenheter.
+Det här attributet anger för vinkeln att innehållet i det här DOM-elementet ska länkas till följande modul. Den här modulen länkar vyerna (i AEM är de cq:Page-resurser) till motsvarande kontrollenheter.
 
-Den här modulen definierar också en kontrollenhet på den översta nivån med namnet `AppController` som visar `wcmMode` variabeln för omfånget och konfigurerar URI:n som uppdateringsnyttolasterna för innehållssynkronisering ska hämtas från.
+Den här modulen definierar också en kontrollenhet på den översta nivån med namnet `AppController` som exponerar variabeln `wcmMode` för scopet och konfigurerar URI:n som uppdateringsnyttolasterna för innehållssynkronisering ska hämtas från.
 
 Slutligen itererar den här modulen igenom varje underordnad sida (inklusive sig själv) och återger innehållet i flödesfragmentet för varje sida (via väljaren angular-route-fragment.js och filnamnstillägget), inklusive det som en config-post till Angular&#39;s $routeProvider. Med andra ord anger $routeProvider vilket innehåll som ska återges när en viss sökväg begärs.
 
@@ -116,7 +119,7 @@ Det här skriptet genererar ett JavaScript-fragment som måste ha följande form
 })
 ```
 
-Den här koden anger för $routeProvider (definieras i angular-app-module.js.jsp) att &#39;/&lt;sökväg>&#39; ska hanteras av resursen på `templateUrl`och kabelanslutas av `controller` (vilket vi kommer till nästa).
+Den här koden anger för $routeProvider (definieras i angular-app-module.js.jsp) att &#39;/&lt;path>&#39; ska hanteras av resursen på `templateUrl` och kabelanslutas av `controller` (som vi kommer till nästa).
 
 Om det behövs kan du åsidosätta det här skriptet för att hantera mer komplexa banor, inklusive de med variabler. Ett exempel på detta finns i /apps/weretail-app/components/angular/ng-template-page/angular-route-fragment.js.jsp-skriptet som installeras med AEM:
 
@@ -130,7 +133,7 @@ Om det behövs kan du åsidosätta det här skriptet för att hantera mer komple
 
 ### angular-app-controllers.js.jsp {#angular-app-controllers-js-jsp}
 
-I vinkeln sammanfogar styrenheter variablerna i $scope och visar dem för vyn. Skriptet angular-app-controllers.js.jsp följer det mönster som illustreras av angular-app-module.js.jsp på så sätt att det itererar genom varje underordnad sida (inklusive sig själv) och matar ut det kontrollenhetsfragment som varje sida definierar (via controller.js.jsp). Modulen som definieras anropas `cqAppControllers` och måste listas som ett beroende av appmodulen på den översta nivån så att sidstyrenheterna blir tillgängliga.
+I vinkeln sammanfogar styrenheter variablerna i $scope och visar dem för vyn. Skriptet angular-app-controllers.js.jsp följer det mönster som illustreras av angular-app-module.js.jsp på så sätt att det itererar genom varje underordnad sida (inklusive sig själv) och matar ut det kontrollenhetsfragment som varje sida definierar (via controller.js.jsp). Modulen som definieras kallas `cqAppControllers` och måste listas som ett beroende av appmodulen på den översta nivån så att sidstyrenheterna blir tillgängliga.
 
 ### controller.js.jsp {#controller-js-jsp}
 
@@ -146,13 +149,13 @@ Skriptet controller.js.jsp genererar kontrollenhetsfragmentet för varje sida. D
 ])
 ```
 
-Observera att variabeln tilldelas det löfte som returneras av `data` `$http.get` metoden Angular. Alla komponenter på den här sidan kan, om så önskas, göra en del .json-innehåll tillgängligt (via skriptet angular.json.jsp) och agera på innehållet i den här begäran när den löses. Begäran är mycket snabb på mobila enheter eftersom den bara använder filsystemet.
+Observera att variabeln `data` tilldelas det löfte som returneras av metoden Angular `$http.get`. Alla komponenter på den här sidan kan, om så önskas, göra en del .json-innehåll tillgängligt (via skriptet angular.json.jsp) och agera på innehållet i den här begäran när den löses. Begäran är mycket snabb på mobila enheter eftersom den bara använder filsystemet.
 
-För att en komponent ska kunna vara en del av kontrollenheten på det här sättet bör den utöka komponenten /libs/mobileapps/components/angular/ng-component och innehålla `frameworkType: angular` egenskapen.
+För att en komponent ska kunna vara en del av kontrollenheten på det här sättet bör den utöka komponenten /libs/mobileapps/components/angular/ng-component och innehålla egenskapen `frameworkType: angular`.
 
 ### template.jsp {#template-jsp}
 
-Först introducerades i body.jsp-avsnittet, innehåller template.jsp helt enkelt sidans parsys. I publiceringsläget refereras det här innehållet direkt (på &lt;page-path>.template.html) och läses in i SPA via den templateUrl som konfigurerats på $routeProvider.
+Först introducerades i body.jsp-avsnittet, innehåller template.jsp helt enkelt sidans parsys. I publiceringsläge refereras det här innehållet direkt (på &lt;page-path>.template.html) och läses in i SPA via den templateUrl som konfigurerats på $routeProvider.
 
 Parsyserna i det här skriptet kan konfigureras så att alla typer av komponenter accepteras. Försiktighet måste dock iakttas vid hantering av komponenter som är byggda för en traditionell webbplats (till skillnad från SPA). Till exempel fungerar bildkomponenten som grund bara korrekt på appsidan på den översta nivån eftersom den inte är utformad för att referera till resurser som finns inuti en app.
 
@@ -178,10 +181,10 @@ Ett skript som placerar statiskt innehåll längst ned i programmet. Det här in
 
 ## Appkomponenter {#app-components}
 
-Programkomponenter får inte bara fungera på en AEM-instans (publicera eller författare), utan även när programinnehållet exporteras till filsystemet via Innehållssynkronisering. Komponenten måste därför innehålla följande egenskaper:
+Programkomponenter får inte bara fungera på en AEM (publicera eller författare), utan även när programinnehållet exporteras till filsystemet via Innehållssynkronisering. Komponenten måste därför innehålla följande egenskaper:
 
 * Alla resurser, mallar och skript i ett PhoneGap-program måste refereras relativt.
-* Hanteringen av länkar skiljer sig om AEM-instansen körs i författar- eller publiceringsläge.
+* Hanteringen av länkar skiljer sig om AEM fungerar i redigerings- eller publiceringsläge.
 
 ### Relativa resurser {#relative-assets}
 
@@ -193,7 +196,7 @@ Observera GUID &#39;24BA22ED-7D06-4330-B7EB-F6FC73251CA3&#39; i sökvägen.
 
 Som PhoneGap-utvecklare finns det innehåll du är intresserad av under www-katalogen. Använd relativa sökvägar för att komma åt appresurserna.
 
-För att lösa problemet använder PhoneGap-programmet SPA-mönstret (single page app) så att bas-URI:n (exklusive hash) aldrig ändras. Därför måste alla resurser, mallar och skript som du refererar till **vara relativa till den översta sidan. **Den översta sidan initierar vinkelroutning och styrenheter med hjälp av `<name>.angular-app-module.js` och `<name>.angular-app-controllers.js`. Den här sidan ska vara den närmaste sidan till databasens rot som *inte *utökar en sling:redirect.
+För att lösa in problemet använder PhoneGap-programmet appmönstret för en sida (SPA) så att bas-URI:n (exklusive hash) aldrig ändras. Därför måste alla resurser, mallar och skript som du refererar till **vara relativa till den översta sidan. **Sidan på den översta nivån initierar vinkelroutning och styrenheter med hjälp av `<name>.angular-app-module.js` och `<name>.angular-app-controllers.js`. Den här sidan ska vara den närmaste sidan till databasens rot som *inte *utökar en sling:redirect.
 
 Det finns flera hjälpmetoder för att hantera relativa sökvägar:
 
@@ -217,9 +220,9 @@ Länkarna måste använda funktionen `ng-click="go('/path')"` för att stödja a
 </c:otherwise></c:choose>
 ```
 
-När `$scope.wcmMode == true` vi hanterar varje navigeringshändelse på vanligt sätt, så att resultatet blir en ändring av sökvägen och/eller siddelen i URL:en.
+När `$scope.wcmMode == true` hanterar vi varje navigeringshändelse på vanligt sätt, så att resultatet blir en ändring av sökvägen och/eller siddelen i URL:en.
 
-Om `$scope.wcmMode == false`detta inträffar, kan varje navigeringshändelse resultera i en ändring av hash-delen av URL:en som löses internt av vinkelmodulen ngRoute.
+Om `$scope.wcmMode == false` är &lt;a0/> resulterar varje navigeringshändelse i en ändring i hash-delen av URL:en som löses internt av vinkelmodulen ngRoute.
 
 ### Information om komponentskript {#component-script-details}
 
@@ -231,7 +234,7 @@ Skriptet visar antingen komponentinnehållet eller en lämplig platshållare nä
 
 ### template.jsp {#template-jsp-1}
 
-Skriptet template.jsp återger komponentens kod. Om komponenten i fråga drivs av JSON-data som hämtats från AEM (till exempel &#39;ng-text&#39;): /libs/mobileapps/components/angular/ng-text/template.jsp) kommer det här skriptet att vara ansvarigt för att dra markeringen med data som exponeras av sidans kontrollomfång.
+Skriptet template.jsp återger komponentens kod. Om komponenten i fråga drivs av JSON-data som har extraherats från AEM (till exempel &#39;ng-text&#39;): /libs/mobileapps/components/angular/ng-text/template.jsp) kommer det här skriptet att vara ansvarigt för att dra markeringen med data som exponeras av sidans kontrollomfång.
 
 Prestandakraven kan dock ibland innebära att ingen klientsidans mall (dvs databindning) utförs. I det här fallet återger du bara komponentens kod på serversidan, så inkluderas den i sidmallsinnehållet.
 
@@ -241,7 +244,7 @@ I komponenter som drivs av JSON-data (till exempel &#39;ng-text&#39;): /libs/mob
 
 ### controller.js.jsp {#controller-js-jsp-1}
 
-Så som beskrivs i [AEM-sidmallar](/help/mobile/apps-architecture.md)kan varje komponent generera ett JavaScript-fragment för att förbruka det JSON-innehåll som exponeras av `data` löftet. I enlighet med vinkelregler bör en kontrollenhet endast användas för att tilldela variabler till omfånget.
+Så som beskrivs i [AEM Page Templates](/help/mobile/apps-architecture.md) kan varje komponent generera ett JavaScript-fragment för att förbruka JSON-innehållet som exponeras av `data`-löftet. I enlighet med vinkelregler bör en kontrollenhet endast användas för att tilldela variabler till omfånget.
 
 ### angular.json.jsp {#angular-json-jsp}
 
@@ -280,7 +283,7 @@ Produktkomponenten för programmet We.Retail är ett mer komplext exempel (/apps
 }
 ```
 
-## Innehåll i hämtningen av CLI-resurser {#contents-of-the-cli-assets-download}
+## Innehåll i CLI Assets Download {#contents-of-the-cli-assets-download}
 
 Hämta CLI-resurser från Apps-konsolen för att optimera dem för en viss plattform och bygg sedan appen med PhoneGap-API:t för kommandoradsintegrering (CLI). Innehållet i ZIP-filen som du sparar i det lokala filsystemet har följande struktur:
 
@@ -308,21 +311,21 @@ Det här är en dold katalog som du kanske inte ser beroende på dina aktuella o
 
 ### .cordova/hooks/ {#cordova-hooks}
 
-Den här katalogen innehåller [CLI-krokarna](https://devgirl.org/2013/11/12/three-hooks-your-cordovaphonegap-project-needs/). Mapparna i hooks-katalogen innehåller node.js-skript som körs vid exakta punkter under bygget.
+Den här katalogen innehåller [CLI-böckerna](https://devgirl.org/2013/11/12/three-hooks-your-cordovaphonegap-project-needs/). Mapparna i hooks-katalogen innehåller node.js-skript som körs vid exakta punkter under bygget.
 
 ### .cordova/hooks/after-platform_add/ {#cordova-hooks-after-platform-add}
 
-Katalogen after-platform_add innehåller `copy_AMS_Conifg.js` filen. Det här skriptet kopierar en konfigurationsfil som stöder samlingen av Adobe Mobile Services-analyser.
+Katalogen after-platform_add innehåller filen `copy_AMS_Conifg.js`. Det här skriptet kopierar en konfigurationsfil som stöder samlingen av Adobe Mobile Services-analyser.
 
 ### .cordova/hooks/after-prepare/ {#cordova-hooks-after-prepare}
 
-Katalogen after-prepare innehåller `copy_resource_files.js` filen. Skriptet kopierar ett antal ikoner och välkomstskärmsbilder till plattformsspecifika platser.
+Katalogen after-prepare innehåller filen `copy_resource_files.js`. Skriptet kopierar ett antal ikoner och välkomstskärmsbilder till plattformsspecifika platser.
 
 ### .cordova/hooks/before_platform_add/ {#cordova-hooks-before-platform-add}
 
-Katalogen before_platform_add innehåller `install_plugins.js` filen. Skriptet itererar genom en lista med identifierare för Cordova-plugin-program, och installerar de som identifieras inte redan är tillgängliga.
+Katalogen before_platform_add innehåller filen `install_plugins.js`. Skriptet itererar genom en lista med identifierare för Cordova-plugin-program, och installerar de som identifieras inte redan är tillgängliga.
 
-Denna strategi kräver inte att du paketerar och installerar plugin-program till AEM varje gång kommandot Maven `content-package:install` körs. Den alternativa strategin för att checka in filerna i SCM-systemet kräver repetitiva paketerings- och installationsaktiviteter.
+Den här strategin kräver inte att du paketerar och installerar plugin-program för att AEM varje gång kommandot Maven `content-package:install` körs. Den alternativa strategin för att checka in filerna i SCM-systemet kräver repetitiva paketerings- och installationsaktiviteter.
 
 ### .cordova/hooks/andra krokar {#cordova-hooks-other-hooks}
 
@@ -353,15 +356,15 @@ Inkludera andra krokar efter behov. Följande kopplingar är tillgängliga (enli
 * after_run
 * before_run
 
-### plattformar/ {#platforms}
+### plattformar/{#platforms}
 
-Den här katalogen är tom tills du kör `phonegap run *<platform>*` kommandot i projektet. För närvarande `*<platform>*` kan det vara antingen `ios` eller `android`.
+Den här katalogen är tom tills du kör kommandot `phonegap run *<platform>*` i projektet. För närvarande kan `*<platform>*` antingen vara `ios` eller `android`.
 
 När du har skapat programmet för en viss plattform skapas motsvarande katalog och den innehåller den plattformsspecifika programkoden.
 
 ### plugins/ {#plugins}
 
-Katalogen för plugin-program fylls i av varje plugin-program som visas i `.cordova/hooks/before_platform_add/install_plugins.js` filen när du har kört `phonegap run *<platform>*` kommandot. Katalogen är från början tom.
+Katalogen plugin-program fylls i av varje plugin-program som finns i `.cordova/hooks/before_platform_add/install_plugins.js`-filen när du har kört kommandot `phonegap run *<platform>*`. Katalogen är från början tom.
 
 ### www/ {#www}
 
@@ -369,7 +372,7 @@ Katalogen www innehåller allt webbinnehåll (HTML-, JS- och CSS-filer) som impl
 
 ### www/config.xml {#www-config-xml}
 
-PhoneGap- [dokumentationen](https://docs.phonegap.com) refererar till den här filen som en&quot;global konfigurationsfil&quot;. config.xml innehåller många appegenskaper, till exempel namnet på programmet, programmets inställningar (till exempel om en iOS-webbvy tillåter överrullning) och plugin-beroenden som *bara* används av PhoneGap-bygget.
+[PhoneGap-dokumentationen](https://docs.phonegap.com) refererar till den här filen som en global konfigurationsfil. config.xml innehåller många appegenskaper, till exempel namnet på programmet, programmets inställningar (till exempel om en iOS-webbvy tillåter överrullning) och plugin-beroenden som är *endast* som används av PhoneGap-bygget.
 
 Filen config.xml är en statisk fil i AEM och exporteras i befintligt skick via Innehållssynkronisering.
 
@@ -377,41 +380,41 @@ Filen config.xml är en statisk fil i AEM och exporteras i befintligt skick via 
 
 Filen index.html dirigeras om till programmets startsida.
 
-Filen config.xml innehåller `content` elementet:
+Filen config.xml innehåller elementet `content`:
 
 `<content src="content/phonegap/weretail/apps/ng-we-retail/en.html" />`
 
-I PhoneGap- [dokumentationen](https://docs.phonegap.com)beskrivs det här elementet som&quot;Det valfria &lt;content>-elementet definierar programmets startsida i webbresurskatalogen på den översta nivån. Standardvärdet är index.html, som vanligtvis visas i projektets toppnivåkatalog www.&quot;
+I [PhoneGap-dokumentationen](https://docs.phonegap.com) beskrivs det här elementet som &quot;Det valfria &lt;content>-elementet definierar programmets startsida i webbresurskatalogen på den översta nivån. Standardvärdet är index.html, som vanligtvis visas i projektets toppnivåkatalog www.&quot;
 
 PhoneGap-bygget misslyckas om det inte finns någon index.html-fil. Därför inkluderas den här filen.
 
 ### www/res {#www-res}
 
-Katalogen res innehåller bilder och ikoner på välkomstskärmen. Skriptet kopierar filerna till deras plattformsspecifika platser under `copy_resource_files.js` `after_prepare` byggfasen.
+Katalogen res innehåller bilder och ikoner på välkomstskärmen. Skriptet `copy_resource_files.js` kopierar filerna till deras plattformsspecifika platser under byggfasen av `after_prepare`.
 
 ### www/etc {#www-etc}
 
-I AEM innehåller noden /etc som regel statiskt clientlib-innehåll. Katalogen etc innehåller biblioteken Toprock, AngularJS och We.Retail ng-clientlibsall.
+AEM noden /etc innehåller som standard statiskt clientlib-innehåll. Katalogen etc innehåller biblioteken Toprock, AngularJS och We.Retail ng-clientlibsall.
 
 ### www/apps {#www-apps}
 
-Programkatalogen innehåller kod som är relaterad till välkomstsidan. Den unika egenskapen hos startsidan för en AEM-app är att den initierar programmet utan någon användarinteraktion. Klientlibbinnehållet (både CSS och JS) i appen är därför minimalt för att maximera prestanda.
+Programkatalogen innehåller kod som är relaterad till välkomstsidan. Den unika egenskapen hos startsidan för en AEM är att den initierar programmet utan någon användarinteraktion. Klientlibbinnehållet (både CSS och JS) i appen är därför minimalt för att maximera prestanda.
 
 ### www/content {#www-content}
 
 Innehållskatalogen innehåller resten av programmets webbinnehåll. Innehållet kan innehålla, men är inte begränsat till, följande filer:
 
 * HTML-sidinnehåll, som skapas direkt i AEM
-* Bildresurser som är associerade med AEM-komponenter
+* Bildresurser som är associerade med AEM
 * JavaScript-innehåll som serverskript genererar
 * JSON-filer som beskriver sidor- eller komponentinnehåll
 
 ### www/package.json {#www-package-json}
 
-Filen package.json är en manifestfil som listar de filer som ingår i en **fullständig** nedladdning av innehållssynkronisering. Den här filen innehåller även den tidsstämpel som användes när Content Sync-nyttolasten genererades ( `lastModified`). Den här egenskapen används vid begäran om partiella uppdateringar av appen från AEM.
+Filen package.json är en manifestfil som listar de filer som ingår i en **full** Content Sync-hämtning. Den här filen innehåller också den tidsstämpel som nyttolasten för innehållssynkronisering genererades med ( `lastModified`). Den här egenskapen används vid begäran om partiella uppdateringar av appen från AEM.
 
 ### www/package-update.json {#www-package-update-json}
 
-Om den här nyttolasten är en nedladdning av hela programmet innehåller manifestet den exakta listan över filer som `package.json`.
+Om den här nyttolasten är en hämtning av hela programmet innehåller manifestet den exakta listan med filer som `package.json`.
 
-Om den här nyttolasten är en partiell uppdatering innehåller dock endast de filer som ingår i den aktuella nyttolasten `package-update.json` .
+Om nyttolasten är en partiell uppdatering innehåller `package-update.json` bara de filer som ingår i den aktuella nyttolasten.
