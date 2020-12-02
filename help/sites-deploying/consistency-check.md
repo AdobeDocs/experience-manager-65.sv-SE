@@ -10,11 +10,14 @@ content-type: reference
 discoiquuid: af9a3e9d-194a-42e5-be28-b238e0c1e55e
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '168'
+ht-degree: 0%
 
 ---
 
 
-# Konsekvenskontroll och genomgående kontroll{#consistency-and-traversal-checks}
+# Konsekvenskontroll och genomgång{#consistency-and-traversal-checks}
 
 När du uppgraderar kan det uppstå problem på grund av inkonsekvenser i arbetsytan. Du kan antingen köra en testuppgradering för att se om det är ett problem eller köra konsekvenskontrollerna som förebyggande åtgärder.
 
@@ -30,13 +33,13 @@ javax.jcr.RepositoryException: Error indexing workspace: Error indexing workspac
 
 ## Utför en konsekvenskontroll {#perform-a-consistency-check}
 
-Navigera till administrationssidan för JMX Mbean**.adobe.granite (Repository)** för att utföra en konsekvenskontroll. Från AEM-huvudskärmen går du till:
+Navigera till administrationssidan för JMX Mbean**.adobe.granite (Repository)** för att utföra en konsekvenskontroll. Från AEM huvudskärm går du till:
 
 **Verktyg > Webbkonsol > Huvudmeny (på menyraden) > JMX > com.adobe.granite (databas)**
 
-**[I en standardinstallation finns den här:  |Visa mig|](http://localhost:4502/system/console/jmx/com.adobe.granite%3Atype%3DRepository)**
+I en standardinstallation finns den här:  **[|Visa mig|](http://localhost:4502/system/console/jmx/com.adobe.granite%3Atype%3DRepository)**
 
-Under **Åtgärder** på sidan finns två metoder: **`traversalCheck`** och **`consistencyCheck`**. Om du vill utföra en kontroll klickar du på åtgärden och anger önskade parametrar.
+I avsnittet **Åtgärder** på sidan hittar du två metoder: **`traversalCheck`** och **`consistencyCheck`**. Om du vill utföra en kontroll klickar du på åtgärden och anger önskade parametrar.
 
 ![chlimage_1-117](assets/chlimage_1-117.png)
 
