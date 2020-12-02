@@ -1,8 +1,8 @@
 ---
 title: Kodexempel
 seo-title: Kodexempel
-description: Adobe Consulting Services-teamet har genererat en serie AEM-kodexempel
-seo-description: Adobe Consulting Services-teamet har genererat en serie AEM-kodexempel
+description: Adobe Consulting Services-teamet har genererat ett antal AEM kodexempel
+seo-description: Adobe Consulting Services-teamet har genererat ett antal AEM kodexempel
 uuid: 16f23fa6-5a3c-4697-87de-86db37b3ec1b
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,21 +11,24 @@ topic-tags: best-practices
 discoiquuid: 07bf0224-6744-42d4-861f-d656ccfad171
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '238'
+ht-degree: 0%
 
 ---
 
 
 # Kodexempel{#code-samples}
 
-Adobe Consulting Services-teamet har genererat en serie AEM-kodexempel. Dessa exempel är väl kommenterade kodavsnitt som hjälper AEM-utvecklare att förstå huvudbyggstenarna i AEM. Proverna finns här: [https://adobe-consulting-services.github.io/acs-aem-samples/](https://adobe-consulting-services.github.io/acs-aem-samples/).
+Adobe Consulting Services Team har genererat en serie AEM kodexempel. Dessa exempel är väl kommenterade kodavsnitt som hjälper AEM utvecklare att förstå de viktigaste byggstenarna i AEM. Proverna finns här: [https://adobe-consulting-services.github.io/acs-aem-samples/](https://adobe-consulting-services.github.io/acs-aem-samples/).
 
-En självstudiekurs i flera delar som utformats för utvecklare som är nybörjare i AEM och som täcker grundläggande ämnen som projektkonfiguration, kärnkomponenter, redigerbara mallar, klientbibliotek och komponentutveckling: Komma [igång med AEM Sites - WKND, genomgång](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)
+En självstudiekurs i flera delar som är utformad för utvecklare som inte är vana att AEM grundläggande ämnen som projektkonfiguration, kärnkomponenter, redigerbara mallar, klientbibliotek och komponentutveckling: [Komma igång med AEM Sites - WKND självstudiekurs](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)
 
 Adobe AEM Community-teamet skapar artiklar om hur man gör för utvecklare. Du hittar artiklarna [här](https://helpx.adobe.com/experience-manager/topics/how-to.html).
 
-Det finns en Maven-mall [här](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype)som du kan använda för att skapa ett nytt AEM-projekt som utgångspunkt för att utveckla egna funktioner.
+Det finns en Maven-mall som du kan använda för att skapa ett nytt AEM som utgångspunkt för att utveckla egna funktioner [här](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype).
 
-Exemplen med gränssnittskod som har pekfunktion finns som standard [här](/help/sites-developing/developing-components.md).
+Exemplen med gränssnittskod som har pekfunktion är tillgängliga [här](/help/sites-developing/developing-components.md).
 
 Ytterligare kodexempel finns:
 
