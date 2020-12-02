@@ -1,8 +1,8 @@
 ---
 title: Bästa praxis
 seo-title: Bästa praxis
-description: Här hittar du de bästa metoderna som tagits fram av Adobes tekniker och konsultteam för att hjälpa administratörerna att komma igång.
-seo-description: Här hittar du de bästa metoderna som tagits fram av Adobes tekniker och konsultteam för att hjälpa administratörerna att komma igång.
+description: Här hittar du de bästa arbetssätten som skapats av Adobe tekniker och konsultteam för att hjälpa administratörerna att komma igång.
+seo-description: Här hittar du de bästa arbetssätten som skapats av Adobe tekniker och konsultteam för att hjälpa administratörerna att komma igång.
 uuid: 862d4fcf-ca61-4228-9344-b95a49b59b32
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,18 +11,21 @@ topic-tags: best-practices
 discoiquuid: 8f6468a0-7721-454f-9334-c449968b8fe7
 translation-type: tm+mt
 source-git-commit: e594c53b2a26c1c9e484ac07220dc89c283cf7da
+workflow-type: tm+mt
+source-wordcount: '543'
+ht-degree: 2%
 
 ---
 
 
 # Bästa praxis{#best-practices}
 
-Bästa praxis beskriver hur man utvecklar, administrerar eller använder AEM på det mest effektiva och effektiva sättet. Den här växande ämneslistan innehåller en rad olika områden i AEM.
+Bästa tillvägagångssätt beskriver hur du utvecklar, administrerar eller använder AEM på det mest effektiva och effektiva sättet. Den här växande listan med ämnen innehåller en mängd olika områden i AEM.
 
 Följande områden har dokumentation om bästa praxis:
 
-* [Resurser](#assets)
-* [Webbplatser](#sites)
+* [Assets](#assets)
+* [Sites](#sites)
 
 De bästa sätten att skapa, distribuera och underhålla, eller utveckla finns i något av följande:
 
@@ -32,7 +35,7 @@ De bästa sätten att skapa, distribuera och underhålla, eller utveckla finns i
 
 Specifika dokument beskrivs och länkas till i de tabeller som följer.
 
-## Resurser {#assets}
+## Assets {#assets}
 
 De bästa sätten att använda Assets, inklusive Dynamic Media-funktionen och Dynamic Media Classic-integrering, beskrivs i följande avsnitt:
 
@@ -55,8 +58,8 @@ De bästa sätten att använda Assets, inklusive Dynamic Media-funktionen och Dy
   </tr>
   <tr>
    <td>Alternativ för bildförinställningar</td>
-   <td>De bästa sätten att använda <a href="/help/assets/managing-image-presets.md#understanding-image-presets">bildförinställningar</a> och <a href="/help/assets/managing-image-presets.md#image-preset-options">bildförinställningar</a></td>
-   <td>I dokumentationen om <a href="/help/assets/managing-image-presets.md">hantering av bildförinställningar</a>beskrivs vilka bildförinställningar som är och de bästa sätten att välja bildförinställningar.</td>
+   <td>Om <a href="/help/assets/managing-image-presets.md#understanding-image-presets">bildförinställningar</a> och <a href="/help/assets/managing-image-presets.md#image-preset-options">god praxis för bildförinställningar</a></td>
+   <td>I dokumentationen om <a href="/help/assets/managing-image-presets.md">Hantera bildförinställningar</a> beskrivs vilka bildförinställningar som är och de bästa sätten att välja bildförinställningar.</td>
   </tr>
   <tr>
    <td>Dynamic Media jämfört med direktintegrering med Scene7</td>
@@ -66,7 +69,7 @@ De bästa sätten att använda Assets, inklusive Dynamic Media-funktionen och Dy
  </tbody>
 </table>
 
-## Webbplatser {#sites}
+## Sites {#sites}
 
 Hantering och redigering av webbplatsinnehåll har några beprövade metoder:
 
@@ -74,8 +77,8 @@ Hantering och redigering av webbplatsinnehåll har några beprövade metoder:
  <tbody>
   <tr>
    <td>GDPR-efterlevnad</td>
-   <td><a href="/help/sites-administering/gdpr-compliance-sites.md">AEM Sites GDPR-kompatibilitet</a></td>
-   <td>Europeiska unionens allmänna dataskyddsförordning om integritetsskydd får verkan från och med maj 2018. AEM Sites är kompatibelt med GDPR. På den här sidan får kunderna hjälp med hur de hanterar GDPR-förfrågningar i AEM Sites. Den beskriver platsen för privata data som lagras och hur du tar bort dem manuellt eller med kod.</td>
+   <td><a href="/help/sites-administering/gdpr-compliance-sites.md">AEM Sites GDPR-efterlevnad</a></td>
+   <td>Europeiska unionens allmänna dataskyddsförordning om integritetsskydd får verkan från och med maj 2018. AEM Sites följer GDPR. På den här sidan får kunderna hjälp med hur de hanterar GDPR-förfrågningar i AEM Sites. Den beskriver platsen för privata data som lagras och hur du tar bort dem manuellt eller med kod.</td>
   </tr>
   <tr>
    <td>Definiera standardgränssnittet för instansen.</td>
@@ -100,7 +103,7 @@ Hantering och redigering av webbplatsinnehåll har några beprövade metoder:
   <tr>
    <td>Arbetsflöden</td>
    <td><a href="/help/sites-developing/workflows-best-practices.md#configuration">Bästa praxis för arbetsflöde - Konfiguration</a></td>
-   <td>Med arbetsflöden kan du automatisera Adobe Experience Manager-aktiviteter (AEM) och representera en stor del av den bearbetning som sker i en AEM-miljö, så vi rekommenderar att du noggrant planerar och konfigurerar arbetsflödesimplementeringarna.</td>
+   <td>Med arbetsflöden kan du automatisera Adobe Experience Manager (AEM)-aktiviteter och representera en stor del av den bearbetning som sker i en AEM miljö, så vi rekommenderar att du noggrant planerar och konfigurerar arbetsflödesimplementeringarna.</td>
   </tr>
  </tbody>
 </table>
