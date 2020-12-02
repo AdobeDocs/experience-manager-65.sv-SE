@@ -1,6 +1,6 @@
 ---
 title: Funktionsstatus för Touch UI
-description: Versionsinformation som är specifik [!DNL Adobe Experience Manager] för användargränssnittet som har pekfunktioner.
+description: Versionsinformation som är specifik för [!DNL Adobe Experience Manager] Touchaktiverat användargränssnitt.
 translation-type: tm+mt
 source-git-commit: d938f52766154b68df2f6db2c8c49a0ad97e7e6d
 workflow-type: tm+mt
@@ -10,17 +10,17 @@ ht-degree: 1%
 ---
 
 
-# Funktionsstatus för Touch UI {#touch-ui-feature-status}
+# Touch UI Feature Status {#touch-ui-feature-status}
 
-AEM 6.4 och senare är [Classic UI föråldrat](../release-notes/deprecated-removed-features.md). Adobe kommer inte att göra några ytterligare förbättringar av det klassiska användargränssnittet, och användare uppmanas att utnyttja de nya kraftfulla funktionerna i det beröringskänsliga användargränssnittet.
+AEM 6.4 och [Klassiskt gränssnitt är föråldrat](../release-notes/deprecated-removed-features.md). Adobe kommer inte att göra några ytterligare förbättringar av det klassiska användargränssnittet, och användare uppmanas att utnyttja de nya kraftfulla funktionerna i det beröringskänsliga användargränssnittet.
 
-Från och med version 6.0 har AEM introducerat ett nytt användargränssnitt som kallas &quot;pekaktiverat användargränssnitt&quot; (kallas helt enkelt &quot;Touch-användargränssnitt&quot;) som är anpassat till de allmänna riktlinjerna för användargränssnittet i [!DNL Adobe Experience Cloud] och Adobe. Med nästan samma funktionsparitet har detta blivit standardgränssnittet i AEM med det äldre skrivbordsorienterade gränssnittet som kallas &quot;klassiskt gränssnitt&quot;.
+Från och med version 6.0 har AEM introducerat ett nytt användargränssnitt som kallas &quot;pekaktiverat användargränssnitt&quot; (kallas helt enkelt &quot;Touch UI&quot;) som är anpassat till [!DNL Adobe Experience Cloud] och till de övergripande riktlinjerna för användargränssnittet i Adobe. Med nästan samma funktionsparitet har detta blivit standardgränssnittet i AEM med det äldre skrivbordsorienterade gränssnittet som kallas &quot;klassiskt gränssnitt&quot;.
 
 De flesta funktioner finns i det beröringskänsliga användargränssnittet, men det finns funktioner som ännu inte är fullständiga och som kommer att läggas till i framtida versioner.
 
 Följande lista visar aktuell status för funktionerna som implementerats i AEM 6.5.
 
-Rekommendationer för kunder som uppgraderar till AEM 6.5 finns i [Användargränssnittets rekommendationer för kunder](/help/sites-deploying/ui-recommendations.md).
+Rekommendationer för kunder som uppgraderar till AEM 6.5 finns i [Användargränssnittsrekommendationer för kunder](/help/sites-deploying/ui-recommendations.md).
 
 >[!NOTE]
 >
@@ -40,11 +40,11 @@ Rekommendationer för kunder som uppgraderar till AEM 6.5 finns i [Användargrä
 
 ## Funktionsstatus: Webbplatsadministratör {#feature-status-sites-admin}
 
-Det här är en lista över funktioner som den klassiska administratören för användargränssnitt (`/siteadmin`) har och status i det beröringskänsliga användargränssnittet (`/sites.html`).
+Det här är en lista över funktioner som den klassiska användargränssnittsadministratören (`/siteadmin`) har och status i det beröringskänsliga användargränssnittet (`/sites.html`).
 
 | Funktion | Status | Kommentar |
 |--- |--- |--- |
-| Navigera i webbplatshierarkin | Slutförd | I AEM 6.4 introducerades en [innehållsträdsvy](/help/sites-authoring/basic-handling.md#content-tree). |
+| Navigera i webbplatshierarkin | Slutförd | AEM 6.4 introducerade en [innehållsträdsvy](/help/sites-authoring/basic-handling.md#content-tree). |
 | Starta arbetsflöde | Slutförd |  |
 | Skapa ny sida | Slutförd |  |
 | Skapa ny plats | Slutförd |  |
@@ -76,9 +76,9 @@ Det här är en lista över funktioner som den klassiska administratören för a
 | Inkorgen för meddelanden (JCR-händelser) | Saknas | Använd klassiskt gränssnitt. Ersätts med annan implementering. |
 | Referenser | Slutförd | Visa inkommande sidlänkar som lagts till i AEM 6.5. |
 
-## Funktionsstatus: Page Editor {#feature-status-page-editor}
+## Funktionsstatus: Sidredigeraren {#feature-status-page-editor}
 
-Det här är en lista över funktioner som den klassiska sidredigeraren (`/cf#`) har och status i den beröringsaktiverade (`/editor.html`).
+Det här är en lista över funktioner som den klassiska sidredigeraren (`/cf#`) har och status för den beröringsaktiverade (`/editor.html`).
 
 | Funktion | Status | Kommentar |
 |--- |--- |--- |
@@ -106,15 +106,15 @@ Det här är en lista över funktioner som den klassiska sidredigeraren (`/cf#`)
 | Kopiera sida | Borttagen | Använd Webbplatsadministratör för att [kopiera sidor](/help/sites-authoring/managing-pages.md#copying-and-pasting-a-page). |
 | Flytta sida | Borttagen | Använd Webbplatsadministratör för att [flytta sidor](/help/sites-authoring/managing-pages.md#moving-or-renaming-a-page). |
 | Ta bort sida | Borttagen | Använd Webbplatsadministratör för att [ta bort sidor](/help/sites-authoring/managing-pages.md#deleting-a-page). |
-| Visa referenser | Borttagen | Använd Webbplatsadministratör för att se den [detaljerade referenslistan](/help/sites-authoring/author-environment-tools.md#references). |
-| Granskningslogg | Borttagen | Använd Webbplatsadministratör och [öppen aktivitetsfältet](/help/sites-authoring/author-environment-tools.md#events-timeline). |
+| Visa referenser | Borttagen | Använd Webbplatsadministratör för att se [den detaljerade referenslistan](/help/sites-authoring/author-environment-tools.md#references). |
+| Granskningslogg | Borttagen | Använd Webbplatsadministratör och [öppna aktivitetsfält](/help/sites-authoring/author-environment-tools.md#events-timeline). |
 | Skapa version | Borttagen | Använd Webbplatsadministratör för att [skapa nya versioner](/help/sites-authoring/working-with-page-versions.md#creating-a-new-version). |
 | Återställ version | Borttagen | Använd Webbplatsadministratör för att [återställa versioner](/help/sites-authoring/working-with-page-versions.md#reverting-to-a-page-version). |
 | Växla startprogram | Borttagen | Använd Webbplatsadministratör för att [växla mellan starter](/help/sites-authoring/launches-promoting.md). |
-| Översätt sida | Borttagen | Använd Webbplatsadministratör för att [lägga till sidor i översättningsprojekt](/help/sites-administering/tc-manage.md). |
+| Översätt sida | Borttagen | Använd Webbplatsadministratör för att [lägga till sida i översättningsprojekt](/help/sites-administering/tc-manage.md). |
 | Timewarp (välj datum/tid och bläddra på webbplatsen efter utseendet) | Slutförd |  |
 | Ange behörigheter | Slutförd |  |
-| Användargränssnitt för klientkontext | Ersatt | Använd [ContextHub](/help/sites-authoring/ch-previewing.md) -gränssnittet framåt. |
+| Användargränssnitt för klientkontext | Ersatt | Använd gränssnittet [ContextHub](/help/sites-authoring/ch-previewing.md) som fortsätter framåt. |
 | Content Finder för de olika medietyperna | Slutförd |  |
 | Komponentlista | Slutförd |  |
 | Kopiera och klistra in komponenter | Slutförd |  |
@@ -159,7 +159,7 @@ Det här är en lista över funktioner som det klassiska användargränssnittet 
 | IPE-plugin: Rotera | Slutförd |  |
 | IPE-plugin: Zooma | Slutförd |  |
 
-## Funktionsstatus: verktyg {#feature-status-tools}
+## Funktionsstatus: Verktyg {#feature-status-tools}
 
 Det här är en lista över olika verktyg som det klassiska användargränssnittet har och status i det beröringsaktiverade användargränssnittet.
 
