@@ -38,7 +38,7 @@ Lagra för lösta och olösta ContextHub-segment. Hämtar automatiskt segment fr
 
 ### Basimplementering {#base-implementation-segmentation}
 
-Butikskandidaten aem.segmentation utökas [`ContextHub.Store.PersistedJSONPStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedjsonpstore).
+Förkandidaten för aem.segmentation-arkivet är [`ContextHub.Store.PersistedJSONPStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedjsonpstore).
 
 ### Konfiguration {#configuration-segmentation}
 
@@ -64,7 +64,7 @@ Exempelarkivkandidaten contexthub.geolocation använder Google Maps för att hä
 
 ### Basimplementering {#base-implementation-geolocation}
 
-Conexthub.geolocation-lagringskandidaten utökas [`ContextHub.Store.PersistedJSONPStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedjsonpstore).
+Conexthub.geolocation-lagringskandidaten utökar [`ContextHub.Store.PersistedJSONPStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedjsonpstore).
 
 ### Konfiguration {#configuration-geolocation}
 
@@ -110,7 +110,7 @@ I butiken används ett dataträd som liknar följande exempel:
 
 >[!NOTE]
 >
->En säkerhetsprincip som introducerades i Chrome 50.x kräver att alla geopositioneringsrelaterade anrop görs via en skyddad anslutning. AEM tvingar därför även https-användning för API-anrop för geopositionering om AEM körs över https. I annat fall används http för att följa principen om samma ursprung. Se [det här Google-blogginlägget](https://developers.google.com/web/updates/2016/04/geolocation-on-secure-contexts-only) för mer information om förändringen i Chrome.
+>En säkerhetsprincip som introducerades i Chrome 50.x kräver att alla geopositioneringsrelaterade anrop görs via en skyddad anslutning. AEM tvingar därför även https-användning för API-anrop för geopositionering om AEM körs över https. I annat fall används http för att följa principen om samma ursprung. Mer information om ändringen i Chrome finns i [det här Google-blogginlägget](https://developers.google.com/web/updates/2016/04/geolocation-on-secure-contexts-only).
 
 ## contexthub.surferinfo Sample Store Candidate {#contexthub-surferinfo-sample-store-candidate}
 
@@ -122,7 +122,7 @@ Lagrar information om den aktuella klientmiljön, t.ex. enhet, fönster, webblä
 
 ### Basimplementering {#base-implementation-surferinfo}
 
-Conexthub.datetime-lagringskandidaten utökas [`ContextHub.Store.PersistedStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedstore).
+Conexthub.datetime-lagringskandidaten utökar [`ContextHub.Store.PersistedStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedstore).
 
 ### Konfiguration {#configuration-surferinfo}
 
@@ -179,7 +179,7 @@ Lager som använder den här butikskandidaten har ett dataträd som liknar följ
 }
 ```
 
-## granite.emulators Sample Store Candidate {#granite-emulators-sample-store-candidate}
+## granite.emulators Exempelarkivkandidaten {#granite-emulators-sample-store-candidate}
 
 I exemplet granite.emulators lagras information om klientenheter.
 
@@ -189,7 +189,7 @@ I exemplet granite.emulators lagras information om klientenheter.
 
 ### Basimplementering {#base-implementation-emulators}
 
-Conexthub.geolocation-lagringskandidaten utökas [`ContextHub.Store.PersistedStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedstore).
+Conexthub.geolocation-lagringskandidaten utökar [`ContextHub.Store.PersistedStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedstore).
 
 ### Konfiguration {#configuration-emulators}
 
@@ -322,7 +322,7 @@ Lagrar information om den aktuella användaren.
 
 ### Basimplementering {#base-implementation-profile}
 
-Conexthub.datetime-lagringskandidaten utökas [`ContextHub.Store.PersistedJSONPStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedjsonpstore).
+Conexthub.datetime-lagringskandidaten utökar [`ContextHub.Store.PersistedJSONPStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedjsonpstore).
 
 ### Konfiguration {#configuration-profile}
 
