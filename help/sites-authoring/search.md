@@ -1,6 +1,6 @@
 ---
-title: Sök
-seo-title: Sök
+title: Sökning
+seo-title: Sökning
 description: Hitta materialet snabbare med omfattande sökfunktioner
 seo-description: Hitta materialet snabbare med omfattande sökfunktioner
 uuid: 21605b96-b467-4d01-9a64-9d0648d539f1
@@ -12,19 +12,22 @@ discoiquuid: 4ec15013-f7ab-44d6-8053-ed28b14f95e2
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 4dc4a518c212555b7833ac27de02087a403d3517
+workflow-type: tm+mt
+source-wordcount: '511'
+ht-degree: 6%
 
 ---
 
 
-# Sök{#searching}
+# Sökning{#searching}
 
 I författarmiljön i AEM finns olika sätt att söka efter innehåll, beroende på resurstypen.
 
 >[!NOTE]
 >
->Utanför redigeringsmiljön finns det även andra sökfunktioner, som [Query Builder](/help/sites-developing/querybuilder-api.md) och [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
+>Utanför författarmiljön finns det även andra sökfunktioner, till exempel [Query Builder](/help/sites-developing/querybuilder-api.md) och [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
 
-## Grunderna i sökning {#search-basics}
+## Sökgrunder {#search-basics}
 
 Sökfunktionen finns i det övre verktygsfältet:
 
@@ -38,7 +41,7 @@ Med sökfältet kan du:
 
 >[!NOTE]
 >
->Sökfunktionen kan också anropas med snabbtangenten `/` (snedstreck) när sökfältet visas.
+>Sökningen kan också anropas med snabbtangenten `/` (snedstreck) när sökfältet visas.
 
 ## Sök och filtrera {#search-and-filter}
 
@@ -59,7 +62,7 @@ Så här söker och filtrerar du resurser:
 
    ![screen-shot_2019-03-05at101900](assets/screen-shot_2019-03-05at101900.png)
 
-1. Om du vill gå vidare väljer du Rail-symbolen (längst upp till vänster) för att öppna sidopanelens **filter och alternativ**.
+1. Om du vill gå vidare väljer du Rail-symbolen (längst upp till vänster) för att öppna sidopanelen **Filter och alternativ**.
 
    ![](do-not-localize/screen_shot_2018-03-23at101542.png)
 
@@ -71,6 +74,7 @@ Så här söker och filtrerar du resurser:
    * Sökkatalog
    * Taggar
    * Sökvillkor; till exempel Ändrade datum, Publiceringsstatus, LiveCopy-status.
+
    >[!NOTE]
    >
    >Sökvillkoren kan variera:
@@ -78,7 +82,7 @@ Så här söker och filtrerar du resurser:
    >
    >
    >    * Beroende på vilken resurstyp du har valt; Exempelvis är kriterierna Assets och Communities begripligt specialiserade.
-   >    * Din instans som [sökformulär](/help/sites-administering/search-forms.md) kan anpassas (lämplig för platsen i AEM).
+   >    * Instansen som [sökningen i Forms](/help/sites-administering/search-forms.md) kan anpassas (lämplig för platsen i AEM).
 
 
    ![screen-shot_2019-03-05at102509](assets/screen-shot_2019-03-05at102509.png)
@@ -114,7 +118,7 @@ Förutom att söka efter en mängd olika aspekter kan du även spara en viss sö
 1. När du har sparat kan du:
 
    * Använd **x** (mot namnet på den sparade sökningen) för att starta en ny fråga (den sparade sökningen tas inte bort).
-   * **Redigera sparad sökning**, ändra sökvillkoren och **spara** igen.
+   * **Redigera sparad sökning**, ändra sökvillkoren och  **** spara igen.
 
 Du kan ändra sparade sökningar genom att markera den sparade sökningen och klicka på **Redigera sparad sökning** längst ned på sökpanelen.
 
