@@ -18,13 +18,13 @@ ht-degree: 0%
 ---
 
 
-# Introduktion till formulärsekvenser i flera steg{#introduction-to-multi-step-form-sequence}
+# Introduktion till formulärsekvens i flera steg{#introduction-to-multi-step-form-sequence}
 
 Med adaptiva blanketter kan man enkelt skapa datainhämtning i flera steg. Den har inbyggt stöd för att skapa flera paneler och koppla ihop varje panel med olika navigeringsmönster. Formulärförfattare kan gruppera formulärfält i logiska avsnitt och representera en grupp som en panel. Den övergripande navigeringen mellan paneler styrs med hjälp av panellayouten. Författare kan välja att ordna paneler i olika layouter, t.ex. placera sekventiellt med guidelayouten eller på ett ad hoc-sätt med hjälp av fliklayouten. Mer information om panellayouter finns i [Layoutfunktioner i adaptiva formulär](../../forms/using/layout-capabilities-adaptive-forms.md).
 
 I en typisk miljö för ifyllnad av formulär finns det fler steg än att bara hämta in data. En fullständig inlämning av formulär kan omfatta andra steg, som att signera formuläret digitalt, verifiera den information som fylls i formuläret, bearbeta betalningar och så vidare. Det skiljer sig från fall till fall.
 
-Om ditt användningsfall föreskriver en uppsättning steg för datainhämtning eller om det finns bestämmelser som kräver att vissa steg följs, kan AEM Forms använda den gemensamma strukturen i alla formulär. Den medföljande implementeringen av formulärstrukturen definierar stegsekvensen för ett formulär. ![Exempel på en formulärsekvens i flera steg](assets/formpipeline.png)
+Om ditt användningsfall föreskriver en uppsättning steg för datainhämtning, eller om det finns bestämmelser som kräver att vissa steg ska följas, kan AEM Forms använda den gemensamma strukturen i alla formulär. Den medföljande implementeringen av formulärstrukturen definierar stegsekvensen för ett formulär. ![Exempel på en formulärsekvens i flera steg](assets/formpipeline.png)
 
 Exempel på en formulärsekvens i flera steg
 
@@ -36,13 +36,13 @@ Låt oss ta ett exempel där du behöver skapa en sekvens för att fylla i, veri
 
    * **Fyllning**: Den innehåller formulärfält för datainhämtning. Här kan du ta med kapslade underpaneler för att skapa avsnitt för olika typer av information, t.ex. personlig, familj, ekonomi osv.
 
-   * **Verifiera**: Den innehåller komponenten **Verify** som kan användas i en XFA-baserad adaptiv form. Den information som hämtas på panelen Fyllning visas i skrivskyddat läge för verifiering.
+   * **Verifiera**: Den innehåller  **** Verifycomponent som kan användas i en XFA-baserad adaptiv form. Den information som hämtas på panelen Fyllning visas i skrivskyddat läge för verifiering.
 
-   * **E-signatur**: Den innehåller **Sign** -komponenten som kan användas i ett XFA-baserat adaptivt formulär. den tillhandahåller följande signeringstjänster:
+   * **E-signatur**: Den innehåller  **** Signcomponent som kan användas i en XFA-baserad adaptiv form. den tillhandahåller följande signeringstjänster:
 
       * Adobe Document Cloud eSign-tjänster
       * Klottra signaturer
-   * **Bekräftelse**: Den innehåller komponenten **Sammanfattning** som visar ett meddelande som bekräftar att formuläret skickas när en användare har signerat formuläret och når steget Bekräfta (Sammanfattning) i sekvensen. Författare kan konfigurera texten i komponenten Sammanfattning, visa ett tackmeddelande, visa en länk till den genererade PDF-filen och så vidare.
+   * **Bekräftelse**: Den innehåller  **** Summarycomponent som visar ett meddelande som bekräftar att formuläret skickas när en användare har signerat formuläret och når steget Bekräfta (Sammanfattning) i sekvensen. Författare kan konfigurera texten i komponenten Sammanfattning, visa ett tackmeddelande, visa en länk till den genererade PDF-filen och så vidare.
 
 
 1. Välj layouten för rotpanelen som **[!UICONTROL Wizard]**.
