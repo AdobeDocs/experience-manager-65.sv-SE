@@ -20,14 +20,14 @@ ht-degree: 0%
 
 # Katalogfunktion {#catalog-feature}
 
-De [`Enablement Assignments`](assignments.md) och `Enablement Catalog` komponenter som finns i gruppen Communities i komponentwebbläsaren är komponenter i en [aktiveringscommunity](overview.md#enablement-community).
+Komponenterna [`Enablement Assignments`](assignments.md) och `Enablement Catalog` som finns i gruppen Communities i komponentwebbläsaren är komponenter i en [aktiveringscommunity](overview.md#enablement-community).
 
-Komponenten `Enablement Catalog` ger communitymedlemmar åtkomst till en katalog med [aktiveringsresurser](resources.md). Användning av AEM-taggar är en viktig del av hanteringen av listan över aktiveringsresurser i en katalog (se [Tagga aktiveringsresurser](tag-resources.md)).
+Komponenten `Enablement Catalog` ger communitymedlemmar åtkomst till en katalog med [aktiveringsresurser](resources.md). Användningen av AEM-taggar är en viktig del i hanteringen av listan över aktiveringsresurser i en katalog (se [Tagga aktiveringsresurser](tag-resources.md)).
 
-I självstudiekursen [Komma igång med AEM Communities för aktivering](getting-started-enablement.md) kan du se en medlems vy över tilldelningar och kataloger i [Experience the Published Site](enablement-published-site.md) (Upplev publicerad webbplats).
+I självstudiekursen [Getting Started with AEM Communities for Enablement](getting-started-enablement.md) kan du se en medlems vy över tilldelningar och kataloger i [Experience the Published Site](enablement-published-site.md)-avsnittet.
 
-## Additional Information {#additional-information}
+## Ytterligare information {#additional-information}
 
 Mer information finns på sidan [Catalog Essentials](catalog-developer-essentials.md) för utvecklare.
 
-Katalogfunktionen [är](functions.md#catalog-function) tillgänglig när du skapar en [community-webbplats](sites-console.md).
+Katalogfunktionen [](functions.md#catalog-function) är tillgänglig när du skapar en [community-plats](sites-console.md).
