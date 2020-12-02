@@ -148,7 +148,7 @@ I följande kodexempel konverteras ett PDF-dokument med namnet *Loan.pdf* till e
 
 ## Snabbstart (SOAP-läge): Konvertera ett PDF-dokument till JPEG-filer med Java API {#quick-start-soap-mode-converting-a-pdf-document-to-jpeg-files-using-the-java-api}
 
-I följande Java-kodexempel konverteras ett PDF-dokument med namnet *Loan.pdf* till en uppsättning JPEG-filer och lagras i mappen C:\Adobe directory. Varje fil namnges `tempFile[index].jpg`där den första bildfilen heter *tempFile0.jpg*. (Se [Konvertera PDF-dokument till bildformat](/help/forms/developing/converting-pdf-postscript-image-files.md#converting-pdf-documents-to-image-formats).)
+Följande Java-kodexempel konverterar ett PDF-dokument med namnet *Loan.pdf* till en uppsättning JPEG-filer och lagrar dem i mappen C:\Adobe directory. Varje fil har namnet `tempFile[index].jpg`, där den första bildfilen har namnet *tempFile0.jpg*. (Se [Konvertera PDF-dokument till bildformat](/help/forms/developing/converting-pdf-postscript-image-files.md#converting-pdf-documents-to-image-formats).)
 
 ```java
  /*
