@@ -1,8 +1,8 @@
 ---
-title: Uppgradera till AEM 6.5-formulär
-seo-title: Uppgradera till AEM 6.5-formulär
-description: Du kan uppgradera direkt från AEM 6.3-formulär och AEM 6.4-formulär till AEM 6.5-formulär.
-seo-description: Du kan uppgradera direkt från AEM 6.3-formulär och AEM 6.4-formulär till AEM 6.5-formulär.
+title: Uppgradera till AEM 6.5 Forms
+seo-title: Uppgradera till AEM 6.5 Forms
+description: Du kan uppgradera direkt från AEM 6.3 Forms och AEM 6.4 Forms till AEM 6.5 Forms.
+seo-description: Du kan uppgradera direkt från AEM 6.3 Forms och AEM 6.4 Forms till AEM 6.5 Forms.
 uuid: 7a38cd72-2d01-4af7-b6a3-00dc34c4f02b
 content-type: reference
 topic-tags: installing
@@ -18,43 +18,43 @@ ht-degree: 0%
 ---
 
 
-# Uppgradera till AEM 6.5-formulär{#upgrade-to-aem-forms}
+# Uppgradera till AEM 6.5 Forms{#upgrade-to-aem-forms}
 
-AEM 6.5 Forms innehåller flera nya funktioner och förbättringar som effektiviserar skapandet, hanteringen och användarupplevelsen med formulär och korrespondenser. Mer information om alla nya funktioner och förbättringar i AEM 6.5-formulär finns i [Sammanfattningsdokument](../../forms/using/whats-new.md)om nya funktioner.
+AEM 6.5 Forms innehåller flera nya funktioner och förbättringar som effektiviserar framtagning, hantering och användarupplevelser med formulär och korrespondenser. Mer information om alla nya funktioner och förbättringar i AEM 6.5 Forms finns i [Sammanfattningsdokument om nya funktioner](../../forms/using/whats-new.md).
 
-Du kan uppgradera din befintliga LiveCycle- eller AEM Forms-installation för att få tillgång till nya funktioner och förbättringar som finns i AEM 6.5-formulär samtidigt som befintliga data, processer och resurser bevaras intakta. Vid uppgradering bevaras också metadata och processernas status. Du kan välja ett uppgraderingsalternativ för att komma igång med uppgraderingen.
+Du kan uppgradera din befintliga LiveCycle- eller AEM Forms-installation för att få tillgång till nya funktioner och förbättringar som finns i AEM 6.5 Forms samtidigt som befintliga data, processer och resurser bevaras intakta. Vid uppgradering bevaras också metadata och processernas status. Du kan välja ett uppgraderingsalternativ för att komma igång med uppgraderingen.
 
-I följande diagram visas de tillgängliga uppgraderingssökvägarna för AEM Forms på OSGi:
+I följande diagram visas de tillgängliga uppgraderingsmöjligheterna för AEM Forms på OSGi:
 
 ![](do-not-localize/osgi-upgrade-path.png)
 
 Du kan uppgradera direkt från:
 
 * AEM 6.3 Forms on OSGi
-* AEM 6.4-formulär på OSGi
+* AEM 6.4 Forms on OSGi
 
 Du kan också utföra en uppgradering från
 
-* AEM 6.0-formulär på OSGi
-* AEM 6.1-formulär på OSGi
+* AEM 6.0 Forms on OSGi
+* AEM 6.1 Forms on OSGi
 * AEM 6.2 Forms on OSGi
 
-I följande diagram visas de tillgängliga uppgraderingssökvägarna för AEM Forms på JEE:
+I följande diagram visas de tillgängliga uppgraderingsmöjligheterna för AEM Forms på JEE:
 
 ![](do-not-localize/jee-upgrade-6-5.png)
 
 Du kan uppgradera direkt från:
 
-* AEM 6.3-formulär på JEE
-* AEM 6.4-formulär på JEE
+* AEM 6.3 Forms on JEE
+* AEM 6.4 Forms on JEE
 
 Du kan också utföra en uppgradering från
 
 * LiveCycle ES2
 * LiveCycle ES3
 * LiveCycle ES4 SP1
-* AEM 6.0-formulär på JEE
-* AEM 6.1-formulär på JEE
+* AEM 6.0 Forms on JEE
+* AEM 6.1 Forms on JEE
 * AEM 6.2 Forms on JEE
 
 <!--
