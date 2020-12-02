@@ -20,18 +20,18 @@ ht-degree: 2%
 
 # Konfigurerar cookie-användning{#configuring-cookie-usage}
 
-AEM erbjuder en tjänst som gör att du kan konfigurera och styra hur cookies används med dina webbsidor:
+AEM tillhandahåller en tjänst som gör att du kan konfigurera och styra hur cookies används med dina webbsidor:
 
 * En konfigurerbar tjänst på serversidan upprätthåller en lista över cookies som kan användas.
 * Med ett javascript-API kan din javascript-kod verifiera att en cookie kan användas.
 
 Använd den här funktionen för att kontrollera att sidorna uppfyller användarnas samtycke när det gäller användningen av cookies.
 
-## Konfigurera tillåtna cookies {#configuring-allowed-cookies}
+## Konfigurerar tillåtna cookies {#configuring-allowed-cookies}
 
 Konfigurera avanmälningstjänsten för Adobe Granite för att ange hur cookies ska användas på dina webbsidor. I följande tabell beskrivs de egenskaper som du kan konfigurera.
 
-Om du vill konfigurera tjänsten kan du använda [webbkonsolen](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) eller [lägga till en OSGi-konfiguration i databasen](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository). I följande tabell beskrivs de egenskaper som du behöver för någon av metoderna. Tjänstens-PID är för en OSGi-konfiguration `com.adobe.granite.optout`.
+Om du vill konfigurera tjänsten kan du använda [webbkonsolen](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) eller [lägga till en OSGi-konfiguration i databasen](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository). I följande tabell beskrivs de egenskaper som du behöver för någon av metoderna. Tjänstens-PID är `com.adobe.granite.optout` för en OSGi-konfiguration.
 
 | Egenskapsnamn (webbkonsol) | OSGi-egenskapsnamn | Beskrivning |
 |---|---|---|
@@ -48,7 +48,7 @@ Använd javascript på klientsidan för att anropa tjänsten Adobe Granite Opt-O
 * Avgör om webbläsaren innehåller en cookie som anger att användaren inte godkänner användningen av cookies för spårning.
 * Avgör om en viss cookie kan användas.
 
-Klientbiblioteksmappen [granite.utils innehåller](/help/sites-developing/clientlibs.md#referencing-client-side-libraries) objektet Granite.OptOutUtil. Lägg till följande kod i sidhuvud-JSP för att inkludera en länk till javascript-biblioteket:
+Granite.utils [klientbiblioteksmappen](/help/sites-developing/clientlibs.md#referencing-client-side-libraries) innehåller objektet Granite.OptOutUtil. Lägg till följande kod i sidhuvud-JSP för att inkludera en länk till javascript-biblioteket:
 
 `<ui:includeClientLib categories="granite.utils" />`
 
@@ -65,7 +65,7 @@ function writeCookie(value){
 }
 ```
 
-## Objektet Granite.OptOutUtil JavaScript {#the-granite-optoututil-javascript-object}
+## Granite.OptOutUtil JavaScript-objektet {#the-granite-optoututil-javascript-object}
 
 Med Granite.OptOutUtil kan du avgöra om cookie-användning är tillåten.
 
@@ -93,7 +93,7 @@ Inget.
 
 En array med cookie-namn.
 
-#### funktionen isOptedOut() {#isoptedout-function}
+#### isOptedOut(), funktion {#isoptedout-function}
 
 Avgör om användarens webbläsare innehåller cookies som anger att samtycke inte har getts för att använda cookies.
 
@@ -103,11 +103,11 @@ Inget.
 
 **Returnerar**
 
-Ett booleskt värde för `true` om en cookie hittas som inte anger något samtycke, och värdet för `false` om ingen cookie anger att den inte godkänner avtalet.
+Ett booleskt värde på `true` om det finns en cookie som inte anger något samtycke, och värdet `false` om ingen cookie anger att den inte medgett.
 
 ### Funktionen maySetCookie(cookieName) {#maysetcookie-cookiename-function}
 
-Avgör om en viss cookie kan användas i användarens webbläsare. Den här funktionen motsvarar att använda `isOptedOut` funktionen tillsammans med att bestämma om den angivna cookien finns med i listan som `getWhitelistCookieNames` funktionen returnerar.
+Avgör om en viss cookie kan användas i användarens webbläsare. Den här funktionen motsvarar att använda funktionen `isOptedOut` när du avgör om den angivna cookien finns med i listan som funktionen `getWhitelistCookieNames` returnerar.
 
 **Parametrar**
 
@@ -115,4 +115,4 @@ Avgör om en viss cookie kan användas i användarens webbläsare. Den här funk
 
 **Returnerar**
 
-Ett booleskt värde på `true` if `cookieName` kan användas, eller värdet `false` if `cookieName` kan inte användas.
+Ett booleskt värde på `true` om `cookieName` kan användas, eller ett värde på `false` om `cookieName` inte kan användas.
