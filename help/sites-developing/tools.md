@@ -12,6 +12,9 @@ discoiquuid: 3cf0fd8d-7fc8-468a-bb1e-1debb68a82a5
 docset: aem65
 translation-type: tm+mt
 source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+workflow-type: tm+mt
+source-wordcount: '312'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
 
 ## Testning {#testing}
 
-AEM ger:
+AEM tillhandahåller:
 
 * [ett ramverk för testning av komponentens användargränssnitt](/help/sites-developing/hobbes.md).
 * [en mekanism för att testa och felsöka komponenter](/help/sites-developing/developer-mode.md).
@@ -31,13 +34,13 @@ Här följer två testverktyg för öppen källkod:
 
 Selenium används för funktionstestning i en webbläsare med en användare per aktivitet. Den registrerar teststeg (klickningar) som antingen HTML-tabeller eller Java-klasser.
 
-Mer information finns på [https://www.seleniumhq.org/](https://www.seleniumhq.org/).
+Mer information finns i [https://www.seleniumhq.org/](https://www.seleniumhq.org/).
 
 **JMeter**
 
 JMeter används för att spåra förfrågningar och kan användas för funktions-, prestanda- och stresstester.
 
-Mer information finns på [https://jakarta.apache.org/jmeter/](https://jakarta.apache.org/jmeter).
+Mer information finns i [https://jakarta.apache.org/jmeter/](https://jakarta.apache.org/jmeter).
 
 Det finns också många egna verktyg för att automatisera tester och hantera testplaner.
 
@@ -51,14 +54,14 @@ Ett felsökningssystem som kan konfigureras efter dina egna behov.
 
 **Kalkylblad**
 
-Även om kalkylblad inte är specifikt ett felsökningsverktyg, ** används de ofta på ett felaktigt sätt eftersom de är lätta att förstå och de flesta användare har erfarenhet av sin funktionalitet.
+Även om det inte är specifikt ett felspårningsverktyg, används kalkylblad ofta *mis* för detta ändamål eftersom de är lätta att förstå och de flesta användare har erfarenhet av sin funktionalitet.
 
 Om dessa används för spårning:
 
 * de ska vara enkla.
 * Antalet enskilda kalkylblad bör begränsas till ett minimum.
 * måste uppdateras regelbundet.
-* endast en originalkopia ska bevaras och alla ska veta var originalkopian finns.
+* endast en överordnad kopia ska bevaras och alla ska veta var den överordnad kopian finns.
 * De ska vara tillgängliga för alla projektmedlemmar.
 * Om säkerhet är ett problem (ofta i stora företag) och gemensam åtkomst inte är möjlig, kan kopior distribueras så länge alla förstår att det är kopior som inte kan uppdateras.
 
