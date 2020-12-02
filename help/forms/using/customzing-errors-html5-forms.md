@@ -38,8 +38,8 @@ När du har extraherat paketet öppnar du mappen CustomErrorManager-1.0-SNAPSHOT
 
 Om du vill anpassa placeringen av felmeddelandet lägger du till taggen &lt;div> för varje fel- och varningsfält, placerar taggen &lt;div> till vänster eller höger och tillämpar CSS-format på taggen &lt;div>. Detaljerade anvisningar finns i proceduren nedan:
 
-1. Navigera till `CustomErrorManager-1.0-SNAPSHOT`mappen och öppna `etc\clientlibs\mf-custom-error-manager\CustomErrorManager\javascript` mappen.
-1. Öppna `customErrorManager.js` filen för redigering. Funktionen `markError` i filen accepterar följande parametrar:
+1. Navigera till mappen `CustomErrorManager-1.0-SNAPSHOT`och öppna mappen `etc\clientlibs\mf-custom-error-manager\CustomErrorManager\javascript`.
+1. Öppna `customErrorManager.js`-filen för redigering. Funktionen `markError` i filen accepterar följande parametrar:
 
    |  |  |
    |---|---|
@@ -77,7 +77,7 @@ Om du vill anpassa placeringen av felmeddelandet lägger du till taggen &lt;div>
    ```
 
 1. Spara och stäng filen.
-1. Navigera till `CustomErrorManager-1.0-SNAPSHOT` mappen och skapa ett arkiv med mapparna jcr_root och META-INF. Byt namn på arkivet till CustomErrorManager-1.0-SNAPSHOT.zip.
+1. Navigera till mappen `CustomErrorManager-1.0-SNAPSHOT` och skapa ett arkiv med mapparna jcr_root och META-INF. Byt namn på arkivet till CustomErrorManager-1.0-SNAPSHOT.zip.
 1. Använd pakethanteraren för att överföra och installera paketet.
 
 ## Visa felmeddelanden för flera fält  {#display-error-messages-for-multiple-fields-nbsp}
@@ -88,7 +88,7 @@ Använd det bifogade paketet för att samtidigt visa felmeddelanden för alla f�
 
 1. Gå till etc\clientlibs\mf-custom-error-manager\CustomErrorManager\css folder.
 
-1. Öppna filen sample.css för redigering.CSS-filen innehåller 2 id- #customError, #customWarning. Du kan använda dessa id:n för att ändra olika egenskaper som färg, teckenstorlek osv.
+1. Öppna filen sample.css för redigering.CSS-filen innehåller 2 id- #customError, #customWarning. Du kan använda dessa id:n för att ändra olika egenskaper som färg, teckensnittsstorlek osv.
 
    Använd följande kod om du vill ändra teckenstorlek och färg för fel-/varningsmeddelanden.
 
